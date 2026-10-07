@@ -1456,6 +1456,13 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .nav-tab-on .nav-label { font-weight: 700; }
 .nav-tab:hover:not(.nav-tab-on) { color: var(--ink-2); }
 .nav-tab:focus-visible { outline-offset: -3px; }
+/* Four tabs on a small phone: keep "Instellingen" on one line. */
+@media (max-width: 400px) {
+  .bottom-nav { padding-inline: 4px; }
+  .nav-tab { padding-inline: 2px; }
+  .nav-icon { width: 46px; }
+  .nav-label { font-size: 0.74rem; }
+}
 /* Screens with the bar leave room for it. */
 .path, .words-hub, .screen:has(+ .bottom-nav) { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
 

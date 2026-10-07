@@ -30,6 +30,7 @@ import {
   LockIcon,
   RouteIcon,
   GearIcon,
+  InfoIcon,
   MoonIcon,
   SpeakerIcon,
   SunIcon,
@@ -128,15 +129,16 @@ export function TopBar({ streak, words, lang, onLanguage }: {
   );
 }
 
-export type Tab = 'route' | 'words' | 'me';
+export type Tab = 'route' | 'words' | 'me' | 'about';
 
-const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'settings'; Icon: typeof RouteIcon }[] = [
+const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'settings' | 'about'; Icon: typeof RouteIcon }[] = [
   { tab: 'route', nl: 'Route', key: 'navRoute', Icon: RouteIcon },
   { tab: 'words', nl: 'Hulp', key: 'navWords', Icon: LifebuoyIcon },
   { tab: 'me', nl: 'Instellingen', key: 'settings', Icon: GearIcon },
+  { tab: 'about', nl: 'Over', key: 'about', Icon: InfoIcon },
 ];
 
-/** Bottom bar on the three home-level screens: Route (lessons), Hulp, Instellingen. The label is
+/** Bottom bar on the three home-level screens: Route (lessons), Hulp, Instellingen, Over. The label is
  *  Dutch (short, part of learning the work floor); screen readers also hear the English. */
 export function BottomNav({ current, onTab }: { current: Tab; onTab: (tab: Tab) => void }) {
   return (
@@ -299,12 +301,13 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
 }
 
 /** "About Vloertaal": what the app is, who it is for, privacy and voice credits. */
-export function About({ lang, onBack }: { lang?: HelpLanguage; onBack: () => void }) {
+/** "About Vloertaal": the "Over" tab of the bottom bar. */
+export function About({ lang, onBack }: { lang?: HelpLanguage; onBack?: () => void }) {
   const { recorded } = useVoices();
   return (
     <div className="screen about">
       <div className="screen-head">
-        <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+        {onBack && <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>}
         <h1><Bi text={ui('about', lang)} /></h1>
       </div>
       <div className="about-hero">

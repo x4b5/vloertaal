@@ -163,6 +163,15 @@ export const LifebuoyIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** An "i" in a circle: the "Over" tab (about Vloertaal). */
+export const InfoIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <circle cx="12" cy="12" r="9" {...stroke} strokeWidth={2.4} />
+    <path d="M12 11v6" {...stroke} strokeWidth={2.6} />
+    <circle cx="12" cy="7.4" r="1.6" fill="currentColor" />
+  </Svg>
+);
+
 /** A gear: the "Instellingen" tab. */
 export const GearIcon = (p: IconProps) => (
   <Svg {...p}>
