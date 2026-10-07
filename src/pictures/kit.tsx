@@ -283,25 +283,23 @@ export function Box({ x = 30, y = 50, w = 52, h = 44, depth = 16, open = false, 
  * Speech bubble: a rounded box with a tail and a darker "depth" edge underneath (like the
  * app's buttons). Put dots, a mark, a hand or an icon inside as `children`.
  */
-export function Bubble({ x = 14, y = 14, w = 70, h = 46, tail = 'left', fill = PAL.white, depth = PAL.paperShade, children }: {
+export function Bubble({ x = 14, y = 14, w = 70, h = 46, tail = 'left', fill = '#e3f5ff', depth = PAL.ice, children }: {
   x?: number; y?: number; w?: number; h?: number;
   tail?: 'left' | 'right' | 'none';
+  /** Light tint by default, so the bubble also shows on a white card. */
   fill?: string; depth?: string;
   children?: ReactNode;
 }) {
   const r = Math.min(14, h / 2);
-  const tx = tail === 'left' ? x + w * 0.24 : x + w * 0.76;
-  const tip = tail === 'left' ? tx - 8 : tx + 8;
-  const shape = (dy: number, c: string) => (
-    <g transform={`translate(0 ${dy})`}>
-      <rect x={x} y={y} width={w} height={h} rx={r} fill={c} />
-      {tail !== 'none' && <path d={`M${tx - 8} ${y + h - 2}L${tip} ${y + h + 13}L${tx + 8} ${y + h - 2}Z`} fill={c} strokeLinejoin="round" stroke={c} strokeWidth="3" />}
-    </g>
-  );
+  const tx = tail === 'left' ? x + w * 0.26 : x + w * 0.74;
+  const tip = tail === 'left' ? tx - 9 : tx + 9;
+  const bottom = tail === 'none' ? '' : `H${r1(tx + 8)}L${r1(tip)} ${y + h + 13}L${r1(tx - 8)} ${y + h}`;
+  const d = `M${x + r} ${y}H${x + w - r}A${r} ${r} 0 0 1 ${x + w} ${y + r}V${y + h - r}A${r} ${r} 0 0 1 ${x + w - r} ${y + h}` +
+    `${bottom}H${x + r}A${r} ${r} 0 0 1 ${x} ${y + h - r}V${y + r}A${r} ${r} 0 0 1 ${x + r} ${y}Z`;
   return (
-    <g>
-      {shape(3.5, depth)}
-      {shape(0, fill)}
+    <g strokeLinejoin="round">
+      <path d={d} fill={depth} stroke={depth} strokeWidth="2" transform="translate(0 3.5)" />
+      <path d={d} fill={fill} stroke={fill} strokeWidth="2" />
       {children}
     </g>
   );
@@ -374,7 +372,7 @@ export function Sparkle({ x, y, r = 8, color = PAL.yellow }: { x: number; y: num
 }
 
 /** Short motion/emphasis lines radiating from (x, y) towards `dir` degrees (0 = right, -90 = up). */
-export function Motion({ x, y, dir = -90, spread = 60, n = 3, len = 9, gap = 6, color = PAL.ink, width = 3.2 }: {
+export function Motion({ x, y, dir = -90, spread = 60, n = 3, len = 9, gap = 6, color = PAL.line, width = 3.2 }: {
   x: number; y: number; dir?: number; spread?: number; n?: number; len?: number; gap?: number; color?: string; width?: number;
 }) {
   const lines = Array.from({ length: n }, (_, i) => {
@@ -417,10 +415,12 @@ export function Clock({ cx = 60, cy = 60, r = 36, hour = 10, minute = 10, rim = 
           <rect x={cx - 3} y={cy - r - 7} width="6" height="8" rx="2" fill={rimShade} />
         </>
       )}
-      <circle cx={cx} cy={cy} r={r} fill={rim} />
-      <path d={`M${cx + r * 0.2} ${cy - r * 0.98}A${r} ${r} 0 0 1 ${cx + r * 0.2} ${cy + r * 0.98}A${r * 0.9} ${r * 0.98} 0 0 0 ${cx + r * 0.2} ${cy - r * 0.98}Z`} fill={rimShade} />
-      <circle cx={cx} cy={cy} r={r * 0.8} fill={PAL.white} />
-      <path d={`M${cx + r * 0.3} ${cy - r * 0.74}A${r * 0.8} ${r * 0.8} 0 0 1 ${cx + r * 0.3} ${cy + r * 0.74}A${r * 0.66} ${r * 0.8} 0 0 0 ${cx + r * 0.3} ${cy - r * 0.74}Z`} fill={PAL.paperShade} />
+      <Shade color={rimShade} opacity={1} at={[cx + r * 1.25, cy, r * 0.6, r * 1.4]}>
+        <circle cx={cx} cy={cy} r={r} fill={rim} />
+      </Shade>
+      <Shade color={PAL.paperShade} opacity={1} at={[cx + r * 1.1, cy, r * 0.55, r * 1.2]}>
+        <circle cx={cx} cy={cy} r={r * 0.8} fill={PAL.white} />
+      </Shade>
       <path d={ticks.join('')} stroke={PAL.line} strokeWidth={Math.max(2, r * 0.07)} strokeLinecap="round" />
       <path d={hand(((hour % 12) + minute / 60) / 12, r * 0.42)} stroke={PAL.ink} strokeWidth={Math.max(3, r * 0.12)} strokeLinecap="round" />
       <path d={hand(minute / 60, r * 0.6)} stroke={PAL.ink} strokeWidth={Math.max(2.4, r * 0.08)} strokeLinecap="round" />

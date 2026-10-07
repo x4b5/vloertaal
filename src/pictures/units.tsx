@@ -26,9 +26,9 @@ const unitPictures: Record<string, () => JSX.Element> = {
   'u.firstday': () => (
     <g>
       <Halo />
-      <Bust who="bram" x={52} y={112} scale={0.66} expr="pleased" />
-      <Hand pose="open" x={90} y={72} rotate={14} scale={0.78} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
-      <Motion x={92} y={26} dir={-40} spread={70} len={8} gap={7} color={PAL.white} width={3.6} />
+      <Bust who="bram" x={50} y={113} scale={0.74} expr="pleased" />
+      <Hand pose="open" x={95} y={64} rotate={16} scale={0.74} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
+      <Motion x={98} y={20} dir={-30} spread={70} len={8} gap={6} color={PAL.white} width={3.8} />
     </g>
   ),
   // Asking for help: a raised hand and a question bubble.
@@ -105,8 +105,8 @@ const unitPictures: Record<string, () => JSX.Element> = {
   'u.teamwork': () => (
     <g>
       <Halo />
-      <Bust who="jada" x={80} y={112} scale={0.56} expr="pleased" flip />
-      <Bust who="amina" x={40} y={112} scale={0.56} expr="pleased" />
+      <Bust who="jada" x={82} y={114} scale={0.62} expr="pleased" flip />
+      <Bust who="amina" x={38} y={114} scale={0.62} expr="pleased" />
       <Sparkle x={60} y={18} r={9} color={PAL.white} />
       <Sparkle x={16} y={30} r={5} color={PAL.white} />
       <Sparkle x={104} y={30} r={5} color={PAL.white} />
