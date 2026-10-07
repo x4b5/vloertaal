@@ -65,6 +65,12 @@ const lang: HelpLanguage = {
     quitHint: 'Твої відповіді в цьому уроці не збережуться.',
     keepGoing: 'Продовжити',
     stopLesson: 'Зупинити урок',
+    fullVersion: 'Повна версія',
+    unlockFull: 'Відкрити повну версію',
+    unlockHint: 'Зараз відкритий лише перший розділ. Введи пароль для всіх уроків.',
+    password: 'Пароль',
+    wrongPassword: 'Пароль неправильний. Спробуй ще раз.',
+    unlock: 'Відкрити',
   },
   gloss: {
     // Unit: First day at work

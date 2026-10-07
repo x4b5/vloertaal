@@ -65,6 +65,12 @@ const lang: HelpLanguage = {
     quitHint: 'Bu dersteki cevapların kaydedilmez.',
     keepGoing: 'Devam et',
     stopLesson: 'Dersi bırak',
+    fullVersion: 'Tam sürüm',
+    unlockFull: 'Tam sürümü aç',
+    unlockHint: 'Şu an sadece ilk bölüm açık. Tüm dersler için şifreyi gir.',
+    password: 'Şifre',
+    wrongPassword: 'Şifre doğru değil. Tekrar dene.',
+    unlock: 'Aç',
   },
   gloss: {
     // Unit: First day at work

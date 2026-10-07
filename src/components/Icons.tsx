@@ -163,3 +163,20 @@ export const WorkerIcon = (p: IconProps) => (
     <path d="M6 21c.6-3.6 3-5.4 6-5.4s5.4 1.8 6 5.4" {...stroke} strokeWidth={2.4} />
   </Svg>
 );
+
+/** Eye: show the password. */
+export const EyeIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" {...stroke} strokeWidth={2.2} />
+    <circle cx="12" cy="12" r="3" fill="currentColor" />
+  </Svg>
+);
+
+/** Eye struck through: hide the password. */
+export const EyeOffIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" {...stroke} strokeWidth={2.2} />
+    <circle cx="12" cy="12" r="3" fill="currentColor" />
+    <path d="M4 4l16 16" {...stroke} strokeWidth={2.4} />
+  </Svg>
+);

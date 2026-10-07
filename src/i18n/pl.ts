@@ -65,6 +65,12 @@ const lang: HelpLanguage = {
     quitHint: 'Twoje odpowiedzi z tej lekcji nie zostaną zapisane.',
     keepGoing: 'Ucz się dalej',
     stopLesson: 'Przerwij lekcję',
+    fullVersion: 'Pełna wersja',
+    unlockFull: 'Odblokuj pełną wersję',
+    unlockHint: 'Teraz otwarty jest tylko pierwszy dział. Wpisz hasło, aby mieć wszystkie lekcje.',
+    password: 'Hasło',
+    wrongPassword: 'Hasło jest nieprawidłowe. Spróbuj jeszcze raz.',
+    unlock: 'Odblokuj',
   },
   gloss: {
     // Unit: First day at work

@@ -65,6 +65,12 @@ const lang: HelpLanguage = {
     quitHint: 'Отговорите ти в този урок няма да се запазят.',
     keepGoing: 'Продължи',
     stopLesson: 'Спри урока',
+    fullVersion: 'Пълна версия',
+    unlockFull: 'Отключи пълната версия',
+    unlockHint: 'Сега е отворен само първият раздел. Въведи паролата за всички уроци.',
+    password: 'Парола',
+    wrongPassword: 'Паролата не е вярна. Опитай пак.',
+    unlock: 'Отключи',
   },
   gloss: {
     // Units

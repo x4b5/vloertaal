@@ -65,6 +65,12 @@ const lang: HelpLanguage = {
     quitHint: 'መልስታትካ ኣብዚ ትምህርቲ ኣይዕቀብን እዩ።',
     keepGoing: 'ቀጽል',
     stopLesson: 'ትምህርቲ ደው ኣብል',
+    fullVersion: 'ምሉእ ቨርዥን',
+    unlockFull: 'ምሉእ ቨርዥን ክፈት',
+    unlockHint: 'ሕጂ ቀዳማይ ክፍሊ ጥራይ እዩ ክፉት። ንኹሉ ትምህርትታት ፓስዎርድ ኣእቱ።',
+    password: 'ፓስዎርድ',
+    wrongPassword: 'እቲ ፓስዎርድ ቅኑዕ ኣይኮነን። ደጊምካ ፈትን።',
+    unlock: 'ክፈት',
   },
   gloss: {
     // Units

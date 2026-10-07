@@ -65,6 +65,12 @@ const lang: HelpLanguage = {
     quitHint: 'پاسخ\u200cهایت در این درس ذخیره نمی\u200cشود.',
     keepGoing: 'ادامه بده',
     stopLesson: 'توقف درس',
+    fullVersion: 'نسخهٔ کامل',
+    unlockFull: 'باز کردن نسخهٔ کامل',
+    unlockHint: 'الان فقط بخش اول باز است. برای همهٔ درس‌ها رمز را وارد کن.',
+    password: 'رمز',
+    wrongPassword: 'رمز درست نیست. دوباره امتحان کن.',
+    unlock: 'باز کن',
   },
   gloss: {
     // Units

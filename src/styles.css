@@ -1500,3 +1500,69 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .stat-card-foot { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
 
 .result .stat-card-foot { align-items: flex-start; text-align: start; }
+
+/* Password gate: a signboard on the warehouse door. */
+.gate { min-height: 100dvh; display: flex; align-items: center; justify-content: center; }
+.gate-sign {
+  position: relative; width: 100%; max-width: 440px; overflow: hidden;
+  padding: 34px 20px 22px; background: var(--card);
+  border: 3px solid var(--edge); border-radius: 10px; box-shadow: 6px 6px 0 var(--label-shadow);
+}
+.gate-hazard {
+  position: absolute; inset: 0 0 auto; height: 12px;
+  background: repeating-linear-gradient(-45deg, var(--yellow) 0 10px, #1e2226 10px 20px);
+}
+.gate-logo { display: flex; align-items: center; gap: 12px; }
+.gate-logo .wordmark { font-size: 2.3rem; }
+.gate-tag { margin: 8px 0 18px; color: var(--muted); font-weight: 600; }
+.gate-title { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 14px; font-size: clamp(1.15rem, 5.4vw, 1.4rem); line-height: 1.2; }
+@media (max-width: 360px) { .gate-sign { padding-inline: 16px; } .gate-logo .wordmark { font-size: 2rem; } }
+.gate-title > .icon { flex: none; margin-top: 3px; }
+.gate-en { font-size: 1rem; font-weight: 500; color: var(--muted); }
+
+.pw-form { display: flex; flex-direction: column; gap: 10px; }
+.pw-label { font-weight: 600; font-size: 0.95rem; color: var(--ink-2); }
+.pw-label .bi { flex-direction: row; flex-wrap: wrap; gap: 0 8px; }
+.pw-label .bi-help { display: inline; }
+.pw-field { position: relative; display: flex; }
+.pw-input {
+  flex: 1; min-width: 0; min-height: 56px; padding: 12px 60px 12px 16px; font: inherit; font-size: 1.2rem; font-weight: 600;
+  color: var(--ink); background: var(--input-bg); border: 3px solid var(--edge); border-radius: var(--radius);
+}
+.pw-input:focus { outline: none; box-shadow: inset 9px 0 0 var(--yellow); padding-inline-start: 24px; }
+.pw-eye {
+  position: absolute; top: 50%; right: 6px; width: 48px; height: 48px; margin-top: -24px;
+  display: grid; place-items: center; background: none; border: 0; border-radius: 8px; color: var(--ink-2);
+}
+.pw-eye:hover { background: var(--track); }
+.pw-wrong .pw-input { border-color: var(--red); background: var(--red-bg); }
+.pw-wrong { animation: pw-shake 0.4s; }
+@keyframes pw-shake { 20%, 60% { transform: translateX(-7px); } 40%, 80% { transform: translateX(7px); } }
+@media (prefers-reduced-motion: reduce) { .pw-wrong { animation: none; } }
+.pw-error { display: flex; flex-direction: column; gap: 2px; margin: 0; padding-inline-start: 12px; border-inline-start: 5px solid var(--red); color: var(--wrong-ink); font-weight: 600; }
+.pw-error-en { font-weight: 500; font-size: 0.9rem; color: var(--muted); }
+.pw-go { width: 100%; min-height: 60px; margin-top: 4px; font-size: 1.15rem; padding-inline: 16px 68px; }
+.pw-go .bi { align-items: center; }
+.pw-go-en, .pw-go .bi-help { font-size: 0.8em; font-weight: 500; color: #3f3a2c; }
+.pw-go:disabled .pw-go-en, .pw-go:disabled .bi-help { color: inherit; }
+
+/* Preview: unlock card in Settings, and the "Volledige versie" note on locked units. */
+.upgrade-card {
+  margin: 8px 0 20px; padding: 16px; background: var(--card); scroll-margin-top: 16px;
+  border: 2.5px solid var(--edge); border-radius: 6px; box-shadow: inset 8px 0 0 var(--yellow), 5px 5px 0 var(--label-shadow);
+  padding-inline-start: 22px;
+}
+.upgrade-title { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 6px; font-size: 1.15rem; }
+.upgrade-title > .icon { flex: none; margin-top: 2px; }
+.upgrade-nl { font-family: var(--stencil); font-weight: 800; font-size: 1.35rem; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.05; }
+.upgrade-hint { margin: 0 0 12px; color: var(--muted); }
+.unit-full-only .unit-head { cursor: pointer; }
+.full-only-note {
+  display: flex; align-items: center; gap: 8px; width: 100%; min-height: 48px; margin: 8px 0 0; padding: 6px 12px;
+  text-align: start; font-weight: 700; color: var(--tag-ink); background: var(--tag-bg);
+  border: 2px dashed var(--kraft); border-radius: 8px;
+}
+.full-only-note > .icon { flex: none; }
+.full-only-en { flex: 1; min-width: 0; flex-direction: row; flex-wrap: wrap; gap: 0 6px; font-weight: 600; font-size: 0.85rem; color: var(--muted); }
+.full-only-en .bi-help { display: inline; }
+.full-only-en:has(.bi-help) .bi-en::after { content: ' ·'; }

@@ -2,6 +2,7 @@ import { allLessons, allReplies, allWords } from '../content/curriculum';
 import { type CultureTip, tipForLesson } from '../content/culture';
 import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
 import { tokenize } from './answers';
+import { type Access, lessonAllowed } from './access';
 import { createRng, sample, shuffle } from './random';
 
 export type Exercise =
@@ -112,7 +113,9 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
 }
 
 /** Lessons unlock in order: a lesson is open when the previous one is done. */
-export function isUnlocked(lessonId: string, completed: Record<string, unknown>): boolean {
+export function isUnlocked(lessonId: string, completed: Record<string, unknown>, access: Access = 'full'): boolean {
+  // The access level wins over progress: a preview never opens a later unit.
+  if (!lessonAllowed(lessonId, access)) return false;
   const index = allLessons.findIndex((l) => l.id === lessonId);
   if (index <= 0) return index === 0;
   return Boolean(completed[allLessons[index - 1].id]);
