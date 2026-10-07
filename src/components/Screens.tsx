@@ -3,7 +3,7 @@ import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
-import { findItem, phrasebookIds, units } from '../content/curriculum';
+import { findItem, learnedWords, phrasebookIds, units } from '../content/curriculum';
 import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useState } from 'react';
@@ -18,25 +18,28 @@ import {
   AlertIcon,
   AutoThemeIcon,
   CalendarIcon,
-  ChevronDownIcon,
   CrateIcon,
   BackIcon,
-  BullseyeIcon,
   CheckIcon,
   ChevronIcon,
   CrownIcon,
   GlobeIcon,
+  ListIcon,
   LockIcon,
+  RouteIcon,
+  WorkerIcon,
   MoonIcon,
   SpeakerIcon,
   SunIcon,
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
 
-export function LanguagePicker({ current, onPick }: {
+export function LanguagePicker({ current, onPick, showBeta = false }: {
   /** undefined = nothing chosen yet (onboarding). */
   current?: LangCode | null;
   onPick: (code: LangCode | null) => void;
+  /** Mark translations still in review (Settings only; onboarding stays calm). */
+  showBeta?: boolean;
 }) {
   return (
     <div className="lang-grid">
@@ -49,7 +52,7 @@ export function LanguagePicker({ current, onPick }: {
         >
           <span className="lang-native" lang={l.code} dir={l.dir}>{l.nativeName}</span>
           <span className="lang-en">{l.name}</span>
-          {!l.reviewed && <span className="lang-beta">beta</span>}
+          {showBeta && !l.reviewed && <span className="lang-beta">beta</span>}
         </button>
       ))}
       <button
@@ -85,12 +88,15 @@ export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void
   );
 }
 
-export function TopBar({ streak, xp, lang, onSettings }: {
+export function TopBar({ streak, words, lang, onLanguage }: {
   streak: number;
-  xp: number;
+  /** Words learned so far (see learnedWords). */
+  words: number;
   lang?: HelpLanguage;
-  onSettings: () => void;
+  /** The language chip opens Settings ("Ik"), where the help language is chosen. */
+  onLanguage: () => void;
 }) {
+  const wordsLabel = ui('wordsLearnedN').en.replace('{n}', String(words));
   return (
     <header className="topbar">
       <span className="brand">
@@ -102,22 +108,88 @@ export function TopBar({ streak, xp, lang, onSettings }: {
         <span className="chip-num">{streak}</span>
         <span className="chip-unit" lang="nl">{streak === 1 ? 'dag' : 'dagen'}</span>
       </span>
-      <span className="chip chip-xp" role="img" aria-label={`${xp} XP`}>
+      <span className="chip chip-words" role="img" aria-label={wordsLabel} title={wordsLabel}>
         <CrateIcon size={22} />
-        <span className="chip-num">{xp}</span>
-        <span className="chip-unit">XP</span>
+        <span className="chip-num">{words}</span>
+        <span className="chip-unit" lang="nl">{words === 1 ? 'woord' : 'woorden'}</span>
       </span>
       <button
         type="button"
         className="chip chip-lang"
-        onClick={onSettings}
-        aria-label={`${ui('settings').en} · ${lang ? lang.name : ui('englishOnly').en}`}
+        onClick={onLanguage}
+        aria-label={`${ui('helpLanguage').en}: ${lang ? lang.name : ui('englishOnly').en}`}
       >
         <GlobeIcon size={20} />
         <span className="chip-code">{lang ? lang.code.toUpperCase() : 'EN'}</span>
-        <ChevronDownIcon size={16} />
       </button>
     </header>
+  );
+}
+
+export type Tab = 'route' | 'words' | 'me';
+
+const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'navMe'; Icon: typeof RouteIcon }[] = [
+  { tab: 'route', nl: 'Route', key: 'navRoute', Icon: RouteIcon },
+  { tab: 'words', nl: 'Woorden', key: 'navWords', Icon: ListIcon },
+  { tab: 'me', nl: 'Ik', key: 'navMe', Icon: WorkerIcon },
+];
+
+/** Bottom bar on the three home-level screens: Route (lessons), Woorden, Ik. The label is
+ *  Dutch (short, part of learning the work floor); screen readers also hear the English. */
+export function BottomNav({ current, onTab }: { current: Tab; onTab: (tab: Tab) => void }) {
+  return (
+    <nav className="bottom-nav" aria-label="Main">
+      {TABS.map(({ tab, nl, key, Icon }) => (
+        <button
+          key={tab}
+          type="button"
+          className={`nav-tab ${current === tab ? 'nav-tab-on' : ''}`}
+          aria-current={current === tab ? 'page' : undefined}
+          onClick={() => onTab(tab)}
+        >
+          <span className="nav-icon" aria-hidden><Icon size={26} /></span>
+          <span className="nav-label" lang="nl">{nl}</span>
+          <span className="sr-only"> · {ui(key).en}</span>
+        </button>
+      ))}
+    </nav>
+  );
+}
+
+/** "Woorden" tab: the emergency phrases and the workplace tips, as two big entry cards. */
+export function WordsHub({ progress, lang, onPhrasebook, onTips }: {
+  progress: Progress;
+  lang?: HelpLanguage;
+  onPhrasebook: () => void;
+  onTips: () => void;
+}) {
+  const words = learnedWords(progress.completed).size;
+  return (
+    <div className="screen words-hub">
+      <div className="screen-head">
+        <h1><Bi text={ui('navWords', lang)} /></h1>
+      </div>
+      <p className="hub-count">
+        <CrateIcon size={26} />
+        <Bi text={{ ...ui('wordsLearnedN', lang), en: ui('wordsLearnedN').en.replace('{n}', String(words)), help: lang?.ui.wordsLearnedN?.replace('{n}', String(words)) }} />
+      </p>
+      <button type="button" className="hub-card hub-alert" onClick={onPhrasebook}>
+        <span className="hub-icon" aria-hidden><AlertIcon size={34} /></span>
+        <span className="hub-text">
+          <span className="hub-nl" lang="nl">Noodzinnen</span>
+          <Bi text={ui('phrasebook', lang)} />
+        </span>
+        <ChevronIcon size={24} />
+      </button>
+      <button type="button" className="hub-card hub-tips" onClick={onTips}>
+        <span className="hub-icon" aria-hidden><span className="entry-emoji">💡</span></span>
+        <span className="hub-text">
+          <span className="hub-nl" lang="nl">Zo werkt het hier</span>
+          <Bi text={ui('cultureTips', lang)} />
+        </span>
+        <ChevronIcon size={24} />
+      </button>
+    </div>
   );
 }
 
@@ -127,28 +199,24 @@ const unitNumber = (u: number) => String(u + 1).padStart(2, '0');
  *  (not A1/B1, which read like language levels). */
 const lessonCode = (u: number, i: number) => `${u + 1}.${i + 1}`;
 
-export function Path({ progress, lang, onStart, onPhrasebook, onTips, onAbout }: {
+export function Path({ progress, lang, onStart, onPhrasebook, onAbout }: {
   progress: Progress;
   lang?: HelpLanguage;
   onStart: (lessonId: string, review: boolean) => void;
   onPhrasebook: () => void;
-  onTips: () => void;
   onAbout: () => void;
 }) {
   return (
     <div className="path">
-      <div className="entries">
-        <button type="button" className="entry entry-alert" onClick={onPhrasebook}>
-          <span className="entry-icon" aria-hidden><AlertIcon size={26} /></span>
-          <Bi text={ui('phrasebook', lang)} />
-          <ChevronIcon size={20} />
-        </button>
-        <button type="button" className="entry entry-tips" onClick={onTips}>
-          <span className="entry-icon" aria-hidden><span className="entry-emoji">💡</span></span>
-          <Bi text={ui('cultureTips', lang)} />
-          <ChevronIcon size={20} />
-        </button>
-      </div>
+      {/* Safety first: the emergency phrases stay one tap away on the path (also under Woorden). */}
+      <button type="button" className="sos-chip" onClick={onPhrasebook}>
+        <AlertIcon size={22} />
+        <span className="sos-text">
+          <span className="sos-nl" lang="nl">Noodzinnen</span>
+          <Bi className="sos-en" text={ui('phrasebook', lang)} />
+        </span>
+        <ChevronIcon size={18} />
+      </button>
 
       {units.map((unit, u) => {
         const unitOpen = unit.lessons.some((l) => isUnlocked(l.id, progress.completed));
@@ -324,16 +392,17 @@ export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, on
   onVoice: (voice: string | null) => void;
   onReset: () => void;
   onAbout: () => void;
-  onBack: () => void;
+  /** Absent when Settings is the "Ik" tab (the bottom bar leads away). */
+  onBack?: () => void;
 }) {
   return (
     <div className="screen">
       <div className="screen-head">
-        <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+        {onBack && <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>}
         <h1><Bi text={ui('settings', lang)} /></h1>
       </div>
       <h2><Bi text={ui('helpLanguage', lang)} /></h2>
-      <LanguagePicker current={progress.helpLang} onPick={onLang} />
+      <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta />
       {lang && !lang.reviewed && <p className="muted small">beta: {ui('beta').en}</p>}
 
       <h2><Bi text={ui('theme', lang)} /></h2>
@@ -436,14 +505,6 @@ function VoicePicker({ current, lang, onPick }: {
   );
 }
 
-/** Accuracy praise for the card header, like a teacher would say it. */
-function praiseFor(pct: number): { key: 'accPerfect' | 'accGreat' | 'accGood' | 'accOk'; tone: 'green' | 'orange' } {
-  if (pct >= 100) return { key: 'accPerfect', tone: 'green' };
-  if (pct >= 90) return { key: 'accGreat', tone: 'green' };
-  if (pct >= 70) return { key: 'accGood', tone: 'green' };
-  return { key: 'accOk', tone: 'orange' };
-}
-
 /** Counts a number up from 0 (skipped when the learner prefers less motion). */
 function useCountUp(target: number, delay = 350, ms = 900) {
   const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -463,9 +524,9 @@ function useCountUp(target: number, delay = 350, ms = 900) {
   return value;
 }
 
-function StatCard({ tone, tag, label, icon, value, final, done }: {
+function StatCard({ tone, tag, label, icon, value, final, done, foot }: {
   tone: 'gold' | 'green' | 'orange';
-  /** Short stencil tag on the label (XP, SCORE). */
+  /** Short stencil tag on the label (GOED, WOORDEN). */
   tag: string;
   label: Bilingual;
   icon: React.ReactNode;
@@ -474,6 +535,8 @@ function StatCard({ tone, tag, label, icon, value, final, done }: {
   final: string;
   /** The count-up has landed: the value gives a little pop. */
   done: boolean;
+  /** Small line under the value. */
+  foot?: Bilingual;
 }) {
   return (
     <div className={`stat-card stat-${tone} ${done ? 'stat-done' : ''}`} role="group" aria-label={`${label.en} ${final}`}>
@@ -482,21 +545,25 @@ function StatCard({ tone, tag, label, icon, value, final, done }: {
         {icon}
         <span className="stat-card-value">{value}</span>
       </div>
+      {foot && <Bi className="stat-card-foot" text={foot} />}
     </div>
   );
 }
 
-export function Result({ accuracy, xp, lang, onDone }: {
-  accuracy: number;
-  xp: number;
+export function Result({ right, total, newWords, words, lang, onDone }: {
+  /** Graded exercises right the first time, out of all graded ones. */
+  right: number;
+  total: number;
+  /** Words this lesson added to the learner's list, and the list's size now. */
+  newWords: number;
+  words: number;
   lang?: HelpLanguage;
   onDone: () => void;
 }) {
-  const pct = Math.round(accuracy * 100);
-  const praise = praiseFor(pct);
   // Each number starts counting once its card has popped in.
-  const shownXp = useCountUp(xp, 700, 700);
-  const shownPct = useCountUp(pct, 850, 800);
+  const shownRight = useCountUp(right, 700, 700);
+  const shownNew = useCountUp(newWords, 850, 600);
+  const fill = (t: Bilingual, n: number): Bilingual => ({ ...t, en: t.en.replace('{n}', String(n)), help: t.help?.replace('{n}', String(n)) });
   // Enter continues, as after every exercise (the screen has no other input).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -519,15 +586,24 @@ export function Result({ accuracy, xp, lang, onDone }: {
         <h1 className="result-title"><Bi text={ui('lessonComplete', lang)} /></h1>
         <p className="result-nl" lang="nl">Les voltooid!</p>
         <div className="result-stats">
-          <StatCard tone="gold" tag="XP" label={ui('xpTotal', lang)} icon={<CrateIcon size={30} />} value={String(shownXp)} final={`${xp} XP`} done={shownXp === xp} />
           <StatCard
-            tone={praise.tone}
-            tag="Score"
-            label={ui(praise.key, lang)}
-            icon={<BullseyeIcon size={30} />}
-            value={`${shownPct}%`}
-            final={`${ui('accuracy').en} ${pct}%`}
-            done={shownPct === pct}
+            tone="green"
+            tag="Goed"
+            label={ui('rightFirstTime', lang)}
+            icon={<CheckIcon size={30} />}
+            value={`${shownRight} / ${total}`}
+            final={`${right} / ${total}`}
+            done={shownRight === right}
+          />
+          <StatCard
+            tone="gold"
+            tag="Woorden"
+            label={ui('newWords', lang)}
+            icon={<CrateIcon size={30} />}
+            value={`+${shownNew}`}
+            final={`+${newWords}`}
+            done={shownNew === newWords}
+            foot={fill(ui('wordsLearnedN', lang), words)}
           />
         </div>
       </main>

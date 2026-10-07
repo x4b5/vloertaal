@@ -1,21 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
-import { findLesson } from './content/curriculum';
+import { findLesson, learnedWords } from './content/curriculum';
 import { getHelpLanguage } from './i18n';
 import type { LangCode } from './i18n/types';
 import { setPreferredVoice } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
-import { About, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar } from './components/Screens';
+import { About, BottomNav, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
 import { Milestone } from './components/Milestone';
-import { completeLesson, currentStreak, emptyProgress, loadProgress, saveProgress, streakWentUp, xpFor } from './lib/progress';
+import { completeLesson, currentStreak, emptyProgress, loadProgress, saveProgress, streakWentUp } from './lib/progress';
 
 type View =
   | { name: 'home' }
   | { name: 'lesson'; lessonId: string; review: boolean }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
-  | { name: 'result'; accuracy: number; xp: number; streakUp?: number }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number }
   | { name: 'streak'; streak: number }
+  | { name: 'words' }
   | { name: 'phrasebook' }
   | { name: 'tips' }
   | { name: 'settings' }
@@ -61,6 +62,15 @@ export default function App() {
     leaving.current = false;
     history.replaceState({ view: next, depth: current()?.depth ?? 0 } satisfies Entry, '');
     setView(next);
+  };
+  /** Bottom bar: Route is home; Woorden and Ik sit one level above it, so Back from either
+   *  returns to Route and switching between them doesn't stack entries. */
+  const tab = (t: Tab) => {
+    const next: View = t === 'words' ? { name: 'words' } : t === 'me' ? { name: 'settings' } : HOME;
+    if (next.name === viewRef.current.name) return;
+    if (t === 'route') back();
+    else if (viewRef.current.name === 'home') go(next);
+    else replace(next);
   };
   /** Back to the previous screen (as the Back button would), or home when there is none. */
   const back = () => {
@@ -113,11 +123,13 @@ export default function App() {
     case 'lesson': {
       const found = findLesson(view.lessonId);
       if (!found) return null;
-      const finish = ({ accuracy, review }: LessonResult) => {
+      const finish = ({ accuracy, review, right, total }: LessonResult) => {
         const next = completeLesson(progress, view.lessonId, accuracy, review, new Date());
         setProgress(next);
         const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
-        replace({ name: 'result', accuracy, xp: xpFor(accuracy, review), streakUp });
+        const before = learnedWords(progress.completed).size;
+        const words = learnedWords(next.completed).size;
+        replace({ name: 'result', right, total, newWords: words - before, words, streakUp });
       };
       return (
         <LessonPlayer
@@ -134,8 +146,10 @@ export default function App() {
     case 'result':
       return (
         <Result
-          accuracy={view.accuracy}
-          xp={view.xp}
+          right={view.right}
+          total={view.total}
+          newWords={view.newWords}
+          words={view.words}
           lang={lang}
           onDone={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}
         />
@@ -150,38 +164,52 @@ export default function App() {
       return <Phrasebook lang={lang} onBack={back} />;
     case 'settings':
       return (
-        <Settings
-          progress={progress}
-          lang={lang}
-          onLang={setLang}
-          onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
-          onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
-          onReset={() => {
-            // Keep look and voice; only learning progress is wiped.
-            setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice }));
-            back();
-          }}
-          onAbout={() => go({ name: 'about', from: 'settings' })}
-          onBack={back}
-        />
+        <>
+          <Settings
+            progress={progress}
+            lang={lang}
+            onLang={setLang}
+            onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
+            onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
+            onReset={() => {
+              // Keep look and voice; only learning progress is wiped.
+              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice }));
+              back();
+            }}
+            onAbout={() => go({ name: 'about', from: 'settings' })}
+          />
+          <BottomNav current="me" onTab={tab} />
+        </>
+      );
+    case 'words':
+      return (
+        <>
+          <WordsHub
+            progress={progress}
+            lang={lang}
+            onPhrasebook={() => go({ name: 'phrasebook' })}
+            onTips={() => go({ name: 'tips' })}
+          />
+          <BottomNav current="words" onTab={tab} />
+        </>
       );
     default:
       return (
         <>
           <TopBar
             streak={currentStreak(progress, new Date())}
-            xp={progress.xp}
+            words={learnedWords(progress.completed).size}
             lang={lang}
-            onSettings={() => go({ name: 'settings' })}
+            onLanguage={() => tab('me')}
           />
           <Path
             progress={progress}
             lang={lang}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
             onPhrasebook={() => go({ name: 'phrasebook' })}
-            onTips={() => go({ name: 'tips' })}
             onAbout={() => go({ name: 'about', from: 'home' })}
           />
+          <BottomNav current="route" onTab={tab} />
         </>
       );
   }

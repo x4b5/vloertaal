@@ -126,7 +126,7 @@ export const CalendarIcon = (p: IconProps) => (
   </Svg>
 );
 
-/** Kraft cardboard box: XP in the top bar. */
+/** Kraft cardboard box: words learned (top bar, result, Woorden). */
 export const CrateIcon = (p: IconProps) => (
   <Svg {...p}>
     <path d="M12 2.8l8.5 4.4v9.6L12 21.2l-8.5-4.4V7.2z" fill="#c8955b" stroke="#7e5428" strokeWidth="1.6" strokeLinejoin="round" />
@@ -137,4 +137,29 @@ export const CrateIcon = (p: IconProps) => (
 
 export const ChevronDownIcon = (p: IconProps) => (
   <Svg {...p}><path d="M6 9l6 6 6-6" {...stroke} /></Svg>
+);
+
+/** Warehouse loading door: the "Route" tab (the lesson path). */
+export const RouteIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M3.5 20V9.5L12 4.5l8.5 5V20" {...stroke} strokeWidth={2.4} />
+    <path d="M7.5 20v-7.5h9V20M7.5 15.5h9M7.5 18h9" {...stroke} strokeWidth={2} />
+  </Svg>
+);
+
+/** Ruled list: the "Woorden" tab (emergency phrases and workplace tips). */
+export const ListIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M4.5 6.5h15M4.5 12h15M4.5 17.5h10" {...stroke} strokeWidth={2.4} />
+  </Svg>
+);
+
+/** A worker in a hard hat: the "Ik" tab (settings and you). */
+export const WorkerIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M6.5 9.5a5.5 5.5 0 0 1 11 0z" fill="currentColor" />
+    <path d="M5 9.5h14" {...stroke} strokeWidth={2.2} />
+    <circle cx="12" cy="12.6" r="2.6" {...stroke} strokeWidth={2.2} />
+    <path d="M6 21c.6-3.6 3-5.4 6-5.4s5.4 1.8 6 5.4" {...stroke} strokeWidth={2.4} />
+  </Svg>
 );

@@ -320,6 +320,14 @@ export const allDialogues: Dialogue[] = allLessons.flatMap((l) => l.dialogues ??
 /** Every learner reply; wrong options in a chat exercise come from here. */
 export const allReplies: ChatLine[] = allDialogues.map((d) => d.reply);
 
+/**
+ * Words learned: every distinct word of the lessons the learner has finished (each finished
+ * lesson showed and practised all its words). Counted from progress, so nothing new is stored.
+ */
+export function learnedWords(completed: Record<string, unknown>): Set<string> {
+  return new Set(allLessons.filter((l) => completed[l.id]).flatMap((l) => l.words.map((w) => w.id)));
+}
+
 export function findLesson(id: string): { unit: Unit; lesson: Lesson } | undefined {
   for (const unit of units) {
     const lesson = unit.lessons.find((l) => l.id === id);
