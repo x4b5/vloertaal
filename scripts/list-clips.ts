@@ -2,7 +2,7 @@
 // stable id, for the recorded (Piper) voices generated in CI.
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { cultureTips } from '../src/content/culture';
-import { units } from '../src/content/curriculum';
+import { phrasebookExtras, units } from '../src/content/curriculum';
 import { VOICE_SAMPLE } from '../src/lib/voices';
 
 const clips = new Map<string, string>();
@@ -19,6 +19,8 @@ for (const u of units)
     }
   }
 for (const t of cultureTips) add(t.phrase.id, t.phrase.nl);
+// Emergency phrases that only live in the phrasebook ("Bel 112!").
+for (const p of phrasebookExtras) add(p.id, p.nl);
 add('x.sample', VOICE_SAMPLE);
 
 mkdirSync('public/audio', { recursive: true });
