@@ -23,10 +23,10 @@ export default function App() {
   const [view, setView] = useState<View>({ name: 'home' });
   const lang = getHelpLanguage(progress.helpLang);
 
-  useEffect(() => saveProgress(progress), [progress]);
-  useEffect(() => setPreferredVoice(progress.voice), [progress.voice]);
-  useEffect(() => applyTheme(progress.theme), [progress.theme]);
-  useEffect(() => window.scrollTo(0, 0), [view.name]);
+  useEffect(() => { saveProgress(progress); }, [progress]);
+  useEffect(() => { setPreferredVoice(progress.voice); }, [progress.voice]);
+  useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
+  useEffect(() => { window.scrollTo(0, 0); }, [view.name]);
 
   const setLang = (code: LangCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
 

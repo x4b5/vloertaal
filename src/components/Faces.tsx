@@ -193,15 +193,15 @@ const bram: FaceKit = {
     const g = {
       neutral: { gx: 1.4, gy: 0.4 },
       thinking: { gx: 2, gy: -3.2 },
-      pleased: { gx: 0.6, gy: 0.8 },
+      pleased: { gx: 0.8, gy: -2 },
       disappointed: { gx: 0.4, gy: 2.4 },
     }[e];
     const L: Partial<EyeSpec> =
-      e === 'pleased' ? { lower: 0.42 } :
+      e === 'pleased' ? { lower: 0.34 } :
       e === 'thinking' ? { lower: 0.28, lid: 0.12 } :
       e === 'disappointed' ? { lid: 0.24, lidOuter: 0.36 } : {};
     const R: Partial<EyeSpec> =
-      e === 'pleased' ? { lower: 0.42 } :
+      e === 'pleased' ? { lower: 0.34 } :
       e === 'disappointed' ? { lid: 0.24, lidOuter: 0.36 } : {};
     return (
       <>
@@ -242,8 +242,9 @@ const bram: FaceKit = {
         // Nervous grimace: clenched teeth, crooked
         return (
           <g>
-            <path d="M52 77.4Q60 75.4 68.6 78.2L68 82.6Q60 80.8 52.6 82.4Z" fill={WHITE} stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
-            <path d="M57.4 76.6V81.6M63 76.8V81.8M52.4 79.9Q60 78.4 68.3 80.4" fill="none" stroke="#c9c2bd" strokeWidth="1.2" />
+            <path d="M51.6 77.6Q60 75.2 69 77.8Q69.4 83.2 60.4 82.8Q52 83.4 51.6 77.6Z" fill={MOUTH} />
+            <path d="M53 78.2Q60 76.4 67.8 78.4V81Q60 79.6 53.2 81.4Z" fill={WHITE} />
+            <path d="M57.6 77.4V80.6M62.6 77.4V80.4" stroke="#d9cfc9" strokeWidth="1.1" />
           </g>
         );
       case 'joy':
@@ -331,7 +332,7 @@ const henk: FaceKit = {
     const map: Record<string, [Partial<EyeSpec>, Partial<EyeSpec>]> = {
       neutral: [{ lid: 0.46, gx: 0.6, gy: 1 }, { lid: 0.5, gx: 0.6, gy: 1 }],
       thinking: [{ lid: 0.58, lower: 0.18, gx: -1.6, gy: -0.6 }, { lid: 0.22, gx: -1.6, gy: -1.4 }],
-      pleased: [{ lid: 0.42, lower: 0.3, gy: 0.6 }, { lid: 0.42, lower: 0.3, gy: 0.6 }],
+      pleased: [{ lid: 0.36, lower: 0.26, gy: -0.4 }, { lid: 0.4, lower: 0.26, gy: -0.4 }],
       disappointed: [{ lid: 0.34, lidOuter: 0.5, gy: 1.2 }, { lid: 0.34, lidOuter: 0.5, gy: 1.2 }],
     };
     const [L, R] = map[e];
@@ -388,7 +389,7 @@ const jada: FaceKit = {
       // Half-lidded left eye, wide-ish right eye under a cocked brow
       neutral: [{ lid: 0.4, lidOuter: 0.3, gx: 1.6, gy: 0.6 }, { lid: 0.14, gx: 1.6, gy: 0.4 }],
       thinking: [{ lid: 0.18, gx: -2.4, gy: -2.4 }, { lid: 0.1, gx: -2.4, gy: -2.4 }],
-      pleased: [{ lid: 0.2, lower: 0.38 }, { lid: 0.16, lower: 0.38 }],
+      pleased: [{ lid: 0.16, lower: 0.3, gx: 1, gy: -1.2 }, { lid: 0.12, lower: 0.3, gx: 1, gy: -1.2 }],
       // Side-eye: flat heavy lids, pupils parked at the side
       disappointed: [{ lid: 0.48, gx: -2.6, gy: 0.6 }, { lid: 0.48, gx: -2.6, gy: 0.6 }],
     };

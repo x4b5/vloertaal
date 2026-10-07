@@ -177,8 +177,8 @@ const LOOKS: Record<CharacterId, Look> = {
     ),
   },
   jada: {
-    skin: '#7b4a2e',
-    shade: '#633a22',
+    skin: '#8d5536',
+    shade: '#6e3f25',
     brow: '#1e1512',
     sleeve: '#e3e9ee',
     // Round cheeks, small pointed chin
@@ -264,6 +264,14 @@ function Arms({ mood, look }: { mood: Mood; look: Look }) {
         <>
           {leftDown}
           <Arm {...s} className="ch-arm ch-arm-r ch-arm-wave" d="M90 102Q104 96 105 78" hand={[105, 73]} />
+        </>
+      );
+    case 'thinking':
+      // Hand on the chin
+      return (
+        <>
+          {leftDown}
+          <Arm {...s} className="ch-arm ch-arm-r" d="M89 104Q92 96 72 94" hand={[68, 92]} />
         </>
       );
     case 'cheer':

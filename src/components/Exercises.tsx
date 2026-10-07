@@ -133,7 +133,7 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
 
 /** Dutch word shown → pick the English meaning. */
 export function MeaningExercise({ ex, lang, locked, onAnswer, verdict }: Props<'meaning'>) {
-  useEffect(() => speak(ex.word.nl), [ex.word]);
+  useEffect(() => { speak(ex.word.nl); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
@@ -210,7 +210,7 @@ function wordSize(nl: string): string {
 
 /** Only audio → pick the written Dutch word. */
 export function ListenExercise({ ex, lang, locked, onAnswer }: Props<'listen'>) {
-  useEffect(() => speak(ex.word.nl), [ex.word]);
+  useEffect(() => { speak(ex.word.nl); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoYouHear', lang)} />
@@ -352,7 +352,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict }: Props<'bu
 /** Hear a word → type it. Forgiving about capitals, articles and one typo. */
 export function TypeExercise({ ex, lang, locked, onAnswer }: Props<'type'>) {
   const [value, setValue] = useState('');
-  useEffect(() => speak(ex.word.nl), [ex.word]);
+  useEffect(() => { speak(ex.word.nl); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('typeWhatYouHear', lang)} />
@@ -391,7 +391,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
   const { prompt, reply } = ex.dialogue;
   const [picked, setPicked] = useState<ChatLine | null>(null);
   const [hint, setHint] = useState(false);
-  useEffect(() => speak(prompt.nl), [prompt]);
+  useEffect(() => { speak(prompt.nl); }, [prompt]);
   const mine = picked && locked ? (picked.id === reply.id ? 'right' : 'wrong') : '';
   // The colleague asks; "you" are Amina. The colleague talks while the line plays.
   const them = castFor(prompt.id, ['bram', 'henk', 'jada']);
