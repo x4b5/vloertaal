@@ -6,10 +6,13 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'check = only show cost, sample = one test line per voice, all = everything missing'
+        description: 'check = only show cost, sample = a few test lines per voice, all = everything missing or outdated'
         type: choice
         options: [check, sample, all]
         default: check
+      voices:
+        description: 'Only these voices, comma separated (e.g. berend). Empty = all voices'
+        default: ''
       max_credits:
         description: 'Stop before spending more than this'
         default: '12000'
@@ -27,6 +30,7 @@ jobs:
     env:
       ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
       MAX_CREDITS: ${{ inputs.max_credits }}
+      VOICES: ${{ inputs.voices }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
