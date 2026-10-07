@@ -151,6 +151,14 @@
     "c.cake.p": "Ik ben vandaag jarig! Wil je een stukje taart?",
     "c.speakup.p": "Ik zit ergens mee. Kunnen we even praten?",
     "c.no.p": "Nee, dat lukt vandaag niet. Morgen kan ik wel."
+   },
+   "takes": {
+    "w.hallo": 2,
+    "w.goedemorgen": 2,
+    "w.ja": 2,
+    "c.hello.a": 2,
+    "w.collega": 2,
+    "x.sample": 2
    }
   },
   {
@@ -304,6 +312,14 @@
     "c.speakup.p": "Ik zit ergens mee. Kunnen we even praten?",
     "c.no.p": "Nee, dat lukt vandaag niet. Morgen kan ik wel.",
     "x.sample": "Goedemorgen! Draag altijd je helm."
+   },
+   "takes": {
+    "w.hallo": 2,
+    "w.goedemorgen": 2,
+    "w.ja": 2,
+    "c.hello.a": 2,
+    "w.collega": 2,
+    "x.sample": 2
    }
   },
   {
@@ -457,6 +473,14 @@
     "c.cake.p": "Ik ben vandaag jarig! Wil je een stukje taart?",
     "c.speakup.p": "Ik zit ergens mee. Kunnen we even praten?",
     "c.no.p": "Nee, dat lukt vandaag niet. Morgen kan ik wel."
+   },
+   "takes": {
+    "w.hallo": 2,
+    "w.goedemorgen": 2,
+    "w.ja": 2,
+    "c.hello.a": 2,
+    "w.collega": 2,
+    "x.sample": 2
    }
   },
   {
@@ -610,6 +634,14 @@
     "c.speakup.p": "Ik zit ergens mee. Kunnen we even praten?",
     "c.no.p": "Nee, dat lukt vandaag niet. Morgen kan ik wel.",
     "x.sample": "Goedemorgen! Draag altijd je helm."
+   },
+   "takes": {
+    "w.hallo": 2,
+    "w.goedemorgen": 2,
+    "w.ja": 2,
+    "c.hello.a": 2,
+    "w.collega": 2,
+    "x.sample": 2
    }
   }
  ]
