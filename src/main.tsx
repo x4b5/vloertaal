@@ -1,11 +1,18 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import { ShotHarness } from './dev/ShotHarness';
 import './styles.css';
+
+const params = new URLSearchParams(location.search);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    {import.meta.env.DEV && params.get('shot') ? (
+      <ShotHarness shot={params.get('shot')!} lang={params.get('lang')} />
+    ) : (
+      <App />
+    )}
   </StrictMode>,
 );
 

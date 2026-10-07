@@ -36,16 +36,19 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
 
 const needsAudio = (ex: Exercise) => ex.kind === 'listen' || ex.kind === 'type';
 
-export function LessonPlayer({ lesson, review, lang, onQuit, onFinish }: {
+export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, startAt = 0 }: {
   lesson: Lesson;
   review: boolean;
+  /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
+  exercises?: Exercise[];
+  startAt?: number;
   lang?: HelpLanguage;
   onQuit: () => void;
   onFinish: (r: LessonResult) => void;
 }) {
-  const initial = useMemo(() => buildLesson(lesson, { review }), [lesson, review]);
+  const initial = useMemo(() => exercises ?? buildLesson(lesson, { review }), [exercises, lesson, review]);
   const [queue, setQueue] = useState<Exercise[]>(initial);
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(startAt);
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [checked, setChecked] = useState(false);
   const graded = useRef({ right: 0, total: 0 });
