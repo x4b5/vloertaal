@@ -1,4 +1,5 @@
 import { Character } from './Characters';
+import { LessonCelebration } from './Celebrate';
 import { findItem, phrasebookIds, units } from '../content/curriculum';
 import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
@@ -13,7 +14,6 @@ import {
   BackIcon,
   BoltIcon,
   BullseyeIcon,
-  CelebrationArt,
   CheckIcon,
   ChevronIcon,
   CrownIcon,
@@ -310,13 +310,13 @@ function praiseFor(pct: number): { key: 'accPerfect' | 'accGreat' | 'accGood' | 
 }
 
 /** Counts a number up from 0 (skipped when the learner prefers less motion). */
-function useCountUp(target: number, ms = 900) {
+function useCountUp(target: number, delay = 350, ms = 900) {
   const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
   const [value, setValue] = useState(still ? target : 0);
   useEffect(() => {
     if (still) return setValue(target);
     let raf = 0;
-    const t0 = performance.now() + 350;
+    const t0 = performance.now() + delay;
     const tick = (now: number) => {
       const k = Math.min(1, Math.max(0, (now - t0) / ms));
       setValue(Math.round(target * (1 - (1 - k) ** 3)));
@@ -324,20 +324,22 @@ function useCountUp(target: number, ms = 900) {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [target, ms, still]);
+  }, [target, delay, ms, still]);
   return value;
 }
 
-function StatCard({ tone, label, icon, value, final }: {
+function StatCard({ tone, label, icon, value, final, done }: {
   tone: 'gold' | 'green' | 'orange';
   label: Bilingual;
   icon: React.ReactNode;
   value: string;
   /** Screen readers hear the end value, not the count-up. */
   final: string;
+  /** The count-up has landed: the value gives a little pop. */
+  done: boolean;
 }) {
   return (
-    <div className={`stat-card stat-${tone}`} role="group" aria-label={`${label.en} ${final}`}>
+    <div className={`stat-card stat-${tone} ${done ? 'stat-done' : ''}`} role="group" aria-label={`${label.en} ${final}`}>
       <div className="stat-card-head"><Bi text={label} /></div>
       <div className="stat-card-body" aria-hidden>
         {icon}
@@ -355,8 +357,9 @@ export function Result({ accuracy, xp, lang, onDone }: {
 }) {
   const pct = Math.round(accuracy * 100);
   const praise = praiseFor(pct);
-  const shownXp = useCountUp(xp);
-  const shownPct = useCountUp(pct);
+  // Each number starts counting once its card has popped in.
+  const shownXp = useCountUp(xp, 700, 700);
+  const shownPct = useCountUp(pct, 850, 800);
   // Enter continues, as after every exercise (the screen has no other input).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -368,17 +371,18 @@ export function Result({ accuracy, xp, lang, onDone }: {
   return (
     <div className="player result-screen">
       <main className="player-body result">
-        <CelebrationArt />
+        <LessonCelebration />
         <h1 className="result-title"><Bi text={ui('lessonComplete', lang)} /></h1>
         <p className="result-nl" lang="nl">Les voltooid!</p>
         <div className="result-stats">
-          <StatCard tone="gold" label={ui('xpTotal', lang)} icon={<BoltIcon size={30} />} value={String(shownXp)} final={`${xp} XP`} />
+          <StatCard tone="gold" label={ui('xpTotal', lang)} icon={<BoltIcon size={30} />} value={String(shownXp)} final={`${xp} XP`} done={shownXp === xp} />
           <StatCard
             tone={praise.tone}
             label={ui(praise.key, lang)}
             icon={<BullseyeIcon size={30} />}
             value={`${shownPct}%`}
             final={`${ui('accuracy').en} ${pct}%`}
+            done={shownPct === pct}
           />
         </div>
       </main>

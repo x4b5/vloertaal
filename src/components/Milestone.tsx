@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
-import { StreakArt, StreakFlame } from './StreakArt';
+import { Burst, StreakHero } from './Celebrate';
+import { StreakFlame } from './StreakArt';
 
 /**
  * Day-streak milestone ("Mijlpaal"), shown after the lesson-complete screen on the first
@@ -18,7 +19,7 @@ export function Milestone({ streak, lang, onDone }: {
   const [shown, setShown] = useState(still ? streak : streak - 1);
   useEffect(() => {
     if (still) return setShown(streak);
-    const t = window.setTimeout(() => setShown(streak), 700);
+    const t = window.setTimeout(() => setShown(streak), 1000);
     return () => window.clearTimeout(t);
   }, [streak, still]);
 
@@ -38,9 +39,15 @@ export function Milestone({ streak, lang, onDone }: {
   return (
     <div className="player milestone-screen">
       <main className="player-body milestone">
-        <StreakArt />
-        <div className="streak-count" role="img" aria-label={`${streak} ${label.en}`}>
-          <StreakFlame />
+        <StreakHero lit={shown === streak} />
+        <div className={`streak-count ${shown === streak ? 'streak-lit' : ''}`} role="img" aria-label={`${streak} ${label.en}`}>
+          <span className="streak-flame-wrap">
+            {/* Sparks fly off the flame when the new day is counted. */}
+            <svg className="streak-sparks" viewBox="0 0 120 120" aria-hidden focusable="false">
+              <Burst x={60} y={60} r={58} color="#ffc800" />
+            </svg>
+            <StreakFlame />
+          </span>
           <span key={shown} className={`streak-num ${shown === streak ? 'streak-num-new' : ''}`} aria-hidden>
             {shown}
           </span>

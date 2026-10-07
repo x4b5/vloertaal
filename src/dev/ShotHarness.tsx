@@ -21,10 +21,10 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
   if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   // The whole cast in every mood, big, for judging the drawings.
   if (shot === 'cast') {
-    const moods: Mood[] = ['idle', 'talking', 'thinking', 'pleased', 'sad', 'cheer'];
+    const moods: Mood[] = ['idle', 'happy', 'sad', 'pleased', 'thinking', 'cheer'];
     return (
       <div style={{ display: 'grid', gridTemplateColumns: `repeat(${moods.length}, 1fr)`, gap: 8, padding: 16 }}>
-        {CAST.flatMap((who) => moods.map((m) => <Character key={who + m} who={who} mood={m} size={180} />))}
+        {CAST.flatMap((who) => moods.map((m) => <Character key={who + m} who={who} mood={m} size={150} />))}
       </div>
     );
   }

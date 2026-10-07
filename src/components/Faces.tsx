@@ -11,7 +11,8 @@
  *    a one-sided smile.
  *
  * Expression sheet per character: neutral (resting), thinking, pleased, disappointed, and
- * joy (only for the big cheer on the result screen). While talking, the mouth cycles through
+ * joy (a right answer): Bram's eyes pop wide open, Amina squeezes hers shut with a small open
+ * smile, Henk and Jada each wink (on opposite sides) with a cocked brow and an open smirk. While talking, the mouth cycles through
  * closed / small open / wide open / round (see TALK_SEQUENCE in Characters.tsx).
  *
  * Coordinates are in the 120×140 character box; the face sits roughly in x 33–87, y 26–90.
@@ -132,7 +133,7 @@ function Eye(s: EyeSpec & { skin: string }) {
   );
 }
 
-/** Eyes squeezed shut with joy (only for the cheer). Different arc per character. */
+/** Eyes squeezed shut with joy (Amina's happy face). */
 const joyArcs = (lx: number, rx: number, y: number, w: number, h: number, sw = 3.4) => (
   <path
     d={`M${lx - w} ${y}Q${lx} ${y - h} ${lx + w} ${y}M${rx - w} ${y}Q${rx} ${y - h} ${rx + w} ${y}`}
@@ -175,20 +176,22 @@ function talkShape(f: TalkFrame, cx: number, cy: number, s = 1, lip = INK): Reac
   }
 }
 
-/** A big open laugh, for the cheer only. */
-const laugh = (cx: number, cy: number, w: number, h: number) => (
-  <g>
-    <path d={`M${cx - w} ${cy}H${cx + w}Q${cx + w} ${cy + h} ${cx} ${cy + h}Q${cx - w} ${cy + h} ${cx - w} ${cy}Z`} fill={MOUTH} />
-    <path d={`M${cx - w + 1.5} ${cy}H${cx + w - 1.5}V${cy + 3.4}H${cx - w + 1.5}Z`} fill={WHITE} />
-    <path d={`M${cx - w * 0.6} ${cy + h - 3.5}Q${cx} ${cy + h - 8} ${cx + w * 0.6} ${cy + h - 3.5}Q${cx} ${cy + h + 0.5} ${cx - w * 0.6} ${cy + h - 3.5}Z`} fill={TONGUE} />
-  </g>
-);
-
 /* ---------- Bram: eager, friendly, lopsided ---------- */
 
 const bram: FaceKit = {
   eyes: (e, skin) => {
-    if (e === 'joy') return joyArcs(50, 70, 66, 6.5, 8.5);
+    if (e === 'joy') {
+      // Not squeezed shut like the others: Bram's eyes pop wide open, with an extra sparkle.
+      const j = { cy: 63.4, rx: 7.6, ry: 9, pr: 5.2, gx: 1, gy: -1.2, skin };
+      return (
+        <>
+          <Eye {...j} cx={50} side={-1} />
+          <Eye {...j} cx={70} side={1} />
+          <circle cx="48.4" cy="65.6" r="1.2" fill={WHITE} />
+          <circle cx="68.4" cy="65.6" r="1.2" fill={WHITE} />
+        </>
+      );
+    }
     const base = { cy: 64, rx: 7, ry: 8.2, pr: 4.6, skin };
     const g = {
       neutral: { gx: 1.4, gy: 0.4 },
@@ -216,7 +219,7 @@ const bram: FaceKit = {
       thinking: 'M43 57.2L55.5 56.4M65 52.4Q71.5 48.4 77.4 52',
       pleased: 'M43 54Q49 50 55.5 52.6M64.5 52.6Q71 50 77 54',
       disappointed: 'M43.5 56.2Q49 56 55 51.6M65 51.6Q71 56 76.5 56.2',
-      joy: 'M43 54Q49 49.5 55.5 52.4M64.5 52.4Q71 49.5 77 54',
+      joy: 'M42.4 50.6Q49 45 55.6 48.6M64.6 47.4Q71.4 43.6 77.8 48.4',
     }[e];
     return stroke(d, c, 4);
   },
@@ -248,7 +251,14 @@ const bram: FaceKit = {
           </g>
         );
       case 'joy':
-        return laugh(60, 76, 10, 13);
+        // A big lopsided "YES!" grin, higher on his right
+        return (
+          <g>
+            <path d="M49.6 75.6Q60 79 71.4 72.4Q71 87.6 60.4 87.6Q50.4 87.6 49.6 75.6Z" fill={MOUTH} />
+            <path d="M51 76.2Q60 79.2 70.2 73.4L70 76.4Q60 81.6 51.4 79Z" fill={WHITE} />
+            <path d="M54 84.6Q60.6 79.6 67 84Q60.6 89 54 84.6Z" fill={TONGUE} />
+          </g>
+        );
       default:
         // Lopsided grin with a dimple on the high side
         return (
@@ -313,7 +323,13 @@ const amina: FaceKit = {
       case 'disappointed':
         return stroke('M54.4 79.4Q57 77.2 59.6 78.8Q62.4 77 65.4 79.6', INK, 2.4);
       case 'joy':
-        return laugh(60, 74.6, 8, 11);
+        return (
+          <g>
+            <path d="M53 74.4Q60 77.4 67 74.4Q66 82.4 60 82.4Q54 82.4 53 74.4Z" fill={MOUTH} />
+            <path d="M54 74.8Q60 77.2 66 74.8L65.8 76.6Q60 78.6 54.2 76.6Z" fill={WHITE} />
+            <path d="M56.4 80.6Q60 78.4 63.6 80.6Q60 83 56.4 80.6Z" fill={TONGUE} />
+          </g>
+        );
       default:
         // Small shy smile that wobbles a little to one side
         return stroke('M54.2 76Q56.8 78.8 60 77.4Q63.2 78.6 65.6 75.4', INK, 2.4);
@@ -327,7 +343,16 @@ const amina: FaceKit = {
 
 const henk: FaceKit = {
   eyes: (e, skin) => {
-    if (e === 'joy') return joyArcs(50, 70, 63, 5, 5.5, 3);
+    if (e === 'joy') {
+      // A wink: left eye shut with a crease, right eye open under a cocked brow.
+      return (
+        <>
+          {stroke('M44.6 63.6Q50 59.6 55.4 63.6', INK, 3)}
+          {stroke('M43 66.4l-2.4 1.4M43.4 61.2l-2.4 -1', INK, 1.4)}
+          <Eye cy={62} rx={5.6} ry={6.2} pr={3.2} lid={0.22} lower={0.24} gx={0.6} gy={-0.4} cx={70} side={1} skin={skin} />
+        </>
+      );
+    }
     const base = { cy: 62, rx: 5.4, ry: 5.8, pr: 3, skin };
     const map: Record<string, [Partial<EyeSpec>, Partial<EyeSpec>]> = {
       neutral: [{ lid: 0.46, gx: 0.6, gy: 1 }, { lid: 0.5, gx: 0.6, gy: 1 }],
@@ -349,7 +374,7 @@ const henk: FaceKit = {
       thinking: 'M41.5 51.6L56 52.4M64 47.4Q71 44.2 78.6 47.6',
       pleased: 'M41.5 49.6Q49 47.8 56 49M64 48.6Q71 47.6 78.6 49.8',
       disappointed: 'M41.5 48.4L56 51.8M64 51.8L78.6 48.4',
-      joy: 'M41.5 49Q49 46 56 48M64 48Q71 46 78.6 49',
+      joy: 'M41.5 54L56 52.6M64 46.6Q71 42.4 78.6 47',
     }[e];
     return stroke(d, c, 5.2);
   },
@@ -369,7 +394,12 @@ const henk: FaceKit = {
       case 'disappointed':
         return stroke('M54.6 84Q60.6 80.2 66.2 83.6', INK, 2.6);
       case 'joy':
-        return laugh(60.5, 79.6, 7.5, 9);
+        return (
+          <g>
+            <path d="M54.6 80.4Q61 83 68.2 77.6Q67.2 85.6 61 85.6Q56 85.6 54.6 80.4Z" fill={MOUTH} />
+            <path d="M55.6 80.8Q61 82.8 67.4 78.4L67.2 80.4Q61 84 56 82.4Z" fill={WHITE} />
+          </g>
+        );
       default:
         // Deadpan: short, flat, a bit off-centre
         return stroke('M56.4 82H65.4', INK, 2.6);
@@ -383,7 +413,16 @@ const henk: FaceKit = {
 
 const jada: FaceKit = {
   eyes: (e, skin) => {
-    if (e === 'joy') return joyArcs(50, 70, 65, 6.4, 7.6);
+    if (e === 'joy') {
+      // Wink on the right with her eyeliner wing; the left eye smiles.
+      return (
+        <>
+          <Eye cy={63.6} rx={7} ry={6.6} pr={4.2} liner="wing" iris="#3a2116" lid={0.16} lower={0.32} gx={1.4} gy={-0.6} cx={50} side={-1} skin={skin} />
+          {stroke('M63.4 64Q70 67.6 76.6 63.2', INK, 3)}
+          {stroke('M76.4 63.4l3.6 -2.8', INK, 2.4)}
+        </>
+      );
+    }
     const base = { cy: 63.6, rx: 7, ry: 6.6, pr: 4.2, liner: 'wing' as const, iris: '#3a2116', skin };
     const map: Record<string, [Partial<EyeSpec>, Partial<EyeSpec>]> = {
       // Half-lidded left eye, wide-ish right eye under a cocked brow
@@ -407,7 +446,7 @@ const jada: FaceKit = {
       thinking: 'M42.6 52.4Q49 48 55.4 51.8M64.6 55.2L77.4 55.4',
       pleased: 'M43 54.6Q49 52 55.4 53.6M64.6 52.6Q71 49 77.6 52.6',
       disappointed: 'M43 55.4L55.4 56.4M64.6 56.4L77.4 55.2',
-      joy: 'M43 54Q49 50 55.4 52.4M64.6 52.4Q71 50 77.4 54',
+      joy: 'M42.6 52.6Q49 47.6 55.4 51M64.6 57.4Q71 55 77.4 58',
     }[e];
     return stroke(d, c, 3.4);
   },
@@ -432,7 +471,13 @@ const jada: FaceKit = {
       case 'disappointed':
         return stroke('M54.8 79.2L65.8 78.4Q67.4 78.4 68 80.4', INK, 2.6);
       case 'joy':
-        return laugh(60, 75.6, 9, 12);
+        return (
+          <g>
+            <path d="M53 76.6Q61 79.4 69.8 72.8Q68.6 82.6 60.6 82.6Q54.6 82.4 53 76.6Z" fill={MOUTH} />
+            <path d="M54.2 77.2Q61 79.4 68.8 74L68.4 76.4Q61 81 54.6 79.2Z" fill={WHITE} />
+            {stroke('M69.6 70.8Q71.8 72.4 71 74.8', INK, 1.8)}
+          </g>
+        );
       default:
         // Smirk: flat on the left, curling up on the right, with a dimple
         return (
