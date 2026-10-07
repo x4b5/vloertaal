@@ -65,6 +65,12 @@ const lang: HelpLanguage = {
     quitHint: 'إجاباتك في هذا الدرس لن تُحفظ.',
     keepGoing: 'استمر',
     stopLesson: 'أوقف الدرس',
+    fullVersion: 'النسخة الكاملة',
+    unlockFull: 'افتح النسخة الكاملة',
+    unlockHint: 'الوحدة الأولى فقط مفتوحة الآن. أدخل كلمة المرور لكل الدروس.',
+    password: 'كلمة المرور',
+    wrongPassword: 'كلمة المرور غير صحيحة. حاول مرة أخرى.',
+    unlock: 'افتح',
   },
   gloss: {
     // Units

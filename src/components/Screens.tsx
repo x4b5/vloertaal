@@ -10,6 +10,8 @@ import { useEffect, useState } from 'react';
 import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
 import { VOICE_SAMPLE } from '../lib/voices';
 import { isUnlocked } from '../lib/exercises';
+import { type Access, unitAllowed } from '../lib/access';
+import { UpgradeCard } from './Gate';
 import type { Progress, ThemeChoice } from '../lib/progress';
 import { Bi, HelpText } from './Bi';
 import { LogoMark, Wordmark } from './Logo';
@@ -199,9 +201,13 @@ const unitNumber = (u: number) => String(u + 1).padStart(2, '0');
  *  (not A1/B1, which read like language levels). */
 const lessonCode = (u: number, i: number) => `${u + 1}.${i + 1}`;
 
-export function Path({ progress, lang, onStart, onPhrasebook, onAbout }: {
+export function Path({ progress, lang, onStart, onPhrasebook, onAbout, access = 'full', onUpgrade }: {
   progress: Progress;
   lang?: HelpLanguage;
+  /** Preview: only the first unit can be played; the rest shows a "full version" lock. */
+  access?: Access;
+  /** Opens the unlock card (Settings) from a locked unit sign. */
+  onUpgrade?: () => void;
   onStart: (lessonId: string, review: boolean) => void;
   onPhrasebook: () => void;
   onAbout: () => void;
@@ -219,11 +225,14 @@ export function Path({ progress, lang, onStart, onPhrasebook, onAbout }: {
       </button>
 
       {units.map((unit, u) => {
-        const unitOpen = unit.lessons.some((l) => isUnlocked(l.id, progress.completed));
+        const allowed = unitAllowed(unit.id, access);
+        const unitOpen = unit.lessons.some((l) => isUnlocked(l.id, progress.completed, access));
         return (
-          <section key={unit.id} className={`unit ${unitOpen ? '' : 'unit-locked'}`}>
+          <section key={unit.id} className={`unit ${unitOpen ? '' : 'unit-locked'} ${allowed ? '' : 'unit-full-only'}`}>
             {u > 0 && <div className="hazard" aria-hidden />}
-            <div className="unit-head">
+            {/* In the preview, tapping a later unit's sign opens the unlock card (the note below
+                is the same action as a real button, for keyboards and screen readers). */}
+            <div className="unit-head" onClick={allowed ? undefined : onUpgrade}>
               <span className="unit-num" aria-hidden>{unitNumber(u)}</span>
               <div className="unit-titles">
                 <h2>
@@ -237,11 +246,19 @@ export function Path({ progress, lang, onStart, onPhrasebook, onAbout }: {
               </div>
               {!unitOpen && <LockIcon size={26} className="unit-lock" />}
             </div>
+            {!allowed && (
+              <button type="button" className="full-only-note" onClick={onUpgrade}>
+                <LockIcon size={16} />
+                <span lang="nl">Volledige versie</span>
+                <Bi className="full-only-en" text={ui('fullVersion', lang)} />
+                <ChevronIcon size={16} />
+              </button>
+            )}
             <ol className="bays">
               {unit.lessons.map((lesson, i) => {
                 const record = progress.completed[lesson.id];
-                const open = isUnlocked(lesson.id, progress.completed);
-                const state = record ? 'done' : open ? 'now' : 'locked';
+                const open = isUnlocked(lesson.id, progress.completed, access);
+                const state = !allowed ? 'locked' : record ? 'done' : open ? 'now' : 'locked';
                 const code = lessonCode(u, i);
                 const first = lesson.words[0];
                 return (
@@ -384,7 +401,7 @@ function useVoices() {
   return { device, recorded };
 }
 
-export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, onAbout, onBack }: {
+export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade }: {
   progress: Progress;
   lang?: HelpLanguage;
   onLang: (code: LangCode | null) => void;
@@ -394,13 +411,28 @@ export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, on
   onAbout: () => void;
   /** Absent when Settings is the "Ik" tab (the bottom bar leads away). */
   onBack?: () => void;
+  access?: Access;
+  /** Preview: the unlock card's password was right. */
+  onAccess?: (a: Access) => void;
+  /** Opened from a locked unit: scroll the unlock card into view. */
+  focusUpgrade?: boolean;
 }) {
+  useEffect(() => {
+    if (!focusUpgrade) return;
+    const raf = requestAnimationFrame(() => {
+      const card = document.getElementById('unlock-full');
+      card?.scrollIntoView({ block: 'start' });
+      card?.querySelector('input')?.focus({ preventScroll: true });
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [focusUpgrade]);
   return (
     <div className="screen">
       <div className="screen-head">
         {onBack && <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>}
         <h1><Bi text={ui('settings', lang)} /></h1>
       </div>
+      {access === 'preview' && onAccess && <UpgradeCard lang={lang} onAccess={onAccess} />}
       <h2><Bi text={ui('helpLanguage', lang)} /></h2>
       <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta />
       {lang && !lang.reviewed && <p className="muted small">beta: {ui('beta').en}</p>}
@@ -622,9 +654,9 @@ export function Result({ right, total, newWords, words, lang, onDone }: {
 }
 
 /** All "Zo werkt het hier" tips, to read again. Tips of lessons not reached yet stay hidden. */
-export function Tips({ progress, lang, onBack }: { progress: Progress; lang?: HelpLanguage; onBack: () => void }) {
+export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Progress; lang?: HelpLanguage; onBack: () => void; access?: Access }) {
   const [open, setOpen] = useState<string | null>(null);
-  const visible = cultureTips.filter((t) => isUnlocked(t.lessonId, progress.completed));
+  const visible = cultureTips.filter((t) => isUnlocked(t.lessonId, progress.completed, access));
   return (
     <div className="screen">
       <div className="screen-head">

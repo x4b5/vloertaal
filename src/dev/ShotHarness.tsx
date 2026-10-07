@@ -3,6 +3,8 @@ import { findLesson } from '../content/curriculum';
 import { LessonPlayer } from '../components/LessonPlayer';
 import { About, BottomNav, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar, WordsHub } from '../components/Screens';
 import { Admin } from '../components/Admin';
+import { Gate } from '../components/Gate';
+import type { Access } from '../lib/access';
 import { emptyProgress } from '../lib/progress';
 import { Milestone } from '../components/Milestone';
 import { CAST, Character, type Mood } from '../components/Characters';
@@ -27,6 +29,9 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // Day-streak milestone after the very first lesson: streak 1.
   if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
+  // &access=preview shows the path, tips and settings as a preview user sees them.
+  const access: Access = new URLSearchParams(location.search).get('access') === 'preview' ? 'preview' : 'full';
+  if (shot === 'gate') return <Gate onAccess={() => {}} />;
   // Screens outside the lesson flow (phase-3 house-style review).
   if (shot === 'onboarding') return <Onboarding onDone={() => {}} />;
   if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
@@ -45,10 +50,10 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       );
     }
     return shot === 'tips' ? (
-      <Tips progress={progress} lang={l} onBack={() => {}} />
+      <Tips progress={progress} lang={l} onBack={() => {}} access={access} />
     ) : (
       <>
-        <Settings progress={progress} lang={l} onLang={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} />
+        <Settings progress={progress} lang={l} onLang={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
         <BottomNav current="me" onTab={() => {}} />
       </>
     );
@@ -61,7 +66,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     return (
       <>
         <TopBar streak={7} words={learnedWords(progress.completed).size} lang={l} onLanguage={() => {}} />
-        <Path progress={progress} lang={l} onStart={() => {}} onPhrasebook={() => {}} onAbout={() => {}} />
+        <Path progress={progress} lang={l} onStart={() => {}} onPhrasebook={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}} />
         <BottomNav current="route" onTab={() => {}} />
       </>
     );

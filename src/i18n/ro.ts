@@ -65,6 +65,12 @@ const lang: HelpLanguage = {
     quitHint: 'Răspunsurile din această lecție nu se salvează.',
     keepGoing: 'Continuă',
     stopLesson: 'Oprește lecția',
+    fullVersion: 'Versiunea completă',
+    unlockFull: 'Deblochează versiunea completă',
+    unlockHint: 'Acum este deschisă doar prima unitate. Introdu parola pentru toate lecțiile.',
+    password: 'Parola',
+    wrongPassword: 'Parola nu este corectă. Încearcă din nou.',
+    unlock: 'Deblochează',
   },
   gloss: {
     // Units

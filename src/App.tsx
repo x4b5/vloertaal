@@ -8,6 +8,8 @@ import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
 import { Milestone } from './components/Milestone';
+import { Gate } from './components/Gate';
+import { type Access, lessonAllowed, loadAccess, saveAccess } from './lib/access';
 import { completeLesson, currentStreak, emptyProgress, loadProgress, saveProgress, streakWentUp } from './lib/progress';
 
 type View =
@@ -19,7 +21,8 @@ type View =
   | { name: 'words' }
   | { name: 'phrasebook' }
   | { name: 'tips' }
-  | { name: 'settings' }
+  /** upgrade: opened from a locked unit, so the unlock card is scrolled into view. */
+  | { name: 'settings'; upgrade?: boolean }
   | { name: 'about'; from: 'home' | 'settings' }
   | { name: 'admin' };
 
@@ -40,6 +43,8 @@ if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
 export default function App() {
   const [progress, setProgress] = useState(loadProgress);
+  const [access, setAccess] = useState<Access | null>(loadAccess);
+  const grant = (a: Access) => { saveAccess(a); setAccess(a); };
   const [view, setView] = useState<View>(() => adminRequested() ? { name: 'admin' } : restored());
   /** Bumped when the system Back button is pressed in a lesson (the lesson asks before quitting). */
   const [lessonBack, setLessonBack] = useState(0);
@@ -110,6 +115,10 @@ export default function App() {
   useEffect(() => { setPreferredVoice(progress.voice); }, [progress.voice]);
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { window.scrollTo(0, 0); }, [view.name]);
+  // A preview never plays a later unit (e.g. via Back/Forward into an old entry): go home.
+  useEffect(() => {
+    if (view.name === 'lesson' && access && !lessonAllowed(view.lessonId, access)) replace(HOME);
+  });
 
   const setLang = (code: LangCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
 
@@ -117,12 +126,15 @@ export default function App() {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
 
+  // The door comes first (the admin page above stays reachable with #beheer).
+  if (!access) return <Gate onAccess={grant} />;
   if (!progress.onboarded) return <Onboarding onDone={setLang} />;
 
   switch (view.name) {
     case 'lesson': {
       const found = findLesson(view.lessonId);
-      if (!found) return null;
+      // A preview never plays a later unit, whatever the progress or history says.
+      if (!found || !lessonAllowed(view.lessonId, access)) return null;
       const finish = ({ accuracy, review, right, total }: LessonResult) => {
         const next = completeLesson(progress, view.lessonId, accuracy, review, new Date());
         setProgress(next);
@@ -157,7 +169,7 @@ export default function App() {
     case 'streak':
       return <Milestone streak={view.streak} lang={lang} onDone={back} />;
     case 'tips':
-      return <Tips progress={progress} lang={lang} onBack={back} />;
+      return <Tips progress={progress} lang={lang} onBack={back} access={access} />;
     case 'about':
       return <About lang={lang} onBack={back} />;
     case 'phrasebook':
@@ -177,6 +189,9 @@ export default function App() {
               back();
             }}
             onAbout={() => go({ name: 'about', from: 'settings' })}
+            access={access}
+            onAccess={grant}
+            focusUpgrade={view.upgrade}
           />
           <BottomNav current="me" onTab={tab} />
         </>
@@ -208,6 +223,8 @@ export default function App() {
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
             onPhrasebook={() => go({ name: 'phrasebook' })}
             onAbout={() => go({ name: 'about', from: 'home' })}
+            access={access}
+            onUpgrade={() => go({ name: 'settings', upgrade: true })}
           />
           <BottomNav current="route" onTab={tab} />
         </>
