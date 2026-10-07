@@ -114,7 +114,7 @@ function ChoiceGrid({ options, render, correctId, locked, onAnswer, onPick, clas
 
 /** Dutch word shown → pick the English meaning. */
 export function MeaningExercise({ ex, lang, locked, onAnswer }: Props<'meaning'>) {
-  useEffect(() => speak(ex.word.nl), [ex.word]);
+  useEffect(() => { speak(ex.word.nl); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
@@ -191,7 +191,7 @@ function wordSize(nl: string): string {
 
 /** Only audio → pick the written Dutch word. */
 export function ListenExercise({ ex, lang, locked, onAnswer }: Props<'listen'>) {
-  useEffect(() => speak(ex.word.nl), [ex.word]);
+  useEffect(() => { speak(ex.word.nl); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoYouHear', lang)} />
@@ -333,7 +333,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer }: Props<'build'>) {
 /** Hear a word → type it. Forgiving about capitals, articles and one typo. */
 export function TypeExercise({ ex, lang, locked, onAnswer }: Props<'type'>) {
   const [value, setValue] = useState('');
-  useEffect(() => speak(ex.word.nl), [ex.word]);
+  useEffect(() => { speak(ex.word.nl); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('typeWhatYouHear', lang)} />
