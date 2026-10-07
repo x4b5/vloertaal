@@ -19,6 +19,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
       - run: pip install piper-tts==1.8.0
       - run: python scripts/voices/make_voices.py audition --out docs/stemproef/piper
       - name: Commit the samples
