@@ -644,7 +644,7 @@ h2 { font-size: 1.25rem; }
 .voice-lang { font-size: 0.8rem; color: var(--muted); }
 
 /* Word pictures: one emoji set (Noto) on every device, so a helmet looks the same on iPhone and Android. */
-.emoji-xl, .emoji-lg, .pic-emoji, .choice-emoji, .unit-emoji, .confetti {
+.emoji-xl, .emoji-lg, .pic-emoji, .choice-emoji, .unit-emoji, .confetti, .word-emoji {
   font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
 }
 .speaker-char .ch, .chat-char .ch { display: block; height: 1em; width: auto; }
@@ -1075,3 +1075,19 @@ h2 { font-size: 1.25rem; }
 .tip-char { width: 70px; display: flex; justify-content: center; }
 .tip-bubble { flex: 1; min-width: 0; }
 .feedback-why { max-width: 46ch; line-height: 1.4; }
+
+/* Word pictures (src/pictures): still drawings, so the cast heads in them do not blink. */
+.word-pic { display: inline-block; flex: none; vertical-align: middle; }
+.word-pic .ch-eyes { animation: none; }
+.word-emoji { display: inline-flex; align-items: center; justify-content: center; }
+
+/* Dev page /?shot=pictures */
+.pics-page { padding: 16px; max-width: 1200px; margin: 0 auto; }
+.pics-unit { margin: 24px 0 8px; display: flex; align-items: center; gap: 12px; }
+.pics-banner { width: 72px; height: 72px; border-radius: 16px; display: grid; place-items: center; }
+.pics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+.pics-cell { border: 2px solid var(--line); border-radius: 16px; padding: 10px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.pics-row { display: flex; align-items: flex-end; gap: 10px; }
+.pics-nl { font-weight: 800; }
+.pics-id { font-size: 0.75rem; color: var(--muted); font-family: ui-monospace, monospace; }
+.pics-missing { opacity: 0.55; }

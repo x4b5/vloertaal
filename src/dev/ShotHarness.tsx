@@ -9,10 +9,14 @@ import type { LangCode } from '../i18n/types';
 import { allReplies } from '../content/curriculum';
 import { buildTiles, type Exercise } from '../lib/exercises';
 import { createRng } from '../lib/random';
+import { units } from '../content/curriculum';
+import { WordPicture, pictures, unitPictures } from '../pictures';
+import * as kit from '../pictures/kit';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
  * screenshotted reproducibly: /?shot=dutch|meaning|build|chat|result|streak&lang=ar
+ * /?shot=pictures shows every word picture (and the unit banner pictures) for review.
  * Options are always in lesson order, so tests know which one is right.
  */
 export function ShotHarness({ shot, lang }: { shot: string; lang: string | null }) {
@@ -20,6 +24,7 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
   if (shot === 'result') return <Result xp={14} accuracy={0.88} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   // Day-streak milestone after the very first lesson: streak 1.
   if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
+  if (shot === 'pictures') return <PicturesSheet />;
   // The whole cast in every mood, big, for judging the drawings.
   if (shot === 'cast') {
     const moods: Mood[] = ['idle', 'happy', 'sad', 'pleased', 'thinking', 'cheer'];
@@ -63,3 +68,73 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
     />
   );
 }
+
+/** Every word of the course with its picture at 120 px and 48 px, grouped by unit, plus the
+ *  unit banner pictures on their colours and the kit's building blocks. Words still without a
+ *  picture show their emoji, dimmed. */
+function PicturesSheet() {
+  const words = units.flatMap((u) => u.lessons.flatMap((l) => l.words));
+  const done = words.filter((w) => pictures[w.id]).length;
+  return (
+    <div className="pics-page">
+      <h1>Woordplaatjes</h1>
+      <p className="pics-id">{done} / {words.length} drawn</p>
+      <h2>Bouwstenen (kit)</h2>
+      <div className="pics-grid">
+        {KIT_SAMPLES.map(([name, draw]) => (
+          <div key={name} className="pics-cell">
+            <div className="pics-row">
+              <svg viewBox="0 0 120 120" width={120} height={120} aria-hidden>{draw()}</svg>
+              <svg viewBox="0 0 120 120" width={48} height={48} aria-hidden>{draw()}</svg>
+            </div>
+            <span className="pics-id">{name}</span>
+          </div>
+        ))}
+      </div>
+      {units.map((unit) => {
+        const banner = unitPictures[unit.id];
+        return (
+          <section key={unit.id}>
+            <div className="pics-unit">
+              {[72, 48].map((px) => (
+                <div key={px} className="pics-banner" style={{ background: unit.color, width: px + 16, height: px + 16 }}>
+                  {banner ? <svg viewBox="0 0 120 120" width={px} height={px} aria-hidden>{banner()}</svg> : <span className="word-emoji">{unit.emoji}</span>}
+                </div>
+              ))}
+              <div>
+                <h2 style={{ margin: 0 }}>{unit.title}</h2>
+                <span className="pics-id">{unit.id} · {unit.titleNl}</span>
+              </div>
+            </div>
+            <div className="pics-grid">
+              {unit.lessons.flatMap((l) => l.words).map((w) => (
+                <div key={w.id} className={`pics-cell ${pictures[w.id] ? '' : 'pics-missing'}`}>
+                  <div className="pics-row">
+                    <WordPicture id={w.id} emoji={w.emoji} size={120} />
+                    <WordPicture id={w.id} emoji={w.emoji} size={48} />
+                  </div>
+                  <span className="pics-nl" lang="nl">{w.nl}</span>
+                  <span className="pics-id">{w.id}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+const KIT_SAMPLES: [string, () => React.ReactNode][] = [
+  ['Hand open / point', () => (<><kit.Ground cy={108} rx={40} /><kit.Hand pose="open" x={36} y={100} scale={1.05} sleeve={[kit.PAL.blue, kit.PAL.blueShade]} /><kit.Hand pose="point" x={86} y={100} skin={kit.SKIN.jada} sleeve={['#ffc929', '#e0a800']} /></>)],
+  ['Hand thumb / fist / hold', () => (<><kit.Hand pose="thumb" x={24} y={96} scale={0.85} skin={kit.SKIN.amina} /><kit.Hand pose="fist" x={60} y={96} scale={0.85} skin={kit.SKIN.henk} /><kit.Hand pose="hold" x={96} y={96} scale={0.85} /></>)],
+  ['Box / Box open', () => (<><kit.Ground cy={100} rx={50} /><kit.Box x={8} y={58} w={44} h={38} depth={12} label /><kit.Box x={60} y={58} w={42} h={38} depth={12} open /></>)],
+  ['Bubble + Dots / QuestionMark', () => (<><kit.Bubble x={8} y={10} w={70} h={42}><kit.Dots cx={43} cy={31} /></kit.Bubble><kit.Bubble x={46} y={62} w={60} h={40} tail="right"><kit.QuestionMark x={76} y={82} size={28} /></kit.Bubble></>)],
+  ['Arrow / CurveArrow', () => (<><kit.Arrow from={[14, 30]} to={[104, 30]} /><kit.CurveArrow from={[20, 100]} to={[100, 90]} bend={30} color={kit.PAL.orange} /></>)],
+  ['Sparkle / Motion / ExclaimMark', () => (<><kit.Sparkle x={30} y={30} r={14} /><kit.Sparkle x={58} y={18} r={7} color={kit.PAL.sky} /><kit.Motion x={86} y={70} dir={-90} gap={10} len={12} /><kit.ExclaimMark x={86} y={74} size={34} /><kit.Sparkle x={30} y={84} r={10} color={kit.PAL.ok} /></>)],
+  ['Clock / alarm', () => (<><kit.Ground cy={108} rx={44} /><kit.Clock cx={32} cy={70} r={24} hour={3} minute={0} /><kit.Clock cx={86} cy={62} r={22} hour={7} minute={30} bells rim={kit.PAL.red} rimShade={kit.PAL.redShade} /></>)],
+  ['Calendar', () => <kit.Calendar />],
+  ['Tick / Cross', () => (<><kit.Tick x={34} y={58} r={26} /><kit.Cross x={86} y={58} r={26} /></>)],
+  ['Bust bram / amina', () => (<><kit.Bust who="bram" x={34} y={116} scale={0.5} /><kit.Bust who="amina" x={88} y={116} scale={0.5} expr="pleased" flip /></>)],
+  ['Bust henk / jada', () => (<><kit.Bust who="henk" x={34} y={116} scale={0.5} /><kit.Bust who="jada" x={88} y={116} scale={0.5} expr="joy" flip /></>)],
+];
