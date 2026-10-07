@@ -20,6 +20,7 @@ const lang: HelpLanguage = {
     tapToHear: 'برای شنیدن لمس کنید',
     whatDoesThisMean: 'این چه معنی دارد؟',
     chooseDutch: 'لغت هالندی را انتخاب کنید',
+    whichOneIs: 'کدام یک «{word}» است؟',
     whatDoYouHear: 'چه می‌شنوید؟',
     matchPairs: 'جوره‌های همسان را لمس کنید',
     buildSentence: 'این جمله را به هالندی بسازید',

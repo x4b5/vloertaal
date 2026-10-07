@@ -20,6 +20,7 @@ const lang: HelpLanguage = {
     tapToHear: 'Dotknij, aby usłyszeć',
     whatDoesThisMean: 'Co to znaczy?',
     chooseDutch: 'Wybierz niderlandzkie słowo',
+    whichOneIs: 'Które z nich to „{word}”?',
     whatDoYouHear: 'Co słyszysz?',
     matchPairs: 'Dotknij pasujących par',
     buildSentence: 'Ułóż to zdanie po niderlandzku',

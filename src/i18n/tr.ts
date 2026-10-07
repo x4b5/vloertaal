@@ -20,6 +20,7 @@ const lang: HelpLanguage = {
     tapToHear: 'Dinlemek için dokun',
     whatDoesThisMean: 'Bu ne demek?',
     chooseDutch: 'Hollandaca kelimeyi seç',
+    whichOneIs: 'Hangisi “{word}”?',
     whatDoYouHear: 'Ne duyuyorsun?',
     matchPairs: 'Eşleşen çiftlere dokun',
     buildSentence: 'Bu cümleyi Hollandaca kur',

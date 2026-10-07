@@ -20,6 +20,7 @@ const lang: HelpLanguage = {
     tapToHear: 'Atinge ca să asculți',
     whatDoesThisMean: 'Ce înseamnă asta?',
     chooseDutch: 'Alege cuvântul în olandeză',
+    whichOneIs: 'Care dintre acestea este „{word}”?',
     whatDoYouHear: 'Ce auzi?',
     matchPairs: 'Atinge perechile potrivite',
     buildSentence: 'Formează această propoziție în olandeză',

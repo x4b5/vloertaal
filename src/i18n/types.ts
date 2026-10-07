@@ -12,6 +12,7 @@ export const uiEn = {
   tapToHear: 'Tap to hear',
   whatDoesThisMean: 'What does this mean?',
   chooseDutch: 'Choose the Dutch word',
+  whichOneIs: 'Which one is “{word}”?',
   whatDoYouHear: 'What do you hear?',
   matchPairs: 'Tap the matching pairs',
   buildSentence: 'Make this sentence in Dutch',

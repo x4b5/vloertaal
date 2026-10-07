@@ -137,42 +137,63 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       </header>
 
       <main className="player-body">{body}</main>
-
       <footer className={`player-foot ${feedback ? (answer.correct ? 'foot-right' : 'foot-wrong') : ''}`}>
-        {feedback && (
-          <div className="feedback" role="status">
-            <div className="feedback-title">
-              <span aria-hidden>{answer.correct ? '🎉' : '💡'}</span>
-              <Bi text={ui(answer.correct ? (answer.almost ? 'almost' : 'correct') : 'incorrect', lang)} />
-            </div>
-            {(!answer.correct || answer.almost) && sol.text && (
-              <div className="feedback-sol">
-                {ui('correctAnswer', lang).en}: <strong lang={sol.nl ? 'nl' : undefined}>{sol.text}</strong>
+        <div className="foot-inner">
+          {feedback && (
+            <div className="feedback" role="status">
+              <span className="feedback-icon" aria-hidden>
+                {answer.correct ? (
+                  <svg viewBox="0 0 24 24" width="40" height="40"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                ) : (
+                  <svg viewBox="0 0 24 24" width="36" height="36"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11" fill="none" stroke="currentColor" strokeWidth="3.6" strokeLinecap="round" /></svg>
+                )}
+              </span>
+              <div className="feedback-text">
+                {!answer.correct && sol.text ? (
+                  <>
+                    <span className="sr-only">{ui('incorrect', lang).en}. </span>
+                    <div className="feedback-title">
+                      <Bi text={{ ...ui('correctAnswer', lang), en: `${ui('correctAnswer', lang).en}:` }} />
+                    </div>
+                    <div className="feedback-sol feedback-answer" lang={sol.nl ? 'nl' : undefined}>{sol.text}</div>
+                  </>
+                ) : (
+                  <>
+                    <div className="feedback-title">
+                      <Bi text={ui(answer.correct ? (answer.almost ? 'almost' : 'correct') : 'incorrect', lang)} />
+                    </div>
+                    {answer.almost && sol.text && (
+                      <div className="feedback-sol">
+                        {ui('correctAnswer', lang).en}: <strong lang={sol.nl ? 'nl' : undefined}>{sol.text}</strong>
+                      </div>
+                    )}
+                  </>
+                )}
               </div>
+            </div>
+          )}
+          <div className="foot-actions">
+            {needsAudio(ex) && !checked && (
+              <button type="button" className="btn btn-ghost" onClick={skipAudio}>
+                <Bi text={ui('cantListen', lang)} />
+              </button>
+            )}
+            {checked || autoContinue ? (
+              <button
+                type="button"
+                className={`btn ${feedback && !answer.correct ? 'btn-red' : 'btn-green'}`}
+                disabled={!answer}
+                onClick={checked ? next : check}
+                autoFocus
+              >
+                {ui('continue', lang).en}
+              </button>
+            ) : (
+              <button type="button" className="btn btn-green" disabled={!answer} onClick={check}>
+                {ui('check', lang).en}
+              </button>
             )}
           </div>
-        )}
-        <div className="foot-actions">
-          {needsAudio(ex) && !checked && (
-            <button type="button" className="btn btn-ghost" onClick={skipAudio}>
-              <Bi text={ui('cantListen', lang)} />
-            </button>
-          )}
-          {checked || autoContinue ? (
-            <button
-              type="button"
-              className={`btn ${feedback && !answer.correct ? 'btn-red' : 'btn-green'}`}
-              disabled={!answer}
-              onClick={checked ? next : check}
-              autoFocus
-            >
-              {ui('continue', lang).en}
-            </button>
-          ) : (
-            <button type="button" className="btn btn-green" disabled={!answer} onClick={check}>
-              {ui('check', lang).en}
-            </button>
-          )}
         </div>
       </footer>
     </div>

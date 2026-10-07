@@ -9,13 +9,13 @@ function dutchVoice(): SpeechSynthesisVoice | undefined {
   return voices.find((v) => v.lang.toLowerCase() === 'nl-nl') ?? voices.find((v) => v.lang.toLowerCase().startsWith('nl'));
 }
 
-export function speak(text: string, slow = false): void {
+export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl'): void {
   if (!speechAvailable()) return;
   const synth = window.speechSynthesis;
   synth.cancel();
   const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'nl-NL';
-  const voice = dutchVoice();
+  u.lang = lang === 'en' ? 'en-GB' : 'nl-NL';
+  const voice = lang === 'en' ? undefined : dutchVoice();
   if (voice) u.voice = voice;
   u.rate = slow ? 0.55 : 0.9;
   synth.speak(u);
