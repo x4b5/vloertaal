@@ -7,6 +7,7 @@ import { sounds, speak } from '../lib/audio';
 import type { Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { Bi } from './Bi';
+import { MascotIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 
 export interface Answer {
@@ -118,7 +119,7 @@ export function MeaningExercise({ ex, lang, locked, onAnswer }: Props<'meaning'>
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
       <div className="speaker">
-        <span className="speaker-char" aria-hidden>👷</span>
+        <span className="speaker-char"><MascotIcon size={96} /></span>
         <div className="speaker-bubble">
           <SpeakButton text={ex.word.nl} />
           <span className="speaker-nl" lang="nl">{ex.word.nl}</span>
@@ -288,7 +289,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer }: Props<'build'>) {
     <div className="exercise">
       <Prompt text={ui('buildSentence', lang)} />
       <div className="speaker speaker-build">
-        <span className="speaker-char" aria-hidden>👷</span>
+        <span className="speaker-char"><MascotIcon size={96} /></span>
         <div className="speaker-bubble">
           <SpeakButton glyph lang="en" text={ex.sentence.en} label={`Play: ${ex.sentence.en}`} />
           <Bi className="bubble-text" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />

@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { findLesson } from './content/curriculum';
 import { getHelpLanguage } from './i18n';
 import type { LangCode } from './i18n/types';
+import { setPreferredVoice } from './lib/audio';
+import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { Onboarding, Path, Phrasebook, Result, Settings, TopBar } from './components/Screens';
 import { completeLesson, currentStreak, emptyProgress, loadProgress, saveProgress, xpFor } from './lib/progress';
@@ -19,6 +21,8 @@ export default function App() {
   const lang = getHelpLanguage(progress.helpLang);
 
   useEffect(() => saveProgress(progress), [progress]);
+  useEffect(() => setPreferredVoice(progress.voice), [progress.voice]);
+  useEffect(() => applyTheme(progress.theme), [progress.theme]);
   useEffect(() => window.scrollTo(0, 0), [view.name]);
 
   const setLang = (code: LangCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
@@ -54,8 +58,11 @@ export default function App() {
           progress={progress}
           lang={lang}
           onLang={setLang}
+          onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
+          onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
           onReset={() => {
-            setProgress(emptyProgress);
+            // Keep look and voice; only learning progress is wiped.
+            setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice }));
             setView({ name: 'home' });
           }}
           onBack={() => setView({ name: 'home' })}
@@ -80,3 +87,4 @@ export default function App() {
       );
   }
 }
+

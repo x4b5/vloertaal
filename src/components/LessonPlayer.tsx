@@ -5,6 +5,7 @@ import type { HelpLanguage } from '../i18n/types';
 import { sounds, speak, speechAvailable } from '../lib/audio';
 import { buildLesson, isGraded, type Exercise } from '../lib/exercises';
 import { Bi } from './Bi';
+import { CloseIcon } from './Icons';
 import {
   type Answer,
   BuildExercise,
@@ -127,7 +128,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   return (
     <div className="player">
       <header className="player-top">
-        <button type="button" className="icon-btn" onClick={onQuit} aria-label="Quit lesson">✕</button>
+        <button type="button" className="icon-btn" onClick={onQuit} aria-label="Quit lesson"><CloseIcon size={28} /></button>
         <div className="bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>
           <div className="bar-fill" style={{ width: `${Math.max(4, progress * 100)}%` }} />
         </div>

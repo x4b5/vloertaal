@@ -36,6 +36,14 @@ export const uiEn = {
   resetConfirm: 'Delete all progress on this device?',
   audioUnavailable: 'Sound is not available on this device.',
   slow: 'Slow',
+  theme: 'Appearance',
+  themeAuto: 'Automatic',
+  themeLight: 'Light',
+  themeDark: 'Dark',
+  voice: 'Dutch voice',
+  voiceAuto: 'Automatic',
+  voiceHint: 'Tap 🔊 to listen. The voices come from your phone, so the list is different on every device.',
+  voiceNone: 'This device has no Dutch voice. You can add one in your phone settings (Text-to-speech).',
 } as const;
 
 export type UiKey = keyof typeof uiEn;
