@@ -842,7 +842,11 @@ h2 { font-size: 1.25rem; }
 .chat-row { display: flex; align-items: center; gap: 14px; }
 .chat-me { justify-content: flex-end; }
 .chat-char { flex: none; font-size: 132px; line-height: 1; }
-@media (max-width: 380px) { .chat-char { font-size: 100px; } .chat-row { gap: 10px; } }
+@media (max-width: 380px) {
+  .chat-char { font-size: 100px; } .chat-row { gap: 10px; }
+  .speaker-build .speaker-char, .situation .speaker-char { font-size: 100px; }
+  .speaker-build, .situation .speaker { gap: 10px; }
+}
 .chat-bubble {
   position: relative; display: flex; align-items: center; gap: 4px; min-width: 0;
   padding: 8px 18px 8px 8px; border: 3px solid var(--edge); border-radius: 12px; background: var(--card);
