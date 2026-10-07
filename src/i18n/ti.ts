@@ -20,6 +20,7 @@ const lang: HelpLanguage = {
     tapToHear: 'ክትሰምዕ ጠውቕ',
     whatDoesThisMean: 'እዚ እንታይ ማለት እዩ?',
     chooseDutch: 'ነቲ ሆላንድኛ ቃል ምረጽ',
+    whichOneIs: 'ኣየናይ እዩ «{word}»?',
     whatDoYouHear: 'እንታይ ትሰምዕ ኣለኻ?',
     matchPairs: 'ነቶም ዝሰማምዑ ጽምዲታት ጠውቕ',
     buildSentence: 'ነዚ ሓረግ ብሆላንድኛ ስራሕ',

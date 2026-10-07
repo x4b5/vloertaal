@@ -53,8 +53,10 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
   );
 }
 
-function ChoiceGrid({ options, render, correctId, locked, onAnswer, onPick }: {
+function ChoiceGrid({ options, render, correctId, locked, onAnswer, onPick, className, style }: {
   options: Word[];
+  className?: string;
+  style?: React.CSSProperties;
   render: (w: Word) => React.ReactNode;
   correctId: string;
   locked: boolean;
@@ -62,8 +64,26 @@ function ChoiceGrid({ options, render, correctId, locked, onAnswer, onPick }: {
   onPick?: (w: Word) => void;
 }) {
   const [picked, setPicked] = useState<string | null>(null);
+  const pick = (w: Word) => {
+    setPicked(w.id);
+    onPick?.(w);
+    onAnswer({ correct: w.id === correctId });
+  };
+  // Number keys 1–9 pick an option, like the hints on each card say.
+  useEffect(() => {
+    if (locked) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
+      const t = e.target as HTMLElement | null;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+      const n = Number(e.key);
+      if (Number.isInteger(n) && n >= 1 && n <= options.length) pick(options[n - 1]);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  });
   return (
-    <div className="choices">
+    <div className={`choices ${className ?? ''}`} style={style}>
       {options.map((w, i) => {
         const state = locked
           ? w.id === correctId
@@ -80,11 +100,7 @@ function ChoiceGrid({ options, render, correctId, locked, onAnswer, onPick }: {
             type="button"
             className={`choice ${state}`}
             disabled={locked}
-            onClick={() => {
-              setPicked(w.id);
-              onPick?.(w);
-              onAnswer({ correct: w.id === correctId });
-            }}
+            onClick={() => pick(w)}
           >
             <span className="choice-num" aria-hidden>{i + 1}</span>
             {render(w)}
@@ -101,19 +117,64 @@ export function MeaningExercise({ ex, lang, locked, onAnswer }: Props<'meaning'>
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
-      <div className="target">
-        <SpeakButton text={ex.word.nl} size="lg" />
-        <span className="target-nl" lang="nl">{ex.word.nl}</span>
+      <div className="speaker">
+        <span className="speaker-char" aria-hidden>👷</span>
+        <div className="speaker-bubble">
+          <SpeakButton text={ex.word.nl} />
+          <span className="speaker-nl" lang="nl">{ex.word.nl}</span>
+        </div>
       </div>
       <ChoiceGrid
+        className="choices-rows"
         options={ex.options}
         correctId={ex.word.id}
         locked={locked}
         onAnswer={onAnswer}
+        render={(w) => <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />}
+      />
+    </div>
+  );
+}
+
+/** English meaning shown → pick the Dutch word from picture cards. */
+export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
+  const meaning = gloss(ex.word.id, ex.word.en, lang);
+  const fill = (template: string | undefined, word: string | undefined) =>
+    template && word ? template.replace('{word}', word) : undefined;
+  const question: Bilingual = {
+    en: ui('whichOneIs').en.replace('{word}', ex.word.en),
+    help: fill(lang?.ui.whichOneIs, meaning.help),
+    lang,
+  };
+  return (
+    <div className="exercise">
+      <div className="new-word">
+        <svg className="new-word-icon" viewBox="0 0 32 32" aria-hidden>
+          <circle cx="16" cy="16" r="16" fill="currentColor" />
+          <path d="M13 6.5l4.5 4.5-4.5 4.5-4.5-4.5z" fill="#fff" />
+          <path d="M20.5 13.5l3 3-3 3-3-3z" fill="#fff" />
+          <circle cx="13.5" cy="21.5" r="2" fill="#fff" />
+        </svg>
+        <Bi text={ui('newWord', lang)} />
+      </div>
+      <div className="pic-question">
+        <h2 className="prompt">
+          <Bi text={question} />
+        </h2>
+        <SpeakButton text={ex.word.en} lang="en" label={`Play: ${ex.word.en}`} />
+      </div>
+      <ChoiceGrid
+        className={`choices-pics n${ex.options.length} ${ex.options.length % 2 ? 'odd' : 'even'}`}
+        style={{ '--n': ex.options.length } as React.CSSProperties}
+        options={ex.options}
+        correctId={ex.word.id}
+        locked={locked}
+        onAnswer={onAnswer}
+        onPick={(w) => speak(w.nl)}
         render={(w) => (
           <>
-            <span className="choice-emoji" aria-hidden>{w.emoji}</span>
-            <Bi text={gloss(w.id, w.en, lang)} />
+            <span className="pic-emoji" aria-hidden>{w.emoji}</span>
+            <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{w.nl}</span>
           </>
         )}
       />
@@ -121,25 +182,10 @@ export function MeaningExercise({ ex, lang, locked, onAnswer }: Props<'meaning'>
   );
 }
 
-/** English meaning + picture shown → pick the Dutch word. */
-export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
-  return (
-    <div className="exercise">
-      <Prompt text={ui('chooseDutch', lang)} />
-      <div className="target">
-        <span className="emoji-lg" aria-hidden>{ex.word.emoji}</span>
-        <Bi className="target-en" text={gloss(ex.word.id, ex.word.en, lang)} />
-      </div>
-      <ChoiceGrid
-        options={ex.options}
-        correctId={ex.word.id}
-        locked={locked}
-        onAnswer={onAnswer}
-        onPick={(w) => speak(w.nl)}
-        render={(w) => <span lang="nl" className="choice-nl">{w.nl}</span>}
-      />
-    </div>
-  );
+/** Long Dutch compounds (veiligheidsschoenen) get a smaller size so they never split mid-word. */
+function wordSize(nl: string): string {
+  const longest = Math.max(...nl.split(/\s+/).map((t) => t.length));
+  return longest > 13 ? 'len-l' : longest > 9 ? 'len-m' : '';
 }
 
 /** Only audio → pick the written Dutch word. */
@@ -241,9 +287,12 @@ export function BuildExercise({ ex, lang, locked, onAnswer }: Props<'build'>) {
   return (
     <div className="exercise">
       <Prompt text={ui('buildSentence', lang)} />
-      <div className="bubble">
-        <span className="bubble-avatar" aria-hidden>👷</span>
-        <Bi className="bubble-text" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
+      <div className="speaker speaker-build">
+        <span className="speaker-char" aria-hidden>👷</span>
+        <div className="speaker-bubble">
+          <SpeakButton glyph lang="en" text={ex.sentence.en} label={`Play: ${ex.sentence.en}`} />
+          <Bi className="bubble-text" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
+        </div>
       </div>
       <div className="answer-line" aria-live="polite">
         {chosen.map((i) => (
