@@ -56,7 +56,6 @@ const lang: HelpLanguage = {
     meaning: 'معنی',
     navRoute: 'درس‌ها',
     navWords: 'کمک',
-    navMe: 'من',
     rightFirstTime: 'درست در بار اول',
     newWords: 'واژه‌های تازه',
     wordsLearnedN: '{n} واژه یاد گرفتی',

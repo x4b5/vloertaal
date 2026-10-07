@@ -56,7 +56,6 @@ const lang: HelpLanguage = {
     meaning: 'Sensul',
     navRoute: 'Lecții',
     navWords: 'Ajutor',
-    navMe: 'Eu',
     rightFirstTime: 'Corect din prima încercare',
     newWords: 'Cuvinte noi',
     wordsLearnedN: 'Cuvinte învățate: {n}',

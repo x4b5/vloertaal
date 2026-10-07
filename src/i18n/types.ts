@@ -23,7 +23,6 @@ export const uiEn = {
   meaning: 'Meaning',
   navRoute: 'Lessons',
   navWords: 'Help',
-  navMe: 'Me',
   rightFirstTime: 'Right the first time',
   newWords: 'New words',
   wordsLearnedN: '{n} words learned',

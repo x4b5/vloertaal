@@ -56,7 +56,6 @@ const lang: HelpLanguage = {
     meaning: 'Значення',
     navRoute: 'Уроки',
     navWords: 'Допомога',
-    navMe: 'Я',
     rightFirstTime: 'Правильно з першого разу',
     newWords: 'Нові слова',
     wordsLearnedN: 'Вивчено слів: {n}',

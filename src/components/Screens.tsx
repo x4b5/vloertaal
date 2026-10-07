@@ -29,7 +29,7 @@ import {
   LifebuoyIcon,
   LockIcon,
   RouteIcon,
-  WorkerIcon,
+  GearIcon,
   MoonIcon,
   SpeakerIcon,
   SunIcon,
@@ -95,7 +95,7 @@ export function TopBar({ streak, words, lang, onLanguage }: {
   /** Words learned so far (see learnedWords). */
   words: number;
   lang?: HelpLanguage;
-  /** The language chip opens Settings ("Ik"), where the help language is chosen. */
+  /** The language chip opens Settings ("Instellingen"), where the help language is chosen. */
   onLanguage: () => void;
 }) {
   const wordsLabel = ui('wordsLearnedN').en.replace('{n}', String(words));
@@ -130,13 +130,13 @@ export function TopBar({ streak, words, lang, onLanguage }: {
 
 export type Tab = 'route' | 'words' | 'me';
 
-const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'navMe'; Icon: typeof RouteIcon }[] = [
+const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'settings'; Icon: typeof RouteIcon }[] = [
   { tab: 'route', nl: 'Route', key: 'navRoute', Icon: RouteIcon },
   { tab: 'words', nl: 'Hulp', key: 'navWords', Icon: LifebuoyIcon },
-  { tab: 'me', nl: 'Ik', key: 'navMe', Icon: WorkerIcon },
+  { tab: 'me', nl: 'Instellingen', key: 'settings', Icon: GearIcon },
 ];
 
-/** Bottom bar on the three home-level screens: Route (lessons), Hulp, Ik. The label is
+/** Bottom bar on the three home-level screens: Route (lessons), Hulp, Instellingen. The label is
  *  Dutch (short, part of learning the work floor); screen readers also hear the English. */
 export function BottomNav({ current, onTab }: { current: Tab; onTab: (tab: Tab) => void }) {
   return (
@@ -392,7 +392,7 @@ export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, on
   onVoice: (voice: string | null) => void;
   onReset: () => void;
   onAbout: () => void;
-  /** Absent when Settings is the "Ik" tab (the bottom bar leads away). */
+  /** Absent when Settings is the "Instellingen" tab (the bottom bar leads away). */
   onBack?: () => void;
   access?: Access;
   /** Preview: the unlock card's password was right. */
