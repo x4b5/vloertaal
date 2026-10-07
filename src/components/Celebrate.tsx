@@ -11,8 +11,8 @@ import { FlameArt } from "./StreakArt";
  *
  *  - LessonCelebration (lesson complete): Bram leaps along a strong diagonal, back leg kicked
  *    out, and punches up into a high five with Jada, who springs off a pallet to meet him.
- *  - StreakHero (day-streak milestone): Bram lands on the podium, throws an arm round the
- *    streak flame and leans into the hug, one foot popped up behind him, thumb up.
+ *  - StreakHero (day-streak milestone): Bram lands on the podium beside the streak flame and
+ *    cheers, one hand flung out to present it, the other fist punched high.
  *
  * Choreography (styles.css, "Celebrations"): anticipation (crouch), the big pose (stretch),
  * overshoot and settle, once on entry; then a gentle idle loop (bob, blink, wiggle, drifting
@@ -399,12 +399,12 @@ export function LessonCelebration({ className }: { className?: string }) {
         </g>
         <g className="lv-jada">
           <g className="lv-idle lv-idle-jada">
-            <Figure who="jada" pose={JADA_SPRING} expr="joy" />
+            <Figure who="jada" pose={JADA_SPRING} expr="joy" blink={3.7} />
           </g>
         </g>
         <g className="lv-bram">
           <g className="lv-idle">
-            <Figure who="bram" pose={BRAM_LEAP} expr="joy" squint />
+            <Figure who="bram" pose={BRAM_LEAP} expr="joy" squint blink={3.2} />
           </g>
         </g>
       </svg>
@@ -423,20 +423,21 @@ const STREAK_CONFETTI: Piece[] = [
   [230, 82, 'dot', ORANGE, 0, 4.5],
 ];
 
-/** Bram hugs the flame: leans into it, arm round it, back foot popped up, thumb up. */
-const BRAM_HUG: ActionPose = {
-  pelvis: [142, 140],
-  tilt: -18,
-  head: -14,
-  armL: { a: 176, e: 122, hand: 'open', flip: true },
-  armR: { a: -34, e: -8, hand: 'thumb' },
-  legL: { t: 100, s: 92 },
-  legR: { t: 52, s: -12 },
+/** Bram stands on the podium beside the flame and cheers: weight on his back foot, leaning
+ *  towards the flame, one open hand flung out to present it ("ta-da!"), the other fist punched high. */
+const BRAM_CHEER: ActionPose = {
+  pelvis: [164, 136],
+  tilt: -7,
+  head: -8,
+  armL: { a: -166, e: -128, hand: 'open', flip: true },
+  armR: { a: -52, e: -92, hand: 'fist' },
+  legL: { t: 106, s: 94 },
+  legR: { t: 74, s: 86 },
   facing: -1,
   behind: ['legR'],
 };
 
-/** Day-streak milestone: Bram lands on the podium and hugs the streak flame. */
+/** Day-streak milestone: Bram lands on the podium and cheers next to the streak flame. */
 export function StreakHero({ lit = false, className }: { lit?: boolean; className?: string }) {
   return (
     <div className={`streak-hero ${lit ? 'streak-hero-lit' : ''} ${className ?? ''}`} aria-hidden>
@@ -450,14 +451,16 @@ export function StreakHero({ lit = false, className }: { lit?: boolean; classNam
           <ellipse cx="120" cy="185" rx="44" ry="7.5" fill="#c25700" opacity=".45" />
         </g>
         <g className="sk-flame">
-          <g transform="translate(38 86) scale(1.36)">
-            <FlameArt face />
+          <g className="sk-flame-idle">
+            <g transform="translate(30 92) scale(1.28)">
+              <FlameArt face />
+            </g>
           </g>
         </g>
         <g className="sk-bram">
           <g className="sk-jump">
             <g className="sk-idle">
-              <Figure who="bram" pose={BRAM_HUG} expr="joy" blink={3.4} />
+              <Figure who="bram" pose={BRAM_CHEER} expr="joy" blink={3.4} />
             </g>
           </g>
         </g>

@@ -15,7 +15,7 @@ export function FlameArt({ face = false }: { face?: boolean }) {
       />
       <path d="M32 66c-5 0-8-3-8-7 0-4 3-6 5-9 2 3 4 4 6 4 1-1 2-3 2-5 2 3 3 6 3 10 0 4-3 7-8 7z" fill="#fff3b0" />
       {face && (
-        // A happy little face: eyes squeezed shut, open smile (it is being hugged).
+        // A happy little face: eyes squeezed shut with joy, open smile.
         <g>
           <path d="M22.5 52.5q2.6-3.4 5.2 0M36.3 52.5q2.6-3.4 5.2 0" fill="none" stroke="#7a3a00" strokeWidth="2.2" strokeLinecap="round" />
           <path d="M27.4 57.4q4.6 4.4 9.2 0q-.6 4.6-4.6 4.6t-4.6-4.6z" fill="#7a3a00" />

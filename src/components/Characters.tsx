@@ -745,12 +745,17 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
  * their own bodies, so the faces stay exactly those of the cast. `squint` squeezes the eyes
  * shut with joy (^ ^) instead of the expression's own eyes.
  */
-export function CastHead({ who, expr = 'joy', squint = false, blink }: {
+export function CastHead({ who, expr = 'joy', squint = false, blink, bold = false, gaze = [0, -1] }: {
   who: CharacterId;
   expr?: Expr;
   squint?: boolean;
   /** Blink rhythm in seconds (defaults to the character's own). */
   blink?: number;
+  /** Mascot mode for the celebrations: oversized eyes with big pupils, thick raised brows,
+   *  and no fine detail (a plain dome hat without highlight bands). */
+  bold?: boolean;
+  /** Where the big pupils look (-1..1 each way), bold mode only. */
+  gaze?: [number, number];
 }) {
   const look = LOOKS[who];
   const face = FACES[who];
@@ -778,7 +783,9 @@ export function CastHead({ who, expr = 'joy', squint = false, blink }: {
       </g>
       <ellipse cx="42" cy="74" rx="5.4" ry="3.6" fill="#ff7b7b" opacity={squint ? 0.6 : blush} />
       <ellipse cx="78" cy="74" rx="5.4" ry="3.6" fill="#ff7b7b" opacity={squint ? 0.6 : blush} />
-      {squint ? (
+      {bold ? (
+        <BoldEyes who={who} blink={blink ?? look.blink} gaze={gaze} brow={look.brow} />
+      ) : squint ? (
         <path
           d="M43 66Q50 56 57 65M63 65Q70 56 77 66"
           fill="none"
@@ -791,10 +798,61 @@ export function CastHead({ who, expr = 'joy', squint = false, blink }: {
           {face.eyes(expr, look.skin)}
         </g>
       )}
-      <g className="ch-brows">{face.brows(expr, look.brow)}</g>
-      {face.nose(look.shade)}
-      <g className="ch-mouth">{face.mouth(expr)}</g>
-      {look.front}
+      {!bold && <g className="ch-brows">{face.brows(expr, look.brow)}</g>}
+      {bold ? <ellipse cx="60" cy="73" rx="3.6" ry="2.7" fill={look.shade} /> : face.nose(look.shade)}
+      <g className="ch-mouth">{bold ? <BoldMouth /> : face.mouth(expr)}</g>
+      {bold && BOLD_FRONT[who] ? BOLD_FRONT[who] : look.front}
+    </g>
+  );
+}
+
+/** Bold-mode headwear: the same items as the cast's, as single flat shapes. */
+const BOLD_FRONT: Partial<Record<CharacterId, React.ReactNode>> = {
+  bram: (
+    <g>
+      <path d="M30 41C30 17 43 4 60 4C77 4 90 17 90 41Z" fill="#ffc800" />
+      <path d="M77 9C86 17 90 28 90 41H79C79 29 79 18 77 9Z" fill="#e5a400" opacity=".6" />
+      <rect x="21" y="34" width="78" height="10" rx="5" fill="#e5a400" />
+    </g>
+  ),
+};
+
+/** Oversized eyes: big whites, huge pupils with a catch-light, thick brows arched high. */
+function BoldEyes({ who, blink, gaze, brow }: { who: CharacterId; blink: number; gaze: [number, number]; brow: string }) {
+  const cy = 62;
+  const [gx, gy] = gaze;
+  const eye = (cx: number, tilt: number) => (
+    <g>
+      <ellipse cx={cx} cy={cy} rx="10" ry="11.5" fill="#fff" transform={`rotate(${tilt} ${cx} ${cy})`} />
+      <circle cx={cx + gx * 3} cy={cy + gy * 3.4} r="6.6" fill="#2a1f1c" />
+      <circle cx={cx + gx * 3 - 2.4} cy={cy + gy * 3.4 - 2.6} r="2.5" fill="#fff" />
+      <circle cx={cx + gx * 3 + 2.4} cy={cy + gy * 3.4 + 2.4} r="1.1" fill="#fff" />
+    </g>
+  );
+  return (
+    <>
+      <g className="ch-eyes" style={{ '--blink': `${blink}s` } as React.CSSProperties}>
+        {eye(48.5, -8)}
+        {eye(71.5, 8)}
+      </g>
+      <path
+        className="ch-brows"
+        d={`M38 ${cy - 12}Q46 ${cy - 21} 55 ${cy - 14}M65 ${cy - 15}Q74 ${cy - 23} 83 ${cy - 12}`}
+        fill="none"
+        stroke={brow}
+        strokeWidth="5"
+        strokeLinecap="round"
+      />
+    </>
+  );
+}
+
+/** A wide-open cheering mouth with a tongue: one shape, readable at any size. */
+function BoldMouth() {
+  return (
+    <g>
+      <path d="M48 77Q60 80 73 75Q72 91 60.5 91Q49 91 48 77Z" fill="#7a2230" />
+      <path d="M52.5 85.5Q60 80.5 68.5 85Q61 92 52.5 85.5Z" fill="#ff7b8a" />
     </g>
   );
 }
