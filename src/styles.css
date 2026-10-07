@@ -689,8 +689,9 @@ h2 { font-size: 1.25rem; }
 .result { align-items: center; justify-content: center; text-align: center; gap: 6px; padding-top: 24px; }
 .result .bi { align-items: center; }
 /* (the celebration scene itself is styled under "Celebrations" below) */
+.result-screen { overflow-x: clip; }
 .result-hero { position: relative; }
-.result-stamp { top: auto; bottom: 18px; right: -6px; margin-top: 0; width: 92px; height: 92px; rotate: -14deg; animation-delay: 0.9s; }
+.result-stamp { top: auto; bottom: 18px; right: 0; margin-top: 0; width: 92px; height: 92px; rotate: -14deg; animation-delay: 0.9s; }
 .result-stamp .stamp-word { font-size: 1.6rem; }
 .result-title { margin: 8px 0 0; animation: cel-title 0.6s 0.35s cubic-bezier(0.3, 1.6, 0.5, 1) both; font-size: 2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
 .result-title .bi-help { font-size: 0.6em; font-weight: 500; color: var(--muted); }

@@ -57,19 +57,6 @@ export const SlowIcon = (p: IconProps) => (
   </Svg>
 );
 
-export const FlameIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <path d="M12 2.5c.6 3.2 4.8 5.3 4.8 10.4a4.8 4.8 0 0 1-9.6 0c0-2 1-3.4 2.1-4.4.2 1.4.9 2.4 1.9 2.8C10.6 8.5 11 5.2 12 2.5z" fill="#ff9600" />
-    <path d="M12 21.5a3.4 3.4 0 0 1-3.4-3.4c0-2.2 2.1-3.3 2.9-5.4 1.3 1.4 3.9 2.9 3.9 5.4a3.4 3.4 0 0 1-3.4 3.4z" fill="#ffc800" />
-  </Svg>
-);
-
-export const StarIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" fill="#ffc800" stroke="#e5a400" strokeWidth="1.2" strokeLinejoin="round" />
-  </Svg>
-);
-
 export const GlobeIcon = (p: IconProps) => (
   <Svg {...p}>
     <circle cx="12" cy="12" r="9" {...stroke} strokeWidth={2} />
@@ -90,25 +77,11 @@ export const CrownIcon = (p: IconProps) => (
   </Svg>
 );
 
-export const PlayStarIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z" fill="currentColor" />
-  </Svg>
-);
-
 export const AlertIcon = (p: IconProps) => (
   <Svg {...p}>
-    <path d="M10.3 3.9a2 2 0 0 1 3.4 0l8 13.8a2 2 0 0 1-1.7 3H4a2 2 0 0 1-1.7-3z" fill="#ff4b4b" />
+    <path d="M10.3 3.9a2 2 0 0 1 3.4 0l8 13.8a2 2 0 0 1-1.7 3H4a2 2 0 0 1-1.7-3z" fill="#c2412d" />
     <path d="M12 9v5" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" />
     <circle cx="12" cy="17.3" r="1.5" fill="#fff" />
-  </Svg>
-);
-
-export const TargetIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2.4" />
-    <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" strokeWidth="2.4" />
-    <circle cx="12" cy="12" r="1.8" fill="currentColor" />
   </Svg>
 );
 
@@ -129,13 +102,6 @@ export const AutoThemeIcon = (p: IconProps) => (
   <Svg {...p}>
     <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" strokeWidth="2.2" />
     <path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor" />
-  </Svg>
-);
-
-export const BoltIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <path d="M13.6 1.8L4.6 13.4h6.1l-1.6 8.8 9.4-12.1h-6.3z" fill="#ffc800" stroke="#e5a400" strokeWidth="1.1" strokeLinejoin="round" />
-    <path d="M12.6 4.6L7.8 11.4h3" fill="none" stroke="#fff3b0" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
   </Svg>
 );
 
