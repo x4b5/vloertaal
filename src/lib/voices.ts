@@ -15,9 +15,9 @@ export const DEVICE = 'device';
  *  Keys match CharacterId in src/components/Characters.tsx. */
 const CAST_VOICES: Record<string, VoiceRef[]> = {
   bram: ['piper:berend', 'piper:pim'],
-  henk: ['piper:berend', 'piper:ronnie'],
+  henk: ['piper:daniel', 'piper:ronnie'],
   amina: ['piper:ariel', DEVICE],
-  jada: ['piper:ariel', DEVICE],
+  jada: ['piper:noa', DEVICE],
 };
 
 export function voiceFor(who: string): VoiceRef {

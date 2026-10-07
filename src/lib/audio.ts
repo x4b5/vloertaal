@@ -21,6 +21,8 @@ export interface RecordedVoice {
   license?: string;
   dataset?: string;
   modelCard?: string;
+  /** Set when loading: who made the recordings. */
+  engine?: 'ElevenLabs' | 'Piper';
 }
 
 interface RecordedIndex {
@@ -69,11 +71,11 @@ if (typeof window !== 'undefined' && typeof fetch === 'function') {
     ([eleven, piper]) => {
       const list: Recorded[] = [
         ...(eleven?.voices ?? []).map(({ said, ...voice }) => ({
-          voice,
+          voice: { ...voice, engine: 'ElevenLabs' as const },
           base: './audio-el',
           clips: Object.fromEntries(Object.entries(said).map(([id, text]) => [text.trim(), id])),
         })),
-        ...(piper?.voices ?? []).map((voice) => ({ voice, base: './audio', clips: piper!.clips })),
+        ...(piper?.voices ?? []).map((voice) => ({ voice: { ...voice, engine: 'Piper' as const }, base: './audio', clips: piper!.clips })),
       ];
       if (list.length) {
         recorded = list;

@@ -16,7 +16,7 @@ const t: CultureTranslation = {
     'a.free': 'Za darmo i prywatnie',
     'a.free.b': 'Vloertaal jest darmowy i nie potrzebujesz konta. Twoje postępy są zapisywane tylko na tym telefonie albo komputerze. Nie śledzimy tego, co robisz.',
     'a.voices': 'Głosy',
-    'a.voices.b': 'Niderlandzkie głosy mężczyzn są zrobione za pomocą Piper, darmowego programu do mowy o otwartym kodzie. Kobiety w aplikacji mówią głosem twojego własnego telefonu albo komputera.',
+    'a.voices.b': 'Każda postać ma swój własny niderlandzki głos: Bram mówi głosem Berenda, Henk głosem Daniela, Amina głosem Ariël, a Jada głosem Noi. Te głosy zostały nagrane za pomocą ElevenLabs. Jeśli zdanie nie ma jeszcze nagrania, słyszysz Piper (darmowy program do mowy o otwartym kodzie) albo głos swojego telefonu lub komputera.',
   },
 };
 
