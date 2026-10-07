@@ -347,7 +347,13 @@ h2 { font-size: 1.25rem; }
 }
 .feedback-text { min-width: 0; }
 .feedback-title { font-size: 1.6rem; font-weight: 700; line-height: 1.15; color: var(--ink); letter-spacing: -0.01em; }
-.feedback-wrong .feedback-title { color: var(--wrong-ink); }
+/* Wrong answer: ink heading, a brick-red bar on the left edge as the only red accent. */
+.feedback-wrong { box-shadow: inset 8px 0 0 var(--red), 6px 6px 0 var(--label-shadow); padding-inline-start: 26px; }
+.feedback-other { box-shadow: inset 8px 0 0 var(--kraft), 6px 6px 0 var(--label-shadow); padding-inline-start: 26px; }
+.feedback-kicker { margin-bottom: 4px; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+.feedback-kicker .bi { flex-direction: row; flex-wrap: wrap; gap: 0 8px; }
+.feedback-kicker .bi-help { font-size: 1em; }
+.feedback-kicker .bi-help::before { content: '· '; }
 .feedback-title .bi-help { color: inherit; font-size: 0.6em; font-weight: 500; }
 .feedback-rule { height: 0; margin: 12px 0 10px; border: 0; border-top: 2px dashed var(--line); }
 /* "het hesje = the safety vest", with the help language underneath. */
@@ -527,8 +533,12 @@ h2 { font-size: 1.25rem; }
   background-image: linear-gradient(var(--ink-3) 0 2px, transparent 2px);
   background-size: 100% 64px;
 }
-.answer-line .stamp { top: auto; bottom: -62px; right: -4px; margin-top: 0; width: 78px; height: 78px; }
-.answer-line .stamp-word { font-size: 1.55rem; }
+/* Room at the end of the answer row for the stamp, so it never covers a tile. */
+.answer-line { padding-inline-end: 72px; }
+.answer-line .stamp { top: 0; right: 0; margin-top: 0; width: 64px; height: 64px; }
+.answer-line .stamp-word { font-size: 1.3rem; }
+.answer-line .stamp-wrong .stamp-word { font-size: 0.95rem; }
+.answer-line .stamp-sub { margin-top: 1px; }
 .answer-right .tile { border-color: var(--green); }
 .answer-wrong .tile { border-color: var(--red); }
 .tile-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 28px; }

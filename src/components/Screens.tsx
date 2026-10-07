@@ -12,22 +12,22 @@ import { isUnlocked } from '../lib/exercises';
 import type { Progress, ThemeChoice } from '../lib/progress';
 import { Bi } from './Bi';
 import { LogoMark, Wordmark } from './Logo';
-import { unitPictures } from '../pictures';
+import { WordPicture } from '../pictures';
 import {
   AlertIcon,
   AutoThemeIcon,
+  CalendarIcon,
+  ChevronDownIcon,
+  CrateIcon,
   BackIcon,
   BoltIcon,
   BullseyeIcon,
   CheckIcon,
   ChevronIcon,
   CrownIcon,
-  FlameIcon,
   GlobeIcon,
   LockIcon,
   MoonIcon,
-  PlayStarIcon,
-  StarIcon,
   SpeakerIcon,
   SunIcon,
 } from './Icons';
@@ -93,15 +93,38 @@ export function TopBar({ streak, xp, lang, onSettings }: {
 }) {
   return (
     <header className="topbar">
-      <span className="brand"><LogoMark size={32} /><Wordmark /></span>
-      <span className="stat" title={ui('dayStreak').en}><FlameIcon /> {streak}</span>
-      <span className="stat" title="XP"><StarIcon /> {xp}</span>
-      <button type="button" className="stat stat-btn" onClick={onSettings} aria-label={ui('settings').en}>
-        <GlobeIcon size={20} /> {lang ? lang.nativeName : 'EN'}
+      <span className="brand">
+        <LogoMark size={40} />
+        <Wordmark className="topbar-wordmark" />
+      </span>
+      <span className="chip chip-streak" role="img" aria-label={`${streak} ${ui('dayStreak').en}`} title={ui('dayStreak').en}>
+        <CalendarIcon size={22} />
+        <span className="chip-num">{streak}</span>
+        <span className="chip-unit" lang="nl">{streak === 1 ? 'dag' : 'dagen'}</span>
+      </span>
+      <span className="chip chip-xp" role="img" aria-label={`${xp} XP`}>
+        <CrateIcon size={22} />
+        <span className="chip-num">{xp}</span>
+        <span className="chip-unit">XP</span>
+      </span>
+      <button
+        type="button"
+        className="chip chip-lang"
+        onClick={onSettings}
+        aria-label={`${ui('settings').en} · ${lang ? lang.name : ui('englishOnly').en}`}
+      >
+        <GlobeIcon size={20} />
+        <span className="chip-code">{lang ? lang.code.toUpperCase() : 'EN'}</span>
+        <ChevronDownIcon size={16} />
       </button>
     </header>
   );
 }
+
+/** Two-digit stencil unit number: 01, 02 … */
+const unitNumber = (u: number) => String(u + 1).padStart(2, '0');
+/** Lesson code on the card tab: A1, A2 … for unit 1, B1 … for unit 2. */
+const lessonCode = (u: number, i: number) => `${String.fromCharCode(65 + u)}${i + 1}`;
 
 export function Path({ progress, lang, onStart, onPhrasebook, onTips, onAbout }: {
   progress: Progress;
@@ -111,61 +134,93 @@ export function Path({ progress, lang, onStart, onPhrasebook, onTips, onAbout }:
   onTips: () => void;
   onAbout: () => void;
 }) {
-  let n = 0;
   return (
     <div className="path">
-      <button type="button" className="phrase-banner" onClick={onPhrasebook}>
-        <AlertIcon size={30} />
-        <Bi text={ui('phrasebook', lang)} />
-        <ChevronIcon />
-      </button>
-      <button type="button" className="phrase-banner tips-banner" onClick={onTips}>
-        <span className="tips-banner-emoji" aria-hidden>💡</span>
-        <Bi text={ui('cultureTips', lang)} />
-        <ChevronIcon />
-      </button>
+      <div className="entries">
+        <button type="button" className="entry entry-alert" onClick={onPhrasebook}>
+          <span className="entry-icon" aria-hidden><AlertIcon size={26} /></span>
+          <Bi text={ui('phrasebook', lang)} />
+          <ChevronIcon size={20} />
+        </button>
+        <button type="button" className="entry entry-tips" onClick={onTips}>
+          <span className="entry-icon" aria-hidden><span className="entry-emoji">💡</span></span>
+          <Bi text={ui('cultureTips', lang)} />
+          <ChevronIcon size={20} />
+        </button>
+      </div>
 
-      {units.map((unit, u) => (
-        <section key={unit.id} className="unit" style={{ '--unit': unit.color } as React.CSSProperties}>
-          <div className="unit-head">
-            <div>
-              <div className="unit-num">Unit {u + 1} · <span lang="nl">{unit.titleNl}</span></div>
-              <h2><Bi text={gloss(unit.id, unit.title, lang)} /></h2>
+      {units.map((unit, u) => {
+        const unitOpen = unit.lessons.some((l) => isUnlocked(l.id, progress.completed));
+        return (
+          <section key={unit.id} className={`unit ${unitOpen ? '' : 'unit-locked'}`}>
+            {u > 0 && <div className="hazard" aria-hidden />}
+            <div className="unit-head">
+              <span className="unit-num" aria-hidden>{unitNumber(u)}</span>
+              <div className="unit-titles">
+                <h2>
+                  <span className="sr-only">Unit {u + 1}: </span>
+                  {gloss(unit.id, unit.title, lang).en}
+                </h2>
+                <span className="unit-nl" lang="nl">{unit.titleNl}</span>
+                {lang?.gloss[unit.id] && (
+                  <span className="bi-help" lang={lang.code} dir={lang.dir}>{lang.gloss[unit.id]}</span>
+                )}
+              </div>
+              {!unitOpen && <LockIcon size={26} className="unit-lock" />}
             </div>
-            {unitPictures[unit.id] ? (
-              <svg className="unit-emoji unit-pic" viewBox="0 0 120 120" width={64} height={64} aria-hidden focusable="false">{unitPictures[unit.id]()}</svg>
-            ) : (
-              <span className="unit-emoji" aria-hidden>{unit.emoji}</span>
-            )}
-          </div>
-          <ol className="nodes">
-            {unit.lessons.map((lesson) => {
-              const record = progress.completed[lesson.id];
-              const open = isUnlocked(lesson.id, progress.completed);
-              const offset = [0, 1, 0, -1][n++ % 4];
-              return (
-                <li key={lesson.id} className="node-row" style={{ '--offset': offset } as React.CSSProperties}>
-                  <button
-                    type="button"
-                    className={`node ${record ? 'node-done' : open ? 'node-open' : 'node-locked'}`}
-                    disabled={!open}
-                    onClick={() => onStart(lesson.id, Boolean(record))}
-                    aria-label={`${lesson.title}${open ? '' : ` (${ui('locked').en})`}`}
-                  >
-                    {record ? (record.best === 1 ? <CrownIcon size={34} /> : <CheckIcon size={36} />) : open ? <PlayStarIcon size={36} /> : <LockIcon size={28} />}
-                  </button>
-                  <div className="node-label">
-                    <Bi text={gloss(lesson.id, lesson.title, lang)} />
-                    {open && (
-                      <span className="node-cta">{record ? ui('practice').en : ui('start').en}</span>
-                    )}
-                  </div>
-                </li>
-              );
-            })}
-          </ol>
-        </section>
-      ))}
+            <ol className="bays">
+              {unit.lessons.map((lesson, i) => {
+                const record = progress.completed[lesson.id];
+                const open = isUnlocked(lesson.id, progress.completed);
+                const state = record ? 'done' : open ? 'now' : 'locked';
+                const code = lessonCode(u, i);
+                const first = lesson.words[0];
+                return (
+                  <li key={lesson.id} className={`bay bay-${state}`}>
+                    <span className="bay-marker" aria-hidden>
+                      {state === 'done' ? <CheckIcon size={24} /> : i + 1}
+                    </span>
+                    <button
+                      type="button"
+                      className="bay-card"
+                      disabled={!open}
+                      onClick={() => onStart(lesson.id, Boolean(record))}
+                      aria-label={`${lesson.title}${open ? (record ? ` · ${ui('practice').en}` : '') : ` (${ui('locked').en})`}`}
+                    >
+                      <span className="bay-tab" aria-hidden>
+                        {code}{state === 'now' && <> · <span lang="nl">Nu</span></>}
+                      </span>
+                      {state === 'done' && first && (
+                        <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={56} />
+                      )}
+                      {state === 'locked' && <LockIcon size={30} className="bay-lock" />}
+                      <span className="bay-text">
+                        <Bi className="bay-title" text={gloss(lesson.id, lesson.title, lang)} />
+                        {state === 'done' && (
+                          <span className="bay-status">
+                            <span lang="nl">klaar</span> · <span className="bay-again">{ui('practice').en} ›</span>
+                          </span>
+                        )}
+                        {state === 'now' && (
+                          <span className="bay-start">{ui('start').en}<ChevronIcon size={20} /></span>
+                        )}
+                      </span>
+                      {state === 'done' && (
+                        <span className="bay-check" aria-hidden>
+                          {record.best === 1 ? <CrownIcon size={18} /> : <CheckIcon size={20} />}
+                        </span>
+                      )}
+                      {state === 'now' && (
+                        <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>
+                      )}
+                    </button>
+                  </li>
+                );
+              })}
+            </ol>
+          </section>
+        );
+      })}
       <button type="button" className="about-link" onClick={onAbout}>
         <LogoMark size={22} check={false} />
         <Bi text={ui('about', lang)} />

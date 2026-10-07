@@ -149,3 +149,26 @@ export const BullseyeIcon = (p: IconProps) => (
     <path d="M17.5 2.5l.6 3.4 3.4.6" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
   </Svg>
 );
+
+/** Calendar page with a tick: the day streak in the top bar (orange accent). */
+export const CalendarIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" fill="#ff7a00" />
+    <rect x="5.5" y="9.5" width="13" height="9" rx="1.2" fill="#fffdf8" />
+    <path d="M8 3v4M16 3v4" stroke="#1e2226" strokeWidth="2.2" strokeLinecap="round" />
+    <path d="M8.8 14l2.2 2.2 4.4-4.4" fill="none" stroke="#ff7a00" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+  </Svg>
+);
+
+/** Kraft cardboard box: XP in the top bar. */
+export const CrateIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M12 2.8l8.5 4.4v9.6L12 21.2l-8.5-4.4V7.2z" fill="#c8955b" stroke="#7e5428" strokeWidth="1.6" strokeLinejoin="round" />
+    <path d="M3.8 7.3L12 11.6l8.2-4.3M12 11.6v9.4" fill="none" stroke="#7e5428" strokeWidth="1.6" strokeLinejoin="round" />
+    <path d="M7.6 5L16 9.4v3.2" fill="none" stroke="#ebd6b5" strokeWidth="2" strokeLinecap="round" />
+  </Svg>
+);
+
+export const ChevronDownIcon = (p: IconProps) => (
+  <Svg {...p}><path d="M6 9l6 6 6-6" {...stroke} /></Svg>
+);

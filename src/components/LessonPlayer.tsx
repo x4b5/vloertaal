@@ -260,18 +260,21 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       <footer className="player-foot">
         <div className="foot-inner">
           {feedback && (
-            <div className={`feedback ${answer.correct ? 'feedback-right' : 'feedback-wrong'}`} role="status">
+            <div
+              className={`feedback ${answer.correct ? 'feedback-right' : ex.kind === 'situation' ? 'feedback-other' : 'feedback-wrong'}`}
+              role="status"
+            >
               <span className="feedback-tape" aria-hidden />
               <div className="feedback-text">
                 {!answer.correct && sol.text ? (
-                  <>
-                    <span className="sr-only">{ui('incorrect', lang).en}. </span>
-                    <div className="feedback-title">
-                      {ex.kind === 'situation'
-                        ? <Bi text={ui('otherChoice', lang)} />
-                        : <Bi text={{ ...ui('correctAnswer', lang), en: `${ui('correctAnswer', lang).en}:` }} />}
-                    </div>
-                  </>
+                  ex.kind === 'situation' ? (
+                    <div className="feedback-title"><Bi text={ui('otherChoice', lang)} /></div>
+                  ) : (
+                    <>
+                      <div className="feedback-title"><span lang="nl">Nog eens!</span></div>
+                      <span className="sr-only">{ui('incorrect', lang).en}.</span>
+                    </>
+                  )
                 ) : answer.correct && !answer.almost ? (
                   <>
                     <div className="feedback-title"><span lang="nl">Goed zo!</span></div>
@@ -283,6 +286,11 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
                   </div>
                 )}
                 {(pairLine || whyLine) && <hr className="feedback-rule" />}
+                {!answer.correct && sol.text && ex.kind !== 'situation' && (
+                  <div className="feedback-kicker">
+                    <Bi text={{ ...ui('correctAnswer', lang), en: `${ui('correctAnswer', lang).en}:` }} />
+                  </div>
+                )}
                 {pairLine}{whyLine}
               </div>
             </div>
