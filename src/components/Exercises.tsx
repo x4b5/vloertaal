@@ -76,7 +76,9 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
   }, [word, onAnswer]);
   return (
     <div className="exercise">
-      <Prompt text={ui('newWord', lang)} />
+      {/* The kraft tag above already says "Nieuw woord" (with its translation beside it), so the
+          heading tells the learner what to do: listen to the word. */}
+      <Prompt text={ui('tapToHear', lang)} />
       <div className="card intro-card">
         <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />
         <div className="intro-nl">

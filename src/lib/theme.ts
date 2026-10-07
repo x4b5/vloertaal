@@ -8,6 +8,6 @@ export function applyTheme(theme: ThemeChoice): void {
   document.querySelectorAll('meta[name="theme-color"]').forEach((m) => {
     const metaIsDark = m.getAttribute('media')?.includes('dark');
     const dark = theme === 'auto' ? metaIsDark : theme === 'dark';
-    m.setAttribute('content', dark ? '#131f24' : '#ffffff');
+    m.setAttribute('content', dark ? '#16191c' : '#e7e3dc');
   });
 }

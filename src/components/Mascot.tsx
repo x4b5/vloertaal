@@ -92,10 +92,10 @@ const HEADS: Record<HeadId, HeadLook> = {
     // The oversized hard hat, tipped back at a jaunty angle: wider than his head, low brim.
     top: (
       <g transform="rotate(-13 0 -40)">
-        <path d="M-31 -37C-31 -66 -15 -80 2 -80C21 -80 35 -66 35 -37Z" fill="#ffc800" />
-        <path d="M18 -76C29 -69 35 -55 35 -37H24C24 -52 22 -66 18 -76Z" fill="#e5a400" />
+        <path d="M-31 -37C-31 -66 -15 -80 2 -80C21 -80 35 -66 35 -37Z" fill="#ffc414" />
+        <path d="M18 -76C29 -69 35 -55 35 -37H24C24 -52 22 -66 18 -76Z" fill="#e0a800" />
         <rect x="-4.5" y="-80" width="10" height="42" rx="5" fill="#ffe066" />
-        <rect x="-37" y="-42" width="76" height="11" rx="5.5" fill="#e5a400" />
+        <rect x="-37" y="-42" width="76" height="11" rx="5.5" fill="#e0a800" />
       </g>
     ),
   },
@@ -116,8 +116,8 @@ const HEADS: Record<HeadId, HeadLook> = {
         <path d="M-21 -26C-23 -46 -12 -52 0 -52C13 -52 23 -46 21 -26C14 -36 -2 -40 -21 -26Z" fill="#2b1a12" />
         <g transform="rotate(-8 0 -42)">
           <rect x="-22" y="-46" width="44" height="6" rx="3" fill="#1a6fae" />
-          <rect x="-17" y="-50" width="14" height="12" rx="5" fill="#1cb0f6" />
-          <rect x="3" y="-50" width="14" height="12" rx="5" fill="#1cb0f6" />
+          <rect x="-17" y="-50" width="14" height="12" rx="5" fill="#1592db" />
+          <rect x="3" y="-50" width="14" height="12" rx="5" fill="#1592db" />
           <rect x="-14" y="-47.5" width="6" height="3" rx="1.5" fill="#bfe9ff" />
           <rect x="6" y="-47.5" width="6" height="3" rx="1.5" fill="#bfe9ff" />
         </g>

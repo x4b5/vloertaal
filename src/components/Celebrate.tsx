@@ -54,12 +54,13 @@ export function Burst({ x, y, r, color, className, style }: {
 
 type Piece = [x: number, y: number, kind: 'rect' | 'dot' | 'ring' | 'star' | 'wave', color: string, rot: number, size: number];
 
-const GOLD = '#ffc800';
-const ORANGE = '#ff9600';
-const BLUE = '#1cb0f6';
-const GREEN = '#93d333';
-const PINK = '#ff86d0';
-const PURPLE = '#ce82ff';
+const GOLD = '#ffc414';
+const ORANGE = '#ff7a00';
+/* Theme-aware house tokens (SVG presentation attributes accept var()). */
+const KRAFT = 'var(--kraft)';
+const GREEN = 'var(--green)';
+const BRICK = 'var(--red)';
+const KRAFT_DARK = 'var(--kraft-dark)';
 
 /** One confetti piece. It flies out from (ox, oy) to its spot, then drifts there. */
 function Confetti({ pieces, ox, oy, delay = 0 }: { pieces: Piece[]; ox: number; oy: number; delay?: number }) {
@@ -180,8 +181,8 @@ const OUTFITS: Record<HeadId, Outfit> = {
     shade: '#6e3f25',
     sleeve: '#ffc929',
     bare: true,
-    leg: '#1cb0f6',
-    shoe: '#ff4b4b',
+    leg: '#1592db',
+    shoe: '#c2412d',
     arm: [20, 19, 10.5],
     legs: [14, 13, 12.5],
     shoulder: [12, -30],
@@ -193,10 +194,10 @@ const OUTFITS: Record<HeadId, Outfit> = {
       <>
         {/* Yellow tee under blue dungarees: one bib-and-trousers block and two straps. */}
         <path d={JADA_BEAN} fill="#ffc929" />
-        <rect x="-11" y="-20" width="22" height="34" rx="3" fill="#1cb0f6" />
-        <rect x="-22" y="-2" width="44" height="18" fill="#1cb0f6" />
-        <rect x="-13" y="-42" width="5" height="24" rx="2.5" fill="#1cb0f6" transform="rotate(-6 -10 -20)" />
-        <rect x="8" y="-42" width="5" height="24" rx="2.5" fill="#1cb0f6" transform="rotate(6 10 -20)" />
+        <rect x="-11" y="-20" width="22" height="34" rx="3" fill="#1592db" />
+        <rect x="-22" y="-2" width="44" height="18" fill="#1592db" />
+        <rect x="-13" y="-42" width="5" height="24" rx="2.5" fill="#1592db" transform="rotate(-6 -10 -20)" />
+        <rect x="8" y="-42" width="5" height="24" rx="2.5" fill="#1592db" transform="rotate(6 10 -20)" />
       </>
     ),
   },
@@ -302,17 +303,17 @@ const LESSON_CONFETTI: Piece[] = [
   [60, 40, 'star', GOLD, 0, 9],
   [262, 30, 'ring', GOLD, 0, 9],
   [296, 74, 'star', ORANGE, 0, 7],
-  [30, 104, 'dot', PINK, 0, 6],
-  [300, 128, 'rect', BLUE, 30, 10],
-  [26, 54, 'rect', PURPLE, -24, 10],
+  [30, 104, 'dot', BRICK, 0, 6],
+  [300, 128, 'rect', KRAFT, 30, 10],
+  [26, 54, 'rect', KRAFT_DARK, -24, 10],
   [196, 14, 'dot', GREEN, 0, 5],
-  [232, 54, 'wave', PINK, -12, 6],
+  [232, 54, 'wave', BRICK, -12, 6],
   [100, 20, 'rect', GOLD, 52, 8],
   [304, 190, 'dot', GOLD, 0, 5],
   [22, 160, 'star', GOLD, 0, 7],
   [276, 160, 'wave', GREEN, 20, 5],
   [40, 196, 'ring', ORANGE, 0, 7],
-  [168, 6, 'dot', BLUE, 0, 4.5],
+  [168, 6, 'dot', KRAFT, 0, 4.5],
 ];
 
 /** Bram's leap: one long diagonal from his kicked-back boot (bottom left), through his body and up
@@ -352,7 +353,7 @@ export function LessonCelebration({ className }: { className?: string }) {
     <div className={`cel-scene ${className ?? ''}`} aria-hidden>
       <svg className="cel-svg" viewBox="0 0 320 260" focusable="false">
         <Burst x={40} y={80} r={28} color={GREEN} className="cel-b1" />
-        <Burst x={284} y={56} r={24} color={BLUE} className="cel-b2" />
+        <Burst x={284} y={56} r={24} color={KRAFT} className="cel-b2" />
         <Burst x={296} y={214} r={14} color={GOLD} className="cel-b3" />
         <Confetti pieces={LESSON_CONFETTI} ox={160} oy={60} delay={0.5} />
         {/* The shop floor, shadows, and the crate Jada springs off */}
@@ -417,11 +418,11 @@ export function StreakHero({ lit = false, className }: { lit?: boolean; classNam
       <svg className="streak-svg" viewBox="0 0 240 220" focusable="false">
         <Confetti pieces={STREAK_CONFETTI} ox={110} oy={100} delay={0.6} />
         <g className="streak-podium">
-          <path d="M44 184v14c0 10 34 17 76 17s76-7 76-17v-14z" fill="#d96500" />
-          <path d="M150 198.6v14.6M90 198.6v14.6" stroke="#c25700" strokeWidth="3" strokeLinecap="round" opacity=".5" />
-          <ellipse cx="120" cy="184" rx="76" ry="17" fill="#ff9600" />
-          <path d="M60 182c12-7 34-10 52-10" fill="none" stroke="#ffc266" strokeWidth="4.5" strokeLinecap="round" />
-          <ellipse cx="120" cy="185" rx="44" ry="7.5" fill="#c25700" opacity=".45" />
+          <path d="M44 184v14c0 10 34 17 76 17s76-7 76-17v-14z" fill="#a8743e" />
+          <path d="M150 198.6v14.6M90 198.6v14.6" stroke="#7e5428" strokeWidth="3" strokeLinecap="round" opacity=".5" />
+          <ellipse cx="120" cy="184" rx="76" ry="17" fill="#c8955b" />
+          <path d="M60 182c12-7 34-10 52-10" fill="none" stroke="#ebd6b5" strokeWidth="4.5" strokeLinecap="round" />
+          <ellipse cx="120" cy="185" rx="44" ry="7.5" fill="#7e5428" opacity=".35" />
         </g>
         <g className="sk-flame">
           <g className="sk-flame-idle">

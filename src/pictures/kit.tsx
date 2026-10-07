@@ -25,20 +25,20 @@ export const PAL = {
   slate: '#3c4a56',
   slateDark: '#26313a',
   // Hard-hat yellow
-  yellow: '#ffc800',
-  yellowShade: '#e5a400',
+  yellow: '#ffc414',
+  yellowShade: '#e0a800',
   yellowLight: '#ffd94d',
   yellowShine: '#fff3b0',
   // Hi-vis orange
   orange: '#ff7a00',
   orangeShade: '#d96500',
-  orangeLight: '#ff9600',
+  orangeLight: '#ff9a3c',
   // Work-shirt blue and sky blue
   blue: '#1a86d8',
   blueShade: '#126bb0',
   blueLight: '#5fb8f5',
-  sky: '#1cb0f6',
-  skyShade: '#1899d6',
+  sky: '#1592db',
+  skyShade: '#0f73ae',
   ice: '#8fdcff',
   // Supervisor navy
   navy: '#244a7d',
@@ -49,16 +49,16 @@ export const PAL = {
   leaf: '#7ac70c',
   leafShade: '#58a700',
   lime: '#c6f06b',
-  ok: '#58cc02',
-  okShade: '#46a302',
+  ok: '#137a55',
+  okShade: '#0d5a3f',
   // Headscarf purple
   purple: '#8e44c9',
   purpleShade: '#6f2fa6',
   purpleLight: '#b07ae6',
   // Alarm red
-  red: '#ff4b4b',
-  redShade: '#ea2b2b',
-  redLight: '#ffb3b3',
+  red: '#e0452f',
+  redShade: '#b5341f',
+  redLight: '#f0b8ab',
   // Terracotta pot
   clay: '#e0703f',
   clayShade: '#c0552a',
