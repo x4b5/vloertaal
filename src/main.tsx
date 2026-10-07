@@ -6,10 +6,11 @@ import { loadProgress } from './lib/progress';
 import { applyTheme } from './lib/theme';
 import './styles.css';
 
-// Apply the saved theme before the first paint, so there is no light/dark flash.
-applyTheme(loadProgress().theme);
-
 const params = new URLSearchParams(location.search);
+
+// Apply the saved theme before the first paint, so there is no light/dark flash.
+// Dev screenshot pages follow the browser's colour scheme instead.
+applyTheme(import.meta.env.DEV && params.get('shot') ? 'auto' : loadProgress().theme);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
