@@ -171,11 +171,11 @@ h2 { font-size: 1.25rem; }
 .bi-help { color: var(--muted); font-weight: 400; }
 /* Help-language size: each context sets --help-size (default 0.85em); never below --help-min,
    and 10% up for the scripts below. */
-.bi-help, .in-a-row-help {
+.bi-help {
   font-size: max(calc(var(--help-min) * var(--help-k, 1)), calc(var(--help-size, 0.85em) * var(--help-k, 1)));
 }
 /* Ethiopic, Arabic and Persian script read small next to Latin at the same size: 10% bigger. */
-.bi-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']), .in-a-row-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { --help-k: 1.1; }
+.bi-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { --help-k: 1.1; }
 
 /* Buttons: flat, ink-bordered, printed. The main lesson buttons carry a square block at
    the end (a check before answering, an arrow after). */
@@ -281,24 +281,14 @@ h2 { font-size: 1.25rem; }
 
 /* Learning path: the warehouse aisle. Units are ink signs, lessons are bays along a track. */
 .path { padding: 8px 16px 80px; }
-/* Phrasebook / tips entry points (also used as banners on the Settings page). */
-.entries { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-bottom: 8px; }
-.entry, .phrase-banner {
+/* Banner buttons (About on the Settings page). */
+.phrase-banner {
   width: 100%; display: flex; align-items: center; gap: 12px; text-align: start; min-height: 60px;
   padding: 8px 12px; font-weight: 700; color: var(--ink);
   background: var(--card); border: 2.5px solid var(--edge); border-radius: var(--radius);
 }
-.entry .bi, .phrase-banner .bi { flex: 1; min-width: 0; font-size: 0.95rem; line-height: 1.25; }
-.entry .bi-help { --help-size: 0.85em; }
-.entry > .icon:last-child { color: var(--ink-3); }
-.entry:hover, .phrase-banner:hover { background: color-mix(in srgb, var(--card) 70%, var(--concrete-2)); }
-.entry-icon {
-  flex: none; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 8px;
-}
-.entry-alert { box-shadow: inset 7px 0 0 var(--red); padding-inline-start: 16px; }
-.entry-alert .entry-icon { background: var(--red-bg); }
-.entry-tips { box-shadow: inset 7px 0 0 var(--yellow); padding-inline-start: 16px; }
-.entry-tips .entry-icon { background: var(--tag-bg); }
+.phrase-banner .bi { flex: 1; min-width: 0; font-size: 0.95rem; line-height: 1.25; }
+.phrase-banner:hover { background: color-mix(in srgb, var(--card) 70%, var(--concrete-2)); }
 .entry-emoji { font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; font-size: 1.4rem; line-height: 1; }
 .phrase-banner > span:first-child { font-size: 1.6rem; }
 
@@ -412,8 +402,8 @@ h2 { font-size: 1.25rem; }
 .player-top {
   display: flex; align-items: center; gap: 10px;
   width: 100%; max-width: 1080px; margin: 0 auto;
-  /* Room above the bar for the "5 IN A ROW" label, below the notch / status bar. */
-  padding: calc(26px + env(safe-area-inset-top)) 16px 0;
+  /* Below the notch / status bar. */
+  padding: calc(18px + env(safe-area-inset-top)) 16px 0;
 }
 .player-top .icon-btn { margin-inline-start: -8px; }
 /* Generic bar (admin page). */
@@ -431,16 +421,7 @@ h2 { font-size: 1.25rem; }
   box-shadow: inset 0 0 0 2px #1e2226;
 }
 .lesson-name { display: none; }
-/* Progress bar with the "5 IN A ROW" streak label floating above the filled part. */
 .bar-wrap { position: relative; flex: 1; display: flex; min-width: 0; }
-.in-a-row {
-  position: absolute; bottom: calc(100% + 6px);
-  left: clamp(0px, calc(var(--p, 0) * 50% - 48px), calc(100% - 140px));
-  display: inline-flex; align-items: baseline; gap: 8px; white-space: nowrap;
-  color: var(--right-ink); font-family: var(--stencil); font-size: 1rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
-  animation: up 0.25s ease-out;
-}
-.in-a-row-help { font-family: 'Lexend Variable', sans-serif; --help-size: 0.8rem; font-weight: 600; letter-spacing: 0; text-transform: none; }
 .player-body {
   flex: 1; display: flex; flex-direction: column;
   width: 100%; max-width: 640px; margin: 0 auto; padding: 20px 16px 0;
@@ -609,8 +590,12 @@ h2 { font-size: 1.25rem; }
 .choices-rows .choice-label { font-size: 1.15rem; line-height: 1.25; min-width: 0; }
 .choices-rows .choice-label .bi-help { --help-size: 0.85em; margin-top: 2px; }
 .choice-nl { font-size: 1.2rem; min-width: 0; overflow-wrap: anywhere; }
-/* Room for the stamp on a checked row, so it never covers the words. */
-.choices-rows .choice:has(> .stamp), .choices:not(.choices-pics) .choice:has(> .stamp) { padding-right: 76px; }
+/* Room for the stamp on a checked row, so it never covers the words: a smaller stamp in rows,
+   and the text stops short of it (stamp 72 px, 8 px over the edge, plus a little air). */
+.choices:not(.choices-pics) .stamp { width: 72px; height: 72px; margin-top: -36px; }
+.choices:not(.choices-pics) .stamp-word { font-size: 1.45rem; }
+.choices:not(.choices-pics) .stamp-wrong .stamp-word { font-size: 1.1rem; }
+.choices:not(.choices-pics) .choice:has(> .stamp) { padding-right: 78px; }
 
 /* Rubber stamps: GOED on a right answer, NOG EENS on a wrong pick. Double ring, stencil,
    slightly rotated, overlapping the right edge of the card; stamped in with a short thud. */
@@ -800,7 +785,7 @@ h2 { font-size: 1.25rem; }
 
 /* Wide screens: roomy lesson frame. */
 @media (min-width: 760px) {
-  .player-top { padding: calc(32px + env(safe-area-inset-top)) 40px 0; gap: 24px; }
+  .player-top { padding: calc(28px + env(safe-area-inset-top)) 40px 0; gap: 24px; }
   .player-top .icon-btn { font-size: 1.75rem; }
   .player-body {
     display: flex; flex-direction: column; justify-content: center;
@@ -1452,3 +1437,66 @@ svg.emoji-xl { width: 140px; height: 140px; }
   .sheet { border-bottom: 3px solid var(--edge); border-radius: 14px; padding: 32px 24px 24px; box-shadow: 8px 8px 0 var(--label-shadow); }
 }
 @media (prefers-reduced-motion: reduce) { .sheet, .sheet-backdrop { animation: none; } }
+
+/* Bottom navigation (Route · Woorden · Ik): a paper strip with an ink top edge. The active tab
+   is a yellow square with an ink border, like the reference (docs/bar-b/1-lespad.png). */
+.bottom-nav {
+  position: fixed; inset: auto 0 0; z-index: 10; display: flex; justify-content: center;
+  padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+  background: var(--card); border-top: 3px solid var(--edge);
+}
+.nav-tab {
+  flex: 1 1 0; max-width: 200px; min-height: 64px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  padding: 4px; background: none; border: 0; border-radius: 10px; color: var(--ink-3);
+}
+.nav-icon { display: grid; place-items: center; width: 52px; height: 36px; border-radius: 8px; border: 2.5px solid transparent; }
+.nav-label { font-size: 0.85rem; font-weight: 600; line-height: 1.1; }
+.nav-tab-on { color: var(--ink); }
+.nav-tab-on .nav-icon { background: var(--yellow); border-color: #1e2226; color: #1e2226; }
+.nav-tab-on .nav-label { font-weight: 700; }
+.nav-tab:hover:not(.nav-tab-on) { color: var(--ink-2); }
+.nav-tab:focus-visible { outline-offset: -3px; }
+/* Screens with the bar leave room for it. */
+.path, .words-hub, .screen:has(+ .bottom-nav) { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
+
+/* Emergency phrases, one tap away on the path: a compact red-edged chip. */
+.sos-chip {
+  display: flex; align-items: center; gap: 10px; width: 100%; min-height: 52px; margin: 4px 0 6px;
+  padding: 6px 12px 6px 16px; text-align: start; color: var(--ink);
+  background: var(--card); border: 2.5px solid var(--edge); border-radius: var(--radius);
+  box-shadow: inset 7px 0 0 var(--red);
+}
+.sos-nl { font-weight: 700; font-size: 1.05rem; }
+.sos-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.sos-en { flex-direction: row; flex-wrap: wrap; gap: 0 6px; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+.sos-en .bi-help { --help-size: 0.95em; display: inline; }
+.sos-en:has(.bi-help) .bi-en::after { content: ' ·'; color: var(--ink-3); }
+.sos-chip > .icon:last-child { color: var(--ink-3); flex: none; }
+.sos-chip:hover { background: var(--red-bg); }
+
+/* Woorden tab: words-learned count and two big entry cards. */
+.hub-count { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; font-weight: 600; }
+.hub-card {
+  display: flex; align-items: center; gap: 14px; width: 100%; min-height: 96px; margin-bottom: 14px;
+  padding: 14px 14px 14px 20px; text-align: start; color: var(--ink);
+  background: var(--card); border: 2.5px solid var(--edge); border-radius: 6px; box-shadow: 5px 5px 0 var(--label-shadow);
+}
+.hub-alert { box-shadow: inset 8px 0 0 var(--red), 5px 5px 0 var(--label-shadow); }
+.hub-tips { box-shadow: inset 8px 0 0 var(--yellow), 5px 5px 0 var(--label-shadow); }
+.hub-icon { flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 8px; background: var(--red-bg); }
+.hub-tips .hub-icon { background: var(--tag-bg); }
+.hub-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.hub-nl { font-family: var(--stencil); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.03em; text-transform: uppercase; line-height: 1; }
+.hub-text .bi { font-weight: 600; }
+.hub-card > .icon:last-child { flex: none; color: var(--ink-3); }
+
+/* Retry phase: mistakes come back as kraft segments after the planned ones. */
+.seg-repeat { background: var(--kraft-light); box-shadow: inset 0 0 0 1.5px var(--kraft); }
+.seg-repeat.seg-done { background: var(--kraft); box-shadow: none; }
+.seg-repeat.seg-now { background: repeating-linear-gradient(-45deg, var(--yellow) 0 5px, #1e2226 5px 10px); box-shadow: inset 0 0 0 2px #1e2226; }
+.tag-repeat { background: var(--kraft); color: #1e2226; }
+
+/* Result: small line under a stat value ("24 words learned"). */
+.stat-card-foot { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+
+.result .stat-card-foot { align-items: flex-start; text-align: start; }

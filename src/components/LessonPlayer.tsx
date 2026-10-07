@@ -25,6 +25,9 @@ import {
 export interface LessonResult {
   accuracy: number;
   review: boolean;
+  /** Graded exercises answered right the first time, out of all graded exercises. */
+  right: number;
+  total: number;
 }
 
 function solution(ex: Exercise): { text: string; nl: boolean } {
@@ -61,6 +64,11 @@ const KIND_TAG: Record<Exercise['kind'], string> = {
   situation: 'Situatie',
 };
 
+/** Fills {n} in both languages of a UI string. */
+function fillN(text: Bilingual, n: number): Bilingual {
+  return { ...text, en: text.en.replace('{n}', String(n)), help: text.help?.replace('{n}', String(n)) };
+}
+
 /** The answer as a pair for the feedback label: Dutch = meaning (English + help language). */
 function answerPair(ex: Exercise, lang?: HelpLanguage): { nl?: string; meaning: Bilingual } | null {
   switch (ex.kind) {
@@ -92,28 +100,14 @@ function ButtonBlock({ icon }: { icon: 'check' | 'next' }) {
   );
 }
 
-/** "5 IN A ROW" label above the progress bar, from three correct answers in a row. */
-function InARow({ count, progress, lang }: { count: number; progress: number; lang?: HelpLanguage }) {
-  const text = ui('inARow', lang);
-  const fill = (t: string) => t.replace('{n}', String(count));
-  return (
-    <span className="in-a-row" style={{ '--p': progress } as React.CSSProperties} role="status">
-      <span className="in-a-row-en">{fill(text.en)}</span>
-      {text.help && text.lang && (
-        <HelpText className="in-a-row-help" text={fill(text.help)} lang={text.lang} />
-      )}
-    </span>
-  );
-}
-
-export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, startAt = 0, initialStreak = 0, backSignal = 0 }: {
+export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0 }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
   exercises?: Exercise[];
+  /** Mistakes already queued to come back (screenshot harness, to show the retry phase). */
+  repeats?: Exercise[];
   startAt?: number;
-  /** Correct answers in a row before this exercise (screenshot harness). */
-  initialStreak?: number;
   lang?: HelpLanguage;
   onQuit: () => void;
   /** Goes up by one each time the system Back button is pressed during the lesson. */
@@ -121,12 +115,11 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   onFinish: (r: LessonResult) => void;
 }) {
   const initial = useMemo(() => exercises ?? buildLesson(lesson, { review }), [exercises, lesson, review]);
-  const [queue, setQueue] = useState<Exercise[]>(initial);
+  const [queue, setQueue] = useState<Exercise[]>(() => [...initial, ...(repeats ?? [])]);
   const [index, setIndex] = useState(startAt);
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [checked, setChecked] = useState(false);
   const graded = useRef({ right: 0, total: 0 });
-  const [streak, setStreak] = useState(initialStreak);
   const [audioOff, setAudioOff] = useState(!speechAvailable());
 
   const ex = queue[index];
@@ -165,7 +158,6 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       graded.current.total += 1;
       if (answer.correct) graded.current.right += 1;
     }
-    setStreak((n) => (answer.correct ? n + 1 : 0));
     // A finished match board already gave its feedback tile by tile.
     if (ex.kind === 'match') return next();
     setChecked(true);
@@ -189,7 +181,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   function finish() {
     const { right, total } = graded.current;
     sounds.done();
-    onFinish({ accuracy: total ? right / total : 1, review });
+    onFinish({ accuracy: total ? right / total : 1, review, right, total });
   }
 
   function next() {
@@ -265,18 +257,19 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     </div>
   );
   const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip';
-  // Segments: one per exercise of the lesson (mistakes that come back at the end don't add any).
+  // Segments: one per planned exercise, then one kraft segment per mistake that comes back.
   const segState = (i: number) => (i < index || (i === index && checked) ? 'seg-done' : i === index ? 'seg-now' : '');
   const count = Math.min(index + 1, initial.length);
+  /** In the retry phase: how many mistakes are left, this one included. */
+  const repeatsLeft = index >= initial.length ? queue.length - index : 0;
 
   return (
     <div className="player">
       <header className="player-top">
         <button type="button" className="icon-btn" onClick={() => setAskQuit(true)} aria-label="Quit lesson"><CloseIcon size={28} /></button>
         <div className="bar-wrap">
-          {streak >= 3 && <InARow count={streak} progress={progress} lang={lang} />}
           <div className="segs" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>
-            {initial.map((_, i) => <span key={i} className={`seg ${segState(i)}`} />)}
+            {queue.map((_, i) => <span key={i} className={`seg ${i >= initial.length ? 'seg-repeat' : ''} ${segState(i)}`} />)}
           </div>
         </div>
         <span className="lesson-name">
@@ -286,10 +279,21 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
 
       <main className="player-body">
         <div className="ex-tag">
-          <span className="tag" lang="nl">{KIND_TAG[ex.kind]}</span>
-          <span className="ex-count">{count} / {initial.length}</span>
-          {/* New-word exercises: translate the Dutch tag into English and the help language. */}
-          {(ex.kind === 'dutch' || ex.kind === 'intro') && <Bi className="ex-tag-note" text={ui('newWord', lang)} />}
+          {repeatsLeft > 0 ? (
+            <>
+              {/* Retry phase: the mistakes come back, and the learner sees how many are left. */}
+              <span className="tag tag-repeat" lang="nl">Herhalen</span>
+              <span className="ex-count" lang="nl">nog {repeatsLeft}</span>
+              <Bi className="ex-tag-note" text={fillN(ui('practiseMistakes', lang), repeatsLeft)} />
+            </>
+          ) : (
+            <>
+              <span className="tag" lang="nl">{KIND_TAG[ex.kind]}</span>
+              <span className="ex-count">{count} / {initial.length}</span>
+              {/* New-word exercises: translate the Dutch tag into English and the help language. */}
+              {(ex.kind === 'dutch' || ex.kind === 'intro') && <Bi className="ex-tag-note" text={ui('newWord', lang)} />}
+            </>
+          )}
         </div>
         {body}
       </main>

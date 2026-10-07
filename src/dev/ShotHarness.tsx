@@ -1,14 +1,14 @@
 import { tipForLesson } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import { LessonPlayer } from '../components/LessonPlayer';
-import { About, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar } from '../components/Screens';
+import { About, BottomNav, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar, WordsHub } from '../components/Screens';
 import { Admin } from '../components/Admin';
 import { emptyProgress } from '../lib/progress';
 import { Milestone } from '../components/Milestone';
 import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
 import type { LangCode } from '../i18n/types';
-import { allLessons, allReplies } from '../content/curriculum';
+import { allLessons, allReplies, learnedWords } from '../content/curriculum';
 import { buildTiles, type Exercise } from '../lib/exercises';
 import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
@@ -22,8 +22,8 @@ import * as kit from '../pictures/kit';
  * Options are always in lesson order, so tests know which one is right.
  */
 export function ShotHarness({ shot, lang, word }: { shot: string; lang: string | null; word?: string | null }) {
-  // Lesson complete: 14 XP at 88% accuracy, as in the reference.
-  if (shot === 'result') return <Result xp={14} accuracy={0.88} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
+  // Lesson complete: 9 of 11 right the first time, 6 new words (24 in all).
+  if (shot === 'result') return <Result right={9} total={11} newWords={6} words={24} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   // Day-streak milestone after the very first lesson: streak 1.
   if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
@@ -31,15 +31,26 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'onboarding') return <Onboarding onDone={() => {}} />;
   if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
   if (shot === 'admin') return <Admin onBack={() => {}} />;
-  if (shot === 'tips' || shot === 'settings') {
+  if (shot === 'tips' || shot === 'settings' || shot === 'words') {
     // Half the course done, so several tips are unlocked.
     const done = Object.fromEntries(allLessons.slice(0, 8).map((l) => [l.id, { best: 1, times: 1 }]));
     const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, completed: done };
     const l = getHelpLanguage(lang as LangCode);
+    if (shot === 'words') {
+      return (
+        <>
+          <WordsHub progress={progress} lang={l} onPhrasebook={() => {}} onTips={() => {}} />
+          <BottomNav current="words" onTab={() => {}} />
+        </>
+      );
+    }
     return shot === 'tips' ? (
       <Tips progress={progress} lang={l} onBack={() => {}} />
     ) : (
-      <Settings progress={progress} lang={l} onLang={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} onBack={() => {}} />
+      <>
+        <Settings progress={progress} lang={l} onLang={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} />
+        <BottomNav current="me" onTab={() => {}} />
+      </>
     );
   }
   if (shot === 'about') return <About lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
@@ -49,8 +60,9 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     const l = getHelpLanguage(lang as LangCode);
     return (
       <>
-        <TopBar streak={7} xp={120} lang={l} onSettings={() => {}} />
-        <Path progress={progress} lang={l} onStart={() => {}} onPhrasebook={() => {}} onTips={() => {}} onAbout={() => {}} />
+        <TopBar streak={7} words={learnedWords(progress.completed).size} lang={l} onLanguage={() => {}} />
+        <Path progress={progress} lang={l} onStart={() => {}} onPhrasebook={() => {}} onAbout={() => {}} />
+        <BottomNav current="route" onTab={() => {}} />
       </>
     );
   }
@@ -96,9 +108,9 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       review
       lang={getHelpLanguage(lang as LangCode)}
       exercises={[...before, ex, ...pad]}
-      startAt={before.length}
-      // The chat page shows the in-a-row counter: 4 before, 5 after a right answer.
-      initialStreak={shot === 'chat' ? 4 : 0}
+      startAt={shot === 'retry' ? before.length + pad.length + 2 : before.length}
+      // /?shot=retry: the lesson is through and three mistakes come back (the second is on now).
+      repeats={shot === 'retry' ? [exercises.meaning, exercises.dutch, exercises.build] : undefined}
       onQuit={() => {}}
       onFinish={() => {}}
     />

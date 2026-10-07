@@ -49,7 +49,8 @@ describe('content and translations', () => {
       const missingGloss = contentIds.filter((id) => !lang.gloss[id]?.trim());
       expect(missingUi).toEqual([]);
       // Templates keep their placeholders, or the number/word would vanish.
-      expect(lang.ui.inARow).toContain('{n}');
+      expect(lang.ui.practiseMistakes).toContain('{n}');
+      expect(lang.ui.wordsLearnedN).toContain('{n}');
       expect(lang.ui.streakGrew).toContain('{n}');
       expect(lang.ui.whichOneIs).toContain('{word}');
       expect(missingGloss).toEqual([]);
