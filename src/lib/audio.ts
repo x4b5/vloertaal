@@ -131,6 +131,12 @@ function emitSpeech(text: string, speaking: boolean, slow: boolean): void {
   speechListeners.forEach((fn) => fn(text, speaking, slow));
 }
 
+/** Learners need calm Dutch: recordings play a bit slower than recorded (same pitch),
+ *  and the turtle button slower still. */
+const RECORDED_RATE = { normal: 0.85, slow: 0.65 };
+/** The phone's own voice already speaks a little faster than the recordings. */
+const DEVICE_RATE = { normal: 0.8, slow: 0.55 };
+
 let playing: HTMLAudioElement | null = null;
 
 function stopAll(): void {
@@ -151,8 +157,9 @@ export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voic
   if (rec && id) {
     stopAll();
     const audio = new Audio(`${rec.base}/${rec.voice.key}/${id}.mp3`);
-    audio.playbackRate = slow ? 0.7 : 1;
+    audio.playbackRate = slow ? RECORDED_RATE.slow : RECORDED_RATE.normal;
     audio.preservesPitch = true;
+    (audio as HTMLAudioElement & { webkitPreservesPitch?: boolean }).webkitPreservesPitch = true;
     playing = audio;
     const turn = ++speechTurn;
     const end = () => {
@@ -183,7 +190,7 @@ function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: s
   u.lang = lang === 'en' ? 'en-GB' : 'nl-NL';
   const voice = lang === 'en' ? undefined : dutchVoice(voiceURI);
   if (voice) u.voice = voice;
-  u.rate = slow ? 0.55 : 0.9;
+  u.rate = slow ? DEVICE_RATE.slow : DEVICE_RATE.normal;
   // cancel() ends the previous utterance asynchronously; only the latest one reports its end.
   const turn = ++speechTurn;
   u.onend = u.onerror = () => {
