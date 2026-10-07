@@ -277,7 +277,7 @@ h2 { font-size: 1.25rem; }
 .player { display: flex; flex-direction: column; min-height: 100dvh; }
 .player-top {
   display: flex; align-items: center; gap: 10px;
-  width: 100%; max-width: 1080px; margin: 0 auto; padding: 24px 16px 0;
+  width: 100%; max-width: 1080px; margin: 0 auto; padding: 18px 16px 0;
 }
 .player-top .icon-btn { margin-inline-start: -8px; }
 /* Generic bar (admin page). */
@@ -307,7 +307,7 @@ h2 { font-size: 1.25rem; }
 .in-a-row-help { font-family: 'Lexend Variable', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0; text-transform: none; }
 .player-body {
   flex: 1; display: flex; flex-direction: column;
-  width: 100%; max-width: 640px; margin: 0 auto; padding: 22px 16px 0;
+  width: 100%; max-width: 640px; margin: 0 auto; padding: 20px 16px 0;
 }
 .player-body > .exercise { flex: none; }
 
@@ -333,7 +333,7 @@ h2 { font-size: 1.25rem; }
 
 /* Feedback: a label taped onto the floor. Paper, ink border, kraft offset shadow, tape on top. */
 .feedback {
-  position: relative; margin: 14px 4px 18px; padding: 18px 18px 14px;
+  position: relative; margin: 12px 4px 18px; padding: 16px 18px 12px;
   background: var(--card); border: 2.5px solid var(--edge); border-radius: 4px;
   box-shadow: 6px 6px 0 var(--label-shadow);
   rotate: -0.6deg;
@@ -349,10 +349,6 @@ h2 { font-size: 1.25rem; }
 .feedback-title { font-size: 1.6rem; font-weight: 700; line-height: 1.15; color: var(--ink); letter-spacing: -0.01em; }
 .feedback-wrong .feedback-title { color: var(--wrong-ink); }
 .feedback-title .bi-help { color: inherit; font-size: 0.6em; font-weight: 500; }
-.feedback-sub { display: block; margin-top: 4px; font-size: 0.95rem; color: var(--muted); font-weight: 500; }
-.feedback-sub .bi { flex-direction: row; flex-wrap: wrap; gap: 0 8px; }
-.feedback-sub .bi-help { font-size: 1em; }
-.feedback-sub .bi-help::before { content: '· '; }
 .feedback-rule { height: 0; margin: 12px 0 10px; border: 0; border-top: 2px dashed var(--line); }
 /* "het hesje = the safety vest", with the help language underneath. */
 .feedback-pair { display: flex; flex-direction: column; gap: 2px; }
@@ -369,7 +365,7 @@ h2 { font-size: 1.25rem; }
 @keyframes up { from { transform: translateY(10px); opacity: 0; } }
 
 .exercise { animation: up 0.25s ease-out; }
-.prompt { font-size: 1.65rem; font-weight: 700; margin: 4px 0 18px; color: var(--ink-strong); letter-spacing: -0.01em; }
+.prompt { font-size: 1.65rem; font-weight: 700; margin: 2px 0 12px; color: var(--ink-strong); letter-spacing: -0.01em; }
 .prompt .bi-help { font-size: 0.6em; font-weight: 500; letter-spacing: 0; }
 .card { border: 3px solid var(--line); border-radius: var(--radius); padding: 24px; text-align: center; background: var(--card); }
 .intro-card { display: flex; flex-direction: column; align-items: center; gap: 12px; }
@@ -393,11 +389,11 @@ h2 { font-size: 1.25rem; }
 .target { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
 .target-nl { font-size: 1.8rem; font-weight: 700; }
 /* "What does this mean?": a character says the Dutch word in a speech bubble (a paper label). */
-.speaker { display: flex; align-items: center; gap: 16px; margin: 0 0 16px; }
-.speaker-char { flex: none; font-size: 140px; line-height: 1; }
+.speaker { display: flex; align-items: center; gap: 14px; margin: 0 0 12px; }
+.speaker-char { flex: none; font-size: 124px; line-height: 1; }
 .speaker-bubble {
-  position: relative; display: flex; align-items: center; gap: 14px; margin-bottom: 28px; min-width: 0;
-  padding: 10px 20px 10px 10px; border: 3px solid var(--edge); border-radius: 12px; background: var(--card);
+  position: relative; display: flex; align-items: center; gap: 12px; margin-bottom: 20px; min-width: 0;
+  padding: 9px 18px 9px 9px; border: 3px solid var(--edge); border-radius: 12px; background: var(--card);
 }
 .speaker-bubble::before {
   content: ''; position: absolute; left: -10px; top: 50%; width: 16px; height: 16px; margin-top: -8px;
@@ -405,12 +401,12 @@ h2 { font-size: 1.25rem; }
   transform: rotate(45deg);
 }
 .speaker-bubble .speak { width: 48px; height: 48px; font-size: 1.1rem; }
-.speaker-nl { font-size: 1.85rem; font-weight: 700; color: var(--ink-strong); letter-spacing: -0.01em; line-height: 1.15; }
+.speaker-nl { font-size: clamp(1.4rem, 7vw, 1.85rem); font-weight: 700; color: var(--ink-strong); letter-spacing: -0.01em; line-height: 1.15; }
 
 .listen-buttons { display: flex; align-items: flex-end; justify-content: center; gap: 16px; margin: 8px 0 28px; }
 
 /* Answer options: paper labels with a stencil number in a dashed box. */
-.choices { display: flex; flex-direction: column; gap: 12px; }
+.choices { display: flex; flex-direction: column; gap: 10px; }
 .choice {
   position: relative; display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 10px 14px; text-align: start;
   background: var(--card); border: 3px solid var(--line); border-radius: var(--radius);
@@ -425,7 +421,7 @@ h2 { font-size: 1.25rem; }
   font-family: var(--stencil); font-weight: 800; font-size: 1.55rem; line-height: 1;
 }
 /* Selected: ink border, a yellow strip on the left edge, the number box filled yellow. */
-.choice.picked {
+.choice.picked, .choice.picked:hover:not(:disabled) {
   border-color: var(--edge);
   background: linear-gradient(to right, var(--yellow) 0 9px, var(--card) 9px);
 }
@@ -438,7 +434,7 @@ h2 { font-size: 1.25rem; }
 .choice.right .choice-num { border: 2.5px solid var(--green); background: var(--green); color: var(--on-green); }
 .choice.wrong .choice-num { border: 2.5px solid var(--red); background: var(--red); color: var(--on-green); }
 .choice-emoji { font-size: 1.8rem; }
-.choices-rows .choice { min-height: 72px; padding: 10px 16px 10px 18px; }
+.choices-rows .choice { min-height: 68px; padding: 8px 16px 8px 16px; }
 .choices-rows .choice-label { font-size: 1.15rem; line-height: 1.25; min-width: 0; }
 .choices-rows .choice-label .bi-help { font-size: 0.85em; margin-top: 2px; }
 .choice-nl { font-size: 1.2rem; }
@@ -463,11 +459,12 @@ h2 { font-size: 1.25rem; }
 
 /* Picture choice ("Which one is …?"): NEW WORD badge + big picture cards. */
 .new-word {
-  display: flex; align-items: center; gap: 10px; margin: 0 0 8px;
-  color: var(--ink); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.95rem;
+  display: flex; align-items: center; gap: 8px; margin: 0 0 6px;
+  color: var(--ink); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.85rem;
 }
-.new-word .bi-help { color: var(--muted); text-transform: none; letter-spacing: 0; font-weight: 500; }
-.new-word-icon { flex: none; width: 30px; height: 30px; color: var(--ink); --icon-cut: var(--yellow); }
+.new-word .bi { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 10px; }
+.new-word .bi-help { color: var(--muted); text-transform: none; letter-spacing: 0; font-weight: 500; font-size: 0.95rem; }
+.new-word-icon { flex: none; width: 24px; height: 24px; color: var(--ink); }
 .new-word-icon path, .new-word-icon circle:not(:first-child) { fill: var(--yellow); }
 .pic-question { display: flex; align-items: flex-start; gap: 14px; margin: 0 0 24px; }
 .pic-question .prompt { margin: 0; flex: 0 1 auto; }
@@ -530,7 +527,8 @@ h2 { font-size: 1.25rem; }
   background-image: linear-gradient(var(--ink-3) 0 2px, transparent 2px);
   background-size: 100% 64px;
 }
-.answer-line .stamp { top: -14px; right: 0; margin-top: 0; }
+.answer-line .stamp { top: auto; bottom: -62px; right: -4px; margin-top: 0; width: 78px; height: 78px; }
+.answer-line .stamp-word { font-size: 1.55rem; }
 .answer-right .tile { border-color: var(--green); }
 .answer-wrong .tile { border-color: var(--red); }
 .tile-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 28px; }
@@ -604,11 +602,11 @@ h2 { font-size: 1.25rem; }
 
 /* Wide screens: roomy lesson frame. */
 @media (min-width: 760px) {
-  .player-top { padding: 40px 40px 0; gap: 24px; }
+  .player-top { padding: 28px 40px 0; gap: 24px; }
   .player-top .icon-btn { font-size: 1.75rem; }
   .player-body {
     display: flex; flex-direction: column; justify-content: center;
-    padding: 24px 24px 32px;
+    padding: 16px 24px 8px;
   }
   .prompt { font-size: 2rem; margin: 0 0 20px; }
   .new-word { font-size: 1.1rem; }
@@ -624,7 +622,7 @@ h2 { font-size: 1.25rem; }
   .choices-pics.n4 .choice.picked, .choices-pics.n4 .choice.right, .choices-pics.n4 .choice.wrong { padding-inline-start: 22px; }
   .choices-pics.n4 .pic-emoji { font-size: 76px; }
   .choices-pics.n4 .choice-nl.len-l { font-size: 1rem; }
-  .player-foot { padding: 32px 40px; min-height: 140px; display: flex; align-items: center; }
+  .player-foot { padding: 12px 40px 24px; margin-top: 8px; display: flex; align-items: center; }
   .foot-inner { max-width: 800px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
   .foot-actions { flex: 1; justify-content: flex-end; flex-wrap: nowrap; }
   .foot-actions .btn-primary, .foot-actions .btn-dark { flex: 0 0 260px; }
@@ -634,7 +632,7 @@ h2 { font-size: 1.25rem; }
   .feedback-title { font-size: 1.7rem; }
   .pair-main { font-size: 1.3rem; }
   .speaker { margin-bottom: 8px; }
-  .speaker-char { font-size: 178px; }
+  .speaker-char { font-size: 150px; }
   .speaker-build .speaker-char { font-size: 170px; }
   .speaker-build .speaker-bubble { margin-bottom: 36px; }
   .tile-bank { margin-top: 40px; }
@@ -673,7 +671,7 @@ h2 { font-size: 1.25rem; }
   border-right: 3px dashed var(--ink-3); border-top: 3px dashed var(--ink-3);
 }
 .chat-bubble-me:has(.chat-line) { border-style: solid; border-color: var(--edge); }
-.chat-bubble-me:has(.chat-line)::before { border-style: solid; border-color: var(--edge); }
+.chat-bubble-me:has(.chat-line)::before { border-top-style: solid; border-right-style: solid; border-color: var(--edge); }
 .chat-bubble-me .chat-line { text-decoration: none; padding: 0; min-height: 0; }
 .chat-blank { display: block; width: 110px; height: 2px; margin-top: 22px; background: var(--ink-3); border-radius: 2px; }
 .chat-bubble-me.right, .chat-bubble-me.right::before { border-color: var(--green); }
@@ -1111,7 +1109,7 @@ h2 { font-size: 1.25rem; }
 }
 .tip-badge-emoji { font-size: 1.6rem; line-height: 1; }
 .tip-badge-nl { text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; }
-.tip-badge-en { font-size: 0.75rem; font-weight: 700; opacity: 0.85; }
+.tip-badge-en { font-size: 0.75rem; font-weight: 600; }
 .tip-badge-en .bi-help { color: inherit; }
 .tip-title { margin-top: 4px; }
 .tip-body { font-size: 1.1rem; line-height: 1.5; margin: 0 0 20px; }

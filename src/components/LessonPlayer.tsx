@@ -203,6 +203,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   // The answer as a pair: "het hesje = the safety vest", help language underneath.
   // (In a chat this is what the right reply means; in a situation, the usual choice.)
   const pair = answerPair(ex, lang);
+  // On a right answer the praise in the help language closes the help line ("… · Harika!").
+  const praise = feedback && answer.correct && !answer.almost ? ui(ex.kind === 'situation' ? 'goodChoice' : 'correct', lang) : null;
+  const pairHelp = [pair?.meaning.help, praise?.help].filter(Boolean).join(' · ');
   const pairLine = pair && (
     <div className="feedback-pair">
       <span className="pair-main">
@@ -214,8 +217,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         )}
         <span className="bi-en">{pair.meaning.en}</span>
       </span>
-      {pair.meaning.help && pair.meaning.lang && (
-        <span className="bi-help" lang={pair.meaning.lang.code} dir={pair.meaning.lang.dir}>{pair.meaning.help}</span>
+      {pairHelp && lang && (
+        <span className="bi-help" lang={lang.code} dir={lang.dir}>{pairHelp}</span>
       )}
     </div>
   );
@@ -271,10 +274,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
                   </>
                 ) : answer.correct && !answer.almost ? (
                   <>
-                    <div className="feedback-title" lang="nl">Goed zo!</div>
-                    <span className="feedback-sub">
-                      <Bi text={ui(ex.kind === 'situation' ? 'goodChoice' : 'correct', lang)} />
-                    </span>
+                    <div className="feedback-title"><span lang="nl">Goed zo!</span></div>
+                    <span className="sr-only">{praise?.en}</span>
                   </>
                 ) : (
                   <div className="feedback-title">
