@@ -1,5 +1,6 @@
+import { Character } from './Characters';
 import { findItem, phrasebookIds, units } from '../content/curriculum';
-import { gloss, helpLanguages, ui } from '../i18n';
+import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useState } from 'react';
 import { dutchVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
@@ -10,19 +11,20 @@ import {
   AlertIcon,
   AutoThemeIcon,
   BackIcon,
+  BoltIcon,
+  BullseyeIcon,
+  CelebrationArt,
   CheckIcon,
   ChevronIcon,
   CrownIcon,
   FlameIcon,
   GlobeIcon,
   LockIcon,
-  MascotIcon,
   MoonIcon,
   PlayStarIcon,
   StarIcon,
   SpeakerIcon,
   SunIcon,
-  TargetIcon,
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
 
@@ -61,7 +63,12 @@ export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void
   return (
     <div className="screen onboarding">
       <div className="hero">
-        <div className="mascot"><MascotIcon size={112} /></div>
+        <div className="mascot cast-row" aria-hidden>
+          <Character who="amina" size={104} />
+          <Character who="bram" mood="wave" size={132} />
+          <Character who="henk" size={104} />
+          <Character who="jada" size={104} />
+        </div>
         <h1>Vloertaal</h1>
         <p className="tagline">{ui('appTagline').en}</p>
         <p className="tagline-nl" lang="nl">Nederlands voor op de werkvloer</p>
@@ -81,7 +88,7 @@ export function TopBar({ streak, xp, lang, onSettings }: {
 }) {
   return (
     <header className="topbar">
-      <span className="brand"><MascotIcon size={30} /> Vloertaal</span>
+      <span className="brand"><Character who="bram" crop="head" size={32} /> Vloertaal</span>
       <span className="stat" title={ui('dayStreak').en}><FlameIcon /> {streak}</span>
       <span className="stat" title="XP"><StarIcon /> {xp}</span>
       <button type="button" className="stat stat-btn" onClick={onSettings} aria-label={ui('settings').en}>
@@ -294,29 +301,96 @@ function VoicePicker({ current, lang, onPick }: {
   );
 }
 
+/** Accuracy praise for the card header, like a teacher would say it. */
+function praiseFor(pct: number): { key: 'accPerfect' | 'accGreat' | 'accGood' | 'accOk'; tone: 'green' | 'orange' } {
+  if (pct >= 100) return { key: 'accPerfect', tone: 'green' };
+  if (pct >= 90) return { key: 'accGreat', tone: 'green' };
+  if (pct >= 70) return { key: 'accGood', tone: 'green' };
+  return { key: 'accOk', tone: 'orange' };
+}
+
+/** Counts a number up from 0 (skipped when the learner prefers less motion). */
+function useCountUp(target: number, ms = 900) {
+  const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  const [value, setValue] = useState(still ? target : 0);
+  useEffect(() => {
+    if (still) return setValue(target);
+    let raf = 0;
+    const t0 = performance.now() + 350;
+    const tick = (now: number) => {
+      const k = Math.min(1, Math.max(0, (now - t0) / ms));
+      setValue(Math.round(target * (1 - (1 - k) ** 3)));
+      if (k < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [target, ms, still]);
+  return value;
+}
+
+function StatCard({ tone, label, icon, value, final }: {
+  tone: 'gold' | 'green' | 'orange';
+  label: Bilingual;
+  icon: React.ReactNode;
+  value: string;
+  /** Screen readers hear the end value, not the count-up. */
+  final: string;
+}) {
+  return (
+    <div className={`stat-card stat-${tone}`} role="group" aria-label={`${label.en} ${final}`}>
+      <div className="stat-card-head"><Bi text={label} /></div>
+      <div className="stat-card-body" aria-hidden>
+        {icon}
+        <span className="stat-card-value">{value}</span>
+      </div>
+    </div>
+  );
+}
+
 export function Result({ accuracy, xp, lang, onDone }: {
   accuracy: number;
   xp: number;
   lang?: HelpLanguage;
   onDone: () => void;
 }) {
+  const pct = Math.round(accuracy * 100);
+  const praise = praiseFor(pct);
+  const shownXp = useCountUp(xp);
+  const shownPct = useCountUp(pct);
+  // Enter continues, as after every exercise (the screen has no other input).
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Enter' && !(e.target instanceof HTMLButtonElement)) onDone();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onDone]);
   return (
-    <div className="screen result">
-      <div className="confetti" aria-hidden>🎉</div>
-      <h1><Bi text={ui('lessonComplete', lang)} /></h1>
-      <div className="result-stats">
-        <div className="result-box xp">
-          <span className="result-label">{ui('xpEarned').en}</span>
-          <span className="result-value"><StarIcon size={26} /> {xp}</span>
+    <div className="player result-screen">
+      <main className="player-body result">
+        <CelebrationArt />
+        <h1 className="result-title"><Bi text={ui('lessonComplete', lang)} /></h1>
+        <p className="result-nl" lang="nl">Les voltooid!</p>
+        <div className="result-stats">
+          <StatCard tone="gold" label={ui('xpTotal', lang)} icon={<BoltIcon size={30} />} value={String(shownXp)} final={`${xp} XP`} />
+          <StatCard
+            tone={praise.tone}
+            label={ui(praise.key, lang)}
+            icon={<BullseyeIcon size={30} />}
+            value={`${shownPct}%`}
+            final={`${ui('accuracy').en} ${pct}%`}
+          />
         </div>
-        <div className="result-box acc">
-          <span className="result-label">{ui('accuracy').en}</span>
-          <span className="result-value"><TargetIcon size={26} /> {Math.round(accuracy * 100)}%</span>
+      </main>
+      <footer className="player-foot">
+        <div className="foot-inner">
+          <div className="foot-actions">
+            <button type="button" className="btn btn-green" onClick={onDone}>
+              {ui('continue', lang).en}
+            </button>
+          </div>
         </div>
-      </div>
-      <button type="button" className="btn btn-green" onClick={onDone} autoFocus>
-        {ui('continue', lang).en}
-      </button>
+      </footer>
     </div>
   );
 }

@@ -10,6 +10,7 @@ describe('lesson builder', () => {
         const exercises = buildLesson(lesson, { review, seed: 42 });
         expect(exercises.length).toBeGreaterThan(8);
         expect(exercises.some((e) => e.kind === 'intro')).toBe(!review);
+        expect(exercises.filter((e) => e.kind === 'chat')).toHaveLength(lesson.dialogues?.length ?? 0);
 
         for (const ex of exercises) {
           if (ex.kind === 'meaning' || ex.kind === 'dutch' || ex.kind === 'listen') {
@@ -17,6 +18,14 @@ describe('lesson builder', () => {
             expect(ex.options.map((o) => o.id)).toContain(ex.word.id);
             expect(new Set(ex.options.map((o) => o.en)).size).toBe(ex.options.length);
             expect(new Set(ex.options.map((o) => o.nl)).size).toBe(ex.options.length);
+          }
+          if (ex.kind === 'chat') {
+            // The right reply is there once, and every wrong reply is a real, different reply.
+            const ids = ex.options.map((o) => o.id);
+            expect(ids.filter((id) => id === ex.dialogue.reply.id)).toHaveLength(1);
+            expect(new Set(ex.options.map((o) => o.nl)).size).toBe(ex.options.length);
+            expect(ex.options.length).toBeGreaterThanOrEqual(2);
+            expect(ex.options.length).toBeLessThanOrEqual(3);
           }
           if (ex.kind === 'build') {
             // All words of the sentence are available as tiles.

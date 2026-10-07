@@ -6,12 +6,15 @@ import { setPreferredVoice } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { Onboarding, Path, Phrasebook, Result, Settings, TopBar } from './components/Screens';
-import { completeLesson, currentStreak, emptyProgress, loadProgress, saveProgress, xpFor } from './lib/progress';
+import { Milestone } from './components/Milestone';
+import { completeLesson, currentStreak, emptyProgress, loadProgress, saveProgress, streakWentUp, xpFor } from './lib/progress';
 
 type View =
   | { name: 'home' }
   | { name: 'lesson'; lessonId: string; review: boolean }
-  | { name: 'result'; accuracy: number; xp: number }
+  /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
+  | { name: 'result'; accuracy: number; xp: number; streakUp?: number }
+  | { name: 'streak'; streak: number }
   | { name: 'phrasebook' }
   | { name: 'settings' };
 
@@ -34,8 +37,10 @@ export default function App() {
       const found = findLesson(view.lessonId);
       if (!found) return null;
       const finish = ({ accuracy, review }: LessonResult) => {
-        setProgress((p) => completeLesson(p, view.lessonId, accuracy, review, new Date()));
-        setView({ name: 'result', accuracy, xp: xpFor(accuracy, review) });
+        const next = completeLesson(progress, view.lessonId, accuracy, review, new Date());
+        setProgress(next);
+        const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
+        setView({ name: 'result', accuracy, xp: xpFor(accuracy, review), streakUp });
       };
       return (
         <LessonPlayer
@@ -49,7 +54,16 @@ export default function App() {
       );
     }
     case 'result':
-      return <Result accuracy={view.accuracy} xp={view.xp} lang={lang} onDone={() => setView({ name: 'home' })} />;
+      return (
+        <Result
+          accuracy={view.accuracy}
+          xp={view.xp}
+          lang={lang}
+          onDone={() => setView(view.streakUp ? { name: 'streak', streak: view.streakUp } : { name: 'home' })}
+        />
+      );
+    case 'streak':
+      return <Milestone streak={view.streak} lang={lang} onDone={() => setView({ name: 'home' })} />;
     case 'phrasebook':
       return <Phrasebook lang={lang} onBack={() => setView({ name: 'home' })} />;
     case 'settings':

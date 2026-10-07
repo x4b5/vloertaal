@@ -1,5 +1,5 @@
-import { allLessons, allWords } from '../content/curriculum';
-import type { Lesson, Sentence, Word } from '../content/types';
+import { allLessons, allReplies, allWords } from '../content/curriculum';
+import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
 import { tokenize } from './answers';
 import { createRng, sample, shuffle } from './random';
 
@@ -10,7 +10,8 @@ export type Exercise =
   | { kind: 'listen'; word: Word; options: Word[] }
   | { kind: 'match'; words: Word[] }
   | { kind: 'build'; sentence: Sentence; tiles: string[] }
-  | { kind: 'type'; word: Word };
+  | { kind: 'type'; word: Word }
+  | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[] };
 
 /** Intros only teach; every other exercise is graded. */
 export function isGraded(ex: Exercise): boolean {
@@ -31,6 +32,13 @@ function distractors(word: Word, lesson: Lesson, n: number, rng: () => number): 
 
 function options(word: Word, lesson: Lesson, rng: () => number, n = 3): Word[] {
   return shuffle([word, ...distractors(word, lesson, n - 1, rng)], rng);
+}
+
+/** Reply options for a chat: the right reply plus replies from other dialogues. */
+export function chatOptions(dialogue: Dialogue, rng: () => number, n = 3): ChatLine[] {
+  const { reply } = dialogue;
+  const others = allReplies.filter((r) => r.id !== reply.id && r.nl !== reply.nl);
+  return shuffle([reply, ...sample(others, n - 1, rng)], rng);
 }
 
 /** Word tiles for a sentence: the real words plus a few plausible extras. */
@@ -79,6 +87,11 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
 
   for (const sentence of lesson.sentences) {
     out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });
+  }
+
+  // Complete the conversation: use the words in a real exchange with a colleague.
+  for (const dialogue of lesson.dialogues ?? []) {
+    out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng) });
   }
 
   out.push({ kind: 'listen', word: l2, options: options(l2, lesson, rng) });

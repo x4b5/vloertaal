@@ -132,19 +132,126 @@ export const AutoThemeIcon = (p: IconProps) => (
   </Svg>
 );
 
-export const MascotIcon = (p: IconProps) => (
-  <Svg {...p} viewBox="0 0 64 64">
-    {/* Hard hat */}
-    <path d="M12 30a20 20 0 0 1 40 0z" fill="#ffc800" />
-    <rect x="8" y="28" width="48" height="6" rx="3" fill="#e5a400" />
-    <rect x="29" y="11" width="6" height="17" rx="3" fill="#ffd94d" />
-    {/* Face */}
-    <circle cx="32" cy="42" r="14" fill="#f5c59a" />
-    <circle cx="26.5" cy="41" r="2.2" fill="#3c3c3c" />
-    <circle cx="37.5" cy="41" r="2.2" fill="#3c3c3c" />
-    <path d="M26 47.5c3.5 3 8.5 3 12 0" fill="none" stroke="#3c3c3c" strokeWidth="2.4" strokeLinecap="round" />
-    {/* Hi-vis collar */}
-    <path d="M18 60c2-4 7-6 14-6s12 2 14 6z" fill="#ff7a00" />
-    <path d="M24 56.5l3 3.5M40 56.5l-3 3.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+export const BoltIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M13.6 1.8L4.6 13.4h6.1l-1.6 8.8 9.4-12.1h-6.3z" fill="#ffc800" stroke="#e5a400" strokeWidth="1.1" strokeLinejoin="round" />
+    <path d="M12.6 4.6L7.8 11.4h3" fill="none" stroke="#fff3b0" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
   </Svg>
 );
+
+/** Bullseye with an arrow in the middle: the accuracy card. Colour follows the card. */
+export const BullseyeIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <circle cx="11" cy="13" r="9" fill="currentColor" />
+    <circle cx="11" cy="13" r="6.2" fill="var(--bg)" />
+    <circle cx="11" cy="13" r="3.6" fill="currentColor" />
+    <path d="M11 13l9-9" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <path d="M17.5 2.5l.6 3.4 3.4.6" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+  </Svg>
+);
+
+/** Four-pointed twinkle used around the celebration. */
+const sparkle = (x: number, y: number, r: number) =>
+  `M${x} ${y - r}C${x + r * 0.18} ${y - r * 0.18} ${x + r * 0.18} ${y - r * 0.18} ${x + r} ${y}` +
+  `C${x + r * 0.18} ${y + r * 0.18} ${x + r * 0.18} ${y + r * 0.18} ${x} ${y + r}` +
+  `C${x - r * 0.18} ${y + r * 0.18} ${x - r * 0.18} ${y + r * 0.18} ${x - r} ${y}` +
+  `C${x - r * 0.18} ${y - r * 0.18} ${x - r * 0.18} ${y - r * 0.18} ${x} ${y - r}z`;
+
+/** Firework burst: eight rays around a centre, alternating long and short. */
+function Burst({ x, y, r, color, className }: { x: number; y: number; r: number; color: string; className?: string }) {
+  const rays = Array.from({ length: 8 }, (_, i) => {
+    const a = (i * Math.PI) / 4;
+    const long = i % 2 === 0;
+    const r0 = r * 0.42;
+    const r1 = long ? r : r * 0.72;
+    return (
+      <path
+        key={i}
+        d={`M${(x + Math.cos(a) * r0).toFixed(1)} ${(y + Math.sin(a) * r0).toFixed(1)}L${(x + Math.cos(a) * r1).toFixed(1)} ${(y + Math.sin(a) * r1).toFixed(1)}`}
+        stroke={color}
+        strokeWidth={long ? 4 : 3.4}
+        strokeLinecap="round"
+      />
+    );
+  });
+  return <g className={className}>{rays}</g>;
+}
+
+/**
+ * Lesson-complete scene: our construction worker jumps for joy, both fists in the air,
+ * eyes squeezed shut with a big grin, with fireworks and twinkles around.
+ */
+export function CelebrationArt({ className }: { className?: string }) {
+  const skin = '#f5c59a';
+  const skinShade = '#e3a97a';
+  const ink = '#3c3c3c';
+  return (
+    <svg className={`celebration ${className ?? ''}`} viewBox="0 0 280 230" aria-hidden focusable="false">
+      {/* Fireworks and twinkles */}
+      <Burst x={36} y={66} r={30} color="#93d333" className="cel-burst cel-b1" />
+      <Burst x={240} y={128} r={22} color="#1cb0f6" className="cel-burst cel-b2" />
+      <g className="cel-twinkle cel-t1"><path d={sparkle(206, 30, 10)} fill="#ffc800" /></g>
+      <g className="cel-twinkle cel-t2"><path d={sparkle(86, 18, 7)} fill="#ff9600" /></g>
+      <g className="cel-twinkle cel-t3"><path d={sparkle(232, 76, 6)} fill="#ce82ff" /></g>
+      <g className="cel-twinkle cel-t4"><path d={sparkle(30, 150, 8)} fill="#ffc800" /></g>
+      <circle cx="176" cy="16" r="4.5" fill="none" stroke="#ffc800" strokeWidth="2.6" className="cel-twinkle cel-t2" />
+      <circle cx="66" cy="120" r="3" fill="#ff86d0" className="cel-twinkle cel-t3" />
+      <circle cx="252" cy="44" r="3" fill="#93d333" className="cel-twinkle cel-t1" />
+      <circle cx="210" cy="176" r="3.4" fill="none" stroke="#ff9600" strokeWidth="2.2" className="cel-twinkle cel-t4" />
+
+      {/* Ground shadow (stays put while the worker jumps) */}
+      <ellipse cx="140" cy="214" rx="58" ry="6" fill="var(--line)" className="cel-shadow" />
+
+      <g className="cel-worker">
+        {/* Legs in navy work trousers, knees bent mid-jump */}
+        <path d="M128 160l-10 22 6 14" fill="none" stroke="#2b5d9b" strokeWidth="17" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M152 160l10 22-6 14" fill="none" stroke="#2b5d9b" strokeWidth="17" strokeLinecap="round" strokeLinejoin="round" />
+        {/* Safety boots */}
+        <path d="M112 192h20a6 6 0 0 1 6 6v3a3 3 0 0 1-3 3h-27a6 6 0 0 1-6-6 6 6 0 0 1 6-6z" fill="#6b4423" />
+        <path d="M168 192h-20a6 6 0 0 0-6 6v3a3 3 0 0 0 3 3h27a6 6 0 0 0 6-6 6 6 0 0 0-6-6z" fill="#6b4423" />
+        <path d="M104 201h31M176 201h-31" stroke="#4a2e17" strokeWidth="3" strokeLinecap="round" />
+
+        {/* Arms up: blue sleeves, then forearms */}
+        <path d="M116 118l-20-18" stroke="#1cb0f6" strokeWidth="16" strokeLinecap="round" />
+        <path d="M96 100l-8-32" stroke={skin} strokeWidth="13" strokeLinecap="round" />
+        <path d="M164 118l20-18" stroke="#1cb0f6" strokeWidth="16" strokeLinecap="round" />
+        <path d="M184 100l8-32" stroke={skin} strokeWidth="13" strokeLinecap="round" />
+        {/* Fists */}
+        <circle cx="87" cy="62" r="10" fill={skin} />
+        <path d="M81 58h11M81 63h11" stroke={skinShade} strokeWidth="2" strokeLinecap="round" />
+        <circle cx="193" cy="62" r="10" fill={skin} />
+        <path d="M188 58h11M188 63h11" stroke={skinShade} strokeWidth="2" strokeLinecap="round" />
+        {/* Joy lines next to the fists */}
+        <path d="M74 44l-6-5M190 40l3-8M206 52l7-4M86 40l-3-8" stroke="#ffc800" strokeWidth="3" strokeLinecap="round" />
+
+        {/* Body: blue shirt under an orange hi-vis vest with reflective stripes */}
+        <rect x="112" y="108" width="56" height="58" rx="20" fill="#1cb0f6" />
+        <path d="M112 128a20 20 0 0 1 20-20h4l4 16 4-16h4a20 20 0 0 1 20 20v18a20 20 0 0 1-20 20h-16a20 20 0 0 1-20-20z" fill="#ff7a00" />
+        <path d="M112 140h56M112 152h56" stroke="#fff6d6" strokeWidth="5" />
+        <path d="M140 124v42" stroke="#d96500" strokeWidth="2" />
+        <rect x="147" y="128" width="12" height="8" rx="2" fill="#ffc800" />
+
+        {/* Head */}
+        <rect x="134" y="98" width="12" height="12" rx="4" fill={skinShade} />
+        <circle cx="140" cy="78" r="26" fill={skin} />
+        <circle cx="114.5" cy="80" r="5" fill={skin} />
+        <circle cx="165.5" cy="80" r="5" fill={skin} />
+        {/* Happy squeezed eyes */}
+        <path d="M122 76l7 4-7 4" fill="none" stroke={ink} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M158 76l-7 4 7 4" fill="none" stroke={ink} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="122" cy="91" r="4.5" fill="#ff8c8c" opacity="0.6" />
+        <circle cx="158" cy="91" r="4.5" fill="#ff8c8c" opacity="0.6" />
+        {/* Big open grin */}
+        <path d="M128 88h24a12 12 0 0 1-24 0z" fill="#7a2e2e" />
+        <path d="M131 89h18v3h-18z" fill="#fff" />
+        <path d="M133.5 96.5a8 5 0 0 1 13 0 10 10 0 0 1-13 0z" fill="#ff7c8a" />
+
+        {/* Hard hat */}
+        <path d="M112 66a28 26 0 0 1 56 0z" fill="#ffc800" />
+        <path d="M120 52a24 22 0 0 1 12-10" fill="none" stroke="#fff3b0" strokeWidth="4" strokeLinecap="round" />
+        <rect x="135" y="40" width="10" height="26" rx="5" fill="#ffd94d" />
+        <rect x="106" y="62" width="68" height="9" rx="4.5" fill="#e5a400" />
+      </g>
+    </svg>
+  );
+}

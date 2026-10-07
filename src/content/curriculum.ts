@@ -1,4 +1,4 @@
-import type { Lesson, Unit, Word } from './types';
+import type { ChatLine, Dialogue, Lesson, Unit, Word } from './types';
 
 /**
  * The course: Dutch for the work floor, explained in English.
@@ -28,6 +28,12 @@ export const units: Unit[] = [
           { id: 's.hello.2', nl: 'Goedemorgen, ik ben Ali.', en: 'Good morning, I am Ali.' },
           { id: 's.hello.3', nl: 'Dank je wel, tot morgen!', en: 'Thank you, see you tomorrow!' },
         ],
+        dialogues: [
+          {
+            prompt: { id: 'c.hello.q', nl: 'Fijne avond!', en: 'Have a nice evening!' },
+            reply: { id: 'c.hello.a', nl: 'Tot morgen!', en: 'See you tomorrow!' },
+          },
+        ],
       },
       {
         id: 'l.people',
@@ -44,6 +50,12 @@ export const units: Unit[] = [
           { id: 's.people.1', nl: 'Mijn naam is Sara.', en: 'My name is Sara.' },
           { id: 's.people.2', nl: 'Wie is de baas?', en: 'Who is the boss?' },
           { id: 's.people.3', nl: 'Ik ben een nieuwe collega.', en: 'I am a new colleague.' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.people.q', nl: 'Hoe heet je?', en: 'What is your name?' },
+            reply: { id: 'c.people.a', nl: 'Ik heet Sara.', en: 'My name is Sara.' },
+          },
         ],
       },
     ],
@@ -71,6 +83,12 @@ export const units: Unit[] = [
           { id: 's.understand.2', nl: 'Wilt u langzaam praten?', en: 'Could you speak slowly?' },
           { id: 's.understand.3', nl: 'Waar is de wc?', en: 'Where is the toilet?' },
         ],
+        dialogues: [
+          {
+            prompt: { id: 'c.understand.q', nl: 'Begrijp je het?', en: 'Do you understand?' },
+            reply: { id: 'c.understand.a', nl: 'Nee, nog een keer graag.', en: 'No, one more time please.' },
+          },
+        ],
       },
     ],
   },
@@ -97,6 +115,12 @@ export const units: Unit[] = [
           { id: 's.gear.2', nl: 'Waar zijn de handschoenen?', en: 'Where are the gloves?' },
           { id: 's.gear.3', nl: 'Ik draag mijn hesje.', en: 'I am wearing my safety vest.' },
         ],
+        dialogues: [
+          {
+            prompt: { id: 'c.gear.q', nl: 'Heb je je helm?', en: 'Do you have your helmet?' },
+            reply: { id: 'c.gear.a', nl: 'Ja, ik draag hem.', en: 'Yes, I am wearing it.' },
+          },
+        ],
       },
       {
         id: 'l.danger',
@@ -113,6 +137,12 @@ export const units: Unit[] = [
           { id: 's.danger.1', nl: 'Pas op, de vloer is nat!', en: 'Watch out, the floor is wet!' },
           { id: 's.danger.2', nl: 'Waar is de nooduitgang?', en: 'Where is the emergency exit?' },
           { id: 's.danger.3', nl: 'Er is een ongeluk!', en: 'There is an accident!' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.danger.q', nl: 'Is er een ongeluk?', en: 'Is there an accident?' },
+            reply: { id: 'c.danger.a', nl: 'Ja, bel 112!', en: 'Yes, call 112!' },
+          },
         ],
       },
     ],
@@ -140,6 +170,12 @@ export const units: Unit[] = [
           { id: 's.things.2', nl: 'Waar is de scanner?', en: 'Where is the scanner?' },
           { id: 's.things.3', nl: 'De heftruck komt eraan.', en: 'The forklift is coming.' },
         ],
+        dialogues: [
+          {
+            prompt: { id: 'c.things.q', nl: 'Waar moet de doos heen?', en: 'Where does the box go?' },
+            reply: { id: 'c.things.a', nl: 'Op de pallet.', en: 'On the pallet.' },
+          },
+        ],
       },
       {
         id: 'l.directions',
@@ -156,6 +192,12 @@ export const units: Unit[] = [
           { id: 's.directions.1', nl: 'De doos staat links.', en: 'The box is on the left.' },
           { id: 's.directions.2', nl: 'Til met je benen.', en: 'Lift with your legs.' },
           { id: 's.directions.3', nl: 'Ga naar rechts.', en: 'Go to the right.' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.directions.q', nl: 'Links of rechts?', en: 'Left or right?' },
+            reply: { id: 'c.directions.a', nl: 'Rechts, bij de stelling.', en: 'Right, by the rack.' },
+          },
         ],
       },
     ],
@@ -183,6 +225,12 @@ export const units: Unit[] = [
           { id: 's.shift.2', nl: 'Wanneer is de pauze?', en: 'When is the break?' },
           { id: 's.shift.3', nl: 'Sorry, ik ben te laat.', en: 'Sorry, I am too late.' },
         ],
+        dialogues: [
+          {
+            prompt: { id: 'c.shift.q', nl: 'Wil je koffie of thee?', en: 'Do you want coffee or tea?' },
+            reply: { id: 'c.shift.a', nl: 'Thee, graag.', en: 'Tea, please.' },
+          },
+        ],
       },
       {
         id: 'l.sick',
@@ -199,6 +247,12 @@ export const units: Unit[] = [
           { id: 's.sick.1', nl: 'Ik ben vandaag ziek.', en: 'I am sick today.' },
           { id: 's.sick.2', nl: 'Ik heb pijn in mijn rug.', en: 'I have pain in my back.' },
           { id: 's.sick.3', nl: 'Ik bel de dokter.', en: 'I am calling the doctor.' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.sick.q', nl: 'Ben je ziek?', en: 'Are you sick?' },
+            reply: { id: 'c.sick.a', nl: 'Ja, ik blijf vandaag thuis.', en: 'Yes, I am staying home today.' },
+          },
         ],
       },
     ],
@@ -226,6 +280,12 @@ export const units: Unit[] = [
           { id: 's.harvest.2', nl: 'De krat is vol.', en: 'The crate is full.' },
           { id: 's.harvest.3', nl: 'Ik werk in de kas.', en: 'I work in the greenhouse.' },
         ],
+        dialogues: [
+          {
+            prompt: { id: 'c.harvest.q', nl: 'Is de krat vol?', en: 'Is the crate full?' },
+            reply: { id: 'c.harvest.a', nl: 'Ja, hij is vol.', en: 'Yes, it is full.' },
+          },
+        ],
       },
     ],
   },
@@ -246,6 +306,9 @@ export const phrasebookIds = [
 
 export const allLessons: Lesson[] = units.flatMap((u) => u.lessons);
 export const allWords: Word[] = allLessons.flatMap((l) => l.words);
+export const allDialogues: Dialogue[] = allLessons.flatMap((l) => l.dialogues ?? []);
+/** Every learner reply; wrong options in a chat exercise come from here. */
+export const allReplies: ChatLine[] = allDialogues.map((d) => d.reply);
 
 export function findLesson(id: string): { unit: Unit; lesson: Lesson } | undefined {
   for (const unit of units) {

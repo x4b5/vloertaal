@@ -34,3 +34,8 @@ Pallet (المنصة الخشبية), kas (البيت الزجاجي), krat (ص�
 ## Roemeens, Bulgaars
 Werkwoorden in het Bulgaars in de 1e persoon (er is geen infinitief). Heftruck: motostivuitorul / мотокарът.
 Krat: lada / касетката. "Klaar": gata / готов.
+
+## Chatgesprekken (`c.*`, alle talen)
+De korte dialogen ("Wil je koffie of thee?" → "Thee, graag.") gebruiken informeel "je", net als in het
+Nederlands. "Ben je ziek?" en "Ja, ik draag hem." (de helm) staan in de mannelijke vorm waar de taal dat
+vraagt. `inARow` is een sjabloon: `{n}` moet blijven staan (de test controleert dat).

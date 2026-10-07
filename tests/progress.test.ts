@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { completeLesson, currentStreak, emptyProgress } from '../src/lib/progress';
+import { completeLesson, currentStreak, emptyProgress, streakWentUp } from '../src/lib/progress';
 
 const day = (d: number) => new Date(2026, 9, d, 12);
 
@@ -23,5 +23,33 @@ describe('progress', () => {
     expect(currentStreak(p, day(4))).toBe(0);
     p = completeLesson(p, 'd', 1, false, day(5));
     expect(p.streak).toBe(1);
+  });
+
+  it('shows the streak milestone only for the first lesson of a day', () => {
+    const a = completeLesson(emptyProgress, 'a', 1, false, day(1));
+    expect(streakWentUp(emptyProgress, a)).toBe(true);
+    const b = completeLesson(a, 'b', 1, false, day(1));
+    expect(streakWentUp(a, b)).toBe(false);
+    const c = completeLesson(b, 'c', 1, false, day(2));
+    expect(streakWentUp(b, c)).toBe(true);
+    expect(c.streak).toBe(2);
+  });
+});
+
+describe('theme default', () => {
+  const store = new Map<string, string>();
+  const ls = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v) };
+
+  it('is light for new learners and moves the old automatic default to light', async () => {
+    (globalThis as { localStorage?: unknown }).localStorage = ls;
+    const { loadProgress } = await import('../src/lib/progress');
+    store.clear();
+    expect(loadProgress().theme).toBe('light');
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, theme: 'auto' }));
+    expect(loadProgress().theme).toBe('light');
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, theme: 'dark' }));
+    expect(loadProgress().theme).toBe('dark');
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, theme: 'auto', themeVersion: 2 }));
+    expect(loadProgress().theme).toBe('auto');
   });
 });

@@ -9,6 +9,7 @@ import { CloseIcon } from './Icons';
 import {
   type Answer,
   BuildExercise,
+  ChatExercise,
   DutchExercise,
   IntroCard,
   ListenExercise,
@@ -28,6 +29,8 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
       return { text: ex.word.en, nl: false };
     case 'build':
       return { text: ex.sentence.nl, nl: true };
+    case 'chat':
+      return { text: ex.dialogue.reply.nl, nl: true };
     case 'match':
       return { text: '', nl: false };
     default:
@@ -37,12 +40,28 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
 
 const needsAudio = (ex: Exercise) => ex.kind === 'listen' || ex.kind === 'type';
 
-export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, startAt = 0 }: {
+/** "5 IN A ROW" label above the progress bar, from three correct answers in a row. */
+function InARow({ count, progress, lang }: { count: number; progress: number; lang?: HelpLanguage }) {
+  const text = ui('inARow', lang);
+  const fill = (t: string) => t.replace('{n}', String(count));
+  return (
+    <span className="in-a-row" style={{ '--p': progress } as React.CSSProperties} role="status">
+      <span className="in-a-row-en">{fill(text.en)}</span>
+      {text.help && text.lang && (
+        <span className="in-a-row-help" lang={text.lang.code} dir={text.lang.dir}>{fill(text.help)}</span>
+      )}
+    </span>
+  );
+}
+
+export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, startAt = 0, initialStreak = 0 }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
   exercises?: Exercise[];
   startAt?: number;
+  /** Correct answers in a row before this exercise (screenshot harness). */
+  initialStreak?: number;
   lang?: HelpLanguage;
   onQuit: () => void;
   onFinish: (r: LessonResult) => void;
@@ -53,6 +72,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [checked, setChecked] = useState(false);
   const graded = useRef({ right: 0, total: 0 });
+  const [streak, setStreak] = useState(initialStreak);
   const [audioOff, setAudioOff] = useState(!speechAvailable());
 
   const ex = queue[index];
@@ -68,6 +88,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       graded.current.total += 1;
       if (answer.correct) graded.current.right += 1;
     }
+    setStreak((n) => (answer.correct ? n + 1 : 0));
     // A finished match board already gave its feedback tile by tile.
     if (ex.kind === 'match') return next();
     setChecked(true);
@@ -108,7 +129,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     else setIndex(i);
   }
 
-  const props = { lang, locked: checked, onAnswer };
+  const verdict: 'right' | 'wrong' | undefined = checked && answer && isGraded(ex) ? (answer.correct ? 'right' : 'wrong') : undefined;
+  const props = { lang, locked: checked, onAnswer, verdict };
   const key = `${index}`;
   let body: React.ReactNode;
   switch (ex.kind) {
@@ -119,18 +141,32 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     case 'match': body = <MatchExercise key={key} ex={ex} {...props} />; break;
     case 'build': body = <BuildExercise key={key} ex={ex} {...props} />; break;
     case 'type': body = <TypeExercise key={key} ex={ex} {...props} />; break;
+    case 'chat': body = <ChatExercise key={key} ex={ex} {...props} />; break;
   }
 
   const sol = solution(ex);
   const feedback = checked && isGraded(ex) && answer;
+  // Chats also show what the right reply means, like Duolingo's "Meaning: …".
+  const meaning = ex.kind === 'chat' ? gloss(ex.dialogue.reply.id, ex.dialogue.reply.en, lang) : null;
+  const meaningLine = meaning && (
+    <div className="feedback-meaning">
+      <span className="bi-en">{ui('meaning', lang).en}: {meaning.en}</span>
+      {meaning.help && meaning.lang && (
+        <span className="bi-help" lang={meaning.lang.code} dir={meaning.lang.dir}>{meaning.help}</span>
+      )}
+    </div>
+  );
   const autoContinue = ex.kind === 'intro' || ex.kind === 'match';
 
   return (
     <div className="player">
       <header className="player-top">
         <button type="button" className="icon-btn" onClick={onQuit} aria-label="Quit lesson"><CloseIcon size={28} /></button>
-        <div className="bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>
-          <div className="bar-fill" style={{ width: `${Math.max(4, progress * 100)}%` }} />
+        <div className="bar-wrap">
+          {streak >= 3 && <InARow count={streak} progress={progress} lang={lang} />}
+          <div className="bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>
+            <div className="bar-fill" style={{ width: `${Math.max(4, progress * 100)}%` }} />
+          </div>
         </div>
         <span className="lesson-name">
           <Bi text={gloss(lesson.id, lesson.title, lang)} />
@@ -157,6 +193,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
                       <Bi text={{ ...ui('correctAnswer', lang), en: `${ui('correctAnswer', lang).en}:` }} />
                     </div>
                     <div className="feedback-sol feedback-answer" lang={sol.nl ? 'nl' : undefined}>{sol.text}</div>
+                    {meaningLine}
                   </>
                 ) : (
                   <>
@@ -168,6 +205,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
                         {ui('correctAnswer', lang).en}: <strong lang={sol.nl ? 'nl' : undefined}>{sol.text}</strong>
                       </div>
                     )}
+                    {meaningLine}
                   </>
                 )}
               </div>

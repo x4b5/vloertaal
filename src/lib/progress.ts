@@ -10,8 +10,10 @@ export type ThemeChoice = 'auto' | 'light' | 'dark';
 
 export interface Progress {
   onboarded: boolean;
-  /** 'auto' follows the device setting. */
+  /** 'auto' follows the device setting; light is the default. */
   theme: ThemeChoice;
+  /** 2 = saved after light became the default (see loadProgress). */
+  themeVersion?: number;
   /** voiceURI of the chosen Dutch voice; null = best available. */
   voice: string | null;
   helpLang: LangCode | null;
@@ -24,7 +26,8 @@ export interface Progress {
 
 export const emptyProgress: Progress = {
   onboarded: false,
-  theme: 'auto',
+  theme: 'light',
+  themeVersion: 2,
   voice: null,
   helpLang: null,
   xp: 0,
@@ -38,7 +41,16 @@ const KEY = 'vloertaal:v1';
 export function loadProgress(): Progress {
   try {
     const raw = localStorage.getItem(KEY);
-    if (raw) return { ...emptyProgress, ...JSON.parse(raw) };
+    if (raw) {
+      const saved = JSON.parse(raw);
+      // Light became the default later; an 'auto' saved before then was the old
+      // default rather than a choice, so it moves to light. An explicit dark stays.
+      if (saved.themeVersion !== 2) {
+        saved.theme = saved.theme === 'dark' ? 'dark' : 'light';
+        saved.themeVersion = 2;
+      }
+      return { ...emptyProgress, ...saved };
+    }
   } catch {
     // Private mode or blocked storage: start fresh, the app still works.
   }
@@ -102,4 +114,12 @@ export function completeLesson(
       [lessonId]: { best: Math.max(prev?.best ?? 0, accuracy), times: (prev?.times ?? 0) + 1 },
     },
   };
+}
+
+/**
+ * True when finishing a lesson made the day streak go up (first lesson of the day),
+ * so the milestone screen is shown once per day and not after every lesson.
+ */
+export function streakWentUp(before: Progress, after: Progress): boolean {
+  return after.lastDay !== before.lastDay && after.streak > 0;
 }
