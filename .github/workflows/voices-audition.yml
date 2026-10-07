@@ -22,7 +22,7 @@ jobs:
       - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
       - run: pip install piper-tts==1.8.0
       # Round 3: the free Coqui VITS Dutch voice (CSS10, a female reader), as a female option.
-      - run: pip install coqui-tts
+      - run: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu && pip install coqui-tts
       - name: Coqui CSS10 sample
         run: |
           mkdir -p docs/stemproef/coqui
