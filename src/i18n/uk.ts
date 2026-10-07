@@ -62,6 +62,10 @@ const lang: HelpLanguage = {
     completeChat: 'Заверши розмову',
     meaning: 'Значення',
     inARow: '{n} поспіль',
+    quitTitle: 'Зупинити цей урок?',
+    quitHint: 'Твої відповіді в цьому уроці не збережуться.',
+    keepGoing: 'Продовжити',
+    stopLesson: 'Зупинити урок',
   },
   gloss: {
     // Unit: First day at work
@@ -201,6 +205,9 @@ const lang: HelpLanguage = {
     'c.sick.a': 'Так, сьогодні я залишаюся вдома.',
     'c.harvest.q': 'Ящик повний?',
     'c.harvest.a': 'Так, він повний.',
+    // Emergency phrases (phrasebook only)
+    'p.call112': 'Дзвони 112!',
+    'p.hurt': 'Я поранений / поранена.',
   },
 };
 

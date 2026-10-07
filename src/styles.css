@@ -213,7 +213,7 @@ h2 { font-size: 1.25rem; }
 }
 
 /* Screens */
-.screen { padding: 16px 16px 48px; }
+.screen { padding: calc(16px + env(safe-area-inset-top)) 16px calc(48px + env(safe-area-inset-bottom)); }
 /* Screen head: an outlined square back button and the bilingual title. */
 .screen-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
 .screen-head h1 { margin: 0.2em 0; font-size: 1.5rem; }
@@ -262,7 +262,7 @@ h2 { font-size: 1.25rem; }
 /* Top bar: logo tile, outlined chips (streak, XP) and the help-language chip (opens Settings). */
 .topbar {
   position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 8px;
-  padding: 12px 16px; background: var(--bg);
+  padding: calc(12px + env(safe-area-inset-top)) 16px 12px; background: var(--bg);
 }
 .brand { display: inline-flex; align-items: center; gap: 8px; margin-inline-end: auto; font-weight: 700; color: var(--ink); font-size: 1.25rem; }
 .topbar-wordmark { display: none; }
@@ -411,7 +411,9 @@ h2 { font-size: 1.25rem; }
 .player { display: flex; flex-direction: column; min-height: 100dvh; }
 .player-top {
   display: flex; align-items: center; gap: 10px;
-  width: 100%; max-width: 1080px; margin: 0 auto; padding: 18px 16px 0;
+  width: 100%; max-width: 1080px; margin: 0 auto;
+  /* Room above the bar for the "5 IN A ROW" label, below the notch / status bar. */
+  padding: calc(26px + env(safe-area-inset-top)) 16px 0;
 }
 .player-top .icon-btn { margin-inline-start: -8px; }
 /* Generic bar (admin page). */
@@ -456,6 +458,8 @@ h2 { font-size: 1.25rem; }
 .ex-tag-note { flex-direction: row; flex-wrap: wrap; gap: 0 8px; font-size: 0.9rem; font-weight: 600; color: var(--ink); }
 .ex-tag-note .bi-help { --help-size: 1em; }
 .ex-tag-note::before { content: '·'; color: var(--ink-3); }
+/* Phones: the translation of the tag gets its own line (no dangling dot when it wraps). */
+@media (max-width: 759px) { .ex-tag-note { flex-basis: 100%; } .ex-tag-note::before { content: none; } }
 .ex-count { color: var(--muted); font-weight: 500; font-size: 1rem; font-variant-numeric: tabular-nums; word-spacing: 0.1em; }
 
 /* Action bar, pinned to the bottom of the lesson; the feedback label sits on top of it. */
@@ -471,7 +475,7 @@ h2 { font-size: 1.25rem; }
 
 /* Feedback: a label taped onto the floor. Paper, ink border, kraft offset shadow, tape on top. */
 .feedback {
-  position: relative; margin: 12px 4px 18px; padding: 16px 18px 12px;
+  position: relative; margin: 10px 4px 14px; padding: 12px 16px 10px;
   background: var(--card); border: 2.5px solid var(--edge); border-radius: 4px;
   box-shadow: 6px 6px 0 var(--label-shadow);
   rotate: -0.6deg;
@@ -479,29 +483,35 @@ h2 { font-size: 1.25rem; }
 }
 @keyframes label-in { from { transform: translateY(12px); opacity: 0; } }
 .feedback-tape {
-  position: absolute; top: -13px; left: 50%; width: 120px; height: 24px; margin-left: -60px;
+  position: absolute; top: -10px; left: 50%; width: 92px; height: 18px; margin-left: -46px;
   background: var(--tape); rotate: 1.5deg;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
 }
-.feedback-text { min-width: 0; }
-.feedback-title { font-size: 1.6rem; font-weight: 700; line-height: 1.15; color: var(--ink); letter-spacing: -0.01em; }
-/* Wrong answer: ink heading, a brick-red bar on the left edge as the only red accent. */
+/* A long explanation (situations) scrolls inside the label instead of covering the question. */
+.feedback-text { min-width: 0; max-height: 23dvh; overflow-y: auto; overscroll-behavior: contain; }
+/* Heading: the Dutch words, with their meaning in small type beside or under them. */
+.feedback-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 12px; }
+.feedback-title { font-size: 1.45rem; font-weight: 700; line-height: 1.15; color: var(--ink); letter-spacing: -0.01em; }
+.feedback-sub { flex-direction: row; flex-wrap: wrap; gap: 0 8px; font-size: 0.9rem; font-weight: 600; color: var(--muted); }
+.feedback-sub .bi-help { --help-size: 1em; display: inline; }
+.feedback-sub:has(.bi-help) .bi-en::after, .feedback-kicker .bi:has(.bi-help) .bi-en::after { content: ' ·'; color: var(--ink-3); }
+/* A long heading meaning (situations) reads better as two lines than wrapped mid-pair. */
+.feedback-other .feedback-sub { flex-direction: column; }
+.feedback-other .feedback-sub .bi-en::after { content: none; }
 .feedback-wrong { box-shadow: inset 8px 0 0 var(--red), 6px 6px 0 var(--label-shadow); padding-inline-start: 26px; }
 .feedback-other { box-shadow: inset 8px 0 0 var(--kraft), 6px 6px 0 var(--label-shadow); padding-inline-start: 26px; }
 .feedback-kicker { margin-bottom: 4px; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
 .feedback-kicker .bi { flex-direction: row; flex-wrap: wrap; gap: 0 8px; }
 .feedback-kicker .bi-help { --help-size: 1em; }
-.feedback-kicker .bi-help::before { content: '· '; }
-.feedback-title .bi-help { color: inherit; --help-size: 0.6em; font-weight: 500; }
-.feedback-rule { height: 0; margin: 12px 0 10px; border: 0; border-top: 2px dashed var(--line); }
+.feedback-rule { height: 0; margin: 8px 0 8px; border: 0; border-top: 2px dashed var(--line); }
 /* "het hesje = the safety vest", with the help language underneath. */
 .feedback-pair { display: flex; flex-direction: column; gap: 2px; }
-.pair-main { font-size: 1.2rem; font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
+.pair-main { font-size: 1.15rem; font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
 .pair-eq { color: var(--ink-3); font-weight: 500; padding: 0 0.2em; }
 .feedback-pair .bi-help { --help-size: 1rem; }
-.feedback-meaning { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; font-size: 1rem; font-weight: 500; }
+.feedback-meaning { display: flex; flex-direction: column; gap: 2px; margin-top: 6px; font-size: 0.95rem; font-weight: 500; }
 .feedback-meaning .bi-help { --help-size: 0.9rem; }
-.feedback-why { max-width: 46ch; line-height: 1.4; color: var(--ink); }
+.feedback-why { max-width: 46ch; line-height: 1.35; color: var(--ink); }
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
@@ -599,6 +609,8 @@ h2 { font-size: 1.25rem; }
 .choices-rows .choice-label { font-size: 1.15rem; line-height: 1.25; min-width: 0; }
 .choices-rows .choice-label .bi-help { --help-size: 0.85em; margin-top: 2px; }
 .choice-nl { font-size: 1.2rem; min-width: 0; overflow-wrap: anywhere; }
+/* Room for the stamp on a checked row, so it never covers the words. */
+.choices-rows .choice:has(> .stamp), .choices:not(.choices-pics) .choice:has(> .stamp) { padding-right: 76px; }
 
 /* Rubber stamps: GOED on a right answer, NOG EENS on a wrong pick. Double ring, stencil,
    slightly rotated, overlapping the right edge of the card; stamped in with a short thud. */
@@ -788,7 +800,7 @@ h2 { font-size: 1.25rem; }
 
 /* Wide screens: roomy lesson frame. */
 @media (min-width: 760px) {
-  .player-top { padding: 28px 40px 0; gap: 24px; }
+  .player-top { padding: calc(32px + env(safe-area-inset-top)) 40px 0; gap: 24px; }
   .player-top .icon-btn { font-size: 1.75rem; }
   .player-body {
     display: flex; flex-direction: column; justify-content: center;
@@ -808,13 +820,15 @@ h2 { font-size: 1.25rem; }
   .choices-pics.n4 .pic-emoji { font-size: 76px; }
   .choices-pics.n4 .choice-nl.len-l { font-size: 1rem; }
   .player-foot { padding: 12px 40px 24px; margin-top: 8px; display: flex; align-items: center; }
-  .foot-inner { max-width: 800px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  /* Same column as the exercise (player-body: 640 px minus its padding). */
+  .foot-inner { max-width: 592px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
   .foot-actions { flex: 1; justify-content: flex-end; flex-wrap: nowrap; }
   .foot-actions .btn-primary, .foot-actions .btn-dark { flex: 0 0 260px; }
   .foot-actions .btn-ghost { flex: 0 1 auto; margin-inline-end: auto; }
   .feedback { flex: 1; margin: 6px 0; }
   .feedback + .foot-actions { flex: none; }
-  .feedback-title { font-size: 1.7rem; }
+  .feedback-title { font-size: 1.6rem; }
+  .feedback-text { max-height: 40dvh; }
   .pair-main { font-size: 1.3rem; }
   .speaker { margin-bottom: 8px; }
   .speaker-char { font-size: 150px; }
@@ -1346,7 +1360,7 @@ h2 { font-size: 1.25rem; }
 }
 
 /* "What do you do?" situation */
-.situation-text { font-weight: 700; font-size: 1.05rem; line-height: 1.45; }
+.situation-text { font-weight: 700; font-size: 1.05rem; line-height: 1.45; padding-left: 16px; }
 .situation .choice { text-align: start; justify-content: flex-start; }
 
 /* Tips page */
@@ -1400,3 +1414,37 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .about-emoji { font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; font-size: 1.4rem; line-height: 1.2; }
 .about-credits { list-style: none; padding: 12px 0 0; margin: 8px 0 0; border-top: 2px dashed var(--line); display: grid; gap: 4px; }
 .about-credits a { color: inherit; }
+
+/* "Stop this lesson?" sheet: a printed label sliding up from the floor, hazard stripe on top,
+   two big buttons (keep going is the main one). */
+.sheet-backdrop {
+  position: fixed; inset: 0; z-index: 20; display: flex; align-items: flex-end; justify-content: center;
+  background: rgba(22, 25, 28, 0.55); animation: fade-in 0.15s ease-out;
+}
+@keyframes fade-in { from { opacity: 0; } }
+.sheet {
+  position: relative; width: 100%; max-width: 560px; overflow: hidden;
+  padding: 28px 16px calc(16px + env(safe-area-inset-bottom));
+  background: var(--card); border: 3px solid var(--edge); border-bottom: 0; border-radius: 14px 14px 0 0;
+  animation: sheet-up 0.22s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+@keyframes sheet-up { from { transform: translateY(100%); } }
+.sheet-hazard {
+  position: absolute; inset: 0 0 auto; height: 10px;
+  background: repeating-linear-gradient(-45deg, var(--yellow) 0 10px, #1e2226 10px 20px);
+}
+.sheet-title { margin: 0 0 6px; font-size: 1.5rem; font-weight: 700; color: var(--ink-strong); }
+.sheet-title .bi-help { --help-size: 0.7em; font-weight: 500; }
+.sheet-hint { margin: 0 0 18px; color: var(--muted); font-size: 1rem; }
+.sheet-actions { display: flex; flex-direction: column; gap: 10px; }
+.sheet-actions .btn { width: 100%; min-height: 60px; font-size: 1.15rem; }
+.sheet-actions .btn .bi { align-items: center; }
+.sheet-actions .btn .bi-help { --help-size: 0.8em; font-weight: 500; }
+.sheet-actions .btn-primary .bi-help { color: #3f3a2c; }
+.sheet-stop { background: var(--card); color: var(--ink); border: 3px solid var(--edge); }
+.sheet-stop:hover { background: var(--red-bg); }
+@media (min-width: 760px) {
+  .sheet-backdrop { align-items: center; }
+  .sheet { border-bottom: 3px solid var(--edge); border-radius: 14px; padding: 32px 24px 24px; box-shadow: 8px 8px 0 var(--label-shadow); }
+}
+@media (prefers-reduced-motion: reduce) { .sheet, .sheet-backdrop { animation: none; } }

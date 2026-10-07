@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { allLessons, phrasebookIds, findItem, units } from '../src/content/curriculum';
+import { allLessons, phrasebookExtras, phrasebookIds, findItem, units } from '../src/content/curriculum';
 import { aboutIds } from '../src/content/about';
 import { cultureIds, cultureTips } from '../src/content/culture';
 import { helpLanguages } from '../src/i18n';
@@ -17,6 +17,8 @@ const contentIds = [
   ...cultureIds,
   // The About page (src/content/about.ts).
   ...aboutIds,
+  // Phrasebook-only emergency lines.
+  ...phrasebookExtras.map((p) => p.id),
 ];
 
 describe('content and translations', () => {

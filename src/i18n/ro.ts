@@ -62,6 +62,10 @@ const lang: HelpLanguage = {
     completeChat: 'Completează conversația',
     meaning: 'Sensul',
     inARow: '{n} la rând',
+    quitTitle: 'Oprești această lecție?',
+    quitHint: 'Răspunsurile din această lecție nu se salvează.',
+    keepGoing: 'Continuă',
+    stopLesson: 'Oprește lecția',
   },
   gloss: {
     // Units
@@ -197,6 +201,9 @@ const lang: HelpLanguage = {
     'c.sick.a': 'Da, azi rămân acasă.',
     'c.harvest.q': 'Lada e plină?',
     'c.harvest.a': 'Da, e plină.',
+    // Emergency phrases (phrasebook only)
+    'p.call112': 'Sună la 112!',
+    'p.hurt': 'Sunt rănit / rănită.',
   },
 };
 

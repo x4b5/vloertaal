@@ -123,8 +123,9 @@ export function TopBar({ streak, xp, lang, onSettings }: {
 
 /** Two-digit stencil unit number: 01, 02 … */
 const unitNumber = (u: number) => String(u + 1).padStart(2, '0');
-/** Lesson code on the card tab: A1, A2 … for unit 1, B1 … for unit 2. */
-const lessonCode = (u: number, i: number) => `${String.fromCharCode(65 + u)}${i + 1}`;
+/** Lesson code on the card tab: unit.lesson, so 1.1, 1.2 … for unit 1, 2.1 … for unit 2
+ *  (not A1/B1, which read like language levels). */
+const lessonCode = (u: number, i: number) => `${u + 1}.${i + 1}`;
 
 export function Path({ progress, lang, onStart, onPhrasebook, onTips, onAbout }: {
   progress: Progress;

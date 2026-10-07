@@ -62,6 +62,10 @@ const lang: HelpLanguage = {
     completeChat: 'Довърши разговора',
     meaning: 'Значение',
     inARow: '{n} поред',
+    quitTitle: 'Да спрем ли този урок?',
+    quitHint: 'Отговорите ти в този урок няма да се запазят.',
+    keepGoing: 'Продължи',
+    stopLesson: 'Спри урока',
   },
   gloss: {
     // Units
@@ -197,6 +201,9 @@ const lang: HelpLanguage = {
     'c.sick.a': 'Да, днес оставам вкъщи.',
     'c.harvest.q': 'Пълна ли е касетката?',
     'c.harvest.a': 'Да, пълна е.',
+    // Emergency phrases (phrasebook only)
+    'p.call112': 'Обади се на 112!',
+    'p.hurt': 'Ранен / ранена съм.',
   },
 };
 
