@@ -21,12 +21,17 @@ jobs:
           python-version: '3.12'
       - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
       - run: pip install piper-tts==1.8.0
-      # Round 2: every speaker of the multi-speaker MLS voice, to find good female voices.
-      - run: python scripts/voices/make_voices.py audition --models nl_NL-mls-medium --max-speakers 200 --out docs/stemproef/piper/mls
+      # Round 3: the free Coqui VITS Dutch voice (CSS10, a female reader), as a female option.
+      - run: pip install coqui-tts
+      - name: Coqui CSS10 sample
+        run: |
+          mkdir -p docs/stemproef/coqui
+          tts --model_name tts_models/nl/css10/vits --text "Goedemorgen! Draag altijd je helm. Wil je koffie of thee?" --out_path /tmp/css10.wav
+          ffmpeg -loglevel error -y -i /tmp/css10.wav -ac 1 -b:a 48k docs/stemproef/coqui/nl-css10-vits.mp3
       - name: Commit the samples
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/stemproef/piper
+          git add docs/stemproef
           git commit -m "Add Piper voice audition samples [skip ci]" || exit 0
           git push
