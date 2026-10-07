@@ -1459,21 +1459,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
 /* Screens with the bar leave room for it. */
 .path, .words-hub, .screen:has(+ .bottom-nav) { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
 
-/* Emergency phrases, one tap away on the path: a compact red-edged chip. */
-.sos-chip {
-  display: flex; align-items: center; gap: 10px; width: 100%; min-height: 52px; margin: 4px 0 6px;
-  padding: 6px 12px 6px 16px; text-align: start; color: var(--ink);
-  background: var(--card); border: 2.5px solid var(--edge); border-radius: var(--radius);
-  box-shadow: inset 7px 0 0 var(--red);
-}
-.sos-nl { font-weight: 700; font-size: 1.05rem; }
-.sos-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
-.sos-en { flex-direction: row; flex-wrap: wrap; gap: 0 6px; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
-.sos-en .bi-help { --help-size: 0.95em; display: inline; }
-.sos-en:has(.bi-help) .bi-en::after { content: ' ·'; color: var(--ink-3); }
-.sos-chip > .icon:last-child { color: var(--ink-3); flex: none; }
-.sos-chip:hover { background: var(--red-bg); }
-
 /* Woorden tab: words-learned count and two big entry cards. */
 .hub-count { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; font-weight: 600; }
 .hub-card {

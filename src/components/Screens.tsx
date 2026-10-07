@@ -201,7 +201,7 @@ const unitNumber = (u: number) => String(u + 1).padStart(2, '0');
  *  (not A1/B1, which read like language levels). */
 const lessonCode = (u: number, i: number) => `${u + 1}.${i + 1}`;
 
-export function Path({ progress, lang, onStart, onPhrasebook, onAbout, access = 'full', onUpgrade }: {
+export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade }: {
   progress: Progress;
   lang?: HelpLanguage;
   /** Preview: only the first unit can be played; the rest shows a "full version" lock. */
@@ -209,21 +209,10 @@ export function Path({ progress, lang, onStart, onPhrasebook, onAbout, access = 
   /** Opens the unlock card (Settings) from a locked unit sign. */
   onUpgrade?: () => void;
   onStart: (lessonId: string, review: boolean) => void;
-  onPhrasebook: () => void;
   onAbout: () => void;
 }) {
   return (
     <div className="path">
-      {/* Safety first: the emergency phrases stay one tap away on the path (also under Woorden). */}
-      <button type="button" className="sos-chip" onClick={onPhrasebook}>
-        <AlertIcon size={22} />
-        <span className="sos-text">
-          <span className="sos-nl" lang="nl">Noodzinnen</span>
-          <Bi className="sos-en" text={ui('phrasebook', lang)} />
-        </span>
-        <ChevronIcon size={18} />
-      </button>
-
       {units.map((unit, u) => {
         const allowed = unitAllowed(unit.id, access);
         const unitOpen = unit.lessons.some((l) => isUnlocked(l.id, progress.completed, access));
