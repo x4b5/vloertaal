@@ -45,6 +45,21 @@ function Speaker({ who, lines, verdict }: { who: CharacterId; lines: string[]; v
   );
 }
 
+/** Rubber stamp on a checked answer: green GOED, or brick-red NOG EENS on a wrong pick.
+ *  Decorative: the feedback label below says the same in words. */
+function Stamp({ right }: { right: boolean }) {
+  return right ? (
+    <span className="stamp stamp-right" aria-hidden>
+      <span className="stamp-word">Goed</span>
+      <span className="stamp-sub">✓</span>
+    </span>
+  ) : (
+    <span className="stamp stamp-wrong" aria-hidden>
+      <span className="stamp-word">Nog<br />eens</span>
+    </span>
+  );
+}
+
 function Prompt({ text }: { text: Bilingual }) {
   return (
     <h2 className="prompt">
@@ -126,6 +141,7 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
           >
             <span className="choice-num" aria-hidden>{i + 1}</span>
             {render(w)}
+            {locked && w.id === picked && <Stamp right={w.id === correctId} />}
           </button>
         );
       })}
@@ -316,7 +332,8 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict }: Props<'bu
           <Bi className="bubble-text" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
         </div>
       </div>
-      <div className="answer-line" aria-live="polite">
+      <div className={`answer-line ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite">
+        {verdict && <Stamp right={verdict === 'right'} />}
         {chosen.map((i) => (
           <button
             key={i}

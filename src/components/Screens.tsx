@@ -464,7 +464,7 @@ export function Result({ accuracy, xp, lang, onDone }: {
       <footer className="player-foot">
         <div className="foot-inner">
           <div className="foot-actions">
-            <button type="button" className="btn btn-green" onClick={onDone}>
+            <button type="button" className="btn btn-primary" onClick={onDone}>
               {ui('continue', lang).en}
             </button>
           </div>

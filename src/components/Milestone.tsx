@@ -59,7 +59,7 @@ export function Milestone({ streak, lang, onDone }: {
       <footer className="player-foot milestone-foot">
         <div className="foot-inner">
           <div className="foot-actions">
-            <button type="button" className="btn btn-blue" onClick={onDone}>
+            <button type="button" className="btn btn-primary" onClick={onDone}>
               {ui('continue', lang).en}
             </button>
           </div>
