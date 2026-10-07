@@ -1,5 +1,7 @@
 import { findLesson } from '../content/curriculum';
 import { LessonPlayer } from '../components/LessonPlayer';
+import { Result } from '../components/Screens';
+import { Milestone } from '../components/Milestone';
 import { getHelpLanguage } from '../i18n';
 import type { LangCode } from '../i18n/types';
 import { allReplies } from '../content/curriculum';
@@ -8,10 +10,14 @@ import { createRng } from '../lib/random';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
- * screenshotted reproducibly: /?shot=dutch|meaning|build|chat&lang=ar
+ * screenshotted reproducibly: /?shot=dutch|meaning|build|chat|result|streak&lang=ar
  * Options are always in lesson order, so tests know which one is right.
  */
 export function ShotHarness({ shot, lang }: { shot: string; lang: string | null }) {
+  // Lesson complete: 14 XP at 88% accuracy, as in the reference.
+  if (shot === 'result') return <Result xp={14} accuracy={0.88} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
+  // Day-streak milestone after the very first lesson: streak 1.
+  if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   const { lesson } = findLesson('l.gear')!;
   const [helm, handschoenen, schoenen, hesje] = lesson.words;
   const exercises: Record<string, Exercise> = {

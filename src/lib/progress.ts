@@ -103,3 +103,11 @@ export function completeLesson(
     },
   };
 }
+
+/**
+ * True when finishing a lesson made the day streak go up (first lesson of the day),
+ * so the milestone screen is shown once per day and not after every lesson.
+ */
+export function streakWentUp(before: Progress, after: Progress): boolean {
+  return after.lastDay !== before.lastDay && after.streak > 0;
+}

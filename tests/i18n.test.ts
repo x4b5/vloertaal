@@ -33,6 +33,7 @@ describe('content and translations', () => {
       expect(missingUi).toEqual([]);
       // Templates keep their placeholders, or the number/word would vanish.
       expect(lang.ui.inARow).toContain('{n}');
+      expect(lang.ui.streakGrew).toContain('{n}');
       expect(lang.ui.whichOneIs).toContain('{word}');
       expect(missingGloss).toEqual([]);
       expect(Object.keys(lang.gloss).filter((id) => !contentIds.includes(id))).toEqual([]);
