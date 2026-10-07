@@ -158,12 +158,12 @@ const OUTFITS: Record<HeadId, Outfit> = {
     sleeve: '#1a86d8',
     leg: '#2d4f78',
     shoe: '#8a5a2b',
-    arm: [16, 15, 12],
+    arm: [19, 18, 12],
     legs: [17, 15, 14],
     shoulder: [15, -34],
     hip: [9, 4],
     neck: -44,
-    headScale: 1,
+    headScale: 0.92,
     torsoPath: BRAM_BEAN,
     torso: (
       <>
@@ -182,12 +182,12 @@ const OUTFITS: Record<HeadId, Outfit> = {
     bare: true,
     leg: '#1cb0f6',
     shoe: '#ff4b4b',
-    arm: [13, 13, 10.5],
+    arm: [16, 15, 10.5],
     legs: [14, 13, 12.5],
     shoulder: [12, -30],
     hip: [7, 4],
     neck: -38,
-    headScale: 0.86,
+    headScale: 0.8,
     torsoPath: JADA_BEAN,
     torso: (
       <>
@@ -317,29 +317,29 @@ const LESSON_CONFETTI: Piece[] = [
 
 /** Bram's leap: one diagonal from the kicked-back boot through his body to the high-five. */
 const BRAM_LEAP: ActionPose = {
-  pelvis: [210, 170],
-  tilt: -26,
-  head: 6,
-  gaze: [-1, -0.5],
+  pelvis: [218, 170],
+  tilt: -18,
+  head: 4,
+  gaze: [-1, -0.6],
   shout: true,
-  armL: { a: -128, e: -112, hand: 'open', flip: true },
-  armR: { a: -150, e: -128, hand: 'open', flip: true },
+  armL: { a: -140, e: -114, hand: 'open', flip: true },
+  armR: { a: 30, e: -10, hand: 'fist' },
   legL: { t: 118, s: 96 },
-  legR: { t: 30, s: -6 },
+  legR: { t: 24, s: -14 },
   facing: [-1, -1],
   behind: ['armR', 'legR'],
 };
 
 /** Jada springs up off a pallet to meet him, one foot flicked up behind her. */
 const JADA_SPRING: ActionPose = {
-  pelvis: [112, 176],
-  tilt: 18,
-  head: -6,
-  gaze: [1, -0.5],
+  pelvis: [104, 178],
+  tilt: 16,
+  head: -4,
+  gaze: [1, -0.6],
   shout: true,
-  armL: { a: -36, e: -56, hand: 'open' },
-  armR: { a: -58, e: -70, hand: 'open' },
-  legL: { t: 132, s: 168 },
+  armL: { a: 156, e: 120, hand: 'fist', flip: true },
+  armR: { a: -38, e: -66, hand: 'open' },
+  legL: { t: 132, s: 172 },
   legR: { t: 96, s: 84 },
   facing: [1, 1],
   behind: ['armL', 'legL'],
@@ -397,15 +397,15 @@ const STREAK_CONFETTI: Piece[] = [
 /** Bram stands on the podium beside the flame and cheers: weight on his back foot, leaning
  *  towards the flame, one open hand flung out to present it ("ta-da!"), the other fist punched high. */
 const BRAM_CHEER: ActionPose = {
-  pelvis: [160, 146],
-  tilt: 10,
-  head: -10,
-  gaze: [0.2, -1],
+  pelvis: [158, 146],
+  tilt: 12,
+  head: -12,
+  gaze: [0.3, -1],
   shout: true,
-  armL: { a: 150, e: 40, hand: 'fist', flip: true },
-  armR: { a: -76, e: -88, hand: 'fist' },
-  legL: { t: 100, s: 88 },
-  legR: { t: 10, s: 96 },
+  armL: { a: 128, e: -34, hand: 'fist', flip: true },
+  armR: { a: -62, e: -80, hand: 'fist' },
+  legL: { t: 102, s: 86 },
+  legR: { t: 8, s: 98 },
   facing: [-1, 1],
   behind: [],
 };
