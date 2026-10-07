@@ -5,6 +5,7 @@ import type { HelpLanguage } from '../i18n/types';
 import { sounds, speak, speechAvailable } from '../lib/audio';
 import { buildLesson, isGraded, type Exercise } from '../lib/exercises';
 import { voiceFor } from '../lib/voices';
+import { castFor } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { CheckIcon, ChevronIcon, CloseIcon } from './Icons';
 import {
@@ -175,8 +176,14 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       if (index < initial.length) setQueue((q) => [...q, ex]);
     }
     const sol = solution(ex);
-    // In a chat the right reply is "your" line: Amina says it.
-    if (sol.nl) speak(sol.text, false, 'nl', ex.kind === 'chat' ? voiceFor('amina') : undefined);
+    // The answer is said by the character on screen, so a woman never speaks with a man's voice:
+    // in a chat the right reply is "your" line (Amina); a built sentence belongs to its speaker.
+    const who =
+      ex.kind === 'chat' ? 'amina'
+      : ex.kind === 'build' ? castFor(ex.sentence.id)
+      : ex.kind === 'situation' || ex.kind === 'tip' ? castFor(ex.tip.id)
+      : 'bram';
+    if (sol.nl) speak(sol.text, false, 'nl', voiceFor(who));
   }
 
   function finish() {
