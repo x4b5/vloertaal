@@ -415,7 +415,6 @@ export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, on
         {onBack && <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>}
         <h1><Bi text={ui('settings', lang)} /></h1>
       </div>
-      {access === 'preview' && onAccess && <UpgradeCard lang={lang} onAccess={onAccess} />}
       <h2><Bi text={ui('helpLanguage', lang)} /></h2>
       <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta />
       {lang && !lang.reviewed && <p className="muted small">beta: {ui('beta').en}</p>}
@@ -439,6 +438,8 @@ export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, on
 
       <h2><Bi text={ui('voice', lang)} /></h2>
       <VoicePicker current={progress.voice} lang={lang} onPick={onVoice} />
+      {/* Preview: settings work as usual; unlocking the full version sits below them. */}
+      {access === 'preview' && onAccess && <UpgradeCard lang={lang} onAccess={onAccess} />}
       <button type="button" className="phrase-banner about-banner" onClick={onAbout}>
         <LogoMark size={32} check={false} />
         <Bi text={ui('about', lang)} />
