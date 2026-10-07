@@ -1,4 +1,5 @@
 import { Character } from './Characters';
+import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
@@ -10,7 +11,7 @@ import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak
 import { VOICE_SAMPLE } from '../lib/voices';
 import { isUnlocked } from '../lib/exercises';
 import type { Progress, ThemeChoice } from '../lib/progress';
-import { Bi } from './Bi';
+import { Bi, HelpText } from './Bi';
 import { LogoMark, Wordmark } from './Logo';
 import { WordPicture } from '../pictures';
 import {
@@ -162,7 +163,7 @@ export function Path({ progress, lang, onStart, onPhrasebook, onTips, onAbout }:
                 </h2>
                 <span className="unit-nl" lang="nl">{unit.titleNl}</span>
                 {lang?.gloss[unit.id] && (
-                  <span className="bi-help" lang={lang.code} dir={lang.dir}>{lang.gloss[unit.id]}</span>
+                  <HelpText text={lang.gloss[unit.id]} lang={lang} />
                 )}
               </div>
               {!unitOpen && <LockIcon size={26} className="unit-lock" />}
@@ -279,7 +280,7 @@ export function Phrasebook({ lang, onBack }: { lang?: HelpLanguage; onBack: () =
             <li key={id} className="phrase">
               <SpeakButton text={item.nl} />
               <div className="phrase-text">
-                <span className="phrase-nl" lang="nl">{item.nl}</span>
+                <span className="phrase-nl" lang="nl">{breakable(item.nl)}</span>
                 <Bi text={gloss(id, item.en, lang)} />
               </div>
             </li>
@@ -568,7 +569,7 @@ export function Tips({ progress, lang, onBack }: { progress: Progress; lang?: He
                 <div className="phrase">
                   <SpeakButton text={t.phrase.nl} />
                   <div className="phrase-text">
-                    <span className="phrase-nl" lang="nl">{t.phrase.nl}</span>
+                    <span className="phrase-nl" lang="nl">{breakable(t.phrase.nl)}</span>
                     <Bi text={gloss(t.phrase.id, t.phrase.en, lang)} />
                   </div>
                 </div>

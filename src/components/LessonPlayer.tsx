@@ -5,7 +5,7 @@ import type { HelpLanguage } from '../i18n/types';
 import { sounds, speak, speechAvailable } from '../lib/audio';
 import { buildLesson, isGraded, type Exercise } from '../lib/exercises';
 import { voiceFor } from '../lib/voices';
-import { Bi } from './Bi';
+import { Bi, HelpText } from './Bi';
 import { CheckIcon, ChevronIcon, CloseIcon } from './Icons';
 import {
   type Answer,
@@ -99,7 +99,7 @@ function InARow({ count, progress, lang }: { count: number; progress: number; la
     <span className="in-a-row" style={{ '--p': progress } as React.CSSProperties} role="status">
       <span className="in-a-row-en">{fill(text.en)}</span>
       {text.help && text.lang && (
-        <span className="in-a-row-help" lang={text.lang.code} dir={text.lang.dir}>{fill(text.help)}</span>
+        <HelpText className="in-a-row-help" text={fill(text.help)} lang={text.lang} />
       )}
     </span>
   );
@@ -218,7 +218,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         <span className="bi-en">{pair.meaning.en}</span>
       </span>
       {pairHelp && lang && (
-        <span className="bi-help" lang={lang.code} dir={lang.dir}>{pairHelp}</span>
+        <HelpText text={pairHelp} lang={lang} />
       )}
     </div>
   );
@@ -227,7 +227,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const whyLine = why && (
     <div className="feedback-meaning feedback-why">
       <span className="bi-en">{why.en}</span>
-      {why.help && why.lang && <span className="bi-help" lang={why.lang.code} dir={why.lang.dir}>{why.help}</span>}
+      {why.help && why.lang && <HelpText text={why.help} lang={why.lang} />}
     </div>
   );
   const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip';

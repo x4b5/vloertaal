@@ -6,6 +6,7 @@ import { checkTiles, checkTyped } from '../lib/answers';
 import { sounds, speak } from '../lib/audio';
 import type { Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
+import { breakable, wordSize } from '../lib/dutch';
 import { Bi } from './Bi';
 import { castFor, Character, type CharacterId, type Mood, useTalking } from './Characters';
 import { voiceFor } from '../lib/voices';
@@ -81,8 +82,8 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
       <Prompt text={ui('tapToHear', lang)} />
       <div className="card intro-card">
         <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />
-        <div className="intro-nl">
-          <span lang="nl">{word.nl}</span>
+        <div className={`intro-nl ${wordSize(word.nl)}`}>
+          <span lang="nl">{breakable(word.nl)}</span>
           <SpeakButton text={word.nl} />
           <SpeakButton text={word.nl} slow label={`Play slowly: ${word.nl}`} />
         </div>
@@ -157,11 +158,11 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict }: Props<'
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
-      <div className="speaker">
+      <div className={`speaker speaker-word ${wordSize(ex.word.nl)}`}>
         <Speaker who="bram" lines={[ex.word.nl]} verdict={verdict} />
         <div className="speaker-bubble">
           <SpeakButton text={ex.word.nl} voice={voiceFor('bram')} />
-          <span className="speaker-nl" lang="nl">{ex.word.nl}</span>
+          <span className="speaker-nl" lang="nl">{breakable(ex.word.nl)}</span>
         </div>
       </div>
       <ChoiceGrid
@@ -205,18 +206,12 @@ export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
         render={(w) => (
           <>
             <WordPicture className="pic-emoji" id={w.id} emoji={w.emoji} size={110} />
-            <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{w.nl}</span>
+            <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
           </>
         )}
       />
     </div>
   );
-}
-
-/** Long Dutch compounds (veiligheidsschoenen) get a smaller size so they never split mid-word. */
-function wordSize(nl: string): string {
-  const longest = Math.max(...nl.split(/\s+/).map((t) => t.length));
-  return longest > 13 ? 'len-l' : longest > 9 ? 'len-m' : '';
 }
 
 /** Only audio → pick the written Dutch word. */
@@ -234,7 +229,7 @@ export function ListenExercise({ ex, lang, locked, onAnswer }: Props<'listen'>) 
         correctId={ex.word.id}
         locked={locked}
         onAnswer={onAnswer}
-        render={(w) => <span lang="nl" className="choice-nl">{w.nl}</span>}
+        render={(w) => <span lang="nl" className="choice-nl">{breakable(w.nl)}</span>}
       />
     </div>
   );
@@ -270,37 +265,35 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
   return (
     <div className="exercise">
       <Prompt text={ui('matchPairs', lang)} />
+      {/* One grid, row by row (Dutch word, meaning), so both cards of a row share its height. */}
       <div className="match-grid">
-        <div className="match-col">
-          {ex.words.map((w) => (
+        {ex.words.map((w, i) => {
+          const r = right[i];
+          return [
             <button
-              key={w.id}
+              key={`nl-${w.id}`}
               type="button"
-              className={cls(w.id, left)}
+              className={`${cls(w.id, left)} match-nl`}
               disabled={done.has(w.id)}
               onClick={() => {
                 speak(w.nl);
                 setLeft(w.id);
               }}
             >
-              <span lang="nl" className="choice-nl">{w.nl}</span>
-            </button>
-          ))}
-        </div>
-        <div className="match-col">
-          {right.map((w) => (
+              <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
+            </button>,
             <button
-              key={w.id}
+              key={`en-${r.id}`}
               type="button"
-              className={cls(w.id, rightPick)}
-              disabled={done.has(w.id)}
-              onClick={() => setRightPick(w.id)}
+              className={`${cls(r.id, rightPick)} match-en`}
+              disabled={done.has(r.id)}
+              onClick={() => setRightPick(r.id)}
             >
-              <WordPicture className="choice-emoji" id={w.id} emoji={w.emoji} size={44} />
-              <Bi text={gloss(w.id, w.en, lang)} />
-            </button>
-          ))}
-        </div>
+              <WordPicture className="choice-emoji" id={r.id} emoji={r.emoji} size={36} />
+              <Bi text={gloss(r.id, r.en, lang)} />
+            </button>,
+          ];
+        })}
       </div>
     </div>
   );
@@ -428,7 +421,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
               aria-expanded={hint}
               onClick={() => setHint((h) => !h)}
             >
-              {prompt.nl}
+              {breakable(prompt.nl)}
             </button>
             {hint && !locked && (
               <span className="chat-hint">
@@ -439,7 +432,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
         </div>
         <div className="chat-row chat-me">
           <div className={`chat-bubble chat-bubble-me ${mine}`} aria-live="polite">
-            {picked ? <span className="chat-line" lang="nl">{picked.nl}</span> : <span className="chat-blank" aria-hidden />}
+            {picked ? <span className="chat-line" lang="nl">{breakable(picked.nl)}</span> : <span className="chat-blank" aria-hidden />}
           </div>
           <span className="chat-char"><Character who="amina" flip mood={moodFor(verdict, meRest)} talking={meTalking} /></span>
         </div>
@@ -454,7 +447,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
           setPicked(o);
           setHint(false);
         }}
-        render={(o) => <span lang="nl" className="choice-nl">{o.nl}</span>}
+        render={(o) => <span lang="nl" className="choice-nl">{breakable(o.nl)}</span>}
       />
     </div>
   );
@@ -483,7 +476,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
           <div className="speaker-bubble tip-bubble">
             <SpeakButton glyph text={tip.phrase.nl} label={`Play: ${tip.phrase.nl}`} voice={voiceFor(castFor(tip.id))} />
             <span className="tip-phrase">
-              <span lang="nl" className="tip-phrase-nl">{tip.phrase.nl}</span>
+              <span lang="nl" className="tip-phrase-nl">{breakable(tip.phrase.nl)}</span>
               <Bi text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
             </span>
           </div>

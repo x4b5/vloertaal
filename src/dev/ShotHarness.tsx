@@ -21,7 +21,7 @@ import * as kit from '../pictures/kit';
  * /?shot=pictures shows every word picture (and the unit banner pictures) for review.
  * Options are always in lesson order, so tests know which one is right.
  */
-export function ShotHarness({ shot, lang }: { shot: string; lang: string | null }) {
+export function ShotHarness({ shot, lang, word }: { shot: string; lang: string | null; word?: string | null }) {
   // Lesson complete: 14 XP at 88% accuracy, as in the reference.
   if (shot === 'result') return <Result xp={14} accuracy={0.88} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   // Day-streak milestone after the very first lesson: streak 1.
@@ -65,11 +65,14 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
   }
   const { lesson } = findLesson('l.gear')!;
   const [helm, handschoenen, schoenen, hesje] = lesson.words;
+  // &word=w.veiligheidsschoenen puts any course word in the spotlight (long-word checks).
+  const allWords = units.flatMap((u) => u.lessons.flatMap((l) => l.words));
+  const focus = allWords.find((w) => w.id === word);
   const exercises: Record<string, Exercise> = {
     dutch: { kind: 'dutch', word: helm, options: [hesje, handschoenen, helm] },
-    meaning: { kind: 'meaning', word: hesje, options: [handschoenen, schoenen, hesje] },
-    intro: { kind: 'intro', word: hesje },
-    listen: { kind: 'listen', word: schoenen, options: [helm, schoenen, hesje] },
+    meaning: { kind: 'meaning', word: focus ?? hesje, options: [handschoenen, schoenen, focus ?? hesje] },
+    intro: { kind: 'intro', word: focus ?? hesje },
+    listen: { kind: 'listen', word: focus ?? schoenen, options: [helm, focus ?? schoenen, hesje] },
     type: { kind: 'type', word: helm },
     match: { kind: 'match', words: [helm, handschoenen, schoenen, hesje] },
     build: { kind: 'build', sentence: lesson.sentences[0], tiles: buildTiles(lesson.sentences[0], lesson, createRng(3)) },
