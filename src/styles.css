@@ -340,7 +340,7 @@ h2 { font-size: 1.25rem; }
 .target-nl { font-size: 1.8rem; font-weight: 900; }
 /* "What does this mean?": a character says the Dutch word in a speech bubble. */
 .speaker { display: flex; align-items: center; gap: 18px; margin: 0 0 20px; }
-.speaker-char { flex: none; font-size: 112px; line-height: 1; }
+.speaker-char { flex: none; font-size: 140px; line-height: 1; }
 .speaker-bubble {
   position: relative; display: flex; align-items: center; gap: 12px; margin-bottom: 28px;
   padding: 10px 18px 10px 10px; border: 2px solid var(--line); border-radius: 16px; background: var(--bg);
@@ -427,7 +427,7 @@ h2 { font-size: 1.25rem; }
 
 /* Sentence building: character + speech bubble (speaker icon, dotted hint underline). */
 .speaker-build { align-items: flex-end; gap: 14px; margin-bottom: 4px; }
-.speaker-build .speaker-char { font-size: 96px; }
+.speaker-build .speaker-char { font-size: 136px; }
 .speaker-build .speaker-bubble { padding: 8px 18px 8px 8px; margin-bottom: 20px; gap: 6px; min-width: 0; }
 .speak-glyph {
   display: inline-grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0;
@@ -550,8 +550,8 @@ h2 { font-size: 1.25rem; }
   .feedback-title { font-size: 1.55rem; }
   .feedback-answer { font-size: 1.2rem; }
   .speaker { margin-bottom: 8px; }
-  .speaker-char { font-size: 150px; }
-  .speaker-build .speaker-char { font-size: 136px; }
+  .speaker-char { font-size: 178px; }
+  .speaker-build .speaker-char { font-size: 170px; }
   .speaker-build .speaker-bubble { margin-bottom: 36px; }
   .tile-bank { margin-top: 40px; }
 }
@@ -560,7 +560,7 @@ h2 { font-size: 1.25rem; }
 .chat { display: flex; flex-direction: column; gap: 8px; margin: 0 0 24px; }
 .chat-row { display: flex; align-items: center; gap: 14px; }
 .chat-me { justify-content: flex-end; }
-.chat-char { flex: none; font-size: 84px; line-height: 1; }
+.chat-char { flex: none; font-size: 132px; line-height: 1; }
 .chat-bubble {
   position: relative; display: flex; align-items: center; gap: 4px; min-width: 0;
   padding: 8px 18px 8px 8px; border: 2px solid var(--line); border-radius: 16px; background: var(--bg);
@@ -597,8 +597,8 @@ h2 { font-size: 1.25rem; }
 .feedback-meaning { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; font-size: 1.05rem; font-weight: 600; }
 .feedback-meaning .bi-help { color: inherit; opacity: 0.85; font-size: 0.9rem; }
 @media (min-width: 760px) {
-  .chat { gap: 4px; margin-bottom: 40px; }
-  .chat-char { font-size: 112px; }
+  .chat { gap: 0; margin-bottom: 24px; }
+  .chat-char { font-size: 148px; }
   .chat-them .chat-bubble { margin-bottom: 16px; }
   .chat-line { font-size: 1.3rem; }
   .feedback-meaning { font-size: 1.15rem; }
@@ -656,24 +656,31 @@ h2 { font-size: 1.25rem; }
 /* Characters (src/components/Characters.tsx): breathe + blink when idle, mouth moves while
    talking, a squash-and-stretch jump when happy, a droop when sad. */
 .ch { overflow: visible; }
-.ch-fig { transform-box: view-box; transform-origin: 60px 134px; animation: ch-breathe 3.2s ease-in-out infinite; }
-.ch-head { transform-box: view-box; transform-origin: 60px 92px; animation: ch-head 3.2s 0.25s ease-in-out infinite; }
+.ch-fig { transform-box: view-box; transform-origin: 60px 134px; animation: ch-breathe 2.6s ease-in-out infinite; }
+.ch-head { transform-box: view-box; transform-origin: 60px 92px; animation: ch-head 2.6s 0.2s ease-in-out infinite; }
 .ch-eyes { transform-box: fill-box; transform-origin: center; animation: ch-blink var(--blink, 4.2s) infinite; }
-.ch-shadow { transform-box: fill-box; transform-origin: center; }
-@keyframes ch-breathe { 50% { transform: translateY(-1px) scale(1.012, 1.018); } }
-@keyframes ch-head { 50% { transform: translateY(-1.2px) rotate(-1deg); } }
-@keyframes ch-blink { 0%, 93%, 100% { transform: scaleY(1); } 95.5% { transform: scaleY(0.08); } }
+.ch-shadow { transform-box: fill-box; transform-origin: center; animation: ch-shadow-breathe 2.6s ease-in-out infinite; }
+/* Idle loop: a slow breathing bob with squash (bottom) and stretch (top), the head trailing a little. */
+@keyframes ch-breathe {
+  0%, 100% { transform: scale(1.035, 0.965); }
+  50% { transform: translateY(-4px) scale(0.975, 1.035); }
+}
+@keyframes ch-head { 0%, 100% { transform: translateY(1px) rotate(1deg); } 50% { transform: translateY(-2px) rotate(-1.5deg); } }
+@keyframes ch-shadow-breathe { 50% { transform: scale(0.88); opacity: 0.12; } }
+/* Blink early in the cycle (so it shows soon after an exercise appears), then every --blink seconds. */
+@keyframes ch-blink { 0%, 10%, 15%, 100% { transform: scaleY(1); } 12.5% { transform: scaleY(0.08); } }
 
 .ch-talking .ch-mouth-rest { display: none; }
-.ch-mouth-talk { transform-box: fill-box; transform-origin: 50% 0; animation: ch-talk 0.24s ease-in-out infinite alternate; }
-.ch-talking .ch-head { animation: ch-nod 0.48s ease-in-out infinite alternate; }
+.ch-mouth-talk { transform-box: fill-box; transform-origin: 50% 0; animation: ch-talk 0.18s ease-in-out infinite alternate; }
+.ch-talking .ch-head { animation: ch-nod 0.36s ease-in-out infinite alternate; }
 .ch-arm-gesture { transform-box: view-box; transform-origin: 90px 104px; animation: ch-gesture 0.96s ease-in-out infinite alternate; }
-@keyframes ch-talk { from { transform: scaleY(0.25); } to { transform: scaleY(1); } }
-@keyframes ch-nod { from { transform: rotate(-1.5deg); } to { transform: translateY(0.8px) rotate(1.5deg); } }
+@keyframes ch-talk { from { transform: scale(0.8, 0.12); } to { transform: scale(1.05, 1.1); } }
+@keyframes ch-nod { from { transform: translateY(-1px) rotate(-2.5deg); } to { transform: translateY(1.5px) rotate(2deg); } }
 @keyframes ch-gesture { to { transform: rotate(-8deg); } }
 
-.ch-happy .ch-fig { animation: ch-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) 2, ch-breathe 3.2s 1.24s ease-in-out infinite; }
-.ch-happy .ch-shadow { animation: ch-shadow-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) 2; }
+/* One-shot gestures hand over to the idle loop when they end. */
+.ch-happy .ch-fig { animation: ch-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) 2, ch-breathe 2.6s 1.24s ease-in-out infinite; }
+.ch-happy .ch-shadow { animation: ch-shadow-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) 2, ch-shadow-breathe 2.6s 1.24s ease-in-out infinite; }
 .ch-happy .ch-arm-wave, .ch-wave .ch-arm-wave { transform-box: view-box; transform-origin: 90px 102px; animation: ch-wave 0.36s ease-in-out infinite alternate; }
 .ch-cheer .ch-fig { animation: ch-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) infinite; }
 .ch-cheer .ch-shadow { animation: ch-shadow-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) infinite; }
@@ -681,18 +688,21 @@ h2 { font-size: 1.25rem; }
 @keyframes ch-jump {
   0% { transform: none; }
   18% { transform: scale(1.08, 0.9); }
-  50% { transform: translateY(-16px) scale(0.96, 1.05); }
+  50% { transform: translateY(-22px) scale(0.95, 1.07); }
   82% { transform: scale(1.06, 0.94); }
   100% { transform: none; }
 }
 @keyframes ch-shadow-jump { 50% { transform: scale(0.6); opacity: 0.08; } }
 @keyframes ch-wave { from { transform: rotate(-10deg); } to { transform: rotate(14deg); } }
 
-.ch-sad .ch-fig { animation: ch-droop 0.5s ease-out both; }
-.ch-sad .ch-head { animation: ch-head-droop 0.7s ease-out both; }
+.ch-sad .ch-fig { animation: ch-droop 0.5s ease-out, ch-breathe-sad 3s 0.5s ease-in-out infinite; }
+.ch-sad .ch-head { animation: ch-head-droop 0.7s ease-out, ch-head-sad 3s 0.7s ease-in-out infinite; }
 .ch-sweat { transform-box: fill-box; transform-origin: 50% 0; animation: ch-sweat 0.6s 0.2s ease-in both; }
-@keyframes ch-droop { 30% { transform: translateX(-2px); } 55% { transform: translateX(2px); } to { transform: translateY(3px) scale(1.02, 0.97); } }
+@keyframes ch-droop { 30% { transform: translateX(-3px); } 55% { transform: translateX(3px); } to { transform: translateY(3px) scale(1.03, 0.96); } }
 @keyframes ch-head-droop { to { transform: translateY(2px) rotate(-5deg); } }
+/* After the droop: slow, heavy breathing in the slumped pose (a sigh). */
+@keyframes ch-breathe-sad { 0%, 100% { transform: translateY(3px) scale(1.03, 0.96); } 50% { transform: translateY(1px) scale(1.01, 0.99); } }
+@keyframes ch-head-sad { 0%, 100% { transform: translateY(2px) rotate(-5deg); } 50% { transform: translateY(1px) rotate(-3.5deg); } }
 @keyframes ch-sweat { from { transform: translateY(-6px) scale(0.3); opacity: 0; } }
 
 /* Day-streak milestone (Mijlpaal): worker on a podium, big flame + number, one line. */

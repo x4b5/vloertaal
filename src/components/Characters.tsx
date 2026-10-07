@@ -37,6 +37,8 @@ interface Look {
   front?: React.ReactNode;
   /** Clothes on the torso; `clip` is the id of a clip path with the torso shape. */
   torso: (clip: string) => React.ReactNode;
+  /** Extra detail clipped to the face (stubble). */
+  faceExtra?: React.ReactNode;
   /** Blink rhythm, so a group of characters doesn't blink in sync. */
   blink: number;
 }
@@ -53,6 +55,7 @@ const LOOKS: Record<CharacterId, Look> = {
     face: roundFace,
     ears: true,
     blink: 4.2,
+    faceExtra: <path d="M30 70Q36 92 60 92Q84 92 90 70Q80 86 60 86Q40 86 30 70Z" fill="#b07a55" opacity=".28" />,
     torso: (clip) => (
       <>
         <path d={TORSO} fill="#ff7a00" />
@@ -68,7 +71,7 @@ const LOOKS: Record<CharacterId, Look> = {
           {/* Chest pocket with a pen */}
           <rect x="67" y="104" width="10" height="2.5" rx="1.2" fill="#2b2b2b" />
           <rect x="66" y="105" width="14" height="10" rx="2" fill="#e86e00" />
-          <rect x="20" y="93" width="100" height="45" fill="#000" opacity=".1" transform="translate(56 0)" />
+          <ellipse cx="104" cy="122" rx="26" ry="34" fill="#000" opacity=".1" />
         </g>
       </>
     ),
@@ -108,7 +111,6 @@ const LOOKS: Record<CharacterId, Look> = {
         {/* Inner cap edge around the face */}
         <path d="M37 52C39 40 48 34 60 34C72 34 81 40 83 52" fill="none" stroke="#b07ae6" strokeWidth="3.4" strokeLinecap="round" />
         <path d="M35 30Q46 21 58 20" fill="none" stroke="#b07ae6" strokeWidth="3" strokeLinecap="round" opacity=".7" />
-        <circle cx="83" cy="80" r="2.6" fill="#ffc800" />
       </>
     ),
     torso: (clip) => (
@@ -120,7 +122,7 @@ const LOOKS: Record<CharacterId, Look> = {
           <rect x="65" y="114" width="16" height="10" rx="2.5" fill="#fff" />
           <path d="M69 121H77M69 118H74" stroke="#9aa5ab" strokeWidth="1.6" strokeLinecap="round" />
           <path d="M45 124V116M45 118C41 118 40 115 40 113C43 113 45 115 45 118ZM45 117C45 114 47 112 50 112C50 115 48 117 45 117Z" fill="#c6f06b" stroke="#c6f06b" strokeWidth="1" />
-          <rect x="20" y="93" width="100" height="45" fill="#000" opacity=".1" transform="translate(56 0)" />
+          <ellipse cx="104" cy="122" rx="26" ry="34" fill="#000" opacity=".1" />
         </g>
       </>
     ),
@@ -162,7 +164,7 @@ const LOOKS: Record<CharacterId, Look> = {
           {/* Pen in the pocket */}
           <rect x="70" y="101" width="2.6" height="8" rx="1.2" fill="#ff4b4b" />
           <rect x="66" y="106" width="12" height="9" rx="2" fill="#1d3f6e" />
-          <rect x="20" y="93" width="100" height="45" fill="#000" opacity=".12" transform="translate(56 0)" />
+          <ellipse cx="104" cy="122" rx="26" ry="34" fill="#000" opacity=".12" />
         </g>
       </>
     ),
@@ -176,7 +178,7 @@ const LOOKS: Record<CharacterId, Look> = {
     ears: true,
     blink: 3.8,
     back: (
-      <g fill="#241914">
+      <g fill="#2e201a">
         {/* Curly hair, big and round */}
         <circle cx="60" cy="28" r="19" />
         <circle cx="42" cy="34" r="13" />
@@ -185,13 +187,14 @@ const LOOKS: Record<CharacterId, Look> = {
         <circle cx="84" cy="48" r="9" />
         <circle cx="50" cy="15" r="9" />
         <circle cx="70" cy="15" r="9" />
+        <g fill="none" stroke="#4a362c" strokeWidth="2" strokeLinecap="round">
+          <path d="M44 22a5 5 0 0 1 6-4M64 12a5 5 0 0 1 6 0M76 26a5 5 0 0 1 5 4M33 42a4 4 0 0 1 4-4" />
+        </g>
       </g>
     ),
     front: (
       <>
-        <path d="M34 52C35 38 46 31 60 31C74 31 85 38 86 52C80 45 71 42 60 43C49 42 40 45 34 52Z" fill="#241914" />
-        <circle cx="47" cy="22" r="3" fill="#3a2a22" />
-        <circle cx="66" cy="16" r="2.6" fill="#3a2a22" />
+        <path d="M34 52C35 38 46 31 60 31C74 31 85 38 86 52C80 45 71 42 60 43C49 42 40 45 34 52Z" fill="#2e201a" />
         {/* Safety glasses pushed up on the hair */}
         <g>
           <rect x="42" y="27" width="16" height="9" rx="4.5" fill="#8fdcff" stroke="#1d6fa8" strokeWidth="2" />
@@ -216,7 +219,7 @@ const LOOKS: Record<CharacterId, Look> = {
           <circle cx="76" cy="111" r="2.6" fill="#ffc800" />
           <rect x="52" y="113" width="16" height="9" rx="2" fill="#1899d6" />
           <path d="M53 97Q60 102 67 97" fill="none" stroke="#c4ced6" strokeWidth="2.4" strokeLinecap="round" />
-          <rect x="20" y="93" width="100" height="45" fill="#000" opacity=".1" transform="translate(56 0)" />
+          <ellipse cx="104" cy="122" rx="26" ry="34" fill="#000" opacity=".1" />
         </g>
       </>
     ),
@@ -329,7 +332,7 @@ function Mouth({ mood }: { mood: Mood }) {
   }
   return (
     <>
-      <path className="ch-mouth ch-mouth-rest" d="M52.5 76Q60 82 67.5 76" fill="none" stroke={INK} strokeWidth="2.8" strokeLinecap="round" />
+      <path className="ch-mouth ch-mouth-rest" d="M52.5 76.5Q60.5 82.5 68 75" fill="none" stroke={INK} strokeWidth="2.8" strokeLinecap="round" />
       {mood === 'talking' && (
         <g className="ch-mouth-talk">
           <path d="M52.5 75H67.5Q67.5 85 60 85Q52.5 85 52.5 75Z" fill={MOUTH} />
@@ -380,7 +383,8 @@ export function Character({ who, mood = 'idle', size = 120, flip = false, crop, 
           )}
           {look.face(look.skin)}
           <g clipPath={`url(#${faceClip})`}>
-            <rect x="74" y="0" width="40" height="100" fill={look.shade} opacity=".45" />
+            <ellipse cx="100" cy="58" rx="27" ry="48" fill={look.shade} opacity=".5" />
+            {look.faceExtra}
           </g>
           <ellipse cx="42" cy="73" rx="4.6" ry="3.2" fill="#ff7b7b" opacity=".35" />
           <ellipse cx="78" cy="73" rx="4.6" ry="3.2" fill="#ff7b7b" opacity=".35" />
