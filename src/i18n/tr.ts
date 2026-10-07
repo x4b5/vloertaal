@@ -55,7 +55,7 @@ const lang: HelpLanguage = {
     completeChat: 'Konuşmayı tamamla',
     meaning: 'Anlamı',
     navRoute: 'Dersler',
-    navWords: 'Kelimeler ve ifadeler',
+    navWords: 'Yardım',
     navMe: 'Ben',
     rightFirstTime: 'İlk denemede doğru',
     newWords: 'Yeni kelimeler',

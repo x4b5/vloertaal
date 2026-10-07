@@ -193,7 +193,6 @@ export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
         <h2 className="prompt">
           <Bi text={question} />
         </h2>
-        <SpeakButton text={ex.word.en} lang="en" label={`Play: ${ex.word.en}`} />
       </div>
       <ChoiceGrid
         className={`choices-pics n${ex.options.length} ${ex.options.length % 2 ? 'odd' : 'even'}`}
@@ -302,6 +301,8 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
 /** English sentence → put Dutch word tiles in order. */
 export function BuildExercise({ ex, lang, locked, onAnswer, verdict }: Props<'build'>) {
   const [chosen, setChosen] = useState<number[]>([]);
+  // One voice per exercise: the speaker says the tiles and, after Check, the whole sentence.
+  const who = castFor(ex.sentence.id);
 
   const update = (next: number[]) => {
     setChosen(next);
@@ -312,9 +313,8 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict }: Props<'bu
     <div className="exercise">
       <Prompt text={ui('buildSentence', lang)} />
       <div className="speaker speaker-build">
-        <Speaker who={castFor(ex.sentence.id)} lines={[ex.sentence.en]} verdict={verdict} />
+        <Speaker who={who} lines={[ex.sentence.nl, ...ex.tiles]} verdict={verdict} />
         <div className="speaker-bubble">
-          <SpeakButton glyph lang="en" text={ex.sentence.en} label={`Play: ${ex.sentence.en}`} />
           <Bi className="bubble-text" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
         </div>
       </div>
@@ -342,7 +342,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict }: Props<'bu
             lang="nl"
             disabled={locked || chosen.includes(i)}
             onClick={() => {
-              speak(t);
+              speak(t, false, 'nl', voiceFor(who));
               update([...chosen, i]);
             }}
           >

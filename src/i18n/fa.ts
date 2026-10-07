@@ -55,7 +55,7 @@ const lang: HelpLanguage = {
     completeChat: 'گفتگو را کامل کنید',
     meaning: 'معنی',
     navRoute: 'درس‌ها',
-    navWords: 'واژه‌ها و جمله‌ها',
+    navWords: 'کمک',
     navMe: 'من',
     rightFirstTime: 'درست در بار اول',
     newWords: 'واژه‌های تازه',

@@ -55,7 +55,7 @@ const lang: HelpLanguage = {
     completeChat: 'Dokończ rozmowę',
     meaning: 'Znaczenie',
     navRoute: 'Lekcje',
-    navWords: 'Słowa i zwroty',
+    navWords: 'Pomoc',
     navMe: 'Ja',
     rightFirstTime: 'Dobrze za pierwszym razem',
     newWords: 'Nowe słowa',

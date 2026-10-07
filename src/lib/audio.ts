@@ -42,7 +42,15 @@ interface Recorded {
   base: string;
   /** Dutch text → clip id. */
   clips: Record<string, string>;
+  /** Same, keyed without capitals or closing punctuation ("Hallo" finds "hallo"). */
+  plain: Record<string, string>;
 }
+
+const plainText = (t: string) => t.trim().toLowerCase().replace(/[.!?…,]+$/, '');
+const withPlain = (r: Omit<Recorded, 'plain'>): Recorded => ({
+  ...r,
+  plain: Object.fromEntries(Object.entries(r.clips).map(([text, id]) => [plainText(text), id])),
+});
 
 let recorded: Recorded[] = [];
 const recordedListeners = new Set<() => void>();
@@ -70,12 +78,16 @@ if (typeof window !== 'undefined' && typeof fetch === 'function') {
   Promise.all([loadJson<ElevenIndex>('./audio-el/voices.json'), loadJson<RecordedIndex>('./audio/voices.json')]).then(
     ([eleven, piper]) => {
       const list: Recorded[] = [
-        ...(eleven?.voices ?? []).map(({ said, ...voice }) => ({
-          voice: { ...voice, engine: 'ElevenLabs' as const },
-          base: './audio-el',
-          clips: Object.fromEntries(Object.entries(said).map(([id, text]) => [text.trim(), id])),
-        })),
-        ...(piper?.voices ?? []).map((voice) => ({ voice: { ...voice, engine: 'Piper' as const }, base: './audio', clips: piper!.clips })),
+        ...(eleven?.voices ?? []).map(({ said, ...voice }) =>
+          withPlain({
+            voice: { ...voice, engine: 'ElevenLabs' as const },
+            base: './audio-el',
+            clips: Object.fromEntries(Object.entries(said).map(([id, text]) => [text.trim(), id])),
+          }),
+        ),
+        ...(piper?.voices ?? []).map((voice) =>
+          withPlain({ voice: { ...voice, engine: 'Piper' as const }, base: './audio', clips: piper!.clips }),
+        ),
       ];
       if (list.length) {
         recorded = list;
@@ -153,7 +165,7 @@ function stopAll(): void {
 export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef): void {
   const ref = voice === undefined ? preferredVoice : voice;
   const rec = lang === 'nl' ? recordedFor(ref) : undefined;
-  const id = rec?.clips[text.trim()];
+  const id = rec?.clips[text.trim()] ?? rec?.plain[plainText(text)];
   if (rec && id) {
     stopAll();
     const audio = new Audio(`${rec.base}/${rec.voice.key}/${id}.mp3`);

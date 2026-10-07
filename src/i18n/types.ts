@@ -22,7 +22,7 @@ export const uiEn = {
   completeChat: 'Complete the conversation',
   meaning: 'Meaning',
   navRoute: 'Lessons',
-  navWords: 'Words and phrases',
+  navWords: 'Help',
   navMe: 'Me',
   rightFirstTime: 'Right the first time',
   newWords: 'New words',

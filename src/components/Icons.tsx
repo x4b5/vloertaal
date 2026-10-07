@@ -154,6 +154,15 @@ export const ListIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** A lifebuoy: the "Hulp" tab (emergency phrases and workplace tips). */
+export const LifebuoyIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <circle cx="12" cy="12" r="8.6" {...stroke} strokeWidth={2.4} />
+    <circle cx="12" cy="12" r="3.6" {...stroke} strokeWidth={2.4} />
+    <path d="M6 6l3.4 3.4M18 6l-3.4 3.4M6 18l3.4-3.4M18 18l-3.4-3.4" {...stroke} strokeWidth={2.4} />
+  </Svg>
+);
+
 /** A worker in a hard hat: the "Ik" tab (settings and you). */
 export const WorkerIcon = (p: IconProps) => (
   <Svg {...p}>

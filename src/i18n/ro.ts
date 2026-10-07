@@ -55,7 +55,7 @@ const lang: HelpLanguage = {
     completeChat: 'Completează conversația',
     meaning: 'Sensul',
     navRoute: 'Lecții',
-    navWords: 'Cuvinte și expresii',
+    navWords: 'Ajutor',
     navMe: 'Eu',
     rightFirstTime: 'Corect din prima încercare',
     newWords: 'Cuvinte noi',

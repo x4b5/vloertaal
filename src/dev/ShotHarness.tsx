@@ -44,7 +44,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     if (shot === 'words') {
       return (
         <>
-          <WordsHub progress={progress} lang={l} onPhrasebook={() => {}} onTips={() => {}} />
+          <WordsHub lang={l} onPhrasebook={() => {}} onTips={() => {}} />
           <BottomNav current="words" onTab={() => {}} />
         </>
       );
