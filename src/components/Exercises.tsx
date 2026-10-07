@@ -391,7 +391,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer }: Props<'chat'>) {
             >
               {prompt.nl}
             </button>
-            {hint && (
+            {hint && !locked && (
               <span className="chat-hint">
                 <Bi text={gloss(prompt.id, prompt.en, lang)} />
               </span>
@@ -411,7 +411,10 @@ export function ChatExercise({ ex, lang, locked, onAnswer }: Props<'chat'>) {
         correctId={reply.id}
         locked={locked}
         onAnswer={onAnswer}
-        onPick={setPicked}
+        onPick={(o) => {
+          setPicked(o);
+          setHint(false);
+        }}
         render={(o) => <span lang="nl" className="choice-nl">{o.nl}</span>}
       />
     </div>

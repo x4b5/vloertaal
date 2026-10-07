@@ -255,7 +255,7 @@ h2 { font-size: 1.25rem; }
 .player { display: flex; flex-direction: column; min-height: 100dvh; }
 .player-top {
   display: flex; align-items: center; gap: 12px;
-  width: 100%; max-width: 1080px; margin: 0 auto; padding: 12px 16px 0;
+  width: 100%; max-width: 1080px; margin: 0 auto; padding: 28px 16px 0;
 }
 .bar { flex: 1; height: 16px; background: var(--bar-track); border-radius: 99px; overflow: hidden; }
 .bar-fill {
@@ -537,9 +537,10 @@ h2 { font-size: 1.25rem; }
 }
 .chat-line[aria-expanded='true'] { text-decoration-color: var(--blue); }
 .chat-hint {
-  position: absolute; z-index: 3; top: calc(100% + 8px); left: 44px;
+  position: absolute; z-index: 3; top: calc(100% + 8px); left: 0;
+  width: max-content; max-width: 100%;
   padding: 10px 14px; border: 2px solid var(--line); border-radius: 14px; background: var(--card);
-  box-shadow: 0 4px 0 var(--line); font-weight: 700; white-space: nowrap; animation: up 0.15s ease-out;
+  box-shadow: 0 4px 0 var(--line); font-weight: 700; animation: up 0.15s ease-out;
 }
 .chat-bubble-me { min-width: 150px; min-height: 64px; padding: 8px 18px; justify-content: center; }
 .chat-bubble-me::before {
