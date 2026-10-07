@@ -447,3 +447,59 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
     </div>
   );
 }
+
+/** "How it works here": one Dutch workplace custom, with the sentence to use. Not graded. */
+export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
+  const { tip } = ex;
+  const talking = useTalking([tip.phrase.nl]);
+  useEffect(() => { onAnswer({ correct: true }); }, [tip, onAnswer]);
+  return (
+    <div className="exercise tip">
+      <div className="tip-badge">
+        <span className="tip-badge-emoji" aria-hidden>{tip.emoji}</span>
+        <span className="tip-badge-nl" lang="nl">Zo werkt het hier</span>
+        <Bi className="tip-badge-en" text={ui('cultureBadge', lang)} />
+      </div>
+      <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
+      <p className="tip-body"><Bi text={gloss(`${tip.id}.b`, tip.body, lang)} /></p>
+      <div className="tip-say">
+        <span className="tip-say-label"><Bi text={ui('sayThis', lang)} /></span>
+        <div className="tip-say-row">
+          <span className="tip-char"><Character who={castFor(tip.id)} talking={talking} size={96} /></span>
+          <div className="speaker-bubble tip-bubble">
+            <SpeakButton glyph text={tip.phrase.nl} label={`Play: ${tip.phrase.nl}`} />
+            <span className="tip-phrase">
+              <span lang="nl" className="tip-phrase-nl">{tip.phrase.nl}</span>
+              <Bi text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** "What do you do?": pick the most usual way to handle a workplace situation. */
+export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props<'situation'>) {
+  const { tip } = ex;
+  const best = tip.options.find((o) => o.best)!;
+  return (
+    <div className="exercise situation">
+      <Prompt text={ui('whatDoYouDo', lang)} />
+      <div className="speaker">
+        <span className="speaker-char"><Character who={castFor(tip.id)} mood={moodFor(verdict, 'thinking', true)} /></span>
+        <div className="speaker-bubble situation-text">
+          <Bi text={gloss(tip.situation.id, tip.situation.en, lang)} />
+        </div>
+      </div>
+      <ChoiceGrid
+        className="choices-rows"
+        options={ex.options}
+        correctId={best.id}
+        locked={locked}
+        onAnswer={onAnswer}
+        render={(o) => <Bi text={gloss(o.id, o.en, lang)} />}
+      />
+    </div>
+  );
+}

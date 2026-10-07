@@ -1016,3 +1016,62 @@ h2 { font-size: 1.25rem; }
 .admin-big { font-size: 3rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
 .admin-bar { margin: 14px 0; }
 .admin code { background: var(--input-bg); padding: 1px 6px; border-radius: 6px; }
+
+/* Logo */
+.wordmark { font-weight: 900; color: var(--blue); letter-spacing: -0.02em; }
+.wordmark-dot { color: var(--orange); }
+.brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.25rem; }
+.brand .logo-mark, .hero-logo .logo-mark { flex: none; border-radius: 22%; }
+.hero-logo { display: inline-flex; align-items: center; gap: 12px; margin: 8px 0 0; }
+.hero-logo .wordmark { font-size: 2.6rem; }
+
+/* "Zo werkt het hier" tip card */
+.tip-badge {
+  display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 8px; margin-bottom: 8px;
+  background: var(--warn-bg); color: var(--warn-ink); border-radius: 999px; font-weight: 900;
+}
+.tip-badge-emoji { font-size: 1.6rem; line-height: 1; }
+.tip-badge-nl { text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; }
+.tip-badge-en { font-size: 0.75rem; font-weight: 700; opacity: 0.85; }
+.tip-badge-en .bi-help { color: inherit; }
+.tip-title { margin-top: 4px; }
+.tip-body { font-size: 1.1rem; line-height: 1.5; margin: 0 0 20px; }
+.tip-body .bi { gap: 8px; }
+.tip-say { border: 2px solid var(--line); border-radius: var(--radius); padding: 14px; background: var(--card); }
+.tip-say-label { display: block; font-weight: 900; color: var(--blue); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; margin-bottom: 8px; }
+.tip-say-label .bi-help { text-transform: none; letter-spacing: 0; }
+.tip-say-row { display: flex; align-items: flex-end; gap: 10px; }
+.tip-char { flex: none; }
+.tip-bubble { display: flex; align-items: center; gap: 10px; }
+.tip-phrase { display: flex; flex-direction: column; gap: 2px; }
+.tip-phrase-nl { font-weight: 900; font-size: 1.2rem; }
+
+/* "What do you do?" situation */
+.situation-text { font-weight: 700; font-size: 1.05rem; line-height: 1.45; }
+.situation .choice { text-align: start; justify-content: flex-start; }
+.situation-why {
+  display: flex; gap: 10px; align-items: flex-start; margin-top: 16px; padding: 12px 14px;
+  border-radius: var(--radius); background: var(--warn-bg); color: var(--ink); line-height: 1.45;
+  animation: up 0.25s ease-out;
+}
+.situation-why > span:first-child { font-size: 1.3rem; }
+
+/* Tips page */
+.tips-banner { background: var(--warn-bg); border-color: #ffe08a; box-shadow: 0 4px 0 #ffe08a; }
+.tips-banner-emoji { font-size: 1.6rem; }
+.tips-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.tips-item { border: 2px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.tips-head {
+  width: 100%; display: flex; align-items: center; gap: 12px; padding: 14px; text-align: start;
+  background: var(--card); border: none; font-weight: 800; min-height: 60px;
+}
+.tips-head .bi { flex: 1; }
+.tips-emoji { font-size: 1.6rem; }
+.tips-item.open .tips-head .icon:last-child { transform: rotate(90deg); }
+.tips-body { padding: 0 14px 14px; line-height: 1.5; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .tips-banner { border-color: #5a4a1a; box-shadow: 0 4px 0 #5a4a1a; } }
+:root[data-theme='dark'] .tips-banner { border-color: #5a4a1a; box-shadow: 0 4px 0 #5a4a1a; }
+.tip-say-row { align-items: center; }
+.tip-char { width: 70px; display: flex; justify-content: center; }
+.tip-bubble { flex: 1; min-width: 0; }
+.feedback-why { max-width: 46ch; line-height: 1.4; }

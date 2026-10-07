@@ -1,4 +1,5 @@
 import { allLessons, allReplies, allWords } from '../content/curriculum';
+import { type CultureTip, tipForLesson } from '../content/culture';
 import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
 import { tokenize } from './answers';
 import { createRng, sample, shuffle } from './random';
@@ -11,11 +12,15 @@ export type Exercise =
   | { kind: 'match'; words: Word[] }
   | { kind: 'build'; sentence: Sentence; tiles: string[] }
   | { kind: 'type'; word: Word }
-  | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[] };
+  | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[] }
+  /** "How it works here": a workplace-culture card (not graded). */
+  | { kind: 'tip'; tip: CultureTip }
+  /** "What do you do?": the tip's situation with shuffled options. */
+  | { kind: 'situation'; tip: CultureTip; options: CultureTip['options'] };
 
 /** Intros only teach; every other exercise is graded. */
 export function isGraded(ex: Exercise): boolean {
-  return ex.kind !== 'intro';
+  return ex.kind !== 'intro' && ex.kind !== 'tip';
 }
 
 function distractors(word: Word, lesson: Lesson, n: number, rng: () => number): Word[] {
@@ -77,6 +82,13 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     for (const word of sample(words, 3, rng)) {
       out.push({ kind: 'meaning', word, options: options(word, lesson, rng) });
     }
+  }
+
+  // Language first, then one workplace custom, right after the new words.
+  const tip = tipForLesson(lesson.id);
+  if (tip) {
+    if (!opts.review) out.push({ kind: 'tip', tip });
+    out.push({ kind: 'situation', tip, options: shuffle(tip.options, rng) });
   }
 
   out.push({ kind: 'match', words: sample(words, Math.min(5, words.length), rng) });

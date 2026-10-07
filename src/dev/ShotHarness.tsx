@@ -1,3 +1,4 @@
+import { tipForLesson } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import { LessonPlayer } from '../components/LessonPlayer';
 import { Result } from '../components/Screens';
@@ -39,6 +40,10 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
   const coffee = findLesson('l.shift')!.lesson.dialogues![0];
   const byeReply = allReplies.find((r) => r.id === 'c.hello.a')!;
   exercises.chat = { kind: 'chat', dialogue: coffee, options: [coffee.reply, byeReply] };
+  // Workplace culture: the speak-up tip and its situation (best option listed first).
+  const speakTip = tipForLesson('l.speakup')!;
+  exercises.tip = { kind: 'tip', tip: speakTip };
+  exercises.situation = { kind: 'situation', tip: speakTip, options: speakTip.options };
   const ex = exercises[shot] ?? exercises.dutch;
   // A few intro exercises in front would move the progress bar; pad so it sits at ~40%.
   const pad: Exercise[] = Array.from({ length: 3 }, () => ex);

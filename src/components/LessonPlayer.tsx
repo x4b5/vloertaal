@@ -16,6 +16,8 @@ import {
   MatchExercise,
   MeaningExercise,
   TypeExercise,
+  SituationExercise,
+  TipCard,
 } from './Exercises';
 
 export interface LessonResult {
@@ -32,7 +34,10 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
     case 'chat':
       return { text: ex.dialogue.reply.nl, nl: true };
     case 'match':
+    case 'tip':
       return { text: '', nl: false };
+    case 'situation':
+      return { text: ex.tip.options.find((o) => o.best)!.en, nl: false };
     default:
       return { text: ex.word.nl, nl: true };
   }
@@ -142,6 +147,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     case 'build': body = <BuildExercise key={key} ex={ex} {...props} />; break;
     case 'type': body = <TypeExercise key={key} ex={ex} {...props} />; break;
     case 'chat': body = <ChatExercise key={key} ex={ex} {...props} />; break;
+    case 'tip': body = <TipCard key={key} ex={ex} {...props} />; break;
+    case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
   }
 
   const sol = solution(ex);
@@ -156,7 +163,15 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       )}
     </div>
   );
-  const autoContinue = ex.kind === 'intro' || ex.kind === 'match';
+  // Situations explain why the usual answer works here.
+  const why = ex.kind === 'situation' ? gloss(ex.tip.why.id, ex.tip.why.en, lang) : null;
+  const whyLine = why && (
+    <div className="feedback-meaning feedback-why">
+      <span className="bi-en">{why.en}</span>
+      {why.help && why.lang && <span className="bi-help" lang={why.lang.code} dir={why.lang.dir}>{why.help}</span>}
+    </div>
+  );
+  const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip';
 
   return (
     <div className="player">
@@ -190,22 +205,24 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
                   <>
                     <span className="sr-only">{ui('incorrect', lang).en}. </span>
                     <div className="feedback-title">
-                      <Bi text={{ ...ui('correctAnswer', lang), en: `${ui('correctAnswer', lang).en}:` }} />
+                      {ex.kind === 'situation'
+                        ? <Bi text={ui('otherChoice', lang)} />
+                        : <Bi text={{ ...ui('correctAnswer', lang), en: `${ui('correctAnswer', lang).en}:` }} />}
                     </div>
                     <div className="feedback-sol feedback-answer" lang={sol.nl ? 'nl' : undefined}>{sol.text}</div>
-                    {meaningLine}
+                    {meaningLine}{whyLine}
                   </>
                 ) : (
                   <>
                     <div className="feedback-title">
-                      <Bi text={ui(answer.correct ? (answer.almost ? 'almost' : 'correct') : 'incorrect', lang)} />
+                      <Bi text={ui(ex.kind === 'situation' && answer.correct ? 'goodChoice' : answer.correct ? (answer.almost ? 'almost' : 'correct') : 'incorrect', lang)} />
                     </div>
                     {answer.almost && sol.text && (
                       <div className="feedback-sol">
                         {ui('correctAnswer', lang).en}: <strong lang={sol.nl ? 'nl' : undefined}>{sol.text}</strong>
                       </div>
                     )}
-                    {meaningLine}
+                    {meaningLine}{whyLine}
                   </>
                 )}
               </div>

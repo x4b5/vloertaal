@@ -1,5 +1,6 @@
 import { Character } from './Characters';
 import { LessonCelebration } from './Celebrate';
+import { cultureTips } from '../content/culture';
 import { findItem, phrasebookIds, units } from '../content/curriculum';
 import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
@@ -8,6 +9,7 @@ import { dutchVoices, setPreferredVoice, speak, speechAvailable } from '../lib/a
 import { isUnlocked } from '../lib/exercises';
 import type { Progress, ThemeChoice } from '../lib/progress';
 import { Bi } from './Bi';
+import { LogoMark, Wordmark } from './Logo';
 import {
   AlertIcon,
   AutoThemeIcon,
@@ -69,7 +71,7 @@ export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void
           <Character who="henk" size={104} />
           <Character who="jada" size={104} />
         </div>
-        <h1>Vloertaal</h1>
+        <h1 className="hero-logo"><LogoMark size={56} /><Wordmark /></h1>
         <p className="tagline">{ui('appTagline').en}</p>
         <p className="tagline-nl" lang="nl">Nederlands voor op de werkvloer</p>
       </div>
@@ -88,7 +90,7 @@ export function TopBar({ streak, xp, lang, onSettings }: {
 }) {
   return (
     <header className="topbar">
-      <span className="brand"><Character who="bram" crop="head" size={32} /> Vloertaal</span>
+      <span className="brand"><LogoMark size={32} /><Wordmark /></span>
       <span className="stat" title={ui('dayStreak').en}><FlameIcon /> {streak}</span>
       <span className="stat" title="XP"><StarIcon /> {xp}</span>
       <button type="button" className="stat stat-btn" onClick={onSettings} aria-label={ui('settings').en}>
@@ -98,11 +100,12 @@ export function TopBar({ streak, xp, lang, onSettings }: {
   );
 }
 
-export function Path({ progress, lang, onStart, onPhrasebook }: {
+export function Path({ progress, lang, onStart, onPhrasebook, onTips }: {
   progress: Progress;
   lang?: HelpLanguage;
   onStart: (lessonId: string, review: boolean) => void;
   onPhrasebook: () => void;
+  onTips: () => void;
 }) {
   let n = 0;
   return (
@@ -110,6 +113,11 @@ export function Path({ progress, lang, onStart, onPhrasebook }: {
       <button type="button" className="phrase-banner" onClick={onPhrasebook}>
         <AlertIcon size={30} />
         <Bi text={ui('phrasebook', lang)} />
+        <ChevronIcon />
+      </button>
+      <button type="button" className="phrase-banner tips-banner" onClick={onTips}>
+        <span className="tips-banner-emoji" aria-hidden>💡</span>
+        <Bi text={ui('cultureTips', lang)} />
         <ChevronIcon />
       </button>
 
@@ -395,6 +403,44 @@ export function Result({ accuracy, xp, lang, onDone }: {
           </div>
         </div>
       </footer>
+    </div>
+  );
+}
+
+/** All "Zo werkt het hier" tips, to read again. Tips of lessons not reached yet stay hidden. */
+export function Tips({ progress, lang, onBack }: { progress: Progress; lang?: HelpLanguage; onBack: () => void }) {
+  const [open, setOpen] = useState<string | null>(null);
+  const visible = cultureTips.filter((t) => isUnlocked(t.lessonId, progress.completed));
+  return (
+    <div className="screen">
+      <div className="screen-head">
+        <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+        <h1><Bi text={ui('cultureTips', lang)} /></h1>
+      </div>
+      <p className="muted"><Bi text={ui('cultureTipsHint', lang)} /></p>
+      <ul className="tips-list">
+        {visible.map((t) => (
+          <li key={t.id} className={`tips-item ${open === t.id ? 'open' : ''}`}>
+            <button type="button" className="tips-head" aria-expanded={open === t.id} onClick={() => setOpen(open === t.id ? null : t.id)}>
+              <span className="tips-emoji" aria-hidden>{t.emoji}</span>
+              <Bi text={gloss(t.id, t.title, lang)} />
+              <ChevronIcon />
+            </button>
+            {open === t.id && (
+              <div className="tips-body">
+                <p><Bi text={gloss(`${t.id}.b`, t.body, lang)} /></p>
+                <div className="phrase">
+                  <SpeakButton text={t.phrase.nl} />
+                  <div className="phrase-text">
+                    <span className="phrase-nl" lang="nl">{t.phrase.nl}</span>
+                    <Bi text={gloss(t.phrase.id, t.phrase.en, lang)} />
+                  </div>
+                </div>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

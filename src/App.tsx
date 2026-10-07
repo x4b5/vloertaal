@@ -6,7 +6,7 @@ import { setPreferredVoice } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
-import { Onboarding, Path, Phrasebook, Result, Settings, TopBar } from './components/Screens';
+import { Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar } from './components/Screens';
 import { Milestone } from './components/Milestone';
 import { completeLesson, currentStreak, emptyProgress, loadProgress, saveProgress, streakWentUp, xpFor } from './lib/progress';
 
@@ -17,6 +17,7 @@ type View =
   | { name: 'result'; accuracy: number; xp: number; streakUp?: number }
   | { name: 'streak'; streak: number }
   | { name: 'phrasebook' }
+  | { name: 'tips' }
   | { name: 'settings' }
   | { name: 'admin' };
 
@@ -77,6 +78,8 @@ export default function App() {
       );
     case 'streak':
       return <Milestone streak={view.streak} lang={lang} onDone={() => setView({ name: 'home' })} />;
+    case 'tips':
+      return <Tips progress={progress} lang={lang} onBack={() => setView({ name: 'home' })} />;
     case 'phrasebook':
       return <Phrasebook lang={lang} onBack={() => setView({ name: 'home' })} />;
     case 'settings':
@@ -109,6 +112,7 @@ export default function App() {
             lang={lang}
             onStart={(lessonId, review) => setView({ name: 'lesson', lessonId, review })}
             onPhrasebook={() => setView({ name: 'phrasebook' })}
+            onTips={() => setView({ name: 'tips' })}
           />
         </>
       );
