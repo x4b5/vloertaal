@@ -784,7 +784,7 @@ export function CastHead({ who, expr = 'joy', squint = false, blink, bold = fals
       <ellipse cx="42" cy="74" rx="5.4" ry="3.6" fill="#ff7b7b" opacity={squint ? 0.6 : blush} />
       <ellipse cx="78" cy="74" rx="5.4" ry="3.6" fill="#ff7b7b" opacity={squint ? 0.6 : blush} />
       {bold ? (
-        <BoldEyes who={who} blink={blink ?? look.blink} gaze={gaze} brow={look.brow} />
+        <BoldEyes blink={blink ?? look.blink} gaze={gaze} brow={look.brow} />
       ) : squint ? (
         <path
           d="M43 66Q50 56 57 65M63 65Q70 56 77 66"
@@ -818,7 +818,7 @@ const BOLD_FRONT: Partial<Record<CharacterId, React.ReactNode>> = {
 };
 
 /** Oversized eyes: big whites, huge pupils with a catch-light, thick brows arched high. */
-function BoldEyes({ who, blink, gaze, brow }: { who: CharacterId; blink: number; gaze: [number, number]; brow: string }) {
+function BoldEyes({ blink, gaze, brow }: { blink: number; gaze: [number, number]; brow: string }) {
   const cy = 62;
   const [gx, gy] = gaze;
   const eye = (cx: number, tilt: number) => (

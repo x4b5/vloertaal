@@ -127,19 +127,16 @@ const place = ([x, y]: V, tilt: number, [px, py]: V): V => {
   const s = Math.sin(tilt * RAD);
   return [px + x * c - y * s, py + x * s + y * c];
 };
-const polyline = (pts: V[]) => 'M' + pts.map(([x, y]) => `${r1(x)} ${r1(y)}`).join('L');
 const origin = ([x, y]: V): CSSProperties => ({ transformOrigin: `${r1(x)}px ${r1(y)}px` });
 
 interface Outfit {
   skin: string;
   shade: string;
   sleeve: string;
-  cuff: string;
   /** Short sleeves: the forearm is bare. */
   bare?: boolean;
   leg: string;
   shoe: string;
-  sole: string;
   /** Upper arm, forearm, thickness. */
   arm: [number, number, number];
   /** Thigh, shin, thickness. */
@@ -151,75 +148,64 @@ interface Outfit {
   hand: number;
   torsoPath: string;
   torso: ReactNode;
-  pelvis: ReactNode;
 }
+
+/* Mascot proportions: a big head (about 45% of the standing height), a short bean of a body and
+ * thick, rounded tube limbs. Flat colour blocks only, no seams, stripes or pockets. */
+const BRAM_BEAN = 'M-20 8C-24 -6 -24 -24 -18 -33Q-12 -40 0 -40Q12 -40 18 -33C24 -24 24 -6 20 8Q0 15 -20 8Z';
+const JADA_BEAN = 'M-16 8C-19 -6 -19 -22 -15 -30Q-10 -36 0 -36Q10 -36 15 -30C19 -22 19 -6 16 8Q0 13 -16 8Z';
 
 const OUTFITS: Partial<Record<CharacterId, Outfit>> = {
   bram: {
     skin: '#f7c49b',
     shade: '#e2a376',
     sleeve: '#1a86d8',
-    cuff: '#126bb0',
     leg: '#2d4f78',
     shoe: '#8a5a2b',
-    sole: '#4a2f17',
-    arm: [23, 21, 12],
-    legs: [25, 24, 15],
-    shoulder: [17, -43],
-    hip: [8, -1],
-    neck: -49,
-    headScale: 0.84,
-    hand: 1.45,
-    torsoPath: 'M-15 4C-17 -14 -22 -31 -20 -41Q-18 -51 0 -51Q18 -51 20 -41C22 -31 17 -14 15 4Q0 9 -15 4Z',
+    arm: [16, 15, 16],
+    legs: [17, 16, 19],
+    shoulder: [17, -30],
+    hip: [9, 2],
+    neck: -36,
+    headScale: 0.82,
+    hand: 1.55,
+    torsoPath: BRAM_BEAN,
     torso: (
       <>
-        <path d="M-15 4C-17 -14 -22 -31 -20 -41Q-18 -51 0 -51Q18 -51 20 -41C22 -31 17 -14 15 4Q0 9 -15 4Z" fill="#ff7a00" />
-        {/* Blue work shirt in the V of the hi-vis vest */}
-        <path d="M-9 -52L0 -34L9 -52Z" fill="#1a86d8" />
-        <path d="M-8 -51L0 -42L-3 -38ZM8 -51L0 -42L3 -38Z" fill="#5fb8f5" />
-        {/* Reflective stripes */}
-        <rect x="-30" y="-17" width="60" height="6" fill="#eef5f7" />
-        <rect x="-30" y="-11" width="60" height="1.6" fill="#b9c7cc" />
-        <path d="M-11 -47V-17M11 -47V-17" stroke="#eef5f7" strokeWidth="4.6" />
-        <path d="M0 -34V10" stroke="#d96500" strokeWidth="2" />
-        <rect x="4" y="-31" width="10" height="8" rx="2" fill="#e86e00" />
-        <rect x="5" y="-33" width="8" height="2.4" rx="1.2" fill="#2b2b2b" />
-        <ellipse cx="26" cy="-20" rx="16" ry="40" fill="#000" opacity=".1" />
+        <path d={BRAM_BEAN} fill="#1a86d8" />
+        {/* The hi-vis vest as two big flat panels over the blue shirt */}
+        <path d="M-26 14V-30Q-20 -40 -9 -40L2 -16V14Z" fill="#ff7a00" />
+        <path d="M26 14V-30Q20 -40 9 -40L-2 -16V14Z" fill="#ff7a00" />
+        <path d="M-26 0H26V16H-26Z" fill="#2d4f78" />
+        <ellipse cx="24" cy="-12" rx="12" ry="30" fill="#000" opacity=".12" />
       </>
     ),
-    pelvis: <rect x="-16" y="-4" width="32" height="13" rx="6.5" fill="#2d4f78" />,
   },
   jada: {
     skin: '#8d5536',
     shade: '#6e3f25',
     sleeve: '#ffc929',
-    cuff: '#e0a800',
     bare: true,
     leg: '#1cb0f6',
     shoe: '#ff4b4b',
-    sole: '#f4f7f9',
-    arm: [18, 17, 9.5],
-    legs: [20, 20, 12],
-    shoulder: [13, -37],
-    hip: [6.5, -1],
-    neck: -42,
+    arm: [13, 13, 13],
+    legs: [14, 14, 16],
+    shoulder: [14, -27],
+    hip: [7, 2],
+    neck: -32,
     headScale: 0.7,
-    hand: 1.2,
-    torsoPath: 'M-12 4C-14 -12 -17 -28 -16 -36Q-14 -44 0 -44Q14 -44 16 -36C17 -28 14 -12 12 4Q0 8 -12 4Z',
+    hand: 1.3,
+    torsoPath: JADA_BEAN,
     torso: (
       <>
-        <path d="M-12 4C-14 -12 -17 -28 -16 -36Q-14 -44 0 -44Q14 -44 16 -36C17 -28 14 -12 12 4Q0 8 -12 4Z" fill="#ffc929" />
-        {/* Blue dungarees: bib, straps, gold buttons, a pocket */}
-        <path d="M-11 -22H11V12H-11Z" fill="#1cb0f6" />
-        <path d="M-12 -42L-9 -23M12 -42L9 -23" stroke="#1cb0f6" strokeWidth="4.4" strokeLinecap="round" />
-        <circle cx="-9" cy="-22" r="2.2" fill="#ffc800" />
-        <circle cx="9" cy="-22" r="2.2" fill="#ffc800" />
-        <rect x="-5" y="-17" width="10" height="7" rx="1.6" fill="#1899d6" />
-        <path d="M-6 -43Q0 -38 6 -43" fill="none" stroke="#e0a800" strokeWidth="2" strokeLinecap="round" />
-        <ellipse cx="22" cy="-18" rx="13" ry="34" fill="#000" opacity=".1" />
+        <path d={JADA_BEAN} fill="#ffc929" />
+        {/* Blue dungarees: one bib-and-trousers shape with two broad straps */}
+        <path d="M-12 -14H12V16H-12Z" fill="#1cb0f6" />
+        <path d="M-20 0H20V16H-20Z" fill="#1cb0f6" />
+        <path d="M-12 -34L-10 -14M12 -34L10 -14" stroke="#1cb0f6" strokeWidth="6" strokeLinecap="round" />
+        <ellipse cx="20" cy="-10" rx="10" ry="28" fill="#000" opacity=".12" />
       </>
     ),
-    pelvis: <rect x="-13" y="-4" width="26" height="11" rx="5.5" fill="#1cb0f6" />,
   },
 };
 
@@ -230,6 +216,8 @@ interface ActionPose {
   /** Torso tilt along the line of action, and the head's extra tilt on top of it. */
   tilt: number;
   head: number;
+  /** Where the big pupils look. */
+  gaze?: [number, number];
   /** Viewer's left / right limbs. */
   armL: ArmSpec;
   armR: ArmSpec;
@@ -240,6 +228,12 @@ interface ActionPose {
   /** Limbs drawn behind the torso (the far side). */
   behind: Array<'armL' | 'armR' | 'legL' | 'legR'>;
 }
+
+/** A soft rubber-hose tube from a through b (the joint) to c: one curve, round caps. */
+const tube = (a: V, b: V, c: V) => {
+  const k: V = [2 * b[0] - (a[0] + c[0]) / 2, 2 * b[1] - (a[1] + c[1]) / 2];
+  return `M${r1(a[0])} ${r1(a[1])}Q${r1(k[0])} ${r1(k[1])} ${r1(c[0])} ${r1(c[1])}`;
+};
 
 function Arm({ o, pose, side, cls }: { o: Outfit; pose: ActionPose; side: 'L' | 'R'; cls: string }) {
   const spec = side === 'L' ? pose.armL : pose.armR;
@@ -252,14 +246,11 @@ function Arm({ o, pose, side, cls }: { o: Outfit; pose: ActionPose; side: 'L' | 
     <g className={`fig-arm ${cls}`} style={origin(S)}>
       {o.bare ? (
         <>
-          <path d={polyline([S, E, W])} fill="none" stroke={o.skin} strokeWidth={w * 0.82} strokeLinecap="round" strokeLinejoin="round" />
-          <path d={polyline([S, go(S, U * 0.55, spec.a)])} fill="none" stroke={o.sleeve} strokeWidth={w * 1.25} strokeLinecap="round" />
+          <path d={tube(S, E, W)} fill="none" stroke={o.skin} strokeWidth={w} strokeLinecap="round" />
+          <path d={`M${r1(S[0])} ${r1(S[1])}L${r1(go(S, U * 0.45, spec.a)[0])} ${r1(go(S, U * 0.45, spec.a)[1])}`} stroke={o.sleeve} strokeWidth={w * 1.3} strokeLinecap="round" />
         </>
       ) : (
-        <>
-          <path d={polyline([S, E, W])} fill="none" stroke={o.sleeve} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" />
-          <path d={polyline([go(W, -5, spec.e), go(W, -1, spec.e)])} stroke={o.cuff} strokeWidth={w + 1} strokeLinecap="round" />
-        </>
+        <path d={tube(S, E, W)} fill="none" stroke={o.sleeve} strokeWidth={w} strokeLinecap="round" />
       )}
       <g className="fig-hand" style={origin(W)}>
         <g transform={`translate(${r1(W[0])} ${r1(W[1])}) rotate(${spec.e}) scale(${o.hand} ${k})`}>
@@ -279,22 +270,20 @@ function Leg({ o, pose, side, cls }: { o: Outfit; pose: ActionPose; side: 'L' | 
   const f = w / 15;
   return (
     <g className={`fig-leg ${cls}`} style={origin(H)}>
-      <path d={polyline([H, K, A])} fill="none" stroke={o.leg} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" />
-      {/* Shoe: sole along the shin's direction, toes towards `facing`. */}
+      <path d={tube(H, K, A)} fill="none" stroke={o.leg} strokeWidth={w} strokeLinecap="round" />
+      {/* A chunky round boot, one flat shape, toes towards `facing`. */}
       <g transform={`translate(${r1(A[0])} ${r1(A[1])}) rotate(${r1(spec.s - 90)}) scale(${pose.facing * f} ${f})`}>
-        <path d="M-8 -5Q-8 -10 -2 -10H3Q7 -10 8 -5L9 -3Q18 -3 19 3V6H-8Z" fill={o.shoe} />
-        <rect x="-9" y="4" width="29" height="5.4" rx="2.7" fill={o.sole} />
+        <path d="M-10 -2Q-10 -9 -2 -9H3Q9 -9 10 -3Q21 -3 21 5Q21 10 15 10H-6Q-11 10 -11 4Z" fill={o.shoe} />
       </g>
     </g>
   );
 }
 
-/** One cast member in an action pose. Classes let CSS move the parts (fig-armL, fig-head...). */
-function Figure({ who, pose, expr, squint, blink }: {
+/** One cast member in an action pose, mascot-style. Classes let CSS move the parts. */
+function Figure({ who, pose, expr, blink }: {
   who: CharacterId;
   pose: ActionPose;
   expr: Expr;
-  squint?: boolean;
   blink?: number;
 }) {
   const o = OUTFITS[who]!;
@@ -315,14 +304,15 @@ function Figure({ who, pose, expr, squint, blink }: {
         </clipPath>
       </defs>
       {names.filter((n) => pose.behind.includes(n)).map((n) => parts[n])}
-      <g transform={`translate(${r1(pose.pelvis[0])} ${r1(pose.pelvis[1])}) rotate(${pose.tilt})`}>
-        {o.pelvis}
-        <g clipPath={`url(#${clip})`}>{o.torso}</g>
-      </g>
       {names.filter((n) => n.startsWith('leg') && !pose.behind.includes(n)).map((n) => parts[n])}
+      <g className="fig-body" style={origin(pose.pelvis)}>
+        <g transform={`translate(${r1(pose.pelvis[0])} ${r1(pose.pelvis[1])}) rotate(${pose.tilt})`}>
+          <g clipPath={`url(#${clip})`}>{o.torso}</g>
+        </g>
+      </g>
       <g className="fig-head" style={origin(N)}>
         <g transform={`translate(${r1(N[0])} ${r1(N[1])}) rotate(${pose.tilt + pose.head}) scale(${o.headScale}) translate(-60 -90)`}>
-          <CastHead who={who} expr={expr} squint={squint} blink={blink} />
+          <CastHead who={who} expr={expr} blink={blink} bold gaze={pose.gaze} />
         </g>
       </g>
       {names.filter((n) => n.startsWith('arm') && !pose.behind.includes(n)).map((n) => parts[n])}
@@ -404,7 +394,7 @@ export function LessonCelebration({ className }: { className?: string }) {
         </g>
         <g className="lv-bram">
           <g className="lv-idle">
-            <Figure who="bram" pose={BRAM_LEAP} expr="joy" squint blink={3.2} />
+            <Figure who="bram" pose={BRAM_LEAP} expr="joy" blink={3.2} />
           </g>
         </g>
       </svg>
