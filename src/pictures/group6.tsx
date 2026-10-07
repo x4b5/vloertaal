@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Box, Bubble, Bust, Clock, Cross, CurveArrow, Dots, ExclaimMark, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Box, Bubble, Bust, Clock, Cross, CurveArrow, Dots, ExclaimMark, Ground, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 
 /** Word pictures, group 6 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
@@ -165,32 +165,36 @@ export default {
   // an arrow shows it fits, sparkles where it clicks in
   'w.lukken': () => (
     <g>
-      {/* Board: depth edge, three pieces in place, one empty spot */}
-      <rect x="10" y="22" width="68" height="68" rx="7" fill={PAL.paperShade} transform="translate(0 4)" />
-      <rect x="10" y="22" width="68" height="68" rx="7" fill={PAL.mist} />
-      <rect x="44" y="56" width="32" height="32" rx="3" fill={PAL.steel} opacity=".55" />
-      <rect x="12" y="24" width="32" height="32" rx="4" fill={PAL.yellow} />
-      <circle cx="44" cy="40" r="6" fill={PAL.yellow} />
-      <rect x="44" y="24" width="32" height="32" rx="4" fill={PAL.sky} />
-      <circle cx="60" cy="56" r="6" fill={PAL.sky} />
-      <rect x="12" y="56" width="32" height="32" rx="4" fill={PAL.green} />
-      <circle cx="28" cy="56" r="6" fill={PAL.green} />
-      <circle cx="44" cy="72" r="6" fill={PAL.green} />
-      <Shine d="M17 36V29H24" width={3} color={PAL.yellowShine} opacity={0.9} />
-      {/* The last piece, in Jada's hand */}
-      <Hand pose="hold" x={98} y={116} rotate={-12} scale={0.8} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
-      <g transform="rotate(-12 94 84)">
-        <mask id="g6-lukken-piece" style={{ maskType: 'alpha' }}>
-          <rect x="78" y="68" width="32" height="32" rx="4" fill="#fff" />
-          <circle cx="94" cy="68" r="6.6" fill="#000" />
-          <circle cx="78" cy="84" r="6.6" fill="#000" />
-        </mask>
-        <rect x="78" y="68" width="32" height="32" rx="4" fill={PAL.orange} mask="url(#g6-lukken-piece)" />
-        <path d="M104 74V96" stroke={PAL.orangeShade} strokeWidth="5" strokeLinecap="round" opacity=".6" />
+      <g transform="translate(8 18) scale(0.88)">
+        {/* Board: depth edge, three pieces in place, one empty spot */}
+        <rect x="10" y="22" width="68" height="68" rx="7" fill={PAL.paperShade} transform="translate(0 4)" />
+        <rect x="10" y="22" width="68" height="68" rx="7" fill={PAL.mist} />
+        <rect x="44" y="56" width="32" height="32" rx="3" fill={PAL.steel} opacity=".55" />
+        <rect x="12" y="24" width="32" height="32" rx="4" fill={PAL.yellow} />
+        <circle cx="44" cy="40" r="6" fill={PAL.yellow} />
+        <rect x="44" y="24" width="32" height="32" rx="4" fill={PAL.sky} />
+        <circle cx="60" cy="56" r="6" fill={PAL.sky} />
+        <rect x="12" y="56" width="32" height="32" rx="4" fill={PAL.green} />
+        <circle cx="28" cy="56" r="6" fill={PAL.green} />
+        <circle cx="44" cy="72" r="6" fill={PAL.green} />
+        <Shine d="M17 36V29H24" width={3} color={PAL.yellowShine} opacity={0.9} />
+        {/* The last piece, on its way into the empty spot */}
+        <g transform="rotate(14 96 10)">
+          <mask id="g6-lukken-piece">
+            <rect x="80" y="-6" width="32" height="36" rx="4" fill="#fff" />
+            <circle cx="96" cy="-6" r="6.6" fill="#000" />
+            <circle cx="80" cy="10" r="6.6" fill="#000" />
+          </mask>
+          <g mask="url(#g6-lukken-piece)">
+            <rect x="80" y="-2" width="32" height="32" rx="4" fill={PAL.orangeShade} />
+            <rect x="80" y="-6" width="32" height="32" rx="4" fill={PAL.orange} />
+            <path d="M105 0V20" stroke={PAL.orangeShade} strokeWidth="5" strokeLinecap="round" opacity=".5" />
+          </g>
+        </g>
+        <CurveArrow from={[100, 38]} to={[72, 62]} bend={-12} color={PAL.sky} width={6} head={11} />
       </g>
-      <CurveArrow from={[100, 56]} to={[70, 44]} bend={10} color={PAL.orange} width={5} head={9} />
-      <Sparkle x={100} y={24} r={8} />
-      <Sparkle x={86} y={14} r={4.5} color={PAL.ok} />
+      <Sparkle x={104} y={70} r={8} />
+      <Sparkle x={18} y={22} r={5.5} color={PAL.ok} />
     </g>
   ),
 
@@ -228,9 +232,9 @@ export default {
             <rect key={`${i}-${y}`} x={cx(i) - 5} y={y - 8} width="10" height="16" rx="3" fill={i < 5 ? PAL.mist : PAL.yellowLight} />
           )),
         )}
-        {/* Saturday: filled and ringed */}
-        <rect x={cx(5) - 5} y="44" width="10" height="16" rx="3" fill={PAL.red} />
-        <ellipse cx={cx(5)} cy="52" rx="11" ry="14" fill="none" stroke={PAL.red} strokeWidth="3.6" />
+        {/* Saturday: a big red ring round the sixth day */}
+        <rect x={cx(5) - 5} y="44" width="10" height="16" rx="3" fill={PAL.orange} />
+        <circle cx={cx(5)} cy="52" r="12.5" fill="none" stroke={PAL.red} strokeWidth="4" />
         <Shine d="M14 30Q16 27 20 27" width={2.6} opacity={0.5} />
       </g>
     );

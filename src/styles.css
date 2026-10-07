@@ -1091,3 +1091,7 @@ h2 { font-size: 1.25rem; }
 .pics-nl { font-weight: 800; }
 .pics-id { font-size: 0.75rem; color: var(--muted); font-family: ui-monospace, monospace; }
 .pics-missing { opacity: 0.55; }
+/* Drawn word pictures scale with their slot */
+svg.pic-emoji { width: min(110px, 72%); height: auto; aspect-ratio: 1; }
+svg.emoji-xl { width: 140px; height: 140px; }
+svg.unit-pic { width: 64px; height: 64px; filter: drop-shadow(0 2px 0 rgba(0,0,0,.12)); }

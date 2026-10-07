@@ -11,6 +11,7 @@ import { isUnlocked } from '../lib/exercises';
 import type { Progress, ThemeChoice } from '../lib/progress';
 import { Bi } from './Bi';
 import { LogoMark, Wordmark } from './Logo';
+import { unitPictures } from '../pictures';
 import {
   AlertIcon,
   AutoThemeIcon,
@@ -129,7 +130,11 @@ export function Path({ progress, lang, onStart, onPhrasebook, onTips }: {
               <div className="unit-num">Unit {u + 1} · <span lang="nl">{unit.titleNl}</span></div>
               <h2><Bi text={gloss(unit.id, unit.title, lang)} /></h2>
             </div>
-            <span className="unit-emoji" aria-hidden>{unit.emoji}</span>
+            {unitPictures[unit.id] ? (
+              <svg className="unit-emoji unit-pic" viewBox="0 0 120 120" width={64} height={64} aria-hidden focusable="false">{unitPictures[unit.id]()}</svg>
+            ) : (
+              <span className="unit-emoji" aria-hidden>{unit.emoji}</span>
+            )}
           </div>
           <ol className="nodes">
             {unit.lessons.map((lesson) => {

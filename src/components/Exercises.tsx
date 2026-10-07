@@ -9,6 +9,7 @@ import { shuffle } from '../lib/random';
 import { Bi } from './Bi';
 import { castFor, Character, type CharacterId, type Mood, useTalking } from './Characters';
 import { voiceFor } from '../lib/voices';
+import { WordPicture } from '../pictures';
 import { SpeakButton } from './SpeakButton';
 
 export interface Answer {
@@ -62,7 +63,7 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
     <div className="exercise">
       <Prompt text={ui('newWord', lang)} />
       <div className="card intro-card">
-        <div className="emoji-xl" aria-hidden>{word.emoji}</div>
+        <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />
         <div className="intro-nl">
           <span lang="nl">{word.nl}</span>
           <SpeakButton text={word.nl} />
@@ -194,7 +195,7 @@ export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
         onPick={(w) => speak(w.nl)}
         render={(w) => (
           <>
-            <span className="pic-emoji" aria-hidden>{w.emoji}</span>
+            <WordPicture className="pic-emoji" id={w.id} emoji={w.emoji} size={110} />
             <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{w.nl}</span>
           </>
         )}
@@ -286,7 +287,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
               disabled={done.has(w.id)}
               onClick={() => setRightPick(w.id)}
             >
-              <span className="choice-emoji" aria-hidden>{w.emoji}</span>
+              <WordPicture className="choice-emoji" id={w.id} emoji={w.emoji} size={44} />
               <Bi text={gloss(w.id, w.en, lang)} />
             </button>
           ))}
