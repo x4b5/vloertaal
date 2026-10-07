@@ -26,11 +26,11 @@ interface Props<K extends Exercise['kind']> {
   verdict?: 'right' | 'wrong';
 }
 
-/** How a character in an exercise feels: reacts to the verdict, otherwise talks or idles. */
-function moodFor(verdict: Props<'meaning'>['verdict'], talking: boolean): Mood {
-  if (verdict === 'right') return 'happy';
+/** How a character in an exercise feels about the verdict; `calm` is the reaction without a hop. */
+function moodFor(verdict: Props<'meaning'>['verdict'], rest: Mood = 'idle', calm = false): Mood {
+  if (verdict === 'right') return calm ? 'pleased' : 'happy';
   if (verdict === 'wrong') return 'sad';
-  return talking ? 'talking' : 'idle';
+  return rest;
 }
 
 /** A colleague saying something in a speech bubble (meaning and sentence-building exercises). */
@@ -38,7 +38,7 @@ function Speaker({ who, lines, verdict }: { who: CharacterId; lines: string[]; v
   const talking = useTalking(lines);
   return (
     <span className="speaker-char">
-      <Character who={who} mood={moodFor(verdict, talking)} />
+      <Character who={who} mood={moodFor(verdict)} talking={talking} />
     </span>
   );
 }
@@ -396,14 +396,17 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
   // The colleague asks; "you" are Amina. The colleague talks while the line plays.
   const them = castFor(prompt.id, ['bram', 'henk', 'jada']);
   const themTalking = useTalking([prompt.nl]);
-  // "You" talk while your picked reply is read out (after a right answer).
-  const meTalking = useTalking(picked ? [picked.nl] : [], false);
+  // After a right answer it's your turn: "you" say the reply (and talk while it is read out),
+  // while the colleague listens. Before that you listen, then think about your answer.
+  const replyTurn = verdict === 'right' && picked ? [picked.nl] : [];
+  const meTalking = useTalking(replyTurn, replyTurn.length > 0);
+  const meRest: Mood = picked || themTalking ? 'idle' : 'thinking';
   return (
     <div className="exercise">
       <Prompt text={ui('completeChat', lang)} />
       <div className="chat">
         <div className="chat-row chat-them">
-          <span className="chat-char"><Character who={them} mood={moodFor(verdict, themTalking)} /></span>
+          <span className="chat-char"><Character who={them} mood={moodFor(verdict, 'idle', true)} talking={themTalking} /></span>
           <div className="chat-bubble">
             <SpeakButton glyph text={prompt.nl} label={`Play: ${prompt.nl}`} />
             <button
@@ -426,7 +429,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
           <div className={`chat-bubble chat-bubble-me ${mine}`} aria-live="polite">
             {picked ? <span className="chat-line" lang="nl">{picked.nl}</span> : <span className="chat-blank" aria-hidden />}
           </div>
-          <span className="chat-char"><Character who="amina" flip mood={moodFor(verdict, meTalking)} /></span>
+          <span className="chat-char"><Character who="amina" flip mood={moodFor(verdict, meRest)} talking={meTalking} /></span>
         </div>
       </div>
       <ChoiceGrid

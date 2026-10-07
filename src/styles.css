@@ -472,7 +472,8 @@ h2 { font-size: 1.25rem; }
 #root:has(.result-screen) { max-width: none; }
 .result { align-items: center; justify-content: center; text-align: center; gap: 6px; padding-top: 24px; }
 .result .bi { align-items: center; }
-.celebration { width: min(300px, 78vw); height: auto; overflow: visible; margin-bottom: 4px; }
+/* Room above the art, so the hop never brings the hard hat near the top bar or heading. */
+.celebration { width: min(300px, 78vw); height: auto; overflow: visible; margin: 20px 0 10px; }
 .cel-worker { transform-origin: 140px 210px; animation: cel-jump 1s cubic-bezier(0.3, 1.5, 0.6, 1) both, cel-hop 1.6s 1s ease-in-out infinite; }
 .cel-shadow { transform-origin: 140px 216px; animation: cel-shadow 1.6s 1s ease-in-out infinite; }
 .cel-burst { transform-box: fill-box; transform-origin: center; animation: cel-burst 1.4s ease-out both; }
@@ -480,7 +481,7 @@ h2 { font-size: 1.25rem; }
 .cel-twinkle { transform-box: fill-box; transform-origin: center; animation: cel-twinkle 1.8s ease-in-out infinite; }
 .cel-t2 { animation-delay: 0.4s; } .cel-t3 { animation-delay: 0.8s; } .cel-t4 { animation-delay: 1.2s; }
 @keyframes cel-jump { from { transform: scale(0.3) translateY(40px); opacity: 0; } }
-@keyframes cel-hop { 50% { transform: translateY(-8px); } }
+@keyframes cel-hop { 50% { transform: translateY(-4px); } }
 @keyframes cel-shadow { 50% { transform: scaleX(0.85); opacity: 0.7; } }
 @keyframes cel-burst { 0% { transform: scale(0.2); opacity: 0; } 40% { opacity: 1; } }
 @keyframes cel-twinkle { 50% { transform: scale(0.55) rotate(20deg); opacity: 0.6; } }
@@ -670,18 +671,23 @@ h2 { font-size: 1.25rem; }
 /* Blink early in the cycle (so it shows soon after an exercise appears), then every --blink seconds. */
 @keyframes ch-blink { 0%, 10%, 15%, 100% { transform: scaleY(1); } 12.5% { transform: scaleY(0.08); } }
 
-.ch-talking .ch-mouth-rest { display: none; }
-.ch-mouth-talk { transform-box: fill-box; transform-origin: 50% 0; animation: ch-talk 0.18s ease-in-out infinite alternate; }
-.ch-talking .ch-head { animation: ch-nod 0.36s ease-in-out infinite alternate; }
+.ch-pulse { transform-box: view-box; transform-origin: 60px 134px; }
+/* Talking: the mouth shapes are switched by Characters.tsx (~105 ms each); the head tilts
+   towards the listener and the body gives a small pulse on the beat. */
+.ch-talking .ch-head { animation: ch-nod 0.42s ease-in-out infinite alternate; }
+.ch-talking .ch-pulse { animation: ch-pulse 0.21s ease-in-out infinite alternate; }
 .ch-arm-gesture { transform-box: view-box; transform-origin: 90px 104px; animation: ch-gesture 0.96s ease-in-out infinite alternate; }
-@keyframes ch-talk { from { transform: scale(0.8, 0.12); } to { transform: scale(1.05, 1.1); } }
-@keyframes ch-nod { from { transform: translateY(-1px) rotate(-2.5deg); } to { transform: translateY(1.5px) rotate(2deg); } }
+@keyframes ch-pulse { to { transform: scale(1.018, 0.986); } }
+@keyframes ch-nod { from { transform: translateY(-0.5px) rotate(1deg); } to { transform: translateY(1.5px) rotate(5deg); } }
 @keyframes ch-gesture { to { transform: rotate(-8deg); } }
 
 /* One-shot gestures hand over to the idle loop when they end. */
-.ch-happy .ch-fig { animation: ch-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) 2, ch-breathe 2.6s 1.24s ease-in-out infinite; }
-.ch-happy .ch-shadow { animation: ch-shadow-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) 2, ch-shadow-breathe 2.6s 1.24s ease-in-out infinite; }
-.ch-happy .ch-arm-wave, .ch-wave .ch-arm-wave { transform-box: view-box; transform-origin: 90px 102px; animation: ch-wave 0.36s ease-in-out infinite alternate; }
+.ch-happy .ch-fig { animation: ch-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1), ch-breathe 2.6s 0.62s ease-in-out infinite; }
+.ch-happy .ch-shadow { animation: ch-shadow-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1), ch-shadow-breathe 2.6s 0.62s ease-in-out infinite; }
+.ch-happy .ch-arm-wave, .ch-wave .ch-arm-wave { transform-box: view-box; transform-origin: 90px 102px; animation: ch-wave 0.36s ease-in-out 4 alternate; }
+/* Thinking: a slow, small head tilt. */
+.ch-thinking .ch-head { animation: ch-ponder 3.2s ease-in-out infinite; }
+@keyframes ch-ponder { 0%, 100% { transform: rotate(-3deg); } 50% { transform: translateY(-1px) rotate(-5deg); } }
 .ch-cheer .ch-fig { animation: ch-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) infinite; }
 .ch-cheer .ch-shadow { animation: ch-shadow-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) infinite; }
 .ch-wave .ch-arm-wave { animation-duration: 0.5s; animation-iteration-count: 6; }

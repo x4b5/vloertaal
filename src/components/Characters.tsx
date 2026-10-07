@@ -323,6 +323,7 @@ function useTalkFrame(on: boolean): TalkFrame | null {
   useEffect(() => {
     if (!on) return;
     setI(0);
+    if (prefersReducedMotion()) return; // a still, open mouth
     const t = window.setInterval(() => setI((n) => (n + 1) % TALK_SEQUENCE.length), TALK_STEP_MS);
     return () => window.clearInterval(t);
   }, [on]);
