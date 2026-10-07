@@ -362,7 +362,7 @@ const BRAM_LEAP: ActionPose = {
 
 /** Jada springs up off a pallet to meet him, one foot flicked up behind her. */
 const JADA_SPRING: ActionPose = {
-  pelvis: [84, 160],
+  pelvis: [84, 164],
   tilt: 18,
   head: -8,
   armL: { a: 150, e: 118, hand: 'fist', flip: true },
@@ -427,8 +427,8 @@ const STREAK_CONFETTI: Piece[] = [
 const BRAM_HUG: ActionPose = {
   pelvis: [142, 140],
   tilt: -18,
-  head: -10,
-  armL: { a: 168, e: 112, hand: 'open', flip: true },
+  head: -14,
+  armL: { a: 176, e: 122, hand: 'open', flip: true },
   armR: { a: -34, e: -8, hand: 'thumb' },
   legL: { t: 100, s: 92 },
   legR: { t: 52, s: -12 },
