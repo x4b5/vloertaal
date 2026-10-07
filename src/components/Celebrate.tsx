@@ -382,7 +382,7 @@ export function LessonCelebration({ className }: { className?: string }) {
           {/* A wooden crate Jada springs off */}
           <rect x="80" y="210" width="62" height="36" rx="6" fill="#c98a4b" />
           <rect x="80" y="210" width="62" height="9" rx="4.5" fill="#e0a86b" />
-          <rect x="128" y="219" width="14" height="27" rx="0" fill="#a86d3a" opacity=".5" />
+          <path d="M128 219H142V240Q142 246 136 246H128Z" fill="#a86d3a" opacity=".5" />
         </g>
         {/* The clap where their hands meet, behind the hands */}
         <g className="lv-clap">
