@@ -3,7 +3,7 @@ import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
-import { findItem, learnedWords, phrasebookIds, units } from '../content/curriculum';
+import { findItem, phrasebookIds, units } from '../content/curriculum';
 import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useState } from 'react';
@@ -26,7 +26,7 @@ import {
   ChevronIcon,
   CrownIcon,
   GlobeIcon,
-  ListIcon,
+  LifebuoyIcon,
   LockIcon,
   RouteIcon,
   WorkerIcon,
@@ -132,11 +132,11 @@ export type Tab = 'route' | 'words' | 'me';
 
 const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'navMe'; Icon: typeof RouteIcon }[] = [
   { tab: 'route', nl: 'Route', key: 'navRoute', Icon: RouteIcon },
-  { tab: 'words', nl: 'Woorden', key: 'navWords', Icon: ListIcon },
+  { tab: 'words', nl: 'Hulp', key: 'navWords', Icon: LifebuoyIcon },
   { tab: 'me', nl: 'Ik', key: 'navMe', Icon: WorkerIcon },
 ];
 
-/** Bottom bar on the three home-level screens: Route (lessons), Woorden, Ik. The label is
+/** Bottom bar on the three home-level screens: Route (lessons), Hulp, Ik. The label is
  *  Dutch (short, part of learning the work floor); screen readers also hear the English. */
 export function BottomNav({ current, onTab }: { current: Tab; onTab: (tab: Tab) => void }) {
   return (
@@ -158,23 +158,17 @@ export function BottomNav({ current, onTab }: { current: Tab; onTab: (tab: Tab) 
   );
 }
 
-/** "Woorden" tab: the emergency phrases and the workplace tips, as two big entry cards. */
-export function WordsHub({ progress, lang, onPhrasebook, onTips }: {
-  progress: Progress;
+/** "Hulp" tab: the emergency phrases and the workplace tips, as two big entry cards. */
+export function WordsHub({ lang, onPhrasebook, onTips }: {
   lang?: HelpLanguage;
   onPhrasebook: () => void;
   onTips: () => void;
 }) {
-  const words = learnedWords(progress.completed).size;
   return (
     <div className="screen words-hub">
       <div className="screen-head">
         <h1><Bi text={ui('navWords', lang)} /></h1>
       </div>
-      <p className="hub-count">
-        <CrateIcon size={26} />
-        <Bi text={{ ...ui('wordsLearnedN', lang), en: ui('wordsLearnedN').en.replace('{n}', String(words)), help: lang?.ui.wordsLearnedN?.replace('{n}', String(words)) }} />
-      </p>
       <button type="button" className="hub-card hub-alert" onClick={onPhrasebook}>
         <span className="hub-icon" aria-hidden><AlertIcon size={34} /></span>
         <span className="hub-text">

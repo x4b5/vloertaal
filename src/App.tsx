@@ -200,7 +200,6 @@ export default function App() {
       return (
         <>
           <WordsHub
-            progress={progress}
             lang={lang}
             onPhrasebook={() => go({ name: 'phrasebook' })}
             onTips={() => go({ name: 'tips' })}

@@ -1460,7 +1460,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .path, .words-hub, .screen:has(+ .bottom-nav) { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
 
 /* Woorden tab: words-learned count and two big entry cards. */
-.hub-count { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; font-weight: 600; }
 .hub-card {
   display: flex; align-items: center; gap: 14px; width: 100%; min-height: 96px; margin-bottom: 14px;
   padding: 14px 14px 14px 20px; text-align: start; color: var(--ink);

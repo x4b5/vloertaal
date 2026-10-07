@@ -55,7 +55,7 @@ const lang: HelpLanguage = {
     completeChat: 'ዝርርብ ኣማልእ',
     meaning: 'ትርጉም',
     navRoute: 'ትምህርትታት',
-    navWords: 'ቃላትን ሓረጋትን',
+    navWords: 'ሓገዝ',
     navMe: 'ኣነ',
     rightFirstTime: 'ብቐዳማይ ፈተነ ቅኑዕ',
     newWords: 'ሓደሽቲ ቃላት',
