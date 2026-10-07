@@ -20,7 +20,6 @@ import {
   ChevronDownIcon,
   CrateIcon,
   BackIcon,
-  BoltIcon,
   BullseyeIcon,
   CheckIcon,
   ChevronIcon,
@@ -458,8 +457,10 @@ function useCountUp(target: number, delay = 350, ms = 900) {
   return value;
 }
 
-function StatCard({ tone, label, icon, value, final, done }: {
+function StatCard({ tone, tag, label, icon, value, final, done }: {
   tone: 'gold' | 'green' | 'orange';
+  /** Short stencil tag on the label (XP, SCORE). */
+  tag: string;
   label: Bilingual;
   icon: React.ReactNode;
   value: string;
@@ -470,7 +471,7 @@ function StatCard({ tone, label, icon, value, final, done }: {
 }) {
   return (
     <div className={`stat-card stat-${tone} ${done ? 'stat-done' : ''}`} role="group" aria-label={`${label.en} ${final}`}>
-      <div className="stat-card-head"><Bi text={label} /></div>
+      <div className="stat-card-head"><span className="tag" aria-hidden>{tag}</span><Bi text={label} /></div>
       <div className="stat-card-body" aria-hidden>
         {icon}
         <span className="stat-card-value">{value}</span>
@@ -501,13 +502,21 @@ export function Result({ accuracy, xp, lang, onDone }: {
   return (
     <div className="player result-screen">
       <main className="player-body result">
-        <LessonCelebration />
+        <div className="result-hero">
+          <LessonCelebration />
+          {/* Rubber stamp on the delivery note: the lesson is done. */}
+          <span className="stamp stamp-right result-stamp" aria-hidden>
+            <span className="stamp-word" lang="nl">Klaar</span>
+            <span className="stamp-sub">✓</span>
+          </span>
+        </div>
         <h1 className="result-title"><Bi text={ui('lessonComplete', lang)} /></h1>
         <p className="result-nl" lang="nl">Les voltooid!</p>
         <div className="result-stats">
-          <StatCard tone="gold" label={ui('xpTotal', lang)} icon={<BoltIcon size={30} />} value={String(shownXp)} final={`${xp} XP`} done={shownXp === xp} />
+          <StatCard tone="gold" tag="XP" label={ui('xpTotal', lang)} icon={<CrateIcon size={30} />} value={String(shownXp)} final={`${xp} XP`} done={shownXp === xp} />
           <StatCard
             tone={praise.tone}
+            tag="Score"
             label={ui(praise.key, lang)}
             icon={<BullseyeIcon size={30} />}
             value={`${shownPct}%`}
@@ -519,8 +528,9 @@ export function Result({ accuracy, xp, lang, onDone }: {
       <footer className="player-foot">
         <div className="foot-inner">
           <div className="foot-actions">
-            <button type="button" className="btn btn-primary" onClick={onDone}>
+            <button type="button" className="btn btn-go btn-primary" onClick={onDone}>
               {ui('continue', lang).en}
+              <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
             </button>
           </div>
         </div>

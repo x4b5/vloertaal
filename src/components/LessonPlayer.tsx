@@ -50,7 +50,7 @@ const needsAudio = (ex: Exercise) => ex.kind === 'listen' || ex.kind === 'type';
 const KIND_TAG: Record<Exercise['kind'], string> = {
   intro: 'Nieuw woord',
   meaning: 'Woord',
-  dutch: 'Woord',
+  dutch: 'Nieuw woord',
   listen: 'Luisteren',
   type: 'Luisteren',
   match: 'Woorden',
@@ -254,6 +254,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         <div className="ex-tag">
           <span className="tag" lang="nl">{KIND_TAG[ex.kind]}</span>
           <span className="ex-count">{count} / {initial.length}</span>
+          {/* The picture exercise introduces a word: say so in English and the help language too. */}
+          {ex.kind === 'dutch' && <Bi className="ex-tag-note" text={ui('newWord', lang)} />}
         </div>
         {body}
       </main>

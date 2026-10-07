@@ -186,15 +186,6 @@ export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
   };
   return (
     <div className="exercise">
-      <div className="new-word">
-        <svg className="new-word-icon" viewBox="0 0 32 32" aria-hidden>
-          <circle cx="16" cy="16" r="16" fill="currentColor" />
-          <path d="M13 6.5l4.5 4.5-4.5 4.5-4.5-4.5z" fill="#fff" />
-          <path d="M20.5 13.5l3 3-3 3-3-3z" fill="#fff" />
-          <circle cx="13.5" cy="21.5" r="2" fill="#fff" />
-        </svg>
-        <Bi text={ui('newWord', lang)} />
-      </div>
       <div className="pic-question">
         <h2 className="prompt">
           <Bi text={question} />
@@ -476,8 +467,10 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
     <div className="exercise tip">
       <div className="tip-badge">
         <span className="tip-badge-emoji" aria-hidden>{tip.emoji}</span>
-        <span className="tip-badge-nl" lang="nl">Zo werkt het hier</span>
-        <Bi className="tip-badge-en" text={ui('cultureBadge', lang)} />
+        <span className="tip-badge-text">
+          <span className="tip-badge-nl" lang="nl">Zo werkt het hier</span>
+          <Bi className="tip-badge-en" text={ui('cultureBadge', lang)} />
+        </span>
       </div>
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
       <p className="tip-body"><Bi text={gloss(`${tip.id}.b`, tip.body, lang)} /></p>
