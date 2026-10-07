@@ -9,7 +9,7 @@ export function speechAvailable(): boolean {
 /** null = automatic: the first recorded voice, else the phone's best Dutch voice. */
 let preferredVoice: VoiceRef = null;
 
-/** Remember the learner's chosen voice: "piper:<key>", a device voiceURI, or null. */
+/** Remember the learner's chosen voice: "piper:<key>" (any recorded voice), a device voiceURI, or null. */
 export function setPreferredVoice(ref: VoiceRef): void {
   preferredVoice = ref;
 }
@@ -29,12 +29,25 @@ interface RecordedIndex {
   clips: Record<string, string>;
 }
 
-let recorded: RecordedIndex | null = null;
+/** ElevenLabs recordings, committed to public/audio-el (see scripts/voices/elevenlabs.mjs). */
+interface ElevenIndex {
+  voices: (RecordedVoice & { said: Record<string, string> })[];
+}
+
+/** One recorded voice with where its files live and which texts it has. */
+interface Recorded {
+  voice: RecordedVoice;
+  base: string;
+  /** Dutch text → clip id. */
+  clips: Record<string, string>;
+}
+
+let recorded: Recorded[] = [];
 const recordedListeners = new Set<() => void>();
 
-/** Voices recorded at build time (empty in development or when the build had none). */
+/** Voices recorded ahead of time: ElevenLabs first, then Piper (built in CI). Empty when none. */
 export function recordedVoices(): RecordedVoice[] {
-  return recorded?.voices ?? [];
+  return recorded.map((r) => r.voice);
 }
 
 export function onRecordedVoices(fn: () => void): () => void {
@@ -42,25 +55,46 @@ export function onRecordedVoices(fn: () => void): () => void {
   return () => recordedListeners.delete(fn);
 }
 
+async function loadJson<T>(url: string): Promise<T | null> {
+  try {
+    const r = await fetch(url);
+    return r.ok ? ((await r.json()) as T) : null;
+  } catch {
+    return null;
+  }
+}
+
 if (typeof window !== 'undefined' && typeof fetch === 'function') {
-  fetch('./audio/voices.json')
-    .then((r) => (r.ok ? r.json() : null))
-    .then((index: RecordedIndex | null) => {
-      if (index?.voices?.length) {
-        recorded = index;
+  Promise.all([loadJson<ElevenIndex>('./audio-el/voices.json'), loadJson<RecordedIndex>('./audio/voices.json')]).then(
+    ([eleven, piper]) => {
+      const list: Recorded[] = [
+        ...(eleven?.voices ?? []).map(({ said, ...voice }) => ({
+          voice,
+          base: './audio-el',
+          clips: Object.fromEntries(Object.entries(said).map(([id, text]) => [text.trim(), id])),
+        })),
+        ...(piper?.voices ?? []).map((voice) => ({ voice, base: './audio', clips: piper!.clips })),
+      ];
+      if (list.length) {
+        recorded = list;
         recordedListeners.forEach((fn) => fn());
       }
-    })
-    .catch(() => {});
+    },
+  );
+}
+
+/** Whether a recorded voice with this key has been loaded. */
+export function hasRecordedVoice(key: string): boolean {
+  return recorded.some((r) => r.voice.key === key);
 }
 
 /** Which recorded voice (if any) a reference resolves to. */
-function recordedKey(ref: VoiceRef): string | undefined {
-  if (!recorded) return undefined;
-  if (ref === null) return recorded.voices[0]?.key;
+function recordedFor(ref: VoiceRef): Recorded | undefined {
+  if (!recorded.length) return undefined;
+  if (ref === null) return recorded[0];
   if (ref.startsWith('piper:')) {
     const key = ref.slice(6);
-    return recorded.voices.some((v) => v.key === key) ? key : recorded.voices[0]?.key;
+    return recorded.find((r) => r.voice.key === key) ?? recorded[0];
   }
   return undefined;
 }
@@ -110,11 +144,11 @@ function stopAll(): void {
  */
 export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef): void {
   const ref = voice === undefined ? preferredVoice : voice;
-  const key = lang === 'nl' ? recordedKey(ref) : undefined;
-  const id = key && recorded?.clips[text.trim()];
-  if (key && id) {
+  const rec = lang === 'nl' ? recordedFor(ref) : undefined;
+  const id = rec?.clips[text.trim()];
+  if (rec && id) {
     stopAll();
-    const audio = new Audio(`./audio/${key}/${id}.mp3`);
+    const audio = new Audio(`${rec.base}/${rec.voice.key}/${id}.mp3`);
     audio.playbackRate = slow ? 0.7 : 1;
     audio.preservesPitch = true;
     playing = audio;

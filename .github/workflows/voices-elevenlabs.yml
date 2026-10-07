@@ -1,0 +1,52 @@
+name: Record ElevenLabs voices
+
+# Run by hand (Actions → Record ElevenLabs voices → Run workflow). Records only clips that
+# are missing or whose text changed, and commits them to public/audio-el on this branch.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'check = only show cost, sample = one test line per voice, all = everything missing'
+        type: choice
+        options: [check, sample, all]
+        default: check
+      max_credits:
+        description: 'Stop before spending more than this'
+        default: '12000'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voices-elevenlabs
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    env:
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      MAX_CREDITS: ${{ inputs.max_credits }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run clips
+      - run: node scripts/voices/elevenlabs.mjs ${{ inputs.mode }}
+      - name: Commit the recordings
+        if: inputs.mode != 'check'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/audio-el
+          git diff --cached --quiet && { echo "Nothing new."; exit 0; }
+          git commit -m "Record ElevenLabs voices (${{ inputs.mode }})"
+          git push
+      - uses: actions/upload-artifact@v4
+        if: inputs.mode == 'sample'
+        with:
+          name: elevenlabs-sample
+          path: public/audio-el/*/x.sample.mp3
