@@ -263,6 +263,16 @@ h2 { font-size: 1.25rem; }
   box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.08), inset 0 4px 0 rgba(255, 255, 255, 0.3);
 }
 .lesson-name { display: none; }
+/* Progress bar with the "5 IN A ROW" streak label floating above the filled part. */
+.bar-wrap { position: relative; flex: 1; display: flex; }
+.in-a-row {
+  position: absolute; bottom: calc(100% + 6px);
+  left: clamp(0px, calc(var(--p, 0) * 50% - 48px), calc(100% - 140px));
+  display: inline-flex; align-items: baseline; gap: 8px; white-space: nowrap;
+  color: var(--green); font-size: 0.85rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase;
+  animation: up 0.25s ease-out;
+}
+.in-a-row-help { font-size: 0.8rem; font-weight: 700; letter-spacing: 0; text-transform: none; opacity: 0.85; }
 .player-body {
   flex: 1; display: flex; flex-direction: column;
   width: 100%; max-width: 640px; margin: 0 auto; padding: 16px 16px 0;
@@ -506,6 +516,53 @@ h2 { font-size: 1.25rem; }
   .tile-bank { margin-top: 40px; }
 }
 
+/* Complete the conversation: colleague on the left, you on the right, replies as rows. */
+.chat { display: flex; flex-direction: column; gap: 8px; margin: 0 0 24px; }
+.chat-row { display: flex; align-items: center; gap: 14px; }
+.chat-me { justify-content: flex-end; }
+.chat-char { flex: none; font-size: 72px; line-height: 1; }
+.chat-bubble {
+  position: relative; display: flex; align-items: center; gap: 4px; min-width: 0;
+  padding: 8px 18px 8px 8px; border: 2px solid var(--line); border-radius: 16px; background: var(--bg);
+}
+.chat-bubble::before {
+  content: ''; position: absolute; left: -9px; top: 50%; width: 14px; height: 14px; margin-top: -7px;
+  background: var(--bg); border-left: 2px solid var(--line); border-bottom: 2px solid var(--line);
+  transform: rotate(45deg);
+}
+.chat-line {
+  padding: 4px 0; background: none; border: none; text-align: start; min-height: 44px;
+  font-size: 1.2rem; font-weight: 600; color: var(--ink-strong);
+  text-decoration: underline dashed var(--faint); text-decoration-thickness: 2px; text-underline-offset: 7px;
+}
+.chat-line[aria-expanded='true'] { text-decoration-color: var(--blue); }
+.chat-hint {
+  position: absolute; z-index: 3; top: calc(100% + 8px); left: 44px;
+  padding: 10px 14px; border: 2px solid var(--line); border-radius: 14px; background: var(--card);
+  box-shadow: 0 4px 0 var(--line); font-weight: 700; white-space: nowrap; animation: up 0.15s ease-out;
+}
+.chat-bubble-me { min-width: 150px; min-height: 64px; padding: 8px 18px; justify-content: center; }
+.chat-bubble-me::before {
+  left: auto; right: -9px; border-left: none; border-bottom: none;
+  border-right: 2px solid var(--line); border-top: 2px solid var(--line);
+}
+.chat-bubble-me .chat-line { text-decoration: none; padding: 0; min-height: 0; }
+.chat-blank { display: block; width: 110px; height: 2px; margin-top: 22px; background: var(--line); border-radius: 2px; }
+.chat-bubble-me.right, .chat-bubble-me.right::before { border-color: var(--green); }
+.chat-bubble-me.right .chat-line { color: var(--right-ink); }
+.chat-bubble-me.wrong, .chat-bubble-me.wrong::before { border-color: var(--red); }
+.chat-bubble-me.wrong .chat-line { color: var(--wrong-ink); }
+.chat-choices .choice-nl { font-weight: 600; }
+.feedback-meaning { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; font-size: 1.05rem; font-weight: 600; }
+.feedback-meaning .bi-help { color: inherit; opacity: 0.85; font-size: 0.9rem; }
+@media (min-width: 760px) {
+  .chat { gap: 4px; margin-bottom: 40px; }
+  .chat-char { font-size: 96px; }
+  .chat-them .chat-bubble { margin-bottom: 16px; }
+  .chat-line { font-size: 1.3rem; }
+  .feedback-meaning { font-size: 1.15rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
@@ -545,5 +602,5 @@ h2 { font-size: 1.25rem; }
 .emoji-xl, .emoji-lg, .pic-emoji, .choice-emoji, .unit-emoji, .confetti {
   font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
 }
-.speaker-char .icon, .mascot .icon { width: 1em; height: 1em; }
+.speaker-char .icon, .chat-char .icon, .mascot .icon { width: 1em; height: 1em; }
 .mascot { font-size: 112px; line-height: 1; }

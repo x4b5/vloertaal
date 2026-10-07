@@ -2,12 +2,13 @@ import { findLesson } from '../content/curriculum';
 import { LessonPlayer } from '../components/LessonPlayer';
 import { getHelpLanguage } from '../i18n';
 import type { LangCode } from '../i18n/types';
+import { allReplies } from '../content/curriculum';
 import { buildTiles, type Exercise } from '../lib/exercises';
 import { createRng } from '../lib/random';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
- * screenshotted reproducibly: /?shot=dutch|meaning|build&lang=ar
+ * screenshotted reproducibly: /?shot=dutch|meaning|build|chat&lang=ar
  * Options are always in lesson order, so tests know which one is right.
  */
 export function ShotHarness({ shot, lang }: { shot: string; lang: string | null }) {
@@ -18,16 +19,24 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
     meaning: { kind: 'meaning', word: hesje, options: [handschoenen, schoenen, hesje] },
     build: { kind: 'build', sentence: lesson.sentences[0], tiles: buildTiles(lesson.sentences[0], lesson, createRng(3)) },
   };
+  // Break-room chat: "Wil je koffie of thee?" → "Thee, graag." (right), "Tot morgen!" (wrong).
+  const coffee = findLesson('l.shift')!.lesson.dialogues![0];
+  const byeReply = allReplies.find((r) => r.id === 'c.hello.a')!;
+  exercises.chat = { kind: 'chat', dialogue: coffee, options: [coffee.reply, byeReply] };
   const ex = exercises[shot] ?? exercises.dutch;
   // A few intro exercises in front would move the progress bar; pad so it sits at ~40%.
   const pad: Exercise[] = Array.from({ length: 3 }, () => ex);
+  // The chat page sits a little further into the lesson (~55%), as in the reference.
+  const before: Exercise[] = shot === 'chat' ? [...pad, ...pad, ex] : pad;
   return (
     <LessonPlayer
-      lesson={lesson}
+      lesson={shot === 'chat' ? findLesson('l.shift')!.lesson : lesson}
       review
       lang={getHelpLanguage(lang as LangCode)}
-      exercises={[...pad, ex, ...pad]}
-      startAt={pad.length}
+      exercises={[...before, ex, ...pad]}
+      startAt={before.length}
+      // The chat page shows the in-a-row counter: 4 before, 5 after a right answer.
+      initialStreak={shot === 'chat' ? 4 : 0}
       onQuit={() => {}}
       onFinish={() => {}}
     />

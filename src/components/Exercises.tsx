@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import type { Word } from '../content/types';
+import type { ChatLine } from '../content/types';
 import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { checkTiles, checkTyped } from '../lib/answers';
@@ -7,7 +7,7 @@ import { sounds, speak } from '../lib/audio';
 import type { Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { Bi } from './Bi';
-import { MascotIcon } from './Icons';
+import { LearnerIcon, MascotIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 
 export interface Answer {
@@ -54,18 +54,18 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
   );
 }
 
-function ChoiceGrid({ options, render, correctId, locked, onAnswer, onPick, className, style }: {
-  options: Word[];
+function ChoiceGrid<T extends { id: string }>({ options, render, correctId, locked, onAnswer, onPick, className, style }: {
+  options: T[];
   className?: string;
   style?: React.CSSProperties;
-  render: (w: Word) => React.ReactNode;
+  render: (w: T) => React.ReactNode;
   correctId: string;
   locked: boolean;
   onAnswer: (a: Answer | null) => void;
-  onPick?: (w: Word) => void;
+  onPick?: (w: T) => void;
 }) {
   const [picked, setPicked] = useState<string | null>(null);
-  const pick = (w: Word) => {
+  const pick = (w: T) => {
     setPicked(w.id);
     onPick?.(w);
     onAnswer({ correct: w.id === correctId });
@@ -359,6 +359,60 @@ export function TypeExercise({ ex, lang, locked, onAnswer }: Props<'type'>) {
           const r = checkTyped(v, ex.word.nl);
           onAnswer({ correct: r !== 'wrong', almost: r === 'almost' });
         }}
+      />
+    </div>
+  );
+}
+
+/**
+ * Complete the conversation: a colleague says a Dutch line, the learner picks the reply.
+ * Tapping the colleague's words shows what they mean (English + help language).
+ */
+export function ChatExercise({ ex, lang, locked, onAnswer }: Props<'chat'>) {
+  const { prompt, reply } = ex.dialogue;
+  const [picked, setPicked] = useState<ChatLine | null>(null);
+  const [hint, setHint] = useState(false);
+  useEffect(() => speak(prompt.nl), [prompt]);
+  const mine = picked && locked ? (picked.id === reply.id ? 'right' : 'wrong') : '';
+  return (
+    <div className="exercise">
+      <Prompt text={ui('completeChat', lang)} />
+      <div className="chat">
+        <div className="chat-row chat-them">
+          <span className="chat-char"><MascotIcon size={96} /></span>
+          <div className="chat-bubble">
+            <SpeakButton glyph text={prompt.nl} label={`Play: ${prompt.nl}`} />
+            <button
+              type="button"
+              className="chat-line"
+              lang="nl"
+              aria-expanded={hint}
+              onClick={() => setHint((h) => !h)}
+            >
+              {prompt.nl}
+            </button>
+            {hint && (
+              <span className="chat-hint">
+                <Bi text={gloss(prompt.id, prompt.en, lang)} />
+              </span>
+            )}
+          </div>
+        </div>
+        <div className="chat-row chat-me">
+          <div className={`chat-bubble chat-bubble-me ${mine}`} aria-live="polite">
+            {picked ? <span className="chat-line" lang="nl">{picked.nl}</span> : <span className="chat-blank" aria-hidden />}
+          </div>
+          <span className="chat-char"><LearnerIcon size={96} /></span>
+        </div>
+      </div>
+      <ChoiceGrid
+        className="choices-rows chat-choices"
+        options={ex.options}
+        correctId={reply.id}
+        locked={locked}
+        onAnswer={onAnswer}
+        onPick={setPicked}
+        render={(o) => <span lang="nl" className="choice-nl">{o.nl}</span>}
       />
     </div>
   );
