@@ -16,7 +16,7 @@ const t: CultureTranslation = {
     'a.free': 'Gratuit și privat',
     'a.free.b': 'Vloertaal este gratuit și nu ai nevoie de cont. Progresul tău se salvează doar pe acest telefon sau calculator. Nu urmărim ce faci.',
     'a.voices': 'Vocile',
-    'a.voices.b': 'Vocile olandeze ale bărbaților sunt făcute cu Piper, un program de voce gratuit și open-source. Femeile din aplicație vorbesc cu vocea telefonului sau calculatorului tău.',
+    'a.voices.b': 'Bărbații din aplicație vorbesc cu vocea lui Berend, iar femeile cu vocea lui Ariël. Aceste voci olandeze au fost înregistrate cu ElevenLabs. Dacă o propoziție nu are încă o înregistrare, auzi Piper (un program de voce gratuit și open-source) sau vocea telefonului ori calculatorului tău.',
   },
 };
 
