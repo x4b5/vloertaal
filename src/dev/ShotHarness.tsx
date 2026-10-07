@@ -66,7 +66,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     return (
       <>
         <TopBar streak={7} words={learnedWords(progress.completed).size} lang={l} onLanguage={() => {}} />
-        <Path progress={progress} lang={l} onStart={() => {}} onPhrasebook={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}} />
+        <Path progress={progress} lang={l} onStart={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}} />
         <BottomNav current="route" onTab={() => {}} />
       </>
     );

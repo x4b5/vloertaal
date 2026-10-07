@@ -221,7 +221,6 @@ export default function App() {
             progress={progress}
             lang={lang}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
-            onPhrasebook={() => go({ name: 'phrasebook' })}
             onAbout={() => go({ name: 'about', from: 'home' })}
             access={access}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
