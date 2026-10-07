@@ -1,12 +1,12 @@
 import { useCallback, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
-import { gloss, ui } from '../i18n';
+import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { sounds, speak, speechAvailable } from '../lib/audio';
 import { buildLesson, isGraded, type Exercise } from '../lib/exercises';
 import { voiceFor } from '../lib/voices';
 import { Bi } from './Bi';
-import { CloseIcon } from './Icons';
+import { CheckIcon, ChevronIcon, CloseIcon } from './Icons';
 import {
   type Answer,
   BuildExercise,
@@ -45,6 +45,51 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
 }
 
 const needsAudio = (ex: Exercise) => ex.kind === 'listen' || ex.kind === 'type';
+
+/** Short Dutch label on the kraft tag above each exercise. */
+const KIND_TAG: Record<Exercise['kind'], string> = {
+  intro: 'Nieuw woord',
+  meaning: 'Woord',
+  dutch: 'Nieuw woord',
+  listen: 'Luisteren',
+  type: 'Luisteren',
+  match: 'Woorden',
+  build: 'Zin',
+  chat: 'Gesprek',
+  tip: 'Tip',
+  situation: 'Situatie',
+};
+
+/** The answer as a pair for the feedback label: Dutch = meaning (English + help language). */
+function answerPair(ex: Exercise, lang?: HelpLanguage): { nl?: string; meaning: Bilingual } | null {
+  switch (ex.kind) {
+    case 'meaning':
+    case 'dutch':
+    case 'listen':
+    case 'type':
+    case 'intro':
+      return { nl: ex.word.nl, meaning: gloss(ex.word.id, ex.word.en, lang) };
+    case 'build':
+      return { nl: ex.sentence.nl, meaning: gloss(ex.sentence.id, ex.sentence.en, lang) };
+    case 'chat':
+      return { nl: ex.dialogue.reply.nl, meaning: gloss(ex.dialogue.reply.id, ex.dialogue.reply.en, lang) };
+    case 'situation': {
+      const best = ex.tip.options.find((o) => o.best)!;
+      return { meaning: gloss(best.id, best.en, lang) };
+    }
+    default:
+      return null;
+  }
+}
+
+/** The square block at the end of the main button: a check before answering, an arrow after. */
+function ButtonBlock({ icon }: { icon: 'check' | 'next' }) {
+  return (
+    <span className="btn-block" aria-hidden>
+      {icon === 'check' ? <CheckIcon size={26} /> : <ChevronIcon size={26} />}
+    </span>
+  );
+}
 
 /** "5 IN A ROW" label above the progress bar, from three correct answers in a row. */
 function InARow({ count, progress, lang }: { count: number; progress: number; lang?: HelpLanguage }) {
@@ -155,13 +200,25 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
 
   const sol = solution(ex);
   const feedback = checked && isGraded(ex) && answer;
-  // Chats also show what the right reply means, like Duolingo's "Meaning: …".
-  const meaning = ex.kind === 'chat' ? gloss(ex.dialogue.reply.id, ex.dialogue.reply.en, lang) : null;
-  const meaningLine = meaning && (
-    <div className="feedback-meaning">
-      <span className="bi-en">{ui('meaning', lang).en}: {meaning.en}</span>
-      {meaning.help && meaning.lang && (
-        <span className="bi-help" lang={meaning.lang.code} dir={meaning.lang.dir}>{meaning.help}</span>
+  // The answer as a pair: "het hesje = the safety vest", help language underneath.
+  // (In a chat this is what the right reply means; in a situation, the usual choice.)
+  const pair = answerPair(ex, lang);
+  // On a right answer the praise in the help language closes the help line ("… · Harika!").
+  const praise = feedback && answer.correct && !answer.almost ? ui(ex.kind === 'situation' ? 'goodChoice' : 'correct', lang) : null;
+  const pairHelp = [pair?.meaning.help, praise?.help].filter(Boolean).join(' · ');
+  const pairLine = pair && (
+    <div className="feedback-pair">
+      <span className="pair-main">
+        {pair.nl && (
+          <>
+            <strong lang="nl">{pair.nl}</strong>
+            <span className="pair-eq"> = </span>
+          </>
+        )}
+        <span className="bi-en">{pair.meaning.en}</span>
+      </span>
+      {pairHelp && lang && (
+        <span className="bi-help" lang={lang.code} dir={lang.dir}>{pairHelp}</span>
       )}
     </div>
   );
@@ -174,6 +231,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     </div>
   );
   const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip';
+  // Segments: one per exercise of the lesson (mistakes that come back at the end don't add any).
+  const segState = (i: number) => (i < index || (i === index && checked) ? 'seg-done' : i === index ? 'seg-now' : '');
+  const count = Math.min(index + 1, initial.length);
 
   return (
     <div className="player">
@@ -181,8 +241,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         <button type="button" className="icon-btn" onClick={onQuit} aria-label="Quit lesson"><CloseIcon size={28} /></button>
         <div className="bar-wrap">
           {streak >= 3 && <InARow count={streak} progress={progress} lang={lang} />}
-          <div className="bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>
-            <div className="bar-fill" style={{ width: `${Math.max(4, progress * 100)}%` }} />
+          <div className="segs" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>
+            {initial.map((_, i) => <span key={i} className={`seg ${segState(i)}`} />)}
           </div>
         </div>
         <span className="lesson-name">
@@ -190,43 +250,50 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         </span>
       </header>
 
-      <main className="player-body">{body}</main>
-      <footer className={`player-foot ${feedback ? (answer.correct ? 'foot-right' : 'foot-wrong') : ''}`}>
+      <main className="player-body">
+        <div className="ex-tag">
+          <span className="tag" lang="nl">{KIND_TAG[ex.kind]}</span>
+          <span className="ex-count">{count} / {initial.length}</span>
+          {/* The picture exercise introduces a word: say so in English and the help language too. */}
+          {ex.kind === 'dutch' && <Bi className="ex-tag-note" text={ui('newWord', lang)} />}
+        </div>
+        {body}
+      </main>
+      <footer className="player-foot">
         <div className="foot-inner">
           {feedback && (
-            <div className="feedback" role="status">
-              <span className="feedback-icon" aria-hidden>
-                {answer.correct ? (
-                  <svg viewBox="0 0 24 24" width="40" height="40"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                ) : (
-                  <svg viewBox="0 0 24 24" width="36" height="36"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11" fill="none" stroke="currentColor" strokeWidth="3.6" strokeLinecap="round" /></svg>
-                )}
-              </span>
+            <div
+              className={`feedback ${answer.correct ? 'feedback-right' : ex.kind === 'situation' ? 'feedback-other' : 'feedback-wrong'}`}
+              role="status"
+            >
+              <span className="feedback-tape" aria-hidden />
               <div className="feedback-text">
                 {!answer.correct && sol.text ? (
+                  ex.kind === 'situation' ? (
+                    <div className="feedback-title"><Bi text={ui('otherChoice', lang)} /></div>
+                  ) : (
+                    <>
+                      <div className="feedback-title"><span lang="nl">Nog eens!</span></div>
+                      <span className="sr-only">{ui('incorrect', lang).en}.</span>
+                    </>
+                  )
+                ) : answer.correct && !answer.almost ? (
                   <>
-                    <span className="sr-only">{ui('incorrect', lang).en}. </span>
-                    <div className="feedback-title">
-                      {ex.kind === 'situation'
-                        ? <Bi text={ui('otherChoice', lang)} />
-                        : <Bi text={{ ...ui('correctAnswer', lang), en: `${ui('correctAnswer', lang).en}:` }} />}
-                    </div>
-                    <div className="feedback-sol feedback-answer" lang={sol.nl ? 'nl' : undefined}>{sol.text}</div>
-                    {meaningLine}{whyLine}
+                    <div className="feedback-title"><span lang="nl">Goed zo!</span></div>
+                    <span className="sr-only">{praise?.en}</span>
                   </>
                 ) : (
-                  <>
-                    <div className="feedback-title">
-                      <Bi text={ui(ex.kind === 'situation' && answer.correct ? 'goodChoice' : answer.correct ? (answer.almost ? 'almost' : 'correct') : 'incorrect', lang)} />
-                    </div>
-                    {answer.almost && sol.text && (
-                      <div className="feedback-sol">
-                        {ui('correctAnswer', lang).en}: <strong lang={sol.nl ? 'nl' : undefined}>{sol.text}</strong>
-                      </div>
-                    )}
-                    {meaningLine}{whyLine}
-                  </>
+                  <div className="feedback-title">
+                    <Bi text={ui(answer.correct ? 'almost' : 'incorrect', lang)} />
+                  </div>
                 )}
+                {(pairLine || whyLine) && <hr className="feedback-rule" />}
+                {!answer.correct && sol.text && ex.kind !== 'situation' && (
+                  <div className="feedback-kicker">
+                    <Bi text={ui('correctAnswer', lang)} />
+                  </div>
+                )}
+                {pairLine}{whyLine}
               </div>
             </div>
           )}
@@ -239,16 +306,18 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             {checked || autoContinue ? (
               <button
                 type="button"
-                className={`btn ${feedback && !answer.correct ? 'btn-red' : 'btn-green'}`}
+                className={`btn btn-go ${checked ? 'btn-dark' : 'btn-primary'}`}
                 disabled={!answer}
                 onClick={checked ? next : check}
                 autoFocus
               >
                 {ui('continue', lang).en}
+                <ButtonBlock icon="next" />
               </button>
             ) : (
-              <button type="button" className="btn btn-green" disabled={!answer} onClick={check}>
+              <button type="button" className="btn btn-go btn-primary" disabled={!answer} onClick={check}>
                 {ui('check', lang).en}
+                <ButtonBlock icon="check" />
               </button>
             )}
           </div>

@@ -4,6 +4,8 @@ import App from './App';
 import { ShotHarness } from './dev/ShotHarness';
 import { loadProgress } from './lib/progress';
 import { applyTheme } from './lib/theme';
+import '@fontsource-variable/lexend';
+import '@fontsource/big-shoulders-stencil-display/800';
 import './styles.css';
 
 const params = new URLSearchParams(location.search);

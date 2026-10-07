@@ -4,6 +4,7 @@ import type { HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
 import { Burst, StreakHero } from './Celebrate';
 import { StreakFlame } from './StreakArt';
+import { ChevronIcon } from './Icons';
 
 /**
  * Day-streak milestone ("Mijlpaal"), shown after the lesson-complete screen on the first
@@ -44,13 +45,14 @@ export function Milestone({ streak, lang, onDone }: {
           <span className="streak-flame-wrap">
             {/* Sparks fly off the flame when the new day is counted. */}
             <svg className="streak-sparks" viewBox="0 0 120 120" aria-hidden focusable="false">
-              <Burst x={60} y={60} r={58} color="#ffc800" />
+              <Burst x={60} y={60} r={58} color="#ffc414" />
             </svg>
             <StreakFlame />
           </span>
           <span key={shown} className={`streak-num ${shown === streak ? 'streak-num-new' : ''}`} aria-hidden>
             {shown}
           </span>
+          <span className="streak-unit" lang="nl" aria-hidden>{streak === 1 ? 'dag' : 'dagen'}</span>
         </div>
         <h1 className="streak-line">
           <Bi text={{ ...line, en: fill(line.en), help: line.help && fill(line.help) }} />
@@ -59,8 +61,9 @@ export function Milestone({ streak, lang, onDone }: {
       <footer className="player-foot milestone-foot">
         <div className="foot-inner">
           <div className="foot-actions">
-            <button type="button" className="btn btn-blue" onClick={onDone}>
+            <button type="button" className="btn btn-go btn-primary" onClick={onDone}>
               {ui('continue', lang).en}
+              <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
             </button>
           </div>
         </div>

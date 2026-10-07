@@ -61,6 +61,7 @@ export const uiEn = {
   otherChoice: "Here it usually works differently",
   cultureTips: "Workplace tips",
   cultureTipsHint: "How things usually go at a Dutch workplace. Tap a tip to read it again.",
+  about: 'About Vloertaal',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

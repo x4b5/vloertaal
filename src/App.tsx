@@ -6,7 +6,7 @@ import { setPreferredVoice } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
-import { Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar } from './components/Screens';
+import { About, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar } from './components/Screens';
 import { Milestone } from './components/Milestone';
 import { completeLesson, currentStreak, emptyProgress, loadProgress, saveProgress, streakWentUp, xpFor } from './lib/progress';
 
@@ -19,6 +19,7 @@ type View =
   | { name: 'phrasebook' }
   | { name: 'tips' }
   | { name: 'settings' }
+  | { name: 'about'; from: 'home' | 'settings' }
   | { name: 'admin' };
 
 export default function App() {
@@ -80,6 +81,8 @@ export default function App() {
       return <Milestone streak={view.streak} lang={lang} onDone={() => setView({ name: 'home' })} />;
     case 'tips':
       return <Tips progress={progress} lang={lang} onBack={() => setView({ name: 'home' })} />;
+    case 'about':
+      return <About lang={lang} onBack={() => setView(view.from === 'settings' ? { name: 'settings' } : { name: 'home' })} />;
     case 'phrasebook':
       return <Phrasebook lang={lang} onBack={() => setView({ name: 'home' })} />;
     case 'settings':
@@ -95,6 +98,7 @@ export default function App() {
             setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice }));
             setView({ name: 'home' });
           }}
+          onAbout={() => setView({ name: 'about', from: 'settings' })}
           onBack={() => setView({ name: 'home' })}
         />
       );
@@ -113,6 +117,7 @@ export default function App() {
             onStart={(lessonId, review) => setView({ name: 'lesson', lessonId, review })}
             onPhrasebook={() => setView({ name: 'phrasebook' })}
             onTips={() => setView({ name: 'tips' })}
+            onAbout={() => setView({ name: 'about', from: 'home' })}
           />
         </>
       );

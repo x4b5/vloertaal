@@ -1,12 +1,14 @@
 import { tipForLesson } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import { LessonPlayer } from '../components/LessonPlayer';
-import { Result } from '../components/Screens';
+import { About, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar } from '../components/Screens';
+import { Admin } from '../components/Admin';
+import { emptyProgress } from '../lib/progress';
 import { Milestone } from '../components/Milestone';
 import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
 import type { LangCode } from '../i18n/types';
-import { allReplies } from '../content/curriculum';
+import { allLessons, allReplies } from '../content/curriculum';
 import { buildTiles, type Exercise } from '../lib/exercises';
 import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
@@ -25,6 +27,33 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
   // Day-streak milestone after the very first lesson: streak 1.
   if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
+  // Screens outside the lesson flow (phase-3 house-style review).
+  if (shot === 'onboarding') return <Onboarding onDone={() => {}} />;
+  if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
+  if (shot === 'admin') return <Admin onBack={() => {}} />;
+  if (shot === 'tips' || shot === 'settings') {
+    // Half the course done, so several tips are unlocked.
+    const done = Object.fromEntries(allLessons.slice(0, 8).map((l) => [l.id, { best: 1, times: 1 }]));
+    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, completed: done };
+    const l = getHelpLanguage(lang as LangCode);
+    return shot === 'tips' ? (
+      <Tips progress={progress} lang={l} onBack={() => {}} />
+    ) : (
+      <Settings progress={progress} lang={l} onLang={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} onBack={() => {}} />
+    );
+  }
+  if (shot === 'about') return <About lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
+  // Home screen: first lesson done, second lesson current (as in the house-style concept).
+  if (shot === 'path') {
+    const progress = { ...emptyProgress, onboarded: true, xp: 120, streak: 7, completed: { 'l.hello': { best: 1, times: 1 } } };
+    const l = getHelpLanguage(lang as LangCode);
+    return (
+      <>
+        <TopBar streak={7} xp={120} lang={l} onSettings={() => {}} />
+        <Path progress={progress} lang={l} onStart={() => {}} onPhrasebook={() => {}} onTips={() => {}} onAbout={() => {}} />
+      </>
+    );
+  }
   // The whole cast in every mood, big, for judging the drawings.
   if (shot === 'cast') {
     const moods: Mood[] = ['idle', 'happy', 'sad', 'pleased', 'thinking', 'cheer'];
@@ -39,6 +68,10 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
   const exercises: Record<string, Exercise> = {
     dutch: { kind: 'dutch', word: helm, options: [hesje, handschoenen, helm] },
     meaning: { kind: 'meaning', word: hesje, options: [handschoenen, schoenen, hesje] },
+    intro: { kind: 'intro', word: hesje },
+    listen: { kind: 'listen', word: schoenen, options: [helm, schoenen, hesje] },
+    type: { kind: 'type', word: helm },
+    match: { kind: 'match', words: [helm, handschoenen, schoenen, hesje] },
     build: { kind: 'build', sentence: lesson.sentences[0], tiles: buildTiles(lesson.sentences[0], lesson, createRng(3)) },
   };
   // Break-room chat: "Wil je koffie of thee?" → "Thee, graag." (right), "Tot morgen!" (wrong).

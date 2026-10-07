@@ -45,6 +45,21 @@ function Speaker({ who, lines, verdict }: { who: CharacterId; lines: string[]; v
   );
 }
 
+/** Rubber stamp on a checked answer: green GOED, or brick-red NOG EENS on a wrong pick.
+ *  Decorative: the feedback label below says the same in words. */
+function Stamp({ right }: { right: boolean }) {
+  return right ? (
+    <span className="stamp stamp-right" aria-hidden>
+      <span className="stamp-word">Goed</span>
+      <span className="stamp-sub">✓</span>
+    </span>
+  ) : (
+    <span className="stamp stamp-wrong" aria-hidden>
+      <span className="stamp-word">Nog<br />eens</span>
+    </span>
+  );
+}
+
 function Prompt({ text }: { text: Bilingual }) {
   return (
     <h2 className="prompt">
@@ -126,6 +141,7 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
           >
             <span className="choice-num" aria-hidden>{i + 1}</span>
             {render(w)}
+            {locked && w.id === picked && <Stamp right={w.id === correctId} />}
           </button>
         );
       })}
@@ -170,15 +186,6 @@ export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
   };
   return (
     <div className="exercise">
-      <div className="new-word">
-        <svg className="new-word-icon" viewBox="0 0 32 32" aria-hidden>
-          <circle cx="16" cy="16" r="16" fill="currentColor" />
-          <path d="M13 6.5l4.5 4.5-4.5 4.5-4.5-4.5z" fill="#fff" />
-          <path d="M20.5 13.5l3 3-3 3-3-3z" fill="#fff" />
-          <circle cx="13.5" cy="21.5" r="2" fill="#fff" />
-        </svg>
-        <Bi text={ui('newWord', lang)} />
-      </div>
       <div className="pic-question">
         <h2 className="prompt">
           <Bi text={question} />
@@ -316,7 +323,8 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict }: Props<'bu
           <Bi className="bubble-text" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
         </div>
       </div>
-      <div className="answer-line" aria-live="polite">
+      <div className={`answer-line ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite">
+        {verdict && <Stamp right={verdict === 'right'} />}
         {chosen.map((i) => (
           <button
             key={i}
@@ -459,8 +467,10 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
     <div className="exercise tip">
       <div className="tip-badge">
         <span className="tip-badge-emoji" aria-hidden>{tip.emoji}</span>
-        <span className="tip-badge-nl" lang="nl">Zo werkt het hier</span>
-        <Bi className="tip-badge-en" text={ui('cultureBadge', lang)} />
+        <span className="tip-badge-text">
+          <span className="tip-badge-nl" lang="nl">Zo werkt het hier</span>
+          <Bi className="tip-badge-en" text={ui('cultureBadge', lang)} />
+        </span>
       </div>
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
       <p className="tip-body"><Bi text={gloss(`${tip.id}.b`, tip.body, lang)} /></p>

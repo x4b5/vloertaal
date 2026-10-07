@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { allLessons, phrasebookIds, findItem, units } from '../src/content/curriculum';
+import { aboutIds } from '../src/content/about';
 import { cultureIds, cultureTips } from '../src/content/culture';
 import { helpLanguages } from '../src/i18n';
 import { uiEn } from '../src/i18n/types';
@@ -14,6 +15,8 @@ const contentIds = [
   ]),
   // Workplace-culture tips (src/content/culture.ts).
   ...cultureIds,
+  // The About page (src/content/about.ts).
+  ...aboutIds,
 ];
 
 describe('content and translations', () => {

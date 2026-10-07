@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { BackIcon } from './Icons';
 
 interface Credits {
   tier: string;
@@ -31,7 +32,7 @@ export function Admin({ onBack }: { onBack: () => void }) {
   return (
     <div className="screen admin" lang="nl">
       <div className="screen-head">
-        <button type="button" className="btn btn-ghost" onClick={onBack}>← Terug</button>
+        <button type="button" className="icon-btn" onClick={onBack} aria-label="Terug"><BackIcon size={28} /></button>
         <h1>Beheer</h1>
       </div>
       <h2>ElevenLabs-credits</h2>
