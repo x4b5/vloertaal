@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  # Daily refresh of the ElevenLabs credit balance on the hidden #beheer page.
+  schedule:
+    - cron: '17 5 * * *'
 
 permissions:
   contents: read
@@ -14,6 +17,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # Optional. Only the credit numbers reach the site, never the key.
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,6 +28,23 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+      # Recorded Dutch voices (Piper, free and open source), made fresh for every build.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: piper-models
+          key: piper-models-${{ hashFiles('scripts/voices/chosen.json') }}
+      - name: Record the Dutch voices
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+          pip install -q piper-tts==1.8.0
+          npm run clips
+          python scripts/voices/make_voices.py all --out public/audio
+      - name: Fetch ElevenLabs credits for the admin page
+        if: github.ref == 'refs/heads/main' && env.ELEVENLABS_API_KEY != ''
+        run: node scripts/fetch-credits.mjs
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main'

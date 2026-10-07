@@ -1,3 +1,4 @@
+import { teamworkUnit } from './culture';
 import type { ChatLine, Dialogue, Lesson, Unit, Word } from './types';
 
 /**
@@ -289,6 +290,7 @@ export const units: Unit[] = [
       },
     ],
   },
+  teamworkUnit,
 ];
 
 /** Ids of the phrases shown on the always-available "Emergency phrases" page. */

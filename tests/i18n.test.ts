@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { allLessons, phrasebookIds, findItem, units } from '../src/content/curriculum';
+import { cultureIds, cultureTips } from '../src/content/culture';
 import { helpLanguages } from '../src/i18n';
 import { uiEn } from '../src/i18n/types';
 
@@ -11,9 +12,20 @@ const contentIds = [
     ...l.sentences.map((s) => s.id),
     ...(l.dialogues ?? []).flatMap((d) => [d.prompt.id, d.reply.id]),
   ]),
+  // Workplace-culture tips (src/content/culture.ts).
+  ...cultureIds,
 ];
 
 describe('content and translations', () => {
+  it('has one culture tip per lesson, each with exactly one best option', () => {
+    const lessonIds = new Set(allLessons.map((l) => l.id));
+    for (const t of cultureTips) {
+      expect(lessonIds.has(t.lessonId), t.id).toBe(true);
+      expect(t.options.filter((o) => o.best)).toHaveLength(1);
+    }
+    expect(new Set(cultureTips.map((t) => t.lessonId)).size).toBe(cultureTips.length);
+  });
+
   it('has unique ids', () => {
     expect(new Set(contentIds).size).toBe(contentIds.length);
   });

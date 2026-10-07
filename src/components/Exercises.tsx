@@ -8,6 +8,8 @@ import type { Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { Bi } from './Bi';
 import { castFor, Character, type CharacterId, type Mood, useTalking } from './Characters';
+import { voiceFor } from '../lib/voices';
+import { WordPicture } from '../pictures';
 import { SpeakButton } from './SpeakButton';
 
 export interface Answer {
@@ -26,11 +28,11 @@ interface Props<K extends Exercise['kind']> {
   verdict?: 'right' | 'wrong';
 }
 
-/** How a character in an exercise feels: reacts to the verdict, otherwise talks or idles. */
-function moodFor(verdict: Props<'meaning'>['verdict'], talking: boolean): Mood {
-  if (verdict === 'right') return 'happy';
+/** How a character in an exercise feels about the verdict; `calm` is the reaction without a hop. */
+function moodFor(verdict: Props<'meaning'>['verdict'], rest: Mood = 'idle', calm = false): Mood {
+  if (verdict === 'right') return calm ? 'pleased' : 'happy';
   if (verdict === 'wrong') return 'sad';
-  return talking ? 'talking' : 'idle';
+  return rest;
 }
 
 /** A colleague saying something in a speech bubble (meaning and sentence-building exercises). */
@@ -38,7 +40,7 @@ function Speaker({ who, lines, verdict }: { who: CharacterId; lines: string[]; v
   const talking = useTalking(lines);
   return (
     <span className="speaker-char">
-      <Character who={who} mood={moodFor(verdict, talking)} />
+      <Character who={who} mood={moodFor(verdict)} talking={talking} />
     </span>
   );
 }
@@ -61,7 +63,7 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
     <div className="exercise">
       <Prompt text={ui('newWord', lang)} />
       <div className="card intro-card">
-        <div className="emoji-xl" aria-hidden>{word.emoji}</div>
+        <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />
         <div className="intro-nl">
           <span lang="nl">{word.nl}</span>
           <SpeakButton text={word.nl} />
@@ -133,14 +135,14 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
 
 /** Dutch word shown → pick the English meaning. */
 export function MeaningExercise({ ex, lang, locked, onAnswer, verdict }: Props<'meaning'>) {
-  useEffect(() => { speak(ex.word.nl); }, [ex.word]);
+  useEffect(() => { speak(ex.word.nl, false, 'nl', voiceFor('bram')); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
       <div className="speaker">
         <Speaker who="bram" lines={[ex.word.nl]} verdict={verdict} />
         <div className="speaker-bubble">
-          <SpeakButton text={ex.word.nl} />
+          <SpeakButton text={ex.word.nl} voice={voiceFor('bram')} />
           <span className="speaker-nl" lang="nl">{ex.word.nl}</span>
         </div>
       </div>
@@ -193,7 +195,7 @@ export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
         onPick={(w) => speak(w.nl)}
         render={(w) => (
           <>
-            <span className="pic-emoji" aria-hidden>{w.emoji}</span>
+            <WordPicture className="pic-emoji" id={w.id} emoji={w.emoji} size={110} />
             <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{w.nl}</span>
           </>
         )}
@@ -285,7 +287,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
               disabled={done.has(w.id)}
               onClick={() => setRightPick(w.id)}
             >
-              <span className="choice-emoji" aria-hidden>{w.emoji}</span>
+              <WordPicture className="choice-emoji" id={w.id} emoji={w.emoji} size={44} />
               <Bi text={gloss(w.id, w.en, lang)} />
             </button>
           ))}
@@ -391,21 +393,24 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
   const { prompt, reply } = ex.dialogue;
   const [picked, setPicked] = useState<ChatLine | null>(null);
   const [hint, setHint] = useState(false);
-  useEffect(() => { speak(prompt.nl); }, [prompt]);
   const mine = picked && locked ? (picked.id === reply.id ? 'right' : 'wrong') : '';
   // The colleague asks; "you" are Amina. The colleague talks while the line plays.
   const them = castFor(prompt.id, ['bram', 'henk', 'jada']);
+  useEffect(() => { speak(prompt.nl, false, 'nl', voiceFor(them)); }, [prompt, them]);
   const themTalking = useTalking([prompt.nl]);
-  // "You" talk while your picked reply is read out (after a right answer).
-  const meTalking = useTalking(picked ? [picked.nl] : [], false);
+  // After a right answer it's your turn: "you" say the reply (and talk while it is read out),
+  // while the colleague listens. Before that you listen, then think about your answer.
+  const replyTurn = verdict === 'right' && picked ? [picked.nl] : [];
+  const meTalking = useTalking(replyTurn, replyTurn.length > 0);
+  const meRest: Mood = picked || themTalking ? 'idle' : 'thinking';
   return (
     <div className="exercise">
       <Prompt text={ui('completeChat', lang)} />
       <div className="chat">
         <div className="chat-row chat-them">
-          <span className="chat-char"><Character who={them} mood={moodFor(verdict, themTalking)} /></span>
+          <span className="chat-char"><Character who={them} mood={moodFor(verdict, 'idle', true)} talking={themTalking && !meTalking} /></span>
           <div className="chat-bubble">
-            <SpeakButton glyph text={prompt.nl} label={`Play: ${prompt.nl}`} />
+            <SpeakButton glyph text={prompt.nl} label={`Play: ${prompt.nl}`} voice={voiceFor(them)} />
             <button
               type="button"
               className="chat-line"
@@ -426,7 +431,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
           <div className={`chat-bubble chat-bubble-me ${mine}`} aria-live="polite">
             {picked ? <span className="chat-line" lang="nl">{picked.nl}</span> : <span className="chat-blank" aria-hidden />}
           </div>
-          <span className="chat-char"><Character who="amina" flip mood={moodFor(verdict, meTalking)} /></span>
+          <span className="chat-char"><Character who="amina" flip mood={moodFor(verdict, meRest)} talking={meTalking} /></span>
         </div>
       </div>
       <ChoiceGrid
@@ -440,6 +445,62 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
           setHint(false);
         }}
         render={(o) => <span lang="nl" className="choice-nl">{o.nl}</span>}
+      />
+    </div>
+  );
+}
+
+/** "How it works here": one Dutch workplace custom, with the sentence to use. Not graded. */
+export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
+  const { tip } = ex;
+  const talking = useTalking([tip.phrase.nl]);
+  useEffect(() => { onAnswer({ correct: true }); }, [tip, onAnswer]);
+  return (
+    <div className="exercise tip">
+      <div className="tip-badge">
+        <span className="tip-badge-emoji" aria-hidden>{tip.emoji}</span>
+        <span className="tip-badge-nl" lang="nl">Zo werkt het hier</span>
+        <Bi className="tip-badge-en" text={ui('cultureBadge', lang)} />
+      </div>
+      <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
+      <p className="tip-body"><Bi text={gloss(`${tip.id}.b`, tip.body, lang)} /></p>
+      <div className="tip-say">
+        <span className="tip-say-label"><Bi text={ui('sayThis', lang)} /></span>
+        <div className="tip-say-row">
+          <span className="tip-char"><Character who={castFor(tip.id)} talking={talking} size={96} /></span>
+          <div className="speaker-bubble tip-bubble">
+            <SpeakButton glyph text={tip.phrase.nl} label={`Play: ${tip.phrase.nl}`} voice={voiceFor(castFor(tip.id))} />
+            <span className="tip-phrase">
+              <span lang="nl" className="tip-phrase-nl">{tip.phrase.nl}</span>
+              <Bi text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** "What do you do?": pick the most usual way to handle a workplace situation. */
+export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props<'situation'>) {
+  const { tip } = ex;
+  const best = tip.options.find((o) => o.best)!;
+  return (
+    <div className="exercise situation">
+      <Prompt text={ui('whatDoYouDo', lang)} />
+      <div className="speaker">
+        <span className="speaker-char"><Character who={castFor(tip.id)} mood={moodFor(verdict, 'thinking', true)} /></span>
+        <div className="speaker-bubble situation-text">
+          <Bi text={gloss(tip.situation.id, tip.situation.en, lang)} />
+        </div>
+      </div>
+      <ChoiceGrid
+        className="choices-rows"
+        options={ex.options}
+        correctId={best.id}
+        locked={locked}
+        onAnswer={onAnswer}
+        render={(o) => <Bi text={gloss(o.id, o.en, lang)} />}
       />
     </div>
   );

@@ -52,8 +52,15 @@ export const uiEn = {
   themeDark: 'Dark',
   voice: 'Dutch voice',
   voiceAuto: 'Automatic',
-  voiceHint: 'Tap 🔊 to listen. The voices come from your phone, so the list is different on every device.',
+  voiceHint: 'Tap 🔊 to listen. The Vloertaal voices sound the same on every phone; the others come from your phone.',
   voiceNone: 'This device has no Dutch voice. You can add one in your phone settings (Text-to-speech).',
+  cultureBadge: "How it works here",
+  whatDoYouDo: "What do you do?",
+  sayThis: "Say it like this",
+  goodChoice: "Good choice!",
+  otherChoice: "Here it usually works differently",
+  cultureTips: "Workplace tips",
+  cultureTipsHint: "How things usually go at a Dutch workplace. Tap a tip to read it again.",
 } as const;
 
 export type UiKey = keyof typeof uiEn;

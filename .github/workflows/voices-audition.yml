@@ -1,0 +1,37 @@
+name: Piper voice audition
+
+# Runs when the audition script changes on a feature branch: every Dutch Piper
+# voice says one test sentence, and the MP3s are committed to docs/stemproef/piper.
+on:
+  push:
+    branches: ['claude/**']
+    paths: ['.github/workflows/voices-audition.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audition:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - run: pip install piper-tts==1.8.0
+      # Round 3: the free Coqui VITS Dutch voice (CSS10, a female reader), as a female option.
+      - run: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu && pip install coqui-tts
+      - name: Coqui CSS10 sample
+        run: |
+          mkdir -p docs/stemproef/coqui
+          tts --model_name tts_models/nl/css10/vits --text "Goedemorgen! Draag altijd je helm. Wil je koffie of thee?" --out_path /tmp/css10.wav
+          ffmpeg -loglevel error -y -i /tmp/css10.wav -ac 1 -b:a 48k docs/stemproef/coqui/nl-css10-vits.mp3
+      - name: Commit the samples
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/stemproef
+          git commit -m "Add Piper voice audition samples [skip ci]" || exit 0
+          git push

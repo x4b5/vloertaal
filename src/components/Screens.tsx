@@ -1,19 +1,23 @@
 import { Character } from './Characters';
+import { LessonCelebration } from './Celebrate';
+import { cultureTips } from '../content/culture';
 import { findItem, phrasebookIds, units } from '../content/curriculum';
 import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useState } from 'react';
-import { dutchVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
+import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
+import { VOICE_SAMPLE } from '../lib/voices';
 import { isUnlocked } from '../lib/exercises';
 import type { Progress, ThemeChoice } from '../lib/progress';
 import { Bi } from './Bi';
+import { LogoMark, Wordmark } from './Logo';
+import { unitPictures } from '../pictures';
 import {
   AlertIcon,
   AutoThemeIcon,
   BackIcon,
   BoltIcon,
   BullseyeIcon,
-  CelebrationArt,
   CheckIcon,
   ChevronIcon,
   CrownIcon,
@@ -69,7 +73,7 @@ export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void
           <Character who="henk" size={104} />
           <Character who="jada" size={104} />
         </div>
-        <h1>Vloertaal</h1>
+        <h1 className="hero-logo"><LogoMark size={56} /><Wordmark /></h1>
         <p className="tagline">{ui('appTagline').en}</p>
         <p className="tagline-nl" lang="nl">Nederlands voor op de werkvloer</p>
       </div>
@@ -88,7 +92,7 @@ export function TopBar({ streak, xp, lang, onSettings }: {
 }) {
   return (
     <header className="topbar">
-      <span className="brand"><Character who="bram" crop="head" size={32} /> Vloertaal</span>
+      <span className="brand"><LogoMark size={32} /><Wordmark /></span>
       <span className="stat" title={ui('dayStreak').en}><FlameIcon /> {streak}</span>
       <span className="stat" title="XP"><StarIcon /> {xp}</span>
       <button type="button" className="stat stat-btn" onClick={onSettings} aria-label={ui('settings').en}>
@@ -98,11 +102,12 @@ export function TopBar({ streak, xp, lang, onSettings }: {
   );
 }
 
-export function Path({ progress, lang, onStart, onPhrasebook }: {
+export function Path({ progress, lang, onStart, onPhrasebook, onTips }: {
   progress: Progress;
   lang?: HelpLanguage;
   onStart: (lessonId: string, review: boolean) => void;
   onPhrasebook: () => void;
+  onTips: () => void;
 }) {
   let n = 0;
   return (
@@ -110,6 +115,11 @@ export function Path({ progress, lang, onStart, onPhrasebook }: {
       <button type="button" className="phrase-banner" onClick={onPhrasebook}>
         <AlertIcon size={30} />
         <Bi text={ui('phrasebook', lang)} />
+        <ChevronIcon />
+      </button>
+      <button type="button" className="phrase-banner tips-banner" onClick={onTips}>
+        <span className="tips-banner-emoji" aria-hidden>💡</span>
+        <Bi text={ui('cultureTips', lang)} />
         <ChevronIcon />
       </button>
 
@@ -120,7 +130,11 @@ export function Path({ progress, lang, onStart, onPhrasebook }: {
               <div className="unit-num">Unit {u + 1} · <span lang="nl">{unit.titleNl}</span></div>
               <h2><Bi text={gloss(unit.id, unit.title, lang)} /></h2>
             </div>
-            <span className="unit-emoji" aria-hidden>{unit.emoji}</span>
+            {unitPictures[unit.id] ? (
+              <svg className="unit-emoji unit-pic" viewBox="0 0 120 120" width={64} height={64} aria-hidden focusable="false">{unitPictures[unit.id]()}</svg>
+            ) : (
+              <span className="unit-emoji" aria-hidden>{unit.emoji}</span>
+            )}
           </div>
           <ol className="nodes">
             {unit.lessons.map((lesson) => {
@@ -188,18 +202,22 @@ const THEMES: { value: ThemeChoice; key: 'themeAuto' | 'themeLight' | 'themeDark
   { value: 'dark', key: 'themeDark', Icon: MoonIcon },
 ];
 
-const SAMPLE = 'Goedemorgen! Draag altijd je helm.';
-
-/** Dutch voices load asynchronously in most browsers. */
-function useDutchVoices() {
-  const [voices, setVoices] = useState(dutchVoices);
+/** Dutch voices load asynchronously in most browsers; recorded voices arrive with voices.json. */
+function useVoices() {
+  const [device, setDevice] = useState(dutchVoices);
+  const [recorded, setRecorded] = useState(recordedVoices);
   useEffect(() => {
-    if (!speechAvailable()) return;
-    const update = () => setVoices(dutchVoices());
+    const offRecorded = onRecordedVoices(() => setRecorded(recordedVoices()));
+    setRecorded(recordedVoices()); // they may have arrived before this screen opened
+    if (!speechAvailable()) return offRecorded;
+    const update = () => setDevice(dutchVoices());
     window.speechSynthesis.addEventListener('voiceschanged', update);
-    return () => window.speechSynthesis.removeEventListener('voiceschanged', update);
+    return () => {
+      offRecorded();
+      window.speechSynthesis.removeEventListener('voiceschanged', update);
+    };
   }, []);
-  return voices;
+  return { device, recorded };
 }
 
 export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, onBack }: {
@@ -256,29 +274,33 @@ function VoicePicker({ current, lang, onPick }: {
   lang?: HelpLanguage;
   onPick: (voice: string | null) => void;
 }) {
-  const voices = useDutchVoices();
-  if (!voices.length) return <p className="warn"><Bi text={ui('voiceNone', lang)} /></p>;
-  const options = [{ uri: null, name: ui('voiceAuto', lang), detail: voices[0].name }, ...voices.map((v) => ({
-    uri: v.voiceURI,
-    name: { en: v.name.replace(/\s*\(.*\)\s*$/, '') },
-    detail: v.lang.replace('_', '-').toLowerCase() === 'nl-be' ? 'Vlaams (België)' : 'Nederland',
-  }))];
+  const { device, recorded } = useVoices();
+  if (!recorded.length && !device.length) return <p className="warn"><Bi text={ui('voiceNone', lang)} /></p>;
+  const options: { ref: string | null; name: Bilingual; detail: string }[] = [
+    { ref: null, name: ui('voiceAuto', lang), detail: recorded[0]?.label ?? device[0]?.name ?? '' },
+    ...recorded.map((v) => ({ ref: `piper:${v.key}`, name: { en: v.label }, detail: 'Vloertaal · Nederland' })),
+    ...device.map((v) => ({
+      ref: v.voiceURI,
+      name: { en: v.name.replace(/\s*\(.*\)\s*$/, '') },
+      detail: v.lang.replace('_', '-').toLowerCase() === 'nl-be' ? 'Vlaams (België)' : 'Nederland',
+    })),
+  ];
   return (
     <>
       <p className="muted small"><Bi text={ui('voiceHint', lang)} /></p>
       <ul className="voices" role="radiogroup" aria-label={ui('voice').en}>
         {options.map((o) => {
-          const picked = current === o.uri;
+          const picked = current === o.ref;
           return (
-            <li key={o.uri ?? 'auto'} className={`voice-row ${picked ? 'picked' : ''}`}>
+            <li key={o.ref ?? 'auto'} className={`voice-row ${picked ? 'picked' : ''}`}>
               <button
                 type="button"
                 className="voice-pick"
                 role="radio"
-                aria-checked={Boolean(picked)}
+                aria-checked={picked}
                 onClick={() => {
-                  setPreferredVoice(o.uri);
-                  onPick(o.uri);
+                  setPreferredVoice(o.ref);
+                  onPick(o.ref);
                 }}
               >
                 <span className="voice-name"><Bi text={o.name} /></span>
@@ -289,7 +311,7 @@ function VoicePicker({ current, lang, onPick }: {
                 type="button"
                 className="speak speak-md"
                 aria-label={`Listen: ${o.name.en}`}
-                onClick={() => speak(SAMPLE, false, 'nl', o.uri ?? undefined)}
+                onClick={() => speak(VOICE_SAMPLE, false, 'nl', o.ref)}
               >
                 <SpeakerIcon size={28} />
               </button>
@@ -297,6 +319,13 @@ function VoicePicker({ current, lang, onPick }: {
           );
         })}
       </ul>
+      {recorded.length > 0 && (
+        <p className="muted small credits">
+          Vloertaal voices: {recorded.map((v) => v.label).join(', ')}, made with Piper (open source)
+          {recorded.some((v) => v.license) && <> · {[...new Set(recorded.map((v) => v.license).filter(Boolean))].join(', ')}</>}.
+          {' '}Women in the app speak with your phone's voice.
+        </p>
+      )}
     </>
   );
 }
@@ -310,13 +339,13 @@ function praiseFor(pct: number): { key: 'accPerfect' | 'accGreat' | 'accGood' | 
 }
 
 /** Counts a number up from 0 (skipped when the learner prefers less motion). */
-function useCountUp(target: number, ms = 900) {
+function useCountUp(target: number, delay = 350, ms = 900) {
   const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
   const [value, setValue] = useState(still ? target : 0);
   useEffect(() => {
     if (still) return setValue(target);
     let raf = 0;
-    const t0 = performance.now() + 350;
+    const t0 = performance.now() + delay;
     const tick = (now: number) => {
       const k = Math.min(1, Math.max(0, (now - t0) / ms));
       setValue(Math.round(target * (1 - (1 - k) ** 3)));
@@ -324,20 +353,22 @@ function useCountUp(target: number, ms = 900) {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [target, ms, still]);
+  }, [target, delay, ms, still]);
   return value;
 }
 
-function StatCard({ tone, label, icon, value, final }: {
+function StatCard({ tone, label, icon, value, final, done }: {
   tone: 'gold' | 'green' | 'orange';
   label: Bilingual;
   icon: React.ReactNode;
   value: string;
   /** Screen readers hear the end value, not the count-up. */
   final: string;
+  /** The count-up has landed: the value gives a little pop. */
+  done: boolean;
 }) {
   return (
-    <div className={`stat-card stat-${tone}`} role="group" aria-label={`${label.en} ${final}`}>
+    <div className={`stat-card stat-${tone} ${done ? 'stat-done' : ''}`} role="group" aria-label={`${label.en} ${final}`}>
       <div className="stat-card-head"><Bi text={label} /></div>
       <div className="stat-card-body" aria-hidden>
         {icon}
@@ -355,8 +386,9 @@ export function Result({ accuracy, xp, lang, onDone }: {
 }) {
   const pct = Math.round(accuracy * 100);
   const praise = praiseFor(pct);
-  const shownXp = useCountUp(xp);
-  const shownPct = useCountUp(pct);
+  // Each number starts counting once its card has popped in.
+  const shownXp = useCountUp(xp, 700, 700);
+  const shownPct = useCountUp(pct, 850, 800);
   // Enter continues, as after every exercise (the screen has no other input).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -368,17 +400,18 @@ export function Result({ accuracy, xp, lang, onDone }: {
   return (
     <div className="player result-screen">
       <main className="player-body result">
-        <CelebrationArt />
+        <LessonCelebration />
         <h1 className="result-title"><Bi text={ui('lessonComplete', lang)} /></h1>
         <p className="result-nl" lang="nl">Les voltooid!</p>
         <div className="result-stats">
-          <StatCard tone="gold" label={ui('xpTotal', lang)} icon={<BoltIcon size={30} />} value={String(shownXp)} final={`${xp} XP`} />
+          <StatCard tone="gold" label={ui('xpTotal', lang)} icon={<BoltIcon size={30} />} value={String(shownXp)} final={`${xp} XP`} done={shownXp === xp} />
           <StatCard
             tone={praise.tone}
             label={ui(praise.key, lang)}
             icon={<BullseyeIcon size={30} />}
             value={`${shownPct}%`}
             final={`${ui('accuracy').en} ${pct}%`}
+            done={shownPct === pct}
           />
         </div>
       </main>
@@ -391,6 +424,44 @@ export function Result({ accuracy, xp, lang, onDone }: {
           </div>
         </div>
       </footer>
+    </div>
+  );
+}
+
+/** All "Zo werkt het hier" tips, to read again. Tips of lessons not reached yet stay hidden. */
+export function Tips({ progress, lang, onBack }: { progress: Progress; lang?: HelpLanguage; onBack: () => void }) {
+  const [open, setOpen] = useState<string | null>(null);
+  const visible = cultureTips.filter((t) => isUnlocked(t.lessonId, progress.completed));
+  return (
+    <div className="screen">
+      <div className="screen-head">
+        <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+        <h1><Bi text={ui('cultureTips', lang)} /></h1>
+      </div>
+      <p className="muted"><Bi text={ui('cultureTipsHint', lang)} /></p>
+      <ul className="tips-list">
+        {visible.map((t) => (
+          <li key={t.id} className={`tips-item ${open === t.id ? 'open' : ''}`}>
+            <button type="button" className="tips-head" aria-expanded={open === t.id} onClick={() => setOpen(open === t.id ? null : t.id)}>
+              <span className="tips-emoji" aria-hidden>{t.emoji}</span>
+              <Bi text={gloss(t.id, t.title, lang)} />
+              <ChevronIcon />
+            </button>
+            {open === t.id && (
+              <div className="tips-body">
+                <p><Bi text={gloss(`${t.id}.b`, t.body, lang)} /></p>
+                <div className="phrase">
+                  <SpeakButton text={t.phrase.nl} />
+                  <div className="phrase-text">
+                    <span className="phrase-nl" lang="nl">{t.phrase.nl}</span>
+                    <Bi text={gloss(t.phrase.id, t.phrase.en, lang)} />
+                  </div>
+                </div>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
