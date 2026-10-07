@@ -4,6 +4,7 @@ import { getHelpLanguage } from './i18n';
 import type { LangCode } from './i18n/types';
 import { setPreferredVoice } from './lib/audio';
 import { applyTheme } from './lib/theme';
+import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { Onboarding, Path, Phrasebook, Result, Settings, TopBar } from './components/Screens';
 import { Milestone } from './components/Milestone';
@@ -16,11 +17,19 @@ type View =
   | { name: 'result'; accuracy: number; xp: number; streakUp?: number }
   | { name: 'streak'; streak: number }
   | { name: 'phrasebook' }
-  | { name: 'settings' };
+  | { name: 'settings' }
+  | { name: 'admin' };
 
 export default function App() {
   const [progress, setProgress] = useState(loadProgress);
-  const [view, setView] = useState<View>({ name: 'home' });
+  const [view, setView] = useState<View>(adminRequested() ? { name: 'admin' } : { name: 'home' });
+
+  // The owner's hidden page opens with #beheer in the address.
+  useEffect(() => {
+    const onHash = () => { if (adminRequested()) setView({ name: 'admin' }); };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
   const lang = getHelpLanguage(progress.helpLang);
 
   useEffect(() => { saveProgress(progress); }, [progress]);
@@ -29,6 +38,10 @@ export default function App() {
   useEffect(() => { window.scrollTo(0, 0); }, [view.name]);
 
   const setLang = (code: LangCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
+
+  if (view.name === 'admin') {
+    return <Admin onBack={() => { history.replaceState(null, '', location.pathname); setView({ name: 'home' }); }} />;
+  }
 
   if (!progress.onboarded) return <Onboarding onDone={setLang} />;
 
@@ -102,3 +115,6 @@ export default function App() {
   }
 }
 
+function adminRequested(): boolean {
+  return location.hash === '#beheer';
+}

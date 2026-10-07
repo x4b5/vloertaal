@@ -1009,3 +1009,9 @@ h2 { font-size: 1.25rem; }
   .streak-hero { width: 260px; }
   .cel-scene { width: 340px; }
 }
+
+/* Hidden admin page (#beheer) */
+.admin-card { border: 2px solid var(--line); border-radius: var(--radius); padding: 20px; margin: 12px 0 20px; }
+.admin-big { font-size: 3rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
+.admin-bar { margin: 14px 0; }
+.admin code { background: var(--input-bg); padding: 1px 6px; border-radius: 6px; }
