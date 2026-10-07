@@ -252,7 +252,7 @@ export function About({ lang, onBack }: { lang?: HelpLanguage; onBack: () => voi
         <ul className="about-credits muted small">
           {recorded.map((v) => (
             <li key={v.key}>
-              Voice “{v.label}”: Piper{v.dataset ? ` · ${v.dataset}` : ''}{v.license ? ` · ${v.license}` : ''}
+              Voice “{v.label}”: {v.engine ?? 'Piper'}{v.dataset ? ` · ${v.dataset}` : ''}{v.license ? ` · ${v.license}` : ''}
               {v.modelCard && <> · <a href={v.modelCard} target="_blank" rel="noreferrer">model card</a></>}
             </li>
           ))}
@@ -421,9 +421,13 @@ function VoicePicker({ current, lang, onPick }: {
       </ul>
       {recorded.length > 0 && (
         <p className="muted small credits">
-          Vloertaal voices: {recorded.map((v) => v.label).join(', ')}, made with Piper (open source)
+          Vloertaal voices:{' '}
+          {(['ElevenLabs', 'Piper'] as const)
+            .map((engine) => [engine, recorded.filter((v) => (v.engine ?? 'Piper') === engine)] as const)
+            .filter(([, vs]) => vs.length)
+            .map(([engine, vs]) => `${vs.map((v) => v.label).join(', ')} (${engine === 'Piper' ? 'Piper, open source' : engine})`)
+            .join('; ')}
           {recorded.some((v) => v.license) && <> · {[...new Set(recorded.map((v) => v.license).filter(Boolean))].join(', ')}</>}.
-          {' '}Women in the app speak with your phone's voice.
         </p>
       )}
     </>

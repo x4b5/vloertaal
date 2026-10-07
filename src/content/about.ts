@@ -32,7 +32,7 @@ export const aboutSections: AboutSection[] = [
   },
   {
     id: 'a.voices', emoji: '🔊', title: 'The voices',
-    body: 'The Dutch voices of the men are made with Piper, free open-source speech software. The women in the app speak with the voice of your own phone or computer.',
+    body: 'The men in the app speak with the voice of Berend, the women with the voice of Ariël. These Dutch voices were recorded with ElevenLabs. If a sentence has no recording yet, you hear Piper (free open-source speech software) or the voice of your own phone or computer.',
   },
 ];
 
