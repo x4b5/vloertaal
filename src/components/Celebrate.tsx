@@ -424,7 +424,7 @@ const BRAM_CHEER: ActionPose = {
   armL: { a: -170, e: -150, hand: 'open', flip: true },
   armR: { a: -62, e: -100, hand: 'fist' },
   legL: { t: 112, s: 80 },
-  legR: { t: 66, s: 24 },
+  legR: { t: 52, s: 12 },
   facing: -1,
   behind: ['legR'],
 };
