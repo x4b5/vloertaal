@@ -1274,6 +1274,29 @@ h2 { font-size: 1.25rem; }
 .tip-bubble::before { top: auto; bottom: 22px; }
 .tip-phrase { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .tip-phrase-nl { font-weight: 700; font-size: 1.2rem; }
+/* Phones: a tip is a lot of text. Keep it compact so the "Say it like this" label (the point
+   of the tip) is on screen above the sticky Continue bar at 390×844 without scrolling. */
+@media (max-width: 759px) {
+  .tip-badge { gap: 8px; margin-bottom: 2px; }
+  .tip-badge-emoji { width: 34px; height: 34px; font-size: 1.1rem; border-width: 2px; border-radius: 6px; }
+  .tip-badge-nl { font-size: 1.05rem; }
+  .tip-badge-text { gap: 1px; }
+  .tip-badge-en { flex-direction: row; flex-wrap: wrap; gap: 0 6px; font-size: 0.8rem; }
+  .tip-badge-en .bi-help { font-size: 1em; }
+  .tip-badge-en .bi-help::before { content: '· '; color: var(--ink-3); }
+  .tip-title { font-size: 1.35rem; line-height: 1.2; margin: 6px 0 8px; }
+  .tip-title .bi-help { font-size: 0.7em; }
+  .tip-body { font-size: 0.98rem; line-height: 1.42; margin: 0 0 16px; }
+  .tip-body .bi { gap: 6px; }
+  .tip-body .bi-help { font-size: 0.88em; line-height: 1.4; }
+  .tip-say { padding: 10px 12px 12px; box-shadow: 4px 4px 0 var(--label-shadow); }
+  .tip-say-label { margin-bottom: 8px; }
+  .tip-say-row { gap: 6px; }
+  .tip-char .ch { height: 60px; }
+  .tip-bubble { padding: 8px 12px 8px 8px; gap: 8px; }
+  .tip-phrase-nl { font-size: 1.1rem; line-height: 1.25; }
+  .tip-phrase .bi { font-size: 0.95rem; }
+}
 
 /* "What do you do?" situation */
 .situation-text { font-weight: 700; font-size: 1.05rem; line-height: 1.45; }

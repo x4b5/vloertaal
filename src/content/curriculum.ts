@@ -66,7 +66,7 @@ export const units: Unit[] = [
     title: 'Asking for help',
     titleNl: 'Hulp vragen',
     emoji: '🙋',
-    color: '#1cb0f6',
+    color: '#c8955b',
     lessons: [
       {
         id: 'l.understand',
@@ -98,7 +98,7 @@ export const units: Unit[] = [
     title: 'Safety first',
     titleNl: 'Veiligheid',
     emoji: '🦺',
-    color: '#58cc02',
+    color: '#ffc414',
     lessons: [
       {
         id: 'l.gear',
@@ -153,7 +153,7 @@ export const units: Unit[] = [
     title: 'In the warehouse',
     titleNl: 'In het magazijn',
     emoji: '📦',
-    color: '#ce82ff',
+    color: '#7e5428',
     lessons: [
       {
         id: 'l.things',
@@ -208,7 +208,7 @@ export const units: Unit[] = [
     title: 'Time and schedule',
     titleNl: 'Tijd en rooster',
     emoji: '⏰',
-    color: '#ff4b4b',
+    color: '#c2412d',
     lessons: [
       {
         id: 'l.shift',
@@ -263,7 +263,7 @@ export const units: Unit[] = [
     title: 'In the greenhouse',
     titleNl: 'In de kas',
     emoji: '🍅',
-    color: '#00b894',
+    color: '#137a55',
     lessons: [
       {
         id: 'l.harvest',

@@ -6,12 +6,12 @@ export function FlameArt({ face = false }: { face?: boolean }) {
     <g>
       <path
         d="M30 3c2 9 14 15 21 25 5 7 7 13 7 19 0 14-11 23-26 23S6 61 6 47c0-8 3-14 9-20 1 5 3 8 7 10-2-12 2-24 8-34z"
-        fill="#ff9600"
+        fill="#ff7a00"
       />
-      <path d="M14 44c-1 4 0 9 3 12" fill="none" stroke="#ffb340" strokeWidth="3" strokeLinecap="round" />
+      <path d="M14 44c-1 4 0 9 3 12" fill="none" stroke="#ffa64d" strokeWidth="3" strokeLinecap="round" />
       <path
         d="M32 68c-9 0-15-6-15-14 0-7 5-11 9-17 1 4 3 6 6 7 0-5 2-9 5-12 3 6 10 11 10 22 0 8-6 14-15 14z"
-        fill="#ffc800"
+        fill="#ffc414"
       />
       <path d="M32 66c-5 0-8-3-8-7 0-4 3-6 5-9 2 3 4 4 6 4 1-1 2-3 2-5 2 3 3 6 3 10 0 4-3 7-8 7z" fill="#fff3b0" />
       {face && (

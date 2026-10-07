@@ -254,8 +254,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         <div className="ex-tag">
           <span className="tag" lang="nl">{KIND_TAG[ex.kind]}</span>
           <span className="ex-count">{count} / {initial.length}</span>
-          {/* The picture exercise introduces a word: say so in English and the help language too. */}
-          {ex.kind === 'dutch' && <Bi className="ex-tag-note" text={ui('newWord', lang)} />}
+          {/* New-word exercises: translate the Dutch tag into English and the help language. */}
+          {(ex.kind === 'dutch' || ex.kind === 'intro') && <Bi className="ex-tag-note" text={ui('newWord', lang)} />}
         </div>
         {body}
       </main>

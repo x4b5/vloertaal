@@ -102,11 +102,11 @@ const LOOKS: Record<CharacterId, Look> = {
         <rect x="82" y="48" width="5" height="14" rx="2.5" fill="#6b3f22" />
         {/* Hard hat (sits high, so the brows show) */}
         <g transform="translate(0 -4)">
-        <path d="M30 50C30 26 43 13 60 13C77 13 90 26 90 50Z" fill="#ffc800" />
-        <path d="M75 17C85 24 90 36 90 50H80C80 36 79 26 75 17Z" fill="#e5a400" opacity=".55" />
+        <path d="M30 50C30 26 43 13 60 13C77 13 90 26 90 50Z" fill="#ffc414" />
+        <path d="M75 17C85 24 90 36 90 50H80C80 36 79 26 75 17Z" fill="#e0a800" opacity=".55" />
         <rect x="55" y="13" width="10" height="35" rx="5" fill="#ffd94d" />
         <path d="M37 40Q39 27 49 20" fill="none" stroke="#fff3b0" strokeWidth="3.5" strokeLinecap="round" />
-        <rect x="23" y="45" width="74" height="9" rx="4.5" fill="#e5a400" />
+        <rect x="23" y="45" width="74" height="9" rx="4.5" fill="#e0a800" />
         <rect x="23" y="45" width="74" height="3" rx="1.5" fill="#ffd94d" opacity=".6" />
         </g>
       </>
@@ -192,7 +192,7 @@ const LOOKS: Record<CharacterId, Look> = {
           <rect x="20" y="118" width="80" height="6" fill="#ffd400" />
           <path d="M60 108V140" stroke="#1a3860" strokeWidth="2" />
           {/* Pen in the pocket */}
-          <rect x="70" y="101" width="2.6" height="8" rx="1.2" fill="#ff4b4b" />
+          <rect x="70" y="101" width="2.6" height="8" rx="1.2" fill="#c2412d" />
           <rect x="66" y="106" width="12" height="9" rx="2" fill="#1d3f6e" />
           <ellipse cx="104" cy="122" rx="26" ry="34" fill="#000" opacity=".12" />
         </g>
@@ -238,8 +238,8 @@ const LOOKS: Record<CharacterId, Look> = {
           <path d="M45 30L49 30" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" />
         </g>
         {/* Gold hoops */}
-        <circle cx="34" cy="72" r="3.2" fill="none" stroke="#ffc800" strokeWidth="2" />
-        <circle cx="86" cy="72" r="3.2" fill="none" stroke="#ffc800" strokeWidth="2" />
+        <circle cx="34" cy="72" r="3.2" fill="none" stroke="#ffc414" strokeWidth="2" />
+        <circle cx="86" cy="72" r="3.2" fill="none" stroke="#ffc414" strokeWidth="2" />
       </>
     ),
     torso: (clip) => (
@@ -247,12 +247,12 @@ const LOOKS: Record<CharacterId, Look> = {
         <path d={TORSOS.jada} fill="#ffc929" />
         <g clipPath={`url(#${clip})`}>
           {/* Blue dungarees over a light T-shirt */}
-          <path d="M40 112Q40 108 44 108H76Q80 108 80 112V140H40Z" fill="#1cb0f6" />
-          <rect x="20" y="124" width="80" height="20" fill="#1cb0f6" />
-          <path d="M38 95L44 110M82 95L76 110" stroke="#1cb0f6" strokeWidth="6" strokeLinecap="round" />
-          <circle cx="44" cy="111" r="2.6" fill="#ffc800" />
-          <circle cx="76" cy="111" r="2.6" fill="#ffc800" />
-          <rect x="52" y="113" width="16" height="9" rx="2" fill="#1899d6" />
+          <path d="M40 112Q40 108 44 108H76Q80 108 80 112V140H40Z" fill="#1592db" />
+          <rect x="20" y="124" width="80" height="20" fill="#1592db" />
+          <path d="M38 95L44 110M82 95L76 110" stroke="#1592db" strokeWidth="6" strokeLinecap="round" />
+          <circle cx="44" cy="111" r="2.6" fill="#ffc414" />
+          <circle cx="76" cy="111" r="2.6" fill="#ffc414" />
+          <rect x="52" y="113" width="16" height="9" rx="2" fill="#0f73ae" />
           <path d="M53 97Q60 102 67 97" fill="none" stroke="#e0a800" strokeWidth="2.4" strokeLinecap="round" />
           <ellipse cx="104" cy="122" rx="26" ry="34" fill="#000" opacity=".1" />
         </g>
@@ -525,7 +525,7 @@ function PropArt({ prop }: { prop: Prop }) {
           <path d="M-2 -9H15L14 8Q13.6 10.4 11 10.4H2Q-0.6 10.4 -1 8Z" fill="#f4f7f9" />
           <path d="M10.6 -9H15L14 8Q13.6 10.4 11 10.4H9.6Q11.6 2 10.6 -9Z" fill="#cfd8de" />
           <path d="M15 -5Q20.4 -5 20.4 0Q20.4 5 14.4 5" fill="none" stroke="#dfe6ec" strokeWidth="2.6" />
-          <rect x="-1.6" y="-3.6" width="16.2" height="3.4" fill="#ff4b4b" />
+          <rect x="-1.6" y="-3.6" width="16.2" height="3.4" fill="#c2412d" />
           <ellipse cx="6.5" cy="-9" rx="8.5" ry="2.2" fill="#6b3f22" />
           <ellipse cx="6.5" cy="-9" rx="8.5" ry="2.2" fill="none" stroke="#f4f7f9" strokeWidth="1.2" />
           <path d="M3.6 -13.4Q2 -16.6 4 -19.4M9.4 -13.8Q7.8 -17.2 9.8 -20" fill="none" stroke="#c9d3da" strokeWidth="1.5" strokeLinecap="round" opacity=".8" />
@@ -558,7 +558,7 @@ function PropArt({ prop }: { prop: Prop }) {
           <path d="M-4 -12Q-4 -15 -1 -15H6Q9 -15 9 -12V-4Q9 -2 7 -1L4 1V8H-1V-1Q-4 -2 -4 -5Z" fill="#3c4a56" />
           <path d="M5 -15H6Q9 -15 9 -12V-4Q9 -2 7 -1L4 1V8H2.6V0L6 -2.6Z" fill="#26313a" />
           <path d="M-1 0H4V8H-1Z" fill="#ff8a1f" />
-          <rect x="-2" y="-13" width="9" height="3.6" rx="1.2" fill="#ff4b4b" />
+          <rect x="-2" y="-13" width="9" height="3.6" rx="1.2" fill="#c2412d" />
           <rect x="-0.6" y="-12.2" width="3" height="1.2" rx=".6" fill="#ffb3b3" />
         </g>
       );
@@ -810,9 +810,9 @@ export function CastHead({ who, expr = 'joy', squint = false, blink, bold = fals
 const BOLD_FRONT: Partial<Record<CharacterId, React.ReactNode>> = {
   bram: (
     <g transform="translate(0 -4)">
-      <path d="M30 41C30 17 43 4 60 4C77 4 90 17 90 41Z" fill="#ffc800" />
-      <path d="M77 9C86 17 90 28 90 41H79C79 29 79 18 77 9Z" fill="#e5a400" opacity=".6" />
-      <rect x="21" y="34" width="78" height="10" rx="5" fill="#e5a400" />
+      <path d="M30 41C30 17 43 4 60 4C77 4 90 17 90 41Z" fill="#ffc414" />
+      <path d="M77 9C86 17 90 28 90 41H79C79 29 79 18 77 9Z" fill="#e0a800" opacity=".6" />
+      <rect x="21" y="34" width="78" height="10" rx="5" fill="#e0a800" />
     </g>
   ),
 };

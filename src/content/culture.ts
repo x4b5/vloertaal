@@ -216,7 +216,7 @@ export const teamworkUnit: Unit = {
   title: 'Working together',
   titleNl: 'Samenwerken',
   emoji: '🤝',
-  color: '#ff9600',
+  color: '#1e2226',
   lessons: [
     {
       id: 'l.speakup',
