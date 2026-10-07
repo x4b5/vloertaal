@@ -198,7 +198,7 @@ export function Path({ progress, lang, onStart, onPhrasebook, onTips, onAbout }:
                         <Bi className="bay-title" text={gloss(lesson.id, lesson.title, lang)} />
                         {state === 'done' && (
                           <span className="bay-status">
-                            <span lang="nl">klaar</span> · <span className="bay-again">{ui('practice').en} ›</span>
+                            <span lang="nl">klaar</span> · <span className="bay-again">{ui('practice').en}</span>
                           </span>
                         )}
                         {state === 'now' && (

@@ -288,7 +288,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
                 {(pairLine || whyLine) && <hr className="feedback-rule" />}
                 {!answer.correct && sol.text && ex.kind !== 'situation' && (
                   <div className="feedback-kicker">
-                    <Bi text={{ ...ui('correctAnswer', lang), en: `${ui('correctAnswer', lang).en}:` }} />
+                    <Bi text={ui('correctAnswer', lang)} />
                   </div>
                 )}
                 {pairLine}{whyLine}

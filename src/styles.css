@@ -225,52 +225,152 @@ h2 { font-size: 1.25rem; }
   background: var(--tag-bg); color: var(--tag-ink); padding: 1px 7px; border-radius: 4px;
 }
 
-/* Top bar */
+/* Top bar: logo tile, outlined chips (streak, XP) and the help-language chip (opens Settings). */
 .topbar {
   position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 8px;
-  padding: 10px 16px; background: var(--bg); border-bottom: 2px solid var(--line);
+  padding: 12px 16px; background: var(--bg);
 }
-.brand { font-weight: 700; color: var(--ink); margin-right: auto; font-size: 1.1rem; }
-.stat { font-weight: 700; padding: 6px 8px; border-radius: 10px; white-space: nowrap; }
-.stat-btn { background: none; border: 2px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 8px; margin-inline-end: auto; font-weight: 700; color: var(--ink); font-size: 1.25rem; }
+.topbar-wordmark { display: none; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 6px 10px;
+  background: var(--card); border: 2.5px solid var(--edge); border-radius: 10px;
+  color: var(--ink); white-space: nowrap; font-weight: 700;
+}
+.chip-num { font-size: 1.05rem; font-variant-numeric: tabular-nums; }
+.chip-unit { font-size: 0.8rem; font-weight: 500; color: var(--muted); }
+.chip-lang { margin-inline-start: auto; gap: 4px; }
+.chip-lang:hover { background: var(--concrete-2); }
+.chip-code { font-size: 0.95rem; letter-spacing: 0.03em; }
+@media (max-width: 370px) { .chip-unit { display: none; } }
+@media (min-width: 560px) { .topbar-wordmark { display: inline; } .brand { margin-inline-end: 8px; } }
 
-/* Learning path */
-.path { padding: 16px 16px 80px; }
-.phrase-banner {
-  width: 100%; display: flex; align-items: center; gap: 12px; text-align: start;
-  padding: 14px 16px; margin-bottom: 8px; font-weight: 700;
-  background: var(--red-bg); border: 2px solid var(--red-line); border-radius: var(--radius); box-shadow: 0 4px 0 var(--red-line);
+/* Learning path: the warehouse aisle. Units are ink signs, lessons are bays along a track. */
+.path { padding: 8px 16px 80px; }
+/* Phrasebook / tips entry points (also used as banners on the Settings page). */
+.entries { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-bottom: 8px; }
+.entry, .phrase-banner {
+  width: 100%; display: flex; align-items: center; gap: 12px; text-align: start; min-height: 60px;
+  padding: 8px 12px; font-weight: 700; color: var(--ink);
+  background: var(--card); border: 2.5px solid var(--edge); border-radius: var(--radius);
 }
+.entry .bi, .phrase-banner .bi { flex: 1; min-width: 0; font-size: 0.95rem; line-height: 1.25; }
+.entry .bi-help { font-size: 0.85em; }
+.entry > .icon:last-child { color: var(--ink-3); }
+.entry:hover, .phrase-banner:hover { background: color-mix(in srgb, var(--card) 70%, var(--concrete-2)); }
+.entry-icon {
+  flex: none; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 8px;
+}
+.entry-alert { box-shadow: inset 7px 0 0 var(--red); padding-inline-start: 16px; }
+.entry-alert .entry-icon { background: var(--red-bg); }
+.entry-tips { box-shadow: inset 7px 0 0 var(--yellow); padding-inline-start: 16px; }
+.entry-tips .entry-icon { background: var(--tag-bg); }
+.entry-emoji { font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; font-size: 1.4rem; line-height: 1; }
 .phrase-banner > span:first-child { font-size: 1.6rem; }
-.phrase-banner .bi { flex: 1; }
-.unit { margin-top: 24px; }
+
+.unit { margin-top: 20px; }
+/* Hazard tape between units. */
+.hazard {
+  height: 14px; margin: 30px -16px 24px;
+  background: repeating-linear-gradient(-45deg, var(--yellow) 0 12px, #1e2226 12px 24px);
+}
 .unit-head {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  padding: 14px 18px; border-radius: var(--radius); color: #fff;
-  background: var(--unit); box-shadow: 0 4px 0 color-mix(in srgb, var(--unit) 75%, #000);
+  display: flex; align-items: center; gap: 14px; padding: 14px 16px;
+  background: #1e2226; color: #fffdf8; border: 3px solid var(--edge); border-radius: var(--radius);
 }
-.unit-head h2 { margin: 2px 0 0; }
-.unit-head .bi-help { color: rgba(255, 255, 255, 0.9); }
-.unit-num { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; opacity: 0.9; letter-spacing: 0.04em; }
-.unit-emoji { font-size: 2.6rem; }
-.nodes { list-style: none; margin: 0; padding: 20px 0 0; display: flex; flex-direction: column; gap: 22px; }
-.node-row {
-  display: flex; align-items: center; gap: 16px;
-  padding-left: calc(22% + var(--offset) * 40px);
+.unit-num {
+  flex: none; display: grid; place-items: center; min-width: 64px; height: 58px; padding: 4px 6px 0;
+  border: 3px solid var(--yellow); border-radius: 6px; color: var(--yellow);
+  font-family: var(--stencil); font-weight: 800; font-size: 2.6rem; line-height: 1;
 }
-.node {
-  flex: none; width: 76px; height: 70px; border-radius: 50%; border: none; font-size: 1.8rem; font-weight: 700; color: #fff;
+.unit-titles { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.unit-head h2 { margin: 0; font-size: 1.35rem; line-height: 1.2; }
+.unit-nl { color: #d9d4cb; font-size: 1rem; }
+.unit-head .bi-help { color: #c9c4bb; font-size: 0.9rem; margin-top: 2px; }
+.unit-lock { flex: none; color: var(--ink-3); }
+.unit-locked .unit-head { background: var(--card); color: var(--ink); border-color: var(--line); }
+.unit-locked .unit-num { border-color: var(--ink-3); color: var(--ink-3); }
+.unit-locked .unit-nl, .unit-locked .unit-head .bi-help { color: var(--muted); }
+
+/* The aisle: a concrete track with yellow edge lines and an ink centre line; a marker per bay. */
+.bays {
+  position: relative; list-style: none; margin: 0; padding: 26px 0 6px;
+  display: flex; flex-direction: column; gap: 18px;
 }
-.node-open {
-  background: var(--unit); box-shadow: 0 7px 0 color-mix(in srgb, var(--unit) 70%, #000);
-  animation: pulse 1.8s ease-in-out infinite;
+.bays::before {
+  content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 56px;
+  border-inline: 5px solid var(--yellow);
+  background: linear-gradient(to right, transparent calc(50% - 1.5px), var(--ink-3) calc(50% - 1.5px) calc(50% + 1.5px), transparent calc(50% + 1.5px)), var(--track);
 }
-.node-done { background: #ffc800; box-shadow: 0 7px 0 #e0a800; }
-.node-locked { background: var(--line); box-shadow: 0 7px 0 var(--locked-shadow); color: var(--faint); font-size: 1.4rem; }
-.node:active:not(:disabled) { transform: translateY(5px); box-shadow: none; }
-.node-label { display: flex; flex-direction: column; font-weight: 700; min-width: 0; }
-.node-cta { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--unit); margin-top: 2px; }
-@keyframes pulse { 50% { transform: scale(1.06); } }
+.unit-locked .bays::before { border-color: color-mix(in srgb, var(--yellow) 45%, var(--track)); }
+.bay { position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 18px; align-items: center; }
+.bay-marker {
+  position: relative; z-index: 1; justify-self: center; display: grid; place-items: center;
+  width: 44px; height: 44px; border-radius: 50%;
+  font-family: var(--stencil); font-weight: 800; font-size: 1.5rem; line-height: 1; padding-top: 2px;
+}
+.bay-done .bay-marker { background: #1e2226; color: var(--yellow); border: 2.5px solid var(--edge); padding: 0; }
+.bay-now .bay-marker {
+  background: var(--yellow); color: #1e2226; border: 3px solid #1e2226;
+  box-shadow: 0 0 0 7px color-mix(in srgb, var(--yellow) 35%, transparent);
+}
+.bay-locked .bay-marker { background: var(--card); color: var(--ink-3); border: 2.5px dashed var(--ink-3); }
+
+/* Bay cards: printed labels with a stencil tab; connected to the track by a short ink line. */
+.bay-card {
+  position: relative; display: flex; align-items: center; gap: 12px; width: 100%; min-height: 92px;
+  padding: 30px 14px 14px; text-align: start; color: var(--ink);
+  background: var(--card); border: 3px solid var(--edge); border-radius: var(--radius);
+}
+.bay-card::before {
+  content: ''; position: absolute; top: 50%; right: 100%; width: 24px; height: 3px; margin-top: -1.5px;
+  background: var(--edge);
+}
+.bay-tab {
+  position: absolute; top: -3px; left: -3px; padding: 3px 10px 1px;
+  background: #1e2226; color: var(--yellow); border-radius: var(--radius) 0 8px 0;
+  font-family: var(--stencil); font-weight: 800; font-size: 1.05rem; letter-spacing: 0.05em; line-height: 1.2;
+}
+.bay-text { flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.bay-title { font-size: 1.1rem; font-weight: 700; line-height: 1.25; }
+.bay-title .bi-help { font-weight: 400; }
+.bay-pic { flex: none; width: 56px; height: 56px; font-size: 44px; }
+/* Done: ink-bordered label, green check; still tappable to practise again. */
+.bay-done .bay-card { padding-inline-end: 52px; }
+.bay-done .bay-card:hover { background: color-mix(in srgb, var(--card) 75%, var(--concrete-2)); }
+.bay-status { font-size: 0.85rem; color: var(--muted); }
+.bay-again { white-space: nowrap; color: var(--ink); font-weight: 600; text-decoration: underline dotted var(--ink-3); text-underline-offset: 3px; }
+.bay-check {
+  position: absolute; top: 10px; right: 10px; display: grid; place-items: center; width: 34px; height: 34px;
+  border: 3px solid var(--green); border-radius: 50%; color: var(--green);
+}
+/* Now: safety-yellow label with Bram and a dark Start button. Colours fixed in both themes. */
+.bay-now .bay-card {
+  background: var(--yellow); color: #1e2226; border-color: #1e2226; min-height: 170px;
+  padding: 36px 128px 16px 18px; overflow: hidden;
+}
+.bay-now .bay-card::before { background: #1e2226; }
+.bay-now .bay-card:hover { background: #ffcd3a; }
+.bay-now .bay-title { font-size: 1.5rem; line-height: 1.15; }
+.bay-now .bay-title .bi-help { color: #3f3a2c; font-size: 0.68em; margin-top: 4px; }
+.bay-start {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; margin-top: 10px;
+  min-height: 48px; padding: 8px 14px 8px 20px; border-radius: 10px;
+  background: #1e2226; color: #fffdf8; font-weight: 700; font-size: 1.1rem;
+}
+.bay-start .icon { color: var(--yellow); }
+.bay-char { position: absolute; right: 4px; bottom: -6px; line-height: 0; pointer-events: none; }
+/* Locked: dashed outline on the floor, muted text. */
+.bay-locked .bay-card { background: transparent; border: 3px dashed var(--ink-3); color: var(--muted); }
+.bay-locked .bay-card::before { background: var(--ink-3); }
+.bay-locked .bay-tab { background: var(--concrete-2); color: var(--ink-2); top: 0; left: 0; border-radius: 8px 0 8px 0; }
+.bay-locked .bay-title { font-weight: 600; }
+.bay-lock { color: var(--ink-3); }
+.bay-card:disabled { cursor: default; }
+@media (max-width: 380px) {
+  .bay-now .bay-card { padding-inline-end: 104px; }
+  .bay-char .ch { height: 100px; width: auto; }
+}
 
 /* Lesson player: full-bleed frame, content column centred on wide screens. */
 #root:has(.player) { max-width: none; }
@@ -704,11 +804,7 @@ h2 { font-size: 1.25rem; }
 
 /* Interface icons */
 .icon { display: inline-block; vertical-align: middle; flex: none; }
-.stat { display: inline-flex; align-items: center; gap: 4px; }
-.brand { display: inline-flex; align-items: center; gap: 6px; }
 .icon-btn { display: inline-grid; place-items: center; }
-.node .icon { display: block; margin: auto; }
-.node-done .icon { color: #fff; }
 .speak { --icon-cut: var(--blue); }
 .speak-slow { --icon-cut: var(--card); }
 
@@ -1107,7 +1203,6 @@ h2 { font-size: 1.25rem; }
 /* Logo */
 .wordmark { font-family: 'Lexend Variable', 'Lexend', system-ui, sans-serif; font-weight: 700; color: var(--ink-strong); letter-spacing: -0.02em; }
 .wordmark-dot { color: #ffc414; }
-.brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.25rem; }
 .brand .logo-mark, .hero-logo .logo-mark { flex: none; border-radius: 22%; }
 .hero-logo { display: inline-flex; align-items: center; gap: 12px; margin: 8px 0 0; }
 .hero-logo .wordmark { font-size: 2.6rem; }
@@ -1144,7 +1239,6 @@ h2 { font-size: 1.25rem; }
 .situation-why > span:first-child { font-size: 1.3rem; }
 
 /* Tips page */
-.tips-banner { background: var(--warn-bg); border-color: var(--kraft); box-shadow: none; }
 .tips-banner-emoji { font-size: 1.6rem; }
 .tips-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .tips-item { border: 2px solid var(--line); border-radius: var(--radius); overflow: hidden; }
