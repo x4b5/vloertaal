@@ -1,4 +1,4 @@
-import { useEffect, useId, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useState } from 'react';
 import { onSpeech } from '../lib/audio';
 import { FACES, type Expr, type TalkFrame } from './Faces';
 
@@ -259,6 +259,13 @@ function Arms({ mood, look }: { mood: Mood; look: Look }) {
         </>
       );
     case 'happy':
+      // Celebration: both arms swing up from the sides (CSS ch-arm-swing) and stay raised.
+      return (
+        <>
+          <Arm {...s} className="ch-arm ch-arm-l ch-arm-swing" d="M30 102Q16 96 15 78" hand={[15, 73]} />
+          <Arm {...s} className="ch-arm ch-arm-r ch-arm-swing" d="M90 102Q104 96 105 78" hand={[105, 73]} />
+        </>
+      );
     case 'wave':
       return (
         <>
@@ -302,11 +309,11 @@ function exprFor(mood: Mood): Expr {
     case 'thinking':
       return 'thinking';
     case 'pleased':
-    case 'happy':
     case 'wave':
       return 'pleased';
     case 'sad':
       return 'disappointed';
+    case 'happy':
     case 'cheer':
       return 'joy';
     default:
@@ -345,7 +352,9 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
 }) {
   const look = LOOKS[who];
   const face = FACES[who];
-  const talking = !!talkingProp || mood === 'talking';
+  // The happy jump (~760 ms) shows the happy face; any talking waits until it has landed.
+  const celebrating = useOneShot(mood === 'happy', 780);
+  const talking = (!!talkingProp || mood === 'talking') && !celebrating;
   const frame = useTalkFrame(talking);
   const expr = exprFor(mood);
   const id = useId().replace(/[^a-zA-Z0-9_-]/g, '');
@@ -414,6 +423,21 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
       {flip ? <g transform="translate(120 0) scale(-1 1)">{figure}</g> : figure}
     </svg>
   );
+}
+
+/** True for `ms` after `on` turns true (never with reduced motion: there is no jump to wait for). */
+function useOneShot(on: boolean, ms: number): boolean {
+  const [active, setActive] = useState(false);
+  useLayoutEffect(() => {
+    if (!on || prefersReducedMotion()) return;
+    setActive(true);
+    const t = window.setTimeout(() => setActive(false), ms);
+    return () => {
+      window.clearTimeout(t);
+      setActive(false);
+    };
+  }, [on, ms]);
+  return on && active;
 }
 
 function prefersReducedMotion(): boolean {
