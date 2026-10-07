@@ -406,7 +406,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
       <Prompt text={ui('completeChat', lang)} />
       <div className="chat">
         <div className="chat-row chat-them">
-          <span className="chat-char"><Character who={them} mood={moodFor(verdict, 'idle', true)} talking={themTalking} /></span>
+          <span className="chat-char"><Character who={them} mood={moodFor(verdict, 'idle', true)} talking={themTalking && !meTalking} /></span>
           <div className="chat-bubble">
             <SpeakButton glyph text={prompt.nl} label={`Play: ${prompt.nl}`} />
             <button

@@ -431,7 +431,8 @@ export function useTalking(lines: string[], intro = true): boolean {
   useEffect(() => {
     if (prefersReducedMotion()) return;
     const mine = new Set(key.split('\n'));
-    let until = intro ? Date.now() + 1500 : 0;
+    const introEnd = intro ? Date.now() + 1500 : 0;
+    let until = introEnd;
     let timer: number | undefined;
     const update = () => {
       window.clearTimeout(timer);
@@ -448,7 +449,8 @@ export function useTalking(lines: string[], intro = true): boolean {
         const estimate = (500 + text.length * 70) * (slow ? 1.6 : 1);
         until = Math.max(until, now + Math.min(estimate, 8000));
       } else {
-        until = Math.min(until, now + 150);
+        // The line ended (or failed to play): stop soon, but always finish the intro line.
+        until = Math.max(introEnd, Math.min(until, now + 150));
       }
       update();
     });
