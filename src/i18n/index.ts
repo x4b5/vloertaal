@@ -16,6 +16,15 @@ import cRo from './culture/ro';
 import cTi from './culture/ti';
 import cTr from './culture/tr';
 import cUk from './culture/uk';
+import aAr from './about/ar';
+import aBg from './about/bg';
+import aFa from './about/fa';
+import aPl from './about/pl';
+import aPrs from './about/prs';
+import aRo from './about/ro';
+import aTi from './about/ti';
+import aTr from './about/tr';
+import aUk from './about/uk';
 import type { CultureTranslation } from './culture/types';
 import type { HelpLanguage, LangCode, UiKey } from './types';
 import { uiEn } from './types';
@@ -25,11 +34,15 @@ const culture: Record<LangCode, CultureTranslation> = {
   ar: cAr, bg: cBg, fa: cFa, pl: cPl, prs: cPrs, ro: cRo, ti: cTi, tr: cTr, uk: cUk,
 };
 
-/** Workplace-culture texts live in their own files (src/i18n/culture); merge them in. */
+const about: Record<LangCode, CultureTranslation> = {
+  ar: aAr, bg: aBg, fa: aFa, pl: aPl, prs: aPrs, ro: aRo, ti: aTi, tr: aTr, uk: aUk,
+};
+
+/** Workplace-culture and About texts live in their own files (src/i18n/culture, src/i18n/about); merge them in. */
 const withCulture = (l: HelpLanguage): HelpLanguage => ({
   ...l,
-  ui: { ...l.ui, ...culture[l.code].ui },
-  gloss: { ...l.gloss, ...culture[l.code].gloss },
+  ui: { ...l.ui, ...culture[l.code].ui, ...about[l.code].ui },
+  gloss: { ...l.gloss, ...culture[l.code].gloss, ...about[l.code].gloss },
 });
 
 export const helpLanguages: HelpLanguage[] = [ar, ti, fa, prs, uk, tr, pl, ro, bg].map(withCulture);

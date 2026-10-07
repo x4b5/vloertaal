@@ -1,5 +1,6 @@
 import { Character } from './Characters';
 import { LessonCelebration } from './Celebrate';
+import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
 import { findItem, phrasebookIds, units } from '../content/curriculum';
 import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
@@ -102,12 +103,13 @@ export function TopBar({ streak, xp, lang, onSettings }: {
   );
 }
 
-export function Path({ progress, lang, onStart, onPhrasebook, onTips }: {
+export function Path({ progress, lang, onStart, onPhrasebook, onTips, onAbout }: {
   progress: Progress;
   lang?: HelpLanguage;
   onStart: (lessonId: string, review: boolean) => void;
   onPhrasebook: () => void;
   onTips: () => void;
+  onAbout: () => void;
 }) {
   let n = 0;
   return (
@@ -164,6 +166,44 @@ export function Path({ progress, lang, onStart, onPhrasebook, onTips }: {
           </ol>
         </section>
       ))}
+      <button type="button" className="about-link" onClick={onAbout}>
+        <LogoMark size={22} check={false} />
+        <Bi text={ui('about', lang)} />
+      </button>
+    </div>
+  );
+}
+
+/** "About Vloertaal": what the app is, who it is for, privacy and voice credits. */
+export function About({ lang, onBack }: { lang?: HelpLanguage; onBack: () => void }) {
+  const { recorded } = useVoices();
+  return (
+    <div className="screen about">
+      <div className="screen-head">
+        <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+        <h1><Bi text={ui('about', lang)} /></h1>
+      </div>
+      <div className="about-hero">
+        <LogoMark size={88} />
+        <Wordmark />
+        <p className="about-tag" lang="nl">Nederlands voor op de werkvloer</p>
+      </div>
+      {aboutSections.map((s) => (
+        <section key={s.id} className="about-section">
+          <h2><span className="about-emoji" aria-hidden>{s.emoji}</span><Bi text={gloss(s.id, s.title, lang)} /></h2>
+          <p><Bi text={gloss(`${s.id}.b`, s.body, lang)} /></p>
+        </section>
+      ))}
+      {recorded.length > 0 && (
+        <ul className="about-credits muted small">
+          {recorded.map((v) => (
+            <li key={v.key}>
+              Voice “{v.label}”: Piper{v.dataset ? ` · ${v.dataset}` : ''}{v.license ? ` · ${v.license}` : ''}
+              {v.modelCard && <> · <a href={v.modelCard} target="_blank" rel="noreferrer">model card</a></>}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
@@ -220,13 +260,14 @@ function useVoices() {
   return { device, recorded };
 }
 
-export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, onBack }: {
+export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, onAbout, onBack }: {
   progress: Progress;
   lang?: HelpLanguage;
   onLang: (code: LangCode | null) => void;
   onTheme: (theme: ThemeChoice) => void;
   onVoice: (voice: string | null) => void;
   onReset: () => void;
+  onAbout: () => void;
   onBack: () => void;
 }) {
   return (
@@ -258,6 +299,11 @@ export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, on
 
       <h2><Bi text={ui('voice', lang)} /></h2>
       <VoicePicker current={progress.voice} lang={lang} onPick={onVoice} />
+      <button type="button" className="phrase-banner about-banner" onClick={onAbout}>
+        <LogoMark size={32} check={false} />
+        <Bi text={ui('about', lang)} />
+        <ChevronIcon />
+      </button>
       <button
         type="button"
         className="btn btn-ghost danger"

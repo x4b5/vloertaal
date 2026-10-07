@@ -1095,3 +1095,21 @@ h2 { font-size: 1.25rem; }
 svg.pic-emoji { width: min(110px, 72%); height: auto; aspect-ratio: 1; }
 svg.emoji-xl { width: 140px; height: 140px; }
 svg.unit-pic { width: 64px; height: 64px; filter: drop-shadow(0 2px 0 rgba(0,0,0,.12)); }
+
+/* About Vloertaal */
+.about-banner { margin-top: 24px; }
+.about-link {
+  display: flex; align-items: center; justify-content: center; gap: 10px; margin: 32px auto 8px;
+  background: none; border: 0; color: var(--muted); font: inherit; font-weight: 700; cursor: pointer; padding: 10px 16px;
+}
+.about-link .bi { text-align: start; }
+.about-link:hover, .about-link:focus-visible { color: var(--ink-strong); text-decoration: underline; }
+.about-hero { display: flex; flex-direction: column; align-items: center; gap: 6px; margin: 12px 0 20px; text-align: center; }
+.about-hero .wordmark { font-size: 2.2rem; }
+.about-tag { margin: 0; color: var(--muted); font-weight: 700; }
+.about-section { border-top: 2px solid var(--line); padding: 14px 0 4px; }
+.about-section h2 { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 6px; font-size: 1.15rem; }
+.about-section p { margin: 0 0 10px; line-height: 1.55; }
+.about-emoji { font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; font-size: 1.4rem; line-height: 1.2; }
+.about-credits { list-style: none; padding: 12px 0 0; margin: 8px 0 0; border-top: 2px solid var(--line); display: grid; gap: 4px; }
+.about-credits a { color: inherit; }

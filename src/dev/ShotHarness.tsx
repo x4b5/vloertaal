@@ -1,7 +1,7 @@
 import { tipForLesson } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import { LessonPlayer } from '../components/LessonPlayer';
-import { Path, Result, TopBar } from '../components/Screens';
+import { About, Path, Result, TopBar } from '../components/Screens';
 import { emptyProgress } from '../lib/progress';
 import { Milestone } from '../components/Milestone';
 import { CAST, Character, type Mood } from '../components/Characters';
@@ -26,6 +26,7 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
   // Day-streak milestone after the very first lesson: streak 1.
   if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
+  if (shot === 'about') return <About lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
   // Home screen: first lesson done, second lesson current (as in the house-style concept).
   if (shot === 'path') {
     const progress = { ...emptyProgress, onboarded: true, xp: 120, streak: 7, completed: { 'l.hello': { best: 1, times: 1 } } };
@@ -33,7 +34,7 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
     return (
       <>
         <TopBar streak={7} xp={120} lang={l} onSettings={() => {}} />
-        <Path progress={progress} lang={l} onStart={() => {}} onPhrasebook={() => {}} onTips={() => {}} />
+        <Path progress={progress} lang={l} onStart={() => {}} onPhrasebook={() => {}} onTips={() => {}} onAbout={() => {}} />
       </>
     );
   }
