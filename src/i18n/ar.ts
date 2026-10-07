@@ -62,6 +62,10 @@ const lang: HelpLanguage = {
     completeChat: 'أكمل المحادثة',
     meaning: 'المعنى',
     inARow: '{n} على التوالي',
+    quitTitle: 'هل تريد إيقاف هذا الدرس؟',
+    quitHint: 'إجاباتك في هذا الدرس لن تُحفظ.',
+    keepGoing: 'استمر',
+    stopLesson: 'أوقف الدرس',
   },
   gloss: {
     // Units
@@ -197,6 +201,9 @@ const lang: HelpLanguage = {
     'c.sick.a': 'نعم، سأبقى في البيت اليوم.',
     'c.harvest.q': 'هل صندوق الحصاد ممتلئ؟',
     'c.harvest.a': 'نعم، إنه ممتلئ.',
+    // Emergency phrases (phrasebook only)
+    'p.call112': 'اتصل بـ 112!',
+    'p.hurt': 'أنا مصاب.',
   },
 };
 

@@ -1,4 +1,5 @@
 {
+  "take": 2,
   "model": "eleven_multilingual_v2",
   "format": "mp3_44100_64",
   "voices": [

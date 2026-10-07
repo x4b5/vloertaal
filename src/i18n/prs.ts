@@ -62,6 +62,10 @@ const lang: HelpLanguage = {
     completeChat: 'گفتگو را تکمیل کنید',
     meaning: 'معنا',
     inARow: '{n} بار پی‌هم',
+    quitTitle: 'این درس را متوقف می\u200cکنی؟',
+    quitHint: 'جواب\u200cهایت در این درس ذخیره نمی\u200cشود.',
+    keepGoing: 'ادامه بده',
+    stopLesson: 'درس را بس کن',
   },
   gloss: {
     // Units
@@ -197,6 +201,9 @@ const lang: HelpLanguage = {
     'c.sick.a': 'بلی، امروز خانه می‌مانم.',
     'c.harvest.q': 'صندوق پر است؟',
     'c.harvest.a': 'بلی، پر است.',
+    // Emergency phrases (phrasebook only)
+    'p.call112': 'به 112 زنگ بزن!',
+    'p.hurt': 'من زخمی شده‌ام.',
   },
 };
 

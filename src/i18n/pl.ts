@@ -62,6 +62,10 @@ const lang: HelpLanguage = {
     completeChat: 'Dokończ rozmowę',
     meaning: 'Znaczenie',
     inARow: '{n} z rzędu',
+    quitTitle: 'Przerwać tę lekcję?',
+    quitHint: 'Twoje odpowiedzi z tej lekcji nie zostaną zapisane.',
+    keepGoing: 'Ucz się dalej',
+    stopLesson: 'Przerwij lekcję',
   },
   gloss: {
     // Unit: First day at work
@@ -201,6 +205,9 @@ const lang: HelpLanguage = {
     'c.sick.a': 'Tak, dziś zostaję w domu.',
     'c.harvest.q': 'Czy skrzynka jest pełna?',
     'c.harvest.a': 'Tak, jest pełna.',
+    // Emergency phrases (phrasebook only)
+    'p.call112': 'Dzwoń pod 112!',
+    'p.hurt': 'Jestem ranny / ranna.',
   },
 };
 

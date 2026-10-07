@@ -62,6 +62,10 @@ const lang: HelpLanguage = {
     completeChat: 'Konuşmayı tamamla',
     meaning: 'Anlamı',
     inARow: 'Üst üste {n}',
+    quitTitle: 'Bu dersi bırakmak istiyor musun?',
+    quitHint: 'Bu dersteki cevapların kaydedilmez.',
+    keepGoing: 'Devam et',
+    stopLesson: 'Dersi bırak',
   },
   gloss: {
     // Unit: First day at work
@@ -201,6 +205,9 @@ const lang: HelpLanguage = {
     'c.sick.a': 'Evet, bugün evde kalıyorum.',
     'c.harvest.q': 'Kasa dolu mu?',
     'c.harvest.a': 'Evet, dolu.',
+    // Emergency phrases (phrasebook only)
+    'p.call112': "112'yi ara!",
+    'p.hurt': 'Yaralandım.',
   },
 };
 

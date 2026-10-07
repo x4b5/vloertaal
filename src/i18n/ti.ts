@@ -62,6 +62,10 @@ const lang: HelpLanguage = {
     completeChat: 'ዝርርብ ኣማልእ',
     meaning: 'ትርጉም',
     inARow: '{n} ብተኸታታሊ',
+    quitTitle: 'ነዚ ትምህርቲ ደው ከተብሎ ትደሊ ዶ?',
+    quitHint: 'መልስታትካ ኣብዚ ትምህርቲ ኣይዕቀብን እዩ።',
+    keepGoing: 'ቀጽል',
+    stopLesson: 'ትምህርቲ ደው ኣብል',
   },
   gloss: {
     // Units
@@ -197,6 +201,9 @@ const lang: HelpLanguage = {
     'c.sick.a': 'እወ፣ ሎሚ ኣብ ገዛ እጸንሕ።',
     'c.harvest.q': 'ካሸታ መሊኡ ድዩ?',
     'c.harvest.a': 'እወ፣ መሊኡ እዩ።',
+    // Emergency phrases (phrasebook only)
+    'p.call112': 'ናብ 112 ደውል!',
+    'p.hurt': 'ተጎዲአ ኣለኹ።',
   },
 };
 

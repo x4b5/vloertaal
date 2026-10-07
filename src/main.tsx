@@ -17,7 +17,7 @@ applyTheme(import.meta.env.DEV && params.get('shot') ? 'auto' : loadProgress().t
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {import.meta.env.DEV && params.get('shot') ? (
-      <ShotHarness shot={params.get('shot')!} lang={params.get('lang')} />
+      <ShotHarness shot={params.get('shot')!} lang={params.get('lang')} word={params.get('word')} />
     ) : (
       <App />
     )}

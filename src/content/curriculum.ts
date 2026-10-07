@@ -1,5 +1,5 @@
 import { teamworkUnit } from './culture';
-import type { ChatLine, Dialogue, Lesson, Unit, Word } from './types';
+import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
 
 /**
  * The course: Dutch for the work floor, explained in English.
@@ -293,11 +293,19 @@ export const units: Unit[] = [
   teamworkUnit,
 ];
 
+/** Emergency lines that are only in the phrasebook, not practised in a lesson. */
+export const phrasebookExtras: Sentence[] = [
+  { id: 'p.call112', nl: 'Bel 112!', en: 'Call 112!' },
+  { id: 'p.hurt', nl: 'Ik ben gewond.', en: 'I am hurt.' },
+];
+
 /** Ids of the phrases shown on the always-available "Emergency phrases" page. */
 export const phrasebookIds = [
   'w.help',
   'w.pasop',
   's.danger.3',
+  'p.call112',
+  'p.hurt',
   's.danger.2',
   'w.begrijpniet',
   's.understand.1',
@@ -326,5 +334,5 @@ export function findItem(id: string): { id: string; nl: string; en: string; emoj
     const item = lesson.words.find((w) => w.id === id) ?? lesson.sentences.find((s) => s.id === id);
     if (item) return item;
   }
-  return undefined;
+  return phrasebookExtras.find((p) => p.id === id);
 }
