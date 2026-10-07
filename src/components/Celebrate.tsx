@@ -167,7 +167,7 @@ const OUTFITS: Partial<Record<CharacterId, Outfit>> = {
     shoulder: [17, -30],
     hip: [9, 2],
     neck: -36,
-    headScale: 0.82,
+    headScale: 0.92,
     hand: 1.55,
     torsoPath: BRAM_BEAN,
     torso: (
@@ -193,7 +193,7 @@ const OUTFITS: Partial<Record<CharacterId, Outfit>> = {
     shoulder: [14, -27],
     hip: [7, 2],
     neck: -32,
-    headScale: 0.7,
+    headScale: 0.8,
     hand: 1.3,
     torsoPath: JADA_BEAN,
     torso: (
@@ -267,7 +267,7 @@ function Leg({ o, pose, side, cls }: { o: Outfit; pose: ActionPose; side: 'L' | 
   const [T, Sh, w] = o.legs;
   const K = go(H, T, spec.t);
   const A = go(K, Sh, spec.s);
-  const f = w / 15;
+  const f = w / 18;
   return (
     <g className={`fig-leg ${cls}`} style={origin(H)}>
       <path d={tube(H, K, A)} fill="none" stroke={o.leg} strokeWidth={w} strokeLinecap="round" />
@@ -339,26 +339,28 @@ const LESSON_CONFETTI: Piece[] = [
 
 /** Bram's leap: one diagonal from the kicked-back boot through his body to the high-five. */
 const BRAM_LEAP: ActionPose = {
-  pelvis: [206, 168],
-  tilt: -30,
-  head: 16,
-  armL: { a: -122, e: -112, hand: 'open', flip: true },
-  armR: { a: 18, e: -58, hand: 'fist' },
-  legL: { t: 128, s: 78 },
-  legR: { t: 44, s: -20 },
+  pelvis: [206, 160],
+  tilt: -16,
+  head: 12,
+  gaze: [-1, -0.4],
+  armL: { a: -150, e: -132, hand: 'open', flip: true },
+  armR: { a: 34, e: -36, hand: 'fist' },
+  legL: { t: 140, s: 96 },
+  legR: { t: 40, s: -12 },
   facing: -1,
   behind: ['armR', 'legR'],
 };
 
 /** Jada springs up off a pallet to meet him, one foot flicked up behind her. */
 const JADA_SPRING: ActionPose = {
-  pelvis: [84, 164],
-  tilt: 18,
+  pelvis: [112, 172],
+  tilt: 14,
   head: -8,
-  armL: { a: 150, e: 118, hand: 'fist', flip: true },
-  armR: { a: -66, e: -58, hand: 'open' },
-  legL: { t: 128, s: 172 },
-  legR: { t: 96, s: 88 },
+  gaze: [1, -0.4],
+  armL: { a: 150, e: -112, hand: 'fist', flip: true },
+  armR: { a: -56, e: -66, hand: 'open' },
+  legL: { t: 122, s: 200 },
+  legR: { t: 100, s: 80 },
   facing: 1,
   behind: ['armL', 'legL'],
 };
@@ -375,17 +377,16 @@ export function LessonCelebration({ className }: { className?: string }) {
         {/* The shop floor, shadows, and the pallet Jada springs off */}
         <rect className="cel-floor" x="34" y="246" width="252" height="7" rx="3.5" fill="var(--line)" />
         <ellipse className="lv-shadow" cx="214" cy="247" rx="34" ry="4" fill="#000" opacity=".2" />
-        <ellipse className="lv-shadow lv-shadow-jada" cx="86" cy="211" rx="18" ry="2.6" fill="#000" opacity=".22" />
+        <ellipse className="lv-shadow lv-shadow-jada" cx="110" cy="211" rx="18" ry="2.6" fill="#000" opacity=".22" />
         <g className="lv-pallet">
           {/* A wooden crate Jada springs off */}
-          <rect x="58" y="210" width="58" height="36" rx="4" fill="#c98a4b" />
-          <rect x="58" y="210" width="58" height="4" rx="2" fill="#e0a86b" />
-          <path d="M63 218H111M63 228H111M63 238H111" stroke="#a86d3a" strokeWidth="2.4" strokeLinecap="round" />
-          <path d="M64 216L110 242" stroke="#9c6436" strokeWidth="5" strokeLinecap="round" />
+          <rect x="80" y="210" width="62" height="36" rx="6" fill="#c98a4b" />
+          <rect x="80" y="210" width="62" height="9" rx="4.5" fill="#e0a86b" />
+          <rect x="128" y="219" width="14" height="27" rx="0" fill="#a86d3a" opacity=".5" />
         </g>
         {/* The clap where their hands meet, behind the hands */}
         <g className="lv-clap">
-          <Burst x={136} y={58} r={24} color={GOLD} />
+          <Burst x={152} y={104} r={28} color={GOLD} />
         </g>
         <g className="lv-jada">
           <g className="lv-idle lv-idle-jada">
@@ -416,13 +417,14 @@ const STREAK_CONFETTI: Piece[] = [
 /** Bram stands on the podium beside the flame and cheers: weight on his back foot, leaning
  *  towards the flame, one open hand flung out to present it ("ta-da!"), the other fist punched high. */
 const BRAM_CHEER: ActionPose = {
-  pelvis: [164, 136],
-  tilt: -7,
-  head: -8,
-  armL: { a: -166, e: -128, hand: 'open', flip: true },
-  armR: { a: -52, e: -92, hand: 'fist' },
-  legL: { t: 106, s: 94 },
-  legR: { t: 74, s: 86 },
+  pelvis: [158, 148],
+  tilt: -12,
+  head: -10,
+  gaze: [-0.9, -0.3],
+  armL: { a: -170, e: -150, hand: 'open', flip: true },
+  armR: { a: -62, e: -100, hand: 'fist' },
+  legL: { t: 112, s: 80 },
+  legR: { t: 66, s: 24 },
   facing: -1,
   behind: ['legR'],
 };

@@ -809,7 +809,7 @@ export function CastHead({ who, expr = 'joy', squint = false, blink, bold = fals
 /** Bold-mode headwear: the same items as the cast's, as single flat shapes. */
 const BOLD_FRONT: Partial<Record<CharacterId, React.ReactNode>> = {
   bram: (
-    <g>
+    <g transform="translate(0 -4)">
       <path d="M30 41C30 17 43 4 60 4C77 4 90 17 90 41Z" fill="#ffc800" />
       <path d="M77 9C86 17 90 28 90 41H79C79 29 79 18 77 9Z" fill="#e5a400" opacity=".6" />
       <rect x="21" y="34" width="78" height="10" rx="5" fill="#e5a400" />
@@ -823,21 +823,21 @@ function BoldEyes({ blink, gaze, brow }: { blink: number; gaze: [number, number]
   const [gx, gy] = gaze;
   const eye = (cx: number, tilt: number) => (
     <g>
-      <ellipse cx={cx} cy={cy} rx="10" ry="11.5" fill="#fff" transform={`rotate(${tilt} ${cx} ${cy})`} />
-      <circle cx={cx + gx * 3} cy={cy + gy * 3.4} r="6.6" fill="#2a1f1c" />
-      <circle cx={cx + gx * 3 - 2.4} cy={cy + gy * 3.4 - 2.6} r="2.5" fill="#fff" />
+      <ellipse cx={cx} cy={cy} rx="11" ry="12.5" fill="#fff" transform={`rotate(${tilt} ${cx} ${cy})`} />
+      <circle cx={cx + gx * 3} cy={cy + gy * 3.4} r="7.4" fill="#2a1f1c" />
+      <circle cx={cx + gx * 3 - 2.4} cy={cy + gy * 3.4 - 2.6} r="2.8" fill="#fff" />
       <circle cx={cx + gx * 3 + 2.4} cy={cy + gy * 3.4 + 2.4} r="1.1" fill="#fff" />
     </g>
   );
   return (
     <>
       <g className="ch-eyes" style={{ '--blink': `${blink}s` } as React.CSSProperties}>
-        {eye(48.5, -8)}
-        {eye(71.5, 8)}
+        {eye(47.5, -8)}
+        {eye(72.5, 8)}
       </g>
       <path
         className="ch-brows"
-        d={`M38 ${cy - 12}Q46 ${cy - 21} 55 ${cy - 14}M65 ${cy - 15}Q74 ${cy - 23} 83 ${cy - 12}`}
+        d={`M37 ${cy - 14}Q46 ${cy - 24} 56 ${cy - 16}M64 ${cy - 17}Q74 ${cy - 26} 84 ${cy - 14}`}
         fill="none"
         stroke={brow}
         strokeWidth="5"
