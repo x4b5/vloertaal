@@ -2,7 +2,29 @@
   "model": "eleven_multilingual_v2",
   "format": "mp3_44100_64",
   "voices": [
-    { "key": "berend", "label": "Berend", "gender": "male", "voiceId": "pb6qe8wKy786fK6M05tq" },
-    { "key": "ariel", "label": "Ariël", "gender": "female", "voiceId": "3fjjbhBA9yI42Aoj0o18" }
+    {
+      "key": "berend",
+      "label": "Berend",
+      "gender": "male",
+      "voiceId": "pb6qe8wKy786fK6M05tq"
+    },
+    {
+      "key": "daniel",
+      "label": "Daniel",
+      "gender": "male",
+      "voiceId": "mxrI8vmSNrwqRL0G7yhl"
+    },
+    {
+      "key": "ariel",
+      "label": "Ariël",
+      "gender": "female",
+      "voiceId": "3fjjbhBA9yI42Aoj0o18"
+    },
+    {
+      "key": "noa",
+      "label": "Noa",
+      "gender": "female",
+      "voiceId": "94W4cf0CMSgymY1uoRiX"
+    }
   ]
 }
