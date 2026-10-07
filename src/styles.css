@@ -1018,8 +1018,8 @@ h2 { font-size: 1.25rem; }
 .admin code { background: var(--input-bg); padding: 1px 6px; border-radius: 6px; }
 
 /* Logo */
-.wordmark { font-weight: 900; color: var(--blue); letter-spacing: -0.02em; }
-.wordmark-dot { color: var(--orange); }
+.wordmark { font-family: 'Lexend Variable', 'Lexend', system-ui, sans-serif; font-weight: 700; color: var(--ink-strong); letter-spacing: -0.02em; }
+.wordmark-dot { color: #ffc414; }
 .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.25rem; }
 .brand .logo-mark, .hero-logo .logo-mark { flex: none; border-radius: 22%; }
 .hero-logo { display: inline-flex; align-items: center; gap: 12px; margin: 8px 0 0; }
