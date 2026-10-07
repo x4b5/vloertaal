@@ -44,9 +44,16 @@ jobs:
           git add public/audio-el
           git diff --cached --quiet && { echo "Nothing new."; exit 0; }
           git commit -m "Record ElevenLabs voices (${{ inputs.mode }})"
-          git push
+          # The branch may have moved while recording (e.g. a merged PR): rebase and retry.
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
+      # Keep a copy of every recording run, so paid clips are never lost if the commit fails.
       - uses: actions/upload-artifact@v4
-        if: inputs.mode == 'sample'
+        if: always() && inputs.mode != 'check'
         with:
-          name: elevenlabs-sample
-          path: public/audio-el/*/x.sample.mp3
+          name: elevenlabs-${{ inputs.mode }}
+          path: public/audio-el/
+          retention-days: 30
