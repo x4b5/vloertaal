@@ -6,8 +6,14 @@ export interface LessonRecord {
   times: number;
 }
 
+export type ThemeChoice = 'auto' | 'light' | 'dark';
+
 export interface Progress {
   onboarded: boolean;
+  /** 'auto' follows the device setting. */
+  theme: ThemeChoice;
+  /** voiceURI of the chosen Dutch voice; null = best available. */
+  voice: string | null;
   helpLang: LangCode | null;
   xp: number;
   streak: number;
@@ -18,6 +24,8 @@ export interface Progress {
 
 export const emptyProgress: Progress = {
   onboarded: false,
+  theme: 'auto',
+  voice: null,
   helpLang: null,
   xp: 0,
   streak: 0,

@@ -43,9 +43,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* Dark theme follows the device setting (Duolingo-style deep navy). */
+/* Dark theme (Duolingo-style deep navy): follows the device unless the learner
+   picked light or dark in Settings, which sets data-theme on <html>. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     --green: #93d333;
     --green-dark: #79b933;
     --green-bg: #202f36;
@@ -78,7 +79,48 @@
     --pick-bg: #16384a;
     --pick-ink: #7fd4ff;
     --purple: #ce82ff;
+    color-scheme: dark;
   }
+}
+
+:root[data-theme='dark'] {
+  --green: #93d333;
+  --green-dark: #79b933;
+  --green-bg: #202f36;
+  --red: #ee5555;
+  --red-dark: #d84848;
+  --red-bg: #202f36;
+  --blue: #1cb0f6;
+  --blue-dark: #1899d6;
+  --blue-bg: #202f36;
+  --blue-line: #3f85a7;
+  --ink: #f1f7fb;
+  --ink-strong: #f1f7fb;
+  --muted: #a3b4bc;
+  --faint: #52656d;
+  --line: #37464f;
+  --bg: #131f24;
+  --card: #131f24;
+  --on-accent: #131f24;
+  --disabled-bg: #37464f;
+  --disabled-ink: #52656d;
+  --input-bg: #202f36;
+  --right-ink: #93d333;
+  --wrong-ink: #ee5555;
+  --warn-bg: #3a3320;
+  --warn-ink: #ffc800;
+  --red-line: #5a2a2e;
+  --locked-shadow: #2a363c;
+  --bar-track: #37464f;
+  --foot-bg: #131f24;
+  --pick-bg: #16384a;
+  --pick-ink: #7fd4ff;
+  --purple: #ce82ff;
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
@@ -467,3 +509,41 @@ h2 { font-size: 1.25rem; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Interface icons */
+.icon { display: inline-block; vertical-align: middle; flex: none; }
+.stat { display: inline-flex; align-items: center; gap: 4px; }
+.brand { display: inline-flex; align-items: center; gap: 6px; }
+.icon-btn { display: inline-grid; place-items: center; }
+.node .icon { display: block; margin: auto; }
+.node-done .icon { color: #fff; }
+.result-value { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.acc .result-value { color: var(--green-dark); }
+.speak { --icon-cut: var(--blue); }
+.speak-slow { --icon-cut: var(--card); color: var(--green-dark); }
+
+/* Settings: theme and voice */
+.segmented { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0 20px; }
+.segmented button {
+  display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 72px; padding: 10px 6px;
+  background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); box-shadow: 0 4px 0 var(--line);
+  font-weight: 800; font-size: 0.95rem;
+}
+.segmented button.picked { border-color: var(--blue); background: var(--pick-bg); color: var(--pick-ink); box-shadow: 0 4px 0 var(--blue); }
+.segmented .bi { align-items: center; }
+.voices { list-style: none; padding: 0; margin: 8px 0 20px; display: flex; flex-direction: column; gap: 10px; }
+.voice-row {
+  display: flex; align-items: center; gap: 12px; padding: 10px 12px;
+  border: 2px solid var(--line); border-radius: var(--radius); background: var(--card);
+}
+.voice-row.picked { border-color: var(--blue); background: var(--pick-bg); }
+.voice-pick { flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: start; background: none; border: none; padding: 4px 0; min-height: 44px; justify-content: center; }
+.voice-name { font-weight: 800; }
+.voice-lang { font-size: 0.8rem; color: var(--muted); }
+
+/* Word pictures: one emoji set (Noto) on every device, so a helmet looks the same on iPhone and Android. */
+.emoji-xl, .emoji-lg, .pic-emoji, .choice-emoji, .unit-emoji, .confetti {
+  font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+}
+.speaker-char .icon, .mascot .icon { width: 1em; height: 1em; }
+.mascot { font-size: 112px; line-height: 1; }

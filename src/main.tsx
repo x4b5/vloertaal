@@ -2,7 +2,12 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import { ShotHarness } from './dev/ShotHarness';
+import { loadProgress } from './lib/progress';
+import { applyTheme } from './lib/theme';
 import './styles.css';
+
+// Apply the saved theme before the first paint, so there is no light/dark flash.
+applyTheme(loadProgress().theme);
 
 const params = new URLSearchParams(location.search);
 

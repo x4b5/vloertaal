@@ -4,18 +4,36 @@ export function speechAvailable(): boolean {
   return typeof window !== 'undefined' && 'speechSynthesis' in window;
 }
 
-function dutchVoice(): SpeechSynthesisVoice | undefined {
-  const voices = window.speechSynthesis.getVoices();
-  return voices.find((v) => v.lang.toLowerCase() === 'nl-nl') ?? voices.find((v) => v.lang.toLowerCase().startsWith('nl'));
+let preferredVoice: string | null = null;
+
+/** Remember the learner's chosen voice (a voiceURI); null = pick automatically. */
+export function setPreferredVoice(uri: string | null): void {
+  preferredVoice = uri;
 }
 
-export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl'): void {
+/** All Dutch voices on this device, Netherlands voices first, then Belgian (nl-BE). */
+export function dutchVoices(): SpeechSynthesisVoice[] {
+  if (!speechAvailable()) return [];
+  const rank = (v: SpeechSynthesisVoice) => (v.lang.toLowerCase().replace('_', '-') === 'nl-nl' ? 0 : 1);
+  return window.speechSynthesis
+    .getVoices()
+    .filter((v) => v.lang.toLowerCase().startsWith('nl'))
+    .sort((a, b) => rank(a) - rank(b) || a.name.localeCompare(b.name));
+}
+
+function dutchVoice(uri: string | null = preferredVoice): SpeechSynthesisVoice | undefined {
+  const voices = dutchVoices();
+  return voices.find((v) => v.voiceURI === uri) ?? voices[0];
+}
+
+/** Speak text aloud; `voiceURI` overrides the learner's chosen voice (for previews). */
+export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voiceURI?: string): void {
   if (!speechAvailable()) return;
   const synth = window.speechSynthesis;
   synth.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = lang === 'en' ? 'en-GB' : 'nl-NL';
-  const voice = lang === 'en' ? undefined : dutchVoice();
+  const voice = lang === 'en' ? undefined : dutchVoice(voiceURI);
   if (voice) u.voice = voice;
   u.rate = slow ? 0.55 : 0.9;
   synth.speak(u);
