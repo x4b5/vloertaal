@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Bubble, Bust, Dots, Ground, Hand, PAL, QuestionMark, Shade, Shine, SKIN } from './kit';
+import { Arrow, Box, Bubble, Bust, CurveArrow, Ground, Hand, PAL, QuestionMark, Shade, Shine, SKIN } from './kit';
 
 /** Word pictures, group 2 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
@@ -34,15 +34,17 @@ export default {
     </g>
   ),
 
-  // "nog een keer": one more time — a speech bubble inside a circle of repeat arrows
+  // "nog een keer": one more time — Jada cups her hand to her ear: "say it again?"
   'w.nogeenkeer': () => (
     <g>
-      <path d="M22 68A39 39 0 0 1 86 30" fill="none" stroke={PAL.sky} strokeWidth="9" strokeLinecap="round" />
-      <polygon points="100 44 78 20 76 46" fill={PAL.sky} stroke={PAL.sky} strokeWidth="4" strokeLinejoin="round" />
-      <path d="M98 52A39 39 0 0 1 34 90" fill="none" stroke={PAL.skyShade} strokeWidth="9" strokeLinecap="round" />
-      <polygon points="20 76 42 100 44 74" fill={PAL.skyShade} stroke={PAL.skyShade} strokeWidth="4" strokeLinejoin="round" />
-      <Bubble x={38} y={43} w={44} h={30} tail="none">
-        <Dots cx={60} cy={58} gap={11} r={4} color={PAL.skyShade} />
+      <Bust who="jada" x={46} y={118} scale={0.72} expr="thinking" />
+      {/* Hand cupped behind the ear */}
+      <Hand pose="open" x={74} y={92} rotate={-12} scale={0.62} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} mirror />
+      {/* Sound arriving at the ear */}
+      <path d="M92 54Q97 62 92 70M100 50Q108 62 100 76" fill="none" stroke={PAL.line} strokeWidth="3.6" strokeLinecap="round" />
+      {/* Her question: "again?" — a bubble with a loop-back arrow */}
+      <Bubble x={64} y={8} w={48} h={30} tail="left">
+        <CurveArrow from={[103, 30]} to={[76, 28]} bend={-13} color={PAL.sky} width={5} head={10} />
       </Bubble>
     </g>
   ),
@@ -68,12 +70,18 @@ export default {
     </g>
   ),
 
-  // "helpen": to help — one hand reaching down and taking another hand to pull it up
+  // "helpen": to help — Amina sweats under a heavy box; a cheerful Bram lifts the other side
   'w.helpen': () => (
     <g>
-      <Hand pose="open" x={50} y={112} skin={SKIN.jada} sleeve={[PAL.orange, PAL.orangeShade]} />
-      <Hand pose="hold" x={52} y={28} rotate={180} scale={1.1} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
-      <Arrow from={[94, 92]} to={[94, 34]} color={PAL.sky} width={8} head={13} />
+      <Ground cx={60} cy={108} rx={46} ry={4} />
+      <Bust who="amina" x={30} y={112} scale={0.52} expr="disappointed" />
+      <Bust who="bram" x={92} y={112} scale={0.52} expr="pleased" />
+      <Box x={36} y={70} w={42} h={32} depth={10} />
+      <Hand pose="open" x={30} y={100} rotate={60} scale={0.5} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <Hand pose="open" x={94} y={102} rotate={-60} scale={0.5} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} mirror />
+      {/* Amina is straining: sweat drops */}
+      <path d="M14 44Q10 50 14 52Q18 50 14 44ZM50 40Q46 46 50 48Q54 46 50 40Z" fill={PAL.sky} />
+      <Arrow from={[61, 56]} to={[61, 24]} color={PAL.sky} width={7} head={11} />
     </g>
   ),
 
@@ -112,26 +120,29 @@ export default {
     </g>
   ),
 
-  // "de kas": the greenhouse — a Dutch glass greenhouse with two roof ridges and plants inside
+  // "de kas": the greenhouse — a flat-filled glass house with two roof ridges and tomato plants inside
   'w.kas': () => (
     <g>
       <Ground cx={60} cy={104} rx={50} ry={4.5} />
-      {/* Glass */}
-      <path d="M12 52L34 30L56 52L78 30L100 52V102H12Z" fill="#e3f5ff" stroke="#e3f5ff" strokeWidth="2" strokeLinejoin="round" />
-      <path d="M78 30L100 52V102H78Z" fill={PAL.ice} opacity=".55" />
-      {/* Plants: tomato vines in a row */}
-      {[24, 45, 66, 88].map((x) => (
+      {/* Glass body: two gables */}
+      <path d="M14 54L37 30L60 54L83 30L106 54V100H14Z" fill={PAL.ice} stroke={PAL.ice} strokeWidth="4" strokeLinejoin="round" />
+      {/* Shade side: the right gable */}
+      <path d="M83 30L106 54V100H83Z" fill={PAL.sky} opacity=".45" stroke={PAL.sky} strokeOpacity=".45" strokeWidth="4" strokeLinejoin="round" />
+      {/* Plants with tomatoes */}
+      {[28, 60, 92].map((x) => (
         <g key={x}>
-          <path d={`M${x} 100V62`} stroke={PAL.greenShade} strokeWidth="3" strokeLinecap="round" />
-          <ellipse cx={x - 5} cy={72} rx="6" ry="4" fill={PAL.green} transform={`rotate(-30 ${x - 5} 72)`} />
-          <ellipse cx={x + 5} cy={64} rx="6" ry="4" fill={PAL.green} transform={`rotate(30 ${x + 5} 64)`} />
-          <ellipse cx={x + 5} cy={84} rx="6" ry="4" fill={PAL.leaf} transform={`rotate(30 ${x + 5} 84)`} />
-          <circle cx={x - 4} cy={90} r="4" fill={PAL.red} />
+          <rect x={x - 3} y={60} width="6" height="36" rx="3" fill={PAL.greenShade} />
+          <path d={`M${x - 13} 84C${x - 15} 70 ${x - 8} 60 ${x} 60C${x + 8} 60 ${x + 15} 70 ${x + 13} 84C${x + 10} 92 ${x - 10} 92 ${x - 13} 84Z`} fill={PAL.green} />
+          <circle cx={x - 5} cy={86} r="5" fill={PAL.red} />
+          <circle cx={x + 6} cy={83} r="4.5" fill={PAL.red} />
         </g>
       ))}
-      {/* Frame */}
-      <path d="M12 102V52L34 30L56 52L78 30L100 52V102H12ZM56 52V102M34 30V102M78 30V102M12 52H100M12 78H100" fill="none" stroke={PAL.steel} strokeWidth="3" strokeLinejoin="round" strokeLinecap="round" />
-      <Shine d="M18 48L32 34" width={3} opacity={0.9} />
+      {/* Chunky white frame: ridges and two posts */}
+      <path d="M14 54L37 30L60 54L83 30L106 54M60 54V96M14 54H106" fill="none" stroke={PAL.white} strokeWidth="4.5" strokeLinejoin="round" strokeLinecap="round" />
+      {/* Concrete plinth */}
+      <rect x="10" y="94" width="100" height="10" rx="3" fill={PAL.steel} />
+      <rect x="10" y="94" width="100" height="4" rx="2" fill={PAL.mist} />
+      <Shine d="M22 50L34 38" width={3.5} opacity={0.9} />
     </g>
   ),
 
@@ -179,22 +190,35 @@ export default {
     </g>
   ),
 
-  // "plukken": to pick — a hand pulling a ripe tomato off the vine
-  'w.plukken': () => (
-    <g>
-      {/* Vine with the stalk stretched down to the tomato */}
-      <path d="M10 16Q50 24 98 14" fill="none" stroke={PAL.greenShade} strokeWidth="4" strokeLinecap="round" />
-      <path d="M54 20Q56 34 54 48" fill="none" stroke={PAL.greenShade} strokeWidth="3.5" strokeLinecap="round" />
-      <ellipse cx="30" cy="24" rx="9" ry="5" fill={PAL.green} transform="rotate(20 30 24)" />
-      <ellipse cx="80" cy="22" rx="9" ry="5" fill={PAL.leaf} transform="rotate(-20 80 22)" />
-      {/* Hand cupping the tomato from below, thumb over the front */}
-      <Hand pose="hold" x={54} y={112} scale={1.05} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
-      <Tomato cx={54} cy={66} r={19} />
-      <rect x="62" y="64" width="9" height="22" rx="4.5" fill={SKIN.amina[0]} transform="rotate(18 66 75)" />
-      <path d="M64 70l2 1" stroke={SKIN.amina[1]} strokeWidth="1.4" strokeLinecap="round" transform="rotate(18 66 75)" />
-      <Arrow from={[94, 44]} to={[94, 86]} color={PAL.sky} width={7} head={12} />
-    </g>
-  ),
+  // "plukken": to pick — a hand cups a ripe tomato and pulls it down, away from its broken stalk
+  'w.plukken': () => {
+    const [sk, skSh] = SKIN.amina;
+    return (
+      <g>
+        {/* The plant: stalk from the top with two leaves; the fruit is already off it */}
+        <path d="M54 6Q55 14 58 22" fill="none" stroke={PAL.greenShade} strokeWidth="6" strokeLinecap="round" />
+        <ellipse cx="42" cy="14" rx="11" ry="6" fill={PAL.green} transform="rotate(25 42 14)" />
+        <ellipse cx="72" cy="12" rx="10" ry="5.5" fill={PAL.leaf} transform="rotate(-20 72 12)" />
+        {/* The tomato */}
+        <Tomato cx={58} cy={68} r={22} />
+        {/* Hand from below: sleeve, palm under the fruit, thumb up the right side, fingers over the front */}
+        <path d="M58 96L82 92L100 120H60Z" fill={PAL.green} />
+        <path d="M58 96L82 92L85 97L60 102Z" fill={PAL.greenShade} />
+        <Shade color={skSh} opacity={0.8} at={[84, 92, 10, 24]}>
+          <g>
+            <ellipse cx="60" cy="94" rx="21" ry="10" fill={sk} />
+            <rect x="74" y="64" width="9" height="30" rx="4.5" fill={sk} transform="rotate(10 78 80)" />
+          </g>
+        </Shade>
+        {[[40, 76], [48, 80], [57, 82], [66, 81]].map(([fx, fy]) => (
+          <rect key={fx} x={fx - 4} y={fy} width="8.5" height={92 - fy + 6} rx="4.25" fill={sk} />
+        ))}
+        <path d="M44 82V94M52.5 84V96M61.5 85V97" stroke={skSh} strokeWidth="1.4" strokeLinecap="round" />
+        {/* Pull: arrow down */}
+        <Arrow from={[16, 44]} to={[16, 84]} color={PAL.sky} width={7} head={12} />
+      </g>
+    );
+  },
 
   // "de krat": the crate — a plastic harvest crate full of tomatoes
   'w.krat': () => (

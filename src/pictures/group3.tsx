@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Box, Bubble, Bust, ExclaimMark, Ground, Hand, Motion, PAL, Shade, Shine, Sparkle } from './kit';
+import { Box, Bust, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Tick } from './kit';
 
 /** Word pictures, group 3 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
@@ -93,6 +93,17 @@ function Flame({ cx = 60, base = 72, h = 64 }: { cx?: number; base?: number; h?:
   );
 }
 
+/** A jagged crash star: `n` points between radius r (tips) and ri (dents), centred on (cx, cy). */
+function burst(cx: number, cy: number, r: number, ri: number, n: number) {
+  const pts: string[] = [];
+  for (let i = 0; i < n * 2; i++) {
+    const a = (Math.PI * i) / n - Math.PI / 2;
+    const rr = i % 2 ? ri : r * (i % 4 ? 0.85 : 1);
+    pts.push(`${(cx + rr * Math.cos(a)).toFixed(1)} ${(cy + rr * Math.sin(a)).toFixed(1)}`);
+  }
+  return `M${pts.join('L')}Z`;
+}
+
 export default {
   // "de helm": the helmet — a yellow hard hat with its chin strap
   'w.helm': () => (
@@ -160,20 +171,20 @@ export default {
     </g>
   ),
 
-  // "dragen": to wear — Amina wearing a hard hat and a hi-vis vest over her fleece
+  // "dragen": to wear — Amina wears her work gear: hard hat on her headscarf and a hi-vis vest, with a green tick
   'w.dragen': () => (
     <g>
-      <Bust who="amina" x={58} y={116} scale={0.78} expr="pleased" />
-      {/* Vest and hat drawn in the bust's own coordinates */}
-      <g transform="translate(58 116) scale(0.78) translate(-60 -134)">
-        <path d="M24 134C24 112 30 102 38 99L50 112L58 134ZM96 134C96 112 90 102 82 99L70 112L62 134Z" fill={PAL.orange} />
-        <path d="M84 104C92 110 96 120 96 134H80C82 122 83 112 84 104Z" fill={PAL.orangeShade} opacity=".7" />
-        <path d="M26 122H55M65 122H95" stroke={PAL.paper} strokeWidth="6" />
-        <path d="M37 104L38 122M83 104L82 122" stroke={PAL.paper} strokeWidth="5" strokeLinecap="round" />
+      <Bust who="amina" x={56} y={116} scale={0.72} expr="joy" />
+      {/* Hi-vis vest over the fleece (drawn in the bust's own coordinates) */}
+      <g transform="translate(56 116) scale(0.72) translate(-60 -134)">
+        <path d="M24 134C24 114 30 104 40 100L50 112L54 134Z" fill={PAL.orange} />
+        <path d="M96 134C96 114 90 104 80 100L70 112L66 134Z" fill={PAL.orange} />
+        <path d="M96 134C96 116 92 108 86 103C88 114 88 124 86 134Z" fill={PAL.orangeShade} />
+        <path d="M24 122H53M67 122H96" stroke={PAL.paper} strokeWidth="7" />
+        <path d="M24 125H53M67 125H96" stroke={PAL.paperShade} strokeWidth="2" />
       </g>
-      <HardHat x={58} y={44} s={0.66} />
-      <Sparkle x={100} y={30} r={8} />
-      <Sparkle x={18} y={48} r={6} color={PAL.sky} />
+      <HardHat x={56} y={34} s={0.49} />
+      <Tick x={96} y={84} r={14} />
     </g>
   ),
 
@@ -201,14 +212,24 @@ export default {
     </g>
   ),
 
-  // "help": Jada calls for help — worried face, alarm in her speech bubble
+  // "help": Jada calls for help — both arms up, waving her hands, mouth open in a shout
   'w.help': () => (
     <g>
-      <Bust who="jada" x={42} y={116} scale={0.66} expr="disappointed" />
-      <Bubble x={62} y={10} w={46} h={44} tail="left" fill="#ffe3e3" depth={PAL.redLight}>
-        <ExclaimMark x={85} y={32} size={34} color={PAL.red} />
-      </Bubble>
-      <Motion x={60} y={58} dir={-50} spread={60} n={3} len={7} gap={6} color={PAL.red} width={3.4} />
+      <Bust who="jada" x={60} y={124} scale={0.62} expr="thinking" />
+      {/* Open mouth: shouting */}
+      <g transform="translate(60 124) scale(0.62) translate(-60 -134)">
+        <ellipse cx="61" cy="79.4" rx="5.6" ry="6.4" fill={PAL.mouth} />
+        <ellipse cx="61" cy="82.6" rx="3.4" ry="2.4" fill={PAL.blush} />
+      </g>
+      {/* Arms raised high in a V */}
+      <path d="M38 104Q26 86 24 58M82 104Q94 86 96 58" fill="none" stroke="#ffc929" strokeWidth="12" strokeLinecap="round" />
+      <path d="M88 100Q95 86 96 62" fill="none" stroke="#e0a800" strokeWidth="5" strokeLinecap="round" opacity=".6" />
+      <Hand pose="open" x={24} y={58} rotate={-16} scale={0.74} skin={SKIN.jada} />
+      <Hand pose="open" x={96} y={58} rotate={16} scale={0.74} skin={SKIN.jada} mirror />
+      {/* Waving / shouting lines */}
+      <Motion x={14} y={26} dir={-150} spread={70} n={3} len={7} gap={5} color={PAL.red} width={3.4} />
+      <Motion x={106} y={26} dir={-30} spread={70} n={3} len={7} gap={5} color={PAL.red} width={3.4} />
+      <ExclaimMark x={60} y={22} size={26} color={PAL.red} />
     </g>
   ),
 
@@ -245,22 +266,21 @@ export default {
     </g>
   ),
 
-  // "het ongeluk": the accident — a box has fallen, Bram is hurt (plaster on his cheek)
+  // "het ongeluk": the accident — a box falls on Bram's head: a red crash burst, he reels sideways in pain
   'w.ongeluk': () => (
     <g>
-      <Ground cx={86} cy={104} rx={24} ry={4.5} />
-      <Bust who="bram" x={42} y={118} scale={0.66} expr="disappointed" />
-      {/* Plaster */}
-      <g transform="rotate(-30 53 81)">
-        <rect x="43" y="77" width="20" height="8" rx="3" fill={PAL.card} />
-        <rect x="49.5" y="77" width="7" height="8" fill="#f0c48a" />
+      {/* Bram knocked sideways */}
+      <g transform="rotate(-20 46 124)">
+        <Bust who="bram" x={48} y={128} scale={0.68} expr="disappointed" squint />
       </g>
-      {/* Fallen box with a crash */}
-      <g transform="rotate(16 92 100)">
-        <Box x={70} y={70} w={34} h={30} depth={10} />
+      {/* Crash burst where the box hits his helmet */}
+      <path d={burst(56, 46, 20, 10.5, 9)} fill={PAL.red} />
+      <path d={burst(56, 46, 10.5, 5, 9)} fill={PAL.yellow} />
+      {/* The falling box, tilted, coming down from above */}
+      <g transform="rotate(28 76 34)">
+        <Box x={64} y={18} w={26} h={22} depth={8} />
       </g>
-      <Motion x={86} y={60} dir={-90} spread={110} n={4} len={8} gap={7} color={PAL.red} width={3.6} />
-      <Sparkle x={104} y={30} r={7} color={PAL.yellow} />
+      <path d="M82 13V6M94 17V10" stroke={PAL.line} strokeWidth="3.2" strokeLinecap="round" />
     </g>
   ),
 } as Record<string, () => JSX.Element>;

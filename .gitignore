@@ -5,3 +5,4 @@ dist
 .vercel
 public/credits.json
 piper-models/
+public/audio/

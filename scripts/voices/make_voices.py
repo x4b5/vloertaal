@@ -66,6 +66,25 @@ def audition(out_dir: Path, models: list[str] | None = None, max_speakers: int =
     )
 
 
+def model_card(name: str) -> dict:
+    """Dataset URL and licence from the voice's MODEL_CARD (shown as credits in the app)."""
+    lang = name.split("-")[0]
+    voice, quality = name.split("-")[1], name.split("-")[2]
+    url = f"https://huggingface.co/rhasspy/piper-voices/resolve/main/{lang.split('_')[0]}/{lang}/{voice}/{quality}/MODEL_CARD?download=true"
+    try:
+        text = urllib.request.urlopen(url).read().decode("utf-8", "replace")
+    except Exception as e:  # never fail the build over credits
+        return {"modelCard": url, "error": str(e)}
+    info = {"modelCard": url.split("?")[0]}
+    for line in text.splitlines():
+        low = line.lower().strip("* ").strip()
+        if low.startswith("license"):
+            info["license"] = line.split(":", 1)[1].strip()
+        elif low.startswith("url") and "dataset" not in info:
+            info["dataset"] = line.split(":", 1)[1].strip()
+    return info
+
+
 def generate_all(out_dir: Path) -> None:
     chosen = json.loads(Path("scripts/voices/chosen.json").read_text())
     clips = json.loads(Path("public/audio/clips.json").read_text())
@@ -75,7 +94,10 @@ def generate_all(out_dir: Path) -> None:
             to_mp3(voice, clip["text"], out_dir / v["key"] / f"{clip['id']}.mp3", v.get("speaker"), v.get("lengthScale"))
         print(f"{v['key']}: {len(clips)} clips", flush=True)
     index = {
-        "voices": [{"key": v["key"], "label": v["label"], "gender": v.get("gender")} for v in chosen],
+        "voices": [
+            {"key": v["key"], "label": v["label"], "gender": v.get("gender"), "model": v["model"], **model_card(v["model"])}
+            for v in chosen
+        ],
         "clips": {c["text"]: c["id"] for c in clips},
     }
     (out_dir / "voices.json").write_text(json.dumps(index, ensure_ascii=False))

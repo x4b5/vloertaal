@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Box, Ground, Hand, Motion, PAL, SKIN, Shade, Shine } from './kit';
+import { Arrow, Box, Bust, Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
 
 /** Word pictures, group 4 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
@@ -117,31 +117,32 @@ export default {
   'w.heftruck': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4.5} />
-      {/* Overhead guard */}
-      <path d="M52 66L56 24M94 58V24" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
-      <rect x="50" y="19" width="50" height="7" rx="3" fill={PAL.slateDark} />
+      {/* Overhead guard (light steel so it reads on the dark card too) */}
+      <path d="M53 64L57 24M94 56V24" stroke={PAL.steel} strokeWidth="5.5" strokeLinecap="round" />
+      <rect x="50" y="18" width="50" height="8" rx="3.5" fill={PAL.mist} />
+      <rect x="50" y="23" width="50" height="3" rx="1.5" fill={PAL.steel} />
       {/* Seat and steering */}
-      <path d="M74 64V48Q74 44 78 44H84Q88 44 88 48V58" fill={PAL.navy} />
-      <path d="M62 66L60 52" stroke={PAL.slateDark} strokeWidth="4" strokeLinecap="round" />
-      <rect x="52" y="48" width="14" height="5" rx="2.5" fill={PAL.slateDark} transform="rotate(-15 59 50)" />
+      <path d="M74 64V48Q74 44 78 44H84Q88 44 88 48V58" fill={PAL.blue} />
+      <path d="M62 66L60 52" stroke={PAL.steel} strokeWidth="4" strokeLinecap="round" />
+      <rect x="52" y="48" width="14" height="5" rx="2.5" fill={PAL.steel} transform="rotate(-15 59 50)" />
       {/* Body and counterweight */}
       <Shade color={PAL.yellowShade} opacity={1} at={[112, 80, 16, 40]}>
         <path d="M42 70Q42 64 48 64H84V56Q84 52 90 52H100Q106 52 106 58V90Q106 96 100 96H48Q42 96 42 90Z" fill={PAL.yellow} />
       </Shade>
       <Shine d="M48 70H78" color={PAL.yellowShine} width={3.5} opacity={0.9} />
-      {/* Mast and forks */}
-      <rect x="32" y="16" width="9" height="84" rx="2.5" fill={PAL.slate} />
-      <rect x="37" y="16" width="4" height="84" rx="2" fill={PAL.slateDark} />
-      <rect x="26" y="66" width="10" height="34" rx="2" fill={PAL.slateDark} />
-      <rect x="8" y="95" width="28" height="5" rx="2.5" fill={PAL.slateDark} />
+      {/* Mast and forks (light steel, shade on the right) */}
+      <rect x="31" y="14" width="11" height="86" rx="3" fill={PAL.mist} />
+      <rect x="37" y="14" width="5" height="86" rx="2.5" fill={PAL.steel} />
+      <rect x="26" y="64" width="9" height="36" rx="2.5" fill={PAL.steel} />
+      <rect x="7" y="94" width="29" height="6" rx="3" fill={PAL.steel} />
       {/* The load */}
       <Box x={9} y={68} w={22} h={27} depth={0} tape={false} />
       <rect x="18" y="68" width="5" height="10" fill="#f6dcae" />
-      {/* Wheels */}
+      {/* Wheels: dark tyres with big light hubs */}
       <circle cx="56" cy="94" r="12" fill={PAL.slateDark} />
-      <circle cx="56" cy="94" r="5" fill={PAL.mist} />
+      <circle cx="56" cy="94" r="6.5" fill={PAL.mist} />
       <circle cx="94" cy="96" r="10" fill={PAL.slateDark} />
-      <circle cx="94" cy="96" r="4.2" fill={PAL.mist} />
+      <circle cx="94" cy="96" r="5.5" fill={PAL.mist} />
     </g>
   ),
 
@@ -239,30 +240,61 @@ export default {
     </g>
   ),
 
-  // "tillen": to lift — two hands lift a box off the floor, an arrow going up
+  // "tillen": to lift — Bram holds a box high above his head with both arms
   'w.tillen': () => (
     <g>
-      <Ground cx={60} cy={107} rx={30} ry={4} />
-      <Box x={34} y={58} w={44} h={34} depth={12} />
-      <Motion x={60} y={86} dir={90} spread={50} len={6} gap={12} color={PAL.line} width={3} />
-      <Hand pose="open" x={14} y={84} rotate={80} scale={0.62} skin={SKIN.jada} sleeve={[PAL.orange, PAL.orangeShade]} />
-      <Hand pose="open" x={106} y={84} rotate={-80} scale={0.62} skin={SKIN.jada} sleeve={[PAL.orange, PAL.orangeShade]} mirror />
-      <Arrow from={[62, 46]} to={[62, 10]} color={PAL.sky} width={9} head={14} />
+      <Ground cx={60} cy={108} rx={30} ry={3.5} />
+      <Bust who="bram" x={60} y={116} scale={0.5} expr="pleased" />
+      {/* Arms: orange sleeves from the shoulders up to the hands under the box */}
+      <path d="M45 100L31 60M75 100L87 60" stroke={PAL.orange} strokeWidth="11" strokeLinecap="round" />
+      <path d="M79 96L88 66" stroke={PAL.orangeShade} strokeWidth="4" strokeLinecap="round" opacity=".7" />
+      <Hand pose="open" x={31} y={60} rotate={-14} scale={0.48} skin={SKIN.bram} />
+      <Hand pose="open" x={87} y={60} rotate={14} scale={0.48} skin={SKIN.bram} mirror />
+      <Box x={20} y={20} w={66} h={30} depth={12} />
     </g>
   ),
 
-  // "pakken": to take — a hand grabs a box from the shelf (curved arrow from shelf to hand)
+  // "pakken": to take — a hand grabs one tomato and takes it out of a full crate
   'w.pakken': () => (
     <g>
-      {/* Shelf corner with an empty spot */}
-      <rect x="12" y="10" width="7" height="52" rx="2.5" fill={PAL.blue} />
-      <rect x="12" y="34" width="44" height="7" rx="2" fill={PAL.orange} />
-      <rect x="12" y="38.5" width="44" height="2.5" rx="1.2" fill={PAL.orangeShade} />
-      <rect x="24" y="14" width="26" height="18" rx="3" fill="none" stroke={PAL.line} strokeWidth="2" strokeDasharray="4 4" />
-      {/* The box, gripped from below by a hand (fingers over its front) */}
-      <Box x={48} y={52} w={40} h={32} depth={11} />
-      <Hand pose="hold" x={68} y={118} scale={1.15} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
-      <Arrow from={[30, 50]} to={[44, 74]} color={PAL.sky} width={7} head={12} />
+      <Ground cx={60} cy={107} rx={46} ry={3.5} />
+      {/* Tomatoes still in the crate */}
+      {[28, 47, 66, 85].map((x) => (
+        <circle key={x} cx={x} cy={88} r={9} fill={x === 85 ? PAL.redShade : PAL.red} />
+      ))}
+      {/* Green plastic crate */}
+      <rect x={14} y={88} width={92} height={17} rx="4" fill={PAL.green} />
+      <rect x={86} y={88} width={20} height={17} rx="4" fill={PAL.greenShade} />
+      <rect x={14} y={88} width={92} height={4.5} rx="2.25" fill={PAL.leaf} />
+      {[26, 42, 58, 74, 92].map((x) => (
+        <rect key={x} x={x - 4} y={95} width={8} height={6} rx="3" fill={PAL.greenShade} />
+      ))}
+      {/* The tomato being taken, lifted out of the crate */}
+      <g transform="translate(2 -9)">
+      <circle cx={52} cy={58} r={20} fill={PAL.red} />
+      <path d="M68 48A20 20 0 0 1 54 77.8" fill="none" stroke={PAL.redShade} strokeWidth="6" strokeLinecap="round" />
+      <Shine d="M36 62Q36 70 41 74" width={3.5} opacity={0.5} />
+      {/* Arm and hand coming in from the top right, fingers wrapped over the tomato */}
+      <g transform="rotate(32 52 58)">
+        <rect x={37} y={-14} width={30} height={30} rx="5" fill={PAL.blue} />
+        <rect x={58} y={-14} width={9} height={30} rx="4" fill={PAL.blueShade} />
+        <rect x={36} y={10} width={32} height={9} rx="4.5" fill={PAL.blueShade} />
+        <Shade color={SKIN.amina[1]} opacity={1} at={[74, 40, 9, 30]}>
+          <g fill={SKIN.amina[0]}>
+            <rect x={36} y={16} width={32} height={26} rx="12" />
+            {/* Thumb round the left side */}
+            <rect x={31} y={25} width={11} height={25} rx="5.5" transform="rotate(14 36 25)" />
+            {/* Four curled fingers over the front of the tomato */}
+            <rect x={38} y={34} width={7.5} height={22} rx="3.75" />
+            <rect x={46} y={34} width={7.5} height={25} rx="3.75" />
+            <rect x={54} y={34} width={7.5} height={24} rx="3.75" />
+            <rect x={62} y={34} width={7} height={19} rx="3.5" />
+          </g>
+        </Shade>
+        <path d="M45.8 42V54M53.8 42V56M61.6 42V52" stroke={SKIN.amina[1]} strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M42 30Q52 34 62 30" fill="none" stroke={SKIN.amina[1]} strokeWidth="1.5" strokeLinecap="round" opacity=".8" />
+      </g>
+      </g>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

@@ -1,23 +1,7 @@
 import type { JSX, ReactNode } from 'react';
-import { Box, Bubble, Bust, Clock, Cross, Dots, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Arrow, Box, Bubble, Bust, Clock, Cross, CurveArrow, Dots, ExclaimMark, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 
 /** Word pictures, group 6 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
-
-/** A tangled knot of line (a mess, a problem), centred on (x, y). */
-function Knot({ x, y, s = 1, color = PAL.red }: { x: number; y: number; s?: number; color?: string }) {
-  return (
-    <g transform={`translate(${x} ${y}) scale(${s})`}>
-      <path
-        d="M-24 10C-24 -8 -8 -12 -8 0C-8 12 -20 8 -16 -4C-12 -16 6 -14 4 0C2 12 -10 8 -6 -4C-2 -16 18 -14 16 0C14 12 4 8 8 -2C12 -12 24 -8 22 6"
-        fill="none"
-        stroke={color}
-        strokeWidth="4.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </g>
-  );
-}
 
 /** A soft grey rain cloud with drops, centred on (x, y). */
 function RainCloud({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
@@ -61,13 +45,17 @@ function Pan({ x, y, children }: { x: number; y: number; children?: ReactNode })
 }
 
 export default {
-  // "het probleem": Bram looks worried; in his speech bubble a red tangle (a mess, something wrong)
+  // "het probleem": Bram is stuck — big worried face, a bead of sweat, and a red "?!" badge
   'w.probleem': () => (
     <g>
-      <Bust who="bram" x={42} y={116} scale={0.64} expr="disappointed" />
-      <Bubble x={58} y={10} w={52} h={44} tail="left" fill="#ffe3e3" depth={PAL.redLight}>
-        <Knot x={84} y={32} s={0.92} />
-      </Bubble>
+      <Bust who="bram" x={52} y={124} scale={0.88} expr="disappointed" />
+      <path d="M17 44Q23 54 23 58A6 6 0 0 1 11 58Q11 54 17 44Z" fill={PAL.ice} />
+      <path d="M14.5 56.5A3 3 0 0 0 16 59" fill="none" stroke={PAL.white} strokeWidth="1.8" strokeLinecap="round" opacity=".8" />
+      <circle cx="93" cy="30" r="18" fill={PAL.redShade} />
+      <circle cx="93" cy="27" r="18" fill={PAL.red} />
+      <QuestionMark x={87} y={27} size={23} color={PAL.white} />
+      <ExclaimMark x={100.5} y={27} size={23} color={PAL.white} />
+      <Motion x={93} y={27} dir={-90} spread={110} n={3} len={5} gap={23} color={PAL.red} width={3.4} />
     </g>
   ),
 
@@ -140,25 +128,42 @@ export default {
     </g>
   ),
 
-  // "de afspraak": the agreement — a handshake, with a green tick above
+  // "de afspraak": the agreement — two hands shake on it, with a green tick above
   'w.afspraak': () => (
     <g>
-      {/* Sleeves */}
-      <path d="M4 112L30 78L46 90L24 118Z" fill={PAL.navy} />
-      <path d="M28 80L32 75L49 88L44 93Z" fill={PAL.navyShade} />
-      <path d="M116 112L90 78L74 90L96 118Z" fill={PAL.orange} />
-      <path d="M92 80L88 75L71 88L76 93Z" fill={PAL.orangeShade} />
-      {/* Henk's hand (from the left) */}
-      <rect x="36" y="64" width="40" height="22" rx="10" fill={SKIN.henk[0]} transform="rotate(-14 56 75)" />
-      {/* Bram's hand (from the right), wrapped over it */}
-      <Shade color={SKIN.bram[1]} opacity={0.8} at={[90, 84, 16, 10]}>
-        <rect x="48" y="60" width="40" height="24" rx="10" fill={SKIN.bram[0]} transform="rotate(12 68 72)" />
-      </Shade>
-      <path d="M55 63V78M61 64V80M67 66V81" stroke={SKIN.bram[1]} strokeWidth="1.8" strokeLinecap="round" />
-      {/* Henk's thumb over Bram's hand */}
-      <rect x="52" y="56" width="22" height="8" rx="4" fill={SKIN.henk[0]} transform="rotate(8 63 60)" />
-      <path d="M66 59.5L71 60" stroke={SKIN.henk[1]} strokeWidth="1.4" strokeLinecap="round" />
-      <Tick x={60} y={28} r={16} />
+      <Tick x={60} y={24} r={15} />
+      <g transform="translate(60 76) scale(1.16) translate(-60 -76)">
+        {/* Sleeves: Henk (navy) from the left, Jada (orange) from the right */}
+        <g transform="rotate(-8 60 76)">
+          <rect x="-6" y="62" width="34" height="30" rx="6" fill={PAL.navy} />
+          <rect x="22" y="60" width="9" height="34" rx="4.5" fill={PAL.navyShade} />
+          <rect x="92" y="62" width="34" height="30" rx="6" fill={PAL.orange} />
+          <rect x="89" y="60" width="9" height="34" rx="4.5" fill={PAL.orangeShade} />
+        </g>
+        {/* Jada's hand (behind): palm, and her fingertips curling under Henk's hand */}
+        <g fill={SKIN.jada[1]}>
+          <rect x="34" y="80" width="8" height="10" rx="4" />
+          <rect x="42.5" y="81" width="8" height="10" rx="4" />
+          <rect x="51" y="81" width="8" height="9" rx="4" />
+        </g>
+        <Shade color={SKIN.jada[1]} opacity={0.9} at={[84, 94, 24, 12]}>
+          <rect x="56" y="58" width="38" height="30" rx="13" fill={SKIN.jada[0]} transform="rotate(-6 75 73)" />
+        </Shade>
+        {/* Henk's hand (in front): palm, and four fingers wrapped over Jada's hand */}
+        <rect x="26" y="60" width="34" height="26" rx="12" fill={SKIN.henk[0]} transform="rotate(-8 43 73)" />
+        <g transform="translate(52 61) rotate(30)">
+          {[[0, 25], [8.6, 26], [17.2, 23], [25.8, 18]].map(([o, len], k) => (
+            <g key={k}>
+              <rect x={-4} y={o - 4} width={len} height="8" rx="4" fill={SKIN.henk[0]} />
+              {k > 0 && <path d={`M${len * 0.3} ${o - 4.3}H${len - 6}`} stroke={SKIN.henk[1]} strokeWidth="1.6" strokeLinecap="round" />}
+            </g>
+          ))}
+        </g>
+        {/* Jada's thumb over the back of Henk's hand */}
+        <rect x="38" y="56" width="28" height="9" rx="4.5" fill={SKIN.jada[0]} transform="rotate(6 52 60)" />
+        <path d="M42 60H46" stroke={SKIN.jada[1]} strokeWidth="1.6" strokeLinecap="round" />
+        <Shine d="M31 70Q32 66 36 64" width={2.6} opacity={0.5} />
+      </g>
     </g>
   ),
 
@@ -186,29 +191,43 @@ export default {
     </g>
   ),
 
-  // "zaterdag": Saturday — a week calendar, the weekend in colour, Saturday ringed
-  'w.zaterdag': () => (
-    <g>
-      <rect x="12" y="26" width="96" height="76" rx="9" fill={PAL.paperShade} />
-      <rect x="12" y="22" width="96" height="76" rx="9" fill={PAL.white} />
-      <path d="M12 31A9 9 0 0 1 21 22H99A9 9 0 0 1 108 31V42H12Z" fill={PAL.red} />
-      <path d="M80 22H99A9 9 0 0 1 108 31V42H80Z" fill={PAL.redShade} opacity=".6" />
-      <rect x="34" y="15" width="6" height="14" rx="3" fill={PAL.slate} />
-      <rect x="80" y="15" width="6" height="14" rx="3" fill={PAL.slate} />
-      {/* Weekend columns */}
-      <rect x="80" y="46" width="25" height="49" rx="4" fill="#fff3d6" />
-      {Array.from({ length: 21 }, (_, i) => {
-        const col = i % 7;
-        const row = Math.floor(i / 7);
-        const cx = 22 + col * 12.7;
-        const cy = 54 + row * 15;
-        if (col === 5 && row === 1) return null;
-        return <rect key={i} x={cx - 4} y={cy - 4} width="8" height="8" rx="2" fill={col >= 5 ? PAL.yellowShade : PAL.mist} opacity={col >= 5 ? 0.6 : 1} />;
-      })}
-      <circle cx={22 + 5 * 12.7} cy={69} r="8.5" fill={PAL.orange} />
-      <circle cx={22 + 5 * 12.7} cy={69} r="3.4" fill={PAL.white} />
-    </g>
-  ),
+  // "zaterdag": Saturday — a week planner with seven day columns: five work days (hard
+  // hats), then the sixth day breaks out as a big orange day off; an arrow points at it
+  'w.zaterdag': () => {
+    const cx = (i: number) => 19.5 + i * 13.5;
+    const sat = cx(5);
+    return (
+      <g>
+        {/* Week planner */}
+        <rect x="10" y="40" width="100" height="64" rx="8" fill={PAL.paperShade} />
+        <rect x="10" y="36" width="100" height="64" rx="8" fill={PAL.white} />
+        <path d="M10 44A8 8 0 0 1 18 36H102A8 8 0 0 1 110 44V50H10Z" fill={PAL.red} />
+        <rect x="24" y="31" width="5.5" height="12" rx="2.75" fill={PAL.slate} />
+        <rect x="58" y="31" width="5.5" height="12" rx="2.75" fill={PAL.slate} />
+        {Array.from({ length: 7 }, (_, i) => {
+          if (i === 5) return null;
+          const x = cx(i);
+          return i === 6 ? (
+            <rect key={i} x={x - 5.5} y={54} width="11" height="42" rx="3" fill={PAL.redLight} />
+          ) : (
+            <g key={i}>
+              <rect x={x - 5.5} y={54} width="11" height="42" rx="3" fill={PAL.mist} />
+              <path d={`M${x - 4.6} 90A4.6 4.6 0 0 1 ${x + 4.6} 90Z`} fill={PAL.yellow} stroke={PAL.yellow} strokeWidth="1.6" strokeLinejoin="round" />
+              <path d={`M${x - 5.2} 90.6H${x + 5.2}`} stroke={PAL.yellowShade} strokeWidth="2" strokeLinecap="round" />
+            </g>
+          );
+        })}
+        {/* Saturday: the day off */}
+        <rect x={sat - 10} y={32} width="20" height="76" rx="5" fill={PAL.orangeShade} />
+        <rect x={sat - 10} y={28} width="20" height="76" rx="5" fill={PAL.orange} />
+        <path d={`M${sat + 3} 28H${sat + 5}A5 5 0 0 1 ${sat + 10} 33V99A5 5 0 0 1 ${sat + 5} 104H${sat + 3}Z`} fill={PAL.orangeShade} opacity=".6" />
+        <circle cx={sat} cy={84} r="6.5" fill={PAL.yellow} />
+        <Shine d={`M${sat - 5} 35V48`} width={3} opacity={0.5} />
+        <Arrow from={[sat, 8]} to={[sat, 25]} color={PAL.sky} width={6} head={10} />
+      </g>
+    );
+  },
+
 
   // "overwerken": working overtime — Bram still at work, late at night (moon, clock)
   'w.overwerken': () => (
@@ -220,14 +239,13 @@ export default {
     </g>
   ),
 
-  // "misschien": maybe — Amina thinks; in her bubble both a tick and a cross
+  // "misschien": maybe — Amina thinks it over; a flat hand rocks up and down: "so-so, maybe"
   'w.misschien': () => (
     <g>
-      <Bust who="amina" x={42} y={118} scale={0.62} expr="thinking" />
-      <Bubble x={56} y={10} w={54} h={40} tail="left">
-        <Tick x={72} y={29} r={10} />
-        <Cross x={94} y={29} r={10} />
-      </Bubble>
+      <Bust who="amina" x={32} y={122} scale={0.6} expr="thinking" />
+      <Hand pose="open" x={114} y={66} rotate={-80} scale={0.94} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} mirror />
+      <CurveArrow from={[94, 38]} to={[66, 26]} bend={7} color={PAL.orange} width={5} head={10} />
+      <CurveArrow from={[94, 88]} to={[66, 100]} bend={-7} color={PAL.orange} width={5} head={10} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;

@@ -4,6 +4,7 @@ import { gloss, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { sounds, speak, speechAvailable } from '../lib/audio';
 import { buildLesson, isGraded, type Exercise } from '../lib/exercises';
+import { voiceFor } from '../lib/voices';
 import { Bi } from './Bi';
 import { CloseIcon } from './Icons';
 import {
@@ -104,7 +105,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       if (index < initial.length) setQueue((q) => [...q, ex]);
     }
     const sol = solution(ex);
-    if (sol.nl) speak(sol.text);
+    // In a chat the right reply is "your" line: Amina says it.
+    if (sol.nl) speak(sol.text, false, 'nl', ex.kind === 'chat' ? voiceFor('amina') : undefined);
   }
 
   function finish() {

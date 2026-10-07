@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Box, Bust, Calendar, Clock, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Box, Bust, Clock, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 
 /** Word pictures, group 5 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
@@ -16,13 +16,6 @@ function HardHat({ x = 60, y = 70, s = 1 }: { x?: number; y?: number; s?: number
       <rect x="12" y="60" width="96" height="4.5" rx="2.25" fill={PAL.yellowLight} opacity=".7" />
     </g>
   );
-}
-
-/** Centre of calendar cell `i` (same grid as kit's Calendar). */
-function cell(i: number, x: number, y: number, w: number, h: number): [number, number] {
-  const cw = (w - 16) / 4;
-  const ch = (h - 30) / 3;
-  return [x + 8 + (i % 4) * cw + cw / 2, y + 26 + Math.floor(i / 4) * ch + ch / 2];
 }
 
 /** A wooden pallet seen from the front, top-left corner of the deck at (x, y). */
@@ -51,16 +44,70 @@ function Thermometer({ x, y, angle = 0, len = 34 }: { x: number; y: number; angl
   );
 }
 
-export default {
-  // "de dienst": the shift — a clock with the working hours marked in orange, and a hard hat.
-  'w.dienst': () => (
+/** A sun: yellow disc with orange rays, centred on (cx, cy). */
+function Sun({ cx, cy, r = 16 }: { cx: number; cy: number; r?: number }) {
+  const rays = Array.from({ length: 8 }, (_, k) => {
+    const a = (k * Math.PI) / 4;
+    const o = r + r * 0.32;
+    const e = r + r * 0.72;
+    return `M${(cx + Math.cos(a) * o).toFixed(1)} ${(cy + Math.sin(a) * o).toFixed(1)}L${(cx + Math.cos(a) * e).toFixed(1)} ${(cy + Math.sin(a) * e).toFixed(1)}`;
+  });
+  return (
     <g>
-      <Clock cx={52} cy={50} r={40} hour={7} minute={0} rim={PAL.navy} rimShade={PAL.navyShade} />
-      {/* Working hours: 7 to 3 o'clock as a thick orange band inside the rim */}
-      <path d="M38 74.2A28 28 0 1 1 80 50" fill="none" stroke={PAL.orange} strokeWidth="7" strokeLinecap="round" opacity=".9" />
-      <HardHat x={92} y={96} s={0.32} />
+      <path d={rays.join('')} stroke={PAL.orangeLight} strokeWidth={Math.max(4, r * 0.3)} strokeLinecap="round" />
+      <Shade color={PAL.orange} opacity={0.5} at={[cx + r * 1.1, cy, r * 0.55, r * 1.3]}>
+        <circle cx={cx} cy={cy} r={r} fill={PAL.yellow} />
+      </Shade>
+      <Shine d={`M${cx - r * 0.62} ${cy - r * 0.1}A${r * 0.66} ${r * 0.66} 0 0 1 ${cx - r * 0.1} ${cy - r * 0.62}`} color={PAL.yellowShine} width={Math.max(3, r * 0.2)} opacity={0.9} />
     </g>
-  ),
+  );
+}
+
+/** A yellow crescent moon around (x, y). */
+function Moon({ x, y, r = 20 }: { x: number; y: number; r?: number }) {
+  const d =
+    `M${x + r * 0.15} ${y - r}A${r} ${r} 0 1 0 ${x + r * 0.95} ${y + r * 0.35}` +
+    `A${r * 0.82} ${r * 0.82} 0 0 1 ${x + r * 0.15} ${y - r}Z`;
+  return (
+    <g>
+      <Shade color={PAL.yellowShade} opacity={0.9} at={[x + r * 0.5, y + r * 1.1, r * 0.9, r * 0.5]}>
+        <path d={d} fill={PAL.yellow} />
+      </Shade>
+      <Shine d={`M${x - r * 0.72} ${y + r * 0.1}A${r * 0.74} ${r * 0.74} 0 0 1 ${x - r * 0.3} ${y - r * 0.6}`} color={PAL.yellowShine} width={Math.max(3, r * 0.2)} opacity={0.9} />
+    </g>
+  );
+}
+
+export default {
+  // "de dienst": the shift — a big work clock with the hours of the shift coloured in green,
+  // Jada (in her work clothes) underneath: "these are my working hours".
+  'w.dienst': () => {
+    const cx = 70;
+    const cy = 50;
+    const r = 38;
+    const at = (h: number, len: number) => {
+      const a = (h / 12) * 2 * Math.PI - Math.PI / 2;
+      return `${(cx + Math.cos(a) * len).toFixed(1)} ${(cy + Math.sin(a) * len).toFixed(1)}`;
+    };
+    const f = r * 0.8;
+    return (
+      <g>
+        <Shade color={PAL.skyShade} opacity={1} at={[cx + r * 1.25, cy, r * 0.6, r * 1.4]}>
+          <circle cx={cx} cy={cy} r={r} fill={PAL.sky} />
+        </Shade>
+        <circle cx={cx} cy={cy} r={f} fill={PAL.white} />
+        {/* The shift: 7 to 3 o'clock, filled in green */}
+        <path d={`M${cx} ${cy}L${at(7, f)}A${f} ${f} 0 1 1 ${at(3, f)}Z`} fill={PAL.lime} />
+        <path d={`M${at(7, f + 1)}A${f + 1} ${f + 1} 0 1 1 ${at(3, f + 1)}`} fill="none" stroke={PAL.ok} strokeWidth="5" strokeLinecap="round" />
+        <circle cx={cx} cy={cy} r={f} fill="none" stroke={PAL.paperShade} strokeWidth="0" />
+        <path d={`M${cx} ${cy}L${at(7, f * 0.62)}`} stroke={PAL.ink} strokeWidth="5" strokeLinecap="round" />
+        <path d={`M${cx} ${cy}L${at(0, f * 0.82)}`} stroke={PAL.ink} strokeWidth="3.6" strokeLinecap="round" />
+        <circle cx={cx} cy={cy} r="3.6" fill={PAL.red} />
+        <Shine d={`M${cx - r * 0.86} ${cy - r * 0.3}A${r * 0.9} ${r * 0.9} 0 0 1 ${cx - r * 0.32} ${cy - r * 0.86}`} width={3.4} opacity={0.6} />
+        <Bust who="jada" x={26} y={122} scale={0.44} expr="pleased" />
+      </g>
+    );
+  },
 
   // "de pauze": the break — a hot mug of coffee, the hard hat put down beside it.
   'w.pauze': () => (
@@ -118,20 +165,15 @@ export default {
     </g>
   ),
 
-  // "morgen": tomorrow — on the calendar an arrow jumps from today to the next day.
-  'w.morgen': () => {
-    const [x, y, w, h] = [10, 20, 100, 88];
-    const today = cell(5, x, y, w, h);
-    const next = cell(6, x, y, w, h);
-    return (
-      <g>
-        <Calendar x={x} y={y} w={w} h={h} mark={6} header={PAL.green} headerShade={PAL.greenShade} />
-        <circle cx={today[0]} cy={today[1]} r="8" fill={PAL.mist} />
-        <circle cx={today[0]} cy={today[1]} r="4" fill={PAL.line} />
-        <CurveArrow from={[today[0], today[1] - 9]} to={[next[0] + 2, next[1] - 12]} bend={12} color={PAL.sky} width={5} head={9} />
-      </g>
-    );
-  },
+  // "morgen": tomorrow — after the night (moon) comes the next day (sun): a big arrow from one to the other.
+  'w.morgen': () => (
+    <g>
+      <Moon x={28} y={80} r={18} />
+      <Sparkle x={14} y={56} r={5} color={PAL.yellowLight} />
+      <Sun cx={86} cy={78} r={16} />
+      <CurveArrow from={[26, 52]} to={[84, 44]} bend={26} color={PAL.sky} width={8} head={13} />
+    </g>
+  ),
 
   // "ziek": sick — Amina with a thermometer in her mouth and a hot, red forehead.
   'w.ziek': () => (
@@ -184,31 +226,33 @@ export default {
     </g>
   ),
 
-  // "de pijn": the pain — Henk holds his aching shoulder, red pain flashes.
+  // "de pijn": the pain — Bram squeezes his eyes shut and grabs his sore shoulder; a red
+  // throbbing spot under his hand.
   'w.pijn': () => (
     <g>
-      <Bust who="henk" x={52} y={120} scale={0.74} expr="disappointed" />
-      <path d="M88 54L96 62L90 64L100 74" fill="none" stroke={PAL.red} strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M104 86L110 82" stroke={PAL.red} strokeWidth="4.5" strokeLinecap="round" />
-      <Hand pose="open" x={68} y={120} rotate={-58} scale={0.62} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
-      <Sparkle x={94} y={92} r={10} color={PAL.red} />
+      <Bust who="bram" x={48} y={124} scale={0.76} expr="disappointed" squint />
+      <circle cx="78" cy="98" r="20" fill={PAL.red} opacity=".28" />
+      <circle cx="78" cy="98" r="12" fill={PAL.red} opacity=".55" />
+      <Motion x={78} y={98} dir={-45} spread={110} n={4} len={9} gap={22} color={PAL.red} width={4.4} />
+      <Hand pose="open" x={70} y={124} rotate={-28} scale={0.7} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
     </g>
   ),
 
-  // "vandaag": today — the sun over the calendar, a finger points at this day.
-  'w.vandaag': () => {
-    const [x, y, w, h] = [12, 24, 82, 80];
-    const [cx, cy] = cell(5, x, y, w, h);
-    return (
-      <g>
-        <Calendar x={x} y={y} w={w} h={h} mark={5} header={PAL.orange} headerShade={PAL.orangeShade} />
-        <circle cx={cx} cy={cy} r="5" fill={PAL.yellow} />
-        <circle cx="96" cy="22" r="11" fill={PAL.yellow} />
-        <Motion x={96} y={22} dir={-135} spread={170} n={4} len={5} gap={14} color={PAL.yellowShade} width={3.2} />
-        <Hand pose="point" x={76} y={109} rotate={-32} scale={0.8} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
-      </g>
-    );
-  },
+  // "vandaag": today — one big day page with the sun on it, a finger points: this day.
+  'w.vandaag': () => (
+    <g>
+      {/* Tear-off pad: page edges below */}
+      <rect x="12" y="28" width="72" height="74" rx="9" fill={PAL.mist} />
+      <rect x="12" y="23" width="72" height="74" rx="9" fill={PAL.paperShade} />
+      <rect x="12" y="18" width="72" height="74" rx="9" fill={PAL.white} />
+      <path d="M12 27A9 9 0 0 1 21 18H75A9 9 0 0 1 84 27V36H12Z" fill={PAL.orange} />
+      <path d="M64 18H75A9 9 0 0 1 84 27V36H64Z" fill={PAL.orangeShade} opacity=".6" />
+      <rect x="28" y="11" width="6" height="14" rx="3" fill={PAL.slate} />
+      <rect x="62" y="11" width="6" height="14" rx="3" fill={PAL.slate} />
+      <Sun cx={48} cy={63} r={16} />
+      <Hand pose="point" x={104} y={114} rotate={-38} scale={0.82} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
+    </g>
+  ),
 
   // "beter": better — Bram feels well again: big smile, a green arrow going up.
   'w.beter': () => (

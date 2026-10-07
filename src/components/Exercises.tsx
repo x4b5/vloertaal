@@ -8,6 +8,7 @@ import type { Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { Bi } from './Bi';
 import { castFor, Character, type CharacterId, type Mood, useTalking } from './Characters';
+import { voiceFor } from '../lib/voices';
 import { SpeakButton } from './SpeakButton';
 
 export interface Answer {
@@ -133,14 +134,14 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
 
 /** Dutch word shown → pick the English meaning. */
 export function MeaningExercise({ ex, lang, locked, onAnswer, verdict }: Props<'meaning'>) {
-  useEffect(() => { speak(ex.word.nl); }, [ex.word]);
+  useEffect(() => { speak(ex.word.nl, false, 'nl', voiceFor('bram')); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
       <div className="speaker">
         <Speaker who="bram" lines={[ex.word.nl]} verdict={verdict} />
         <div className="speaker-bubble">
-          <SpeakButton text={ex.word.nl} />
+          <SpeakButton text={ex.word.nl} voice={voiceFor('bram')} />
           <span className="speaker-nl" lang="nl">{ex.word.nl}</span>
         </div>
       </div>
@@ -391,10 +392,10 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
   const { prompt, reply } = ex.dialogue;
   const [picked, setPicked] = useState<ChatLine | null>(null);
   const [hint, setHint] = useState(false);
-  useEffect(() => { speak(prompt.nl); }, [prompt]);
   const mine = picked && locked ? (picked.id === reply.id ? 'right' : 'wrong') : '';
   // The colleague asks; "you" are Amina. The colleague talks while the line plays.
   const them = castFor(prompt.id, ['bram', 'henk', 'jada']);
+  useEffect(() => { speak(prompt.nl, false, 'nl', voiceFor(them)); }, [prompt, them]);
   const themTalking = useTalking([prompt.nl]);
   // After a right answer it's your turn: "you" say the reply (and talk while it is read out),
   // while the colleague listens. Before that you listen, then think about your answer.
@@ -408,7 +409,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
         <div className="chat-row chat-them">
           <span className="chat-char"><Character who={them} mood={moodFor(verdict, 'idle', true)} talking={themTalking && !meTalking} /></span>
           <div className="chat-bubble">
-            <SpeakButton glyph text={prompt.nl} label={`Play: ${prompt.nl}`} />
+            <SpeakButton glyph text={prompt.nl} label={`Play: ${prompt.nl}`} voice={voiceFor(them)} />
             <button
               type="button"
               className="chat-line"
@@ -467,7 +468,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
         <div className="tip-say-row">
           <span className="tip-char"><Character who={castFor(tip.id)} talking={talking} size={96} /></span>
           <div className="speaker-bubble tip-bubble">
-            <SpeakButton glyph text={tip.phrase.nl} label={`Play: ${tip.phrase.nl}`} />
+            <SpeakButton glyph text={tip.phrase.nl} label={`Play: ${tip.phrase.nl}`} voice={voiceFor(castFor(tip.id))} />
             <span className="tip-phrase">
               <span lang="nl" className="tip-phrase-nl">{tip.phrase.nl}</span>
               <Bi text={gloss(tip.phrase.id, tip.phrase.en, lang)} />

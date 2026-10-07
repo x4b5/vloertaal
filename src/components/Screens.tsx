@@ -5,7 +5,8 @@ import { findItem, phrasebookIds, units } from '../content/curriculum';
 import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useState } from 'react';
-import { dutchVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
+import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
+import { VOICE_SAMPLE } from '../lib/voices';
 import { isUnlocked } from '../lib/exercises';
 import type { Progress, ThemeChoice } from '../lib/progress';
 import { Bi } from './Bi';
@@ -196,18 +197,22 @@ const THEMES: { value: ThemeChoice; key: 'themeAuto' | 'themeLight' | 'themeDark
   { value: 'dark', key: 'themeDark', Icon: MoonIcon },
 ];
 
-const SAMPLE = 'Goedemorgen! Draag altijd je helm.';
-
-/** Dutch voices load asynchronously in most browsers. */
-function useDutchVoices() {
-  const [voices, setVoices] = useState(dutchVoices);
+/** Dutch voices load asynchronously in most browsers; recorded voices arrive with voices.json. */
+function useVoices() {
+  const [device, setDevice] = useState(dutchVoices);
+  const [recorded, setRecorded] = useState(recordedVoices);
   useEffect(() => {
-    if (!speechAvailable()) return;
-    const update = () => setVoices(dutchVoices());
+    const offRecorded = onRecordedVoices(() => setRecorded(recordedVoices()));
+    setRecorded(recordedVoices()); // they may have arrived before this screen opened
+    if (!speechAvailable()) return offRecorded;
+    const update = () => setDevice(dutchVoices());
     window.speechSynthesis.addEventListener('voiceschanged', update);
-    return () => window.speechSynthesis.removeEventListener('voiceschanged', update);
+    return () => {
+      offRecorded();
+      window.speechSynthesis.removeEventListener('voiceschanged', update);
+    };
   }, []);
-  return voices;
+  return { device, recorded };
 }
 
 export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, onBack }: {
@@ -264,29 +269,33 @@ function VoicePicker({ current, lang, onPick }: {
   lang?: HelpLanguage;
   onPick: (voice: string | null) => void;
 }) {
-  const voices = useDutchVoices();
-  if (!voices.length) return <p className="warn"><Bi text={ui('voiceNone', lang)} /></p>;
-  const options = [{ uri: null, name: ui('voiceAuto', lang), detail: voices[0].name }, ...voices.map((v) => ({
-    uri: v.voiceURI,
-    name: { en: v.name.replace(/\s*\(.*\)\s*$/, '') },
-    detail: v.lang.replace('_', '-').toLowerCase() === 'nl-be' ? 'Vlaams (België)' : 'Nederland',
-  }))];
+  const { device, recorded } = useVoices();
+  if (!recorded.length && !device.length) return <p className="warn"><Bi text={ui('voiceNone', lang)} /></p>;
+  const options: { ref: string | null; name: Bilingual; detail: string }[] = [
+    { ref: null, name: ui('voiceAuto', lang), detail: recorded[0]?.label ?? device[0]?.name ?? '' },
+    ...recorded.map((v) => ({ ref: `piper:${v.key}`, name: { en: v.label }, detail: 'Vloertaal · Nederland' })),
+    ...device.map((v) => ({
+      ref: v.voiceURI,
+      name: { en: v.name.replace(/\s*\(.*\)\s*$/, '') },
+      detail: v.lang.replace('_', '-').toLowerCase() === 'nl-be' ? 'Vlaams (België)' : 'Nederland',
+    })),
+  ];
   return (
     <>
       <p className="muted small"><Bi text={ui('voiceHint', lang)} /></p>
       <ul className="voices" role="radiogroup" aria-label={ui('voice').en}>
         {options.map((o) => {
-          const picked = current === o.uri;
+          const picked = current === o.ref;
           return (
-            <li key={o.uri ?? 'auto'} className={`voice-row ${picked ? 'picked' : ''}`}>
+            <li key={o.ref ?? 'auto'} className={`voice-row ${picked ? 'picked' : ''}`}>
               <button
                 type="button"
                 className="voice-pick"
                 role="radio"
-                aria-checked={Boolean(picked)}
+                aria-checked={picked}
                 onClick={() => {
-                  setPreferredVoice(o.uri);
-                  onPick(o.uri);
+                  setPreferredVoice(o.ref);
+                  onPick(o.ref);
                 }}
               >
                 <span className="voice-name"><Bi text={o.name} /></span>
@@ -297,7 +306,7 @@ function VoicePicker({ current, lang, onPick }: {
                 type="button"
                 className="speak speak-md"
                 aria-label={`Listen: ${o.name.en}`}
-                onClick={() => speak(SAMPLE, false, 'nl', o.uri ?? undefined)}
+                onClick={() => speak(VOICE_SAMPLE, false, 'nl', o.ref)}
               >
                 <SpeakerIcon size={28} />
               </button>
@@ -305,6 +314,13 @@ function VoicePicker({ current, lang, onPick }: {
           );
         })}
       </ul>
+      {recorded.length > 0 && (
+        <p className="muted small credits">
+          Vloertaal voices: {recorded.map((v) => v.label).join(', ')}, made with Piper (open source)
+          {recorded.some((v) => v.license) && <> · {[...new Set(recorded.map((v) => v.license).filter(Boolean))].join(', ')}</>}.
+          {' '}Women in the app speak with your phone's voice.
+        </p>
+      )}
     </>
   );
 }
