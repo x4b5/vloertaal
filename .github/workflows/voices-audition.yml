@@ -21,7 +21,8 @@ jobs:
           python-version: '3.12'
       - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
       - run: pip install piper-tts==1.8.0
-      - run: python scripts/voices/make_voices.py audition --out docs/stemproef/piper
+      # Round 2: every speaker of the multi-speaker MLS voice, to find good female voices.
+      - run: python scripts/voices/make_voices.py audition --models nl_NL-mls-medium --max-speakers 200 --out docs/stemproef/piper/mls
       - name: Commit the samples
         run: |
           git config user.name "github-actions[bot]"

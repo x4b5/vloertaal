@@ -48,11 +48,13 @@ def to_mp3(voice: PiperVoice, text: str, out: Path, speaker: int | None, length:
     wav.unlink()
 
 
-def audition(out_dir: Path) -> None:
+def audition(out_dir: Path, models: list[str] | None = None, max_speakers: int = MAX_SPEAKERS) -> None:
     rows = []
     for name, info in sorted(dutch_voices().items()):
+        if models and name not in models:
+            continue
         voice = load(name)
-        speakers = list(info.get("speaker_id_map", {}).items())[:MAX_SPEAKERS] or [(None, None)]
+        speakers = list(info.get("speaker_id_map", {}).items())[:max_speakers] or [(None, None)]
         for label, sid in speakers:
             key = name if sid is None else f"{name}-s{sid}"
             to_mp3(voice, SAMPLE, out_dir / f"{key}.mp3", sid)
@@ -83,6 +85,11 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("mode", choices=["audition", "all"])
     ap.add_argument("--out", required=True)
+    ap.add_argument("--models", nargs="*", help="audition only these voices")
+    ap.add_argument("--max-speakers", type=int, default=MAX_SPEAKERS)
     a = ap.parse_args()
-    (audition if a.mode == "audition" else generate_all)(Path(a.out))
+    if a.mode == "audition":
+        audition(Path(a.out), a.models, a.max_speakers)
+    else:
+        generate_all(Path(a.out))
     sys.exit(0)
