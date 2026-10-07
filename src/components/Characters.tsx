@@ -1,5 +1,6 @@
 import { useEffect, useId, useState } from 'react';
 import { onSpeech } from '../lib/audio';
+import { FACES, type Expr, type TalkFrame } from './Faces';
 
 /**
  * The Vloertaal cast: four colleagues from the work floor, drawn as flat-vector busts in one
@@ -15,13 +16,15 @@ import { onSpeech } from '../lib/audio';
  * With prefers-reduced-motion the pose is shown without motion.
  */
 export type CharacterId = 'bram' | 'amina' | 'henk' | 'jada';
-export type Mood = 'idle' | 'talking' | 'happy' | 'sad' | 'cheer' | 'wave';
+/**
+ * Body + face state. `idle` is the character's own resting face; `thinking`, `pleased` and
+ * `sad` (disappointed) change the face only; `happy` adds one hop, `cheer` keeps jumping with
+ * both arms up. `talking` is idle with a moving mouth (or pass `talking` to any mood).
+ */
+export type Mood = 'idle' | 'talking' | 'thinking' | 'pleased' | 'happy' | 'sad' | 'cheer' | 'wave';
 
 export const CAST: CharacterId[] = ['bram', 'amina', 'henk', 'jada'];
 
-const INK = '#3c3c3c';
-const MOUTH = '#7a2433';
-const TONGUE = '#ff7c8a';
 
 interface Look {
   skin: string;
@@ -44,7 +47,6 @@ interface Look {
 }
 
 const TORSO = 'M24 128C24 104 38 93 60 93C82 93 96 104 96 128Q96 134 90 134H30Q24 134 24 128Z';
-const roundFace = (fill: string) => <rect x="33" y="26" width="54" height="60" rx="25" fill={fill} />;
 
 const LOOKS: Record<CharacterId, Look> = {
   bram: {
@@ -52,7 +54,8 @@ const LOOKS: Record<CharacterId, Look> = {
     shade: '#e2a376',
     brow: '#6b3f22',
     sleeve: '#1a86d8',
-    face: roundFace,
+    // Broad, square jaw
+    face: (fill) => <path d="M33 50C33 33 44 27 60 27C76 27 87 33 87 50V69C87 84 77 91 60 91C43 91 33 84 33 69Z" fill={fill} />,
     ears: true,
     blink: 4.2,
     faceExtra: <path d="M30 70Q36 92 60 92Q84 92 90 70Q80 86 60 86Q40 86 30 70Z" fill="#b07a55" opacity=".28" />,
@@ -80,13 +83,15 @@ const LOOKS: Record<CharacterId, Look> = {
         {/* Sideburns */}
         <rect x="33" y="48" width="5" height="14" rx="2.5" fill="#6b3f22" />
         <rect x="82" y="48" width="5" height="14" rx="2.5" fill="#6b3f22" />
-        {/* Hard hat */}
+        {/* Hard hat (sits high, so the brows show) */}
+        <g transform="translate(0 -4)">
         <path d="M30 50C30 26 43 13 60 13C77 13 90 26 90 50Z" fill="#ffc800" />
         <path d="M75 17C85 24 90 36 90 50H80C80 36 79 26 75 17Z" fill="#e5a400" opacity=".55" />
         <rect x="55" y="13" width="10" height="35" rx="5" fill="#ffd94d" />
         <path d="M37 40Q39 27 49 20" fill="none" stroke="#fff3b0" strokeWidth="3.5" strokeLinecap="round" />
         <rect x="23" y="45" width="74" height="9" rx="4.5" fill="#e5a400" />
         <rect x="23" y="45" width="74" height="3" rx="1.5" fill="#ffd94d" opacity=".6" />
+        </g>
       </>
     ),
   },
@@ -95,7 +100,8 @@ const LOOKS: Record<CharacterId, Look> = {
     shade: '#9c6141',
     brow: '#2b1d14',
     sleeve: '#2f8f3e',
-    face: (fill) => <ellipse cx="60" cy="63" rx="22" ry="25" fill={fill} />,
+    // Soft egg-shaped face framed by the scarf
+    face: (fill) => <path d="M60 38C73 38 82 47 82 61C82 77 72 88 60 88C48 88 38 77 38 61C38 47 47 38 60 38Z" fill={fill} />,
     blink: 5.1,
     back: (
       <>
@@ -132,7 +138,8 @@ const LOOKS: Record<CharacterId, Look> = {
     shade: '#d9946c',
     brow: '#9aa1a8',
     sleeve: '#244a7d',
-    face: (fill) => <rect x="33" y="24" width="54" height="62" rx="26" fill={fill} />,
+    // Long face, high forehead, heavy jowls
+    face: (fill) => <path d="M36 44C36 29 46 22 60 22C74 22 84 29 84 44V72C84 84 76 91 60 91C44 91 36 84 36 72Z" fill={fill} />,
     ears: true,
     blink: 4.7,
     front: (
@@ -174,7 +181,8 @@ const LOOKS: Record<CharacterId, Look> = {
     shade: '#633a22',
     brow: '#1e1512',
     sleeve: '#e3e9ee',
-    face: (fill) => <rect x="34" y="30" width="52" height="56" rx="24" fill={fill} />,
+    // Round cheeks, small pointed chin
+    face: (fill) => <path d="M60 31C77 31 87 43 87 59C87 74 74 88 60 89C46 88 33 74 33 59C33 43 43 31 60 31Z" fill={fill} />,
     ears: true,
     blink: 3.8,
     back: (
@@ -280,72 +288,44 @@ function Arms({ mood, look }: { mood: Mood; look: Look }) {
   }
 }
 
-function Eyes({ mood, look }: { mood: Mood; look: Look }) {
-  if (mood === 'happy' || mood === 'cheer' || mood === 'wave') {
-    // Squeezed with joy: upturned arcs, brows up.
-    return (
-      <g className="ch-eyes-joy">
-        <path d="M43.5 64Q50 55.5 56.5 64M63.5 64Q70 55.5 76.5 64" fill="none" stroke={INK} strokeWidth="3.4" strokeLinecap="round" />
-        <path d="M43 50Q49 46 55 48.5M65 48.5Q71 46 77 50" fill="none" stroke={look.brow} strokeWidth="3.2" strokeLinecap="round" />
-      </g>
-    );
+/** Which face a mood shows. */
+function exprFor(mood: Mood): Expr {
+  switch (mood) {
+    case 'thinking':
+      return 'thinking';
+    case 'pleased':
+    case 'happy':
+    case 'wave':
+      return 'pleased';
+    case 'sad':
+      return 'disappointed';
+    case 'cheer':
+      return 'joy';
+    default:
+      return 'neutral';
   }
-  const sad = mood === 'sad';
-  const py = sad ? 65 : 63;
-  return (
-    <>
-      <g className="ch-eyes" style={{ '--blink': `${look.blink}s` } as React.CSSProperties}>
-        <ellipse cx="50" cy="62" rx="6.6" ry="7.6" fill="#fff" />
-        <ellipse cx="70" cy="62" rx="6.6" ry="7.6" fill="#fff" />
-        <circle cx="51.3" cy={py} r="4.1" fill="#1f1a17" />
-        <circle cx="71.3" cy={py} r="4.1" fill="#1f1a17" />
-        <circle cx="52.8" cy={py - 1.8} r="1.6" fill="#fff" />
-        <circle cx="72.8" cy={py - 1.8} r="1.6" fill="#fff" />
-        {sad && (
-          // Heavy upper lids
-          <path d="M43 54H57V60Q50 57 43 61ZM63 54H77V61Q70 57 63 60Z" fill={look.skin} />
-        )}
-      </g>
-      <path
-        d={sad ? 'M44 54Q50 53 55.5 49M64.5 49Q70 53 76 54' : 'M43.5 52Q49.5 48.5 55.5 51M64.5 51Q70.5 48.5 76.5 52'}
-        fill="none"
-        stroke={look.brow}
-        strokeWidth="3.2"
-        strokeLinecap="round"
-      />
-    </>
-  );
 }
 
-function Mouth({ mood }: { mood: Mood }) {
-  if (mood === 'happy' || mood === 'cheer' || mood === 'wave') {
-    return (
-      <g className="ch-mouth">
-        <path d="M50 74H70Q70 88 60 88Q50 88 50 74Z" fill={MOUTH} />
-        <path d="M51.5 74H68.5V77.5H51.5Z" fill="#fff" />
-        <path d="M54 84.5Q60 80 66 84.5Q60 88.5 54 84.5Z" fill={TONGUE} />
-      </g>
-    );
-  }
-  if (mood === 'sad') {
-    return <path className="ch-mouth" d="M54 81Q60 75.5 66 81" fill="none" stroke={INK} strokeWidth="2.8" strokeLinecap="round" />;
-  }
-  return (
-    <>
-      <path className="ch-mouth ch-mouth-rest" d="M52.5 76.5Q60.5 82.5 68 75" fill="none" stroke={INK} strokeWidth="2.8" strokeLinecap="round" />
-      {mood === 'talking' && (
-        <g className="ch-mouth-talk">
-          <path d="M52.5 75H67.5Q67.5 85 60 85Q52.5 85 52.5 75Z" fill={MOUTH} />
-          <path d="M54.5 82Q60 78.5 65.5 82Q60 85.5 54.5 82Z" fill={TONGUE} />
-        </g>
-      )}
-    </>
-  );
+/** Mouth shapes while talking, one every ~105 ms: never the same twice in a row. */
+const TALK_SEQUENCE: TalkFrame[] = [1, 2, 3, 1, 2, 0, 3, 2, 1, 0, 2, 3];
+const TALK_STEP_MS = 105;
+
+function useTalkFrame(on: boolean): TalkFrame | null {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    if (!on) return;
+    setI(0);
+    const t = window.setInterval(() => setI((n) => (n + 1) % TALK_SEQUENCE.length), TALK_STEP_MS);
+    return () => window.clearInterval(t);
+  }, [on]);
+  return on ? TALK_SEQUENCE[i] : null;
 }
 
-export function Character({ who, mood = 'idle', size = 120, flip = false, crop, className }: {
+export function Character({ who, mood = 'idle', talking: talkingProp, size = 120, flip = false, crop, className }: {
   who: CharacterId;
   mood?: Mood;
+  /** Mouth moves (on top of any mood); mood 'talking' means the same. */
+  talking?: boolean;
   /** Height in px (the width follows the drawing). */
   size?: number;
   /** Face left instead of right (for a character on the right side of a chat). */
@@ -355,54 +335,63 @@ export function Character({ who, mood = 'idle', size = 120, flip = false, crop, 
   className?: string;
 }) {
   const look = LOOKS[who];
+  const face = FACES[who];
+  const talking = !!talkingProp || mood === 'talking';
+  const frame = useTalkFrame(talking);
+  const expr = exprFor(mood);
   const id = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   const faceClip = `chf-${id}`;
   const torsoClip = `cht-${id}`;
   const viewBox = crop === 'head' ? '20 8 80 84' : '0 0 120 140';
   const ratio = crop === 'head' ? 1 : 120 / 140;
+  const blush = face.blush?.(expr) ?? 0.35;
   const figure = (
     <>
       {crop !== 'head' && <ellipse className="ch-shadow" cx="60" cy="135" rx="33" ry="4.5" fill="#000" opacity=".18" />}
       <g className="ch-fig">
-        {crop !== 'head' && (
-          <>
-            {look.torso(torsoClip)}
-            <Arms mood={mood} look={look} />
-          </>
-        )}
-        <g className="ch-head">
-          {look.back}
-          <rect x="52" y="78" width="16" height="18" rx="6" fill={look.shade} />
-          {look.ears && (
+        <g className="ch-pulse">
+          {crop !== 'head' && (
             <>
-              <circle cx="33.5" cy="63" r="6.5" fill={look.skin} />
-              <circle cx="86.5" cy="63" r="6.5" fill={look.skin} />
-              <circle cx="33.5" cy="63" r="3" fill={look.shade} />
-              <circle cx="86.5" cy="63" r="3" fill={look.shade} />
+              {look.torso(torsoClip)}
+              <Arms mood={mood} look={look} />
             </>
           )}
-          {look.face(look.skin)}
-          <g clipPath={`url(#${faceClip})`}>
-            <ellipse cx="100" cy="58" rx="27" ry="48" fill={look.shade} opacity=".5" />
-            {look.faceExtra}
+          <g className="ch-head">
+            {look.back}
+            <rect x="52" y="78" width="16" height="18" rx="6" fill={look.shade} />
+            {look.ears && (
+              <>
+                <circle cx="33.5" cy="64" r="6.5" fill={look.skin} />
+                <circle cx="86.5" cy="64" r="6.5" fill={look.skin} />
+                <circle cx="33.5" cy="64" r="3" fill={look.shade} />
+                <circle cx="86.5" cy="64" r="3" fill={look.shade} />
+              </>
+            )}
+            {look.face(look.skin)}
+            <g clipPath={`url(#${faceClip})`}>
+              <ellipse cx="100" cy="58" rx="27" ry="48" fill={look.shade} opacity=".5" />
+              {look.faceExtra}
+            </g>
+            <ellipse cx="42" cy="74" rx="4.8" ry="3.2" fill="#ff7b7b" opacity={blush} />
+            <ellipse cx="78" cy="74" rx="4.8" ry="3.2" fill="#ff7b7b" opacity={blush} />
+            <g className="ch-eyes" style={{ '--blink': `${look.blink}s` } as React.CSSProperties}>
+              {face.eyes(talking && expr === 'thinking' ? 'neutral' : expr, look.skin)}
+            </g>
+            <g className="ch-brows">{face.brows(expr, look.brow)}</g>
+            {face.nose(look.shade)}
+            <g className="ch-mouth">{frame !== null ? face.talk(frame) : face.mouth(expr)}</g>
+            {look.front}
+            {mood === 'sad' && (
+              <path className="ch-sweat" d="M92 40Q96 47 96 50A4 4 0 0 1 88 50Q88 47 92 40Z" fill="#8fdcff" />
+            )}
           </g>
-          <ellipse cx="42" cy="73" rx="4.6" ry="3.2" fill="#ff7b7b" opacity=".35" />
-          <ellipse cx="78" cy="73" rx="4.6" ry="3.2" fill="#ff7b7b" opacity=".35" />
-          <Eyes mood={mood} look={look} />
-          <path d="M57.5 66.5Q60 71.5 62.5 66.5" fill={look.shade} />
-          <ellipse cx="60" cy="69.5" rx="3.6" ry="2.4" fill={look.shade} />
-          <Mouth mood={mood} />
-          {look.front}
-          {mood === 'sad' && (
-            <path className="ch-sweat" d="M92 40Q96 47 96 50A4 4 0 0 1 88 50Q88 47 92 40Z" fill="#8fdcff" />
-          )}
         </g>
       </g>
     </>
   );
   return (
     <svg
-      className={`ch ch-${who} ch-${mood} ${crop === 'head' ? 'ch-headonly' : ''} ${className ?? ''}`}
+      className={`ch ch-${who} ch-${mood} ch-x-${expr} ${talking ? 'ch-talking' : ''} ${crop === 'head' ? 'ch-headonly' : ''} ${className ?? ''}`}
       viewBox={viewBox}
       width={Math.round(size * ratio)}
       height={size}
