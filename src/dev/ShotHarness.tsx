@@ -1,7 +1,8 @@
 import { tipForLesson } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import { LessonPlayer } from '../components/LessonPlayer';
-import { Result } from '../components/Screens';
+import { Path, Result, TopBar } from '../components/Screens';
+import { emptyProgress } from '../lib/progress';
 import { Milestone } from '../components/Milestone';
 import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
@@ -25,6 +26,17 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
   // Day-streak milestone after the very first lesson: streak 1.
   if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
+  // Home screen: first lesson done, second lesson current (as in the house-style concept).
+  if (shot === 'path') {
+    const progress = { ...emptyProgress, onboarded: true, xp: 120, streak: 7, completed: { 'l.hello': { best: 1, times: 1 } } };
+    const l = getHelpLanguage(lang as LangCode);
+    return (
+      <>
+        <TopBar streak={7} xp={120} lang={l} onSettings={() => {}} />
+        <Path progress={progress} lang={l} onStart={() => {}} onPhrasebook={() => {}} onTips={() => {}} />
+      </>
+    );
+  }
   // The whole cast in every mood, big, for judging the drawings.
   if (shot === 'cast') {
     const moods: Mood[] = ['idle', 'happy', 'sad', 'pleased', 'thinking', 'cheer'];
