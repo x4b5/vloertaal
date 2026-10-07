@@ -1,0 +1,22 @@
+{
+ "voices": [
+  {
+   "key": "berend",
+   "label": "Berend",
+   "gender": "male",
+   "license": "ElevenLabs (paid plan, commercial use)",
+   "said": {
+    "x.sample": "Goedemorgen! Draag altijd je helm."
+   }
+  },
+  {
+   "key": "ariel",
+   "label": "Ariël",
+   "gender": "female",
+   "license": "ElevenLabs (paid plan, commercial use)",
+   "said": {
+    "x.sample": "Goedemorgen! Draag altijd je helm."
+   }
+  }
+ ]
+}
