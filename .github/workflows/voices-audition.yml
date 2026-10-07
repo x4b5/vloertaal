@@ -1,0 +1,30 @@
+name: Piper voice audition
+
+# Runs when the audition script changes on a feature branch: every Dutch Piper
+# voice says one test sentence, and the MP3s are committed to docs/stemproef/piper.
+on:
+  push:
+    branches: ['claude/**']
+    paths: ['scripts/voices/**', '.github/workflows/voices-audition.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audition:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install piper-tts==1.8.0
+      - run: python scripts/voices/make_voices.py audition --out docs/stemproef/piper
+      - name: Commit the samples
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/stemproef/piper
+          git commit -m "Add Piper voice audition samples [skip ci]" || exit 0
+          git push

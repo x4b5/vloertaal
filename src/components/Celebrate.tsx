@@ -158,7 +158,7 @@ const OUTFITS: Record<HeadId, Outfit> = {
     sleeve: '#1a86d8',
     leg: '#2d4f78',
     shoe: '#8a5a2b',
-    arm: [19, 18, 12],
+    arm: [23, 21, 12],
     legs: [17, 15, 14],
     shoulder: [15, -34],
     hip: [9, 4],
@@ -182,7 +182,7 @@ const OUTFITS: Record<HeadId, Outfit> = {
     bare: true,
     leg: '#1cb0f6',
     shoe: '#ff4b4b',
-    arm: [16, 15, 10.5],
+    arm: [20, 19, 10.5],
     legs: [14, 13, 12.5],
     shoulder: [12, -30],
     hip: [7, 4],
@@ -315,34 +315,35 @@ const LESSON_CONFETTI: Piece[] = [
   [168, 6, 'dot', BLUE, 0, 4.5],
 ];
 
-/** Bram's leap: one diagonal from the kicked-back boot through his body to the high-five. */
+/** Bram's leap: one long diagonal from his kicked-back boot (bottom left), through his body and up
+ *  his straight arm into the high five above the two of them. */
 const BRAM_LEAP: ActionPose = {
-  pelvis: [218, 170],
-  tilt: -18,
-  head: 4,
-  gaze: [-1, -0.6],
+  pelvis: [112, 160],
+  tilt: 6,
+  head: -14,
+  gaze: [1, -1],
   shout: true,
-  armL: { a: -140, e: -114, hand: 'open', flip: true },
-  armR: { a: 30, e: -10, hand: 'fist' },
-  legL: { t: 118, s: 96 },
-  legR: { t: 24, s: -14 },
-  facing: [-1, -1],
-  behind: ['armR', 'legR'],
+  armL: { a: 168, e: 140, hand: 'fist', flip: true },
+  armR: { a: -48, e: -56, hand: 'open', flip: true },
+  legL: { t: 132, s: 196 },
+  legR: { t: 72, s: 104 },
+  facing: [-1, 1],
+  behind: ['armL', 'legL'],
 };
 
-/** Jada springs up off a pallet to meet him, one foot flicked up behind her. */
+/** Jada springs up off the crate to meet him, her free fist pumped, one foot flicked up behind. */
 const JADA_SPRING: ActionPose = {
-  pelvis: [104, 178],
-  tilt: 16,
-  head: -4,
-  gaze: [1, -0.6],
+  pelvis: [208, 162],
+  tilt: -12,
+  head: 12,
+  gaze: [-1, -1],
   shout: true,
-  armL: { a: 156, e: 120, hand: 'fist', flip: true },
-  armR: { a: -38, e: -66, hand: 'open' },
-  legL: { t: 132, s: 172 },
-  legR: { t: 96, s: 84 },
-  facing: [1, 1],
-  behind: ['armL', 'legL'],
+  armL: { a: -128, e: -122, hand: 'open' },
+  armR: { a: -10, e: -96, hand: 'fist' },
+  legL: { t: 96, s: 90 },
+  legR: { t: 58, s: -20 },
+  facing: [-1, -1],
+  behind: ['armR', 'legR'],
 };
 
 /** Lesson complete: Bram leaps into a high five with Jada; fireworks and confetti around them. */
@@ -353,20 +354,19 @@ export function LessonCelebration({ className }: { className?: string }) {
         <Burst x={40} y={80} r={28} color={GREEN} className="cel-b1" />
         <Burst x={284} y={56} r={24} color={BLUE} className="cel-b2" />
         <Burst x={296} y={214} r={14} color={GOLD} className="cel-b3" />
-        <Confetti pieces={LESSON_CONFETTI} ox={146} oy={84} delay={0.5} />
-        {/* The shop floor, shadows, and the pallet Jada springs off */}
+        <Confetti pieces={LESSON_CONFETTI} ox={160} oy={60} delay={0.5} />
+        {/* The shop floor, shadows, and the crate Jada springs off */}
         <rect className="cel-floor" x="34" y="246" width="252" height="7" rx="3.5" fill="var(--line)" />
-        <ellipse className="lv-shadow" cx="214" cy="247" rx="34" ry="4" fill="#000" opacity=".2" />
-        <ellipse className="lv-shadow lv-shadow-jada" cx="110" cy="211" rx="18" ry="2.6" fill="#000" opacity=".22" />
+        <ellipse className="lv-shadow" cx="110" cy="247" rx="28" ry="4" fill="#000" opacity=".2" />
+        <ellipse className="lv-shadow lv-shadow-jada" cx="210" cy="211" rx="18" ry="2.6" fill="#000" opacity=".22" />
         <g className="lv-pallet">
-          {/* A wooden crate Jada springs off */}
-          <rect x="80" y="210" width="62" height="36" rx="6" fill="#c98a4b" />
-          <rect x="80" y="210" width="62" height="9" rx="4.5" fill="#e0a86b" />
-          <path d="M128 219H142V240Q142 246 136 246H128Z" fill="#a86d3a" opacity=".5" />
+          <rect x="176" y="210" width="62" height="36" rx="6" fill="#c98a4b" />
+          <rect x="176" y="210" width="62" height="9" rx="4.5" fill="#e0a86b" />
+          <path d="M224 219H238V240Q238 246 232 246H224Z" fill="#a86d3a" opacity=".5" />
         </g>
         {/* The clap where their hands meet, behind the hands */}
         <g className="lv-clap">
-          <Burst x={152} y={104} r={28} color={GOLD} />
+          <Burst x={160} y={74} r={32} color={GOLD} />
         </g>
         <g className="lv-jada">
           <g className="lv-idle lv-idle-jada">
@@ -402,8 +402,8 @@ const BRAM_CHEER: ActionPose = {
   head: -12,
   gaze: [0.3, -1],
   shout: true,
-  armL: { a: 128, e: -34, hand: 'fist', flip: true },
-  armR: { a: -62, e: -80, hand: 'fist' },
+  armL: { a: 112, e: -70, hand: 'fist', flip: true },
+  armR: { a: -50, e: -74, hand: 'fist' },
   legL: { t: 102, s: 86 },
   legR: { t: 8, s: 98 },
   facing: [-1, 1],

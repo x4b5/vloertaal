@@ -95,7 +95,7 @@ const HEADS: Record<HeadId, HeadLook> = {
         <path d="M-31 -37C-31 -66 -15 -80 2 -80C21 -80 35 -66 35 -37Z" fill="#ffc800" />
         <path d="M18 -76C29 -69 35 -55 35 -37H24C24 -52 22 -66 18 -76Z" fill="#e5a400" />
         <rect x="-4.5" y="-80" width="10" height="42" rx="5" fill="#ffe066" />
-        <rect x="-41" y="-42" width="84" height="11" rx="5.5" fill="#e5a400" />
+        <rect x="-37" y="-42" width="76" height="11" rx="5.5" fill="#e5a400" />
       </g>
     ),
   },

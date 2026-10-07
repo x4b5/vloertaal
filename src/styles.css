@@ -864,20 +864,20 @@ h2 { font-size: 1.25rem; }
 
 /* Entrances are solid pops, never fades: each figure grows from its feet (scale 0), overshoots
    with a stretch, squashes on landing and settles; by ~0.8s the high five has landed. */
-.lv-bram { transform-origin: 214px 246px; animation: lv-leap 0.75s 0.08s both; }
+.lv-bram { transform-origin: 110px 246px; animation: lv-leap 0.75s 0.08s both; }
 @keyframes lv-leap {
-  0% { transform: translate(10px, 30px) scale(0); animation-timing-function: cubic-bezier(0.2, 0.8, 0.3, 1); }
-  40% { transform: translate(-6px, -16px) scale(0.86, 1.2); animation-timing-function: cubic-bezier(0.3, 0.6, 0.4, 1); }
-  64% { transform: translate(1px, 4px) scale(1.12, 0.88); }
+  0% { transform: translate(-10px, 30px) scale(0); animation-timing-function: cubic-bezier(0.2, 0.8, 0.3, 1); }
+  40% { transform: translate(6px, -16px) scale(0.86, 1.2); animation-timing-function: cubic-bezier(0.3, 0.6, 0.4, 1); }
+  64% { transform: translate(-1px, 4px) scale(1.12, 0.88); }
   82% { transform: translate(0, -2px) scale(0.97, 1.04); }
   100% { transform: none; }
 }
-.lv-shadow { transform-origin: 214px 247px; animation: lv-shadow 0.75s 0.08s both, lv-shadow-idle 1.4s 0.83s ease-in-out infinite; }
+.lv-shadow { transform-origin: 110px 247px; animation: lv-shadow 0.75s 0.08s both, lv-shadow-idle 1.4s 0.83s ease-in-out infinite; }
 @keyframes lv-shadow { 0% { transform: scale(0); } 40% { transform: scale(0.7); } 64% { transform: scale(1.2); } }
 @keyframes lv-shadow-idle { 50% { transform: scale(0.82); opacity: 0.12; } }
-.lv-shadow-jada { transform-origin: 110px 211px; animation: lv-shadow 0.7s 0s both, lv-shadow-idle 1.5s 0.7s ease-in-out infinite; }
+.lv-shadow-jada { transform-origin: 210px 211px; animation: lv-shadow 0.7s 0s both, lv-shadow-idle 1.5s 0.7s ease-in-out infinite; }
 /* Jada: pops up off the crate a beat earlier, to be there for his hand. */
-.lv-jada { transform-origin: 110px 210px; animation: lv-spring 0.7s 0s both; }
+.lv-jada { transform-origin: 210px 210px; animation: lv-spring 0.7s 0s both; }
 @keyframes lv-spring {
   0% { transform: scale(0); animation-timing-function: cubic-bezier(0.2, 0.8, 0.3, 1); }
   42% { transform: translateY(-12px) scale(0.88, 1.18); }
@@ -885,31 +885,32 @@ h2 { font-size: 1.25rem; }
   84% { transform: scale(0.97, 1.03); }
   100% { transform: none; }
 }
-/* The high five: both hands snap in past the pose and spring back (lands at ~0.75s)... */
-.lv-bram .fig-armL { animation: lv-punch 0.45s 0.32s cubic-bezier(0.3, 1.7, 0.5, 1) backwards, lv-pat 0.7s 0.77s ease-in-out infinite alternate; }
-.lv-jada .fig-armR { animation: lv-reach 0.45s 0.3s cubic-bezier(0.3, 1.7, 0.5, 1) backwards, lv-pat-j 0.7s 0.75s ease-in-out infinite alternate; }
-@keyframes lv-punch { from { transform: rotate(60deg); } }
-@keyframes lv-reach { from { transform: rotate(-70deg); } }
-@keyframes lv-pat { to { transform: rotate(-9deg); } }
-@keyframes lv-pat-j { to { transform: rotate(9deg); } }
-/* ...then the idle celebration: the free fists pump on a staggered beat, the kicked legs swing. */
-.lv-bram .fig-armR { animation: lv-pump 0.4s 0.5s ease-in-out infinite alternate; }
-.lv-jada .fig-armL { animation: lv-pump-j 0.4s 0.7s ease-in-out infinite alternate; }
-@keyframes lv-pump { from { transform: rotate(12deg); } to { transform: rotate(-26deg); } }
-@keyframes lv-pump-j { from { transform: rotate(-12deg); } to { transform: rotate(26deg); } }
-.lv-bram .fig-legR { animation: lv-kick 0.5s 0.4s cubic-bezier(0.3, 1.6, 0.5, 1) backwards, lv-kick-idle 0.7s 0.9s ease-in-out infinite alternate; }
-@keyframes lv-kick { from { transform: rotate(-50deg); } }
-@keyframes lv-kick-idle { to { transform: rotate(-16deg); } }
-.lv-jada .fig-legL { animation: lv-kick-j 0.7s 0.6s ease-in-out infinite alternate; }
-@keyframes lv-kick-j { to { transform: rotate(18deg); } }
+/* The high five: both straight arms swing up from their sides, snap past the pose and spring
+   back (lands at ~0.75s), then keep patting together on the beat. */
+.lv-bram .fig-armR { animation: lv-punch 0.45s 0.32s cubic-bezier(0.3, 1.7, 0.5, 1) backwards, lv-pat 0.7s 0.77s ease-in-out infinite alternate; }
+.lv-jada .fig-armL { animation: lv-reach 0.45s 0.3s cubic-bezier(0.3, 1.7, 0.5, 1) backwards, lv-pat-j 0.7s 0.77s ease-in-out infinite alternate; }
+@keyframes lv-punch { from { transform: rotate(80deg); } }
+@keyframes lv-reach { from { transform: rotate(-80deg); } }
+@keyframes lv-pat { to { transform: rotate(7deg); } }
+@keyframes lv-pat-j { to { transform: rotate(-7deg); } }
+/* ...the free fists pump on a staggered beat, the kicked legs swing. */
+.lv-bram .fig-armL { animation: lv-pump 0.4s 0.5s ease-in-out infinite alternate; }
+.lv-jada .fig-armR { animation: lv-pump-j 0.4s 0.7s ease-in-out infinite alternate; }
+@keyframes lv-pump { from { transform: rotate(-14deg); } to { transform: rotate(18deg); } }
+@keyframes lv-pump-j { from { transform: rotate(14deg); } to { transform: rotate(-22deg); } }
+.lv-bram .fig-legL { animation: lv-kick 0.5s 0.4s cubic-bezier(0.3, 1.6, 0.5, 1) backwards, lv-kick-idle 0.7s 0.9s ease-in-out infinite alternate; }
+@keyframes lv-kick { from { transform: rotate(50deg); } }
+@keyframes lv-kick-idle { to { transform: rotate(14deg); } }
+.lv-jada .fig-legR { animation: lv-kick-j 0.7s 0.6s ease-in-out infinite alternate; }
+@keyframes lv-kick-j { to { transform: rotate(-18deg); } }
 .lv-bram .fig-head { animation: lv-nod 1.4s 0.8s ease-in-out infinite; }
 .lv-jada .fig-head { animation: lv-nod-j 1.5s 0.7s ease-in-out infinite; }
-@keyframes lv-nod { 50% { transform: rotate(-6deg) translateY(-1px); } }
-@keyframes lv-nod-j { 50% { transform: rotate(6deg) translateY(-1px); } }
+@keyframes lv-nod { 50% { transform: rotate(6deg) translateY(-1px); } }
+@keyframes lv-nod-j { 50% { transform: rotate(-6deg) translateY(-1px); } }
 /* Idle bob, forever and from the first frame: 5px up with a stretch, squash at the bottom,
    ease-in-out (1.4s Bram, 1.5s Jada, so they never move in lockstep). */
-.lv-idle { transform-origin: 214px 246px; animation: cel-bob 1.4s ease-in-out infinite; }
-.lv-idle-jada { transform-origin: 110px 210px; animation: cel-bob-small 1.5s -0.5s ease-in-out infinite; }
+.lv-idle { transform-origin: 110px 246px; animation: cel-bob 1.4s ease-in-out infinite; }
+.lv-idle-jada { transform-origin: 210px 210px; animation: cel-bob-small 1.5s -0.5s ease-in-out infinite; }
 @keyframes cel-bob {
   0%, 100% { transform: translateY(0) scale(1.05, 0.94); }
   50% { transform: translateY(-5px) scale(0.97, 1.04); }
@@ -983,7 +984,7 @@ h2 { font-size: 1.25rem; }
 @keyframes sk-cheer { 45% { transform: rotate(-22deg); } }
 @keyframes sk-pump { to { transform: rotate(-12deg); } }
 .sk-bram .fig-armL { animation: sk-wave 0.7s 0.6s ease-in-out infinite alternate; }
-@keyframes sk-wave { from { transform: rotate(10deg); } to { transform: rotate(-8deg); } }
+@keyframes sk-wave { from { transform: rotate(-8deg); } to { transform: rotate(12deg); } }
 /* Idle, from the first frame and forever: a 5px bob, squash on the way down, stretch at the top,
    1.4s ease-in-out; the head nods along. Feet are the pivot so he stays planted on the podium. */
 .sk-idle { transform-origin: 156px 184px; animation: cel-bob 1.4s ease-in-out infinite; }
