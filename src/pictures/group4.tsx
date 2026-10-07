@@ -270,7 +270,7 @@ export default {
         <rect key={x} x={x - 4} y={95} width={8} height={6} rx="3" fill={PAL.greenShade} />
       ))}
       {/* The tomato being taken, lifted out of the crate */}
-      <g transform="translate(2 -9)">
+      <g transform="translate(56 52) scale(0.88) translate(-52 -58)">
       <circle cx={52} cy={58} r={20} fill={PAL.red} />
       <path d="M68 48A20 20 0 0 1 54 77.8" fill="none" stroke={PAL.redShade} strokeWidth="6" strokeLinecap="round" />
       <Shine d="M36 62Q36 70 41 74" width={3.5} opacity={0.5} />

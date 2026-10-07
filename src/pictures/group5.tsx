@@ -80,11 +80,11 @@ function Moon({ x, y, r = 20 }: { x: number; y: number; r?: number }) {
 
 export default {
   // "de dienst": the shift — a big work clock with the hours of the shift coloured in green,
-  // Jada (in her work clothes) underneath: "these are my working hours".
+  // Amina (in her work fleece) underneath: "these are my working hours".
   'w.dienst': () => {
-    const cx = 70;
-    const cy = 50;
-    const r = 38;
+    const cx = 76;
+    const cy = 44;
+    const r = 33;
     const at = (h: number, len: number) => {
       const a = (h / 12) * 2 * Math.PI - Math.PI / 2;
       return `${(cx + Math.cos(a) * len).toFixed(1)} ${(cy + Math.sin(a) * len).toFixed(1)}`;
@@ -99,12 +99,11 @@ export default {
         {/* The shift: 7 to 3 o'clock, filled in green */}
         <path d={`M${cx} ${cy}L${at(7, f)}A${f} ${f} 0 1 1 ${at(3, f)}Z`} fill={PAL.lime} />
         <path d={`M${at(7, f + 1)}A${f + 1} ${f + 1} 0 1 1 ${at(3, f + 1)}`} fill="none" stroke={PAL.ok} strokeWidth="5" strokeLinecap="round" />
-        <circle cx={cx} cy={cy} r={f} fill="none" stroke={PAL.paperShade} strokeWidth="0" />
         <path d={`M${cx} ${cy}L${at(7, f * 0.62)}`} stroke={PAL.ink} strokeWidth="5" strokeLinecap="round" />
         <path d={`M${cx} ${cy}L${at(0, f * 0.82)}`} stroke={PAL.ink} strokeWidth="3.6" strokeLinecap="round" />
         <circle cx={cx} cy={cy} r="3.6" fill={PAL.red} />
         <Shine d={`M${cx - r * 0.86} ${cy - r * 0.3}A${r * 0.9} ${r * 0.9} 0 0 1 ${cx - r * 0.32} ${cy - r * 0.86}`} width={3.4} opacity={0.6} />
-        <Bust who="jada" x={26} y={122} scale={0.44} expr="pleased" />
+        <Bust who="amina" x={32} y={124} scale={0.56} expr="pleased" />
       </g>
     );
   },
@@ -231,8 +230,8 @@ export default {
   'w.pijn': () => (
     <g>
       <Bust who="bram" x={48} y={124} scale={0.76} expr="disappointed" squint />
-      <circle cx="78" cy="98" r="20" fill={PAL.red} opacity=".28" />
-      <circle cx="78" cy="98" r="12" fill={PAL.red} opacity=".55" />
+      <circle cx="78" cy="98" r="17" fill={PAL.redLight} />
+      <circle cx="78" cy="98" r="10" fill={PAL.red} />
       <Motion x={78} y={98} dir={-45} spread={110} n={4} len={9} gap={22} color={PAL.red} width={4.4} />
       <Hand pose="open" x={70} y={124} rotate={-28} scale={0.7} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
     </g>
