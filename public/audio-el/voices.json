@@ -150,7 +150,9 @@
     "c.sick.p": "Ik ben ziek. Ik kan vandaag niet komen werken.",
     "c.cake.p": "Ik ben vandaag jarig! Wil je een stukje taart?",
     "c.speakup.p": "Ik zit ergens mee. Kunnen we even praten?",
-    "c.no.p": "Nee, dat lukt vandaag niet. Morgen kan ik wel."
+    "c.no.p": "Nee, dat lukt vandaag niet. Morgen kan ik wel.",
+    "p.call112": "Bel 112!",
+    "p.hurt": "Ik ben gewond."
    },
    "takes": {
     "w.hallo": 2,
@@ -297,7 +299,9 @@
     "c.sick.p": 2,
     "c.cake.p": 2,
     "c.speakup.p": 2,
-    "c.no.p": 2
+    "c.no.p": 2,
+    "p.call112": 2,
+    "p.hurt": 2
    }
   },
   {
@@ -450,7 +454,9 @@
     "c.cake.p": "Ik ben vandaag jarig! Wil je een stukje taart?",
     "c.speakup.p": "Ik zit ergens mee. Kunnen we even praten?",
     "c.no.p": "Nee, dat lukt vandaag niet. Morgen kan ik wel.",
-    "x.sample": "Goedemorgen! Draag altijd je helm."
+    "x.sample": "Goedemorgen! Draag altijd je helm.",
+    "p.call112": "Bel 112!",
+    "p.hurt": "Ik ben gewond."
    },
    "takes": {
     "w.hallo": 2,
@@ -597,7 +603,9 @@
     "c.sick.p": 2,
     "c.cake.p": 2,
     "c.speakup.p": 2,
-    "c.no.p": 2
+    "c.no.p": 2,
+    "p.call112": 2,
+    "p.hurt": 2
    }
   },
   {
@@ -750,7 +758,9 @@
     "c.sick.p": "Ik ben ziek. Ik kan vandaag niet komen werken.",
     "c.cake.p": "Ik ben vandaag jarig! Wil je een stukje taart?",
     "c.speakup.p": "Ik zit ergens mee. Kunnen we even praten?",
-    "c.no.p": "Nee, dat lukt vandaag niet. Morgen kan ik wel."
+    "c.no.p": "Nee, dat lukt vandaag niet. Morgen kan ik wel.",
+    "p.call112": "Bel 112!",
+    "p.hurt": "Ik ben gewond."
    },
    "takes": {
     "w.hallo": 2,
@@ -897,7 +907,9 @@
     "c.sick.p": 2,
     "c.cake.p": 2,
     "c.speakup.p": 2,
-    "c.no.p": 2
+    "c.no.p": 2,
+    "p.call112": 2,
+    "p.hurt": 2
    }
   },
   {
@@ -1050,7 +1062,9 @@
     "c.cake.p": "Ik ben vandaag jarig! Wil je een stukje taart?",
     "c.speakup.p": "Ik zit ergens mee. Kunnen we even praten?",
     "c.no.p": "Nee, dat lukt vandaag niet. Morgen kan ik wel.",
-    "x.sample": "Goedemorgen! Draag altijd je helm."
+    "x.sample": "Goedemorgen! Draag altijd je helm.",
+    "p.call112": "Bel 112!",
+    "p.hurt": "Ik ben gewond."
    },
    "takes": {
     "w.hallo": 2,
@@ -1197,7 +1211,9 @@
     "c.sick.p": 2,
     "c.cake.p": 2,
     "c.speakup.p": 2,
-    "c.no.p": 2
+    "c.no.p": 2,
+    "p.call112": 2,
+    "p.hurt": 2
    }
   }
  ]
