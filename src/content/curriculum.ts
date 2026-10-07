@@ -1,0 +1,265 @@
+import type { Lesson, Unit, Word } from './types';
+
+/**
+ * The course: Dutch for the work floor, explained in English.
+ * Every id here is also a translation key in src/i18n/<lang>.ts.
+ */
+export const units: Unit[] = [
+  {
+    id: 'u.firstday',
+    title: 'First day at work',
+    titleNl: 'Eerste werkdag',
+    emoji: '👋',
+    color: '#ff7a00',
+    lessons: [
+      {
+        id: 'l.hello',
+        title: 'Say hello',
+        words: [
+          { id: 'w.hallo', nl: 'hallo', en: 'hello', emoji: '👋' },
+          { id: 'w.goedemorgen', nl: 'goedemorgen', en: 'good morning', emoji: '🌅' },
+          { id: 'w.dankjewel', nl: 'dank je wel', en: 'thank you', emoji: '🙏' },
+          { id: 'w.ja', nl: 'ja', en: 'yes', emoji: '✅' },
+          { id: 'w.nee', nl: 'nee', en: 'no', emoji: '❌' },
+          { id: 'w.totmorgen', nl: 'tot morgen', en: 'see you tomorrow', emoji: '👋📅' },
+        ],
+        sentences: [
+          { id: 's.hello.1', nl: 'Hallo, ik ben nieuw.', en: 'Hello, I am new.' },
+          { id: 's.hello.2', nl: 'Goedemorgen, ik ben Ali.', en: 'Good morning, I am Ali.' },
+          { id: 's.hello.3', nl: 'Dank je wel, tot morgen!', en: 'Thank you, see you tomorrow!' },
+        ],
+      },
+      {
+        id: 'l.people',
+        title: 'People at work',
+        words: [
+          { id: 'w.collega', nl: 'de collega', en: 'the colleague', emoji: '🧑‍🤝‍🧑' },
+          { id: 'w.baas', nl: 'de baas', en: 'the boss', emoji: '👔' },
+          { id: 'w.leidinggevende', nl: 'de leidinggevende', en: 'the supervisor', emoji: '📋' },
+          { id: 'w.werk', nl: 'het werk', en: 'the work', emoji: '🛠️' },
+          { id: 'w.naam', nl: 'de naam', en: 'the name', emoji: '🪪' },
+          { id: 'w.nieuw', nl: 'nieuw', en: 'new', emoji: '🆕' },
+        ],
+        sentences: [
+          { id: 's.people.1', nl: 'Mijn naam is Sara.', en: 'My name is Sara.' },
+          { id: 's.people.2', nl: 'Wie is de baas?', en: 'Who is the boss?' },
+          { id: 's.people.3', nl: 'Ik ben een nieuwe collega.', en: 'I am a new colleague.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'u.help',
+    title: 'Asking for help',
+    titleNl: 'Hulp vragen',
+    emoji: '🙋',
+    color: '#1cb0f6',
+    lessons: [
+      {
+        id: 'l.understand',
+        title: 'I don’t understand',
+        words: [
+          { id: 'w.begrijpniet', nl: 'ik begrijp het niet', en: 'I don’t understand', emoji: '🤷' },
+          { id: 'w.nogeenkeer', nl: 'nog een keer', en: 'one more time', emoji: '🔁' },
+          { id: 'w.langzaam', nl: 'langzaam', en: 'slowly', emoji: '🐢' },
+          { id: 'w.helpen', nl: 'helpen', en: 'to help', emoji: '🤝' },
+          { id: 'w.waar', nl: 'waar', en: 'where', emoji: '📍' },
+          { id: 'w.wc', nl: 'de wc', en: 'the toilet', emoji: '🚻' },
+        ],
+        sentences: [
+          { id: 's.understand.1', nl: 'Kunt u dat herhalen?', en: 'Can you repeat that?' },
+          { id: 's.understand.2', nl: 'Wilt u langzaam praten?', en: 'Could you speak slowly?' },
+          { id: 's.understand.3', nl: 'Waar is de wc?', en: 'Where is the toilet?' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'u.safety',
+    title: 'Safety first',
+    titleNl: 'Veiligheid',
+    emoji: '🦺',
+    color: '#58cc02',
+    lessons: [
+      {
+        id: 'l.gear',
+        title: 'Protective gear',
+        words: [
+          { id: 'w.helm', nl: 'de helm', en: 'the helmet', emoji: '⛑️' },
+          { id: 'w.handschoenen', nl: 'de handschoenen', en: 'the gloves', emoji: '🧤' },
+          { id: 'w.veiligheidsschoenen', nl: 'de veiligheidsschoenen', en: 'the safety shoes', emoji: '🥾' },
+          { id: 'w.hesje', nl: 'het hesje', en: 'the safety vest', emoji: '🦺' },
+          { id: 'w.bril', nl: 'de veiligheidsbril', en: 'the safety glasses', emoji: '🥽' },
+          { id: 'w.dragen', nl: 'dragen', en: 'to wear', emoji: '👕' },
+        ],
+        sentences: [
+          { id: 's.gear.1', nl: 'Draag altijd je helm.', en: 'Always wear your helmet.' },
+          { id: 's.gear.2', nl: 'Waar zijn de handschoenen?', en: 'Where are the gloves?' },
+          { id: 's.gear.3', nl: 'Ik draag mijn hesje.', en: 'I am wearing my safety vest.' },
+        ],
+      },
+      {
+        id: 'l.danger',
+        title: 'Danger!',
+        words: [
+          { id: 'w.pasop', nl: 'pas op', en: 'watch out', emoji: '⚠️' },
+          { id: 'w.stop', nl: 'stop', en: 'stop', emoji: '🛑' },
+          { id: 'w.help', nl: 'help', en: 'help', emoji: '🆘' },
+          { id: 'w.brand', nl: 'de brand', en: 'the fire', emoji: '🔥' },
+          { id: 'w.nooduitgang', nl: 'de nooduitgang', en: 'the emergency exit', emoji: '🚪' },
+          { id: 'w.ongeluk', nl: 'het ongeluk', en: 'the accident', emoji: '🚑' },
+        ],
+        sentences: [
+          { id: 's.danger.1', nl: 'Pas op, de vloer is nat!', en: 'Watch out, the floor is wet!' },
+          { id: 's.danger.2', nl: 'Waar is de nooduitgang?', en: 'Where is the emergency exit?' },
+          { id: 's.danger.3', nl: 'Er is een ongeluk!', en: 'There is an accident!' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'u.warehouse',
+    title: 'In the warehouse',
+    titleNl: 'In het magazijn',
+    emoji: '📦',
+    color: '#ce82ff',
+    lessons: [
+      {
+        id: 'l.things',
+        title: 'Warehouse things',
+        words: [
+          { id: 'w.doos', nl: 'de doos', en: 'the box', emoji: '📦' },
+          { id: 'w.pallet', nl: 'de pallet', en: 'the pallet', emoji: '🪵' },
+          { id: 'w.heftruck', nl: 'de heftruck', en: 'the forklift', emoji: '🚜' },
+          { id: 'w.kar', nl: 'de kar', en: 'the cart', emoji: '🛒' },
+          { id: 'w.stelling', nl: 'de stelling', en: 'the shelving rack', emoji: '🗄️' },
+          { id: 'w.scanner', nl: 'de scanner', en: 'the scanner', emoji: '📟' },
+        ],
+        sentences: [
+          { id: 's.things.1', nl: 'Zet de doos op de pallet.', en: 'Put the box on the pallet.' },
+          { id: 's.things.2', nl: 'Waar is de scanner?', en: 'Where is the scanner?' },
+          { id: 's.things.3', nl: 'De heftruck komt eraan.', en: 'The forklift is coming.' },
+        ],
+      },
+      {
+        id: 'l.directions',
+        title: 'Directions and actions',
+        words: [
+          { id: 'w.links', nl: 'links', en: 'left', emoji: '⬅️' },
+          { id: 'w.rechts', nl: 'rechts', en: 'right', emoji: '➡️' },
+          { id: 'w.boven', nl: 'boven', en: 'at the top', emoji: '⬆️' },
+          { id: 'w.beneden', nl: 'beneden', en: 'at the bottom', emoji: '⬇️' },
+          { id: 'w.tillen', nl: 'tillen', en: 'to lift', emoji: '🏋️' },
+          { id: 'w.pakken', nl: 'pakken', en: 'to take', emoji: '✋' },
+        ],
+        sentences: [
+          { id: 's.directions.1', nl: 'De doos staat links.', en: 'The box is on the left.' },
+          { id: 's.directions.2', nl: 'Til met je benen.', en: 'Lift with your legs.' },
+          { id: 's.directions.3', nl: 'Ga naar rechts.', en: 'Go to the right.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'u.time',
+    title: 'Time and schedule',
+    titleNl: 'Tijd en rooster',
+    emoji: '⏰',
+    color: '#ff4b4b',
+    lessons: [
+      {
+        id: 'l.shift',
+        title: 'My shift',
+        words: [
+          { id: 'w.dienst', nl: 'de dienst', en: 'the shift', emoji: '🗓️' },
+          { id: 'w.pauze', nl: 'de pauze', en: 'the break', emoji: '☕' },
+          { id: 'w.beginnen', nl: 'beginnen', en: 'to start', emoji: '▶️' },
+          { id: 'w.klaar', nl: 'klaar', en: 'finished', emoji: '🏁' },
+          { id: 'w.telaat', nl: 'te laat', en: 'too late', emoji: '⏳' },
+          { id: 'w.morgen', nl: 'morgen', en: 'tomorrow', emoji: '📅' },
+        ],
+        sentences: [
+          { id: 's.shift.1', nl: 'Mijn dienst begint om zeven uur.', en: 'My shift starts at seven o’clock.' },
+          { id: 's.shift.2', nl: 'Wanneer is de pauze?', en: 'When is the break?' },
+          { id: 's.shift.3', nl: 'Sorry, ik ben te laat.', en: 'Sorry, I am too late.' },
+        ],
+      },
+      {
+        id: 'l.sick',
+        title: 'Calling in sick',
+        words: [
+          { id: 'w.ziek', nl: 'ziek', en: 'sick', emoji: '🤒' },
+          { id: 'w.bellen', nl: 'bellen', en: 'to call (phone)', emoji: '📞' },
+          { id: 'w.dokter', nl: 'de dokter', en: 'the doctor', emoji: '🩺' },
+          { id: 'w.pijn', nl: 'de pijn', en: 'the pain', emoji: '🤕' },
+          { id: 'w.vandaag', nl: 'vandaag', en: 'today', emoji: '📆' },
+          { id: 'w.beter', nl: 'beter', en: 'better', emoji: '💪' },
+        ],
+        sentences: [
+          { id: 's.sick.1', nl: 'Ik ben vandaag ziek.', en: 'I am sick today.' },
+          { id: 's.sick.2', nl: 'Ik heb pijn in mijn rug.', en: 'I have pain in my back.' },
+          { id: 's.sick.3', nl: 'Ik bel de dokter.', en: 'I am calling the doctor.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'u.greenhouse',
+    title: 'In the greenhouse',
+    titleNl: 'In de kas',
+    emoji: '🍅',
+    color: '#00b894',
+    lessons: [
+      {
+        id: 'l.harvest',
+        title: 'Harvest time',
+        words: [
+          { id: 'w.kas', nl: 'de kas', en: 'the greenhouse', emoji: '🌱' },
+          { id: 'w.tomaat', nl: 'de tomaat', en: 'the tomato', emoji: '🍅' },
+          { id: 'w.paprika', nl: 'de paprika', en: 'the bell pepper', emoji: '🫑' },
+          { id: 'w.komkommer', nl: 'de komkommer', en: 'the cucumber', emoji: '🥒' },
+          { id: 'w.plukken', nl: 'plukken', en: 'to pick', emoji: '🤏' },
+          { id: 'w.krat', nl: 'de krat', en: 'the crate', emoji: '🧺' },
+        ],
+        sentences: [
+          { id: 's.harvest.1', nl: 'Pluk alleen rode tomaten.', en: 'Only pick red tomatoes.' },
+          { id: 's.harvest.2', nl: 'De krat is vol.', en: 'The crate is full.' },
+          { id: 's.harvest.3', nl: 'Ik werk in de kas.', en: 'I work in the greenhouse.' },
+        ],
+      },
+    ],
+  },
+];
+
+/** Ids of the phrases shown on the always-available "Emergency phrases" page. */
+export const phrasebookIds = [
+  'w.help',
+  'w.pasop',
+  's.danger.3',
+  's.danger.2',
+  'w.begrijpniet',
+  's.understand.1',
+  's.understand.2',
+  's.sick.1',
+  's.understand.3',
+];
+
+export const allLessons: Lesson[] = units.flatMap((u) => u.lessons);
+export const allWords: Word[] = allLessons.flatMap((l) => l.words);
+
+export function findLesson(id: string): { unit: Unit; lesson: Lesson } | undefined {
+  for (const unit of units) {
+    const lesson = unit.lessons.find((l) => l.id === id);
+    if (lesson) return { unit, lesson };
+  }
+  return undefined;
+}
+
+/** Look up any word or sentence by id (used by the phrasebook). */
+export function findItem(id: string): { id: string; nl: string; en: string; emoji?: string } | undefined {
+  for (const lesson of allLessons) {
+    const item = lesson.words.find((w) => w.id === id) ?? lesson.sentences.find((s) => s.id === id);
+    if (item) return item;
+  }
+  return undefined;
+}
