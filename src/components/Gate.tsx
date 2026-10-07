@@ -116,7 +116,7 @@ export function Gate({ onAccess }: { onAccess: (a: Access) => void }) {
   );
 }
 
-/** Preview only: a card in Settings ("Ik") to unlock the full version with its password. */
+/** Preview only: a card in Settings ("Instellingen") to unlock the full version with its password. */
 export function UpgradeCard({ lang, onAccess }: { lang?: HelpLanguage; onAccess: (a: Access) => void }) {
   return (
     <section className="upgrade-card" id="unlock-full" aria-labelledby="unlock-full-title">

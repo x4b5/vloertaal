@@ -56,7 +56,6 @@ const lang: HelpLanguage = {
     meaning: 'Anlamı',
     navRoute: 'Dersler',
     navWords: 'Yardım',
-    navMe: 'Ben',
     rightFirstTime: 'İlk denemede doğru',
     newWords: 'Yeni kelimeler',
     wordsLearnedN: '{n} kelime öğrendin',

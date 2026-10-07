@@ -56,7 +56,6 @@ const lang: HelpLanguage = {
     meaning: 'ትርጉም',
     navRoute: 'ትምህርትታት',
     navWords: 'ሓገዝ',
-    navMe: 'ኣነ',
     rightFirstTime: 'ብቐዳማይ ፈተነ ቅኑዕ',
     newWords: 'ሓደሽቲ ቃላት',
     wordsLearnedN: '{n} ቃላት ተማሂርካ',

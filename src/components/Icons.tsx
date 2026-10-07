@@ -163,13 +163,11 @@ export const LifebuoyIcon = (p: IconProps) => (
   </Svg>
 );
 
-/** A worker in a hard hat: the "Ik" tab (settings and you). */
-export const WorkerIcon = (p: IconProps) => (
+/** A gear: the "Instellingen" tab. */
+export const GearIcon = (p: IconProps) => (
   <Svg {...p}>
-    <path d="M6.5 9.5a5.5 5.5 0 0 1 11 0z" fill="currentColor" />
-    <path d="M5 9.5h14" {...stroke} strokeWidth={2.2} />
-    <circle cx="12" cy="12.6" r="2.6" {...stroke} strokeWidth={2.2} />
-    <path d="M6 21c.6-3.6 3-5.4 6-5.4s5.4 1.8 6 5.4" {...stroke} strokeWidth={2.4} />
+    <path d="M12 2.8l1.6 2.3 2.7-.6.7 2.7 2.6 1-.8 2.6 1.9 2-1.9 2 .8 2.6-2.6 1-.7 2.7-2.7-.6L12 21.2l-1.6-2.3-2.7.6-.7-2.7-2.6-1 .8-2.6-1.9-2 1.9-2-.8-2.6 2.6-1 .7-2.7 2.7.6z" {...stroke} strokeWidth={2} />
+    <circle cx="12" cy="12" r="3.4" {...stroke} strokeWidth={2.2} />
   </Svg>
 );
 
