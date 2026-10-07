@@ -133,9 +133,9 @@ function emitSpeech(text: string, speaking: boolean, slow: boolean): void {
 
 /** Learners need calm Dutch: recordings play a bit slower than recorded (same pitch),
  *  and the turtle button slower still. */
-const RECORDED_RATE = { normal: 0.75, slow: 0.6 };
+const RECORDED_RATE = { normal: 0.75, slow: 0.5 };
 /** The phone's own voice already speaks a little faster than the recordings. */
-const DEVICE_RATE = { normal: 0.75, slow: 0.5 };
+const DEVICE_RATE = { normal: 0.75, slow: 0.45 };
 
 let playing: HTMLAudioElement | null = null;
 
