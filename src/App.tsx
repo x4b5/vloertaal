@@ -23,7 +23,7 @@ type View =
   | { name: 'tips' }
   /** upgrade: opened from a locked unit, so the unlock card is scrolled into view. */
   | { name: 'settings'; upgrade?: boolean }
-  | { name: 'about'; from: 'home' | 'settings' }
+  | { name: 'about' }
   | { name: 'admin' };
 
 const HOME: View = { name: 'home' };
@@ -68,10 +68,11 @@ export default function App() {
     history.replaceState({ view: next, depth: current()?.depth ?? 0 } satisfies Entry, '');
     setView(next);
   };
-  /** Bottom bar: Route is home; Woorden and Ik sit one level above it, so Back from either
+  /** Bottom bar: Route is home; Hulp, Instellingen and Over sit one level above it, so Back from either
    *  returns to Route and switching between them doesn't stack entries. */
   const tab = (t: Tab) => {
-    const next: View = t === 'words' ? { name: 'words' } : t === 'me' ? { name: 'settings' } : HOME;
+    const next: View =
+      t === 'words' ? { name: 'words' } : t === 'me' ? { name: 'settings' } : t === 'about' ? { name: 'about' } : HOME;
     if (next.name === viewRef.current.name) return;
     if (t === 'route') back();
     else if (viewRef.current.name === 'home') go(next);
@@ -171,7 +172,12 @@ export default function App() {
     case 'tips':
       return <Tips progress={progress} lang={lang} onBack={back} access={access} />;
     case 'about':
-      return <About lang={lang} onBack={back} />;
+      return (
+        <>
+          <About lang={lang} />
+          <BottomNav current="about" onTab={tab} />
+        </>
+      );
     case 'phrasebook':
       return <Phrasebook lang={lang} onBack={back} />;
     case 'settings':
@@ -188,7 +194,7 @@ export default function App() {
               setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice }));
               back();
             }}
-            onAbout={() => go({ name: 'about', from: 'settings' })}
+            onAbout={() => tab('about')}
             access={access}
             onAccess={grant}
             focusUpgrade={view.upgrade}
@@ -220,7 +226,7 @@ export default function App() {
             progress={progress}
             lang={lang}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
-            onAbout={() => go({ name: 'about', from: 'home' })}
+            onAbout={() => tab('about')}
             access={access}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
           />
