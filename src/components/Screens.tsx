@@ -1,3 +1,4 @@
+import { Character } from './Characters';
 import { findItem, phrasebookIds, units } from '../content/curriculum';
 import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
@@ -19,7 +20,6 @@ import {
   FlameIcon,
   GlobeIcon,
   LockIcon,
-  MascotIcon,
   MoonIcon,
   PlayStarIcon,
   StarIcon,
@@ -63,7 +63,12 @@ export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void
   return (
     <div className="screen onboarding">
       <div className="hero">
-        <div className="mascot"><MascotIcon size={112} /></div>
+        <div className="mascot cast-row" aria-hidden>
+          <Character who="amina" size={104} />
+          <Character who="bram" mood="wave" size={132} />
+          <Character who="henk" size={104} />
+          <Character who="jada" size={104} />
+        </div>
         <h1>Vloertaal</h1>
         <p className="tagline">{ui('appTagline').en}</p>
         <p className="tagline-nl" lang="nl">Nederlands voor op de werkvloer</p>
@@ -83,7 +88,7 @@ export function TopBar({ streak, xp, lang, onSettings }: {
 }) {
   return (
     <header className="topbar">
-      <span className="brand"><MascotIcon size={30} /> Vloertaal</span>
+      <span className="brand"><Character who="bram" crop="head" size={32} /> Vloertaal</span>
       <span className="stat" title={ui('dayStreak').en}><FlameIcon /> {streak}</span>
       <span className="stat" title="XP"><StarIcon /> {xp}</span>
       <button type="button" className="stat stat-btn" onClick={onSettings} aria-label={ui('settings').en}>

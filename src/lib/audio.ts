@@ -26,6 +26,21 @@ function dutchVoice(uri: string | null = preferredVoice): SpeechSynthesisVoice |
   return voices.find((v) => v.voiceURI === uri) ?? voices[0];
 }
 
+type SpeechListener = (text: string, speaking: boolean, slow: boolean) => void;
+const speechListeners = new Set<SpeechListener>();
+
+/** Follow what is being spoken (characters move their mouth along). Returns an unsubscribe. */
+export function onSpeech(fn: SpeechListener): () => void {
+  speechListeners.add(fn);
+  return () => speechListeners.delete(fn);
+}
+
+let speechTurn = 0;
+
+function emitSpeech(text: string, speaking: boolean, slow: boolean): void {
+  speechListeners.forEach((fn) => fn(text, speaking, slow));
+}
+
 /** Speak text aloud; `voiceURI` overrides the learner's chosen voice (for previews). */
 export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voiceURI?: string): void {
   if (!speechAvailable()) return;
@@ -36,7 +51,13 @@ export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voic
   const voice = lang === 'en' ? undefined : dutchVoice(voiceURI);
   if (voice) u.voice = voice;
   u.rate = slow ? 0.55 : 0.9;
+  // cancel() ends the previous utterance asynchronously; only the latest one reports its end.
+  const turn = ++speechTurn;
+  u.onend = u.onerror = () => {
+    if (turn === speechTurn) emitSpeech(text, false, slow);
+  };
   synth.speak(u);
+  emitSpeech(text, true, slow);
 }
 
 // Voices load asynchronously in some browsers; touching the list early warms it up.

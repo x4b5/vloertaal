@@ -132,43 +132,6 @@ export const AutoThemeIcon = (p: IconProps) => (
   </Svg>
 );
 
-export const MascotIcon = (p: IconProps) => (
-  <Svg {...p} viewBox="0 0 64 64">
-    {/* Hard hat */}
-    <path d="M12 30a20 20 0 0 1 40 0z" fill="#ffc800" />
-    <rect x="8" y="28" width="48" height="6" rx="3" fill="#e5a400" />
-    <rect x="29" y="11" width="6" height="17" rx="3" fill="#ffd94d" />
-    {/* Face */}
-    <circle cx="32" cy="42" r="14" fill="#f5c59a" />
-    <circle cx="26.5" cy="41" r="2.2" fill="#3c3c3c" />
-    <circle cx="37.5" cy="41" r="2.2" fill="#3c3c3c" />
-    <path d="M26 47.5c3.5 3 8.5 3 12 0" fill="none" stroke="#3c3c3c" strokeWidth="2.4" strokeLinecap="round" />
-    {/* Hi-vis collar */}
-    <path d="M18 60c2-4 7-6 14-6s12 2 14 6z" fill="#ff7a00" />
-    <path d="M24 56.5l3 3.5M40 56.5l-3 3.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
-  </Svg>
-);
-
-/** "You" in a chat: a new colleague in a blue work shirt with a hair bun. */
-export const LearnerIcon = (p: IconProps) => (
-  <Svg {...p} viewBox="0 0 64 64">
-    {/* Hair: bun and back of the head */}
-    <circle cx="32" cy="12" r="7" fill="#2b2118" />
-    <path d="M15 38c0-13 7-21 17-21s17 8 17 21v6H15z" fill="#2b2118" />
-    {/* Face */}
-    <rect x="19" y="24" width="26" height="25" rx="11" fill="#a86a43" />
-    <path d="M18 31c4-1 9-5 11-9 4 5 11 8 17 9v-4c0-6-6-10-14-10s-14 4-14 10z" fill="#2b2118" />
-    <circle cx="26.5" cy="36" r="2.2" fill="#1f1a17" />
-    <circle cx="37.5" cy="36" r="2.2" fill="#1f1a17" />
-    <path d="M27.5 42.5c2.6 2.2 6.4 2.2 9 0" fill="none" stroke="#1f1a17" strokeWidth="2.2" strokeLinecap="round" />
-    <circle cx="18.5" cy="40" r="1.8" fill="#ffc800" />
-    <circle cx="45.5" cy="40" r="1.8" fill="#ffc800" />
-    {/* Work shirt with collar */}
-    <path d="M14 64c1-8 8-12 18-12s17 4 18 12z" fill="#1cb0f6" />
-    <path d="M26 52.5l6 6 6-6" fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-  </Svg>
-);
-
 export const BoltIcon = (p: IconProps) => (
   <Svg {...p}>
     <path d="M13.6 1.8L4.6 13.4h6.1l-1.6 8.8 9.4-12.1h-6.3z" fill="#ffc800" stroke="#e5a400" strokeWidth="1.1" strokeLinejoin="round" />

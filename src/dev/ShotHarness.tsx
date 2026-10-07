@@ -2,6 +2,7 @@ import { findLesson } from '../content/curriculum';
 import { LessonPlayer } from '../components/LessonPlayer';
 import { Result } from '../components/Screens';
 import { Milestone } from '../components/Milestone';
+import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
 import type { LangCode } from '../i18n/types';
 import { allReplies } from '../content/curriculum';
@@ -18,6 +19,15 @@ export function ShotHarness({ shot, lang }: { shot: string; lang: string | null 
   if (shot === 'result') return <Result xp={14} accuracy={0.88} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   // Day-streak milestone after the very first lesson: streak 1.
   if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
+  // The whole cast in every mood, big, for judging the drawings.
+  if (shot === 'cast') {
+    const moods: Mood[] = ['idle', 'talking', 'happy', 'sad', 'cheer'];
+    return (
+      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${moods.length}, 1fr)`, gap: 8, padding: 16 }}>
+        {CAST.flatMap((who) => moods.map((m) => <Character key={who + m} who={who} mood={m} size={180} />))}
+      </div>
+    );
+  }
   const { lesson } = findLesson('l.gear')!;
   const [helm, handschoenen, schoenen, hesje] = lesson.words;
   const exercises: Record<string, Exercise> = {

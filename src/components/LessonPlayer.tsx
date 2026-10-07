@@ -129,7 +129,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     else setIndex(i);
   }
 
-  const props = { lang, locked: checked, onAnswer };
+  const verdict: 'right' | 'wrong' | undefined = checked && answer && isGraded(ex) ? (answer.correct ? 'right' : 'wrong') : undefined;
+  const props = { lang, locked: checked, onAnswer, verdict };
   const key = `${index}`;
   let body: React.ReactNode;
   switch (ex.kind) {

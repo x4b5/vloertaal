@@ -193,7 +193,6 @@ h2 { font-size: 1.25rem; }
 
 /* Onboarding */
 .hero { text-align: center; padding: 24px 0 8px; }
-.mascot { font-size: 84px; animation: bob 2.4s ease-in-out infinite; }
 .hero h1 { font-size: 2.4rem; color: var(--orange); margin: 0; letter-spacing: -0.02em; }
 .tagline { font-weight: 700; margin: 4px 0 0; }
 .tagline-nl { color: var(--muted); margin: 0; font-style: italic; }
@@ -341,7 +340,7 @@ h2 { font-size: 1.25rem; }
 .target-nl { font-size: 1.8rem; font-weight: 900; }
 /* "What does this mean?": a character says the Dutch word in a speech bubble. */
 .speaker { display: flex; align-items: center; gap: 18px; margin: 0 0 20px; }
-.speaker-char { font-size: 96px; line-height: 1; }
+.speaker-char { flex: none; font-size: 112px; line-height: 1; }
 .speaker-bubble {
   position: relative; display: flex; align-items: center; gap: 12px; margin-bottom: 28px;
   padding: 10px 18px 10px 10px; border: 2px solid var(--line); border-radius: 16px; background: var(--bg);
@@ -428,7 +427,7 @@ h2 { font-size: 1.25rem; }
 
 /* Sentence building: character + speech bubble (speaker icon, dotted hint underline). */
 .speaker-build { align-items: flex-end; gap: 14px; margin-bottom: 4px; }
-.speaker-build .speaker-char { font-size: 76px; }
+.speaker-build .speaker-char { font-size: 96px; }
 .speaker-build .speaker-bubble { padding: 8px 18px 8px 8px; margin-bottom: 20px; gap: 6px; min-width: 0; }
 .speak-glyph {
   display: inline-grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0;
@@ -551,8 +550,8 @@ h2 { font-size: 1.25rem; }
   .feedback-title { font-size: 1.55rem; }
   .feedback-answer { font-size: 1.2rem; }
   .speaker { margin-bottom: 8px; }
-  .speaker-char { font-size: 120px; }
-  .speaker-build .speaker-char { font-size: 112px; }
+  .speaker-char { font-size: 150px; }
+  .speaker-build .speaker-char { font-size: 136px; }
   .speaker-build .speaker-bubble { margin-bottom: 36px; }
   .tile-bank { margin-top: 40px; }
 }
@@ -561,7 +560,7 @@ h2 { font-size: 1.25rem; }
 .chat { display: flex; flex-direction: column; gap: 8px; margin: 0 0 24px; }
 .chat-row { display: flex; align-items: center; gap: 14px; }
 .chat-me { justify-content: flex-end; }
-.chat-char { flex: none; font-size: 72px; line-height: 1; }
+.chat-char { flex: none; font-size: 84px; line-height: 1; }
 .chat-bubble {
   position: relative; display: flex; align-items: center; gap: 4px; min-width: 0;
   padding: 8px 18px 8px 8px; border: 2px solid var(--line); border-radius: 16px; background: var(--bg);
@@ -599,7 +598,7 @@ h2 { font-size: 1.25rem; }
 .feedback-meaning .bi-help { color: inherit; opacity: 0.85; font-size: 0.9rem; }
 @media (min-width: 760px) {
   .chat { gap: 4px; margin-bottom: 40px; }
-  .chat-char { font-size: 96px; }
+  .chat-char { font-size: 112px; }
   .chat-them .chat-bubble { margin-bottom: 16px; }
   .chat-line { font-size: 1.3rem; }
   .feedback-meaning { font-size: 1.15rem; }
@@ -642,8 +641,59 @@ h2 { font-size: 1.25rem; }
 .emoji-xl, .emoji-lg, .pic-emoji, .choice-emoji, .unit-emoji, .confetti {
   font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
 }
-.speaker-char .icon, .chat-char .icon, .mascot .icon { width: 1em; height: 1em; }
-.mascot { font-size: 112px; line-height: 1; }
+.speaker-char .ch, .chat-char .ch { display: block; height: 1em; width: auto; }
+
+/* Onboarding hero: the whole cast, Bram in the middle waving. */
+.cast-row { display: flex; align-items: flex-end; justify-content: center; gap: 2px; margin-bottom: 8px; }
+.cast-row .ch { width: auto; height: 96px; }
+.cast-row .ch-bram { height: 124px; order: 2; margin: 0 4px; }
+.cast-row .ch-amina { order: 1; }
+.cast-row .ch-henk { order: 3; }
+.cast-row .ch-jada { order: 4; }
+@media (max-width: 380px) { .cast-row .ch { height: 80px; } .cast-row .ch-bram { height: 108px; } }
+.brand .ch { width: 32px; height: 32px; }
+
+/* Characters (src/components/Characters.tsx): breathe + blink when idle, mouth moves while
+   talking, a squash-and-stretch jump when happy, a droop when sad. */
+.ch { overflow: visible; }
+.ch-fig { transform-box: view-box; transform-origin: 60px 134px; animation: ch-breathe 3.2s ease-in-out infinite; }
+.ch-head { transform-box: view-box; transform-origin: 60px 92px; animation: ch-head 3.2s 0.25s ease-in-out infinite; }
+.ch-eyes { transform-box: fill-box; transform-origin: center; animation: ch-blink var(--blink, 4.2s) infinite; }
+.ch-shadow { transform-box: fill-box; transform-origin: center; }
+@keyframes ch-breathe { 50% { transform: translateY(-1px) scale(1.012, 1.018); } }
+@keyframes ch-head { 50% { transform: translateY(-1.2px) rotate(-1deg); } }
+@keyframes ch-blink { 0%, 93%, 100% { transform: scaleY(1); } 95.5% { transform: scaleY(0.08); } }
+
+.ch-talking .ch-mouth-rest { display: none; }
+.ch-mouth-talk { transform-box: fill-box; transform-origin: 50% 0; animation: ch-talk 0.24s ease-in-out infinite alternate; }
+.ch-talking .ch-head { animation: ch-nod 0.48s ease-in-out infinite alternate; }
+.ch-arm-gesture { transform-box: view-box; transform-origin: 90px 104px; animation: ch-gesture 0.96s ease-in-out infinite alternate; }
+@keyframes ch-talk { from { transform: scaleY(0.25); } to { transform: scaleY(1); } }
+@keyframes ch-nod { from { transform: rotate(-1.5deg); } to { transform: translateY(0.8px) rotate(1.5deg); } }
+@keyframes ch-gesture { to { transform: rotate(-8deg); } }
+
+.ch-happy .ch-fig { animation: ch-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) 2, ch-breathe 3.2s 1.24s ease-in-out infinite; }
+.ch-happy .ch-shadow { animation: ch-shadow-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) 2; }
+.ch-happy .ch-arm-wave, .ch-wave .ch-arm-wave { transform-box: view-box; transform-origin: 90px 102px; animation: ch-wave 0.36s ease-in-out infinite alternate; }
+.ch-cheer .ch-fig { animation: ch-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) infinite; }
+.ch-cheer .ch-shadow { animation: ch-shadow-jump 0.62s cubic-bezier(0.3, 0.9, 0.4, 1) infinite; }
+.ch-wave .ch-arm-wave { animation-duration: 0.5s; animation-iteration-count: 6; }
+@keyframes ch-jump {
+  0% { transform: none; }
+  18% { transform: scale(1.08, 0.9); }
+  50% { transform: translateY(-16px) scale(0.96, 1.05); }
+  82% { transform: scale(1.06, 0.94); }
+  100% { transform: none; }
+}
+@keyframes ch-shadow-jump { 50% { transform: scale(0.6); opacity: 0.08; } }
+@keyframes ch-wave { from { transform: rotate(-10deg); } to { transform: rotate(14deg); } }
+
+.ch-sad .ch-fig { animation: ch-droop 0.5s ease-out both; }
+.ch-sad .ch-head { animation: ch-head-droop 0.7s ease-out both; }
+.ch-sweat { transform-box: fill-box; transform-origin: 50% 0; animation: ch-sweat 0.6s 0.2s ease-in both; }
+@keyframes ch-droop { 30% { transform: translateX(-2px); } 55% { transform: translateX(2px); } to { transform: translateY(3px) scale(1.02, 0.97); } }
+@keyframes ch-head-droop { to { transform: translateY(2px) rotate(-5deg); } }
+@keyframes ch-sweat { from { transform: translateY(-6px) scale(0.3); opacity: 0; } }
 
 /* Day-streak milestone (Mijlpaal): worker on a podium, big flame + number, one line. */
 #root:has(.milestone-screen) { max-width: none; }
