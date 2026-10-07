@@ -19,8 +19,8 @@ export const aboutSections: AboutSection[] = [
     body: 'You learn Dutch through simple English. If you choose a help language, you also see the instructions and words in your own language. You listen, tap, build sentences and practise short conversations with colleagues.',
   },
   {
-    id: 'a.culture', emoji: '🤝', title: 'More than words',
-    body: 'Language comes first. But you also learn how things usually go at a Dutch workplace: asking questions, being on time, and saying it when something bothers you.',
+    id: 'a.culture', emoji: '🤝', title: 'How it works here',
+    body: 'Language comes first. But Vloertaal also talks about how things usually go at a Dutch workplace: saying "je" to your boss, asking questions, being on time, and saying it when something bothers you. You find these tips in the lessons and under "Workplace tips".',
   },
   {
     id: 'a.who', emoji: '🌍', title: 'Who is it for?',
