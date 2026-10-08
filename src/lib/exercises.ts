@@ -1,5 +1,5 @@
 import { allReplies, allWords, units } from '../content/curriculum';
-import { isOtherSector, mainLessons, type SectorChoice } from '../content/sectors';
+import { mainLessons, type SectorChoice } from '../content/sectors';
 import { type CultureTip, tipForLesson } from '../content/culture';
 import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
 import { tokenize } from './answers';
@@ -163,26 +163,26 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
 }
 
 /**
- * Lessons unlock in order: a lesson is open when the previous one is done. The order is the
- * learner's own path (basis units plus their sector, see coursePlan); another sector's unit
- * never blocks it. Those units (under "Andere sectoren") are open from the start, with their
- * lessons in order within the unit.
+ * A lesson is open when it is the first of its unit or the previous lesson of the unit is done.
+ * The course order (basis units plus the learner's sector, see coursePlan) is the advice the
+ * path highlights with isNextInCourse; it no longer blocks a unit.
  */
-export function isUnlocked(
-  lessonId: string,
-  completed: Record<string, unknown>,
-  access: Access = 'full',
-  sector?: SectorChoice,
-): boolean {
+export function isUnlocked(lessonId: string, completed: Record<string, unknown>, access: Access = 'full'): boolean {
   // The access level wins over progress: a preview never opens a later unit.
   if (!lessonAllowed(lessonId, access)) return false;
+  // Every unit can be entered at its first lesson (a coach can send a learner to one topic);
+  // inside a unit the lessons open in order.
   const unit = units.find((u) => u.lessons.some((l) => l.id === lessonId));
-  if (unit && isOtherSector(unit.id, sector)) {
-    const i = unit.lessons.findIndex((l) => l.id === lessonId);
-    return i === 0 || Boolean(completed[unit.lessons[i - 1].id]);
-  }
+  if (!unit) return false;
+  const i = unit.lessons.findIndex((l) => l.id === lessonId);
+  return i === 0 || Boolean(completed[unit.lessons[i - 1].id]);
+}
+
+/** The next lesson along the learner's own course (basis units plus their sector), the one the path highlights. */
+export function isNextInCourse(lessonId: string, completed: Record<string, unknown>, access: Access = 'full', sector?: SectorChoice): boolean {
+  if (!lessonAllowed(lessonId, access) || completed[lessonId]) return false;
   const order = mainLessons(sector);
   const index = order.findIndex((l) => l.id === lessonId);
-  if (index <= 0) return index === 0;
-  return Boolean(completed[order[index - 1].id]);
+  if (index < 0) return false;
+  return index === 0 || Boolean(completed[order[index - 1].id]);
 }

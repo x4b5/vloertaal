@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { units } from '../src/content/curriculum';
 import { coursePlan, sectors, unitSector } from '../src/content/sectors';
-import { isUnlocked } from '../src/lib/exercises';
+import { isNextInCourse, isUnlocked } from '../src/lib/exercises';
 
 const unit = (id: string) => units.find((u) => u.id === id)!;
 
@@ -39,21 +39,23 @@ describe('sectors', () => {
     const warehouse = unit('u.warehouse');
     const after = units[units.indexOf(warehouse) + 1];
     const safetyDone = Object.fromEntries(safety.lessons.map((l) => [l.id, {}]));
-    // Construction: Safety done → "Op de bouw" (slot 05) opens; the unit after the warehouse waits for it.
-    expect(isUnlocked(build.lessons[0].id, safetyDone, 'full', 'construction')).toBe(true);
-    expect(isUnlocked(after.lessons[0].id, safetyDone, 'full', 'construction')).toBe(false);
+    // Construction: Safety done → "Op de bouw" (slot 05) is next; the unit after the warehouse waits for it.
+    expect(isNextInCourse(build.lessons[0].id, safetyDone, 'full', 'construction')).toBe(true);
+    expect(isNextInCourse(after.lessons[0].id, safetyDone, 'full', 'construction')).toBe(false);
     const buildDone = { ...safetyDone, ...Object.fromEntries(build.lessons.map((l) => [l.id, {}])) };
-    expect(isUnlocked(after.lessons[0].id, buildDone, 'full', 'construction')).toBe(true);
+    expect(isNextInCourse(after.lessons[0].id, buildDone, 'full', 'construction')).toBe(true);
     // Without a sector: course order, the warehouse comes after Safety as before.
-    expect(isUnlocked(warehouse.lessons[0].id, safetyDone, 'full')).toBe(true);
-    expect(isUnlocked(build.lessons[0].id, safetyDone, 'full')).toBe(false);
+    expect(isNextInCourse(warehouse.lessons[0].id, safetyDone, 'full')).toBe(true);
+    expect(isNextInCourse(build.lessons[0].id, safetyDone, 'full')).toBe(false);
+    // Any unit can still be entered at its first lesson.
+    expect(isUnlocked(after.lessons[0].id, {}, 'full')).toBe(true);
     // The warehouse (other sector) is open from the start, in order within the unit.
-    expect(isUnlocked(warehouse.lessons[0].id, {}, 'full', 'construction')).toBe(true);
-    expect(isUnlocked(warehouse.lessons[1].id, {}, 'full', 'construction')).toBe(false);
-    expect(isUnlocked(warehouse.lessons[1].id, { [warehouse.lessons[0].id]: {} }, 'full', 'construction')).toBe(true);
+    expect(isUnlocked(warehouse.lessons[0].id, {}, 'full')).toBe(true);
+    expect(isUnlocked(warehouse.lessons[1].id, {}, 'full')).toBe(false);
+    expect(isUnlocked(warehouse.lessons[1].id, { [warehouse.lessons[0].id]: {} }, 'full')).toBe(true);
     // A preview still only opens the first unit.
-    expect(isUnlocked(warehouse.lessons[0].id, {}, 'preview', 'construction')).toBe(false);
-    expect(isUnlocked(build.lessons[0].id, safetyDone, 'preview', 'construction')).toBe(false);
+    expect(isUnlocked(warehouse.lessons[0].id, {}, 'preview')).toBe(false);
+    expect(isUnlocked(build.lessons[0].id, safetyDone, 'preview')).toBe(false);
     expect(unitSector('u.build')).toBe('construction');
     expect(unitSector('u.firstday')).toBeUndefined();
   });

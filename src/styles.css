@@ -381,6 +381,7 @@ h2 { font-size: 1.25rem; }
 .bay-done .bay-marker { background: var(--solid); color: var(--yellow); padding: 0; }
 .bay-now .bay-marker { width: 44px; height: 44px; font-size: 1.5rem; background: var(--yellow); color: #1e2226; border: 2px solid #1e2226; }
 .bay-locked .bay-marker { background: var(--bg); color: var(--ink-3); border: 2px solid var(--line); }
+.bay-open .bay-marker { background: var(--card); color: var(--ink); border: 2px solid var(--ink-3); }
 
 /* Lesson cards: quiet paper for done, the one yellow card for now, plain text for locked. */
 .bay-card {
@@ -410,6 +411,10 @@ h2 { font-size: 1.25rem; }
 }
 .bay-start .icon { color: var(--yellow); }
 .bay-char { position: absolute; right: 4px; bottom: -6px; line-height: 0; pointer-events: none; }
+/* Open: a unit you may enter out of order (the first lesson of every unit). A quiet card with a small start. */
+.bay-open .bay-card:hover { border-color: var(--ink-3); }
+.bay-open .bay-start { margin-top: 6px; min-height: 36px; padding: 4px 10px 4px 14px; font-size: 0.95rem; background: transparent; color: var(--ink); border: 2px solid var(--line); }
+.bay-open .bay-start .icon { color: var(--ink-3); }
 /* Locked: no card, just the title in muted ink and a small lock. */
 .bay-locked .bay-card { background: transparent; border-color: transparent; color: var(--muted); min-height: 52px; padding-block: 6px; }
 .bay-locked .bay-title { font-weight: 500; }

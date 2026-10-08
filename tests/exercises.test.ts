@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { allLessons } from '../src/content/curriculum';
+import { allLessons, units } from '../src/content/curriculum';
 import { tokenize } from '../src/lib/answers';
-import { AUDIO_ONLY_KINDS, buildLesson, isUnlocked, needsAudio } from '../src/lib/exercises';
+import { AUDIO_ONLY_KINDS, buildLesson, isNextInCourse, isUnlocked, needsAudio } from '../src/lib/exercises';
 
 describe('lesson builder', () => {
   for (const lesson of allLessons) {
@@ -69,11 +69,24 @@ describe('lesson builder', () => {
     expect(a).toEqual(b);
   });
 
-  it('unlocks lessons in order', () => {
+  it('opens every unit at its first lesson, and the lessons inside a unit in order', () => {
+    for (const unit of units) {
+      const [first, second, third] = unit.lessons;
+      expect(isUnlocked(first.id, {}), unit.id).toBe(true);
+      if (second) {
+        expect(isUnlocked(second.id, {}), unit.id).toBe(false);
+        expect(isUnlocked(second.id, { [first.id]: {} }), unit.id).toBe(true);
+      }
+      if (third) expect(isUnlocked(third.id, { [first.id]: {} }), unit.id).toBe(false);
+    }
+  });
+
+  it('highlights only the next lesson of the course', () => {
     const [first, second, third] = allLessons;
-    expect(isUnlocked(first.id, {})).toBe(true);
-    expect(isUnlocked(second.id, {})).toBe(false);
-    expect(isUnlocked(second.id, { [first.id]: {} })).toBe(true);
-    expect(isUnlocked(third.id, { [first.id]: {} })).toBe(false);
+    expect(isNextInCourse(first.id, {})).toBe(true);
+    expect(isNextInCourse(second.id, {})).toBe(false);
+    expect(isNextInCourse(second.id, { [first.id]: {} })).toBe(true);
+    expect(isNextInCourse(first.id, { [first.id]: {} })).toBe(false);
+    expect(isNextInCourse(third.id, { [first.id]: {} })).toBe(false);
   });
 });
