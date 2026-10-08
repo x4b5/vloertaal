@@ -68,6 +68,7 @@ const lang: HelpLanguage = {
     unlockFull: 'Deblochează versiunea completă',
     unlockHint: 'Acum este deschisă doar prima unitate. Introdu parola pentru toate lecțiile.',
     password: 'Parola',
+    enterPassword: 'Introdu parola',
     wrongPassword: 'Parola nu este corectă. Încearcă din nou.',
     unlock: 'Deblochează',
   },

@@ -68,6 +68,7 @@ const lang: HelpLanguage = {
     unlockFull: 'Відкрити повну версію',
     unlockHint: 'Зараз відкритий лише перший розділ. Введи пароль для всіх уроків.',
     password: 'Пароль',
+    enterPassword: 'Введи пароль',
     wrongPassword: 'Пароль неправильний. Спробуй ще раз.',
     unlock: 'Відкрити',
   },

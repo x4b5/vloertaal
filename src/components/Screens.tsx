@@ -25,7 +25,6 @@ import {
   CheckIcon,
   ChevronIcon,
   CrownIcon,
-  GlobeIcon,
   LifebuoyIcon,
   LockIcon,
   RouteIcon,
@@ -36,56 +35,50 @@ import {
   SunIcon,
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
+import { Flag } from './Flags';
 
-export function LanguagePicker({ current, onPick, showBeta = false }: {
-  /** undefined = nothing chosen yet (onboarding). */
+export function LanguagePicker({ current, onPick, showBeta = false, compact = false }: {
+  /** undefined = nothing chosen yet (first run). */
   current?: LangCode | null;
   onPick: (code: LangCode | null) => void;
-  /** Mark translations still in review (Settings only; onboarding stays calm). */
+  /** Mark translations still in review (Settings only; the first-run screen stays calm). */
   showBeta?: boolean;
+  /** Smaller cards (Settings); the first-run screen has the big ones. */
+  compact?: boolean;
 }) {
+  const option = (code: LangCode | null, native: string, english: string, dir?: 'ltr' | 'rtl', beta = false) => (
+    <button
+      key={code ?? 'en'}
+      type="button"
+      className={`lang-btn ${current === code ? 'picked' : ''}`}
+      onClick={() => onPick(code)}
+      aria-pressed={current === undefined ? undefined : current === code}
+    >
+      <Flag code={code ?? 'en'} width={compact ? 32 : 40} />
+      <span className="lang-names">
+        <span className="lang-native" lang={code ?? 'en'} dir={dir}>{native}</span>
+        <span className="lang-en">{english}{beta && <span className="lang-beta"> · beta</span>}</span>
+      </span>
+      {current === code && <CheckIcon size={20} className="lang-check" />}
+    </button>
+  );
   return (
-    <div className="lang-grid">
-      {helpLanguages.map((l) => (
-        <button
-          key={l.code}
-          type="button"
-          className={`lang-btn ${current === l.code ? 'picked' : ''}`}
-          onClick={() => onPick(l.code)}
-        >
-          <span className="lang-native" lang={l.code} dir={l.dir}>{l.nativeName}</span>
-          <span className="lang-en">{l.name}</span>
-          {showBeta && !l.reviewed && <span className="lang-beta">beta</span>}
-        </button>
-      ))}
-      <button
-        type="button"
-        className={`lang-btn ${current === null ? 'picked' : ''}`}
-        onClick={() => onPick(null)}
-      >
-        <span className="lang-native">English</span>
-        <span className="lang-en">{ui('englishOnly').en}</span>
-      </button>
+    <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`}>
+      {helpLanguages.map((l) => option(l.code, l.nativeName, l.name, l.dir, showBeta && !l.reviewed))}
+      {option(null, 'English', ui('englishOnly').en)}
     </div>
   );
 }
 
+/** First run, before anything else: pick the language you get help in. */
 export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void }) {
   return (
     <div className="screen onboarding">
       <div className="hero">
-        <div className="mascot cast-row" aria-hidden>
-          <Character who="amina" size={104} />
-          <Character who="bram" mood="wave" size={132} />
-          <Character who="henk" size={104} />
-          <Character who="jada" size={104} />
-        </div>
-        <h1 className="hero-logo"><LogoMark size={56} /><Wordmark /></h1>
+        <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
         <p className="tagline">{ui('appTagline').en}</p>
-        <p className="tagline-nl" lang="nl">Nederlands voor op de werkvloer</p>
       </div>
-      <h2>{ui('chooseLanguage').en}</h2>
-      <p className="muted">{ui('chooseLanguageHint').en}</p>
+      <h2 className="onboarding-title">{ui('chooseLanguage').en}</h2>
       <LanguagePicker onPick={onDone} />
     </div>
   );
@@ -103,27 +96,26 @@ export function TopBar({ streak, words, lang, onLanguage }: {
   return (
     <header className="topbar">
       <span className="brand">
-        <LogoMark size={40} />
+        <LogoMark size={36} />
         <Wordmark className="topbar-wordmark" />
       </span>
-      <span className="chip chip-streak" role="img" aria-label={`${streak} ${ui('dayStreak').en}`} title={ui('dayStreak').en}>
-        <CalendarIcon size={22} />
-        <span className="chip-num">{streak}</span>
-        <span className="chip-unit" lang="nl">{streak === 1 ? 'dag' : 'dagen'}</span>
+      <span className="stat" role="img" aria-label={`${streak} ${ui('dayStreak').en}`} title={ui('dayStreak').en}>
+        <CalendarIcon size={20} />
+        <span className="stat-num">{streak}</span>
+        <span className="stat-unit" lang="nl">{streak === 1 ? 'dag' : 'dagen'}</span>
       </span>
-      <span className="chip chip-words" role="img" aria-label={wordsLabel} title={wordsLabel}>
-        <CrateIcon size={22} />
-        <span className="chip-num">{words}</span>
-        <span className="chip-unit" lang="nl">{words === 1 ? 'woord' : 'woorden'}</span>
+      <span className="stat" role="img" aria-label={wordsLabel} title={wordsLabel}>
+        <CrateIcon size={20} />
+        <span className="stat-num">{words}</span>
+        <span className="stat-unit" lang="nl">{words === 1 ? 'woord' : 'woorden'}</span>
       </span>
       <button
         type="button"
-        className="chip chip-lang"
+        className="lang-chip"
         onClick={onLanguage}
         aria-label={`${ui('helpLanguage').en}: ${lang ? lang.name : ui('englishOnly').en}`}
       >
-        <GlobeIcon size={20} />
-        <span className="chip-code">{lang ? lang.code.toUpperCase() : 'EN'}</span>
+        <Flag code={lang?.code ?? 'en'} width={32} />
       </button>
     </header>
   );
@@ -214,7 +206,6 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
         const unitOpen = unit.lessons.some((l) => isUnlocked(l.id, progress.completed, access));
         return (
           <section key={unit.id} className={`unit ${unitOpen ? '' : 'unit-locked'} ${allowed ? '' : 'unit-full-only'}`}>
-            {u > 0 && <div className="hazard" aria-hidden />}
             {/* In the preview, tapping a later unit's sign opens the unlock card (the note below
                 is the same action as a real button, for keyboards and screen readers). */}
             <div className="unit-head" onClick={allowed ? undefined : onUpgrade}>
@@ -224,12 +215,14 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
                   <span className="sr-only">Unit {u + 1}: </span>
                   {gloss(unit.id, unit.title, lang).en}
                 </h2>
-                <span className="unit-nl" lang="nl">{unit.titleNl}</span>
-                {lang?.gloss[unit.id] && (
+                {/* Two lines, not three: the help language when there is one, else the Dutch name. */}
+                {lang?.gloss[unit.id] ? (
                   <HelpText text={lang.gloss[unit.id]} lang={lang} />
+                ) : (
+                  <span className="unit-nl" lang="nl">{unit.titleNl}</span>
                 )}
               </div>
-              {!unitOpen && <LockIcon size={26} className="unit-lock" />}
+              {!unitOpen && allowed && <LockIcon size={22} className="unit-lock" />}
             </div>
             {!allowed && (
               <button type="button" className="full-only-note" onClick={onUpgrade}>
@@ -244,43 +237,35 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
                 const record = progress.completed[lesson.id];
                 const open = isUnlocked(lesson.id, progress.completed, access);
                 const state = !allowed ? 'locked' : record ? 'done' : open ? 'now' : 'locked';
-                const code = lessonCode(u, i);
                 const first = lesson.words[0];
                 return (
                   <li key={lesson.id} className={`bay bay-${state}`}>
                     <span className="bay-marker" aria-hidden>
-                      {state === 'done' ? <CheckIcon size={24} /> : i + 1}
+                      {state === 'done' ? <CheckIcon size={20} /> : i + 1}
                     </span>
                     <button
                       type="button"
                       className="bay-card"
                       disabled={!open}
                       onClick={() => onStart(lesson.id, Boolean(record))}
-                      aria-label={`${lesson.title}${open ? (record ? ` · ${ui('practice').en}` : '') : ` (${ui('locked').en})`}`}
+                      aria-label={`${lessonCode(u, i)} ${lesson.title}${open ? (record ? ` · ${ui('practice').en}` : '') : ` (${ui('locked').en})`}`}
                     >
-                      <span className="bay-tab" aria-hidden>
-                        {code}{state === 'now' && <> · <span lang="nl">Nu</span></>}
-                      </span>
                       {state === 'done' && first && (
-                        <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={56} />
+                        <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />
                       )}
-                      {state === 'locked' && <LockIcon size={30} className="bay-lock" />}
                       <span className="bay-text">
                         <Bi className="bay-title" text={gloss(lesson.id, lesson.title, lang)} />
                         {state === 'done' && (
-                          <span className="bay-status">
-                            <span lang="nl">klaar</span> · <span className="bay-again">{ui('practice').en}</span>
+                          <span className="bay-again">
+                            {record.best === 1 ? <CrownIcon size={16} /> : <CheckIcon size={16} />}
+                            {ui('practice').en}
                           </span>
                         )}
                         {state === 'now' && (
                           <span className="bay-start">{ui('start').en}<ChevronIcon size={20} /></span>
                         )}
                       </span>
-                      {state === 'done' && (
-                        <span className="bay-check" aria-hidden>
-                          {record.best === 1 ? <CrownIcon size={18} /> : <CheckIcon size={20} />}
-                        </span>
-                      )}
+                      {state === 'locked' && <LockIcon size={20} className="bay-lock" />}
                       {state === 'now' && (
                         <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>
                       )}
@@ -419,7 +404,7 @@ export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, on
         <h1><Bi text={ui('settings', lang)} /></h1>
       </div>
       <h2><Bi text={ui('helpLanguage', lang)} /></h2>
-      <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta />
+      <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta compact />
       {lang && !lang.reviewed && <p className="muted small">beta: {ui('beta').en}</p>}
 
       <h2><Bi text={ui('theme', lang)} /></h2>
@@ -543,10 +528,8 @@ function useCountUp(target: number, delay = 350, ms = 900) {
   return value;
 }
 
-function StatCard({ tone, tag, label, icon, value, final, done, foot }: {
+function StatCard({ tone, label, icon, value, final, done, foot }: {
   tone: 'gold' | 'green' | 'orange';
-  /** Short stencil tag on the label (GOED, WOORDEN). */
-  tag: string;
   label: Bilingual;
   icon: React.ReactNode;
   value: string;
@@ -559,7 +542,7 @@ function StatCard({ tone, tag, label, icon, value, final, done, foot }: {
 }) {
   return (
     <div className={`stat-card stat-${tone} ${done ? 'stat-done' : ''}`} role="group" aria-label={`${label.en} ${final}`}>
-      <div className="stat-card-head"><span className="tag" aria-hidden>{tag}</span><Bi text={label} /></div>
+      <div className="stat-card-head"><Bi text={label} /></div>
       <div className="stat-card-body" aria-hidden>
         {icon}
         <span className="stat-card-value">{value}</span>
@@ -603,11 +586,9 @@ export function Result({ right, total, newWords, words, lang, onDone }: {
           </span>
         </div>
         <h1 className="result-title"><Bi text={ui('lessonComplete', lang)} /></h1>
-        <p className="result-nl" lang="nl">Les voltooid!</p>
         <div className="result-stats">
           <StatCard
             tone="green"
-            tag="Goed"
             label={ui('rightFirstTime', lang)}
             icon={<CheckIcon size={30} />}
             value={`${shownRight} / ${total}`}
@@ -616,7 +597,6 @@ export function Result({ right, total, newWords, words, lang, onDone }: {
           />
           <StatCard
             tone="gold"
-            tag="Woorden"
             label={ui('newWords', lang)}
             icon={<CrateIcon size={30} />}
             value={`+${shownNew}`}

@@ -31,9 +31,9 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'pictures') return <PicturesSheet />;
   // &access=preview shows the path, tips and settings as a preview user sees them.
   const access: Access = new URLSearchParams(location.search).get('access') === 'preview' ? 'preview' : 'full';
-  if (shot === 'gate') return <Gate onAccess={() => {}} />;
+  if (shot === 'gate') return <Gate lang={getHelpLanguage(lang as LangCode)} onAccess={() => {}} onLanguage={() => {}} />;
   // Screens outside the lesson flow (phase-3 house-style review).
-  if (shot === 'onboarding') return <Onboarding onDone={() => {}} />;
+  if (shot === 'onboarding' || shot === 'language') return <Onboarding onDone={() => {}} />;
   if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
   if (shot === 'admin') return <Admin onBack={() => {}} />;
   if (shot === 'tips' || shot === 'settings' || shot === 'words') {

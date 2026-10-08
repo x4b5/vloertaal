@@ -68,6 +68,7 @@ const lang: HelpLanguage = {
     unlockFull: 'ምሉእ ቨርዥን ክፈት',
     unlockHint: 'ሕጂ ቀዳማይ ክፍሊ ጥራይ እዩ ክፉት። ንኹሉ ትምህርትታት ፓስዎርድ ኣእቱ።',
     password: 'ፓስዎርድ',
+    enterPassword: 'ፓስዎርድ ኣእቱ',
     wrongPassword: 'እቲ ፓስዎርድ ቅኑዕ ኣይኮነን። ደጊምካ ፈትን።',
     unlock: 'ክፈት',
   },
