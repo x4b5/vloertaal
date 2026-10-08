@@ -20,7 +20,12 @@ const only = (process.env.VOICES ?? '').split(',').map((s) => s.trim()).filter(B
 if (!key) throw new Error('ELEVENLABS_API_KEY is not set.');
 const config = JSON.parse(readFileSync('scripts/voices/elevenlabs.json', 'utf8'));
 const clips = JSON.parse(readFileSync('public/audio/clips.json', 'utf8'));
-const voices = config.voices.filter((v) => !only.length || only.includes(v.key));
+// Voice names are matched without case ("Thijmen" = "thijmen"), by key or label.
+const wantedNames = only.map((o) => o.toLowerCase());
+const voices = config.voices.filter((v) => !wantedNames.length || wantedNames.includes(v.key.toLowerCase()) || wantedNames.includes(v.label.toLowerCase()));
+if (wantedNames.length && !voices.length) {
+  throw new Error(`No voice matches "${only.join(', ')}". Known voices: ${config.voices.map((v) => v.key).join(', ')}.`);
+}
 
 // Index of what has been recorded: per voice, clip id → the exact text it says.
 const indexPath = `${OUT}/voices.json`;
