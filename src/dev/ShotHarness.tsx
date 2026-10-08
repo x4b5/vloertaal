@@ -20,6 +20,7 @@ import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
 import * as kit from '../pictures/kit';
+import { hasPicture } from '../lib/wordPicture';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -28,7 +29,8 @@ import * as kit from '../pictures/kit';
  * /?shot=pictures shows every word picture (and the unit banner pictures) for review.
  * Options are always in lesson order, so tests know which one is right.
  * &quiet=1 starts in "Without sound" (Settings, any lesson shot). /?shot=lesson&at=12 plays a real
- * built lesson (Safety gear, seed 1) from exercise 12; with &quiet=1 it is built without sound.
+ * built lesson (Safety gear, seed 1; &lesson=l.rights for another) from exercise 12; with &quiet=1
+ * it is built without sound.
  */
 export function ShotHarness({ shot, lang, word }: { shot: string; lang: string | null; word?: string | null }) {
   // Lesson complete: 9 of 11 right the first time, 6 new words (24 in all).
@@ -95,14 +97,16 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   }
   const { lesson } = findLesson('l.gear')!;
   if (shot === 'lesson') {
+    // &lesson=l.rights plays another lesson (default Safety gear).
+    const picked = findLesson(new URLSearchParams(location.search).get('lesson') ?? '')?.lesson ?? lesson;
     const at = Number(new URLSearchParams(location.search).get('at') ?? 0);
     return (
       <QuietLesson
         quiet={quiet}
-        lesson={lesson}
+        lesson={picked}
         review={false}
         lang={getHelpLanguage(lang as LangCode)}
-        exercises={buildLesson(lesson, { review: false, seed: 1, quiet })}
+        exercises={buildLesson(picked, { review: false, seed: 1, quiet })}
         startAt={at}
         onQuit={() => {}}
         onFinish={() => {}}
@@ -166,14 +170,16 @@ function SettingsWithSound(props: Omit<React.ComponentProps<typeof Settings>, 'o
 
 /** Every word of the course with its picture at 120 px and 48 px, grouped by unit, plus the
  *  unit banner pictures on their colours and the kit's building blocks. Words still without a
- *  picture show their emoji, dimmed. */
+ *  picture show their emoji, dimmed; abstract words (no picture in the course) are greyed and
+ *  marked "geen plaatje". */
 function PicturesSheet() {
   const words = units.flatMap((u) => u.lessons.flatMap((l) => l.words));
   const done = words.filter((w) => pictures[w.id]).length;
+  const abstract = words.filter((w) => !hasPicture(w)).length;
   return (
     <div className="pics-page">
       <h1>Woordplaatjes</h1>
-      <p className="pics-id">{done} / {words.length} drawn</p>
+      <p className="pics-id">{done} / {words.length} drawn · {abstract} abstract (geen plaatje: word card only, greyed here)</p>
       <h2>Bouwstenen (kit)</h2>
       <div className="pics-grid">
         {KIT_SAMPLES.map(([name, draw]) => (
@@ -203,11 +209,12 @@ function PicturesSheet() {
             </div>
             <div className="pics-grid">
               {unit.lessons.flatMap((l) => l.words).map((w) => (
-                <div key={w.id} className={`pics-cell ${pictures[w.id] ? '' : 'pics-missing'}`}>
+                <div key={w.id} className={`pics-cell ${!hasPicture(w) ? 'pics-abstract' : pictures[w.id] ? '' : 'pics-missing'}`}>
                   <div className="pics-row">
                     <WordPicture id={w.id} emoji={w.emoji} size={120} />
                     <WordPicture id={w.id} emoji={w.emoji} size={48} />
                   </div>
+                  {!hasPicture(w) && <span className="pics-none" lang="nl">geen plaatje</span>}
                   <span className="pics-nl" lang="nl">{w.nl}</span>
                   <span className="pics-id">{w.id}</span>
                 </div>

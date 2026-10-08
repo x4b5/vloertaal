@@ -19,6 +19,7 @@ import type { Progress, ThemeChoice } from '../lib/progress';
 import { Bi, HelpText } from './Bi';
 import { LogoMark, Wordmark } from './Logo';
 import { WordPicture } from '../pictures';
+import { hasPicture } from '../lib/wordPicture';
 import {
   AlertIcon,
   AutoThemeIcon,
@@ -249,7 +250,8 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
             const record = completed[lesson.id];
             const open = unlocked(lesson.id);
             const state = !allowed ? 'locked' : record ? 'done' : open ? 'now' : 'locked';
-            const first = lesson.words[0];
+            // The bay shows the lesson's first word that has a picture (none if all are abstract).
+            const first = lesson.words.find(hasPicture);
             return (
               <li key={lesson.id} className={`bay bay-${state}`}>
                 <span className="bay-marker" aria-hidden>

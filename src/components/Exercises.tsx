@@ -11,6 +11,7 @@ import { Bi } from './Bi';
 import { castFor, Character, type CharacterId, type Mood, useTalking } from './Characters';
 import { voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
+import { hasPicture } from '../lib/wordPicture';
 import { SpeakButton } from './SpeakButton';
 
 export interface Answer {
@@ -80,8 +81,9 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
       {/* The kraft tag above already says "Nieuw woord" (with its translation beside it), so the
           heading tells the learner what to do: listen to the word. */}
       <Prompt text={ui('tapToHear', lang)} />
-      <div className="card intro-card">
-        <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />
+      {/* Abstract words get no picture (it would mislead): a calm word card, word + sound + gloss. */}
+      <div className={`card intro-card ${hasPicture(word) ? '' : 'intro-word-only'}`}>
+        {hasPicture(word) && <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />}
         <div className={`intro-nl ${wordSize(word.nl)}`}>
           <span lang="nl">{breakable(word.nl)}</span>
           <SpeakButton text={word.nl} />
@@ -177,7 +179,7 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict }: Props<'
   );
 }
 
-/** English meaning shown → pick the Dutch word from picture cards. */
+/** English meaning shown → pick the Dutch word from picture cards (text cards when `textOnly`). */
 export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
   const meaning = gloss(ex.word.id, ex.word.en, lang);
   const fill = (template: string | undefined, word: string | undefined) =>
@@ -194,21 +196,33 @@ export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
           <Bi text={question} />
         </h2>
       </div>
-      <ChoiceGrid
-        className={`choices-pics n${ex.options.length} ${ex.options.length % 2 ? 'odd' : 'even'}`}
-        style={{ '--n': ex.options.length } as React.CSSProperties}
-        options={ex.options}
-        correctId={ex.word.id}
-        locked={locked}
-        onAnswer={onAnswer}
-        onPick={(w) => autoSpeak(w.nl)}
-        render={(w) => (
-          <>
-            <WordPicture className="pic-emoji" id={w.id} emoji={w.emoji} size={110} />
-            <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
-          </>
-        )}
-      />
+      {ex.textOnly ? (
+        <ChoiceGrid
+          className="choices-rows choices-words"
+          options={ex.options}
+          correctId={ex.word.id}
+          locked={locked}
+          onAnswer={onAnswer}
+          onPick={(w) => autoSpeak(w.nl)}
+          render={(w) => <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>}
+        />
+      ) : (
+        <ChoiceGrid
+          className={`choices-pics n${ex.options.length} ${ex.options.length % 2 ? 'odd' : 'even'}`}
+          style={{ '--n': ex.options.length } as React.CSSProperties}
+          options={ex.options}
+          correctId={ex.word.id}
+          locked={locked}
+          onAnswer={onAnswer}
+          onPick={(w) => autoSpeak(w.nl)}
+          render={(w) => (
+            <>
+              <WordPicture className="pic-emoji" id={w.id} emoji={w.emoji} size={110} />
+              <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
+            </>
+          )}
+        />
+      )}
     </div>
   );
 }
@@ -288,7 +302,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
               disabled={done.has(r.id)}
               onClick={() => setRightPick(r.id)}
             >
-              <WordPicture className="choice-emoji" id={r.id} emoji={r.emoji} size={36} />
+              {hasPicture(r) && <WordPicture className="choice-emoji" id={r.id} emoji={r.emoji} size={36} />}
               <Bi text={gloss(r.id, r.en, lang)} />
             </button>,
           ];

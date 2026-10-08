@@ -529,6 +529,12 @@ h2 { font-size: 1.25rem; }
 .intro-nl.len-m { font-size: clamp(1.6rem, 7.6vw, 2rem); }
 .intro-nl.len-l { font-size: clamp(1.4rem, 6.6vw, 2rem); }
 .intro-meaning { font-size: 1.25rem; font-weight: 600; align-items: center; }
+/* Abstract word (no picture): a calm word card, the Dutch word big and the gloss under a rule. */
+.intro-word-only { padding: 40px 20px 32px; gap: 18px; }
+.intro-word-only .intro-nl { font-size: 2.6rem; }
+.intro-word-only .intro-nl.len-m { font-size: clamp(1.8rem, 8.6vw, 2.6rem); }
+.intro-word-only .intro-nl.len-l { font-size: clamp(1.5rem, 7.2vw, 2.4rem); }
+.intro-word-only .intro-meaning { border-top: 2px solid var(--line); padding-top: 16px; width: min(100%, 22rem); justify-content: center; }
 
 /* Audio: blue squares (the only blue in the app). */
 .speak {
@@ -608,6 +614,8 @@ h2 { font-size: 1.25rem; }
 .choices-rows .choice-label { font-size: 1.15rem; line-height: 1.25; min-width: 0; }
 .choices-rows .choice-label .bi-help { --help-size: 0.85em; margin-top: 2px; }
 .choice-nl { font-size: 1.2rem; min-width: 0; overflow-wrap: anywhere; }
+/* "Which one is …?" without pictures: Dutch words on text cards. */
+.choices-words .choice-nl { font-size: 1.35rem; font-weight: 650; }
 /* Room for the stamp on a checked row, so it never covers the words: a smaller stamp in rows,
    and the text stops short of it (stamp 72 px, 8 px over the edge, plus a little air). */
 .choices:not(.choices-pics) .stamp { width: 72px; height: 72px; margin-top: -36px; }
@@ -1382,6 +1390,10 @@ h2 { font-size: 1.25rem; }
 .pics-nl { font-weight: 700; }
 .pics-id { font-size: 0.75rem; color: var(--muted); font-family: ui-monospace, monospace; }
 .pics-missing { opacity: 0.55; }
+/* Abstract words: no picture in the course; the stored emoji is shown greyed for reference. */
+.pics-abstract { background: var(--line); border-style: dashed; }
+.pics-abstract .pics-row { filter: grayscale(1); opacity: 0.35; }
+.pics-none { font-size: 0.8rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
 /* Drawn word pictures scale with their slot */
 svg.pic-emoji { width: min(110px, 72%); height: auto; aspect-ratio: 1; }
 svg.emoji-xl { width: 140px; height: 140px; }
