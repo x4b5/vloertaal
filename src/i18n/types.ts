@@ -183,6 +183,21 @@ export const uiEn = {
   inReview: 'in review',
   today: 'Today',
   playAgain: 'Listen again',
+  /* Gauntlet loop 4: singular counts, letter tiles, skipped listening, stamp glosses. */
+  daysUnitOne: 'day',
+  wordsUnitOne: 'word',
+  wordsLearnedOne: '{n} word learned',
+  tomorrowOne: 'Tomorrow: {n} word',
+  wordsStrongerOne: '{n} word stronger',
+  recordOne: 'Your best: {n} day',
+  streakStoppedOne: 'Your streak stopped at {n} day. Start again today.',
+  letterTiles: 'Letters',
+  useKeyboard: 'Keyboard',
+  deleteLetter: 'Delete',
+  listenSkipped: 'The listening questions in this lesson are skipped. Sound stays on.',
+  skippedN: '{n} skipped, not counted',
+  stampAgain: 'Try again',
+  stampDone: 'Done',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

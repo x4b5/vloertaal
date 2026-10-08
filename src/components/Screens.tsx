@@ -10,7 +10,7 @@ import type { DailyCard } from '../lib/spaced';
 import { coursePlan, unitSector, type SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { SectorIcon, SectorPicker } from './Sector';
-import { fillN, gloss, helpLanguages, ui, withoutN, type Bilingual } from '../i18n';
+import { fillCount, fillN, gloss, helpLanguages, ui, uiCount, withoutN, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useRef, useState } from 'react';
 import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
@@ -122,12 +122,12 @@ export function TopBar({ streak, words, lang, onLanguage, done = false }: {
 }) {
   // The stats are a picture and a number; the unit is in the help language (when there is
   // room), and the spoken label says it in English and the help language.
-  const wordsText = fillN(ui('wordsLearnedN', lang), words);
+  const wordsText = fillCount('wordsLearnedN', words, lang);
   const wordsLabel = wordsText.help ? `${wordsText.en} · ${wordsText.help}` : wordsText.en;
   const streakText = ui('dayStreak', lang);
   const streakLabel = `${streak} ${streakText.en}${streakText.help ? ` · ${streak} ${streakText.help}` : ''}${!done && streak > 0 ? ` · ${ui('stillToDo').en}` : ''}`;
-  const daysUnit = ui('daysUnit', lang);
-  const wordsUnit = ui('wordsUnit', lang);
+  const daysUnit = uiCount('daysUnit', streak, lang);
+  const wordsUnit = uiCount('wordsUnit', words, lang);
   return (
     <header className="topbar">
       <span className="brand">
@@ -276,7 +276,7 @@ function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: HelpLang
       className={`daily-card daily-${card.state}`}
       dir={rtl ? 'rtl' : undefined}
       role="group"
-      aria-label={`Herhaal vandaag · ${ui('reviewToday').en}${done && card.tomorrow > 0 ? ` · ${fillN(ui('tomorrowN'), card.tomorrow).en}` : ''}`}
+      aria-label={`Herhaal vandaag · ${ui('reviewToday').en}${done && card.tomorrow > 0 ? ` · ${fillCount('tomorrowN', card.tomorrow).en}` : ''}`}
     >
       {done ? (
         // A calm badge, not a stamp: the review is done for today.
@@ -867,7 +867,6 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   // or "+0" (the numbers are what the learner came for, not a counter).
   const shownRight = right;
   const shownNew = newWords;
-  const fill = (t: Bilingual, n: number): Bilingual => ({ ...t, en: t.en.replace('{n}', String(n)), help: t.help?.replace('{n}', String(n)) });
   // A tap or Enter meant for the last exercise must not skip this screen: both are ignored for
   // a moment (shorter with reduced motion), and the button fades in after about a second.
   const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -924,16 +923,16 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             icon={repeated !== undefined ? <CalendarIcon size={30} /> : <CrateIcon size={30} />}
             value={repeated !== undefined ? `${repeated}` : `+${shownNew}`}
             // The total is said, not printed: the top bar's crate shows it on the path.
-            final={`${repeated !== undefined ? repeated : `+${newWords}`} · ${fill(ui('wordsLearnedN'), words).en}`}
+            final={`${repeated !== undefined ? repeated : `+${newWords}`} · ${fillCount('wordsLearnedN', words).en}`}
             done={repeated !== undefined || shownNew === newWords}
           />
         </div>
         {/* After the review: how many words got stronger, the number big, the help language
             large and English small (no Dutch sentence). */}
         {stronger !== undefined && stronger > 0 && (
-          <p className="result-line result-stronger" aria-label={fill(ui('wordsStrongerN'), stronger).en}>
+          <p className="result-line result-stronger" aria-label={fillCount('wordsStrongerN', stronger).en}>
             <span className="stronger-n" aria-hidden><span className="stronger-arrow">▲</span>{stronger}</span>
-            <Bi text={withoutN(ui('wordsStrongerN', lang))} />
+            <Bi text={withoutN(uiCount('wordsStrongerN', stronger, lang))} />
           </p>
         )}
         {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}

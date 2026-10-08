@@ -8,7 +8,7 @@ import { sentencePicture, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
 import { Bi } from './Bi';
-import { castFor, Character, type CharacterId, type Mood, useTalking } from './Characters';
+import { castFor, Character, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
 import { CheckIcon, ChevronDownIcon, CloseIcon, SpeakerIcon } from './Icons';
 import { cheerFor } from '../lib/lessonRun';
 import { voiceFor } from '../lib/voices';
@@ -619,9 +619,9 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       <div className="tip-say">
         <span className="tip-say-label"><Bi text={ui('sayThis', lang)} /></span>
         <div className="tip-say-row">
-          <span className="tip-char"><Character who={castFor(tip.id)} talking={talking} size={96} /></span>
+          <span className="tip-char"><Character who={tipCast(tip)} talking={talking} size={96} /></span>
           <div className="speaker-bubble tip-bubble">
-            <SpeakButton glyph text={tip.phrase.nl} label={`Play: ${tip.phrase.nl}`} voice={voiceFor(castFor(tip.id))} />
+            <SpeakButton glyph text={tip.phrase.nl} label={`Play: ${tip.phrase.nl}`} voice={voiceFor(tipCast(tip))} />
             <span className="tip-phrase">
               <span lang="nl" className="tip-phrase-nl">{breakable(tip.phrase.nl)}</span>
               <Bi text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
@@ -675,7 +675,7 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
     <div className="exercise situation">
       <Prompt text={ui('whatDoYouDo', lang)} />
       <div className="speaker">
-        <span className="speaker-char"><Character who={castFor(tip.id)} mood={moodFor(verdict, 'thinking', true)} /></span>
+        <span className="speaker-char"><Character who={tipCast(tip)} mood={moodFor(verdict, 'thinking', true)} /></span>
         <div className="speaker-bubble situation-text">
           <Bi text={gloss(tip.situation.id, tip.situation.en, lang)} />
         </div>

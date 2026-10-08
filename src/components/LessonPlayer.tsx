@@ -8,7 +8,7 @@ import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercis
 import { barParts, chimeStep, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { voiceFor } from '../lib/voices';
-import { castFor, type CharacterId } from './Characters';
+import { castFor, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { FlameIcon } from './StreakArt';
 import {
@@ -63,7 +63,7 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
 function answerVoice(ex: Exercise): CharacterId {
   return ex.kind === 'chat' ? 'amina'
     : ex.kind === 'build' ? castFor(ex.sentence.id)
-    : ex.kind === 'situation' || ex.kind === 'tip' ? castFor(ex.tip.id)
+    : ex.kind === 'situation' || ex.kind === 'tip' ? tipCast(ex.tip)
     : 'bram';
 }
 

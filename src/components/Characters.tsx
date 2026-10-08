@@ -1,6 +1,7 @@
 import { useEffect, useId, useLayoutEffect, useState } from 'react';
 import { onSpeech } from '../lib/audio';
 import { FACES, type Expr, type TalkFrame } from './Faces';
+import { tipGender, type CultureTip } from '../content/culture';
 
 /**
  * The Vloertaal cast: four colleagues from the work floor, drawn as flat-vector busts in one
@@ -925,4 +926,16 @@ export function castFor(seed: string, from: CharacterId[] = CAST): CharacterId {
   let h = 0;
   for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
   return from[h % from.length];
+}
+
+/**
+ * The colleague of a workplace tip and its situation: a woman when the text says "she", a man
+ * when it says "he" (see tipGender), any colleague otherwise. Amina is "you" in the chats, so
+ * she never plays the other person in a situation.
+ */
+export function tipCast(tip: CultureTip): CharacterId {
+  const g = tipGender(tip);
+  if (g === 'f') return 'jada';
+  if (g === 'm') return castFor(tip.id, ['bram', 'henk']);
+  return castFor(tip.id, ['bram', 'henk', 'jada']);
 }

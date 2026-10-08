@@ -16,8 +16,11 @@ export interface CultureTip {
   body: string;
   /** The one Dutch sentence to use in this situation. */
   phrase: ChatLine;
-  /** "What do you do?" — a short workplace situation. */
-  situation: { id: string; en: string };
+  /** "What do you do?" — a short workplace situation. `nl`: the Dutch quoted in it, which a
+   *  speaker beside the text plays in the character's voice. */
+  situation: { id: string; en: string; nl?: string };
+  /** Who the character in the situation is, when the text does not say it with she/he. */
+  speaker?: 'f' | 'm';
   options: { id: string; en: string; best: boolean }[];
   /** Shown after answering: why the best option works here. */
   why: { id: string; en: string };
@@ -33,7 +36,7 @@ const baseTips: CultureTip[] = [
     title: '"Je" or "u"?',
     body: 'At work most people say "je" to each other, often also to the boss. If you are not sure, start with "u" and listen to what others do. Saying "je" is not rude here.',
     phrase: { id: 'c.je.p', nl: 'Mag ik je zeggen?', en: 'May I say "je" to you?' },
-    situation: { id: 'c.je.s', en: 'Your new supervisor says: "Zeg maar je, hoor!" What does she mean?' },
+    situation: { id: 'c.je.s', en: 'Your new supervisor says: "Zeg maar je, hoor!" What does she mean?', nl: 'Zeg maar je, hoor!' },
     options: [
       { id: 'c.je.o1', en: 'She wants you to say "je" to her.', best: true },
       { id: 'c.je.o2', en: 'She is angry with you.', best: false },
@@ -48,7 +51,7 @@ const baseTips: CultureTip[] = [
     title: 'First names and a handshake',
     body: 'On your first day, give a short handshake, look at the person and say your first name. Colleagues and managers usually use first names.',
     phrase: { id: 'c.names.p', nl: 'Hoi, ik ben Ali. Ik ben nieuw hier.', en: 'Hi, I am Ali. I am new here.' },
-    situation: { id: 'c.names.s', en: 'A colleague walks up to you: "Hoi, ik ben Mark." What do you do?' },
+    situation: { id: 'c.names.s', en: 'A colleague walks up to you: "Hoi, ik ben Mark." What do you do?', nl: 'Hoi, ik ben Mark.' },
     options: [
       { id: 'c.names.o1', en: 'Shake hands and say your first name.', best: true },
       { id: 'c.names.o2', en: 'Look down and say nothing.', best: false },
@@ -108,7 +111,7 @@ const baseTips: CultureTip[] = [
     title: 'Direct is not rude',
     body: 'Dutch colleagues often say things very directly, like "Dat is fout" or "Doe het zo". They usually do not mean it rudely. You may also be direct, as long as you stay friendly.',
     phrase: { id: 'c.direct.p', nl: 'Oké, hoe moet het dan?', en: 'Okay, how should it be done then?' },
-    situation: { id: 'c.direct.s', en: 'A colleague says: "Nee, dat is fout. Die doos moet daar." What do you do?' },
+    situation: { id: 'c.direct.s', en: 'A colleague says: "Nee, dat is fout. Die doos moet daar." What do you do?', nl: 'Nee, dat is fout. Die doos moet daar.' },
     options: [
       { id: 'c.direct.o1', en: 'Ask how it should be done and move the box.', best: true },
       { id: 'c.direct.o2', en: 'Feel insulted and walk away.', best: false },
@@ -261,6 +264,21 @@ export const cultureTips: CultureTip[] = [
   ...baseTips.slice(afterHelp),
   ...workTips.filter((t) => !isToolsTip(t)),
 ];
+
+/**
+ * Whether the person in a tip's situation is a woman ('f'), a man ('m') or not said (null),
+ * read from the English text ("What does she mean?", "He asks for ..."), so the character
+ * shown and the voice that speaks always match the text.
+ */
+export function tipGender(t: CultureTip): 'f' | 'm' | null {
+  if (t.speaker) return t.speaker;
+  const text = `${t.situation.en} ${t.why.en}`;
+  const she = /\b(she|her|hers|herself|woman|female)\b/i.exec(text);
+  const he = /\b(he|him|his|himself|man|male)\b/i.exec(text);
+  if (she && (!he || she.index < he.index)) return 'f';
+  if (he) return 'm';
+  return null;
+}
 
 export function tipForLesson(lessonId: string): CultureTip | undefined {
   return cultureTips.find((t) => t.lessonId === lessonId);

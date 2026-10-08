@@ -381,7 +381,7 @@ const coreTips: CultureTip[] = [
     title: 'Trial period and on-call work',
     body: 'A trial period (proeftijd) must be in writing. It is not allowed in a contract of 6 months or shorter. In a longer contract of less than 2 years, it is at most 1 month. In a contract of 2 years or longer, or a permanent one, it is at most 2 months. On-call worker (oproepkracht)? Your employer must call you at least 4 days before. If it is later, you do not have to come. A cao can make these 4 days shorter, but not shorter than 1 day. If they cancel your work later than that, you still get paid. If they call you for less than 3 hours of work, you usually get paid for 3 hours.',
     phrase: { id: 'c.contract.p', nl: 'Staat de proeftijd in mijn contract?', en: 'Is the trial period in my contract?' },
-    situation: { id: 'c.contract.s', en: 'Your contract is for 3 months. It says: "Proeftijd: 1 maand". What do you do?' },
+    situation: { id: 'c.contract.s', en: 'Your contract is for 3 months. It says: "Proeftijd: 1 maand". What do you do?', nl: 'Proeftijd: 1 maand' },
     options: [
       { id: 'c.contract.o1', en: 'Ask about it calmly: a trial period is not allowed in a contract this short.', best: true },
       { id: 'c.contract.o2', en: 'Nothing. Every contract has a trial period.', best: false },
@@ -568,6 +568,9 @@ const unit = (slug: string, title: string, titleNl: string, emoji: string, color
 });
 
 /** Closing line: ADVICE_LINE for rights and rules set by law, HOUSE_LINE for company rules, '' for social norms. */
+/** Dutch said aloud in a situation (a speaker plays it in the character's voice). */
+const SAID: Record<string, string> = { interview: 'Heb je nog vragen?' };
+
 const tipFor = (
   slug: string,
   emoji: string,
@@ -587,7 +590,7 @@ const tipFor = (
       title,
       body,
       phrase: { id: `c.${slug}.p`, nl, en },
-      situation: { id: `c.${slug}.s`, en: situation },
+      situation: { id: `c.${slug}.s`, en: situation, ...(SAID[slug] ? { nl: SAID[slug] } : {}) },
       options: options.map((o, i) => ({ id: `c.${slug}.o${i + 1}`, en: o, best: i === 0 })),
       why: { id: `c.${slug}.w`, en: why },
     },

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { fillN, ui } from '../i18n';
+import { fillCount, fillN, ui, uiCount } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { STREAK_TIERS, dayKey, emptyProgress, workWeek, type WeekDayState } from '../lib/progress';
 import { Bi, HelpText } from './Bi';
@@ -24,7 +24,7 @@ export function useTapGuard() {
 /** The unit under the streak number: the help language's word ("days"), or the Dutch one
  *  for English only. Never a bare Dutch "DAG" for a learner who can't read it. */
 function DaysUnit({ n, lang }: { n: number; lang?: HelpLanguage }) {
-  const help = lang?.ui.daysUnit;
+  const help = uiCount('daysUnit', n, lang).help;
   if (help && lang) return <HelpText className="streak-unit streak-unit-help" text={help} lang={lang} />;
   return <span className="streak-unit" lang="nl" aria-hidden>{n === 1 ? 'dag' : 'dagen'}</span>;
 }
@@ -239,7 +239,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
             {record > 1 && (
               <p className="streak-fact">
                 <span className="fact-tag" lang="nl" aria-hidden><TrophyGlyph /> {record}</span>
-                <Bi className="fact-gloss" text={fillN(ui('recordN', lang), record)} />
+                <Bi className="fact-gloss" text={fillCount('recordN', record, lang)} />
               </p>
             )}
             {freezes > 0 && (
@@ -295,12 +295,12 @@ export function StreakStopped({ streak, best, lang, onDone }: {
         {/* The help language large, English small (the Dutch sentence is only spoken). */}
         <h1 className="streak-line">
           <span className="sr-only" lang="nl">Je reeks is gestopt bij {streak}. Begin vandaag opnieuw. </span>
-          <Bi text={fillN(ui('streakStopped', lang), streak)} />
+          <Bi text={fillCount('streakStopped', streak, lang)} />
         </h1>
         <div className="streak-facts">
           <p className="streak-fact">
             <span className="fact-tag" lang="nl" aria-hidden><TrophyGlyph /> {best}</span>
-            <Bi className="fact-gloss" text={fillN(ui('recordN', lang), best)} />
+            <Bi className="fact-gloss" text={fillCount('recordN', best, lang)} />
           </p>
         </div>
       </main>

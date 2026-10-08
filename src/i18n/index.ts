@@ -96,3 +96,24 @@ export function withoutN(text: Bilingual): Bilingual {
   const drop = (s: string) => s.replace(/\s*\{n\}\s*/, ' ').replace(/\s+/g, ' ').trim();
   return { ...text, en: drop(text.en), help: text.help && drop(text.help) };
 }
+
+/** Strings with a count that have their own singular form ("1 day", not "1 days"). */
+const SINGULAR: Partial<Record<UiKey, UiKey>> = {
+  daysUnit: 'daysUnitOne',
+  wordsUnit: 'wordsUnitOne',
+  wordsLearnedN: 'wordsLearnedOne',
+  tomorrowN: 'tomorrowOne',
+  wordsStrongerN: 'wordsStrongerOne',
+  recordN: 'recordOne',
+  streakStopped: 'streakStoppedOne',
+};
+
+/** A UI string for a count of `n`: the singular form when n is 1 (in every language). */
+export function uiCount(key: UiKey, n: number, lang?: HelpLanguage): Bilingual {
+  return ui(n === 1 ? SINGULAR[key] ?? key : key, lang);
+}
+
+/** uiCount with the number filled in. */
+export function fillCount(key: UiKey, n: number, lang?: HelpLanguage): Bilingual {
+  return fillN(uiCount(key, n, lang), n);
+}
