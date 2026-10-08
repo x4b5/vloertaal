@@ -188,6 +188,9 @@ function emitSpeech(text: string, speaking: boolean, slow: boolean): void {
 /** Learners need calm Dutch: recordings play a bit slower than recorded (same pitch),
  *  and the turtle button slower still. */
 const RECORDED_RATE = { normal: 0.75, slow: 0.5 };
+/** Some recorded voices speak slower by nature; this evens them out (Noa reads noticeably
+ *  slower than the others, so she plays a bit faster). */
+const VOICE_PACE: Record<string, number> = { noa: 1.2 };
 /** The phone's own voice already speaks a little faster than the recordings. */
 const DEVICE_RATE = { normal: 0.75, slow: 0.45 };
 
@@ -212,7 +215,7 @@ export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voic
     const { rec, id } = found;
     stopAll();
     const audio = new Audio(`${rec.base}/${rec.voice.key}/${id}.mp3`);
-    audio.playbackRate = slow ? RECORDED_RATE.slow : RECORDED_RATE.normal;
+    audio.playbackRate = (slow ? RECORDED_RATE.slow : RECORDED_RATE.normal) * (VOICE_PACE[rec.voice.key] ?? 1);
     audio.preservesPitch = true;
     (audio as HTMLAudioElement & { webkitPreservesPitch?: boolean }).webkitPreservesPitch = true;
     playing = audio;
@@ -263,28 +266,6 @@ if (speechAvailable()) {
 
 let ctx: AudioContext | undefined;
 
-function tone(freqs: number[], duration = 0.12): void {
-  try {
-    ctx ??= new AudioContext();
-    const start = ctx.currentTime;
-    freqs.forEach((f, i) => {
-      const osc = ctx!.createOscillator();
-      const gain = ctx!.createGain();
-      osc.type = 'sine';
-      osc.frequency.value = f;
-      const t = start + i * duration;
-      gain.gain.setValueAtTime(0.0001, t);
-      gain.gain.exponentialRampToValueAtTime(0.2, t + 0.02);
-      gain.gain.exponentialRampToValueAtTime(0.0001, t + duration);
-      osc.connect(gain).connect(ctx!.destination);
-      osc.start(t);
-      osc.stop(t + duration);
-    });
-  } catch {
-    // No Web Audio: silently skip the effect.
-  }
-}
-
 /** A short note with a soft attack and decay (no click at either end). */
 function note(c: AudioContext, freq: number, at: number, dur: number, peak: number, type: OscillatorType = 'sine'): void {
   const osc = c.createOscillator();
@@ -311,8 +292,8 @@ function audioCtx(): AudioContext | undefined {
 /**
  * Effect sounds; all silent in "Without sound".
  *  - tap: a tiny 1800 Hz click when an option is picked.
- *  - correct: two soft notes, 660 then 990 Hz, 90 ms apart; `step` raises both a whole tone per
- *    step of the run (0–3, see lib/lessonRun.ts).
+ *  - correct: two soft notes, 660 then 880 Hz, 80 ms apart, always the same (a run is shown by
+ *    the run label, not by a rising pitch).
  *  - wrong: a low sine sliding 196 → 165 Hz through a lowpass, so it sounds like "hmm", not a buzzer.
  */
 export const sounds = {
@@ -321,14 +302,13 @@ export const sounds = {
     const c = audioCtx();
     if (c) note(c, 1800, c.currentTime, 0.03, 0.04, 'triangle');
   },
-  correct: (step = 0) => {
+  correct: () => {
     if (quietAudio) return;
     const c = audioCtx();
     if (!c) return;
-    const k = Math.pow(2, (2 * Math.max(0, Math.min(3, step))) / 12);
     const t = c.currentTime;
-    note(c, 660 * k, t, 0.16, 0.12);
-    note(c, 990 * k, t + 0.09, 0.22, 0.12);
+    note(c, 660, t, 0.14, 0.09);
+    note(c, 880, t + 0.08, 0.18, 0.08);
   },
   wrong: () => {
     if (quietAudio) return;
@@ -355,5 +335,36 @@ export const sounds = {
       // Ignore: the visual feedback says it all.
     }
   },
-  done: () => { if (!quietAudio) tone([523, 659, 784, 1047], 0.13); },
+  /** Lesson done: a short, soft two-note confirmation (G4 then C5), no fanfare. */
+  done: () => {
+    if (quietAudio) return;
+    const c = audioCtx();
+    if (!c) return;
+    const t = c.currentTime;
+    note(c, 392, t, 0.18, 0.09);
+    note(c, 523, t + 0.12, 0.26, 0.08);
+  },
 };
+
+/**
+ * The device's own voice for a help language (Tigrinya, Arabic, ...), or null when the phone has
+ * none: then no "read aloud" button is shown. Dari may use a Persian voice. No recordings needed.
+ */
+export function helpVoice(code: string): SpeechSynthesisVoice | null {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
+  const want = code === 'prs' ? ['prs', 'fa'] : [code];
+  const voices = window.speechSynthesis.getVoices();
+  return voices.find((v) => want.some((w) => v.lang.toLowerCase().replace('_', '-').split('-')[0] === w)) ?? null;
+}
+
+/** Reads a help-language text aloud with the device's voice for it (a tap; plays even when quiet). */
+export function speakHelp(text: string, code: string): void {
+  const voice = helpVoice(code);
+  if (!voice) return;
+  stopAll();
+  const u = new SpeechSynthesisUtterance(text);
+  u.voice = voice;
+  u.lang = voice.lang;
+  u.rate = 0.95;
+  window.speechSynthesis.speak(u);
+}

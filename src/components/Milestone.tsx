@@ -3,7 +3,7 @@ import { fillCount, fillN, ui, uiCount } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { STREAK_TIERS, dayKey, emptyProgress, workWeek, type WeekDayState } from '../lib/progress';
 import { Bi, HelpText } from './Bi';
-import { Burst, StreakHero } from './Celebrate';
+import { StreakHero } from './Celebrate';
 import { Character } from './Characters';
 import { FlameIcon, StreakFlame } from './StreakArt';
 import { CheckIcon, ChevronIcon, CupIcon } from './Icons';
@@ -148,12 +148,15 @@ function ContinueButton({ lang, onClick }: { lang?: HelpLanguage; onClick: () =>
 function KeepScreen({ lang, onDone }: { lang?: HelpLanguage; onDone: () => void }) {
   useEnter(onDone);
   useEffect(() => { markKeepOffered(); window.scrollTo(0, 0); }, []);
+  const [short] = useState(() => typeof window !== 'undefined' && window.innerHeight < 720);
   return (
     <div className="player milestone-screen keep-screen">
       <main className="player-body milestone">
-        <div className="keep-hero" aria-hidden><Character who="bram" mood="wave" size={120} /></div>
+        {/* On a short screen (360×640) Bram is smaller, so the whole reminder card fits above Continue. */}
+        <div className="keep-hero" aria-hidden><Character who="bram" mood="wave" size={short ? 64 : 120} /></div>
         <div className="milestone-keep">
-          <ReminderCard lang={lang} />
+          {/* Continue is the one main button here; "add to calendar" is an outline one. */}
+          <ReminderCard lang={lang} secondary />
           <InstallCard lang={lang} />
         </div>
       </main>
@@ -190,7 +193,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
   const [lit, setLit] = useState(still);
   useEffect(() => {
     if (still) { setShown(streak); setLit(true); return; }
-    const t = window.setTimeout(() => { setShown(streak); setLit(true); }, 1000);
+    const t = window.setTimeout(() => { setShown(streak); setLit(true); }, 600);
     return () => window.clearTimeout(t);
   }, [streak, still]);
   const next = useCallback(() => (offer ? setStep('keep') : onDone()), [offer, onDone]);
@@ -210,10 +213,6 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
         <StreakHero lit={lit} />
         <div className={`streak-count ${lit ? 'streak-lit' : ''}`} role="img" aria-label={`${streak} ${label.en}${tier ? ` · ${ui(tier.key).en}` : ''}`}>
           <span className="streak-flame-wrap">
-            {/* Sparks fly off the flame when the new day is counted. */}
-            <svg className="streak-sparks" viewBox="0 0 120 120" aria-hidden focusable="false">
-              <Burst x={60} y={60} r={58} color="#ffc414" />
-            </svg>
             <StreakFlame />
           </span>
           <span key={`${shown}-${lit}`} className={`streak-num ${lit ? 'streak-num-new' : ''}`} aria-hidden>

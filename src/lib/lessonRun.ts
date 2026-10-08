@@ -15,9 +15,9 @@ export function nextMisses(misses: number, correct: boolean): number {
 }
 
 /**
- * How a character reacts to a right answer, by the run it extends. Every right answer is a
- * clear cheer (open-mouthed joy, fist up), never just the resting grin: 1–2 a fist pump on the
- * spot, 3–4 the pump with a jump, 5+ the jump plus a second fist pump.
+ * The reaction tier of a right answer, by the run it extends: 1–2 'pump', 3–4 'happy', 5+
+ * 'big'. With the calm style every tier looks (almost) the same: a nod and a smile; the run
+ * itself is shown by the run label.
  */
 export type Cheer = 'pump' | 'happy' | 'big';
 
@@ -34,15 +34,7 @@ export function runStampFor(run: number): number | null {
   return (RUN_STAMPS as readonly number[]).includes(run) ? run : null;
 }
 
-/** The chime goes up a whole tone for each answer in the run after the first, at most 3 steps. */
-export function chimeStep(run: number): number {
-  return Math.max(0, Math.min(3, run - 1));
-}
 
-/** Frequency multiplier for a number of whole tones (2 semitones each). */
-export function wholeTones(steps: number): number {
-  return Math.pow(2, (2 * steps) / 12);
-}
 
 export interface BarParts {
   /** Fraction of the bar filled in ink (exercises done). */

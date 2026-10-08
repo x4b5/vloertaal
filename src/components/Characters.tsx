@@ -4,28 +4,30 @@ import { FACES, type Expr, type TalkFrame } from './Faces';
 import { tipGender, type CultureTip } from '../content/culture';
 
 /**
- * The Vloertaal cast: four colleagues from the work floor, drawn as flat-vector busts in one
- * style (big head, bold shapes, eyes with highlights, a bit of shading on the right side).
+ * The Vloertaal cast: four colleagues from the work floor, drawn as flat, sleek busts in one
+ * system (the style of a bank or government app): an oval head a little larger than life, a
+ * slim body with straight shoulders, flat fills with one crisp shade on the right (light from
+ * the top left), small solid eyes and a closed mouth. Nothing round or bulbous.
  *
  *  - Bram: our mascot. Warehouse/construction worker, yellow hard hat, orange hi-vis vest.
  *  - Amina: greenhouse worker in a purple headscarf and a green fleece.
- *  - Henk: the older shift supervisor; bald, grey moustache, glasses, navy jacket.
+ *  - Henk: the older shift supervisor; short grey hair, grey moustache, glasses, navy jacket.
  *  - Jada: order picker in blue dungarees over a yellow T-shirt, curly hair with safety glasses on top.
  *
  * Every character has the same moods; CSS (styles.css, "Characters") animates them:
- * idle breathing + blinking, a moving mouth while talking, a jump when happy, a droop when sad.
+ * idle breathing + blinking, a moving mouth while talking, a calm nod and a smile when happy, a
+ * brief head tilt when sad.
  * With prefers-reduced-motion the pose is shown without motion.
  */
 export type CharacterId = 'bram' | 'amina' | 'henk' | 'jada';
 /**
  * Body + face state. `idle` is the character's own resting face; `thinking`, `pleased` and
- * `sad` (disappointed) change the face only; `happy` adds one hop, `cheer` keeps jumping with
- * both arms up. `talking` is idle with a moving mouth (or pass `talking` to any mood).
+ * `sad` (disappointed) change the face only; `happy` and `cheer` add one calm nod (a thumb for
+ * Bram and Jada). `talking` is idle with a moving mouth (or pass `talking` to any mood).
  */
 export type Mood = 'idle' | 'talking' | 'thinking' | 'pleased' | 'happy' | 'sad' | 'cheer' | 'wave';
 
 export const CAST: CharacterId[] = ['bram', 'amina', 'henk', 'jada'];
-
 
 interface Look {
   skin: string;
@@ -34,15 +36,17 @@ interface Look {
   sleeve: string;
   /** Face silhouette (also used as clip for its shading). */
   face: (fill: string) => React.ReactNode;
+  /** Half the face width (the ears sit on its edge). */
+  half: number;
   ears?: boolean;
+  /** No visible neck (Amina's scarf covers it). */
+  noNeck?: boolean;
   /** Behind the head (hair volume, headscarf), drawn over the torso. */
   back?: React.ReactNode;
   /** In front of the face (hat, fringe, glasses, moustache). */
   front?: React.ReactNode;
   /** Clothes on the torso; `clip` is the id of a clip path with the torso shape. */
   torso: (clip: string) => React.ReactNode;
-  /** Extra detail clipped to the face (stubble). */
-  faceExtra?: React.ReactNode;
   /** Blink rhythm, so a group of characters doesn't blink in sync. */
   blink: number;
   /** Shoulder joints (viewer's left, viewer's right) and upper/lower arm lengths. */
@@ -54,90 +58,137 @@ interface Look {
   bareForearm?: boolean;
 }
 
-/** Torso silhouettes: Bram broad and square, Amina narrow under her scarf, Henk wide with a
- *  belly, Jada slim with one hip pushed out. */
-const TORSOS: Record<CharacterId, string> = {
-  bram: 'M23 128C23 103 37 93 60 93C83 93 97 103 97 128Q97 134 91 134H29Q23 134 23 128Z',
-  amina: 'M29 128C29 105 41 95 60 95C79 95 91 105 91 128Q91 134 85 134H35Q29 134 29 128Z',
-  henk: 'M19 128C19 103 35 92 60 92C85 92 101 103 101 126Q102 134 95 134H25Q19 134 19 128Z',
-  jada: 'M30 128C29 106 41 95 60 95C79 95 91 105 90 116Q89 124 91 129Q92 134 86 134H36Q30 134 30 128Z',
+const r1 = (n: number) => Math.round(n * 10) / 10;
+
+/**
+ * The shared head shape: an oval, taller than wide, with straight jaw lines to a narrow chin
+ * (no round cheeks). `half` is half the width, `top` and `chin` the vertical extent.
+ */
+function oval(half: number, top: number, chin: number) {
+  const l = 60 - half;
+  const r = 60 + half;
+  const jaw = chin - 21;
+  const cx = half * 0.6;
+  return (
+    `M${r1(l)} ${r1(top + 19)}C${r1(l)} ${r1(top + 6)} ${r1(60 - half * 0.56)} ${top} 60 ${top}` +
+    `C${r1(60 + half * 0.56)} ${top} ${r1(r)} ${r1(top + 6)} ${r1(r)} ${r1(top + 19)}V${r1(jaw)}` +
+    `C${r1(r)} ${r1(jaw + 6)} ${r1(60 + cx + 2)} ${r1(chin - 6)} ${r1(60 + cx * 0.55)} ${r1(chin - 2.2)}` +
+    `Q60 ${r1(chin + 1.2)} ${r1(60 - cx * 0.55)} ${r1(chin - 2.2)}` +
+    `C${r1(60 - cx - 2)} ${r1(chin - 6)} ${r1(l)} ${r1(jaw + 6)} ${r1(l)} ${r1(jaw)}Z`
+  );
+}
+
+/** Slim torsos with straight, slightly sloping shoulders, cut off flat at the bottom. */
+const torsoPath = (half: number, top = 96) => {
+  const l = 60 - half;
+  const r = 60 + half;
+  return `M${l} 134L${l + 1} ${top + 13}Q${l + 2.5} ${top + 3} ${l + 13} ${top}H${r - 13}Q${r - 2.5} ${top + 3} ${r - 1} ${top + 13}L${r} 134Z`;
 };
+
+const TORSOS: Record<CharacterId, string> = {
+  bram: torsoPath(28, 93),
+  amina: torsoPath(25, 95.5),
+  henk: torsoPath(29.5, 93),
+  jada: torsoPath(25.5, 94.5),
+};
+
+/** The right-hand shade on the clothes: one crisp diagonal band, clipped to the torso. */
+const bodyShade = <path d="M79 90L104 90L104 140L82 140Z" fill="#000" opacity=".13" />;
+
+const FACE: Record<CharacterId, [number, number, number]> = {
+  bram: [20, 31, 85],
+  amina: [18.6, 34, 84.4],
+  henk: [19.6, 29.5, 86],
+  jada: [18.8, 32.4, 84.6],
+};
+const face = (who: CharacterId) => (fill: string) => {
+  const [h, t, c] = FACE[who];
+  return <path d={oval(h, t, c)} fill={fill} />;
+};
+
+/** Jada's curls: a compact hair shape with a fine scalloped edge (small curls, no big puffs). */
+function curls(): string {
+  const pts: [number, number][] = [];
+  const n = 18;
+  for (let i = 0; i <= n; i++) {
+    const a = Math.PI * (0.8 + (1.4 * i) / n);
+    pts.push([60 + Math.cos(a) * 25, 52 + Math.sin(a) * 27.5]);
+  }
+  let d = `M${r1(pts[0][0])} ${r1(pts[0][1])}`;
+  for (let i = 1; i < pts.length; i++) d += `A3.4 3.4 0 0 1 ${r1(pts[i][0])} ${r1(pts[i][1])}`;
+  return `${d}Z`;
+}
+const CURLS = curls();
 
 const LOOKS: Record<CharacterId, Look> = {
   bram: {
-    shoulders: [[31, 103], [89, 103]],
-    arm: [17, 15],
+    shoulders: [[39, 104], [81, 104]],
+    arm: [16, 14],
     cuff: '#126bb0',
     skin: '#f7c49b',
     shade: '#e2a376',
     brow: '#6b3f22',
     sleeve: '#1a86d8',
-    // Broad, square jaw
-    face: (fill) => <path d="M33 50C33 33 44 27 60 27C76 27 87 33 87 50V69C87 84 77 91 60 91C43 91 33 84 33 69Z" fill={fill} />,
+    face: face('bram'),
+    half: 20,
     ears: true,
     blink: 4.2,
-    faceExtra: <path d="M30 70Q36 92 60 92Q84 92 90 70Q80 86 60 86Q40 86 30 70Z" fill="#b07a55" opacity=".28" />,
     torso: (clip) => (
       <>
         <path d={TORSOS.bram} fill="#ff7a00" />
         <g clipPath={`url(#${clip})`}>
           {/* Blue work shirt in the V of the vest, with a collar */}
-          <path d="M48 90H72L60 114Z" fill="#1a86d8" />
-          <path d="M49 92L60 102L55 106ZM71 92L60 102L65 106Z" fill="#5fb8f5" />
+          <path d="M51 91H69L60 106Z" fill="#1a86d8" />
+          <path d="M52 92L60 98.5L56 102ZM68 92L60 98.5L64 102Z" fill="#5fb8f5" />
           {/* Reflective stripes */}
-          <rect x="20" y="117" width="80" height="6" fill="#eef5f7" />
-          <rect x="20" y="123" width="80" height="1.6" fill="#b9c7cc" />
-          <path d="M41 97V117M79 97V117" stroke="#eef5f7" strokeWidth="5" />
-          <path d="M60 114V140" stroke="#d96500" strokeWidth="2" />
+          <rect x="20" y="118" width="80" height="5" fill="#eef5f7" />
+          <path d="M44.5 96V118M75.5 96V118" stroke="#eef5f7" strokeWidth="4" />
+          <path d="M60 106V140" stroke="#d96500" strokeWidth="1.6" />
           {/* Chest pocket with a pen */}
-          <rect x="67" y="104" width="10" height="2.5" rx="1.2" fill="#2b2b2b" />
-          <rect x="66" y="105" width="14" height="10" rx="2" fill="#e86e00" />
-          <ellipse cx="104" cy="122" rx="26" ry="34" fill="#000" opacity=".1" />
+          <rect x="67" y="104.5" width="2" height="4" rx=".6" fill="#2b2b2b" />
+          <rect x="65" y="107" width="9" height="7" rx="1" fill="#e86e00" />
+          {bodyShade}
         </g>
       </>
     ),
     front: (
       <>
-        {/* Sideburns */}
-        <rect x="33" y="48" width="5" height="14" rx="2.5" fill="#6b3f22" />
-        <rect x="82" y="48" width="5" height="14" rx="2.5" fill="#6b3f22" />
-        {/* Hard hat (sits high, so the brows show) */}
-        <g transform="translate(0 -4)">
-        <path d="M30 50C30 26 43 13 60 13C77 13 90 26 90 50Z" fill="#ffc414" />
-        <path d="M75 17C85 24 90 36 90 50H80C80 36 79 26 75 17Z" fill="#e0a800" opacity=".55" />
-        <rect x="55" y="13" width="10" height="35" rx="5" fill="#ffd94d" />
-        <path d="M37 40Q39 27 49 20" fill="none" stroke="#fff3b0" strokeWidth="3.5" strokeLinecap="round" />
-        <rect x="23" y="45" width="74" height="9" rx="4.5" fill="#e0a800" />
-        <rect x="23" y="45" width="74" height="3" rx="1.5" fill="#ffd94d" opacity=".6" />
-        </g>
+        {/* Short sideburns under the hat */}
+        <path d="M40 46H43.8V54.4L40.2 53.4Z" fill="#6b3f22" />
+        <path d="M80 46H76.2V54.4L79.8 53.4Z" fill="#6b3f22" />
+        {/* Hard hat: a flat dome with a ridge and a thin, straight brim */}
+        <path d="M38.5 46C38.5 30 47.5 20.5 60 20.5C72.5 20.5 81.5 30 81.5 46Z" fill="#ffc414" />
+        <path d="M70 22.8C77 26.8 81.5 35 81.5 46H73.5C73.5 35.5 72.6 28.4 70 22.8Z" fill="#e0a800" />
+        <path d="M57 20.8H63V45H57Z" fill="#ffd94d" />
+        <rect x="33.5" y="43.6" width="53" height="4.8" rx="1.2" fill="#e0a800" />
+        <rect x="33.5" y="43.6" width="40" height="1.6" rx=".8" fill="#ffd94d" />
       </>
     ),
   },
   amina: {
-    shoulders: [[34, 104], [86, 104]],
-    arm: [17, 16],
+    shoulders: [[39.5, 105], [80.5, 105]],
+    arm: [16, 15],
     cuff: '#23722f',
     skin: '#b97a52',
     shade: '#9c6141',
     brow: '#2b1d14',
     sleeve: '#2f8f3e',
-    // Soft egg-shaped face framed by the scarf
-    face: (fill) => <path d="M60 38C73 38 82 47 82 61C82 77 72 88 60 88C48 88 38 77 38 61C38 47 47 38 60 38Z" fill={fill} />,
+    face: face('amina'),
+    half: 18.6,
+    noNeck: true,
     blink: 5.1,
     back: (
       <>
-        {/* Headscarf: wraps the head and drapes over the shoulders */}
-        <path d="M27 62C27 30 41 15 60 15C79 15 93 30 93 62C93 80 90 96 84 104H36C30 96 27 80 27 62Z" fill="#8e44c9" />
-        <path d="M80 22C89 32 93 46 93 62C93 80 90 96 84 104H76C82 92 84 76 84 60C84 44 83 32 80 22Z" fill="#6f2fa6" />
-        <path d="M36 104C40 98 48 95 60 95C72 95 80 98 84 104C78 109 70 111 60 111C50 111 42 109 36 104Z" fill="#8e44c9" />
-        <path d="M44 100Q60 106 76 100" fill="none" stroke="#6f2fa6" strokeWidth="2" strokeLinecap="round" />
+        {/* Headscarf: wraps the head close and falls in a straight drape over the shoulders */}
+        <path d="M36.5 58C36.5 35 46.5 24.5 60 24.5C73.5 24.5 83.5 35 83.5 58C83.5 74 81.5 87 77 96L84 105H36L43 96C38.5 87 36.5 74 36.5 58Z" fill="#8e44c9" />
+        <path d="M72 27.6C79.4 33 83.5 43.4 83.5 58C83.5 74 81.5 87 77 96L84 105H78L71.5 96.5C75.6 87 77.4 74 77.4 58C77.4 44 75.6 34 72 27.6Z" fill="#6f2fa6" />
+        <path d="M44 96.6H76" stroke="#6f2fa6" strokeWidth="1.6" />
       </>
     ),
     front: (
       <>
-        {/* Inner cap edge around the face */}
-        <path d="M37 52C39 40 48 34 60 34C72 34 81 40 83 52" fill="none" stroke="#b07ae6" strokeWidth="3.4" strokeLinecap="round" />
-        <path d="M35 30Q46 21 58 20" fill="none" stroke="#b07ae6" strokeWidth="3" strokeLinecap="round" opacity=".7" />
+        {/* The inner cap edge round the face */}
+        <path d="M41.6 52.5C42 40.5 49.6 34.4 60 34.4C70.4 34.4 78 40.5 78.4 52.5" fill="none" stroke="#b07ae6" strokeWidth="2.2" strokeLinecap="round" />
       </>
     ),
     torso: (clip) => (
@@ -145,117 +196,106 @@ const LOOKS: Record<CharacterId, Look> = {
         <path d={TORSOS.amina} fill="#3fa34d" />
         <g clipPath={`url(#${clip})`}>
           {/* Fleece zip and a name badge with a little seedling */}
-          <path d="M60 108V140" stroke="#2f7d3a" strokeWidth="2.4" />
-          <rect x="65" y="114" width="16" height="10" rx="2.5" fill="#fff" />
-          <path d="M69 121H77M69 118H74" stroke="#9aa5ab" strokeWidth="1.6" strokeLinecap="round" />
-          <path d="M45 124V116M45 118C41 118 40 115 40 113C43 113 45 115 45 118ZM45 117C45 114 47 112 50 112C50 115 48 117 45 117Z" fill="#c6f06b" stroke="#c6f06b" strokeWidth="1" />
-          <ellipse cx="104" cy="122" rx="26" ry="34" fill="#000" opacity=".1" />
+          <path d="M60 106V140" stroke="#2f7d3a" strokeWidth="1.8" />
+          <rect x="65" y="112" width="12" height="8" rx="1" fill="#fff" />
+          <path d="M67.5 117.6H74.5M67.5 114.8H72" stroke="#9aa5ab" strokeWidth="1.3" strokeLinecap="round" />
+          <path d="M47 122V114.5M47 116.5L43.6 113.6M47 115.6L50.4 112.6" stroke="#c6f06b" strokeWidth="1.6" strokeLinecap="round" />
+          {bodyShade}
         </g>
       </>
     ),
   },
   henk: {
-    shoulders: [[27, 103], [93, 103]],
-    arm: [17, 15],
+    shoulders: [[38, 104], [82, 104]],
+    arm: [16, 14],
     cuff: '#183660',
     skin: '#f0b791',
     shade: '#d9946c',
     brow: '#9aa1a8',
     sleeve: '#244a7d',
-    // Long face, high forehead, heavy jowls
-    face: (fill) => <path d="M36 44C36 29 46 22 60 22C74 22 84 29 84 44V72C84 84 76 91 60 91C44 91 36 84 36 72Z" fill={fill} />,
+    face: face('henk'),
+    half: 19.6,
     ears: true,
     blink: 4.7,
     front: (
       <>
-        {/* Grey hair round the sides, shiny bald top, forehead lines */}
-        <path d="M33 42C28 49 29 61 35 66L39 63L38 45Z" fill="#c4cad0" />
-        <path d="M87 42C92 49 91 61 85 66L81 63L82 45Z" fill="#c4cad0" />
-        <ellipse cx="49" cy="33" rx="7" ry="3.2" fill="#fff" opacity=".35" transform="rotate(-18 49 33)" />
-        <path d="M50 42Q60 39 70 42M53 46Q60 44 67 46" fill="none" stroke="#d9946c" strokeWidth="1.5" strokeLinecap="round" />
-        {/* Glasses */}
-        <g fill="#fff" fillOpacity=".12" stroke="#2f3b46" strokeWidth="2.4">
-          <rect x="40.5" y="53.5" width="19" height="17" rx="7" />
-          <rect x="60.5" y="53.5" width="19" height="17" rx="7" />
+        {/* Short grey hair, receding at the temples */}
+        <path d="M40.2 50C40 36.5 48 28.8 60 28.8C72 28.8 80 36.5 79.8 50L77.6 50.4L76.6 41.6C72.6 37.4 67.6 36.2 63 37.4Q60 35 56.6 37.4C52 36.4 46.6 37.6 43.4 41.6L42.4 50.4Z" fill="#c4cad0" />
+        <path d="M72 31.6C77 35 79.9 41.4 79.8 50L77.6 50.4L76.6 41.6C75.4 38.6 74 35.6 72 31.6Z" fill="#aab1b8" />
+        {/* Glasses: thin, squarish frames */}
+        <g fill="#fff" fillOpacity=".14" stroke="#2f3b46" strokeWidth="1.5">
+          <rect x="46.2" y="56.4" width="11.6" height="8.6" rx="2" />
+          <rect x="62.2" y="56.4" width="11.6" height="8.6" rx="2" />
         </g>
-        <path d="M58.5 60Q60 58 61.5 60M40.5 59L34 57M79.5 59L86 57" fill="none" stroke="#2f3b46" strokeWidth="2.2" strokeLinecap="round" />
-        {/* Moustache */}
-        <path d="M46 76C48 70 55 69 60 72C65 69 72 70 74 76C70 78 65 77 60 75C55 77 50 78 46 76Z" fill="#b8bec5" />
+        <path d="M57.8 59.4H62.2M46.2 59L40.6 58M73.8 59L79.4 58" fill="none" stroke="#2f3b46" strokeWidth="1.4" strokeLinecap="round" />
+        {/* Trimmed moustache */}
+        <path d="M52.6 74.8Q53.6 71.6 60 71.8Q66.4 71.6 67.4 74.8Q63.6 74 60 74.4Q56.4 74 52.6 74.8Z" fill="#b8bec5" />
       </>
     ),
     torso: (clip) => (
       <>
         <path d={TORSOS.henk} fill="#244a7d" />
         <g clipPath={`url(#${clip})`}>
-          {/* White shirt collar and tie-less V, hi-vis stripes on the jacket */}
-          <path d="M49 90H71L60 108Z" fill="#f4f7f9" />
-          <path d="M48 92L57 104L52 107ZM72 92L63 104L68 107Z" fill="#dfe6ec" />
-          <rect x="20" y="118" width="80" height="6" fill="#ffd400" />
-          <path d="M60 108V140" stroke="#1a3860" strokeWidth="2" />
+          {/* White shirt collar, hi-vis stripe on the jacket */}
+          <path d="M51 91H69L60 104Z" fill="#f4f7f9" />
+          <path d="M51 92L58 100.6L54.4 103ZM69 92L62 100.6L65.6 103Z" fill="#dfe6ec" />
+          <rect x="20" y="118" width="80" height="5" fill="#ffd400" />
+          <path d="M60 104V140" stroke="#1a3860" strokeWidth="1.6" />
           {/* Pen in the pocket */}
-          <rect x="70" y="101" width="2.6" height="8" rx="1.2" fill="#c2412d" />
-          <rect x="66" y="106" width="12" height="9" rx="2" fill="#1d3f6e" />
-          <ellipse cx="104" cy="122" rx="26" ry="34" fill="#000" opacity=".12" />
+          <rect x="70" y="102" width="1.8" height="6" rx=".6" fill="#c2412d" />
+          <rect x="66" y="106" width="10" height="7" rx="1" fill="#1d3f6e" />
+          {bodyShade}
         </g>
       </>
     ),
   },
   jada: {
-    shoulders: [[34, 104], [86, 104]],
-    arm: [16, 16],
+    shoulders: [[39.5, 105], [80.5, 105]],
+    arm: [15, 15],
     cuff: '#e0a800',
     bareForearm: true,
     skin: '#8d5536',
     shade: '#6e3f25',
     brow: '#1e1512',
     sleeve: '#ffc929',
-    // Round cheeks, small pointed chin
-    face: (fill) => <path d="M60 31C77 31 87 43 87 59C87 74 74 88 60 89C46 88 33 74 33 59C33 43 43 31 60 31Z" fill={fill} />,
+    face: face('jada'),
+    half: 18.8,
     ears: true,
     blink: 3.8,
     back: (
-      <g fill="#2e201a">
-        {/* Curly hair, big and round */}
-        <circle cx="60" cy="28" r="19" />
-        <circle cx="42" cy="34" r="13" />
-        <circle cx="78" cy="34" r="13" />
-        <circle cx="36" cy="48" r="9" />
-        <circle cx="84" cy="48" r="9" />
-        <circle cx="50" cy="15" r="9" />
-        <circle cx="70" cy="15" r="9" />
-        <g fill="none" stroke="#4a362c" strokeWidth="2" strokeLinecap="round">
-          <path d="M44 22a5 5 0 0 1 6-4M64 12a5 5 0 0 1 6 0M76 26a5 5 0 0 1 5 4M33 42a4 4 0 0 1 4-4" />
-        </g>
-      </g>
+      <>
+        <path d={CURLS} fill="#2e201a" />
+        {/* A few lighter curls, so the hair keeps its texture on a dark background */}
+        <path d="M44 33a3 3 0 0 1 4.4-2.4M56 27.4a3 3 0 0 1 4.6 0M70 29.6a3 3 0 0 1 4 2.6M38.6 44a3 3 0 0 1 2.4-4M80.4 41.4a3 3 0 0 1 1.6 4.2" fill="none" stroke="#5a4236" strokeWidth="1.4" strokeLinecap="round" />
+      </>
     ),
     front: (
       <>
-        <path d="M34 52C35 38 46 31 60 31C74 31 85 38 86 52C80 45 71 42 60 43C49 42 40 45 34 52Z" fill="#2e201a" />
+        {/* Hairline: curls over the forehead */}
+        <path d="M41.2 52C41.4 40 49.4 32 60 32C70.6 32 78.6 40 78.8 52C76.4 47.4 73 44.6 68.6 43.6A3 3 0 0 0 63.4 42.4A3 3 0 0 0 57.4 42.6A3 3 0 0 0 51.8 43.4C47.4 44.4 43.8 47.2 41.2 52Z" fill="#2e201a" />
         {/* Safety glasses pushed up on the hair */}
-        <g>
-          <rect x="42" y="27" width="16" height="9" rx="4.5" fill="#8fdcff" stroke="#1d6fa8" strokeWidth="2" />
-          <rect x="62" y="27" width="16" height="9" rx="4.5" fill="#8fdcff" stroke="#1d6fa8" strokeWidth="2" />
-          <path d="M58 31H62" stroke="#1d6fa8" strokeWidth="2" />
-          <path d="M45 30L49 30" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" />
-        </g>
-        {/* Gold hoops */}
-        <circle cx="34" cy="72" r="3.2" fill="none" stroke="#ffc414" strokeWidth="2" />
-        <circle cx="86" cy="72" r="3.2" fill="none" stroke="#ffc414" strokeWidth="2" />
+        <path d="M40 38.4L80 38.4" stroke="#1d6fa8" strokeWidth="1.8" />
+        <rect x="45.6" y="34.6" width="12" height="7" rx="2" fill="#8fdcff" stroke="#1d6fa8" strokeWidth="1.5" />
+        <rect x="62.4" y="34.6" width="12" height="7" rx="2" fill="#8fdcff" stroke="#1d6fa8" strokeWidth="1.5" />
+        <path d="M48 36.8H51.6" stroke="#fff" strokeWidth="1.2" strokeLinecap="round" />
+        {/* Small gold hoops */}
+        <circle cx="41.2" cy="67.6" r="2" fill="none" stroke="#ffc414" strokeWidth="1.3" />
+        <circle cx="78.8" cy="67.6" r="2" fill="none" stroke="#ffc414" strokeWidth="1.3" />
       </>
     ),
     torso: (clip) => (
       <>
         <path d={TORSOS.jada} fill="#ffc929" />
         <g clipPath={`url(#${clip})`}>
-          {/* Blue dungarees over a light T-shirt */}
-          <path d="M40 112Q40 108 44 108H76Q80 108 80 112V140H40Z" fill="#1592db" />
+          {/* Blue dungarees over a yellow T-shirt */}
+          <path d="M44 111H76V140H44Z" fill="#1592db" />
           <rect x="20" y="124" width="80" height="20" fill="#1592db" />
-          <path d="M38 95L44 110M82 95L76 110" stroke="#1592db" strokeWidth="6" strokeLinecap="round" />
-          <circle cx="44" cy="111" r="2.6" fill="#ffc414" />
-          <circle cx="76" cy="111" r="2.6" fill="#ffc414" />
-          <rect x="52" y="113" width="16" height="9" rx="2" fill="#0f73ae" />
-          <path d="M53 97Q60 102 67 97" fill="none" stroke="#e0a800" strokeWidth="2.4" strokeLinecap="round" />
-          <ellipse cx="104" cy="122" rx="26" ry="34" fill="#000" opacity=".1" />
+          <path d="M42.4 95L46 111M77.6 95L74 111" stroke="#1592db" strokeWidth="4.4" />
+          <rect x="44.2" y="109" width="3.6" height="3.6" rx=".8" fill="#ffc414" />
+          <rect x="72.2" y="109" width="3.6" height="3.6" rx=".8" fill="#ffc414" />
+          <rect x="54" y="114" width="12" height="7" rx="1" fill="#0f73ae" />
+          <path d="M54 94.8L60 99L66 94.8" fill="none" stroke="#e0a800" strokeWidth="1.8" strokeLinejoin="round" />
+          {bodyShade}
         </g>
       </>
     ),
@@ -309,22 +349,22 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       l: { a: 150, e: 22, w: 34, hand: 'fist', m: true },
       r: { a: 32, e: -22, w: -18, hand: 'point', beat: true },
     },
-    // Right: one big fist pump, hip hand stays.
+    // Right: a calm thumb up, hip hand stays.
     happy: {
-      lean: -1.5, tilt: -5, turn: 0.6,
+      lean: 2, tilt: 5, turn: 1.4,
       l: { a: 150, e: 22, w: 34, hand: 'fist', m: true },
-      r: { a: -48, e: -96, w: -96, hand: 'fist', act: 'pump' },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
-    // Wrong: scratches the side of his head, sheepish.
+    // Wrong: the head tilts a little, the hands stay where they are.
     sad: {
-      lean: -2, tilt: -7, turn: -1,
-      l: { a: 150, e: 26, w: 38, hand: 'fist', m: true },
-      r: { a: -38, e: -118, w: -150, hand: 'open', act: 'scratch' },
+      lean: 2, tilt: 2, turn: 0.6,
+      l: { a: 150, e: 22, w: 34, hand: 'fist', m: true },
+      r: { a: 32, e: -22, w: -18, hand: 'point' },
     },
     pleased: {
       lean: 2, tilt: 5, turn: 1.4,
       l: { a: 150, e: 22, w: 34, hand: 'fist', m: true },
-      r: { a: 62, e: -58, w: 0, hand: 'thumb', act: 'thumb' },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
     wave: {
       lean: 1.5, tilt: 6, turn: 1.4,
@@ -337,9 +377,9 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       r: { a: 150, e: -110, w: -100, hand: 'fist' },
     },
     cheer: {
-      lean: 0, tilt: 0, turn: 0,
-      l: { a: -132, e: -98, w: -96, hand: 'fist', m: true, act: 'pump' },
-      r: { a: -48, e: -82, w: -84, hand: 'fist', act: 'pump' },
+      lean: 2, tilt: 5, turn: 1.4,
+      l: { a: 150, e: 22, w: 34, hand: 'fist', m: true },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
   },
   // Amina: shy, head tilted away, cradles her seedling pot with both hands.
@@ -349,17 +389,17 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       l: { a: 104, e: -12, w: -14, hand: 'grip', prop: 'pot', m: true },
       r: { a: 76, e: -168, w: -168, hand: 'grip', beat: true },
     },
-    // Right: a little wave of delight, pot tucked in the other hand.
+    // Right: a calm nod and a smile, the pot in both hands.
     happy: {
-      lean: 1, tilt: 8, turn: 0.8,
+      lean: -1, tilt: 6, turn: 1,
       l: { a: 104, e: -12, w: -14, hand: 'grip', prop: 'pot', m: true },
-      r: { a: -40, e: -96, w: -100, hand: 'open', act: 'wiggle' },
+      r: { a: 76, e: -168, w: -168, hand: 'grip' },
     },
-    // Wrong: hand to her mouth.
+    // Wrong: the head tilts a little further.
     sad: {
-      lean: -3, tilt: -12, turn: -1.6,
+      lean: -2, tilt: -13, turn: 0.6,
       l: { a: 104, e: -12, w: -14, hand: 'grip', prop: 'pot', m: true },
-      r: { a: 150, e: -108, w: -110, hand: 'open', m: true },
+      r: { a: 76, e: -168, w: -168, hand: 'grip' },
     },
     pleased: {
       lean: -1, tilt: 6, turn: 1,
@@ -372,9 +412,9 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       r: { a: 150, e: -108, w: -100, hand: 'fist', m: true },
     },
     cheer: {
-      lean: 0, tilt: 6, turn: 0,
-      l: { a: -130, e: -96, w: -100, hand: 'open', m: true, act: 'pump' },
-      r: { a: -50, e: -84, w: -80, hand: 'open', act: 'pump' },
+      lean: -1, tilt: 6, turn: 1,
+      l: { a: 104, e: -12, w: -14, hand: 'grip', prop: 'pot', m: true },
+      r: { a: 76, e: -168, w: -168, hand: 'grip' },
     },
   },
   // Henk: leans back, clipboard under one arm, his coffee mug in the other hand.
@@ -384,22 +424,22 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       l: { a: 112, e: -8, w: -8, hand: 'grip', prop: 'clipboard', m: true },
       r: { a: 72, e: -84, w: -84, hand: 'grip', prop: 'mug', beat: true },
     },
-    // Right: raises his mug to you with a wink.
+    // Right: lifts his mug a little to you and nods.
     happy: {
-      lean: 1, tilt: 4, turn: 1.4,
+      lean: -1, tilt: 3, turn: 1.4,
       l: { a: 112, e: -8, w: -8, hand: 'grip', prop: 'clipboard', m: true },
-      r: { a: -18, e: -84, w: -84, hand: 'grip', prop: 'mug', act: 'toast' },
+      r: { a: 58, e: -84, w: -84, hand: 'grip', prop: 'mug' },
     },
     pleased: {
       lean: -1, tilt: 3, turn: 1.4,
       l: { a: 112, e: -8, w: -8, hand: 'grip', prop: 'clipboard', m: true },
-      r: { a: 40, e: -84, w: -84, hand: 'grip', prop: 'mug', act: 'toast' },
+      r: { a: 58, e: -84, w: -84, hand: 'grip', prop: 'mug' },
     },
-    // Wrong: the mug sinks, the head shakes slowly.
+    // Wrong: the head tilts a little.
     sad: {
-      lean: -3.5, tilt: -6, turn: -1,
+      lean: -2.5, tilt: -7, turn: 0.4,
       l: { a: 112, e: -8, w: -8, hand: 'grip', prop: 'clipboard', m: true },
-      r: { a: 84, e: 6, w: 6, hand: 'grip', prop: 'mug' },
+      r: { a: 72, e: -84, w: -84, hand: 'grip', prop: 'mug' },
     },
     thinking: {
       lean: -2.5, tilt: -8, turn: -2,
@@ -407,9 +447,9 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       r: { a: 72, e: -84, w: -84, hand: 'grip', prop: 'mug' },
     },
     cheer: {
-      lean: 0, tilt: 3, turn: 0,
+      lean: -1, tilt: 3, turn: 1.4,
       l: { a: 112, e: -8, w: -8, hand: 'grip', prop: 'clipboard', m: true },
-      r: { a: -18, e: -84, w: -84, hand: 'grip', prop: 'mug', act: 'toast' },
+      r: { a: 58, e: -84, w: -84, hand: 'grip', prop: 'mug' },
     },
   },
   // Jada: hip out, hand on that hip, scanner propped up, side-eye and a smirk.
@@ -419,22 +459,22 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       l: { a: 100, e: -78, w: -78, hand: 'grip', prop: 'scanner', m: true, beat: true },
       r: { a: 28, e: 154, w: 146, hand: 'fist' },
     },
-    // Right: a finger-gun at you, with a wink.
+    // Right: a calm thumb up.
     happy: {
-      lean: 5, tilt: -4, turn: 2.4,
+      lean: 4, tilt: -5, turn: 2.4,
       l: { a: 100, e: -78, w: -78, hand: 'grip', prop: 'scanner', m: true },
-      r: { a: 18, e: -12, w: -10, hand: 'point', act: 'pew' },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
     pleased: {
       lean: 4, tilt: -5, turn: 2.4,
       l: { a: 100, e: -78, w: -78, hand: 'grip', prop: 'scanner', m: true },
-      r: { a: 18, e: -12, w: -10, hand: 'point', act: 'pew' },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
-    // Wrong: a shrug, palms up.
+    // Wrong: the head tilts a little, hand stays on the hip.
     sad: {
-      lean: 2, tilt: 7, turn: -1.6,
-      l: { a: 104, e: -148, w: -160, hand: 'open', act: 'shrug' },
-      r: { a: 76, e: -32, w: -20, hand: 'open', m: true, act: 'shrug' },
+      lean: 4, tilt: -4, turn: 0.6,
+      l: { a: 100, e: -78, w: -78, hand: 'grip', prop: 'scanner', m: true },
+      r: { a: 28, e: 154, w: 146, hand: 'fist' },
     },
     thinking: {
       lean: 4, tilt: -10, turn: -2,
@@ -442,9 +482,9 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       r: { a: 28, e: 154, w: 146, hand: 'fist' },
     },
     cheer: {
-      lean: 3, tilt: -4, turn: 0,
-      l: { a: -126, e: -98, w: -98, hand: 'grip', prop: 'scanner', m: true, act: 'pump' },
-      r: { a: 18, e: -12, w: -10, hand: 'point', act: 'pew' },
+      lean: 4, tilt: -5, turn: 2.4,
+      l: { a: 100, e: -78, w: -78, hand: 'grip', prop: 'scanner', m: true },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
   },
 };
@@ -457,7 +497,7 @@ function poseFor(who: CharacterId, mood: Mood): Pose {
 const rot = (deg: number, x: number, y: number): React.CSSProperties => ({ rotate: `${deg}deg`, transformOrigin: `${x}px ${y}px` });
 const at = (x: number, y: number): React.CSSProperties => ({ transformOrigin: `${x}px ${y}px` });
 
-/** A limb segment along +x from (x, y): a capsule that tapers from r0 to r1. */
+/** A limb segment along +x from (x, y): a slim segment that tapers from r0 to r1. */
 function limb(x: number, y: number, len: number, r0: number, r1: number, fill: string) {
   const x1 = x + len;
   return (
@@ -468,48 +508,50 @@ function limb(x: number, y: number, len: number, r0: number, r1: number, fill: s
   );
 }
 
-/** Hands, drawn with the wrist at (0, 0) and the hand pointing along +x, thumb towards +y. */
+/**
+ * Hands, drawn with the wrist at (0, 0) and the hand pointing along +x, thumb towards +y.
+ * Slim and squarish (small corner radii), about as wide as the wrist: no mittens or balls.
+ */
 export function Hand({ kind, skin, shade }: { kind: HandKind; skin: string; shade: string }) {
-  const thumb = <ellipse cx="6" cy="4.6" rx="3.6" ry="2.4" fill={skin} stroke={shade} strokeWidth=".9" transform="rotate(-18 6 4.6)" />;
+  const thumb = <rect x="1.6" y="1.6" width="5.2" height="2.6" rx="1.2" fill={skin} stroke={shade} strokeWidth=".6" transform="rotate(-14 1.6 1.6)" />;
   switch (kind) {
     case 'open':
       return (
         <g>
-          <path d="M0 -4.2C3 -6.6 12.5 -7.6 16.2 -5.2C18.2 -3.6 18.4 2 16.2 3.6C12.6 5.8 4.6 5.4 0 4.2Z" fill={skin} />
-          <path d="M11.4 -2.4H16.4M11.4 0.8H16.6" stroke={shade} strokeWidth="1.1" strokeLinecap="round" />
-          <ellipse cx="5.6" cy="6" rx="5" ry="2.5" fill={skin} transform="rotate(30 5.6 6)" />
+          <path d="M0 -3.2L4 -4.2H12.6Q13.8 -4.2 13.8 -3V1.8Q13.8 3 12.6 3H4L0 2.8Z" fill={skin} />
+          <path d="M8.4 -1.6H13.6M8.4 0.8H13.6" stroke={shade} strokeWidth=".7" />
+          <rect x="1.8" y="2.2" width="6" height="2.4" rx="1.1" fill={skin} transform="rotate(32 1.8 2.2)" />
         </g>
       );
     case 'point':
       return (
         <g>
-          <rect x="7" y="-5.4" width="13.6" height="4.6" rx="2.3" fill={skin} />
-          <circle cx="6.6" cy=".4" r="5.8" fill={skin} />
-          <path d="M9.8 1.4Q11.4 2.4 10.8 4.2" fill="none" stroke={shade} strokeWidth="1" strokeLinecap="round" />
+          <path d="M0 -3.4H6.6Q8 -3.4 8 -2V2.4Q8 3.4 6.6 3.4H0Z" fill={skin} />
+          <rect x="5.4" y="-3.4" width="9" height="2.4" rx="1.1" fill={skin} />
           {thumb}
         </g>
       );
     case 'thumb':
       return (
         <g>
-          <rect x="3.2" y="-15" width="4.8" height="12" rx="2.4" fill={skin} />
-          <rect x="1.6" y="-5.6" width="12" height="11.6" rx="5" fill={skin} />
-          <path d="M8.6 -1.4H13.4M8.6 2H13.2" stroke={shade} strokeWidth="1" strokeLinecap="round" />
+          <rect x="1.4" y="-10.4" width="2.8" height="8" rx="1.3" fill={skin} />
+          <path d="M0 -3.6H7Q8.6 -3.6 8.6 -2V2Q8.6 3.6 7 3.6H0Z" fill={skin} />
+          <path d="M5.4 -1.2H8.4M5.4 1.2H8.4" stroke={shade} strokeWidth=".7" />
         </g>
       );
     case 'grip':
       return (
         <g>
-          <rect x="1" y="-5.6" width="11.6" height="11.2" rx="5" fill={skin} />
-          <path d="M8.4 -2.6V3M11 -2V2.4" stroke={shade} strokeWidth="1" strokeLinecap="round" />
+          <path d="M0 -3.4H6.4Q8 -3.4 8 -1.8V1.8Q8 3.4 6.4 3.4H0Z" fill={skin} />
+          <path d="M5.6 -1.8V1.8" stroke={shade} strokeWidth=".7" />
           {thumb}
         </g>
       );
     default:
       return (
         <g>
-          <circle cx="6.4" cy="0" r="6" fill={skin} />
-          <path d="M9.6 -3Q11.8 0 9.6 3" fill="none" stroke={shade} strokeWidth="1" strokeLinecap="round" />
+          <path d="M0 -3.4H6.4Q8 -3.4 8 -1.8V1.8Q8 3.4 6.4 3.4H0Z" fill={skin} />
+          <path d="M5.6 -1.8V1.8" stroke={shade} strokeWidth=".7" />
           {thumb}
         </g>
       );
@@ -577,19 +619,25 @@ function Arm({ pose, look, side }: { pose: ArmPose; look: Look; side: 'l' | 'r' 
   return (
     <g className={`ch-arm ch-arm-${side} ${pose.act ? `ch-act-${pose.act}` : ''}`} style={at(sx, sy)}>
       <g className="ch-j" style={rot(pose.a, sx, sy)}>
-        {limb(sx, sy, U + 1, 6.6, 5.8, look.sleeve)}
+        {look.bareForearm ? (
+          <>
+            {limb(sx, sy, U + 1, 4.2, 3.6, look.skin)}
+            {limb(sx, sy, U * 0.5, 5, 4.6, look.sleeve)}
+          </>
+        ) : (
+          limb(sx, sy, U + 1, 5, 4.5, look.sleeve)
+        )}
         <g className={`ch-fore ${pose.beat ? 'ch-beat' : ''}`} style={at(ex, sy)}>
           <g className="ch-j" style={rot(pose.e - pose.a, ex, sy)}>
-            {look.bareForearm && limb(ex - 7, sy, 5, 6.6, 6.2, look.sleeve)}
-            {limb(ex, sy, F - 2, look.bareForearm ? 4.6 : 5.8, look.bareForearm ? 3.6 : 5.2, fore)}
-            {!look.bareForearm && limb(wx - 4.4, sy, 2.6, 5.6, 5.6, look.cuff)}
-            {limb(wx - 2.4, sy, 3, 3.4, 3.2, look.skin)}
+            {limb(ex, sy, F - 2, look.bareForearm ? 3.5 : 4.5, look.bareForearm ? 3 : 4.1, fore)}
+            {!look.bareForearm && limb(wx - 4, sy, 2.2, 4.4, 4.4, look.cuff)}
+            {limb(wx - 2.2, sy, 2.6, 2.8, 2.8, look.skin)}
             <g className="ch-j" style={rot(pose.w - pose.e, wx, sy)}>
               <g className="ch-hand" style={at(wx, sy)}>
                 <g transform={`translate(${wx} ${sy})`}>
                   {pose.prop && (
-                    <g className="ch-j" style={rot(-pose.w, 7, 0)}>
-                      <g transform="translate(7 0)">
+                    <g className="ch-j" style={rot(-pose.w, 5.5, 0)}>
+                      <g transform="translate(5.5 0) scale(.86)">
                         <PropArt prop={pose.prop} />
                       </g>
                     </g>
@@ -612,21 +660,21 @@ function exprFor(mood: Mood): Expr {
   switch (mood) {
     case 'thinking':
       return 'thinking';
+    // A right answer is a calm smile: motion and faces confirm, they do not perform.
     case 'pleased':
     case 'wave':
+    case 'happy':
+    case 'cheer':
       return 'pleased';
     case 'sad':
       return 'disappointed';
-    case 'happy':
-    case 'cheer':
-      return 'joy';
     default:
       return 'neutral';
   }
 }
 
 /** Mouth shapes while talking, one every ~105 ms: never the same twice in a row. */
-const TALK_SEQUENCE: TalkFrame[] = [1, 2, 3, 1, 2, 0, 3, 2, 1, 0, 2, 3];
+const TALK_SEQUENCE: TalkFrame[] = [1, 2, 0, 1, 3, 0, 2, 1, 0, 3, 1, 0];
 const TALK_STEP_MS = 105;
 
 function useTalkFrame(on: boolean): TalkFrame | null {
@@ -634,11 +682,70 @@ function useTalkFrame(on: boolean): TalkFrame | null {
   useEffect(() => {
     if (!on) return;
     setI(0);
-    if (prefersReducedMotion()) return; // a still, open mouth
+    if (prefersReducedMotion()) return; // a still, slightly open mouth
     const t = window.setInterval(() => setI((n) => (n + 1) % TALK_SEQUENCE.length), TALK_STEP_MS);
     return () => window.clearInterval(t);
   }, [on]);
   return on ? TALK_SEQUENCE[i] : null;
+}
+
+/** Closed, content eyes (two soft upward arcs), for `squint`. */
+const SQUINT = 'M49.8 61Q52.5 58.6 55.2 61M64.8 61Q67.5 58.6 70.2 61';
+
+/**
+ * The head of a cast member in the 120 x 140 box, neck base at (60, 96): neck, ears, the face
+ * with its one crisp shade on the right, the features and the headwear. Shared by the rigged
+ * Character and by CastHead (word pictures, celebrations), so there is only one head.
+ */
+function HeadArt({ who, expr, clip, eyes, mouth, turn = 0, blink, neck = true, bold = false }: {
+  who: CharacterId;
+  expr: Expr;
+  clip: string;
+  eyes?: React.ReactNode;
+  mouth?: React.ReactNode;
+  turn?: number;
+  blink?: number;
+  neck?: boolean;
+  bold?: boolean;
+}) {
+  const look = LOOKS[who];
+  const f = FACES[who];
+  const h = look.half;
+  const sw = bold ? 1.25 : 1;
+  return (
+    <>
+      {look.back}
+      {neck && !look.noNeck && (
+        <>
+          <path d="M53 74H67V96H53Z" fill={look.skin} />
+          <path d="M53 74H67V86L53 81Z" fill={look.shade} />
+        </>
+      )}
+      {look.ears && (
+        <>
+          <rect x={60 - h - 3} y="56" width="5.4" height="10.4" rx="2.4" fill={look.skin} />
+          <rect x={60 + h - 2.4} y="56" width="5.4" height="10.4" rx="2.4" fill={look.shade} />
+        </>
+      )}
+      {look.face(look.skin)}
+      <g clipPath={`url(#${clip})`}>
+        <path d={`M${r1(72 + turn * 2)} 20L104 20L104 100L${r1(70 + turn * 2)} 100Z`} fill={look.shade} opacity=".55" />
+      </g>
+      <g className="ch-j ch-turn" style={{ translate: `${turn}px 0` }}>
+        <g className="ch-look" style={bold ? { transform: `scale(${sw})`, transformOrigin: '60px 66px' } : undefined}>
+          {eyes ?? (
+            <g className="ch-eyes" style={{ '--blink': `${blink ?? look.blink}s` } as React.CSSProperties}>
+              {f.eyes(expr, look.skin)}
+            </g>
+          )}
+          <g className="ch-brows">{f.brows(expr, look.brow)}</g>
+          {f.nose(look.shade)}
+          <g className="ch-mouth">{mouth ?? f.mouth(expr)}</g>
+        </g>
+      </g>
+      {look.front}
+    </>
+  );
 }
 
 export function Character({ who, mood = 'idle', talking: talkingProp, size = 120, flip = false, crop, className }: {
@@ -656,9 +763,8 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
 }) {
   const look = LOOKS[who];
   const face = FACES[who];
-  // The cheer shows its open-mouthed joy first and holds it for 760 ms (past the landing of the
-  // jump); only then may the mouth talk, so the cheer is never swallowed by the spoken answer
-  // that starts at 700 ms (see LessonPlayer).
+  // The smile shows first and holds for 760 ms; only then may the mouth talk, so the reaction is
+  // never swallowed by the spoken answer that starts at 700 ms (see LessonPlayer).
   const reacting = useOneShot(mood === 'happy', 760);
   const talking = (!!talkingProp || mood === 'talking') && !reacting;
   const frame = useTalkFrame(talking);
@@ -667,13 +773,12 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
   const id = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   const faceClip = `chf-${id}`;
   const torsoClip = `cht-${id}`;
-  const viewBox = crop === 'head' ? '20 8 80 84' : '0 0 120 140';
+  const viewBox = crop === 'head' ? '22 14 76 76' : '6 14 108 126';
   const ratio = crop === 'head' ? 1 : 120 / 140;
-  const blush = face.blush?.(expr) ?? 0.35;
   const arms = [<Arm key="l" pose={pose.l} look={look} side="l" />, <Arm key="r" pose={pose.r} look={look} side="r" />];
   const figure = (
     <>
-      {crop !== 'head' && <ellipse className="ch-shadow" cx="60" cy="135" rx="33" ry="4.5" fill="#000" opacity=".18" />}
+      {crop !== 'head' && <ellipse className="ch-shadow" cx="60" cy="135" rx="29" ry="3.6" fill="#000" opacity=".16" />}
       <g className="ch-fig">
         <g className="ch-j" style={rot(pose.lean, 60, 134)}>
           <g className="ch-pulse">
@@ -685,37 +790,18 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
             )}
             <g className="ch-j" style={rot(pose.tilt, 60, 94)}>
               <g className="ch-head">
-                {look.back}
-                <rect x="52" y="78" width="16" height="18" rx="6" fill={look.shade} />
-                {look.ears && (
-                  <>
-                    <circle cx="33.5" cy="64" r="6.5" fill={look.skin} />
-                    <circle cx="86.5" cy="64" r="6.5" fill={look.skin} />
-                    <circle cx="33.5" cy="64" r="3" fill={look.shade} />
-                    <circle cx="86.5" cy="64" r="3" fill={look.shade} />
-                  </>
-                )}
-                {look.face(look.skin)}
-                <g clipPath={`url(#${faceClip})`}>
-                  <ellipse cx={100 + pose.turn * 2} cy="58" rx="27" ry="48" fill={look.shade} opacity=".5" />
-                  {look.faceExtra}
-                </g>
-                <g className="ch-j ch-turn" style={{ translate: `${pose.turn}px 0` }}>
-                  <g className="ch-look">
-                    <ellipse cx="42" cy="74" rx="4.8" ry="3.2" fill="#ff7b7b" opacity={blush} />
-                    <ellipse cx="78" cy="74" rx="4.8" ry="3.2" fill="#ff7b7b" opacity={blush} />
+                <HeadArt
+                  who={who}
+                  expr={expr}
+                  clip={faceClip}
+                  turn={pose.turn}
+                  eyes={
                     <g className="ch-eyes" style={{ '--blink': `${look.blink}s` } as React.CSSProperties}>
                       {face.eyes(talking && expr === 'thinking' ? 'neutral' : expr, look.skin)}
                     </g>
-                    <g className="ch-brows">{face.brows(expr, look.brow)}</g>
-                    {face.nose(look.shade)}
-                    <g className="ch-mouth">{frame !== null ? face.talk(frame) : face.mouth(expr)}</g>
-                  </g>
-                </g>
-                {look.front}
-                {mood === 'sad' && (
-                  <path className="ch-sweat" d="M92 40Q96 47 96 50A4 4 0 0 1 88 50Q88 47 92 40Z" fill="#8fdcff" />
-                )}
+                  }
+                  mouth={frame !== null ? face.talk(frame) : undefined}
+                />
               </g>
             </g>
             {crop !== 'head' && arms.filter((_, i) => !(i === 0 ? pose.l : pose.r).back)}
@@ -744,118 +830,41 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
 
 /**
  * Just the head of a cast member (hair, hat, face and features), in the 120 x 140 character
- * box with the neck base at (60, 92). The full-body action poses in Celebrate.tsx put it on
- * their own bodies, so the faces stay exactly those of the cast. `squint` squeezes the eyes
- * shut with joy (^ ^) instead of the expression's own eyes.
+ * box with the neck base at (60, 96). Word pictures and the celebration rigs put it on their own
+ * bodies, so the faces stay exactly those of the cast. `squint` closes the eyes in two soft
+ * arcs (content) instead of the expression's own eyes.
  */
-export function CastHead({ who, expr = 'joy', squint = false, blink, bold = false, gaze = [0, -1] }: {
+export function CastHead({ who, expr = 'joy', squint = false, blink, bold = false, gaze = [0, -1], neck = true, talk = false }: {
   who: CharacterId;
   expr?: Expr;
   squint?: boolean;
   /** Blink rhythm in seconds (defaults to the character's own). */
   blink?: number;
-  /** Mascot mode for the celebrations: oversized eyes with big pupils, thick raised brows,
-   *  and no fine detail (a plain dome hat without highlight bands). */
+  /** For very small sizes: the same calm face with the features a little larger and bolder. */
   bold?: boolean;
-  /** Where the big pupils look (-1..1 each way), bold mode only. */
+  /** Where the eyes look (-1..1 each way), bold mode only. */
   gaze?: [number, number];
+  /** Draw the neck (off when the body brings its own). */
+  neck?: boolean;
+  /** Mouth a little open, mid-word (for pictures about speaking). */
+  talk?: boolean;
 }) {
   const look = LOOKS[who];
-  const face = FACES[who];
   const clip = `chh-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
-  const blush = face.blush?.(expr) ?? 0.35;
+  const ink = '#2a2321';
+  const eyes = squint ? (
+    <path d={SQUINT} fill="none" stroke={ink} strokeWidth="1.5" strokeLinecap="round" />
+  ) : bold ? (
+    <g className="ch-eyes" style={{ '--blink': `${blink ?? look.blink}s` } as React.CSSProperties}>
+      <g transform={`translate(${r1(gaze[0] * 0.6)} ${r1(gaze[1] * 0.4)})`}>{FACES[who].eyes(expr, look.skin)}</g>
+    </g>
+  ) : undefined;
   return (
     <g className="cast-head">
       <defs>
         <clipPath id={clip}>{look.face('#000')}</clipPath>
       </defs>
-      {look.back}
-      <rect x="52" y="78" width="16" height="18" rx="6" fill={look.shade} />
-      {look.ears && (
-        <>
-          <circle cx="33.5" cy="64" r="6.5" fill={look.skin} />
-          <circle cx="86.5" cy="64" r="6.5" fill={look.skin} />
-          <circle cx="33.5" cy="64" r="3" fill={look.shade} />
-          <circle cx="86.5" cy="64" r="3" fill={look.shade} />
-        </>
-      )}
-      {look.face(look.skin)}
-      <g clipPath={`url(#${clip})`}>
-        <ellipse cx="100" cy="58" rx="27" ry="48" fill={look.shade} opacity=".5" />
-        {look.faceExtra}
-      </g>
-      <ellipse cx="42" cy="74" rx="5.4" ry="3.6" fill="#ff7b7b" opacity={squint ? 0.6 : blush} />
-      <ellipse cx="78" cy="74" rx="5.4" ry="3.6" fill="#ff7b7b" opacity={squint ? 0.6 : blush} />
-      {bold ? (
-        <BoldEyes blink={blink ?? look.blink} gaze={gaze} brow={look.brow} />
-      ) : squint ? (
-        <path
-          d="M43 66Q50 56 57 65M63 65Q70 56 77 66"
-          fill="none"
-          stroke="#2f2a28"
-          strokeWidth="3.8"
-          strokeLinecap="round"
-        />
-      ) : (
-        <g className="ch-eyes" style={{ '--blink': `${blink ?? look.blink}s` } as React.CSSProperties}>
-          {face.eyes(expr, look.skin)}
-        </g>
-      )}
-      {!bold && <g className="ch-brows">{face.brows(expr, look.brow)}</g>}
-      {bold ? <ellipse cx="60" cy="73" rx="3.6" ry="2.7" fill={look.shade} /> : face.nose(look.shade)}
-      <g className="ch-mouth">{bold ? <BoldMouth /> : face.mouth(expr)}</g>
-      {bold && BOLD_FRONT[who] ? BOLD_FRONT[who] : look.front}
-    </g>
-  );
-}
-
-/** Bold-mode headwear: the same items as the cast's, as single flat shapes. */
-const BOLD_FRONT: Partial<Record<CharacterId, React.ReactNode>> = {
-  bram: (
-    <g transform="translate(0 -4)">
-      <path d="M30 41C30 17 43 4 60 4C77 4 90 17 90 41Z" fill="#ffc414" />
-      <path d="M77 9C86 17 90 28 90 41H79C79 29 79 18 77 9Z" fill="#e0a800" opacity=".6" />
-      <rect x="21" y="34" width="78" height="10" rx="5" fill="#e0a800" />
-    </g>
-  ),
-};
-
-/** Oversized eyes: big whites, huge pupils with a catch-light, thick brows arched high. */
-function BoldEyes({ blink, gaze, brow }: { blink: number; gaze: [number, number]; brow: string }) {
-  const cy = 62;
-  const [gx, gy] = gaze;
-  const eye = (cx: number, tilt: number) => (
-    <g>
-      <ellipse cx={cx} cy={cy} rx="11" ry="12.5" fill="#fff" transform={`rotate(${tilt} ${cx} ${cy})`} />
-      <circle cx={cx + gx * 3} cy={cy + gy * 3.4} r="7.4" fill="#2a1f1c" />
-      <circle cx={cx + gx * 3 - 2.4} cy={cy + gy * 3.4 - 2.6} r="2.8" fill="#fff" />
-      <circle cx={cx + gx * 3 + 2.4} cy={cy + gy * 3.4 + 2.4} r="1.1" fill="#fff" />
-    </g>
-  );
-  return (
-    <>
-      <g className="ch-eyes" style={{ '--blink': `${blink}s` } as React.CSSProperties}>
-        {eye(47.5, -8)}
-        {eye(72.5, 8)}
-      </g>
-      <path
-        className="ch-brows"
-        d={`M37 ${cy - 14}Q46 ${cy - 24} 56 ${cy - 16}M64 ${cy - 17}Q74 ${cy - 26} 84 ${cy - 14}`}
-        fill="none"
-        stroke={brow}
-        strokeWidth="5"
-        strokeLinecap="round"
-      />
-    </>
-  );
-}
-
-/** A wide-open cheering mouth with a tongue: one shape, readable at any size. */
-function BoldMouth() {
-  return (
-    <g>
-      <path d="M48 77Q60 80 73 75Q72 91 60.5 91Q49 91 48 77Z" fill="#7a2230" />
-      <path d="M52.5 85.5Q60 80.5 68.5 85Q61 92 52.5 85.5Z" fill="#ff7b8a" />
+      <HeadArt who={who} expr={expr} clip={clip} eyes={eyes} blink={blink} neck={neck} bold={bold} mouth={talk ? FACES[who].talk(2) : undefined} />
     </g>
   );
 }

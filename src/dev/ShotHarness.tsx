@@ -23,6 +23,8 @@ import { WordPicture, pictures, unitPictures } from '../pictures';
 import * as kit from '../pictures/kit';
 import { hasPicture } from '../lib/wordPicture';
 import { CertEarned, CertificateScreen } from '../components/Certificate';
+import { AllTopics, Route } from '../components/Route';
+import { routeNextLesson } from '../lib/route';
 import { findUnit } from '../lib/certificate';
 import { clearSave, makeSave, writeSave } from '../lib/resume';
 
@@ -145,6 +147,11 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       </>
     );
   }
+  // The home, one block at a time: /?shot=route&state=new|mid|finished|shelf|pick|coach|done
+  // (see RouteShot); /?shot=all is "Alle onderwerpen". &access=preview, &sector=, &daily=due work too.
+  if (shot === 'route' || shot === 'all') {
+    return <RouteShot shot={shot} state={q.get('state') ?? 'mid'} lang={getHelpLanguage(lang as LangCode)} access={access} sector={sector} daily={q.get('daily') === 'due'} />;
+  }
   // The whole cast in every mood, big, for judging the drawings.
   if (shot === 'cast') {
     const moods: Mood[] = ['idle', 'happy', 'sad', 'pleased', 'thinking', 'cheer'];
@@ -181,7 +188,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     meaning: { kind: 'meaning', word: focus ?? hesje, options: [handschoenen, schoenen, focus ?? hesje] },
     intro: { kind: 'intro', word: focus ?? hesje },
     listen: { kind: 'listen', word: focus ?? schoenen, options: [helm, focus ?? schoenen, hesje] },
-    type: { kind: 'type', word: helm },
+    // With options: a non-Latin help language picks the written word (unless writing is on).
+    type: { kind: 'type', word: helm, options: [hesje, helm, handschoenen] },
     match: { kind: 'match', words: [helm, handschoenen, schoenen, hesje] },
     build: { kind: 'build', sentence: lesson.sentences[0], tiles: buildTiles(lesson.sentences[0], lesson, createRng(3)) },
   };
@@ -211,6 +219,56 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       onQuit={() => {}}
       onFinish={() => {}}
     />
+  );
+}
+
+const doneIds = (...ids: string[]) => Object.fromEntries(ids.map((id) => [id, { best: 1, times: 1 }]));
+const unitLessons = (...ids: string[]) => ids.flatMap((id) => findUnit(id)?.lessons.map((l) => l.id) ?? []);
+
+/**
+ * The home in a fixed state, with a working choice (tapping a block card makes it current):
+ *  new: nothing done; mid: the first lesson done; finished: the first unit done (the 3 choices);
+ *  shelf: four units done and the fifth started; pick: "Ander onderwerp kiezen" open mid-block;
+ *  coach: a coach link to "Pay" (marked); done: a finished unit opened on the shelf.
+ */
+function RouteShot({ shot, state, lang, access, sector, daily }: { shot: string; state: string; lang?: ReturnType<typeof getHelpLanguage>; access: Access; sector?: SectorChoice; daily: boolean }) {
+  const completed =
+    state === 'new' ? {}
+    : state === 'mid' || state === 'pick' || state === 'coach' ? doneIds('l.hello')
+    : state === 'finished' ? doneIds(...unitLessons('u.firstday'))
+    : doneIds(...unitLessons('u.firstday', 'u.help', 'u.tools', 'u.safety'), 'l.things');
+  const [progress, setProgress] = useState({
+    ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector: sector ?? 'none' as SectorChoice, completed,
+    currentUnit: state === 'coach' ? 'u.pay' : undefined,
+  });
+  useState(() => clearSave());
+  const today = dayKey(new Date());
+  const words = findLesson('l.hello')!.lesson.words;
+  const card = daily ? dailyCard(Object.fromEntries(words.map((w) => [w.id, { box: 1, due: today }])), today) : null;
+  const words2 = learnedWords(progress.completed).size;
+  if (shot === 'all') {
+    return (
+      <>
+        <AllTopics lang={lang} onBack={() => {}}>
+          <Path progress={progress} lang={lang} onStart={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}}
+            nowLesson={routeNextLesson(progress, access)?.id ?? null} onCertificate={() => {}} />
+        </AllTopics>
+        <BottomNav current="route" onTab={() => {}} lang={lang} />
+      </>
+    );
+  }
+  return (
+    <>
+      <TopBar streak={7} done words={words2} lang={lang} onLanguage={() => {}} />
+      <Route
+        progress={progress} lang={lang} access={access} daily={card} onDaily={() => {}}
+        onStart={() => {}} onAll={() => {}} onUpgrade={() => {}} onCertificate={() => {}}
+        onPick={(unit) => setProgress((p) => ({ ...p, currentUnit: unit }))}
+        focusUnit={state === 'coach' ? 'u.pay' : state === 'done' ? 'u.help' : null}
+        picking={state === 'pick'}
+      />
+      <BottomNav current="route" onTab={() => {}} lang={lang} />
+    </>
   );
 }
 

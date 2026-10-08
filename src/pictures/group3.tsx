@@ -183,7 +183,7 @@ export default {
         <path d="M24 122H53M67 122H96" stroke={PAL.paper} strokeWidth="7" />
         <path d="M24 125H53M67 125H96" stroke={PAL.paperShade} strokeWidth="2" />
       </g>
-      <HardHat x={56} y={34} s={0.49} />
+      <HardHat x={56} y={45} s={0.42} />
       <Tick x={96} y={84} r={14} />
     </g>
   ),
@@ -216,14 +216,13 @@ export default {
   'w.help': () => (
     <g>
       <Bust who="jada" x={60} y={124} scale={0.62} expr="thinking" />
-      {/* Open mouth: shouting */}
+      {/* Mouth a little open: calling out */}
       <g transform="translate(60 124) scale(0.62) translate(-60 -134)">
-        <ellipse cx="61" cy="79.4" rx="5.6" ry="6.4" fill={PAL.mouth} />
-        <ellipse cx="61" cy="82.6" rx="3.4" ry="2.4" fill={PAL.blush} />
+        <ellipse cx="60" cy="76.6" rx="3.4" ry="2.4" fill="#4a2420" />
       </g>
       {/* Arms raised high in a V */}
-      <path d="M38 104Q26 86 24 58M82 104Q94 86 96 58" fill="none" stroke="#ffc929" strokeWidth="12" strokeLinecap="round" />
-      <path d="M88 100Q95 86 96 62" fill="none" stroke="#e0a800" strokeWidth="5" strokeLinecap="round" opacity=".6" />
+      <path d="M38 104Q26 86 24 58M82 104Q94 86 96 58" fill="none" stroke="#ffc929" strokeWidth="9" strokeLinecap="round" />
+      <path d="M88 100Q95 86 96 62" fill="none" stroke="#e0a800" strokeWidth="3.5" strokeLinecap="round" opacity=".6" />
       <Hand pose="open" x={24} y={58} rotate={-16} scale={0.74} skin={SKIN.jada} />
       <Hand pose="open" x={96} y={58} rotate={16} scale={0.74} skin={SKIN.jada} mirror />
       {/* Waving / shouting lines */}

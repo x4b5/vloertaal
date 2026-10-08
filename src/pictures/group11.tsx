@@ -246,7 +246,7 @@ export default {
   // voice message (sound bars) and a red record button.
   'w.inspreken': () => (
     <g>
-      <Bust who="jada" x={34} y={120} scale={0.6} expr="joy" />
+      <Bust who="jada" x={34} y={120} scale={0.6} expr="pleased" talk />
       <Waves x={52} y={74} dir={1} n={2} r0={6} gap={7} />
       <g transform="rotate(8 88 66)">
         <Phone x={70} y={28} w={36} h={70}>
@@ -351,13 +351,13 @@ export default {
       <Bust who="henk" x={94} y={84} scale={0.42} expr="pleased" flip />
       <Hand pose="point" x={80} y={70} rotate={-62} scale={0.5} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
       {/* Learners from behind */}
-      <path d="M8 120Q8 98 32 98Q56 98 56 120Z" fill={PAL.green} />
-      <circle cx={32} cy={90} r={13} fill={PAL.purple} />
-      <path d="M38 80Q44 86 43 96" fill="none" stroke={PAL.purpleShade} strokeWidth="4" strokeLinecap="round" />
-      <path d="M64 120Q64 100 88 100Q112 100 112 120Z" fill={PAL.orange} />
-      <rect x={82} y={88} width={12} height={12} rx="4" fill={SKIN.bram[1]} />
-      <path d="M74 92C74 80 80 74 88 74C96 74 102 80 102 92Z" fill={PAL.yellow} />
-      <rect x={72} y={90} width={32} height={5} rx="2.5" fill={PAL.yellowShade} />
+      <path d="M10 120L11.5 108Q13 100.5 21 99.5H43Q51 100.5 52.5 108L54 120Z" fill={PAL.green} />
+      <path d="M21 90C21 81 25.6 76 32 76C38.4 76 43 81 43 90C43 96 41.6 100 39.5 102.5H24.5C22.4 100 21 96 21 90Z" fill={PAL.purple} />
+      <path d="M37.4 77.6C41 80 43 84.4 43 90C43 96 41.6 100 39.5 102.5H36C38 99 38.8 95 38.8 90C38.8 84.6 38.4 80.6 37.4 77.6Z" fill={PAL.purpleShade} />
+      <path d="M66 120L67.5 110Q69 102.5 77 101.5H99Q107 102.5 108.5 110L110 120Z" fill={PAL.orange} />
+      <rect x={82.5} y={88} width={11} height={14} fill={SKIN.bram[1]} />
+      <path d="M76 92C76 81 81 75 88 75C95 75 100 81 100 92Z" fill={PAL.yellow} />
+      <rect x={73} y={90} width={30} height={4.4} rx="1.2" fill={PAL.yellowShade} />
       {/* Open book between them */}
       <path d="M46 108L60 104L74 108V116L60 112L46 116Z" fill={PAL.paperShade} />
       <path d="M47 106L60 102V110L47 114Z" fill={PAL.white} />
@@ -504,7 +504,7 @@ export default {
   // "herhalen": to repeat — Bram says it again: a repeat loop in his speech bubble.
   'w.herhalen': () => (
     <g>
-      <Bust who="bram" x={36} y={120} scale={0.6} expr="pleased" />
+      <Bust who="bram" x={36} y={120} scale={0.6} expr="pleased" talk />
       <Bubble x={54} y={8} w={58} h={50} tail="left">
         <CurveArrow from={[68, 34]} to={[98, 32]} bend={14} color={PAL.sky} width={5.5} head={10} />
         <CurveArrow from={[98, 36]} to={[68, 38]} bend={14} color={PAL.sky} width={5.5} head={10} />

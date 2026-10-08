@@ -100,7 +100,8 @@ export function InstallCard({ lang }: { lang?: HelpLanguage }) {
 
 /* ---- Reminder ---- */
 
-export function ReminderCard({ lang }: { lang?: HelpLanguage }) {
+/** `secondary`: the add button is an outline one, for a screen whose main action is Continue. */
+export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; secondary?: boolean }) {
   // One clear action: "Na het werk" is chosen from the start, so "Zet in mijn agenda" works
   // right away. A chip changes the time; "Andere tijd" opens the phone's own time field.
   const [time, setTime] = useState<string>(REMINDER_TIMES[2].time);
@@ -159,7 +160,7 @@ export function ReminderCard({ lang }: { lang?: HelpLanguage }) {
           </span>
         </button>
       )}
-      <button type="button" className="btn btn-primary keep-btn remind-add" disabled={!chosen} onClick={add}>
+      <button type="button" className={`btn ${secondary ? 'btn-line' : 'btn-primary'} keep-btn remind-add`} disabled={!chosen} onClick={add}>
         <CalendarGlyph />
         <span className="remind-add-text">
           <Bi className="keep-btn-gloss" text={ui('remindAdd', lang)} />

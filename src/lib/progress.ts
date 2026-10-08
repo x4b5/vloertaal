@@ -43,6 +43,12 @@ export interface Progress {
   bestStreak?: number;
   /** Certificates: the local date (YYYY-MM-DD) each finished unit was earned, by unit id. Missing in older saves. */
   certs?: Record<string, string>;
+  /**
+   * The home's current block ("one block at a time", src/lib/route.ts): the unit the learner chose
+   * or was sent to by a coach link. It stays until it is finished. Missing = worked out from the
+   * lessons done (older saves, a brand-new learner).
+   */
+  currentUnit?: string;
 }
 
 export const emptyProgress: Progress = {
@@ -72,6 +78,7 @@ export function loadProgress(): Progress {
       }
       // Older saves have no sector (asked once after the password); drop anything unknown.
       if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
+      if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;
       return { ...emptyProgress, ...saved };
     }
   } catch {
@@ -307,6 +314,8 @@ export function replaceWithBackup(p: Progress, b: Partial<Progress>): Progress {
     rest: b.rest,
     bestStreak: b.bestStreak,
     certs: b.certs,
+    // The block follows the progress that was put back (worked out from its lessons).
+    currentUnit: undefined,
   };
 }
 

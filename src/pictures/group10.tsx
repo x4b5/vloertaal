@@ -313,7 +313,7 @@ export default {
   // "vertellen": to tell — Bram tells his story (a bubble full of lines), Jada listens.
   'w.vertellen': () => (
     <g>
-      <Bust who="bram" x={34} y={122} scale={0.62} expr="pleased" />
+      <Bust who="bram" x={34} y={122} scale={0.62} expr="pleased" talk />
       <Bust who="jada" x={96} y={122} scale={0.4} expr="neutral" flip />
       <Bubble x={50} y={10} w={60} h={42} tail="left">
         <Lines x={60} y0={22} widths={[40, 32, 22]} gap={9} color={PAL.skyShade} width={4} />

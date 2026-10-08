@@ -51,6 +51,11 @@ export const uiEn = {
   /** Kraft stamp "3 OP RIJ" in a lesson: right answers in a row. */
   inARow: '{n} in a row',
   cantListen: 'I can’t listen now',
+  cantWriteYet: 'I can’t write this yet',
+  learnWriting: 'I also want to learn to write',
+  learnWritingHint: 'On: type the words you hear with letter tiles. Off: pick the written word you hear.',
+  tagRepeat: 'Again',
+  readAloud: 'Read aloud',
   lessonComplete: 'Lesson complete!',
   backToPath: 'Back to lessons',
   phrasebook: 'Emergency phrases',
@@ -198,6 +203,15 @@ export const uiEn = {
   skippedN: '{n} skipped, not counted',
   stampAgain: 'Again',
   stampDone: 'Done',
+  /* Route, one block at a time: the choice of the next block, the shelf, all topics. */
+  chooseNext: 'Choose your next topic',
+  recommended: 'Recommended',
+  otherTopic: 'Choose another topic',
+  allTopics: 'All topics',
+  topicsDone: 'Finished topics',
+  lessonsUnit: 'lessons',
+  lessonsUnitOne: 'lesson',
+  allTopicsDone: 'You finished every topic. Well done!',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

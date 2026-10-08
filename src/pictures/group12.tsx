@@ -129,13 +129,17 @@ function BackView({ who, x, y, s }: { who: CharacterId; x: number; y: number; s:
   const [c, cs, h, hs] = look[who];
   return (
     <g transform={`translate(${x} ${y}) scale(${s}) translate(-60 -134)`}>
-      <path d="M22 134C22 106 38 94 60 94C82 94 98 106 98 134Z" fill={c} />
-      <path d="M84 102C93 108 98 119 98 134H82C84 121 85 111 84 102Z" fill={cs} opacity=".7" />
-      <Shade color={hs} opacity={0.9} at={[96, 60, 16, 44]}>
-        <path d="M30 60C30 36 44 24 60 24C76 24 90 36 90 60C90 80 82 96 60 104C38 96 30 80 30 60Z" fill={h} />
+      {/* Slim, straight shoulders and an oval head (the scarf falls in a straight drape) */}
+      <path d="M25 134L26.5 109Q28.5 96.5 42 93.5H78Q91.5 96.5 93.5 109L95 134Z" fill={c} />
+      <path d="M81 94L86 95Q92 98 93.5 109L95 134H84Z" fill={cs} opacity=".7" />
+      <Shade color={hs} opacity={0.9} at={[90, 60, 12, 50]}>
+        <path
+          d={who === 'amina'
+            ? 'M36.5 58C36.5 35 46.5 24.5 60 24.5C73.5 24.5 83.5 35 83.5 58C83.5 74 81.5 87 77 96L84 105H36L43 96C38.5 87 36.5 74 36.5 58Z'
+            : 'M40 52C40 37 49 30 60 30C71 30 80 37 80 52V64C80 75 72 84 60 86C48 84 40 75 40 64Z'}
+          fill={h}
+        />
       </Shade>
-      <path d="M44 92Q60 100 76 92" fill="none" stroke={hs} strokeWidth="3" strokeLinecap="round" />
-      <Shine d="M40 44Q44 34 54 30" width={4} opacity={0.35} />
     </g>
   );
 }
@@ -180,10 +184,10 @@ export default {
   // "spreken": to speak — Bram speaks out loud: big sound waves come from his open mouth
   // (no speech bubble, no phone).
   'w.spreken': () => {
-    const [mx, my] = onBust(42, 122, 0.74, 80, 80);
+    const [mx, my] = onBust(42, 122, 0.74, 77, 77);
     return (
       <g>
-        <Bust who="bram" x={42} y={122} scale={0.74} expr="joy" />
+        <Bust who="bram" x={42} y={122} scale={0.74} expr="pleased" talk />
         <Waves x={mx + 8} y={my - 2} dir={1} n={3} r0={12} gap={11} width={5.5} color={PAL.sky} />
       </g>
     );
@@ -205,7 +209,7 @@ export default {
 
   // "luisteren": to listen — Henk cups his hand behind his ear; sound waves come in.
   'w.luisteren': () => {
-    const [ex, ey] = onBust(68, 122, 0.74, 33.5, 64);
+    const [ex, ey] = onBust(68, 122, 0.74, 39.6, 61);
     return (
       <g>
         <Hand pose="hold" x={ex - 2} y={ey + 24} rotate={-8} scale={0.7} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
@@ -525,7 +529,7 @@ export default {
   // "uitleggen": to explain — Henk explains to Jada how it works: step, arrow, done.
   'w.uitleggen': () => (
     <g>
-      <Bust who="henk" x={30} y={124} scale={0.58} expr="pleased" />
+      <Bust who="henk" x={30} y={124} scale={0.58} expr="pleased" talk />
       <Bust who="jada" x={98} y={124} scale={0.44} expr="thinking" flip />
       <Hand pose="open" x={60} y={104} rotate={30} scale={0.5} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
       <Bubble x={40} y={6} w={72} h={40} tail="left">

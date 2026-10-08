@@ -1,8 +1,8 @@
-import { useEffect, useId, useMemo, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { ChatLine } from '../content/types';
 import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { checkTiles, checkTyped } from '../lib/answers';
+import { checkTiles, checkTyped, tokenize } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
 import { sentencePicture, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
@@ -17,6 +17,8 @@ import { hasPicture } from '../lib/wordPicture';
 import { SpeakButton } from './SpeakButton';
 import { letterTiles, NON_LATIN_HELP } from '../lib/letters';
 import { createRng } from '../lib/random';
+import { pickInsteadOfTyping } from '../lib/writing';
+import { HelpSay } from './HelpSay';
 
 export interface Answer {
   correct: boolean;
@@ -43,9 +45,9 @@ interface Props<K extends Exercise['kind']> {
 type Verdict = Props<'meaning'>['verdict'];
 
 /**
- * How a character in an exercise feels about the verdict. A right answer is always the cheer
- * (open-mouthed joy and a fist pump, clearly unlike the resting grin); how big it is grows with
- * the run (lib/lessonRun.ts, reactClass). `calm` characters (the colleague in a chat or a
+ * How a character in an exercise feels about the verdict. A right answer is a calm nod with a
+ * smile (and a thumb up for some); a wrong one a brief head tilt. The run does not make it
+ * bigger (the run label shows the run). `calm` characters (the colleague in a chat or a
  * situation) only ever nod. The pose holds until Continue, so a still frame reads as "right"
  * or "wrong".
  */
@@ -55,8 +57,8 @@ function moodFor(verdict: Verdict, rest: Mood = 'idle', calm = false): Mood {
   return rest;
 }
 
-/** Extra reaction classes: a run of 1–2 pumps the fist without the jump, 5+ adds a second
- *  pump; no head-scratch after the first miss. */
+/** Reaction tiers by run (lib/lessonRun.ts) and by misses in a row, as classes. The calm style
+ *  gives them (almost) the same look; they stay as hooks. */
 function reactClass(verdict: Verdict, run = 1, misses = 1): string {
   if (verdict === 'right' && cheerFor(run) === 'pump') return 'ch-small';
   if (verdict === 'right' && cheerFor(run) === 'big') return 'ch-big';
@@ -330,15 +332,26 @@ export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misse
         <SpeakButton text={ex.word.nl} size="lg" label="Play" />
         <SpeakButton text={ex.word.nl} slow label="Play slowly" />
       </div>
-      {/* Hearing a candidate is the task itself: a tap plays it. */}
+      {/* As in the other "What do you hear?": each option has its own speaker that only plays it;
+          a tap on the option itself picks it. */}
       <ChoiceGrid
+        className="choices-rows choices-words hear-pick-choices"
         options={ex.options}
         correctId={ex.word.id}
         locked={locked}
         lang={lang}
         onAnswer={onAnswer}
-        onPick={(w) => speak(w.nl)}
-        render={(w) => <><span lang="nl" className="choice-nl">{breakable(w.nl)}</span><SoundMark /></>}
+        side={(w) => (
+          <button type="button" className="choice-say" aria-label={`Play: ${w.nl}`} onClick={() => speak(w.nl)}>
+            <SpeakerIcon size={24} />
+          </button>
+        )}
+        render={(w) => (
+          <span className="choice-text">
+            <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
+            {locked && <Bi className="choice-gloss" text={gloss(w.id, w.en, lang)} />}
+          </span>
+        )}
       />
     </div>
   );
@@ -444,6 +457,37 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   const who = castFor(ex.sentence.id);
   const pic = useMemo(() => sentencePicture(ex.sentence), [ex.sentence]);
 
+  // The answer area keeps room for two rows when the right sentence will not fit on one, so the
+  // tile bank under it does not jump down when the sentence wraps.
+  const lineRef = useRef<HTMLDivElement>(null);
+  const bankRef = useRef<HTMLDivElement>(null);
+  const [twoRows, setTwoRows] = useState(false);
+  useLayoutEffect(() => {
+    const line = lineRef.current;
+    const bank = bankRef.current;
+    if (!line || !bank) return;
+    const fit = () => {
+      const style = getComputedStyle(line);
+      const room = line.clientWidth - parseFloat(style.paddingInlineStart) - parseFloat(style.paddingInlineEnd);
+      const gap = parseFloat(style.columnGap) || 8;
+      const left = [...tokenize(ex.sentence.nl).map((w) => w.toLowerCase())];
+      let need = 0;
+      bank.querySelectorAll<HTMLElement>('.tile-with-say').forEach((b) => {
+        const k = left.indexOf((b.textContent ?? '').trim().toLowerCase());
+        if (k < 0) return;
+        left.splice(k, 1);
+        // A placed tile has no speaker: the bank tile's width without the speaker's room.
+        const pad = parseFloat(getComputedStyle(b).paddingInlineEnd) - parseFloat(getComputedStyle(b).paddingInlineStart);
+        need += b.offsetWidth - pad + gap;
+      });
+      setTwoRows(need - gap > room);
+    };
+    fit();
+    const ro = new ResizeObserver(fit);
+    ro.observe(line);
+    return () => ro.disconnect();
+  }, [ex]);
+
   const update = (next: number[]) => {
     setChosen(next);
     const given = next.map((i) => ex.tiles[i]);
@@ -463,9 +507,10 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
         </div>
       </div>
-      {/* After Check: a check at the start of a right sentence; a wrong one gets only the
-          NOG EENS stamp (the right sentence is shown as tiles in the label below). */}
-      <div className={`answer-line ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite">
+      {/* After Check: a check at the end of a right sentence; a wrong one gets only the NOG EENS
+          stamp (the right sentence is shown as tiles in the label below). Both sit in a column
+          kept free from the start, so no word moves on Check. */}
+      <div className={`answer-line ${twoRows ? 'answer-two' : ''} ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite" ref={lineRef}>
         {verdict === 'wrong' && <WrongStamp lang={lang} />}
         {verdict === 'right' && (
           <span className="answer-mark mark-right">
@@ -474,6 +519,18 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           </span>
         )}
         {verdict === 'wrong' && <span className="sr-only">{ui('yourAnswer').en}: {ui('incorrect').en}</span>}
+        {/* The placed words keep a voice: this plays the sentence so far (a tap on a placed word
+            still takes it back). It sits in the row's reserved end column, like the check later. */}
+        {!verdict && chosen.length > 0 && (
+          <button
+            type="button"
+            className="answer-say"
+            aria-label={`Play: ${chosen.map((i) => ex.tiles[i]).join(' ')}`}
+            onClick={() => speak(chosen.map((i) => ex.tiles[i]).join(' '), false, 'nl', voiceFor(who))}
+          >
+            <SpeakerIcon size={20} />
+          </button>
+        )}
         {chosen.map((i) => (
           <button
             key={i}
@@ -489,7 +546,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       </div>
       {/* Each tile: the word (a tap puts it in the sentence) and, on its own, a small speaker that
           only plays it, so hearing a tile never places it. */}
-      <div className="tile-bank">
+      <div className="tile-bank" ref={bankRef}>
         {ex.tiles.map((t, i) => {
           const used = chosen.includes(i);
           return (
@@ -533,7 +590,55 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
  * extra ones); the default for help languages in another script. The keyboard stays one tap
  * away, and the grading is the same either way.
  */
-export function TypeExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'type'>) {
+export function TypeExercise(props: Props<'type'>) {
+  // Decided once per exercise, so a change in Settings never swaps it halfway.
+  const [pick] = useState(() => pickInsteadOfTyping(props.lang) && (props.ex.options?.length ?? 0) > 1);
+  return pick ? <HearPickWritten {...props} /> : <TypeWriting {...props} />;
+}
+
+/**
+ * "Type what you hear" for a learner who reads only a non-Latin script: hear the word and pick
+ * it from three written Dutch words, each with its own speaker (hearing never picks). After
+ * Check the word's picture shows on its card, and every card says what it means.
+ */
+function HearPickWritten({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'type'>) {
+  useEffect(() => { autoSpeak(ex.word.nl); }, [ex.word]);
+  return (
+    <div className="exercise hear-pick">
+      <PromptWithBram text={ui('whatDoYouHear', lang)} word={ex.word.nl} verdict={verdict} run={run} misses={misses} />
+      <div className="listen-buttons">
+        <SpeakButton text={ex.word.nl} size="lg" label="Play" />
+        <SpeakButton text={ex.word.nl} slow label="Play slowly" />
+      </div>
+      <ChoiceGrid
+        className="choices-rows choices-words hear-pick-choices"
+        options={ex.options ?? [ex.word]}
+        correctId={ex.word.id}
+        locked={locked}
+        lang={lang}
+        onAnswer={onAnswer}
+        side={(w) => (
+          <button type="button" className="choice-say" aria-label={`Play: ${w.nl}`} onClick={() => speak(w.nl)}>
+            <SpeakerIcon size={24} />
+          </button>
+        )}
+        render={(w) => (
+          <>
+            {/* After Check the heard word shows its picture, on its own card (always in view). */}
+            {locked && w.id === ex.word.id && hasPicture(w) && <WordPicture className="choice-pic hear-pick-pic" id={w.id} emoji={w.emoji} size={56} />}
+            <span className="choice-text">
+              <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
+              {locked && <Bi className="choice-gloss" text={gloss(w.id, w.en, lang)} />}
+            </span>
+          </>
+        )}
+      />
+    </div>
+  );
+}
+
+/** Real dictation: type the word with letter tiles or the keyboard. */
+function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'type'>) {
   const [value, setValue] = useState('');
   const [mode, setMode] = useState<'tiles' | 'keys'>(() => (lang && NON_LATIN_HELP.has(lang.code) ? 'tiles' : 'keys'));
   const tiles = useMemo(() => letterTiles(ex.word.nl, createRng(ex.word.id.length * 7919 + ex.word.nl.length)), [ex.word]);
@@ -751,10 +856,19 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
   );
 }
 
+/** A text's sentences: one ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨) and a space. */
+export const sentences = (text: string) => text.trim().split(/(?<=[.!?؟።፧፨…])\s+/u);
+
+/** The help text as lines, one per sentence; a folded text's closing "…" stays on the last line. */
+function helpLines(text: string): string[] {
+  const lines = sentences(text);
+  if (lines.length > 1 && lines[lines.length - 1] === '…') lines.splice(-2, 2, `${lines[lines.length - 2]} …`);
+  return lines;
+}
+
 /** The first `n` sentences of a text, and whether there is more after them. */
 export function firstSentences(text: string, n: number): { head: string; more: boolean } {
-  // A sentence ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨) and a space.
-  const parts = text.trim().split(/(?<=[.!?؟።፧፨…])\s+/u);
+  const parts = sentences(text);
   if (parts.length <= n) return { head: text.trim(), more: false };
   return { head: parts.slice(0, n).join(' '), more: true };
 }
@@ -773,7 +887,23 @@ function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
   const id = useId();
   return (
     <div className="tip-body">
-      <p id={id}><Bi text={shown} /></p>
+      <div className="help-say-row">
+        <p id={id}>
+          {shown.help && shown.lang ? (
+            // The help language one sentence per line (short lines read more easily than a
+            // block), English small under it.
+            <span className="bi bi-swap tip-lines" dir={shown.lang.dir === 'rtl' ? 'rtl' : undefined}>
+              <span className="bi-en">
+                {helpLines(shown.help).map((line, i) => <HelpText key={i} className="tip-line" text={line} lang={shown.lang!} />)}
+              </span>
+              <span className="bi-help" lang="en" dir={shown.lang.dir === 'rtl' ? 'ltr' : undefined}>{shown.en}</span>
+            </span>
+          ) : (
+            <Bi text={shown} />
+          )}
+        </p>
+        <HelpSay text={text.help} lang={lang} />
+      </div>
       {long && (
         <button type="button" className="tip-more" aria-expanded={open} aria-controls={id} onClick={() => setOpen((o) => !o)}>
           <span className="tip-more-nl" lang="nl">{open ? 'minder' : 'meer'}</span>
@@ -806,7 +936,11 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
               <span lang="nl" className="situation-nl">{said}</span>
             </span>
           )}
-          <Bi text={gloss(tip.situation.id, tip.situation.en, lang)} />
+          {/* Much help-language text: the device reads it aloud when it has a voice for it. */}
+          <span className="help-say-row">
+            <Bi text={gloss(tip.situation.id, tip.situation.en, lang)} />
+            <HelpSay text={gloss(tip.situation.id, tip.situation.en, lang).help} lang={lang} />
+          </span>
         </div>
       </div>
       <ChoiceGrid

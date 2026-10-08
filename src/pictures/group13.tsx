@@ -499,7 +499,7 @@ export default {
   // "het telefoontje": the phone call — Bram on the phone, phone at his ear, talking
   'w.telefoontje': () => (
     <g>
-      <Bust who="bram" x={44} y={122} scale={0.74} expr="pleased" />
+      <Bust who="bram" x={44} y={122} scale={0.74} expr="pleased" talk />
       {/* Phone held to the ear */}
       <g transform="rotate(14 66 66)">
         <rect x="58" y="46" width="15" height="32" rx="4" fill={PAL.slateDark} />

@@ -5,6 +5,7 @@ import { cultureIds, cultureTips } from '../src/content/culture';
 import { workIds } from '../src/content/work';
 import { helpLanguages } from '../src/i18n';
 import { uiEn } from '../src/i18n/types';
+import { mixLessonFor } from '../src/content/review';
 
 const contentIds = [
   ...units.map((u) => u.id),
@@ -40,6 +41,7 @@ describe('content and translations', () => {
   });
 
   it('every unit ends with a mixed review of items taught before, with a translated title', () => {
+    const allDone = Object.fromEntries(teachingLessons.map((l) => [l.id, {}]));
     const taught = new Set(teachingLessons.flatMap((l) => [...l.words, ...l.sentences, ...(l.dialogues ?? []).map((d) => d.reply)].map((x) => x.id)));
     for (const u of units) {
       const mix = u.lessons[u.lessons.length - 1];
@@ -48,9 +50,10 @@ describe('content and translations', () => {
       expect(mix.sentences.length, u.id).toBeGreaterThanOrEqual(2);
       expect(mix.dialogues?.length, u.id).toBeGreaterThanOrEqual(1);
       for (const x of [...mix.words, ...mix.sentences, ...(mix.dialogues ?? []).map((d) => d.reply)]) expect(taught.has(x.id), `${mix.id}: ${x.id}`).toBe(true);
-      // Some of it comes from other units: repetition across topics.
+      // Once the related units are played, some of it comes from them: repetition across topics
+      // (src/content/review.ts; before that it only uses this unit's own items).
       const own = new Set(u.lessons.slice(0, -1).flatMap((l) => l.words.map((w) => w.id)));
-      expect(mix.words.some((w) => !own.has(w.id)), u.id).toBe(true);
+      expect(mixLessonFor(u, units, allDone).words.some((w) => !own.has(w.id)), u.id).toBe(true);
       for (const lang of helpLanguages) expect(lang.gloss[mix.id]?.trim(), `${lang.code} ${mix.id}`).toBeTruthy();
     }
   });

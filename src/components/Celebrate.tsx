@@ -3,20 +3,17 @@ import { Boot, Capsule, MascotHead, Mitt, r1, type HeadId, type MitKind, type V 
 import { FlameArt } from "./StreakArt";
 
 /**
- * Celebration scenes for the end of a lesson. The cast's own heads (CastHead from
- * Characters.tsx) sit on full-body action rigs here, so the colleagues look exactly like the
- * ones the learner just practised with, but get their whole body into the moment. Each scene
- * is built around one bold, asymmetric line of action that reads as a solid silhouette:
+ * Celebration scenes for the end of a lesson and the day streak. The cast's own heads sit on
+ * full-body rigs here, so the colleagues look exactly like the ones the learner just practised
+ * with. The tone is calm and professional (a work tool, not a game):
  *
- *  - LessonCelebration (lesson complete): Bram leaps along a strong diagonal, back leg kicked
- *    out, and punches up into a high five with Jada, who springs off a pallet to meet him.
- *  - StreakHero (day-streak milestone): Bram lands on the podium beside the streak flame and
- *    cheers, one hand flung out to present it, the other fist punched high.
+ *  - LessonCelebration (lesson complete): Bram and Jada stand on the shop floor; Bram gives a
+ *    thumb up.
+ *  - StreakHero (day-streak milestone): Bram stands on the podium beside the streak flame, thumb up.
  *
- * Choreography (styles.css, "Celebrations"): anticipation (crouch), the big pose (stretch),
- * overshoot and settle, once on entry; then a gentle idle loop (bob, blink, wiggle, drifting
- * confetti). The settled pose is the base style, so with prefers-reduced-motion the still
- * scene is complete.
+ * Choreography (styles.css, "Celebrations"): the scene fades up once, the thumb comes up once,
+ * then only a blink. No confetti, bursts, leaps or loops. The settled pose is the base style, so
+ * with prefers-reduced-motion the still scene is complete.
  */
 
 /** Four-pointed twinkle. */
@@ -29,86 +26,6 @@ export const twinkle = (x: number, y: number, r: number) => {
     `C${x - k} ${y - k} ${x - k} ${y - k} ${x} ${y - r}z`
   );
 };
-
-/** Firework burst: eight rays around a centre, alternating long and short. */
-export function Burst({ x, y, r, color, className, style }: {
-  x: number; y: number; r: number; color: string; className?: string; style?: CSSProperties;
-}) {
-  const rays = Array.from({ length: 8 }, (_, i) => {
-    const a = (i * Math.PI) / 4;
-    const long = i % 2 === 0;
-    const r0 = r * 0.42;
-    const r1 = long ? r : r * 0.7;
-    return (
-      <path
-        key={i}
-        d={`M${(x + Math.cos(a) * r0).toFixed(1)} ${(y + Math.sin(a) * r0).toFixed(1)}L${(x + Math.cos(a) * r1).toFixed(1)} ${(y + Math.sin(a) * r1).toFixed(1)}`}
-        stroke={color}
-        strokeWidth={long ? 4 : 3.4}
-        strokeLinecap="round"
-      />
-    );
-  });
-  return <g className={`cel-burst ${className ?? ''}`} style={style}>{rays}</g>;
-}
-
-type Piece = [x: number, y: number, kind: 'rect' | 'dot' | 'ring' | 'star' | 'wave', color: string, rot: number, size: number];
-
-const GOLD = '#ffc414';
-const ORANGE = '#ff7a00';
-/* Theme-aware house tokens (SVG presentation attributes accept var()). */
-const KRAFT = 'var(--kraft)';
-const GREEN = 'var(--green)';
-const BRICK = 'var(--red)';
-const KRAFT_DARK = 'var(--kraft-dark)';
-
-/** One confetti piece. It flies out from (ox, oy) to its spot, then drifts there. */
-function Confetti({ pieces, ox, oy, delay = 0 }: { pieces: Piece[]; ox: number; oy: number; delay?: number }) {
-  return (
-    <g className="cf-group">
-      {pieces.map(([x, y, kind, color, rot, s], i) => {
-        const style = {
-          '--fx': `${ox - x}px`,
-          '--fy': `${oy - y}px`,
-          '--d': `${delay + (i % 6) * 0.04}s`,
-          '--drift': `${i % 2 ? 3 : -3}px`,
-          '--spin': `${i % 3 === 0 ? 14 : -10}deg`,
-          rotate: `${rot}deg`,
-        } as CSSProperties;
-        let art;
-        switch (kind) {
-          case 'rect':
-            art = <rect x={x - s / 2} y={y - s * 0.3} width={s} height={s * 0.6} rx={s * 0.15} fill={color} />;
-            break;
-          case 'dot':
-            art = <circle cx={x} cy={y} r={s / 2} fill={color} />;
-            break;
-          case 'ring':
-            art = <circle cx={x} cy={y} r={s / 2} fill="none" stroke={color} strokeWidth={2.4} />;
-            break;
-          case 'star':
-            art = <path d={twinkle(x, y, s)} fill={color} />;
-            break;
-          default:
-            art = (
-              <path
-                d={`M${x - s} ${y}q${s / 2} ${-s * 0.6} ${s} 0t${s} 0`}
-                fill="none"
-                stroke={color}
-                strokeWidth={2.6}
-                strokeLinecap="round"
-              />
-            );
-        }
-        return (
-          <g key={i} className={`cf cf-${kind}`} style={style}>
-            {art}
-          </g>
-        );
-      })}
-    </g>
-  );
-}
 
 
 /* ------------------------------------------------------------------------------------------
@@ -299,124 +216,61 @@ function Figure({ who, pose, blink }: { who: HeadId; pose: ActionPose; blink?: n
   );
 }
 
-const LESSON_CONFETTI: Piece[] = [
-  [60, 40, 'star', GOLD, 0, 9],
-  [262, 30, 'ring', GOLD, 0, 9],
-  [296, 74, 'star', ORANGE, 0, 7],
-  [30, 104, 'dot', BRICK, 0, 6],
-  [300, 128, 'rect', KRAFT, 30, 10],
-  [26, 54, 'rect', KRAFT_DARK, -24, 10],
-  [196, 14, 'dot', GREEN, 0, 5],
-  [232, 54, 'wave', BRICK, -12, 6],
-  [100, 20, 'rect', GOLD, 52, 8],
-  [304, 190, 'dot', GOLD, 0, 5],
-  [22, 160, 'star', GOLD, 0, 7],
-  [276, 160, 'wave', GREEN, 20, 5],
-  [40, 196, 'ring', ORANGE, 0, 7],
-  [168, 6, 'dot', KRAFT, 0, 4.5],
-];
-
-/** Bram's leap: one long diagonal from his kicked-back boot (bottom left), through his body and up
- *  his straight arm into the high five above the two of them. */
-const BRAM_LEAP: ActionPose = {
-  pelvis: [112, 160],
-  tilt: 6,
-  head: -14,
-  gaze: [1, -1],
-  shout: true,
-  armL: { a: 168, e: 140, hand: 'fist', flip: true },
-  armR: { a: -48, e: -56, hand: 'open', flip: true },
-  legL: { t: 132, s: 196 },
-  legR: { t: 72, s: 104 },
+/** Bram stands relaxed, one hand down, the other a thumb up at chest height. */
+const BRAM_STAND: ActionPose = {
+  pelvis: [100, 203],
+  tilt: 0,
+  head: 3,
+  gaze: [0.4, 0],
+  armL: { a: 100, e: 92, hand: 'fist', flip: true },
+  armR: { a: 72, e: -28, hand: 'thumb' },
+  legL: { t: 96, s: 92 },
+  legR: { t: 85, s: 88 },
   facing: [-1, 1],
-  behind: ['armL', 'legL'],
+  behind: [],
 };
 
-/** Jada springs up off the crate to meet him, her free fist pumped, one foot flicked up behind. */
-const JADA_SPRING: ActionPose = {
-  pelvis: [208, 162],
-  tilt: -12,
-  head: 12,
-  gaze: [-1, -1],
-  shout: true,
-  armL: { a: -128, e: -122, hand: 'open' },
-  armR: { a: -10, e: -96, hand: 'fist' },
-  legL: { t: 96, s: 90 },
-  legR: { t: 58, s: -20 },
-  facing: [-1, -1],
-  behind: ['armR', 'legR'],
+/** Jada stands beside him, a hand on her hip. */
+const JADA_STAND: ActionPose = {
+  pelvis: [178, 209],
+  tilt: 0,
+  head: -4,
+  gaze: [-0.6, 0],
+  armL: { a: 96, e: 88, hand: 'fist' },
+  armR: { a: 42, e: 136, hand: 'fist' },
+  legL: { t: 95, s: 91 },
+  legR: { t: 84, s: 88 },
+  facing: [-1, 1],
+  behind: [],
 };
 
-/** Lesson complete: Bram leaps into a high five with Jada; fireworks and confetti around them. */
+/** Lesson complete: Bram and Jada stand on the floor; Bram gives a thumb up. */
 export function LessonCelebration({ className }: { className?: string }) {
   return (
     <div className={`cel-scene ${className ?? ''}`} aria-hidden>
       <svg className="cel-svg" viewBox="0 0 320 260" focusable="false">
-        <Burst x={40} y={80} r={28} color={GREEN} className="cel-b1" />
-        <Burst x={284} y={56} r={24} color={KRAFT} className="cel-b2" />
-        <Burst x={296} y={214} r={14} color={GOLD} className="cel-b3" />
-        <Confetti pieces={LESSON_CONFETTI} ox={160} oy={60} delay={0.5} />
-        {/* The shop floor, shadows, and the crate Jada springs off */}
         <rect className="cel-floor" x="34" y="246" width="252" height="7" rx="3.5" fill="var(--line)" />
-        <ellipse className="lv-shadow" cx="110" cy="247" rx="28" ry="4" fill="#000" opacity=".2" />
-        <ellipse className="lv-shadow lv-shadow-jada" cx="210" cy="211" rx="18" ry="2.6" fill="#000" opacity=".22" />
-        <g className="lv-pallet">
-          <rect x="176" y="210" width="62" height="36" rx="6" fill="#c98a4b" />
-          <rect x="176" y="210" width="62" height="9" rx="4.5" fill="#e0a86b" />
-          <path d="M224 219H238V240Q238 246 232 246H224Z" fill="#a86d3a" opacity=".5" />
-        </g>
-        {/* The clap where their hands meet, behind the hands */}
-        <g className="lv-clap">
-          <Burst x={160} y={74} r={32} color={GOLD} />
-        </g>
+        <ellipse className="lv-shadow" cx="100" cy="247" rx="28" ry="4" fill="#000" opacity=".16" />
+        <ellipse className="lv-shadow" cx="178" cy="247" rx="22" ry="3.4" fill="#000" opacity=".16" />
         <g className="lv-jada">
-          <g className="lv-idle lv-idle-jada">
-            <Figure who="jada" pose={JADA_SPRING} blink={3.7} />
-          </g>
+          <Figure who="jada" pose={JADA_STAND} blink={3.7} />
         </g>
         <g className="lv-bram">
-          <g className="lv-idle">
-            <Figure who="bram" pose={BRAM_LEAP} blink={3.2} />
-          </g>
+          <Figure who="bram" pose={BRAM_STAND} blink={3.2} />
         </g>
       </svg>
     </div>
   );
 }
 
-const STREAK_CONFETTI: Piece[] = [
-  [212, 40, 'star', GOLD, 0, 10],
-  [26, 50, 'star', ORANGE, 0, 7],
-  [222, 120, 'star', GOLD, 0, 6],
-  [20, 128, 'ring', GOLD, 0, 7],
-  [64, 18, 'dot', ORANGE, 0, 5],
-  [180, 10, 'rect', GOLD, 34, 9],
-  [14, 92, 'rect', ORANGE, -30, 8],
-  [230, 82, 'dot', ORANGE, 0, 4.5],
-];
+/** On the podium: the same calm stance, thumb up, turned a little towards the flame. */
+const BRAM_PODIUM: ActionPose = { ...BRAM_STAND, pelvis: [158, 142], head: -3, gaze: [-0.4, 0] };
 
-/** Bram stands on the podium beside the flame and cheers: weight on his back foot, leaning
- *  towards the flame, one open hand flung out to present it ("ta-da!"), the other fist punched high. */
-const BRAM_CHEER: ActionPose = {
-  pelvis: [158, 146],
-  tilt: 12,
-  head: -12,
-  gaze: [0.3, -1],
-  shout: true,
-  armL: { a: 112, e: -70, hand: 'fist', flip: true },
-  armR: { a: -50, e: -74, hand: 'fist' },
-  legL: { t: 102, s: 86 },
-  legR: { t: 8, s: 98 },
-  facing: [-1, 1],
-  behind: [],
-};
-
-/** Day-streak milestone: Bram lands on the podium and cheers next to the streak flame. */
+/** Day-streak milestone: Bram stands on the podium next to the streak flame, thumb up. */
 export function StreakHero({ lit = false, className }: { lit?: boolean; className?: string }) {
   return (
     <div className={`streak-hero ${lit ? 'streak-hero-lit' : ''} ${className ?? ''}`} aria-hidden>
       <svg className="streak-svg" viewBox="0 0 240 220" focusable="false">
-        <Confetti pieces={STREAK_CONFETTI} ox={110} oy={100} delay={0.6} />
         <g className="streak-podium">
           <path d="M44 184v14c0 10 34 17 76 17s76-7 76-17v-14z" fill="#a8743e" />
           <path d="M150 198.6v14.6M90 198.6v14.6" stroke="#7e5428" strokeWidth="3" strokeLinecap="round" opacity=".5" />
@@ -425,18 +279,12 @@ export function StreakHero({ lit = false, className }: { lit?: boolean; classNam
           <ellipse cx="120" cy="185" rx="44" ry="7.5" fill="#7e5428" opacity=".35" />
         </g>
         <g className="sk-flame">
-          <g className="sk-flame-idle">
-            <g transform="translate(30 92) scale(1.28)">
-              <FlameArt face />
-            </g>
+          <g transform="translate(30 92) scale(1.28)">
+            <FlameArt />
           </g>
         </g>
         <g className="sk-bram">
-          <g className="sk-jump">
-            <g className="sk-idle">
-              <Figure who="bram" pose={BRAM_CHEER} blink={3.4} />
-            </g>
-          </g>
+          <Figure who="bram" pose={BRAM_PODIUM} blink={3.4} />
         </g>
       </svg>
     </div>

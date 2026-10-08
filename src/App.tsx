@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { findLesson, learnedWords } from './content/curriculum';
+import { findLesson, learnedWords, playLesson } from './content/curriculum';
 import { getHelpLanguage } from './i18n';
 import type { LangCode } from './i18n/types';
 import { setPreferredVoice, setQuietAudio } from './lib/audio';
@@ -7,20 +7,20 @@ import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
+import { AllTopics, Route } from './components/Route';
 import { Milestone, StreakStopped } from './components/Milestone';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
-import { type Access, lessonAllowed, loadAccess, saveAccess } from './lib/access';
+import { type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
+import { blockAfterLesson, routeNextLesson } from './lib/route';
 import { takeLinkedUnit } from './lib/unitLink';
 import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonWords, applyReview, dailyCard, dailyLesson, dailyWordIds, seedCards, strongerCount } from './lib/spaced';
-import { isNextInCourse } from './lib/exercises';
-import { mainLessons } from './content/sectors';
 import { gloss } from './i18n';
 import { persistStorage } from './lib/install';
 import { CertEarned, CertificateScreen } from './components/Certificate';
-import { earnCertificates, findUnit, unitJustDone } from './lib/certificate';
+import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
 import { count, countOpen } from './lib/count';
 import { clearSave } from './lib/resume';
 
@@ -41,6 +41,8 @@ type View =
   /** upgrade: opened from a locked unit, so the unlock card is scrolled into view. */
   | { name: 'settings'; upgrade?: boolean }
   | { name: 'about' }
+  /** "Alle onderwerpen": every unit as one long path (from the link at the foot of the home). */
+  | { name: 'all' }
   | { name: 'admin' };
 
 const HOME: View = { name: 'home' };
@@ -177,6 +179,21 @@ export default function App() {
     if (view.name === 'lesson' && access && !lessonAllowed(view.lessonId, access)) replace(HOME);
   });
 
+  // A coach link (?unit=pay) makes that unit the current block on the home, which marks it. In the
+  // preview a unit outside the first one opens "Alle onderwerpen" at that unit instead, with its
+  // "Volledige versie" note (the home's block stays as it was).
+  const linkHandled = useRef(false);
+  useEffect(() => {
+    if (!focusUnit || linkHandled.current || !access || !progress.onboarded || progress.sector === undefined) return;
+    linkHandled.current = true;
+    // A finished unit is opened on the home's "Gedaan" shelf instead (the block stays).
+    const unit = findUnit(focusUnit);
+    if (unit && unitDone(unit, progress.completed)) return;
+    if (unitAllowed(focusUnit, access)) setProgress((p) => (p.currentUnit === focusUnit ? p : { ...p, currentUnit: focusUnit }));
+    else if (viewRef.current.name === 'home') go({ name: 'all' });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focusUnit, access, progress.onboarded, progress.sector]);
+
   const setLang = (code: LangCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
 
@@ -197,7 +214,7 @@ export default function App() {
   switch (view.name) {
     case 'lesson': {
       const daily = view.lessonId === DAILY_ID;
-      const found = daily ? { lesson: dailyLesson(view.ids ?? []) } : findLesson(view.lessonId);
+      const found = daily ? { lesson: dailyLesson(view.ids ?? []) } : playLesson(view.lessonId, progress.completed);
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !found.lesson.words.length || !lessonAllowed(view.lessonId, access)) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
@@ -207,6 +224,8 @@ export default function App() {
         const next = earnCertificates(daily
           ? { ...completeDaily(progress, accuracy, now), cards: applyReview(cards, results, today) }
           : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: addLessonWords(cards, found.lesson.words, results, today) }, now);
+        // The lesson's unit is the current block while it is unfinished (see src/lib/route.ts).
+        if (!daily) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
         setProgress(next);
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
         const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId);
@@ -218,8 +237,9 @@ export default function App() {
         const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
         const before = learnedWords(progress.completed).size;
         const words = learnedWords(next.completed).size;
-        // The next lesson on the learner's own course, for "Volgende:" on the result.
-        const upNext = daily ? undefined : mainLessons(progress.sector).find((l) => isNextInCourse(l.id, next.completed, access, progress.sector));
+        // The next lesson of the current block, for "Volgende:" on the result (none when the block
+        // is finished: the home offers the choice of the next one).
+        const upNext = daily ? undefined : routeNextLesson(next, access);
         if (!daily) setArrived(view.lessonId);
         replace({
           name: 'result', right, total, newWords: words - before, words, streakUp,
@@ -284,6 +304,28 @@ export default function App() {
         <CertificateScreen unit={unit} day={day} lang={lang} onBack={onward} />
       );
     }
+    case 'all':
+      return (
+        <>
+          <AllTopics lang={lang} onBack={back}>
+            <Path
+              progress={progress}
+              lang={lang}
+              onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
+              nowLesson={routeNextLesson(progress, access)?.id ?? null}
+              arrived={arrived}
+              onArrived={() => setArrived(null)}
+              onAbout={() => tab('about')}
+              access={access}
+              onUpgrade={() => go({ name: 'settings', upgrade: true })}
+              focusUnit={focusUnit}
+              onFocused={() => setFocusUnit(null)}
+              onCertificate={(unit) => go({ name: 'certificate', unit })}
+            />
+          </AllTopics>
+          <BottomNav current="route" onTab={tab} lang={lang} />
+        </>
+      );
     case 'tips':
       return <Tips progress={progress} lang={lang} onBack={back} access={access} />;
     case 'about':
@@ -345,15 +387,16 @@ export default function App() {
             lang={lang}
             onLanguage={() => tab('me')}
           />
-          <Path
+          <Route
             progress={progress}
             lang={lang}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
+            onPick={(unit) => setProgress((p) => ({ ...p, currentUnit: unit }))}
+            onAll={() => go({ name: 'all' })}
             daily={Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : null}
             arrived={arrived}
             onArrived={() => setArrived(null)}
             onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: dailyWordIds(progress.cards ?? {}, dayKey(new Date())) })}
-            onAbout={() => tab('about')}
             access={access}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
             focusUnit={focusUnit}

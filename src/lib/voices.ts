@@ -1,6 +1,6 @@
 /**
- * Who speaks with which voice. Recorded voices (ElevenLabs, committed in public/audio-el,
- * and Piper, generated in CI) are named "piper:<key>"; "device" is the phone's own voice.
+ * Who speaks with which voice. Recorded voices (ElevenLabs, committed in public/audio-el)
+ * are named "piper:<key>" (a historical prefix); "device" is the phone's own voice.
  */
 import { hasRecordedVoice } from './audio';
 
@@ -14,9 +14,8 @@ export const DEVICE = 'device';
 /** Character → voices in order of preference; the first one available is used.
  *  Keys match CharacterId in src/components/Characters.tsx. */
 const CAST_VOICES: Record<string, VoiceRef[]> = {
-  // Thijmen (friendlier) replaced Berend; Berend stays as the fallback until Thijmen is recorded.
-  bram: ['piper:thijmen', 'piper:berend', 'piper:pim'],
-  henk: ['piper:daniel', 'piper:ronnie'],
+  bram: ['piper:thijmen', DEVICE],
+  henk: ['piper:daniel', DEVICE],
   amina: ['piper:ariel', DEVICE],
   jada: ['piper:noa', DEVICE],
 };

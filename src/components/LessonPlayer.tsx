@@ -5,15 +5,16 @@ import type { HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, sounds, speak, speechAvailable } from '../lib/audio';
 import { tileDiff } from '../lib/answers';
 import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
-import { barParts, chimeStep, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
+import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { voiceFor } from '../lib/voices';
+import { pickInsteadOfTyping } from '../lib/writing';
 import { castFor, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { FlameIcon } from './StreakArt';
 import {
   BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
-  LifebuoyIcon, PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
+  LifebuoyIcon, PencilIcon, PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
 } from './Icons';
 import { PhraseSheet } from './Phrases';
 import {
@@ -111,6 +112,18 @@ function KindTag({ kind, lang }: { kind: Exercise['kind']; lang?: HelpLanguage }
   );
 }
 
+/** The retry phase: "Herhalen · nog N" with the help language large (like the kind tag). */
+function RepeatTag({ left, lang }: { left: number; lang?: HelpLanguage }) {
+  const word = ui('tagRepeat', lang);
+  return (
+    <span className="tag tag-kind tag-repeat">
+      <span className="tag-nl" lang="nl">Herhalen</span>
+      {word.help && lang ? <HelpText className="tag-help" text={word.help} lang={lang} /> : <span className="tag-help" lang="en">{word.en}</span>}
+      <span className="tag-count" lang="nl">· {left}</span>
+    </span>
+  );
+}
+
 /** The answer as a pair for the feedback label: Dutch = meaning (English + help language). */
 function answerPair(ex: Exercise, lang?: HelpLanguage): { nl?: string; meaning: Bilingual } | null {
   switch (ex.kind) {
@@ -139,16 +152,17 @@ function reducedMotion(): boolean {
 }
 
 /**
- * A run of 3, 5 or 8: a taped label that drops onto the progress bar for 1.5 s, a lit flame, the
- * big number and "in a row" in the help language (English without one). It lives in the lesson
- * header, so it is in view whatever the exercise below does.
+ * A run of 3, 5 or 8: a small label over the progress bar for 1.5 s (fades and slides in 6 px,
+ * stays, fades out): a still flame, the number and "in a row" in the help language (English
+ * without one). It lives in the lesson header, so it is in view whatever the exercise below does
+ * and never covers it.
  */
 function RunLabel({ n, lang }: { n: number; lang?: HelpLanguage }) {
   const text = withoutN(ui('inARow', lang));
   return (
     <span className="run-label" aria-hidden>
       <span className="run-label-tape" />
-      <FlameIcon lit size={26} />
+      <FlameIcon lit size={20} />
       <b className="run-label-n">{n}</b>
       {text.help && lang ? <HelpText className="run-label-text" text={text.help} lang={lang} /> : <span className="run-label-text" lang="en">{text.en}</span>}
     </span>
@@ -326,6 +340,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
    * its top edge while there is more of the exercise underneath it.
    */
   const [footStatic, setFootStatic] = useState(false);
+  const measureRef = useRef<(() => void) | null>(null);
   const [moreBelow, setMoreBelow] = useState(false);
   useEffect(() => {
     const foot = footRef.current;
@@ -339,23 +354,44 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         const tall = foot.offsetHeight > window.innerHeight * 0.75;
         setFootStatic(tall);
         root.style.setProperty('--foot-h', `${tall ? 0 : foot.offsetHeight}px`);
-        setMoreBelow(!tall && root.scrollHeight - (window.scrollY + window.innerHeight) > 4);
+        // "More below" only when the exercise itself (not just the page's bottom padding) runs
+        // more than a few pixels under the footer, and the page can still scroll there.
+        const slide = slideRef.current;
+        const hidden = slide ? slide.getBoundingClientRect().bottom - foot.getBoundingClientRect().top : 0;
+        const canScroll = root.scrollHeight - (window.scrollY + window.innerHeight) > 4;
+        setMoreBelow(!tall && canScroll && hidden > 12);
       });
     };
+    measureRef.current = measure;
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(foot);
     ro.observe(body);
+    // The page shrinks when the content does, or when an entering exercise's slide-in ends.
+    body.addEventListener('animationend', measure);
+    body.addEventListener('transitionend', measure);
     window.addEventListener('scroll', measure, { passive: true });
     window.addEventListener('resize', measure);
     return () => {
       cancelAnimationFrame(raf);
       ro.disconnect();
+      measureRef.current = null;
+      body.removeEventListener('animationend', measure);
+      body.removeEventListener('transitionend', measure);
       window.removeEventListener('scroll', measure);
       window.removeEventListener('resize', measure);
       root.style.removeProperty('--foot-h');
     };
   }, []);
+  // A new screen (or Check): observe this exercise's slide, so the arrow follows its size.
+  useEffect(() => {
+    const slide = slideRef.current;
+    measureRef.current?.();
+    if (!slide) return;
+    const ro = new ResizeObserver(() => measureRef.current?.());
+    ro.observe(slide);
+    return () => ro.disconnect();
+  }, [index, checked]);
   // After "Check" the feedback label grows the sticky footer. Keep the learner's pick, the right
   // option and the stamp in view above it: scroll just enough, never past the question's top.
   useEffect(() => {
@@ -367,17 +403,17 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         foot.querySelector('.feedback')?.scrollIntoView({ block: 'nearest', behavior: reducedMotion() ? 'auto' : 'smooth' });
         return;
       }
-      const marked = document.querySelectorAll<HTMLElement>('.player-body .choice.wrong, .player-body .choice.right, .player-body .answer-line, .player-body .chat-bubble-me');
+      // (A chat's reply bubble is not among them: the label repeats the reply, the options matter.)
+      const marked = document.querySelectorAll<HTMLElement>('.player-body .choice.wrong, .player-body .choice.right, .player-body .answer-line');
       if (!foot || !marked.length) return;
       const bottom = Math.max(...[...marked].map((el) => el.getBoundingClientRect().bottom));
       const top = Math.min(...[...marked].map((el) => el.getBoundingClientRect().top));
       // The header (close, sound, progress bar) is sticky: nothing may slide under it.
       const head = document.querySelector('.player-top')?.getBoundingClientRect().bottom ?? 0;
       const limit = foot.getBoundingClientRect().top - 12;
-      // The exercise tag stays whole under the header (its top is the scroll margin): the
-      // label may cover the foot of the options rather than clip the tag.
-      const tag = document.querySelector('.player-body .ex-tag')?.getBoundingClientRect().top ?? top;
-      const room = Math.min(top, tag) - head - 8;
+      // The pick and the right answer matter more than the tag and the question above them
+      // (both stay one scroll away): they may slide under the header, the marked options not.
+      const room = top - head - 8;
       const by = Math.min(bottom - limit, Math.max(0, room));
       if (bottom > limit && by > 0) window.scrollBy({ top: by, behavior: reducedMotion() ? 'auto' : 'smooth' });
     });
@@ -439,7 +475,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       goRef.current?.focus({ preventScroll: true });
     });
     if (answer.correct) {
-      sounds.correct(chimeStep(newRun));
+      sounds.correct();
       const stamp = runStampFor(newRun);
       if (stamp) later(300, () => { setRunLabel(stamp); setSweep((k) => k + 1); });
     } else {
@@ -612,14 +648,14 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   ) : pair && (
     <div className="feedback-pair">
       {/* "de helm = the helmet" is one left-to-right unit, also inside right-to-left text. */}
-      <span className="pair-main" dir={rtl ? 'ltr' : undefined}>
-        {pair.nl && (
-          <>
-            <strong lang="nl" dir={rtl ? 'ltr' : undefined}>{pair.nl}</strong>
-            <span className="pair-eq"> = </span>
-          </>
-        )}
-        <span className="bi-en" lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
+      <span className="pair-main" dir="ltr">
+        {pair.nl && <strong lang="nl" dir="ltr">{pair.nl}</strong>}
+        {/* "= thank you" stays on one line when it is short; it may move under the Dutch as a
+            whole, but never breaks inside. */}
+        <span className={`pair-rest ${pair.meaning.en.length <= 28 ? 'pair-short' : ''}`} dir="ltr">
+          {pair.nl && <span className="pair-eq">= </span>}
+          <span className="bi-en" lang="en" dir="ltr">{pair.meaning.en}</span>
+        </span>
       </span>
       {pairHelp && lang && (
         <HelpText text={pairHelp} lang={lang} />
@@ -640,6 +676,10 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const doneCount = Math.round(bar.done * bar.slots);
   /** In the retry phase: how many mistakes are left, this one included. */
   const repeatsLeft = index >= initial.length ? queue.length - index : 0;
+  /** Type what you hear, shown as "hear and pick the written word" (lib/writing.ts), or as real
+   *  dictation (`writing`), which offers "I can't write this yet" instead of "I can't listen". */
+  const typePick = ex.kind === 'type' && pickInsteadOfTyping(lang) && (ex.options?.length ?? 0) > 1;
+  const writing = ex.kind === 'type' && !typePick;
 
   return (
     // A right-to-left help language mirrors the whole player (header, cards, feedback); the Dutch
@@ -677,6 +717,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             <span className="lbar-ticks" style={{ '--n': bar.slots } as React.CSSProperties} />
             {sweep > 0 && <span key={sweep} className="lbar-sweep" />}
           </div>
+          {/* The run label sits over the progress bar, inside the header: it never covers the
+              exercise's tag or question. */}
+          {runLabel && <RunLabel key={sweep} n={runLabel} lang={lang} />}
         </div>
         <span className="lesson-name">
           <Bi text={gloss(lesson.id, lesson.title, lang)} />
@@ -696,9 +739,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             ? <HelpText className="sos-label" text={lang.ui.navWords} lang={lang} />
             : <span className="sos-label" lang="nl">Hulp</span>}
         </button>
-        {/* The run label and the sound note hang just under the header, never over the close
-            button, the sound toggle or the progress bar. */}
-        {runLabel && <RunLabel key={sweep} n={runLabel} lang={lang} />}
+        {/* The sound note hangs just under the header, never over the close button, the sound
+            toggle or the progress bar. */}
         {soundNote && (
           <div className="sound-note" role="status" key={soundNote} onClick={() => setSoundNote(null)}>
             {soundNote === 'on' ? <SpeakerIcon size={20} /> : soundNote === 'skip' ? <EarIcon size={20} /> : <SpeakerOffIcon size={20} />}
@@ -714,18 +756,29 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
           {repeatsLeft > 0 ? (
             <>
               {/* Retry phase: the mistakes come back, and the learner sees how many are left. */}
-              <span className="tag tag-repeat" lang="nl">Herhalen</span>
-              <span className="ex-count" lang="nl">nog {repeatsLeft}</span>
+              {/* The chip says it in the help language too (large), the Dutch small beside it. */}
+              <RepeatTag left={repeatsLeft} lang={lang} />
               <Bi className="ex-tag-note" text={fillN(ui('practiseMistakes', lang), repeatsLeft)} />
             </>
           ) : (
-            <KindTag kind={ex.kind} lang={lang} />
+            <KindTag kind={typePick ? 'listen' : ex.kind} lang={lang} />
           )}
         </div>
         {body}
         </div>
       </main>
       <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''}`} ref={footRef}>
+        {/* More of the exercise underneath: a visible "more" chevron (the shadow alone is easy to miss). */}
+        {moreBelow && !checked && (
+          <button
+            type="button"
+            className="foot-more-btn"
+            aria-label="Scroll down"
+            onClick={() => window.scrollBy({ top: Math.round(window.innerHeight * 0.4), behavior: reducedMotion() ? 'auto' : 'smooth' })}
+          >
+            <ChevronDownIcon size={22} />
+          </button>
+        )}
         <div className="foot-inner">
           {/* Always present, so screen readers hear what is put in it one tick after Check. */}
           <div className="sr-only" role="status">{live}</div>
@@ -761,9 +814,20 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             </div>
           )}
           <div className="foot-actions">
-            {needsAudio(ex) && !checked && (
+            {needsAudio(ex) && !checked && !writing && (
               <button type="button" className="btn btn-ghost" onClick={cantListenNow}>
                 <Bi text={ui('cantListen', lang)} />
+              </button>
+            )}
+            {/* Real dictation: a learner who can't write Dutch yet skips this one word (it is not
+                graded). Its own words and icon, never the "I can't listen" ones. */}
+            {writing && !checked && (
+              <button type="button" className="btn btn-ghost btn-cant-write" onClick={next}>
+                <span className="cant-write-icon" aria-hidden><PencilIcon size={22} /></span>
+                <span className="cant-write-text">
+                  <Bi text={ui('cantWriteYet', lang)} />
+                  <span className="cant-write-nl" lang="nl">Ik kan dit nog niet schrijven</span>
+                </span>
               </button>
             )}
             {/* One button per exercise (it fades in with the exercise). After Check it keeps focus and

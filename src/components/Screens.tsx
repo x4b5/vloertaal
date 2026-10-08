@@ -54,6 +54,7 @@ import { Flag } from './Flags';
 import { PhraseList } from './Phrases';
 import { CertBadge, CertificatesCard } from './Certificate';
 import { CountingCard } from './Counting';
+import { WritingCard } from './Writing';
 import { unitDone } from '../lib/certificate';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
@@ -129,8 +130,9 @@ export function TopBar({ streak, words, lang, onLanguage, done = false }: {
   const streakLabel = `${streak} ${streakText.en}${streakText.help ? ` · ${streak} ${streakText.help}` : ''}${!done && streak > 0 ? ` · ${ui('stillToDo').en}` : ''}`;
   const daysUnit = uiCount('daysUnit', streak, lang);
   const wordsUnit = uiCount('wordsUnit', words, lang);
+  // Right to left (Arabic, Persian, Dari): the logo moves to the right, the stats and the flag to the left.
   return (
-    <header className="topbar">
+    <header className="topbar" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
       <span className="brand">
         <LogoMark size={36} />
         <Wordmark className="topbar-wordmark" />
@@ -186,7 +188,7 @@ const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'settings' | 
  *  it; screen readers hear all of it. */
 export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab: Tab) => void; lang?: HelpLanguage }) {
   return (
-    <nav className="bottom-nav" aria-label="Main">
+    <nav className="bottom-nav" aria-label="Main" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
       {TABS.map(({ tab, nl, key, Icon }) => {
         const word = ui(key, lang);
         return (
@@ -252,7 +254,7 @@ const lessonCode = (u: number, i: number) => `${u + 1}.${i + 1}`;
  * lesson: "Tomorrow your first words come back". The Dutch name is in the spoken label only; no
  * "label: n" strings, so nothing wraps or reorders in right-to-left text.
  */
-function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: HelpLanguage; onDaily?: () => void }) {
+export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: HelpLanguage; onDaily?: () => void }) {
   const rtl = lang?.dir === 'rtl';
   if (card.state === 'due') {
     return (
@@ -296,8 +298,11 @@ function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: HelpLang
   );
 }
 
-export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused, daily, onDaily, arrived, onArrived, onCertificate }: {
+export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused, daily, onDaily, arrived, onArrived, onCertificate, nowLesson }: {
   progress: Progress;
+  /** The one lesson with the big Start card ("Alle onderwerpen": the next lesson of the home's
+   *  current block; null when the home offers a choice). Undefined: the next lesson along the course. */
+  nowLesson?: string | null;
   /** Opens a finished unit's certificate (the chip on its sign). */
   onCertificate?: (unitId: string) => void;
   /** "Herhaal vandaag" (see dailyCard): due, done today, or the first words come tomorrow. */
@@ -383,7 +388,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
   }, [marked]);
   const unlocked = (lessonId: string) => isUnlocked(lessonId, completed, access);
   const rtl = lang?.dir === 'rtl';
-  const next = (lessonId: string) => isNextInCourse(lessonId, completed, access, sector);
+  const next = (lessonId: string) => (nowLesson !== undefined ? lessonId === nowLesson : isNextInCourse(lessonId, completed, access, sector));
 
   const renderUnit = (unit: Unit, u: number) => {
     const allowed = unitAllowed(unit.id, access);
@@ -742,6 +747,8 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
         })}
       </div>
       <p className="muted small sound-hint"><Bi text={ui('quietHint', lang)} /></p>
+      {/* Another script than Dutch: "type what you hear" is picking by default; this brings typing back. */}
+      <WritingCard lang={lang} />
 
       <h2><Bi text={ui('voice', lang)} /></h2>
       <VoicePicker current={progress.voice} lang={lang} onPick={onVoice} />
@@ -855,8 +862,16 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
         {icon}
         <span className="stat-card-value" dir="ltr">{value}</span>
       </div>
-      {foot && <Bi className="stat-card-foot" text={foot} />}
-      {badge}
+      {/* The stamp sits beside the line under the value, in the flow (never over its words);
+          on a narrow card it wraps under it. */}
+      {badge ? (
+        <div className="stat-card-foot-row">
+          {foot && <Bi className="stat-card-foot" text={foot} />}
+          {badge}
+        </div>
+      ) : (
+        foot && <Bi className="stat-card-foot" text={foot} />
+      )}
     </div>
   );
 }
