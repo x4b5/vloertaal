@@ -1575,3 +1575,13 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 .unit-locked .bay-lock { display: none; }
 @media (max-width: 350px) { .sector-btn .lang-native { font-size: 1rem; } }
+/* Other sectors: their open first lessons stay calm (one big yellow card on the path is enough). */
+.other-units .bay-now .bay-card { min-height: 0; padding: 14px 16px; background: var(--card); color: var(--ink); border-color: var(--edge); }
+.other-units .bay-now .bay-card:hover { background: color-mix(in srgb, var(--yellow) 12%, var(--card)); }
+.other-units .bay-now .bay-title { font-size: 1.1rem; }
+.other-units .bay-now .bay-title .bi-help { color: var(--muted); }
+.other-units .bay-now .bay-char { display: none; }
+.other-units .bay-now .bay-start { margin-top: 6px; min-height: 40px; font-size: 1rem; }
+.other-units .bay-now .bay-marker { width: 36px; height: 36px; font-size: 1.25rem; }
+.other-units .bay-now .bay-start { background: var(--yellow); color: #1e2226; }
+.other-units .bay-now .bay-start .icon { color: #1e2226; }
