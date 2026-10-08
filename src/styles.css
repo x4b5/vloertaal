@@ -2176,8 +2176,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .bay-open .bay-pic { opacity: 0.6; }
 .bay-locked .bay-pic { opacity: 0.32; filter: grayscale(1); }
 .bay-chev { flex: none; color: var(--ink-3); }
-/* The next lesson: its picture in the free corner above Bram, so the title keeps its width. */
-.bay-now .bay-pic { position: absolute; top: 14px; inset-inline-end: 22px; width: 56px; height: 56px; }
+/* The next lesson: its picture before the title, clear of Bram (in the corner it overlapped his hat). */
+.bay-now .bay-pic { width: 56px; height: 56px; align-self: flex-start; }
 .bay-start-label { align-items: flex-start; line-height: 1.15; }
 .bay-start-label.bi-swap > .bi-help { --help-size: 0.72em; color: rgba(255, 253, 248, 0.8); font-weight: 500; }
 .bay-start-label .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.15em; }
