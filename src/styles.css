@@ -2044,6 +2044,32 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .help-say:active { transform: translateY(1px); filter: brightness(0.94); }
 .help-say-row { display: flex; align-items: flex-start; gap: 8px; }
 .help-say-row > :not(.help-say) { flex: 1; min-width: 0; }
+/* Short phones (360×640): tighter spacing, so the options, tiles and controls of every exercise
+   fit above the footer as far as possible (the "more" chevron covers what still does not). */
+@media (max-height: 700px) {
+  .player .player-body { padding-top: 10px; }
+  .player .ex-tag { margin-bottom: 2px; }
+  .player .prompt { font-size: 1.35rem; margin: 2px 0 10px; }
+  .player .prompt-row .speaker-char { font-size: 52px; }
+  .player .listen-buttons { margin: 4px 0 14px; }
+  .player .listen-buttons .speak-lg { width: 72px; height: 60px; }
+  .player .choices { gap: 8px; }
+  .player .choices-rows .choice { min-height: 56px; padding-block: 6px; }
+  .player .choice-wrap > .choice { min-height: 56px; }
+  .player .speaker-word .speaker-char { font-size: 92px; }
+  .player .speaker-build .speaker-char { font-size: 100px; }
+  .player .chat-char { font-size: 84px; }
+  .player .chat { margin-bottom: 8px; }
+  .player .tile-bank { margin-top: 14px; gap: 6px; }
+  .player .answer-line { min-height: 56px; row-gap: 8px; background-size: 100% 56px; }
+  .player .tile { min-height: 44px; padding-block: 5px; }
+  .player .match { min-height: 52px; }
+  .player .player-foot { padding-top: 8px; }
+  .player .foot-actions { gap: 8px; }
+  .player .foot-actions .btn-ghost { min-height: 44px; padding-block: 4px; }
+  .player .foot-actions .btn-go { min-height: 54px; }
+  .player .choices-pics .choice { min-height: 104px; }
+}
 /* Focused elements stay clear of the pinned footer and the bottom bar. */
 html { scroll-padding-bottom: calc(var(--foot-h, 0px) + 12px); }
 html:has(.bottom-nav) { scroll-padding-bottom: 104px; }
