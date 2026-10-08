@@ -12,6 +12,7 @@ import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
 import { type Access, lessonAllowed, loadAccess, saveAccess } from './lib/access';
+import { takeLinkedUnit } from './lib/unitLink';
 import { completeLesson, currentStreak, emptyProgress, loadProgress, saveProgress, streakWentUp } from './lib/progress';
 
 type View =
@@ -42,12 +43,16 @@ const restored = (): View => {
   return !v || v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'admin' ? HOME : v;
 };
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+/** A coach link (?unit=pay) asks to open the path at that unit; read once at start. */
+const linkedUnit = takeLinkedUnit();
 
 export default function App() {
   const [progress, setProgress] = useState(loadProgress);
   const [access, setAccess] = useState<Access | null>(loadAccess);
   const grant = (a: Access) => { saveAccess(a); setAccess(a); };
-  const [view, setView] = useState<View>(() => adminRequested() ? { name: 'admin' } : restored());
+  const [view, setView] = useState<View>(() => adminRequested() ? { name: 'admin' } : linkedUnit ? HOME : restored());
+  /** The unit to show first on the path (from a coach link), until the path has shown it. */
+  const [focusUnit, setFocusUnit] = useState<string | null>(linkedUnit);
   /** Bumped when the system Back button is pressed in a lesson (the lesson asks before quitting). */
   const [lessonBack, setLessonBack] = useState(0);
   const viewRef = useRef(view);
@@ -246,6 +251,8 @@ export default function App() {
             onAbout={() => tab('about')}
             access={access}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
+            focusUnit={focusUnit}
+            onFocused={() => setFocusUnit(null)}
           />
           <BottomNav current="route" onTab={tab} />
         </>

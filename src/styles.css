@@ -314,6 +314,14 @@ h2 { font-size: 1.25rem; }
 .other-hint { margin: 12px 0 0; }
 .other-units > .unit:first-of-type { margin-top: 20px; }
 .other-units > .unit + .unit { margin-top: 44px; }
+.unit { scroll-margin-top: 88px; }
+/* Opened from a coach link: the unit's sign lights up for a moment. */
+.unit-marked .unit-head { border-radius: var(--radius); animation: unit-mark 4s ease-out both; }
+@keyframes unit-mark {
+  0%, 60% { background: color-mix(in srgb, var(--yellow) 28%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, var(--yellow) 28%, transparent); }
+  100% { background: transparent; box-shadow: 0 0 0 6px transparent; }
+}
+@media (prefers-reduced-motion: reduce) { .unit-marked .unit-head { animation: none; background: color-mix(in srgb, var(--yellow) 22%, transparent); } }
 
 /* Top bar: logo, two quiet stats (no boxes) and the help-language flag (opens Settings). */
 .topbar {
@@ -350,6 +358,14 @@ h2 { font-size: 1.25rem; }
 /* Units: a stencil number and a plain heading on the floor; a calm gap between units. */
 .unit { margin-top: 12px; }
 .unit + .unit { margin-top: 44px; }
+.unit { scroll-margin-top: 88px; }
+/* Opened from a coach link: the unit's sign lights up for a moment. */
+.unit-marked .unit-head { border-radius: var(--radius); animation: unit-mark 4s ease-out both; }
+@keyframes unit-mark {
+  0%, 60% { background: color-mix(in srgb, var(--yellow) 28%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, var(--yellow) 28%, transparent); }
+  100% { background: transparent; box-shadow: 0 0 0 6px transparent; }
+}
+@media (prefers-reduced-motion: reduce) { .unit-marked .unit-head { animation: none; background: color-mix(in srgb, var(--yellow) 22%, transparent); } }
 .unit-head { display: flex; align-items: center; gap: 14px; padding: 4px 0; }
 .unit-num {
   flex: none; width: 56px; text-align: center; color: var(--ink);
@@ -1627,3 +1643,16 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .sound-note .icon { flex: none; }
 .sound-note .bi-help { color: inherit; opacity: 0.85; }
 @media (prefers-reduced-motion: reduce) { .sound-note { animation: none; } }
+
+/* About: links for coaches, folded away under the About texts. */
+.coach-links { border-top: 2px dashed var(--line); padding: 14px 0 6px; }
+.coach-links summary { cursor: pointer; font-weight: 650; font-size: 1.05rem; padding: 4px 0; }
+.coach-links ul { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
+.coach-links li { display: flex; align-items: center; gap: 10px; min-height: 48px; }
+.coach-icon { flex: none; width: 32px; height: 32px; }
+.coach-title { flex: 1; min-width: 0; }
+.coach-share {
+  flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 6px 12px;
+  border-radius: 10px; border: 2px solid var(--line); background: var(--card); color: var(--ink); font-weight: 600;
+}
+.coach-share .icon { color: var(--right-ink); }
