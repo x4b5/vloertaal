@@ -82,9 +82,15 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, max: number): string[
 }
 
 /** Text around a circle, clockwise from the left (as the SVG textPath on the logo and seal). */
-function ringText(ctx: CanvasRenderingContext2D, text: string, cx: number, cy: number, r: number, size: number, spacing: number, start = Math.PI) {
+function ringText(ctx: CanvasRenderingContext2D, text: string, cx: number, cy: number, r: number, size: number, spacing: number, start = Math.PI, fill = false) {
   ctx.save();
   ctx.font = font(800, size);
+  // fill: spread the letters so the text goes exactly once around (as SVG textLength).
+  if (fill) {
+    const chars = [...text];
+    const plain = chars.reduce((w, ch) => w + ctx.measureText(ch).width, 0);
+    spacing = (2 * Math.PI * r - 2 - plain) / chars.length;
+  }
   ctx.textAlign = 'center';
   ctx.textBaseline = 'alphabetic';
   let a = start;
@@ -147,7 +153,7 @@ function drawSeal(ctx: CanvasRenderingContext2D, cx: number, cy: number, s: numb
   ctx.beginPath();
   ctx.arc(60, 60, 40, 0, Math.PI * 2);
   ctx.stroke();
-  ringText(ctx, SEAL_RING, 60, 60, 44.5, 7.4, 0.9);
+  ringText(ctx, SEAL_RING, 60, 60, 47, 7.4, 0.9, Math.PI, true);
   ctx.lineWidth = 5;
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
@@ -241,7 +247,13 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   // Measure the body first, so it is centred between head and foot (as the flex column on screen).
   const titleSize = 6.4 * u;
   ctx.font = font(800, titleSize);
-  const titleLines = wrap(ctx, d.titleNl, width);
+  // Balanced, like text-wrap: balance on screen: the narrowest width that keeps the line count.
+  let titleLines = wrap(ctx, d.titleNl, width);
+  for (let w = width; titleLines.length > 1 && w > width * 0.4; w -= u) {
+    const tryLines = wrap(ctx, d.titleNl, w);
+    if (tryLines.length > titleLines.length) break;
+    titleLines = tryLines;
+  }
   ctx.font = font(600, 1.65 * u);
   const chipH = 1.65 * u * 1.25 + 0.9 * u;
   const chipRows: { text: string; w: number }[][] = [[]];

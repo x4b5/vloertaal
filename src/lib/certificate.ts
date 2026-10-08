@@ -147,5 +147,6 @@ export function certData(unit: Unit, day: string, name: string, lang?: HelpLangu
 export const certMeta = (d: CertData) =>
   `Nederlands voor het werk · ${d.lessons} ${d.lessons === 1 ? 'les' : 'lessen'} · ${d.words} ${d.words === 1 ? 'woord' : 'woorden'}`;
 export const CERT_NOTE = 'Oefencertificaat — geen officieel diploma';
-export const SEAL_RING = 'OEFENCERTIFICAAT · VLOERTAAL · NEDERLANDS VOOR HET WERK · ';
+/** Around the seal; spread to fill the whole ring exactly (SVG textLength, and the canvas likewise). */
+export const SEAL_RING = 'OEFENCERTIFICAAT · VLOERTAAL · NEDERLANDS · ';
 

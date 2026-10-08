@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { fillN, ui } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { STREAK_TIERS, dayKey, emptyProgress, workWeek, type WeekDayState } from '../lib/progress';
@@ -22,14 +22,17 @@ function useEnter(onDone: () => void) {
 
 /** The streak tiers, each with its Dutch stamp and the help-language gloss. */
 const TIERS: Record<(typeof STREAK_TIERS)[number], { nl: string; key: UiKey }> = {
-  3: { nl: '3 dagen', key: 'tier3' },
+  // "dagen" is already on the board: the first tier says "op rij" (in a row).
+  3: { nl: '3 op rij', key: 'tier3' },
   7: { nl: '1 week', key: 'tier7' },
   14: { nl: '2 weken', key: 'tier14' },
   30: { nl: '1 maand', key: 'tier30' },
 };
 
-/** Monday to Sunday in Dutch: the fallback, and the small line under every tile. */
+/** Monday to Sunday in Dutch: said in each day's spoken label. */
 const NL_DAYS = ['ma', 'di', 'wo', 'do', 'vr', 'za', 'zo'];
+/** English initials, for English only and help languages Intl has no weekday names for. */
+const EN_DAYS = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 /** Locales Intl knows the weekday names of (Dari is written with the Afghan Persian names). */
 const INTL_LOCALE: Partial<Record<string, string>> = { prs: 'fa-AF' };
 
@@ -47,39 +50,38 @@ export function weekdayLetters(lang?: HelpLanguage): string[] | null {
   }
 }
 
-/** "Werkweek": seven tiles, Monday to Sunday. Done days get a yellow check stamp, free days are grey. */
+/**
+ * The work week: seven tiles, Monday to Sunday (right to left in a right-to-left language).
+ * Done days get a yellow check stamp, free days are grey. One row of labels: the weekday
+ * initials in the help language (English without one); the Dutch day is in the spoken label.
+ */
 export function WeekRow({ days, lang }: {
   days: { key: string; state: WeekDayState; today: boolean }[];
   lang?: HelpLanguage;
 }) {
-  const letters = weekdayLetters(lang);
+  const own = weekdayLetters(lang);
+  const letters = own ?? EN_DAYS;
   const anyRest = days.some((d) => d.state === 'rest');
   return (
-    <section className="week" aria-label={ui('workWeek').en}>
-      <div className="week-head">
-        <span className="week-nl" lang="nl">Werkweek</span>
-        <Bi className="week-gloss" text={ui('workWeek', lang)} />
-      </div>
-      <ol className="week-row">
+    <section className="week" aria-label={`Werkweek · ${ui('workWeek').en}`}>
+      <ol className="week-row" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
         {days.map((d, i) => (
           <li
             key={d.key}
             className={`week-day week-${d.state} ${d.today ? 'week-today' : ''}`}
             aria-label={`${NL_DAYS[i]}${d.state === 'done' ? ' ✓' : d.state === 'rest' ? ` · ${ui('restDay').en}` : ''}`}
           >
-            {letters && <span className="week-letter" lang={lang?.code} aria-hidden>{letters[i]}</span>}
             <span className="week-tile" aria-hidden>
               {d.state === 'done' && <span className="week-stamp"><CheckIcon size={20} /></span>}
               {d.state === 'rest' && <CupIcon size={20} />}
             </span>
-            <span className="week-nl-day" lang="nl" aria-hidden>{NL_DAYS[i]}</span>
+            <span className="week-letter" lang={own ? lang?.code : 'en'} aria-hidden>{letters[i]}</span>
           </li>
         ))}
       </ol>
       {anyRest && (
         <p className="week-legend">
           <span className="week-legend-tile" aria-hidden><CupIcon size={16} /></span>
-          <span lang="nl">Vrije dag</span>
           <Bi className="week-gloss" text={ui('restDay', lang)} />
         </p>
       )}
@@ -87,11 +89,57 @@ export function WeekRow({ days, lang }: {
   );
 }
 
+/** The reminder and home-screen cards are offered once, after the first day's milestone. */
+const KEEP_OFFERED = 'vloertaal.keepOffered';
+function keepOffered(): boolean {
+  try { return localStorage.getItem(KEEP_OFFERED) === '1'; } catch { return false; }
+}
+function markKeepOffered() {
+  try { localStorage.setItem(KEEP_OFFERED, '1'); } catch { /* private mode: offered again next time */ }
+}
+
+/** The bilingual Continue at the foot of these screens (it points left in right-to-left text). */
+function ContinueButton({ lang, onClick }: { lang?: HelpLanguage; onClick: () => void }) {
+  return (
+    <footer className="player-foot milestone-foot">
+      <div className="foot-inner">
+        <div className="foot-actions">
+          <button type="button" className="btn btn-go btn-primary" onClick={onClick} dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
+            <Bi className="btn-label" text={ui('continue', lang)} />
+            <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+/**
+ * After the first day's milestone, once: "Remind me every day" and "Put Vloertaal on your home
+ * screen" on a screen of their own (both also in Settings). Continue skips it.
+ */
+function KeepScreen({ lang, onDone }: { lang?: HelpLanguage; onDone: () => void }) {
+  useEnter(onDone);
+  useEffect(() => { markKeepOffered(); window.scrollTo(0, 0); }, []);
+  return (
+    <div className="player milestone-screen keep-screen">
+      <main className="player-body milestone">
+        <div className="keep-hero" aria-hidden><Character who="bram" mood="wave" size={120} /></div>
+        <div className="milestone-keep">
+          <ReminderCard lang={lang} />
+          <InstallCard lang={lang} />
+        </div>
+      </main>
+      <ContinueButton lang={lang} onClick={onDone} />
+    </div>
+  );
+}
+
 /**
  * Day-streak milestone ("Mijlpaal"), shown after the lesson-complete screen on the first
- * lesson of a day: the worker on a podium, the flame with the new streak, one line of praise,
- * the work week, a tier stamp at 3, 7, 14 and 30 days, and the record.
- * Day 1 also offers a daily reminder and the home screen; day 3 the home screen again.
+ * lesson of a day: the worker on a podium, the flame with the new streak (a tier stamp at 3, 7,
+ * 14 and 30 days), one sentence in the help language, the work week and the record.
+ * After the very first day, Continue leads once to the reminder and home-screen cards.
  */
 export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep = true }: {
   streak: number;
@@ -103,9 +151,11 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
   best?: number;
   /** Free days in hand. */
   freezes?: number;
-  /** Offer the reminder and home-screen cards on day 1 and 3. */
+  /** Offer the reminder and home-screen cards after day 1 (once, on a screen of their own). */
   keep?: boolean;
 }) {
+  const [step, setStep] = useState<'streak' | 'keep'>('streak');
+  const [offer] = useState(() => keep && streak === 1 && !keepOffered());
   const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
   // The number ticks up from yesterday's count, like a counter flipping over.
   const [shown, setShown] = useState(still ? streak : streak - 1);
@@ -114,7 +164,8 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
     const t = window.setTimeout(() => setShown(streak), 1000);
     return () => window.clearTimeout(t);
   }, [streak, still]);
-  useEnter(onDone);
+  const next = useCallback(() => (offer ? setStep('keep') : onDone()), [offer, onDone]);
+  useEnter(step === 'streak' ? next : noop);
 
   const line = ui(streak > 1 ? 'streakGrew' : 'streakStarted', lang);
   const label = ui('dayStreak', lang);
@@ -123,11 +174,12 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
   const week = days ?? workWeek({ ...emptyProgress, streak, lastDay: dayKey(new Date()) }, new Date());
   const record = Math.max(best ?? 0, streak);
 
+  if (step === 'keep') return <KeepScreen lang={lang} onDone={onDone} />;
   return (
     <div className="player milestone-screen">
       <main className="player-body milestone">
         <StreakHero lit={shown === streak} />
-        <div className={`streak-count ${shown === streak ? 'streak-lit' : ''}`} role="img" aria-label={`${streak} ${label.en}`}>
+        <div className={`streak-count ${shown === streak ? 'streak-lit' : ''}`} role="img" aria-label={`${streak} ${label.en}${tier ? ` · ${ui(tier.key).en}` : ''}`}>
           <span className="streak-flame-wrap">
             {/* Sparks fly off the flame when the new day is counted. */}
             <svg className="streak-sparks" viewBox="0 0 120 120" aria-hidden focusable="false">
@@ -138,60 +190,53 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
           <span key={shown} className={`streak-num ${shown === streak ? 'streak-num-new' : ''}`} aria-hidden>
             {shown}
           </span>
-          <span className="streak-unit" lang="nl" aria-hidden>{streak === 1 ? 'dag' : 'dagen'}</span>
-          {tier && (
-            <span className="tier-stamp" lang="nl" aria-hidden>
-              <span className="tier-stamp-word">{tier.nl}</span>
-            </span>
-          )}
+          {/* The tier stamp sits inside the board, over the unit: never over its edge. */}
+          <span className="streak-unit-col">
+            {tier && (
+              <span className="tier-stamp" lang="nl" aria-hidden>
+                <span className="tier-stamp-word">{tier.nl}</span>
+              </span>
+            )}
+            <span className="streak-unit" lang="nl" aria-hidden>{streak === 1 ? 'dag' : 'dagen'}</span>
+          </span>
         </div>
-        {tier && (
-          <p className="tier-gloss">
-            <span className="sr-only" lang="nl">{tier.nl}: </span>
-            <Bi text={ui(tier.key, lang)} />
-          </p>
-        )}
         <h1 className="streak-line">
           <Bi text={fillN(line, streak)} />
         </h1>
         <WeekRow days={week} lang={lang} />
         {(record > 1 || freezes > 0) && (
           <div className="streak-facts">
+            {/* The record and free days: a small icon tag, the help language large. */}
             {record > 1 && (
               <p className="streak-fact">
-                <span className="fact-tag" lang="nl">Record: {record}</span>
+                <span className="fact-tag" lang="nl" aria-hidden><TrophyGlyph /> {record}</span>
                 <Bi className="fact-gloss" text={fillN(ui('recordN', lang), record)} />
               </p>
             )}
             {freezes > 0 && (
               <p className="streak-fact">
-                <span className="fact-tag fact-free" lang="nl">
+                <span className="fact-tag fact-free" aria-hidden>
                   {Array.from({ length: freezes }, (_, i) => <CupIcon key={i} size={18} />)}
-                  Vrije dag{freezes > 1 ? 'en' : ''}: {freezes}
                 </span>
                 <Bi className="fact-gloss" text={fillN(ui('freeDaysN', lang), freezes)} />
               </p>
             )}
           </div>
         )}
-        {keep && (streak === 1 || streak === 3) && (
-          <div className="milestone-keep">
-            {streak === 1 && <ReminderCard lang={lang} />}
-            <InstallCard lang={lang} />
-          </div>
-        )}
       </main>
-      <footer className="player-foot milestone-foot">
-        <div className="foot-inner">
-          <div className="foot-actions">
-            <button type="button" className="btn btn-go btn-primary" onClick={onDone}>
-              {ui('continue', lang).en}
-              <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
-            </button>
-          </div>
-        </div>
-      </footer>
+      <ContinueButton lang={lang} onClick={next} />
     </div>
+  );
+}
+
+const noop = () => {};
+
+/** A small cup-shaped trophy for the record. */
+function TrophyGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden focusable="false">
+      <path d="M7 4h10v5a5 5 0 0 1-10 0z M7 6H4.5a2.5 2.5 0 0 0 2.6 4.2 M17 6h2.5a2.5 2.5 0 0 1-2.6 4.2 M12 14v3.5 M8.5 20h7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }
 
@@ -218,27 +263,19 @@ export function StreakStopped({ streak, best, lang, onDone }: {
           <span className="streak-num" aria-hidden>{streak}</span>
           <span className="streak-unit" lang="nl" aria-hidden>{streak === 1 ? 'dag' : 'dagen'}</span>
         </div>
+        {/* The help language large, English small (the Dutch sentence is only spoken). */}
         <h1 className="streak-line">
-          <span className="stopped-nl" lang="nl">Je reeks is gestopt bij {streak}. Begin vandaag opnieuw.</span>
+          <span className="sr-only" lang="nl">Je reeks is gestopt bij {streak}. Begin vandaag opnieuw. </span>
           <Bi text={fillN(ui('streakStopped', lang), streak)} />
         </h1>
         <div className="streak-facts">
           <p className="streak-fact">
-            <span className="fact-tag" lang="nl">Record: {best}</span>
+            <span className="fact-tag" lang="nl" aria-hidden><TrophyGlyph /> {best}</span>
             <Bi className="fact-gloss" text={fillN(ui('recordN', lang), best)} />
           </p>
         </div>
       </main>
-      <footer className="player-foot milestone-foot">
-        <div className="foot-inner">
-          <div className="foot-actions">
-            <button type="button" className="btn btn-go btn-primary" onClick={onDone}>
-              {ui('continue', lang).en}
-              <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
-            </button>
-          </div>
-        </div>
-      </footer>
+      <ContinueButton lang={lang} onClick={onDone} />
     </div>
   );
 }

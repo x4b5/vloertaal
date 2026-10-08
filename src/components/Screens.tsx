@@ -3,14 +3,14 @@ import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
-import { units } from '../content/curriculum';
+import { findLesson, units } from '../content/curriculum';
 import { unitIcons } from '../content/unitIcons';
 import { unitLink } from '../lib/unitLink';
 import type { DailyCard } from '../lib/spaced';
 import { coursePlan, unitSector, type SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { SectorIcon, SectorPicker } from './Sector';
-import { fillN, gloss, helpLanguages, ui, type Bilingual } from '../i18n';
+import { fillN, gloss, helpLanguages, ui, withoutN, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useRef, useState } from 'react';
 import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
@@ -25,6 +25,7 @@ import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
 import {
   AlertIcon,
+  ArrowIcon,
   AutoThemeIcon,
   CalendarIcon,
   CrateIcon,
@@ -45,7 +46,7 @@ import {
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { FlameIcon } from './StreakArt';
-import { BackupCard, ReminderCard } from './Keep';
+import { BackupCard, InstallCard, ReminderCard } from './Keep';
 import { Flag } from './Flags';
 import { PhraseList } from './Phrases';
 import { CertBadge, CertificatesCard } from './Certificate';
@@ -146,11 +147,14 @@ export function TopBar({ streak, words, lang, onLanguage, done = false }: {
       >
         <Flag code={lang?.code ?? 'en'} width={32} />
       </button>
-      {/* The streak is on, but today still needs a lesson or the review. */}
+      {/* The streak is on, but today still needs a lesson or the review: a calm chip (not a
+          stamp) in the help language, a small open circle for "not yet". */}
       {streak > 0 && !done && (
         <span className="todo-tag" aria-hidden>
-          <span className="todo-nl" lang="nl">Vandaag nog</span>
-          <Bi className="todo-gloss" text={ui('stillToDo', lang)} />
+          <span className="todo-chip">
+            <span className="todo-dot" />
+            <Bi className="todo-gloss" text={ui('stillToDo', lang)} />
+          </span>
         </span>
       )}
     </header>
@@ -230,61 +234,52 @@ const unitNumber = (u: number) => String(u + 1).padStart(2, '0');
 const lessonCode = (u: number, i: number) => `${u + 1}.${i + 1}`;
 
 /**
- * "Herhaal vandaag" on the path, in three states: words due (tap to review), done today (a GEDAAN
- * stamp and how many words come tomorrow, plus a small "extra ronde" when words are left over),
- * or the first words come back tomorrow (after the first lesson).
+ * "Herhaal vandaag" on the path: one compact card (about 72 px), so the next lesson's Start stays
+ * in view. Words due: the calendar, the number big, "Review today" in the help language (English
+ * small) and a chevron; the whole card starts the review. Done today: a calm green check badge,
+ * "Done for today", and a real "Extra round" button when words are left over. After the first
+ * lesson: "Tomorrow your first words come back". The Dutch name is in the spoken label only; no
+ * "label: n" strings, so nothing wraps or reorders in right-to-left text.
  */
 function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: HelpLanguage; onDaily?: () => void }) {
+  const rtl = lang?.dir === 'rtl';
   if (card.state === 'due') {
     return (
-      <button type="button" className="daily-card" onClick={onDaily}>
+      <button
+        type="button"
+        className="daily-card daily-due"
+        dir={rtl ? 'rtl' : undefined}
+        onClick={onDaily}
+        aria-label={`Herhaal vandaag · ${ui('reviewToday').en}: ${fillN(ui('reviewTodayN'), card.due).en}`}
+      >
         <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
-        <span className="daily-text">
-          <span className="daily-nl" lang="nl">Herhaal vandaag</span>
-          <Bi className="daily-title" text={ui('reviewToday', lang)} />
-          <Bi className="daily-n" text={fillN(ui('reviewTodayN', lang), card.due)} />
-        </span>
-        <ChevronIcon size={24} className="daily-go" />
+        <span className="daily-n" aria-hidden>{card.due}</span>
+        <Bi className="daily-title" text={ui('reviewToday', lang)} />
+        <ChevronIcon size={26} className="daily-go" />
       </button>
     );
   }
   const done = card.state === 'done';
+  const extra = done && card.extra > 0 && onDaily;
   return (
-    <div className={`daily-card daily-${card.state}`} role="group" aria-label={`Herhaal vandaag · ${ui('reviewToday').en}`}>
-      <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
-      <span className="daily-text">
-        <span className="daily-nl" lang="nl">Herhaal vandaag</span>
-        {done ? (
-          <>
-            <span className="sr-only">{ui('reviewDone').en}. </span>
-            {card.tomorrow > 0 ? (
-              <>
-                <span className="daily-tomorrow" lang="nl">Morgen: {card.tomorrow} {card.tomorrow === 1 ? 'woord' : 'woorden'}</span>
-                <Bi className="daily-n" text={fillN(ui('tomorrowN', lang), card.tomorrow)} />
-              </>
-            ) : (
-              <Bi className="daily-title" text={ui('reviewDone', lang)} />
-            )}
-            {card.extra > 0 && onDaily && (
-              <button type="button" className="daily-extra" onClick={onDaily}>
-                <span lang="nl">Extra ronde</span>
-                <Bi className="daily-extra-gloss" text={ui('extraRound', lang)} />
-                <ChevronIcon size={16} />
-              </button>
-            )}
-          </>
-        ) : (
-          <>
-            <span className="daily-tomorrow" lang="nl">Morgen komen je eerste woorden terug</span>
-            <Bi className="daily-n" text={ui('firstWordsTomorrow', lang)} />
-          </>
-        )}
-      </span>
-      {done && (
-        <span className="stamp daily-stamp" aria-hidden>
-          <span className="stamp-word" lang="nl">Gedaan</span>
-          <span className="stamp-sub">✓</span>
-        </span>
+    <div
+      className={`daily-card daily-${card.state}`}
+      dir={rtl ? 'rtl' : undefined}
+      role="group"
+      aria-label={`Herhaal vandaag · ${ui('reviewToday').en}${done && card.tomorrow > 0 ? ` · ${fillN(ui('tomorrowN'), card.tomorrow).en}` : ''}`}
+    >
+      {done ? (
+        // A calm badge, not a stamp: the review is done for today.
+        <span className="daily-icon daily-badge" aria-hidden><CheckIcon size={26} /></span>
+      ) : (
+        <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
+      )}
+      <Bi className="daily-title" text={ui(done ? 'reviewDone' : 'firstWordsTomorrow', lang)} />
+      {extra && (
+        <button type="button" className="btn daily-extra" onClick={onDaily}>
+          <Bi className="daily-extra-label" text={ui('extraRound', lang)} />
+          <ChevronIcon size={18} />
+        </button>
       )}
     </div>
   );
@@ -327,12 +322,27 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
     if (!focusUnit && !arrived) return;
     const still = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     const t = window.setTimeout(() => {
+      // The sticky top bar covers the top of the screen, the bottom bar its foot: every target
+      // is measured against the space between them, so a unit's header never hides under the bar.
+      const top = document.querySelector('.topbar')?.getBoundingClientRect().bottom ?? 0;
+      const foot = document.querySelector('.bottom-nav')?.getBoundingClientRect().top ?? window.innerHeight;
+      const behavior: ScrollBehavior = still ? 'auto' : 'smooth';
       if (focusUnit) {
-        document.getElementById(`unit-${focusUnit.slice(2)}`)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        const head = document.getElementById(`unit-${focusUnit.slice(2)}`);
+        if (head) window.scrollBy({ top: head.getBoundingClientRect().top - top - 8, behavior });
         onFocused?.();
       } else {
-        // After a lesson: the next lesson in view (not the top of the path).
-        pathRef.current?.querySelector('.bay-now')?.scrollIntoView({ block: 'center', behavior: still ? 'auto' : 'smooth' });
+        // After a lesson: the next lesson in view (not the top of the path), centred in the free
+        // space; when its unit's header fits above it too, that header is shown in full.
+        const bay = pathRef.current?.querySelector<HTMLElement>('.bay-now');
+        const head = bay?.closest('.unit')?.querySelector<HTMLElement>('.unit-head');
+        if (bay) {
+          const b = bay.getBoundingClientRect();
+          let by = b.top + b.height / 2 - (top + foot) / 2;
+          const h = head?.getBoundingClientRect();
+          if (h && h.top - by < top + 8 && b.bottom - (h.top - top - 8) <= foot - 8) by = h.top - top - 8;
+          window.scrollBy({ top: by, behavior });
+        }
         onArrived?.();
       }
     }, 80);
@@ -694,6 +704,8 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
       {/* Preview: settings work as usual; unlocking the full version sits below them. */}
       {access === 'preview' && onAccess && <UpgradeCard lang={lang} onAccess={onAccess} />}
       <ReminderCard lang={lang} />
+      {/* Also offered once after the first day's milestone; always here. */}
+      <InstallCard lang={lang} />
       {onRestore && <BackupCard progress={progress} lang={lang} onRestore={onRestore} />}
       {onCertificate && <CertificatesCard progress={progress} lang={lang} onOpen={onCertificate} />}
       <CountingCard lang={lang} />
@@ -816,7 +828,7 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
       <div className="stat-card-head"><Bi text={label} /></div>
       <div className="stat-card-body" aria-hidden>
         {icon}
-        <span className="stat-card-value">{value}</span>
+        <span className="stat-card-value" dir="ltr">{value}</span>
       </div>
       {foot && <Bi className="stat-card-foot" text={foot} />}
       {badge}
@@ -829,8 +841,9 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   repeated?: number;
   /** After today's review: how many words went up a box ("N woorden sterker"). */
   stronger?: number;
-  /** The next lesson on the course, for the "Volgende:" line. */
-  next?: Bilingual;
+  /** The next lesson on the course (its title, and its id for the picture), shown as an arrow,
+   *  the lesson's picture and its title. */
+  next?: Bilingual & { id?: string };
   /** Graded exercises right the first time, out of all graded ones. */
   right: number;
   total: number;
@@ -862,6 +875,9 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
     return () => window.removeEventListener('keydown', onKey);
   }, [onDone]);
   const perfect = total > 0 && right === total;
+  const rtl = lang?.dir === 'rtl';
+  // The next lesson's first word with a picture, as on its card on the path.
+  const nextPic = next?.id ? findLesson(next.id)?.lesson.words.find(hasPicture) : undefined;
   return (
     <div className="player result-screen">
       <main className="player-body result">
@@ -874,7 +890,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           </span>
         </div>
         <h1 className="result-title"><Bi text={ui('lessonComplete', lang)} /></h1>
-        <div className="result-stats">
+        <div className="result-stats" dir={rtl ? 'rtl' : undefined}>
           <StatCard
             tone="green"
             label={ui('rightFirstTime', lang)}
@@ -882,8 +898,10 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             value={`${shownRight} / ${total}`}
             final={`${right} / ${total}`}
             done={shownRight === right}
+            // Every answer right the first time: a blue-ink rubber stamp inside the card, and
+            // "No mistakes" in the help language in the card's free space.
+            foot={perfect ? ui('noMistakes', lang) : undefined}
             badge={perfect ? (
-              // Every answer right the first time: a red-ink rubber stamp on the card.
               <span className="stamp flawless-stamp" aria-hidden>
                 <span className="stamp-word" lang="nl">Foutloos</span>
               </span>
@@ -894,27 +912,24 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             label={repeated !== undefined ? ui('reviewToday', lang) : ui('newWords', lang)}
             icon={repeated !== undefined ? <CalendarIcon size={30} /> : <CrateIcon size={30} />}
             value={repeated !== undefined ? `${repeated}` : `+${shownNew}`}
-            final={repeated !== undefined ? `${repeated}` : `+${newWords}`}
+            // The total is said, not printed: the top bar's crate shows it on the path.
+            final={`${repeated !== undefined ? repeated : `+${newWords}`} · ${fill(ui('wordsLearnedN'), words).en}`}
             done={repeated !== undefined || shownNew === newWords}
-            foot={fill(ui('wordsLearnedN', lang), words)}
           />
         </div>
-        {perfect && (
-          <p className="result-line result-flawless">
-            <span className="sr-only" lang="nl">Foutloos: </span>
-            <Bi text={ui('noMistakes', lang)} />
-          </p>
-        )}
+        {/* After the review: how many words got stronger, the number big, the help language
+            large and English small (no Dutch sentence). */}
         {stronger !== undefined && stronger > 0 && (
-          <p className="result-line result-stronger">
-            <span className="stronger-arrow" aria-hidden>▲</span>
-            <span lang="nl">{stronger} {stronger === 1 ? 'woord' : 'woorden'} sterker</span>
-            <Bi text={fill(ui('wordsStrongerN', lang), stronger)} />
+          <p className="result-line result-stronger" aria-label={fill(ui('wordsStrongerN'), stronger).en}>
+            <span className="stronger-n" aria-hidden><span className="stronger-arrow">▲</span>{stronger}</span>
+            <Bi text={withoutN(ui('wordsStrongerN', lang))} />
           </p>
         )}
+        {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}
         {next && (
-          <p className="result-line result-next">
-            <span className="result-next-nl" lang="nl">Volgende:</span>
+          <p className="result-line result-next" dir={rtl ? 'rtl' : undefined} aria-label={`${ui('nextUp').en}: ${next.en}`}>
+            <span className="result-next-arrow" aria-hidden><ArrowIcon size={22} /></span>
+            {nextPic && <WordPicture className="result-next-pic" id={nextPic.id} emoji={nextPic.emoji} size={44} />}
             <Bi className="result-next-title" text={next} />
           </p>
         )}
@@ -922,8 +937,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
       <footer className="player-foot">
         <div className="foot-inner">
           <div className="foot-actions">
-            <button type="button" className="btn btn-go btn-primary result-go" onClick={done}>
-              {ui('continue', lang).en}
+            <button type="button" className="btn btn-go btn-primary result-go" onClick={done} dir={rtl ? 'rtl' : undefined}>
+              <Bi className="btn-label" text={ui('continue', lang)} />
               <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
             </button>
           </div>

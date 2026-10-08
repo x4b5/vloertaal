@@ -16,7 +16,7 @@ import { LogoMark } from './Logo';
  * - BackupCard: "Bewaar je voortgang", progress as a .json file to download and put back.
  */
 
-/** A card's head: the Dutch line big, the help language (and English) under it. */
+/** A card's head: the Dutch name as a small label, the help language large and English small. */
 function CardHead({ nl, text }: { nl: string; text: ReturnType<typeof ui> }) {
   return (
     <div className="keep-head">
@@ -63,7 +63,7 @@ export function InstallCard({ lang }: { lang?: HelpLanguage }) {
   return (
     <section className="keep-card install-card" aria-label={ui('installTitle').en}>
       <span className="keep-icon" aria-hidden><LogoMark size={44} /></span>
-      <CardHead nl="Zet Vloertaal op je beginscherm" text={ui('installTitle', lang)} />
+      <CardHead nl="Zet Vloertaal op je begin&shy;scherm" text={ui('installTitle', lang)} />
       <p className="keep-hint"><Bi text={ui('installHint', lang)} /></p>
       {added ? (
         <p className="keep-ok"><CheckIcon size={20} /><span lang="nl">Klaar!</span></p>

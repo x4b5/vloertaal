@@ -37,7 +37,7 @@ interface Env {
 const realEnv = (): Env => ({
   prod: Boolean(import.meta.env.PROD),
   host: typeof location === 'undefined' ? '' : location.hostname,
-  dnt: typeof navigator !== 'undefined' && (navigator.doNotTrack === '1' || (window as { doNotTrack?: string }).doNotTrack === '1'),
+  dnt: typeof navigator !== 'undefined' && (navigator.doNotTrack === '1' || (globalThis as { doNotTrack?: string }).doNotTrack === '1'),
 });
 
 let envOverride: Partial<Env> | null = null;

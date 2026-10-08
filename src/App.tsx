@@ -357,7 +357,7 @@ export default function App() {
 
 function nextTitle(id: string, lang: ReturnType<typeof getHelpLanguage>) {
   const found = findLesson(id);
-  return found ? gloss(id, found.lesson.title, lang) : undefined;
+  return found ? { ...gloss(id, found.lesson.title, lang), id } : undefined;
 }
 
 function adminRequested(): boolean {

@@ -43,7 +43,7 @@ function Seal({ unitNo }: { unitNo: string }) {
       <circle cx="60" cy="60" r="40" fill="none" stroke="currentColor" strokeWidth="2" />
       <path id={ring} d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1-94 0" fill="none" />
       <text fontFamily="'Lexend Variable', Lexend, sans-serif" fontWeight={800} fontSize="7.4" letterSpacing="0.9" fill="currentColor">
-        <textPath href={`#${ring}`} startOffset="0">{SEAL_RING}</textPath>
+        <textPath href={`#${ring}`} startOffset="0" textLength={2 * Math.PI * 47 - 2} lengthAdjust="spacing">{SEAL_RING}</textPath>
       </text>
       <path d="M48 38.5l7.5 7.5 15-15" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
       <text x="60" y="70" textAnchor="middle" fontFamily="'Big Shoulders Stencil Display', sans-serif" fontWeight={800} fontSize="21" letterSpacing="0.6" fill="currentColor">BEHAALD</text>
@@ -293,7 +293,8 @@ export function CertEarned({ unit, day, lang, onView, onLater }: {
           <div className="foot-actions cert-earned-actions">
             <button type="button" className="btn btn-ghost cert-later" onClick={onLater}>
               <span lang="nl">Later</span>
-              <Bi className="cert-btn-gloss" text={ui('certLater', lang)} />
+              {/* "Later" is the same word in English: only the help language is added. */}
+              {lang && <Bi className="cert-btn-gloss" text={ui('certLater', lang)} />}
             </button>
             <button type="button" className="btn btn-go btn-primary cert-view" onClick={onView}>
               <span className="cert-btn-text">
@@ -352,6 +353,7 @@ export function CertificatesCard({ progress, lang, onOpen }: {
                 <span className="cert-row-no" aria-hidden>{String(unitIndex(unit) + 1).padStart(2, '0')}</span>
                 <span className="cert-row-text">
                   <span className="cert-row-nl" lang="nl">{unit.titleNl}</span>
+                  {lang?.gloss[unit.id] && <span className="cert-row-help" lang={lang.code} dir={lang.dir}>{lang.gloss[unit.id]}</span>}
                   <span className="cert-row-date" lang="nl">{certDate(day)}</span>
                 </span>
                 <ChevronIcon size={22} />

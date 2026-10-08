@@ -37,6 +37,11 @@ export const ChevronIcon = (p: IconProps) => (
   <Svg {...p} className={`icon-fwd ${p.className ?? ''}`}><path d="M9 5l7 7-7 7" {...stroke} /></Svg>
 );
 
+/** A forward arrow ("next"): mirrored in right-to-left text like the chevron. */
+export const ArrowIcon = (p: IconProps) => (
+  <Svg {...p} className={`icon-fwd ${p.className ?? ''}`}><path d="M4.5 12h14M13 6l6 6-6 6" {...stroke} /></Svg>
+);
+
 export const CheckIcon = (p: IconProps) => (
   <Svg {...p}><path d="M5 12.5l4.5 4.5L19 7.5" {...stroke} strokeWidth={3.4} /></Svg>
 );

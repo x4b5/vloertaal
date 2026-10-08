@@ -48,7 +48,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       <Result
         right={right} total={11} newWords={6} words={24} lang={l} onDone={() => {}}
         repeated={review ? 8 : undefined} stronger={review ? 5 : undefined}
-        next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l } : undefined}
+        next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l, id: next.id } : undefined}
       />
     );
   }
@@ -65,10 +65,10 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The streak stopped at 12 (record 21), shown once on the next open.
   if (shot === 'stopped') return <StreakStopped streak={12} best={21} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
-  // Certificates: /?shot=certificate&unit=u.safety&name=Ali%20Hassan (name=ask: asked the first
+  // Certificates: /?shot=certificate&cu=u.safety&name=Ali%20Hassan (name=ask: asked the first
   // time; name=none: without a name); /?shot=cert-earned is the one-time moment.
   if (shot === 'certificate' || shot === 'cert-earned') {
-    const unit = findUnit(q.get('unit') ?? 'u.firstday') ?? units[0];
+    const unit = findUnit(q.get('cu') ?? 'u.firstday') ?? units[0];
     const name = q.get('name');
     try {
       if (name === 'ask') localStorage.removeItem('vloertaal:cert-name');

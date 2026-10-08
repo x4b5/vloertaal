@@ -1879,21 +1879,25 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 .coach-share .icon { color: var(--right-ink); }
 
-/* "Herhaal vandaag": the daily review, a calm card at the top of the path. */
+/* "Herhaal vandaag": the daily review, one compact card (about 72 px) at the top of the path:
+   icon, the number big, one help-language line (English small) and a chevron. */
 .daily-card {
-  display: flex; align-items: center; gap: 14px; width: 100%; margin: 4px 0 28px; padding: 14px 16px;
+  display: flex; align-items: center; gap: 12px; width: 100%; min-height: 72px; margin: 4px 0 24px; padding: 8px 14px 8px 10px;
   text-align: start; color: var(--ink); background: var(--card);
   border: 2px solid var(--ink-3); border-radius: var(--radius);
 }
 .daily-card:hover { border-color: var(--ink); }
 .daily-icon {
-  flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
+  flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
   background: var(--yellow); color: #1e2226;
 }
-.daily-text { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.daily-nl { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
-.daily-title { font-size: 1.15rem; font-weight: 650; line-height: 1.2; }
-.daily-n { font-size: 0.95rem; color: var(--muted); }
+.daily-n {
+  flex: none; min-width: 1ch; font-family: var(--stencil); font-weight: 800; font-size: 2.6rem; line-height: 1;
+  color: var(--ink); font-variant-numeric: tabular-nums;
+}
+.daily-title { flex: 1; min-width: 0; font-size: 1.15rem; font-weight: 650; line-height: 1.2; }
+.daily-title.bi-swap > .bi-help { --help-size: 0.78em; font-weight: 500; color: var(--muted); }
+.daily-title .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.08em; }
 .daily-go { flex: none; color: var(--ink-3); }
 
 /* Route: a unit's picture (and a done lesson's picture) grows a little under the mouse. */
@@ -1919,42 +1923,36 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .flame-icon-out { color: var(--ink-3); }
 .stat-streak .flame-icon-lit { animation: flame-lit 0.5s var(--ease-pop) both; }
 @keyframes flame-lit { from { transform: scale(0.4); opacity: 0; } }
-/* "VANDAAG NOG": a small stencil tag on its own line under the stats, with the gloss. */
+/* "Still to do today": a calm chip on its own line under the stats (not a stamp). */
 .topbar:has(.todo-tag) { flex-wrap: wrap; row-gap: 2px; }
 .todo-tag {
-  order: 10; flex: 1 0 100%; display: flex; align-items: center; justify-content: flex-end; gap: 8px;
-  margin-top: -6px; min-width: 0;
+  order: 10; flex: 1 0 100%; display: flex; align-items: center; justify-content: flex-end;
+  margin-top: -4px; min-width: 0;
 }
-.todo-nl {
-  flex: none; padding: 3px 8px 2px; border: 2px solid #1e2226; border-radius: 3px;
-  background: var(--yellow); color: #1e2226; rotate: -2deg;
-  font-family: var(--stencil); font-weight: 800; font-size: 0.95rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase;
+.todo-chip {
+  display: inline-flex; align-items: center; gap: 7px; min-width: 0; padding: 3px 10px 3px 8px;
+  border: 1.5px solid var(--line); border-radius: 999px; background: var(--card);
 }
-.todo-gloss { flex: 0 1 auto; min-width: 0; font-size: 0.85rem; color: var(--muted); }
+.todo-dot { flex: none; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--yellow-dark); }
+.todo-gloss { flex: 0 1 auto; min-width: 0; font-size: 0.85rem; font-weight: 600; color: var(--ink-2); }
 .todo-gloss .bi-en { line-height: 1.15; }
 .todo-gloss.bi-swap .bi-help { display: none; }
 
 /* "Herhaal vandaag": done today (GEDAAN stamp) and "first words tomorrow" stay on the path. */
-.daily-done, .daily-first { position: relative; border-color: var(--line); }
+.daily-done, .daily-first { border-color: var(--line); }
 .daily-done:hover, .daily-first:hover { border-color: var(--line); }
-.daily-done { padding-inline-end: 70px; }
-.daily-done .daily-icon, .daily-first .daily-icon { background: var(--track); }
-.daily-tomorrow { font-size: 1.1rem; font-weight: 650; line-height: 1.2; }
-.daily-stamp {
-  top: -16px; right: auto; inset-inline-end: -10px; width: 76px; height: 76px; margin-top: 0; rotate: -10deg;
-  color: var(--right-ink); background: var(--card);
-}
-.daily-stamp .stamp-word { font-size: 1.15rem; }
+.daily-first .daily-icon { background: var(--track); }
+.daily-first .daily-title, .daily-done .daily-title { font-size: 1.05rem; }
+/* Done today: a calm green check badge (no rotated stamp, nothing over the edge). */
+.daily-badge { background: var(--green-bg); color: var(--right-ink); box-shadow: inset 0 0 0 2px var(--right-ink); }
+/* "Extra round": a real button (44 px+), the help language large and English small. */
 .daily-extra {
-  align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; margin-top: 4px;
-  padding: 4px 0; background: none; border: 0; color: var(--ink-2); font-weight: 600; font-size: 0.9rem;
+  flex: none; min-height: 48px; max-width: 46%; padding: 4px 10px 4px 12px; gap: 6px;
+  background: var(--card); color: var(--ink); border: 2px solid var(--edge); border-radius: 10px; font-size: 0.95rem;
 }
-.daily-extra > span[lang='nl'] { text-decoration: underline; text-underline-offset: 3px; }
-.daily-extra { flex-wrap: wrap; text-align: start; }
-.daily-extra .bi { flex-direction: row; gap: 6px; }
-.daily-extra-gloss .bi-en { font-weight: 400; color: var(--muted); text-decoration: none; display: inline-block; }
-.daily-extra-gloss .bi-help { display: none; }
-.daily-extra:hover { color: var(--ink); }
+.daily-extra-label { align-items: flex-start; line-height: 1.15; min-width: 0; }
+.daily-extra-label.bi-swap > .bi-help { --help-size: 0.78em; font-weight: 500; color: var(--muted); }
+.daily-extra:hover { background: color-mix(in srgb, var(--yellow) 18%, var(--card)); }
 
 /* Back on the path after a lesson: the done marker is stamped in, the next lesson pops in. */
 .bay-arrived .bay-marker { animation: bay-stamp 0.42s 0.35s var(--ease-pop) both; }
@@ -1978,11 +1976,14 @@ svg.emoji-xl { width: 140px; height: 140px; }
 @media (prefers-reduced-motion: reduce) { .result-go { animation: none; } }
 /* FOUTLOOS: a blue-ink rubber stamp on the "right the first time" card. */
 .stat-card:has(.flawless-stamp) { position: relative; }
+/* Inside the card's bottom corner (never over its edge), beside "No mistakes". */
 .flawless-stamp {
-  top: auto; bottom: -18px; right: -12px; margin-top: 0; width: 78px; height: 78px; rotate: 14deg;
+  top: auto; bottom: 8px; right: auto; inset-inline-end: 8px; margin-top: 0; width: 62px; height: 62px; rotate: 12deg;
   color: var(--stamp-ink); animation-delay: 1.45s;
 }
-.flawless-stamp .stamp-word { font-size: 1.05rem; letter-spacing: 0.01em; }
+.flawless-stamp .stamp-word { font-size: 0.82rem; letter-spacing: 0; }
+.stat-card:has(.flawless-stamp) .stat-card-foot { min-height: 54px; padding-inline-end: 62px; color: var(--stamp-ink); }
+.stat-card:has(.flawless-stamp) .stat-card-foot .bi-help { color: var(--muted); }
 .result-line {
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 8px;
   margin: 6px 0 0; max-width: 440px; font-weight: 650; animation: result-go 0.4s 1.2s var(--ease-out) both;
@@ -1990,45 +1991,45 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .result-line .bi-help { --help-size: 0.85em; }
 .result-flawless { color: var(--stamp-ink); }
 .result-flawless .bi-help { color: var(--muted); }
-.result-stronger { font-size: 1.1rem; color: var(--right-ink); }
-.result-stronger .bi { flex-basis: 100%; font-weight: 500; color: var(--ink-2); }
-.stronger-arrow { font-size: 0.85em; }
-.result-next { margin-top: 14px; font-size: 1rem; color: var(--ink); }
-.result-next-nl {
-  padding: 3px 8px 2px; border-radius: 3px; background: var(--tag-bg); color: var(--tag-ink);
-  font-family: var(--stencil); font-weight: 800; font-size: 1rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase;
-}
-.result-next-title { font-weight: 650; }
-.result-next-title .bi-help { font-weight: 400; }
+/* After the review: ▲ and the number big in green, "words stronger" in the help language. */
+.result-stronger { flex-wrap: nowrap; gap: 12px; font-size: 1.15rem; color: var(--ink); }
+.stronger-n { display: inline-flex; align-items: center; gap: 4px; font-family: var(--stencil); font-weight: 800; font-size: 2.2rem; line-height: 1; color: var(--right-ink); }
+.stronger-arrow { font-size: 0.5em; }
+.result-stronger .bi { align-items: flex-start; text-align: start; }
+.result-stronger .bi-help { --help-size: 0.78em; font-weight: 500; color: var(--muted); }
+/* Next: an arrow, the next lesson's picture and its title. */
+.result-next { flex-wrap: nowrap; gap: 10px; margin-top: 16px; font-size: 1.05rem; color: var(--ink); }
+.result-next-arrow { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--tag-bg); color: var(--tag-ink); }
+.result-next-pic { flex: none; width: 44px; height: 44px; }
+.result-next-title { align-items: flex-start; text-align: start; font-weight: 650; min-width: 0; }
+.result-next-title .bi-help { font-weight: 400; color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { .result-line { animation: none; } }
 
 /* Milestone: tier stamp on the streak card, the work week, record and free days. */
+/* The board's last column: the tier stamp (when there is one) over "dagen". */
+.streak-unit-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; align-self: stretch; }
+.streak-unit-col .streak-unit { align-self: auto; }
 .tier-stamp {
-  position: absolute; top: -20px; inset-inline-end: -16px; z-index: 1;
+  position: relative; z-index: 1;
   display: grid; place-items: center; padding: 5px 9px 4px;
   border: 3px solid currentColor; border-radius: 6px; box-shadow: inset 0 0 0 2px var(--card), inset 0 0 0 3.5px currentColor;
   background: color-mix(in srgb, var(--card) 70%, transparent); color: var(--stamp-ink); rotate: 9deg;
   font-family: var(--stencil); font-weight: 800; font-size: 1.35rem; line-height: 1; text-transform: uppercase; white-space: nowrap;
   animation: stamp-in 0.25s 1.15s cubic-bezier(0.3, 1.4, 0.6, 1) both;
 }
-.tier-gloss { margin: -4px 0 4px; font-weight: 650; color: var(--stamp-ink); }
-.tier-gloss .bi-help { color: var(--muted); font-weight: 400; }
 
-.week { width: 100%; max-width: 420px; margin: 20px 0 0; }
-.week-head { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: 2px 10px; margin-bottom: 10px; }
-.week-nl {
-  font-family: var(--stencil); font-weight: 800; font-size: 1.15rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2);
-}
+.week { width: 100%; max-width: 420px; margin: 22px 0 0; }
 .week-gloss { font-size: 0.9rem; color: var(--muted); }
 .milestone .week-gloss.bi { flex-direction: row; flex-wrap: wrap; gap: 0 6px; align-items: baseline; }
 .week-row { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
 .week-day { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; }
 .week-letter { font-size: 0.95rem; font-weight: 650; color: var(--ink-2); line-height: 1.2; }
+.week-letter:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.05rem; }
+/* An unlit day: the border at 3:1 or more against the card and the floor, in both themes. */
 .week-tile {
   display: grid; place-items: center; width: 100%; max-width: 48px; aspect-ratio: 1;
-  background: var(--card); border: 2px solid var(--line); border-radius: 6px;
+  background: var(--card); border: 2px solid var(--choice-edge); border-radius: 6px;
 }
-.week-nl-day { font-size: 0.72rem; font-weight: 600; color: var(--faint); text-transform: uppercase; letter-spacing: 0.04em; }
 .week-stamp {
   display: grid; place-items: center; width: 82%; aspect-ratio: 1; border-radius: 50%;
   background: var(--yellow); color: #1e2226; border: 2px solid #1e2226; rotate: -10deg;
@@ -2036,7 +2037,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 .week-done .week-tile { border-color: var(--edge); }
 .week-rest .week-tile { background: var(--track); border-color: var(--track); color: var(--ink-3); }
-.week-today .week-letter, .week-today .week-nl-day { color: var(--ink); }
+.week-today .week-letter { color: var(--ink); }
 .week-today .week-tile { border-width: 2.5px; border-color: var(--edge); animation: week-pulse 0.9s 1.3s var(--ease-out) 1 both; }
 .week-today .week-stamp { animation: stamp-in 0.25s 1.1s cubic-bezier(0.3, 1.4, 0.6, 1) both; }
 @keyframes week-pulse {
@@ -2052,12 +2053,24 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .fact-tag {
   display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px 3px; border-radius: 3px;
   background: var(--tag-bg); color: var(--tag-ink);
-  font-family: var(--stencil); font-weight: 800; font-size: 1.15rem; line-height: 1; letter-spacing: 0.04em; text-transform: uppercase;
+  font-family: var(--stencil); font-weight: 800; font-size: 1.15rem; line-height: 1; letter-spacing: 0.04em;
 }
 .fact-free .icon { margin-top: -2px; }
-.fact-gloss { font-size: 0.9rem; color: var(--ink-2); max-width: 26em; }
+.fact-gloss { font-size: 0.95rem; font-weight: 600; color: var(--ink); max-width: 26em; line-height: 1.3; }
+.fact-gloss.bi-swap > .bi-help { --help-size: 0.82em; font-weight: 400; color: var(--muted); }
 .milestone .fact-gloss.bi { align-items: center; }
-.milestone-keep { display: flex; flex-direction: column; gap: 18px; width: 100%; max-width: 440px; margin-top: 26px; text-align: start; }
+.milestone-keep { display: flex; flex-direction: column; gap: 18px; width: 100%; max-width: 440px; margin-top: 18px; text-align: start; }
+/* Room under the last line, so the record is never under the pinned Continue. */
+.milestone { padding-bottom: 12px; }
+/* Short screens (360×640 and the like): a smaller podium, so the record stays above Continue. */
+@media (max-height: 760px) {
+  .milestone .streak-hero { width: min(170px, 46vw); }
+  .milestone .streak-count { margin: 10px 0 8px; }
+  .milestone .streak-num { font-size: 4.6rem; }
+  .milestone .week { margin-top: 14px; }
+}
+/* The follow-up screen after day 1: Bram waves, then the two cards. */
+.keep-hero { display: flex; justify-content: center; }
 @media (prefers-reduced-motion: reduce) {
   .tier-stamp, .week-today .week-tile, .week-today .week-stamp { animation: none; }
 }
@@ -2068,9 +2081,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .stopped-count { rotate: 0deg; animation: none; box-shadow: 5px 5px 0 var(--line); }
 .stopped-count .streak-num { font-size: 4.5rem; color: var(--ink-3); }
 .stopped-count .streak-unit { font-size: 1.5rem; padding-bottom: 6px; }
-.stopped-nl { display: block; }
-.streak-stopped .streak-line .bi { margin-top: 10px; font-size: 0.78em; font-weight: 500; }
-.streak-stopped .streak-line .bi-help { font-weight: 400; }
+.streak-stopped .streak-line { font-size: 1.3rem; }
 
 /* Cards that keep the habit and the progress: printed labels, like the result's stat cards. */
 .keep-card {
@@ -2082,15 +2093,19 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .keep-card .bi { align-items: stretch; }
 .keep-card .bi-help { text-align: start; }
 .keep-head { display: flex; flex-direction: column; gap: 2px; }
-.keep-nl { font-size: 1.2rem; font-weight: 700; line-height: 1.2; color: var(--ink-strong); }
-.keep-gloss { font-size: 0.95rem; color: var(--ink-2); }
+/* The Dutch name small (a label to learn), the help language large, English small. */
+.keep-nl { font-size: 0.85rem; font-weight: 650; line-height: 1.25; color: var(--muted); hyphens: manual; overflow-wrap: normal; }
+.keep-gloss { font-size: 1.2rem; font-weight: 700; line-height: 1.25; color: var(--ink-strong); }
+.keep-gloss.bi-swap > .bi-help { --help-size: 0.74em; font-weight: 500; color: var(--ink-2); }
 .keep-hint { margin: 0; font-size: 0.9rem; line-height: 1.4; color: var(--muted); }
 .keep-ok { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--right-ink); font-weight: 650; }
 .keep-note { margin: 0; }
 .keep-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .keep-btn { flex-direction: column; gap: 0; width: 100%; min-height: 58px; padding: 8px 12px; font-weight: 650; line-height: 1.2; }
 .keep-card .keep-btn .bi { align-items: center; }
-.keep-btn-gloss { font-size: 0.8rem; font-weight: 500; opacity: 0.9; }
+/* House rule: the help language large, the Dutch a small label (buttons, chips, "other time"). */
+.keep-btn > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; opacity: 0.9; }
+.keep-btn-gloss { font-size: 1.05rem; font-weight: 650; }
 .keep-btn-gloss.bi-swap .bi-help { display: none; }
 .keep-link {
   display: inline-flex; align-items: center; gap: 6px; align-self: center; min-height: 44px; padding: 4px 8px;
@@ -2112,8 +2127,9 @@ svg.emoji-xl { width: 140px; height: 140px; }
   font-family: var(--stencil); font-weight: 800; font-size: 1.25rem; line-height: 1; color: var(--ink-3);
 }
 .ios-pic { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--card); color: var(--ink); border: 2px solid var(--line); }
-.ios-nl { font-size: 0.85rem; font-weight: 650; line-height: 1.2; overflow-wrap: anywhere; }
-.ios-gloss { font-size: 0.78rem; color: var(--muted); }
+.ios-nl { order: 3; font-size: 0.74rem; font-weight: 500; line-height: 1.2; color: var(--muted); overflow-wrap: normal; hyphens: manual; }
+.ios-gloss { font-size: 0.9rem; font-weight: 650; color: var(--ink); }
+.ios-gloss.bi-swap > .bi-help { --help-size: 0.82em; font-weight: 500; color: var(--muted); }
 .keep-card .ios-gloss.bi { align-items: center; }
 .ios-gloss .bi-help { --help-min: 12px; }
 
@@ -2127,8 +2143,9 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .remind-chip:hover { border-color: var(--ink-3); }
 .remind-chip.picked { background: var(--yellow); color: #1e2226; border-color: #1e2226; }
 .remind-time { font-family: var(--stencil); font-weight: 800; font-size: 1.7rem; line-height: 1; font-variant-numeric: tabular-nums; }
-.remind-nl { font-size: 0.85rem; font-weight: 650; line-height: 1.2; }
-.remind-gloss { font-size: 0.78rem; color: var(--muted); }
+.remind-nl { order: 3; font-size: 0.74rem; font-weight: 500; line-height: 1.2; color: var(--muted); }
+.remind-gloss { font-size: 0.95rem; font-weight: 650; color: var(--ink); }
+.remind-gloss.bi-swap > .bi-help { --help-size: 0.8em; font-weight: 500; color: var(--muted); }
 .keep-card .remind-chip .bi { align-items: center; }
 .remind-chip.picked .remind-gloss, .remind-chip.picked .bi-help { color: #3f3a2c; }
 .remind-gloss .bi-help { --help-min: 12px; }
@@ -2138,6 +2155,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 .remind-own.picked { border-style: solid; border-color: var(--edge); }
 .remind-own-text { display: flex; flex-direction: column; gap: 1px; font-weight: 650; font-size: 0.95rem; min-width: 0; }
+.remind-own-text > span[lang='nl'] { order: 2; font-size: 0.78rem; font-weight: 500; color: var(--muted); }
 .remind-own input {
   flex: none; min-height: 44px; padding: 6px 10px; font: inherit; font-size: 1.15rem; font-weight: 650;
   color: var(--ink); background: var(--input-bg); border: 2px solid var(--line); border-radius: 8px;
@@ -2184,8 +2202,8 @@ svg.emoji-xl { width: 140px; height: 140px; }
 
 /* A Dutch line stacked over a right-to-left pair (cards, labels, headings): the whole stack
    starts on the right, so the eye does not jump from side to side. */
-:is(.hub-title, .phrase-sheet .sheet-title, .hub-text, .daily-text, .tip-badge-text, .phrase-text, .other-text, .keep-head, .remind-own-text, .sector-names):has(> .bi[dir='rtl']) { text-align: right; }
-:is(.daily-text, .phrase-text):has(> .bi[dir='rtl']) > * { align-self: stretch; }
+:is(.hub-title, .phrase-sheet .sheet-title, .hub-text, .daily-title, .tip-badge-text, .phrase-text, .other-text, .keep-head, .remind-own-text, .sector-names):has(> .bi[dir='rtl']) { text-align: right; }
+:is(.phrase-text):has(> .bi[dir='rtl']) > * { align-self: stretch; }
 .phrase-text { flex: 1; }
 /* The end block stays a square-ish block when a label wraps and the button grows taller. */
 .btn-block { max-width: 54px; }
@@ -2367,7 +2385,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .voice-row { flex-wrap: wrap; }
   .bay-now .bay-title { font-size: 1.2rem; }
   .full-only-note { padding-inline-start: 0; }
-  .daily-card { flex-wrap: wrap; padding: 12px; }
+  .daily-card { flex-wrap: wrap; }
+  .daily-extra { max-width: none; }
   /* Lesson */
   .player-top { flex-wrap: wrap; row-gap: 4px; padding-inline: 10px; }
   .player-top .bar-wrap { order: 5; flex-basis: 100%; }
@@ -2439,3 +2458,163 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .hub-card { gap: 10px; padding: 10px; }
   .hub-icon { width: 44px; height: 44px; }
 }
+
+/* ---- Retention ---- */
+/* Certificate (src/components/Certificate.tsx): A4 landscape, paper on a kraft border. It is a
+   printed document, so its colours stay the same in dark mode. Every size follows the sheet's
+   width (1cqw = 1/100), so the screen, print (297 mm) and the shared picture (src/lib/certCanvas.ts,
+   which mirrors these numbers) show the same layout. */
+#root:has(.cert-screen) { max-width: 980px; }
+.cert-frame {
+  container-type: inline-size; position: relative; width: 100%; aspect-ratio: 297 / 210;
+  background: #ebd6b5; border-radius: 4px; box-shadow: 5px 5px 0 var(--label-shadow);
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.cert {
+  position: absolute; inset: 2.4cqw; display: flex; flex-direction: column; padding: 3.4cqw 4.4cqw 2.4cqw;
+  background: #fffdf8; color: #1e2226; border: 0.32cqw solid #1e2226;
+  box-shadow: inset 0 0 0 0.7cqw #fffdf8, inset 0 0 0 0.85cqw #c8955b;
+  overflow: hidden; direction: ltr; text-align: left; line-height: 1.2;
+  font-family: 'Lexend Variable', Lexend, system-ui, sans-serif;
+}
+.cert-head { display: flex; align-items: center; gap: 2cqw; }
+.cert-logo { flex: none; width: 8.5cqw; height: 8.5cqw; }
+.cert-logo svg { display: block; width: 100%; height: 100%; }
+.cert-brand { display: flex; flex-direction: column; gap: 0.6cqw; min-width: 0; }
+.cert-kicker { font-family: var(--stencil); font-weight: 800; font-size: 4.2cqw; line-height: 1; letter-spacing: 0.06em; text-transform: uppercase; }
+.cert-sub { font-size: 1.5cqw; font-weight: 500; color: #4a5058; letter-spacing: 0.02em; }
+.cert-unit {
+  flex: none; margin-inline-start: auto; padding: 0.5cqw 1.4cqw; rotate: 2deg;
+  font-family: var(--stencil); font-weight: 800; font-size: 2.6cqw; line-height: 1.15; letter-spacing: 0.08em; text-transform: uppercase;
+  background: #ffc414; border: 0.25cqw solid #1e2226;
+}
+.cert-body { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; padding-top: 1.6cqw; }
+.cert-label { font-size: 1.15cqw; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #7e5428; }
+.cert-to { display: flex; align-items: baseline; gap: 1cqw; margin: 0 0 0.6cqw; }
+.cert-name { font-size: 3cqw; font-weight: 700; overflow-wrap: anywhere; }
+.cert-title { margin: 0; font-size: 6.4cqw; font-weight: 800; line-height: 1.02; letter-spacing: -0.02em; color: #1e2226; }
+.cert-title span {
+  padding: 0 0.1em; margin: 0 -0.1em;
+  background: linear-gradient(transparent 62%, #ffc414 62%, #ffc414 92%, transparent 92%);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.cert-titles { margin: 0.9cqw 0 0; font-size: 2cqw; font-weight: 500; line-height: 1.3; color: #4a5058; }
+.cert-dot { margin: 0 0.8cqw; }
+.cert-words { margin-top: 2.4cqw; }
+.cert-words .cert-label { display: block; margin-bottom: 0.8cqw; }
+.cert-words ul { display: flex; flex-wrap: wrap; gap: 0.8cqw; margin: 0; padding: 0; list-style: none; }
+.cert-words li {
+  padding: 0.45cqw 1.1cqw; font-size: 1.65cqw; font-weight: 600; line-height: 1.25;
+  background: #f6efe3; border: 0.16cqw solid #cfc8bc; border-radius: 0.5cqw;
+}
+.cert-meta { margin: 1.8cqw 0 0; font-size: 1.45cqw; font-weight: 500; color: #4a5058; }
+.cert-foot { position: relative; display: flex; align-items: flex-end; justify-content: space-between; min-height: 9cqw; }
+.cert-date { display: flex; flex-direction: column; gap: 0.8cqw; margin: 0; }
+.cert-date-v { font-size: 2.1cqw; font-weight: 700; }
+.cert-sign { position: relative; width: 30cqw; margin-inline-end: 9cqw; color: #1f4f9c; }
+.cert-signature { display: block; width: 100%; height: auto; margin-bottom: -0.4cqw; }
+.cert-rule { display: block; border-top: 0.18cqw solid #1e2226; }
+.cert-seal {
+  position: absolute; right: -2cqw; bottom: -3.4cqw; width: 16cqw; height: 16cqw;
+  color: #137a55; opacity: 0.9; rotate: -14deg; mix-blend-mode: multiply;
+}
+.cert-note { margin: 1.4cqw 0 0; text-align: center; font-size: 1.1cqw; font-weight: 500; letter-spacing: 0.04em; color: #6e737a; }
+
+/* The certificate screen: name (asked once), the sheet, Print / PDF and Share as picture. */
+.cert-screen .screen-head h1 { display: flex; flex-direction: column; }
+.cert-screen > .cert-frame { margin-top: 12px; }
+.cert-name-card { margin: 8px 0 22px; }
+.cert-name-input {
+  width: 100%; min-height: 54px; padding: 10px 14px; font: inherit; font-size: 1.15rem; font-weight: 600;
+  color: var(--ink); background: var(--input-bg); border: 2px solid var(--edge); border-radius: 10px;
+}
+.cert-practice { display: flex; flex-direction: column; gap: 2px; margin: 18px 0 0; font-size: 0.9rem; line-height: 1.35; color: var(--muted); }
+.cert-practice > span[lang='nl'] { font-weight: 650; color: var(--ink-2); }
+.cert-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+.cert-btn { justify-content: flex-start; gap: 12px; min-height: 66px; padding: 10px 14px; text-align: start; }
+.cert-btn > svg { flex: none; }
+.cert-btn-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.2; }
+.cert-btn-gloss { font-size: 0.8rem; font-weight: 500; opacity: 0.9; }
+.cert-btn-gloss.bi-swap .bi-help { display: none; }
+.btn-primary .cert-btn-gloss { opacity: 1; color: #3f3a2c; }
+.cert-saved { margin-top: 12px; }
+.cert-rename { display: flex; margin-top: 10px; }
+@media (max-width: 520px) {
+  .cert-actions { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* "Certificaat behaald": the milestone shell with Bram over the certificate. */
+.cert-earned-hero { display: flex; flex-direction: column; align-items: center; width: min(100%, 440px); }
+.cert-earned-bram { position: relative; z-index: 1; margin-bottom: -12px; }
+.cert-preview { rotate: -2deg; animation: cel-card 0.5s 0.3s cubic-bezier(0.3, 1.5, 0.6, 1) both; }
+.cert-earned-line { margin-top: 22px; }
+.cert-earned-nl { display: block; }
+.cert-earned-line .bi { margin-top: 8px; font-size: 0.72em; font-weight: 500; }
+.cert-earned-unit { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 10px 0 0; font-size: 1.05rem; font-weight: 650; }
+.cert-earned-hint { font-size: 0.95rem; font-weight: 400; color: var(--muted); }
+.cert-earned-actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 10px; }
+.milestone-foot .cert-earned-actions .btn { min-height: 62px; }
+.cert-later { flex-direction: column; gap: 0; padding: 8px 10px; }
+.cert-view .cert-btn-text { align-items: center; }
+@media (min-width: 640px) {
+  .cert-earned-actions { grid-template-columns: 180px 260px; justify-content: end; }
+}
+
+/* On a finished unit's sign: a calm chip, not a stamp. */
+.cert-badge {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; margin-top: 6px;
+  min-height: 40px; padding: 4px 8px 4px 10px; font-size: 0.88rem; font-weight: 650; line-height: 1;
+  color: var(--ink); background: var(--card); border: 1.5px solid var(--line); border-radius: 999px;
+}
+.cert-badge:hover { border-color: var(--ink-3); }
+.cert-badge > .icon:first-child { color: var(--right-ink); }
+.cert-badge > .icon:last-child { color: var(--faint); }
+
+/* "Mijn certificaten" (Settings). */
+.cert-list-card .keep-head { padding-inline-end: 44px; }
+.cert-list-icon { position: absolute; top: 14px; inset-inline-end: 14px; color: var(--right-ink); rotate: 6deg; }
+.cert-list { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.cert-row {
+  display: flex; align-items: center; gap: 12px; width: 100%; min-height: 58px; padding: 8px 10px; text-align: start;
+  color: var(--ink); background: var(--bg); border: 2px solid var(--line); border-radius: 10px;
+}
+.cert-row:hover { border-color: var(--ink-3); }
+.cert-row-no { flex: none; min-width: 1.5em; font-family: var(--stencil); font-weight: 800; font-size: 1.5rem; line-height: 1; color: var(--ink-3); }
+.cert-row-text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.cert-row-nl { font-weight: 650; line-height: 1.25; }
+.cert-row-date { font-size: 0.85rem; color: var(--muted); }
+
+/* "Anoniem meetellen" (Settings): a switch, on by default. */
+.count-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.count-switch {
+  flex: none; position: relative; width: 80px; height: 42px; padding: 0; direction: ltr;
+  background: var(--track); border: 2px solid var(--edge); border-radius: 999px;
+}
+.count-knob {
+  position: absolute; top: 4px; left: 4px; width: 30px; height: 30px; border-radius: 50%;
+  background: var(--card); border: 2px solid var(--edge); transition: transform 0.15s var(--ease-out);
+}
+.count-state { position: absolute; top: 50%; right: 10px; translate: 0 -50%; font-size: 0.8rem; font-weight: 700; line-height: 1; color: var(--muted); }
+.count-switch.on { background: var(--yellow); border-color: #1e2226; }
+.count-switch.on .count-knob { transform: translateX(38px); background: #1e2226; border-color: #1e2226; }
+.count-switch.on .count-state { right: auto; left: 12px; color: #1e2226; }
+
+/* Print / Save as PDF: only the certificate, one A4 landscape page. */
+@media print {
+  @page { size: A4 landscape; margin: 0; }
+  html, body { background: #fff !important; margin: 0 !important; padding: 0 !important; }
+  body:has(.cert-screen) > :not(#root) { display: none !important; }
+  #root:has(.cert-screen) { max-width: none; min-height: 0; margin: 0; }
+  .cert-screen { padding: 0 !important; }
+  .cert-screen > :not(.cert-frame) { display: none !important; }
+  .cert-screen > .cert-frame {
+    width: 297mm; height: 209.5mm; aspect-ratio: auto; margin: 0; border-radius: 0; box-shadow: none;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+}
+.cert-screen .screen-head h1 .bi { font-size: 0.62em; font-weight: 400; }
+.cert-rename .keep-link-gloss { font-size: 0.85em; font-weight: 500; }
+.cert-title { text-wrap: balance; }
+.cert-row-help { font-size: 0.95rem; line-height: 1.3; color: var(--ink-2); }
+.count-row .keep-head { flex: 1; min-width: 0; }
+.cert-row-help { text-align: left; }
