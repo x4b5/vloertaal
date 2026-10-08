@@ -4,18 +4,19 @@ import type { HelpLanguage } from '../i18n/types';
 import { type Access, checkPassword } from '../lib/access';
 import { Bi } from './Bi';
 import { ChevronIcon, EyeIcon, EyeOffIcon, LockIcon } from './Icons';
+import { Flag } from './Flags';
 import { LogoMark, Wordmark } from './Logo';
 
 /**
  * One password field with a show/hide toggle and a big yellow button. `accept` decides which
  * access levels count here (the upgrade card only takes the full-version password).
  */
-function PasswordForm({ onAccess, accept, lang, dutch }: {
+function PasswordForm({ onAccess, accept, lang, labelHidden = false }: {
   onAccess: (a: Access) => void;
   accept: (a: Access) => boolean;
   lang?: HelpLanguage;
-  /** Dutch button text and error (the gate, before any help language is chosen). */
-  dutch?: { button: string; error: string };
+  /** The screen's heading already says "Enter the password": the label is for screen readers. */
+  labelHidden?: boolean;
 }) {
   const [value, setValue] = useState('');
   const [show, setShow] = useState(false);
@@ -47,8 +48,8 @@ function PasswordForm({ onAccess, accept, lang, dutch }: {
 
   return (
     <form className="pw-form" onSubmit={submit} noValidate>
-      <label className="pw-label" htmlFor={id}>
-        {dutch ? <><span lang="nl">Wachtwoord</span> · Password</> : <Bi text={ui('password', lang)} />}
+      <label className={labelHidden ? 'sr-only' : 'pw-label'} htmlFor={id}>
+        <Bi text={ui('password', lang)} />
       </label>
       <div key={tries} className={`pw-field ${error ? 'pw-wrong' : ''}`}>
         <input
@@ -77,40 +78,49 @@ function PasswordForm({ onAccess, accept, lang, dutch }: {
       </div>
       {error && (
         <p id={`${id}-err`} className="pw-error" role="alert">
-          {dutch ? <><span lang="nl">{dutch.error}</span><span className="pw-error-en">{ui('wrongPassword').en}</span></> : <Bi text={ui('wrongPassword', lang)} />}
+          <Bi text={ui('wrongPassword', lang)} />
         </p>
       )}
       <button type="submit" className="btn btn-go btn-primary pw-go" disabled={!value.trim() || busy}>
-        {dutch ? <span className="bi"><span lang="nl">{dutch.button}</span><span className="pw-go-en">{ui('unlock').en}</span></span> : <Bi text={ui('unlock', lang)} />}
+        <Bi text={ui('unlock', lang)} />
         <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
       </button>
     </form>
   );
 }
 
-/** The door: shown before anything else until a password was entered on this device. */
-export function Gate({ onAccess }: { onAccess: (a: Access) => void }) {
+/**
+ * The door: shown after the language choice until a password was entered on this device.
+ * Everything is in English plus the chosen help language; the language can still be changed.
+ */
+export function Gate({ lang, onAccess, onLanguage }: {
+  lang?: HelpLanguage;
+  onAccess: (a: Access) => void;
+  /** Back to the language choice. */
+  onLanguage: () => void;
+}) {
   return (
     <div className="screen gate">
+      <button
+        type="button"
+        className="gate-lang"
+        onClick={onLanguage}
+        aria-label={`${ui('helpLanguage').en}: ${lang ? lang.name : ui('englishOnly').en}`}
+      >
+        <Flag code={lang?.code ?? 'en'} width={28} />
+        <span lang={lang?.code ?? 'en'} dir={lang?.dir}>{lang ? lang.nativeName : 'English'}</span>
+        <ChevronIcon size={18} />
+      </button>
       <div className="gate-sign">
-        <span className="gate-hazard" aria-hidden />
         <div className="gate-logo">
-          <LogoMark size={64} />
+          <LogoMark size={52} />
           <Wordmark />
         </div>
         <p className="gate-tag" lang="nl">Nederlands voor op de werkvloer</p>
         <h1 className="gate-title">
-          <LockIcon size={26} />
-          <span className="bi">
-            <span lang="nl">Voer het wachtwoord in</span>
-            <span className="gate-en">Enter the password</span>
-          </span>
+          <Bi text={ui('enterPassword', lang)} />
         </h1>
-        <PasswordForm
-          onAccess={onAccess}
-          accept={() => true}
-          dutch={{ button: 'Naar binnen', error: 'Dit wachtwoord klopt niet.' }}
-        />
+        <PasswordForm onAccess={onAccess} accept={() => true} lang={lang} labelHidden />
       </div>
     </div>
   );

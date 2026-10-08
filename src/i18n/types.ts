@@ -1,6 +1,6 @@
 export const uiEn = {
   appTagline: 'Dutch for the work floor',
-  chooseLanguage: 'Choose your help language',
+  chooseLanguage: 'Choose your language',
   chooseLanguageHint: 'You learn Dutch through English. We add short help in your own language.',
   englishOnly: 'English only',
   beta: 'Translation in review',
@@ -35,6 +35,7 @@ export const uiEn = {
   unlockFull: 'Unlock the full version',
   unlockHint: 'Only the first unit is open now. Enter the password for all lessons.',
   password: 'Password',
+  enterPassword: 'Enter the password',
   wrongPassword: 'That password is not right. Try again.',
   unlock: 'Unlock',
   check: 'Check',

@@ -127,9 +127,12 @@ export default function App() {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
 
-  // The door comes first (the admin page above stays reachable with #beheer).
-  if (!access) return <Gate onAccess={grant} />;
+  // First run: the language comes first (an app to learn Dutch can't start in Dutch), then the
+  // door in English plus that language. The admin page above stays reachable with #beheer.
   if (!progress.onboarded) return <Onboarding onDone={setLang} />;
+  if (!access) {
+    return <Gate lang={lang} onAccess={grant} onLanguage={() => setProgress((p) => ({ ...p, onboarded: false }))} />;
+  }
 
   switch (view.name) {
     case 'lesson': {

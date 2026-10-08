@@ -68,6 +68,7 @@ const lang: HelpLanguage = {
     unlockFull: 'Отключи пълната версия',
     unlockHint: 'Сега е отворен само първият раздел. Въведи паролата за всички уроци.',
     password: 'Парола',
+    enterPassword: 'Въведи паролата',
     wrongPassword: 'Паролата не е вярна. Опитай пак.',
     unlock: 'Отключи',
   },
