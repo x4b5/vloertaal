@@ -188,7 +188,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     meaning: { kind: 'meaning', word: focus ?? hesje, options: [handschoenen, schoenen, focus ?? hesje] },
     intro: { kind: 'intro', word: focus ?? hesje },
     listen: { kind: 'listen', word: focus ?? schoenen, options: [helm, focus ?? schoenen, hesje] },
-    type: { kind: 'type', word: helm },
+    // With options: a non-Latin help language picks the written word (unless writing is on).
+    type: { kind: 'type', word: helm, options: [hesje, helm, handschoenen] },
     match: { kind: 'match', words: [helm, handschoenen, schoenen, hesje] },
     build: { kind: 'build', sentence: lesson.sentences[0], tiles: buildTiles(lesson.sentences[0], lesson, createRng(3)) },
   };
