@@ -20,6 +20,16 @@ export type Exercise =
   /** "What do you do?": the tip's situation with shuffled options. */
   | { kind: 'situation'; tip: CultureTip; options: CultureTip['options'] };
 
+/**
+ * Exercises that can only be answered by hearing: the word is not on screen. They are left out
+ * in "Without sound" (and skipped when the learner can't listen right now).
+ */
+export const AUDIO_ONLY_KINDS: readonly Exercise['kind'][] = ['listen', 'type'];
+
+export function needsAudio(ex: Exercise): boolean {
+  return AUDIO_ONLY_KINDS.includes(ex.kind);
+}
+
 /** Intros only teach; every other exercise is graded. */
 export function isGraded(ex: Exercise): boolean {
   return ex.kind !== 'intro' && ex.kind !== 'tip';
@@ -65,8 +75,10 @@ export function buildTiles(sentence: Sentence, lesson: Lesson, rng: () => number
  * Builds the exercise queue for a lesson.
  * First time: introduce each word, check it right away, then mix and apply.
  * Review: skip the intros and practise everything.
+ * quiet ("Without sound"): every listening exercise becomes a reading one on the same word, so
+ * the lesson keeps its length and nothing needs to be heard.
  */
-export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number }): Exercise[] {
+export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean }): Exercise[] {
   const rng = createRng(opts.seed ?? Date.now());
   const words = lesson.words;
   const out: Exercise[] = [];
@@ -96,7 +108,9 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   out.push({ kind: 'match', words: sample(words, Math.min(5, words.length), rng) });
 
   const [l1, l2, d1, t1] = shuffle(words, rng);
-  out.push({ kind: 'listen', word: l1, options: options(l1, lesson, rng) });
+  // Without sound the first listening task shows the Dutch word (pick its meaning) and the
+  // second one the meaning (pick the Dutch word from picture cards); same options either way.
+  out.push({ kind: opts.quiet ? 'meaning' : 'listen', word: l1, options: options(l1, lesson, rng) });
   out.push({ kind: 'dutch', word: d1, options: options(d1, lesson, rng, 4) });
 
   for (const sentence of lesson.sentences) {
@@ -108,8 +122,9 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng) });
   }
 
-  out.push({ kind: 'listen', word: l2, options: options(l2, lesson, rng) });
-  out.push({ kind: 'type', word: t1 });
+  out.push({ kind: opts.quiet ? 'dutch' : 'listen', word: l2, options: options(l2, lesson, rng) });
+  // Typing what you hear has no reading twin; read the word and pick its meaning instead.
+  out.push(opts.quiet ? { kind: 'meaning', word: t1, options: options(t1, lesson, rng) } : { kind: 'type', word: t1 });
   return out;
 }
 
