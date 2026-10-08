@@ -3,7 +3,7 @@ import type { ChatLine } from '../content/types';
 import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { checkTiles, checkTyped } from '../lib/answers';
-import { sounds, speak } from '../lib/audio';
+import { autoSpeak, sounds } from '../lib/audio';
 import type { Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
@@ -72,7 +72,7 @@ function Prompt({ text }: { text: Bilingual }) {
 export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
   const { word } = ex;
   useEffect(() => {
-    speak(word.nl);
+    autoSpeak(word.nl);
     onAnswer({ correct: true });
   }, [word, onAnswer]);
   return (
@@ -154,7 +154,7 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
 
 /** Dutch word shown → pick the English meaning. */
 export function MeaningExercise({ ex, lang, locked, onAnswer, verdict }: Props<'meaning'>) {
-  useEffect(() => { speak(ex.word.nl, false, 'nl', voiceFor('bram')); }, [ex.word]);
+  useEffect(() => { autoSpeak(ex.word.nl, false, 'nl', voiceFor('bram')); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
@@ -201,7 +201,7 @@ export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
         correctId={ex.word.id}
         locked={locked}
         onAnswer={onAnswer}
-        onPick={(w) => speak(w.nl)}
+        onPick={(w) => autoSpeak(w.nl)}
         render={(w) => (
           <>
             <WordPicture className="pic-emoji" id={w.id} emoji={w.emoji} size={110} />
@@ -215,7 +215,7 @@ export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
 
 /** Only audio → pick the written Dutch word. */
 export function ListenExercise({ ex, lang, locked, onAnswer }: Props<'listen'>) {
-  useEffect(() => { speak(ex.word.nl); }, [ex.word]);
+  useEffect(() => { autoSpeak(ex.word.nl); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoYouHear', lang)} />
@@ -275,7 +275,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
               className={`${cls(w.id, left)} match-nl`}
               disabled={done.has(w.id)}
               onClick={() => {
-                speak(w.nl);
+                autoSpeak(w.nl);
                 setLeft(w.id);
               }}
             >
@@ -342,7 +342,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict }: Props<'bu
             lang="nl"
             disabled={locked || chosen.includes(i)}
             onClick={() => {
-              speak(t, false, 'nl', voiceFor(who));
+              autoSpeak(t, false, 'nl', voiceFor(who));
               update([...chosen, i]);
             }}
           >
@@ -357,7 +357,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict }: Props<'bu
 /** Hear a word → type it. Forgiving about capitals, articles and one typo. */
 export function TypeExercise({ ex, lang, locked, onAnswer }: Props<'type'>) {
   const [value, setValue] = useState('');
-  useEffect(() => { speak(ex.word.nl); }, [ex.word]);
+  useEffect(() => { autoSpeak(ex.word.nl); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('typeWhatYouHear', lang)} />
@@ -399,7 +399,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
   const mine = picked && locked ? (picked.id === reply.id ? 'right' : 'wrong') : '';
   // The colleague asks; "you" are Amina. The colleague talks while the line plays.
   const them = castFor(prompt.id, ['bram', 'henk', 'jada']);
-  useEffect(() => { speak(prompt.nl, false, 'nl', voiceFor(them)); }, [prompt, them]);
+  useEffect(() => { autoSpeak(prompt.nl, false, 'nl', voiceFor(them)); }, [prompt, them]);
   const themTalking = useTalking([prompt.nl]);
   // After a right answer it's your turn: "you" say the reply (and talk while it is read out),
   // while the colleague listens. Before that you listen, then think about your answer.

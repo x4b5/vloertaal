@@ -14,6 +14,29 @@ export function setPreferredVoice(ref: VoiceRef): void {
   preferredVoice = ref;
 }
 
+/**
+ * "Without sound" (the learner's setting): nothing plays by itself and there are no effect
+ * sounds. A speaker button the learner taps still plays (they may wear earphones).
+ */
+let quietAudio = false;
+
+export function setQuietAudio(quiet: boolean): void {
+  if (quiet && !quietAudio) stopAll();
+  quietAudio = quiet;
+}
+
+export function isQuietAudio(): boolean {
+  return quietAudio;
+}
+
+/**
+ * Speech that starts by itself (a new word on screen, the right answer after Check, a tile or
+ * card that says its word when picked). Silent in "Without sound"; buttons use speak().
+ */
+export function autoSpeak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef): void {
+  if (!quietAudio) speak(text, slow, lang, voice);
+}
+
 export interface RecordedVoice {
   key: string;
   label: string;
@@ -262,8 +285,9 @@ function tone(freqs: number[], duration = 0.12): void {
   }
 }
 
+/** Effect sounds; silent in "Without sound". */
 export const sounds = {
-  correct: () => tone([660, 880]),
-  wrong: () => tone([300, 220], 0.16),
-  done: () => tone([523, 659, 784, 1047], 0.13),
+  correct: () => { if (!quietAudio) tone([660, 880]); },
+  wrong: () => { if (!quietAudio) tone([300, 220], 0.16); },
+  done: () => { if (!quietAudio) tone([523, 659, 784, 1047], 0.13); },
 };
