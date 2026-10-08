@@ -167,6 +167,9 @@ const lang: HelpLanguage = {
     certNoName: 'ብዘይ ስም',
     certChangeName: 'ስም ቀይር',
     certPractice: 'ናይ ልምምድ ምስክር ወረቐት እዩ፡ ወግዓዊ ዲፕሎማ ኣይኮነን',
+    resumeLesson: 'ትምህርቲ ቀጽል',
+    restartLesson: 'ካብ መጀመርታ ጀምር',
+    quitKept: 'ዝገበርካዮ ይዕቀብ እዩ። ድሓር ክትቅጽል ትኽእል ኢኻ።',
   },
   gloss: {
     // Units

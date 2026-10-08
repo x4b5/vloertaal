@@ -174,6 +174,10 @@ export const uiEn = {
   certNoName: 'Without a name',
   certChangeName: 'Change name',
   certPractice: 'Practice certificate, not an official diploma',
+  /* Retention: resume an interrupted lesson (the path bay, the quit sheet). */
+  resumeLesson: 'Continue lesson',
+  restartLesson: 'Start again',
+  quitKept: 'Your progress is kept. You can go on later.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

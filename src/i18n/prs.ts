@@ -167,6 +167,9 @@ const lang: HelpLanguage = {
     certNoName: 'بدون نام',
     certChangeName: 'تغییر نام',
     certPractice: 'تصدیق‌نامهٔ تمرینی، نه دیپلوم رسمی',
+    resumeLesson: 'ادامهٔ درس',
+    restartLesson: 'از سر شروع کن',
+    quitKept: 'پیشرفتت ذخیره می‌ماند. بعداً می‌توانی ادامه بدهی.',
   },
   gloss: {
     // Units

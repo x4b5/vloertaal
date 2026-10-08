@@ -167,6 +167,9 @@ const lang: HelpLanguage = {
     certNoName: 'Bez imienia',
     certChangeName: 'Zmień imię',
     certPractice: 'Certyfikat ćwiczeniowy, nie oficjalny dyplom',
+    resumeLesson: 'Kontynuuj lekcję',
+    restartLesson: 'Zacznij od nowa',
+    quitKept: 'Twoje postępy są zapisane. Możesz wrócić później.',
   },
   gloss: {
     // Unit: First day at work

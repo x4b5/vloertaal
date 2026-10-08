@@ -167,6 +167,9 @@ const lang: HelpLanguage = {
     certNoName: 'İsimsiz',
     certChangeName: 'Adı değiştir',
     certPractice: 'Alıştırma sertifikası, resmî diploma değil',
+    resumeLesson: 'Derse devam et',
+    restartLesson: 'Baştan başla',
+    quitKept: 'İlerlemen kaydedilir. Sonra devam edebilirsin.',
   },
   gloss: {
     // Unit: First day at work

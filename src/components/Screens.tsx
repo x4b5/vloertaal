@@ -20,6 +20,8 @@ import { type Access, unitAllowed } from '../lib/access';
 import { UpgradeCard } from './Gate';
 import type { Progress, ThemeChoice } from '../lib/progress';
 import { Bi, HelpText } from './Bi';
+import { RestartLink, ResumeChip, resumeLabel } from './Resume';
+import { clearSave, loadSaves } from '../lib/resume';
 import { LogoMark, Wordmark } from './Logo';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
@@ -318,6 +320,8 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
   // The lesson just finished: kept for this visit of the path, for its one-time animations.
   const [justDone] = useState<string | null>(arrived ?? null);
   const pathRef = useRef<HTMLDivElement>(null);
+  // Lessons stopped halfway (less than two days ago): their bay says "Ga verder · n/N".
+  const [saves, setSaves] = useState(() => loadSaves());
   useEffect(() => {
     if (!focusUnit && !arrived) return;
     const still = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -405,10 +409,11 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
             // The bay shows the lesson's first word that has a picture (none if all are abstract).
             const first = lesson.words.find(hasPicture);
             const title = gloss(lesson.id, lesson.title, lang);
+            const saved = open && state !== 'locked' && saves[lesson.id]?.review === Boolean(record) ? saves[lesson.id] : undefined;
             return (
               <li
                 key={lesson.id}
-                className={`bay bay-${state} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''}`}
+                className={`bay bay-${state} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''}`}
               >
                 <span className="bay-marker" aria-hidden>
                   {state === 'done' ? <CheckIcon size={20} /> : i + 1}
@@ -418,33 +423,42 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
                   className="bay-card"
                   disabled={!open}
                   onClick={() => onStart(lesson.id, Boolean(record))}
-                  aria-label={`${lessonCode(u, i)} ${lesson.title}${title.help ? ` (${title.help})` : ''}${open ? (record ? ` · ${ui('practice').en}` : state === 'now' ? ` · ${ui('start').en}` : '') : ` (${ui('locked').en})`}`}
+                  aria-label={`${lessonCode(u, i)} ${lesson.title}${title.help ? ` (${title.help})` : ''}${saved ? ` · ${resumeLabel(saved)}` : open ? (record ? ` · ${ui('practice').en}` : state === 'now' ? ` · ${ui('start').en}` : '') : ` (${ui('locked').en})`}`}
                 >
                   {/* Every card shows the lesson's first picture: full colour when done or next,
                       dimmed for one you may open, more dimmed when locked. */}
                   {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
                   <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
                     <Bi className="bay-title" text={title} />
-                    {state === 'done' && (
+                    {/* Stopped halfway: "Ga verder · 12/18" in place of Start or Practise again. */}
+                    {saved && <ResumeChip save={saved} lang={lang} />}
+                    {state === 'done' && !saved && (
                       <span className="bay-again">
                         {record.best === 1 ? <CrownIcon size={16} /> : <CheckIcon size={16} />}
                         <Bi className="bay-again-label" text={ui('practice', lang)} />
                       </span>
                     )}
                     {/* One Start on the whole path: the next lesson. */}
-                    {state === 'now' && (
+                    {state === 'now' && !saved && (
                       <span className="bay-start">
                         <Bi className="bay-start-label" text={ui('start', lang)} />
                         <ChevronIcon size={22} />
                       </span>
                     )}
                   </span>
-                  {state === 'open' && <ChevronIcon size={24} className="bay-chev" />}
+                  {state === 'open' && !saved && <ChevronIcon size={24} className="bay-chev" />}
                   {state === 'locked' && <LockIcon size={20} className="bay-lock" />}
                   {state === 'now' && (
                     <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>
                   )}
                 </button>
+                {saved && (
+                  <RestartLink lang={lang} onRestart={() => {
+                    clearSave(lesson.id);
+                    setSaves(loadSaves());
+                    onStart(lesson.id, Boolean(record));
+                  }} />
+                )}
               </li>
             );
           })}

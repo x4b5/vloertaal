@@ -167,6 +167,9 @@ const lang: HelpLanguage = {
     certNoName: 'Без імені',
     certChangeName: 'Змінити ім’я',
     certPractice: 'Навчальний сертифікат, не офіційний диплом',
+    resumeLesson: 'Продовжити урок',
+    restartLesson: 'Почати знову',
+    quitKept: 'Твій прогрес збережено. Можеш продовжити пізніше.',
   },
   gloss: {
     // Unit: First day at work

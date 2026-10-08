@@ -167,6 +167,9 @@ const lang: HelpLanguage = {
     certNoName: 'Без име',
     certChangeName: 'Смени името',
     certPractice: 'Сертификат за упражнение, не официална диплома',
+    resumeLesson: 'Продължи урока',
+    restartLesson: 'Започни отначало',
+    quitKept: 'Напредъкът ти се запазва. Можеш да продължиш по-късно.',
   },
   gloss: {
     // Units

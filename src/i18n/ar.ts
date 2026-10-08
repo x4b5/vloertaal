@@ -167,6 +167,9 @@ const lang: HelpLanguage = {
     certNoName: 'بدون اسم',
     certChangeName: 'غيّر الاسم',
     certPractice: 'شهادة تدريب، وليست دبلومًا رسميًا',
+    resumeLesson: 'تابع الدرس',
+    restartLesson: 'ابدأ من جديد',
+    quitKept: 'تقدّمك محفوظ. يمكنك المتابعة لاحقًا.',
   },
   gloss: {
     // Units

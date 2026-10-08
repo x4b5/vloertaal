@@ -24,6 +24,7 @@ import * as kit from '../pictures/kit';
 import { hasPicture } from '../lib/wordPicture';
 import { CertEarned, CertificateScreen } from '../components/Certificate';
 import { findUnit } from '../lib/certificate';
+import { clearSave, makeSave, writeSave } from '../lib/resume';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -131,6 +132,9 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       due: dstate === 'due' ? today : dstate === 'done' ? addDays(today, i < 4 ? 1 : 2) : addDays(today, 1),
     }]));
     const daily = dstate ? dailyCard(cards, today, dstate === 'done' ? today : undefined) : null;
+    // &resume=1: the next lesson was stopped at 12 of 18 ("Ga verder · 12/18"); &resume=done
+    // also the finished first lesson, practised again and stopped halfway.
+    seedResume(q.get('resume'), Boolean(q.get('cert')));
     if (daily && dstate === 'done' && q.get('extra') === '1') daily.extra = 6;
     return (
       <>
@@ -295,3 +299,24 @@ const KIT_SAMPLES: [string, () => React.ReactNode][] = [
   ['Bust bram / amina', () => (<><kit.Bust who="bram" x={34} y={116} scale={0.5} /><kit.Bust who="amina" x={88} y={116} scale={0.5} expr="pleased" flip /></>)],
   ['Bust henk / jada', () => (<><kit.Bust who="henk" x={34} y={116} scale={0.5} /><kit.Bust who="jada" x={88} y={116} scale={0.5} expr="joy" flip /></>)],
 ];
+
+/** Saved lesson runs for the path shots (see &resume= on the path). */
+function seedResume(mode: string | null, certUnit: boolean) {
+  clearSave();
+  if (!mode) return;
+  const put = (id: string, review: boolean, at: number, repeats: number) => {
+    const lesson = findLesson(id)?.lesson;
+    if (!lesson) return;
+    const initial = buildLesson(lesson, { review, seed: 7 });
+    const queue = [...initial, ...initial.slice(2, 2 + repeats)];
+    const save = makeSave({ lessonId: id, review, quiet: false, seed: 7, initial, queue, index: at, right: 3, total: 5, words: {}, run: 0, misses: 0, now: Date.now() });
+    if (save) writeSave(save);
+  };
+  const next = certUnit ? units[1].lessons[0].id : units[0].lessons[1].id;
+  const lesson = findLesson(next)?.lesson;
+  if (lesson) {
+    const n = buildLesson(lesson, { review: false, seed: 7 }).length;
+    put(next, false, Math.min(12, n - 1), Math.max(0, 18 - n));
+  }
+  if (mode === 'done') put('l.hello', true, 5, 1);
+}

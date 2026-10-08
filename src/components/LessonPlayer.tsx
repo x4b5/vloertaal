@@ -6,6 +6,7 @@ import { autoSpeak, sounds, speechAvailable } from '../lib/audio';
 import { tileDiff } from '../lib/answers';
 import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
 import { barParts, chimeStep, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
+import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { voiceFor } from '../lib/voices';
 import { castFor } from './Characters';
 import { Bi, HelpText } from './Bi';
@@ -142,7 +143,7 @@ function ButtonBlock({ icon }: { icon: 'check' | 'next' }) {
   );
 }
 
-export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet }: {
+export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -159,23 +160,38 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   quiet?: boolean;
   /** Switches "Without sound" on or off for good (the header toggle, "I can't listen now"). */
   onQuiet?: (quiet: boolean) => void;
+  /**
+   * Keep this lesson's place on the device (src/lib/resume.ts): saved after every answer and when
+   * the app is hidden, picked up again on the next start, cleared when the lesson is finished.
+   */
+  resumable?: boolean;
 }) {
+  const persist = resumable && !exercises;
+  // An interrupted run of this lesson (same review mode), less than two days old.
+  const [saved] = useState(() => {
+    const s = persist ? loadSave(lesson.id) : null;
+    return s && s.review === review ? s : null;
+  });
+  // The lesson is built from a seed, so a saved run rebuilds the same exercises.
+  const [seed] = useState(() => saved?.seed ?? (Date.now() >>> 0));
   // The lesson is planned once, with the setting it started with; switching sound off midway
   // skips the listening exercises that are left instead (see audioOff).
-  const [quietAtStart] = useState(quiet);
+  const [quietAtStart] = useState(() => saved?.quiet ?? quiet);
   const initial = useMemo(
-    () => exercises ?? buildLesson(lesson, { review, quiet: quietAtStart }),
-    [exercises, lesson, review, quietAtStart],
+    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart }),
+    [exercises, lesson, review, seed, quietAtStart],
   );
-  const [queue, setQueue] = useState<Exercise[]>(() => [...initial, ...(repeats ?? [])]);
-  const [index, setIndex] = useState(startAt);
+  // The saved place in that list, with the mistakes queued then (null: start from the top).
+  const [resumed] = useState(() => (saved ? restoreSave(saved, initial) : null));
+  const [queue, setQueue] = useState<Exercise[]>(() => resumed?.queue ?? [...initial, ...(repeats ?? [])]);
+  const [index, setIndex] = useState(() => resumed?.index ?? startAt);
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [checked, setChecked] = useState(false);
-  const graded = useRef({ right: 0, total: 0 });
+  const graded = useRef(saved && resumed ? { right: saved.right, total: saved.total } : { right: 0, total: 0 });
   /** Right answers in a row (graded exercises only); a miss resets it without a word. */
-  const [run, setRun] = useState(0);
+  const [run, setRun] = useState(resumed ? saved!.run : 0);
   /** Misses in a row: the character's "oops" plays on the first one only. */
-  const [misses, setMisses] = useState(0);
+  const [misses, setMisses] = useState(resumed ? saved!.misses : 0);
   /** The main button turns into the outcome-coloured Continue 120 ms after Check. */
   const [swapped, setSwapped] = useState(false);
   /** The run label (runs of 3, 5, 8), shown 300 ms after Check for 1.5 s, also past Continue;
@@ -210,7 +226,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   }, [entering, index]);
   const rtl = lang?.dir === 'rtl';
   const goRef = useRef<HTMLButtonElement>(null);
-  const wordResults = useRef<Record<string, boolean>>({});
+  const wordResults = useRef<Record<string, boolean>>(resumed ? { ...saved!.words } : {});
   /** "I can't listen now" without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
   const soundOff = quiet || cantListen;
@@ -224,7 +240,41 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   }, [soundNote]);
 
   const ex = queue[index];
-  // Quitting loses the lesson's answers, so the X and the system Back button ask first.
+
+  /*
+   * Resume: the place is saved after every answer (on the exercise that comes next) and when the
+   * app goes to the background. The last exercise answered keeps the save from before it, so a
+   * reload there asks it again instead of losing the lesson. Finishing clears the save.
+   */
+  const latest = useRef({ queue, index, checked, run, misses });
+  latest.current = { queue, index, checked, run, misses };
+  const finished = useRef(false);
+  const writeNow = useCallback(() => {
+    if (!persist || finished.current) return;
+    const s = latest.current;
+    const at = s.checked ? s.index + 1 : s.index;
+    if (at >= s.queue.length) return;
+    const save = makeSave({
+      lessonId: lesson.id, review, quiet: quietAtStart, seed, initial, queue: s.queue, index: at,
+      right: graded.current.right, total: graded.current.total, words: wordResults.current,
+      run: s.run, misses: s.misses, now: Date.now(),
+    });
+    if (save) writeSave(save);
+  }, [persist, lesson.id, review, quietAtStart, seed, initial]);
+  useEffect(() => { writeNow(); }, [writeNow, index, checked, queue.length]);
+  useEffect(() => {
+    if (!persist) return;
+    // A save that no longer fits the lesson (changed in an update) is dropped.
+    if (saved && !resumed) clearSave(lesson.id);
+    const onHide = () => { if (document.visibilityState === 'hidden') writeNow(); };
+    document.addEventListener('visibilitychange', onHide);
+    window.addEventListener('pagehide', writeNow);
+    return () => {
+      document.removeEventListener('visibilitychange', onHide);
+      window.removeEventListener('pagehide', writeNow);
+    };
+  }, [persist, writeNow]); // eslint-disable-line react-hooks/exhaustive-deps
+  // The X and the system Back button ask first (a resumable lesson keeps its place).
   const [askQuit, setAskQuit] = useState(false);
   /** The emergency phrases (⚠ in the header), as a sheet over the lesson. */
   const [phrases, setPhrases] = useState(false);
@@ -388,6 +438,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
 
   function finish() {
     const { right, total } = graded.current;
+    finished.current = true;
+    if (persist) clearSave(lesson.id);
     sounds.done();
     onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current });
   }
@@ -647,14 +699,17 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
           </div>
         </div>
       </footer>
-      {askQuit && <QuitSheet lang={lang} onKeep={() => setAskQuit(false)} onStop={onQuit} />}
+      {askQuit && <QuitSheet lang={lang} kept={persist} onKeep={() => setAskQuit(false)} onStop={onQuit} />}
       {phrases && <PhraseSheet lang={lang} onClose={closePhrases} />}
     </div>
   );
 }
 
-/** "Stop this lesson?": a bottom sheet with two big buttons; keep going is the main one. */
-function QuitSheet({ lang, onKeep, onStop }: { lang?: HelpLanguage; onKeep: () => void; onStop: () => void }) {
+/**
+ * "Stop this lesson?": a bottom sheet with two big buttons; keep going is the main one.
+ * kept: the lesson's place is saved (resume), so the hint says the progress stays.
+ */
+function QuitSheet({ lang, kept, onKeep, onStop }: { lang?: HelpLanguage; kept: boolean; onKeep: () => void; onStop: () => void }) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onKeep(); };
     window.addEventListener('keydown', onKey);
@@ -665,7 +720,10 @@ function QuitSheet({ lang, onKeep, onStop }: { lang?: HelpLanguage; onKeep: () =
       <div className="sheet" role="alertdialog" aria-modal="true" aria-labelledby="quit-title" aria-describedby="quit-hint" onClick={(e) => e.stopPropagation()}>
         <span className="sheet-hazard" aria-hidden />
         <h2 id="quit-title" className="sheet-title"><Bi text={ui('quitTitle', lang)} /></h2>
-        <p id="quit-hint" className="sheet-hint"><Bi text={ui('quitHint', lang)} /></p>
+        <p id="quit-hint" className="sheet-hint">
+          {kept && <span className="sheet-hint-nl" lang="nl">Je voortgang blijft bewaard.</span>}
+          <Bi text={ui(kept ? 'quitKept' : 'quitHint', lang)} />
+        </p>
         <div className="sheet-actions">
           <button type="button" className="btn btn-go btn-primary" onClick={onKeep} autoFocus>
             <Bi text={ui('keepGoing', lang)} />

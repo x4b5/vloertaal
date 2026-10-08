@@ -22,6 +22,7 @@ import { persistStorage } from './lib/install';
 import { CertEarned, CertificateScreen } from './components/Certificate';
 import { earnCertificates, findUnit, unitJustDone } from './lib/certificate';
 import { count, countOpen } from './lib/count';
+import { clearSave } from './lib/resume';
 
 type View =
   | { name: 'home' }
@@ -233,6 +234,7 @@ export default function App() {
           onQuiet={setQuiet}
           onQuit={() => { leaving.current = true; back(); }}
           onFinish={finish}
+          resumable={!daily}
         />
       );
     }
@@ -297,7 +299,8 @@ export default function App() {
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
             onReset={() => {
-              // Keep look, voice, sound and sector; only learning progress is wiped.
+              // Keep look, voice, sound and sector; only learning progress is wiped (and lessons in progress).
+              clearSave();
               setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector }));
               back();
             }}
