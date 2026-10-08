@@ -453,11 +453,11 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       <span className="pair-main">
         {pair.nl && (
           <>
-            <strong lang="nl">{pair.nl}</strong>
+            <strong lang="nl" dir={rtl ? 'ltr' : undefined}>{pair.nl}</strong>
             <span className="pair-eq"> = </span>
           </>
         )}
-        <span className="bi-en">{pair.meaning.en}</span>
+        <span className="bi-en" lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
       </span>
       {pairHelp && lang && (
         <HelpText text={pairHelp} lang={lang} />
@@ -468,7 +468,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const why = ex.kind === 'situation' ? gloss(ex.tip.why.id, ex.tip.why.en, lang) : null;
   const whyLine = why && (
     <div className="feedback-meaning feedback-why">
-      <span className="bi-en">{why.en}</span>
+      <span className="bi-en" lang="en" dir={rtl ? 'ltr' : undefined}>{why.en}</span>
       {why.help && why.lang && <HelpText text={why.help} lang={why.lang} />}
     </div>
   );
@@ -563,15 +563,18 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
               <span className="feedback-icon" aria-hidden>
                 {outcome === 'right' ? <CheckIcon size={26} /> : outcome === 'wrong' ? <CloseIcon size={26} /> : <ChevronIcon size={26} />}
               </span>
-              <div className="feedback-text">
+              {/* A right-to-left help language: the whole label reads from the right, with the
+                  Dutch and English pieces kept in their own direction. */}
+              <div className="feedback-text" dir={rtl ? 'rtl' : undefined}>
                 {/* Heading: the help language first and large; the Dutch words and English under it. */}
                 <div className={`feedback-head ${headingMeaning?.help ? 'has-help' : ''}`}>
                   {headingMeaning?.help && lang && <HelpText className="feedback-help" text={headingMeaning.help} lang={lang} />}
                   <div className="feedback-line">
-                    <span className="feedback-title" lang="nl">
+                    <span className="feedback-title" lang="nl" dir={rtl ? 'ltr' : undefined}>
                       {answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Nog eens!'}
                     </span>
-                    {headingMeaning && <span className="feedback-en" lang="en">{headingMeaning.en}</span>}
+                    {headingMeaning?.help && <span className="feedback-sep" aria-hidden>·</span>}
+                    {headingMeaning && <span className="feedback-en" lang="en" dir={rtl ? 'ltr' : undefined}>{headingMeaning.en}</span>}
                   </div>
                 </div>
                 {(pairLine || whyLine) && <hr className="feedback-rule" />}

@@ -56,6 +56,9 @@
   --on-tone: var(--paper);
   --on-accent: var(--paper);
   --locked-shadow: #c4bdb1;
+  /* Edge of an answer card: 3:1 or more against the floor. */
+  --choice-edge: #827c72;
+  --repeat-bg: var(--kraft);
   --radius: 12px;
   /* Motion: one set of curves for the whole app (see "Answer moment"). */
   --ease-out: cubic-bezier(.2, .8, .2, 1);
@@ -108,6 +111,8 @@
     --on-tone: #16191c;
     --on-accent: #16191c;
     --locked-shadow: #23272b;
+    --choice-edge: #6b7178;
+    --repeat-bg: #e8c48f;
     color-scheme: dark;
   }
 }
@@ -139,6 +144,8 @@
   --on-tone: #16191c;
   --on-accent: #16191c;
   --locked-shadow: #23272b;
+  --choice-edge: #6b7178;
+  --repeat-bg: #e8c48f;
   color-scheme: dark;
 }
 
@@ -238,7 +245,7 @@ h2 { font-size: 1.25rem; }
 }
 .btn-ghost:hover { border-color: var(--ink-3); }
 .btn-ghost .bi-help { --help-size: 0.75em; }
-.danger { color: var(--red); margin-top: 32px; }
+.danger { color: var(--wrong-ink); margin-top: 32px; }
 .icon-btn {
   background: none; border: none; font-size: 1.5rem; color: var(--ink);
   min-width: 44px; min-height: 44px; border-radius: 10px;
@@ -600,7 +607,7 @@ h2 { font-size: 1.25rem; }
 .feedback-wrong .feedback-icon { background: var(--go-wrong); }
 .feedback-other .feedback-icon { background: var(--kraft-dark); color: var(--card); }
 /* A long explanation (situations) scrolls inside the label instead of covering the question. */
-.feedback-text { flex: 1; min-width: 0; max-height: 23dvh; overflow-y: auto; overscroll-behavior: contain; }
+.feedback-text { flex: 1; min-width: 0; }
 /* Heading: the help language first and large; under it the Dutch words and the English. */
 .feedback-head { display: flex; flex-direction: column; gap: 2px; }
 .feedback-help { font-size: 1.25rem; font-weight: 700; line-height: 1.25; color: var(--ink); }
@@ -608,14 +615,14 @@ h2 { font-size: 1.25rem; }
 .feedback-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; }
 .feedback-title { font-size: 1.05rem; font-weight: 700; line-height: 1.2; color: var(--ink); letter-spacing: -0.01em; }
 .feedback-en { font-size: 0.92rem; font-weight: 500; color: var(--muted); }
-.has-help .feedback-title::after { content: ' ·'; color: var(--ink-3); font-weight: 500; }
+.feedback-sep { color: var(--ink-3); font-weight: 500; }
 /* English only: the Dutch words are the heading, the English under them. */
 .feedback-head:not(.has-help) .feedback-line { flex-direction: column; gap: 2px; }
 .feedback-head:not(.has-help) .feedback-title { font-size: 1.45rem; line-height: 1.15; }
 .feedback-kicker { margin-bottom: 4px; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
 .feedback-kicker .bi { flex-direction: row; flex-wrap: wrap; gap: 0 8px; }
 .feedback-kicker .bi-help { --help-size: 1em; }
-.feedback-kicker .bi:has(.bi-help) .bi-en::after { content: ' ·'; color: var(--ink-3); }
+.feedback-kicker .bi-sep { display: inline; }
 .feedback-rule { height: 0; margin: 8px 0 8px; border: 0; border-top: 2px dashed color-mix(in srgb, var(--ink-3) 45%, transparent); }
 /* "3 OP RIJ": a kraft rubber stamp on the label's corner, 300 ms after Check, at runs of 3, 5, 8. */
 .run-stamp {
@@ -709,11 +716,11 @@ h2 { font-size: 1.25rem; }
 .choices { display: flex; flex-direction: column; gap: 10px; }
 .choice {
   position: relative; display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 10px 14px; text-align: start;
-  background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
+  background: var(--card); border: 2px solid var(--choice-edge); border-radius: var(--radius);
   font-weight: 500; color: var(--ink);
   transition: background-color 0.12s, border-color 0.12s, color 0.12s, transform 0.12s var(--ease-out);
 }
-.choice:hover:not(:disabled, [aria-disabled='true']) { border-color: var(--ink-3); }
+.choice:hover:not(:disabled, [aria-disabled='true']) { border-color: var(--edge); }
 .choice:active:not(:disabled, [aria-disabled='true']) { transform: translateY(2px); }
 .choice[aria-disabled='true'] { cursor: default; }
 .choice-num {
@@ -785,8 +792,10 @@ h2 { font-size: 1.25rem; }
 .prompt-row .speaker-char { font-size: 68px; margin-top: -4px; }
 .pic-question .speak { width: 44px; height: 44px; font-size: 1.2rem; margin-top: 2px; }
 
-.choices-pics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.choices-pics.odd .choice:last-child { grid-column: 1 / -1; }
+.choices-pics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+/* Every picture tile the same size: two per row, and an odd last one centred (not wider). */
+.choices-pics .choice { grid-column: span 2; min-width: 0; }
+.choices-pics.odd .choice:last-child { grid-column: 2 / span 2; }
 .choices-pics .choice {
   display: grid; align-items: end; gap: 6px 8px; min-height: 150px; padding: 12px 14px 14px;
   grid-template-columns: 1fr auto; grid-template-areas: 'pic pic' 'word num';
@@ -897,7 +906,7 @@ h2 { font-size: 1.25rem; }
 .tile-used { color: transparent; background: var(--track); border-style: dashed; }
 .type-input {
   width: 100%; padding: 16px; font-size: 1.3rem; font-weight: 600;
-  border: 2px solid var(--line); border-radius: var(--radius); background: var(--input-bg); color: var(--ink);
+  border: 2px solid var(--ink-3); border-radius: var(--radius); background: var(--input-bg); color: var(--ink);
 }
 .type-input:focus { outline: none; border-color: var(--edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 55%, transparent); }
 
@@ -972,7 +981,7 @@ h2 { font-size: 1.25rem; }
   .prompt { font-size: 2rem; margin: 0 0 20px; }
   .pic-question { margin-bottom: 40px; }
   .choices-pics, .choices-pics.odd { grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); gap: 16px; }
-  .choices-pics.odd .choice:last-child { grid-column: auto; }
+  .choices-pics .choice, .choices-pics.odd .choice:last-child { grid-column: auto; }
   .choices-pics .choice { min-height: 250px; padding: 20px 16px 16px; }
   .choices-pics .pic-emoji { font-size: 96px; }
   /* Four pictures: a 2×2 grid keeps every word on its own line next to its number. */
@@ -989,7 +998,6 @@ h2 { font-size: 1.25rem; }
   .feedback { flex: 1; margin: 6px 0; }
   .feedback + .foot-actions { flex: none; }
   .feedback-head:not(.has-help) .feedback-title { font-size: 1.6rem; }
-  .feedback-text { max-height: 40dvh; }
   .pair-main { font-size: 1.3rem; }
   .speaker { margin-bottom: 8px; }
   .speaker-char { font-size: 150px; }
@@ -1527,7 +1535,7 @@ h2 { font-size: 1.25rem; }
   .tip-badge-text { gap: 1px; }
   .tip-badge-en { flex-direction: row; flex-wrap: wrap; gap: 0 6px; font-size: 0.8rem; }
   .tip-badge-en .bi-help { --help-size: 1em; }
-  .tip-badge-en .bi-help::before { content: '· '; color: var(--ink-3); }
+  .tip-badge-en .bi-sep { display: inline; }
   .tip-title { font-size: 1.35rem; line-height: 1.2; margin: 6px 0 8px; }
   .tip-title .bi-help { --help-size: 0.7em; }
   .tip-body { font-size: 0.98rem; line-height: 1.42; margin: 0 0 16px; }
@@ -1681,7 +1689,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .hub-card > .icon:last-child { flex: none; color: var(--ink-3); }
 
 /* Retry phase: the kraft tag (the bar's kraft tail is under "Lesson progress"). */
-.tag-repeat { background: var(--kraft); color: #1e2226; }
+.tag-repeat { background: var(--repeat-bg); color: #1e2226; }
 
 /* Result: small line under a stat value ("24 words learned"). */
 .stat-card-foot { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
@@ -1758,7 +1766,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .full-only-note > .icon { flex: none; }
 .full-only-en { flex: 1; min-width: 0; flex-direction: row; flex-wrap: wrap; gap: 0 6px; font-weight: 600; font-size: 0.85rem; color: var(--muted); }
 .full-only-en .bi-help { display: inline; }
-.full-only-en:has(.bi-help) .bi-en::after { content: ' ·'; }
+.full-only-en .bi-sep { display: inline; }
 
 /* Small phones: the result numbers stay on one line ("9 / 11"). */
 .stat-card-value { white-space: nowrap; }
@@ -1811,7 +1819,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .coach-icon { flex: none; width: 32px; height: 32px; }
 .coach-title { flex: 1; min-width: 0; }
 .coach-share {
-  flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 6px 12px;
+  flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 6px 12px;
   border-radius: 10px; border: 2px solid var(--line); background: var(--card); color: var(--ink); font-weight: 600;
 }
 .coach-share .icon { color: var(--right-ink); }
