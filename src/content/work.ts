@@ -1,8 +1,9 @@
 import type { CultureTip } from './culture';
-import type { ChatLine, Dialogue, Unit } from './types';
+import type { ChatLine, Dialogue, Lesson, Unit } from './types';
 
 /**
- * Work and rights in the Netherlands: contracts, pay, rules, leave and sickness.
+ * Work and rights in the Netherlands: contracts, papers and housing, pay, house rules, rights,
+ * leave and sickness.
  * Still language units first (Dutch words and sentences learners will hear and see); the
  * "Zo werkt het hier" tip of each lesson carries the practical information.
  *
@@ -19,9 +20,9 @@ const chat = (prompt: ChatLine, reply: ChatLine): Dialogue => ({ prompt, reply }
 export const ADVICE_LINE = 'General information. For your situation: ask your employer, the union or the Juridisch Loket.';
 /** Closing line of the house-rules tips: these rules are set per company. */
 export const HOUSE_LINE = 'Rules differ per company: ask your supervisor what the rules are where you work.';
-const tip = (t: CultureTip, end = ADVICE_LINE): CultureTip => ({ ...t, body: `${t.body} ${end}` });
+const tip = (t: CultureTip, end = ADVICE_LINE): CultureTip => ({ ...t, body: end ? `${t.body} ${end}` : t.body });
 
-export const workUnits: Unit[] = [
+const coreUnits: Unit[] = [
   {
     id: 'u.contract',
     title: 'Work and contracts',
@@ -72,6 +73,61 @@ export const workUnits: Unit[] = [
           chat(
             line('c.contract.q', 'Kun je morgen komen werken?', 'Can you come to work tomorrow?'),
             line('c.contract.a', 'Ja, hoe laat moet ik er zijn?', 'Yes, what time must I be there?'),
+          ),
+        ],
+      },
+    ],
+  },
+  {
+    id: 'u.papers',
+    title: 'Housing and papers',
+    titleNl: 'Wonen en papieren',
+    emoji: '🪪',
+    color: '#a35a2a',
+    lessons: [
+      {
+        id: 'l.bsn',
+        title: 'Your BSN and papers',
+        words: [
+          { id: 'w.bsn', nl: 'het BSN', en: 'the citizen service number', emoji: '🔢' },
+          { id: 'w.identiteitsbewijs', nl: 'het identiteitsbewijs', en: 'the ID document', emoji: '🛂' },
+          { id: 'w.gemeente', nl: 'de gemeente', en: 'the town hall, the municipality', emoji: '🏘️' },
+          { id: 'w.inschrijven', nl: 'inschrijven', en: 'to register', emoji: '🖊️' },
+          { id: 'w.adres', nl: 'het adres', en: 'the address', emoji: '📮' },
+          { id: 'w.zorgverzekering', nl: 'de zorgverzekering', en: 'the health insurance', emoji: '🏥' },
+        ],
+        sentences: [
+          { id: 's.bsn.1', nl: 'Ik schrijf me in bij de gemeente.', en: 'I register at the town hall.' },
+          { id: 's.bsn.2', nl: 'Mijn adres is veranderd.', en: 'My address has changed.' },
+          { id: 's.bsn.3', nl: 'Ik log in met DigiD.', en: 'I log in with DigiD.' },
+        ],
+        dialogues: [
+          chat(
+            line('c.bsn.q', 'Mag ik je identiteitsbewijs zien?', 'May I see your ID?'),
+            line('c.bsn.a', 'Ja, hier is mijn paspoort.', 'Yes, here is my passport.'),
+          ),
+        ],
+      },
+      {
+        id: 'l.housing',
+        title: 'Housing',
+        words: [
+          { id: 'w.kamer', nl: 'de kamer', en: 'the room', emoji: '🛏️' },
+          { id: 'w.huur', nl: 'de huur', en: 'the rent', emoji: '🔑' },
+          { id: 'w.huurcontract', nl: 'het huurcontract', en: 'the rental contract', emoji: '📑' },
+          { id: 'w.borg', nl: 'de borg', en: 'the deposit', emoji: '💰' },
+          { id: 'w.huisbaas', nl: 'de huisbaas', en: 'the landlord', emoji: '🧑‍💼' },
+          { id: 'w.inhouden', nl: 'inhouden', en: 'to take off (from your pay)', emoji: '✂️' },
+        ],
+        sentences: [
+          { id: 's.housing.1', nl: 'Hoeveel is de huur per week?', en: 'How much is the rent per week?' },
+          { id: 's.housing.2', nl: 'Krijg ik de borg terug?', en: 'Do I get the deposit back?' },
+          { id: 's.housing.3', nl: 'Ik wil een apart huurcontract.', en: 'I want a separate rental contract.' },
+        ],
+        dialogues: [
+          chat(
+            line('c.housing.q', 'De huur houden we in op je loon.', 'We take the rent off your pay.'),
+            line('c.housing.a', 'Dan wil ik dat op papier.', 'Then I want that on paper.'),
           ),
         ],
       },
@@ -300,7 +356,7 @@ export const workUnits: Unit[] = [
 ];
 
 /** One "Zo werkt het hier" tip per lesson above. */
-export const workTips: CultureTip[] = [
+const coreTips: CultureTip[] = [
   tip({
     id: 'c.findwork',
     lessonId: 'l.findwork',
@@ -330,6 +386,36 @@ export const workTips: CultureTip[] = [
       { id: 'c.contract.o3', en: 'Sign and never ask, because the boss knows best.', best: false },
     ],
     why: { id: 'c.contract.w', en: 'A trial period in a contract of 6 months or shorter does not count. Asking calmly is normal. If the answer is not clear, get advice from the union or the Juridisch Loket.' },
+  }),
+  tip({
+    id: 'c.bsn',
+    lessonId: 'l.bsn',
+    emoji: '🔢',
+    title: 'Your BSN: keep it safe',
+    body: 'You get a BSN (burgerservicenummer) when you register at the municipality (gemeente). Here only for a short time? Then you register at an RNI desk. You need your BSN to work, for tax, for health insurance and for a bank account. Your employer needs your ID and your BSN. Do not give your BSN or a copy of your ID to people who do not need it: ask why they need it. Moving? Register your new address at the gemeente within 5 days. DigiD is your login for government websites: never give it to someone else. Do you live or work here? Then you usually must have Dutch health insurance (zorgverzekering). Arrange it quickly.',
+    phrase: { id: 'c.bsn.p', nl: 'Waarom heeft u mijn BSN nodig?', en: 'Why do you need my BSN?' },
+    situation: { id: 'c.bsn.s', en: 'Someone you do not know offers you a job on WhatsApp. He asks for a photo of your passport and your DigiD login. What do you do?' },
+    options: [
+      { id: 'c.bsn.o1', en: 'Never give your DigiD login. Ask who he is and why he needs your ID, and check the company first.', best: true },
+      { id: 'c.bsn.o2', en: 'Send everything quickly, so you get the job.', best: false },
+      { id: 'c.bsn.o3', en: 'Send only your DigiD login, because that is not a document.', best: false },
+    ],
+    why: { id: 'c.bsn.w', en: 'With your DigiD or a copy of your ID, other people can use your name, for example for loans or benefits. A real employer needs your ID and BSN, but never your DigiD login.' },
+  }),
+  tip({
+    id: 'c.housing',
+    lessonId: 'l.housing',
+    emoji: '🔑',
+    title: 'Housing from your employer',
+    body: 'Does your employer or agency arrange your housing? Then the rental contract must be separate from your work contract. Ask for a written rental contract and proof of what you pay. Rent may only be taken off your wage if you agreed in writing, and within legal limits: check it on your payslip. A deposit (borg) is at most 2 months of basic rent. You get it back when you leave, minus real damage. Register at your address with the gemeente. Unsafe housing, threats or unfair costs? Report it to the gemeente (meldpunt), and get free advice from the Juridisch Loket or a housing advice service. For a fight about the rent, there is the Huurcommissie. Your job ends? Ask for advice before you leave your home.',
+    phrase: { id: 'c.housing.p', nl: 'Mag ik een bewijs dat ik betaald heb?', en: 'May I have proof that I paid?' },
+    situation: { id: 'c.housing.s', en: 'Your job ends. The agency says: "You must leave the house tomorrow." What do you do?' },
+    options: [
+      { id: 'c.housing.o1', en: 'Ask for advice quickly, for example at the Juridisch Loket, before you leave.', best: true },
+      { id: 'c.housing.o2', en: 'Leave right away and forget about your deposit.', best: false },
+      { id: 'c.housing.o3', en: 'Stay, and stop answering the agency.', best: false },
+    ],
+    why: { id: 'c.housing.w', en: 'Your rental contract has its own rules, separate from your job. Free advice helps you know your rights, for example about when you must leave and about your deposit.' },
   }),
   tip({
     id: 'c.payslip',
@@ -453,12 +539,3 @@ export const workTips: CultureTip[] = [
   }),
 ];
 
-/** Tip ids of this file that need a help-language translation (lesson items are counted with the course). */
-export const workIds: string[] = workTips.flatMap((t) => [
-  t.id,
-  `${t.id}.b`,
-  t.phrase.id,
-  t.situation.id,
-  ...t.options.map((o) => o.id),
-  t.why.id,
-]);
