@@ -78,6 +78,9 @@ export const uiEn = {
   sectorHint: 'The lessons for your work come first. You can change this later in Settings.',
   otherSectors: 'Other sectors',
   otherSectorsHint: 'Lessons for other kinds of work. You can do them too.',
+  /** "Herhaal vandaag": the daily review of words met before (spaced repetition). */
+  reviewToday: 'Review today',
+  reviewTodayN: 'Words to practise again: {n} · a few minutes',
   notSureYet: 'Not sure yet',
   sectorLogistics: 'Logistics',
   sectorConstruction: 'Construction',

@@ -117,7 +117,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   const words = lesson.words;
   const out: Exercise[] = [];
 
-  const mix = isMixLesson(lesson);
+  const mix = isMixLesson(lesson) || Boolean(lesson.repeat);
   if (!opts.review && !mix) {
     words.forEach((word, i) => {
       out.push({ kind: 'intro', word });

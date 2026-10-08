@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
-import { gloss, ui, type Bilingual } from '../i18n';
+import { fillN, gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { autoSpeak, sounds, speechAvailable } from '../lib/audio';
 import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
@@ -28,6 +28,8 @@ export interface LessonResult {
   /** Graded exercises answered right the first time, out of all graded exercises. */
   right: number;
   total: number;
+  /** Per word asked on its own (meaning, picture, listen, type): right every first time? */
+  words: Record<string, boolean>;
 }
 
 function solution(ex: Exercise): { text: string; nl: boolean } {
@@ -61,11 +63,6 @@ const KIND_TAG: Record<Exercise['kind'], string> = {
   tip: 'Tip',
   situation: 'Situatie',
 };
-
-/** Fills {n} in both languages of a UI string. */
-function fillN(text: Bilingual, n: number): Bilingual {
-  return { ...text, en: text.en.replace('{n}', String(n)), help: text.help?.replace('{n}', String(n)) };
-}
 
 /** The answer as a pair for the feedback label: Dutch = meaning (English + help language). */
 function answerPair(ex: Exercise, lang?: HelpLanguage): { nl?: string; meaning: Bilingual } | null {
@@ -128,6 +125,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [checked, setChecked] = useState(false);
   const graded = useRef({ right: 0, total: 0 });
+  const wordResults = useRef<Record<string, boolean>>({});
   /** "I can't listen now" without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
   const soundOff = quiet || cantListen;
@@ -175,6 +173,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     if (index < initial.length) {
       graded.current.total += 1;
       if (answer.correct) graded.current.right += 1;
+      if (ex.kind === 'meaning' || ex.kind === 'dutch' || ex.kind === 'listen' || ex.kind === 'type') {
+        wordResults.current[ex.word.id] = (wordResults.current[ex.word.id] ?? true) && answer.correct;
+      }
     }
     // A finished match board already gave its feedback tile by tile.
     if (ex.kind === 'match') return next();
@@ -199,7 +200,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   function finish() {
     const { right, total } = graded.current;
     sounds.done();
-    onFinish({ accuracy: total ? right / total : 1, review, right, total });
+    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current });
   }
 
   function next() {

@@ -6,10 +6,11 @@ import { cultureTips } from '../content/culture';
 import { findItem, phrasebookIds, units } from '../content/curriculum';
 import { unitIcons } from '../content/unitIcons';
 import { unitLink } from '../lib/unitLink';
+import { DAILY_MAX } from '../lib/spaced';
 import { coursePlan, unitSector, type SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { SectorIcon, SectorPicker } from './Sector';
-import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
+import { fillN, gloss, helpLanguages, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useState } from 'react';
 import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
@@ -197,8 +198,11 @@ const unitNumber = (u: number) => String(u + 1).padStart(2, '0');
  *  (not A1/B1, which read like language levels). */
 const lessonCode = (u: number, i: number) => `${u + 1}.${i + 1}`;
 
-export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused }: {
+export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused, dueToday = 0, onDaily }: {
   progress: Progress;
+  /** Words due in "Herhaal vandaag"; the card shows when there are any. */
+  dueToday?: number;
+  onDaily?: () => void;
   /** A unit to scroll to and mark (from a coach link); onFocused is called once it is shown. */
   focusUnit?: string | null;
   onFocused?: () => void;
@@ -322,6 +326,17 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
 
   return (
     <div className="path">
+      {dueToday > 0 && onDaily && (
+        <button type="button" className="daily-card" onClick={onDaily}>
+          <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
+          <span className="daily-text">
+            <span className="daily-nl" lang="nl">Herhaal vandaag</span>
+            <Bi className="daily-title" text={ui('reviewToday', lang)} />
+            <Bi className="daily-n" text={fillN(ui('reviewTodayN', lang), Math.min(dueToday, DAILY_MAX))} />
+          </span>
+          <ChevronIcon size={24} className="daily-go" />
+        </button>
+      )}
       {main.map((unit, u) => renderUnit(unit, u))}
       {other.length > 0 && (
         <section className="other-sectors">
@@ -704,7 +719,9 @@ function StatCard({ tone, label, icon, value, final, done, foot }: {
   );
 }
 
-export function Result({ right, total, newWords, words, lang, onDone }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated }: {
+  /** After today's review: how many words came back (shown instead of new words). */
+  repeated?: number;
   /** Graded exercises right the first time, out of all graded ones. */
   right: number;
   total: number;
@@ -749,11 +766,11 @@ export function Result({ right, total, newWords, words, lang, onDone }: {
           />
           <StatCard
             tone="gold"
-            label={ui('newWords', lang)}
-            icon={<CrateIcon size={30} />}
-            value={`+${shownNew}`}
-            final={`+${newWords}`}
-            done={shownNew === newWords}
+            label={repeated !== undefined ? ui('reviewToday', lang) : ui('newWords', lang)}
+            icon={repeated !== undefined ? <CalendarIcon size={30} /> : <CrateIcon size={30} />}
+            value={repeated !== undefined ? `${repeated}` : `+${shownNew}`}
+            final={repeated !== undefined ? `${repeated}` : `+${newWords}`}
+            done={repeated !== undefined || shownNew === newWords}
             foot={fill(ui('wordsLearnedN', lang), words)}
           />
         </div>

@@ -77,6 +77,8 @@ const lang: HelpLanguage = {
     sectorHint: 'دروس عملك تأتي أولاً. يمكنك تغيير هذا لاحقاً في الإعدادات.',
     otherSectors: 'قطاعات أخرى',
     otherSectorsHint: 'دروس لأنواع عمل أخرى. يمكنك أن تتعلمها أيضاً.',
+    reviewToday: 'مراجعة اليوم',
+    reviewTodayN: 'كلمات للتمرين مرة أخرى: {n} · بضع دقائق',
     notSureYet: 'لست متأكداً بعد',
     sectorLogistics: 'الخدمات اللوجستية',
     sectorConstruction: 'البناء',

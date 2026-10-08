@@ -84,3 +84,8 @@ export function ui(key: UiKey, lang?: HelpLanguage): Bilingual {
 export function gloss(id: string, en: string, lang?: HelpLanguage): Bilingual {
   return { en, help: lang?.gloss[id], lang };
 }
+
+/** Fills {n} in both languages of a UI string. */
+export function fillN(text: Bilingual, n: number): Bilingual {
+  return { ...text, en: text.en.replace('{n}', String(n)), help: text.help?.replace('{n}', String(n)) };
+}

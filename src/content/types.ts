@@ -42,6 +42,8 @@ export interface Lesson {
   sentences: Sentence[];
   /** Short chats for the "Complete the conversation" exercise. */
   dialogues?: Dialogue[];
+  /** A review of words met before (today's review): no intro cards, every word is asked. */
+  repeat?: true;
 }
 
 export interface Unit {

@@ -1,5 +1,6 @@
 import type { LangCode } from '../i18n/types';
 import { isSectorId, type SectorChoice } from '../content/sectors';
+import type { Cards } from './spaced';
 
 export interface LessonRecord {
   /** Best accuracy so far, 0–1. */
@@ -30,6 +31,8 @@ export interface Progress {
   /** Local date (YYYY-MM-DD) of the last finished lesson. */
   lastDay: string | null;
   completed: Record<string, LessonRecord>;
+  /** "Herhaal vandaag": a card per word met, with its box and next date (src/lib/spaced.ts). Missing in older saves. */
+  cards?: Cards;
 }
 
 export const emptyProgress: Progress = {
@@ -98,6 +101,19 @@ export function xpFor(accuracy: number, review: boolean): number {
   return base + (accuracy === 1 ? 5 : 0);
 }
 
+/** The day streak after practising today (a lesson or today's review). */
+function streakAfter(p: Progress, key: string): number {
+  if (!p.lastDay) return 1;
+  const gap = daysBetween(p.lastDay, key);
+  return gap === 1 ? p.streak + 1 : gap > 1 ? 1 : p.streak;
+}
+
+/** Today's review counts for the day streak like a lesson, but is not a lesson on the path. */
+export function completeDaily(p: Progress, accuracy: number, today: Date): Progress {
+  const key = dayKey(today);
+  return { ...p, xp: p.xp + xpFor(accuracy, true), streak: streakAfter(p, key), lastDay: key };
+}
+
 export function completeLesson(
   p: Progress,
   lessonId: string,
@@ -106,13 +122,7 @@ export function completeLesson(
   today: Date,
 ): Progress {
   const key = dayKey(today);
-  let streak = p.streak;
-  if (!p.lastDay) streak = 1;
-  else {
-    const gap = daysBetween(p.lastDay, key);
-    if (gap === 1) streak += 1;
-    else if (gap > 1) streak = 1;
-  }
+  const streak = streakAfter(p, key);
   const prev = p.completed[lessonId];
   return {
     ...p,

@@ -1,4 +1,5 @@
 import { units } from '../content/curriculum';
+import { DAILY_ID } from './spaced';
 
 /**
  * A door lock, not security: the site is static, so anyone can read the bundle. The passwords
@@ -60,5 +61,7 @@ export function unitAllowed(unitId: string, access: Access): boolean {
 /** Can this lesson be played with this access level (whatever the progress says)? */
 export function lessonAllowed(lessonId: string, access: Access): boolean {
   if (access === 'full') return true;
+  // Today's review only repeats words the learner met, so it is open in the preview too.
+  if (lessonId === DAILY_ID) return true;
   return units.some((u) => PREVIEW_UNITS.has(u.id) && u.lessons.some((l) => l.id === lessonId));
 }
