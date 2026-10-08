@@ -11,7 +11,7 @@ on:
         options: [check, sample, all]
         default: check
       voices:
-        description: 'Only these voices, comma separated (e.g. berend). Empty = all voices'
+        description: 'Only these voices, comma separated (e.g. thijmen). Empty = all voices'
         default: ''
       max_credits:
         description: 'Stop before spending more than this'
