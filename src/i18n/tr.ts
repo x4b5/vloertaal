@@ -178,18 +178,6 @@ const lang: HelpLanguage = {
     's.sick.2': 'Sırtım ağrıyor.',
     's.sick.3': 'Doktoru arıyorum.',
 
-    // Unit: In the greenhouse
-    'u.greenhouse': 'Serada',
-    'l.harvest': 'Hasat zamanı',
-    'w.kas': 'sera',
-    'w.tomaat': 'domates',
-    'w.paprika': 'dolmalık biber',
-    'w.komkommer': 'salatalık',
-    'w.plukken': 'toplamak',
-    'w.krat': 'kasa',
-    's.harvest.1': 'Sadece kırmızı domatesleri topla.',
-    's.harvest.2': 'Kasa dolu.',
-    's.harvest.3': 'Serada çalışıyorum.',
     'c.hello.q': 'İyi akşamlar!',
     'c.hello.a': 'Yarın görüşürüz!',
     'c.people.q': 'Adın ne?',
@@ -208,8 +196,6 @@ const lang: HelpLanguage = {
     'c.shift.a': 'Çay, lütfen.',
     'c.sick.q': 'Hasta mısın?',
     'c.sick.a': 'Evet, bugün evde kalıyorum.',
-    'c.harvest.q': 'Kasa dolu mu?',
-    'c.harvest.a': 'Evet, dolu.',
     // Emergency phrases (phrasebook only)
     'p.call112': "112'yi ara!",
     'p.hurt': 'Yaralandım.',

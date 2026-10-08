@@ -259,38 +259,6 @@ export const units: Unit[] = [
       },
     ],
   },
-  {
-    id: 'u.greenhouse',
-    title: 'In the greenhouse',
-    titleNl: 'In de kas',
-    emoji: '🍅',
-    color: '#137a55',
-    lessons: [
-      {
-        id: 'l.harvest',
-        title: 'Harvest time',
-        words: [
-          { id: 'w.kas', nl: 'de kas', en: 'the greenhouse', emoji: '🌱' },
-          { id: 'w.tomaat', nl: 'de tomaat', en: 'the tomato', emoji: '🍅' },
-          { id: 'w.paprika', nl: 'de paprika', en: 'the bell pepper', emoji: '🫑' },
-          { id: 'w.komkommer', nl: 'de komkommer', en: 'the cucumber', emoji: '🥒' },
-          { id: 'w.plukken', nl: 'plukken', en: 'to pick', emoji: '🤏' },
-          { id: 'w.krat', nl: 'de krat', en: 'the crate', emoji: '🧺' },
-        ],
-        sentences: [
-          { id: 's.harvest.1', nl: 'Pluk alleen rode tomaten.', en: 'Only pick red tomatoes.' },
-          { id: 's.harvest.2', nl: 'De krat is vol.', en: 'The crate is full.' },
-          { id: 's.harvest.3', nl: 'Ik werk in de kas.', en: 'I work in the greenhouse.' },
-        ],
-        dialogues: [
-          {
-            prompt: { id: 'c.harvest.q', nl: 'Is de krat vol?', en: 'Is the crate full?' },
-            reply: { id: 'c.harvest.a', nl: 'Ja, hij is vol.', en: 'Yes, it is full.' },
-          },
-        ],
-      },
-    ],
-  },
   teamworkUnit,
   ...workUnits,
 ];

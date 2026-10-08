@@ -79,7 +79,6 @@ const lang: HelpLanguage = {
     'u.safety': 'اول ایمنی',
     'u.warehouse': 'در گدام',
     'u.time': 'وقت و تقسیم اوقات کار',
-    'u.greenhouse': 'در گلخانه',
 
     // Lessons
     'l.hello': 'سلام دادن',
@@ -91,7 +90,6 @@ const lang: HelpLanguage = {
     'l.directions': 'طرف‌ها و کارها',
     'l.shift': 'نوبت کاری من',
     'l.sick': 'خبر دادن از مریضی',
-    'l.harvest': 'وقت حاصل‌برداری',
 
     // Words
     'w.hallo': 'سلام',
@@ -148,12 +146,6 @@ const lang: HelpLanguage = {
     'w.pijn': 'درد',
     'w.vandaag': 'امروز',
     'w.beter': 'بهتر',
-    'w.kas': 'گلخانه',
-    'w.tomaat': 'بادنجان رومی',
-    'w.paprika': 'مرچ شیرین (دلمه‌ای)',
-    'w.komkommer': 'بادرنگ',
-    'w.plukken': 'چیدن',
-    'w.krat': 'صندوق حاصل (کریت)',
 
     // Sentences
     's.hello.1': 'سلام، من نو آمده‌ام.',
@@ -183,9 +175,6 @@ const lang: HelpLanguage = {
     's.sick.1': 'من امروز مریض هستم.',
     's.sick.2': 'کمرم درد می‌کند.',
     's.sick.3': 'به داکتر زنگ می‌زنم.',
-    's.harvest.1': 'فقط بادنجان رومی‌های سرخ را بچین.',
-    's.harvest.2': 'صندوق پر است.',
-    's.harvest.3': 'من در گلخانه کار می‌کنم.',
     'c.hello.q': 'شب خوش!',
     'c.hello.a': 'فردا می‌بینمت!',
     'c.people.q': 'نامت چیست؟',
@@ -204,8 +193,6 @@ const lang: HelpLanguage = {
     'c.shift.a': 'چای، لطفاً.',
     'c.sick.q': 'مریض هستی؟',
     'c.sick.a': 'بلی، امروز خانه می‌مانم.',
-    'c.harvest.q': 'صندوق پر است؟',
-    'c.harvest.a': 'بلی، پر است.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'به 112 زنگ بزن!',
     'p.hurt': 'من زخمی شده‌ام.',

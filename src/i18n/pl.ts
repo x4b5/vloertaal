@@ -178,18 +178,6 @@ const lang: HelpLanguage = {
     's.sick.2': 'Bolą mnie plecy.',
     's.sick.3': 'Dzwonię do lekarza.',
 
-    // Unit: In the greenhouse
-    'u.greenhouse': 'W szklarni',
-    'l.harvest': 'Czas zbiorów',
-    'w.kas': 'szklarnia',
-    'w.tomaat': 'pomidor',
-    'w.paprika': 'papryka',
-    'w.komkommer': 'ogórek',
-    'w.plukken': 'zrywać',
-    'w.krat': 'skrzynka',
-    's.harvest.1': 'Zrywaj tylko czerwone pomidory.',
-    's.harvest.2': 'Skrzynka jest pełna.',
-    's.harvest.3': 'Pracuję w szklarni.',
     'c.hello.q': 'Miłego wieczoru!',
     'c.hello.a': 'Do jutra!',
     'c.people.q': 'Jak masz na imię?',
@@ -208,8 +196,6 @@ const lang: HelpLanguage = {
     'c.shift.a': 'Herbatę, poproszę.',
     'c.sick.q': 'Jesteś chory?',
     'c.sick.a': 'Tak, dziś zostaję w domu.',
-    'c.harvest.q': 'Czy skrzynka jest pełna?',
-    'c.harvest.a': 'Tak, jest pełna.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Dzwoń pod 112!',
     'p.hurt': 'Jestem ranny / ranna.',

@@ -178,18 +178,6 @@ const lang: HelpLanguage = {
     's.sick.2': 'У мене болить спина.',
     's.sick.3': 'Я дзвоню лікарю.',
 
-    // Unit: In the greenhouse
-    'u.greenhouse': 'У теплиці',
-    'l.harvest': 'Час збору врожаю',
-    'w.kas': 'теплиця',
-    'w.tomaat': 'помідор',
-    'w.paprika': 'солодкий перець',
-    'w.komkommer': 'огірок',
-    'w.plukken': 'збирати (зривати)',
-    'w.krat': 'ящик',
-    's.harvest.1': 'Збирай лише червоні помідори.',
-    's.harvest.2': 'Ящик повний.',
-    's.harvest.3': 'Я працюю в теплиці.',
     'c.hello.q': 'Гарного вечора!',
     'c.hello.a': 'До завтра!',
     'c.people.q': 'Як тебе звати?',
@@ -208,8 +196,6 @@ const lang: HelpLanguage = {
     'c.shift.a': 'Чаю, будь ласка.',
     'c.sick.q': 'Ти хворий?',
     'c.sick.a': 'Так, сьогодні я залишаюся вдома.',
-    'c.harvest.q': 'Ящик повний?',
-    'c.harvest.a': 'Так, він повний.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Дзвони 112!',
     'p.hurt': 'Я поранений / поранена.',

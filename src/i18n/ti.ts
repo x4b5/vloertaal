@@ -79,7 +79,6 @@ const lang: HelpLanguage = {
     'u.safety': 'ድሕንነት ቅድሚ ኩሉ',
     'u.warehouse': 'ኣብ መኽዘን',
     'u.time': 'ግዜን መደብ ስራሕን',
-    'u.greenhouse': 'ኣብ ግሪንሃውስ (ቤት ኣትክልቲ)',
 
     // Lessons
     'l.hello': 'ሰላም በል',
@@ -91,7 +90,6 @@ const lang: HelpLanguage = {
     'l.directions': 'ኣንፈታትን ተግባራትን',
     'l.shift': 'ፈረቓ ስራሐይ (ሺፍት)',
     'l.sick': 'ሕማም ምሕባር',
-    'l.harvest': 'ግዜ ምእራይ',
 
     // Words
     'w.hallo': 'ሰላም',
@@ -148,12 +146,6 @@ const lang: HelpLanguage = {
     'w.pijn': 'ቃንዛ',
     'w.vandaag': 'ሎሚ',
     'w.beter': 'ዝሓሸ',
-    'w.kas': 'ግሪንሃውስ (ቤት ኣትክልቲ)',
-    'w.tomaat': 'ኮሚደረ',
-    'w.paprika': 'ፐፐሮኒ',
-    'w.komkommer': 'ኩኩምበር',
-    'w.plukken': 'ምቕራም',
-    'w.krat': 'ካሸታ (ሳጹን ኣሕምልቲ)',
 
     // Sentences
     's.hello.1': 'ሰላም፡ ኣነ ሓድሽ እየ።',
@@ -183,9 +175,6 @@ const lang: HelpLanguage = {
     's.sick.1': 'ሎሚ ሕሙም እየ።',
     's.sick.2': 'ሕቖይ ይቃንዘኒ ኣሎ።',
     's.sick.3': 'ናብ ሓኪም ይድውል ኣለኹ።',
-    's.harvest.1': 'ቀይሕ ኮሚደረ ጥራይ ቕረም።',
-    's.harvest.2': 'እቲ ካሸታ መሊኡ።',
-    's.harvest.3': 'ኣብ ግሪንሃውስ እሰርሕ።',
     'c.hello.q': 'ጽቡቕ ምሸት!',
     'c.hello.a': 'ጽባሕ ክንራኸብ!',
     'c.people.q': 'ስምካ መን እዩ?',
@@ -204,8 +193,6 @@ const lang: HelpLanguage = {
     'c.shift.a': 'ሻሂ፣ በጃኻ።',
     'c.sick.q': 'ሓሚምካ ዲኻ?',
     'c.sick.a': 'እወ፣ ሎሚ ኣብ ገዛ እጸንሕ።',
-    'c.harvest.q': 'ካሸታ መሊኡ ድዩ?',
-    'c.harvest.a': 'እወ፣ መሊኡ እዩ።',
     // Emergency phrases (phrasebook only)
     'p.call112': 'ናብ 112 ደውል!',
     'p.hurt': 'ተጎዲአ ኣለኹ።',

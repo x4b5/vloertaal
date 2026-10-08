@@ -79,7 +79,6 @@ const lang: HelpLanguage = {
     'u.safety': 'Siguranța pe primul loc',
     'u.warehouse': 'În depozit',
     'u.time': 'Timp și program',
-    'u.greenhouse': 'În seră',
 
     // Lessons
     'l.hello': 'Salută',
@@ -91,7 +90,6 @@ const lang: HelpLanguage = {
     'l.directions': 'Direcții și acțiuni',
     'l.shift': 'Tura mea',
     'l.sick': 'Anunți că ești bolnav',
-    'l.harvest': 'Timpul recoltei',
 
     // Words
     'w.hallo': 'salut',
@@ -148,12 +146,6 @@ const lang: HelpLanguage = {
     'w.pijn': 'durerea',
     'w.vandaag': 'azi',
     'w.beter': 'mai bine',
-    'w.kas': 'sera',
-    'w.tomaat': 'roșia',
-    'w.paprika': 'ardeiul gras',
-    'w.komkommer': 'castravetele',
-    'w.plukken': 'a culege',
-    'w.krat': 'lada',
 
     // Sentences
     's.hello.1': 'Salut, sunt nou.',
@@ -183,9 +175,6 @@ const lang: HelpLanguage = {
     's.sick.1': 'Sunt bolnav azi.',
     's.sick.2': 'Mă doare spatele.',
     's.sick.3': 'Îl sun pe doctor.',
-    's.harvest.1': 'Culege doar roșii roșii.',
-    's.harvest.2': 'Lada este plină.',
-    's.harvest.3': 'Lucrez în seră.',
     'c.hello.q': 'Seară bună!',
     'c.hello.a': 'Pe mâine!',
     'c.people.q': 'Cum te cheamă?',
@@ -204,8 +193,6 @@ const lang: HelpLanguage = {
     'c.shift.a': 'Ceai, te rog.',
     'c.sick.q': 'Ești bolnav?',
     'c.sick.a': 'Da, azi rămân acasă.',
-    'c.harvest.q': 'Lada e plină?',
-    'c.harvest.a': 'Da, e plină.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Sună la 112!',
     'p.hurt': 'Sunt rănit / rănită.',
