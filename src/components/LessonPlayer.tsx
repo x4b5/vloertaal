@@ -483,7 +483,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     </div>
   ) : pair && (
     <div className="feedback-pair">
-      <span className="pair-main">
+      {/* "de helm = the helmet" is one left-to-right unit, also inside right-to-left text. */}
+      <span className="pair-main" dir={rtl ? 'ltr' : undefined}>
         {pair.nl && (
           <>
             <strong lang="nl" dir={rtl ? 'ltr' : undefined}>{pair.nl}</strong>
