@@ -804,6 +804,42 @@ const socialUnit = unit('social', 'Getting along', 'Omgang met collega’s', '�
     ],
     [['Wat is er? Je kijkt verdrietig.', 'What is wrong? You look sad.'], ['Een collega pest mij.', 'A colleague is bullying me.']],
   ),
+  lesson(
+    'gossip',
+    'Gossip and social media',
+    [
+      ['roddelen', 'roddelen', 'to gossip', '🤫'],
+      ['posten', 'posten', 'to post (online)', '📤'],
+      ['groepsapp', 'de groepsapp', 'the group chat', '💭'],
+      ['socialemedia', 'de sociale media', 'social media', '🌐', false],
+      ['delen', 'delen', 'to share', '↗️'],
+      ['screenshot', 'de screenshot', 'the screenshot', '🖼️'],
+    ],
+    [
+      ['Ik roddel niet over collega’s.', 'I do not gossip about colleagues.'],
+      ['Ik zet geen foto’s van het werk online.', 'I do not put photos of work online.'],
+      ['Zeg het liever tegen mij zelf.', 'I would rather you say it to me.'],
+    ],
+    [['Heb je gehoord wat Mark heeft gedaan?', 'Did you hear what Mark did?'], ['Nee, en ik praat liever niet over hem.', 'No, and I would rather not talk about him.']],
+  ),
+  lesson(
+    'boundaries',
+    'Crossing the line',
+    [
+      ['aanraken', 'aanraken', 'to touch', '✋'],
+      ['ongewenst', 'ongewenst', 'unwanted', '🚫', false],
+      ['opmerking', 'de opmerking', 'the remark, the comment', '🗯'],
+      ['intimidatie', 'de intimidatie', 'the harassment, the intimidation', '😰', false],
+      ['getuige', 'de getuige', 'the witness', '👀'],
+      ['grapje', 'het grapje', 'the joke', '😜', false],
+    ],
+    [
+      ['Raak me niet aan, alstublieft.', 'Please do not touch me.'],
+      ['Die opmerking vind ik niet grappig.', 'I do not find that remark funny.'],
+      ['Ik wil iets melden bij de vertrouwenspersoon.', 'I want to report something to the confidential adviser.'],
+    ],
+    [['Doe niet zo moeilijk, het was maar een grapje.', 'Do not be so difficult, it was only a joke.'], ['Voor mij niet. Ik wil dat je stopt.', 'Not for me. I want you to stop.']],
+  ),
 ]);
 
 const socialTips = [
@@ -850,6 +886,36 @@ const socialTips = [
       'Make jokes about his background back.',
     ],
     'Such jokes are not accepted at work. Reporting it is normal: the company must keep the workplace safe for everyone.',
+    NONE,
+  ),
+  tipFor(
+    'gossip',
+    '🤫',
+    'Gossip and social media',
+    'Talking behind a colleague’s back (roddelen) harms the trust in a team. Do you have a problem with someone? Talk to that person, or to your supervisor. Online, the same rules apply as at work: do not post photos, videos or messages about colleagues, clients or the company without permission. Your boss can see what you post, and it can stay online for years. Many teams have a group chat (groepsapp) for work: keep it about work, and do not share screenshots of it with others. Sharing private things of a colleague or mocking someone online is bullying too.',
+    ['Dat wil ik niet online hebben.', 'I do not want that online.'],
+    'A colleague films you when you slip on the wet floor. He wants to put the video on TikTok. What do you do?',
+    [
+      'Say "Nee, dat wil ik niet" and ask him to delete it. If he posts it anyway, tell your supervisor.',
+      'Laugh and let him post it, so you are not difficult.',
+      'Film him too and post that video yourself.',
+    ],
+    'Nobody may put a video of you online without your permission. Saying no is normal, and your employer must act when colleagues mock each other online.',
+    NONE,
+  ),
+  tipFor(
+    'boundaries',
+    '🛑',
+    'Crossing the line',
+    'Grensoverschrijdend gedrag is behaviour that crosses someone’s boundary: unwanted touching, sexual remarks or jokes, staring, sending unwanted pictures, threats or shouting. It does not matter if the other person "meant it as a joke": what counts is how it feels to you. If you can, say clearly that you want it to stop. Write down what happened, when, and who saw it. Tell your supervisor, the confidential adviser (vertrouwenspersoon) or HR. Your employer must protect you, and you may not be punished for reporting it. Did you see it happen to a colleague? Ask if they are okay, and offer to be a witness.',
+    ['Ik wil dat je stopt.', 'I want you to stop.'],
+    'Your team leader often puts his hand on your back and says you look "pretty". It makes you feel uncomfortable. He decides your shifts. What do you do?',
+    [
+      'Write down what happens and talk to the vertrouwenspersoon or HR.',
+      'Say nothing, because he decides your shifts.',
+      'Quit your job without telling anyone why.',
+    ],
+    'This is unwanted behaviour, and it is not your fault. A confidential adviser listens in confidence and helps you choose the next step. You are protected when you report it.',
     NONE,
   ),
 ];
