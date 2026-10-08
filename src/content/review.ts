@@ -86,45 +86,83 @@ function pickWords(lessons: Lesson[], n: number, taken: Set<string>, takenNl: Se
   return out;
 }
 
-/** Builds the mixed-review lesson for one unit from the units as they are before review lessons. */
-export function mixLesson(unit: Unit, all: Unit[]): Lesson {
+/**
+ * Builds the mixed-review lesson for one unit. `met` says whether the learner finished a lesson:
+ * items of a related unit only come in from its lessons the learner has finished, so the review
+ * never brings something the learner has not been taught yet. With no related lesson met (and
+ * by default) the review uses this unit's own items only. Deterministic for the same `met`.
+ */
+export function mixLesson(unit: Unit, all: Unit[], met: (lessonId: string) => boolean = () => false): Lesson {
+  const teaching = (u: Unit) => u.lessons.filter((l) => !isMixLesson(l));
+  const metLessons = (u: Unit) => teaching(u).filter((l) => met(l.id));
   const byId = new Map(all.map((u) => [u.id, u]));
-  const related = (relatedUnits[unit.id] ?? []).map((id) => byId.get(id)).filter((u): u is Unit => Boolean(u));
-  const own = unit.lessons;
+  const related = (relatedUnits[unit.id] ?? [])
+    .map((id) => byId.get(id))
+    .filter((u): u is Unit => Boolean(u) && metLessons(u as Unit).length > 0);
+  const own = teaching(unit);
   const taken = new Set<string>();
   const takenText = new Set<string>();
-  // 4 words of this unit and 1 of each related unit (or the hand-picked ones): 6 words.
+  // 4 words of this unit and 1 of each related unit (or the hand-picked ones): 6 words. Words of
+  // related units the learner has not met are left out, and this unit's own words fill up.
   const ownWords = pickWords(own, 4, taken, takenText);
   const picked = relatedWords[unit.id];
-  const words = [
-    ...ownWords,
-    ...(picked
-      ? picked.map((id) => {
-          const w = all.flatMap((u) => u.lessons.flatMap((l) => l.words)).find((x) => x.id === id);
-          if (!w) throw new Error(`Mixed review of ${unit.id}: no word ${id}`);
-          return w;
-        })
-      : related.flatMap((u) => pickWords([...u.lessons].reverse(), 1, taken, takenText))),
-  ];
+  const metWord = (id: string) => all.some((u) => u.id !== unit.id && metLessons(u).some((l) => l.words.some((w) => w.id === id)));
+  const relWords = picked
+    ? picked.map((id) => {
+        const w = all.flatMap((u) => teaching(u).flatMap((l) => l.words)).find((x) => x.id === id);
+        if (!w) throw new Error(`Mixed review of ${unit.id}: no word ${id}`);
+        return w;
+      }).filter((w) => metWord(w.id) && !taken.has(w.id))
+    : related.flatMap((u) => pickWords([...metLessons(u)].reverse(), 1, taken, takenText));
+  const words = [...ownWords, ...relWords];
+  if (words.length < 6) words.push(...pickWords(own, 6 - words.length, taken, takenText));
   const first = own[0];
   const last = own[own.length - 1];
-  // Sentences: the last one of the first lesson and of the last lesson, plus one of a related unit.
+  // Sentences: the last one of the first lesson and of the last lesson, plus one of a related
+  // unit (of its last lesson the learner finished), or else one more of this unit.
   const sentences: Sentence[] = [];
   const addSentence = (s?: Sentence) => {
     if (s && !sentences.some((x) => x.id === s.id || x.nl === s.nl)) sentences.push(s);
   };
   addSentence(first.sentences[first.sentences.length - 1]);
   addSentence(last.sentences[last.sentences.length - 1]);
-  if (related[0]) addSentence(related[0].lessons[related[0].lessons.length - 1].sentences[0]);
-  // Chats: one of this unit's last lesson and one of the second related unit.
+  const relMet = related[0] ? metLessons(related[0]) : [];
+  if (relMet.length) addSentence(relMet[relMet.length - 1].sentences[0]);
+  // Too few (a short unit, no related lesson met): more of this unit's own, from the end.
+  for (const s of own.flatMap((l) => l.sentences).reverse()) if (sentences.length < 3) addSentence(s);
+  // Chats: one of this unit's last lesson and one of the second related unit (its first lesson
+  // the learner finished that has a chat), or else one more of this unit.
   const dialogues: Dialogue[] = [];
   const addDialogue = (d?: Dialogue) => {
     if (d && !dialogues.some((x) => x.reply.nl === d.reply.nl)) dialogues.push(d);
   };
   addDialogue(last.dialogues?.[0]);
   const other = related[1] ?? related[0];
-  if (other) addDialogue(other.lessons[0].dialogues?.[0]);
+  const otherChat = other ? metLessons(other).find((l) => l.dialogues?.length) : undefined;
+  if (otherChat) addDialogue(otherChat.dialogues![0]);
+  else for (const l of own) if (dialogues.length < 2) for (const d of l.dialogues ?? []) if (dialogues.length < 2) addDialogue(d);
   return { id: mixLessonId(unit.id), title: MIX_TITLE, words, sentences, dialogues };
+}
+
+const played = new Map<string, Lesson>();
+
+/**
+ * The mixed review as the learner plays it, from the lessons they finished (`completed`).
+ * Cached per unit and per set of related lessons met, so the same object comes back while
+ * nothing changes (the player builds its exercises from it).
+ */
+export function mixLessonFor(unit: Unit, all: Unit[], completed: Record<string, unknown>): Lesson {
+  const metIds = all
+    .filter((u) => u.id !== unit.id)
+    .flatMap((u) => u.lessons.filter((l) => !isMixLesson(l) && completed[l.id]).map((l) => l.id));
+  const key = `${unit.id}|${metIds.join(',')}`;
+  let lesson = played.get(key);
+  if (!lesson) {
+    const done = new Set(metIds);
+    lesson = mixLesson(unit, all, (id) => done.has(id));
+    played.set(key, lesson);
+  }
+  return lesson;
 }
 
 /** Adds the mixed-review lesson to the end of every unit (in place, so unit objects keep their identity). */

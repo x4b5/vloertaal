@@ -862,8 +862,16 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
         {icon}
         <span className="stat-card-value" dir="ltr">{value}</span>
       </div>
-      {foot && <Bi className="stat-card-foot" text={foot} />}
-      {badge}
+      {/* The stamp sits beside the line under the value, in the flow (never over its words);
+          on a narrow card it wraps under it. */}
+      {badge ? (
+        <div className="stat-card-foot-row">
+          {foot && <Bi className="stat-card-foot" text={foot} />}
+          {badge}
+        </div>
+      ) : (
+        foot && <Bi className="stat-card-foot" text={foot} />
+      )}
     </div>
   );
 }

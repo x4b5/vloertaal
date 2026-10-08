@@ -148,12 +148,15 @@ function ContinueButton({ lang, onClick }: { lang?: HelpLanguage; onClick: () =>
 function KeepScreen({ lang, onDone }: { lang?: HelpLanguage; onDone: () => void }) {
   useEnter(onDone);
   useEffect(() => { markKeepOffered(); window.scrollTo(0, 0); }, []);
+  const [short] = useState(() => typeof window !== 'undefined' && window.innerHeight < 720);
   return (
     <div className="player milestone-screen keep-screen">
       <main className="player-body milestone">
-        <div className="keep-hero" aria-hidden><Character who="bram" mood="wave" size={120} /></div>
+        {/* On a short screen (360×640) Bram is smaller, so the whole reminder card fits above Continue. */}
+        <div className="keep-hero" aria-hidden><Character who="bram" mood="wave" size={short ? 64 : 120} /></div>
         <div className="milestone-keep">
-          <ReminderCard lang={lang} />
+          {/* Continue is the one main button here; "add to calendar" is an outline one. */}
+          <ReminderCard lang={lang} secondary />
           <InstallCard lang={lang} />
         </div>
       </main>

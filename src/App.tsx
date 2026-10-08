@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { findLesson, learnedWords } from './content/curriculum';
+import { findLesson, learnedWords, playLesson } from './content/curriculum';
 import { getHelpLanguage } from './i18n';
 import type { LangCode } from './i18n/types';
 import { setPreferredVoice, setQuietAudio } from './lib/audio';
@@ -214,7 +214,7 @@ export default function App() {
   switch (view.name) {
     case 'lesson': {
       const daily = view.lessonId === DAILY_ID;
-      const found = daily ? { lesson: dailyLesson(view.ids ?? []) } : findLesson(view.lessonId);
+      const found = daily ? { lesson: dailyLesson(view.ids ?? []) } : playLesson(view.lessonId, progress.completed);
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !found.lesson.words.length || !lessonAllowed(view.lessonId, access)) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {

@@ -340,6 +340,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
    * its top edge while there is more of the exercise underneath it.
    */
   const [footStatic, setFootStatic] = useState(false);
+  const measureRef = useRef<(() => void) | null>(null);
   const [moreBelow, setMoreBelow] = useState(false);
   useEffect(() => {
     const foot = footRef.current;
@@ -353,23 +354,44 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         const tall = foot.offsetHeight > window.innerHeight * 0.75;
         setFootStatic(tall);
         root.style.setProperty('--foot-h', `${tall ? 0 : foot.offsetHeight}px`);
-        setMoreBelow(!tall && root.scrollHeight - (window.scrollY + window.innerHeight) > 4);
+        // "More below" only when the exercise itself (not just the page's bottom padding) runs
+        // more than a few pixels under the footer, and the page can still scroll there.
+        const slide = slideRef.current;
+        const hidden = slide ? slide.getBoundingClientRect().bottom - foot.getBoundingClientRect().top : 0;
+        const canScroll = root.scrollHeight - (window.scrollY + window.innerHeight) > 4;
+        setMoreBelow(!tall && canScroll && hidden > 12);
       });
     };
+    measureRef.current = measure;
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(foot);
     ro.observe(body);
+    // The page shrinks when the content does, or when an entering exercise's slide-in ends.
+    body.addEventListener('animationend', measure);
+    body.addEventListener('transitionend', measure);
     window.addEventListener('scroll', measure, { passive: true });
     window.addEventListener('resize', measure);
     return () => {
       cancelAnimationFrame(raf);
       ro.disconnect();
+      measureRef.current = null;
+      body.removeEventListener('animationend', measure);
+      body.removeEventListener('transitionend', measure);
       window.removeEventListener('scroll', measure);
       window.removeEventListener('resize', measure);
       root.style.removeProperty('--foot-h');
     };
   }, []);
+  // A new screen (or Check): observe this exercise's slide, so the arrow follows its size.
+  useEffect(() => {
+    const slide = slideRef.current;
+    measureRef.current?.();
+    if (!slide) return;
+    const ro = new ResizeObserver(() => measureRef.current?.());
+    ro.observe(slide);
+    return () => ro.disconnect();
+  }, [index, checked]);
   // After "Check" the feedback label grows the sticky footer. Keep the learner's pick, the right
   // option and the stamp in view above it: scroll just enough, never past the question's top.
   useEffect(() => {

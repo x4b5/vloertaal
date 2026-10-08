@@ -1,8 +1,8 @@
-import { useEffect, useId, useMemo, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { ChatLine } from '../content/types';
 import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { checkTiles, checkTyped } from '../lib/answers';
+import { checkTiles, checkTyped, tokenize } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
 import { sentencePicture, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
@@ -332,15 +332,26 @@ export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misse
         <SpeakButton text={ex.word.nl} size="lg" label="Play" />
         <SpeakButton text={ex.word.nl} slow label="Play slowly" />
       </div>
-      {/* Hearing a candidate is the task itself: a tap plays it. */}
+      {/* As in the other "What do you hear?": each option has its own speaker that only plays it;
+          a tap on the option itself picks it. */}
       <ChoiceGrid
+        className="choices-rows choices-words hear-pick-choices"
         options={ex.options}
         correctId={ex.word.id}
         locked={locked}
         lang={lang}
         onAnswer={onAnswer}
-        onPick={(w) => speak(w.nl)}
-        render={(w) => <><span lang="nl" className="choice-nl">{breakable(w.nl)}</span><SoundMark /></>}
+        side={(w) => (
+          <button type="button" className="choice-say" aria-label={`Play: ${w.nl}`} onClick={() => speak(w.nl)}>
+            <SpeakerIcon size={24} />
+          </button>
+        )}
+        render={(w) => (
+          <span className="choice-text">
+            <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
+            {locked && <Bi className="choice-gloss" text={gloss(w.id, w.en, lang)} />}
+          </span>
+        )}
       />
     </div>
   );
@@ -446,6 +457,37 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   const who = castFor(ex.sentence.id);
   const pic = useMemo(() => sentencePicture(ex.sentence), [ex.sentence]);
 
+  // The answer area keeps room for two rows when the right sentence will not fit on one, so the
+  // tile bank under it does not jump down when the sentence wraps.
+  const lineRef = useRef<HTMLDivElement>(null);
+  const bankRef = useRef<HTMLDivElement>(null);
+  const [twoRows, setTwoRows] = useState(false);
+  useLayoutEffect(() => {
+    const line = lineRef.current;
+    const bank = bankRef.current;
+    if (!line || !bank) return;
+    const fit = () => {
+      const style = getComputedStyle(line);
+      const room = line.clientWidth - parseFloat(style.paddingInlineStart) - parseFloat(style.paddingInlineEnd);
+      const gap = parseFloat(style.columnGap) || 8;
+      const left = [...tokenize(ex.sentence.nl).map((w) => w.toLowerCase())];
+      let need = 0;
+      bank.querySelectorAll<HTMLElement>('.tile-with-say').forEach((b) => {
+        const k = left.indexOf((b.textContent ?? '').trim().toLowerCase());
+        if (k < 0) return;
+        left.splice(k, 1);
+        // A placed tile has no speaker: the bank tile's width without the speaker's room.
+        const pad = parseFloat(getComputedStyle(b).paddingInlineEnd) - parseFloat(getComputedStyle(b).paddingInlineStart);
+        need += b.offsetWidth - pad + gap;
+      });
+      setTwoRows(need - gap > room);
+    };
+    fit();
+    const ro = new ResizeObserver(fit);
+    ro.observe(line);
+    return () => ro.disconnect();
+  }, [ex]);
+
   const update = (next: number[]) => {
     setChosen(next);
     const given = next.map((i) => ex.tiles[i]);
@@ -468,7 +510,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       {/* After Check: a check at the end of a right sentence; a wrong one gets only the NOG EENS
           stamp (the right sentence is shown as tiles in the label below). Both sit in a column
           kept free from the start, so no word moves on Check. */}
-      <div className={`answer-line ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite">
+      <div className={`answer-line ${twoRows ? 'answer-two' : ''} ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite" ref={lineRef}>
         {verdict === 'wrong' && <WrongStamp lang={lang} />}
         {verdict === 'right' && (
           <span className="answer-mark mark-right">
@@ -504,7 +546,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       </div>
       {/* Each tile: the word (a tap puts it in the sentence) and, on its own, a small speaker that
           only plays it, so hearing a tile never places it. */}
-      <div className="tile-bank">
+      <div className="tile-bank" ref={bankRef}>
         {ex.tiles.map((t, i) => {
           const used = chosen.includes(i);
           return (
@@ -814,10 +856,19 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
   );
 }
 
+/** A text's sentences: one ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨) and a space. */
+export const sentences = (text: string) => text.trim().split(/(?<=[.!?؟።፧፨…])\s+/u);
+
+/** The help text as lines, one per sentence; a folded text's closing "…" stays on the last line. */
+function helpLines(text: string): string[] {
+  const lines = sentences(text);
+  if (lines.length > 1 && lines[lines.length - 1] === '…') lines.splice(-2, 2, `${lines[lines.length - 2]} …`);
+  return lines;
+}
+
 /** The first `n` sentences of a text, and whether there is more after them. */
 export function firstSentences(text: string, n: number): { head: string; more: boolean } {
-  // A sentence ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨) and a space.
-  const parts = text.trim().split(/(?<=[.!?؟።፧፨…])\s+/u);
+  const parts = sentences(text);
   if (parts.length <= n) return { head: text.trim(), more: false };
   return { head: parts.slice(0, n).join(' '), more: true };
 }
@@ -837,7 +888,20 @@ function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
   return (
     <div className="tip-body">
       <div className="help-say-row">
-        <p id={id}><Bi text={shown} /></p>
+        <p id={id}>
+          {shown.help && shown.lang ? (
+            // The help language one sentence per line (short lines read more easily than a
+            // block), English small under it.
+            <span className="bi bi-swap tip-lines" dir={shown.lang.dir === 'rtl' ? 'rtl' : undefined}>
+              <span className="bi-en">
+                {helpLines(shown.help).map((line, i) => <HelpText key={i} className="tip-line" text={line} lang={shown.lang!} />)}
+              </span>
+              <span className="bi-help" lang="en" dir={shown.lang.dir === 'rtl' ? 'ltr' : undefined}>{shown.en}</span>
+            </span>
+          ) : (
+            <Bi text={shown} />
+          )}
+        </p>
         <HelpSay text={text.help} lang={lang} />
       </div>
       {long && (

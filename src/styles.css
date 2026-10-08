@@ -923,6 +923,8 @@ h2 { font-size: 1.25rem; }
 /* A column at the end of the answer row is kept free from the start, for the replay speaker
    and, after Check, the check or the stamp: no word moves or wraps on Check. */
 .answer-line { padding-inline-end: 64px; }
+/* A sentence that needs two rows gets both from the start, so the tile bank never jumps. */
+.answer-line.answer-two { min-height: 130px; }
 .answer-line .stamp { top: 0; right: 0; margin-top: 0; width: 60px; height: 60px; }
 .answer-say {
   position: absolute; top: 12px; inset-inline-end: 8px; display: grid; place-items: center;
@@ -1725,6 +1727,20 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .flawless-stamp .stamp-word { font-size: 0.82rem; letter-spacing: 0; }
 .stat-card:has(.flawless-stamp) .stat-card-foot { min-height: 54px; padding-inline-end: 62px; color: var(--stamp-ink); }
 .stat-card:has(.flawless-stamp) .stat-card-foot .bi-help { color: var(--muted); }
+/* The stamp beside "No mistakes" in the flow, so it never covers the words; calm: small, a
+   slight tilt. */
+.stat-card-foot-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+.stat-card:has(.flawless-stamp) .stat-card-foot-row .stat-card-foot { flex: 1 1 72px; min-width: 0; min-height: 0; padding-inline-end: 0; }
+.stat-card .stat-card-foot-row .flawless-stamp { position: relative; inset: auto; flex: none; width: 54px; height: 54px; rotate: 6deg; margin: 0; }
+.stat-card-foot-row .flawless-stamp .stamp-word { font-size: 0.64rem; }
+/* Short screens (360×640): the scene's empty sky is cropped (the figures stand at its bottom),
+   so both result cards are above Continue. */
+@media (max-height: 760px) {
+  .result .cel-scene { aspect-ratio: 320 / 165; }
+  .result .cel-svg { inset: auto 0 0; height: auto; aspect-ratio: 320 / 260; }
+  .result { padding-top: 8px; }
+  .result-stats { margin-top: 16px; }
+}
 .result-line {
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 8px;
   margin: 6px 0 0; max-width: 440px; font-weight: 650; animation: result-go 0.4s 1.2s var(--ease-out) both;
@@ -1981,6 +1997,11 @@ svg.emoji-xl { width: 140px; height: 140px; }
 
 /* Tip: the text folds after about two sentences; "meer" opens the rest. */
 .tip-body p { margin: 0; }
+/* The help language one sentence per line, with air between the lines. */
+.tip-lines .tip-line { display: block; line-height: 1.55; }
+.tip-lines .tip-line + .tip-line { margin-top: 0.4em; }
+.tip-lines .tip-line:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.12em; }
+.tip-lines > .bi-help { margin-top: 4px; }
 .tip-more {
   display: inline-flex; align-items: center; flex-wrap: wrap; gap: 2px 8px; min-height: 44px; margin-top: 8px;
   padding: 4px 12px 4px 14px; text-align: start; color: var(--ink);
@@ -2061,6 +2082,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
   .player .chat { margin-bottom: 8px; }
   .player .tile-bank { margin-top: 14px; gap: 6px; }
   .player .answer-line { min-height: 56px; row-gap: 8px; background-size: 100% 56px; }
+  .player .answer-line.answer-two { min-height: 114px; }
   .player .tile { min-height: 44px; padding-block: 5px; }
   .player .match { min-height: 52px; }
   .player .player-foot { padding-top: 8px; }
@@ -2068,6 +2090,30 @@ svg.emoji-xl { width: 140px; height: 140px; }
   .player .foot-actions .btn-ghost { min-height: 44px; padding-block: 4px; }
   .player .foot-actions .btn-go { min-height: 54px; }
   .player .choices-pics .choice { min-height: 104px; }
+}
+/* Short phones (360×640): a chat and a situation keep all three options above the footer.
+   The learner's own (empty) bubble and the characters are smaller, the gaps tighter. */
+@media (max-height: 700px) {
+  .player .chat { gap: 4px; margin-bottom: 6px; }
+  .player .chat-me .chat-char { font-size: 56px; }
+  .player .chat-bubble-me { min-height: 44px; padding-block: 4px; }
+  .player .chat-blank { margin-top: 14px; }
+  .player .chat-choices .choice { min-height: 52px; padding-block: 4px; }
+  .player .chat-choices .choice-nl { font-size: 1.12rem; line-height: 1.2; }
+  .player .situation .speaker-char { font-size: 64px; margin-top: 4px; }
+  .player .situation .speaker-bubble { margin-bottom: 4px; }
+  .player .situation-text { padding-block: 6px; line-height: 1.32; }
+  .player .situation .choices-rows .choice { min-height: 52px; padding-block: 4px; }
+  .player .situation .choices-rows .bi { line-height: 1.22; }
+  .player .situation .choices { gap: 6px; }
+  /* Sentence building: a smaller character and picture, so the bubble's text sits beside the
+     speaker and the whole tile bank stays above the footer. */
+  .player .speaker-build { gap: 8px; }
+  .player .speaker-build .speaker-char { font-size: 60px; }
+  .player .speaker-build .speaker-bubble { margin-bottom: 8px; }
+  .player .build-bubble .build-pic { width: 40px; height: 40px; }
+  .player .build-gloss { flex-basis: 110px; font-size: 1.12rem; line-height: 1.25; }
+  .player .tile-bank { margin-top: 8px; }
 }
 /* Focused elements stay clear of the pinned footer and the bottom bar. */
 html { scroll-padding-bottom: calc(var(--foot-h, 0px) + 12px); }
@@ -2572,6 +2618,19 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .remind-add-text { display: flex; flex-direction: column; align-items: center; min-width: 0; }
 .remind-add-nl { font-size: 0.8rem; font-weight: 500; opacity: 0.9; }
 .remind-add-text .bi { align-items: center; }
+/* On the after-day-1 screen Continue is the main button: "add to calendar" is an outline one. */
+.btn-line { background: var(--card); color: var(--ink-strong); border: 2px solid var(--edge); }
+.btn-line:hover:not(:disabled) { background: color-mix(in srgb, var(--yellow) 14%, var(--card)); }
+.btn-line > svg { color: var(--ink-2); }
+/* Short screens (360×640): the reminder card fits above the pinned Continue. */
+@media (max-height: 720px) {
+  .keep-screen .milestone { padding-top: 8px; }
+  .keep-screen .milestone-keep { margin-top: 8px; gap: 12px; }
+  .keep-screen .keep-card { gap: 8px; padding: 12px; }
+  .keep-screen .remind-chip { min-height: 0; padding-block: 8px; }
+  .keep-screen .remind-other { min-height: 46px; }
+  .keep-screen .remind-add { min-height: 52px; }
+}
 
 /* Result and streak: the Continue button is there from the start (a tap guard in the code
    ignores taps for 700 ms). Both stat cards pop in together, so no card is ever alone. */
@@ -2670,6 +2729,9 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* Toasts (the run label, the sound note) hang just under the sticky header: never over the
    close button, the sound toggle, the progress bar or the help button. */
 .player-top > .run-label { top: calc(100% + 6px); left: 50%; translate: -50% 0; }
+/* The run label hangs just under the progress bar at its end, clear of the bar itself (it
+   never covers the steps done) and of the exercise's tag at the start of the row below. */
+.bar-wrap > .run-label { top: calc(100% + 12px); left: auto; inset-inline-end: 0; translate: none; }
 .player-top > .sound-note {
   position: absolute; top: calc(100% + 6px); inset-inline: 16px; z-index: 30;
   margin: 0 auto; width: auto; max-width: 420px;
@@ -2698,6 +2760,11 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .tile-say:hover { background: color-mix(in srgb, var(--blue) 24%, transparent); }
 .tile-say:active { translate: 0 1px; filter: brightness(0.94); }
 @media (max-width: 380px) { .tile-slot > .tile-with-say { padding-inline-end: 40px; } .tile-say { width: 30px; height: 30px; margin-top: -15px; inset-inline-end: 4px; } }
+/* The speaker looks small but takes a 44 px tap (the touch-target minimum): the extra room
+   goes up, down and outwards, hardly towards the word, so a tap on a short word ("je") still
+   places it. */
+.tile-say::after { content: ''; position: absolute; inset-block: -7px; inset-inline-start: -4px; inset-inline-end: -10px; }
+@media (min-width: 381px) { .tile-say::after { inset-block: -5px; inset-inline-start: -2px; inset-inline-end: -8px; } }
 
 /* Type what you hear, with letter tiles: the answer, a back key, then the letters. */
 .type-answer-row { display: flex; align-items: stretch; gap: 10px; }
@@ -2852,7 +2919,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .rb-progress { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; }
 .rb-bar { flex: 1; height: 6px; border-radius: 3px; background: var(--track); overflow: hidden; }
 .rb-bar-fill { display: block; height: 100%; border-radius: 3px; background: var(--right-ink); }
-[dir='rtl'] .rb-bar-fill { margin-inline-start: auto; }
+/* A block-level fill starts at the inline start on its own: the right in RTL, like the lesson bar. */
 .rb-count { flex: none; display: inline-flex; align-items: baseline; gap: 5px; color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
 .rb-count-n { color: var(--ink); font-weight: 650; font-variant-numeric: tabular-nums; unicode-bidi: isolate; }
 /* A coach link: the block lights up for a moment (the existing unit-mark keyframes). */

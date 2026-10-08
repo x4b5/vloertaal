@@ -1,6 +1,6 @@
 import { teamworkUnit } from './culture';
 import { toolsUnit, workUnits } from './work';
-import { addMixLessons, isMixLesson } from './review';
+import { addMixLessons, isMixLesson, mixLessonFor } from './review';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
 
 /**
@@ -312,6 +312,16 @@ export function findLesson(id: string): { unit: Unit; lesson: Lesson } | undefin
     if (lesson) return { unit, lesson };
   }
   return undefined;
+}
+
+/**
+ * A lesson as the learner plays it: a mixed review only brings items of lessons they finished
+ * (see mixLessonFor); every other lesson is as written.
+ */
+export function playLesson(id: string, completed: Record<string, unknown>): { unit: Unit; lesson: Lesson } | undefined {
+  const found = findLesson(id);
+  if (!found || !isMixLesson(found.lesson)) return found;
+  return { unit: found.unit, lesson: mixLessonFor(found.unit, units, completed) };
 }
 
 /** Look up any word or sentence by id (used by the phrasebook). */

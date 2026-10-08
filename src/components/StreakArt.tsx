@@ -1,7 +1,8 @@
 /** The streak flame, used big on the day-streak milestone. Inline SVG so it follows the theme. */
 
 /** The flame's shapes in a 64 x 72 box (base at the bottom centre, about (32, 70)). */
-export function FlameArt({ face = false }: { face?: boolean }) {
+/** A plain flat flame: no face (calm and adult, like the rest of the app). */
+export function FlameArt() {
   return (
     <g>
       <path
@@ -14,15 +15,6 @@ export function FlameArt({ face = false }: { face?: boolean }) {
         fill="#ffc414"
       />
       <path d="M32 66c-5 0-8-3-8-7 0-4 3-6 5-9 2 3 4 4 6 4 1-1 2-3 2-5 2 3 3 6 3 10 0 4-3 7-8 7z" fill="#fff3b0" />
-      {face && (
-        // A happy little face: eyes squeezed shut with joy, open smile.
-        <g>
-          <path d="M22.5 52.5q2.6-3.4 5.2 0M36.3 52.5q2.6-3.4 5.2 0" fill="none" stroke="#7a3a00" strokeWidth="2.2" strokeLinecap="round" />
-          <path d="M27.4 57.4q4.6 4.4 9.2 0q-.6 4.6-4.6 4.6t-4.6-4.6z" fill="#7a3a00" />
-          <ellipse cx="20.6" cy="57" rx="2.6" ry="1.6" fill="#ff7b5b" opacity=".6" />
-          <ellipse cx="43.4" cy="57" rx="2.6" ry="1.6" fill="#ff7b5b" opacity=".6" />
-        </g>
-      )}
     </g>
   );
 }

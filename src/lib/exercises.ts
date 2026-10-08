@@ -153,13 +153,29 @@ export function chatOptions(dialogue: Dialogue, rng: () => number, n = 3, lesson
 }
 
 /**
+ * One letter apart in a way that is easy to mix up: one vowel swapped for another ("je" / "ja",
+ * "dat" / "dit") or one letter added or left out ("u" / "uw"). A different consonant ("ik" /
+ * "is") reads as a different word and is fine.
+ */
+function oneLetterApart(a: string, b: string): boolean {
+  if (Math.abs(a.length - b.length) > 1) return false;
+  let i = 0;
+  while (i < a.length && i < b.length && a[i] === b[i]) i++;
+  if (i === a.length && i === b.length) return false;
+  if (a.length === b.length) return /[aeiouy]/.test(a[i]) && /[aeiouy]/.test(b[i]) && a.slice(i + 1) === b.slice(i + 1);
+  return a.length < b.length ? a.slice(i) === b.slice(i + 1) : a.slice(i + 1) === b.slice(i);
+}
+
+/**
  * A wrong tile that looks or sounds like a word of the sentence: the same stem or a part of it
- * ("draag" / "dragen", "morgen" / "goedemorgen"). Those are never offered as extras.
+ * ("draag" / "dragen", "morgen" / "goedemorgen"), or one letter apart ("je" / "ja"). Those are
+ * never offered as extras.
  */
 export function nearMiss(tile: string, word: string): boolean {
   const a = tile.toLowerCase();
   const b = word.toLowerCase();
   if (a === b) return true;
+  if (oneLetterApart(a, b)) return true;
   if (Math.min(a.length, b.length) >= 3 && (a.includes(b) || b.includes(a))) return true;
   // Same stem: a shared start of 3 letters or more once doubled vowels and -en/-e/-t are gone.
   const stem = (s: string) => s.replace(/(aa|ee|oo|uu)/g, (m) => m[0]).replace(/(en|e|t)$/, '');

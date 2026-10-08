@@ -280,7 +280,7 @@ export function StreakHero({ lit = false, className }: { lit?: boolean; classNam
         </g>
         <g className="sk-flame">
           <g transform="translate(30 92) scale(1.28)">
-            <FlameArt face />
+            <FlameArt />
           </g>
         </g>
         <g className="sk-bram">

@@ -191,6 +191,9 @@ describe('chat replies and sentence tiles are taught and never confusable', () =
     expect(nearMiss('dragen', 'draag')).toBe(true);
     expect(nearMiss('morgen', 'goedemorgen')).toBe(true);
     expect(nearMiss('ik', 'is')).toBe(false);
+    expect(nearMiss('ja', 'je')).toBe(true);
+    expect(nearMiss('dit', 'dat')).toBe(true);
+    expect(nearMiss('u', 'uw')).toBe(true);
     expect(nearMiss('de', 'deur')).toBe(false);
     for (const lesson of teachingLessons) {
       for (const s of lesson.sentences) {
