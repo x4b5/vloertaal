@@ -1656,3 +1656,30 @@ svg.emoji-xl { width: 140px; height: 140px; }
   border-radius: 10px; border: 2px solid var(--line); background: var(--card); color: var(--ink); font-weight: 600;
 }
 .coach-share .icon { color: var(--right-ink); }
+
+/* "Herhaal vandaag": the daily review, a calm card at the top of the path. */
+.daily-card {
+  display: flex; align-items: center; gap: 14px; width: 100%; margin: 4px 0 28px; padding: 14px 16px;
+  text-align: start; color: var(--ink); background: var(--card);
+  border: 2px solid var(--ink-3); border-radius: var(--radius);
+}
+.daily-card:hover { border-color: var(--ink); }
+.daily-icon {
+  flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
+  background: var(--yellow); color: #1e2226;
+}
+.daily-text { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.daily-nl { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.daily-title { font-size: 1.15rem; font-weight: 650; line-height: 1.2; }
+.daily-n { font-size: 0.95rem; color: var(--muted); }
+.daily-go { flex: none; color: var(--ink-3); }
+
+/* Route: a unit's picture (and a done lesson's picture) grows a little under the mouse. */
+.unit-icon, .bay-pic { transition: transform 0.18s ease-out; }
+@media (hover: hover) {
+  .unit-icon:hover, .unit-head:hover .unit-icon { transform: scale(1.25); }
+  .bay-card:hover .bay-pic { transform: scale(1.2); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .unit-icon, .bay-pic { transition: none; }
+}

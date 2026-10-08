@@ -13,13 +13,15 @@ import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
 import { type Access, lessonAllowed, loadAccess, saveAccess } from './lib/access';
 import { takeLinkedUnit } from './lib/unitLink';
-import { completeLesson, currentStreak, emptyProgress, loadProgress, saveProgress, streakWentUp } from './lib/progress';
+import { completeDaily, completeLesson, currentStreak, dayKey, emptyProgress, loadProgress, saveProgress, streakWentUp } from './lib/progress';
+import { DAILY_ID, addLessonWords, applyReview, dailyLesson, dailyWordIds, dueIds, seedCards } from './lib/spaced';
 
 type View =
   | { name: 'home' }
-  | { name: 'lesson'; lessonId: string; review: boolean }
+  /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
+  | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[] }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number }
   | { name: 'streak'; streak: number }
   | { name: 'words' }
   | { name: 'phrasebook' }
@@ -120,6 +122,10 @@ export default function App() {
   const lang = getHelpLanguage(progress.helpLang);
 
   useEffect(() => { saveProgress(progress); }, [progress]);
+  // Learners from before "Herhaal vandaag" get cards for the words they already learned.
+  useEffect(() => {
+    if (!progress.cards) setProgress((p) => (p.cards ? p : { ...p, cards: seedCards(p.completed, dayKey(new Date())) }));
+  }, [progress.cards]);
   useEffect(() => { setPreferredVoice(progress.voice); }, [progress.voice]);
   // Set during render, not in an effect: a child's effect (an exercise that would say its word)
   // runs before the parent's, and must already know that sound is off.
@@ -151,16 +157,22 @@ export default function App() {
 
   switch (view.name) {
     case 'lesson': {
-      const found = findLesson(view.lessonId);
+      const daily = view.lessonId === DAILY_ID;
+      const found = daily ? { lesson: dailyLesson(view.ids ?? []) } : findLesson(view.lessonId);
       // A preview never plays a later unit, whatever the progress or history says.
-      if (!found || !lessonAllowed(view.lessonId, access)) return null;
-      const finish = ({ accuracy, review, right, total }: LessonResult) => {
-        const next = completeLesson(progress, view.lessonId, accuracy, review, new Date());
+      if (!found || !found.lesson.words.length || !lessonAllowed(view.lessonId, access)) return null;
+      const finish = ({ accuracy, review, right, total, words: results }: LessonResult) => {
+        const now = new Date();
+        const today = dayKey(now);
+        const cards = progress.cards ?? {};
+        const next = daily
+          ? { ...completeDaily(progress, accuracy, now), cards: applyReview(cards, results, today) }
+          : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: addLessonWords(cards, found.lesson.words, results, today) };
         setProgress(next);
         const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
         const before = learnedWords(progress.completed).size;
         const words = learnedWords(next.completed).size;
-        replace({ name: 'result', right, total, newWords: words - before, words, streakUp });
+        replace({ name: 'result', right, total, newWords: words - before, words, streakUp, repeated: daily ? found.lesson.words.length : undefined });
       };
       return (
         <LessonPlayer
@@ -183,6 +195,7 @@ export default function App() {
           total={view.total}
           newWords={view.newWords}
           words={view.words}
+          repeated={view.repeated}
           lang={lang}
           onDone={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}
         />
@@ -248,6 +261,8 @@ export default function App() {
             progress={progress}
             lang={lang}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
+            dueToday={dueIds(progress.cards ?? {}, dayKey(new Date())).length}
+            onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: dailyWordIds(progress.cards ?? {}, dayKey(new Date())) })}
             onAbout={() => tab('about')}
             access={access}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}

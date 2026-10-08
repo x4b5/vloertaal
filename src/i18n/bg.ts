@@ -77,6 +77,8 @@ const lang: HelpLanguage = {
     sectorHint: 'Първо идват уроците за твоята работа. Можеш да промениш това по-късно в Настройки.',
     otherSectors: 'Други сектори',
     otherSectorsHint: 'Уроци за друга работа. Можеш да ги правиш и тях.',
+    reviewToday: 'Преговор за днес',
+    reviewTodayN: 'Думи за преговор: {n} · няколко минути',
     notSureYet: 'Още не знам',
     sectorLogistics: 'Логистика',
     sectorConstruction: 'Строителство',

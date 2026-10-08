@@ -77,6 +77,8 @@ const lang: HelpLanguage = {
     sectorHint: 'ትምህርትታት ናይ ስራሕካ ቅድም ይመጹ። ደሓር ኣብ ምድላዋት ክትቅይሮ ትኽእል ኢኻ።',
     otherSectors: 'ካልኦት ዓውድታት ስራሕ',
     otherSectorsHint: 'ትምህርትታት ንካልእ ዓይነት ስራሕ። ንዓኣቶም እውን ክትገብሮም ትኽእል ኢኻ።',
+    reviewToday: 'ናይ ሎሚ ድግግም',
+    reviewTodayN: 'ንምድጋም ዘለዋ ቃላት: {n} · ቁሩብ ደቓይቕ',
     notSureYet: 'ገና ኣይፈለጥኩን',
     sectorLogistics: 'መኽዘንን መጓዓዝያን',
     sectorConstruction: 'ስራሕ ህንጻ',

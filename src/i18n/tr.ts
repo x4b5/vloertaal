@@ -77,6 +77,8 @@ const lang: HelpLanguage = {
     sectorHint: 'Önce kendi işinin dersleri gelir. Bunu sonra Ayarlar’da değiştirebilirsin.',
     otherSectors: 'Diğer sektörler',
     otherSectorsHint: 'Başka işler için dersler. Bunları da yapabilirsin.',
+    reviewToday: 'Bugünün tekrarı',
+    reviewTodayN: 'Tekrar edilecek kelimeler: {n} · birkaç dakika',
     notSureYet: 'Henüz bilmiyorum',
     sectorLogistics: 'Lojistik',
     sectorConstruction: 'İnşaat',

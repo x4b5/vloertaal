@@ -77,6 +77,8 @@ const lang: HelpLanguage = {
     sectorHint: 'درس‌های کار شما اول می‌آیند. بعداً می‌توانید این را در تنظیمات تغییر بدهید.',
     otherSectors: 'بخش‌های دیگر',
     otherSectorsHint: 'درس‌ها برای کارهای دیگر. این‌ها را هم می‌توانید یاد بگیرید.',
+    reviewToday: 'مرور امروز',
+    reviewTodayN: 'کلمه‌ها برای تمرین دوباره: {n} · چند دقیقه',
     notSureYet: 'هنوز نمی‌دانم',
     sectorLogistics: 'لوجستیک',
     sectorConstruction: 'ساختمان‌سازی',

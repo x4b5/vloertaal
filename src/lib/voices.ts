@@ -14,7 +14,8 @@ export const DEVICE = 'device';
 /** Character → voices in order of preference; the first one available is used.
  *  Keys match CharacterId in src/components/Characters.tsx. */
 const CAST_VOICES: Record<string, VoiceRef[]> = {
-  bram: ['piper:berend', 'piper:pim'],
+  // Thijmen (friendlier) replaced Berend; Berend stays as the fallback until Thijmen is recorded.
+  bram: ['piper:thijmen', 'piper:berend', 'piper:pim'],
   henk: ['piper:daniel', 'piper:ronnie'],
   amina: ['piper:ariel', DEVICE],
   jada: ['piper:noa', DEVICE],

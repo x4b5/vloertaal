@@ -77,6 +77,8 @@ const lang: HelpLanguage = {
     sectorHint: 'Lecțiile pentru munca ta vin primele. Poți schimba asta mai târziu în Setări.',
     otherSectors: 'Alte domenii',
     otherSectorsHint: 'Lecții pentru alte meserii. Le poți face și pe ele.',
+    reviewToday: 'Recapitularea de azi',
+    reviewTodayN: 'Cuvinte de repetat: {n} · câteva minute',
     notSureYet: 'Nu știu încă',
     sectorLogistics: 'Logistică',
     sectorConstruction: 'Construcții',
