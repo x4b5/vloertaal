@@ -1883,7 +1883,9 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .remind-gloss { font-size: 0.95rem; font-weight: 650; color: var(--ink); }
 .remind-gloss.bi-swap > .bi-help { --help-size: 0.8em; font-weight: 500; color: var(--muted); }
 .keep-card .remind-chip .bi { align-items: center; }
-.remind-chip.picked .remind-gloss, .remind-chip.picked .bi-help { color: #3f3a2c; }
+/* On the yellow of the chosen chip every line is dark ink (7:1 or more), in both themes. */
+.remind-chip.picked :is(.remind-gloss, .remind-gloss *, .remind-nl, .bi-help, .bi-en) { color: #3f3a2c; }
+.remind-chip.picked .remind-time { color: #1e2226; }
 .remind-gloss .bi-help { --help-min: 12px; }
 .remind-own {
   display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 8px 8px 12px;
