@@ -3,8 +3,8 @@ import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
-import { findItem, findLesson, phrasebookIds } from '../content/curriculum';
-import { coursePlan, isOtherSector, unitSector, type SectorChoice } from '../content/sectors';
+import { findItem, phrasebookIds } from '../content/curriculum';
+import { coursePlan, unitSector, type SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { SectorIcon, SectorPicker } from './Sector';
 import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
@@ -12,7 +12,7 @@ import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useState } from 'react';
 import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
 import { VOICE_SAMPLE } from '../lib/voices';
-import { isUnlocked } from '../lib/exercises';
+import { isNextInCourse, isUnlocked } from '../lib/exercises';
 import { type Access, unitAllowed } from '../lib/access';
 import { UpgradeCard } from './Gate';
 import type { Progress, ThemeChoice } from '../lib/progress';
@@ -211,7 +211,8 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
   // Basis units plus the learner's own sector in course order; other sectors' units wait below.
   const { main, other } = coursePlan(sector);
   const [showOther, setShowOther] = useState(openOther);
-  const unlocked = (lessonId: string) => isUnlocked(lessonId, completed, access, sector);
+  const unlocked = (lessonId: string) => isUnlocked(lessonId, completed, access);
+  const next = (lessonId: string) => isNextInCourse(lessonId, completed, access, sector);
 
   const renderUnit = (unit: Unit, u: number) => {
     const allowed = unitAllowed(unit.id, access);
@@ -249,7 +250,8 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
           {unit.lessons.map((lesson, i) => {
             const record = completed[lesson.id];
             const open = unlocked(lesson.id);
-            const state = !allowed ? 'locked' : record ? 'done' : open ? 'now' : 'locked';
+            // 'now' is the next lesson of the learner's own course; 'open' is any other lesson they may enter.
+            const state = !allowed ? 'locked' : record ? 'done' : !open ? 'locked' : next(lesson.id) ? 'now' : 'open';
             // The bay shows the lesson's first word that has a picture (none if all are abstract).
             const first = lesson.words.find(hasPicture);
             return (
@@ -275,7 +277,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
                         {ui('practice').en}
                       </span>
                     )}
-                    {state === 'now' && (
+                    {(state === 'now' || state === 'open') && (
                       <span className="bay-start">{ui('start').en}<ChevronIcon size={20} /></span>
                     )}
                   </span>
@@ -704,12 +706,9 @@ export function Result({ right, total, newWords, words, lang, onDone }: {
 /** All "Zo werkt het hier" tips, to read again. Tips of lessons not reached yet stay hidden. */
 export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Progress; lang?: HelpLanguage; onBack: () => void; access?: Access }) {
   const [open, setOpen] = useState<string | null>(null);
-  // Another sector's units are open from the start; their tips show once that lesson is done.
-  const visible = cultureTips.filter((t) => {
-    const unit = findLesson(t.lessonId)?.unit;
-    if (unit && isOtherSector(unit.id, progress.sector)) return Boolean(progress.completed[t.lessonId]);
-    return isUnlocked(t.lessonId, progress.completed, access, progress.sector);
-  });
+  // A tip shows once its lesson is done, or when its lesson is the next one on the own course.
+  const visible = cultureTips.filter((t) =>
+    Boolean(progress.completed[t.lessonId]) || isNextInCourse(t.lessonId, progress.completed, access, progress.sector));
   return (
     <div className="screen">
       <div className="screen-head">
