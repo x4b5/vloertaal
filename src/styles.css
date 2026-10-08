@@ -2115,6 +2115,13 @@ svg.emoji-xl { width: 140px; height: 140px; }
   .player .build-gloss { flex-basis: 110px; font-size: 1.12rem; line-height: 1.25; }
   .player .tile-bank { margin-top: 8px; }
 }
+/* A 10–13 letter word ("goedemorgen") in the speech bubble stays whole on a narrow phone: a
+   smaller colleague gives the bubble the room (its soft hyphen is only for longer words' sake). */
+@media (max-width: 400px) {
+  .player .speaker-word.len-m .speaker-char { font-size: 68px; }
+  .player .speaker-word.len-m { gap: 8px; }
+  .speaker-bubble [lang='nl'] { hyphens: manual; }
+}
 /* Focused elements stay clear of the pinned footer and the bottom bar. */
 html { scroll-padding-bottom: calc(var(--foot-h, 0px) + 12px); }
 html:has(.bottom-nav) { scroll-padding-bottom: 104px; }
@@ -2765,6 +2772,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
    places it. */
 .tile-say::after { content: ''; position: absolute; inset-block: -7px; inset-inline-start: -4px; inset-inline-end: -10px; }
 @media (min-width: 381px) { .tile-say::after { inset-block: -5px; inset-inline-start: -2px; inset-inline-end: -8px; } }
+/* A short word ("je") keeps a word part of 44 px or more beside its speaker. */
+.tile-slot > .tile-with-say { min-width: 92px; }
 
 /* Type what you hear, with letter tiles: the answer, a back key, then the letters. */
 .type-answer-row { display: flex; align-items: stretch; gap: 10px; }
@@ -2851,6 +2860,21 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .choices:not(.choices-pics) .choice:has(> .stamp) { padding-right: 16px; padding-inline-end: 80px; }
 .choices-pics .stamp { right: auto; inset-inline-end: 8px; }
 .answer-line .stamp { right: auto; inset-inline-end: 0; }
+/* NOG EENS, calm: smaller, hardly tilted, a single thin ring in muted brick ink (a note on the
+   card, not a slap). */
+.stamp.stamp-wrong {
+  rotate: 3deg; border-width: 2px; box-shadow: none;
+  color: color-mix(in srgb, var(--wrong-ink) 70%, var(--muted));
+}
+.choices:not(.choices-pics) .stamp.stamp-wrong { width: 54px; height: 54px; margin-top: -27px; }
+.choices:not(.choices-pics) .choice:has(> .stamp-wrong) { padding-inline-end: 72px; }
+.choices:not(.choices-pics) .stamp-wrong .stamp-word, .choices-pics .stamp-wrong .stamp-word { font-size: 0.9rem; }
+.answer-line .stamp.stamp-wrong { width: 54px; height: 54px; top: 3px; }
+.answer-line .stamp-wrong .stamp-word { font-size: 0.9rem; }
+/* At this size a help-language line would not fit: the stamp says NOG EENS only; the feedback
+   label under it says it large in the help language. */
+.stamp.stamp-wrong .stamp-sub { display: none; }
+.stamp.stamp-wrong .stamp-word { font-size: 0.9rem; }
 .result-stamp { right: auto; inset-inline-end: 0; }
 .chat-hint { left: auto; inset-inline-start: 0; }
 
