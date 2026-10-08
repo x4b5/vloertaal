@@ -83,6 +83,11 @@ const lang: HelpLanguage = {
     sectorCare: 'Грижа за хора',
     sectorHospitality: 'Хотели и ресторанти',
     sectorCleaning: 'Почистване',
+    sound: 'Звук',
+    soundOn: 'Със звук',
+    withoutSound: 'Без звук',
+    quietHint: 'Без звук уроците нямат упражнения за слушане и нищо не се пуска само. Докосни 🔊, за да чуеш дума, например със слушалки.',
+    soundOffToast: 'Без звук. Можеш да включиш звука от Настройки.',
   },
   gloss: {
     // Units

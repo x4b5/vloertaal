@@ -83,6 +83,11 @@ const lang: HelpLanguage = {
     sectorCare: 'Îngrijire',
     sectorHospitality: 'Hoteluri și restaurante',
     sectorCleaning: 'Curățenie',
+    sound: 'Sunet',
+    soundOn: 'Cu sunet',
+    withoutSound: 'Fără sunet',
+    quietHint: 'Fără sunet, lecțiile nu au exerciții de ascultare și nimic nu pornește singur. Atinge 🔊 ca să auzi un cuvânt, de exemplu cu căștile.',
+    soundOffToast: 'Fără sunet. Poți porni sunetul din Setări.',
   },
   gloss: {
     // Units

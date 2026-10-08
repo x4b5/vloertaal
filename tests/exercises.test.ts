@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { allLessons } from '../src/content/curriculum';
 import { tokenize } from '../src/lib/answers';
-import { buildLesson, isUnlocked } from '../src/lib/exercises';
+import { AUDIO_ONLY_KINDS, buildLesson, isUnlocked, needsAudio } from '../src/lib/exercises';
 
 describe('lesson builder', () => {
   for (const lesson of allLessons) {
@@ -41,6 +41,27 @@ describe('lesson builder', () => {
       }
     });
   }
+
+  it('builds lessons without listening exercises when sound is off', () => {
+    for (const lesson of allLessons) {
+      for (const review of [false, true]) {
+        for (const seed of [1, 7, 42, 2026]) {
+          const loud = buildLesson(lesson, { review, seed });
+          const quiet = buildLesson(lesson, { review, seed, quiet: true });
+          expect(quiet.filter(needsAudio), `${lesson.id} seed ${seed}`).toEqual([]);
+          expect(quiet.some((e) => AUDIO_ONLY_KINDS.includes(e.kind))).toBe(false);
+          // Every listening exercise became a reading one: same length, same words practised.
+          expect(quiet).toHaveLength(loud.length);
+          expect(loud.some(needsAudio)).toBe(true);
+          for (const ex of quiet) {
+            if (ex.kind === 'meaning' || ex.kind === 'dutch') expect(ex.options.map((o) => o.id)).toContain(ex.word.id);
+          }
+        }
+      }
+    }
+    // Sound on stays exactly as before.
+    expect(buildLesson(allLessons[0], { review: false, seed: 7, quiet: false })).toEqual(buildLesson(allLessons[0], { review: false, seed: 7 }));
+  });
 
   it('is reproducible with a seed', () => {
     const a = buildLesson(allLessons[0], { review: false, seed: 7 });

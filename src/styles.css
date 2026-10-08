@@ -1589,3 +1589,21 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .settings-sector-title { display: flex; flex-direction: column; gap: 2px; }
 .settings-sector-title .bi-en { font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
 .settings-sector-title .bi-help { --help-size: 0.8rem; }
+
+/* Sound: "Without sound" (Settings, lesson header, the short note after switching). */
+.segmented-2 { grid-template-columns: repeat(2, 1fr); margin-bottom: 8px; }
+.sound-hint { margin: 0 0 20px; }
+.player-top .sound-toggle { flex: none; margin-inline-start: -6px; color: var(--muted); }
+.player-top .sound-toggle:hover { background: var(--concrete-2); }
+.player-top .sound-toggle.is-off { color: var(--ink); background: var(--tag-bg); }
+.sound-note {
+  position: fixed; z-index: 30; inset-inline: 16px; top: calc(64px + env(safe-area-inset-top));
+  margin: 0 auto; max-width: 420px; width: fit-content;
+  display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+  background: var(--solid); color: var(--on-solid); border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); font-size: 0.95rem; line-height: 1.35;
+  animation: up 0.25s ease-out;
+}
+.sound-note .icon { flex: none; }
+.sound-note .bi-help { color: inherit; opacity: 0.85; }
+@media (prefers-reduced-motion: reduce) { .sound-note { animation: none; } }

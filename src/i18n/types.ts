@@ -83,6 +83,11 @@ export const uiEn = {
   sectorCare: 'Care',
   sectorHospitality: 'Hospitality',
   sectorCleaning: 'Cleaning',
+  sound: 'Sound',
+  soundOn: 'Sound on',
+  withoutSound: 'Without sound',
+  quietHint: 'Without sound, lessons have no listening questions and nothing plays by itself. Tap 🔊 to hear a word, for example with earphones.',
+  soundOffToast: 'Without sound. You can turn sound on in Settings.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

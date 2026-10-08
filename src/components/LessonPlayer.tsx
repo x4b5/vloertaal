@@ -130,7 +130,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const graded = useRef({ right: 0, total: 0 });
   /** "I can't listen now" without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
-  const audioOff = !speechAvailable() || quiet || cantListen;
+  const soundOff = quiet || cantListen;
+  const audioOff = !speechAvailable() || soundOff;
   /** Short line after the sound setting changed: 'off' = without sound, 'on' = sound on. */
   const [soundNote, setSoundNote] = useState<'off' | 'on' | null>(null);
   useEffect(() => {
@@ -296,14 +297,13 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         {/* Sound on/off for a learner on the bus; pressed = "Without sound" (saved, see Settings). */}
         <button
           type="button"
-          className={`icon-btn sound-toggle ${audioOff ? 'is-off' : ''}`}
-          onClick={() => setSound(!audioOff)}
-          aria-pressed={audioOff}
+          className={`icon-btn sound-toggle ${soundOff ? 'is-off' : ''}`}
+          onClick={() => setSound(!soundOff)}
+          aria-pressed={soundOff}
           aria-label={ui('withoutSound').en}
-          title={(audioOff ? ui('withoutSound') : ui('soundOn')).en}
-          disabled={!speechAvailable()}
+          title={(soundOff ? ui('withoutSound') : ui('soundOn')).en}
         >
-          {audioOff ? <SpeakerOffIcon size={26} /> : <SpeakerIcon size={26} />}
+          {soundOff ? <SpeakerOffIcon size={26} /> : <SpeakerIcon size={26} />}
         </button>
         <div className="bar-wrap">
           <div className="segs" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>

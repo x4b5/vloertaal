@@ -83,6 +83,11 @@ const lang: HelpLanguage = {
     sectorCare: 'Opieka',
     sectorHospitality: 'Gastronomia i hotele',
     sectorCleaning: 'Sprzątanie',
+    sound: 'Dźwięk',
+    soundOn: 'Z dźwiękiem',
+    withoutSound: 'Bez dźwięku',
+    quietHint: 'Bez dźwięku lekcje nie mają ćwiczeń ze słuchania i nic nie odtwarza się samo. Dotknij 🔊, aby usłyszeć słowo, na przykład w słuchawkach.',
+    soundOffToast: 'Bez dźwięku. Dźwięk możesz włączyć w Ustawieniach.',
   },
   gloss: {
     // Unit: First day at work
