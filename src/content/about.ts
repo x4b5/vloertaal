@@ -12,7 +12,7 @@ export interface AboutSection {
 export const aboutSections: AboutSection[] = [
   {
     id: 'a.what', emoji: '🦺', title: 'What is Vloertaal?',
-    body: 'Vloertaal helps you learn the Dutch you need at work: in the warehouse, the kitchen, the factory or on the building site. The lessons are short, so you can practise a few minutes every day.',
+    body: 'Vloertaal helps you learn the Dutch you need at work: in the warehouse, the kitchen, the factory or on the building site. Not only the words on the work floor, but all the language around work: applying for a job, your contract and pay slip, your rights, housing and papers, calling in sick and getting along with colleagues. The lessons are short, so you can practise a few minutes every day.',
   },
   {
     id: 'a.how', emoji: '👂', title: 'How does it work?',
