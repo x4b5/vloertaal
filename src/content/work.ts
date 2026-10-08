@@ -539,3 +539,314 @@ const coreTips: CultureTip[] = [
   }),
 ];
 
+/* ------------------------------------------------------------------------------------------
+ * More units, written with small helpers: lesson slug "x" gives l.x, s.x.1-3, c.x.q/a and tip c.x
+ * (options c.x.o1-3, the first is the best one; shuffled when shown). Word ids are w.<id>.
+ * ---------------------------------------------------------------------------------------- */
+
+type WordRow = [id: string, nl: string, en: string, emoji: string];
+type Pair = [nl: string, en: string];
+
+const lesson = (slug: string, title: string, words: WordRow[], sentences: Pair[], [q, a]: [Pair, Pair]): Lesson => ({
+  id: `l.${slug}`,
+  title,
+  words: words.map(([id, nl, en, emoji]) => ({ id: `w.${id}`, nl, en, emoji })),
+  sentences: sentences.map(([nl, en], i) => ({ id: `s.${slug}.${i + 1}`, nl, en })),
+  dialogues: [chat(line(`c.${slug}.q`, ...q), line(`c.${slug}.a`, ...a))],
+});
+
+const unit = (slug: string, title: string, titleNl: string, emoji: string, color: string, lessons: Lesson[]): Unit => ({
+  id: `u.${slug}`,
+  title,
+  titleNl,
+  emoji,
+  color,
+  lessons,
+});
+
+/** Closing line: ADVICE_LINE for rights and rules set by law, HOUSE_LINE for company rules, '' for social norms. */
+const tipFor = (
+  slug: string,
+  emoji: string,
+  title: string,
+  body: string,
+  [nl, en]: Pair,
+  situation: string,
+  options: [best: string, worse: string, worse2: string],
+  why: string,
+  end: string,
+): CultureTip =>
+  tip(
+    {
+      id: `c.${slug}`,
+      lessonId: `l.${slug}`,
+      emoji,
+      title,
+      body,
+      phrase: { id: `c.${slug}.p`, nl, en },
+      situation: { id: `c.${slug}.s`, en: situation },
+      options: options.map((o, i) => ({ id: `c.${slug}.o${i + 1}`, en: o, best: i === 0 })),
+      why: { id: `c.${slug}.w`, en: why },
+    },
+    end,
+  );
+
+const NONE = '';
+
+// ---- Applying for a job (before "Work and contracts") ----
+
+const applyUnit = unit('apply', 'Applying for a job', 'Solliciteren', '📨', '#4a6fa5', [
+  lesson(
+    'cv',
+    'Your CV and letter',
+    [
+      ['cv', 'het cv', 'the CV', '🗂️'],
+      ['motivatie', 'de motivatie', 'the motivation (why you want the job)', '💡'],
+      ['ervaring', 'de ervaring', 'the experience', '🧰'],
+      ['opleiding', 'de opleiding', 'the education, the training', '🎓'],
+      ['vaardigheden', 'de vaardigheden', 'the skills', '🤹'],
+      ['referentie', 'de referentie', 'the reference (someone who can tell about your work)', '👍'],
+    ],
+    [
+      ['Hier is mijn cv.', 'Here is my CV.'],
+      ['Ik heb ervaring in de bouw.', 'I have experience in construction.'],
+      ['Ik spreek drie talen.', 'I speak three languages.'],
+    ],
+    [['Heb je een referentie?', 'Do you have a reference?'], ['Ja, mijn vorige baas.', 'Yes, my last boss.']],
+  ),
+  lesson(
+    'interview',
+    'The job interview',
+    [
+      ['sollicitatiegesprek', 'het sollicitatiegesprek', 'the job interview', '🪑'],
+      ['begroeten', 'begroeten', 'to greet', '😊'],
+      ['vertellen', 'vertellen', 'to tell', '💬'],
+      ['vraagstellen', 'een vraag stellen', 'to ask a question', '✋'],
+      ['salaris', 'het salaris', 'the salary', '💵'],
+      ['functie', 'de functie', 'the job, the position', '💼'],
+    ],
+    [
+      ['Ik heb een sollicitatiegesprek.', 'I have a job interview.'],
+      ['Ik leer nog Nederlands.', 'I am still learning Dutch.'],
+      ['Wanneer hoor ik iets van u?', 'When will I hear from you?'],
+    ],
+    [
+      ['Vertel eens iets over jezelf.', 'Tell me something about yourself.'],
+      ['Ik heb vijf jaar in een magazijn gewerkt.', 'I worked in a warehouse for five years.'],
+    ],
+  ),
+]);
+
+const applyTips = [
+  tipFor(
+    'cv',
+    '🗂️',
+    'A short Dutch CV',
+    'A Dutch CV is short: 1 or 2 pages. Write your contact details, work experience, education, languages and skills. A photo is not needed. You do not have to write your religion, age or marital status. Be honest about what you can do. Ask someone to check your Dutch.',
+    ['Wil je mijn cv lezen? Klopt mijn Nederlands?', 'Will you read my CV? Is my Dutch correct?'],
+    'You worked 3 years in a factory in your home country, but you have no diploma. What do you put on your CV?',
+    [
+      'Write the work and what you did there, honestly.',
+      'Write nothing, because you have no diploma.',
+      'Write that you have a diploma, so you look better.',
+    ],
+    'Work experience counts, also from abroad. Being honest is important: employers may check it.',
+    NONE,
+  ),
+  tipFor(
+    'interview',
+    '🪑',
+    'The job interview',
+    'Come on time: 5 to 10 minutes early. Greet politely and look at the person. Tell briefly what you can do. Asking questions yourself is normal and positive, for example about the hours, the work or training. At the end you may ask when you will hear something. It is fine to say that you are still learning Dutch. An employer may not ask about your religion, a pregnancy or your health. You do not have to answer: you may politely say that you prefer not to answer.',
+    ['Mag ik ook iets vragen? Hoeveel uur per week is het werk?', 'May I ask something too? How many hours per week is the work?'],
+    'At the end of the interview, the employer asks: "Heb je nog vragen?" What do you do?',
+    [
+      'Ask one or two questions, for example about the hours or training.',
+      'Say no, because asking questions is not polite.',
+      'Say no, so the interview ends quickly.',
+    ],
+    'Questions show that you are interested in the job. Dutch employers often expect them.',
+    NONE,
+  ),
+];
+
+// ---- House rules: lessons 3 and 4 ----
+
+const houseMore: Lesson[] = [
+  lesson(
+    'clock',
+    'Clocking in and on time',
+    [
+      ['inklokken', 'inklokken', 'to clock in', '🟢'],
+      ['uitklokken', 'uitklokken', 'to clock out', '🔴'],
+      ['pasje', 'het pasje', 'the (staff) card', '💳'],
+      ['prikklok', 'de prikklok', 'the time clock', '⏲️'],
+      ['optijd', 'op tijd', 'on time', '⏰'],
+      ['rooster', 'het rooster', 'the work schedule', '🗓️'],
+    ],
+    [
+      ['Ik klok in om zes uur.', 'I clock in at six o’clock.'],
+      ['Ik ben mijn pasje vergeten.', 'I forgot my card.'],
+      ['Waar hangt het rooster?', 'Where is the work schedule?'],
+    ],
+    [['Wil je even voor mij inklokken?', 'Will you clock in for me?'], ['Nee, dat mag niet.', 'No, that is not allowed.']],
+  ),
+  lesson(
+    'hygiene',
+    'Alcohol, drugs and hygiene',
+    [
+      ['alcohol', 'de alcohol', 'the alcohol', '🍺'],
+      ['medicijn', 'het medicijn', 'the medicine', '💊'],
+      ['handenwassen', 'handen wassen', 'to wash hands', '🧼'],
+      ['werkkleding', 'de werkkleding', 'the work clothes', '👕'],
+      ['haarnetje', 'het haarnetje', 'the hairnet', '🧢'],
+      ['schoon', 'schoon', 'clean', '✨'],
+    ],
+    [
+      ['Was je handen voor het werk.', 'Wash your hands before work.'],
+      ['Alcohol en drugs zijn verboden.', 'Alcohol and drugs are not allowed.'],
+      ['Mijn werkkleding is schoon.', 'My work clothes are clean.'],
+    ],
+    [['Heb je je haarnetje op?', 'Are you wearing your hairnet?'], ['Ja, en ik heb mijn ring afgedaan.', 'Yes, and I took off my ring.']],
+  ),
+];
+
+const houseTips = [
+  tipFor(
+    'clock',
+    '⏲️',
+    'Clock in yourself',
+    'Clock in and out yourself, at the moment you really start and stop working. Never clock in or out for a colleague, and never let someone else use your card. This is seen as fraud and can lead to dismissal on the spot. Will you be late? Call before your shift starts. Check that your clocked hours match your payslip.',
+    ['Ik ben vergeten uit te klokken. Kun je het aanpassen?', 'I forgot to clock out. Can you correct it?'],
+    'A colleague gives you his card: "Clock me in, I will be 20 minutes late." What do you do?',
+    [
+      'Say no kindly, and tell him to call the supervisor himself.',
+      'Do it just once, because he is your friend.',
+      'Clock him in and tell the supervisor later.',
+    ],
+    'Clocking in for someone else counts as fraud, for both of you. Saying no protects your colleague and your own job.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'hygiene',
+    '🧼',
+    'Clear head, clean hands',
+    'Alcohol and drugs at work, or coming to work after using them, are forbidden in almost all companies. It is very unsafe near machines and forklifts, and it can lead to dismissal. Does a medicine make you sleepy or dizzy? Tell your supervisor, so you can do safe work. You do not have to say which medicine. In food production and greenhouses the hygiene rules are strict: wash your hands, wear clean work clothes, a hairnet if needed, and no jewellery. Vomiting or diarrhoea? Report it before you start. Keep your workplace tidy.',
+    ['Ik neem een medicijn. Ik word er slaperig van.', 'I take a medicine. It makes me sleepy.'],
+    'Your doctor gives you a medicine that makes you sleepy. Tomorrow you must drive a forklift. What do you do?',
+    [
+      'Tell your supervisor before you start, so you can do safe work.',
+      'Say nothing and drive very slowly.',
+      'Stop taking the medicine without asking your doctor.',
+    ],
+    'Your supervisor does not need to know which medicine, only that you cannot drive or work with machines now. That keeps you and your colleagues safe.',
+    HOUSE_LINE,
+  ),
+];
+
+// ---- Getting along (after "House rules") ----
+
+const socialUnit = unit('social', 'Getting along', 'Omgang met collega’s', '☕', '#3a7d5c', [
+  lesson(
+    'smalltalk',
+    'Small talk and breaks',
+    [
+      ['weekend', 'het weekend', 'the weekend', '🛋️'],
+      ['koffie', 'de koffie', 'the coffee', '☕'],
+      ['gezellig', 'gezellig', 'cosy, nice together', '🥰'],
+      ['weer', 'het weer', 'the weather', '🌦️'],
+      ['verjaardag', 'de verjaardag', 'the birthday', '🎂'],
+      ['gefeliciteerd', 'gefeliciteerd', 'congratulations', '🥳'],
+    ],
+    [
+      ['Hoe was je weekend?', 'How was your weekend?'],
+      ['Mag ik bij jullie zitten?', 'May I sit with you?'],
+      ['Het is lekker weer vandaag.', 'The weather is nice today.'],
+    ],
+    [['Wat heb je dit weekend gedaan?', 'What did you do this weekend?'], ['Ik heb gevoetbald met vrienden.', 'I played football with friends.']],
+  ),
+  lesson(
+    'mistakes',
+    'Feedback and mistakes',
+    [
+      ['fout', 'de fout', 'the mistake', '🙈'],
+      ['compliment', 'het compliment', 'the compliment', '👏'],
+      ['feedback', 'de feedback', 'the feedback', '🗨️'],
+      ['uitleggen', 'uitleggen', 'to explain', '🧑‍🏫'],
+      ['leren', 'leren', 'to learn', '📚'],
+      ['verbeteren', 'verbeteren', 'to improve, to correct', '🔧'],
+    ],
+    [
+      ['Sorry, ik heb een fout gemaakt.', 'Sorry, I made a mistake.'],
+      ['Kun je het uitleggen?', 'Can you explain it?'],
+      ['Bedankt voor het compliment!', 'Thank you for the compliment!'],
+    ],
+    [['Goed gedaan, zeg!', 'Well done!'], ['Dank je, dat is fijn om te horen.', 'Thank you, that is nice to hear.']],
+  ),
+  lesson(
+    'respect',
+    'Respect for everyone',
+    [
+      ['respect', 'het respect', 'the respect', '🤝'],
+      ['gelijk', 'gelijk', 'equal', '🟰'],
+      ['grens', 'de grens', 'the limit, the boundary', '🚧'],
+      ['neezeggen', 'nee zeggen', 'to say no', '🛑'],
+      ['pesten', 'pesten', 'to bully', '😣'],
+      ['vertrouwenspersoon', 'de vertrouwenspersoon', 'the confidential adviser', '🫂'],
+    ],
+    [
+      ['Iedereen is hier gelijk.', 'Everyone is equal here.'],
+      ['Dit vind ik niet oké.', 'I am not okay with this.'],
+      ['Stop, dit is mijn grens.', 'Stop, this is my limit.'],
+    ],
+    [['Wat is er? Je kijkt verdrietig.', 'What is wrong? You look sad.'], ['Een collega pest mij.', 'A colleague is bullying me.']],
+  ),
+]);
+
+const socialTips = [
+  tipFor(
+    'smalltalk',
+    '☕',
+    'Small talk in the break',
+    'Short chats in the break are normal. They help you feel part of the team. You are welcome at the coffee or lunch table. Easy topics are the weekend, the weather, sports and holidays. Questions about salary, religion or someone’s private life are often too personal at first. Is it a colleague’s birthday? Say "Gefeliciteerd!".',
+    ['Gefeliciteerd met je verjaardag!', 'Happy birthday!'],
+    'In the break, your colleagues sit together at a table. You do not know them well yet. What do you do?',
+    [
+      'Ask "Mag ik bij jullie zitten?" and join with a short chat.',
+      'Eat alone outside every day, so you do not disturb them.',
+      'Ask each colleague how much they earn.',
+    ],
+    'Joining the table is welcome and helps you get to know the team. A simple question like "Hoe was je weekend?" is a good start.',
+    NONE,
+  ),
+  tipFor(
+    'mistakes',
+    '🙈',
+    'Mistakes are normal',
+    'Everybody makes mistakes at work. Say it quickly, so it can be fixed: "Sorry, ik heb een fout gemaakt." Hiding a mistake is seen as much worse than the mistake itself. Feedback is about the work, not about you as a person. Did you get a compliment? Just say thank you. Not clear what to do better? Ask: "Kun je het uitleggen?"',
+    ['Sorry, ik heb een fout gemaakt. Hoe kan ik het oplossen?', 'Sorry, I made a mistake. How can I fix it?'],
+    'You put 20 boxes on the wrong pallet. Nobody has seen it yet. What do you do?',
+    [
+      'Tell your supervisor right away and help to fix it.',
+      'Say nothing and hope nobody notices.',
+      'Say that a colleague did it.',
+    ],
+    'A mistake that is told early is easy to fix. Being honest builds trust, and that counts more than never making a mistake.',
+    NONE,
+  ),
+  tipFor(
+    'respect',
+    '🫂',
+    'Respect for everyone',
+    'At work, men and women are equal. A woman can be your supervisor and give instructions, like anyone else. Everyone is treated with respect, whatever their origin, religion, gender or sexual orientation. You decide about physical contact. A handshake is common, but you may also greet in another polite way, like a nod and a smile, and explain it briefly. Jokes about someone’s origin or religion, threats, bullying (pesten) and unwanted sexual behaviour are not accepted. You can report it to your supervisor, or to a confidential adviser (vertrouwenspersoon) if your company has one.',
+    ['Ik geef liever geen hand, maar ik groet je graag.', 'I prefer not to shake hands, but I am happy to greet you.'],
+    'A colleague often makes jokes about your religion. You asked him to stop, but he goes on. What do you do?',
+    [
+      'Tell your supervisor or the vertrouwenspersoon.',
+      'Laugh along, so there is no trouble.',
+      'Make jokes about his background back.',
+    ],
+    'Such jokes are not accepted at work. Reporting it is normal: the company must keep the workplace safe for everyone.',
+    NONE,
+  ),
+];
