@@ -4,6 +4,8 @@ import { LessonPlayer } from '../components/LessonPlayer';
 import { About, BottomNav, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar, WordsHub } from '../components/Screens';
 import { Admin } from '../components/Admin';
 import { Gate } from '../components/Gate';
+import { SectorScreen } from '../components/Sector';
+import { isSectorId, type SectorChoice } from '../content/sectors';
 import type { Access } from '../lib/access';
 import { emptyProgress } from '../lib/progress';
 import { Milestone } from '../components/Milestone';
@@ -20,6 +22,7 @@ import * as kit from '../pictures/kit';
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
  * screenshotted reproducibly: /?shot=dutch|meaning|build|chat|result|streak&lang=ar
+ * /?shot=sector is the sector choice; &sector=construction sets the sector for path/tips/settings.
  * /?shot=pictures shows every word picture (and the unit banner pictures) for review.
  * Options are always in lesson order, so tests know which one is right.
  */
@@ -31,6 +34,11 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'pictures') return <PicturesSheet />;
   // &access=preview shows the path, tips and settings as a preview user sees them.
   const access: Access = new URLSearchParams(location.search).get('access') === 'preview' ? 'preview' : 'full';
+  // &sector=construction (or none) sets the learner's sector on the path, tips and settings;
+  // &other=open opens the "Andere sectoren" section.
+  const sp = new URLSearchParams(location.search).get('sector');
+  const sector: SectorChoice | undefined = sp === 'none' || isSectorId(sp) ? sp : undefined;
+  if (shot === 'sector') return <SectorScreen lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'gate') return <Gate lang={getHelpLanguage(lang as LangCode)} onAccess={() => {}} onLanguage={() => {}} />;
   // Screens outside the lesson flow (phase-3 house-style review).
   if (shot === 'onboarding' || shot === 'language') return <Onboarding onDone={() => {}} />;
@@ -39,7 +47,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'tips' || shot === 'settings' || shot === 'words') {
     // Half the course done, so several tips are unlocked.
     const done = Object.fromEntries(allLessons.slice(0, 8).map((l) => [l.id, { best: 1, times: 1 }]));
-    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, completed: done };
+    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, completed: done };
     const l = getHelpLanguage(lang as LangCode);
     if (shot === 'words') {
       return (
@@ -53,7 +61,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       <Tips progress={progress} lang={l} onBack={() => {}} access={access} />
     ) : (
       <>
-        <Settings progress={progress} lang={l} onLang={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
+        <Settings progress={progress} lang={l} onLang={() => {}} onSector={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
         <BottomNav current="me" onTab={() => {}} />
       </>
     );
@@ -61,12 +69,12 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'about') return <About lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
   // Home screen: first lesson done, second lesson current (as in the house-style concept).
   if (shot === 'path') {
-    const progress = { ...emptyProgress, onboarded: true, xp: 120, streak: 7, completed: { 'l.hello': { best: 1, times: 1 } } };
+    const progress = { ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector, completed: { 'l.hello': { best: 1, times: 1 } } };
     const l = getHelpLanguage(lang as LangCode);
     return (
       <>
         <TopBar streak={7} words={learnedWords(progress.completed).size} lang={l} onLanguage={() => {}} />
-        <Path progress={progress} lang={l} onStart={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}} />
+        <Path progress={progress} lang={l} onStart={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}} openOther={new URLSearchParams(location.search).get('other') === 'open'} />
         <BottomNav current="route" onTab={() => {}} />
       </>
     );

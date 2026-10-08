@@ -9,6 +9,8 @@ import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
 import { Milestone } from './components/Milestone';
 import { Gate } from './components/Gate';
+import { SectorScreen } from './components/Sector';
+import type { SectorChoice } from './content/sectors';
 import { type Access, lessonAllowed, loadAccess, saveAccess } from './lib/access';
 import { completeLesson, currentStreak, emptyProgress, loadProgress, saveProgress, streakWentUp } from './lib/progress';
 
@@ -122,17 +124,21 @@ export default function App() {
   });
 
   const setLang = (code: LangCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
+  const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
 
   if (view.name === 'admin') {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
 
   // First run: the language comes first (an app to learn Dutch can't start in Dutch), then the
-  // door in English plus that language. The admin page above stays reachable with #beheer.
+  // door in English plus that language, then the sector. The admin page above stays reachable
+  // with #beheer.
   if (!progress.onboarded) return <Onboarding onDone={setLang} />;
   if (!access) {
     return <Gate lang={lang} onAccess={grant} onLanguage={() => setProgress((p) => ({ ...p, onboarded: false }))} />;
   }
+  // Asked once (also for learners from before the sector choice); Settings can change it.
+  if (progress.sector === undefined) return <SectorScreen lang={lang} onDone={setSector} />;
 
   switch (view.name) {
     case 'lesson': {
@@ -190,11 +196,12 @@ export default function App() {
             progress={progress}
             lang={lang}
             onLang={setLang}
+            onSector={setSector}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onReset={() => {
-              // Keep look and voice; only learning progress is wiped.
-              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice }));
+              // Keep look, voice and sector; only learning progress is wiped.
+              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, sector: p.sector }));
               back();
             }}
             onAbout={() => tab('about')}

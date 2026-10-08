@@ -71,6 +71,18 @@ const lang: HelpLanguage = {
     enterPassword: 'رمز را وارد کنید',
     wrongPassword: 'رمز درست نیست. دوباره امتحان کن.',
     unlock: 'باز کن',
+    sector: 'کار شما',
+    chooseSector: 'کجا کار می‌کنید؟',
+    sectorHint: 'درس‌های کار شما اول می‌آیند. بعداً می‌توانید این را در تنظیمات عوض کنید.',
+    otherSectors: 'بخش‌های دیگر',
+    otherSectorsHint: 'درس‌ها برای کارهای دیگر. این‌ها را هم می‌توانید یاد بگیرید.',
+    notSureYet: 'هنوز نمی‌دانم',
+    sectorLogistics: 'لجستیک',
+    sectorConstruction: 'ساختمان‌سازی',
+    sectorProduction: 'تولید',
+    sectorCare: 'مراقبت',
+    sectorHospitality: 'رستوران و هتل',
+    sectorCleaning: 'نظافت',
   },
   gloss: {
     // Units

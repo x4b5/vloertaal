@@ -71,6 +71,18 @@ const lang: HelpLanguage = {
     enterPassword: 'Въведи паролата',
     wrongPassword: 'Паролата не е вярна. Опитай пак.',
     unlock: 'Отключи',
+    sector: 'Твоята работа',
+    chooseSector: 'Къде работиш?',
+    sectorHint: 'Първо идват уроците за твоята работа. Можеш да промениш това по-късно в Настройки.',
+    otherSectors: 'Други сектори',
+    otherSectorsHint: 'Уроци за друга работа. Можеш да ги правиш и тях.',
+    notSureYet: 'Още не знам',
+    sectorLogistics: 'Логистика',
+    sectorConstruction: 'Строителство',
+    sectorProduction: 'Производство',
+    sectorCare: 'Грижа за хора',
+    sectorHospitality: 'Хотели и ресторанти',
+    sectorCleaning: 'Почистване',
   },
   gloss: {
     // Units

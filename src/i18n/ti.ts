@@ -71,6 +71,18 @@ const lang: HelpLanguage = {
     enterPassword: 'ፓስዎርድ ኣእቱ',
     wrongPassword: 'እቲ ፓስዎርድ ቅኑዕ ኣይኮነን። ደጊምካ ፈትን።',
     unlock: 'ክፈት',
+    sector: 'ስራሕካ',
+    chooseSector: 'ኣበይ ኢኻ ትሰርሕ?',
+    sectorHint: 'ትምህርትታት ናይ ስራሕካ ቅድም ይመጹ። ደሓር ኣብ ምድላዋት ክትቅይሮ ትኽእል ኢኻ።',
+    otherSectors: 'ካልኦት ዓውድታት ስራሕ',
+    otherSectorsHint: 'ትምህርትታት ንካልእ ዓይነት ስራሕ። ንዓኣቶም እውን ክትገብሮም ትኽእል ኢኻ።',
+    notSureYet: 'ገና ኣይፈለጥኩን',
+    sectorLogistics: 'መኽዘንን መጓዓዝያን',
+    sectorConstruction: 'ስራሕ ህንጻ',
+    sectorProduction: 'ምፍራይ',
+    sectorCare: 'ክንክን',
+    sectorHospitality: 'ቤት ብልዕን ሆቴልን',
+    sectorCleaning: 'ጽሬት',
   },
   gloss: {
     // Units

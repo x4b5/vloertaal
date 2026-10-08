@@ -71,6 +71,18 @@ const lang: HelpLanguage = {
     enterPassword: 'Introdu parola',
     wrongPassword: 'Parola nu este corectă. Încearcă din nou.',
     unlock: 'Deblochează',
+    sector: 'Munca ta',
+    chooseSector: 'Unde lucrezi?',
+    sectorHint: 'Lecțiile pentru munca ta vin primele. Poți schimba asta mai târziu în Setări.',
+    otherSectors: 'Alte domenii',
+    otherSectorsHint: 'Lecții pentru alte meserii. Le poți face și pe ele.',
+    notSureYet: 'Nu știu încă',
+    sectorLogistics: 'Logistică',
+    sectorConstruction: 'Construcții',
+    sectorProduction: 'Producție',
+    sectorCare: 'Îngrijire',
+    sectorHospitality: 'Hoteluri și restaurante',
+    sectorCleaning: 'Curățenie',
   },
   gloss: {
     // Units

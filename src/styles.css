@@ -271,6 +271,50 @@ h2 { font-size: 1.25rem; }
   .lang-native { font-size: 1.08rem; }
 }
 
+/* Sector choice (after the password, and in Settings): the language cards with a line icon,
+   the Dutch name, then the help language with the English small. "Not sure yet" spans the row. */
+.sector-screen .hero-logo .wordmark { font-size: 2rem; }
+.sector-title { display: flex; flex-direction: column; align-items: center; gap: 2px; margin-top: 28px; }
+.sector-title .bi { align-items: center; }
+.sector-title .bi-help { --help-size: 0.7em; font-weight: 400; }
+.sector-title-nl { font-size: 1.45rem; }
+.sector-title-nl + .bi .bi-en { font-size: 1.05rem; font-weight: 500; color: var(--ink-2); }
+.sector-title-nl + .bi .bi-help { --help-size: 0.85rem; }
+.sector-hint { margin: 10px auto 0; max-width: 34em; text-align: center; color: var(--muted); font-size: 0.95rem; line-height: 1.4; }
+.sector-hint .bi { align-items: center; }
+.sector-hint .bi-en { color: var(--ink-2); }
+.sector-btn { min-height: 0; }
+.sector-icon {
+  display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px;
+  background: var(--concrete-2, var(--bg)); color: var(--ink);
+}
+.sector-btn.picked .sector-icon { background: var(--yellow); color: #1e2226; }
+.sector-names { font-size: 0.92rem; line-height: 1.25; }
+.sector-names .bi-en { color: var(--ink-2); }
+.sector-names .bi-help { --help-size: 0.82rem; }
+.sector-none { grid-column: 1 / -1; flex-direction: row; align-items: center; }
+.lang-grid-compact .sector-icon { width: 38px; height: 38px; border-radius: 10px; }
+.sector-btn .lang-native { overflow-wrap: normal; hyphens: auto; }
+.lang-grid-compact .sector-none { padding-inline-end: 40px; }
+.lang-grid-compact .sector-names { font-size: 0.85rem; }
+
+/* Path: the other sectors' units, folded away at the bottom (still playable when opened). */
+.other-sectors { margin-top: 44px; }
+.other-toggle {
+  width: 100%; display: flex; align-items: center; gap: 12px; padding: 12px 14px; text-align: start;
+  color: var(--ink); background: var(--card); border: 2px dashed var(--line); border-radius: var(--radius);
+}
+.other-toggle:hover { border-color: var(--ink-3); }
+.other-icons { flex: none; display: grid; grid-template-columns: repeat(3, 20px); gap: 4px; color: var(--ink-2); }
+.other-text { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.other-nl { font-weight: 650; font-size: 1.1rem; }
+.other-text .bi-en { font-size: 0.92rem; color: var(--ink-2); }
+.other-chev { flex: none; color: var(--ink-3); transition: transform 0.2s ease; }
+.other-chev.open { transform: rotate(180deg); }
+.other-hint { margin: 12px 0 0; }
+.other-units > .unit:first-of-type { margin-top: 20px; }
+.other-units > .unit + .unit { margin-top: 44px; }
+
 /* Top bar: logo, two quiet stats (no boxes) and the help-language flag (opens Settings). */
 .topbar {
   position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 16px;
@@ -1530,3 +1574,4 @@ svg.emoji-xl { width: 140px; height: 140px; }
   .stat-card-body .icon { width: 24px; height: 24px; }
 }
 .unit-locked .bay-lock { display: none; }
+@media (max-width: 350px) { .sector-btn .lang-native { font-size: 1rem; } }

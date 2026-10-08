@@ -71,6 +71,18 @@ const lang: HelpLanguage = {
     enterPassword: 'Введи пароль',
     wrongPassword: 'Пароль неправильний. Спробуй ще раз.',
     unlock: 'Відкрити',
+    sector: 'Твоя робота',
+    chooseSector: 'Де ти працюєш?',
+    sectorHint: 'Спершу йдуть уроки для твоєї роботи. Пізніше це можна змінити в Налаштуваннях.',
+    otherSectors: 'Інші сфери',
+    otherSectorsHint: 'Уроки для іншої роботи. Їх теж можна проходити.',
+    notSureYet: 'Ще не знаю',
+    sectorLogistics: 'Логістика',
+    sectorConstruction: 'Будівництво',
+    sectorProduction: 'Виробництво',
+    sectorCare: 'Догляд',
+    sectorHospitality: 'Готелі й ресторани',
+    sectorCleaning: 'Прибирання',
   },
   gloss: {
     // Unit: First day at work

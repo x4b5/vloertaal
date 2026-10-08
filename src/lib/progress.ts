@@ -1,4 +1,5 @@
 import type { LangCode } from '../i18n/types';
+import { isSectorId, type SectorChoice } from '../content/sectors';
 
 export interface LessonRecord {
   /** Best accuracy so far, 0–1. */
@@ -17,6 +18,8 @@ export interface Progress {
   /** voiceURI of the chosen Dutch voice; null = best available. */
   voice: string | null;
   helpLang: LangCode | null;
+  /** The learner's sector ('none' = not sure yet); undefined = not asked yet (first run). */
+  sector?: SectorChoice;
   xp: number;
   streak: number;
   /** Local date (YYYY-MM-DD) of the last finished lesson. */
@@ -49,6 +52,8 @@ export function loadProgress(): Progress {
         saved.theme = saved.theme === 'dark' ? 'dark' : 'light';
         saved.themeVersion = 2;
       }
+      // Older saves have no sector (asked once after the password); drop anything unknown.
+      if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
       return { ...emptyProgress, ...saved };
     }
   } catch {

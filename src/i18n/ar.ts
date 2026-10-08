@@ -71,6 +71,18 @@ const lang: HelpLanguage = {
     enterPassword: 'أدخل كلمة المرور',
     wrongPassword: 'كلمة المرور غير صحيحة. حاول مرة أخرى.',
     unlock: 'افتح',
+    sector: 'عملك',
+    chooseSector: 'أين تعمل؟',
+    sectorHint: 'دروس عملك تأتي أولاً. يمكنك تغيير هذا لاحقاً في الإعدادات.',
+    otherSectors: 'قطاعات أخرى',
+    otherSectorsHint: 'دروس لأنواع عمل أخرى. يمكنك أن تتعلمها أيضاً.',
+    notSureYet: 'لست متأكداً بعد',
+    sectorLogistics: 'الخدمات اللوجستية',
+    sectorConstruction: 'البناء',
+    sectorProduction: 'الإنتاج',
+    sectorCare: 'الرعاية',
+    sectorHospitality: 'المطاعم والفنادق',
+    sectorCleaning: 'التنظيف',
   },
   gloss: {
     // Units

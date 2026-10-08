@@ -71,6 +71,18 @@ const lang: HelpLanguage = {
     enterPassword: 'Şifreyi gir',
     wrongPassword: 'Şifre doğru değil. Tekrar dene.',
     unlock: 'Aç',
+    sector: 'İşin',
+    chooseSector: 'Nerede çalışıyorsun?',
+    sectorHint: 'Önce kendi işinin dersleri gelir. Bunu sonra Ayarlar’da değiştirebilirsin.',
+    otherSectors: 'Diğer sektörler',
+    otherSectorsHint: 'Başka işler için dersler. Bunları da yapabilirsin.',
+    notSureYet: 'Henüz bilmiyorum',
+    sectorLogistics: 'Lojistik',
+    sectorConstruction: 'İnşaat',
+    sectorProduction: 'Üretim',
+    sectorCare: 'Bakım',
+    sectorHospitality: 'Otel ve restoran',
+    sectorCleaning: 'Temizlik',
   },
   gloss: {
     // Unit: First day at work
