@@ -11,6 +11,7 @@ import group9 from './group9';
 import group10 from './group10';
 import group11 from './group11';
 import units from './units';
+import icons from './icons';
 
 /**
  * Original word pictures (flat vector, in the cast's style; see docs/tekenstijl.md).
@@ -30,6 +31,9 @@ export const pictures: Record<string, () => JSX.Element> = {
   ...group11,
 };
 
+/** Own unit icons for abstract topics (i.*), next to the word pictures in WordPicture. */
+export const iconPictures: Record<string, () => JSX.Element> = icons;
+
 /** Pictures for the coloured unit banners, keyed by unit id. */
 export const unitPictures: Record<string, () => JSX.Element> = units;
 
@@ -43,7 +47,7 @@ export function WordPicture({ id, emoji, size = 96, className }: {
   size?: number;
   className?: string;
 }): JSX.Element {
-  const draw = pictures[id];
+  const draw = pictures[id] ?? iconPictures[id];
   if (!draw) {
     const style: CSSProperties = { fontSize: Math.round(size * 0.8), lineHeight: 1, width: size, height: size };
     return createElement('span', { className: `word-pic word-emoji ${className ?? ''}`, 'aria-hidden': true, style }, emoji);

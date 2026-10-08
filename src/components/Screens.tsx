@@ -4,6 +4,7 @@ import { LessonCelebration } from './Celebrate';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
 import { findItem, phrasebookIds } from '../content/curriculum';
+import { unitIcons } from '../content/unitIcons';
 import { coursePlan, unitSector, type SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { SectorIcon, SectorPicker } from './Sector';
@@ -223,6 +224,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
             is the same action as a real button, for keyboards and screen readers). */}
         <div className="unit-head" onClick={allowed ? undefined : onUpgrade}>
           <span className="unit-num" aria-hidden>{unitNumber(u)}</span>
+          <WordPicture className="unit-icon" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
           <div className="unit-titles">
             {/* Two lines: the help language large with the English small under it, or the
                 English large with the Dutch name under it when there is no help language. */}
