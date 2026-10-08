@@ -149,8 +149,9 @@ export function Hand({ pose = 'open', x = 60, y = 90, rotate = 0, scale = 1, ski
   mirror?: boolean;
 }) {
   const [s, sh] = skin;
-  const finger = (fx: number, top: number, bottom = -18, w = 7) => (
-    <rect x={fx - w / 2} y={top} width={w} height={bottom - top} rx={w / 2} fill={s} />
+  // Slim fingers with squarish tips (no sausage fingers or balloon palms).
+  const finger = (fx: number, top: number, bottom = -18, w = 6.2) => (
+    <rect x={fx - w / 2} y={top} width={w} height={bottom - top} rx={2.2} fill={s} />
   );
   const knuckles = (
     <path d="M-4 -19V-13M3 -19V-13" stroke={sh} strokeWidth="1.6" strokeLinecap="round" />
@@ -164,8 +165,8 @@ export function Hand({ pose = 'open', x = 60, y = 90, rotate = 0, scale = 1, ski
           {finger(-3, -48)}
           {finger(3.5, -46)}
           {finger(10, -39, -16, 6.4)}
-          <rect x="-13" y="-27" width="26" height="28" rx="10" fill={s} />
-          <rect x="-15.5" y="-24" width="8" height="21" rx="4" fill={s} transform="rotate(-38 -11.5 -8)" />
+          <path d="M-12.6 -27H12.6V-6L8 1H-8L-12.6 -6Z" fill={s} strokeLinejoin="round" stroke={s} strokeWidth="1.6" />
+          <rect x="-15" y="-24" width="7" height="21" rx="2.6" fill={s} transform="rotate(-38 -11.5 -8)" />
           <path d="M-6.2 -38V-28M0.2 -40V-28M6.8 -36V-27" stroke={sh} strokeWidth="1.3" strokeLinecap="round" opacity=".8" />
           <path d="M-5 -12Q0 -8 6 -12" fill="none" stroke={sh} strokeWidth="1.5" strokeLinecap="round" opacity=".7" />
         </>
@@ -175,9 +176,9 @@ export function Hand({ pose = 'open', x = 60, y = 90, rotate = 0, scale = 1, ski
       body = (
         <>
           {finger(-8, -48, -20)}
-          <rect x="-13" y="-25" width="26" height="26" rx="10" fill={s} />
+          <path d="M-12.6 -25H12.6V-5L8 1H-8L-12.6 -5Z" fill={s} strokeLinejoin="round" stroke={s} strokeWidth="1.6" />
           <path d="M-2 -21H9M-2 -14H9M-1 -7H8" stroke={sh} strokeWidth="1.5" strokeLinecap="round" />
-          <rect x="-16" y="-14" width="17" height="8" rx="4" fill={s} transform="rotate(-12 -7 -10)" />
+          <rect x="-16" y="-14" width="17" height="7" rx="2.6" fill={s} transform="rotate(-12 -7 -10)" />
           <path d="M-12 -10H-2" stroke={sh} strokeWidth="1.2" strokeLinecap="round" opacity=".6" transform="rotate(-12 -7 -10)" />
         </>
       );
@@ -185,8 +186,8 @@ export function Hand({ pose = 'open', x = 60, y = 90, rotate = 0, scale = 1, ski
     case 'thumb':
       body = (
         <>
-          <rect x="-11.5" y="-44" width="9" height="26" rx="4.5" fill={s} />
-          <rect x="-13" y="-24" width="27" height="25" rx="10" fill={s} />
+          <rect x="-11" y="-44" width="8" height="26" rx="3" fill={s} />
+          <path d="M-12.6 -24H13.6V-5L9 1H-8L-12.6 -5Z" fill={s} strokeLinejoin="round" stroke={s} strokeWidth="1.6" />
           <path d="M3 -18H13M3 -11H13M3 -4H12" stroke={sh} strokeWidth="1.6" strokeLinecap="round" />
           <path d="M-9 -38Q-7 -40 -5 -38" fill="none" stroke={sh} strokeWidth="1.2" strokeLinecap="round" opacity=".7" />
         </>
@@ -196,18 +197,18 @@ export function Hand({ pose = 'open', x = 60, y = 90, rotate = 0, scale = 1, ski
       // Fingers curled round something held in front (put the object over the gap at y = -20).
       body = (
         <>
-          <rect x="-13" y="-34" width="26" height="35" rx="11" fill={s} />
+          <path d="M-12.6 -34H12.6V-5L8 1H-8L-12.6 -5Z" fill={s} strokeLinejoin="round" stroke={s} strokeWidth="1.6" />
           <path d="M-13 -24H6M-13 -16H7M-13 -8H6" stroke={sh} strokeWidth="1.6" strokeLinecap="round" />
-          <rect x="4" y="-36" width="9" height="20" rx="4.5" fill={s} />
+          <rect x="4.5" y="-36" width="8" height="20" rx="3" fill={s} />
         </>
       );
       break;
     default:
       body = (
         <>
-          <rect x="-13" y="-26" width="26" height="27" rx="11" fill={s} />
+          <path d="M-12.6 -26H12.6V-5L8 1H-8L-12.6 -5Z" fill={s} strokeLinejoin="round" stroke={s} strokeWidth="1.6" />
           {knuckles}
-          <rect x="-15" y="-13" width="18" height="8.4" rx="4.2" fill={s} transform="rotate(-8 -6 -9)" />
+          <rect x="-15" y="-13" width="18" height="7.4" rx="2.6" fill={s} transform="rotate(-8 -6 -9)" />
           <path d="M-11 -9H-1" stroke={sh} strokeWidth="1.2" strokeLinecap="round" opacity=".6" />
         </>
       );
@@ -216,8 +217,8 @@ export function Hand({ pose = 'open', x = 60, y = 90, rotate = 0, scale = 1, ski
     <g transform={`translate(${x} ${y}) rotate(${rotate}) scale(${mirror ? -scale : scale} ${scale})`}>
       {sleeve && (
         <>
-          <rect x="-15" y="4" width="30" height="40" rx="6" fill={sleeve[0]} />
-          <rect x="-15.5" y="1" width="31" height="9" rx="4.5" fill={sleeve[1]} />
+          <rect x="-14" y="4" width="28" height="40" rx="2" fill={sleeve[0]} />
+          <rect x="-14.5" y="1" width="29" height="8" rx="1.6" fill={sleeve[1]} />
         </>
       )}
       <Shade color={sh} opacity={0.75} at={[20, -18, 9, 40]}>
@@ -512,58 +513,76 @@ export function ExclaimMark({ x = 60, y = 60, size = 40, color = PAL.red }: { x?
  * ---------------------------------------------------------------------------------------- */
 
 /** Bust clothes per cast member (head and shoulders, cut off flat at the bottom). */
-const BUST_TORSO: Record<CharacterId, ReactNode> = {
-  bram: (
+const BUST = 'M25 134L26.5 109Q28.5 96.5 42 93.5H78Q91.5 96.5 93.5 109L95 134Z';
+const BUST_SHADE = <path d="M81 92L100 92L100 134L84 134Z" fill="#000" opacity=".13" />;
+const bustClip = (id: string, art: ReactNode) => (
+  <>
+    <defs>
+      <clipPath id={id}><path d={BUST} /></clipPath>
+    </defs>
+    <g clipPath={`url(#${id})`}>{art}</g>
+  </>
+);
+
+/** Bust clothes per cast member (head and shoulders, cut off flat at the bottom): slim, straight
+ *  shoulders, the same outfits as the cast. */
+const BUST_TORSO: Record<CharacterId, (id: string) => ReactNode> = {
+  bram: (id) => bustClip(id, (
     <>
-      <path d="M20 134C20 105 36 93 60 93C84 93 100 105 100 134Z" fill={PAL.orange} />
-      <path d="M48 92H72L60 114Z" fill={PAL.blue} />
-      <path d="M49 93L60 102L55 106ZM71 93L60 102L65 106Z" fill={PAL.blueLight} />
-      <path d="M41 98V134M79 98V134" stroke="#eef5f7" strokeWidth="6" />
-      <path d="M86 100C95 106 100 117 100 134H84C86 120 87 110 86 100Z" fill={PAL.orangeShade} opacity=".5" />
+      <path d={BUST} fill={PAL.orange} />
+      <path d="M50 91H70L60 107Z" fill={PAL.blue} />
+      <path d="M51 92L60 99L56 103ZM69 92L60 99L64 103Z" fill={PAL.blueLight} />
+      <path d="M42.5 96V134M77.5 96V134" stroke="#eef5f7" strokeWidth="5" />
+      {BUST_SHADE}
     </>
-  ),
-  amina: (
+  )),
+  amina: (id) => bustClip(id, (
     <>
-      <path d="M24 134C24 107 40 96 60 96C80 96 96 107 96 134Z" fill={PAL.green} />
-      <path d="M36 104C40 98 48 95 60 95C72 95 80 98 84 104C78 112 70 116 60 116C50 116 42 112 36 104Z" fill={PAL.purple} />
-      <path d="M44 103Q60 110 76 103" fill="none" stroke={PAL.purpleShade} strokeWidth="2.4" strokeLinecap="round" />
-      <path d="M84 104C92 110 96 120 96 134H82C84 122 85 112 84 104Z" fill={PAL.greenShade} opacity=".6" />
+      <path d={BUST} fill={PAL.green} />
+      <path d="M36 92L43 96H77L84 92L86 105H34Z" fill={PAL.purple} />
+      <path d="M78 96L84 92L86 105H80Z" fill={PAL.purpleShade} />
+      <path d="M60 105V134" stroke={PAL.greenShade} strokeWidth="2" />
+      {BUST_SHADE}
     </>
-  ),
-  henk: (
+  )),
+  henk: (id) => bustClip(id, (
     <>
-      <path d="M18 134C18 104 35 92 60 92C85 92 102 104 102 134Z" fill={PAL.navy} />
-      <path d="M49 91H71L60 109Z" fill={PAL.paper} />
-      <path d="M48 93L57 105L52 108ZM72 93L63 105L68 108Z" fill={PAL.paperShade} />
-      <path d="M88 100C97 107 102 118 102 134H86C88 120 89 110 88 100Z" fill={PAL.navyShade} opacity=".6" />
+      <path d={BUST} fill={PAL.navy} />
+      <path d="M50 91H70L60 106Z" fill={PAL.paper} />
+      <path d="M50 92L58 101L54 104ZM70 92L62 101L66 104Z" fill={PAL.paperShade} />
+      <path d="M60 106V134" stroke={PAL.navyShade} strokeWidth="1.8" />
+      {BUST_SHADE}
     </>
-  ),
-  jada: (
+  )),
+  jada: (id) => bustClip(id, (
     <>
-      <path d="M24 134C24 107 40 96 60 96C80 96 96 107 96 134Z" fill="#ffc929" />
-      <path d="M38 118Q38 113 43 113H77Q82 113 82 118V134H38Z" fill={PAL.sky} />
-      <path d="M38 98L44 115M82 98L76 115" stroke={PAL.sky} strokeWidth="6.5" strokeLinecap="round" />
-      <circle cx="44" cy="115" r="2.8" fill={PAL.yellow} />
-      <circle cx="76" cy="115" r="2.8" fill={PAL.yellow} />
-      <path d="M53 98Q60 103 67 98" fill="none" stroke="#e0a800" strokeWidth="2.6" strokeLinecap="round" />
-      <path d="M84 104C92 110 96 120 96 134H82C84 122 85 112 84 104Z" fill="#000" opacity=".1" />
+      <path d={BUST} fill="#ffc929" />
+      <path d="M40 115H80V134H40Z" fill={PAL.sky} />
+      <path d="M40.5 94L44 115M79.5 94L76 115" stroke={PAL.sky} strokeWidth="5.5" />
+      <rect x="42" y="112" width="4" height="4" rx=".8" fill={PAL.yellow} />
+      <rect x="74" y="112" width="4" height="4" rx=".8" fill={PAL.yellow} />
+      <path d="M54 94.6L60 99L66 94.6" fill="none" stroke="#e0a800" strokeWidth="2" strokeLinejoin="round" />
+      {BUST_SHADE}
     </>
-  ),
+  )),
 };
 
 /**
  * A cast member as a head-and-shoulders bust, exactly the cast's own head. (x, y) is the middle
  * of the bottom edge; at scale 1 the bust is 84 wide and 130 tall, so use scale 0.4-0.75.
  */
-export function Bust({ who, x = 60, y = 110, scale = 0.7, expr = 'neutral', squint = false, flip = false }: {
+export function Bust({ who, x = 60, y = 110, scale = 0.7, expr = 'neutral', squint = false, flip = false, talk = false }: {
   who: CharacterId; x?: number; y?: number; scale?: number; expr?: Expr; squint?: boolean;
+  /** Mouth a little open, mid-word. */
+  talk?: boolean;
   /** Face the other way (mirror). */
   flip?: boolean;
 }) {
+  const id = `bt-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
   return (
     <g transform={`translate(${r1(x)} ${r1(y)}) scale(${flip ? -scale : scale} ${scale}) translate(-60 -134)`}>
-      {BUST_TORSO[who]}
-      <CastHead who={who} expr={expr} squint={squint} />
+      {BUST_TORSO[who](id)}
+      <CastHead who={who} expr={expr} squint={squint} talk={talk} />
     </g>
   );
 }

@@ -386,7 +386,7 @@ const pictures: Record<string, () => JSX.Element> = {
   'w.haarnetje': () => (
     <g>
       <Bust who="henk" x={60} y={124} scale={0.86} expr="neutral" />
-      <g transform="translate(60 124) scale(0.86) translate(-60 -134)">
+      <g transform="translate(60 124) scale(0.86) translate(-60 -134) translate(60 22) scale(.72) translate(-60 -14)">
         {/* Net cap over the head */}
         <path d="M28 54C26 26 42 14 60 14C78 14 94 26 92 54Q60 44 28 54Z" fill="#e3f5ff" opacity=".9" />
         <g stroke={PAL.sky} strokeWidth="1.6" opacity=".7" fill="none">
