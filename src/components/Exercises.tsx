@@ -557,7 +557,7 @@ export function TypeExercise(props: Props<'type'>) {
 /**
  * "Type what you hear" for a learner who reads only a non-Latin script: hear the word and pick
  * it from three written Dutch words, each with its own speaker (hearing never picks). After
- * Check the word's picture shows beside the question.
+ * Check the word's picture shows on its card, and every card says what it means.
  */
 function HearPickWritten({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'type'>) {
   useEffect(() => { autoSpeak(ex.word.nl); }, [ex.word]);
@@ -567,7 +567,6 @@ function HearPickWritten({ ex, lang, locked, onAnswer, verdict, run, misses }: P
       <div className="listen-buttons">
         <SpeakButton text={ex.word.nl} size="lg" label="Play" />
         <SpeakButton text={ex.word.nl} slow label="Play slowly" />
-        {locked && hasPicture(ex.word) && <WordPicture className="hear-pick-pic" id={ex.word.id} emoji={ex.word.emoji} size={72} />}
       </div>
       <ChoiceGrid
         className="choices-rows choices-words hear-pick-choices"
@@ -582,10 +581,14 @@ function HearPickWritten({ ex, lang, locked, onAnswer, verdict, run, misses }: P
           </button>
         )}
         render={(w) => (
-          <span className="choice-text">
-            <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
-            {locked && <Bi className="choice-gloss" text={gloss(w.id, w.en, lang)} />}
-          </span>
+          <>
+            {/* After Check the heard word shows its picture, on its own card (always in view). */}
+            {locked && w.id === ex.word.id && hasPicture(w) && <WordPicture className="choice-pic hear-pick-pic" id={w.id} emoji={w.emoji} size={56} />}
+            <span className="choice-text">
+              <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
+              {locked && <Bi className="choice-gloss" text={gloss(w.id, w.en, lang)} />}
+            </span>
+          </>
         )}
       />
     </div>

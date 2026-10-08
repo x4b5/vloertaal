@@ -381,7 +381,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         foot.querySelector('.feedback')?.scrollIntoView({ block: 'nearest', behavior: reducedMotion() ? 'auto' : 'smooth' });
         return;
       }
-      const marked = document.querySelectorAll<HTMLElement>('.player-body .choice.wrong, .player-body .choice.right, .player-body .answer-line, .player-body .chat-bubble-me');
+      // (A chat's reply bubble is not among them: the label repeats the reply, the options matter.)
+      const marked = document.querySelectorAll<HTMLElement>('.player-body .choice.wrong, .player-body .choice.right, .player-body .answer-line');
       if (!foot || !marked.length) return;
       const bottom = Math.max(...[...marked].map((el) => el.getBoundingClientRect().bottom));
       const top = Math.min(...[...marked].map((el) => el.getBoundingClientRect().top));
@@ -746,7 +747,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       </main>
       <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''}`} ref={footRef}>
         {/* More of the exercise underneath: a visible "more" chevron (the shadow alone is easy to miss). */}
-        {moreBelow && (
+        {moreBelow && !checked && (
           <button
             type="button"
             className="foot-more-btn"

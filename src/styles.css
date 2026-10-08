@@ -2020,8 +2020,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .player .player-foot .feedback:has(> .feedback-more) { padding-bottom: 40px; }
 .player .player-foot .feedback > .feedback-more { bottom: 6px; }
 /* "Type what you hear" as "hear and pick the written word": the word's picture after Check. */
-.hear-pick .listen-buttons { align-items: center; }
-.hear-pick-pic { flex: none; width: 72px; height: 72px; animation: rm-fade 0.2s ease-out both; }
+.hear-pick-pic { flex: none; animation: rm-fade 0.2s ease-out both; }
 .hear-pick-choices .choice-nl { font-size: 1.3rem; }
 /* Dictation: "I can't write this yet", the help language large, with a pencil. */
 .btn-cant-write { display: flex; align-items: center; justify-content: center; gap: 10px; }
