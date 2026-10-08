@@ -100,3 +100,18 @@ describe('abstract words (no picture)', () => {
     }
   });
 });
+
+describe('unit icons', () => {
+  it('every unit has a drawn icon next to its title', async () => {
+    const { units } = await import('../src/content/curriculum');
+    const { unitIcons } = await import('../src/content/unitIcons');
+    const { pictures, iconPictures } = await import('../src/pictures');
+    for (const u of units) {
+      const id = unitIcons[u.id];
+      expect(id, u.id).toBeTruthy();
+      expect(Boolean(pictures[id] ?? iconPictures[id]), `${u.id}: ${id}`).toBe(true);
+    }
+    // One picture per unit, so the path never shows the same icon twice.
+    expect(new Set(Object.values(unitIcons)).size).toBe(Object.keys(unitIcons).length);
+  });
+});
