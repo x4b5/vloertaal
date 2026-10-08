@@ -1,14 +1,18 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
 import { fillN, gloss, ui, type Bilingual } from '../i18n';
-import type { HelpLanguage } from '../i18n/types';
+import type { HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, sounds, speechAvailable } from '../lib/audio';
 import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
 import { barParts, chimeStep, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { voiceFor } from '../lib/voices';
 import { castFor } from './Characters';
 import { Bi, HelpText } from './Bi';
-import { CheckIcon, ChevronIcon, CloseIcon, SpeakerIcon, SpeakerOffIcon } from './Icons';
+import {
+  AlertIcon, BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
+  PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
+} from './Icons';
+import { PhraseSheet } from './Phrases';
 import {
   type Answer,
   BuildExercise,
@@ -51,19 +55,37 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
   }
 }
 
-/** Short Dutch label on the kraft tag above each exercise. */
-const KIND_TAG: Record<Exercise['kind'], string> = {
-  intro: 'Nieuw woord',
-  meaning: 'Woord',
-  dutch: 'Nieuw woord',
-  listen: 'Luisteren',
-  type: 'Luisteren',
-  match: 'Woorden',
-  build: 'Zin',
-  chat: 'Gesprek',
-  tip: 'Tip',
-  situation: 'Situatie',
+/**
+ * The kraft tag above each exercise: a fixed pictogram per kind of exercise, a short Dutch
+ * label, and the same word in the help language (English without one).
+ */
+const KIND_TAG: Record<Exercise['kind'], { nl: string; key: UiKey; Icon: (p: { size?: number }) => React.ReactElement }> = {
+  intro: { nl: 'Nieuw woord', key: 'newWord', Icon: SparkleIcon },
+  meaning: { nl: 'Betekenis', key: 'tagMeaning', Icon: AskIcon },
+  dutch: { nl: 'Kies', key: 'tagPick', Icon: PictureIcon },
+  listen: { nl: 'Luisteren', key: 'tagListen', Icon: EarIcon },
+  type: { nl: 'Typen', key: 'tagType', Icon: KeyboardIcon },
+  match: { nl: 'Paren', key: 'tagMatch', Icon: PairIcon },
+  build: { nl: 'Zin', key: 'tagBuild', Icon: BlocksIcon },
+  chat: { nl: 'Gesprek', key: 'tagChat', Icon: BubblesIcon },
+  tip: { nl: 'Tip', key: 'tagTip', Icon: BulbIcon },
+  situation: { nl: 'Situatie', key: 'tagSituation', Icon: SignpostIcon },
 };
+
+function KindTag({ kind, lang }: { kind: Exercise['kind']; lang?: HelpLanguage }) {
+  const { nl, key, Icon } = KIND_TAG[kind];
+  const word = ui(key, lang);
+  const same = !word.help && word.en.toLowerCase() === nl.toLowerCase();
+  return (
+    <span className="tag tag-kind">
+      <span className="tag-icon" aria-hidden><Icon size={20} /></span>
+      <span className="tag-nl" lang="nl">{nl}</span>
+      {!same && (word.help && lang
+        ? <HelpText className="tag-help" text={word.help} lang={lang} />
+        : <span className="tag-help" lang="en">{word.en}</span>)}
+    </span>
+  );
+}
 
 /** The answer as a pair for the feedback label: Dutch = meaning (English + help language). */
 function answerPair(ex: Exercise, lang?: HelpLanguage): { nl?: string; meaning: Bilingual } | null {
@@ -190,18 +212,68 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const ex = queue[index];
   // Quitting loses the lesson's answers, so the X and the system Back button ask first.
   const [askQuit, setAskQuit] = useState(false);
+  /** The emergency phrases (⚠ in the header), as a sheet over the lesson. */
+  const [phrases, setPhrases] = useState(false);
+  const phrasesOpen = useRef(false);
+  phrasesOpen.current = phrases;
   const firstBack = useRef(backSignal);
   useEffect(() => {
-    // Back while the sheet is open means "never mind": close it.
-    if (backSignal !== firstBack.current) setAskQuit((open) => !open);
+    if (backSignal === firstBack.current) return;
+    // Back with the phrases open closes them; otherwise Back asks "Stop this lesson?", and
+    // Back while that sheet is open means "never mind": close it.
+    if (phrasesOpen.current) setPhrases(false);
+    else setAskQuit((open) => !open);
   }, [backSignal]);
   const footRef = useRef<HTMLElement>(null);
+  const bodyRef = useRef<HTMLElement>(null);
+  /**
+   * The footer is pinned to the bottom, unless it would take more than half the screen (200%
+   * zoom, a long feedback label): then it scrolls with the page. --foot-h keeps focused
+   * elements clear of a pinned footer (scroll-padding), and moreBelow shows a soft shadow on
+   * its top edge while there is more of the exercise underneath it.
+   */
+  const [footStatic, setFootStatic] = useState(false);
+  const [moreBelow, setMoreBelow] = useState(false);
+  useEffect(() => {
+    const foot = footRef.current;
+    const body = bodyRef.current;
+    if (!foot || !body) return;
+    const root = document.documentElement;
+    let raf = 0;
+    const measure = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const tall = foot.offsetHeight > window.innerHeight * 0.5;
+        setFootStatic(tall);
+        root.style.setProperty('--foot-h', `${tall ? 0 : foot.offsetHeight}px`);
+        setMoreBelow(!tall && root.scrollHeight - (window.scrollY + window.innerHeight) > 4);
+      });
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(foot);
+    ro.observe(body);
+    window.addEventListener('scroll', measure, { passive: true });
+    window.addEventListener('resize', measure);
+    return () => {
+      cancelAnimationFrame(raf);
+      ro.disconnect();
+      window.removeEventListener('scroll', measure);
+      window.removeEventListener('resize', measure);
+      root.style.removeProperty('--foot-h');
+    };
+  }, []);
   // After "Check" the feedback label grows the sticky footer. Keep the learner's pick, the right
   // option and the stamp in view above it: scroll just enough, never past the question's top.
   useEffect(() => {
     if (!checked) return;
     const raf = requestAnimationFrame(() => {
       const foot = footRef.current;
+      // A footer that scrolls with the page (200% zoom): bring the feedback label into view.
+      if (foot && footStatic) {
+        foot.querySelector('.feedback')?.scrollIntoView({ block: 'nearest', behavior: reducedMotion() ? 'auto' : 'smooth' });
+        return;
+      }
       const marked = document.querySelectorAll<HTMLElement>('.player-body .choice.wrong, .player-body .choice.right, .player-body .answer-line, .player-body .chat-bubble-me');
       if (!foot || !marked.length) return;
       const bottom = Math.max(...[...marked].map((el) => el.getBoundingClientRect().bottom));
@@ -210,7 +282,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       if (bottom > limit) window.scrollBy({ top: Math.min(bottom - limit, Math.max(0, top - 8)), behavior: reducedMotion() ? 'auto' : 'smooth' });
     });
     return () => cancelAnimationFrame(raf);
-  }, [checked]);
+  }, [checked]); // eslint-disable-line react-hooks/exhaustive-deps
   const onAnswer = useCallback((a: Answer | null) => setAnswer(a), []);
 
   // A new exercise: focus its question, so a screen reader starts there (typing keeps the input).
@@ -347,6 +419,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     if (off && needsAudio(ex) && !checked) skipAudio();
   }
 
+  const closePhrases = useCallback(() => setPhrases(false), []);
   const verdict: 'right' | 'wrong' | undefined = checked && answer && isGraded(ex) ? (answer.correct ? 'right' : 'wrong') : undefined;
   const props = { lang, locked: checked, onAnswer, verdict, run, misses };
   const key = `${index}`;
@@ -442,6 +515,17 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         <span className="lesson-name">
           <Bi text={gloss(lesson.id, lesson.title, lang)} />
         </span>
+        {/* Emergency phrases, one tap away during a lesson (a sheet; the lesson waits). */}
+        <button
+          type="button"
+          className="icon-btn sos-btn"
+          onClick={() => setPhrases(true)}
+          aria-haspopup="dialog"
+          aria-label={`Noodzinnen · ${ui('phrasebook').en}${lang?.ui.phrasebook ? ` · ${lang.ui.phrasebook}` : ''}`}
+          title={ui('phrasebook').en}
+        >
+          <AlertIcon size={24} />
+        </button>
       </header>
 
       {soundNote && (
@@ -450,7 +534,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
           <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : 'soundOn', lang)} />
         </div>
       )}
-      <main className="player-body">
+      <main className="player-body" ref={bodyRef}>
         <div className="ex-ghost" ref={ghostRef} aria-hidden />
         <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
         <div className="ex-tag">
@@ -462,17 +546,13 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
               <Bi className="ex-tag-note" text={fillN(ui('practiseMistakes', lang), repeatsLeft)} />
             </>
           ) : (
-            <>
-              <span className="tag" lang="nl">{KIND_TAG[ex.kind]}</span>
-              {/* New-word exercises: translate the Dutch tag into English and the help language. */}
-              {(ex.kind === 'dutch' || ex.kind === 'intro') && <Bi className="ex-tag-note" text={ui('newWord', lang)} />}
-            </>
+            <KindTag kind={ex.kind} lang={lang} />
           )}
         </div>
         {body}
         </div>
       </main>
-      <footer className="player-foot" ref={footRef}>
+      <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''}`} ref={footRef}>
         <div className="foot-inner">
           {/* Always present, so screen readers hear what is put in it one tick after Check. */}
           <div className="sr-only" role="status">{live}</div>
@@ -520,13 +600,15 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
               onClick={checked ? next : check}
               ref={goRef}
             >
-              {checked && swapped ? ui('continue', lang).en : autoContinue ? ui('continue', lang).en : ui('check', lang).en}
+              {/* The help language large, the English small under it (just English without one). */}
+              <Bi className="btn-label" text={ui((checked && swapped) || autoContinue ? 'continue' : 'check', lang)} />
               <ButtonBlock icon={(checked && swapped) || autoContinue ? 'next' : 'check'} />
             </button>
           </div>
         </div>
       </footer>
       {askQuit && <QuitSheet lang={lang} onKeep={() => setAskQuit(false)} onStop={onQuit} />}
+      {phrases && <PhraseSheet lang={lang} onClose={closePhrases} />}
     </div>
   );
 }

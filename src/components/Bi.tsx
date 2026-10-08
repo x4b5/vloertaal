@@ -10,10 +10,16 @@ import type { HelpLanguage } from '../i18n/types';
  */
 export function Bi({ text, className }: { text: Bilingual; className?: string }) {
   if (text.help && text.lang) {
+    // A right-to-left help language makes the whole pair one right-to-left block, so the
+    // English line under it starts on the same (right) side and nothing zig-zags. The English
+    // keeps its own direction, so its full stop or question mark stays at its end.
+    const rtl = text.lang.dir === 'rtl';
     return (
-      <span className={`bi bi-swap ${className ?? ''}`}>
+      <span className={`bi bi-swap ${className ?? ''}`} dir={rtl ? 'rtl' : undefined}>
         <HelpText text={text.help} lang={text.lang} className="bi-en" />
-        <span className="bi-help" lang="en">{text.en}</span>
+        {/* Shown only where a context lays the pair out on one line (see .bi-sep). */}
+        <span className="bi-sep" aria-hidden>·</span>
+        <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{text.en}</span>
       </span>
     );
   }

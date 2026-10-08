@@ -3,7 +3,7 @@ import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
-import { findItem, phrasebookIds, units } from '../content/curriculum';
+import { units } from '../content/curriculum';
 import { unitIcons } from '../content/unitIcons';
 import { unitLink } from '../lib/unitLink';
 import type { DailyCard } from '../lib/spaced';
@@ -47,6 +47,7 @@ import { SpeakButton } from './SpeakButton';
 import { FlameIcon } from './StreakArt';
 import { BackupCard, ReminderCard } from './Keep';
 import { Flag } from './Flags';
+import { PhraseList } from './Phrases';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false }: {
   /** undefined = nothing chosen yet (first run). */
@@ -105,7 +106,14 @@ export function TopBar({ streak, words, lang, onLanguage, done = false }: {
   /** The language chip opens Settings ("Instellingen"), where the help language is chosen. */
   onLanguage: () => void;
 }) {
-  const wordsLabel = ui('wordsLearnedN').en.replace('{n}', String(words));
+  // The stats are a picture and a number; the unit is in the help language (when there is
+  // room), and the spoken label says it in English and the help language.
+  const wordsText = fillN(ui('wordsLearnedN', lang), words);
+  const wordsLabel = wordsText.help ? `${wordsText.en} · ${wordsText.help}` : wordsText.en;
+  const streakText = ui('dayStreak', lang);
+  const streakLabel = `${streak} ${streakText.en}${streakText.help ? ` · ${streak} ${streakText.help}` : ''}${!done && streak > 0 ? ` · ${ui('stillToDo').en}` : ''}`;
+  const daysUnit = ui('daysUnit', lang);
+  const wordsUnit = ui('wordsUnit', lang);
   return (
     <header className="topbar">
       <span className="brand">
@@ -115,17 +123,17 @@ export function TopBar({ streak, words, lang, onLanguage, done = false }: {
       <span
         className={`stat stat-streak ${done ? 'stat-lit' : ''}`}
         role="img"
-        aria-label={`${streak} ${ui('dayStreak').en}${!done && streak > 0 ? ` · ${ui('stillToDo').en}` : ''}`}
-        title={ui('dayStreak').en}
+        aria-label={streakLabel}
+        title={streakLabel}
       >
         <FlameIcon lit={done} size={22} />
         <span className="stat-num">{streak}</span>
-        <span className="stat-unit" lang="nl">{streak === 1 ? 'dag' : 'dagen'}</span>
+        {daysUnit.help && lang ? <HelpText className="stat-unit" text={daysUnit.help} lang={lang} /> : <span className="stat-unit" lang="en">{daysUnit.en}</span>}
       </span>
       <span className="stat" role="img" aria-label={wordsLabel} title={wordsLabel}>
         <CrateIcon size={20} />
         <span className="stat-num">{words}</span>
-        <span className="stat-unit" lang="nl">{words === 1 ? 'woord' : 'woorden'}</span>
+        {wordsUnit.help && lang ? <HelpText className="stat-unit" text={wordsUnit.help} lang={lang} /> : <span className="stat-unit" lang="en">{wordsUnit.en}</span>}
       </span>
       <button
         type="button"
@@ -148,54 +156,56 @@ export function TopBar({ streak, words, lang, onLanguage, done = false }: {
 
 export type Tab = 'route' | 'words' | 'me' | 'about';
 
-const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'settings' | 'about'; Icon: typeof RouteIcon }[] = [
+const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'settings' | 'navAbout'; Icon: typeof RouteIcon }[] = [
   { tab: 'route', nl: 'Route', key: 'navRoute', Icon: RouteIcon },
   { tab: 'words', nl: 'Hulp', key: 'navWords', Icon: LifebuoyIcon },
   { tab: 'me', nl: 'Instellingen', key: 'settings', Icon: GearIcon },
-  { tab: 'about', nl: 'Over', key: 'about', Icon: InfoIcon },
+  { tab: 'about', nl: 'Over', key: 'navAbout', Icon: InfoIcon },
 ];
 
-/** Bottom bar on the three home-level screens: Route (lessons), Hulp, Instellingen, Over. The label is
- *  Dutch (short, part of learning the work floor); screen readers also hear the English. */
-export function BottomNav({ current, onTab }: { current: Tab; onTab: (tab: Tab) => void }) {
+/** Bottom bar on the home-level screens: Route (lessons), Hulp, Instellingen, Over. The label is
+ *  Dutch (short, part of learning the work floor) with the help language in a small line under
+ *  it; screen readers hear all of it. */
+export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab: Tab) => void; lang?: HelpLanguage }) {
   return (
     <nav className="bottom-nav" aria-label="Main">
-      {TABS.map(({ tab, nl, key, Icon }) => (
-        <button
-          key={tab}
-          type="button"
-          className={`nav-tab ${current === tab ? 'nav-tab-on' : ''}`}
-          aria-current={current === tab ? 'page' : undefined}
-          onClick={() => onTab(tab)}
-        >
-          <span className="nav-icon" aria-hidden><Icon size={26} /></span>
-          <span className="nav-label" lang="nl">{nl}</span>
-          <span className="sr-only"> · {ui(key).en}</span>
-        </button>
-      ))}
+      {TABS.map(({ tab, nl, key, Icon }) => {
+        const word = ui(key, lang);
+        return (
+          <button
+            key={tab}
+            type="button"
+            className={`nav-tab ${current === tab ? 'nav-tab-on' : ''}`}
+            aria-current={current === tab ? 'page' : undefined}
+            aria-label={`${nl} · ${word.en}${word.help ? ` · ${word.help}` : ''}`}
+            onClick={() => onTab(tab)}
+          >
+            <span className="nav-icon" aria-hidden><Icon size={26} /></span>
+            <span className="nav-label" lang="nl" aria-hidden>{nl === 'Instellingen' ? 'Instel\u00adlingen' : nl}</span>
+            {word.help && lang && <HelpText className="nav-help" text={word.help} lang={lang} />}
+          </button>
+        );
+      })}
     </nav>
   );
 }
 
-/** "Hulp" tab: the emergency phrases and the workplace tips, as two big entry cards. */
-export function WordsHub({ lang, onPhrasebook, onTips }: {
+/** "Hulp" tab: opens straight onto the emergency phrases; the workplace tips are below them. */
+export function WordsHub({ lang, onTips }: {
   lang?: HelpLanguage;
-  onPhrasebook: () => void;
   onTips: () => void;
 }) {
   return (
     <div className="screen words-hub">
-      <div className="screen-head">
-        <h1><Bi text={ui('navWords', lang)} /></h1>
-      </div>
-      <button type="button" className="hub-card hub-alert" onClick={onPhrasebook}>
-        <span className="hub-icon" aria-hidden><AlertIcon size={34} /></span>
-        <span className="hub-text">
+      <div className="hub-alert-head">
+        <span className="hub-icon" aria-hidden><AlertIcon size={30} /></span>
+        <h1 className="hub-title">
           <span className="hub-nl" lang="nl">Noodzinnen</span>
           <Bi text={ui('phrasebook', lang)} />
-        </span>
-        <ChevronIcon size={24} />
-      </button>
+        </h1>
+      </div>
+      <p className="muted hub-hint"><Bi text={ui('phrasebookHint', lang)} /></p>
+      <PhraseList lang={lang} />
       <button type="button" className="hub-card hub-tips" onClick={onTips}>
         <span className="hub-icon" aria-hidden><span className="entry-emoji">💡</span></span>
         <span className="hub-text">
@@ -328,6 +338,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
     return () => window.clearTimeout(off);
   }, [marked]);
   const unlocked = (lessonId: string) => isUnlocked(lessonId, completed, access);
+  const rtl = lang?.dir === 'rtl';
   const next = (lessonId: string) => isNextInCourse(lessonId, completed, access, sector);
 
   const renderUnit = (unit: Unit, u: number) => {
@@ -344,7 +355,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
         <div className="unit-head" onClick={allowed ? undefined : onUpgrade}>
           <span className="unit-num" aria-hidden>{unitNumber(u)}</span>
           <WordPicture className="unit-icon" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={60} />
-          <div className="unit-titles">
+          <div className="unit-titles" dir={rtl && lang?.gloss[unit.id] ? 'rtl' : undefined}>
             {/* Two lines: the help language large with the English small under it, or the
                 English large with the Dutch name under it when there is no help language. */}
             <h2>
@@ -352,7 +363,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
               {lang?.gloss[unit.id] ? <HelpText text={lang.gloss[unit.id]} lang={lang} className="unit-main" /> : unit.title}
             </h2>
             {lang?.gloss[unit.id] ? (
-              <span className="unit-nl" lang="en">{unit.title}</span>
+              <span className="unit-nl" lang="en" dir={rtl ? 'ltr' : undefined}>{unit.title}</span>
             ) : (
               <span className="unit-nl" lang="nl">{unit.titleNl}</span>
             )}
@@ -375,6 +386,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
             const state = !allowed ? 'locked' : record ? 'done' : !open ? 'locked' : next(lesson.id) ? 'now' : 'open';
             // The bay shows the lesson's first word that has a picture (none if all are abstract).
             const first = lesson.words.find(hasPicture);
+            const title = gloss(lesson.id, lesson.title, lang);
             return (
               <li
                 key={lesson.id}
@@ -388,23 +400,28 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
                   className="bay-card"
                   disabled={!open}
                   onClick={() => onStart(lesson.id, Boolean(record))}
-                  aria-label={`${lessonCode(u, i)} ${lesson.title}${open ? (record ? ` · ${ui('practice').en}` : '') : ` (${ui('locked').en})`}`}
+                  aria-label={`${lessonCode(u, i)} ${lesson.title}${title.help ? ` (${title.help})` : ''}${open ? (record ? ` · ${ui('practice').en}` : state === 'now' ? ` · ${ui('start').en}` : '') : ` (${ui('locked').en})`}`}
                 >
-                  {state === 'done' && first && (
-                    <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />
-                  )}
-                  <span className="bay-text">
-                    <Bi className="bay-title" text={gloss(lesson.id, lesson.title, lang)} />
+                  {/* Every card shows the lesson's first picture: full colour when done or next,
+                      dimmed for one you may open, more dimmed when locked. */}
+                  {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
+                  <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
+                    <Bi className="bay-title" text={title} />
                     {state === 'done' && (
                       <span className="bay-again">
                         {record.best === 1 ? <CrownIcon size={16} /> : <CheckIcon size={16} />}
-                        {ui('practice').en}
+                        <Bi className="bay-again-label" text={ui('practice', lang)} />
                       </span>
                     )}
-                    {(state === 'now' || state === 'open') && (
-                      <span className="bay-start">{ui('start').en}<ChevronIcon size={20} /></span>
+                    {/* One Start on the whole path: the next lesson. */}
+                    {state === 'now' && (
+                      <span className="bay-start">
+                        <Bi className="bay-start-label" text={ui('start', lang)} />
+                        <ChevronIcon size={22} />
+                      </span>
                     )}
                   </span>
+                  {state === 'open' && <ChevronIcon size={24} className="bay-chev" />}
                   {state === 'locked' && <LockIcon size={20} className="bay-lock" />}
                   {state === 'now' && (
                     <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>
@@ -545,22 +562,7 @@ export function Phrasebook({ lang, onBack }: { lang?: HelpLanguage; onBack: () =
         <h1><Bi text={ui('phrasebook', lang)} /></h1>
       </div>
       <p className="muted"><Bi text={ui('phrasebookHint', lang)} /></p>
-      {!speechAvailable() && <p className="warn">{ui('audioUnavailable').en}</p>}
-      <ul className="phrases">
-        {phrasebookIds.map((id) => {
-          const item = findItem(id);
-          if (!item) return null;
-          return (
-            <li key={id} className="phrase">
-              <SpeakButton text={item.nl} />
-              <div className="phrase-text">
-                <span className="phrase-nl" lang="nl">{breakable(item.nl)}</span>
-                <Bi text={gloss(id, item.en, lang)} />
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      <PhraseList lang={lang} />
     </div>
   );
 }

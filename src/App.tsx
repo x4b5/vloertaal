@@ -247,7 +247,7 @@ export default function App() {
       return (
         <>
           <About lang={lang} />
-          <BottomNav current="about" onTab={tab} />
+          <BottomNav current="about" onTab={tab} lang={lang} />
         </>
       );
     case 'phrasebook':
@@ -274,7 +274,7 @@ export default function App() {
             onAccess={grant}
             focusUpgrade={view.upgrade}
           />
-          <BottomNav current="me" onTab={tab} />
+          <BottomNav current="me" onTab={tab} lang={lang} />
         </>
       );
     case 'words':
@@ -282,10 +282,9 @@ export default function App() {
         <>
           <WordsHub
             lang={lang}
-            onPhrasebook={() => go({ name: 'phrasebook' })}
             onTips={() => go({ name: 'tips' })}
           />
-          <BottomNav current="words" onTab={tab} />
+          <BottomNav current="words" onTab={tab} lang={lang} />
         </>
       );
     default:
@@ -315,7 +314,7 @@ export default function App() {
             focusUnit={focusUnit}
             onFocused={() => setFocusUnit(null)}
           />
-          <BottomNav current="route" onTab={tab} />
+          <BottomNav current="route" onTab={tab} lang={lang} />
         </>
       );
   }

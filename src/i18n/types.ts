@@ -139,6 +139,22 @@ export const uiEn = {
   remindOwn: 'Other time',
   remindAdd: 'Add to my calendar',
   remindAdded: 'Open the file to add it to your calendar.',
+  /* Round 2, understanding without reading: nav, exercise tags, tip toggle, top bar units, phrase sheet. */
+  navAbout: 'About',
+  tagMeaning: 'Meaning',
+  tagPick: 'Choose',
+  tagListen: 'Listen',
+  tagType: 'Type',
+  tagMatch: 'Pairs',
+  tagBuild: 'Sentence',
+  tagChat: 'Talk',
+  tagSituation: 'Situation',
+  tagTip: 'Tip',
+  more: 'More',
+  less: 'Less',
+  daysUnit: 'days',
+  wordsUnit: 'words',
+  backToLesson: 'Back to the lesson',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

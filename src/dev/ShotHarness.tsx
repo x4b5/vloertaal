@@ -84,8 +84,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     if (shot === 'words') {
       return (
         <>
-          <WordsHub lang={l} onPhrasebook={() => {}} onTips={() => {}} />
-          <BottomNav current="words" onTab={() => {}} />
+          <WordsHub lang={l} onTips={() => {}} />
+          <BottomNav current="words" onTab={() => {}} lang={l} />
         </>
       );
     }
@@ -94,7 +94,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     ) : (
       <>
         <SettingsWithSound progress={progress} lang={l} onRestore={() => {}} onLang={() => {}} onSector={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
-        <BottomNav current="me" onTab={() => {}} />
+        <BottomNav current="me" onTab={() => {}} lang={l} />
       </>
     );
   }
@@ -119,7 +119,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
         <TopBar streak={7} done={q.get('lit') === '1'} words={learnedWords(progress.completed).size} lang={l} onLanguage={() => {}} />
         <Path progress={progress} lang={l} onStart={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}} openOther={new URLSearchParams(location.search).get('other') === 'open'}
           daily={daily} onDaily={() => {}} arrived={q.get('arrived') === '1' ? 'l.hello' : null} />
-        <BottomNav current="route" onTab={() => {}} />
+        <BottomNav current="route" onTab={() => {}} lang={l} />
       </>
     );
   }

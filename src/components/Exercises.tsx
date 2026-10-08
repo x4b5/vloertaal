@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useId, useMemo, useState } from 'react';
 import type { ChatLine } from '../content/types';
 import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
@@ -9,7 +9,7 @@ import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
 import { Bi } from './Bi';
 import { castFor, Character, type CharacterId, type Mood, useTalking } from './Characters';
-import { CheckIcon, CloseIcon } from './Icons';
+import { CheckIcon, ChevronDownIcon, CloseIcon } from './Icons';
 import { cheerFor } from '../lib/lessonRun';
 import { voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
@@ -168,8 +168,11 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
     if (locked) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
-      const t = e.target as HTMLElement | null;
-      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+      // Only with focus on the page itself, the question or an option: never while typing in a
+      // field, and never behind a sheet (the emergency phrases, "Stop this lesson?").
+      const t = document.activeElement as HTMLElement | null;
+      const free = !t || t === document.body || t.classList.contains('prompt') || Boolean(t.closest('.choices'));
+      if (!free || t?.closest('input, textarea, select, [contenteditable="true"], [role="dialog"], [role="alertdialog"]')) return;
       const n = Number(e.key);
       if (Number.isInteger(n) && n >= 1 && n <= options.length) pick(options[n - 1]);
     };
@@ -233,7 +236,13 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, miss
         correctId={ex.word.id}
         locked={locked}
         onAnswer={onAnswer}
-        render={(w) => <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />}
+        render={(w) => (
+          <>
+            {/* A small picture of each option (abstract words keep a text-only row). */}
+            {hasPicture(w) && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={46} />}
+            <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />
+          </>
+        )}
       />
     </div>
   );
@@ -553,6 +562,8 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
         onPick={(o) => {
           setPicked(o);
           setHint(false);
+          // Hear the reply before choosing: "you" (Amina) say it.
+          autoSpeak(o.nl, false, 'nl', voiceFor('amina'));
         }}
         render={(o) => <span lang="nl" className="choice-nl">{breakable(o.nl)}</span>}
       />
@@ -575,7 +586,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
         </span>
       </div>
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
-      <p className="tip-body"><Bi text={gloss(`${tip.id}.b`, tip.body, lang)} /></p>
+      <TipBody text={gloss(`${tip.id}.b`, tip.body, lang)} lang={lang} />
       <div className="tip-say">
         <span className="tip-say-label"><Bi text={ui('sayThis', lang)} /></span>
         <div className="tip-say-row">
@@ -589,6 +600,40 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+/** The first `n` sentences of a text, and whether there is more after them. */
+export function firstSentences(text: string, n: number): { head: string; more: boolean } {
+  // A sentence ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨) and a space.
+  const parts = text.trim().split(/(?<=[.!?؟።፧፨…])\s+/u);
+  if (parts.length <= n) return { head: text.trim(), more: false };
+  return { head: parts.slice(0, n).join(' '), more: true };
+}
+
+/**
+ * The tip's text, folded after about two sentences: "meer" opens the rest. Both languages
+ * fold at the same point, so the help language and the English say the same thing.
+ */
+function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
+  const [open, setOpen] = useState(false);
+  const help = text.help ? firstSentences(text.help, 2) : null;
+  const en = firstSentences(text.en, 2);
+  const long = en.more || Boolean(help?.more);
+  const shown: Bilingual = open || !long ? text : { ...text, en: en.more ? `${en.head} …` : en.head, help: help ? (help.more ? `${help.head} …` : help.head) : undefined };
+  const label = ui(open ? 'less' : 'more', lang);
+  const id = useId();
+  return (
+    <div className="tip-body">
+      <p id={id}><Bi text={shown} /></p>
+      {long && (
+        <button type="button" className="tip-more" aria-expanded={open} aria-controls={id} onClick={() => setOpen((o) => !o)}>
+          <span className="tip-more-nl" lang="nl">{open ? 'minder' : 'meer'}</span>
+          <Bi className="tip-more-gloss" text={label} />
+          <ChevronDownIcon size={18} className={`tip-more-chev ${open ? 'open' : ''}`} />
+        </button>
+      )}
     </div>
   );
 }
