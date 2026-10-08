@@ -3,16 +3,16 @@ import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
-import { findItem, phrasebookIds, units } from '../content/curriculum';
+import { findLesson, units } from '../content/curriculum';
 import { unitIcons } from '../content/unitIcons';
 import { unitLink } from '../lib/unitLink';
-import { DAILY_MAX } from '../lib/spaced';
+import type { DailyCard } from '../lib/spaced';
 import { coursePlan, unitSector, type SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { SectorIcon, SectorPicker } from './Sector';
-import { fillN, gloss, helpLanguages, ui, type Bilingual } from '../i18n';
+import { fillCount, fillN, gloss, helpLanguages, ui, uiCount, withoutN, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
 import { VOICE_SAMPLE } from '../lib/voices';
 import { isNextInCourse, isUnlocked } from '../lib/exercises';
@@ -20,11 +20,14 @@ import { type Access, unitAllowed } from '../lib/access';
 import { UpgradeCard } from './Gate';
 import type { Progress, ThemeChoice } from '../lib/progress';
 import { Bi, HelpText } from './Bi';
+import { RestartLink, ResumeChip, resumeLabel } from './Resume';
+import { clearSave, loadSaves } from '../lib/resume';
 import { LogoMark, Wordmark } from './Logo';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
 import {
   AlertIcon,
+  ArrowIcon,
   AutoThemeIcon,
   CalendarIcon,
   CrateIcon,
@@ -35,6 +38,7 @@ import {
   CrownIcon,
   LifebuoyIcon,
   LockIcon,
+  EarIcon,
   RouteIcon,
   GearIcon,
   InfoIcon,
@@ -44,9 +48,17 @@ import {
   SunIcon,
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
+import { FlameIcon } from './StreakArt';
+import { BackupCard, InstallCard, ReminderCard } from './Keep';
 import { Flag } from './Flags';
+import { PhraseList } from './Phrases';
+import { CertBadge, CertificatesCard } from './Certificate';
+import { CountingCard } from './Counting';
+import { unitDone } from '../lib/certificate';
 
-export function LanguagePicker({ current, onPick, showBeta = false, compact = false }: {
+export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
+  /** The help language in use (Settings): the "in review" tag is written in it. */
+  lang?: HelpLanguage;
   /** undefined = nothing chosen yet (first run). */
   current?: LangCode | null;
   onPick: (code: LangCode | null) => void;
@@ -66,7 +78,13 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
       <Flag code={code ?? 'en'} width={compact ? 32 : 40} />
       <span className="lang-names">
         <span className="lang-native" lang={code ?? 'en'} dir={dir}>{native}</span>
-        <span className="lang-en">{english}{beta && <span className="lang-beta"> · beta</span>}</span>
+        <span className="lang-en">{english}</span>
+        {beta && (
+          <span className="lang-beta-tag">
+            {lang?.ui.inReview ? <HelpText className="lang-beta-help" text={lang.ui.inReview} lang={lang} /> : <span className="lang-beta-help" lang="en">{ui('inReview').en}</span>}
+            <span className="lang-beta" lang="en">beta</span>
+          </span>
+        )}
       </span>
       {current === code && <CheckIcon size={20} className="lang-check" />}
     </button>
@@ -93,30 +111,44 @@ export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void
   );
 }
 
-export function TopBar({ streak, words, lang, onLanguage }: {
+export function TopBar({ streak, words, lang, onLanguage, done = false }: {
   streak: number;
+  /** Today has a finished lesson or review: the flame is lit. Until then a grey outline. */
+  done?: boolean;
   /** Words learned so far (see learnedWords). */
   words: number;
   lang?: HelpLanguage;
   /** The language chip opens Settings ("Instellingen"), where the help language is chosen. */
   onLanguage: () => void;
 }) {
-  const wordsLabel = ui('wordsLearnedN').en.replace('{n}', String(words));
+  // The stats are a picture and a number; the unit is in the help language (when there is
+  // room), and the spoken label says it in English and the help language.
+  const wordsText = fillCount('wordsLearnedN', words, lang);
+  const wordsLabel = wordsText.help ? `${wordsText.en} · ${wordsText.help}` : wordsText.en;
+  const streakText = ui('dayStreak', lang);
+  const streakLabel = `${streak} ${streakText.en}${streakText.help ? ` · ${streak} ${streakText.help}` : ''}${!done && streak > 0 ? ` · ${ui('stillToDo').en}` : ''}`;
+  const daysUnit = uiCount('daysUnit', streak, lang);
+  const wordsUnit = uiCount('wordsUnit', words, lang);
   return (
     <header className="topbar">
       <span className="brand">
         <LogoMark size={36} />
         <Wordmark className="topbar-wordmark" />
       </span>
-      <span className="stat" role="img" aria-label={`${streak} ${ui('dayStreak').en}`} title={ui('dayStreak').en}>
-        <CalendarIcon size={20} />
+      <span
+        className={`stat stat-streak ${done ? 'stat-lit' : ''}`}
+        role="img"
+        aria-label={streakLabel}
+        title={streakLabel}
+      >
+        <FlameIcon lit={done} size={22} />
         <span className="stat-num">{streak}</span>
-        <span className="stat-unit" lang="nl">{streak === 1 ? 'dag' : 'dagen'}</span>
+        {daysUnit.help && lang ? <HelpText className="stat-unit" text={daysUnit.help} lang={lang} /> : <span className="stat-unit" lang="en">{daysUnit.en}</span>}
       </span>
       <span className="stat" role="img" aria-label={wordsLabel} title={wordsLabel}>
         <CrateIcon size={20} />
         <span className="stat-num">{words}</span>
-        <span className="stat-unit" lang="nl">{words === 1 ? 'woord' : 'woorden'}</span>
+        {wordsUnit.help && lang ? <HelpText className="stat-unit" text={wordsUnit.help} lang={lang} /> : <span className="stat-unit" lang="en">{wordsUnit.en}</span>}
       </span>
       <button
         type="button"
@@ -126,60 +158,74 @@ export function TopBar({ streak, words, lang, onLanguage }: {
       >
         <Flag code={lang?.code ?? 'en'} width={32} />
       </button>
+      {/* The streak is on, but today still needs a lesson or the review: a small unlit flame
+          and the word "today" in the help language (not a sentence). */}
+      {streak > 0 && !done && (
+        <span className="todo-tag" aria-hidden>
+          <span className="todo-chip todo-flame">
+            <FlameIcon lit={false} size={18} />
+            {lang?.ui.today ? <HelpText className="todo-word" text={lang.ui.today} lang={lang} /> : <span className="todo-word" lang="en">{ui('today').en}</span>}
+          </span>
+        </span>
+      )}
     </header>
   );
 }
 
 export type Tab = 'route' | 'words' | 'me' | 'about';
 
-const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'settings' | 'about'; Icon: typeof RouteIcon }[] = [
+const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'settings' | 'navAbout'; Icon: typeof RouteIcon }[] = [
   { tab: 'route', nl: 'Route', key: 'navRoute', Icon: RouteIcon },
   { tab: 'words', nl: 'Hulp', key: 'navWords', Icon: LifebuoyIcon },
   { tab: 'me', nl: 'Instellingen', key: 'settings', Icon: GearIcon },
-  { tab: 'about', nl: 'Over', key: 'about', Icon: InfoIcon },
+  { tab: 'about', nl: 'Over', key: 'navAbout', Icon: InfoIcon },
 ];
 
-/** Bottom bar on the three home-level screens: Route (lessons), Hulp, Instellingen, Over. The label is
- *  Dutch (short, part of learning the work floor); screen readers also hear the English. */
-export function BottomNav({ current, onTab }: { current: Tab; onTab: (tab: Tab) => void }) {
+/** Bottom bar on the home-level screens: Route (lessons), Hulp, Instellingen, Over. The label is
+ *  Dutch (short, part of learning the work floor) with the help language in a small line under
+ *  it; screen readers hear all of it. */
+export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab: Tab) => void; lang?: HelpLanguage }) {
   return (
     <nav className="bottom-nav" aria-label="Main">
-      {TABS.map(({ tab, nl, key, Icon }) => (
-        <button
-          key={tab}
-          type="button"
-          className={`nav-tab ${current === tab ? 'nav-tab-on' : ''}`}
-          aria-current={current === tab ? 'page' : undefined}
-          onClick={() => onTab(tab)}
-        >
-          <span className="nav-icon" aria-hidden><Icon size={26} /></span>
-          <span className="nav-label" lang="nl">{nl}</span>
-          <span className="sr-only"> · {ui(key).en}</span>
-        </button>
-      ))}
+      {TABS.map(({ tab, nl, key, Icon }) => {
+        const word = ui(key, lang);
+        return (
+          <button
+            key={tab}
+            type="button"
+            className={`nav-tab ${current === tab ? 'nav-tab-on' : ''}`}
+            aria-current={current === tab ? 'page' : undefined}
+            aria-label={`${nl} · ${word.en}${word.help ? ` · ${word.help}` : ''}`}
+            onClick={() => onTab(tab)}
+          >
+            <span className="nav-icon" aria-hidden><Icon size={26} /></span>
+            <span className="nav-label" lang="nl" aria-hidden>{nl === 'Instellingen' ? 'Instel\u00adlingen' : nl}</span>
+            {word.help && lang
+              ? <HelpText className="nav-help" text={word.help} lang={lang} />
+              : <span className="nav-help" lang="en" aria-hidden>{word.en}</span>}
+          </button>
+        );
+      })}
     </nav>
   );
 }
 
-/** "Hulp" tab: the emergency phrases and the workplace tips, as two big entry cards. */
-export function WordsHub({ lang, onPhrasebook, onTips }: {
+/** "Hulp" tab: opens straight onto the emergency phrases; the workplace tips are below them. */
+export function WordsHub({ lang, onTips }: {
   lang?: HelpLanguage;
-  onPhrasebook: () => void;
   onTips: () => void;
 }) {
   return (
     <div className="screen words-hub">
-      <div className="screen-head">
-        <h1><Bi text={ui('navWords', lang)} /></h1>
-      </div>
-      <button type="button" className="hub-card hub-alert" onClick={onPhrasebook}>
-        <span className="hub-icon" aria-hidden><AlertIcon size={34} /></span>
-        <span className="hub-text">
+      <div className="hub-alert-head">
+        <span className="hub-icon" aria-hidden><AlertIcon size={30} /></span>
+        <h1 className="hub-title">
           <span className="hub-nl" lang="nl">Noodzinnen</span>
           <Bi text={ui('phrasebook', lang)} />
-        </span>
-        <ChevronIcon size={24} />
-      </button>
+        </h1>
+      </div>
+      <p className="muted hub-hint"><Bi text={ui('phrasebookHint', lang)} /></p>
+      <PhraseList lang={lang} />
       <button type="button" className="hub-card hub-tips" onClick={onTips}>
         <span className="hub-icon" aria-hidden><span className="entry-emoji">💡</span></span>
         <span className="hub-text">
@@ -198,11 +244,69 @@ const unitNumber = (u: number) => String(u + 1).padStart(2, '0');
  *  (not A1/B1, which read like language levels). */
 const lessonCode = (u: number, i: number) => `${u + 1}.${i + 1}`;
 
-export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused, dueToday = 0, onDaily }: {
+/**
+ * "Herhaal vandaag" on the path: one compact card (about 72 px), so the next lesson's Start stays
+ * in view. Words due: the calendar, the number big, "Review today" in the help language (English
+ * small) and a chevron; the whole card starts the review. Done today: a calm green check badge,
+ * "Done for today", and a real "Extra round" button when words are left over. After the first
+ * lesson: "Tomorrow your first words come back". The Dutch name is in the spoken label only; no
+ * "label: n" strings, so nothing wraps or reorders in right-to-left text.
+ */
+function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: HelpLanguage; onDaily?: () => void }) {
+  const rtl = lang?.dir === 'rtl';
+  if (card.state === 'due') {
+    return (
+      <button
+        type="button"
+        className="daily-card daily-due"
+        dir={rtl ? 'rtl' : undefined}
+        onClick={onDaily}
+        aria-label={`Herhaal vandaag · ${ui('reviewToday').en}: ${fillN(ui('reviewTodayN'), card.due).en}`}
+      >
+        <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
+        <span className="daily-n" aria-hidden>{card.due}</span>
+        <Bi className="daily-title" text={ui('reviewToday', lang)} />
+        <ChevronIcon size={26} className="daily-go" />
+      </button>
+    );
+  }
+  const done = card.state === 'done';
+  const extra = done && card.extra > 0 && onDaily;
+  return (
+    <div
+      className={`daily-card daily-${card.state}`}
+      dir={rtl ? 'rtl' : undefined}
+      role="group"
+      aria-label={`Herhaal vandaag · ${ui('reviewToday').en}${done && card.tomorrow > 0 ? ` · ${fillCount('tomorrowN', card.tomorrow).en}` : ''}`}
+    >
+      {done ? (
+        // A calm badge, not a stamp: the review is done for today.
+        <span className="daily-icon daily-badge" aria-hidden><CheckIcon size={26} /></span>
+      ) : (
+        <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
+      )}
+      <Bi className="daily-title" text={ui(done ? 'reviewDone' : 'firstWordsTomorrow', lang)} />
+      {extra && (
+        <button type="button" className="btn daily-extra" onClick={onDaily}>
+          <Bi className="daily-extra-label" text={ui('extraRound', lang)} />
+          <ChevronIcon size={18} />
+        </button>
+      )}
+    </div>
+  );
+}
+
+export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused, daily, onDaily, arrived, onArrived, onCertificate }: {
   progress: Progress;
-  /** Words due in "Herhaal vandaag"; the card shows when there are any. */
-  dueToday?: number;
+  /** Opens a finished unit's certificate (the chip on its sign). */
+  onCertificate?: (unitId: string) => void;
+  /** "Herhaal vandaag" (see dailyCard): due, done today, or the first words come tomorrow. */
+  daily?: DailyCard | null;
+  /** Starts today's review (also the "extra ronde" after it). */
   onDaily?: () => void;
+  /** Back from a finished lesson: scroll to the next lesson, stamp the done one, pop the new one. */
+  arrived?: string | null;
+  onArrived?: () => void;
   /** A unit to scroll to and mark (from a coach link); onFocused is called once it is shown. */
   focusUnit?: string | null;
   onFocused?: () => void;
@@ -222,21 +326,63 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
   const [showOther, setShowOther] = useState(openOther || other.some((u) => u.id === focusUnit));
   // A coach link: scroll to that unit (after the app's own scroll-to-top) and mark it for a moment.
   const [marked, setMarked] = useState<string | null>(focusUnit ?? null);
+  // The lesson just finished: kept for this visit of the path, for its one-time animations.
+  const [justDone] = useState<string | null>(arrived ?? null);
+  const pathRef = useRef<HTMLDivElement>(null);
+  // Lessons stopped halfway (less than two days ago): their bay says "Ga verder · n/N".
+  const [saves, setSaves] = useState(() => loadSaves());
   useEffect(() => {
-    if (!focusUnit) return;
+    if (!focusUnit && !arrived) return;
+    const still = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     const t = window.setTimeout(() => {
-      document.getElementById(`unit-${focusUnit.slice(2)}`)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
-      onFocused?.();
+      // The sticky top bar covers the top of the screen, the bottom bar its foot: every target
+      // is measured against the space between them, so a unit's header never hides under the bar.
+      const top = document.querySelector('.topbar')?.getBoundingClientRect().bottom ?? 0;
+      const foot = document.querySelector('.bottom-nav')?.getBoundingClientRect().top ?? window.innerHeight;
+      const behavior: ScrollBehavior = still ? 'auto' : 'smooth';
+      if (focusUnit) {
+        const head = document.getElementById(`unit-${focusUnit.slice(2)}`);
+        if (head) window.scrollBy({ top: head.getBoundingClientRect().top - top - 8, behavior });
+        onFocused?.();
+      } else {
+        // After a lesson: the next lesson in view (not the top of the path), centred in the free
+        // space; when its unit's header fits above it too, that header is shown in full.
+        const bay = pathRef.current?.querySelector<HTMLElement>('.bay-now');
+        const head = bay?.closest('.unit')?.querySelector<HTMLElement>('.unit-head');
+        if (bay) {
+          const b = bay.getBoundingClientRect();
+          let by = b.top + b.height / 2 - (top + foot) / 2;
+          const h = head?.getBoundingClientRect();
+          if (h && h.top - by < top + 8 && b.bottom - (h.top - top - 8) <= foot - 8) by = h.top - top - 8;
+          // Never leave a card cut in half under the top bar: scroll it fully out of view, or, when
+          // the next lesson would not fit then, fully into view.
+          const cards = pathRef.current?.querySelectorAll<HTMLElement>('.daily-card, .unit-head, .bay-card, .full-only-note') ?? [];
+          for (const el of cards) {
+            const r = el.getBoundingClientRect();
+            if (r.top - by < top && r.bottom - by > top + 2) {
+              const hide = r.bottom - top + 6;
+              const show = r.top - top - 8;
+              const fits = (d: number) => b.top - d >= top + 4 && b.bottom - d <= foot - 8;
+              if (fits(hide)) by = hide;
+              else if (fits(show)) by = show;
+              break;
+            }
+          }
+          window.scrollBy({ top: by, behavior });
+        }
+        onArrived?.();
+      }
     }, 80);
     return () => window.clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [focusUnit]);
+  }, [focusUnit, arrived]);
   useEffect(() => {
     if (!marked) return;
     const off = window.setTimeout(() => setMarked(null), 4000);
     return () => window.clearTimeout(off);
   }, [marked]);
   const unlocked = (lessonId: string) => isUnlocked(lessonId, completed, access);
+  const rtl = lang?.dir === 'rtl';
   const next = (lessonId: string) => isNextInCourse(lessonId, completed, access, sector);
 
   const renderUnit = (unit: Unit, u: number) => {
@@ -246,6 +392,8 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
       <section
         key={unit.id}
         id={`unit-${unit.id.slice(2)}`}
+        // Right to left: the stencil numbers, the rail and the markers move to the right.
+        dir={rtl ? 'rtl' : undefined}
         className={`unit ${unitOpen ? '' : 'unit-locked'} ${allowed ? '' : 'unit-full-only'} ${marked === unit.id ? 'unit-marked' : ''}`}
       >
         {/* In the preview, tapping a later unit's sign opens the unlock card (the note below
@@ -253,7 +401,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
         <div className="unit-head" onClick={allowed ? undefined : onUpgrade}>
           <span className="unit-num" aria-hidden>{unitNumber(u)}</span>
           <WordPicture className="unit-icon" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={60} />
-          <div className="unit-titles">
+          <div className="unit-titles" dir={rtl && lang?.gloss[unit.id] ? 'rtl' : undefined}>
             {/* Two lines: the help language large with the English small under it, or the
                 English large with the Dutch name under it when there is no help language. */}
             <h2>
@@ -261,10 +409,11 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
               {lang?.gloss[unit.id] ? <HelpText text={lang.gloss[unit.id]} lang={lang} className="unit-main" /> : unit.title}
             </h2>
             {lang?.gloss[unit.id] ? (
-              <span className="unit-nl" lang="en">{unit.title}</span>
+              <span className="unit-nl" lang="en" dir={rtl ? 'ltr' : undefined}>{unit.title}</span>
             ) : (
               <span className="unit-nl" lang="nl">{unit.titleNl}</span>
             )}
+            {onCertificate && allowed && unitDone(unit, completed) && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
           </div>
           {!unitOpen && allowed && <LockIcon size={22} className="unit-lock" />}
         </div>
@@ -284,8 +433,13 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
             const state = !allowed ? 'locked' : record ? 'done' : !open ? 'locked' : next(lesson.id) ? 'now' : 'open';
             // The bay shows the lesson's first word that has a picture (none if all are abstract).
             const first = lesson.words.find(hasPicture);
+            const title = gloss(lesson.id, lesson.title, lang);
+            const saved = open && state !== 'locked' && saves[lesson.id]?.review === Boolean(record) ? saves[lesson.id] : undefined;
             return (
-              <li key={lesson.id} className={`bay bay-${state}`}>
+              <li
+                key={lesson.id}
+                className={`bay bay-${state} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''}`}
+              >
                 <span className="bay-marker" aria-hidden>
                   {state === 'done' ? <CheckIcon size={20} /> : i + 1}
                 </span>
@@ -294,28 +448,42 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
                   className="bay-card"
                   disabled={!open}
                   onClick={() => onStart(lesson.id, Boolean(record))}
-                  aria-label={`${lessonCode(u, i)} ${lesson.title}${open ? (record ? ` · ${ui('practice').en}` : '') : ` (${ui('locked').en})`}`}
+                  aria-label={`${lessonCode(u, i)} ${lesson.title}${title.help ? ` (${title.help})` : ''}${saved ? ` · ${resumeLabel(saved)}` : open ? (record ? ` · ${ui('practice').en}` : state === 'now' ? ` · ${ui('start').en}` : '') : ` (${ui('locked').en})`}`}
                 >
-                  {state === 'done' && first && (
-                    <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />
-                  )}
-                  <span className="bay-text">
-                    <Bi className="bay-title" text={gloss(lesson.id, lesson.title, lang)} />
-                    {state === 'done' && (
+                  {/* Every card shows the lesson's first picture: full colour when done or next,
+                      dimmed for one you may open, more dimmed when locked. */}
+                  {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
+                  <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
+                    <Bi className="bay-title" text={title} />
+                    {/* Stopped halfway: "Ga verder · 12/18" in place of Start or Practise again. */}
+                    {saved && <ResumeChip save={saved} lang={lang} />}
+                    {state === 'done' && !saved && (
                       <span className="bay-again">
                         {record.best === 1 ? <CrownIcon size={16} /> : <CheckIcon size={16} />}
-                        {ui('practice').en}
+                        <Bi className="bay-again-label" text={ui('practice', lang)} />
                       </span>
                     )}
-                    {(state === 'now' || state === 'open') && (
-                      <span className="bay-start">{ui('start').en}<ChevronIcon size={20} /></span>
+                    {/* One Start on the whole path: the next lesson. */}
+                    {state === 'now' && !saved && (
+                      <span className="bay-start">
+                        <Bi className="bay-start-label" text={ui('start', lang)} />
+                        <ChevronIcon size={22} />
+                      </span>
                     )}
                   </span>
+                  {state === 'open' && !saved && <ChevronIcon size={24} className="bay-chev" />}
                   {state === 'locked' && <LockIcon size={20} className="bay-lock" />}
                   {state === 'now' && (
                     <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>
                   )}
                 </button>
+                {saved && (
+                  <RestartLink lang={lang} onRestart={() => {
+                    clearSave(lesson.id);
+                    setSaves(loadSaves());
+                    onStart(lesson.id, Boolean(record));
+                  }} />
+                )}
               </li>
             );
           })}
@@ -325,18 +493,8 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
   };
 
   return (
-    <div className="path">
-      {dueToday > 0 && onDaily && (
-        <button type="button" className="daily-card" onClick={onDaily}>
-          <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
-          <span className="daily-text">
-            <span className="daily-nl" lang="nl">Herhaal vandaag</span>
-            <Bi className="daily-title" text={ui('reviewToday', lang)} />
-            <Bi className="daily-n" text={fillN(ui('reviewTodayN', lang), Math.min(dueToday, DAILY_MAX))} />
-          </span>
-          <ChevronIcon size={24} className="daily-go" />
-        </button>
-      )}
+    <div className="path" ref={pathRef} dir={rtl ? 'rtl' : undefined}>
+      {daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
       {main.map((unit, u) => renderUnit(unit, u))}
       {other.length > 0 && (
         <section className="other-sectors">
@@ -461,22 +619,7 @@ export function Phrasebook({ lang, onBack }: { lang?: HelpLanguage; onBack: () =
         <h1><Bi text={ui('phrasebook', lang)} /></h1>
       </div>
       <p className="muted"><Bi text={ui('phrasebookHint', lang)} /></p>
-      {!speechAvailable() && <p className="warn">{ui('audioUnavailable').en}</p>}
-      <ul className="phrases">
-        {phrasebookIds.map((id) => {
-          const item = findItem(id);
-          if (!item) return null;
-          return (
-            <li key={id} className="phrase">
-              <SpeakButton text={item.nl} />
-              <div className="phrase-text">
-                <span className="phrase-nl" lang="nl">{breakable(item.nl)}</span>
-                <Bi text={gloss(id, item.en, lang)} />
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      <PhraseList lang={lang} />
     </div>
   );
 }
@@ -505,8 +648,12 @@ function useVoices() {
   return { device, recorded };
 }
 
-export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade }: {
+export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade, onRestore, onCertificate }: {
   progress: Progress;
+  /** Opens a certificate from "Mijn certificaten". */
+  onCertificate?: (unitId: string) => void;
+  /** "Bewaar je voortgang": a backup was put back (merged or replaced). */
+  onRestore?: (next: Progress) => void;
   lang?: HelpLanguage;
   onLang: (code: LangCode | null) => void;
   onSector: (sector: SectorChoice) => void;
@@ -540,8 +687,13 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
         <h1><Bi text={ui('settings', lang)} /></h1>
       </div>
       <h2><Bi text={ui('helpLanguage', lang)} /></h2>
-      <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta compact />
-      {lang && !lang.reviewed && <p className="muted small">beta: {ui('beta').en}</p>}
+      <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta compact lang={lang} />
+      {lang && !lang.reviewed && (
+        <p className="beta-note">
+          <span className="beta-chip" lang="en">beta</span>
+          <Bi text={ui('beta', lang)} />
+        </p>
+      )}
 
       <h2 className="settings-sector-title">
         <span lang="nl">Waar werk je?</span>
@@ -595,6 +747,12 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
       <VoicePicker current={progress.voice} lang={lang} onPick={onVoice} />
       {/* Preview: settings work as usual; unlocking the full version sits below them. */}
       {access === 'preview' && onAccess && <UpgradeCard lang={lang} onAccess={onAccess} />}
+      <ReminderCard lang={lang} />
+      {/* Also offered once after the first day's milestone; always here. */}
+      <InstallCard lang={lang} />
+      {onRestore && <BackupCard progress={progress} lang={lang} onRestore={onRestore} />}
+      {onCertificate && <CertificatesCard progress={progress} lang={lang} onOpen={onCertificate} />}
+      <CountingCard lang={lang} />
       <button type="button" className="phrase-banner about-banner" onClick={onAbout}>
         <LogoMark size={32} check={false} />
         <Bi text={ui('about', lang)} />
@@ -676,26 +834,9 @@ function VoicePicker({ current, lang, onPick }: {
   );
 }
 
-/** Counts a number up from 0 (skipped when the learner prefers less motion). */
-function useCountUp(target: number, delay = 350, ms = 900) {
-  const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-  const [value, setValue] = useState(still ? target : 0);
-  useEffect(() => {
-    if (still) return setValue(target);
-    let raf = 0;
-    const t0 = performance.now() + delay;
-    const tick = (now: number) => {
-      const k = Math.min(1, Math.max(0, (now - t0) / ms));
-      setValue(Math.round(target * (1 - (1 - k) ** 3)));
-      if (k < 1) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [target, delay, ms, still]);
-  return value;
-}
-
-function StatCard({ tone, label, icon, value, final, done, foot }: {
+function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
+  /** A stamp on the card's corner (FOUTLOOS). */
+  badge?: React.ReactNode;
   tone: 'gold' | 'green' | 'orange';
   label: Bilingual;
   icon: React.ReactNode;
@@ -712,16 +853,24 @@ function StatCard({ tone, label, icon, value, final, done, foot }: {
       <div className="stat-card-head"><Bi text={label} /></div>
       <div className="stat-card-body" aria-hidden>
         {icon}
-        <span className="stat-card-value">{value}</span>
+        <span className="stat-card-value" dir="ltr">{value}</span>
       </div>
       {foot && <Bi className="stat-card-foot" text={foot} />}
+      {badge}
     </div>
   );
 }
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next, skipped = 0 }: {
+  /** Listening exercises left out in the lesson: said on their own line, not in the score. */
+  skipped?: number;
   /** After today's review: how many words came back (shown instead of new words). */
   repeated?: number;
+  /** After today's review: how many words went up a box ("N woorden sterker"). */
+  stronger?: number;
+  /** The next lesson on the course (its title, and its id for the picture), shown as an arrow,
+   *  the lesson's picture and its title. */
+  next?: Bilingual & { id?: string };
   /** Graded exercises right the first time, out of all graded ones. */
   right: number;
   total: number;
@@ -731,18 +880,31 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated }
   lang?: HelpLanguage;
   onDone: () => void;
 }) {
-  // Each number starts counting once its card has popped in.
-  const shownRight = useCountUp(right, 700, 700);
-  const shownNew = useCountUp(newWords, 850, 600);
-  const fill = (t: Bilingual, n: number): Bilingual => ({ ...t, en: t.en.replace('{n}', String(n)), help: t.help?.replace('{n}', String(n)) });
+  // The cards pop in together with their final numbers: a still frame never shows "0 / 11"
+  // or "+0" (the numbers are what the learner came for, not a counter).
+  const shownRight = right;
+  const shownNew = newWords;
+  // A tap or Enter meant for the last exercise must not skip this screen: both are ignored for
+  // a moment (shorter with reduced motion), and the button fades in after about a second.
+  const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  const ready = useRef(false);
+  useEffect(() => {
+    const t = window.setTimeout(() => { ready.current = true; }, still ? 400 : 700);
+    return () => window.clearTimeout(t);
+  }, [still]);
+  const done = () => { if (ready.current) onDone(); };
   // Enter continues, as after every exercise (the screen has no other input).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Enter' && !(e.target instanceof HTMLButtonElement)) onDone();
+      if (e.key === 'Enter' && !(e.target instanceof HTMLButtonElement) && ready.current) onDone();
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [onDone]);
+  const perfect = total > 0 && right === total;
+  const rtl = lang?.dir === 'rtl';
+  // The next lesson's first word with a picture, as on its card on the path.
+  const nextPic = next?.id ? findLesson(next.id)?.lesson.words.find(hasPicture) : undefined;
   return (
     <div className="player result-screen">
       <main className="player-body result">
@@ -751,11 +913,12 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated }
           {/* Rubber stamp on the delivery note: the lesson is done. */}
           <span className="stamp stamp-right result-stamp" aria-hidden>
             <span className="stamp-word" lang="nl">Klaar</span>
-            <span className="stamp-sub">✓</span>
+            {/* The Dutch stamp in the help language too (English without one). */}
+            {lang?.ui.stampDone ? <HelpText className="stamp-sub" text={lang.ui.stampDone} lang={lang} /> : <span className="stamp-sub" lang="en">{ui('stampDone').en}</span>}
           </span>
         </div>
         <h1 className="result-title"><Bi text={ui('lessonComplete', lang)} /></h1>
-        <div className="result-stats">
+        <div className="result-stats" dir={rtl ? 'rtl' : undefined}>
           <StatCard
             tone="green"
             label={ui('rightFirstTime', lang)}
@@ -763,23 +926,54 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated }
             value={`${shownRight} / ${total}`}
             final={`${right} / ${total}`}
             done={shownRight === right}
+            // Every answer right the first time: a blue-ink rubber stamp inside the card, and
+            // "No mistakes" in the help language in the card's free space.
+            foot={perfect ? ui('noMistakes', lang) : undefined}
+            badge={perfect ? (
+              <span className="stamp flawless-stamp" aria-hidden>
+                <span className="stamp-word" lang="nl">Foutloos</span>
+              </span>
+            ) : undefined}
           />
           <StatCard
             tone="gold"
             label={repeated !== undefined ? ui('reviewToday', lang) : ui('newWords', lang)}
             icon={repeated !== undefined ? <CalendarIcon size={30} /> : <CrateIcon size={30} />}
             value={repeated !== undefined ? `${repeated}` : `+${shownNew}`}
-            final={repeated !== undefined ? `${repeated}` : `+${newWords}`}
+            // The total is said, not printed: the top bar's crate shows it on the path.
+            final={`${repeated !== undefined ? repeated : `+${newWords}`} · ${fillCount('wordsLearnedN', words).en}`}
             done={repeated !== undefined || shownNew === newWords}
-            foot={fill(ui('wordsLearnedN', lang), words)}
           />
         </div>
+        {/* After the review: how many words got stronger, the number big, the help language
+            large and English small (no Dutch sentence). */}
+        {stronger !== undefined && stronger > 0 && (
+          <p className="result-line result-stronger" aria-label={fillCount('wordsStrongerN', stronger).en}>
+            <span className="stronger-n" aria-hidden><span className="stronger-arrow">▲</span>{stronger}</span>
+            <Bi text={withoutN(uiCount('wordsStrongerN', stronger, lang))} />
+          </p>
+        )}
+        {/* Listening exercises left out ("I can't listen now"): counted out, visibly. */}
+        {skipped > 0 && (
+          <p className="result-line result-skipped" dir={rtl ? 'rtl' : undefined}>
+            <span className="result-skipped-icon" aria-hidden><EarIcon size={22} /></span>
+            <Bi text={fillN(ui('skippedN', lang), skipped)} />
+          </p>
+        )}
+        {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}
+        {next && (
+          <p className="result-line result-next" dir={rtl ? 'rtl' : undefined} aria-label={`${ui('nextUp').en}: ${next.en}`}>
+            <span className="result-next-arrow" aria-hidden><ArrowIcon size={22} /></span>
+            {nextPic && <WordPicture className="result-next-pic" id={nextPic.id} emoji={nextPic.emoji} size={44} />}
+            <Bi className="result-next-title" text={next} />
+          </p>
+        )}
       </main>
       <footer className="player-foot">
         <div className="foot-inner">
           <div className="foot-actions">
-            <button type="button" className="btn btn-go btn-primary" onClick={onDone}>
-              {ui('continue', lang).en}
+            <button type="button" className="btn btn-go btn-primary result-go" onClick={done} dir={rtl ? 'rtl' : undefined}>
+              <Bi className="btn-label" text={ui('continue', lang)} />
               <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
             </button>
           </div>

@@ -57,3 +57,12 @@ export function tokenize(sentence: string): string[] {
 export function checkTiles(chosen: string[], sentence: string): boolean {
   return normalize(chosen.join(' ')) === normalize(tokenize(sentence).join(' '));
 }
+
+/**
+ * The right sentence as tiles, each marked whether the learner had that word in that place
+ * (a plain position diff of the tiles they laid against the solution). A word put somewhere
+ * else, or left out, is `ok: false` and gets a red underline in the feedback label.
+ */
+export function tileDiff(given: string[], sentence: string): { word: string; ok: boolean }[] {
+  return tokenize(sentence).map((word, i) => ({ word, ok: given[i] !== undefined && normalize(given[i]) === normalize(word) }));
+}

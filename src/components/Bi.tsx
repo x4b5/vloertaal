@@ -10,10 +10,16 @@ import type { HelpLanguage } from '../i18n/types';
  */
 export function Bi({ text, className }: { text: Bilingual; className?: string }) {
   if (text.help && text.lang) {
+    // A right-to-left help language makes the whole pair one right-to-left block, so the
+    // English line under it starts on the same (right) side and nothing zig-zags. The English
+    // keeps its own direction, so its full stop or question mark stays at its end.
+    const rtl = text.lang.dir === 'rtl';
     return (
-      <span className={`bi bi-swap ${className ?? ''}`}>
+      <span className={`bi bi-swap ${className ?? ''}`} dir={rtl ? 'rtl' : undefined}>
         <HelpText text={text.help} lang={text.lang} className="bi-en" />
-        <span className="bi-help" lang="en">{text.en}</span>
+        {/* Shown only where a context lays the pair out on one line (see .bi-sep). */}
+        <span className="bi-sep" aria-hidden>·</span>
+        <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{text.en}</span>
       </span>
     );
   }
@@ -24,11 +30,14 @@ export function Bi({ text, className }: { text: Bilingual; className?: string })
   );
 }
 
+/** Help languages written in the Latin script: a Dutch phrase in them needs no isolating. */
+const LATIN_SCRIPT = new Set(['pl', 'ro', 'tr']);
+
 /** A line in the help language, with its own language and direction. */
 export function HelpText({ text, lang, className = 'bi-help' }: { text: string; lang: HelpLanguage; className?: string }) {
   return (
     <span className={className} lang={lang.code} dir={lang.dir}>
-      {lang.dir === 'rtl' ? isolateLatin(text) : text}
+      {lang.dir === 'rtl' || !LATIN_SCRIPT.has(lang.code) ? isolateLatin(text) : text}
     </span>
   );
 }

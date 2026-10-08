@@ -14,7 +14,7 @@ const t: CultureTranslation = {
     'a.who': 'Kimin için?',
     'a.who.b': 'Hollanda’da çalışmaya yeni başlayan herkes için. Yardım dilleri: Arapça, Tigrinya dili, Farsça, Darice, Ukraynaca, Türkçe, Lehçe, Rumence ve Bulgarca.',
     'a.free': 'Ücretsiz ve gizli',
-    'a.free.b': 'Vloertaal ücretsizdir ve hesaba ihtiyacın yok. İlerlemen sadece bu telefonda ya da bilgisayarda kaydedilir. Ne yaptığını takip etmiyoruz.',
+    'a.free.b': 'Vloertaal ücretsizdir ve hesaba ihtiyacın yok. İlerlemen sadece bu telefonda ya da bilgisayarda kaydedilir. Açıksa, uygulama derslerin kaç kez yapıldığını anonim olarak sayar: hesap yok, isim yok, takip yok. Bunu “Ayarlar” bölümünde kapatabilirsin.',
     'a.voices': 'Sesler',
     'a.voices.b': 'Her karakterin kendi Hollandaca sesi var: Bram, Thijmen’in sesiyle konuşur; Henk, Daniel’in; Amina, Ariël’in ve Jada, Noa’nın sesiyle. Bu sesler ElevenLabs ile kaydedildi. Bir cümlenin henüz kaydı yoksa, Piper’ı (ücretsiz ve açık kaynaklı bir konuşma programı) ya da kendi telefonunun veya bilgisayarının sesini duyarsın.',
   },

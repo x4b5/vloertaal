@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { checkTiles, checkTyped, normalize, tokenize } from '../src/lib/answers';
+import { checkTiles, checkTyped, normalize, tileDiff, tokenize } from '../src/lib/answers';
 
 describe('answers', () => {
   it('normalizes case, accents and punctuation', () => {
@@ -28,5 +28,12 @@ describe('answers', () => {
     expect(tokenize('Hallo, ik ben nieuw.')).toEqual(['Hallo', 'ik', 'ben', 'nieuw']);
     expect(checkTiles(['Hallo', 'ik', 'ben', 'nieuw'], 'Hallo, ik ben nieuw.')).toBe(true);
     expect(checkTiles(['ik', 'Hallo', 'ben', 'nieuw'], 'Hallo, ik ben nieuw.')).toBe(false);
+  });
+
+  it('marks the words of the right sentence that were out of place or missing', () => {
+    const marks = (given: string[]) => tileDiff(given, 'Draag altijd je helm.').map((t) => (t.ok ? t.word : `[${t.word}]`)).join(' ');
+    expect(marks(['je', 'Draag'])).toBe('[Draag] [altijd] [je] [helm]');
+    expect(marks(['draag', 'altijd', 'helm', 'je'])).toBe('Draag altijd [je] [helm]');
+    expect(marks(['Draag', 'altijd', 'je', 'helm'])).toBe('Draag altijd je helm');
   });
 });

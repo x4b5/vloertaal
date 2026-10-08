@@ -1,13 +1,21 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
-import { fillN, gloss, ui, type Bilingual } from '../i18n';
-import type { HelpLanguage } from '../i18n/types';
-import { autoSpeak, sounds, speechAvailable } from '../lib/audio';
+import { fillN, gloss, ui, withoutN, type Bilingual } from '../i18n';
+import type { HelpLanguage, UiKey } from '../i18n/types';
+import { autoSpeak, sounds, speak, speechAvailable } from '../lib/audio';
+import { tileDiff } from '../lib/answers';
 import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
+import { barParts, chimeStep, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
+import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { voiceFor } from '../lib/voices';
-import { castFor } from './Characters';
+import { castFor, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
-import { CheckIcon, ChevronIcon, CloseIcon, SpeakerIcon, SpeakerOffIcon } from './Icons';
+import { FlameIcon } from './StreakArt';
+import {
+  BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
+  LifebuoyIcon, PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
+} from './Icons';
+import { PhraseSheet } from './Phrases';
 import {
   type Answer,
   BuildExercise,
@@ -30,6 +38,9 @@ export interface LessonResult {
   total: number;
   /** Per word asked on its own (meaning, picture, listen, type): right every first time? */
   words: Record<string, boolean>;
+  /** Listening exercises left out ("I can't listen now", or sound switched off midway): not in
+   *  `total`, and the result says so ("2 skipped, not counted"). */
+  skipped?: number;
 }
 
 function solution(ex: Exercise): { text: string; nl: boolean } {
@@ -50,19 +61,55 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
   }
 }
 
-/** Short Dutch label on the kraft tag above each exercise. */
-const KIND_TAG: Record<Exercise['kind'], string> = {
-  intro: 'Nieuw woord',
-  meaning: 'Woord',
-  dutch: 'Nieuw woord',
-  listen: 'Luisteren',
-  type: 'Luisteren',
-  match: 'Woorden',
-  build: 'Zin',
-  chat: 'Gesprek',
-  tip: 'Tip',
-  situation: 'Situatie',
+/** Who says the answer: in a chat the right reply is "your" line (Amina); a built sentence
+ *  belongs to its speaker; a tip or situation to its colleague; single words to Bram. */
+function answerVoice(ex: Exercise): CharacterId {
+  return ex.kind === 'chat' ? 'amina'
+    : ex.kind === 'build' ? castFor(ex.sentence.id)
+    : ex.kind === 'situation' || ex.kind === 'tip' ? tipCast(ex.tip)
+    : 'bram';
+}
+
+/** A filled play triangle for the replay button in the feedback label. */
+function PlayGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden focusable="false">
+      <path d="M8 5.2v13.6a1 1 0 0 0 1.5.86l11-6.8a1 1 0 0 0 0-1.72l-11-6.8A1 1 0 0 0 8 5.2z" fill="currentColor" />
+    </svg>
+  );
+}
+
+/**
+ * The kraft tag above each exercise: a fixed pictogram per kind of exercise, a short Dutch
+ * label, and the same word in the help language (English without one).
+ */
+const KIND_TAG: Record<Exercise['kind'], { nl: string; key: UiKey; Icon: (p: { size?: number }) => React.ReactElement }> = {
+  intro: { nl: 'Nieuw woord', key: 'newWord', Icon: SparkleIcon },
+  meaning: { nl: 'Betekenis', key: 'tagMeaning', Icon: AskIcon },
+  dutch: { nl: 'Kies', key: 'tagPick', Icon: PictureIcon },
+  listen: { nl: 'Luisteren', key: 'tagListen', Icon: EarIcon },
+  type: { nl: 'Typen', key: 'tagType', Icon: KeyboardIcon },
+  match: { nl: 'Paren', key: 'tagMatch', Icon: PairIcon },
+  build: { nl: 'Zin', key: 'tagBuild', Icon: BlocksIcon },
+  chat: { nl: 'Gesprek', key: 'tagChat', Icon: BubblesIcon },
+  tip: { nl: 'Tip', key: 'tagTip', Icon: BulbIcon },
+  situation: { nl: 'Situatie', key: 'tagSituation', Icon: SignpostIcon },
 };
+
+function KindTag({ kind, lang }: { kind: Exercise['kind']; lang?: HelpLanguage }) {
+  const { nl, key, Icon } = KIND_TAG[kind];
+  const word = ui(key, lang);
+  const same = !word.help && word.en.toLowerCase() === nl.toLowerCase();
+  return (
+    <span className="tag tag-kind">
+      <span className="tag-icon" aria-hidden><Icon size={20} /></span>
+      <span className="tag-nl" lang="nl">{nl}</span>
+      {!same && (word.help && lang
+        ? <HelpText className="tag-help" text={word.help} lang={lang} />
+        : <span className="tag-help" lang="en">{word.en}</span>)}
+    </span>
+  );
+}
 
 /** The answer as a pair for the feedback label: Dutch = meaning (English + help language). */
 function answerPair(ex: Exercise, lang?: HelpLanguage): { nl?: string; meaning: Bilingual } | null {
@@ -86,6 +133,28 @@ function answerPair(ex: Exercise, lang?: HelpLanguage): { nl?: string; meaning: 
   }
 }
 
+/** Reduced motion: no smooth scrolling, no movement (see "Reduced motion" in styles.css). */
+function reducedMotion(): boolean {
+  return typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+}
+
+/**
+ * A run of 3, 5 or 8: a taped label that drops onto the progress bar for 1.5 s, a lit flame, the
+ * big number and "in a row" in the help language (English without one). It lives in the lesson
+ * header, so it is in view whatever the exercise below does.
+ */
+function RunLabel({ n, lang }: { n: number; lang?: HelpLanguage }) {
+  const text = withoutN(ui('inARow', lang));
+  return (
+    <span className="run-label" aria-hidden>
+      <span className="run-label-tape" />
+      <FlameIcon lit size={26} />
+      <b className="run-label-n">{n}</b>
+      {text.help && lang ? <HelpText className="run-label-text" text={text.help} lang={lang} /> : <span className="run-label-text" lang="en">{text.en}</span>}
+    </span>
+  );
+}
+
 /** The square block at the end of the main button: a check before answering, an arrow after. */
 function ButtonBlock({ icon }: { icon: 'check' | 'next' }) {
   return (
@@ -95,7 +164,7 @@ function ButtonBlock({ icon }: { icon: 'check' | 'next' }) {
   );
 }
 
-export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet }: {
+export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -110,28 +179,88 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   onFinish: (r: LessonResult) => void;
   /** "Without sound" (a saved setting): no listening exercises, nothing plays by itself. */
   quiet?: boolean;
-  /** Switches "Without sound" on or off for good (the header toggle, "I can't listen now"). */
+  /** Switches "Without sound" on or off for good (the header toggle; "I can't listen now" only
+   *  leaves out this lesson's listening exercises). */
   onQuiet?: (quiet: boolean) => void;
+  /**
+   * Keep this lesson's place on the device (src/lib/resume.ts): saved after every answer and when
+   * the app is hidden, picked up again on the next start, cleared when the lesson is finished.
+   */
+  resumable?: boolean;
 }) {
+  const persist = resumable && !exercises;
+  // An interrupted run of this lesson (same review mode), less than two days old.
+  const [saved] = useState(() => {
+    const s = persist ? loadSave(lesson.id) : null;
+    return s && s.review === review ? s : null;
+  });
+  // The lesson is built from a seed, so a saved run rebuilds the same exercises.
+  const [seed] = useState(() => saved?.seed ?? (Date.now() >>> 0));
   // The lesson is planned once, with the setting it started with; switching sound off midway
   // skips the listening exercises that are left instead (see audioOff).
-  const [quietAtStart] = useState(quiet);
+  const [quietAtStart] = useState(() => saved?.quiet ?? quiet);
   const initial = useMemo(
-    () => exercises ?? buildLesson(lesson, { review, quiet: quietAtStart }),
-    [exercises, lesson, review, quietAtStart],
+    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart }),
+    [exercises, lesson, review, seed, quietAtStart],
   );
-  const [queue, setQueue] = useState<Exercise[]>(() => [...initial, ...(repeats ?? [])]);
-  const [index, setIndex] = useState(startAt);
+  // The saved place in that list, with the mistakes queued then (null: start from the top).
+  const [resumed] = useState(() => (saved ? restoreSave(saved, initial) : null));
+  const [queue, setQueue] = useState<Exercise[]>(() => resumed?.queue ?? [...initial, ...(repeats ?? [])]);
+  const [index, setIndex] = useState(() => resumed?.index ?? startAt);
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [checked, setChecked] = useState(false);
-  const graded = useRef({ right: 0, total: 0 });
-  const wordResults = useRef<Record<string, boolean>>({});
-  /** "I can't listen now" without a saved setting to switch (screenshot harness). */
+  const graded = useRef(saved && resumed ? { right: saved.right, total: saved.total } : { right: 0, total: 0 });
+  /** Right answers in a row (graded exercises only); a miss resets it without a word. */
+  const [run, setRun] = useState(resumed ? saved!.run : 0);
+  /** Misses in a row: the character's "oops" plays on the first one only. */
+  const [misses, setMisses] = useState(resumed ? saved!.misses : 0);
+  /** The main button turns into the outcome-coloured Continue 120 ms after Check. */
+  const [swapped, setSwapped] = useState(false);
+  /** The run label (runs of 3, 5, 8), shown 300 ms after Check for 1.5 s, also past Continue;
+   *  `sweep` replays the bar highlight and keys the label. */
+  const [runLabel, setRunLabel] = useState<number | null>(null);
+  const [sweep, setSweep] = useState(0);
+  useEffect(() => {
+    if (!runLabel) return;
+    const t = window.setTimeout(() => setRunLabel(null), 1500);
+    return () => window.clearTimeout(t);
+  }, [runLabel, sweep]);
+  /** Screen-reader announcement, filled one tick after Check (the region itself is always there). */
+  const [live, setLive] = useState('');
+  /** The Check choreography's timers; cleared on Continue and when the lesson closes. */
+  const timers = useRef<number[]>([]);
+  const later = (ms: number, fn: () => void) => { timers.current.push(window.setTimeout(fn, ms)); };
+  const clearTimers = () => { timers.current.forEach((t) => window.clearTimeout(t)); timers.current = []; };
+  useEffect(() => {
+    const list = timers;
+    return () => list.current.forEach((t) => window.clearTimeout(t));
+  }, []);
+  /** The exercise on screen and a layer for the one leaving (a copy that slides out, 160 ms). */
+  const slideRef = useRef<HTMLDivElement>(null);
+  const ghostRef = useRef<HTMLDivElement>(null);
+  /** The new exercise's entrance (staggered); the class comes off afterwards, so later state
+   *  changes (a shake, a flash) never replay it. */
+  const [entering, setEntering] = useState(true);
+  useEffect(() => {
+    if (!entering) return;
+    const t = window.setTimeout(() => setEntering(false), 700);
+    return () => window.clearTimeout(t);
+  }, [entering, index]);
+  const rtl = lang?.dir === 'rtl';
+  const goRef = useRef<HTMLButtonElement>(null);
+  const wordResults = useRef<Record<string, boolean>>(resumed ? { ...saved!.words } : {});
+  /** The header toggle without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
   const soundOff = quiet || cantListen;
-  const audioOff = !speechAvailable() || soundOff;
-  /** Short line after the sound setting changed: 'off' = without sound, 'on' = sound on. */
-  const [soundNote, setSoundNote] = useState<'off' | 'on' | null>(null);
+  /** "I can't listen now": only this lesson's listening exercises are left out; sound stays on
+   *  and the "Without sound" setting is not touched. */
+  const [skipListening, setSkipListening] = useState(false);
+  const audioOff = !speechAvailable() || soundOff || skipListening;
+  /** Listening exercises left out, counted out loud on the result. */
+  const skipped = useRef(0);
+  /** Short line after the sound changed: 'off' = without sound, 'on' = sound on, 'skip' = this
+   *  lesson's listening questions are left out. */
+  const [soundNote, setSoundNote] = useState<'off' | 'on' | 'skip' | null>(null);
   useEffect(() => {
     if (!soundNote) return;
     const t = setTimeout(() => setSoundNote(null), 4500);
@@ -139,33 +268,148 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   }, [soundNote]);
 
   const ex = queue[index];
-  // Quitting loses the lesson's answers, so the X and the system Back button ask first.
+
+  /*
+   * Resume: the place is saved after every answer (on the exercise that comes next) and when the
+   * app goes to the background. The last exercise answered keeps the save from before it, so a
+   * reload there asks it again instead of losing the lesson. Finishing clears the save.
+   */
+  const latest = useRef({ queue, index, checked, run, misses });
+  latest.current = { queue, index, checked, run, misses };
+  const finished = useRef(false);
+  const writeNow = useCallback(() => {
+    if (!persist || finished.current) return;
+    const s = latest.current;
+    const at = s.checked ? s.index + 1 : s.index;
+    if (at >= s.queue.length) return;
+    const save = makeSave({
+      lessonId: lesson.id, review, quiet: quietAtStart, seed, initial, queue: s.queue, index: at,
+      right: graded.current.right, total: graded.current.total, words: wordResults.current,
+      run: s.run, misses: s.misses, now: Date.now(),
+    });
+    if (save) writeSave(save);
+  }, [persist, lesson.id, review, quietAtStart, seed, initial]);
+  useEffect(() => { writeNow(); }, [writeNow, index, checked, queue.length]);
+  useEffect(() => {
+    if (!persist) return;
+    // A save that no longer fits the lesson (changed in an update) is dropped.
+    if (saved && !resumed) clearSave(lesson.id);
+    const onHide = () => { if (document.visibilityState === 'hidden') writeNow(); };
+    document.addEventListener('visibilitychange', onHide);
+    window.addEventListener('pagehide', writeNow);
+    return () => {
+      document.removeEventListener('visibilitychange', onHide);
+      window.removeEventListener('pagehide', writeNow);
+    };
+  }, [persist, writeNow]); // eslint-disable-line react-hooks/exhaustive-deps
+  // The X and the system Back button ask first (a resumable lesson keeps its place).
   const [askQuit, setAskQuit] = useState(false);
+  /** The emergency phrases (⚠ in the header), as a sheet over the lesson. */
+  const [phrases, setPhrases] = useState(false);
+  const phrasesOpen = useRef(false);
+  phrasesOpen.current = phrases;
   const firstBack = useRef(backSignal);
   useEffect(() => {
-    // Back while the sheet is open means "never mind": close it.
-    if (backSignal !== firstBack.current) setAskQuit((open) => !open);
+    if (backSignal === firstBack.current) return;
+    // Back with the phrases open closes them; otherwise Back asks "Stop this lesson?", and
+    // Back while that sheet is open means "never mind": close it.
+    if (phrasesOpen.current) setPhrases(false);
+    else setAskQuit((open) => !open);
   }, [backSignal]);
   const footRef = useRef<HTMLElement>(null);
+  const bodyRef = useRef<HTMLElement>(null);
+  /**
+   * The footer is pinned to the bottom, unless it would take more than three quarters of the
+   * screen (200% zoom): then it scrolls with the page. A long feedback label scrolls inside
+   * itself instead (styles.css, .feedback-text), so Continue stays in view. --foot-h keeps focused
+   * elements clear of a pinned footer (scroll-padding), and moreBelow shows a soft shadow on
+   * its top edge while there is more of the exercise underneath it.
+   */
+  const [footStatic, setFootStatic] = useState(false);
+  const [moreBelow, setMoreBelow] = useState(false);
+  useEffect(() => {
+    const foot = footRef.current;
+    const body = bodyRef.current;
+    if (!foot || !body) return;
+    const root = document.documentElement;
+    let raf = 0;
+    const measure = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const tall = foot.offsetHeight > window.innerHeight * 0.75;
+        setFootStatic(tall);
+        root.style.setProperty('--foot-h', `${tall ? 0 : foot.offsetHeight}px`);
+        setMoreBelow(!tall && root.scrollHeight - (window.scrollY + window.innerHeight) > 4);
+      });
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(foot);
+    ro.observe(body);
+    window.addEventListener('scroll', measure, { passive: true });
+    window.addEventListener('resize', measure);
+    return () => {
+      cancelAnimationFrame(raf);
+      ro.disconnect();
+      window.removeEventListener('scroll', measure);
+      window.removeEventListener('resize', measure);
+      root.style.removeProperty('--foot-h');
+    };
+  }, []);
   // After "Check" the feedback label grows the sticky footer. Keep the learner's pick, the right
   // option and the stamp in view above it: scroll just enough, never past the question's top.
   useEffect(() => {
     if (!checked) return;
     const raf = requestAnimationFrame(() => {
       const foot = footRef.current;
+      // A footer that scrolls with the page (200% zoom): bring the feedback label into view.
+      if (foot && footStatic) {
+        foot.querySelector('.feedback')?.scrollIntoView({ block: 'nearest', behavior: reducedMotion() ? 'auto' : 'smooth' });
+        return;
+      }
       const marked = document.querySelectorAll<HTMLElement>('.player-body .choice.wrong, .player-body .choice.right, .player-body .answer-line, .player-body .chat-bubble-me');
       if (!foot || !marked.length) return;
       const bottom = Math.max(...[...marked].map((el) => el.getBoundingClientRect().bottom));
       const top = Math.min(...[...marked].map((el) => el.getBoundingClientRect().top));
+      // The header (close, sound, progress bar) is sticky: nothing may slide under it.
+      const head = document.querySelector('.player-top')?.getBoundingClientRect().bottom ?? 0;
       const limit = foot.getBoundingClientRect().top - 12;
-      if (bottom > limit) window.scrollBy({ top: Math.min(bottom - limit, Math.max(0, top - 8)), behavior: 'smooth' });
+      // The exercise tag stays whole under the header (its top is the scroll margin): the
+      // label may cover the foot of the options rather than clip the tag.
+      const tag = document.querySelector('.player-body .ex-tag')?.getBoundingClientRect().top ?? top;
+      const room = Math.min(top, tag) - head - 8;
+      const by = Math.min(bottom - limit, Math.max(0, room));
+      if (bottom > limit && by > 0) window.scrollBy({ top: by, behavior: reducedMotion() ? 'auto' : 'smooth' });
     });
     return () => cancelAnimationFrame(raf);
-  }, [checked]);
+  }, [checked]); // eslint-disable-line react-hooks/exhaustive-deps
   const onAnswer = useCallback((a: Answer | null) => setAnswer(a), []);
+  /** The feedback label has more text below what fits (it scrolls inside itself). */
+  const fbRef = useRef<HTMLDivElement>(null);
+  const [fbMore, setFbMore] = useState(false);
+  const measureFb = useCallback(() => {
+    const el = fbRef.current;
+    setFbMore(Boolean(el && el.scrollHeight - el.scrollTop - el.clientHeight > 6));
+  }, []);
+  useEffect(() => {
+    if (!checked) { setFbMore(false); return; }
+    const t = window.setTimeout(measureFb, 420);
+    return () => window.clearTimeout(t);
+  }, [checked, measureFb]);
 
-  const firstTryDone = Math.min(index, initial.length);
-  const progress = firstTryDone / initial.length;
+  // A new exercise starts at the top (the last one may have been scrolled to show its feedback).
+  useEffect(() => {
+    if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [index]);
+  // A new exercise: focus its question, so a screen reader starts there (typing keeps the input).
+  useEffect(() => {
+    if (queue[index]?.kind === 'type' && document.activeElement?.tagName === 'INPUT') return;
+    const h = slideRef.current?.querySelector<HTMLElement>('.prompt');
+    if (!h) return;
+    h.tabIndex = -1;
+    h.focus({ preventScroll: true });
+    // Only the index matters: the queue grows when a mistake is queued, on the same exercise.
+  }, [index]); // eslint-disable-line react-hooks/exhaustive-deps
 
   function check() {
     if (!answer) return;
@@ -179,52 +423,116 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     }
     // A finished match board already gave its feedback tile by tile.
     if (ex.kind === 'match') return next();
+    // The choreography (styles.css, "Answer moment"): t=0 the options colour, the chime plays
+    // and the character reacts; the stamp lands at 60 ms and the label rises at 120 ms, when the
+    // button becomes the green or red Continue; the run stamp follows at 300 ms and the answer
+    // is spoken at 700 ms (right) or 450 ms (wrong).
+    clearTimers();
+    const newRun = nextRun(run, answer.correct);
+    setRun(newRun);
+    setMisses(nextMisses(misses, answer.correct));
     setChecked(true);
-    if (answer.correct) sounds.correct();
-    else {
+    setSwapped(false);
+    later(120, () => {
+      setSwapped(true);
+      // Enter goes on from here, also after picking with the number keys.
+      goRef.current?.focus({ preventScroll: true });
+    });
+    if (answer.correct) {
+      sounds.correct(chimeStep(newRun));
+      const stamp = runStampFor(newRun);
+      if (stamp) later(300, () => { setRunLabel(stamp); setSweep((k) => k + 1); });
+    } else {
       sounds.wrong();
       // A mistake comes back once at the end of the lesson; no endless loops.
       if (index < initial.length) setQueue((q) => [...q, ex]);
     }
     const sol = solution(ex);
+    const said = announce(ex, answer.correct, answer.almost);
+    later(30, () => setLive(said));
     // The answer is said by the character on screen, so a woman never speaks with a man's voice:
     // in a chat the right reply is "your" line (Amina); a built sentence belongs to its speaker.
-    const who =
-      ex.kind === 'chat' ? 'amina'
-      : ex.kind === 'build' ? castFor(ex.sentence.id)
-      : ex.kind === 'situation' || ex.kind === 'tip' ? castFor(ex.tip.id)
-      : 'bram';
-    if (sol.nl) autoSpeak(sol.text, false, 'nl', voiceFor(who));
+    const who = answerVoice(ex);
+    if (sol.nl) later(answer.correct ? 700 : 450, () => autoSpeak(sol.text, false, 'nl', voiceFor(who)));
+  }
+
+  /** What the status region says after Check: the outcome, then the right answer. */
+  function announce(e: Exercise, correct: boolean, almost?: boolean): string {
+    const title = correct ? 'Goed zo!' : e.kind === 'situation' ? 'Hier gaat het anders.' : 'Nog eens!';
+    const meaning = ui(correct ? (almost ? 'almost' : e.kind === 'situation' ? 'goodChoice' : 'correct') : e.kind === 'situation' ? 'otherChoice' : 'incorrect', lang);
+    const p = answerPair(e, lang);
+    const answerText = p ? `${p.nl ? `${p.nl} = ` : ''}${p.meaning.en}${p.meaning.help ? ` (${p.meaning.help})` : ''}` : '';
+    const lead = !correct ? `${ui(e.kind === 'situation' ? 'bestAnswer' : 'correctAnswer').en}: ` : '';
+    return [title, `${meaning.en}${meaning.help ? ` (${meaning.help})` : ''}.`, answerText && `${lead}${answerText}`].filter(Boolean).join(' ');
+  }
+
+  /** Copy the exercise on screen into the ghost layer, where it slides out while the next comes in. */
+  function leave() {
+    const from = slideRef.current;
+    const layer = ghostRef.current;
+    if (!from || !layer) return;
+    const copy = from.cloneNode(true) as HTMLElement;
+    copy.classList.remove('ex-enter');
+    copy.classList.add('ex-leave');
+    copy.setAttribute('aria-hidden', 'true');
+    copy.setAttribute('inert', '');
+    layer.replaceChildren(copy);
+    setEntering(true);
+    const t = window.setTimeout(() => copy.remove(), 200);
+    timers.current.push(t);
   }
 
   function finish() {
     const { right, total } = graded.current;
+    finished.current = true;
+    if (persist) clearSave(lesson.id);
     sounds.done();
-    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current });
+    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current });
+  }
+
+  function reset() {
+    clearTimers();
+    setAnswer(null);
+    setChecked(false);
+    setSwapped(false);
+    setLive('');
   }
 
   function next() {
-    setAnswer(null);
-    setChecked(false);
+    reset();
     let i = index + 1;
     // Skip audio-only exercises when the learner can't listen right now.
-    while (audioOff && i < queue.length && needsAudio(queue[i])) i++;
+    while (audioOff && i < queue.length && needsAudio(queue[i])) { if (i < initial.length) skipped.current += 1; i++; }
     if (i >= queue.length) {
       finish();
-    } else setIndex(i);
+    } else {
+      leave();
+      setIndex(i);
+    }
   }
 
   /** Leave the listening exercise on screen (unanswered) for the next one that needs no sound. */
   function skipAudio() {
-    setAnswer(null);
-    setChecked(false);
+    reset();
+    // Only exercises that would have counted are "skipped" (a mistake coming back is not).
+    if (index < initial.length) skipped.current += 1;
     let i = index + 1;
-    while (i < queue.length && needsAudio(queue[i])) i++;
+    while (i < queue.length && needsAudio(queue[i])) { if (i < initial.length) skipped.current += 1; i++; }
     if (i >= queue.length) finish();
-    else setIndex(i);
+    else {
+      leave();
+      setIndex(i);
+    }
   }
 
-  /** Sound off for good (header toggle or "I can't listen now"), or back on. */
+  /** "I can't listen now": leave out this lesson's listening exercises (this one included). */
+  function cantListenNow() {
+    setSkipListening(true);
+    setSoundNote('skip');
+    if (needsAudio(ex) && !checked) skipAudio();
+  }
+
+  /** Sound off for good (the header toggle, a saved setting), or back on. */
   function setSound(off: boolean) {
     if (onQuiet) onQuiet(off);
     else setCantListen(off);
@@ -233,8 +541,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     if (off && needsAudio(ex) && !checked) skipAudio();
   }
 
+  const closePhrases = useCallback(() => setPhrases(false), []);
   const verdict: 'right' | 'wrong' | undefined = checked && answer && isGraded(ex) ? (answer.correct ? 'right' : 'wrong') : undefined;
-  const props = { lang, locked: checked, onAnswer, verdict };
+  const props = { lang, locked: checked, onAnswer, verdict, run, misses };
   const key = `${index}`;
   let body: React.ReactNode;
   switch (ex.kind) {
@@ -256,20 +565,61 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   // (In a chat this is what the right reply means; in a situation, the usual choice.)
   const pair = answerPair(ex, lang);
   // The heading is Dutch ("Goed zo!" / "Nog eens!"); its meaning sits under it in small type.
+  // A situation is graded like the rest: the usual choice is green with a check; any other
+  // choice is red with a cross and the best answer under it (never a neutral sheet).
+  const outcome: 'right' | 'wrong' | null = feedback ? (answer.correct ? 'right' : 'wrong') : null;
   const headingMeaning = feedback
     ? ui(answer.correct ? (answer.almost ? 'almost' : ex.kind === 'situation' ? 'goodChoice' : 'correct') : ex.kind === 'situation' ? 'otherChoice' : 'incorrect', lang)
     : null;
   const pairHelp = pair?.meaning.help ?? '';
-  const pairLine = pair && (
+  // A wrong sentence: the right one as tiles, the words that were out of place or missing
+  // underlined in red (a position diff of the tiles laid against the solution).
+  const diff = feedback && !answer.correct && ex.kind === 'build' && answer.given ? tileDiff(answer.given, ex.sentence.nl) : null;
+  // A built sentence or a chat reply: a ▶ that says it again in the speaker's voice, the Dutch
+  // (as tiles after a wrong sentence), its meaning large in the help language, English small.
+  const sayable = feedback && pair?.nl && (ex.kind === 'build' || ex.kind === 'chat');
+  const replay = sayable && pair?.nl ? (
+    <button
+      type="button"
+      className="replay-btn"
+      onClick={() => speak(pair.nl!, false, 'nl', voiceFor(answerVoice(ex)))}
+      aria-label={`${ui('playAgain').en}: ${pair.nl}`}
+      title={ui('playAgain', lang).help ?? ui('playAgain').en}
+    >
+      <PlayGlyph />
+    </button>
+  ) : null;
+  const pairLine = pair && sayable ? (
+    <div className="feedback-pair feedback-say">
+      <div className="pair-say" dir="ltr">
+        {replay}
+        {diff ? (
+          <span className="pair-tiles" lang="nl">
+            {diff.map((t, i) => (
+              <span key={i} className={`ftile ${t.ok ? '' : 'ftile-miss'}`}>
+                {t.word}
+                {!t.ok && <span className="sr-only"> ({ui('incorrect').en})</span>}
+              </span>
+            ))}
+          </span>
+        ) : (
+          <strong className="pair-nl" lang="nl">{pair.nl}</strong>
+        )}
+      </div>
+      {pairHelp && lang && <HelpText className="pair-gloss" text={pairHelp} lang={lang} />}
+      <span className="pair-en" lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
+    </div>
+  ) : pair && (
     <div className="feedback-pair">
-      <span className="pair-main">
+      {/* "de helm = the helmet" is one left-to-right unit, also inside right-to-left text. */}
+      <span className="pair-main" dir={rtl ? 'ltr' : undefined}>
         {pair.nl && (
           <>
-            <strong lang="nl">{pair.nl}</strong>
+            <strong lang="nl" dir={rtl ? 'ltr' : undefined}>{pair.nl}</strong>
             <span className="pair-eq"> = </span>
           </>
         )}
-        <span className="bi-en">{pair.meaning.en}</span>
+        <span className="bi-en" lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
       </span>
       {pairHelp && lang && (
         <HelpText text={pairHelp} lang={lang} />
@@ -280,19 +630,21 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const why = ex.kind === 'situation' ? gloss(ex.tip.why.id, ex.tip.why.en, lang) : null;
   const whyLine = why && (
     <div className="feedback-meaning feedback-why">
-      <span className="bi-en">{why.en}</span>
+      <span className="bi-en" lang="en" dir={rtl ? 'ltr' : undefined}>{why.en}</span>
       {why.help && why.lang && <HelpText text={why.help} lang={why.lang} />}
     </div>
   );
   const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip';
-  // Segments: one per planned exercise, then one kraft segment per mistake that comes back.
-  const segState = (i: number) => (i < index || (i === index && checked) ? 'seg-done' : i === index ? 'seg-now' : '');
-  const count = Math.min(index + 1, initial.length);
+  // One bar: ink for done, yellow for where you are, a kraft tail for mistakes that come back.
+  const bar = barParts(index, checked, initial.length, queue.length);
+  const doneCount = Math.round(bar.done * bar.slots);
   /** In the retry phase: how many mistakes are left, this one included. */
   const repeatsLeft = index >= initial.length ? queue.length - index : 0;
 
   return (
-    <div className="player">
+    // A right-to-left help language mirrors the whole player (header, cards, feedback); the Dutch
+    // and English in it keep their own direction (lang="nl" / lang="en" isolates, styles.css).
+    <div className={`player ${rtl ? 'player-rtl' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
       <header className="player-top">
         <button type="button" className="icon-btn" onClick={() => setAskQuit(true)} aria-label="Quit lesson"><CloseIcon size={28} /></button>
         {/* Sound on/off for a learner on the bus; pressed = "Without sound" (saved, see Settings). */}
@@ -307,22 +659,57 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
           {soundOff ? <SpeakerOffIcon size={26} /> : <SpeakerIcon size={26} />}
         </button>
         <div className="bar-wrap">
-          <div className="segs" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>
-            {queue.map((_, i) => <span key={i} className={`seg ${i >= initial.length ? 'seg-repeat' : ''} ${segState(i)}`} />)}
+          <div
+            className="lbar"
+            role="progressbar"
+            aria-label="Lesson progress"
+            aria-valuemin={0}
+            aria-valuemax={bar.slots}
+            aria-valuenow={doneCount}
+            aria-valuetext={`${doneCount} / ${bar.slots}`}
+          >
+            {bar.tail > 0 && <span className="lbar-tail" style={{ width: `${bar.tail * 100}%` }} />}
+            {bar.now !== null && (
+              <span className="lbar-now" style={{ width: `${100 / bar.slots}%`, transform: `translateX(${(rtl ? -1 : 1) * bar.now * 100}%)` }} />
+            )}
+            <span className="lbar-fill" style={{ transform: `scaleX(${bar.done})` }} />
+            {/* A thin notch between exercises, so the steps can be counted (up to ~20 read fine). */}
+            <span className="lbar-ticks" style={{ '--n': bar.slots } as React.CSSProperties} />
+            {sweep > 0 && <span key={sweep} className="lbar-sweep" />}
           </div>
         </div>
         <span className="lesson-name">
           <Bi text={gloss(lesson.id, lesson.title, lang)} />
         </span>
+        {/* Emergency phrases, one tap away during a lesson (a sheet; the lesson waits): the
+            lifebuoy of the Hulp tab in calm ink, with its word in the help language under it. */}
+        <button
+          type="button"
+          className="icon-btn sos-btn"
+          onClick={() => setPhrases(true)}
+          aria-haspopup="dialog"
+          aria-label={`Noodzinnen · ${ui('phrasebook').en}${lang?.ui.phrasebook ? ` · ${lang.ui.phrasebook}` : ''}`}
+          title={lang?.ui.phrasebook ?? ui('phrasebook').en}
+        >
+          <LifebuoyIcon size={24} />
+          {lang?.ui.navWords
+            ? <HelpText className="sos-label" text={lang.ui.navWords} lang={lang} />
+            : <span className="sos-label" lang="nl">Hulp</span>}
+        </button>
+        {/* The run label and the sound note hang just under the header, never over the close
+            button, the sound toggle or the progress bar. */}
+        {runLabel && <RunLabel key={sweep} n={runLabel} lang={lang} />}
+        {soundNote && (
+          <div className="sound-note" role="status" key={soundNote} onClick={() => setSoundNote(null)}>
+            {soundNote === 'on' ? <SpeakerIcon size={20} /> : soundNote === 'skip' ? <EarIcon size={20} /> : <SpeakerOffIcon size={20} />}
+            <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : soundNote === 'skip' ? 'listenSkipped' : 'soundOn', lang)} />
+          </div>
+        )}
       </header>
 
-      {soundNote && (
-        <div className="sound-note" role="status" key={soundNote}>
-          {soundNote === 'off' ? <SpeakerOffIcon size={20} /> : <SpeakerIcon size={20} />}
-          <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : 'soundOn', lang)} />
-        </div>
-      )}
-      <main className="player-body">
+      <main className="player-body" ref={bodyRef}>
+        <div className="ex-ghost" ref={ghostRef} aria-hidden />
+        <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
         <div className="ex-tag">
           {repeatsLeft > 0 ? (
             <>
@@ -332,74 +719,82 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
               <Bi className="ex-tag-note" text={fillN(ui('practiseMistakes', lang), repeatsLeft)} />
             </>
           ) : (
-            <>
-              <span className="tag" lang="nl">{KIND_TAG[ex.kind]}</span>
-              <span className="ex-count">{count} / {initial.length}</span>
-              {/* New-word exercises: translate the Dutch tag into English and the help language. */}
-              {(ex.kind === 'dutch' || ex.kind === 'intro') && <Bi className="ex-tag-note" text={ui('newWord', lang)} />}
-            </>
+            <KindTag kind={ex.kind} lang={lang} />
           )}
         </div>
         {body}
+        </div>
       </main>
-      <footer className="player-foot" ref={footRef}>
+      <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''}`} ref={footRef}>
         <div className="foot-inner">
-          {feedback && (
-            <div
-              className={`feedback ${answer.correct ? 'feedback-right' : ex.kind === 'situation' ? 'feedback-other' : 'feedback-wrong'}`}
-              role="status"
-            >
+          {/* Always present, so screen readers hear what is put in it one tick after Check. */}
+          <div className="sr-only" role="status">{live}</div>
+          {feedback && outcome && (
+            <div className={`feedback feedback-${outcome}`}>
               <span className="feedback-tape" aria-hidden />
-              <div className="feedback-text">
-                <div className="feedback-head">
-                  <div className="feedback-title" lang="nl">
-                    {answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Nog eens!'}
+              <span className="feedback-icon" aria-hidden>
+                {outcome === 'right' ? <CheckIcon size={26} /> : <CloseIcon size={26} />}
+              </span>
+              {/* A right-to-left help language: the whole label reads from the right, with the
+                  Dutch and English pieces kept in their own direction. */}
+              <div className={`feedback-text ${fbMore ? 'has-more' : ''}`} dir={rtl ? 'rtl' : undefined} ref={fbRef} onScroll={measureFb} tabIndex={fbMore ? 0 : undefined}>
+                {/* Heading: the help language first and large; the Dutch words and English under it. */}
+                <div className={`feedback-head ${headingMeaning?.help ? 'has-help' : ''}`}>
+                  {headingMeaning?.help && lang && <HelpText className="feedback-help" text={headingMeaning.help} lang={lang} />}
+                  <div className="feedback-line">
+                    <span className="feedback-title" lang="nl" dir={rtl ? 'ltr' : undefined}>
+                      {answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Nog eens!'}
+                    </span>
+                    {headingMeaning?.help && <span className="feedback-sep" aria-hidden>·</span>}
+                    {headingMeaning && <span className="feedback-en" lang="en" dir={rtl ? 'ltr' : undefined}>{headingMeaning.en}</span>}
                   </div>
-                  {headingMeaning && <Bi className="feedback-sub" text={headingMeaning} />}
                 </div>
                 {(pairLine || whyLine) && <hr className="feedback-rule" />}
-                {!answer.correct && sol.text && ex.kind !== 'situation' && (
+                {!answer.correct && sol.text && (
                   <div className="feedback-kicker">
-                    <Bi text={ui('correctAnswer', lang)} />
+                    <Bi text={ui(ex.kind === 'situation' ? 'bestAnswer' : 'correctAnswer', lang)} />
                   </div>
                 )}
                 {pairLine}{whyLine}
               </div>
+              {fbMore && <span className="feedback-more" aria-hidden><ChevronDownIcon size={20} /></span>}
             </div>
           )}
           <div className="foot-actions">
             {needsAudio(ex) && !checked && (
-              <button type="button" className="btn btn-ghost" onClick={() => setSound(true)}>
+              <button type="button" className="btn btn-ghost" onClick={cantListenNow}>
                 <Bi text={ui('cantListen', lang)} />
               </button>
             )}
-            {checked || autoContinue ? (
-              <button
-                type="button"
-                className={`btn btn-go ${checked ? 'btn-dark' : 'btn-primary'}`}
-                disabled={!answer}
-                onClick={checked ? next : check}
-                autoFocus
-              >
-                {ui('continue', lang).en}
-                <ButtonBlock icon="next" />
-              </button>
-            ) : (
-              <button type="button" className="btn btn-go btn-primary" disabled={!answer} onClick={check}>
-                {ui('check', lang).en}
-                <ButtonBlock icon="check" />
-              </button>
-            )}
+            {/* One button per exercise (it fades in with the exercise). After Check it keeps focus and
+                becomes Continue in the outcome's colour, without blending through olive. */}
+            <button
+              key={key}
+              type="button"
+              className={`btn btn-go ${checked && swapped && outcome ? `btn-${outcome} btn-swap` : 'btn-primary'}`}
+              dir={rtl ? 'rtl' : undefined}
+              disabled={!answer}
+              onClick={checked ? next : check}
+              ref={goRef}
+            >
+              {/* The help language large, the English small under it (just English without one). */}
+              <Bi className="btn-label" text={ui((checked && swapped) || autoContinue ? 'continue' : 'check', lang)} />
+              <ButtonBlock icon={(checked && swapped) || autoContinue ? 'next' : 'check'} />
+            </button>
           </div>
         </div>
       </footer>
-      {askQuit && <QuitSheet lang={lang} onKeep={() => setAskQuit(false)} onStop={onQuit} />}
+      {askQuit && <QuitSheet lang={lang} kept={persist} onKeep={() => setAskQuit(false)} onStop={onQuit} />}
+      {phrases && <PhraseSheet lang={lang} onClose={closePhrases} />}
     </div>
   );
 }
 
-/** "Stop this lesson?": a bottom sheet with two big buttons; keep going is the main one. */
-function QuitSheet({ lang, onKeep, onStop }: { lang?: HelpLanguage; onKeep: () => void; onStop: () => void }) {
+/**
+ * "Stop this lesson?": a bottom sheet with two big buttons; keep going is the main one.
+ * kept: the lesson's place is saved (resume), so the hint says the progress stays.
+ */
+function QuitSheet({ lang, kept, onKeep, onStop }: { lang?: HelpLanguage; kept: boolean; onKeep: () => void; onStop: () => void }) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onKeep(); };
     window.addEventListener('keydown', onKey);
@@ -410,7 +805,10 @@ function QuitSheet({ lang, onKeep, onStop }: { lang?: HelpLanguage; onKeep: () =
       <div className="sheet" role="alertdialog" aria-modal="true" aria-labelledby="quit-title" aria-describedby="quit-hint" onClick={(e) => e.stopPropagation()}>
         <span className="sheet-hazard" aria-hidden />
         <h2 id="quit-title" className="sheet-title"><Bi text={ui('quitTitle', lang)} /></h2>
-        <p id="quit-hint" className="sheet-hint"><Bi text={ui('quitHint', lang)} /></p>
+        <p id="quit-hint" className="sheet-hint">
+          {kept && <span className="sheet-hint-nl" lang="nl">Je voortgang blijft bewaard.</span>}
+          <Bi text={ui(kept ? 'quitKept' : 'quitHint', lang)} />
+        </p>
         <div className="sheet-actions">
           <button type="button" className="btn btn-go btn-primary" onClick={onKeep} autoFocus>
             <Bi text={ui('keepGoing', lang)} />

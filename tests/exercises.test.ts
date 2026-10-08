@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { allLessons, units } from '../src/content/curriculum';
+import { allLessons, teachingLessons, units } from '../src/content/curriculum';
 import { tokenize } from '../src/lib/answers';
-import { AUDIO_ONLY_KINDS, buildLesson, isNextInCourse, isUnlocked, needsAudio } from '../src/lib/exercises';
+import { AUDIO_ONLY_KINDS, buildLesson, isNextInCourse, isUnlocked, needsAudio, wordsBefore } from '../src/lib/exercises';
 
 describe('lesson builder', () => {
   for (const lesson of allLessons) {
@@ -98,6 +98,64 @@ describe('mixed review lessons', () => {
       expect(ex.some((e) => e.kind === 'intro'), lesson.id).toBe(false);
       const asked = new Set(ex.filter((e) => e.kind === 'meaning').map((e) => (e as { word: { id: string } }).word.id));
       for (const w of lesson.words) expect(asked.has(w.id), `${lesson.id} ${w.id}`).toBe(true);
+    }
+  });
+});
+
+describe('wrong options come from words already met', () => {
+  it('a quiz right after new words only offers words introduced so far or in earlier lessons', () => {
+    for (const lesson of teachingLessons) {
+      const before = new Set(wordsBefore(lesson).map((w) => w.id));
+      for (const seed of [1, 7, 42, 2026]) {
+        const exercises = buildLesson(lesson, { review: false, seed });
+        const introduced = new Set<string>();
+        for (const ex of exercises) {
+          if (ex.kind === 'intro') introduced.add(ex.word.id);
+          if (ex.kind !== 'meaning') continue;
+          for (const o of ex.options) {
+            expect(introduced.has(o.id) || before.has(o.id), `${lesson.id} seed ${seed}: ${o.nl} before it was introduced`).toBe(true);
+          }
+        }
+      }
+    }
+  });
+
+  it('lesson 1.1 never shows "tot morgen" before it was introduced', () => {
+    const hello = teachingLessons[0];
+    expect(hello.id).toBe('l.hello');
+    for (let seed = 0; seed < 200; seed++) {
+      const exercises = buildLesson(hello, { review: false, seed });
+      const at = exercises.findIndex((e) => e.kind === 'intro' && e.word.id === 'w.totmorgen');
+      for (const ex of exercises.slice(0, at)) {
+        if (ex.kind === 'meaning') expect(ex.options.map((o) => o.id)).not.toContain('w.totmorgen');
+      }
+    }
+  });
+
+  it('later choices prefer the lesson and earlier lessons over words still to come', () => {
+    for (const lesson of teachingLessons.slice(1)) {
+      const known = new Set([...lesson.words, ...wordsBefore(lesson)].map((w) => w.id));
+      for (const ex of buildLesson(lesson, { review: true, seed: 3 })) {
+        if (ex.kind === 'meaning' || ex.kind === 'listen') for (const o of ex.options) expect(known.has(o.id), `${lesson.id}: ${o.nl}`).toBe(true);
+      }
+    }
+  });
+});
+
+describe('the character of a tip matches the text', () => {
+  it('a situation about a woman shows a woman, one about a man shows a man', async () => {
+    const { cultureTips, tipGender } = await import('../src/content/culture');
+    const { tipCast } = await import('../src/components/Characters');
+    const women = new Set(['amina', 'jada']);
+    expect(tipGender(cultureTips.find((t) => t.id === 'c.je')!)).toBe('f');
+    for (const t of cultureTips) {
+      const g = tipGender(t);
+      const who = tipCast(t);
+      expect(who, t.id).not.toBe('amina');
+      if (g === 'f') expect(women.has(who), `${t.id}: ${who}`).toBe(true);
+      if (g === 'm') expect(women.has(who), `${t.id}: ${who}`).toBe(false);
+      if (/\b(she|her)\b/i.test(t.situation.en)) expect(g, t.id).toBe('f');
+      if (/\b(he|him|his)\b/i.test(t.situation.en) && !/\b(she|her)\b/i.test(t.situation.en)) expect(g, t.id).toBe('m');
     }
   });
 });

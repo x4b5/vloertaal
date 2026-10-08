@@ -1,21 +1,36 @@
+import { useId } from 'react';
+
 /**
- * The Vloertaal logo (house style B, "Magazijnvloer"): a bold yellow "V" wearing an
- * orange hard hat, with a white check mark (you got it right), on an ink-dark tile.
- * LogoMark is the app icon; Wordmark is the name. Keep in sync with public/icon.svg.
+ * The Vloertaal logo: a black rubber stamp on safety yellow, slightly tilted, with
+ * "VLOERTAAL · NEDERLANDS VOOR HET WERK" around a V. Small sizes (under 56px) drop the
+ * ring text and thicken the ring so it stays sharp. LogoMark is the app icon; Wordmark is
+ * the name. Keep in sync with public/icon.svg (the small version) and the PNG icons.
+ * `check` is kept for older call sites and no longer changes the mark.
  */
-export function LogoMark({ size = 40, check = true }: { size?: number; check?: boolean }) {
+export function LogoMark({ size = 40 }: { size?: number; check?: boolean }) {
+  const ring = `ring-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
+  const full = size >= 56;
   return (
     <svg className="logo-mark" viewBox="0 0 120 120" width={size} height={size} aria-hidden focusable="false">
-      <rect width="120" height="120" rx="28" fill="#1e2226" />
-      <path d="M30 30h18l12 38 12-38h18L70 92H50z" fill="#ffc414" />
-      <path d="M40 24a20 15 0 0 1 40 0z" fill="#ff7a00" />
-      <rect x="34" y="21" width="52" height="7" rx="3.5" fill="#d96500" />
-      {check && (
-        <>
-          <circle cx="88" cy="88" r="13" fill="#fff" />
-          <path d="M82 88l4 4 8-8" stroke="#1e2226" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        </>
-      )}
+      <rect width="120" height="120" rx="28" fill="#ffc414" />
+      <g transform="rotate(-10 60 60)" fill="#1e2226" stroke="#1e2226">
+        {full ? (
+          <>
+            <circle cx="60" cy="60" r="44" fill="none" strokeWidth="6" />
+            <circle cx="60" cy="60" r="31" fill="none" strokeWidth="2.5" />
+            <path id={ring} d="M60 60m-36.2 0a36.2 36.2 0 1 1 72.4 0a36.2 36.2 0 1 1-72.4 0" fill="none" stroke="none" />
+            <text fontFamily="'Lexend Variable', Lexend, system-ui, sans-serif" fontWeight={800} fontSize="6.6" letterSpacing="1.25" stroke="none">
+              <textPath href={`#${ring}`} startOffset="2%">VLOERTAAL · NEDERLANDS VOOR HET WERK ·</textPath>
+            </text>
+            <path d="M43 41h11l6 20 6-20h11L66 79H54z" stroke="none" />
+          </>
+        ) : (
+          <>
+            <circle cx="60" cy="60" r="42" fill="none" strokeWidth="9" />
+            <path d="M38 36h14l8 26 8-26h14L68 86H52z" stroke="none" />
+          </>
+        )}
+      </g>
     </svg>
   );
 }

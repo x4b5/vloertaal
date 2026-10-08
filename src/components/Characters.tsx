@@ -1,6 +1,7 @@
 import { useEffect, useId, useLayoutEffect, useState } from 'react';
 import { onSpeech } from '../lib/audio';
 import { FACES, type Expr, type TalkFrame } from './Faces';
+import { tipGender, type CultureTip } from '../content/culture';
 
 /**
  * The Vloertaal cast: four colleagues from the work floor, drawn as flat-vector busts in one
@@ -655,8 +656,10 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
 }) {
   const look = LOOKS[who];
   const face = FACES[who];
-  // The reaction (~800 ms) shows its face first; any talking waits until it has landed.
-  const reacting = useOneShot(mood === 'happy', 800);
+  // The cheer shows its open-mouthed joy first and holds it for 760 ms (past the landing of the
+  // jump); only then may the mouth talk, so the cheer is never swallowed by the spoken answer
+  // that starts at 700 ms (see LessonPlayer).
+  const reacting = useOneShot(mood === 'happy', 760);
   const talking = (!!talkingProp || mood === 'talking') && !reacting;
   const frame = useTalkFrame(talking);
   const expr = exprFor(mood);
@@ -923,4 +926,16 @@ export function castFor(seed: string, from: CharacterId[] = CAST): CharacterId {
   let h = 0;
   for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
   return from[h % from.length];
+}
+
+/**
+ * The colleague of a workplace tip and its situation: a woman when the text says "she", a man
+ * when it says "he" (see tipGender), any colleague otherwise. Amina is "you" in the chats, so
+ * she never plays the other person in a situation.
+ */
+export function tipCast(tip: CultureTip): CharacterId {
+  const g = tipGender(tip);
+  if (g === 'f') return 'jada';
+  if (g === 'm') return castFor(tip.id, ['bram', 'henk']);
+  return castFor(tip.id, ['bram', 'henk', 'jada']);
 }

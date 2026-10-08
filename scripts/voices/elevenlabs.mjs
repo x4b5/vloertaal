@@ -20,7 +20,12 @@ const only = (process.env.VOICES ?? '').split(',').map((s) => s.trim()).filter(B
 if (!key) throw new Error('ELEVENLABS_API_KEY is not set.');
 const config = JSON.parse(readFileSync('scripts/voices/elevenlabs.json', 'utf8'));
 const clips = JSON.parse(readFileSync('public/audio/clips.json', 'utf8'));
-const voices = config.voices.filter((v) => !only.length || only.includes(v.key));
+// Voice names are matched without case ("Thijmen" = "thijmen"), by key or label.
+const wantedNames = only.map((o) => o.toLowerCase());
+const voices = config.voices.filter((v) => !wantedNames.length || wantedNames.includes(v.key.toLowerCase()) || wantedNames.includes(v.label.toLowerCase()));
+if (wantedNames.length && !voices.length) {
+  throw new Error(`No voice matches "${only.join(', ')}". Known voices: ${config.voices.map((v) => v.key).join(', ')}.`);
+}
 
 // Index of what has been recorded: per voice, clip id → the exact text it says.
 const indexPath = `${OUT}/voices.json`;
@@ -43,6 +48,11 @@ const todo = voices.flatMap((v) =>
     )
     .map((c) => ({ voice: v, clip: c })),
 );
+// MAX_CLIPS: record at most this many clips per run, so the workflow can save (commit) in
+// batches and a lost runner never loses more than one batch of paid clips.
+const maxClips = Number(process.env.MAX_CLIPS || 0);
+const totalTodo = todo.length;
+if (maxClips > 0 && todo.length > maxClips) todo.length = maxClips;
 const cost = todo.reduce((n, t) => n + t.clip.text.length, 0);
 
 const headers = { 'xi-api-key': key, 'content-type': 'application/json' };
@@ -54,7 +64,7 @@ for (const v of voices) {
   const r = await fetch(`${API}/voices/${v.voiceId}`, { headers });
   console.log(`${v.label} (${v.voiceId}): ${r.ok ? 'reachable' : `NOT reachable (HTTP ${r.status}) - add it to "My Voices" in ElevenLabs`}`);
 }
-console.log(`${todo.length} clips to record, about ${cost} credits (limit for this run: ${maxCredits}).`);
+console.log(`${totalTodo} clips missing; this batch records ${todo.length}, about ${cost} credits (limit for this run: ${maxCredits}).`);
 if (mode === 'check') process.exit(0);
 if (cost > maxCredits) throw new Error(`Would spend ${cost} credits, more than MAX_CREDITS=${maxCredits}. Nothing recorded.`);
 

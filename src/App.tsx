@@ -7,21 +7,33 @@ import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
-import { Milestone } from './components/Milestone';
+import { Milestone, StreakStopped } from './components/Milestone';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
 import { type Access, lessonAllowed, loadAccess, saveAccess } from './lib/access';
 import { takeLinkedUnit } from './lib/unitLink';
-import { completeDaily, completeLesson, currentStreak, dayKey, emptyProgress, loadProgress, saveProgress, streakWentUp } from './lib/progress';
-import { DAILY_ID, addLessonWords, applyReview, dailyLesson, dailyWordIds, dueIds, seedCards } from './lib/spaced';
+import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
+import { DAILY_ID, addLessonWords, applyReview, dailyCard, dailyLesson, dailyWordIds, seedCards, strongerCount } from './lib/spaced';
+import { isNextInCourse } from './lib/exercises';
+import { mainLessons } from './content/sectors';
+import { gloss } from './i18n';
+import { persistStorage } from './lib/install';
+import { CertEarned, CertificateScreen } from './components/Certificate';
+import { earnCertificates, findUnit, unitJustDone } from './lib/certificate';
+import { count, countOpen } from './lib/count';
+import { clearSave } from './lib/resume';
 
 type View =
   | { name: 'home' }
   /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[] }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; next?: string; cert?: string; skipped?: number }
+  /** "Certificaat behaald": once, after the result of a unit's last lesson (then the streak, if it went up). */
+  | { name: 'cert-earned'; unit: string; streakUp?: number }
+  /** A unit's certificate; streakUp: opened from "Certificaat behaald", the streak milestone still follows. */
+  | { name: 'certificate'; unit: string; streakUp?: number }
   | { name: 'streak'; streak: number }
   | { name: 'words' }
   | { name: 'phrasebook' }
@@ -42,14 +54,28 @@ const current = (): Entry | null => {
 /** After a reload: back on the screen you were on, but a lesson or its result starts over at home. */
 const restored = (): View => {
   const v = current()?.view;
-  return !v || v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'admin' ? HOME : v;
+  return !v || v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'admin' ? HOME : v;
 };
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 /** A coach link (?unit=pay) asks to open the path at that unit; read once at start. */
 const linkedUnit = takeLinkedUnit();
 
+/**
+ * The saved progress, brought up to date for today: a free day covers one missed day; when the
+ * streak stopped, `stopped` holds the lost streak so a calm screen can say so once.
+ */
+function startProgress() {
+  const { progress, broken } = settleStreak(loadProgress(), new Date());
+  return { progress, stopped: broken ?? null };
+}
+
 export default function App() {
-  const [progress, setProgress] = useState(loadProgress);
+  const [start] = useState(startProgress);
+  const [progress, setProgress] = useState(start.progress);
+  /** "Je reeks is gestopt bij N": shown once on this open, before the path. */
+  const [stopped, setStopped] = useState<number | null>(start.stopped);
+  /** The lesson just finished: the path scrolls to the next one and stamps this one in. */
+  const [arrived, setArrived] = useState<string | null>(null);
   const [access, setAccess] = useState<Access | null>(loadAccess);
   const grant = (a: Access) => { saveAccess(a); setAccess(a); };
   const [view, setView] = useState<View>(() => adminRequested() ? { name: 'admin' } : linkedUnit ? HOME : restored());
@@ -107,7 +133,7 @@ export default function App() {
       leaving.current = false;
       const v = current()?.view ?? HOME;
       // A finished lesson's entry was replaced by its result; never step back into a lesson.
-      setView(v.name === 'lesson' || v.name === 'result' || v.name === 'streak' ? HOME : v);
+      setView(v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' ? HOME : v);
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
@@ -120,8 +146,21 @@ export default function App() {
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
   const lang = getHelpLanguage(progress.helpLang);
+  // The page's language is the help language (Dutch without one). The direction is set where the
+  // layout is mirrored (the lesson player and the path), so Dutch never inherits right-to-left.
+  useEffect(() => {
+    document.documentElement.lang = lang?.code ?? 'nl';
+    document.documentElement.dir = 'ltr';
+  }, [lang]);
 
   useEffect(() => { saveProgress(progress); }, [progress]);
+  // Certificates: units finished before certificates existed (or put back from a backup) get today's date.
+  useEffect(() => { setProgress((p) => earnCertificates(p, new Date())); }, [progress.completed]);
+  // Anonymous count of app opens: at most once a day, never in development (src/lib/count.ts).
+  useEffect(() => {
+    if (progress.onboarded) countOpen({ lang: progress.helpLang, sector: progress.sector });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [progress.onboarded]);
   // Learners from before "Herhaal vandaag" get cards for the words they already learned.
   useEffect(() => {
     if (!progress.cards) setProgress((p) => (p.cards ? p : { ...p, cards: seedCards(p.completed, dayKey(new Date())) }));
@@ -161,18 +200,35 @@ export default function App() {
       const found = daily ? { lesson: dailyLesson(view.ids ?? []) } : findLesson(view.lessonId);
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !found.lesson.words.length || !lessonAllowed(view.lessonId, access)) return null;
-      const finish = ({ accuracy, review, right, total, words: results }: LessonResult) => {
+      const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
         const now = new Date();
         const today = dayKey(now);
         const cards = progress.cards ?? {};
-        const next = daily
+        const next = earnCertificates(daily
           ? { ...completeDaily(progress, accuracy, now), cards: applyReview(cards, results, today) }
-          : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: addLessonWords(cards, found.lesson.words, results, today) };
+          : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: addLessonWords(cards, found.lesson.words, results, today) }, now);
         setProgress(next);
+        // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
+        const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId);
+        const dims = { lang: progress.helpLang, sector: progress.sector };
+        count(daily ? 'review-done' : 'lesson-done', dims);
+        if (unitDone) count('unit-done', dims);
+        // The first finished lesson: ask the browser to keep this site's storage (the progress).
+        if (!daily && !Object.keys(progress.completed).length) persistStorage();
         const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
         const before = learnedWords(progress.completed).size;
         const words = learnedWords(next.completed).size;
-        replace({ name: 'result', right, total, newWords: words - before, words, streakUp, repeated: daily ? found.lesson.words.length : undefined });
+        // The next lesson on the learner's own course, for "Volgende:" on the result.
+        const upNext = daily ? undefined : mainLessons(progress.sector).find((l) => isNextInCourse(l.id, next.completed, access, progress.sector));
+        if (!daily) setArrived(view.lessonId);
+        replace({
+          name: 'result', right, total, newWords: words - before, words, streakUp,
+          repeated: daily ? found.lesson.words.length : undefined,
+          stronger: daily ? strongerCount(cards, next.cards) : undefined,
+          next: upNext?.id,
+          cert: unitDone?.id,
+          skipped: skipped || undefined,
+        });
       };
       return (
         <LessonPlayer
@@ -185,6 +241,7 @@ export default function App() {
           onQuiet={setQuiet}
           onQuit={() => { leaving.current = true; back(); }}
           onFinish={finish}
+          resumable={!daily}
         />
       );
     }
@@ -196,19 +253,44 @@ export default function App() {
           newWords={view.newWords}
           words={view.words}
           repeated={view.repeated}
+          stronger={view.stronger}
+          skipped={view.skipped}
+          next={view.next ? nextTitle(view.next, lang) : undefined}
           lang={lang}
-          onDone={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}
+          onDone={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}
         />
       );
     case 'streak':
-      return <Milestone streak={view.streak} lang={lang} onDone={back} />;
+      return (
+        <Milestone
+          streak={view.streak}
+          lang={lang}
+          onDone={back}
+          days={workWeek(progress, new Date())}
+          best={bestStreak(progress)}
+          freezes={progress.freezes ?? 0}
+        />
+      );
+    case 'cert-earned':
+    case 'certificate': {
+      const unit = findUnit(view.unit);
+      if (!unit) return null;
+      const day = progress.certs?.[unit.id] ?? dayKey(new Date());
+      // After "Certificaat behaald", the day-streak milestone still follows (once per day).
+      const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back());
+      return view.name === 'cert-earned' ? (
+        <CertEarned unit={unit} day={day} lang={lang} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward} />
+      ) : (
+        <CertificateScreen unit={unit} day={day} lang={lang} onBack={onward} />
+      );
+    }
     case 'tips':
       return <Tips progress={progress} lang={lang} onBack={back} access={access} />;
     case 'about':
       return (
         <>
           <About lang={lang} />
-          <BottomNav current="about" onTab={tab} />
+          <BottomNav current="about" onTab={tab} lang={lang} />
         </>
       );
     case 'phrasebook':
@@ -225,16 +307,19 @@ export default function App() {
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
             onReset={() => {
-              // Keep look, voice, sound and sector; only learning progress is wiped.
+              // Keep look, voice, sound and sector; only learning progress is wiped (and lessons in progress).
+              clearSave();
               setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector }));
               back();
             }}
             onAbout={() => tab('about')}
+            onRestore={(next) => setProgress(next)}
             access={access}
             onAccess={grant}
             focusUpgrade={view.upgrade}
+            onCertificate={(unit) => go({ name: 'certificate', unit })}
           />
-          <BottomNav current="me" onTab={tab} />
+          <BottomNav current="me" onTab={tab} lang={lang} />
         </>
       );
     case 'words':
@@ -242,16 +327,19 @@ export default function App() {
         <>
           <WordsHub
             lang={lang}
-            onPhrasebook={() => go({ name: 'phrasebook' })}
             onTips={() => go({ name: 'tips' })}
           />
-          <BottomNav current="words" onTab={tab} />
+          <BottomNav current="words" onTab={tab} lang={lang} />
         </>
       );
     default:
+      if (stopped !== null) {
+        return <StreakStopped streak={stopped} best={bestStreak(progress)} lang={lang} onDone={() => setStopped(null)} />;
+      }
       return (
         <>
           <TopBar
+            done={doneToday(progress, new Date())}
             streak={currentStreak(progress, new Date())}
             words={learnedWords(progress.completed).size}
             lang={lang}
@@ -261,18 +349,26 @@ export default function App() {
             progress={progress}
             lang={lang}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
-            dueToday={dueIds(progress.cards ?? {}, dayKey(new Date())).length}
+            daily={Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : null}
+            arrived={arrived}
+            onArrived={() => setArrived(null)}
             onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: dailyWordIds(progress.cards ?? {}, dayKey(new Date())) })}
             onAbout={() => tab('about')}
             access={access}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
             focusUnit={focusUnit}
             onFocused={() => setFocusUnit(null)}
+            onCertificate={(unit) => go({ name: 'certificate', unit })}
           />
-          <BottomNav current="route" onTab={tab} />
+          <BottomNav current="route" onTab={tab} lang={lang} />
         </>
       );
   }
+}
+
+function nextTitle(id: string, lang: ReturnType<typeof getHelpLanguage>) {
+  const found = findLesson(id);
+  return found ? { ...gloss(id, found.lesson.title, lang), id } : undefined;
 }
 
 function adminRequested(): boolean {

@@ -285,9 +285,75 @@ function tone(freqs: number[], duration = 0.12): void {
   }
 }
 
-/** Effect sounds; silent in "Without sound". */
+/** A short note with a soft attack and decay (no click at either end). */
+function note(c: AudioContext, freq: number, at: number, dur: number, peak: number, type: OscillatorType = 'sine'): void {
+  const osc = c.createOscillator();
+  const gain = c.createGain();
+  osc.type = type;
+  osc.frequency.value = freq;
+  gain.gain.setValueAtTime(0.0001, at);
+  gain.gain.exponentialRampToValueAtTime(peak, at + Math.min(0.012, dur / 3));
+  gain.gain.exponentialRampToValueAtTime(0.0001, at + dur);
+  osc.connect(gain).connect(c.destination);
+  osc.start(at);
+  osc.stop(at + dur + 0.02);
+}
+
+function audioCtx(): AudioContext | undefined {
+  try {
+    ctx ??= new AudioContext();
+    return ctx;
+  } catch {
+    return undefined; // No Web Audio: silently skip the effect.
+  }
+}
+
+/**
+ * Effect sounds; all silent in "Without sound".
+ *  - tap: a tiny 1800 Hz click when an option is picked.
+ *  - correct: two soft notes, 660 then 990 Hz, 90 ms apart; `step` raises both a whole tone per
+ *    step of the run (0–3, see lib/lessonRun.ts).
+ *  - wrong: a low sine sliding 196 → 165 Hz through a lowpass, so it sounds like "hmm", not a buzzer.
+ */
 export const sounds = {
-  correct: () => { if (!quietAudio) tone([660, 880]); },
-  wrong: () => { if (!quietAudio) tone([300, 220], 0.16); },
+  tap: () => {
+    if (quietAudio) return;
+    const c = audioCtx();
+    if (c) note(c, 1800, c.currentTime, 0.03, 0.04, 'triangle');
+  },
+  correct: (step = 0) => {
+    if (quietAudio) return;
+    const c = audioCtx();
+    if (!c) return;
+    const k = Math.pow(2, (2 * Math.max(0, Math.min(3, step))) / 12);
+    const t = c.currentTime;
+    note(c, 660 * k, t, 0.16, 0.12);
+    note(c, 990 * k, t + 0.09, 0.22, 0.12);
+  },
+  wrong: () => {
+    if (quietAudio) return;
+    const c = audioCtx();
+    if (!c) return;
+    try {
+      const t = c.currentTime;
+      const osc = c.createOscillator();
+      const filter = c.createBiquadFilter();
+      const gain = c.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(196, t);
+      osc.frequency.exponentialRampToValueAtTime(165, t + 0.26);
+      filter.type = 'lowpass';
+      filter.frequency.value = 900;
+      gain.gain.setValueAtTime(0.0001, t);
+      gain.gain.exponentialRampToValueAtTime(0.08, t + 0.03);
+      gain.gain.setValueAtTime(0.08, t + 0.16);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.26);
+      osc.connect(filter).connect(gain).connect(c.destination);
+      osc.start(t);
+      osc.stop(t + 0.28);
+    } catch {
+      // Ignore: the visual feedback says it all.
+    }
+  },
   done: () => { if (!quietAudio) tone([523, 659, 784, 1047], 0.13); },
 };

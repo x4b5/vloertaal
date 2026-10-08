@@ -1,4 +1,4 @@
-import { allReplies, allWords, units } from '../content/curriculum';
+import { allReplies, allWords, teachingLessons, units } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
 import { mainLessons, type SectorChoice } from '../content/sectors';
 import { type CultureTip, tipForLesson } from '../content/culture';
@@ -61,8 +61,28 @@ function distractors(word: Word, pools: readonly (readonly Word[])[], n: number,
   return picked;
 }
 
-function options(word: Word, lesson: Lesson, rng: () => number, n = 3): Word[] {
-  return shuffle([word, ...distractors(word, [lesson.words, allWords], n - 1, rng)], rng);
+/**
+ * Words the learner met before this lesson: those of the lessons before it in the course
+ * (empty for the first lesson, and for lessons outside the course such as today's review).
+ */
+export function wordsBefore(lesson: Lesson): Word[] {
+  const at = teachingLessons.findIndex((l) => l.id === lesson.id);
+  return at > 0 ? teachingLessons.slice(0, at).flatMap((l) => l.words) : [];
+}
+
+/**
+ * The target and n − 1 wrong options. Wrong options come from words the learner has already
+ * met: the lesson's own words (`known`, by default all of them), then earlier lessons. Only
+ * when those run out does a word from elsewhere in the course fill in, so an option is never a
+ * word that is still to come when a known one can take its place.
+ */
+function options(word: Word, lesson: Lesson, rng: () => number, n = 3, known: readonly Word[] = lesson.words): Word[] {
+  const before = wordsBefore(lesson);
+  const met = distractors(word, [known, before], n - 1, rng);
+  // The very first quiz of the course knows only two words: a choice of two is fair.
+  if (met.length === n - 1 || (met.length >= 1 && !before.length)) return shuffle([word, ...met], rng);
+  const rest = [lesson.words, allWords].map((pool) => pool.filter((w) => !met.some((m) => clashes(w, m, false))));
+  return shuffle([word, ...met, ...distractors(word, rest, n - 1 - met.length, rng)], rng);
 }
 
 /** The words of the lesson's unit: the fallback pool for picture choices (related words). */
@@ -77,7 +97,10 @@ function unitWords(lesson: Lesson): Word[] {
  */
 export function dutchExercise(word: Word, lesson: Lesson, rng: () => number, n = 4): Extract<Exercise, { kind: 'dutch' }> {
   if (hasPicture(word)) {
-    const others = distractors(word, [lesson.words, unitWords(lesson)], n - 1, rng, true);
+    // Known words first: the lesson's, then the unit's earlier lessons', then the rest of the unit.
+    const unit = unitWords(lesson);
+    const before = new Set(wordsBefore(lesson).map((w) => w.id));
+    const others = distractors(word, [lesson.words, unit.filter((w) => before.has(w.id)), unit], n - 1, rng, true);
     if (others.length === n - 1) return { kind: 'dutch', word, options: shuffle([word, ...others], rng) };
   }
   return { kind: 'dutch', word, options: options(word, lesson, rng, n), textOnly: true };
@@ -124,7 +147,8 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
       // After every second new word, quiz one of the two just learned.
       if (i % 2 === 1) {
         const target = words[i - Math.floor(rng() * 2)];
-        out.push({ kind: 'meaning', word: target, options: options(target, lesson, rng) });
+        // Only words introduced so far (and earlier lessons') are wrong options here.
+        out.push({ kind: 'meaning', word: target, options: options(target, lesson, rng, 3, words.slice(0, i + 1)) });
       }
     });
   } else {
@@ -189,4 +213,26 @@ export function isNextInCourse(lessonId: string, completed: Record<string, unkno
   const index = order.findIndex((l) => l.id === lessonId);
   if (index < 0) return false;
   return index === 0 || Boolean(completed[order[index - 1].id]);
+}
+
+const ARTICLES = new Set(['de', 'het', 'een']);
+
+/**
+ * A picture for a sentence: the pictured word (from the whole course) whose Dutch, without its
+ * article, appears in the sentence. The longest match wins ("de veiligheidsschoenen" over "de
+ * schoen"). Undefined when the sentence has no pictured word.
+ */
+export function sentencePicture(sentence: Sentence, words: readonly Word[] = allWords): Word | undefined {
+  const tokens = tokenize(sentence.nl).map((t) => t.toLowerCase());
+  const has = (part: string[]) =>
+    part.length > 0 && tokens.some((_, i) => part.every((p, j) => tokens[i + j] === p));
+  let best: Word | undefined;
+  let bestLen = 0;
+  for (const w of words) {
+    if (!hasPicture(w)) continue;
+    const part = tokenize(w.nl).map((t) => t.toLowerCase()).filter((t) => !ARTICLES.has(t));
+    const len = part.join(' ').length;
+    if (len >= 3 && len > bestLen && has(part)) { best = w; bestLen = len; }
+  }
+  return best;
 }

@@ -8,8 +8,9 @@ import { Gate } from '../components/Gate';
 import { SectorScreen } from '../components/Sector';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import type { Access } from '../lib/access';
-import { emptyProgress } from '../lib/progress';
-import { Milestone } from '../components/Milestone';
+import { dayKey, emptyProgress, workWeek } from '../lib/progress';
+import { Milestone, StreakStopped } from '../components/Milestone';
+import { addDays, dailyCard } from '../lib/spaced';
 import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
 import type { LangCode } from '../i18n/types';
@@ -21,6 +22,9 @@ import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
 import * as kit from '../pictures/kit';
 import { hasPicture } from '../lib/wordPicture';
+import { CertEarned, CertificateScreen } from '../components/Certificate';
+import { findUnit } from '../lib/certificate';
+import { clearSave, makeSave, writeSave } from '../lib/resume';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -33,11 +37,49 @@ import { hasPicture } from '../lib/wordPicture';
  * it is built without sound.
  */
 export function ShotHarness({ shot, lang, word }: { shot: string; lang: string | null; word?: string | null }) {
-  // Lesson complete: 9 of 11 right the first time, 6 new words (24 in all).
-  if (shot === 'result') return <Result right={9} total={11} newWords={6} words={24} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
-  // Day-streak milestone after the very first lesson: streak 1.
-  if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
+  const q = new URLSearchParams(location.search);
+  // Lesson complete: 9 of 11 right the first time, 6 new words (24 in all), next lesson named.
+  // &perfect=1: 11 of 11 (FOUTLOOS); &review=1: after "Herhaal vandaag" (8 words, 5 stronger).
+  if (shot === 'result') {
+    const l = getHelpLanguage(lang as LangCode);
+    const review = q.get('review') === '1';
+    const right = q.get('perfect') === '1' ? 11 : 9;
+    const next = findLesson('l.people')?.lesson;
+    return (
+      <Result
+        right={right} total={11} newWords={6} words={24} lang={l} onDone={() => {}}
+        repeated={review ? 8 : undefined} stronger={review ? 5 : undefined}
+        next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l, id: next.id } : undefined}
+      />
+    );
+  }
+  // Day-streak milestone after the very first lesson: streak 1. &n=7 another day; &rest=1 with a
+  // free day used yesterday and one in hand; &install=ios|prompt shows that home-screen card.
+  if (shot === 'streak') {
+    const n = Number(q.get('n') ?? 1);
+    const today = new Date();
+    const key = (d: number) => dayKey(new Date(today.getFullYear(), today.getMonth(), today.getDate() - d));
+    const rest = q.get('rest') === '1';
+    const p = { ...emptyProgress, streak: n, lastDay: key(0), rest: rest ? [key(1)] : [] };
+    return <Milestone streak={n} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} days={workWeek(p, today)} best={Number(q.get('best') ?? n)} freezes={rest ? 1 : 0} />;
+  }
+  // The streak stopped at 12 (record 21), shown once on the next open.
+  if (shot === 'stopped') return <StreakStopped streak={12} best={21} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
+  // Certificates: /?shot=certificate&cu=u.safety&name=Ali%20Hassan (name=ask: asked the first
+  // time; name=none: without a name); /?shot=cert-earned is the one-time moment.
+  if (shot === 'certificate' || shot === 'cert-earned') {
+    const unit = findUnit(q.get('cu') ?? 'u.firstday') ?? units[0];
+    const name = q.get('name');
+    try {
+      if (name === 'ask') localStorage.removeItem('vloertaal:cert-name');
+      else localStorage.setItem('vloertaal:cert-name', name === 'none' || name === null ? '' : name);
+    } catch { /* ignore */ }
+    const l = getHelpLanguage(lang as LangCode);
+    return shot === 'certificate'
+      ? <CertificateScreen unit={unit} day="2026-10-08" lang={l} onBack={() => {}} />
+      : <CertEarned unit={unit} day="2026-10-08" lang={l} onView={() => {}} onLater={() => {}} />;
+  }
   const quiet = new URLSearchParams(location.search).get('quiet') === '1';
   // &access=preview shows the path, tips and settings as a preview user sees them.
   const access: Access = new URLSearchParams(location.search).get('access') === 'preview' ? 'preview' : 'full';
@@ -59,8 +101,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     if (shot === 'words') {
       return (
         <>
-          <WordsHub lang={l} onPhrasebook={() => {}} onTips={() => {}} />
-          <BottomNav current="words" onTab={() => {}} />
+          <WordsHub lang={l} onTips={() => {}} />
+          <BottomNav current="words" onTab={() => {}} lang={l} />
         </>
       );
     }
@@ -68,21 +110,38 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       <Tips progress={progress} lang={l} onBack={() => {}} access={access} />
     ) : (
       <>
-        <SettingsWithSound progress={progress} lang={l} onLang={() => {}} onSector={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
-        <BottomNav current="me" onTab={() => {}} />
+        <SettingsWithSound progress={progress} lang={l} onCertificate={() => {}} onRestore={() => {}} onLang={() => {}} onSector={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
+        <BottomNav current="me" onTab={() => {}} lang={l} />
       </>
     );
   }
   if (shot === 'about') return <About lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
   // Home screen: first lesson done, second lesson current (as in the house-style concept).
   if (shot === 'path') {
-    const progress = { ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector, completed: { 'l.hello': { best: 1, times: 1 } } };
+    // &cert=1: the whole first unit is done, so its sign carries the certificate chip.
+    const firstUnit = q.get('cert') === '1' ? Object.fromEntries(units[0].lessons.map((x) => [x.id, { best: 1, times: 1 }])) : {};
+    const progress = { ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector, completed: { 'l.hello': { best: 1, times: 1 }, ...firstUnit } };
     const l = getHelpLanguage(lang as LangCode);
+    // &daily=due|done|first shows "Herhaal vandaag" in that state; &lit=1 has today done (lit flame);
+    // &arrived=1 plays the "back from a lesson" arrival (scroll, stamp, pop).
+    const today = dayKey(new Date());
+    const words = findLesson('l.hello')!.lesson.words;
+    const dstate = q.get('daily');
+    const cards = Object.fromEntries(words.map((w, i) => [w.id, {
+      box: dstate === 'done' ? 2 : 1,
+      due: dstate === 'due' ? today : dstate === 'done' ? addDays(today, i < 4 ? 1 : 2) : addDays(today, 1),
+    }]));
+    const daily = dstate ? dailyCard(cards, today, dstate === 'done' ? today : undefined) : null;
+    // &resume=1: the next lesson was stopped at 12 of 18 ("Ga verder · 12/18"); &resume=done
+    // also the finished first lesson, practised again and stopped halfway.
+    seedResume(q.get('resume'), Boolean(q.get('cert')));
+    if (daily && dstate === 'done' && q.get('extra') === '1') daily.extra = 6;
     return (
       <>
-        <TopBar streak={7} words={learnedWords(progress.completed).size} lang={l} onLanguage={() => {}} />
-        <Path progress={progress} lang={l} onStart={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}} openOther={new URLSearchParams(location.search).get('other') === 'open'} />
-        <BottomNav current="route" onTab={() => {}} />
+        <TopBar streak={7} done={q.get('lit') === '1'} words={learnedWords(progress.completed).size} lang={l} onLanguage={() => {}} />
+        <Path progress={progress} lang={l} onStart={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}} openOther={new URLSearchParams(location.search).get('other') === 'open'}
+          daily={daily} onDaily={() => {}} arrived={q.get('arrived') === '1' ? 'l.hello' : null} onCertificate={() => {}} />
+        <BottomNav current="route" onTab={() => {}} lang={l} />
       </>
     );
   }
@@ -240,3 +299,24 @@ const KIT_SAMPLES: [string, () => React.ReactNode][] = [
   ['Bust bram / amina', () => (<><kit.Bust who="bram" x={34} y={116} scale={0.5} /><kit.Bust who="amina" x={88} y={116} scale={0.5} expr="pleased" flip /></>)],
   ['Bust henk / jada', () => (<><kit.Bust who="henk" x={34} y={116} scale={0.5} /><kit.Bust who="jada" x={88} y={116} scale={0.5} expr="joy" flip /></>)],
 ];
+
+/** Saved lesson runs for the path shots (see &resume= on the path). */
+function seedResume(mode: string | null, certUnit: boolean) {
+  clearSave();
+  if (!mode) return;
+  const put = (id: string, review: boolean, at: number, repeats: number) => {
+    const lesson = findLesson(id)?.lesson;
+    if (!lesson) return;
+    const initial = buildLesson(lesson, { review, seed: 7 });
+    const queue = [...initial, ...initial.slice(2, 2 + repeats)];
+    const save = makeSave({ lessonId: id, review, quiet: false, seed: 7, initial, queue, index: at, right: 3, total: 5, words: {}, run: 0, misses: 0, now: Date.now() });
+    if (save) writeSave(save);
+  };
+  const next = certUnit ? units[1].lessons[0].id : units[0].lessons[1].id;
+  const lesson = findLesson(next)?.lesson;
+  if (lesson) {
+    const n = buildLesson(lesson, { review: false, seed: 7 }).length;
+    put(next, false, Math.min(12, n - 1), Math.max(0, 18 - n));
+  }
+  if (mode === 'done') put('l.hello', true, 5, 1);
+}
