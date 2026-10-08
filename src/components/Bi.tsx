@@ -2,12 +2,24 @@ import type { ReactNode } from 'react';
 import type { Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 
-/** English text with the help-language version underneath (right-to-left aware). */
+/**
+ * Bilingual text. With a help language, that language comes first in the large type and the
+ * English sits small underneath: the learner reads their own language, English is support.
+ * Without one, it is just the English. (The main line keeps the class bi-en and the small line
+ * bi-help, so every screen's sizing keeps working.)
+ */
 export function Bi({ text, className }: { text: Bilingual; className?: string }) {
+  if (text.help && text.lang) {
+    return (
+      <span className={`bi bi-swap ${className ?? ''}`}>
+        <HelpText text={text.help} lang={text.lang} className="bi-en" />
+        <span className="bi-help" lang="en">{text.en}</span>
+      </span>
+    );
+  }
   return (
     <span className={`bi ${className ?? ''}`}>
       <span className="bi-en">{text.en}</span>
-      {text.help && text.lang && <HelpText text={text.help} lang={text.lang} />}
     </span>
   );
 }
