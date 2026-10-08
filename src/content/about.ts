@@ -32,7 +32,7 @@ export const aboutSections: AboutSection[] = [
   },
   {
     id: 'a.voices', emoji: '🔊', title: 'The voices',
-    body: 'Every character has their own Dutch voice: Bram speaks with the voice of Thijmen, Henk with Daniel, Amina with Ariël and Jada with Noa. These voices were recorded with ElevenLabs. If a sentence has no recording yet, you hear Piper (free open-source speech software) or the voice of your own phone or computer.',
+    body: 'Every character has their own Dutch voice: Bram speaks with the voice of Thijmen, Henk with Daniel, Amina with Ariël and Jada with Noa. These voices were recorded with ElevenLabs. If a sentence has no recording yet, you hear the voice of your own phone or computer.',
   },
 ];
 

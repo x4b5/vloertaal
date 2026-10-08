@@ -4,12 +4,6 @@
   "format": "mp3_44100_64",
   "voices": [
     {
-      "key": "berend",
-      "label": "Berend",
-      "gender": "male",
-      "voiceId": "pb6qe8wKy786fK6M05tq"
-    },
-    {
       "key": "thijmen",
       "label": "Thijmen",
       "gender": "male",

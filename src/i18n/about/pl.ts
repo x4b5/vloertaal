@@ -16,7 +16,7 @@ const t: CultureTranslation = {
     'a.free': 'Za darmo i prywatnie',
     'a.free.b': 'Vloertaal jest darmowy i nie potrzebujesz konta. Twoje postępy są zapisywane tylko na tym telefonie albo komputerze. Jeśli to jest włączone, aplikacja anonimowo liczy, jak często robi się lekcje: bez konta, bez imienia, bez śledzenia. Możesz to wyłączyć w „Ustawienia”.',
     'a.voices': 'Głosy',
-    'a.voices.b': 'Każda postać ma swój własny niderlandzki głos: Bram mówi głosem Thijmena, Henk głosem Daniela, Amina głosem Ariël, a Jada głosem Noi. Te głosy zostały nagrane za pomocą ElevenLabs. Jeśli zdanie nie ma jeszcze nagrania, słyszysz Piper (darmowy program do mowy o otwartym kodzie) albo głos swojego telefonu lub komputera.',
+    'a.voices.b': 'Każda postać ma swój własny niderlandzki głos: Bram mówi głosem Thijmena, Henk głosem Daniela, Amina głosem Ariël, a Jada głosem Noi. Te głosy zostały nagrane za pomocą ElevenLabs. Jeśli zdanie nie ma jeszcze nagrania, słyszysz głos swojego telefonu lub komputera.',
   },
 };
 

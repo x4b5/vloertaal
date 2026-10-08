@@ -1,5 +1,0 @@
-[
-  { "key": "pim", "label": "Pim", "model": "nl_NL-pim-medium", "gender": "male" },
-  { "key": "ronnie", "label": "Ronnie", "model": "nl_NL-ronnie-medium", "gender": "male" },
-  { "key": "alex", "label": "Alex", "model": "nl_NL-alex-medium", "gender": "male" }
-]
