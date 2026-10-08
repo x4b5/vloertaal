@@ -224,7 +224,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
             is the same action as a real button, for keyboards and screen readers). */}
         <div className="unit-head" onClick={allowed ? undefined : onUpgrade}>
           <span className="unit-num" aria-hidden>{unitNumber(u)}</span>
-          <WordPicture className="unit-icon" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
+          <WordPicture className="unit-icon" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={60} />
           <div className="unit-titles">
             {/* Two lines: the help language large with the English small under it, or the
                 English large with the Dutch name under it when there is no help language. */}
