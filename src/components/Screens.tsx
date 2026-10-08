@@ -3,8 +3,9 @@ import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
-import { findItem, phrasebookIds } from '../content/curriculum';
+import { findItem, phrasebookIds, units } from '../content/curriculum';
 import { unitIcons } from '../content/unitIcons';
+import { unitLink } from '../lib/unitLink';
 import { coursePlan, unitSector, type SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { SectorIcon, SectorPicker } from './Sector';
@@ -196,8 +197,11 @@ const unitNumber = (u: number) => String(u + 1).padStart(2, '0');
  *  (not A1/B1, which read like language levels). */
 const lessonCode = (u: number, i: number) => `${u + 1}.${i + 1}`;
 
-export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false }: {
+export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused }: {
   progress: Progress;
+  /** A unit to scroll to and mark (from a coach link); onFocused is called once it is shown. */
+  focusUnit?: string | null;
+  onFocused?: () => void;
   /** Start with "Andere sectoren" open (dev screenshots). */
   openOther?: boolean;
   lang?: HelpLanguage;
@@ -211,7 +215,23 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
   const { sector, completed } = progress;
   // Basis units plus the learner's own sector in course order; other sectors' units wait below.
   const { main, other } = coursePlan(sector);
-  const [showOther, setShowOther] = useState(openOther);
+  const [showOther, setShowOther] = useState(openOther || other.some((u) => u.id === focusUnit));
+  // A coach link: scroll to that unit (after the app's own scroll-to-top) and mark it for a moment.
+  const [marked, setMarked] = useState<string | null>(focusUnit ?? null);
+  useEffect(() => {
+    if (!focusUnit) return;
+    const t = window.setTimeout(() => {
+      document.getElementById(`unit-${focusUnit.slice(2)}`)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      onFocused?.();
+    }, 80);
+    return () => window.clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focusUnit]);
+  useEffect(() => {
+    if (!marked) return;
+    const off = window.setTimeout(() => setMarked(null), 4000);
+    return () => window.clearTimeout(off);
+  }, [marked]);
   const unlocked = (lessonId: string) => isUnlocked(lessonId, completed, access);
   const next = (lessonId: string) => isNextInCourse(lessonId, completed, access, sector);
 
@@ -219,7 +239,11 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
     const allowed = unitAllowed(unit.id, access);
     const unitOpen = unit.lessons.some((l) => unlocked(l.id));
     return (
-      <section key={unit.id} className={`unit ${unitOpen ? '' : 'unit-locked'} ${allowed ? '' : 'unit-full-only'}`}>
+      <section
+        key={unit.id}
+        id={`unit-${unit.id.slice(2)}`}
+        className={`unit ${unitOpen ? '' : 'unit-locked'} ${allowed ? '' : 'unit-full-only'} ${marked === unit.id ? 'unit-marked' : ''}`}
+      >
         {/* In the preview, tapping a later unit's sign opens the unlock card (the note below
             is the same action as a real button, for keyboards and screen readers). */}
         <div className="unit-head" onClick={allowed ? undefined : onUpgrade}>
@@ -357,6 +381,7 @@ export function About({ lang, onBack }: { lang?: HelpLanguage; onBack?: () => vo
           <p><Bi text={gloss(`${s.id}.b`, s.body, lang)} /></p>
         </section>
       ))}
+      <CoachLinks />
       {recorded.length > 0 && (
         <ul className="about-credits muted small">
           {recorded.map((v) => (
@@ -368,6 +393,48 @@ export function About({ lang, onBack }: { lang?: HelpLanguage; onBack?: () => vo
         </ul>
       )}
     </div>
+  );
+}
+
+/**
+ * For coaches (Dutch only): a link per unit that opens the path at that topic, to send a learner
+ * by WhatsApp or e-mail. Shares with the phone's share sheet, or copies the link.
+ */
+function CoachLinks() {
+  const [copied, setCopied] = useState<string | null>(null);
+  const share = async (unit: Unit) => {
+    const url = unitLink(unit.id);
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: `Vloertaal: ${unit.titleNl}`, url });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      setCopied(unit.id);
+    } catch {
+      // Share sheet closed, or no clipboard access: show the link to copy by hand.
+      window.prompt('Kopieer deze link:', url);
+    }
+  };
+  return (
+    <details className="coach-links">
+      <summary lang="nl">Voor begeleiders: stuur een link naar een onderwerp</summary>
+      <p className="muted small" lang="nl">
+        Met de link opent Vloertaal meteen bij dat onderwerp. Elk onderwerp kan bij de eerste les beginnen.
+        Een nieuwe gebruiker kiest eerst nog een taal en vult het wachtwoord in.
+      </p>
+      <ul>
+        {units.map((unit) => (
+          <li key={unit.id}>
+            <WordPicture className="coach-icon" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={32} />
+            <span className="coach-title" lang="nl">{unit.titleNl}</span>
+            <button type="button" className="coach-share" onClick={() => share(unit)}>
+              {copied === unit.id ? <><CheckIcon size={16} /> Gekopieerd</> : 'Deel link'}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </details>
   );
 }
 

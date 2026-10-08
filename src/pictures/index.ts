@@ -10,6 +10,9 @@ import group8 from './group8';
 import group9 from './group9';
 import group10 from './group10';
 import group11 from './group11';
+import group12 from './group12';
+import group13 from './group13';
+import group14 from './group14';
 import units from './units';
 import icons from './icons';
 
@@ -29,6 +32,9 @@ export const pictures: Record<string, () => JSX.Element> = {
   ...group9,
   ...group10,
   ...group11,
+  ...group12,
+  ...group13,
+  ...group14,
 };
 
 /** Own unit icons for abstract topics (i.*), next to the word pictures in WordPicture. */

@@ -13,7 +13,7 @@ const lang: HelpLanguage = {
     themeDark: 'Întunecat',
     voice: 'Voce în neerlandeză',
     voiceAuto: 'Automat',
-    voiceHint: 'Atinge 🔊 ca să asculți. Vocile vin de pe telefonul tău, așa că lista diferă de la un dispozitiv la altul.',
+    voiceHint: 'Atinge 🔊 ca să asculți. Vocile Vloertaal sună la fel pe orice telefon; celelalte vin de pe telefonul tău.',
     voiceNone: 'Acest dispozitiv nu are o voce în neerlandeză. O poți adăuga din setările telefonului (Redare text în vorbire).',
     appTagline: 'Olandeză pentru locul de muncă',
     chooseLanguage: 'Alege limba de ajutor',

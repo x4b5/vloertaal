@@ -63,7 +63,7 @@ const t: CultureTranslation = {
     'c.limits.b': 'Kimse her şeyi tek başına kaldırmanı beklemez. “dit is te zwaar” deyip yardım veya alet istemek akıllıcadır, zayıflık değil. Belini korur.',
     'c.limits.p': 'Bu kutu çok ağır. Bir saniye yardım eder misin?',
     'c.limits.s': 'Senin için çok fazla ağır bir kutuyu kaldırman gerekiyor. Ne yaparsın?',
-    'c.limits.o1': 'Bir iş arkadaşından yardım istersin veya araba kullanırsın.',
+    'c.limits.o1': 'Bir iş arkadaşından yardım istersin veya taşıma arabası kullanırsın.',
     'c.limits.o2': 'Kimse zayıf olduğunu düşünmesin diye yine de kaldırırsın.',
     'c.limits.o3': 'Orada bırakır ve hiçbir şey söylemezsin.',
     'c.limits.w': 'Yardım istemek normal bir takım çalışmasıdır. Sakatlanmış bir bel, bir dakikalık yardımdan çok daha pahalıya mal olur.',
