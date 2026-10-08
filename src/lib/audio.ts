@@ -188,6 +188,9 @@ function emitSpeech(text: string, speaking: boolean, slow: boolean): void {
 /** Learners need calm Dutch: recordings play a bit slower than recorded (same pitch),
  *  and the turtle button slower still. */
 const RECORDED_RATE = { normal: 0.75, slow: 0.5 };
+/** Some recorded voices speak slower by nature; this evens them out (Noa reads noticeably
+ *  slower than the others, so she plays a bit faster). */
+const VOICE_PACE: Record<string, number> = { noa: 1.2 };
 /** The phone's own voice already speaks a little faster than the recordings. */
 const DEVICE_RATE = { normal: 0.75, slow: 0.45 };
 
@@ -212,7 +215,7 @@ export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voic
     const { rec, id } = found;
     stopAll();
     const audio = new Audio(`${rec.base}/${rec.voice.key}/${id}.mp3`);
-    audio.playbackRate = slow ? RECORDED_RATE.slow : RECORDED_RATE.normal;
+    audio.playbackRate = (slow ? RECORDED_RATE.slow : RECORDED_RATE.normal) * (VOICE_PACE[rec.voice.key] ?? 1);
     audio.preservesPitch = true;
     (audio as HTMLAudioElement & { webkitPreservesPitch?: boolean }).webkitPreservesPitch = true;
     playing = audio;
@@ -342,3 +345,26 @@ export const sounds = {
     note(c, 523, t + 0.12, 0.26, 0.08);
   },
 };
+
+/**
+ * The device's own voice for a help language (Tigrinya, Arabic, ...), or null when the phone has
+ * none: then no "read aloud" button is shown. Dari may use a Persian voice. No recordings needed.
+ */
+export function helpVoice(code: string): SpeechSynthesisVoice | null {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
+  const want = code === 'prs' ? ['prs', 'fa'] : [code];
+  const voices = window.speechSynthesis.getVoices();
+  return voices.find((v) => want.some((w) => v.lang.toLowerCase().replace('_', '-').split('-')[0] === w)) ?? null;
+}
+
+/** Reads a help-language text aloud with the device's voice for it (a tap; plays even when quiet). */
+export function speakHelp(text: string, code: string): void {
+  const voice = helpVoice(code);
+  if (!voice) return;
+  stopAll();
+  const u = new SpeechSynthesisUtterance(text);
+  u.voice = voice;
+  u.lang = voice.lang;
+  u.rate = 0.95;
+  window.speechSynthesis.speak(u);
+}
