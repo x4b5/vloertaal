@@ -17,6 +17,7 @@ import { hasPicture } from '../lib/wordPicture';
 import { SpeakButton } from './SpeakButton';
 import { letterTiles, NON_LATIN_HELP } from '../lib/letters';
 import { createRng } from '../lib/random';
+import { pickInsteadOfTyping } from '../lib/writing';
 
 export interface Answer {
   correct: boolean;
@@ -463,8 +464,9 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
         </div>
       </div>
-      {/* After Check: a check at the start of a right sentence; a wrong one gets only the
-          NOG EENS stamp (the right sentence is shown as tiles in the label below). */}
+      {/* After Check: a check at the end of a right sentence; a wrong one gets only the NOG EENS
+          stamp (the right sentence is shown as tiles in the label below). Both sit in a column
+          kept free from the start, so no word moves on Check. */}
       <div className={`answer-line ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite">
         {verdict === 'wrong' && <WrongStamp lang={lang} />}
         {verdict === 'right' && (
@@ -474,6 +476,18 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           </span>
         )}
         {verdict === 'wrong' && <span className="sr-only">{ui('yourAnswer').en}: {ui('incorrect').en}</span>}
+        {/* The placed words keep a voice: this plays the sentence so far (a tap on a placed word
+            still takes it back). It sits in the row's reserved end column, like the check later. */}
+        {!verdict && chosen.length > 0 && (
+          <button
+            type="button"
+            className="answer-say"
+            aria-label={`Play: ${chosen.map((i) => ex.tiles[i]).join(' ')}`}
+            onClick={() => speak(chosen.map((i) => ex.tiles[i]).join(' '), false, 'nl', voiceFor(who))}
+          >
+            <SpeakerIcon size={20} />
+          </button>
+        )}
         {chosen.map((i) => (
           <button
             key={i}
@@ -533,7 +547,52 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
  * extra ones); the default for help languages in another script. The keyboard stays one tap
  * away, and the grading is the same either way.
  */
-export function TypeExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'type'>) {
+export function TypeExercise(props: Props<'type'>) {
+  // Decided once per exercise, so a change in Settings never swaps it halfway.
+  const [pick] = useState(() => pickInsteadOfTyping(props.lang) && (props.ex.options?.length ?? 0) > 1);
+  return pick ? <HearPickWritten {...props} /> : <TypeWriting {...props} />;
+}
+
+/**
+ * "Type what you hear" for a learner who reads only a non-Latin script: hear the word and pick
+ * it from three written Dutch words, each with its own speaker (hearing never picks). After
+ * Check the word's picture shows beside the question.
+ */
+function HearPickWritten({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'type'>) {
+  useEffect(() => { autoSpeak(ex.word.nl); }, [ex.word]);
+  return (
+    <div className="exercise hear-pick">
+      <PromptWithBram text={ui('whatDoYouHear', lang)} word={ex.word.nl} verdict={verdict} run={run} misses={misses} />
+      <div className="listen-buttons">
+        <SpeakButton text={ex.word.nl} size="lg" label="Play" />
+        <SpeakButton text={ex.word.nl} slow label="Play slowly" />
+        {locked && hasPicture(ex.word) && <WordPicture className="hear-pick-pic" id={ex.word.id} emoji={ex.word.emoji} size={72} />}
+      </div>
+      <ChoiceGrid
+        className="choices-rows choices-words hear-pick-choices"
+        options={ex.options ?? [ex.word]}
+        correctId={ex.word.id}
+        locked={locked}
+        lang={lang}
+        onAnswer={onAnswer}
+        side={(w) => (
+          <button type="button" className="choice-say" aria-label={`Play: ${w.nl}`} onClick={() => speak(w.nl)}>
+            <SpeakerIcon size={24} />
+          </button>
+        )}
+        render={(w) => (
+          <span className="choice-text">
+            <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
+            {locked && <Bi className="choice-gloss" text={gloss(w.id, w.en, lang)} />}
+          </span>
+        )}
+      />
+    </div>
+  );
+}
+
+/** Real dictation: type the word with letter tiles or the keyboard. */
+function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'type'>) {
   const [value, setValue] = useState('');
   const [mode, setMode] = useState<'tiles' | 'keys'>(() => (lang && NON_LATIN_HELP.has(lang.code) ? 'tiles' : 'keys'));
   const tiles = useMemo(() => letterTiles(ex.word.nl, createRng(ex.word.id.length * 7919 + ex.word.nl.length)), [ex.word]);

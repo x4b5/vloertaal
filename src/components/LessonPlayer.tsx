@@ -8,12 +8,13 @@ import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercis
 import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { voiceFor } from '../lib/voices';
+import { pickInsteadOfTyping } from '../lib/writing';
 import { castFor, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { FlameIcon } from './StreakArt';
 import {
   BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
-  LifebuoyIcon, PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
+  LifebuoyIcon, PencilIcon, PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
 } from './Icons';
 import { PhraseSheet } from './Phrases';
 import {
@@ -107,6 +108,18 @@ function KindTag({ kind, lang }: { kind: Exercise['kind']; lang?: HelpLanguage }
       {!same && (word.help && lang
         ? <HelpText className="tag-help" text={word.help} lang={lang} />
         : <span className="tag-help" lang="en">{word.en}</span>)}
+    </span>
+  );
+}
+
+/** The retry phase: "Herhalen · nog N" with the help language large (like the kind tag). */
+function RepeatTag({ left, lang }: { left: number; lang?: HelpLanguage }) {
+  const word = ui('tagRepeat', lang);
+  return (
+    <span className="tag tag-kind tag-repeat">
+      <span className="tag-nl" lang="nl">Herhalen</span>
+      {word.help && lang ? <HelpText className="tag-help" text={word.help} lang={lang} /> : <span className="tag-help" lang="en">{word.en}</span>}
+      <span className="tag-count" lang="nl">· {left}</span>
     </span>
   );
 }
@@ -641,6 +654,10 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const doneCount = Math.round(bar.done * bar.slots);
   /** In the retry phase: how many mistakes are left, this one included. */
   const repeatsLeft = index >= initial.length ? queue.length - index : 0;
+  /** Type what you hear, shown as "hear and pick the written word" (lib/writing.ts), or as real
+   *  dictation (`writing`), which offers "I can't write this yet" instead of "I can't listen". */
+  const typePick = ex.kind === 'type' && pickInsteadOfTyping(lang) && (ex.options?.length ?? 0) > 1;
+  const writing = ex.kind === 'type' && !typePick;
 
   return (
     // A right-to-left help language mirrors the whole player (header, cards, feedback); the Dutch
@@ -717,12 +734,12 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
           {repeatsLeft > 0 ? (
             <>
               {/* Retry phase: the mistakes come back, and the learner sees how many are left. */}
-              <span className="tag tag-repeat" lang="nl">Herhalen</span>
-              <span className="ex-count" lang="nl">nog {repeatsLeft}</span>
+              {/* The chip says it in the help language too (large), the Dutch small beside it. */}
+              <RepeatTag left={repeatsLeft} lang={lang} />
               <Bi className="ex-tag-note" text={fillN(ui('practiseMistakes', lang), repeatsLeft)} />
             </>
           ) : (
-            <KindTag kind={ex.kind} lang={lang} />
+            <KindTag kind={typePick ? 'listen' : ex.kind} lang={lang} />
           )}
         </div>
         {body}
@@ -764,9 +781,20 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             </div>
           )}
           <div className="foot-actions">
-            {needsAudio(ex) && !checked && (
+            {needsAudio(ex) && !checked && !writing && (
               <button type="button" className="btn btn-ghost" onClick={cantListenNow}>
                 <Bi text={ui('cantListen', lang)} />
+              </button>
+            )}
+            {/* Real dictation: a learner who can't write Dutch yet skips this one word (it is not
+                graded). Its own words and icon, never the "I can't listen" ones. */}
+            {writing && !checked && (
+              <button type="button" className="btn btn-ghost btn-cant-write" onClick={next}>
+                <span className="cant-write-icon" aria-hidden><PencilIcon size={22} /></span>
+                <span className="cant-write-text">
+                  <Bi text={ui('cantWriteYet', lang)} />
+                  <span className="cant-write-nl" lang="nl">Ik kan dit nog niet schrijven</span>
+                </span>
               </button>
             )}
             {/* One button per exercise (it fades in with the exercise). After Check it keeps focus and

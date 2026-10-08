@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { allLessons, teachingLessons, units } from '../src/content/curriculum';
 import { tokenize } from '../src/lib/answers';
+import * as exercisesModule from '../src/lib/exercises';
+import { createRng } from '../src/lib/random';
 import { AUDIO_ONLY_KINDS, buildLesson, isNextInCourse, isUnlocked, needsAudio, wordsBefore } from '../src/lib/exercises';
 
 describe('lesson builder', () => {
@@ -156,6 +158,47 @@ describe('the character of a tip matches the text', () => {
       if (g === 'm') expect(women.has(who), `${t.id}: ${who}`).toBe(false);
       if (/\b(she|her)\b/i.test(t.situation.en)) expect(g, t.id).toBe('f');
       if (/\b(he|him|his)\b/i.test(t.situation.en) && !/\b(she|her)\b/i.test(t.situation.en)) expect(g, t.id).toBe('m');
+    }
+  });
+});
+
+describe('chat replies and sentence tiles are taught and never confusable', () => {
+  const { chatOptions, buildTiles, nearMiss } = exercisesModule;
+  const first = (s: string) => tokenize(s)[0]?.toLowerCase();
+
+  it('a wrong reply never starts with the right reply’s first word, and comes from taught lessons when there are enough', () => {
+    for (const [i, lesson] of teachingLessons.entries()) {
+      const taught = new Set(
+        teachingLessons.slice(0, i + 1).flatMap((l) => (l.dialogues ?? []).map((d) => d.reply.id)),
+      );
+      for (const d of lesson.dialogues ?? []) {
+        for (let seed = 1; seed <= 12; seed++) {
+          const opts = chatOptions(d, createRng(seed), 3, lesson);
+          expect(opts.filter((o) => o.id === d.reply.id)).toHaveLength(1);
+          const wrong = opts.filter((o) => o.id !== d.reply.id);
+          expect(wrong).toHaveLength(2);
+          for (const w of wrong) expect(first(w.nl), `${lesson.id}: ${w.nl}`).not.toBe(first(d.reply.nl));
+          expect(first(wrong[0].nl)).not.toBe(first(wrong[1].nl));
+          // Enough taught replies with another first word: all wrong ones are taught.
+          const pool = [...taught].filter((id) => id !== d.reply.id);
+          if (pool.length >= 8) for (const w of wrong) expect(taught.has(w.id), `${lesson.id}: ${w.nl}`).toBe(true);
+        }
+      }
+    }
+  });
+
+  it('spots near-misses and never offers them as extra tiles', () => {
+    expect(nearMiss('dragen', 'draag')).toBe(true);
+    expect(nearMiss('morgen', 'goedemorgen')).toBe(true);
+    expect(nearMiss('ik', 'is')).toBe(false);
+    expect(nearMiss('de', 'deur')).toBe(false);
+    for (const lesson of teachingLessons) {
+      for (const s of lesson.sentences) {
+        const real = tokenize(s.nl);
+        const tiles = buildTiles(s, lesson, createRng(5));
+        const extra = tiles.filter((t) => !real.some((r) => r.toLowerCase() === t.toLowerCase()));
+        for (const t of extra) expect(real.some((r) => nearMiss(t, r)), `${s.nl}: ${t}`).toBe(false);
+      }
     }
   });
 });

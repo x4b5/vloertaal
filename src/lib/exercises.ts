@@ -1,4 +1,4 @@
-import { allReplies, allWords, teachingLessons, units } from '../content/curriculum';
+import { allDialogues, allLessons, allReplies, allWords, teachingLessons, units } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
 import { mainLessons, type SectorChoice } from '../content/sectors';
 import { type CultureTip, tipForLesson } from '../content/culture';
@@ -16,7 +16,10 @@ export type Exercise =
   | { kind: 'listen'; word: Word; options: Word[] }
   | { kind: 'match'; words: Word[] }
   | { kind: 'build'; sentence: Sentence; tiles: string[] }
-  | { kind: 'type'; word: Word }
+  /** Type what you hear. `options` (the word and two others): for a learner who reads only a
+   *  non-Latin script, the same exercise becomes "hear and pick the written word" (see
+   *  lib/writing.ts); without them it is always typed. */
+  | { kind: 'type'; word: Word; options?: Word[] }
   | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[] }
   /** "How it works here": a workplace-culture card (not graded). */
   | { kind: 'tip'; tip: CultureTip }
@@ -106,21 +109,75 @@ export function dutchExercise(word: Word, lesson: Lesson, rng: () => number, n =
   return { kind: 'dutch', word, options: options(word, lesson, rng, n), textOnly: true };
 }
 
-/** Reply options for a chat: the right reply plus replies from other dialogues. */
-export function chatOptions(dialogue: Dialogue, rng: () => number, n = 3): ChatLine[] {
-  const { reply } = dialogue;
-  const others = allReplies.filter((r) => r.id !== reply.id && r.nl !== reply.nl);
-  return shuffle([reply, ...sample(others, n - 1, rng)], rng);
+/** The first word of a line, lower case ("Tot morgen!" → "tot"). */
+const firstWord = (s: string) => tokenize(s)[0]?.toLowerCase() ?? '';
+
+/**
+ * Replies the learner has been taught by the time of `lesson`: the dialogues of the lessons up
+ * to it in the course (for a mixed review, those before it). Outside the course (today's review),
+ * up to the lesson the dialogue comes from.
+ */
+function taughtReplies(dialogue: Dialogue, lesson?: Lesson): ChatLine[] {
+  let at = lesson ? allLessons.findIndex((l) => l.id === lesson.id) : -1;
+  if (at < 0) at = allLessons.findIndex((l) => l.dialogues?.some((d) => d.reply.id === dialogue.reply.id));
+  if (at < 0) return [];
+  const upTo = new Set(allLessons.slice(0, at + 1).map((l) => l.id));
+  return teachingLessons.filter((l) => upTo.has(l.id)).flatMap((l) => (l.dialogues ?? []).map((d) => d.reply));
 }
 
-/** Word tiles for a sentence: the real words plus a few plausible extras. */
+/**
+ * Reply options for a chat: the right reply plus wrong ones that are taught and not confusable.
+ * Wrong replies come from the same or earlier lessons first (the rest of the course only when
+ * those run out); none starts with the same word as the right reply ("Tot morgen!" next to "Tot
+ * straks!"), none answers a question that opens the same way, and no two wrong replies start
+ * with the same word either.
+ */
+export function chatOptions(dialogue: Dialogue, rng: () => number, n = 3, lesson?: Lesson): ChatLine[] {
+  const { reply } = dialogue;
+  const first = firstWord(reply.nl);
+  // A reply to a question that starts the same way ("Kun je zaterdag …?") could be right here too.
+  const opening = (s: string) => tokenize(s).slice(0, 2).join(' ').toLowerCase();
+  const asked = opening(dialogue.prompt.nl);
+  const promptOf = (r: ChatLine) => allDialogues.find((d) => d.reply.id === r.id)?.prompt.nl ?? '';
+  const clear = (r: ChatLine) => r.id !== reply.id && r.nl !== reply.nl && firstWord(r.nl) !== first && opening(promptOf(r)) !== asked;
+  const picked: ChatLine[] = [];
+  const pools = [taughtReplies(dialogue, lesson).filter(clear), allReplies.filter(clear), allReplies.filter((r) => r.id !== reply.id && r.nl !== reply.nl)];
+  for (const pool of pools) {
+    for (const r of shuffle(pool, rng)) {
+      if (picked.length >= n - 1) break;
+      if (picked.some((p) => p.nl === r.nl || firstWord(p.nl) === firstWord(r.nl))) continue;
+      picked.push(r);
+    }
+  }
+  return shuffle([reply, ...picked], rng);
+}
+
+/**
+ * A wrong tile that looks or sounds like a word of the sentence: the same stem or a part of it
+ * ("draag" / "dragen", "morgen" / "goedemorgen"). Those are never offered as extras.
+ */
+export function nearMiss(tile: string, word: string): boolean {
+  const a = tile.toLowerCase();
+  const b = word.toLowerCase();
+  if (a === b) return true;
+  if (Math.min(a.length, b.length) >= 3 && (a.includes(b) || b.includes(a))) return true;
+  // Same stem: a shared start of 3 letters or more once doubled vowels and -en/-e/-t are gone.
+  const stem = (s: string) => s.replace(/(aa|ee|oo|uu)/g, (m) => m[0]).replace(/(en|e|t)$/, '');
+  const sa = stem(a);
+  const sb = stem(b);
+  let k = 0;
+  while (k < sa.length && k < sb.length && sa[k] === sb[k]) k++;
+  return k >= 3 && k >= Math.min(sa.length, sb.length) - 1;
+}
+
+/** Word tiles for a sentence: the real words plus a few plausible extras (never near-misses). */
 export function buildTiles(sentence: Sentence, lesson: Lesson, rng: () => number): string[] {
   const real = tokenize(sentence.nl);
   const realSet = new Set(real.map((t) => t.toLowerCase()));
   const pool = [
     ...lesson.sentences.filter((s) => s.id !== sentence.id).flatMap((s) => tokenize(s.nl)),
     ...lesson.words.flatMap((w) => tokenize(w.nl)),
-  ].filter((t) => !realSet.has(t.toLowerCase()));
+  ].filter((t) => !realSet.has(t.toLowerCase()) && !real.some((r) => nearMiss(t, r)));
   const unique = [...new Map(pool.map((t) => [t.toLowerCase(), t])).values()];
   const extra = sample(unique, Math.min(3, Math.max(2, Math.ceil(real.length / 2))), rng);
   return shuffle([...real, ...extra], rng);
@@ -181,12 +238,15 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
 
   // Complete the conversation: use the words in a real exchange with a colleague.
   for (const dialogue of lesson.dialogues ?? []) {
-    out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng) });
+    out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
   }
 
   out.push(opts.quiet ? dutchExercise(l2, lesson, rng, 3) : { kind: 'listen', word: l2, options: options(l2, lesson, rng) });
   // Typing what you hear has no reading twin; read the word and pick its meaning instead.
-  out.push(opts.quiet ? { kind: 'meaning', word: t1, options: options(t1, lesson, rng) } : { kind: 'type', word: t1 });
+  // The written-word options for "hear and pick" come from their own generator, so the rest of
+  // the lesson (and a saved place in it) stays the same as before they existed.
+  const pickRng = createRng(((opts.seed ?? 0) ^ 0x5eed) >>> 0);
+  out.push(opts.quiet ? { kind: 'meaning', word: t1, options: options(t1, lesson, rng) } : { kind: 'type', word: t1, options: options(t1, lesson, pickRng) });
   return out;
 }
 

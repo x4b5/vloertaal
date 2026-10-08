@@ -54,6 +54,7 @@ import { Flag } from './Flags';
 import { PhraseList } from './Phrases';
 import { CertBadge, CertificatesCard } from './Certificate';
 import { CountingCard } from './Counting';
+import { WritingCard } from './Writing';
 import { unitDone } from '../lib/certificate';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
@@ -746,6 +747,8 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
         })}
       </div>
       <p className="muted small sound-hint"><Bi text={ui('quietHint', lang)} /></p>
+      {/* Another script than Dutch: "type what you hear" is picking by default; this brings typing back. */}
+      <WritingCard lang={lang} />
 
       <h2><Bi text={ui('voice', lang)} /></h2>
       <VoicePicker current={progress.voice} lang={lang} onPick={onVoice} />

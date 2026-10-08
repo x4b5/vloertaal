@@ -51,6 +51,11 @@ export const uiEn = {
   /** Kraft stamp "3 OP RIJ" in a lesson: right answers in a row. */
   inARow: '{n} in a row',
   cantListen: 'I can’t listen now',
+  cantWriteYet: 'I can’t write this yet',
+  learnWriting: 'I also want to learn to write',
+  learnWritingHint: 'On: type the words you hear with letter tiles. Off: pick the written word you hear.',
+  tagRepeat: 'Again',
+  readAloud: 'Read aloud',
   lessonComplete: 'Lesson complete!',
   backToPath: 'Back to lessons',
   phrasebook: 'Emergency phrases',

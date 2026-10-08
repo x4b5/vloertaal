@@ -915,14 +915,21 @@ h2 { font-size: 1.25rem; }
   background-image: linear-gradient(var(--ink-3) 0 2px, transparent 2px);
   background-size: 100% 64px;
 }
-/* Room at the end of the answer row for the stamp, so it never covers a tile. */
-.answer-line:has(> .stamp) { padding-inline-end: 72px; }
-.answer-line .stamp { top: 0; right: 0; margin-top: 0; width: 64px; height: 64px; }
+/* A column at the end of the answer row is kept free from the start, for the replay speaker
+   and, after Check, the check or the stamp: no word moves or wraps on Check. */
+.answer-line { padding-inline-end: 64px; }
+.answer-line .stamp { top: 0; right: 0; margin-top: 0; width: 60px; height: 60px; }
+.answer-say {
+  position: absolute; top: 12px; inset-inline-end: 8px; display: grid; place-items: center;
+  width: 44px; height: 44px; border: 0; border-radius: 10px;
+  color: var(--blue); background: color-mix(in srgb, var(--blue) 14%, transparent);
+}
+.answer-say:active { transform: translateY(1px); filter: brightness(0.94); }
 .answer-line .stamp-word { font-size: 1.3rem; }
 .answer-line .stamp-wrong .stamp-word { font-size: 0.95rem; }
 .answer-line .stamp-sub { margin-top: 1px; }
 .answer-mark {
-  flex: none; align-self: center; display: grid; place-items: center; width: 36px; height: 36px;
+  position: absolute; top: 14px; inset-inline-end: 12px; display: grid; place-items: center; width: 36px; height: 36px;
   border-radius: 50%; color: #fff; background: var(--go-right);
   animation: stamp-in 0.16s var(--ease-out) 0.06s both;
 }

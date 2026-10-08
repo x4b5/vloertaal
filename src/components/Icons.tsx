@@ -304,6 +304,14 @@ export const EarIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** Writing: a pencil (dictation's "I can't write this yet"). */
+export const PencilIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M15.2 4.6l4.2 4.2L9 19.2l-5 .8.8-5z" {...stroke} strokeWidth={2.4} />
+    <path d="M13 6.8l4.2 4.2" {...stroke} strokeWidth={2.2} />
+  </Svg>
+);
+
 /** Type: a keyboard. */
 export const KeyboardIcon = (p: IconProps) => (
   <Svg {...p}>
