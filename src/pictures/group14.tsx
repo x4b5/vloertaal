@@ -1,7 +1,7 @@
 import type { JSX, ReactNode } from 'react';
 import { CastHead, type CharacterId } from '../components/Characters';
 import type { Expr } from '../components/Faces';
-import { Arrow, Box, Bust, Cross, CurveArrow, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Arrow, Cross, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle } from './kit';
 
 /** Word pictures, group 14 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
@@ -125,18 +125,6 @@ const CARDIGAN = (color: string, shade: string): ReactNode => (
     <path d="M86 102C95 108 102 118 102 134H86Z" fill={shade} opacity=".6" />
   </>
 );
-
-/** A white plate seen a little from above, centred on (cx, cy). */
-function Plate({ cx, cy, rx = 18 }: { cx: number; cy: number; rx?: number }) {
-  const ry = rx * 0.5;
-  return (
-    <g>
-      <ellipse cx={cx} cy={cy + 3} rx={rx} ry={ry} fill={PAL.steel} />
-      <ellipse cx={cx} cy={cy} rx={rx} ry={ry} fill={PAL.white} />
-      <ellipse cx={cx} cy={cy + 0.8} rx={rx * 0.72} ry={ry * 0.68} fill={PAL.paperShade} />
-    </g>
-  );
-}
 
 export default {
   // "de fiets": the bike — a Dutch city bike seen from the side: upright handlebar, step-through
@@ -299,32 +287,33 @@ export default {
     </g>
   ),
 
-  // "bewaren": to keep (papers) — a sheet goes into the open drawer of a filing cabinet, with the
-  // other papers in their folders
+  // "bewaren": to keep (papers) — a sheet goes into the open top drawer of a filing cabinet,
+  // in between the other papers in their folders
   'w.bewaren': () => (
     <g>
-      <Ground cx={60} cy={106} rx={42} ry={4} />
+      <Ground cx={60} cy={106} rx={40} ry={4} />
       {/* Cabinet */}
-      <Shade color={PAL.steel} opacity={1} at={[100, 80, 12, 40]}>
-        <rect x="26" y="50" width="68" height="56" rx="4" fill={PAL.mist} />
+      <Shade color={PAL.slate} opacity={0.6} at={[100, 80, 12, 50]}>
+        <rect x="28" y="36" width="64" height="70" rx="4" fill={PAL.steel} />
       </Shade>
-      {/* Folders standing in the open top drawer */}
-      <rect x="30" y="48" width="18" height="18" rx="2" fill={PAL.sky} />
-      <rect x="50" y="46" width="18" height="20" rx="2" fill={PAL.green} />
-      <rect x="70" y="48" width="18" height="18" rx="2" fill={PAL.yellow} />
-      {/* Drawer fronts */}
-      <rect x="22" y="62" width="76" height="18" rx="3" fill={PAL.steel} transform="translate(0 2.5)" />
-      <rect x="22" y="62" width="76" height="18" rx="3" fill={PAL.paper} />
-      <rect x="50" y="68" width="20" height="5" rx="2.5" fill={PAL.slate} />
-      <rect x="30" y="86" width="60" height="14" rx="3" fill={PAL.paperShade} />
-      <rect x="50" y="91" width="20" height="4.4" rx="2.2" fill={PAL.steel} />
-      {/* The sheet going in */}
-      <g transform="rotate(-6 58 26)">
-        <rect x="40" y="8" width="34" height="40" rx="3" fill={PAL.paperShade} transform="translate(2 2)" />
-        <rect x="40" y="8" width="34" height="40" rx="3" fill={PAL.white} />
-        <path d="M46 16H66M46 23H68M46 30H62" stroke={PAL.line} strokeWidth="2.2" strokeLinecap="round" />
+      {/* Folders in the open top drawer, and the sheet going in */}
+      <rect x="32" y="28" width="17" height="20" rx="2" fill={PAL.sky} />
+      <rect x="71" y="28" width="17" height="20" rx="2" fill={PAL.yellow} />
+      <g transform="rotate(-4 60 24)">
+        <rect x="45" y="6" width="30" height="40" rx="3" fill={PAL.paperShade} transform="translate(2 2)" />
+        <rect x="45" y="6" width="30" height="40" rx="3" fill={PAL.white} />
+        <path d="M50 13H69M50 20H70M50 27H64" stroke={PAL.line} strokeWidth="2.2" strokeLinecap="round" />
       </g>
-      <Arrow from={[94, 12]} to={[94, 42]} color={PAL.sky} width={6} head={10} />
+      <rect x="54" y="32" width="17" height="16" rx="2" fill={PAL.green} />
+      {/* Drawer fronts: the top one pulled out */}
+      <rect x="24" y="40" width="72" height="20" rx="3" fill={PAL.slate} transform="translate(0 3)" />
+      <rect x="24" y="40" width="72" height="20" rx="3" fill={PAL.mist} />
+      <rect x="50" y="47" width="20" height="5" rx="2.5" fill={PAL.slate} />
+      <rect x="32" y="66" width="56" height="15" rx="3" fill={PAL.mist} />
+      <rect x="50" y="71" width="20" height="4.4" rx="2.2" fill={PAL.slate} />
+      <rect x="32" y="86" width="56" height="15" rx="3" fill={PAL.mist} />
+      <rect x="50" y="91" width="20" height="4.4" rx="2.2" fill={PAL.slate} />
+      <Arrow from={[104, 8]} to={[104, 40]} color={PAL.sky} width={6} head={10} />
     </g>
   ),
 
@@ -394,62 +383,64 @@ export default {
     </g>
   ),
 
-  // "het gat": the hole — a deep hole in the ground on the building site, red-and-white tape
-  // round it
+  // "het gat": the hole — a deep hole dug in the ground on the building site, red-and-white
+  // tape behind it
   'w.gat': () => (
     <g>
-      <ellipse cx="60" cy="80" rx="54" ry="26" fill={PAL.card} />
-      <ellipse cx="60" cy="84" rx="54" ry="24" fill={PAL.cardShade} opacity=".35" />
-      {/* The hole: far wall, then the dark depth */}
-      <ellipse cx="60" cy="80" rx="36" ry="15" fill={PAL.cardDark} />
-      <ellipse cx="60" cy="86" rx="32" ry="10" fill={PAL.ink} />
-      <path d="M30 76Q44 68 60 67" fill="none" stroke={PAL.brown} strokeWidth="2.4" strokeLinecap="round" opacity=".6" />
       {/* Posts and tape behind */}
-      <rect x="16" y="28" width="6" height="52" rx="3" fill={PAL.slate} />
-      <rect x="98" y="28" width="6" height="52" rx="3" fill={PAL.slate} />
-      <path d="M19 38L101 38" stroke={PAL.red} strokeWidth="7" />
-      <path d="M19 38L101 38" stroke={PAL.white} strokeWidth="7" strokeDasharray="8 8" strokeDashoffset="4" />
-      <ExclaimBadge />
+      <rect x="16" y="22" width="6" height="56" rx="3" fill={PAL.slate} />
+      <rect x="98" y="22" width="6" height="56" rx="3" fill={PAL.slate} />
+      <path d="M19 32L101 32" stroke={PAL.red} strokeWidth="7" />
+      <path d="M19 32L101 32" stroke={PAL.white} strokeWidth="7" strokeDasharray="8 8" strokeDashoffset="4" />
+      {/* Ground */}
+      <path d="M6 76Q18 60 50 62Q84 58 106 66Q118 80 106 96Q72 108 30 104Q2 94 6 76Z" fill={PAL.card} />
+      <path d="M106 66Q118 80 106 96Q72 108 30 104Q14 100 8 90Q40 100 76 94Q104 88 106 66Z" fill={PAL.cardShade} />
+      {/* Heap of dug-out earth */}
+      <path d="M98 64L101 24" stroke={PAL.wood} strokeWidth="4.4" strokeLinecap="round" />
+      <path d="M95 24H107" stroke={PAL.ink} strokeWidth="5" strokeLinecap="round" />
+      <path d="M93 54H107L105 68Q100 74 95 68Z" fill={PAL.steel} />
+      <path d="M80 72Q90 50 104 58Q114 64 112 76Z" fill={PAL.cardDark} />
+      {/* The hole: far wall, then the dark depth */}
+      <path d="M24 80Q26 68 54 67Q86 66 90 78Q92 92 60 94Q24 94 24 80Z" fill={PAL.cardDark} />
+      <path d="M28 84Q34 76 58 76Q84 76 86 84Q84 92 60 93Q30 93 28 84Z" fill={PAL.ink} />
+      <path d="M32 74Q44 68 58 68" fill="none" stroke={PAL.brown} strokeWidth="2.4" strokeLinecap="round" opacity=".7" />
     </g>
   ),
 
   // "afkeuren": to reject — the product gets a red cross and a thumbs down: it is not good
   'w.afkeuren': () => (
     <g>
-      <Ground cx={46} cy={106} rx={34} ry={4} />
+      <Ground cx={42} cy={106} rx={30} ry={4} />
       {/* Product box (blue retail box with label) */}
-      <path d="M20 46L30 38H70L60 46Z" fill={PAL.blueLight} />
-      <path d="M60 46L70 38V96L60 104Z" fill={PAL.blueShade} />
-      <rect x="20" y="46" width="40" height="58" rx="2" fill={PAL.blue} />
-      <rect x="26" y="76" width="28" height="18" rx="2" fill={PAL.white} />
-      <path d="M30 81V89M33 81V89M37 81V89M40 81V89M44 81V89M48 81V89M50 81V89" stroke={PAL.ink} strokeWidth="1.6" />
-      <circle cx="40" cy="60" r="7" fill={PAL.yellow} />
-      <Cross x={56} y={40} r={16} />
+      <path d="M16 46L26 38H66L56 46Z" fill={PAL.blueLight} />
+      <path d="M56 46L66 38V96L56 104Z" fill={PAL.blueShade} />
+      <rect x="16" y="46" width="40" height="58" rx="2" fill={PAL.blue} />
+      <rect x="22" y="76" width="28" height="18" rx="2" fill={PAL.white} />
+      <path d="M26 81V89M29 81V89M33 81V89M36 81V89M40 81V89M44 81V89M46 81V89" stroke={PAL.ink} strokeWidth="1.6" />
+      <circle cx="36" cy="60" r="7" fill={PAL.yellow} />
+      <Cross x={52} y={40} r={16} />
       {/* Thumbs down */}
-      <Hand pose="thumb" x={94} y={34} rotate={180} scale={0.92} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <Hand pose="thumb" x={92} y={18} rotate={180} scale={1.1} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
     </g>
   ),
 
-  // "het etiket": the label — a big sticky label being peeled off its backing sheet by a hand
+  // "het etiket": the label — a big sticky label on a box, its corner peeled up by a finger
   'w.etiket': () => (
     <g>
-      {/* Backing sheet with the next label */}
-      <rect x="14" y="58" width="70" height="50" rx="4" fill={PAL.yellowShade} />
-      <rect x="14" y="56" width="70" height="50" rx="4" fill={PAL.yellowLight} />
-      <rect x="22" y="80" width="54" height="22" rx="3" fill={PAL.white} />
-      <path d="M28 86H58M28 92H50" stroke={PAL.line} strokeWidth="2" strokeLinecap="round" />
-      {/* The label being peeled off */}
-      <g transform="rotate(-12 60 40)">
-        <rect x="26" y="20" width="62" height="38" rx="4" fill={PAL.paperShade} transform="translate(2 3)" />
-        <rect x="26" y="20" width="62" height="38" rx="4" fill={PAL.white} />
-        <rect x="26" y="20" width="62" height="10" rx="4" fill={PAL.sky} />
-        <rect x="26" y="26" width="62" height="4" fill={PAL.sky} />
-        <path d="M32 38H62M32 45H54" stroke={PAL.line} strokeWidth="2.2" strokeLinecap="round" />
-        <path d="M66 36V52M69 36V52M73 36V52M75.5 36V52M79 36V52M82 36V52" stroke={PAL.ink} strokeWidth="1.6" />
-        {/* Curled corner */}
-        <path d="M88 46V54Q88 58 84 58H78Q86 54 88 46Z" fill={PAL.paperShade} />
+      {/* Cardboard behind */}
+      <rect x="6" y="14" width="108" height="92" rx="6" fill={PAL.card} />
+      <path d="M6 96H114V100Q114 106 108 106H12Q6 106 6 100Z" fill={PAL.cardShade} />
+      {/* The label, a bit crooked, its bottom-right corner peeled up */}
+      <g transform="rotate(-8 60 56)">
+        <path d="M20 30Q20 24 26 24H94Q100 24 100 30V68L84 84H26Q20 84 20 78Z" fill={PAL.cardDark} transform="translate(1 3)" />
+        <path d="M20 30Q20 24 26 24H94Q100 24 100 30V68L84 84H26Q20 84 20 78Z" fill={PAL.white} />
+        <path d="M20 30Q20 24 26 24H94Q100 24 100 30V36H20Z" fill={PAL.sky} />
+        <path d="M28 46H62M28 55H56M28 64H50" stroke={PAL.line} strokeWidth="2.6" strokeLinecap="round" />
+        <path d="M68 44V70M72 44V70M77 44V70M80 44V70M85 44V64M89 44V64" stroke={PAL.ink} strokeWidth="2" />
+        {/* Curl */}
+        <path d="M100 68L84 84Q96 92 108 80Q104 76 100 68Z" fill={PAL.paperShade} />
       </g>
-      <Hand pose="hold" x={106} y={70} rotate={-60} scale={0.66} skin={SKIN.jada} sleeve={[PAL.slate, PAL.slateDark]} />
+      <Hand pose="point" x={117} y={112} rotate={-28} scale={0.66} skin={SKIN.jada} sleeve={[PAL.slate, PAL.slateDark]} />
     </g>
   ),
 
@@ -486,25 +477,28 @@ export default {
       {/* Arm rests */}
       <rect x="8" y="88" width="20" height="26" rx="8" fill={PAL.greenShade} />
       <rect x="92" y="88" width="20" height="26" rx="8" fill={PAL.greenShade} />
-      <Hand pose="open" x={102} y={60} rotate={150} scale={0.62} skin={SKIN.amina} sleeve={[PAL.sky, PAL.skyShade]} />
+      <Hand pose="open" x={102} y={64} rotate={-150} scale={0.62} skin={SKIN.amina} sleeve={[PAL.sky, PAL.skyShade]} />
     </g>
   ),
 
-  // "wassen": to wash (a client) — the carer washes Henk's arm with a soapy washcloth; a bowl of water
+  // "wassen": to wash (a client) — the carer washes Henk's face with a soapy washcloth; a bowl
+  // of water in front
   'w.wassen': () => (
     <g>
-      <Bust who="henk" x={42} y={118} scale={0.64} expr="pleased" />
-      {/* Washcloth in the carer's hand, on his shoulder, with foam */}
-      <Hand pose="hold" x={98} y={62} rotate={-70} scale={0.62} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
-      <rect x="58" y="70" width="22" height="18" rx="5" fill={PAL.blue} transform="rotate(-14 69 79)" />
-      <path d="M62 76H76M62 82H76" stroke={PAL.blueLight} strokeWidth="1.6" strokeLinecap="round" transform="rotate(-14 69 79)" />
-      {[[60, 66, 4], [52, 72, 3], [70, 62, 3.4], [58, 58, 2.6]].map(([cx, cy, r], i) => (
-        <circle key={i} cx={cx} cy={cy} r={r} fill={PAL.white} stroke={PAL.ice} strokeWidth="1.4" />
+      <Person who="henk" x={42} y={118} scale={0.64} expr="pleased" torso={CARDIGAN(PAL.purple, PAL.purpleShade)} />
+      {/* Carer's hand with the washcloth, foam */}
+      <Hand pose="hold" x={88} y={76} rotate={-70} scale={0.62} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
+      <g transform="rotate(-14 72 70)">
+        <rect x="60" y="60" width="24" height="20" rx="5" fill={PAL.blue} />
+        <path d="M64 66H80M64 73H80" stroke={PAL.blueLight} strokeWidth="1.8" strokeLinecap="round" />
+      </g>
+      {[[58, 58, 6], [52, 68, 4.4], [64, 47, 4.6], [76, 50, 3.4], [50, 50, 3.2], [70, 38, 2.8]].map(([cx, cy, r], i) => (
+        <circle key={i} cx={cx} cy={cy} r={r} fill={PAL.white} stroke={PAL.ice} strokeWidth="1.6" />
       ))}
       {/* Wash bowl */}
-      <path d="M74 96H112L106 110H80Z" fill={PAL.skyShade} />
-      <ellipse cx="93" cy="96" rx="19" ry="4.6" fill={PAL.ice} />
-      <circle cx="88" cy="94" r="2.4" fill={PAL.white} />
+      <path d="M72 96H112L106 110H78Z" fill={PAL.skyShade} />
+      <ellipse cx="92" cy="96" rx="20" ry="4.6" fill={PAL.ice} />
+      <circle cx="87" cy="94" r="2.4" fill={PAL.white} />
       <circle cx="96" cy="93" r="2" fill={PAL.white} />
     </g>
   ),
@@ -634,147 +628,152 @@ export default {
     <g>
       <Ground cx={56} cy={106} rx={28} ry={4} />
       {/* Spray */}
-      <circle cx="94" cy="24" r="2.6" fill={PAL.ice} />
-      <circle cx="102" cy="32" r="2.6" fill={PAL.ice} />
-      <circle cx="100" cy="18" r="2.2" fill={PAL.ice} />
-      <circle cx="108" cy="24" r="2.2" fill={PAL.ice} />
-      <circle cx="94" cy="36" r="2" fill={PAL.ice} />
+      <circle cx="96" cy="24" r="2.6" fill={PAL.sky} />
+      <circle cx="104" cy="31" r="2.6" fill={PAL.sky} />
+      <circle cx="102" cy="17" r="2.2" fill={PAL.sky} />
+      <circle cx="110" cy="23" r="2.2" fill={PAL.sky} />
+      <circle cx="96" cy="35" r="2" fill={PAL.sky} />
       {/* Trigger head */}
-      <path d="M40 30Q40 18 52 18H80Q86 18 86 24V28H72L70 36H44Z" fill={PAL.white} />
-      <path d="M44 36H70L72 28H86V30Q86 34 82 34H74L72 40H44Z" fill={PAL.paperShade} />
-      <path d="M54 30Q50 42 56 50" fill="none" stroke={PAL.mist} strokeWidth="6" strokeLinecap="round" />
-      <rect x="84" y="21" width="6" height="7" rx="2" fill={PAL.slate} />
-      <rect x="42" y="38" width="30" height="8" rx="2" fill={PAL.mist} />
+      <path d="M58 30Q54 42 60 50" fill="none" stroke={PAL.blueShade} strokeWidth="6" strokeLinecap="round" />
+      <path d="M40 32Q40 18 54 18H82Q88 18 88 24V30H74L72 38H44Z" fill={PAL.blue} />
+      <path d="M44 38H72L74 30H88Q88 34 84 34H76L74 42H44Z" fill={PAL.blueShade} />
+      <rect x="86" y="21" width="6" height="7" rx="2" fill={PAL.slate} />
+      <Shine d="M46 28Q47 23 53 22" width={2.6} opacity={0.6} />
+      <rect x="42" y="40" width="30" height="8" rx="2" fill={PAL.slate} />
       {/* Bottle */}
       <Shade color={PAL.leafShade} opacity={1} at={[86, 80, 12, 34]}>
-        <path d="M44 46H70Q74 54 80 62V100Q80 106 74 106H40Q34 106 34 100V62Q40 54 44 46Z" fill={PAL.leaf} />
+        <path d="M44 48H70Q74 56 80 64V100Q80 106 74 106H40Q34 106 34 100V64Q40 56 44 48Z" fill={PAL.leaf} />
       </Shade>
       <rect x="40" y="70" width="34" height="24" rx="3" fill={PAL.white} />
       <circle cx="50" cy="82" r="4.4" fill="none" stroke={PAL.sky} strokeWidth="2" />
       <circle cx="60" cy="78" r="3" fill="none" stroke={PAL.sky} strokeWidth="2" />
       <circle cx="62" cy="87" r="2.6" fill="none" stroke={PAL.sky} strokeWidth="2" />
-      <Shine d="M39 64V96" width={3} opacity={0.5} />
-      <Sparkle x={100} y={58} r={7} color={PAL.ice} />
-      <Sparkle x={18} y={40} r={6} color={PAL.yellow} />
+      <Shine d="M39 66V96" width={3} opacity={0.5} />
+      <Sparkle x={102} y={60} r={7} color={PAL.sky} />
+      <Sparkle x={18} y={42} r={6} color={PAL.yellow} />
     </g>
   ),
 
-  // "de prullenbak": the bin — a pedal bin with its lid open, paper and rubbish going in
+  // "de prullenbak": the bin — a pedal bin with its lid up, rubbish in it, a paper ball
+  // going in
   'w.prullenbak': () => (
     <g>
       <Ground cx={58} cy={106} rx={34} ry={5} />
-      {/* Lid, open */}
-      <path d="M30 40Q28 18 50 14L84 8Q88 8 86 12L36 42Z" fill={PAL.slate} />
+      {/* Lid, standing up at the back */}
+      <ellipse cx="58" cy="26" rx="30" ry="16" fill={PAL.slateDark} />
+      <ellipse cx="58" cy="24" rx="30" ry="16" fill={PAL.slate} />
+      <Shine d="M36 20Q42 12 54 10" width={3} opacity={0.35} />
+      {/* Opening and rubbish */}
+      <ellipse cx="58" cy="44" rx="32" ry="8" fill={PAL.ink} />
+      <path d="M37 40L41 32L49 31L55 37L53 45L44 47Z" fill={PAL.mist} stroke={PAL.mist} strokeWidth="2" strokeLinejoin="round" />
+      <path d="M41 32L46 39L37 40M46 39L55 37M46 39L44 47" fill="none" stroke={PAL.steel} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M56 44Q58 30 72 30Q68 38 70 44Z" fill={PAL.yellow} />
+      <path d="M62 44Q70 34 80 38Q74 40 74 44Z" fill={PAL.yellowShade} />
       {/* Body */}
-      <Shade color={PAL.slateDark} opacity={0.5} at={[96, 80, 14, 40]}>
-        <path d="M28 44H90L86 100Q86 106 80 106H38Q32 106 32 100Z" fill={PAL.steel} />
+      <Shade color={PAL.slate} opacity={0.5} at={[96, 80, 14, 40]}>
+        <path d="M26 46Q58 56 90 46L86 100Q86 106 80 106H36Q30 106 30 100Z" fill={PAL.steel} />
       </Shade>
-      {/* Bin bag folded over the rim */}
-      <rect x="26" y="40" width="66" height="12" rx="4" fill={PAL.slateDark} />
-      {/* Rubbish sticking out */}
-      <circle cx="48" cy="38" r="8" fill={PAL.white} />
-      <path d="M44 34L50 38L46 42" fill="none" stroke={PAL.mist} strokeWidth="1.6" strokeLinecap="round" />
-      <path d="M58 40Q62 28 74 30Q70 36 68 42Z" fill={PAL.yellow} />
-      {/* Paper ball falling in */}
-      <circle cx="96" cy="22" r="8" fill={PAL.white} />
-      <path d="M92 18L98 22L93 26" fill="none" stroke={PAL.mist} strokeWidth="1.6" strokeLinecap="round" />
-      <path d="M90 34L82 42" stroke={PAL.line} strokeWidth="3" strokeLinecap="round" strokeDasharray="2 5" />
+      <path d="M26 46Q58 56 90 46" fill="none" stroke={PAL.mist} strokeWidth="3" strokeLinecap="round" />
+      <Shine d="M36 58L39 94" width={3.4} opacity={0.5} />
       {/* Pedal */}
-      <rect x="42" y="100" width="20" height="6" rx="3" fill={PAL.slate} />
-      <Shine d="M38 54L41 94" width={3.4} opacity={0.5} />
+      <rect x="44" y="100" width="22" height="7" rx="3.5" fill={PAL.slate} />
+      {/* Paper ball dropping in */}
+      <path d="M90 18L95 11L103 12L107 19L104 27L96 29L90 25Z" fill={PAL.mist} stroke={PAL.mist} strokeWidth="2" strokeLinejoin="round" />
+      <path d="M95 11L98 19L90 25M98 19L107 19M98 19L96 29" fill="none" stroke={PAL.steel} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      <Arrow from={[100, 36]} to={[90, 50]} color={PAL.sky} width={4.4} head={8} />
     </g>
   ),
 
-  // "de bel": the bike bell — a big round bell clamped on the handlebar, its lever flicked,
-  // ringing loudly
+  // "de bel": the bike bell — a big bell on the handlebar of a bike, right next to the grip;
+  // the rider's thumb flicks the lever and it rings
   'w.bel': () => (
     <g>
-      {/* Handlebar with grip */}
-      <path d="M6 92H96" stroke={PAL.steel} strokeWidth="9" strokeLinecap="round" />
-      <path d="M90 92H112" stroke={PAL.ink} strokeWidth="13" strokeLinecap="round" />
-      <rect x="44" y="76" width="18" height="20" rx="4" fill={PAL.slate} />
-      {/* Bell dome */}
-      <ellipse cx="53" cy="74" rx="34" ry="8" fill={PAL.skyShade} />
-      <Shade color={PAL.skyShade} opacity={1} at={[90, 54, 14, 30]}>
-        <path d="M19 72Q19 34 53 34Q87 34 87 72Q87 76 53 76Q19 76 19 72Z" fill={PAL.sky} />
+      {/* Front of the bike: head tube, fork and the top of the front wheel */}
+      <path d="M8 120A26 26 0 0 1 60 120" fill="none" stroke={PAL.slate} strokeWidth="6" />
+      <path d="M4 116A30 30 0 0 1 64 116" fill="none" stroke={PAL.blueShade} strokeWidth="3" />
+      <path d="M34 84V112" stroke={PAL.blue} strokeWidth="7" strokeLinecap="round" />
+      {/* Handlebar and grip */}
+      <path d="M4 88Q30 80 70 82" fill="none" stroke={PAL.steel} strokeWidth="8" strokeLinecap="round" />
+      <path d="M70 82H112" stroke={PAL.ink} strokeWidth="14" strokeLinecap="round" />
+      {/* Bell, clamped on the bar */}
+      <rect x="44" y="72" width="14" height="14" rx="3" fill={PAL.slate} />
+      <ellipse cx="51" cy="68" rx="28" ry="6.6" fill={PAL.skyShade} />
+      <Shade color={PAL.skyShade} opacity={1} at={[82, 50, 12, 28]}>
+        <path d="M23 66Q23 34 51 34Q79 34 79 66Q79 70 51 70Q23 70 23 66Z" fill={PAL.sky} />
       </Shade>
-      <circle cx="53" cy="33" r="5" fill={PAL.slate} />
-      <Shine d="M28 62Q30 46 44 40" width={5} opacity={0.75} />
-      {/* Lever, flicked */}
-      <path d="M30 78L12 70" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
-      <circle cx="11" cy="69" r="5" fill={PAL.slateDark} />
+      <circle cx="51" cy="33" r="4.6" fill={PAL.slate} />
+      <Shine d="M31 58Q33 45 44 40" width={4.4} opacity={0.75} />
+      {/* Lever, under the thumb */}
+      <path d="M56 74L76 72" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
+      {/* Rider's hand round the grip, thumb on the lever */}
+      <Hand pose="thumb" x={107} y={89} rotate={-60} scale={0.7} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
       {/* Ringing */}
-      <path d="M94 44Q102 54 94 64M101 36Q114 54 101 72" fill="none" stroke={PAL.orange} strokeWidth="4" strokeLinecap="round" />
-      <path d="M14 46Q8 40 12 30M24 34Q22 24 28 18" fill="none" stroke={PAL.orange} strokeWidth="4" strokeLinecap="round" />
+      <path d="M14 46Q8 36 14 26M24 32Q22 20 32 14M76 14Q86 18 88 30" fill="none" stroke={PAL.orange} strokeWidth="4" strokeLinecap="round" />
     </g>
   ),
 
-  // "aankleden": helping someone get dressed — the carer holds the coat open, Henk already has
-  // one arm in; the arrow shows the coat going round his shoulders
+  // "aankleden": helping someone get dressed — the carer's hands pull a jumper down over
+  // Henk's head; he sits in his vest, the arrows show the jumper going on
   'w.aankleden': () => (
     <g>
       <Person
         who="henk"
-        x={46}
-        y={122}
-        scale={0.7}
+        x={60}
+        y={126}
+        scale={0.64}
         expr="pleased"
         torso={(
           <>
-            <path d="M18 134C18 104 35 92 60 92C85 92 102 104 102 134Z" fill={PAL.paper} />
-            <path d="M86 102C95 108 102 118 102 134H86Z" fill={PAL.paperShade} />
-            {/* Coat on his right side (viewer's left), with its collar */}
-            <path d="M18 134C18 104 35 92 54 92L60 134Z" fill={PAL.orange} />
-            <path d="M54 92L60 110L56 134" fill="none" stroke={PAL.orangeShade} strokeWidth="5" strokeLinecap="round" />
-            <circle cx="49" cy="114" r="3.4" fill={PAL.orangeShade} />
-            <circle cx="49" cy="127" r="3.4" fill={PAL.orangeShade} />
+            <path d="M18 134C18 104 35 92 60 92C85 92 102 104 102 134Z" fill={SKIN.henk[0]} />
+            <path d="M34 134V104Q34 96 44 94Q52 104 60 104Q68 104 76 94Q86 96 86 104V134Z" fill={PAL.white} />
+            <path d="M76 94Q86 96 86 104V134H78Z" fill={PAL.paperShade} />
           </>
         )}
       />
-      {/* Other half of the coat, held up: front panel and empty sleeve */}
-      <path d="M96 52L110 60L112 110H100Z" fill={PAL.orangeShade} />
-      <path d="M74 60Q84 50 98 52L104 110H78Q78 86 74 60Z" fill={PAL.orange} />
-      <path d="M76 62Q84 54 96 54" fill="none" stroke={PAL.orangeShade} strokeWidth="4" strokeLinecap="round" />
-      <Hand pose="hold" x={112} y={74} rotate={-20} scale={0.6} skin={SKIN.amina} sleeve={[PAL.sky, PAL.skyShade]} mirror />
-      <CurveArrow from={[92, 36]} to={[66, 56]} bend={14} color={PAL.sky} width={6} head={10} />
+      {/* The jumper, held up over his head */}
+      <path d="M50 8Q60 14 70 8L88 14L106 36L96 43L82 30V46H38V30L24 43L14 36L32 14Z" fill={PAL.clayShade} transform="translate(0 2.5)" stroke={PAL.clayShade} strokeWidth="3" strokeLinejoin="round" />
+      <Shade color={PAL.clayShade} opacity={0.8} at={[100, 30, 14, 26]}>
+        <path d="M50 8Q60 14 70 8L88 14L106 36L96 43L82 30V46H38V30L24 43L14 36L32 14Z" fill={PAL.clay} stroke={PAL.clay} strokeWidth="3" strokeLinejoin="round" />
+      </Shade>
+      <path d="M40 42H80" stroke={PAL.clayShade} strokeWidth="5" strokeLinecap="round" />
+      <path d="M50 8Q60 14 70 8" fill="none" stroke={PAL.clayShade} strokeWidth="3" strokeLinecap="round" />
+      <Shine d="M30 20L40 16" width={3} opacity={0.5} />
+      {/* The carer's hands on the hem */}
+      <Hand pose="hold" x={22} y={50} rotate={70} scale={0.5} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
+      <Hand pose="hold" x={98} y={50} rotate={-70} scale={0.5} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} mirror />
+      <Arrow from={[12, 68]} to={[12, 94]} color={PAL.sky} width={5} head={8} />
+      <Arrow from={[108, 68]} to={[108, 94]} color={PAL.sky} width={5} head={8} />
     </g>
   ),
 
-  // "de pincode": the PIN — a payment keypad with the code hidden as four stars; a hand
-  // covers the keys while typing
+  // "de pincode": the PIN — a card terminal with the bank card in it and the code hidden as
+  // four stars; one hand types, the other hand covers the keypad
   'w.pincode': () => (
     <g>
-      <rect x="24" y="8" width="64" height="100" rx="10" fill={PAL.slateDark} transform="translate(3 3)" />
-      <rect x="24" y="8" width="64" height="100" rx="10" fill={PAL.slate} />
-      <rect x="30" y="15" width="52" height="20" rx="4" fill="#e3f5ff" />
+      {/* Bank card in the slot */}
+      <rect x="38" y="2" width="36" height="16" rx="3" fill={PAL.blue} />
+      <rect x="44" y="6" width="8" height="6" rx="1.5" fill={PAL.yellow} />
+      <rect x="24" y="14" width="64" height="96" rx="10" fill={PAL.slateDark} transform="translate(3 3)" />
+      <rect x="24" y="14" width="64" height="96" rx="10" fill={PAL.slate} />
+      <rect x="34" y="14" width="44" height="4" rx="2" fill={PAL.slateDark} />
+      <rect x="30" y="22" width="52" height="18" rx="4" fill="#e3f5ff" />
       {[38, 50, 62, 74].map((cx) => (
-        <path key={cx} d={`M${cx} 19.5V30.5M${cx - 4.8} 22.2L${cx + 4.8} 27.8M${cx - 4.8} 27.8L${cx + 4.8} 22.2`} stroke={PAL.ink} strokeWidth="2.4" strokeLinecap="round" />
+        <path key={cx} d={`M${cx} 26V36M${cx - 4.4} 28.5L${cx + 4.4} 33.5M${cx - 4.4} 33.5L${cx + 4.4} 28.5`} stroke={PAL.ink} strokeWidth="2.4" strokeLinecap="round" />
       ))}
       {['123', '456', '789', '-0-'].flatMap((row, r) => [...row].map((c, k) => {
         const x = 31 + k * 17;
-        const y = 41 + r * 16;
+        const y = 46 + r * 15;
         const fill = r === 3 && k === 0 ? PAL.red : r === 3 && k === 2 ? PAL.ok : PAL.mist;
         return (
           <g key={`${r}${k}`}>
-            <rect x={x} y={y} width="14" height="12" rx="3" fill={fill} />
-            {c !== '-' && <Digits x={x + 5} y={y + 3} h={6} text={c} color={PAL.slate} width={1.5} />}
+            <rect x={x} y={y} width="14" height="11" rx="3" fill={fill} />
+            {c !== '-' && <Digits x={x + 5} y={y + 2.6} h={6} text={c} color={PAL.slate} width={1.5} />}
           </g>
         );
       }))}
-      {/* Shielding hand over the keys */}
-      <Hand pose="open" x={118} y={58} rotate={-100} scale={0.82} skin={SKIN.jada} sleeve={[PAL.purple, PAL.purpleShade]} />
+      {/* Covering hand, held flat over the keys from the right */}
+      <Hand pose="open" x={114} y={54} rotate={-80} scale={0.84} skin={SKIN.jada} sleeve={[PAL.purple, PAL.purpleShade]} />
     </g>
   ),
-} as Record<string, () => JSX.Element>;
 
-/** A small yellow warning triangle (for the hole). */
-function ExclaimBadge() {
-  return (
-    <g>
-      <path d="M60 8L74 32H46Z" fill={PAL.yellowShade} stroke={PAL.yellowShade} strokeWidth="5" strokeLinejoin="round" transform="translate(0 2)" />
-      <path d="M60 8L74 32H46Z" fill={PAL.yellow} stroke={PAL.yellow} strokeWidth="5" strokeLinejoin="round" />
-      <path d="M60 15V24" stroke={PAL.ink} strokeWidth="3" strokeLinecap="round" />
-      <circle cx="60" cy="29" r="1.8" fill={PAL.ink} />
-    </g>
-  );
-}
+} as Record<string, () => JSX.Element>;
