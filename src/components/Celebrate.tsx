@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from 'react';
+import { useId, type CSSProperties, type ReactNode } from 'react';
 import { Boot, Capsule, MascotHead, Mitt, r1, type HeadId, type MitKind, type V } from './Mascot';
 import { FlameArt } from "./StreakArt";
 
@@ -29,9 +29,9 @@ export const twinkle = (x: number, y: number, r: number) => {
 
 
 /* ------------------------------------------------------------------------------------------
- * Full-body action rig, built from the flat primitives in Mascot.tsx: capsule limbs that start
- * inside a bean torso (so shoulders and hips attach cleanly), mitten hands, block boots, and the
- * mascot head. The torso is drawn upright around the pelvis and tilted along the line of action.
+ * Full-body action rig, built from the flat primitives in Mascot.tsx: slim capsule limbs that
+ * start inside a slim, straight-shouldered torso (so shoulders and hips attach cleanly), squarish
+ * hands, block boots, and the cast's own head. The torso is drawn upright around the pelvis and tilted along the line of action.
  * All angles are screen angles: 0 right, 90 down.
  * ---------------------------------------------------------------------------------------- */
 
@@ -65,9 +65,18 @@ interface Outfit {
   torso: ReactNode;
 }
 
-/* One bean per body: narrow shoulders, a full belly, flat at the hips. */
-const BRAM_BEAN = 'M-19 10C-25 -4 -25 -30 -16 -40Q-9 -47 0 -47Q9 -47 16 -40C25 -30 25 -4 19 10Q0 16 -19 10Z';
-const JADA_BEAN = 'M-15 9C-20 -4 -20 -26 -13 -35Q-7 -41 0 -41Q7 -41 13 -35C20 -26 20 -4 15 9Q0 14 -15 9Z';
+/**
+ * Slim torsos in the cast's system (the same as `Character` and `Bust`): straight, slightly
+ * sloping shoulders with a small rounded corner, straight sides tapering a little to the hips,
+ * cut off flat where the trousers start. Torso space: pelvis at (0, 0), up is negative.
+ */
+const slimTorso = (sh: number, hip: number, top: number, bottom: number) =>
+  `M${-hip} ${bottom}L${-sh} ${top + 10}Q${-sh + 0.6} ${top + 1.5} ${-sh + 9} ${top}H${sh - 9}` +
+  `Q${sh - 0.6} ${top + 1.5} ${sh} ${top + 10}L${hip} ${bottom}Z`;
+const BRAM_TORSO = slimTorso(20, 15.5, -47, 11);
+const JADA_TORSO = slimTorso(17, 13.5, -41, 10);
+/** The one crisp shade on the right of the clothes (light from the top left). */
+const torsoShade = (x0: number, x1: number) => <path d={`M${x0} -60H34V20H${x1}Z`} fill="#000" opacity=".13" />;
 
 const OUTFITS: Record<HeadId, Outfit> = {
   bram: {
@@ -76,20 +85,25 @@ const OUTFITS: Record<HeadId, Outfit> = {
     sleeve: '#1a86d8',
     leg: '#2d4f78',
     shoe: '#8a5a2b',
-    arm: [23, 21, 12],
-    legs: [17, 15, 14],
-    shoulder: [15, -34],
-    hip: [9, 4],
+    arm: [22, 20, 10],
+    legs: [17, 15, 12.5],
+    shoulder: [17.5, -39],
+    hip: [8, 4],
     neck: -44,
     headScale: 0.92,
-    torsoPath: BRAM_BEAN,
+    torsoPath: BRAM_TORSO,
     torso: (
       <>
-        {/* Hi-vis vest over a blue shirt: flat colour blocks only. */}
-        <path d={BRAM_BEAN} fill="#ff7a00" />
-        <path d="M-9 -48L0 -33L9 -48Z" fill="#1a86d8" />
-        <rect x="-26" y="-21" width="52" height="6" fill="#ffe066" />
-        <rect x="-26" y="-2" width="52" height="20" fill="#2d4f78" />
+        {/* Hi-vis vest over a blue work shirt, the same blocks as the lesson Bram. */}
+        <path d={BRAM_TORSO} fill="#ff7a00" />
+        <path d="M-8.5 -48L0 -32.5L8.5 -48Z" fill="#1a86d8" />
+        <path d="M-7.6 -47.4L0 -41.6L-3.6 -38.6ZM7.6 -47.4L0 -41.6L3.6 -38.6Z" fill="#5fb8f5" />
+        <path d="M-10 -46V-20M10 -46V-20" stroke="#eef5f7" strokeWidth="3.6" />
+        <rect x="-24" y="-21" width="48" height="4.4" fill="#eef5f7" />
+        <path d="M0 -32.5V-3" stroke="#d96500" strokeWidth="1.4" />
+        <rect x="4.5" y="-31" width="7" height="5.6" rx=".8" fill="#e86e00" />
+        <rect x="-24" y="-3" width="48" height="16" fill="#2d4f78" />
+        <rect x="-24" y="-3" width="48" height="2.2" fill="#24405f" />
       </>
     ),
   },
@@ -100,21 +114,24 @@ const OUTFITS: Record<HeadId, Outfit> = {
     bare: true,
     leg: '#1592db',
     shoe: '#c2412d',
-    arm: [20, 19, 10.5],
-    legs: [14, 13, 12.5],
-    shoulder: [12, -30],
-    hip: [7, 4],
+    arm: [19, 18, 8.5],
+    legs: [14, 13, 11],
+    shoulder: [14.5, -33.5],
+    hip: [6.5, 4],
     neck: -38,
     headScale: 0.8,
-    torsoPath: JADA_BEAN,
+    torsoPath: JADA_TORSO,
     torso: (
       <>
-        {/* Yellow tee under blue dungarees: one bib-and-trousers block and two straps. */}
-        <path d={JADA_BEAN} fill="#ffc929" />
-        <rect x="-11" y="-20" width="22" height="34" rx="3" fill="#1592db" />
-        <rect x="-22" y="-2" width="44" height="18" fill="#1592db" />
-        <rect x="-13" y="-42" width="5" height="24" rx="2.5" fill="#1592db" transform="rotate(-6 -10 -20)" />
-        <rect x="8" y="-42" width="5" height="24" rx="2.5" fill="#1592db" transform="rotate(6 10 -20)" />
+        {/* Yellow tee under blue dungarees: a bib, two straps and the trousers block. */}
+        <path d={JADA_TORSO} fill="#ffc929" />
+        <path d="M-5.6 -41.6L0 -37.4L5.6 -41.6" fill="none" stroke="#e0a800" strokeWidth="1.6" strokeLinejoin="round" />
+        <path d="M-12.6 -40L-9 -24M12.6 -40L9 -24" stroke="#1592db" strokeWidth="3.6" />
+        <rect x="-10" y="-25" width="20" height="24" fill="#1592db" />
+        <rect x="-10.6" y="-26.4" width="3.4" height="3.4" rx=".7" fill="#ffc414" />
+        <rect x="7.2" y="-26.4" width="3.4" height="3.4" rx=".7" fill="#ffc414" />
+        <rect x="-5" y="-19" width="10" height="6" rx=".8" fill="#0f73ae" />
+        <rect x="-22" y="-4" width="44" height="16" fill="#1592db" />
       </>
     ),
   },
@@ -141,26 +158,27 @@ interface ActionPose {
   behind: Array<'armL' | 'armR' | 'legL' | 'legR'>;
 }
 
-function Arm({ o, pose, side, cls }: { o: Outfit; pose: ActionPose; side: 'L' | 'R'; cls: string }) {
+/**
+ * One arm in two layers: the upper arm hangs from under the shoulder (drawn behind the torso, so
+ * the shoulder line stays straight), the forearm and hand come in front.
+ */
+function Arm({ o, pose, side, cls, seg }: { o: Outfit; pose: ActionPose; side: 'L' | 'R'; cls: string; seg: 'upper' | 'lower' }) {
   const spec = side === 'L' ? pose.armL : pose.armR;
   const S = place([side === 'L' ? -o.shoulder[0] : o.shoulder[0], o.shoulder[1]], pose.tilt, pose.pelvis);
   const [U, F, w] = o.arm;
   const E = go(S, U, spec.a);
   const W = go(E, F, spec.e);
+  if (seg === 'upper') {
+    return (
+      <g className={`fig-arm ${cls}`} style={origin(S)}>
+        <Capsule a={S} b={E} w={w} fill={o.bare ? o.skin : o.sleeve} />
+        {o.bare && <Capsule a={S} b={go(S, U * 0.42, spec.a)} w={w * 1.18} fill={o.sleeve} />}
+      </g>
+    );
+  }
   return (
     <g className={`fig-arm ${cls}`} style={origin(S)}>
-      {o.bare ? (
-        <>
-          <Capsule a={S} b={E} w={w} fill={o.skin} />
-          <Capsule a={E} b={W} w={w} fill={o.skin} />
-          <Capsule a={S} b={go(S, U * 0.45, spec.a)} w={w * 1.35} fill={o.sleeve} />
-        </>
-      ) : (
-        <>
-          <Capsule a={S} b={E} w={w} fill={o.sleeve} />
-          <Capsule a={E} b={W} w={w} fill={o.sleeve} />
-        </>
-      )}
+      <Capsule a={E} b={W} w={w} fill={o.bare ? o.skin : o.sleeve} />
       <g className="fig-hand" style={origin(W)}>
         <g transform={`translate(${r1(W[0])} ${r1(W[1])}) rotate(${spec.e}) scale(1 ${spec.flip ? -1 : 1})`}>
           <Mitt kind={spec.hand} w={w} skin={o.skin} shade={o.shade} />
@@ -191,10 +209,11 @@ function Leg({ o, pose, side, cls }: { o: Outfit; pose: ActionPose; side: 'L' | 
 /** One cast member in an action pose. Classes let CSS move the parts. */
 function Figure({ who, pose, blink }: { who: HeadId; pose: ActionPose; blink?: number }) {
   const o = OUTFITS[who];
+  const clip = `figt-${who}-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
   const N = place([0, o.neck], pose.tilt, pose.pelvis);
   const parts = {
-    armL: <Arm key="armL" o={o} pose={pose} side="L" cls="fig-armL" />,
-    armR: <Arm key="armR" o={o} pose={pose} side="R" cls="fig-armR" />,
+    armL: <Arm key="armL" o={o} pose={pose} side="L" cls="fig-armL" seg="lower" />,
+    armR: <Arm key="armR" o={o} pose={pose} side="R" cls="fig-armR" seg="lower" />,
     legL: <Leg key="legL" o={o} pose={pose} side="L" cls="fig-legL" />,
     legR: <Leg key="legR" o={o} pose={pose} side="R" cls="fig-legR" />,
   };
@@ -203,8 +222,18 @@ function Figure({ who, pose, blink }: { who: HeadId; pose: ActionPose; blink?: n
     <g className={`fig fig-${who}`} style={origin(pose.pelvis)}>
       {names.filter((n) => pose.behind.includes(n)).map((n) => parts[n])}
       {names.filter((n) => n.startsWith('leg') && !pose.behind.includes(n)).map((n) => parts[n])}
+      <Arm o={o} pose={pose} side="L" cls="fig-armL" seg="upper" />
+      <Arm o={o} pose={pose} side="R" cls="fig-armR" seg="upper" />
       <g className="fig-body" style={origin(pose.pelvis)}>
-        <g transform={`translate(${r1(pose.pelvis[0])} ${r1(pose.pelvis[1])}) rotate(${pose.tilt})`}>{o.torso}</g>
+        <g transform={`translate(${r1(pose.pelvis[0])} ${r1(pose.pelvis[1])}) rotate(${pose.tilt})`}>
+          <defs>
+            <clipPath id={clip}><path d={o.torsoPath} /></clipPath>
+          </defs>
+          <g clipPath={`url(#${clip})`}>
+            {o.torso}
+            {torsoShade(o.shoulder[0] - 6, o.shoulder[0] - 4)}
+          </g>
+        </g>
       </g>
       <g className="fig-head" style={origin(N)}>
         <g transform={`translate(${r1(N[0])} ${r1(N[1])}) rotate(${pose.tilt + pose.head}) scale(${o.headScale})`}>

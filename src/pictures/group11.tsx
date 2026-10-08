@@ -601,15 +601,15 @@ export default {
     </g>
   ),
 
-  // "het compliment": the compliment — Henk gives Amina a thumbs up; she beams, with sparkles.
+  // "het compliment": the compliment — Henk gives Amina a thumbs up; she smiles, proud, with sparkles.
   'w.compliment': () => (
     <g>
-      <Bust who="henk" x={30} y={122} scale={0.5} expr="pleased" />
-      <Hand pose="thumb" x={58} y={96} rotate={8} scale={0.7} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
-      <Bust who="amina" x={90} y={122} scale={0.5} expr="joy" flip />
+      <Bust who="henk" x={28} y={122} scale={0.52} expr="pleased" bold />
+      <Hand pose="thumb" x={56} y={98} rotate={8} scale={0.66} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
+      <Bust who="amina" x={88} y={122} scale={0.6} emotion="proud" tilt={-4} bold flip />
       <Sparkle x={66} y={24} r={8} />
-      <Sparkle x={112} y={36} r={6} />
-      <Sparkle x={106} y={14} r={4} color={PAL.yellowShade} />
+      <Sparkle x={112} y={30} r={6} />
+      <Sparkle x={108} y={10} r={4} color={PAL.yellowShade} />
     </g>
   ),
 
@@ -677,10 +677,12 @@ export default {
     );
   },
 
-  // "de rust": the rest (break) — Jada sits back with her eyes closed and a hot cup of coffee.
+  // "de rust": the rest (break) — Jada leans back with her eyes calmly closed and a hot cup of coffee.
   'w.rust': () => (
     <g>
-      <Bust who="jada" x={50} y={122} scale={0.7} expr="pleased" squint />
+      <g transform="rotate(-7 50 122)">
+        <Bust who="jada" x={50} y={122} scale={0.72} emotion="rest" tilt={-6} bold />
+      </g>
       {/* Mug */}
       <path d="M96 84A8 8 0 0 1 96 100" fill="none" stroke={PAL.paperShade} strokeWidth="4.5" strokeLinecap="round" />
       <rect x={74} y={78} width={24} height={28} rx="5" fill={PAL.white} />

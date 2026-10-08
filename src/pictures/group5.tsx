@@ -174,14 +174,14 @@ export default {
     </g>
   ),
 
-  // "ziek": sick — Amina with a thermometer in her mouth and a hot, red forehead.
+  // "ziek": sick — Amina with a hand on her hot forehead, heavy eyes, a thermometer in her mouth.
   'w.ziek': () => (
     <g>
-      <Bust who="amina" x={52} y={118} scale={0.78} expr="disappointed" />
-      <Thermometer x={60} y={80} angle={18} len={40} />
+      <Bust who="amina" x={58} y={120} scale={0.78} emotion="sick" arms="forehead" bold />
+      <Thermometer x={64} y={80} angle={18} len={38} />
       {/* Sweat drop */}
-      <path d="M94 34Q100 44 100 48A6 6 0 0 1 88 48Q88 44 94 34Z" fill={PAL.ice} />
-      <Motion x={52} y={22} dir={-90} spread={80} n={3} len={6} gap={10} color={PAL.red} width={3.4} />
+      <path d="M98 34Q104 44 104 48A6 6 0 0 1 92 48Q92 44 98 34Z" fill={PAL.ice} />
+      <Motion x={58} y={20} dir={-90} spread={80} n={3} len={6} gap={10} color={PAL.red} width={3.4} />
     </g>
   ),
 
@@ -225,15 +225,12 @@ export default {
     </g>
   ),
 
-  // "de pijn": the pain — Bram squeezes his eyes shut and grabs his sore shoulder; a red
-  // throbbing spot under his hand.
+  // "de pijn": the pain — Bram squeezes his eyes shut, grimaces and grips his sore upper arm;
+  // short red throb marks where it hurts.
   'w.pijn': () => (
     <g>
-      <Bust who="bram" x={48} y={124} scale={0.76} expr="disappointed" squint />
-      <circle cx="78" cy="98" r="17" fill={PAL.redLight} />
-      <circle cx="78" cy="98" r="10" fill={PAL.red} />
-      <Motion x={78} y={98} dir={-45} spread={110} n={4} len={9} gap={22} color={PAL.red} width={4.4} />
-      <Hand pose="open" x={70} y={124} rotate={-28} scale={0.7} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
+      <Bust who="bram" x={50} y={124} scale={0.8} emotion="pain" arms="clutch" tilt={-6} bold />
+      <Motion x={88} y={98} dir={-40} spread={110} n={3} len={8} gap={10} color={PAL.red} width={4} />
     </g>
   ),
 

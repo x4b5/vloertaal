@@ -19,6 +19,22 @@
 import type { ReactNode } from 'react';
 
 export type Expr = 'neutral' | 'thinking' | 'pleased' | 'disappointed' | 'joy';
+/**
+ * Clear feelings for the word pictures (boos, bang, pijn, ziek...), on top of the calm `Expr`
+ * set. Still adult and flat: the feeling is carried by the brow angle, the eye shape and a
+ * mouth line, never by big eyes, open laughs or blush.
+ *
+ *  - angry: inner brows pulled down hard, narrowed eyes, a tight down-turned mouth.
+ *  - afraid: inner brows pulled up, slightly wider eyes, the mouth a little open.
+ *  - pain: brows pulled together, eyes squeezed shut, a tense open grimace.
+ *  - sick: tired brows, heavy half-closed lids, a small down-turned mouth.
+ *  - worried: inner brows up, a wavering mouth.
+ *  - sad: inner brows up, heavy lids looking down, a clearly down-turned mouth.
+ *  - confused: one brow up, the other down, a slanted mouth.
+ *  - rest: eyes calmly closed, relaxed brows, a soft smile.
+ *  - proud: smiling eyes (closed upward arcs), raised brows, a wide closed smile.
+ */
+export type Emotion = 'angry' | 'afraid' | 'pain' | 'sick' | 'worried' | 'sad' | 'confused' | 'rest' | 'proud';
 /** 0 closed, 1 small open, 2 a little more open, 3 rounded. */
 export type TalkFrame = 0 | 1 | 2 | 3;
 
@@ -33,6 +49,8 @@ export interface FaceKit {
   talk: (f: TalkFrame) => ReactNode;
   /** Cheek blush per expression (opacity). The flat style has none. */
   blush?: (e: Expr) => number;
+  /** A clear feeling (word pictures): eyes, brows and mouth together. */
+  emote: (e: Emotion, brow: string) => { eyes: ReactNode; brows: ReactNode; mouth: ReactNode; open: boolean };
 }
 
 const line = (d: string, color: string, w: number) => (
@@ -122,8 +140,165 @@ function kit(s: Spec): FaceKit {
       return <ellipse cx="60" cy={m + 0.6} rx={rx} ry={ry} fill="#4a2420" />;
     },
     blush: () => 0,
+    emote: (e, brow) => emote(s, e, brow),
   };
 }
+
+const MOUTH_DARK = '#4a2420';
+
+/** The feeling faces, from the same spec (eye places, brow weight, mouth place) as the calm ones. */
+function emote(s: Spec, e: Emotion, color: string) {
+  const { lx: L, rx: R, y: Y, mouthY: m, mw: w } = s;
+  const [ex, ey] = s.er;
+  const bw = r(Math.max(s.browW, 2.1) + 0.5);
+  /** Both brows from the inner end (y offset from the eyes) to the outer end; arch < 0 bends up. */
+  const brows = (inner: number, outer: number, arch = 0, inner2 = inner, outer2 = outer) =>
+    line(
+      `M${r(L - 4.4)} ${r(Y + outer)}Q${r(L)} ${r(Y + (inner + outer) / 2 + arch)} ${r(L + 3.8)} ${r(Y + inner)}` +
+        `M${r(R - 3.8)} ${r(Y + inner2)}Q${r(R)} ${r(Y + (inner2 + outer2) / 2 + arch)} ${r(R + 4.4)} ${r(Y + outer2)}`,
+      color,
+      bw,
+    );
+  const dots = (sx = 1, sy = 1, dx = 0, dy = 0) => (
+    <>
+      <ellipse cx={r(L + dx)} cy={r(Y + dy)} rx={r(ex * sx)} ry={r(ey * sy)} fill={INK} />
+      <ellipse cx={r(R + dx)} cy={r(Y + dy)} rx={r(ex * sx)} ry={r(ey * sy)} fill={INK} />
+    </>
+  );
+  /** Heavy lids: the lower half of each eye under a straight lid line. */
+  const lids = (dy = 0) => (
+    <>
+      {[L, R].map((cx) => (
+        <g key={cx}>
+          <path d={`M${r(cx - ex - 0.2)} ${r(Y + dy - 0.3)}A${r(ex + 0.2)} ${r(ey)} 0 0 0 ${r(cx + ex + 0.2)} ${r(Y + dy - 0.3)}Z`} fill={INK} />
+          {line(`M${r(cx - ex - 1)} ${r(Y + dy - 0.5)}L${r(cx + ex + 1)} ${r(Y + dy - 0.5)}`, INK, 1.4)}
+        </g>
+      ))}
+    </>
+  );
+  const arcs = (bend: number, dy = 0, wdt = 1.8) =>
+    line([L, R].map((cx) => `M${r(cx - 2.9)} ${r(Y + dy)}Q${r(cx)} ${r(Y + dy + bend)} ${r(cx + 2.9)} ${r(Y + dy)}`).join(''), INK, wdt);
+  const mouthLine = (d: string, wdt = 2) => line(d, s.lip, wdt);
+  switch (e) {
+    case 'angry':
+      return {
+        open: true,
+        brows: (
+          <>
+            {brows(-4, -8.6, 0.3)}
+            {line(`M59 ${r(Y - 6.6)}L59.4 ${r(Y - 3.6)}M61 ${r(Y - 6.6)}L60.6 ${r(Y - 3.6)}`, color, 1)}
+          </>
+        ),
+        eyes: (
+          <>
+            {[L, R].map((cx) => {
+              const inner = cx < 60 ? 1 : -1;
+              // A narrowed eye whose upper lid slopes down towards the nose.
+              return (
+                <path
+                  key={cx}
+                  d={`M${r(cx - inner * (ex + 0.6))} ${r(Y - 1.2)}L${r(cx + inner * (ex + 0.6))} ${r(Y + 0.2)}Q${r(cx + inner * (ex + 0.4))} ${r(Y + 1.9)} ${r(cx)} ${r(Y + 1.9)}Q${r(cx - inner * (ex + 0.6))} ${r(Y + 1.6)} ${r(cx - inner * (ex + 0.6))} ${r(Y - 1.2)}Z`}
+                  fill={INK}
+                />
+              );
+            })}
+          </>
+        ),
+        mouth: mouthLine(`M${r(60 - w * 0.95)} ${r(m + 1.5)}Q60 ${r(m - 1.3)} ${r(60 + w * 0.95)} ${r(m + 1.5)}`, 2.2),
+      };
+    case 'afraid':
+      return {
+        open: true,
+        brows: brows(-10.4, -7.2, -0.6),
+        eyes: dots(1.1, 1.22, 0, -0.3),
+        mouth: (
+          <path
+            d={`M${r(60 - w * 0.85)} ${r(m + 0.4)}Q60 ${r(m - 2)} ${r(60 + w * 0.85)} ${r(m + 0.4)}Q60 ${r(m + 2.8)} ${r(60 - w * 0.85)} ${r(m + 0.4)}Z`}
+            fill={MOUTH_DARK}
+          />
+        ),
+      };
+    case 'pain':
+      return {
+        open: false,
+        brows: brows(-4.6, -7.4, 0.6),
+        // Eyes squeezed shut: a short pinched line each, pulled in towards the nose.
+        eyes: line(
+          [L, R]
+            .map((cx) => {
+              const i = cx < 60 ? 1 : -1;
+              return `M${r(cx - i * 3)} ${r(Y - 1.6)}L${r(cx + i * 2.6)} ${r(Y + 0.1)}L${r(cx - i * 3)} ${r(Y + 1.6)}`;
+            })
+            .join(''),
+          INK,
+          1.8,
+        ),
+        mouth: (
+          <g>
+            <rect x={r(60 - w * 1.1)} y={r(m - 1.8)} width={r(w * 2.2)} height="3.8" rx="1.5" fill={MOUTH_DARK} />
+            <rect x={r(60 - w * 0.9)} y={r(m - 1.4)} width={r(w * 1.8)} height="1.3" rx=".5" fill="#fff" opacity=".9" />
+          </g>
+        ),
+      };
+    case 'sick':
+      return {
+        open: true,
+        brows: brows(-8, -6.2, 0),
+        eyes: lids(0.4),
+        mouth: mouthLine(`M${r(60 - w * 0.7)} ${r(m + 1)}Q60 ${r(m - 0.6)} ${r(60 + w * 0.7)} ${r(m + 1)}`, 1.8),
+      };
+    case 'worried':
+      return {
+        open: true,
+        brows: brows(-10.4, -6, -0.2),
+        eyes: dots(1, 1.08),
+        mouth: mouthLine(
+          `M${r(60 - w)} ${r(m + 0.8)}Q${r(60 - w * 0.5)} ${r(m - 1)} 60 ${r(m + 0.3)}Q${r(60 + w * 0.5)} ${r(m + 1.6)} ${r(60 + w)} ${r(m - 0.1)}`,
+          1.9,
+        ),
+      };
+    case 'sad':
+      return {
+        open: true,
+        brows: brows(-9.4, -6, 0),
+        eyes: lids(0.9),
+        mouth: mouthLine(`M${r(60 - w * 0.95)} ${r(m + 1.9)}Q60 ${r(m - 1.7)} ${r(60 + w * 0.95)} ${r(m + 1.9)}`, 2.1),
+      };
+    case 'confused':
+      return {
+        open: true,
+        // One brow lifted and arched, the other pulled down: "huh?"
+        brows: brows(-8.6, -8, -2.4, -5, -6.6),
+        eyes: dots(1, 1.04, 0.5, -0.3),
+        mouth: mouthLine(`M${r(60 - w * 0.8)} ${r(m + 1.1)}L${r(60 + w * 0.85)} ${r(m - 0.7)}`, 2),
+      };
+    case 'rest':
+      return {
+        open: false,
+        brows: brows(-6.8, -6.6, -0.8),
+        eyes: arcs(1.9, 0.2),
+        mouth: mouthLine(`M${r(60 - w * 0.9)} ${r(m)}Q60 ${r(m + 2.2)} ${r(60 + w * 0.9)} ${r(m - 0.2)}`, 1.9),
+      };
+    case 'proud':
+    default:
+      return {
+        open: false,
+        brows: brows(-8, -7.6, -1),
+        eyes: arcs(-2.2, 0.9, 1.9),
+        mouth: (
+          <path
+            d={`M${r(60 - w * 1.2)} ${r(m - 1)}Q60 ${r(m + 4.8)} ${r(60 + w * 1.2)} ${r(m - 1)}Q60 ${r(m + 2)} ${r(60 - w * 1.2)} ${r(m - 1)}Z`}
+            fill={s.lip}
+            stroke={s.lip}
+            strokeWidth="1.2"
+            strokeLinejoin="round"
+          />
+        ),
+      };
+  }
+}
+
+const r = (n: number) => Math.round(n * 100) / 100;
 
 /* ---------- Bram: easy-going, straight brows, lopsided smile ---------- */
 
