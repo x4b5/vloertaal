@@ -2113,7 +2113,22 @@ svg.emoji-xl { width: 140px; height: 140px; }
   .player .speaker-build .speaker-bubble { margin-bottom: 8px; }
   .player .build-bubble .build-pic { width: 40px; height: 40px; }
   .player .build-gloss { flex-basis: 110px; font-size: 1.12rem; line-height: 1.25; }
-  .player .tile-bank { margin-top: 8px; }
+  .player .tile-bank { margin-top: 6px; }
+  /* A two-line instruction (Polish "Ułóż to zdanie po niderlandzku") still leaves the last row
+     of tiles above the footer: tighter gaps around the bubble. */
+  .player .exercise:has(> .speaker-build) > .prompt { margin-bottom: 6px; }
+  .player .speaker-build { margin-bottom: 2px; }
+  .player .speaker-build .speaker-bubble { margin-bottom: 2px; padding-block: 6px; }
+  /* A long situation ("Say what bothers you", in Tigrinya) keeps all three options above the
+     footer: "What do you do?" on one line, a smaller colleague (a wider bubble), tighter gaps and
+     a smaller number box (wider option text). The help language keeps its size. */
+  .player .situation .prompt { margin-bottom: 6px; }
+  .player .situation .prompt .bi { flex-direction: row; flex-wrap: wrap; align-items: baseline; column-gap: 10px; }
+  .player .situation .speaker { gap: 6px; margin-bottom: 6px; }
+  .player .situation .speaker-char { font-size: 48px; margin-top: 0; }
+  .player .situation .speaker-bubble { margin-bottom: 0; }
+  .player .situation .choices-rows .choice { gap: 10px; padding-inline: 12px; }
+  .player .situation .choice-num { width: 32px; height: 32px; font-size: 1.15rem; }
 }
 /* A 10–13 letter word ("goedemorgen") in the speech bubble stays whole on a narrow phone: a
    smaller colleague gives the bubble the room (its soft hyphen is only for longer words' sake). */
@@ -2871,10 +2886,26 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .choices:not(.choices-pics) .stamp-wrong .stamp-word, .choices-pics .stamp-wrong .stamp-word { font-size: 0.9rem; }
 .answer-line .stamp.stamp-wrong { width: 54px; height: 54px; top: 3px; }
 .answer-line .stamp-wrong .stamp-word { font-size: 0.9rem; }
-/* At this size a help-language line would not fit: the stamp says NOG EENS only; the feedback
-   label under it says it large in the help language. */
-.stamp.stamp-wrong .stamp-sub { display: none; }
+/* The ring says NOG EENS only; the small help-language line sits under the ring, outside it,
+   upright and on one line, so it never clips. The ring moves up to keep the pair centred on the
+   card. */
 .stamp.stamp-wrong .stamp-word { font-size: 0.9rem; }
+.stamp.stamp-wrong .stamp-sub {
+  position: absolute; top: calc(100% + 3px); left: auto; right: auto; inset-inline-end: -4px; rotate: -3deg;
+  width: max-content; min-width: calc(100% + 8px); max-width: none; margin: 0; white-space: nowrap; text-align: center;
+  font-size: 0.66rem; font-weight: 650; line-height: 1.15; color: var(--wrong-ink);
+}
+.stamp.stamp-wrong .stamp-sub:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.76rem; }
+.choices:not(.choices-pics) .stamp.stamp-wrong { width: 50px; height: 50px; margin-top: -33px; inset-inline-end: 10px; }
+.choices:not(.choices-pics) .choice-wrap .choice:has(> .stamp-wrong) { padding-inline-end: 140px; }
+.choices:not(.choices-pics) .choice:has(> .stamp-wrong) { padding-inline-end: 84px; }
+.answer-line .stamp.stamp-wrong { width: 46px; height: 46px; top: 1px; inset-inline-end: 9px; }
+.answer-line .stamp.stamp-wrong .stamp-word { font-size: 0.8rem; }
+/* Short phones (360×640): lower option cards, so a smaller ring keeps ring and line inside. */
+@media (max-height: 700px) {
+  .choices:not(.choices-pics) .stamp.stamp-wrong { width: 44px; height: 44px; margin-top: -30px; }
+  .choices:not(.choices-pics) .stamp.stamp-wrong .stamp-word { font-size: 0.8rem; }
+}
 .result-stamp { right: auto; inset-inline-end: 0; }
 .chat-hint { left: auto; inset-inline-start: 0; }
 
