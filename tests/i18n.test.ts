@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { allLessons, phrasebookExtras, phrasebookIds, findItem, units } from '../src/content/curriculum';
+import { allLessons, teachingLessons, phrasebookExtras, phrasebookIds, findItem, units } from '../src/content/curriculum';
 import { aboutIds } from '../src/content/about';
 import { cultureIds, cultureTips } from '../src/content/culture';
 import { workIds } from '../src/content/work';
@@ -8,7 +8,8 @@ import { uiEn } from '../src/i18n/types';
 
 const contentIds = [
   ...units.map((u) => u.id),
-  ...allLessons.flatMap((l) => [
+  // Mixed-review lessons only repeat items of other lessons; their titles are checked below.
+  ...teachingLessons.flatMap((l) => [
     l.id,
     ...l.words.map((w) => w.id),
     ...l.sentences.map((s) => s.id),
@@ -38,6 +39,22 @@ describe('content and translations', () => {
     expect(new Set(contentIds).size).toBe(contentIds.length);
   });
 
+  it('every unit ends with a mixed review of items taught before, with a translated title', () => {
+    const taught = new Set(teachingLessons.flatMap((l) => [...l.words, ...l.sentences, ...(l.dialogues ?? []).map((d) => d.reply)].map((x) => x.id)));
+    for (const u of units) {
+      const mix = u.lessons[u.lessons.length - 1];
+      expect(mix.id, u.id).toBe(`l.${u.id.slice(2)}.mix`);
+      expect(mix.words.length, u.id).toBeGreaterThanOrEqual(5);
+      expect(mix.sentences.length, u.id).toBeGreaterThanOrEqual(2);
+      expect(mix.dialogues?.length, u.id).toBeGreaterThanOrEqual(1);
+      for (const x of [...mix.words, ...mix.sentences, ...(mix.dialogues ?? []).map((d) => d.reply)]) expect(taught.has(x.id), `${mix.id}: ${x.id}`).toBe(true);
+      // Some of it comes from other units: repetition across topics.
+      const own = new Set(u.lessons.slice(0, -1).flatMap((l) => l.words.map((w) => w.id)));
+      expect(mix.words.some((w) => !own.has(w.id)), u.id).toBe(true);
+      for (const lang of helpLanguages) expect(lang.gloss[mix.id]?.trim(), `${lang.code} ${mix.id}`).toBeTruthy();
+    }
+  });
+
   it('every lesson has a workplace chat', () => {
     for (const l of allLessons) expect(l.dialogues?.length, l.id).toBeGreaterThan(0);
   });
@@ -57,7 +74,7 @@ describe('content and translations', () => {
       expect(lang.ui.streakGrew).toContain('{n}');
       expect(lang.ui.whichOneIs).toContain('{word}');
       expect(missingGloss).toEqual([]);
-      expect(Object.keys(lang.gloss).filter((id) => !contentIds.includes(id))).toEqual([]);
+      expect(Object.keys(lang.gloss).filter((id) => !contentIds.includes(id) && !id.endsWith('.mix'))).toEqual([]);
     });
   }
 });

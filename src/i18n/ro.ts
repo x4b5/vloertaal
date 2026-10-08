@@ -31,6 +31,7 @@ const lang: HelpLanguage = {
     whatDoesThisMean: 'Ce înseamnă asta?',
     chooseDutch: 'Alege cuvântul în olandeză',
     whichOneIs: 'Care dintre acestea este „{word}”?',
+    mixLesson: 'Recapitulare mixtă',
     whatDoYouHear: 'Ce auzi?',
     matchPairs: 'Atinge perechile potrivite',
     buildSentence: 'Formează această propoziție în olandeză',

@@ -9,7 +9,7 @@ describe('lesson builder', () => {
       for (const review of [false, true]) {
         const exercises = buildLesson(lesson, { review, seed: 42 });
         expect(exercises.length).toBeGreaterThan(8);
-        expect(exercises.some((e) => e.kind === 'intro')).toBe(!review);
+        expect(exercises.some((e) => e.kind === 'intro')).toBe(!review && !lesson.id.endsWith('.mix'));
         expect(exercises.filter((e) => e.kind === 'chat')).toHaveLength(lesson.dialogues?.length ?? 0);
 
         for (const ex of exercises) {
@@ -88,5 +88,16 @@ describe('lesson builder', () => {
     expect(isNextInCourse(second.id, { [first.id]: {} })).toBe(true);
     expect(isNextInCourse(first.id, { [first.id]: {} })).toBe(false);
     expect(isNextInCourse(third.id, { [first.id]: {} })).toBe(false);
+  });
+});
+
+describe('mixed review lessons', () => {
+  it('never present their words as new', () => {
+    for (const lesson of allLessons.filter((l) => l.id.endsWith('.mix'))) {
+      const ex = buildLesson(lesson, { review: false, seed: 3 });
+      expect(ex.some((e) => e.kind === 'intro'), lesson.id).toBe(false);
+      const asked = new Set(ex.filter((e) => e.kind === 'meaning').map((e) => (e as { word: { id: string } }).word.id));
+      for (const w of lesson.words) expect(asked.has(w.id), `${lesson.id} ${w.id}`).toBe(true);
+    }
   });
 });

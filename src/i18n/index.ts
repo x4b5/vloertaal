@@ -35,6 +35,7 @@ import wTi from './work/ti';
 import wTr from './work/tr';
 import wUk from './work/uk';
 import type { CultureTranslation } from './culture/types';
+import { mixLessonId, relatedUnits } from '../content/review';
 import type { HelpLanguage, LangCode, UiKey } from './types';
 import { uiEn } from './types';
 
@@ -56,7 +57,11 @@ const work: Record<LangCode, CultureTranslation> = {
 const withCulture = (l: HelpLanguage): HelpLanguage => ({
   ...l,
   ui: { ...l.ui, ...culture[l.code].ui, ...work[l.code].ui, ...about[l.code].ui },
-  gloss: { ...l.gloss, ...culture[l.code].gloss, ...work[l.code].gloss, ...about[l.code].gloss },
+  gloss: {
+    ...l.gloss, ...culture[l.code].gloss, ...work[l.code].gloss, ...about[l.code].gloss,
+    // Every unit's "Mixed review" lesson shares one title.
+    ...Object.fromEntries(Object.keys(relatedUnits).map((id) => [mixLessonId(id), l.ui.mixLesson ?? uiEn.mixLesson])),
+  },
 });
 
 export const helpLanguages: HelpLanguage[] = [ar, ti, fa, prs, uk, tr, pl, ro, bg].map(withCulture);

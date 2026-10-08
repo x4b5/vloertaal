@@ -15,6 +15,8 @@ export const uiEn = {
   whatDoesThisMean: 'What does this mean?',
   chooseDutch: 'Choose the Dutch word',
   whichOneIs: 'Which one is “{word}”?',
+  /** Title of the last lesson of every unit: words, sentences and chats from before, mixed. */
+  mixLesson: 'Mixed review',
   whatDoYouHear: 'What do you hear?',
   matchPairs: 'Tap the matching pairs',
   buildSentence: 'Make this sentence in Dutch',
