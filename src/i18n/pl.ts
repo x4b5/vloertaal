@@ -13,7 +13,7 @@ const lang: HelpLanguage = {
     themeDark: 'Ciemny',
     voice: 'Głos niderlandzki',
     voiceAuto: 'Automatycznie',
-    voiceHint: 'Dotknij 🔊, aby posłuchać. Głosy pochodzą z twojego telefonu, więc lista jest inna na każdym urządzeniu.',
+    voiceHint: 'Dotknij 🔊, aby posłuchać. Głosy Vloertaal brzmią tak samo na każdym telefonie; pozostałe pochodzą z twojego telefonu.',
     voiceNone: 'To urządzenie nie ma głosu niderlandzkiego. Możesz go dodać w ustawieniach telefonu (Zamiana tekstu na mowę).',
     appTagline: 'Niderlandzki do pracy',
     chooseLanguage: 'Wybierz język pomocy',

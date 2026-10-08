@@ -13,7 +13,7 @@ const lang: HelpLanguage = {
     themeDark: 'Koyu',
     voice: 'Hollandaca ses',
     voiceAuto: 'Otomatik',
-    voiceHint: 'Dinlemek için 🔊 simgesine dokun. Sesler telefonundan gelir, bu yüzden liste her cihazda farklıdır.',
+    voiceHint: 'Dinlemek için 🔊 simgesine dokun. Vloertaal sesleri her telefonda aynı duyulur; diğerleri telefonundan gelir.',
     voiceNone: 'Bu cihazda Hollandaca ses yok. Telefon ayarlarından (Metin okuma) ekleyebilirsin.',
     appTagline: 'İş yeri için Hollandaca',
     chooseLanguage: 'Yardım dilini seç',

@@ -51,7 +51,7 @@ const t: CultureTranslation = {
     'c.unsafe.o2': 'Nic nie mówisz, bo nic się nie stało.',
     'c.unsafe.o3': 'Naprawiasz to sam i nikomu nie mówisz.',
     'c.unsafe.w': 'Prawie-wypadek to ostrzeżenie. Zgłoszenie go pomaga zapobiec prawdziwemu wypadkowi; nie będziesz mieć kłopotów za to, że coś powiesz.',
-    'c.direct': 'Bezpośrednio to nie niegrzecznie',
+    'c.direct': 'Bezpośredniość to nie niegrzeczność',
     'c.direct.b': 'Holenderscy koledzy często mówią bardzo bezpośrednio, np. „Dat is fout” albo „Doe het zo”. Zwykle nie chcą być niegrzeczni. Ty też możesz mówić bezpośrednio, dopóki jesteś uprzejmy.',
     'c.direct.p': 'Dobrze, to jak trzeba to zrobić?',
     'c.direct.s': 'Kolega mówi: „Nee, dat is fout. Die doos moet daar.” Co robisz?',
