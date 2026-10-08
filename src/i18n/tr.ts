@@ -170,6 +170,10 @@ const lang: HelpLanguage = {
     resumeLesson: 'Derse devam et',
     restartLesson: 'Baştan başla',
     quitKept: 'İlerlemen kaydedilir. Sonra devam edebilirsin.',
+    bestAnswer: 'En iyi cevap',
+    inReview: 'kontrol ediliyor',
+    today: 'Bugün',
+    playAgain: 'Tekrar dinle',
   },
   gloss: {
     // Unit: First day at work

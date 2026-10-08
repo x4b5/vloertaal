@@ -190,3 +190,25 @@ export function isNextInCourse(lessonId: string, completed: Record<string, unkno
   if (index < 0) return false;
   return index === 0 || Boolean(completed[order[index - 1].id]);
 }
+
+const ARTICLES = new Set(['de', 'het', 'een']);
+
+/**
+ * A picture for a sentence: the pictured word (from the whole course) whose Dutch, without its
+ * article, appears in the sentence. The longest match wins ("de veiligheidsschoenen" over "de
+ * schoen"). Undefined when the sentence has no pictured word.
+ */
+export function sentencePicture(sentence: Sentence, words: readonly Word[] = allWords): Word | undefined {
+  const tokens = tokenize(sentence.nl).map((t) => t.toLowerCase());
+  const has = (part: string[]) =>
+    part.length > 0 && tokens.some((_, i) => part.every((p, j) => tokens[i + j] === p));
+  let best: Word | undefined;
+  let bestLen = 0;
+  for (const w of words) {
+    if (!hasPicture(w)) continue;
+    const part = tokenize(w.nl).map((t) => t.toLowerCase()).filter((t) => !ARTICLES.has(t));
+    const len = part.join(' ').length;
+    if (len >= 3 && len > bestLen && has(part)) { best = w; bestLen = len; }
+  }
+  return best;
+}

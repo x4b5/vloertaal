@@ -1,13 +1,33 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { fillN, ui } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { STREAK_TIERS, dayKey, emptyProgress, workWeek, type WeekDayState } from '../lib/progress';
-import { Bi } from './Bi';
+import { Bi, HelpText } from './Bi';
 import { Burst, StreakHero } from './Celebrate';
 import { Character } from './Characters';
 import { FlameIcon, StreakFlame } from './StreakArt';
 import { CheckIcon, ChevronIcon, CupIcon } from './Icons';
 import { InstallCard, ReminderCard } from './Keep';
+
+/** False for the first 700 ms (400 ms with reduced motion): a tap meant for the screen before
+ *  must not skip this one. */
+export function useTapGuard() {
+  const ready = useRef(false);
+  useEffect(() => {
+    const still = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const t = window.setTimeout(() => { ready.current = true; }, still ? 400 : 700);
+    return () => window.clearTimeout(t);
+  }, []);
+  return ready;
+}
+
+/** The unit under the streak number: the help language's word ("days"), or the Dutch one
+ *  for English only. Never a bare Dutch "DAG" for a learner who can't read it. */
+function DaysUnit({ n, lang }: { n: number; lang?: HelpLanguage }) {
+  const help = lang?.ui.daysUnit;
+  if (help && lang) return <HelpText className="streak-unit streak-unit-help" text={help} lang={lang} />;
+  return <span className="streak-unit" lang="nl" aria-hidden>{n === 1 ? 'dag' : 'dagen'}</span>;
+}
 
 /** Enter continues, as on every other screen in the lesson flow. */
 function useEnter(onDone: () => void) {
@@ -60,6 +80,9 @@ export function WeekRow({ days, lang }: {
   lang?: HelpLanguage;
 }) {
   const own = weekdayLetters(lang);
+  // A help language the browser has no weekday names for (Tigrinya): no English letters, but a
+  // dot per day, today's ringed. English only keeps the English initials.
+  const dots = !own && Boolean(lang);
   const letters = own ?? EN_DAYS;
   const anyRest = days.some((d) => d.state === 'rest');
   return (
@@ -75,7 +98,9 @@ export function WeekRow({ days, lang }: {
               {d.state === 'done' && <span className="week-stamp"><CheckIcon size={20} /></span>}
               {d.state === 'rest' && <CupIcon size={20} />}
             </span>
-            <span className="week-letter" lang={own ? lang?.code : 'en'} aria-hidden>{letters[i]}</span>
+            {dots
+              ? <span className="week-dot" aria-hidden />
+              : <span className="week-letter" lang={own ? lang?.code : 'en'} aria-hidden>{letters[i]}</span>}
           </li>
         ))}
       </ol>
@@ -100,11 +125,13 @@ function markKeepOffered() {
 
 /** The bilingual Continue at the foot of these screens (it points left in right-to-left text). */
 function ContinueButton({ lang, onClick }: { lang?: HelpLanguage; onClick: () => void }) {
+  // Shown at once, but a tap meant for the screen before is ignored for a moment.
+  const ready = useTapGuard();
   return (
     <footer className="player-foot milestone-foot">
       <div className="foot-inner">
         <div className="foot-actions">
-          <button type="button" className="btn btn-go btn-primary" onClick={onClick} dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
+          <button type="button" className="btn btn-go btn-primary" onClick={() => { if (ready.current) onClick(); }} dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
             <Bi className="btn-label" text={ui('continue', lang)} />
             <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
           </button>
@@ -157,11 +184,13 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
   const [step, setStep] = useState<'streak' | 'keep'>('streak');
   const [offer] = useState(() => keep && streak === 1 && !keepOffered());
   const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-  // The number ticks up from yesterday's count, like a counter flipping over.
-  const [shown, setShown] = useState(still ? streak : streak - 1);
+  // The number ticks up from yesterday's count, like a counter flipping over; on the first
+  // day it shows 1 from the start (never "0"), and only the flame lights up.
+  const [shown, setShown] = useState(still || streak <= 1 ? streak : streak - 1);
+  const [lit, setLit] = useState(still);
   useEffect(() => {
-    if (still) return setShown(streak);
-    const t = window.setTimeout(() => setShown(streak), 1000);
+    if (still) { setShown(streak); setLit(true); return; }
+    const t = window.setTimeout(() => { setShown(streak); setLit(true); }, 1000);
     return () => window.clearTimeout(t);
   }, [streak, still]);
   const next = useCallback(() => (offer ? setStep('keep') : onDone()), [offer, onDone]);
@@ -178,8 +207,8 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
   return (
     <div className="player milestone-screen">
       <main className="player-body milestone">
-        <StreakHero lit={shown === streak} />
-        <div className={`streak-count ${shown === streak ? 'streak-lit' : ''}`} role="img" aria-label={`${streak} ${label.en}${tier ? ` · ${ui(tier.key).en}` : ''}`}>
+        <StreakHero lit={lit} />
+        <div className={`streak-count ${lit ? 'streak-lit' : ''}`} role="img" aria-label={`${streak} ${label.en}${tier ? ` · ${ui(tier.key).en}` : ''}`}>
           <span className="streak-flame-wrap">
             {/* Sparks fly off the flame when the new day is counted. */}
             <svg className="streak-sparks" viewBox="0 0 120 120" aria-hidden focusable="false">
@@ -187,7 +216,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
             </svg>
             <StreakFlame />
           </span>
-          <span key={shown} className={`streak-num ${shown === streak ? 'streak-num-new' : ''}`} aria-hidden>
+          <span key={`${shown}-${lit}`} className={`streak-num ${lit ? 'streak-num-new' : ''}`} aria-hidden>
             {shown}
           </span>
           {/* The tier stamp sits inside the board, over the unit: never over its edge. */}
@@ -197,7 +226,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
                 <span className="tier-stamp-word">{tier.nl}</span>
               </span>
             )}
-            <span className="streak-unit" lang="nl" aria-hidden>{streak === 1 ? 'dag' : 'dagen'}</span>
+            <DaysUnit n={streak} lang={lang} />
           </span>
         </div>
         <h1 className="streak-line">
@@ -261,7 +290,7 @@ export function StreakStopped({ streak, best, lang, onDone }: {
         </div>
         <div className="streak-count stopped-count" role="img" aria-label={`${streak} ${ui('dayStreak').en}`}>
           <span className="streak-num" aria-hidden>{streak}</span>
-          <span className="streak-unit" lang="nl" aria-hidden>{streak === 1 ? 'dag' : 'dagen'}</span>
+          <DaysUnit n={streak} lang={lang} />
         </div>
         {/* The help language large, English small (the Dutch sentence is only spoken). */}
         <h1 className="streak-line">

@@ -296,7 +296,7 @@ export function CertEarned({ unit, day, lang, onView, onLater }: {
               {/* "Later" is the same word in English: only the help language is added. */}
               {lang && <Bi className="cert-btn-gloss" text={ui('certLater', lang)} />}
             </button>
-            <button type="button" className="btn btn-go btn-primary cert-view" onClick={onView}>
+            <button type="button" className="btn btn-go btn-primary cert-view" onClick={onView} dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
               <span className="cert-btn-text">
                 <span lang="nl">Bekijk</span>
                 <Bi className="cert-btn-gloss" text={ui('certView', lang)} />

@@ -170,6 +170,10 @@ const lang: HelpLanguage = {
     resumeLesson: 'Continuă lecția',
     restartLesson: 'Începe din nou',
     quitKept: 'Progresul tău rămâne salvat. Poți continua mai târziu.',
+    bestAnswer: 'Cel mai bun răspuns',
+    inReview: 'în verificare',
+    today: 'Azi',
+    playAgain: 'Ascultă din nou',
   },
   gloss: {
     // Units

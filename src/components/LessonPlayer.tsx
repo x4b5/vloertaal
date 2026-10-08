@@ -2,18 +2,18 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
 import { fillN, gloss, ui, withoutN, type Bilingual } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
-import { autoSpeak, sounds, speechAvailable } from '../lib/audio';
+import { autoSpeak, sounds, speak, speechAvailable } from '../lib/audio';
 import { tileDiff } from '../lib/answers';
 import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
 import { barParts, chimeStep, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { voiceFor } from '../lib/voices';
-import { castFor } from './Characters';
+import { castFor, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { FlameIcon } from './StreakArt';
 import {
-  AlertIcon, BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
-  PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
+  BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
+  LifebuoyIcon, PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
 } from './Icons';
 import { PhraseSheet } from './Phrases';
 import {
@@ -56,6 +56,24 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
     default:
       return { text: ex.word.nl, nl: true };
   }
+}
+
+/** Who says the answer: in a chat the right reply is "your" line (Amina); a built sentence
+ *  belongs to its speaker; a tip or situation to its colleague; single words to Bram. */
+function answerVoice(ex: Exercise): CharacterId {
+  return ex.kind === 'chat' ? 'amina'
+    : ex.kind === 'build' ? castFor(ex.sentence.id)
+    : ex.kind === 'situation' || ex.kind === 'tip' ? castFor(ex.tip.id)
+    : 'bram';
+}
+
+/** A filled play triangle for the replay button in the feedback label. */
+function PlayGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden focusable="false">
+      <path d="M8 5.2v13.6a1 1 0 0 0 1.5.86l11-6.8a1 1 0 0 0 0-1.72l-11-6.8A1 1 0 0 0 8 5.2z" fill="currentColor" />
+    </svg>
+  );
 }
 
 /**
@@ -345,7 +363,12 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       // The header (close, sound, progress bar) is sticky: nothing may slide under it.
       const head = document.querySelector('.player-top')?.getBoundingClientRect().bottom ?? 0;
       const limit = foot.getBoundingClientRect().top - 12;
-      if (bottom > limit) window.scrollBy({ top: Math.min(bottom - limit, Math.max(0, top - head - 8)), behavior: reducedMotion() ? 'auto' : 'smooth' });
+      // The exercise tag stays whole under the header (its top is the scroll margin): the
+      // label may cover the foot of the options rather than clip the tag.
+      const tag = document.querySelector('.player-body .ex-tag')?.getBoundingClientRect().top ?? top;
+      const room = Math.min(top, tag) - head - 8;
+      const by = Math.min(bottom - limit, Math.max(0, room));
+      if (bottom > limit && by > 0) window.scrollBy({ top: by, behavior: reducedMotion() ? 'auto' : 'smooth' });
     });
     return () => cancelAnimationFrame(raf);
   }, [checked]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -402,11 +425,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     later(30, () => setLive(said));
     // The answer is said by the character on screen, so a woman never speaks with a man's voice:
     // in a chat the right reply is "your" line (Amina); a built sentence belongs to its speaker.
-    const who =
-      ex.kind === 'chat' ? 'amina'
-      : ex.kind === 'build' ? castFor(ex.sentence.id)
-      : ex.kind === 'situation' || ex.kind === 'tip' ? castFor(ex.tip.id)
-      : 'bram';
+    const who = answerVoice(ex);
     if (sol.nl) later(answer.correct ? 700 : 450, () => autoSpeak(sol.text, false, 'nl', voiceFor(who)));
   }
 
@@ -416,7 +435,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     const meaning = ui(correct ? (almost ? 'almost' : e.kind === 'situation' ? 'goodChoice' : 'correct') : e.kind === 'situation' ? 'otherChoice' : 'incorrect', lang);
     const p = answerPair(e, lang);
     const answerText = p ? `${p.nl ? `${p.nl} = ` : ''}${p.meaning.en}${p.meaning.help ? ` (${p.meaning.help})` : ''}` : '';
-    const lead = !correct && e.kind !== 'situation' ? `${ui('correctAnswer').en}: ` : '';
+    const lead = !correct ? `${ui(e.kind === 'situation' ? 'bestAnswer' : 'correctAnswer').en}: ` : '';
     return [title, `${meaning.en}${meaning.help ? ` (${meaning.help})` : ''}.`, answerText && `${lead}${answerText}`].filter(Boolean).join(' ');
   }
 
@@ -510,7 +529,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   // (In a chat this is what the right reply means; in a situation, the usual choice.)
   const pair = answerPair(ex, lang);
   // The heading is Dutch ("Goed zo!" / "Nog eens!"); its meaning sits under it in small type.
-  const outcome: 'right' | 'wrong' | 'other' | null = feedback ? (answer.correct ? 'right' : ex.kind === 'situation' ? 'other' : 'wrong') : null;
+  // A situation is graded like the rest: the usual choice is green with a check; any other
+  // choice is red with a cross and the best answer under it (never a neutral sheet).
+  const outcome: 'right' | 'wrong' | null = feedback ? (answer.correct ? 'right' : 'wrong') : null;
   const headingMeaning = feedback
     ? ui(answer.correct ? (answer.almost ? 'almost' : ex.kind === 'situation' ? 'goodChoice' : 'correct') : ex.kind === 'situation' ? 'otherChoice' : 'incorrect', lang)
     : null;
@@ -518,20 +539,39 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   // A wrong sentence: the right one as tiles, the words that were out of place or missing
   // underlined in red (a position diff of the tiles laid against the solution).
   const diff = feedback && !answer.correct && ex.kind === 'build' && answer.given ? tileDiff(answer.given, ex.sentence.nl) : null;
-  const pairLine = pair && diff ? (
-    <div className="feedback-pair">
-      <span className="pair-tiles" lang="nl" dir="ltr">
-        {diff.map((t, i) => (
-          <span key={i} className={`ftile ${t.ok ? '' : 'ftile-miss'}`}>
-            {t.word}
-            {!t.ok && <span className="sr-only"> ({ui('incorrect').en})</span>}
+  // A built sentence or a chat reply: a ▶ that says it again in the speaker's voice, the Dutch
+  // (as tiles after a wrong sentence), its meaning large in the help language, English small.
+  const sayable = feedback && pair?.nl && (ex.kind === 'build' || ex.kind === 'chat');
+  const replay = sayable && pair?.nl ? (
+    <button
+      type="button"
+      className="replay-btn"
+      onClick={() => speak(pair.nl!, false, 'nl', voiceFor(answerVoice(ex)))}
+      aria-label={`${ui('playAgain').en}: ${pair.nl}`}
+      title={ui('playAgain', lang).help ?? ui('playAgain').en}
+    >
+      <PlayGlyph />
+    </button>
+  ) : null;
+  const pairLine = pair && sayable ? (
+    <div className="feedback-pair feedback-say">
+      <div className="pair-say" dir="ltr">
+        {replay}
+        {diff ? (
+          <span className="pair-tiles" lang="nl">
+            {diff.map((t, i) => (
+              <span key={i} className={`ftile ${t.ok ? '' : 'ftile-miss'}`}>
+                {t.word}
+                {!t.ok && <span className="sr-only"> ({ui('incorrect').en})</span>}
+              </span>
+            ))}
           </span>
-        ))}
-      </span>
-      <span className="pair-main">
-        <span className="bi-en" lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
-      </span>
-      {pairHelp && lang && <HelpText text={pairHelp} lang={lang} />}
+        ) : (
+          <strong className="pair-nl" lang="nl">{pair.nl}</strong>
+        )}
+      </div>
+      {pairHelp && lang && <HelpText className="pair-gloss" text={pairHelp} lang={lang} />}
+      <span className="pair-en" lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
     </div>
   ) : pair && (
     <div className="feedback-pair">
@@ -604,16 +644,20 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         <span className="lesson-name">
           <Bi text={gloss(lesson.id, lesson.title, lang)} />
         </span>
-        {/* Emergency phrases, one tap away during a lesson (a sheet; the lesson waits). */}
+        {/* Emergency phrases, one tap away during a lesson (a sheet; the lesson waits): the
+            lifebuoy of the Hulp tab in calm ink, with its word in the help language under it. */}
         <button
           type="button"
           className="icon-btn sos-btn"
           onClick={() => setPhrases(true)}
           aria-haspopup="dialog"
           aria-label={`Noodzinnen · ${ui('phrasebook').en}${lang?.ui.phrasebook ? ` · ${lang.ui.phrasebook}` : ''}`}
-          title={ui('phrasebook').en}
+          title={lang?.ui.phrasebook ?? ui('phrasebook').en}
         >
-          <AlertIcon size={24} />
+          <LifebuoyIcon size={24} />
+          {lang?.ui.navWords
+            ? <HelpText className="sos-label" text={lang.ui.navWords} lang={lang} />
+            : <span className="sos-label" lang="nl">Hulp</span>}
         </button>
       </header>
 
@@ -649,7 +693,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             <div className={`feedback feedback-${outcome}`}>
               <span className="feedback-tape" aria-hidden />
               <span className="feedback-icon" aria-hidden>
-                {outcome === 'right' ? <CheckIcon size={26} /> : outcome === 'wrong' ? <CloseIcon size={26} /> : <ChevronIcon size={26} />}
+                {outcome === 'right' ? <CheckIcon size={26} /> : <CloseIcon size={26} />}
               </span>
               {/* A right-to-left help language: the whole label reads from the right, with the
                   Dutch and English pieces kept in their own direction. */}
@@ -666,9 +710,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
                   </div>
                 </div>
                 {(pairLine || whyLine) && <hr className="feedback-rule" />}
-                {!answer.correct && sol.text && ex.kind !== 'situation' && (
+                {!answer.correct && sol.text && (
                   <div className="feedback-kicker">
-                    <Bi text={ui('correctAnswer', lang)} />
+                    <Bi text={ui(ex.kind === 'situation' ? 'bestAnswer' : 'correctAnswer', lang)} />
                   </div>
                 )}
                 {pairLine}{whyLine}

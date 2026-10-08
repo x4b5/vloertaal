@@ -55,7 +55,9 @@ import { CertBadge, CertificatesCard } from './Certificate';
 import { CountingCard } from './Counting';
 import { unitDone } from '../lib/certificate';
 
-export function LanguagePicker({ current, onPick, showBeta = false, compact = false }: {
+export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
+  /** The help language in use (Settings): the "in review" tag is written in it. */
+  lang?: HelpLanguage;
   /** undefined = nothing chosen yet (first run). */
   current?: LangCode | null;
   onPick: (code: LangCode | null) => void;
@@ -75,7 +77,13 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
       <Flag code={code ?? 'en'} width={compact ? 32 : 40} />
       <span className="lang-names">
         <span className="lang-native" lang={code ?? 'en'} dir={dir}>{native}</span>
-        <span className="lang-en">{english}{beta && <span className="lang-beta"> · beta</span>}</span>
+        <span className="lang-en">{english}</span>
+        {beta && (
+          <span className="lang-beta-tag">
+            {lang?.ui.inReview ? <HelpText className="lang-beta-help" text={lang.ui.inReview} lang={lang} /> : <span className="lang-beta-help" lang="en">{ui('inReview').en}</span>}
+            <span className="lang-beta" lang="en">beta</span>
+          </span>
+        )}
       </span>
       {current === code && <CheckIcon size={20} className="lang-check" />}
     </button>
@@ -149,13 +157,13 @@ export function TopBar({ streak, words, lang, onLanguage, done = false }: {
       >
         <Flag code={lang?.code ?? 'en'} width={32} />
       </button>
-      {/* The streak is on, but today still needs a lesson or the review: a calm chip (not a
-          stamp) in the help language, a small open circle for "not yet". */}
+      {/* The streak is on, but today still needs a lesson or the review: a small unlit flame
+          and the word "today" in the help language (not a sentence). */}
       {streak > 0 && !done && (
         <span className="todo-tag" aria-hidden>
-          <span className="todo-chip">
-            <span className="todo-dot" />
-            <Bi className="todo-gloss" text={ui('stillToDo', lang)} />
+          <span className="todo-chip todo-flame">
+            <FlameIcon lit={false} size={18} />
+            {lang?.ui.today ? <HelpText className="todo-word" text={lang.ui.today} lang={lang} /> : <span className="todo-word" lang="en">{ui('today').en}</span>}
           </span>
         </span>
       )}
@@ -369,6 +377,8 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
       <section
         key={unit.id}
         id={`unit-${unit.id.slice(2)}`}
+        // Right to left: the stencil numbers, the rail and the markers move to the right.
+        dir={rtl ? 'rtl' : undefined}
         className={`unit ${unitOpen ? '' : 'unit-locked'} ${allowed ? '' : 'unit-full-only'} ${marked === unit.id ? 'unit-marked' : ''}`}
       >
         {/* In the preview, tapping a later unit's sign opens the unlock card (the note below
@@ -662,8 +672,13 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
         <h1><Bi text={ui('settings', lang)} /></h1>
       </div>
       <h2><Bi text={ui('helpLanguage', lang)} /></h2>
-      <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta compact />
-      {lang && !lang.reviewed && <p className="muted small">beta: {ui('beta').en}</p>}
+      <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta compact lang={lang} />
+      {lang && !lang.reviewed && (
+        <p className="beta-note">
+          <span className="beta-chip" lang="en">beta</span>
+          <Bi text={ui('beta', lang)} />
+        </p>
+      )}
 
       <h2 className="settings-sector-title">
         <span lang="nl">Waar werk je?</span>
@@ -804,25 +819,6 @@ function VoicePicker({ current, lang, onPick }: {
   );
 }
 
-/** Counts a number up from 0 (skipped when the learner prefers less motion). */
-function useCountUp(target: number, delay = 350, ms = 900) {
-  const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-  const [value, setValue] = useState(still ? target : 0);
-  useEffect(() => {
-    if (still) return setValue(target);
-    let raf = 0;
-    const t0 = performance.now() + delay;
-    const tick = (now: number) => {
-      const k = Math.min(1, Math.max(0, (now - t0) / ms));
-      setValue(Math.round(target * (1 - (1 - k) ** 3)));
-      if (k < 1) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [target, delay, ms, still]);
-  return value;
-}
-
 function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   /** A stamp on the card's corner (FOUTLOOS). */
   badge?: React.ReactNode;
@@ -867,9 +863,10 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   lang?: HelpLanguage;
   onDone: () => void;
 }) {
-  // Each number starts counting once its card has popped in.
-  const shownRight = useCountUp(right, 700, 700);
-  const shownNew = useCountUp(newWords, 850, 600);
+  // The cards pop in together with their final numbers: a still frame never shows "0 / 11"
+  // or "+0" (the numbers are what the learner came for, not a counter).
+  const shownRight = right;
+  const shownNew = newWords;
   const fill = (t: Bilingual, n: number): Bilingual => ({ ...t, en: t.en.replace('{n}', String(n)), help: t.help?.replace('{n}', String(n)) });
   // A tap or Enter meant for the last exercise must not skip this screen: both are ignored for
   // a moment (shorter with reduced motion), and the button fades in after about a second.

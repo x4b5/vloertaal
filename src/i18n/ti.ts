@@ -170,6 +170,10 @@ const lang: HelpLanguage = {
     resumeLesson: 'ትምህርቲ ቀጽል',
     restartLesson: 'ካብ መጀመርታ ጀምር',
     quitKept: 'ዝገበርካዮ ይዕቀብ እዩ። ድሓር ክትቅጽል ትኽእል ኢኻ።',
+    bestAnswer: 'ዝበለጸ መልሲ',
+    inReview: 'ይምርመር ኣሎ',
+    today: 'ሎሚ',
+    playAgain: 'ደጊምካ ስማዕ',
   },
   gloss: {
     // Units

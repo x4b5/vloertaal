@@ -170,6 +170,10 @@ const lang: HelpLanguage = {
     resumeLesson: 'Продовжити урок',
     restartLesson: 'Почати знову',
     quitKept: 'Твій прогрес збережено. Можеш продовжити пізніше.',
+    bestAnswer: 'Найкраща відповідь',
+    inReview: 'на перевірці',
+    today: 'Сьогодні',
+    playAgain: 'Послухай ще раз',
   },
   gloss: {
     // Unit: First day at work

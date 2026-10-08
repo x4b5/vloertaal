@@ -170,6 +170,10 @@ const lang: HelpLanguage = {
     resumeLesson: 'تابع الدرس',
     restartLesson: 'ابدأ من جديد',
     quitKept: 'تقدّمك محفوظ. يمكنك المتابعة لاحقًا.',
+    bestAnswer: 'أفضل إجابة',
+    inReview: 'قيد المراجعة',
+    today: 'اليوم',
+    playAgain: 'استمع مرة أخرى',
   },
   gloss: {
     // Units

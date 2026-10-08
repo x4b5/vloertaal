@@ -3,13 +3,13 @@ import type { ChatLine } from '../content/types';
 import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { checkTiles, checkTyped } from '../lib/answers';
-import { autoSpeak, sounds } from '../lib/audio';
-import type { Exercise } from '../lib/exercises';
+import { autoSpeak, sounds, speak } from '../lib/audio';
+import { sentencePicture, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
 import { Bi } from './Bi';
 import { castFor, Character, type CharacterId, type Mood, useTalking } from './Characters';
-import { CheckIcon, ChevronDownIcon, CloseIcon } from './Icons';
+import { CheckIcon, ChevronDownIcon, CloseIcon, SpeakerIcon } from './Icons';
 import { cheerFor } from '../lib/lessonRun';
 import { voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
@@ -112,6 +112,14 @@ function WrongStamp() {
   );
 }
 
+/**
+ * A small speaker on a Dutch-only card or tile: tapping it plays the Dutch (also in "Without
+ * sound", like every 🔊). Decorative: the card itself is the button.
+ */
+function SoundMark() {
+  return <span className="opt-sound" aria-hidden><SpeakerIcon size={18} /></span>;
+}
+
 /** The question. Focus moves here on a new exercise (tabIndex -1), see LessonPlayer. */
 function Prompt({ text }: { text: Bilingual }) {
   return (
@@ -137,8 +145,11 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
         {hasPicture(word) && <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />}
         <div className={`intro-nl ${wordSize(word.nl)}`}>
           <span lang="nl">{breakable(word.nl)}</span>
-          <SpeakButton text={word.nl} />
-          <SpeakButton text={word.nl} slow label={`Play slowly: ${word.nl}`} />
+          {/* The two speakers stay together: a long word wraps, never the slow button alone. */}
+          <span className="intro-sounds">
+            <SpeakButton text={word.nl} />
+            <SpeakButton text={word.nl} slow label={`Play slowly: ${word.nl}`} />
+          </span>
         </div>
         <Bi className="intro-meaning" text={gloss(word.id, word.en, lang)} />
       </div>
@@ -242,7 +253,7 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, miss
         render={(w) => (
           <>
             {/* A small picture of each option (abstract words keep a text-only row). */}
-            {hasPicture(w) && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={46} />}
+            {hasPicture(w) && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={56} />}
             <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />
           </>
         )}
@@ -273,8 +284,8 @@ export function DutchExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           correctId={ex.word.id}
           locked={locked}
           onAnswer={onAnswer}
-          onPick={(w) => autoSpeak(w.nl)}
-          render={(w) => <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>}
+          onPick={(w) => speak(w.nl)}
+          render={(w) => <><span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span><SoundMark /></>}
         />
       ) : (
         <ChoiceGrid
@@ -307,12 +318,14 @@ export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misse
         <SpeakButton text={ex.word.nl} size="lg" label="Play" />
         <SpeakButton text={ex.word.nl} slow label="Play slowly" />
       </div>
+      {/* Hearing a candidate is the task itself: a tap plays it. */}
       <ChoiceGrid
         options={ex.options}
         correctId={ex.word.id}
         locked={locked}
         onAnswer={onAnswer}
-        render={(w) => <span lang="nl" className="choice-nl">{breakable(w.nl)}</span>}
+        onPick={(w) => speak(w.nl)}
+        render={(w) => <><span lang="nl" className="choice-nl">{breakable(w.nl)}</span><SoundMark /></>}
       />
     </div>
   );
@@ -380,10 +393,11 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
               onClick={() => {
                 if (done.has(w.id)) return;
                 tap();
-                autoSpeak(w.nl);
+                speak(w.nl);
                 setLeft(w.id);
               }}
             >
+              <SoundMark />
               <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
               {missMark('nl', w.id)}
             </button>,
@@ -399,7 +413,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
                 setRightPick(r.id);
               }}
             >
-              {hasPicture(r) && <WordPicture className="choice-emoji" id={r.id} emoji={r.emoji} size={36} />}
+              {hasPicture(r) && <WordPicture className="choice-emoji" id={r.id} emoji={r.emoji} size={40} />}
               <Bi text={gloss(r.id, r.en, lang)} />
               {missMark('en', r.id)}
             </button>,
@@ -415,6 +429,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   const [chosen, setChosen] = useState<number[]>([]);
   // One voice per exercise: the speaker says the tiles and, after Check, the whole sentence.
   const who = castFor(ex.sentence.id);
+  const pic = useMemo(() => sentencePicture(ex.sentence), [ex.sentence]);
 
   const update = (next: number[]) => {
     setChosen(next);
@@ -427,8 +442,12 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       <Prompt text={ui('buildSentence', lang)} />
       <div className="speaker speaker-build">
         <Speaker who={who} lines={[ex.sentence.nl, ...ex.tiles]} verdict={verdict} run={run} misses={misses} />
-        <div className="speaker-bubble">
-          <Bi className="bubble-text" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
+        {/* The meaning, large in the help language, with the sentence's picture word and a
+            speaker: hearing the Dutch is the listen-and-build form of the task. */}
+        <div className="speaker-bubble build-bubble">
+          <SpeakButton glyph text={ex.sentence.nl} label={`Play: ${ex.sentence.nl}`} voice={voiceFor(who)} />
+          {pic && <WordPicture className="build-pic" id={pic.id} emoji={pic.emoji} size={56} />}
+          <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
         </div>
       </div>
       {/* After Check: a check at the start of a right sentence; a wrong one gets only the
@@ -464,11 +483,12 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
             lang="nl"
             disabled={locked || chosen.includes(i)}
             onClick={() => {
-              autoSpeak(t, false, 'nl', voiceFor(who));
+              speak(t, false, 'nl', voiceFor(who));
               update([...chosen, i]);
             }}
           >
             {t}
+            <SoundMark />
           </button>
         ))}
       </div>
@@ -518,7 +538,9 @@ export function TypeExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
 export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'chat'>) {
   const { prompt, reply } = ex.dialogue;
   const [picked, setPicked] = useState<ChatLine | null>(null);
-  const [hint, setHint] = useState(false);
+  // The colleague's line in the help language shows from the start (a learner who can't read
+  // the Dutch must know what was asked); tapping the Dutch hides or shows it.
+  const [hint, setHint] = useState(Boolean(lang));
   const mine = picked && locked ? (picked.id === reply.id ? 'right' : 'wrong') : '';
   // The colleague asks; "you" are Amina. The colleague talks while the line plays.
   const them = castFor(prompt.id, ['bram', 'henk', 'jada']);
@@ -546,7 +568,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
             >
               {breakable(prompt.nl)}
             </button>
-            {hint && !locked && (
+            {hint && (
               <span className="chat-hint">
                 <Bi text={gloss(prompt.id, prompt.en, lang)} />
               </span>
@@ -568,11 +590,10 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
         onAnswer={onAnswer}
         onPick={(o) => {
           setPicked(o);
-          setHint(false);
           // Hear the reply before choosing: "you" (Amina) say it.
-          autoSpeak(o.nl, false, 'nl', voiceFor('amina'));
+          speak(o.nl, false, 'nl', voiceFor('amina'));
         }}
-        render={(o) => <span lang="nl" className="choice-nl">{breakable(o.nl)}</span>}
+        render={(o) => <><span lang="nl" className="choice-nl">{breakable(o.nl)}</span><SoundMark /></>}
       />
     </div>
   );
@@ -587,9 +608,10 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
     <div className="exercise tip">
       <div className="tip-badge">
         <span className="tip-badge-emoji" aria-hidden>{tip.emoji}</span>
-        <span className="tip-badge-text">
+        {/* The help language large; the Dutch name is a small label under it. */}
+        <span className="tip-badge-text tip-badge-swap">
+          <Bi className="tip-badge-main" text={ui('cultureBadge', lang)} />
           <span className="tip-badge-nl" lang="nl">Zo werkt het hier</span>
-          <Bi className="tip-badge-en" text={ui('cultureBadge', lang)} />
         </span>
       </div>
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>

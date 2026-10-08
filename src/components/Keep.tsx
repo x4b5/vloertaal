@@ -101,10 +101,13 @@ export function InstallCard({ lang }: { lang?: HelpLanguage }) {
 /* ---- Reminder ---- */
 
 export function ReminderCard({ lang }: { lang?: HelpLanguage }) {
-  const [time, setTime] = useState<string | null>(null);
+  // One clear action: "Na het werk" is chosen from the start, so "Zet in mijn agenda" works
+  // right away. A chip changes the time; "Andere tijd" opens the phone's own time field.
+  const [time, setTime] = useState<string>(REMINDER_TIMES[2].time);
+  const [ownOpen, setOwnOpen] = useState(false);
   const [own, setOwn] = useState('');
   const [saved, setSaved] = useState(false);
-  const chosen = time ?? (own || null);
+  const chosen = ownOpen ? own || null : time;
   const add = () => {
     if (!chosen) return;
     const url = `${location.origin}${location.pathname}`;
@@ -115,41 +118,77 @@ export function ReminderCard({ lang }: { lang?: HelpLanguage }) {
     <section className="keep-card remind-card" aria-label={ui('remindTitle').en}>
       <CardHead nl="Herinner mij elke dag" text={ui('remindTitle', lang)} />
       <div className="remind-chips" role="radiogroup" aria-label={ui('remindTitle').en}>
-        {REMINDER_TIMES.map((t) => (
-          <button
-            key={t.time}
-            type="button"
-            role="radio"
-            aria-checked={time === t.time}
-            className={`remind-chip ${time === t.time ? 'picked' : ''}`}
-            onClick={() => { setTime(t.time); setSaved(false); }}
-          >
-            <span className="remind-time">{t.time}</span>
-            <span className="remind-nl" lang="nl">{t.nl}</span>
-            <Bi className="remind-gloss" text={ui(t.key, lang)} />
-          </button>
-        ))}
+        {REMINDER_TIMES.map((t) => {
+          const on = !ownOpen && time === t.time;
+          return (
+            <button
+              key={t.time}
+              type="button"
+              role="radio"
+              aria-checked={on}
+              className={`remind-chip ${on ? 'picked' : ''}`}
+              onClick={() => { setTime(t.time); setOwnOpen(false); setSaved(false); }}
+            >
+              {on && <span className="remind-tick" aria-hidden><CheckIcon size={16} /></span>}
+              <span className="remind-time">{t.time}</span>
+              <span className="remind-nl" lang="nl">{t.nl}</span>
+              <Bi className="remind-gloss" text={ui(t.key, lang)} />
+            </button>
+          );
+        })}
       </div>
-      <label className={`remind-own ${time === null && own ? 'picked' : ''}`}>
-        <span className="remind-own-text">
-          <span lang="nl">Andere tijd</span>
-          <Bi className="remind-gloss" text={ui('remindOwn', lang)} />
+      {ownOpen ? (
+        <label className="remind-own picked">
+          <span className="remind-own-text">
+            <span lang="nl">Andere tijd</span>
+            <Bi className="remind-gloss" text={ui('remindOwn', lang)} />
+          </span>
+          <input
+            type="time"
+            value={own}
+            autoFocus
+            onChange={(e) => { setOwn(e.target.value); setSaved(false); }}
+          />
+        </label>
+      ) : (
+        <button type="button" className="remind-other" onClick={() => { setOwnOpen(true); setSaved(false); }}>
+          <ClockGlyph />
+          <span className="remind-own-text">
+            <span lang="nl">Andere tijd</span>
+            <Bi className="remind-gloss" text={ui('remindOwn', lang)} />
+          </span>
+        </button>
+      )}
+      <button type="button" className="btn btn-primary keep-btn remind-add" disabled={!chosen} onClick={add}>
+        <CalendarGlyph />
+        <span className="remind-add-text">
+          <Bi className="keep-btn-gloss" text={ui('remindAdd', lang)} />
+          <span lang="nl" className="remind-add-nl">Zet in mijn agenda{chosen ? ` · ${chosen}` : ''}</span>
         </span>
-        <input
-          type="time"
-          value={own}
-          onChange={(e) => { setOwn(e.target.value); setTime(null); setSaved(false); }}
-          onFocus={() => setTime(null)}
-        />
-      </label>
-      <button type="button" className="btn btn-primary keep-btn" disabled={!chosen} onClick={add}>
-        <span lang="nl">Zet in mijn agenda</span>
-        <Bi className="keep-btn-gloss" text={ui('remindAdd', lang)} />
       </button>
       <p className="keep-hint" role="status">
         <Bi text={ui(saved ? 'remindAdded' : 'remindHint', lang)} />
       </p>
     </section>
+  );
+}
+
+function ClockGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden focusable="false">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2.2" />
+      <path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function CalendarGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden focusable="false">
+      <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" fill="none" stroke="currentColor" strokeWidth="2.2" />
+      <path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M12 12.5v5M9.5 15h5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    </svg>
   );
 }
 

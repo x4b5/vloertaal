@@ -170,6 +170,10 @@ const lang: HelpLanguage = {
     resumeLesson: 'Kontynuuj lekcję',
     restartLesson: 'Zacznij od nowa',
     quitKept: 'Twoje postępy są zapisane. Możesz wrócić później.',
+    bestAnswer: 'Najlepsza odpowiedź',
+    inReview: 'w sprawdzaniu',
+    today: 'Dziś',
+    playAgain: 'Posłuchaj jeszcze raz',
   },
   gloss: {
     // Unit: First day at work

@@ -170,6 +170,10 @@ const lang: HelpLanguage = {
     resumeLesson: 'Продължи урока',
     restartLesson: 'Започни отначало',
     quitKept: 'Напредъкът ти се запазва. Можеш да продължиш по-късно.',
+    bestAnswer: 'Най-добър отговор',
+    inReview: 'в проверка',
+    today: 'Днес',
+    playAgain: 'Чуй отново',
   },
   gloss: {
     // Units

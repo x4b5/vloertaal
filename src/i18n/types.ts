@@ -178,6 +178,11 @@ export const uiEn = {
   resumeLesson: 'Continue lesson',
   restartLesson: 'Start again',
   quitKept: 'Your progress is kept. You can go on later.',
+  /* Gauntlet loop 3: the usual choice in a situation, the short beta tag, "today", replay. */
+  bestAnswer: 'Best answer',
+  inReview: 'in review',
+  today: 'Today',
+  playAgain: 'Listen again',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

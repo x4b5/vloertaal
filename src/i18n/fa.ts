@@ -170,6 +170,10 @@ const lang: HelpLanguage = {
     resumeLesson: 'ادامهٔ درس',
     restartLesson: 'از اول شروع کن',
     quitKept: 'پیشرفتت ذخیره می‌ماند. بعداً می‌توانی ادامه بدهی.',
+    bestAnswer: 'بهترین پاسخ',
+    inReview: 'در حال بررسی',
+    today: 'امروز',
+    playAgain: 'دوباره گوش کن',
   },
   gloss: {
     // Units
