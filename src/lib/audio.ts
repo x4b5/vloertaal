@@ -113,6 +113,25 @@ function recordedFor(ref: VoiceRef): Recorded | undefined {
   return undefined;
 }
 
+const clipIn = (r: Recorded, text: string) => r.clips[text.trim()] ?? r.plain[plainText(text)];
+
+/**
+ * The recording to play for this text: the chosen voice if it has the line, else another
+ * recorded voice of the same gender (ElevenLabs before Piper), so a man never suddenly
+ * sounds like a woman or the other way round. New lines may exist in only some voices.
+ */
+function clipFor(rec: Recorded, text: string): { rec: Recorded; id: string } | undefined {
+  const own = clipIn(rec, text);
+  if (own) return { rec, id: own };
+  const gender = rec.voice.gender;
+  for (const other of recorded) {
+    if (other === rec || (gender && other.voice.gender !== gender)) continue;
+    const id = clipIn(other, text);
+    if (id) return { rec: other, id };
+  }
+  return undefined;
+}
+
 /** All Dutch voices on this device, Netherlands voices first, then Belgian (nl-BE). */
 export function dutchVoices(): SpeechSynthesisVoice[] {
   if (!speechAvailable()) return [];
@@ -164,9 +183,10 @@ function stopAll(): void {
  */
 export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef): void {
   const ref = voice === undefined ? preferredVoice : voice;
-  const rec = lang === 'nl' ? recordedFor(ref) : undefined;
-  const id = rec?.clips[text.trim()] ?? rec?.plain[plainText(text)];
-  if (rec && id) {
+  const chosen = lang === 'nl' ? recordedFor(ref) : undefined;
+  const found = chosen && clipFor(chosen, text);
+  if (found) {
+    const { rec, id } = found;
     stopAll();
     const audio = new Audio(`${rec.base}/${rec.voice.key}/${id}.mp3`);
     audio.playbackRate = slow ? RECORDED_RATE.slow : RECORDED_RATE.normal;

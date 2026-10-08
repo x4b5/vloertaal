@@ -71,6 +71,18 @@ export const uiEn = {
   cultureTips: "Workplace tips",
   cultureTipsHint: "How things usually go at a Dutch workplace. Tap a tip to read it again.",
   about: 'About Vloertaal',
+  sector: 'Your work',
+  chooseSector: 'Where do you work?',
+  sectorHint: 'The lessons for your work come first. You can change this later in Settings.',
+  otherSectors: 'Other sectors',
+  otherSectorsHint: 'Lessons for other kinds of work. You can do them too.',
+  notSureYet: 'Not sure yet',
+  sectorLogistics: 'Logistics',
+  sectorConstruction: 'Construction',
+  sectorProduction: 'Production',
+  sectorCare: 'Care',
+  sectorHospitality: 'Hospitality',
+  sectorCleaning: 'Cleaning',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

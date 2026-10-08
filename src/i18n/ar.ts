@@ -71,6 +71,18 @@ const lang: HelpLanguage = {
     enterPassword: 'أدخل كلمة المرور',
     wrongPassword: 'كلمة المرور غير صحيحة. حاول مرة أخرى.',
     unlock: 'افتح',
+    sector: 'عملك',
+    chooseSector: 'أين تعمل؟',
+    sectorHint: 'دروس عملك تأتي أولاً. يمكنك تغيير هذا لاحقاً في الإعدادات.',
+    otherSectors: 'قطاعات أخرى',
+    otherSectorsHint: 'دروس لأنواع عمل أخرى. يمكنك أن تتعلمها أيضاً.',
+    notSureYet: 'لست متأكداً بعد',
+    sectorLogistics: 'الخدمات اللوجستية',
+    sectorConstruction: 'البناء',
+    sectorProduction: 'الإنتاج',
+    sectorCare: 'الرعاية',
+    sectorHospitality: 'المطاعم والفنادق',
+    sectorCleaning: 'التنظيف',
   },
   gloss: {
     // Units
@@ -79,7 +91,6 @@ const lang: HelpLanguage = {
     'u.safety': 'السلامة أولاً',
     'u.warehouse': 'في المستودع',
     'u.time': 'الوقت وجدول العمل',
-    'u.greenhouse': 'في البيت الزجاجي',
 
     // Lessons
     'l.hello': 'قل مرحباً',
@@ -91,7 +102,6 @@ const lang: HelpLanguage = {
     'l.directions': 'الاتجاهات والأفعال',
     'l.shift': 'نوبتي',
     'l.sick': 'الإبلاغ عن المرض',
-    'l.harvest': 'وقت الحصاد',
 
     // Words
     'w.hallo': 'مرحباً',
@@ -148,12 +158,6 @@ const lang: HelpLanguage = {
     'w.pijn': 'الألم',
     'w.vandaag': 'اليوم',
     'w.beter': 'أفضل',
-    'w.kas': 'البيت الزجاجي (الدفيئة)',
-    'w.tomaat': 'الطماطم',
-    'w.paprika': 'الفلفل الحلو',
-    'w.komkommer': 'الخيار',
-    'w.plukken': 'يقطف',
-    'w.krat': 'صندوق الحصاد',
 
     // Sentences
     's.hello.1': 'مرحباً، أنا جديد.',
@@ -183,9 +187,6 @@ const lang: HelpLanguage = {
     's.sick.1': 'أنا مريض اليوم.',
     's.sick.2': 'عندي ألم في ظهري.',
     's.sick.3': 'أنا أتصل بالطبيب.',
-    's.harvest.1': 'اقطف الطماطم الحمراء فقط.',
-    's.harvest.2': 'صندوق الحصاد ممتلئ.',
-    's.harvest.3': 'أنا أعمل في البيت الزجاجي.',
     'c.hello.q': 'أتمنى لك مساءً سعيداً!',
     'c.hello.a': 'أراك غداً!',
     'c.people.q': 'ما اسمك؟',
@@ -204,8 +205,6 @@ const lang: HelpLanguage = {
     'c.shift.a': 'شاي، من فضلك.',
     'c.sick.q': 'هل أنت مريض؟',
     'c.sick.a': 'نعم، سأبقى في البيت اليوم.',
-    'c.harvest.q': 'هل صندوق الحصاد ممتلئ؟',
-    'c.harvest.a': 'نعم، إنه ممتلئ.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'اتصل بـ 112!',
     'p.hurt': 'أنا مصاب.',

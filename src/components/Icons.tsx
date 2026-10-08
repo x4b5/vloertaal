@@ -196,3 +196,82 @@ export const EyeOffIcon = (p: IconProps) => (
     <path d="M4 4l16 16" {...stroke} strokeWidth={2.4} />
   </Svg>
 );
+
+/* Sector icons (the sector choice): simple line drawings in the stroke style above. */
+
+/** Forklift with a box on its forks: logistics. */
+export const ForkliftIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M3 16.8V11.5h5.2l2.6 5.3M3 16.8h11.5" {...stroke} strokeWidth={1.9} />
+    <path d="M4.6 11.5V7.2h3l1.4 4.3" {...stroke} strokeWidth={1.9} />
+    <path d="M14.5 4.5v15h7" {...stroke} strokeWidth={1.9} />
+    <rect x="16.6" y="12.6" width="4.9" height="4.6" rx="0.5" {...stroke} strokeWidth={1.9} />
+    <circle cx="6" cy="19.2" r="1.6" {...stroke} strokeWidth={1.9} />
+    <circle cx="11.3" cy="19.2" r="1.6" {...stroke} strokeWidth={1.9} />
+  </Svg>
+);
+
+/** Hard hat: construction. */
+export const HelmetIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M4.5 17v-2a7.5 7.5 0 0 1 15 0v2" {...stroke} strokeWidth={2} />
+    <path d="M10 7.8v5.4M14 7.8v5.4" {...stroke} strokeWidth={2} />
+    <path d="M2.5 17.5h19" {...stroke} strokeWidth={2.6} />
+  </Svg>
+);
+
+/** A gear over a conveyor belt: production. */
+export const ConveyorIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <circle cx="12" cy="7.5" r="3" {...stroke} strokeWidth={2} />
+    <path
+      d="M12 2.6v1.4M12 11v1.4M7.1 7.5h1.4M15.5 7.5h1.4M8.6 4.1l1 1M15.4 4.1l-1 1M8.6 10.9l1-1M15.4 10.9l-1-1"
+      {...stroke}
+      strokeWidth={2}
+    />
+    <path d="M5 15.2h14a2.6 2.6 0 0 1 0 5.2H5a2.6 2.6 0 0 1 0-5.2z" {...stroke} strokeWidth={2} />
+    <circle cx="5.2" cy="17.8" r="0.9" fill="currentColor" />
+    <circle cx="12" cy="17.8" r="0.9" fill="currentColor" />
+    <circle cx="18.8" cy="17.8" r="0.9" fill="currentColor" />
+  </Svg>
+);
+
+/** A heart held in an open hand: care. */
+export const CareIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M12 12.6s-4.6-2.8-4.6-6.1A2.5 2.5 0 0 1 12 5.1a2.5 2.5 0 0 1 4.6 1.4c0 3.3-4.6 6.1-4.6 6.1z" {...stroke} strokeWidth={2} />
+    <path d="M2.5 15h3l3.2 2.2h5.1a1.4 1.4 0 0 1 0 2.8H9.5" {...stroke} strokeWidth={2} />
+    <path d="M2.5 21H14l6.2-4.3a1.5 1.5 0 0 0-1.9-2.3l-3.4 2.3" {...stroke} strokeWidth={2} />
+  </Svg>
+);
+
+/** A steaming cup on a saucer: hospitality. */
+export const CupIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M5 10h10.5v4.8a4.6 4.6 0 0 1-4.6 4.6H9.6A4.6 4.6 0 0 1 5 14.8z" {...stroke} strokeWidth={2} />
+    <path d="M15.5 11.3h1.4a2.5 2.5 0 0 1 0 5h-1.6" {...stroke} strokeWidth={2} />
+    <path d="M3 21.5h15.5" {...stroke} strokeWidth={2} />
+    <path d="M8.4 3.2c-1 1.2 1 2.1 0 3.6M12.2 3.2c-1 1.2 1 2.1 0 3.6" {...stroke} strokeWidth={1.8} />
+  </Svg>
+);
+
+/** A spray bottle: cleaning. */
+export const SprayIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M6.8 12.5h7.4l.8 7.5a1.5 1.5 0 0 1-1.5 1.6H7.5A1.5 1.5 0 0 1 6 20z" {...stroke} strokeWidth={2} />
+    <path d="M8.5 12.5V9.5h4v3" {...stroke} strokeWidth={2} />
+    <path d="M7.5 9.5V5.5h6.8l1.7 2.2M12.6 9.5l1.6 2" {...stroke} strokeWidth={2} />
+    <circle cx="19" cy="4.6" r="1" fill="currentColor" />
+    <circle cx="20.8" cy="7.4" r="1" fill="currentColor" />
+    <circle cx="19" cy="10.2" r="1" fill="currentColor" />
+  </Svg>
+);
+
+/** A question mark in a circle: "not sure yet". */
+export const QuestionIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <circle cx="12" cy="12" r="9" {...stroke} strokeWidth={2} />
+    <path d="M9.4 9.4a2.6 2.6 0 1 1 3.7 2.4c-.7.3-1.1.9-1.1 1.7v.5" {...stroke} strokeWidth={2.2} />
+    <circle cx="12" cy="17" r="1.3" fill="currentColor" />
+  </Svg>
+);

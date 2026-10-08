@@ -1,4 +1,5 @@
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
+import { workTips } from './work';
 
 /**
  * "Zo werkt het hier": Dutch workplace customs, norms and values, one per lesson.
@@ -24,7 +25,7 @@ export interface CultureTip {
 
 const tip = (t: CultureTip) => t;
 
-export const cultureTips: CultureTip[] = [
+const baseTips: CultureTip[] = [
   tip({
     id: 'c.je',
     lessonId: 'l.hello',
@@ -161,21 +162,6 @@ export const cultureTips: CultureTip[] = [
     why: { id: 'c.sick.w', en: 'Calling in sick yourself and on time is the rule in most Dutch workplaces. Your employer may ask how long it will take, but not what illness it is.' },
   }),
   tip({
-    id: 'c.cake',
-    lessonId: 'l.harvest',
-    emoji: '🎂',
-    title: 'Breaks, lunch and cake',
-    body: 'Breaks are at fixed times and people take them together. Lunch is often short and simple, like bread. On your birthday it is a custom to bring a treat for colleagues ("trakteren"), like cake.',
-    phrase: { id: 'c.cake.p', nl: 'Ik ben vandaag jarig! Wil je een stukje taart?', en: 'It is my birthday today! Would you like a piece of cake?' },
-    situation: { id: 'c.cake.s', en: 'It is your birthday. What do many Dutch colleagues expect?' },
-    options: [
-      { id: 'c.cake.o1', en: 'That you bring something small for the team, like cake.', best: true },
-      { id: 'c.cake.o2', en: 'That you give everyone a present.', best: false },
-      { id: 'c.cake.o3', en: 'That you take the day off.', best: false },
-    ],
-    why: { id: 'c.cake.w', en: 'In the Netherlands the birthday person treats the others. It is a small, friendly custom, not an obligation.' },
-  }),
-  tip({
     id: 'c.speakup',
     lessonId: 'l.speakup',
     emoji: '🗣️',
@@ -264,12 +250,15 @@ export const teamworkUnit: Unit = {
   ] satisfies Lesson[],
 };
 
+/** All tips in course order: the ones above, then those of the work-and-rights units (src/content/work.ts). */
+export const cultureTips: CultureTip[] = [...baseTips, ...workTips];
+
 export function tipForLesson(lessonId: string): CultureTip | undefined {
   return cultureTips.find((t) => t.lessonId === lessonId);
 }
 
-/** Every id in this file that needs a help-language translation. */
-export const cultureIds: string[] = cultureTips.flatMap((t) => [
+/** Every id in this file that needs a help-language translation (work tips: see workIds in work.ts). */
+export const cultureIds: string[] = baseTips.flatMap((t) => [
   t.id,
   `${t.id}.b`,
   t.phrase.id,

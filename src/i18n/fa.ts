@@ -71,6 +71,18 @@ const lang: HelpLanguage = {
     enterPassword: 'رمز را وارد کنید',
     wrongPassword: 'رمز درست نیست. دوباره امتحان کن.',
     unlock: 'باز کن',
+    sector: 'کار شما',
+    chooseSector: 'کجا کار می‌کنید؟',
+    sectorHint: 'درس‌های کار شما اول می‌آیند. بعداً می‌توانید این را در تنظیمات عوض کنید.',
+    otherSectors: 'بخش‌های دیگر',
+    otherSectorsHint: 'درس‌ها برای کارهای دیگر. این‌ها را هم می‌توانید یاد بگیرید.',
+    notSureYet: 'هنوز نمی‌دانم',
+    sectorLogistics: 'لجستیک',
+    sectorConstruction: 'ساختمان‌سازی',
+    sectorProduction: 'تولید',
+    sectorCare: 'مراقبت',
+    sectorHospitality: 'رستوران و هتل',
+    sectorCleaning: 'نظافت',
   },
   gloss: {
     // Units
@@ -79,7 +91,6 @@ const lang: HelpLanguage = {
     'u.safety': 'اول ایمنی',
     'u.warehouse': 'در انبار',
     'u.time': 'زمان و برنامهٔ کاری',
-    'u.greenhouse': 'در گلخانه',
 
     // Lessons
     'l.hello': 'سلام کردن',
@@ -91,7 +102,6 @@ const lang: HelpLanguage = {
     'l.directions': 'جهت‌ها و کارها',
     'l.shift': 'شیفت من',
     'l.sick': 'خبر دادن بیماری',
-    'l.harvest': 'وقت برداشت',
 
     // Words
     'w.hallo': 'سلام',
@@ -148,12 +158,6 @@ const lang: HelpLanguage = {
     'w.pijn': 'درد',
     'w.vandaag': 'امروز',
     'w.beter': 'بهتر',
-    'w.kas': 'گلخانه',
-    'w.tomaat': 'گوجه‌فرنگی',
-    'w.paprika': 'فلفل دلمه‌ای',
-    'w.komkommer': 'خیار',
-    'w.plukken': 'چیدن',
-    'w.krat': 'سبد (جعبهٔ برداشت)',
 
     // Sentences
     's.hello.1': 'سلام، من تازه‌کارم.',
@@ -183,9 +187,6 @@ const lang: HelpLanguage = {
     's.sick.1': 'من امروز بیمارم.',
     's.sick.2': 'کمرم درد می‌کند.',
     's.sick.3': 'دارم به دکتر زنگ می‌زنم.',
-    's.harvest.1': 'فقط گوجه‌فرنگی‌های قرمز را بچین.',
-    's.harvest.2': 'سبد پر است.',
-    's.harvest.3': 'من در گلخانه کار می‌کنم.',
     'c.hello.q': 'شب خوبی داشته باشی!',
     'c.hello.a': 'تا فردا!',
     'c.people.q': 'اسمت چیست؟',
@@ -204,8 +205,6 @@ const lang: HelpLanguage = {
     'c.shift.a': 'چای، لطفاً.',
     'c.sick.q': 'مریضی؟',
     'c.sick.a': 'بله، امروز خانه می‌مانم.',
-    'c.harvest.q': 'سبد پر است؟',
-    'c.harvest.a': 'بله، پر است.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'با 112 تماس بگیر!',
     'p.hurt': 'من زخمی شده‌ام.',

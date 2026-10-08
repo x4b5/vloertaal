@@ -71,6 +71,18 @@ const lang: HelpLanguage = {
     enterPassword: 'Въведи паролата',
     wrongPassword: 'Паролата не е вярна. Опитай пак.',
     unlock: 'Отключи',
+    sector: 'Твоята работа',
+    chooseSector: 'Къде работиш?',
+    sectorHint: 'Първо идват уроците за твоята работа. Можеш да промениш това по-късно в Настройки.',
+    otherSectors: 'Други сектори',
+    otherSectorsHint: 'Уроци за друга работа. Можеш да ги правиш и тях.',
+    notSureYet: 'Още не знам',
+    sectorLogistics: 'Логистика',
+    sectorConstruction: 'Строителство',
+    sectorProduction: 'Производство',
+    sectorCare: 'Грижа за хора',
+    sectorHospitality: 'Хотели и ресторанти',
+    sectorCleaning: 'Почистване',
   },
   gloss: {
     // Units
@@ -79,7 +91,6 @@ const lang: HelpLanguage = {
     'u.safety': 'Безопасността на първо място',
     'u.warehouse': 'В склада',
     'u.time': 'Време и график',
-    'u.greenhouse': 'В оранжерията',
 
     // Lessons
     'l.hello': 'Поздрави',
@@ -91,7 +102,6 @@ const lang: HelpLanguage = {
     'l.directions': 'Посоки и действия',
     'l.shift': 'Моята смяна',
     'l.sick': 'Обаждане при болест',
-    'l.harvest': 'Време за беритба',
 
     // Words
     'w.hallo': 'здравей',
@@ -148,12 +158,6 @@ const lang: HelpLanguage = {
     'w.pijn': 'болката',
     'w.vandaag': 'днес',
     'w.beter': 'по-добре',
-    'w.kas': 'оранжерията',
-    'w.tomaat': 'доматът',
-    'w.paprika': 'чушката',
-    'w.komkommer': 'краставицата',
-    'w.plukken': 'бера',
-    'w.krat': 'касетката',
 
     // Sentences
     's.hello.1': 'Здравейте, нов съм.',
@@ -183,9 +187,6 @@ const lang: HelpLanguage = {
     's.sick.1': 'Днес съм болен.',
     's.sick.2': 'Боли ме гърбът.',
     's.sick.3': 'Обаждам се на лекаря.',
-    's.harvest.1': 'Бери само червени домати.',
-    's.harvest.2': 'Касетката е пълна.',
-    's.harvest.3': 'Работя в оранжерията.',
     'c.hello.q': 'Приятна вечер!',
     'c.hello.a': 'До утре!',
     'c.people.q': 'Как се казваш?',
@@ -204,8 +205,6 @@ const lang: HelpLanguage = {
     'c.shift.a': 'Чай, моля.',
     'c.sick.q': 'Болен ли си?',
     'c.sick.a': 'Да, днес оставам вкъщи.',
-    'c.harvest.q': 'Пълна ли е касетката?',
-    'c.harvest.a': 'Да, пълна е.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Обади се на 112!',
     'p.hurt': 'Ранен / ранена съм.',

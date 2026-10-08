@@ -3,7 +3,10 @@ import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
-import { findItem, phrasebookIds, units } from '../content/curriculum';
+import { findItem, findLesson, phrasebookIds } from '../content/curriculum';
+import { coursePlan, isOtherSector, unitSector, type SectorChoice } from '../content/sectors';
+import type { Unit } from '../content/types';
+import { SectorIcon, SectorPicker } from './Sector';
 import { gloss, helpLanguages, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useState } from 'react';
@@ -23,6 +26,7 @@ import {
   CrateIcon,
   BackIcon,
   CheckIcon,
+  ChevronDownIcon,
   ChevronIcon,
   CrownIcon,
   LifebuoyIcon,
@@ -189,8 +193,10 @@ const unitNumber = (u: number) => String(u + 1).padStart(2, '0');
  *  (not A1/B1, which read like language levels). */
 const lessonCode = (u: number, i: number) => `${u + 1}.${i + 1}`;
 
-export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade }: {
+export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false }: {
   progress: Progress;
+  /** Start with "Andere sectoren" open (dev screenshots). */
+  openOther?: boolean;
   lang?: HelpLanguage;
   /** Preview: only the first unit can be played; the rest shows a "full version" lock. */
   access?: Access;
@@ -199,85 +205,122 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
   onStart: (lessonId: string, review: boolean) => void;
   onAbout: () => void;
 }) {
+  const { sector, completed } = progress;
+  // Basis units plus the learner's own sector in course order; other sectors' units wait below.
+  const { main, other } = coursePlan(sector);
+  const [showOther, setShowOther] = useState(openOther);
+  const unlocked = (lessonId: string) => isUnlocked(lessonId, completed, access, sector);
+
+  const renderUnit = (unit: Unit, u: number) => {
+    const allowed = unitAllowed(unit.id, access);
+    const unitOpen = unit.lessons.some((l) => unlocked(l.id));
+    return (
+      <section key={unit.id} className={`unit ${unitOpen ? '' : 'unit-locked'} ${allowed ? '' : 'unit-full-only'}`}>
+        {/* In the preview, tapping a later unit's sign opens the unlock card (the note below
+            is the same action as a real button, for keyboards and screen readers). */}
+        <div className="unit-head" onClick={allowed ? undefined : onUpgrade}>
+          <span className="unit-num" aria-hidden>{unitNumber(u)}</span>
+          <div className="unit-titles">
+            {/* Two lines: the help language large with the English small under it, or the
+                English large with the Dutch name under it when there is no help language. */}
+            <h2>
+              <span className="sr-only">Unit {u + 1}: </span>
+              {lang?.gloss[unit.id] ? <HelpText text={lang.gloss[unit.id]} lang={lang} className="unit-main" /> : unit.title}
+            </h2>
+            {lang?.gloss[unit.id] ? (
+              <span className="unit-nl" lang="en">{unit.title}</span>
+            ) : (
+              <span className="unit-nl" lang="nl">{unit.titleNl}</span>
+            )}
+          </div>
+          {!unitOpen && allowed && <LockIcon size={22} className="unit-lock" />}
+        </div>
+        {!allowed && (
+          <button type="button" className="full-only-note" onClick={onUpgrade}>
+            <LockIcon size={16} />
+            <span lang="nl">Volledige versie</span>
+            <Bi className="full-only-en" text={ui('fullVersion', lang)} />
+            <ChevronIcon size={16} />
+          </button>
+        )}
+        <ol className="bays">
+          {unit.lessons.map((lesson, i) => {
+            const record = completed[lesson.id];
+            const open = unlocked(lesson.id);
+            const state = !allowed ? 'locked' : record ? 'done' : open ? 'now' : 'locked';
+            const first = lesson.words[0];
+            return (
+              <li key={lesson.id} className={`bay bay-${state}`}>
+                <span className="bay-marker" aria-hidden>
+                  {state === 'done' ? <CheckIcon size={20} /> : i + 1}
+                </span>
+                <button
+                  type="button"
+                  className="bay-card"
+                  disabled={!open}
+                  onClick={() => onStart(lesson.id, Boolean(record))}
+                  aria-label={`${lessonCode(u, i)} ${lesson.title}${open ? (record ? ` · ${ui('practice').en}` : '') : ` (${ui('locked').en})`}`}
+                >
+                  {state === 'done' && first && (
+                    <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />
+                  )}
+                  <span className="bay-text">
+                    <Bi className="bay-title" text={gloss(lesson.id, lesson.title, lang)} />
+                    {state === 'done' && (
+                      <span className="bay-again">
+                        {record.best === 1 ? <CrownIcon size={16} /> : <CheckIcon size={16} />}
+                        {ui('practice').en}
+                      </span>
+                    )}
+                    {state === 'now' && (
+                      <span className="bay-start">{ui('start').en}<ChevronIcon size={20} /></span>
+                    )}
+                  </span>
+                  {state === 'locked' && <LockIcon size={20} className="bay-lock" />}
+                  {state === 'now' && (
+                    <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>
+                  )}
+                </button>
+              </li>
+            );
+          })}
+        </ol>
+      </section>
+    );
+  };
+
   return (
     <div className="path">
-      {units.map((unit, u) => {
-        const allowed = unitAllowed(unit.id, access);
-        const unitOpen = unit.lessons.some((l) => isUnlocked(l.id, progress.completed, access));
-        return (
-          <section key={unit.id} className={`unit ${unitOpen ? '' : 'unit-locked'} ${allowed ? '' : 'unit-full-only'}`}>
-            {/* In the preview, tapping a later unit's sign opens the unlock card (the note below
-                is the same action as a real button, for keyboards and screen readers). */}
-            <div className="unit-head" onClick={allowed ? undefined : onUpgrade}>
-              <span className="unit-num" aria-hidden>{unitNumber(u)}</span>
-              <div className="unit-titles">
-                {/* Two lines: the help language large with the English small under it, or the
-                    English large with the Dutch name under it when there is no help language. */}
-                <h2>
-                  <span className="sr-only">Unit {u + 1}: </span>
-                  {lang?.gloss[unit.id] ? <HelpText text={lang.gloss[unit.id]} lang={lang} className="unit-main" /> : unit.title}
-                </h2>
-                {lang?.gloss[unit.id] ? (
-                  <span className="unit-nl" lang="en">{unit.title}</span>
-                ) : (
-                  <span className="unit-nl" lang="nl">{unit.titleNl}</span>
-                )}
-              </div>
-              {!unitOpen && allowed && <LockIcon size={22} className="unit-lock" />}
-            </div>
-            {!allowed && (
-              <button type="button" className="full-only-note" onClick={onUpgrade}>
-                <LockIcon size={16} />
-                <span lang="nl">Volledige versie</span>
-                <Bi className="full-only-en" text={ui('fullVersion', lang)} />
-                <ChevronIcon size={16} />
-              </button>
-            )}
-            <ol className="bays">
-              {unit.lessons.map((lesson, i) => {
-                const record = progress.completed[lesson.id];
-                const open = isUnlocked(lesson.id, progress.completed, access);
-                const state = !allowed ? 'locked' : record ? 'done' : open ? 'now' : 'locked';
-                const first = lesson.words[0];
-                return (
-                  <li key={lesson.id} className={`bay bay-${state}`}>
-                    <span className="bay-marker" aria-hidden>
-                      {state === 'done' ? <CheckIcon size={20} /> : i + 1}
-                    </span>
-                    <button
-                      type="button"
-                      className="bay-card"
-                      disabled={!open}
-                      onClick={() => onStart(lesson.id, Boolean(record))}
-                      aria-label={`${lessonCode(u, i)} ${lesson.title}${open ? (record ? ` · ${ui('practice').en}` : '') : ` (${ui('locked').en})`}`}
-                    >
-                      {state === 'done' && first && (
-                        <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />
-                      )}
-                      <span className="bay-text">
-                        <Bi className="bay-title" text={gloss(lesson.id, lesson.title, lang)} />
-                        {state === 'done' && (
-                          <span className="bay-again">
-                            {record.best === 1 ? <CrownIcon size={16} /> : <CheckIcon size={16} />}
-                            {ui('practice').en}
-                          </span>
-                        )}
-                        {state === 'now' && (
-                          <span className="bay-start">{ui('start').en}<ChevronIcon size={20} /></span>
-                        )}
-                      </span>
-                      {state === 'locked' && <LockIcon size={20} className="bay-lock" />}
-                      {state === 'now' && (
-                        <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>
-                      )}
-                    </button>
-                  </li>
-                );
+      {main.map((unit, u) => renderUnit(unit, u))}
+      {other.length > 0 && (
+        <section className="other-sectors">
+          <button
+            type="button"
+            className="other-toggle"
+            aria-expanded={showOther}
+            aria-controls="other-sectors"
+            onClick={() => setShowOther((v) => !v)}
+          >
+            <span className="other-icons" aria-hidden>
+              {other.map((unit) => {
+                const id = unitSector(unit.id);
+                return id ? <SectorIcon key={unit.id} id={id} size={20} /> : null;
               })}
-            </ol>
-          </section>
-        );
-      })}
+            </span>
+            <span className="other-text">
+              <span className="other-nl" lang="nl">Andere sectoren</span>
+              <Bi text={ui('otherSectors', lang)} />
+            </span>
+            <ChevronDownIcon size={24} className={`other-chev ${showOther ? 'open' : ''}`} />
+          </button>
+          {showOther && (
+            <div id="other-sectors" className="other-units">
+              <p className="muted small other-hint"><Bi text={ui('otherSectorsHint', lang)} /></p>
+              {other.map((unit, i) => renderUnit(unit, main.length + i))}
+            </div>
+          )}
+        </section>
+      )}
       <button type="button" className="about-link" onClick={onAbout}>
         <LogoMark size={22} check={false} />
         <Bi text={ui('about', lang)} />
@@ -373,10 +416,11 @@ function useVoices() {
   return { device, recorded };
 }
 
-export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade }: {
+export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade }: {
   progress: Progress;
   lang?: HelpLanguage;
   onLang: (code: LangCode | null) => void;
+  onSector: (sector: SectorChoice) => void;
   onTheme: (theme: ThemeChoice) => void;
   onVoice: (voice: string | null) => void;
   onReset: () => void;
@@ -407,6 +451,12 @@ export function Settings({ progress, lang, onLang, onTheme, onVoice, onReset, on
       <h2><Bi text={ui('helpLanguage', lang)} /></h2>
       <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta compact />
       {lang && !lang.reviewed && <p className="muted small">beta: {ui('beta').en}</p>}
+
+      <h2 className="settings-sector-title">
+        <span lang="nl">Waar werk je?</span>
+        <Bi text={ui('chooseSector', lang)} />
+      </h2>
+      <SectorPicker current={progress.sector} lang={lang} onPick={onSector} compact />
 
       <h2><Bi text={ui('theme', lang)} /></h2>
       <div className="segmented" role="radiogroup" aria-label={ui('theme').en}>
@@ -624,7 +674,12 @@ export function Result({ right, total, newWords, words, lang, onDone }: {
 /** All "Zo werkt het hier" tips, to read again. Tips of lessons not reached yet stay hidden. */
 export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Progress; lang?: HelpLanguage; onBack: () => void; access?: Access }) {
   const [open, setOpen] = useState<string | null>(null);
-  const visible = cultureTips.filter((t) => isUnlocked(t.lessonId, progress.completed, access));
+  // Another sector's units are open from the start; their tips show once that lesson is done.
+  const visible = cultureTips.filter((t) => {
+    const unit = findLesson(t.lessonId)?.unit;
+    if (unit && isOtherSector(unit.id, progress.sector)) return Boolean(progress.completed[t.lessonId]);
+    return isUnlocked(t.lessonId, progress.completed, access, progress.sector);
+  });
   return (
     <div className="screen">
       <div className="screen-head">

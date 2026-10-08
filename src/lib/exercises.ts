@@ -1,4 +1,5 @@
-import { allLessons, allReplies, allWords } from '../content/curriculum';
+import { allReplies, allWords, units } from '../content/curriculum';
+import { isOtherSector, mainLessons, type SectorChoice } from '../content/sectors';
 import { type CultureTip, tipForLesson } from '../content/culture';
 import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
 import { tokenize } from './answers';
@@ -112,11 +113,27 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   return out;
 }
 
-/** Lessons unlock in order: a lesson is open when the previous one is done. */
-export function isUnlocked(lessonId: string, completed: Record<string, unknown>, access: Access = 'full'): boolean {
+/**
+ * Lessons unlock in order: a lesson is open when the previous one is done. The order is the
+ * learner's own path (basis units plus their sector, see coursePlan); another sector's unit
+ * never blocks it. Those units (under "Andere sectoren") are open from the start, with their
+ * lessons in order within the unit.
+ */
+export function isUnlocked(
+  lessonId: string,
+  completed: Record<string, unknown>,
+  access: Access = 'full',
+  sector?: SectorChoice,
+): boolean {
   // The access level wins over progress: a preview never opens a later unit.
   if (!lessonAllowed(lessonId, access)) return false;
-  const index = allLessons.findIndex((l) => l.id === lessonId);
+  const unit = units.find((u) => u.lessons.some((l) => l.id === lessonId));
+  if (unit && isOtherSector(unit.id, sector)) {
+    const i = unit.lessons.findIndex((l) => l.id === lessonId);
+    return i === 0 || Boolean(completed[unit.lessons[i - 1].id]);
+  }
+  const order = mainLessons(sector);
+  const index = order.findIndex((l) => l.id === lessonId);
   if (index <= 0) return index === 0;
-  return Boolean(completed[allLessons[index - 1].id]);
+  return Boolean(completed[order[index - 1].id]);
 }

@@ -76,31 +76,6 @@ const unitPictures: Record<string, () => JSX.Element> = {
       <Motion x={60} y={62} dir={-35} spread={30} n={2} len={8} gap={52} color={PAL.white} width={3.6} />
     </g>
   ),
-  // Greenhouse: a glass house with a plant in a pot in front.
-  'u.greenhouse': () => (
-    <g>
-      <Halo />
-      <Ground cy={104} rx={46} ry={5} />
-      {/* Glass house */}
-      <path d="M14 100V58L44 30L74 58V100Z" fill={PAL.ice} />
-      <path d="M74 58L44 30L60 30L104 58V100H74Z" fill="#6fc9f0" />
-      <path d="M74 58L104 58L60 30H44Z" fill="#b5ebff" />
-      <g stroke={PAL.white} strokeWidth="3.2" strokeLinejoin="round" strokeLinecap="round" fill="none">
-        <path d="M14 100V58L44 30L74 58V100Z" />
-        <path d="M74 58H104V100H74M44 30H60L104 58" />
-        <path d="M44 30V100M14 76H74M89 58V100M74 78H104" />
-      </g>
-      <Shine d="M22 66L40 48" color={PAL.white} width={4} opacity={0.7} />
-      {/* Pot with a seedling */}
-      <g transform="translate(80 84)">
-        <path d="M0 -6C-4 -16 -12 -18 -16 -16C-15 -9 -7 -6 0 -6ZM0 -9C3 -20 12 -22 16 -20C16 -11 8 -8 0 -8Z" fill={PAL.leaf} />
-        <path d="M0 -6V4" stroke={PAL.leafShade} strokeWidth="3" />
-        <path d="M-14 2H14L11 20Q10.4 22.4 8 22.4H-8Q-10.4 22.4 -11 20Z" fill={PAL.clay} />
-        <path d="M6 2H14L11 20Q10.4 22.4 8 22.4H5.6Q7.6 12 6 2Z" fill={PAL.clayShade} />
-        <rect x="-16" y="-1" width="32" height="7" rx="2.4" fill={PAL.clayLight} />
-      </g>
-    </g>
-  ),
   // Working together: two colleagues side by side, happy.
   'u.teamwork': () => (
     <g>
