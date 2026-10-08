@@ -2961,7 +2961,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .situation-quote .speak-glyph { flex: none; }
 
 /* Stamps: the Dutch word with a small help-language line under it. */
-.stamp-sub { max-width: 80%; text-align: center; text-transform: none; line-height: 1; overflow-wrap: anywhere; }
+.stamp-sub { max-width: 66%; text-align: center; text-transform: none; line-height: 1; overflow-wrap: anywhere; }
 .stamp-wrong .stamp-sub { font-size: 0.54rem; margin-top: 2px; }
 .stamp-wrong .stamp-sub:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.62rem; }
 .choices:not(.choices-pics) .stamp-wrong .stamp-word, .choices-pics .stamp-wrong .stamp-word { font-size: 0.86rem; }
@@ -3013,3 +3013,12 @@ html:has(.topbar) { scroll-padding-top: 72px; }
    that change state, e.g. the next lesson's Start right after a lesson). */
 [dir='rtl'] .icon-fwd { scale: -1 1; }
 [dir='rtl'] [dir='ltr'] .icon-fwd { scale: 1 1; }
+/* Short phones (360×640): the letter tiles sit higher, so most of them clear the footer. */
+@media (max-height: 700px) {
+  .exercise:has(.letter-bank) .listen-buttons { margin: 0 0 12px; }
+  .exercise:has(.letter-bank) .listen-buttons .speak-lg { width: 72px; height: 60px; }
+  .type-display { min-height: 54px; }
+  .letter-bank { margin-top: 10px; gap: 6px; }
+  .letter-tile { height: 46px; min-width: 44px; font-size: 1.35rem; }
+  .type-mode { margin-top: 10px; }
+}

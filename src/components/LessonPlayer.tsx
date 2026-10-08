@@ -397,6 +397,10 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     return () => window.clearTimeout(t);
   }, [checked, measureFb]);
 
+  // A new exercise starts at the top (the last one may have been scrolled to show its feedback).
+  useEffect(() => {
+    if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [index]);
   // A new exercise: focus its question, so a screen reader starts there (typing keeps the input).
   useEffect(() => {
     if (queue[index]?.kind === 'type' && document.activeElement?.tagName === 'INPUT') return;
