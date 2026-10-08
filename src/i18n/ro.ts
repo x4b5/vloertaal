@@ -188,6 +188,14 @@ const lang: HelpLanguage = {
     skippedN: '{n} sărite, nu se numără',
     stampAgain: 'Încă o dată',
     stampDone: 'Gata',
+    chooseNext: 'Alege următorul subiect',
+    recommended: 'Recomandat',
+    otherTopic: 'Alege alt subiect',
+    allTopics: 'Toate subiectele',
+    topicsDone: 'Subiecte terminate',
+    lessonsUnit: 'lecții',
+    lessonsUnitOne: 'lecție',
+    allTopicsDone: 'Ai terminat toate subiectele. Bravo!',
   },
   gloss: {
     // Units

@@ -188,6 +188,14 @@ const lang: HelpLanguage = {
     skippedN: '{n} atlandı, sayılmadı',
     stampAgain: 'Tekrar',
     stampDone: 'Bitti',
+    chooseNext: 'Sonraki konunu seç',
+    recommended: 'Önerilen',
+    otherTopic: 'Başka bir konu seç',
+    allTopics: 'Tüm konular',
+    topicsDone: 'Biten konular',
+    lessonsUnit: 'ders',
+    lessonsUnitOne: 'ders',
+    allTopicsDone: 'Tüm konuları bitirdin. Aferin!',
   },
   gloss: {
     // Unit: First day at work

@@ -43,9 +43,9 @@ interface Props<K extends Exercise['kind']> {
 type Verdict = Props<'meaning'>['verdict'];
 
 /**
- * How a character in an exercise feels about the verdict. A right answer is always the cheer
- * (open-mouthed joy and a fist pump, clearly unlike the resting grin); how big it is grows with
- * the run (lib/lessonRun.ts, reactClass). `calm` characters (the colleague in a chat or a
+ * How a character in an exercise feels about the verdict. A right answer is a calm nod with a
+ * smile (and a thumb up for some); a wrong one a brief head tilt. The run does not make it
+ * bigger (the run label shows the run). `calm` characters (the colleague in a chat or a
  * situation) only ever nod. The pose holds until Continue, so a still frame reads as "right"
  * or "wrong".
  */
@@ -55,8 +55,8 @@ function moodFor(verdict: Verdict, rest: Mood = 'idle', calm = false): Mood {
   return rest;
 }
 
-/** Extra reaction classes: a run of 1–2 pumps the fist without the jump, 5+ adds a second
- *  pump; no head-scratch after the first miss. */
+/** Reaction tiers by run (lib/lessonRun.ts) and by misses in a row, as classes. The calm style
+ *  gives them (almost) the same look; they stay as hooks. */
 function reactClass(verdict: Verdict, run = 1, misses = 1): string {
   if (verdict === 'right' && cheerFor(run) === 'pump') return 'ch-small';
   if (verdict === 'right' && cheerFor(run) === 'big') return 'ch-big';

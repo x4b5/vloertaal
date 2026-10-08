@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { helpLanguages } from '../src/i18n';
-import { barParts, cheerFor, chimeStep, nextMisses, nextRun, runStampFor, wholeTones } from '../src/lib/lessonRun';
+import { barParts, cheerFor, nextMisses, nextRun, runStampFor } from '../src/lib/lessonRun';
 
 describe('run of right answers in a lesson', () => {
   it('counts up on a right answer and resets silently on a miss', () => {
@@ -16,18 +16,12 @@ describe('run of right answers in a lesson', () => {
     expect(nextMisses(2, true)).toBe(0);
   });
 
-  it('reacts in tiers: a fist pump for 1–2, a jump for 3–4, a second pump from 5', () => {
+  it('keeps the reaction tiers by run (1–2, 3–4, 5+); the calm style draws them alike', () => {
     expect([1, 2, 3, 4, 5, 9].map(cheerFor)).toEqual(['pump', 'pump', 'happy', 'happy', 'big', 'big']);
   });
 
   it('stamps runs of 3, 5 and 8 only', () => {
     expect([1, 2, 3, 4, 5, 6, 7, 8, 9].map(runStampFor)).toEqual([null, null, 3, null, 5, null, null, 8, null]);
-  });
-
-  it('raises the chime a whole tone per step, at most 3 steps', () => {
-    expect([0, 1, 2, 3, 4, 10].map(chimeStep)).toEqual([0, 0, 1, 2, 3, 3]);
-    expect(wholeTones(0)).toBe(1);
-    expect(wholeTones(6)).toBeCloseTo(2);
   });
 });
 

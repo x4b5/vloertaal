@@ -188,6 +188,14 @@ const lang: HelpLanguage = {
     skippedN: 'Пропуснати: {n}, не се броят',
     stampAgain: 'Още веднъж',
     stampDone: 'Готово',
+    chooseNext: 'Избери следващата тема',
+    recommended: 'Препоръчано',
+    otherTopic: 'Избери друга тема',
+    allTopics: 'Всички теми',
+    topicsDone: 'Готови теми',
+    lessonsUnit: 'урока',
+    lessonsUnitOne: 'урок',
+    allTopicsDone: 'Завърши всички теми. Браво!',
   },
   gloss: {
     // Units

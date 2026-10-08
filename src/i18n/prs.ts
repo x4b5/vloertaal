@@ -188,6 +188,14 @@ const lang: HelpLanguage = {
     skippedN: '{n} تیر شد، حساب نمی‌شود',
     stampAgain: 'دوباره',
     stampDone: 'ختم شد',
+    chooseNext: 'موضوع بعدی را انتخاب کنید',
+    recommended: 'پیشنهادی',
+    otherTopic: 'موضوع دیگری انتخاب کنید',
+    allTopics: 'همهٔ موضوع‌ها',
+    topicsDone: 'موضوع‌های ختم‌شده',
+    lessonsUnit: 'درس',
+    lessonsUnitOne: 'درس',
+    allTopicsDone: 'همهٔ موضوع‌ها را ختم کردید. آفرین!',
   },
   gloss: {
     // Units

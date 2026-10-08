@@ -188,6 +188,14 @@ const lang: HelpLanguage = {
     skippedN: 'تم تخطي {n}، لا تُحسب',
     stampAgain: 'مرة أخرى',
     stampDone: 'انتهى',
+    chooseNext: 'اختر موضوعك التالي',
+    recommended: 'مُوصى به',
+    otherTopic: 'اختر موضوعاً آخر',
+    allTopics: 'كل المواضيع',
+    topicsDone: 'مواضيع منتهية',
+    lessonsUnit: 'دروس',
+    lessonsUnitOne: 'درس',
+    allTopicsDone: 'أنهيت كل المواضيع. أحسنت!',
   },
   gloss: {
     // Units

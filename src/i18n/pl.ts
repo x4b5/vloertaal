@@ -188,6 +188,14 @@ const lang: HelpLanguage = {
     skippedN: 'Pominięte: {n}, nie liczą się',
     stampAgain: 'Jeszcze raz',
     stampDone: 'Gotowe',
+    chooseNext: 'Wybierz następny temat',
+    recommended: 'Polecane',
+    otherTopic: 'Wybierz inny temat',
+    allTopics: 'Wszystkie tematy',
+    topicsDone: 'Ukończone tematy',
+    lessonsUnit: 'lekcji',
+    lessonsUnitOne: 'lekcja',
+    allTopicsDone: 'Wszystkie tematy ukończone. Brawo!',
   },
   gloss: {
     // Unit: First day at work

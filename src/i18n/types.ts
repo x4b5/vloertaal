@@ -198,6 +198,15 @@ export const uiEn = {
   skippedN: '{n} skipped, not counted',
   stampAgain: 'Again',
   stampDone: 'Done',
+  /* Route, one block at a time: the choice of the next block, the shelf, all topics. */
+  chooseNext: 'Choose your next topic',
+  recommended: 'Recommended',
+  otherTopic: 'Choose another topic',
+  allTopics: 'All topics',
+  topicsDone: 'Finished topics',
+  lessonsUnit: 'lessons',
+  lessonsUnitOne: 'lesson',
+  allTopicsDone: 'You finished every topic. Well done!',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

@@ -188,6 +188,14 @@ const lang: HelpLanguage = {
     skippedN: '{n} ተሰጊሩ፡ ኣይተቖጽረን',
     stampAgain: 'ደጊምካ',
     stampDone: 'ተወዲኡ',
+    chooseNext: 'ዝቕጽል ኣርእስቲ ምረጽ',
+    recommended: 'ዝምከር',
+    otherTopic: 'ካልእ ኣርእስቲ ምረጽ',
+    allTopics: 'ኩሎም ኣርእስትታት',
+    topicsDone: 'ዝተወድኡ ኣርእስትታት',
+    lessonsUnit: 'ትምህርትታት',
+    lessonsUnitOne: 'ትምህርቲ',
+    allTopicsDone: 'ኩሎም ኣርእስትታት ወዲእካ። ጽቡቕ ስራሕ!',
   },
   gloss: {
     // Units

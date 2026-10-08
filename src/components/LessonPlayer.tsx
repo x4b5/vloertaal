@@ -5,7 +5,7 @@ import type { HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, sounds, speak, speechAvailable } from '../lib/audio';
 import { tileDiff } from '../lib/answers';
 import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
-import { barParts, chimeStep, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
+import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { voiceFor } from '../lib/voices';
 import { castFor, tipCast, type CharacterId } from './Characters';
@@ -139,16 +139,17 @@ function reducedMotion(): boolean {
 }
 
 /**
- * A run of 3, 5 or 8: a taped label that drops onto the progress bar for 1.5 s, a lit flame, the
- * big number and "in a row" in the help language (English without one). It lives in the lesson
- * header, so it is in view whatever the exercise below does.
+ * A run of 3, 5 or 8: a small label over the progress bar for 1.5 s (fades and slides in 6 px,
+ * stays, fades out): a still flame, the number and "in a row" in the help language (English
+ * without one). It lives in the lesson header, so it is in view whatever the exercise below does
+ * and never covers it.
  */
 function RunLabel({ n, lang }: { n: number; lang?: HelpLanguage }) {
   const text = withoutN(ui('inARow', lang));
   return (
     <span className="run-label" aria-hidden>
       <span className="run-label-tape" />
-      <FlameIcon lit size={26} />
+      <FlameIcon lit size={20} />
       <b className="run-label-n">{n}</b>
       {text.help && lang ? <HelpText className="run-label-text" text={text.help} lang={lang} /> : <span className="run-label-text" lang="en">{text.en}</span>}
     </span>
@@ -439,7 +440,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       goRef.current?.focus({ preventScroll: true });
     });
     if (answer.correct) {
-      sounds.correct(chimeStep(newRun));
+      sounds.correct();
       const stamp = runStampFor(newRun);
       if (stamp) later(300, () => { setRunLabel(stamp); setSweep((k) => k + 1); });
     } else {
@@ -677,6 +678,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             <span className="lbar-ticks" style={{ '--n': bar.slots } as React.CSSProperties} />
             {sweep > 0 && <span key={sweep} className="lbar-sweep" />}
           </div>
+          {/* The run label sits over the progress bar, inside the header: it never covers the
+              exercise's tag or question. */}
+          {runLabel && <RunLabel key={sweep} n={runLabel} lang={lang} />}
         </div>
         <span className="lesson-name">
           <Bi text={gloss(lesson.id, lesson.title, lang)} />
@@ -696,9 +700,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             ? <HelpText className="sos-label" text={lang.ui.navWords} lang={lang} />
             : <span className="sos-label" lang="nl">Hulp</span>}
         </button>
-        {/* The run label and the sound note hang just under the header, never over the close
-            button, the sound toggle or the progress bar. */}
-        {runLabel && <RunLabel key={sweep} n={runLabel} lang={lang} />}
+        {/* The sound note hangs just under the header, never over the close button, the sound
+            toggle or the progress bar. */}
         {soundNote && (
           <div className="sound-note" role="status" key={soundNote} onClick={() => setSoundNote(null)}>
             {soundNote === 'on' ? <SpeakerIcon size={20} /> : soundNote === 'skip' ? <EarIcon size={20} /> : <SpeakerOffIcon size={20} />}

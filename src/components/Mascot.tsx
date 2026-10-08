@@ -35,10 +35,20 @@ export function Capsule({ a, b, w, fill }: { a: V; b: V; w: number; fill: string
   );
 }
 
-export type MitKind = 'fist' | 'open';
+export type MitKind = 'fist' | 'open' | 'thumb';
 
 /** A hand at the end of a forearm of thickness w, drawn along +x (the forearm's direction). */
 export function Mitt({ kind, w, skin, shade }: { kind: MitKind; w: number; skin: string; shade: string }) {
+  if (kind === 'thumb') {
+    // A fist with the thumb standing up, square to the forearm (a calm "well done").
+    return (
+      <g>
+        <rect x={r1(w * 0.18)} y={r1(-w * 1.45)} width={r1(w * 0.46)} height={r1(w * 1.05)} rx={r1(w * 0.23)} fill={skin} />
+        <circle cx={r1(w * 0.45)} cy="0" r={r1(w * 0.78)} fill={skin} />
+        <rect x={r1(w * 0.55)} y={r1(-w * 0.5)} width={r1(w * 0.5)} height={r1(w * 0.22)} rx={r1(w * 0.11)} fill={shade} />
+      </g>
+    );
+  }
   if (kind === 'fist') {
     return (
       <g>

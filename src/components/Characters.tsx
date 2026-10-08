@@ -13,14 +13,15 @@ import { tipGender, type CultureTip } from '../content/culture';
  *  - Jada: order picker in blue dungarees over a yellow T-shirt, curly hair with safety glasses on top.
  *
  * Every character has the same moods; CSS (styles.css, "Characters") animates them:
- * idle breathing + blinking, a moving mouth while talking, a jump when happy, a droop when sad.
+ * idle breathing + blinking, a moving mouth while talking, a calm nod and a smile when happy, a
+ * brief head tilt when sad.
  * With prefers-reduced-motion the pose is shown without motion.
  */
 export type CharacterId = 'bram' | 'amina' | 'henk' | 'jada';
 /**
  * Body + face state. `idle` is the character's own resting face; `thinking`, `pleased` and
- * `sad` (disappointed) change the face only; `happy` adds one hop, `cheer` keeps jumping with
- * both arms up. `talking` is idle with a moving mouth (or pass `talking` to any mood).
+ * `sad` (disappointed) change the face only; `happy` and `cheer` add one calm nod (a thumb for
+ * Bram and Jada). `talking` is idle with a moving mouth (or pass `talking` to any mood).
  */
 export type Mood = 'idle' | 'talking' | 'thinking' | 'pleased' | 'happy' | 'sad' | 'cheer' | 'wave';
 
@@ -309,22 +310,22 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       l: { a: 150, e: 22, w: 34, hand: 'fist', m: true },
       r: { a: 32, e: -22, w: -18, hand: 'point', beat: true },
     },
-    // Right: one big fist pump, hip hand stays.
+    // Right: a calm thumb up, hip hand stays.
     happy: {
-      lean: -1.5, tilt: -5, turn: 0.6,
+      lean: 2, tilt: 5, turn: 1.4,
       l: { a: 150, e: 22, w: 34, hand: 'fist', m: true },
-      r: { a: -48, e: -96, w: -96, hand: 'fist', act: 'pump' },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
-    // Wrong: scratches the side of his head, sheepish.
+    // Wrong: the head tilts a little, the hands stay where they are.
     sad: {
-      lean: -2, tilt: -7, turn: -1,
-      l: { a: 150, e: 26, w: 38, hand: 'fist', m: true },
-      r: { a: -38, e: -118, w: -150, hand: 'open', act: 'scratch' },
+      lean: 2, tilt: 2, turn: 0.6,
+      l: { a: 150, e: 22, w: 34, hand: 'fist', m: true },
+      r: { a: 32, e: -22, w: -18, hand: 'point' },
     },
     pleased: {
       lean: 2, tilt: 5, turn: 1.4,
       l: { a: 150, e: 22, w: 34, hand: 'fist', m: true },
-      r: { a: 62, e: -58, w: 0, hand: 'thumb', act: 'thumb' },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
     wave: {
       lean: 1.5, tilt: 6, turn: 1.4,
@@ -337,9 +338,9 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       r: { a: 150, e: -110, w: -100, hand: 'fist' },
     },
     cheer: {
-      lean: 0, tilt: 0, turn: 0,
-      l: { a: -132, e: -98, w: -96, hand: 'fist', m: true, act: 'pump' },
-      r: { a: -48, e: -82, w: -84, hand: 'fist', act: 'pump' },
+      lean: 2, tilt: 5, turn: 1.4,
+      l: { a: 150, e: 22, w: 34, hand: 'fist', m: true },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
   },
   // Amina: shy, head tilted away, cradles her seedling pot with both hands.
@@ -349,17 +350,17 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       l: { a: 104, e: -12, w: -14, hand: 'grip', prop: 'pot', m: true },
       r: { a: 76, e: -168, w: -168, hand: 'grip', beat: true },
     },
-    // Right: a little wave of delight, pot tucked in the other hand.
+    // Right: a calm nod and a smile, the pot in both hands.
     happy: {
-      lean: 1, tilt: 8, turn: 0.8,
+      lean: -1, tilt: 6, turn: 1,
       l: { a: 104, e: -12, w: -14, hand: 'grip', prop: 'pot', m: true },
-      r: { a: -40, e: -96, w: -100, hand: 'open', act: 'wiggle' },
+      r: { a: 76, e: -168, w: -168, hand: 'grip' },
     },
-    // Wrong: hand to her mouth.
+    // Wrong: the head tilts a little further.
     sad: {
-      lean: -3, tilt: -12, turn: -1.6,
+      lean: -2, tilt: -13, turn: 0.6,
       l: { a: 104, e: -12, w: -14, hand: 'grip', prop: 'pot', m: true },
-      r: { a: 150, e: -108, w: -110, hand: 'open', m: true },
+      r: { a: 76, e: -168, w: -168, hand: 'grip' },
     },
     pleased: {
       lean: -1, tilt: 6, turn: 1,
@@ -372,9 +373,9 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       r: { a: 150, e: -108, w: -100, hand: 'fist', m: true },
     },
     cheer: {
-      lean: 0, tilt: 6, turn: 0,
-      l: { a: -130, e: -96, w: -100, hand: 'open', m: true, act: 'pump' },
-      r: { a: -50, e: -84, w: -80, hand: 'open', act: 'pump' },
+      lean: -1, tilt: 6, turn: 1,
+      l: { a: 104, e: -12, w: -14, hand: 'grip', prop: 'pot', m: true },
+      r: { a: 76, e: -168, w: -168, hand: 'grip' },
     },
   },
   // Henk: leans back, clipboard under one arm, his coffee mug in the other hand.
@@ -384,22 +385,22 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       l: { a: 112, e: -8, w: -8, hand: 'grip', prop: 'clipboard', m: true },
       r: { a: 72, e: -84, w: -84, hand: 'grip', prop: 'mug', beat: true },
     },
-    // Right: raises his mug to you with a wink.
+    // Right: lifts his mug a little to you and nods.
     happy: {
-      lean: 1, tilt: 4, turn: 1.4,
+      lean: -1, tilt: 3, turn: 1.4,
       l: { a: 112, e: -8, w: -8, hand: 'grip', prop: 'clipboard', m: true },
-      r: { a: -18, e: -84, w: -84, hand: 'grip', prop: 'mug', act: 'toast' },
+      r: { a: 58, e: -84, w: -84, hand: 'grip', prop: 'mug' },
     },
     pleased: {
       lean: -1, tilt: 3, turn: 1.4,
       l: { a: 112, e: -8, w: -8, hand: 'grip', prop: 'clipboard', m: true },
-      r: { a: 40, e: -84, w: -84, hand: 'grip', prop: 'mug', act: 'toast' },
+      r: { a: 58, e: -84, w: -84, hand: 'grip', prop: 'mug' },
     },
-    // Wrong: the mug sinks, the head shakes slowly.
+    // Wrong: the head tilts a little.
     sad: {
-      lean: -3.5, tilt: -6, turn: -1,
+      lean: -2.5, tilt: -7, turn: 0.4,
       l: { a: 112, e: -8, w: -8, hand: 'grip', prop: 'clipboard', m: true },
-      r: { a: 84, e: 6, w: 6, hand: 'grip', prop: 'mug' },
+      r: { a: 72, e: -84, w: -84, hand: 'grip', prop: 'mug' },
     },
     thinking: {
       lean: -2.5, tilt: -8, turn: -2,
@@ -407,9 +408,9 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       r: { a: 72, e: -84, w: -84, hand: 'grip', prop: 'mug' },
     },
     cheer: {
-      lean: 0, tilt: 3, turn: 0,
+      lean: -1, tilt: 3, turn: 1.4,
       l: { a: 112, e: -8, w: -8, hand: 'grip', prop: 'clipboard', m: true },
-      r: { a: -18, e: -84, w: -84, hand: 'grip', prop: 'mug', act: 'toast' },
+      r: { a: 58, e: -84, w: -84, hand: 'grip', prop: 'mug' },
     },
   },
   // Jada: hip out, hand on that hip, scanner propped up, side-eye and a smirk.
@@ -419,22 +420,22 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       l: { a: 100, e: -78, w: -78, hand: 'grip', prop: 'scanner', m: true, beat: true },
       r: { a: 28, e: 154, w: 146, hand: 'fist' },
     },
-    // Right: a finger-gun at you, with a wink.
+    // Right: a calm thumb up.
     happy: {
-      lean: 5, tilt: -4, turn: 2.4,
+      lean: 4, tilt: -5, turn: 2.4,
       l: { a: 100, e: -78, w: -78, hand: 'grip', prop: 'scanner', m: true },
-      r: { a: 18, e: -12, w: -10, hand: 'point', act: 'pew' },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
     pleased: {
       lean: 4, tilt: -5, turn: 2.4,
       l: { a: 100, e: -78, w: -78, hand: 'grip', prop: 'scanner', m: true },
-      r: { a: 18, e: -12, w: -10, hand: 'point', act: 'pew' },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
-    // Wrong: a shrug, palms up.
+    // Wrong: the head tilts a little, hand stays on the hip.
     sad: {
-      lean: 2, tilt: 7, turn: -1.6,
-      l: { a: 104, e: -148, w: -160, hand: 'open', act: 'shrug' },
-      r: { a: 76, e: -32, w: -20, hand: 'open', m: true, act: 'shrug' },
+      lean: 4, tilt: -4, turn: 0.6,
+      l: { a: 100, e: -78, w: -78, hand: 'grip', prop: 'scanner', m: true },
+      r: { a: 28, e: 154, w: 146, hand: 'fist' },
     },
     thinking: {
       lean: 4, tilt: -10, turn: -2,
@@ -442,9 +443,9 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
       r: { a: 28, e: 154, w: 146, hand: 'fist' },
     },
     cheer: {
-      lean: 3, tilt: -4, turn: 0,
-      l: { a: -126, e: -98, w: -98, hand: 'grip', prop: 'scanner', m: true, act: 'pump' },
-      r: { a: 18, e: -12, w: -10, hand: 'point', act: 'pew' },
+      lean: 4, tilt: -5, turn: 2.4,
+      l: { a: 100, e: -78, w: -78, hand: 'grip', prop: 'scanner', m: true },
+      r: { a: 62, e: -58, w: 0, hand: 'thumb' },
     },
   },
 };
@@ -612,14 +613,15 @@ function exprFor(mood: Mood): Expr {
   switch (mood) {
     case 'thinking':
       return 'thinking';
+    // A right answer is a calm smile (not the open-mouthed joy): motion and faces confirm,
+    // they do not perform.
     case 'pleased':
     case 'wave':
+    case 'happy':
+    case 'cheer':
       return 'pleased';
     case 'sad':
       return 'disappointed';
-    case 'happy':
-    case 'cheer':
-      return 'joy';
     default:
       return 'neutral';
   }
@@ -656,9 +658,8 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
 }) {
   const look = LOOKS[who];
   const face = FACES[who];
-  // The cheer shows its open-mouthed joy first and holds it for 760 ms (past the landing of the
-  // jump); only then may the mouth talk, so the cheer is never swallowed by the spoken answer
-  // that starts at 700 ms (see LessonPlayer).
+  // The smile shows first and holds for 760 ms; only then may the mouth talk, so the reaction is
+  // never swallowed by the spoken answer that starts at 700 ms (see LessonPlayer).
   const reacting = useOneShot(mood === 'happy', 760);
   const talking = (!!talkingProp || mood === 'talking') && !reacting;
   const frame = useTalkFrame(talking);
@@ -713,9 +714,7 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
                   </g>
                 </g>
                 {look.front}
-                {mood === 'sad' && (
-                  <path className="ch-sweat" d="M92 40Q96 47 96 50A4 4 0 0 1 88 50Q88 47 92 40Z" fill="#8fdcff" />
-                )}
+
               </g>
             </g>
             {crop !== 'head' && arms.filter((_, i) => !(i === 0 ? pose.l : pose.r).back)}

@@ -188,6 +188,14 @@ const lang: HelpLanguage = {
     skippedN: 'Пропущено: {n}, не враховано',
     stampAgain: 'Ще раз',
     stampDone: 'Готово',
+    chooseNext: 'Обери наступну тему',
+    recommended: 'Рекомендовано',
+    otherTopic: 'Обрати іншу тему',
+    allTopics: 'Усі теми',
+    topicsDone: 'Пройдені теми',
+    lessonsUnit: 'уроків',
+    lessonsUnitOne: 'урок',
+    allTopicsDone: 'Усі теми пройдено. Чудово!',
   },
   gloss: {
     // Unit: First day at work
