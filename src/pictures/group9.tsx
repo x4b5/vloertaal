@@ -168,28 +168,26 @@ export default {
     </g>
   ),
 
-  // "de bel": the bike bell — a round bell on the handlebar, its lever pushed, ringing
+  // "de bel": the bike bell — a round bell on a bike's handlebar (grips, stem), its lever
+  // pushed, ringing
   'w.bel': () => (
     <g>
-      {/* Handlebar with a black grip */}
-      <path d="M10 88L104 76" stroke={PAL.steel} strokeWidth="11" strokeLinecap="round" />
-      <path d="M12 86L104 74" stroke={PAL.mist} strokeWidth="3" strokeLinecap="round" opacity=".9" />
-      <path d="M80 79L106 76" stroke={PAL.ink} strokeWidth="15" strokeLinecap="round" />
-      <path d="M86 75L88 82M93 74L95 81M100 73L102 80" stroke={PAL.slate} strokeWidth="1.8" strokeLinecap="round" />
-      {/* Clamp */}
-      <rect x="40" y="74" width="16" height="18" rx="4" fill={PAL.slate} transform="rotate(-7 48 83)" />
-      {/* Bell dome */}
-      <ellipse cx="46" cy="66" rx="29" ry="8" fill={PAL.steel} />
-      <Shade color={PAL.skyShade} opacity={1} at={[78, 50, 14, 30]}>
-        <path d="M17 64A29 30 0 0 1 75 64Q75 70 46 70Q17 70 17 64Z" fill={PAL.sky} />
+      {/* Handlebar: stem, bar and two black grips */}
+      <path d="M60 78V112" stroke={PAL.steel} strokeWidth="9" strokeLinecap="round" />
+      <path d="M14 70Q30 80 60 80Q90 80 106 70" fill="none" stroke={PAL.steel} strokeWidth="8" strokeLinecap="round" />
+      <path d="M8 66L22 74M98 74L112 66" stroke={PAL.ink} strokeWidth="12" strokeLinecap="round" />
+      <rect x="53" y="74" width="14" height="12" rx="4" fill={PAL.slate} />
+      {/* Bell on the right half */}
+      <rect x="76" y="70" width="10" height="12" rx="3" fill={PAL.slate} />
+      <ellipse cx="81" cy="68" rx="22" ry="6" fill={PAL.skyShade} />
+      <Shade color={PAL.skyShade} opacity={1} at={[104, 48, 10, 28]}>
+        <path d="M59 66A22 26 0 0 1 103 66Q103 72 81 72Q59 72 59 66Z" fill={PAL.sky} />
       </Shade>
-      <circle cx="46" cy="34" r="4.6" fill={PAL.steel} />
-      <Shine d="M25 54Q28 42 38 38" width={4.4} opacity={0.75} />
+      <Shine d="M65 58Q67 47 75 43" width={4} opacity={0.75} />
       {/* Lever */}
-      <path d="M68 74L84 64" stroke={PAL.slate} strokeWidth="5.5" strokeLinecap="round" />
-      <circle cx="86" cy="63" r="5" fill={PAL.slateDark} />
-      <Motion x={46} y={50} dir={-150} spread={50} n={3} len={9} gap={36} color={PAL.orange} width={4} />
-      <Motion x={46} y={50} dir={-30} spread={50} n={3} len={9} gap={36} color={PAL.orange} width={4} />
+      <path d="M66 76L50 70" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
+      <circle cx="48" cy="69" r="4.6" fill={PAL.slateDark} />
+      <Motion x={81} y={48} dir={-90} spread={120} n={5} len={9} gap={22} color={PAL.orange} width={4} />
     </g>
   ),
 
@@ -217,26 +215,27 @@ export default {
     </g>
   ),
 
-  // "inchecken": to check in — a hand brings the card to the yellow reader pole (arrow in),
+  // "inchecken": to check in — a hand holds the card against the yellow reader pole (arrow in),
   // the reader beeps green
   'w.inchecken': () => (
     <g>
-      <CardPole x={84} y={58} />
-      <Hand pose="hold" x={26} y={92} rotate={58} scale={0.8} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
-      <BankCard x={42} y={26} w={34} rot={8} />
-      <Arrow from={[14, 22]} to={[46, 22]} color={PAL.ok} width={7} head={11} />
-      <Motion x={86} y={34} dir={-60} spread={70} n={3} len={6} gap={18} color={PAL.ok} width={3.4} />
-      <Tick x={22} y={102} r={0.01} />
+      <CardPole x={86} y={60} />
+      <Hand pose="hold" x={42} y={38} rotate={90} scale={0.72} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
+      <BankCard x={52} y={26} w={30} rot={0} />
+      <Arrow from={[14, 74]} to={[60, 74]} color={PAL.ok} width={7} head={11} />
+      <Tick x={104} y={16} r={11} />
+      <Motion x={86} y={36} dir={-30} spread={60} n={3} len={6} gap={26} color={PAL.ok} width={3.4} />
     </g>
   ),
 
-  // "uitchecken": to check out — the card goes back away from the reader (arrow out)
+  // "uitchecken": to check out — the hand takes the card away from the reader again (arrow out)
   'w.uitchecken': () => (
     <g>
-      <CardPole x={36} y={58} lamp={PAL.ok} />
-      <Hand pose="hold" x={94} y={96} rotate={-58} scale={0.8} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
-      <BankCard x={62} y={36} w={34} rot={-8} />
-      <Arrow from={[66, 22]} to={[106, 22]} color={PAL.orange} width={7} head={11} />
+      <CardPole x={34} y={60} />
+      <Hand pose="hold" x={102} y={38} rotate={-90} scale={0.72} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
+      <BankCard x={66} y={26} w={30} rot={0} />
+      <Motion x={70} y={36} dir={180} spread={50} n={3} len={6} gap={6} color={PAL.line} width={3.4} />
+      <Arrow from={[60, 74]} to={[106, 74]} color={PAL.orange} width={7} head={11} />
     </g>
   ),
 
@@ -342,7 +341,7 @@ export default {
       )))}
       <Hand pose="point" x={58} y={118} rotate={-8} scale={0.8} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
       {/* Shielding hand, held flat over the keys from the right */}
-      <Hand pose="open" x={112} y={74} rotate={-78} scale={0.86} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} mirror />
+      <Hand pose="open" x={108} y={56} rotate={-90} scale={0.8} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
     </g>
   ),
 
@@ -365,65 +364,58 @@ export default {
     </g>
   ),
 
-  // "de oplichter": the scammer — a hooded figure with a phone that has a fishing hook on
-  // it, fishing for your bank card
+  // "de oplichter": the scammer — an anonymous hooded figure, face in shadow, with a phone on a
+  // fishing line: he is fishing for your bank card
   'w.oplichter': () => (
     <g>
-      <Person
-        who="bram"
-        x={40}
-        y={120}
-        scale={0.66}
-        expr="neutral"
-        torso={(
-          <>
-            <path d="M18 134C18 104 35 92 60 92C85 92 102 104 102 134Z" fill={PAL.slate} />
-            <path d="M48 96Q60 104 72 96" fill="none" stroke={PAL.slateDark} strokeWidth="3" strokeLinecap="round" />
-            <path d="M52 100V116M68 100V116" stroke={PAL.mist} strokeWidth="2" strokeLinecap="round" />
-          </>
-        )}
-      />
-      {/* Hood over the head, face in shadow */}
-      <g transform="translate(40 120) scale(0.66) translate(-60 -134)">
-        <path d="M22 96C18 56 30 14 60 14C90 14 102 56 98 96Q90 82 86 64Q84 30 60 30Q36 30 34 64Q30 82 22 96Z" fill={PAL.slate} />
-        <path d="M30 58Q38 22 60 22Q82 22 90 58Q78 42 60 42Q42 42 30 58Z" fill={PAL.slateDark} opacity=".65" />
-      </g>
-      {/* Phone with a line and hook to a bank card */}
-      <rect x="62" y="62" width="14" height="24" rx="3" fill={PAL.ink} />
-      <rect x="64" y="65" width="10" height="16" rx="1.5" fill={PAL.ice} />
-      <path d="M72 62Q80 30 94 24V40" fill="none" stroke={PAL.steel} strokeWidth="1.8" strokeLinecap="round" />
-      <BankCard x={80} y={44} w={30} rot={0} />
-      <path d="M94 38V46Q94 52 99 50" fill="none" stroke={PAL.slateDark} strokeWidth="3" strokeLinecap="round" />
-      <ExclaimMark x={106} y={84} size={22} />
+      {/* Hooded figure */}
+      <path d="M8 118C8 92 22 80 40 80C58 80 72 92 72 118Z" fill={PAL.slate} />
+      <path d="M58 86C66 92 72 102 72 118H60C62 104 61 94 58 86Z" fill={PAL.slateDark} opacity=".6" />
+      <path d="M33 86L40 98L47 86" fill="none" stroke={PAL.slateDark} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M36 96V108M44 96V108" stroke={PAL.mist} strokeWidth="2" strokeLinecap="round" />
+      <path d="M12 86C10 52 22 26 40 26C58 26 70 52 68 86Q54 92 40 92Q26 92 12 86Z" fill={PAL.slate} />
+      <ellipse cx="40" cy="62" rx="17" ry="21" fill={PAL.slateDark} />
+      <path d="M26 72Q40 86 54 72Q52 84 40 84Q28 84 26 72Z" fill={SKIN.henk[1]} opacity=".7" />
+      <Shine d="M18 60Q19 40 32 31" width={3} opacity={0.3} />
+      {/* Phone in his hand, with a fishing line and hook */}
+      <circle cx="66" cy="96" r="7" fill={SKIN.henk[0]} />
+      <rect x="62" y="70" width="14" height="24" rx="3" fill={PAL.ink} />
+      <rect x="64" y="73" width="10" height="16" rx="1.5" fill={PAL.ice} />
+      <path d="M70 70Q78 30 96 22V44" fill="none" stroke={PAL.line} strokeWidth="1.8" strokeLinecap="round" />
+      <BankCard x={80} y={50} w={30} />
+      <path d="M96 42V52Q96 58 101 56" fill="none" stroke={PAL.slateDark} strokeWidth="3" strokeLinecap="round" />
+      <ExclaimMark x={100} y={92} size={24} />
     </g>
   ),
 
-  // "aankleden": helping someone get dressed — a carer's hand holds out a cardigan sleeve
-  // while Henk puts his arm in
+  // "aankleden": helping someone get dressed — a carer holds out the other half of the
+  // cardigan, Henk already has one sleeve on; the arrow shows it going over his shoulder
   'w.aankleden': () => (
     <g>
       <Person
         who="henk"
-        x={48}
-        y={118}
+        x={44}
+        y={120}
         scale={0.7}
         expr="pleased"
         torso={(
           <>
             <path d="M18 134C18 104 35 92 60 92C85 92 102 104 102 134Z" fill={PAL.paper} />
+            <path d="M86 102C95 108 102 118 102 134H86Z" fill={PAL.paperShade} />
             {/* Cardigan on his right side (viewer's left), and its collar */}
             <path d="M18 134C18 104 35 92 54 92L58 134Z" fill={PAL.purple} />
             <path d="M54 92L60 112L56 134" fill="none" stroke={PAL.purpleShade} strokeWidth="5" strokeLinecap="round" />
-            <circle cx="52" cy="112" r="3" fill={PAL.purpleLight} />
-            <circle cx="52" cy="124" r="3" fill={PAL.purpleLight} />
+            <circle cx="50" cy="112" r="3.2" fill={PAL.purpleLight} />
+            <circle cx="50" cy="125" r="3.2" fill={PAL.purpleLight} />
           </>
         )}
       />
-      {/* The other half of the cardigan, held open by the carer */}
-      <path d="M78 74Q96 76 100 96L104 114H80Q78 96 70 86Z" fill={PAL.purple} />
-      <path d="M78 74Q96 76 100 96L104 114H96Q92 92 78 74Z" fill={PAL.purpleShade} opacity=".7" />
-      <Hand pose="hold" x={104} y={74} rotate={-30} scale={0.5} skin={SKIN.amina} sleeve={[PAL.sky, PAL.skyShade]} mirror />
-      <CurveArrow from={[100, 40]} to={[74, 66]} bend={12} color={PAL.sky} width={6} head={10} />
+      {/* The other half of the cardigan, held open by the carer: front panel and hanging sleeve */}
+      <path d="M92 62L106 66L110 112H96Z" fill={PAL.purpleShade} />
+      <path d="M70 70Q80 60 94 62L100 112H74Q74 92 70 70Z" fill={PAL.purple} />
+      <path d="M72 72Q80 64 92 64" fill="none" stroke={PAL.purpleShade} strokeWidth="4" strokeLinecap="round" />
+      <Hand pose="hold" x={110} y={86} rotate={-14} scale={0.6} skin={SKIN.amina} sleeve={[PAL.sky, PAL.skyShade]} mirror />
+      <CurveArrow from={[94, 44]} to={[64, 62]} bend={14} color={PAL.sky} width={6} head={10} />
     </g>
   ),
 

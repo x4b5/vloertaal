@@ -1,7 +1,7 @@
 import type { JSX, ReactNode } from 'react';
 import { CastHead } from '../components/Characters';
 import type { CharacterId } from '../components/Characters';
-import { Bubble, Bust, Calendar, Clock, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick, Arrow } from './kit';
+import { Arrow, Bubble, Bust, Calendar, Clock, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Tick } from './kit';
 
 /** Word pictures, group 10 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
@@ -298,7 +298,7 @@ export default {
     <g>
       <Bust who="amina" x={30} y={98} scale={0.52} expr="pleased" />
       <Bust who="henk" x={90} y={98} scale={0.52} expr="neutral" flip />
-      <CvSheet x={68} y={62} w={26} h={30} who="amina" rot={-8} id="g10-gesprek-cv" />
+      <CvSheet x={64} y={56} w={30} h={36} who="amina" rot={-8} id="g10-gesprek-cv" />
       <Table x0={6} x1={114} y={86} />
     </g>
   ),
@@ -387,10 +387,10 @@ export default {
   // "solliciteren": to apply — Amina's hand hands over her CV, Henk's hand reaches for it.
   'w.solliciteren': () => (
     <g>
-      <CvSheet x={30} y={22} w={42} h={54} who="amina" rot={-6} id="g10-sol-cv" />
-      <Hand pose="hold" x={36} y={110} rotate={18} scale={0.72} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
-      <Hand pose="open" x={98} y={112} rotate={-28} scale={0.7} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
-      <CurveArrow from={[66, 12]} to={[104, 30]} bend={10} color={PAL.sky} width={6} head={11} />
+      <CvSheet x={20} y={36} w={44} h={58} who="amina" rot={-8} id="g10-sol-cv" />
+      <Hand pose="hold" x={34} y={118} rotate={14} scale={0.66} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <Hand pose="open" x={100} y={116} rotate={-34} scale={0.66} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
+      <CurveArrow from={[64, 26]} to={[100, 52]} bend={14} color={PAL.sky} width={6} head={11} />
     </g>
   ),
 
@@ -443,13 +443,14 @@ export default {
   // "de oproepkracht": the on-call worker — Bram gets a call: come to work (the day on the calendar).
   'w.oproepkracht': () => (
     <g>
-      <Bust who="bram" x={42} y={122} scale={0.66} expr="pleased" />
-      <g transform="rotate(14 70 70)">
-        <Phone x={60} y={50} w={16} h={30} />
+      <Bust who="bram" x={36} y={122} scale={0.64} expr="pleased" />
+      <g transform="rotate(14 62 72)">
+        <Phone x={54} y={54} w={16} h={30} />
       </g>
-      <Hand pose="hold" x={72} y={110} rotate={-8} scale={0.52} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
-      <Motion x={74} y={50} dir={-45} spread={70} n={3} len={7} gap={8} color={PAL.sky} width={3.4} />
-      <Calendar x={80} y={58} w={30} h={34} mark={5} />
+      <Hand pose="hold" x={64} y={112} rotate={-8} scale={0.5} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
+      <Bubble x={60} y={6} w={52} h={54} tail="left">
+        <Calendar x={70} y={17} w={32} h={38} mark={6} />
+      </Bubble>
     </g>
   ),
 
@@ -714,4 +715,3 @@ export default {
   ),
 } as Record<string, () => JSX.Element>;
 
-void Sparkle;

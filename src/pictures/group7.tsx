@@ -300,7 +300,7 @@ export default {
     <g>
       <path d="M60 4V16" stroke={PAL.slate} strokeWidth="3" />
       {/* Slings */}
-      <path d="M53 52L22 72M53 52L98 72" stroke={PAL.orange} strokeWidth="5" strokeLinecap="round" />
+      <path d="M50 52L22 72M50 52L98 72" stroke={PAL.orange} strokeWidth="5" strokeLinecap="round" />
       <Hook x={60} y={14} s={1} />
       {/* Crate */}
       <Shade color={PAL.cardDark} opacity={0.8} at={[106, 90, 12, 30]}>
@@ -311,7 +311,6 @@ export default {
       <rect x="16" y="70" width="8" height="36" rx="2" fill={PAL.cardDark} />
       <rect x="96" y="70" width="8" height="36" rx="2" fill={PAL.cardDark} />
       <rect x="16" y="70" width="88" height="6" rx="2" fill={PAL.cardDark} />
-      <Motion x={60} y={108} dir={90} spread={60} n={3} len={4} gap={1} color={PAL.line} width={3} />
     </g>
   ),
 
@@ -324,7 +323,7 @@ export default {
     return (
       <g>
         <Ground cx={58} cy={106} rx={30} ry={4} />
-        <Motion x={78} y={18} dir={-60} spread={50} n={3} len={9} gap={0} color={PAL.line} width={3.4} />
+        <path d="M44 12V22M58 8V20M72 10V22" stroke={PAL.line} strokeWidth="3.4" strokeLinecap="round" opacity=".75" />
         {/* Legs (kicked up to the right) */}
         <Capsule a={[70, 66]} b={[90, 50]} w={11} fill={leg} />
         <Capsule a={[90, 50]} b={[100, 32]} w={11} fill={leg} />
@@ -342,11 +341,11 @@ export default {
           <rect x="46" y="56" width="36" height="5" fill="#ffe066" />
         </g>
         {/* Head */}
-        <Head who="bram" x={44} y={58} s={0.38} rot={-58} expr="disappointed" />
+        <Head who="bram" x={47} y={58} s={0.5} rot={-50} expr="disappointed" />
         {/* Near arm, flung out */}
-        <Capsule a={[46, 66]} b={[28, 56]} w={10} fill={PAL.blue} />
-        <Capsule a={[28, 56]} b={[16, 40]} w={10} fill={PAL.blue} />
-        <circle cx="14" cy="37" r="5.5" fill={sk[0]} />
+        <Capsule a={[52, 72]} b={[34, 80]} w={10} fill={PAL.blue} />
+        <Capsule a={[34, 80]} b={[20, 70]} w={10} fill={PAL.blue} />
+        <circle cx="17" cy="67" r="5.5" fill={sk[0]} />
       </g>
     );
   },
