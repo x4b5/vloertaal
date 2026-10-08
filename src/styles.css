@@ -176,6 +176,13 @@ h2 { font-size: 1.25rem; }
 }
 /* Ethiopic, Arabic and Persian script read small next to Latin at the same size: 10% bigger. */
 .bi-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { --help-k: 1.1; }
+/* With a help language the pair is swapped: the learner's language is the main (large) line,
+   the English is the small line under it. */
+.bi-swap > .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.08em; }
+.bi-swap > .bi-en bdi { unicode-bidi: isolate; }
+.bi-swap > .bi-help { --help-min: 13px; }
+/* Right-to-left main line: the small English line lines up under it on the right. */
+.bi-swap:has(> .bi-en[dir='rtl']) > .bi-help { text-align: right; }
 
 /* Buttons: flat, ink-bordered, printed. The main lesson buttons carry a square block at
    the end (a check before answering, an arrow after). */

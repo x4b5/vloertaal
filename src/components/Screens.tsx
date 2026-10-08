@@ -211,13 +211,14 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
             <div className="unit-head" onClick={allowed ? undefined : onUpgrade}>
               <span className="unit-num" aria-hidden>{unitNumber(u)}</span>
               <div className="unit-titles">
+                {/* Two lines: the help language large with the English small under it, or the
+                    English large with the Dutch name under it when there is no help language. */}
                 <h2>
                   <span className="sr-only">Unit {u + 1}: </span>
-                  {gloss(unit.id, unit.title, lang).en}
+                  {lang?.gloss[unit.id] ? <HelpText text={lang.gloss[unit.id]} lang={lang} className="unit-main" /> : unit.title}
                 </h2>
-                {/* Two lines, not three: the help language when there is one, else the Dutch name. */}
                 {lang?.gloss[unit.id] ? (
-                  <HelpText text={lang.gloss[unit.id]} lang={lang} />
+                  <span className="unit-nl" lang="en">{unit.title}</span>
                 ) : (
                   <span className="unit-nl" lang="nl">{unit.titleNl}</span>
                 )}
