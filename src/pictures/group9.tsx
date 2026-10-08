@@ -113,23 +113,24 @@ function Coin({ cx, cy, r = 8 }: { cx: number; cy: number; r?: number }) {
   );
 }
 
-/** A frying pan, pan centred on (cx, cy), handle to the right. */
-function FryingPan({ cx = 52, cy = 66, rx = 36, handle = true }: { cx?: number; cy?: number; rx?: number; handle?: boolean }) {
+/** A frying pan, pan centred on (cx, cy), handle to the right: steel outside, dark non-stick inside, wooden grip. */
+function FryingPan({ cx = 52, cy = 66, rx = 36 }: { cx?: number; cy?: number; rx?: number }) {
   const ry = rx * 0.5;
+  const wall = rx * 0.22;
   return (
     <g>
-      {handle && (
-        <g>
-          <path d={`M${cx + rx - 4} ${cy}L${cx + rx + 30} ${cy - 10}`} stroke={PAL.slateDark} strokeWidth={rx * 0.26} strokeLinecap="round" />
-          <path d={`M${cx + rx + 6} ${cy - 3.4}L${cx + rx + 30} ${cy - 10}`} stroke={PAL.ink} strokeWidth={rx * 0.3} strokeLinecap="round" />
-        </g>
-      )}
-      {/* Body: outer wall and the dark cooking surface */}
-      <path d={`M${cx - rx} ${cy}A${rx} ${ry} 0 0 0 ${cx + rx} ${cy}V${cy + rx * 0.2}A${rx} ${ry} 0 0 1 ${cx - rx} ${cy + rx * 0.2}Z`} fill={PAL.slateDark} />
-      <ellipse cx={cx} cy={cy + rx * 0.18} rx={rx * 0.96} ry={ry * 0.95} fill={PAL.slateDark} />
-      <ellipse cx={cx} cy={cy} rx={rx} ry={ry} fill={PAL.steel} />
+      <path d={`M${cx + rx - 4} ${cy + 2}L${cx + rx + 12} ${cy - 3}`} stroke={PAL.steel} strokeWidth={rx * 0.16} strokeLinecap="round" />
+      <path d={`M${cx + rx + 10} ${cy - 2.6}L${cx + rx + 32} ${cy - 10}`} stroke={PAL.cardDark} strokeWidth={rx * 0.28} strokeLinecap="round" />
+      <path d={`M${cx + rx + 13} ${cy - 6}L${cx + rx + 29} ${cy - 11.4}`} stroke={PAL.card} strokeWidth={rx * 0.08} strokeLinecap="round" />
+      {/* Outer wall (steel) */}
+      <path d={`M${cx - rx} ${cy}A${rx} ${ry} 0 0 0 ${cx + rx} ${cy}V${cy + wall}A${rx} ${ry} 0 0 1 ${cx - rx} ${cy + wall}Z`} fill={PAL.steel} />
+      <Shade color={PAL.slate} opacity={0.5} at={[cx + rx, cy + wall, rx * 0.4, ry]}>
+        <ellipse cx={cx} cy={cy + wall} rx={rx * 0.97} ry={ry * 0.95} fill={PAL.steel} />
+      </Shade>
+      {/* Rim and cooking surface */}
+      <ellipse cx={cx} cy={cy} rx={rx} ry={ry} fill={PAL.mist} />
       <ellipse cx={cx} cy={cy + 1.5} rx={rx * 0.86} ry={ry * 0.8} fill={PAL.slate} />
-      <Shine d={`M${cx - rx * 0.6} ${cy - ry * 0.25}Q${cx - rx * 0.4} ${cy - ry * 0.6} ${cx - rx * 0.05} ${cy - ry * 0.65}`} width={3} opacity={0.35} />
+      <Shine d={`M${cx - rx * 0.6} ${cy - ry * 0.15}Q${cx - rx * 0.4} ${cy - ry * 0.55} ${cx - rx * 0.05} ${cy - ry * 0.6}`} width={3} opacity={0.35} />
     </g>
   );
 }
@@ -683,8 +684,8 @@ export default {
   // "de pan": the frying pan
   'w.pan': () => (
     <g>
-      <Ground cx={56} cy={92} rx={40} ry={6} />
-      <FryingPan cx={48} cy={64} rx={38} />
+      <Ground cx={48} cy={90} rx={42} ry={6} />
+      <FryingPan cx={45} cy={62} rx={39} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;

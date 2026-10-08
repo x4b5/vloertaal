@@ -238,7 +238,7 @@ export default {
         <CallButton cx={43} cy={58} r={14} />
         <path d="M32 34H54M32 82H54" stroke={PAL.mist} strokeWidth="3" strokeLinecap="round" />
       </Phone>
-      <CurveArrow from={[72, 28]} to={[72, 86]} bend={36} color={PAL.sky} width={8} head={14} />
+      <CurveArrow from={[70, 26]} to={[70, 82]} bend={36} color={PAL.sky} width={8} head={14} />
     </g>
   ),
 
@@ -786,7 +786,7 @@ export default {
           i === 5 ? <circle cx={cx} cy={cy} r={r} fill="none" stroke={PAL.line} strokeWidth="3" /> : i === 6 ? <circle cx={cx} cy={cy} r={r} fill={PAL.sky} /> : null
         }
       />
-      <CurveArrow from={[49, 60]} to={[72, 62]} bend={20} color={PAL.orange} width={6} head={10} />
+      <CurveArrow from={[47, 58]} to={[74, 58]} bend={18} color={PAL.orange} width={7} head={12} />
     </g>
   ),
 
