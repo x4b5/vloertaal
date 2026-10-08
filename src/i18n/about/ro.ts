@@ -14,7 +14,7 @@ const t: CultureTranslation = {
     'a.who': 'Pentru cine este?',
     'a.who.b': 'Pentru toți cei care sunt noi la muncă în Țările de Jos. Limbi de ajutor: arabă, tigrină, persană, dari, ucraineană, turcă, poloneză, română și bulgară.',
     'a.free': 'Gratuit și privat',
-    'a.free.b': 'Vloertaal este gratuit și nu ai nevoie de cont. Progresul tău se salvează doar pe acest telefon sau calculator. Nu urmărim ce faci.',
+    'a.free.b': 'Vloertaal este gratuit și nu ai nevoie de cont. Progresul tău se salvează doar pe acest telefon sau calculator. Dacă este pornită, aplicația numără anonim cât de des se fac lecțiile: fără cont, fără nume, fără urmărire. O poți opri în „Setări”.',
     'a.voices': 'Vocile',
     'a.voices.b': 'Fiecare personaj are propria voce olandeză: Bram vorbește cu vocea lui Thijmen, Henk cu a lui Daniel, Amina cu a lui Ariël, iar Jada cu a lui Noa. Aceste voci au fost înregistrate cu ElevenLabs. Dacă o propoziție nu are încă o înregistrare, auzi Piper (un program de voce gratuit și open-source) sau vocea telefonului ori calculatorului tău.',
   },

@@ -16,8 +16,8 @@ describe('run of right answers in a lesson', () => {
     expect(nextMisses(2, true)).toBe(0);
   });
 
-  it('reacts in tiers: pleased for 1–2, happy for 3–4, a second pump from 5', () => {
-    expect([1, 2, 3, 4, 5, 9].map(cheerFor)).toEqual(['pleased', 'pleased', 'happy', 'happy', 'big', 'big']);
+  it('reacts in tiers: a fist pump for 1–2, a jump for 3–4, a second pump from 5', () => {
+    expect([1, 2, 3, 4, 5, 9].map(cheerFor)).toEqual(['pump', 'pump', 'happy', 'happy', 'big', 'big']);
   });
 
   it('stamps runs of 3, 5 and 8 only', () => {

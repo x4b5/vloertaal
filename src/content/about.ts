@@ -28,7 +28,7 @@ export const aboutSections: AboutSection[] = [
   },
   {
     id: 'a.free', emoji: '🔒', title: 'Free and private',
-    body: 'Vloertaal is free and you do not need an account. Your progress is saved only on this phone or computer. We do not track what you do.',
+    body: 'Vloertaal is free and you do not need an account. Your progress is saved only on this phone or computer. If it is switched on, the app counts anonymously how often lessons are done: no account, no name, no tracking. You can turn this off in Settings.',
   },
   {
     id: 'a.voices', emoji: '🔊', title: 'The voices',

@@ -20,6 +20,8 @@ export interface Answer {
   correct: boolean;
   /** Accepted, but with a spelling note. */
   almost?: boolean;
+  /** Sentence building: the tiles in the order the learner put them. */
+  given?: string[];
 }
 
 interface Props<K extends Exercise['kind']> {
@@ -39,19 +41,22 @@ interface Props<K extends Exercise['kind']> {
 type Verdict = Props<'meaning'>['verdict'];
 
 /**
- * How a character in an exercise feels about the verdict. A right answer is a pleased nod with
- * a thumb up for a run of 1–2 and a happy jump from 3 (lib/lessonRun.ts); `calm` characters
- * (the colleague in a chat or a situation) only ever nod. The pose holds until Continue, so a
- * still frame reads as "right" or "wrong".
+ * How a character in an exercise feels about the verdict. A right answer is always the cheer
+ * (open-mouthed joy and a fist pump, clearly unlike the resting grin); how big it is grows with
+ * the run (lib/lessonRun.ts, reactClass). `calm` characters (the colleague in a chat or a
+ * situation) only ever nod. The pose holds until Continue, so a still frame reads as "right"
+ * or "wrong".
  */
-function moodFor(verdict: Verdict, rest: Mood = 'idle', calm = false, run = 1): Mood {
-  if (verdict === 'right') return calm || cheerFor(run) === 'pleased' ? 'pleased' : 'happy';
+function moodFor(verdict: Verdict, rest: Mood = 'idle', calm = false): Mood {
+  if (verdict === 'right') return calm ? 'pleased' : 'happy';
   if (verdict === 'wrong') return 'sad';
   return rest;
 }
 
-/** Extra reaction classes: a second fist pump on a run of 5+, no head-scratch after the first miss. */
+/** Extra reaction classes: a run of 1–2 pumps the fist without the jump, 5+ adds a second
+ *  pump; no head-scratch after the first miss. */
 function reactClass(verdict: Verdict, run = 1, misses = 1): string {
+  if (verdict === 'right' && cheerFor(run) === 'pump') return 'ch-small';
   if (verdict === 'right' && cheerFor(run) === 'big') return 'ch-big';
   if (verdict === 'wrong' && misses > 1) return 'ch-calm';
   return '';
@@ -74,7 +79,7 @@ function Speaker({ who, lines, verdict, run, misses, size, quietUntilChecked = f
   const talking = useTalking(quietUntilChecked && !verdict ? [] : lines, !quietUntilChecked);
   return (
     <span className={`speaker-char ${size ? 'speaker-char-sm' : ''}`}>
-      <Character who={who} mood={moodFor(verdict, 'idle', false, run)} talking={talking} size={size} className={reactClass(verdict, run, misses)} />
+      <Character who={who} mood={moodFor(verdict)} talking={talking} size={size} className={reactClass(verdict, run, misses)} />
     </span>
   );
 }
@@ -96,15 +101,11 @@ function PromptWithBram({ text, verdict, run, misses, word, quietUntilChecked }:
   );
 }
 
-/** Rubber stamp on a checked answer: green GOED, or brick-red NOG EENS on a wrong pick.
- *  Decorative: the feedback label below says the same in words. */
-function Stamp({ right }: { right: boolean }) {
-  return right ? (
-    <span className="stamp stamp-right" aria-hidden>
-      <span className="stamp-word">Goed</span>
-      <span className="stamp-sub">✓</span>
-    </span>
-  ) : (
+/** The one rubber stamp in a lesson: brick-red NOG EENS on a wrong pick. A right answer gets no
+ *  stamp (its check, the green label and the green button say it already). Decorative: the
+ *  feedback label below says the same in words. */
+function WrongStamp() {
+  return (
     <span className="stamp stamp-wrong" aria-hidden>
       <span className="stamp-word">Nog<br />eens</span>
     </span>
@@ -145,8 +146,10 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
   );
 }
 
-function ChoiceGrid<T extends { id: string }>({ options, render, correctId, locked, onAnswer, onPick, className, style }: {
+function ChoiceGrid<T extends { id: string }>({ options, render, correctId, locked, onAnswer, onPick, className, style, stamp = true }: {
   options: T[];
+  /** NOG EENS on a wrong pick (not in a situation, where another choice is not "wrong"). */
+  stamp?: boolean;
   className?: string;
   style?: React.CSSProperties;
   render: (w: T) => React.ReactNode;
@@ -180,7 +183,7 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
     return () => window.removeEventListener('keydown', onKey);
   });
   return (
-    <div className={`choices ${className ?? ''}`} style={style}>
+    <div className={`choices ${locked ? 'checked' : ''} ${className ?? ''}`} style={style}>
       {options.map((w, i) => {
         const state = locked
           ? w.id === correctId
@@ -193,11 +196,12 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
             : '';
         // After Check the options stay focusable (aria-disabled, not disabled) and say what
         // they were; the number box shows a check or a cross, so colour is never the only cue.
+        // After a wrong pick the right option is only outlined ("reveal"), never filled like a win.
         return (
           <button
             key={w.id}
             type="button"
-            className={`choice ${state} ${locked && !state ? 'faded' : ''}`}
+            className={`choice ${state} ${state === 'right' && picked !== w.id ? 'reveal' : ''} ${locked && !state ? 'faded' : ''}`}
             aria-pressed={w.id === picked}
             aria-disabled={locked || undefined}
             onClick={() => pick(w)}
@@ -208,8 +212,7 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
             {render(w)}
             {state === 'right' && <span className="sr-only">, {ui('correctAnswer').en}</span>}
             {state === 'wrong' && <span className="sr-only">, {ui('yourAnswer').en}: {ui('incorrect').en}</span>}
-            {state === 'right' && <Stamp right />}
-            {state === 'wrong' && <Stamp right={false} />}
+            {state === 'wrong' && stamp && <WrongStamp />}
           </button>
         );
       })}
@@ -415,7 +418,8 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
 
   const update = (next: number[]) => {
     setChosen(next);
-    onAnswer(next.length ? { correct: checkTiles(next.map((i) => ex.tiles[i]), ex.sentence.nl) } : null);
+    const given = next.map((i) => ex.tiles[i]);
+    onAnswer(next.length ? { correct: checkTiles(given, ex.sentence.nl), given } : null);
   };
 
   return (
@@ -427,14 +431,17 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           <Bi className="bubble-text" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
         </div>
       </div>
+      {/* After Check: a check at the start of a right sentence; a wrong one gets only the
+          NOG EENS stamp (the right sentence is shown as tiles in the label below). */}
       <div className={`answer-line ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite">
-        {verdict && <Stamp right={verdict === 'right'} />}
-        {verdict && (
-          <span className={`answer-mark mark-${verdict}`}>
-            {verdict === 'right' ? <CheckIcon size={24} /> : <CloseIcon size={24} />}
-            <span className="sr-only">{verdict === 'right' ? ui('correctAnswer').en : `${ui('yourAnswer').en}: ${ui('incorrect').en}`}</span>
+        {verdict === 'wrong' && <WrongStamp />}
+        {verdict === 'right' && (
+          <span className="answer-mark mark-right">
+            <CheckIcon size={24} />
+            <span className="sr-only">{ui('correctAnswer').en}</span>
           </span>
         )}
+        {verdict === 'wrong' && <span className="sr-only">{ui('yourAnswer').en}: {ui('incorrect').en}</span>}
         {chosen.map((i) => (
           <button
             key={i}
@@ -550,7 +557,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
           <div className={`chat-bubble chat-bubble-me ${mine}`} aria-live="polite">
             {picked ? <span className="chat-line" lang="nl">{breakable(picked.nl)}</span> : <span className="chat-blank" aria-hidden />}
           </div>
-          <span className="chat-char"><Character who="amina" flip mood={moodFor(verdict, meRest, false, run)} talking={meTalking} className={reactClass(verdict, run, misses)} /></span>
+          <span className="chat-char"><Character who="amina" flip mood={moodFor(verdict, meRest)} talking={meTalking} className={reactClass(verdict, run, misses)} /></span>
         </div>
       </div>
       <ChoiceGrid
@@ -657,6 +664,7 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
         correctId={best.id}
         locked={locked}
         onAnswer={onAnswer}
+        stamp={false}
         render={(o) => <Bi text={gloss(o.id, o.en, lang)} />}
       />
     </div>

@@ -15,15 +15,16 @@ export function nextMisses(misses: number, correct: boolean): number {
 }
 
 /**
- * How a character reacts to a right answer, by the run it extends:
- * 1–2 a pleased nod with a thumb up, 3–4 a happy jump, 5+ the jump plus a second fist pump.
+ * How a character reacts to a right answer, by the run it extends. Every right answer is a
+ * clear cheer (open-mouthed joy, fist up), never just the resting grin: 1–2 a fist pump on the
+ * spot, 3–4 the pump with a jump, 5+ the jump plus a second fist pump.
  */
-export type Cheer = 'pleased' | 'happy' | 'big';
+export type Cheer = 'pump' | 'happy' | 'big';
 
 export function cheerFor(run: number): Cheer {
   if (run >= 5) return 'big';
   if (run >= 3) return 'happy';
-  return 'pleased';
+  return 'pump';
 }
 
 /** Runs that earn the kraft "n OP RIJ" stamp (and the sweep over the progress bar). */

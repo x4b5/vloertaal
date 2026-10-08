@@ -41,6 +41,8 @@ export interface Progress {
   rest?: string[];
   /** The longest day streak so far ("Record"). Missing in older saves = the current streak. */
   bestStreak?: number;
+  /** Certificates: the local date (YYYY-MM-DD) each finished unit was earned, by unit id. Missing in older saves. */
+  certs?: Record<string, string>;
 }
 
 export const emptyProgress: Progress = {
@@ -285,6 +287,9 @@ export function parseBackup(text: string): Partial<Progress> | null {
     }
     out.cards = cards;
   }
+  if (src.certs && typeof src.certs === 'object' && !Array.isArray(src.certs)) {
+    out.certs = Object.fromEntries(Object.entries(src.certs as Record<string, unknown>).filter((e): e is [string, string] => isDay(e[1])));
+  }
   return out;
 }
 
@@ -301,8 +306,12 @@ export function replaceWithBackup(p: Progress, b: Partial<Progress>): Progress {
     freezes: b.freezes,
     rest: b.rest,
     bestStreak: b.bestStreak,
+    certs: b.certs,
   };
 }
+
+/** The earlier of two dates (either may be missing). */
+const earlier = (x?: string, y?: string): string => (!x ? y! : !y ? x : x < y ? x : y);
 
 /** Adds a backup to the progress on this phone: the best of both, nothing is lost. */
 export function mergeBackup(p: Progress, b: Partial<Progress>): Progress {
@@ -331,5 +340,10 @@ export function mergeBackup(p: Progress, b: Partial<Progress>): Progress {
     freezes: Math.max(p.freezes ?? 0, b.freezes ?? 0),
     rest: [...new Set([...(p.rest ?? []), ...(b.rest ?? [])])].sort().slice(-REST_KEEP),
     bestStreak: Math.max(bestStreak(p), b.bestStreak ?? 0, b.streak ?? 0),
+    // A certificate keeps the date it was first earned, on either side.
+    certs: Object.fromEntries(
+      [...new Set([...Object.keys(p.certs ?? {}), ...Object.keys(b.certs ?? {})])]
+        .map((id) => [id, earlier(p.certs?.[id], b.certs?.[id])]),
+    ),
   };
 }

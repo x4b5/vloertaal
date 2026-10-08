@@ -1,13 +1,15 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
-import { fillN, gloss, ui, type Bilingual } from '../i18n';
+import { fillN, gloss, ui, withoutN, type Bilingual } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, sounds, speechAvailable } from '../lib/audio';
+import { tileDiff } from '../lib/answers';
 import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
 import { barParts, chimeStep, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { voiceFor } from '../lib/voices';
 import { castFor } from './Characters';
 import { Bi, HelpText } from './Bi';
+import { FlameIcon } from './StreakArt';
 import {
   AlertIcon, BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
   PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
@@ -114,13 +116,19 @@ function reducedMotion(): boolean {
   return typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 }
 
-/** Kraft rubber stamp on the feedback label at a run of 3, 5 or 8: "3 OP RIJ" + the help language. */
-function RunStamp({ n, lang }: { n: number; lang?: HelpLanguage }) {
-  const gloss = fillN(ui('inARow', lang), n);
+/**
+ * A run of 3, 5 or 8: a taped label that drops onto the progress bar for 1.5 s, a lit flame, the
+ * big number and "in a row" in the help language (English without one). It lives in the lesson
+ * header, so it is in view whatever the exercise below does.
+ */
+function RunLabel({ n, lang }: { n: number; lang?: HelpLanguage }) {
+  const text = withoutN(ui('inARow', lang));
   return (
-    <span className="run-stamp" aria-hidden>
-      <span className="run-stamp-nl" lang="nl"><b>{n}</b> op rij</span>
-      {gloss.help && lang ? <HelpText className="run-stamp-help" text={gloss.help} lang={lang} /> : <span className="run-stamp-help" lang="en">{gloss.en}</span>}
+    <span className="run-label" aria-hidden>
+      <span className="run-label-tape" />
+      <FlameIcon lit size={26} />
+      <b className="run-label-n">{n}</b>
+      {text.help && lang ? <HelpText className="run-label-text" text={text.help} lang={lang} /> : <span className="run-label-text" lang="en">{text.en}</span>}
     </span>
   );
 }
@@ -170,9 +178,15 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const [misses, setMisses] = useState(0);
   /** The main button turns into the outcome-coloured Continue 120 ms after Check. */
   const [swapped, setSwapped] = useState(false);
-  /** "3 OP RIJ" (runs of 3, 5, 8), shown 300 ms after Check; `sweep` replays the bar highlight. */
-  const [runStamp, setRunStamp] = useState<number | null>(null);
+  /** The run label (runs of 3, 5, 8), shown 300 ms after Check for 1.5 s, also past Continue;
+   *  `sweep` replays the bar highlight and keys the label. */
+  const [runLabel, setRunLabel] = useState<number | null>(null);
   const [sweep, setSweep] = useState(0);
+  useEffect(() => {
+    if (!runLabel) return;
+    const t = window.setTimeout(() => setRunLabel(null), 1500);
+    return () => window.clearTimeout(t);
+  }, [runLabel, sweep]);
   /** Screen-reader announcement, filled one tick after Check (the region itself is always there). */
   const [live, setLive] = useState('');
   /** The Check choreography's timers; cleared on Continue and when the lesson closes. */
@@ -278,8 +292,10 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       if (!foot || !marked.length) return;
       const bottom = Math.max(...[...marked].map((el) => el.getBoundingClientRect().bottom));
       const top = Math.min(...[...marked].map((el) => el.getBoundingClientRect().top));
+      // The header (close, sound, progress bar) is sticky: nothing may slide under it.
+      const head = document.querySelector('.player-top')?.getBoundingClientRect().bottom ?? 0;
       const limit = foot.getBoundingClientRect().top - 12;
-      if (bottom > limit) window.scrollBy({ top: Math.min(bottom - limit, Math.max(0, top - 8)), behavior: reducedMotion() ? 'auto' : 'smooth' });
+      if (bottom > limit) window.scrollBy({ top: Math.min(bottom - limit, Math.max(0, top - head - 8)), behavior: reducedMotion() ? 'auto' : 'smooth' });
     });
     return () => cancelAnimationFrame(raf);
   }, [checked]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -325,7 +341,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     if (answer.correct) {
       sounds.correct(chimeStep(newRun));
       const stamp = runStampFor(newRun);
-      if (stamp) later(300, () => { setRunStamp(stamp); setSweep((k) => k + 1); });
+      if (stamp) later(300, () => { setRunLabel(stamp); setSweep((k) => k + 1); });
     } else {
       sounds.wrong();
       // A mistake comes back once at the end of the lesson; no endless loops.
@@ -381,7 +397,6 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     setAnswer(null);
     setChecked(false);
     setSwapped(false);
-    setRunStamp(null);
     setLive('');
   }
 
@@ -448,7 +463,25 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     ? ui(answer.correct ? (answer.almost ? 'almost' : ex.kind === 'situation' ? 'goodChoice' : 'correct') : ex.kind === 'situation' ? 'otherChoice' : 'incorrect', lang)
     : null;
   const pairHelp = pair?.meaning.help ?? '';
-  const pairLine = pair && (
+  // A wrong sentence: the right one as tiles, the words that were out of place or missing
+  // underlined in red (a position diff of the tiles laid against the solution).
+  const diff = feedback && !answer.correct && ex.kind === 'build' && answer.given ? tileDiff(answer.given, ex.sentence.nl) : null;
+  const pairLine = pair && diff ? (
+    <div className="feedback-pair">
+      <span className="pair-tiles" lang="nl" dir="ltr">
+        {diff.map((t, i) => (
+          <span key={i} className={`ftile ${t.ok ? '' : 'ftile-miss'}`}>
+            {t.word}
+            {!t.ok && <span className="sr-only"> ({ui('incorrect').en})</span>}
+          </span>
+        ))}
+      </span>
+      <span className="pair-main">
+        <span className="bi-en" lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
+      </span>
+      {pairHelp && lang && <HelpText text={pairHelp} lang={lang} />}
+    </div>
+  ) : pair && (
     <div className="feedback-pair">
       <span className="pair-main">
         {pair.nl && (
@@ -509,8 +542,11 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
               <span className="lbar-now" style={{ width: `${100 / bar.slots}%`, transform: `translateX(${(rtl ? -1 : 1) * bar.now * 100}%)` }} />
             )}
             <span className="lbar-fill" style={{ transform: `scaleX(${bar.done})` }} />
+            {/* A thin notch between exercises, so the steps can be counted (up to ~20 read fine). */}
+            <span className="lbar-ticks" style={{ '--n': bar.slots } as React.CSSProperties} />
             {sweep > 0 && <span key={sweep} className="lbar-sweep" />}
           </div>
+          {runLabel && <RunLabel key={sweep} n={runLabel} lang={lang} />}
         </div>
         <span className="lesson-name">
           <Bi text={gloss(lesson.id, lesson.title, lang)} />
@@ -559,7 +595,6 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
           {feedback && outcome && (
             <div className={`feedback feedback-${outcome}`}>
               <span className="feedback-tape" aria-hidden />
-              {runStamp && <RunStamp n={runStamp} lang={lang} />}
               <span className="feedback-icon" aria-hidden>
                 {outcome === 'right' ? <CheckIcon size={26} /> : outcome === 'wrong' ? <CloseIcon size={26} /> : <ChevronIcon size={26} />}
               </span>
@@ -599,6 +634,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
               key={key}
               type="button"
               className={`btn btn-go ${checked && swapped && outcome ? `btn-${outcome} btn-swap` : 'btn-primary'}`}
+              dir={rtl ? 'rtl' : undefined}
               disabled={!answer}
               onClick={checked ? next : check}
               ref={goRef}

@@ -655,9 +655,10 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
 }) {
   const look = LOOKS[who];
   const face = FACES[who];
-  // The jump shows its face first; talking waits until it has landed (~560 ms), so the spoken
-  // answer after Check (at 700 ms, see LessonPlayer) moves the mouth instead of freezing it.
-  const reacting = useOneShot(mood === 'happy', 560);
+  // The cheer shows its open-mouthed joy first and holds it for 760 ms (past the landing of the
+  // jump); only then may the mouth talk, so the cheer is never swallowed by the spoken answer
+  // that starts at 700 ms (see LessonPlayer).
+  const reacting = useOneShot(mood === 'happy', 760);
   const talking = (!!talkingProp || mood === 'talking') && !reacting;
   const frame = useTalkFrame(talking);
   const expr = exprFor(mood);

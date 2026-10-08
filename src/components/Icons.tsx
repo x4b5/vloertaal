@@ -32,8 +32,9 @@ export const BackIcon = (p: IconProps) => (
   <Svg {...p}><path d="M15 5l-7 7 7 7" {...stroke} /></Svg>
 );
 
+/** Points forward: mirrored in right-to-left text (styles.css, .icon-fwd), or with `icon-flip`. */
 export const ChevronIcon = (p: IconProps) => (
-  <Svg {...p}><path d="M9 5l7 7-7 7" {...stroke} /></Svg>
+  <Svg {...p} className={`icon-fwd ${p.className ?? ''}`}><path d="M9 5l7 7-7 7" {...stroke} /></Svg>
 );
 
 export const CheckIcon = (p: IconProps) => (

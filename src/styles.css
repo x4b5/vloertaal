@@ -484,13 +484,26 @@ h2 { font-size: 1.25rem; }
 #root:has(.player) { max-width: none; }
 .player { display: flex; flex-direction: column; min-height: 100dvh; overflow-x: clip; }
 .player-rtl { --fwd: -1; }
+/* The header stays put while the exercise scrolls under it (a long question, the feedback
+   label opening at 390×844): close, sound, progress and the run label are always in view. */
 .player-top {
+  position: sticky; top: 0; z-index: 3;
   display: flex; align-items: center; gap: 10px;
   width: 100%; max-width: 1080px; margin: 0 auto;
   /* Below the notch / status bar. */
-  padding: calc(18px + env(safe-area-inset-top)) 16px 0;
+  padding: calc(18px + env(safe-area-inset-top)) 16px 6px;
+  background: var(--bg);
 }
 .player-top .icon-btn { margin-inline-start: -8px; }
+/* Once the exercise scrolls under the header, a soft shadow on its bottom edge says so. */
+.player-top::after {
+  content: ''; position: absolute; inset: 100% 0 auto; height: 14px; pointer-events: none; opacity: 0;
+  background: linear-gradient(to bottom, rgba(30, 34, 38, 0.14), rgba(30, 34, 38, 0));
+}
+@supports (animation-timeline: scroll()) {
+  .player-top::after { animation: head-shade linear both; animation-timeline: scroll(root); animation-range: 0 24px; }
+  @keyframes head-shade { to { opacity: 1; } }
+}
 /* Generic bar (admin page). */
 .bar { flex: 1; height: 14px; background: var(--track); border-radius: 4px; overflow: hidden; }
 .bar-fill { height: 100%; background: var(--ink); border-radius: 4px; transition: width 0.4s ease; }
@@ -506,6 +519,14 @@ h2 { font-size: 1.25rem; }
 .lbar-tail { right: 0; background: color-mix(in srgb, var(--kraft) 70%, var(--track)); }
 .lbar-now { left: 0; background: var(--yellow); box-shadow: inset 0 0 0 1.5px #1e2226; transition: transform 0.32s var(--ease-out); }
 .lbar-fill { left: 0; width: 100%; background: var(--ink); transform-origin: left center; transition: transform 0.32s var(--ease-out); }
+/* Countable steps: a 2 px notch in the floor colour at the end of every exercise's slot, over
+   the fill, so "how many left" can be seen without reading a number (still clear at ~20). */
+.lbar-ticks {
+  inset-inline: 0;
+  background-image: linear-gradient(to right, transparent calc(100% - 2px), var(--bg) calc(100% - 2px));
+  background-size: calc(100% / var(--n, 10)) 100%;
+}
+.player-rtl .lbar-ticks { background-image: linear-gradient(to left, transparent calc(100% - 2px), var(--bg) calc(100% - 2px)); background-position: right; }
 .player-rtl .lbar-tail { right: auto; left: 0; }
 .player-rtl .lbar-now { left: auto; right: 0; }
 .player-rtl .lbar-fill { transform-origin: right center; }
@@ -624,18 +645,29 @@ h2 { font-size: 1.25rem; }
 .feedback-kicker .bi-help { --help-size: 1em; }
 .feedback-kicker .bi-sep { display: inline; }
 .feedback-rule { height: 0; margin: 8px 0 8px; border: 0; border-top: 2px dashed color-mix(in srgb, var(--ink-3) 45%, transparent); }
-/* "3 OP RIJ": a kraft rubber stamp on the label's corner, 300 ms after Check, at runs of 3, 5, 8. */
-.run-stamp {
-  position: absolute; z-index: 1; top: -22px; inset-inline-end: 12px;
-  display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 10px 5px;
-  border: 2.5px solid currentColor; border-radius: 6px; box-shadow: inset 0 0 0 2px var(--card), inset 0 0 0 3.5px currentColor;
-  color: var(--kraft-dark); background: color-mix(in srgb, var(--kraft-light) 80%, var(--card));
-  rotate: 5deg; pointer-events: none;
-  animation: stamp-in 0.18s var(--ease-pop) both;
+/* A run of 3, 5 or 8: a taped paper label drops onto the progress bar, 300 ms after Check, for
+   1.5 s (also past Continue): a lit flame, the big number and "in a row" in the help language. */
+.run-label {
+  position: absolute; z-index: 4; top: 50%; left: 50%; translate: -50% -14px;
+  display: flex; align-items: center; gap: 6px; max-width: calc(100% + 40px); padding: 3px 12px 3px 8px;
+  background: var(--card); color: var(--ink); border: 2.5px solid var(--edge); border-radius: 4px;
+  box-shadow: 4px 4px 0 var(--label-shadow); white-space: nowrap; pointer-events: none;
+  animation: run-label 1.5s var(--ease-out) both;
 }
-.run-stamp-nl { font-family: var(--stencil); font-weight: 800; font-size: 1.15rem; line-height: 1; text-transform: uppercase; letter-spacing: 0.03em; }
-.run-stamp-nl b { font-size: 1.35rem; }
-.run-stamp-help { font-size: 0.8rem; font-weight: 600; line-height: 1.15; }
+.run-label-tape {
+  position: absolute; top: -9px; left: 50%; width: 46px; height: 13px; margin-left: -23px;
+  background: var(--tape); rotate: -3deg;
+}
+.run-label .flame-icon { flex: none; }
+.run-label-n { font-family: var(--stencil); font-weight: 800; font-size: 2rem; line-height: 1; letter-spacing: -0.01em; }
+.run-label-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; font-size: 1.02rem; font-weight: 650; line-height: 1.2; }
+@keyframes run-label {
+  0% { transform: translateY(-18px) rotate(-8deg) scale(0.7); opacity: 0; }
+  14% { transform: translateY(2px) rotate(3deg) scale(1.06); opacity: 1; }
+  24%, 84% { transform: rotate(-2deg); opacity: 1; }
+  100% { transform: translateY(-10px) rotate(-2deg); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .run-label { rotate: -2deg; } }
 /* "het hesje = the safety vest", with the help language underneath. */
 .feedback-pair { display: flex; flex-direction: column; gap: 2px; }
 .pair-main { font-size: 1.15rem; font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
@@ -744,9 +776,13 @@ h2 { font-size: 1.25rem; }
 .choice.wrong { border-color: var(--red); background: var(--red-bg); }
 .choice.right .choice-num { border-color: var(--green); background: var(--green); color: var(--on-green); }
 .choice.wrong .choice-num { border-color: var(--red); background: var(--red); color: var(--on-green); }
+/* After a wrong pick the right option is outlined and checked, but not filled like a win. */
+.choice.right.reveal { background: var(--card); }
+/* The options not picked step back: no fill, a faint border, --muted text (4.5:1 or more), and
+   the picture and the number box at 45%. */
 .choice.faded { border-color: color-mix(in srgb, var(--line) 70%, transparent); background: transparent; color: var(--muted); }
 .choice.faded .choice-num { background: transparent; border: 2px dashed var(--line); color: var(--muted); }
-.choice.faded .pic-emoji { opacity: 0.55; }
+.choice.faded :is(.choice-num, .pic-emoji, .choice-pic) { opacity: 0.45; }
 .choice-emoji { font-size: 1.8rem; }
 .choices-rows .choice { min-height: 68px; padding: 8px 16px 8px 16px; }
 .choice > .bi { flex: 1 1 auto; }
@@ -757,8 +793,7 @@ h2 { font-size: 1.25rem; }
 .choices-words .choice-nl { font-size: 1.35rem; font-weight: 650; }
 /* Room for the stamp on a checked row, so it never covers the words: a smaller stamp that sits
    inside the card (never clipped), and the text stops short of it. */
-.choices:not(.choices-pics) .stamp { width: 64px; height: 64px; margin-top: -32px; right: 8px; }
-.choices:not(.choices-pics) .stamp-word { font-size: 1.3rem; }
+.choices:not(.choices-pics) .stamp { width: 62px; height: 62px; margin-top: -31px; right: 8px; }
 .choices:not(.choices-pics) .stamp-wrong .stamp-word { font-size: 1rem; }
 .choices:not(.choices-pics) .choice:has(> .stamp) { padding-right: 80px; }
 
@@ -808,15 +843,23 @@ h2 { font-size: 1.25rem; }
 .choices-pics .choice-nl.len-m { font-size: 1rem; }
 .choices-pics .choice-nl.len-l { font-size: 0.85rem; }
 .choices-pics .choice-num { grid-area: num; width: 34px; height: 34px; font-size: 1.2rem; }
-.choices-pics .stamp { top: 6px; right: 6px; margin-top: 0; width: 66px; height: 66px; }
-.choices-pics .stamp-word { font-size: 1.3rem; }
-.choices-pics .stamp-wrong .stamp-word { font-size: 1rem; }
+/* NOG EENS in the card's top corner, clear of the picture (which moves to the other side). */
+.choices-pics .stamp { top: 8px; right: 8px; margin-top: 0; width: 58px; height: 58px; }
+.choices-pics .stamp-wrong .stamp-word { font-size: 0.9rem; }
+.choices-pics .choice:has(> .stamp) .pic-emoji { justify-self: start; }
 /* Phones: no keyboard, so the number hints give their room to the word. */
 @media (max-width: 759px) {
   .choices-pics .choice { grid-template-columns: 1fr; grid-template-areas: 'pic' 'word'; }
   .choices-pics .choice-num { display: none; }
-  /* After Check the check or cross still shows, in the card's top corner. */
-  .choices-pics :is(.right, .wrong) > .choice-num { display: grid; position: absolute; top: 8px; left: 8px; }
+  /* After Check the cards get shorter, so the feedback label fits without pushing the question
+     away: a smaller picture, and the check or cross in front of the word (not on the picture). */
+  .choices-pics.checked .choice {
+    min-height: 0; padding: 10px 12px 12px; grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: 'pic pic' 'num word'; align-items: center;
+  }
+  .choices-pics.checked .pic-emoji { width: 64px; height: 64px; font-size: 52px; }
+  .choices-pics.checked :is(.right, .wrong) > .choice-num { display: grid; width: 30px; height: 30px; }
+  .choices-pics.checked .faded .choice-nl { grid-column: 1 / -1; }
 }
 
 .match-grid {
@@ -890,6 +933,14 @@ h2 { font-size: 1.25rem; }
   animation: stamp-in 0.18s var(--ease-pop) 0.06s both;
 }
 .answer-mark.mark-wrong { background: var(--go-wrong); }
+/* The right sentence in the feedback label, as tiles; a word that was out of place or missing
+   is underlined in red (thick, so it is not only a colour). */
+.pair-tiles { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 4px; }
+.ftile {
+  padding: 3px 9px 4px; border: 2px solid var(--edge); border-radius: 6px; background: var(--card);
+  font-size: 1.1rem; font-weight: 650; line-height: 1.25; color: var(--ink-strong);
+}
+.ftile-miss { text-decoration: underline 3px var(--wrong-ink); text-decoration-skip-ink: none; text-underline-offset: 4px; }
 .answer-right .tile { border-color: var(--green); }
 .answer-wrong .tile { border-color: var(--red); }
 .tile-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 28px; }
@@ -1078,12 +1129,13 @@ h2 { font-size: 1.25rem; }
   .ex-leave { animation: rm-fade-out 0.12s linear both !important; }
   .choice .stamp, .answer-line .stamp, .answer-mark { animation: rm-fade 0.15s linear 0.06s both !important; }
   .feedback { animation: rm-fade 0.15s linear 0.12s both !important; }
-  .run-stamp { animation: rm-fade 0.15s linear both !important; }
+  .run-label { animation: rm-label 1.5s linear both !important; }
   .btn-go { animation: rm-fade 0.15s linear both !important; }
   .lbar-sweep { animation: rm-flash 0.6s linear both !important; }
   .match.match-hit { animation: none !important; }
 }
 @keyframes rm-fade { from { opacity: 0; } }
+@keyframes rm-label { 0% { opacity: 0; } 8%, 90% { opacity: 1; } 100% { opacity: 0; } }
 @keyframes rm-fade-out { to { opacity: 0; } }
 @keyframes rm-flash { 0%, 100% { opacity: 0; transform: translateX(80%); } 30% { opacity: 1; transform: translateX(80%); } }
 
@@ -1199,6 +1251,9 @@ h2 { font-size: 1.25rem; }
 }
 @keyframes ch-pump { 0% { transform: rotate(calc(var(--sw, 1) * 40deg)); } 45% { transform: rotate(calc(var(--sw, 1) * -12deg)); } }
 @keyframes ch-pump-loop { to { transform: rotate(calc(var(--sw, 1) * -10deg)); } }
+/* A run of 1 or 2: the same cheer on the spot (fist pump and joy, no jump). */
+.ch-bram.ch-happy.ch-small .ch-fig { animation: ch-perk 0.76s cubic-bezier(0.34, 1.56, 0.64, 1), ch-breathe 2.6s 0.76s ease-in-out infinite; }
+.ch-bram.ch-happy.ch-small .ch-shadow { animation: ch-shadow-breathe 2.6s ease-in-out infinite; }
 /* A run of 5 or more: a second fist pump right after the first. */
 .ch-big .ch-act-pump { animation: ch-pump 0.76s cubic-bezier(0.3, 1.5, 0.5, 1), ch-pump 0.5s 0.74s cubic-bezier(0.3, 1.5, 0.5, 1), ch-pump-loop 0.36s 1.24s ease-in-out 4 alternate; }
 /* A second miss in a row: the slumped pose without the head-scratch. */
@@ -2162,7 +2217,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
 
 /* "What does this mean?": a small picture of each option. */
 .choice-pic { flex: none; width: 46px; height: 46px; }
-.choice.faded .choice-pic { opacity: 0.55; }
 
 /* Tip: the text folds after about two sentences; "meer" opens the rest. */
 .tip-body p { margin: 0; }
@@ -2241,8 +2295,9 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .bay-again-label { line-height: 1.2; }
 .bay-again-label.bi-swap > .bi-help { --help-size: 0.9em; }
 .other-units .bay-now .bay-start-label.bi-swap > .bi-help { color: #3f3a2c; }
-/* Right-to-left: Start points the way the line reads. */
-[dir='rtl'] > .bay-start > .icon { transform: scaleX(-1); }
+/* Right-to-left: every forward chevron (Start, Continue, the review card, open lessons) points
+   the way the line reads, to the left. */
+.icon-fwd:dir(rtl), .icon-fwd.icon-flip, .player-rtl .feedback-icon .icon-fwd { scale: -1 1; }
 
 /* Situation on a phone: a smaller colleague and a wider bubble, so the options start higher. */
 @media (max-width: 759px) {

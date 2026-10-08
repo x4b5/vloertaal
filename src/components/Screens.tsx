@@ -48,6 +48,9 @@ import { FlameIcon } from './StreakArt';
 import { BackupCard, ReminderCard } from './Keep';
 import { Flag } from './Flags';
 import { PhraseList } from './Phrases';
+import { CertBadge, CertificatesCard } from './Certificate';
+import { CountingCard } from './Counting';
+import { unitDone } from '../lib/certificate';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false }: {
   /** undefined = nothing chosen yet (first run). */
@@ -287,8 +290,10 @@ function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: HelpLang
   );
 }
 
-export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused, daily, onDaily, arrived, onArrived }: {
+export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused, daily, onDaily, arrived, onArrived, onCertificate }: {
   progress: Progress;
+  /** Opens a finished unit's certificate (the chip on its sign). */
+  onCertificate?: (unitId: string) => void;
   /** "Herhaal vandaag" (see dailyCard): due, done today, or the first words come tomorrow. */
   daily?: DailyCard | null;
   /** Starts today's review (also the "extra ronde" after it). */
@@ -369,6 +374,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
             ) : (
               <span className="unit-nl" lang="nl">{unit.titleNl}</span>
             )}
+            {onCertificate && allowed && unitDone(unit, completed) && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
           </div>
           {!unitOpen && allowed && <LockIcon size={22} className="unit-lock" />}
         </div>
@@ -593,8 +599,10 @@ function useVoices() {
   return { device, recorded };
 }
 
-export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade, onRestore }: {
+export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade, onRestore, onCertificate }: {
   progress: Progress;
+  /** Opens a certificate from "Mijn certificaten". */
+  onCertificate?: (unitId: string) => void;
   /** "Bewaar je voortgang": a backup was put back (merged or replaced). */
   onRestore?: (next: Progress) => void;
   lang?: HelpLanguage;
@@ -687,6 +695,8 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
       {access === 'preview' && onAccess && <UpgradeCard lang={lang} onAccess={onAccess} />}
       <ReminderCard lang={lang} />
       {onRestore && <BackupCard progress={progress} lang={lang} onRestore={onRestore} />}
+      {onCertificate && <CertificatesCard progress={progress} lang={lang} onOpen={onCertificate} />}
+      <CountingCard lang={lang} />
       <button type="button" className="phrase-banner about-banner" onClick={onAbout}>
         <LogoMark size={32} check={false} />
         <Bi text={ui('about', lang)} />

@@ -89,3 +89,10 @@ export function gloss(id: string, en: string, lang?: HelpLanguage): Bilingual {
 export function fillN(text: Bilingual, n: number): Bilingual {
   return { ...text, en: text.en.replace('{n}', String(n)), help: text.help?.replace('{n}', String(n)) };
 }
+
+/** A {n} string without its number, for places that show the number big on its own
+ *  ("3" + "in a row"): no "label: n" punctuation to wrap or reorder in right-to-left text. */
+export function withoutN(text: Bilingual): Bilingual {
+  const drop = (s: string) => s.replace(/\s*\{n\}\s*/, ' ').replace(/\s+/g, ' ').trim();
+  return { ...text, en: drop(text.en), help: text.help && drop(text.help) };
+}

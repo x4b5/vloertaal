@@ -19,13 +19,20 @@ import { isNextInCourse } from './lib/exercises';
 import { mainLessons } from './content/sectors';
 import { gloss } from './i18n';
 import { persistStorage } from './lib/install';
+import { CertEarned, CertificateScreen } from './components/Certificate';
+import { earnCertificates, findUnit, unitJustDone } from './lib/certificate';
+import { count, countOpen } from './lib/count';
 
 type View =
   | { name: 'home' }
   /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[] }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; next?: string }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; next?: string; cert?: string }
+  /** "Certificaat behaald": once, after the result of a unit's last lesson (then the streak, if it went up). */
+  | { name: 'cert-earned'; unit: string; streakUp?: number }
+  /** A unit's certificate; streakUp: opened from "Certificaat behaald", the streak milestone still follows. */
+  | { name: 'certificate'; unit: string; streakUp?: number }
   | { name: 'streak'; streak: number }
   | { name: 'words' }
   | { name: 'phrasebook' }
@@ -46,7 +53,7 @@ const current = (): Entry | null => {
 /** After a reload: back on the screen you were on, but a lesson or its result starts over at home. */
 const restored = (): View => {
   const v = current()?.view;
-  return !v || v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'admin' ? HOME : v;
+  return !v || v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'admin' ? HOME : v;
 };
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 /** A coach link (?unit=pay) asks to open the path at that unit; read once at start. */
@@ -125,7 +132,7 @@ export default function App() {
       leaving.current = false;
       const v = current()?.view ?? HOME;
       // A finished lesson's entry was replaced by its result; never step back into a lesson.
-      setView(v.name === 'lesson' || v.name === 'result' || v.name === 'streak' ? HOME : v);
+      setView(v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' ? HOME : v);
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
@@ -140,6 +147,13 @@ export default function App() {
   const lang = getHelpLanguage(progress.helpLang);
 
   useEffect(() => { saveProgress(progress); }, [progress]);
+  // Certificates: units finished before certificates existed (or put back from a backup) get today's date.
+  useEffect(() => { setProgress((p) => earnCertificates(p, new Date())); }, [progress.completed]);
+  // Anonymous count of app opens: at most once a day, never in development (src/lib/count.ts).
+  useEffect(() => {
+    if (progress.onboarded) countOpen({ lang: progress.helpLang, sector: progress.sector });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [progress.onboarded]);
   // Learners from before "Herhaal vandaag" get cards for the words they already learned.
   useEffect(() => {
     if (!progress.cards) setProgress((p) => (p.cards ? p : { ...p, cards: seedCards(p.completed, dayKey(new Date())) }));
@@ -183,10 +197,15 @@ export default function App() {
         const now = new Date();
         const today = dayKey(now);
         const cards = progress.cards ?? {};
-        const next = daily
+        const next = earnCertificates(daily
           ? { ...completeDaily(progress, accuracy, now), cards: applyReview(cards, results, today) }
-          : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: addLessonWords(cards, found.lesson.words, results, today) };
+          : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: addLessonWords(cards, found.lesson.words, results, today) }, now);
         setProgress(next);
+        // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
+        const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId);
+        const dims = { lang: progress.helpLang, sector: progress.sector };
+        count(daily ? 'review-done' : 'lesson-done', dims);
+        if (unitDone) count('unit-done', dims);
         // The first finished lesson: ask the browser to keep this site's storage (the progress).
         if (!daily && !Object.keys(progress.completed).length) persistStorage();
         const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
@@ -200,6 +219,7 @@ export default function App() {
           repeated: daily ? found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
           next: upNext?.id,
+          cert: unitDone?.id,
         });
       };
       return (
@@ -227,7 +247,7 @@ export default function App() {
           stronger={view.stronger}
           next={view.next ? nextTitle(view.next, lang) : undefined}
           lang={lang}
-          onDone={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}
+          onDone={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}
         />
       );
     case 'streak':
@@ -241,6 +261,19 @@ export default function App() {
           freezes={progress.freezes ?? 0}
         />
       );
+    case 'cert-earned':
+    case 'certificate': {
+      const unit = findUnit(view.unit);
+      if (!unit) return null;
+      const day = progress.certs?.[unit.id] ?? dayKey(new Date());
+      // After "Certificaat behaald", the day-streak milestone still follows (once per day).
+      const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back());
+      return view.name === 'cert-earned' ? (
+        <CertEarned unit={unit} day={day} lang={lang} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward} />
+      ) : (
+        <CertificateScreen unit={unit} day={day} lang={lang} onBack={onward} />
+      );
+    }
     case 'tips':
       return <Tips progress={progress} lang={lang} onBack={back} access={access} />;
     case 'about':
@@ -273,6 +306,7 @@ export default function App() {
             access={access}
             onAccess={grant}
             focusUpgrade={view.upgrade}
+            onCertificate={(unit) => go({ name: 'certificate', unit })}
           />
           <BottomNav current="me" onTab={tab} lang={lang} />
         </>
@@ -313,6 +347,7 @@ export default function App() {
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
             focusUnit={focusUnit}
             onFocused={() => setFocusUnit(null)}
+            onCertificate={(unit) => go({ name: 'certificate', unit })}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
         </>

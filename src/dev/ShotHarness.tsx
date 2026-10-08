@@ -22,6 +22,8 @@ import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
 import * as kit from '../pictures/kit';
 import { hasPicture } from '../lib/wordPicture';
+import { CertEarned, CertificateScreen } from '../components/Certificate';
+import { findUnit } from '../lib/certificate';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -63,6 +65,20 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The streak stopped at 12 (record 21), shown once on the next open.
   if (shot === 'stopped') return <StreakStopped streak={12} best={21} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
+  // Certificates: /?shot=certificate&unit=u.safety&name=Ali%20Hassan (name=ask: asked the first
+  // time; name=none: without a name); /?shot=cert-earned is the one-time moment.
+  if (shot === 'certificate' || shot === 'cert-earned') {
+    const unit = findUnit(q.get('unit') ?? 'u.firstday') ?? units[0];
+    const name = q.get('name');
+    try {
+      if (name === 'ask') localStorage.removeItem('vloertaal:cert-name');
+      else localStorage.setItem('vloertaal:cert-name', name === 'none' || name === null ? '' : name);
+    } catch { /* ignore */ }
+    const l = getHelpLanguage(lang as LangCode);
+    return shot === 'certificate'
+      ? <CertificateScreen unit={unit} day="2026-10-08" lang={l} onBack={() => {}} />
+      : <CertEarned unit={unit} day="2026-10-08" lang={l} onView={() => {}} onLater={() => {}} />;
+  }
   const quiet = new URLSearchParams(location.search).get('quiet') === '1';
   // &access=preview shows the path, tips and settings as a preview user sees them.
   const access: Access = new URLSearchParams(location.search).get('access') === 'preview' ? 'preview' : 'full';
@@ -93,7 +109,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       <Tips progress={progress} lang={l} onBack={() => {}} access={access} />
     ) : (
       <>
-        <SettingsWithSound progress={progress} lang={l} onRestore={() => {}} onLang={() => {}} onSector={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
+        <SettingsWithSound progress={progress} lang={l} onCertificate={() => {}} onRestore={() => {}} onLang={() => {}} onSector={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
         <BottomNav current="me" onTab={() => {}} lang={l} />
       </>
     );
@@ -101,7 +117,9 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'about') return <About lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
   // Home screen: first lesson done, second lesson current (as in the house-style concept).
   if (shot === 'path') {
-    const progress = { ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector, completed: { 'l.hello': { best: 1, times: 1 } } };
+    // &cert=1: the whole first unit is done, so its sign carries the certificate chip.
+    const firstUnit = q.get('cert') === '1' ? Object.fromEntries(units[0].lessons.map((x) => [x.id, { best: 1, times: 1 }])) : {};
+    const progress = { ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector, completed: { 'l.hello': { best: 1, times: 1 }, ...firstUnit } };
     const l = getHelpLanguage(lang as LangCode);
     // &daily=due|done|first shows "Herhaal vandaag" in that state; &lit=1 has today done (lit flame);
     // &arrived=1 plays the "back from a lesson" arrival (scroll, stamp, pop).
@@ -118,7 +136,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       <>
         <TopBar streak={7} done={q.get('lit') === '1'} words={learnedWords(progress.completed).size} lang={l} onLanguage={() => {}} />
         <Path progress={progress} lang={l} onStart={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}} openOther={new URLSearchParams(location.search).get('other') === 'open'}
-          daily={daily} onDaily={() => {}} arrived={q.get('arrived') === '1' ? 'l.hello' : null} />
+          daily={daily} onDaily={() => {}} arrived={q.get('arrived') === '1' ? 'l.hello' : null} onCertificate={() => {}} />
         <BottomNav current="route" onTab={() => {}} lang={l} />
       </>
     );

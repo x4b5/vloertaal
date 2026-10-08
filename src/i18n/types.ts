@@ -155,6 +155,25 @@ export const uiEn = {
   daysUnit: 'days',
   wordsUnit: 'words',
   backToLesson: 'Back to the lesson',
+  /* Retention: anonymous counting (Settings) and a certificate per finished unit. */
+  countTitle: 'Count anonymously',
+  countHint: 'The app counts how often lessons are done. No name, no account, no tracking.',
+  certificate: 'Certificate',
+  myCertificates: 'My certificates',
+  certsEmpty: 'Finish all lessons of a unit. Then you get a certificate.',
+  certEarned: 'Certificate earned!',
+  certEarnedHint: 'You finished all lessons of this unit.',
+  certView: 'View',
+  certLater: 'Later',
+  certPrint: 'Print or save as PDF',
+  certShare: 'Share as picture',
+  certSaved: 'The picture is saved.',
+  certNameAsk: 'Your name on the certificate?',
+  certNameHint: 'It stays on this phone only. You can leave it empty.',
+  certNameSave: 'Put it on',
+  certNoName: 'Without a name',
+  certChangeName: 'Change name',
+  certPractice: 'Practice certificate, not an official diploma',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

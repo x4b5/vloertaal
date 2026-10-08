@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BackIcon } from './Icons';
+import { COUNTER, countingOn, mayCount } from '../lib/count';
 
 interface Credits {
   tier: string;
@@ -55,6 +56,20 @@ export function Admin({ onBack }: { onBack: () => void }) {
           <p className="muted small">Bijgewerkt op {date(credits.updatedAt)}. Ververst bij elke publicatie en één keer per dag.</p>
         </div>
       )}
+      <h2>Anoniem meetellen</h2>
+      <div className="admin-card">
+        <p>
+          Teller (GoatCounter): <a href={COUNTER} target="_blank" rel="noreferrer">{COUNTER.replace(/^https?:\/\//, '')}</a>
+        </p>
+        <p className="muted small">
+          Gebeurtenissen: <code>open</code> (één keer per dag per toestel), <code>lesson-done</code>, <code>review-done</code> en{' '}
+          <code>unit-done</code>, elk ook per hulptaal (<code>/lang-ti</code>) en per sector (<code>/sector-care</code>). Geen cookies,
+          geen namen, geen ids. Een andere teller instellen: <code>VITE_COUNTER_URL</code> bij het bouwen.
+        </p>
+        <p className="muted small">
+          Deze browser: {mayCount() ? 'telt mee.' : countingOn() ? 'telt niet mee (ontwikkelversie, localhost of Do Not Track).' : 'telt niet mee (uitgezet in Instellingen).'}
+        </p>
+      </div>
       <p className="muted small">
         Leerlingen gebruiken geen credits: de stemmen staan als bestanden in de app. Alleen het inspreken van
         nieuwe zinnen kost credits. Met een gratis abonnement stopt ElevenLabs als de credits op zijn; er wordt
