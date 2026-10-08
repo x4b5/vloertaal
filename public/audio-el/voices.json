@@ -1152,7 +1152,12 @@
     "t.neer": "neer",
     "t.meng": "meng",
     "t.schoonmaakmiddelen": "schoonmaakmiddelen",
-    "t.damp": "damp"
+    "t.damp": "damp",
+    "c.je.s.nl": "Zeg maar je, hoor!",
+    "c.names.s.nl": "Hoi, ik ben Mark.",
+    "c.direct.s.nl": "Nee, dat is fout. Die doos moet daar.",
+    "c.interview.s.nl": "Heb je nog vragen?",
+    "c.contract.s.nl": "Proeftijd: 1 maand"
    },
    "takes": {
     "w.hallo": 2,
@@ -2301,7 +2306,12 @@
     "t.neer": 2,
     "t.meng": 2,
     "t.schoonmaakmiddelen": 2,
-    "t.damp": 2
+    "t.damp": 2,
+    "c.je.s.nl": 2,
+    "c.names.s.nl": 2,
+    "c.direct.s.nl": 2,
+    "c.interview.s.nl": 2,
+    "c.contract.s.nl": 2
    }
   },
   {
@@ -3478,7 +3488,12 @@
     "t.grappig": "grappig",
     "t.intimidatie": "intimidatie",
     "t.getuige": "getuige",
-    "t.grapje": "grapje"
+    "t.grapje": "grapje",
+    "c.je.s.nl": "Zeg maar je, hoor!",
+    "c.names.s.nl": "Hoi, ik ben Mark.",
+    "c.direct.s.nl": "Nee, dat is fout. Die doos moet daar.",
+    "c.interview.s.nl": "Heb je nog vragen?",
+    "c.contract.s.nl": "Proeftijd: 1 maand"
    },
    "takes": {
     "w.hallo": 2,
@@ -4649,7 +4664,12 @@
     "t.grappig": 2,
     "t.intimidatie": 2,
     "t.getuige": 2,
-    "t.grapje": 2
+    "t.grapje": 2,
+    "c.je.s.nl": 2,
+    "c.names.s.nl": 2,
+    "c.direct.s.nl": 2,
+    "c.interview.s.nl": 2,
+    "c.contract.s.nl": 2
    }
   },
   {
@@ -5826,7 +5846,12 @@
     "t.grappig": "grappig",
     "t.intimidatie": "intimidatie",
     "t.getuige": "getuige",
-    "t.grapje": "grapje"
+    "t.grapje": "grapje",
+    "c.je.s.nl": "Zeg maar je, hoor!",
+    "c.names.s.nl": "Hoi, ik ben Mark.",
+    "c.direct.s.nl": "Nee, dat is fout. Die doos moet daar.",
+    "c.interview.s.nl": "Heb je nog vragen?",
+    "c.contract.s.nl": "Proeftijd: 1 maand"
    },
    "takes": {
     "w.hallo": 2,
@@ -6997,7 +7022,12 @@
     "t.grappig": 2,
     "t.intimidatie": 2,
     "t.getuige": 2,
-    "t.grapje": 2
+    "t.grapje": 2,
+    "c.je.s.nl": 2,
+    "c.names.s.nl": 2,
+    "c.direct.s.nl": 2,
+    "c.interview.s.nl": 2,
+    "c.contract.s.nl": 2
    }
   },
   {
@@ -8174,7 +8204,12 @@
     "t.grappig": "grappig",
     "t.intimidatie": "intimidatie",
     "t.getuige": "getuige",
-    "t.grapje": "grapje"
+    "t.grapje": "grapje",
+    "c.je.s.nl": "Zeg maar je, hoor!",
+    "c.names.s.nl": "Hoi, ik ben Mark.",
+    "c.direct.s.nl": "Nee, dat is fout. Die doos moet daar.",
+    "c.interview.s.nl": "Heb je nog vragen?",
+    "c.contract.s.nl": "Proeftijd: 1 maand"
    },
    "takes": {
     "w.hallo": 2,
@@ -9345,7 +9380,12 @@
     "t.grappig": 2,
     "t.intimidatie": 2,
     "t.getuige": 2,
-    "t.grapje": 2
+    "t.grapje": 2,
+    "c.je.s.nl": 2,
+    "c.names.s.nl": 2,
+    "c.direct.s.nl": 2,
+    "c.interview.s.nl": 2,
+    "c.contract.s.nl": 2
    }
   }
  ]
