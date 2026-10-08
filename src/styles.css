@@ -1673,3 +1673,13 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .daily-title { font-size: 1.15rem; font-weight: 650; line-height: 1.2; }
 .daily-n { font-size: 0.95rem; color: var(--muted); }
 .daily-go { flex: none; color: var(--ink-3); }
+
+/* Route: a unit's picture (and a done lesson's picture) grows a little under the mouse. */
+.unit-icon, .bay-pic { transition: transform 0.18s ease-out; }
+@media (hover: hover) {
+  .unit-icon:hover, .unit-head:hover .unit-icon { transform: scale(1.25); }
+  .bay-card:hover .bay-pic { transform: scale(1.2); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .unit-icon, .bay-pic { transition: none; }
+}
