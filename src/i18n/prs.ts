@@ -186,7 +186,7 @@ const lang: HelpLanguage = {
     deleteLetter: 'پاک کو',
     listenSkipped: 'سوال‌های شنیدنی این درس تیر شدند. صدا روشن می‌ماند.',
     skippedN: '{n} تیر شد، حساب نمی‌شود',
-    stampAgain: 'دوباره کوشش کو',
+    stampAgain: 'دوباره',
     stampDone: 'ختم شد',
   },
   gloss: {

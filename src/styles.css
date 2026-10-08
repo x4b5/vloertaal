@@ -2859,3 +2859,157 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .milestone .streak-flame-wrap { animation-delay: 0.45s; animation-duration: 0.4s; }
 .milestone .streak-num:not(.streak-num-new) { animation: none; }
 @media (prefers-reduced-motion: reduce) { .milestone .streak-count:not(.stopped-count), .milestone .streak-flame-wrap { animation: none; } }
+
+/* ---- Gauntlet loop 4: letter tiles, lesson-only skip, toasts under the header, RTL player ---- */
+
+/* Toasts (the run label, the sound note) hang just under the sticky header: never over the
+   close button, the sound toggle, the progress bar or the help button. */
+.player-top > .run-label { top: calc(100% + 6px); left: 50%; translate: -50% 0; }
+.player-top > .sound-note {
+  position: absolute; top: calc(100% + 6px); inset-inline: 16px; z-index: 30;
+  margin: 0 auto; width: auto; max-width: 420px;
+}
+
+/* A long feedback label (a situation's "why") scrolls inside itself, so the footer stays pinned
+   and Continue is always in view; a soft fade and a small arrow say there is more. */
+.feedback-text { max-height: min(34dvh, 300px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.feedback-text.has-more { mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent); }
+.feedback-more {
+  position: absolute; bottom: 4px; left: 50%; translate: -50% 0; display: grid; place-items: center;
+  width: 30px; height: 30px; border-radius: 50%; background: var(--solid); color: var(--on-solid);
+  pointer-events: none; animation: up 0.2s ease-out;
+}
+@media (max-height: 700px) { .feedback-text { max-height: 30dvh; } }
+
+/* Sentence tiles: the word is the button that places it; the speaker beside it is its own
+   button that only plays it. */
+.tile-slot { position: relative; display: inline-flex; }
+.tile-slot > .tile-with-say { padding-inline-end: 46px; }
+.tile-say {
+  position: absolute; z-index: 1; top: 50%; inset-inline-end: 5px; margin-top: -17px;
+  display: grid; place-items: center; width: 34px; height: 34px; border: 0; border-radius: 7px;
+  color: var(--blue); background: color-mix(in srgb, var(--blue) 14%, transparent);
+}
+.tile-say:hover { background: color-mix(in srgb, var(--blue) 24%, transparent); }
+.tile-say:active { scale: 0.94; }
+@media (max-width: 380px) { .tile-slot > .tile-with-say { padding-inline-end: 40px; } .tile-say { width: 30px; height: 30px; margin-top: -15px; inset-inline-end: 4px; } }
+
+/* Type what you hear, with letter tiles: the answer, a back key, then the letters. */
+.type-answer-row { display: flex; align-items: stretch; gap: 10px; }
+.type-input { text-align: center; }
+.type-display {
+  flex: 1; min-width: 0; min-height: 64px; display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; font-weight: 650; letter-spacing: 0.03em; line-height: 1.2; overflow-wrap: anywhere; color: var(--ink-strong);
+}
+.type-display.type-empty { color: var(--ink-3); }
+.type-caret { display: inline-block; width: 2px; height: 1.2em; margin-inline-start: 2px; background: var(--ink); animation: caret 1.05s steps(1) infinite; }
+@keyframes caret { 50% { opacity: 0; } }
+.letter-back {
+  flex: none; width: 64px; display: grid; place-items: center;
+  border: 2px solid var(--line); border-bottom-width: 4px; border-radius: var(--radius); background: var(--card); color: var(--ink);
+}
+.letter-back:disabled { color: var(--ink-3); }
+.letter-back:active:not(:disabled) { transform: translateY(2px); }
+.letter-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
+.letter-tile {
+  min-width: 50px; height: 54px; padding: 0 12px; display: grid; place-items: center;
+  font-size: 1.55rem; font-weight: 650; line-height: 1; color: var(--ink-strong);
+  background: var(--card); border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 10px;
+  transition: transform 0.1s var(--ease-out), background-color 0.12s;
+}
+.letter-tile:hover:not(:disabled) { border-color: var(--ink-3); }
+.letter-tile:active:not(:disabled) { transform: translateY(2px); }
+.letter-space { min-width: 76px; color: var(--ink-3); font-size: 1.3rem; }
+.letter-article { font-size: 1.3rem; }
+.letter-used { color: transparent; background: var(--track); border-style: dashed; border-bottom-width: 2px; }
+@media (max-width: 380px) { .letter-tile { min-width: 44px; height: 50px; padding: 0 9px; font-size: 1.4rem; } .letter-bank { gap: 6px; } }
+.type-mode {
+  align-self: center; display: inline-flex; align-items: center; gap: 8px; margin: 16px auto 0;
+  min-height: 40px; padding: 4px 14px; border: 2px solid var(--line); border-radius: 999px;
+  background: transparent; color: var(--ink-2); font-size: 0.92rem; font-weight: 600;
+}
+.type-mode:hover { border-color: var(--ink-3); }
+.type-mode .icon { flex: none; }
+.type-mode-label { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 6px; }
+.type-mode-label .bi-sep { display: inline; }
+.type-mode-label.bi-swap > .bi-help { --help-size: 0.85em; }
+.exercise:has(> .type-mode) { display: flex; flex-direction: column; }
+
+/* Chat replies: the card picks, the speaker beside it only plays. After Check each reply says
+   what it means, small, under the Dutch. */
+.choice-wrap { position: relative; display: flex; }
+.choice-wrap > .choice { flex: 1; min-width: 0; padding-inline-end: 70px; }
+.choice-say {
+  position: absolute; z-index: 2; top: 50%; inset-inline-end: 10px; margin-top: -24px;
+  display: grid; place-items: center; width: 48px; height: 48px; border-radius: 10px;
+  color: var(--blue); background: var(--card); border: 2px solid color-mix(in srgb, var(--blue) 45%, transparent);
+}
+.choice-say:hover { background: color-mix(in srgb, var(--blue) 12%, var(--card)); }
+.choice-say:active { scale: 0.95; }
+.choice-wrap.faded > .choice-say { opacity: 0.6; }
+.choices:not(.choices-pics) .choice-wrap .choice:has(> .stamp) { padding-inline-end: 136px; }
+.choices:not(.choices-pics) .choice-wrap .choice > .stamp { right: auto; inset-inline-end: 66px; }
+.choice-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.choice-gloss { font-size: 0.92rem; font-weight: 500; line-height: 1.3; color: var(--ink-2); }
+.choice-gloss.bi-swap > .bi-help { --help-size: 0.85em; }
+.choice.faded .choice-gloss { color: var(--muted); }
+
+/* A situation that quotes Dutch: the line with its speaker on top of the bubble. */
+.situation-quote { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.situation-says { flex-direction: column; align-items: stretch; gap: 2px; }
+.situation-nl { font-weight: 700; font-size: 1.05rem; line-height: 1.25; color: var(--ink-strong); }
+.situation-quote .speak-glyph { flex: none; }
+
+/* Stamps: the Dutch word with a small help-language line under it. */
+.stamp-sub { max-width: 80%; text-align: center; text-transform: none; line-height: 1; overflow-wrap: anywhere; }
+.stamp-wrong .stamp-sub { font-size: 0.54rem; margin-top: 2px; }
+.stamp-wrong .stamp-sub:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.62rem; }
+.choices:not(.choices-pics) .stamp-wrong .stamp-word, .choices-pics .stamp-wrong .stamp-word { font-size: 0.86rem; }
+.result-stamp .stamp-sub { font-size: 0.72rem; max-width: 80%; }
+
+/* The result: listening questions left out, said on their own line. */
+.result-skipped { display: flex; align-items: center; justify-content: center; gap: 8px; color: var(--ink-2); font-size: 0.95rem; }
+.result-skipped .bi { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0 8px; }
+.result-skipped .bi-sep { display: inline; }
+.result-skipped-icon { flex: none; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--track); color: var(--ink-2); }
+
+/* Logical sides for the stamps and marks, so a right-to-left player mirrors them. */
+.stamp { right: auto; inset-inline-end: -8px; }
+.choices:not(.choices-pics) .stamp { right: auto; inset-inline-end: 8px; }
+.choices:not(.choices-pics) .choice:has(> .stamp) { padding-right: 16px; padding-inline-end: 80px; }
+.choices-pics .stamp { right: auto; inset-inline-end: 8px; }
+.answer-line .stamp { right: auto; inset-inline-end: 0; }
+.result-stamp { right: auto; inset-inline-end: 0; }
+.chat-hint { left: auto; inset-inline-start: 0; }
+
+/* Right to left (Arabic, Persian, Dari): the whole player is mirrored (dir="rtl" on .player):
+   close and help swap sides, the number badge and picture of a card sit on the right with the
+   text right-aligned, the tag, the feedback icon and the speech-bubble tails follow. Dutch and
+   English stay left to right inside it, each in its own isolate. */
+.player[dir='rtl'] :is([lang='nl'], [lang='en']) { direction: ltr; unicode-bidi: isolate; }
+.player[dir='rtl'] :is(.answer-line, .tile-bank, .pair-say, .pair-tiles) { direction: ltr; }
+.player[dir='rtl'] .speaker-bubble { padding-left: 18px; padding-right: 9px; }
+.player[dir='rtl'] .chat-bubble:not(.chat-bubble-me) { padding-left: 18px; padding-right: 8px; }
+.player[dir='rtl'] :is(.speaker-bubble, .chat-bubble:not(.chat-bubble-me))::before {
+  left: auto; right: -9px; border-left: none; border-bottom: none;
+  border-right: 2px solid var(--edge); border-top: 2px solid var(--edge);
+}
+.player[dir='rtl'] .chat-bubble-me::before {
+  right: auto; left: -9px; border-right: none; border-top: none;
+  border-left: 2px dashed var(--ink-3); border-bottom: 2px dashed var(--ink-3);
+}
+.player[dir='rtl'] .chat-bubble-me:has(.chat-line)::before { border-left-style: solid; border-bottom-style: solid; border-color: var(--edge); }
+.player[dir='rtl'] .chat-bubble-me.right::before { border-color: var(--green); }
+.player[dir='rtl'] .chat-bubble-me.wrong::before { border-color: var(--red); }
+/* The colleagues turn to face the bubble, now on their left. */
+.player[dir='rtl'] :is(.speaker-char, .chat-char, .tip-char) { scale: -1 1; }
+.player[dir='rtl'] .feedback { padding: 12px 12px 10px 16px; rotate: 0.6deg; }
+.player[dir='rtl'] .match-x { right: auto; left: -6px; }
+.player[dir='rtl'] .type-display, .player[dir='rtl'] .type-input { text-align: center; }
+/* A Dutch block in a mirrored card lines up with the card's start (the right), like the text
+   around it; its words still read left to right. */
+.player[dir='rtl'] [lang='nl']:not(.type-input, .type-display, .tile, .letter-tile, .tag-nl) { text-align: right; }
+/* Forward chevrons follow the dir attribute too (:dir() is not always re-evaluated for cards
+   that change state, e.g. the next lesson's Start right after a lesson). */
+[dir='rtl'] .icon-fwd { scale: -1 1; }
+[dir='rtl'] [dir='ltr'] .icon-fwd { scale: 1 1; }

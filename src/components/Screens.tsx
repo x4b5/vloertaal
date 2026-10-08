@@ -38,6 +38,7 @@ import {
   CrownIcon,
   LifebuoyIcon,
   LockIcon,
+  EarIcon,
   RouteIcon,
   GearIcon,
   InfoIcon,
@@ -353,6 +354,20 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
           let by = b.top + b.height / 2 - (top + foot) / 2;
           const h = head?.getBoundingClientRect();
           if (h && h.top - by < top + 8 && b.bottom - (h.top - top - 8) <= foot - 8) by = h.top - top - 8;
+          // Never leave a card cut in half under the top bar: scroll it fully out of view, or, when
+          // the next lesson would not fit then, fully into view.
+          const cards = pathRef.current?.querySelectorAll<HTMLElement>('.daily-card, .unit-head, .bay-card, .full-only-note') ?? [];
+          for (const el of cards) {
+            const r = el.getBoundingClientRect();
+            if (r.top - by < top && r.bottom - by > top + 2) {
+              const hide = r.bottom - top + 6;
+              const show = r.top - top - 8;
+              const fits = (d: number) => b.top - d >= top + 4 && b.bottom - d <= foot - 8;
+              if (fits(hide)) by = hide;
+              else if (fits(show)) by = show;
+              break;
+            }
+          }
           window.scrollBy({ top: by, behavior });
         }
         onArrived?.();
@@ -478,7 +493,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
   };
 
   return (
-    <div className="path" ref={pathRef}>
+    <div className="path" ref={pathRef} dir={rtl ? 'rtl' : undefined}>
       {daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
       {main.map((unit, u) => renderUnit(unit, u))}
       {other.length > 0 && (
@@ -846,7 +861,9 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   );
 }
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next, skipped = 0 }: {
+  /** Listening exercises left out in the lesson: said on their own line, not in the score. */
+  skipped?: number;
   /** After today's review: how many words came back (shown instead of new words). */
   repeated?: number;
   /** After today's review: how many words went up a box ("N woorden sterker"). */
@@ -896,7 +913,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           {/* Rubber stamp on the delivery note: the lesson is done. */}
           <span className="stamp stamp-right result-stamp" aria-hidden>
             <span className="stamp-word" lang="nl">Klaar</span>
-            <span className="stamp-sub">✓</span>
+            {/* The Dutch stamp in the help language too (English without one). */}
+            {lang?.ui.stampDone ? <HelpText className="stamp-sub" text={lang.ui.stampDone} lang={lang} /> : <span className="stamp-sub" lang="en">{ui('stampDone').en}</span>}
           </span>
         </div>
         <h1 className="result-title"><Bi text={ui('lessonComplete', lang)} /></h1>
@@ -933,6 +951,13 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           <p className="result-line result-stronger" aria-label={fillCount('wordsStrongerN', stronger).en}>
             <span className="stronger-n" aria-hidden><span className="stronger-arrow">▲</span>{stronger}</span>
             <Bi text={withoutN(uiCount('wordsStrongerN', stronger, lang))} />
+          </p>
+        )}
+        {/* Listening exercises left out ("I can't listen now"): counted out, visibly. */}
+        {skipped > 0 && (
+          <p className="result-line result-skipped" dir={rtl ? 'rtl' : undefined}>
+            <span className="result-skipped-icon" aria-hidden><EarIcon size={22} /></span>
+            <Bi text={fillN(ui('skippedN', lang), skipped)} />
           </p>
         )}
         {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}

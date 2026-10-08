@@ -186,7 +186,7 @@ const lang: HelpLanguage = {
     deleteLetter: 'پاک کن',
     listenSkipped: 'سؤال‌های شنیداری این درس رد شدند. صدا روشن می‌ماند.',
     skippedN: '{n} رد شد، حساب نمی‌شود',
-    stampAgain: 'دوباره امتحان کن',
+    stampAgain: 'دوباره',
     stampDone: 'تمام شد',
   },
   gloss: {

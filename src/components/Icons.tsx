@@ -381,3 +381,22 @@ export const SparkleIcon = (p: IconProps) => (
     <path d="M18.5 14l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z" fill="currentColor" />
   </Svg>
 );
+
+/** Delete the last letter: a key with a cross, pointing back along the (left-to-right) Dutch word. */
+export const BackspaceIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M8.6 5.5H20a1.8 1.8 0 0 1 1.8 1.8v9.4a1.8 1.8 0 0 1-1.8 1.8H8.6L2.6 12z" {...stroke} strokeWidth={2.2} />
+    <path d="M11.6 9.4l5.2 5.2M16.8 9.4l-5.2 5.2" {...stroke} strokeWidth={2.2} />
+  </Svg>
+);
+
+/** Letter tiles: four small tiles with a stroke each, instead of a keyboard. */
+export const LettersIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <rect x="2.5" y="3.5" width="8.2" height="8.2" rx="1.8" {...stroke} strokeWidth={2} />
+    <rect x="13.3" y="3.5" width="8.2" height="8.2" rx="1.8" {...stroke} strokeWidth={2} />
+    <rect x="2.5" y="13.3" width="8.2" height="8.2" rx="1.8" {...stroke} strokeWidth={2} />
+    <rect x="13.3" y="13.3" width="8.2" height="8.2" rx="1.8" fill="currentColor" />
+    <path d="M6.6 5.9v3.4M15.6 7.6h3.6M6.6 15.6v3.4" {...stroke} strokeWidth={2} />
+  </Svg>
+);

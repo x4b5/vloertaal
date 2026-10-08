@@ -29,7 +29,7 @@ type View =
   /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[] }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; next?: string; cert?: string }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; next?: string; cert?: string; skipped?: number }
   /** "Certificaat behaald": once, after the result of a unit's last lesson (then the streak, if it went up). */
   | { name: 'cert-earned'; unit: string; streakUp?: number }
   /** A unit's certificate; streakUp: opened from "Certificaat behaald", the streak milestone still follows. */
@@ -146,6 +146,12 @@ export default function App() {
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
   const lang = getHelpLanguage(progress.helpLang);
+  // The page's language is the help language (Dutch without one). The direction is set where the
+  // layout is mirrored (the lesson player and the path), so Dutch never inherits right-to-left.
+  useEffect(() => {
+    document.documentElement.lang = lang?.code ?? 'nl';
+    document.documentElement.dir = 'ltr';
+  }, [lang]);
 
   useEffect(() => { saveProgress(progress); }, [progress]);
   // Certificates: units finished before certificates existed (or put back from a backup) get today's date.
@@ -194,7 +200,7 @@ export default function App() {
       const found = daily ? { lesson: dailyLesson(view.ids ?? []) } : findLesson(view.lessonId);
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !found.lesson.words.length || !lessonAllowed(view.lessonId, access)) return null;
-      const finish = ({ accuracy, review, right, total, words: results }: LessonResult) => {
+      const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
         const now = new Date();
         const today = dayKey(now);
         const cards = progress.cards ?? {};
@@ -221,6 +227,7 @@ export default function App() {
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
           next: upNext?.id,
           cert: unitDone?.id,
+          skipped: skipped || undefined,
         });
       };
       return (
@@ -247,6 +254,7 @@ export default function App() {
           words={view.words}
           repeated={view.repeated}
           stronger={view.stronger}
+          skipped={view.skipped}
           next={view.next ? nextTitle(view.next, lang) : undefined}
           lang={lang}
           onDone={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}

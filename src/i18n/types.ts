@@ -196,7 +196,7 @@ export const uiEn = {
   deleteLetter: 'Delete',
   listenSkipped: 'The listening questions in this lesson are skipped. Sound stays on.',
   skippedN: '{n} skipped, not counted',
-  stampAgain: 'Try again',
+  stampAgain: 'Again',
   stampDone: 'Done',
 } as const;
 

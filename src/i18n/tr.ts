@@ -186,7 +186,7 @@ const lang: HelpLanguage = {
     deleteLetter: 'Sil',
     listenSkipped: 'Bu dersteki dinleme soruları atlandı. Ses açık kalır.',
     skippedN: '{n} atlandı, sayılmadı',
-    stampAgain: 'Tekrar dene',
+    stampAgain: 'Tekrar',
     stampDone: 'Bitti',
   },
   gloss: {

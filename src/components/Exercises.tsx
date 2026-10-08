@@ -7,14 +7,16 @@ import { autoSpeak, sounds, speak } from '../lib/audio';
 import { sentencePicture, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
-import { Bi } from './Bi';
+import { Bi, HelpText } from './Bi';
 import { castFor, Character, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
-import { CheckIcon, ChevronDownIcon, CloseIcon, SpeakerIcon } from './Icons';
+import { BackspaceIcon, CheckIcon, ChevronDownIcon, CloseIcon, KeyboardIcon, LettersIcon, SpeakerIcon } from './Icons';
 import { cheerFor } from '../lib/lessonRun';
 import { voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
 import { SpeakButton } from './SpeakButton';
+import { letterTiles, NON_LATIN_HELP } from '../lib/letters';
+import { createRng } from '../lib/random';
 
 export interface Answer {
   correct: boolean;
@@ -104,10 +106,13 @@ function PromptWithBram({ text, verdict, run, misses, word, quietUntilChecked }:
 /** The one rubber stamp in a lesson: brick-red NOG EENS on a wrong pick. A right answer gets no
  *  stamp (its check, the green label and the green button say it already). Decorative: the
  *  feedback label below says the same in words. */
-function WrongStamp() {
+function WrongStamp({ lang }: { lang?: HelpLanguage }) {
+  const sub = ui('stampAgain', lang);
   return (
     <span className="stamp stamp-wrong" aria-hidden>
-      <span className="stamp-word">Nog<br />eens</span>
+      <span className="stamp-word" lang="nl">Nog<br />eens</span>
+      {/* The Dutch marker in the help language too, small under it (English without one). */}
+      {sub.help && lang ? <HelpText className="stamp-sub" text={sub.help} lang={lang} /> : <span className="stamp-sub" lang="en">{sub.en}</span>}
     </span>
   );
 }
@@ -157,8 +162,11 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
   );
 }
 
-function ChoiceGrid<T extends { id: string }>({ options, render, correctId, locked, onAnswer, onPick, className, style, stamp = true }: {
+function ChoiceGrid<T extends { id: string }>({ options, render, correctId, locked, onAnswer, onPick, className, style, stamp = true, lang, side }: {
   options: T[];
+  lang?: HelpLanguage;
+  /** A control beside each card (its own button, e.g. a speaker that only plays the option). */
+  side?: (w: T) => React.ReactNode;
   /** NOG EENS on a wrong pick (not in a situation, where another choice is not "wrong"). */
   stamp?: boolean;
   className?: string;
@@ -208,7 +216,7 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
         // After Check the options stay focusable (aria-disabled, not disabled) and say what
         // they were; the number box shows a check or a cross, so colour is never the only cue.
         // After a wrong pick the right option is only outlined ("reveal"), never filled like a win.
-        return (
+        const card = (
           <button
             key={w.id}
             type="button"
@@ -223,9 +231,10 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
             {render(w)}
             {state === 'right' && <span className="sr-only">, {ui('correctAnswer').en}</span>}
             {state === 'wrong' && <span className="sr-only">, {ui('yourAnswer').en}: {ui('incorrect').en}</span>}
-            {state === 'wrong' && stamp && <WrongStamp />}
+            {state === 'wrong' && stamp && <WrongStamp lang={lang} />}
           </button>
         );
+        return side ? <div key={w.id} className={`choice-wrap ${locked && !state ? 'faded' : ''}`}>{card}{side(w)}</div> : card;
       })}
     </div>
   );
@@ -249,6 +258,7 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, miss
         options={ex.options}
         correctId={ex.word.id}
         locked={locked}
+        lang={lang}
         onAnswer={onAnswer}
         render={(w) => (
           <>
@@ -283,6 +293,7 @@ export function DutchExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           options={ex.options}
           correctId={ex.word.id}
           locked={locked}
+          lang={lang}
           onAnswer={onAnswer}
           onPick={(w) => speak(w.nl)}
           render={(w) => <><span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span><SoundMark /></>}
@@ -294,6 +305,7 @@ export function DutchExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           options={ex.options}
           correctId={ex.word.id}
           locked={locked}
+          lang={lang}
           onAnswer={onAnswer}
           onPick={(w) => autoSpeak(w.nl)}
           render={(w) => (
@@ -323,6 +335,7 @@ export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misse
         options={ex.options}
         correctId={ex.word.id}
         locked={locked}
+        lang={lang}
         onAnswer={onAnswer}
         onPick={(w) => speak(w.nl)}
         render={(w) => <><span lang="nl" className="choice-nl">{breakable(w.nl)}</span><SoundMark /></>}
@@ -453,7 +466,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       {/* After Check: a check at the start of a right sentence; a wrong one gets only the
           NOG EENS stamp (the right sentence is shown as tiles in the label below). */}
       <div className={`answer-line ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite">
-        {verdict === 'wrong' && <WrongStamp />}
+        {verdict === 'wrong' && <WrongStamp lang={lang} />}
         {verdict === 'right' && (
           <span className="answer-mark mark-right">
             <CheckIcon size={24} />
@@ -474,32 +487,76 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           </button>
         ))}
       </div>
+      {/* Each tile: the word (a tap puts it in the sentence) and, on its own, a small speaker that
+          only plays it, so hearing a tile never places it. */}
       <div className="tile-bank">
-        {ex.tiles.map((t, i) => (
-          <button
-            key={i}
-            type="button"
-            className={`tile ${chosen.includes(i) ? 'tile-used' : ''}`}
-            lang="nl"
-            disabled={locked || chosen.includes(i)}
-            onClick={() => {
-              speak(t, false, 'nl', voiceFor(who));
-              update([...chosen, i]);
-            }}
-          >
-            {t}
-            <SoundMark />
-          </button>
-        ))}
+        {ex.tiles.map((t, i) => {
+          const used = chosen.includes(i);
+          return (
+            <span key={i} className={`tile-slot ${used ? 'tile-slot-used' : ''}`}>
+              <button
+                type="button"
+                className={`tile tile-with-say ${used ? 'tile-used' : ''}`}
+                lang="nl"
+                disabled={locked || used}
+                onClick={() => {
+                  speak(t, false, 'nl', voiceFor(who));
+                  update([...chosen, i]);
+                }}
+              >
+                {t}
+              </button>
+              {!used && (
+                <button
+                  type="button"
+                  className="tile-say"
+                  aria-label={`Play: ${t}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    speak(t, false, 'nl', voiceFor(who));
+                  }}
+                >
+                  <SpeakerIcon size={16} />
+                </button>
+              )}
+            </span>
+          );
+        })}
       </div>
     </div>
   );
 }
 
-/** Hear a word → type it. Forgiving about capitals, articles and one typo. */
+/**
+ * Hear a word → type it. Forgiving about capitals, articles and one typo. A learner who can't
+ * write Latin letters taps letter tiles instead (the word's letters, shuffled, plus a few
+ * extra ones); the default for help languages in another script. The keyboard stays one tap
+ * away, and the grading is the same either way.
+ */
 export function TypeExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'type'>) {
   const [value, setValue] = useState('');
+  const [mode, setMode] = useState<'tiles' | 'keys'>(() => (lang && NON_LATIN_HELP.has(lang.code) ? 'tiles' : 'keys'));
+  const tiles = useMemo(() => letterTiles(ex.word.nl, createRng(ex.word.id.length * 7919 + ex.word.nl.length)), [ex.word]);
+  /** The tiles tapped, in order (each one once). */
+  const [used, setUsed] = useState<number[]>([]);
   useEffect(() => { autoSpeak(ex.word.nl); }, [ex.word]);
+  const answerWith = (v: string) => {
+    setValue(v);
+    if (!v.trim()) return onAnswer(null);
+    const r = checkTyped(v, ex.word.nl);
+    onAnswer({ correct: r !== 'wrong', almost: r === 'almost' });
+  };
+  const tap = (next: number[]) => {
+    sounds.tap();
+    setUsed(next);
+    answerWith(next.map((i) => tiles[i].text).join(''));
+  };
+  const switchTo = (m: 'tiles' | 'keys') => {
+    setMode(m);
+    setUsed([]);
+    answerWith('');
+  };
+  const other = mode === 'tiles' ? ui('useKeyboard', lang) : ui('letterTiles', lang);
   return (
     <div className="exercise">
       <PromptWithBram text={ui('typeWhatYouHear', lang)} word={ex.word.nl} verdict={verdict} run={run} misses={misses} />
@@ -507,26 +564,69 @@ export function TypeExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
         <SpeakButton text={ex.word.nl} size="lg" label="Play" />
         <SpeakButton text={ex.word.nl} slow label="Play slowly" />
       </div>
-      <input
-        lang="nl"
-        autoFocus
-        autoComplete="off"
-        autoCapitalize="off"
-        spellCheck={false}
-        readOnly={locked}
-        aria-invalid={verdict === 'wrong' || undefined}
-        className={`type-input ${verdict ? `type-${verdict}` : ''}`}
-        value={value}
-        placeholder="…"
-        aria-label="Your answer"
-        onChange={(e) => {
-          const v = e.target.value;
-          setValue(v);
-          if (!v.trim()) return onAnswer(null);
-          const r = checkTyped(v, ex.word.nl);
-          onAnswer({ correct: r !== 'wrong', almost: r === 'almost' });
-        }}
-      />
+      {mode === 'keys' ? (
+        <input
+          lang="nl"
+          dir="ltr"
+          autoFocus
+          autoComplete="off"
+          autoCapitalize="off"
+          spellCheck={false}
+          readOnly={locked}
+          aria-invalid={verdict === 'wrong' || undefined}
+          className={`type-input ${verdict ? `type-${verdict}` : ''}`}
+          value={value}
+          placeholder="…"
+          aria-label="Your answer"
+          onChange={(e) => answerWith(e.target.value)}
+        />
+      ) : (
+        <>
+          {/* The answer so far, as on a keyboard; the last tile can be taken back. */}
+          <div className="type-answer-row" dir="ltr">
+            <output
+              lang="nl"
+              className={`type-input type-display ${verdict ? `type-${verdict}` : ''} ${value ? '' : 'type-empty'}`}
+              aria-label="Your answer"
+              aria-live="polite"
+            >
+              {value.replace(/ /g, '\u00a0')}
+              {!locked && <span className="type-caret" aria-hidden />}
+            </output>
+            <button
+              type="button"
+              className="letter-back"
+              disabled={locked || !used.length}
+              aria-label={`${ui('deleteLetter').en}${lang?.ui.deleteLetter ? ` · ${lang.ui.deleteLetter}` : ''}`}
+              title={lang?.ui.deleteLetter ?? ui('deleteLetter').en}
+              onClick={() => tap(used.slice(0, -1))}
+            >
+              <BackspaceIcon size={28} />
+            </button>
+          </div>
+          <div className="letter-bank" dir="ltr">
+            {tiles.map((t, i) => (
+              <button
+                key={i}
+                type="button"
+                lang="nl"
+                className={`letter-tile letter-${t.kind} ${used.includes(i) ? 'letter-used' : ''}`}
+                disabled={locked || used.includes(i)}
+                aria-label={t.kind === 'space' ? 'space' : t.label}
+                onClick={() => tap([...used, i])}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
+      {!locked && (
+        <button type="button" className="type-mode" onClick={() => switchTo(mode === 'tiles' ? 'keys' : 'tiles')}>
+          {mode === 'tiles' ? <KeyboardIcon size={20} /> : <LettersIcon size={20} />}
+          <Bi className="type-mode-label" text={other} />
+        </button>
+      )}
     </div>
   );
 }
@@ -587,13 +687,31 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
         options={ex.options}
         correctId={reply.id}
         locked={locked}
+        lang={lang}
         onAnswer={onAnswer}
         onPick={(o) => {
           setPicked(o);
           // Hear the reply before choosing: "you" (Amina) say it.
           speak(o.nl, false, 'nl', voiceFor('amina'));
         }}
-        render={(o) => <><span lang="nl" className="choice-nl">{breakable(o.nl)}</span><SoundMark /></>}
+        // Each option's speaker is its own button: hearing a reply never picks it.
+        side={(o) => (
+          <button
+            type="button"
+            className="choice-say"
+            aria-label={`Play: ${o.nl}`}
+            onClick={() => speak(o.nl, false, 'nl', voiceFor('amina'))}
+          >
+            <SpeakerIcon size={24} />
+          </button>
+        )}
+        // After Check every reply says what it means (before, that would give the answer away).
+        render={(o) => (
+          <span className="choice-text">
+            <span lang="nl" className="choice-nl">{breakable(o.nl)}</span>
+            {locked && <Bi className="choice-gloss" text={gloss(o.id, o.en, lang)} />}
+          </span>
+        )}
       />
     </div>
   );
@@ -671,12 +789,23 @@ function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
 export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props<'situation'>) {
   const { tip } = ex;
   const best = tip.options.find((o) => o.best)!;
+  const who = tipCast(tip);
+  const said = tip.situation.nl;
+  // The Dutch in the situation ("Zeg maar je, hoor!") is said by the character, as in a chat.
+  useEffect(() => { if (said) autoSpeak(said, false, 'nl', voiceFor(who)); }, [said, who]);
+  const talking = useTalking(said ? [said] : [], Boolean(said));
   return (
     <div className="exercise situation">
       <Prompt text={ui('whatDoYouDo', lang)} />
       <div className="speaker">
-        <span className="speaker-char"><Character who={tipCast(tip)} mood={moodFor(verdict, 'thinking', true)} /></span>
-        <div className="speaker-bubble situation-text">
+        <span className="speaker-char"><Character who={who} mood={moodFor(verdict, 'thinking', true)} talking={talking && !verdict} /></span>
+        <div className={`speaker-bubble situation-text ${said ? 'situation-says' : ''}`}>
+          {said && (
+            <span className="situation-quote" dir="ltr">
+              <SpeakButton glyph text={said} label={`Play: ${said}`} voice={voiceFor(who)} />
+              <span lang="nl" className="situation-nl">{said}</span>
+            </span>
+          )}
           <Bi text={gloss(tip.situation.id, tip.situation.en, lang)} />
         </div>
       </div>
@@ -685,6 +814,7 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
         options={ex.options}
         correctId={best.id}
         locked={locked}
+        lang={lang}
         onAnswer={onAnswer}
         stamp={false}
         render={(o) => <Bi text={gloss(o.id, o.en, lang)} />}

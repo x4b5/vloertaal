@@ -19,7 +19,11 @@ for (const u of units)
       add(d.reply.id, d.reply.nl);
     }
   }
-for (const t of cultureTips) add(t.phrase.id, t.phrase.nl);
+for (const t of cultureTips) {
+  add(t.phrase.id, t.phrase.nl);
+  // The Dutch quoted in a situation ("Zeg maar je, hoor!"), played beside its text.
+  if (t.situation.nl) add(`${t.situation.id}.nl`, t.situation.nl);
+}
 // Emergency phrases that only live in the phrasebook ("Bel 112!").
 for (const p of phrasebookExtras) add(p.id, p.nl);
 add('x.sample', VOICE_SAMPLE);

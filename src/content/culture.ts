@@ -272,7 +272,7 @@ export const cultureTips: CultureTip[] = [
  */
 export function tipGender(t: CultureTip): 'f' | 'm' | null {
   if (t.speaker) return t.speaker;
-  const text = `${t.situation.en} ${t.why.en}`;
+  const text = [t.situation.en, ...t.options.map((o) => o.en), t.why.en].join(' ');
   const she = /\b(she|her|hers|herself|woman|female)\b/i.exec(text);
   const he = /\b(he|him|his|himself|man|male)\b/i.exec(text);
   if (she && (!he || she.index < he.index)) return 'f';

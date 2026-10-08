@@ -186,7 +186,7 @@ const lang: HelpLanguage = {
     deleteLetter: 'حذف',
     listenSkipped: 'تم تخطي أسئلة الاستماع في هذا الدرس. الصوت يبقى مُشغّلاً.',
     skippedN: 'تم تخطي {n}، لا تُحسب',
-    stampAgain: 'حاول مرة أخرى',
+    stampAgain: 'مرة أخرى',
     stampDone: 'انتهى',
   },
   gloss: {

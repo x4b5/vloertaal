@@ -12,7 +12,7 @@ import { castFor, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { FlameIcon } from './StreakArt';
 import {
-  BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
+  BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
   LifebuoyIcon, PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
 } from './Icons';
 import { PhraseSheet } from './Phrases';
@@ -38,6 +38,9 @@ export interface LessonResult {
   total: number;
   /** Per word asked on its own (meaning, picture, listen, type): right every first time? */
   words: Record<string, boolean>;
+  /** Listening exercises left out ("I can't listen now", or sound switched off midway): not in
+   *  `total`, and the result says so ("2 skipped, not counted"). */
+  skipped?: number;
 }
 
 function solution(ex: Exercise): { text: string; nl: boolean } {
@@ -176,7 +179,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   onFinish: (r: LessonResult) => void;
   /** "Without sound" (a saved setting): no listening exercises, nothing plays by itself. */
   quiet?: boolean;
-  /** Switches "Without sound" on or off for good (the header toggle, "I can't listen now"). */
+  /** Switches "Without sound" on or off for good (the header toggle; "I can't listen now" only
+   *  leaves out this lesson's listening exercises). */
   onQuiet?: (quiet: boolean) => void;
   /**
    * Keep this lesson's place on the device (src/lib/resume.ts): saved after every answer and when
@@ -245,12 +249,18 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const rtl = lang?.dir === 'rtl';
   const goRef = useRef<HTMLButtonElement>(null);
   const wordResults = useRef<Record<string, boolean>>(resumed ? { ...saved!.words } : {});
-  /** "I can't listen now" without a saved setting to switch (screenshot harness). */
+  /** The header toggle without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
   const soundOff = quiet || cantListen;
-  const audioOff = !speechAvailable() || soundOff;
-  /** Short line after the sound setting changed: 'off' = without sound, 'on' = sound on. */
-  const [soundNote, setSoundNote] = useState<'off' | 'on' | null>(null);
+  /** "I can't listen now": only this lesson's listening exercises are left out; sound stays on
+   *  and the "Without sound" setting is not touched. */
+  const [skipListening, setSkipListening] = useState(false);
+  const audioOff = !speechAvailable() || soundOff || skipListening;
+  /** Listening exercises left out, counted out loud on the result. */
+  const skipped = useRef(0);
+  /** Short line after the sound changed: 'off' = without sound, 'on' = sound on, 'skip' = this
+   *  lesson's listening questions are left out. */
+  const [soundNote, setSoundNote] = useState<'off' | 'on' | 'skip' | null>(null);
   useEffect(() => {
     if (!soundNote) return;
     const t = setTimeout(() => setSoundNote(null), 4500);
@@ -309,8 +319,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const footRef = useRef<HTMLElement>(null);
   const bodyRef = useRef<HTMLElement>(null);
   /**
-   * The footer is pinned to the bottom, unless it would take more than half the screen (200%
-   * zoom, a long feedback label): then it scrolls with the page. --foot-h keeps focused
+   * The footer is pinned to the bottom, unless it would take more than three quarters of the
+   * screen (200% zoom): then it scrolls with the page. A long feedback label scrolls inside
+   * itself instead (styles.css, .feedback-text), so Continue stays in view. --foot-h keeps focused
    * elements clear of a pinned footer (scroll-padding), and moreBelow shows a soft shadow on
    * its top edge while there is more of the exercise underneath it.
    */
@@ -325,7 +336,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     const measure = () => {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(() => {
-        const tall = foot.offsetHeight > window.innerHeight * 0.5;
+        const tall = foot.offsetHeight > window.innerHeight * 0.75;
         setFootStatic(tall);
         root.style.setProperty('--foot-h', `${tall ? 0 : foot.offsetHeight}px`);
         setMoreBelow(!tall && root.scrollHeight - (window.scrollY + window.innerHeight) > 4);
@@ -373,10 +384,22 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     return () => cancelAnimationFrame(raf);
   }, [checked]); // eslint-disable-line react-hooks/exhaustive-deps
   const onAnswer = useCallback((a: Answer | null) => setAnswer(a), []);
+  /** The feedback label has more text below what fits (it scrolls inside itself). */
+  const fbRef = useRef<HTMLDivElement>(null);
+  const [fbMore, setFbMore] = useState(false);
+  const measureFb = useCallback(() => {
+    const el = fbRef.current;
+    setFbMore(Boolean(el && el.scrollHeight - el.scrollTop - el.clientHeight > 6));
+  }, []);
+  useEffect(() => {
+    if (!checked) { setFbMore(false); return; }
+    const t = window.setTimeout(measureFb, 420);
+    return () => window.clearTimeout(t);
+  }, [checked, measureFb]);
 
   // A new exercise: focus its question, so a screen reader starts there (typing keeps the input).
   useEffect(() => {
-    if (queue[index]?.kind === 'type') return;
+    if (queue[index]?.kind === 'type' && document.activeElement?.tagName === 'INPUT') return;
     const h = slideRef.current?.querySelector<HTMLElement>('.prompt');
     if (!h) return;
     h.tabIndex = -1;
@@ -460,7 +483,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     finished.current = true;
     if (persist) clearSave(lesson.id);
     sounds.done();
-    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current });
+    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current });
   }
 
   function reset() {
@@ -475,7 +498,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     reset();
     let i = index + 1;
     // Skip audio-only exercises when the learner can't listen right now.
-    while (audioOff && i < queue.length && needsAudio(queue[i])) i++;
+    while (audioOff && i < queue.length && needsAudio(queue[i])) { if (i < initial.length) skipped.current += 1; i++; }
     if (i >= queue.length) {
       finish();
     } else {
@@ -487,8 +510,10 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   /** Leave the listening exercise on screen (unanswered) for the next one that needs no sound. */
   function skipAudio() {
     reset();
+    // Only exercises that would have counted are "skipped" (a mistake coming back is not).
+    if (index < initial.length) skipped.current += 1;
     let i = index + 1;
-    while (i < queue.length && needsAudio(queue[i])) i++;
+    while (i < queue.length && needsAudio(queue[i])) { if (i < initial.length) skipped.current += 1; i++; }
     if (i >= queue.length) finish();
     else {
       leave();
@@ -496,7 +521,14 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     }
   }
 
-  /** Sound off for good (header toggle or "I can't listen now"), or back on. */
+  /** "I can't listen now": leave out this lesson's listening exercises (this one included). */
+  function cantListenNow() {
+    setSkipListening(true);
+    setSoundNote('skip');
+    if (needsAudio(ex) && !checked) skipAudio();
+  }
+
+  /** Sound off for good (the header toggle, a saved setting), or back on. */
   function setSound(off: boolean) {
     if (onQuiet) onQuiet(off);
     else setCantListen(off);
@@ -606,7 +638,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const repeatsLeft = index >= initial.length ? queue.length - index : 0;
 
   return (
-    <div className={`player ${rtl ? 'player-rtl' : ''}`}>
+    // A right-to-left help language mirrors the whole player (header, cards, feedback); the Dutch
+    // and English in it keep their own direction (lang="nl" / lang="en" isolates, styles.css).
+    <div className={`player ${rtl ? 'player-rtl' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
       <header className="player-top">
         <button type="button" className="icon-btn" onClick={() => setAskQuit(true)} aria-label="Quit lesson"><CloseIcon size={28} /></button>
         {/* Sound on/off for a learner on the bus; pressed = "Without sound" (saved, see Settings). */}
@@ -639,7 +673,6 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             <span className="lbar-ticks" style={{ '--n': bar.slots } as React.CSSProperties} />
             {sweep > 0 && <span key={sweep} className="lbar-sweep" />}
           </div>
-          {runLabel && <RunLabel key={sweep} n={runLabel} lang={lang} />}
         </div>
         <span className="lesson-name">
           <Bi text={gloss(lesson.id, lesson.title, lang)} />
@@ -659,14 +692,17 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             ? <HelpText className="sos-label" text={lang.ui.navWords} lang={lang} />
             : <span className="sos-label" lang="nl">Hulp</span>}
         </button>
+        {/* The run label and the sound note hang just under the header, never over the close
+            button, the sound toggle or the progress bar. */}
+        {runLabel && <RunLabel key={sweep} n={runLabel} lang={lang} />}
+        {soundNote && (
+          <div className="sound-note" role="status" key={soundNote} onClick={() => setSoundNote(null)}>
+            {soundNote === 'on' ? <SpeakerIcon size={20} /> : soundNote === 'skip' ? <EarIcon size={20} /> : <SpeakerOffIcon size={20} />}
+            <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : soundNote === 'skip' ? 'listenSkipped' : 'soundOn', lang)} />
+          </div>
+        )}
       </header>
 
-      {soundNote && (
-        <div className="sound-note" role="status" key={soundNote}>
-          {soundNote === 'off' ? <SpeakerOffIcon size={20} /> : <SpeakerIcon size={20} />}
-          <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : 'soundOn', lang)} />
-        </div>
-      )}
       <main className="player-body" ref={bodyRef}>
         <div className="ex-ghost" ref={ghostRef} aria-hidden />
         <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
@@ -697,7 +733,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
               </span>
               {/* A right-to-left help language: the whole label reads from the right, with the
                   Dutch and English pieces kept in their own direction. */}
-              <div className="feedback-text" dir={rtl ? 'rtl' : undefined}>
+              <div className={`feedback-text ${fbMore ? 'has-more' : ''}`} dir={rtl ? 'rtl' : undefined} ref={fbRef} onScroll={measureFb} tabIndex={fbMore ? 0 : undefined}>
                 {/* Heading: the help language first and large; the Dutch words and English under it. */}
                 <div className={`feedback-head ${headingMeaning?.help ? 'has-help' : ''}`}>
                   {headingMeaning?.help && lang && <HelpText className="feedback-help" text={headingMeaning.help} lang={lang} />}
@@ -717,11 +753,12 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
                 )}
                 {pairLine}{whyLine}
               </div>
+              {fbMore && <span className="feedback-more" aria-hidden><ChevronDownIcon size={20} /></span>}
             </div>
           )}
           <div className="foot-actions">
             {needsAudio(ex) && !checked && (
-              <button type="button" className="btn btn-ghost" onClick={() => setSound(true)}>
+              <button type="button" className="btn btn-ghost" onClick={cantListenNow}>
                 <Bi text={ui('cantListen', lang)} />
               </button>
             )}

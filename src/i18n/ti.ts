@@ -186,7 +186,7 @@ const lang: HelpLanguage = {
     deleteLetter: 'ደምስስ',
     listenSkipped: 'ናይ ምስማዕ ሕቶታት ናይዚ ትምህርቲ ተሰጊሮም። ድምጺ ክፉት ይጸንሕ።',
     skippedN: '{n} ተሰጊሩ፡ ኣይተቖጽረን',
-    stampAgain: 'ደጊምካ ፈትን',
+    stampAgain: 'ደጊምካ',
     stampDone: 'ተወዲኡ',
   },
   gloss: {
