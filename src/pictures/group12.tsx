@@ -199,7 +199,6 @@ export default {
         <rect x={16} y={34} width={88} height={70} rx="5" fill={PAL.wood} />
       </Shade>
       <MiniPhoto x={26} y={44} w={68} h={50} />
-      <path d="M26 94H94" stroke={PAL.leaf} strokeWidth="0" />
       <Shine d="M20 90V44" width={3} opacity={0.4} />
     </g>
   ),
@@ -311,7 +310,6 @@ export default {
       <path d="M56 52H96" stroke={PAL.navy} strokeWidth="4.4" strokeLinecap="round" />
       <path d="M56 63H100M56 72H88" stroke={PAL.line} strokeWidth="3.2" strokeLinecap="round" />
       <path d="M56 84H104" stroke={PAL.line} strokeWidth="2.4" strokeLinecap="round" strokeDasharray="3 2.4" />
-      <circle cx={92} cy={76} r={0} fill="none" />
       <Shine d="M14 46V60" width={2.6} opacity={0.6} />
     </g>
   ),
