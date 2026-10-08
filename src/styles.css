@@ -2114,3 +2114,273 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .waybill .btn-ghost { background: var(--card); }
 .waybill-ask { display: flex; flex-direction: column; gap: 10px; padding: 12px; background: var(--card); border: 2px solid var(--edge); border-radius: 8px; }
 .waybill-ask-nl { margin: 0; font-weight: 650; }
+
+/* ---- Round 2: understanding without reading ---- */
+/* Buttons in the learner's language, a pictogram per exercise, pictures and sound in the
+   reading-heavy exercises, one Start on the path, emergency phrases in reach, and layouts that
+   hold at 200% zoom and in right-to-left languages. */
+
+/* Bilingual pairs. The dot between the two halves is a real element (so it sits between them
+   in right-to-left text too); it shows only where a context puts the pair on one line. */
+.bi-sep { display: none; color: var(--ink-3); font-weight: 400; }
+/* English or Dutch kept left-to-right inside a right-to-left block starts on the right, with
+   the help language above it: one block, no zig-zag. */
+[dir='rtl'] [dir='ltr'] { text-align: right; }
+
+/* A Dutch line stacked over a right-to-left pair (cards, labels, headings): the whole stack
+   starts on the right, so the eye does not jump from side to side. */
+:is(.hub-title, .phrase-sheet .sheet-title, .hub-text, .daily-text, .tip-badge-text, .phrase-text, .other-text, .keep-head, .remind-own-text, .sector-names):has(> .bi[dir='rtl']) { text-align: right; }
+:is(.daily-text, .phrase-text):has(> .bi[dir='rtl']) > * { align-self: stretch; }
+.phrase-text { flex: 1; }
+/* The end block stays a square-ish block when a label wraps and the button grows taller. */
+.btn-block { max-width: 54px; }
+
+/* Main lesson button: the help language large, the English small under it. */
+.btn-label { align-items: center; gap: 0; min-width: 0; text-align: center; line-height: 1.15; }
+.btn-label .bi-en { overflow-wrap: anywhere; }
+.btn-label.bi-swap > .bi-help { --help-size: 0.74em; font-weight: 500; margin-top: 1px; color: inherit; opacity: 0.86; }
+.btn-label.bi-swap[dir='rtl'] > .bi-help { text-align: center; }
+.btn-primary .btn-label.bi-swap > .bi-help { color: #3f3a2c; opacity: 1; }
+.btn:disabled .btn-label.bi-swap > .bi-help { color: inherit; opacity: 1; }
+.foot-actions .btn-go { padding-block: 8px; }
+.phrase-sheet-back .btn-label .bi-en, .foot-actions .btn-go .btn-label .bi-en { font-size: 1.15rem; }
+.btn-label .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.24rem; }
+
+/* Exercise tag: pictogram, the Dutch word, and the same word in the help language. */
+.tag-kind {
+  display: inline-flex; align-items: center; flex-wrap: wrap; gap: 2px 7px; max-width: 100%;
+  padding: 3px 10px 3px 6px; text-transform: none; letter-spacing: 0;
+}
+.tag-icon { display: grid; place-items: center; }
+.tag-nl { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }
+.tag-help {
+  min-width: 0; padding-left: 7px; border-left: 2px solid color-mix(in srgb, var(--tag-ink) 35%, transparent);
+  font-size: 15px; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere;
+}
+.tag-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 16.5px; }
+.ex-tag { min-width: 0; }
+
+/* "What does this mean?": a small picture of each option. */
+.choice-pic { flex: none; width: 46px; height: 46px; }
+.choice.faded .choice-pic { opacity: 0.55; }
+
+/* Tip: the text folds after about two sentences; "meer" opens the rest. */
+.tip-body p { margin: 0; }
+.tip-more {
+  display: inline-flex; align-items: center; flex-wrap: wrap; gap: 2px 8px; min-height: 44px; margin-top: 8px;
+  padding: 4px 12px 4px 14px; text-align: start; color: var(--ink);
+  background: var(--card); border: 2px solid var(--choice-edge); border-radius: 8px; font-weight: 650; font-size: 0.95rem;
+}
+.tip-more:hover { border-color: var(--edge); }
+.tip-more-gloss { flex-direction: row; font-weight: 500; color: var(--ink-2); }
+.tip-more-gloss.bi-swap > .bi-help { display: none; }
+.tip-more-chev { color: var(--ink-3); transition: transform 0.2s var(--ease-out); }
+.tip-more-chev.open { transform: rotate(180deg); }
+
+/* Lesson header: the emergency phrases, one tap away. */
+.player-top .sos-btn { flex: none; margin-inline-end: -8px; color: var(--wrong-ink); }
+.player-top .sos-btn:hover { background: var(--red-bg); }
+
+/* The footer: a soft shadow on its top edge while the exercise goes on underneath it, and no
+   longer pinned when it would fill half the screen (it then scrolls with the page). */
+.player-foot::before {
+  content: ''; position: absolute; inset: -18px 0 auto; height: 18px; pointer-events: none;
+  background: linear-gradient(to top, rgba(30, 34, 38, 0.16), rgba(30, 34, 38, 0));
+  opacity: 0; transition: opacity 0.15s;
+}
+.player-foot.foot-more::before { opacity: 1; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .player-foot::before { background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)); } }
+:root[data-theme='dark'] .player-foot::before { background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)); }
+.player-foot.foot-static { position: relative; }
+/* Focused elements stay clear of the pinned footer and the bottom bar. */
+html { scroll-padding-bottom: calc(var(--foot-h, 0px) + 12px); }
+html:has(.bottom-nav) { scroll-padding-bottom: 104px; }
+html:has(.topbar) { scroll-padding-top: 72px; }
+
+/* Emergency phrases as a sheet over the lesson. */
+.phrase-sheet { display: flex; flex-direction: column; max-height: 90dvh; padding-top: 22px; }
+.phrase-sheet-head { flex: none; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.phrase-sheet-back { flex: none; }
+.phrase-sheet-icon {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 8px;
+  background: var(--red-bg); color: var(--wrong-ink);
+}
+.phrase-sheet .sheet-title { flex: 1; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; font-size: 1.3rem; }
+.phrase-sheet .sheet-title .bi { font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
+.phrase-sheet-x { flex: none; margin-inline-end: -6px; }
+.phrase-sheet-x:hover { background: var(--concrete-2); }
+.phrase-sheet-list {
+  flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+  margin-inline: -16px; padding-inline: 16px; border-block: 2px dashed var(--line);
+}
+.phrase-sheet-list .phrases { margin: 12px 0; }
+.phrase-sheet-list .phrase { background: var(--bg); }
+.phrase-sheet-back { width: 100%; min-height: 60px; margin-top: 12px; padding-inline: 64px; }
+@media (min-width: 760px) { .phrase-sheet { max-height: 86dvh; } .phrase-sheet-list { margin-inline: -24px; padding-inline: 24px; } }
+
+/* "Hulp" tab: the emergency phrases straight away, the workplace tips under them. */
+.hub-alert-head { display: flex; align-items: center; gap: 12px; margin: 4px 0 0; }
+.hub-alert-head .hub-icon { color: var(--wrong-ink); }
+.hub-title { flex: 1; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; font-size: 1.5rem; line-height: 1.15; }
+.hub-title .bi { font-size: 1rem; font-weight: 500; color: var(--ink-2); }
+.hub-hint { margin: 12px 0 4px; }
+.words-hub .hub-tips { margin-top: 24px; }
+
+/* Path: one Start (the next lesson); other open lessons a chevron. Every card has its picture. */
+.bay-pic { flex: none; width: 48px; height: 48px; }
+.bay-open .bay-pic { opacity: 0.6; }
+.bay-locked .bay-pic { opacity: 0.32; filter: grayscale(1); }
+.bay-chev { flex: none; color: var(--ink-3); }
+/* The next lesson: its picture in the free corner above Bram, so the title keeps its width. */
+.bay-now .bay-pic { position: absolute; top: 14px; inset-inline-end: 22px; width: 56px; height: 56px; }
+.bay-start-label { align-items: flex-start; line-height: 1.15; }
+.bay-start-label.bi-swap > .bi-help { --help-size: 0.72em; color: rgba(255, 253, 248, 0.8); font-weight: 500; }
+.bay-start-label .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.15em; }
+.bay-start { padding-block: 6px; }
+.bay-again { flex-wrap: wrap; }
+.bay-again-label { line-height: 1.2; }
+.bay-again-label.bi-swap > .bi-help { --help-size: 0.9em; }
+.other-units .bay-now .bay-start-label.bi-swap > .bi-help { color: #3f3a2c; }
+/* Right-to-left: Start points the way the line reads. */
+[dir='rtl'] > .bay-start > .icon { transform: scaleX(-1); }
+
+/* Situation on a phone: a smaller colleague and a wider bubble, so the options start higher. */
+@media (max-width: 759px) {
+  .situation .speaker { align-items: flex-start; gap: 10px; }
+  .situation .speaker-char { font-size: 84px; margin-top: 8px; }
+  .situation .speaker-bubble { margin-bottom: 8px; }
+  .situation-text { font-size: 0.98rem; line-height: 1.4; padding: 8px 12px 8px 14px; }
+  .situation-text .bi-help { --help-size: 0.9em; }
+  .situation .prompt { margin-bottom: 10px; }
+  .situation .choices-rows .choice { min-height: 60px; padding-block: 6px; }
+  .situation .choices-rows .bi { font-size: 1rem; line-height: 1.3; }
+  .situation .speaker-bubble::before { top: 34px; }
+}
+
+/* Top bar: icon and number; the unit (in the help language) when there is room. */
+.stat-unit:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.9rem; }
+
+/* Bottom bar: the Dutch label, the help language in a small line under it. */
+.nav-tab { min-width: 0; gap: 2px; }
+.nav-label { max-width: 100%; text-align: center; overflow-wrap: anywhere; }
+.nav-help {
+  max-width: 100%; font-size: 13px; line-height: 1.15; color: var(--muted); text-align: center;
+  overflow-wrap: anywhere; white-space: normal;
+}
+.nav-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 14px; }
+.nav-tab-on .nav-help { color: var(--ink-2); }
+.bottom-nav:has(.nav-help) .nav-tab { min-height: 66px; }
+.path, .words-hub, .screen:has(+ .bottom-nav) { padding-bottom: calc(124px + env(safe-area-inset-bottom)); }
+
+/* 200% zoom (a 195 px wide screen) and very small phones: nothing wider than the screen. */
+@media (max-width: 300px) {
+  .screen { padding-inline: 10px; }
+  .path { padding-inline: 10px; }
+  /* Top bar */
+  .topbar { gap: 6px; padding-inline: 10px; }
+  .brand .logo-mark { width: 28px; height: 28px; }
+  .stat { gap: 3px; }
+  .todo-tag { flex-wrap: wrap; justify-content: flex-start; margin-top: 0; }
+  /* Bottom bar: two rows of two, icon beside the words. */
+  .bottom-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; padding: 4px 4px calc(4px + env(safe-area-inset-bottom)); }
+  .nav-tab, .bottom-nav:has(.nav-help) .nav-tab {
+    display: grid; grid-template-columns: auto minmax(0, 1fr); align-content: center; column-gap: 4px; row-gap: 0;
+    max-width: none; min-height: 46px; padding: 3px 4px; text-align: start;
+  }
+  .nav-icon { grid-row: 1 / span 2; width: 30px; height: 28px; }
+  .nav-icon .icon { width: 20px; height: 20px; }
+  .nav-label, .nav-help { justify-self: start; text-align: start; font-size: 13px; }
+  .path, .words-hub, .screen:has(+ .bottom-nav) { padding-bottom: calc(132px + env(safe-area-inset-bottom)); }
+  html:has(.bottom-nav) { scroll-padding-bottom: 120px; }
+  /* Path */
+  .unit-head { flex-wrap: wrap; gap: 6px 10px; }
+  .unit-num { width: auto; font-size: 2rem; }
+  .unit-icon { width: 48px; height: 48px; }
+  .unit-titles { flex-basis: 100%; }
+  .unit-head h2 { font-size: 1.15rem; }
+  .bays::before { inset-inline-start: 15px; }
+  .bay { grid-template-columns: 32px minmax(0, 1fr); column-gap: 6px; }
+  .bay-marker { width: 28px; height: 28px; font-size: 1rem; }
+  .bay-now .bay-marker { width: 32px; height: 32px; font-size: 1.1rem; }
+  .bay-card { flex-wrap: wrap; gap: 8px; padding: 10px; }
+  .bay-now .bay-card { min-height: 0; padding: 12px; }
+  .bay-char { display: none; }
+  .bay-pic, .bay-now .bay-pic { width: 40px; height: 40px; }
+  .bay-text { flex: 1 1 96px; }
+  .bay-title { overflow-wrap: anywhere; }
+  .bay-now .bay-pic { position: static; }
+  .voice-row { flex-wrap: wrap; }
+  .bay-now .bay-title { font-size: 1.2rem; }
+  .full-only-note { padding-inline-start: 0; }
+  .daily-card { flex-wrap: wrap; padding: 12px; }
+  /* Lesson */
+  .player-top { flex-wrap: wrap; row-gap: 4px; padding-inline: 10px; }
+  .player-top .bar-wrap { order: 5; flex-basis: 100%; }
+  .player-top .sos-btn { margin-inline-start: auto; }
+  .player-body { padding-inline: 10px; }
+  .player-foot { padding-inline: 10px; }
+  .prompt { font-size: 1.3rem; }
+  .btn-go, .foot-actions .btn-go { padding-inline: 8px 58px; font-size: 1rem; }
+  .phrase-sheet-back { padding-inline: 8px 58px; }
+  .speaker { gap: 8px; }
+  .speaker-char, .speaker-build .speaker-char, .situation .speaker-char,
+  .speaker-word.len-m .speaker-char, .speaker-word.len-l .speaker-char { font-size: 64px; }
+  .prompt-row .speaker-char { font-size: 52px; }
+  .speaker-bubble, .speaker-build .speaker-bubble { padding: 6px 10px 6px 6px; gap: 6px; }
+  .speaker-bubble .speak, .speaker-word.len-l .speaker-bubble .speak { width: 40px; height: 40px; }
+  .situation-text { padding-left: 10px; }
+  /* Too narrow for a colleague beside a bubble: the bubble goes under the colleague. */
+  .speaker { flex-wrap: wrap; }
+  .speaker > .speaker-bubble, .speaker-word .speaker-bubble { flex: 1 1 140px; max-width: 100%; margin-bottom: 8px; }
+  .speaker-bubble::before { display: none; }
+  .speaker-nl, .speaker-word.len-m .speaker-nl, .speaker-word.len-l .speaker-nl { font-size: 1.3rem; overflow-wrap: break-word; }
+  .situation .speaker-char { font-size: 64px; margin-top: 0; }
+  .chat-row { flex-wrap: wrap; }
+  .chat-bubble { flex: 1 1 130px; }
+  .chat-bubble::before { display: none; }
+  .chat-me .chat-char { order: -1; margin-inline-start: auto; }
+  .chat-hint { width: auto; }
+  /* An option with a picture: the number and picture on top, the words under them. */
+  .choices-rows .choice:has(> .choice-pic) { flex-wrap: wrap; row-gap: 4px; }
+  .choices-rows .choice:has(> .choice-pic) > .choice-label { flex-basis: 100%; }
+  .choices:not(.choices-pics) .choice:has(> .choice-pic):has(> .stamp) { padding-right: 10px; }
+  .choices:not(.choices-pics) .choice:has(> .choice-pic) .stamp { top: 6px; margin-top: 0; }
+  /* The feedback heading wraps here: no dot left hanging at the end of a line. */
+  .feedback-sep { display: none; }
+  .chat-char { font-size: 60px; }
+  .chat-row { gap: 6px; }
+  .chat-bubble-me { min-width: 0; }
+  .chat-blank { width: 60px; }
+  .choice { gap: 8px; }
+  .choices-rows .choice { padding: 8px 10px; }
+  .choice-num { width: 30px; height: 30px; font-size: 1.1rem; }
+  .choice-pic { width: 36px; height: 36px; }
+  .choices:not(.choices-pics) .choice:has(> .stamp) { padding-right: 56px; }
+  .choices:not(.choices-pics) .stamp { width: 48px; height: 48px; margin-top: -24px; right: 4px; }
+  .choices:not(.choices-pics) .stamp-word { font-size: 1rem; }
+  .choices:not(.choices-pics) .stamp-wrong .stamp-word { font-size: 0.8rem; }
+  .choices-pics { gap: 8px; }
+  .choices-pics .choice { min-height: 112px; padding: 8px; }
+  .match-grid { grid-template-columns: minmax(0, 1fr); }
+  .listen-buttons .speak-lg { width: 80px; height: 68px; }
+  .tile { padding: 6px 10px; font-size: 1.05rem; }
+  .answer-line { padding-inline-end: 56px; }
+  .feedback { margin-inline: 0; padding: 10px 10px 8px; gap: 8px; }
+  .feedback-icon { width: 34px; height: 34px; }
+  .tip-say-row { flex-wrap: wrap; }
+  .sheet { padding-inline: 10px; }
+  .phrase { gap: 10px; padding: 10px; flex-wrap: wrap; }
+  .phrase-sheet-list { margin-inline: -10px; padding-inline: 10px; }
+  .phrase-sheet { max-height: 96dvh; padding-top: 18px; }
+  .phrase-sheet .sheet-title { font-size: 1.1rem; overflow-wrap: anywhere; }
+  .phrase-sheet-icon { display: none; }
+  .phrase-sheet-back { min-height: 52px; margin-top: 8px; }
+  /* Settings and other screens */
+  .lang-grid { grid-template-columns: minmax(0, 1fr); }
+  .segmented { grid-template-columns: minmax(0, 1fr); }
+  .keep-row, .remind-chips { grid-template-columns: minmax(0, 1fr); }
+  .remind-chip { min-height: 0; }
+  .remind-own { flex-wrap: wrap; }
+  .hub-card { gap: 10px; padding: 10px; }
+  .hub-icon { width: 44px; height: 44px; }
+}

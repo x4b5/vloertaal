@@ -182,7 +182,9 @@ export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab:
           >
             <span className="nav-icon" aria-hidden><Icon size={26} /></span>
             <span className="nav-label" lang="nl" aria-hidden>{nl === 'Instellingen' ? 'Instel\u00adlingen' : nl}</span>
-            {word.help && lang && <HelpText className="nav-help" text={word.help} lang={lang} />}
+            {word.help && lang
+              ? <HelpText className="nav-help" text={word.help} lang={lang} />
+              : <span className="nav-help" lang="en" aria-hidden>{word.en}</span>}
           </button>
         );
       })}
