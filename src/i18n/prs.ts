@@ -83,6 +83,11 @@ const lang: HelpLanguage = {
     sectorCare: 'مراقبت',
     sectorHospitality: 'رستوران و هوتل',
     sectorCleaning: 'پاک‌کاری',
+    sound: 'صدا',
+    soundOn: 'صدا روشن',
+    withoutSound: 'بدون صدا',
+    quietHint: 'بدون صدا، درس‌ها سوال شنیدنی ندارند و هیچ چیز خودبخود پخش نمی‌شود. برای شنیدن یک کلمه 🔊 را بزنید، مثلاً با گوشکی.',
+    soundOffToast: 'بدون صدا. می‌توانید صدا را در تنظیمات روشن کنید.',
   },
   gloss: {
     // Units

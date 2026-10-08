@@ -10,6 +10,8 @@ import type { ChatLine, Dialogue, Lesson, Unit } from './types';
  * Only stable, general facts. No amounts that change every year (like the minimum wage in
  * euros): we say where to check instead. Every tip ends with the same "ask for advice" line
  * (house rules: "ask your supervisor").
+ * Also the basis unit "Smart tools" (toolsUnit: translation apps, captions, keep learning),
+ * which curriculum.ts places right after "Asking for help".
  * Every id is also a translation key in src/i18n/work/<lang>.ts.
  */
 
@@ -39,7 +41,7 @@ const coreUnits: Unit[] = [
           { id: 'w.solliciteren', nl: 'solliciteren', en: 'to apply for a job', emoji: '🙋' },
           { id: 'w.contract', nl: 'het contract', en: 'the contract', emoji: '📄' },
           { id: 'w.tekenen', nl: 'tekenen', en: 'to sign', emoji: '✍️' },
-          { id: 'w.tijdelijk', nl: 'tijdelijk', en: 'temporary', emoji: '⏳' },
+          { id: 'w.tijdelijk', nl: 'tijdelijk', en: 'temporary', emoji: '⏳', picture: false },
         ],
         sentences: [
           { id: 's.findwork.1', nl: 'Ik wil solliciteren.', en: 'I want to apply for the job.' },
@@ -60,9 +62,9 @@ const coreUnits: Unit[] = [
           { id: 'w.werkgever', nl: 'de werkgever', en: 'the employer', emoji: '🏭' },
           { id: 'w.uren', nl: 'de uren', en: 'the hours', emoji: '🕐' },
           { id: 'w.oproepkracht', nl: 'de oproepkracht', en: 'the on-call worker', emoji: '📲' },
-          { id: 'w.proeftijd', nl: 'de proeftijd', en: 'the trial period', emoji: '🧪' },
-          { id: 'w.opzegtermijn', nl: 'de opzegtermijn', en: 'the notice period', emoji: '📆' },
-          { id: 'w.cao', nl: 'de cao', en: 'the collective agreement', emoji: '📘' },
+          { id: 'w.proeftijd', nl: 'de proeftijd', en: 'the trial period', emoji: '🧪', picture: false },
+          { id: 'w.opzegtermijn', nl: 'de opzegtermijn', en: 'the notice period', emoji: '📆', picture: false },
+          { id: 'w.cao', nl: 'de cao', en: 'the collective agreement', emoji: '📘', picture: false },
         ],
         sentences: [
           { id: 's.contract.1', nl: 'Hoeveel uur werk ik per week?', en: 'How many hours do I work per week?' },
@@ -89,12 +91,12 @@ const coreUnits: Unit[] = [
         id: 'l.bsn',
         title: 'Your BSN and papers',
         words: [
-          { id: 'w.bsn', nl: 'het BSN', en: 'the citizen service number', emoji: '🔢' },
-          { id: 'w.identiteitsbewijs', nl: 'het identiteitsbewijs', en: 'the ID document', emoji: '🛂' },
+          { id: 'w.bsn', nl: 'het BSN', en: 'the citizen service number', emoji: '🔢', picture: false },
+          { id: 'w.identiteitsbewijs', nl: 'het identiteitsbewijs', en: 'the ID document', emoji: '🪪' },
           { id: 'w.gemeente', nl: 'de gemeente', en: 'the town hall, the municipality', emoji: '🏘️' },
           { id: 'w.inschrijven', nl: 'inschrijven', en: 'to register', emoji: '🖊️' },
           { id: 'w.adres', nl: 'het adres', en: 'the address', emoji: '📮' },
-          { id: 'w.zorgverzekering', nl: 'de zorgverzekering', en: 'the health insurance', emoji: '🏥' },
+          { id: 'w.zorgverzekering', nl: 'de zorgverzekering', en: 'the health insurance', emoji: '🏥', picture: false },
         ],
         sentences: [
           { id: 's.bsn.1', nl: 'Ik schrijf me in bij de gemeente.', en: 'I register at the town hall.' },
@@ -113,11 +115,11 @@ const coreUnits: Unit[] = [
         title: 'Housing',
         words: [
           { id: 'w.kamer', nl: 'de kamer', en: 'the room', emoji: '🛏️' },
-          { id: 'w.huur', nl: 'de huur', en: 'the rent', emoji: '🔑' },
+          { id: 'w.huur', nl: 'de huur', en: 'the rent', emoji: '🔑', picture: false },
           { id: 'w.huurcontract', nl: 'het huurcontract', en: 'the rental contract', emoji: '📑' },
-          { id: 'w.borg', nl: 'de borg', en: 'the deposit', emoji: '💰' },
+          { id: 'w.borg', nl: 'de borg', en: 'the deposit', emoji: '💰', picture: false },
           { id: 'w.huisbaas', nl: 'de huisbaas', en: 'the landlord', emoji: '🧑‍💼' },
-          { id: 'w.inhouden', nl: 'inhouden', en: 'to take off (from your pay)', emoji: '✂️' },
+          { id: 'w.inhouden', nl: 'inhouden', en: 'to take off (from your pay)', emoji: '✂️', picture: false },
         ],
         sentences: [
           { id: 's.housing.1', nl: 'Hoeveel is de huur per week?', en: 'How much is the rent per week?' },
@@ -145,10 +147,10 @@ const coreUnits: Unit[] = [
         title: 'Your payslip',
         words: [
           { id: 'w.loon', nl: 'het loon', en: 'the pay, the wage', emoji: '💶' },
-          { id: 'w.bruto', nl: 'bruto', en: 'gross (before tax)', emoji: '🧾' },
-          { id: 'w.netto', nl: 'netto', en: 'net (what you get)', emoji: '👛' },
+          { id: 'w.bruto', nl: 'bruto', en: 'gross (before tax)', emoji: '🧾', picture: false },
+          { id: 'w.netto', nl: 'netto', en: 'net (what you get)', emoji: '👛', picture: false },
           { id: 'w.loonstrook', nl: 'de loonstrook', en: 'the payslip', emoji: '📃' },
-          { id: 'w.belasting', nl: 'de belasting', en: 'the tax', emoji: '🏛️' },
+          { id: 'w.belasting', nl: 'de belasting', en: 'the tax', emoji: '🏛️', picture: false },
           { id: 'w.uurloon', nl: 'het uurloon', en: 'the pay per hour', emoji: '⏱️' },
         ],
         sentences: [
@@ -169,8 +171,8 @@ const coreUnits: Unit[] = [
         words: [
           { id: 'w.vakantiegeld', nl: 'het vakantiegeld', en: 'the holiday pay', emoji: '🏖️' },
           { id: 'w.overuren', nl: 'de overuren', en: 'the overtime hours', emoji: '🕘' },
-          { id: 'w.toeslag', nl: 'de toeslag', en: 'the extra pay', emoji: '➕' },
-          { id: 'w.minimumloon', nl: 'het minimumloon', en: 'the minimum wage', emoji: '📏' },
+          { id: 'w.toeslag', nl: 'de toeslag', en: 'the extra pay', emoji: '➕', picture: false },
+          { id: 'w.minimumloon', nl: 'het minimumloon', en: 'the minimum wage', emoji: '📏', picture: false },
           { id: 'w.bankrekening', nl: 'de bankrekening', en: 'the bank account', emoji: '🏦' },
           { id: 'w.betalen', nl: 'betalen', en: 'to pay', emoji: '💳' },
         ],
@@ -203,7 +205,7 @@ const coreUnits: Unit[] = [
           { id: 'w.appen', nl: 'appen', en: 'to send a message (app)', emoji: '💬' },
           { id: 'w.kluisje', nl: 'het kluisje', en: 'the locker', emoji: '🔐' },
           { id: 'w.uitzetten', nl: 'uitzetten', en: 'to switch off', emoji: '📴' },
-          { id: 'w.prive', nl: 'privé', en: 'private, personal', emoji: '🏠' },
+          { id: 'w.prive', nl: 'privé', en: 'private, personal', emoji: '🏠', picture: false },
           { id: 'w.foto', nl: 'de foto', en: 'the photo', emoji: '📷' },
         ],
         sentences: [
@@ -224,7 +226,7 @@ const coreUnits: Unit[] = [
         words: [
           { id: 'w.roken', nl: 'roken', en: 'to smoke', emoji: '🚬' },
           { id: 'w.rookplek', nl: 'de rookplek', en: 'the smoking area', emoji: '📍' },
-          { id: 'w.verboden', nl: 'verboden', en: 'not allowed, forbidden', emoji: '🚭' },
+          { id: 'w.verboden', nl: 'verboden', en: 'not allowed, forbidden', emoji: '🚫' },
           { id: 'w.buiten', nl: 'buiten', en: 'outside', emoji: '🌳' },
           { id: 'w.esigaret', nl: 'de e-sigaret', en: 'the e-cigarette (vape)', emoji: '💨' },
           { id: 'w.brandbaar', nl: 'brandbaar', en: 'can burn easily (flammable)', emoji: '🛢️' },
@@ -254,12 +256,12 @@ const coreUnits: Unit[] = [
         id: 'l.health',
         title: 'Safe and healthy work',
         words: [
-          { id: 'w.arbowet', nl: 'de Arbowet', en: 'the health and safety law', emoji: '📜' },
-          { id: 'w.veilig', nl: 'veilig', en: 'safe', emoji: '🛡️' },
+          { id: 'w.arbowet', nl: 'de Arbowet', en: 'the health and safety law', emoji: '📜', picture: false },
+          { id: 'w.veilig', nl: 'veilig', en: 'safe', emoji: '🛡️', picture: false },
           { id: 'w.werktijden', nl: 'de werktijden', en: 'the working hours', emoji: '🕗' },
           { id: 'w.rust', nl: 'de rust', en: 'the rest', emoji: '😌' },
           { id: 'w.beschermingsmiddelen', nl: 'de beschermingsmiddelen', en: 'the protective equipment', emoji: '🦺' },
-          { id: 'w.arbeidsinspectie', nl: 'de Arbeidsinspectie', en: 'the Labour Inspectorate', emoji: '🔍' },
+          { id: 'w.arbeidsinspectie', nl: 'de Arbeidsinspectie', en: 'the Labour Inspectorate', emoji: '🔍', picture: false },
         ],
         sentences: [
           { id: 's.health.1', nl: 'Ik heb recht op pauze.', en: 'I have a right to a break.' },
@@ -277,12 +279,12 @@ const coreUnits: Unit[] = [
         id: 'l.rights',
         title: 'Your rights',
         words: [
-          { id: 'w.recht', nl: 'het recht', en: 'the right', emoji: '✅' },
-          { id: 'w.discriminatie', nl: 'de discriminatie', en: 'the discrimination', emoji: '🚫' },
-          { id: 'w.vakbond', nl: 'de vakbond', en: 'the union', emoji: '✊' },
-          { id: 'w.juridischloket', nl: 'het Juridisch Loket', en: 'the free legal help desk', emoji: '⚖️' },
-          { id: 'w.klacht', nl: 'de klacht', en: 'the complaint', emoji: '📣' },
-          { id: 'w.ontslag', nl: 'het ontslag', en: 'the dismissal', emoji: '🚪' },
+          { id: 'w.recht', nl: 'het recht', en: 'the right', emoji: '✅', picture: false },
+          { id: 'w.discriminatie', nl: 'de discriminatie', en: 'the discrimination', emoji: '🚫', picture: false },
+          { id: 'w.vakbond', nl: 'de vakbond', en: 'the union', emoji: '✊', picture: false },
+          { id: 'w.juridischloket', nl: 'het Juridisch Loket', en: 'the free legal help desk', emoji: '⚖️', picture: false },
+          { id: 'w.klacht', nl: 'de klacht', en: 'the complaint', emoji: '📣', picture: false },
+          { id: 'w.ontslag', nl: 'het ontslag', en: 'the dismissal', emoji: '🚪', picture: false },
         ],
         sentences: [
           { id: 's.rights.1', nl: 'Ik wil een klacht indienen.', en: 'I want to make a complaint.' },
@@ -310,11 +312,11 @@ const coreUnits: Unit[] = [
         title: 'Days off',
         words: [
           { id: 'w.vakantiedagen', nl: 'de vakantiedagen', en: 'the days off (holiday)', emoji: '🏝️' },
-          { id: 'w.verlof', nl: 'het verlof', en: 'the leave', emoji: '🌴' },
-          { id: 'w.aanvragen', nl: 'aanvragen', en: 'to ask for, to apply for', emoji: '📝' },
-          { id: 'w.feestdag', nl: 'de feestdag', en: 'the public holiday', emoji: '🎉' },
-          { id: 'w.vrij', nl: 'vrij', en: 'free, not working', emoji: '🆓' },
-          { id: 'w.calamiteitenverlof', nl: 'het calamiteitenverlof', en: 'the emergency leave', emoji: '🚨' },
+          { id: 'w.verlof', nl: 'het verlof', en: 'the leave', emoji: '🌴', picture: false },
+          { id: 'w.aanvragen', nl: 'aanvragen', en: 'to ask for, to apply for', emoji: '📝', picture: false },
+          { id: 'w.feestdag', nl: 'de feestdag', en: 'the public holiday', emoji: '🎉', picture: false },
+          { id: 'w.vrij', nl: 'vrij', en: 'free, not working', emoji: '🆓', picture: false },
+          { id: 'w.calamiteitenverlof', nl: 'het calamiteitenverlof', en: 'the emergency leave', emoji: '🚨', picture: false },
         ],
         sentences: [
           { id: 's.leave.1', nl: 'Ik wil verlof aanvragen.', en: 'I want to ask for leave.' },
@@ -336,8 +338,8 @@ const coreUnits: Unit[] = [
           { id: 'w.betermelden', nl: 'beter melden', en: 'to say you are better', emoji: '🙂' },
           { id: 'w.bedrijfsarts', nl: 'de bedrijfsarts', en: 'the company doctor', emoji: '👩‍⚕️' },
           { id: 'w.ziekte', nl: 'de ziekte', en: 'the illness', emoji: '🦠' },
-          { id: 'w.doorbetalen', nl: 'doorbetalen', en: 'to keep paying', emoji: '💶' },
-          { id: 'w.wachtdag', nl: 'de wachtdag', en: 'the waiting day (no pay)', emoji: '⏸️' },
+          { id: 'w.doorbetalen', nl: 'doorbetalen', en: 'to keep paying', emoji: '💶', picture: false },
+          { id: 'w.wachtdag', nl: 'de wachtdag', en: 'the waiting day (no pay)', emoji: '⏸️', picture: false },
         ],
         sentences: [
           { id: 's.illness.1', nl: 'Ik meld me ziek.', en: 'I am calling in sick.' },
@@ -544,13 +546,14 @@ const coreTips: CultureTip[] = [
  * (options c.x.o1-3, the first is the best one; shuffled when shown). Word ids are w.<id>.
  * ---------------------------------------------------------------------------------------- */
 
-type WordRow = [id: string, nl: string, en: string, emoji: string];
+/** A word row; a fifth `false` marks an abstract word (no picture, see Word.picture). */
+type WordRow = [id: string, nl: string, en: string, emoji: string, picture?: false];
 type Pair = [nl: string, en: string];
 
 const lesson = (slug: string, title: string, words: WordRow[], sentences: Pair[], [q, a]: [Pair, Pair]): Lesson => ({
   id: `l.${slug}`,
   title,
-  words: words.map(([id, nl, en, emoji]) => ({ id: `w.${id}`, nl, en, emoji })),
+  words: words.map(([id, nl, en, emoji, picture]) => ({ id: `w.${id}`, nl, en, emoji, ...(picture === false ? { picture } : {}) })),
   sentences: sentences.map(([nl, en], i) => ({ id: `s.${slug}.${i + 1}`, nl, en })),
   dialogues: [chat(line(`c.${slug}.q`, ...q), line(`c.${slug}.a`, ...a))],
 });
@@ -601,11 +604,11 @@ const applyUnit = unit('apply', 'Applying for a job', 'Solliciteren', '📨', '#
     'Your CV and letter',
     [
       ['cv', 'het cv', 'the CV', '🗂️'],
-      ['motivatie', 'de motivatie', 'the motivation (why you want the job)', '💡'],
-      ['ervaring', 'de ervaring', 'the experience', '🧰'],
+      ['motivatie', 'de motivatie', 'the motivation (why you want the job)', '💡', false],
+      ['ervaring', 'de ervaring', 'the experience', '🧰', false],
       ['opleiding', 'de opleiding', 'the education, the training', '🎓'],
-      ['vaardigheden', 'de vaardigheden', 'the skills', '🤹'],
-      ['referentie', 'de referentie', 'the reference (someone who can tell about your work)', '👍'],
+      ['vaardigheden', 'de vaardigheden', 'the skills', '🤹', false],
+      ['referentie', 'de referentie', 'the reference (someone who can tell about your work)', '👍', false],
     ],
     [
       ['Hier is mijn cv.', 'Here is my CV.'],
@@ -619,11 +622,11 @@ const applyUnit = unit('apply', 'Applying for a job', 'Solliciteren', '📨', '#
     'The job interview',
     [
       ['sollicitatiegesprek', 'het sollicitatiegesprek', 'the job interview', '🪑'],
-      ['begroeten', 'begroeten', 'to greet', '😊'],
+      ['begroeten', 'begroeten', 'to greet', '👋'],
       ['vertellen', 'vertellen', 'to tell', '💬'],
-      ['vraagstellen', 'een vraag stellen', 'to ask a question', '✋'],
-      ['salaris', 'het salaris', 'the salary', '💵'],
-      ['functie', 'de functie', 'the job, the position', '💼'],
+      ['vraagstellen', 'een vraag stellen', 'to ask a question', '🙋'],
+      ['salaris', 'het salaris', 'the salary', '💶'],
+      ['functie', 'de functie', 'the job, the position', '💼', false],
     ],
     [
       ['Ik heb een sollicitatiegesprek.', 'I have a job interview.'],
@@ -751,9 +754,9 @@ const socialUnit = unit('social', 'Getting along', 'Omgang met collega’s', '�
     'smalltalk',
     'Small talk and breaks',
     [
-      ['weekend', 'het weekend', 'the weekend', '🛋️'],
+      ['weekend', 'het weekend', 'the weekend', '🛋️', false],
       ['koffie', 'de koffie', 'the coffee', '☕'],
-      ['gezellig', 'gezellig', 'cosy, nice together', '🥰'],
+      ['gezellig', 'gezellig', 'cosy, nice together', '🥰', false],
       ['weer', 'het weer', 'the weather', '🌦️'],
       ['verjaardag', 'de verjaardag', 'the birthday', '🎂'],
       ['gefeliciteerd', 'gefeliciteerd', 'congratulations', '🥳'],
@@ -769,12 +772,12 @@ const socialUnit = unit('social', 'Getting along', 'Omgang met collega’s', '�
     'mistakes',
     'Feedback and mistakes',
     [
-      ['fout', 'de fout', 'the mistake', '🙈'],
+      ['fout', 'de fout', 'the mistake', '❌'],
       ['compliment', 'het compliment', 'the compliment', '👏'],
-      ['feedback', 'de feedback', 'the feedback', '🗨️'],
+      ['feedback', 'de feedback', 'the feedback', '🗨️', false],
       ['uitleggen', 'uitleggen', 'to explain', '🧑‍🏫'],
       ['leren', 'leren', 'to learn', '📚'],
-      ['verbeteren', 'verbeteren', 'to improve, to correct', '🔧'],
+      ['verbeteren', 'verbeteren', 'to improve, to correct', '🔧', false],
     ],
     [
       ['Sorry, ik heb een fout gemaakt.', 'Sorry, I made a mistake.'],
@@ -787,10 +790,10 @@ const socialUnit = unit('social', 'Getting along', 'Omgang met collega’s', '�
     'respect',
     'Respect for everyone',
     [
-      ['respect', 'het respect', 'the respect', '🤝'],
-      ['gelijk', 'gelijk', 'equal', '🟰'],
-      ['grens', 'de grens', 'the limit, the boundary', '🚧'],
-      ['neezeggen', 'nee zeggen', 'to say no', '🛑'],
+      ['respect', 'het respect', 'the respect', '🤝', false],
+      ['gelijk', 'gelijk', 'equal', '🟰', false],
+      ['grens', 'de grens', 'the limit, the boundary', '🚧', false],
+      ['neezeggen', 'nee zeggen', 'to say no', '🙅'],
       ['pesten', 'pesten', 'to bully', '😣'],
       ['vertrouwenspersoon', 'de vertrouwenspersoon', 'the confidential adviser', '🫂'],
     ],
@@ -859,11 +862,11 @@ const laterUnits: Unit[] = [
       'warning',
       'Warning signs',
       [
-        ['uitbuiting', 'de uitbuiting', 'the exploitation', '⛓️'],
+        ['uitbuiting', 'de uitbuiting', 'the exploitation', '⛓️', false],
         ['paspoort', 'het paspoort', 'the passport', '📕'],
-        ['schuld', 'de schuld', 'the debt', '💸'],
-        ['dreigen', 'dreigen', 'to threaten', '🗯️'],
-        ['onderbetaald', 'onderbetaald', 'paid too little', '📉'],
+        ['schuld', 'de schuld', 'the debt', '💸', false],
+        ['dreigen', 'dreigen', 'to threaten', '🗯️', false],
+        ['onderbetaald', 'onderbetaald', 'paid too little', '📉', false],
         ['afpakken', 'afpakken', 'to take away', '🫳'],
       ],
       [
@@ -878,8 +881,8 @@ const laterUnits: Unit[] = [
       'Getting help',
       [
         ['politie', 'de politie', 'the police', '🚓'],
-        ['anoniem', 'anoniem', 'without your name (anonymous)', '🕶️'],
-        ['melden', 'melden', 'to report', '🔔'],
+        ['anoniem', 'anoniem', 'without your name (anonymous)', '🕶️', false],
+        ['melden', 'melden', 'to report', '🔔', false],
         ['hulp', 'de hulp', 'the help', '🆘'],
         ['gevaar', 'het gevaar', 'the danger', '⚠️'],
         ['bang', 'bang', 'afraid', '😨'],
@@ -899,9 +902,9 @@ const laterUnits: Unit[] = [
       [
         ['telefoontje', 'het telefoontje', 'the phone call', '☎️'],
         ['terugbellen', 'terugbellen', 'to call back', '↩️'],
-        ['bereikbaar', 'bereikbaar', 'can be reached (by phone)', '📶'],
-        ['reden', 'de reden', 'the reason', '❔'],
-        ['overmorgen', 'overmorgen', 'the day after tomorrow', '⏩'],
+        ['bereikbaar', 'bereikbaar', 'can be reached (by phone)', '📶', false],
+        ['reden', 'de reden', 'the reason', '❔', false],
+        ['overmorgen', 'overmorgen', 'the day after tomorrow', '⏩', false],
         ['inspreken', 'inspreken', 'to leave a voice message', '🎙️'],
       ],
       [
@@ -917,10 +920,10 @@ const laterUnits: Unit[] = [
       [
         ['bericht', 'het bericht', 'the message', '✉️'],
         ['app', 'de app', 'the app', '📲'],
-        ['reageren', 'reageren', 'to reply, to react', '↪️'],
-        ['ruilen', 'ruilen', 'to swap', '🔄'],
+        ['reageren', 'reageren', 'to reply, to react', '↪️', false],
+        ['ruilen', 'ruilen', 'to swap', '🔄', false],
         ['kijken', 'kijken', 'to look, to check', '👀'],
-        ['groet', 'de groet', 'the greeting (at the end of a message)', '💌'],
+        ['groet', 'de groet', 'the greeting (at the end of a message)', '💌', false],
       ],
       [
         ['Ik ben tien minuten te laat.', 'I am ten minutes late.'],
@@ -941,9 +944,9 @@ const laterUnits: Unit[] = [
         ['certificaat', 'het certificaat', 'the certificate', '🏅'],
         ['cursus', 'de cursus', 'the course', '📖'],
         ['examen', 'het examen', 'the exam', '✏️'],
-        ['slagen', 'slagen', 'to pass (an exam)', '✅'],
+        ['slagen', 'slagen', 'to pass (an exam)', '✅', false],
         ['heftruckcertificaat', 'het heftruckcertificaat', 'the forklift certificate', '🚜'],
-        ['halen', 'halen', 'to get (a certificate)', '🏆'],
+        ['halen', 'halen', 'to get (a certificate)', '🏆', false],
       ],
       [
         ['Ik heb een VCA-certificaat.', 'I have a VCA safety certificate.'],
@@ -957,11 +960,11 @@ const laterUnits: Unit[] = [
       'Your diploma and training',
       [
         ['diploma', 'het diploma', 'the diploma', '📜'],
-        ['waarderen', 'laten waarderen', 'to have (a diploma) assessed', '🔎'],
+        ['waarderen', 'laten waarderen', 'to have (a diploma) assessed', '🔎', false],
         ['training', 'de training', 'the training', '🏋️'],
-        ['verplicht', 'verplicht', 'required, compulsory', '❗'],
+        ['verplicht', 'verplicht', 'required, compulsory', '❗', false],
         ['werktijd', 'de werktijd', 'the working time', '🕰️'],
-        ['verderkomen', 'verder komen', 'to get ahead', '📈'],
+        ['verderkomen', 'verder komen', 'to get ahead', '📈', false],
       ],
       [
         ['Ik heb een diploma uit mijn land.', 'I have a diploma from my country.'],
@@ -980,7 +983,7 @@ const laterUnits: Unit[] = [
         ['huisartsenpost', 'de huisartsenpost', 'the GP service for evening, night and weekend', '🌙'],
         ['apotheek', 'de apotheek', 'the pharmacy', '⚕️'],
         ['recept', 'het recept', 'the prescription', '📋'],
-        ['spoed', 'spoed', 'urgent', '⚡'],
+        ['spoed', 'spoed', 'urgent', '⚡', false],
         ['ambulance', 'de ambulance', 'the ambulance', '🚑'],
       ],
       [
@@ -997,12 +1000,12 @@ const laterUnits: Unit[] = [
       'insurance',
       'Health insurance',
       [
-        ['premie', 'de premie', 'the premium (monthly payment)', '🪙'],
-        ['eigenrisico', 'het eigen risico', 'the own risk (costs you pay first)', '🧮'],
-        ['zorgtoeslag', 'de zorgtoeslag', 'the healthcare allowance', '🤲'],
-        ['verzekeraar', 'de verzekeraar', 'the insurer', '☂️'],
-        ['permaand', 'per maand', 'per month', '📅'],
-        ['vergoeden', 'vergoeden', 'to pay for (cover) costs', '💱'],
+        ['premie', 'de premie', 'the premium (monthly payment)', '🪙', false],
+        ['eigenrisico', 'het eigen risico', 'the own risk (costs you pay first)', '🧮', false],
+        ['zorgtoeslag', 'de zorgtoeslag', 'the healthcare allowance', '🤲', false],
+        ['verzekeraar', 'de verzekeraar', 'the insurer', '☂️', false],
+        ['permaand', 'per maand', 'per month', '📅', false],
+        ['vergoeden', 'vergoeden', 'to pay for (cover) costs', '💱', false],
       ],
       [
         ['Ik betaal elke maand premie.', 'I pay a premium every month.'],
@@ -1019,10 +1022,10 @@ const laterUnits: Unit[] = [
       [
         ['brief', 'de brief', 'the letter', '📨'],
         ['post', 'de post', 'the mail', '📬'],
-        ['belastingdienst', 'de Belastingdienst', 'the Tax Office', '🏛️'],
-        ['aangifte', 'de aangifte', 'the tax return', '🧾'],
-        ['inkomen', 'het inkomen', 'the income', '📊'],
-        ['terugbetalen', 'terugbetalen', 'to pay back', '🔙'],
+        ['belastingdienst', 'de Belastingdienst', 'the Tax Office', '🏛️', false],
+        ['aangifte', 'de aangifte', 'the tax return', '🧾', false],
+        ['inkomen', 'het inkomen', 'the income', '📊', false],
+        ['terugbetalen', 'terugbetalen', 'to pay back', '🔙', false],
       ],
       [
         ['Ik begrijp deze brief niet.', 'I do not understand this letter.'],
@@ -1039,8 +1042,8 @@ const laterUnits: Unit[] = [
         ['link', 'de link', 'the link', '🔗'],
         ['oplichter', 'de oplichter', 'the scammer', '🦹'],
         ['sms', 'de sms', 'the text message (SMS)', '📩'],
-        ['controleren', 'controleren', 'to check', '✔️'],
-        ['nep', 'nep', 'fake', '🎭'],
+        ['controleren', 'controleren', 'to check', '✔️', false],
+        ['nep', 'nep', 'fake', '🎭', false],
       ],
       [
         ['Ik geef mijn pincode nooit.', 'I never give my PIN.'],
@@ -1078,7 +1081,7 @@ const laterUnits: Unit[] = [
         ['inchecken', 'inchecken', 'to check in', '📥'],
         ['uitchecken', 'uitchecken', 'to check out', '📤'],
         ['bankpas', 'de bankpas', 'the bank card', '🏧'],
-        ['reiskosten', 'de reiskostenvergoeding', 'the travel allowance', '🎫'],
+        ['reiskosten', 'de reiskostenvergoeding', 'the travel allowance', '🎫', false],
       ],
       [
         ['Ik check in met mijn bankpas.', 'I check in with my bank card.'],
@@ -1093,11 +1096,11 @@ const laterUnits: Unit[] = [
       'ww',
       'Unemployment benefit',
       [
-        ['uitkering', 'de uitkering', 'the benefit (money from the government)', '💶'],
-        ['ww', 'de WW', 'the unemployment benefit', '🛟'],
-        ['werkloos', 'werkloos', 'unemployed', '😔'],
-        ['uwv', 'het UWV', 'UWV (the office for work and benefits)', '🏢'],
-        ['ontslagnemen', 'ontslag nemen', 'to quit your job', '🚶'],
+        ['uitkering', 'de uitkering', 'the benefit (money from the government)', '💶', false],
+        ['ww', 'de WW', 'the unemployment benefit', '🛟', false],
+        ['werkloos', 'werkloos', 'unemployed', '😔', false],
+        ['uwv', 'het UWV', 'UWV (the office for work and benefits)', '🏢', false],
+        ['ontslagnemen', 'ontslag nemen', 'to quit your job', '🚶', false],
         ['werkzoekende', 'de werkzoekende', 'the job seeker', '🔭'],
       ],
       [
@@ -1114,12 +1117,12 @@ const laterUnits: Unit[] = [
       'newjob',
       'Looking for new work',
       [
-        ['baan', 'de baan', 'the job', '👷'],
+        ['baan', 'de baan', 'the job', '👷', false],
         ['zoeken', 'zoeken', 'to look for', '🔍'],
         ['bewaren', 'bewaren', 'to keep', '🗄️'],
-        ['bijwerken', 'bijwerken', 'to update', '🔃'],
+        ['bijwerken', 'bijwerken', 'to update', '🔃', false],
         ['gratis', 'gratis', 'free (no cost)', '🎁'],
-        ['nooit', 'nooit', 'never', '⛔'],
+        ['nooit', 'nooit', 'never', '⛔', false],
       ],
       [
         ['Ik zoek een nieuwe baan.', 'I am looking for a new job.'],
@@ -1370,7 +1373,7 @@ const sectorUnits: Unit[] = [
         ['last', 'de last', 'the load', '🏋️'],
         ['gat', 'het gat', 'the hole', '🕳️'],
         ['vallen', 'vallen', 'to fall', '⬇️'],
-        ['risico', 'het risico', 'the risk', '🎲'],
+        ['risico', 'het risico', 'the risk', '🎲', false],
         ['weigeren', 'weigeren', 'to refuse', '🙅‍♀️'],
       ],
       [
@@ -1404,7 +1407,7 @@ const sectorUnits: Unit[] = [
       'quality',
       'Quality',
       [
-        ['kwaliteit', 'de kwaliteit', 'the quality', '⭐'],
+        ['kwaliteit', 'de kwaliteit', 'the quality', '⭐', false],
         ['product', 'het product', 'the product', '🧴'],
         ['afkeuren', 'afkeuren', 'to reject', '👎'],
         ['beschadigd', 'beschadigd', 'damaged', '💔'],
@@ -1428,7 +1431,7 @@ const sectorUnits: Unit[] = [
         ['wassen', 'wassen', 'to wash', '🛁'],
         ['aankleden', 'aankleden', 'to get dressed, to dress someone', '👗'],
         ['eten', 'het eten', 'the food', '🍽️'],
-        ['rolstoel', 'de rolstoel', 'the wheelchair', '♿'],
+        ['rolstoel', 'de rolstoel', 'the wheelchair', '🦽'],
         ['verpleegkundige', 'de verpleegkundige', 'the nurse', '💉'],
       ],
       [
@@ -1442,11 +1445,11 @@ const sectorUnits: Unit[] = [
       'privacy',
       'Privacy and safety in care',
       [
-        ['privacy', 'de privacy', 'the privacy', '🤫'],
-        ['hygiene', 'de hygiëne', 'the hygiene', '🫧'],
-        ['doorgeven', 'doorgeven', 'to pass on (information)', '📨'],
-        ['geheim', 'geheim', 'secret', '🤐'],
-        ['toestemming', 'de toestemming', 'the permission', '👌'],
+        ['privacy', 'de privacy', 'the privacy', '🤫', false],
+        ['hygiene', 'de hygiëne', 'the hygiene', '🫧', false],
+        ['doorgeven', 'doorgeven', 'to pass on (information)', '📨', false],
+        ['geheim', 'geheim', 'secret', '🤐', false],
+        ['toestemming', 'de toestemming', 'the permission', '👌', false],
         ['gevallen', 'gevallen', 'fallen', '🤕'],
       ],
       [
@@ -1469,7 +1472,7 @@ const sectorUnits: Unit[] = [
         ['snijden', 'snijden', 'to cut', '🔪'],
         ['pan', 'de pan', 'the pan', '🥘'],
         ['koelcel', 'de koelcel', 'the cold store (walk-in fridge)', '🧊'],
-        ['allergie', 'de allergie', 'the allergy', '🥜'],
+        ['allergie', 'de allergie', 'the allergy', '🥜', false],
         ['datum', 'de datum', 'the date', '📆'],
       ],
       [
@@ -1547,11 +1550,11 @@ const sectorTips = [
     ['Deze boor is kapot. Is er een andere?', 'This drill is broken. Is there another one?'],
     'There is a toolbox meeting, but your Dutch is not good yet. What do you do?',
     [
-      'Go, listen, and ask a colleague to explain what you did not understand.',
+      'Go, use a translation app if that is allowed, and ask a colleague afterwards what you did not understand.',
       'Skip it, because you will not understand it anyway.',
       'Sign the attendance list without going.',
     ],
-    'Safety information is for everyone. Asking for an explanation afterwards is normal and keeps you safe.',
+    'Safety information is for everyone. A translation app can help you follow the meeting, if phones are allowed there. Asking a colleague afterwards is normal and checks that you understood it right.',
     NONE,
   ),
   tipFor(
@@ -1691,6 +1694,113 @@ const sectorTips = [
   ),
 ];
 
+// ---- Smart tools (a basis unit right after "Asking for help", spliced in by curriculum.ts) ----
+
+export const toolsUnit = unit('tools', 'Smart tools', 'Slimme hulpmiddelen', '📱', '#d1495b', [
+  lesson(
+    'translate',
+    'Translate with your phone',
+    [
+      ['vertaalapp', 'de vertaalapp', 'the translation app', '📱'],
+      ['vertalen', 'vertalen', 'to translate', '🔤'],
+      ['camera', 'de camera', 'the camera', '📸'],
+      ['briefje', 'het briefje', 'the note (a small paper)', '🗒️'],
+      ['spreken', 'spreken', 'to speak', '🗣️'],
+      ['vertaling', 'de vertaling', 'the translation', '📝'],
+    ],
+    [
+      ['Ik vertaal het met mijn telefoon.', 'I translate it with my phone.'],
+      ['Mag ik dit even vertalen?', 'May I quickly translate this?'],
+      ['Kunt u in mijn telefoon spreken?', 'Can you speak into my phone?'],
+    ],
+    [['Wat staat er op dat briefje?', 'What does that note say?'], ['Wacht even, ik vertaal het.', 'Wait a moment, I will translate it.']],
+  ),
+  lesson(
+    'understood',
+    'Understand and be understood',
+    [
+      ['herhalen', 'herhalen', 'to repeat', '🔁'],
+      ['opschrijven', 'opschrijven', 'to write down', '✏️'],
+      ['latenzien', 'laten zien', 'to show', '👉'],
+      ['ondertiteling', 'de ondertiteling', 'the captions (speech as text)', '💬'],
+      ['instructie', 'de instructie', 'the instruction', '📋'],
+      ['plaatje', 'het plaatje', 'the picture', '🖼️'],
+    ],
+    [
+      ['Wilt u het opschrijven?', 'Will you write it down?'],
+      ['Kunt u het laten zien?', 'Can you show it?'],
+      ['Is er een instructie met plaatjes?', 'Is there an instruction with pictures?'],
+    ],
+    [['Eerst opruimen, dan inpakken.', 'First tidy up, then pack.'], ['Dus ik moet eerst opruimen?', 'So I must tidy up first?']],
+  ),
+  lesson(
+    'keeplearning',
+    'Keep learning',
+    [
+      ['bibliotheek', 'de bibliotheek', 'the (public) library', '🏫'],
+      ['taalhuis', 'het Taalhuis', 'the Taalhuis (free help with Dutch)', '🗨️', false],
+      ['oefenen', 'oefenen', 'to practise', '🎯', false],
+      ['luisteren', 'luisteren', 'to listen', '👂'],
+      ['elkedag', 'elke dag', 'every day', '📆', false],
+      ['woord', 'het woord', 'the word', '🔡', false],
+    ],
+    [
+      ['Ik oefen elke dag tien minuten.', 'I practise ten minutes every day.'],
+      ['Wat betekent dit woord?', 'What does this word mean?'],
+      ['Wil je Nederlands met mij praten?', 'Will you speak Dutch with me?'],
+    ],
+    [['Zal ik Engels praten?', 'Shall I speak English?'], ['Nee, liever Nederlands. Ik wil oefenen.', 'No, Dutch please. I want to practise.']],
+  ),
+]);
+
+const toolsTips = [
+  tipFor(
+    'translate',
+    '🌐',
+    'Translation apps: smart, but check',
+    'A translation app, like Google Translate, helps a lot. You can type, speak, or use conversation mode to talk with a colleague. With the camera you can translate signs, notes and instructions. On many phones, WhatsApp can also translate messages. Use your phone only where it is safe and allowed: not near machines or forklifts, and ask first (more in the lesson "Your phone at work"). Apps make mistakes. For important things, like your contract, a letter or a safety instruction, also ask a person to explain it. Do not take photos of confidential work papers without permission.',
+    ['Mag ik mijn telefoon gebruiken om te vertalen?', 'May I use my phone to translate?'],
+    'Your supervisor gives you a paper with safety instructions in Dutch. You understand only a few words. What do you do?',
+    [
+      'Ask if you may translate it with your phone, and ask your supervisor to explain the important parts.',
+      'Say "ja, ja" and start working. You will understand it later.',
+      'Take a photo and send it to a group chat of friends, so they can translate it.',
+    ],
+    'A translation app helps you understand quickly, but it can make mistakes. For safety, an explanation from a person is the best check. Work papers can be confidential, so do not share them without permission.',
+    NONE,
+  ),
+  tipFor(
+    'understood',
+    '💬',
+    'Check that you understood',
+    'Your phone can turn speech into text (live captions): Live Transcribe on Android, Live Captions on iPhone. Check which languages your phone supports. You can also ask someone to write it down, to show it, or to speak slowly. Ask if there is an instruction with pictures, or in your language. Then say back what you understood: "Dus ik moet eerst …?" This is normal here, and it prevents mistakes.',
+    ['Dus ik moet eerst de dozen tellen?', 'So I must count the boxes first?'],
+    'A colleague explains how a new machine works. She speaks fast and you miss some words. What do you do?',
+    [
+      'Ask her to show it or write the steps down, then say back what you understood.',
+      'Nod and say "ja, ja", so she does not lose time.',
+      'Try the machine alone later and see what happens.',
+    ],
+    'Showing, writing and saying it back are quick checks. Your colleague can correct you before something goes wrong. Here, this is seen as careful, not as slow.',
+    NONE,
+  ),
+  tipFor(
+    'keeplearning',
+    '📚',
+    'Keep learning, a little every day',
+    'A few minutes every day helps more than one long hour a week. Save new words from work in a notes app on your phone. Listen to easy Dutch, for example the NOS Jeugdjournaal (news for children) or a podcast in slow Dutch. Many public libraries have a Taalhuis: free help with Dutch, often with a taalcafé (a place to practise speaking) or a language buddy (taalmaatje). Colleagues often switch to English to help you. Ask them kindly to speak Dutch with you: most people like to help.',
+    ['Praat maar Nederlands met mij, dan leer ik het sneller.', 'Just speak Dutch with me, then I learn it faster.'],
+    'Your colleagues always switch to English when they talk to you. You want to learn Dutch. What do you do?',
+    [
+      'Thank them, and ask them kindly to speak Dutch with you, slowly.',
+      'Say nothing. Dutch will come by itself.',
+      'Stop talking with colleagues until your Dutch is perfect.',
+    ],
+    'Colleagues often switch to English to be kind. When you ask for Dutch, most of them are happy to help. Speaking a little every day at work is one of the fastest ways to learn.',
+    NONE,
+  ),
+];
+
 // ---- Course order of everything in this file ----
 
 const byId = (id: string) => coreUnits.find((u) => u.id === id)!;
@@ -1708,10 +1818,10 @@ export const workUnits: Unit[] = [
   ...sectorUnits,
 ];
 
-const lessonOrder = workUnits.flatMap((u) => u.lessons.map((l) => l.id));
+const lessonOrder = [toolsUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
-/** One "Zo werkt het hier" tip per lesson of workUnits, in course order. */
-export const workTips: CultureTip[] = [...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips].sort(
+/** One "Zo werkt het hier" tip per lesson of toolsUnit and workUnits, in course order. */
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

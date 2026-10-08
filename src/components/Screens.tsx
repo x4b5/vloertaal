@@ -19,6 +19,7 @@ import type { Progress, ThemeChoice } from '../lib/progress';
 import { Bi, HelpText } from './Bi';
 import { LogoMark, Wordmark } from './Logo';
 import { WordPicture } from '../pictures';
+import { hasPicture } from '../lib/wordPicture';
 import {
   AlertIcon,
   AutoThemeIcon,
@@ -36,6 +37,7 @@ import {
   InfoIcon,
   MoonIcon,
   SpeakerIcon,
+  SpeakerOffIcon,
   SunIcon,
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
@@ -248,7 +250,8 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
             const record = completed[lesson.id];
             const open = unlocked(lesson.id);
             const state = !allowed ? 'locked' : record ? 'done' : open ? 'now' : 'locked';
-            const first = lesson.words[0];
+            // The bay shows the lesson's first word that has a picture (none if all are abstract).
+            const first = lesson.words.find(hasPicture);
             return (
               <li key={lesson.id} className={`bay bay-${state}`}>
                 <span className="bay-marker" aria-hidden>
@@ -416,13 +419,15 @@ function useVoices() {
   return { device, recorded };
 }
 
-export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade }: {
+export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade }: {
   progress: Progress;
   lang?: HelpLanguage;
   onLang: (code: LangCode | null) => void;
   onSector: (sector: SectorChoice) => void;
   onTheme: (theme: ThemeChoice) => void;
   onVoice: (voice: string | null) => void;
+  /** "Without sound" on (true) or off. */
+  onQuiet: (quiet: boolean) => void;
   onReset: () => void;
   onAbout: () => void;
   /** Absent when Settings is the "Instellingen" tab (the bottom bar leads away). */
@@ -474,6 +479,31 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
           </button>
         ))}
       </div>
+
+      {/* A website can't see the phone's mute switch, so the learner says it here (or in a lesson). */}
+      <h2 className="settings-sector-title">
+        <span lang="nl">Geluid</span>
+        <Bi text={ui('sound', lang)} />
+      </h2>
+      <div className="segmented segmented-2" role="radiogroup" aria-label={ui('sound').en}>
+        {([false, true] as const).map((quiet) => {
+          const picked = Boolean(progress.quiet) === quiet;
+          return (
+            <button
+              key={String(quiet)}
+              type="button"
+              role="radio"
+              aria-checked={picked}
+              className={picked ? 'picked' : ''}
+              onClick={() => onQuiet(quiet)}
+            >
+              {quiet ? <SpeakerOffIcon size={26} /> : <SpeakerIcon size={26} />}
+              <Bi text={ui(quiet ? 'withoutSound' : 'soundOn', lang)} />
+            </button>
+          );
+        })}
+      </div>
+      <p className="muted small sound-hint"><Bi text={ui('quietHint', lang)} /></p>
 
       <h2><Bi text={ui('voice', lang)} /></h2>
       <VoicePicker current={progress.voice} lang={lang} onPick={onVoice} />

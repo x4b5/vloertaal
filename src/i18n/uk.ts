@@ -83,6 +83,11 @@ const lang: HelpLanguage = {
     sectorCare: 'Догляд',
     sectorHospitality: 'Готелі й ресторани',
     sectorCleaning: 'Прибирання',
+    sound: 'Звук',
+    soundOn: 'Зі звуком',
+    withoutSound: 'Без звуку',
+    quietHint: 'Без звуку в уроках немає вправ на слухання і нічого не грає саме. Натисніть 🔊, щоб почути слово, наприклад у навушниках.',
+    soundOffToast: 'Без звуку. Звук можна увімкнути в Налаштуваннях.',
   },
   gloss: {
     // Unit: First day at work

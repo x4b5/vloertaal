@@ -1,5 +1,5 @@
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
-import { workTips } from './work';
+import { toolsUnit, workTips } from './work';
 
 /**
  * "Zo werkt het hier": Dutch workplace customs, norms and values, one per lesson.
@@ -211,7 +211,7 @@ export const teamworkUnit: Unit = {
         { id: 'w.probleem', nl: 'het probleem', en: 'the problem', emoji: '❓' },
         { id: 'w.praten', nl: 'praten', en: 'to talk', emoji: '🗣️' },
         { id: 'w.nietfijn', nl: 'niet fijn', en: 'not nice', emoji: '😕' },
-        { id: 'w.eerlijk', nl: 'eerlijk', en: 'fair, honest', emoji: '⚖️' },
+        { id: 'w.eerlijk', nl: 'eerlijk', en: 'fair, honest', emoji: '⚖️', picture: false },
         { id: 'w.boos', nl: 'boos', en: 'angry', emoji: '😠' },
         { id: 'w.samen', nl: 'samen', en: 'together', emoji: '👥' },
       ],
@@ -229,11 +229,11 @@ export const teamworkUnit: Unit = {
       title: 'Agreements and saying no',
       words: [
         { id: 'w.afspraak', nl: 'de afspraak', en: 'the agreement', emoji: '🤝' },
-        { id: 'w.lukken', nl: 'lukken', en: 'to work out, to manage', emoji: '👍' },
+        { id: 'w.lukken', nl: 'lukken', en: 'to work out, to manage', emoji: '👍', picture: false },
         { id: 'w.oneens', nl: 'het oneens zijn', en: 'to disagree', emoji: '🙅' },
-        { id: 'w.zaterdag', nl: 'zaterdag', en: 'Saturday', emoji: '🗓️' },
+        { id: 'w.zaterdag', nl: 'zaterdag', en: 'Saturday', emoji: '🗓️', picture: false },
         { id: 'w.overwerken', nl: 'overwerken', en: 'to work overtime', emoji: '🌙' },
-        { id: 'w.misschien', nl: 'misschien', en: 'maybe', emoji: '🤔' },
+        { id: 'w.misschien', nl: 'misschien', en: 'maybe', emoji: '🤔', picture: false },
       ],
       sentences: [
         { id: 's.agree.1', nl: 'Nee, dat lukt vandaag niet.', en: 'No, that does not work today.' },
@@ -250,8 +250,17 @@ export const teamworkUnit: Unit = {
   ] satisfies Lesson[],
 };
 
-/** All tips in course order: the ones above, then those of the work-and-rights units (src/content/work.ts). */
-export const cultureTips: CultureTip[] = [...baseTips, ...workTips];
+/** The "Smart tools" unit sits right after "Asking for help" (l.understand), so its tips do too. */
+const isToolsTip = (t: CultureTip) => toolsUnit.lessons.some((l) => l.id === t.lessonId);
+const afterHelp = baseTips.findIndex((t) => t.lessonId === 'l.understand') + 1;
+
+/** All tips in course order: the ones above (with the Smart tools tips after "Asking for help"), then those of the work-and-rights units (src/content/work.ts). */
+export const cultureTips: CultureTip[] = [
+  ...baseTips.slice(0, afterHelp),
+  ...workTips.filter(isToolsTip),
+  ...baseTips.slice(afterHelp),
+  ...workTips.filter((t) => !isToolsTip(t)),
+];
 
 export function tipForLesson(lessonId: string): CultureTip | undefined {
   return cultureTips.find((t) => t.lessonId === lessonId);

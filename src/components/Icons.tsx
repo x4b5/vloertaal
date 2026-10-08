@@ -47,6 +47,14 @@ export const SpeakerIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** Speaker with a cross: "Without sound". */
+export const SpeakerOffIcon = (p: IconProps) => (
+  <Svg {...p} viewBox="0 0 32 32">
+    <path d="M4 12.5a2 2 0 0 1 2-2h4l7-5.6c.9-.7 2-.1 2 1V25.1c0 1.1-1.1 1.7-2 1l-7-5.6H6a2 2 0 0 1-2-2z" fill="currentColor" />
+    <path d="M22.5 12.5l7 7M29.5 12.5l-7 7" {...stroke} strokeWidth={2.6} />
+  </Svg>
+);
+
 /** Snail-pace speaker: a turtle shell, for "play slowly". */
 export const SlowIcon = (p: IconProps) => (
   <Svg {...p} viewBox="0 0 32 32">

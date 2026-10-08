@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { findLesson, learnedWords } from './content/curriculum';
 import { getHelpLanguage } from './i18n';
 import type { LangCode } from './i18n/types';
-import { setPreferredVoice } from './lib/audio';
+import { setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
@@ -116,6 +116,10 @@ export default function App() {
 
   useEffect(() => { saveProgress(progress); }, [progress]);
   useEffect(() => { setPreferredVoice(progress.voice); }, [progress.voice]);
+  // Set during render, not in an effect: a child's effect (an exercise that would say its word)
+  // runs before the parent's, and must already know that sound is off.
+  setQuietAudio(Boolean(progress.quiet));
+  const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { window.scrollTo(0, 0); }, [view.name]);
   // A preview never plays a later unit (e.g. via Back/Forward into an old entry): go home.
@@ -160,6 +164,8 @@ export default function App() {
           review={view.review}
           lang={lang}
           backSignal={lessonBack}
+          quiet={Boolean(progress.quiet)}
+          onQuiet={setQuiet}
           onQuit={() => { leaving.current = true; back(); }}
           onFinish={finish}
         />
@@ -199,9 +205,10 @@ export default function App() {
             onSector={setSector}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
+            onQuiet={setQuiet}
             onReset={() => {
-              // Keep look, voice and sector; only learning progress is wiped.
-              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, sector: p.sector }));
+              // Keep look, voice, sound and sector; only learning progress is wiped.
+              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector }));
               back();
             }}
             onAbout={() => tab('about')}

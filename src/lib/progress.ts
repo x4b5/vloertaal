@@ -17,6 +17,11 @@ export interface Progress {
   themeVersion?: number;
   /** voiceURI of the chosen Dutch voice; null = best available. */
   voice: string | null;
+  /**
+   * "Without sound": no listening exercises, nothing plays by itself, no effect sounds.
+   * Speaker buttons still play on tap. Missing in older saves = sound on.
+   */
+  quiet?: boolean;
   helpLang: LangCode | null;
   /** The learner's sector ('none' = not sure yet); undefined = not asked yet (first run). */
   sector?: SectorChoice;

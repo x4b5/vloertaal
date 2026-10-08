@@ -1,5 +1,5 @@
 import { teamworkUnit } from './culture';
-import { workUnits } from './work';
+import { toolsUnit, workUnits } from './work';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
 
 /**
@@ -94,6 +94,8 @@ export const units: Unit[] = [
       },
     ],
   },
+  // Smart tools (translation apps, captions, keep learning): unit 03, right after "Asking for help".
+  toolsUnit,
   {
     id: 'u.safety',
     title: 'Safety first',

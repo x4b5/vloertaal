@@ -83,6 +83,11 @@ const lang: HelpLanguage = {
     sectorCare: 'Bakım',
     sectorHospitality: 'Otel ve restoran',
     sectorCleaning: 'Temizlik',
+    sound: 'Ses',
+    soundOn: 'Ses açık',
+    withoutSound: 'Sessiz',
+    quietHint: 'Sessiz modda derslerde dinleme sorusu olmaz ve hiçbir şey kendiliğinden çalmaz. Bir kelimeyi duymak için 🔊 simgesine dokun, örneğin kulaklıkla.',
+    soundOffToast: 'Sessiz. Sesi Ayarlar’dan açabilirsin.',
   },
   gloss: {
     // Unit: First day at work

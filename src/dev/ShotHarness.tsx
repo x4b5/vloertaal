@@ -1,5 +1,6 @@
 import { tipForLesson } from '../content/culture';
 import { findLesson } from '../content/curriculum';
+import { useState } from 'react';
 import { LessonPlayer } from '../components/LessonPlayer';
 import { About, BottomNav, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar, WordsHub } from '../components/Screens';
 import { Admin } from '../components/Admin';
@@ -13,11 +14,13 @@ import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
 import type { LangCode } from '../i18n/types';
 import { allLessons, allReplies, learnedWords } from '../content/curriculum';
-import { buildTiles, type Exercise } from '../lib/exercises';
+import { buildLesson, buildTiles, type Exercise } from '../lib/exercises';
+import { setQuietAudio } from '../lib/audio';
 import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
 import * as kit from '../pictures/kit';
+import { hasPicture } from '../lib/wordPicture';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -25,6 +28,9 @@ import * as kit from '../pictures/kit';
  * /?shot=sector is the sector choice; &sector=construction sets the sector for path/tips/settings.
  * /?shot=pictures shows every word picture (and the unit banner pictures) for review.
  * Options are always in lesson order, so tests know which one is right.
+ * &quiet=1 starts in "Without sound" (Settings, any lesson shot). /?shot=lesson&at=12 plays a real
+ * built lesson (Safety gear, seed 1; &lesson=l.rights for another) from exercise 12; with &quiet=1
+ * it is built without sound.
  */
 export function ShotHarness({ shot, lang, word }: { shot: string; lang: string | null; word?: string | null }) {
   // Lesson complete: 9 of 11 right the first time, 6 new words (24 in all).
@@ -32,6 +38,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // Day-streak milestone after the very first lesson: streak 1.
   if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
+  const quiet = new URLSearchParams(location.search).get('quiet') === '1';
   // &access=preview shows the path, tips and settings as a preview user sees them.
   const access: Access = new URLSearchParams(location.search).get('access') === 'preview' ? 'preview' : 'full';
   // &sector=construction (or none) sets the learner's sector on the path, tips and settings;
@@ -47,7 +54,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'tips' || shot === 'settings' || shot === 'words') {
     // Half the course done, so several tips are unlocked.
     const done = Object.fromEntries(allLessons.slice(0, 8).map((l) => [l.id, { best: 1, times: 1 }]));
-    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, completed: done };
+    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, quiet, completed: done };
     const l = getHelpLanguage(lang as LangCode);
     if (shot === 'words') {
       return (
@@ -61,7 +68,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       <Tips progress={progress} lang={l} onBack={() => {}} access={access} />
     ) : (
       <>
-        <Settings progress={progress} lang={l} onLang={() => {}} onSector={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
+        <SettingsWithSound progress={progress} lang={l} onLang={() => {}} onSector={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
         <BottomNav current="me" onTab={() => {}} />
       </>
     );
@@ -89,6 +96,23 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     );
   }
   const { lesson } = findLesson('l.gear')!;
+  if (shot === 'lesson') {
+    // &lesson=l.rights plays another lesson (default Safety gear).
+    const picked = findLesson(new URLSearchParams(location.search).get('lesson') ?? '')?.lesson ?? lesson;
+    const at = Number(new URLSearchParams(location.search).get('at') ?? 0);
+    return (
+      <QuietLesson
+        quiet={quiet}
+        lesson={picked}
+        review={false}
+        lang={getHelpLanguage(lang as LangCode)}
+        exercises={buildLesson(picked, { review: false, seed: 1, quiet })}
+        startAt={at}
+        onQuit={() => {}}
+        onFinish={() => {}}
+      />
+    );
+  }
   const [helm, handschoenen, schoenen, hesje] = lesson.words;
   // &word=w.veiligheidsschoenen puts any course word in the spotlight (long-word checks).
   const allWords = units.flatMap((u) => u.lessons.flatMap((l) => l.words));
@@ -116,7 +140,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The chat page sits a little further into the lesson (~55%), as in the reference.
   const before: Exercise[] = shot === 'chat' ? [...pad, ...pad, ex] : pad;
   return (
-    <LessonPlayer
+    <QuietLesson
+      quiet={quiet}
       lesson={shot === 'chat' ? findLesson('l.shift')!.lesson : lesson}
       review
       lang={getHelpLanguage(lang as LangCode)}
@@ -130,16 +155,31 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   );
 }
 
+/** The lesson with a working sound toggle, as App gives it (the setting lives in progress there). */
+function QuietLesson({ quiet: start, ...props }: Omit<React.ComponentProps<typeof LessonPlayer>, 'quiet' | 'onQuiet'> & { quiet: boolean }) {
+  const [quiet, setQuiet] = useState(start);
+  setQuietAudio(quiet);
+  return <LessonPlayer {...props} quiet={quiet} onQuiet={setQuiet} />;
+}
+
+/** Settings whose sound choice can be tapped (the screenshot shows the picked option move). */
+function SettingsWithSound(props: Omit<React.ComponentProps<typeof Settings>, 'onQuiet'>) {
+  const [quiet, setQuiet] = useState(Boolean(props.progress.quiet));
+  return <Settings {...props} progress={{ ...props.progress, quiet }} onQuiet={setQuiet} />;
+}
+
 /** Every word of the course with its picture at 120 px and 48 px, grouped by unit, plus the
  *  unit banner pictures on their colours and the kit's building blocks. Words still without a
- *  picture show their emoji, dimmed. */
+ *  picture show their emoji, dimmed; abstract words (no picture in the course) are greyed and
+ *  marked "geen plaatje". */
 function PicturesSheet() {
   const words = units.flatMap((u) => u.lessons.flatMap((l) => l.words));
   const done = words.filter((w) => pictures[w.id]).length;
+  const abstract = words.filter((w) => !hasPicture(w)).length;
   return (
     <div className="pics-page">
       <h1>Woordplaatjes</h1>
-      <p className="pics-id">{done} / {words.length} drawn</p>
+      <p className="pics-id">{done} / {words.length} drawn · {abstract} abstract (geen plaatje: word card only, greyed here)</p>
       <h2>Bouwstenen (kit)</h2>
       <div className="pics-grid">
         {KIT_SAMPLES.map(([name, draw]) => (
@@ -169,11 +209,12 @@ function PicturesSheet() {
             </div>
             <div className="pics-grid">
               {unit.lessons.flatMap((l) => l.words).map((w) => (
-                <div key={w.id} className={`pics-cell ${pictures[w.id] ? '' : 'pics-missing'}`}>
+                <div key={w.id} className={`pics-cell ${!hasPicture(w) ? 'pics-abstract' : pictures[w.id] ? '' : 'pics-missing'}`}>
                   <div className="pics-row">
                     <WordPicture id={w.id} emoji={w.emoji} size={120} />
                     <WordPicture id={w.id} emoji={w.emoji} size={48} />
                   </div>
+                  {!hasPicture(w) && <span className="pics-none" lang="nl">geen plaatje</span>}
                   <span className="pics-nl" lang="nl">{w.nl}</span>
                   <span className="pics-id">{w.id}</span>
                 </div>

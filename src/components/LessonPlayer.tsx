@@ -2,12 +2,12 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
 import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { sounds, speak, speechAvailable } from '../lib/audio';
-import { buildLesson, isGraded, type Exercise } from '../lib/exercises';
+import { autoSpeak, sounds, speechAvailable } from '../lib/audio';
+import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
 import { voiceFor } from '../lib/voices';
 import { castFor } from './Characters';
 import { Bi, HelpText } from './Bi';
-import { CheckIcon, ChevronIcon, CloseIcon } from './Icons';
+import { CheckIcon, ChevronIcon, CloseIcon, SpeakerIcon, SpeakerOffIcon } from './Icons';
 import {
   type Answer,
   BuildExercise,
@@ -47,8 +47,6 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
       return { text: ex.word.nl, nl: true };
   }
 }
-
-const needsAudio = (ex: Exercise) => ex.kind === 'listen' || ex.kind === 'type';
 
 /** Short Dutch label on the kraft tag above each exercise. */
 const KIND_TAG: Record<Exercise['kind'], string> = {
@@ -100,7 +98,7 @@ function ButtonBlock({ icon }: { icon: 'check' | 'next' }) {
   );
 }
 
-export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0 }: {
+export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -113,14 +111,34 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   /** Goes up by one each time the system Back button is pressed during the lesson. */
   backSignal?: number;
   onFinish: (r: LessonResult) => void;
+  /** "Without sound" (a saved setting): no listening exercises, nothing plays by itself. */
+  quiet?: boolean;
+  /** Switches "Without sound" on or off for good (the header toggle, "I can't listen now"). */
+  onQuiet?: (quiet: boolean) => void;
 }) {
-  const initial = useMemo(() => exercises ?? buildLesson(lesson, { review }), [exercises, lesson, review]);
+  // The lesson is planned once, with the setting it started with; switching sound off midway
+  // skips the listening exercises that are left instead (see audioOff).
+  const [quietAtStart] = useState(quiet);
+  const initial = useMemo(
+    () => exercises ?? buildLesson(lesson, { review, quiet: quietAtStart }),
+    [exercises, lesson, review, quietAtStart],
+  );
   const [queue, setQueue] = useState<Exercise[]>(() => [...initial, ...(repeats ?? [])]);
   const [index, setIndex] = useState(startAt);
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [checked, setChecked] = useState(false);
   const graded = useRef({ right: 0, total: 0 });
-  const [audioOff, setAudioOff] = useState(!speechAvailable());
+  /** "I can't listen now" without a saved setting to switch (screenshot harness). */
+  const [cantListen, setCantListen] = useState(false);
+  const soundOff = quiet || cantListen;
+  const audioOff = !speechAvailable() || soundOff;
+  /** Short line after the sound setting changed: 'off' = without sound, 'on' = sound on. */
+  const [soundNote, setSoundNote] = useState<'off' | 'on' | null>(null);
+  useEffect(() => {
+    if (!soundNote) return;
+    const t = setTimeout(() => setSoundNote(null), 4500);
+    return () => clearTimeout(t);
+  }, [soundNote]);
 
   const ex = queue[index];
   // Quitting loses the lesson's answers, so the X and the system Back button ask first.
@@ -175,7 +193,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       : ex.kind === 'build' ? castFor(ex.sentence.id)
       : ex.kind === 'situation' || ex.kind === 'tip' ? castFor(ex.tip.id)
       : 'bram';
-    if (sol.nl) speak(sol.text, false, 'nl', voiceFor(who));
+    if (sol.nl) autoSpeak(sol.text, false, 'nl', voiceFor(who));
   }
 
   function finish() {
@@ -195,14 +213,23 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     } else setIndex(i);
   }
 
+  /** Leave the listening exercise on screen (unanswered) for the next one that needs no sound. */
   function skipAudio() {
-    setAudioOff(true);
     setAnswer(null);
     setChecked(false);
     let i = index + 1;
     while (i < queue.length && needsAudio(queue[i])) i++;
     if (i >= queue.length) finish();
     else setIndex(i);
+  }
+
+  /** Sound off for good (header toggle or "I can't listen now"), or back on. */
+  function setSound(off: boolean) {
+    if (onQuiet) onQuiet(off);
+    else setCantListen(off);
+    setSoundNote(off ? 'off' : 'on');
+    // Switched off while a listening exercise waits for an answer: go on without it.
+    if (off && needsAudio(ex) && !checked) skipAudio();
   }
 
   const verdict: 'right' | 'wrong' | undefined = checked && answer && isGraded(ex) ? (answer.correct ? 'right' : 'wrong') : undefined;
@@ -267,6 +294,17 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     <div className="player">
       <header className="player-top">
         <button type="button" className="icon-btn" onClick={() => setAskQuit(true)} aria-label="Quit lesson"><CloseIcon size={28} /></button>
+        {/* Sound on/off for a learner on the bus; pressed = "Without sound" (saved, see Settings). */}
+        <button
+          type="button"
+          className={`icon-btn sound-toggle ${soundOff ? 'is-off' : ''}`}
+          onClick={() => setSound(!soundOff)}
+          aria-pressed={soundOff}
+          aria-label={ui('withoutSound').en}
+          title={(soundOff ? ui('withoutSound') : ui('soundOn')).en}
+        >
+          {soundOff ? <SpeakerOffIcon size={26} /> : <SpeakerIcon size={26} />}
+        </button>
         <div className="bar-wrap">
           <div className="segs" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>
             {queue.map((_, i) => <span key={i} className={`seg ${i >= initial.length ? 'seg-repeat' : ''} ${segState(i)}`} />)}
@@ -277,6 +315,12 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         </span>
       </header>
 
+      {soundNote && (
+        <div className="sound-note" role="status" key={soundNote}>
+          {soundNote === 'off' ? <SpeakerOffIcon size={20} /> : <SpeakerIcon size={20} />}
+          <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : 'soundOn', lang)} />
+        </div>
+      )}
       <main className="player-body">
         <div className="ex-tag">
           {repeatsLeft > 0 ? (
@@ -324,7 +368,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
           )}
           <div className="foot-actions">
             {needsAudio(ex) && !checked && (
-              <button type="button" className="btn btn-ghost" onClick={skipAudio}>
+              <button type="button" className="btn btn-ghost" onClick={() => setSound(true)}>
                 <Bi text={ui('cantListen', lang)} />
               </button>
             )}

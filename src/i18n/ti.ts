@@ -83,6 +83,11 @@ const lang: HelpLanguage = {
     sectorCare: 'ክንክን',
     sectorHospitality: 'ቤት ብልዕን ሆቴልን',
     sectorCleaning: 'ጽሬት',
+    sound: 'ድምጺ',
+    soundOn: 'ድምጺ ክፉት',
+    withoutSound: 'ብዘይ ድምጺ',
+    quietHint: 'ብዘይ ድምጺ፡ ኣብ ትምህርትታት ናይ ምስማዕ ሕቶታት የለን፡ ዋላ ሓደ ነገር ድማ ባዕሉ ኣይጻወትን። ሓደ ቃል ንምስማዕ 🔊 ጠውቑ፡ ንኣብነት ብኢርፎን።',
+    soundOffToast: 'ብዘይ ድምጺ። ኣብ ምድላዋት ድምጺ ክትከፍቱ ትኽእሉ ኢኹም።',
   },
   gloss: {
     // Units

@@ -52,4 +52,16 @@ describe('theme default', () => {
     store.set('vloertaal:v1', JSON.stringify({ onboarded: true, theme: 'auto', themeVersion: 2 }));
     expect(loadProgress().theme).toBe('auto');
   });
+
+  it('keeps "Without sound" across reloads; older saves have sound on', async () => {
+    (globalThis as { localStorage?: unknown }).localStorage = ls;
+    const { loadProgress, saveProgress } = await import('../src/lib/progress');
+    store.clear();
+    expect(loadProgress().quiet).toBeFalsy();
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, theme: 'light', themeVersion: 2, xp: 30 }));
+    expect(loadProgress().quiet).toBeFalsy();
+    saveProgress({ ...loadProgress(), quiet: true });
+    expect(loadProgress().quiet).toBe(true);
+    expect(loadProgress().xp).toBe(30);
+  });
 });

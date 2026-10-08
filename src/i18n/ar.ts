@@ -83,6 +83,11 @@ const lang: HelpLanguage = {
     sectorCare: 'الرعاية',
     sectorHospitality: 'المطاعم والفنادق',
     sectorCleaning: 'التنظيف',
+    sound: 'الصوت',
+    soundOn: 'الصوت يعمل',
+    withoutSound: 'بدون صوت',
+    quietHint: 'بدون صوت، لا توجد أسئلة استماع في الدروس ولا يُشغَّل شيء تلقائيًا. اضغط 🔊 لتسمع كلمة، مثلًا بسماعات الأذن.',
+    soundOffToast: 'بدون صوت. يمكنك تشغيل الصوت في الإعدادات.',
   },
   gloss: {
     // Units

@@ -1,10 +1,17 @@
-/** A single Dutch word or short fixed phrase, taught with a picture (emoji). */
+/** A single Dutch word or short fixed phrase, taught with a picture (drawing or emoji) unless abstract. */
 export interface Word {
   /** Stable id, also used as the key for help-language translations. */
   id: string;
   nl: string;
   en: string;
   emoji: string;
+  /**
+   * `false` for an abstract word (a right, a rule, a time, a feeling) that no picture can show
+   * without misleading. It is taught with the word, its sound and the gloss only: no picture in
+   * the intro, the match cards or the path, and never in a "Which one is …?" picture choice.
+   * The emoji stays for data compatibility but is not shown.
+   */
+  picture?: false;
 }
 
 /** A full sentence, practised by building it from word tiles. */
