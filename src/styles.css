@@ -2176,8 +2176,11 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .bay-open .bay-pic { opacity: 0.6; }
 .bay-locked .bay-pic { opacity: 0.32; filter: grayscale(1); }
 .bay-chev { flex: none; color: var(--ink-3); }
-/* The next lesson: its picture before the title, clear of Bram (in the corner it overlapped his hat). */
-.bay-now .bay-pic { width: 56px; height: 56px; align-self: flex-start; }
+/* The next lesson: Bram is its picture, so the small word picture (often Bram too) is left out;
+   it comes back where Bram is hidden (very narrow screens, the all-topics list). */
+.bay-now .bay-pic { display: none; width: 56px; height: 56px; align-self: flex-start; }
+.other-units .bay-now .bay-pic { display: inline-block; }
+@media (max-width: 300px) { .bay-now .bay-pic { display: inline-block; } }
 .bay-start-label { align-items: flex-start; line-height: 1.15; }
 .bay-start-label.bi-swap > .bi-help { --help-size: 0.72em; color: rgba(255, 253, 248, 0.8); font-weight: 500; }
 .bay-start-label .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.15em; }
