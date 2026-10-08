@@ -50,10 +50,21 @@ export function isOtherSector(unitId: string, sector: SectorChoice | undefined):
   return own !== undefined && own !== sector;
 }
 
-/** The path for a sector: `main` (basis + own sector, course order) and `other` (the rest). */
+/** The slot for the learner's own sector unit(s): where the warehouse unit sits in the course (04). */
+const SECTOR_SLOT = 'u.warehouse';
+
+/**
+ * The path for a sector: `main` (basis units, with the learner's own sector unit(s) early, in the
+ * warehouse's slot right after Safety) and `other` (the other sectors' units, in course order).
+ * With no sector chosen, or 'none': the whole course in its own order.
+ */
 export function coursePlan(sector: SectorChoice | undefined): { main: Unit[]; other: Unit[] } {
+  if (!sector || sector === 'none') return { main: units, other: [] };
+  const own = units.filter((u) => unitSector(u.id) === sector);
+  const basis = units.filter((u) => unitSector(u.id) === undefined);
+  const at = units.slice(0, units.findIndex((u) => u.id === SECTOR_SLOT)).filter((u) => unitSector(u.id) === undefined).length;
   return {
-    main: units.filter((u) => !isOtherSector(u.id, sector)),
+    main: [...basis.slice(0, at), ...own, ...basis.slice(at)],
     other: units.filter((u) => isOtherSector(u.id, sector)),
   };
 }

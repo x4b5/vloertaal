@@ -452,7 +452,10 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
       <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta compact />
       {lang && !lang.reviewed && <p className="muted small">beta: {ui('beta').en}</p>}
 
-      <h2><Bi text={ui('sector', lang)} /></h2>
+      <h2 className="settings-sector-title">
+        <span lang="nl">Waar werk je?</span>
+        <Bi text={ui('chooseSector', lang)} />
+      </h2>
       <SectorPicker current={progress.sector} lang={lang} onPick={onSector} compact />
 
       <h2><Bi text={ui('theme', lang)} /></h2>

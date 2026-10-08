@@ -1585,3 +1585,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .other-units .bay-now .bay-marker { width: 36px; height: 36px; font-size: 1.25rem; }
 .other-units .bay-now .bay-start { background: var(--yellow); color: #1e2226; }
 .other-units .bay-now .bay-start .icon { color: #1e2226; }
+/* Settings: the sector heading as on the first-run screen, Dutch first. */
+.settings-sector-title { display: flex; flex-direction: column; gap: 2px; }
+.settings-sector-title .bi-en { font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
+.settings-sector-title .bi-help { --help-size: 0.8rem; }
