@@ -663,8 +663,13 @@ h2 { font-size: 1.25rem; }
 }
 /* "het hesje = the safety vest", with the help language underneath. */
 .feedback-pair { display: flex; flex-direction: column; gap: 2px; }
-.pair-main { font-size: 1.15rem; font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
-.pair-eq { color: var(--ink-3); font-weight: 500; padding: 0 0.2em; }
+/* "dank je wel = thank you": one left-to-right unit (also in right-to-left text). It breaks only
+   between the Dutch and "= meaning", and a short meaning never breaks inside. */
+.pair-main { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.35em; font-size: 1.15rem; font-weight: 600; color: var(--ink); overflow-wrap: break-word; }
+.pair-main > * { min-width: 0; }
+.pair-short { white-space: nowrap; }
+.player[dir='rtl'] .feedback .pair-main { justify-content: flex-end; text-align: left; }
+.pair-eq { color: var(--ink-3); font-weight: 500; padding: 0 0.2em 0 0; }
 .feedback-pair .bi-help { --help-size: 1rem; }
 .feedback-meaning { display: flex; flex-direction: column; gap: 2px; margin-top: 6px; font-size: 0.95rem; font-weight: 500; }
 .feedback-meaning .bi-help { --help-size: 0.9rem; }
@@ -2002,6 +2007,43 @@ svg.emoji-xl { width: 140px; height: 140px; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .player-foot::before { background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)); } }
 :root[data-theme='dark'] .player-foot::before { background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)); }
 .player-foot.foot-static { position: relative; }
+/* More of the exercise under the footer: besides the shadow, a small "more" chevron centred on
+   the footer's top edge, over what the footer already cuts off (a tap scrolls down). */
+.foot-more-btn {
+  position: absolute; z-index: 3; top: -16px; left: 50%; margin-left: -26px; display: grid; place-items: center;
+  width: 52px; height: 30px; border: 2px solid var(--edge); border-radius: 999px;
+  background: var(--card); color: var(--ink); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  animation: rm-fade 0.2s ease-out both;
+}
+.foot-more-btn:active { transform: translateY(1px); }
+/* The long label's "more" arrow has its own room under the text, never over it. */
+.player .player-foot .feedback:has(> .feedback-more) { padding-bottom: 40px; }
+.player .player-foot .feedback > .feedback-more { bottom: 6px; }
+/* "Type what you hear" as "hear and pick the written word": the word's picture after Check. */
+.hear-pick .listen-buttons { align-items: center; }
+.hear-pick-pic { flex: none; width: 72px; height: 72px; animation: rm-fade 0.2s ease-out both; }
+.hear-pick-choices .choice-nl { font-size: 1.3rem; }
+/* Dictation: "I can't write this yet", the help language large, with a pencil. */
+.btn-cant-write { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.cant-write-icon { flex: none; display: grid; place-items: center; color: var(--ink-2); }
+.cant-write-text { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; min-width: 0; text-align: start; }
+.cant-write-text .bi { align-items: flex-start; }
+.cant-write-nl { font-size: 0.78rem; font-weight: 500; color: var(--muted); }
+/* The retry chip: HERHALEN, the help language large, and how many are left. */
+.tag-repeat .tag-count { font-weight: 650; font-variant-numeric: tabular-nums; }
+/* Settings: "I also want to learn to write". */
+.writing-icon { flex: none; display: grid; place-items: center; color: var(--ink-2); }
+.writing-card .keep-gloss { order: 0; }
+.writing-card .keep-nl { order: 1; }
+/* A help-language text read aloud by the device's own voice (when it has one). */
+.help-say {
+  flex: none; display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0;
+  border: 2px solid color-mix(in srgb, var(--blue) 45%, transparent); border-radius: 10px;
+  background: var(--card); color: var(--blue);
+}
+.help-say:active { transform: translateY(1px); filter: brightness(0.94); }
+.help-say-row { display: flex; align-items: flex-start; gap: 8px; }
+.help-say-row > :not(.help-say) { flex: 1; min-width: 0; }
 /* Focused elements stay clear of the pinned footer and the bottom bar. */
 html { scroll-padding-bottom: calc(var(--foot-h, 0px) + 12px); }
 html:has(.bottom-nav) { scroll-padding-bottom: 104px; }

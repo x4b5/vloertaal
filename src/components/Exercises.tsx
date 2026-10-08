@@ -18,6 +18,7 @@ import { SpeakButton } from './SpeakButton';
 import { letterTiles, NON_LATIN_HELP } from '../lib/letters';
 import { createRng } from '../lib/random';
 import { pickInsteadOfTyping } from '../lib/writing';
+import { HelpSay } from './HelpSay';
 
 export interface Answer {
   correct: boolean;
@@ -832,7 +833,10 @@ function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
   const id = useId();
   return (
     <div className="tip-body">
-      <p id={id}><Bi text={shown} /></p>
+      <div className="help-say-row">
+        <p id={id}><Bi text={shown} /></p>
+        <HelpSay text={text.help} lang={lang} />
+      </div>
       {long && (
         <button type="button" className="tip-more" aria-expanded={open} aria-controls={id} onClick={() => setOpen((o) => !o)}>
           <span className="tip-more-nl" lang="nl">{open ? 'minder' : 'meer'}</span>
@@ -865,7 +869,11 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
               <span lang="nl" className="situation-nl">{said}</span>
             </span>
           )}
-          <Bi text={gloss(tip.situation.id, tip.situation.en, lang)} />
+          {/* Much help-language text: the device reads it aloud when it has a voice for it. */}
+          <span className="help-say-row">
+            <Bi text={gloss(tip.situation.id, tip.situation.en, lang)} />
+            <HelpSay text={gloss(tip.situation.id, tip.situation.en, lang).help} lang={lang} />
+          </span>
         </div>
       </div>
       <ChoiceGrid

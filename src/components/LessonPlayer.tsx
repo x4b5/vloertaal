@@ -388,10 +388,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       // The header (close, sound, progress bar) is sticky: nothing may slide under it.
       const head = document.querySelector('.player-top')?.getBoundingClientRect().bottom ?? 0;
       const limit = foot.getBoundingClientRect().top - 12;
-      // The exercise tag stays whole under the header (its top is the scroll margin): the
-      // label may cover the foot of the options rather than clip the tag.
-      const tag = document.querySelector('.player-body .ex-tag')?.getBoundingClientRect().top ?? top;
-      const room = Math.min(top, tag) - head - 8;
+      // The pick and the right answer matter more than the tag and the question above them
+      // (both stay one scroll away): they may slide under the header, the marked options not.
+      const room = top - head - 8;
       const by = Math.min(bottom - limit, Math.max(0, room));
       if (bottom > limit && by > 0) window.scrollBy({ top: by, behavior: reducedMotion() ? 'auto' : 'smooth' });
     });
@@ -626,14 +625,14 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   ) : pair && (
     <div className="feedback-pair">
       {/* "de helm = the helmet" is one left-to-right unit, also inside right-to-left text. */}
-      <span className="pair-main" dir={rtl ? 'ltr' : undefined}>
-        {pair.nl && (
-          <>
-            <strong lang="nl" dir={rtl ? 'ltr' : undefined}>{pair.nl}</strong>
-            <span className="pair-eq"> = </span>
-          </>
-        )}
-        <span className="bi-en" lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
+      <span className="pair-main" dir="ltr">
+        {pair.nl && <strong lang="nl" dir="ltr">{pair.nl}</strong>}
+        {/* "= thank you" stays on one line when it is short; it may move under the Dutch as a
+            whole, but never breaks inside. */}
+        <span className={`pair-rest ${pair.meaning.en.length <= 28 ? 'pair-short' : ''}`} dir="ltr">
+          {pair.nl && <span className="pair-eq">= </span>}
+          <span className="bi-en" lang="en" dir="ltr">{pair.meaning.en}</span>
+        </span>
       </span>
       {pairHelp && lang && (
         <HelpText text={pairHelp} lang={lang} />
@@ -746,6 +745,17 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         </div>
       </main>
       <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''}`} ref={footRef}>
+        {/* More of the exercise underneath: a visible "more" chevron (the shadow alone is easy to miss). */}
+        {moreBelow && (
+          <button
+            type="button"
+            className="foot-more-btn"
+            aria-label="Scroll down"
+            onClick={() => window.scrollBy({ top: Math.round(window.innerHeight * 0.4), behavior: reducedMotion() ? 'auto' : 'smooth' })}
+          >
+            <ChevronDownIcon size={22} />
+          </button>
+        )}
         <div className="foot-inner">
           {/* Always present, so screen readers hear what is put in it one tick after Check. */}
           <div className="sr-only" role="status">{live}</div>
