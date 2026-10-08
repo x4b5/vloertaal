@@ -7,21 +7,25 @@ import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
-import { Milestone } from './components/Milestone';
+import { Milestone, StreakStopped } from './components/Milestone';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
 import { type Access, lessonAllowed, loadAccess, saveAccess } from './lib/access';
 import { takeLinkedUnit } from './lib/unitLink';
-import { completeDaily, completeLesson, currentStreak, dayKey, emptyProgress, loadProgress, saveProgress, streakWentUp } from './lib/progress';
-import { DAILY_ID, addLessonWords, applyReview, dailyLesson, dailyWordIds, dueIds, seedCards } from './lib/spaced';
+import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
+import { DAILY_ID, addLessonWords, applyReview, dailyCard, dailyLesson, dailyWordIds, seedCards, strongerCount } from './lib/spaced';
+import { isNextInCourse } from './lib/exercises';
+import { mainLessons } from './content/sectors';
+import { gloss } from './i18n';
+import { persistStorage } from './lib/install';
 
 type View =
   | { name: 'home' }
   /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[] }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; next?: string }
   | { name: 'streak'; streak: number }
   | { name: 'words' }
   | { name: 'phrasebook' }
@@ -48,8 +52,22 @@ if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 /** A coach link (?unit=pay) asks to open the path at that unit; read once at start. */
 const linkedUnit = takeLinkedUnit();
 
+/**
+ * The saved progress, brought up to date for today: a free day covers one missed day; when the
+ * streak stopped, `stopped` holds the lost streak so a calm screen can say so once.
+ */
+function startProgress() {
+  const { progress, broken } = settleStreak(loadProgress(), new Date());
+  return { progress, stopped: broken ?? null };
+}
+
 export default function App() {
-  const [progress, setProgress] = useState(loadProgress);
+  const [start] = useState(startProgress);
+  const [progress, setProgress] = useState(start.progress);
+  /** "Je reeks is gestopt bij N": shown once on this open, before the path. */
+  const [stopped, setStopped] = useState<number | null>(start.stopped);
+  /** The lesson just finished: the path scrolls to the next one and stamps this one in. */
+  const [arrived, setArrived] = useState<string | null>(null);
   const [access, setAccess] = useState<Access | null>(loadAccess);
   const grant = (a: Access) => { saveAccess(a); setAccess(a); };
   const [view, setView] = useState<View>(() => adminRequested() ? { name: 'admin' } : linkedUnit ? HOME : restored());
@@ -169,10 +187,20 @@ export default function App() {
           ? { ...completeDaily(progress, accuracy, now), cards: applyReview(cards, results, today) }
           : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: addLessonWords(cards, found.lesson.words, results, today) };
         setProgress(next);
+        // The first finished lesson: ask the browser to keep this site's storage (the progress).
+        if (!daily && !Object.keys(progress.completed).length) persistStorage();
         const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
         const before = learnedWords(progress.completed).size;
         const words = learnedWords(next.completed).size;
-        replace({ name: 'result', right, total, newWords: words - before, words, streakUp, repeated: daily ? found.lesson.words.length : undefined });
+        // The next lesson on the learner's own course, for "Volgende:" on the result.
+        const upNext = daily ? undefined : mainLessons(progress.sector).find((l) => isNextInCourse(l.id, next.completed, access, progress.sector));
+        if (!daily) setArrived(view.lessonId);
+        replace({
+          name: 'result', right, total, newWords: words - before, words, streakUp,
+          repeated: daily ? found.lesson.words.length : undefined,
+          stronger: daily ? strongerCount(cards, next.cards) : undefined,
+          next: upNext?.id,
+        });
       };
       return (
         <LessonPlayer
@@ -196,12 +224,23 @@ export default function App() {
           newWords={view.newWords}
           words={view.words}
           repeated={view.repeated}
+          stronger={view.stronger}
+          next={view.next ? nextTitle(view.next, lang) : undefined}
           lang={lang}
           onDone={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}
         />
       );
     case 'streak':
-      return <Milestone streak={view.streak} lang={lang} onDone={back} />;
+      return (
+        <Milestone
+          streak={view.streak}
+          lang={lang}
+          onDone={back}
+          days={workWeek(progress, new Date())}
+          best={bestStreak(progress)}
+          freezes={progress.freezes ?? 0}
+        />
+      );
     case 'tips':
       return <Tips progress={progress} lang={lang} onBack={back} access={access} />;
     case 'about':
@@ -230,6 +269,7 @@ export default function App() {
               back();
             }}
             onAbout={() => tab('about')}
+            onRestore={(next) => setProgress(next)}
             access={access}
             onAccess={grant}
             focusUpgrade={view.upgrade}
@@ -249,9 +289,13 @@ export default function App() {
         </>
       );
     default:
+      if (stopped !== null) {
+        return <StreakStopped streak={stopped} best={bestStreak(progress)} lang={lang} onDone={() => setStopped(null)} />;
+      }
       return (
         <>
           <TopBar
+            done={doneToday(progress, new Date())}
             streak={currentStreak(progress, new Date())}
             words={learnedWords(progress.completed).size}
             lang={lang}
@@ -261,7 +305,9 @@ export default function App() {
             progress={progress}
             lang={lang}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
-            dueToday={dueIds(progress.cards ?? {}, dayKey(new Date())).length}
+            daily={Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : null}
+            arrived={arrived}
+            onArrived={() => setArrived(null)}
             onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: dailyWordIds(progress.cards ?? {}, dayKey(new Date())) })}
             onAbout={() => tab('about')}
             access={access}
@@ -273,6 +319,11 @@ export default function App() {
         </>
       );
   }
+}
+
+function nextTitle(id: string, lang: ReturnType<typeof getHelpLanguage>) {
+  const found = findLesson(id);
+  return found ? gloss(id, found.lesson.title, lang) : undefined;
 }
 
 function adminRequested(): boolean {

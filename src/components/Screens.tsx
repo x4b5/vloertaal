@@ -6,13 +6,13 @@ import { cultureTips } from '../content/culture';
 import { findItem, phrasebookIds, units } from '../content/curriculum';
 import { unitIcons } from '../content/unitIcons';
 import { unitLink } from '../lib/unitLink';
-import { DAILY_MAX } from '../lib/spaced';
+import type { DailyCard } from '../lib/spaced';
 import { coursePlan, unitSector, type SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { SectorIcon, SectorPicker } from './Sector';
 import { fillN, gloss, helpLanguages, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
 import { VOICE_SAMPLE } from '../lib/voices';
 import { isNextInCourse, isUnlocked } from '../lib/exercises';
@@ -44,6 +44,8 @@ import {
   SunIcon,
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
+import { FlameIcon } from './StreakArt';
+import { BackupCard, ReminderCard } from './Keep';
 import { Flag } from './Flags';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false }: {
@@ -93,8 +95,10 @@ export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void
   );
 }
 
-export function TopBar({ streak, words, lang, onLanguage }: {
+export function TopBar({ streak, words, lang, onLanguage, done = false }: {
   streak: number;
+  /** Today has a finished lesson or review: the flame is lit. Until then a grey outline. */
+  done?: boolean;
   /** Words learned so far (see learnedWords). */
   words: number;
   lang?: HelpLanguage;
@@ -108,8 +112,13 @@ export function TopBar({ streak, words, lang, onLanguage }: {
         <LogoMark size={36} />
         <Wordmark className="topbar-wordmark" />
       </span>
-      <span className="stat" role="img" aria-label={`${streak} ${ui('dayStreak').en}`} title={ui('dayStreak').en}>
-        <CalendarIcon size={20} />
+      <span
+        className={`stat stat-streak ${done ? 'stat-lit' : ''}`}
+        role="img"
+        aria-label={`${streak} ${ui('dayStreak').en}${!done && streak > 0 ? ` · ${ui('stillToDo').en}` : ''}`}
+        title={ui('dayStreak').en}
+      >
+        <FlameIcon lit={done} size={22} />
         <span className="stat-num">{streak}</span>
         <span className="stat-unit" lang="nl">{streak === 1 ? 'dag' : 'dagen'}</span>
       </span>
@@ -126,6 +135,13 @@ export function TopBar({ streak, words, lang, onLanguage }: {
       >
         <Flag code={lang?.code ?? 'en'} width={32} />
       </button>
+      {/* The streak is on, but today still needs a lesson or the review. */}
+      {streak > 0 && !done && (
+        <span className="todo-tag" aria-hidden>
+          <span className="todo-nl" lang="nl">Vandaag nog</span>
+          <Bi className="todo-gloss" text={ui('stillToDo', lang)} />
+        </span>
+      )}
     </header>
   );
 }
@@ -198,11 +214,76 @@ const unitNumber = (u: number) => String(u + 1).padStart(2, '0');
  *  (not A1/B1, which read like language levels). */
 const lessonCode = (u: number, i: number) => `${u + 1}.${i + 1}`;
 
-export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused, dueToday = 0, onDaily }: {
+/**
+ * "Herhaal vandaag" on the path, in three states: words due (tap to review), done today (a GEDAAN
+ * stamp and how many words come tomorrow, plus a small "extra ronde" when words are left over),
+ * or the first words come back tomorrow (after the first lesson).
+ */
+function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: HelpLanguage; onDaily?: () => void }) {
+  if (card.state === 'due') {
+    return (
+      <button type="button" className="daily-card" onClick={onDaily}>
+        <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
+        <span className="daily-text">
+          <span className="daily-nl" lang="nl">Herhaal vandaag</span>
+          <Bi className="daily-title" text={ui('reviewToday', lang)} />
+          <Bi className="daily-n" text={fillN(ui('reviewTodayN', lang), card.due)} />
+        </span>
+        <ChevronIcon size={24} className="daily-go" />
+      </button>
+    );
+  }
+  const done = card.state === 'done';
+  return (
+    <div className={`daily-card daily-${card.state}`} role="group" aria-label={`Herhaal vandaag · ${ui('reviewToday').en}`}>
+      <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
+      <span className="daily-text">
+        <span className="daily-nl" lang="nl">Herhaal vandaag</span>
+        {done ? (
+          <>
+            <span className="sr-only">{ui('reviewDone').en}. </span>
+            {card.tomorrow > 0 ? (
+              <>
+                <span className="daily-tomorrow" lang="nl">Morgen: {card.tomorrow} {card.tomorrow === 1 ? 'woord' : 'woorden'}</span>
+                <Bi className="daily-n" text={fillN(ui('tomorrowN', lang), card.tomorrow)} />
+              </>
+            ) : (
+              <Bi className="daily-title" text={ui('reviewDone', lang)} />
+            )}
+            {card.extra > 0 && onDaily && (
+              <button type="button" className="daily-extra" onClick={onDaily}>
+                <span lang="nl">Extra ronde</span>
+                <Bi className="daily-extra-gloss" text={ui('extraRound', lang)} />
+                <ChevronIcon size={16} />
+              </button>
+            )}
+          </>
+        ) : (
+          <>
+            <span className="daily-tomorrow" lang="nl">Morgen komen je eerste woorden terug</span>
+            <Bi className="daily-n" text={ui('firstWordsTomorrow', lang)} />
+          </>
+        )}
+      </span>
+      {done && (
+        <span className="stamp daily-stamp" aria-hidden>
+          <span className="stamp-word" lang="nl">Gedaan</span>
+          <span className="stamp-sub">✓</span>
+        </span>
+      )}
+    </div>
+  );
+}
+
+export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused, daily, onDaily, arrived, onArrived }: {
   progress: Progress;
-  /** Words due in "Herhaal vandaag"; the card shows when there are any. */
-  dueToday?: number;
+  /** "Herhaal vandaag" (see dailyCard): due, done today, or the first words come tomorrow. */
+  daily?: DailyCard | null;
+  /** Starts today's review (also the "extra ronde" after it). */
   onDaily?: () => void;
+  /** Back from a finished lesson: scroll to the next lesson, stamp the done one, pop the new one. */
+  arrived?: string | null;
+  onArrived?: () => void;
   /** A unit to scroll to and mark (from a coach link); onFocused is called once it is shown. */
   focusUnit?: string | null;
   onFocused?: () => void;
@@ -222,15 +303,25 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
   const [showOther, setShowOther] = useState(openOther || other.some((u) => u.id === focusUnit));
   // A coach link: scroll to that unit (after the app's own scroll-to-top) and mark it for a moment.
   const [marked, setMarked] = useState<string | null>(focusUnit ?? null);
+  // The lesson just finished: kept for this visit of the path, for its one-time animations.
+  const [justDone] = useState<string | null>(arrived ?? null);
+  const pathRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (!focusUnit) return;
+    if (!focusUnit && !arrived) return;
+    const still = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     const t = window.setTimeout(() => {
-      document.getElementById(`unit-${focusUnit.slice(2)}`)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
-      onFocused?.();
+      if (focusUnit) {
+        document.getElementById(`unit-${focusUnit.slice(2)}`)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        onFocused?.();
+      } else {
+        // After a lesson: the next lesson in view (not the top of the path).
+        pathRef.current?.querySelector('.bay-now')?.scrollIntoView({ block: 'center', behavior: still ? 'auto' : 'smooth' });
+        onArrived?.();
+      }
     }, 80);
     return () => window.clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [focusUnit]);
+  }, [focusUnit, arrived]);
   useEffect(() => {
     if (!marked) return;
     const off = window.setTimeout(() => setMarked(null), 4000);
@@ -285,7 +376,10 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
             // The bay shows the lesson's first word that has a picture (none if all are abstract).
             const first = lesson.words.find(hasPicture);
             return (
-              <li key={lesson.id} className={`bay bay-${state}`}>
+              <li
+                key={lesson.id}
+                className={`bay bay-${state} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''}`}
+              >
                 <span className="bay-marker" aria-hidden>
                   {state === 'done' ? <CheckIcon size={20} /> : i + 1}
                 </span>
@@ -325,18 +419,8 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
   };
 
   return (
-    <div className="path">
-      {dueToday > 0 && onDaily && (
-        <button type="button" className="daily-card" onClick={onDaily}>
-          <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
-          <span className="daily-text">
-            <span className="daily-nl" lang="nl">Herhaal vandaag</span>
-            <Bi className="daily-title" text={ui('reviewToday', lang)} />
-            <Bi className="daily-n" text={fillN(ui('reviewTodayN', lang), Math.min(dueToday, DAILY_MAX))} />
-          </span>
-          <ChevronIcon size={24} className="daily-go" />
-        </button>
-      )}
+    <div className="path" ref={pathRef}>
+      {daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
       {main.map((unit, u) => renderUnit(unit, u))}
       {other.length > 0 && (
         <section className="other-sectors">
@@ -505,8 +589,10 @@ function useVoices() {
   return { device, recorded };
 }
 
-export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade }: {
+export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade, onRestore }: {
   progress: Progress;
+  /** "Bewaar je voortgang": a backup was put back (merged or replaced). */
+  onRestore?: (next: Progress) => void;
   lang?: HelpLanguage;
   onLang: (code: LangCode | null) => void;
   onSector: (sector: SectorChoice) => void;
@@ -595,6 +681,8 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
       <VoicePicker current={progress.voice} lang={lang} onPick={onVoice} />
       {/* Preview: settings work as usual; unlocking the full version sits below them. */}
       {access === 'preview' && onAccess && <UpgradeCard lang={lang} onAccess={onAccess} />}
+      <ReminderCard lang={lang} />
+      {onRestore && <BackupCard progress={progress} lang={lang} onRestore={onRestore} />}
       <button type="button" className="phrase-banner about-banner" onClick={onAbout}>
         <LogoMark size={32} check={false} />
         <Bi text={ui('about', lang)} />
@@ -695,7 +783,9 @@ function useCountUp(target: number, delay = 350, ms = 900) {
   return value;
 }
 
-function StatCard({ tone, label, icon, value, final, done, foot }: {
+function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
+  /** A stamp on the card's corner (FOUTLOOS). */
+  badge?: React.ReactNode;
   tone: 'gold' | 'green' | 'orange';
   label: Bilingual;
   icon: React.ReactNode;
@@ -715,13 +805,18 @@ function StatCard({ tone, label, icon, value, final, done, foot }: {
         <span className="stat-card-value">{value}</span>
       </div>
       {foot && <Bi className="stat-card-foot" text={foot} />}
+      {badge}
     </div>
   );
 }
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next }: {
   /** After today's review: how many words came back (shown instead of new words). */
   repeated?: number;
+  /** After today's review: how many words went up a box ("N woorden sterker"). */
+  stronger?: number;
+  /** The next lesson on the course, for the "Volgende:" line. */
+  next?: Bilingual;
   /** Graded exercises right the first time, out of all graded ones. */
   right: number;
   total: number;
@@ -735,14 +830,24 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated }
   const shownRight = useCountUp(right, 700, 700);
   const shownNew = useCountUp(newWords, 850, 600);
   const fill = (t: Bilingual, n: number): Bilingual => ({ ...t, en: t.en.replace('{n}', String(n)), help: t.help?.replace('{n}', String(n)) });
+  // A tap or Enter meant for the last exercise must not skip this screen: both are ignored for
+  // a moment (shorter with reduced motion), and the button fades in after about a second.
+  const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  const ready = useRef(false);
+  useEffect(() => {
+    const t = window.setTimeout(() => { ready.current = true; }, still ? 400 : 700);
+    return () => window.clearTimeout(t);
+  }, [still]);
+  const done = () => { if (ready.current) onDone(); };
   // Enter continues, as after every exercise (the screen has no other input).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Enter' && !(e.target instanceof HTMLButtonElement)) onDone();
+      if (e.key === 'Enter' && !(e.target instanceof HTMLButtonElement) && ready.current) onDone();
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [onDone]);
+  const perfect = total > 0 && right === total;
   return (
     <div className="player result-screen">
       <main className="player-body result">
@@ -763,6 +868,12 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated }
             value={`${shownRight} / ${total}`}
             final={`${right} / ${total}`}
             done={shownRight === right}
+            badge={perfect ? (
+              // Every answer right the first time: a red-ink rubber stamp on the card.
+              <span className="stamp flawless-stamp" aria-hidden>
+                <span className="stamp-word" lang="nl">Foutloos</span>
+              </span>
+            ) : undefined}
           />
           <StatCard
             tone="gold"
@@ -774,11 +885,30 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated }
             foot={fill(ui('wordsLearnedN', lang), words)}
           />
         </div>
+        {perfect && (
+          <p className="result-line result-flawless">
+            <span className="sr-only" lang="nl">Foutloos: </span>
+            <Bi text={ui('noMistakes', lang)} />
+          </p>
+        )}
+        {stronger !== undefined && stronger > 0 && (
+          <p className="result-line result-stronger">
+            <span className="stronger-arrow" aria-hidden>▲</span>
+            <span lang="nl">{stronger} {stronger === 1 ? 'woord' : 'woorden'} sterker</span>
+            <Bi text={fill(ui('wordsStrongerN', lang), stronger)} />
+          </p>
+        )}
+        {next && (
+          <p className="result-line result-next">
+            <span className="result-next-nl" lang="nl">Volgende:</span>
+            <Bi className="result-next-title" text={next} />
+          </p>
+        )}
       </main>
       <footer className="player-foot">
         <div className="foot-inner">
           <div className="foot-actions">
-            <button type="button" className="btn btn-go btn-primary" onClick={onDone}>
+            <button type="button" className="btn btn-go btn-primary result-go" onClick={done}>
               {ui('continue', lang).en}
               <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
             </button>

@@ -57,6 +57,16 @@
   --on-accent: var(--paper);
   --locked-shadow: #c4bdb1;
   --radius: 12px;
+  /* Motion: one set of curves for the whole app (see "Answer moment"). */
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --ease-in: cubic-bezier(.4, 0, 1, 1);
+  --ease-pop: cubic-bezier(.3, 1.4, .6, 1);
+  /* Continue after Check, and the icon on the feedback label: white on these is 6.5:1 or more,
+     in light and dark. */
+  --go-right: #0f6a4a;
+  --go-wrong: #a8361f;
+  /* Direction of travel for the exercise slide: -1 in right-to-left help languages. */
+  --fwd: 1;
   /* Help-language text is never smaller than this (phones included). */
   --help-min: 15px;
   --stencil: 'Big Shoulders Stencil Display', 'Lexend Variable', 'Arial Narrow', sans-serif;
@@ -207,6 +217,21 @@ h2 { font-size: 1.25rem; }
 .btn-primary .btn-block { background: #1e2226; color: var(--yellow); }
 .btn-dark .btn-block { background: var(--yellow); color: #1e2226; }
 .btn:disabled .btn-block { background: var(--line); color: var(--disabled-ink); }
+/* After Check, Continue takes the outcome's colour: green, brick red, or ink for a situation.
+   No colour transition here (yellow → green would pass through olive): the class swaps at
+   120 ms and the button gives one small press (.98 → 1). */
+.btn-right, .btn-wrong, .btn-other { color: #fff; }
+.btn-right { background: var(--go-right); border-color: var(--go-right); }
+.btn-wrong { background: var(--go-wrong); border-color: var(--go-wrong); }
+.btn-other { background: var(--solid); color: var(--on-solid); border-color: var(--solid); }
+.btn-right .btn-block, .btn-wrong .btn-block { background: #fff; }
+.btn-right .btn-block { color: var(--go-right); }
+.btn-wrong .btn-block { color: var(--go-wrong); }
+.btn-other .btn-block { background: var(--yellow); color: #1e2226; }
+.btn-go { animation: btn-in 0.2s var(--ease-out) both; }
+.btn-go.btn-swap { transition: transform 0.06s; animation: btn-press 0.12s var(--ease-out) both; }
+@keyframes btn-in { from { opacity: 0.25; } }
+@keyframes btn-press { from { transform: scale(0.98); } }
 .btn-ghost {
   background: transparent; border: 2px solid var(--line);
   color: var(--muted); font-weight: 500;
@@ -439,6 +464,10 @@ h2 { font-size: 1.25rem; }
 .bay-locked .bay-title { font-weight: 500; }
 .bay-lock { color: var(--ink-3); }
 .bay-card:disabled { cursor: default; }
+/* Tactile: lesson cards and Start press in. */
+.bay-card { transition: transform 0.12s var(--ease-out), background-color 0.12s, border-color 0.12s; }
+.bay-card:active:not(:disabled) { transform: translateY(2px); }
+.bay-card:active:not(:disabled) .bay-start { transform: translateY(1px); }
 @media (max-width: 380px) {
   .bay-now .bay-card { padding-inline-end: 104px; }
   .bay-char .ch { height: 100px; width: auto; }
@@ -446,7 +475,8 @@ h2 { font-size: 1.25rem; }
 
 /* Lesson player: full-bleed frame, content column centred on wide screens. */
 #root:has(.player) { max-width: none; }
-.player { display: flex; flex-direction: column; min-height: 100dvh; }
+.player { display: flex; flex-direction: column; min-height: 100dvh; overflow-x: clip; }
+.player-rtl { --fwd: -1; }
 .player-top {
   display: flex; align-items: center; gap: 10px;
   width: 100%; max-width: 1080px; margin: 0 auto;
@@ -457,18 +487,64 @@ h2 { font-size: 1.25rem; }
 /* Generic bar (admin page). */
 .bar { flex: 1; height: 14px; background: var(--track); border-radius: 4px; overflow: hidden; }
 .bar-fill { height: 100%; background: var(--ink); border-radius: 4px; transition: width 0.4s ease; }
-/* Lesson progress: one segment per exercise. Done = ink, current = yellow, todo = concrete. */
-.segs { flex: 1; display: flex; gap: clamp(2px, 0.8vw, 4px); min-width: 0; }
-.seg { flex: 1 1 0; min-width: 3px; height: 10px; border-radius: 5px; background: var(--track); }
-.seg-done { background: var(--ink); }
-.seg-now { background: var(--yellow); }
+/* Lesson progress: one continuous bar. Ink fills what is done, yellow marks where you are and
+   a kraft tail at the end holds the mistakes that come back. The ink-3 outline keeps the empty
+   track at 3:1 or more against the floor. Transform-only motion (320 ms); fills from the right
+   in right-to-left help languages. */
+.lbar {
+  position: relative; flex: 1; min-width: 0; height: 12px; overflow: hidden;
+  border-radius: 6px; background: var(--track); box-shadow: inset 0 0 0 1.5px var(--ink-3);
+}
+.lbar > span { position: absolute; inset-block: 0; }
+.lbar-tail { right: 0; background: color-mix(in srgb, var(--kraft) 70%, var(--track)); }
+.lbar-now { left: 0; background: var(--yellow); box-shadow: inset 0 0 0 1.5px #1e2226; transition: transform 0.32s var(--ease-out); }
+.lbar-fill { left: 0; width: 100%; background: var(--ink); transform-origin: left center; transition: transform 0.32s var(--ease-out); }
+.player-rtl .lbar-tail { right: auto; left: 0; }
+.player-rtl .lbar-now { left: auto; right: 0; }
+.player-rtl .lbar-fill { transform-origin: right center; }
+/* A run of 3, 5 or 8: one light sweep over the bar. */
+.lbar-sweep {
+  left: 0; width: 45%;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--yellow) 85%, #fff), transparent);
+  animation: lbar-sweep 0.7s var(--ease-out) both;
+}
+.player-rtl .lbar-sweep { animation-name: lbar-sweep-rtl; }
+@keyframes lbar-sweep { from { transform: translateX(-100%); } to { transform: translateX(230%); } }
+@keyframes lbar-sweep-rtl { from { transform: translateX(230%); } to { transform: translateX(-100%); } }
 .lesson-name { display: none; }
 .bar-wrap { position: relative; flex: 1; display: flex; min-width: 0; }
 .player-body {
   flex: 1; display: flex; flex-direction: column;
   width: 100%; max-width: 640px; margin: 0 auto; padding: 20px 16px 0;
 }
-.player-body > .exercise { flex: none; }
+.player-body { position: relative; }
+.player-body > .ex-slide { flex: none; display: flex; flex-direction: column; }
+.player-body .exercise { flex: none; }
+
+/* Exercise transitions: the old exercise (a copy in .ex-ghost) slides out (160 ms, ease-in)
+   while the new one comes in from the other side at 120 ms (240 ms, ease-out): first the
+   question, then the character +40 ms, then the options 30 ms apart. Mirrored in RTL. */
+.ex-ghost { position: absolute; inset: 20px 16px auto; z-index: 0; pointer-events: none; }
+.ex-ghost:empty { display: none; }
+.ex-leave { animation: ex-out 0.16s var(--ease-in) both; }
+@keyframes ex-out { to { opacity: 0; transform: translateX(calc(var(--fwd) * -24px)); } }
+.ex-enter > .ex-tag,
+.ex-enter .exercise > *,
+.ex-enter :is(.choices, .match-grid, .tile-bank) > * {
+  animation: ex-in 0.24s var(--ease-out) var(--in, 0.16s) both;
+}
+.ex-enter > .ex-tag, .ex-enter .exercise > :first-child { --in: 0.12s; }
+.ex-enter :is(.choices, .match-grid, .tile-bank) { animation: none; }
+.ex-enter :is(.choices, .match-grid, .tile-bank) > :nth-child(1) { --in: 0.19s; }
+.ex-enter :is(.choices, .match-grid, .tile-bank) > :nth-child(2) { --in: 0.22s; }
+.ex-enter :is(.choices, .match-grid, .tile-bank) > :nth-child(3) { --in: 0.25s; }
+.ex-enter :is(.choices, .match-grid, .tile-bank) > :nth-child(4) { --in: 0.28s; }
+.ex-enter :is(.choices, .match-grid, .tile-bank) > :nth-child(5) { --in: 0.31s; }
+.ex-enter :is(.choices, .match-grid, .tile-bank) > :nth-child(6) { --in: 0.34s; }
+.ex-enter :is(.choices, .match-grid, .tile-bank) > :nth-child(n + 7) { --in: 0.37s; }
+@keyframes ex-in { from { opacity: 0; transform: translateX(calc(var(--fwd) * 24px)); } }
+/* The question takes focus on a new exercise (for screen readers); it is not a control, so no ring. */
+.prompt:focus { outline: none; }
 
 /* Kraft tag above the question: what kind of exercise, and where you are in the lesson. */
 .ex-tag { display: flex; align-items: center; gap: 12px; margin: 0 0 6px; }
@@ -493,40 +569,66 @@ h2 { font-size: 1.25rem; }
 }
 .foot-inner { width: 100%; max-width: 1000px; margin: 0 auto; }
 .foot-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.foot-actions .btn-primary, .foot-actions .btn-dark { flex: 1 1 100%; min-height: 60px; font-size: 1.15rem; }
+.foot-actions .btn-go { flex: 1 1 100%; min-height: 60px; font-size: 1.15rem; }
 .foot-actions .btn-ghost { flex: 1 1 100%; }
 
-/* Feedback: a label taped onto the floor. Paper, ink border, kraft offset shadow, tape on top. */
+/* Feedback: a label taped onto the floor, tinted by the outcome so it reads at a glance:
+   a green border on a light green tint with a check, or brick red with a cross (kraft for a
+   situation, where there is no wrong). Rises 120 ms after Check (260 ms, ease-out). */
 .feedback {
-  position: relative; margin: 10px 4px 14px; padding: 12px 16px 10px;
+  position: relative; display: flex; align-items: flex-start; gap: 12px;
+  margin: 10px 4px 14px; padding: 12px 16px 10px 12px;
   background: var(--card); border: 2.5px solid var(--edge); border-radius: 4px;
   box-shadow: 6px 6px 0 var(--label-shadow);
   rotate: -0.6deg;
-  animation: label-in 0.22s ease-out;
+  animation: label-in 0.26s var(--ease-out) 0.12s both;
 }
-@keyframes label-in { from { transform: translateY(12px); opacity: 0; } }
+@keyframes label-in { from { transform: translateY(24px); opacity: 0; } }
+.feedback-right { border-color: var(--right-ink); background: var(--green-bg); }
+.feedback-wrong { border-color: var(--wrong-ink); background: var(--red-bg); }
+.feedback-other { border-color: var(--kraft-dark); background: color-mix(in srgb, var(--kraft-light) 60%, var(--card)); }
 .feedback-tape {
   position: absolute; top: -10px; left: 50%; width: 92px; height: 18px; margin-left: -46px;
   background: var(--tape); rotate: 1.5deg;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
 }
+/* The outcome as a shape, not only a colour: a 42 px check or cross at the start. */
+.feedback-icon {
+  flex: none; display: grid; place-items: center; width: 42px; height: 42px; margin-top: 2px;
+  border-radius: 50%; color: #fff; background: var(--go-right);
+}
+.feedback-wrong .feedback-icon { background: var(--go-wrong); }
+.feedback-other .feedback-icon { background: var(--kraft-dark); color: var(--card); }
 /* A long explanation (situations) scrolls inside the label instead of covering the question. */
-.feedback-text { min-width: 0; max-height: 23dvh; overflow-y: auto; overscroll-behavior: contain; }
-/* Heading: the Dutch words, with their meaning in small type beside or under them. */
-.feedback-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 12px; }
-.feedback-title { font-size: 1.45rem; font-weight: 700; line-height: 1.15; color: var(--ink); letter-spacing: -0.01em; }
-.feedback-sub { flex-direction: row; flex-wrap: wrap; gap: 0 8px; font-size: 0.9rem; font-weight: 600; color: var(--muted); }
-.feedback-sub .bi-help { --help-size: 1em; display: inline; }
-.feedback-sub:has(.bi-help) .bi-en::after, .feedback-kicker .bi:has(.bi-help) .bi-en::after { content: ' ·'; color: var(--ink-3); }
-/* A long heading meaning (situations) reads better as two lines than wrapped mid-pair. */
-.feedback-other .feedback-sub { flex-direction: column; }
-.feedback-other .feedback-sub .bi-en::after { content: none; }
-.feedback-wrong { box-shadow: inset 8px 0 0 var(--red), 6px 6px 0 var(--label-shadow); padding-inline-start: 26px; }
-.feedback-other { box-shadow: inset 8px 0 0 var(--kraft), 6px 6px 0 var(--label-shadow); padding-inline-start: 26px; }
+.feedback-text { flex: 1; min-width: 0; max-height: 23dvh; overflow-y: auto; overscroll-behavior: contain; }
+/* Heading: the help language first and large; under it the Dutch words and the English. */
+.feedback-head { display: flex; flex-direction: column; gap: 2px; }
+.feedback-help { font-size: 1.25rem; font-weight: 700; line-height: 1.25; color: var(--ink); }
+.feedback-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.32rem; }
+.feedback-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; }
+.feedback-title { font-size: 1.05rem; font-weight: 700; line-height: 1.2; color: var(--ink); letter-spacing: -0.01em; }
+.feedback-en { font-size: 0.92rem; font-weight: 500; color: var(--muted); }
+.has-help .feedback-title::after { content: ' ·'; color: var(--ink-3); font-weight: 500; }
+/* English only: the Dutch words are the heading, the English under them. */
+.feedback-head:not(.has-help) .feedback-line { flex-direction: column; gap: 2px; }
+.feedback-head:not(.has-help) .feedback-title { font-size: 1.45rem; line-height: 1.15; }
 .feedback-kicker { margin-bottom: 4px; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
 .feedback-kicker .bi { flex-direction: row; flex-wrap: wrap; gap: 0 8px; }
 .feedback-kicker .bi-help { --help-size: 1em; }
-.feedback-rule { height: 0; margin: 8px 0 8px; border: 0; border-top: 2px dashed var(--line); }
+.feedback-kicker .bi:has(.bi-help) .bi-en::after { content: ' ·'; color: var(--ink-3); }
+.feedback-rule { height: 0; margin: 8px 0 8px; border: 0; border-top: 2px dashed color-mix(in srgb, var(--ink-3) 45%, transparent); }
+/* "3 OP RIJ": a kraft rubber stamp on the label's corner, 300 ms after Check, at runs of 3, 5, 8. */
+.run-stamp {
+  position: absolute; z-index: 1; top: -22px; inset-inline-end: 12px;
+  display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 10px 5px;
+  border: 2.5px solid currentColor; border-radius: 6px; box-shadow: inset 0 0 0 2px var(--card), inset 0 0 0 3.5px currentColor;
+  color: var(--kraft-dark); background: color-mix(in srgb, var(--kraft-light) 80%, var(--card));
+  rotate: 5deg; pointer-events: none;
+  animation: stamp-in 0.18s var(--ease-pop) both;
+}
+.run-stamp-nl { font-family: var(--stencil); font-weight: 800; font-size: 1.15rem; line-height: 1; text-transform: uppercase; letter-spacing: 0.03em; }
+.run-stamp-nl b { font-size: 1.35rem; }
+.run-stamp-help { font-size: 0.8rem; font-weight: 600; line-height: 1.15; }
 /* "het hesje = the safety vest", with the help language underneath. */
 .feedback-pair { display: flex; flex-direction: column; gap: 2px; }
 .pair-main { font-size: 1.15rem; font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
@@ -541,7 +643,6 @@ h2 { font-size: 1.25rem; }
 }
 @keyframes up { from { transform: translateY(10px); opacity: 0; } }
 
-.exercise { animation: up 0.25s ease-out; }
 .prompt { font-size: 1.6rem; font-weight: 650; margin: 4px 0 16px; color: var(--ink-strong); letter-spacing: -0.01em; }
 .prompt .bi-help { --help-size: 0.6em; font-weight: 400; letter-spacing: 0; }
 .card { border: 2px solid var(--line); border-radius: var(--radius); padding: 24px; text-align: center; background: var(--card); }
@@ -610,28 +711,35 @@ h2 { font-size: 1.25rem; }
   position: relative; display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 10px 14px; text-align: start;
   background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
   font-weight: 500; color: var(--ink);
-  transition: border-color 0.12s, opacity 0.2s;
+  transition: background-color 0.12s, border-color 0.12s, color 0.12s, transform 0.12s var(--ease-out);
 }
-.choice:hover:not(:disabled) { border-color: var(--ink-3); }
-.choice:active:not(:disabled) { transform: translateY(1px); }
+.choice:hover:not(:disabled, [aria-disabled='true']) { border-color: var(--ink-3); }
+.choice:active:not(:disabled, [aria-disabled='true']) { transform: translateY(2px); }
+.choice[aria-disabled='true'] { cursor: default; }
 .choice-num {
   flex: none; display: grid; place-items: center; width: 40px; height: 40px; padding-top: 2px;
   border: 2px solid transparent; border-radius: 8px; background: var(--track); color: var(--ink-2);
   font-family: var(--stencil); font-weight: 800; font-size: 1.4rem; line-height: 1;
+  transition: background-color 0.12s, border-color 0.12s, color 0.12s;
 }
+.choice-num .icon { margin-top: -2px; }
 /* Selected: ink border, a light yellow wash, the number box filled yellow. */
-.choice.picked, .choice.picked:hover:not(:disabled) {
+.choice.picked, .choice.picked:hover:not(:disabled, [aria-disabled='true']) {
   border-color: var(--edge);
   background: color-mix(in srgb, var(--yellow) 14%, var(--card));
 }
-.choice.picked .choice-num { border-color: #1e2226; background: var(--yellow); color: #1e2226; }
-/* After "Check": the right option turns stamp green, the wrong pick brick red, the rest fade. */
-.choice:disabled { opacity: 0.5; }
-.choice.right, .choice.wrong { opacity: 1; }
+.choice.picked .choice-num { border-color: #1e2226; background: var(--yellow); color: #1e2226; animation: num-pop 0.18s var(--ease-pop); }
+@keyframes num-pop { 0% { transform: scale(0.85); } 60% { transform: scale(1.08); } 100% { transform: none; } }
+/* After "Check" (120 ms): the right option turns stamp green with a check, the wrong pick brick
+   red with a cross, so colour is never the only cue. The rest step back without fading: a muted
+   border, no fill and --muted text, which stays at 4.5:1 or more. */
 .choice.right { border-color: var(--green); background: var(--green-bg); }
 .choice.wrong { border-color: var(--red); background: var(--red-bg); }
 .choice.right .choice-num { border-color: var(--green); background: var(--green); color: var(--on-green); }
 .choice.wrong .choice-num { border-color: var(--red); background: var(--red); color: var(--on-green); }
+.choice.faded { border-color: color-mix(in srgb, var(--line) 70%, transparent); background: transparent; color: var(--muted); }
+.choice.faded .choice-num { background: transparent; border: 2px dashed var(--line); color: var(--muted); }
+.choice.faded .pic-emoji { opacity: 0.55; }
 .choice-emoji { font-size: 1.8rem; }
 .choices-rows .choice { min-height: 68px; padding: 8px 16px 8px 16px; }
 .choice > .bi { flex: 1 1 auto; }
@@ -640,12 +748,12 @@ h2 { font-size: 1.25rem; }
 .choice-nl { font-size: 1.2rem; min-width: 0; overflow-wrap: anywhere; }
 /* "Which one is …?" without pictures: Dutch words on text cards. */
 .choices-words .choice-nl { font-size: 1.35rem; font-weight: 650; }
-/* Room for the stamp on a checked row, so it never covers the words: a smaller stamp in rows,
-   and the text stops short of it (stamp 72 px, 8 px over the edge, plus a little air). */
-.choices:not(.choices-pics) .stamp { width: 72px; height: 72px; margin-top: -36px; }
-.choices:not(.choices-pics) .stamp-word { font-size: 1.45rem; }
-.choices:not(.choices-pics) .stamp-wrong .stamp-word { font-size: 1.1rem; }
-.choices:not(.choices-pics) .choice:has(> .stamp) { padding-right: 78px; }
+/* Room for the stamp on a checked row, so it never covers the words: a smaller stamp that sits
+   inside the card (never clipped), and the text stops short of it. */
+.choices:not(.choices-pics) .stamp { width: 64px; height: 64px; margin-top: -32px; right: 8px; }
+.choices:not(.choices-pics) .stamp-word { font-size: 1.3rem; }
+.choices:not(.choices-pics) .stamp-wrong .stamp-word { font-size: 1rem; }
+.choices:not(.choices-pics) .choice:has(> .stamp) { padding-right: 80px; }
 
 /* Rubber stamps: GOED on a right answer, NOG EENS on a wrong pick. Double ring, stencil,
    slightly rotated, overlapping the right edge of the card; stamped in with a short thud. */
@@ -657,7 +765,8 @@ h2 { font-size: 1.25rem; }
   color: var(--green); background: color-mix(in srgb, var(--card) 55%, transparent);
   font-family: var(--stencil); font-weight: 800; line-height: 0.9; text-transform: uppercase;
   rotate: -12deg; pointer-events: none;
-  animation: stamp-in 0.2s cubic-bezier(0.3, 1.4, 0.6, 1) both;
+  /* Lands 60 ms after Check, after the colour change. */
+  animation: stamp-in 0.18s var(--ease-pop) 0.06s both;
 }
 .stamp-word { font-size: 1.75rem; letter-spacing: 0.02em; }
 .stamp-sub { font-family: 'Lexend Variable', sans-serif; font-weight: 700; font-size: 0.7rem; margin-top: 3px; }
@@ -668,6 +777,12 @@ h2 { font-size: 1.25rem; }
 /* Picture choice ("Which one is …?"): big picture cards. */
 .pic-question { display: flex; align-items: flex-start; gap: 14px; margin: 0 0 24px; }
 .pic-question .prompt { margin: 0; flex: 0 1 auto; }
+.pic-question .prompt-row { flex: 1; margin: 0; }
+/* Bram beside a question without a speech bubble (picture choice, listening, typing): small,
+   at the end of the line, so he can react to the answer. */
+.prompt-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin: 0 0 4px; }
+.prompt-row .prompt { flex: 0 1 auto; min-width: 0; }
+.prompt-row .speaker-char { font-size: 68px; margin-top: -4px; }
 .pic-question .speak { width: 44px; height: 44px; font-size: 1.2rem; margin-top: 2px; }
 
 .choices-pics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -684,13 +799,15 @@ h2 { font-size: 1.25rem; }
 .choices-pics .choice-nl.len-m { font-size: 1rem; }
 .choices-pics .choice-nl.len-l { font-size: 0.85rem; }
 .choices-pics .choice-num { grid-area: num; width: 34px; height: 34px; font-size: 1.2rem; }
-.choices-pics .stamp { top: -10px; right: -10px; margin-top: 0; width: 74px; height: 74px; }
-.choices-pics .stamp-word { font-size: 1.45rem; }
-.choices-pics .stamp-wrong .stamp-word { font-size: 1.1rem; }
+.choices-pics .stamp { top: 6px; right: 6px; margin-top: 0; width: 66px; height: 66px; }
+.choices-pics .stamp-word { font-size: 1.3rem; }
+.choices-pics .stamp-wrong .stamp-word { font-size: 1rem; }
 /* Phones: no keyboard, so the number hints give their room to the word. */
 @media (max-width: 759px) {
   .choices-pics .choice { grid-template-columns: 1fr; grid-template-areas: 'pic' 'word'; }
   .choices-pics .choice-num { display: none; }
+  /* After Check the check or cross still shows, in the card's top corner. */
+  .choices-pics :is(.right, .wrong) > .choice-num { display: grid; position: absolute; top: 8px; left: 8px; }
 }
 
 .match-grid {
@@ -715,7 +832,16 @@ h2 { font-size: 1.25rem; }
   .match .choice-emoji.icon, .match svg.choice-emoji { width: 28px; height: 28px; }
   .match .bi { font-size: 0.88rem; line-height: 1.15; gap: 1px; }
 }
+.match { transition: background-color 0.12s, border-color 0.12s, opacity 0.24s var(--ease-out), transform 0.12s var(--ease-out); }
 .match.matched { opacity: 0.35; }
+/* A right pair flashes green (320 ms), then fades to matched. */
+.match.match-hit { border-color: var(--green); background: var(--green-bg); animation: match-hit 0.32s var(--ease-pop); }
+@keyframes match-hit { 40% { transform: scale(1.04); } }
+/* A wrong pair keeps a cross until the next tap. */
+.match-x {
+  position: absolute; top: -8px; right: -6px; display: grid; place-items: center; width: 24px; height: 24px;
+  border-radius: 50%; background: var(--go-wrong); color: #fff; box-shadow: 0 0 0 2px var(--card);
+}
 .shake { animation: shake 0.35s; border-color: var(--red) !important; background: var(--red-bg) !important; }
 @keyframes shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
 
@@ -749,6 +875,12 @@ h2 { font-size: 1.25rem; }
 .answer-line .stamp-word { font-size: 1.3rem; }
 .answer-line .stamp-wrong .stamp-word { font-size: 0.95rem; }
 .answer-line .stamp-sub { margin-top: 1px; }
+.answer-mark {
+  flex: none; align-self: center; display: grid; place-items: center; width: 36px; height: 36px;
+  border-radius: 50%; color: #fff; background: var(--go-right);
+  animation: stamp-in 0.18s var(--ease-pop) 0.06s both;
+}
+.answer-mark.mark-wrong { background: var(--go-wrong); }
 .answer-right .tile { border-color: var(--green); }
 .answer-wrong .tile { border-color: var(--red); }
 .tile-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 28px; }
@@ -757,6 +889,10 @@ h2 { font-size: 1.25rem; }
   background: var(--card); border: 2px solid var(--line); border-radius: 8px;
 }
 .tile:hover:not(:disabled) { border-color: var(--ink-3); }
+.tile { transition: background-color 0.12s, border-color 0.12s, transform 0.12s var(--ease-out); }
+.tile:active:not(:disabled) { transform: translateY(2px); }
+.type-input.type-right { border-color: var(--green); background: var(--green-bg); }
+.type-input.type-wrong { border-color: var(--red); background: var(--red-bg); }
 .answer-line .tile { border-color: var(--edge); }
 .tile-used { color: transparent; background: var(--track); border-style: dashed; }
 .type-input {
@@ -848,11 +984,11 @@ h2 { font-size: 1.25rem; }
   /* Same column as the exercise (player-body: 640 px minus its padding). */
   .foot-inner { max-width: 592px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
   .foot-actions { flex: 1; justify-content: flex-end; flex-wrap: nowrap; }
-  .foot-actions .btn-primary, .foot-actions .btn-dark { flex: 0 0 260px; }
+  .foot-actions .btn-go { flex: 0 0 260px; }
   .foot-actions .btn-ghost { flex: 0 1 auto; margin-inline-end: auto; }
   .feedback { flex: 1; margin: 6px 0; }
   .feedback + .foot-actions { flex: none; }
-  .feedback-title { font-size: 1.6rem; }
+  .feedback-head:not(.has-help) .feedback-title { font-size: 1.6rem; }
   .feedback-text { max-height: 40dvh; }
   .pair-main { font-size: 1.3rem; }
   .speaker { margin-bottom: 8px; }
@@ -917,9 +1053,31 @@ h2 { font-size: 1.25rem; }
   .chat-line { font-size: 1.3rem; }
 }
 
+/* Reduced motion: nothing moves and the idle loops stop, but the order of events stays. The
+   answer moment and the exercise change become short crossfades (150 ms or less) with the same
+   delays: colours at 0, stamp at 60 ms, label at 120 ms, the new exercise at 120 ms. */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition-property: opacity, color, background-color, border-color, fill, stroke !important;
+    transition-duration: 0.12s !important;
+    transition-delay: 0s !important;
+  }
+  .ex-enter > .ex-tag,
+  .ex-enter .exercise > *,
+  .ex-enter :is(.choices, .match-grid, .tile-bank) > * { animation: rm-fade 0.15s linear var(--in, 0.12s) both !important; }
+  .ex-enter :is(.choices, .match-grid, .tile-bank) { animation: none !important; }
+  .ex-leave { animation: rm-fade-out 0.12s linear both !important; }
+  .choice .stamp, .answer-line .stamp, .answer-mark { animation: rm-fade 0.15s linear 0.06s both !important; }
+  .feedback { animation: rm-fade 0.15s linear 0.12s both !important; }
+  .run-stamp { animation: rm-fade 0.15s linear both !important; }
+  .btn-go { animation: rm-fade 0.15s linear both !important; }
+  .lbar-sweep { animation: rm-flash 0.6s linear both !important; }
+  .match.match-hit { animation: none !important; }
 }
+@keyframes rm-fade { from { opacity: 0; } }
+@keyframes rm-fade-out { to { opacity: 0; } }
+@keyframes rm-flash { 0%, 100% { opacity: 0; transform: translateX(80%); } 30% { opacity: 1; transform: translateX(80%); } }
 
 /* Interface icons */
 .icon { display: inline-block; vertical-align: middle; flex: none; }
@@ -1014,8 +1172,8 @@ h2 { font-size: 1.25rem; }
 @keyframes ch-celebrate {
   0% { transform: none; animation-timing-function: cubic-bezier(0.2, 0.7, 0.4, 1); }
   16% { transform: scale(1.08, 0.9); animation-timing-function: cubic-bezier(0.15, 0.7, 0.35, 1); }
-  42% { transform: translateY(-15px) scale(0.95, 1.08); animation-timing-function: ease-out; }
-  52% { transform: translateY(-16px) scale(0.98, 1.03); animation-timing-function: cubic-bezier(0.55, 0, 0.9, 0.5); }
+  42% { transform: translateY(-23px) scale(0.95, 1.08); animation-timing-function: ease-out; }
+  52% { transform: translateY(-24px) scale(0.98, 1.03); animation-timing-function: cubic-bezier(0.55, 0, 0.9, 0.5); }
   68% { transform: scale(1.1, 0.88); animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); }
   100% { transform: none; }
 }
@@ -1033,6 +1191,10 @@ h2 { font-size: 1.25rem; }
 }
 @keyframes ch-pump { 0% { transform: rotate(calc(var(--sw, 1) * 40deg)); } 45% { transform: rotate(calc(var(--sw, 1) * -12deg)); } }
 @keyframes ch-pump-loop { to { transform: rotate(calc(var(--sw, 1) * -10deg)); } }
+/* A run of 5 or more: a second fist pump right after the first. */
+.ch-big .ch-act-pump { animation: ch-pump 0.76s cubic-bezier(0.3, 1.5, 0.5, 1), ch-pump 0.5s 0.74s cubic-bezier(0.3, 1.5, 0.5, 1), ch-pump-loop 0.36s 1.24s ease-in-out 4 alternate; }
+/* A second miss in a row: the slumped pose without the head-scratch. */
+.ch-calm .ch-act-scratch .ch-hand, .ch-calm .ch-act-shrug { animation: none; }
 
 /* Amina: two quick little hops, head bobbing, waving her free hand. */
 .ch-amina.ch-happy .ch-fig { animation: ch-hops 0.8s ease-out, ch-breathe 2.6s 0.8s ease-in-out infinite; }
@@ -1518,10 +1680,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .hub-text .bi { font-weight: 400; color: var(--ink-2); }
 .hub-card > .icon:last-child { flex: none; color: var(--ink-3); }
 
-/* Retry phase: mistakes come back as kraft segments after the planned ones. */
-.seg-repeat { background: var(--kraft-light); }
-.seg-repeat.seg-done { background: var(--kraft); }
-.seg-repeat.seg-now { background: var(--yellow); }
+/* Retry phase: the kraft tag (the bar's kraft tail is under "Lesson progress"). */
 .tag-repeat { background: var(--kraft); color: #1e2226; }
 
 /* Result: small line under a stat value ("24 words learned"). */
@@ -1683,3 +1842,267 @@ svg.emoji-xl { width: 140px; height: 140px; }
 @media (prefers-reduced-motion: reduce) {
   .unit-icon, .bay-pic { transition: none; }
 }
+
+/* ---- Round 3: coming back ---- */
+/* Streak state in the top bar, free days, the week row and tiers on the milestone, the calm
+   "streak stopped" screen, "Herhaal vandaag" all day, the arrival on the path, the result's
+   extras, and the cards that keep the habit and the progress (install, reminder, backup). */
+:root { --stamp-ink: #1d5fae; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) { --stamp-ink: #7db8ff; } }
+:root[data-theme='dark'] { --stamp-ink: #7db8ff; }
+
+/* Top bar: a flame, grey outline until today is done, then lit. */
+.flame-icon { flex: none; display: block; }
+.flame-icon-out { color: var(--ink-3); }
+.stat-streak .flame-icon-lit { animation: flame-lit 0.5s var(--ease-pop) both; }
+@keyframes flame-lit { from { transform: scale(0.4); opacity: 0; } }
+/* "VANDAAG NOG": a small stencil tag on its own line under the stats, with the gloss. */
+.topbar:has(.todo-tag) { flex-wrap: wrap; row-gap: 2px; }
+.todo-tag {
+  order: 10; flex: 1 0 100%; display: flex; align-items: center; justify-content: flex-end; gap: 8px;
+  margin-top: -6px; min-width: 0;
+}
+.todo-nl {
+  flex: none; padding: 3px 8px 2px; border: 2px solid #1e2226; border-radius: 3px;
+  background: var(--yellow); color: #1e2226; rotate: -2deg;
+  font-family: var(--stencil); font-weight: 800; font-size: 0.95rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase;
+}
+.todo-gloss { flex: 0 1 auto; min-width: 0; font-size: 0.85rem; color: var(--muted); }
+.todo-gloss .bi-en { line-height: 1.15; }
+.todo-gloss.bi-swap .bi-help { display: none; }
+
+/* "Herhaal vandaag": done today (GEDAAN stamp) and "first words tomorrow" stay on the path. */
+.daily-done, .daily-first { position: relative; border-color: var(--line); }
+.daily-done:hover, .daily-first:hover { border-color: var(--line); }
+.daily-done { padding-inline-end: 70px; }
+.daily-done .daily-icon, .daily-first .daily-icon { background: var(--track); }
+.daily-tomorrow { font-size: 1.1rem; font-weight: 650; line-height: 1.2; }
+.daily-stamp {
+  top: -16px; right: auto; inset-inline-end: -10px; width: 76px; height: 76px; margin-top: 0; rotate: -10deg;
+  color: var(--right-ink); background: var(--card);
+}
+.daily-stamp .stamp-word { font-size: 1.15rem; }
+.daily-extra {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; margin-top: 4px;
+  padding: 4px 0; background: none; border: 0; color: var(--ink-2); font-weight: 600; font-size: 0.9rem;
+}
+.daily-extra > span[lang='nl'] { text-decoration: underline; text-underline-offset: 3px; }
+.daily-extra { flex-wrap: wrap; text-align: start; }
+.daily-extra .bi { flex-direction: row; gap: 6px; }
+.daily-extra-gloss .bi-en { font-weight: 400; color: var(--muted); text-decoration: none; display: inline-block; }
+.daily-extra-gloss .bi-help { display: none; }
+.daily-extra:hover { color: var(--ink); }
+
+/* Back on the path after a lesson: the done marker is stamped in, the next lesson pops in. */
+.bay-arrived .bay-marker { animation: bay-stamp 0.42s 0.35s var(--ease-pop) both; }
+@keyframes bay-stamp {
+  0% { transform: scale(2.2) rotate(-24deg); opacity: 0; }
+  60% { transform: scale(0.9) rotate(4deg); opacity: 1; }
+}
+.bay-pop .bay-card { animation: bay-pop 0.55s 0.75s var(--ease-pop) both; }
+.bay-pop .bay-marker { animation: bay-pop 0.5s 0.7s var(--ease-pop) both; }
+@keyframes bay-pop {
+  0% { transform: scale(0.88); opacity: 0.3; }
+  60% { transform: scale(1.04); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bay-arrived .bay-marker, .bay-pop .bay-card, .bay-pop .bay-marker, .stat-streak .flame-icon-lit { animation: none; }
+}
+
+/* Result: Continue fades in after a moment (stray taps from the last exercise are ignored). */
+.result-go { animation: result-go 0.35s 0.9s var(--ease-out) both; }
+@keyframes result-go { from { opacity: 0; transform: translateY(10px); } }
+@media (prefers-reduced-motion: reduce) { .result-go { animation: none; } }
+/* FOUTLOOS: a blue-ink rubber stamp on the "right the first time" card. */
+.stat-card:has(.flawless-stamp) { position: relative; }
+.flawless-stamp {
+  top: auto; bottom: -18px; right: -12px; margin-top: 0; width: 78px; height: 78px; rotate: 14deg;
+  color: var(--stamp-ink); animation-delay: 1.45s;
+}
+.flawless-stamp .stamp-word { font-size: 1.05rem; letter-spacing: 0.01em; }
+.result-line {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 8px;
+  margin: 6px 0 0; max-width: 440px; font-weight: 650; animation: result-go 0.4s 1.2s var(--ease-out) both;
+}
+.result-line .bi-help { --help-size: 0.85em; }
+.result-flawless { color: var(--stamp-ink); }
+.result-flawless .bi-help { color: var(--muted); }
+.result-stronger { font-size: 1.1rem; color: var(--right-ink); }
+.result-stronger .bi { flex-basis: 100%; font-weight: 500; color: var(--ink-2); }
+.stronger-arrow { font-size: 0.85em; }
+.result-next { margin-top: 14px; font-size: 1rem; color: var(--ink); }
+.result-next-nl {
+  padding: 3px 8px 2px; border-radius: 3px; background: var(--tag-bg); color: var(--tag-ink);
+  font-family: var(--stencil); font-weight: 800; font-size: 1rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase;
+}
+.result-next-title { font-weight: 650; }
+.result-next-title .bi-help { font-weight: 400; }
+@media (prefers-reduced-motion: reduce) { .result-line { animation: none; } }
+
+/* Milestone: tier stamp on the streak card, the work week, record and free days. */
+.tier-stamp {
+  position: absolute; top: -20px; inset-inline-end: -16px; z-index: 1;
+  display: grid; place-items: center; padding: 5px 9px 4px;
+  border: 3px solid currentColor; border-radius: 6px; box-shadow: inset 0 0 0 2px var(--card), inset 0 0 0 3.5px currentColor;
+  background: color-mix(in srgb, var(--card) 70%, transparent); color: var(--stamp-ink); rotate: 9deg;
+  font-family: var(--stencil); font-weight: 800; font-size: 1.35rem; line-height: 1; text-transform: uppercase; white-space: nowrap;
+  animation: stamp-in 0.25s 1.15s cubic-bezier(0.3, 1.4, 0.6, 1) both;
+}
+.tier-gloss { margin: -4px 0 4px; font-weight: 650; color: var(--stamp-ink); }
+.tier-gloss .bi-help { color: var(--muted); font-weight: 400; }
+
+.week { width: 100%; max-width: 420px; margin: 20px 0 0; }
+.week-head { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: 2px 10px; margin-bottom: 10px; }
+.week-nl {
+  font-family: var(--stencil); font-weight: 800; font-size: 1.15rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2);
+}
+.week-gloss { font-size: 0.9rem; color: var(--muted); }
+.milestone .week-gloss.bi { flex-direction: row; flex-wrap: wrap; gap: 0 6px; align-items: baseline; }
+.week-row { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.week-day { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; }
+.week-letter { font-size: 0.95rem; font-weight: 650; color: var(--ink-2); line-height: 1.2; }
+.week-tile {
+  display: grid; place-items: center; width: 100%; max-width: 48px; aspect-ratio: 1;
+  background: var(--card); border: 2px solid var(--line); border-radius: 6px;
+}
+.week-nl-day { font-size: 0.72rem; font-weight: 600; color: var(--faint); text-transform: uppercase; letter-spacing: 0.04em; }
+.week-stamp {
+  display: grid; place-items: center; width: 82%; aspect-ratio: 1; border-radius: 50%;
+  background: var(--yellow); color: #1e2226; border: 2px solid #1e2226; rotate: -10deg;
+  box-shadow: inset 0 0 0 2px var(--yellow), inset 0 0 0 3px #1e2226;
+}
+.week-done .week-tile { border-color: var(--edge); }
+.week-rest .week-tile { background: var(--track); border-color: var(--track); color: var(--ink-3); }
+.week-today .week-letter, .week-today .week-nl-day { color: var(--ink); }
+.week-today .week-tile { border-width: 2.5px; border-color: var(--edge); animation: week-pulse 0.9s 1.3s var(--ease-out) 1 both; }
+.week-today .week-stamp { animation: stamp-in 0.25s 1.1s cubic-bezier(0.3, 1.4, 0.6, 1) both; }
+@keyframes week-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--yellow) 80%, transparent); transform: scale(1); }
+  35% { transform: scale(1.12); }
+  100% { box-shadow: 0 0 0 12px transparent; transform: scale(1); }
+}
+.week-legend { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 10px 0 0; font-size: 0.85rem; color: var(--ink-2); }
+.week-legend-tile { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 4px; background: var(--track); color: var(--ink-3); }
+
+.streak-facts { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 18px; }
+.streak-fact { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 10px; margin: 0; }
+.fact-tag {
+  display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px 3px; border-radius: 3px;
+  background: var(--tag-bg); color: var(--tag-ink);
+  font-family: var(--stencil); font-weight: 800; font-size: 1.15rem; line-height: 1; letter-spacing: 0.04em; text-transform: uppercase;
+}
+.fact-free .icon { margin-top: -2px; }
+.fact-gloss { font-size: 0.9rem; color: var(--ink-2); max-width: 26em; }
+.milestone .fact-gloss.bi { align-items: center; }
+.milestone-keep { display: flex; flex-direction: column; gap: 18px; width: 100%; max-width: 440px; margin-top: 26px; text-align: start; }
+@media (prefers-reduced-motion: reduce) {
+  .tier-stamp, .week-today .week-tile, .week-today .week-stamp { animation: none; }
+}
+
+/* Streak stopped: calm. Bram, a grey flame, the number in grey, the record. */
+.stopped-hero { display: flex; align-items: flex-end; justify-content: center; gap: 4px; margin-top: 8px; }
+.stopped-flame { color: var(--ink-3); margin-bottom: 14px; }
+.stopped-count { rotate: 0deg; animation: none; box-shadow: 5px 5px 0 var(--line); }
+.stopped-count .streak-num { font-size: 4.5rem; color: var(--ink-3); }
+.stopped-count .streak-unit { font-size: 1.5rem; padding-bottom: 6px; }
+.stopped-nl { display: block; }
+.streak-stopped .streak-line .bi { margin-top: 10px; font-size: 0.78em; font-weight: 500; }
+.streak-stopped .streak-line .bi-help { font-weight: 400; }
+
+/* Cards that keep the habit and the progress: printed labels, like the result's stat cards. */
+.keep-card {
+  position: relative; display: flex; flex-direction: column; gap: 12px; padding: 16px; text-align: start;
+  background: var(--card); color: var(--ink); border: 2.5px solid var(--edge); border-radius: 6px;
+  box-shadow: 5px 5px 0 var(--label-shadow);
+}
+.screen > .keep-card { margin: 32px 0 0; }
+.keep-card .bi { align-items: stretch; }
+.keep-card .bi-help { text-align: start; }
+.keep-head { display: flex; flex-direction: column; gap: 2px; }
+.keep-nl { font-size: 1.2rem; font-weight: 700; line-height: 1.2; color: var(--ink-strong); }
+.keep-gloss { font-size: 0.95rem; color: var(--ink-2); }
+.keep-hint { margin: 0; font-size: 0.9rem; line-height: 1.4; color: var(--muted); }
+.keep-ok { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--right-ink); font-weight: 650; }
+.keep-note { margin: 0; }
+.keep-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.keep-btn { flex-direction: column; gap: 0; width: 100%; min-height: 58px; padding: 8px 12px; font-weight: 650; line-height: 1.2; }
+.keep-card .keep-btn .bi { align-items: center; }
+.keep-btn-gloss { font-size: 0.8rem; font-weight: 500; opacity: 0.9; }
+.keep-btn-gloss.bi-swap .bi-help { display: none; }
+.keep-link {
+  display: inline-flex; align-items: center; gap: 6px; align-self: center; min-height: 44px; padding: 4px 8px;
+  background: none; border: 0; color: var(--ink-2); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;
+}
+.keep-link .bi { flex-direction: row; gap: 6px; }
+.keep-link-gloss.bi-swap .bi-help { display: none; }
+
+/* Install: the app icon on the card, and the iPhone's three steps as a picture strip. */
+.install-card .keep-head { padding-inline-end: 54px; }
+.keep-icon { position: absolute; top: 14px; inset-inline-end: 14px; rotate: 6deg; }
+.ios-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.ios-steps li {
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0;
+  padding: 12px 4px 10px; text-align: center; background: var(--bg); border-radius: 8px;
+}
+.ios-num {
+  position: absolute; top: 4px; inset-inline-start: 8px;
+  font-family: var(--stencil); font-weight: 800; font-size: 1.25rem; line-height: 1; color: var(--ink-3);
+}
+.ios-pic { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--card); color: var(--ink); border: 2px solid var(--line); }
+.ios-nl { font-size: 0.85rem; font-weight: 650; line-height: 1.2; overflow-wrap: anywhere; }
+.ios-gloss { font-size: 0.78rem; color: var(--muted); }
+.keep-card .ios-gloss.bi { align-items: center; }
+.ios-gloss .bi-help { --help-min: 12px; }
+
+/* Reminder: three big time chips and an own time. */
+.remind-chips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.remind-chip {
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 3px; min-width: 0; min-height: 104px;
+  padding: 10px 4px; text-align: center; color: var(--ink); background: var(--bg);
+  border: 2px solid var(--line); border-radius: 10px;
+}
+.remind-chip:hover { border-color: var(--ink-3); }
+.remind-chip.picked { background: var(--yellow); color: #1e2226; border-color: #1e2226; }
+.remind-time { font-family: var(--stencil); font-weight: 800; font-size: 1.7rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.remind-nl { font-size: 0.85rem; font-weight: 650; line-height: 1.2; }
+.remind-gloss { font-size: 0.78rem; color: var(--muted); }
+.keep-card .remind-chip .bi { align-items: center; }
+.remind-chip.picked .remind-gloss, .remind-chip.picked .bi-help { color: #3f3a2c; }
+.remind-gloss .bi-help { --help-min: 12px; }
+.remind-own {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 8px 8px 12px;
+  border: 2px dashed var(--line); border-radius: 10px;
+}
+.remind-own.picked { border-style: solid; border-color: var(--edge); }
+.remind-own-text { display: flex; flex-direction: column; gap: 1px; font-weight: 650; font-size: 0.95rem; min-width: 0; }
+.remind-own input {
+  flex: none; min-height: 44px; padding: 6px 10px; font: inherit; font-size: 1.15rem; font-weight: 650;
+  color: var(--ink); background: var(--input-bg); border: 2px solid var(--line); border-radius: 8px;
+}
+.remind-own input:focus { outline: none; border-color: var(--edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 55%, transparent); }
+
+/* Backup: a kraft waybill ("vrachtbrief") with the contents listed, stamped in the corner. */
+.waybill {
+  background: var(--tag-bg); border-color: var(--kraft-dark); box-shadow: 5px 5px 0 var(--kraft);
+  background-image: repeating-linear-gradient(90deg, var(--kraft-dark) 0 10px, transparent 10px 16px);
+  background-size: 100% 3px; background-repeat: no-repeat; background-position: 0 6px;
+  padding-top: 22px;
+}
+.waybill .keep-hint { color: var(--ink-2); }
+.waybill-tag {
+  position: absolute; top: 14px; inset-inline-end: 12px; padding: 3px 7px 2px;
+  border: 2px solid var(--tag-ink); border-radius: 3px; color: var(--tag-ink); rotate: -4deg;
+  font-family: var(--stencil); font-weight: 800; font-size: 0.85rem; line-height: 1; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.waybill .keep-head { padding-inline-end: 92px; }
+.waybill-lines {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0;
+  border-block: 2px dashed var(--kraft); padding: 8px 0;
+}
+.waybill-lines div { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.waybill-lines div + div { border-inline-start: 2px dashed var(--kraft); }
+.waybill-lines dt { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tag-ink); }
+.waybill-lines dd { margin: 0; font-family: var(--stencil); font-weight: 800; font-size: 1.9rem; line-height: 1; color: var(--ink); }
+.waybill .btn-ghost { background: var(--card); }
+.waybill-ask { display: flex; flex-direction: column; gap: 10px; padding: 12px; background: var(--card); border: 2px solid var(--edge); border-radius: 8px; }
+.waybill-ask-nl { margin: 0; font-weight: 650; }

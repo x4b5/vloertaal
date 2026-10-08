@@ -8,8 +8,9 @@ import { Gate } from '../components/Gate';
 import { SectorScreen } from '../components/Sector';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import type { Access } from '../lib/access';
-import { emptyProgress } from '../lib/progress';
-import { Milestone } from '../components/Milestone';
+import { dayKey, emptyProgress, workWeek } from '../lib/progress';
+import { Milestone, StreakStopped } from '../components/Milestone';
+import { addDays, dailyCard } from '../lib/spaced';
 import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
 import type { LangCode } from '../i18n/types';
@@ -33,10 +34,34 @@ import { hasPicture } from '../lib/wordPicture';
  * it is built without sound.
  */
 export function ShotHarness({ shot, lang, word }: { shot: string; lang: string | null; word?: string | null }) {
-  // Lesson complete: 9 of 11 right the first time, 6 new words (24 in all).
-  if (shot === 'result') return <Result right={9} total={11} newWords={6} words={24} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
-  // Day-streak milestone after the very first lesson: streak 1.
-  if (shot === 'streak') return <Milestone streak={1} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
+  const q = new URLSearchParams(location.search);
+  // Lesson complete: 9 of 11 right the first time, 6 new words (24 in all), next lesson named.
+  // &perfect=1: 11 of 11 (FOUTLOOS); &review=1: after "Herhaal vandaag" (8 words, 5 stronger).
+  if (shot === 'result') {
+    const l = getHelpLanguage(lang as LangCode);
+    const review = q.get('review') === '1';
+    const right = q.get('perfect') === '1' ? 11 : 9;
+    const next = findLesson('l.people')?.lesson;
+    return (
+      <Result
+        right={right} total={11} newWords={6} words={24} lang={l} onDone={() => {}}
+        repeated={review ? 8 : undefined} stronger={review ? 5 : undefined}
+        next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l } : undefined}
+      />
+    );
+  }
+  // Day-streak milestone after the very first lesson: streak 1. &n=7 another day; &rest=1 with a
+  // free day used yesterday and one in hand; &install=ios|prompt shows that home-screen card.
+  if (shot === 'streak') {
+    const n = Number(q.get('n') ?? 1);
+    const today = new Date();
+    const key = (d: number) => dayKey(new Date(today.getFullYear(), today.getMonth(), today.getDate() - d));
+    const rest = q.get('rest') === '1';
+    const p = { ...emptyProgress, streak: n, lastDay: key(0), rest: rest ? [key(1)] : [] };
+    return <Milestone streak={n} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} days={workWeek(p, today)} best={Number(q.get('best') ?? n)} freezes={rest ? 1 : 0} />;
+  }
+  // The streak stopped at 12 (record 21), shown once on the next open.
+  if (shot === 'stopped') return <StreakStopped streak={12} best={21} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
   const quiet = new URLSearchParams(location.search).get('quiet') === '1';
   // &access=preview shows the path, tips and settings as a preview user sees them.
@@ -68,7 +93,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       <Tips progress={progress} lang={l} onBack={() => {}} access={access} />
     ) : (
       <>
-        <SettingsWithSound progress={progress} lang={l} onLang={() => {}} onSector={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
+        <SettingsWithSound progress={progress} lang={l} onRestore={() => {}} onLang={() => {}} onSector={() => {}} onTheme={() => {}} onVoice={() => {}} onReset={() => {}} onAbout={() => {}} access={access} onAccess={() => {}} />
         <BottomNav current="me" onTab={() => {}} />
       </>
     );
@@ -78,10 +103,22 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'path') {
     const progress = { ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector, completed: { 'l.hello': { best: 1, times: 1 } } };
     const l = getHelpLanguage(lang as LangCode);
+    // &daily=due|done|first shows "Herhaal vandaag" in that state; &lit=1 has today done (lit flame);
+    // &arrived=1 plays the "back from a lesson" arrival (scroll, stamp, pop).
+    const today = dayKey(new Date());
+    const words = findLesson('l.hello')!.lesson.words;
+    const dstate = q.get('daily');
+    const cards = Object.fromEntries(words.map((w, i) => [w.id, {
+      box: dstate === 'done' ? 2 : 1,
+      due: dstate === 'due' ? today : dstate === 'done' ? addDays(today, i < 4 ? 1 : 2) : addDays(today, 1),
+    }]));
+    const daily = dstate ? dailyCard(cards, today, dstate === 'done' ? today : undefined) : null;
+    if (daily && dstate === 'done' && q.get('extra') === '1') daily.extra = 6;
     return (
       <>
-        <TopBar streak={7} words={learnedWords(progress.completed).size} lang={l} onLanguage={() => {}} />
-        <Path progress={progress} lang={l} onStart={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}} openOther={new URLSearchParams(location.search).get('other') === 'open'} />
+        <TopBar streak={7} done={q.get('lit') === '1'} words={learnedWords(progress.completed).size} lang={l} onLanguage={() => {}} />
+        <Path progress={progress} lang={l} onStart={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}} openOther={new URLSearchParams(location.search).get('other') === 'open'}
+          daily={daily} onDaily={() => {}} arrived={q.get('arrived') === '1' ? 'l.hello' : null} />
         <BottomNav current="route" onTab={() => {}} />
       </>
     );

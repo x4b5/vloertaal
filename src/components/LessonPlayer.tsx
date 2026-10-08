@@ -4,6 +4,7 @@ import { fillN, gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { autoSpeak, sounds, speechAvailable } from '../lib/audio';
 import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
+import { barParts, chimeStep, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { voiceFor } from '../lib/voices';
 import { castFor } from './Characters';
 import { Bi, HelpText } from './Bi';
@@ -86,6 +87,22 @@ function answerPair(ex: Exercise, lang?: HelpLanguage): { nl?: string; meaning: 
   }
 }
 
+/** Reduced motion: no smooth scrolling, no movement (see "Reduced motion" in styles.css). */
+function reducedMotion(): boolean {
+  return typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+}
+
+/** Kraft rubber stamp on the feedback label at a run of 3, 5 or 8: "3 OP RIJ" + the help language. */
+function RunStamp({ n, lang }: { n: number; lang?: HelpLanguage }) {
+  const gloss = fillN(ui('inARow', lang), n);
+  return (
+    <span className="run-stamp" aria-hidden>
+      <span className="run-stamp-nl" lang="nl"><b>{n}</b> op rij</span>
+      {gloss.help && lang ? <HelpText className="run-stamp-help" text={gloss.help} lang={lang} /> : <span className="run-stamp-help" lang="en">{gloss.en}</span>}
+    </span>
+  );
+}
+
 /** The square block at the end of the main button: a check before answering, an arrow after. */
 function ButtonBlock({ icon }: { icon: 'check' | 'next' }) {
   return (
@@ -125,6 +142,38 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [checked, setChecked] = useState(false);
   const graded = useRef({ right: 0, total: 0 });
+  /** Right answers in a row (graded exercises only); a miss resets it without a word. */
+  const [run, setRun] = useState(0);
+  /** Misses in a row: the character's "oops" plays on the first one only. */
+  const [misses, setMisses] = useState(0);
+  /** The main button turns into the outcome-coloured Continue 120 ms after Check. */
+  const [swapped, setSwapped] = useState(false);
+  /** "3 OP RIJ" (runs of 3, 5, 8), shown 300 ms after Check; `sweep` replays the bar highlight. */
+  const [runStamp, setRunStamp] = useState<number | null>(null);
+  const [sweep, setSweep] = useState(0);
+  /** Screen-reader announcement, filled one tick after Check (the region itself is always there). */
+  const [live, setLive] = useState('');
+  /** The Check choreography's timers; cleared on Continue and when the lesson closes. */
+  const timers = useRef<number[]>([]);
+  const later = (ms: number, fn: () => void) => { timers.current.push(window.setTimeout(fn, ms)); };
+  const clearTimers = () => { timers.current.forEach((t) => window.clearTimeout(t)); timers.current = []; };
+  useEffect(() => {
+    const list = timers;
+    return () => list.current.forEach((t) => window.clearTimeout(t));
+  }, []);
+  /** The exercise on screen and a layer for the one leaving (a copy that slides out, 160 ms). */
+  const slideRef = useRef<HTMLDivElement>(null);
+  const ghostRef = useRef<HTMLDivElement>(null);
+  /** The new exercise's entrance (staggered); the class comes off afterwards, so later state
+   *  changes (a shake, a flash) never replay it. */
+  const [entering, setEntering] = useState(true);
+  useEffect(() => {
+    if (!entering) return;
+    const t = window.setTimeout(() => setEntering(false), 700);
+    return () => window.clearTimeout(t);
+  }, [entering, index]);
+  const rtl = lang?.dir === 'rtl';
+  const goRef = useRef<HTMLButtonElement>(null);
   const wordResults = useRef<Record<string, boolean>>({});
   /** "I can't listen now" without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
@@ -158,14 +207,21 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       const bottom = Math.max(...[...marked].map((el) => el.getBoundingClientRect().bottom));
       const top = Math.min(...[...marked].map((el) => el.getBoundingClientRect().top));
       const limit = foot.getBoundingClientRect().top - 12;
-      if (bottom > limit) window.scrollBy({ top: Math.min(bottom - limit, Math.max(0, top - 8)), behavior: 'smooth' });
+      if (bottom > limit) window.scrollBy({ top: Math.min(bottom - limit, Math.max(0, top - 8)), behavior: reducedMotion() ? 'auto' : 'smooth' });
     });
     return () => cancelAnimationFrame(raf);
   }, [checked]);
   const onAnswer = useCallback((a: Answer | null) => setAnswer(a), []);
 
-  const firstTryDone = Math.min(index, initial.length);
-  const progress = firstTryDone / initial.length;
+  // A new exercise: focus its question, so a screen reader starts there (typing keeps the input).
+  useEffect(() => {
+    if (queue[index]?.kind === 'type') return;
+    const h = slideRef.current?.querySelector<HTMLElement>('.prompt');
+    if (!h) return;
+    h.tabIndex = -1;
+    h.focus({ preventScroll: true });
+    // Only the index matters: the queue grows when a mistake is queued, on the same exercise.
+  }, [index]); // eslint-disable-line react-hooks/exhaustive-deps
 
   function check() {
     if (!answer) return;
@@ -179,14 +235,33 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     }
     // A finished match board already gave its feedback tile by tile.
     if (ex.kind === 'match') return next();
+    // The choreography (styles.css, "Answer moment"): t=0 the options colour, the chime plays
+    // and the character reacts; the stamp lands at 60 ms and the label rises at 120 ms, when the
+    // button becomes the green or red Continue; the run stamp follows at 300 ms and the answer
+    // is spoken at 700 ms (right) or 450 ms (wrong).
+    clearTimers();
+    const newRun = nextRun(run, answer.correct);
+    setRun(newRun);
+    setMisses(nextMisses(misses, answer.correct));
     setChecked(true);
-    if (answer.correct) sounds.correct();
-    else {
+    setSwapped(false);
+    later(120, () => {
+      setSwapped(true);
+      // Enter goes on from here, also after picking with the number keys.
+      goRef.current?.focus({ preventScroll: true });
+    });
+    if (answer.correct) {
+      sounds.correct(chimeStep(newRun));
+      const stamp = runStampFor(newRun);
+      if (stamp) later(300, () => { setRunStamp(stamp); setSweep((k) => k + 1); });
+    } else {
       sounds.wrong();
       // A mistake comes back once at the end of the lesson; no endless loops.
       if (index < initial.length) setQueue((q) => [...q, ex]);
     }
     const sol = solution(ex);
+    const said = announce(ex, answer.correct, answer.almost);
+    later(30, () => setLive(said));
     // The answer is said by the character on screen, so a woman never speaks with a man's voice:
     // in a chat the right reply is "your" line (Amina); a built sentence belongs to its speaker.
     const who =
@@ -194,7 +269,33 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       : ex.kind === 'build' ? castFor(ex.sentence.id)
       : ex.kind === 'situation' || ex.kind === 'tip' ? castFor(ex.tip.id)
       : 'bram';
-    if (sol.nl) autoSpeak(sol.text, false, 'nl', voiceFor(who));
+    if (sol.nl) later(answer.correct ? 700 : 450, () => autoSpeak(sol.text, false, 'nl', voiceFor(who)));
+  }
+
+  /** What the status region says after Check: the outcome, then the right answer. */
+  function announce(e: Exercise, correct: boolean, almost?: boolean): string {
+    const title = correct ? 'Goed zo!' : e.kind === 'situation' ? 'Hier gaat het anders.' : 'Nog eens!';
+    const meaning = ui(correct ? (almost ? 'almost' : e.kind === 'situation' ? 'goodChoice' : 'correct') : e.kind === 'situation' ? 'otherChoice' : 'incorrect', lang);
+    const p = answerPair(e, lang);
+    const answerText = p ? `${p.nl ? `${p.nl} = ` : ''}${p.meaning.en}${p.meaning.help ? ` (${p.meaning.help})` : ''}` : '';
+    const lead = !correct && e.kind !== 'situation' ? `${ui('correctAnswer').en}: ` : '';
+    return [title, `${meaning.en}${meaning.help ? ` (${meaning.help})` : ''}.`, answerText && `${lead}${answerText}`].filter(Boolean).join(' ');
+  }
+
+  /** Copy the exercise on screen into the ghost layer, where it slides out while the next comes in. */
+  function leave() {
+    const from = slideRef.current;
+    const layer = ghostRef.current;
+    if (!from || !layer) return;
+    const copy = from.cloneNode(true) as HTMLElement;
+    copy.classList.remove('ex-enter');
+    copy.classList.add('ex-leave');
+    copy.setAttribute('aria-hidden', 'true');
+    copy.setAttribute('inert', '');
+    layer.replaceChildren(copy);
+    setEntering(true);
+    const t = window.setTimeout(() => copy.remove(), 200);
+    timers.current.push(t);
   }
 
   function finish() {
@@ -203,25 +304,38 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current });
   }
 
-  function next() {
+  function reset() {
+    clearTimers();
     setAnswer(null);
     setChecked(false);
+    setSwapped(false);
+    setRunStamp(null);
+    setLive('');
+  }
+
+  function next() {
+    reset();
     let i = index + 1;
     // Skip audio-only exercises when the learner can't listen right now.
     while (audioOff && i < queue.length && needsAudio(queue[i])) i++;
     if (i >= queue.length) {
       finish();
-    } else setIndex(i);
+    } else {
+      leave();
+      setIndex(i);
+    }
   }
 
   /** Leave the listening exercise on screen (unanswered) for the next one that needs no sound. */
   function skipAudio() {
-    setAnswer(null);
-    setChecked(false);
+    reset();
     let i = index + 1;
     while (i < queue.length && needsAudio(queue[i])) i++;
     if (i >= queue.length) finish();
-    else setIndex(i);
+    else {
+      leave();
+      setIndex(i);
+    }
   }
 
   /** Sound off for good (header toggle or "I can't listen now"), or back on. */
@@ -234,7 +348,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   }
 
   const verdict: 'right' | 'wrong' | undefined = checked && answer && isGraded(ex) ? (answer.correct ? 'right' : 'wrong') : undefined;
-  const props = { lang, locked: checked, onAnswer, verdict };
+  const props = { lang, locked: checked, onAnswer, verdict, run, misses };
   const key = `${index}`;
   let body: React.ReactNode;
   switch (ex.kind) {
@@ -256,6 +370,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   // (In a chat this is what the right reply means; in a situation, the usual choice.)
   const pair = answerPair(ex, lang);
   // The heading is Dutch ("Goed zo!" / "Nog eens!"); its meaning sits under it in small type.
+  const outcome: 'right' | 'wrong' | 'other' | null = feedback ? (answer.correct ? 'right' : ex.kind === 'situation' ? 'other' : 'wrong') : null;
   const headingMeaning = feedback
     ? ui(answer.correct ? (answer.almost ? 'almost' : ex.kind === 'situation' ? 'goodChoice' : 'correct') : ex.kind === 'situation' ? 'otherChoice' : 'incorrect', lang)
     : null;
@@ -285,14 +400,14 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     </div>
   );
   const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip';
-  // Segments: one per planned exercise, then one kraft segment per mistake that comes back.
-  const segState = (i: number) => (i < index || (i === index && checked) ? 'seg-done' : i === index ? 'seg-now' : '');
-  const count = Math.min(index + 1, initial.length);
+  // One bar: ink for done, yellow for where you are, a kraft tail for mistakes that come back.
+  const bar = barParts(index, checked, initial.length, queue.length);
+  const doneCount = Math.round(bar.done * bar.slots);
   /** In the retry phase: how many mistakes are left, this one included. */
   const repeatsLeft = index >= initial.length ? queue.length - index : 0;
 
   return (
-    <div className="player">
+    <div className={`player ${rtl ? 'player-rtl' : ''}`}>
       <header className="player-top">
         <button type="button" className="icon-btn" onClick={() => setAskQuit(true)} aria-label="Quit lesson"><CloseIcon size={28} /></button>
         {/* Sound on/off for a learner on the bus; pressed = "Without sound" (saved, see Settings). */}
@@ -307,8 +422,21 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
           {soundOff ? <SpeakerOffIcon size={26} /> : <SpeakerIcon size={26} />}
         </button>
         <div className="bar-wrap">
-          <div className="segs" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>
-            {queue.map((_, i) => <span key={i} className={`seg ${i >= initial.length ? 'seg-repeat' : ''} ${segState(i)}`} />)}
+          <div
+            className="lbar"
+            role="progressbar"
+            aria-label="Lesson progress"
+            aria-valuemin={0}
+            aria-valuemax={bar.slots}
+            aria-valuenow={doneCount}
+            aria-valuetext={`${doneCount} / ${bar.slots}`}
+          >
+            {bar.tail > 0 && <span className="lbar-tail" style={{ width: `${bar.tail * 100}%` }} />}
+            {bar.now !== null && (
+              <span className="lbar-now" style={{ width: `${100 / bar.slots}%`, transform: `translateX(${(rtl ? -1 : 1) * bar.now * 100}%)` }} />
+            )}
+            <span className="lbar-fill" style={{ transform: `scaleX(${bar.done})` }} />
+            {sweep > 0 && <span key={sweep} className="lbar-sweep" />}
           </div>
         </div>
         <span className="lesson-name">
@@ -323,6 +451,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         </div>
       )}
       <main className="player-body">
+        <div className="ex-ghost" ref={ghostRef} aria-hidden />
+        <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
         <div className="ex-tag">
           {repeatsLeft > 0 ? (
             <>
@@ -334,28 +464,35 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
           ) : (
             <>
               <span className="tag" lang="nl">{KIND_TAG[ex.kind]}</span>
-              <span className="ex-count">{count} / {initial.length}</span>
               {/* New-word exercises: translate the Dutch tag into English and the help language. */}
               {(ex.kind === 'dutch' || ex.kind === 'intro') && <Bi className="ex-tag-note" text={ui('newWord', lang)} />}
             </>
           )}
         </div>
         {body}
+        </div>
       </main>
       <footer className="player-foot" ref={footRef}>
         <div className="foot-inner">
-          {feedback && (
-            <div
-              className={`feedback ${answer.correct ? 'feedback-right' : ex.kind === 'situation' ? 'feedback-other' : 'feedback-wrong'}`}
-              role="status"
-            >
+          {/* Always present, so screen readers hear what is put in it one tick after Check. */}
+          <div className="sr-only" role="status">{live}</div>
+          {feedback && outcome && (
+            <div className={`feedback feedback-${outcome}`}>
               <span className="feedback-tape" aria-hidden />
+              {runStamp && <RunStamp n={runStamp} lang={lang} />}
+              <span className="feedback-icon" aria-hidden>
+                {outcome === 'right' ? <CheckIcon size={26} /> : outcome === 'wrong' ? <CloseIcon size={26} /> : <ChevronIcon size={26} />}
+              </span>
               <div className="feedback-text">
-                <div className="feedback-head">
-                  <div className="feedback-title" lang="nl">
-                    {answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Nog eens!'}
+                {/* Heading: the help language first and large; the Dutch words and English under it. */}
+                <div className={`feedback-head ${headingMeaning?.help ? 'has-help' : ''}`}>
+                  {headingMeaning?.help && lang && <HelpText className="feedback-help" text={headingMeaning.help} lang={lang} />}
+                  <div className="feedback-line">
+                    <span className="feedback-title" lang="nl">
+                      {answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Nog eens!'}
+                    </span>
+                    {headingMeaning && <span className="feedback-en" lang="en">{headingMeaning.en}</span>}
                   </div>
-                  {headingMeaning && <Bi className="feedback-sub" text={headingMeaning} />}
                 </div>
                 {(pairLine || whyLine) && <hr className="feedback-rule" />}
                 {!answer.correct && sol.text && ex.kind !== 'situation' && (
@@ -373,23 +510,19 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
                 <Bi text={ui('cantListen', lang)} />
               </button>
             )}
-            {checked || autoContinue ? (
-              <button
-                type="button"
-                className={`btn btn-go ${checked ? 'btn-dark' : 'btn-primary'}`}
-                disabled={!answer}
-                onClick={checked ? next : check}
-                autoFocus
-              >
-                {ui('continue', lang).en}
-                <ButtonBlock icon="next" />
-              </button>
-            ) : (
-              <button type="button" className="btn btn-go btn-primary" disabled={!answer} onClick={check}>
-                {ui('check', lang).en}
-                <ButtonBlock icon="check" />
-              </button>
-            )}
+            {/* One button per exercise (it fades in with the exercise). After Check it keeps focus and
+                becomes Continue in the outcome's colour, without blending through olive. */}
+            <button
+              key={key}
+              type="button"
+              className={`btn btn-go ${checked && swapped && outcome ? `btn-${outcome} btn-swap` : 'btn-primary'}`}
+              disabled={!answer}
+              onClick={checked ? next : check}
+              ref={goRef}
+            >
+              {checked && swapped ? ui('continue', lang).en : autoContinue ? ui('continue', lang).en : ui('check', lang).en}
+              <ButtonBlock icon={(checked && swapped) || autoContinue ? 'next' : 'check'} />
+            </button>
           </div>
         </div>
       </footer>

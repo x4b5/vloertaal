@@ -58,7 +58,7 @@ export function installWay(): InstallWay {
 
 export function onInstallChange(f: () => void): () => void {
   listeners.add(f);
-  return () => listeners.delete(f);
+  return () => { listeners.delete(f); };
 }
 
 /** Shows the browser's own install dialog (Android). True when the learner said yes. */

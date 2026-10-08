@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { helpLanguages } from '../src/i18n';
 import { barParts, cheerFor, chimeStep, nextMisses, nextRun, runStampFor, wholeTones } from '../src/lib/lessonRun';
 
 describe('run of right answers in a lesson', () => {
@@ -36,8 +37,9 @@ describe('lesson progress bar', () => {
     expect(barParts(3, false, 10, 10)).toEqual({ done: 0.3, now: 3, slots: 10, tail: 0 });
   });
 
-  it('counts the current exercise as done once checked', () => {
-    expect(barParts(3, true, 10, 10)).toMatchObject({ done: 0.4, now: null });
+  it('counts the current exercise as done once checked (the ink fill grows over its yellow)', () => {
+    expect(barParts(3, true, 10, 10)).toMatchObject({ done: 0.4, now: 3 });
+    expect(barParts(10, false, 10, 10).now).toBeNull();
   });
 
   it('gives mistakes that come back a kraft tail at the end', () => {
@@ -49,5 +51,11 @@ describe('lesson progress bar', () => {
 
   it('never overfills', () => {
     expect(barParts(12, true, 10, 12).done).toBe(1);
+  });
+});
+
+describe('run stamp gloss', () => {
+  it('keeps the {n} in every language', () => {
+    for (const l of helpLanguages) expect(l.ui.inARow, l.code).toContain('{n}');
   });
 });

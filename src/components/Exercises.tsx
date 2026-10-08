@@ -315,7 +315,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
   /** The pair just matched: it flashes green (320 ms) before it fades to "matched". */
   const [hit, setHit] = useState<string | null>(null);
   /** A wrong pair keeps its cross until the next tap. */
-  const [miss, setMiss] = useState<string[]>([]);
+  const [miss, setMiss] = useState<{ nl: string; en: string } | null>(null);
 
   useEffect(() => {
     if (!left || !rightPick) return;
@@ -327,7 +327,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
       if (next.size === ex.words.length) onAnswer({ correct: true });
     } else {
       sounds.wrong();
-      setMiss([left, rightPick]);
+      setMiss({ nl: left, en: rightPick });
     }
     setLeft(null);
     setRightPick(null);
@@ -341,12 +341,13 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
 
   const tap = () => {
     sounds.tap();
-    setMiss([]);
+    setMiss(null);
   };
-  const cls = (id: string, picked: string | null) =>
-    `choice match ${done.has(id) ? (hit === id ? 'match-hit' : 'matched') : ''} ${picked === id ? 'picked' : ''} ${miss.includes(id) ? 'shake match-miss' : ''}`;
-  const missMark = (id: string) =>
-    miss.includes(id) && (
+  const missed = (side: 'nl' | 'en', id: string) => miss?.[side] === id;
+  const cls = (side: 'nl' | 'en', id: string, picked: string | null) =>
+    `choice match ${done.has(id) ? (hit === id ? 'match-hit' : 'matched') : ''} ${picked === id ? 'picked' : ''} ${missed(side, id) ? 'shake match-miss' : ''}`;
+  const missMark = (side: 'nl' | 'en', id: string) =>
+    missed(side, id) && (
       <span className="match-x" aria-hidden><CloseIcon size={16} /></span>
     );
 
@@ -361,7 +362,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
             <button
               key={`nl-${w.id}`}
               type="button"
-              className={`${cls(w.id, left)} match-nl`}
+              className={`${cls('nl', w.id, left)} match-nl`}
               disabled={done.has(w.id) && hit !== w.id}
               aria-pressed={left === w.id}
               onClick={() => {
@@ -372,12 +373,12 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
               }}
             >
               <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
-              {missMark(w.id)}
+              {missMark('nl', w.id)}
             </button>,
             <button
               key={`en-${r.id}`}
               type="button"
-              className={`${cls(r.id, rightPick)} match-en`}
+              className={`${cls('en', r.id, rightPick)} match-en`}
               disabled={done.has(r.id) && hit !== r.id}
               aria-pressed={rightPick === r.id}
               onClick={() => {
@@ -388,7 +389,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
             >
               {hasPicture(r) && <WordPicture className="choice-emoji" id={r.id} emoji={r.emoji} size={36} />}
               <Bi text={gloss(r.id, r.en, lang)} />
-              {missMark(r.id)}
+              {missMark('en', r.id)}
             </button>,
           ];
         })}

@@ -46,7 +46,7 @@ export function wholeTones(steps: number): number {
 export interface BarParts {
   /** Fraction of the bar filled in ink (exercises done). */
   done: number;
-  /** Slot of the current exercise (yellow), as a 0-based index into `slots`; null when finished. */
+  /** Slot of the current exercise (yellow, under the ink fill once answered); null when finished. */
   now: number | null;
   /** Number of equal slots: the planned exercises plus the mistakes that come back. */
   slots: number;
@@ -63,7 +63,7 @@ export function barParts(index: number, checked: boolean, planned: number, total
   const doneCount = Math.min(slots, index + (checked ? 1 : 0));
   return {
     done: doneCount / slots,
-    now: checked || index >= slots ? null : index,
+    now: index >= slots ? null : index,
     slots,
     tail: Math.max(0, total - planned) / slots,
   };
