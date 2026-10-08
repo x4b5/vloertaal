@@ -484,15 +484,13 @@ export default {
     </g>
   ),
 
-  // "bang": afraid — Bram with wide eyes, worried brows and clenched teeth, hands up in
-  // front of him, shaking (tremble lines) and sweating
+  // "bang": afraid — Bram with inner brows pulled up, wide eyes and a half-open mouth, both
+  // hands up in front of him, shaking (tremble lines) and sweating
   'w.bang': () => (
     <g>
-      <Bust who="bram" x={60} y={126} scale={0.8} expr="disappointed" />
+      <Bust who="bram" x={60} y={126} scale={0.8} emotion="afraid" arms="raised" tilt={-3} bold />
       <path d="M16 40Q11 50 16 60M8 34Q1 50 8 66M104 40Q109 50 104 60M112 34Q119 50 112 66" fill="none" stroke={PAL.line} strokeWidth="3.6" strokeLinecap="round" />
       <path d="M90 22Q96 31 96 35A6 6 0 0 1 84 35Q84 31 90 22Z" fill={PAL.ice} />
-      <Hand pose="open" x={28} y={118} rotate={14} scale={0.66} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
-      <Hand pose="open" x={92} y={118} rotate={-14} scale={0.66} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} mirror />
     </g>
   ),
 

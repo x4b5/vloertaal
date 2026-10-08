@@ -1,6 +1,6 @@
 import { useEffect, useId, useLayoutEffect, useState } from 'react';
 import { onSpeech } from '../lib/audio';
-import { FACES, type Expr, type TalkFrame } from './Faces';
+import { FACES, type Emotion, type Expr, type TalkFrame } from './Faces';
 import { tipGender, type CultureTip } from '../content/culture';
 
 /**
@@ -697,9 +697,11 @@ const SQUINT = 'M49.8 61Q52.5 58.6 55.2 61M64.8 61Q67.5 58.6 70.2 61';
  * with its one crisp shade on the right, the features and the headwear. Shared by the rigged
  * Character and by CastHead (word pictures, celebrations), so there is only one head.
  */
-function HeadArt({ who, expr, clip, eyes, mouth, turn = 0, blink, neck = true, bold = false }: {
+function HeadArt({ who, expr, emotion, clip, eyes, mouth, turn = 0, blink, neck = true, bold = false }: {
   who: CharacterId;
   expr: Expr;
+  /** A clear feeling instead of the calm expression (word pictures). */
+  emotion?: Emotion;
   clip: string;
   eyes?: React.ReactNode;
   mouth?: React.ReactNode;
@@ -712,6 +714,7 @@ function HeadArt({ who, expr, clip, eyes, mouth, turn = 0, blink, neck = true, b
   const f = FACES[who];
   const h = look.half;
   const sw = bold ? 1.25 : 1;
+  const feel = emotion ? f.emote(emotion, look.brow) : null;
   return (
     <>
       {look.back}
@@ -733,14 +736,18 @@ function HeadArt({ who, expr, clip, eyes, mouth, turn = 0, blink, neck = true, b
       </g>
       <g className="ch-j ch-turn" style={{ translate: `${turn}px 0` }}>
         <g className="ch-look" style={bold ? { transform: `scale(${sw})`, transformOrigin: '60px 66px' } : undefined}>
-          {eyes ?? (
+          {feel ? (
+            <g className={feel.open ? 'ch-eyes' : undefined} style={{ '--blink': `${blink ?? look.blink}s` } as React.CSSProperties}>
+              {feel.eyes}
+            </g>
+          ) : eyes ?? (
             <g className="ch-eyes" style={{ '--blink': `${blink ?? look.blink}s` } as React.CSSProperties}>
               {f.eyes(expr, look.skin)}
             </g>
           )}
-          <g className="ch-brows">{f.brows(expr, look.brow)}</g>
+          <g className="ch-brows">{feel ? feel.brows : f.brows(expr, look.brow)}</g>
           {f.nose(look.shade)}
-          <g className="ch-mouth">{mouth ?? f.mouth(expr)}</g>
+          <g className="ch-mouth">{mouth ?? (feel ? feel.mouth : f.mouth(expr))}</g>
         </g>
       </g>
       {look.front}
@@ -834,9 +841,14 @@ export function Character({ who, mood = 'idle', talking: talkingProp, size = 120
  * bodies, so the faces stay exactly those of the cast. `squint` closes the eyes in two soft
  * arcs (content) instead of the expression's own eyes.
  */
-export function CastHead({ who, expr = 'joy', squint = false, blink, bold = false, gaze = [0, -1], neck = true, talk = false }: {
+export function CastHead({ who, expr = 'joy', emotion, squint = false, blink, bold = false, gaze = [0, -1], neck = true, talk = false }: {
   who: CharacterId;
   expr?: Expr;
+  /**
+   * A clear feeling (angry, afraid, pain, sick, worried, sad, confused, rest, proud) for word
+   * pictures about feelings. Replaces `expr` and `squint`; still calm and adult in style.
+   */
+  emotion?: Emotion;
   squint?: boolean;
   /** Blink rhythm in seconds (defaults to the character's own). */
   blink?: number;
@@ -864,7 +876,7 @@ export function CastHead({ who, expr = 'joy', squint = false, blink, bold = fals
       <defs>
         <clipPath id={clip}>{look.face('#000')}</clipPath>
       </defs>
-      <HeadArt who={who} expr={expr} clip={clip} eyes={eyes} blink={blink} neck={neck} bold={bold} mouth={talk ? FACES[who].talk(2) : undefined} />
+      <HeadArt who={who} expr={expr} emotion={emotion} clip={clip} eyes={eyes} blink={blink} neck={neck} bold={bold} mouth={talk ? FACES[who].talk(2) : undefined} />
     </g>
   );
 }

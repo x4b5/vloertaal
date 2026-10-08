@@ -32,10 +32,11 @@ function Moon({ x, y, r = 20 }: { x: number; y: number; r?: number }) {
 }
 
 export default {
-  // "het probleem": Bram is stuck — big worried face, a bead of sweat, and a red "?!" badge
+  // "het probleem": Bram is stuck — worried brows and a wavering mouth, a bead of sweat, and a
+  // red "?!" badge
   'w.probleem': () => (
     <g>
-      <Bust who="bram" x={52} y={124} scale={0.88} expr="disappointed" />
+      <Bust who="bram" x={52} y={124} scale={0.88} emotion="worried" tilt={-5} bold />
       <path d="M17 44Q23 54 23 58A6 6 0 0 1 11 58Q11 54 17 44Z" fill={PAL.ice} />
       <path d="M14.5 56.5A3 3 0 0 0 16 59" fill="none" stroke={PAL.white} strokeWidth="1.8" strokeLinecap="round" opacity=".8" />
       <circle cx="93" cy="30" r="18" fill={PAL.redShade} />
@@ -60,11 +61,12 @@ export default {
     </g>
   ),
 
-  // "niet fijn": Amina feels down — a little grey rain cloud over her head
+  // "niet fijn": Amina feels down — sad brows, heavy eyes looking down, the head bowed; a little
+  // grey rain cloud over her head
   'w.nietfijn': () => (
     <g>
-      <Bust who="amina" x={56} y={118} scale={0.68} expr="disappointed" />
-      <RainCloud x={90} y={22} s={0.95} />
+      <Bust who="amina" x={54} y={120} scale={0.74} emotion="sad" tilt={7} bold />
+      <RainCloud x={92} y={22} s={0.95} />
     </g>
   ),
 
@@ -84,15 +86,15 @@ export default {
     </g>
   ),
 
-  // "boos": Henk is angry — frowning brows, red face, a red zigzag in his bubble
+  // "boos": Henk is angry — brows pulled down hard, narrowed eyes, a tight mouth, arms crossed;
+  // a red zigzag in his bubble
   'w.boos': () => (
     <g>
-      <Bust who="henk" x={44} y={118} scale={0.66} expr="disappointed" />
-      <ellipse cx="44" cy="70" rx="18" ry="9" fill={PAL.red} opacity=".22" />
-      <Bubble x={64} y={10} w={46} h={40} tail="left" fill="#ffe3e3" depth={PAL.redLight}>
-        <path d="M74 36L80 22L86 36L92 22L98 36L102 26" fill="none" stroke={PAL.redShade} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+      <Bust who="henk" x={42} y={122} scale={0.72} emotion="angry" arms="crossed" bold />
+      <Bubble x={66} y={10} w={44} h={38} tail="left" fill="#ffe3e3" depth={PAL.redLight}>
+        <path d="M75 35L81 21L87 35L93 21L99 35L103 26" fill="none" stroke={PAL.redShade} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
       </Bubble>
-      <Motion x={28} y={50} dir={-130} spread={70} n={3} len={7} gap={6} color={PAL.red} width={3.6} />
+      <Motion x={24} y={42} dir={-130} spread={70} n={3} len={7} gap={6} color={PAL.red} width={3.6} />
     </g>
   ),
 

@@ -4,12 +4,13 @@ import { Arrow, Box, Bubble, Bust, CurveArrow, Ground, Hand, PAL, QuestionMark, 
 /** Word pictures, group 2 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
 export default {
-  // "ik begrijp het niet": I don't understand — a puzzled Amina with a question in her bubble
+  // "ik begrijp het niet": I don't understand — Amina tilts her head, one brow up, and shrugs
+  // with both palms up; a question in her bubble
   'w.begrijpniet': () => (
     <g>
-      <Bust who="amina" x={44} y={114} scale={0.62} expr="thinking" />
-      <Bubble x={60} y={10} w={50} h={42} tail="left">
-        <QuestionMark x={85} y={31} size={32} color={PAL.sky} />
+      <Bust who="amina" x={42} y={116} scale={0.62} emotion="confused" arms="shrug" tilt={9} bold />
+      <Bubble x={62} y={8} w={48} h={40} tail="left">
+        <QuestionMark x={86} y={28} size={30} color={PAL.sky} />
       </Bubble>
     </g>
   ),

@@ -1,7 +1,7 @@
 import { useId, type ReactNode } from 'react';
 import { CastHead, type CharacterId } from '../components/Characters';
 import { twinkle } from '../components/Celebrate';
-import type { Expr } from '../components/Faces';
+import type { Emotion, Expr } from '../components/Faces';
 
 /**
  * Building blocks for the word pictures (see docs/tekenstijl.md). Every block returns a <g>
@@ -567,22 +567,147 @@ const BUST_TORSO: Record<CharacterId, (id: string) => ReactNode> = {
   )),
 };
 
+/** Sleeve colour and its darker cuff per cast member (Bram's blue shirt under the vest). */
+const BUST_SLEEVE: Record<CharacterId, [string, string]> = {
+  bram: [PAL.blue, PAL.blueShade],
+  amina: ['#2f8f3e', '#23722f'],
+  henk: ['#2d5a92', PAL.navyShade],
+  jada: ['#ffc929', PAL.yellowShade],
+};
+
+/**
+ * Body language for a bust, in the bust's own 120 x 140 box (shoulders at y 93-110, cut off at
+ * y 134). Slim forearms in the sleeve colour, squarish hands, flat fills.
+ *
+ *  - crossed: arms folded high on the chest, fists tucked (angry, closed off).
+ *  - shrug: both forearms out to the sides, palms up ("I don't know / I don't understand").
+ *  - forehead: one hand laid on the forehead (sick, feverish).
+ *  - clutch: one hand grips the other upper arm (pain there).
+ *  - raised: both hands up in front of the chest, palms out (afraid, "stop").
+ */
+export type BustArms = 'crossed' | 'shrug' | 'forehead' | 'clutch' | 'raised';
+
+function BustArmsArt({ who, arms }: { who: CharacterId; arms: BustArms }) {
+  const [s, sh] = SKIN[who];
+  const [cloth, cuff] = BUST_SLEEVE[who];
+  const bare = who === 'jada';
+  /** A forearm from a to b, thickness t: sleeve (or bare skin) with a darker cuff at b. */
+  const fore = (a: Pt, b: Pt, t = 12) => {
+    const len = Math.hypot(b[0] - a[0], b[1] - a[1]);
+    const ang = (Math.atan2(b[1] - a[1], b[0] - a[0]) * 180) / Math.PI;
+    return (
+      <g transform={`translate(${r1(a[0])} ${r1(a[1])}) rotate(${r1(ang)})`}>
+        <rect x={-t / 2} y={-t / 2} width={r1(len + t / 2)} height={t} rx={t / 2} fill={bare ? s : cloth} />
+        {!bare && <rect x={r1(len - 4)} y={-t / 2} width="4" height={t} fill={cuff} />}
+        <rect x={-t / 2} y={r1(t * 0.1)} width={r1(len + t / 2)} height={r1(t * 0.4)} fill="#000" opacity=".1" />
+      </g>
+    );
+  };
+  /** A fist seen from the front: four finger blocks over a palm. */
+  const fist = (x: number, y: number, rot = 0, k = 1) => (
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${k})`}>
+      <rect x="-7" y="-7.5" width="14" height="15" rx="3" fill={s} />
+      <path d="M-7 -2.4H6.6M-7 2.4H6.6" stroke={sh} strokeWidth="1.3" />
+      <rect x="1.8" y="-7.5" width="5.2" height="15" rx="2.6" fill={sh} opacity=".55" />
+    </g>
+  );
+  /** An open hand, palm up, fingers along +x from the wrist at (0, 0). */
+  const palmUp = (x: number, y: number, rot: number, flip = false, k = 1) => (
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${k} ${flip ? -k : k})`}>
+      <rect x="-2" y="-4.6" width="17" height="8.6" rx="2.4" fill={s} />
+      <rect x="1" y="-9.6" width="4.6" height="8" rx="2.2" fill={s} transform="rotate(-24 3 -4)" />
+      <path d="M6 -0.6H14" stroke={sh} strokeWidth="1.2" strokeLinecap="round" />
+    </g>
+  );
+  switch (arms) {
+    case 'crossed':
+      return (
+        <g>
+          {/* The lower arm (from the left), its fist tucked under the right upper arm */}
+          {fore([28, 126], [86, 119], 13)}
+          {fist(90, 116, -10)}
+          {/* The upper arm (from the right) over it, with a crisp shadow underneath */}
+          <path d="M36 121L94 127L94 131L36 125Z" fill="#000" opacity=".18" />
+          {fore([94, 121], [34, 113], 13)}
+          {fist(29, 110, 8)}
+        </g>
+      );
+    case 'shrug':
+      return (
+        <g>
+          {fore([31, 130], [10, 104], 12)}
+          {palmUp(8, 102, 200, true, 1.45)}
+          {fore([89, 130], [110, 104], 12)}
+          {palmUp(112, 102, -20, false, 1.45)}
+        </g>
+      );
+    case 'forehead':
+      return (
+        <g>
+          {fore([32, 112], [16, 82], 12)}
+          {fore([16, 82], [40, 49], 11)}
+          {/* The back of the hand flat on the forehead, fingers across it */}
+          <g transform="translate(40 49) rotate(-10)">
+            <rect x="-2" y="-5.6" width="22" height="11" rx="3" fill={s} />
+            <path d="M8 -2H19M8 1.8H19" stroke={sh} strokeWidth="1.2" strokeLinecap="round" />
+            <rect x="-2" y="1.4" width="22" height="4.2" rx="2" fill={sh} opacity=".5" />
+          </g>
+        </g>
+      );
+    case 'clutch':
+      return (
+        <g>
+          {fore([32, 130], [82, 112], 12)}
+          {/* Fingers wrapped round the other upper arm */}
+          <g transform="translate(88 108) rotate(-8)">
+            <rect x="-6" y="-9" width="13" height="18" rx="3" fill={s} />
+            <path d="M-6 -4.4H6M-6 0H6M-6 4.4H6" stroke={sh} strokeWidth="1.3" />
+            <rect x="-8.6" y="-4" width="6" height="11" rx="2.6" fill={s} />
+          </g>
+        </g>
+      );
+    case 'raised':
+    default:
+      return (
+        <g>
+          {fore([22, 136], [27, 104], 12)}
+          {fore([98, 136], [93, 104], 12)}
+          <Hand pose="open" x={27} y={106} rotate={-6} scale={0.62} skin={SKIN[who]} />
+          <Hand pose="open" x={93} y={106} rotate={6} scale={0.62} skin={SKIN[who]} mirror />
+        </g>
+      );
+  }
+}
+
 /**
  * A cast member as a head-and-shoulders bust, exactly the cast's own head. (x, y) is the middle
  * of the bottom edge; at scale 1 the bust is 84 wide and 130 tall, so use scale 0.4-0.75.
+ * For pictures about feelings: `emotion` gives a clear (still calm, adult) face, `tilt` tilts
+ * the head (degrees, + is clockwise) and `arms` adds body language (see BustArms).
  */
-export function Bust({ who, x = 60, y = 110, scale = 0.7, expr = 'neutral', squint = false, flip = false, talk = false }: {
+export function Bust({ who, x = 60, y = 110, scale = 0.7, expr = 'neutral', emotion, squint = false, flip = false, talk = false, tilt = 0, arms, bold = false }: {
   who: CharacterId; x?: number; y?: number; scale?: number; expr?: Expr; squint?: boolean;
+  /** A clear feeling instead of the calm `expr`. */
+  emotion?: Emotion;
   /** Mouth a little open, mid-word. */
   talk?: boolean;
   /** Face the other way (mirror). */
   flip?: boolean;
+  /** Head tilt around the neck, in degrees. */
+  tilt?: number;
+  /** Body language: arms and hands in front of the bust. */
+  arms?: BustArms;
+  /** Features a little larger and bolder, for small pictures. */
+  bold?: boolean;
 }) {
   const id = `bt-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
   return (
     <g transform={`translate(${r1(x)} ${r1(y)}) scale(${flip ? -scale : scale} ${scale}) translate(-60 -134)`}>
       {BUST_TORSO[who](id)}
-      <CastHead who={who} expr={expr} squint={squint} talk={talk} />
+      <g transform={tilt ? `rotate(${tilt} 60 96)` : undefined}>
+        <CastHead who={who} expr={expr} emotion={emotion} squint={squint} talk={talk} bold={bold} gaze={[0, 0]} />
+      </g>
+      {arms && <BustArmsArt who={who} arms={arms} />}
     </g>
   );
 }

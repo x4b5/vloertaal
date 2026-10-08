@@ -265,12 +265,13 @@ export default {
     </g>
   ),
 
-  // "het ongeluk": the accident — a box falls on Bram's head: a red crash burst, he reels sideways in pain
+  // "het ongeluk": the accident — a box falls on Bram's head: a red crash burst, he reels sideways
+  // with his eyes squeezed shut in pain
   'w.ongeluk': () => (
     <g>
       {/* Bram knocked sideways */}
       <g transform="rotate(-20 46 124)">
-        <Bust who="bram" x={48} y={128} scale={0.68} expr="disappointed" squint />
+        <Bust who="bram" x={48} y={128} scale={0.68} emotion="pain" bold />
       </g>
       {/* Crash burst where the box hits his helmet */}
       <path d={burst(56, 46, 20, 10.5, 9)} fill={PAL.red} />
