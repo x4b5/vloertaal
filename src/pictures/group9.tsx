@@ -179,15 +179,15 @@ export default {
       <rect x="53" y="74" width="14" height="12" rx="4" fill={PAL.slate} />
       {/* Bell on the right half */}
       <rect x="76" y="70" width="10" height="12" rx="3" fill={PAL.slate} />
-      <ellipse cx="81" cy="68" rx="22" ry="6" fill={PAL.skyShade} />
+      <ellipse cx="81" cy="69" rx="24" ry="6" fill={PAL.skyShade} />
       <Shade color={PAL.skyShade} opacity={1} at={[104, 48, 10, 28]}>
-        <path d="M59 66A22 26 0 0 1 103 66Q103 72 81 72Q59 72 59 66Z" fill={PAL.sky} />
+        <path d="M57 66A24 20 0 0 1 105 66Q105 72 81 72Q57 72 57 66Z" fill={PAL.sky} />
       </Shade>
-      <Shine d="M65 58Q67 47 75 43" width={4} opacity={0.75} />
+      <Shine d="M64 60Q67 51 75 48" width={4} opacity={0.75} />
       {/* Lever */}
       <path d="M66 76L50 70" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
       <circle cx="48" cy="69" r="4.6" fill={PAL.slateDark} />
-      <Motion x={81} y={48} dir={-90} spread={120} n={5} len={9} gap={22} color={PAL.orange} width={4} />
+      <Motion x={81} y={56} dir={-90} spread={120} n={5} len={9} gap={22} color={PAL.orange} width={4} />
     </g>
   ),
 
@@ -220,11 +220,10 @@ export default {
   'w.inchecken': () => (
     <g>
       <CardPole x={86} y={60} />
-      <Hand pose="hold" x={42} y={38} rotate={90} scale={0.72} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
-      <BankCard x={52} y={26} w={30} rot={0} />
+      <Hand pose="hold" x={34} y={36} rotate={90} scale={0.84} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
+      <BankCard x={56} y={26} w={28} rot={0} />
       <Arrow from={[14, 74]} to={[60, 74]} color={PAL.ok} width={7} head={11} />
       <Tick x={104} y={16} r={11} />
-      <Motion x={86} y={36} dir={-30} spread={60} n={3} len={6} gap={26} color={PAL.ok} width={3.4} />
     </g>
   ),
 
@@ -232,9 +231,9 @@ export default {
   'w.uitchecken': () => (
     <g>
       <CardPole x={34} y={60} />
-      <Hand pose="hold" x={102} y={38} rotate={-90} scale={0.72} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
-      <BankCard x={66} y={26} w={30} rot={0} />
-      <Motion x={70} y={36} dir={180} spread={50} n={3} len={6} gap={6} color={PAL.line} width={3.4} />
+      <Hand pose="hold" x={110} y={36} rotate={-90} scale={0.84} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
+      <BankCard x={64} y={26} w={28} rot={0} />
+      <Motion x={62} y={35} dir={180} spread={50} n={3} len={6} gap={6} color={PAL.line} width={3.4} />
       <Arrow from={[60, 74]} to={[106, 74]} color={PAL.orange} width={7} head={11} />
     </g>
   ),
@@ -414,6 +413,7 @@ export default {
       <path d="M92 62L106 66L110 112H96Z" fill={PAL.purpleShade} />
       <path d="M70 70Q80 60 94 62L100 112H74Q74 92 70 70Z" fill={PAL.purple} />
       <path d="M72 72Q80 64 92 64" fill="none" stroke={PAL.purpleShade} strokeWidth="4" strokeLinecap="round" />
+      <path d="M77 84H82M78 98H83" stroke={PAL.purpleShade} strokeWidth="2.6" strokeLinecap="round" />
       <Hand pose="hold" x={110} y={86} rotate={-14} scale={0.6} skin={SKIN.amina} sleeve={[PAL.sky, PAL.skyShade]} mirror />
       <CurveArrow from={[94, 44]} to={[64, 62]} bend={14} color={PAL.sky} width={6} head={10} />
     </g>
@@ -453,26 +453,28 @@ export default {
   'w.gevallen': () => (
     <g>
       <Ground cx={60} cy={102} rx={52} ry={5} />
-      {/* Walking stick */}
-      <path d="M50 108L98 96" stroke={PAL.wood} strokeWidth="4.5" strokeLinecap="round" />
-      <path d="M98 96Q106 94 105 100" fill="none" stroke={PAL.wood} strokeWidth="4.5" strokeLinecap="round" />
-      {/* Legs */}
-      <path d="M58 92H96" stroke={PAL.navyShade} strokeWidth="13" strokeLinecap="round" />
-      <path d="M58 86L92 74" stroke={PAL.navy} strokeWidth="13" strokeLinecap="round" />
-      <rect x="94" y="64" width="9" height="16" rx="4" fill={PAL.ink} transform="rotate(-20 98 72)" />
-      <rect x="98" y="83" width="9" height="16" rx="4" fill={PAL.ink} />
-      {/* Body */}
-      <rect x="26" y="76" width="40" height="24" rx="11" fill={PAL.purple} />
-      <rect x="26" y="90" width="40" height="10" rx="5" fill={PAL.purpleShade} />
-      {/* Arm reaching up */}
-      <path d="M46 80L54 58" stroke={PAL.purple} strokeWidth="9" strokeLinecap="round" />
-      <circle cx="55" cy="55" r="5.4" fill={SKIN.henk[0]} />
-      {/* Head: Henk, turned on his side */}
-      <g transform="translate(14 86) rotate(-90) scale(0.4) translate(-60 -92)">
-        <CastHead who="henk" expr="disappointed" />
+      <g transform="translate(60 90) scale(0.9) translate(-52 -90)">
+        {/* Walking stick */}
+        <path d="M44 110L92 100" stroke={PAL.wood} strokeWidth="4.5" strokeLinecap="round" />
+        <path d="M92 100Q100 98 99 104" fill="none" stroke={PAL.wood} strokeWidth="4.5" strokeLinecap="round" />
+        {/* Legs */}
+        <path d="M58 92H96" stroke={PAL.navyShade} strokeWidth="13" strokeLinecap="round" />
+        <path d="M58 86L92 74" stroke={PAL.navy} strokeWidth="13" strokeLinecap="round" />
+        <rect x="94" y="64" width="9" height="16" rx="4" fill={PAL.ink} transform="rotate(-20 98 72)" />
+        <rect x="98" y="83" width="9" height="16" rx="4" fill={PAL.ink} />
+        {/* Body */}
+        <rect x="26" y="76" width="40" height="24" rx="11" fill={PAL.purple} />
+        <rect x="26" y="90" width="40" height="10" rx="5" fill={PAL.purpleShade} />
+        {/* Arm reaching up */}
+        <path d="M46 80L54 58" stroke={PAL.purple} strokeWidth="9" strokeLinecap="round" />
+        <circle cx="55" cy="55" r="5.4" fill={SKIN.henk[0]} />
+        {/* Head: Henk, turned on his side */}
+        <g transform="translate(26 88) rotate(-90) scale(0.4) translate(-60 -92)">
+          <CastHead who="henk" expr="disappointed" />
+        </g>
       </g>
-      <Motion x={20} y={56} dir={-90} spread={90} n={3} len={7} gap={10} color={PAL.red} width={3.4} />
-      <ExclaimMark x={84} y={34} size={30} />
+      <Motion x={30} y={58} dir={-90} spread={90} n={3} len={7} gap={10} color={PAL.red} width={3.4} />
+      <ExclaimMark x={86} y={36} size={30} />
     </g>
   ),
 
@@ -635,47 +637,46 @@ export default {
     </g>
   ),
 
-  // "afruimen": to clear the table — dirty plates go from the table onto a tray
+  // "afruimen": to clear the table — the used plates go from the table onto a tray
   'w.afruimen': () => (
     <g>
-      {/* Tray with a stack of used plates */}
-      <Hand pose="open" x={78} y={78} rotate={-90} scale={0.5} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} mirror />
-      <rect x="50" y="44" width="58" height="7" rx="3.5" fill={PAL.cardDark} />
-      <Plate cx={79} cy={40} rx={22} />
-      <Plate cx={79} cy={34} rx={22} />
-      <Plate cx={79} cy={28} rx={22} food />
+      {/* Tray, held on a flat hand, with a stack of used plates */}
+      <Hand pose="open" x={102} y={66} rotate={-90} scale={0.5} skin={SKIN.jada} sleeve={[PAL.slate, PAL.slateDark]} />
+      <rect x="52" y="46" width="58" height="7" rx="3.5" fill={PAL.cardDark} />
+      <Plate cx={81} cy={42} rx={22} />
+      <Plate cx={81} cy={36} rx={22} />
+      <Plate cx={81} cy={30} rx={22} food />
       {/* Table with one plate left */}
       <rect x="8" y="88" width="104" height="8" rx="3" fill={PAL.cardShade} />
       <rect x="8" y="84" width="104" height="6" rx="3" fill={PAL.card} />
       <rect x="16" y="94" width="7" height="14" rx="2" fill={PAL.cardDark} />
       <rect x="97" y="94" width="7" height="14" rx="2" fill={PAL.cardDark} />
-      <Plate cx={32} cy={80} rx={18} food />
-      <CurveArrow from={[28, 64]} to={[52, 26]} bend={-14} color={PAL.sky} width={6} head={11} />
+      <Plate cx={34} cy={80} rx={18} food />
+      <CurveArrow from={[30, 66]} to={[54, 26]} bend={-14} color={PAL.sky} width={6} head={11} />
     </g>
   ),
 
   // "de fooi": the tip — a hand drops a coin into a tip jar full of coins
   'w.fooi': () => (
     <g>
-      <Ground cx={58} cy={106} rx={30} ry={4} />
+      <Ground cx={52} cy={106} rx={30} ry={4} />
       {/* Jar */}
-      <rect x="30" y="38" width="56" height="68" rx="12" fill={PAL.ice} opacity=".45" />
-      <Coin cx={44} cy={96} r={8} />
-      <Coin cx={60} cy={98} r={8} />
-      <Coin cx={74} cy={95} r={8} />
-      <Coin cx={52} cy={84} r={8} />
-      <Coin cx={67} cy={83} r={8} />
-      <Coin cx={58} cy={70} r={8} />
-      <rect x="30" y="38" width="56" height="68" rx="12" fill="none" stroke={PAL.ice} strokeWidth="3" />
-      <rect x="26" y="32" width="64" height="9" rx="4" fill={PAL.skyShade} />
-      <Shine d="M36 54V90" width={4} opacity={0.8} />
-      {/* Heart on the jar */}
-      <path d="M58 58C52 52 46 56 50 61L58 67L66 61C70 56 64 52 58 58Z" fill={PAL.red} />
-      {/* Coin dropped in */}
+      <rect x="24" y="44" width="56" height="62" rx="12" fill={PAL.ice} opacity=".45" />
+      <Coin cx={38} cy={96} r={8} />
+      <Coin cx={54} cy={98} r={8} />
+      <Coin cx={68} cy={95} r={8} />
+      <Coin cx={46} cy={84} r={8} />
+      <Coin cx={61} cy={83} r={8} />
+      <Coin cx={52} cy={70} r={8} />
+      <rect x="24" y="44" width="56" height="62" rx="12" fill="none" stroke={PAL.ice} strokeWidth="3" />
+      <rect x="20" y="38" width="64" height="9" rx="4" fill={PAL.skyShade} />
+      <Shine d="M30 58V92" width={4} opacity={0.8} />
+      {/* Coin about to drop in */}
+      <Hand pose="hold" x={76} y={20} rotate={-90} scale={0.6} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
       <Coin cx={58} cy={20} r={9} />
-      <Hand pose="hold" x={92} y={46} rotate={-110} scale={0.5} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
-      <Motion x={58} y={20} dir={90} spread={1} n={1} len={6} gap={11} color={PAL.line} width={3} />
-      <Sparkle x={20} y={22} r={6} />
+      <path d="M58 33V40" stroke={PAL.line} strokeWidth="3" strokeLinecap="round" />
+      <Sparkle x={98} y={64} r={7} />
+      <Sparkle x={12} y={24} r={5} />
     </g>
   ),
 

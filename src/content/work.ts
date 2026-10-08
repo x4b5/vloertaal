@@ -626,7 +626,7 @@ const applyUnit = unit('apply', 'Applying for a job', 'Solliciteren', '📨', '#
       ['vertellen', 'vertellen', 'to tell', '💬'],
       ['vraagstellen', 'een vraag stellen', 'to ask a question', '🙋'],
       ['salaris', 'het salaris', 'the salary', '💶'],
-      ['functie', 'de functie', 'the job, the position', '💼'],
+      ['functie', 'de functie', 'the job, the position', '💼', false],
     ],
     [
       ['Ik heb een sollicitatiegesprek.', 'I have a job interview.'],
@@ -1117,7 +1117,7 @@ const laterUnits: Unit[] = [
       'newjob',
       'Looking for new work',
       [
-        ['baan', 'de baan', 'the job', '👷'],
+        ['baan', 'de baan', 'the job', '👷', false],
         ['zoeken', 'zoeken', 'to look for', '🔍'],
         ['bewaren', 'bewaren', 'to keep', '🗄️'],
         ['bijwerken', 'bijwerken', 'to update', '🔃', false],

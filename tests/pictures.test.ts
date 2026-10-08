@@ -21,7 +21,7 @@ describe('abstract words (no picture)', () => {
     expect(abstract).toContain('w.recht');
     expect(abstract).toContain('w.premie');
     expect(abstract).toContain('w.eerlijk');
-    expect(abstract.length).toBe(96);
+    expect(abstract.length).toBe(98);
     // Every word still has its emoji (data compatibility).
     for (const w of allWords) expect(w.emoji, w.id).toBeTruthy();
   });

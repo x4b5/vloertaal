@@ -238,7 +238,7 @@ export default {
         <CallButton cx={43} cy={58} r={14} />
         <path d="M32 34H54M32 82H54" stroke={PAL.mist} strokeWidth="3" strokeLinecap="round" />
       </Phone>
-      <CurveArrow from={[74, 30]} to={[74, 84]} bend={-34} color={PAL.sky} width={8} head={14} />
+      <CurveArrow from={[72, 28]} to={[72, 86]} bend={36} color={PAL.sky} width={8} head={14} />
     </g>
   ),
 
@@ -269,8 +269,8 @@ export default {
           <path d="M47 32H73M47 42H64" stroke={PAL.line} strokeWidth="3.2" strokeLinecap="round" />
         </Bubble>
       </Phone>
-      <circle cx={88} cy={12} r={9} fill={PAL.redShade} />
-      <circle cx={88} cy={10.5} r={9} fill={PAL.red} />
+      <circle cx={85} cy={15} r={9} fill={PAL.redShade} />
+      <circle cx={85} cy={13.5} r={9} fill={PAL.red} />
       <Hand pose="hold" x={60} y={124} scale={1.1} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
     </g>
   ),
@@ -537,7 +537,7 @@ export default {
       <rect x={10} y={26} width={100} height={66} rx="9" fill={PAL.slate} />
       <svg x={18} y={31} width={84} height={56} viewBox="18 31 84 56" overflow="hidden">
         <rect x={18} y={31} width={84} height={56} rx="3" fill={PAL.ice} />
-        <Bust who="jada" x={60} y={100} scale={0.46} expr="joy" />
+        <Bust who="jada" x={60} y={92} scale={0.5} expr="joy" />
       </svg>
       <rect x={22} y={68} width={76} height={15} rx="4" fill={PAL.ink} opacity=".85" />
       <path d="M29 75.5H52M57 75.5H73M78 75.5H91" stroke={PAL.white} strokeWidth="3.4" strokeLinecap="round" />
@@ -589,15 +589,15 @@ export default {
         <WaveScript x={24} y={51} w={48} color={PAL.navy} width={2.8} />
         <WaveScript x={24} y={63} w={28} color={PAL.navy} width={2.8} />
       </Sheet>
-      {/* Pencil, tip on the end of the line */}
-      <g transform="rotate(-125 53 64)">
-        <rect x={49.5} y={70} width="8" height="44" rx="2" fill={PAL.yellow} />
-        <rect x={54.5} y={70} width="3" height="44" fill={PAL.yellowShade} />
-        <rect x={49.5} y={108} width="8" height="8" rx="2" fill={PAL.redLight} />
-        <path d="M49.5 70L53.5 62L57.5 70Z" fill={PAL.card} />
-        <path d="M52 65L53.5 62L55 65Z" fill={PAL.ink} />
+      {/* Hand holding the pencil, tip on the end of the written line */}
+      <Hand pose="hold" x={84} y={91} rotate={-45} scale={0.62} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <g transform="translate(53 63) rotate(38.8)">
+        <path d="M0 0L9 -4V4Z" fill={PAL.card} />
+        <path d="M0 0L3 -1.4V1.4Z" fill={PAL.ink} />
+        <rect x={9} y={-4} width={46} height={8} rx="1.5" fill={PAL.yellow} />
+        <rect x={9} y={1} width={46} height={3} fill={PAL.yellowShade} />
+        <rect x={53} y={-4} width={8} height={8} rx="2" fill={PAL.redLight} />
       </g>
-      <Hand pose="hold" x={98} y={112} rotate={-35} scale={0.72} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
     </g>
   ),
 
@@ -626,7 +626,7 @@ export default {
   ),
 
   // "de vertrouwenspersoon": the confidential adviser — behind a closed door, Henk listens
-  // calmly while Amina tells him something; a heart in his bubble.
+  // calmly while Amina tells him something.
   'w.vertrouwenspersoon': () => (
     <g>
       {/* Closed door with a "do not disturb" sign */}
@@ -640,9 +640,6 @@ export default {
       <Bust who="henk" x={94} y={122} scale={0.5} expr="pleased" flip />
       <Bubble x={6} y={12} w={30} h={20} tail="left">
         <Dots cx={21} cy={22} gap={7} r={2.4} color={PAL.skyShade} />
-      </Bubble>
-      <Bubble x={84} y={14} w={28} h={22} tail="right" fill="#ffe3e3" depth={PAL.redLight}>
-        <path d="M98 31Q89 25 90 20Q92 15 98 19Q104 15 106 20Q107 25 98 31Z" fill={PAL.red} />
       </Bubble>
     </g>
   ),
@@ -694,22 +691,27 @@ export default {
     </g>
   ),
 
-  // "ziek melden": to call in sick — Bram sits up in bed, under the blanket, and phones in.
+  // "ziek melden": to call in sick — Henk sits up in bed, under the blanket, and phones in.
   'w.ziekmelden': () => (
     <g>
-      {/* Headboard and pillow */}
-      <rect x={10} y={46} width={100} height={62} rx="8" fill={PAL.cardDark} />
-      <rect x={20} y={56} width={64} height={22} rx="10" fill={PAL.white} />
-      <Bust who="bram" x={52} y={112} scale={0.56} expr="disappointed" />
+      <Ground cy={110} rx={50} ry={4} />
+      {/* Bed: headboard with posts, pillow */}
+      <path d="M16 90V44Q60 26 104 44V90Z" fill={PAL.wood} />
+      <path d="M84 34Q96 38 104 44V90H84Z" fill={PAL.cardDark} opacity=".45" />
+      <rect x={10} y={38} width={10} height={72} rx="4" fill={PAL.cardDark} />
+      <rect x={100} y={38} width={10} height={72} rx="4" fill={PAL.cardDark} />
+      <rect x={24} y={54} width={72} height={24} rx="11" fill={PAL.paperShade} />
+      <rect x={24} y={52} width={72} height={22} rx="11" fill={PAL.white} />
+      <Bust who="henk" x={54} y={112} scale={0.52} expr="disappointed" />
       {/* Phone at his ear */}
-      <rect x={70} y={44} width={13} height={24} rx="3" fill={PAL.slate} transform="rotate(18 76 56)" />
-      <Hand pose="hold" x={80} y={84} rotate={10} scale={0.5} skin={SKIN.bram} />
+      <rect x={70} y={46} width={12} height={22} rx="3" fill={PAL.slate} transform="rotate(16 76 57)" />
+      <Hand pose="hold" x={79} y={84} rotate={10} scale={0.46} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
       <Waves x={86} y={46} dir={1} n={2} r0={6} gap={6} color={PAL.sky} />
       {/* Blanket */}
-      <path d="M8 92Q8 86 14 86H106Q112 86 112 92V108H8Z" fill={PAL.blueLight} />
-      <path d="M8 92Q8 86 14 86H106Q112 86 112 92V95H8Z" fill={PAL.white} />
-      <rect x={84} y={95} width={28} height={13} fill={PAL.blue} opacity=".35" />
-      <path d="M30 26Q36 36 36 40A6 6 0 0 1 24 40Q24 36 30 26Z" fill={PAL.ice} />
+      <path d="M14 90Q14 84 20 84H100Q106 84 106 90V104Q106 108 102 108H18Q14 108 14 104Z" fill={PAL.blueLight} />
+      <path d="M14 90Q14 84 20 84H100Q106 84 106 90V93H14Z" fill={PAL.white} />
+      <path d="M86 93H106V104Q106 108 102 108H86Z" fill={PAL.blue} opacity=".35" />
+      <path d="M26 24Q32 34 32 38A6 6 0 0 1 20 38Q20 34 26 24Z" fill={PAL.ice} />
     </g>
   ),
 

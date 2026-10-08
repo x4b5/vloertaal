@@ -387,10 +387,11 @@ export default {
   // "solliciteren": to apply — Amina's hand hands over her CV, Henk's hand reaches for it.
   'w.solliciteren': () => (
     <g>
-      <CvSheet x={20} y={36} w={44} h={58} who="amina" rot={-8} id="g10-sol-cv" />
-      <Hand pose="hold" x={34} y={118} rotate={14} scale={0.66} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
-      <Hand pose="open" x={100} y={116} rotate={-34} scale={0.66} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
-      <CurveArrow from={[64, 26]} to={[100, 52]} bend={14} color={PAL.sky} width={6} head={11} />
+      <Hand pose="hold" x={34} y={120} rotate={14} scale={0.66} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <CvSheet x={20} y={32} w={44} h={58} who="amina" rot={-8} id="g10-sol-cv" />
+      <rect x="31" y="84" width="9" height="18" rx="4.5" fill={SKIN.amina[0]} transform="rotate(24 35 93)" />
+      <Hand pose="open" x={94} y={118} rotate={-34} scale={0.66} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
+      <CurveArrow from={[64, 24]} to={[98, 52]} bend={14} color={PAL.sky} width={6} head={11} />
     </g>
   ),
 
