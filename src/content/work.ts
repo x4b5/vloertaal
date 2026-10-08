@@ -65,7 +65,7 @@ const coreUnits: Unit[] = [
           { id: 'w.cao', nl: 'de cao', en: 'the collective agreement', emoji: '📘' },
         ],
         sentences: [
-          { id: 's.contract.1', nl: 'Hoeveel uren werk ik per week?', en: 'How many hours do I work per week?' },
+          { id: 's.contract.1', nl: 'Hoeveel uur werk ik per week?', en: 'How many hours do I work per week?' },
           { id: 's.contract.2', nl: 'Hoe lang is de proeftijd?', en: 'How long is the trial period?' },
           { id: 's.contract.3', nl: 'Welke cao geldt voor mij?', en: 'Which collective agreement is for me?' },
         ],
@@ -377,7 +377,7 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.contract',
     emoji: '🧪',
     title: 'Trial period and on-call work',
-    body: 'A trial period (proeftijd) must be in writing. It is not allowed in a contract of 6 months or shorter. In a contract shorter than 2 years it is at most 1 month. In a contract of 2 years or longer, or a permanent one, it is at most 2 months. On-call worker (oproepkracht)? Your employer must call you at least 4 days before. If it is later, you do not have to come. If they call you for less than 3 hours of work, you get paid for 3 hours.',
+    body: 'A trial period (proeftijd) must be in writing. It is not allowed in a contract of 6 months or shorter. In a longer contract of less than 2 years, it is at most 1 month. In a contract of 2 years or longer, or a permanent one, it is at most 2 months. On-call worker (oproepkracht)? Your employer must call you at least 4 days before. If it is later, you do not have to come. A cao can make these 4 days shorter, but not shorter than 1 day. If they cancel your work later than that, you still get paid. If they call you for less than 3 hours of work, you usually get paid for 3 hours.',
     phrase: { id: 'c.contract.p', nl: 'Staat de proeftijd in mijn contract?', en: 'Is the trial period in my contract?' },
     situation: { id: 'c.contract.s', en: 'Your contract is for 3 months. It says: "Proeftijd: 1 maand". What do you do?' },
     options: [
@@ -407,7 +407,7 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.housing',
     emoji: '🔑',
     title: 'Housing from your employer',
-    body: 'Does your employer or agency arrange your housing? Then the rental contract must be separate from your work contract. Ask for a written rental contract and proof of what you pay. Rent may only be taken off your wage if you agreed in writing, and within legal limits: check it on your payslip. A deposit (borg) is at most 2 months of basic rent. You get it back when you leave, minus real damage. Register at your address with the gemeente. Unsafe housing, threats or unfair costs? Report it to the gemeente (meldpunt), and get free advice from the Juridisch Loket or a housing advice service. For a fight about the rent, there is the Huurcommissie. Your job ends? Ask for advice before you leave your home.',
+    body: 'Does your employer or agency arrange your housing? Then the rental contract must be separate from your work contract. Ask for a written rental contract and proof of what you pay. Rent may only be taken off your wage if you agreed in writing, and within legal limits: check it on your payslip. A deposit (borg) is at most 2 months of basic rent. You get it back when you leave, minus real damage. Register at your address with the gemeente. Unsafe housing, threats or unfair costs? Report it to the gemeente (meldpunt), and get free advice from the Juridisch Loket or a housing advice service. For a problem with the rent price or service costs, there is the Huurcommissie. Your job ends? Ask for advice before you leave your home.',
     phrase: { id: 'c.housing.p', nl: 'Mag ik een bewijs dat ik betaald heb?', en: 'May I have proof that I paid?' },
     situation: { id: 'c.housing.s', en: 'Your job ends. The agency says: "You must leave the house tomorrow." What do you do?' },
     options: [
@@ -422,7 +422,7 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.payslip',
     emoji: '🧾',
     title: 'Check your payslip',
-    body: 'Bruto is your pay before tax. Netto is what you get in your bank account: bruto minus tax and premiums (loonheffing). Check the hours and the pay on every payslip (loonstrook), and write down the hours you work. Do you have two jobs? Ask for the tax credit (loonheffingskorting) at only one employer.',
+    body: 'Bruto is your pay before tax. Netto is what you get in your bank account: bruto minus tax and premiums (loonheffing). Your employer must give you a payslip (loonstrook). Check the hours and the pay on every payslip, and write down the hours you work. Do you have two jobs? Use the tax credit (loonheffingskorting) at only one employer.',
     phrase: { id: 'c.payslip.p', nl: 'Ik heb meer uren gewerkt. Kun je het controleren?', en: 'I worked more hours. Can you check it?' },
     situation: { id: 'c.payslip.s', en: 'Your payslip shows fewer hours than you worked. What do you do?' },
     options: [
@@ -482,7 +482,7 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.health',
     emoji: '⏸️',
     title: 'Breaks and working hours',
-    body: 'The law protects your health. After 5.5 hours of work you get at least 30 minutes of break (it may be 2 times 15 minutes). After 10 hours: at least 45 minutes. You may work at most 12 hours in one shift and 60 hours in one week. Unsafe work or too little pay? You can report it to the Nederlandse Arbeidsinspectie, also without giving your name.',
+    body: 'The law protects your health. Do you work more than 5.5 hours? Then you get at least 30 minutes of break (it may be 2 times 15 minutes). More than 10 hours? Then at least 45 minutes. A cao can have slightly different break rules. You may work at most 12 hours in one shift and 60 hours in one week. Your employer must give you protective equipment, like safety shoes or gloves, for free. Unsafe work or too little pay? You can report it to the Nederlandse Arbeidsinspectie, also without giving your name.',
     phrase: { id: 'c.health.p', nl: 'Ik heb nog geen pauze gehad.', en: 'I have not had a break yet.' },
     situation: { id: 'c.health.s', en: 'You have worked 6 hours without a break. Your supervisor asks you to keep going. What do you do?' },
     options: [
@@ -490,14 +490,14 @@ const coreTips: CultureTip[] = [
       { id: 'c.health.o2', en: 'Keep working and skip your break every day.', best: false },
       { id: 'c.health.o3', en: 'Leave work and go home without a word.', best: false },
     ],
-    why: { id: 'c.health.w', en: 'A break after 5.5 hours is the law, not a favour. Rest also helps you work safely.' },
+    why: { id: 'c.health.w', en: 'When you work more than 5.5 hours, a break is the law, not a favour. Rest also helps you work safely.' },
   }),
   tip({
     id: 'c.rights',
     lessonId: 'l.rights',
     emoji: '✊',
     title: 'Discrimination and dismissal',
-    body: 'Discrimination at work is forbidden, for example because of your origin, religion or gender. Your employer cannot simply fire you: normally they need permission from UWV or a judge, or your agreement. (In a trial period or at the end of a temporary contract, other rules apply.) Do not sign a paper about your dismissal that you do not understand. Get help first from the union (for example FNV), a discrimination help desk or the Juridisch Loket (free legal advice).',
+    body: 'Discrimination at work is forbidden, for example because of your origin, religion or gender. Your employer cannot simply fire you: normally they need permission from UWV or a judge, or your agreement. (In a trial period or at the end of a temporary contract, other rules apply.) Do not sign a paper about your dismissal that you do not understand. Did you sign an agreement to end your job (vaststellingsovereenkomst)? Then you can usually still cancel it in writing within 14 days. Get help first from the union (for example FNV), a discrimination help desk or the Juridisch Loket (free legal advice).',
     phrase: { id: 'c.rights.p', nl: 'Ik wil eerst advies vragen.', en: 'I want to ask for advice first.' },
     situation: { id: 'c.rights.s', en: 'Your boss gives you a paper: "Sign today, then you leave by agreement." You do not understand it well. What do you do?' },
     options: [
@@ -527,7 +527,7 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.illness',
     emoji: '👩‍⚕️',
     title: 'Your rights when you are sick',
-    body: 'When you are sick, your employer must pay at least 70% of your wage. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay. Your boss may not ask what illness you have: you talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (beter melden). Working through an agency? The rules can be different: ask your agency.',
+    body: 'When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. Your boss may not ask what illness you have: you talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (beter melden). Working through an agency? The rules can be different: ask your agency.',
     phrase: { id: 'c.illness.p', nl: 'Ik ben weer beter. Ik kom morgen werken.', en: 'I am better again. I will come to work tomorrow.' },
     situation: { id: 'c.illness.s', en: 'You are sick for a week. Your employer asks you to visit the company doctor. What do you do?' },
     options: [
@@ -612,7 +612,7 @@ const applyUnit = unit('apply', 'Applying for a job', 'Solliciteren', '📨', '#
       ['Ik heb ervaring in de bouw.', 'I have experience in construction.'],
       ['Ik spreek drie talen.', 'I speak three languages.'],
     ],
-    [['Heb je een referentie?', 'Do you have a reference?'], ['Ja, mijn vorige baas.', 'Yes, my last boss.']],
+    [['Heb je een referentie?', 'Do you have a reference?'], ['Ja, mijn vorige baas.', 'Yes, my previous boss.']],
   ),
   lesson(
     'interview',
@@ -716,7 +716,7 @@ const houseTips = [
     'clock',
     '⏲️',
     'Clock in yourself',
-    'Clock in and out yourself, at the moment you really start and stop working. Never clock in or out for a colleague, and never let someone else use your card. This is seen as fraud and can lead to dismissal on the spot. Will you be late? Call before your shift starts. Check that your clocked hours match your payslip.',
+    'Clock in and out yourself, at the moment you really start and stop working. Never clock in or out for a colleague, and never let someone else use your card. This counts as fraud and can lead to dismissal. Will you be late? Call before your shift starts. Check that your clocked hours match your payslip.',
     ['Ik ben vergeten uit te klokken. Kun je het aanpassen?', 'I forgot to clock out. Can you correct it?'],
     'A colleague gives you his card: "Clock me in, I will be 20 minutes late." What do you do?',
     [
@@ -838,7 +838,7 @@ const socialTips = [
     'respect',
     '🫂',
     'Respect for everyone',
-    'At work, men and women are equal. A woman can be your supervisor and give instructions, like anyone else. Everyone is treated with respect, whatever their origin, religion, gender or sexual orientation. You decide about physical contact. A handshake is common, but you may also greet in another polite way, like a nod and a smile, and explain it briefly. Jokes about someone’s origin or religion, threats, bullying (pesten) and unwanted sexual behaviour are not accepted. You can report it to your supervisor, or to a confidential adviser (vertrouwenspersoon) if your company has one.',
+    'At work, everyone is equal and everyone is treated with respect, whatever their gender, origin, religion or sexual orientation. Your supervisor can be a man or a woman. You decide about physical contact. A handshake is common, but you may also greet in another polite way, like a nod and a smile, and explain it briefly. Jokes about someone’s origin or religion, threats, bullying (pesten) and unwanted sexual behaviour are not accepted. You can report it to your supervisor, or to a confidential adviser (vertrouwenspersoon) if your company has one.',
     ['Ik geef liever geen hand, maar ik groet je graag.', 'I prefer not to shake hands, but I am happy to greet you.'],
     'A colleague often makes jokes about your religion. You asked him to stop, but he goes on. What do you do?',
     [
@@ -968,7 +968,7 @@ const laterUnits: Unit[] = [
         ['Is deze training verplicht?', 'Is this training required?'],
         ['Ik wil verder komen in mijn werk.', 'I want to get ahead in my work.'],
       ],
-      [['Wil je een opleiding volgen?', 'Do you want to do a training?'], ['Ja, graag! Wie betaalt het?', 'Yes, please! Who pays for it?']],
+      [['Wil je een opleiding volgen?', 'Do you want to do a training?'], ['Ja, graag! Wie betaalt dat?', 'Yes, please! Who pays for it?']],
     ),
   ]),
   unit('health', 'Health', 'Gezondheid', '🩺', '#c0392b', [
@@ -1029,7 +1029,7 @@ const laterUnits: Unit[] = [
         ['Wil je me helpen met deze brief?', 'Will you help me with this letter?'],
         ['Mijn inkomen is veranderd.', 'My income has changed.'],
       ],
-      [['Heb je je aangifte al gedaan?', 'Have you done your tax return yet?'], ['Nee, ik doe het voor mei.', 'No, I will do it before May.']],
+      [['Heb je je aangifte al gedaan?', 'Have you done your tax return yet?'], ['Nee, ik doe het voor 1 mei.', 'No, I will do it before 1 May.']],
     ),
     lesson(
       'scams',
@@ -1151,7 +1151,7 @@ const laterTips = [
     'gethelp',
     '🆘',
     'Where to get help',
-    'Do you see signs of exploitation, for you or for someone else? Get help. You can report it to the Nederlandse Arbeidsinspectie, also anonymously, or to the police. Meld Misdaad Anoniem: 0800-7000. Free legal advice: the Juridisch Loket. In danger? Call 112. You do not lose your right to help because you are a migrant.',
+    'Do you see signs of exploitation, for you or for someone else? Get help. You can report it to the Nederlandse Arbeidsinspectie, also anonymously, or to the police. Meld Misdaad Anoniem: 0800-7000. Free legal advice: the Juridisch Loket. In danger? Call 112. Everyone who works in the Netherlands can get help, also migrants.',
     ['Ik heb hulp nodig. Ik word uitgebuit.', 'I need help. I am being exploited.'],
     'A friend works 14 hours a day, gets almost no pay and is afraid of the boss. What can you do?',
     [
@@ -1166,7 +1166,7 @@ const laterTips = [
     'callin',
     '☎️',
     'Calling your supervisor',
-    'When you call your supervisor, say your name, the reason, and when you expect to come back. Call: do not only send a text, unless your company says a text is fine. No answer? Leave a voice message and try again.',
+    'When you call your supervisor, say your name, the reason, and when you expect to come back. Sick? You only have to say that you are sick, not what illness you have. Call: do not only send a text, unless your company says a text is fine. No answer? Leave a voice message and try again.',
     ['Hallo, met Ali. Ik kan vandaag niet komen.', 'Hello, this is Ali. I cannot come today.'],
     'Your child is sick and you cannot come to work. Your company wants you to call. What do you do?',
     [
@@ -1181,7 +1181,7 @@ const laterTips = [
     'texting',
     '💬',
     'Messages to work: short and polite',
-    'Keep messages to work short and polite. Say who you are and what is happening, and end with a greeting. For example: "Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali". Check your roster (rooster) in the app often. React to shift requests in time.',
+    'Keep messages to work short and polite. Say who you are and what is happening, and end with a greeting. For example: "Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali". Check your roster (rooster) in the app often. Reply to shift requests in time.',
     ['Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali', 'Hi Mark, I am 10 minutes late. Sorry! Regards, Ali'],
     'You will be 10 minutes late. Which message to your supervisor is best?',
     [
@@ -1211,7 +1211,7 @@ const laterTips = [
     'diploma',
     '📜',
     'Your diploma counts',
-    'Do you have a diploma from another country? You can have it assessed: at IDW (Internationale Diplomawaardering) for most diplomas, or at SBB for vocational (MBO) level. Is a training required for your job? Then your employer must pay for it, and it counts as working time. Ask your supervisor about courses.',
+    'Do you have a diploma from another country? You can have it assessed at IDW (Internationale Diplomawaardering). Then employers can see what it is worth here. Is a training required for your job? Then your employer must pay for it, and it counts as working time. Ask your supervisor about courses.',
     ['Zijn er cursussen voor mij?', 'Are there courses for me?'],
     'Your employer says you must do a required safety training on Saturday, without pay. What is true?',
     [
@@ -1252,7 +1252,7 @@ const laterTips = [
     'letters',
     '📨',
     'Do not ignore letters',
-    'Do not ignore letters from the Belastingdienst, the gemeente or UWV. Ask someone you trust to help you read them. The yearly tax return (aangifte) is usually due before 1 May. Benefits (toeslagen) like zorgtoeslag and huurtoeslag depend on your income. If you get too much, you must pay it back, so keep your income details up to date.',
+    'Do not ignore letters from the Belastingdienst, the gemeente or UWV. Ask someone you trust to help you read them. The tax return (aangifte) for last year must usually be done before 1 May. You can ask for more time. Allowances (toeslagen) like zorgtoeslag and huurtoeslag depend on your income. If you get too much, you must pay it back, so keep your income details up to date.',
     ['Ik heb een brief gekregen. Kun je me helpen?', 'I got a letter. Can you help me?'],
     'You get a letter from the Belastingdienst. You do not understand it. What do you do?',
     [
@@ -1288,7 +1288,7 @@ const laterTips = [
     [
       'Stop at a safe place before you answer.',
       'Answer with the phone in your hand while cycling.',
-      'Cycle on the road instead of the bike path, because it is faster.',
+      'Ride on, and look at your phone quickly.',
     ],
     'A phone in your hand while cycling is forbidden and dangerous. Stopping first takes only a moment.',
     NONE,
@@ -1297,7 +1297,7 @@ const laterTips = [
     'transit',
     '🎫',
     'Bus, train and travel costs',
-    'In most buses and trains you can pay with your bank card (OVpay). Check in AND check out, or you pay too much. A travel allowance (reiskostenvergoeding) is not a legal right: it depends on your employer or cao. Ask about it.',
+    'In most buses and trains you can pay with your bank card (OVpay). Check in AND check out with the same card, or you pay too much. A travel allowance (reiskostenvergoeding) is not a legal right: it depends on your employer or cao. Ask about it.',
     ['Krijg ik een vergoeding voor mijn reiskosten?', 'Do I get money for my travel costs?'],
     'You travel to work by bus every day. A colleague gets travel money, you do not. What do you do?',
     [
@@ -1432,7 +1432,7 @@ const sectorUnits: Unit[] = [
         ['verpleegkundige', 'de verpleegkundige', 'the nurse', '💉'],
       ],
       [
-        ['Goedemorgen, mevrouw. Hoe gaat het?', 'Good morning, madam. How are you?'],
+        ['Hebt u goed geslapen?', 'Did you sleep well?'],
         ['Ik help u met aankleden.', 'I will help you get dressed.'],
         ['Wilt u nog wat eten?', 'Would you like something more to eat?'],
       ],
@@ -1558,7 +1558,7 @@ const sectorTips = [
     'site',
     '🦺',
     'Stop and check: LMRA',
-    'Before you start a job, stop for a moment and check: what can go wrong here? This is the LMRA (last-minute risk analysis). Always wear your helmet, and fall protection when you work high. Never stand under a hanging load. Is the work unsafe? You may refuse it, and you must report it to your supervisor.',
+    'Before you start a job, stop for a moment and check: what can go wrong here? This is the LMRA (last-minute risk analysis). Always wear your helmet, and fall protection when you work high. Never stand under a hanging load. Is the work really dangerous? Then you may stop, and you must tell your supervisor right away.',
     ['Ik begin nog niet. Dit is niet veilig.', 'I am not starting yet. This is not safe.'],
     'You must work on a scaffold, but a railing is missing. A colleague says: "Just be careful." What do you do?',
     [
@@ -1566,7 +1566,7 @@ const sectorTips = [
       'Start, but be very careful.',
       'Fix the railing yourself with some rope.',
     ],
-    'A fall from height can kill. You may stop unsafe work, and reporting it protects the whole team.',
+    'A fall from height can cause very serious injuries. You may stop dangerous work, and reporting it protects the whole team.',
     ADVICE_LINE,
   ),
   tipFor(
@@ -1663,7 +1663,7 @@ const sectorTips = [
     'cleaning',
     '🧴',
     'Read the label',
-    'Every cleaning product has a label. Pictograms (small pictures in a red diamond) show the danger, for example for your skin, eyes or lungs. Read the label, or ask what the product is for and how to use it. Wear gloves.',
+    'Every cleaning product has a label. Pictograms (small pictures in a red diamond) show the danger, for example for your skin, eyes or lungs. Read the label, or ask what the product is for and how to use it. Wear the gloves your employer gives you.',
     ['Waarvoor is dit middel?', 'What is this product for?'],
     'You get a new cleaning product. You cannot read the label well. What do you do?',
     [
