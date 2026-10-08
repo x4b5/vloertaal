@@ -1,5 +1,5 @@
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
-import { workTips } from './work';
+import { toolsUnit, workTips } from './work';
 
 /**
  * "Zo werkt het hier": Dutch workplace customs, norms and values, one per lesson.
@@ -250,8 +250,17 @@ export const teamworkUnit: Unit = {
   ] satisfies Lesson[],
 };
 
-/** All tips in course order: the ones above, then those of the work-and-rights units (src/content/work.ts). */
-export const cultureTips: CultureTip[] = [...baseTips, ...workTips];
+/** The "Smart tools" unit sits right after "Asking for help" (l.understand), so its tips do too. */
+const isToolsTip = (t: CultureTip) => toolsUnit.lessons.some((l) => l.id === t.lessonId);
+const afterHelp = baseTips.findIndex((t) => t.lessonId === 'l.understand') + 1;
+
+/** All tips in course order: the ones above (with the Smart tools tips after "Asking for help"), then those of the work-and-rights units (src/content/work.ts). */
+export const cultureTips: CultureTip[] = [
+  ...baseTips.slice(0, afterHelp),
+  ...workTips.filter(isToolsTip),
+  ...baseTips.slice(afterHelp),
+  ...workTips.filter((t) => !isToolsTip(t)),
+];
 
 export function tipForLesson(lessonId: string): CultureTip | undefined {
   return cultureTips.find((t) => t.lessonId === lessonId);

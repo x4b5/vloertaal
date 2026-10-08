@@ -10,6 +10,8 @@ import type { ChatLine, Dialogue, Lesson, Unit } from './types';
  * Only stable, general facts. No amounts that change every year (like the minimum wage in
  * euros): we say where to check instead. Every tip ends with the same "ask for advice" line
  * (house rules: "ask your supervisor").
+ * Also the basis unit "Smart tools" (toolsUnit: translation apps, captions, keep learning),
+ * which curriculum.ts places right after "Asking for help".
  * Every id is also a translation key in src/i18n/work/<lang>.ts.
  */
 
@@ -1547,11 +1549,11 @@ const sectorTips = [
     ['Deze boor is kapot. Is er een andere?', 'This drill is broken. Is there another one?'],
     'There is a toolbox meeting, but your Dutch is not good yet. What do you do?',
     [
-      'Go, listen, and ask a colleague to explain what you did not understand.',
+      'Go, use a translation app if that is allowed, and ask a colleague afterwards what you did not understand.',
       'Skip it, because you will not understand it anyway.',
       'Sign the attendance list without going.',
     ],
-    'Safety information is for everyone. Asking for an explanation afterwards is normal and keeps you safe.',
+    'Safety information is for everyone. A translation app can help you follow the meeting, if phones are allowed there. Asking a colleague afterwards is normal and checks that you understood it right.',
     NONE,
   ),
   tipFor(
@@ -1691,6 +1693,113 @@ const sectorTips = [
   ),
 ];
 
+// ---- Smart tools (a basis unit right after "Asking for help", spliced in by curriculum.ts) ----
+
+export const toolsUnit = unit('tools', 'Smart tools', 'Slimme hulpmiddelen', '📱', '#d1495b', [
+  lesson(
+    'translate',
+    'Translate with your phone',
+    [
+      ['vertaalapp', 'de vertaalapp', 'the translation app', '📱'],
+      ['vertalen', 'vertalen', 'to translate', '🔤'],
+      ['camera', 'de camera', 'the camera', '📸'],
+      ['briefje', 'het briefje', 'the note (a small paper)', '🗒️'],
+      ['spreken', 'spreken', 'to speak', '🗣️'],
+      ['vertaling', 'de vertaling', 'the translation', '📝'],
+    ],
+    [
+      ['Ik vertaal het met mijn telefoon.', 'I translate it with my phone.'],
+      ['Mag ik dit even vertalen?', 'May I quickly translate this?'],
+      ['Kunt u in mijn telefoon spreken?', 'Can you speak into my phone?'],
+    ],
+    [['Wat staat er op dat briefje?', 'What does that note say?'], ['Wacht even, ik vertaal het.', 'Wait a moment, I will translate it.']],
+  ),
+  lesson(
+    'understood',
+    'Understand and be understood',
+    [
+      ['herhalen', 'herhalen', 'to repeat', '🔁'],
+      ['opschrijven', 'opschrijven', 'to write down', '✏️'],
+      ['latenzien', 'laten zien', 'to show', '👉'],
+      ['ondertiteling', 'de ondertiteling', 'the captions (speech as text)', '💬'],
+      ['instructie', 'de instructie', 'the instruction', '📋'],
+      ['plaatje', 'het plaatje', 'the picture', '🖼️'],
+    ],
+    [
+      ['Wilt u het opschrijven?', 'Will you write it down?'],
+      ['Kunt u het laten zien?', 'Can you show it?'],
+      ['Is er een instructie met plaatjes?', 'Is there an instruction with pictures?'],
+    ],
+    [['Eerst opruimen, dan inpakken.', 'First tidy up, then pack.'], ['Dus ik moet eerst opruimen?', 'So I must tidy up first?']],
+  ),
+  lesson(
+    'keeplearning',
+    'Keep learning',
+    [
+      ['bibliotheek', 'de bibliotheek', 'the (public) library', '🏫'],
+      ['taalhuis', 'het Taalhuis', 'the Taalhuis (free help with Dutch)', '🗨️'],
+      ['oefenen', 'oefenen', 'to practise', '🎯'],
+      ['luisteren', 'luisteren', 'to listen', '🎧'],
+      ['elkedag', 'elke dag', 'every day', '📆'],
+      ['woord', 'het woord', 'the word', '🔡'],
+    ],
+    [
+      ['Ik oefen elke dag tien minuten.', 'I practise ten minutes every day.'],
+      ['Wat betekent dit woord?', 'What does this word mean?'],
+      ['Wil je Nederlands met mij praten?', 'Will you speak Dutch with me?'],
+    ],
+    [['Zal ik Engels praten?', 'Shall I speak English?'], ['Nee, liever Nederlands. Ik wil oefenen.', 'No, Dutch please. I want to practise.']],
+  ),
+]);
+
+const toolsTips = [
+  tipFor(
+    'translate',
+    '🌐',
+    'Translation apps: smart, but check',
+    'A translation app, like Google Translate, helps a lot. You can type, speak, or use conversation mode to talk with a colleague. With the camera you can translate signs, notes and instructions. On many phones, WhatsApp can also translate messages. Use your phone only where it is safe and allowed: not near machines or forklifts, and ask first (more in the lesson "Your phone at work"). Apps make mistakes. For important things, like your contract, a letter or a safety instruction, also ask a person to explain it. Do not take photos of confidential work papers without permission.',
+    ['Mag ik mijn telefoon gebruiken om te vertalen?', 'May I use my phone to translate?'],
+    'Your supervisor gives you a paper with safety instructions in Dutch. You understand only a few words. What do you do?',
+    [
+      'Ask if you may translate it with your phone, and ask your supervisor to explain the important parts.',
+      'Say "ja, ja" and start working. You will understand it later.',
+      'Take a photo and send it to a group chat of friends, so they can translate it.',
+    ],
+    'A translation app helps you understand quickly, but it can make mistakes. For safety, an explanation from a person is the best check. Work papers can be confidential, so do not share them without permission.',
+    NONE,
+  ),
+  tipFor(
+    'understood',
+    '💬',
+    'Check that you understood',
+    'Your phone can turn speech into text (live captions): Live Transcribe on Android, Live Captions on iPhone. Check which languages your phone supports. You can also ask someone to write it down, to show it, or to speak slowly. Ask if there is an instruction with pictures, or in your language. Then say back what you understood: "Dus ik moet eerst …?" This is normal here, and it prevents mistakes.',
+    ['Dus ik moet eerst de dozen tellen?', 'So I must count the boxes first?'],
+    'A colleague explains how a new machine works. She speaks fast and you miss some words. What do you do?',
+    [
+      'Ask her to show it or write the steps down, then say back what you understood.',
+      'Nod and say "ja, ja", so she does not lose time.',
+      'Try the machine alone later and see what happens.',
+    ],
+    'Showing, writing and saying it back are quick checks. Your colleague can correct you before something goes wrong. Here, this is seen as careful, not as slow.',
+    NONE,
+  ),
+  tipFor(
+    'keeplearning',
+    '📚',
+    'Keep learning, a little every day',
+    'A few minutes every day helps more than one long hour a week. Save new words from work in a notes app on your phone. Listen to easy Dutch, for example the NOS Jeugdjournaal (news for children) or a podcast in slow Dutch. Many public libraries have a Taalhuis: free help with Dutch, often with a taalcafé (a place to practise speaking) or a language buddy (taalmaatje). Colleagues often switch to English to help you. Ask them kindly to speak Dutch with you: most people like to help.',
+    ['Praat maar Nederlands met mij, dan leer ik het sneller.', 'Just speak Dutch with me, then I learn it faster.'],
+    'Your colleagues always switch to English when they talk to you. You want to learn Dutch. What do you do?',
+    [
+      'Thank them, and ask them kindly to speak Dutch with you, slowly.',
+      'Say nothing. Dutch will come by itself.',
+      'Stop talking with colleagues until your Dutch is perfect.',
+    ],
+    'Colleagues often switch to English to be kind. When you ask for Dutch, most of them are happy to help. Speaking a little every day at work is one of the fastest ways to learn.',
+    NONE,
+  ),
+];
+
 // ---- Course order of everything in this file ----
 
 const byId = (id: string) => coreUnits.find((u) => u.id === id)!;
@@ -1708,10 +1817,10 @@ export const workUnits: Unit[] = [
   ...sectorUnits,
 ];
 
-const lessonOrder = workUnits.flatMap((u) => u.lessons.map((l) => l.id));
+const lessonOrder = [toolsUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
-/** One "Zo werkt het hier" tip per lesson of workUnits, in course order. */
-export const workTips: CultureTip[] = [...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips].sort(
+/** One "Zo werkt het hier" tip per lesson of toolsUnit and workUnits, in course order. */
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

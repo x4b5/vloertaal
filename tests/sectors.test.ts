@@ -12,10 +12,12 @@ describe('sectors', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it('puts the own sector unit in slot 04 (after Safety); everything in course order with none', () => {
+  it('puts the own sector unit in slot 05 (after Safety); everything in course order with none', () => {
+    // Smart tools is unit 03 for everyone, right after "Asking for help".
+    expect(units.slice(0, 4).map((u) => u.id)).toEqual(['u.firstday', 'u.help', 'u.tools', 'u.safety']);
     const { main, other } = coursePlan('construction');
-    expect(main[2].id).toBe('u.safety');
-    expect(main[3].id).toBe('u.build');
+    expect(main[3].id).toBe('u.safety');
+    expect(main[4].id).toBe('u.build');
     expect(main.filter((u) => u.id === 'u.build')).toHaveLength(1);
     expect(main.some((u) => u.id === 'u.warehouse')).toBe(false);
     expect(other.map((u) => u.id).sort()).toEqual(['u.care', 'u.clean', 'u.factory', 'u.horeca', 'u.warehouse']);
@@ -23,8 +25,8 @@ describe('sectors', () => {
     // The basis units keep their course order around it.
     const basis = main.filter((u) => !unitSector(u.id));
     expect(basis).toEqual(units.filter((u) => !unitSector(u.id)));
-    expect(coursePlan('care').main[3].id).toBe('u.care');
-    expect(coursePlan('logistics').main[3].id).toBe('u.warehouse');
+    expect(coursePlan('care').main[4].id).toBe('u.care');
+    expect(coursePlan('logistics').main[4].id).toBe('u.warehouse');
     for (const s of ['none', undefined] as const) {
       expect(coursePlan(s).main).toEqual(units);
       expect(coursePlan(s).other).toEqual([]);
@@ -37,7 +39,7 @@ describe('sectors', () => {
     const warehouse = unit('u.warehouse');
     const after = units[units.indexOf(warehouse) + 1];
     const safetyDone = Object.fromEntries(safety.lessons.map((l) => [l.id, {}]));
-    // Construction: Safety done → "Op de bouw" (slot 04) opens; the unit after the warehouse waits for it.
+    // Construction: Safety done → "Op de bouw" (slot 05) opens; the unit after the warehouse waits for it.
     expect(isUnlocked(build.lessons[0].id, safetyDone, 'full', 'construction')).toBe(true);
     expect(isUnlocked(after.lessons[0].id, safetyDone, 'full', 'construction')).toBe(false);
     const buildDone = { ...safetyDone, ...Object.fromEntries(build.lessons.map((l) => [l.id, {}])) };

@@ -50,7 +50,7 @@ export function isOtherSector(unitId: string, sector: SectorChoice | undefined):
   return own !== undefined && own !== sector;
 }
 
-/** The slot for the learner's own sector unit(s): where the warehouse unit sits in the course (04). */
+/** The slot for the learner's own sector unit(s): where the warehouse unit sits in the course (05, right after Safety). */
 const SECTOR_SLOT = 'u.warehouse';
 
 /**
