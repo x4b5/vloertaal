@@ -1,5 +1,5 @@
 import type { CultureTip } from './culture';
-import type { ChatLine, Dialogue, Lesson, Unit } from './types';
+import type { ChatLine, Dialogue, Unit } from './types';
 
 /**
  * Work and rights in the Netherlands: contracts, pay, rules, leave and sickness.
@@ -7,7 +7,8 @@ import type { ChatLine, Dialogue, Lesson, Unit } from './types';
  * "Zo werkt het hier" tip of each lesson carries the practical information.
  *
  * Only stable, general facts. No amounts that change every year (like the minimum wage in
- * euros): we say where to check instead. Every tip ends with the same "ask for advice" line.
+ * euros): we say where to check instead. Every tip ends with the same "ask for advice" line
+ * (house rules: "ask your supervisor").
  * Every id is also a translation key in src/i18n/work/<lang>.ts.
  */
 
@@ -16,7 +17,9 @@ const chat = (prompt: ChatLine, reply: ChatLine): Dialogue => ({ prompt, reply }
 
 /** Closing line of every tip: this is general information, not advice for one person. */
 export const ADVICE_LINE = 'General information. For your situation: ask your employer, the union or the Juridisch Loket.';
-const tip = (t: CultureTip): CultureTip => ({ ...t, body: `${t.body} ${ADVICE_LINE}` });
+/** Closing line of the house-rules tips: these rules are set per company. */
+export const HOUSE_LINE = 'Rules differ per company: ask your supervisor what the rules are where you work.';
+const tip = (t: CultureTip, end = ADVICE_LINE): CultureTip => ({ ...t, body: `${t.body} ${end}` });
 
 export const workUnits: Unit[] = [
   {
@@ -124,6 +127,61 @@ export const workUnits: Unit[] = [
           chat(
             line('c.extra.q', 'Kun je vandaag twee uur langer blijven?', 'Can you stay two hours longer today?'),
             line('c.extra.a', 'Ja, schrijf je de overuren op?', 'Yes, will you write down the overtime?'),
+          ),
+        ],
+      },
+    ],
+  },
+  {
+    id: 'u.house',
+    title: 'House rules',
+    titleNl: 'Huisregels',
+    emoji: '🏠',
+    color: '#8a6d1f',
+    lessons: [
+      {
+        id: 'l.phone',
+        title: 'Your phone at work',
+        words: [
+          { id: 'w.telefoon', nl: 'de telefoon', en: 'the phone', emoji: '📱' },
+          { id: 'w.appen', nl: 'appen', en: 'to send a message (app)', emoji: '💬' },
+          { id: 'w.kluisje', nl: 'het kluisje', en: 'the locker', emoji: '🔐' },
+          { id: 'w.uitzetten', nl: 'uitzetten', en: 'to switch off', emoji: '📴' },
+          { id: 'w.prive', nl: 'privé', en: 'private, personal', emoji: '🏠' },
+          { id: 'w.foto', nl: 'de foto', en: 'the photo', emoji: '📷' },
+        ],
+        sentences: [
+          { id: 's.phone.1', nl: 'Mijn telefoon ligt in mijn kluisje.', en: 'My phone is in my locker.' },
+          { id: 's.phone.2', nl: 'Ik zet mijn telefoon uit.', en: 'I switch off my phone.' },
+          { id: 's.phone.3', nl: 'Mag ik hier een foto maken?', en: 'May I take a photo here?' },
+        ],
+        dialogues: [
+          chat(
+            line('c.phone.q', 'Geen telefoon bij de machine, oké?', 'No phone near the machine, okay?'),
+            line('c.phone.a', 'Oké, ik app in de pauze.', 'Okay, I will send messages in the break.'),
+          ),
+        ],
+      },
+      {
+        id: 'l.smoking',
+        title: 'Smoking',
+        words: [
+          { id: 'w.roken', nl: 'roken', en: 'to smoke', emoji: '🚬' },
+          { id: 'w.rookplek', nl: 'de rookplek', en: 'the smoking area', emoji: '📍' },
+          { id: 'w.verboden', nl: 'verboden', en: 'not allowed, forbidden', emoji: '🚭' },
+          { id: 'w.buiten', nl: 'buiten', en: 'outside', emoji: '🌳' },
+          { id: 'w.esigaret', nl: 'de e-sigaret', en: 'the e-cigarette (vape)', emoji: '💨' },
+          { id: 'w.brandbaar', nl: 'brandbaar', en: 'can burn easily (flammable)', emoji: '🛢️' },
+        ],
+        sentences: [
+          { id: 's.smoking.1', nl: 'Roken is hier verboden.', en: 'Smoking is not allowed here.' },
+          { id: 's.smoking.2', nl: 'Waar is de rookplek?', en: 'Where is the smoking area?' },
+          { id: 's.smoking.3', nl: 'Ik rook alleen buiten in de pauze.', en: 'I only smoke outside in the break.' },
+        ],
+        dialogues: [
+          chat(
+            line('c.smoking.q', 'Ga je mee roken?', 'Are you coming to smoke?'),
+            line('c.smoking.a', 'Nee, ik heb nog geen pauze.', 'No, I do not have my break yet.'),
           ),
         ],
       },
@@ -303,6 +361,36 @@ export const workTips: CultureTip[] = [
     ],
     why: { id: 'c.extra.w', en: 'Holiday pay is your right, not a gift. You build it up with every hour you work. If you leave your job earlier, you get it with your last pay.' },
   }),
+  tip({
+    id: 'c.phone',
+    lessonId: 'l.phone',
+    emoji: '📵',
+    title: 'Your phone at work',
+    body: 'Many workplaces do not allow phones during work, especially near machines and forklifts, or in food production. It can be unsafe or not hygienic. Use your phone in your break. Waiting for an urgent call from your family? Tell your supervisor first. Do not take photos or videos at work without permission: think of the privacy of colleagues and company secrets.',
+    phrase: { id: 'c.phone.p', nl: 'Mijn kind is ziek. Mag mijn telefoon aanblijven?', en: 'My child is sick. May my phone stay on?' },
+    situation: { id: 'c.phone.s', en: 'Your mother is in hospital and may call today. Phones are not allowed on the work floor. What do you do?' },
+    options: [
+      { id: 'c.phone.o1', en: 'Tell your supervisor and ask how you can be reached.', best: true },
+      { id: 'c.phone.o2', en: 'Keep your phone in your pocket and answer quietly at the machine.', best: false },
+      { id: 'c.phone.o3', en: 'Stay home without telling anyone why.', best: false },
+    ],
+    why: { id: 'c.phone.w', en: 'Supervisors usually understand a family emergency. When they know, they can find a safe solution, for example a set time to check your phone.' },
+  }, HOUSE_LINE),
+  tip({
+    id: 'c.smoking',
+    lessonId: 'l.smoking',
+    emoji: '🚭',
+    title: 'Smoking only outside',
+    body: 'In the Netherlands, smoking inside a workplace is forbidden by law. This is also true for e-cigarettes (vapes). Since 2022, smoking rooms inside companies are not allowed anymore. Smoke only outside, at the place your employer allows, and usually only in your break. Extra smoke breaks are not a right: agree on them with your supervisor. Never smoke near things that burn easily, like fuel or boxes in a warehouse.',
+    phrase: { id: 'c.smoking.p', nl: 'Mag ik in mijn pauze buiten roken?', en: 'May I smoke outside in my break?' },
+    situation: { id: 'c.smoking.s', en: 'It is cold and raining. A colleague says: "Just smoke in the storage room, nobody sees it." What do you do?' },
+    options: [
+      { id: 'c.smoking.o1', en: 'Say no, and smoke outside at the smoking area in your break.', best: true },
+      { id: 'c.smoking.o2', en: 'Smoke quickly in the storage room, just this once.', best: false },
+      { id: 'c.smoking.o3', en: 'Use your vape inside instead, because that is allowed.', best: false },
+    ],
+    why: { id: 'c.smoking.w', en: 'Smoking inside is against the law and can start a fire. A vape inside is not allowed either. Following the rule keeps everyone safe.' },
+  }, HOUSE_LINE),
   tip({
     id: 'c.health',
     lessonId: 'l.health',
