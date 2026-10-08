@@ -42,6 +42,8 @@ const lang: HelpLanguage = {
     almost: 'Corect, dar atenție la scriere',
     incorrect: 'Nu chiar',
     correctAnswer: 'Răspunsul corect',
+    yourAnswer: 'Răspunsul tău',
+    inARow: '{n} la rând',
     cantListen: 'Nu pot asculta acum',
     lessonComplete: 'Lecție terminată!',
     backToPath: 'Înapoi la lecții',

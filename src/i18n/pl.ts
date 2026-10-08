@@ -42,6 +42,8 @@ const lang: HelpLanguage = {
     almost: 'Dobrze, ale uważaj na pisownię',
     incorrect: 'Nie całkiem',
     correctAnswer: 'Poprawna odpowiedź',
+    yourAnswer: 'Twoja odpowiedź',
+    inARow: '{n} z rzędu',
     cantListen: 'Nie mogę teraz słuchać',
     lessonComplete: 'Lekcja ukończona!',
     backToPath: 'Wróć do lekcji',

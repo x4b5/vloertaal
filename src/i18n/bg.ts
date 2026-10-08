@@ -42,6 +42,8 @@ const lang: HelpLanguage = {
     almost: 'Правилно, но внимавай с правописа',
     incorrect: 'Не съвсем',
     correctAnswer: 'Правилен отговор',
+    yourAnswer: 'Твоят отговор',
+    inARow: '{n} поред',
     cantListen: 'Сега не мога да слушам',
     lessonComplete: 'Урокът е завършен!',
     backToPath: 'Обратно към уроците',

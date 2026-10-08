@@ -42,6 +42,8 @@ const lang: HelpLanguage = {
     almost: 'Правильно, але зверни увагу на правопис',
     incorrect: 'Не зовсім',
     correctAnswer: 'Правильна відповідь',
+    yourAnswer: 'Ваша відповідь',
+    inARow: '{n} поспіль',
     cantListen: 'Зараз не можу слухати',
     lessonComplete: 'Урок завершено!',
     backToPath: 'Назад до уроків',

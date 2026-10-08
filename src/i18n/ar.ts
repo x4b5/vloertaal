@@ -42,6 +42,8 @@ const lang: HelpLanguage = {
     almost: 'صحيح، لكن انتبه إلى الإملاء',
     incorrect: 'ليس تماماً',
     correctAnswer: 'الإجابة الصحيحة',
+    yourAnswer: 'إجابتك',
+    inARow: '{n} على التوالي',
     cantListen: 'لا أستطيع الاستماع الآن',
     lessonComplete: 'انتهى الدرس!',
     backToPath: 'العودة إلى الدروس',

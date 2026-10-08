@@ -42,6 +42,8 @@ const lang: HelpLanguage = {
     almost: 'Doğru, ama yazımına dikkat et',
     incorrect: 'Tam değil',
     correctAnswer: 'Doğru cevap',
+    yourAnswer: 'Senin cevabın',
+    inARow: 'Üst üste {n}',
     cantListen: 'Şu an dinleyemiyorum',
     lessonComplete: 'Ders tamamlandı!',
     backToPath: 'Derslere dön',

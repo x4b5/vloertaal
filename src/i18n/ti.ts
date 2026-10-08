@@ -42,6 +42,8 @@ const lang: HelpLanguage = {
     almost: 'ቅኑዕ እዩ፡ ግን ኣጸሓሕፋ ተጠንቀቕ',
     incorrect: 'ገና ኣይኮነን',
     correctAnswer: 'ቅኑዕ መልሲ',
+    yourAnswer: 'መልስኻ',
+    inARow: '{n} ብተኸታታሊ',
     cantListen: 'ሕጂ ክሰምዕ ኣይክእልን',
     lessonComplete: 'ትምህርቲ ተወዲኡ!',
     backToPath: 'ናብ ትምህርትታት ተመለስ',

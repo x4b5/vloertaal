@@ -9,6 +9,8 @@ import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
 import { Bi } from './Bi';
 import { castFor, Character, type CharacterId, type Mood, useTalking } from './Characters';
+import { CheckIcon, CloseIcon } from './Icons';
+import { cheerFor } from '../lib/lessonRun';
 import { voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
@@ -28,22 +30,69 @@ interface Props<K extends Exercise['kind']> {
   onAnswer: (a: Answer | null) => void;
   /** After "Check" on a graded exercise: was the answer right? Characters react to it. */
   verdict?: 'right' | 'wrong';
+  /** Right answers in a row, this one included (0 after a miss): sets how big the cheer is. */
+  run?: number;
+  /** Misses in a row, this one included: the "oops" gesture plays on the first only. */
+  misses?: number;
 }
 
-/** How a character in an exercise feels about the verdict; `calm` is the reaction without a hop. */
-function moodFor(verdict: Props<'meaning'>['verdict'], rest: Mood = 'idle', calm = false): Mood {
-  if (verdict === 'right') return calm ? 'pleased' : 'happy';
+type Verdict = Props<'meaning'>['verdict'];
+
+/**
+ * How a character in an exercise feels about the verdict. A right answer is a pleased nod with
+ * a thumb up for a run of 1–2 and a happy jump from 3 (lib/lessonRun.ts); `calm` characters
+ * (the colleague in a chat or a situation) only ever nod. The pose holds until Continue, so a
+ * still frame reads as "right" or "wrong".
+ */
+function moodFor(verdict: Verdict, rest: Mood = 'idle', calm = false, run = 1): Mood {
+  if (verdict === 'right') return calm || cheerFor(run) === 'pleased' ? 'pleased' : 'happy';
   if (verdict === 'wrong') return 'sad';
   return rest;
 }
 
-/** A colleague saying something in a speech bubble (meaning and sentence-building exercises). */
-function Speaker({ who, lines, verdict }: { who: CharacterId; lines: string[]; verdict?: 'right' | 'wrong' }) {
-  const talking = useTalking(lines);
+/** Extra reaction classes: a second fist pump on a run of 5+, no head-scratch after the first miss. */
+function reactClass(verdict: Verdict, run = 1, misses = 1): string {
+  if (verdict === 'right' && cheerFor(run) === 'big') return 'ch-big';
+  if (verdict === 'wrong' && misses > 1) return 'ch-calm';
+  return '';
+}
+
+/**
+ * A colleague beside the question (or saying the word in a speech bubble). `quietUntilChecked`:
+ * the mouth only moves with the spoken answer after Check, never when the learner taps an
+ * option (that would give the answer away).
+ */
+function Speaker({ who, lines, verdict, run, misses, size, quietUntilChecked = false }: {
+  who: CharacterId;
+  lines: string[];
+  verdict?: Verdict;
+  run?: number;
+  misses?: number;
+  size?: number;
+  quietUntilChecked?: boolean;
+}) {
+  const talking = useTalking(quietUntilChecked && !verdict ? [] : lines, !quietUntilChecked);
   return (
-    <span className="speaker-char">
-      <Character who={who} mood={moodFor(verdict)} talking={talking} />
+    <span className={`speaker-char ${size ? 'speaker-char-sm' : ''}`}>
+      <Character who={who} mood={moodFor(verdict, 'idle', false, run)} talking={talking} size={size} className={reactClass(verdict, run, misses)} />
     </span>
+  );
+}
+
+/** Bram beside a question that has no speech bubble (picture choice, listening, typing). */
+function PromptWithBram({ text, verdict, run, misses, word, quietUntilChecked }: {
+  text: Bilingual;
+  verdict?: Verdict;
+  run?: number;
+  misses?: number;
+  word: string;
+  quietUntilChecked?: boolean;
+}) {
+  return (
+    <div className="prompt-row">
+      <Prompt text={text} />
+      <Speaker who="bram" lines={[word]} verdict={verdict} run={run} misses={misses} size={68} quietUntilChecked={quietUntilChecked} />
+    </div>
   );
 }
 
@@ -62,9 +111,10 @@ function Stamp({ right }: { right: boolean }) {
   );
 }
 
+/** The question. Focus moves here on a new exercise (tabIndex -1), see LessonPlayer. */
 function Prompt({ text }: { text: Bilingual }) {
   return (
-    <h2 className="prompt">
+    <h2 className="prompt" tabIndex={-1}>
       <Bi text={text} />
     </h2>
   );
@@ -107,6 +157,8 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
 }) {
   const [picked, setPicked] = useState<string | null>(null);
   const pick = (w: T) => {
+    if (locked) return;
+    sounds.tap();
     setPicked(w.id);
     onPick?.(w);
     onAnswer({ correct: w.id === correctId });
@@ -136,17 +188,25 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
           : w.id === picked
             ? 'picked'
             : '';
+        // After Check the options stay focusable (aria-disabled, not disabled) and say what
+        // they were; the number box shows a check or a cross, so colour is never the only cue.
         return (
           <button
             key={w.id}
             type="button"
-            className={`choice ${state}`}
-            disabled={locked}
+            className={`choice ${state} ${locked && !state ? 'faded' : ''}`}
+            aria-pressed={w.id === picked}
+            aria-disabled={locked || undefined}
             onClick={() => pick(w)}
           >
-            <span className="choice-num" aria-hidden>{i + 1}</span>
+            <span className="choice-num" aria-hidden>
+              {state === 'right' ? <CheckIcon size={26} /> : state === 'wrong' ? <CloseIcon size={26} /> : i + 1}
+            </span>
             {render(w)}
-            {locked && w.id === picked && <Stamp right={w.id === correctId} />}
+            {state === 'right' && <span className="sr-only">, {ui('correctAnswer').en}</span>}
+            {state === 'wrong' && <span className="sr-only">, {ui('yourAnswer').en}: {ui('incorrect').en}</span>}
+            {state === 'right' && <Stamp right />}
+            {state === 'wrong' && <Stamp right={false} />}
           </button>
         );
       })}
@@ -155,13 +215,13 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
 }
 
 /** Dutch word shown → pick the English meaning. */
-export function MeaningExercise({ ex, lang, locked, onAnswer, verdict }: Props<'meaning'>) {
+export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'meaning'>) {
   useEffect(() => { autoSpeak(ex.word.nl, false, 'nl', voiceFor('bram')); }, [ex.word]);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
       <div className={`speaker speaker-word ${wordSize(ex.word.nl)}`}>
-        <Speaker who="bram" lines={[ex.word.nl]} verdict={verdict} />
+        <Speaker who="bram" lines={[ex.word.nl]} verdict={verdict} run={run} misses={misses} />
         <div className="speaker-bubble">
           <SpeakButton text={ex.word.nl} voice={voiceFor('bram')} />
           <span className="speaker-nl" lang="nl">{breakable(ex.word.nl)}</span>
@@ -180,7 +240,7 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict }: Props<'
 }
 
 /** English meaning shown → pick the Dutch word from picture cards (text cards when `textOnly`). */
-export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
+export function DutchExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'dutch'>) {
   const meaning = gloss(ex.word.id, ex.word.en, lang);
   const fill = (template: string | undefined, word: string | undefined) =>
     template && word ? template.replace('{word}', word) : undefined;
@@ -192,9 +252,7 @@ export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
   return (
     <div className="exercise">
       <div className="pic-question">
-        <h2 className="prompt">
-          <Bi text={question} />
-        </h2>
+        <PromptWithBram text={question} word={ex.word.nl} verdict={verdict} run={run} misses={misses} quietUntilChecked />
       </div>
       {ex.textOnly ? (
         <ChoiceGrid
@@ -228,11 +286,11 @@ export function DutchExercise({ ex, lang, locked, onAnswer }: Props<'dutch'>) {
 }
 
 /** Only audio → pick the written Dutch word. */
-export function ListenExercise({ ex, lang, locked, onAnswer }: Props<'listen'>) {
+export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'listen'>) {
   useEffect(() => { autoSpeak(ex.word.nl); }, [ex.word]);
   return (
     <div className="exercise">
-      <Prompt text={ui('whatDoYouHear', lang)} />
+      <PromptWithBram text={ui('whatDoYouHear', lang)} word={ex.word.nl} verdict={verdict} run={run} misses={misses} />
       <div className="listen-buttons">
         <SpeakButton text={ex.word.nl} size="lg" label="Play" />
         <SpeakButton text={ex.word.nl} slow label="Play slowly" />
@@ -254,6 +312,9 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
   const [left, setLeft] = useState<string | null>(null);
   const [rightPick, setRightPick] = useState<string | null>(null);
   const [done, setDone] = useState<Set<string>>(new Set());
+  /** The pair just matched: it flashes green (320 ms) before it fades to "matched". */
+  const [hit, setHit] = useState<string | null>(null);
+  /** A wrong pair keeps its cross until the next tap. */
   const [miss, setMiss] = useState<string[]>([]);
 
   useEffect(() => {
@@ -262,18 +323,32 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
       sounds.correct();
       const next = new Set(done).add(left);
       setDone(next);
+      setHit(left);
       if (next.size === ex.words.length) onAnswer({ correct: true });
     } else {
       sounds.wrong();
       setMiss([left, rightPick]);
-      setTimeout(() => setMiss([]), 450);
     }
     setLeft(null);
     setRightPick(null);
   }, [left, rightPick, done, ex.words.length, onAnswer]);
 
+  useEffect(() => {
+    if (!hit) return;
+    const t = window.setTimeout(() => setHit(null), 320);
+    return () => window.clearTimeout(t);
+  }, [hit]);
+
+  const tap = () => {
+    sounds.tap();
+    setMiss([]);
+  };
   const cls = (id: string, picked: string | null) =>
-    `choice match ${done.has(id) ? 'matched' : ''} ${picked === id ? 'picked' : ''} ${miss.includes(id) ? 'shake' : ''}`;
+    `choice match ${done.has(id) ? (hit === id ? 'match-hit' : 'matched') : ''} ${picked === id ? 'picked' : ''} ${miss.includes(id) ? 'shake match-miss' : ''}`;
+  const missMark = (id: string) =>
+    miss.includes(id) && (
+      <span className="match-x" aria-hidden><CloseIcon size={16} /></span>
+    );
 
   return (
     <div className="exercise">
@@ -287,23 +362,33 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
               key={`nl-${w.id}`}
               type="button"
               className={`${cls(w.id, left)} match-nl`}
-              disabled={done.has(w.id)}
+              disabled={done.has(w.id) && hit !== w.id}
+              aria-pressed={left === w.id}
               onClick={() => {
+                if (done.has(w.id)) return;
+                tap();
                 autoSpeak(w.nl);
                 setLeft(w.id);
               }}
             >
               <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
+              {missMark(w.id)}
             </button>,
             <button
               key={`en-${r.id}`}
               type="button"
               className={`${cls(r.id, rightPick)} match-en`}
-              disabled={done.has(r.id)}
-              onClick={() => setRightPick(r.id)}
+              disabled={done.has(r.id) && hit !== r.id}
+              aria-pressed={rightPick === r.id}
+              onClick={() => {
+                if (done.has(r.id)) return;
+                tap();
+                setRightPick(r.id);
+              }}
             >
               {hasPicture(r) && <WordPicture className="choice-emoji" id={r.id} emoji={r.emoji} size={36} />}
               <Bi text={gloss(r.id, r.en, lang)} />
+              {missMark(r.id)}
             </button>,
           ];
         })}
@@ -313,7 +398,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
 }
 
 /** English sentence → put Dutch word tiles in order. */
-export function BuildExercise({ ex, lang, locked, onAnswer, verdict }: Props<'build'>) {
+export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'build'>) {
   const [chosen, setChosen] = useState<number[]>([]);
   // One voice per exercise: the speaker says the tiles and, after Check, the whole sentence.
   const who = castFor(ex.sentence.id);
@@ -327,13 +412,19 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict }: Props<'bu
     <div className="exercise">
       <Prompt text={ui('buildSentence', lang)} />
       <div className="speaker speaker-build">
-        <Speaker who={who} lines={[ex.sentence.nl, ...ex.tiles]} verdict={verdict} />
+        <Speaker who={who} lines={[ex.sentence.nl, ...ex.tiles]} verdict={verdict} run={run} misses={misses} />
         <div className="speaker-bubble">
           <Bi className="bubble-text" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
         </div>
       </div>
       <div className={`answer-line ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite">
         {verdict && <Stamp right={verdict === 'right'} />}
+        {verdict && (
+          <span className={`answer-mark mark-${verdict}`}>
+            {verdict === 'right' ? <CheckIcon size={24} /> : <CloseIcon size={24} />}
+            <span className="sr-only">{verdict === 'right' ? ui('correctAnswer').en : `${ui('yourAnswer').en}: ${ui('incorrect').en}`}</span>
+          </span>
+        )}
         {chosen.map((i) => (
           <button
             key={i}
@@ -369,24 +460,25 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict }: Props<'bu
 }
 
 /** Hear a word → type it. Forgiving about capitals, articles and one typo. */
-export function TypeExercise({ ex, lang, locked, onAnswer }: Props<'type'>) {
+export function TypeExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'type'>) {
   const [value, setValue] = useState('');
   useEffect(() => { autoSpeak(ex.word.nl); }, [ex.word]);
   return (
     <div className="exercise">
-      <Prompt text={ui('typeWhatYouHear', lang)} />
+      <PromptWithBram text={ui('typeWhatYouHear', lang)} word={ex.word.nl} verdict={verdict} run={run} misses={misses} />
       <div className="listen-buttons">
         <SpeakButton text={ex.word.nl} size="lg" label="Play" />
         <SpeakButton text={ex.word.nl} slow label="Play slowly" />
       </div>
       <input
-        className="type-input"
         lang="nl"
         autoFocus
         autoComplete="off"
         autoCapitalize="off"
         spellCheck={false}
-        disabled={locked}
+        readOnly={locked}
+        aria-invalid={verdict === 'wrong' || undefined}
+        className={`type-input ${verdict ? `type-${verdict}` : ''}`}
         value={value}
         placeholder="…"
         aria-label="Your answer"
@@ -406,7 +498,7 @@ export function TypeExercise({ ex, lang, locked, onAnswer }: Props<'type'>) {
  * Complete the conversation: a colleague says a Dutch line, the learner picks the reply.
  * Tapping the colleague's words shows what they mean (English + help language).
  */
-export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'chat'>) {
+export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'chat'>) {
   const { prompt, reply } = ex.dialogue;
   const [picked, setPicked] = useState<ChatLine | null>(null);
   const [hint, setHint] = useState(false);
@@ -448,7 +540,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict }: Props<'cha
           <div className={`chat-bubble chat-bubble-me ${mine}`} aria-live="polite">
             {picked ? <span className="chat-line" lang="nl">{breakable(picked.nl)}</span> : <span className="chat-blank" aria-hidden />}
           </div>
-          <span className="chat-char"><Character who="amina" flip mood={moodFor(verdict, meRest)} talking={meTalking} /></span>
+          <span className="chat-char"><Character who="amina" flip mood={moodFor(verdict, meRest, false, run)} talking={meTalking} className={reactClass(verdict, run, misses)} /></span>
         </div>
       </div>
       <ChoiceGrid

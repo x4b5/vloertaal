@@ -42,6 +42,8 @@ const lang: HelpLanguage = {
     almost: 'درست است، ولی به املا دقت کن',
     incorrect: 'نه کاملاً',
     correctAnswer: 'پاسخ درست',
+    yourAnswer: 'پاسخ شما',
+    inARow: '{n} پشت سر هم',
     cantListen: 'الان نمی‌توانم گوش بدهم',
     lessonComplete: 'درس تمام شد!',
     backToPath: 'بازگشت به درس‌ها',

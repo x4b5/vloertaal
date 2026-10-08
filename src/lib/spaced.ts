@@ -102,3 +102,35 @@ export function dailyLesson(ids: string[]): Lesson {
   const dialogues: Dialogue[] = from.flatMap((l) => l.dialogues ?? []).slice(0, 1);
   return { id: DAILY_ID, title: 'Review today', words, sentences, dialogues, repeat: true };
 }
+
+/**
+ * The "Herhaal vandaag" card on the path, which stays put all day:
+ * - 'due': words are waiting (tap to review);
+ * - 'done': today's review is finished, or nothing is due today (the "GEDAAN" stamp);
+ * - 'first': lessons are done but no review yet, the first words come back tomorrow.
+ * null: no words met yet, so no card.
+ * One review per day: after it, leftover due words roll over to tomorrow (an "extra ronde" stays
+ * possible); `tomorrow` is how many words come back then, `extra` how many are still due now.
+ */
+export interface DailyCard {
+  state: 'due' | 'done' | 'first';
+  /** Words in today's review (due state). */
+  due: number;
+  tomorrow: number;
+  extra: number;
+}
+
+export function dailyCard(cards: Cards, today: string, reviewDay?: string): DailyCard | null {
+  const ids = Object.keys(cards).filter((id) => wordById.has(id));
+  if (!ids.length) return null;
+  const dueNow = dueIds(cards, today).length;
+  const tomorrow = Math.min(dueIds(cards, addDays(today, 1)).length, DAILY_MAX);
+  if (reviewDay === today) return { state: 'done', due: 0, tomorrow, extra: dueNow };
+  if (dueNow > 0) return { state: 'due', due: Math.min(dueNow, DAILY_MAX), tomorrow, extra: 0 };
+  return { state: reviewDay ? 'done' : 'first', due: 0, tomorrow, extra: 0 };
+}
+
+/** "N woorden sterker": how many words moved up a box in a review. */
+export function strongerCount(before: Cards, after: Cards): number {
+  return Object.entries(after).filter(([id, c]) => c.box > (before[id]?.box ?? 0) && before[id] !== undefined).length;
+}
