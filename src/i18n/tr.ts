@@ -31,6 +31,7 @@ const lang: HelpLanguage = {
     whatDoesThisMean: 'Bu ne demek?',
     chooseDutch: 'Hollandaca kelimeyi seç',
     whichOneIs: 'Hangisi “{word}”?',
+    mixLesson: 'Karışık tekrar',
     whatDoYouHear: 'Ne duyuyorsun?',
     matchPairs: 'Eşleşen çiftlere dokun',
     buildSentence: 'Bu cümleyi Hollandaca kur',

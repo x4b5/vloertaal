@@ -1,4 +1,5 @@
 import { allReplies, allWords, units } from '../content/curriculum';
+import { isMixLesson } from '../content/review';
 import { mainLessons, type SectorChoice } from '../content/sectors';
 import { type CultureTip, tipForLesson } from '../content/culture';
 import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
@@ -106,6 +107,8 @@ export function buildTiles(sentence: Sentence, lesson: Lesson, rng: () => number
  * Builds the exercise queue for a lesson.
  * First time: introduce each word, check it right away, then mix and apply.
  * Review: skip the intros and practise everything.
+ * Mixed review (last lesson of a unit): the words are not new, so no intros either; each word
+ * gets a "What does this mean?" instead.
  * quiet ("Without sound"): every listening exercise becomes a reading one on the same word, so
  * the lesson keeps its length and nothing needs to be heard.
  */
@@ -114,7 +117,8 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   const words = lesson.words;
   const out: Exercise[] = [];
 
-  if (!opts.review) {
+  const mix = isMixLesson(lesson);
+  if (!opts.review && !mix) {
     words.forEach((word, i) => {
       out.push({ kind: 'intro', word });
       // After every second new word, quiz one of the two just learned.
@@ -124,7 +128,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
       }
     });
   } else {
-    for (const word of sample(words, 3, rng)) {
+    for (const word of mix ? shuffle(words, rng) : sample(words, 3, rng)) {
       out.push({ kind: 'meaning', word, options: options(word, lesson, rng) });
     }
   }

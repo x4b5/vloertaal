@@ -6,7 +6,7 @@ const t: CultureTranslation = {
   },
   gloss: {
     'a.what': 'Ce este Vloertaal?',
-    'a.what.b': 'Vloertaal te ajută să înveți olandeza de care ai nevoie la muncă: în depozit, în bucătărie, în fabrică sau pe șantier. Lecțiile sunt scurte, așa că poți exersa câteva minute în fiecare zi.',
+    'a.what.b': 'Vloertaal te ajută să înveți olandeza de care ai nevoie la muncă: în depozit, în bucătărie, în fabrică sau pe șantier. Nu doar cuvintele de la locul de muncă, ci toată limba legată de muncă: aplicarea pentru un job, contractul și fluturașul de salariu, drepturile tale, locuința și actele, anunțarea că ești bolnav și relațiile cu colegii. Lecțiile sunt scurte, așa că poți exersa câteva minute în fiecare zi.',
     'a.how': 'Cum funcționează?',
     'a.how.b': 'Înveți olandeză prin engleză simplă. Dacă alegi o limbă de ajutor, vezi instrucțiunile și cuvintele și în limba ta. Asculți, atingi, construiești propoziții și exersezi conversații scurte cu colegii.',
     'a.culture': 'Cum merg lucrurile aici',

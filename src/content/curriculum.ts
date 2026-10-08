@@ -1,5 +1,6 @@
 import { teamworkUnit } from './culture';
 import { toolsUnit, workUnits } from './work';
+import { addMixLessons, isMixLesson } from './review';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
 
 /**
@@ -286,9 +287,14 @@ export const phrasebookIds = [
   's.understand.3',
 ];
 
+// Every unit ends with a "Mixed review" lesson of earlier items (src/content/review.ts).
+addMixLessons(units);
+
 export const allLessons: Lesson[] = units.flatMap((u) => u.lessons);
-export const allWords: Word[] = allLessons.flatMap((l) => l.words);
-export const allDialogues: Dialogue[] = allLessons.flatMap((l) => l.dialogues ?? []);
+/** The lessons that teach new items; mixed reviews only repeat them. */
+export const teachingLessons: Lesson[] = allLessons.filter((l) => !isMixLesson(l));
+export const allWords: Word[] = teachingLessons.flatMap((l) => l.words);
+export const allDialogues: Dialogue[] = teachingLessons.flatMap((l) => l.dialogues ?? []);
 /** Every learner reply; wrong options in a chat exercise come from here. */
 export const allReplies: ChatLine[] = allDialogues.map((d) => d.reply);
 
