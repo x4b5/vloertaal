@@ -14,8 +14,8 @@ on:
         description: 'Only these voices, comma separated (e.g. thijmen). Empty = all voices'
         default: ''
       max_credits:
-        description: 'Stop before spending more than this'
-        default: '12000'
+        description: 'Stop before spending more than this (per batch of 150 clips)'
+        default: '20000'
 
 permissions:
   contents: write
@@ -27,6 +27,7 @@ concurrency:
 jobs:
   record:
     runs-on: ubuntu-latest
+    timeout-minutes: 180
     env:
       ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
       MAX_CREDITS: ${{ inputs.max_credits }}
@@ -39,21 +40,37 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run clips
-      - run: node scripts/voices/elevenlabs.mjs ${{ inputs.mode }}
-      - name: Commit the recordings
+      - name: Check
+        if: inputs.mode == 'check'
+        run: node scripts/voices/elevenlabs.mjs check
+      # Record in batches of 150 clips and commit after each batch, so a runner that drops out
+      # never loses more than one batch of paid recordings. Stops when nothing is left.
+      - name: Record and commit in batches
         if: inputs.mode != 'check'
+        env:
+          MAX_CLIPS: '150'
         run: |
+          set -o pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/audio-el
-          git diff --cached --quiet && { echo "Nothing new."; exit 0; }
-          git commit -m "Record ElevenLabs voices (${{ inputs.mode }})"
-          # The branch may have moved while recording (e.g. a merged PR): rebase and retry.
-          for i in 1 2 3 4 5; do
-            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && exit 0
-            sleep $((i * 5))
+          save() {
+            git add public/audio-el
+            git diff --cached --quiet && return 0
+            git commit -m "Record ElevenLabs voices (${{ inputs.mode }}, batch $1)"
+            # The branch may have moved while recording (e.g. a merged PR): rebase and retry.
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin "${GITHUB_REF_NAME}" && git push && return 0
+              sleep $((i * 5))
+            done
+            return 1
+          }
+          for batch in $(seq 1 40); do
+            node scripts/voices/elevenlabs.mjs ${{ inputs.mode }} | tee batch.log
+            save "$batch"
+            grep -q "this batch records 0," batch.log && break
+            [ "${{ inputs.mode }}" = "sample" ] && break
           done
-          exit 1
+          rm -f batch.log
       # Keep a copy of every recording run, so paid clips are never lost if the commit fails.
       - uses: actions/upload-artifact@v5
         if: always() && inputs.mode != 'check'

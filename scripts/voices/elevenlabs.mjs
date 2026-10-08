@@ -48,6 +48,11 @@ const todo = voices.flatMap((v) =>
     )
     .map((c) => ({ voice: v, clip: c })),
 );
+// MAX_CLIPS: record at most this many clips per run, so the workflow can save (commit) in
+// batches and a lost runner never loses more than one batch of paid clips.
+const maxClips = Number(process.env.MAX_CLIPS || 0);
+const totalTodo = todo.length;
+if (maxClips > 0 && todo.length > maxClips) todo.length = maxClips;
 const cost = todo.reduce((n, t) => n + t.clip.text.length, 0);
 
 const headers = { 'xi-api-key': key, 'content-type': 'application/json' };
@@ -59,7 +64,7 @@ for (const v of voices) {
   const r = await fetch(`${API}/voices/${v.voiceId}`, { headers });
   console.log(`${v.label} (${v.voiceId}): ${r.ok ? 'reachable' : `NOT reachable (HTTP ${r.status}) - add it to "My Voices" in ElevenLabs`}`);
 }
-console.log(`${todo.length} clips to record, about ${cost} credits (limit for this run: ${maxCredits}).`);
+console.log(`${totalTodo} clips missing; this batch records ${todo.length}, about ${cost} credits (limit for this run: ${maxCredits}).`);
 if (mode === 'check') process.exit(0);
 if (cost > maxCredits) throw new Error(`Would spend ${cost} credits, more than MAX_CREDITS=${maxCredits}. Nothing recorded.`);
 
