@@ -1,4 +1,5 @@
 import { teamworkUnit } from './culture';
+import { workUnits } from './work';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
 
 /**
@@ -291,6 +292,7 @@ export const units: Unit[] = [
     ],
   },
   teamworkUnit,
+  ...workUnits,
 ];
 
 /** Emergency lines that are only in the phrasebook, not practised in a lesson. */

@@ -1,4 +1,5 @@
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
+import { workTips } from './work';
 
 /**
  * "Zo werkt het hier": Dutch workplace customs, norms and values, one per lesson.
@@ -24,7 +25,7 @@ export interface CultureTip {
 
 const tip = (t: CultureTip) => t;
 
-export const cultureTips: CultureTip[] = [
+const baseTips: CultureTip[] = [
   tip({
     id: 'c.je',
     lessonId: 'l.hello',
@@ -264,12 +265,15 @@ export const teamworkUnit: Unit = {
   ] satisfies Lesson[],
 };
 
+/** All tips in course order: the ones above, then those of the work-and-rights units (src/content/work.ts). */
+export const cultureTips: CultureTip[] = [...baseTips, ...workTips];
+
 export function tipForLesson(lessonId: string): CultureTip | undefined {
   return cultureTips.find((t) => t.lessonId === lessonId);
 }
 
-/** Every id in this file that needs a help-language translation. */
-export const cultureIds: string[] = cultureTips.flatMap((t) => [
+/** Every id in this file that needs a help-language translation (work tips: see workIds in work.ts). */
+export const cultureIds: string[] = baseTips.flatMap((t) => [
   t.id,
   `${t.id}.b`,
   t.phrase.id,

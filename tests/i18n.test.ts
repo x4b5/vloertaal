@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { allLessons, phrasebookExtras, phrasebookIds, findItem, units } from '../src/content/curriculum';
 import { aboutIds } from '../src/content/about';
 import { cultureIds, cultureTips } from '../src/content/culture';
+import { workIds } from '../src/content/work';
 import { helpLanguages } from '../src/i18n';
 import { uiEn } from '../src/i18n/types';
 
@@ -15,6 +16,8 @@ const contentIds = [
   ]),
   // Workplace-culture tips (src/content/culture.ts).
   ...cultureIds,
+  // Tips of the work-and-rights units (src/content/work.ts).
+  ...workIds,
   // The About page (src/content/about.ts).
   ...aboutIds,
   // Phrasebook-only emergency lines.
