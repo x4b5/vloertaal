@@ -214,6 +214,18 @@ const lang: HelpLanguage = {
     speakMe: 'Ben',
     speakingPractice: 'Konuşma alıştırması',
     speakingHint: 'Kelimeleri sesli söyle ve karşılaştır. Sesin asla kaydedilmez ve gönderilmez.',
+    saveOffline: 'İnternetsiz kullanım için kaydet',
+    savingOffline: 'Kaydediliyor…',
+    savedOffline: 'İnternetsiz kullanıma kaydedildi',
+    removeOffline: 'Bu telefondan sil',
+    offlineNoSpace: 'Bu telefonda yeterli yer yok. Kayıtlı bir konuyu sil veya yer aç.',
+    offlineFailed: 'Kaydedilemedi. İnternetini kontrol et ve tekrar dene.',
+    pocketCard: 'Cep kartı',
+    pocketSave: 'Resim olarak kaydet',
+    textSize: 'Yazı boyutu',
+    textNormal: 'Normal',
+    textLarge: 'Büyük',
+    textXl: 'Çok büyük',
   },
   gloss: {
     // Unit: First day at work

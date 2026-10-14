@@ -214,6 +214,18 @@ const lang: HelpLanguage = {
     speakMe: 'أنا',
     speakingPractice: 'تمرين التكلّم',
     speakingHint: 'قل الكلمات بصوت عالٍ وقارن. صوتك لا يُحفَظ ولا يُرسَل أبداً.',
+    saveOffline: 'احفظ للاستخدام بدون إنترنت',
+    savingOffline: 'جارٍ الحفظ…',
+    savedOffline: 'محفوظ بدون إنترنت',
+    removeOffline: 'احذف من هذا الهاتف',
+    offlineNoSpace: 'لا توجد مساحة كافية على هذا الهاتف. احذف موضوعًا محفوظًا أو أفرغ بعض المساحة.',
+    offlineFailed: 'لم ينجح الحفظ. تحقّق من الإنترنت وحاول مرة أخرى.',
+    pocketCard: 'بطاقة الجيب',
+    pocketSave: 'احفظ كصورة',
+    textSize: 'حجم النص',
+    textNormal: 'عادي',
+    textLarge: 'كبير',
+    textXl: 'كبير جدًا',
   },
   gloss: {
     // Units

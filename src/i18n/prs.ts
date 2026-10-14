@@ -214,6 +214,18 @@ const lang: HelpLanguage = {
     speakMe: 'من',
     speakingPractice: 'تمرین گپ زدن',
     speakingHint: 'کلمه‌ها را بلند بگویید و مقایسه کنید. صدای شما هیچ وقت ذخیره یا فرستاده نمی‌شود.',
+    saveOffline: 'ذخیره برای استفاده بدون انترنت',
+    savingOffline: 'در حال ذخیره…',
+    savedOffline: 'بدون انترنت ذخیره شد',
+    removeOffline: 'از این تیلفون پاک کنید',
+    offlineNoSpace: 'جای کافی در این تیلفون نیست. یک موضوع ذخیره‌شده را پاک کنید یا جای خالی کنید.',
+    offlineFailed: 'ذخیره نشد. انترنت را چک کنید و دوباره کوشش کنید.',
+    pocketCard: 'کارت جیبی',
+    pocketSave: 'منحیث عکس ذخیره کنید',
+    textSize: 'اندازهٔ متن',
+    textNormal: 'عادی',
+    textLarge: 'کلان',
+    textXl: 'بسیار کلان',
   },
   gloss: {
     // Units

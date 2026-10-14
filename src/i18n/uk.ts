@@ -214,6 +214,18 @@ const lang: HelpLanguage = {
     speakMe: 'Я',
     speakingPractice: 'Практика мовлення',
     speakingHint: 'Кажи слова вголос і порівнюй. Твій голос ніколи не зберігається і не надсилається.',
+    saveOffline: 'Зберегти для офлайну',
+    savingOffline: 'Зберігаємо…',
+    savedOffline: 'Збережено офлайн',
+    removeOffline: 'Видалити з цього телефона',
+    offlineNoSpace: 'На телефоні замало місця. Видали збережену тему або звільни місце.',
+    offlineFailed: 'Не вдалося зберегти. Перевір інтернет і спробуй ще раз.',
+    pocketCard: 'Кишенькова картка',
+    pocketSave: 'Зберегти як зображення',
+    textSize: 'Розмір тексту',
+    textNormal: 'Звичайний',
+    textLarge: 'Великий',
+    textXl: 'Дуже великий',
   },
   gloss: {
     // Unit: First day at work

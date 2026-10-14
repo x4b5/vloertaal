@@ -214,6 +214,18 @@ const lang: HelpLanguage = {
     speakMe: 'Ja',
     speakingPractice: 'Ćwiczenie mówienia',
     speakingHint: 'Mów słowa na głos i porównuj. Twój głos nigdy nie jest zapisywany ani wysyłany.',
+    saveOffline: 'Zapisz do użytku offline',
+    savingOffline: 'Zapisywanie…',
+    savedOffline: 'Zapisano offline',
+    removeOffline: 'Usuń z tego telefonu',
+    offlineNoSpace: 'Za mało miejsca w telefonie. Usuń zapisany temat lub zwolnij miejsce.',
+    offlineFailed: 'Nie udało się zapisać. Sprawdź internet i spróbuj ponownie.',
+    pocketCard: 'Ściągawka',
+    pocketSave: 'Zapisz jako obraz',
+    textSize: 'Rozmiar tekstu',
+    textNormal: 'Normalny',
+    textLarge: 'Duży',
+    textXl: 'Bardzo duży',
   },
   gloss: {
     // Unit: First day at work

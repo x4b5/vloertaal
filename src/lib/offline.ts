@@ -19,9 +19,8 @@ import { persistStorage } from './install';
  */
 export const OFFLINE_CACHE = 'vloertaal-offline-v1';
 const KEY = 'vloertaal:offline';
-/** An ElevenLabs clip is about 11 kB (52 MB for 4 × 1174 clips): used for the size shown before saving. */
-const CLIP_BYTES = 11_500;
-const SHELL_BYTES = 700_000;
+/** A unit's clip is about 8 kB (many are single words): for the size shown before saving. */
+const CLIP_BYTES = 8_000;
 
 /* ---- Which Dutch lines a unit can say (pure, tested) ---- */
 
@@ -185,25 +184,19 @@ export function shellUrls(): string[] {
   return [...out];
 }
 
-function shellBytes(): number {
-  let sum = 0;
-  for (const e of (performance.getEntriesByType?.('resource') ?? []) as PerformanceResourceTiming[]) {
-    if (/\/assets\//.test(e.name)) sum += e.encodedBodySize || 0;
-  }
-  return sum || SHELL_BYTES;
-}
-
 /** The files a unit needs, as absolute URLs: the app and the unit's clips in these voices. */
 export async function unitFiles(unit: Unit, voices: VoiceRef[]): Promise<{ shell: string[]; clips: string[] }> {
   await recordedIndexReady();
   return { shell: shellUrls(), clips: clipPaths(unitTexts(unit), voices, clipUrl).map(abs) };
 }
 
-/** About how much saving takes (counted from the clips; the app files from what was loaded). */
+/**
+ * About how much the unit's sound takes (the number shown before and after saving is the sound;
+ * the app files are shared by all saved units and kept by the browser anyway).
+ */
 export async function estimateBytes(unit: Unit, voices: VoiceRef[]): Promise<number> {
   const { clips } = await unitFiles(unit, voices);
-  const shellSaved = loadSaved().shell.length > 0;
-  return clips.length * CLIP_BYTES + (shellSaved ? 0 : shellBytes());
+  return clips.length * CLIP_BYTES;
 }
 
 const isQuota = (e: unknown) => {

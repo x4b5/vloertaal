@@ -214,6 +214,18 @@ const lang: HelpLanguage = {
     speakMe: 'Аз',
     speakingPractice: 'Упражнение по говорене',
     speakingHint: 'Казвай думите на глас и сравнявай. Гласът ти никога не се запазва и не се изпраща.',
+    saveOffline: 'Запази за офлайн',
+    savingOffline: 'Запазване…',
+    savedOffline: 'Запазено офлайн',
+    removeOffline: 'Изтрий от този телефон',
+    offlineNoSpace: 'Няма достатъчно място на телефона. Изтрий запазена тема или освободи място.',
+    offlineFailed: 'Запазването не успя. Провери интернета и опитай пак.',
+    pocketCard: 'Джобна карта',
+    pocketSave: 'Запази като снимка',
+    textSize: 'Размер на текста',
+    textNormal: 'Нормален',
+    textLarge: 'Голям',
+    textXl: 'Много голям',
   },
   gloss: {
     // Units

@@ -214,6 +214,18 @@ const lang: HelpLanguage = {
     speakMe: 'ኣነ',
     speakingPractice: 'ልምምድ ምዝራብ',
     speakingHint: 'ቃላት ብዓው ኢልካ በሎም እሞ ኣወዳድር። ድምጽካ ፈጺሙ ኣይዕቀብን ኣይለኣኽን።',
+    saveOffline: 'ብዘይ ኢንተርነት ንምጥቃም ዓቅብ',
+    savingOffline: 'ይዕቀብ ኣሎ…',
+    savedOffline: 'ብዘይ ኢንተርነት ተዓቂቡ',
+    removeOffline: 'ካብዚ ተሌፎን ኣልግስ',
+    offlineNoSpace: 'ኣብዚ ተሌፎን እኹል ቦታ የለን። ዝተዓቀበ ኣርእስቲ ኣልግስ ወይ ቦታ ኣጽሪ።',
+    offlineFailed: 'ምዕቃብ ኣይሰለጠን። ኢንተርነትካ ኣረጋግጽ እሞ እንደገና ፈትን።',
+    pocketCard: 'ናይ ጁባ ካርድ',
+    pocketSave: 'ከም ስእሊ ዓቅብ',
+    textSize: 'ዓቐን ጽሑፍ',
+    textNormal: 'ንቡር',
+    textLarge: 'ዓቢ',
+    textXl: 'ኣዝዩ ዓቢ',
   },
   gloss: {
     // Units

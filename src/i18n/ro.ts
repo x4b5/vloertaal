@@ -214,6 +214,18 @@ const lang: HelpLanguage = {
     speakMe: 'Eu',
     speakingPractice: 'Exercițiu de vorbire',
     speakingHint: 'Spune cuvintele cu voce tare și compară. Vocea ta nu este niciodată salvată sau trimisă.',
+    saveOffline: 'Salvează pentru offline',
+    savingOffline: 'Se salvează…',
+    savedOffline: 'Salvat offline',
+    removeOffline: 'Șterge de pe acest telefon',
+    offlineNoSpace: 'Nu este destul spațiu pe acest telefon. Șterge un subiect salvat sau eliberează spațiu.',
+    offlineFailed: 'Salvarea nu a reușit. Verifică internetul și încearcă din nou.',
+    pocketCard: 'Fițuică',
+    pocketSave: 'Salvează ca imagine',
+    textSize: 'Mărimea textului',
+    textNormal: 'Normal',
+    textLarge: 'Mare',
+    textXl: 'Foarte mare',
   },
   gloss: {
     // Units
