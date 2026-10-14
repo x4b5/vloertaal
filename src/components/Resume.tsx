@@ -2,12 +2,12 @@ import { ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { resumeCount, type LessonSave } from '../lib/resume';
 import { Bi } from './Bi';
-import { ChevronIcon } from './Icons';
+import { ChevronIcon, RestartIcon } from './Icons';
 
 /**
  * Resume an interrupted lesson, on its bay on the path (see src/lib/resume.ts):
  * - ResumeChip: a small progress ring with "12/18", and "Ga verder" in place of Start;
- * - RestartLink: the small "Opnieuw beginnen" under the card, which drops the save.
+ * - RestartButton: "Start again" under the card on the home, which drops the save.
  */
 
 /** A small ring, filled as far as the lesson got. */
@@ -52,21 +52,23 @@ export function ResumeChip({ save, lang }: { save: LessonSave; lang?: HelpLangua
   );
 }
 
-export function RestartLink({ lang, onRestart }: { lang?: HelpLanguage; onRestart: () => void }) {
+/** "Start again" under the Continue card on the home: a real button with its icon (the third
+ *  choice of the resume state); the lesson then starts from the top. */
+export function RestartButton({ lang, onRestart }: { lang?: HelpLanguage; onRestart: () => void }) {
   const t = ui('restartLesson', lang);
   return (
     <button
       type="button"
-      className="bay-restart"
+      className="btn bay-restart"
       onClick={onRestart}
+      dir={lang?.dir === 'rtl' ? 'rtl' : undefined}
       aria-label={`Opnieuw beginnen · ${t.en}${t.help ? ` (${t.help})` : ''}`}
     >
-      <svg className="icon" viewBox="0 0 24 24" width={16} height={16} aria-hidden focusable="false">
-        <path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
-        <path d="M5 3.5v4h4" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-      <span lang="nl">Opnieuw beginnen</span>
-      <Bi className="restart-help" text={t} />
+      <RestartIcon size={22} />
+      <span className="bay-restart-text">
+        <Bi className="bay-restart-label" text={t} />
+        <span className="bay-restart-nl" lang="nl" dir="ltr">Opnieuw beginnen</span>
+      </span>
     </button>
   );
 }

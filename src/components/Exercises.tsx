@@ -1,23 +1,23 @@
-import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ChatLine } from '../content/types';
 import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { checkTiles, checkTyped, tokenize } from '../lib/answers';
+import { checkTyped, tokenize } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
-import { sentencePicture, type Exercise } from '../lib/exercises';
+import { buildSteps, sentencePicture, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
 import { castFor, Character, colleaguesOf, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
-import { BackspaceIcon, CheckIcon, ChevronDownIcon, CloseIcon, KeyboardIcon, LettersIcon, SpeakerIcon } from './Icons';
-import { cheerFor } from '../lib/lessonRun';
+import { CheckIcon, CloseIcon, SpeakerIcon } from './Icons';
+import { cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerCharacter, learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
 import { SpeakButton } from './SpeakButton';
-import { letterTiles, NON_LATIN_HELP } from '../lib/letters';
+import { letterSteps } from '../lib/letters';
 import { createRng } from '../lib/random';
-import { pickInsteadOfTyping } from '../lib/writing';
+import { pickInsteadOfTyping, writingInput } from '../lib/writing';
 import { HelpSay } from './HelpSay';
 
 export interface Answer {
@@ -26,6 +26,9 @@ export interface Answer {
   almost?: boolean;
   /** Sentence building: the tiles in the order the learner put them. */
   given?: string[];
+  /** The answer is complete: grade it now (a tap on an option, the last word of a sentence).
+   *  Without it the learner still finishes with Check (typing). */
+  done?: boolean;
 }
 
 interface Props<K extends Exercise['kind']> {
@@ -119,12 +122,16 @@ function WrongStamp({ lang }: { lang?: HelpLanguage }) {
   );
 }
 
-/**
- * A small speaker on a Dutch-only card or tile: tapping it plays the Dutch (also in "Without
- * sound", like every 🔊). Decorative: the card itself is the button.
- */
-function SoundMark() {
-  return <span className="opt-sound" aria-hidden><SpeakerIcon size={18} /></span>;
+/** A wrong tap's mark (a short shake, red, a small cross) stays a moment, then goes: calm
+ *  feedback, and the exercise waits for the right one. */
+function useMiss<T>(): [T | null, (v: T | null) => void] {
+  const [miss, setMiss] = useState<{ v: T } | null>(null);
+  useEffect(() => {
+    if (!miss) return;
+    const t = window.setTimeout(() => setMiss(null), 900);
+    return () => window.clearTimeout(t);
+  }, [miss]);
+  return [miss ? miss.v : null, (v) => setMiss(v === null ? null : { v })];
 }
 
 /** The question. Focus moves here on a new exercise (tabIndex -1), see LessonPlayer. */
@@ -152,10 +159,9 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
         {hasPicture(word) && <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />}
         <div className={`intro-nl ${wordSize(word.nl)}`}>
           <span lang="nl">{breakable(word.nl)}</span>
-          {/* The two speakers stay together: a long word wraps, never the slow button alone. */}
+          {/* One speaker: normal speed, then slowly on the next tap (SpeakButton). */}
           <span className="intro-sounds">
             <SpeakButton text={word.nl} />
-            <SpeakButton text={word.nl} slow label={`Play slowly: ${word.nl}`} />
           </span>
         </div>
         <Bi className="intro-meaning" text={gloss(word.id, word.en, lang)} />
@@ -185,7 +191,8 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
     sounds.tap();
     setPicked(w.id);
     onPick?.(w);
-    onAnswer({ correct: w.id === correctId });
+    // A tap is the answer: it is graded at once and the options lock (LessonPlayer).
+    onAnswer({ correct: w.id === correctId, done: true });
   };
   // Number keys 1–9 pick an option, like the hints on each card say.
   useEffect(() => {
@@ -193,7 +200,7 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
     const onKey = (e: KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
       // Only with focus on the page itself, the question or an option: never while typing in a
-      // field, and never behind a sheet (the emergency phrases, "Stop this lesson?").
+      // field, and never behind a sheet (the emergency phrases, the pause sheet).
       const t = document.activeElement as HTMLElement | null;
       const free = !t || t === document.body || t.classList.contains('prompt') || Boolean(t.closest('.choices'));
       if (!free || t?.closest('input, textarea, select, [contenteditable="true"], [role="dialog"], [role="alertdialog"]')) return;
@@ -297,8 +304,7 @@ export function DutchExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           locked={locked}
           lang={lang}
           onAnswer={onAnswer}
-          onPick={(w) => speak(w.nl)}
-          render={(w) => <><span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span><SoundMark /></>}
+          render={(w) => <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>}
         />
       ) : (
         <ChoiceGrid
@@ -309,7 +315,6 @@ export function DutchExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           locked={locked}
           lang={lang}
           onAnswer={onAnswer}
-          onPick={(w) => autoSpeak(w.nl)}
           render={(w) => (
             <>
               <WordPicture className="pic-emoji" id={w.id} emoji={w.emoji} size={110} />
@@ -330,7 +335,6 @@ export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misse
       <PromptWithBram text={ui('whatDoYouHear', lang)} word={ex.word.nl} verdict={verdict} run={run} misses={misses} />
       <div className="listen-buttons">
         <SpeakButton text={ex.word.nl} size="lg" label="Play" />
-        <SpeakButton text={ex.word.nl} slow label="Play slowly" />
       </div>
       {/* As in the other "What do you hear?": each option has its own speaker that only plays it;
           a tap on the option itself picks it. */}
@@ -357,148 +361,140 @@ export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misse
   );
 }
 
-/** Tap Dutch words and their English meanings in pairs. */
+/**
+ * Guided matching: one Dutch word at a time is "on" (said, with its speaker), and the learner
+ * taps its meaning among three meaning cards; then the next word. A meaning already matched
+ * shows its Dutch word and is no longer a choice, so at most three cards can be tapped. A wrong
+ * tap shakes that card with a small cross and the word stays. When the last pair is made,
+ * Continue appears.
+ */
 export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
-  const right = useMemo(() => shuffle(ex.words, Math.random), [ex.words]);
-  const [left, setLeft] = useState<string | null>(null);
-  const [rightPick, setRightPick] = useState<string | null>(null);
-  const [done, setDone] = useState<Set<string>>(new Set());
-  /** The pair just matched: it flashes green (320 ms) before it fades to "matched". */
+  const words = ex.words;
+  // The meaning cards keep one order through the exercise (seeded by the words, so a screenshot
+  // or a resumed lesson looks the same).
+  const cards = useMemo(() => shuffle(words, createRng(words.map((w) => w.id).join('|').length * 7919 + words.length)), [words]);
+  const [state, setState] = useState<MatchState>(matchStart);
+  /** The word on screen: it stays a moment after its pair is made (the card flashes green). */
+  const [step, setStep] = useState(0);
+  const done = useMemo(() => new Set(state.done), [state.done]);
+  /** The pair just made: it flashes green before the next word comes on. */
   const [hit, setHit] = useState<string | null>(null);
-  /** A wrong pair keeps its cross until the next tap. */
-  const [miss, setMiss] = useState<{ nl: string; en: string } | null>(null);
+  /** A wrong meaning: a short shake and a cross. */
+  const [miss, setMiss] = useMiss<string>();
+  const current = words[step];
+  const finished = state.done.length >= words.length;
 
   useEffect(() => {
-    if (!left || !rightPick) return;
-    if (left === rightPick) {
-      sounds.correct();
-      const next = new Set(done).add(left);
-      setDone(next);
-      setHit(left);
-      if (next.size === ex.words.length) onAnswer({ correct: true });
-    } else {
-      sounds.wrong();
-      setMiss({ nl: left, en: rightPick });
-    }
-    setLeft(null);
-    setRightPick(null);
-  }, [left, rightPick, done, ex.words.length, onAnswer]);
+    if (!finished) autoSpeak(current.nl, false, 'nl', voiceFor('bram'));
+  }, [current, finished]);
 
   useEffect(() => {
     if (!hit) return;
-    const t = window.setTimeout(() => setHit(null), 320);
+    const t = window.setTimeout(() => {
+      setHit(null);
+      setStep((s) => Math.min(s + 1, words.length - 1));
+    }, 420);
     return () => window.clearTimeout(t);
-  }, [hit]);
+  }, [hit, words.length]);
 
-  const tap = () => {
-    sounds.tap();
-    setMiss(null);
+  const pick = (w: (typeof words)[number]) => {
+    if (hit) return;
+    const r = matchTap(words, state, w.id);
+    if (r.state === state) return;
+    setState(r.state);
+    if (r.hit) {
+      sounds.correct();
+      setMiss(null);
+      setHit(w.id);
+      // Graded like a sentence built word by word: one stray wrong tap is forgiven, more is a mistake.
+      if (r.finished) onAnswer(stepGrade(r.state.wrong));
+    } else {
+      sounds.tap();
+      setMiss(w.id);
+    }
   };
-  const missed = (side: 'nl' | 'en', id: string) => miss?.[side] === id;
-  const cls = (side: 'nl' | 'en', id: string, picked: string | null) =>
-    `choice match ${done.has(id) ? (hit === id ? 'match-hit' : 'matched') : ''} ${picked === id ? 'picked' : ''} ${missed(side, id) ? 'shake match-miss' : ''}`;
-  const missMark = (side: 'nl' | 'en', id: string) =>
-    missed(side, id) && (
-      <span className="match-x" aria-hidden><CloseIcon size={16} /></span>
-    );
 
   return (
-    <div className="exercise">
-      <Prompt text={ui('matchPairs', lang)} />
-      {/* One grid, row by row (Dutch word, meaning), so both cards of a row share its height. */}
-      <div className="match-grid">
-        {ex.words.map((w, i) => {
-          const r = right[i];
-          return [
+    <div className="exercise match-guided">
+      <Prompt text={ui('whatDoesThisMean', lang)} />
+      <div className={`speaker speaker-word ${wordSize(current.nl)}`}>
+        <Speaker who="bram" lines={finished ? [] : [current.nl]} />
+        <div className="speaker-bubble match-on" key={current.id}>
+          <SpeakButton text={current.nl} voice={voiceFor('bram')} />
+          <span className="speaker-nl" lang="nl">{breakable(current.nl)}</span>
+        </div>
+      </div>
+      {/* Where the learner is: one dot per pair, filled when made. */}
+      <div className="match-dots" aria-hidden>
+        {words.map((w, i) => <span key={w.id} className={`match-dot ${done.has(w.id) ? 'is-done' : i === step ? 'is-now' : ''}`} />)}
+      </div>
+      <div className="choices choices-rows match-cards">
+        {cards.map((w) => {
+          const made = done.has(w.id);
+          return (
             <button
-              key={`nl-${w.id}`}
+              key={w.id}
               type="button"
-              className={`${cls('nl', w.id, left)} match-nl`}
-              disabled={done.has(w.id) && hit !== w.id}
-              aria-pressed={left === w.id}
-              onClick={() => {
-                if (done.has(w.id)) return;
-                tap();
-                speak(w.nl);
-                setLeft(w.id);
-              }}
+              className={`choice match match-en ${hit === w.id ? 'match-hit' : made ? 'matched' : ''} ${miss === w.id ? 'shake match-miss' : ''}`}
+              disabled={made && hit !== w.id}
+              onClick={() => pick(w)}
             >
-              <SoundMark />
-              <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
-              {missMark('nl', w.id)}
-            </button>,
-            <button
-              key={`en-${r.id}`}
-              type="button"
-              className={`${cls('en', r.id, rightPick)} match-en`}
-              disabled={done.has(r.id) && hit !== r.id}
-              aria-pressed={rightPick === r.id}
-              onClick={() => {
-                if (done.has(r.id)) return;
-                tap();
-                setRightPick(r.id);
-              }}
-            >
-              {hasPicture(r) && <WordPicture className="choice-emoji" id={r.id} emoji={r.emoji} size={40} />}
-              <Bi text={gloss(r.id, r.en, lang)} />
-              {missMark('en', r.id)}
-            </button>,
-          ];
+              {hasPicture(w) && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={56} />}
+              <span className="match-text">
+                <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />
+                {made && <span className="match-made" lang="nl" dir="ltr">{w.nl}</span>}
+              </span>
+              {made && <span className="match-check" aria-hidden><CheckIcon size={20} /></span>}
+              {miss === w.id && <span className="match-x" aria-hidden><CloseIcon size={16} /></span>}
+              {miss === w.id && <span className="sr-only">, {ui('incorrect').en}</span>}
+            </button>
+          );
         })}
       </div>
     </div>
   );
 }
 
-/** English sentence → put Dutch word tiles in order. */
+/**
+ * Build the sentence word by word: for each next place three words (the right one and two
+ * others, lib/exercises.ts buildSteps). A right tap puts the word in the sentence; a wrong tap
+ * shakes that word with a small cross and the sentence waits. No Check and no taking words
+ * back: the last word grades it (one stray wrong tap is forgiven, two or more are a mistake).
+ */
 export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'build'>) {
-  const [chosen, setChosen] = useState<number[]>([]);
-  // One voice per exercise: the speaker says the tiles and, after Check, the whole sentence.
+  // One voice per exercise: the speaker says the words and, when it is done, the whole sentence.
   const who = castFor(ex.sentence.id);
   const pic = useMemo(() => sentencePicture(ex.sentence), [ex.sentence]);
+  const words = useMemo(() => tokenize(ex.sentence.nl), [ex.sentence]);
+  const steps = useMemo(() => buildSteps(ex.sentence.nl, ex.tiles), [ex]);
+  const [at, setAt] = useState(0);
+  const wrongTaps = useRef(0);
+  /** The wrong word just tapped (a short shake and a cross). */
+  const [miss, setMiss] = useMiss<string>();
+  const complete = at >= words.length;
+  // A long sentence keeps room for two rows from the start, so the words below never jump.
+  const twoRows = ex.sentence.nl.length > 24;
 
-  // The answer area keeps room for two rows when the right sentence will not fit on one, so the
-  // tile bank under it does not jump down when the sentence wraps.
-  const lineRef = useRef<HTMLDivElement>(null);
-  const bankRef = useRef<HTMLDivElement>(null);
-  const [twoRows, setTwoRows] = useState(false);
-  useLayoutEffect(() => {
-    const line = lineRef.current;
-    const bank = bankRef.current;
-    if (!line || !bank) return;
-    const fit = () => {
-      const style = getComputedStyle(line);
-      const room = line.clientWidth - parseFloat(style.paddingInlineStart) - parseFloat(style.paddingInlineEnd);
-      const gap = parseFloat(style.columnGap) || 8;
-      const left = [...tokenize(ex.sentence.nl).map((w) => w.toLowerCase())];
-      let need = 0;
-      bank.querySelectorAll<HTMLElement>('.tile-with-say').forEach((b) => {
-        const k = left.indexOf((b.textContent ?? '').trim().toLowerCase());
-        if (k < 0) return;
-        left.splice(k, 1);
-        // A placed tile has no speaker: the bank tile's width without the speaker's room.
-        const pad = parseFloat(getComputedStyle(b).paddingInlineEnd) - parseFloat(getComputedStyle(b).paddingInlineStart);
-        need += b.offsetWidth - pad + gap;
-      });
-      setTwoRows(need - gap > room);
-    };
-    fit();
-    const ro = new ResizeObserver(fit);
-    ro.observe(line);
-    return () => ro.disconnect();
-  }, [ex]);
-
-  const update = (next: number[]) => {
-    setChosen(next);
-    const given = next.map((i) => ex.tiles[i]);
-    onAnswer(next.length ? { correct: checkTiles(given, ex.sentence.nl), given } : null);
+  const tap = (w: string) => {
+    if (locked || complete) return;
+    if (w === words[at]) {
+      speak(w, false, 'nl', voiceFor(who));
+      setMiss(null);
+      const next = at + 1;
+      setAt(next);
+      if (next >= words.length) onAnswer({ ...stepGrade(wrongTaps.current), done: true });
+    } else {
+      wrongTaps.current += 1;
+      sounds.tap();
+      setMiss(w);
+    }
   };
 
   return (
-    <div className="exercise">
+    <div className="exercise build-steps">
       <Prompt text={ui('buildSentence', lang)} />
       <div className="speaker speaker-build">
-        <Speaker who={who} lines={[ex.sentence.nl, ...ex.tiles]} verdict={verdict} run={run} misses={misses} />
+        <Speaker who={who} lines={[ex.sentence.nl, ...words]} verdict={verdict} run={run} misses={misses} />
         {/* The meaning, large in the help language, with the sentence's picture word and a
             speaker: hearing the Dutch is the listen-and-build form of the task. */}
         <div className="speaker-bubble build-bubble">
@@ -507,10 +503,8 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
         </div>
       </div>
-      {/* After Check: a check at the end of a right sentence; a wrong one gets only the NOG EENS
-          stamp (the right sentence is shown as tiles in the label below). Both sit in a column
-          kept free from the start, so no word moves on Check. */}
-      <div className={`answer-line ${twoRows ? 'answer-two' : ''} ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite" ref={lineRef}>
+      {/* The sentence so far (not tappable), with a dashed slot where the next word goes. */}
+      <div className={`answer-line ${twoRows ? 'answer-two' : ''} ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite" lang="nl" dir="ltr">
         {verdict === 'wrong' && <WrongStamp lang={lang} />}
         {verdict === 'right' && (
           <span className="answer-mark mark-right">
@@ -518,68 +512,40 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
             <span className="sr-only">{ui('correctAnswer').en}</span>
           </span>
         )}
-        {verdict === 'wrong' && <span className="sr-only">{ui('yourAnswer').en}: {ui('incorrect').en}</span>}
-        {/* The placed words keep a voice: this plays the sentence so far (a tap on a placed word
-            still takes it back). It sits in the row's reserved end column, like the check later. */}
-        {!verdict && chosen.length > 0 && (
-          <button
-            type="button"
-            className="answer-say"
-            aria-label={`Play: ${chosen.map((i) => ex.tiles[i]).join(' ')}`}
-            onClick={() => speak(chosen.map((i) => ex.tiles[i]).join(' '), false, 'nl', voiceFor(who))}
-          >
-            <SpeakerIcon size={20} />
-          </button>
-        )}
-        {chosen.map((i) => (
-          <button
-            key={i}
-            type="button"
-            className="tile"
-            lang="nl"
-            disabled={locked}
-            onClick={() => update(chosen.filter((c) => c !== i))}
-          >
-            {ex.tiles[i]}
-          </button>
-        ))}
+        {words.slice(0, at).map((w, i) => <span key={i} className="tile tile-placed">{w}</span>)}
+        {!complete && <span className="tile-next" aria-hidden />}
       </div>
-      {/* Each tile: the word (a tap puts it in the sentence) and, on its own, a small speaker that
-          only plays it, so hearing a tile never places it. */}
-      <div className="tile-bank" ref={bankRef}>
-        {ex.tiles.map((t, i) => {
-          const used = chosen.includes(i);
-          return (
-            <span key={i} className={`tile-slot ${used ? 'tile-slot-used' : ''}`}>
+      {/* Three words for the next place; each has its own small speaker that only plays it. */}
+      {!complete && (
+        <div className="tile-bank tile-steps" dir="ltr" key={at}>
+          {steps[at].map((t) => (
+            <span key={t} className="tile-slot">
               <button
                 type="button"
-                className={`tile tile-with-say ${used ? 'tile-used' : ''}`}
+                className={`tile tile-with-say ${miss === t ? 'shake tile-miss' : ''}`}
                 lang="nl"
-                disabled={locked || used}
-                onClick={() => {
-                  speak(t, false, 'nl', voiceFor(who));
-                  update([...chosen, i]);
-                }}
+                disabled={locked}
+                onClick={() => tap(t)}
               >
                 {t}
+                {miss === t && <span className="tile-x" aria-hidden><CloseIcon size={14} /></span>}
+                {miss === t && <span className="sr-only">, {ui('incorrect').en}</span>}
               </button>
-              {!used && (
-                <button
-                  type="button"
-                  className="tile-say"
-                  aria-label={`Play: ${t}`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    speak(t, false, 'nl', voiceFor(who));
-                  }}
-                >
-                  <SpeakerIcon size={16} />
-                </button>
-              )}
+              <button
+                type="button"
+                className="tile-say"
+                aria-label={`Play: ${t}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  speak(t, false, 'nl', voiceFor(who));
+                }}
+              >
+                <SpeakerIcon size={22} />
+              </button>
             </span>
-          );
-        })}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -608,7 +574,6 @@ function HearPickWritten({ ex, lang, locked, onAnswer, verdict, run, misses }: P
       <PromptWithBram text={ui('whatDoYouHear', lang)} word={ex.word.nl} verdict={verdict} run={run} misses={misses} />
       <div className="listen-buttons">
         <SpeakButton text={ex.word.nl} size="lg" label="Play" />
-        <SpeakButton text={ex.word.nl} slow label="Play slowly" />
       </div>
       <ChoiceGrid
         className="choices-rows choices-words hear-pick-choices"
@@ -637,37 +602,51 @@ function HearPickWritten({ ex, lang, locked, onAnswer, verdict, run, misses }: P
   );
 }
 
-/** Real dictation: type the word with letter tiles or the keyboard. */
+/**
+ * Real dictation. With the keyboard: a text field and Check (the learner says when the word is
+ * finished). With letter tiles (Settings, the default for a help language in another script):
+ * the word letter by letter, three tiles for each next letter (lib/letters.ts letterSteps); a
+ * wrong tile shakes and the word waits; the last letter grades it (one stray wrong tile is
+ * forgiven, two or more are a mistake, as in build and match).
+ */
 function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'type'>) {
   const [value, setValue] = useState('');
-  const [mode, setMode] = useState<'tiles' | 'keys'>(() => (lang && NON_LATIN_HELP.has(lang.code) ? 'tiles' : 'keys'));
-  const tiles = useMemo(() => letterTiles(ex.word.nl, createRng(ex.word.id.length * 7919 + ex.word.nl.length)), [ex.word]);
-  /** The tiles tapped, in order (each one once). */
-  const [used, setUsed] = useState<number[]>([]);
+  // Decided once per exercise, so a change in Settings never swaps it halfway.
+  const [mode] = useState(() => writingInput(lang));
+  const steps = useMemo(() => letterSteps(ex.word.nl, createRng(ex.word.id.length * 7919 + ex.word.nl.length)), [ex.word]);
+  const [at, setAt] = useState(0);
+  const wrongTaps = useRef(0);
+  const [miss, setMiss] = useMiss<number>();
   useEffect(() => { autoSpeak(ex.word.nl); }, [ex.word]);
-  const answerWith = (v: string) => {
+  const typed = (v: string) => {
     setValue(v);
     if (!v.trim()) return onAnswer(null);
     const r = checkTyped(v, ex.word.nl);
     onAnswer({ correct: r !== 'wrong', almost: r === 'almost' });
   };
-  const tap = (next: number[]) => {
+  const tapTile = (i: number) => {
+    if (locked || at >= steps.length) return;
+    const step = steps[at];
+    if (step.options[i] !== step.answer) {
+      wrongTaps.current += 1;
+      sounds.tap();
+      setMiss(i);
+      return;
+    }
     sounds.tap();
-    setUsed(next);
-    answerWith(next.map((i) => tiles[i].text).join(''));
+    setMiss(null);
+    const v = value + step.answer.text;
+    setValue(v);
+    setAt(at + 1);
+    if (at + 1 >= steps.length) {
+      onAnswer({ ...stepGrade(wrongTaps.current), done: true });
+    }
   };
-  const switchTo = (m: 'tiles' | 'keys') => {
-    setMode(m);
-    setUsed([]);
-    answerWith('');
-  };
-  const other = mode === 'tiles' ? ui('useKeyboard', lang) : ui('letterTiles', lang);
   return (
     <div className="exercise">
       <PromptWithBram text={ui('typeWhatYouHear', lang)} word={ex.word.nl} verdict={verdict} run={run} misses={misses} />
       <div className="listen-buttons">
         <SpeakButton text={ex.word.nl} size="lg" label="Play" />
-        <SpeakButton text={ex.word.nl} slow label="Play slowly" />
       </div>
       {mode === 'keys' ? (
         <input
@@ -683,11 +662,11 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
           value={value}
           placeholder="…"
           aria-label="Your answer"
-          onChange={(e) => answerWith(e.target.value)}
+          onChange={(e) => typed(e.target.value)}
         />
       ) : (
         <>
-          {/* The answer so far, as on a keyboard; the last tile can be taken back. */}
+          {/* The word so far, as on a keyboard. */}
           <div className="type-answer-row" dir="ltr">
             <output
               lang="nl"
@@ -695,42 +674,28 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
               aria-label="Your answer"
               aria-live="polite"
             >
-              {value.replace(/ /g, '\u00a0')}
+              {value.replace(/ /g, ' ')}
               {!locked && <span className="type-caret" aria-hidden />}
             </output>
-            <button
-              type="button"
-              className="letter-back"
-              disabled={locked || !used.length}
-              aria-label={`${ui('deleteLetter').en}${lang?.ui.deleteLetter ? ` · ${lang.ui.deleteLetter}` : ''}`}
-              title={lang?.ui.deleteLetter ?? ui('deleteLetter').en}
-              onClick={() => tap(used.slice(0, -1))}
-            >
-              <BackspaceIcon size={28} />
-            </button>
           </div>
-          <div className="letter-bank" dir="ltr">
-            {tiles.map((t, i) => (
-              <button
-                key={i}
-                type="button"
-                lang="nl"
-                className={`letter-tile letter-${t.kind} ${used.includes(i) ? 'letter-used' : ''}`}
-                disabled={locked || used.includes(i)}
-                aria-label={t.kind === 'space' ? 'space' : t.label}
-                onClick={() => tap([...used, i])}
-              >
-                {t.label}
-              </button>
-            ))}
-          </div>
+          {at < steps.length && (
+            <div className="letter-bank letter-steps" dir="ltr" key={at}>
+              {steps[at].options.map((t, i) => (
+                <button
+                  key={`${at}-${i}`}
+                  type="button"
+                  lang="nl"
+                  className={`letter-tile letter-${t.kind === 'extra' ? 'letter' : t.kind} ${miss === i ? 'shake letter-miss' : ''}`}
+                  disabled={locked}
+                  aria-label={t.kind === 'space' ? 'space' : t.label}
+                  onClick={() => tapTile(i)}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+          )}
         </>
-      )}
-      {!locked && (
-        <button type="button" className="type-mode" onClick={() => switchTo(mode === 'tiles' ? 'keys' : 'tiles')}>
-          {mode === 'tiles' ? <KeyboardIcon size={20} /> : <LettersIcon size={20} />}
-          <Bi className="type-mode-label" text={other} />
-        </button>
       )}
     </div>
   );
@@ -743,9 +708,6 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
 export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'chat'>) {
   const { prompt, reply } = ex.dialogue;
   const [picked, setPicked] = useState<ChatLine | null>(null);
-  // The colleague's line in the help language shows from the start (a learner who can't read
-  // the Dutch must know what was asked); tapping the Dutch hides or shows it.
-  const [hint, setHint] = useState(Boolean(lang));
   const mine = picked && locked ? (picked.id === reply.id ? 'right' : 'wrong') : '';
   // The colleague asks; "you" are Amina (Bram for a man: lib/voices.ts learnerCharacter).
   // The colleague talks while the line plays.
@@ -767,20 +729,11 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
           <span className="chat-char"><Character who={them} mood={moodFor(verdict, 'idle', true)} talking={themTalking && !meTalking} /></span>
           <div className="chat-bubble">
             <SpeakButton glyph text={prompt.nl} label={`Play: ${prompt.nl}`} voice={voiceFor(them)} />
-            <button
-              type="button"
-              className="chat-line"
-              lang="nl"
-              aria-expanded={hint}
-              onClick={() => setHint((h) => !h)}
-            >
-              {breakable(prompt.nl)}
-            </button>
-            {hint && (
-              <span className="chat-hint">
-                <Bi text={gloss(prompt.id, prompt.en, lang)} />
-              </span>
-            )}
+            <span className="chat-line" lang="nl">{breakable(prompt.nl)}</span>
+            {/* What was asked, always under it (a learner who can't read the Dutch must know). */}
+            <span className="chat-hint">
+              <Bi text={gloss(prompt.id, prompt.en, lang)} />
+            </span>
           </div>
         </div>
         <div className="chat-row chat-me">
@@ -797,11 +750,8 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
         locked={locked}
         lang={lang}
         onAnswer={onAnswer}
-        onPick={(o) => {
-          setPicked(o);
-          // Hear the reply before choosing: "you" say it.
-          speak(o.nl, false, 'nl', myVoice);
-        }}
+        // The tap is the answer; the right reply is then said in "your" voice (LessonPlayer).
+        onPick={(o) => setPicked(o)}
         // Each option's speaker is its own button: hearing a reply never picks it.
         side={(o) => (
           <button
@@ -876,44 +826,27 @@ export function firstSentences(text: string, n: number): { head: string; more: b
   return { head: parts.slice(0, n).join(' '), more: true };
 }
 
-/**
- * The tip's text, folded after about two sentences: "meer" opens the rest. Both languages
- * fold at the same point, so the help language and the English say the same thing.
- */
+/** The tip's whole text (no "more" button: Continue is the only choice on a tip). */
 function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
-  const [open, setOpen] = useState(false);
-  const help = text.help ? firstSentences(text.help, 2) : null;
-  const en = firstSentences(text.en, 2);
-  const long = en.more || Boolean(help?.more);
-  const shown: Bilingual = open || !long ? text : { ...text, en: en.more ? `${en.head} …` : en.head, help: help ? (help.more ? `${help.head} …` : help.head) : undefined };
-  const label = ui(open ? 'less' : 'more', lang);
-  const id = useId();
   return (
     <div className="tip-body">
       <div className="help-say-row">
-        <p id={id}>
-          {shown.help && shown.lang ? (
+        <p>
+          {text.help && text.lang ? (
             // The help language one sentence per line (short lines read more easily than a
             // block), English small under it.
-            <span className="bi bi-swap tip-lines" dir={shown.lang.dir === 'rtl' ? 'rtl' : undefined}>
+            <span className="bi bi-swap tip-lines" dir={text.lang.dir === 'rtl' ? 'rtl' : undefined}>
               <span className="bi-en">
-                {helpLines(shown.help).map((line, i) => <HelpText key={i} className="tip-line" text={line} lang={shown.lang!} />)}
+                {helpLines(text.help).map((line, i) => <HelpText key={i} className="tip-line" text={line} lang={text.lang!} />)}
               </span>
-              <span className="bi-help" lang="en" dir={shown.lang.dir === 'rtl' ? 'ltr' : undefined}>{shown.en}</span>
+              <span className="bi-help" lang="en" dir={text.lang.dir === 'rtl' ? 'ltr' : undefined}>{text.en}</span>
             </span>
           ) : (
-            <Bi text={shown} />
+            <Bi text={text} />
           )}
         </p>
         <HelpSay text={text.help} lang={lang} />
       </div>
-      {long && (
-        <button type="button" className="tip-more" aria-expanded={open} aria-controls={id} onClick={() => setOpen((o) => !o)}>
-          <span className="tip-more-nl" lang="nl">{open ? 'minder' : 'meer'}</span>
-          <Bi className="tip-more-gloss" text={label} />
-          <ChevronDownIcon size={18} className={`tip-more-chev ${open ? 'open' : ''}`} />
-        </button>
-      )}
     </div>
   );
 }

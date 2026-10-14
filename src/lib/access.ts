@@ -51,6 +51,15 @@ export function saveAccess(a: Access): void {
   }
 }
 
+/** Forget the access (first run: back from "Woman or man?" to the password page). */
+export function clearAccess(): void {
+  try {
+    localStorage.removeItem(KEY);
+  } catch {
+    // Blocked storage: nothing was kept.
+  }
+}
+
 /** Units open in the preview: only "First day at work". */
 export const PREVIEW_UNITS = new Set([units[0].id]);
 

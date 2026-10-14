@@ -33,8 +33,8 @@ export interface Progress {
    */
   gender?: Gender;
   /**
-   * The home's one-time "Woman or man?" card (learners from before the gender question) was
-   * closed with ✕: it never comes back. Settings can still choose. Missing = not closed.
+   * "Woman or man?" was answered on its own one-time page (or, in older saves, the home card that
+   * page replaced was closed with ✕): it never comes back. Settings can still choose. Missing = not asked.
    */
   genderAsked?: boolean;
   /** The learner's sector ('none' = not sure yet); undefined = not asked yet (first run). */

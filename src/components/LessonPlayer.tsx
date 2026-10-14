@@ -8,15 +8,14 @@ import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercis
 import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { learnerCharacter, voiceFor } from '../lib/voices';
-import { pickInsteadOfTyping } from '../lib/writing';
+import { pickInsteadOfTyping, writingInput } from '../lib/writing';
 import { castFor, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { FlameIcon } from './StreakArt';
 import {
   BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
-  LifebuoyIcon, PencilIcon, PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
+  PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon,
 } from './Icons';
-import { PhraseSheet } from './Phrases';
 import { MicIcon, SpeakExercise } from './Speaking';
 import { canRecord, micBlocked, speakingOn } from '../lib/speaking';
 import {
@@ -182,7 +181,17 @@ function ButtonBlock({ icon }: { icon: 'check' | 'next' }) {
   );
 }
 
-export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false }: {
+type PlayerProps = Parameters<typeof LessonRun>[0];
+
+/**
+ * The lesson. "Start again" for a lesson stopped halfway is on the home (it clears the saved
+ * place before the lesson opens); the pause sheet is always Keep going / sound / Stop.
+ */
+export function LessonPlayer(props: PlayerProps) {
+  return <LessonRun {...props} />;
+}
+
+function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -195,10 +204,10 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   /** Goes up by one each time the system Back button is pressed during the lesson. */
   backSignal?: number;
   onFinish: (r: LessonResult) => void;
-  /** "Without sound" (a saved setting): no listening exercises, nothing plays by itself. */
+  /** "Without sound" (a saved setting): no listening, speaking or writing exercises, nothing
+   *  plays by itself. */
   quiet?: boolean;
-  /** Switches "Without sound" on or off for good (the header toggle; "I can't listen now" only
-   *  leaves out this lesson's listening exercises). */
+  /** Switches "Without sound" on or off for good (the pause sheet). */
   onQuiet?: (quiet: boolean) => void;
   /**
    * Keep this lesson's place on the device (src/lib/resume.ts): saved after every answer and when
@@ -272,18 +281,14 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const rtl = lang?.dir === 'rtl';
   const goRef = useRef<HTMLButtonElement>(null);
   const wordResults = useRef<Record<string, boolean>>(resumed ? { ...saved!.words } : {});
-  /** The header toggle without a saved setting to switch (screenshot harness). */
+  /** "Without sound" without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
   const soundOff = quiet || cantListen;
-  /** "I can't listen now": only this lesson's listening exercises are left out; sound stays on
-   *  and the "Without sound" setting is not touched. */
-  const [skipListening, setSkipListening] = useState(false);
-  const audioOff = !speechAvailable() || soundOff || skipListening;
+  const audioOff = !speechAvailable() || soundOff;
   /** Listening exercises left out, counted out loud on the result. */
   const skipped = useRef(0);
-  /** Short line after the sound changed: 'off' = without sound, 'on' = sound on, 'skip' = this
-   *  lesson's listening questions are left out. */
-  const [soundNote, setSoundNote] = useState<'off' | 'on' | 'skip' | null>(null);
+  /** Short line after the sound changed: 'off' = without sound, 'on' = sound on. */
+  const [soundNote, setSoundNote] = useState<'off' | 'on' | null>(null);
   useEffect(() => {
     if (!soundNote) return;
     const t = setTimeout(() => setSoundNote(null), 4500);
@@ -325,19 +330,13 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       window.removeEventListener('pagehide', writeNow);
     };
   }, [persist, writeNow]); // eslint-disable-line react-hooks/exhaustive-deps
-  // The X and the system Back button ask first (a resumable lesson keeps its place).
+  // The ✕ and the system Back button open the pause sheet (a resumable lesson keeps its place).
   const [askQuit, setAskQuit] = useState(false);
-  /** The emergency phrases (⚠ in the header), as a sheet over the lesson. */
-  const [phrases, setPhrases] = useState(false);
-  const phrasesOpen = useRef(false);
-  phrasesOpen.current = phrases;
   const firstBack = useRef(backSignal);
   useEffect(() => {
     if (backSignal === firstBack.current) return;
-    // Back with the phrases open closes them; otherwise Back asks "Stop this lesson?", and
-    // Back while that sheet is open means "never mind": close it.
-    if (phrasesOpen.current) setPhrases(false);
-    else setAskQuit((open) => !open);
+    // Back opens the pause sheet; Back while it is open means "never mind": close it.
+    setAskQuit((open) => !open);
   }, [backSignal]);
   const footRef = useRef<HTMLElement>(null);
   const bodyRef = useRef<HTMLElement>(null);
@@ -428,7 +427,13 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     });
     return () => cancelAnimationFrame(raf);
   }, [checked]); // eslint-disable-line react-hooks/exhaustive-deps
-  const onAnswer = useCallback((a: Answer | null) => setAnswer(a), []);
+  /** A complete answer (a tap on an option, the last word of a sentence) is graded at once;
+   *  only typing waits for Check. */
+  const checkRef = useRef<(a: Answer) => void>(() => {});
+  const onAnswer = useCallback((a: Answer | null) => {
+    setAnswer(a);
+    if (a?.done) checkRef.current(a);
+  }, []);
   /** The feedback label has more text below what fits (it scrolls inside itself). */
   const fbRef = useRef<HTMLDivElement>(null);
   const [fbMore, setFbMore] = useState(false);
@@ -456,8 +461,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     // Only the index matters: the queue grows when a mistake is queued, on the same exercise.
   }, [index]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  function check() {
-    if (!answer) return;
+  function check(given: Answer | null = answer) {
+    const answer = given;
+    if (!answer || checked) return;
     if (!isGraded(ex)) return next();
     if (index < initial.length) {
       graded.current.total += 1;
@@ -466,8 +472,12 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         wordResults.current[ex.word.id] = (wordResults.current[ex.word.id] ?? true) && answer.correct;
       }
     }
-    // A finished match board already gave its feedback tile by tile.
-    if (ex.kind === 'match') return next();
+    // A finished match board already gave its feedback tile by tile. Two or more wrong taps make
+    // it a mistake, which comes back once at the end (as a built sentence does).
+    if (ex.kind === 'match') {
+      if (!answer.correct && index < initial.length) setQueue((q) => [...q, ex]);
+      return next();
+    }
     // The choreography (styles.css, "Answer moment"): t=0 the options colour, the chime plays
     // and the character reacts; the stamp lands at 60 ms and the label rises at 120 ms, when the
     // button becomes the green or red Continue; the run stamp follows at 300 ms and the answer
@@ -500,6 +510,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     const who = answerVoice(ex, lang?.gender);
     if (sol.nl) later(answer.correct ? 700 : 450, () => autoSpeak(sol.text, false, 'nl', voiceFor(who)));
   }
+  checkRef.current = check;
 
   /** What the status region says after Check: the outcome, then the right answer. */
   function announce(e: Exercise, correct: boolean, almost?: boolean): string {
@@ -564,11 +575,12 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     }
   }
 
-  /** Leave the listening exercise on screen (unanswered) for the next one that needs no sound. */
+  /** Leave the listening, speaking or writing exercise on screen (unanswered) for the next one
+   *  that needs no sound. */
   function skipAudio() {
     reset();
     // Only exercises that would have counted are "skipped" (a mistake coming back is not).
-    if (index < initial.length) skipped.current += 1;
+    if (index < initial.length && needsAudio(ex)) skipped.current += 1;
     let i = index + 1;
     while (i < queue.length && (needsAudio(queue[i]) || cantSpeak(queue[i]))) { if (i < initial.length && needsAudio(queue[i])) skipped.current += 1; i++; }
     if (i >= queue.length) finish();
@@ -578,23 +590,16 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     }
   }
 
-  /** "I can't listen now": leave out this lesson's listening exercises (this one included). */
-  function cantListenNow() {
-    setSkipListening(true);
-    setSoundNote('skip');
-    if (needsAudio(ex) && !checked) skipAudio();
-  }
-
-  /** Sound off for good (the header toggle, a saved setting), or back on. */
+  /** "Without sound" from the pause sheet (a saved setting), or sound back on. From now on the
+   *  listening, speaking and writing exercises are left out (they replace the old "I can't
+   *  listen / speak / write now" buttons). */
   function setSound(off: boolean) {
     if (onQuiet) onQuiet(off);
     else setCantListen(off);
     setSoundNote(off ? 'off' : 'on');
-    // Switched off while a listening exercise waits for an answer: go on without it.
-    if (off && needsAudio(ex) && !checked) skipAudio();
+    // Switched off while such an exercise waits for an answer: go on without it.
+    if (off && !checked && (needsAudio(ex) || ex.kind === 'speak')) skipAudio();
   }
-
-  const closePhrases = useCallback(() => setPhrases(false), []);
   const verdict: 'right' | 'wrong' | undefined = checked && answer && isGraded(ex) ? (answer.correct ? 'right' : 'wrong') : undefined;
   const props = { lang, locked: checked, onAnswer, verdict, run, misses };
   const key = `${index}`;
@@ -697,25 +702,19 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   /** Type what you hear, shown as "hear and pick the written word" (lib/writing.ts), or as real
    *  dictation (`writing`), which offers "I can't write this yet" instead of "I can't listen". */
   const typePick = ex.kind === 'type' && pickInsteadOfTyping(lang) && (ex.options?.length ?? 0) > 1;
-  const writing = ex.kind === 'type' && !typePick;
+  /** Dictation with the keyboard: the one exercise that needs Check (to say the word is done). */
+  const typing = ex.kind === 'type' && !typePick && writingInput(lang) === 'keys';
+
+  /** The footer button: Continue after an answer, Check while typing (nothing before a tap). */
+  const showGo = !speakRating && Boolean(checked || answer || typing);
 
   return (
     // A right-to-left help language mirrors the whole player (header, cards, feedback); the Dutch
     // and English in it keep their own direction (lang="nl" / lang="en" isolates, styles.css).
     <div className={`player ${rtl ? 'player-rtl' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
       <header className="player-top">
-        <button type="button" className="icon-btn" onClick={() => setAskQuit(true)} aria-label="Quit lesson"><CloseIcon size={28} /></button>
-        {/* Sound on/off for a learner on the bus; pressed = "Without sound" (saved, see Settings). */}
-        <button
-          type="button"
-          className={`icon-btn sound-toggle ${soundOff ? 'is-off' : ''}`}
-          onClick={() => setSound(!soundOff)}
-          aria-pressed={soundOff}
-          aria-label={ui('withoutSound').en}
-          title={(soundOff ? ui('withoutSound') : ui('soundOn')).en}
-        >
-          {soundOff ? <SpeakerOffIcon size={26} /> : <SpeakerIcon size={26} />}
-        </button>
+        {/* The only control up here: ✕ opens the pause sheet (keep going, without sound, stop). */}
+        <button type="button" className="icon-btn lesson-close" onClick={() => setAskQuit(true)} aria-label="Quit lesson" aria-haspopup="dialog"><CloseIcon size={28} /></button>
         <div className="bar-wrap">
           <div
             className="lbar"
@@ -742,27 +741,12 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         <span className="lesson-name">
           <Bi text={gloss(lesson.id, lesson.title, lang)} />
         </span>
-        {/* Emergency phrases, one tap away during a lesson (a sheet; the lesson waits): the
-            lifebuoy of the Hulp tab in calm ink, with its word in the help language under it. */}
-        <button
-          type="button"
-          className="icon-btn sos-btn"
-          onClick={() => setPhrases(true)}
-          aria-haspopup="dialog"
-          aria-label={`Noodzinnen · ${ui('phrasebook').en}${lang?.ui.phrasebook ? ` · ${lang.ui.phrasebook}` : ''}`}
-          title={lang?.ui.phrasebook ?? ui('phrasebook').en}
-        >
-          <LifebuoyIcon size={24} />
-          {lang?.ui.navWords
-            ? <HelpText className="sos-label" text={lang.ui.navWords} lang={lang} />
-            : <span className="sos-label" lang="nl">Hulp</span>}
-        </button>
         {/* The sound note hangs just under the header, never over the close button, the sound
             toggle or the progress bar. */}
         {soundNote && (
-          <div className="sound-note" role="status" key={soundNote} onClick={() => setSoundNote(null)}>
-            {soundNote === 'on' ? <SpeakerIcon size={20} /> : soundNote === 'skip' ? <EarIcon size={20} /> : <SpeakerOffIcon size={20} />}
-            <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : soundNote === 'skip' ? 'listenSkipped' : 'soundOn', lang)} />
+          <div className="sound-note" role="status" key={soundNote}>
+            {soundNote === 'on' ? <SpeakerIcon size={20} /> : <SpeakerOffIcon size={20} />}
+            <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : 'soundOn', lang)} />
           </div>
         )}
       </header>
@@ -787,7 +771,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
       </main>
       <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''}`} ref={footRef}>
         {/* More of the exercise underneath: a visible "more" chevron (the shadow alone is easy to miss). */}
-        {moreBelow && !checked && (
+        {/* Only beside a footer button: with nothing in the footer, nothing is hidden under it. */}
+        {moreBelow && !checked && showGo && (
           <button
             type="button"
             className="foot-more-btn"
@@ -832,39 +817,17 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             </div>
           )}
           <div className="foot-actions">
-            {needsAudio(ex) && !checked && !writing && (
-              <button type="button" className="btn btn-ghost" onClick={cantListenNow}>
-                <Bi text={ui('cantListen', lang)} />
-              </button>
-            )}
-            {/* "I can't speak now": skips only this speaking exercise, without penalty; sound and
-                the "Without sound" setting stay as they are. */}
-            {ex.kind === 'speak' && !answer && !speakRating && (
-              <button type="button" className="btn btn-ghost btn-cant-speak" onClick={next}>
-                <Bi text={ui('cantSpeak', lang)} />
-              </button>
-            )}
-            {/* Real dictation: a learner who can't write Dutch yet skips this one word (it is not
-                graded). Its own words and icon, never the "I can't listen" ones. */}
-            {writing && !checked && (
-              <button type="button" className="btn btn-ghost btn-cant-write" onClick={next}>
-                <span className="cant-write-icon" aria-hidden><PencilIcon size={22} /></span>
-                <span className="cant-write-text">
-                  <Bi text={ui('cantWriteYet', lang)} />
-                  <span className="cant-write-nl" lang="nl">Ik kan dit nog niet schrijven</span>
-                </span>
-              </button>
-            )}
-            {/* One button per exercise (it fades in with the exercise). After Check it keeps focus and
-                becomes Continue in the outcome's colour, without blending through olive. While a
+            {/* One button per exercise. A tap on an option is the answer, so before it there is no
+                button at all; only typing has Check (disabled until something is typed). After
+                the answer it keeps focus and becomes Continue in the outcome's colour. While a
                 spoken try is compared, "Sounds the same" is the one way on, so it is not shown. */}
-            {!speakRating && <button
+            {showGo && <button
               key={key}
               type="button"
               className={`btn btn-go ${checked && swapped && outcome ? `btn-${outcome} btn-swap` : 'btn-primary'}`}
               dir={rtl ? 'rtl' : undefined}
               disabled={!answer}
-              onClick={checked ? next : check}
+              onClick={checked ? next : () => check()}
               ref={goRef}
             >
               {/* The help language large, the English small under it (just English without one). */}
@@ -874,17 +837,35 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
           </div>
         </div>
       </footer>
-      {askQuit && <QuitSheet lang={lang} kept={persist} onKeep={() => setAskQuit(false)} onStop={onQuit} />}
-      {phrases && <PhraseSheet lang={lang} onClose={closePhrases} />}
+      {askQuit && (
+        <PauseSheet
+          lang={lang}
+          kept={persist}
+          soundOff={soundOff}
+          onKeep={() => setAskQuit(false)}
+          onSound={() => { setAskQuit(false); setSound(!soundOff); }}
+          onStop={onQuit}
+        />
+      )}
     </div>
   );
 }
 
 /**
- * "Stop this lesson?": a bottom sheet with two big buttons; keep going is the main one.
+ * The pause sheet behind the ✕: always three big buttons, each with its icon. Keep going is the
+ * main one; then "Without sound" (leave out listening, speaking and writing from now on; "Sound
+ * on" when it is already off); then Stop. Help (the phrasebook) is one tap further: Stop, then
+ * Help in the bottom bar. "Start again" lives on the home, next to Continue.
  * kept: the lesson's place is saved (resume), so the hint says the progress stays.
  */
-function QuitSheet({ lang, kept, onKeep, onStop }: { lang?: HelpLanguage; kept: boolean; onKeep: () => void; onStop: () => void }) {
+function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onStop }: {
+  lang?: HelpLanguage;
+  kept: boolean;
+  soundOff: boolean;
+  onKeep: () => void;
+  onSound: () => void;
+  onStop: () => void;
+}) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onKeep(); };
     window.addEventListener('keydown', onKey);
@@ -892,9 +873,13 @@ function QuitSheet({ lang, kept, onKeep, onStop }: { lang?: HelpLanguage; kept: 
   }, [onKeep]);
   return (
     <div className="sheet-backdrop" onClick={onKeep}>
-      <div className="sheet" role="alertdialog" aria-modal="true" aria-labelledby="quit-title" aria-describedby="quit-hint" onClick={(e) => e.stopPropagation()}>
+      <div className="sheet pause-sheet" role="alertdialog" aria-modal="true" aria-labelledby="quit-title" aria-describedby="quit-hint" onClick={(e) => e.stopPropagation()}>
         <span className="sheet-hazard" aria-hidden />
-        <h2 id="quit-title" className="sheet-title"><Bi text={ui('quitTitle', lang)} /></h2>
+        {/* A neutral title: the sheet offers going on, a quiet lesson (or starting again) and stopping. */}
+        <h2 id="quit-title" className="sheet-title max3-title">
+          <Bi text={ui('pauseTitle', lang)} />
+          <span className="max3-title-nl" lang="nl">Pauze</span>
+        </h2>
         <p id="quit-hint" className="sheet-hint">
           {kept && <span className="sheet-hint-nl" lang="nl">Je voortgang blijft bewaard.</span>}
           <Bi text={ui(kept ? 'quitKept' : 'quitHint', lang)} />
@@ -904,7 +889,12 @@ function QuitSheet({ lang, kept, onKeep, onStop }: { lang?: HelpLanguage; kept: 
             <Bi text={ui('keepGoing', lang)} />
             <ButtonBlock icon="next" />
           </button>
+          <button type="button" className="btn sheet-second sheet-sound" onClick={onSound} aria-pressed={soundOff}>
+            <span className="sheet-second-icon" aria-hidden>{soundOff ? <SpeakerIcon size={24} /> : <SpeakerOffIcon size={24} />}</span>
+            <Bi text={ui(soundOff ? 'soundOn' : 'withoutSound', lang)} />
+          </button>
           <button type="button" className="btn sheet-stop" onClick={onStop}>
+            <span className="sheet-second-icon sheet-stop-icon" aria-hidden><StopIcon size={24} /></span>
             <Bi text={ui('stopLesson', lang)} />
           </button>
         </div>
@@ -912,3 +902,4 @@ function QuitSheet({ lang, kept, onKeep, onStop }: { lang?: HelpLanguage; kept: 
     </div>
   );
 }
+

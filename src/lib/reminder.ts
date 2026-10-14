@@ -96,3 +96,21 @@ export function saveFile(name: string, type: string, content: string): void {
   a.remove();
   window.setTimeout(() => URL.revokeObjectURL(url), 10_000);
 }
+
+const REMINDER_KEY = 'vloertaal:reminder-time';
+
+/** The time of the daily reminder last put in the calendar on this phone (null: none yet). */
+export function reminderTime(): string | null {
+  try { return localStorage.getItem(REMINDER_KEY); } catch { return null; }
+}
+
+/** Remember the time just put in the calendar, so Settings shows it as the chosen one. */
+export function rememberReminder(time: string): void {
+  try { localStorage.setItem(REMINDER_KEY, time); } catch { /* private mode: only not remembered */ }
+}
+
+/** A tap on a time in Settings adds a calendar event only for a new time; the one already there
+ *  only leads back (another .ics for the same time would make a second, identical reminder). */
+export function reminderTapAdds(time: string, current: string | null): boolean {
+  return time !== current;
+}

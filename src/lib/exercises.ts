@@ -101,7 +101,7 @@ function unitWords(lesson: Lesson): Word[] {
  * lesson and its unit have enough other picture words (no abstract word, no look-alikes); else
  * as text cards (Dutch words only), with the same prompt.
  */
-export function dutchExercise(word: Word, lesson: Lesson, rng: () => number, n = 4): Extract<Exercise, { kind: 'dutch' }> {
+export function dutchExercise(word: Word, lesson: Lesson, rng: () => number, n = 3): Extract<Exercise, { kind: 'dutch' }> {
   if (hasPicture(word)) {
     // Known words first: the lesson's, then the unit's earlier lessons', then the rest of the unit.
     const unit = unitWords(lesson);
@@ -202,6 +202,76 @@ export function buildTiles(sentence: Sentence, lesson: Lesson, rng: () => number
   return shuffle([...real, ...extra], rng);
 }
 
+/** A small, stable number for a text (seeds the word-by-word choices of a sentence). */
+function hashText(text: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < text.length; i++) h = Math.imul(h ^ text.charCodeAt(i), 16777619);
+  return h >>> 0;
+}
+
+let names: Set<string> | null = null;
+/**
+ * Proper names in the course ("Ali", "Mark"): words written with a capital in the middle of a
+ * sentence (not after a full stop). A name offered as a wrong word keeps its capital.
+ */
+export function courseNames(): Set<string> {
+  if (names) return names;
+  names = new Set();
+  const texts = [
+    ...allLessons.flatMap((l) => [...l.sentences.map((s) => s.nl), ...l.words.map((w) => w.nl)]),
+    ...allDialogues.flatMap((d) => [d.prompt.nl, d.reply.nl]),
+    ...allReplies.map((r) => r.nl),
+  ];
+  for (const text of texts) {
+    const raw = text.split(/\s+/);
+    raw.forEach((r, i) => {
+      if (i === 0 || /[.!?…:]["”’]?$/.test(raw[i - 1])) return;
+      const w = r.replace(/[^\p{L}\p{N}'-]/gu, '');
+      if (/^\p{Lu}\p{Ll}/u.test(w)) names!.add(w);
+    });
+  }
+  return names;
+}
+
+/** Pairs in a guided match. */
+export const MATCH_PAIRS = 3;
+
+/**
+ * Build word by word: for each place in the sentence, the right word and (at most) two wrong
+ * ones, shuffled. The wrong ones are the sentence's extra tiles (buildTiles: plausible words of
+ * the lesson, never near-misses) and the words that come later in the sentence. None of them is
+ * the right word or one letter or a stem apart from it ("je" / "ja"), and the two wrong ones
+ * never look alike either. At the start of the sentence every option starts with a capital, so
+ * the capital gives nothing away; further on the extras are lower case (names keep their
+ * capital). Pure and seeded by the
+ * sentence, so the same sentence always offers the same words.
+ */
+export function buildSteps(nl: string, tiles: readonly string[], n = 3): string[][] {
+  const real = tokenize(nl);
+  const left = real.map((w) => w.toLowerCase());
+  const extras = tiles.filter((t) => {
+    const k = left.indexOf(t.toLowerCase());
+    if (k < 0) return true;
+    left.splice(k, 1);
+    return false;
+  });
+  const rng = createRng(hashText(nl));
+  const cap = (w: string) => w.charAt(0).toUpperCase() + w.slice(1);
+  return real.map((word, i) => {
+    const later = real.slice(i + 1).filter((w) => w.toLowerCase() !== word.toLowerCase());
+    // Further on the extras are lower case, except a name ("Ali" never becomes "ali").
+    const lower = (w: string) => (courseNames().has(w) ? w : w.toLowerCase());
+    const pool = [...shuffle(extras, rng).map((w) => (i === 0 ? cap(w) : lower(w))), ...shuffle(later, rng).map((w) => (i === 0 ? cap(w) : w))];
+    const picked: string[] = [];
+    for (const w of pool) {
+      if (picked.length >= n - 1) break;
+      if (nearMiss(w, word) || picked.some((p) => p.toLowerCase() === w.toLowerCase() || nearMiss(w, p))) continue;
+      picked.push(w);
+    }
+    return shuffle([word, ...picked], rng);
+  });
+}
+
 /**
  * Builds the exercise queue for a lesson.
  * First time: introduce each word, check it right away, then mix and apply.
@@ -240,7 +310,8 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     out.push({ kind: 'situation', tip, options: shuffle(tip.options, rng) });
   }
 
-  out.push({ kind: 'match', words: sample(words, Math.min(5, words.length), rng) });
+  // Guided matching: three pairs, one Dutch word at a time (components/Exercises.tsx).
+  out.push({ kind: 'match', words: sample(words, Math.min(MATCH_PAIRS, words.length), rng) });
 
   const [l1, l2, d1, t1] = shuffle(words, rng);
   // Without sound the first listening task shows the Dutch word (pick its meaning) and the
@@ -249,7 +320,8 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // The picture choice asks for a word that has a picture (text cards if the lesson has none).
   const pictured = words.filter(hasPicture);
   const target = hasPicture(d1) || !pictured.length ? d1 : pictured[Math.floor(rng() * pictured.length)];
-  out.push(dutchExercise(target, lesson, rng, 4));
+  // At most three answers on a screen (the "at most 3" rule).
+  out.push(dutchExercise(target, lesson, rng, 3));
 
   for (const sentence of lesson.sentences) {
     out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });

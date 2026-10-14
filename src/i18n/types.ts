@@ -246,6 +246,33 @@ export const uiEn = {
   genderWoman: 'Woman',
   genderMan: 'Man',
   genderNone: 'Rather not say',
+  /* Max 3: onboarding (language guess, sector in two steps) and Settings (3 rows, a page per setting). */
+  langGuessYes: 'Yes',
+  langGuessOther: 'Other language',
+  settingsLangMe: 'Language & me',
+  settingsLessons: 'Lessons',
+  settingsPhone: 'This phone',
+  settingOn: 'On',
+  settingOff: 'Off',
+  sectorGroupMake: 'Making & moving',
+  sectorGroupCare: 'Care & service',
+  voiceWoman: "Woman's voice",
+  voiceMan: "Man's voice",
+  writingPick: 'Pick the word',
+  settingWriting: 'Writing',
+  settingKeepLessons: 'Keep lessons on this phone',
+  settingKeepLessonsHint: 'The topic you are learning now is saved on this phone, so it also works without internet. Finished topics are removed again.',
+  /* Max 3: home & after the lesson (one "Other topic" link, the reminder in two pages, the certificate). */
+  otherTopicLink: 'Other topic',
+  remindAsk: 'Shall we remind you every day?',
+  remindYes: 'Yes, after work',
+  remindNo: 'No thanks',
+  remindEvening: 'In the evening',
+  remindPickTime: 'When shall we remind you?',
+  certSaveShare: 'Save or share',
+  certNameDone: 'Done',
+  pauseTitle: 'Pause',
+  back: 'Back',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

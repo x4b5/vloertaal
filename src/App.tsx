@@ -1,18 +1,24 @@
 import { useEffect, useRef, useState } from 'react';
 import { findLesson, learnedWords, playLesson } from './content/curriculum';
 import { getHelpLanguage } from './i18n';
-import type { Gender, LangCode } from './i18n/types';
+import type { LangCode } from './i18n/types';
 import { setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
-import { About, BottomNav, Onboarding, Path, Phrasebook, Result, Settings, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
-import { AllTopics, Route } from './components/Route';
+import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
+import { Settings } from './components/Settings';
+import { Coaches } from './components/Coaches';
+import { GenderScreen } from './components/Gender';
+import { shouldAskGender } from './lib/askGender';
+import type { SettingsPage } from './lib/settingsMenu';
+import { AllTopics, Route, TopicPage } from './components/Route';
+import { useAutoOffline } from './components/Offline';
 import { Milestone, StreakStopped } from './components/Milestone';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
-import { type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
+import { type Access, clearAccess, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, routeNextLesson } from './lib/route';
 import { takeLinkedUnit } from './lib/unitLink';
 import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
@@ -44,10 +50,16 @@ type View =
   | { name: 'phrasebook' }
   | { name: 'tips' }
   /** upgrade: opened from a locked unit, so the unlock card is scrolled into view. */
-  | { name: 'settings'; upgrade?: boolean }
+  /** Settings: the menu, a list or one setting's page. upgrade: opened from a locked topic (the
+   *  unlock page). up: how many Settings pages lie between this one and the menu in history. */
+  | { name: 'settings'; upgrade?: boolean; page?: SettingsPage; up?: number }
+  /** "Voor begeleiders": a link per topic to send (from About). */
+  | { name: 'coaches' }
   | { name: 'about' }
   /** "Alle onderwerpen": every unit as one long path (from the link at the foot of the home). */
   | { name: 'all' }
+  /** A topic page (from All topics, or a coach link to a finished or locked topic). */
+  | { name: 'topic'; unit: string; focus?: boolean }
   | { name: 'admin' };
 
 const HOME: View = { name: 'home' };
@@ -84,6 +96,8 @@ export default function App() {
   /** The lesson just finished: the path scrolls to the next one and stamps this one in. */
   const [arrived, setArrived] = useState<string | null>(null);
   const [access, setAccess] = useState<Access | null>(loadAccess);
+  /** Back from the password page to the language: the list opens (the guess was seen). */
+  const [langAgain, setLangAgain] = useState(false);
   const grant = (a: Access) => { saveAccess(a); setAccess(a); };
   const [view, setView] = useState<View>(() => adminRequested() ? { name: 'admin' } : linkedUnit ? HOME : restored());
   /** The unit to show first on the path (from a coach link), until the path has shown it. */
@@ -110,15 +124,34 @@ export default function App() {
     history.replaceState({ view: next, depth: current()?.depth ?? 0 } satisfies Entry, '');
     setView(next);
   };
-  /** Bottom bar: Route is home; Hulp, Instellingen and Over sit one level above it, so Back from either
-   *  returns to Route and switching between them doesn't stack entries. */
+  /**
+   * Bottom bar. Route always goes to the home and Settings always to the Settings menu, from any
+   * depth. The history is put back to [home] or [home, tab] (Hulp, Instellingen and Over sit one
+   * level above the home), so the phone's Back from a tab returns home and never steps back into
+   * the pages that were open before.
+   */
   const tab = (t: Tab) => {
     const next: View =
       t === 'words' ? { name: 'words' } : t === 'me' ? { name: 'settings' } : t === 'about' ? { name: 'about' } : HOME;
-    if (next.name === viewRef.current.name) return;
-    if (t === 'route') back();
-    else if (viewRef.current.name === 'home') go(next);
-    else replace(next);
+    const now = viewRef.current;
+    if (now.name === next.name && !(now.name === 'settings' && (now.page || now.upgrade))) return;
+    const depth = current()?.depth ?? 0;
+    const land = () => {
+      if (next.name === 'home') { replace(HOME); return; }
+      // On the home: one entry above it; anywhere else this entry is already one above the home.
+      if ((current()?.depth ?? 0) === 0) go(next);
+      else replace(next);
+    };
+    // Deeper than one level above the home: walk the history back to depth 1 (or the home), then land.
+    const target = next.name === 'home' ? 0 : 1;
+    if (depth > target) {
+      const onPop = () => { window.removeEventListener('popstate', onPop); leaving.current = false; land(); };
+      window.addEventListener('popstate', onPop);
+      leaving.current = true;
+      history.go(target - depth);
+      return;
+    }
+    land();
   };
   /** Back to the previous screen (as the Back button would), or home when there is none. */
   const back = () => {
@@ -131,7 +164,7 @@ export default function App() {
     const onPop = () => {
       if (adminRequested()) return; // #beheer: the hashchange handler opens the admin page
       if (viewRef.current.name === 'lesson' && !leaving.current) {
-        // Stay in the lesson (put its entry back) and let it ask "Stop this lesson?".
+        // Stay in the lesson (put its entry back) and open its pause sheet.
         const lesson = viewRef.current;
         history.pushState({ view: lesson, depth: (current()?.depth ?? 0) + 1 } satisfies Entry, '');
         setLessonBack((n) => n + 1);
@@ -198,27 +231,45 @@ export default function App() {
     linkHandled.current = true;
     // A finished unit is opened on the home's "Gedaan" shelf instead (the block stays).
     const unit = findUnit(focusUnit);
-    if (unit && unitDone(unit, progress.completed)) return;
+    // A finished topic (to practise again) or one outside the preview: its topic page.
+    if (unit && (unitDone(unit, progress.completed) || !unitAllowed(focusUnit, access))) {
+      setFocusUnit(null);
+      if (viewRef.current.name === 'home') go({ name: 'topic', unit: unit.id, focus: true });
+      return;
+    }
     if (unitAllowed(focusUnit, access)) setProgress((p) => (p.currentUnit === focusUnit ? p : { ...p, currentUnit: focusUnit }));
-    else if (viewRef.current.name === 'home') go({ name: 'all' });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focusUnit, access, progress.onboarded, progress.sector]);
 
   const setLang = (code: LangCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
-  const setGender = (gender: Gender) => setProgress((p) => ({ ...p, gender }));
-  const onboard = (code: LangCode | null, gender?: Gender) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true, gender: gender ?? p.gender }));
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
+
+  // "Keep lessons on this phone" (Settings → This phone): the current topic is kept by itself.
+  useAutoOffline(progress, access);
 
   if (view.name === 'admin') {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
 
-  // First run: the language comes first (an app to learn Dutch can't start in Dutch), then the
-  // door in English plus that language, then the sector. The admin page above stays reachable
-  // with #beheer.
-  if (!progress.onboarded) return <Onboarding onDone={onboard} asked={progress.gender} />;
+  // First run, one question per page: the language (an app to learn Dutch can't start in Dutch),
+  // the password (in English plus that language), "Woman or man?" (only for a help language with
+  // gender), then the sector. The admin page above stays reachable with #beheer.
+  if (!progress.onboarded) return <Onboarding onDone={setLang} startWithList={langAgain} />;
   if (!access) {
-    return <Gate lang={lang} onAccess={grant} onLanguage={() => setProgress((p) => ({ ...p, onboarded: false }))} />;
+    return <Gate lang={lang} onAccess={grant} onLanguage={() => { setLangAgain(true); setProgress((p) => ({ ...p, onboarded: false })); }} />;
+  }
+  // Asked once on its own page: in the first run, and for a learner from before the question (or
+  // after switching to a help language with gender), on the next opening of the home.
+  if (view.name === 'home' && shouldAskGender(progress)) {
+    // In the first run (no sector yet) it follows the password page, so it has a way back there.
+    const firstRun = progress.sector === undefined;
+    return (
+      <GenderScreen
+        lang={lang}
+        onDone={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))}
+        onBack={firstRun ? () => { clearAccess(); setAccess(null); } : undefined}
+      />
+    );
   }
   // Asked once (also for learners from before the sector choice); Settings can change it.
   if (progress.sector === undefined) return <SectorScreen lang={lang} onDone={setSector} />;
@@ -314,7 +365,7 @@ export default function App() {
         <CertEarned unit={unit} day={day} lang={lang} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
           onPocket={() => replace({ name: 'pocket', unit: unit.id, streakUp: view.streakUp })} />
       ) : (
-        <CertificateScreen unit={unit} day={day} lang={lang} onBack={onward} onPocket={() => go({ name: 'pocket', unit: unit.id })} />
+        <CertificateScreen unit={unit} day={day} lang={lang} onBack={onward} />
       );
     }
     case 'pocket': {
@@ -325,45 +376,57 @@ export default function App() {
     case 'all':
       return (
         <>
-          <AllTopics lang={lang} onBack={back}>
-            <Path
-              progress={progress}
-              lang={lang}
-              onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
-              nowLesson={routeNextLesson(progress, access)?.id ?? null}
-              arrived={arrived}
-              onArrived={() => setArrived(null)}
-              onAbout={() => tab('about')}
-              access={access}
-              onUpgrade={() => go({ name: 'settings', upgrade: true })}
-              focusUnit={focusUnit}
-              onFocused={() => setFocusUnit(null)}
-              onCertificate={(unit) => go({ name: 'certificate', unit })}
-              onPocket={(unit) => go({ name: 'pocket', unit })}
-            />
-          </AllTopics>
+          <AllTopics progress={progress} lang={lang} access={access} onBack={back} onOpen={(unit) => go({ name: 'topic', unit })} />
           <BottomNav current="route" onTab={tab} lang={lang} />
         </>
       );
+    case 'topic': {
+      const unit = findUnit(view.unit);
+      if (!unit) return null;
+      return (
+        <>
+          <TopicPage
+            key={unit.id}
+            unit={unit}
+            progress={progress}
+            lang={lang}
+            access={access}
+            focus={view.focus}
+            onBack={back}
+            onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
+            onPocket={(id) => go({ name: 'pocket', unit: id })}
+            onCertificate={(id) => go({ name: 'certificate', unit: id })}
+            onUpgrade={() => go({ name: 'settings', upgrade: true })}
+          />
+          <BottomNav current="route" onTab={tab} lang={lang} />
+        </>
+      );
+    }
     case 'tips':
       return <Tips progress={progress} lang={lang} onBack={back} access={access} />;
     case 'about':
       return (
         <>
-          <About lang={lang} />
+          <About lang={lang} onCoaches={() => go({ name: 'coaches' })} />
           <BottomNav current="about" onTab={tab} lang={lang} />
         </>
       );
+    case 'coaches':
+      return <Coaches onBack={back} lang={lang} />;
     case 'phrasebook':
       return <Phrasebook lang={lang} onBack={back} />;
-    case 'settings':
+    case 'settings': {
+      const up = view.up ?? 0;
       return (
         <>
           <Settings
             progress={progress}
             lang={lang}
+            page={view.page ?? (view.upgrade ? 'unlock' : undefined)}
+            onPage={(page) => go({ name: 'settings', page, up: up + 1 })}
+            onReturn={(steps = 1) => (up >= steps ? history.go(-steps) : back())}
             onLang={setLang}
-            onGender={setGender}
+            onGender={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))}
             onSector={setSector}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
             onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
@@ -373,18 +436,16 @@ export default function App() {
               // Keep look, voice, sound, sector and gender; only learning progress is wiped (and lessons in progress).
               clearSave();
               setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked }));
-              back();
             }}
-            onAbout={() => tab('about')}
             onRestore={(next) => setProgress(next)}
             access={access}
             onAccess={grant}
-            focusUpgrade={view.upgrade}
             onCertificate={(unit) => go({ name: 'certificate', unit })}
           />
           <BottomNav current="me" onTab={tab} lang={lang} />
         </>
       );
+    }
     case 'words':
       return (
         <>
@@ -406,12 +467,13 @@ export default function App() {
             streak={currentStreak(progress, new Date())}
             words={learnedWords(progress.completed).size}
             lang={lang}
-            onLanguage={() => tab('me')}
+            quiet={Boolean(progress.quiet)}
           />
           <Route
             progress={progress}
             lang={lang}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
+            onRestart={(lessonId) => { clearSave(lessonId); go({ name: 'lesson', lessonId, review: false }); }}
             onPick={(unit) => setProgress((p) => ({ ...p, currentUnit: unit }))}
             onAll={() => go({ name: 'all' })}
             daily={Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : null}
@@ -422,10 +484,6 @@ export default function App() {
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
             focusUnit={focusUnit}
             onFocused={() => setFocusUnit(null)}
-            onCertificate={(unit) => go({ name: 'certificate', unit })}
-            onPocket={(unit) => go({ name: 'pocket', unit })}
-            onGender={setGender}
-            onGenderLater={() => setProgress((p) => ({ ...p, genderAsked: true }))}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
         </>

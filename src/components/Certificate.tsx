@@ -3,11 +3,12 @@ import { ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import type { Unit } from '../content/types';
 import { CERT_NOTE, SEAL_RING, certData, certDate, certMeta, earnedCertificates, loadCertName, saveCertName, unitIndex, type CertData } from '../lib/certificate';
-import { shareCertificate } from '../lib/certCanvas';
+import { shareCertificateFile } from '../lib/certCanvas';
 import type { Progress } from '../lib/progress';
 import { Bi } from './Bi';
 import { Character } from './Characters';
-import { BackIcon, CheckIcon, ChevronIcon } from './Icons';
+import { ChevronIcon } from './Icons';
+import { ChromeBack } from './ChromeBack';
 import { LogoMark } from './Logo';
 import { PocketIcon } from './Offline';
 
@@ -15,7 +16,7 @@ import { PocketIcon } from './Offline';
  * A certificate per finished unit ("Oefencertificaat"):
  * - CertificateSheet: the A4 landscape certificate itself (the same layout on screen, in print
  *   and, drawn again on a canvas, as the shared picture: see src/lib/certCanvas.ts);
- * - CertificateScreen: the sheet with the name (asked once), Print / PDF and Share as picture;
+ * - CertificateScreen: the sheet, one Save / share and Change name (the name asked on its own page);
  * - CertEarned: the one-time "Certificaat behaald" moment after a unit's last lesson;
  * - CertBadge: the calm chip on a finished unit's sign on the path;
  * - CertificatesCard: "Mijn certificaten" in Settings.
@@ -119,16 +120,6 @@ export function CertificateSheet({ data, className }: { data: CertData; classNam
 
 /* ---- Printer and share glyphs ---- */
 
-function PrintGlyph() {
-  return (
-    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden focusable="false">
-      <path d="M7 9V3.5h10V9" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
-      <rect x="3" y="9" width="18" height="8.5" rx="2" fill="none" stroke="currentColor" strokeWidth="2.2" />
-      <path d="M7 14.5h10v6H7z" fill="currentColor" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 function ShareGlyph() {
   return (
     <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden focusable="false">
@@ -139,54 +130,54 @@ function ShareGlyph() {
   );
 }
 
-/** "Je naam op het certificaat?": asked the first time; kept on this device only. */
-function NameCard({ name, lang, onName, onDone }: {
-  name: string;
-  lang?: HelpLanguage;
-  onName: (name: string) => void;
-  onDone: (name: string) => void;
-}) {
+/**
+ * "Je naam op het certificaat?": a page of its own, asked the first time and after "Change name".
+ * Three things: the field, [Done] and [Without name]. Kept on this device only.
+ */
+function NamePage({ name, lang, onDone }: { name: string; lang?: HelpLanguage; onDone: (name: string) => void }) {
   const id = useId();
+  const [value, setValue] = useState(name);
+  const rtl = lang?.dir === 'rtl';
   return (
-    <form
-      className="keep-card cert-name-card"
-      onSubmit={(e) => { e.preventDefault(); onDone(name); }}
-    >
-      <label className="keep-head" htmlFor={id}>
-        <span className="keep-nl" lang="nl">Je naam op het certificaat?</span>
-        <Bi className="keep-gloss" text={ui('certNameAsk', lang)} />
-      </label>
-      <input
-        id={id}
-        className="cert-name-input"
-        type="text"
-        value={name}
-        maxLength={60}
-        autoComplete="name"
-        autoCapitalize="words"
-        enterKeyHint="done"
-        onChange={(e) => onName(e.target.value)}
-      />
-      <p className="keep-hint"><Bi text={ui('certNameHint', lang)} /></p>
-      <div className="keep-row">
-        <button type="submit" className="btn btn-dark keep-btn" disabled={!name.trim()}>
-          <span lang="nl">Zet erop</span>
-          <Bi className="keep-btn-gloss" text={ui('certNameSave', lang)} />
+    <div className="screen cert-name-page">
+      <form className="cert-name-form" onSubmit={(e) => { e.preventDefault(); if (value.trim()) onDone(value); }}>
+        <span className="cert-name-icon" aria-hidden><CertIcon size={40} /></span>
+        <label className="keep-head cert-name-head" htmlFor={id} dir={rtl ? 'rtl' : undefined}>
+          <span className="keep-nl" lang="nl" dir="ltr">Je naam op het certificaat?</span>
+          <Bi className="keep-gloss" text={ui('certNameAsk', lang)} />
+        </label>
+        <input
+          id={id}
+          className="cert-name-input"
+          type="text"
+          value={value}
+          maxLength={60}
+          autoComplete="name"
+          autoCapitalize="words"
+          enterKeyHint="done"
+          onChange={(e) => setValue(e.target.value)}
+        />
+        <p className="keep-hint"><Bi text={ui('certNameHint', lang)} /></p>
+        <button type="submit" className="btn btn-primary keep-btn cert-name-done" disabled={!value.trim()}>
+          <span lang="nl">Klaar</span>
+          <Bi className="keep-btn-gloss" text={ui('certNameDone', lang)} />
         </button>
-        <button type="button" className="btn btn-ghost keep-btn" onClick={() => { onName(''); onDone(''); }}>
+        <button type="button" className="keep-link cert-no-name" onClick={() => onDone('')}>
           <span lang="nl">Zonder naam</span>
-          <Bi className="keep-btn-gloss" text={ui('certNoName', lang)} />
+          <Bi className="keep-link-gloss" text={ui('certNoName', lang)} />
         </button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 
-/** The certificate of one unit, with the name, Print / PDF and Share as picture. */
-export function CertificateScreen({ unit, day, lang, onBack, onPocket }: {
+/**
+ * The certificate of one unit: Back, one [Save / share] (the phone's share sheet, where it can
+ * also be printed; the print dialog, which saves a PDF, where files cannot be shared) and
+ * [Change name]. The name is asked first, on its own page.
+ */
+export function CertificateScreen({ unit, day, lang, onBack }: {
   unit: Unit;
-  /** Opens the unit's pocket card. */
-  onPocket?: () => void;
   /** YYYY-MM-DD it was earned. */
   day: string;
   lang?: HelpLanguage;
@@ -194,11 +185,11 @@ export function CertificateScreen({ unit, day, lang, onBack, onPocket }: {
 }) {
   const [stored] = useState(loadCertName);
   const [name, setName] = useState(stored ?? '');
-  /** The name field shows the first time (never asked), or after "Naam wijzigen". */
+  /** The name page shows the first time (never asked), or after "Change name". */
   const [asking, setAsking] = useState(stored === null);
-  const [note, setNote] = useState<'saved' | null>(null);
   const [busy, setBusy] = useState(false);
   const data = certData(unit, day, name, lang);
+  const rtl = lang?.dir === 'rtl';
 
   // The tab title becomes the PDF's file name when it is saved from the print dialog.
   useEffect(() => {
@@ -206,59 +197,49 @@ export function CertificateScreen({ unit, day, lang, onBack, onPocket }: {
     document.title = `Vloertaal certificaat - ${unit.titleNl}`;
     return () => { document.title = before; };
   }, [unit.titleNl]);
+  useEffect(() => { window.scrollTo(0, 0); }, [asking]);
 
   const done = (n: string) => { saveCertName(n); setName(n.trim()); setAsking(false); };
   const share = async () => {
     setBusy(true);
     try {
-      const how = await shareCertificate(data, `vloertaal-certificaat-${unit.id.slice(2)}.png`);
-      setNote(how === 'saved' ? 'saved' : null);
+      const how = await shareCertificateFile(data, `vloertaal-certificaat-${unit.id.slice(2)}.png`);
+      if (how === 'unsupported') window.print();
+    } catch {
+      window.print();
     } finally {
       setBusy(false);
     }
   };
 
+  if (asking) return <NamePage name={name} lang={lang} onDone={done} />;
   return (
     <div className="screen cert-screen">
-      <div className="screen-head">
-        <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+      <div className="screen-head" dir={rtl ? 'rtl' : undefined}>
+        <ChromeBack lang={lang} onBack={onBack} />
         <h1>
           <span className="cert-screen-nl" lang="nl">Certificaat</span>
           <Bi text={ui('certificate', lang)} />
         </h1>
       </div>
-      {asking && <NameCard name={name} lang={lang} onName={setName} onDone={done} />}
       <CertificateSheet data={data} />
       <p className="cert-practice">
         <span lang="nl">{CERT_NOTE}</span>
         <Bi text={ui('certPractice', lang)} />
       </p>
-      <div className="cert-actions">
-        <button type="button" className="btn btn-dark cert-btn" onClick={() => window.print()}>
-          <PrintGlyph />
-          <span className="cert-btn-text">
-            <span lang="nl">Print of bewaar als pdf</span>
-            <Bi className="cert-btn-gloss" text={ui('certPrint', lang)} />
-          </span>
-        </button>
-        <button type="button" className="btn btn-primary cert-btn" onClick={share} disabled={busy}>
+      <div className="cert-actions cert-actions-one">
+        <button type="button" className="btn btn-primary cert-btn cert-share" onClick={share} disabled={busy} dir={rtl ? 'rtl' : undefined}>
           <ShareGlyph />
           <span className="cert-btn-text">
-            <span lang="nl">Deel als plaatje</span>
-            <Bi className="cert-btn-gloss" text={ui('certShare', lang)} />
+            <span lang="nl">Bewaar of deel</span>
+            <Bi className="cert-btn-gloss" text={ui('certSaveShare', lang)} />
           </span>
         </button>
       </div>
-      {note === 'saved' && (
-        <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
-      )}
-      {onPocket && <PocketLink lang={lang} onOpen={onPocket} />}
-      {!asking && (
-        <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
-          <span lang="nl">Naam wijzigen</span>
-          <Bi className="keep-link-gloss" text={ui('certChangeName', lang)} />
-        </button>
-      )}
+      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
+        <span lang="nl">Naam wijzigen</span>
+        <Bi className="keep-link-gloss" text={ui('certChangeName', lang)} />
+      </button>
     </div>
   );
 }

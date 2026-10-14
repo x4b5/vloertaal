@@ -7,7 +7,7 @@ import { StreakHero } from './Celebrate';
 import { Character } from './Characters';
 import { FlameIcon, StreakFlame } from './StreakArt';
 import { CheckIcon, ChevronIcon, CupIcon } from './Icons';
-import { InstallCard, ReminderCard } from './Keep';
+import { KeepFlow } from './Keep';
 
 /** False for the first 700 ms (400 ms with reduced motion): a tap meant for the screen before
  *  must not skip this one. */
@@ -142,27 +142,12 @@ function ContinueButton({ lang, onClick }: { lang?: HelpLanguage; onClick: () =>
 }
 
 /**
- * After the first day's milestone, once: "Remind me every day" and "Put Vloertaal on your home
- * screen" on a screen of their own (both also in Settings). Continue skips it.
+ * After the first day's milestone, once: the reminder and the home-screen offer, a few small
+ * pages with at most 3 choices each (KeepFlow in Keep.tsx; both also in Settings).
  */
 function KeepScreen({ lang, onDone }: { lang?: HelpLanguage; onDone: () => void }) {
-  useEnter(onDone);
   useEffect(() => { markKeepOffered(); window.scrollTo(0, 0); }, []);
-  const [short] = useState(() => typeof window !== 'undefined' && window.innerHeight < 720);
-  return (
-    <div className="player milestone-screen keep-screen">
-      <main className="player-body milestone">
-        {/* On a short screen (360×640) Bram is smaller, so the whole reminder card fits above Continue. */}
-        <div className="keep-hero" aria-hidden><Character who="bram" mood="wave" size={short ? 64 : 120} /></div>
-        <div className="milestone-keep">
-          {/* Continue is the one main button here; "add to calendar" is an outline one. */}
-          <ReminderCard lang={lang} secondary />
-          <InstallCard lang={lang} />
-        </div>
-      </main>
-      <ContinueButton lang={lang} onClick={onDone} />
-    </div>
-  );
+  return <KeepFlow lang={lang} onDone={onDone} />;
 }
 
 /**

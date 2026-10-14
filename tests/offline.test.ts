@@ -3,7 +3,7 @@ import { beforeAll, describe, expect, it } from 'vitest';
 import { tipForLesson } from '../src/content/culture';
 import { units } from '../src/content/curriculum';
 import { clipUrl, setRecordedIndex } from '../src/lib/audio';
-import { OFFLINE_CACHE, clipPaths, currentVoices, formatBytes, unitTexts, voicesKey } from '../src/lib/offline';
+import { OFFLINE_CACHE, autoOfflinePlan, clipPaths, currentVoices, formatBytes, offlineAuto, setOfflineAuto, unitTexts, voicesKey } from '../src/lib/offline';
 
 const firstDay = units.find((u) => u.id === 'u.firstday')!;
 const elevenIndex = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8'));
@@ -76,5 +76,45 @@ describe('the font files saved with the app', () => {
     const { fontFileUrls } = await import('../src/lib/offline');
     expect(fontFileUrls('url("./noto-color-emoji.3.woff2") format("woff2")')).toEqual(['./noto-color-emoji.3.woff2']);
     expect(fontFileUrls("url(/assets/lexend-latin-ext.woff2) format('woff2'), url(/assets/lexend-latin-ext.woff) format('woff')")).toEqual(['/assets/lexend-latin-ext.woff2']);
+  });
+});
+
+describe('"Keep lessons on this phone" (automatic)', () => {
+  const done = (...ids: string[]) => (id: string) => ids.includes(id);
+
+  it('saves the current topic when it is not on the phone yet, or was saved with other voices', () => {
+    expect(autoOfflinePlan({ current: 'u.firstday', saved: {}, done: done() })).toEqual({ save: 'u.firstday', release: [] });
+    expect(autoOfflinePlan({ current: 'u.firstday', saved: { 'u.firstday': { stale: true } }, done: done() }).save).toBe('u.firstday');
+    expect(autoOfflinePlan({ current: 'u.firstday', saved: { 'u.firstday': { stale: false } }, done: done() })).toEqual({ release: [] });
+  });
+
+  it('releases finished topics, never the current one, and keeps unfinished ones', () => {
+    const saved = { 'u.firstday': { stale: false }, 'u.help': { stale: false }, 'u.tools': { stale: false } };
+    expect(autoOfflinePlan({ current: 'u.tools', saved, done: done('u.firstday', 'u.tools') })).toEqual({ release: ['u.firstday'] });
+    // Nothing current (the home offers the next topics): finished ones still go.
+    expect(autoOfflinePlan({ current: null, saved, done: done('u.help') })).toEqual({ release: ['u.help'] });
+  });
+
+  it('does not start a topic again while it saves or after it failed on this visit', () => {
+    expect(autoOfflinePlan({ current: 'u.help', saved: {}, done: done(), busy: ['u.help'] })).toEqual({ release: [] });
+  });
+
+  it('is off by default, on for a phone that saved a unit by hand before, and remembers the switch', () => {
+    const store = new Map<string, string>();
+    const ls = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v), removeItem: (k: string) => void store.delete(k) };
+    const before = (globalThis as { localStorage?: unknown }).localStorage;
+    (globalThis as { localStorage?: unknown }).localStorage = ls;
+    try {
+      expect(offlineAuto()).toBe(false);
+      store.set('vloertaal:offline', JSON.stringify({ units: { 'u.firstday': { urls: [], bytes: 1, voices: 'auto' } }, shell: [] }));
+      expect(offlineAuto()).toBe(true);
+      store.delete('vloertaal:offline');
+      setOfflineAuto(true);
+      expect(offlineAuto()).toBe(true);
+      setOfflineAuto(false);
+      expect(offlineAuto()).toBe(false);
+    } finally {
+      (globalThis as { localStorage?: unknown }).localStorage = before;
+    }
   });
 });

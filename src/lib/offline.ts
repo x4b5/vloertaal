@@ -365,3 +365,67 @@ export function showOfflineStateForShot(unitId: string, state: OfflineState): vo
   jobs.set(unitId, state);
   emit();
 }
+
+/* ---- "Keep lessons on this phone": one switch in Settings → This phone ---- */
+
+const AUTO_KEY = 'vloertaal:offline-auto';
+
+/**
+ * Whether lessons are kept on this phone automatically. Never chosen yet: on when a unit was
+ * saved by hand before (the old per-unit button), else off (saving costs mobile data).
+ */
+export function offlineAuto(): boolean {
+  try {
+    const v = localStorage.getItem(AUTO_KEY);
+    if (v === '1') return true;
+    if (v === '0') return false;
+  } catch {
+    return false;
+  }
+  return savedUnitIds().length > 0;
+}
+
+/** Turns the setting on or off (off removes every saved topic from this phone). */
+export function setOfflineAuto(on: boolean): void {
+  try {
+    localStorage.setItem(AUTO_KEY, on ? '1' : '0');
+  } catch {
+    // Blocked storage: the switch holds for this visit only.
+  }
+  if (!on) for (const id of savedUnitIds()) void removeUnitOffline(id);
+  emit();
+}
+
+export interface AutoOfflinePlan {
+  /** The unit to save now (the current topic, not saved yet or saved with other voices). */
+  save?: string;
+  /** Saved units that may go: finished, and not the current topic. */
+  release: string[];
+}
+
+/**
+ * What "Keep lessons on this phone" does now (pure, tested): the current topic is saved, and
+ * finished topics are released again. A topic that is saving, or failed on this visit, is left
+ * alone (no retry loop on a bad connection; turning the switch off and on tries again).
+ */
+export function autoOfflinePlan({ current, saved, done, busy = [] }: {
+  current: string | null;
+  /** The saved units, and whether each was saved with other voices than the ones chosen now. */
+  saved: Record<string, { stale: boolean }>;
+  /** Whether a unit is finished. */
+  done: (unitId: string) => boolean;
+  /** Units saving now or failed on this visit. */
+  busy?: string[];
+}): AutoOfflinePlan {
+  const release = Object.keys(saved).filter((id) => id !== current && done(id));
+  const save = current && !busy.includes(current) && (!saved[current] || saved[current].stale) ? current : undefined;
+  return save ? { save, release } : { release };
+}
+
+/** The saved units with their voices state, and the units busy now (for autoOfflinePlan). */
+export function offlineSnapshot(voices: string): { saved: Record<string, { stale: boolean }>; busy: string[] } {
+  const all = loadSaved().units;
+  const saved = Object.fromEntries(Object.entries(all).map(([id, u]) => [id, { stale: u.voices !== voices }]));
+  const busy = [...jobs.entries()].filter(([, s]) => s.status === 'saving' || s.status === 'error').map(([id]) => id);
+  return { saved, busy };
+}

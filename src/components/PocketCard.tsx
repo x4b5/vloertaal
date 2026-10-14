@@ -9,7 +9,8 @@ import { savePocketCard } from '../lib/pocketCanvas';
 import { englishHidden, wantsEnglish } from '../lib/english';
 import { WordPicture } from '../pictures';
 import { Bi, HelpText } from './Bi';
-import { BackIcon, CheckIcon } from './Icons';
+import { CheckIcon } from './Icons';
+import { ChromeBack } from './ChromeBack';
 import { PocketIcon } from './Offline';
 import { SpeakButton } from './SpeakButton';
 
@@ -66,7 +67,7 @@ export function PocketCardScreen({ unit, lang, onBack }: { unit: Unit; lang?: He
   return (
     <div className="screen pocket-screen">
       <div className="screen-head" dir={rtl ? 'rtl' : undefined}>
-        <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+        <ChromeBack lang={lang} onBack={onBack} />
         <h1>
           <span className="pocket-screen-nl" lang="nl" dir="ltr">Spiekkaartje</span>
           <Bi text={ui('pocketCard', lang)} />
