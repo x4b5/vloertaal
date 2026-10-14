@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
 import { fillN, gloss, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
-import { autoSpeak, sounds, speak, speechAvailable } from '../lib/audio';
+import { autoSpeak, sounds, speak, speechAvailable, stopSpeech } from '../lib/audio';
 import { tileDiff } from '../lib/answers';
 import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
 import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
@@ -265,7 +265,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const clearTimers = () => { timers.current.forEach((t) => window.clearTimeout(t)); timers.current = []; };
   useEffect(() => {
     const list = timers;
-    return () => list.current.forEach((t) => window.clearTimeout(t));
+    return () => {
+      list.current.forEach((t) => window.clearTimeout(t));
+      stopSpeech(); // leaving the lesson: stop talking too
+    };
   }, []);
   /** The exercise on screen and a layer for the one leaving (a copy that slides out, 160 ms). */
   const slideRef = useRef<HTMLDivElement>(null);
@@ -548,6 +551,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
 
   function reset() {
     clearTimers();
+    // What the last screen was still saying must not run on into the next one.
+    stopSpeech();
     setAnswer(null);
     setChecked(false);
     setSwapped(false);
