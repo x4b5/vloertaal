@@ -165,9 +165,9 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot = shotP
     };
   }, [item.nl, voice, phaseForShot, release, discard]);
 
-  // No microphone: nothing to do here, the learner just goes on (Continue is open).
+  // Said it once, or no microphone: Continue is open (rating is optional, nothing is scored).
   useEffect(() => {
-    if (phase === 'off') onAnswer({ correct: true });
+    if (phase === 'off' || phase === 'review') onAnswer({ correct: true });
   }, [phase, onAnswer]);
 
   // The app goes to the background mid-recording: stop, so the microphone is not left on.
@@ -217,7 +217,6 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot = shotP
       urlRef.current = URL.createObjectURL(blob);
       setPhase('review');
       setStatus(ui('speakMe').en);
-      onAnswer({ correct: true });
       // Hear yourself right away.
       playMine();
     };
@@ -267,7 +266,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot = shotP
   const meaning = gloss(item.id, item.en, lang);
 
   return (
-    <div className={`exercise say-ex say-${phase}`}>
+    <div className={`exercise say-ex say-is-${phase}`}>
       <h2 className="prompt" tabIndex={-1}><Bi text={ui('speakPrompt', lang)} /></h2>
       <div className={`card say-card ${picture ? '' : 'say-card-text'}`}>
         {picture && <WordPicture className="say-pic" id={picture.id} emoji={picture.emoji} size={76} />}
@@ -296,7 +295,6 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot = shotP
             )}
             <span className="say-mic-core">{recording ? <StopGlyph size={34} /> : <MicIcon size={40} />}</span>
           </button>
-          <Bi className="say-mic-label" text={ui(recording ? 'stopRecording' : 'tapToSpeak', lang)} />
           {!recording && (
             <p className="say-privacy">
               <LockIcon size={18} />

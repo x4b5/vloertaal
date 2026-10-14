@@ -57,6 +57,9 @@ import { CountingCard } from './Counting';
 import { WritingCard } from './Writing';
 import { SpeakingCard } from './Speaking';
 import { unitDone } from '../lib/certificate';
+import { UnitTools } from './Offline';
+import { TextSizePicker } from './TextSize';
+import type { TextSize } from '../lib/textSize';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
   /** The help language in use (Settings): the "in review" tag is written in it. */
@@ -299,13 +302,15 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
   );
 }
 
-export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused, daily, onDaily, arrived, onArrived, onCertificate, nowLesson }: {
+export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgrade, openOther = false, focusUnit, onFocused, daily, onDaily, arrived, onArrived, onCertificate, onPocket, nowLesson }: {
   progress: Progress;
   /** The one lesson with the big Start card ("Alle onderwerpen": the next lesson of the home's
    *  current block; null when the home offers a choice). Undefined: the next lesson along the course. */
   nowLesson?: string | null;
   /** Opens a finished unit's certificate (the chip on its sign). */
   onCertificate?: (unitId: string) => void;
+  /** Opens a unit's pocket card (the row under an open unit's sign). */
+  onPocket?: (unitId: string) => void;
   /** "Herhaal vandaag" (see dailyCard): due, done today, or the first words come tomorrow. */
   daily?: DailyCard | null;
   /** Starts today's review (also the "extra ronde" after it). */
@@ -423,6 +428,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
           </div>
           {!unitOpen && allowed && <LockIcon size={22} className="unit-lock" />}
         </div>
+        {allowed && unitOpen && <UnitTools unit={unit} lang={lang} onPocket={onPocket} />}
         {!allowed && (
           <button type="button" className="full-only-note" onClick={onUpgrade}>
             <LockIcon size={16} />
@@ -654,7 +660,7 @@ function useVoices() {
   return { device, recorded };
 }
 
-export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade, onRestore, onCertificate }: {
+export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade, onRestore, onCertificate, onTextSize }: {
   progress: Progress;
   /** Opens a certificate from "Mijn certificaten". */
   onCertificate?: (unitId: string) => void;
@@ -664,6 +670,8 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
   onLang: (code: LangCode | null) => void;
   onSector: (sector: SectorChoice) => void;
   onTheme: (theme: ThemeChoice) => void;
+  /** "Text size": normal, large or extra large. */
+  onTextSize?: (size: TextSize) => void;
   onVoice: (voice: string | null) => void;
   /** "Without sound" on (true) or off. */
   onQuiet: (quiet: boolean) => void;
@@ -723,6 +731,8 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
           </button>
         ))}
       </div>
+
+      {onTextSize && <TextSizePicker current={progress.textSize} lang={lang} onPick={onTextSize} />}
 
       {/* A website can't see the phone's mute switch, so the learner says it here (or in a lesson). */}
       <h2 className="settings-sector-title">

@@ -836,7 +836,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             )}
             {/* "I can't speak now": skips only this speaking exercise, without penalty; sound and
                 the "Without sound" setting stay as they are. */}
-            {ex.kind === 'speak' && (
+            {ex.kind === 'speak' && !answer && (
               <button type="button" className="btn btn-ghost btn-cant-speak" onClick={next}>
                 <Bi text={ui('cantSpeak', lang)} />
               </button>

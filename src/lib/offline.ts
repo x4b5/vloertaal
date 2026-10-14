@@ -227,7 +227,7 @@ async function fill(cache: Cache, urls: string[], progress: (n: number) => void,
           continue;
         }
       }
-      const res = await fetch(url, { cache: 'no-cache' });
+      const res = await fetch(url, { cache: 'no-cache', headers: { 'x-vloertaal-save': '1' } });
       if (!res.ok || res.status !== 200) throw new Error(`${res.status} ${url}`);
       const blob = await res.clone().blob();
       await cache.put(url, res);
@@ -339,4 +339,10 @@ export async function refreshOfflineShell(): Promise<void> {
   } catch {
     // Offline after all, or no room: the files saved before stay.
   }
+}
+
+/** Development screenshots only (src/dev/ShotHarness.tsx): show a unit in a fixed state. */
+export function showOfflineStateForShot(unitId: string, state: OfflineState): void {
+  jobs.set(unitId, state);
+  emit();
 }

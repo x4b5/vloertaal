@@ -201,6 +201,19 @@ const lang: HelpLanguage = {
     lessonsUnit: 'ders',
     lessonsUnitOne: 'ders',
     allTopicsDone: 'Tüm konuları bitirdin. Aferin!',
+    // Speaking practice
+    tagSpeak: 'Konuş',
+    speakPrompt: 'Dinle, sonra söyle',
+    tapToSpeak: 'Dokun ve konuş',
+    stopRecording: 'Dur',
+    micPrivacy: 'Sadece sen duyarsın. Hiçbir şey gönderilmez.',
+    micUnavailable: 'Mikrofon kullanılamıyor. Sorun değil, devam et.',
+    cantSpeak: 'Şu an konuşamıyorum',
+    soundsSame: 'Aynı gibi',
+    sayAgain: 'Tekrar söyle',
+    speakMe: 'Ben',
+    speakingPractice: 'Konuşma alıştırması',
+    speakingHint: 'Kelimeleri sesli söyle ve karşılaştır. Sesin asla kaydedilmez ve gönderilmez.',
   },
   gloss: {
     // Unit: First day at work

@@ -201,6 +201,19 @@ const lang: HelpLanguage = {
     lessonsUnit: 'ትምህርትታት',
     lessonsUnitOne: 'ትምህርቲ',
     allTopicsDone: 'ኩሎም ኣርእስትታት ወዲእካ። ጽቡቕ ስራሕ!',
+    // Speaking practice
+    tagSpeak: 'ተዛረብ',
+    speakPrompt: 'ስማዕ፣ ድሕሪኡ በሎ',
+    tapToSpeak: 'ጠውቕ እሞ ተዛረብ',
+    stopRecording: 'ደው ኣብል',
+    micPrivacy: 'ንስኻ ጥራይ ኢኻ ትሰምዖ። ዋላ ሓንቲ ኣይለኣኽን።',
+    micUnavailable: 'ማይክሮፎን ኣይሰርሕን ዘሎ። ጸገም የለን፣ ቀጽል።',
+    cantSpeak: 'ሕጂ ክዛረብ ኣይክእልን',
+    soundsSame: 'ሓደ ዓይነት እዩ',
+    sayAgain: 'ደጊምካ በሎ',
+    speakMe: 'ኣነ',
+    speakingPractice: 'ልምምድ ምዝራብ',
+    speakingHint: 'ቃላት ብዓው ኢልካ በሎም እሞ ኣወዳድር። ድምጽካ ፈጺሙ ኣይዕቀብን ኣይለኣኽን።',
   },
   gloss: {
     // Units

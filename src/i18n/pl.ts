@@ -201,6 +201,19 @@ const lang: HelpLanguage = {
     lessonsUnit: 'lekcji',
     lessonsUnitOne: 'lekcja',
     allTopicsDone: 'Wszystkie tematy ukończone. Brawo!',
+    // Speaking practice
+    tagSpeak: 'Mów',
+    speakPrompt: 'Posłuchaj, potem powiedz',
+    tapToSpeak: 'Dotknij i mów',
+    stopRecording: 'Stop',
+    micPrivacy: 'Słyszysz to tylko ty. Nic nie jest wysyłane.',
+    micUnavailable: 'Mikrofon jest niedostępny. Nic nie szkodzi, idź dalej.',
+    cantSpeak: 'Nie mogę teraz mówić',
+    soundsSame: 'Brzmi tak samo',
+    sayAgain: 'Powiedz jeszcze raz',
+    speakMe: 'Ja',
+    speakingPractice: 'Ćwiczenie mówienia',
+    speakingHint: 'Mów słowa na głos i porównuj. Twój głos nigdy nie jest zapisywany ani wysyłany.',
   },
   gloss: {
     // Unit: First day at work

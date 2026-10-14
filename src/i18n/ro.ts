@@ -201,6 +201,19 @@ const lang: HelpLanguage = {
     lessonsUnit: 'lecții',
     lessonsUnitOne: 'lecție',
     allTopicsDone: 'Ai terminat toate subiectele. Bravo!',
+    // Speaking practice
+    tagSpeak: 'Vorbește',
+    speakPrompt: 'Ascultă, apoi spune',
+    tapToSpeak: 'Apasă și vorbește',
+    stopRecording: 'Stop',
+    micPrivacy: 'Doar tu auzi. Nimic nu este trimis.',
+    micUnavailable: 'Microfonul nu este disponibil. Nu-i nimic, mergi mai departe.',
+    cantSpeak: 'Nu pot vorbi acum',
+    soundsSame: 'Sună la fel',
+    sayAgain: 'Spune din nou',
+    speakMe: 'Eu',
+    speakingPractice: 'Exercițiu de vorbire',
+    speakingHint: 'Spune cuvintele cu voce tare și compară. Vocea ta nu este niciodată salvată sau trimisă.',
   },
   gloss: {
     // Units

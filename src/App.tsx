@@ -23,6 +23,8 @@ import { CertEarned, CertificateScreen } from './components/Certificate';
 import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
 import { count, countOpen } from './lib/count';
 import { clearSave } from './lib/resume';
+import { applyTextSize } from './lib/textSize';
+import { PocketCardScreen } from './components/PocketCard';
 
 type View =
   | { name: 'home' }
@@ -34,6 +36,8 @@ type View =
   | { name: 'cert-earned'; unit: string; streakUp?: number }
   /** A unit's certificate; streakUp: opened from "Certificaat behaald", the streak milestone still follows. */
   | { name: 'certificate'; unit: string; streakUp?: number }
+  /** A unit's pocket card ("Spiekkaartje"): its five most useful phrases. */
+  | { name: 'pocket'; unit: string; streakUp?: number }
   | { name: 'streak'; streak: number }
   | { name: 'words' }
   | { name: 'phrasebook' }
@@ -173,6 +177,7 @@ export default function App() {
   setQuietAudio(Boolean(progress.quiet));
   const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
+  useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);
   useEffect(() => { window.scrollTo(0, 0); }, [view.name]);
   // A preview never plays a later unit (e.g. via Back/Forward into an old entry): go home.
   useEffect(() => {
@@ -299,10 +304,16 @@ export default function App() {
       // After "Certificaat behaald", the day-streak milestone still follows (once per day).
       const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back());
       return view.name === 'cert-earned' ? (
-        <CertEarned unit={unit} day={day} lang={lang} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward} />
+        <CertEarned unit={unit} day={day} lang={lang} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
+          onPocket={() => replace({ name: 'pocket', unit: unit.id, streakUp: view.streakUp })} />
       ) : (
-        <CertificateScreen unit={unit} day={day} lang={lang} onBack={onward} />
+        <CertificateScreen unit={unit} day={day} lang={lang} onBack={onward} onPocket={() => go({ name: 'pocket', unit: unit.id })} />
       );
+    }
+    case 'pocket': {
+      const unit = findUnit(view.unit);
+      // From "Certificaat behaald": the day-streak milestone still follows.
+      return unit ? <PocketCardScreen unit={unit} lang={lang} onBack={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())} /> : null;
     }
     case 'all':
       return (
@@ -321,6 +332,7 @@ export default function App() {
               focusUnit={focusUnit}
               onFocused={() => setFocusUnit(null)}
               onCertificate={(unit) => go({ name: 'certificate', unit })}
+              onPocket={(unit) => go({ name: 'pocket', unit })}
             />
           </AllTopics>
           <BottomNav current="route" onTab={tab} lang={lang} />
@@ -346,12 +358,13 @@ export default function App() {
             onLang={setLang}
             onSector={setSector}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
+            onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
             onReset={() => {
               // Keep look, voice, sound and sector; only learning progress is wiped (and lessons in progress).
               clearSave();
-              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector }));
+              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, textSize: p.textSize }));
               back();
             }}
             onAbout={() => tab('about')}
@@ -402,6 +415,7 @@ export default function App() {
             focusUnit={focusUnit}
             onFocused={() => setFocusUnit(null)}
             onCertificate={(unit) => go({ name: 'certificate', unit })}
+            onPocket={(unit) => go({ name: 'pocket', unit })}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
         </>

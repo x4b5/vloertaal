@@ -3080,3 +3080,230 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .rb-all-nl { font-size: 0.8rem; font-weight: 600; color: var(--faint); letter-spacing: 0.02em; }
 .rb-all-head h1 .bi-help { --help-size: 0.62em; }
 [dir='rtl'] .rb-all-head .icon-btn .icon { scale: -1 1; }
+
+/* ---- Speaking practice ---- */
+/* "Say it" (src/components/Speaking.tsx): the word card, one big mic button with a calm pulsing
+   ring and a 6-second ring while recording, then the speaker and "me" side by side and two
+   self-rating buttons. Icons carry everything, so it works with the text blurred. */
+.say-ex .prompt { margin-bottom: 12px; }
+.say-card { display: flex; align-items: center; gap: 14px; padding: 14px 16px; text-align: start; }
+.say-pic { flex: none; width: 76px; height: 76px; }
+.say-words { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.say-nl { font-size: 1.45rem; font-weight: 700; line-height: 1.2; color: var(--ink-strong); overflow-wrap: anywhere; }
+.say-meaning { font-size: 1.1rem; }
+.say-meaning .bi-help { --help-size: 0.8em; color: var(--muted); }
+.say-card .speak { flex: none; }
+
+.say-mic-area { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 20px; }
+.say-mic {
+  position: relative; display: grid; place-items: center; width: 96px; height: 96px; padding: 0;
+  border: 3px solid var(--ink); border-radius: 50%; background: var(--yellow); color: var(--on-yellow);
+  cursor: pointer; touch-action: manipulation;
+}
+.say-mic:active { transform: translateY(1px); }
+.say-mic:disabled { opacity: 0.7; cursor: progress; }
+.say-mic:focus-visible { outline: 3px solid var(--focus); outline-offset: 16px; }
+.say-mic-core { display: grid; place-items: center; }
+/* Recording: the button turns ink with a yellow stop square; a soft ring breathes around it. */
+.say-mic.is-rec { background: var(--solid); color: var(--yellow); border-color: var(--solid); }
+.say-mic.is-rec::before {
+  content: ''; position: absolute; inset: -16px; border-radius: 50%;
+  border: 3px solid var(--yellow); opacity: 0.45;
+  animation: say-breathe 1.8s ease-in-out infinite;
+}
+@keyframes say-breathe {
+  0%, 100% { opacity: 0.25; transform: scale(0.97); }
+  50% { opacity: 0.7; transform: scale(1.03); }
+}
+/* The 6 seconds, filling clockwise (driven from script, so it also shows with reduced motion). */
+.say-ring { position: absolute; inset: -12px; width: calc(100% + 24px); height: calc(100% + 24px); transform: rotate(-90deg); pointer-events: none; }
+.say-ring circle { fill: none; stroke-width: 6; }
+.say-ring-track { stroke: var(--track); }
+.say-ring-used { stroke: var(--yellow-dark); stroke-linecap: round; transition: stroke-dashoffset 0.1s linear; }
+[dir='rtl'] .say-ring { transform: rotate(-90deg) scaleY(-1); }
+.say-privacy {
+  display: flex; align-items: center; gap: 8px; max-width: 34ch; margin: 14px 0 0;
+  color: var(--muted); font-size: 0.95rem; text-align: start;
+}
+.say-privacy .icon { flex: none; color: var(--ink-3); }
+.say-privacy .bi-help { --help-size: 0.8em; }
+
+/* After recording: the speaker and "me", two big play buttons side by side. */
+.say-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.say-play {
+  display: grid; grid-template-columns: auto auto; grid-template-areas: 'face icon' 'face who';
+  align-items: center; justify-content: center; justify-items: center; column-gap: 10px; row-gap: 2px;
+  min-height: 84px; padding: 10px 8px; background: var(--card); color: var(--ink);
+  border: 2px solid var(--edge); border-radius: var(--radius); cursor: pointer; font: inherit;
+}
+.say-play > .icon { grid-area: icon; color: var(--blue); }
+.say-play:active { transform: translateY(1px); }
+.say-play.is-playing { border-color: var(--blue); box-shadow: inset 0 0 0 2px var(--blue); }
+.say-face { grid-area: face; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--track); overflow: hidden; }
+.say-face-me { background: var(--kraft-light); color: var(--kraft-dark); }
+.say-who { grid-area: who; font-weight: 650; font-size: 1.05rem; text-align: center; }
+.say-who .bi-help { --help-size: 0.8em; font-weight: 400; color: var(--muted); }
+
+/* Rate yourself: no score, no stamp. "Sounds the same" goes on; "again" listens and tries again. */
+.say-rate { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.say-rate-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 64px; padding: 8px 10px; border: 2px solid; border-radius: var(--radius);
+  font: inherit; font-weight: 650; text-align: center; cursor: pointer;
+}
+.say-rate-btn .icon { flex: none; }
+.say-rate-btn .bi { text-align: start; }
+.say-rate-btn .bi-help { --help-size: 0.75em; font-weight: 400; }
+.say-same { background: var(--green-bg); border-color: var(--green); color: var(--right-ink); }
+.say-again { background: var(--card); border-color: var(--choice-edge); color: var(--ink); }
+.say-rate-btn:active { transform: translateY(1px); }
+
+/* No microphone (refused, or none on this phone): a calm note, and the lesson goes on. */
+.say-off {
+  display: flex; align-items: center; gap: 12px; margin-top: 16px; padding: 14px 16px;
+  border-radius: var(--radius); background: var(--warn-bg); color: var(--warn-ink); font-weight: 600;
+}
+.say-off .icon { flex: none; }
+.say-off .bi-help { --help-size: 0.8em; font-weight: 400; }
+
+/* A short phone (360 × 640): a smaller picture and mic, so Continue stays in view. */
+@media (max-height: 700px) {
+  .say-ex .prompt { margin-bottom: 8px; }
+  .say-card { padding: 10px 12px; gap: 10px; }
+  .say-pic { width: 60px; height: 60px; }
+  .say-nl { font-size: 1.25rem; }
+  .say-mic { width: 84px; height: 84px; }
+  .say-mic-area { margin-top: 18px; }
+  .say-face { width: 46px; height: 46px; }
+  .say-compare { margin-top: 12px; }
+  .say-is-review .say-pic { width: 48px; height: 48px; }
+}
+
+/* ---- Offline, pocket card, text size ---- */
+
+/* Text size (Settings): the root size scales all rem type, the body size all em type, and the
+   help-language floor follows. Normal is the app as designed. */
+:root[data-text='large'] { font-size: 112.5%; --help-min: 17px; }
+:root[data-text='xl'] { font-size: 125%; --help-min: 19px; }
+:root[data-text='large'] body { font-size: 20.25px; }
+:root[data-text='xl'] body { font-size: 22.5px; }
+/* Long words may break rather than run off a narrow screen at the larger sizes. */
+:root:is([data-text='large'], [data-text='xl']) :is(h1, h2, h3, p, li, button, label) { overflow-wrap: break-word; }
+.text-size-picker button { justify-content: center; min-height: 64px; }
+.text-size-a { font-weight: 700; line-height: 1; color: var(--ink); }
+/* Fixed px, so the three A's keep their steps whatever the size now is. */
+.text-size-normal { font-size: 18px; }
+.text-size-large { font-size: 24px; }
+.text-size-xl { font-size: 31px; }
+
+/* The row under a unit's header: "Save for offline" and the pocket card, two quiet chips. */
+.unit-tools { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.rb-block + .unit-tools { margin: 4px 0 14px; }
+.unit-head + .unit-tools { margin: 4px 0 10px; }
+.rb-done-panel .unit-tools { margin: 10px 0 0; }
+.unit-tool {
+  position: relative; overflow: hidden; flex: 1 1 140px; min-width: 0; min-height: 48px;
+  display: flex; align-items: center; gap: 8px; padding: 6px 12px; text-align: start;
+  color: var(--ink); background: var(--card); border: 1.5px solid var(--line); border-radius: 12px;
+  font-size: 0.9rem; font-weight: 600; line-height: 1.2;
+}
+button.unit-tool:hover { border-color: var(--ink-3); }
+.unit-tool > .icon { flex: none; color: var(--ink-2); position: relative; }
+.unit-tool-text { flex: 1; min-width: 0; position: relative; display: flex; flex-direction: column; gap: 1px; }
+.unit-tool-label .bi-help { --help-size: 0.72rem; font-weight: 400; }
+.unit-tool-size {
+  align-self: flex-start; font-size: 0.74rem; font-weight: 600; color: var(--faint);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.offline-save, .offline-saving, .offline-saved { flex-grow: 1.3; }
+/* Saving: the chip fills with kraft from the start side, like tape being pulled. */
+.offline-saving { border-color: var(--kraft); }
+.offline-fill {
+  position: absolute; inset-block: 0; inset-inline-start: 0; background: var(--kraft-light);
+  transition: width 240ms var(--ease-out);
+}
+@media (prefers-reduced-motion: reduce) { .offline-fill { transition: none; } }
+.offline-saving .unit-tool-size { color: var(--ink); }
+/* Saved: a calm green tick in a tray, the size, and a small cross to remove it again. */
+.offline-saved { border-color: color-mix(in srgb, var(--green) 45%, var(--line)); padding-inline-end: 2px; }
+.offline-done {
+  flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
+  color: var(--right-ink); background: var(--green-bg);
+}
+.offline-remove {
+  flex: none; display: grid; place-items: center; width: 40px; height: 40px; padding: 0;
+  color: var(--faint); background: none; border: none; border-radius: 10px;
+}
+.offline-remove:hover { color: var(--ink); background: var(--concrete-2); }
+.offline-error {
+  order: 3; flex: 1 1 100%; margin: 0; padding: 8px 12px; font-size: 0.88rem;
+  color: var(--warn-ink); background: var(--warn-bg); border-inline-start: 5px solid var(--kraft); border-radius: 6px;
+}
+.offline-error .bi-help { --help-size: 0.78rem; }
+.pocket-open > .icon:first-child { color: var(--kraft-dark); }
+.cert-pocket { flex: none; width: 100%; margin-top: 14px; }
+.cert-earned .cert-pocket { max-width: 360px; margin-inline: auto; }
+
+/* The pocket card ("Spiekkaartje"): label paper on a kraft board, five phrases. */
+.pocket-screen .screen-head h1 { display: flex; flex-direction: column; line-height: 1.15; }
+.pocket-screen-nl { font-size: 0.8rem; font-weight: 600; color: var(--faint); letter-spacing: 0.02em; }
+.pocket-screen .screen-head h1 .bi { font-size: 1em; }
+.pocket-screen > .screen-head[dir='rtl'] > .icon-btn .icon { scale: -1 1; }
+.pocket-card {
+  padding: 14px 14px 6px; background: var(--card); color: var(--ink);
+  border: 2px solid var(--kraft); border-radius: 16px; box-shadow: 0 0 0 6px var(--kraft-light);
+  margin: 6px 6px 0;
+}
+.pocket-head { display: flex; align-items: center; gap: 12px; padding-bottom: 8px; border-bottom: 2px dashed var(--line); }
+.pocket-unit-pic { flex: none; width: 46px; height: 46px; }
+.pocket-titles { display: flex; flex-direction: column; min-width: 0; }
+.pocket-tab {
+  align-self: flex-start; padding: 2px 8px; border-radius: 6px; background: var(--yellow); color: var(--on-yellow);
+  font-family: var(--stencil); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.pocket-tab-no { margin-inline-end: 2px; }
+.pocket-title { margin: 3px 0 0; font-size: 1.15rem; font-weight: 700; line-height: 1.15; }
+.pocket-sub { font-size: 0.9rem; color: var(--muted); }
+.pocket-list { list-style: none; margin: 0; padding: 0; }
+.pocket-row { display: flex; align-items: center; gap: 12px; padding: 9px 0; }
+.pocket-row + .pocket-row { border-top: 1px solid var(--line); }
+.pocket-pic {
+  flex: none; display: grid; place-items: center; width: 64px; height: 64px; border-radius: 12px;
+  background: color-mix(in srgb, var(--kraft-light) 55%, var(--card));
+}
+.pocket-no { font-family: var(--stencil); font-weight: 800; font-size: 2rem; color: var(--faint); }
+.pocket-text { flex: 1; display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.pocket-nl { font-size: 1.12rem; font-weight: 700; line-height: 1.2; overflow-wrap: break-word; }
+.pocket-help { font-size: max(var(--help-min), 0.95rem); line-height: 1.3; color: var(--ink); }
+.pocket-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: max(var(--help-min), 1.04rem); }
+.pocket-en { font-size: 0.78rem; color: var(--faint); line-height: 1.25; }
+/* Right to left: every line starts on the right, the Dutch and English keep their own order. */
+.pocket-card[dir='rtl'] .pocket-text, .pocket-card[dir='rtl'] .pocket-titles { text-align: right; }
+.pocket-card[dir='rtl'] .pocket-tab { align-self: flex-end; }
+.pocket-card[dir='rtl'] .pocket-title { text-align: right; }
+.pocket-row .speak { width: 44px; height: 44px; }
+.pocket-actions { margin-top: 16px; }
+@media (max-width: 380px) {
+  .pocket-card { padding: 10px 10px 4px; margin-inline: 4px; }
+  .pocket-row { gap: 10px; padding: 8px 0; }
+  .pocket-pic { width: 54px; height: 54px; }
+  .pocket-pic .word-pic { width: 46px; height: 46px; }
+}
+
+/* Print: the card alone, on A6-ish paper size at the top of an A4 page, to cut out. */
+@media print {
+  body:has(.pocket-screen) > :not(#root) { display: none !important; }
+  #root:has(.pocket-screen) { max-width: none; min-height: 0; margin: 0; }
+  #root:has(.pocket-screen) > :not(.pocket-screen) { display: none !important; }
+  html:has(.pocket-screen), body:has(.pocket-screen) { background: #fff !important; }
+  .pocket-screen { padding: 12mm !important; }
+  .pocket-screen > :not(.pocket-card) { display: none !important; }
+  .pocket-screen .pocket-card {
+    width: 120mm; margin: 0; box-shadow: none; border: 0.6mm dashed #7e5428; break-inside: avoid;
+    background: #fff; color: #1e2226;
+  }
+  .pocket-screen .pocket-row .speak { display: none; }
+  .pocket-screen .pocket-pic { background: #f6efe3; }
+  .pocket-screen .pocket-sub, .pocket-screen .pocket-help { color: #1e2226; }
+  .pocket-screen .pocket-en { color: #4a5058; }
+}

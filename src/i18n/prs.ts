@@ -201,6 +201,19 @@ const lang: HelpLanguage = {
     lessonsUnit: 'درس',
     lessonsUnitOne: 'درس',
     allTopicsDone: 'همهٔ موضوع‌ها را ختم کردید. آفرین!',
+    // Speaking practice
+    tagSpeak: 'بگویید',
+    speakPrompt: 'گوش کنید، بعد بگویید',
+    tapToSpeak: 'لمس کنید و گپ بزنید',
+    stopRecording: 'توقف',
+    micPrivacy: 'فقط خود شما می‌شنوید. هیچ چیزی فرستاده نمی‌شود.',
+    micUnavailable: 'مایکروفون در دسترس نیست. مشکلی نیست، ادامه بدهید.',
+    cantSpeak: 'حالا نمی‌توانم گپ بزنم',
+    soundsSame: 'مثل هم است',
+    sayAgain: 'دوباره بگویید',
+    speakMe: 'من',
+    speakingPractice: 'تمرین گپ زدن',
+    speakingHint: 'کلمه‌ها را بلند بگویید و مقایسه کنید. صدای شما هیچ وقت ذخیره یا فرستاده نمی‌شود.',
   },
   gloss: {
     // Units

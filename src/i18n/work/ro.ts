@@ -798,7 +798,7 @@ const t: CultureTranslation = {
     'c.ww.w': 'Demisia te poate costa ajutorul de șomaj. Dacă vorbești întâi cu șeful, cu sindicatul sau cu Juridisch Loket, poți găsi o cale mai bună.',
     'c.newjob': 'Cum cauți o muncă nouă',
     'c.newjob.b': 'Înainte să pleci, cere o referință (referentie). Păstrează fluturașii de salariu și contractul. Actualizează-ți CV-ul. Caută de lucru la agențiile de muncă temporară (uitzendbureaus) și pe werk.nl. Nu plăti niciodată bani ca să primești un loc de muncă.',
-    'c.newjob.p': 'Pot să vă dau numele ca referință?',
+    'c.newjob.p': 'Pot să dau numele dumneavoastră ca referință?',
     'c.newjob.s': 'Cineva îți oferă un loc de muncă, dar întâi trebuie să plătești 300 de euro „pentru post”. Ce faci?',
     'c.newjob.o1': 'Nu plătești. Cauți de lucru printr-o agenție adevărată sau pe werk.nl.',
     'c.newjob.o2': 'Plătești, pentru că un loc de muncă bun merită.',

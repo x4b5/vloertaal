@@ -9,6 +9,7 @@ import { Bi } from './Bi';
 import { Character } from './Characters';
 import { BackIcon, CheckIcon, ChevronIcon } from './Icons';
 import { LogoMark } from './Logo';
+import { PocketIcon } from './Offline';
 
 /**
  * A certificate per finished unit ("Oefencertificaat"):
@@ -182,8 +183,10 @@ function NameCard({ name, lang, onName, onDone }: {
 }
 
 /** The certificate of one unit, with the name, Print / PDF and Share as picture. */
-export function CertificateScreen({ unit, day, lang, onBack }: {
+export function CertificateScreen({ unit, day, lang, onBack, onPocket }: {
   unit: Unit;
+  /** Opens the unit's pocket card. */
+  onPocket?: () => void;
   /** YYYY-MM-DD it was earned. */
   day: string;
   lang?: HelpLanguage;
@@ -249,6 +252,7 @@ export function CertificateScreen({ unit, day, lang, onBack }: {
       {note === 'saved' && (
         <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
       )}
+      {onPocket && <PocketLink lang={lang} onOpen={onPocket} />}
       {!asking && (
         <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
           <span lang="nl">Naam wijzigen</span>
@@ -263,8 +267,10 @@ export function CertificateScreen({ unit, day, lang, onBack }: {
  * "Certificaat behaald": shown once, after the result of a unit's last lesson. The milestone
  * shell (Bram, one line, the footer button), with the certificate preview and Bekijk / Later.
  */
-export function CertEarned({ unit, day, lang, onView, onLater }: {
+export function CertEarned({ unit, day, lang, onView, onLater, onPocket }: {
   unit: Unit;
+  /** Opens the unit's pocket card, next to the certificate. */
+  onPocket?: () => void;
   day: string;
   lang?: HelpLanguage;
   onView: () => void;
@@ -287,6 +293,7 @@ export function CertEarned({ unit, day, lang, onView, onLater }: {
           <span lang="nl">{unit.titleNl}</span>
           <Bi className="cert-earned-hint" text={ui('certEarnedHint', lang)} />
         </p>
+        {onPocket && <PocketLink lang={lang} onOpen={onPocket} />}
       </main>
       <footer className="player-foot milestone-foot">
         <div className="foot-inner">
@@ -307,6 +314,17 @@ export function CertEarned({ unit, day, lang, onView, onLater }: {
         </div>
       </footer>
     </div>
+  );
+}
+
+/** "Spiekkaartje": the unit's pocket card, offered next to its certificate. */
+function PocketLink({ lang, onOpen }: { lang?: HelpLanguage; onOpen: () => void }) {
+  return (
+    <button type="button" className="unit-tool pocket-open cert-pocket" onClick={onOpen} dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
+      <PocketIcon />
+      <span className="unit-tool-text"><Bi className="unit-tool-label" text={ui('pocketCard', lang)} /></span>
+      <ChevronIcon size={18} />
+    </button>
   );
 }
 

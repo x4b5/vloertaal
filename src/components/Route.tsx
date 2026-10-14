@@ -17,6 +17,7 @@ import { CertBadge } from './Certificate';
 import { BackIcon, CheckIcon, ChevronIcon, LockIcon } from './Icons';
 import { RestartLink, ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
+import { UnitTools } from './Offline';
 
 /**
  * The home ("Route"), one block at a time (src/lib/route.ts):
@@ -30,7 +31,7 @@ import { DailyReview } from './Screens';
  * learner first sees what the topic is (the picture, the title, its lessons) before a lesson
  * begins, and a wrong tap costs nothing.
  */
-export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onPick, onAll, onUpgrade, onCertificate, arrived, onArrived, focusUnit, onFocused, picking: pickingAtStart = false, openDone: openAtStart = null }: {
+export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onPick, onAll, onUpgrade, onCertificate, onPocket, arrived, onArrived, focusUnit, onFocused, picking: pickingAtStart = false, openDone: openAtStart = null }: {
   progress: Progress;
   lang?: HelpLanguage;
   access?: Access;
@@ -45,6 +46,8 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   /** Opens the unlock card (preview). */
   onUpgrade?: () => void;
   onCertificate?: (unitId: string) => void;
+  /** Opens a unit's pocket card ("Spiekkaartje"). */
+  onPocket?: (unitId: string) => void;
   /** Back from a finished lesson: the next lesson (or the choice) in view, stamp the done one. */
   arrived?: string | null;
   onArrived?: () => void;
@@ -186,7 +189,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
             <UnitTitle unit={block} lang={lang} heading />
             <BlockProgress unit={block} completed={completed} lang={lang} />
           </div>
-          {!unitAllowed(block.id, access) && fullOnly}
+          {unitAllowed(block.id, access) ? <UnitTools unit={block} lang={lang} onPocket={onPocket} /> : fullOnly}
           {lessons(block)}
           {/* A brand-new learner gets one block only, no choice yet. */}
           {!brandNew && <button type="button" className="rb-switch" onClick={() => { setPicking(true); setOpenDone(null); }}>
@@ -282,6 +285,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                 {onCertificate && unitAllowed(unit.id, access) && unitDone(unit, completed) && (
                   <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />
                 )}
+                {unitAllowed(unit.id, access) && <UnitTools unit={unit} lang={lang} onPocket={onPocket} />}
                 {lessons(unit)}
               </div>
             );

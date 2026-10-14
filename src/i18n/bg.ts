@@ -201,6 +201,19 @@ const lang: HelpLanguage = {
     lessonsUnit: 'урока',
     lessonsUnitOne: 'урок',
     allTopicsDone: 'Всички теми са завършени. Браво!',
+    // Speaking practice
+    tagSpeak: 'Говори',
+    speakPrompt: 'Чуй, после го кажи',
+    tapToSpeak: 'Докосни и говори',
+    stopRecording: 'Стоп',
+    micPrivacy: 'Само ти го чуваш. Нищо не се изпраща.',
+    micUnavailable: 'Микрофонът не е достъпен. Няма проблем, продължи.',
+    cantSpeak: 'Сега не мога да говоря',
+    soundsSame: 'Звучи еднакво',
+    sayAgain: 'Кажи отново',
+    speakMe: 'Аз',
+    speakingPractice: 'Упражнение по говорене',
+    speakingHint: 'Казвай думите на глас и сравнявай. Гласът ти никога не се запазва и не се изпраща.',
   },
   gloss: {
     // Units

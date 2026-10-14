@@ -201,6 +201,19 @@ const lang: HelpLanguage = {
     lessonsUnit: 'уроків',
     lessonsUnitOne: 'урок',
     allTopicsDone: 'Усі теми пройдено. Чудово!',
+    // Speaking practice
+    tagSpeak: 'Говори',
+    speakPrompt: 'Послухай, потім скажи',
+    tapToSpeak: 'Натисни й говори',
+    stopRecording: 'Стоп',
+    micPrivacy: 'Чуєш тільки ти. Нічого не надсилається.',
+    micUnavailable: 'Мікрофон недоступний. Нічого страшного, продовжуй.',
+    cantSpeak: 'Зараз не можу говорити',
+    soundsSame: 'Звучить так само',
+    sayAgain: 'Скажи ще раз',
+    speakMe: 'Я',
+    speakingPractice: 'Практика мовлення',
+    speakingHint: 'Кажи слова вголос і порівнюй. Твій голос ніколи не зберігається і не надсилається.',
   },
   gloss: {
     // Unit: First day at work

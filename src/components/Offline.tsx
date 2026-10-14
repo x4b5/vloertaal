@@ -88,8 +88,10 @@ export function OfflineControl({ unit, lang }: { unit: Unit; lang?: HelpLanguage
       <div className="unit-tool offline-saving" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct} aria-label={label('savingOffline')}>
         <span className="offline-fill" style={{ width: `${pct}%` }} aria-hidden />
         <DownloadIcon />
-        <Bi className="unit-tool-label" text={ui('savingOffline', lang)} />
-        <b className="unit-tool-size" dir="ltr">{pct}%</b>
+        <span className="unit-tool-text">
+          <Bi className="unit-tool-label" text={ui('savingOffline', lang)} />
+          <b className="unit-tool-size" dir="ltr">{pct}%</b>
+        </span>
       </div>
     );
   }
@@ -97,8 +99,10 @@ export function OfflineControl({ unit, lang }: { unit: Unit; lang?: HelpLanguage
     return (
       <div className="unit-tool offline-saved" role="status">
         <span className="offline-done" aria-hidden><DownloadDoneIcon size={20} /></span>
-        <Bi className="unit-tool-label" text={ui('savedOffline', lang)} />
-        <span className="unit-tool-size" dir="ltr">{formatBytes(state.bytes)}</span>
+        <span className="unit-tool-text">
+          <Bi className="unit-tool-label" text={ui('savedOffline', lang)} />
+          <span className="unit-tool-size" dir="ltr">{formatBytes(state.bytes)}</span>
+        </span>
         <button
           type="button"
           className="offline-remove"
@@ -119,8 +123,10 @@ export function OfflineControl({ unit, lang }: { unit: Unit; lang?: HelpLanguage
         aria-label={`${label('saveOffline')}${estimate ? ` · ${formatBytes(estimate)}` : ''}`}
       >
         <DownloadIcon />
-        <Bi className="unit-tool-label" text={ui('saveOffline', lang)} />
-        {estimate !== null && <span className="unit-tool-size" dir="ltr" aria-hidden>≈ {formatBytes(estimate)}</span>}
+        <span className="unit-tool-text">
+          <Bi className="unit-tool-label" text={ui('saveOffline', lang)} />
+          {estimate !== null && <span className="unit-tool-size" dir="ltr" aria-hidden>≈ {formatBytes(estimate)}</span>}
+        </span>
       </button>
       {state.status === 'error' && (
         <p className="offline-error" role="alert">
@@ -140,7 +146,7 @@ export function UnitTools({ unit, lang, onPocket }: { unit: Unit; lang?: HelpLan
       {onPocket && (
         <button type="button" className="unit-tool pocket-open" onClick={() => onPocket(unit.id)}>
           <PocketIcon />
-          <Bi className="unit-tool-label" text={ui('pocketCard', lang)} />
+          <span className="unit-tool-text"><Bi className="unit-tool-label" text={ui('pocketCard', lang)} /></span>
         </button>
       )}
     </div>

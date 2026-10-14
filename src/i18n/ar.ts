@@ -201,6 +201,19 @@ const lang: HelpLanguage = {
     lessonsUnit: 'دروس',
     lessonsUnitOne: 'درس',
     allTopicsDone: 'أنهيت كل المواضيع. أحسنت!',
+    // Speaking practice
+    tagSpeak: 'تكلّم',
+    speakPrompt: 'استمع، ثم قلها',
+    tapToSpeak: 'اضغط وتكلّم',
+    stopRecording: 'توقّف',
+    micPrivacy: 'أنت فقط تسمعه. لا يُرسَل أي شيء.',
+    micUnavailable: 'الميكروفون غير متاح. لا بأس، تابع.',
+    cantSpeak: 'لا أستطيع التكلّم الآن',
+    soundsSame: 'يبدو مثله',
+    sayAgain: 'قلها مرة أخرى',
+    speakMe: 'أنا',
+    speakingPractice: 'تمرين التكلّم',
+    speakingHint: 'قل الكلمات بصوت عالٍ وقارن. صوتك لا يُحفَظ ولا يُرسَل أبداً.',
   },
   gloss: {
     // Units
