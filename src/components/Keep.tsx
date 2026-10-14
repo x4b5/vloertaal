@@ -5,8 +5,10 @@ import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
 import { backupFile, bestStreak, mergeBackup, parseBackup, replaceWithBackup, type Progress } from '../lib/progress';
 import { REMINDER_TIMES, reminderIcs, saveFile } from '../lib/reminder';
+import { REMIND_DEFAULT, REMIND_OTHER_TIMES, keepNext, type KeepAction, type KeepStep } from '../lib/keep';
 import { Bi } from './Bi';
-import { CheckIcon } from './Icons';
+import { Character } from './Characters';
+import { CheckIcon, ChevronIcon } from './Icons';
 import { LogoMark } from './Logo';
 
 /**
@@ -281,5 +283,169 @@ export function BackupCard({ progress, lang, onRestore }: {
         </p>
       )}
     </section>
+  );
+}
+
+/* ---- After the first day: the reminder and the home screen, a few calm pages ---- */
+
+/** Puts the daily reminder in the phone's calendar (a .ics file the phone opens). */
+function addReminder(time: string) {
+  const url = `${location.origin}${location.pathname}`;
+  saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, url, new Date()));
+}
+
+/** A tap meant for the page before is ignored for a moment (as on the milestone). */
+function useGuard(step: string) {
+  const ready = useRef(false);
+  useEffect(() => {
+    ready.current = false;
+    const still = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const t = window.setTimeout(() => { ready.current = true; }, still ? 300 : 500);
+    return () => window.clearTimeout(t);
+  }, [step]);
+  return (fn: () => void) => () => { if (ready.current) fn(); };
+}
+
+/** The page title: the Dutch small, the help language large. */
+function KeepTitle({ nl, text, lang }: { nl: string; text: ReturnType<typeof ui>; lang?: HelpLanguage }) {
+  return (
+    <h1 className="keep3-title" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
+      <span className="keep3-nl" lang="nl" dir="ltr">{nl}</span>
+      <Bi className="keep3-gloss" text={text} />
+    </h1>
+  );
+}
+
+/**
+ * The reminder and home-screen offer after the first day's milestone (src/lib/keep.ts), one
+ * small page at a time, at most 3 choices each:
+ *  ask: [Yes, after work · 18:00] [Other time] [No thanks];
+ *  times: 07:00 / 12:00 / 20:00 (a tap adds it);
+ *  install (only when the phone can): [Add to home screen] [Later];
+ *  added: "Open the file to add it" and Continue (when there is no install page).
+ */
+export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => void }) {
+  const way = useInstallWay();
+  const [step, setStep] = useState<KeepStep>('ask');
+  const [added, setAdded] = useState<string | null>(null);
+  const guard = useGuard(step);
+  const rtl = lang?.dir === 'rtl';
+  const go = (action: KeepAction) => {
+    const next = keepNext(step, action, Boolean(way));
+    if (next === 'done') onDone();
+    else { setStep(next); window.scrollTo(0, 0); }
+  };
+  const remind = (time: string, action: KeepAction) => { addReminder(time); setAdded(time); go(action); };
+  const [short] = useState(() => typeof window !== 'undefined' && window.innerHeight < 720);
+  const hero = (mood: 'wave' | 'cheer') => <div className="keep-hero" aria-hidden><Character who="bram" mood={mood} size={short ? 72 : 112} /></div>;
+
+  let body;
+  if (step === 'ask') {
+    body = (
+      <>
+        {hero('wave')}
+        <KeepTitle nl="Herinner mij elke dag" text={ui('remindAsk', lang)} lang={lang} />
+        <p className="keep3-hint"><Bi text={ui('remindHint', lang)} /></p>
+        <div className="keep3-actions">
+          <button type="button" className="btn btn-primary keep3-btn keep-yes" onClick={guard(() => remind(REMIND_DEFAULT.time, 'yes'))} dir={rtl ? 'rtl' : undefined}>
+            <span className="keep3-time" dir="ltr">{REMIND_DEFAULT.time}</span>
+            <span className="keep3-btn-text">
+              <Bi className="keep3-btn-gloss" text={ui('remindYes', lang)} />
+              <span className="keep3-btn-nl" lang="nl" dir="ltr">Ja, na het werk</span>
+            </span>
+          </button>
+          <button type="button" className="btn btn-ghost keep3-btn keep-other" onClick={guard(() => go('other'))} dir={rtl ? 'rtl' : undefined}>
+            <ClockGlyph />
+            <span className="keep3-btn-text">
+              <Bi className="keep3-btn-gloss" text={ui('remindOwn', lang)} />
+              <span className="keep3-btn-nl" lang="nl" dir="ltr">Andere tijd</span>
+            </span>
+            <ChevronIcon size={20} />
+          </button>
+          <button type="button" className="keep-link keep3-no keep-no" onClick={guard(() => go('no'))}>
+            <span lang="nl">Nee, dank je</span>
+            <Bi className="keep-link-gloss" text={ui('remindNo', lang)} />
+          </button>
+        </div>
+      </>
+    );
+  } else if (step === 'times') {
+    body = (
+      <>
+        <KeepTitle nl="Hoe laat?" text={ui('remindPickTime', lang)} lang={lang} />
+        <p className="keep3-hint"><Bi text={ui('remindHint', lang)} /></p>
+        <ul className="keep3-times">
+          {REMIND_OTHER_TIMES.map((t) => (
+            <li key={t.time}>
+              <button type="button" className="keep3-time-btn" onClick={guard(() => remind(t.time, 'time'))} dir={rtl ? 'rtl' : undefined}>
+                <span className="keep3-time" dir="ltr">{t.time}</span>
+                <span className="keep3-btn-text">
+                  <Bi className="keep3-btn-gloss" text={ui(t.key, lang)} />
+                  <span className="keep3-btn-nl" lang="nl" dir="ltr">{t.nl}</span>
+                </span>
+                <CalendarGlyph />
+              </button>
+            </li>
+          ))}
+        </ul>
+      </>
+    );
+  } else if (step === 'install') {
+    body = (
+      <>
+        <div className="keep-hero keep3-logo" aria-hidden><LogoMark size={short ? 64 : 88} /></div>
+        {added && <p className="keep-ok keep3-added" role="status"><CheckIcon size={20} /><span dir="ltr">{added}</span><Bi text={ui('remindAdded', lang)} /></p>}
+        <KeepTitle nl="Zet Vloertaal op je beginscherm" text={ui('installTitle', lang)} lang={lang} />
+        <p className="keep3-hint"><Bi text={ui('installHint', lang)} /></p>
+        {way === 'ios' && (
+          <ol className="ios-steps keep3-ios">
+            <li><span className="ios-num" aria-hidden>1</span><span className="ios-pic"><ShareGlyph /></span><span className="ios-nl" lang="nl">Deel</span><Bi className="ios-gloss" text={ui('iosStep1', lang)} /></li>
+            <li><span className="ios-num" aria-hidden>2</span><span className="ios-pic"><AddGlyph /></span><span className="ios-nl" lang="nl">Zet op begin&shy;scherm</span><Bi className="ios-gloss" text={ui('iosStep2', lang)} /></li>
+            <li><span className="ios-num" aria-hidden>3</span><span className="ios-pic"><LogoMark size={30} /></span><span className="ios-nl" lang="nl">Klaar</span><Bi className="ios-gloss" text={ui('iosStep3', lang)} /></li>
+          </ol>
+        )}
+        <div className="keep3-actions">
+          {way === 'prompt' && (
+            <button type="button" className="btn btn-primary keep3-btn keep-install" onClick={guard(() => { void promptInstall().finally(() => go('next')); })} dir={rtl ? 'rtl' : undefined}>
+              <AddGlyph />
+              <span className="keep3-btn-text">
+                <Bi className="keep3-btn-gloss" text={ui('installAdd', lang)} />
+                <span className="keep3-btn-nl" lang="nl" dir="ltr">Op beginscherm</span>
+              </span>
+            </button>
+          )}
+          <button type="button" className={`btn ${way === 'prompt' ? 'btn-ghost' : 'btn-primary'} keep3-btn keep-later`} onClick={guard(() => go('next'))}>
+            <span className="keep3-btn-text keep3-center">
+              {way === 'prompt' ? (
+                <>
+                  <span className="keep3-btn-nl" lang="nl">Later</span>
+                  {lang && <Bi className="keep3-btn-gloss" text={ui('certLater', lang)} />}
+                </>
+              ) : (
+                <Bi className="keep3-btn-gloss" text={ui('continue', lang)} />
+              )}
+            </span>
+          </button>
+        </div>
+      </>
+    );
+  } else {
+    body = (
+      <>
+        {hero('cheer')}
+        <p className="keep-ok keep3-added keep3-added-big" role="status"><CheckIcon size={24} /><span dir="ltr">{added}</span></p>
+        <KeepTitle nl="Zet in je agenda" text={ui('remindAdded', lang)} lang={lang} />
+        <div className="keep3-actions">
+          <button type="button" className="btn btn-primary keep3-btn keep-continue" onClick={guard(() => go('next'))}>
+            <span className="keep3-btn-text keep3-center"><Bi className="keep3-btn-gloss" text={ui('continue', lang)} /></span>
+          </button>
+        </div>
+      </>
+    );
+  }
+  return (
+    <div className="player milestone-screen keep-screen keep3">
+      <main className={`player-body milestone keep3-page keep3-step-${step}`}>{body}</main>
+    </div>
   );
 }

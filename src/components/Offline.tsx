@@ -1,27 +1,35 @@
-import { useEffect, useReducer, useState } from 'react';
-import type { Unit } from '../content/types';
+import { useEffect, useId, useReducer } from 'react';
+import { findUnit, unitDone } from '../lib/certificate';
 import { gloss, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
+import { type Access, unitAllowed } from '../lib/access';
 import { onRecordedVoices, preferredVoiceRef } from '../lib/audio';
 import {
+  autoOfflinePlan,
   currentVoices,
   dismissOfflineError,
-  estimateBytes,
   formatBytes,
+  offlineAuto,
+  offlineSnapshot,
   offlineState,
   offlineSupported,
   onOfflineChange,
   removeUnitOffline,
   saveUnitOffline,
+  setOfflineAuto,
   voicesKey,
 } from '../lib/offline';
+import type { Progress } from '../lib/progress';
+import { currentBlock } from '../lib/route';
 import { Bi } from './Bi';
-import { CloseIcon } from './Icons';
 
 /**
- * The small row under a unit's header (the home's block, the "Gedaan" shelf and "Alle
- * onderwerpen"): "Save for offline" and the pocket card. Calm: two quiet chips, no colour
- * until something is saved.
+ * "Keep lessons on this phone" (Settings → This phone): one switch. When it is on, the topic the
+ * learner works in is saved on the phone by itself (src/lib/offline.ts: autoOfflinePlan), and
+ * finished topics are released again. No per-unit buttons anywhere.
+ *  - useAutoOffline: runs in App, saves and releases as the current topic changes;
+ *  - useOfflineAuto: the setting, for any switch;
+ *  - OfflineSettingCard: the switch with one status line, for Settings.
  */
 
 type IconProps = { size?: number };
@@ -52,122 +60,111 @@ export const PocketIcon = ({ size = 22 }: IconProps) => (
   </svg>
 );
 
-/** Follows the saved state of a unit (and the voices, which arrive after the app opens). */
-function useOfflineUnit(unitId: string) {
-  const [, repaint] = useReducer((n: number) => n + 1, 0);
+/** Repaints on any offline change, and when the recorded voices arrive after the app opens. */
+function useOfflineRepaint() {
+  const [n, repaint] = useReducer((x: number) => x + 1, 0);
   useEffect(() => {
     const a = onOfflineChange(repaint);
     const b = onRecordedVoices(repaint);
     return () => { a(); b(); };
   }, []);
+  return n;
+}
+
+/** The setting "Keep lessons on this phone": [on, set]. */
+export function useOfflineAuto(): [boolean, (on: boolean) => void] {
+  useOfflineRepaint();
+  return [offlineAuto(), (on: boolean) => {
+    if (on) for (const id of offlineSnapshot('').busy) dismissOfflineError(id);
+    setOfflineAuto(on);
+  }];
+}
+
+/** The topic kept on the phone now: the current block, when the learner may play it. */
+function keptUnit(progress: Progress, access: Access) {
+  const block = progress.onboarded && progress.sector !== undefined ? currentBlock(progress) : null;
+  return block && unitAllowed(block.id, access) ? block : null;
+}
+
+/**
+ * Keeps the current topic on the phone while the setting is on (call it once, in App, before any
+ * early return). It waits a moment after a change, so the home paints first, and only online.
+ */
+export function useAutoOffline(progress: Progress, access: Access | null) {
+  const tick = useOfflineRepaint();
+  const on = offlineAuto();
+  const unit = access ? keptUnit(progress, access) : null;
   const voices = currentVoices(preferredVoiceRef());
-  return { voices, state: offlineState(unitId, voicesKey(voices)) };
-}
-
-export function OfflineControl({ unit, lang }: { unit: Unit; lang?: HelpLanguage }) {
-  const { voices, state } = useOfflineUnit(unit.id);
-  const [estimate, setEstimate] = useState<number | null>(null);
-  const [confirming, setConfirming] = useState(false);
-  const showSave = state.status === 'none' || state.status === 'error' || (state.status === 'saved' && state.stale);
   const vk = voicesKey(voices);
+  const doneKey = Object.keys(progress.completed).length;
   useEffect(() => {
-    if (!showSave || !offlineSupported()) return;
-    let live = true;
-    estimateBytes(unit, voices).then((b) => live && setEstimate(b)).catch(() => {});
-    return () => { live = false; };
+    if (!on || !offlineSupported()) return;
+    const t = window.setTimeout(() => {
+      if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
+      const { saved, busy } = offlineSnapshot(vk);
+      const plan = autoOfflinePlan({
+        current: unit?.id ?? null,
+        saved,
+        busy,
+        done: (id) => {
+          const u = findUnit(id);
+          return u ? unitDone(u, progress.completed) : true;
+        },
+      });
+      for (const id of plan.release) void removeUnitOffline(id);
+      if (plan.save && unit) void saveUnitOffline(unit, voices);
+    }, 1500);
+    return () => window.clearTimeout(t);
+    // `tick` repaints after a save or a removal, so a finished save is not started again.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [unit.id, showSave, vk]);
-  if (!offlineSupported()) return null;
-  const label = (key: 'saveOffline' | 'savingOffline' | 'savedOffline') => {
-    const t = ui(key, lang);
-    return `${t.help ? `${t.help} · ` : ''}${t.en}`;
-  };
-
-  if (state.status === 'saving') {
-    const pct = Math.round((state.done / Math.max(1, state.total)) * 100);
-    return (
-      <div className="unit-tool offline-saving" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct} aria-label={label('savingOffline')}>
-        <span className="offline-fill" style={{ width: `${pct}%` }} aria-hidden />
-        <DownloadIcon />
-        <span className="unit-tool-text">
-          <Bi className="unit-tool-label" text={ui('savingOffline', lang)} />
-          <b className="unit-tool-size" dir="ltr">{pct}%</b>
-        </span>
-      </div>
-    );
-  }
-  if (state.status === 'saved' && !state.stale && confirming) {
-    // "Remove?" asked in place, no pop-up: Ja removes, Nee keeps (words from the first unit).
-    return (
-      <div className="unit-tool offline-saved offline-confirm" role="group" aria-label={`${ui('removeOffline').en}?`}>
-        <span className="unit-tool-text">
-          <Bi className="unit-tool-label" text={{ ...ui('removeOffline', lang), en: `${ui('removeOffline').en}?`, help: ui('removeOffline', lang).help && `${ui('removeOffline', lang).help}?` }} />
-        </span>
-        <span className="offline-confirm-btns">
-          <button type="button" className="offline-yes" onClick={() => { setConfirming(false); removeUnitOffline(unit.id); }} aria-label={`Ja · ${gloss('w.ja', 'yes', lang).help ?? 'yes'}`}>
-            <span lang="nl">Ja</span>
-          </button>
-          <button type="button" className="offline-no" onClick={() => setConfirming(false)} aria-label={`Nee · ${gloss('w.nee', 'no', lang).help ?? 'no'}`} autoFocus>
-            <span lang="nl">Nee</span>
-          </button>
-        </span>
-      </div>
-    );
-  }
-  if (state.status === 'saved' && !state.stale) {
-    return (
-      <div className="unit-tool offline-saved" role="status">
-        <span className="offline-done" aria-hidden><DownloadDoneIcon size={20} /></span>
-        <span className="unit-tool-text">
-          <Bi className="unit-tool-label" text={ui('savedOffline', lang)} />
-          <span className="unit-tool-size" dir="ltr">{formatBytes(state.bytes)}</span>
-        </span>
-        <button
-          type="button"
-          className="offline-remove"
-          onClick={() => setConfirming(true)}
-          aria-label={`${ui('removeOffline').en}${ui('removeOffline', lang).help ? ` (${ui('removeOffline', lang).help})` : ''}`}
-        >
-          <CloseIcon size={18} />
-        </button>
-      </div>
-    );
-  }
-  return (
-    <>
-      <button
-        type="button"
-        className="unit-tool offline-save"
-        onClick={() => { dismissOfflineError(unit.id); saveUnitOffline(unit, voices); }}
-        aria-label={`${label('saveOffline')}${estimate ? ` · ${formatBytes(estimate)}` : ''}`}
-      >
-        <DownloadIcon />
-        <span className="unit-tool-text">
-          <Bi className="unit-tool-label" text={ui('saveOffline', lang)} />
-          {estimate !== null && <span className="unit-tool-size" dir="ltr" aria-hidden>≈ {formatBytes(estimate)}</span>}
-        </span>
-      </button>
-      {state.status === 'error' && (
-        <p className="offline-error" role="alert">
-          <Bi text={ui(state.reason === 'space' ? 'offlineNoSpace' : 'offlineFailed', lang)} />
-        </p>
-      )}
-    </>
-  );
+  }, [on, unit?.id, vk, doneKey, tick]);
 }
 
-/** The row under a unit's header: save for offline, and the pocket card (when it can open). */
-export function UnitTools({ unit, lang, onPocket }: { unit: Unit; lang?: HelpLanguage; onPocket?: (unitId: string) => void }) {
+/**
+ * The switch for Settings → This phone: "Keep lessons on this phone", one hint line, and while
+ * it is on, what is on the phone now (saving 40%, saved · 1.9 MB, or why it did not work).
+ * One tappable thing. Hidden where the browser cannot keep files.
+ */
+export function OfflineSettingCard({ progress, lang, access = 'full' }: { progress: Progress; lang?: HelpLanguage; access?: Access }) {
+  const [on, setOn] = useOfflineAuto();
+  const label = useId();
+  if (!offlineSupported()) return null;
+  const unit = keptUnit(progress, access);
+  const state = unit ? offlineState(unit.id, voicesKey(currentVoices(preferredVoiceRef()))) : null;
+  const title = unit ? gloss(unit.id, unit.title, lang) : null;
   const rtl = lang?.dir === 'rtl';
   return (
-    <div className="unit-tools" dir={rtl ? 'rtl' : undefined} onClick={(e) => e.stopPropagation()}>
-      <OfflineControl unit={unit} lang={lang} />
-      {onPocket && (
-        <button type="button" className="unit-tool pocket-open" onClick={() => onPocket(unit.id)}>
-          <PocketIcon />
-          <span className="unit-tool-text"><Bi className="unit-tool-label" text={ui('pocketCard', lang)} /></span>
+    <section className="keep-card offline-card" dir={rtl ? 'rtl' : undefined}>
+      <div className="count-row">
+        <div className="keep-head" id={label}>
+          <span className="keep-nl" lang="nl" dir="ltr">Lessen op deze telefoon</span>
+          <Bi className="keep-gloss" text={ui('settingKeepLessons', lang)} />
+        </div>
+        <button type="button" role="switch" aria-checked={on} aria-labelledby={label} className={`count-switch ${on ? 'on' : ''}`} onClick={() => setOn(!on)}>
+          <span className="count-knob" aria-hidden />
+          <span className="count-state" lang="nl" aria-hidden>{on ? 'Aan' : 'Uit'}</span>
         </button>
+      </div>
+      <p className="keep-hint"><Bi text={ui('settingKeepLessonsHint', lang)} /></p>
+      {on && state && title && (
+        <p className={`offline-status offline-${state.status}`} role="status">
+          {state.status === 'error' ? (
+            <Bi text={ui(state.reason === 'space' ? 'offlineNoSpace' : 'offlineFailed', lang)} />
+          ) : (
+            <>
+              <span className="offline-status-icon" aria-hidden>{state.status === 'saved' ? <DownloadDoneIcon size={20} /> : <DownloadIcon size={20} />}</span>
+              <span className="offline-status-text">
+                <Bi className="offline-status-topic" text={title} />
+                <span className="offline-status-line">
+                  <Bi text={ui(state.status === 'saved' ? 'savedOffline' : 'savingOffline', lang)} />
+                  {state.status === 'saved' && <b dir="ltr">{formatBytes(state.bytes)}</b>}
+                  {state.status === 'saving' && <b dir="ltr">{Math.round((state.done / Math.max(1, state.total)) * 100)}%</b>}
+                </span>
+              </span>
+            </>
+          )}
+        </p>
       )}
-    </div>
+    </section>
   );
 }

@@ -1,39 +1,38 @@
-import { type ReactNode, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Character } from './Characters';
 import { unitIcons } from '../content/unitIcons';
+import { coursePlan } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { gloss, ui, uiCount, type Bilingual } from '../i18n';
-import type { Gender, HelpLanguage } from '../i18n/types';
+import type { HelpLanguage } from '../i18n/types';
 import { type Access, unitAllowed } from '../lib/access';
 import { unitDone } from '../lib/certificate';
+import { isUnlocked } from '../lib/exercises';
 import type { DailyCard } from '../lib/spaced';
 import type { Progress } from '../lib/progress';
-import { blockDoneCount, blockNext, currentBlock, doneBlocks, nextChoices, routeOrder } from '../lib/route';
-import { clearSave, loadSaves } from '../lib/resume';
+import { blockDoneCount, blockNext, currentBlock, homeLessonState, homeSuggestions, routeOrder } from '../lib/route';
+import { loadSaves } from '../lib/resume';
 import { hasPicture } from '../lib/wordPicture';
 import { WordPicture } from '../pictures';
 import { Bi, HelpText } from './Bi';
 import { CertBadge } from './Certificate';
-import { BackIcon, CheckIcon, ChevronIcon, LockIcon } from './Icons';
-import { RestartLink, ResumeChip, resumeLabel } from './Resume';
+import { BackIcon, CheckIcon, ChevronIcon, CrownIcon, LockIcon } from './Icons';
+import { ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
-import { GenderCard } from './Gender';
-import { shouldAskGender } from '../lib/askGender';
-import { UnitTools } from './Offline';
+import { PocketIcon } from './Offline';
 
 /**
- * The home ("Route"), one block at a time (src/lib/route.ts):
- *  1. "Herhaal vandaag", only when words are due;
- *  2. the current block: the unit's picture and title, "2 / 4 lessons", and its lessons (only the
- *     next one is the big yellow Start card), with a small "Ander onderwerp kiezen" link;
- *     or, when the block is finished, "Kies je volgende onderwerp" with 3 block cards;
- *  3. "Gedaan": a row of small pictures of the finished units (tap one to practise it again);
- *  4. "Alle onderwerpen": the full list, on its own screen.
- * Tapping a block card makes it the current block and shows it with its Start button, so the
- * learner first sees what the topic is (the picture, the title, its lessons) before a lesson
- * begins, and a wrong tap costs nothing.
+ * The home ("Route"): at most 3 things to tap (src/lib/route.ts).
+ *  - Working in a block: [Start / Continue] on its next lesson and [Other topic], plus
+ *    [Herhaal vandaag] when words are due. Done lessons are a calm tick, not a button
+ *    (practising again lives in "Herhaal vandaag" and All topics); "Start again" for a lesson
+ *    stopped halfway is in the pause sheet of that lesson.
+ *  - The block finished: 2 suggested next blocks and [Other topic].
+ * Tapping a suggestion makes it the current block and shows it with its Start button, so the
+ * learner first sees what the topic is before a lesson begins. "Other topic" opens All topics: a
+ * list of every topic, each leading to its topic page (lessons, pocket card, certificate).
  */
-export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onPick, onAll, onUpgrade, onCertificate, onPocket, arrived, onArrived, focusUnit, onFocused, onGender, onGenderLater, picking: pickingAtStart = false, openDone: openAtStart = null }: {
+export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused }: {
   progress: Progress;
   lang?: HelpLanguage;
   access?: Access;
@@ -43,55 +42,38 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   onStart: (lessonId: string, review: boolean) => void;
   /** Makes this unit the current block (stored in progress.currentUnit). */
   onPick: (unitId: string) => void;
-  /** Opens "Alle onderwerpen". */
+  /** "Other topic": opens All topics. */
   onAll: () => void;
   /** Opens the unlock card (preview). */
   onUpgrade?: () => void;
-  onCertificate?: (unitId: string) => void;
-  /** Opens a unit's pocket card ("Spiekkaartje"). */
-  onPocket?: (unitId: string) => void;
   /** Back from a finished lesson: the next lesson (or the choice) in view, stamp the done one. */
   arrived?: string | null;
   onArrived?: () => void;
   /** From a coach link: the block to mark for a moment (App made it the current block). */
   focusUnit?: string | null;
   onFocused?: () => void;
-  /** The one-time "Woman or man?" card (see shouldAskGender): a choice, or ✕ for good. */
-  onGender?: (gender: Gender) => void;
-  onGenderLater?: () => void;
-  /** Start with the choice open (dev screenshots of "Ander onderwerp kiezen"). */
-  picking?: boolean;
-  /** Start with this finished unit open on the shelf (dev screenshots). */
-  openDone?: string | null;
 }) {
   const { sector, completed } = progress;
   const rtl = lang?.dir === 'rtl';
   const block = currentBlock(progress);
-  const [picking, setPicking] = useState(pickingAtStart);
-  const choosing = !block || picking;
-  const brandNew = !Object.keys(completed).length;
-  const choices = choosing ? nextChoices(sector, completed, block?.id) : [];
-  const done = doneBlocks(sector, completed);
-  // A coach link to a finished unit opens it on the shelf (to practise it again).
-  const [openDone, setOpenDone] = useState<string | null>(() => (focusUnit && done.some((u) => u.id === focusUnit) ? focusUnit : openAtStart));
+  const choices = block ? [] : homeSuggestions(sector, completed);
   const [marked, setMarked] = useState<string | null>(focusUnit ?? null);
   // The lesson just finished: kept for this visit, for its one-time stamp.
   const [justDone] = useState<string | null>(arrived ?? null);
-  const [saves, setSaves] = useState(() => loadSaves());
+  const [saves] = useState(() => loadSaves());
   const ref = useRef<HTMLDivElement>(null);
   const order = routeOrder(sector);
   const unitIndex = (unit: Unit) => order.findIndex((u) => u.id === unit.id);
 
-  // After a lesson or a coach link: the next step in view (the next lesson, the choice, or the
-  // unit opened on the shelf), between the sticky top bar and the bottom bar.
+  // After a lesson or a coach link: the next step in view (the next lesson or the choice),
+  // between the sticky top bar and the bottom bar.
   useEffect(() => {
     if (!focusUnit && !arrived) return;
     const still = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     const t = window.setTimeout(() => {
       const top = document.querySelector('.topbar')?.getBoundingClientRect().bottom ?? 0;
       const foot = document.querySelector('.bottom-nav')?.getBoundingClientRect().top ?? window.innerHeight;
-      const root = ref.current;
-      const target = root?.querySelector<HTMLElement>(openDone ? '.rb-done-panel' : choosing ? '.rb-choose' : '.bay-now') ?? null;
+      const target = ref.current?.querySelector<HTMLElement>(block ? '.bay-now' : '.rb-choose') ?? null;
       if (target) {
         const r = target.getBoundingClientRect();
         // Fully in view already: nothing moves. Otherwise its top just under the top bar.
@@ -113,59 +95,57 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
 
   const pick = (unit: Unit) => {
     if (!unitAllowed(unit.id, access)) { onUpgrade?.(); return; }
-    setPicking(false);
     onPick(unit.id);
     window.scrollTo({ top: 0 });
   };
 
-  /** The lessons of a block: done rows (✓), the next lesson as the one big Start card, locked rows. */
+  /** The block's lessons: only the next one is a button (the big yellow card); the rest is calm text. */
   const lessons = (unit: Unit) => {
-    const allowed = unitAllowed(unit.id, access);
-    const next = allowed ? blockNext(unit, completed) : undefined;
     const u = unitIndex(unit);
     return (
       <ol className="bays rb-lessons">
         {unit.lessons.map((lesson, i) => {
-          const record = completed[lesson.id];
-          const state = !allowed ? 'locked' : record ? 'done' : lesson.id === next?.id ? 'now' : 'locked';
-          const open = state !== 'locked';
+          const state = homeLessonState(unit, lesson.id, completed, access);
           const first = lesson.words.find(hasPicture);
           const title = gloss(lesson.id, lesson.title, lang);
-          const saved = open && saves[lesson.id]?.review === Boolean(record) ? saves[lesson.id] : undefined;
+          const saved = state === 'now' && saves[lesson.id]?.review === false ? saves[lesson.id] : undefined;
+          const css = state === 'later' ? 'locked' : state;
+          const body = (
+            <>
+              {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
+              <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
+                <Bi className="bay-title" text={title} />
+                {saved && <ResumeChip save={saved} lang={lang} />}
+                {state === 'now' && !saved && (
+                  <span className="bay-start">
+                    <Bi className="bay-start-label" text={ui('start', lang)} />
+                    <ChevronIcon size={22} />
+                  </span>
+                )}
+              </span>
+              {state === 'now' && <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>}
+            </>
+          );
           return (
             <li
               key={lesson.id}
-              className={`bay bay-${state} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''}`}
+              className={`bay bay-${css} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''}`}
             >
               <span className="bay-marker" aria-hidden>{state === 'done' ? <CheckIcon size={18} /> : i + 1}</span>
-              <button
-                type="button"
-                className="bay-card"
-                disabled={!open}
-                onClick={() => onStart(lesson.id, Boolean(record))}
-                aria-label={`${u + 1}.${i + 1} ${lesson.title}${title.help ? ` (${title.help})` : ''}${saved ? ` · ${resumeLabel(saved)}` : open ? (record ? ` · ${ui('practice').en}` : ` · ${ui('start').en}`) : ` (${ui('locked').en})`}`}
-              >
-                {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
-                <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
-                  <Bi className="bay-title" text={title} />
-                  {saved && <ResumeChip save={saved} lang={lang} />}
-                  {state === 'now' && !saved && (
-                    <span className="bay-start">
-                      <Bi className="bay-start-label" text={ui('start', lang)} />
-                      <ChevronIcon size={22} />
-                    </span>
-                  )}
-                </span>
-                {state === 'done' && !saved && <ChevronIcon size={20} className="bay-chev" />}
-                {state === 'locked' && <LockIcon size={18} className="bay-lock" />}
-                {state === 'now' && <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>}
-              </button>
-              {saved && (
-                <RestartLink lang={lang} onRestart={() => {
-                  clearSave(lesson.id);
-                  setSaves(loadSaves());
-                  onStart(lesson.id, Boolean(record));
-                }} />
+              {state === 'now' ? (
+                <button
+                  type="button"
+                  className="bay-card"
+                  onClick={() => onStart(lesson.id, false)}
+                  aria-label={`${u + 1}.${i + 1} ${lesson.title}${title.help ? ` (${title.help})` : ''} · ${saved ? resumeLabel(saved) : ui('start').en}`}
+                >
+                  {body}
+                </button>
+              ) : (
+                <div className="bay-card bay-still">
+                  {body}
+                  <span className="sr-only">{state === 'done' ? ` · ${ui('stampDone').en}` : ''}</span>
+                </div>
               )}
             </li>
           );
@@ -174,38 +154,23 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
     );
   };
 
-  const fullOnly = (
-    <button type="button" className="full-only-note" onClick={onUpgrade}>
-      <LockIcon size={16} />
-      <span lang="nl">Volledige versie</span>
-      <Bi className="full-only-en" text={ui('fullVersion', lang)} />
-      <ChevronIcon size={16} />
-    </button>
-  );
-
   return (
-    <div className="path route" ref={ref} dir={rtl ? 'rtl' : undefined}>
+    <div className="path route home3" ref={ref} dir={rtl ? 'rtl' : undefined}>
       {daily?.state === 'due' && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
-      {onGender && onGenderLater && shouldAskGender(progress) && <GenderCard lang={lang} onPick={onGender} onLater={onGenderLater} />}
 
-      {block && !picking && (
+      {block && (
         <section className="rb-current" aria-label={`Unit ${unitIndex(block) + 1}: ${block.title}`}>
           <div id={`unit-${block.id.slice(2)}`} className={`rb-block ${marked === block.id ? 'rb-marked' : ''}`}>
             <WordPicture className="rb-pic" id={unitIcons[block.id] ?? ''} emoji={block.emoji} size={64} />
             <UnitTitle unit={block} lang={lang} heading />
             <BlockProgress unit={block} completed={completed} lang={lang} />
           </div>
-          {unitAllowed(block.id, access) ? <UnitTools unit={block} lang={lang} onPocket={onPocket} /> : fullOnly}
+          {!unitAllowed(block.id, access) && <FullOnly lang={lang} onUpgrade={onUpgrade} />}
           {lessons(block)}
-          {/* A brand-new learner gets one block only, no choice yet. */}
-          {!brandNew && <button type="button" className="rb-switch" onClick={() => { setPicking(true); setOpenDone(null); }}>
-            <Bi text={ui('otherTopic', lang)} />
-            <ChevronIcon size={18} />
-          </button>}
         </section>
       )}
 
-      {choosing && (
+      {!block && (
         <section className="rb-choose" aria-labelledby="rb-choose-title">
           {choices.length > 0 ? (
             <>
@@ -218,13 +183,12 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                   const allowed = unitAllowed(unit.id, access);
                   const n = blockDoneCount(unit, completed);
                   const rec = i === 0 && allowed;
-                  const now = unit.id === block?.id;
                   const t = unitTitle(unit, lang);
                   return (
                     <li key={unit.id}>
                       <button
                         type="button"
-                        className={`rb-choice ${rec ? 'rb-rec' : ''} ${allowed ? '' : 'rb-choice-locked'} ${now ? 'rb-choice-now' : ''}`}
+                        className={`rb-choice ${rec ? 'rb-rec' : ''} ${allowed ? '' : 'rb-choice-locked'}`}
                         onClick={() => pick(unit)}
                         aria-label={`${t.help ? `${t.help} · ` : ''}${unit.title} · ${unit.titleNl}${rec ? ` · Aanbevolen · ${ui('recommended').en}` : ''} · ${n ? `${n} / ` : ''}${unit.lessons.length} ${uiCount('lessonsUnit', unit.lessons.length).en}${allowed ? '' : ` · ${ui('fullVersion').en}`}`}
                       >
@@ -236,7 +200,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                             </span>
                           )}
                           <Bi className="rb-choice-title" text={t} />
-                          <LessonCount unit={unit} completed={completed} lang={lang} />
+                          {allowed ? <LessonCount unit={unit} completed={completed} lang={lang} /> : <span className="rb-count"><Bi text={ui('fullVersion', lang)} /></span>}
                         </span>
                         {allowed ? <ChevronIcon size={24} className="rb-choice-go" /> : <LockIcon size={20} className="rb-choice-go" />}
                       </button>
@@ -244,7 +208,6 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                   );
                 })}
               </ul>
-              {choices.some((u) => !unitAllowed(u.id, access)) && fullOnly}
             </>
           ) : (
             <p className="rb-all-done">
@@ -255,56 +218,25 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
         </section>
       )}
 
-      {done.length > 0 && (
-        <section className="rb-shelf" aria-labelledby="rb-shelf-title">
-          <h2 id="rb-shelf-title" className="rb-shelf-title">
-            <span className="sr-only" lang="nl">Gedaan. </span>
-            <Bi text={ui('topicsDone', lang)} />
-          </h2>
-          <div className="rb-chips">
-            {done.map((unit) => {
-              const t = unitTitle(unit, lang);
-              const on = openDone === unit.id;
-              return (
-                <button
-                  key={unit.id}
-                  type="button"
-                  className={`rb-chip ${on ? 'rb-chip-on' : ''}`}
-                  aria-expanded={on}
-                  aria-label={`${t.help ? `${t.help} · ` : ''}${unit.title} · ${unit.titleNl} · ${ui('practice').en}`}
-                  onClick={() => setOpenDone(on ? null : unit.id)}
-                >
-                  <WordPicture className="rb-chip-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={40} />
-                  <span className="rb-chip-check" aria-hidden><CheckIcon size={14} /></span>
-                </button>
-              );
-            })}
-          </div>
-          {openDone && done.some((u) => u.id === openDone) && (() => {
-            const unit = done.find((u) => u.id === openDone)!;
-            return (
-              <div className={`rb-done-panel ${marked === unit.id ? 'rb-marked' : ''}`}>
-                <div className="rb-done-head">
-                  <WordPicture className="rb-done-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
-                  <UnitTitle unit={unit} lang={lang} />
-                </div>
-                {onCertificate && unitAllowed(unit.id, access) && unitDone(unit, completed) && (
-                  <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />
-                )}
-                {unitAllowed(unit.id, access) && <UnitTools unit={unit} lang={lang} onPocket={onPocket} />}
-                {lessons(unit)}
-              </div>
-            );
-          })()}
-        </section>
-      )}
-
-      <button type="button" className="rb-all" onClick={onAll}>
-        <span className="sr-only" lang="nl">Alle onderwerpen. </span>
-        <Bi text={ui('allTopics', lang)} />
+      {/* One link for every other topic: All topics (it replaces "choose another topic"). */}
+      <button type="button" className="rb-all rb-other" onClick={onAll}>
+        <span className="sr-only" lang="nl">Ander onderwerp. </span>
+        <Bi text={ui('otherTopicLink', lang)} />
         <ChevronIcon size={18} />
       </button>
     </div>
+  );
+}
+
+/** "Volledige versie": a preview learner's way to the unlock card. */
+function FullOnly({ lang, onUpgrade }: { lang?: HelpLanguage; onUpgrade?: () => void }) {
+  return (
+    <button type="button" className="full-only-note" onClick={onUpgrade}>
+      <LockIcon size={16} />
+      <span lang="nl">Volledige versie</span>
+      <Bi className="full-only-en" text={ui('fullVersion', lang)} />
+      <ChevronIcon size={16} />
+    </button>
   );
 }
 
@@ -356,22 +288,182 @@ function LessonCount({ unit, completed, lang, showDone = false }: { unit: Unit; 
   );
 }
 
-/**
- * "Alle onderwerpen": every unit as one long path (the path view of before, with "Andere
- * sectoren"), opened from the small link at the foot of the home. A plain screen with a back arrow.
- */
-export function AllTopics({ lang, onBack, children }: { lang?: HelpLanguage; onBack: () => void; children: ReactNode }) {
+/** The plain screen head of All topics and a topic page: a back arrow and the title. */
+function ScreenHead({ lang, onBack, nl, text }: { lang?: HelpLanguage; onBack: () => void; nl: string; text: Bilingual }) {
   const rtl = lang?.dir === 'rtl';
   return (
-    <div className="rb-all-screen">
-      <div className="screen-head rb-all-head" dir={rtl ? 'rtl' : undefined}>
-        <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
-        <h1>
-          <span className="rb-all-nl" lang="nl" dir={rtl ? 'ltr' : undefined}>Alle onderwerpen</span>
-          <Bi text={ui('allTopics', lang)} />
-        </h1>
+    <div className="screen-head rb-all-head" dir={rtl ? 'rtl' : undefined}>
+      <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+      <h1>
+        <span className="rb-all-nl" lang="nl" dir={rtl ? 'ltr' : undefined}>{nl}</span>
+        <Bi text={text} />
+      </h1>
+    </div>
+  );
+}
+
+/**
+ * "Alle onderwerpen": every topic as one row (the list exception of the max-3 rule: one kind of
+ * row, one tap per row, no buttons inside a row). The learner's own course first, then the other
+ * sectors under a plain heading. A row opens the topic page.
+ */
+export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
+  progress: Progress;
+  lang?: HelpLanguage;
+  access?: Access;
+  onBack: () => void;
+  onOpen: (unitId: string) => void;
+}) {
+  const { sector, completed } = progress;
+  const { main, other } = coursePlan(sector);
+  const block = currentBlock(progress);
+  const rtl = lang?.dir === 'rtl';
+  const row = (unit: Unit, u: number) => {
+    const allowed = unitAllowed(unit.id, access);
+    const finished = unitDone(unit, completed);
+    const n = blockDoneCount(unit, completed);
+    const t = unitTitle(unit, lang);
+    const now = block?.id === unit.id;
+    return (
+      <li key={unit.id}>
+        <button
+          type="button"
+          id={`unit-${unit.id.slice(2)}`}
+          className={`topic-row ${finished ? 'topic-done' : ''} ${now ? 'topic-now' : ''} ${allowed ? '' : 'topic-locked'}`}
+          onClick={() => onOpen(unit.id)}
+          aria-label={`${u + 1}. ${t.help ? `${t.help} · ` : ''}${unit.title} · ${unit.titleNl} · ${n} / ${unit.lessons.length} ${uiCount('lessonsUnit', unit.lessons.length).en}${allowed ? '' : ` · ${ui('fullVersion').en}`}`}
+        >
+          <span className="topic-num" aria-hidden>{String(u + 1).padStart(2, '0')}</span>
+          <WordPicture className="topic-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
+          <span className="topic-text" dir={rtl ? 'rtl' : undefined} aria-hidden>
+            <Bi className="topic-title" text={t} />
+            {allowed && <LessonCount unit={unit} completed={completed} lang={lang} showDone={n > 0} />}
+          </span>
+          <span className="topic-end" aria-hidden>
+            {!allowed ? <LockIcon size={18} /> : finished ? <span className="topic-check"><CheckIcon size={16} /></span> : <ChevronIcon size={20} />}
+          </span>
+        </button>
+      </li>
+    );
+  };
+  return (
+    <div className="rb-all-screen topics-screen">
+      <ScreenHead lang={lang} onBack={onBack} nl="Alle onderwerpen" text={ui('allTopics', lang)} />
+      <div className="topics" dir={rtl ? 'rtl' : undefined}>
+        <ul className="topic-list" data-list="topics">{main.map((unit, i) => row(unit, i))}</ul>
+        {other.length > 0 && (
+          <>
+            <h2 className="topic-group">
+              <span lang="nl" className="topic-group-nl" dir="ltr">Andere sectoren</span>
+              <Bi text={ui('otherSectors', lang)} />
+            </h2>
+            <ul className="topic-list" data-list="topics">{other.map((unit, i) => row(unit, main.length + i))}</ul>
+          </>
+        )}
       </div>
-      {children}
+    </div>
+  );
+}
+
+/**
+ * A topic page (from All topics): the topic's sign, at most 3 actions (Back, the pocket card,
+ * and the certificate once the topic is finished) and its lessons. Done lessons can be practised
+ * again here; the next one says Start (or Continue when it was stopped halfway).
+ */
+export function TopicPage({ unit, progress, lang, access = 'full', onBack, onStart, onPocket, onCertificate, onUpgrade, focus = false }: {
+  unit: Unit;
+  progress: Progress;
+  lang?: HelpLanguage;
+  access?: Access;
+  onBack: () => void;
+  onStart: (lessonId: string, review: boolean) => void;
+  onPocket?: (unitId: string) => void;
+  onCertificate?: (unitId: string) => void;
+  onUpgrade?: () => void;
+  /** From a coach link: mark the topic for a moment. */
+  focus?: boolean;
+}) {
+  const { completed, sector } = progress;
+  const rtl = lang?.dir === 'rtl';
+  const allowed = unitAllowed(unit.id, access);
+  const finished = unitDone(unit, completed);
+  const next = allowed ? blockNext(unit, completed) : undefined;
+  const [saves] = useState(() => loadSaves());
+  const [marked, setMarked] = useState(focus);
+  useEffect(() => {
+    if (!marked) return;
+    const off = window.setTimeout(() => setMarked(false), 4000);
+    return () => window.clearTimeout(off);
+  }, [marked]);
+  const u = routeOrder(sector).findIndex((x) => x.id === unit.id);
+  return (
+    <div className="rb-all-screen topic-screen">
+      {/* Back goes to All topics, which the head names; the topic's own name is on its sign. */}
+      <ScreenHead lang={lang} onBack={onBack} nl="Alle onderwerpen" text={ui('allTopics', lang)} />
+      <div className="path route topic-page" dir={rtl ? 'rtl' : undefined}>
+        <div className={`rb-block ${marked ? 'rb-marked' : ''}`}>
+          <WordPicture className="rb-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={64} />
+          <UnitTitle unit={unit} lang={lang} heading />
+          <BlockProgress unit={unit} completed={completed} lang={lang} />
+        </div>
+        {allowed ? (
+          (onPocket || (finished && onCertificate)) && (
+            <div className="topic-tools" dir={rtl ? 'rtl' : undefined}>
+              {onPocket && (
+                <button type="button" className="unit-tool pocket-open" onClick={() => onPocket(unit.id)}>
+                  <PocketIcon />
+                  <span className="unit-tool-text"><Bi className="unit-tool-label" text={ui('pocketCard', lang)} /></span>
+                </button>
+              )}
+              {finished && onCertificate && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
+            </div>
+          )
+        ) : (
+          <FullOnly lang={lang} onUpgrade={onUpgrade} />
+        )}
+        <ol className="bays rb-lessons topic-lessons" data-list="lessons">
+          {unit.lessons.map((lesson, i) => {
+            const record = completed[lesson.id] as { best?: number } | undefined;
+            const open = allowed && isUnlocked(lesson.id, completed, access);
+            const state = !open ? 'locked' : record ? 'done' : lesson.id === next?.id ? 'now' : 'open';
+            const first = lesson.words.find(hasPicture);
+            const title = gloss(lesson.id, lesson.title, lang);
+            const saved = open && saves[lesson.id]?.review === Boolean(record) ? saves[lesson.id] : undefined;
+            return (
+              <li key={lesson.id} className={`bay bay-${state} ${saved ? 'bay-saved' : ''}`}>
+                <span className="bay-marker" aria-hidden>{state === 'done' ? <CheckIcon size={18} /> : i + 1}</span>
+                <button
+                  type="button"
+                  className="bay-card"
+                  disabled={!open}
+                  onClick={() => onStart(lesson.id, Boolean(record))}
+                  aria-label={`${u + 1}.${i + 1} ${lesson.title}${title.help ? ` (${title.help})` : ''}${saved ? ` · ${resumeLabel(saved)}` : open ? (record ? ` · ${ui('practice').en}` : ` · ${ui('start').en}`) : ` (${ui('locked').en})`}`}
+                >
+                  {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
+                  <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
+                    <Bi className="bay-title" text={title} />
+                    {saved && <ResumeChip save={saved} lang={lang} />}
+                    {state === 'done' && !saved && (
+                      <span className="bay-again">
+                        {record?.best === 1 ? <CrownIcon size={16} /> : <CheckIcon size={16} />}
+                        <Bi className="bay-again-label" text={ui('practice', lang)} />
+                      </span>
+                    )}
+                    {state === 'now' && !saved && (
+                      <span className="bay-start">
+                        <Bi className="bay-start-label" text={ui('start', lang)} />
+                        <ChevronIcon size={22} />
+                      </span>
+                    )}
+                  </span>
+                  {state === 'open' && !saved && <ChevronIcon size={22} className="bay-chev" />}
+                  {state === 'locked' && <LockIcon size={18} className="bay-lock" />}
+                </button>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </div>
   );
 }

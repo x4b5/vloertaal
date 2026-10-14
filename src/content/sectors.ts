@@ -83,3 +83,26 @@ export function sectorPriority(sector: SectorChoice | undefined): string[] {
   const s = sectors.find((x) => x.id === sector);
   return s ? [...s.units, ...s.focus] : [];
 }
+
+/**
+ * The sector choice in two small steps (never more than three cards on a page): first the kind
+ * of work, then the three sectors in it. "Weet ik nog niet" sits next to the two groups.
+ */
+export type SectorGroupId = 'make' | 'care';
+
+export interface SectorGroup {
+  id: SectorGroupId;
+  nl: string;
+  key: UiKey;
+  sectors: SectorId[];
+}
+
+export const sectorGroups: SectorGroup[] = [
+  { id: 'make', nl: 'Maken en verplaatsen', key: 'sectorGroupMake', sectors: ['logistics', 'construction', 'production'] },
+  { id: 'care', nl: 'Zorg en service', key: 'sectorGroupCare', sectors: ['care', 'hospitality', 'cleaning'] },
+];
+
+/** The group a sector is in (undefined for "not sure yet" or nothing chosen). */
+export function sectorGroupOf(sector: SectorChoice | undefined): SectorGroupId | undefined {
+  return sectorGroups.find((g) => g.sectors.includes(sector as SectorId))?.id;
+}

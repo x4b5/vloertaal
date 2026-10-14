@@ -2,7 +2,7 @@ import { ui } from '../i18n';
 import type { Gender, HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
 import { Character, type CharacterId } from './Characters';
-import { CheckIcon, CloseIcon } from './Icons';
+import { CheckIcon } from './Icons';
 import { LogoMark, Wordmark } from './Logo';
 
 const OPTIONS: { id: Gender; nl: string; key: 'genderWoman' | 'genderMan' | 'genderNone'; who?: CharacterId }[] = [
@@ -12,7 +12,7 @@ const OPTIONS: { id: Gender; nl: string; key: 'genderWoman' | 'genderMan' | 'gen
 ];
 
 /** "Rather not say": a plain person outline, no woman or man (in the sector cards' icon tile). */
-const NeutralIcon = ({ size = 28 }: { size?: number }) => (
+export const NeutralIcon = ({ size = 28 }: { size?: number }) => (
   <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
     <circle cx="12" cy="8.2" r="3.9" fill="none" stroke="currentColor" strokeWidth="2.4" />
     <path d="M4.6 20.4a7.4 7.4 0 0 1 14.8 0" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
@@ -68,10 +68,14 @@ export function GenderPicker({ current, lang, onPick, compact = false, mini = fa
   );
 }
 
-/** First run, right after a help language with gender (Arabic, Polish, …): asked once, calmly. */
+/**
+ * "Woman or man?" on its own page, asked once for a help language with gender (Arabic, Polish, …):
+ * in the first run right after the password, and once on opening for a learner from before the
+ * question (see shouldAskGender). Three cards and nothing else: "rather not say" is the way past.
+ */
 export function GenderScreen({ lang, onDone, current }: { lang?: HelpLanguage; onDone: (g: Gender) => void; current?: Gender }) {
   return (
-    <div className="screen onboarding sector-screen gender-screen">
+    <div className="screen onboarding sector-screen gender-screen" dir={lang?.dir}>
       <div className="hero">
         <h1 className="hero-logo sector-logo"><LogoMark size={40} /><Wordmark /></h1>
       </div>
@@ -82,28 +86,5 @@ export function GenderScreen({ lang, onDone, current }: { lang?: HelpLanguage; o
       <p className="sector-hint"><Bi text={ui('genderHint', lang)} /></p>
       <GenderPicker current={current} lang={lang} onPick={onDone} />
     </div>
-  );
-}
-
-/**
- * On the home, once, for learners who finished the first run before the gender question (see
- * shouldAskGender): the same question and the two pictures, small, with a ✕ that puts it away
- * for good (and leaves the help language's texts as they are, like "rather not say").
- */
-export function GenderCard({ lang, onPick, onLater }: { lang?: HelpLanguage; onPick: (g: Gender) => void; onLater: () => void }) {
-  const rtl = lang?.dir === 'rtl';
-  return (
-    <section className="gender-card" aria-labelledby="gender-card-title" dir={rtl ? 'rtl' : undefined}>
-      <div className="gender-card-head">
-        <h2 id="gender-card-title" className="gender-card-title">
-          <Bi text={ui('genderTitle', lang)} />
-          <span className="gender-card-nl" lang="nl" dir="ltr">Vrouw of man?</span>
-        </h2>
-        <button type="button" className="icon-btn gender-card-x" onClick={onLater} aria-label={`Close · ${ui('genderNone').en}`}>
-          <CloseIcon size={20} />
-        </button>
-      </div>
-      <GenderPicker lang={lang} onPick={onPick} mini />
-    </section>
   );
 }

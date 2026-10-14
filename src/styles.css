@@ -3402,3 +3402,306 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .gender-grid-mini .gender-btn .lang-names { min-width: 0; }
 .gender-grid-mini .gender-btn .lang-names > .lang-native { font-size: 0.76rem; line-height: 1.2; }
 .gender-grid-mini .sector-names.bi-swap > .bi-help { display: none; }
+
+/* ---- Max 3: lesson ---- */
+/* The header holds only the ✕ and the progress bar (the sound toggle and Help moved into the
+   pause sheet and the bottom bar). */
+.player-top .lesson-close { flex: none; }
+/* Pause sheet: the second choice ("Without sound" / "Start again") is a calm outlined button
+   with its icon, between the main "Keep going" and "Stop". */
+.sheet-second { gap: 10px; background: var(--card); color: var(--ink); border: 3px solid var(--edge); }
+.sheet-second:hover { background: var(--concrete-2); }
+.sheet-second-icon { display: inline-grid; place-items: center; flex: none; color: var(--ink-2); }
+
+/* One speaker per item: after a normal play a small turtle sits on the speaker (the next tap is
+   slow); after the slow play it goes again. */
+.speak, .speak-glyph { position: relative; }
+.speak-turtle {
+  position: absolute; inset-inline-end: -7px; bottom: -7px; display: grid; place-items: center;
+  width: 24px; height: 24px; border-radius: 50%; pointer-events: none;
+  background: var(--card); color: var(--blue); box-shadow: 0 0 0 2px var(--blue);
+  --icon-cut: var(--card);
+  animation: turtle-in 0.18s var(--ease-out) both;
+}
+.speak-lg .speak-turtle { width: 30px; height: 30px; }
+.speak-turtle .icon { width: 16px; height: 16px; }
+.speak-lg .speak-turtle .icon { width: 20px; height: 20px; }
+@keyframes turtle-in { from { opacity: 0; transform: scale(0.6); } }
+@media (prefers-reduced-motion: reduce) { .speak-turtle { animation: none; } }
+
+/* Guided matching: one Dutch word in the bubble, three meaning cards under it. */
+.match-dots { display: flex; justify-content: center; gap: 8px; margin: 2px 0 12px; }
+.match-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--track); transition: background-color 0.2s; }
+.match-dot.is-now { background: var(--yellow); box-shadow: 0 0 0 2px var(--yellow-dark); }
+.match-dot.is-done { background: var(--green); }
+.match-cards .match-en { flex-direction: row; justify-content: flex-start; align-items: center; gap: 12px; padding: 10px 14px; text-align: start; min-height: 68px; }
+.match-cards .match-en .bi { align-items: flex-start; }
+.match-text { display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; }
+.match-made { font-size: 0.95rem; font-weight: 700; color: var(--right-ink); }
+.match-check { display: grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 50%; color: #fff; background: var(--go-right); }
+.match-cards .match.matched { opacity: 0.55; }
+.match-on { animation: up 0.2s var(--ease-out) both; }
+@media (prefers-reduced-motion: reduce) { .match-on { animation: none; } }
+
+/* Build word by word: the sentence so far (words, not buttons), a dashed slot for the next one,
+   and three words to choose from. */
+.answer-line .tile-placed { display: inline-flex; align-items: center; cursor: default; animation: up 0.16s var(--ease-out) both; }
+.tile-next {
+  display: inline-block; width: 64px; min-height: 48px; border: 2px dashed var(--ink-3); border-radius: 8px; opacity: 0.7;
+}
+.tile-steps { margin-top: 22px; }
+.tile-with-say, .letter-tile { position: relative; }
+.tile-x {
+  position: absolute; top: -9px; inset-inline-start: -7px; display: grid; place-items: center; width: 22px; height: 22px;
+  border-radius: 50%; background: var(--go-wrong); color: #fff; box-shadow: 0 0 0 2px var(--card);
+}
+.letter-steps .letter-tile { min-width: 64px; height: 60px; }
+@media (prefers-reduced-motion: reduce) { .answer-line .tile-placed { animation: none; } }
+
+/* ---- Max 3: onboarding & settings ---- */
+/* One question per page, at most three answers: big stacked cards (picture tile, the help language
+   large with the Dutch small under it). Shared by the first run and the Settings pages. */
+.max3-cards { display: grid; gap: 10px; margin: 18px 0 12px; }
+.max3-card-wrap { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.max3-card {
+  position: relative; flex: 1; min-width: 0; display: flex; align-items: center; gap: 14px;
+  min-height: 76px; padding: 12px 14px; text-align: start; color: var(--ink);
+  background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.max3-card:hover { border-color: var(--ink-3); }
+.max3-card:active { transform: translateY(1px); }
+.max3-card.picked { border-color: var(--edge); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
+.max3-card.danger { color: var(--red); }
+.max3-pic {
+  flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 14px;
+  background: var(--concrete-2, var(--bg)); color: var(--ink); overflow: hidden;
+}
+.max3-card.picked .max3-pic { background: var(--yellow); color: #1e2226; }
+.max3-card.danger .max3-pic { background: var(--red-bg); color: var(--red); }
+.max3-pic .word-pic { width: 52px; height: 52px; }
+.max3-names { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.max3-help { font-size: 1.12rem; font-weight: 650; line-height: 1.25; overflow-wrap: anywhere; }
+.max3-help .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--ink-2); }
+.max3-nl { font-size: 0.85rem; color: var(--muted); line-height: 1.25; }
+.max3-check, .max3-chev { flex: none; color: var(--ink-2); }
+.max3-card.picked .max3-check { color: var(--ink); }
+.max3-say { flex: none; }
+/* A group of work: its three sector pictures side by side, overlapping a little. */
+.sector-step .max3-pic:has(.max3-trio) { width: 92px; }
+.max3-trio { display: flex; align-items: center; justify-content: center; }
+.max3-trio > span { display: grid; width: 30px; height: 34px; place-items: center; }
+.max3-trio .word-pic { width: 34px; height: 34px; }
+.sector-step-2 .max3-pic { width: 64px; height: 64px; }
+.sector-step-2 .max3-pic .word-pic { width: 58px; height: 58px; }
+.max3-crumb { display: flex; justify-content: center; margin: 14px 0 0; }
+.max3-crumb .bi {
+  padding: 4px 12px; border-radius: 999px; background: var(--concrete-2, var(--bg)); color: var(--ink-2);
+  font-size: 0.9rem; font-weight: 600; align-items: center;
+}
+.max3-hint { margin: 4px 2px 0; color: var(--muted); font-size: 0.92rem; line-height: 1.45; }
+.max3-hint-top { margin: 6px 2px 0; color: var(--ink-2); font-size: 1rem; }
+[dir='rtl'] :is(.max3-head, .max3-back) .icon-btn .icon { scale: -1 1; }
+
+/* First run: the language guess ("Polski?" [Yes] [Other language]) and the list's way back. */
+.max3-back { margin: -8px 0 -36px; position: relative; z-index: 1; }
+.lang-guess-q {
+  display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 40px 0 6px;
+  font-size: 2rem; font-weight: 700; text-align: center;
+}
+.lang-guess-q .flag, .lang-guess-q svg { border-radius: 6px; box-shadow: 0 0 0 1px var(--line); }
+.lang-guess .max3-cards { margin-top: 22px; }
+
+/* The password field shows what is typed and has no eye any more. */
+.pw-input { padding-inline-end: 16px; }
+
+/* Settings: a menu of three rows, lists of one row per setting, and one page per setting. */
+.max3-title { display: flex; flex-direction: column; gap: 0; }
+.max3-title .bi-help { --help-size: 0.62em; font-weight: 400; }
+.max3-title-nl { font-size: 0.85rem; font-weight: 500; color: var(--muted); }
+.set-rows { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.set-row {
+  width: 100%; display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 10px 12px;
+  text-align: start; color: var(--ink); background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
+}
+.set-row:hover { border-color: var(--ink-3); }
+.set-row:active { transform: translateY(1px); }
+.set-row.danger { color: var(--red); }
+.set-row-icon {
+  flex: none; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px;
+  background: var(--concrete-2, var(--bg)); color: var(--ink); overflow: hidden;
+}
+.set-row.danger .set-row-icon { background: var(--red-bg); color: var(--red); }
+.set-row-icon .text-size-a { font-size: 20px; }
+.set-en { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.04em; }
+.set-row-names { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.set-row-help { font-size: 1.02rem; font-weight: 650; line-height: 1.25; overflow-wrap: anywhere; }
+.set-row-help .bi-help { --help-size: 0.78rem; font-weight: 400; color: var(--ink-2); }
+.set-row-nl { font-size: 0.8rem; color: var(--muted); }
+.set-row-value {
+  flex: none; max-width: 38%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-size: 0.88rem; color: var(--ink-2);
+}
+.set-row-chev { flex: none; color: var(--ink-3); }
+.set-rows-big { gap: 12px; margin-top: 20px; }
+.set-rows-big .set-row { min-height: 84px; padding: 14px; }
+.set-rows-big .set-row-icon { width: 52px; height: 52px; border-radius: 14px; }
+.set-rows-big .set-row-help { font-size: 1.15rem; }
+.set-time { font-size: 0.95rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.set-pick { font-size: 0.95rem; font-weight: 800; }
+.set-face { font-size: 1.6rem; font-weight: 700; line-height: 1; }
+/* A card reused as a setting's page: the page head already names it. */
+.max3-settings > .keep-card { margin-top: 14px; }
+.max3-settings > .keep-card > .keep-head, .max3-settings .cert-list-icon { display: none; }
+.max3-settings .upgrade-card { margin-top: 14px; }
+.max3-settings .gender-grid { margin-top: 18px; }
+.max3-settings .lang-grid { margin-top: 14px; }
+
+/* "Voor begeleiders": its own page now, a plain list. */
+.coach-list { border-top: 0; padding-top: 4px; }
+.coach-link .coach-link-icon { font-size: 1.3rem; }
+
+/* ---- Max 3: home & after ---- */
+/* Home: only the next lesson is a button; done and later lessons are calm rows (no hover, no press). */
+.home3 .bay-still { cursor: default; }
+.home3 .bay-done .bay-still:hover, .home3 .bay-locked .bay-still:hover { border-color: var(--line); }
+.home3 .bay-locked .bay-still:hover { border-color: transparent; }
+.home3 .rb-current .full-only-note { margin-top: 12px; }
+/* "Other topic": the one link to All topics, under the block or the suggestions. */
+.rb-other { margin-top: 18px; }
+
+/* All topics: one row per topic, one tap per row (the list exception). */
+.topics { padding: 8px 16px 0; }
+.topic-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.topic-row {
+  width: 100%; display: flex; align-items: center; gap: 12px; min-height: 68px; padding: 8px 12px;
+  text-align: start; color: var(--ink); background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
+  transition: border-color 0.12s, transform 0.12s var(--ease-out);
+}
+.topic-row:hover { border-color: var(--ink-3); }
+.topic-row:active { transform: translateY(1px); }
+.topic-now { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.topic-num {
+  flex: none; width: 1.7em; font-family: var(--stencil); font-weight: 800; font-size: 1.15rem; line-height: 1;
+  color: var(--ink-3); font-variant-numeric: tabular-nums; text-align: center;
+}
+.topic-pic { flex: none; width: 44px; height: 44px; }
+.topic-text { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+.topic-title { font-size: 1.02rem; font-weight: 650; line-height: 1.2; overflow-wrap: anywhere; }
+.topic-title .bi-help { --help-size: 0.8em; font-weight: 400; color: var(--muted); }
+.topic-text .rb-count { font-size: 0.82rem; }
+.topic-end { flex: none; display: grid; place-items: center; color: var(--ink-3); }
+.topic-check {
+  display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--solid); color: var(--yellow);
+}
+.topic-locked { background: transparent; color: var(--muted); }
+.topic-locked .topic-pic { opacity: 0.6; }
+.topic-group { display: flex; flex-direction: column; gap: 2px; margin: 26px 0 10px; font-size: 1rem; font-weight: 650; color: var(--ink-2); }
+.topic-group-nl { font-size: 0.78rem; font-weight: 600; color: var(--faint); }
+.topic-group .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }
+.topics-screen .topics { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
+
+/* A topic page: the sign, the pocket card and the certificate side by side, then the lessons. */
+.topic-page { padding-top: 8px; }
+.topic-tools { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; margin: 12px 0 2px; }
+.topic-tools .pocket-open { flex: 1 1 140px; }
+.topic-tools .cert-badge { flex: 1 1 140px; justify-content: center; min-height: 48px; }
+.topic-page .full-only-note { margin-top: 12px; }
+.topic-screen .rb-all-head h1 { min-width: 0; }
+.topic-screen .rb-all-head h1 .bi { overflow-wrap: anywhere; }
+
+/* "Keep lessons on this phone" (Settings → This phone): the switch row, a hint, one status line. */
+.offline-status {
+  display: flex; align-items: center; gap: 10px; margin: 0; padding: 10px 12px; border-radius: 8px;
+  background: var(--bg); font-size: 0.9rem; line-height: 1.3;
+}
+.offline-status-icon {
+  flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%;
+  color: var(--ink-2); background: var(--card);
+}
+.offline-saved .offline-status-icon { color: var(--right-ink); background: var(--green-bg); }
+.offline-status-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.offline-status-topic { font-weight: 650; }
+.offline-status-topic .bi-help { --help-size: 0.8em; font-weight: 400; color: var(--muted); }
+.offline-status-line { color: var(--muted); }
+.offline-status-line b { font-weight: 650; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.offline-status.offline-error { color: var(--warn-ink); background: var(--warn-bg); border-inline-start: 5px solid var(--kraft); }
+.offline-card .count-row .keep-head { min-width: 0; }
+
+/* After the first day: the reminder and home-screen offer, one small page at a time. */
+.keep3-page { justify-content: flex-start; gap: 10px; padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
+.keep3-title { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 8px 0 0; max-width: 26em; }
+.keep3-nl { font-size: 0.85rem; font-weight: 650; color: var(--muted); }
+.keep3-gloss { font-size: 1.45rem; font-weight: 700; line-height: 1.2; color: var(--ink-strong); }
+.keep3-gloss .bi-help { --help-size: 0.62em; font-weight: 500; color: var(--ink-2); margin-top: 4px; }
+.keep3-hint { margin: 0; max-width: 26em; font-size: 0.92rem; line-height: 1.4; color: var(--muted); }
+.keep3-actions { display: flex; flex-direction: column; align-items: stretch; gap: 10px; width: 100%; max-width: 420px; margin-top: 14px; }
+.keep3-btn { justify-content: flex-start; gap: 14px; min-height: 66px; padding: 10px 16px; text-align: start; }
+.keep3-btn > svg { flex: none; }
+.keep3-btn > .icon:last-child { margin-inline-start: auto; color: var(--ink-3); }
+.keep3-btn-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.2; }
+.keep3-btn-text.keep3-center { flex: 1; align-items: center; text-align: center; }
+.keep3-page .keep3-btn-text .bi { align-items: flex-start; }
+.keep3-page .keep3-center .bi { align-items: center; }
+.keep3-btn-gloss { order: 1; font-size: 1.1rem; font-weight: 650; }
+.keep3-btn-gloss .bi-help { --help-size: 0.78em; font-weight: 500; }
+.keep3-btn-nl { order: 2; font-size: 0.8rem; font-weight: 500; opacity: 0.85; }
+.keep3-time {
+  flex: none; font-family: var(--stencil); font-weight: 800; font-size: 1.6rem; line-height: 1;
+  font-variant-numeric: tabular-nums; unicode-bidi: isolate;
+}
+.btn-primary .keep3-btn-nl, .btn-primary .keep3-btn-gloss .bi-help { color: #3f3a2c; }
+.keep3-no { flex-direction: column; gap: 0; margin-top: 2px; text-decoration: none; }
+.keep3-no > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; color: var(--muted); }
+.keep3-no .keep-link-gloss { order: 1; font-size: 1rem; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.keep3-no .keep-link-gloss.bi-swap .bi-help { display: block; }
+.keep3-no .bi { flex-direction: column; align-items: center; gap: 0; }
+.keep3-times { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
+.keep3-time-btn {
+  width: 100%; display: flex; align-items: center; gap: 16px; min-height: 76px; padding: 10px 16px; text-align: start;
+  color: var(--ink); background: var(--card); border: 2px solid var(--line); border-radius: 12px;
+  transition: border-color 0.12s, transform 0.12s var(--ease-out);
+}
+.keep3-time-btn:hover { border-color: var(--ink-3); }
+.keep3-time-btn:active { transform: translateY(1px); }
+.keep3-time-btn > svg { flex: none; margin-inline-start: auto; color: var(--ink-3); }
+.keep3-time-btn .keep3-time { min-width: 3.1ch; }
+.keep3-added { justify-content: center; flex-wrap: wrap; text-align: center; font-size: 0.95rem; }
+.keep3-added .bi { align-items: center; }
+.keep3-added-big { font-size: 1.6rem; font-family: var(--stencil); font-weight: 800; }
+.keep3-ios { width: 100%; max-width: 420px; margin-top: 10px; }
+.keep3-logo { margin-top: 6px; }
+@media (max-height: 700px) {
+  .keep3-page { padding-top: 12px; gap: 6px; }
+  .keep3-gloss { font-size: 1.25rem; }
+  .keep3-actions, .keep3-times { margin-top: 8px; }
+  .keep3-btn { min-height: 58px; }
+  .keep3-time-btn { min-height: 64px; }
+}
+
+/* Certificate: one Save / share; the name on a page of its own. */
+.cert-actions-one { grid-template-columns: minmax(0, 1fr); }
+.cert-actions-one .cert-btn { justify-content: center; }
+.cert-name-page { display: flex; flex-direction: column; align-items: center; }
+.cert-name-form { display: flex; flex-direction: column; align-items: stretch; gap: 14px; width: 100%; max-width: 440px; margin-top: 24px; }
+.cert-name-icon {
+  align-self: center; display: grid; place-items: center; width: 72px; height: 72px; border-radius: 50%;
+  color: var(--right-ink); background: var(--card); border: 2px solid var(--line);
+}
+.cert-name-head { align-items: center; text-align: center; }
+.cert-name-head .bi { align-items: center; }
+.cert-name-done { margin-top: 4px; min-height: 60px; }
+.cert-name-done .bi { align-items: center; }
+.cert-no-name { flex-direction: column; gap: 0; text-decoration: none; }
+.cert-no-name > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; color: var(--muted); }
+.cert-no-name .keep-link-gloss { order: 1; font-size: 1rem; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.cert-no-name .bi { align-items: center; }
+/* Right to left: a Dutch line keeps its own direction ("Vrouw of man?", not "?Vrouw of man"). */
+[dir='rtl'] :is(.set-row-nl, .max3-nl, .max3-title-nl, .sector-title-nl)[lang='nl'] { direction: ltr; unicode-bidi: isolate; }
+[dir='rtl'] :is(.set-row-nl, .max3-nl, .max3-title-nl)[lang='nl'] { text-align: right; }
+/* The waybill's stamp sits where its (hidden) head was: keep the hint clear of it. */
+.max3-settings > .waybill { padding-top: 48px; }
+.offline-status-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; }
+.topic-tools > * { min-height: 52px; margin: 0; }
+.topic-tools .cert-badge { align-self: stretch; border-radius: 12px; }

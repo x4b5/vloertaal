@@ -14,6 +14,8 @@ import { unitDone } from './certificate';
 
 /** How many blocks the learner chooses from. */
 export const CHOICES = 3;
+/** On the home, a finished block offers 2 suggestions; "Other topic" (All topics) is the third choice. */
+export const HOME_SUGGESTIONS = 2;
 
 type Completed = Record<string, unknown>;
 
@@ -106,4 +108,25 @@ export function blockAfterLesson(currentUnit: string | undefined, lessonId: stri
   const unit = units.find((u) => u.lessons.some((l) => l.id === lessonId));
   if (!unit) return currentUnit;
   return unitDone(unit, completed) ? currentUnit : unit.id;
+}
+
+/**
+ * The home after a finished block: the 2 suggested next blocks (the recommended one first). The
+ * third choice on that screen is "Other topic", which opens All topics.
+ */
+export function homeSuggestions(sector: SectorChoice | undefined, completed: Completed): Unit[] {
+  return nextChoices(sector, completed, undefined, HOME_SUGGESTIONS);
+}
+
+/**
+ * How a lesson shows on the home: only the block's next lesson can be tapped (Start, or Continue
+ * when it was stopped halfway); done lessons are a calm tick (practising again lives in "Herhaal
+ * vandaag" and All topics) and later ones wait. A preview block outside the first unit shows
+ * every lesson as waiting.
+ */
+export type HomeLessonState = 'now' | 'done' | 'later';
+export function homeLessonState(unit: Unit, lessonId: string, completed: Completed, access: Access = 'full'): HomeLessonState {
+  if (completed[lessonId]) return 'done';
+  if (!unitAllowed(unit.id, access)) return 'later';
+  return blockNext(unit, completed)?.id === lessonId ? 'now' : 'later';
 }

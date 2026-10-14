@@ -3,12 +3,13 @@ import { ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { type Access, checkPassword } from '../lib/access';
 import { Bi } from './Bi';
-import { ChevronIcon, EyeIcon, EyeOffIcon, LockIcon } from './Icons';
+import { ChevronIcon, LockIcon } from './Icons';
 import { Flag } from './Flags';
 import { LogoMark, Wordmark } from './Logo';
 
 /**
- * One password field with a show/hide toggle and a big yellow button. `accept` decides which
+ * One password field and a big yellow button. The field shows what is typed (no show/hide eye):
+ * it is a shared class code, not a secret, and one less thing to tap. `accept` decides which
  * access levels count here (the upgrade card only takes the full-version password).
  */
 function PasswordForm({ onAccess, accept, lang, labelHidden = false }: {
@@ -19,7 +20,6 @@ function PasswordForm({ onAccess, accept, lang, labelHidden = false }: {
   labelHidden?: boolean;
 }) {
   const [value, setValue] = useState('');
-  const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
   const [busy, setBusy] = useState(false);
   /** Bumped on every wrong try, so the shake plays again. */
@@ -55,10 +55,10 @@ function PasswordForm({ onAccess, accept, lang, labelHidden = false }: {
         <input
           id={id}
           className="pw-input"
-          type={show ? 'text' : 'password'}
+          type="text"
           value={value}
           onChange={(e) => { setValue(e.target.value); setError(false); }}
-          autoComplete="current-password"
+          autoComplete="off"
           autoCapitalize="none"
           autoCorrect="off"
           spellCheck={false}
@@ -66,15 +66,6 @@ function PasswordForm({ onAccess, accept, lang, labelHidden = false }: {
           aria-invalid={error}
           aria-describedby={error ? `${id}-err` : undefined}
         />
-        <button
-          type="button"
-          className="pw-eye"
-          onClick={() => setShow((s) => !s)}
-          aria-label={show ? 'Hide password' : 'Show password'}
-          aria-pressed={show}
-        >
-          {show ? <EyeOffIcon size={24} /> : <EyeIcon size={24} />}
-        </button>
       </div>
       {error && (
         <p id={`${id}-err`} className="pw-error" role="alert">

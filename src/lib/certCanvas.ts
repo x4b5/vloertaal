@@ -408,3 +408,22 @@ export async function shareCertificate(d: CertData, fileName: string): Promise<'
   window.setTimeout(() => URL.revokeObjectURL(url), 10_000);
   return 'saved';
 }
+
+/**
+ * "Save / share" on the certificate: the picture to the phone's share sheet (where the learner can
+ * save it, send it or print it). 'unsupported' when the browser cannot share files (a computer):
+ * the caller then opens the print dialog, which saves a PDF too.
+ */
+export async function shareCertificateFile(d: CertData, fileName: string): Promise<'shared' | 'cancelled' | 'unsupported'> {
+  const nav = navigator as Navigator & { canShare?: (data: ShareData) => boolean };
+  if (!nav.share || !nav.canShare) return 'unsupported';
+  const blob = await toBlob(await drawCertificate(d));
+  const file = new File([blob], fileName, { type: 'image/png' });
+  if (!nav.canShare({ files: [file] })) return 'unsupported';
+  try {
+    await nav.share({ files: [file], title: `Certificaat · ${d.titleNl}` });
+    return 'shared';
+  } catch (e) {
+    return (e as DOMException)?.name === 'AbortError' ? 'cancelled' : 'unsupported';
+  }
+}

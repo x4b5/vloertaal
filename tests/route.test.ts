@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { units } from '../src/content/curriculum';
 import { coursePlan } from '../src/content/sectors';
-import { blockAfterLesson, blockDoneCount, blockNext, currentBlock, doneBlocks, nextChoices, routeNextLesson } from '../src/lib/route';
+import { HOME_SUGGESTIONS, blockAfterLesson, blockDoneCount, blockNext, currentBlock, doneBlocks, homeLessonState, homeSuggestions, nextChoices, routeNextLesson } from '../src/lib/route';
 import { emptyProgress, replaceWithBackup } from '../src/lib/progress';
 
 const unit = (id: string) => units.find((u) => u.id === id)!;
@@ -104,5 +104,24 @@ describe('route: "choose next" weighs the sector', () => {
 
   it('skips weighted units that are done and fills up in course order', () => {
     expect(nextChoices('care', done('u.firstday', 'u.care', 'u.teamwork')).map((u) => u.id)).toEqual(['u.help', 'u.health', 'u.tools']);
+  });
+});
+
+describe('route: at most 3 choices on the home', () => {
+  it('offers 2 suggestions after a finished block ("Other topic" is the third)', () => {
+    expect(HOME_SUGGESTIONS).toBe(2);
+    expect(homeSuggestions('none', done('u.firstday')).map((u) => u.id)).toEqual(['u.help', 'u.tools']);
+    expect(homeSuggestions('logistics', done('u.firstday')).map((u) => u.id)).toEqual(['u.help', 'u.warehouse']);
+    expect(homeSuggestions('none', done(...units.map((u) => u.id)))).toEqual([]);
+  });
+
+  it('lets only the next lesson of the block be tapped; done lessons are not buttons', () => {
+    const u = unit('u.firstday');
+    const completed = lesson(u.lessons[0].id);
+    expect(u.lessons.map((l) => homeLessonState(u, l.id, completed))).toEqual(['done', 'now', ...u.lessons.slice(2).map(() => 'later')]);
+    expect(u.lessons.filter((l) => homeLessonState(u, l.id, completed) === 'now')).toHaveLength(1);
+    // A preview block outside the first unit: nothing to start.
+    const pay = unit('u.pay');
+    expect(pay.lessons.map((l) => homeLessonState(pay, l.id, {}, 'preview'))).toEqual(pay.lessons.map(() => 'later'));
   });
 });

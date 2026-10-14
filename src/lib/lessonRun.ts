@@ -61,3 +61,39 @@ export function barParts(index: number, checked: boolean, planned: number, total
     tail: Math.max(0, total - planned) / slots,
   };
 }
+
+/**
+ * An answer built step by step (a sentence word by word, a word letter by letter) is graded by
+ * the wrong taps on the way. A sentence: any wrong tap is a mistake. A spelled word
+ * (`typoAllowed`): one wrong letter is accepted with a spelling note, like one typo when typing;
+ * more is a mistake.
+ */
+export function stepGrade(wrongTaps: number, typoAllowed = false): { correct: boolean; almost: boolean } {
+  if (wrongTaps <= 0) return { correct: true, almost: false };
+  if (typoAllowed && wrongTaps === 1) return { correct: true, almost: true };
+  return { correct: false, almost: false };
+}
+
+/** Guided matching: which word is on, which meanings are matched, how many wrong taps. */
+export interface MatchState {
+  step: number;
+  done: string[];
+  wrong: number;
+}
+
+export const matchStart: MatchState = { step: 0, done: [], wrong: 0 };
+
+/**
+ * A tap on a meaning card in a guided match (`words` in the order they come on). The meaning of
+ * the word that is on makes the pair and the next word comes on; another meaning is a wrong tap
+ * and the word stays; a meaning already matched is not a choice any more (nothing happens).
+ */
+export function matchTap(words: readonly { id: string }[], state: MatchState, id: string): { state: MatchState; hit: boolean; finished: boolean } {
+  const finished = state.done.length >= words.length;
+  if (finished || state.done.includes(id)) return { state, hit: false, finished };
+  if (words[state.step]?.id === id) {
+    const done = [...state.done, id];
+    return { state: { ...state, step: state.step + 1, done }, hit: true, finished: done.length >= words.length };
+  }
+  return { state: { ...state, wrong: state.wrong + 1 }, hit: false, finished: false };
+}

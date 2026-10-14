@@ -36,3 +36,33 @@ export function nonLatinHelp(lang?: HelpLanguage): boolean {
 export function pickInsteadOfTyping(lang?: HelpLanguage, writing = wantsWriting()): boolean {
   return nonLatinHelp(lang) && !writing;
 }
+
+/**
+ * How dictation is written: with letter tiles (three at a time, components/Exercises.tsx) or
+ * with the phone's keyboard (a text field and Check). The default follows the script of the help
+ * language: letter tiles for another script, the keyboard for the Latin one. The choice lives in
+ * Settings (the writing setting), stored on this device under its own key; it replaces the
+ * "letters / keyboard" switch that used to sit inside the exercise.
+ */
+const INPUT_KEY = 'vloertaal:writing-input';
+export type WritingInput = 'tiles' | 'keys';
+
+export function writingInput(lang?: HelpLanguage): WritingInput {
+  try {
+    const v = localStorage.getItem(INPUT_KEY);
+    if (v === 'tiles' || v === 'keys') return v;
+  } catch {
+    // No storage: the default below.
+  }
+  return nonLatinHelp(lang) ? 'tiles' : 'keys';
+}
+
+/** Sets the dictation input (null: back to the default for the help language). */
+export function setWritingInput(mode: WritingInput | null): void {
+  try {
+    if (mode) localStorage.setItem(INPUT_KEY, mode);
+    else localStorage.removeItem(INPUT_KEY);
+  } catch {
+    // Private mode: the default stays.
+  }
+}

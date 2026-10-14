@@ -83,7 +83,8 @@ describe('abstract words (no picture)', () => {
     const ex = dutchExercise(abstract, rights, createRng(5));
     expect(ex.textOnly).toBe(true);
     expect(ex.options.map((o) => o.id)).toContain(abstract.id);
-    expect(ex.options).toHaveLength(4);
+    // At most three answers on a screen (the "at most 3" rule).
+    expect(ex.options).toHaveLength(3);
   });
 
   it('keeps match pairs and quiet replacements on the same words', () => {

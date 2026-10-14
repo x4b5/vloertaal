@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useId, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { gloss, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { autoSpeak, speak, stopSpeech } from '../lib/audio';
@@ -6,7 +6,7 @@ import { breakable } from '../lib/dutch';
 import type { Exercise } from '../lib/exercises';
 import { sentencePicture } from '../lib/exercises';
 import {
-  canRecord, isWord, MAX_RECORD_MS, recordMime, setMicBlocked, setSpeakingOn, SILENCE_MS, speakingOn,
+  canRecord, isWord, MAX_RECORD_MS, recordMime, setMicBlocked, SILENCE_MS,
 } from '../lib/speaking';
 import { voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
@@ -281,8 +281,9 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
           <span className="say-nl" lang="nl" dir="ltr">{breakable(item.nl)}</span>
           <Bi className="say-meaning" text={meaning} />
         </div>
-        {/* The model is always one tap away, also with no microphone and while comparing. */}
-        <SpeakButton text={item.nl} voice={voice} label={`Play: ${item.nl}`} />
+        {/* The model is one tap away. While comparing, the speaker's own button below plays it
+            (one speaker per item). */}
+        {phase !== 'review' && <SpeakButton text={item.nl} voice={voice} label={`Play: ${item.nl}`} />}
       </div>
 
       {listenFirst && (
@@ -347,31 +348,5 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
       )}
       <div className="sr-only" role="status">{status}</div>
     </div>
-  );
-}
-
-/** The Settings switch "Speaking practice" (on by default; stored on this device only). */
-export function SpeakingCard({ lang }: { lang?: HelpLanguage }) {
-  const [on, setOn] = useState(speakingOn);
-  const label = useId();
-  const flip = () => {
-    setSpeakingOn(!on);
-    setOn(!on);
-  };
-  return (
-    <section className="keep-card count-card speaking-card">
-      <div className="count-row">
-        <span className="writing-icon" aria-hidden><MicIcon size={24} /></span>
-        <div className="keep-head" id={label}>
-          <Bi className="keep-gloss writing-gloss" text={ui('speakingPractice', lang)} />
-          <span className="keep-nl" lang="nl">Spreken oefenen</span>
-        </div>
-        <button type="button" role="switch" aria-checked={on} aria-labelledby={label} className={`count-switch ${on ? 'on' : ''}`} onClick={flip}>
-          <span className="count-knob" aria-hidden />
-          <span className="count-state" lang="nl" aria-hidden>{on ? 'Aan' : 'Uit'}</span>
-        </button>
-      </div>
-      <p className="keep-hint"><Bi text={ui('speakingHint', lang)} /></p>
-    </section>
   );
 }
