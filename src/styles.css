@@ -332,6 +332,19 @@ h2 { font-size: 1.25rem; }
 .lang-grid-compact .sector-none { padding-inline-end: 40px; }
 .lang-grid-compact .sector-names { font-size: 0.85rem; }
 
+/* Gender (after a help language with gender, and in Settings): two cast heads, then "rather not say". */
+.gender-btn:not(.gender-none) { align-items: center; text-align: center; }
+.gender-btn:not(.gender-none) .lang-names { align-items: center; }
+.gender-btn:not(.gender-none) .sector-names .bi { align-items: center; }
+.gender-face {
+  display: grid; place-items: center; border-radius: 50%; overflow: hidden;
+  background: var(--concrete-2, var(--bg));
+}
+.gender-btn.picked .gender-face { background: color-mix(in srgb, var(--yellow) 45%, var(--card)); }
+.gender-none { min-height: 0; }
+.lang-grid-compact .gender-btn:not(.gender-none) { padding-top: 12px; }
+.gender-btn .lang-native { overflow-wrap: anywhere; }
+
 /* Path: the other sectors' units, folded away at the bottom (still playable when opened). */
 .other-sectors { margin-top: 44px; }
 .other-toggle {

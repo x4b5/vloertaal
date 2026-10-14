@@ -1,6 +1,6 @@
-import type { HelpLanguage } from './types';
+import type { HelpLanguageSource } from './types';
 
-const lang: HelpLanguage = {
+const lang: HelpLanguageSource = {
   code: 'fa',
   name: 'Persian (Iran)',
   nativeName: 'فارسی',
@@ -227,6 +227,11 @@ const lang: HelpLanguage = {
     textLarge: 'بزرگ',
     textXl: 'خیلی بزرگ',
     showEnglish: 'انگلیسی را هم نشان بدهید',
+    genderTitle: 'زن یا مرد؟',
+    genderHint: 'تا زبان شما درست با شما صحبت کند.',
+    genderWoman: 'زن',
+    genderMan: 'مرد',
+    genderNone: 'ترجیح می‌دهم نگویم',
   },
   gloss: {
     // Units

@@ -64,4 +64,17 @@ describe('theme default', () => {
     expect(loadProgress().quiet).toBe(true);
     expect(loadProgress().xp).toBe(30);
   });
+
+  it('keeps the gender choice on the device; older saves have none, unknown values are dropped', async () => {
+    (globalThis as { localStorage?: unknown }).localStorage = ls;
+    const { loadProgress, saveProgress } = await import('../src/lib/progress');
+    store.clear();
+    expect(loadProgress().gender).toBeUndefined();
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: 'pl', themeVersion: 2 }));
+    expect(loadProgress().gender).toBeUndefined();
+    saveProgress({ ...loadProgress(), gender: 'f' });
+    expect(loadProgress().gender).toBe('f');
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: 'pl', themeVersion: 2, gender: 'w' }));
+    expect(loadProgress().gender).toBeUndefined();
+  });
 });

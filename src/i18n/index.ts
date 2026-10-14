@@ -36,8 +36,8 @@ import wTr from './work/tr';
 import wUk from './work/uk';
 import type { CultureTranslation } from './culture/types';
 import { mixLessonId, relatedUnits } from '../content/review';
-import type { HelpLanguage, LangCode, UiKey } from './types';
-import { uiEn } from './types';
+import type { Gender, HelpLanguage, HelpLanguageSource, LangCode, LangText, UiKey } from './types';
+import { forGender, GENDERED_LANGS, uiEn } from './types';
 
 /** Picker order: the largest newcomer groups first, then labour-migration languages. */
 const culture: Record<LangCode, CultureTranslation> = {
@@ -54,7 +54,7 @@ const work: Record<LangCode, CultureTranslation> = {
 };
 
 /** Workplace-culture, work-and-rights and About texts live in their own files (src/i18n/culture, src/i18n/work, src/i18n/about); merge them in. */
-const withCulture = (l: HelpLanguage): HelpLanguage => ({
+const withCulture = (l: HelpLanguageSource): HelpLanguageSource => ({
   ...l,
   ui: { ...l.ui, ...culture[l.code].ui, ...work[l.code].ui, ...about[l.code].ui },
   gloss: {
@@ -64,10 +64,42 @@ const withCulture = (l: HelpLanguage): HelpLanguage => ({
   },
 });
 
-export const helpLanguages: HelpLanguage[] = [ar, ti, fa, prs, uk, tr, pl, ro, bg].map(withCulture);
+/** Every help language as written, texts by gender where they differ (checks and tests). */
+export const helpLanguageSources: HelpLanguageSource[] = [ar, ti, fa, prs, uk, tr, pl, ro, bg].map(withCulture);
 
-export function getHelpLanguage(code: LangCode | null | undefined): HelpLanguage | undefined {
-  return helpLanguages.find((l) => l.code === code);
+const resolveAll = (texts: Record<string, LangText | undefined>, gender?: Gender): Record<string, string> =>
+  Object.fromEntries(Object.entries(texts).flatMap(([k, t]) => (t === undefined ? [] : [[k, forGender(t, gender)]])));
+
+/**
+ * A help language for one learner: every gendered text resolved once, for their gender
+ * (fallback: their form, then the both-forms `x`, then the masculine). Every lookup (ui, gloss,
+ * lang.ui.x, lang.gloss[id]) then reads plain strings in the right form.
+ */
+function resolve(src: HelpLanguageSource, gender?: Gender): HelpLanguage {
+  return { ...src, gender, ui: resolveAll(src.ui, gender), gloss: resolveAll(src.gloss, gender) };
+}
+
+const cache = new Map<string, HelpLanguage>();
+
+/** The help languages with the default form (no gender chosen): the language picker and checks. */
+export const helpLanguages: HelpLanguage[] = helpLanguageSources.map((src) => getHelpLanguage(src.code)!);
+
+/** Does the help language change "I am sick" / "you are new" for a woman or a man? */
+export function hasGender(code: LangCode | null | undefined): boolean {
+  return Boolean(code && GENDERED_LANGS.includes(code));
+}
+
+export function getHelpLanguage(code: LangCode | null | undefined, gender?: Gender | null): HelpLanguage | undefined {
+  const src = helpLanguageSources.find((l) => l.code === code);
+  if (!src) return undefined;
+  const g = gender ?? undefined;
+  const key = `${src.code}:${g ?? ''}`;
+  let lang = cache.get(key);
+  if (!lang) {
+    lang = resolve(src, g);
+    cache.set(key, lang);
+  }
+  return lang;
 }
 
 /** An English string plus, when available, the same string in the help language. */

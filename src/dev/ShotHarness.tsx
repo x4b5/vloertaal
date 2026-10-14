@@ -13,7 +13,8 @@ import { Milestone, StreakStopped } from '../components/Milestone';
 import { addDays, dailyCard } from '../lib/spaced';
 import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
-import type { LangCode } from '../i18n/types';
+import { GenderScreen } from '../components/Gender';
+import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies, learnedWords } from '../content/curriculum';
 import { buildLesson, buildTiles, type Exercise } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
@@ -44,10 +45,13 @@ import type { TextSize } from '../lib/textSize';
  */
 export function ShotHarness({ shot, lang, word }: { shot: string; lang: string | null; word?: string | null }) {
   const q = new URLSearchParams(location.search);
+  // &gender=f|m|x: the help language's texts for a woman, a man, or "rather not say".
+  const gp = q.get('gender');
+  const gender: Gender | undefined = gp === 'f' || gp === 'm' || gp === 'x' ? gp : undefined;
   // Lesson complete: 9 of 11 right the first time, 6 new words (24 in all), next lesson named.
   // &perfect=1: 11 of 11 (FOUTLOOS); &review=1: after "Herhaal vandaag" (8 words, 5 stronger).
   if (shot === 'result') {
-    const l = getHelpLanguage(lang as LangCode);
+    const l = getHelpLanguage(lang as LangCode, gender);
     const review = q.get('review') === '1';
     const right = q.get('perfect') === '1' ? 11 : 9;
     const next = findLesson('l.people')?.lesson;
@@ -67,15 +71,15 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     const key = (d: number) => dayKey(new Date(today.getFullYear(), today.getMonth(), today.getDate() - d));
     const rest = q.get('rest') === '1';
     const p = { ...emptyProgress, streak: n, lastDay: key(0), rest: rest ? [key(1)] : [] };
-    return <Milestone streak={n} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} days={workWeek(p, today)} best={Number(q.get('best') ?? n)} freezes={rest ? 1 : 0} />;
+    return <Milestone streak={n} lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} days={workWeek(p, today)} best={Number(q.get('best') ?? n)} freezes={rest ? 1 : 0} />;
   }
   // The streak stopped at 12 (record 21), shown once on the next open.
-  if (shot === 'stopped') return <StreakStopped streak={12} best={21} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
+  if (shot === 'stopped') return <StreakStopped streak={12} best={21} lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
   // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety
   if (shot === 'pocket') {
     const unit = findUnit(q.get('cu') ?? 'u.safety') ?? units[0];
-    return <PocketCardScreen unit={unit} lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
+    return <PocketCardScreen unit={unit} lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} />;
   }
   // "Save for offline" under a unit in a fixed state: /?shot=offline&offline=saving|saved|error|space
   // (the home's current block, first lesson done); &view=all shows it in "Alle onderwerpen".
@@ -88,7 +92,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       : st === 'space' ? { status: 'error', reason: 'space' }
       : null;
     if (fixed) showOfflineStateForShot('u.firstday', fixed);
-    return <RouteShot shot={q.get('view') === 'all' ? 'all' : 'route'} state="mid" lang={getHelpLanguage(lang as LangCode)} access="full" daily={false} />;
+    return <RouteShot shot={q.get('view') === 'all' ? 'all' : 'route'} state="mid" lang={getHelpLanguage(lang as LangCode, gender)} access="full" daily={false} />;
   }
   // Certificates: /?shot=certificate&cu=u.safety&name=Ali%20Hassan (name=ask: asked the first
   // time; name=none: without a name); /?shot=cert-earned is the one-time moment.
@@ -99,7 +103,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       if (name === 'ask') localStorage.removeItem('vloertaal:cert-name');
       else localStorage.setItem('vloertaal:cert-name', name === 'none' || name === null ? '' : name);
     } catch { /* ignore */ }
-    const l = getHelpLanguage(lang as LangCode);
+    const l = getHelpLanguage(lang as LangCode, gender);
     return shot === 'certificate'
       ? <CertificateScreen unit={unit} day="2026-10-08" lang={l} onBack={() => {}} />
       : <CertEarned unit={unit} day="2026-10-08" lang={l} onView={() => {}} onLater={() => {}} onPocket={() => {}} />;
@@ -111,17 +115,20 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // &other=open opens the "Andere sectoren" section.
   const sp = new URLSearchParams(location.search).get('sector');
   const sector: SectorChoice | undefined = sp === 'none' || isSectorId(sp) ? sp : undefined;
-  if (shot === 'sector') return <SectorScreen lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
-  if (shot === 'gate') return <Gate lang={getHelpLanguage(lang as LangCode)} onAccess={() => {}} onLanguage={() => {}} />;
+  if (shot === 'sector') return <SectorScreen lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} />;
+  if (shot === 'gate') return <Gate lang={getHelpLanguage(lang as LangCode, gender)} onAccess={() => {}} onLanguage={() => {}} />;
   // Screens outside the lesson flow (phase-3 house-style review).
   if (shot === 'onboarding' || shot === 'language') return <Onboarding onDone={() => {}} />;
-  if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
+  // The gender question right after a help language with gender: /?shot=gender&lang=pl
+  // (&gender=f shows it picked; Settings has the same cards: /?shot=settings&lang=pl&gender=f).
+  if (shot === 'gender') return <GenderShot lang={(lang as LangCode) ?? 'pl'} gender={gender} />;
+  if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} />;
   if (shot === 'admin') return <Admin onBack={() => {}} />;
   if (shot === 'tips' || shot === 'settings' || shot === 'words') {
     // Half the course done, so several tips are unlocked.
     const done = Object.fromEntries(allLessons.slice(0, 8).map((l) => [l.id, { best: 1, times: 1 }]));
-    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, quiet, completed: done };
-    const l = getHelpLanguage(lang as LangCode);
+    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, quiet, completed: done, gender };
+    const l = getHelpLanguage(lang as LangCode, gender);
     if (shot === 'words') {
       return (
         <>
@@ -139,13 +146,13 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       </>
     );
   }
-  if (shot === 'about') return <About lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
+  if (shot === 'about') return <About lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} />;
   // Home screen: first lesson done, second lesson current (as in the house-style concept).
   if (shot === 'path') {
     // &cert=1: the whole first unit is done, so its sign carries the certificate chip.
     const firstUnit = q.get('cert') === '1' ? Object.fromEntries(units[0].lessons.map((x) => [x.id, { best: 1, times: 1 }])) : {};
     const progress = { ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector, completed: { 'l.hello': { best: 1, times: 1 }, ...firstUnit } };
-    const l = getHelpLanguage(lang as LangCode);
+    const l = getHelpLanguage(lang as LangCode, gender);
     // &daily=due|done|first shows "Herhaal vandaag" in that state; &lit=1 has today done (lit flame);
     // &arrived=1 plays the "back from a lesson" arrival (scroll, stamp, pop).
     const today = dayKey(new Date());
@@ -172,7 +179,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The home, one block at a time: /?shot=route&state=new|mid|finished|shelf|pick|coach|done
   // (see RouteShot); /?shot=all is "Alle onderwerpen". &access=preview, &sector=, &daily=due work too.
   if (shot === 'route' || shot === 'all') {
-    return <RouteShot shot={shot} state={q.get('state') ?? 'mid'} lang={getHelpLanguage(lang as LangCode)} access={access} sector={sector} daily={q.get('daily') === 'due'} />;
+    return <RouteShot shot={shot} state={q.get('state') ?? 'mid'} lang={getHelpLanguage(lang as LangCode, gender)} access={access} sector={sector} daily={q.get('daily') === 'due'} />;
   }
   // The whole cast in every mood, big, for judging the drawings.
   if (shot === 'cast') {
@@ -193,7 +200,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
         quiet={quiet}
         lesson={picked}
         review={false}
-        lang={getHelpLanguage(lang as LangCode)}
+        lang={getHelpLanguage(lang as LangCode, gender)}
         exercises={buildLesson(picked, { review: false, seed: 1, quiet })}
         startAt={at}
         onQuit={() => {}}
@@ -240,7 +247,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       quiet={quiet}
       lesson={shot === 'chat' ? findLesson('l.shift')!.lesson : lesson}
       review
-      lang={getHelpLanguage(lang as LangCode)}
+      lang={getHelpLanguage(lang as LangCode, gender)}
       exercises={[...before, ex, ...pad]}
       startAt={shot === 'retry' ? before.length + pad.length + 2 : before.length}
       // /?shot=retry: the lesson is through and three mistakes come back (the second is on now).
@@ -311,6 +318,7 @@ function QuietLesson({ quiet: start, ...props }: Omit<React.ComponentProps<typeo
 /** Settings whose sound choice can be tapped (the screenshot shows the picked option move). */
 function SettingsWithSound(props: Omit<React.ComponentProps<typeof Settings>, 'onQuiet'>) {
   const [quiet, setQuiet] = useState(Boolean(props.progress.quiet));
+  const [gender, setGender] = useState(props.progress.gender);
   // &text=large|xl: that text size, picked (main.tsx applies it to the page).
   const [textSize, setTextSize] = useState<TextSize>(() => (new URLSearchParams(location.search).get('text') as TextSize | null) ?? 'normal');
   const pickSize = (size: TextSize) => {
@@ -318,7 +326,14 @@ function SettingsWithSound(props: Omit<React.ComponentProps<typeof Settings>, 'o
     if (size === 'normal') delete document.documentElement.dataset.text;
     else document.documentElement.dataset.text = size;
   };
-  return <Settings {...props} progress={{ ...props.progress, quiet, textSize }} onQuiet={setQuiet} onTextSize={pickSize} />;
+  const lang = getHelpLanguage(props.progress.helpLang, gender);
+  return <Settings {...props} lang={lang} progress={{ ...props.progress, quiet, textSize, gender }} onQuiet={setQuiet} onTextSize={pickSize} onGender={setGender} />;
+}
+
+/** The onboarding gender step for a help language, with a working choice. */
+function GenderShot({ lang, gender }: { lang: LangCode; gender?: Gender }) {
+  const [picked, setPicked] = useState(gender);
+  return <GenderScreen lang={getHelpLanguage(lang, picked)} current={picked} onDone={setPicked} />;
 }
 
 /** Every word of the course with its picture at 120 px and 48 px, grouped by unit, plus the

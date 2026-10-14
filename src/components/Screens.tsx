@@ -10,8 +10,9 @@ import type { DailyCard } from '../lib/spaced';
 import { coursePlan, unitSector, type SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { SectorIcon, SectorPicker } from './Sector';
-import { fillCount, fillN, gloss, helpLanguages, ui, uiCount, withoutN, type Bilingual } from '../i18n';
-import type { HelpLanguage, LangCode } from '../i18n/types';
+import { fillCount, fillN, getHelpLanguage, gloss, hasGender, helpLanguages, ui, uiCount, withoutN, type Bilingual } from '../i18n';
+import type { Gender, HelpLanguage, LangCode } from '../i18n/types';
+import { GenderPicker, GenderScreen } from './Gender';
 import { useEffect, useRef, useState } from 'react';
 import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
 import { VOICE_SAMPLE } from '../lib/voices';
@@ -103,8 +104,24 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   );
 }
 
-/** First run, before anything else: pick the language you get help in. */
-export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void }) {
+/**
+ * First run, before anything else: pick the language you get help in. A language whose
+ * sentences change for a woman or a man (Arabic, Polish, …) then asks that once; `asked` set
+ * (Settings or an earlier run) skips it. &step=gender in the shot harness opens that step.
+ */
+export function Onboarding({ onDone, asked, initial }: {
+  onDone: (code: LangCode | null, gender?: Gender) => void;
+  /** The gender is already known: no question. */
+  asked?: Gender;
+  /** Open on the gender step for this language (screenshots). */
+  initial?: LangCode;
+}) {
+  const [picked, setPicked] = useState<LangCode | null>(initial ?? null);
+  const pick = (code: LangCode | null) => {
+    if (hasGender(code) && !asked) setPicked(code);
+    else onDone(code, asked);
+  };
+  if (picked) return <GenderScreen lang={getHelpLanguage(picked)} onDone={(g) => onDone(picked, g)} />;
   return (
     <div className="screen onboarding">
       <div className="hero">
@@ -112,7 +129,7 @@ export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void
         <p className="tagline">{ui('appTagline').en}</p>
       </div>
       <h2 className="onboarding-title">{ui('chooseLanguage').en}</h2>
-      <LanguagePicker onPick={onDone} />
+      <LanguagePicker onPick={pick} />
     </div>
   );
 }
@@ -661,7 +678,7 @@ function useVoices() {
   return { device, recorded };
 }
 
-export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade, onRestore, onCertificate, onTextSize }: {
+export function Settings({ progress, lang, onLang, onGender, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade, onRestore, onCertificate, onTextSize }: {
   progress: Progress;
   /** Opens a certificate from "Mijn certificaten". */
   onCertificate?: (unitId: string) => void;
@@ -669,6 +686,8 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
   onRestore?: (next: Progress) => void;
   lang?: HelpLanguage;
   onLang: (code: LangCode | null) => void;
+  /** Woman, man or rather not say; shown only for a help language with gender. */
+  onGender?: (gender: Gender) => void;
   onSector: (sector: SectorChoice) => void;
   onTheme: (theme: ThemeChoice) => void;
   /** "Text size": normal, large or extra large. */
@@ -708,6 +727,16 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
           <span className="beta-chip" lang="en">beta</span>
           <Bi text={ui('beta', lang)} />
         </p>
+      )}
+
+      {onGender && hasGender(lang?.code) && (
+        <>
+          <h2 className="settings-sector-title">
+            <span lang="nl">Vrouw of man?</span>
+            <Bi text={ui('genderTitle', lang)} />
+          </h2>
+          <GenderPicker current={progress.gender} lang={lang} onPick={onGender} compact />
+        </>
       )}
 
       <h2 className="settings-sector-title">

@@ -1,6 +1,6 @@
-import type { HelpLanguage } from './types';
+import type { HelpLanguageSource } from './types';
 
-const lang: HelpLanguage = {
+const lang: HelpLanguageSource = {
   code: 'tr',
   name: 'Turkish',
   nativeName: 'Türkçe',
@@ -227,6 +227,11 @@ const lang: HelpLanguage = {
     textLarge: 'Büyük',
     textXl: 'Çok büyük',
     showEnglish: 'İngilizceyi de göster',
+    genderTitle: 'Kadın mı, erkek mi?',
+    genderHint: 'Dilin sana doğru şekilde hitap etsin diye.',
+    genderWoman: 'Kadın',
+    genderMan: 'Erkek',
+    genderNone: 'Söylemek istemiyorum',
   },
   gloss: {
     // Unit: First day at work

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { findLesson, learnedWords, playLesson } from './content/curriculum';
 import { getHelpLanguage } from './i18n';
-import type { LangCode } from './i18n/types';
+import type { Gender, LangCode } from './i18n/types';
 import { setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
@@ -152,7 +152,7 @@ export default function App() {
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
-  const lang = getHelpLanguage(progress.helpLang);
+  const lang = getHelpLanguage(progress.helpLang, progress.gender);
   // The page's language is the help language (Dutch without one). The direction is set where the
   // layout is mirrored (the lesson player and the path), so Dutch never inherits right-to-left.
   useEffect(() => {
@@ -202,6 +202,8 @@ export default function App() {
   }, [focusUnit, access, progress.onboarded, progress.sector]);
 
   const setLang = (code: LangCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
+  const setGender = (gender: Gender) => setProgress((p) => ({ ...p, gender }));
+  const onboard = (code: LangCode | null, gender?: Gender) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true, gender: gender ?? p.gender }));
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
 
   if (view.name === 'admin') {
@@ -211,7 +213,7 @@ export default function App() {
   // First run: the language comes first (an app to learn Dutch can't start in Dutch), then the
   // door in English plus that language, then the sector. The admin page above stays reachable
   // with #beheer.
-  if (!progress.onboarded) return <Onboarding onDone={setLang} />;
+  if (!progress.onboarded) return <Onboarding onDone={onboard} asked={progress.gender} />;
   if (!access) {
     return <Gate lang={lang} onAccess={grant} onLanguage={() => setProgress((p) => ({ ...p, onboarded: false }))} />;
   }
@@ -358,15 +360,16 @@ export default function App() {
             progress={progress}
             lang={lang}
             onLang={setLang}
+            onGender={setGender}
             onSector={setSector}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
             onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
             onReset={() => {
-              // Keep look, voice, sound and sector; only learning progress is wiped (and lessons in progress).
+              // Keep look, voice, sound, sector and gender; only learning progress is wiped (and lessons in progress).
               clearSave();
-              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, textSize: p.textSize }));
+              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, textSize: p.textSize, gender: p.gender }));
               back();
             }}
             onAbout={() => tab('about')}

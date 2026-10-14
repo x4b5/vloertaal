@@ -1,4 +1,4 @@
-import type { LangCode } from '../i18n/types';
+import type { Gender, LangCode } from '../i18n/types';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import type { Cards } from './spaced';
 import type { TextSize } from './textSize';
@@ -27,6 +27,11 @@ export interface Progress {
   /** "Text size" in Settings (src/lib/textSize.ts). Missing = normal. */
   textSize?: TextSize;
   helpLang: LangCode | null;
+  /**
+   * Woman, man or rather not say ('x'), for the help language's own sentences ("I am sick" in
+   * Polish: chory / chora). On this device only. Undefined = not asked (same as 'x').
+   */
+  gender?: Gender;
   /** The learner's sector ('none' = not sure yet); undefined = not asked yet (first run). */
   sector?: SectorChoice;
   xp: number;
@@ -81,6 +86,7 @@ export function loadProgress(): Progress {
       }
       // Older saves have no sector (asked once after the password); drop anything unknown.
       if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
+      if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;
       if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;
       return { ...emptyProgress, ...saved };
     }
