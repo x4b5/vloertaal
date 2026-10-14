@@ -25,3 +25,8 @@ export function voiceFor(who: string): VoiceRef {
   if (!options) return null;
   return options.find((r) => !r?.startsWith('piper:') || hasRecordedVoice(r.slice(6))) ?? DEVICE;
 }
+
+/** The voices the characters speak with now (lessons use all of them: chats, tiles, answers). */
+export function castVoices(): VoiceRef[] {
+  return Object.keys(CAST_VOICES).map(voiceFor);
+}

@@ -315,7 +315,7 @@ const lang: HelpLanguage = {
     'c.gear.a': 'نعم، أنا أرتديها.',
     'c.danger.q': 'هل هناك حادث؟',
     'c.danger.a': 'نعم، اتصل بـ 112!',
-    'c.things.q': 'أين يذهب الصندوق؟',
+    'c.things.q': 'أين يوضع الصندوق؟',
     'c.things.a': 'على المنصة الخشبية (البالِت).',
     'c.directions.q': 'يسار أم يمين؟',
     'c.directions.a': 'يمين، عند رف التخزين.',

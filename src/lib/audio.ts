@@ -48,14 +48,14 @@ export interface RecordedVoice {
   engine?: 'ElevenLabs' | 'Piper';
 }
 
-interface RecordedIndex {
+export interface RecordedIndex {
   voices: RecordedVoice[];
   /** Dutch text → clip id; files live at audio/<voice key>/<id>.mp3. */
   clips: Record<string, string>;
 }
 
 /** ElevenLabs recordings, committed to public/audio-el (see scripts/voices/elevenlabs.mjs). */
-interface ElevenIndex {
+export interface ElevenIndex {
   voices: (RecordedVoice & { said: Record<string, string> })[];
 }
 
@@ -97,27 +97,37 @@ async function loadJson<T>(url: string): Promise<T | null> {
   }
 }
 
+/** Puts the recorded voices in place (ElevenLabs first, then Piper). Also used by tests. */
+export function setRecordedIndex(eleven: ElevenIndex | null, piper: RecordedIndex | null): void {
+  const list: Recorded[] = [
+    ...(eleven?.voices ?? []).map(({ said, ...voice }) =>
+      withPlain({
+        voice: { ...voice, engine: 'ElevenLabs' as const },
+        base: './audio-el',
+        clips: Object.fromEntries(Object.entries(said).map(([id, text]) => [text.trim(), id])),
+      }),
+    ),
+    ...(piper?.voices ?? []).map((voice) =>
+      withPlain({ voice: { ...voice, engine: 'Piper' as const }, base: './audio', clips: piper!.clips }),
+    ),
+  ];
+  if (list.length) {
+    recorded = list;
+    recordedListeners.forEach((fn) => fn());
+  }
+}
+
+/** Settles once the recorded-voice index has loaded (or failed to load). */
+let indexLoaded: Promise<void> = Promise.resolve();
+
 if (typeof window !== 'undefined' && typeof fetch === 'function') {
-  Promise.all([loadJson<ElevenIndex>('./audio-el/voices.json'), loadJson<RecordedIndex>('./audio/voices.json')]).then(
-    ([eleven, piper]) => {
-      const list: Recorded[] = [
-        ...(eleven?.voices ?? []).map(({ said, ...voice }) =>
-          withPlain({
-            voice: { ...voice, engine: 'ElevenLabs' as const },
-            base: './audio-el',
-            clips: Object.fromEntries(Object.entries(said).map(([id, text]) => [text.trim(), id])),
-          }),
-        ),
-        ...(piper?.voices ?? []).map((voice) =>
-          withPlain({ voice: { ...voice, engine: 'Piper' as const }, base: './audio', clips: piper!.clips }),
-        ),
-      ];
-      if (list.length) {
-        recorded = list;
-        recordedListeners.forEach((fn) => fn());
-      }
-    },
+  indexLoaded = Promise.all([loadJson<ElevenIndex>('./audio-el/voices.json'), loadJson<RecordedIndex>('./audio/voices.json')]).then(
+    ([eleven, piper]) => setRecordedIndex(eleven, piper),
   );
+}
+
+export function recordedIndexReady(): Promise<void> {
+  return indexLoaded;
 }
 
 /** Whether a recorded voice with this key has been loaded. */
@@ -134,6 +144,19 @@ function recordedFor(ref: VoiceRef): Recorded | undefined {
     return recorded.find((r) => r.voice.key === key) ?? recorded[0];
   }
   return undefined;
+}
+
+const clipPath = (rec: Recorded, id: string) => `${rec.base}/${rec.voice.key}/${id}.mp3`;
+
+/**
+ * The recorded file speak() would play for this Dutch text with this voice (undefined: the
+ * learner's choice), relative to the app; undefined when the phone's own voice would say it.
+ * Used to save a unit's sound for offline use.
+ */
+export function clipUrl(text: string, voice?: VoiceRef): string | undefined {
+  const chosen = recordedFor(voice === undefined ? preferredVoice : voice);
+  const found = chosen && clipFor(chosen, text);
+  return found ? clipPath(found.rec, found.id) : undefined;
 }
 
 const clipIn = (r: Recorded, text: string) => r.clips[text.trim()] ?? r.plain[plainText(text)];
@@ -214,7 +237,7 @@ export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voic
   if (found) {
     const { rec, id } = found;
     stopAll();
-    const audio = new Audio(`${rec.base}/${rec.voice.key}/${id}.mp3`);
+    const audio = new Audio(clipPath(rec, id));
     audio.playbackRate = (slow ? RECORDED_RATE.slow : RECORDED_RATE.normal) * (VOICE_PACE[rec.voice.key] ?? 1);
     audio.preservesPitch = true;
     (audio as HTMLAudioElement & { webkitPreservesPitch?: boolean }).webkitPreservesPitch = true;
