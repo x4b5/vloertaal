@@ -203,9 +203,11 @@ export default function App() {
     );
     return () => { live = false; };
   }, [progress.helpLang, langReady, langTry]);
+  // A file that failed to load is not fetched again by the browser in this page: back online (or
+  // on the retry button) the page reloads, which is quick and keeps everything.
   useEffect(() => {
     if (!langFailed) return;
-    const back = () => setLangTry((n) => n + 1);
+    const back = () => location.reload();
     window.addEventListener('online', back);
     return () => window.removeEventListener('online', back);
   }, [langFailed]);
@@ -278,7 +280,7 @@ export default function App() {
   // "Keep lessons on this phone" (Settings → This phone): the current topic is kept by itself.
   useAutoOffline(progress, access);
 
-  if ((!langReady || (progress.onboarded && !picsReady)) && view.name !== 'admin') return <Splash failed={langFailed} onRetry={() => setLangTry((n) => n + 1)} />;
+  if ((!langReady || (progress.onboarded && !picsReady)) && view.name !== 'admin') return <Splash failed={langFailed} onRetry={() => location.reload()} />;
   if (view.name === 'admin') {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }

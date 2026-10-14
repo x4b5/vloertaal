@@ -26,6 +26,13 @@ applyEnglish(import.meta.env.DEV && params.get('shot') ? params.get('lang') : lo
 const langBoot = ensureLanguage(loadProgress().helpLang).catch(() => {});
 // The word pictures load alongside (their own file); a returning learner's first screen has them.
 const picsBoot = loadPictures().catch(() => {});
+// The stylesheet loads without blocking the splash (vite.config.ts): React waits for it.
+const appCss = document.querySelector<HTMLLinkElement>('link[data-app-css]');
+const cssBoot = new Promise<void>((done) => {
+  if (!appCss || appCss.media === 'all' || appCss.sheet?.cssRules.length) return done();
+  appCss.addEventListener('load', () => done());
+  appCss.addEventListener('error', () => done());
+});
 const render = (node: ReactNode) => createRoot(document.getElementById('root')!).render(<StrictMode>{node}</StrictMode>);
 
 if (import.meta.env.DEV && params.get('shot')) {
@@ -36,7 +43,7 @@ if (import.meta.env.DEV && params.get('shot')) {
 } else {
   // The saved help language's texts first (index.html's static splash stays up meanwhile), so the
   // first screen has its help text. If that fails (offline, nothing saved), App shows the splash and retries.
-  void Promise.all([langBoot, loadProgress().onboarded ? picsBoot : null]).then(() => render(<App />));
+  void Promise.all([langBoot, cssBoot, loadProgress().onboarded ? picsBoot : null]).then(() => render(<App />));
 }
 
 // Offline support: cache the app after the first visit (production only).

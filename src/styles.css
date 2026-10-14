@@ -266,7 +266,7 @@ h2 { font-size: 1.25rem; }
 .screen > h2 .bi-help { --help-size: 0.8em; font-weight: 400; }
 .screen > .muted { line-height: 1.45; }
 
-/* First run: the language choice. One calm hero (logo, one line), then big flag cards. */
+/* First run: the language choice. One calm hero (logo, one line), then big name cards. */
 .onboarding { padding-top: calc(32px + env(safe-area-inset-top)); }
 .hero { text-align: center; padding: 8px 0 0; }
 .hero h1 { font-size: 2.4rem; color: var(--ink); margin: 0; letter-spacing: -0.02em; }
@@ -284,7 +284,7 @@ h2 { font-size: 1.25rem; }
 .lang-btn:active { transform: translateY(1px); }
 .lang-btn.picked { border-color: var(--edge); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
 .lang-names { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; min-width: 0; max-width: 100%; }
-/* Settings: the same cards, smaller (the flag beside the name when there is room). */
+/* Settings: the same cards, smaller. */
 .lang-grid-compact .lang-btn { min-height: 0; gap: 8px; padding: 10px 12px; }
 .lang-grid-compact .lang-native { font-size: 1.05rem; }
 .lang-grid-compact .lang-native:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: 1.15rem; }
@@ -297,8 +297,6 @@ h2 { font-size: 1.25rem; }
   position: absolute; top: 12px; inset-inline-end: 12px; width: 26px; height: 26px; padding: 3px;
   border-radius: 50%; background: var(--yellow); color: #1e2226;
 }
-/* Flags (src/components/Flags.tsx): rounded corners and a thin edge, so white bands show. */
-.flag { flex: none; display: block; border-radius: 4px; box-shadow: 0 0 0 1px rgba(30, 34, 38, 0.18); }
 @media (max-width: 350px) {
   .lang-grid { gap: 8px; }
   .lang-btn { padding: 12px; min-height: 104px; }
@@ -370,7 +368,7 @@ h2 { font-size: 1.25rem; }
 }
 @media (prefers-reduced-motion: reduce) { .unit-marked .unit-head { animation: none; background: color-mix(in srgb, var(--yellow) 22%, transparent); } }
 
-/* Top bar: logo, two quiet stats (no boxes) and the help-language flag (opens Settings). */
+/* Top bar: logo and two quiet stats (no boxes). */
 .topbar {
   position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 16px;
   padding: calc(10px + env(safe-area-inset-top)) 16px 10px; background: var(--bg);
@@ -2071,14 +2069,13 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .writing-card .keep-nl { order: 1; }
 /* A help-language text read aloud by the device's own voice (when it has one). */
 .help-say {
-  /* A pill with the help language's flag and a speech bubble, in ink, not the Dutch speaker's
+  /* A pill with a globe and a speech bubble, in ink, not the Dutch speaker's
      blue square: reading the help text aloud is a different thing from hearing the Dutch. */
   flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 5px;
   min-width: 56px; height: 44px; padding: 0 9px;
   border: 2px dashed var(--ink-3); border-radius: 999px;
   background: var(--card); color: var(--ink-2);
 }
-.help-say .flag { flex: none; border-radius: 3px; box-shadow: 0 0 0 1px var(--line); }
 .help-say:active { transform: translateY(1px); filter: brightness(0.94); }
 .help-say-row { display: flex; align-items: flex-start; gap: 8px; }
 .help-say-row > :not(.help-say) { flex: 1; min-width: 0; }
@@ -3507,7 +3504,6 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 40px 0 6px;
   font-size: 2rem; font-weight: 700; text-align: center;
 }
-.lang-guess-q .flag, .lang-guess-q svg { border-radius: 6px; box-shadow: 0 0 0 1px var(--line); }
 .lang-guess .max3-cards { margin-top: 22px; }
 
 /* The password field shows what is typed and has no eye any more. */
