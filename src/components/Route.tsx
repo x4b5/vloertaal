@@ -3,7 +3,7 @@ import { Character } from './Characters';
 import { unitIcons } from '../content/unitIcons';
 import type { Unit } from '../content/types';
 import { gloss, ui, uiCount, type Bilingual } from '../i18n';
-import type { HelpLanguage } from '../i18n/types';
+import type { Gender, HelpLanguage } from '../i18n/types';
 import { type Access, unitAllowed } from '../lib/access';
 import { unitDone } from '../lib/certificate';
 import type { DailyCard } from '../lib/spaced';
@@ -17,6 +17,8 @@ import { CertBadge } from './Certificate';
 import { BackIcon, CheckIcon, ChevronIcon, LockIcon } from './Icons';
 import { RestartLink, ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
+import { GenderCard } from './Gender';
+import { shouldAskGender } from '../lib/askGender';
 import { UnitTools } from './Offline';
 
 /**
@@ -31,7 +33,7 @@ import { UnitTools } from './Offline';
  * learner first sees what the topic is (the picture, the title, its lessons) before a lesson
  * begins, and a wrong tap costs nothing.
  */
-export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onPick, onAll, onUpgrade, onCertificate, onPocket, arrived, onArrived, focusUnit, onFocused, picking: pickingAtStart = false, openDone: openAtStart = null }: {
+export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onPick, onAll, onUpgrade, onCertificate, onPocket, arrived, onArrived, focusUnit, onFocused, onGender, onGenderLater, picking: pickingAtStart = false, openDone: openAtStart = null }: {
   progress: Progress;
   lang?: HelpLanguage;
   access?: Access;
@@ -54,6 +56,9 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   /** From a coach link: the block to mark for a moment (App made it the current block). */
   focusUnit?: string | null;
   onFocused?: () => void;
+  /** The one-time "Woman or man?" card (see shouldAskGender): a choice, or ✕ for good. */
+  onGender?: (gender: Gender) => void;
+  onGenderLater?: () => void;
   /** Start with the choice open (dev screenshots of "Ander onderwerp kiezen"). */
   picking?: boolean;
   /** Start with this finished unit open on the shelf (dev screenshots). */
@@ -181,6 +186,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   return (
     <div className="path route" ref={ref} dir={rtl ? 'rtl' : undefined}>
       {daily?.state === 'due' && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
+      {onGender && onGenderLater && shouldAskGender(progress) && <GenderCard lang={lang} onPick={onGender} onLater={onGenderLater} />}
 
       {block && !picking && (
         <section className="rb-current" aria-label={`Unit ${unitIndex(block) + 1}: ${block.title}`}>

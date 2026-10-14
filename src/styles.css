@@ -3378,3 +3378,27 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   border: 1.5px solid var(--line); background: var(--card); color: var(--ink);
 }
 .offline-confirm-btns .offline-yes { border-color: color-mix(in srgb, var(--wrong-ink) 55%, var(--line)); color: var(--wrong-ink); }
+
+/* The home's one-time "Woman or man?" (learners from before the question): a calm card above the
+   block, the question in the help language with the Dutch small under it, three small tiles on
+   one row and a ✕ to put it away. */
+.gender-card {
+  margin: 0 0 12px; padding: 8px 10px 10px 12px; background: var(--card);
+  border: 2px solid var(--line); border-radius: var(--radius);
+}
+.gender-card-head { display: flex; align-items: flex-start; gap: 8px; }
+.gender-card-title { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 1px; margin: 2px 0 0; font-size: 1.08rem; font-weight: 650; line-height: 1.25; }
+.gender-card-title .bi-help { --help-size: 0.8rem; font-weight: 500; color: var(--muted); }
+.gender-card-nl { font-size: 0.82rem; font-weight: 500; color: var(--muted); }
+.gender-card-x { flex: none; width: 36px; height: 36px; margin-block-start: -2px; margin-inline-end: -4px; color: var(--ink-2); }
+.gender-grid-mini { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 8px 0 0; }
+.lang-grid-compact.gender-grid-mini .gender-btn:not(.gender-none) {
+  flex-direction: row; align-items: center; gap: 8px; padding-block: 5px; padding-inline: 5px 8px; text-align: start;
+}
+.gender-grid-mini .gender-face { flex: none; }
+.gender-grid-mini .gender-btn:not(.gender-none) .lang-names,
+.gender-grid-mini .gender-btn:not(.gender-none) .sector-names .bi { align-items: flex-start; }
+.gender-grid-mini .gender-btn .lang-names > .sector-names { font-size: 0.94rem; line-height: 1.2; }
+.gender-grid-mini .gender-btn .lang-names { min-width: 0; }
+.gender-grid-mini .gender-btn .lang-names > .lang-native { font-size: 0.76rem; line-height: 1.2; }
+.gender-grid-mini .sector-names.bi-swap > .bi-help { display: none; }

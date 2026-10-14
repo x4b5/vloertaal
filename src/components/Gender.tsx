@@ -2,7 +2,7 @@ import { ui } from '../i18n';
 import type { Gender, HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
 import { Character, type CharacterId } from './Characters';
-import { CheckIcon } from './Icons';
+import { CheckIcon, CloseIcon } from './Icons';
 import { LogoMark, Wordmark } from './Logo';
 
 const OPTIONS: { id: Gender; nl: string; key: 'genderWoman' | 'genderMan' | 'genderNone'; who?: CharacterId }[] = [
@@ -24,17 +24,21 @@ const NeutralIcon = ({ size = 28 }: { size?: number }) => (
  * the sector cards. The choice only changes the help language ("I am sick" in Polish: chory or
  * chora); the Dutch is the same.
  */
-export function GenderPicker({ current, lang, onPick, compact = false }: {
+export function GenderPicker({ current, lang, onPick, compact = false, mini = false }: {
   /** undefined = nothing chosen yet. */
   current?: Gender;
   lang?: HelpLanguage;
   onPick: (g: Gender) => void;
   /** Smaller cards (Settings). */
   compact?: boolean;
+  /** Woman and man only, as two low tiles on one row (the home's one-time card, whose ✕ is the
+   *  "rather not say": nothing chosen reads the same as 'x'). */
+  mini?: boolean;
 }) {
+  const small = compact || mini;
   return (
-    <div className={`lang-grid sector-grid gender-grid ${compact ? 'lang-grid-compact' : ''}`} role="radiogroup" aria-label={ui('genderTitle').en}>
-      {OPTIONS.map((o) => {
+    <div className={`lang-grid sector-grid gender-grid ${small ? 'lang-grid-compact' : ''} ${mini ? 'gender-grid-mini' : ''}`} role="radiogroup" aria-label={ui('genderTitle').en}>
+      {(mini ? OPTIONS.filter((o) => o.who) : OPTIONS).map((o) => {
         const picked = current === o.id;
         return (
           <button
@@ -47,10 +51,10 @@ export function GenderPicker({ current, lang, onPick, compact = false }: {
           >
             {o.who ? (
               <span className="gender-face" aria-hidden>
-                <Character who={o.who} crop="head" size={compact ? 56 : 84} />
+                <Character who={o.who} crop="head" size={mini ? 38 : compact ? 56 : 84} />
               </span>
             ) : (
-              <span className="sector-icon" aria-hidden><NeutralIcon size={compact ? 26 : 30} /></span>
+              <span className="sector-icon" aria-hidden><NeutralIcon size={mini ? 22 : compact ? 26 : 30} /></span>
             )}
             <span className="lang-names">
               <span className="lang-native" lang="nl">{o.nl}</span>
@@ -78,5 +82,28 @@ export function GenderScreen({ lang, onDone, current }: { lang?: HelpLanguage; o
       <p className="sector-hint"><Bi text={ui('genderHint', lang)} /></p>
       <GenderPicker current={current} lang={lang} onPick={onDone} />
     </div>
+  );
+}
+
+/**
+ * On the home, once, for learners who finished the first run before the gender question (see
+ * shouldAskGender): the same question and the two pictures, small, with a ✕ that puts it away
+ * for good (and leaves the help language's texts as they are, like "rather not say").
+ */
+export function GenderCard({ lang, onPick, onLater }: { lang?: HelpLanguage; onPick: (g: Gender) => void; onLater: () => void }) {
+  const rtl = lang?.dir === 'rtl';
+  return (
+    <section className="gender-card" aria-labelledby="gender-card-title" dir={rtl ? 'rtl' : undefined}>
+      <div className="gender-card-head">
+        <h2 id="gender-card-title" className="gender-card-title">
+          <Bi text={ui('genderTitle', lang)} />
+          <span className="gender-card-nl" lang="nl" dir="ltr">Vrouw of man?</span>
+        </h2>
+        <button type="button" className="icon-btn gender-card-x" onClick={onLater} aria-label={`Close · ${ui('genderNone').en}`}>
+          <CloseIcon size={20} />
+        </button>
+      </div>
+      <GenderPicker lang={lang} onPick={onPick} mini />
+    </section>
   );
 }

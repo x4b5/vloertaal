@@ -372,7 +372,7 @@ export default function App() {
             onReset={() => {
               // Keep look, voice, sound, sector and gender; only learning progress is wiped (and lessons in progress).
               clearSave();
-              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, textSize: p.textSize, gender: p.gender }));
+              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked }));
               back();
             }}
             onAbout={() => tab('about')}
@@ -424,6 +424,8 @@ export default function App() {
             onFocused={() => setFocusUnit(null)}
             onCertificate={(unit) => go({ name: 'certificate', unit })}
             onPocket={(unit) => go({ name: 'pocket', unit })}
+            onGender={setGender}
+            onGenderLater={() => setProgress((p) => ({ ...p, genderAsked: true }))}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
         </>

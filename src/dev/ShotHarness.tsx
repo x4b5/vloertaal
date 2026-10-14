@@ -8,7 +8,7 @@ import { Gate } from '../components/Gate';
 import { SectorScreen } from '../components/Sector';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import type { Access } from '../lib/access';
-import { dayKey, emptyProgress, workWeek } from '../lib/progress';
+import { dayKey, emptyProgress, workWeek, type Progress } from '../lib/progress';
 import { Milestone, StreakStopped } from '../components/Milestone';
 import { addDays, dailyCard } from '../lib/spaced';
 import { CAST, Character, type Mood } from '../components/Characters';
@@ -178,8 +178,9 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   }
   // The home, one block at a time: /?shot=route&state=new|mid|finished|shelf|pick|coach|done
   // (see RouteShot); /?shot=all is "Alle onderwerpen". &access=preview, &sector=, &daily=due work too.
+  // &askGender=1: a learner from before the gender question, with the one-time card (with &lang=pl).
   if (shot === 'route' || shot === 'all') {
-    return <RouteShot shot={shot} state={q.get('state') ?? 'mid'} lang={getHelpLanguage(lang as LangCode, gender)} access={access} sector={sector} daily={q.get('daily') === 'due'} />;
+    return <RouteShot shot={shot} state={q.get('state') ?? 'mid'} lang={getHelpLanguage(lang as LangCode, gender)} access={access} sector={sector} daily={q.get('daily') === 'due'} askGender={q.get('askGender') === '1' ? (lang as LangCode) : undefined} />;
   }
   // The whole cast in every mood, big, for judging the drawings.
   if (shot === 'cast') {
@@ -267,16 +268,19 @@ const unitLessons = (...ids: string[]) => ids.flatMap((id) => findUnit(id)?.less
  *  shelf: four units done and the fifth started; pick: "Ander onderwerp kiezen" open mid-block;
  *  coach: a coach link to "Pay" (marked); done: a finished unit opened on the shelf.
  */
-function RouteShot({ shot, state, lang, access, sector, daily }: { shot: string; state: string; lang?: ReturnType<typeof getHelpLanguage>; access: Access; sector?: SectorChoice; daily: boolean }) {
+function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGender }: { shot: string; state: string; lang?: ReturnType<typeof getHelpLanguage>; access: Access; sector?: SectorChoice; daily: boolean; askGender?: LangCode }) {
   const completed =
     state === 'new' ? {}
     : state === 'mid' || state === 'pick' || state === 'coach' ? doneIds('l.hello')
     : state === 'finished' ? doneIds(...unitLessons('u.firstday'))
     : doneIds(...unitLessons('u.firstday', 'u.help', 'u.tools', 'u.safety'), 'l.things');
-  const [progress, setProgress] = useState({
+  const [progress, setProgress] = useState<Progress>({
     ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector: sector ?? 'none' as SectorChoice, completed,
     currentUnit: state === 'coach' ? 'u.pay' : undefined,
+    // &askGender=1: the help language is stored, the gender is not (the card shows; a choice hides it).
+    helpLang: askGender ?? null,
   });
+  const lang = askGender ? getHelpLanguage(askGender, progress.gender) : shotLang;
   useState(() => clearSave());
   const today = dayKey(new Date());
   const words = findLesson('l.hello')!.lesson.words;
@@ -300,6 +304,8 @@ function RouteShot({ shot, state, lang, access, sector, daily }: { shot: string;
         progress={progress} lang={lang} access={access} daily={card} onDaily={() => {}}
         onStart={() => {}} onAll={() => {}} onUpgrade={() => {}} onCertificate={() => {}} onPocket={() => {}}
         onPick={(unit) => setProgress((p) => ({ ...p, currentUnit: unit }))}
+        onGender={(gender) => setProgress((p) => ({ ...p, gender }))}
+        onGenderLater={() => setProgress((p) => ({ ...p, genderAsked: true }))}
         focusUnit={state === 'coach' ? 'u.pay' : state === 'done' ? 'u.help' : null}
         picking={state === 'pick'}
       />

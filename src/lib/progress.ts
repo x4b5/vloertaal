@@ -32,6 +32,11 @@ export interface Progress {
    * Polish: chory / chora). On this device only. Undefined = not asked (same as 'x').
    */
   gender?: Gender;
+  /**
+   * The home's one-time "Woman or man?" card (learners from before the gender question) was
+   * closed with ✕: it never comes back. Settings can still choose. Missing = not closed.
+   */
+  genderAsked?: boolean;
   /** The learner's sector ('none' = not sure yet); undefined = not asked yet (first run). */
   sector?: SectorChoice;
   xp: number;
@@ -90,6 +95,7 @@ export function loadProgress(): Progress {
       // Older saves have no sector (asked once after the password); drop anything unknown.
       if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
       if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;
+      if (saved.genderAsked !== undefined && typeof saved.genderAsked !== 'boolean') delete saved.genderAsked;
       if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;
       return { ...emptyProgress, ...saved };
     }
