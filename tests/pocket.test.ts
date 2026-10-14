@@ -12,7 +12,7 @@ describe('pocket card phrases', () => {
       const phrases = pocketPhrases(unit);
       expect(phrases, unit.id).toHaveLength(POCKET_SIZE);
       expect(new Set(phrases.map((p) => p.nl.toLowerCase())).size, unit.id).toBe(POCKET_SIZE);
-      const own = new Set(teaching(unit).flatMap((l) => [...l.words, ...l.sentences].map((x) => x.id)));
+      const own = new Set(teaching(unit).flatMap((l) => [...l.words, ...l.sentences, ...(l.dialogues ?? []).flatMap((d) => [d.prompt, d.reply])].map((x) => x.id)));
       for (const p of phrases) expect(own.has(p.id), `${unit.id}: ${p.id}`).toBe(true);
     }
   });

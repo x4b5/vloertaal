@@ -1,6 +1,6 @@
-import type { HelpLanguage } from './types';
+import type { HelpLanguageSource } from './types';
 
-const lang: HelpLanguage = {
+const lang: HelpLanguageSource = {
   code: 'prs',
   name: 'Dari (Afghanistan)',
   nativeName: 'دری',
@@ -227,6 +227,11 @@ const lang: HelpLanguage = {
     textLarge: 'کلان',
     textXl: 'بسیار کلان',
     showEnglish: 'انگلیسی را هم نشان بدهید',
+    genderTitle: 'زن یا مرد؟',
+    genderHint: 'تا زبان شما به شکل درست با شما صحبت کند.',
+    genderWoman: 'زن',
+    genderMan: 'مرد',
+    genderNone: 'ترجیح می‌دهم نگویم',
   },
   gloss: {
     // Units

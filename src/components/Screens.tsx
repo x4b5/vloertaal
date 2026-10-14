@@ -10,11 +10,13 @@ import type { DailyCard } from '../lib/spaced';
 import { coursePlan, unitSector, type SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { SectorIcon, SectorPicker } from './Sector';
-import { fillCount, fillN, gloss, helpLanguages, ui, uiCount, withoutN, type Bilingual } from '../i18n';
-import type { HelpLanguage, LangCode } from '../i18n/types';
+import { fillCount, fillN, getHelpLanguage, gloss, hasGender, helpLanguages, ui, uiCount, withoutN, type Bilingual } from '../i18n';
+import type { Gender, HelpLanguage, LangCode } from '../i18n/types';
+import { GenderPicker, GenderScreen } from './Gender';
 import { useEffect, useRef, useState } from 'react';
 import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
 import { VOICE_SAMPLE } from '../lib/voices';
+import { applyEnglish } from '../lib/english';
 import { isNextInCourse, isUnlocked } from '../lib/exercises';
 import { type Access, unitAllowed } from '../lib/access';
 import { UpgradeCard } from './Gate';
@@ -73,7 +75,8 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   /** Smaller cards (Settings); the first-run screen has the big ones. */
   compact?: boolean;
 }) {
-  const option = (code: LangCode | null, native: string, english: string, dir?: 'ltr' | 'rtl', beta = false) => (
+  const betaHelp = lang?.ui.inReview ?? lang?.ui.beta;
+  const option = (code: LangCode | null, native: string, english: string, dir?: 'ltr' | 'rtl', beta = false, englishHelp?: string) => (
     <button
       key={code ?? 'en'}
       type="button"
@@ -84,11 +87,15 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
       <Flag code={code ?? 'en'} width={compact ? 32 : 40} />
       <span className="lang-names">
         <span className="lang-native" lang={code ?? 'en'} dir={dir}>{native}</span>
-        <span className="lang-en">{english}</span>
+        {/* With a help language chosen (Settings), the English name is support only: hidden
+            with English off, like every other English line. */}
+        {englishHelp
+          ? <HelpText className="lang-en" text={englishHelp} lang={lang!} />
+          : <span className={`lang-en ${lang ? 'en-support' : ''}`} lang="en">{english}</span>}
         {beta && (
           <span className="lang-beta-tag">
-            {lang?.ui.inReview ? <HelpText className="lang-beta-help" text={lang.ui.inReview} lang={lang} /> : <span className="lang-beta-help" lang="en">{ui('inReview').en}</span>}
-            <span className="lang-beta" lang="en">beta</span>
+            {betaHelp ? <HelpText className="lang-beta-help" text={betaHelp} lang={lang!} /> : <span className="lang-beta-help" lang="en">{ui('inReview').en}</span>}
+            <span className={`lang-beta ${betaHelp ? 'en-support' : ''}`} lang="en">beta</span>
           </span>
         )}
       </span>
@@ -98,13 +105,32 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   return (
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`}>
       {helpLanguages.map((l) => option(l.code, l.nativeName, l.name, l.dir, showBeta && !l.reviewed))}
-      {option(null, 'English', ui('englishOnly').en)}
+      {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
     </div>
   );
 }
 
-/** First run, before anything else: pick the language you get help in. */
-export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void }) {
+/**
+ * First run, before anything else: pick the language you get help in. A language whose
+ * sentences change for a woman or a man (Arabic, Polish, …) then asks that once; `asked` set
+ * (Settings or an earlier run) skips it. &step=gender in the shot harness opens that step.
+ */
+export function Onboarding({ onDone, asked, initial }: {
+  onDone: (code: LangCode | null, gender?: Gender) => void;
+  /** The gender is already known: no question. */
+  asked?: Gender;
+  /** Open on the gender step for this language (screenshots). */
+  initial?: LangCode;
+}) {
+  const [picked, setPicked] = useState<LangCode | null>(initial ?? null);
+  // From the gender question on, the help language is chosen: hide the English line already
+  // (as on every later screen), not only once the language is saved.
+  useEffect(() => { if (picked) applyEnglish(picked); }, [picked]);
+  const pick = (code: LangCode | null) => {
+    if (hasGender(code) && !asked) setPicked(code);
+    else onDone(code, asked);
+  };
+  if (picked) return <GenderScreen lang={getHelpLanguage(picked)} onDone={(g) => onDone(picked, g)} />;
   return (
     <div className="screen onboarding">
       <div className="hero">
@@ -112,7 +138,7 @@ export function Onboarding({ onDone }: { onDone: (code: LangCode | null) => void
         <p className="tagline">{ui('appTagline').en}</p>
       </div>
       <h2 className="onboarding-title">{ui('chooseLanguage').en}</h2>
-      <LanguagePicker onPick={onDone} />
+      <LanguagePicker onPick={pick} />
     </div>
   );
 }
@@ -661,7 +687,7 @@ function useVoices() {
   return { device, recorded };
 }
 
-export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade, onRestore, onCertificate, onTextSize }: {
+export function Settings({ progress, lang, onLang, onGender, onSector, onTheme, onVoice, onQuiet, onReset, onAbout, onBack, access = 'full', onAccess, focusUpgrade, onRestore, onCertificate, onTextSize }: {
   progress: Progress;
   /** Opens a certificate from "Mijn certificaten". */
   onCertificate?: (unitId: string) => void;
@@ -669,6 +695,8 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
   onRestore?: (next: Progress) => void;
   lang?: HelpLanguage;
   onLang: (code: LangCode | null) => void;
+  /** Woman, man or rather not say; shown only for a help language with gender. */
+  onGender?: (gender: Gender) => void;
   onSector: (sector: SectorChoice) => void;
   onTheme: (theme: ThemeChoice) => void;
   /** "Text size": normal, large or extra large. */
@@ -705,9 +733,19 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
       <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta compact lang={lang} />
       {lang && !lang.reviewed && (
         <p className="beta-note">
-          <span className="beta-chip" lang="en">beta</span>
+          <span className={`beta-chip ${lang.ui.beta ? 'en-support' : ''}`} lang="en">beta</span>
           <Bi text={ui('beta', lang)} />
         </p>
+      )}
+
+      {onGender && hasGender(lang?.code) && (
+        <>
+          <h2 className="settings-sector-title">
+            <span lang="nl">Vrouw of man?</span>
+            <Bi text={ui('genderTitle', lang)} />
+          </h2>
+          <GenderPicker current={progress.gender} lang={lang} onPick={onGender} compact />
+        </>
       )}
 
       <h2 className="settings-sector-title">
@@ -844,7 +882,7 @@ function VoicePicker({ current, lang, onPick }: {
       </ul>
       {recorded.length > 0 && (
         <p className="muted small credits">
-          Vloertaal voices:{' '}
+          {lang?.ui.voice ? <HelpText className="credits-label" text={lang.ui.voice} lang={lang} /> : 'Vloertaal voices'}:{' '}
           {(['ElevenLabs', 'Piper'] as const)
             .map((engine) => [engine, recorded.filter((v) => (v.engine ?? 'Piper') === engine)] as const)
             .filter(([, vs]) => vs.length)

@@ -1,4 +1,4 @@
-import type { LangCode } from '../i18n/types';
+import type { Gender, LangCode } from '../i18n/types';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import type { Cards } from './spaced';
 import type { TextSize } from './textSize';
@@ -27,6 +27,16 @@ export interface Progress {
   /** "Text size" in Settings (src/lib/textSize.ts). Missing = normal. */
   textSize?: TextSize;
   helpLang: LangCode | null;
+  /**
+   * Woman, man or rather not say ('x'), for the help language's own sentences ("I am sick" in
+   * Polish: chory / chora). On this device only. Undefined = not asked (same as 'x').
+   */
+  gender?: Gender;
+  /**
+   * The home's one-time "Woman or man?" card (learners from before the gender question) was
+   * closed with ✕: it never comes back. Settings can still choose. Missing = not closed.
+   */
+  genderAsked?: boolean;
   /** The learner's sector ('none' = not sure yet); undefined = not asked yet (first run). */
   sector?: SectorChoice;
   xp: number;
@@ -56,7 +66,8 @@ export interface Progress {
 
 export const emptyProgress: Progress = {
   onboarded: false,
-  theme: 'light',
+  // A new learner follows the phone (light or dark); a saved choice is kept (loadProgress).
+  theme: 'auto',
   themeVersion: 2,
   voice: null,
   helpLang: null,
@@ -79,8 +90,12 @@ export function loadProgress(): Progress {
         saved.theme = saved.theme === 'dark' ? 'dark' : 'light';
         saved.themeVersion = 2;
       }
+      // Saved before the automatic default for new learners: they had light, and keep it.
+      if (saved.theme === undefined) saved.theme = 'light';
       // Older saves have no sector (asked once after the password); drop anything unknown.
       if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
+      if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;
+      if (saved.genderAsked !== undefined && typeof saved.genderAsked !== 'boolean') delete saved.genderAsked;
       if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;
       return { ...emptyProgress, ...saved };
     }

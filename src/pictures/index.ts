@@ -1,4 +1,6 @@
-import { createElement, type CSSProperties, type JSX } from 'react';
+import { createElement, isValidElement, type CSSProperties, type JSX } from 'react';
+import type { CharacterId } from '../components/Characters';
+import { Bust } from './kit';
 import group1 from './group1';
 import group2 from './group2';
 import group3 from './group3';
@@ -70,4 +72,31 @@ export function WordPicture({ id, emoji, size = 96, className }: {
     },
     createElement(draw),
   );
+}
+
+/**
+ * The cast member a picture shows (the biggest bust in it), or undefined when it shows none.
+ * Used so a speaker matches the face in the picture (the speaking exercise's model voice).
+ * Reads the picture's element tree only; nothing is rendered.
+ */
+export function pictureCast(id: string): CharacterId | undefined {
+  const draw = pictures[id];
+  if (!draw) return undefined;
+  let best: { who: CharacterId; scale: number } | undefined;
+  const walk = (node: unknown): void => {
+    if (Array.isArray(node)) { node.forEach(walk); return; }
+    if (!isValidElement(node)) return;
+    const props = node.props as { who?: CharacterId; scale?: number; children?: unknown };
+    if (node.type === Bust && props.who) {
+      const scale = props.scale ?? 0.7;
+      if (!best || scale > best.scale) best = { who: props.who, scale };
+    }
+    walk(props.children);
+  };
+  try {
+    walk(draw());
+  } catch {
+    return undefined; // A picture that needs to render (hooks) to show its people: no match.
+  }
+  return best?.who;
 }

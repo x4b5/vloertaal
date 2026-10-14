@@ -46,6 +46,10 @@ export function HelpText({ text, lang, className = 'bi-help' }: { text: string; 
 // the "!", "?" or "…" that closes it when a quote mark follows ("«Zeg maar je, hoor!»").
 const L = 'A-Za-z\\u00C0-\\u024F';
 const WORD = `[${L}0-9][${L}0-9'’\\-]*`;
+const OPEN_QUOTE = '«„“"\'‘';
+const CLOSE_QUOTE = '»”“"\'’';
+/** Quotes up to this many characters stay on one line. */
+const SHORT_QUOTE = 20;
 const LATIN_RUN = new RegExp(`${WORD}(?:[.,:;]?\\s+${WORD})*(?:\\s?(?:…|[!?.])+(?=[»”"“«']))?`, 'g');
 
 /**
@@ -58,10 +62,18 @@ export function isolateLatin(text: string): ReactNode {
   const parts: ReactNode[] = [];
   let last = 0;
   for (const m of text.matchAll(LATIN_RUN)) {
-    const at = m.index ?? 0;
+    let at = m.index ?? 0;
+    let end = at + m[0].length;
+    // A quoted phrase takes its quote marks along, so they stay with it (and the right way
+    // round) in right-to-left text: «Zeg maar je, hoor!», never «!Zeg … hoor» split up.
+    const quoted = at > last && OPEN_QUOTE.includes(text[at - 1]) && CLOSE_QUOTE.includes(text[end] ?? '');
+    if (quoted) { at -= 1; end += 1; }
     if (at > last) parts.push(text.slice(last, at));
-    parts.push(<bdi key={at} dir="ltr">{m[0]}</bdi>);
-    last = at + m[0].length;
+    const phrase = text.slice(at, end);
+    // A short quote is never broken over two lines (a long one still wraps where it must).
+    const keep = quoted && m[0].length <= SHORT_QUOTE;
+    parts.push(<bdi key={at} dir="ltr" className={keep ? 'nl-quote' : undefined}>{phrase}</bdi>);
+    last = end;
   }
   if (!parts.length) return text;
   if (last < text.length) parts.push(text.slice(last));

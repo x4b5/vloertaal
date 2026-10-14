@@ -125,9 +125,9 @@ export function setRecordedIndex(eleven: ElevenIndex | null, piper: RecordedInde
 let indexLoaded: Promise<void> = Promise.resolve();
 
 if (typeof window !== 'undefined' && typeof fetch === 'function') {
-  indexLoaded = Promise.all([loadJson<ElevenIndex>('./audio-el/voices.json'), loadJson<RecordedIndex>('./audio/voices.json')]).then(
-    ([eleven, piper]) => setRecordedIndex(eleven, piper),
-  );
+  // Only the ElevenLabs index: the old Piper voices (./audio/voices.json, built in CI) are no
+  // longer made, so asking for that file only failed, on every load and offline.
+  indexLoaded = loadJson<ElevenIndex>('./audio-el/voices.json').then((eleven) => setRecordedIndex(eleven, null));
 }
 
 export function recordedIndexReady(): Promise<void> {

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { findLesson, learnedWords, playLesson } from './content/curriculum';
 import { getHelpLanguage } from './i18n';
-import type { LangCode } from './i18n/types';
+import type { Gender, LangCode } from './i18n/types';
 import { setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
@@ -152,7 +152,7 @@ export default function App() {
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
-  const lang = getHelpLanguage(progress.helpLang);
+  const lang = getHelpLanguage(progress.helpLang, progress.gender);
   // The page's language is the help language (Dutch without one). The direction is set where the
   // layout is mirrored (the lesson player and the path), so Dutch never inherits right-to-left.
   useEffect(() => {
@@ -163,11 +163,14 @@ export default function App() {
   useEffect(() => { saveProgress(progress); }, [progress]);
   // Certificates: units finished before certificates existed (or put back from a backup) get today's date.
   useEffect(() => { setProgress((p) => earnCertificates(p, new Date())); }, [progress.completed]);
-  // Anonymous count of app opens: at most once a day, never in development (src/lib/count.ts).
+  // Anonymous count of app opens: at most once a day, never in development or with Do Not
+  // Track (src/lib/count.ts). Only once the first run is through (language, password, sector),
+  // so a new learner is counted under their sector, not as "sector-unknown".
+  const readyToCount = progress.onboarded && Boolean(access) && progress.sector !== undefined;
   useEffect(() => {
-    if (progress.onboarded) countOpen({ lang: progress.helpLang, sector: progress.sector });
+    if (readyToCount) countOpen({ lang: progress.helpLang, sector: progress.sector });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [progress.onboarded]);
+  }, [readyToCount]);
   // Learners from before "Herhaal vandaag" get cards for the words they already learned.
   useEffect(() => {
     if (!progress.cards) setProgress((p) => (p.cards ? p : { ...p, cards: seedCards(p.completed, dayKey(new Date())) }));
@@ -202,6 +205,8 @@ export default function App() {
   }, [focusUnit, access, progress.onboarded, progress.sector]);
 
   const setLang = (code: LangCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
+  const setGender = (gender: Gender) => setProgress((p) => ({ ...p, gender }));
+  const onboard = (code: LangCode | null, gender?: Gender) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true, gender: gender ?? p.gender }));
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
 
   if (view.name === 'admin') {
@@ -211,7 +216,7 @@ export default function App() {
   // First run: the language comes first (an app to learn Dutch can't start in Dutch), then the
   // door in English plus that language, then the sector. The admin page above stays reachable
   // with #beheer.
-  if (!progress.onboarded) return <Onboarding onDone={setLang} />;
+  if (!progress.onboarded) return <Onboarding onDone={onboard} asked={progress.gender} />;
   if (!access) {
     return <Gate lang={lang} onAccess={grant} onLanguage={() => setProgress((p) => ({ ...p, onboarded: false }))} />;
   }
@@ -358,15 +363,16 @@ export default function App() {
             progress={progress}
             lang={lang}
             onLang={setLang}
+            onGender={setGender}
             onSector={setSector}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
             onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
             onReset={() => {
-              // Keep look, voice, sound and sector; only learning progress is wiped (and lessons in progress).
+              // Keep look, voice, sound, sector and gender; only learning progress is wiped (and lessons in progress).
               clearSave();
-              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, textSize: p.textSize }));
+              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked }));
               back();
             }}
             onAbout={() => tab('about')}
@@ -418,6 +424,8 @@ export default function App() {
             onFocused={() => setFocusUnit(null)}
             onCertificate={(unit) => go({ name: 'certificate', unit })}
             onPocket={(unit) => go({ name: 'pocket', unit })}
+            onGender={setGender}
+            onGenderLater={() => setProgress((p) => ({ ...p, genderAsked: true }))}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
         </>

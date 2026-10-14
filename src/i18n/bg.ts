@@ -1,6 +1,6 @@
-import type { HelpLanguage } from './types';
+import type { HelpLanguageSource } from './types';
 
-const lang: HelpLanguage = {
+const lang: HelpLanguageSource = {
   code: 'bg',
   name: 'Bulgarian',
   nativeName: 'Български',
@@ -227,6 +227,11 @@ const lang: HelpLanguage = {
     textLarge: 'Голям',
     textXl: 'Много голям',
     showEnglish: 'Показвай и английски',
+    genderTitle: 'Жена или мъж?',
+    genderHint: 'За да може езикът ти да се обръща към теб правилно.',
+    genderWoman: 'Жена',
+    genderMan: 'Мъж',
+    genderNone: 'Предпочитам да не казвам',
   },
   gloss: {
     // Units
@@ -304,12 +309,12 @@ const lang: HelpLanguage = {
     'w.beter': 'по-добре',
 
     // Sentences
-    's.hello.1': 'Здравейте, нов съм.',
+    's.hello.1': { m: 'Здравейте, нов съм.', f: 'Здравейте, нова съм.' },
     's.hello.2': 'Добро утро, аз съм Али.',
     's.hello.3': 'Благодаря, до утре!',
     's.people.1': 'Казвам се Сара.',
     's.people.2': 'Кой е шефът?',
-    's.people.3': 'Аз съм нов колега.',
+    's.people.3': { m: 'Аз съм нов колега.', f: 'Аз съм нова колежка.' },
     's.understand.1': 'Може ли да повторите?',
     's.understand.2': 'Може ли да говорите бавно?',
     's.understand.3': 'Къде е тоалетната?',
@@ -328,7 +333,7 @@ const lang: HelpLanguage = {
     's.shift.1': 'Смяната ми започва в седем часа.',
     's.shift.2': 'Кога е почивката?',
     's.shift.3': 'Извинете, закъснях.',
-    's.sick.1': 'Днес съм болен.',
+    's.sick.1': { m: 'Днес съм болен.', f: 'Днес съм болна.' },
     's.sick.2': 'Боли ме гърбът.',
     's.sick.3': 'Обаждам се на лекаря.',
     'c.hello.q': 'Приятна вечер!',
@@ -347,11 +352,11 @@ const lang: HelpLanguage = {
     'c.directions.a': 'Надясно, до стелажа.',
     'c.shift.q': 'Искаш ли кафе или чай?',
     'c.shift.a': 'Чай, моля.',
-    'c.sick.q': 'Болен ли си?',
+    'c.sick.q': { m: 'Болен ли си?', f: 'Болна ли си?' },
     'c.sick.a': 'Да, днес оставам вкъщи.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Обади се на 112!',
-    'p.hurt': 'Ранен / ранена съм.',
+    'p.hurt': { m: 'Ранен съм.', f: 'Ранена съм.', x: 'Ранен / ранена съм.' },
   },
 };
 

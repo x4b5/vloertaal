@@ -2,6 +2,8 @@ import { useEffect, useId, useLayoutEffect, useState } from 'react';
 import { onSpeech } from '../lib/audio';
 import { FACES, type Emotion, type Expr, type TalkFrame } from './Faces';
 import { tipGender, type CultureTip } from '../content/culture';
+import type { Gender } from '../i18n/types';
+import { learnerCharacter } from '../lib/voices';
 
 /**
  * The Vloertaal cast: four colleagues from the work floor, drawn as flat, sleek busts in one
@@ -951,12 +953,21 @@ export function castFor(seed: string, from: CharacterId[] = CAST): CharacterId {
 
 /**
  * The colleague of a workplace tip and its situation: a woman when the text says "she", a man
- * when it says "he" (see tipGender), any colleague otherwise. Amina is "you" in the chats, so
- * she never plays the other person in a situation.
+ * when it says "he" (see tipGender), any colleague otherwise. The learner's own character ("you"
+ * in the chats: Amina, or Bram for a man; see learnerCharacter) never plays the other person.
  */
-export function tipCast(tip: CultureTip): CharacterId {
+export function tipCast(tip: CultureTip, gender?: Gender | null): CharacterId {
+  const me = learnerCharacter(gender);
+  const notMe = (ids: CharacterId[]) => ids.filter((c) => c !== me);
   const g = tipGender(tip);
   if (g === 'f') return 'jada';
-  if (g === 'm') return castFor(tip.id, ['bram', 'henk']);
-  return castFor(tip.id, ['bram', 'henk', 'jada']);
+  if (g === 'm') return castFor(tip.id, notMe(['bram', 'henk']));
+  return castFor(tip.id, notMe(['bram', 'henk', 'jada']));
+}
+
+/** The colleagues "you" talk to in a chat: everyone but your own character. With Amina as you
+ *  (the default) that is Bram, Henk and Jada, as before. */
+export function colleaguesOf(gender?: Gender | null): CharacterId[] {
+  const me = learnerCharacter(gender);
+  return me === 'amina' ? ['bram', 'henk', 'jada'] : CAST.filter((c) => c !== me);
 }

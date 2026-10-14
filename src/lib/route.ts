@@ -1,5 +1,5 @@
 import { units } from '../content/curriculum';
-import { coursePlan, type SectorChoice } from '../content/sectors';
+import { coursePlan, sectorPriority, type SectorChoice } from '../content/sectors';
 import type { Lesson, Unit } from '../content/types';
 import { type Access, unitAllowed } from './access';
 import { unitDone } from './certificate';
@@ -51,14 +51,18 @@ export function currentBlock({ sector, completed, currentUnit }: RouteInput): Un
 }
 
 /**
- * The next blocks to choose from: the first `n` unfinished units of the learner's course, in
- * course order (the first one is the recommended one). When the course has fewer left, the other
+ * The next blocks to choose from: `n` unfinished units of the learner's course, the next one in
+ * course order first (the recommended one), then the sector's weighted units (see below). When the course has fewer left, the other
  * sectors' units fill up. `include` (the unfinished current block, when the learner asks to choose
  * another topic) is always one of them: it takes the last place when it is not in the list yet.
  */
 export function nextChoices(sector: SectorChoice | undefined, completed: Completed, include?: string, n = CHOICES): Unit[] {
   const open = routeOrder(sector).filter((u) => !unitDone(u, completed));
-  const list = open.slice(0, n);
+  // Weighted by the sector: the next unit in course order stays the recommended one (first);
+  // then the sector's own unit and the basis units that matter most in that work; then the
+  // course order. So a cleaner, a carer and a warehouse worker get different choices.
+  const weighted = sectorPriority(sector).map((id) => open.find((u) => u.id === id)).filter((u): u is Unit => Boolean(u));
+  const list = [...new Set([...open.slice(0, 1), ...weighted, ...open])].slice(0, n);
   const extra = findUnit(include);
   if (extra && !unitDone(extra, completed) && !list.some((u) => u.id === extra.id)) {
     if (list.length >= n) list.pop();

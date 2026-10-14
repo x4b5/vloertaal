@@ -3,8 +3,8 @@ import { allLessons, teachingLessons, phrasebookExtras, phrasebookIds, findItem,
 import { aboutIds } from '../src/content/about';
 import { cultureIds, cultureTips } from '../src/content/culture';
 import { workIds } from '../src/content/work';
-import { helpLanguages } from '../src/i18n';
-import { uiEn } from '../src/i18n/types';
+import { getHelpLanguage, gloss, hasGender, helpLanguageSources, helpLanguages, ui } from '../src/i18n';
+import { allForms, forGender, GENDERED_LANGS, uiEn, type LangText } from '../src/i18n/types';
 import { mixLessonFor } from '../src/content/review';
 
 const contentIds = [
@@ -66,18 +66,79 @@ describe('content and translations', () => {
     for (const id of phrasebookIds) expect(findItem(id), id).toBeDefined();
   });
 
-  for (const lang of helpLanguages) {
+  /** Every form of a text is filled in (a gendered text has an m and an f, both non-empty). */
+  const filled = (t: LangText | undefined) => allForms(t).length > 0 && allForms(t).every((x) => x.trim());
+  const placeholders = (x: string) => [...x.matchAll(/\{\w+\}/g)].map((m) => m[0]).sort();
+
+  for (const lang of helpLanguageSources) {
     it(`${lang.code} translates every UI string and every lesson item`, () => {
-      const missingUi = Object.keys(uiEn).filter((k) => !lang.ui[k as keyof typeof uiEn]?.trim());
-      const missingGloss = contentIds.filter((id) => !lang.gloss[id]?.trim());
+      const missingUi = Object.keys(uiEn).filter((k) => !filled(lang.ui[k as keyof typeof uiEn]));
+      const missingGloss = contentIds.filter((id) => !filled(lang.gloss[id]));
       expect(missingUi).toEqual([]);
-      // Templates keep their placeholders, or the number/word would vanish.
-      expect(lang.ui.practiseMistakes).toContain('{n}');
-      expect(lang.ui.wordsLearnedN).toContain('{n}');
-      expect(lang.ui.streakGrew).toContain('{n}');
-      expect(lang.ui.whichOneIs).toContain('{word}');
+      // Templates keep their placeholders, or the number/word would vanish (in every gender form).
+      for (const [key, ph] of [['practiseMistakes', '{n}'], ['wordsLearnedN', '{n}'], ['streakGrew', '{n}'], ['whichOneIs', '{word}']] as const) {
+        for (const form of allForms(lang.ui[key])) expect(form, `${lang.code} ${key}`).toContain(ph);
+      }
       expect(missingGloss).toEqual([]);
       expect(Object.keys(lang.gloss).filter((id) => !contentIds.includes(id) && !id.endsWith('.mix'))).toEqual([]);
     });
+
+    it(`${lang.code} gender forms keep the same placeholders and only appear where gender matters`, () => {
+      const texts: [string, LangText | undefined][] = [...Object.entries(lang.ui), ...Object.entries(lang.gloss)];
+      for (const [key, t] of texts) {
+        if (t === undefined || typeof t === 'string') continue;
+        // Only languages with grammatical gender carry gendered texts.
+        expect(hasGender(lang.code), `${lang.code} ${key}`).toBe(true);
+        expect(t.m.trim() && t.f.trim(), `${lang.code} ${key}`).toBeTruthy();
+        // A gendered text with the same m and f is just a string.
+        expect(t.m, `${lang.code} ${key}`).not.toBe(t.f);
+        // Every form keeps the English placeholders ({n}, {word}): m, f and x alike.
+        const en = placeholders(uiEn[key as keyof typeof uiEn] ?? '');
+        for (const form of allForms(t)) expect(placeholders(form), `${lang.code} ${key}`).toEqual(placeholders(t.m));
+        if (key in uiEn) expect(placeholders(t.m), `${lang.code} ${key}`).toEqual(en);
+      }
+    });
   }
+
+  it('resolves a gendered text by gender: f, m, then the both-forms x, then m', () => {
+    const t = { m: 'Sunt rănit.', f: 'Sunt rănită.', x: 'Sunt rănit / rănită.' };
+    expect(forGender(t, 'f')).toBe('Sunt rănită.');
+    expect(forGender(t, 'm')).toBe('Sunt rănit.');
+    expect(forGender(t, 'x')).toBe('Sunt rănit / rănită.');
+    expect(forGender(t, undefined)).toBe('Sunt rănit / rănită.');
+    expect(forGender({ m: 'chory', f: 'chora' }, 'x')).toBe('chory');
+    expect(forGender('plain', 'f')).toBe('plain');
+    expect(forGender(undefined, 'f')).toBeUndefined();
+  });
+
+  it('a chosen gender reaches every lookup: lang.gloss, lang.ui, gloss() and ui()', () => {
+    for (const code of GENDERED_LANGS) {
+      const src = helpLanguageSources.find((l) => l.code === code)!;
+      const f = getHelpLanguage(code, 'f')!;
+      const m = getHelpLanguage(code, 'm')!;
+      const gendered = Object.entries(src.gloss).filter(([, t]) => typeof t !== 'string');
+      expect(gendered.length, code).toBeGreaterThan(0);
+      for (const [id, t] of gendered) {
+        expect(f.gloss[id]).toBe((t as { f: string }).f);
+        expect(m.gloss[id]).toBe((t as { m: string }).m);
+        expect(gloss(id, 'en', f).help).toBe((t as { f: string }).f);
+      }
+      // Every resolved text is a plain string.
+      for (const l of [f, m, getHelpLanguage(code)!]) {
+        for (const v of [...Object.values(l.ui), ...Object.values(l.gloss)]) expect(typeof v).toBe('string');
+      }
+    }
+    expect(helpLanguages.every((l) => Object.values(l.gloss).every((v) => typeof v === 'string'))).toBe(true);
+    // Examples from the brief: "not sure yet" in Arabic, "are you sick?", "I am hurt".
+    expect(ui('notSureYet', getHelpLanguage('ar', 'f')).help).toBe('لست متأكدة بعد');
+    expect(ui('notSureYet', getHelpLanguage('ar', 'm')).help).toBe('لست متأكداً بعد');
+    expect(getHelpLanguage('pl', 'f')!.gloss['c.sick.q']).toBe('Jesteś chora?');
+    expect(getHelpLanguage('ro', 'x')!.gloss['p.hurt']).toBe('Sunt rănit / rănită.');
+    expect(getHelpLanguage('ro', 'f')!.gloss['p.hurt']).toBe('Sunt rănită.');
+    // Languages without grammatical gender give the same text for everyone.
+    for (const code of ['fa', 'prs', 'tr'] as const) {
+      expect(hasGender(code)).toBe(false);
+      expect(getHelpLanguage(code, 'f')!.gloss).toEqual(getHelpLanguage(code, 'm')!.gloss);
+    }
+  });
 });

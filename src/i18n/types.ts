@@ -239,14 +239,75 @@ export const uiEn = {
   textLarge: 'Large',
   textXl: 'Extra large',
   showEnglish: 'Show English too',
+  /* Gender (onboarding after the help language, and Settings): only for help languages where
+     "I am sick" or "you are new" changes for a woman or a man. Pictures carry the meaning. */
+  genderTitle: 'Woman or man?',
+  genderHint: 'So your language talks to you in the right way.',
+  genderWoman: 'Woman',
+  genderMan: 'Man',
+  genderNone: 'Rather not say',
 } as const;
 
 export type UiKey = keyof typeof uiEn;
 
 export type LangCode = 'ar' | 'ti' | 'fa' | 'prs' | 'uk' | 'tr' | 'pl' | 'ro' | 'bg';
 
+/**
+ * The learner's grammatical gender for the help language ("Ik ben ziek": Polish "chory" or
+ * "chora"). 'x' = rather not say: the both-forms text ("rănit / rănită") where there is one,
+ * otherwise the masculine. Undefined = not asked (same as 'x').
+ */
+export type Gender = 'f' | 'm' | 'x';
+
+/**
+ * A help-language text that changes with the learner's gender: the learner speaks (first person)
+ * or is spoken to (second person). `x` is the neutral or both-forms text, used for "rather not say".
+ */
+export interface GenderedText {
+  m: string;
+  f: string;
+  x?: string;
+}
+
+/** A help-language text in a translation file: plain, or by gender. */
+export type LangText = string | GenderedText;
+
+/** The text for this gender. Fallback: the asked form, then `x`, then `m`. */
+export function forGender(text: LangText, gender?: Gender): string;
+export function forGender(text: LangText | undefined, gender?: Gender): string | undefined;
+export function forGender(text: LangText | undefined, gender?: Gender): string | undefined {
+  if (text === undefined || typeof text === 'string') return text;
+  if (gender === 'f') return text.f;
+  if (gender === 'm') return text.m;
+  return text.x ?? text.m;
+}
+
+/** Every form of a text (plain: just the one), for checks over all of them. */
+export function allForms(text: LangText | undefined): string[] {
+  if (text === undefined) return [];
+  if (typeof text === 'string') return [text];
+  return [text.m, text.f, ...(text.x === undefined ? [] : [text.x])];
+}
+
+/** Help languages with grammatical gender in the learner's own sentences ("I am sick"). */
+export const GENDERED_LANGS: readonly LangCode[] = ['ar', 'ti', 'uk', 'pl', 'ro', 'bg'];
+
+/** A help language as written in its translation file: texts may differ by gender. */
+export interface HelpLanguageSource {
+  code: LangCode;
+  name: string;
+  nativeName: string;
+  dir: 'ltr' | 'rtl';
+  reviewed: boolean;
+  ui: Partial<Record<UiKey, LangText>>;
+  gloss: Record<string, LangText>;
+}
+
+/** A help language resolved for one learner: every text is a plain string in their gender. */
 export interface HelpLanguage {
   code: LangCode;
+  /** The gender the texts were resolved for (undefined = not chosen: both-forms or masculine). */
+  gender?: Gender;
   /** English name of the language, e.g. "Dari (Afghanistan)". */
   name: string;
   /** Name in the language itself, shown in the language picker. */

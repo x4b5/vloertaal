@@ -1,6 +1,6 @@
-import type { HelpLanguage } from './types';
+import type { HelpLanguageSource } from './types';
 
-const lang: HelpLanguage = {
+const lang: HelpLanguageSource = {
   code: 'pl',
   name: 'Polish',
   nativeName: 'Polski',
@@ -227,6 +227,11 @@ const lang: HelpLanguage = {
     textLarge: 'Duży',
     textXl: 'Bardzo duży',
     showEnglish: 'Pokazuj też angielski',
+    genderTitle: 'Kobieta czy mężczyzna?',
+    genderHint: 'Żeby twój język zwracał się do ciebie poprawnie.',
+    genderWoman: 'Kobieta',
+    genderMan: 'Mężczyzna',
+    genderNone: 'Wolę nie mówić',
   },
   gloss: {
     // Unit: First day at work
@@ -238,7 +243,7 @@ const lang: HelpLanguage = {
     'w.ja': 'tak',
     'w.nee': 'nie',
     'w.totmorgen': 'do jutra',
-    's.hello.1': 'Cześć, jestem nowy.',
+    's.hello.1': { m: 'Cześć, jestem nowy.', f: 'Cześć, jestem nowa.' },
     's.hello.2': 'Dzień dobry, jestem Ali.',
     's.hello.3': 'Dziękuję, do jutra!',
     'l.people': 'Ludzie w pracy',
@@ -250,7 +255,7 @@ const lang: HelpLanguage = {
     'w.nieuw': 'nowy',
     's.people.1': 'Mam na imię Sara.',
     's.people.2': 'Kto jest szefem?',
-    's.people.3': 'Jestem nowym kolegą z pracy.',
+    's.people.3': { m: 'Jestem nowym kolegą z pracy.', f: 'Jestem nową koleżanką z pracy.' },
 
     // Unit: Asking for help
     'u.help': 'Prośba o pomoc',
@@ -322,7 +327,7 @@ const lang: HelpLanguage = {
     'w.morgen': 'jutro',
     's.shift.1': 'Moja zmiana zaczyna się o siódmej.',
     's.shift.2': 'Kiedy jest przerwa?',
-    's.shift.3': 'Przepraszam, spóźniłem się.',
+    's.shift.3': { m: 'Przepraszam, spóźniłem się.', f: 'Przepraszam, spóźniłam się.' },
     'l.sick': 'Zgłaszanie choroby',
     'w.ziek': 'chory',
     'w.bellen': 'dzwonić (telefonem)',
@@ -330,7 +335,7 @@ const lang: HelpLanguage = {
     'w.pijn': 'ból',
     'w.vandaag': 'dzisiaj',
     'w.beter': 'lepiej',
-    's.sick.1': 'Jestem dzisiaj chory.',
+    's.sick.1': { m: 'Jestem dzisiaj chory.', f: 'Jestem dzisiaj chora.' },
     's.sick.2': 'Bolą mnie plecy.',
     's.sick.3': 'Dzwonię do lekarza.',
 
@@ -350,11 +355,11 @@ const lang: HelpLanguage = {
     'c.directions.a': 'W prawo, przy regale.',
     'c.shift.q': 'Chcesz kawę czy herbatę?',
     'c.shift.a': 'Herbatę, poproszę.',
-    'c.sick.q': 'Jesteś chory?',
+    'c.sick.q': { m: 'Jesteś chory?', f: 'Jesteś chora?' },
     'c.sick.a': 'Tak, dziś zostaję w domu.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Dzwoń pod 112!',
-    'p.hurt': 'Jestem ranny / ranna.',
+    'p.hurt': { m: 'Jestem ranny.', f: 'Jestem ranna.', x: 'Jestem ranny / ranna.' },
   },
 };
 

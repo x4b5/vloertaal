@@ -24,7 +24,8 @@ const MAX_LEN = 34;
 
 /** Hand-picked where the automatic pick would miss the line you need most. */
 export const pocketPicks: Record<string, string[]> = {
-  'u.help': ['w.begrijpniet', 's.understand.1', 's.understand.2', 's.understand.3', 'w.helpen'],
+  // Whole lines you say, not the bare verb "helpen": the chat's reply fills the fifth place.
+  'u.help': ['w.begrijpniet', 's.understand.1', 's.understand.2', 's.understand.3', 'c.understand.a'],
   'u.safety': ['s.danger.3', 's.danger.2', 's.gear.1', 's.danger.1', 'w.stop'],
 };
 
@@ -52,8 +53,10 @@ export function pocketPhrases(unit: Unit, n = POCKET_SIZE): PocketPhrase[] {
     seen.add(key);
     out.push({ id: item.id, nl: item.nl, en: item.en, picture: pictureFor(item, unitWords) });
   };
+  // A pick may also be a line of the unit's chats (what you answer a colleague).
+  const chatLines = lessons.flatMap((l) => (l.dialogues ?? []).flatMap((d) => [d.prompt, d.reply]));
   for (const id of pocketPicks[unit.id] ?? []) {
-    const item = findItem(id);
+    const item = findItem(id) ?? chatLines.find((c) => c.id === id);
     if (item) push(item);
   }
   const sentences = roundRobin(lessons.map((l) => l.sentences));

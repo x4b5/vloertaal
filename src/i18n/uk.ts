@@ -1,6 +1,6 @@
-import type { HelpLanguage } from './types';
+import type { HelpLanguageSource } from './types';
 
-const lang: HelpLanguage = {
+const lang: HelpLanguageSource = {
   code: 'uk',
   name: 'Ukrainian',
   nativeName: 'Українська',
@@ -227,6 +227,11 @@ const lang: HelpLanguage = {
     textLarge: 'Великий',
     textXl: 'Дуже великий',
     showEnglish: 'Показуй також англійську',
+    genderTitle: 'Жінка чи чоловік?',
+    genderHint: 'Щоб твоя мова зверталася до тебе правильно.',
+    genderWoman: 'Жінка',
+    genderMan: 'Чоловік',
+    genderNone: 'Не хочу казати',
   },
   gloss: {
     // Unit: First day at work
@@ -238,7 +243,7 @@ const lang: HelpLanguage = {
     'w.ja': 'так',
     'w.nee': 'ні',
     'w.totmorgen': 'до завтра',
-    's.hello.1': 'Привіт, я тут новенький.',
+    's.hello.1': { m: 'Привіт, я тут новенький.', f: 'Привіт, я тут новенька.' },
     's.hello.2': 'Доброго ранку, я Алі.',
     's.hello.3': 'Дякую, до завтра!',
     'l.people': 'Люди на роботі',
@@ -250,7 +255,7 @@ const lang: HelpLanguage = {
     'w.nieuw': 'новий',
     's.people.1': 'Мене звати Сара.',
     's.people.2': 'Хто тут начальник?',
-    's.people.3': 'Я новий колега.',
+    's.people.3': { m: 'Я новий колега.', f: 'Я нова колега.' },
 
     // Unit: Asking for help
     'u.help': 'Як попросити про допомогу',
@@ -322,7 +327,7 @@ const lang: HelpLanguage = {
     'w.morgen': 'завтра',
     's.shift.1': 'Моя зміна починається о сьомій.',
     's.shift.2': 'Коли перерва?',
-    's.shift.3': 'Вибачте, я запізнився.',
+    's.shift.3': { m: 'Вибачте, я запізнився.', f: 'Вибачте, я запізнилася.' },
     'l.sick': 'Повідомити про хворобу',
     'w.ziek': 'хворий',
     'w.bellen': 'дзвонити (телефоном)',
@@ -330,7 +335,7 @@ const lang: HelpLanguage = {
     'w.pijn': 'біль',
     'w.vandaag': 'сьогодні',
     'w.beter': 'краще',
-    's.sick.1': 'Я сьогодні хворий.',
+    's.sick.1': { m: 'Я сьогодні хворий.', f: 'Я сьогодні хвора.' },
     's.sick.2': 'У мене болить спина.',
     's.sick.3': 'Я дзвоню лікарю.',
 
@@ -350,11 +355,11 @@ const lang: HelpLanguage = {
     'c.directions.a': 'Праворуч, біля стелажа.',
     'c.shift.q': 'Хочеш кави чи чаю?',
     'c.shift.a': 'Чаю, будь ласка.',
-    'c.sick.q': 'Ти хворий?',
+    'c.sick.q': { m: 'Ти хворий?', f: 'Ти хвора?' },
     'c.sick.a': 'Так, сьогодні я залишаюся вдома.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Дзвони 112!',
-    'p.hurt': 'Я поранений / поранена.',
+    'p.hurt': { m: 'Я поранений.', f: 'Я поранена.', x: 'Я поранений / поранена.' },
   },
 };
 

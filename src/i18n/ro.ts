@@ -1,6 +1,6 @@
-import type { HelpLanguage } from './types';
+import type { HelpLanguageSource } from './types';
 
-const lang: HelpLanguage = {
+const lang: HelpLanguageSource = {
   code: 'ro',
   name: 'Romanian',
   nativeName: 'Română',
@@ -227,6 +227,11 @@ const lang: HelpLanguage = {
     textLarge: 'Mare',
     textXl: 'Foarte mare',
     showEnglish: 'Arată și engleza',
+    genderTitle: 'Femeie sau bărbat?',
+    genderHint: 'Ca limba ta să ți se adreseze corect.',
+    genderWoman: 'Femeie',
+    genderMan: 'Bărbat',
+    genderNone: 'Prefer să nu spun',
   },
   gloss: {
     // Units
@@ -245,7 +250,7 @@ const lang: HelpLanguage = {
     'l.things': 'Lucruri din depozit',
     'l.directions': 'Direcții și acțiuni',
     'l.shift': 'Tura mea',
-    'l.sick': 'Anunți că ești bolnav',
+    'l.sick': { m: 'Anunți că ești bolnav', f: 'Anunți că ești bolnavă' },
 
     // Words
     'w.hallo': 'salut',
@@ -304,12 +309,12 @@ const lang: HelpLanguage = {
     'w.beter': 'mai bine',
 
     // Sentences
-    's.hello.1': 'Salut, sunt nou.',
+    's.hello.1': { m: 'Salut, sunt nou.', f: 'Salut, sunt nouă.' },
     's.hello.2': 'Bună dimineața, sunt Ali.',
     's.hello.3': 'Mulțumesc, pe mâine!',
     's.people.1': 'Numele meu este Sara.',
     's.people.2': 'Cine este șeful?',
-    's.people.3': 'Sunt un coleg nou.',
+    's.people.3': { m: 'Sunt un coleg nou.', f: 'Sunt o colegă nouă.' },
     's.understand.1': 'Puteți repeta?',
     's.understand.2': 'Puteți vorbi mai încet?',
     's.understand.3': 'Unde este toaleta?',
@@ -328,7 +333,7 @@ const lang: HelpLanguage = {
     's.shift.1': 'Tura mea începe la ora șapte.',
     's.shift.2': 'Când este pauza?',
     's.shift.3': 'Scuze, am întârziat.',
-    's.sick.1': 'Sunt bolnav azi.',
+    's.sick.1': { m: 'Sunt bolnav azi.', f: 'Sunt bolnavă azi.' },
     's.sick.2': 'Mă doare spatele.',
     's.sick.3': 'Îl sun pe doctor.',
     'c.hello.q': 'Seară bună!',
@@ -347,11 +352,11 @@ const lang: HelpLanguage = {
     'c.directions.a': 'Dreapta, lângă raft.',
     'c.shift.q': 'Vrei cafea sau ceai?',
     'c.shift.a': 'Ceai, te rog.',
-    'c.sick.q': 'Ești bolnav?',
+    'c.sick.q': { m: 'Ești bolnav?', f: 'Ești bolnavă?' },
     'c.sick.a': 'Da, azi rămân acasă.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Sună la 112!',
-    'p.hurt': 'Sunt rănit / rănită.',
+    'p.hurt': { m: 'Sunt rănit.', f: 'Sunt rănită.', x: 'Sunt rănit / rănită.' },
   },
 };
 
