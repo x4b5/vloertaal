@@ -7,6 +7,7 @@ import { tokenize } from './answers';
 import { type Access, lessonAllowed } from './access';
 import { createRng, sample, shuffle } from './random';
 import { hasPicture, lookKey } from './wordPicture';
+import { type SpeakItem, withSpeaking } from './speaking';
 
 export type Exercise =
   | { kind: 'intro'; word: Word }
@@ -24,7 +25,9 @@ export type Exercise =
   /** "How it works here": a workplace-culture card (not graded). */
   | { kind: 'tip'; tip: CultureTip }
   /** "What do you do?": the tip's situation with shuffled options. */
-  | { kind: 'situation'; tip: CultureTip; options: CultureTip['options'] };
+  | { kind: 'situation'; tip: CultureTip; options: CultureTip['options'] }
+  /** "Say it": hear the Dutch, record yourself, compare, rate yourself. Never graded (lib/speaking.ts). */
+  | { kind: 'speak'; item: SpeakItem };
 
 /**
  * Exercises that can only be answered by hearing: the word is not on screen. They are left out
@@ -36,9 +39,9 @@ export function needsAudio(ex: Exercise): boolean {
   return AUDIO_ONLY_KINDS.includes(ex.kind);
 }
 
-/** Intros only teach; every other exercise is graded. */
+/** Intros, tips and speaking practice are not graded; every other exercise is. */
 export function isGraded(ex: Exercise): boolean {
-  return ex.kind !== 'intro' && ex.kind !== 'tip';
+  return ex.kind !== 'intro' && ex.kind !== 'tip' && ex.kind !== 'speak';
 }
 
 /** Same answer, or the same (or a near-identical) picture: never two of these in one choice. */
@@ -208,7 +211,7 @@ export function buildTiles(sentence: Sentence, lesson: Lesson, rng: () => number
  * quiet ("Without sound"): every listening exercise becomes a reading one on the same word, so
  * the lesson keeps its length and nothing needs to be heard.
  */
-export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean }): Exercise[] {
+export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean }): Exercise[] {
   const rng = createRng(opts.seed ?? Date.now());
   const words = lesson.words;
   const out: Exercise[] = [];
@@ -263,6 +266,9 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // the lesson (and a saved place in it) stays the same as before they existed.
   const pickRng = createRng(((opts.seed ?? 0) ^ 0x5eed) >>> 0);
   out.push(opts.quiet ? { kind: 'meaning', word: t1, options: options(t1, lesson, rng) } : { kind: 'type', word: t1, options: options(t1, lesson, pickRng) });
+  // Speaking practice (Settings, on by default; never "Without sound"): one "say it" near the
+  // end, placed after the rest is built so the other exercises stay the same with or without it.
+  if (opts.speak && !opts.quiet) return withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);
   return out;
 }
 

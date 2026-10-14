@@ -219,6 +219,11 @@ const DEVICE_RATE = { normal: 0.75, slow: 0.45 };
 
 let playing: HTMLAudioElement | null = null;
 
+/** Stop whatever is being said (before the microphone records: the clip must not be recorded too). */
+export function stopSpeech(): void {
+  stopAll();
+}
+
 function stopAll(): void {
   playing?.pause();
   playing = null;
