@@ -5,7 +5,7 @@ import type { HelpLanguage } from '../i18n/types';
 import { speechAvailable } from '../lib/audio';
 import { breakable } from '../lib/dutch';
 import { Bi } from './Bi';
-import { AlertIcon, ChevronIcon, CloseIcon } from './Icons';
+import { AlertIcon, ChevronIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 
 /** The emergency phrases: Dutch with a speaker button, the meaning in the help language. */
@@ -59,14 +59,12 @@ export function PhraseSheet({ lang, onClose }: { lang?: HelpLanguage; onClose: (
             <span className="phrase-sheet-nl" lang="nl">Noodzinnen</span>
             <Bi text={ui('phrasebook', lang)} />
           </h2>
-          <button type="button" className="icon-btn phrase-sheet-x" onClick={onClose} aria-label={ui('backToLesson').en} ref={closeRef}>
-            <CloseIcon size={26} />
-          </button>
         </div>
         <div className="phrase-sheet-list">
           <PhraseList lang={lang} />
         </div>
-        <button type="button" className="btn btn-go btn-primary phrase-sheet-back" onClick={onClose}>
+        {/* One way back (no second ✕ in the corner): this button, Escape, the backdrop or Back. */}
+        <button type="button" className="btn btn-go btn-primary phrase-sheet-back" onClick={onClose} ref={closeRef}>
           <Bi className="btn-label" text={ui('backToLesson', lang)} />
           <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
         </button>
