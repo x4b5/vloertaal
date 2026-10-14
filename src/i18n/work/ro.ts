@@ -228,7 +228,7 @@ const t: CultureTranslation = {
     's.leave.3': 'Am o urgență acasă.',
     'c.leave.q': 'Când vrei să pleci în concediu?',
     'c.leave.a': 'În iulie, trei săptămâni.',
-    'l.illness': 'Bolnav acasă',
+    'l.illness': { m: 'Bolnav acasă', f: 'Bolnavă acasă' },
     'w.ziekmelden': { m: 'a anunța că ești bolnav', f: 'a anunța că ești bolnavă' },
     'w.betermelden': 'a anunța că te-ai făcut bine',
     'w.bedrijfsarts': 'medicul de medicina muncii',

@@ -228,7 +228,7 @@ const t: CultureTranslation = {
     's.leave.3': 'Mam nagłą sytuację w domu.',
     'c.leave.q': 'Kiedy chcesz jechać na urlop?',
     'c.leave.a': 'W lipcu, na trzy tygodnie.',
-    'l.illness': 'Chory w domu',
+    'l.illness': { m: 'Chory w domu', f: 'Chora w domu' },
     'w.ziekmelden': 'zgłosić chorobę',
     'w.betermelden': 'zgłosić powrót do zdrowia',
     'w.bedrijfsarts': 'lekarz zakładowy',
