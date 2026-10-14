@@ -61,7 +61,8 @@ export interface Progress {
 
 export const emptyProgress: Progress = {
   onboarded: false,
-  theme: 'light',
+  // A new learner follows the phone (light or dark); a saved choice is kept (loadProgress).
+  theme: 'auto',
   themeVersion: 2,
   voice: null,
   helpLang: null,
@@ -84,6 +85,8 @@ export function loadProgress(): Progress {
         saved.theme = saved.theme === 'dark' ? 'dark' : 'light';
         saved.themeVersion = 2;
       }
+      // Saved before the automatic default for new learners: they had light, and keep it.
+      if (saved.theme === undefined) saved.theme = 'light';
       // Older saves have no sector (asked once after the password); drop anything unknown.
       if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
       if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;

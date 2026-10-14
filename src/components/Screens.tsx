@@ -75,7 +75,8 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   /** Smaller cards (Settings); the first-run screen has the big ones. */
   compact?: boolean;
 }) {
-  const option = (code: LangCode | null, native: string, english: string, dir?: 'ltr' | 'rtl', beta = false) => (
+  const betaHelp = lang?.ui.inReview ?? lang?.ui.beta;
+  const option = (code: LangCode | null, native: string, english: string, dir?: 'ltr' | 'rtl', beta = false, englishHelp?: string) => (
     <button
       key={code ?? 'en'}
       type="button"
@@ -86,11 +87,15 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
       <Flag code={code ?? 'en'} width={compact ? 32 : 40} />
       <span className="lang-names">
         <span className="lang-native" lang={code ?? 'en'} dir={dir}>{native}</span>
-        <span className="lang-en">{english}</span>
+        {/* With a help language chosen (Settings), the English name is support only: hidden
+            with English off, like every other English line. */}
+        {englishHelp
+          ? <HelpText className="lang-en" text={englishHelp} lang={lang!} />
+          : <span className={`lang-en ${lang ? 'en-support' : ''}`} lang="en">{english}</span>}
         {beta && (
           <span className="lang-beta-tag">
-            {lang?.ui.inReview ? <HelpText className="lang-beta-help" text={lang.ui.inReview} lang={lang} /> : <span className="lang-beta-help" lang="en">{ui('inReview').en}</span>}
-            <span className="lang-beta" lang="en">beta</span>
+            {betaHelp ? <HelpText className="lang-beta-help" text={betaHelp} lang={lang!} /> : <span className="lang-beta-help" lang="en">{ui('inReview').en}</span>}
+            <span className={`lang-beta ${betaHelp ? 'en-support' : ''}`} lang="en">beta</span>
           </span>
         )}
       </span>
@@ -100,7 +105,7 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   return (
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`}>
       {helpLanguages.map((l) => option(l.code, l.nativeName, l.name, l.dir, showBeta && !l.reviewed))}
-      {option(null, 'English', ui('englishOnly').en)}
+      {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
     </div>
   );
 }
@@ -728,7 +733,7 @@ export function Settings({ progress, lang, onLang, onGender, onSector, onTheme, 
       <LanguagePicker current={progress.helpLang} onPick={onLang} showBeta compact lang={lang} />
       {lang && !lang.reviewed && (
         <p className="beta-note">
-          <span className="beta-chip" lang="en">beta</span>
+          <span className={`beta-chip ${lang.ui.beta ? 'en-support' : ''}`} lang="en">beta</span>
           <Bi text={ui('beta', lang)} />
         </p>
       )}
@@ -877,7 +882,7 @@ function VoicePicker({ current, lang, onPick }: {
       </ul>
       {recorded.length > 0 && (
         <p className="muted small credits">
-          Vloertaal voices:{' '}
+          {lang?.ui.voice ? <HelpText className="credits-label" text={lang.ui.voice} lang={lang} /> : 'Vloertaal voices'}:{' '}
           {(['ElevenLabs', 'Piper'] as const)
             .map((engine) => [engine, recorded.filter((v) => (v.engine ?? 'Piper') === engine)] as const)
             .filter(([, vs]) => vs.length)

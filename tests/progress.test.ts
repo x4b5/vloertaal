@@ -40,10 +40,14 @@ describe('theme default', () => {
   const store = new Map<string, string>();
   const ls = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v) };
 
-  it('is light for new learners and moves the old automatic default to light', async () => {
+  it('follows the phone for new learners, keeps saved choices, and moves the old automatic default to light', async () => {
     (globalThis as { localStorage?: unknown }).localStorage = ls;
     const { loadProgress } = await import('../src/lib/progress');
     store.clear();
+    expect(loadProgress().theme).toBe('auto');
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, theme: 'light', themeVersion: 2 }));
+    expect(loadProgress().theme).toBe('light');
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, themeVersion: 2 }));
     expect(loadProgress().theme).toBe('light');
     store.set('vloertaal:v1', JSON.stringify({ onboarded: true, theme: 'auto' }));
     expect(loadProgress().theme).toBe('light');

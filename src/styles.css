@@ -3337,3 +3337,44 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 :root.en-off .pair-main:has(> .en-support):not(:has(> strong)) { display: none; }
 /* The settings switch: "EN" as its icon. */
 .show-en-icon { width: 24px; height: 24px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.02em; border: 2px solid currentColor; border-radius: 6px; line-height: 1; }
+
+/* ---- Larger text on a small phone (360×640, Polish at XL) ---- */
+/* Unit chips ("Zapisz do użytku offline", "Ściągawka"): words stay whole. A chip is never
+   narrower than its longest word; when both don't fit on one row, the second wraps below. */
+.unit-tool { min-width: min-content; }
+.unit-tool-label { hyphens: manual; overflow-wrap: break-word; }
+/* Bottom bar: the Dutch label on one line, a little smaller where the tab is narrow, instead
+   of "Instel-lingen" squeezed over two lines (the help line under it keeps its own size). */
+@media (min-width: 301px) {
+  /* Each tab as wide as its words need (the rest of the bar shared out), and words kept whole:
+     "Налаштування" or "Instellingen" never break inside. */
+  .nav-tab { flex: 1 1 auto; }
+  .nav-label { white-space: nowrap; overflow-wrap: normal; }
+  .nav-help { overflow-wrap: normal; }
+}
+@media (min-width: 301px) and (max-width: 400px) {
+  .nav-label { font-size: min(0.74rem, 3.75vw); }
+}
+/* The run label ("3 in a row") sits on the progress bar's end, inside the header: after
+   scrolling it never covers the exercise's question below the header. */
+.bar-wrap > .run-label { top: 50%; translate: 0 -50%; }
+/* A larger text needs a taller feedback label, so the answer's meaning is not hidden. */
+:root:is([data-text='large'], [data-text='xl']) .feedback-text { max-height: min(42dvh, 360px); }
+@media (max-height: 700px) { :root:is([data-text='large'], [data-text='xl']) .feedback-text { max-height: 38dvh; } }
+/* The "more below" button sits at the end of the footer's top edge, over the page margin,
+   not in the middle of the text it points to. */
+.foot-more-btn { left: auto; margin-left: 0; inset-inline-end: 8px; width: 40px; }
+/* Reminder after day 1 on a short screen with larger text: no Bram, so the whole card and its
+   privacy line fit above Continue. */
+@media (max-height: 720px) {
+  :root:is([data-text='large'], [data-text='xl']) .keep-screen .keep-hero { display: none; }
+}
+.nl-quote { white-space: nowrap; }
+/* "Remove from this phone?" in place of the saved chip: two small buttons, Nee first in focus. */
+.offline-confirm { flex: 1 1 100%; flex-wrap: wrap; row-gap: 6px; padding-block: 6px; }
+.offline-confirm-btns { display: flex; gap: 6px; flex: none; }
+.offline-confirm-btns button {
+  min-width: 52px; min-height: 40px; padding: 0 12px; border-radius: 10px; font-weight: 700;
+  border: 1.5px solid var(--line); background: var(--card); color: var(--ink);
+}
+.offline-confirm-btns .offline-yes { border-color: color-mix(in srgb, var(--wrong-ink) 55%, var(--line)); color: var(--wrong-ink); }

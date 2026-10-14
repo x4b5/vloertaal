@@ -1,6 +1,6 @@
 import { useEffect, useReducer, useState } from 'react';
 import type { Unit } from '../content/types';
-import { ui } from '../i18n';
+import { gloss, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { onRecordedVoices, preferredVoiceRef } from '../lib/audio';
 import {
@@ -67,6 +67,7 @@ function useOfflineUnit(unitId: string) {
 export function OfflineControl({ unit, lang }: { unit: Unit; lang?: HelpLanguage }) {
   const { voices, state } = useOfflineUnit(unit.id);
   const [estimate, setEstimate] = useState<number | null>(null);
+  const [confirming, setConfirming] = useState(false);
   const showSave = state.status === 'none' || state.status === 'error' || (state.status === 'saved' && state.stale);
   const vk = voicesKey(voices);
   useEffect(() => {
@@ -95,6 +96,24 @@ export function OfflineControl({ unit, lang }: { unit: Unit; lang?: HelpLanguage
       </div>
     );
   }
+  if (state.status === 'saved' && !state.stale && confirming) {
+    // "Remove?" asked in place, no pop-up: Ja removes, Nee keeps (words from the first unit).
+    return (
+      <div className="unit-tool offline-saved offline-confirm" role="group" aria-label={`${ui('removeOffline').en}?`}>
+        <span className="unit-tool-text">
+          <Bi className="unit-tool-label" text={{ ...ui('removeOffline', lang), en: `${ui('removeOffline').en}?`, help: ui('removeOffline', lang).help && `${ui('removeOffline', lang).help}?` }} />
+        </span>
+        <span className="offline-confirm-btns">
+          <button type="button" className="offline-yes" onClick={() => { setConfirming(false); removeUnitOffline(unit.id); }} aria-label={`Ja · ${gloss('w.ja', 'yes', lang).help ?? 'yes'}`}>
+            <span lang="nl">Ja</span>
+          </button>
+          <button type="button" className="offline-no" onClick={() => setConfirming(false)} aria-label={`Nee · ${gloss('w.nee', 'no', lang).help ?? 'no'}`} autoFocus>
+            <span lang="nl">Nee</span>
+          </button>
+        </span>
+      </div>
+    );
+  }
   if (state.status === 'saved' && !state.stale) {
     return (
       <div className="unit-tool offline-saved" role="status">
@@ -106,7 +125,7 @@ export function OfflineControl({ unit, lang }: { unit: Unit; lang?: HelpLanguage
         <button
           type="button"
           className="offline-remove"
-          onClick={() => removeUnitOffline(unit.id)}
+          onClick={() => setConfirming(true)}
           aria-label={`${ui('removeOffline').en}${ui('removeOffline', lang).help ? ` (${ui('removeOffline', lang).help})` : ''}`}
         >
           <CloseIcon size={18} />

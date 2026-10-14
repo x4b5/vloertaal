@@ -70,3 +70,11 @@ describe('offline odds and ends', () => {
     expect(sw).toContain('clients.claim');
   });
 });
+
+describe('the font files saved with the app', () => {
+  it('takes every .woff2 of a @font-face, not the .woff fallbacks', async () => {
+    const { fontFileUrls } = await import('../src/lib/offline');
+    expect(fontFileUrls('url("./noto-color-emoji.3.woff2") format("woff2")')).toEqual(['./noto-color-emoji.3.woff2']);
+    expect(fontFileUrls("url(/assets/lexend-latin-ext.woff2) format('woff2'), url(/assets/lexend-latin-ext.woff) format('woff')")).toEqual(['/assets/lexend-latin-ext.woff2']);
+  });
+});

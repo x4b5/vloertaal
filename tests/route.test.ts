@@ -84,3 +84,25 @@ describe('route: one block at a time', () => {
     expect(replaceWithBackup(p, { completed: {} }).currentUnit).toBeUndefined();
   });
 });
+
+describe('route: "choose next" weighs the sector', () => {
+  const choices = (sector: Parameters<typeof nextChoices>[0]) => nextChoices(sector, done('u.firstday')).map((u) => u.id);
+
+  it('keeps the next unit in course order first, then the sector\'s own unit and its focus units', () => {
+    expect(choices('logistics')).toEqual(['u.help', 'u.warehouse', 'u.safety']);
+    expect(choices('cleaning')).toEqual(['u.help', 'u.clean', 'u.time']);
+    expect(choices('care')).toEqual(['u.help', 'u.care', 'u.teamwork']);
+    // No sector: plain course order.
+    expect(choices('none')).toEqual(['u.help', 'u.tools', 'u.safety']);
+    expect(choices(undefined)).toEqual(['u.help', 'u.tools', 'u.safety']);
+  });
+
+  it('gives different sectors different choices', () => {
+    const sets = (['logistics', 'cleaning', 'care', 'hospitality', 'construction', 'production'] as const).map((s) => choices(s).join());
+    expect(new Set(sets).size).toBe(sets.length);
+  });
+
+  it('skips weighted units that are done and fills up in course order', () => {
+    expect(nextChoices('care', done('u.firstday', 'u.care', 'u.teamwork')).map((u) => u.id)).toEqual(['u.help', 'u.health', 'u.tools']);
+  });
+});

@@ -163,11 +163,14 @@ export default function App() {
   useEffect(() => { saveProgress(progress); }, [progress]);
   // Certificates: units finished before certificates existed (or put back from a backup) get today's date.
   useEffect(() => { setProgress((p) => earnCertificates(p, new Date())); }, [progress.completed]);
-  // Anonymous count of app opens: at most once a day, never in development (src/lib/count.ts).
+  // Anonymous count of app opens: at most once a day, never in development or with Do Not
+  // Track (src/lib/count.ts). Only once the first run is through (language, password, sector),
+  // so a new learner is counted under their sector, not as "sector-unknown".
+  const readyToCount = progress.onboarded && Boolean(access) && progress.sector !== undefined;
   useEffect(() => {
-    if (progress.onboarded) countOpen({ lang: progress.helpLang, sector: progress.sector });
+    if (readyToCount) countOpen({ lang: progress.helpLang, sector: progress.sector });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [progress.onboarded]);
+  }, [readyToCount]);
   // Learners from before "Herhaal vandaag" get cards for the words they already learned.
   useEffect(() => {
     if (!progress.cards) setProgress((p) => (p.cards ? p : { ...p, cards: seedCards(p.completed, dayKey(new Date())) }));

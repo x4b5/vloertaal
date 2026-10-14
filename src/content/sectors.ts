@@ -20,15 +20,18 @@ export interface Sector {
   key: UiKey;
   /** The units that belong to this sector. */
   units: string[];
+  /** Basis units (for everyone) that matter most in this work: recommended earlier in "choose
+   *  next" (src/lib/route.ts nextChoices), after the sector's own unit. */
+  focus: string[];
 }
 
 export const sectors: Sector[] = [
-  { id: 'logistics', nl: 'Logistiek', key: 'sectorLogistics', units: ['u.warehouse'] },
-  { id: 'construction', nl: 'Bouw', key: 'sectorConstruction', units: ['u.build'] },
-  { id: 'production', nl: 'Productie', key: 'sectorProduction', units: ['u.factory'] },
-  { id: 'care', nl: 'Zorg', key: 'sectorCare', units: ['u.care'] },
-  { id: 'hospitality', nl: 'Horeca', key: 'sectorHospitality', units: ['u.horeca'] },
-  { id: 'cleaning', nl: 'Schoonmaak', key: 'sectorCleaning', units: ['u.clean'] },
+  { id: 'logistics', nl: 'Logistiek', key: 'sectorLogistics', units: ['u.warehouse'], focus: ['u.safety', 'u.time'] },
+  { id: 'construction', nl: 'Bouw', key: 'sectorConstruction', units: ['u.build'], focus: ['u.safety', 'u.tools'] },
+  { id: 'production', nl: 'Productie', key: 'sectorProduction', units: ['u.factory'], focus: ['u.safety', 'u.tools'] },
+  { id: 'care', nl: 'Zorg', key: 'sectorCare', units: ['u.care'], focus: ['u.teamwork', 'u.health'] },
+  { id: 'hospitality', nl: 'Horeca', key: 'sectorHospitality', units: ['u.horeca'], focus: ['u.teamwork', 'u.time'] },
+  { id: 'cleaning', nl: 'Schoonmaak', key: 'sectorCleaning', units: ['u.clean'], focus: ['u.time', 'u.safety'] },
 ];
 
 /** "Weet ik nog niet": shown as the last card. */
@@ -72,4 +75,11 @@ export function coursePlan(sector: SectorChoice | undefined): { main: Unit[]; ot
 /** Lessons in the order they unlock one after another (basis + own sector). */
 export function mainLessons(sector: SectorChoice | undefined): Lesson[] {
   return coursePlan(sector).main.flatMap((u) => u.lessons);
+}
+
+/** The units a sector weighs first when the learner chooses what's next: its own unit(s), then
+ *  its focus units. Empty with no sector chosen (or "not sure yet"). */
+export function sectorPriority(sector: SectorChoice | undefined): string[] {
+  const s = sectors.find((x) => x.id === sector);
+  return s ? [...s.units, ...s.focus] : [];
 }
