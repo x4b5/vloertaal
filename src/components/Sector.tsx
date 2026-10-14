@@ -6,6 +6,7 @@ import { Bi } from './Bi';
 import { CareIcon, ConveyorIcon, CupIcon, ForkliftIcon, HelmetIcon, QuestionIcon, SprayIcon } from './Icons';
 import { WordPicture } from '../pictures';
 import { ChoiceCards, QuestionHead, type ChoiceOption } from './Choice';
+import { ChromeHead } from './ChromeBack';
 
 const ICONS: Record<SectorId | 'none', typeof ForkliftIcon> = {
   logistics: ForkliftIcon,
@@ -25,7 +26,8 @@ export function SectorIcon({ id, size = 24 }: { id: SectorChoice; size?: number 
 /** The picture of each sector (the word pictures of its own unit's world). */
 export const SECTOR_PICTURES: Record<SectorId, string> = {
   logistics: 'w.heftruck',
-  construction: 'w.steiger',
+  // A yellow hard hat: the scaffold read as warehouse racking at card size.
+  construction: 'w.helm',
   production: 'w.lopendeband',
   care: 'w.verpleegkundige',
   hospitality: 'w.pan',
@@ -98,6 +100,8 @@ export function SectorScreen({ lang, onDone, initialGroup }: {
     <div className="screen onboarding sector-screen max3-page" dir={lang?.dir}>
       {g ? (
         <>
+          {/* Back to the kind of work (the phone's Back button does the same). */}
+          <ChromeHead lang={lang} onBack={() => (history.state?.sectorStep ? history.back() : setGroup(null))} />
           <QuestionHead nl="Waar werk je?" text={ui('chooseSector', lang)} />
           <p className="max3-crumb"><Bi text={ui(g.key, lang)} /></p>
           <SectorCards group={g.id} lang={lang} onPick={onDone} />

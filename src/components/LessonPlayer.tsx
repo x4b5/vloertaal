@@ -14,7 +14,7 @@ import { Bi, HelpText } from './Bi';
 import { FlameIcon } from './StreakArt';
 import {
   BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
-  PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
+  PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon,
 } from './Icons';
 import { MicIcon, SpeakExercise } from './Speaking';
 import { canRecord, micBlocked, speakingOn } from '../lib/speaking';
@@ -184,19 +184,14 @@ function ButtonBlock({ icon }: { icon: 'check' | 'next' }) {
 type PlayerProps = Parameters<typeof LessonRun>[0];
 
 /**
- * The lesson. "Start again" in the pause sheet of a resumed lesson throws the saved place away
- * and plays the lesson from the top (a fresh run, new seed).
+ * The lesson. "Start again" for a lesson stopped halfway is on the home (it clears the saved
+ * place before the lesson opens); the pause sheet is always Keep going / sound / Stop.
  */
-export function LessonPlayer(props: Omit<PlayerProps, 'onRestart'>) {
-  const [round, setRound] = useState(0);
-  const restart = useCallback(() => {
-    clearSave(props.lesson.id);
-    setRound((r) => r + 1);
-  }, [props.lesson.id]);
-  return <LessonRun key={round} {...props} onRestart={restart} />;
+export function LessonPlayer(props: PlayerProps) {
+  return <LessonRun {...props} />;
 }
 
-function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, onRestart }: {
+function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -219,8 +214,6 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
    * the app is hidden, picked up again on the next start, cleared when the lesson is finished.
    */
   resumable?: boolean;
-  /** "Start again" (pause sheet of a resumed lesson). */
-  onRestart?: () => void;
 }) {
   const persist = resumable && !exercises;
   // An interrupted run of this lesson (same review mode), less than two days old.
@@ -479,8 +472,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         wordResults.current[ex.word.id] = (wordResults.current[ex.word.id] ?? true) && answer.correct;
       }
     }
-    // A finished match board already gave its feedback tile by tile.
-    if (ex.kind === 'match') return next();
+    // A finished match board already gave its feedback tile by tile. Two or more wrong taps make
+    // it a mistake, which comes back once at the end (as a built sentence does).
+    if (ex.kind === 'match') {
+      if (!answer.correct && index < initial.length) setQueue((q) => [...q, ex]);
+      return next();
+    }
     // The choreography (styles.css, "Answer moment"): t=0 the options colour, the chime plays
     // and the character reacts; the stamp lands at 60 ms and the label rises at 120 ms, when the
     // button becomes the green or red Continue; the run stamp follows at 300 ms and the answer
@@ -847,7 +844,6 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
           soundOff={soundOff}
           onKeep={() => setAskQuit(false)}
           onSound={() => { setAskQuit(false); setSound(!soundOff); }}
-          onRestart={resumed && onRestart ? onRestart : undefined}
           onStop={onQuit}
         />
       )}
@@ -856,20 +852,18 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
 }
 
 /**
- * The pause sheet behind the ✕: three big buttons, keep going is the main one. The second is
- * "Without sound" (leave out listening, speaking and writing from now on; "Sound on" when it is
- * already off), or "Start again" in a lesson picked up where it was left. Help (the phrasebook)
- * is one tap further: Stop, then Help in the bottom bar.
+ * The pause sheet behind the ✕: always three big buttons, each with its icon. Keep going is the
+ * main one; then "Without sound" (leave out listening, speaking and writing from now on; "Sound
+ * on" when it is already off); then Stop. Help (the phrasebook) is one tap further: Stop, then
+ * Help in the bottom bar. "Start again" lives on the home, next to Continue.
  * kept: the lesson's place is saved (resume), so the hint says the progress stays.
  */
-function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onRestart, onStop }: {
+function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onStop }: {
   lang?: HelpLanguage;
   kept: boolean;
   soundOff: boolean;
   onKeep: () => void;
   onSound: () => void;
-  /** Set in a resumed lesson: "Start again" takes the place of the sound choice. */
-  onRestart?: () => void;
   onStop: () => void;
 }) {
   useEffect(() => {
@@ -895,18 +889,12 @@ function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onRestart, onStop }
             <Bi text={ui('keepGoing', lang)} />
             <ButtonBlock icon="next" />
           </button>
-          {onRestart ? (
-            <button type="button" className="btn sheet-second sheet-restart" onClick={onRestart}>
-              <span className="sheet-second-icon" aria-hidden><RestartIcon /></span>
-              <Bi text={ui('restartLesson', lang)} />
-            </button>
-          ) : (
-            <button type="button" className="btn sheet-second sheet-sound" onClick={onSound} aria-pressed={soundOff}>
-              <span className="sheet-second-icon" aria-hidden>{soundOff ? <SpeakerIcon size={24} /> : <SpeakerOffIcon size={24} />}</span>
-              <Bi text={ui(soundOff ? 'soundOn' : 'withoutSound', lang)} />
-            </button>
-          )}
+          <button type="button" className="btn sheet-second sheet-sound" onClick={onSound} aria-pressed={soundOff}>
+            <span className="sheet-second-icon" aria-hidden>{soundOff ? <SpeakerIcon size={24} /> : <SpeakerOffIcon size={24} />}</span>
+            <Bi text={ui(soundOff ? 'soundOn' : 'withoutSound', lang)} />
+          </button>
           <button type="button" className="btn sheet-stop" onClick={onStop}>
+            <span className="sheet-second-icon sheet-stop-icon" aria-hidden><StopIcon size={24} /></span>
             <Bi text={ui('stopLesson', lang)} />
           </button>
         </div>
@@ -915,11 +903,3 @@ function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onRestart, onStop }
   );
 }
 
-/** A circular arrow (start again). */
-function RestartIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden focusable="false">
-      <path d="M4.6 12a7.4 7.4 0 1 0 2.2-5.3M6.4 2.8v4.4h4.4" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}

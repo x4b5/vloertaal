@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { allLessons, allWords } from '../src/content/curriculum';
 import { tokenize } from '../src/lib/answers';
-import { buildLesson, buildSteps, buildTiles, MATCH_PAIRS, nearMiss } from '../src/lib/exercises';
+import { buildLesson, buildSteps, buildTiles, courseNames, MATCH_PAIRS, nearMiss } from '../src/lib/exercises';
 import { letterSteps } from '../src/lib/letters';
 import { matchStart, matchTap, stepGrade } from '../src/lib/lessonRun';
 import { createRng } from '../src/lib/random';
@@ -57,6 +57,26 @@ describe('build word by word', () => {
     expect(full / all).toBeGreaterThan(0.9);
   });
 
+  it('knows the names of the course', () => {
+    expect(courseNames().has('Ali')).toBe(true);
+    expect(courseNames().has('Ik')).toBe(false);
+  });
+
+  it('never writes a name in lower case ("Ali", not "ali")', () => {
+    const lower = new Map([...courseNames()].map((n) => [n.toLowerCase(), n]));
+    for (const lesson of allLessons) {
+      for (const s of lesson.sentences) {
+        for (let seed = 1; seed <= 5; seed++) {
+          const steps = buildSteps(s.nl, buildTiles(s, lesson, createRng(seed)));
+          for (const w of steps.flat()) {
+            const name = lower.get(w.toLowerCase());
+            if (name) expect(w, `${s.nl}`).toBe(name);
+          }
+        }
+      }
+    }
+  });
+
   it('is the same every time for the same sentence', () => {
     const lesson = allLessons.find((l) => l.sentences.length)!;
     const s = lesson.sentences[0];
@@ -64,16 +84,11 @@ describe('build word by word', () => {
     expect(buildSteps(s.nl, tiles)).toEqual(buildSteps(s.nl, tiles));
   });
 
-  it('a sentence counts as a mistake after any wrong tap', () => {
+  it('forgives one stray wrong tap; two or more are a mistake (build, match and letters alike)', () => {
     expect(stepGrade(0)).toEqual({ correct: true, almost: false });
-    expect(stepGrade(1).correct).toBe(false);
+    expect(stepGrade(1)).toEqual({ correct: true, almost: false });
+    expect(stepGrade(2).correct).toBe(false);
     expect(stepGrade(3).correct).toBe(false);
-  });
-
-  it('a spelled word allows one wrong letter, with a note', () => {
-    expect(stepGrade(0, true)).toEqual({ correct: true, almost: false });
-    expect(stepGrade(1, true)).toEqual({ correct: true, almost: true });
-    expect(stepGrade(2, true).correct).toBe(false);
   });
 });
 
@@ -97,6 +112,18 @@ describe('guided match', () => {
     const again = matchTap(words, one, 'a');
     expect(again.state).toBe(one);
     expect(again.hit).toBe(false);
+  });
+  it('is graded like a built sentence: one wrong tap forgiven, two a mistake', () => {
+    const play = (taps: string[]) => {
+      let s = matchStart;
+      let finished = false;
+      for (const id of taps) ({ state: s, finished } = matchTap(words, s, id));
+      expect(finished).toBe(true);
+      return stepGrade(s.wrong).correct;
+    };
+    expect(play(['a', 'b', 'c'])).toBe(true);
+    expect(play(['c', 'a', 'b', 'c'])).toBe(true);
+    expect(play(['c', 'a', 'c', 'b', 'c'])).toBe(false);
   });
   it('finishes after the last pair', () => {
     let s = matchStart;

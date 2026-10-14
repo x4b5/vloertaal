@@ -256,6 +256,7 @@ const lang: HelpLanguageSource = {
     certSaveShare: { m: 'ዓቅብ ወይ ኣካፍል', f: 'ዓቅቢ ወይ ኣካፍሊ' },
     certNameDone: 'ተወዲኡ',
     pauseTitle: 'ዕረፍቲ',
+    back: 'ንድሕሪት',
   },
   gloss: {
     // Units

@@ -1452,7 +1452,8 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .sheet-actions .btn .bi { align-items: center; }
 .sheet-actions .btn .bi-help { --help-size: 0.8em; font-weight: 500; }
 .sheet-actions .btn-primary .bi-help { color: #3f3a2c; }
-.sheet-stop { background: var(--card); color: var(--ink); border: 3px solid var(--edge); }
+.sheet-stop { gap: 10px; background: var(--card); color: var(--ink); border: 3px solid var(--edge); }
+.sheet-stop-icon { color: var(--red); }
 .sheet-stop:hover { background: var(--red-bg); }
 @media (min-width: 760px) {
   .sheet-backdrop { align-items: center; }
@@ -2070,10 +2071,14 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .writing-card .keep-nl { order: 1; }
 /* A help-language text read aloud by the device's own voice (when it has one). */
 .help-say {
-  flex: none; display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0;
-  border: 2px solid color-mix(in srgb, var(--blue) 45%, transparent); border-radius: 10px;
-  background: var(--card); color: var(--blue);
+  /* A pill with the help language's flag and a speech bubble, in ink, not the Dutch speaker's
+     blue square: reading the help text aloud is a different thing from hearing the Dutch. */
+  flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+  min-width: 56px; height: 44px; padding: 0 9px;
+  border: 2px dashed var(--ink-3); border-radius: 999px;
+  background: var(--card); color: var(--ink-2);
 }
+.help-say .flag { flex: none; border-radius: 3px; box-shadow: 0 0 0 1px var(--line); }
 .help-say:active { transform: translateY(1px); filter: brightness(0.94); }
 .help-say-row { display: flex; align-items: flex-start; gap: 8px; }
 .help-say-row > :not(.help-say) { flex: 1; min-width: 0; }
@@ -2532,19 +2537,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .bay-done .bay-resume > .icon, .bay-open .bay-resume > .icon { color: var(--ink-3); }
 .bay-done .resume-meta, .bay-open .resume-meta { color: var(--ink); }
 .bay-done .resume-ring circle:first-child, .bay-open .resume-ring circle:first-child { stroke: var(--line); stroke-opacity: 1; }
-.bay-restart {
-  grid-column: 2; justify-self: start; display: inline-flex; align-items: center; flex-wrap: wrap; gap: 4px 6px;
-  min-height: 44px; margin-top: -4px; padding: 6px 4px; background: none; border: 0;
-  color: var(--muted); font-size: 0.9rem; font-weight: 600; text-align: start;
-}
-.bay-restart > .icon { flex: none; color: var(--ink-3); }
-.bay-restart:hover { color: var(--ink); }
-.bay-restart > [lang='nl'] { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
-.restart-help.bi-swap { flex-direction: row; flex-wrap: wrap; align-items: baseline; column-gap: 5px; }
-.restart-help .bi-sep { display: inline; }
-.restart-help .bi-en { font-weight: 500; }
-.restart-help.bi-swap > .bi-help { --help-size: 0.85em; }
-.restart-help:not(.bi-swap) .bi-en { color: var(--ink-3); font-weight: 400; }
 .sheet-hint-nl { display: block; margin-bottom: 4px; color: var(--ink); font-weight: 600; }
 
 /* ---- Gauntlet loop 3: no stuck points for a learner who reads only the help language ---- */
@@ -2788,23 +2780,18 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 
 /* Sentence tiles: the word is the button that places it; the speaker beside it is its own
    button that only plays it. */
-.tile-slot { position: relative; display: inline-flex; }
-.tile-slot > .tile-with-say { padding-inline-end: 46px; }
+.tile-slot { position: relative; display: inline-flex; align-items: center; gap: 6px; }
+/* The speaker is its own 44 px button beside the word, outside the word's tap area. */
 .tile-say {
-  position: absolute; z-index: 1; top: 50%; inset-inline-end: 5px; margin-top: -17px;
-  display: grid; place-items: center; width: 34px; height: 34px; border: 0; border-radius: 7px;
+  position: relative; flex: none; z-index: 1;
+  display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 9px;
   color: var(--blue); background: color-mix(in srgb, var(--blue) 14%, transparent);
 }
 .tile-say:hover { background: color-mix(in srgb, var(--blue) 24%, transparent); }
 .tile-say:active { translate: 0 1px; filter: brightness(0.94); }
-@media (max-width: 380px) { .tile-slot > .tile-with-say { padding-inline-end: 40px; } .tile-say { width: 30px; height: 30px; margin-top: -15px; inset-inline-end: 4px; } }
-/* The speaker looks small but takes a 44 px tap (the touch-target minimum): the extra room
-   goes up, down and outwards, hardly towards the word, so a tap on a short word ("je") still
-   places it. */
-.tile-say::after { content: ''; position: absolute; inset-block: -7px; inset-inline-start: -4px; inset-inline-end: -10px; }
-@media (min-width: 381px) { .tile-say::after { inset-block: -5px; inset-inline-start: -2px; inset-inline-end: -8px; } }
-/* A short word ("je") keeps a word part of 44 px or more beside its speaker. */
-.tile-slot > .tile-with-say { min-width: 92px; }
+/* A short word ("je") still makes a big tile to tap. */
+.tile-slot > .tile-with-say { min-width: 64px; justify-content: center; }
+.tile-steps { column-gap: 14px; }
 
 /* Type what you hear, with letter tiles: the answer, a back key, then the letters. */
 .type-answer-row { display: flex; align-items: stretch; gap: 10px; }
@@ -2849,18 +2836,20 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 
 /* Chat replies: the card picks, the speaker beside it only plays. After Check each reply says
    what it means, small, under the Dutch. */
-.choice-wrap { position: relative; display: flex; }
-.choice-wrap > .choice { flex: 1; min-width: 0; padding-inline-end: 70px; }
+.choice-wrap { position: relative; display: flex; align-items: center; gap: 12px; }
+.choice-wrap > .choice { flex: 1; min-width: 0; }
+/* The speaker stands beside the option, outside its tap area, with a clear gap: a near miss on
+   the speaker never answers. */
 .choice-say {
-  position: absolute; z-index: 2; top: 50%; inset-inline-end: 10px; margin-top: -24px;
+  position: relative; flex: none; z-index: 2;
   display: grid; place-items: center; width: 48px; height: 48px; border-radius: 10px;
   color: var(--blue); background: var(--card); border: 2px solid color-mix(in srgb, var(--blue) 45%, transparent);
 }
 .choice-say:hover { background: color-mix(in srgb, var(--blue) 12%, var(--card)); }
 .choice-say:active { translate: 0 1px; filter: brightness(0.94); }
 .choice-wrap.faded > .choice-say { opacity: 0.6; }
-.choices:not(.choices-pics) .choice-wrap .choice:has(> .stamp) { padding-inline-end: 136px; }
-.choices:not(.choices-pics) .choice-wrap .choice > .stamp { right: auto; inset-inline-end: 66px; }
+.choices:not(.choices-pics) .choice-wrap .choice:has(> .stamp) { padding-inline-end: 76px; }
+.choices:not(.choices-pics) .choice-wrap .choice > .stamp { right: auto; inset-inline-end: 10px; }
 .choice-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .choice-gloss { font-size: 0.92rem; font-weight: 500; line-height: 1.3; color: var(--ink-2); }
 .choice-gloss.bi-swap > .bi-help { --help-size: 0.85em; }
@@ -2913,7 +2902,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 }
 .stamp.stamp-wrong .stamp-sub:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.76rem; }
 .choices:not(.choices-pics) .stamp.stamp-wrong { width: 50px; height: 50px; margin-top: -33px; inset-inline-end: 10px; }
-.choices:not(.choices-pics) .choice-wrap .choice:has(> .stamp-wrong) { padding-inline-end: 140px; }
+.choices:not(.choices-pics) .choice-wrap .choice:has(> .stamp-wrong) { padding-inline-end: 84px; }
 .choices:not(.choices-pics) .choice:has(> .stamp-wrong) { padding-inline-end: 84px; }
 .answer-line .stamp.stamp-wrong { width: 46px; height: 46px; top: 1px; inset-inline-end: 9px; }
 .answer-line .stamp.stamp-wrong .stamp-word { font-size: 0.8rem; }
@@ -3407,8 +3396,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* The header holds only the ✕ and the progress bar (the sound toggle and Help moved into the
    pause sheet and the bottom bar). */
 .player-top .lesson-close { flex: none; }
-/* Pause sheet: the second choice ("Without sound" / "Start again") is a calm outlined button
-   with its icon, between the main "Keep going" and "Stop". */
+/* Pause sheet: the second choice ("Without sound" / "Sound on") is a calm outlined button with
+   its icon, between the main "Keep going" and "Stop" (which has its own icon too). */
 .sheet-second { gap: 10px; background: var(--card); color: var(--ink); border: 3px solid var(--edge); }
 .sheet-second:hover { background: var(--concrete-2); }
 .sheet-second-icon { display: inline-grid; place-items: center; flex: none; color: var(--ink-2); }
@@ -3503,6 +3492,15 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .max3-hint-top { margin: 6px 2px 0; color: var(--ink-2); font-size: 1rem; }
 [dir='rtl'] :is(.max3-head, .max3-back) .icon-btn .icon { scale: -1 1; }
 
+/* The back arrow: fixed chrome, the same button in the same top-start corner on every page. */
+.chrome-back { flex: none; width: 44px; height: 44px; margin-inline-start: -8px; color: var(--ink); cursor: pointer; }
+.chrome-back:hover { background: var(--concrete-2); }
+[dir='rtl'] .chrome-back .icon { scale: -1 1; }
+/* A head with only the arrow (first-run pages, the reminder times): it sits over the page's
+   top margin, so the centred title below does not move. */
+.chrome-head { position: relative; z-index: 1; margin: -8px 0 -36px; }
+.keep3-page > .chrome-head { align-self: stretch; margin: -4px 0 -40px; }
+
 /* First run: the language guess ("Polski?" [Yes] [Other language]) and the list's way back. */
 .max3-back { margin: -8px 0 -36px; position: relative; z-index: 1; }
 .lang-guess-q {
@@ -3569,6 +3567,22 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .home3 .rb-current .full-only-note { margin-top: 12px; }
 /* "Other topic": the one link to All topics, under the block or the suggestions. */
 .rb-other { margin-top: 18px; }
+/* A lesson stopped halfway: "Start again" under its Continue card (the home's third choice). */
+.bay-restart {
+  grid-column: 2; justify-self: stretch; justify-content: flex-start; gap: 10px; margin-top: 8px;
+  min-height: 52px; padding: 8px 14px; background: var(--card); color: var(--ink); border: 2px solid var(--edge);
+}
+.bay-restart:hover { background: var(--concrete-2); }
+.bay-restart .icon { flex: none; color: var(--ink-2); }
+.bay-restart-text { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; text-align: start; line-height: 1.2; }
+.bay-restart-label { font-size: 1.02rem; font-weight: 650; }
+.bay-restart-label .bi-help { --help-size: 0.8em; font-weight: 500; }
+.bay-restart-nl { font-size: 0.8rem; font-weight: 500; color: var(--muted); }
+/* "Without sound" is on: a small muted speaker beside the logo (a sign, not a button). */
+.sound-off-mark { display: inline-grid; place-items: center; flex: none; width: 28px; height: 28px; border-radius: 50%; color: var(--ink-2); background: var(--concrete-2, var(--bg)); cursor: default; }
+/* The topic page's sign: picture and progress side by side (its name is in the head). */
+.topic-sign { display: flex; align-items: center; gap: 14px; }
+.topic-sign .rb-progress { flex: 1; min-width: 0; }
 
 /* All topics: one row per topic, one tap per row (the list exception). */
 .topics { padding: 8px 16px 0; }
@@ -3652,11 +3666,6 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   font-variant-numeric: tabular-nums; unicode-bidi: isolate;
 }
 .btn-primary .keep3-btn-nl, .btn-primary .keep3-btn-gloss .bi-help { color: #3f3a2c; }
-.keep3-no { flex-direction: column; gap: 0; margin-top: 2px; text-decoration: none; }
-.keep3-no > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; color: var(--muted); }
-.keep3-no .keep-link-gloss { order: 1; font-size: 1rem; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
-.keep3-no .keep-link-gloss.bi-swap .bi-help { display: block; }
-.keep3-no .bi { flex-direction: column; align-items: center; gap: 0; }
 .keep3-times { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
 .keep3-time-btn {
   width: 100%; display: flex; align-items: center; gap: 16px; min-height: 76px; padding: 10px 16px; text-align: start;

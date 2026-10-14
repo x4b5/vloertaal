@@ -20,7 +20,6 @@ import {
   ArrowIcon,
   CalendarIcon,
   CrateIcon,
-  BackIcon,
   CheckIcon,
   ChevronIcon,
   LifebuoyIcon,
@@ -29,6 +28,7 @@ import {
   GearIcon,
   GlobeIcon,
   InfoIcon,
+  SpeakerOffIcon,
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { useVoices } from './useVoices';
@@ -37,6 +37,7 @@ import { phoneHelpLang } from '../lib/langGuess';
 import { FlameIcon } from './StreakArt';
 import { Flag } from './Flags';
 import { PhraseList } from './Phrases';
+import { ChromeBack, ChromeHead } from './ChromeBack';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
   /** The help language in use (Settings): the "in review" tag is written in it. */
@@ -105,9 +106,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
     return (
       <div className="screen onboarding max3-page">
         {g && (
-          <div className="screen-head max3-back">
-            <button type="button" className="icon-btn" onClick={() => setList(false)} aria-label="Back"><BackIcon size={28} /></button>
-          </div>
+          <ChromeHead onBack={() => setList(false)} />
         )}
         <div className="hero">
           <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
@@ -141,8 +140,10 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   );
 }
 
-export function TopBar({ streak, words, lang, done = false }: {
+export function TopBar({ streak, words, lang, done = false, quiet = false }: {
   streak: number;
+  /** "Without sound" is on: a small muted speaker beside the logo says so (not a button). */
+  quiet?: boolean;
   /** Today has a finished lesson or review: the flame is lit. Until then a grey outline. */
   done?: boolean;
   /** Words learned so far (see learnedWords). */
@@ -166,6 +167,11 @@ export function TopBar({ streak, words, lang, done = false }: {
         <LogoMark size={36} />
         <Wordmark className="topbar-wordmark" />
       </span>
+      {quiet && (
+        <span className="sound-off-mark" role="img" aria-label={`${ui('withoutSound').en}${lang?.ui.withoutSound ? ` · ${ui('withoutSound', lang).help}` : ''}`} title={ui('withoutSound', lang).help ?? ui('withoutSound').en}>
+          <SpeakerOffIcon size={18} />
+        </span>
+      )}
       <span
         className={`stat stat-streak ${done ? 'stat-lit' : ''}`}
         role="img"
@@ -316,12 +322,11 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
 
 /** "About Vloertaal" (the "Over" tab): what the app is, who it is for, privacy and voice credits,
  *  and one link to the page for coaches. */
-export function About({ lang, onBack, onCoaches }: { lang?: HelpLanguage; onBack?: () => void; /** Opens "Voor begeleiders" (the topic links to send). */ onCoaches?: () => void }) {
+export function About({ lang, onCoaches }: { lang?: HelpLanguage; /** Opens "Voor begeleiders" (the topic links to send). */ onCoaches?: () => void }) {
   const { recorded } = useVoices();
   return (
     <div className="screen about">
       <div className="screen-head">
-        {onBack && <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>}
         <h1><Bi text={ui('about', lang)} /></h1>
       </div>
       <div className="about-hero">
@@ -360,7 +365,7 @@ export function Phrasebook({ lang, onBack }: { lang?: HelpLanguage; onBack: () =
   return (
     <div className="screen">
       <div className="screen-head">
-        <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+        <ChromeBack lang={lang} onBack={onBack} />
         <h1><Bi text={ui('phrasebook', lang)} /></h1>
       </div>
       <p className="muted"><Bi text={ui('phrasebookHint', lang)} /></p>
@@ -535,7 +540,7 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
   return (
     <div className="screen">
       <div className="screen-head">
-        <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+        <ChromeBack lang={lang} onBack={onBack} />
         <h1><Bi text={ui('cultureTips', lang)} /></h1>
       </div>
       <p className="muted"><Bi text={ui('cultureTipsHint', lang)} /></p>

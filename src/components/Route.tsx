@@ -16,23 +16,26 @@ import { hasPicture } from '../lib/wordPicture';
 import { WordPicture } from '../pictures';
 import { Bi, HelpText } from './Bi';
 import { CertBadge } from './Certificate';
-import { BackIcon, CheckIcon, ChevronIcon, CrownIcon, LockIcon } from './Icons';
-import { ResumeChip, resumeLabel } from './Resume';
+import { CheckIcon, ChevronIcon, CrownIcon, LockIcon } from './Icons';
+import { ChromeBack } from './ChromeBack';
+import { RestartButton, ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
 import { PocketIcon } from './Offline';
 
 /**
  * The home ("Route"): at most 3 things to tap (src/lib/route.ts).
- *  - Working in a block: [Start / Continue] on its next lesson and [Other topic], plus
- *    [Herhaal vandaag] when words are due. Done lessons are a calm tick, not a button
- *    (practising again lives in "Herhaal vandaag" and All topics); "Start again" for a lesson
- *    stopped halfway is in the pause sheet of that lesson.
- *  - The block finished: 2 suggested next blocks and [Other topic].
+ *  - Working in a block: [Start] on its next lesson and [Other topic], plus [Herhaal vandaag]
+ *    when words are due. Done lessons are a calm tick, not a button (practising again lives in
+ *    "Herhaal vandaag" and All topics).
+ *  - A lesson stopped halfway: [Continue] [Start again] [Other topic]. "Herhaal vandaag" waits
+ *    until that lesson is finished or started again (it would be a 4th choice).
+ *  - The block finished: 2 suggested next blocks and [Other topic]; with words due, only the
+ *    recommended one, [Herhaal vandaag] and [Other topic].
  * Tapping a suggestion makes it the current block and shows it with its Start button, so the
  * learner first sees what the topic is before a lesson begins. "Other topic" opens All topics: a
  * list of every topic, each leading to its topic page (lessons, pocket card, certificate).
  */
-export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused }: {
+export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused }: {
   progress: Progress;
   lang?: HelpLanguage;
   access?: Access;
@@ -40,6 +43,8 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   daily?: DailyCard | null;
   onDaily?: () => void;
   onStart: (lessonId: string, review: boolean) => void;
+  /** "Start again": the lesson stopped halfway, from the top (its saved place is thrown away). */
+  onRestart?: (lessonId: string) => void;
   /** Makes this unit the current block (stored in progress.currentUnit). */
   onPick: (unitId: string) => void;
   /** "Other topic": opens All topics. */
@@ -56,11 +61,16 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   const { sector, completed } = progress;
   const rtl = lang?.dir === 'rtl';
   const block = currentBlock(progress);
-  const choices = block ? [] : homeSuggestions(sector, completed);
   const [marked, setMarked] = useState<string | null>(focusUnit ?? null);
   // The lesson just finished: kept for this visit, for its one-time stamp.
   const [justDone] = useState<string | null>(arrived ?? null);
   const [saves] = useState(() => loadSaves());
+  // The block's next lesson, when it was stopped halfway: Continue and Start again.
+  const resumeId = block?.lessons.find((l) => homeLessonState(block, l.id, completed, access) === 'now' && saves[l.id]?.review === false)?.id;
+  // "Herhaal vandaag" counts as one of the three: not next to Continue + Start again, and next
+  // to only the recommended topic when the block is finished.
+  const dailyDue = daily?.state === 'due' && !resumeId;
+  const choices = block ? [] : homeSuggestions(sector, completed).slice(0, dailyDue ? 1 : 2);
   const ref = useRef<HTMLDivElement>(null);
   const order = routeOrder(sector);
   const unitIndex = (unit: Unit) => order.findIndex((u) => u.id === unit.id);
@@ -126,6 +136,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
               {state === 'now' && <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>}
             </>
           );
+          const restart = saved && onRestart && lesson.id === resumeId;
           return (
             <li
               key={lesson.id}
@@ -147,6 +158,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                   <span className="sr-only">{state === 'done' ? ` · ${ui('stampDone').en}` : ''}</span>
                 </div>
               )}
+              {restart && <RestartButton lang={lang} onRestart={() => onRestart(lesson.id)} />}
             </li>
           );
         })}
@@ -156,7 +168,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
 
   return (
     <div className="path route home3" ref={ref} dir={rtl ? 'rtl' : undefined}>
-      {daily?.state === 'due' && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
+      {dailyDue && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
 
       {block && (
         <section className="rb-current" aria-label={`Unit ${unitIndex(block) + 1}: ${block.title}`}>
@@ -293,7 +305,7 @@ function ScreenHead({ lang, onBack, nl, text }: { lang?: HelpLanguage; onBack: (
   const rtl = lang?.dir === 'rtl';
   return (
     <div className="screen-head rb-all-head" dir={rtl ? 'rtl' : undefined}>
-      <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+      <ChromeBack lang={lang} onBack={onBack} />
       <h1>
         <span className="rb-all-nl" lang="nl" dir={rtl ? 'ltr' : undefined}>{nl}</span>
         <Bi text={text} />
@@ -398,12 +410,12 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
   const u = routeOrder(sector).findIndex((x) => x.id === unit.id);
   return (
     <div className="rb-all-screen topic-screen">
-      {/* Back goes to All topics, which the head names; the topic's own name is on its sign. */}
-      <ScreenHead lang={lang} onBack={onBack} nl="Alle onderwerpen" text={ui('allTopics', lang)} />
+      {/* The head names the topic (Dutch small, the help language large); Back goes to All topics. */}
+      <ScreenHead lang={lang} onBack={onBack} nl={unit.titleNl} text={unitTitle(unit, lang)} />
       <div className="path route topic-page" dir={rtl ? 'rtl' : undefined}>
-        <div className={`rb-block ${marked ? 'rb-marked' : ''}`}>
+        {/* The topic's sign: its picture and how far the learner is (the name is in the head). */}
+        <div className={`rb-block topic-sign ${marked ? 'rb-marked' : ''}`} aria-label={`Unit ${u + 1}: ${unit.title}`} role="group">
           <WordPicture className="rb-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={64} />
-          <UnitTitle unit={unit} lang={lang} heading />
           <BlockProgress unit={unit} completed={completed} lang={lang} />
         </div>
         {allowed ? (

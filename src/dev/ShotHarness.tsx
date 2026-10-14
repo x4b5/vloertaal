@@ -167,7 +167,15 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       </>
     );
   }
-  if (shot === 'about') return <About lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} onCoaches={() => {}} />;
+  if (shot === 'about') {
+    const l = getHelpLanguage(lang as LangCode, gender);
+    return (
+      <>
+        <About lang={l} onCoaches={() => {}} />
+        <BottomNav current="about" onTab={() => {}} lang={l} />
+      </>
+    );
+  }
   // The old long path is gone: /?shot=path is the home (&resume=1: its next lesson stopped halfway).
   if (shot === 'path') {
     return <RouteShot shot="route" state="mid" lang={getHelpLanguage(lang as LangCode, gender)} access={access} sector={sector} daily={q.get('daily') === 'due'} resume={q.get('resume')} />;
@@ -225,8 +233,9 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   const coffee = findLesson('l.shift')!.lesson.dialogues![0];
   const byeReply = allReplies.find((r) => r.id === 'c.hello.a')!;
   exercises.chat = { kind: 'chat', dialogue: coffee, options: [coffee.reply, byeReply] };
-  // Workplace culture: the speak-up tip and its situation (best option listed first).
-  const speakTip = tipForLesson('l.speakup')!;
+  // Workplace culture: the speak-up tip and its situation (best option listed first);
+  // &tip=l.hello another lesson's tip (that one quotes Dutch: "Zeg maar je, hoor!").
+  const speakTip = tipForLesson(q.get('tip') ?? 'l.speakup') ?? tipForLesson('l.speakup')!;
   exercises.tip = { kind: 'tip', tip: speakTip };
   exercises.situation = { kind: 'situation', tip: speakTip, options: speakTip.options };
   // Speaking practice: /?shot=speak (idle), speak-rec (recording), speak-compare (after recording),
@@ -305,10 +314,11 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   }
   return (
     <>
-      <TopBar streak={7} done words={words2} lang={lang} />
+      {/* &quiet=1: "Without sound" is on (the small muted speaker in the top bar). */}
+      <TopBar streak={7} done words={words2} lang={lang} quiet={new URLSearchParams(location.search).get('quiet') === '1'} />
       <Route
         progress={progress} lang={lang} access={access} daily={card} onDaily={() => {}}
-        onStart={() => {}} onAll={() => {}} onUpgrade={() => {}}
+        onStart={() => {}} onRestart={() => {}} onAll={() => {}} onUpgrade={() => {}}
         onPick={(id) => setProgress((p) => ({ ...p, currentUnit: id }))}
         focusUnit={state === 'coach' ? 'u.pay' : null}
       />

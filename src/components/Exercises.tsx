@@ -406,8 +406,8 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
       sounds.correct();
       setMiss(null);
       setHit(w.id);
-      // The board itself makes every pair right, so the exercise counts as right.
-      if (r.finished) onAnswer({ correct: true });
+      // Graded like a sentence built word by word: one stray wrong tap is forgiven, more is a mistake.
+      if (r.finished) onAnswer(stepGrade(r.state.wrong));
     } else {
       sounds.tap();
       setMiss(w.id);
@@ -459,7 +459,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
  * Build the sentence word by word: for each next place three words (the right one and two
  * others, lib/exercises.ts buildSteps). A right tap puts the word in the sentence; a wrong tap
  * shakes that word with a small cross and the sentence waits. No Check and no taking words
- * back: the last word grades it, and any wrong tap on the way counts as a mistake.
+ * back: the last word grades it (one stray wrong tap is forgiven, two or more are a mistake).
  */
 export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'build'>) {
   // One voice per exercise: the speaker says the words and, when it is done, the whole sentence.
@@ -540,7 +540,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
                   speak(t, false, 'nl', voiceFor(who));
                 }}
               >
-                <SpeakerIcon size={16} />
+                <SpeakerIcon size={22} />
               </button>
             </span>
           ))}
@@ -606,8 +606,8 @@ function HearPickWritten({ ex, lang, locked, onAnswer, verdict, run, misses }: P
  * Real dictation. With the keyboard: a text field and Check (the learner says when the word is
  * finished). With letter tiles (Settings, the default for a help language in another script):
  * the word letter by letter, three tiles for each next letter (lib/letters.ts letterSteps); a
- * wrong tile shakes and the word waits; the last letter grades it (no wrong tile: right; one:
- * accepted with a spelling note; more: wrong).
+ * wrong tile shakes and the word waits; the last letter grades it (one stray wrong tile is
+ * forgiven, two or more are a mistake, as in build and match).
  */
 function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'type'>) {
   const [value, setValue] = useState('');
@@ -639,7 +639,7 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
     setValue(v);
     setAt(at + 1);
     if (at + 1 >= steps.length) {
-      onAnswer({ ...stepGrade(wrongTaps.current, true), done: true });
+      onAnswer({ ...stepGrade(wrongTaps.current), done: true });
     }
   };
   return (

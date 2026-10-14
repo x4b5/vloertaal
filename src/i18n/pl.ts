@@ -256,6 +256,7 @@ const lang: HelpLanguageSource = {
     certSaveShare: 'Zapisz lub udostępnij',
     certNameDone: 'Gotowe',
     pauseTitle: 'Pauza',
+    back: 'Wstecz',
   },
   gloss: {
     // Unit: First day at work

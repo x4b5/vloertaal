@@ -18,7 +18,7 @@ import { Milestone, StreakStopped } from './components/Milestone';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
-import { type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
+import { type Access, clearAccess, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, routeNextLesson } from './lib/route';
 import { takeLinkedUnit } from './lib/unitLink';
 import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
@@ -124,22 +124,34 @@ export default function App() {
     history.replaceState({ view: next, depth: current()?.depth ?? 0 } satisfies Entry, '');
     setView(next);
   };
-  /** Bottom bar: Route is home; Hulp, Instellingen and Over sit one level above it, so Back from either
-   *  returns to Route and switching between them doesn't stack entries. */
+  /**
+   * Bottom bar. Route always goes to the home and Settings always to the Settings menu, from any
+   * depth. The history is put back to [home] or [home, tab] (Hulp, Instellingen and Over sit one
+   * level above the home), so the phone's Back from a tab returns home and never steps back into
+   * the pages that were open before.
+   */
   const tab = (t: Tab) => {
     const next: View =
       t === 'words' ? { name: 'words' } : t === 'me' ? { name: 'settings' } : t === 'about' ? { name: 'about' } : HOME;
     const now = viewRef.current;
-    // The Settings tab on a Settings page: back up to the Settings menu.
-    if (now.name === 'settings' && t === 'me') {
-      if (now.up) history.go(-now.up);
-      else if (now.page) replace({ name: 'settings' });
+    if (now.name === next.name && !(now.name === 'settings' && (now.page || now.upgrade))) return;
+    const depth = current()?.depth ?? 0;
+    const land = () => {
+      if (next.name === 'home') { replace(HOME); return; }
+      // On the home: one entry above it; anywhere else this entry is already one above the home.
+      if ((current()?.depth ?? 0) === 0) go(next);
+      else replace(next);
+    };
+    // Deeper than one level above the home: walk the history back to depth 1 (or the home), then land.
+    const target = next.name === 'home' ? 0 : 1;
+    if (depth > target) {
+      const onPop = () => { window.removeEventListener('popstate', onPop); leaving.current = false; land(); };
+      window.addEventListener('popstate', onPop);
+      leaving.current = true;
+      history.go(target - depth);
       return;
     }
-    if (next.name === now.name) return;
-    if (t === 'route') back();
-    else if (viewRef.current.name === 'home') go(next);
-    else replace(next);
+    land();
   };
   /** Back to the previous screen (as the Back button would), or home when there is none. */
   const back = () => {
@@ -249,7 +261,15 @@ export default function App() {
   // Asked once on its own page: in the first run, and for a learner from before the question (or
   // after switching to a help language with gender), on the next opening of the home.
   if (view.name === 'home' && shouldAskGender(progress)) {
-    return <GenderScreen lang={lang} onDone={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))} />;
+    // In the first run (no sector yet) it follows the password page, so it has a way back there.
+    const firstRun = progress.sector === undefined;
+    return (
+      <GenderScreen
+        lang={lang}
+        onDone={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))}
+        onBack={firstRun ? () => { clearAccess(); setAccess(null); } : undefined}
+      />
+    );
   }
   // Asked once (also for learners from before the sector choice); Settings can change it.
   if (progress.sector === undefined) return <SectorScreen lang={lang} onDone={setSector} />;
@@ -392,7 +412,7 @@ export default function App() {
         </>
       );
     case 'coaches':
-      return <Coaches onBack={back} />;
+      return <Coaches onBack={back} lang={lang} />;
     case 'phrasebook':
       return <Phrasebook lang={lang} onBack={back} />;
     case 'settings': {
@@ -447,11 +467,13 @@ export default function App() {
             streak={currentStreak(progress, new Date())}
             words={learnedWords(progress.completed).size}
             lang={lang}
+            quiet={Boolean(progress.quiet)}
           />
           <Route
             progress={progress}
             lang={lang}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
+            onRestart={(lessonId) => { clearSave(lessonId); go({ name: 'lesson', lessonId, review: false }); }}
             onPick={(unit) => setProgress((p) => ({ ...p, currentUnit: unit }))}
             onAll={() => go({ name: 'all' })}
             daily={Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : null}

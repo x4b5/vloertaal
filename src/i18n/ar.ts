@@ -256,6 +256,7 @@ const lang: HelpLanguageSource = {
     certSaveShare: { m: 'احفظ أو شارك', f: 'احفظي أو شاركي' },
     certNameDone: 'تم',
     pauseTitle: 'إيقاف مؤقت',
+    back: 'رجوع',
   },
   gloss: {
     // Units

@@ -256,6 +256,7 @@ const lang: HelpLanguageSource = {
     certSaveShare: 'Salvează sau trimite',
     certNameDone: 'Gata',
     pauseTitle: 'Pauză',
+    back: 'Înapoi',
   },
   gloss: {
     // Units

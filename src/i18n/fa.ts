@@ -256,6 +256,7 @@ const lang: HelpLanguageSource = {
     certSaveShare: 'ذخیره یا اشتراک‌گذاری',
     certNameDone: 'تمام',
     pauseTitle: 'توقف',
+    back: 'بازگشت',
   },
   gloss: {
     // Units

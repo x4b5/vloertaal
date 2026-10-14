@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BackIcon } from './Icons';
+import { ChromeBack } from './ChromeBack';
 import { COUNTER, countingOn, mayCount } from '../lib/count';
 
 interface Credits {
@@ -33,7 +33,7 @@ export function Admin({ onBack }: { onBack: () => void }) {
   return (
     <div className="screen admin" lang="nl">
       <div className="screen-head">
-        <button type="button" className="icon-btn" onClick={onBack} aria-label="Terug"><BackIcon size={28} /></button>
+        <ChromeBack onBack={onBack} />
         <h1>Beheer</h1>
       </div>
       <h2>ElevenLabs-credits</h2>

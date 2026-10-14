@@ -408,3 +408,27 @@ export const LettersIcon = (p: IconProps) => (
     <path d="M6.6 5.9v3.4M15.6 7.6h3.6M6.6 15.6v3.4" {...stroke} strokeWidth={2} />
   </Svg>
 );
+
+/** A circular arrow: start again (the home's resume state). */
+export const RestartIcon = (p: IconProps) => (
+  <Svg {...p}><path d="M4.6 12a7.4 7.4 0 1 0 2.2-5.3M6.4 2.8v4.4h4.4" {...stroke} /></Svg>
+);
+
+/** Stop: a filled square in a ring (the pause sheet's "Stop lesson"). */
+export const StopIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" strokeWidth="2.4" />
+    <rect x="8.4" y="8.4" width="7.2" height="7.2" rx="1.4" fill="currentColor" />
+  </Svg>
+);
+
+/**
+ * Read aloud in the help language: a speech bubble with sound lines inside. Deliberately not the
+ * Dutch speaker (a loudspeaker cone), so the two never look like the same button.
+ */
+export const HelpVoiceIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M5 4.5h14a2 2 0 0 1 2 2v8.6a2 2 0 0 1-2 2h-7.4L7 20.6v-3.5H5a2 2 0 0 1-2-2V6.5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+    <path d="M8 9.2v3.4M12 7.8v6.2M16 9.2v3.4" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+  </Svg>
+);

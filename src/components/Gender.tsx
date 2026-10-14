@@ -3,6 +3,7 @@ import type { Gender, HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
 import { Character, type CharacterId } from './Characters';
 import { CheckIcon } from './Icons';
+import { ChromeHead } from './ChromeBack';
 import { LogoMark, Wordmark } from './Logo';
 
 const OPTIONS: { id: Gender; nl: string; key: 'genderWoman' | 'genderMan' | 'genderNone'; who?: CharacterId }[] = [
@@ -73,9 +74,16 @@ export function GenderPicker({ current, lang, onPick, compact = false, mini = fa
  * in the first run right after the password, and once on opening for a learner from before the
  * question (see shouldAskGender). Three cards and nothing else: "rather not say" is the way past.
  */
-export function GenderScreen({ lang, onDone, current }: { lang?: HelpLanguage; onDone: (g: Gender) => void; current?: Gender }) {
+export function GenderScreen({ lang, onDone, current, onBack }: {
+  lang?: HelpLanguage;
+  onDone: (g: Gender) => void;
+  current?: Gender;
+  /** First run only: back to the password page. */
+  onBack?: () => void;
+}) {
   return (
     <div className="screen onboarding sector-screen gender-screen" dir={lang?.dir}>
+      {onBack && <ChromeHead lang={lang} onBack={onBack} />}
       <div className="hero">
         <h1 className="hero-logo sector-logo"><LogoMark size={40} /><Wordmark /></h1>
       </div>

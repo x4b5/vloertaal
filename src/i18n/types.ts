@@ -272,6 +272,7 @@ export const uiEn = {
   certSaveShare: 'Save or share',
   certNameDone: 'Done',
   pauseTitle: 'Pause',
+  back: 'Back',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

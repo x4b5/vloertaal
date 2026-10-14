@@ -8,7 +8,8 @@ import { REMINDER_TIMES, rememberReminder, reminderIcs, saveFile } from '../lib/
 import { REMIND_DEFAULT, REMIND_OTHER_TIMES, keepNext, type KeepAction, type KeepStep } from '../lib/keep';
 import { Bi } from './Bi';
 import { Character } from './Characters';
-import { CheckIcon, ChevronIcon } from './Icons';
+import { CheckIcon, ChevronIcon, CloseIcon } from './Icons';
+import { ChromeHead } from './ChromeBack';
 import { LogoMark } from './Logo';
 
 /**
@@ -364,9 +365,13 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
             </span>
             <ChevronIcon size={20} />
           </button>
-          <button type="button" className="keep-link keep3-no keep-no" onClick={guard(() => go('no'))}>
-            <span lang="nl">Nee, dank je</span>
-            <Bi className="keep-link-gloss" text={ui('remindNo', lang)} />
+          {/* A card like the other two, with its own icon (not a small text link). */}
+          <button type="button" className="btn btn-ghost keep3-btn keep-no" onClick={guard(() => go('no'))} dir={rtl ? 'rtl' : undefined}>
+            <CloseIcon size={26} />
+            <span className="keep3-btn-text">
+              <Bi className="keep3-btn-gloss" text={ui('remindNo', lang)} />
+              <span className="keep3-btn-nl" lang="nl" dir="ltr">Nee, dank je</span>
+            </span>
           </button>
         </div>
       </>
@@ -374,6 +379,8 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
   } else if (step === 'times') {
     body = (
       <>
+        {/* Back to the question (fixed chrome: not one of the three times). */}
+        <ChromeHead lang={lang} onBack={guard(() => { setStep('ask'); window.scrollTo(0, 0); })} />
         <KeepTitle nl="Hoe laat?" text={ui('remindPickTime', lang)} lang={lang} />
         <p className="keep3-hint"><Bi text={ui('remindHint', lang)} /></p>
         <ul className="keep3-times">

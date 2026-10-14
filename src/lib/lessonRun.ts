@@ -62,16 +62,16 @@ export function barParts(index: number, checked: boolean, planned: number, total
   };
 }
 
+/** Wrong taps forgiven in an answer built by taps: one stray tap is a slip, not a mistake. */
+export const FORGIVEN_TAPS = 1;
+
 /**
- * An answer built step by step (a sentence word by word, a word letter by letter) is graded by
- * the wrong taps on the way. A sentence: any wrong tap is a mistake. A spelled word
- * (`typoAllowed`): one wrong letter is accepted with a spelling note, like one typo when typing;
- * more is a mistake.
+ * An answer built tap by tap (a sentence word by word, a guided match pair by pair, a word letter
+ * by letter) is graded by the wrong taps on the way, the same way for all three: one stray wrong
+ * tap is forgiven (a slip of the finger on a phone), two or more count as a mistake.
  */
-export function stepGrade(wrongTaps: number, typoAllowed = false): { correct: boolean; almost: boolean } {
-  if (wrongTaps <= 0) return { correct: true, almost: false };
-  if (typoAllowed && wrongTaps === 1) return { correct: true, almost: true };
-  return { correct: false, almost: false };
+export function stepGrade(wrongTaps: number): { correct: boolean; almost: boolean } {
+  return { correct: wrongTaps <= FORGIVEN_TAPS, almost: false };
 }
 
 /** Guided matching: which word is on, which meanings are matched, how many wrong taps. */

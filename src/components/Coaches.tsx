@@ -4,7 +4,9 @@ import { unitIcons } from '../content/unitIcons';
 import type { Unit } from '../content/types';
 import { unitLink } from '../lib/unitLink';
 import { WordPicture } from '../pictures';
-import { BackIcon, CheckIcon } from './Icons';
+import { CheckIcon } from './Icons';
+import { ChromeBack } from './ChromeBack';
+import type { HelpLanguage } from '../i18n/types';
 
 /**
  * "Voor begeleiders" (Dutch only), its own page from a link on About: a link per topic that opens
@@ -12,7 +14,7 @@ import { BackIcon, CheckIcon } from './Icons';
  * each (a list, the named exception to "at most three"). Shares with the phone's share sheet, or
  * copies the link.
  */
-export function Coaches({ onBack }: { onBack: () => void }) {
+export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner's help language: the back arrow says Back in it too. */ lang?: HelpLanguage }) {
   const [copied, setCopied] = useState<string | null>(null);
   const share = async (unit: Unit) => {
     const url = unitLink(unit.id);
@@ -31,7 +33,7 @@ export function Coaches({ onBack }: { onBack: () => void }) {
   return (
     <div className="screen coaches" lang="nl">
       <div className="screen-head">
-        <button type="button" className="icon-btn" onClick={onBack} aria-label="Terug"><BackIcon size={28} /></button>
+        <ChromeBack lang={lang} onBack={onBack} />
         <h1>Voor begeleiders</h1>
       </div>
       <p className="muted small">

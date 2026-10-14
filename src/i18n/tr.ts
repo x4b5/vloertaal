@@ -256,6 +256,7 @@ const lang: HelpLanguageSource = {
     certSaveShare: 'Kaydet veya paylaş',
     certNameDone: 'Tamam',
     pauseTitle: 'Mola',
+    back: 'Geri',
   },
   gloss: {
     // Unit: First day at work

@@ -209,6 +209,30 @@ function hashText(text: string): number {
   return h >>> 0;
 }
 
+let names: Set<string> | null = null;
+/**
+ * Proper names in the course ("Ali", "Mark"): words written with a capital in the middle of a
+ * sentence (not after a full stop). A name offered as a wrong word keeps its capital.
+ */
+export function courseNames(): Set<string> {
+  if (names) return names;
+  names = new Set();
+  const texts = [
+    ...allLessons.flatMap((l) => [...l.sentences.map((s) => s.nl), ...l.words.map((w) => w.nl)]),
+    ...allDialogues.flatMap((d) => [d.prompt.nl, d.reply.nl]),
+    ...allReplies.map((r) => r.nl),
+  ];
+  for (const text of texts) {
+    const raw = text.split(/\s+/);
+    raw.forEach((r, i) => {
+      if (i === 0 || /[.!?…:]["”’]?$/.test(raw[i - 1])) return;
+      const w = r.replace(/[^\p{L}\p{N}'-]/gu, '');
+      if (/^\p{Lu}\p{Ll}/u.test(w)) names!.add(w);
+    });
+  }
+  return names;
+}
+
 /** Pairs in a guided match. */
 export const MATCH_PAIRS = 3;
 
@@ -218,7 +242,8 @@ export const MATCH_PAIRS = 3;
  * the lesson, never near-misses) and the words that come later in the sentence. None of them is
  * the right word or one letter or a stem apart from it ("je" / "ja"), and the two wrong ones
  * never look alike either. At the start of the sentence every option starts with a capital, so
- * the capital gives nothing away; further on the extras are lower case. Pure and seeded by the
+ * the capital gives nothing away; further on the extras are lower case (names keep their
+ * capital). Pure and seeded by the
  * sentence, so the same sentence always offers the same words.
  */
 export function buildSteps(nl: string, tiles: readonly string[], n = 3): string[][] {
@@ -234,7 +259,9 @@ export function buildSteps(nl: string, tiles: readonly string[], n = 3): string[
   const cap = (w: string) => w.charAt(0).toUpperCase() + w.slice(1);
   return real.map((word, i) => {
     const later = real.slice(i + 1).filter((w) => w.toLowerCase() !== word.toLowerCase());
-    const pool = [...shuffle(extras, rng).map((w) => (i === 0 ? cap(w) : w.toLowerCase())), ...shuffle(later, rng).map((w) => (i === 0 ? cap(w) : w))];
+    // Further on the extras are lower case, except a name ("Ali" never becomes "ali").
+    const lower = (w: string) => (courseNames().has(w) ? w : w.toLowerCase());
+    const pool = [...shuffle(extras, rng).map((w) => (i === 0 ? cap(w) : lower(w))), ...shuffle(later, rng).map((w) => (i === 0 ? cap(w) : w))];
     const picked: string[] = [];
     for (const w of pool) {
       if (picked.length >= n - 1) break;

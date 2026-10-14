@@ -7,7 +7,8 @@ import { shareCertificateFile } from '../lib/certCanvas';
 import type { Progress } from '../lib/progress';
 import { Bi } from './Bi';
 import { Character } from './Characters';
-import { BackIcon, ChevronIcon } from './Icons';
+import { ChevronIcon } from './Icons';
+import { ChromeBack } from './ChromeBack';
 import { LogoMark } from './Logo';
 import { PocketIcon } from './Offline';
 
@@ -215,7 +216,7 @@ export function CertificateScreen({ unit, day, lang, onBack }: {
   return (
     <div className="screen cert-screen">
       <div className="screen-head" dir={rtl ? 'rtl' : undefined}>
-        <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>
+        <ChromeBack lang={lang} onBack={onBack} />
         <h1>
           <span className="cert-screen-nl" lang="nl">Certificaat</span>
           <Bi text={ui('certificate', lang)} />

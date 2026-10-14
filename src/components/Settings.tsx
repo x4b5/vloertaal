@@ -22,6 +22,7 @@ import { nonLatinHelp, setWantsWriting, setWritingInput, wantsWriting, writingIn
 import { Bi } from './Bi';
 import { CertIcon, CertificatesCard } from './Certificate';
 import { ChoiceCards, type ChoiceOption } from './Choice';
+import { ChromeBack } from './ChromeBack';
 import { Flag } from './Flags';
 import { UpgradeCard } from './Gate';
 import { GenderPicker, NeutralIcon } from './Gender';
@@ -91,12 +92,13 @@ function Value({ text }: { text: Bilingual }) {
     : <span className="set-row-value" lang="en">{text.en}</span>;
 }
 
-/** The page head: Back on a list (one tap, the list exception), only the title on a question page. */
+/** The page head: the back arrow (fixed chrome, not one of the choices) on every list and question
+ *  page, so someone who only came to look has a way out; the menu has none. */
 function Head({ page, lang, onBack }: { page: SettingsPage | null; lang?: HelpLanguage; onBack?: () => void }) {
   const row = page ? ROWS[page] : null;
   return (
     <div className="screen-head max3-head">
-      {onBack && <button type="button" className="icon-btn" onClick={onBack} aria-label="Back"><BackIcon size={28} /></button>}
+      {onBack && <ChromeBack lang={lang} onBack={onBack} />}
       <h1 className="max3-title">
         <Bi text={ui(row ? row.key : 'settings', lang)} />
         <span className="max3-title-nl" lang="nl">{row ? row.nl : 'Instellingen'}</span>
@@ -142,10 +144,9 @@ export function Settings({
     return () => { if (timer.current) clearTimeout(timer.current); };
   }, []);
   /**
-   * An answer on a question page: the check shows a moment, then back to the list. A question page
-   * has no Back button (at most three things to tap), so a tap on the option that is already chosen
-   * does the same: it keeps that choice, shows its check and leads back. That is the way out for
-   * someone who only came to look (an app on the home screen has no Back button of the phone).
+   * An answer on a question page: the check shows a moment, then back to the list. A tap on the
+   * option that is already chosen does the same: it keeps that choice, shows its check and leads
+   * back. The back arrow at the top is the other way out, for someone who only came to look.
    */
   const answered = (steps = 1, wait = 420) => {
     setTick((n) => n + 1);
@@ -398,7 +399,7 @@ export function Settings({
 
   return (
     <div className={`screen max3-settings ${page ? (isList ? 'max3-list' : 'max3-setting') : 'max3-menu'}`} data-depth={settingsDepth(page)} dir={lang?.dir}>
-      <Head page={page ?? null} lang={lang} onBack={isList ? () => onReturn(1) : undefined} />
+      <Head page={page ?? null} lang={lang} onBack={page ? () => onReturn(1) : undefined} />
       {body()}
     </div>
   );
