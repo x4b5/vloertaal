@@ -10,7 +10,7 @@ import {
 } from '../lib/speaking';
 import { voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
-import { WordPicture } from '../pictures';
+import { pictureCast, WordPicture } from '../pictures';
 import { Bi } from './Bi';
 import { castFor, Character, type CharacterId } from './Characters';
 import { LockIcon, SpeakerIcon } from './Icons';
@@ -78,19 +78,24 @@ const RING_C = 2 * Math.PI * RING_R;
  *
  * `phaseForShot` fixes the phase for the screenshot harness (no microphone used).
  */
-export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot = shotPhase }: {
+export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForShot = shotPhase }: {
   ex: Extract<Exercise, { kind: 'speak' }>;
   lang?: HelpLanguage;
   onAnswer: (a: { correct: boolean } | null) => void;
   /** "Sounds the same": done, go on. */
   onNext?: () => void;
+  /** True while the learner compares and rates: "Sounds the same" is then the way forward, so
+   *  the player hides its own Continue (one clear path). */
+  onRating?: (rating: boolean) => void;
   phaseForShot?: Phase;
 }) {
   const { item } = ex;
-  const who: CharacterId = isWord(item) ? 'bram' : castFor(item.id);
+  const picture = isWord(item) ? (hasPicture(item) ? item : undefined) : sentencePicture(item);
+  // The speaker is the person in the picture when it shows one of the cast, so the face on the
+  // card, the voice and the name on the compare button are the same character.
+  const who: CharacterId = (picture && pictureCast(picture.id)) || (isWord(item) ? 'bram' : castFor(item.id));
   const voice = voiceFor(who);
   const name = who[0].toUpperCase() + who.slice(1);
-  const picture = isWord(item) ? (hasPicture(item) ? item : undefined) : sentencePicture(item);
   const [phase, setPhase] = useState<Phase>(phaseForShot ?? (canRecord() ? 'idle' : 'off'));
   /** 0–1 of the 6 seconds used, for the ring around the stop button. */
   const [used, setUsed] = useState(phaseForShot === 'recording' ? 0.35 : 0);
@@ -165,10 +170,12 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot = shotP
     };
   }, [item.nl, voice, phaseForShot, release, discard]);
 
-  // Said it once, or no microphone: Continue is open (rating is optional, nothing is scored).
+  // No microphone: Continue is open. After recording, the learner rates instead: "Sounds the
+  // same" goes on (nothing is scored), "Say it again" records once more; Continue stays hidden.
   useEffect(() => {
-    if (phase === 'off' || phase === 'review') onAnswer({ correct: true });
-  }, [phase, onAnswer]);
+    if (phase === 'off') onAnswer({ correct: true });
+    onRating?.(phase === 'review');
+  }, [phase, onAnswer, onRating]);
 
   // The app goes to the background mid-recording: stop, so the microphone is not left on.
   useEffect(() => {
@@ -274,7 +281,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot = shotP
           <span className="say-nl" lang="nl" dir="ltr">{breakable(item.nl)}</span>
           <Bi className="say-meaning" text={meaning} />
         </div>
-        {listenFirst && <SpeakButton text={item.nl} voice={voice} label={`Play: ${item.nl}`} />}
+        {/* The model is always one tap away, also with no microphone and while comparing. */}
+        <SpeakButton text={item.nl} voice={voice} label={`Play: ${item.nl}`} />
       </div>
 
       {listenFirst && (

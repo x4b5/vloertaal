@@ -2,6 +2,7 @@
  * Who speaks with which voice. Recorded voices (ElevenLabs, committed in public/audio-el)
  * are named "piper:<key>" (a historical prefix); "device" is the phone's own voice.
  */
+import type { Gender } from '../i18n/types';
 import { hasRecordedVoice } from './audio';
 
 export type VoiceRef = string | null;
@@ -29,4 +30,20 @@ export function voiceFor(who: string): VoiceRef {
 /** The voices the characters speak with now (lessons use all of them: chats, tiles, answers). */
 export function castVoices(): VoiceRef[] {
   return Object.keys(CAST_VOICES).map(voiceFor);
+}
+
+/**
+ * "You" in the chats: Amina (a woman's voice) by default, Bram (a man's voice) when the learner
+ * said "man" on the gender question. "Rather not say" or no answer keeps Amina, as before.
+ * The colleagues are then picked from the rest of the cast, so you never talk to yourself.
+ */
+export type LearnerId = 'amina' | 'bram';
+export function learnerCharacter(gender?: Gender | null): LearnerId {
+  return gender === 'm' ? 'bram' : 'amina';
+}
+
+/** The voice "you" speak with. A line one recorded voice lacks is played by another recorded
+ *  voice of the same gender (see clipFor in audio.ts), so a man never sounds like a woman. */
+export function learnerVoice(gender?: Gender | null): VoiceRef {
+  return voiceFor(learnerCharacter(gender));
 }

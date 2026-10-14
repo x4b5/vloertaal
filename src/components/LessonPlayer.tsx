@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
 import { fillN, gloss, ui, withoutN, type Bilingual } from '../i18n';
-import type { HelpLanguage, UiKey } from '../i18n/types';
+import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, sounds, speak, speechAvailable } from '../lib/audio';
 import { tileDiff } from '../lib/answers';
 import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
 import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
-import { voiceFor } from '../lib/voices';
+import { learnerCharacter, voiceFor } from '../lib/voices';
 import { pickInsteadOfTyping } from '../lib/writing';
 import { castFor, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
@@ -65,12 +65,12 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
   }
 }
 
-/** Who says the answer: in a chat the right reply is "your" line (Amina); a built sentence
- *  belongs to its speaker; a tip or situation to its colleague; single words to Bram. */
-function answerVoice(ex: Exercise): CharacterId {
-  return ex.kind === 'chat' ? 'amina'
+/** Who says the answer: in a chat the right reply is "your" line (Amina, or Bram for a man);
+ *  a built sentence belongs to its speaker; a tip or situation to its colleague; single words to Bram. */
+function answerVoice(ex: Exercise, gender?: Gender): CharacterId {
+  return ex.kind === 'chat' ? learnerCharacter(gender)
     : ex.kind === 'build' ? castFor(ex.sentence.id)
-    : ex.kind === 'situation' || ex.kind === 'tip' ? tipCast(ex.tip)
+    : ex.kind === 'situation' || ex.kind === 'tip' ? tipCast(ex.tip, gender)
     : 'bram';
 }
 
@@ -230,6 +230,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const [index, setIndex] = useState(() => resumed?.index ?? startAt);
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [checked, setChecked] = useState(false);
+  /** A speaking exercise in its compare-and-rate step: its own buttons go on, Continue hides. */
+  const [speakRating, setSpeakRating] = useState(false);
   const graded = useRef(saved && resumed ? { right: saved.right, total: saved.total } : { right: 0, total: 0 });
   /** Right answers in a row (graded exercises only); a miss resets it without a word. */
   const [run, setRun] = useState(resumed ? saved!.run : 0);
@@ -495,7 +497,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     later(30, () => setLive(said));
     // The answer is said by the character on screen, so a woman never speaks with a man's voice:
     // in a chat the right reply is "your" line (Amina); a built sentence belongs to its speaker.
-    const who = answerVoice(ex);
+    const who = answerVoice(ex, lang?.gender);
     if (sol.nl) later(answer.correct ? 700 : 450, () => autoSpeak(sol.text, false, 'nl', voiceFor(who)));
   }
 
@@ -538,6 +540,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     setAnswer(null);
     setChecked(false);
     setSwapped(false);
+    setSpeakRating(false);
     setLive('');
   }
 
@@ -607,7 +610,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     case 'chat': body = <ChatExercise key={key} ex={ex} {...props} />; break;
     case 'tip': body = <TipCard key={key} ex={ex} {...props} />; break;
     case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
-    case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onNext={next} />; break;
+    case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onNext={next} onRating={setSpeakRating} />; break;
   }
 
   const sol = solution(ex);
@@ -633,7 +636,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     <button
       type="button"
       className="replay-btn"
-      onClick={() => speak(pair.nl!, false, 'nl', voiceFor(answerVoice(ex)))}
+      onClick={() => speak(pair.nl!, false, 'nl', voiceFor(answerVoice(ex, lang?.gender)))}
       aria-label={`${ui('playAgain').en}: ${pair.nl}`}
       title={ui('playAgain', lang).help ?? ui('playAgain').en}
     >
@@ -836,7 +839,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             )}
             {/* "I can't speak now": skips only this speaking exercise, without penalty; sound and
                 the "Without sound" setting stay as they are. */}
-            {ex.kind === 'speak' && !answer && (
+            {ex.kind === 'speak' && !answer && !speakRating && (
               <button type="button" className="btn btn-ghost btn-cant-speak" onClick={next}>
                 <Bi text={ui('cantSpeak', lang)} />
               </button>
@@ -853,8 +856,9 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
               </button>
             )}
             {/* One button per exercise (it fades in with the exercise). After Check it keeps focus and
-                becomes Continue in the outcome's colour, without blending through olive. */}
-            <button
+                becomes Continue in the outcome's colour, without blending through olive. While a
+                spoken try is compared, "Sounds the same" is the one way on, so it is not shown. */}
+            {!speakRating && <button
               key={key}
               type="button"
               className={`btn btn-go ${checked && swapped && outcome ? `btn-${outcome} btn-swap` : 'btn-primary'}`}
@@ -866,7 +870,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
               {/* The help language large, the English small under it (just English without one). */}
               <Bi className="btn-label" text={ui((checked && swapped) || autoContinue ? 'continue' : 'check', lang)} />
               <ButtonBlock icon={(checked && swapped) || autoContinue ? 'next' : 'check'} />
-            </button>
+            </button>}
           </div>
         </div>
       </footer>

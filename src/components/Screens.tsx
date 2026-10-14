@@ -16,6 +16,7 @@ import { GenderPicker, GenderScreen } from './Gender';
 import { useEffect, useRef, useState } from 'react';
 import { dutchVoices, onRecordedVoices, recordedVoices, setPreferredVoice, speak, speechAvailable } from '../lib/audio';
 import { VOICE_SAMPLE } from '../lib/voices';
+import { applyEnglish } from '../lib/english';
 import { isNextInCourse, isUnlocked } from '../lib/exercises';
 import { type Access, unitAllowed } from '../lib/access';
 import { UpgradeCard } from './Gate';
@@ -117,6 +118,9 @@ export function Onboarding({ onDone, asked, initial }: {
   initial?: LangCode;
 }) {
   const [picked, setPicked] = useState<LangCode | null>(initial ?? null);
+  // From the gender question on, the help language is chosen: hide the English line already
+  // (as on every later screen), not only once the language is saved.
+  useEffect(() => { if (picked) applyEnglish(picked); }, [picked]);
   const pick = (code: LangCode | null) => {
     if (hasGender(code) && !asked) setPicked(code);
     else onDone(code, asked);

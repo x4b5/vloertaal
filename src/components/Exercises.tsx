@@ -8,10 +8,10 @@ import { sentencePicture, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
-import { castFor, Character, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
+import { castFor, Character, colleaguesOf, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
 import { BackspaceIcon, CheckIcon, ChevronDownIcon, CloseIcon, KeyboardIcon, LettersIcon, SpeakerIcon } from './Icons';
 import { cheerFor } from '../lib/lessonRun';
-import { voiceFor } from '../lib/voices';
+import { learnerCharacter, learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
 import { SpeakButton } from './SpeakButton';
@@ -747,8 +747,11 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
   // the Dutch must know what was asked); tapping the Dutch hides or shows it.
   const [hint, setHint] = useState(Boolean(lang));
   const mine = picked && locked ? (picked.id === reply.id ? 'right' : 'wrong') : '';
-  // The colleague asks; "you" are Amina. The colleague talks while the line plays.
-  const them = castFor(prompt.id, ['bram', 'henk', 'jada']);
+  // The colleague asks; "you" are Amina (Bram for a man: lib/voices.ts learnerCharacter).
+  // The colleague talks while the line plays.
+  const me = learnerCharacter(lang?.gender);
+  const myVoice = learnerVoice(lang?.gender);
+  const them = castFor(prompt.id, colleaguesOf(lang?.gender));
   useEffect(() => { autoSpeak(prompt.nl, false, 'nl', voiceFor(them)); }, [prompt, them]);
   const themTalking = useTalking([prompt.nl]);
   // After a right answer it's your turn: "you" say the reply (and talk while it is read out),
@@ -784,7 +787,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
           <div className={`chat-bubble chat-bubble-me ${mine}`} aria-live="polite">
             {picked ? <span className="chat-line" lang="nl">{breakable(picked.nl)}</span> : <span className="chat-blank" aria-hidden />}
           </div>
-          <span className="chat-char"><Character who="amina" flip mood={moodFor(verdict, meRest)} talking={meTalking} className={reactClass(verdict, run, misses)} /></span>
+          <span className="chat-char"><Character who={me} flip mood={moodFor(verdict, meRest)} talking={meTalking} className={reactClass(verdict, run, misses)} /></span>
         </div>
       </div>
       <ChoiceGrid
@@ -796,8 +799,8 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
         onAnswer={onAnswer}
         onPick={(o) => {
           setPicked(o);
-          // Hear the reply before choosing: "you" (Amina) say it.
-          speak(o.nl, false, 'nl', voiceFor('amina'));
+          // Hear the reply before choosing: "you" say it.
+          speak(o.nl, false, 'nl', myVoice);
         }}
         // Each option's speaker is its own button: hearing a reply never picks it.
         side={(o) => (
@@ -805,7 +808,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
             type="button"
             className="choice-say"
             aria-label={`Play: ${o.nl}`}
-            onClick={() => speak(o.nl, false, 'nl', voiceFor('amina'))}
+            onClick={() => speak(o.nl, false, 'nl', myVoice)}
           >
             <SpeakerIcon size={24} />
           </button>
@@ -842,9 +845,9 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       <div className="tip-say">
         <span className="tip-say-label"><Bi text={ui('sayThis', lang)} /></span>
         <div className="tip-say-row">
-          <span className="tip-char"><Character who={tipCast(tip)} talking={talking} size={96} /></span>
+          <span className="tip-char"><Character who={tipCast(tip, lang?.gender)} talking={talking} size={96} /></span>
           <div className="speaker-bubble tip-bubble">
-            <SpeakButton glyph text={tip.phrase.nl} label={`Play: ${tip.phrase.nl}`} voice={voiceFor(tipCast(tip))} />
+            <SpeakButton glyph text={tip.phrase.nl} label={`Play: ${tip.phrase.nl}`} voice={voiceFor(tipCast(tip, lang?.gender))} />
             <span className="tip-phrase">
               <span lang="nl" className="tip-phrase-nl">{breakable(tip.phrase.nl)}</span>
               <Bi text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
@@ -919,7 +922,7 @@ function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
 export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props<'situation'>) {
   const { tip } = ex;
   const best = tip.options.find((o) => o.best)!;
-  const who = tipCast(tip);
+  const who = tipCast(tip, lang?.gender);
   const said = tip.situation.nl;
   // The Dutch in the situation ("Zeg maar je, hoor!") is said by the character, as in a chat.
   useEffect(() => { if (said) autoSpeak(said, false, 'nl', voiceFor(who)); }, [said, who]);

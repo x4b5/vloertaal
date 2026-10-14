@@ -176,12 +176,38 @@ export function shellUrls(): string[] {
   };
   document.querySelectorAll<HTMLScriptElement>('script[src]').forEach((s) => sameOrigin(s.src));
   document.querySelectorAll<HTMLLinkElement>('link[href]:is([rel="stylesheet"], [rel="modulepreload"], [rel="manifest"], [rel~="icon"], [rel="apple-touch-icon"])').forEach((l) => sameOrigin(l.href));
+  // Every font file the app declares, also the ones not used yet on this visit (a font face
+  // loads only when its characters show up: the emoji font's parts, Polish or Vietnamese
+  // letters), so a saved unit never shows empty boxes offline.
+  for (const sheet of Array.from(document.styleSheets)) {
+    let rules: CSSRuleList;
+    try {
+      rules = sheet.cssRules;
+    } catch {
+      continue; // Another origin's stylesheet (Google Fonts would be one): not ours to save.
+    }
+    for (const rule of Array.from(rules)) {
+      if (!(rule instanceof CSSFontFaceRule)) continue;
+      for (const url of fontFileUrls(rule.style.getPropertyValue('src'))) {
+        try {
+          sameOrigin(new URL(url, sheet.href ?? document.baseURI).href);
+        } catch {
+          // Not a URL: skip.
+        }
+      }
+    }
+  }
   for (const e of performance.getEntriesByType?.('resource') ?? []) {
     const u = new URL(e.name);
     // Fonts, CSS and JS; not data the app fetched for a moment (the count, backups).
     if (/\.(js|css|woff2?|svg|png|ico|webmanifest)$/.test(u.pathname)) sameOrigin(e.name);
   }
   return [...out];
+}
+
+/** The .woff2 files in a @font-face `src` (the .woff fallbacks are for browsers this app doesn't run in). */
+export function fontFileUrls(src: string): string[] {
+  return [...src.matchAll(/url\(\s*["']?([^"')]+?)["']?\s*\)/g)].map((m) => m[1]).filter((u) => /\.woff2(?:[?#]|$)/.test(u));
 }
 
 /** The files a unit needs, as absolute URLs: the app and the unit's clips in these voices. */

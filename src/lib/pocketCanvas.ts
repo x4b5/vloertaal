@@ -20,6 +20,9 @@ export interface PocketImage {
   titleEn: string;
   helpDir: 'ltr' | 'rtl';
   rows: PocketImageRow[];
+  /** Draw the English too. False when a help language is chosen and "Show English too" is off,
+   *  as on screen; a line without a help translation keeps its English (the only text then). */
+  english?: boolean;
 }
 
 const W = 1080;
@@ -103,7 +106,7 @@ export async function drawPocketCard(d: PocketImage): Promise<HTMLCanvasElement>
     measure.font = font(500, HELP_PX, HELP);
     const help = row.help ? wrap(measure, row.help, textW) : [];
     measure.font = font(400, EN);
-    const en = wrap(measure, row.en, textW);
+    const en = d.english !== false || !help.length ? wrap(measure, row.en, textW) : [];
     const h = Math.max(PIC, nl.length * NL * 1.15 + help.length * HELP_PX * 1.3 + en.length * EN * 1.3 + 18) + 2 * 30;
     return { row, nl, help, en, h };
   });
@@ -144,7 +147,7 @@ export async function drawPocketCard(d: PocketImage): Promise<HTMLCanvasElement>
   ctx.font = font(700, 58);
   ctx.fillText(d.titleNl, x0, y);
   y += 54;
-  const sub = [d.titleHelp, d.titleEn].filter(Boolean).join('  ·  ');
+  const sub = [d.titleHelp, d.english !== false || !d.titleHelp ? d.titleEn : ''].filter(Boolean).join('  ·  ');
   ctx.font = font(400, 34, HELP);
   ctx.fillStyle = C.ink2;
   if (rtl && d.titleHelp) {

@@ -11,6 +11,14 @@ const OPTIONS: { id: Gender; nl: string; key: 'genderWoman' | 'genderMan' | 'gen
   { id: 'x', nl: 'Zeg ik liever niet', key: 'genderNone' },
 ];
 
+/** "Rather not say": a plain person outline, no woman or man (in the sector cards' icon tile). */
+const NeutralIcon = ({ size = 28 }: { size?: number }) => (
+  <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
+    <circle cx="12" cy="8.2" r="3.9" fill="none" stroke="currentColor" strokeWidth="2.4" />
+    <path d="M4.6 20.4a7.4 7.4 0 0 1 14.8 0" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+  </svg>
+);
+
 /**
  * Woman, man or rather not say: two cast heads and a full-width "rather not say", in the look of
  * the sector cards. The choice only changes the help language ("I am sick" in Polish: chory or
@@ -37,10 +45,12 @@ export function GenderPicker({ current, lang, onPick, compact = false }: {
             className={`lang-btn sector-btn gender-btn ${o.who ? '' : 'sector-none gender-none'} ${picked ? 'picked' : ''}`}
             onClick={() => onPick(o.id)}
           >
-            {o.who && (
+            {o.who ? (
               <span className="gender-face" aria-hidden>
                 <Character who={o.who} crop="head" size={compact ? 56 : 84} />
               </span>
+            ) : (
+              <span className="sector-icon" aria-hidden><NeutralIcon size={compact ? 26 : 30} /></span>
             )}
             <span className="lang-names">
               <span className="lang-native" lang="nl">{o.nl}</span>

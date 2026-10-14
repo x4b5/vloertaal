@@ -6,6 +6,7 @@ import type { HelpLanguage } from '../i18n/types';
 import { unitIndex } from '../lib/certificate';
 import { pocketPhrases } from '../lib/pocket';
 import { savePocketCard } from '../lib/pocketCanvas';
+import { englishHidden, wantsEnglish } from '../lib/english';
 import { WordPicture } from '../pictures';
 import { Bi, HelpText } from './Bi';
 import { BackIcon, CheckIcon } from './Icons';
@@ -43,6 +44,7 @@ export function PocketCardScreen({ unit, lang, onBack }: { unit: Unit; lang?: He
           titleEn: unit.title,
           titleHelp: help,
           helpDir: lang?.dir ?? 'ltr',
+          english: !englishHidden(lang?.code, wantsEnglish()),
           rows: phrases.map((p, i) => ({
             nl: p.nl,
             en: p.en,
