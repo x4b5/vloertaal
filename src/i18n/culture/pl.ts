@@ -21,7 +21,7 @@ const t: CultureTranslation = {
     'c.je.w': '„Zeg maar je” to coś miłego: chce mniejszego dystansu. W wielu holenderskich firmach mówienie „je” do przełożonego jest normalne.',
     'c.names': 'Imiona i uścisk dłoni',
     'c.names.b': 'Pierwszego dnia krótko uściśnij dłoń, spójrz na tę osobę i powiedz swoje imię. Koledzy i kierownicy zwykle mówią do siebie po imieniu.',
-    'c.names.p': { m: 'Cześć, jestem Ali. Jestem tu nowy.', f: 'Cześć, jestem Ali. Jestem tu nowa.' },
+    'c.names.p': 'Cześć, jestem Ali. Jestem tu nowy.',
     'c.names.s': 'Podchodzi do ciebie kolega: „Hoi, ik ben Mark.” Co robisz?',
     'c.names.o1': 'Podajesz rękę i mówisz swoje imię.',
     'c.names.o2': 'Patrzysz w dół i nic nie mówisz.',

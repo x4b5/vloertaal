@@ -21,7 +21,7 @@ const t: CultureTranslation = {
     'c.je.w': '„Zeg maar je” e prietenos: vrea mai puțină distanță. În multe locuri de muncă din Olanda e normal să-i spui „je” șefului.',
     'c.names': 'Prenumele și o strângere de mână',
     'c.names.b': 'În prima zi, dă scurt mâna, uită-te la persoană și spune-ți prenumele. Colegii și șefii își spun de obicei pe prenume.',
-    'c.names.p': { m: 'Salut, sunt Ali. Sunt nou aici.', f: 'Salut, sunt Ali. Sunt nouă aici.' },
+    'c.names.p': 'Salut, sunt Ali. Sunt nou aici.',
     'c.names.s': 'Un coleg vine la tine: „Hoi, ik ben Mark.” Ce faci?',
     'c.names.o1': 'Îi dai mâna și îți spui prenumele.',
     'c.names.o2': 'Te uiți în jos și nu spui nimic.',

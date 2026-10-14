@@ -330,7 +330,7 @@ const t: CultureTranslation = {
     'c.doctor.a': 'Mój syn ma wysoką gorączkę.',
     'l.insurance': 'Ubezpieczenie zdrowotne',
     'w.premie': 'składka (płacona co miesiąc)',
-    'w.eigenrisico': 'udział własny (koszty, które najpierw płacisz sam)',
+    'w.eigenrisico': { m: 'udział własny (koszty, które najpierw płacisz sam)', f: 'udział własny (koszty, które najpierw płacisz sama)' },
     'w.zorgtoeslag': 'dopłata do ubezpieczenia zdrowotnego',
     'w.verzekeraar': 'ubezpieczyciel',
     'w.permaand': 'miesięcznie',

@@ -250,7 +250,7 @@ const lang: HelpLanguageSource = {
     'l.things': 'Lucruri din depozit',
     'l.directions': 'Direcții și acțiuni',
     'l.shift': 'Tura mea',
-    'l.sick': 'Anunți că ești bolnav',
+    'l.sick': { m: 'Anunți că ești bolnav', f: 'Anunți că ești bolnavă' },
 
     // Words
     'w.hallo': 'salut',
