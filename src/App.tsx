@@ -152,7 +152,7 @@ export default function App() {
     const onPop = () => {
       if (adminRequested()) return; // #beheer: the hashchange handler opens the admin page
       if (viewRef.current.name === 'lesson' && !leaving.current) {
-        // Stay in the lesson (put its entry back) and let it ask "Stop this lesson?".
+        // Stay in the lesson (put its entry back) and open its pause sheet.
         const lesson = viewRef.current;
         history.pushState({ view: lesson, depth: (current()?.depth ?? 0) + 1 } satisfies Entry, '');
         setLessonBack((n) => n + 1);

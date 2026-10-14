@@ -255,6 +255,7 @@ const lang: HelpLanguageSource = {
     remindPickTime: { m: 'መዓስ ነዘኻኽረካ?', f: 'መዓስ ነዘኻኽረኪ?' },
     certSaveShare: { m: 'ዓቅብ ወይ ኣካፍል', f: 'ዓቅቢ ወይ ኣካፍሊ' },
     certNameDone: 'ተወዲኡ',
+    pauseTitle: 'ዕረፍቲ',
   },
   gloss: {
     // Units

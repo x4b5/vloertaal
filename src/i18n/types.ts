@@ -271,6 +271,7 @@ export const uiEn = {
   remindPickTime: 'When shall we remind you?',
   certSaveShare: 'Save or share',
   certNameDone: 'Done',
+  pauseTitle: 'Pause',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

@@ -200,7 +200,7 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
     const onKey = (e: KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
       // Only with focus on the page itself, the question or an option: never while typing in a
-      // field, and never behind a sheet (the emergency phrases, "Stop this lesson?").
+      // field, and never behind a sheet (the emergency phrases, the pause sheet).
       const t = document.activeElement as HTMLElement | null;
       const free = !t || t === document.body || t.classList.contains('prompt') || Boolean(t.closest('.choices'));
       if (!free || t?.closest('input, textarea, select, [contenteditable="true"], [role="dialog"], [role="alertdialog"]')) return;

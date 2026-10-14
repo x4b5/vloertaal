@@ -4,7 +4,7 @@ import { ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
 import { backupFile, bestStreak, mergeBackup, parseBackup, replaceWithBackup, type Progress } from '../lib/progress';
-import { REMINDER_TIMES, reminderIcs, saveFile } from '../lib/reminder';
+import { REMINDER_TIMES, rememberReminder, reminderIcs, saveFile } from '../lib/reminder';
 import { REMIND_DEFAULT, REMIND_OTHER_TIMES, keepNext, type KeepAction, type KeepStep } from '../lib/keep';
 import { Bi } from './Bi';
 import { Character } from './Characters';
@@ -115,6 +115,7 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
     if (!chosen) return;
     const url = `${location.origin}${location.pathname}`;
     saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(chosen, url, new Date()));
+    rememberReminder(chosen);
     setSaved(true);
   };
   return (
@@ -292,6 +293,7 @@ export function BackupCard({ progress, lang, onRestore }: {
 function addReminder(time: string) {
   const url = `${location.origin}${location.pathname}`;
   saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, url, new Date()));
+  rememberReminder(time);
 }
 
 /** A tap meant for the page before is ignored for a moment (as on the milestone). */

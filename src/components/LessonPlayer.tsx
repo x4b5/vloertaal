@@ -881,7 +881,11 @@ function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onRestart, onStop }
     <div className="sheet-backdrop" onClick={onKeep}>
       <div className="sheet pause-sheet" role="alertdialog" aria-modal="true" aria-labelledby="quit-title" aria-describedby="quit-hint" onClick={(e) => e.stopPropagation()}>
         <span className="sheet-hazard" aria-hidden />
-        <h2 id="quit-title" className="sheet-title"><Bi text={ui('quitTitle', lang)} /></h2>
+        {/* A neutral title: the sheet offers going on, a quiet lesson (or starting again) and stopping. */}
+        <h2 id="quit-title" className="sheet-title max3-title">
+          <Bi text={ui('pauseTitle', lang)} />
+          <span className="max3-title-nl" lang="nl">Pauze</span>
+        </h2>
         <p id="quit-hint" className="sheet-hint">
           {kept && <span className="sheet-hint-nl" lang="nl">Je voortgang blijft bewaard.</span>}
           <Bi text={ui(kept ? 'quitKept' : 'quitHint', lang)} />

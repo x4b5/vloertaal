@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { REMIND_DEFAULT, REMIND_OTHER_TIMES, keepNext } from '../src/lib/keep';
-import { parseTime } from '../src/lib/reminder';
+import { parseTime, reminderTapAdds } from '../src/lib/reminder';
 import { uiEn } from '../src/i18n/types';
 
 describe('the reminder and home-screen pages after the first day', () => {
@@ -27,5 +27,17 @@ describe('the reminder and home-screen pages after the first day', () => {
     expect(keepNext('ask', 'no', true)).toBe('install');
     expect(keepNext('ask', 'no', false)).toBe('done');
     expect(keepNext('install', 'next', true)).toBe('done');
+  });
+});
+
+describe('Settings → reminder: the way back', () => {
+  it('a new time adds a reminder; the time already there only leads back', () => {
+    expect(reminderTapAdds('07:00', null)).toBe(true);
+    expect(reminderTapAdds('12:00', '07:00')).toBe(true);
+    expect(reminderTapAdds('07:00', '07:00')).toBe(false);
+  });
+
+  it('the pause sheet has a neutral title (the other languages are checked in i18n.test)', () => {
+    expect(uiEn.pauseTitle).toBe('Pause');
   });
 });

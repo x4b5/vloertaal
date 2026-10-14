@@ -255,6 +255,7 @@ const lang: HelpLanguageSource = {
     remindPickTime: 'Sana ne zaman hatırlatalım?',
     certSaveShare: 'Kaydet veya paylaş',
     certNameDone: 'Tamam',
+    pauseTitle: 'Mola',
   },
   gloss: {
     // Unit: First day at work

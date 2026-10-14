@@ -255,6 +255,7 @@ const lang: HelpLanguageSource = {
     remindPickTime: 'Când să-ți amintim?',
     certSaveShare: 'Salvează sau trimite',
     certNameDone: 'Gata',
+    pauseTitle: 'Pauză',
   },
   gloss: {
     // Units

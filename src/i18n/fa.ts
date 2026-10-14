@@ -255,6 +255,7 @@ const lang: HelpLanguageSource = {
     remindPickTime: 'چه زمانی به شما یادآوری کنیم؟',
     certSaveShare: 'ذخیره یا اشتراک‌گذاری',
     certNameDone: 'تمام',
+    pauseTitle: 'توقف',
   },
   gloss: {
     // Units

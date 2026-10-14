@@ -10,7 +10,7 @@ import { applyEnglish, setWantsEnglish, wantsEnglish } from '../lib/english';
 import { installWay } from '../lib/install';
 import { offlineAuto, offlineSupported, setOfflineAuto } from '../lib/offline';
 import type { Progress, ThemeChoice } from '../lib/progress';
-import { REMINDER_TIMES, reminderIcs, saveFile } from '../lib/reminder';
+import { REMINDER_TIMES, rememberReminder, reminderIcs, reminderTapAdds, reminderTime, saveFile } from '../lib/reminder';
 import {
   settingsDepth, settingsRows, SETTINGS_LIST_PAGES, voiceChoiceOf, voiceRefs,
   type SettingsList, type SettingsPage, type VoiceChoice,
@@ -141,11 +141,16 @@ export function Settings({
   useEffect(() => {
     return () => { if (timer.current) clearTimeout(timer.current); };
   }, []);
-  /** An answer on a question page: the check shows a moment, then back to the list. */
-  const answered = (steps = 1) => {
+  /**
+   * An answer on a question page: the check shows a moment, then back to the list. A question page
+   * has no Back button (at most three things to tap), so a tap on the option that is already chosen
+   * does the same: it keeps that choice, shows its check and leads back. That is the way out for
+   * someone who only came to look (an app on the home screen has no Back button of the phone).
+   */
+  const answered = (steps = 1, wait = 420) => {
     setTick((n) => n + 1);
     if (timer.current) clearTimeout(timer.current);
-    timer.current = window.setTimeout(() => onReturn(steps), 420);
+    timer.current = window.setTimeout(() => onReturn(steps), wait);
   };
   const say = (key: Parameters<typeof ui>[0]) => ui(key, lang);
   const onOff = (on: boolean, set: (on: boolean) => void): ReactNode => (
@@ -360,7 +365,7 @@ export function Settings({
           </>
         );
       case 'reminder':
-        return <ReminderTimes lang={lang} />;
+        return <ReminderTimes lang={lang} onDone={(added) => answered(1, added ? 1600 : 420)} />;
       case 'install':
         return <InstallCard lang={lang} />;
       case 'backup':
@@ -399,18 +404,29 @@ export function Settings({
   );
 }
 
-/** "Remind me every day": the three times; a tap puts that daily reminder in the phone's calendar. */
-function ReminderTimes({ lang }: { lang?: HelpLanguage }) {
+/**
+ * "Remind me every day": the three times; a tap puts that daily reminder in the phone's calendar,
+ * shows "added" a moment and leads back. The time already in the calendar carries the check, and a
+ * tap on it only leads back (no second, identical reminder).
+ */
+function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: boolean) => void }) {
+  const [current] = useState<string | null>(reminderTime);
   const [saved, setSaved] = useState<string | null>(null);
   const add = (time: string) => {
-    saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, `${location.origin}${location.pathname}`, new Date()));
+    if (saved) return; // already on its way back
+    const adds = reminderTapAdds(time, current);
+    if (adds) {
+      saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, `${location.origin}${location.pathname}`, new Date()));
+      rememberReminder(time);
+    }
     setSaved(time);
+    onDone(adds);
   };
   return (
     <>
       <ChoiceCards
         label={ui('remindTitle').en}
-        current={saved}
+        current={saved ?? current}
         onPick={add}
         options={REMINDER_TIMES.map((t) => ({
           id: t.time,
@@ -419,7 +435,7 @@ function ReminderTimes({ lang }: { lang?: HelpLanguage }) {
           picture: <span className="set-time">{t.time}</span>,
         }))}
       />
-      <p className="max3-hint" role="status"><Bi text={ui(saved ? 'remindAdded' : 'remindHint', lang)} /></p>
+      <p className="max3-hint" role="status"><Bi text={ui(saved && reminderTapAdds(saved, current) ? 'remindAdded' : 'remindHint', lang)} /></p>
     </>
   );
 }
