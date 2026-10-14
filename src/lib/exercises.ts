@@ -53,6 +53,17 @@ function clashes(a: Word, b: Word, pictured: boolean): boolean {
   return a.id === b.id || a.nl === b.nl || a.en === b.en || a.emoji === b.emoji || nearSynonyms(a.nl, b.nl) || (pictured && lookKey(a) === lookKey(b));
 }
 
+/** Words for one match board: no two that clash (near-synonyms, same meaning or picture), so
+ *  every card has exactly one right partner. */
+function matchWords(words: readonly Word[], n: number, rng: () => number): Word[] {
+  const picked: Word[] = [];
+  for (const w of shuffle(words, rng)) {
+    if (picked.length >= n) break;
+    if (!picked.some((p) => clashes(p, w, false))) picked.push(w);
+  }
+  return picked;
+}
+
 /**
  * Up to n wrong options for `word`, from the first pool first. Each one differs from the word and
  * from every other option. `pictured`: only words with a picture, and no look-alike pictures.
@@ -471,7 +482,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   }
 
   // Guided matching: three cards, two Dutch words asked one at a time (components/Exercises.tsx).
-  out.push({ kind: 'match', words: sample(words, Math.min(MATCH_PAIRS, words.length), rng) });
+  out.push({ kind: 'match', words: matchWords(words, Math.min(MATCH_PAIRS, words.length), rng) });
 
   // Today's review stays short (about a dozen items): every word once in a rotating kind of
   // question (above), the match board, one sentence to build and one chat. Its words already

@@ -168,3 +168,18 @@ describe('near-synonyms are never wrong options for each other', () => {
     }
   });
 });
+
+describe('match boards', () => {
+  it('never put near-synonyms on one board', () => {
+    for (const lesson of allLessons) {
+      for (let seed = 1; seed <= 5; seed++) {
+        for (const ex of buildLesson(lesson, { review: false, seed })) {
+          if (ex.kind !== 'match') continue;
+          for (const a of ex.words) for (const b of ex.words) {
+            if (a !== b) expect(nearSynonyms(a.nl, b.nl), `${lesson.id}: ${a.nl} / ${b.nl}`).toBe(false);
+          }
+        }
+      }
+    }
+  });
+});
