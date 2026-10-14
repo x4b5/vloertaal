@@ -5,8 +5,12 @@ const t: CultureTranslation = {
   ui: {
     sayAloud: "مایکروفون لازم نیست. آن را بلند بگویید، بعد ادامه بدهید.",
     micRetry: "مایکروفون را دوباره امتحان کنید",
+    micFailed: "مایکروفون کار نکرد. آن را بلند بگویید، بعد ادامه بدهید.",
     whichPicture: "کدام تصویر است؟",
     wrongTapsN: "لمس‌های اشتباه: {n}",
+    sayAloudInstead: "به عوض آن، آن را بلند بگویید",
+    wordsPractised: "کلمه‌های تمرین‌شده",
+    reviewComplete: "مرور تمام شد!",
   },
   gloss: {
     'c.hello.a.why': "به خداحافظی با خداحافظی جواب می‌دهند.",

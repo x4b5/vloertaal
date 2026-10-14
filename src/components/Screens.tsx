@@ -4,7 +4,7 @@ import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
-import { fillCount, fillN, getHelpLanguage, gloss, helpLanguages, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
+import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMeta, metaLanguage, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useRef, useState } from 'react';
 import { applyEnglish } from '../lib/english';
@@ -35,7 +35,6 @@ import { useVoices } from './useVoices';
 import { ChoiceCards } from './Choice';
 import { phoneHelpLang } from '../lib/langGuess';
 import { FlameIcon } from './StreakArt';
-import { Flag } from './Flags';
 import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
 
@@ -59,7 +58,7 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
       onClick={() => onPick(code)}
       aria-pressed={current === undefined ? undefined : current === code}
     >
-      <Flag code={code ?? 'en'} width={compact ? 32 : 40} />
+      {/* No flags: a flag stands for a state, not a language, and can hurt (G4 r2). The name in its own script is the sign. */}
       <span className="lang-names">
         <span className="lang-native" lang={code ?? 'en'} dir={dir}>{native}</span>
         {/* With a help language chosen (Settings), the English name is support only: hidden
@@ -79,7 +78,7 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   );
   return (
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`}>
-      {helpLanguages.map((l) => option(l.code, l.nativeName, l.name, l.dir, showBeta && !l.reviewed))}
+      {languageMeta.map((l) => option(l.code, l.nativeName, l.name, l.dir, showBeta && !l.reviewed))}
       {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
     </div>
   );
@@ -101,7 +100,9 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   const [list, setList] = useState(startWithList || !guess);
   // Nothing is chosen yet: the English stays next to every line.
   useEffect(() => { applyEnglish(null); }, []);
-  const g = guess ? getHelpLanguage(guess) : undefined;
+  // The guess page needs only its three strings (src/i18n/meta.ts): no pack to wait for.
+  const gMeta = langMeta(guess);
+  const g = gMeta ? getHelpLanguage(gMeta.code) ?? metaLanguage(gMeta) : undefined;
   if (list || !g) {
     return (
       <div className="screen onboarding max3-page">
@@ -125,8 +126,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
         <p className="tagline">{ui('appTagline').en}</p>
       </div>
       <h2 className="lang-guess-q">
-        <Flag code={g.code} width={64} />
-        <span lang={g.code} dir={g.dir}>{g.nativeName}{q}</span>
+        <span className="lang-guess-name" lang={g.code} dir={g.dir}>{g.nativeName}{q}</span>
       </h2>
       <ChoiceCards
         label={said(ui('chooseLanguage', g))}
@@ -409,7 +409,11 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   );
 }
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next, skipped = 0 }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next, skipped = 0, kind = 'lesson' }: {
+  /** 'daily': after today's review; 'review': after a mixed review or a lesson done again
+   *  (words practised instead of new words, and a review title). */
+  kind?: 'lesson' | 'daily' | 'review';
+
   /** Listening exercises left out in the lesson: said on their own line, not in the score. */
   skipped?: number;
   /** After today's review: how many words came back (shown instead of new words). */
@@ -453,6 +457,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   const rtl = lang?.dir === 'rtl';
   // The next lesson's first word with a picture, as on its card on the path.
   const nextPic = next?.id ? findLesson(next.id)?.lesson.words.find(hasPicture) : undefined;
+  const title = kind === 'daily' ? ui('reviewDone', lang) : kind === 'review' ? ui('reviewComplete', lang) : ui('lessonComplete', lang);
   return (
     <div className="player result-screen">
       <main className="player-body result">
@@ -465,7 +470,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             {lang?.ui.stampDone ? <HelpText className="stamp-sub" text={lang.ui.stampDone} lang={lang} /> : <span className="stamp-sub" lang="en">{ui('stampDone').en}</span>}
           </span>
         </div>
-        <h1 className="result-title"><Bi text={ui('lessonComplete', lang)} /></h1>
+        <h1 className="result-title"><Bi text={title} /></h1>
         <div className="result-stats" dir={rtl ? 'rtl' : undefined}>
           <StatCard
             tone="green"
@@ -485,7 +490,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           />
           <StatCard
             tone="gold"
-            label={repeated !== undefined ? ui('reviewToday', lang) : ui('newWords', lang)}
+            label={repeated !== undefined ? ui('wordsPractised', lang) : ui('newWords', lang)}
             icon={repeated !== undefined ? <CalendarIcon size={30} /> : <CrateIcon size={30} />}
             value={repeated !== undefined ? `${repeated}` : `+${shownNew}`}
             // The total is said, not printed: the top bar's crate shows it on the path.

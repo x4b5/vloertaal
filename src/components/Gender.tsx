@@ -7,8 +7,8 @@ import { ChromeHead } from './ChromeBack';
 import { LogoMark, Wordmark } from './Logo';
 
 const OPTIONS: { id: Gender; nl: string; key: 'genderWoman' | 'genderMan' | 'genderNone'; who?: CharacterId }[] = [
-  { id: 'f', nl: 'Vrouw', key: 'genderWoman', who: 'amina' },
-  { id: 'm', nl: 'Man', key: 'genderMan', who: 'bram' },
+  { id: 'f', nl: 'Vrouw', key: 'genderWoman', who: 'jada' },
+  { id: 'm', nl: 'Man', key: 'genderMan', who: 'henk' },
   { id: 'x', nl: 'Zeg ik liever niet', key: 'genderNone' },
 ];
 

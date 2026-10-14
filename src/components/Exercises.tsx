@@ -8,16 +8,16 @@ import { buildSteps, MATCH_ASKED, sentencePicture, type Exercise } from '../lib/
 import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
-import { castFor, Character, colleaguesOf, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
+import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
 import { CheckIcon, CloseIcon, SpeakerIcon } from './Icons';
 import { cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
-import { learnerCharacter, learnerVoice, voiceFor } from '../lib/voices';
+import { learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
 import { SpeakButton } from './SpeakButton';
 import { letterSteps } from '../lib/letters';
 import { createRng } from '../lib/random';
-import { pickInsteadOfTyping, writingInput } from '../lib/writing';
+import { nonLatinHelp, pickInsteadOfTyping, writingInput } from '../lib/writing';
 import { HelpSay } from './HelpSay';
 
 export interface Answer {
@@ -346,12 +346,19 @@ function DutchFromMeaning({ ex, lang, locked, onAnswer, verdict, run, misses }: 
         <PromptWithBram text={question} word={ex.word.nl} verdict={verdict} run={run} misses={misses} quietUntilChecked />
       </div>
       <ChoiceGrid
-        className="choices-rows choices-words"
+        className={`choices-rows choices-words ${nonLatinHelp(lang) ? 'hear-pick-choices' : ''}`}
         options={ex.options}
         correctId={ex.word.id}
         locked={locked}
         lang={lang}
         onAnswer={onAnswer}
+        // A learner who reads only another script hears each card on its own speaker (as in
+        // "hear and pick"): Latin-only cards alone would leave them guessing.
+        side={nonLatinHelp(lang) ? (w) => (
+          <button type="button" className="choice-say" aria-label={`${srText(ui('playAudio', lang))}: ${w.nl}`} lang={saidLang(ui('playAudio', lang))} onClick={() => speak(w.nl)}>
+            <SpeakerIcon size={24} />
+          </button>
+        ) : undefined}
         render={(w) => <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>}
       />
     </div>
@@ -765,9 +772,8 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
   const { prompt, reply } = ex.dialogue;
   const [picked, setPicked] = useState<ChatLine | null>(null);
   const mine = picked && locked ? (picked.id === reply.id ? 'right' : 'wrong') : '';
-  // The colleague asks; "you" are Amina (Bram for a man: lib/voices.ts learnerCharacter).
-  // The colleague talks while the line plays.
-  const me = learnerCharacter(lang?.gender);
+  // The colleague asks; "you" are a neutral person icon (MeAvatar), speaking with a voice that
+  // follows the gender question (lib/voices.ts learnerVoice). The colleague talks while the line plays.
   const myVoice = learnerVoice(lang?.gender);
   const them = castFor(prompt.id, colleaguesOf(lang?.gender));
   useEffect(() => { autoSpeak(prompt.nl, false, 'nl', voiceFor(them)); }, [prompt, them]);
@@ -776,7 +782,6 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
   // while the colleague listens. Before that you listen, then think about your answer.
   const replyTurn = verdict === 'right' && picked ? [picked.nl] : [];
   const meTalking = useTalking(replyTurn, replyTurn.length > 0);
-  const meRest: Mood = picked || themTalking ? 'idle' : 'thinking';
   return (
     <div className="exercise">
       <Prompt text={ui('completeChat', lang)} />
@@ -796,7 +801,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
           <div className={`chat-bubble chat-bubble-me ${mine}`} aria-live="polite">
             {picked ? <span className="chat-line" lang="nl">{breakable(picked.nl)}</span> : <span className="chat-blank" aria-hidden />}
           </div>
-          <span className="chat-char"><Character who={me} flip mood={moodFor(verdict, meRest)} talking={meTalking} className={reactClass(verdict, run, misses)} /></span>
+          <span className="chat-char"><MeAvatar className={reactClass(verdict, run, misses)} /></span>
         </div>
       </div>
       <ChoiceGrid

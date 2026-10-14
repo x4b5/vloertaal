@@ -62,7 +62,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     return (
       <Result
         right={right} total={11} newWords={6} words={24} lang={l} onDone={() => {}}
-        repeated={review ? 8 : undefined} stronger={review ? 5 : undefined}
+        repeated={review || q.get('mix') === '1' ? 8 : undefined} stronger={review ? 5 : undefined}
+        kind={review ? 'daily' : q.get('mix') === '1' ? 'review' : 'lesson'}
         next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l, id: next.id } : undefined}
       />
     );
@@ -219,7 +220,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   const allWords = units.flatMap((u) => u.lessons.flatMap((l) => l.words));
   const focus = allWords.find((w) => w.id === word);
   const exercises: Record<string, Exercise> = {
-    dutch: { kind: 'dutch', word: helm, options: [hesje, handschoenen, helm] },
+    // &text=1: text cards (a review's help language → Dutch; a non-Latin reader gets a speaker per card).
+    dutch: { kind: 'dutch', word: helm, options: [hesje, handschoenen, helm], ...(q.get('text') === '1' ? { textOnly: true } : {}) },
     meaning: { kind: 'meaning', word: focus ?? hesje, options: [handschoenen, schoenen, focus ?? hesje] },
     intro: { kind: 'intro', word: focus ?? hesje },
     listen: { kind: 'listen', word: focus ?? schoenen, options: [helm, focus ?? schoenen, hesje] },

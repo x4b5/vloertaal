@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { findLesson, learnedWords, playLesson } from './content/curriculum';
-import { getHelpLanguage, hasGender } from './i18n';
+import { ensureLanguage, getHelpLanguage, hasGender, isLanguageLoaded } from './i18n';
+import { Splash } from './components/Splash';
+import { loadPictures, usePicturesLoaded } from './pictures';
 import type { LangCode } from './i18n/types';
 import { setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
@@ -18,6 +20,7 @@ import { Milestone, StreakStopped } from './components/Milestone';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
+import { isMixLesson } from './content/review';
 import { type Access, clearAccess, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, routeNextLesson } from './lib/route';
 import { takeLinkedUnit } from './lib/unitLink';
@@ -38,7 +41,7 @@ type View =
   /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[] }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; next?: string; cert?: string; skipped?: number }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review' }
   /** "Certificaat behaald": once, after the result of a unit's last lesson (then the streak, if it went up). */
   | { name: 'cert-earned'; unit: string; streakUp?: number }
   /** A unit's certificate; streakUp: opened from "Certificaat behaald", the streak milestone still follows. */
@@ -185,6 +188,34 @@ export default function App() {
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
+  // The help language's texts load on demand (src/i18n/index.ts). Until they are here the splash
+  // shows, so no screen ever renders without its help text; offline without a saved copy: retry.
+  const [langTry, setLangTry] = useState(0);
+  const [langFailed, setLangFailed] = useState(false);
+  const langReady = isLanguageLoaded(progress.helpLang);
+  useEffect(() => {
+    if (langReady) return;
+    let live = true;
+    setLangFailed(false);
+    ensureLanguage(progress.helpLang).then(
+      () => { if (live) setLangTry((n) => n + 1); },
+      () => { if (live) setLangFailed(true); },
+    );
+    return () => { live = false; };
+  }, [progress.helpLang, langReady, langTry]);
+  useEffect(() => {
+    if (!langFailed) return;
+    const back = () => setLangTry((n) => n + 1);
+    window.addEventListener('online', back);
+    return () => window.removeEventListener('online', back);
+  }, [langFailed]);
+  // The word pictures (their own file, loading since the start): every screen after the language page has them.
+  const picsReady = usePicturesLoaded();
+  useEffect(() => {
+    if (picsReady || !progress.onboarded) return;
+    setLangFailed(false);
+    loadPictures().catch(() => setLangFailed(true));
+  }, [picsReady, progress.onboarded, langTry]);
   const lang = getHelpLanguage(progress.helpLang, progress.gender);
   // The page's language is the help language (Dutch without one). The direction is set where the
   // layout is mirrored (the lesson player and the path), so Dutch never inherits right-to-left.
@@ -247,6 +278,7 @@ export default function App() {
   // "Keep lessons on this phone" (Settings → This phone): the current topic is kept by itself.
   useAutoOffline(progress, access);
 
+  if ((!langReady || (progress.onboarded && !picsReady)) && view.name !== 'admin') return <Splash failed={langFailed} onRetry={() => setLangTry((n) => n + 1)} />;
   if (view.name === 'admin') {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
@@ -317,9 +349,13 @@ export default function App() {
         // is finished: the home offers the choice of the next one).
         const upNext = daily ? undefined : routeNextLesson(next, access);
         if (!daily) setArrived(view.lessonId);
+        // A review (today's, a mixed review, or a lesson done again) shows the words practised,
+        // not "+0 new words", under a review title.
+        const reviewing = daily || view.review || isMixLesson(found.lesson) || Boolean(found.lesson.repeat);
         replace({
           name: 'result', right, total, newWords: words - before, words, streakUp,
-          repeated: daily ? found.lesson.words.length : undefined,
+          kind: daily ? 'daily' : reviewing ? 'review' : 'lesson',
+          repeated: daily ? found.lesson.words.length : reviewing ? Object.keys(results).length || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
           next: upNext?.id,
           cert: unitDone?.id,
@@ -351,6 +387,7 @@ export default function App() {
           repeated={view.repeated}
           stronger={view.stronger}
           skipped={view.skipped}
+          kind={view.kind}
           next={view.next ? nextTitle(view.next, lang) : undefined}
           lang={lang}
           onDone={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}

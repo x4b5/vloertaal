@@ -108,7 +108,9 @@ describe('unit icons', () => {
   it('every unit has a drawn icon next to its title', async () => {
     const { units } = await import('../src/content/curriculum');
     const { unitIcons } = await import('../src/content/unitIcons');
-    const { pictures, iconPictures } = await import('../src/pictures');
+    const { loadPictures, iconPictures } = await import('../src/pictures');
+    await loadPictures();
+    const { pictures } = await import('../src/pictures');
     for (const u of units) {
       const id = unitIcons[u.id];
       expect(id, u.id).toBeTruthy();

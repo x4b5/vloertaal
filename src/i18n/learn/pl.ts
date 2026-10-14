@@ -5,8 +5,12 @@ const t: CultureTranslation = {
   ui: {
     sayAloud: "Mikrofon nie jest potrzebny. Powiedz to na głos, potem idź dalej.",
     micRetry: "Spróbuj mikrofonu jeszcze raz",
+    micFailed: "Mikrofon nie zadziałał. Powiedz to na głos, potem idź dalej.",
     whichPicture: "Który to obrazek?",
     wrongTapsN: "Błędne dotknięcia: {n}",
+    sayAloudInstead: "Zamiast tego powiedz to na głos",
+    wordsPractised: "Powtórzone słowa",
+    reviewComplete: "Powtórka skończona!",
   },
   gloss: {
     'c.hello.a.why': "Na pożegnanie odpowiada się pożegnaniem.",

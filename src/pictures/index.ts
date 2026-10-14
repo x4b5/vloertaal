@@ -1,43 +1,58 @@
-import { createElement, isValidElement, type CSSProperties, type JSX } from 'react';
+import { createElement, isValidElement, useSyncExternalStore, type CSSProperties, type JSX } from 'react';
 import type { CharacterId } from '../components/Characters';
 import { Bust } from './kit';
-import group1 from './group1';
-import group2 from './group2';
-import group3 from './group3';
-import group4 from './group4';
-import group5 from './group5';
-import group6 from './group6';
-import group7 from './group7';
-import group8 from './group8';
-import group9 from './group9';
-import group10 from './group10';
-import group11 from './group11';
-import group12 from './group12';
-import group13 from './group13';
-import group14 from './group14';
 import units from './units';
 import icons from './icons';
 
 /**
  * Original word pictures (flat vector, in the cast's style; see docs/tekenstijl.md).
  * Each picture is a function returning the inside of a 120 x 120 <svg>; WordPicture wraps it.
+ *
+ * They are about a third of the app's code, so they come in a file of their own (./words.ts),
+ * loaded right after the start (loadPictures, from src/main.tsx) while the learner picks a
+ * language. The app waits for them before any screen with pictures (App.tsx), and a picture
+ * drawn before then is an empty square of its size, never a different picture.
  */
-export const pictures: Record<string, () => JSX.Element> = {
-  ...group1,
-  ...group2,
-  ...group3,
-  ...group4,
-  ...group5,
-  ...group6,
-  ...group7,
-  ...group8,
-  ...group9,
-  ...group10,
-  ...group11,
-  ...group12,
-  ...group13,
-  ...group14,
+export let pictures: Record<string, () => JSX.Element> = {};
+let picturesUrl: string | undefined;
+let loading: Promise<void> | undefined;
+const waiting = new Set<() => void>();
+
+export function picturesLoaded(): boolean {
+  return picturesUrl !== undefined;
+}
+
+/** Loads the word pictures (once; again after a failure). */
+export function loadPictures(): Promise<void> {
+  if (picturesUrl !== undefined) return Promise.resolve();
+  loading ??= import('./words').then(
+    (m) => {
+      pictures = m.default;
+      picturesUrl = m.url;
+      waiting.forEach((fn) => fn());
+    },
+    (e) => {
+      loading = undefined;
+      throw e;
+    },
+  );
+  return loading;
+}
+
+/** The pictures' file, when loaded on this visit (saved with the app for offline use). */
+export function loadedPicturesUrl(): string | undefined {
+  return picturesUrl && /^https?:/.test(picturesUrl) ? picturesUrl : undefined;
+}
+
+const subscribe = (fn: () => void) => {
+  waiting.add(fn);
+  return () => { waiting.delete(fn); };
 };
+
+/** Re-renders when the pictures arrive. */
+export function usePicturesLoaded(): boolean {
+  return useSyncExternalStore(subscribe, picturesLoaded, picturesLoaded);
+}
 
 /** Own unit icons for abstract topics (i.*), next to the word pictures in WordPicture. */
 export const iconPictures: Record<string, () => JSX.Element> = icons;
@@ -55,7 +70,12 @@ export function WordPicture({ id, emoji, size = 96, className }: {
   size?: number;
   className?: string;
 }): JSX.Element {
+  const ready = usePicturesLoaded();
   const draw = pictures[id] ?? iconPictures[id];
+  if (!draw && !ready) {
+    // Not here yet: an empty square of the same size (no emoji that would then change).
+    return createElement('span', { className: `word-pic word-pic-wait ${className ?? ''}`, 'aria-hidden': true, style: { display: 'inline-block', width: size, height: size } });
+  }
   if (!draw) {
     const style: CSSProperties = { fontSize: Math.round(size * 0.8), lineHeight: 1, width: size, height: size };
     return createElement('span', { className: `word-pic word-emoji ${className ?? ''}`, 'aria-hidden': true, style }, emoji);

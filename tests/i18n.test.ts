@@ -4,7 +4,7 @@ import { aboutIds } from '../src/content/about';
 import { cultureIds, cultureTips } from '../src/content/culture';
 import { workIds } from '../src/content/work';
 import { chatWhyIds } from '../src/content/chatWhy';
-import { getHelpLanguage, gloss, hasGender, helpLanguageSources, helpLanguages, ui } from '../src/i18n';
+import { getHelpLanguage, gloss, hasGender, helpLanguageSources, helpLanguages, ui } from '../src/i18n/all';
 import { allForms, forGender, GENDERED_LANGS, uiEn, type LangText } from '../src/i18n/types';
 import { mixLessonFor } from '../src/content/review';
 

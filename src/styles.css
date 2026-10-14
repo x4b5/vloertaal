@@ -3761,3 +3761,45 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .tile.tile-wrong-tap { text-decoration: line-through; text-decoration-thickness: 2px; color: var(--wrong-ink); background: var(--red-bg); border-color: var(--red-line); box-shadow: none; padding: 4px 10px; min-height: 0; }
 /* Picture choice from the Dutch word: pictures only until the answer. */
 .pic-from-nl .choices-pics .choice { justify-content: center; }
+
+/* ---- G4 r2: learning ---- */
+/* Speaking: a quiet outlined choice under the mic, for saying it out loud without recording. */
+.say-aloud-instead {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px; margin-top: 10px; padding: 8px 16px;
+  background: none; border: 2px solid var(--ink-3); border-radius: 12px; color: var(--ink); font: inherit; font-weight: 650; cursor: pointer;
+}
+.say-aloud-instead .bi-help { --help-size: 0.85em; font-weight: 500; }
+.say-aloud-instead:active { transform: translateY(1px); }
+/* Text cards with a speaker on each card (non-Latin readers in a review). */
+.choices-words.hear-pick-choices .choice-wrap .choice { min-width: 0; }
+
+/* ---- G4 r2: polish ---- */
+/* The language list has no flags (a flag stands for a state, not a language): the name in its own
+   script, large, is the sign. It never breaks inside a word ("Українськ|а"); at XL the first-run
+   list is a little smaller so every name still fits on its card at 360 px. */
+.lang-btn:not(.sector-btn, .gender-btn) { justify-content: center; gap: 6px; min-height: 92px; }
+.lang-btn:not(.sector-btn, .gender-btn) .lang-native { font-size: 1.35rem; hyphens: none; overflow-wrap: normal; word-break: normal; }
+.lang-btn:not(.sector-btn, .gender-btn) .lang-native:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: 1.5rem; }
+.lang-grid-compact .lang-btn:not(.sector-btn, .gender-btn) { min-height: 0; }
+.lang-grid-compact .lang-btn:not(.sector-btn, .gender-btn) .lang-native { font-size: 1.12rem; }
+.lang-grid-compact .lang-btn:not(.sector-btn, .gender-btn) .lang-native:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: 1.22rem; }
+@media (max-width: 350px) { .lang-btn:not(.sector-btn, .gender-btn) .lang-native { font-size: 1.15rem; } }
+:root[data-text='large'] .onboarding .lang-btn .lang-native { font-size: 1.12rem; }
+:root[data-text='xl'] .onboarding .lang-btn .lang-native { font-size: 0.98rem; }
+:root[data-text='xl'] .onboarding .lang-btn .lang-native:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: 1.08rem; }
+:root[data-text='xl'] .lang-grid-compact .lang-btn:not(.sector-btn, .gender-btn) .lang-native { font-size: 0.98rem; }
+:root:is([data-text='large'], [data-text='xl']) .lang-btn:not(.sector-btn, .gender-btn) { padding-inline: 12px; }
+/* "Polski?": the guessed language's own name, very large, where the flag was. */
+.lang-guess-q { display: flex; justify-content: center; }
+.lang-guess-name {
+  font-size: clamp(2.2rem, 12vw, 3.4rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.01em;
+  hyphens: none; overflow-wrap: normal; word-break: normal; text-align: center;
+}
+.lang-guess-name:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: clamp(2.4rem, 13vw, 3.7rem); }
+:root[data-text='xl'] .lang-guess-name { font-size: clamp(2rem, 11vw, 3rem); }
+/* "You" in a chat: the neutral person icon in a character's place (MeAvatar). */
+.ch-me { overflow: visible; }
+/* The help voice button: a small globe beside the speech bubble (no flag). */
+.help-say .icon:first-child { opacity: 0.8; }
+/* XL on a 320 px phone: the wordmark of the first-run pages stays inside the screen. */
+:root[data-text='xl'] .hero-logo .wordmark { font-size: min(2.6rem, 12.5vw); }

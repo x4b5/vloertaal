@@ -33,9 +33,12 @@ export function castVoices(): VoiceRef[] {
 }
 
 /**
- * "You" in the chats: Amina (a woman's voice) by default, Bram (a man's voice) when the learner
- * said "man" on the gender question. "Rather not say" or no answer keeps Amina, as before.
- * The colleagues are then picked from the rest of the cast, so you never talk to yourself.
+ * Whose recorded voice "you" borrow in the chats: Amina's (a woman's voice) by default, Bram's
+ * (a man's voice) when the learner said "man" on the gender question. "Rather not say" or no
+ * answer keeps Amina's voice, as before. Only the voice: on screen "you" are a neutral person
+ * icon for everyone (MeAvatar in components/Characters.tsx), never a cast member's face, so no
+ * learner is shown in a hijab or as the narrator. The colleagues are picked from the rest of the
+ * cast, so you never talk to someone with your own voice.
  */
 export type LearnerId = 'amina' | 'bram';
 export function learnerCharacter(gender?: Gender | null): LearnerId {

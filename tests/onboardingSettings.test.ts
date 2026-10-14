@@ -2,7 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { guessHelpLang } from '../src/lib/langGuess';
 import { sectorGroupOf, sectorGroups, sectors } from '../src/content/sectors';
 import { SETTINGS_PARENT, settingsDepth, settingsRows, voiceChoiceOf, voiceRefs, type SettingsContext } from '../src/lib/settingsMenu';
-import { helpLanguages } from '../src/i18n';
+import { helpLanguages, languageMeta } from '../src/i18n/all';
+import { GENDERED_LANGS } from '../src/i18n/types';
 import { uiEn } from '../src/i18n/types';
 
 describe('the first-run language guess', () => {
@@ -31,6 +32,15 @@ describe('the first-run language guess', () => {
     for (const l of helpLanguages) {
       expect(l.ui.langGuessYes, l.code).toBeTruthy();
       expect(l.ui.langGuessOther, l.code).toBeTruthy();
+    }
+  });
+  it('the language list (loaded before any pack) matches the packs', () => {
+    expect(languageMeta.map((m) => m.code)).toEqual(helpLanguages.map((l) => l.code));
+    for (const l of helpLanguages) {
+      const m = languageMeta.find((x) => x.code === l.code)!;
+      expect({ name: m.name, nativeName: m.nativeName, dir: m.dir, reviewed: m.reviewed, gendered: m.gendered }, l.code)
+        .toEqual({ name: l.name, nativeName: l.nativeName, dir: l.dir, reviewed: l.reviewed, gendered: GENDERED_LANGS.includes(l.code) });
+      expect(m.ui, l.code).toEqual({ chooseLanguage: l.ui.chooseLanguage, langGuessYes: l.ui.langGuessYes, langGuessOther: l.ui.langGuessOther });
     }
   });
 });

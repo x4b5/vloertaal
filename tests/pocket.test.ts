@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { units } from '../src/content/curriculum';
 import { isMixLesson } from '../src/content/review';
-import { helpLanguages } from '../src/i18n';
+import { helpLanguages } from '../src/i18n/all';
 import { POCKET_SIZE, pocketPhrases, pocketPicks } from '../src/lib/pocket';
 
 const teaching = (u: (typeof units)[number]) => u.lessons.filter((l) => !isMixLesson(l));

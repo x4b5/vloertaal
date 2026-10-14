@@ -9,7 +9,7 @@ import { chatWhy } from '../content/chatWhy';
 import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { learnerCharacter, voiceFor } from '../lib/voices';
-import { pickInsteadOfTyping, writingInput } from '../lib/writing';
+import { nonLatinHelp, pickInsteadOfTyping, writingInput } from '../lib/writing';
 import { castFor, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { FlameIcon } from './StreakArt';
@@ -232,9 +232,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const [speakAtStart] = useState(speakingOn);
   // Every lesson tries the microphone again (a failure in an earlier lesson does not carry over).
   useState(resetMicForLesson);
+  const [nonLatinAtStart] = useState(() => nonLatinHelp(lang));
   const initial = useMemo(
-    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart }),
-    [exercises, lesson, review, seed, quietAtStart, speakAtStart],
+    // A learner who reads only another script gets picture cards (or cards with speakers) where
+    // a review would show Latin-only text cards (lib/exercises.ts readableDutch).
+    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart }),
+    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart],
   );
   // The saved place in that list, with the mistakes queued then (null: start from the top).
   const [resumed] = useState(() => (saved ? restoreSave(saved, initial) : null));

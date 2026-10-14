@@ -23,7 +23,6 @@ import { Bi } from './Bi';
 import { CertIcon, CertificatesCard } from './Certificate';
 import { ChoiceCards, type ChoiceOption } from './Choice';
 import { ChromeBack } from './ChromeBack';
-import { Flag } from './Flags';
 import { UpgradeCard } from './Gate';
 import { GenderPicker, NeutralIcon } from './Gender';
 import {
@@ -206,7 +205,7 @@ export function Settings({
         <li key={p}>
           <button type="button" className={`set-row ${p === 'reset' ? 'danger' : ''}`} onClick={() => onPage(p)}>
             <span className="set-row-icon" aria-hidden>
-              {p === 'language' && lang ? <Flag code={lang.code} width={30} /> : p === 'sector' && progress.sector ? <SectorIcon id={progress.sector} size={24} /> : ROWS[p].icon}
+              {p === 'sector' && progress.sector ? <SectorIcon id={progress.sector} size={24} /> : ROWS[p].icon}
             </span>
             <span className="set-row-names">
               <Bi className="set-row-help" text={say(ROWS[p].key)} />

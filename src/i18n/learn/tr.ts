@@ -5,8 +5,12 @@ const t: CultureTranslation = {
   ui: {
     sayAloud: "Mikrofon gerekmez. Sesli söyle, sonra devam et.",
     micRetry: "Mikrofonu tekrar dene",
+    micFailed: "Mikrofon çalışmadı. Sesli söyle, sonra devam et.",
     whichPicture: "Hangi resim?",
     wrongTapsN: "Yanlış dokunuş: {n}",
+    sayAloudInstead: "Bunun yerine sesli söyle",
+    wordsPractised: "Tekrar edilen kelimeler",
+    reviewComplete: "Tekrar bitti!",
   },
   gloss: {
     'c.hello.a.why': "Vedalaşmaya vedayla karşılık verilir.",

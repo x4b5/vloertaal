@@ -219,10 +219,12 @@ export const uiEn = {
   stopRecording: 'Stop',
   micPrivacy: 'Only you hear it. Nothing is sent.',
   micUnavailable: 'The microphone is off. That’s fine, go on.',
-  /** Speaking without a usable microphone: self-paced, nothing recorded. */
+  /** Speaking on a device that cannot record at all: self-paced, nothing recorded. */
   sayAloud: 'No microphone needed. Say it out loud, then go on.',
   /** After the microphone failed in a speaking exercise: one retry. */
   micRetry: 'Try the microphone again',
+  /** Speaking after the microphone failed (here or earlier in the lesson): no "No microphone needed" next to a retry. */
+  micFailed: 'The microphone did not work. Say it out loud, then go on.',
   /** Picture choice: the Dutch word is said and written, the learner picks its picture. */
   whichPicture: 'Which picture is it?',
   /** After building a sentence with wrong taps. */
@@ -288,6 +290,10 @@ export const uiEn = {
   lessonProgress: 'Lesson progress',
   mainMenu: 'Main menu',
   spaceKey: 'Space',
+  /* G4 r2 learning: a way on from the speaking screen without the microphone; the result of a review. */
+  sayAloudInstead: 'Say it out loud instead',
+  wordsPractised: 'Words practised',
+  reviewComplete: 'Review finished!',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

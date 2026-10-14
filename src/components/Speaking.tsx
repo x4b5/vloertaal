@@ -6,7 +6,7 @@ import { breakable } from '../lib/dutch';
 import type { Exercise } from '../lib/exercises';
 import { sentencePicture } from '../lib/exercises';
 import {
-  canRecord, isWord, MAX_RECORD_MS, MIC_RETRIES, recordMime, setMicBlocked, SILENCE_MS, speakMode,
+  canRecord, isWord, MAX_RECORD_MS, MIC_RETRIES, micBlocked, recordMime, setMicBlocked, SILENCE_MS, speakMode,
 } from '../lib/speaking';
 import { voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
@@ -317,6 +317,13 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
               <Bi text={ui('micPrivacy', lang)} />
             </p>
           )}
+          {/* A way on without the microphone (shy, noisy floor, no permission wanted): the
+              same self-paced "say it out loud" step as without a microphone. */}
+          {phase === 'idle' && (
+            <button type="button" className="say-aloud-instead" onClick={() => { stopSpeech(); setPhase('off'); }}>
+              <Bi text={ui('sayAloudInstead', lang)} />
+            </button>
+          )}
         </div>
       )}
 
@@ -352,7 +359,10 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
       {phase === 'off' && (
         <div className="say-off say-aloud">
           <MicOffIcon size={32} />
-          <Bi text={ui('sayAloud', lang)} />
+          {/* "No microphone needed" only where the phone cannot record at all; after a failure
+              (here or earlier in the lesson) it says the microphone did not work; chosen by the
+              learner ("Say it out loud instead"): the microphone is off, that's fine. */}
+          <Bi text={ui(!canRecord() ? 'sayAloud' : failed || micBlocked() ? 'micFailed' : 'micUnavailable', lang)} />
           {failed && retries > 0 && canRecord() && !phaseForShot && (
             <button
               type="button"

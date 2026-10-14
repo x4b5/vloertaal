@@ -5,8 +5,12 @@ const t: CultureTranslation = {
   ui: {
     sayAloud: { m: "ማይክሮፎን ኣየድልን። ብዓው ኢልካ በሎ፡ ድሕሪኡ ቀጽል።", f: "ማይክሮፎን ኣየድልን። ብዓው ኢልኪ በልዮ፡ ድሕሪኡ ቀጽሊ።" },
     micRetry: { m: "ማይክሮፎን እንደገና ፈትን", f: "ማይክሮፎን እንደገና ፈትኒ" },
+    micFailed: { m: "ማይክሮፎን ኣይሰርሐን። ብዓው ኢልካ በሎ፡ ድሕሪኡ ቀጽል።", f: "ማይክሮፎን ኣይሰርሐን። ብዓው ኢልኪ በልዮ፡ ድሕሪኡ ቀጽሊ።" },
     whichPicture: "ኣየናይ ስእሊ እዩ?",
     wrongTapsN: "ጌጋ ጠውቕታት: {n}",
+    sayAloudInstead: { m: "ኣብ ክንድኡ ብዓው ኢልካ በሎ", f: "ኣብ ክንድኡ ብዓው ኢልኪ በልዮ" },
+    wordsPractised: "ዝተደገሙ ቃላት",
+    reviewComplete: "ድግግም ተወዲኡ!",
   },
   gloss: {
     'c.hello.a.why': "ንሰናብት ብሰናብት ይምለስ።",

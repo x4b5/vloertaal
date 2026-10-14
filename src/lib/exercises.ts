@@ -8,6 +8,8 @@ import { type Access, lessonAllowed } from './access';
 import { createRng, sample, shuffle } from './random';
 import { hasPicture, lookKey } from './wordPicture';
 import { type SpeakItem, withSpeaking } from './speaking';
+import { nearSynonyms } from '../content/synonyms';
+import { DAILY_ID } from './spaced';
 
 export type Exercise =
   | { kind: 'intro'; word: Word }
@@ -45,22 +47,24 @@ export function isGraded(ex: Exercise): boolean {
   return ex.kind !== 'intro' && ex.kind !== 'tip' && ex.kind !== 'speak';
 }
 
-/** Same answer, or the same (or a near-identical) picture: never two of these in one choice. */
+/** Same answer, near-synonyms (content/synonyms.ts), or the same (or a near-identical) picture:
+ *  never two of these in one choice. */
 function clashes(a: Word, b: Word, pictured: boolean): boolean {
-  return a.id === b.id || a.nl === b.nl || a.en === b.en || a.emoji === b.emoji || (pictured && lookKey(a) === lookKey(b));
+  return a.id === b.id || a.nl === b.nl || a.en === b.en || a.emoji === b.emoji || nearSynonyms(a.nl, b.nl) || (pictured && lookKey(a) === lookKey(b));
 }
 
 /**
  * Up to n wrong options for `word`, from the first pool first. Each one differs from the word and
  * from every other option. `pictured`: only words with a picture, and no look-alike pictures.
  */
-function distractors(word: Word, pools: readonly (readonly Word[])[], n: number, rng: () => number, pictured = false): Word[] {
+function distractors(word: Word, pools: readonly (readonly Word[])[], n: number, rng: () => number, pictured = false, avoid?: ReadonlySet<string>): Word[] {
   const picked: Word[] = [];
   for (const pool of pools) {
     if (picked.length >= n) break;
     for (const w of shuffle(pool, rng)) {
       if (picked.length >= n) break;
       if (pictured && !hasPicture(w)) continue;
+      if (avoid?.has(w.id)) continue;
       if (clashes(w, word, pictured) || picked.some((p) => clashes(w, p, pictured))) continue;
       picked.push(w);
     }
@@ -83,13 +87,13 @@ export function wordsBefore(lesson: Lesson): Word[] {
  * when those run out does a word from elsewhere in the course fill in, so an option is never a
  * word that is still to come when a known one can take its place.
  */
-function options(word: Word, lesson: Lesson, rng: () => number, n = 3, known: readonly Word[] = lesson.words): Word[] {
+export function options(word: Word, lesson: Lesson, rng: () => number, n = 3, known: readonly Word[] = lesson.words, avoid?: ReadonlySet<string>): Word[] {
   const before = wordsBefore(lesson);
-  const met = distractors(word, [known, before], n - 1, rng);
+  const met = distractors(word, [known, before], n - 1, rng, false, avoid);
   // The very first quiz of the course knows only two words: a choice of two is fair.
   if (met.length === n - 1 || (met.length >= 1 && !before.length)) return shuffle([word, ...met], rng);
   const rest = [lesson.words, allWords].map((pool) => pool.filter((w) => !met.some((m) => clashes(w, m, false))));
-  return shuffle([word, ...met, ...distractors(word, rest, n - 1 - met.length, rng)], rng);
+  return shuffle([word, ...met, ...distractors(word, rest, n - 1 - met.length, rng, false, avoid)], rng);
 }
 
 /** The words of the lesson's unit: the fallback pool for picture choices (related words). */
@@ -102,15 +106,15 @@ function unitWords(lesson: Lesson): Word[] {
  * lesson and its unit have enough other picture words (no abstract word, no look-alikes); else
  * as text cards (Dutch words only), with the same prompt.
  */
-export function dutchExercise(word: Word, lesson: Lesson, rng: () => number, n = 3, textOnly = false): Extract<Exercise, { kind: 'dutch' }> {
+export function dutchExercise(word: Word, lesson: Lesson, rng: () => number, n = 3, textOnly = false, avoid?: ReadonlySet<string>): Extract<Exercise, { kind: 'dutch' }> {
   if (hasPicture(word) && !textOnly) {
     // Known words first: the lesson's, then the unit's earlier lessons', then the rest of the unit.
     const unit = unitWords(lesson);
     const before = new Set(wordsBefore(lesson).map((w) => w.id));
-    const others = distractors(word, [lesson.words, unit.filter((w) => before.has(w.id)), unit], n - 1, rng, true);
+    const others = distractors(word, [lesson.words, unit.filter((w) => before.has(w.id)), unit], n - 1, rng, true, avoid);
     if (others.length === n - 1) return { kind: 'dutch', word, options: shuffle([word, ...others], rng) };
   }
-  return { kind: 'dutch', word, options: options(word, lesson, rng, n), textOnly: true };
+  return { kind: 'dutch', word, options: options(word, lesson, rng, n, lesson.words, avoid), textOnly: true };
 }
 
 /** The first word of a line, lower case ("Tot morgen!" → "tot"). */
@@ -277,7 +281,8 @@ export function buildSteps(nl: string, tiles: readonly string[], n = 3, salt = 0
     const take = (pool: readonly string[], max: number) => {
       for (const w of pool) {
         if (picked.length >= max) break;
-        if (nearMiss(w, word) || picked.some((p) => p.toLowerCase() === w.toLowerCase() || nearMiss(w, p))) continue;
+        // Never a near-synonym of the right word either ("baas" for "leidinggevende").
+        if (nearMiss(w, word) || nearSynonyms(w, word) || picked.some((p) => p.toLowerCase() === w.toLowerCase() || nearMiss(w, p))) continue;
         picked.push(w);
       }
     };
@@ -308,8 +313,23 @@ export function reviewKind(i: number, box = 1, quiet = false, offset = 0): Revie
   return kind === 'listen' || (kind === 'type' && box >= 2) ? 'dutch' : kind === 'type' ? 'meaning' : kind;
 }
 
-function reviewExercise(kind: ReviewKind, word: Word, lesson: Lesson, rng: () => number): Exercise {
-  if (kind === 'dutch') return dutchExercise(word, lesson, rng, 3, true);
+/**
+ * "Which one is …?" in a review. A learner who reads Latin letters gets text cards (the meaning
+ * shown, pick the Dutch word: the harder direction). A learner who reads only another script
+ * (`nonLatin`, lib/writing.ts) can't pick between Latin-only cards, so gets picture cards when
+ * the word has a picture; otherwise text cards that each have their own speaker (the component
+ * adds them, as in "hear and pick"), and without sound (`quiet`), where a speaker can't help,
+ * "what does it mean" (the Dutch word shown, meanings in the help language).
+ */
+function readableDutch(word: Word, lesson: Lesson, rng: () => number, nonLatin: boolean, quiet: boolean, textOnly: boolean): Exercise {
+  if (!nonLatin) return dutchExercise(word, lesson, rng, 3, textOnly);
+  const ex = dutchExercise(word, lesson, rng, 3);
+  if (!ex.textOnly || !quiet) return ex;
+  return { kind: 'meaning', word, options: options(word, lesson, rng) };
+}
+
+function reviewExercise(kind: ReviewKind, word: Word, lesson: Lesson, rng: () => number, nonLatin = false, quiet = false): Exercise {
+  if (kind === 'dutch') return readableDutch(word, lesson, rng, nonLatin, quiet, true);
   return { kind, word, options: options(word, lesson, rng) };
 }
 
@@ -335,32 +355,54 @@ function reorder<T extends { id: string }>(items: readonly T[], rng: () => numbe
 }
 
 /**
- * A mistake that comes back at the end of the lesson, in a new form: its options in another
- * order (the answer on another place), and for "What does it mean?" other wrong options where the
- * lesson has them. A sentence offers other words step by step, a match board asks its words in
- * another order (another card stays unused). Pure and seeded.
+ * Options with at least one wrong option the learner has not seen in this question (`old`), made
+ * by `make` (a few seeded tries), and the answer on another place than before. When the lesson
+ * has no other wrong options, the old ones in another order.
+ */
+function freshOptions<T extends { id: string }>(old: readonly T[], answerId: string, make: (avoid: ReadonlySet<string>) => T[], rng: () => number): T[] {
+  const seen = new Set(old.map((o) => o.id));
+  const wrong = old.filter((o) => o.id !== answerId);
+  for (let k = 0; k < 8; k++) {
+    // Leave out one of the old wrong options (another one on each try), so a new one comes in
+    // where the lesson has one; the last tries may use them all again.
+    const avoid = new Set(k < 6 && wrong.length ? [wrong[k % wrong.length].id] : []);
+    const fresh = make(avoid);
+    if (!fresh.some((o) => o.id === answerId) || !fresh.some((o) => !seen.has(o.id))) continue;
+    // The answer moves too (its old place would be a hint).
+    const was = old.findIndex((o) => o.id === answerId);
+    return fresh.findIndex((o) => o.id === answerId) === was ? reorder(fresh, rng, answerId) : fresh;
+  }
+  return reorder(old, rng, answerId);
+}
+
+/**
+ * A mistake that comes back at the end of the lesson, in a new form, so it can't be solved from
+ * memory of the first try: other wrong options where the lesson has them (a choice of words,
+ * pictures or chat replies), always in another order with the answer on another place. A
+ * sentence offers other words step by step, a match board asks its words in another order
+ * (another card stays unused). A situation keeps its three options (each tip has only those; an
+ * option from another tip would be off-topic and give the answer away), in another order. Pure
+ * and seeded.
  */
 export function forRetry(ex: Exercise, lesson: Lesson, seed: number): Exercise {
   const rng = createRng((seed ^ 0x7e7a1) >>> 0);
+  const n = (xs: readonly unknown[]) => Math.max(2, xs.length);
   switch (ex.kind) {
-    case 'meaning': {
-      const old = new Set(ex.options.map((o) => o.id));
-      for (let k = 0; k < 6; k++) {
-        const fresh = options(ex.word, lesson, rng);
-        if (!fresh.some((o) => !old.has(o.id))) continue;
-        // The answer moves too (its old place would be a hint).
-        const was = ex.options.findIndex((o) => o.id === ex.word.id);
-        return { ...ex, options: fresh.findIndex((o) => o.id === ex.word.id) === was ? reorder(fresh, rng, ex.word.id) : fresh };
-      }
-      return { ...ex, options: reorder(ex.options, rng, ex.word.id) };
-    }
-    case 'dutch':
+    case 'meaning':
     case 'listen':
-      return { ...ex, options: reorder(ex.options, rng, ex.word.id) };
+      return { ...ex, options: freshOptions(ex.options, ex.word.id, (avoid) => options(ex.word, lesson, rng, n(ex.options), lesson.words, avoid), rng) };
+    case 'dutch': {
+      // Picture cards stay picture cards (pictured wrong options), text cards stay text cards.
+      const make = (avoid: ReadonlySet<string>) => {
+        const next = dutchExercise(ex.word, lesson, rng, n(ex.options), ex.textOnly, avoid);
+        return Boolean(next.textOnly) === Boolean(ex.textOnly) ? next.options : [];
+      };
+      return { ...ex, options: freshOptions(ex.options, ex.word.id, make, rng) };
+    }
     case 'type':
-      return ex.options ? { ...ex, options: reorder(ex.options, rng, ex.word.id) } : ex;
+      return ex.options ? { ...ex, options: freshOptions(ex.options, ex.word.id, (avoid) => options(ex.word, lesson, rng, n(ex.options!), lesson.words, avoid), rng) } : ex;
     case 'chat':
-      return { ...ex, options: reorder(ex.options, rng, ex.dialogue.reply.id) };
+      return { ...ex, options: freshOptions(ex.options, ex.dialogue.reply.id, () => chatOptions(ex.dialogue, rng, n(ex.options), lesson), rng) };
     case 'situation':
       return { ...ex, options: reorder(ex.options, rng, ex.tip.options.find((o) => o.best)?.id) };
     case 'build':
@@ -381,20 +423,28 @@ export function forRetry(ex: Exercise, lesson: Lesson, seed: number): Exercise {
  * quiet ("Without sound"): every listening exercise becomes a reading one on the same word, so
  * the lesson keeps its length and nothing needs to be heard.
  */
-export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean }): Exercise[] {
+export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean }): Exercise[] {
   const rng = createRng(opts.seed ?? Date.now());
   const words = lesson.words;
   const out: Exercise[] = [];
 
   const mix = isMixLesson(lesson) || Boolean(lesson.repeat);
   if (!opts.review && !mix) {
+    const before = wordsBefore(lesson);
+    // A quiz put off by one word: its words had no fair wrong option yet (see below).
+    let putOff = false;
     words.forEach((word, i) => {
       out.push({ kind: 'intro', word });
       // After every second new word, quiz one of the two just learned.
-      if (i % 2 === 1) {
+      if (i % 2 === 1 || putOff) {
         const target = words[i - Math.floor(rng() * 2)];
+        const known = words.slice(0, i + 1);
+        // No word met so far can be a wrong option (the only other one is a near-synonym, as
+        // "hallo" and "goedemorgen" at the very start): the quiz waits for the next word.
+        if (!putOff && !before.length && !known.some((w) => !clashes(w, target, false))) { putOff = true; return; }
+        putOff = false;
         // Only words introduced so far (and earlier lessons') are wrong options here.
-        out.push({ kind: 'meaning', word: target, options: options(target, lesson, rng, 3, words.slice(0, i + 1)) });
+        out.push({ kind: 'meaning', word: target, options: options(target, lesson, rng, 3, known) });
       }
     });
   } else {
@@ -404,7 +454,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
       // directions (reviewKind).
       const offset = Math.floor(rng() * REVIEW_KINDS.length);
       shuffle(words, rng).forEach((word, i) => {
-        out.push(reviewExercise(reviewKind(i, lesson.boxes?.[word.id] ?? 1, opts.quiet, offset), word, lesson, rng));
+        out.push(reviewExercise(reviewKind(i, lesson.boxes?.[word.id] ?? 1, opts.quiet, offset), word, lesson, rng, opts.nonLatin, opts.quiet));
       });
     } else {
       for (const word of sample(words, 3, rng)) {
@@ -423,6 +473,19 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // Guided matching: three cards, two Dutch words asked one at a time (components/Exercises.tsx).
   out.push({ kind: 'match', words: sample(words, Math.min(MATCH_PAIRS, words.length), rng) });
 
+  // Today's review stays short (about a dozen items): every word once in a rotating kind of
+  // question (above), the match board, one sentence to build and one chat. Its words already
+  // rotate through listening, picture and writing questions, so the extra ones are left out.
+  if (lesson.id === DAILY_ID) {
+    const sentence = lesson.sentences[0];
+    if (sentence) out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });
+    for (const dialogue of (lesson.dialogues ?? []).slice(0, 1)) {
+      out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
+    }
+    if (opts.speak && !opts.quiet) return withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);
+    return out;
+  }
+
   const [l1, l2, d1, t1] = shuffle(words, rng);
   // Without sound the first listening task shows the Dutch word (pick its meaning) and the
   // second one the meaning (pick the Dutch word from picture or text cards).
@@ -431,7 +494,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   const pictured = words.filter(hasPicture);
   const target = hasPicture(d1) || !pictured.length ? d1 : pictured[Math.floor(rng() * pictured.length)];
   // At most three answers on a screen (the "at most 3" rule).
-  out.push(dutchExercise(target, lesson, rng, 3));
+  out.push(readableDutch(target, lesson, rng, Boolean(opts.nonLatin), Boolean(opts.quiet), false));
 
   for (const sentence of lesson.sentences) {
     out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });
@@ -442,7 +505,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
   }
 
-  out.push(opts.quiet ? dutchExercise(l2, lesson, rng, 3) : { kind: 'listen', word: l2, options: options(l2, lesson, rng) });
+  out.push(opts.quiet ? readableDutch(l2, lesson, rng, Boolean(opts.nonLatin), true, false) : { kind: 'listen', word: l2, options: options(l2, lesson, rng) });
   // Typing what you hear has no reading twin; read the word and pick its meaning instead.
   // The written-word options for "hear and pick" come from their own generator, so the rest of
   // the lesson (and a saved place in it) stays the same as before they existed.

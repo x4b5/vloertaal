@@ -5,8 +5,12 @@ const t: CultureTranslation = {
   ui: {
     sayAloud: "Не е нужен микрофон. Кажи го на глас, после продължи.",
     micRetry: "Опитай микрофона отново",
+    micFailed: "Микрофонът не проработи. Кажи го на глас, после продължи.",
     whichPicture: "Коя е картинката?",
     wrongTapsN: "Грешни докосвания: {n}",
+    sayAloudInstead: "Вместо това го кажи на глас",
+    wordsPractised: "Упражнени думи",
+    reviewComplete: "Преговорът приключи!",
   },
   gloss: {
     'c.hello.a.why': "На сбогуване се отговаря със сбогуване.",

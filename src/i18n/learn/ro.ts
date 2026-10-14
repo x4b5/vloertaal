@@ -5,8 +5,12 @@ const t: CultureTranslation = {
   ui: {
     sayAloud: "Nu e nevoie de microfon. Spune cu voce tare, apoi mergi mai departe.",
     micRetry: "Încearcă din nou microfonul",
+    micFailed: "Microfonul nu a funcționat. Spune cu voce tare, apoi mergi mai departe.",
     whichPicture: "Care imagine este?",
     wrongTapsN: "Atingeri greșite: {n}",
+    sayAloudInstead: "Spune cu voce tare în schimb",
+    wordsPractised: "Cuvinte exersate",
+    reviewComplete: "Recapitularea s-a terminat!",
   },
   gloss: {
     'c.hello.a.why': "La „la revedere” se răspunde tot cu „la revedere”.",
