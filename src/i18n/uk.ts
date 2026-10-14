@@ -220,7 +220,7 @@ const lang: HelpLanguage = {
     removeOffline: 'Видалити з цього телефона',
     offlineNoSpace: 'На телефоні замало місця. Видали збережену тему або звільни місце.',
     offlineFailed: 'Не вдалося зберегти. Перевір інтернет і спробуй ще раз.',
-    pocketCard: 'Кишенькова картка',
+    pocketCard: 'Шпаргалка',
     pocketSave: 'Зберегти як зображення',
     textSize: 'Розмір тексту',
     textNormal: 'Звичайний',

@@ -3215,7 +3215,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   align-self: flex-start; font-size: 0.74rem; font-weight: 600; color: var(--faint);
   font-variant-numeric: tabular-nums; white-space: nowrap;
 }
-.offline-save, .offline-saving, .offline-saved { flex: 1.7 1 0; }
+.offline-save, .offline-saving, .offline-saved { flex: 1.5 1 0; }
+.unit-tool-label { hyphens: auto; overflow-wrap: anywhere; }
 .pocket-open:not(.cert-pocket) { flex: 1 1 0; padding-inline: 10px; }
 /* Saving: the chip fills with kraft from the start side, like tape being pulled. */
 .offline-saving { border-color: var(--kraft); }
