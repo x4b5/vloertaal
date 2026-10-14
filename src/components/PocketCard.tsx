@@ -93,7 +93,7 @@ export function PocketCardScreen({ unit, lang, onBack }: { unit: Unit; lang?: He
                 <span className="pocket-text">
                   <span className="pocket-nl" lang="nl" dir="ltr">{p.nl}</span>
                   {helpLine && <HelpText className="pocket-help" text={helpLine} lang={lang!} />}
-                  <span className="pocket-en" lang="en" dir="ltr">{p.en}</span>
+                  <span className={`pocket-en ${helpLine ? 'en-support' : ''}`} lang="en" dir="ltr">{p.en}</span>
                 </span>
                 <SpeakButton text={p.nl} label={`Play: ${p.nl}`} />
               </li>

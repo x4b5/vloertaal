@@ -86,10 +86,10 @@ export function CertificateSheet({ data, className }: { data: CertData; classNam
           )}
           <h2 className="cert-title"><span>{data.titleNl}</span></h2>
           <p className="cert-titles">
-            <span lang="en">{data.titleEn}</span>
+            <span lang="en" className={data.titleHelp ? 'en-support' : undefined}>{data.titleEn}</span>
             {data.titleHelp && (
               <>
-                <span className="cert-dot">·</span>
+                <span className="cert-dot en-support">·</span>
                 <span lang={data.helpCode} dir={helpRtl ? 'rtl' : undefined}>{data.titleHelp}</span>
               </>
             )}

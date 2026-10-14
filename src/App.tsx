@@ -24,6 +24,7 @@ import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certif
 import { count, countOpen } from './lib/count';
 import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
+import { applyEnglish } from './lib/english';
 import { PocketCardScreen } from './components/PocketCard';
 
 type View =
@@ -178,6 +179,7 @@ export default function App() {
   const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);
+  useEffect(() => { applyEnglish(progress.helpLang); }, [progress.helpLang]);
   useEffect(() => { window.scrollTo(0, 0); }, [view.name]);
   // A preview never plays a later unit (e.g. via Back/Forward into an old entry): go home.
   useEffect(() => {

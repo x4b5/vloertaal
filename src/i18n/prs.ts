@@ -226,6 +226,7 @@ const lang: HelpLanguage = {
     textNormal: 'عادی',
     textLarge: 'کلان',
     textXl: 'بسیار کلان',
+    showEnglish: 'انگلیسی را هم نشان بدهید',
   },
   gloss: {
     // Units

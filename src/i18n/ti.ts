@@ -226,6 +226,7 @@ const lang: HelpLanguage = {
     textNormal: 'ንቡር',
     textLarge: 'ዓቢ',
     textXl: 'ኣዝዩ ዓቢ',
+    showEnglish: 'እንግሊዝኛ እውን ኣርኢ',
   },
   gloss: {
     // Units

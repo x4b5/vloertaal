@@ -658,7 +658,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         )}
       </div>
       {pairHelp && lang && <HelpText className="pair-gloss" text={pairHelp} lang={lang} />}
-      <span className="pair-en" lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
+      <span className={`pair-en ${pairHelp && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
     </div>
   ) : pair && (
     <div className="feedback-pair">
@@ -667,7 +667,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         {pair.nl && <strong lang="nl" dir="ltr">{pair.nl}</strong>}
         {/* "= thank you" stays on one line when it is short; it may move under the Dutch as a
             whole, but never breaks inside. */}
-        <span className={`pair-rest ${pair.meaning.en.length <= 28 ? 'pair-short' : ''}`} dir="ltr">
+        <span className={`pair-rest ${pair.meaning.en.length <= 28 ? 'pair-short' : ''} ${pairHelp && lang ? 'en-support' : ''}`} dir="ltr">
           {pair.nl && <span className="pair-eq">= </span>}
           <span className="bi-en" lang="en" dir="ltr">{pair.meaning.en}</span>
         </span>
@@ -681,7 +681,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const why = ex.kind === 'situation' ? gloss(ex.tip.why.id, ex.tip.why.en, lang) : null;
   const whyLine = why && (
     <div className="feedback-meaning feedback-why">
-      <span className="bi-en" lang="en" dir={rtl ? 'ltr' : undefined}>{why.en}</span>
+      <span className={`bi-en ${why.help && why.lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{why.en}</span>
       {why.help && why.lang && <HelpText text={why.help} lang={why.lang} />}
     </div>
   );
@@ -813,8 +813,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
                     <span className="feedback-title" lang="nl" dir={rtl ? 'ltr' : undefined}>
                       {answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Nog eens!'}
                     </span>
-                    {headingMeaning?.help && <span className="feedback-sep" aria-hidden>·</span>}
-                    {headingMeaning && <span className="feedback-en" lang="en" dir={rtl ? 'ltr' : undefined}>{headingMeaning.en}</span>}
+                    {headingMeaning?.help && <span className="feedback-sep en-support" aria-hidden>·</span>}
+                    {headingMeaning && <span className={`feedback-en ${headingMeaning.help && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{headingMeaning.en}</span>}
                   </div>
                 </div>
                 {(pairLine || whyLine) && <hr className="feedback-rule" />}

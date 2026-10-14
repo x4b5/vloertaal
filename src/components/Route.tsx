@@ -317,7 +317,7 @@ function UnitTitle({ unit, lang, heading = false }: { unit: Unit; lang?: HelpLan
       <Tag className="rb-title">
         {help ? <HelpText text={help} lang={lang!} className="rb-main" /> : <span className="rb-main" lang="en">{unit.title}</span>}
       </Tag>
-      {help && <span className="rb-sub" lang="en" dir={rtl ? 'ltr' : undefined}>{unit.title}</span>}
+      {help && <span className="rb-sub en-support" lang="en" dir={rtl ? 'ltr' : undefined}>{unit.title}</span>}
       <span className="rb-sub rb-nl" lang="nl" dir={rtl ? 'ltr' : undefined}>{unit.titleNl}</span>
     </div>
   );

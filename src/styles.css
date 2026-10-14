@@ -3311,3 +3311,16 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   .pocket-screen .pocket-sub, .pocket-screen .pocket-help { color: #1e2226; }
   .pocket-screen .pocket-en { color: #4a5058; }
 }
+
+/* ---- English off when a help language is chosen ---- */
+/* src/lib/english.ts sets .en-off on <html> when a help language is chosen and "Show English
+   too" (Settings) is off. Only English that sits next to a help line goes: the small line of a
+   bilingual pair (Bi renders .bi-swap only when the help text exists) and lines marked
+   .en-support by hand. English shown as the fallback for a missing translation stays. */
+:root.en-off .bi-swap > .bi-help,
+:root.en-off .bi-swap > .bi-sep,
+:root.en-off .en-support { display: none !important; }
+/* An answer without Dutch (a situation's usual choice): with "= English" gone the row is empty. */
+:root.en-off .pair-main:has(> .en-support):not(:has(> strong)) { display: none; }
+/* The settings switch: "EN" as its icon. */
+.show-en-icon { width: 24px; height: 24px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.02em; border: 2px solid currentColor; border-radius: 6px; line-height: 1; }

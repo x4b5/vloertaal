@@ -238,6 +238,7 @@ export const uiEn = {
   textNormal: 'Normal',
   textLarge: 'Large',
   textXl: 'Extra large',
+  showEnglish: 'Show English too',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

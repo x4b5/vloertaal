@@ -5,6 +5,7 @@ import { ShotHarness } from './dev/ShotHarness';
 import { loadProgress } from './lib/progress';
 import { applyTheme } from './lib/theme';
 import { applyTextSize } from './lib/textSize';
+import { applyEnglish } from './lib/english';
 import { refreshOfflineShell } from './lib/offline';
 import '@fontsource-variable/lexend';
 import '@fontsource/big-shoulders-stencil-display/800';
@@ -17,6 +18,9 @@ const params = new URLSearchParams(location.search);
 applyTheme(import.meta.env.DEV && params.get('shot') ? 'auto' : loadProgress().theme);
 // The text size too, so the first paint already has it (screenshots: &text=large|xl).
 applyTextSize(import.meta.env.DEV && params.get('shot') ? (params.get('text') as 'large' | 'xl' | null) ?? 'normal' : loadProgress().textSize);
+
+// English next to the help language: hidden unless "Show English too" is on (screenshots: &en=1).
+applyEnglish(import.meta.env.DEV && params.get('shot') ? params.get('lang') : loadProgress().helpLang, import.meta.env.DEV && params.get('shot') ? params.get('en') === '1' : undefined);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

@@ -226,6 +226,7 @@ const lang: HelpLanguage = {
     textNormal: 'Нормален',
     textLarge: 'Голям',
     textXl: 'Много голям',
+    showEnglish: 'Показвай и английски',
   },
   gloss: {
     // Units

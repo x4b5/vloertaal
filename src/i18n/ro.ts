@@ -226,6 +226,7 @@ const lang: HelpLanguage = {
     textNormal: 'Normal',
     textLarge: 'Mare',
     textXl: 'Foarte mare',
+    showEnglish: 'Arată și engleza',
   },
   gloss: {
     // Units

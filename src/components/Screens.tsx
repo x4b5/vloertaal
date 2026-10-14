@@ -55,6 +55,7 @@ import { PhraseList } from './Phrases';
 import { CertBadge, CertificatesCard } from './Certificate';
 import { CountingCard } from './Counting';
 import { WritingCard } from './Writing';
+import { ShowEnglishCard } from './ShowEnglish';
 import { SpeakingCard } from './Speaking';
 import { unitDone } from '../lib/certificate';
 import { UnitTools } from './Offline';
@@ -420,7 +421,7 @@ export function Path({ progress, lang, onStart, onAbout, access = 'full', onUpgr
               {lang?.gloss[unit.id] ? <HelpText text={lang.gloss[unit.id]} lang={lang} className="unit-main" /> : unit.title}
             </h2>
             {lang?.gloss[unit.id] ? (
-              <span className="unit-nl" lang="en" dir={rtl ? 'ltr' : undefined}>{unit.title}</span>
+              <span className="unit-nl en-support" lang="en" dir={rtl ? 'ltr' : undefined}>{unit.title}</span>
             ) : (
               <span className="unit-nl" lang="nl">{unit.titleNl}</span>
             )}
@@ -762,6 +763,8 @@ export function Settings({ progress, lang, onLang, onSector, onTheme, onVoice, o
       <WritingCard lang={lang} />
       {/* "Spreken oefenen": one record-and-compare exercise per lesson (on by default). */}
       <SpeakingCard lang={lang} />
+      {/* "Ook Engels tonen": the small English line next to the help language (off by default). */}
+      <ShowEnglishCard lang={lang} />
 
       <h2><Bi text={ui('voice', lang)} /></h2>
       <VoicePicker current={progress.voice} lang={lang} onPick={onVoice} />

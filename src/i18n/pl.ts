@@ -226,6 +226,7 @@ const lang: HelpLanguage = {
     textNormal: 'Normalny',
     textLarge: 'Duży',
     textXl: 'Bardzo duży',
+    showEnglish: 'Pokazuj też angielski',
   },
   gloss: {
     // Unit: First day at work
