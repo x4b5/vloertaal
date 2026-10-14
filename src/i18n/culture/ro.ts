@@ -72,7 +72,7 @@ const t: CultureTranslation = {
     'c.time.p': 'Scuze, autobuzul întârzie. Ajung la opt.',
     'c.time.s': 'Autobuzul tău întârzie și vei ajunge cu 15 minute mai târziu. Ce faci?',
     'c.time.o1': 'Îi scrii sau îl suni imediat pe șef.',
-    'c.time.o2': 'Explici când ajungi.',
+    'c.time.o2': 'Explici abia când ajungi la muncă.',
     'c.time.o3': 'Azi nu mai mergi deloc la muncă.',
     'c.time.w': 'Dacă anunți din timp, echipa se poate organiza. Să întârzii fără să anunți e văzut ca mult mai rău decât întârzierea în sine.',
     'c.sick': 'Cum anunți că ești bolnav',

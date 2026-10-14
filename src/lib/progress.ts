@@ -1,6 +1,7 @@
 import type { LangCode } from '../i18n/types';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import type { Cards } from './spaced';
+import type { TextSize } from './textSize';
 
 export interface LessonRecord {
   /** Best accuracy so far, 0–1. */
@@ -23,6 +24,8 @@ export interface Progress {
    * Speaker buttons still play on tap. Missing in older saves = sound on.
    */
   quiet?: boolean;
+  /** "Text size" in Settings (src/lib/textSize.ts). Missing = normal. */
+  textSize?: TextSize;
   helpLang: LangCode | null;
   /** The learner's sector ('none' = not sure yet); undefined = not asked yet (first run). */
   sector?: SectorChoice;

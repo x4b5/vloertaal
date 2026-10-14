@@ -17,6 +17,7 @@ import type { LangCode } from '../i18n/types';
 import { allLessons, allReplies, learnedWords } from '../content/curriculum';
 import { buildLesson, buildTiles, type Exercise } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
+import { setSpeakShotPhase } from '../components/Speaking';
 import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
@@ -27,6 +28,9 @@ import { AllTopics, Route } from '../components/Route';
 import { routeNextLesson } from '../lib/route';
 import { findUnit } from '../lib/certificate';
 import { clearSave, makeSave, writeSave } from '../lib/resume';
+import { PocketCardScreen } from '../components/PocketCard';
+import { showOfflineStateForShot, type OfflineState } from '../lib/offline';
+import type { TextSize } from '../lib/textSize';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -68,6 +72,24 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The streak stopped at 12 (record 21), shown once on the next open.
   if (shot === 'stopped') return <StreakStopped streak={12} best={21} lang={getHelpLanguage(lang as LangCode)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
+  // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety
+  if (shot === 'pocket') {
+    const unit = findUnit(q.get('cu') ?? 'u.safety') ?? units[0];
+    return <PocketCardScreen unit={unit} lang={getHelpLanguage(lang as LangCode)} onBack={() => {}} />;
+  }
+  // "Save for offline" under a unit in a fixed state: /?shot=offline&offline=saving|saved|error|space
+  // (the home's current block, first lesson done); &view=all shows it in "Alle onderwerpen".
+  if (shot === 'offline') {
+    const st = q.get('offline');
+    const fixed: OfflineState | null =
+      st === 'saving' ? { status: 'saving', done: 97, total: 236 }
+      : st === 'saved' ? { status: 'saved', bytes: 2_740_000, stale: false }
+      : st === 'error' ? { status: 'error', reason: 'failed' }
+      : st === 'space' ? { status: 'error', reason: 'space' }
+      : null;
+    if (fixed) showOfflineStateForShot('u.firstday', fixed);
+    return <RouteShot shot={q.get('view') === 'all' ? 'all' : 'route'} state="mid" lang={getHelpLanguage(lang as LangCode)} access="full" daily={false} />;
+  }
   // Certificates: /?shot=certificate&cu=u.safety&name=Ali%20Hassan (name=ask: asked the first
   // time; name=none: without a name); /?shot=cert-earned is the one-time moment.
   if (shot === 'certificate' || shot === 'cert-earned') {
@@ -80,7 +102,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     const l = getHelpLanguage(lang as LangCode);
     return shot === 'certificate'
       ? <CertificateScreen unit={unit} day="2026-10-08" lang={l} onBack={() => {}} />
-      : <CertEarned unit={unit} day="2026-10-08" lang={l} onView={() => {}} onLater={() => {}} />;
+      : <CertEarned unit={unit} day="2026-10-08" lang={l} onView={() => {}} onLater={() => {}} onPocket={() => {}} />;
   }
   const quiet = new URLSearchParams(location.search).get('quiet') === '1';
   // &access=preview shows the path, tips and settings as a preview user sees them.
@@ -201,6 +223,13 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   const speakTip = tipForLesson('l.speakup')!;
   exercises.tip = { kind: 'tip', tip: speakTip };
   exercises.situation = { kind: 'situation', tip: speakTip, options: speakTip.options };
+  // Speaking practice: /?shot=speak (idle), speak-rec (recording), speak-compare (after recording),
+  // speak-off (no microphone); &item=sentence asks a short sentence instead of a word.
+  if (shot.startsWith('speak')) {
+    const phase = ({ 'speak-rec': 'recording', 'speak-compare': 'review', 'speak-off': 'off' } as const)[shot] ?? 'idle';
+    setSpeakShotPhase(phase);
+    exercises[shot] = { kind: 'speak', item: q.get('item') === 'sentence' ? lesson.sentences[0] : focus ?? handschoenen };
+  }
   const ex = exercises[shot] ?? exercises.dutch;
   // A few intro exercises in front would move the progress bar; pad so it sits at ~40%.
   const pad: Exercise[] = Array.from({ length: 3 }, () => ex);
@@ -251,7 +280,7 @@ function RouteShot({ shot, state, lang, access, sector, daily }: { shot: string;
       <>
         <AllTopics lang={lang} onBack={() => {}}>
           <Path progress={progress} lang={lang} onStart={() => {}} onAbout={() => {}} access={access} onUpgrade={() => {}}
-            nowLesson={routeNextLesson(progress, access)?.id ?? null} onCertificate={() => {}} />
+            nowLesson={routeNextLesson(progress, access)?.id ?? null} onCertificate={() => {}} onPocket={() => {}} />
         </AllTopics>
         <BottomNav current="route" onTab={() => {}} lang={lang} />
       </>
@@ -262,7 +291,7 @@ function RouteShot({ shot, state, lang, access, sector, daily }: { shot: string;
       <TopBar streak={7} done words={words2} lang={lang} onLanguage={() => {}} />
       <Route
         progress={progress} lang={lang} access={access} daily={card} onDaily={() => {}}
-        onStart={() => {}} onAll={() => {}} onUpgrade={() => {}} onCertificate={() => {}}
+        onStart={() => {}} onAll={() => {}} onUpgrade={() => {}} onCertificate={() => {}} onPocket={() => {}}
         onPick={(unit) => setProgress((p) => ({ ...p, currentUnit: unit }))}
         focusUnit={state === 'coach' ? 'u.pay' : state === 'done' ? 'u.help' : null}
         picking={state === 'pick'}
@@ -282,7 +311,14 @@ function QuietLesson({ quiet: start, ...props }: Omit<React.ComponentProps<typeo
 /** Settings whose sound choice can be tapped (the screenshot shows the picked option move). */
 function SettingsWithSound(props: Omit<React.ComponentProps<typeof Settings>, 'onQuiet'>) {
   const [quiet, setQuiet] = useState(Boolean(props.progress.quiet));
-  return <Settings {...props} progress={{ ...props.progress, quiet }} onQuiet={setQuiet} />;
+  // &text=large|xl: that text size, picked (main.tsx applies it to the page).
+  const [textSize, setTextSize] = useState<TextSize>(() => (new URLSearchParams(location.search).get('text') as TextSize | null) ?? 'normal');
+  const pickSize = (size: TextSize) => {
+    setTextSize(size);
+    if (size === 'normal') delete document.documentElement.dataset.text;
+    else document.documentElement.dataset.text = size;
+  };
+  return <Settings {...props} progress={{ ...props.progress, quiet, textSize }} onQuiet={setQuiet} onTextSize={pickSize} />;
 }
 
 /** Every word of the course with its picture at 120 px and 48 px, grouped by unit, plus the

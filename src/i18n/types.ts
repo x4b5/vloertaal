@@ -212,6 +212,33 @@ export const uiEn = {
   lessonsUnit: 'lessons',
   lessonsUnitOne: 'lesson',
   allTopicsDone: 'You finished every topic. Well done!',
+  /* Speaking practice ("say it": record and compare; Settings switch). */
+  tagSpeak: 'Speak',
+  speakPrompt: 'Listen, then say it',
+  tapToSpeak: 'Tap and speak',
+  stopRecording: 'Stop',
+  micPrivacy: 'Only you hear it. Nothing is sent.',
+  micUnavailable: 'The microphone is off. That’s fine, go on.',
+  cantSpeak: 'I can’t speak now',
+  soundsSame: 'Sounds the same',
+  sayAgain: 'Say it again',
+  speakMe: 'Me',
+  speakingPractice: 'Speaking practice',
+  speakingHint: 'Say words out loud and compare. Your voice is never saved or sent.',
+  /* Offline per unit, the pocket card, text size. */
+  saveOffline: 'Save for offline',
+  savingOffline: 'Saving…',
+  savedOffline: 'Saved offline',
+  removeOffline: 'Remove from this phone',
+  offlineNoSpace: 'Not enough space on this phone. Remove a saved topic or free up space.',
+  offlineFailed: 'Saving did not work. Check your internet and try again.',
+  pocketCard: 'Pocket card',
+  pocketSave: 'Save as picture',
+  textSize: 'Text size',
+  textNormal: 'Normal',
+  textLarge: 'Large',
+  textXl: 'Extra large',
+  showEnglish: 'Show English too',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

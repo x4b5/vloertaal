@@ -17,6 +17,8 @@ import {
   LifebuoyIcon, PencilIcon, PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon,
 } from './Icons';
 import { PhraseSheet } from './Phrases';
+import { MicIcon, SpeakExercise } from './Speaking';
+import { canRecord, micBlocked, speakingOn } from '../lib/speaking';
 import {
   type Answer,
   BuildExercise,
@@ -54,6 +56,7 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
       return { text: ex.dialogue.reply.nl, nl: true };
     case 'match':
     case 'tip':
+    case 'speak':
       return { text: '', nl: false };
     case 'situation':
       return { text: ex.tip.options.find((o) => o.best)!.en, nl: false };
@@ -95,6 +98,7 @@ const KIND_TAG: Record<Exercise['kind'], { nl: string; key: UiKey; Icon: (p: { s
   chat: { nl: 'Gesprek', key: 'tagChat', Icon: BubblesIcon },
   tip: { nl: 'Tip', key: 'tagTip', Icon: BulbIcon },
   situation: { nl: 'Situatie', key: 'tagSituation', Icon: SignpostIcon },
+  speak: { nl: 'Spreken', key: 'tagSpeak', Icon: MicIcon },
 };
 
 function KindTag({ kind, lang }: { kind: Exercise['kind']; lang?: HelpLanguage }) {
@@ -213,9 +217,12 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   // The lesson is planned once, with the setting it started with; switching sound off midway
   // skips the listening exercises that are left instead (see audioOff).
   const [quietAtStart] = useState(() => saved?.quiet ?? quiet);
+  // Speaking practice (Settings switch, on by default). A save made with the other setting no
+  // longer matches the built list (its kinds differ), so that lesson simply starts fresh.
+  const [speakAtStart] = useState(speakingOn);
   const initial = useMemo(
-    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart }),
-    [exercises, lesson, review, seed, quietAtStart],
+    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart }),
+    [exercises, lesson, review, seed, quietAtStart, speakAtStart],
   );
   // The saved place in that list, with the mistakes queued then (null: start from the top).
   const [resumed] = useState(() => (saved ? restoreSave(saved, initial) : null));
@@ -534,11 +541,18 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     setLive('');
   }
 
+  /** A speaking exercise that can't be done here: sound off, or no (allowed) microphone. It is
+   *  passed over quietly (not graded, so not counted as skipped either). */
+  const cantSpeak = (e: Exercise) => e.kind === 'speak' && (soundOff || !canRecord() || micBlocked());
+
   function next() {
     reset();
     let i = index + 1;
-    // Skip audio-only exercises when the learner can't listen right now.
-    while (audioOff && i < queue.length && needsAudio(queue[i])) { if (i < initial.length) skipped.current += 1; i++; }
+    // Skip audio-only exercises when the learner can't listen right now (and speaking that can't happen).
+    while (i < queue.length && ((audioOff && needsAudio(queue[i])) || cantSpeak(queue[i]))) {
+      if (i < initial.length && needsAudio(queue[i])) skipped.current += 1;
+      i++;
+    }
     if (i >= queue.length) {
       finish();
     } else {
@@ -553,7 +567,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     // Only exercises that would have counted are "skipped" (a mistake coming back is not).
     if (index < initial.length) skipped.current += 1;
     let i = index + 1;
-    while (i < queue.length && needsAudio(queue[i])) { if (i < initial.length) skipped.current += 1; i++; }
+    while (i < queue.length && (needsAudio(queue[i]) || cantSpeak(queue[i]))) { if (i < initial.length && needsAudio(queue[i])) skipped.current += 1; i++; }
     if (i >= queue.length) finish();
     else {
       leave();
@@ -593,6 +607,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
     case 'chat': body = <ChatExercise key={key} ex={ex} {...props} />; break;
     case 'tip': body = <TipCard key={key} ex={ex} {...props} />; break;
     case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
+    case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onNext={next} />; break;
   }
 
   const sol = solution(ex);
@@ -643,7 +658,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         )}
       </div>
       {pairHelp && lang && <HelpText className="pair-gloss" text={pairHelp} lang={lang} />}
-      <span className="pair-en" lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
+      <span className={`pair-en ${pairHelp && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
     </div>
   ) : pair && (
     <div className="feedback-pair">
@@ -652,7 +667,7 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
         {pair.nl && <strong lang="nl" dir="ltr">{pair.nl}</strong>}
         {/* "= thank you" stays on one line when it is short; it may move under the Dutch as a
             whole, but never breaks inside. */}
-        <span className={`pair-rest ${pair.meaning.en.length <= 28 ? 'pair-short' : ''}`} dir="ltr">
+        <span className={`pair-rest ${pair.meaning.en.length <= 28 ? 'pair-short' : ''} ${pairHelp && lang ? 'en-support' : ''}`} dir="ltr">
           {pair.nl && <span className="pair-eq">= </span>}
           <span className="bi-en" lang="en" dir="ltr">{pair.meaning.en}</span>
         </span>
@@ -666,11 +681,11 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
   const why = ex.kind === 'situation' ? gloss(ex.tip.why.id, ex.tip.why.en, lang) : null;
   const whyLine = why && (
     <div className="feedback-meaning feedback-why">
-      <span className="bi-en" lang="en" dir={rtl ? 'ltr' : undefined}>{why.en}</span>
+      <span className={`bi-en ${why.help && why.lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{why.en}</span>
       {why.help && why.lang && <HelpText text={why.help} lang={why.lang} />}
     </div>
   );
-  const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip';
+  const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip' || ex.kind === 'speak';
   // One bar: ink for done, yellow for where you are, a kraft tail for mistakes that come back.
   const bar = barParts(index, checked, initial.length, queue.length);
   const doneCount = Math.round(bar.done * bar.slots);
@@ -798,8 +813,8 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
                     <span className="feedback-title" lang="nl" dir={rtl ? 'ltr' : undefined}>
                       {answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Nog eens!'}
                     </span>
-                    {headingMeaning?.help && <span className="feedback-sep" aria-hidden>·</span>}
-                    {headingMeaning && <span className="feedback-en" lang="en" dir={rtl ? 'ltr' : undefined}>{headingMeaning.en}</span>}
+                    {headingMeaning?.help && <span className="feedback-sep en-support" aria-hidden>·</span>}
+                    {headingMeaning && <span className={`feedback-en ${headingMeaning.help && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{headingMeaning.en}</span>}
                   </div>
                 </div>
                 {(pairLine || whyLine) && <hr className="feedback-rule" />}
@@ -817,6 +832,13 @@ export function LessonPlayer({ lesson, review, lang, onQuit, onFinish, exercises
             {needsAudio(ex) && !checked && !writing && (
               <button type="button" className="btn btn-ghost" onClick={cantListenNow}>
                 <Bi text={ui('cantListen', lang)} />
+              </button>
+            )}
+            {/* "I can't speak now": skips only this speaking exercise, without penalty; sound and
+                the "Without sound" setting stay as they are. */}
+            {ex.kind === 'speak' && !answer && (
+              <button type="button" className="btn btn-ghost btn-cant-speak" onClick={next}>
+                <Bi text={ui('cantSpeak', lang)} />
               </button>
             )}
             {/* Real dictation: a learner who can't write Dutch yet skips this one word (it is not

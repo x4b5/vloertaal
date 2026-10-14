@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { findLesson } from '../src/content/curriculum';
 import { buildLesson } from '../src/lib/exercises';
 import {
@@ -7,7 +7,11 @@ import {
 } from '../src/lib/resume';
 
 const store = new Map<string, string>();
+// Saves expire after two days; pin the clock so the tests do not depend on today's date.
+afterEach(() => vi.useRealTimers());
 beforeEach(() => {
+  vi.useFakeTimers({ toFake: ['Date'] });
+  vi.setSystemTime(new Date(2026, 9, 8, 12));
   store.clear();
   (globalThis as { localStorage?: unknown }).localStorage = {
     getItem: (k: string) => store.get(k) ?? null,
