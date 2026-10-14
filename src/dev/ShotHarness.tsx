@@ -17,6 +17,7 @@ import type { LangCode } from '../i18n/types';
 import { allLessons, allReplies, learnedWords } from '../content/curriculum';
 import { buildLesson, buildTiles, type Exercise } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
+import { setSpeakShotPhase } from '../components/Speaking';
 import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
@@ -201,6 +202,13 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   const speakTip = tipForLesson('l.speakup')!;
   exercises.tip = { kind: 'tip', tip: speakTip };
   exercises.situation = { kind: 'situation', tip: speakTip, options: speakTip.options };
+  // Speaking practice: /?shot=speak (idle), speak-rec (recording), speak-compare (after recording),
+  // speak-off (no microphone); &item=sentence asks a short sentence instead of a word.
+  if (shot.startsWith('speak')) {
+    const phase = ({ 'speak-rec': 'recording', 'speak-compare': 'review', 'speak-off': 'off' } as const)[shot] ?? 'idle';
+    setSpeakShotPhase(phase);
+    exercises[shot] = { kind: 'speak', item: q.get('item') === 'sentence' ? lesson.sentences[0] : focus ?? handschoenen };
+  }
   const ex = exercises[shot] ?? exercises.dutch;
   // A few intro exercises in front would move the progress bar; pad so it sits at ~40%.
   const pad: Exercise[] = Array.from({ length: 3 }, () => ex);

@@ -55,7 +55,14 @@ const AgainIcon = ({ size }: { size?: number }) => (
   </Svg>
 );
 
-type Phase = 'idle' | 'asking' | 'recording' | 'review' | 'off';
+export type SpeakPhase = 'idle' | 'asking' | 'recording' | 'review' | 'off';
+type Phase = SpeakPhase;
+
+/** Screenshot harness only (src/dev/ShotHarness.tsx): show a fixed phase, without a microphone. */
+let shotPhase: Phase | undefined;
+export function setSpeakShotPhase(phase: Phase | undefined): void {
+  shotPhase = phase;
+}
 
 const RING_R = 52;
 const RING_C = 2 * Math.PI * RING_R;
@@ -71,7 +78,7 @@ const RING_C = 2 * Math.PI * RING_R;
  *
  * `phaseForShot` fixes the phase for the screenshot harness (no microphone used).
  */
-export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot }: {
+export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot = shotPhase }: {
   ex: Extract<Exercise, { kind: 'speak' }>;
   lang?: HelpLanguage;
   onAnswer: (a: { correct: boolean } | null) => void;
@@ -260,38 +267,38 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot }: {
   const meaning = gloss(item.id, item.en, lang);
 
   return (
-    <div className={`exercise speak-ex speak-${phase}`}>
+    <div className={`exercise say-ex say-${phase}`}>
       <h2 className="prompt" tabIndex={-1}><Bi text={ui('speakPrompt', lang)} /></h2>
-      <div className={`card speak-card ${picture ? '' : 'speak-card-text'}`}>
-        {picture && <WordPicture className="speak-pic" id={picture.id} emoji={picture.emoji} size={76} />}
-        <div className="speak-words">
-          <span className="speak-nl" lang="nl" dir="ltr">{breakable(item.nl)}</span>
-          <Bi className="speak-meaning" text={meaning} />
+      <div className={`card say-card ${picture ? '' : 'say-card-text'}`}>
+        {picture && <WordPicture className="say-pic" id={picture.id} emoji={picture.emoji} size={76} />}
+        <div className="say-words">
+          <span className="say-nl" lang="nl" dir="ltr">{breakable(item.nl)}</span>
+          <Bi className="say-meaning" text={meaning} />
         </div>
         {listenFirst && <SpeakButton text={item.nl} voice={voice} label={`Play: ${item.nl}`} />}
       </div>
 
       {listenFirst && (
-        <div className="speak-mic-area">
+        <div className="say-mic-area">
           <button
             type="button"
-            className={`speak-mic ${recording ? 'is-rec' : ''}`}
+            className={`say-mic ${recording ? 'is-rec' : ''}`}
             onClick={recording ? stop : start}
             disabled={phase === 'asking'}
             aria-pressed={recording}
             aria-label={recording ? ui('stopRecording').en : ui('tapToSpeak').en}
           >
             {recording && (
-              <svg className="speak-ring" viewBox="0 0 120 120" aria-hidden focusable="false">
-                <circle className="speak-ring-track" cx="60" cy="60" r={RING_R} />
-                <circle className="speak-ring-used" cx="60" cy="60" r={RING_R} strokeDasharray={RING_C} strokeDashoffset={RING_C * (1 - used)} />
+              <svg className="say-ring" viewBox="0 0 120 120" aria-hidden focusable="false">
+                <circle className="say-ring-track" cx="60" cy="60" r={RING_R} />
+                <circle className="say-ring-used" cx="60" cy="60" r={RING_R} strokeDasharray={RING_C} strokeDashoffset={RING_C * (1 - used)} />
               </svg>
             )}
-            <span className="speak-mic-core">{recording ? <StopGlyph size={34} /> : <MicIcon size={40} />}</span>
+            <span className="say-mic-core">{recording ? <StopGlyph size={34} /> : <MicIcon size={40} />}</span>
           </button>
-          <Bi className="speak-mic-label" text={ui(recording ? 'stopRecording' : 'tapToSpeak', lang)} />
+          <Bi className="say-mic-label" text={ui(recording ? 'stopRecording' : 'tapToSpeak', lang)} />
           {!recording && (
-            <p className="speak-privacy">
+            <p className="say-privacy">
               <LockIcon size={18} />
               <Bi text={ui('micPrivacy', lang)} />
             </p>
@@ -301,24 +308,24 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot }: {
 
       {phase === 'review' && (
         <>
-          <div className="speak-compare">
-            <button type="button" className={`speak-play ${playing === 'them' ? 'is-playing' : ''}`} onClick={playThem} aria-label={`${name}: ${item.nl}`}>
-              <span className="speak-face" aria-hidden><Character who={who} crop="head" size={48} /></span>
+          <div className="say-compare">
+            <button type="button" className={`say-play ${playing === 'them' ? 'is-playing' : ''}`} onClick={playThem} aria-label={`${name}: ${item.nl}`}>
+              <span className="say-face" aria-hidden><Character who={who} crop="head" size={48} /></span>
               <SpeakerIcon size={30} />
-              <span className="speak-who" lang="nl">{name}</span>
+              <span className="say-who" lang="nl">{name}</span>
             </button>
-            <button type="button" className={`speak-play speak-play-me ${playing === 'me' ? 'is-playing' : ''}`} onClick={playMine} aria-label={ui('speakMe').en}>
-              <span className="speak-face speak-face-me" aria-hidden><PersonIcon size={34} /></span>
+            <button type="button" className={`say-play say-play-me ${playing === 'me' ? 'is-playing' : ''}`} onClick={playMine} aria-label={ui('speakMe').en}>
+              <span className="say-face say-face-me" aria-hidden><PersonIcon size={34} /></span>
               <SpeakerIcon size={30} />
-              <Bi className="speak-who" text={ui('speakMe', lang)} />
+              <Bi className="say-who" text={ui('speakMe', lang)} />
             </button>
           </div>
-          <div className="speak-rate">
-            <button type="button" className="speak-rate-btn speak-same" onClick={() => onNext?.()}>
+          <div className="say-rate">
+            <button type="button" className="say-rate-btn say-same" onClick={() => onNext?.()}>
               <SameIcon size={30} />
               <Bi text={ui('soundsSame', lang)} />
             </button>
-            <button type="button" className="speak-rate-btn speak-again" onClick={again}>
+            <button type="button" className="say-rate-btn say-again" onClick={again}>
               <AgainIcon size={30} />
               <Bi text={ui('sayAgain', lang)} />
             </button>
@@ -327,7 +334,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, phaseForShot }: {
       )}
 
       {phase === 'off' && (
-        <div className="speak-off">
+        <div className="say-off">
           <MicOffIcon size={32} />
           <Bi text={ui('micUnavailable', lang)} />
         </div>

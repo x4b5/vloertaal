@@ -14,6 +14,10 @@ export function setPreferredVoice(ref: VoiceRef): void {
   preferredVoice = ref;
 }
 
+export function preferredVoiceRef(): VoiceRef {
+  return preferredVoice;
+}
+
 /**
  * "Without sound" (the learner's setting): nothing plays by itself and there are no effect
  * sounds. A speaker button the learner taps still plays (they may wear earphones).
