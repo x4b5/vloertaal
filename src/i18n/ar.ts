@@ -257,6 +257,12 @@ const lang: HelpLanguageSource = {
     certNameDone: 'تم',
     pauseTitle: 'إيقاف مؤقت',
     back: 'رجوع',
+    quitLesson: { m: 'اخرج من الدرس', f: 'اخرجي من الدرس' },
+    playAudio: { m: 'استمع', f: 'استمعي' },
+    scrollDown: { m: 'مرّر للأسفل', f: 'مرّري للأسفل' },
+    lessonProgress: 'تقدّم الدرس',
+    mainMenu: 'القائمة الرئيسية',
+    spaceKey: 'مسافة',
   },
   gloss: {
     // Units

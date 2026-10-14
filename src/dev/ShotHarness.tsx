@@ -20,7 +20,7 @@ import { getHelpLanguage } from '../i18n';
 import { GenderScreen } from '../components/Gender';
 import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies, learnedWords } from '../content/curriculum';
-import { buildLesson, buildTiles, type Exercise } from '../lib/exercises';
+import { buildLesson, buildTiles, forRetry, type Exercise } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
 import { setSpeakShotPhase } from '../components/Speaking';
 import { createRng } from '../lib/random';
@@ -259,7 +259,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       exercises={[...before, ex, ...pad]}
       startAt={shot === 'retry' ? before.length + pad.length + 2 : before.length}
       // /?shot=retry: the lesson is through and three mistakes come back (the second is on now).
-      repeats={shot === 'retry' ? [exercises.meaning, exercises.dutch, exercises.build] : undefined}
+      // They come back in a new form, as in a real lesson (lib/exercises.ts forRetry).
+      repeats={shot === 'retry' ? [exercises.meaning, exercises.dutch, exercises.build].map((e, i) => forRetry(e, lesson, i + 1)) : undefined}
       onQuit={() => {}}
       onFinish={() => {}}
     />

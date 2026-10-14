@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { fillCount, fillN, ui, uiCount } from '../i18n';
+import { fillCount, fillN, ui, uiCount, said } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { STREAK_TIERS, dayKey, emptyProgress, workWeek, type WeekDayState } from '../lib/progress';
 import { Bi, HelpText } from './Bi';
@@ -86,13 +86,13 @@ export function WeekRow({ days, lang }: {
   const letters = own ?? EN_DAYS;
   const anyRest = days.some((d) => d.state === 'rest');
   return (
-    <section className="week" aria-label={`Werkweek · ${ui('workWeek').en}`}>
+    <section className="week" aria-label={`Werkweek · ${said(ui('workWeek', lang))}`}>
       <ol className="week-row" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
         {days.map((d, i) => (
           <li
             key={d.key}
             className={`week-day week-${d.state} ${d.today ? 'week-today' : ''}`}
-            aria-label={`${NL_DAYS[i]}${d.state === 'done' ? ' ✓' : d.state === 'rest' ? ` · ${ui('restDay').en}` : ''}`}
+            aria-label={`${NL_DAYS[i]}${d.state === 'done' ? ' ✓' : d.state === 'rest' ? ` · ${said(ui('restDay', lang))}` : ''}`}
           >
             <span className="week-tile" aria-hidden>
               {d.state === 'done' && <span className="week-stamp"><CheckIcon size={20} /></span>}
@@ -196,7 +196,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
     <div className="player milestone-screen">
       <main className="player-body milestone">
         <StreakHero lit={lit} />
-        <div className={`streak-count ${lit ? 'streak-lit' : ''}`} role="img" aria-label={`${streak} ${label.en}${tier ? ` · ${ui(tier.key).en}` : ''}`}>
+        <div className={`streak-count ${lit ? 'streak-lit' : ''}`} role="img" aria-label={`${streak} ${said(label)}${tier ? ` · ${said(ui(tier.key, lang))}` : ''}`}>
           <span className="streak-flame-wrap">
             <StreakFlame />
           </span>
@@ -272,7 +272,7 @@ export function StreakStopped({ streak, best, lang, onDone }: {
           <Character who="bram" mood="pleased" size={170} />
           <span className="stopped-flame"><FlameIcon lit={false} size={64} /></span>
         </div>
-        <div className="streak-count stopped-count" role="img" aria-label={`${streak} ${ui('dayStreak').en}`}>
+        <div className="streak-count stopped-count" role="img" aria-label={`${streak} ${said(ui('dayStreak', lang))}`}>
           <span className="streak-num" aria-hidden>{streak}</span>
           <DaysUnit n={streak} lang={lang} />
         </div>

@@ -3,6 +3,7 @@ import { allLessons, teachingLessons, phrasebookExtras, phrasebookIds, findItem,
 import { aboutIds } from '../src/content/about';
 import { cultureIds, cultureTips } from '../src/content/culture';
 import { workIds } from '../src/content/work';
+import { chatWhyIds } from '../src/content/chatWhy';
 import { getHelpLanguage, gloss, hasGender, helpLanguageSources, helpLanguages, ui } from '../src/i18n';
 import { allForms, forGender, GENDERED_LANGS, uiEn, type LangText } from '../src/i18n/types';
 import { mixLessonFor } from '../src/content/review';
@@ -22,6 +23,8 @@ const contentIds = [
   ...workIds,
   // The About page (src/content/about.ts).
   ...aboutIds,
+  // Why a chat's right reply fits (src/content/chatWhy.ts).
+  ...chatWhyIds,
   // Phrasebook-only emergency lines.
   ...phrasebookExtras.map((p) => p.id),
 ];

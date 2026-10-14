@@ -1,5 +1,5 @@
 import { useEffect, useId, useState } from 'react';
-import { ui } from '../i18n';
+import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import type { Unit } from '../content/types';
 import { CERT_NOTE, SEAL_RING, certData, certDate, certMeta, earnedCertificates, loadCertName, saveCertName, unitIndex, type CertData } from '../lib/certificate';
@@ -317,7 +317,7 @@ export function CertBadge({ lang, onOpen }: { lang?: HelpLanguage; onOpen: () =>
       type="button"
       className="cert-badge"
       onClick={(e) => { e.stopPropagation(); onOpen(); }}
-      aria-label={`Certificaat · ${help.en}${help.help ? ` (${help.help})` : ''}`}
+      aria-label={`Certificaat · ${said(help)}`}
     >
       <CertIcon size={18} />
       <span lang="nl">Certificaat</span>
@@ -338,7 +338,7 @@ export function CertificatesCard({ progress, lang, onOpen }: {
 }) {
   const earned = earnedCertificates(progress);
   return (
-    <section className="keep-card cert-list-card" aria-label={ui('myCertificates').en}>
+    <section className="keep-card cert-list-card" aria-label={said(ui('myCertificates', lang))}>
       <span className="cert-list-icon" aria-hidden><CertIcon size={30} /></span>
       <div className="keep-head">
         <span className="keep-nl" lang="nl">Mijn certificaten</span>

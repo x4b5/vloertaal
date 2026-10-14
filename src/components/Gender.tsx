@@ -1,4 +1,4 @@
-import { ui } from '../i18n';
+import { ui, said } from '../i18n';
 import type { Gender, HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
 import { Character, type CharacterId } from './Characters';
@@ -38,7 +38,7 @@ export function GenderPicker({ current, lang, onPick, compact = false, mini = fa
 }) {
   const small = compact || mini;
   return (
-    <div className={`lang-grid sector-grid gender-grid ${small ? 'lang-grid-compact' : ''} ${mini ? 'gender-grid-mini' : ''}`} role="radiogroup" aria-label={ui('genderTitle').en}>
+    <div className={`lang-grid sector-grid gender-grid ${small ? 'lang-grid-compact' : ''} ${mini ? 'gender-grid-mini' : ''}`} role="radiogroup" aria-label={said(ui('genderTitle', lang))}>
       {(mini ? OPTIONS.filter((o) => o.who) : OPTIONS).map((o) => {
         const picked = current === o.id;
         return (

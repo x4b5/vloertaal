@@ -1,0 +1,76 @@
+/**
+ * "Complete the conversation": after a wrong pick, one short line on why the right reply fits
+ * (as the situations explain their usual answer). Keyed by the reply's id; the translation id is
+ * `<reply id>.why` (src/i18n/learn). Plain and short, never addressed to the learner, so no
+ * gendered forms are needed.
+ */
+const reasons: Record<string, string> = {
+  'c.hello.a': 'A goodbye is answered with a goodbye.',
+  'c.people.a': 'The question asks for a name. This reply gives one.',
+  'c.understand.a': 'Not understood? Asking to hear it again is normal.',
+  'c.translate.a': 'The note is not clear yet, so it gets translated first.',
+  'c.understood.a': 'Saying the task back checks that the order is clear.',
+  'c.keeplearning.a': 'Asking for Dutch is fine: practice helps.',
+  'c.gear.a': 'The question is about the helmet: yes, it is on.',
+  'c.danger.a': 'In an accident, 112 is called first.',
+  'c.things.a': 'The question asks where. This reply names a place.',
+  'c.directions.a': 'Left or right? This reply picks one and says where.',
+  'c.shift.a': 'Coffee or tea? This reply picks one, politely.',
+  'c.sick.a': 'Sick means staying home, and saying so.',
+  'd.speakup.a': 'Asked if something is wrong: an honest yes is good.',
+  'd.agree.a': 'Saying no is allowed. Offering another day helps.',
+  'c.cv.a': 'A reference is a former boss who can tell about the work.',
+  'c.interview.a': 'In a job interview, work experience is what counts.',
+  'c.findwork.a': 'The question asks what work. This reply names it.',
+  'c.contract.a': 'A yes plus a question about the time is clear and keen.',
+  'c.bsn.a': 'An employer may ask to see an ID, such as a passport.',
+  'c.housing.a': 'Money taken off the pay must be agreed on paper.',
+  'c.payslip.a': 'Missing hours on a payslip must be reported.',
+  'c.extra.a': 'Overtime is written down, so it gets paid.',
+  'c.phone.a': 'No phone near machines: messages wait for the break.',
+  'c.smoking.a': 'Breaks are at set times, not before.',
+  'c.clock.a': 'Clocking in for someone else is not allowed.',
+  'c.hygiene.a': 'Hairnet on, jewellery off: rules for clean food.',
+  'c.smalltalk.a': 'The question is about the weekend: one thing is enough.',
+  'c.mistakes.a': 'A compliment is answered with thanks.',
+  'c.respect.a': 'Bullying must be told, so someone can help.',
+  'c.gossip.a': 'Not joining in gossip keeps trust in the team.',
+  'c.boundaries.a': 'A joke that hurts may be stopped, clearly.',
+  'c.health.a': 'A break protects health, so it is taken.',
+  'c.rights.a': 'A dismissal is never signed at once. Advice comes first.',
+  'c.leave.a': 'When? This reply gives a month and how long.',
+  'c.illness.a': 'Medical details are for the company doctor, not the boss.',
+  'c.warning.a': 'An employer may copy a passport, not keep it.',
+  'c.gethelp.a': 'Saying clearly what is wrong lets them help.',
+  'c.callin.a': 'When back? This reply gives a day.',
+  'c.texting.a': 'A quick reply in the app helps the planning.',
+  'c.certs.a': 'An honest no, plus wanting to learn: a good answer.',
+  'c.diploma.a': 'Yes to training, and asking who pays, is normal.',
+  'c.doctor.a': 'The GP service needs to know who is ill and what is wrong.',
+  'c.insurance.a': 'The insurer’s name is on the health insurance card.',
+  'c.letters.a': 'The tax return is due by 1 May.',
+  'c.scams.a': 'A bank never asks for a PIN. Hanging up is right.',
+  'c.bike.a': 'How? This reply gives the transport and the time.',
+  'c.transit.a': 'Not the train: this reply names the bus instead.',
+  'c.ww.a': 'Unemployment benefit (WW) must be asked for at once.',
+  'c.newjob.a': 'A phone number lets them call back.',
+  'c.tools.a': 'Where? This reply gives the place: in the van.',
+  'c.site.a': 'On a roof, fall protection always comes first.',
+  'c.line.a': 'How is it going? This reply says how, and names the problem.',
+  'c.quality.a': 'Why put aside? This reply gives the fault.',
+  'c.client.a': 'A client asks for help: a polite yes, with “u”.',
+  'c.privacy.a': 'Medicines are for trained staff: the nurse gives them.',
+  'c.kitchen.a': 'An allergy is serious: the chef must know.',
+  'c.service.a': 'Asked for the bill: a short yes, and on the way.',
+  'c.cleaning.a': 'Finished? This reply says almost, and how many are left.',
+  'c.cleansafe.a': 'A wet floor is slippery: a warning helps.',
+};
+
+/** Why the right reply of a chat fits, with its translation id; undefined when there is none. */
+export function chatWhy(replyId: string): { id: string; en: string } | undefined {
+  const en = reasons[replyId];
+  return en ? { id: `${replyId}.why`, en } : undefined;
+}
+
+/** Translation ids of every reason (checked in tests/i18n.test.ts). */
+export const chatWhyIds: string[] = Object.keys(reasons).map((id) => `${id}.why`);

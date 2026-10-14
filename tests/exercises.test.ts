@@ -98,7 +98,8 @@ describe('mixed review lessons', () => {
     for (const lesson of allLessons.filter((l) => l.id.endsWith('.mix'))) {
       const ex = buildLesson(lesson, { review: false, seed: 3 });
       expect(ex.some((e) => e.kind === 'intro'), lesson.id).toBe(false);
-      const asked = new Set(ex.filter((e) => e.kind === 'meaning').map((e) => (e as { word: { id: string } }).word.id));
+      // Every word is asked first, each with one of the review questions (reviewKind).
+      const asked = new Set(ex.slice(0, lesson.words.length).map((e) => (e as { word: { id: string } }).word.id));
       for (const w of lesson.words) expect(asked.has(w.id), `${lesson.id} ${w.id}`).toBe(true);
     }
   });

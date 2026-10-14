@@ -257,6 +257,12 @@ const lang: HelpLanguageSource = {
     certNameDone: 'تمام',
     pauseTitle: 'توقف',
     back: 'بازگشت',
+    quitLesson: 'خروج از درس',
+    playAudio: 'گوش کنید',
+    scrollDown: 'به پایین بروید',
+    lessonProgress: 'پیشرفت درس',
+    mainMenu: 'منوی اصلی',
+    spaceKey: 'فاصله',
   },
   gloss: {
     // Units

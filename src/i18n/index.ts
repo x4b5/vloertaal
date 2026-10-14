@@ -34,6 +34,15 @@ import wRo from './work/ro';
 import wTi from './work/ti';
 import wTr from './work/tr';
 import wUk from './work/uk';
+import lAr from './learn/ar';
+import lBg from './learn/bg';
+import lFa from './learn/fa';
+import lPl from './learn/pl';
+import lPrs from './learn/prs';
+import lRo from './learn/ro';
+import lTi from './learn/ti';
+import lTr from './learn/tr';
+import lUk from './learn/uk';
 import type { CultureTranslation } from './culture/types';
 import { mixLessonId, relatedUnits } from '../content/review';
 import type { Gender, HelpLanguage, HelpLanguageSource, LangCode, LangText, UiKey } from './types';
@@ -53,12 +62,17 @@ const work: Record<LangCode, CultureTranslation> = {
   ar: wAr, bg: wBg, fa: wFa, pl: wPl, prs: wPrs, ro: wRo, ti: wTi, tr: wTr, uk: wUk,
 };
 
+/** Learning mechanics: speaking without a microphone, picture choice, build feedback, why a chat reply fits. */
+const learn: Record<LangCode, CultureTranslation> = {
+  ar: lAr, bg: lBg, fa: lFa, pl: lPl, prs: lPrs, ro: lRo, ti: lTi, tr: lTr, uk: lUk,
+};
+
 /** Workplace-culture, work-and-rights and About texts live in their own files (src/i18n/culture, src/i18n/work, src/i18n/about); merge them in. */
 const withCulture = (l: HelpLanguageSource): HelpLanguageSource => ({
   ...l,
-  ui: { ...l.ui, ...culture[l.code].ui, ...work[l.code].ui, ...about[l.code].ui },
+  ui: { ...l.ui, ...culture[l.code].ui, ...work[l.code].ui, ...about[l.code].ui, ...learn[l.code].ui },
   gloss: {
-    ...l.gloss, ...culture[l.code].gloss, ...work[l.code].gloss, ...about[l.code].gloss,
+    ...l.gloss, ...culture[l.code].gloss, ...work[l.code].gloss, ...about[l.code].gloss, ...learn[l.code].gloss,
     // Every unit's "Mixed review" lesson shares one title.
     ...Object.fromEntries(Object.keys(relatedUnits).map((id) => [mixLessonId(id), l.ui.mixLesson ?? uiEn.mixLesson])),
   },
@@ -149,4 +163,18 @@ export function uiCount(key: UiKey, n: number, lang?: HelpLanguage): Bilingual {
 /** uiCount with the number filled in. */
 export function fillCount(key: UiKey, n: number, lang?: HelpLanguage): Bilingual {
   return fillN(uiCount(key, n, lang), n);
+}
+
+/**
+ * What a screen reader says for a text (aria-label, title, sr-only): the help language when
+ * there is one, English only without it. English is hidden from help-language users on screen,
+ * so it is not read out to them either.
+ */
+export function said(text: Bilingual): string {
+  return text.help ?? text.en;
+}
+
+/** The `lang` attribute for said(text): the help language's code, or English. */
+export function saidLang(text: Bilingual): string {
+  return text.help && text.lang ? text.lang.code : 'en';
 }

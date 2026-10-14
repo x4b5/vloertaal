@@ -1,4 +1,4 @@
-import { ui } from '../i18n';
+import { said, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { resumeCount, type LessonSave } from '../lib/resume';
 import { Bi } from './Bi';
@@ -27,9 +27,9 @@ function ProgressRing({ done, of }: { done: number; of: number }) {
 }
 
 /** What a screen reader hears on the bay: "Ga verder, 12 / 18 · Go on". */
-export function resumeLabel(save: LessonSave): string {
+export function resumeLabel(save: LessonSave, lang?: HelpLanguage): string {
   const { done, of } = resumeCount(save);
-  return `Ga verder, ${done} / ${of} · ${ui('resumeLesson').en}`;
+  return `Ga verder, ${done} / ${of} · ${said(ui('resumeLesson', lang))}`;
 }
 
 export function ResumeChip({ save, lang }: { save: LessonSave; lang?: HelpLanguage }) {
@@ -62,7 +62,7 @@ export function RestartButton({ lang, onRestart }: { lang?: HelpLanguage; onRest
       className="btn bay-restart"
       onClick={onRestart}
       dir={lang?.dir === 'rtl' ? 'rtl' : undefined}
-      aria-label={`Opnieuw beginnen · ${t.en}${t.help ? ` (${t.help})` : ''}`}
+      aria-label={`Opnieuw beginnen · ${said(t)}`}
     >
       <RestartIcon size={22} />
       <span className="bay-restart-text">

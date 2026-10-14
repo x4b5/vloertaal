@@ -257,6 +257,12 @@ const lang: HelpLanguageSource = {
     certNameDone: 'ተወዲኡ',
     pauseTitle: 'ዕረፍቲ',
     back: 'ንድሕሪት',
+    quitLesson: { m: 'ካብ ትምህርቲ ውጻእ', f: 'ካብ ትምህርቲ ውጽኢ' },
+    playAudio: { m: 'ስማዕ', f: 'ስምዒ' },
+    scrollDown: { m: 'ናብ ታሕቲ ውረድ', f: 'ናብ ታሕቲ ውረዲ' },
+    lessonProgress: 'ምዕባለ ትምህርቲ',
+    mainMenu: 'ቀንዲ ዝርዝር',
+    spaceKey: 'ባዶ ቦታ',
   },
   gloss: {
     // Units

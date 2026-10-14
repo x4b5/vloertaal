@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ChatLine } from '../content/types';
-import { gloss, ui, type Bilingual } from '../i18n';
+import { fillN, gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { checkTyped, tokenize } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
-import { buildSteps, sentencePicture, type Exercise } from '../lib/exercises';
+import { buildSteps, MATCH_ASKED, sentencePicture, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
@@ -29,6 +29,10 @@ export interface Answer {
   /** The answer is complete: grade it now (a tap on an option, the last word of a sentence).
    *  Without it the learner still finishes with Check (typing). */
   done?: boolean;
+  /** Tapped answers: what the wrong taps were on. A match: the ids of the words that got a
+   *  wrong tap; a sentence: the Dutch words at the places that got one (LessonPlayer feeds them
+   *  to the review cards when the answer counts as a mistake). */
+  missed?: string[];
 }
 
 interface Props<K extends Exercise['kind']> {
@@ -161,7 +165,7 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
           <span lang="nl">{breakable(word.nl)}</span>
           {/* One speaker: normal speed, then slowly on the next tap (SpeakButton). */}
           <span className="intro-sounds">
-            <SpeakButton text={word.nl} />
+            <SpeakButton text={word.nl} help={lang} />
           </span>
         </div>
         <Bi className="intro-meaning" text={gloss(word.id, word.en, lang)} />
@@ -238,8 +242,8 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
               {state === 'right' ? <CheckIcon size={26} /> : state === 'wrong' ? <CloseIcon size={26} /> : i + 1}
             </span>
             {render(w)}
-            {state === 'right' && <span className="sr-only">, {ui('correctAnswer').en}</span>}
-            {state === 'wrong' && <span className="sr-only">, {ui('yourAnswer').en}: {ui('incorrect').en}</span>}
+            {state === 'right' && <span className="sr-only" lang={saidLang(ui('correctAnswer', lang))}>, {srText(ui('correctAnswer', lang))}</span>}
+            {state === 'wrong' && <span className="sr-only" lang={saidLang(ui('incorrect', lang))}>, {srText(ui('yourAnswer', lang))}: {srText(ui('incorrect', lang))}</span>}
             {state === 'wrong' && stamp && <WrongStamp lang={lang} />}
           </button>
         );
@@ -258,7 +262,7 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, miss
       <div className={`speaker speaker-word ${wordSize(ex.word.nl)}`}>
         <Speaker who="bram" lines={[ex.word.nl]} verdict={verdict} run={run} misses={misses} />
         <div className="speaker-bubble">
-          <SpeakButton text={ex.word.nl} voice={voiceFor('bram')} />
+          <SpeakButton text={ex.word.nl} help={lang} voice={voiceFor('bram')} />
           <span className="speaker-nl" lang="nl">{breakable(ex.word.nl)}</span>
         </div>
       </div>
@@ -281,8 +285,53 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, miss
   );
 }
 
-/** English meaning shown → pick the Dutch word from picture cards (text cards when `textOnly`). */
-export function DutchExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'dutch'>) {
+/**
+ * Picture cards: the DUTCH word is said and written, and the learner picks its picture (so it
+ * can't be solved from the help language alone); the pictures get their Dutch names after the
+ * answer. Text cards (`textOnly`): the meaning is shown and the learner picks the Dutch word.
+ */
+export function DutchExercise(props: Props<'dutch'>) {
+  return props.ex.textOnly ? <DutchFromMeaning {...props} /> : <PictureFromDutch {...props} />;
+}
+
+/** Hear and read the Dutch word → pick its picture. */
+function PictureFromDutch({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'dutch'>) {
+  useEffect(() => { autoSpeak(ex.word.nl, false, 'nl', voiceFor('bram')); }, [ex.word]);
+  return (
+    <div className="exercise pic-from-nl">
+      <Prompt text={ui('whichPicture', lang)} />
+      <div className={`speaker speaker-word ${wordSize(ex.word.nl)}`}>
+        <Speaker who="bram" lines={[ex.word.nl]} verdict={verdict} run={run} misses={misses} />
+        <div className="speaker-bubble">
+          <SpeakButton text={ex.word.nl} help={lang} voice={voiceFor('bram')} />
+          <span className="speaker-nl" lang="nl">{breakable(ex.word.nl)}</span>
+        </div>
+      </div>
+      <ChoiceGrid
+        className={`choices-pics n${ex.options.length} ${ex.options.length % 2 ? 'odd' : 'even'}`}
+        style={{ '--n': ex.options.length } as React.CSSProperties}
+        options={ex.options}
+        correctId={ex.word.id}
+        locked={locked}
+        lang={lang}
+        onAnswer={onAnswer}
+        render={(w) => (
+          <>
+            <WordPicture className="pic-emoji" id={w.id} emoji={w.emoji} size={110} />
+            {/* The name only after the answer (before, it would be a reading match). A screen
+                reader hears what the picture shows, as a sighted learner sees it. */}
+            {locked
+              ? <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
+              : <span className="sr-only">{gloss(w.id, w.en, lang).help ?? w.en}</span>}
+          </>
+        )}
+      />
+    </div>
+  );
+}
+
+/** The meaning shown → pick the Dutch word (text cards). */
+function DutchFromMeaning({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'dutch'>) {
   const meaning = gloss(ex.word.id, ex.word.en, lang);
   const fill = (template: string | undefined, word: string | undefined) =>
     template && word ? template.replace('{word}', word) : undefined;
@@ -296,33 +345,15 @@ export function DutchExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       <div className="pic-question">
         <PromptWithBram text={question} word={ex.word.nl} verdict={verdict} run={run} misses={misses} quietUntilChecked />
       </div>
-      {ex.textOnly ? (
-        <ChoiceGrid
-          className="choices-rows choices-words"
-          options={ex.options}
-          correctId={ex.word.id}
-          locked={locked}
-          lang={lang}
-          onAnswer={onAnswer}
-          render={(w) => <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>}
-        />
-      ) : (
-        <ChoiceGrid
-          className={`choices-pics n${ex.options.length} ${ex.options.length % 2 ? 'odd' : 'even'}`}
-          style={{ '--n': ex.options.length } as React.CSSProperties}
-          options={ex.options}
-          correctId={ex.word.id}
-          locked={locked}
-          lang={lang}
-          onAnswer={onAnswer}
-          render={(w) => (
-            <>
-              <WordPicture className="pic-emoji" id={w.id} emoji={w.emoji} size={110} />
-              <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
-            </>
-          )}
-        />
-      )}
+      <ChoiceGrid
+        className="choices-rows choices-words"
+        options={ex.options}
+        correctId={ex.word.id}
+        locked={locked}
+        lang={lang}
+        onAnswer={onAnswer}
+        render={(w) => <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>}
+      />
     </div>
   );
 }
@@ -334,7 +365,7 @@ export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misse
     <div className="exercise">
       <PromptWithBram text={ui('whatDoYouHear', lang)} word={ex.word.nl} verdict={verdict} run={run} misses={misses} />
       <div className="listen-buttons">
-        <SpeakButton text={ex.word.nl} size="lg" label="Play" />
+        <SpeakButton text={ex.word.nl} size="lg" hideText help={lang} />
       </div>
       {/* As in the other "What do you hear?": each option has its own speaker that only plays it;
           a tap on the option itself picks it. */}
@@ -346,7 +377,7 @@ export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misse
         lang={lang}
         onAnswer={onAnswer}
         side={(w) => (
-          <button type="button" className="choice-say" aria-label={`Play: ${w.nl}`} onClick={() => speak(w.nl)}>
+          <button type="button" className="choice-say" aria-label={`${srText(ui('playAudio', lang))}: ${w.nl}`} lang={saidLang(ui('playAudio', lang))} onClick={() => speak(w.nl)}>
             <SpeakerIcon size={24} />
           </button>
         )}
@@ -369,10 +400,15 @@ export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misse
  * Continue appears.
  */
 export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
-  const words = ex.words;
+  // Every word has a meaning card, but only the first MATCH_ASKED are asked: one card is never
+  // used, so the last word is never a forced tap on the only card left.
+  const all = ex.words;
+  const words = useMemo(() => all.slice(0, Math.max(1, Math.min(MATCH_ASKED, all.length - 1))), [all]);
   // The meaning cards keep one order through the exercise (seeded by the words, so a screenshot
   // or a resumed lesson looks the same).
-  const cards = useMemo(() => shuffle(words, createRng(words.map((w) => w.id).join('|').length * 7919 + words.length)), [words]);
+  const cards = useMemo(() => shuffle(all, createRng(all.map((w) => w.id).join('|').length * 7919 + all.length)), [all]);
+  /** The words that got a wrong tap while they were on (fed to the review cards). */
+  const missed = useRef<Set<string>>(new Set());
   const [state, setState] = useState<MatchState>(matchStart);
   /** The word on screen: it stays a moment after its pair is made (the card flashes green). */
   const [step, setStep] = useState(0);
@@ -407,10 +443,11 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
       setMiss(null);
       setHit(w.id);
       // Graded like a sentence built word by word: one stray wrong tap is forgiven, more is a mistake.
-      if (r.finished) onAnswer(stepGrade(r.state.wrong));
+      if (r.finished) onAnswer({ ...stepGrade(r.state.wrong), missed: [...missed.current] });
     } else {
       sounds.tap();
       setMiss(w.id);
+      missed.current.add(current.id);
     }
   };
 
@@ -420,7 +457,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
       <div className={`speaker speaker-word ${wordSize(current.nl)}`}>
         <Speaker who="bram" lines={finished ? [] : [current.nl]} />
         <div className="speaker-bubble match-on" key={current.id}>
-          <SpeakButton text={current.nl} voice={voiceFor('bram')} />
+          <SpeakButton text={current.nl} help={lang} voice={voiceFor('bram')} />
           <span className="speaker-nl" lang="nl">{breakable(current.nl)}</span>
         </div>
       </div>
@@ -436,7 +473,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
               key={w.id}
               type="button"
               className={`choice match match-en ${hit === w.id ? 'match-hit' : made ? 'matched' : ''} ${miss === w.id ? 'shake match-miss' : ''}`}
-              disabled={made && hit !== w.id}
+              disabled={(made && hit !== w.id) || (finished && !made)}
               onClick={() => pick(w)}
             >
               {hasPicture(w) && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={56} />}
@@ -446,7 +483,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
               </span>
               {made && <span className="match-check" aria-hidden><CheckIcon size={20} /></span>}
               {miss === w.id && <span className="match-x" aria-hidden><CloseIcon size={16} /></span>}
-              {miss === w.id && <span className="sr-only">, {ui('incorrect').en}</span>}
+              {miss === w.id && <span className="sr-only" lang={saidLang(ui('incorrect', lang))}>, {srText(ui('incorrect', lang))}</span>}
             </button>
           );
         })}
@@ -466,9 +503,12 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   const who = castFor(ex.sentence.id);
   const pic = useMemo(() => sentencePicture(ex.sentence), [ex.sentence]);
   const words = useMemo(() => tokenize(ex.sentence.nl), [ex.sentence]);
-  const steps = useMemo(() => buildSteps(ex.sentence.nl, ex.tiles), [ex]);
+  const steps = useMemo(() => buildSteps(ex.sentence.nl, ex.tiles, 3, ex.salt), [ex]);
   const [at, setAt] = useState(0);
   const wrongTaps = useRef(0);
+  /** Every wrong tap: the word tapped and the place it was tapped for (shown after the end). */
+  const [wrongs, setWrongs] = useState<{ at: number; word: string }[]>([]);
+  const wrongsRef = useRef<{ at: number; word: string }[]>([]);
   /** The wrong word just tapped (a short shake and a cross). */
   const [miss, setMiss] = useMiss<string>();
   const complete = at >= words.length;
@@ -482,23 +522,28 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       setMiss(null);
       const next = at + 1;
       setAt(next);
-      if (next >= words.length) onAnswer({ ...stepGrade(wrongTaps.current), done: true });
+      if (next >= words.length) onAnswer({ ...stepGrade(wrongTaps.current), done: true, missed: [...new Set(wrongsRef.current.map((x) => words[x.at]))] });
     } else {
       wrongTaps.current += 1;
+      wrongsRef.current = [...wrongsRef.current, { at, word: w }];
+      setWrongs(wrongsRef.current);
       sounds.tap();
       setMiss(w);
     }
   };
 
   return (
-    <div className="exercise build-steps">
+    // data-nl: the sentence, for the tap counter (scripts/max3) now that its speaker waits.
+    <div className="exercise build-steps" data-nl={ex.sentence.nl}>
       <Prompt text={ui('buildSentence', lang)} />
       <div className="speaker speaker-build">
         <Speaker who={who} lines={[ex.sentence.nl, ...words]} verdict={verdict} run={run} misses={misses} />
         {/* The meaning, large in the help language, with the sentence's picture word and a
             speaker: hearing the Dutch is the listen-and-build form of the task. */}
         <div className="speaker-bubble build-bubble">
-          <SpeakButton glyph text={ex.sentence.nl} label={`Play: ${ex.sentence.nl}`} voice={voiceFor(who)} />
+          {/* The whole sentence is held back until a wrong tap or the end: before that, hearing
+              it would give the order away (the words' own speakers stay). */}
+          {(wrongs.length > 0 || complete || locked) && <SpeakButton glyph text={ex.sentence.nl} help={lang} voice={voiceFor(who)} />}
           {pic && <WordPicture className="build-pic" id={pic.id} emoji={pic.emoji} size={56} />}
           <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
         </div>
@@ -509,12 +554,22 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
         {verdict === 'right' && (
           <span className="answer-mark mark-right">
             <CheckIcon size={24} />
-            <span className="sr-only">{ui('correctAnswer').en}</span>
+            <span className="sr-only" lang={saidLang(ui('correctAnswer', lang))}>{srText(ui('correctAnswer', lang))}</span>
           </span>
         )}
         {words.slice(0, at).map((w, i) => <span key={i} className="tile tile-placed">{w}</span>)}
         {!complete && <span className="tile-next" aria-hidden />}
       </div>
+      {/* After the last word: how many wrong taps there were (in the help language), and the
+          words tapped wrongly, crossed out. */}
+      {complete && wrongs.length > 0 && (
+        <div className="build-misses">
+          <Bi className="build-misses-n" text={fillN(ui('wrongTapsN', lang), wrongs.length)} />
+          <span className="build-misses-tiles" lang="nl" dir="ltr">
+            {wrongs.map((x, i) => <s key={i} className="tile tile-wrong-tap">{x.word}</s>)}
+          </span>
+        </div>
+      )}
       {/* Three words for the next place; each has its own small speaker that only plays it. */}
       {!complete && (
         <div className="tile-bank tile-steps" dir="ltr" key={at}>
@@ -529,12 +584,13 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
               >
                 {t}
                 {miss === t && <span className="tile-x" aria-hidden><CloseIcon size={14} /></span>}
-                {miss === t && <span className="sr-only">, {ui('incorrect').en}</span>}
+                {miss === t && <span className="sr-only" lang={saidLang(ui('incorrect', lang))}>, {srText(ui('incorrect', lang))}</span>}
               </button>
               <button
                 type="button"
                 className="tile-say"
-                aria-label={`Play: ${t}`}
+                aria-label={`${srText(ui('playAudio', lang))}: ${t}`}
+                lang={saidLang(ui('playAudio', lang))}
                 onClick={(e) => {
                   e.stopPropagation();
                   speak(t, false, 'nl', voiceFor(who));
@@ -573,7 +629,7 @@ function HearPickWritten({ ex, lang, locked, onAnswer, verdict, run, misses }: P
     <div className="exercise hear-pick">
       <PromptWithBram text={ui('whatDoYouHear', lang)} word={ex.word.nl} verdict={verdict} run={run} misses={misses} />
       <div className="listen-buttons">
-        <SpeakButton text={ex.word.nl} size="lg" label="Play" />
+        <SpeakButton text={ex.word.nl} size="lg" hideText help={lang} />
       </div>
       <ChoiceGrid
         className="choices-rows choices-words hear-pick-choices"
@@ -583,7 +639,7 @@ function HearPickWritten({ ex, lang, locked, onAnswer, verdict, run, misses }: P
         lang={lang}
         onAnswer={onAnswer}
         side={(w) => (
-          <button type="button" className="choice-say" aria-label={`Play: ${w.nl}`} onClick={() => speak(w.nl)}>
+          <button type="button" className="choice-say" aria-label={`${srText(ui('playAudio', lang))}: ${w.nl}`} lang={saidLang(ui('playAudio', lang))} onClick={() => speak(w.nl)}>
             <SpeakerIcon size={24} />
           </button>
         )}
@@ -646,7 +702,7 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
     <div className="exercise">
       <PromptWithBram text={ui('typeWhatYouHear', lang)} word={ex.word.nl} verdict={verdict} run={run} misses={misses} />
       <div className="listen-buttons">
-        <SpeakButton text={ex.word.nl} size="lg" label="Play" />
+        <SpeakButton text={ex.word.nl} size="lg" hideText help={lang} />
       </div>
       {mode === 'keys' ? (
         <input
@@ -661,7 +717,7 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
           className={`type-input ${verdict ? `type-${verdict}` : ''}`}
           value={value}
           placeholder="…"
-          aria-label="Your answer"
+          aria-label={srText(ui('yourAnswer', lang))}
           onChange={(e) => typed(e.target.value)}
         />
       ) : (
@@ -671,7 +727,7 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
             <output
               lang="nl"
               className={`type-input type-display ${verdict ? `type-${verdict}` : ''} ${value ? '' : 'type-empty'}`}
-              aria-label="Your answer"
+              aria-label={srText(ui('yourAnswer', lang))}
               aria-live="polite"
             >
               {value.replace(/ /g, ' ')}
@@ -687,7 +743,7 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
                   lang="nl"
                   className={`letter-tile letter-${t.kind === 'extra' ? 'letter' : t.kind} ${miss === i ? 'shake letter-miss' : ''}`}
                   disabled={locked}
-                  aria-label={t.kind === 'space' ? 'space' : t.label}
+                  aria-label={t.kind === 'space' ? srText(ui('spaceKey', lang)) : t.label}
                   onClick={() => tapTile(i)}
                 >
                   {t.label}
@@ -728,7 +784,7 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
         <div className="chat-row chat-them">
           <span className="chat-char"><Character who={them} mood={moodFor(verdict, 'idle', true)} talking={themTalking && !meTalking} /></span>
           <div className="chat-bubble">
-            <SpeakButton glyph text={prompt.nl} label={`Play: ${prompt.nl}`} voice={voiceFor(them)} />
+            <SpeakButton glyph text={prompt.nl} help={lang} voice={voiceFor(them)} />
             <span className="chat-line" lang="nl">{breakable(prompt.nl)}</span>
             {/* What was asked, always under it (a learner who can't read the Dutch must know). */}
             <span className="chat-hint">
@@ -757,7 +813,8 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
           <button
             type="button"
             className="choice-say"
-            aria-label={`Play: ${o.nl}`}
+            aria-label={`${srText(ui('playAudio', lang))}: ${o.nl}`}
+            lang={saidLang(ui('playAudio', lang))}
             onClick={() => speak(o.nl, false, 'nl', myVoice)}
           >
             <SpeakerIcon size={24} />
@@ -797,7 +854,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
         <div className="tip-say-row">
           <span className="tip-char"><Character who={tipCast(tip, lang?.gender)} talking={talking} size={96} /></span>
           <div className="speaker-bubble tip-bubble">
-            <SpeakButton glyph text={tip.phrase.nl} label={`Play: ${tip.phrase.nl}`} voice={voiceFor(tipCast(tip, lang?.gender))} />
+            <SpeakButton glyph text={tip.phrase.nl} help={lang} voice={voiceFor(tipCast(tip, lang?.gender))} />
             <span className="tip-phrase">
               <span lang="nl" className="tip-phrase-nl">{breakable(tip.phrase.nl)}</span>
               <Bi text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
@@ -868,7 +925,7 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
         <div className={`speaker-bubble situation-text ${said ? 'situation-says' : ''}`}>
           {said && (
             <span className="situation-quote" dir="ltr">
-              <SpeakButton glyph text={said} label={`Play: ${said}`} voice={voiceFor(who)} />
+              <SpeakButton glyph text={said} help={lang} voice={voiceFor(who)} />
               <span lang="nl" className="situation-nl">{said}</span>
             </span>
           )}

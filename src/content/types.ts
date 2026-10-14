@@ -44,6 +44,8 @@ export interface Lesson {
   dialogues?: Dialogue[];
   /** A review of words met before (today's review): no intro cards, every word is asked. */
   repeat?: true;
+  /** Today's review: the card box of each word (lib/spaced.ts); box 2 and up get harder questions. */
+  boxes?: Record<string, number>;
 }
 
 export interface Unit {

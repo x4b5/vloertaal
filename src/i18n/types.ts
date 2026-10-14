@@ -219,6 +219,14 @@ export const uiEn = {
   stopRecording: 'Stop',
   micPrivacy: 'Only you hear it. Nothing is sent.',
   micUnavailable: 'The microphone is off. That’s fine, go on.',
+  /** Speaking without a usable microphone: self-paced, nothing recorded. */
+  sayAloud: 'No microphone needed. Say it out loud, then go on.',
+  /** After the microphone failed in a speaking exercise: one retry. */
+  micRetry: 'Try the microphone again',
+  /** Picture choice: the Dutch word is said and written, the learner picks its picture. */
+  whichPicture: 'Which picture is it?',
+  /** After building a sentence with wrong taps. */
+  wrongTapsN: 'Wrong taps: {n}',
   cantSpeak: 'I can’t speak now',
   soundsSame: 'Sounds the same',
   sayAgain: 'Say it again',
@@ -273,6 +281,13 @@ export const uiEn = {
   certNameDone: 'Done',
   pauseTitle: 'Pause',
   back: 'Back',
+  /* G4 r1 a11y: screen-reader names, said in the help language when there is one. */
+  quitLesson: 'Quit lesson',
+  playAudio: 'Play',
+  scrollDown: 'Scroll down',
+  lessonProgress: 'Lesson progress',
+  mainMenu: 'Main menu',
+  spaceKey: 'Space',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

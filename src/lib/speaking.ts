@@ -41,13 +41,38 @@ export function canRecord(): boolean {
   );
 }
 
-/** The microphone was refused (or failed) during this visit: later speaking exercises are skipped. */
+/**
+ * The microphone was refused (or failed) during this lesson. It is reset when a lesson starts
+ * (resetMicForLesson), so one failure never takes speaking away for the whole visit; inside the
+ * lesson the learner gets one retry (MIC_RETRIES) before the "say it out loud" step stays.
+ */
 let micRefused = false;
 export function micBlocked(): boolean {
   return micRefused;
 }
 export function setMicBlocked(blocked: boolean): void {
   micRefused = blocked;
+}
+/** A new lesson: try the microphone again. */
+export function resetMicForLesson(): void {
+  micRefused = false;
+}
+/** Retries offered after the microphone failed in a speaking exercise. */
+export const MIC_RETRIES = 1;
+
+/**
+ * How a speaking exercise runs: 'record' (record and compare) when the browser can record and the
+ * microphone has not failed in this lesson; else 'aloud': hear it, say it out loud, then go on
+ * (self-paced, nothing recorded, never graded). Speaking is only left out without sound
+ * (speakSkipped); a missing or refused microphone never removes it.
+ */
+export function speakMode(): 'record' | 'aloud' {
+  return canRecord() && !micBlocked() ? 'record' : 'aloud';
+}
+
+/** A speaking exercise is passed over only when sound is off ("Without sound"). */
+export function speakSkipped(soundOff: boolean): boolean {
+  return soundOff;
 }
 
 /** A recording stops by itself after this long. */

@@ -3714,3 +3714,50 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .offline-status-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; }
 .topic-tools > * { min-height: 52px; margin: 0; }
 .topic-tools .cert-badge { align-self: stretch; border-radius: 12px; }
+
+/* ---- G4 r1: a11y ---- */
+/* The wordmark is a Dutch name, always "vloertaal." left to right: in Arabic, Persian and Dari
+   the full stop must not move to the front (".vloertaal"). */
+.wordmark { direction: ltr; unicode-bidi: isolate; }
+
+/* Settings rows: words wrap between syllables, never mid-letter ("niderlan|dzki"). */
+.set-row-help, .set-row-value { overflow-wrap: break-word; hyphens: auto; }
+/* Extra large text: the value goes under the name (wrapping) instead of being cut off ("Automatycz…"). */
+:root[data-text='xl'] .set-row {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 12px; row-gap: 4px; align-items: center;
+}
+:root[data-text='xl'] .set-row-icon { grid-column: 1; grid-row: 1 / span 2; }
+:root[data-text='xl'] .set-row-names { grid-column: 2; grid-row: 1; }
+:root[data-text='xl'] .set-row-value {
+  grid-column: 2; grid-row: 2; justify-self: start; max-width: none; text-align: start;
+  white-space: normal; overflow: visible; text-overflow: clip;
+}
+:root[data-text='xl'] .set-row-chev { grid-column: 3; grid-row: 1 / span 2; }
+/* Settings and onboarding cards at extra large text: room for a whole word ("Automatycznie")
+   beside the picture and the speaker; the check of a picked card sits in its corner. */
+.max3-help { overflow-wrap: break-word; hyphens: auto; }
+:root[data-text='xl'] .max3-card { gap: 10px; padding-inline: 10px; }
+:root[data-text='xl'] .max3-pic:not(:has(.max3-trio)) { width: 44px; height: 44px; border-radius: 12px; }
+:root[data-text='xl'] .max3-pic .word-pic { width: 40px; height: 40px; }
+:root[data-text='xl'] .max3-check, .has-extra > .max3-card .max3-check { position: absolute; top: 6px; inset-inline-end: 6px; }
+.has-extra > .max3-card { gap: 10px; padding-inline: 10px; }
+
+/* Touch targets: at least 44 x 44 everywhere, also beside a long word and on narrow phones. */
+.speak-md, .speaker-bubble .speak, .speaker-word.len-l .speaker-bubble .speak { min-width: 44px; min-height: 44px; }
+.choice-say, .tile-say, .speak-glyph, .replay-btn, .max3-say { min-width: 44px; min-height: 44px; }
+.foot-more-btn { width: 44px; height: 44px; top: -24px; }
+
+/* The certificate's name: the learner's own name reads clearly, not as small print. */
+.cert-name { font-size: 4.8cqw; line-height: 1.1; overflow-wrap: break-word; hyphens: auto; }
+
+/* ---- G4 r1: learning ---- */
+/* Speaking without a microphone: a calm instruction, not a warning; one retry under it. */
+.say-off.say-aloud { flex-wrap: wrap; background: var(--card, transparent); color: var(--ink); border: 2px dashed var(--ink-3); }
+.say-aloud > .bi { flex: 1 1 200px; }
+.say-retry { flex: 1 1 100%; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; }
+/* Build: after the last word, the wrong taps as crossed-out tiles with their count. */
+.build-misses { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 10px; color: var(--wrong-ink); font-weight: 600; }
+.build-misses-tiles { display: flex; flex-wrap: wrap; gap: 6px; }
+.tile.tile-wrong-tap { text-decoration: line-through; text-decoration-thickness: 2px; color: var(--wrong-ink); background: var(--red-bg); border-color: var(--red-line); box-shadow: none; padding: 4px 10px; min-height: 0; }
+/* Picture choice from the Dutch word: pictures only until the answer. */
+.pic-from-nl .choices-pics .choice { justify-content: center; }

@@ -257,6 +257,12 @@ const lang: HelpLanguageSource = {
     certNameDone: 'Tamam',
     pauseTitle: 'Mola',
     back: 'Geri',
+    quitLesson: 'Dersten çık',
+    playAudio: 'Dinle',
+    scrollDown: 'Aşağı kaydır',
+    lessonProgress: 'Ders ilerlemesi',
+    mainMenu: 'Ana menü',
+    spaceKey: 'Boşluk',
   },
   gloss: {
     // Unit: First day at work

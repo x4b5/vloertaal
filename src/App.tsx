@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { findLesson, learnedWords, playLesson } from './content/curriculum';
-import { getHelpLanguage } from './i18n';
+import { getHelpLanguage, hasGender } from './i18n';
 import type { LangCode } from './i18n/types';
 import { setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
@@ -272,12 +272,25 @@ export default function App() {
     );
   }
   // Asked once (also for learners from before the sector choice); Settings can change it.
-  if (progress.sector === undefined) return <SectorScreen lang={lang} onDone={setSector} />;
+  // Its first step has a way back like every onboarding page: to "Woman or man?" when that was
+  // asked, else to the password page.
+  if (progress.sector === undefined) {
+    const backToGender = hasGender(progress.helpLang) && progress.genderAsked;
+    return (
+      <SectorScreen
+        lang={lang}
+        onDone={setSector}
+        onBack={backToGender
+          ? () => setProgress((p) => ({ ...p, gender: undefined, genderAsked: false }))
+          : () => { clearAccess(); setAccess(null); }}
+      />
+    );
+  }
 
   switch (view.name) {
     case 'lesson': {
       const daily = view.lessonId === DAILY_ID;
-      const found = daily ? { lesson: dailyLesson(view.ids ?? []) } : playLesson(view.lessonId, progress.completed);
+      const found = daily ? { lesson: dailyLesson(view.ids ?? [], progress.cards) } : playLesson(view.lessonId, progress.completed);
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !found.lesson.words.length || !lessonAllowed(view.lessonId, access)) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
