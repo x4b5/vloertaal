@@ -58,11 +58,11 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
   },
   'theme.find': {
     taal: ['u.apply', 'u.contract', 'u.grow', 'u.lost'],
-    regels: ['r.zoeken', 'r.contract'],
+    regels: ['r.zoeken', 'r.contract', 'r.stage'],
   },
   'theme.job': {
     taal: ['u.time', 'u.pay', 'u.leave', 'u.contact', 'u.house', 'u.numbers'],
-    regels: ['r.loon', 'r.tijd', 'r.ziek'],
+    regels: ['r.loon', 'r.tijd', 'r.ziek', 'r.rekenen', 'r.afronden', 'r.duurzaam'],
   },
   'theme.together': {
     taal: ['u.teamwork', 'u.social'],
@@ -74,11 +74,11 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
   },
   'theme.life': {
     taal: ['u.papers', 'u.health', 'u.money', 'u.travel'],
-    regels: ['r.geld'],
+    regels: ['r.geld', 'r.digitaal', 'r.meedoen'],
   },
   'theme.sector': {
     taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.shop'],
-    regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean'],
+    regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean', 'r.winkel'],
   },
 };
 

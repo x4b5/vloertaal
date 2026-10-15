@@ -193,8 +193,8 @@ export const meedoenUnit: RuleUnit = {
       title: 'Recht en plicht: politie, rechter, bezwaar',
       goal: 'Je weet wat de politie en de rechter doen, en een paar rechten en plichten die je hebt.',
       remember: 'De wet geldt voor iedereen. Oneens met een besluit? Maak op tijd bezwaar.',
-      // Wie kan je helpen: het Juridisch Loket · de politie: 112 bij spoed, 0900-8844 zonder spoed ⚖️ ·
-      //   een advocaat (soms betaalt de overheid mee ⚖️).
+      // Wie kan je helpen: het Juridisch Loket · de politie: 112 bij spoed, het nummer zonder spoed
+      //   ⚖️ (the one in help.ts, still to check) · een advocaat (soms betaalt de overheid mee ⚖️).
       help: ['juridischloket', 'politie'],
       steps: [
         {
