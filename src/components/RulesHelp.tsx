@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { courseUnits, ruleCards } from '../content/courses';
+import { withRegion } from '../content/regio';
 import { RULES_DISCLAIMER, ruleAdviceLine } from '../content/regels/disclaimer';
 import { HELP_ROWS, helpRowText, type HelpRow } from '../content/regels/help';
 import type { Unit } from '../content/types';
@@ -14,6 +15,7 @@ import { ChromeBack } from './ChromeBack';
 import { CallIcon, ChevronIcon, GlobeIcon, InfoIcon, SpeakerOffIcon } from './Icons';
 import { InfoGlyph, RULE_KIND_TAG } from './RuleSteps';
 import { SpeakButton } from './SpeakButton';
+import { DialectLine } from './Dialect';
 import { useVoices } from './useVoices';
 
 /**
@@ -26,10 +28,12 @@ import { useVoices } from './useVoices';
  * your own vertrouwenspersoon) has one speaker instead, which is not counted, and is hidden when
  * nothing can say it. Outside the list: the one link to the shelf.
  */
-export function RulesHelp({ lang, onShelf, onBack }: {
+export function RulesHelp({ lang, onShelf, onBack, after }: {
   lang?: HelpLanguage;
   /** "Alle regels": the rule cards of finished lessons. */
   onShelf: () => void;
+  /** One more link below it (the region's Sociale kaart, src/components/SocialMap.tsx). */
+  after?: React.ReactNode;
   /** Opened from the first lesson's result (not the tab): a back arrow. */
   onBack?: () => void;
 }) {
@@ -53,6 +57,7 @@ export function RulesHelp({ lang, onShelf, onBack }: {
         </span>
         <ChevronIcon size={24} />
       </button>
+      {after}
     </div>
   );
 }
@@ -112,7 +117,8 @@ function HelpRowItem({ row, lang }: { row: HelpRow; lang?: HelpLanguage }) {
  */
 export function RulesShelf({ progress, lang, onBack }: { progress: Progress; lang?: HelpLanguage; onBack: () => void }) {
   const [open, setOpen] = useState<string | null>(null);
-  const groups = shelfGroups(courseUnits('regels'), progress.completed);
+  // With the learner's region's rules unit (src/content/regio), in its place in the path.
+  const groups = shelfGroups(withRegion(courseUnits('regels'), progress.region, 'regels'), progress.completed);
   return (
     <div className="screen rules-shelf" lang="nl">
       <div className="screen-head">
@@ -142,8 +148,9 @@ export function RulesShelf({ progress, lang, onBack }: { progress: Progress; lan
                       <div className="tips-body shelf-body">
                         <span className={`rule-kind rule-kind-${r.rule}`}>{RULE_KIND_TAG[r.rule]}</span>
                         <div className="rule-body">
-                          <SpeakButton text={text} long needsDevice glyph help={lang} />
-                          <p>{r.body.map((line, i) => <span key={i} className="rule-line">{line}</span>)}</p>
+                          {/* A dialect word card (regio): no speaker, the words marked as Limburgish. */}
+                          {!r.dialect && <SpeakButton text={text} long needsDevice glyph help={lang} />}
+                          <p>{r.body.map((line, i) => <span key={i} className="rule-line">{r.dialect ? <DialectLine line={line} /> : line}</span>)}</p>
                         </div>
                         {advice && <p className="rule-advice"><InfoGlyph />{advice}</p>}
                       </div>

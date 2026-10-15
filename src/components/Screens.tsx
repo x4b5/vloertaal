@@ -6,6 +6,7 @@ import { resultLineFor } from '../lib/greeting';
 import { aboutRules, aboutSections, CONTACT_EMAIL } from '../content/about';
 import { LAST_UPDATE, updateDate } from '../content/updates';
 import { cultureTips } from '../content/culture';
+import { regionTips } from '../content/regio';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
 import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
@@ -307,10 +308,12 @@ export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab:
   );
 }
 
-/** "Hulp" tab: opens straight onto the emergency phrases; the workplace tips are below them. */
-export function WordsHub({ lang, onTips }: {
+/** "Hulp" tab: opens straight onto the emergency phrases; the workplace tips are below them.
+ *  `after`: one more link below them (the region's Sociale kaart, src/components/SocialMap.tsx). */
+export function WordsHub({ lang, onTips, after }: {
   lang?: HelpLanguage;
   onTips: () => void;
+  after?: React.ReactNode;
 }) {
   return (
     <div className="screen words-hub">
@@ -329,6 +332,7 @@ export function WordsHub({ lang, onTips }: {
         </span>
         <ChevronIcon size={24} />
       </button>
+      {after}
     </div>
   );
 }
@@ -744,7 +748,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
 export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Progress; lang?: HelpLanguage; onBack: () => void; access?: Access }) {
   const [open, setOpen] = useState<string | null>(null);
   // A tip shows once its lesson is done, or when its lesson is the next one on the own course.
-  const visible = cultureTips.filter((t) =>
+  // With the tips of the learner's region (src/content/regio), once their lesson is done.
+  const visible = [...cultureTips, ...regionTips(progress.region)].filter((t) =>
     Boolean(progress.completed[t.lessonId]) || isNextInCourse(t.lessonId, progress.completed, access, progress.sector));
   return (
     <div className="screen">

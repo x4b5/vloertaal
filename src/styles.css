@@ -4334,6 +4334,29 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .rh-go { flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--yellow); color: var(--on-yellow); }
 .rh-go-say { background: transparent; }
 .rules-shelf-link { margin-top: 4px; }
+/* The regions (src/content/regio): the Sociale kaart (src/components/SocialMap.tsx), its link on the
+   Hulp tab, and Settings › "Waar woon je?". The categories are plain header rows inside the one
+   list (not buttons), like the theme headers of All topics. */
+.social-map-link { margin-top: 4px; }
+.sm-nobr { white-space: nowrap; }
+.words-hub .social-map-link { margin-top: 0; }
+.sm-title { display: flex; flex-direction: column; gap: 2px; }
+.sm-title-nl { font-size: 0.9rem; font-weight: 600; color: var(--faint); }
+.sm-region { margin: -6px 0 12px; font-weight: 650; color: var(--ink-2); }
+.sm-note .bi { font-weight: 400; color: var(--ink-2); }
+.sm-note-nl { display: block; }
+.sm-checked { font-weight: 400; color: var(--muted); font-variant-numeric: tabular-nums; }
+.sm-head { list-style: none; margin: 14px 2px 0; }
+.sm-head:first-child { margin-top: 2px; }
+.sm-head-title { display: flex; flex-direction: column; gap: 1px; margin: 0; font-size: 1.1rem; font-weight: 650; line-height: 1.25; color: var(--ink-2); overflow-wrap: anywhere; }
+.sm-head-help .bi-en { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+.sm-area { font-size: 0.88rem; line-height: 1.3; color: var(--muted); }
+.sm-wrong { margin: 4px 0 0; line-height: 1.45; color: var(--ink-2); }
+.sm-wrong a { color: inherit; font-weight: 700; text-underline-offset: 0.15em; overflow-wrap: anywhere; }
+.sm-wrong .bi { display: block; margin-top: 2px; color: var(--muted); }
+.region-places { margin-top: 10px; color: var(--muted); }
+/* A dialect word card (les ZL.4): the Limburgish word stands out from its Dutch meaning. */
+.dialect-word { font-weight: 750; font-style: italic; }
 /* Alle regels: the topic names as headings inside the one list. */
 .shelf-unit { list-style: none; }
 .shelf-list .shelf-unit:not(:first-child) { margin-top: 10px; }

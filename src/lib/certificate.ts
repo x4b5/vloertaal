@@ -129,7 +129,9 @@ export function certDate(day: string): string {
  * a sector this is the order of the whole course.
  */
 export function unitIndex(unit: Unit, sector?: SectorChoice, track: Track = trackOfId(unit.id)): number {
-  const { main, other } = coursePlan(sector, track);
+  // A region's unit ("rg.zl.u") has its number in the path of a learner of that region.
+  const region = /^rg\.([a-z]+)\./.exec(unit.id)?.[1];
+  const { main, other } = coursePlan(sector, track, region);
   const at = [...main, ...other].findIndex((u) => u.id === unit.id);
   return at >= 0 ? at : courseUnits(track).indexOf(unit);
 }

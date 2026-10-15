@@ -8,6 +8,7 @@ import { getHelpLanguage, gloss, hasGender, helpLanguageSources, helpLanguages, 
 import { allForms, forGender, GENDERED_LANGS, isPlural, PLURAL_CATEGORIES, uiEn, type LangText } from '../src/i18n/types';
 import { mixLessonFor } from '../src/content/review';
 import { THEMES } from '../src/content/themes';
+import { regionIds } from '../src/content/regio';
 
 const contentIds = [
   ...units.map((u) => u.id),
@@ -30,6 +31,8 @@ const contentIds = [
   ...phrasebookExtras.map((p) => p.id),
   // Theme names (src/content/themes.ts): the headers of All topics and the home's theme label.
   ...THEMES.map((t) => t.id),
+  // The regions (src/content/regio): their lessons and tips, and the Sociale kaart's categories.
+  ...regionIds,
 ];
 
 describe('content and translations', () => {

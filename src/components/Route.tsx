@@ -6,7 +6,7 @@ import type { Unit } from '../content/types';
 import { gloss, said, ui, uiCount, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { type Access, unitAllowed } from '../lib/access';
-import { unitDone } from '../lib/certificate';
+import { hasCertificate, unitDone } from '../lib/certificate';
 import { isUnlocked } from '../lib/exercises';
 import type { DailyCard } from '../lib/spaced';
 import type { Progress } from '../lib/progress';
@@ -68,7 +68,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   focusUnit?: string | null;
   onFocused?: () => void;
 }) {
-  const { sector, completed } = progress;
+  const { sector, completed, region } = progress;
   const track = trackOf(progress);
   const dutch = dutchUi(lang);
   const rtl = lang?.dir === 'rtl';
@@ -83,12 +83,12 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   // again (that one is then on the topic page), and next to only the recommended topic when the
   // block is finished.
   const dailyDue = daily?.state === 'due';
-  const choices = block ? [] : homeSuggestions(sector, completed, track).slice(0, dailyDue ? 1 : 2);
+  const choices = block ? [] : homeSuggestions(sector, completed, track, region).slice(0, dailyDue ? 1 : 2);
   const ref = useRef<HTMLDivElement>(null);
-  const order = routeOrder(sector, track);
+  const order = routeOrder(sector, track, region);
   const unitIndex = (unit: Unit) => order.findIndex((u) => u.id === unit.id);
   // The block's theme (as All topics groups it), for the small label on its card.
-  const blockGroup = block ? groupOf(planGroups(coursePlan(sector, track)), block.id) : undefined;
+  const blockGroup = block ? groupOf(planGroups(coursePlan(sector, track, region)), block.id) : undefined;
 
   // After a lesson or a coach link: the next step in view (the next lesson or the choice),
   // between the sticky top bar and the bottom bar.
@@ -388,7 +388,8 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
   onOpen: (unitId: string) => void;
 }) {
   const { sector, completed } = progress;
-  const { main, other } = coursePlan(sector, trackOf(progress));
+  // With the learner's region (src/content/regio): its unit in its place in the own course.
+  const { main, other } = coursePlan(sector, trackOf(progress), progress.region);
   const block = currentBlock(progress);
   const rtl = lang?.dir === 'rtl';
   // A topic keeps its number on the path (as on its pocket card and certificate).
@@ -472,7 +473,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
     const off = window.setTimeout(() => setMarked(false), 4000);
     return () => window.clearTimeout(off);
   }, [marked]);
-  const u = routeOrder(sector, trackOf(progress)).findIndex((x) => x.id === unit.id);
+  const u = routeOrder(sector, trackOf(progress), progress.region).findIndex((x) => x.id === unit.id);
   // The next lesson, stopped halfway: "Start again" sits with the topic's tools (at most 3 there).
   const restartId = onRestart && next && !completed[next.id] && saves[next.id]?.review === false ? next.id : undefined;
   const restartLesson = restartId ? unit.lessons.find((l) => l.id === restartId) : undefined;
@@ -487,7 +488,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
           <BlockProgress unit={unit} completed={completed} lang={lang} />
         </div>
         {allowed ? (
-          (onPocket || restartLesson || (finished && onCertificate)) && (
+          (onPocket || restartLesson || (finished && onCertificate && hasCertificate(unit.id))) && (
             <div className="topic-tools" dir={rtl ? 'rtl' : undefined}>
               {restartLesson && onRestart && (
                 <RestartButton
@@ -502,7 +503,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                   <span className="unit-tool-text"><Bi className="unit-tool-label" text={ui('pocketCard', lang)} /></span>
                 </button>
               )}
-              {finished && onCertificate && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
+              {/* A region's unit has no certificate (src/lib/certificate.ts hasCertificate). */}
+              {finished && onCertificate && hasCertificate(unit.id) && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
             </div>
           )
         ) : (

@@ -11,6 +11,7 @@ import { learnerVoice, voiceFor, type VoiceRef } from '../lib/voices';
 import { Character, MeAvatar, useTalking } from './Characters';
 import { type Answer, ChoiceGrid, moodFor, reactClass } from './Exercises';
 import { SpeakButton } from './SpeakButton';
+import { DialectLine } from './Dialect';
 
 /**
  * The work-rules track (Werkregels): one component per kind of step (src/content/regels/types.ts).
@@ -126,8 +127,9 @@ export function RuleCard({ ex, lang, onAnswer }: RuleProps<'rule'>) {
         <span className="rule-label-tape" aria-hidden />
         <h2 className="prompt rule-title" lang="nl">{step.title}</h2>
         <div className="rule-body">
-          <Say text={body} lang={lang} />
-          <p lang="nl">{step.body.map((line, i) => <span key={i} className="rule-line">{line}</span>)}</p>
+          {/* A dialect word card (regio): no speaker, the words marked as Limburgish. */}
+          {!step.dialect && <Say text={body} lang={lang} />}
+          <p lang="nl">{step.body.map((line, i) => <span key={i} className="rule-line">{step.dialect ? <DialectLine line={line} /> : line}</span>)}</p>
         </div>
       </div>
       {advice && <p className="rule-advice" lang="nl"><InfoGlyph />{advice}</p>}

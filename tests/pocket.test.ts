@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { units } from '../src/content/curriculum';
+import { allRegionUnits } from '../src/content/regio';
 import { isMixLesson } from '../src/content/review';
 import { helpLanguages } from '../src/i18n/all';
 import { POCKET_SIZE, pocketPhrases, pocketPicks } from '../src/lib/pocket';
@@ -64,8 +65,15 @@ describe('pocket card phrases', () => {
       'Dit product is over de datum.', 'Hier is uw wisselgeld.',
       'Half acht? Dus een half uur voor acht?', 'Ik heb het twee keer geteld.', 'Het kost zes euro vijftig.',
       'Ik werk vandaag acht uur.', 'Deze doos weegt tien kilo.',
+      // The region unit "Jouw regio: Zuid-Limburg" (src/content/regio): recorded on the next 'Record ElevenLabs voices' run.
+      'Kan ik een afspraak maken?', 'Wil je het in het Nederlands zeggen?', 'Ik heb om tien uur een afspraak.',
+      'Ik wil me inschrijven bij de gemeente.', 'Ik sta op de wachtlijst voor een huis.', 'Mag ik met carnaval vrij?',
+      'Ik woon in Nederland en werk in Duitsland.', 'Kunt u Nederlands praten? Ik versta geen dialect.',
+      'Waar woon je?', 'In Heerlen. Ik ben net verhuisd.', 'Sorry, ik praat te snel.', 'Ja, wat langzamer graag.',
+      'het gemeentehuis', 'het loket', 'de verhuizing', 'de woningcorporatie', 'de wachtlijst', 'de buurt',
+      'het buitenland', 'het carnaval', 'het dialect', 'verstaan',
     ]);
-    for (const unit of units) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
+    for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });
 
   it('gives a picture where the sentence names a pictured word', () => {

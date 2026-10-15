@@ -75,7 +75,7 @@ export interface SettingsContext {
 /** The rows of a list, in order. */
 export function settingsRows(list: SettingsList, ctx: SettingsContext): SettingsPage[] {
   const rows: (SettingsPage | false)[] =
-    list === 'me' ? ['language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region && 'region', !ctx.rules && ctx.helpLang && 'english', 'certificates']
+    list === 'me' ? ['language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', !ctx.rules && ctx.helpLang && 'english', 'certificates']
     : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'speaking', !ctx.rules && 'writing', 'text', 'theme']
     : [ctx.preview && 'unlock', ctx.offline && 'offline', 'reminder', ctx.install && 'install', 'backup', 'counting', 'reset'];
   return rows.filter((r): r is SettingsPage => Boolean(r));

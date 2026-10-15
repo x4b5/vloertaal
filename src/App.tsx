@@ -40,6 +40,8 @@ import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
 import { applyEnglish, englishLangFor } from './lib/english';
 import { PocketCardScreen } from './components/PocketCard';
+import { SocialMap, SocialMapLink } from './components/SocialMap';
+import { regionOf, type RegionChoice } from './content/regio';
 
 type View =
   | { name: 'home' }
@@ -62,6 +64,8 @@ type View =
    *  certificate or the streak milestone still follows. */
   | { name: 'phrasebook'; streakUp?: number; cert?: string }
   | { name: 'tips' }
+  /** The region's "Sociale kaart" (from the Hulp tab, only with a region chosen in Settings). */
+  | { name: 'socialmap' }
   /** upgrade: opened from a locked unit, so the unlock card is scrolled into view. */
   /** Settings: the menu, a list or one setting's page. upgrade: opened from a locked topic (the
    *  unlock page). up: how many Settings pages lie between this one and the menu in history. */
@@ -410,7 +414,7 @@ export default function App() {
    *  that day's streak: for them it comes at the end of the first lesson with the code. */
   const keepDue = useRef(false);
   // Left the screens after a lesson another way (the phone's Back): offered after the next one.
-  useEffect(() => { if (['home', 'topic', 'all', 'settings', 'words', 'tips', 'about'].includes(view.name)) keepDue.current = false; }, [view.name]);
+  useEffect(() => { if (['home', 'topic', 'all', 'settings', 'words', 'tips', 'about', 'socialmap'].includes(view.name)) keepDue.current = false; }, [view.name]);
   /** The end of the screens after a lesson (result, certificate, milestone): home, or the offer. */
   const afterLesson = () => {
     if (keepDue.current && !keepOffered()) { keepDue.current = false; replace({ name: 'keep' }); }
@@ -418,6 +422,11 @@ export default function App() {
   };
   const inTrial = trial && !access && (view.name === 'lesson' || view.name === 'result');
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
+  /** "Waar woon je?" (Settings only): the region's lessons come in or go out of the path. */
+  const setRegion = (region: RegionChoice) => setProgress((p) => ({ ...p, region }));
+  /** The learner's region (src/content/regio), for its Sociale kaart on the Hulp tab. */
+  const region = regionOf(progress.region);
+  const mapLink = region ? <SocialMapLink region={region} lang={lang} onOpen={() => go({ name: 'socialmap' })} /> : undefined;
 
   // "Keep lessons on this phone" (Settings → This phone): the current topic is kept by itself.
   useAutoOffline(progress, access);
@@ -668,14 +677,15 @@ export default function App() {
             onLang={setLang}
             onGender={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))}
             onSector={setSector}
+            onRegion={setRegion}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
             onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
             onReset={() => {
-              // Keep look, voice, sound, sector and gender; only learning progress is wiped (and lessons in progress).
+              // Keep look, voice, sound, sector, region and gender; only learning progress is wiped (and lessons in progress).
               clearSave();
-              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked }));
+              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, region: p.region, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked }));
             }}
             onRestore={(next) => setProgress(next)}
             access={acc}
@@ -691,8 +701,17 @@ export default function App() {
         <>
           {/* The work-rules track: who to call, and "Alle regels" (instead of the emergency phrases). */}
           {track === 'regels'
-            ? <RulesHelp lang={lang} onShelf={() => go({ name: 'tips' })} />
-            : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} />}
+            ? <RulesHelp lang={lang} onShelf={() => go({ name: 'tips' })} after={mapLink} />
+            : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} after={mapLink} />}
+          <BottomNav current="words" onTab={tab} lang={lang} />
+        </>
+      );
+    case 'socialmap':
+      // Back from a region switched off meanwhile: the Hulp tab.
+      if (!region) return null;
+      return (
+        <>
+          <SocialMap region={region} lang={lang} onBack={back} />
           <BottomNav current="words" onTab={tab} lang={lang} />
         </>
       );

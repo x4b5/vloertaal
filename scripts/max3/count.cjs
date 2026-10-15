@@ -372,6 +372,21 @@ function defineStates(LANG) {
   add('screen:coaches', shot('coaches'), null, { list: true });
   add('screen:tips', shot('tips'), null, { list: true });
   add('screen:tips-open', shot('tips'), async (p) => { await tap(p, '.tips-head', 0); await settle(p); }, { list: true });
+
+  // The region Zuid-Limburg (src/content/regio, docs/regio-zuid-limburg.md): Settings › "Waar woon
+  // je?" (two cards), the Hulp tab with the map's link, the Sociale kaart (the list exception:
+  // category headers without a tap, one tap per row), the region unit in All topics and its topic
+  // page (no certificate), a step of its lesson, and the real way from the home to the map.
+  add('settings:region', shot('settings&page=region&region=zl'), null, { expect: '.chrome-back' });
+  add('settings:region-none', shot('settings&page=region'), null, { expect: '.chrome-back' });
+  add('settings:me-region', shot('settings&page=me&region=zl'), null, { list: true, expect: '.chrome-back' });
+  add('tab:help-region', shot('words&region=zl'), null, { expect: '.social-map-link' });
+  add('screen:social-map', shot('socialmap&region=zl'), null, { list: true, expect: '.sm-rows' });
+  add('route:all-topics-region', shot('all&state=mid&region=zl'), null, { list: true });
+  add('route:topic-region', shot('topic&cu=rg.zl.u&state=mid&region=zl'), null, { list: true });
+  add('lesson:region-tip', shot('lesson&lesson=rg.zl.l.1&at=9'));
+  add('lesson:region-situation', shot('lesson&lesson=rg.zl.l.1&at=10'));
+  add('flow:help-map', '/', async (p) => { await realHome(p, { region: 'zl' }); await navTab(p, 1); await settle(p); await tap(p, '.social-map-link'); await settle(p); }, { list: true, expect: '.sm-rows' });
   return S;
 }
 
@@ -462,6 +477,15 @@ function defineRuleStates() {
   add('rule:gate', shot('gate&try=1&greet=1'), null, { expect: '.gate-try' });
   add('rule:sector', shot('sector'), null, { expect: '.sector-step' });
   add('rule:sector-make', shot('sector&group=make'), null, { expect: '.sector-step-2' });
+  // The region Zuid-Limburg: Settings › "Waar woon je?", the Hulp tab with the map's link, the
+  // Sociale kaart, the dialect word card of les ZL.4 (no speaker), the "Waar ga je heen?" step with
+  // the GrensInfoPunt, and a lesson of the region unit from its start.
+  add('rule:settings-region', shot('settings&page=region&region=zl'), null, { expect: '.chrome-back' });
+  add('rule:help-region', shot('words&region=zl'), null, { list: true, expect: '.social-map-link' });
+  add('rule:social-map', shot('socialmap&region=zl'), null, { list: true, expect: '.sm-rows' });
+  step('dialect', 'rule&step=rule&id=rg.zl.r.l.4.ru2', false);
+  step('whoask-grens', 'rule&step=whoask&id=rg.zl.r.l.3.wa1', true);
+  add('rule:lesson-region', shot('lesson&lesson=rg.zl.r.l.3'), null, { expect: '.player-body .exercise' });
 
   // The real first run in this track, from a clean phone (?rules=1 turns the track on in dev):
   // Nederlands -> (no gender page) -> the code page in Dutch -> the sector -> the home.
