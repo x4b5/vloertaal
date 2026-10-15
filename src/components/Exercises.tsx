@@ -881,7 +881,9 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
  * end it.
  */
 const SENTENCE_SPLIT = new RegExp([
-  '(?<=[.!?؟።፧፨…])(?<!(?:^|[^\\p{L}])(?:np|bv|vb|vs|ca|bijv|örn|напр|т\\.е|e\\.g|i\\.e|z\\.B|d\\.h)\\.)\\s+(?=\\P{Ll})',
+  // The Ethiopic and Arabic stops always end a sentence ("… rijksoverheid.nl። cao …").
+  '(?<=[؟።፧፨])\\s+',
+  '(?<=[.!?…])(?<!(?:^|[^\\p{L}])(?:np|bv|vb|vs|ca|bijv|örn|напр|т\\.е|e\\.g|i\\.e|z\\.B|d\\.h)\\.)\\s+(?=\\P{Ll})',
   '(?<=[.؟።]\\))\\s+(?=\\P{Ll})',
   '(?<=[.!?…]["”’»“])\\s+(?=\\p{Lu})',
 ].join('|'), 'u');

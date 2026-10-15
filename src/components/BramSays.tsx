@@ -45,7 +45,7 @@ export function HomeGreeting({ progress, due, lang, force }: {
   force?: Greeting;
 }) {
   const [first] = useState(() => !greetedToday(new Date()));
-  useEffect(() => rememberGreeted(new Date()), []);
+  useEffect(() => { rememberGreeted(new Date()); }, []);
   const g = force ?? greetingFor(greetingInput(progress, new Date(), due, first));
   return <BramSays text={greetingText(g, lang)} tail="start" className={`bram-greet bram-greet-${g.kind}`} />;
 }
