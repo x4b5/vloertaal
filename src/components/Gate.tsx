@@ -119,7 +119,7 @@ export function Gate({ lang, onAccess, onBack, accepted = null, code = '', onTry
   code?: string;
   /** "Try one lesson first": lesson 1.1, then this page again. Undefined: no button. */
   onTry?: () => void;
-  /** The first page after the language was picked: Bram waves "Hallo!" once. */
+  /** The first page after the language was picked: Bram waves and introduces himself, once. */
   greet?: boolean;
   /** Back here after the trial lesson: "You did the trial lesson. The code unlocks everything." */
   trialDone?: boolean;
@@ -129,7 +129,7 @@ export function Gate({ lang, onAccess, onBack, accepted = null, code = '', onTry
   return (
     <div className="screen gate onb-gate">
       <ChromeHead lang={lang} onBack={onBack} />
-      {greet && <Greeting rtl={lang?.dir === 'rtl'} />}
+      {greet && <Greeting lang={lang} place="corner" />}
       <div className="gate-sign" dir={lang?.dir}>
         <div className="gate-logo" dir="ltr">
           <LogoMark size={52} />

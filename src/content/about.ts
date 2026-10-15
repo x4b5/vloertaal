@@ -5,6 +5,8 @@
 export interface AboutSection {
   id: string;
   emoji: string;
+  /** A cast member drawn in place of the emoji (his head), for the section about him. */
+  who?: 'bram';
   title: string;
   body: string;
 }
@@ -13,6 +15,10 @@ export const aboutSections: AboutSection[] = [
   {
     id: 'a.what', emoji: '🦺', title: 'What is Vloertaal?',
     body: 'Vloertaal helps you learn the Dutch you need at work: in the warehouse, the kitchen, the factory or on the building site. Not only the words on the work floor, but all the language around work: applying for a job, your contract and pay slip, your rights, housing and papers, calling in sick and getting along with colleagues. The lessons are short, so you can practise a few minutes every day.',
+  },
+  {
+    id: 'a.bram', emoji: '👷', who: 'bram', title: 'Who is Bram?',
+    body: 'Bram is your colleague in the app. He has worked in warehouses and on building sites for many years, and he likes to help new colleagues. He speaks calmly, and it is okay to make mistakes with him.',
   },
   {
     id: 'a.how', emoji: '👂', title: 'How does it work?',

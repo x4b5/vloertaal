@@ -10,12 +10,22 @@ export type VoiceRef = string | null;
 /** Played when a learner tries a voice in Settings; also recorded in CI. */
 export const VOICE_SAMPLE = 'Goedemorgen! Draag altijd je helm.';
 
+/**
+ * Bram introduces himself: the bubble on the first page after the language (components/Greeting.tsx)
+ * and, once recorded, the first sound of the app (sayFirstWord in audio.ts). Recorded as clip
+ * x.bram in Bram's own voice only (BRAM_VOICE; see scripts/list-clips.ts).
+ */
+export const BRAM_HELLO = 'Hallo, ik ben Bram.';
+
+/** The recorded voice Bram speaks with (Thijmen), as in CAST_VOICES. */
+export const BRAM_VOICE = 'thijmen';
+
 export const DEVICE = 'device';
 
 /** Character → voices in order of preference; the first one available is used.
  *  Keys match CharacterId in src/components/Characters.tsx. */
 const CAST_VOICES: Record<string, VoiceRef[]> = {
-  bram: ['piper:thijmen', DEVICE],
+  bram: [`piper:${BRAM_VOICE}`, DEVICE],
   henk: ['piper:daniel', DEVICE],
   amina: ['piper:ariel', DEVICE],
   jada: ['piper:noa', DEVICE],

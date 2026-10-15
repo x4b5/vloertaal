@@ -1,14 +1,19 @@
 // Writes public/audio/clips.json: every Dutch line the app can speak, keyed by a
-// stable id, for the recorded (Piper) voices generated in CI.
+// stable id, for the recorded (ElevenLabs) voices: scripts/voices/elevenlabs.mjs records each
+// clip in every voice, unless the clip names its voices ("voices": only those record it).
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { cultureTips } from '../src/content/culture';
 import { phrasebookExtras, units } from '../src/content/curriculum';
 import { tokenize } from '../src/lib/answers';
-import { VOICE_SAMPLE } from '../src/lib/voices';
+import { BRAM_HELLO, BRAM_VOICE, VOICE_SAMPLE } from '../src/lib/voices';
 
 const clips = new Map<string, string>();
-const add = (id: string, text: string) => {
-  if (!clips.has(id)) clips.set(id, text);
+/** Clips only some voices record (to save credits): id -> voice keys. */
+const onlyVoices = new Map<string, string[]>();
+const add = (id: string, text: string, voices?: string[]) => {
+  if (clips.has(id)) return;
+  clips.set(id, text);
+  if (voices) onlyVoices.set(id, voices);
 };
 for (const u of units)
   for (const l of u.lessons) {
@@ -27,6 +32,9 @@ for (const t of cultureTips) {
 // Emergency phrases that only live in the phrasebook ("Bel 112!").
 for (const p of phrasebookExtras) add(p.id, p.nl);
 add('x.sample', VOICE_SAMPLE);
+// Bram introduces himself on the first tap of the app (sayFirstWord in src/lib/audio.ts): only in
+// his own voice, Thijmen; the other voices never say it.
+add('x.bram', BRAM_HELLO, [BRAM_VOICE]);
 
 // Single word tiles of the sentence-building exercise ("ik", "ben"), so a tap on a tile is
 // said by the same voice as the rest. Words that already have their own clip are skipped;
@@ -44,5 +52,8 @@ for (const u of units)
       }
 
 mkdirSync('public/audio', { recursive: true });
-writeFileSync('public/audio/clips.json', JSON.stringify([...clips].map(([id, text]) => ({ id, text })), null, 1));
+writeFileSync(
+  'public/audio/clips.json',
+  JSON.stringify([...clips].map(([id, text]) => (onlyVoices.has(id) ? { id, text, voices: onlyVoices.get(id) } : { id, text })), null, 1),
+);
 console.log(`${clips.size} clips`);

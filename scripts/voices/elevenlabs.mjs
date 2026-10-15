@@ -38,8 +38,12 @@ const take = Number(config.take ?? 1);
 // sample = a few short lines to judge a voice: the settings sample plus single words and a reply.
 const SAMPLE = ['x.sample', 'w.hallo', 'w.ja', 'w.goedemorgen', 'w.collega', 'c.hello.a'];
 const wanted = mode === 'sample' ? clips.filter((c) => SAMPLE.includes(c.id)) : clips;
+// A clip may name the voices that record it ("voices": ["thijmen"], e.g. x.bram: Bram's own
+// line); every other clip is recorded in every voice.
+const forVoice = (c, v) => !Array.isArray(c.voices) || c.voices.includes(v.key);
 const todo = voices.flatMap((v) =>
   wanted
+    .filter((c) => forVoice(c, v))
     .filter(
       (c) =>
         said[v.key]?.[c.id] !== c.text ||

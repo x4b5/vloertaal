@@ -281,6 +281,8 @@ const lang: HelpLanguageSource = {
     bramGood: 'Dobra robota. Krok po kroku.',
     bramHard: { m: 'Dobrze, że ćwiczyłeś. Trudne słowa wrócą.', f: 'Dobrze, że ćwiczyłaś. Trudne słowa wrócą.' },
     bramReview: 'Dobrze. Powtarzanie pomaga zapamiętać.',
+    bramIntro: 'Jestem Bram, twój kolega z pracy.',
+    bramIntroHello: 'Cześć, jestem Bram.',
     /* G4 b3 */
     buildListen: 'Posłuchaj i ułóż zdanie',
     chatWhichQuestion: 'Które pytanie pasuje do tej odpowiedzi?',

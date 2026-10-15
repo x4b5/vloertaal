@@ -141,7 +141,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     return <SectorScreen lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} initialGroup={g === 'make' || g === 'care' ? (g as SectorGroupId) : undefined} />;
   }
   // The password page: &try=1 with "Try one lesson first" (TRY_LESSON on), &again=1 back from the
-  // sector with the code kept, &greet=1 with Bram's "Hallo!" (the first page after the language),
+  // sector with the code kept, &greet=1 with Bram's "Hallo, ik ben Bram." (the first page after the language),
   // &trialDone=1 back after the trial lesson.
   if (shot === 'gate') {
     return (
@@ -321,7 +321,7 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   const card = daily ? dailyCard(Object.fromEntries(words.map((w) => [w.id, { box: 1, due: today }])), today) : null;
   const words2 = learnedWords(progress.completed).size;
   const bramParam = new URLSearchParams(location.search).get('bram');
-  const bram = (['hello', 'back', 'due', 'streak', 'done'] as const).find((k) => k === bramParam);
+  const bram = (['intro', 'hello', 'back', 'due', 'streak', 'done'] as const).find((k) => k === bramParam);
   const [open, setOpen] = useState<string | null>(shot === 'topic' ? unit ?? 'u.firstday' : null);
   const topic = open ? findUnit(open) : undefined;
   if (topic) {
@@ -343,8 +343,9 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   return (
     <>
       {/* &quiet=1: "Without sound" is on (the small muted speaker in the top bar). */}
-      {/* &bram=hello|back|due|streak|done: Bram's line in the top bar (the flame is lit only for done). */}
-      <TopBar streak={7} done={!bram || bram === 'done'} words={words2} lang={lang} quiet={new URLSearchParams(location.search).get('quiet') === '1'}
+      {/* &bram=intro|hello|back|due|streak|done: Bram's line in the top bar (the flame is lit only for done;
+          intro is the very first home, so no streak yet: use it with &state=new). */}
+      <TopBar streak={bram === 'intro' ? 0 : 7} done={!bram || bram === 'done'} words={words2} lang={lang} quiet={new URLSearchParams(location.search).get('quiet') === '1'}
         greeting={<HomeGreeting progress={progress} due={card?.due ?? 0} lang={lang} force={bram ? { kind: bram, n: bram === 'due' ? 6 : 7 } : undefined} />} />
       <Route
         progress={progress} lang={lang} access={access} daily={card} onDaily={() => {}}

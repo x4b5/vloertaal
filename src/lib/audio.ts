@@ -1,4 +1,4 @@
-import { DEVICE, type VoiceRef } from './voices';
+import { BRAM_HELLO, BRAM_VOICE, DEVICE, type VoiceRef } from './voices';
 
 /** Dutch text-to-speech through the browser, plus small feedback sounds. */
 
@@ -279,14 +279,29 @@ function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', p
 const FIRST_WORD = { text: 'hallo', url: './audio-el/thijmen/w.hallo.mp3' };
 
 /**
- * The first Dutch word of the first run, on its first tap (Yes, or a language from the list):
- * "hallo" in the chosen or default recorded voice. On a slow first visit the voice index may not
- * be here yet: then the default voice's own file plays (the phone's voice if that fails too).
- * Silent in "Without sound".
+ * Bram's own "Hallo, ik ben Bram." (clip x.bram), when Thijmen has recorded it: the file, relative
+ * to the app. Undefined until the recording exists (or before the voice index has loaded); only
+ * Bram's own voice says it, never another recorded voice.
+ */
+export function bramHelloUrl(): string | undefined {
+  const bram = recorded.find((r) => r.voice.key === BRAM_VOICE);
+  const id = bram && clipIn(bram, BRAM_HELLO);
+  return bram && id ? clipPath(bram, id) : undefined;
+}
+
+/**
+ * The first Dutch words of the first run, on its first tap (Yes, or a language from the list):
+ * Bram introduces himself, "Hallo, ik ben Bram.", in his own recorded voice (Thijmen) once that
+ * line is recorded; until then "hallo" in the chosen or default recorded voice. On a slow first
+ * visit the voice index may not be here yet: then the default voice's own "hallo" file plays (the
+ * phone's voice if that fails too). Always started right here, inside the tap (the first user
+ * gesture, which lets the phone play sound). Silent in "Without sound".
  */
 export function sayFirstWord(): void {
   if (quietAudio) return;
-  if (recorded.length) speak(FIRST_WORD.text);
+  const intro = bramHelloUrl();
+  if (intro) playClip(intro, BRAM_HELLO, false, 'nl', VOICE_PACE[BRAM_VOICE] ?? 1);
+  else if (recorded.length) speak(FIRST_WORD.text);
   else playClip(FIRST_WORD.url, FIRST_WORD.text, false, 'nl');
 }
 

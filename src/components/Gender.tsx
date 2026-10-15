@@ -84,17 +84,20 @@ export function GenderScreen({ lang, onDone, current, onBack, greet = false }: {
   current?: Gender;
   /** First run only: back to the language. */
   onBack?: () => void;
-  /** The first page after the language was picked: Bram waves "Hallo!" once. */
+  /** The first page after the language was picked: Bram waves and introduces himself, once. */
   greet?: boolean;
 }) {
   const title = ui('genderTitle', lang);
   return (
     <div className="screen onboarding sector-screen gender-screen" dir={lang?.dir}>
       {onBack && <ChromeHead lang={lang} onBack={onBack} />}
-      {greet && <Greeting rtl={lang?.dir === 'rtl'} />}
-      <div className="hero">
-        <h1 className="hero-logo sector-logo"><LogoMark size={40} /><Wordmark /></h1>
-      </div>
+      {/* The first page after the language: Bram introduces himself in place of the logo (he is
+          the logo), so the question stays where it was. */}
+      {greet ? <Greeting lang={lang} place="hero" /> : (
+        <div className="hero">
+          <h1 className="hero-logo sector-logo"><LogoMark size={40} /><Wordmark /></h1>
+        </div>
+      )}
       <h2 className="onboarding-title sector-title">
         <span className="sector-title-nl" lang="nl"><bdi dir="ltr">Vrouw of man?</bdi></span>
         <Bi text={title} />

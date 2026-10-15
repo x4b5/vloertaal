@@ -316,6 +316,11 @@ export const uiEn = {
   bramGood: 'Good work. Step by step.',
   bramHard: 'Good that you practised. Hard words come back.',
   bramReview: 'Good. Repeating helps you remember.',
+  /* Bram introduces himself: once on the very first home (bramIntro: at most two lines in the top
+     bar at 360 px, so short in every language; About tells more), and under his Dutch "Hallo, ik
+     ben Bram." on the first onboarding page (bramIntroHello). */
+  bramIntro: 'I’m Bram, your colleague.',
+  bramIntroHello: 'Hello, I’m Bram.',
   /* G4 b3: a sentence built by ear and a chat the other way round (later units); after a review
      with many words still due. */
   buildListen: 'Listen and make the sentence',

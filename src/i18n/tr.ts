@@ -281,6 +281,8 @@ const lang: HelpLanguageSource = {
     bramGood: 'İyi iş. Adım adım.',
     bramHard: 'Çalışman iyi oldu. Zor kelimeler tekrar gelecek.',
     bramReview: 'Güzel. Tekrar etmek hatırlamaya yardım eder.',
+    bramIntro: 'Ben Bram, iş arkadaşınım.',
+    bramIntroHello: 'Merhaba, ben Bram.',
     /* G4 b3 */
     buildListen: 'Dinle ve cümleyi kur',
     chatWhichQuestion: 'Bu cevaba hangi soru uyuyor?',

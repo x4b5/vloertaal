@@ -120,7 +120,7 @@ export default function App() {
   const typedCode = useRef('');
   /** "Try one lesson first" (TRY_LESSON): lesson 1.1 and its result before the password. */
   const [trial, setTrial] = useState(false);
-  /** The language was just picked: the next page shows Bram waving "Hallo!" (once). */
+  /** The language was just picked: the next page shows Bram waving and introducing himself (once). */
   const [greet, setGreet] = useState(false);
   /** A coach link to a topic outside the preview: the home offers its unlock (this visit). */
   const [lockedLink, setLockedLink] = useState<string | null>(null);

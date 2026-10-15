@@ -281,6 +281,8 @@ const lang: HelpLanguageSource = {
     bramGood: 'کار خوب. قدم به قدم.',
     bramHard: 'خوب شد که تمرین کردید. کلمه‌های مشکل دوباره می‌آیند.',
     bramReview: 'خوب است. تکرار به یاد ماندن کمک می‌کند.',
+    bramIntro: 'من Bram هستم، همکار شما.',
+    bramIntroHello: 'سلام، من Bram هستم.',
     /* G4 b3 */
     buildListen: 'گوش کنید و جمله را بسازید',
     chatWhichQuestion: 'کدام سوال با این جواب جور می‌آید؟',

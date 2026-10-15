@@ -1,6 +1,7 @@
 import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
 import { BramSays } from './BramSays';
+import { Character } from './Characters';
 import { resultLineFor } from '../lib/greeting';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
@@ -113,7 +114,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, [list, hasGuess]);
-  /** The first tap: the first Dutch word ("hallo", recorded) plays, then the next page shows. */
+  /** The first tap: Bram says "Hallo, ik ben Bram." (until recorded: "hallo"), then the next page shows. */
   const pick = (code: LangCode | null) => {
     sayFirstWord();
     onDone(code);
@@ -359,7 +360,12 @@ export function About({ lang, onCoaches }: { lang?: HelpLanguage; /** Opens "Voo
       </div>
       {aboutSections.map((s) => (
         <section key={s.id} className="about-section">
-          <h2><span className="about-emoji" aria-hidden>{s.emoji}</span><Bi text={gloss(s.id, s.title, lang)} /></h2>
+          <h2>
+            {s.who
+              ? <span className="about-emoji about-who" aria-hidden><Character who={s.who} crop="head" size={30} /></span>
+              : <span className="about-emoji" aria-hidden>{s.emoji}</span>}
+            <Bi text={gloss(s.id, s.title, lang)} />
+          </h2>
           <p><Bi text={gloss(`${s.id}.b`, s.body, lang)} /></p>
         </section>
       ))}

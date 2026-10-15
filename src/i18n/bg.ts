@@ -281,6 +281,8 @@ const lang: HelpLanguageSource = {
     bramGood: 'Добра работа. Стъпка по стъпка.',
     bramHard: 'Добре, че се упражни. Трудните думи ще се върнат.',
     bramReview: 'Добре. Повторението помага да запомниш.',
+    bramIntro: 'Аз съм Bram, твоят колега.',
+    bramIntroHello: 'Здравей, аз съм Bram.',
     /* G4 b3 */
     buildListen: 'Слушай и състави изречението',
     chatWhichQuestion: 'Кой въпрос подхожда на този отговор?',

@@ -1421,6 +1421,8 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .about-section h2 { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 6px; font-size: 1.15rem; }
 .about-section p { margin: 0 0 10px; line-height: 1.55; }
 .about-emoji { font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; font-size: 1.4rem; line-height: 1.2; }
+.about-who { display: inline-flex; flex: none; margin-top: -2px; }
+.about-who .ch { display: block; }
 .about-credits { list-style: none; padding: 12px 0 0; margin: 8px 0 0; border-top: 2px dashed var(--line); display: grid; gap: 4px; }
 .about-credits a { color: inherit; }
 
@@ -3858,17 +3860,37 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .onb-say .speak { width: 44px; height: 44px; }
 
 /* Bram waves once on the first page after the language: a picture in the free top-end corner. */
-.screen:has(> .onb-greet) { position: relative; }
-.onb-greet {
-  position: absolute; top: calc(2px + env(safe-area-inset-top)); right: 8px; z-index: 0;
-  display: flex; align-items: flex-start; gap: 2px; pointer-events: none;
+/* The first page after the language: Bram waves and introduces himself (components/Greeting.tsx),
+   "Hallo, ik ben Bram." with the help language small under it. A picture, never a button. */
+.onb-greet { display: flex; align-items: flex-start; gap: 6px; pointer-events: none; }
+.onb-greet > .ch { flex: none; }
+.onb-greet-say {
+  position: relative; margin: 8px 0 0; padding: 6px 11px; min-width: 0;
+  background: var(--card); border: 1.5px solid var(--line); border-radius: 12px;
+  color: var(--ink); line-height: 1.25; text-align: start; overflow-wrap: break-word;
 }
-.onb-greet-rtl { right: auto; left: 8px; flex-direction: row-reverse; }
-.onb-greet-word {
-  margin-top: 4px; padding: 2px 8px; border-radius: 10px 10px 2px 10px; background: var(--card);
-  border: 2px solid var(--line); font-weight: 650; font-size: 0.85rem; color: var(--ink);
+.onb-greet-nl { display: block; font-weight: 650; font-size: max(15px, 0.95rem); }
+.onb-greet-help { display: block; margin-top: 1px; color: var(--muted); font-weight: 500; font-size: max(14px, 0.85rem); }
+.onb-greet-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: max(15px, 0.93rem); line-height: 1.35; }
+/* The tail points at Bram, level with his head. */
+.onb-greet-say::after {
+  content: ''; position: absolute; top: 13px; width: 9px; height: 9px; background: var(--card);
+  border: 0 solid var(--line); transform: rotate(45deg);
 }
-.onb-greet-rtl .onb-greet-word { border-radius: 10px 10px 10px 2px; }
+.onb-greet-tail-left::after { left: -6px; border-left-width: 1.5px; border-bottom-width: 1.5px; }
+.onb-greet-tail-right::after { right: -6px; border-top-width: 1.5px; border-right-width: 1.5px; }
+/* The password page: the free top-end corner beside the back arrow, above the card. */
+.screen:has(> .onb-greet-corner) { position: relative; }
+.onb-greet-corner {
+  position: absolute; top: calc(4px + env(safe-area-inset-top)); inset-inline-end: 8px; z-index: 0;
+  flex-direction: row-reverse; max-width: calc(100% - 68px);
+}
+/* Right to left both lines start on the right, the Dutch one too (as in .bi-swap). */
+.onb-greet[dir='rtl'] .onb-greet-nl { text-align: right; }
+/* The password page: a little room between the bubble and the card under it. */
+.onb-gate:has(> .onb-greet-corner) > .chrome-head { margin-bottom: 12px; }
+/* "Woman or man?": in place of the logo, centred in the room after the back arrow (at the start). */
+.onb-greet-hero { justify-content: center; margin: -6px 0 0; padding-inline-start: 38px; }
 
 /* The guess page: what the app is, in the guessed language (large), English small. */
 .onb-tagline { display: flex; justify-content: center; }

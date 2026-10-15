@@ -7,6 +7,8 @@ const t: CultureTranslation = {
   gloss: {
     'a.what': 'Czym jest Vloertaal?',
     'a.what.b': 'Vloertaal pomaga ci nauczyć się niderlandzkiego, którego potrzebujesz w pracy: w magazynie, w kuchni, w fabryce albo na budowie. Nie tylko słowa na hali, ale cały język związany z pracą: szukanie pracy, umowa i pasek wypłaty, twoje prawa, mieszkanie i dokumenty, zgłaszanie choroby i dogadywanie się ze współpracownikami. Lekcje są krótkie, więc możesz ćwiczyć kilka minut każdego dnia.',
+    'a.bram': 'Kim jest Bram?',
+    'a.bram.b': 'Bram to twój kolega w aplikacji. Od wielu lat pracuje w magazynach i na budowach i lubi pomagać nowym kolegom. Mówi spokojnie, a przy nim możesz się mylić.',
     'a.how': 'Jak to działa?',
     'a.how.b': 'Uczysz się niderlandzkiego przez prosty angielski. Jeśli wybierzesz język pomocy, zobaczysz polecenia i słowa także w swoim języku. Słuchasz, dotykasz ekranu, budujesz zdania i ćwiczysz krótkie rozmowy z kolegami z pracy.',
     'a.culture': 'Jak to tu działa',
