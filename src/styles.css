@@ -2980,7 +2980,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   background: var(--bg); border: 2px solid var(--line);
 }
 .rb-titles { display: flex; flex-direction: column; min-width: 0; }
-.rb-title { margin: 0; font-size: 1.35rem; font-weight: 650; line-height: 1.2; overflow-wrap: anywhere; }
+.rb-title { margin: 0; font-size: 1.35rem; font-weight: 650; line-height: 1.2; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
 .rb-title .rb-main:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.08em; }
 .rb-sub { color: var(--muted); font-size: 0.92rem; line-height: 1.3; }
 .rb-nl { color: var(--faint); font-size: 0.85rem; }
