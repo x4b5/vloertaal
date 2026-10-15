@@ -873,11 +873,11 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
 }
 
 /**
- * A text's sentences: one ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨) and a space,
- * and the next one does not start with a small letter: an abbreviation ("np. w pracy", "напр.
+ * A text's sentences: one ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨), maybe a
+ * closing quote or bracket, and a space, and the next one does not start with a small letter: an abbreviation ("np. w pracy", "напр.
  * так", "bv. een") goes on in the same sentence.
  */
-export const sentences = (text: string) => text.trim().split(/(?<=[.!?؟።፧፨…])\s+(?=\P{Ll})/u);
+export const sentences = (text: string) => text.trim().split(/(?<=[.!?؟።፧፨…]["”’»)]?)\s+(?=\P{Ll})/u);
 
 /** The help text as lines, one per sentence; a folded text's closing "…" stays on the last line. */
 function helpLines(text: string): string[] {

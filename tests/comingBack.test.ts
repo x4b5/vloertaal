@@ -173,7 +173,7 @@ describe('daily reminder (.ics)', () => {
     expect(ics).toContain('BEGIN:VCALENDAR');
     expect(ics).toContain('RRULE:FREQ=DAILY');
     expect(ics).toContain('DTSTART:20261009T070000'); // 07:00 has passed today
-    expect(ics).toContain('SUMMARY:Vloertaal · 10 minuten');
+    expect(ics).toContain('SUMMARY:Bram: tijd voor je Nederlands (10 minuten)');
     expect(ics).toContain('URL:https://vloertaal.nl/');
     expect(ics.split('\r\n').every((l) => new TextEncoder().encode(l).length <= 75)).toBe(true);
     expect(reminderIcs('18:00', 'x', new Date(2026, 9, 8, 9, 30))).toContain('DTSTART:20261008T180000');

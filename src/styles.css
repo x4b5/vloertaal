@@ -4010,7 +4010,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
    most on a 360 px phone; it grows (never clips) at large text. */
 .topbar:has(.bram-greet) .brand { margin-inline-end: 0; }
 /* It takes the free room in the row (never pushing the stats onto a new line) but hugs its text. */
-.topbar .bram-greet { flex: 1 1 0; max-width: min(30ch, fit-content); margin-inline: 2px auto; }
+.topbar .bram-greet { flex: 1 1 0; max-width: fit-content; margin-inline: 2px auto; }
+.topbar .bram-greet .bram-say-text { max-width: 30ch; }
 @media (max-width: 300px) {
   .topbar:has(.bram-greet) { flex-wrap: wrap; }
   .topbar .bram-greet { order: 9; flex: 1 1 100%; margin-inline: 0; max-width: none; }

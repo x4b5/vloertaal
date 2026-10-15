@@ -3,7 +3,8 @@
  * every day. The phone's own calendar does the reminding, so nothing is sent anywhere.
  */
 
-export const REMINDER_TITLE = 'Vloertaal · 10 minuten';
+/** Bram, the mascot, says it: calm, one line, the time it takes. */
+export const REMINDER_TITLE = 'Bram: tijd voor je Nederlands (10 minuten)';
 
 /** The three quick choices: before work, in the break, after work. */
 export const REMINDER_TIMES = [
@@ -72,7 +73,7 @@ export function reminderIcs(time: string, appUrl: string, now: Date): string {
     `DTEND:${local(end)}`,
     'RRULE:FREQ=DAILY',
     `SUMMARY:${escapeText(REMINDER_TITLE)}`,
-    `DESCRIPTION:${escapeText(`Oefen 10 minuten Nederlands voor je werk. ${appUrl}`)}`,
+    `DESCRIPTION:${escapeText(`Bram van Vloertaal: oefen 10 minuten Nederlands voor je werk. ${appUrl}`)}`,
     `URL:${appUrl}`,
     'BEGIN:VALARM',
     'ACTION:DISPLAY',
