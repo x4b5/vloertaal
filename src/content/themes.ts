@@ -73,8 +73,9 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     regels: ['r.rechten'],
   },
   'theme.life': {
-    taal: ['u.papers', 'u.health', 'u.money', 'u.travel'],
-    regels: ['r.geld', 'r.digitaal', 'r.meedoen'],
+    // With the regions' units (src/content/regio): only in the path of a learner of that region.
+    taal: ['u.papers', 'u.health', 'u.money', 'u.travel', 'rg.zl.u'],
+    regels: ['r.geld', 'r.digitaal', 'r.meedoen', 'rg.zl.r'],
   },
   'theme.sector': {
     taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.shop'],

@@ -53,8 +53,11 @@ export const trackOfLang = (code: UiCode | null | undefined): Track => (code ===
 /**
  * The track a unit or lesson id belongs to: rules ids start with "r." ("r.pay", "r.l.pay.2"),
  * the language course's with "u." and "l.". Ids never clash, so a lookup by id needs no track.
+ * A region's ids start with "rg.<region>." (src/content/regio): its work-rules unit and everything
+ * in it with "rg.<region>.r" ("rg.zl.r", "rg.zl.r.l.1", "rg.zl.r.l.1.sc1"), the rest is its
+ * language unit ("rg.zl.u", "rg.zl.l.1", "rg.zl.w.grens").
  */
-export const trackOfId = (id: string): Track => (id.startsWith('r.') ? 'regels' : 'taal');
+export const trackOfId = (id: string): Track => (id.startsWith('r.') || /^rg\.[a-z]+\.r(\.|$)/.test(id) ? 'regels' : 'taal');
 
 /**
  * The screen is in Dutch only: no English and no second line under a Dutch label. A hard-coded

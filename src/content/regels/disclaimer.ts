@@ -20,6 +20,12 @@ export const RULES_ABUSE = 'Algemene informatie. Vraag hulp bij een vakbond, het
  */
 export const RULES_CIVIC = 'Algemene informatie. Vraag voor jouw situatie de gemeente of het Juridisch Loket.';
 
+/**
+ * Shown instead of RULES_ADVICE under the rules about working across the border (the regional
+ * module Zuid-Limburg): there the GrensInfoPunt knows the rules of both countries.
+ */
+export const RULES_BORDER = 'Algemene informatie. Vraag voor jouw situatie het GrensInfoPunt of het Juridisch Loket.';
+
 /** The disclaimer of the track (about screen, first rules lesson, certificate). */
 export const RULES_DISCLAIMER = [
   'Vloertaal geeft algemene informatie. Het is geen juridisch advies.',
@@ -82,8 +88,20 @@ export const ruleAdvice: Record<string, 'advice' | 'abuse' | 'civic'> = {
   'r.l.duurzaam.1.ru1': 'advice',
 };
 
+/**
+ * The same for the written rules of the regional modules (src/content/regio, ids "rg.<region>.r.…"):
+ * kept apart, so the list above stays the track's own course. Every 'geschreven' rule of a region
+ * has one (tests/regio.test.ts).
+ */
+export const regionRuleAdvice: Record<string, 'advice' | 'abuse' | 'civic' | 'border'> = {
+  'rg.zl.r.l.1.ru1': 'civic',
+  'rg.zl.r.l.3.ru1': 'border',
+  'rg.zl.r.l.4.ru1': 'advice',
+  'rg.zl.r.l.5.ru1': 'civic',
+};
+
 /** The line to show under a rule step, or undefined for an unwritten rule (a custom). */
 export function ruleAdviceLine(ruleId: string): string | undefined {
-  const kind = ruleAdvice[ruleId];
-  return kind === 'abuse' ? RULES_ABUSE : kind === 'civic' ? RULES_CIVIC : kind === 'advice' ? RULES_ADVICE : undefined;
+  const kind: string | undefined = ruleAdvice[ruleId] as string | undefined ?? regionRuleAdvice[ruleId];
+  return kind === 'abuse' ? RULES_ABUSE : kind === 'civic' ? RULES_CIVIC : kind === 'border' ? RULES_BORDER : kind === 'advice' ? RULES_ADVICE : undefined;
 }

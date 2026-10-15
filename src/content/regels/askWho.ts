@@ -27,6 +27,9 @@ export const ASK_WHO: Record<AskWho, { label: string; emoji: string }> = {
   meldpunt: { label: 'Een meldpunt discriminatie', emoji: '📣' },
   ict: { label: 'De ICT-afdeling', emoji: '💻' },
   bank: { label: 'Je bank', emoji: '🏦' },
+  // The regional modules (docs/regio-zuid-limburg.md).
+  grensinfopunt: { label: 'Het GrensInfoPunt', emoji: '🌍' },
+  woningcorporatie: { label: 'De woningcorporatie', emoji: '🏘️' },
 };
 
 /** The Dutch name of a place to go for help. */

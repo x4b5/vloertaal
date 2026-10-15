@@ -7,6 +7,7 @@ import type { Lesson, Unit } from '../content/types';
 import { type Access, loadAccess, unitAllowed } from './access';
 import { unitDone } from './certificate';
 import { dayKey } from './progress';
+import { regionUnits } from '../content/regio';
 
 /**
  * The home screen ("Route"), one block at a time: the learner works in ONE unit (the current
@@ -36,19 +37,24 @@ export interface RouteInput {
   helpLang?: UiCode | null;
   /** The track; default: the one of helpLang (the Dutch course without one). */
   track?: Track;
+  /** "Waar woon je?" (Progress.region): a region adds its unit to the path (src/content/regio). */
+  region?: string;
 }
 
 /** The track of a route input: given, else the one of its help language. */
 const trackIn = (input: RouteInput): Track => input.track ?? trackOf(input);
 
-/** Every unit in the order the learner meets them: their course, then the other sectors' units. */
-export function routeOrder(sector: SectorChoice | undefined, track: Track = 'taal'): Unit[] {
-  const { main, other } = coursePlan(sector, track);
+/** Every unit in the order the learner meets them: their course, then the other sectors' units.
+ *  With a region (src/content/regio), its unit is in the learner's own course. */
+export function routeOrder(sector: SectorChoice | undefined, track: Track = 'taal', region?: string): Unit[] {
+  const { main, other } = coursePlan(sector, track, region);
   return [...main, ...other];
 }
 
-/** A unit of this track's course (a current block saved in the other track does not count). */
-const findUnit = (id: string | undefined, track: Track) => (id ? courseUnits(track).find((u) => u.id === id) : undefined);
+/** A unit of this track's course (a current block saved in the other track does not count), or of
+ *  the learner's region (a region unit after the region was switched off does not count either). */
+const findUnit = (id: string | undefined, track: Track, region?: string) =>
+  (id ? [...courseUnits(track), ...regionUnits(region, track)].find((u) => u.id === id) : undefined);
 const started = (unit: Unit, completed: Completed) => unit.lessons.some((l) => completed[l.id]);
 
 /**
@@ -59,11 +65,11 @@ const started = (unit: Unit, completed: Completed) => unit.lessons.some((l) => c
  *  - Otherwise (the last block is finished): null, so the home shows the 3 choices.
  */
 function blockAsSaved(input: RouteInput): Unit | null {
-  const { sector, completed, currentUnit } = input;
+  const { sector, completed, currentUnit, region } = input;
   const track = trackIn(input);
-  const chosen = findUnit(currentUnit, track);
+  const chosen = findUnit(currentUnit, track, region);
   if (chosen) return unitDone(chosen, completed) ? null : chosen;
-  const order = routeOrder(sector, track);
+  const order = routeOrder(sector, track, region);
   const busy = order.find((u) => started(u, completed) && !unitDone(u, completed));
   if (busy) return busy;
   if (!courseUnits(track).some((u) => started(u, completed))) return order[0] ?? null;
@@ -89,7 +95,7 @@ export function currentBlock(input: RouteInput, today: Date = new Date(), access
   if (!block || input.pickedUnit === block.id || input.reviewDay !== dayKey(today) || !onlyMixLeft(block, input.completed)) return block;
   const may = access ?? loadAccess() ?? 'full';
   const track = trackIn(input);
-  const next = nextChoices(input.sector, input.completed, undefined, courseUnits(track).length, track)
+  const next = nextChoices(input.sector, input.completed, undefined, courseUnits(track).length + 1, track, input.region)
     .find((u) => u.id !== block.id && !onlyMixLeft(u, input.completed) && unitAllowed(u.id, may));
   return next ?? block;
 }
@@ -111,8 +117,8 @@ export function pickBlock(unitId: string, completed: Completed): { currentUnit: 
  * sectors' units fill up. `include` (the unfinished current block, when the learner asks to choose
  * another topic) is always one of them: it takes the last place when it is not in the list yet.
  */
-export function nextChoices(sector: SectorChoice | undefined, completed: Completed, include?: string, n = CHOICES, track: Track = 'taal'): Unit[] {
-  const open = routeOrder(sector, track).filter((u) => !unitDone(u, completed));
+export function nextChoices(sector: SectorChoice | undefined, completed: Completed, include?: string, n = CHOICES, track: Track = 'taal', region?: string): Unit[] {
+  const open = routeOrder(sector, track, region).filter((u) => !unitDone(u, completed));
   // Weighted by the sector: the sector's first focus unit is recommended first (Safety for
   // warehouse, building and factory work, so it comes in week 1), then the next unit in course
   // order, the sector's own unit and the other basis units that matter most in that work; then
@@ -125,7 +131,7 @@ export function nextChoices(sector: SectorChoice | undefined, completed: Complet
   const fresh = open.find((u) => !onlyMixLeft(u, completed));
   const lead = [...first, ...open.slice(0, 1)].filter((u) => !onlyMixLeft(u, completed));
   const list = [...new Set([...lead, ...(fresh ? [fresh] : []), ...weighted, ...open])].slice(0, n);
-  const extra = findUnit(include, track);
+  const extra = findUnit(include, track, region);
   if (extra && !unitDone(extra, completed) && !list.some((u) => u.id === extra.id)) {
     if (list.length >= n) list.pop();
     list.push(extra);
@@ -134,8 +140,8 @@ export function nextChoices(sector: SectorChoice | undefined, completed: Complet
 }
 
 /** The finished units, in the order the learner meets them (for the "Gedaan" shelf). */
-export function doneBlocks(sector: SectorChoice | undefined, completed: Completed, track: Track = 'taal'): Unit[] {
-  return routeOrder(sector, track).filter((u) => unitDone(u, completed));
+export function doneBlocks(sector: SectorChoice | undefined, completed: Completed, track: Track = 'taal', region?: string): Unit[] {
+  return routeOrder(sector, track, region).filter((u) => unitDone(u, completed));
 }
 
 /** The next lesson to play in a block: its first lesson not done yet (lessons open in order). */
@@ -174,8 +180,8 @@ export function blockAfterLesson(currentUnit: string | undefined, lessonId: stri
  * The home after a finished block: the 2 suggested next blocks (the recommended one first). The
  * third choice on that screen is "Other topic", which opens All topics.
  */
-export function homeSuggestions(sector: SectorChoice | undefined, completed: Completed, track: Track = 'taal'): Unit[] {
-  return nextChoices(sector, completed, undefined, HOME_SUGGESTIONS, track);
+export function homeSuggestions(sector: SectorChoice | undefined, completed: Completed, track: Track = 'taal', region?: string): Unit[] {
+  return nextChoices(sector, completed, undefined, HOME_SUGGESTIONS, track, region);
 }
 
 /**

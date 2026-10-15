@@ -1,6 +1,7 @@
 import type { Gender, UiCode } from '../i18n/types';
 import { rulesTrackOn } from './track';
 import { isSectorId, type SectorChoice } from '../content/sectors';
+import { isRegionChoice, type RegionChoice } from '../content/regio';
 import type { Cards } from './spaced';
 import type { TextSize } from './textSize';
 
@@ -41,6 +42,12 @@ export interface Progress {
   genderAsked?: boolean;
   /** The learner's sector ('none' = not sure yet); undefined = not asked yet (first run). */
   sector?: SectorChoice;
+  /**
+   * "Waar woon je?" in Settings (src/content/regio): a region switches its own lessons on in the
+   * path; 'none' = "Andere plek / zeg ik liever niet". Undefined = not chosen (the same as 'none').
+   * Only on this phone: never sent anywhere, never counted.
+   */
+  region?: RegionChoice;
   xp: number;
   streak: number;
   /** Local date (YYYY-MM-DD) of the last finished lesson. */
@@ -105,6 +112,7 @@ export function loadProgress(): Progress {
       if (saved.theme === undefined) saved.theme = 'light';
       // Older saves have no sector (asked once after the password); drop anything unknown.
       if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
+      if (saved.region !== undefined && !isRegionChoice(saved.region)) delete saved.region;
       // The work-rules track while it is not offered (RULES_TRACK off): the language page again.
       if (saved.helpLang === 'nl' && !rulesTrackOn()) { saved.helpLang = null; saved.onboarded = false; }
       if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;

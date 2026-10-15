@@ -43,7 +43,8 @@ export function toCourseUnits(units: readonly RuleUnit[]): Unit[] {
 export function ruleStepTexts(step: RuleStep): string[] {
   switch (step.kind) {
     case 'scene': return [step.lines.join(' ')];
-    case 'rule': return [step.title, step.body.join(' ')];
+    // A dialect word card has no speaker (the phone's voice reads dialect badly).
+    case 'rule': return step.dialect ? [step.title] : [step.title, step.body.join(' ')];
     case 'truefalse': return [step.statement, step.why];
     case 'whatdo': return [step.situation, ...(step.quote ? [step.quote] : []), ...step.options.filter((o) => o.say).map((o) => o.text), step.why];
     case 'whoask': return [step.question, step.why];

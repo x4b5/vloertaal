@@ -6,6 +6,7 @@ import type { Unit, Word } from '../content/types';
 import type { HelpLanguage } from '../i18n/types';
 import { coursePlan, type SectorChoice } from '../content/sectors';
 import { dayKey, type Progress } from './progress';
+import { isRegionUnitId } from '../content/regio';
 
 /**
  * A certificate per finished unit ("Oefencertificaat"): earned when every lesson of the unit,
@@ -31,11 +32,18 @@ export function earnCertificates<P extends Progress>(p: P, now: Date): P {
   return { ...p, certs: { ...certs, ...Object.fromEntries(fresh.map((u) => [u.id, today])) } };
 }
 
-/** The unit this lesson finished just now (it was not done before, and is now), if any. */
+/**
+ * The unit this lesson finished just now (it was not done before, and is now), if any. A region's
+ * unit (src/content/regio) has no certificate: it does not count, so the certificate is the same
+ * for everyone, wherever they live.
+ */
 export function unitJustDone(before: Record<string, unknown>, after: Record<string, unknown>, lessonId: string): Unit | undefined {
   const unit = findLesson(lessonId)?.unit;
-  return unit && !unitDone(unit, before) && unitDone(unit, after) ? unit : undefined;
+  return unit && !isRegionUnitId(unit.id) && !unitDone(unit, before) && unitDone(unit, after) ? unit : undefined;
 }
+
+/** Can this unit have a certificate? Not a region's unit (see unitJustDone). */
+export const hasCertificate = (unitId: string): boolean => !isRegionUnitId(unitId);
 
 export interface Earned {
   unit: Unit;

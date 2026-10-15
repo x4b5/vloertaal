@@ -16,7 +16,10 @@ export type AskWho =
   | 'leidinggevende' | 'collega' | 'hr' | 'uitzendbureau' | 'bedrijfsarts' | 'vertrouwenspersoon'
   | 'vakbond' | 'juridischloket' | 'huisarts' | 'arbeidsinspectie' | 'uwv' | 'gemeente' | 'politie'
   // The Entree additions (docs/entree-aanvulling.md): stage, digital help, reporting discrimination.
-  | 'school' | 'praktijkopleider' | 'bibliotheek' | 'meldpunt' | 'ict' | 'bank';
+  | 'school' | 'praktijkopleider' | 'bibliotheek' | 'meldpunt' | 'ict' | 'bank'
+  // The regional modules (docs/regio-zuid-limburg.md): advice about living or working across the
+  // border, and a home with social rent. Regional organisations get no AskWho: they are on the map.
+  | 'grensinfopunt' | 'woningcorporatie';
 
 export interface RuleOption {
   /** Stable id within the step ("a", "b", "c"). */
@@ -73,8 +76,13 @@ export type RuleKind = 'geschreven' | 'ongeschreven';
 export type RuleStep =
   /** A short story (3–5 sentences) with a picture idea; read aloud, not graded. */
   | { kind: 'scene'; id: string; who?: RuleCharacter; picture: string; lines: string[] }
-  /** The rule itself, as a card. `key` rules go on the pocket card and the certificate. */
-  | { kind: 'rule'; id: string; emoji: string; title: string; body: string[]; rule: RuleKind; key?: true }
+  /**
+   * The rule itself, as a card. `key` rules go on the pocket card and the certificate.
+   * `dialect`: a word card of a regional dialect, only to recognise (docs/regio-zuid-limburg.md,
+   * les ZL.4): no speaker (the phone's voice reads dialect badly), and in a line "woord = betekenis"
+   * the word is marked as Limburgish (lang "li"), so it is not read as Dutch.
+   */
+  | { kind: 'rule'; id: string; emoji: string; title: string; body: string[]; rule: RuleKind; key?: true; dialect?: true }
   /** "Waar of niet waar?" */
   | { kind: 'truefalse'; id: string; statement: string; answer: boolean; why: string }
   /** "Wat doe je?": 3 options, one best, a why for after the answer. */

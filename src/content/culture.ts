@@ -1,5 +1,6 @@
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
 import { ADVICE_LINE, toolsUnit, workTips } from './work';
+import { allRegionTips } from './regio';
 
 /**
  * "Zo werkt het hier": Dutch workplace customs, norms and values, one per lesson.
@@ -329,7 +330,8 @@ export function tipGender(t: CultureTip): 'f' | 'm' | null {
 }
 
 export function tipForLesson(lessonId: string): CultureTip | undefined {
-  return cultureTips.find((t) => t.lessonId === lessonId);
+  // A region's lessons have their own tips (src/content/regio), kept apart from the course's.
+  return cultureTips.find((t) => t.lessonId === lessonId) ?? allRegionTips.find((t) => t.lessonId === lessonId);
 }
 
 /** Every id in this file that needs a help-language translation (work tips: see workIds in work.ts). */

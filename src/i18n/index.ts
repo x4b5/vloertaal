@@ -30,15 +30,15 @@ const sources = new Map<UiCode, HelpLanguageSource>();
 const packUrls = new Map<UiCode, string>();
 const pending = new Map<UiCode, Promise<void>>();
 
-/** Workplace-culture, work-and-rights, About and learning texts live in their own files; merge them in. */
+/** Workplace-culture, work-and-rights, About, learning and region texts live in their own files; merge them in. */
 function merge(p: LanguagePack): HelpLanguageSource {
   const l = p.base;
   const mix = l.ui.mixLesson ?? uiEn.mixLesson;
   return {
     ...l,
-    ui: { ...l.ui, ...p.culture.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui },
+    ui: { ...l.ui, ...p.culture.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui, ...p.regio.ui },
     gloss: {
-      ...l.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.about.gloss, ...p.learn.gloss,
+      ...l.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.about.gloss, ...p.learn.gloss, ...p.regio.gloss,
       // Every unit's "Mixed review" lesson shares one title.
       ...Object.fromEntries(Object.keys(relatedUnits).map((id) => [mixLessonId(id), isPlural(mix) ? mix.other : mix])),
     },

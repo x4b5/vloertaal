@@ -3,6 +3,7 @@ import { learnedWords, units } from './curriculum';
 import { rulesCourseUnits, setRulesUnits } from './rulesCourse';
 import type { RuleStep } from './regels/types';
 import type { Lesson, Unit } from './types';
+import { allRegionUnits } from './regio';
 
 /**
  * The two courses of the app, one per track (src/lib/track.ts):
@@ -28,23 +29,26 @@ export function allCourseUnits(): Unit[] {
   return [...units, ...rulesCourseUnits()];
 }
 
-/** A lesson and its unit in one track's course. */
+/** A lesson and its unit in one track's course (a region's unit of that track included). */
 export function findLessonIn(track: Track, id: string): { unit: Unit; lesson: Lesson } | undefined {
-  for (const unit of courseUnits(track)) {
+  for (const unit of [...courseUnits(track), ...allRegionUnits(track)]) {
     const lesson = unit.lessons.find((l) => l.id === id);
     if (lesson) return { unit, lesson };
   }
   return undefined;
 }
 
-/** A unit by id, in either course. */
+/**
+ * A unit by id, in either course, or a region's unit (src/content/regio). Region units are not in
+ * allCourseUnits: they never get a certificate (the certificates are the same wherever you live).
+ */
 export function findCourseUnit(id: string | undefined): Unit | undefined {
-  return id ? allCourseUnits().find((u) => u.id === id) : undefined;
+  return id ? [...allCourseUnits(), ...allRegionUnits()].find((u) => u.id === id) : undefined;
 }
 
-/** The unit a lesson belongs to, in either course. */
+/** The unit a lesson belongs to, in either course (or a region's unit). */
 export function unitOfLesson(lessonId: string): Unit | undefined {
-  return allCourseUnits().find((u) => u.lessons.some((l) => l.id === lessonId));
+  return [...allCourseUnits(), ...allRegionUnits()].find((u) => u.lessons.some((l) => l.id === lessonId));
 }
 
 /** A lesson the player can play: words to learn (the Dutch course) or steps (the rules course). */
@@ -65,7 +69,7 @@ export function ruleCards(lesson: Lesson): Extract<RuleStep, { kind: 'rule' }>[]
 export function learnedItems(track: Track, completed: Record<string, unknown>): number {
   if (track === 'taal') return learnedWords(completed).size;
   const ids = new Set<string>();
-  for (const unit of courseUnits('regels')) {
+  for (const unit of [...courseUnits('regels'), ...allRegionUnits('regels')]) {
     for (const lesson of unit.lessons) if (completed[lesson.id]) for (const r of ruleCards(lesson)) ids.add(r.id);
   }
   return ids.size;

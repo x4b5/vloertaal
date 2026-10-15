@@ -17,11 +17,13 @@ import { allForms } from '../src/i18n/types';
 import { emptyProgress, type Progress } from '../src/lib/progress';
 import { routeOrder } from '../src/lib/route';
 import type { Track } from '../src/lib/track';
+import { REGIONS } from '../src/content/regio';
 
-/** Every unit of both courses: the Dutch course and the real work-rules course (not the stub). */
+/** Every unit of both courses: the Dutch course and the real work-rules course (not the stub),
+ *  with the regions' units of each track (src/content/regio: only in a region's path). */
 const COURSE: Record<Track, string[]> = {
-  taal: units.map((u) => u.id),
-  regels: [...rulesUnits, ...sectorRulesUnits].map((u) => u.id),
+  taal: [...units.map((u) => u.id), ...REGIONS.flatMap((r) => (r.taalUnit ? [r.taalUnit.id] : []))],
+  regels: [...[...rulesUnits, ...sectorRulesUnits].map((u) => u.id), ...REGIONS.flatMap((r) => (r.regelsUnitId ? [r.regelsUnitId] : []))],
 };
 const TRACKS: Track[] = ['taal', 'regels'];
 const html = (el: ReactElement) => renderToStaticMarkup(el).replace(/&#x27;/g, '’').replace(/&quot;/g, '"').replace(/&amp;/g, '&');
