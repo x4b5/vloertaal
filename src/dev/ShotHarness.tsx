@@ -195,7 +195,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     const l = getHelpLanguage(lang as LangCode, gender);
     return (
       <>
-        <About lang={l} onCoaches={() => {}} />
+        {/* &nl=1: the sections in Dutch (the "NL" toggle on); &nl=0 off, whatever this phone remembers. */}
+        <About lang={l} onCoaches={() => {}} dutch={q.get('nl') === '1' ? true : q.get('nl') === '0' ? false : undefined} />
         <BottomNav current="about" onTab={() => {}} lang={l} />
       </>
     );

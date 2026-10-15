@@ -42,6 +42,7 @@ import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
 import { pushSubStep } from '../lib/onbHistory';
 import { sayFirstWord } from '../lib/audio';
+import { aboutDutchRemembered, rememberAboutDutch } from '../lib/aboutDutch';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
   /** The help language in use (Settings): the "in review" tag is written in it. */
@@ -346,12 +347,29 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
 
 /** "About Vloertaal" (the "Over" tab): what the app is, who it is for, privacy and voice credits,
  *  and one link to the page for coaches. */
-export function About({ lang, onCoaches }: { lang?: HelpLanguage; /** Opens "Voor begeleiders" (the topic links to send). */ onCoaches?: () => void }) {
+/**
+ * About Vloertaal. The "NL" toggle at the top end shows every section in plain Dutch (lang nl,
+ * left to right also in Arabic, Persian and Dari); pressed again, the help language (or English)
+ * comes back. One tap target; the choice is remembered on this phone.
+ */
+export function About({ lang, onCoaches, dutch: dutchStart }: {
+  lang?: HelpLanguage;
+  /** Opens "Voor begeleiders" (the topic links to send). */
+  onCoaches?: () => void;
+  /** Start with the Dutch on or off (screenshots, tests); default: as remembered on this phone. */
+  dutch?: boolean;
+}) {
   const { recorded } = useVoices();
+  const [dutch, setDutch] = useState(() => dutchStart ?? aboutDutchRemembered());
+  const toggle = () => setDutch((on) => { rememberAboutDutch(!on); return !on; });
+  const nlLabel = said(ui('showDutch', lang));
   return (
     <div className="screen about">
-      <div className="screen-head">
+      <div className="screen-head about-head" dir={lang?.dir}>
         <h1><Bi text={ui('about', lang)} /></h1>
+        <button type="button" className="about-nl" aria-pressed={dutch} aria-label={`NL · ${nlLabel}`} title={nlLabel} onClick={toggle}>
+          <span lang="nl" aria-hidden>NL</span>
+        </button>
       </div>
       <div className="about-hero">
         <LogoMark size={88} />
@@ -359,14 +377,16 @@ export function About({ lang, onCoaches }: { lang?: HelpLanguage; /** Opens "Voo
         <p className="about-tag" lang="nl">Nederlands voor op de werkvloer</p>
       </div>
       {aboutSections.map((s) => (
-        <section key={s.id} className="about-section">
+        <section key={s.id} className={dutch ? 'about-section about-nl-on' : 'about-section'} {...(dutch ? { lang: 'nl', dir: 'ltr' } : {})}>
           <h2>
             {s.who
               ? <span className="about-emoji about-who" aria-hidden><Character who={s.who} crop="head" size={30} /></span>
               : <span className="about-emoji" aria-hidden>{s.emoji}</span>}
-            <Bi text={gloss(s.id, s.title, lang)} />
+            {dutch
+              ? <span className="bi"><span className="bi-en">{s.nl.title}</span></span>
+              : <Bi text={gloss(s.id, s.title, lang)} />}
           </h2>
-          <p><Bi text={gloss(`${s.id}.b`, s.body, lang)} /></p>
+          <p>{dutch ? s.nl.body : <Bi text={gloss(`${s.id}.b`, s.body, lang)} />}</p>
         </section>
       ))}
       {onCoaches && (

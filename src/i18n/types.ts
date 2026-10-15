@@ -321,6 +321,8 @@ export const uiEn = {
      ben Bram." on the first onboarding page (bramIntroHello). */
   bramIntro: 'I’m Bram, your colleague.',
   bramIntroHello: 'Hello, I’m Bram.',
+  /* About: the "NL" toggle that shows every section in plain Dutch (its spoken name). */
+  showDutch: 'Show in Dutch',
   /* G4 b3: a sentence built by ear and a chat the other way round (later units); after a review
      with many words still due. */
   buildListen: 'Listen and make the sentence',

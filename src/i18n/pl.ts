@@ -283,6 +283,7 @@ const lang: HelpLanguageSource = {
     bramReview: 'Dobrze. Powtarzanie pomaga zapamiętać.',
     bramIntro: 'Jestem Bram, twój kolega z pracy.',
     bramIntroHello: 'Cześć, jestem Bram.',
+    showDutch: 'Pokaż po niderlandzku',
     /* G4 b3 */
     buildListen: 'Posłuchaj i ułóż zdanie',
     chatWhichQuestion: 'Które pytanie pasuje do tej odpowiedzi?',

@@ -283,6 +283,7 @@ const lang: HelpLanguageSource = {
     bramReview: 'Добре. Повторението помага да запомниш.',
     bramIntro: 'Аз съм Bram, твоят колега.',
     bramIntroHello: 'Здравей, аз съм Bram.',
+    showDutch: 'Покажи на нидерландски',
     /* G4 b3 */
     buildListen: 'Слушай и състави изречението',
     chatWhichQuestion: 'Кой въпрос подхожда на този отговор?',

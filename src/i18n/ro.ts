@@ -283,6 +283,7 @@ const lang: HelpLanguageSource = {
     bramReview: 'Bine. Repetiția te ajută să ții minte.',
     bramIntro: 'Sunt Bram, colegul tău de muncă.',
     bramIntroHello: 'Bună, sunt Bram.',
+    showDutch: 'Arată în olandeză',
     /* G4 b3 */
     buildListen: 'Ascultă și formează propoziția',
     chatWhichQuestion: 'Ce întrebare se potrivește cu acest răspuns?',

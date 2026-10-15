@@ -283,6 +283,7 @@ const lang: HelpLanguageSource = {
     bramReview: 'Güzel. Tekrar etmek hatırlamaya yardım eder.',
     bramIntro: 'Ben Bram, iş arkadaşınım.',
     bramIntroHello: 'Merhaba, ben Bram.',
+    showDutch: 'Hollandaca göster',
     /* G4 b3 */
     buildListen: 'Dinle ve cümleyi kur',
     chatWhichQuestion: 'Bu cevaba hangi soru uyuyor?',
