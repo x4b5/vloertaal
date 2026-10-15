@@ -246,7 +246,7 @@ const lang: HelpLanguageSource = {
     writingPick: 'اختيار الكلمة',
     settingWriting: 'الكتابة',
     settingKeepLessons: 'حفظ الدروس على هذا الهاتف',
-    settingKeepLessonsHint: 'يُحفَظ الموضوع الحالي على هذا الهاتف، فيعمل أيضًا بدون إنترنت. وتُحذَف المواضيع المنتهية مرة أخرى.',
+    settingKeepLessonsHint: 'يُحفَظ الموضوع الحالي على هذا الهاتف، فيعمل أيضًا بدون إنترنت. وتُحذَف المواضيع المنتهية من الهاتف.',
     otherTopicLink: 'موضوع آخر',
     remindAsk: 'هل نذكّرك كل يوم؟',
     remindYes: 'نعم، بعد العمل',
