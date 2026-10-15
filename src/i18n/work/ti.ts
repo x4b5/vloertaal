@@ -1009,7 +1009,7 @@ const t: CultureTranslation = {
     's.checkout.2': 'እንሆ ምልሰትኩም።',
     's.checkout.3': 'መንነት ወረቐትኩም ክርኢ ይኽእል ዶ?',
     'c.checkout.q': 'ኣብዚ ብካርድ ክኸፍል ይኽእል ዶ?',
-    'c.checkout.a': 'እወ፡ ይከኣል እዩ።',
+    'c.checkout.a': 'እወ፡ ብርግጽ፡ ይከኣል።',
     'u.numbers': 'ግዜ፡ ገንዘብን መለክዒታትን',
     'l.hours': 'ሰዓታትን ግዜን',
     'w.uur': 'ሰዓት (60 ደቒቕ)',

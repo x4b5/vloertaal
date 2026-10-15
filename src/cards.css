@@ -6,6 +6,7 @@
  */
 
 /* The head: a small picture, the title, a sub line; the speaker (if any) at the end. */
+.slip.card { text-align: start; }
 .slip.card .slip-head { align-items: center; gap: 4px 10px; }
 .slip.card-says .slip-head { justify-content: flex-start; }
 .card-pic {
@@ -65,7 +66,7 @@
 .card-werkbon .slip-row { flex-direction: column; align-items: stretch; gap: 0; padding: 6px 6px; }
 .card-werkbon .slip-row dt { font-size: 0.95rem; font-weight: 650; color: var(--muted); }
 .card-werkbon .slip-row.slip-hit dt { color: inherit; }
-.slip.card-werkbon .slip-row dd { text-align: start; font-weight: 650; }
+.slip.card.card-werkbon .slip-row dd { flex: none; text-align: start; font-weight: 650; }
 
 /* The feedback of a sum: "Zo reken je het" and its steps, with a speaker. */
 .rule-fb-sum { display: flex; align-items: flex-start; gap: 10px; margin: 10px 0 0; }

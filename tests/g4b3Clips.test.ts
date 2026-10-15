@@ -16,6 +16,22 @@ const PENDING_RECORDING = new Set([
   // scripts/list-clips.ts). Until the next "Record ElevenLabs voices" run, sayFirstWord keeps
   // playing the recorded "hallo" instead (src/lib/audio.ts).
   BRAM_HELLO,
+  // The units "In de winkel" (u.shop) and "Rekenen: tijd, geld, maten" (u.numbers): recorded on
+  // the next 'Record ElevenLabs voices' run.
+  'Zet de nieuwe producten achteraan.', 'Dit product is over de datum.', 'Is er nog voorraad?',
+  'Waar vind ik de rijst?', 'In gang vier. Ik loop even met u mee.',
+  'Wilt u pinnen of contant betalen?', 'Hier is uw wisselgeld.', 'Mag ik even uw ID zien?',
+  'Kan ik hier pinnen?', 'Ja hoor, dat kan.',
+  'Ik begin om half acht.', 'Ik werk vandaag acht uur.', 'De pauze duurt een half uur.',
+  'Hoe laat ben je klaar?', 'Om kwart over vier.',
+  'Het kost zes euro vijftig.', 'Deze doos weegt tien kilo.', 'Ik heb veertig dozen geteld.',
+  'Hoe lang is die plank?', 'Precies twee meter.',
+  'het schap', 'vakken vullen', 'de voorraad', 'de houdbaarheidsdatum', 'het prijskaartje', 'achteraan',
+  'de klant', 'de kassa', 'het wisselgeld', 'het bonnetje', 'pinnen', 'contant',
+  'het uur', 'de minuut', 'het kwartier', 'een half uur', 'duren', 'optellen',
+  'de euro', 'de cent', 'de kilo', 'de liter', 'de meter', 'tellen',
+  'Wat doe ik met producten over de datum?', 'Zonder ID mag ik dit niet verkopen.',
+  'Half acht? Dus een half uur voor acht?', 'Ik heb het twee keer geteld.',
 ]);
 
 describe('recorded clips (G4 b3)', () => {

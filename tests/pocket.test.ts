@@ -56,7 +56,15 @@ describe('pocket card phrases', () => {
     const voices = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8')).voices as { said: Record<string, string> }[];
     const said = new Set(voices.flatMap((v) => Object.values(v.said)));
     // Changed text, recorded on the next "Record ElevenLabs voices" run (the phone voice says it meanwhile).
-    const pending = new Set(['Het heeft spoed.', 'Wilt u even tegen mijn telefoon praten?']);
+    const pending = new Set([
+      'Het heeft spoed.',
+      'Wilt u even tegen mijn telefoon praten?',
+      // The cards of the new units u.shop and u.numbers: recorded on the next 'Record ElevenLabs voices' run.
+      'Wat doe ik met producten over de datum?', 'Zonder ID mag ik dit niet verkopen.', 'Wilt u pinnen of contant betalen?',
+      'Dit product is over de datum.', 'Hier is uw wisselgeld.',
+      'Half acht? Dus een half uur voor acht?', 'Ik heb het twee keer geteld.', 'Het kost zes euro vijftig.',
+      'Ik werk vandaag acht uur.', 'Deze doos weegt tien kilo.',
+    ]);
     for (const unit of units) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });
 
