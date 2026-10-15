@@ -263,6 +263,7 @@ const lang: HelpLanguageSource = {
     lessonProgress: 'Ders ilerlemesi',
     mainMenu: 'Ana menü',
     spaceKey: 'Boşluk',
+    langNotOnPhone: 'Bu dil henüz telefonunda yok. Dili değiştirmek için internete bağlan.',
   },
   gloss: {
     // Unit: First day at work

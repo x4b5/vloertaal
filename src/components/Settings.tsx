@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { NOT_SURE, sectors, type SectorChoice } from '../content/sectors';
-import { hasGender, said, saidLang, ui, type Bilingual } from '../i18n';
+import { ensureLanguage, hasGender, isLanguageLoaded, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, LangCode } from '../i18n/types';
 import type { Access } from '../lib/access';
 import { setPreferredVoice, speak } from '../lib/audio';
@@ -142,6 +142,27 @@ export function Settings({
   useEffect(() => {
     return () => { if (timer.current) clearTimeout(timer.current); };
   }, []);
+  // Help language offline: a language whose file is not on the phone can't be switched to. The
+  // old language stays and a calm line says why (no splash, no dead end).
+  const [notHere, setNotHere] = useState<LangCode | null>(null);
+  const notHereRef = useRef<HTMLParagraphElement>(null);
+  useEffect(() => {
+    if (!notHere) return;
+    // A language far down the list was tapped: the line comes into view.
+    notHereRef.current?.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' });
+    const back = () => setNotHere(null);
+    window.addEventListener('online', back);
+    return () => window.removeEventListener('online', back);
+  }, [notHere]);
+  const pickLanguage = (code: LangCode | null) => {
+    const take = () => { setNotHere(null); onLang(code); answered(); };
+    if (isLanguageLoaded(code)) { take(); return; }
+    ensureLanguage(code).then(take, () => {
+      // Online after all (a server hiccup): App's own splash retries. Offline: stay here.
+      if (typeof navigator !== 'undefined' && navigator.onLine !== false) take();
+      else setNotHere(code);
+    });
+  };
   /**
    * An answer on a question page: the check shows a moment, then back to the list. A tap on the
    * option that is already chosen does the same: it keeps that choice, shows its check and leads
@@ -231,7 +252,16 @@ export function Settings({
       case 'language':
         return (
           <>
-            <LanguagePicker current={progress.helpLang} onPick={(code) => { onLang(code); answered(); }} showBeta compact lang={lang} />
+            {notHere && (
+              <p className="lang-not-here" role="status" ref={notHereRef}>
+                <GlobeIcon size={22} />
+                <span className="lang-not-here-text">
+                  <span className="lang-not-here-nl" lang="nl">Deze taal staat nog niet op je telefoon. Maak verbinding met internet.</span>
+                  <Bi text={say('langNotOnPhone')} />
+                </span>
+              </p>
+            )}
+            <LanguagePicker current={progress.helpLang} onPick={pickLanguage} showBeta compact lang={lang} />
             {lang && !lang.reviewed && (
               <p className="beta-note">
                 <span className={`beta-chip ${lang.ui.beta ? 'en-support' : ''}`} lang="en">beta</span>

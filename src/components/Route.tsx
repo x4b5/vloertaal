@@ -27,8 +27,9 @@ import { PocketIcon } from './Offline';
  *  - Working in a block: [Start] on its next lesson and [Other topic], plus [Herhaal vandaag]
  *    when words are due. Done lessons are a calm tick, not a button (practising again lives in
  *    "Herhaal vandaag" and All topics).
- *  - A lesson stopped halfway: [Continue] [Start again] [Other topic]. "Herhaal vandaag" waits
- *    until that lesson is finished or started again (it would be a 4th choice).
+ *  - A lesson stopped halfway: [Continue] [Start again] [Other topic]. With words due as well:
+ *    [Herhaal vandaag] [Continue] [Other topic], and "Start again" moves to the topic page (Other
+ *    topic > the topic), so spaced repetition never waits for a half-done lesson.
  *  - The block finished: 2 suggested next blocks and [Other topic]; with words due, only the
  *    recommended one, [Herhaal vandaag] and [Other topic].
  * Tapping a suggestion makes it the current block and shows it with its Start button, so the
@@ -67,9 +68,10 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   const [saves] = useState(() => loadSaves());
   // The block's next lesson, when it was stopped halfway: Continue and Start again.
   const resumeId = block?.lessons.find((l) => homeLessonState(block, l.id, completed, access) === 'now' && saves[l.id]?.review === false)?.id;
-  // "Herhaal vandaag" counts as one of the three: not next to Continue + Start again, and next
-  // to only the recommended topic when the block is finished.
-  const dailyDue = daily?.state === 'due' && !resumeId;
+  // "Herhaal vandaag" counts as one of the three: next to Continue it takes the place of Start
+  // again (that one is then on the topic page), and next to only the recommended topic when the
+  // block is finished.
+  const dailyDue = daily?.state === 'due';
   const choices = block ? [] : homeSuggestions(sector, completed).slice(0, dailyDue ? 1 : 2);
   const ref = useRef<HTMLDivElement>(null);
   const order = routeOrder(sector);
@@ -136,7 +138,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
               {state === 'now' && <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>}
             </>
           );
-          const restart = saved && onRestart && lesson.id === resumeId;
+          const restart = saved && onRestart && lesson.id === resumeId && !dailyDue;
           return (
             <li
               key={lesson.id}
@@ -382,13 +384,16 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
  * and the certificate once the topic is finished) and its lessons. Done lessons can be practised
  * again here; the next one says Start (or Continue when it was stopped halfway).
  */
-export function TopicPage({ unit, progress, lang, access = 'full', onBack, onStart, onPocket, onCertificate, onUpgrade, focus = false }: {
+export function TopicPage({ unit, progress, lang, access = 'full', onBack, onStart, onRestart, onPocket, onCertificate, onUpgrade, focus = false }: {
   unit: Unit;
   progress: Progress;
   lang?: HelpLanguage;
   access?: Access;
   onBack: () => void;
   onStart: (lessonId: string, review: boolean) => void;
+  /** "Start again" for the topic's next lesson when it was stopped halfway (also on the home,
+   *  unless "Herhaal vandaag" took its place there). */
+  onRestart?: (lessonId: string) => void;
   onPocket?: (unitId: string) => void;
   onCertificate?: (unitId: string) => void;
   onUpgrade?: () => void;
@@ -408,6 +413,9 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
     return () => window.clearTimeout(off);
   }, [marked]);
   const u = routeOrder(sector).findIndex((x) => x.id === unit.id);
+  // The next lesson, stopped halfway: "Start again" sits with the topic's tools (at most 3 there).
+  const restartId = onRestart && next && !completed[next.id] && saves[next.id]?.review === false ? next.id : undefined;
+  const restartLesson = restartId ? unit.lessons.find((l) => l.id === restartId) : undefined;
   return (
     <div className="rb-all-screen topic-screen">
       {/* The head names the topic (Dutch small, the help language large); Back goes to All topics. */}
@@ -419,8 +427,15 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
           <BlockProgress unit={unit} completed={completed} lang={lang} />
         </div>
         {allowed ? (
-          (onPocket || (finished && onCertificate)) && (
+          (onPocket || restartLesson || (finished && onCertificate)) && (
             <div className="topic-tools" dir={rtl ? 'rtl' : undefined}>
+              {restartLesson && onRestart && (
+                <RestartButton
+                  lang={lang}
+                  onRestart={() => onRestart(restartLesson.id)}
+                  about={`${u + 1}.${unit.lessons.indexOf(restartLesson) + 1} ${said(gloss(restartLesson.id, restartLesson.title, lang))}`}
+                />
+              )}
               {onPocket && (
                 <button type="button" className="unit-tool pocket-open" onClick={() => onPocket(unit.id)}>
                   <PocketIcon />

@@ -6,7 +6,7 @@ import { tokenize } from './answers';
 import { clipUrl, recordedIndexReady } from './audio';
 import { castVoices, type VoiceRef } from './voices';
 import { persistStorage } from './install';
-import { loadedPackUrls } from '../i18n';
+import { ensureLanguage, isLanguageLoaded, LANG_CODES, loadedPackUrls } from '../i18n';
 import { loadedPicturesUrl } from '../pictures';
 
 /**
@@ -281,6 +281,8 @@ export async function saveUnitOffline(unit: Unit, voices: VoiceRef[]): Promise<v
   let shell: string[] = [];
   let clips: string[] = [];
   try {
+    // Every help language's file comes along (shellUrls lists the loaded ones).
+    if (offlineAuto()) await loadEveryLanguage();
     ({ shell, clips } = await unitFiles(unit, voices));
     const total = shell.length + clips.length;
     jobs.set(unit.id, { status: 'saving', done: 0, total });
@@ -354,6 +356,7 @@ export async function refreshOfflineShell(): Promise<void> {
     return;
   }
   if (!navigator.onLine) return;
+  if (offlineAuto()) await loadEveryLanguage();
   const shell = shellUrls();
   try {
     const cache = await caches.open(OFFLINE_CACHE);
@@ -373,6 +376,36 @@ export async function refreshOfflineShell(): Promise<void> {
 export function warmLanguageCache(): void {
   if (!navigator.serviceWorker?.controller) return;
   for (const url of [...loadedPackUrls(), loadedPicturesUrl()]) if (url) fetch(url).catch(() => {});
+}
+
+let everyLanguage: Promise<void> | null = null;
+
+/**
+ * "Keep lessons on this phone" also keeps all nine help languages' files (about 40 kB zipped
+ * each), so the help language can be switched without internet too. Loads the ones not here yet
+ * (once; again after a failure).
+ */
+export function loadEveryLanguage(): Promise<void> {
+  if (LANG_CODES.every((c) => isLanguageLoaded(c))) return Promise.resolve();
+  everyLanguage ??= Promise.all(LANG_CODES.map((c) => ensureLanguage(c).catch(() => {}))).then(() => { everyLanguage = null; });
+  return everyLanguage;
+}
+
+/** Are all help languages' files in the offline cache's app files (the saved shell)? */
+function languagesKept(): boolean {
+  const shell = new Set(loadSaved().shell);
+  const urls = loadedPackUrls();
+  return LANG_CODES.every((c) => isLanguageLoaded(c)) && urls.length >= LANG_CODES.length && urls.every((u) => shell.has(u));
+}
+
+/**
+ * With the setting on and topics already saved: put every help language's file with them (a
+ * phone that saved its topics before this existed, or switched the setting on later). Online only.
+ */
+export async function keepLanguagesOffline(): Promise<void> {
+  if (!offlineSupported() || !offlineAuto() || !savedUnitIds().length || navigator.onLine === false) return;
+  if (languagesKept()) return;
+  await refreshOfflineShell();
 }
 
 /** Development screenshots only (src/dev/ShotHarness.tsx): show a unit in a fixed state. */

@@ -263,6 +263,7 @@ const lang: HelpLanguageSource = {
     lessonProgress: 'ምዕባለ ትምህርቲ',
     mainMenu: 'ቀንዲ ዝርዝር',
     spaceKey: 'ባዶ ቦታ',
+    langNotOnPhone: { m: 'እዚ ቋንቋ ገና ኣብ ተሌፎንካ የለን። ቋንቋ ንምቕያር ምስ ኢንተርነት ተራኸብ።', f: 'እዚ ቋንቋ ገና ኣብ ተሌፎንኪ የለን። ቋንቋ ንምቕያር ምስ ኢንተርነት ተራኸቢ።' },
   },
   gloss: {
     // Units

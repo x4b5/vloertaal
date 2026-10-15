@@ -263,6 +263,7 @@ const lang: HelpLanguageSource = {
     lessonProgress: 'پیشرفت درس',
     mainMenu: 'منوی اصلی',
     spaceKey: 'فاصله',
+    langNotOnPhone: 'این زبان هنوز روی گوشی شما نیست. برای تغییر زبان، به اینترنت وصل شوید.',
   },
   gloss: {
     // Units

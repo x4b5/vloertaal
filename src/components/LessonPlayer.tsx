@@ -881,7 +881,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
  * The pause sheet behind the ✕: always three big buttons, each with its icon. Keep going is the
  * main one; then "Without sound" (leave out listening, speaking and writing from now on; "Sound
  * on" when it is already off); then Stop. Help (the phrasebook) is one tap further: Stop, then
- * Help in the bottom bar. "Start again" lives on the home, next to Continue.
+ * Help in the bottom bar. "Start again" lives on the home, next to Continue (on the topic page
+ * when "Herhaal vandaag" takes its place on the home): a fourth button here would break the 3.
  * kept: the lesson's place is saved (resume), so the hint says the progress stays.
  */
 function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onStop }: {

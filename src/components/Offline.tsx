@@ -16,6 +16,7 @@ import {
   onOfflineChange,
   removeUnitOffline,
   saveUnitOffline,
+  keepLanguagesOffline,
   setOfflineAuto,
   voicesKey,
 } from '../lib/offline';
@@ -113,6 +114,8 @@ export function useAutoOffline(progress: Progress, access: Access | null) {
       });
       for (const id of plan.release) void removeUnitOffline(id);
       if (plan.save && unit) void saveUnitOffline(unit, voices);
+      // Topics already on the phone: the help languages' files join them (once).
+      else if (!busy.length) void keepLanguagesOffline();
     }, 1500);
     return () => window.clearTimeout(t);
     // `tick` repaints after a save or a removal, so a finished save is not started again.

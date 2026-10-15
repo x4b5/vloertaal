@@ -137,34 +137,92 @@ const firstWord = (s: string) => tokenize(s)[0]?.toLowerCase() ?? '';
  * up to the lesson the dialogue comes from.
  */
 function taughtReplies(dialogue: Dialogue, lesson?: Lesson): ChatLine[] {
-  let at = lesson ? allLessons.findIndex((l) => l.id === lesson.id) : -1;
-  if (at < 0) at = allLessons.findIndex((l) => l.dialogues?.some((d) => d.reply.id === dialogue.reply.id));
+  const at = chatLessonAt(dialogue, lesson);
   if (at < 0) return [];
   const upTo = new Set(allLessons.slice(0, at + 1).map((l) => l.id));
   return teachingLessons.filter((l) => upTo.has(l.id)).flatMap((l) => (l.dialogues ?? []).map((d) => d.reply));
 }
 
+/** Where a chat sits in the course: `lesson` when it is a course lesson, else the lesson the
+ *  dialogue comes from (today's review). -1 when neither. */
+function chatLessonAt(dialogue: Dialogue, lesson?: Lesson): number {
+  const at = lesson ? allLessons.findIndex((l) => l.id === lesson.id) : -1;
+  return at >= 0 ? at : allLessons.findIndex((l) => l.dialogues?.some((d) => d.reply.id === dialogue.reply.id));
+}
+
+/** The replies of the chat's unit (its later lessons too): the same level and topic. */
+function unitReplies(at: number): ChatLine[] {
+  const unit = at >= 0 ? units.find((u) => u.lessons.some((l) => l.id === allLessons[at].id)) : undefined;
+  return (unit?.lessons ?? []).filter((l) => !isMixLesson(l)).flatMap((l) => (l.dialogues ?? []).map((d) => d.reply));
+}
+
+/**
+ * Every reply of the course, best fill-in first: the nearest lessons to `at` (earlier before
+ * later at the same distance), a much longer or shorter line counting as a few lessons further
+ * away. So a fill-in is from about the same level and about as long as the right reply.
+ */
+function nearReplies(at: number, reply: ChatLine): ChatLine[] {
+  const from = Math.max(0, at);
+  const lessons = allLessons.map((l, i) => ({ l, i })).filter(({ l }) => !isMixLesson(l));
+  // Distance in teaching lessons (a mixed review in between does not count).
+  const pos = Math.max(0, lessons.findIndex(({ i }) => i >= from));
+  const scored = lessons.flatMap(({ l }, k) => (l.dialogues ?? []).map((d) => {
+    const steps = k <= pos ? pos - k : k - pos + 0.5;
+    const off = Math.abs(d.reply.nl.length - reply.nl.length) - Math.max(8, Math.round(reply.nl.length * 0.6));
+    return { r: d.reply, score: steps + Math.max(0, off) / 2 };
+  }));
+  return scored.sort((a, b) => a.score - b.score).map(({ r }) => r);
+}
+
+/** Plain text for comparing meanings ("See you tomorrow!" = "see you tomorrow"). */
+const plain = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N} ]+/gu, '').replace(/\s+/g, ' ').trim();
+
+/** About as long as the right reply (a much longer line stands out, and reads above the level). */
+export function similarLength(a: string, b: string): boolean {
+  return Math.abs(a.length - b.length) <= Math.max(8, Math.round(b.length * 0.6));
+}
+
 /**
  * Reply options for a chat: the right reply plus wrong ones that are taught and not confusable.
- * Wrong replies come from the same or earlier lessons first (the rest of the course only when
- * those run out); none starts with the same word as the right reply ("Tot morgen!" next to "Tot
- * straks!"), none answers a question that opens the same way, and no two wrong replies start
- * with the same word either.
+ * Wrong replies come from the learner's level: the same or earlier lessons first, then the rest of
+ * the chat's unit, and only when those run out the nearest lessons of the course. Within each of
+ * these, a reply about as long as the right one comes first (similarLength). None starts with the
+ * same word as the right reply ("Tot morgen!" next to "Tot straks!"), means the same (same
+ * meaning, or near-synonyms), or answers a question that opens the same way, and no two wrong
+ * replies start with the same word either. `avoid`: replies to leave out where others can take
+ * their place (a retry).
  */
-export function chatOptions(dialogue: Dialogue, rng: () => number, n = 3, lesson?: Lesson): ChatLine[] {
+export function chatOptions(dialogue: Dialogue, rng: () => number, n = 3, lesson?: Lesson, avoid?: ReadonlySet<string>): ChatLine[] {
   const { reply } = dialogue;
   const first = firstWord(reply.nl);
   // A reply to a question that starts the same way ("Kun je zaterdag …?") could be right here too.
   const opening = (s: string) => tokenize(s).slice(0, 2).join(' ').toLowerCase();
   const asked = opening(dialogue.prompt.nl);
   const promptOf = (r: ChatLine) => allDialogues.find((d) => d.reply.id === r.id)?.prompt.nl ?? '';
-  const clear = (r: ChatLine) => r.id !== reply.id && r.nl !== reply.nl && firstWord(r.nl) !== first && opening(promptOf(r)) !== asked;
+  const other = (r: ChatLine) => r.id !== reply.id && r.nl !== reply.nl;
+  const clear = (r: ChatLine) =>
+    other(r) && firstWord(r.nl) !== first && opening(promptOf(r)) !== asked && plain(r.en) !== plain(reply.en) && !nearSynonyms(r.nl, reply.nl) && !avoid?.has(r.id);
+  const short = (r: ChatLine) => similarLength(r.nl, reply.nl);
+  const at = chatLessonAt(dialogue, lesson);
+  const taught = taughtReplies(dialogue, lesson).filter(clear);
+  const unit = unitReplies(at).filter(clear);
+  const near = nearReplies(at, reply).filter(clear);
   const picked: ChatLine[] = [];
-  const pools = [taughtReplies(dialogue, lesson).filter(clear), allReplies.filter(clear), allReplies.filter((r) => r.id !== reply.id && r.nl !== reply.nl)];
+  const pools: ChatLine[][] = [
+    shuffle(taught.filter(short), rng),
+    shuffle(unit.filter(short), rng),
+    shuffle(taught, rng),
+    shuffle(unit, rng),
+    // The best fill-ins first (nearReplies is in that order): a few of them, shuffled.
+    shuffle(near.slice(0, 3), rng),
+    near,
+    allReplies.filter((r) => other(r) && !avoid?.has(r.id)),
+    allReplies.filter(other),
+  ];
   for (const pool of pools) {
-    for (const r of shuffle(pool, rng)) {
+    for (const r of pool) {
       if (picked.length >= n - 1) break;
-      if (picked.some((p) => p.nl === r.nl || firstWord(p.nl) === firstWord(r.nl))) continue;
+      if (picked.some((p) => p.id === r.id || p.nl === r.nl || firstWord(p.nl) === firstWord(r.nl) || plain(p.en) === plain(r.en))) continue;
       picked.push(r);
     }
   }
@@ -324,6 +382,33 @@ export function reviewKind(i: number, box = 1, quiet = false, offset = 0): Revie
   return kind === 'listen' || (kind === 'type' && box >= 2) ? 'dutch' : kind === 'type' ? 'meaning' : kind;
 }
 
+/** At most this share of a review's graded items is one kind of question (planReviewKinds). */
+export const REVIEW_KIND_SHARE = 0.3;
+/** Sentences to build in a mixed review (its chats stay, today's review has one of each). */
+export const MIX_MAX_BUILDS = 2;
+
+/**
+ * The kinds of question for the words of a review (mixed review, today's review), as even as can
+ * be: each word gets the least used of its own directions (reviewKind: box 2 and up only the
+ * harder ones, without sound nothing to hear), ties going to its place in the rotation. `taken`:
+ * questions of the review already fixed (after the words), `cap`: at most this many of one kind
+ * where the words' directions leave a choice. Pure and deterministic.
+ */
+export function planReviewKinds(boxes: readonly number[], opts: { quiet?: boolean; offset?: number; cap?: number; taken?: Partial<Record<ReviewKind, number>> } = {}): ReviewKind[] {
+  const count: Record<ReviewKind, number> = { meaning: 0, listen: 0, dutch: 0, type: 0, ...opts.taken };
+  const cap = opts.cap ?? Infinity;
+  return boxes.map((box, i) => {
+    const own = [...new Set([0, 1, 2, 3].map((k) => reviewKind(i + k, box, opts.quiet, opts.offset)))];
+    // Under the cap first, then the least used; the rotation breaks ties.
+    const pick = own.reduce((best, k) => {
+      const score = (x: ReviewKind) => (count[x] >= cap ? 1000 : 0) + count[x];
+      return score(k) < score(best) ? k : best;
+    });
+    count[pick]++;
+    return pick;
+  });
+}
+
 /**
  * "Which one is …?" in a review. A learner who reads Latin letters gets text cards (the meaning
  * shown, pick the Dutch word: the harder direction). A learner who reads only another script
@@ -413,7 +498,7 @@ export function forRetry(ex: Exercise, lesson: Lesson, seed: number): Exercise {
     case 'type':
       return ex.options ? { ...ex, options: freshOptions(ex.options, ex.word.id, (avoid) => options(ex.word, lesson, rng, n(ex.options!), lesson.words, avoid), rng) } : ex;
     case 'chat':
-      return { ...ex, options: freshOptions(ex.options, ex.dialogue.reply.id, () => chatOptions(ex.dialogue, rng, n(ex.options), lesson), rng) };
+      return { ...ex, options: freshOptions(ex.options, ex.dialogue.reply.id, (avoid) => chatOptions(ex.dialogue, rng, n(ex.options), lesson, avoid), rng) };
     case 'situation':
       return { ...ex, options: reorder(ex.options, rng, ex.tip.options.find((o) => o.best)?.id) };
     case 'build':
@@ -440,6 +525,12 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   const out: Exercise[] = [];
 
   const mix = isMixLesson(lesson) || Boolean(lesson.repeat);
+  const daily = lesson.id === DAILY_ID;
+  const tip = tipForLesson(lesson.id);
+  // Sentences to build: one in today's review, two in a mixed review (else 3 builds and 2 chats
+  // made a third of it), all of them in a lesson.
+  const sentences = daily ? lesson.sentences.slice(0, 1) : mix ? lesson.sentences.slice(0, MIX_MAX_BUILDS) : lesson.sentences;
+  const dialogues = daily ? (lesson.dialogues ?? []).slice(0, 1) : lesson.dialogues ?? [];
   if (!opts.review && !mix) {
     const before = wordsBefore(lesson);
     // A quiz put off by one word: its words had no fair wrong option yet (see below).
@@ -464,8 +555,16 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
       // the same recognition question every time; words that were right before get the harder
       // directions (reviewKind).
       const offset = Math.floor(rng() * REVIEW_KINDS.length);
-      shuffle(words, rng).forEach((word, i) => {
-        out.push(reviewExercise(reviewKind(i, lesson.boxes?.[word.id] ?? 1, opts.quiet, offset), word, lesson, rng, opts.nonLatin, opts.quiet));
+      const order = shuffle(words, rng);
+      // The questions after the words (not in today's review): two listening, one "which one
+      // is", one writing; without sound their reading twins.
+      const taken: Partial<Record<ReviewKind, number>> = daily ? {} : opts.quiet ? { meaning: 2, dutch: 2 } : { listen: 2, dutch: 1, type: 1 };
+      const graded = order.length + Object.values(taken).reduce((a, b) => a + (b ?? 0), 0) + 1 + (tip ? 1 : 0) + sentences.length + dialogues.length;
+      // No kind more than about 30% of the graded items (4 of 13 picture cards was too many).
+      const cap = Math.max(2, Math.floor(graded * REVIEW_KIND_SHARE));
+      const kinds = planReviewKinds(order.map((w) => lesson.boxes?.[w.id] ?? 1), { quiet: opts.quiet, offset, cap, taken });
+      order.forEach((word, i) => {
+        out.push(reviewExercise(kinds[i], word, lesson, rng, opts.nonLatin, opts.quiet));
       });
     } else {
       for (const word of sample(words, 3, rng)) {
@@ -475,7 +574,6 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   }
 
   // Language first, then one workplace custom, right after the new words.
-  const tip = tipForLesson(lesson.id);
   if (tip) {
     if (!opts.review) out.push({ kind: 'tip', tip });
     out.push({ kind: 'situation', tip, options: shuffle(tip.options, rng) });
@@ -487,10 +585,9 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // Today's review stays short (about a dozen items): every word once in a rotating kind of
   // question (above), the match board, one sentence to build and one chat. Its words already
   // rotate through listening, picture and writing questions, so the extra ones are left out.
-  if (lesson.id === DAILY_ID) {
-    const sentence = lesson.sentences[0];
-    if (sentence) out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });
-    for (const dialogue of (lesson.dialogues ?? []).slice(0, 1)) {
+  if (daily) {
+    for (const sentence of sentences) out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });
+    for (const dialogue of dialogues) {
       out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
     }
     if (opts.speak && !opts.quiet) return withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);
@@ -507,12 +604,12 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // At most three answers on a screen (the "at most 3" rule).
   out.push(readableDutch(target, lesson, rng, Boolean(opts.nonLatin), Boolean(opts.quiet), false));
 
-  for (const sentence of lesson.sentences) {
+  for (const sentence of sentences) {
     out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });
   }
 
   // Complete the conversation: use the words in a real exchange with a colleague.
-  for (const dialogue of lesson.dialogues ?? []) {
+  for (const dialogue of dialogues) {
     out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
   }
 

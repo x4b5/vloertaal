@@ -263,6 +263,7 @@ const lang: HelpLanguageSource = {
     lessonProgress: 'Поступ уроку',
     mainMenu: 'Головне меню',
     spaceKey: 'Пробіл',
+    langNotOnPhone: 'Цієї мови ще немає на твоєму телефоні. Підключися до інтернету, щоб змінити мову.',
   },
   gloss: {
     // Unit: First day at work

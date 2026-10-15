@@ -446,6 +446,7 @@ export default function App() {
             focus={view.focus}
             onBack={back}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
+            onRestart={(lessonId) => { clearSave(lessonId); go({ name: 'lesson', lessonId, review: false }); }}
             onPocket={(id) => go({ name: 'pocket', unit: id })}
             onCertificate={(id) => go({ name: 'certificate', unit: id })}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}

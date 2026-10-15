@@ -200,6 +200,17 @@ function defineStates(LANG) {
     await tap(p, '.bay-card', 0); await settle(p, 900);
     await tap(p, '.player-top .lesson-close');
   }, { expect: '.pause-sheet .sheet-sound' });
+  // Stopped halfway with words due as well: [Herhaal vandaag] [Continue] [Other topic]; "Start
+  // again" is then on the topic page (Other topic > the topic), next to the pocket card.
+  const dueHome = (p) => realHome(p, { completed: { 'l.hello': { best: 1, times: 1 } }, cards: { 'w.hallo': { box: 1, due: '2000-01-01' }, 'w.ja': { box: 1, due: '2000-01-01' } } });
+  const stopHalfwayDue = async (p) => {
+    await dueHome(p); await tap(p, '.bay-card .bay-start', 0); await settle(p, 900);
+    for (let i = 0; i < 3; i++) { await go(p).catch(() => {}); await settle(p, 500); }
+    await tap(p, '.player-top .lesson-close'); await tap(p, '.sheet-stop'); await settle(p, 900);
+  };
+  add('flow:home-resume-daily', '/', stopHalfwayDue, { expect: '.home3 .daily-due ~ .rb-current .bay-saved' });
+  add('flow:topic-restart', '/', async (p) => { await stopHalfwayDue(p); await tap(p, '.rb-other'); await settle(p); await tap(p, '.topic-row', 0); await settle(p); }, { list: true, expect: '.topic-tools .bay-restart' });
+  add('flow:topic-restart-go', '/', async (p) => { await stopHalfwayDue(p); await tap(p, '.rb-other'); await settle(p); await tap(p, '.topic-row', 0); await settle(p); await tap(p, '.topic-tools .bay-restart'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
   add('flow:help-tab', '/', async (p) => { await realHome(p); await navTab(p, 1); await settle(p); });
   add('flow:settings-tab', '/', async (p) => { await realHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
   add('flow:about-tab', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); });
@@ -232,9 +243,11 @@ function defineStates(LANG) {
   add('route:offline-saved', shot('offline&offline=saved'));
   add('route:offline-saving', shot('offline&offline=saving'));
   add('route:offline-off', shot('offline&offline=off'));
-  // The resume state: [Continue] [Start again] [Other topic] (with words due as well: still 3).
+  // The resume state: [Continue] [Start again] [Other topic]. With words due as well: [Herhaal
+  // vandaag] [Continue] [Other topic], and "Start again" is on the topic page.
   add('route:resume', shot('path&resume=1'), null, { expect: '.bay-restart' });
-  add('route:resume-daily', shot('path&resume=1&daily=due'), null, { expect: '.bay-restart' });
+  add('route:resume-daily', shot('path&resume=1&daily=due'), null, { expect: '.daily-due ~ .rb-current .bay-saved' });
+  add('route:topic-resume', shot('topic&cu=u.firstday&state=mid&resume=1'), null, { list: true, expect: '.topic-tools .bay-restart' });
   // A topic page: the topic's name in the head, at most 3 actions plus its list of lessons.
   add('route:topic', shot('topic&cu=u.firstday&state=mid'), null, { list: true });
   add('route:topic-done', shot('topic&cu=u.firstday&state=shelf'), null, { list: true });

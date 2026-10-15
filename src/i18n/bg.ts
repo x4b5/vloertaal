@@ -263,6 +263,7 @@ const lang: HelpLanguageSource = {
     lessonProgress: 'Напредък в урока',
     mainMenu: 'Главно меню',
     spaceKey: 'Интервал',
+    langNotOnPhone: 'Този език още не е на телефона ти. Свържи се с интернет, за да смениш езика.',
   },
   gloss: {
     // Units

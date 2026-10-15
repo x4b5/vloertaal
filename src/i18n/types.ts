@@ -294,6 +294,8 @@ export const uiEn = {
   sayAloudInstead: 'Say it out loud instead',
   wordsPractised: 'Words practised',
   reviewComplete: 'Review finished!',
+  /* G4 r4: Settings → Help language, offline, a language whose file is not on the phone yet. */
+  langNotOnPhone: 'This language is not on this phone yet. Connect to the internet to switch.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

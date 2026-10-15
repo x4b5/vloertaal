@@ -263,6 +263,7 @@ const lang: HelpLanguageSource = {
     lessonProgress: 'Progresul lecției',
     mainMenu: 'Meniu principal',
     spaceKey: 'Spațiu',
+    langNotOnPhone: 'Această limbă nu este încă pe telefonul tău. Conectează-te la internet ca să schimbi limba.',
   },
   gloss: {
     // Units

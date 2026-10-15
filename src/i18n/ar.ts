@@ -263,6 +263,7 @@ const lang: HelpLanguageSource = {
     lessonProgress: 'تقدّم الدرس',
     mainMenu: 'القائمة الرئيسية',
     spaceKey: 'مسافة',
+    langNotOnPhone: { m: 'هذه اللغة ليست على هاتفك بعد. اتصل بالإنترنت لتغيير اللغة.', f: 'هذه اللغة ليست على هاتفك بعد. اتصلي بالإنترنت لتغيير اللغة.' },
   },
   gloss: {
     // Units

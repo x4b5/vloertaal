@@ -302,7 +302,7 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   if (topic) {
     return (
       <>
-        <TopicPage unit={topic} progress={progress} lang={lang} access={access} onBack={() => setOpen(null)} onStart={() => {}} onPocket={() => {}} onCertificate={() => {}} onUpgrade={() => {}} />
+        <TopicPage unit={topic} progress={progress} lang={lang} access={access} onBack={() => setOpen(null)} onStart={() => {}} onRestart={() => {}} onPocket={() => {}} onCertificate={() => {}} onUpgrade={() => {}} />
         <BottomNav current="route" onTab={() => {}} lang={lang} />
       </>
     );
