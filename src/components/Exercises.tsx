@@ -854,7 +854,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       </div>
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
       {/* In the lesson only the first sentences; the whole text is on "Zo werkt het hier". */}
-      <TipBody text={shortTip(gloss(`${tip.id}.b`, tip.body, lang))} lang={lang} />
+      <TipBody text={shortTip(gloss(`${tip.id}.b`, tip.body, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl)} lang={lang} />
       <div className="tip-say">
         <span className="tip-say-label"><Bi text={ui('sayThis', lang)} /></span>
         <div className="tip-say-row">
@@ -906,16 +906,60 @@ export function firstSentences(text: string, n: number): { head: string; more: b
 /** Sentences of a tip shown in a lesson. */
 export const TIP_SENTENCES = 3;
 
+/** At most this many sentences of a help text whose sentences do not line up with the English. */
+export const TIP_FALLBACK_MAX = 4;
+
+/** The sentences at `idx` (in order), with "…" when some are left out. */
+function pickSentences(parts: readonly string[], idx: readonly number[]): string {
+  const shown = [...new Set(idx)].filter((i) => i >= 0 && i < parts.length).sort((a, b) => a - b);
+  const head = shown.map((i) => parts[i]).join(' ');
+  return shown.length < parts.length ? `${head} …` : head;
+}
+
 /**
- * A tip's text cut to its first TIP_SENTENCES sentences, in English and in the help language
- * each, with "…" when there is more (the full text stays on the "Zo werkt het hier" page).
+ * Which sentences of a help text to show when its sentences do not line up one to one with the
+ * English (another count), so the lead's indices can't be used: the first one, then up to
+ * TIP_FALLBACK_MAX in all, preferring those with a number ("112", "0800-7000") or a key term of
+ * the lead or the phrase ("Juridisch Loket", "Pas op, glad!"); else the first TIP_SENTENCES.
  */
-export function shortTip(text: Bilingual, n = TIP_SENTENCES): Bilingual {
-  const cut = (t: string) => {
-    const { head, more } = firstSentences(t, n);
-    return more ? `${head} …` : head;
+export function fallbackLead(help: readonly string[], keys: readonly string[]): number[] {
+  const terms = [...new Set(keys.map((k) => k.toLowerCase()))];
+  const score = (t: string) => {
+    const low = t.toLowerCase();
+    return terms.filter((k) => low.includes(k)).length + (/\d/.test(t) ? 1 : 0);
   };
-  return { ...text, en: cut(text.en), help: text.help === undefined ? undefined : cut(text.help) };
+  const ranked = help.map((t, i) => ({ i, sc: score(t) })).filter(({ i, sc }) => i > 0 && sc > 0).sort((a, b) => b.sc - a.sc || a.i - b.i);
+  const picked = [0, ...ranked.slice(0, TIP_FALLBACK_MAX - 1).map(({ i }) => i)];
+  for (let i = 1; picked.length < TIP_SENTENCES && i < help.length; i++) if (!picked.includes(i)) picked.push(i);
+  return picked.sort((a, b) => a - b);
+}
+
+/** Words that say what a sentence is about: numbers, names and Dutch terms (written with a capital
+ *  inside a sentence, or with a digit), and the words of the phrase. */
+function keyTerms(enLead: readonly string[], phrase?: string): string[] {
+  const words = (t: string) => t.split(/[\s,;:()"“”«»!?.]+/u).filter(Boolean);
+  const fromEn = enLead.flatMap((t) => words(t).filter((w, k) => /\d/.test(w) || (k > 0 && /^\p{Lu}/u.test(w) && w.length >= 2)));
+  const fromPhrase = phrase ? words(phrase).filter((w) => w.length >= 4) : [];
+  return [...fromEn, ...fromPhrase];
+}
+
+/**
+ * A tip's text for a lesson: its first TIP_SENTENCES sentences, or the tip's `lead` (the
+ * sentences the situation and the phrase need), in English and in the help language each, with
+ * "…" when there is more (the full text stays on the "Zo werkt het hier" page). The lead's
+ * indices are of the English sentences; a help text with another number of sentences gets the
+ * sentences picked by fallbackLead instead.
+ */
+export function shortTip(text: Bilingual, n = TIP_SENTENCES, lead?: readonly number[], phrase?: string): Bilingual {
+  const en = sentences(text.en);
+  const idx = lead ?? Array.from({ length: n }, (_, i) => i);
+  const cut = (parts: readonly string[], at: readonly number[]) => (parts.length <= n && !lead ? parts.join(' ') : pickSentences(parts, at));
+  const help = text.help === undefined ? undefined : (() => {
+    const parts = sentences(text.help);
+    if (!lead || parts.length === en.length) return cut(parts, idx);
+    return pickSentences(parts, fallbackLead(parts, keyTerms(idx.map((i) => en[i] ?? ''), phrase)));
+  })();
+  return { ...text, en: cut(en, idx), help };
 }
 
 /** The tip's text (no "more" button: Continue is the only choice on a tip). */
