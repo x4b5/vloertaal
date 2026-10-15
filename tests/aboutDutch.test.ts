@@ -30,6 +30,24 @@ describe('About in Dutch (the "NL" toggle)', () => {
     expect(mission.body).toMatch(/no ads, no subscription/);
   });
 
+  it('ends with the disclaimer (general information, checked date, where to ask), just before the voices', () => {
+    const ids = aboutSections.map((s) => s.id);
+    expect(ids.slice(-2)).toEqual(['a.disclaimer', 'a.voices']);
+    const d = aboutSections.find((s) => s.id === 'a.disclaimer')!;
+    expect(d.emoji).toBe('⚖️');
+    expect(d.body).toMatch(/general information, not legal advice/);
+    expect(d.body).toMatch(/October 2026/);
+    expect(d.nl.body).toMatch(/oktober 2026/);
+    for (const code of ['ar', 'ti', 'fa', 'prs', 'uk', 'tr', 'pl', 'ro', 'bg']) {
+      for (const g of ['m', 'f'] as const) {
+        const body = getHelpLanguage(code, g).gloss['a.disclaimer.b'];
+        const text = typeof body === 'string' ? body : body?.[g];
+        expect(text, `${code} ${g}`).toContain('Juridisch Loket');
+        expect(text, `${code} ${g}`).toMatch(/2026|۲۰۲۶/);
+      }
+    }
+  });
+
   it('switches every section between the help language and Dutch (lang nl, left to right)', () => {
     const ar = getHelpLanguage('ar', 'f');
     const off = unescape(renderToStaticMarkup(createElement(About, { lang: ar, dutch: false })));

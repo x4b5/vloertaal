@@ -74,6 +74,15 @@ export const aboutSections: AboutSection[] = [
     },
   },
   {
+    // The general disclaimer for the rights-and-rules tips (date: when the texts were last checked).
+    id: 'a.disclaimer', emoji: '⚖️', title: 'Good to know',
+    body: 'The tips in Vloertaal are general information, not legal advice. Rules can change; the texts were checked in October 2026. For your own situation, ask your employer, a union or the Juridisch Loket.',
+    nl: {
+      title: 'Goed om te weten',
+      body: 'De tips in Vloertaal zijn algemene informatie. Het is geen juridisch advies. Regels kunnen veranderen: de teksten zijn gecontroleerd in oktober 2026. Gaat het om jouw situatie? Vraag je werkgever, een vakbond of het Juridisch Loket.',
+    },
+  },
+  {
     id: 'a.voices', emoji: '🔊', title: 'The voices',
     body: 'Every character has their own Dutch voice: Bram speaks with the voice of Thijmen, Henk with Daniel, Amina with Ariël and Jada with Noa. These voices were recorded with ElevenLabs. If a sentence has no recording yet, you hear the voice of your own phone or computer.',
     nl: {

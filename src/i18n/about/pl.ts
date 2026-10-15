@@ -19,6 +19,8 @@ const t: CultureTranslation = {
     'a.who.b': 'Dla każdego, kto dopiero zaczyna pracę w Holandii. Języki pomocy: arabski, tigrinia, perski, dari, ukraiński, turecki, polski, rumuński i bułgarski.',
     'a.free': 'Twoja prywatność',
     'a.free.b': 'Nie potrzebujesz konta. Twoje postępy są zapisywane tylko na tym telefonie albo komputerze. Jeśli to jest włączone, aplikacja anonimowo liczy, jak często robi się lekcje: bez imienia, bez śledzenia. Możesz to wyłączyć w „Ustawieniach”.',
+    'a.disclaimer': 'Dobrze wiedzieć',
+    'a.disclaimer.b': 'Wskazówki w Vloertaal to ogólne informacje, a nie porada prawna. Przepisy mogą się zmieniać; teksty sprawdzono w październiku 2026 roku. Jeśli chodzi o twoją sytuację, zapytaj swojego pracodawcę, związek zawodowy albo Juridisch Loket.',
     'a.voices': 'Głosy',
     'a.voices.b': 'Każda postać ma swój własny niderlandzki głos: Bram mówi głosem Thijmena, Henk głosem Daniela, Amina głosem Ariël, a Jada głosem Noi. Te głosy zostały nagrane za pomocą ElevenLabs. Jeśli zdanie nie ma jeszcze nagrania, słyszysz głos swojego telefonu lub komputera.',
   },
