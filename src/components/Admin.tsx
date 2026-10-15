@@ -16,7 +16,7 @@ const date = (iso: string) =>
 
 /**
  * Hidden page for the app owner (open with #beheer): ElevenLabs credits left this
- * month, written to credits.json by the deploy workflow. Dutch only on purpose.
+ * month, written to credits.json at build time (scripts/fetch-credits.mjs). Dutch only on purpose.
  */
 export function Admin({ onBack }: { onBack: () => void }) {
   const [credits, setCredits] = useState<Credits | null | 'missing'>(null);
@@ -40,8 +40,8 @@ export function Admin({ onBack }: { onBack: () => void }) {
       {credits === null && <p className="muted">Laden…</p>}
       {credits === 'missing' && (
         <div className="warn">
-          <p>Nog geen gegevens. Zet in GitHub onder <em>Settings → Secrets and variables → Actions</em> een geheim
-            met de naam <code>ELEVENLABS_API_KEY</code>. Na de volgende publicatie (of de dagelijkse update)
+          <p>Nog geen gegevens. Zet in Vercel onder <em>Settings → Environment Variables</em> een variabele
+            met de naam <code>ELEVENLABS_API_KEY</code> (alleen voor Production). Na de volgende publicatie
             verschijnt hier het saldo.</p>
         </div>
       )}
@@ -53,7 +53,7 @@ export function Admin({ onBack }: { onBack: () => void }) {
             <div className="bar-fill" style={{ width: `${Math.max(2, pct * 100)}%`, background: pct < 0.15 ? 'var(--red)' : undefined }} />
           </div>
           {credits.resetsAt && <p>Wordt weer aangevuld op <strong>{date(credits.resetsAt)}</strong>.</p>}
-          <p className="muted small">Bijgewerkt op {date(credits.updatedAt)}. Ververst bij elke publicatie en één keer per dag.</p>
+          <p className="muted small">Bijgewerkt op {date(credits.updatedAt)}. Ververst bij elke publicatie.</p>
         </div>
       )}
       <h2>Anoniem meetellen</h2>

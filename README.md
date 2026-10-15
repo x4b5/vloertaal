@@ -2,9 +2,9 @@
 
 **Nederlands voor op de werkvloer — geleerd via Engels, met hulp in je eigen taal.**
 
-Vloertaal is een webapp in de stijl van Duolingo voor mensen die in Nederland (gaan) werken
-in logistiek, land- en tuinbouw, productie of uitzendwerk. Engels is de brugtaal: de app zelf
-is Engels, en onder elke uitleg verschijnt een korte vertaling in de *hulptaal* van de leerling.
+Vloertaal is een gratis webapp, in de stijl van Duolingo, voor mensen die in Nederland (gaan) werken:
+toegankelijk, zonder account en zonder verdienmodel. Je leert Nederlands voor op het werk, met
+uitleg in je eigen *hulptaal*. Zonder hulptaal is Engels de brugtaal.
 
 | Hulptaal | Voor wie |
 |---|---|
@@ -22,17 +22,33 @@ is Engels, en onder elke uitleg verschijnt een korte vertaling in de *hulptaal* 
 
 ## Wat zit erin
 
-- **Lespad** met 6 units / 10 lessen: eerste werkdag, hulp vragen, veiligheid (PBM, gevaar),
-  magazijn, rooster en ziekmelden, de kas. Lessen worden één voor één vrijgespeeld.
-- **7 oefentypen**: nieuw woord (met plaatje en uitspraak), betekenis kiezen, Nederlands woord kiezen,
-  luisteren en kiezen, paren verbinden, zin bouwen met woordtegels, typen wat je hoort.
-- **Toegankelijk**: grote knoppen, plaatjes bij elk woord, alles kan worden voorgelezen (🔊 en 🐢 langzaam),
-  vergevingsgezind bij typen (hoofdletters, lidwoord, één tikfout), rechts-naar-links voor Arabisch/Perzisch/Dari,
-  "kan nu niet luisteren"-knop, `prefers-reduced-motion`, geen account nodig.
-- **Motiverend**: XP, dagelijkse streak 🔥, kroon 👑 bij een foutloze les, geluidjes en feedbackbalk.
-  Fouten komen aan het eind van de les nog één keer terug.
-- **Noodzinnen** 🆘: altijd bereikbaar, ook vóór je lessen hebt gedaan ("Er is een ongeluk!", "Ik begrijp het niet").
-- **Werkt offline** na het eerste bezoek (PWA, installeerbaar op de telefoon). Voortgang staat lokaal op het toestel.
+- **Lespad** met 27 units en 86 lessen (354 woorden, 258 zinnen): eerste werkdag, veiligheid,
+  rooster en ziekmelden, loon, contract, rechten, gezondheid, en een eigen unit per sector
+  (Logistiek, Bouw, Productie, Zorg, Horeca, Schoonmaak).
+- **Oefeningen**: nieuw woord met plaatje en uitspraak, betekenis kiezen, Nederlands woord kiezen,
+  luisteren, paren verbinden, zin bouwen (later ook op het gehoor), typen, gesprekken en spreken.
+  Latere units worden stap voor stap moeilijker.
+- **Herhaal vandaag**: elke dag een korte herhaling van de zwakste woorden, zinnen en gesprekken.
+- **Werkvloer-tips** (59): hoe het hier gaat op het werk, en je rechten, met een verwijzing naar
+  vakbond, Juridisch Loket of FairWork bij uitbuiting.
+- **Bram**, de mascotte met de V op zijn helm: zegt rustig één zin, zonder schuldgevoel en zonder
+  meldingen.
+- **Hulp in je eigen taal**, met mannelijke en vrouwelijke vormen en echte meervouden. Engels
+  verdwijnt zodra je een hulptaal kiest.
+- **Toegankelijk**:
+  - hooguit 3 dingen om op te tikken per scherm;
+  - één vraag per onboardingpagina;
+  - alles kan worden voorgelezen;
+  - werkt rechts-naar-links, in Tigrinya-schrift, met grote letters en zonder geluid.
+- **Echte stemmen** (ElevenLabs, betaald plan); zonder opname leest de telefoonstem voor.
+- **Privacy**:
+  - geen account en geen cookies;
+  - voortgang alleen op het toestel;
+  - alleen een anonieme telling (GoatCounter, respecteert Do Not Track, uit te zetten);
+  - de microfoon slaat niets op.
+- **Offline**: met "Lessen bewaren" staat alles op de telefoon (PWA).
+- **Toegang**: een code van docent, coach of werkgever. Er is een proefles zonder code.
+  `#begeleiders` heeft links per onderwerp voor coaches.
 
 ## Starten
 
@@ -43,39 +59,31 @@ npm test         # unit tests (logica + volledigheid van alle vertalingen)
 npm run build    # productiebuild in dist/
 ```
 
-Bij een push naar `main` draait `.github/workflows/deploy.yml` de tests en publiceert de app op
-GitHub Pages (zet in de repo-instellingen *Pages → Source* op *GitHub Actions*).
+## Publiceren
+
+De app staat op **Vercel** (straks op `vloertaal.nl`). Elke merge naar `main` wordt vanzelf
+gepubliceerd, en elke pull request krijgt een voorbeeldversie. GitHub Actions draait alleen de
+tests (`.github/workflows/deploy.yml`). Nieuwe Nederlandse zinnen neem je op met **Actions →
+Record ElevenLabs voices**. Zie [`docs/livegang.md`](docs/livegang.md) voor het domein en de
+checklist.
 
 ## Structuur
 
 ```
-src/content/curriculum.ts   alle lessen: woorden en zinnen (NL + EN + emoji), met vaste id's
-src/i18n/<taal>.ts          per hulptaal: UI-teksten en vertalingen per id
-src/lib/exercises.ts        stelt een les samen uit woorden en zinnen
-src/lib/answers.ts          antwoordcontrole (normaliseren, tikfouten)
-src/lib/progress.ts         XP, streak, voltooide lessen (localStorage)
-src/lib/audio.ts            Nederlandse spraak via de browser + geluidseffecten
-src/components/             schermen en oefeningen
+src/content/        lessen (curriculum.ts), werkvloer-tips (culture.ts, work.ts), sectoren, Over
+src/i18n/           per hulptaal: UI-teksten (<taal>.ts) en vertalingen per onderdeel (learn/, culture/, work/, about/)
+src/lib/            oefeningen, herhalen, voortgang, audio, telling, toegang
+src/components/     schermen en oefeningen
+scripts/            opnamelijst, iconen, max-3-telscript
+tests/              vitest: logica, volledigheid en vorm van alle vertalingen
 ```
 
-**Les toevoegen:** voeg een `Lesson` toe in `curriculum.ts` en vul in elk `src/i18n/*.ts` de nieuwe id's aan.
+**Les toevoegen:** voeg een `Lesson` toe in `curriculum.ts` en vul in elke hulptaal de nieuwe id's aan.
 `npm test` faalt zolang er in een taal iets ontbreekt.
 
-**Taal toevoegen:** kopieer een bestaand bestand in `src/i18n/`, vertaal, en voeg het toe aan `helpLanguages`
-in `src/i18n/index.ts` (en aan het type `LangCode`).
+## ⚠️ Vertalingen en werkvloer-tips: nakijken vóór gebruik
 
-## ⚠️ Vertalingen moeten nog worden gecontroleerd
-
-Alle hulptaal-teksten zijn met AI geschreven en staan op `reviewed: false` (in de app zichtbaar als **beta**).
-Laat ze nakijken door moedertaalsprekers vóór je de app aan leerlingen geeft. Zie
-[`docs/vertaalcontrole.md`](docs/vertaalcontrole.md) voor de punten die het meest aandacht nodig hebben —
-vooral **Tigrinya** (hele bestand) en **Dari**.
-
-## Ideeën voor de volgende stap
-
-- Sector kiezen bij de start (logistiek, tuinbouw, schoonmaak, bouw, zorg) en het lespad daarop afstemmen.
-- Echte audio-opnames in plaats van browser-spraak (niet elk toestel heeft een Nederlandse stem).
-- Mannelijke/vrouwelijke varianten in de hulptalen ("ik ben nieuw" verschilt per geslacht in o.a. Arabisch, Pools, Oekraïens).
-- Spraakherkenning voor uitspraakoefeningen.
-- Werkgeversdashboard: groepen aanmaken, voortgang van medewerkers zien, eigen bedrijfswoorden toevoegen.
-- Account/sync zodat voortgang niet verloren gaat bij een nieuw toestel.
+Alle hulptaal-teksten zijn met AI geschreven en daarna met een blinde terugvertaling gecontroleerd.
+Ze staan nog op `reviewed: false` (in de app zichtbaar als **beta**). Laat ze nakijken door
+moedertaalsprekers. De open vragen staan in [`docs/vertaalcontrole.md`](docs/vertaalcontrole.md) en de
+xlsx. Laat de werkvloer-tips nakijken door een deskundige: [`docs/juridische-check.md`](docs/juridische-check.md).

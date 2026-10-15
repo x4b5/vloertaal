@@ -6,7 +6,7 @@
   "description": "Dutch for the workplace, learned through English, with help in your own language.",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "node scripts/fetch-credits.mjs && tsc -b && vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "typecheck": "tsc -b",

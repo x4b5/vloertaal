@@ -1,7 +1,11 @@
 {
   "name": "Vloertaal – Dutch for the work floor",
   "short_name": "Vloertaal",
+  "id": "/",
   "start_url": "./",
+  "scope": "./",
+  "lang": "nl",
+  "description": "Free Dutch for the work floor, with help in your own language.",
   "display": "standalone",
   "background_color": "#e7e3dc",
   "theme_color": "#1e2226",
