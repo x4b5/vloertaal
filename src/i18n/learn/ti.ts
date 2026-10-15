@@ -71,7 +71,7 @@ const t: CultureTranslation = {
     'c.kitchen.a.why': "ኣለርጂ ከቢድ እዩ፡ ሸፍ ክፈልጥ ኣለዎ።",
     'c.service.a.why': "ሕሳብ ተሓቲቱ፡ ሓጺር «እወ» ከምኡ ድማ ምኻድ።",
     'c.cleaning.a.why': "ተወዲኡ ድዩ? እዚ መልሲ ዳርጋ ይብል፡ ክንደይ ከም ዝተረፈ ድማ።",
-    'c.cleansafe.a.why': "ርሑስ መሬት ዘንሸራትት እዩ፡ መጠንቀቕታ ይሕግዝ።",
+    'c.cleansafe.a.why': "ዝጠለለ መሬት ዘንሸራትት እዩ፡ መጠንቀቕታ ይሕግዝ።",
   },
 };
 
