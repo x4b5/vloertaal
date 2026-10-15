@@ -179,7 +179,8 @@ describe('the screens show the themes as plain headers (never a button)', () => 
       const m = html(createElement(Route, { progress: nlProgress({ completed: done('r.zoeken'), currentUnit: 'r.contract' }), lang: getHelpLanguage('nl'), onStart: () => {}, onPick: () => {}, onAll: () => {} }));
       const label = m.match(/<p class="rb-theme"[\s\S]*?<\/p>/)![0];
       expect(label).toContain('>Werk vinden<');
-      expect(label).toMatch(/>1 \/ 2</);
+      // Werk vinden: r.zoeken, r.contract and r.stage (Entree addition, docs/entree-aanvulling.md).
+      expect(label).toMatch(/>1 \/ 3</);
       expect(label).not.toContain('lang="en"');
     });
   });

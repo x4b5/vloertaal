@@ -294,7 +294,7 @@ export function DrawnCardView({ card, locked, lang, say, rowClass }: {
   const pic = CARD_PIC[card.type];
   const label = card.sub ? `${card.title} ${card.sub}` : card.title;
   return (
-    <figure className={`slip card card-${card.type}`} aria-label={label} lang="nl">
+    <figure className={`slip card card-${card.type}${say ? ' card-says' : ''}`} aria-label={label} lang="nl">
       <div className="slip-head">
         {pic && <span className="card-pic" aria-hidden>{pic}</span>}
         <span className="slip-title">{card.title}</span>

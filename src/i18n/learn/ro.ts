@@ -72,6 +72,10 @@ const t: CultureTranslation = {
     'c.service.a.why': "Nota de plată cerută: un „da” scurt, și mergi imediat.",
     'c.cleaning.a.why': "Gata? Acest răspuns spune aproape, și câte au rămas.",
     'c.cleansafe.a.why': "O podea udă alunecă: un avertisment ajută.",
+    'c.shelves.a.why': "Întrebarea e „unde”. Răspunsul spune culoarul și oferă ajutor.",
+    'c.checkout.a.why': "Se întreabă dacă se poate plăti cu cardul: un „da” scurt și prietenos.",
+    'c.hours.a.why': "Întrebarea e despre oră. Răspunsul dă o oră.",
+    'c.measures.a.why': "Întrebarea e despre lungime. Răspunsul dă o lungime.",
   },
 };
 

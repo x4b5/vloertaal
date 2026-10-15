@@ -408,12 +408,29 @@ function defineRuleStates() {
   step('model', 'rule&step=model', false);
   step('model-clip', 'rule&step=model&id=r.l.veilig.2.mo1', false);
   step('payslip', 'rule&step=payslip', true);
+  // The drawn card (docs/entree-aanvulling.md): a sum on a rooster (the default), a kassabon, a
+  // pakbon, an etiket and a loonstrook; reading a werkbon. The card is not tappable; its speaker
+  // is not counted.
+  step('card', 'rule&step=card', true);
+  step('card-week', 'rule&step=card&id=r.l.rekenen.1.ca2', true);
+  step('card-kassabon', 'rule&step=card&id=r.l.winkel.3.ca1', true);
+  step('card-pakbon', 'rule&step=card&id=r.l.rekenen.3.ca1', true);
+  step('card-etiket', 'rule&step=card&id=r.l.rekenen.3.ca2', true);
+  step('card-loonstrook', 'rule&step=card&id=r.l.rekenen.2.ca2', true);
+  step('card-werkbon', 'rule&step=card&id=r.l.afronden.1.ca1', true);
+  // The new places to go for help (school, praktijkopleider, ICT-afdeling).
+  step('whoask-stage', 'rule&step=whoask&id=r.l.stage.1.wa1', true);
+  step('whoask-ict', 'rule&step=whoask&id=r.l.digitaal.2.wa1', true);
+  // A written rule with the civic line (Meedoen in Nederland).
+  step('rule-civic', 'rule&step=rule&lesson=r.l.meedoen.1', false);
   add('rule:retry', shot('rule&step=whatdo&retry=1'), null, { expect: '.tag-repeat' });
   add('rule:quiet', shot('rule&step=scene&quiet=1'), null, { expect: '.player-body .exercise' });
   add('rule:quit-dialog', shot('rule&step=whatdo'), async (p) => { await tap(p, '.player-top .lesson-close'); }, { expect: '.pause-sheet .sheet-sound' });
   add('rule:no-voice', shot('rule&step=whatdo&id=r.l.zoeken.3.wd2'), null, { voices: false, expect: '.player-body .exercise' });
   // A real rules lesson from its start, played through the player (built from seed 1).
   add('rule:lesson-start', shot('lesson&lesson=r.l.loon.2'), null, { expect: '.player-body .exercise' });
+  add('rule:lesson-stage', shot('lesson&lesson=r.l.stage.3'), null, { expect: '.player-body .exercise' });
+  add('rule:lesson-meedoen', shot('lesson&lesson=r.l.meedoen.1'), null, { expect: '.player-body .exercise' });
   // M4 around the lessons: "Herhaal vandaag" with rules questions, the home with the rules count
   // and the review due, the result (with the "Onthoud" line and its speaker), the certificate and
   // the pocket card of a rules unit.

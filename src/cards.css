@@ -1,0 +1,74 @@
+/*
+ * The drawn cards of the work-rules track (RuleSteps.tsx DrawnCardView): a rooster, a kassabon,
+ * a pakbon, an etiket, a werkbon, and the loonstrook (the payslip keeps the plain .slip look of
+ * styles.css). Not buttons. Only the theme's tokens, so light and dark both work. Loaded after
+ * styles.css (main.tsx).
+ */
+
+/* The head: a small picture, the title, a sub line; the speaker (if any) at the end. */
+.slip.card .slip-head { align-items: center; gap: 4px 10px; }
+.slip.card-says .slip-head { justify-content: flex-start; }
+.card-pic {
+  flex: none; font-size: 1.35rem; line-height: 1;
+  font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+}
+.card-say { flex: none; margin-inline-start: auto; }
+.slip.card .slip-title { min-width: 0; overflow-wrap: anywhere; }
+
+/* Long values wrap (an address, a work order): never wider than the screen. */
+.slip.card:not(.card-loonstrook) .slip-row dd,
+.slip.card-says .slip-row dd { flex: 0 1 auto; min-width: 0; white-space: normal; text-align: end; overflow-wrap: anywhere; }
+.slip.card .slip-row dt { font-weight: 500; }
+
+/* The row still to work out: a dashed "?" box; after Check it holds the answer, lit up. */
+.card-q {
+  display: inline-grid; place-items: center; min-width: 2.4em; padding: 0 8px;
+  border: 2px dashed var(--edge); border-radius: 6px; font-weight: 800; line-height: 1.35;
+}
+.slip.card .card-todo { margin-top: 2px; border-top: 2px solid var(--edge); font-weight: 700; }
+.slip.card .card-todo.slip-hit dd { animation: card-reveal 0.35s var(--ease-out) both; }
+@keyframes card-reveal { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slip.card .card-todo.slip-hit dd { animation: none; } }
+
+/* Rooster: a coloured head strip, days or times as rows. */
+.card-rooster .slip-head { margin: 0 -4px; padding: 8px; border-radius: 4px 4px 0 0; background: var(--tag-bg); }
+
+/* Kassabon: a narrow receipt, the amounts in a till's type, a torn bottom edge. */
+.slip.card-kassabon {
+  max-width: 320px; margin-inline: auto; padding-bottom: 16px; border-bottom: 0; border-radius: 3px 3px 0 0;
+  box-shadow: 4px 0 0 var(--label-shadow);
+}
+.slip.card-kassabon::after {
+  content: ''; position: absolute; left: -2px; right: -2px; bottom: -9px; height: 10px;
+  background:
+    linear-gradient(135deg, var(--card) 50%, transparent 50%) 0 0 / 12px 10px repeat-x,
+    linear-gradient(-135deg, var(--card) 50%, transparent 50%) 0 0 / 12px 10px repeat-x;
+}
+.card-kassabon .slip-head { justify-content: center; border-bottom-style: dashed; }
+.card-kassabon.card-says .slip-head { justify-content: flex-start; }
+.card-kassabon .slip-row dd { font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; font-size: 1.05em; }
+
+/* Pakbon: a plain form, the counts big. */
+.card-pakbon .slip-row dd { font-size: 1.1em; }
+
+/* Etiket: a rounded label with a thick edge, no perforation; the instruction big. */
+.slip.card-etiket { padding-top: 10px; border-width: 3px; border-radius: 16px; background: var(--tag-bg); }
+.slip.card-etiket::before { display: none; }
+.card-etiket .slip-row { font-size: 1.15rem; }
+
+/* Werkbon: a clipboard (a clip on top); each row's label above its value. */
+.slip.card-werkbon { margin-top: 10px; padding-top: 16px; }
+.slip.card-werkbon::before {
+  left: 50%; right: auto; top: -9px; width: 72px; height: 16px; margin-left: -36px;
+  border: 2px solid var(--edge); border-radius: 6px; background: var(--kraft);
+}
+.card-werkbon .slip-row { flex-direction: column; align-items: stretch; gap: 0; padding: 6px 6px; }
+.card-werkbon .slip-row dt { font-size: 0.95rem; font-weight: 650; color: var(--muted); }
+.card-werkbon .slip-row.slip-hit dt { color: inherit; }
+.slip.card-werkbon .slip-row dd { text-align: start; font-weight: 650; }
+
+/* The feedback of a sum: "Zo reken je het" and its steps, with a speaker. */
+.rule-fb-sum { display: flex; align-items: flex-start; gap: 10px; margin: 10px 0 0; }
+.rule-fb-sum-body { min-width: 0; }
+.rule-fb-sum .feedback-kicker { display: block; margin: 0 0 2px; font-size: 0.95rem; }
+.rule-fb-sum p { margin: 0; font-size: 1.0625rem; font-weight: 600; line-height: 1.4; font-variant-numeric: tabular-nums; }
