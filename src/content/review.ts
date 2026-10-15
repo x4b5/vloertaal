@@ -58,6 +58,8 @@ const relatedWords: Record<string, string[]> = {
   'u.factory': ['w.handschoenen', 'w.doos'],
   'u.horeca': ['w.dweil', 'w.handschoenen'],
   'u.clean': ['w.handschoenen', 'w.kluisje'],
+  'u.shop': ['w.rekening', 'w.doos'],
+  'u.numbers': ['w.pauze', 'w.uurloon'],
 };
 
 export const MIX_TITLE = 'Mixed review';
