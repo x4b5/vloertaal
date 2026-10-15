@@ -4,6 +4,7 @@ import { BramSays } from './BramSays';
 import { Character } from './Characters';
 import { resultLineFor } from '../lib/greeting';
 import { aboutRules, aboutSections, CONTACT_EMAIL } from '../content/about';
+import { LAST_UPDATE, updateDate } from '../content/updates';
 import { cultureTips } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
@@ -501,8 +502,22 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
           ))}
         </ul>
       )}
+      <p className="about-updated muted small"><Bi text={lastUpdatedText(lang)} /></p>
     </div>
   );
+}
+
+/** Locale for a date in a help language (Dari: Afghan Persian). */
+const DATE_LOCALE: Record<string, string> = { prs: 'fa-AF', nl: 'nl-NL' };
+
+/** "Last updated: 15 October 2026", each line with the date in its own language. */
+function lastUpdatedText(lang?: HelpLanguage): Bilingual {
+  const t = ui('lastUpdated', lang);
+  return {
+    ...t,
+    en: t.en.replace('{date}', updateDate(LAST_UPDATE, 'en-GB')),
+    help: t.help?.replace('{date}', updateDate(LAST_UPDATE, lang ? DATE_LOCALE[lang.code] ?? lang.code : 'nl-NL')),
+  };
 }
 
 export function Phrasebook({ lang, onBack }: { lang?: HelpLanguage; onBack: () => void }) {

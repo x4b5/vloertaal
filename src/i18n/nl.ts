@@ -305,6 +305,7 @@ export const uiNl: Record<UiKey, UiText> = {
   bramIntro: 'Ik ben Bram. Ik help je op weg.', // regels: a colleague who knows how work goes here
   bramIntroHello: 'Hallo, ik ben Bram.',
   showDutch: 'Toon in het Nederlands',
+  lastUpdated: 'Laatst bijgewerkt: {date}',
   buildListen: 'Luister en maak de zin',
   chatWhichQuestion: 'Welke vraag hoort bij dit antwoord?',
   reviewWaiting: 'Er wachten nog {n} vragen. Die komen de komende dagen terug.', // regels

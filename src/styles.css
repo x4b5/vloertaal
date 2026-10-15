@@ -4329,3 +4329,6 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .max3-setting .no-voice-note { margin-top: 16px; }
 /* The work-rules track's onboarding question (Waar werk je?): one Dutch line, at the main line's size. */
 .sector-title .sector-title-solo .bi-en { font-size: 1.45rem; font-weight: 650; color: var(--ink); }
+
+/* Over: the date of the newest update (src/content/updates.ts); plain text, not a button. */
+.about-updated { margin: 8px 0 24px; text-align: center; }

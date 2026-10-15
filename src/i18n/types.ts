@@ -323,6 +323,8 @@ export const uiEn = {
   bramIntroHello: 'Hello, I’m Bram.',
   /* About: the "NL" toggle that shows every section in plain Dutch (its spoken name). */
   showDutch: 'Show in Dutch',
+  /** Bottom of Over: the date of the newest entry in src/content/updates.ts. */
+  lastUpdated: 'Last updated: {date}',
   /* G4 b3: a sentence built by ear and a chat the other way round (later units); after a review
      with many words still due. */
   buildListen: 'Listen and make the sentence',

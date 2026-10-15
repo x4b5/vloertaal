@@ -284,6 +284,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'Sunt Bram, colegul tău de muncă.',
     bramIntroHello: 'Bună, sunt Bram.',
     showDutch: 'Arată în olandeză',
+    lastUpdated: 'Ultima actualizare: {date}',
     /* G4 b3 */
     buildListen: 'Ascultă și formează propoziția',
     chatWhichQuestion: 'Ce întrebare se potrivește cu acest răspuns?',
