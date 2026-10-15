@@ -38,7 +38,7 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
       </div>
       <p className="muted small">
         Stuur een leerling een link naar een onderwerp. Met de link opent Vloertaal meteen bij dat onderwerp.
-        Elk onderwerp kan bij de eerste les beginnen. Een nieuwe gebruiker kiest eerst nog een taal en vult het wachtwoord in.
+        Elk onderwerp kan bij de eerste les beginnen. Een nieuwe gebruiker kiest eerst nog een taal en vult de code in.
       </p>
       <ul className="coach-links coach-list">
         {units.map((unit) => (
