@@ -76,7 +76,7 @@ const lang: HelpLanguageSource = {
     unlockFull: 'Отключи пълната версия',
     unlockHint: 'Сега е отворен само първият раздел. Въведи паролата за всички уроци.',
     password: 'Парола',
-    enterPassword: 'Въведи паролата',
+    enterPassword: 'Въведи кода',
     wrongPassword: 'Паролата не е вярна. Опитай пак.',
     unlock: 'Отключи',
     sector: 'Твоята работа',

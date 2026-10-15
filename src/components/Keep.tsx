@@ -183,7 +183,14 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
  * work (one tappable: the field). The time is added once it is chosen: on a touch phone when
  * the phone's time picker sets it, with a mouse and keyboard on Enter or on leaving the field.
  */
-function OwnTime({ lang, onTime }: { lang?: HelpLanguage; onTime: (time: string) => void }) {
+export function OwnTime({ lang, onTime, card = false, current }: {
+  lang?: HelpLanguage;
+  onTime: (time: string) => void;
+  /** As a choice card (Settings → reminder), next to the max3 time cards. */
+  card?: boolean;
+  /** The reminder's own time already in the calendar (Settings): shown in the field, with the check. */
+  current?: string | null;
+}) {
   const input = useRef<HTMLInputElement>(null);
   const done = useRef(false);
   const commit = () => {
@@ -203,6 +210,34 @@ function OwnTime({ lang, onTime }: { lang?: HelpLanguage; onTime: (time: string)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const rtl = lang?.dir === 'rtl';
+  const field = (
+    <input
+      ref={input}
+      type="time"
+      className="keep3-own-input"
+      dir="ltr"
+      defaultValue={current ?? undefined}
+      aria-label={`${REMIND_OWN.nl} · ${said(ui(REMIND_OWN.key, lang))}`}
+      onBlur={commit}
+      onKeyDown={(e) => { if (e.key === 'Enter') commit(); }}
+    />
+  );
+  if (card) {
+    return (
+      <div className="max3-cards set-own-cards" dir={rtl ? 'rtl' : undefined}>
+        <div className="max3-card-wrap">
+          <label className={`max3-card set-own ${current ? 'picked' : ''}`}>
+            <span className="max3-pic" aria-hidden><ClockGlyph /></span>
+            <span className="max3-names">
+              <Bi className="max3-help" text={ui(REMIND_OWN.key, lang)} />
+              <span className="max3-nl" lang="nl">{REMIND_OWN.nl}</span>
+            </span>
+            {field}
+          </label>
+        </div>
+      </div>
+    );
+  }
   return (
     <label className="keep3-time-btn keep3-own" dir={rtl ? 'rtl' : undefined}>
       <ClockGlyph />
@@ -210,15 +245,7 @@ function OwnTime({ lang, onTime }: { lang?: HelpLanguage; onTime: (time: string)
         <Bi className="keep3-btn-gloss" text={ui(REMIND_OWN.key, lang)} />
         <span className="keep3-btn-nl" lang="nl" dir="ltr">{REMIND_OWN.nl}</span>
       </span>
-      <input
-        ref={input}
-        type="time"
-        className="keep3-own-input"
-        dir="ltr"
-        aria-label={`${REMIND_OWN.nl} · ${said(ui(REMIND_OWN.key, lang))}`}
-        onBlur={commit}
-        onKeyDown={(e) => { if (e.key === 'Enter') commit(); }}
-      />
+      {field}
     </label>
   );
 }

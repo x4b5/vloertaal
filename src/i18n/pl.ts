@@ -76,7 +76,7 @@ const lang: HelpLanguageSource = {
     unlockFull: 'Odblokuj pełną wersję',
     unlockHint: 'Teraz otwarty jest tylko pierwszy dział. Wpisz hasło, aby mieć wszystkie lekcje.',
     password: 'Hasło',
-    enterPassword: 'Wpisz hasło',
+    enterPassword: 'Wpisz kod',
     wrongPassword: 'Hasło jest nieprawidłowe. Spróbuj jeszcze raz.',
     unlock: 'Odblokuj',
     sector: 'Twoja praca',

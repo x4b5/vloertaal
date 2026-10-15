@@ -17,7 +17,7 @@ import { offersTryLesson, onboardingStep, previousStep, stepIndex, trialDone, tr
 import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
-import { Milestone, StreakStopped } from './components/Milestone';
+import { KeepScreen, Milestone, StreakStopped, keepOffered } from './components/Milestone';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
@@ -34,7 +34,7 @@ import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certif
 import { count, countOpen } from './lib/count';
 import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
-import { applyEnglish } from './lib/english';
+import { applyEnglish, englishLangFor } from './lib/english';
 import { PocketCardScreen } from './components/PocketCard';
 
 type View =
@@ -51,6 +51,8 @@ type View =
   /** A unit's pocket card ("Spiekkaartje"): its five most useful phrases. */
   | { name: 'pocket'; unit: string; streakUp?: number }
   | { name: 'streak'; streak: number }
+  /** The reminder and home-screen offer, once, at the end of the first lesson with the code (G4 r5). */
+  | { name: 'keep' }
   | { name: 'words' }
   /** The emergency phrases. streakUp / cert: opened from the first lesson's result, so the
    *  certificate or the streak milestone still follows. */
@@ -345,7 +347,9 @@ export default function App() {
   const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);
-  useEffect(() => { applyEnglish(progress.helpLang); }, [progress.helpLang]);
+  // Also on `onboarded`: Back to the language page clears the setting (English shows there), and
+  // picking the same language again must hide the English again, though helpLang did not change.
+  useEffect(() => { applyEnglish(englishLangFor(progress.helpLang, progress.onboarded)); }, [progress.helpLang, progress.onboarded]);
   useEffect(() => { window.scrollTo(0, 0); }, [view.name]);
   // A preview never plays a later unit (e.g. via Back/Forward into an old entry): go home.
   useEffect(() => {
@@ -387,6 +391,17 @@ export default function App() {
   /** "Try one lesson first": lesson 1.1, its result, then the password page again. */
   const startTrial = () => { setTrial(true); go({ name: 'lesson', lessonId: TRY_LESSON_ID, review: false }); };
   const endTrial = () => { setTrial(false); back(); };
+  /** Set when a lesson is finished with the code and the reminder offer was never shown. The
+   *  streak-1 milestone offers it on day 1, but a learner who tried lesson 1.1 first already has
+   *  that day's streak: for them it comes at the end of the first lesson with the code. */
+  const keepDue = useRef(false);
+  // Left the screens after a lesson another way (the phone's Back): offered after the next one.
+  useEffect(() => { if (['home', 'topic', 'all', 'settings', 'words', 'tips', 'about'].includes(view.name)) keepDue.current = false; }, [view.name]);
+  /** The end of the screens after a lesson (result, certificate, milestone): home, or the offer. */
+  const afterLesson = () => {
+    if (keepDue.current && !keepOffered()) { keepDue.current = false; replace({ name: 'keep' }); }
+    else { keepDue.current = false; back(); }
+  };
   const inTrial = trial && !access && (view.name === 'lesson' || view.name === 'result');
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
 
@@ -461,6 +476,7 @@ export default function App() {
         const phrases = !daily && !inTrial && !progress.phrasesShown && Object.keys(progress.completed).every(trialLessonAllowed);
         if (phrases) next.phrasesShown = true;
         setProgress(next);
+        keepDue.current = Boolean(access) && !inTrial && !keepOffered();
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
         const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId);
         const dims = { lang: progress.helpLang, sector: progress.sector };
@@ -517,7 +533,7 @@ export default function App() {
           kind={view.kind}
           next={view.next ? nextTitle(view.next, lang) : undefined}
           lang={lang}
-          onDone={() => (inTrial ? endTrial() : view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}
+          onDone={() => (inTrial ? endTrial() : view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())}
           onPhrases={view.phrases && !inTrial ? () => replace({ name: 'phrasebook', streakUp: view.streakUp, cert: view.cert }) : undefined}
         />
       );
@@ -526,19 +542,21 @@ export default function App() {
         <Milestone
           streak={view.streak}
           lang={lang}
-          onDone={back}
+          onDone={afterLesson}
           days={workWeek(progress, new Date())}
           best={bestStreak(progress)}
           freezes={progress.freezes ?? 0}
         />
       );
+    case 'keep':
+      return <KeepScreen lang={lang} onDone={back} />;
     case 'cert-earned':
     case 'certificate': {
       const unit = findUnit(view.unit);
       if (!unit) return null;
       const day = progress.certs?.[unit.id] ?? dayKey(new Date());
       // After "Certificaat behaald", the day-streak milestone still follows (once per day).
-      const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back());
+      const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
       return view.name === 'cert-earned' ? (
         <CertEarned unit={unit} day={day} lang={lang} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
           onPocket={() => replace({ name: 'pocket', unit: unit.id, streakUp: view.streakUp })} />
@@ -549,7 +567,7 @@ export default function App() {
     case 'pocket': {
       const unit = findUnit(view.unit);
       // From "Certificaat behaald": the day-streak milestone still follows.
-      return unit ? <PocketCardScreen unit={unit} lang={lang} onBack={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())} /> : null;
+      return unit ? <PocketCardScreen unit={unit} lang={lang} onBack={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())} /> : null;
     }
     case 'all':
       return (
@@ -597,7 +615,7 @@ export default function App() {
       return (
         <Phrasebook
           lang={lang}
-          onBack={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}
+          onBack={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())}
         />
       );
     case 'settings': {

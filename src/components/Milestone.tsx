@@ -61,7 +61,8 @@ const INTL_LOCALE: Partial<Record<string, string>> = { prs: 'fa-AF' };
  * (Chrome has none for Tigrinya; Dari falls back to the Persian letters it shares).
  */
 const FALLBACK_DAYS: Partial<Record<string, string[]>> = {
-  ti: ['ሰ', 'ሰ', 'ረ', 'ሓ', 'ዓ', 'ቀ', 'ሰ'],
+  // Two letters: one letter would give ሰ three times (Monday, Tuesday, Sunday).
+  ti: ['ሰኑ', 'ሰሉ', 'ረቡ', 'ሓሙ', 'ዓር', 'ቀዳ', 'ሰን'],
   prs: ['د', 'س', 'چ', 'پ', 'ج', 'ش', 'ی'],
 };
 
@@ -128,7 +129,7 @@ export function WeekRow({ days, lang }: {
 
 /** The reminder and home-screen cards are offered once, after the first day's milestone. */
 const KEEP_OFFERED = 'vloertaal.keepOffered';
-function keepOffered(): boolean {
+export function keepOffered(): boolean {
   try { return localStorage.getItem(KEEP_OFFERED) === '1'; } catch { return false; }
 }
 function markKeepOffered() {
@@ -154,10 +155,11 @@ function ContinueButton({ lang, onClick }: { lang?: HelpLanguage; onClick: () =>
 }
 
 /**
- * After the first day's milestone, once: the reminder and the home-screen offer, a few small
+ * After the first day's milestone, once (or, for a learner who tried lesson 1.1 before the code,
+ * after the first lesson finished with the code: App.tsx): the reminder and the home-screen offer, a few small
  * pages with at most 3 choices each (KeepFlow in Keep.tsx; both also in Settings).
  */
-function KeepScreen({ lang, onDone }: { lang?: HelpLanguage; onDone: () => void }) {
+export function KeepScreen({ lang, onDone }: { lang?: HelpLanguage; onDone: () => void }) {
   useEffect(() => { markKeepOffered(); window.scrollTo(0, 0); }, []);
   return <KeepFlow lang={lang} onDone={onDone} />;
 }

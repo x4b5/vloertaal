@@ -363,7 +363,7 @@ function defineStates(LANG) {
   add('settings:writing-ar', shot('settings&page=writing', 'ar'));
   add('settings:install', shot('settings&page=install&install=prompt'));
   add('settings:unlock', shot('settings&page=unlock&access=preview'));
-  add('settings:reminder-added', shot('settings&page=reminder'), async (p) => { await tap(p, '.max3-card', 2); });
+  add('settings:reminder-added', shot('settings&page=reminder'), async (p) => { await tap(p, '.max3-card', 1); });
   add('tab:help', shot('words'));
   add('tab:about', shot('about'));
   add('screen:coaches', shot('coaches'), null, { list: true });

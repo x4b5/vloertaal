@@ -37,7 +37,7 @@ export const uiEn = {
   unlockFull: 'Unlock the full version',
   unlockHint: 'Only the first unit is open now. Enter the password for all lessons.',
   password: 'Password',
-  enterPassword: 'Enter the password',
+  enterPassword: 'Enter the code',
   wrongPassword: 'That password is not right. Try again.',
   unlock: 'Unlock',
   check: 'Check',

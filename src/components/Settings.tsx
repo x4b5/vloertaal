@@ -29,7 +29,7 @@ import {
   AlertIcon, AutoThemeIcon, BackIcon, CalendarIcon, CheckIcon, ChevronIcon, CloseIcon, CrateIcon, GlobeIcon, KeyboardIcon,
   LettersIcon, LockIcon, MoonIcon, PencilIcon, RouteIcon, SpeakerIcon, SpeakerOffIcon, SunIcon,
 } from './Icons';
-import { BackupCard, InstallCard } from './Keep';
+import { BackupCard, InstallCard, OwnTime } from './Keep';
 import { LogoMark } from './Logo';
 import { LanguagePicker } from './Screens';
 import { SectorCards, SectorGroupCards, SectorIcon } from './Sector';
@@ -435,10 +435,12 @@ export function Settings({
 }
 
 /**
- * "Remind me every day": the three times; a tap puts that daily reminder in the phone's calendar,
- * shows "added" a moment and leads back. The time already in the calendar carries the check, and a
- * tap on it only leads back (no second, identical reminder).
+ * "Remind me every day": before work, after work and "Kies zelf" (the phone's own time field, for
+ * night and shift work; G4 r5: 3 tappables). A tap or a chosen time puts that daily reminder in the
+ * phone's calendar, shows "added" a moment and leads back. The time already in the calendar carries
+ * the check, and choosing it again only leads back (no second, identical reminder).
  */
+const SETTINGS_TIMES = REMINDER_TIMES.filter((t) => t.time !== '12:00');
 function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: boolean) => void }) {
   const [current] = useState<string | null>(reminderTime);
   const [saved, setSaved] = useState<string | null>(null);
@@ -452,19 +454,22 @@ function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: 
     setSaved(time);
     onDone(adds);
   };
+  const shown = saved ?? current;
+  const own = shown && !SETTINGS_TIMES.some((t) => t.time === shown) ? shown : null;
   return (
     <>
       <ChoiceCards
         label={said(ui('remindTitle', lang))}
-        current={saved ?? current}
+        current={shown}
         onPick={add}
-        options={REMINDER_TIMES.map((t) => ({
+        options={SETTINGS_TIMES.map((t) => ({
           id: t.time,
           nl: t.nl,
           text: ui(t.key, lang),
           picture: <span className="set-time">{t.time}</span>,
         }))}
       />
+      <OwnTime card lang={lang} current={own} onTime={add} />
       <p className="max3-hint" role="status"><Bi text={ui(saved && reminderTapAdds(saved, current) ? 'remindAdded' : 'remindHint', lang)} /></p>
     </>
   );

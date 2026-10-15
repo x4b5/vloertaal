@@ -76,7 +76,7 @@ const lang: HelpLanguageSource = {
     unlockFull: 'نسخهٔ کامل را باز کنید',
     unlockHint: 'حالا فقط بخش اول باز است. برای همه درس‌ها رمز را وارد کنید.',
     password: 'رمز',
-    enterPassword: 'رمز را وارد کنید',
+    enterPassword: 'کد را وارد کنید',
     wrongPassword: 'رمز درست نیست. دوباره کوشش کنید.',
     unlock: 'باز کنید',
     sector: 'کار شما',

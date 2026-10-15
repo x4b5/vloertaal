@@ -3941,3 +3941,38 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   .onb-lang-list .lang-btn:not(.sector-btn, .gender-btn) .lang-native:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: 1.25rem; }
   .onb-lang-list .lang-en { font-size: 0.8rem; }
 }
+
+/* ---- G4 r5 ---- */
+/* Answer cards (listen, pick, chat) and the feedback card: the help-language meaning is the line
+   the learner reads (help LARGE), as on the match and meaning cards (G4 r4): at least 17 px, more
+   for the Ethiopic, Arabic and Persian scripts. Long meanings wrap inside the card. */
+.player-body .choice .choice-gloss.bi-swap > .bi-en,
+.player-body .chat-hint .bi-swap > .bi-en,
+.player-foot .feedback-kicker .bi-swap > .bi-en,
+.player-foot .feedback-pair > .bi-help:not([lang='en']),
+.player-foot .feedback-pair > .pair-gloss,
+.player-foot .feedback-why > .bi-help:not([lang='en']) {
+  --help-size: max(17px, 1rem);
+  font-size: max(17px, 1.06rem); line-height: 1.25; overflow-wrap: break-word; hyphens: manual;
+}
+.player-body .choice .choice-gloss.bi-swap > .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']),
+.player-body .chat-hint .bi-swap > .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']),
+.player-foot .feedback-kicker .bi-swap > .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']),
+.player-foot :is(.feedback-pair, .feedback-why) > :is(.bi-help, .pair-gloss):is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) {
+  --help-size: max(19px, 1.12rem);
+  font-size: max(19px, 1.18rem); line-height: 1.32;
+}
+/* The path card: its subtitle (the Dutch title, or the English with English on) and the lesson
+   rows under it at least 17 px. */
+.rb-sub { font-size: max(17px, 0.92rem); }
+.rb-lessons :is(.bay-done, .bay-locked) .bay-title { font-size: max(17px, 0.98rem); }
+/* Settings → Reminder: 07:00, 18:00 and "Kies zelf" (the phone's time field) as one column of
+   cards; the time in its pill never clipped at extra large text. */
+.max3-cards:has(+ .set-own-cards) { margin-bottom: 10px; }
+.set-own-cards { margin-top: 0; }
+.set-own { cursor: pointer; }
+.set-own .keep3-own-input { flex: none; width: 6.4em; min-width: 0; font-size: 1.05rem; padding-inline: 6px; }
+.max3-pic:has(> .set-time) { width: auto; min-width: 56px; padding-inline: 8px; }
+:root[data-text='xl'] .max3-pic:has(> .set-time) { width: auto; min-width: 44px; padding-inline: 6px; }
+/* The Tigrinya weekdays are two letters (ሰኑ ሰሉ ... ሰን): one line in each day's column. */
+.week-letter[lang='ti'] { white-space: nowrap; font-size: 1rem; letter-spacing: -0.02em; }

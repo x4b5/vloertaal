@@ -76,7 +76,7 @@ const lang: HelpLanguageSource = {
     unlockFull: 'Tam sürümü aç',
     unlockHint: 'Şu an sadece ilk bölüm açık. Tüm dersler için şifreyi gir.',
     password: 'Şifre',
-    enterPassword: 'Şifreyi gir',
+    enterPassword: 'Kodu gir',
     wrongPassword: 'Şifre doğru değil. Tekrar dene.',
     unlock: 'Aç',
     sector: 'İşin',
