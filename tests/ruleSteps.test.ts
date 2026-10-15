@@ -3,12 +3,12 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeAll, describe, expect, it } from 'vitest';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import { ASK_WHO } from '../src/content/regels/askWho';
-import { toCourseUnits } from '../src/content/regels/course';
-import { RULES_ABUSE, RULES_ADVICE } from '../src/content/regels/disclaimer';
+import { cardSpeech, toCourseUnits } from '../src/content/regels/course';
+import { RULES_ABUSE, RULES_ADVICE, RULES_CIVIC } from '../src/content/regels/disclaimer';
 import type { AskWho } from '../src/content/regels/types';
 import { registerRulesCourse } from '../src/content/courses';
 import { LessonPlayer } from '../src/components/LessonPlayer';
-import { RULE_KIND_TAG, RuleCard, ruleAnnouncement, ruleVerdict, TF_OPTIONS } from '../src/components/RuleSteps';
+import { CardStep, cardTag, PayslipStep, RULE_KIND_TAG, RuleCard, RuleFeedbackBody, ruleAnnouncement, ruleVerdict, TF_OPTIONS } from '../src/components/RuleSteps';
 import { getHelpLanguage, registerPack } from '../src/i18n';
 import nlPack from '../src/i18n/packs/nl';
 import { buildLesson, buildRuleLesson, forRetry, GRADED_RULE_KINDS, isGraded, isRuleExercise, RULE_KINDS, type Exercise, type RuleExercise } from '../src/lib/exercises';
@@ -35,7 +35,8 @@ function optionsOf(ex: RuleExercise): { id: string; best: boolean }[] {
     case 'truefalse': return TF_OPTIONS.map((o) => ({ id: o.id, best: (o.id === 'waar') === ex.step.answer }));
     case 'whatdo':
     case 'whoask':
-    case 'payslip': return ex.step.options;
+    case 'payslip':
+    case 'card': return ex.step.options;
     default: return [];
   }
 }
@@ -96,8 +97,8 @@ describe('buildRuleLesson', () => {
     }
   });
 
-  it('true/false, what do you do, who do you ask and the payslip are graded; the rest goes on', () => {
-    expect([...GRADED_RULE_KINDS].sort()).toEqual(['payslip', 'truefalse', 'whatdo', 'whoask']);
+  it('true/false, what do you do, who do you ask, the payslip and the card are graded; the rest goes on', () => {
+    expect([...GRADED_RULE_KINDS].sort()).toEqual(['card', 'payslip', 'truefalse', 'whatdo', 'whoask']);
     for (const lesson of lessons) {
       for (const ex of buildRuleLesson(lesson, { seed: 1 })) {
         expect(isGraded(ex), ex.kind).toBe(GRADED_RULE_KINDS.includes(ex.kind as never));
@@ -108,7 +109,7 @@ describe('buildRuleLesson', () => {
   it('a mistake comes back with the same options, the best one on another place', () => {
     for (const lesson of lessons) {
       for (const ex of buildRuleLesson(lesson, { seed: 5 })) {
-        if (ex.kind !== 'whatdo' && ex.kind !== 'whoask' && ex.kind !== 'payslip') continue;
+        if (ex.kind !== 'whatdo' && ex.kind !== 'whoask' && ex.kind !== 'payslip' && ex.kind !== 'card') continue;
         const again = forRetry(ex, lesson, 11) as typeof ex;
         const ids = (e: typeof ex) => e.step.options.map((o) => o.id);
         expect(new Set(ids(again))).toEqual(new Set(ids(ex)));
@@ -127,6 +128,7 @@ describe('kindsOf (resume)', () => {
     expect(keys.every((k) => k.length === 2)).toBe(true);
     expect(new Set(keys).size).toBe(keys.length);
     expect(kindsOf([{ kind: 'whatdo' }, { kind: 'whoask' }])).toBe('whwi');
+    expect(kindsOf([{ kind: 'card' }, { kind: 'payslip' }])).toBe('capa');
   });
 
   it('the language course keeps its old fingerprint (saved runs still restore)', () => {
@@ -168,7 +170,7 @@ describe('rule steps on screen', () => {
     for (const step of written) {
       const out = html(createElement(RuleCard, { ex: { kind: 'rule', step }, lang: nl(), locked: false, onAnswer: () => {} }));
       expect(out).toContain(RULE_KIND_TAG.geschreven);
-      expect(out.includes(RULES_ADVICE) || out.includes(RULES_ABUSE), step.id).toBe(true);
+      expect(out.includes(RULES_ADVICE) || out.includes(RULES_ABUSE) || out.includes(RULES_CIVIC), step.id).toBe(true);
       expect(out.includes('Op je spiekkaartje'), step.id).toBe(Boolean(step.key));
       expect(out).not.toContain('lang="en"');
     }
@@ -177,6 +179,7 @@ describe('rule steps on screen', () => {
       expect(out).toContain(RULE_KIND_TAG.ongeschreven);
       expect(out).not.toContain(RULES_ADVICE);
       expect(out).not.toContain(RULES_ABUSE);
+      expect(out).not.toContain(RULES_CIVIC);
     }
   });
 
@@ -205,5 +208,64 @@ describe('rule steps on screen', () => {
     const wa = buildRuleLesson(lessons.find((l) => l.id === 'r.l.loon.2')!, { seed: 1 }).find((e) => e.kind === 'whoask') as Extract<Exercise, { kind: 'whoask' }>;
     const bestWho = wa.step.options.find((o) => o.best)!;
     expect(ruleVerdict(wa, false, wa.step.options.find((o) => !o.best)!.id)!.best!.text).toBe(ASK_WHO[bestWho.who].label);
+  });
+
+  it('a drawn card: not buttons, the row to work out is "?" until Check, then lit up with the answer', () => {
+    const steps = lessons.flatMap((l) => l.steps ?? []);
+    const cards = steps.filter((s): s is Extract<typeof s, { kind: 'card' }> => s.kind === 'card');
+    expect(cards.length).toBeGreaterThan(5);
+    for (const step of cards) {
+      const ex = { kind: 'card' as const, step };
+      const before = html(createElement(CardStep, { ex, lang: nl(), locked: false, onAnswer: () => {} }));
+      const after = html(createElement(CardStep, { ex, lang: nl(), locked: true, onAnswer: () => {} }));
+      // The card is a figure with rows, never a button; the answers are the 3 cards below it.
+      const figure = before.slice(before.indexOf('<figure'), before.indexOf('</figure>'));
+      expect(figure, step.id).toContain(`card-${step.card.type}`);
+      expect(figure, step.id).not.toMatch(/<button(?![^>]*speak)/);
+      expect(before.match(/class="choice[ "]/g)?.length, step.id).toBe(3);
+      expect(before, step.id).not.toContain('slip-hit');
+      expect(after, step.id).toContain('slip-hit');
+      const todo = step.card.rows.find((r) => r.answer);
+      if (todo) {
+        expect(figure, step.id).not.toContain(`<dd>${todo.answer}</dd>`);
+        expect(after, step.id).toContain(`<dd>${todo.answer}</dd>`);
+        // The speaker beside the card never reads the answer out.
+        expect(cardSpeech(step.card), step.id).not.toContain(todo.answer!);
+      }
+      expect(before, step.id).not.toContain('lang="en"');
+    }
+  });
+
+  it('a card\'s tag, and its feedback: own line, the right answer, the steps of the sum, the why', () => {
+    const lesson = lessons.find((l) => l.id === 'r.l.winkel.3')!;
+    const ex = buildRuleLesson(lesson, { seed: 1 }).find((e) => e.kind === 'card') as Extract<Exercise, { kind: 'card' }>;
+    expect(cardTag(ex.step)).toBe('Reken het uit');
+    expect(cardTag(lessons.find((l) => l.id === 'r.l.afronden.1')!.steps!.find((s) => s.kind === 'card') as { sum?: string[] })).toBe('Lees het kaartje');
+    const best = ex.step.options.find((o) => o.best)!;
+    const other = ex.step.options.find((o) => !o.best)!;
+    const wrong = ruleVerdict(ex, false, other.id)!;
+    expect(wrong).toMatchObject({ own: other.feedback, best: { text: best.text }, sum: ex.step.sum, why: ex.step.why });
+    expect(ruleAnnouncement(wrong)).toContain(ex.step.sum![0]);
+    const out = html(createElement(RuleFeedbackBody, { v: wrong, lang: nl() }));
+    expect(out).toContain('Zo reken je het');
+    for (const line of ex.step.sum!) expect(out).toContain(line);
+    // In the player: the tag says what to do.
+    const list = buildRuleLesson(lesson, { seed: 1 });
+    const at = list.findIndex((e) => e.kind === 'card');
+    const page = html(createElement(LessonPlayer, { lesson, review: false, lang: nl(), exercises: list, startAt: at, onQuit: () => {}, onFinish: () => {} }));
+    expect(page).toContain('Reken het uit');
+    expect(page).toContain('card-kassabon');
+  });
+
+  it('the payslip is drawn as the loonstrook card, its own row lit up after Check', () => {
+    const step = lessons.flatMap((l) => l.steps ?? []).find((s): s is Extract<typeof s, { kind: 'payslip' }> => s.kind === 'payslip')!;
+    const before = html(createElement(PayslipStep, { ex: { kind: 'payslip', step }, lang: nl(), locked: false, onAnswer: () => {} }));
+    const after = html(createElement(PayslipStep, { ex: { kind: 'payslip', step }, lang: nl(), locked: true, onAnswer: () => {} }));
+    expect(before).toContain('card-loonstrook');
+    expect(before).toContain(`aria-label="Loonstrook ${step.slip.periode}"`);
+    for (const r of step.slip.rows) expect(before).toContain(`slip-${r.field}`);
+    expect(before).not.toContain('slip-hit');
+    expect(after).toMatch(new RegExp(`slip-${step.highlight} slip-hit`));
+    expect(after.match(/slip-hit/g)).toHaveLength(1);
   });
 });

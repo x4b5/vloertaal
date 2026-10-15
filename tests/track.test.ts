@@ -25,9 +25,16 @@ const doneUnits = (...unitIds: string[]) =>
 /** The basis course order, as before the tracks: the sector's unit takes the warehouse's slot. */
 const BASIS = ['u.firstday', 'u.help', 'u.tools', 'u.safety', '<own>', 'u.time', 'u.teamwork', 'u.apply', 'u.contract', 'u.papers', 'u.pay', 'u.house', 'u.social', 'u.rights', 'u.leave', 'u.exploit', 'u.contact', 'u.grow', 'u.health', 'u.money', 'u.travel', 'u.lost'];
 const SECTOR_UNITS = ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean'];
+/**
+ * Basis units added after the sector units ("In de winkel", "Rekenen"): appended, so every unit
+ * above keeps its place. With a sector they end the learner's own course (before the other
+ * sectors' units); with none, they come after the sector units.
+ */
+const APPENDED = ['u.shop', 'u.numbers'];
 const expectedOrder = (own: string | null) => {
   const main = BASIS.map((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
-  return [...main, ...SECTOR_UNITS.filter((id) => !main.includes(id))];
+  const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
+  return own ? [...main, ...APPENDED, ...rest] : [...main, ...rest, ...APPENDED];
 };
 
 /** routeOrder for every sector, written out from the course as it was before the work-rules track. */

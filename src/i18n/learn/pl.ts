@@ -72,6 +72,10 @@ const t: CultureTranslation = {
     'c.service.a.why': "Prośba o rachunek: krótkie „tak” i już się idzie.",
     'c.cleaning.a.why': "Gotowe? Ta odpowiedź mówi „prawie” i ile zostało.",
     'c.cleansafe.a.why': "Mokra podłoga jest śliska: ostrzeżenie pomaga.",
+    'c.shelves.a.why': "Pytanie brzmi „gdzie”. Ta odpowiedź podaje alejkę i oferuje pomoc.",
+    'c.checkout.a.why': "Pytanie o płatność kartą: krótkie, miłe „tak”.",
+    'c.hours.a.why': "Pytanie o godzinę. Ta odpowiedź podaje godzinę.",
+    'c.measures.a.why': "Pytanie o długość. Ta odpowiedź podaje długość.",
   },
 };
 

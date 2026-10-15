@@ -42,6 +42,8 @@ import { courseUnits, learnedItems, registerRulesCourse } from '../content/cours
 import { toCourseUnits } from '../content/regels/course';
 import { RULES_STUB } from './rulesStub';
 import { forceNoVoiceNoteForShot, NoVoiceNote, RulesHelp, RulesShelf } from '../components/RulesHelp';
+import { SocialMap, SocialMapLink } from '../components/SocialMap';
+import { allRegionUnits, isRegionChoice, regionOf, type RegionChoice } from '../content/regio';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -160,6 +162,19 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // &other=open opens the "Andere sectoren" section.
   const sp = new URLSearchParams(location.search).get('sector');
   const sector: SectorChoice | undefined = sp === 'none' || isSectorId(sp) ? sp : undefined;
+  // &region=zl: the learner chose Zuid-Limburg in Settings (src/content/regio): its unit in the
+  // path and All topics, its Sociale kaart on the Hulp tab. /?shot=socialmap is the map itself.
+  const rp = q.get('region');
+  const region: RegionChoice | undefined = isRegionChoice(rp) ? rp : undefined;
+  if (shot === 'socialmap') {
+    const l = getHelpLanguage(lang as LangCode, gender);
+    return (
+      <>
+        <SocialMap region={regionOf(region ?? 'zl')!} lang={l} onBack={() => {}} />
+        <BottomNav current="words" onTab={() => {}} lang={l} />
+      </>
+    );
+  }
   // The sector in two steps: /?shot=sector (the kind of work), &group=make|care (its three sectors).
   if (shot === 'sector') {
     const g = q.get('group');
@@ -199,17 +214,21 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   forceNoVoiceNoteForShot(q.get('novoice') === '1');
   if (shot === 'tips' || shot === 'settings' || shot === 'words') {
     // Half the course done, so several tips are unlocked (the work-rules track: its first 8
-    // lessons, so "Alle regels" has rules of three topics).
-    const doneLessons = lang === 'nl' ? courseUnits('regels').flatMap((u) => u.lessons).slice(0, 8) : allLessons.slice(0, 8);
+    // lessons, so "Alle regels" has rules of three topics). &done=40: that many lessons instead
+    // (certificates of several themes).
+    const doneN = Number(q.get('done') ?? 8) || 8;
+    const doneLessons = lang === 'nl' ? courseUnits('regels').flatMap((u) => u.lessons).slice(0, doneN) : allLessons.slice(0, doneN);
     const done = Object.fromEntries(doneLessons.map((l) => [l.id, { best: 1, times: 1 }]));
-    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, quiet, completed: done, gender };
+    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, region, quiet, completed: done, gender };
     const l = getHelpLanguage(lang as LangCode, gender);
+    const zl = regionOf(region);
+    const mapLink = zl ? <SocialMapLink region={zl} lang={l} onOpen={() => {}} /> : undefined;
     if (shot === 'words' && lang === 'nl') {
       // The Hulp tab of the work-rules track ("Wie bel je?"); &shelf=1 is "Alle regels".
       if (q.get('shelf') === '1') return <RulesShelf progress={progress} lang={l} onBack={() => {}} />;
       return (
         <>
-          <RulesHelp lang={l} onShelf={() => {}} />
+          <RulesHelp lang={l} onShelf={() => {}} after={mapLink} />
           <BottomNav current="words" onTab={() => {}} lang={l} />
         </>
       );
@@ -217,7 +236,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     if (shot === 'words') {
       return (
         <>
-          <WordsHub lang={l} onTips={() => {}} />
+          <WordsHub lang={l} onTips={() => {}} after={mapLink} />
           <BottomNav current="words" onTab={() => {}} lang={l} />
         </>
       );
@@ -250,7 +269,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // &askGender=1: a learner from before the gender question, with the one-time card (with &lang=pl).
   // /?shot=topic&cu=u.firstday is a topic page (with &state= as above; &cu= any unit).
   if (shot === 'route' || shot === 'all' || shot === 'topic') {
-    return <RouteShot shot={shot} unit={q.get('cu')} resume={q.get('resume')} state={q.get('state') ?? 'mid'} lang={getHelpLanguage(lang as LangCode, gender)} access={access} sector={sector} daily={q.get('daily') === 'due'} askGender={q.get('askGender') === '1' ? (lang as LangCode) : undefined} />;
+    return <RouteShot shot={shot} unit={q.get('cu')} resume={q.get('resume')} state={q.get('state') ?? 'mid'} lang={getHelpLanguage(lang as LangCode, gender)} access={access} sector={sector} region={region} daily={q.get('daily') === 'due'} askGender={q.get('askGender') === '1' ? (lang as LangCode) : undefined} />;
   }
   // The whole cast in every mood, big, for judging the drawings.
   if (shot === 'cast') {
@@ -262,7 +281,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     );
   }
   // One step of the work-rules track: /?shot=rule&lang=nl&step=scene|rule|truefalse|whatdo|whoask|
-  // model|payslip (the default lesson for each kind is in RULE_SHOT; &lesson=r.l.loon.2 another
+  // model|payslip|card (the default lesson for each kind is in RULE_SHOT; &lesson=r.l.loon.2 another
   // lesson, &id=<step id> one exact step). The step sits at its place in its real lesson. The
   // options are best first (true/false: Waar, Niet waar), so the right one is the 1st card and a
   // wrong one the 2nd (a true/false shot uses a true statement). &retry=1: the step comes back
@@ -362,6 +381,8 @@ const RULE_SHOT: Record<RuleKind, { lesson: string; id?: string }> = {
   whoask: { lesson: 'r.l.loon.2' },
   model: { lesson: 'r.l.ziek.1' },
   payslip: { lesson: 'r.l.loon.2' },
+  // The roster (a sum). Others: &id=r.l.winkel.3.ca1 (kassabon), r.l.afronden.1.ca1 (werkbon).
+  card: { lesson: 'r.l.rekenen.1', id: 'r.l.rekenen.1.ca1' },
 };
 
 /** Best option first (a fixed order for the screenshot and the max-3 counter). */
@@ -371,6 +392,7 @@ function bestFirst(ex: RuleExercise): RuleExercise {
     case 'whatdo': return { ...ex, step: { ...ex.step, options: sort(ex.step.options) } };
     case 'whoask': return { ...ex, step: { ...ex.step, options: sort(ex.step.options) } };
     case 'payslip': return { ...ex, step: { ...ex.step, options: sort(ex.step.options) } };
+    case 'card': return { ...ex, step: { ...ex.step, options: sort(ex.step.options) } };
     default: return ex;
   }
 }
@@ -379,7 +401,8 @@ function RuleShot({ quiet, lang, q }: { quiet: boolean; lang?: ReturnType<typeof
   const kindParam = q.get('step');
   const kind: RuleKind = RULE_KINDS.find((k) => k === kindParam) ?? 'whatdo';
   const id = q.get('id') ?? (q.get('lesson') ? null : RULE_SHOT[kind].id ?? null);
-  const all = courseUnits('regels').flatMap((u) => u.lessons);
+  // With the regions' rules units (&lesson=rg.zl.r.l.4: the dialect card is its rule step &id=rg.zl.r.l.4.ru2).
+  const all = [...courseUnits('regels'), ...allRegionUnits('regels')].flatMap((u) => u.lessons);
   const lesson = (id ? all.find((l) => l.steps?.some((s) => s.id === id)) : undefined)
     ?? all.find((l) => l.id === (q.get('lesson') ?? RULE_SHOT[kind].lesson) && l.steps?.some((s) => s.kind === kind))
     ?? all.find((l) => l.steps?.some((s) => s.kind === kind))
@@ -411,7 +434,7 @@ const unitLessons = (...ids: string[]) => ids.flatMap((id) => findUnit(id)?.less
  *  suggestions); shelf and done: four units done and the fifth started; coach: a coach link to
  *  "Pay" (marked). shot=all is All topics (a row opens its topic page); shot=topic opens &cu=.
  */
-function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGender, unit, resume }: { shot: string; state: string; lang?: ReturnType<typeof getHelpLanguage>; access: Access; sector?: SectorChoice; daily: boolean; askGender?: LangCode; unit?: string | null; resume?: string | null }) {
+function RouteShot({ shot, state, lang: shotLang, access, sector, region, daily, askGender, unit, resume }: { shot: string; state: string; lang?: ReturnType<typeof getHelpLanguage>; access: Access; sector?: SectorChoice; region?: RegionChoice; daily: boolean; askGender?: LangCode; unit?: string | null; resume?: string | null }) {
   // The work-rules track (&lang=nl): the same states on its own course.
   const rules = shotLang?.code === 'nl';
   const rc = courseUnits('regels');
@@ -426,7 +449,7 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
     : state === 'finished' ? doneIds(...unitLessons('u.firstday'))
     : doneIds(...unitLessons('u.firstday', 'u.help', 'u.tools', 'u.safety'), 'l.things');
   const [progress, setProgress] = useState<Progress>({
-    ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector: sector ?? 'none' as SectorChoice, completed,
+    ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector: sector ?? 'none' as SectorChoice, region, completed,
     currentUnit: state === 'coach' ? 'u.pay' : undefined,
     // &askGender=1: the help language is stored, the gender is not. The work-rules track: 'nl'.
     helpLang: askGender ?? (rules ? 'nl' : null),
@@ -515,6 +538,7 @@ function SettingsShot({ progress: start, access }: { progress: Progress; access:
       onLang={(helpLang) => set({ helpLang })}
       onGender={(gender) => set({ gender })}
       onSector={(sector) => set({ sector })}
+      onRegion={(region) => set({ region })}
       onTheme={(theme) => set({ theme })}
       onTextSize={pickSize}
       onVoice={(voice) => set({ voice })}

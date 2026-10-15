@@ -3,6 +3,7 @@ import type { Track } from '../lib/track';
 import { courseUnits } from './courses';
 import { units } from './curriculum';
 import type { Lesson, Unit } from './types';
+import { withRegion } from './regio';
 
 /**
  * Sectors: the kind of work the learner does. The choice only sets the focus of the lesson
@@ -85,7 +86,13 @@ const RULES_SLOT_AFTER = 'r.veilig';
  * In the work-rules track the same, with the own sector's rules unit(s) right after r.veilig (at
  * the end of the basis units if r.veilig is not there).
  */
-export function coursePlan(sector: SectorChoice | undefined, track: Track = 'taal'): { main: Unit[]; other: Unit[] } {
+export function coursePlan(sector: SectorChoice | undefined, track: Track = 'taal', region?: string): { main: Unit[]; other: Unit[] } {
+  // A region (src/content/regio) adds its unit to the learner's own course, in its slot; without
+  // one the plan is exactly as it was.
+  if (region && region !== 'none') {
+    const plan = coursePlan(sector, track);
+    return { main: withRegion(plan.main, region, track), other: plan.other };
+  }
   if (track === 'regels') return rulesPlan(sector);
   if (!sector || sector === 'none') return { main: units, other: [] };
   const own = units.filter((u) => unitSector(u.id) === sector);
@@ -111,8 +118,8 @@ function rulesPlan(sector: SectorChoice | undefined): { main: Unit[]; other: Uni
 }
 
 /** Lessons in the order they unlock one after another (basis + own sector). */
-export function mainLessons(sector: SectorChoice | undefined, track: Track = 'taal'): Lesson[] {
-  return coursePlan(sector, track).main.flatMap((u) => u.lessons);
+export function mainLessons(sector: SectorChoice | undefined, track: Track = 'taal', region?: string): Lesson[] {
+  return coursePlan(sector, track, region).main.flatMap((u) => u.lessons);
 }
 
 /** The units a sector weighs first when the learner chooses what's next: its own unit(s), then

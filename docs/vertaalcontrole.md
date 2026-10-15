@@ -387,3 +387,112 @@ Per taal: aantallen, de belangrijkste verbeteringen en de open vragen.
 - [ ] `c.names.b`: "ሰባት ንብጾት ስራሕን ንሓለፍትን ብተለምዶ ብቀዳማይ ስሞም ይጽውዕዎም": natuurlijk?
 - [ ] `ui.bram*`: De nieuwe ui.bram*-teksten (mascotte Bram) zijn na deze controle toegevoegd en nog niet nagekeken.
 - Veiligheid (3): zie "Eerst nakijken" hierboven (`s.kitchen.3`, `c.kitchen.q`, `c.kitchen.s`, `c.kitchen.o3`; `s.danger.1`, `c.cleansafe.b`, `c.cleansafe.p`; `w.damp`).
+
+## Nieuwe teksten (16 oktober 2026)
+
+Sinds commit `fb98407` (15 oktober, na de blinde terugvertaling) zijn er teksten bijgekomen of veranderd, in alle
+negen hulptalen. Ze zijn met AI vertaald en door geen mens nagekeken. In `vertaalcontrole-vloertaal.xlsx` staan ze per
+taal direct onder de eerdere vragen, met in kolom "Bron" **"Nieuw sinds 15 okt 2026"**. Volgorde: veiligheid (rood),
+"Goed om te weten" en contact, thema-namen en knoppen, dan de lesinhoud. Blauw "vraag" = echte twijfel (hieronder);
+groen "nieuw" / "gewijzigd" = gewoon nakijken.
+
+**Wat is er nieuw of veranderd**
+
+- **Knoppen:** 8 thema-namen (`theme.*`), `ui.topicsUnit`, `ui.showDutch`, `ui.lastUpdated`, Bram stelt zich voor
+  (`ui.bramIntro`, `ui.bramIntroHello`), de regiokeuze (`ui.region*`) en de Sociale kaart (`ui.socialMap*`).
+  Meegenomen: 10 oudere `ui.bram*`-teksten en `ui.buildListen`, `ui.chatWhichQuestion`, `ui.reviewWaiting`; die
+  waren nooit nagekeken (niet in de blinde terugvertaling).
+- **Over Vloertaal:** nieuw `a.mission`, `a.bram`, `a.disclaimer` ("Goed om te weten") en `a.contact`; `a.free`
+  zegt niet meer dat de app gratis is (dat staat nu in `a.mission`).
+- **Taal-units** "In de winkel" (`u.shop`) en "Rekenen: tijd, geld, maten" (`u.numbers`): 4 lessen, 24 woorden,
+  12 zinnen, 4 gesprekken, 4 werkvloertips, 4 uitlegzinnen (`*.a.why`), 2 herhaallessen.
+- **Regio Zuid-Limburg:** unit `rg.zl.u` (2 lessen, 12 woorden, 6 zinnen, 2 gesprekken, 2 tips) en 14 categorieën
+  van de Sociale kaart (`rg.cat.*`).
+- **Meervoud:** in Pools, Oekraïens, Roemeens, Bulgaars (14–16 knoppen) en Arabisch (11) hebben teksten met `{n}`
+  nu echte meervoudsvormen. Elke vorm staat in de xlsx op een eigen regel, met de getallen die bij die vorm horen.
+- **Slotzin:** `c.housing.b`, `c.rights.b`, `c.warning.b`, `c.gethelp.b` en `c.newjob.b` eindigen nu met "vakbond,
+  Juridisch Loket of FairWork"; `c.sick.b` en `c.insurance.b` kregen de gewone slotzin.
+- **Inhoud:** 112 = levensgevaar, brand of een misdrijf dat nu gebeurt (`c.doctor.b`, `c.doctor.w`); overuren "zodat
+  je ze op je loonstrook kunt controleren" (`c.extra.a.why`); "als die er is" bij de vertrouwenspersoon
+  (`c.boundaries.b`); valbeveiliging (`fa`/`prs`) en natte vloer (`ti`) uit de vragen hierboven.
+- **Niet bijgewerkt:** `s.translate.3` is in het Nederlands veranderd ("Kunt u in mijn telefoon spreken?" → "Wilt u
+  even tegen mijn telefoon praten?"), maar de vertalingen volgen in alle negen talen nog de oude zin.
+
+**Aantallen per taal** (sleutels; tussen haakjes alle vormen, dus m/v en meervoud apart):
+
+| Taal | Regels | Nieuw | Gewijzigd | Nooit nagekeken | Vragen |
+|---|---|---|---|---|---|
+| `ar` | 210 (332) | 173 | 23 + 1 bron | 13 | 5 |
+| `ti` | 203 (269) | 173 | 16 + 1 bron | 13 | 5 |
+| `fa` | 203 | 173 | 16 + 1 bron | 13 | 5 |
+| `prs` | 203 | 173 | 16 + 1 bron | 13 | 6 |
+| `uk` | 212 (265) | 173 | 26 + 1 bron | 12 | 4 |
+| `tr` | 200 | 173 | 13 + 1 bron | 13 | 4 |
+| `pl` | 214 (273) | 173 | 28 + 1 bron | 12 | 5 |
+| `ro` | 214 (249) | 173 | 28 + 1 bron | 12 | 4 |
+| `bg` | 214 (238) | 173 | 29 + 1 bron | 11 | 5 |
+
+"Vragen" telt ook de twee vragen voor alle talen hieronder.
+
+**Voor alle talen**
+
+- [ ] `s.translate.3`: opnieuw vertalen (zie hierboven).
+- [ ] `ui.socialMap`: in alle talen "kaart/map van hulp" (خريطة المساعدة, Mapa pomocy, Карта допомоги, Harta
+  ajutorului, Yardım haritası, نقشهٔ کمک, ካርታ ሓገዝ …). Het is een lijst met loketten en telefoonnummers, geen kaart.
+  Verwachten mensen een plattegrond?
+
+**Vragen per taal**
+
+- **`ti`**
+  - [ ] `s.hours.1`, `c.hours.a`, `rg.zl.s.1.2`, `c.hours.p`, `c.hours.w`: kloktijden staan weer in woorden
+    ("ሰዓት ሸውዓተን ፍርቅን", "ሰዓት ዓሰርተ"). Eerder zijn uitgeschreven tijden vervangen door cijfers, omdat ze als
+    Ge'ez-tijd gelezen kunnen worden (7 = 13:00). Deze unit gaat juist over tijden. Alleen cijfers?
+  - [ ] `theme.job`, `theme.rights`, `theme.sector`: vormen m / v / x ("ስራሕካ / ስራሕኪ / ስራሕኩም"). De x-vorm
+    (meervoud/beleefd) staat er zolang er geen geslacht gekozen is. Natuurlijk als titel? En de vijf andere
+    thema's als werkwoordelijk naamwoord ("ብድሕንነት ምስራሕ", "ብሓባር ምስራሕ")?
+  - [ ] `ui.bram*` (12 teksten): toon van Bram (rustig, volwassen, collega).
+- **`prs`**
+  - [ ] `theme.job`: "وظیفهٔ شما". In Dari is وظیفه een baan, in het Iraans Perzisch "plicht, taak". Natuurlijk
+    voor Afghaanse lezers (ook `w.baan`)?
+  - [ ] `theme.rights`: "حقوق شما". Het Perzisch (`fa`) vermijdt حقوق omdat het ook "salaris" is; Dari zegt معاش
+    voor salaris. Is "حقوق شما" hier duidelijk "je rechten"?
+  - [ ] `rg.zl.c.2.o2`: "سر خود را تکان بدهید" kan knikken of nee schudden zijn. Elders staat nu "به معنای بلی".
+  - [ ] `c.checkout.o3`: "یک قطی" voor één blikje; قطی is in de cursus ook "doos". Duidelijk?
+- **`fa`**
+  - [ ] `ui.regionTitle`, `ui.regionHint`, `ui.socialMapHint`, `ui.socialMapWrong`: nieuwe knopteksten staan in تو,
+    terwijl de rest van de schermen bij de eerste controle شما is geworden (ook `ui.bramIntro`: "همکار شما"). شما maken?
+  - [ ] `theme.rights`: "حق‌های شما" (om حقوق = salaris te vermijden). Natuurlijk als titel?
+  - [ ] `rg.zl.c.2.o2`: "سر تکان بده": knikken of nee schudden?
+- **`ar`**
+  - [ ] `ui.streakGrew`, `ui.recordN`, `ui.tomorrowN`, `ui.wordsStrongerN` (en de `*Unit`-labels): de vorm voor 2
+    zet het getal vóór de dualis ("2 يومان", "2 كلمتان"). Dubbel, of goed? Ook 11–99 ("11 يوماً") en 0 ("0 يوم") nakijken.
+  - [ ] `s.checkout.1`, `s.checkout.2`, `c.shelves.a`: zinnen tegen een klant ("u") in de mannelijke vorm
+    (تريد، تفضّل، معك). Goed voor elke klant, of beleefder/neutraal (حضرتك)?
+  - [ ] `rg.zl.s.2.2`: "هل يمكن التكلم بالهولندية؟" is onpersoonlijk ("kan er Nederlands gesproken worden?").
+    Duidelijk dat je de collega vraagt Nederlands te praten?
+- **`pl`**
+  - [ ] `ui.wordsLearnedN`, `ui.wordsStrongerN`, `ui.practiseMistakes`, `ui.skippedN`, `ui.freeDaysN`: nieuwe
+    meervoudsvormen ("1 nauczone słowo / 5 nauczonych słów", "został 1 / zostały 2 / zostało 5"). Natuurlijk op
+    een knop? (Dit vervangt de vraag over `ui.wordsStrongerOne` hierboven: de meervoudsvorm voor 1 gaat nu voor.)
+  - [ ] `rg.zl.w.gemeentehuis`, `rg.zl.s.1.1`, `rg.zl.l.1`, `rg.cat.gemeente`: "urząd gminy" voor de gemeente van
+    een stad als Maastricht. Zegt men daar niet "urząd miasta"?
+  - [ ] `s.checkout.1`, `c.shelves.a`: "pan/pani" met schuine streep in zinnen tegen een klant. Leesbaar?
+- **`uk`**
+  - [ ] `ui.streakStopped`, `ui.wordsStrongerN`, `ui.wordsLearnedN`, `ui.recordN`: nieuwe meervoudsvormen met 1, 2,
+    5 en 21 nakijken ("зупинилася на 1 дні", "{n} слово закріплено краще").
+  - [ ] `rg.zl.c.1.s`, `rg.zl.c.1.o1`, `rg.zl.c.2.b`: "Маастрихт", "Лімбург" in het Cyrillisch, maar "Heerlen" en
+    "Zuid-Limburg" in Latijnse letters (`rg.zl.c.1.a`). Overal één manier?
+- **`tr`**
+  - [ ] `rg.zl.c.2.b`: "İşte birçok kişi…": "İşte" kan "hier is…" lezen; bij de eerste controle is dat in ~15
+    teksten "İş yerinde" geworden.
+  - [ ] `c.checkout.o3`: "bir kutu" voor één blikje bier; "kutu" is in de cursus "doos". Duidelijk?
+- **`ro`**
+  - [ ] `ui.dayStreak`, `ui.daysUnit`, `ui.lessonsUnit`, `ui.topicsUnit`: vanaf 20 "de" ("de zile la rând",
+    "de lecții"). Natuurlijk als label los van het grote getal?
+  - [ ] `rg.zl.c.2.o2`: "Dai din cap" kan knikken of nee schudden zijn. Beter "Aprobi din cap"?
+- **`bg`**
+  - [ ] `s.checkout.3`, `c.checkout.p`, `c.checkout.b`: "лична карта" (alleen de identiteitskaart) naast "документ"
+    in de titel en de andere teksten. Het Nederlandse "ID" is elk identiteitsbewijs. Overal "документ за самоличност"?
+  - [ ] `rg.zl.c.2.o2`: "Кимаш" (knikken). In Bulgarije is knikken van oudsher "nee". Duidelijk dat dit "doen alsof
+    je het snapt" is?
+  - [ ] `rg.zl.s.1.2`: "Имам час в десет часа": twee keer "час" (afspraak en uur). Natuurlijk?

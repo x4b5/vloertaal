@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { Character } from './Characters';
 import { unitIcons } from '../content/unitIcons';
 import { coursePlan } from '../content/sectors';
@@ -6,7 +6,7 @@ import type { Unit } from '../content/types';
 import { gloss, said, ui, uiCount, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { type Access, unitAllowed } from '../lib/access';
-import { unitDone } from '../lib/certificate';
+import { hasCertificate, unitDone } from '../lib/certificate';
 import { isUnlocked } from '../lib/exercises';
 import type { DailyCard } from '../lib/spaced';
 import type { Progress } from '../lib/progress';
@@ -23,6 +23,8 @@ import { dutchUi, trackOf } from '../lib/track';
 import { RestartButton, ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
 import { PocketIcon } from './Offline';
+import { groupOf, planGroups } from '../content/themes';
+import { ThemeHeadRow, ThemeLabel } from './Themes';
 
 /**
  * The home ("Route"): at most 3 things to tap (src/lib/route.ts).
@@ -66,7 +68,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   focusUnit?: string | null;
   onFocused?: () => void;
 }) {
-  const { sector, completed } = progress;
+  const { sector, completed, region } = progress;
   const track = trackOf(progress);
   const dutch = dutchUi(lang);
   const rtl = lang?.dir === 'rtl';
@@ -81,10 +83,12 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   // again (that one is then on the topic page), and next to only the recommended topic when the
   // block is finished.
   const dailyDue = daily?.state === 'due';
-  const choices = block ? [] : homeSuggestions(sector, completed, track).slice(0, dailyDue ? 1 : 2);
+  const choices = block ? [] : homeSuggestions(sector, completed, track, region).slice(0, dailyDue ? 1 : 2);
   const ref = useRef<HTMLDivElement>(null);
-  const order = routeOrder(sector, track);
+  const order = routeOrder(sector, track, region);
   const unitIndex = (unit: Unit) => order.findIndex((u) => u.id === unit.id);
+  // The block's theme (as All topics groups it), for the small label on its card.
+  const blockGroup = block ? groupOf(planGroups(coursePlan(sector, track, region)), block.id) : undefined;
 
   // After a lesson or a coach link: the next step in view (the next lesson or the choice),
   // between the sticky top bar and the bottom bar.
@@ -189,6 +193,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
       {block && (
         <section className="rb-current" aria-label={`${unitIndex(block) + 1}. ${said(unitTitle(block, lang))}`}>
           <div id={`unit-${block.id.slice(2)}`} className={`rb-block ${marked === block.id ? 'rb-marked' : ''}`}>
+            {blockGroup && <ThemeLabel group={blockGroup} lang={lang} completed={completed} />}
             <WordPicture className="rb-pic" id={unitIcons[block.id] ?? ''} emoji={block.emoji} size={64} />
             <UnitTitle unit={block} lang={lang} heading />
             <BlockProgress unit={block} completed={completed} lang={lang} />
@@ -369,8 +374,11 @@ function ScreenHead({ lang, onBack, nl, text }: { lang?: HelpLanguage; onBack: (
 
 /**
  * "Alle onderwerpen": every topic as one row (the list exception of the max-3 rule: one kind of
- * row, one tap per row, no buttons inside a row). The learner's own course first, then the other
- * sectors under a plain heading. A row opens the topic page.
+ * row, one tap per row, no buttons inside a row), grouped by theme (src/content/themes.ts) under
+ * a plain header row that is not a button: its emoji, its name and "3 / 5" topics finished. The
+ * learner's own course by theme first (in route order within a theme), then the other sectors
+ * under a header of their own. A row opens the topic page. One list, so the headers are rows of
+ * it too, without a tap.
  */
 export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
   progress: Progress;
@@ -380,9 +388,13 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
   onOpen: (unitId: string) => void;
 }) {
   const { sector, completed } = progress;
-  const { main, other } = coursePlan(sector, trackOf(progress));
+  // With the learner's region (src/content/regio): its unit in its place in the own course.
+  const { main, other } = coursePlan(sector, trackOf(progress), progress.region);
   const block = currentBlock(progress);
   const rtl = lang?.dir === 'rtl';
+  // A topic keeps its number on the path (as on its pocket card and certificate).
+  const order = [...main, ...other];
+  const number = (unit: Unit) => order.findIndex((u) => u.id === unit.id);
   const row = (unit: Unit, u: number) => {
     const allowed = unitAllowed(unit.id, access);
     const finished = unitDone(unit, completed);
@@ -415,15 +427,14 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
     <div className="rb-all-screen topics-screen">
       <ScreenHead lang={lang} onBack={onBack} nl="Alle onderwerpen" text={ui('allTopics', lang)} />
       <div className="topics" dir={rtl ? 'rtl' : undefined}>
-        <ul className="topic-list" data-list="topics">{main.map((unit, i) => row(unit, i))}</ul>
-        {other.length > 0 && (
-          <>
-            <h2 className="topic-group">
-              <NlPair nlFirst nl="Andere sectoren" nlClass="topic-group-nl" dir="ltr" text={ui('otherSectors', lang)} />
-            </h2>
-            <ul className="topic-list" data-list="topics">{other.map((unit, i) => row(unit, main.length + i))}</ul>
-          </>
-        )}
+        <ul className="topic-list topic-list-themes" data-list="topics">
+          {planGroups({ main, other }).map((group) => (
+            <Fragment key={group.key}>
+              <ThemeHeadRow group={group} lang={lang} completed={completed} />
+              {group.units.map((unit) => row(unit, number(unit)))}
+            </Fragment>
+          ))}
+        </ul>
       </div>
     </div>
   );
@@ -462,7 +473,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
     const off = window.setTimeout(() => setMarked(false), 4000);
     return () => window.clearTimeout(off);
   }, [marked]);
-  const u = routeOrder(sector, trackOf(progress)).findIndex((x) => x.id === unit.id);
+  const u = routeOrder(sector, trackOf(progress), progress.region).findIndex((x) => x.id === unit.id);
   // The next lesson, stopped halfway: "Start again" sits with the topic's tools (at most 3 there).
   const restartId = onRestart && next && !completed[next.id] && saves[next.id]?.review === false ? next.id : undefined;
   const restartLesson = restartId ? unit.lessons.find((l) => l.id === restartId) : undefined;
@@ -477,7 +488,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
           <BlockProgress unit={unit} completed={completed} lang={lang} />
         </div>
         {allowed ? (
-          (onPocket || restartLesson || (finished && onCertificate)) && (
+          (onPocket || restartLesson || (finished && onCertificate && hasCertificate(unit.id))) && (
             <div className="topic-tools" dir={rtl ? 'rtl' : undefined}>
               {restartLesson && onRestart && (
                 <RestartButton
@@ -492,7 +503,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                   <span className="unit-tool-text"><Bi className="unit-tool-label" text={ui('pocketCard', lang)} /></span>
                 </button>
               )}
-              {finished && onCertificate && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
+              {/* A region's unit has no certificate (src/lib/certificate.ts hasCertificate). */}
+              {finished && onCertificate && hasCertificate(unit.id) && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
             </div>
           )
         ) : (

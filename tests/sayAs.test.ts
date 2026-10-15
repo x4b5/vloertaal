@@ -13,6 +13,11 @@ describe('sayAs: how a voice is told to pronounce a line', () => {
     expect(sayAs('Ze appt de chef.')).toBe('Ze ept de chef.');
   });
 
+  it('says "ID" letter by letter', () => {
+    expect(sayAs('Mag ik even uw ID zien?')).toBe('Mag ik even uw ie-dee zien?');
+    expect(sayAs('Een goed idee')).toBe('Een goed idee');
+  });
+
   it('leaves other words alone', () => {
     for (const t of ['de appel', 'het apparaat', 'kappen', 'stappen', 'trappen', 'de apotheek', 'happen']) expect(sayAs(t)).toBe(t);
   });

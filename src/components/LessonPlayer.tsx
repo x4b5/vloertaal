@@ -18,9 +18,9 @@ import { NlPair } from './NlPair';
 import { FlameIcon } from './StreakArt';
 import {
   BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, ListIcon, PairIcon,
-  PictureIcon, AskIcon, QuestionIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon,
+  PictureIcon, AskIcon, CalcIcon, QuestionIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon,
 } from './Icons';
-import { ModelLine, PayslipStep, RuleCard, RuleFeedbackBody, ruleAnnouncement, ruleVerdict, SceneCard, TrueFalse, WhatDo, WhoAsk } from './RuleSteps';
+import { CardStep, cardTag, ModelLine, PayslipStep, RuleCard, RuleFeedbackBody, ruleAnnouncement, ruleVerdict, SceneCard, TrueFalse, WhatDo, WhoAsk } from './RuleSteps';
 import { MicIcon, SpeakExercise } from './Speaking';
 import { resetMicForLesson, speakingOn, speakSkipped } from '../lib/speaking';
 import {
@@ -73,6 +73,7 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
     case 'whoask':
     case 'model':
     case 'payslip':
+    case 'card':
       return { text: '', nl: false };
     default:
       return { text: ex.word.nl, nl: true };
@@ -113,6 +114,8 @@ const RULE_TAG: Record<RuleKind, { nl: string; Icon: TagIcon }> = {
   whoask: { nl: 'Wie vraag je het?', Icon: AskIcon },
   model: { nl: 'Zo zeg je het', Icon: BubblesIcon },
   payslip: { nl: 'Je loonstrook', Icon: ListIcon },
+  // "Reken het uit", or "Lees het kaartje" for a card without a sum (KindTag's `label`).
+  card: { nl: 'Reken het uit', Icon: CalcIcon },
 };
 const KIND_TAG: Record<Exclude<Exercise['kind'], RuleKind>, { nl: string; key: UiKey; Icon: TagIcon }> = {
   intro: { nl: 'Nieuw woord', key: 'newWord', Icon: SparkleIcon },
@@ -128,12 +131,12 @@ const KIND_TAG: Record<Exclude<Exercise['kind'], RuleKind>, { nl: string; key: U
   speak: { nl: 'Spreken', key: 'tagSpeak', Icon: MicIcon },
 };
 
-function KindTag({ kind, lang }: { kind: Exercise['kind']; lang?: HelpLanguage }) {
+function KindTag({ kind, lang, nlLabel }: { kind: Exercise['kind']; lang?: HelpLanguage; nlLabel?: string }) {
   if (kind in RULE_TAG || dutchUi(lang)) {
     // Dutch only: a rules step, or the work-rules track's own Dutch label for the kind.
     const rule = RULE_TAG[kind as RuleKind];
     const { nl, Icon } = rule ?? KIND_TAG[kind as Exclude<Exercise['kind'], RuleKind>];
-    const label = rule ? nl : ui(KIND_TAG[kind as Exclude<Exercise['kind'], RuleKind>].key, lang).help ?? nl;
+    const label = rule ? nlLabel ?? nl : ui(KIND_TAG[kind as Exclude<Exercise['kind'], RuleKind>].key, lang).help ?? nl;
     return (
       <span className="tag tag-kind">
         <span className="tag-icon" aria-hidden><Icon size={20} /></span>
@@ -483,7 +486,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         return;
       }
       // (A chat's reply bubble is not among them: the label repeats the reply, the options matter.)
-      // (A payslip's row that lit up counts too: it is what the answer is about.)
+      // (A drawn card's row that lit up counts too, the payslip's as well: it is what the answer is about.)
       const marked = document.querySelectorAll<HTMLElement>('.player-body .choice.wrong, .player-body .choice.right, .player-body .answer-line, .player-body .slip-hit');
       if (!foot || !marked.length) return;
       const bottom = Math.max(...[...marked].map((el) => el.getBoundingClientRect().bottom));
@@ -712,6 +715,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'whoask': body = <WhoAsk key={key} ex={ex} {...props} />; break;
     case 'model': body = <ModelLine key={key} ex={ex} {...props} />; break;
     case 'payslip': body = <PayslipStep key={key} ex={ex} {...props} />; break;
+    case 'card': body = <CardStep key={key} ex={ex} {...props} />; break;
   }
 
   const sol = solution(ex);
@@ -864,7 +868,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
               <Bi className="ex-tag-note" text={fillCount('practiseMistakes', repeatsLeft, lang)} />
             </>
           ) : (
-            <KindTag kind={typePick ? 'listen' : ex.kind} lang={lang} />
+            <KindTag kind={typePick ? 'listen' : ex.kind} lang={lang} nlLabel={ex.kind === 'card' ? cardTag(ex.step) : undefined} />
           )}
         </div>
         {body}

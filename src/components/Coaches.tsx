@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { units } from '../content/curriculum';
 import { unitIcons } from '../content/unitIcons';
 import type { Unit } from '../content/types';
@@ -7,10 +7,13 @@ import { WordPicture } from '../pictures';
 import { CheckIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
 import type { HelpLanguage } from '../i18n/types';
+import { groupByTheme } from '../content/themes';
+import { ThemeHeadRow } from './Themes';
 
 /**
  * "Voor begeleiders" (Dutch only), its own page from a link on About: a link per topic that opens
- * Vloertaal at that topic, to send a learner by WhatsApp or e-mail. One kind of row with one tap
+ * Vloertaal at that topic, to send a learner by WhatsApp or e-mail, grouped by theme under plain
+ * header rows (src/content/themes.ts). One kind of row with one tap
  * each (a list, the named exception to "at most three"). Shares with the phone's share sheet, or
  * copies the link. Also straight from the address with #begeleiders (App.tsx), without a
  * language choice or code first.
@@ -46,15 +49,20 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
         Voortgang staat alleen op de telefoon van de leerling. Geen account, geen namen.
         Vraag de leerling om de certificaten te laten zien.
       </p>
-      <ul className="coach-links coach-list">
-        {units.map((unit) => (
-          <li key={unit.id}>
-            <WordPicture className="coach-icon" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={32} />
-            <span className="coach-title">{unit.titleNl}</span>
-            <button type="button" className="coach-share" onClick={() => share(unit)}>
-              {copied === unit.id ? <><CheckIcon size={16} /> Gekopieerd</> : 'Deel link'}
-            </button>
-          </li>
+      <ul className="coach-links coach-list coach-list-themes">
+        {groupByTheme(units).map((group) => (
+          <Fragment key={group.key}>
+            <ThemeHeadRow group={group} dutchOnly />
+            {group.units.map((unit) => (
+              <li key={unit.id}>
+                <WordPicture className="coach-icon" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={32} />
+                <span className="coach-title">{unit.titleNl}</span>
+                <button type="button" className="coach-share" onClick={() => share(unit)}>
+                  {copied === unit.id ? <><CheckIcon size={16} /> Gekopieerd</> : 'Deel link'}
+                </button>
+              </li>
+            ))}
+          </Fragment>
         ))}
       </ul>
     </div>

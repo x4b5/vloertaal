@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import type { HelpLanguage } from '../i18n/types';
-import type { RuleCharacter } from '../content/regels/types';
+import type { CardRow, CardType, DrawnCard, RuleCharacter } from '../content/regels/types';
+import { cardSpeech } from '../content/regels/course';
 import { ASK_WHO } from '../content/regels/askWho';
 import { ruleAdviceLine } from '../content/regels/disclaimer';
 import { autoSpeakLong } from '../lib/audio';
@@ -10,6 +11,7 @@ import { learnerVoice, voiceFor, type VoiceRef } from '../lib/voices';
 import { Character, MeAvatar, useTalking } from './Characters';
 import { type Answer, ChoiceGrid, moodFor, reactClass } from './Exercises';
 import { SpeakButton } from './SpeakButton';
+import { DialectLine } from './Dialect';
 
 /**
  * The work-rules track (Werkregels): one component per kind of step (src/content/regels/types.ts).
@@ -20,7 +22,7 @@ import { SpeakButton } from './SpeakButton';
  * At most three things to tap on a screen (speakers, one per text, and the lesson ✕ not
  * counted): a story, a rule card and a model sentence have only Continue; true/false has two
  * cards, the other questions at most three, and the button only comes after the tap (as in the
- * situation exercise). The payslip's rows are not buttons.
+ * situation exercise). The rows of a drawn card (the payslip too) are not buttons.
  *
  * Every Dutch text block has one speaker (SpeakButton `long`: the phone reads it sentence by
  * sentence, or one recording of the whole text). Without a recording and without a Dutch phone
@@ -125,8 +127,9 @@ export function RuleCard({ ex, lang, onAnswer }: RuleProps<'rule'>) {
         <span className="rule-label-tape" aria-hidden />
         <h2 className="prompt rule-title" lang="nl">{step.title}</h2>
         <div className="rule-body">
-          <Say text={body} lang={lang} />
-          <p lang="nl">{step.body.map((line, i) => <span key={i} className="rule-line">{line}</span>)}</p>
+          {/* A dialect word card (regio): no speaker, the words marked as Limburgish. */}
+          {!step.dialect && <Say text={body} lang={lang} />}
+          <p lang="nl">{step.body.map((line, i) => <span key={i} className="rule-line">{step.dialect ? <DialectLine line={line} /> : line}</span>)}</p>
         </div>
       </div>
       {advice && <p className="rule-advice" lang="nl"><InfoGlyph />{advice}</p>}
@@ -269,28 +272,69 @@ export function ModelLine({ ex, lang, onAnswer }: RuleProps<'model'>) {
   );
 }
 
-/** A drawn payslip with a question; the row it is about lights up after the answer. */
+/** The name of each kind of drawn card (for screen readers: "Kassabon", "Werkbon"). */
+export const CARD_NAME: Record<CardType, string> = {
+  rooster: 'Rooster', kassabon: 'Kassabon', pakbon: 'Pakbon', etiket: 'Etiket', werkbon: 'Werkbon', loonstrook: 'Loonstrook',
+};
+/** A small picture beside the card's heading (decoration). The payslip keeps its plain head. */
+const CARD_PIC: Partial<Record<CardType, string>> = { rooster: '🗓️', kassabon: '🧾', pakbon: '📦', etiket: '🏷️', werkbon: '📋' };
+
+/**
+ * A drawn card: a roster, a receipt, a packing slip, a label, a work order or a payslip. Not
+ * buttons: tapping it does nothing (the answer is one of the cards below it). After the answer
+ * (`locked`) the rows the question is about light up, and a row still to work out ("?") shows
+ * the answer. `say`: one speaker that reads the card (never the row still to work out).
+ */
+export function DrawnCardView({ card, locked, lang, say, rowClass }: {
+  card: DrawnCard;
+  locked: boolean;
+  lang?: HelpLanguage;
+  say?: boolean;
+  /** An extra class per row (the payslip's own fields). */
+  rowClass?: (r: CardRow, i: number) => string;
+}) {
+  const pic = CARD_PIC[card.type];
+  const label = card.sub ? `${card.title} ${card.sub}` : card.title;
+  return (
+    <figure className={`slip card card-${card.type}${say ? ' card-says' : ''}`} aria-label={label} lang="nl">
+      <div className="slip-head">
+        {pic && <span className="card-pic" aria-hidden>{pic}</span>}
+        <span className="slip-title">{card.title}</span>
+        {card.sub && <span className="slip-period">{card.sub}</span>}
+        {say && <span className="card-say"><Say text={cardSpeech(card)} lang={lang} /></span>}
+      </div>
+      <dl className="slip-rows">
+        {card.rows.map((r, i) => {
+          const hit = locked && (r.hit || r.answer !== undefined);
+          return (
+            <div key={i} className={['slip-row', rowClass?.(r, i), r.answer !== undefined && 'card-todo', hit && 'slip-hit'].filter(Boolean).join(' ')}>
+              <dt>{r.label}</dt>
+              {r.answer !== undefined
+                ? <dd>{locked ? r.answer : <span className="card-q" aria-label="nog uitrekenen">?</span>}</dd>
+                : r.value && <dd>{r.value}</dd>}
+            </div>
+          );
+        })}
+      </dl>
+    </figure>
+  );
+}
+
+/** A drawn payslip with a question; the row it is about lights up after the answer. Drawn as
+ *  the `loonstrook` card (DrawnCardView), with its own fields as row classes. */
 export function PayslipStep({ ex, lang, locked, onAnswer }: RuleProps<'payslip'>) {
   const { step } = ex;
   const best = step.options.find((o) => o.best)!;
+  const card: DrawnCard = {
+    type: 'loonstrook',
+    title: 'Loonstrook',
+    sub: step.slip.periode,
+    rows: step.slip.rows.map((r) => ({ label: r.label, value: r.value, ...(r.field === step.highlight ? { hit: true as const } : {}) })),
+  };
   return (
     <div className="exercise rule-payslip">
       <Question text={step.question} lang={lang} />
-      {/* Not buttons: tapping the slip does nothing (the answer is one of the cards below). */}
-      <figure className="slip" aria-label={`Loonstrook ${step.slip.periode}`} lang="nl">
-        <div className="slip-head">
-          <span className="slip-title">Loonstrook</span>
-          <span className="slip-period">{step.slip.periode}</span>
-        </div>
-        <dl className="slip-rows">
-          {step.slip.rows.map((r) => (
-            <div key={r.field} className={`slip-row slip-${r.field} ${locked && r.field === step.highlight ? 'slip-hit' : ''}`}>
-              <dt>{r.label}</dt>
-              <dd>{r.value}</dd>
-            </div>
-          ))}
-        </dl>
-      </figure>
+      <DrawnCardView card={card} locked={locked} lang={lang} rowClass={(_r, i) => `slip-${step.slip.rows[i].field}`} />
       <ChoiceGrid
         className="choices-rows rule-options"
         options={step.options}
@@ -305,6 +349,35 @@ export function PayslipStep({ ex, lang, locked, onAnswer }: RuleProps<'payslip'>
   );
 }
 
+/**
+ * "Reken het uit" / "Lees het kaartje": a drawn card (rooster, kassabon, pakbon, etiket,
+ * werkbon), a question about it and three answer cards. After the answer the card lights up
+ * what it was about, and the feedback shows the steps of the sum (RuleFeedbackBody).
+ */
+export function CardStep({ ex, lang, locked, onAnswer }: RuleProps<'card'>) {
+  const { step } = ex;
+  const best = step.options.find((o) => o.best)!;
+  return (
+    <div className={`exercise rule-cardstep${step.sum ? ' rule-sum' : ''}`}>
+      <Question text={step.question} lang={lang} />
+      <DrawnCardView card={step.card} locked={locked} lang={lang} say />
+      <ChoiceGrid
+        className="choices-rows rule-options"
+        options={step.options}
+        correctId={best.id}
+        locked={locked}
+        lang={lang}
+        onAnswer={onAnswer}
+        stamp={false}
+        render={(o) => <span className="choice-label" lang="nl">{o.text}</span>}
+      />
+    </div>
+  );
+}
+
+/** The tag above a card step: a sum, or reading the card. */
+export const cardTag = (step: { sum?: string[] }) => (step.sum?.length ? 'Reken het uit' : 'Lees het kaartje');
+
 /** What the feedback label says after a rules question. */
 export interface RuleVerdict {
   title: string;
@@ -312,6 +385,8 @@ export interface RuleVerdict {
   own?: string;
   /** After another choice: the best answer, with its lead ("Beste antwoord"). */
   best?: { lead: string; text: string };
+  /** A card's sum: its steps, in words and numbers ("20 × 15 = 300 euro."). */
+  sum?: string[];
   why: string;
 }
 
@@ -326,14 +401,16 @@ export function ruleVerdict(ex: RuleExercise, correct: boolean, given?: string):
         why: ex.step.why,
       };
     case 'whatdo':
-    case 'payslip': {
+    case 'payslip':
+    case 'card': {
       const opts: readonly { id: string; text: string; best: boolean; feedback: string }[] = ex.step.options;
       const picked = opts.find((o) => o.id === given);
       const best = opts.find((o) => o.best)!;
       return {
         title: correct ? 'Goed zo!' : ex.kind === 'whatdo' ? 'Hier gaat het anders' : 'Niet helemaal',
         own: picked?.feedback,
-        best: correct ? undefined : { lead: 'Beste antwoord', text: best.text },
+        best: correct ? undefined : { lead: ex.kind === 'card' && ex.step.sum?.length ? 'Het goede antwoord' : 'Beste antwoord', text: best.text },
+        ...(ex.kind === 'card' && ex.step.sum?.length ? { sum: ex.step.sum } : {}),
         why: ex.step.why,
       };
     }
@@ -355,7 +432,7 @@ export function ruleVerdict(ex: RuleExercise, correct: boolean, given?: string):
 /** The text of the feedback label (Dutch), for the screen reader's status line. */
 export function ruleAnnouncement(v: RuleVerdict): string {
   const end = (s: string) => (/[.!?]$/.test(s) ? s : `${s}.`);
-  return [v.title, v.own, v.best && `${v.best.lead}: ${end(v.best.text)}`, v.why].filter(Boolean).map((s) => end(s!)).join(' ');
+  return [v.title, v.own, v.best && `${v.best.lead}: ${end(v.best.text)}`, ...(v.sum ?? []), v.why].filter(Boolean).map((s) => end(s!)).join(' ');
 }
 
 /** The feedback label's body for a rules question: the own line, the best answer, the why with
@@ -369,6 +446,15 @@ export function RuleFeedbackBody({ v, lang }: { v: RuleVerdict; lang?: HelpLangu
           <span className="feedback-kicker">{v.best.lead}</span>
           <strong>{v.best.text}</strong>
         </p>
+      )}
+      {v.sum && (
+        <div className="rule-fb-sum">
+          <Say text={v.sum.join(' ')} lang={lang} />
+          <div className="rule-fb-sum-body">
+            <span className="feedback-kicker" lang="nl">Zo reken je het</span>
+            <p lang="nl">{v.sum.map((line, i) => <span key={i} className="rule-line">{line}</span>)}</p>
+          </div>
+        </div>
       )}
       <hr className="feedback-rule" />
       <div className="feedback-why rule-fb-why">

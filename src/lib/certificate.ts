@@ -6,6 +6,7 @@ import type { Unit, Word } from '../content/types';
 import type { HelpLanguage } from '../i18n/types';
 import { coursePlan, type SectorChoice } from '../content/sectors';
 import { dayKey, type Progress } from './progress';
+import { isRegionUnitId } from '../content/regio';
 
 /**
  * A certificate per finished unit ("Oefencertificaat"): earned when every lesson of the unit,
@@ -31,11 +32,18 @@ export function earnCertificates<P extends Progress>(p: P, now: Date): P {
   return { ...p, certs: { ...certs, ...Object.fromEntries(fresh.map((u) => [u.id, today])) } };
 }
 
-/** The unit this lesson finished just now (it was not done before, and is now), if any. */
+/**
+ * The unit this lesson finished just now (it was not done before, and is now), if any. A region's
+ * unit (src/content/regio) has no certificate: it does not count, so the certificate is the same
+ * for everyone, wherever they live.
+ */
 export function unitJustDone(before: Record<string, unknown>, after: Record<string, unknown>, lessonId: string): Unit | undefined {
   const unit = findLesson(lessonId)?.unit;
-  return unit && !unitDone(unit, before) && unitDone(unit, after) ? unit : undefined;
+  return unit && !isRegionUnitId(unit.id) && !unitDone(unit, before) && unitDone(unit, after) ? unit : undefined;
 }
+
+/** Can this unit have a certificate? Not a region's unit (see unitJustDone). */
+export const hasCertificate = (unitId: string): boolean => !isRegionUnitId(unitId);
 
 export interface Earned {
   unit: Unit;
@@ -121,7 +129,9 @@ export function certDate(day: string): string {
  * a sector this is the order of the whole course.
  */
 export function unitIndex(unit: Unit, sector?: SectorChoice, track: Track = trackOfId(unit.id)): number {
-  const { main, other } = coursePlan(sector, track);
+  // A region's unit ("rg.zl.u") has its number in the path of a learner of that region.
+  const region = /^rg\.([a-z]+)\./.exec(unit.id)?.[1];
+  const { main, other } = coursePlan(sector, track, region);
   const at = [...main, ...other].findIndex((u) => u.id === unit.id);
   return at >= 0 ? at : courseUnits(track).indexOf(unit);
 }

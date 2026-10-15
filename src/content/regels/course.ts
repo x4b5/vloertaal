@@ -1,5 +1,5 @@
 import type { Lesson, Unit } from '../types';
-import type { RuleLesson, RuleStep, RuleUnit } from './types';
+import type { DrawnCard, RuleLesson, RuleStep, RuleUnit } from './types';
 
 /**
  * The rules course in the app's own shape: a RuleUnit becomes a Unit and a RuleLesson a Lesson
@@ -43,11 +43,24 @@ export function toCourseUnits(units: readonly RuleUnit[]): Unit[] {
 export function ruleStepTexts(step: RuleStep): string[] {
   switch (step.kind) {
     case 'scene': return [step.lines.join(' ')];
-    case 'rule': return [step.title, step.body.join(' ')];
+    // A dialect word card has no speaker (the phone's voice reads dialect badly).
+    case 'rule': return step.dialect ? [step.title] : [step.title, step.body.join(' ')];
     case 'truefalse': return [step.statement, step.why];
     case 'whatdo': return [step.situation, ...(step.quote ? [step.quote] : []), ...step.options.filter((o) => o.say).map((o) => o.text), step.why];
     case 'whoask': return [step.question, step.why];
     case 'model': return [step.nl];
     case 'payslip': return [step.question, step.why];
+    case 'card': return [cardSpeech(step.card), step.question, ...(step.sum?.length ? [step.sum.join(' ')] : []), step.why];
   }
+}
+
+/**
+ * What the speaker beside a drawn card reads: its heading and its rows ("Kassabon. Totaal: 13,40
+ * euro."). A row still to work out ("?") is left out: the voice never gives the answer away. The
+ * voice says the times and amounts as words (src/lib/sayNumbers.ts).
+ */
+export function cardSpeech(card: DrawnCard): string {
+  const end = (s: string) => (/[.!?]$/.test(s) ? s : `${s}.`);
+  const head = end(card.sub ? `${card.title}, ${card.sub}` : card.title);
+  return [head, ...card.rows.filter((r) => !r.answer).map((r) => end(r.value ? `${r.label}: ${r.value}` : r.label))].join(' ');
 }

@@ -1,5 +1,6 @@
 import { allWords, teachingLessons } from '../content/curriculum';
 import { courseUnits } from '../content/courses';
+import { allRegionUnits, regionTaalLessons } from '../content/regio';
 import type { RuleStep } from '../content/regels/types';
 import type { Dialogue, Lesson, Sentence, Unit, Word } from '../content/types';
 import { dayKey } from './progress';
@@ -33,7 +34,8 @@ export function addDays(day: string, n: number): string {
   return dayKey(new Date(y, m - 1, d + n));
 }
 
-const wordById = new Map(allWords.map((w) => [w.id, w]));
+// With the words of the regions' lessons (src/content/regio): they come back like any other word.
+const wordById = new Map([...allWords, ...regionTaalLessons().flatMap((l) => l.words)].map((w) => [w.id, w]));
 
 /**
  * After a lesson: new items get a card (back tomorrow); an item answered wrong goes back to box 1.
@@ -192,9 +194,9 @@ export function strongerCount(before: Cards, after: Cards): number {
 /** At most this many questions in a daily review of the work-rules track. */
 export const RULE_DAILY_MAX = 6;
 
-/** The rules questions (graded steps): true/false, what do you do, who do you ask, the payslip. */
-export type GradedRuleStep = Extract<RuleStep, { kind: 'truefalse' | 'whatdo' | 'whoask' | 'payslip' }>;
-const GRADED = new Set<RuleStep['kind']>(['truefalse', 'whatdo', 'whoask', 'payslip']);
+/** The rules questions (graded steps): true/false, what do you do, who do you ask, the payslip, the card. */
+export type GradedRuleStep = Extract<RuleStep, { kind: 'truefalse' | 'whatdo' | 'whoask' | 'payslip' | 'card' }>;
+const GRADED = new Set<RuleStep['kind']>(['truefalse', 'whatdo', 'whoask', 'payslip', 'card']);
 export const isGradedStep = (s: RuleStep): s is GradedRuleStep => GRADED.has(s.kind);
 
 /** The questions of a rules lesson: the cards it adds to the box (a language lesson has none). */
@@ -203,13 +205,15 @@ export function gradedStepIds(lesson: Lesson): string[] {
 }
 
 /** Every question of the rules course by id (the course registers late: rebuilt when it changes). */
-let stepIndex: { from: Unit[]; byId: Map<string, GradedRuleStep> } | null = null;
+let stepIndex: { from: Unit[]; regions: number; byId: Map<string, GradedRuleStep> } | null = null;
 function ruleStepById(): Map<string, GradedRuleStep> {
   const from = courseUnits('regels');
-  if (stepIndex?.from !== from) {
+  // The regions' rules units (src/content/regio) register late too, with the track's file.
+  const regions = allRegionUnits('regels');
+  if (stepIndex?.from !== from || stepIndex.regions !== regions.length) {
     const byId = new Map<string, GradedRuleStep>();
-    for (const u of from) for (const l of u.lessons) for (const s of l.steps ?? []) if (isGradedStep(s)) byId.set(s.id, s);
-    stepIndex = { from, byId };
+    for (const u of [...from, ...regions]) for (const l of u.lessons) for (const s of l.steps ?? []) if (isGradedStep(s)) byId.set(s.id, s);
+    stepIndex = { from, regions: regions.length, byId };
   }
   return stepIndex.byId;
 }

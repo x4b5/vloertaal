@@ -3,6 +3,7 @@ import { toolsUnit, workUnits } from './work';
 import { addMixLessons, isMixLesson, mixLessonFor } from './review';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
 import { rulesCourseUnits } from './rulesCourse';
+import { allRegionUnits, regionTaalLessons } from './regio';
 import type { Track } from '../lib/track';
 
 /**
@@ -305,7 +306,8 @@ export const allReplies: ChatLine[] = allDialogues.map((d) => d.reply);
  * lesson showed and practised all its words). Counted from progress, so nothing new is stored.
  */
 export function learnedWords(completed: Record<string, unknown>): Set<string> {
-  return new Set(allLessons.filter((l) => completed[l.id]).flatMap((l) => l.words.map((w) => w.id)));
+  // A region's lessons (src/content/regio) teach words too.
+  return new Set([...allLessons, ...regionTaalLessons()].filter((l) => completed[l.id]).flatMap((l) => l.words.map((w) => w.id)));
 }
 
 /**
@@ -313,7 +315,8 @@ export function learnedWords(completed: Record<string, unknown>): Set<string> {
  * (the Dutch course first): ids never clash, so a Dutch-course id finds what it always found.
  */
 export function findLesson(id: string, track?: Track): { unit: Unit; lesson: Lesson } | undefined {
-  const where = track === 'taal' ? units : track === 'regels' ? rulesCourseUnits() : [...units, ...rulesCourseUnits()];
+  // A region's units (src/content/regio) are found too: their ids never clash either ("rg.").
+  const where = [...(track === 'taal' ? units : track === 'regels' ? rulesCourseUnits() : [...units, ...rulesCourseUnits()]), ...allRegionUnits(track)];
   for (const unit of where) {
     const lesson = unit.lessons.find((l) => l.id === id);
     if (lesson) return { unit, lesson };

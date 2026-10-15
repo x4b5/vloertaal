@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { NOT_SURE, sectors, type SectorChoice } from '../content/sectors';
+import { REGIONS, regionOf, regionsOn, type RegionChoice } from '../content/regio';
 import { ensureLanguage, hasGender, isLanguageLoaded, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
 import { dutchUi, trackOfLang } from '../lib/track';
@@ -48,6 +49,13 @@ const PhoneIcon = ({ size = 24 }: { size?: number }) => (
     <path d="M10.5 18.2h3" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round" />
   </svg>
 );
+/** A map pin, for "Waar woon je?" (the region). */
+const PinIcon = ({ size = 24 }: { size?: number }) => (
+  <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
+    <path d="M12 21.2s-6.6-6.1-6.6-11.2a6.6 6.6 0 0 1 13.2 0c0 5.1-6.6 11.2-6.6 11.2Z" fill="none" stroke="currentColor" strokeWidth="2.3" strokeLinejoin="round" />
+    <circle cx="12" cy="10" r="2.4" fill="currentColor" />
+  </svg>
+);
 /** Three bars, for "Count anonymously". */
 const BarsIcon = ({ size = 24 }: { size?: number }) => (
   <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
@@ -70,6 +78,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   sector: { nl: 'Waar werk je?', key: 'chooseSector', icon: <SectorIcon id="logistics" size={24} /> },
   'sector-make': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   'sector-care': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
+  region: { nl: 'Waar woon je?', key: 'regionTitle', icon: <PinIcon size={24} /> },
   english: { nl: 'Ook Engels tonen', key: 'showEnglish', icon: <span className="set-en" lang="en">EN</span> },
   certificates: { nl: 'Mijn certificaten', key: 'myCertificates', icon: <CertIcon size={24} /> },
   sound: { nl: 'Geluid', key: 'sound', icon: <SpeakerIcon size={24} /> },
@@ -109,7 +118,7 @@ function Head({ page, lang, onBack }: { page: SettingsPage | null; lang?: HelpLa
 }
 
 export function Settings({
-  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onTheme, onTextSize, onVoice, onQuiet, onReset,
+  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onTheme, onTextSize, onVoice, onQuiet, onReset,
   onRestore, access = 'full', onAccess, onCertificate,
 }: {
   progress: Progress;
@@ -123,6 +132,8 @@ export function Settings({
   onLang: (code: UiCode | null) => void;
   onGender: (gender: Gender) => void;
   onSector: (sector: SectorChoice) => void;
+  /** "Waar woon je?": a region, or 'none' ("Andere plek / zeg ik liever niet"). */
+  onRegion?: (region: RegionChoice) => void;
   onTheme: (theme: ThemeChoice) => void;
   onTextSize: (size: TextSize) => void;
   onVoice: (voice: string | null) => void;
@@ -196,6 +207,8 @@ export function Settings({
     offline: offlineSupported(),
     rules: dutchUi(lang),
     recorded: recorded.length > 0,
+    // Only when the regions are offered (src/content/regio regionsOn) and the app can store one.
+    region: regionsOn() && Boolean(onRegion),
   };
   const writing = nonLatinHelp(lang) && !wantsWriting() ? 'pick' : writingInput(lang);
   const voice = voiceChoiceOf(progress.voice, recorded);
@@ -209,6 +222,10 @@ export function Settings({
       case 'sector': {
         const s = sectors.find((x) => x.id === progress.sector);
         return progress.sector ? <Value text={say(s ? s.key : NOT_SURE.key)} /> : null;
+      }
+      case 'region': {
+        const r = regionOf(progress.region);
+        return r ? <span className="set-row-value" lang="nl">{r.nl}</span> : <Value text={say('regionNone')} />;
       }
       case 'english': return <Value text={say(wantsEnglish() ? 'settingOn' : 'settingOff')} />;
       case 'certificates': return <span className="set-row-value">{earnedCertificates(progress).length}</span>;
@@ -290,6 +307,26 @@ export function Settings({
             <SectorCards group={page === 'sector-make' ? 'make' : 'care'} current={progress.sector} lang={lang} onPick={(s) => { onSector(s); answered(2); }} />
           </>
         );
+      case 'region': {
+        // Two cards (at most three): the region by its name (a name, never translated) and
+        // "Andere plek / zeg ik liever niet". Asked here only, never in the first run.
+        const zl = REGIONS[0];
+        return (
+          <>
+            <p className="max3-hint max3-hint-top"><Bi text={say('regionHint')} /></p>
+            <ChoiceCards
+              label={said(ui('regionTitle', lang))}
+              current={progress.region === 'none' ? 'none' : regionOf(progress.region)?.id ?? null}
+              onPick={(id) => { onRegion?.(id); answered(); }}
+              options={[
+                { id: zl.id, text: { en: zl.nl, lang }, picture: <PinIcon size={28} /> },
+                { id: 'none', nl: 'Andere plek / zeg ik liever niet', text: say('regionOther'), picture: <GlobeIcon size={28} /> },
+              ]}
+            />
+            <p className="max3-hint region-places" lang="nl">{zl.places.join(' · ')}</p>
+          </>
+        );
+      }
       case 'english':
         return onOff(wantsEnglish(), (on) => { setWantsEnglish(on); applyEnglish(lang?.code, on); });
       case 'certificates':

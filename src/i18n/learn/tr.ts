@@ -72,6 +72,10 @@ const t: CultureTranslation = {
     'c.service.a.why': "Hesap istendi: kısa bir \"evet\" ve hemen gidilir.",
     'c.cleaning.a.why': "Bitti mi? Bu cevap \"neredeyse\" diyor ve kaç tane kaldığını söylüyor.",
     'c.cleansafe.a.why': "Islak zemin kaygandır: uyarı yardımcı olur.",
+    'c.shelves.a.why': "Soru \"nerede\" diye soruyor. Bu cevap koridoru söylüyor ve yardım ediyor.",
+    'c.checkout.a.why': "Kartla ödeme soruluyor: kısa ve nazik bir \"evet\".",
+    'c.hours.a.why': "Soru saati soruyor. Bu cevap bir saat söylüyor.",
+    'c.measures.a.why': "Soru uzunluğu soruyor. Bu cevap bir uzunluk söylüyor.",
   },
 };
 

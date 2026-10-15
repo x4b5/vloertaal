@@ -372,6 +372,21 @@ function defineStates(LANG) {
   add('screen:coaches', shot('coaches'), null, { list: true });
   add('screen:tips', shot('tips'), null, { list: true });
   add('screen:tips-open', shot('tips'), async (p) => { await tap(p, '.tips-head', 0); await settle(p); }, { list: true });
+
+  // The region Zuid-Limburg (src/content/regio, docs/regio-zuid-limburg.md): Settings › "Waar woon
+  // je?" (two cards), the Hulp tab with the map's link, the Sociale kaart (the list exception:
+  // category headers without a tap, one tap per row), the region unit in All topics and its topic
+  // page (no certificate), a step of its lesson, and the real way from the home to the map.
+  add('settings:region', shot('settings&page=region&region=zl'), null, { expect: '.chrome-back' });
+  add('settings:region-none', shot('settings&page=region'), null, { expect: '.chrome-back' });
+  add('settings:me-region', shot('settings&page=me&region=zl'), null, { list: true, expect: '.chrome-back' });
+  add('tab:help-region', shot('words&region=zl'), null, { expect: '.social-map-link' });
+  add('screen:social-map', shot('socialmap&region=zl'), null, { list: true, expect: '.sm-rows' });
+  add('route:all-topics-region', shot('all&state=mid&region=zl'), null, { list: true });
+  add('route:topic-region', shot('topic&cu=rg.zl.u&state=mid&region=zl'), null, { list: true });
+  add('lesson:region-tip', shot('lesson&lesson=rg.zl.l.1&at=9'));
+  add('lesson:region-situation', shot('lesson&lesson=rg.zl.l.1&at=10'));
+  add('flow:help-map', '/', async (p) => { await realHome(p, { region: 'zl' }); await navTab(p, 1); await settle(p); await tap(p, '.social-map-link'); await settle(p); }, { list: true, expect: '.sm-rows' });
   return S;
 }
 
@@ -408,12 +423,29 @@ function defineRuleStates() {
   step('model', 'rule&step=model', false);
   step('model-clip', 'rule&step=model&id=r.l.veilig.2.mo1', false);
   step('payslip', 'rule&step=payslip', true);
+  // The drawn card (docs/entree-aanvulling.md): a sum on a rooster (the default), a kassabon, a
+  // pakbon, an etiket and a loonstrook; reading a werkbon. The card is not tappable; its speaker
+  // is not counted.
+  step('card', 'rule&step=card', true);
+  step('card-week', 'rule&step=card&id=r.l.rekenen.1.ca2', true);
+  step('card-kassabon', 'rule&step=card&id=r.l.winkel.3.ca1', true);
+  step('card-pakbon', 'rule&step=card&id=r.l.rekenen.3.ca1', true);
+  step('card-etiket', 'rule&step=card&id=r.l.rekenen.3.ca2', true);
+  step('card-loonstrook', 'rule&step=card&id=r.l.rekenen.2.ca2', true);
+  step('card-werkbon', 'rule&step=card&id=r.l.afronden.1.ca1', true);
+  // The new places to go for help (school, praktijkopleider, ICT-afdeling).
+  step('whoask-stage', 'rule&step=whoask&id=r.l.stage.1.wa1', true);
+  step('whoask-ict', 'rule&step=whoask&id=r.l.digitaal.2.wa1', true);
+  // A written rule with the civic line (Meedoen in Nederland).
+  step('rule-civic', 'rule&step=rule&lesson=r.l.meedoen.1', false);
   add('rule:retry', shot('rule&step=whatdo&retry=1'), null, { expect: '.tag-repeat' });
   add('rule:quiet', shot('rule&step=scene&quiet=1'), null, { expect: '.player-body .exercise' });
   add('rule:quit-dialog', shot('rule&step=whatdo'), async (p) => { await tap(p, '.player-top .lesson-close'); }, { expect: '.pause-sheet .sheet-sound' });
   add('rule:no-voice', shot('rule&step=whatdo&id=r.l.zoeken.3.wd2'), null, { voices: false, expect: '.player-body .exercise' });
   // A real rules lesson from its start, played through the player (built from seed 1).
   add('rule:lesson-start', shot('lesson&lesson=r.l.loon.2'), null, { expect: '.player-body .exercise' });
+  add('rule:lesson-stage', shot('lesson&lesson=r.l.stage.3'), null, { expect: '.player-body .exercise' });
+  add('rule:lesson-meedoen', shot('lesson&lesson=r.l.meedoen.1'), null, { expect: '.player-body .exercise' });
   // M4 around the lessons: "Herhaal vandaag" with rules questions, the home with the rules count
   // and the review due, the result (with the "Onthoud" line and its speaker), the certificate and
   // the pocket card of a rules unit.
@@ -445,6 +477,15 @@ function defineRuleStates() {
   add('rule:gate', shot('gate&try=1&greet=1'), null, { expect: '.gate-try' });
   add('rule:sector', shot('sector'), null, { expect: '.sector-step' });
   add('rule:sector-make', shot('sector&group=make'), null, { expect: '.sector-step-2' });
+  // The region Zuid-Limburg: Settings › "Waar woon je?", the Hulp tab with the map's link, the
+  // Sociale kaart, the dialect word card of les ZL.4 (no speaker), the "Waar ga je heen?" step with
+  // the GrensInfoPunt, and a lesson of the region unit from its start.
+  add('rule:settings-region', shot('settings&page=region&region=zl'), null, { expect: '.chrome-back' });
+  add('rule:help-region', shot('words&region=zl'), null, { list: true, expect: '.social-map-link' });
+  add('rule:social-map', shot('socialmap&region=zl'), null, { list: true, expect: '.sm-rows' });
+  step('dialect', 'rule&step=rule&id=rg.zl.r.l.4.ru2', false);
+  step('whoask-grens', 'rule&step=whoask&id=rg.zl.r.l.3.wa1', true);
+  add('rule:lesson-region', shot('lesson&lesson=rg.zl.r.l.3'), null, { expect: '.player-body .exercise' });
 
   // The real first run in this track, from a clean phone (?rules=1 turns the track on in dev):
   // Nederlands -> (no gender page) -> the code page in Dutch -> the sector -> the home.

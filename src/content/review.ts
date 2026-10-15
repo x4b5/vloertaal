@@ -36,6 +36,8 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.care': ['u.help', 'u.health'],
   'u.horeca': ['u.clean', 'u.safety'],
   'u.clean': ['u.safety', 'u.house'],
+  'u.shop': ['u.horeca', 'u.warehouse'],
+  'u.numbers': ['u.time', 'u.pay'],
 };
 
 /**
@@ -56,6 +58,8 @@ const relatedWords: Record<string, string[]> = {
   'u.factory': ['w.handschoenen', 'w.doos'],
   'u.horeca': ['w.dweil', 'w.handschoenen'],
   'u.clean': ['w.handschoenen', 'w.kluisje'],
+  'u.shop': ['w.rekening', 'w.doos'],
+  'u.numbers': ['w.pauze', 'w.uurloon'],
 };
 
 export const MIX_TITLE = 'Mixed review';

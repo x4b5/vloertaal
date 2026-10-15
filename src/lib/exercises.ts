@@ -42,7 +42,7 @@ export type Exercise =
 
 /** The kinds of step of a rules lesson (src/content/regels/types.ts). */
 export type RuleKind = RuleStep['kind'];
-export const RULE_KINDS: readonly RuleKind[] = ['scene', 'rule', 'truefalse', 'whatdo', 'whoask', 'model', 'payslip'];
+export const RULE_KINDS: readonly RuleKind[] = ['scene', 'rule', 'truefalse', 'whatdo', 'whoask', 'model', 'payslip', 'card'];
 
 /** A rules step as an exercise: the step itself (its options in the lesson's own order). */
 export type RuleExercise = { [K in RuleKind]: { kind: K; step: Extract<RuleStep, { kind: K }> } }[RuleKind];
@@ -54,7 +54,7 @@ export function isRuleExercise(ex: Exercise): ex is RuleExercise {
 
 /** Rule steps that are a question (one best answer): the rest (story, rule card, "Zo zeg je
  *  het") only goes on. */
-export const GRADED_RULE_KINDS: readonly RuleKind[] = ['truefalse', 'whatdo', 'whoask', 'payslip'];
+export const GRADED_RULE_KINDS: readonly RuleKind[] = ['truefalse', 'whatdo', 'whoask', 'payslip', 'card'];
 
 /**
  * Exercises that can only be answered by hearing: the word is not on screen. They are left out
@@ -75,7 +75,7 @@ export function choicePictures(answer: Word, options: readonly Word[]): boolean[
 }
 
 /** Intros, tips and speaking practice are not graded; every other exercise is. In a rules
- *  lesson: true/false, what do you do, who do you ask and the payslip are; a story, a rule card
+ *  lesson: true/false, what do you do, who do you ask, the payslip and the card are; a story, a rule card
  *  and a model sentence just go on. */
 export function isGraded(ex: Exercise): boolean {
   if (isRuleExercise(ex)) return GRADED_RULE_KINDS.includes(ex.kind);
@@ -612,6 +612,8 @@ export function forRetry(ex: Exercise, lesson: Lesson, seed: number): Exercise {
       return { ...ex, step: { ...ex.step, options: reorder(ex.step.options, rng, ex.step.options.find((o) => o.best)?.id) } };
     case 'payslip':
       return { ...ex, step: { ...ex.step, options: reorder(ex.step.options, rng, ex.step.options.find((o) => o.best)?.id) } };
+    case 'card':
+      return { ...ex, step: { ...ex.step, options: reorder(ex.step.options, rng, ex.step.options.find((o) => o.best)?.id) } };
     default:
       return ex;
   }
@@ -632,6 +634,7 @@ export function buildRuleLesson(lesson: Lesson, opts: { seed?: number; review?: 
       case 'whatdo': out.push({ kind: 'whatdo', step: { ...step, options: shuffle(step.options, rng) } }); break;
       case 'whoask': out.push({ kind: 'whoask', step: { ...step, options: shuffle(step.options, rng) } }); break;
       case 'payslip': out.push({ kind: 'payslip', step: { ...step, options: shuffle(step.options, rng) } }); break;
+      case 'card': out.push({ kind: 'card', step: { ...step, options: shuffle(step.options, rng) } }); break;
       default: out.push({ kind: step.kind, step } as RuleExercise);
     }
   }

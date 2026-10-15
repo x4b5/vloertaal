@@ -3,10 +3,14 @@
 // clip in every voice, unless the clip names its voices ("voices": only those record it).
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { cultureTips } from '../src/content/culture';
-import { phrasebookExtras, units } from '../src/content/curriculum';
+import { phrasebookExtras, units as courseUnits } from '../src/content/curriculum';
+import { allRegionTips, allRegionUnits } from '../src/content/regio';
 import { tokenize } from '../src/lib/answers';
 import { sayAs } from '../src/lib/sayAs';
 import { BRAM_HELLO, BRAM_VOICE, VOICE_SAMPLE } from '../src/lib/voices';
+
+// The course, then the regions' language units (src/content/regio): their lines are recorded too.
+const units = [...courseUnits, ...allRegionUnits('taal')];
 
 const clips = new Map<string, string>();
 /** Clips only some voices record (to save credits): id -> voice keys. */
@@ -25,7 +29,7 @@ for (const u of units)
       add(d.reply.id, d.reply.nl);
     }
   }
-for (const t of cultureTips) {
+for (const t of [...cultureTips, ...allRegionTips]) {
   add(t.phrase.id, t.phrase.nl);
   // The Dutch quoted in a situation ("Zeg maar je, hoor!"), played beside its text.
   if (t.situation.nl) add(`${t.situation.id}.nl`, t.situation.nl);

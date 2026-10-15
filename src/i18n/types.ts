@@ -211,6 +211,9 @@ export const uiEn = {
   topicsDone: 'Finished topics',
   lessonsUnit: 'lessons',
   lessonsUnitOne: 'lesson',
+  /** "2 / 5 topics": a theme's finished topics (All topics, the home's theme label). */
+  topicsUnit: 'topics',
+  topicsUnitOne: 'topic',
   allTopicsDone: 'You finished every topic. Well done!',
   /* Speaking practice ("say it": record and compare; Settings switch). */
   tagSpeak: 'Speak',
@@ -266,6 +269,15 @@ export const uiEn = {
   settingOff: 'Off',
   sectorGroupMake: 'Making & moving',
   sectorGroupCare: 'Care & service',
+  /* The regions (src/content/regio): Settings › "Waar woon je?" and the Sociale kaart on the Hulp tab. */
+  regionTitle: 'Where do you live?',
+  regionHint: 'Do you live or work in South Limburg? Then you get extra lessons about your region. This stays on your phone. We send it nowhere.',
+  regionOther: 'Somewhere else / I’d rather not say',
+  regionNone: 'Not chosen',
+  socialMap: 'Social map',
+  socialMapHint: 'Where to go for what. Tap a row to call or to open the website.',
+  socialMapNote: 'General information, not advice. Names, numbers and websites can change.',
+  socialMapWrong: 'Is something not right? Send an e-mail to hoi@vloertaal.nl.',
   voiceWoman: "Woman's voice",
   voiceMan: "Man's voice",
   writingPick: 'Pick the word',

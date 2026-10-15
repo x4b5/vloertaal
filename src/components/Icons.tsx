@@ -168,6 +168,15 @@ export const ListIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** A calculator: "Reken het uit" (a drawn card with a sum, work-rules track). */
+export const CalcIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <rect x="5" y="3" width="14" height="18" rx="2.4" {...stroke} strokeWidth={2.2} />
+    <path d="M8.5 7.5h7" {...stroke} strokeWidth={2.2} />
+    <path d="M9 12h.01M12 12h.01M15 12h.01M9 15.5h.01M12 15.5h.01M15 15.5h.01" {...stroke} strokeWidth={2.8} />
+  </Svg>
+);
+
 /** A lifebuoy: the "Hulp" tab (emergency phrases and workplace tips). */
 export const LifebuoyIcon = (p: IconProps) => (
   <Svg {...p}>

@@ -200,6 +200,8 @@ const lang: HelpLanguageSource = {
     topicsDone: 'موضوع‌های تمام‌شده',
     lessonsUnit: 'درس',
     lessonsUnitOne: 'درس',
+    topicsUnit: 'موضوع',
+    topicsUnitOne: 'موضوع',
     allTopicsDone: 'همهٔ موضوع‌ها را تمام کردید. آفرین!',
     // Speaking practice
     tagSpeak: 'بگویید',
@@ -291,6 +293,15 @@ const lang: HelpLanguageSource = {
     reviewWaiting: 'کلمه‌های دیگری منتظرند: {n}. در روزهای بعد برمی‌گردند.',
   },
   gloss: {
+    // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
+    'theme.start': 'قدم‌های اول',
+    'theme.safe': 'کار ایمن',
+    'theme.find': 'پیدا کردن کار',
+    'theme.job': 'شغل شما',
+    'theme.together': 'همکاری',
+    'theme.rights': 'حق‌های شما',
+    'theme.life': 'زندگی در هلند',
+    'theme.sector': 'رشتهٔ کاری شما',
     // Units
     'u.firstday': 'روز اول کار',
     'u.help': 'کمک خواستن',
