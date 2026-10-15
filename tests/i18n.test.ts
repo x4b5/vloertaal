@@ -5,7 +5,7 @@ import { cultureIds, cultureTips } from '../src/content/culture';
 import { workIds } from '../src/content/work';
 import { chatWhyIds } from '../src/content/chatWhy';
 import { getHelpLanguage, gloss, hasGender, helpLanguageSources, helpLanguages, ui } from '../src/i18n/all';
-import { allForms, forGender, GENDERED_LANGS, uiEn, type LangText } from '../src/i18n/types';
+import { allForms, forGender, GENDERED_LANGS, isPlural, PLURAL_CATEGORIES, uiEn, type LangText } from '../src/i18n/types';
 import { mixLessonFor } from '../src/content/review';
 
 const contentIds = [
@@ -87,7 +87,12 @@ describe('content and translations', () => {
     });
 
     it(`${lang.code} gender forms keep the same placeholders and only appear where gender matters`, () => {
-      const texts: [string, LangText | undefined][] = [...Object.entries(lang.ui), ...Object.entries(lang.gloss)];
+      // A plural text (src/i18n/types.ts PluralText) is checked form by form: each may be gendered.
+      const texts: [string, LangText | undefined][] = [
+        ...Object.entries(lang.ui).flatMap(([k, t]): [string, LangText | undefined][] =>
+          isPlural(t) ? PLURAL_CATEGORIES.map((c) => [k, t[c]]) : [[k, t]]),
+        ...Object.entries(lang.gloss),
+      ];
       for (const [key, t] of texts) {
         if (t === undefined || typeof t === 'string') continue;
         // Only languages with grammatical gender carry gendered texts.

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
-import { fillN, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
+import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, sounds, speak, speechAvailable, stopSpeech } from '../lib/audio';
 import { tileDiff } from '../lib/answers';
@@ -10,7 +10,7 @@ import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { learnerCharacter, voiceFor } from '../lib/voices';
 import { nonLatinHelp, pickInsteadOfTyping, writingInput } from '../lib/writing';
-import { castFor, tipCast, type CharacterId } from './Characters';
+import { castFor, colleaguesOf, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { FlameIcon } from './StreakArt';
 import {
@@ -53,7 +53,7 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
     case 'build':
       return { text: ex.sentence.nl, nl: true };
     case 'chat':
-      return { text: ex.dialogue.reply.nl, nl: true };
+      return { text: ex.reverse ? ex.dialogue.prompt.nl : ex.dialogue.reply.nl, nl: true };
     case 'match':
     case 'tip':
     case 'speak':
@@ -68,7 +68,9 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
 /** Who says the answer: in a chat the right reply is "your" line (Amina, or Bram for a man);
  *  a built sentence belongs to its speaker; a tip or situation to its colleague; single words to Bram. */
 function answerVoice(ex: Exercise, gender?: Gender): CharacterId {
-  return ex.kind === 'chat' ? learnerCharacter(gender)
+  // A reversed chat's answer is the colleague's question (their voice).
+  return ex.kind === 'chat' && ex.reverse ? castFor(ex.dialogue.prompt.id, colleaguesOf(gender))
+    : ex.kind === 'chat' ? learnerCharacter(gender)
     : ex.kind === 'build' ? castFor(ex.sentence.id)
     : ex.kind === 'situation' || ex.kind === 'tip' ? tipCast(ex.tip, gender)
     : 'bram';
@@ -139,8 +141,10 @@ function answerPair(ex: Exercise, lang?: HelpLanguage): { nl?: string; meaning: 
       return { nl: ex.word.nl, meaning: gloss(ex.word.id, ex.word.en, lang) };
     case 'build':
       return { nl: ex.sentence.nl, meaning: gloss(ex.sentence.id, ex.sentence.en, lang) };
-    case 'chat':
-      return { nl: ex.dialogue.reply.nl, meaning: gloss(ex.dialogue.reply.id, ex.dialogue.reply.en, lang) };
+    case 'chat': {
+      const line = ex.reverse ? ex.dialogue.prompt : ex.dialogue.reply;
+      return { nl: line.nl, meaning: gloss(line.id, line.en, lang) };
+    }
     case 'situation': {
       const best = ex.tip.options.find((o) => o.best)!;
       return { meaning: gloss(best.id, best.en, lang) };
@@ -304,7 +308,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     return () => clearTimeout(t);
   }, [soundNote]);
 
-  const ex = queue[index];
+  // A sentence built by ear becomes the usual one (meaning shown) when the learner can't listen.
+  const queued = queue[index];
+  const ex: Exercise = useMemo(
+    () => (queued && queued.kind === 'build' && queued.audio && audioOff ? { ...queued, audio: undefined } : queued),
+    [queued, audioOff],
+  );
 
   /*
    * Resume: the place is saved after every answer (on the exercise that comes next) and when the
@@ -710,7 +719,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   );
   // Situations explain why the usual answer works here.
   // A chat after a wrong pick: one short line on why the right reply fits.
-  const chatReason = ex.kind === 'chat' && feedback && !answer.correct ? chatWhy(ex.dialogue.reply.id) : undefined;
+  const chatReason = ex.kind === 'chat' && !ex.reverse && feedback && !answer.correct ? chatWhy(ex.dialogue.reply.id) : undefined;
   const why = ex.kind === 'situation' ? gloss(ex.tip.why.id, ex.tip.why.en, lang) : chatReason ? gloss(chatReason.id, chatReason.en, lang) : null;
   const whyLine = why && (
     <div className="feedback-meaning feedback-why">
@@ -785,7 +794,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
               {/* Retry phase: the mistakes come back, and the learner sees how many are left. */}
               {/* The chip says it in the help language too (large), the Dutch small beside it. */}
               <RepeatTag left={repeatsLeft} lang={lang} />
-              <Bi className="ex-tag-note" text={fillN(ui('practiseMistakes', lang), repeatsLeft)} />
+              <Bi className="ex-tag-note" text={fillCount('practiseMistakes', repeatsLeft, lang)} />
             </>
           ) : (
             <KindTag kind={typePick ? 'listen' : ex.kind} lang={lang} />
@@ -794,7 +803,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         {body}
         </div>
       </main>
-      <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''}`} ref={footRef}>
+      {/* With nothing in it yet (an answer is a tap on an option), the footer takes no room, so it
+          never covers the last option; a still chevron (not a button) then says there is more. */}
+      <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''} ${!showGo && !feedback ? 'foot-empty' : ''}`} ref={footRef}>
+        {moreBelow && !checked && !showGo && (
+          <span className="foot-more-hint" aria-hidden><ChevronDownIcon size={22} /></span>
+        )}
         {/* More of the exercise underneath: a visible "more" chevron (the shadow alone is easy to miss). */}
         {/* Only beside a footer button: with nothing in the footer, nothing is hidden under it. */}
         {moreBelow && !checked && showGo && (
@@ -881,7 +895,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
  * The pause sheet behind the ✕: always three big buttons, each with its icon. Keep going is the
  * main one; then "Without sound" (leave out listening, speaking and writing from now on; "Sound
  * on" when it is already off); then Stop. Help (the phrasebook) is one tap further: Stop, then
- * Help in the bottom bar. "Start again" lives on the home, next to Continue.
+ * Help in the bottom bar. "Start again" lives on the home, next to Continue (on the topic page
+ * when "Herhaal vandaag" takes its place on the home): a fourth button here would break the 3.
  * kept: the lesson's place is saved (resume), so the hint says the progress stays.
  */
 function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onStop }: {

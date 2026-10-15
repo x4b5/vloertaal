@@ -4,7 +4,7 @@ import { fillN, gloss, said as srText, saidLang, ui, type Bilingual } from '../i
 import type { HelpLanguage } from '../i18n/types';
 import { checkTyped, tokenize } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
-import { buildSteps, MATCH_ASKED, sentencePicture, type Exercise } from '../lib/exercises';
+import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
@@ -256,6 +256,7 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
 /** Dutch word shown → pick the English meaning. */
 export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'meaning'>) {
   useEffect(() => { autoSpeak(ex.word.nl, false, 'nl', voiceFor('bram')); }, [ex.word]);
+  const pics = choicePictures(ex.word, ex.options);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
@@ -275,8 +276,10 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, miss
         onAnswer={onAnswer}
         render={(w) => (
           <>
-            {/* A small picture of each option (abstract words keep a text-only row). */}
-            {hasPicture(w) && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={56} />}
+            {/* A small picture of each option (abstract words keep a text-only row). When the
+                answer has no picture, no option shows one: the one row without a picture
+                would give it away. */}
+            {pics[ex.options.indexOf(w)] && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={56} />}
             <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />
           </>
         )}
@@ -521,6 +524,10 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   const complete = at >= words.length;
   // A long sentence keeps room for two rows from the start, so the words below never jump.
   const twoRows = ex.sentence.nl.length > 24;
+  // Built by ear (later units): the sentence is played at the start and its speaker is there all
+  // along; the meaning shows only at the end. The words keep their own speakers.
+  const byEar = Boolean(ex.audio);
+  useEffect(() => { if (byEar) autoSpeak(ex.sentence.nl, false, 'nl', voiceFor(who)); }, [byEar, ex.sentence, who]);
 
   const tap = (w: string) => {
     if (locked || complete) return;
@@ -542,17 +549,17 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   return (
     // data-nl: the sentence, for the tap counter (scripts/max3) now that its speaker waits.
     <div className="exercise build-steps" data-nl={ex.sentence.nl}>
-      <Prompt text={ui('buildSentence', lang)} />
-      <div className="speaker speaker-build">
+      <Prompt text={ui(byEar ? 'buildListen' : 'buildSentence', lang)} />
+      <div className={`speaker speaker-build ${byEar ? 'build-by-ear' : ''}`}>
         <Speaker who={who} lines={[ex.sentence.nl, ...words]} verdict={verdict} run={run} misses={misses} />
         {/* The meaning, large in the help language, with the sentence's picture word and a
             speaker: hearing the Dutch is the listen-and-build form of the task. */}
         <div className="speaker-bubble build-bubble">
           {/* The whole sentence is held back until a wrong tap or the end: before that, hearing
               it would give the order away (the words' own speakers stay). */}
-          {(wrongs.length > 0 || complete || locked) && <SpeakButton glyph text={ex.sentence.nl} help={lang} voice={voiceFor(who)} />}
+          {(byEar || wrongs.length > 0 || complete || locked) && <SpeakButton glyph={!byEar} size={byEar ? 'lg' : undefined} hideText={byEar || undefined} text={ex.sentence.nl} help={lang} voice={voiceFor(who)} />}
           {pic && <WordPicture className="build-pic" id={pic.id} emoji={pic.emoji} size={56} />}
-          <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
+          {(!byEar || complete || locked) && <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />}
         </div>
       </div>
       {/* The sentence so far (not tappable), with a dashed slot where the next word goes. */}
@@ -767,8 +774,14 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
 /**
  * Complete the conversation: a colleague says a Dutch line, the learner picks the reply.
  * Tapping the colleague's words shows what they mean (English + help language).
+ * Reversed (`ex.reverse`, later units): "your" reply is given (heard, with what it means) and the
+ * learner picks what the colleague asked.
  */
-export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'chat'>) {
+export function ChatExercise(props: Props<'chat'>) {
+  return props.ex.reverse ? <ChatReversed {...props} /> : <ChatForward {...props} />;
+}
+
+function ChatForward({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'chat'>) {
   const { prompt, reply } = ex.dialogue;
   const [picked, setPicked] = useState<ChatLine | null>(null);
   const mine = picked && locked ? (picked.id === reply.id ? 'right' : 'wrong') : '';
@@ -804,36 +817,85 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
           <span className="chat-char"><MeAvatar className={reactClass(verdict, run, misses)} /></span>
         </div>
       </div>
-      <ChoiceGrid
-        className="choices-rows chat-choices"
-        options={ex.options}
-        correctId={reply.id}
-        locked={locked}
-        lang={lang}
-        onAnswer={onAnswer}
-        // The tap is the answer; the right reply is then said in "your" voice (LessonPlayer).
-        onPick={(o) => setPicked(o)}
-        // Each option's speaker is its own button: hearing a reply never picks it.
-        side={(o) => (
-          <button
-            type="button"
-            className="choice-say"
-            aria-label={`${srText(ui('playAudio', lang))}: ${o.nl}`}
-            lang={saidLang(ui('playAudio', lang))}
-            onClick={() => speak(o.nl, false, 'nl', myVoice)}
-          >
-            <SpeakerIcon size={24} />
-          </button>
-        )}
-        // After Check every reply says what it means (before, that would give the answer away).
-        render={(o) => (
-          <span className="choice-text">
-            <span lang="nl" className="choice-nl">{breakable(o.nl)}</span>
-            {locked && <Bi className="choice-gloss" text={gloss(o.id, o.en, lang)} />}
-          </span>
-        )}
-      />
+      <ChatChoices ex={ex} lang={lang} locked={locked} onAnswer={onAnswer} correctId={reply.id} voice={myVoice} onPick={setPicked} />
     </div>
+  );
+}
+
+/** The chat the other way round: your answer is there, which question did the colleague ask? */
+function ChatReversed({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'chat'>) {
+  const { prompt, reply } = ex.dialogue;
+  const [picked, setPicked] = useState<ChatLine | null>(null);
+  const theirs = picked && locked ? (picked.id === prompt.id ? 'right' : 'wrong') : '';
+  const myVoice = learnerVoice(lang?.gender);
+  const them = castFor(prompt.id, colleaguesOf(lang?.gender));
+  // "You" say your answer first; after a right pick the colleague's question is said.
+  useEffect(() => { autoSpeak(reply.nl, false, 'nl', myVoice); }, [reply, myVoice]);
+  const meTalking = useTalking([reply.nl]);
+  const askTurn = verdict === 'right' && picked ? [picked.nl] : [];
+  const themTalking = useTalking(askTurn, askTurn.length > 0);
+  return (
+    <div className="exercise chat-reversed">
+      <Prompt text={ui('chatWhichQuestion', lang)} />
+      <div className="chat">
+        <div className="chat-row chat-them">
+          <span className="chat-char"><Character who={them} mood={moodFor(verdict, 'idle', true)} talking={themTalking && !meTalking} /></span>
+          <div className={`chat-bubble chat-bubble-ask ${theirs}`} aria-live="polite">
+            {picked ? <span className="chat-line" lang="nl">{breakable(picked.nl)}</span> : <span className="chat-blank chat-blank-q" aria-hidden>?</span>}
+          </div>
+        </div>
+        <div className="chat-row chat-me">
+          <div className="chat-bubble chat-bubble-me chat-bubble-given">
+            <SpeakButton glyph text={reply.nl} help={lang} voice={myVoice} />
+            <span className="chat-line" lang="nl">{breakable(reply.nl)}</span>
+            {/* What you answered, always under it. */}
+            <span className="chat-hint">
+              <Bi text={gloss(reply.id, reply.en, lang)} />
+            </span>
+          </div>
+          <span className="chat-char"><MeAvatar className={reactClass(verdict, run, misses)} /></span>
+        </div>
+      </div>
+      <ChatChoices ex={ex} lang={lang} locked={locked} onAnswer={onAnswer} correctId={prompt.id} voice={voiceFor(them)} onPick={setPicked} />
+    </div>
+  );
+}
+
+/** The three lines to pick from in a chat, each with its own speaker (hearing never picks it). */
+function ChatChoices({ ex, lang, locked, onAnswer, correctId, voice, onPick }: Pick<Props<'chat'>, 'ex' | 'lang' | 'locked' | 'onAnswer'> & {
+  correctId: string;
+  voice: Parameters<typeof speak>[3];
+  onPick: (o: ChatLine) => void;
+}) {
+  return (
+    <ChoiceGrid
+      className="choices-rows chat-choices"
+      options={ex.options}
+      correctId={correctId}
+      locked={locked}
+      lang={lang}
+      onAnswer={onAnswer}
+      // The tap is the answer; the right line is then said (LessonPlayer).
+      onPick={onPick}
+      side={(o) => (
+        <button
+          type="button"
+          className="choice-say"
+          aria-label={`${srText(ui('playAudio', lang))}: ${o.nl}`}
+          lang={saidLang(ui('playAudio', lang))}
+          onClick={() => speak(o.nl, false, 'nl', voice)}
+        >
+          <SpeakerIcon size={24} />
+        </button>
+      )}
+      // After Check every line says what it means (before, that would give the answer away).
+      render={(o) => (
+        <span className="choice-text">
+          <span lang="nl" className="choice-nl">{breakable(o.nl)}</span>
+          {locked && <Bi className="choice-gloss" text={gloss(o.id, o.en, lang)} />}
+        </span>
+      )}
+    />
   );
 }
 
@@ -853,7 +915,8 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
         </span>
       </div>
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
-      <TipBody text={gloss(`${tip.id}.b`, tip.body, lang)} lang={lang} />
+      {/* In the lesson only the first sentences; the whole text is on "Zo werkt het hier". */}
+      <TipBody text={shortTip(gloss(`${tip.id}.b`, tip.body, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl)} lang={lang} />
       <div className="tip-say">
         <span className="tip-say-label"><Bi text={ui('sayThis', lang)} /></span>
         <div className="tip-say-row">
@@ -871,8 +934,22 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
   );
 }
 
-/** A text's sentences: one ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨) and a space. */
-export const sentences = (text: string) => text.trim().split(/(?<=[.!?؟።፧፨…])\s+/u);
+/**
+ * A text's sentences. One ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨) and a space,
+ * and the next one does not start with a small letter, and the dot is not an abbreviation's
+ * ("np. w pracy", "напр. так", "bv. een", "(np. FNV)" go on in the same sentence). A sentence
+ * may also end in a bracket ("… apply.) Do not …") or, before a capital, a closing quote ("… eerst
+ * …?" This …"): a quoted Dutch phrase inside a sentence ("Say «Gefeliciteerd!» to …") does not
+ * end it.
+ */
+const SENTENCE_SPLIT = new RegExp([
+  // The Ethiopic and Arabic stops always end a sentence ("… rijksoverheid.nl። cao …").
+  '(?<=[؟።፧፨])\\s+',
+  '(?<=[.!?…])(?<!(?:^|[^\\p{L}])(?:np|bv|vb|vs|ca|bijv|örn|напр|т\\.е|e\\.g|i\\.e|z\\.B|d\\.h)\\.)\\s+(?=\\P{Ll})',
+  '(?<=[.؟።]\\))\\s+(?=\\P{Ll})',
+  '(?<=[.!?…]["”’»“])\\s+(?=\\p{Lu})',
+].join('|'), 'u');
+export const sentences = (text: string) => text.trim().split(SENTENCE_SPLIT);
 
 /** The help text as lines, one per sentence; a folded text's closing "…" stays on the last line. */
 function helpLines(text: string): string[] {
@@ -888,7 +965,66 @@ export function firstSentences(text: string, n: number): { head: string; more: b
   return { head: parts.slice(0, n).join(' '), more: true };
 }
 
-/** The tip's whole text (no "more" button: Continue is the only choice on a tip). */
+/** Sentences of a tip shown in a lesson. */
+export const TIP_SENTENCES = 3;
+
+/** At most this many sentences of a help text whose sentences do not line up with the English. */
+export const TIP_FALLBACK_MAX = 4;
+
+/** The sentences at `idx` (in order), with "…" when some are left out. */
+function pickSentences(parts: readonly string[], idx: readonly number[]): string {
+  const shown = [...new Set(idx)].filter((i) => i >= 0 && i < parts.length).sort((a, b) => a - b);
+  const head = shown.map((i) => parts[i]).join(' ');
+  return shown.length < parts.length ? `${head} …` : head;
+}
+
+/**
+ * Which sentences of a help text to show when its sentences do not line up one to one with the
+ * English (another count), so the lead's indices can't be used: the first one, then up to
+ * TIP_FALLBACK_MAX in all, preferring those with a number ("112", "0800-7000") or a key term of
+ * the lead or the phrase ("Juridisch Loket", "Pas op, glad!"); else the first TIP_SENTENCES.
+ */
+export function fallbackLead(help: readonly string[], keys: readonly string[]): number[] {
+  const terms = [...new Set(keys.map((k) => k.toLowerCase()))];
+  const score = (t: string) => {
+    const low = t.toLowerCase();
+    return terms.filter((k) => low.includes(k)).length + (/\p{Nd}/u.test(t) ? 1 : 0);
+  };
+  const ranked = help.map((t, i) => ({ i, sc: score(t) })).filter(({ i, sc }) => i > 0 && sc > 0).sort((a, b) => b.sc - a.sc || a.i - b.i);
+  const picked = [0, ...ranked.slice(0, TIP_FALLBACK_MAX - 1).map(({ i }) => i)];
+  for (let i = 1; picked.length < TIP_SENTENCES && i < help.length; i++) if (!picked.includes(i)) picked.push(i);
+  return picked.sort((a, b) => a - b);
+}
+
+/** Words that say what a sentence is about: numbers, names and Dutch terms (written with a capital
+ *  inside a sentence, or with a digit), and the words of the phrase. */
+function keyTerms(enLead: readonly string[], phrase?: string): string[] {
+  const words = (t: string) => t.split(/[\s,;:()"“”«»!?.]+/u).filter(Boolean);
+  const fromEn = enLead.flatMap((t) => words(t).filter((w, k) => /\p{Nd}/u.test(w) || (k > 0 && /^\p{Lu}/u.test(w) && w.length >= 2)));
+  const fromPhrase = phrase ? words(phrase).filter((w) => w.length >= 4) : [];
+  return [...fromEn, ...fromPhrase];
+}
+
+/**
+ * A tip's text for a lesson: its first TIP_SENTENCES sentences, or the tip's `lead` (the
+ * sentences the situation and the phrase need), in English and in the help language each, with
+ * "…" when there is more (the full text stays on the "Zo werkt het hier" page). The lead's
+ * indices are of the English sentences; a help text with another number of sentences gets the
+ * sentences picked by fallbackLead instead.
+ */
+export function shortTip(text: Bilingual, n = TIP_SENTENCES, lead?: readonly number[], phrase?: string): Bilingual {
+  const en = sentences(text.en);
+  const idx = lead ?? Array.from({ length: n }, (_, i) => i);
+  const cut = (parts: readonly string[], at: readonly number[]) => (parts.length <= n && !lead ? parts.join(' ') : pickSentences(parts, at));
+  const help = text.help === undefined ? undefined : (() => {
+    const parts = sentences(text.help);
+    if (!lead || parts.length === en.length) return cut(parts, idx);
+    return pickSentences(parts, fallbackLead(parts, keyTerms(idx.map((i) => en[i] ?? ''), phrase)));
+  })();
+  return { ...text, en: cut(en, idx), help };
+}
+
+/** The tip's text (no "more" button: Continue is the only choice on a tip). */
 function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
   return (
     <div className="tip-body">

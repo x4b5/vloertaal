@@ -3,7 +3,8 @@
  * every day. The phone's own calendar does the reminding, so nothing is sent anywhere.
  */
 
-export const REMINDER_TITLE = 'Vloertaal · 5 minuten';
+/** Bram, the mascot, says it: calm, one line, the time it takes. */
+export const REMINDER_TITLE = 'Bram: tijd voor je Nederlands (10 minuten)';
 
 /** The three quick choices: before work, in the break, after work. */
 export const REMINDER_TIMES = [
@@ -46,7 +47,7 @@ export function parseTime(time: string): [number, number] {
 }
 
 /**
- * The calendar file: a daily event of 5 minutes at `time` (local, "floating" time, so it stays at
+ * The calendar file: a daily event of 10 minutes at `time` (local, "floating" time, so it stays at
  * 07:00 wherever the phone is), starting today if that time is still to come, else tomorrow.
  * It links back to the app and has an alert at the start.
  */
@@ -54,7 +55,7 @@ export function reminderIcs(time: string, appUrl: string, now: Date): string {
   const [h, m] = parseTime(time);
   const start = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m);
   if (start <= now) start.setDate(start.getDate() + 1);
-  const end = new Date(start.getTime() + 5 * 60_000);
+  const end = new Date(start.getTime() + 10 * 60_000);
   const local = (d: Date) =>
     `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
   const utc = (d: Date) =>
@@ -72,7 +73,7 @@ export function reminderIcs(time: string, appUrl: string, now: Date): string {
     `DTEND:${local(end)}`,
     'RRULE:FREQ=DAILY',
     `SUMMARY:${escapeText(REMINDER_TITLE)}`,
-    `DESCRIPTION:${escapeText(`Oefen 5 minuten Nederlands voor je werk. ${appUrl}`)}`,
+    `DESCRIPTION:${escapeText(`Bram van Vloertaal: oefen 10 minuten Nederlands voor je werk. ${appUrl}`)}`,
     `URL:${appUrl}`,
     'BEGIN:VALARM',
     'ACTION:DISPLAY',

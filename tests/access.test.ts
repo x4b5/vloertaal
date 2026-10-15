@@ -11,15 +11,35 @@ describe('access', () => {
     expect(PASSWORD_HASHES[sha('sneekpeak')]).toBe('preview');
     expect(PASSWORD_HASHES[sha('sneakpeek')]).toBe('preview');
     expect(PASSWORD_HASHES[sha('vlaai-toer')]).toBe('full');
-    expect(Object.keys(PASSWORD_HASHES)).toHaveLength(3);
-    expect(normalizePassword('  Vlaai-Toer ')).toBe('vlaai-toer');
+    // The full-version password as it is normalised now (without the hyphen).
+    expect(PASSWORD_HASHES[sha(normalizePassword('vlaai-toer'))]).toBe('full');
+    expect(Object.keys(PASSWORD_HASHES)).toHaveLength(4);
+    // Every stored hash is reached by some normalised form of a known password.
+    const known = ['sneekpeak', 'sneakpeek', 'vlaai-toer'];
+    const reached = new Set(known.flatMap((p) => [sha(p), sha(normalizePassword(p))]));
+    for (const h of Object.keys(PASSWORD_HASHES)) expect(reached.has(h), h).toBe(true);
   });
 
-  it('checks typed passwords (trimmed, any case)', async () => {
+  it('normalises: lower case, no spaces, hyphens or dots, Eastern digits as 0-9', () => {
+    expect(normalizePassword('  Vlaai-Toer ')).toBe('vlaaitoer');
+    expect(normalizePassword('vlaai toer')).toBe('vlaaitoer');
+    expect(normalizePassword('vlaai.toer')).toBe('vlaaitoer');
+    expect(normalizePassword('vlaai\u2013toer')).toBe('vlaaitoer'); // a dash a phone keyboard puts in
+    expect(normalizePassword('code \u0661\u0662\u0663')).toBe('code123'); // Arabic-Indic
+    expect(normalizePassword('code \u06f4\u06f5\u06f6')).toBe('code456'); // Persian
+    expect(normalizePassword('\u0660\u0669\u06f0\u06f9')).toBe('0909');
+  });
+
+  it('checks typed passwords (any case, with or without separators)', async () => {
     expect(await checkPassword(' SneekPeak ')).toBe('preview');
+    expect(await checkPassword('sneak peek')).toBe('preview');
+    expect(await checkPassword('Sneak-Peek.')).toBe('preview');
     expect(await checkPassword('vlaai-toer')).toBe('full');
-    expect(await checkPassword('vlaaitoer')).toBeNull();
+    expect(await checkPassword('vlaaitoer')).toBe('full');
+    expect(await checkPassword('Vlaai Toer')).toBe('full');
+    expect(await checkPassword('vlaai')).toBeNull();
     expect(await checkPassword('')).toBeNull();
+    expect(await checkPassword(' - . ')).toBeNull();
   });
 
   it('a preview only opens the first unit, whatever the progress says', () => {

@@ -432,3 +432,19 @@ export const HelpVoiceIcon = (p: IconProps) => (
     <path d="M8 9.2v3.4M12 7.8v6.2M16 9.2v3.4" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
   </Svg>
 );
+
+/** A key (the password page: "your teacher, coach or employer gives you the code"). Not a padlock or a login. */
+export const KeyIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <circle cx="8" cy="12" r="4.2" fill="none" stroke="currentColor" strokeWidth="2.4" />
+    <path d="M12.2 12H21M17.5 12v3.2M20.5 12v2.4" {...stroke} strokeWidth={2.4} />
+  </Svg>
+);
+
+/** A phone: "everything stays on this phone". */
+export const PhoneIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <rect x="6.5" y="2.8" width="11" height="18.4" rx="2.6" fill="none" stroke="currentColor" strokeWidth="2.3" />
+    <path d="M10.5 17.6h3" {...stroke} strokeWidth={2.3} />
+  </Svg>
+);

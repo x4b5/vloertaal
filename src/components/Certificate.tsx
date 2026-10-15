@@ -1,6 +1,7 @@
 import { useEffect, useId, useState } from 'react';
 import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
+import type { SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { CERT_NOTE, SEAL_RING, certData, certDate, certMeta, earnedCertificates, loadCertName, saveCertName, unitIndex, type CertData } from '../lib/certificate';
 import { shareCertificateFile } from '../lib/certCanvas';
@@ -176,8 +177,10 @@ function NamePage({ name, lang, onDone }: { name: string; lang?: HelpLanguage; o
  * also be printed; the print dialog, which saves a PDF, where files cannot be shared) and
  * [Change name]. The name is asked first, on its own page.
  */
-export function CertificateScreen({ unit, day, lang, onBack }: {
+export function CertificateScreen({ unit, day, lang, onBack, sector }: {
   unit: Unit;
+  /** The learner's sector: the unit's number as on their own path. */
+  sector?: SectorChoice;
   /** YYYY-MM-DD it was earned. */
   day: string;
   lang?: HelpLanguage;
@@ -188,7 +191,7 @@ export function CertificateScreen({ unit, day, lang, onBack }: {
   /** The name page shows the first time (never asked), or after "Change name". */
   const [asking, setAsking] = useState(stored === null);
   const [busy, setBusy] = useState(false);
-  const data = certData(unit, day, name, lang);
+  const data = certData(unit, day, name, lang, sector);
   const rtl = lang?.dir === 'rtl';
 
   // The tab title becomes the PDF's file name when it is saved from the print dialog.
@@ -248,8 +251,9 @@ export function CertificateScreen({ unit, day, lang, onBack }: {
  * "Certificaat behaald": shown once, after the result of a unit's last lesson. The milestone
  * shell (Bram, one line, the footer button), with the certificate preview and Bekijk / Later.
  */
-export function CertEarned({ unit, day, lang, onView, onLater, onPocket }: {
+export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector }: {
   unit: Unit;
+  sector?: SectorChoice;
   /** Opens the unit's pocket card, next to the certificate. */
   onPocket?: () => void;
   day: string;
@@ -258,7 +262,7 @@ export function CertEarned({ unit, day, lang, onView, onLater, onPocket }: {
   onLater: () => void;
 }) {
   const [name] = useState(() => loadCertName() ?? '');
-  const data = certData(unit, day, name, lang);
+  const data = certData(unit, day, name, lang, sector);
   return (
     <div className="player milestone-screen cert-earned">
       <main className="player-body milestone">
@@ -349,7 +353,7 @@ export function CertificatesCard({ progress, lang, onOpen }: {
           {earned.map(({ unit, day }) => (
             <li key={unit.id}>
               <button type="button" className="cert-row" onClick={() => onOpen(unit.id)}>
-                <span className="cert-row-no" aria-hidden>{String(unitIndex(unit) + 1).padStart(2, '0')}</span>
+                <span className="cert-row-no" aria-hidden>{String(unitIndex(unit, progress.sector) + 1).padStart(2, '0')}</span>
                 <span className="cert-row-text">
                   <span className="cert-row-nl" lang="nl">{unit.titleNl}</span>
                   {lang?.gloss[unit.id] && <span className="cert-row-help" lang={lang.code} dir={lang.dir}>{lang.gloss[unit.id]}</span>}

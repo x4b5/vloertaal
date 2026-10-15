@@ -12,7 +12,8 @@ import type { HelpLanguage } from '../i18n/types';
  * "Voor begeleiders" (Dutch only), its own page from a link on About: a link per topic that opens
  * Vloertaal at that topic, to send a learner by WhatsApp or e-mail. One kind of row with one tap
  * each (a list, the named exception to "at most three"). Shares with the phone's share sheet, or
- * copies the link.
+ * copies the link. Also straight from the address with #begeleiders (App.tsx), without a
+ * language choice or code first.
  */
 export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner's help language: the back arrow says Back in it too. */ lang?: HelpLanguage }) {
   const [copied, setCopied] = useState<string | null>(null);
@@ -20,7 +21,8 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
     const url = unitLink(unit.id);
     try {
       if (navigator.share) {
-        await navigator.share({ title: `Vloertaal: ${unit.titleNl}`, url });
+        // A short Dutch line goes with the link (WhatsApp shows it above the link).
+        await navigator.share({ title: `Vloertaal: ${unit.titleNl}`, text: `Oefen dit onderwerp in Vloertaal: ${unit.titleNl}`, url });
         return;
       }
       await navigator.clipboard.writeText(url);
@@ -38,7 +40,11 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
       </div>
       <p className="muted small">
         Stuur een leerling een link naar een onderwerp. Met de link opent Vloertaal meteen bij dat onderwerp.
-        Elk onderwerp kan bij de eerste les beginnen. Een nieuwe gebruiker kiest eerst nog een taal en vult het wachtwoord in.
+        Elk onderwerp kan bij de eerste les beginnen. Een nieuwe gebruiker kiest eerst nog een taal en vult de code in.
+      </p>
+      <p className="muted small coach-privacy">
+        Voortgang staat alleen op de telefoon van de leerling. Geen account, geen namen.
+        Vraag de leerling om de certificaten te laten zien.
       </p>
       <ul className="coach-links coach-list">
         {units.map((unit) => (

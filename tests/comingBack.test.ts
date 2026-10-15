@@ -21,19 +21,24 @@ describe('streak: today, free days and the record', () => {
     expect(doneToday(p, day(2))).toBe(false);
   });
 
-  it('earns a free day per 7 practised days, at most two', () => {
-    expect(practise([1, 2, 3, 4, 5, 6]).freezes ?? 0).toBe(0);
-    expect(practise([1, 2, 3, 4, 5, 6, 7]).freezes).toBe(1);
+  it('earns the first free day on day 3, then one per 7 practised days, at most two', () => {
+    expect(practise([1, 2]).freezes ?? 0).toBe(0);
+    expect(practise([1, 2, 3]).freezes).toBe(1);
+    expect(practise([1, 2, 3, 4, 5, 6]).freezes).toBe(1);
+    expect(practise([1, 2, 3, 4, 5, 6, 7]).freezes).toBe(2);
+    // The early one is only for the first streak that gets to 3 days.
+    const again = practise([1, 2, 3], { ...emptyProgress, bestStreak: 5 });
+    expect(again.freezes ?? 0).toBe(0);
     const long = practise(Array.from({ length: 28 }, (_, i) => i + 1));
     expect(long.freezes).toBe(FREEZE_MAX);
   });
 
   it('uses a free day for exactly one missed day: the streak goes on, the day is a rest day', () => {
-    const p = practise([1, 2, 3, 4, 5, 6, 7]); // streak 7, one free day
+    const p = practise([1, 2, 3, 4, 5, 6, 7]); // streak 7, two free days (day 3 and day 7)
     expect(currentStreak(p, day(9))).toBe(7); // the 8th was missed
     const settled = settleStreak(p, day(9));
     expect(settled.broken).toBeUndefined();
-    expect(settled.progress.freezes).toBe(0);
+    expect(settled.progress.freezes).toBe(1);
     expect(settled.progress.rest).toEqual(['2026-10-08']);
     const after = completeLesson(p, 'l.x', 1, false, day(9));
     expect(after.streak).toBe(8);
@@ -48,7 +53,7 @@ describe('streak: today, free days and the record', () => {
     expect(bestStreak(s.progress)).toBe(7);
     // Shown once: settling again reports nothing.
     expect(settleStreak(s.progress, day(10)).broken).toBeUndefined();
-    const q = practise([1, 2, 3]);
+    const q = practise([1, 2, 3], { ...emptyProgress, bestStreak: 5 }); // no free day in hand
     expect(settleStreak(q, day(5)).broken).toBe(3);
     const again = completeLesson(s.progress, 'l.y', 1, false, day(10));
     expect(again.streak).toBe(1);
@@ -67,6 +72,34 @@ describe('streak: today, free days and the record', () => {
     expect(week.map((d) => d.key)).toEqual(['2026-10-05', '2026-10-06', '2026-10-07', '2026-10-08', '2026-10-09', '2026-10-10', '2026-10-11']);
     expect(week.map((d) => d.state)).toEqual(['done', 'done', 'done', 'rest', 'done', 'open', 'open']);
     expect(week.find((d) => d.today)?.key).toBe('2026-10-09');
+  });
+
+  it('protects week 1: the free day of day 3 covers a missed day 4', () => {
+    const p = practise([5, 6, 7]); // Monday to Wednesday
+    const settled = settleStreak(p, day(9)); // Thursday missed
+    expect(settled.broken).toBeUndefined();
+    const after = completeLesson(p, 'l.x', 1, false, day(9));
+    expect(after.streak).toBe(4);
+    expect(workWeek(after, day(9)).map((d) => d.state)).toEqual(['done', 'done', 'done', 'rest', 'done', 'open', 'open']);
+  });
+
+  it('keeps the earlier practised days on the week row after a missed day', () => {
+    // No free day in hand: Monday to Wednesday practised, Thursday and Friday missed.
+    const p = practise([5, 6, 7], { ...emptyProgress, bestStreak: 9 });
+    expect(p.days).toEqual(['2026-10-05', '2026-10-06', '2026-10-07']);
+    const s = settleStreak(p, day(10));
+    expect(s.broken).toBe(3);
+    const after = completeLesson(s.progress, 'l.y', 1, false, day(10));
+    expect(after.streak).toBe(1);
+    expect(workWeek(after, day(10)).map((d) => d.state)).toEqual(['done', 'done', 'done', 'open', 'open', 'done', 'open']);
+    // Before practising on Saturday, the days stay too.
+    expect(workWeek(s.progress, day(10)).map((d) => d.state)).toEqual(['done', 'done', 'done', 'open', 'open', 'open', 'open']);
+  });
+
+  it('keeps only the last 14 practised days', () => {
+    const p = practise(Array.from({ length: 20 }, (_, i) => i + 1));
+    expect(p.days).toHaveLength(14);
+    expect(p.days?.[13]).toBe('2026-10-20');
   });
 
   it('marks the daily review as done today', () => {
@@ -140,7 +173,7 @@ describe('daily reminder (.ics)', () => {
     expect(ics).toContain('BEGIN:VCALENDAR');
     expect(ics).toContain('RRULE:FREQ=DAILY');
     expect(ics).toContain('DTSTART:20261009T070000'); // 07:00 has passed today
-    expect(ics).toContain('SUMMARY:Vloertaal · 5 minuten');
+    expect(ics).toContain('SUMMARY:Bram: tijd voor je Nederlands (10 minuten)');
     expect(ics).toContain('URL:https://vloertaal.nl/');
     expect(ics.split('\r\n').every((l) => new TextEncoder().encode(l).length <= 75)).toBe(true);
     expect(reminderIcs('18:00', 'x', new Date(2026, 9, 8, 9, 30))).toContain('DTSTART:20261008T180000');

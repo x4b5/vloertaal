@@ -1,37 +1,89 @@
 import { useId } from 'react';
+import { CastHead, SOLID_V } from './Characters';
 
 /**
- * The Vloertaal logo: a black rubber stamp on safety yellow, slightly tilted, with
- * "VLOERTAAL · NEDERLANDS VOOR HET WERK" around a V. Small sizes (under 56px) drop the
- * ring text and thicken the ring so it stays sharp. LogoMark is the app icon; Wordmark is
- * the name. Keep in sync with public/icon.svg (the small version) and the PNG icons.
+ * The Vloertaal logo: Bram, the mascot, on ink. His yellow hard hat carries a bold stencil V
+ * (the V of Vloertaal; he wears it on his hat in every lesson too).
+ *
+ *  - `full` (56 px and up, and the 192/512 app icons): Bram's own head from the lessons
+ *    (CastHead, calm closed smile), with the neck and the hi-vis collar at the bottom edge.
+ *  - `small` (under 56 px: top bar, favicon): a drawing of its own for small sizes, not the head
+ *    scaled down. The hat and the V fill the top half, the face is a plain shape with two eyes
+ *    and a smile, and the V has no bridge gap (it would only blur at 16 px).
+ *
+ * `shape`: 'round' is the app icon with rounded corners; 'square' fills the whole square (the
+ * phone rounds it: apple-touch-icon); 'mask' also keeps everything inside the middle 80 %
+ * (Android's maskable icon). public/icon*.svg and the PNG icons are made from this file:
+ * `node scripts/icons/make-icons.cjs` (dev server on :5173). Keep index.html's splash in step.
  * `check` is kept for older call sites and no longer changes the mark.
  */
-export function LogoMark({ size = 40 }: { size?: number; check?: boolean }) {
-  const ring = `ring-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
-  const full = size >= 56;
+export function LogoMark({ size = 40, variant, shape = 'round' }: {
+  size?: number;
+  check?: boolean;
+  variant?: 'full' | 'small';
+  shape?: 'round' | 'square' | 'mask';
+}) {
+  const id = useId().replace(/[^a-zA-Z0-9_-]/g, '');
+  const full = (variant ?? (size >= 56 ? 'full' : 'small')) === 'full';
+  const clip = `logo-${id}`;
   return (
     <svg className="logo-mark" viewBox="0 0 120 120" width={size} height={size} aria-hidden focusable="false">
-      <rect width="120" height="120" rx="28" fill="#ffc414" />
-      <g transform="rotate(-10 60 60)" fill="#1e2226" stroke="#1e2226">
-        {full ? (
-          <>
-            <circle cx="60" cy="60" r="44" fill="none" strokeWidth="6" />
-            <circle cx="60" cy="60" r="31" fill="none" strokeWidth="2.5" />
-            <path id={ring} d="M60 60m-36.2 0a36.2 36.2 0 1 1 72.4 0a36.2 36.2 0 1 1-72.4 0" fill="none" stroke="none" />
-            <text fontFamily="'Lexend Variable', Lexend, system-ui, sans-serif" fontWeight={800} fontSize="6.6" letterSpacing="1.25" stroke="none">
-              <textPath href={`#${ring}`} startOffset="2%">VLOERTAAL · NEDERLANDS VOOR HET WERK ·</textPath>
-            </text>
-            <path d="M43 41h11l6 20 6-20h11L66 79H54z" stroke="none" />
-          </>
-        ) : (
-          <>
-            <circle cx="60" cy="60" r="42" fill="none" strokeWidth="9" />
-            <path d="M38 36h14l8 26 8-26h14L68 86H52z" stroke="none" />
-          </>
-        )}
+      <defs>
+        <clipPath id={clip}><rect width="120" height="120" rx={shape === 'round' ? 28 : 0} /></clipPath>
+      </defs>
+      <g clipPath={`url(#${clip})`}>
+        <rect width="120" height="120" fill="#1e2226" />
+        <g transform={shape === 'mask' ? 'translate(12 14) scale(.8)' : undefined}>
+          {full ? <FullBram vest={`${clip}-vest`} /> : <SmallBram />}
+        </g>
       </g>
     </svg>
+  );
+}
+
+const VEST = 'M30 150L31 104Q32.5 94 43 91H77Q87.5 94 89 104L90 150Z';
+
+/** Bram's bust from the lessons, scaled up so the hat and face fill the icon. */
+function FullBram({ vest }: { vest: string }) {
+  return (
+    <>
+      {/* Hi-vis vest and the blue shirt collar, cut off by the bottom edge. */}
+      <g transform="translate(-24 -20.2) scale(1.4)">
+        <clipPath id={vest}><path d={VEST} /></clipPath>
+        <path d={VEST} fill="#ff7a00" />
+        <path d="M51 90H69L60 105Z" fill="#1a86d8" />
+        <path d="M52 91L60 97.5L56 101ZM68 91L60 97.5L64 101Z" fill="#5fb8f5" />
+        <path d="M44.5 95V150M75.5 95V150" stroke="#eef5f7" strokeWidth="4" />
+        <path d="M79 88L104 88L104 150L82 150Z" fill="#000" opacity=".13" clipPath={`url(#${vest})`} />
+        <CastHead who="bram" expr="pleased" />
+      </g>
+    </>
+  );
+}
+
+/** The small-size drawing: a big hat with a big V over a plain face. */
+function SmallBram() {
+  return (
+    <>
+      {/* Neck and collar */}
+      <path d="M50 100H70V120H50Z" fill="#e2a376" />
+      <path d="M22 120Q24 110 36 108L50 106L60 116L70 106L84 108Q96 110 98 120Z" fill="#ff7a00" />
+      {/* Ears and face */}
+      <rect x="25.5" y="66" width="10" height="17" rx="4.5" fill="#f7c49b" />
+      <rect x="84.5" y="66" width="10" height="17" rx="4.5" fill="#e2a376" />
+      <path d="M30 58H90V80C90 98 76 109 60 109C44 109 30 98 30 80Z" fill="#f7c49b" />
+      <path d="M76 58H90V80C90 92 84 101 75 105.6C78 98 79 90 79 80V58Z" fill="#e2a376" />
+      {/* Eyes and a closed smile */}
+      <ellipse cx="48.5" cy="77" rx="4" ry="4.8" fill="#2a2321" />
+      <ellipse cx="71.5" cy="77" rx="4" ry="4.8" fill="#2a2321" />
+      <path d="M50.5 92.5Q60 99 69.5 91.5" fill="none" stroke="#2a2321" strokeWidth="3.6" strokeLinecap="round" />
+      {/* Hard hat: dome, shade, ridge, brim, and the V */}
+      <path d="M17 62C17 31 36 11 60 11C84 11 103 31 103 62Z" fill="#ffc414" />
+      <path d="M81 16.4C95 24.4 103 41 103 62H90C90 42 87.6 27.4 81 16.4Z" fill="#e0a800" />
+      <rect x="10" y="57" width="100" height="10" rx="3" fill="#e0a800" />
+      <rect x="10" y="57" width="76" height="3.4" rx="1.7" fill="#ffd94d" />
+      <path d={SOLID_V} transform="translate(39 18.6) scale(3)" fill="#1e2226" />
+    </>
   );
 }
 

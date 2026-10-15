@@ -54,7 +54,7 @@ export function ResumeChip({ save, lang }: { save: LessonSave; lang?: HelpLangua
 
 /** "Start again" under the Continue card on the home: a real button with its icon (the third
  *  choice of the resume state); the lesson then starts from the top. */
-export function RestartButton({ lang, onRestart }: { lang?: HelpLanguage; onRestart: () => void }) {
+export function RestartButton({ lang, onRestart, about }: { lang?: HelpLanguage; onRestart: () => void; /** Which lesson (on the topic page): "1.2 Title". */ about?: string }) {
   const t = ui('restartLesson', lang);
   return (
     <button
@@ -62,7 +62,7 @@ export function RestartButton({ lang, onRestart }: { lang?: HelpLanguage; onRest
       className="btn bay-restart"
       onClick={onRestart}
       dir={lang?.dir === 'rtl' ? 'rtl' : undefined}
-      aria-label={`Opnieuw beginnen · ${said(t)}`}
+      aria-label={`Opnieuw beginnen · ${said(t)}${about ? ` · ${about}` : ''}`}
     >
       <RestartIcon size={22} />
       <span className="bay-restart-text">

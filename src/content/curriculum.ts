@@ -189,7 +189,7 @@ export const units: Unit[] = [
           { id: 'w.links', nl: 'links', en: 'left', emoji: '⬅️' },
           { id: 'w.rechts', nl: 'rechts', en: 'right', emoji: '➡️' },
           { id: 'w.boven', nl: 'boven', en: 'at the top', emoji: '⬆️' },
-          { id: 'w.beneden', nl: 'beneden', en: 'at the bottom', emoji: '⬇️' },
+          { id: 'w.beneden', nl: 'beneden', en: 'down, below', emoji: '⬇️' },
           { id: 'w.tillen', nl: 'tillen', en: 'to lift', emoji: '🏋️' },
           { id: 'w.pakken', nl: 'pakken', en: 'to take', emoji: '✋' },
         ],
@@ -222,13 +222,13 @@ export const units: Unit[] = [
           { id: 'w.pauze', nl: 'de pauze', en: 'the break', emoji: '☕' },
           { id: 'w.beginnen', nl: 'beginnen', en: 'to start', emoji: '▶️' },
           { id: 'w.klaar', nl: 'klaar', en: 'finished', emoji: '🏁' },
-          { id: 'w.telaat', nl: 'te laat', en: 'too late', emoji: '⏳' },
+          { id: 'w.telaat', nl: 'te laat', en: 'late', emoji: '⏳' },
           { id: 'w.morgen', nl: 'morgen', en: 'tomorrow', emoji: '📅' },
         ],
         sentences: [
           { id: 's.shift.1', nl: 'Mijn dienst begint om zeven uur.', en: 'My shift starts at seven o’clock.' },
           { id: 's.shift.2', nl: 'Wanneer is de pauze?', en: 'When is the break?' },
-          { id: 's.shift.3', nl: 'Sorry, ik ben te laat.', en: 'Sorry, I am too late.' },
+          { id: 's.shift.3', nl: 'Sorry, ik ben te laat.', en: 'Sorry, I am late.' },
         ],
         dialogues: [
           {

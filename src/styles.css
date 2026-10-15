@@ -3799,3 +3799,278 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .help-say .icon:first-child { opacity: 0.8; }
 /* XL on a 320 px phone: the wordmark of the first-run pages stays inside the screen. */
 :root[data-text='xl'] .hero-logo .wordmark { font-size: min(2.6rem, 12.5vw); }
+
+/* ---- G4 r4 ---- */
+/* Match and meaning cards: the help-language meaning is the large line next to its picture
+   (help LARGE): at least 17 px, and more for the Ethiopic, Arabic and Persian scripts, which
+   read small at the same size. Long meanings wrap inside the card (never out of it). */
+.player-body :is(.match-cards .match-en, .choices-rows .choice) .choice-label.bi-swap > .bi-en {
+  font-size: max(17px, 1.15rem); line-height: 1.22; overflow-wrap: break-word; hyphens: manual;
+}
+.player-body :is(.match-cards .match-en, .choices-rows .choice) .choice-label.bi-swap > .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) {
+  font-size: max(19px, 1.25rem); line-height: 1.3;
+}
+/* The topic page: "Start again" for its next lesson, beside the pocket card. */
+.topic-tools .bay-restart { flex: 1 1 140px; margin: 0; grid-column: auto; }
+/* Settings → Help language, offline: a calm line above the list, the old language stays. */
+.lang-not-here {
+  display: flex; align-items: flex-start; gap: 10px; margin: 0 0 12px; padding: 12px 14px;
+  background: var(--card); border: 2px solid var(--edge); border-inline-start: 6px solid var(--yellow); border-radius: 12px; color: var(--ink);
+  scroll-margin-top: 88px;
+}
+.lang-not-here > .icon, .lang-not-here > svg { flex: none; margin-top: 2px; color: var(--ink-2); }
+.lang-not-here-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.lang-not-here-nl { font-size: 0.85rem; color: var(--muted); }
+.lang-not-here .bi-en { font-size: max(17px, 1.05rem); font-weight: 600; line-height: 1.35; }
+
+/* ---- G4 r4b ---- */
+/* The milestone's tier stamp ("3 OP RIJ"): a small line in the help language under the Dutch. */
+.tier-stamp-sub {
+  display: block; max-width: 8.5rem; margin-top: 3px;
+  font-family: 'Lexend Variable', sans-serif; font-weight: 700; font-size: 0.72rem; line-height: 1.15;
+  text-transform: none; white-space: normal; text-align: center; overflow-wrap: anywhere;
+}
+.tier-stamp-sub:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.8rem; }
+/* The first lesson's result, once: a row to the emergency phrases (as on the Hulp tab). */
+.result-phrases { width: 100%; max-width: 420px; min-height: 72px; margin: 18px 0 0; padding: 10px 12px; gap: 12px; }
+.result-phrases .hub-icon { width: 48px; height: 48px; color: var(--wrong-ink); }
+.result-phrases .hub-nl { font-size: 1rem; color: var(--muted); font-weight: 600; }
+.result-phrases .hub-text .bi { align-items: flex-start; text-align: start; color: var(--ink); font-weight: 650; font-size: 1.1rem; }
+/* The reminder's "Kies zelf": a row like the two times, with the phone's own time field at its end. */
+.keep3-own { cursor: pointer; }
+.keep3-own-input {
+  flex: none; min-width: 6.2em; min-height: 48px; padding: 6px 8px;
+  font: inherit; font-family: var(--stencil); font-weight: 800; font-size: 1.35rem; color: var(--ink);
+  background: var(--card); border: 2px solid var(--choice-edge); border-radius: 8px;
+}
+.keep3-own-input:focus-visible { outline: 3px solid var(--focus, #1592db); outline-offset: 2px; }
+.keep3-own > svg { margin-inline-start: 0; color: var(--ink-2); }
+.keep3-own .keep3-own-input { margin-inline-start: auto; }
+
+/* ---- Onboarding ---- */
+/* G4 onboarding round: speakers under each first-run question, the password page explained,
+   Bram's "Hallo!", the guess page's tagline in the guessed language, bigger sector pictures and a
+   language list that fits a small phone. */
+
+/* One Dutch speaker (and the help-language read-aloud when the phone has that voice) under a
+   first-run question: not choices, so they sit small and centred under the title. */
+.onb-say { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 10px 0 0; }
+.onb-say .speak { width: 44px; height: 44px; }
+
+/* Bram waves once on the first page after the language: a picture in the free top-end corner. */
+.screen:has(> .onb-greet) { position: relative; }
+.onb-greet {
+  position: absolute; top: calc(2px + env(safe-area-inset-top)); right: 8px; z-index: 0;
+  display: flex; align-items: flex-start; gap: 2px; pointer-events: none;
+}
+.onb-greet-rtl { right: auto; left: 8px; flex-direction: row-reverse; }
+.onb-greet-word {
+  margin-top: 4px; padding: 2px 8px; border-radius: 10px 10px 2px 10px; background: var(--card);
+  border: 2px solid var(--line); font-weight: 650; font-size: 0.85rem; color: var(--ink);
+}
+.onb-greet-rtl .onb-greet-word { border-radius: 10px 10px 10px 2px; }
+
+/* The guess page: what the app is, in the guessed language (large), English small. */
+.onb-tagline { display: flex; justify-content: center; }
+.onb-tagline .bi { align-items: center; }
+.onb-tagline .bi-en { font-size: 1.2rem; font-weight: 600; color: var(--ink-2); }
+.onb-tagline .bi-help { --help-size: 0.85rem; font-weight: 400; color: var(--muted); }
+
+/* The password page: the back arrow on top, then the sign. */
+.onb-gate { justify-content: flex-start; padding-top: calc(24px + env(safe-area-inset-top)); }
+.onb-gate > .chrome-head { align-self: stretch; margin: -8px 0 0; }
+.onb-gate .gate-sign { margin-block: auto; padding-top: 24px; }
+.gate-tagline { display: flex; flex-direction: column; gap: 2px; margin: 10px 0 18px; }
+.gate-tagline-help { font-size: 1.2rem; font-weight: 600; color: var(--ink-2); line-height: 1.3; }
+.gate-tagline .gate-tag { margin: 0; }
+.gate-title { display: flex; flex-direction: column; gap: 2px; margin-bottom: 0; }
+.gate-title-nl { font-size: 0.9rem; font-weight: 500; color: var(--muted); }
+.gate-q { display: flex; align-items: flex-end; gap: 10px; margin: 0 0 14px; }
+.gate-q .gate-title { flex: 1; min-width: 0; }
+.gate-q .onb-say { flex: none; margin: 0; }
+.gate-note { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 14px; color: var(--ink-2); font-size: 0.98rem; line-height: 1.4; }
+.gate-note > .icon { flex: none; margin-top: 1px; color: var(--ink-3); }
+.gate-note .bi-help { --help-size: 0.8rem; color: var(--muted); }
+.gate-who { padding: 10px 12px; border-radius: 12px; background: var(--concrete-2, var(--bg)); color: var(--ink); }
+.gate-who > .icon { color: var(--ink-2); }
+.gate-trust { margin: 14px 0 0; font-size: 0.9rem; color: var(--muted); }
+.gate-trial-done { padding: 10px 12px; border-radius: 12px; border: 2px solid var(--line); color: var(--ink); font-weight: 600; }
+.gate-trial-done > .icon { color: var(--go-right, var(--ink-2)); }
+.pw-ok { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--go-right, var(--ink-2)); font-weight: 600; }
+.pw-ok .bi { flex-direction: row; flex-wrap: wrap; gap: 0 8px; align-items: baseline; }
+.pw-ok .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }
+.gate-try {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; min-height: 52px;
+  margin-top: 14px; padding: 8px 14px; background: var(--card); color: var(--ink);
+  border: 2px solid var(--line); border-radius: var(--radius); font-weight: 600; text-align: start;
+}
+.gate-try .icon { flex: none; color: var(--ink-3); }
+
+/* A coach link to a topic outside the preview: under 1.1 on the home, to the unlock card. */
+.linked-locked {
+  display: flex; align-items: center; gap: 12px; width: 100%; margin: 14px 0 0; padding: 10px 12px;
+  background: var(--card); color: var(--ink); border: 2px dashed var(--line); border-radius: var(--radius);
+  text-align: start; cursor: pointer;
+}
+.linked-locked-pic { flex: none; width: 44px; height: 44px; }
+.linked-locked-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.linked-locked-title { font-weight: 650; font-size: 1rem; }
+.linked-locked-title .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }
+.linked-locked-full { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; color: var(--tag-ink); }
+.linked-locked-go { flex: none; color: var(--ink-3); }
+
+/* Sector step 1: the three pictures of a group at about 44 px, overlapping a little. */
+.sector-step .max3-pic:has(.max3-trio) { width: 124px; }
+.max3-trio > span { width: 38px; height: 46px; }
+.max3-trio .word-pic { width: 44px; height: 44px; }
+@media (max-width: 370px) {
+  .sector-step .max3-pic:has(.max3-trio) { width: 108px; }
+  .max3-trio > span { width: 33px; }
+  .max3-trio .word-pic { width: 40px; height: 40px; }
+}
+
+/* The language list fits a 360 x 640 phone without scrolling: tighter rows and head. */
+@media (max-height: 700px) {
+  .onb-lang-list { padding-top: calc(16px + env(safe-area-inset-top)); padding-bottom: 12px; }
+  .onb-lang-list .hero-logo .wordmark { font-size: 1.9rem; }
+  .onb-lang-list .tagline { margin-top: 2px; font-size: 0.95rem; }
+  .onb-lang-list .onboarding-title { margin: 12px 0 2px; font-size: 1.2rem; }
+  .onb-lang-list .lang-grid { gap: 8px; margin: 10px 0 0; }
+  .onb-lang-list .lang-btn:not(.sector-btn, .gender-btn) { min-height: 0; padding: 8px 10px; gap: 2px; }
+  .onb-lang-list .lang-btn:not(.sector-btn, .gender-btn) .lang-native { font-size: 1.15rem; }
+  .onb-lang-list .lang-btn:not(.sector-btn, .gender-btn) .lang-native:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: 1.25rem; }
+  .onb-lang-list .lang-en { font-size: 0.8rem; }
+}
+
+/* ---- G4 r5 ---- */
+/* Answer cards (listen, pick, chat) and the feedback card: the help-language meaning is the line
+   the learner reads (help LARGE), as on the match and meaning cards (G4 r4): at least 17 px, more
+   for the Ethiopic, Arabic and Persian scripts. Long meanings wrap inside the card. */
+.player-body .choice .choice-gloss.bi-swap > .bi-en,
+.player-body .chat-hint .bi-swap > .bi-en,
+.player-foot .feedback-kicker .bi-swap > .bi-en,
+.player-foot .feedback-pair > .bi-help:not([lang='en']),
+.player-foot .feedback-pair > .pair-gloss,
+.player-foot .feedback-why > .bi-help:not([lang='en']) {
+  --help-size: max(17px, 1rem);
+  font-size: max(17px, 1.06rem); line-height: 1.25; overflow-wrap: break-word; hyphens: manual;
+}
+.player-body .choice .choice-gloss.bi-swap > .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']),
+.player-body .chat-hint .bi-swap > .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']),
+.player-foot .feedback-kicker .bi-swap > .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']),
+.player-foot :is(.feedback-pair, .feedback-why) > :is(.bi-help, .pair-gloss):is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) {
+  --help-size: max(19px, 1.12rem);
+  font-size: max(19px, 1.18rem); line-height: 1.32;
+}
+/* The path card: its subtitle (the Dutch title, or the English with English on) and the lesson
+   rows under it at least 17 px. */
+.rb-sub { font-size: max(17px, 0.92rem); }
+.rb-lessons :is(.bay-done, .bay-locked) .bay-title { font-size: max(17px, 0.98rem); }
+/* Settings → Reminder: 07:00, 18:00 and "Kies zelf" (the phone's time field) as one column of
+   cards; the time in its pill never clipped at extra large text. */
+.max3-cards:has(+ .set-own-cards) { margin-bottom: 10px; }
+.set-own-cards { margin-top: 0; }
+.set-own { cursor: pointer; }
+.set-own .keep3-own-input { flex: none; width: 6.4em; min-width: 0; font-size: 1.05rem; padding-inline: 6px; }
+.max3-pic:has(> .set-time) { width: auto; min-width: 56px; padding-inline: 8px; }
+:root[data-text='xl'] .max3-pic:has(> .set-time) { width: auto; min-width: 44px; padding-inline: 6px; }
+/* The Tigrinya weekdays are two letters (ሰኑ ሰሉ ... ሰን): one line in each day's column. */
+.week-letter[lang='ti'] { white-space: nowrap; font-size: 1rem; letter-spacing: -0.02em; }
+
+/* ---- Bram logo & mascot ---- */
+/* The logo is Bram's head on ink (src/components/Logo.tsx). It never blinks (a logo stands still);
+   on a dark page a hairline ring keeps the ink tile from melting into the background. */
+.logo-mark .ch-eyes { animation: none; }
+:root { --logo-ring: transparent; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) { --logo-ring: #3b4249; } }
+:root[data-theme='dark'] { --logo-ring: #3b4249; }
+.logo-mark { box-shadow: 0 0 0 1.5px var(--logo-ring); }
+.boot-label .logo-mark { box-shadow: none; }
+
+/* Bram says one calm line: a small speech bubble, never a button (no pointer, no motion). */
+.bram-say {
+  position: relative; margin: 0; padding: 6px 11px; min-width: 0;
+  background: var(--card); border: 1.5px solid var(--line); border-radius: 12px;
+  color: var(--ink); font-size: max(15px, 0.92rem); font-weight: 600; line-height: 1.22;
+  text-align: start; overflow-wrap: anywhere;
+}
+.bram-say-text { display: block; }
+.bram-say-text:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: max(16px, 1.04em); line-height: 1.3; }
+.bram-say::after {
+  content: ''; position: absolute; width: 9px; height: 9px; background: var(--card);
+  border: 0 solid var(--line);
+}
+/* Tail towards Bram beside the bubble (the logo at the start of the top bar). */
+.bram-say-start::after { top: 50%; left: -6px; border-left-width: 1.5px; border-bottom-width: 1.5px; transform: translateY(-50%) rotate(45deg); }
+.bram-say-start[dir='rtl']::after { left: auto; right: -6px; border-width: 1.5px 1.5px 0 0; }
+/* Tail down to Bram standing under it (the result scene: he stands at about 31 % from the left). */
+.bram-say-down::after { left: 28px; bottom: -6px; border-right-width: 1.5px; border-bottom-width: 1.5px; transform: rotate(45deg); }
+
+/* Home: Bram's line beside the logo in the top bar, the stats pushed to the end. Two lines at
+   most on a 360 px phone; it grows (never clips) at large text. */
+.topbar:has(.bram-greet) .brand { margin-inline-end: 0; }
+/* It takes the free room in the row (never pushing the stats onto a new line) but hugs its text. */
+.topbar .bram-greet { flex: 1 1 0; max-width: fit-content; margin-inline: 2px auto; }
+.topbar .bram-greet .bram-say-text { max-width: 30ch; }
+@media (max-width: 300px) {
+  .topbar:has(.bram-greet) { flex-wrap: wrap; }
+  .topbar .bram-greet { order: 9; flex: 1 1 100%; margin-inline: 0; max-width: none; }
+  .topbar .bram-greet::after { display: none; }
+}
+
+/* Result: Bram's line over the scene, the empty sky under it cropped so nothing moves down much. */
+.result-hero .bram-say-down {
+  --at: max(0px, calc(31% - 34px));
+  margin: 0 0 2px var(--at); width: fit-content; max-width: calc(100% - var(--at));
+  font-size: max(16px, 1rem); padding: 7px 14px;
+}
+.result-hero:has(.bram-say) .cel-scene { aspect-ratio: 320 / 178; }
+.result-hero:has(.bram-say) .cel-svg { inset: auto 0 0; height: auto; aspect-ratio: 320 / 260; }
+.result-hero:has(.bram-say) { width: min(320px, 84vw); }
+
+/* ---- G4 b3 ---- */
+/* "Certificaat behaald!" on a short phone (360×640): Bram steps aside so the certificate, the
+   line and the pocket-card link fit above the buttons; anything brought into view (focus, a
+   scroll to the link) stops above the pinned footer. */
+html:has(.cert-earned) { scroll-padding-bottom: 150px; }
+@media (max-height: 760px) {
+  .cert-earned .cert-earned-bram { display: none; }
+  .cert-earned .milestone { padding-top: 10px; }
+  .cert-earned .cert-earned-line { margin-top: 14px; }
+  .cert-earned .cert-pocket { margin-top: 10px; }
+}
+
+/* A chat the other way round (later units): "your" answer is given with what it means, the
+   colleague's bubble waits for the question picked. */
+.chat-reversed .chat-bubble-given { flex-wrap: wrap; justify-content: flex-start; flex: 0 1 auto; border-style: solid; border-color: var(--edge); }
+.chat-reversed .chat-bubble-given::before { border-top-style: solid; border-right-style: solid; border-color: var(--edge); }
+.chat-reversed .chat-bubble-given .chat-line { flex: 1 1 0; }
+.chat-reversed .chat-bubble-given .chat-hint {
+  position: static; flex-basis: 100%; width: auto; max-width: none; margin-top: 2px;
+  padding: 0; border: 0; box-shadow: none; background: none; animation: none;
+}
+.chat-bubble-ask { min-width: 120px; min-height: 56px; justify-content: center; border-style: dashed; border-color: var(--ink-3); }
+.chat-bubble-ask::before { border-left-style: dashed; border-bottom-style: dashed; border-color: var(--ink-3); }
+.chat-bubble-ask:has(.chat-line), .chat-bubble-ask:has(.chat-line)::before { border-style: solid; border-color: var(--edge); }
+.chat-bubble-ask .chat-line { text-decoration: none; padding: 0; min-height: 0; }
+.chat-bubble-ask.right, .chat-bubble-ask.right::before { border-color: var(--green); border-style: solid; }
+.chat-bubble-ask.right .chat-line { color: var(--right-ink); }
+.chat-bubble-ask.wrong, .chat-bubble-ask.wrong::before { border-color: var(--red); border-style: solid; }
+.chat-bubble-ask.wrong .chat-line { color: var(--wrong-ink); }
+.chat-blank-q { width: auto; height: auto; margin: 0; background: none; font-size: 1.6rem; font-weight: 700; line-height: 1; color: var(--ink-3); }
+/* A sentence built by ear: the big speaker is the question until the end. */
+.build-by-ear .build-bubble { gap: 12px; }
+
+/* The lesson footer with nothing in it (before a tap on an option): no room taken, so the last
+   option is never under it (XL text at 360 px); a still chevron hints at more below. */
+.player .player-foot.foot-empty { margin-top: 12px; padding-top: 0; padding-bottom: env(safe-area-inset-bottom); }
+.player .player-foot.foot-empty::before { display: none; }
+.foot-more-hint {
+  position: absolute; z-index: 3; inset: -44px 0 auto; height: 44px; display: grid; place-items: end center;
+  pointer-events: none; color: var(--ink-2);
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--bg) 0%, transparent), var(--bg) 78%);
+  animation: rm-fade 0.2s ease-out both;
+}
+/* After a review with many words still due: one calm line (not a button). */
+.result-waiting { flex-wrap: nowrap; gap: 10px; color: var(--ink-2); font-size: 0.95rem; font-weight: 500; }
+.result-waiting .bi { flex: 0 1 auto; min-width: 0; align-items: flex-start; text-align: start; }

@@ -122,6 +122,15 @@ function curls(): string {
 }
 const CURLS = curls();
 
+/**
+ * Bram's mark: a bold stencil V in a 14 x 12.5 box, two arms with a thin bridge gap at the foot
+ * (as a sprayed stencil letter). On his hard hat everywhere he appears, and in the app icon
+ * (src/components/Logo.tsx), so the mascot and the logo are one.
+ */
+export const STENCIL_V = 'M0 0H4.6L6.55 6.4V12.5H4.7ZM14 0H9.4L7.45 6.4V12.5H9.3Z';
+/** The same V without the bridge gap, for the smallest icon sizes (a gap would only blur). */
+export const SOLID_V = 'M0 0H4.6L7 7.6L9.4 0H14L9.3 12.5H4.7Z';
+
 const LOOKS: Record<CharacterId, Look> = {
   bram: {
     shoulders: [[39, 104], [81, 104]],
@@ -158,10 +167,11 @@ const LOOKS: Record<CharacterId, Look> = {
         {/* Short sideburns under the hat */}
         <path d="M40 46H43.8V54.4L40.2 53.4Z" fill="#6b3f22" />
         <path d="M80 46H76.2V54.4L79.8 53.4Z" fill="#6b3f22" />
-        {/* Hard hat: a flat dome with a ridge and a thin, straight brim */}
+        {/* Hard hat: a flat dome with a thin, straight brim */}
         <path d="M38.5 46C38.5 30 47.5 20.5 60 20.5C72.5 20.5 81.5 30 81.5 46Z" fill="#ffc414" />
         <path d="M70 22.8C77 26.8 81.5 35 81.5 46H73.5C73.5 35.5 72.6 28.4 70 22.8Z" fill="#e0a800" />
-        <path d="M57 20.8H63V45H57Z" fill="#ffd94d" />
+        {/* The V of Vloertaal on the front, a bold ink stencil V (the same V as the app icon). */}
+        <path d={STENCIL_V} transform="translate(53.3 29.4) scale(.96)" fill="#1e2226" />
         <rect x="33.5" y="43.6" width="53" height="4.8" rx="1.2" fill="#e0a800" />
         <rect x="33.5" y="43.6" width="40" height="1.6" rx=".8" fill="#ffd94d" />
       </>

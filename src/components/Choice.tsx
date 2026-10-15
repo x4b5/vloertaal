@@ -1,8 +1,11 @@
 import type { ReactNode } from 'react';
 import type { Bilingual } from '../i18n';
+import type { HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
+import { HelpSay } from './HelpSay';
 import { CheckIcon, ChevronIcon } from './Icons';
 import { LogoMark, Wordmark } from './Logo';
+import { SpeakButton } from './SpeakButton';
 
 /**
  * One question per page, with at most three answers: the building blocks shared by the first run
@@ -25,16 +28,18 @@ export interface ChoiceOption<T extends string> {
 }
 
 /** Big stacked cards, one per answer (two or three). A picked card carries a check. */
-export function ChoiceCards<T extends string>({ options, current, onPick, label, className = '' }: {
+export function ChoiceCards<T extends string>({ options, current, onPick, label, className = '', dir }: {
   options: ChoiceOption<T>[];
   current?: T | null;
   onPick: (id: T) => void;
   /** The question, for screen readers. */
   label: string;
   className?: string;
+  /** The cards' language direction (right to left: the picture on the right, the chevron mirrored). */
+  dir?: 'ltr' | 'rtl';
 }) {
   return (
-    <div className={`max3-cards ${className}`} role="radiogroup" aria-label={label}>
+    <div className={`max3-cards ${className}`} role="radiogroup" aria-label={label} dir={dir}>
       {options.map((o) => {
         const picked = current === o.id;
         return (
@@ -61,8 +66,32 @@ export function ChoiceCards<T extends string>({ options, current, onPick, label,
   );
 }
 
-/** The calm head of a first-run page: the small logo, the question (help language large, Dutch small) and a hint. */
-export function QuestionHead({ nl, text, hint, logo = true }: { nl?: string; text: Bilingual; hint?: Bilingual; logo?: boolean }) {
+/**
+ * Under a first-run question: one Dutch speaker for the Dutch question (its recording when there
+ * is one, else the phone's Dutch voice), and the question read in the help language when the
+ * phone has a voice for it. Neither is one of the page's choices.
+ */
+export function QuestionSay({ nl, help, lang }: { nl: string; help?: string; lang?: HelpLanguage }) {
+  return (
+    <div className="onb-say">
+      <SpeakButton text={nl} help={lang} />
+      <HelpSay text={help} lang={lang} />
+    </div>
+  );
+}
+
+/**
+ * The calm head of a first-run page: the small logo, the question (help language large, Dutch
+ * small) and a hint. `say`: the first-run pages also give the question a speaker (QuestionSay).
+ */
+export function QuestionHead({ nl, text, hint, logo = true, say = false, lang }: {
+  nl?: string;
+  text: Bilingual;
+  hint?: Bilingual;
+  logo?: boolean;
+  say?: boolean;
+  lang?: HelpLanguage;
+}) {
   return (
     <>
       {logo && (
@@ -71,9 +100,10 @@ export function QuestionHead({ nl, text, hint, logo = true }: { nl?: string; tex
         </div>
       )}
       <h2 className="onboarding-title sector-title">
-        {nl && <span className="sector-title-nl" lang="nl">{nl}</span>}
+        {nl && <span className="sector-title-nl" lang="nl"><bdi dir="ltr">{nl}</bdi></span>}
         <Bi text={text} />
       </h2>
+      {say && nl && <QuestionSay nl={nl} help={text.help} lang={lang} />}
       {hint && <p className="sector-hint"><Bi text={hint} /></p>}
     </>
   );

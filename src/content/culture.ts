@@ -24,6 +24,13 @@ export interface CultureTip {
   options: { id: string; en: string; best: boolean }[];
   /** Shown after answering: why the best option works here. */
   why: { id: string; en: string };
+  /**
+   * The sentences of the body shown in a lesson (indices of the English sentences, see
+   * `sentences` in components/Exercises.tsx), when the first three would cut the one the
+   * situation or the "Zeg het zo" phrase depends on. Default: the first three. The whole text
+   * stays on the "Zo werkt het hier" page.
+   */
+  lead?: readonly number[];
 }
 
 const tip = (t: CultureTip) => t;
@@ -257,13 +264,54 @@ export const teamworkUnit: Unit = {
 const isToolsTip = (t: CultureTip) => toolsUnit.lessons.some((l) => l.id === t.lessonId);
 const afterHelp = baseTips.findIndex((t) => t.lessonId === 'l.understand') + 1;
 
+/**
+ * The lesson's short tip (`lead`): the sentences that the situation after it, or the phrase, needs
+ * (G4 b3: e.g. "Call 112", "Do not sign", the wet-floor sign, "write down the hours"). Indices of
+ * the English sentences, including the closing advice line (src/content/work.ts).
+ */
+export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
+  'c.translate': [0, 4, 6], // ask first; ask a person to explain important papers
+  'c.understood': [0, 2, 4], // say back: "Dus ik moet eerst …?"
+  'c.keeplearning': [0, 4, 5], // colleagues switch to English; ask them to speak Dutch
+  'c.cv': [1, 4, 5], // be honest; ask someone to check your Dutch
+  'c.interview': [0, 2, 3], // asking questions yourself is normal
+  'c.bsn': [0, 5, 8], // ask why they need it; never give your DigiD
+  'c.housing': [2, 10, 11, 13], // proof of payment; job ends: advice first (Juridisch Loket)
+  'c.payslip': [0, 1, 3], // check the hours, write down the hours you work
+  'c.phone': [0, 3, 4], // urgent call: tell your supervisor first
+  'c.smoking': [0, 2, 3], // only outside, in your break
+  'c.hygiene': [0, 2, 3], // a medicine that makes you sleepy: tell your supervisor
+  'c.smalltalk': [0, 2, 6, 7], // welcome at the table; "Gefeliciteerd!"
+  'c.respect': [2, 3, 4, 5], // another polite greeting; report jokes and bullying
+  'c.gossip': [0, 3, 4], // nothing online without permission
+  'c.boundaries': [0, 2, 3, 4], // say stop; write it down; tell the vertrouwenspersoon
+  'c.rights': [1, 3, 6], // do not sign; get help first
+  'c.leave': [0, 1, 2, 4], // ask for leave in time, in writing
+  'c.illness': [0, 3, 4], // the company doctor; call when you are better
+  'c.gethelp': [2, 3, 4, 5, 6], // Arbeidsinspectie, 0800-7000, Juridisch Loket, 112
+  'c.texting': [0, 1, 2, 3, 4], // the example message whole
+  'c.diploma': [3, 4, 5], // required training is paid working time; ask about courses
+  'c.doctor': [0, 1, 2, 3], // huisartsenpost; 112 only when a life is in danger
+  'c.scams': [0, 1, 4], // do not click; call your bank yourself
+  'c.bike': [0, 1, 2, 3], // no phone in your hand while cycling
+  'c.transit': [0, 2, 3], // travel allowance: ask about it
+  'c.ww': [0, 1, 3], // quitting yourself: usually no WW
+  'c.newjob': [0, 1, 4], // never pay to get a job
+  'c.tools': [0, 2, 4, 5], // go to the toolbox meeting; a broken tool: tell
+  'c.site': [0, 4, 5], // really dangerous: you may stop
+  'c.privacy': [0, 3, 4, 5], // tell the nurse; never give medicines untrained
+  'c.kitchen': [0, 4, 5], // allergies: always ask the chef
+  'c.service': [0, 1, 2, 3], // not sure? say that you will check
+  'c.cleansafe': [0, 1, 3, 4], // the wet-floor sign
+};
+
 /** All tips in course order: the ones above (with the Smart tools tips after "Asking for help"), then those of the work-and-rights units (src/content/work.ts). */
 export const cultureTips: CultureTip[] = [
   ...baseTips.slice(0, afterHelp),
   ...workTips.filter(isToolsTip),
   ...baseTips.slice(afterHelp),
   ...workTips.filter((t) => !isToolsTip(t)),
-];
+].map((t) => (TIP_LEADS[t.id] ? { ...t, lead: TIP_LEADS[t.id] } : t));
 
 /**
  * Whether the person in a tip's situation is a woman ('f'), a man ('m') or not said (null),

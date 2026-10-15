@@ -8,7 +8,7 @@ const t: CultureTranslation = {
     'a.what': 'Czym jest Vloertaal?',
     'a.what.b': 'Vloertaal pomaga ci nauczyć się niderlandzkiego, którego potrzebujesz w pracy: w magazynie, w kuchni, w fabryce albo na budowie. Nie tylko słowa na hali, ale cały język związany z pracą: szukanie pracy, umowa i pasek wypłaty, twoje prawa, mieszkanie i dokumenty, zgłaszanie choroby i dogadywanie się ze współpracownikami. Lekcje są krótkie, więc możesz ćwiczyć kilka minut każdego dnia.',
     'a.how': 'Jak to działa?',
-    'a.how.b': 'Uczysz się niderlandzkiego przez prosty angielski. Jeśli wybierzesz język pomocy, zobaczysz polecenia i słowa także w swoim języku. Słuchasz, klikasz, budujesz zdania i ćwiczysz krótkie rozmowy z kolegami z pracy.',
+    'a.how.b': 'Uczysz się niderlandzkiego przez prosty angielski. Jeśli wybierzesz język pomocy, zobaczysz polecenia i słowa także w swoim języku. Słuchasz, dotykasz ekranu, budujesz zdania i ćwiczysz krótkie rozmowy z kolegami z pracy.',
     'a.culture': 'Jak to tu działa',
     'a.culture.b': 'Język jest najważniejszy. Ale Vloertaal mówi też o tym, jak zwykle wygląda praca w Holandii: mówić „je” do szefa, zadawać pytania, przychodzić na czas i mówić, kiedy coś ci przeszkadza. Te wskazówki znajdziesz w lekcjach i w części „Wskazówki do pracy”.',
     'a.who': 'Dla kogo to jest?',

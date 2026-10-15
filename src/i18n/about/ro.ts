@@ -12,7 +12,7 @@ const t: CultureTranslation = {
     'a.culture': 'Cum merg lucrurile aici',
     'a.culture.b': 'Limba e pe primul loc. Dar Vloertaal vorbește și despre cum merg de obicei lucrurile la un loc de muncă olandez: să-i spui „je” șefului, să pui întrebări, să vii la timp și să spui când te deranjează ceva. Găsești aceste sfaturi în lecții și la „Sfaturi pentru locul de muncă”.',
     'a.who': 'Pentru cine este?',
-    'a.who.b': 'Pentru toți cei care sunt noi la muncă în Țările de Jos. Limbi de ajutor: arabă, tigrină, persană, dari, ucraineană, turcă, poloneză, română și bulgară.',
+    'a.who.b': 'Pentru toți cei care sunt noi la muncă în Olanda. Limbi de ajutor: arabă, tigrină, persană, dari, ucraineană, turcă, poloneză, română și bulgară.',
     'a.free': 'Gratuit și privat',
     'a.free.b': 'Vloertaal este gratuit și nu ai nevoie de cont. Progresul tău se salvează doar pe acest telefon sau calculator. Dacă este pornită, aplicația numără anonim cât de des se fac lecțiile: fără cont, fără nume, fără urmărire. O poți opri în „Setări”.',
     'a.voices': 'Vocile',

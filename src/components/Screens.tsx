@@ -1,5 +1,7 @@
 import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
+import { BramSays } from './BramSays';
+import { resultLineFor } from '../lib/greeting';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
 import { findLesson } from '../content/curriculum';
@@ -37,6 +39,8 @@ import { phoneHelpLang } from '../lib/langGuess';
 import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
+import { pushSubStep } from '../lib/onbHistory';
+import { sayFirstWord } from '../lib/audio';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
   /** The help language in use (Settings): the "in review" tag is written in it. */
@@ -94,27 +98,41 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   onDone: (code: LangCode | null) => void;
   /** The guessed help language (from navigator.languages); null = no guess, the list right away. */
   guess?: LangCode | null;
-  /** Back from the password page: open on the list (the guess was already seen). */
+  /** Back from the next page: open on the list (the guess was already seen). */
   startWithList?: boolean;
 }) {
   const [list, setList] = useState(startWithList || !guess);
   // Nothing is chosen yet: the English stays next to every line.
   useEffect(() => { applyEnglish(null); }, []);
-  // The guess page needs only its three strings (src/i18n/meta.ts): no pack to wait for.
+  // The list after the guess has its own history entry: the phone's Back returns to the guess.
+  const hasGuess = Boolean(guess);
+  useEffect(() => {
+    if (!list || !hasGuess) return;
+    if (!(history.state as { langList?: number } | null)?.langList) pushSubStep({ langList: 1 });
+    const onPop = () => { if (!(history.state as { langList?: number } | null)?.langList) setList(false); };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [list, hasGuess]);
+  /** The first tap: the first Dutch word ("hallo", recorded) plays, then the next page shows. */
+  const pick = (code: LangCode | null) => {
+    sayFirstWord();
+    onDone(code);
+  };
+  // The guess page needs only its few strings (src/i18n/meta.ts): no pack to wait for.
   const gMeta = langMeta(guess);
   const g = gMeta ? getHelpLanguage(gMeta.code) ?? metaLanguage(gMeta) : undefined;
   if (list || !g) {
     return (
-      <div className="screen onboarding max3-page">
+      <div className="screen onboarding max3-page onb-lang-list">
         {g && (
-          <ChromeHead onBack={() => setList(false)} />
+          <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />
         )}
         <div className="hero">
           <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
           <p className="tagline">{ui('appTagline').en}</p>
         </div>
         <h2 className="onboarding-title">{ui('chooseLanguage').en}</h2>
-        <LanguagePicker onPick={onDone} />
+        <LanguagePicker onPick={pick} />
       </div>
     );
   }
@@ -123,14 +141,16 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
     <div className="screen onboarding max3-page lang-guess">
       <div className="hero">
         <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
-        <p className="tagline">{ui('appTagline').en}</p>
+        {/* What the app is, in the guessed language (large), the English small under it. */}
+        <p className="tagline onb-tagline"><Bi text={ui('appTagline', g)} /></p>
       </div>
       <h2 className="lang-guess-q">
         <span className="lang-guess-name" lang={g.code} dir={g.dir}>{g.nativeName}{q}</span>
       </h2>
       <ChoiceCards
         label={said(ui('chooseLanguage', g))}
-        onPick={(id) => (id === 'yes' ? onDone(g.code) : setList(true))}
+        dir={g.dir}
+        onPick={(id) => (id === 'yes' ? pick(g.code) : setList(true))}
         options={[
           { id: 'yes', text: ui('langGuessYes', g), picture: <CheckIcon size={30} /> },
           { id: 'other', text: ui('langGuessOther', g), picture: <GlobeIcon size={30} />, next: true },
@@ -140,8 +160,10 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   );
 }
 
-export function TopBar({ streak, words, lang, done = false, quiet = false }: {
+export function TopBar({ streak, words, lang, done = false, quiet = false, greeting }: {
   streak: number;
+  /** Bram's one line beside the logo (HomeGreeting): the logo is his head, so he says it. */
+  greeting?: React.ReactNode;
   /** "Without sound" is on: a small muted speaker beside the logo says so (not a button). */
   quiet?: boolean;
   /** Today has a finished lesson or review: the flame is lit. Until then a grey outline. */
@@ -156,7 +178,7 @@ export function TopBar({ streak, words, lang, done = false, quiet = false }: {
   // room), and the spoken label says it in the help language (English only without one).
   const wordsText = fillCount('wordsLearnedN', words, lang);
   const wordsLabel = said(wordsText);
-  const streakText = ui('dayStreak', lang);
+  const streakText = uiCount('dayStreak', streak, lang);
   const streakLabel = `${streak} ${said(streakText)}${!done && streak > 0 ? ` · ${said(ui('stillToDo', lang))}` : ''}`;
   const daysUnit = uiCount('daysUnit', streak, lang);
   const wordsUnit = uiCount('wordsUnit', words, lang);
@@ -167,6 +189,7 @@ export function TopBar({ streak, words, lang, done = false, quiet = false }: {
         <LogoMark size={36} />
         <Wordmark className="topbar-wordmark" />
       </span>
+      {greeting}
       {quiet && (
         <span className="sound-off-mark" role="img" aria-label={`${said(ui('withoutSound', lang))}${lang?.ui.withoutSound ? ` · ${ui('withoutSound', lang).help}` : ''}`} title={ui('withoutSound', lang).help ?? said(ui('withoutSound', lang))}>
           <SpeakerOffIcon size={18} />
@@ -285,7 +308,7 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
         className="daily-card daily-due"
         dir={rtl ? 'rtl' : undefined}
         onClick={onDaily}
-        aria-label={`Herhaal vandaag · ${said(ui('reviewToday', lang))}: ${said(fillN(ui('reviewTodayN', lang), card.due))}`}
+        aria-label={`Herhaal vandaag · ${said(ui('reviewToday', lang))}: ${said(fillCount('reviewTodayN', card.due, lang))}`}
       >
         <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
         <span className="daily-n" aria-hidden>{card.due}</span>
@@ -409,7 +432,15 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   );
 }
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next, skipped = 0, kind = 'lesson' }: {
+/** From this many words still due after a review, the result says they come in the next days. */
+export const REVIEW_WAITING_MIN = 3;
+
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases }: {
+  /** After today's review: words still due (many after a long absence); a calm line says they
+   *  come back in the next days. Not a button. */
+  waiting?: number;
+  /** After the very first lesson, once: a row to the emergency phrases (Hulp → Noodzinnen). */
+  onPhrases?: () => void;
   /** 'daily': after today's review; 'review': after a mixed review or a lesson done again
    *  (words practised instead of new words, and a review title). */
   kind?: 'lesson' | 'daily' | 'review';
@@ -462,6 +493,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
     <div className="player result-screen">
       <main className="player-body result">
         <div className="result-hero">
+          {/* Bram (the one with the thumb up) says one calm line. */}
+          <BramSays text={ui(resultLineFor(kind, right, total), lang)} tail="down" />
           <LessonCelebration />
           {/* Rubber stamp on the delivery note: the lesson is done. */}
           <span className="stamp stamp-right result-stamp" aria-hidden>
@@ -506,11 +539,19 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             <Bi text={withoutN(uiCount('wordsStrongerN', stronger, lang))} />
           </p>
         )}
+        {/* Back after a long absence: the words still waiting come in the next days (calm, no
+            button: one review a day is enough). */}
+        {waiting >= REVIEW_WAITING_MIN && (
+          <p className="result-line result-waiting" dir={rtl ? 'rtl' : undefined}>
+            <span className="result-skipped-icon" aria-hidden><CalendarIcon size={22} /></span>
+            <Bi text={fillN(ui('reviewWaiting', lang), waiting)} />
+          </p>
+        )}
         {/* Listening exercises left out ("I can't listen now"): counted out, visibly. */}
         {skipped > 0 && (
           <p className="result-line result-skipped" dir={rtl ? 'rtl' : undefined}>
             <span className="result-skipped-icon" aria-hidden><EarIcon size={22} /></span>
-            <Bi text={fillN(ui('skippedN', lang), skipped)} />
+            <Bi text={fillCount('skippedN', skipped, lang)} />
           </p>
         )}
         {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}
@@ -520,6 +561,23 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             {nextPic && <WordPicture className="result-next-pic" id={nextPic.id} emoji={nextPic.emoji} size={44} />}
             <Bi className="result-next-title" text={next} />
           </p>
+        )}
+        {/* Once, after the first lesson: where the emergency phrases are (the Hulp tab). */}
+        {onPhrases && (
+          <button
+            type="button"
+            className="hub-card result-phrases"
+            dir={rtl ? 'rtl' : undefined}
+            onClick={() => { if (ready.current) onPhrases(); }}
+            aria-label={`Noodzinnen · ${said(ui('phrasebook', lang))}`}
+          >
+            <span className="hub-icon" aria-hidden><AlertIcon size={26} /></span>
+            <span className="hub-text" aria-hidden>
+              <span className="hub-nl" lang="nl">Noodzinnen</span>
+              <Bi text={ui('phrasebook', lang)} />
+            </span>
+            <ChevronIcon size={24} />
+          </button>
         )}
       </main>
       <footer className="player-foot">

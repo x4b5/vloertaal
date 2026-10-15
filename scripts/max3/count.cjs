@@ -148,12 +148,17 @@ function defineStates(LANG) {
   const add = (name, url, steps, extra = {}) => S.push({ name, url, steps, ...extra });
   const gendered = GENDERED.includes(LANG);
 
-  // Onboarding (shots), one question per page: language -> password -> gender -> sector (2 steps).
+  // Onboarding (shots), one question per page: language -> gender (gendered languages) -> password
+  // -> sector (2 steps). The password page: the field, Unlock and "Try one lesson first".
   add('onb:language', shot('language', null), null, { list: true }); // no guess from the phone: the list
   add('onb:language-guess', shot(`language&guess=${LANG}`, null)); // "Polski?" [Yes] [Other language]
   add('onb:language-list', shot(`language&guess=${LANG}&list=1`, null), null, { list: true, expect: '.chrome-back' }); // the list, with Back
   add('onb:gate', shot('gate'));
   add('onb:gate-typed', shot('gate'), async (p) => { await p.fill('.pw-input', 'abc'); await settle(p, 200); });
+  add('onb:gate-try', shot('gate&try=1'), async (p) => { await p.fill('.pw-input', 'abc'); await settle(p, 200); }, { expect: '.gate-try' });
+  add('onb:gate-again', shot('gate&again=1&greet=1'), null, { expect: '.pw-ok' });
+  add('onb:gate-trial-done', shot('gate&trialDone=1'), null, { expect: '.gate-trial-done' });
+  add('onb:gender-greet', shot('gender&greet=1'), null, { expect: '.onb-greet' });
   add('onb:gender', shot('gender'));
   add('onb:gender-picked', shot('gender&gender=f'));
   add('onb:sector', shot('sector'));
@@ -165,14 +170,34 @@ function defineStates(LANG) {
     await p.reload(); await settle(p, 900);
   };
   add('flow:language', '/', null, { list: true });
-  add('flow:gate', '/', async (p) => { await tapText(p, 'button', NATIVE[LANG] ?? 'Polski'); await settle(p); }, { expect: '.pw-input' });
-  add('flow:gate-tr', '/', async (p) => { await tapText(p, 'button', 'Türkçe'); await settle(p); });
+  // The language picked: "Woman or man?" first for a help language with gender, then the password.
+  const toGate = async (p) => { await tapText(p, 'button', NATIVE[LANG] ?? 'Polski'); await settle(p); if (gendered) { await tap(p, '.gender-btn', 1); await settle(p); } };
+  add('flow:gate', '/', toGate, { expect: '.pw-input' });
+  add('flow:gate-tr', '/', async (p) => { await tapText(p, 'button', 'Türkçe'); await settle(p); }, { expect: '.pw-input' });
+  // The password page's back arrow and the phone's Back go one page back (gender or language).
+  add('flow:gate-back', '/', async (p) => { await toGate(p); await tap(p, '.chrome-back'); await settle(p); }, gendered ? { expect: '.gender-screen' } : { list: true, expect: '.lang-grid' });
+  add('flow:gate-phone-back', '/', async (p) => { await toGate(p); await p.goBack(); await settle(p); }, gendered ? { expect: '.gender-screen' } : { list: true, expect: '.lang-grid' });
+  // "Try one lesson first": lesson 1.1 before the password; its ✕ and Stop lead back to the password page.
+  add('flow:trial-lesson', '/', async (p) => { await toGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
+  add('flow:trial-quit', '/', async (p) => {
+    await toGate(p); await tap(p, '.gate-try'); await settle(p, 900);
+    await tap(p, '.player-top .lesson-close'); await tap(p, '.sheet-stop'); await settle(p, 900);
+  }, { expect: '.gate-try' });
+  // After the trial lesson (1.1 done, no code): the password page says the code unlocks everything.
+  const noCode = (extra) => async (p) => {
+    await p.evaluate(([x, lang]) => { localStorage.removeItem('vloertaal.access'); localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: lang, gender: 'f', genderAsked: true, completed: {}, ...x })); }, [extra, LANG]);
+    await p.reload(); await settle(p, 900);
+  };
+  add('flow:trial-done', '/', noCode({ completed: { 'l.hello': { best: 1, times: 1 } } }), { expect: '.gate-trial-done' });
   if (gendered) {
-    // After the password: "Woman or man?", with the back arrow to the password page.
+    // Right after the language: "Woman or man?", with the back arrow to the language.
     add('flow:gender', '/', firstRun({}), { expect: '.gender-screen .chrome-back' });
-    add('flow:gender-back', '/', async (p) => { await firstRun({})(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.pw-input' });
+    add('flow:gender-back', '/', async (p) => { await firstRun({})(p); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.lang-grid' });
   }
   add('flow:sector', '/', firstRun({ gender: 'm' }));
+  // Back from the sector: the password page with the accepted code kept (not cleared).
+  add('flow:sector-back', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.pw-ok' });
+  add('flow:sector-phone-back', '/', async (p) => { await toGate(p); await p.fill('.pw-input', 'sneakpeek'); await tap(p, '.pw-go'); await settle(p, 900); await p.goBack(); await settle(p); }, { expect: '.pw-ok' });
   add('flow:sector-step2', '/', async (p) => { await firstRun({ gender: 'm' })(p); await tap(p, '.max3-card', 0); await settle(p); }, { expect: '.sector-step-2' });
   add('flow:sector-step2-back', '/', async (p) => { await firstRun({ gender: 'm' })(p); await tap(p, '.max3-card', 0); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.sector-step:not(.sector-step-2)' });
   // A learner from before the gender question: a one-time page instead of the home card (no back).
@@ -200,6 +225,17 @@ function defineStates(LANG) {
     await tap(p, '.bay-card', 0); await settle(p, 900);
     await tap(p, '.player-top .lesson-close');
   }, { expect: '.pause-sheet .sheet-sound' });
+  // Stopped halfway with words due as well: [Herhaal vandaag] [Continue] [Other topic]; "Start
+  // again" is then on the topic page (Other topic > the topic), next to the pocket card.
+  const dueHome = (p) => realHome(p, { completed: { 'l.hello': { best: 1, times: 1 } }, cards: { 'w.hallo': { box: 1, due: '2000-01-01' }, 'w.ja': { box: 1, due: '2000-01-01' } } });
+  const stopHalfwayDue = async (p) => {
+    await dueHome(p); await tap(p, '.bay-card .bay-start', 0); await settle(p, 900);
+    for (let i = 0; i < 3; i++) { await go(p).catch(() => {}); await settle(p, 500); }
+    await tap(p, '.player-top .lesson-close'); await tap(p, '.sheet-stop'); await settle(p, 900);
+  };
+  add('flow:home-resume-daily', '/', stopHalfwayDue, { expect: '.home3 .daily-due ~ .rb-current .bay-saved' });
+  add('flow:topic-restart', '/', async (p) => { await stopHalfwayDue(p); await tap(p, '.rb-other'); await settle(p); await tap(p, '.topic-row', 0); await settle(p); }, { list: true, expect: '.topic-tools .bay-restart' });
+  add('flow:topic-restart-go', '/', async (p) => { await stopHalfwayDue(p); await tap(p, '.rb-other'); await settle(p); await tap(p, '.topic-row', 0); await settle(p); await tap(p, '.topic-tools .bay-restart'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
   add('flow:help-tab', '/', async (p) => { await realHome(p); await navTab(p, 1); await settle(p); });
   add('flow:settings-tab', '/', async (p) => { await realHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
   add('flow:about-tab', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); });
@@ -232,9 +268,11 @@ function defineStates(LANG) {
   add('route:offline-saved', shot('offline&offline=saved'));
   add('route:offline-saving', shot('offline&offline=saving'));
   add('route:offline-off', shot('offline&offline=off'));
-  // The resume state: [Continue] [Start again] [Other topic] (with words due as well: still 3).
+  // The resume state: [Continue] [Start again] [Other topic]. With words due as well: [Herhaal
+  // vandaag] [Continue] [Other topic], and "Start again" is on the topic page.
   add('route:resume', shot('path&resume=1'), null, { expect: '.bay-restart' });
-  add('route:resume-daily', shot('path&resume=1&daily=due'), null, { expect: '.bay-restart' });
+  add('route:resume-daily', shot('path&resume=1&daily=due'), null, { expect: '.daily-due ~ .rb-current .bay-saved' });
+  add('route:topic-resume', shot('topic&cu=u.firstday&state=mid&resume=1'), null, { list: true, expect: '.topic-tools .bay-restart' });
   // A topic page: the topic's name in the head, at most 3 actions plus its list of lessons.
   add('route:topic', shot('topic&cu=u.firstday&state=mid'), null, { list: true });
   add('route:topic-done', shot('topic&cu=u.firstday&state=shelf'), null, { list: true });
@@ -298,6 +336,8 @@ function defineStates(LANG) {
   add('after:result', shot('result'));
   add('after:result-perfect', shot('result&perfect=1'));
   add('after:result-review', shot('result&review=1'));
+  // The first lesson's result, once: Continue and the row to the emergency phrases.
+  add('after:result-phrases', shot('result&phrases=1'));
   add('after:streak', shot('streak&n=7'));
   add('after:streak-first', shot('streak&n=1'));
   add('after:keep', shot('streak&n=1'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); }, { expect: '.keep-no.keep3-btn' });
@@ -323,7 +363,7 @@ function defineStates(LANG) {
   add('settings:writing-ar', shot('settings&page=writing', 'ar'));
   add('settings:install', shot('settings&page=install&install=prompt'));
   add('settings:unlock', shot('settings&page=unlock&access=preview'));
-  add('settings:reminder-added', shot('settings&page=reminder'), async (p) => { await tap(p, '.max3-card', 2); });
+  add('settings:reminder-added', shot('settings&page=reminder'), async (p) => { await tap(p, '.max3-card', 1); });
   add('tab:help', shot('words'));
   add('tab:about', shot('about'));
   add('screen:coaches', shot('coaches'), null, { list: true });

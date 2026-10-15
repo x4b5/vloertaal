@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { NOT_SURE, sectors, type SectorChoice } from '../content/sectors';
-import { hasGender, said, saidLang, ui, type Bilingual } from '../i18n';
+import { ensureLanguage, hasGender, isLanguageLoaded, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, LangCode } from '../i18n/types';
 import type { Access } from '../lib/access';
 import { setPreferredVoice, speak } from '../lib/audio';
@@ -29,7 +29,7 @@ import {
   AlertIcon, AutoThemeIcon, BackIcon, CalendarIcon, CheckIcon, ChevronIcon, CloseIcon, CrateIcon, GlobeIcon, KeyboardIcon,
   LettersIcon, LockIcon, MoonIcon, PencilIcon, RouteIcon, SpeakerIcon, SpeakerOffIcon, SunIcon,
 } from './Icons';
-import { BackupCard, InstallCard } from './Keep';
+import { BackupCard, InstallCard, OwnTime } from './Keep';
 import { LogoMark } from './Logo';
 import { LanguagePicker } from './Screens';
 import { SectorCards, SectorGroupCards, SectorIcon } from './Sector';
@@ -142,6 +142,27 @@ export function Settings({
   useEffect(() => {
     return () => { if (timer.current) clearTimeout(timer.current); };
   }, []);
+  // Help language offline: a language whose file is not on the phone can't be switched to. The
+  // old language stays and a calm line says why (no splash, no dead end).
+  const [notHere, setNotHere] = useState<LangCode | null>(null);
+  const notHereRef = useRef<HTMLParagraphElement>(null);
+  useEffect(() => {
+    if (!notHere) return;
+    // A language far down the list was tapped: the line comes into view.
+    notHereRef.current?.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' });
+    const back = () => setNotHere(null);
+    window.addEventListener('online', back);
+    return () => window.removeEventListener('online', back);
+  }, [notHere]);
+  const pickLanguage = (code: LangCode | null) => {
+    const take = () => { setNotHere(null); onLang(code); answered(); };
+    if (isLanguageLoaded(code)) { take(); return; }
+    ensureLanguage(code).then(take, () => {
+      // Online after all (a server hiccup): App's own splash retries. Offline: stay here.
+      if (typeof navigator !== 'undefined' && navigator.onLine !== false) take();
+      else setNotHere(code);
+    });
+  };
   /**
    * An answer on a question page: the check shows a moment, then back to the list. A tap on the
    * option that is already chosen does the same: it keeps that choice, shows its check and leads
@@ -231,7 +252,16 @@ export function Settings({
       case 'language':
         return (
           <>
-            <LanguagePicker current={progress.helpLang} onPick={(code) => { onLang(code); answered(); }} showBeta compact lang={lang} />
+            {notHere && (
+              <p className="lang-not-here" role="status" ref={notHereRef}>
+                <GlobeIcon size={22} />
+                <span className="lang-not-here-text">
+                  <span className="lang-not-here-nl" lang="nl">Deze taal staat nog niet op je telefoon. Maak verbinding met internet.</span>
+                  <Bi text={say('langNotOnPhone')} />
+                </span>
+              </p>
+            )}
+            <LanguagePicker current={progress.helpLang} onPick={pickLanguage} showBeta compact lang={lang} />
             {lang && !lang.reviewed && (
               <p className="beta-note">
                 <span className={`beta-chip ${lang.ui.beta ? 'en-support' : ''}`} lang="en">beta</span>
@@ -405,10 +435,12 @@ export function Settings({
 }
 
 /**
- * "Remind me every day": the three times; a tap puts that daily reminder in the phone's calendar,
- * shows "added" a moment and leads back. The time already in the calendar carries the check, and a
- * tap on it only leads back (no second, identical reminder).
+ * "Remind me every day": before work, after work and "Kies zelf" (the phone's own time field, for
+ * night and shift work; G4 r5: 3 tappables). A tap or a chosen time puts that daily reminder in the
+ * phone's calendar, shows "added" a moment and leads back. The time already in the calendar carries
+ * the check, and choosing it again only leads back (no second, identical reminder).
  */
+const SETTINGS_TIMES = REMINDER_TIMES.filter((t) => t.time !== '12:00');
 function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: boolean) => void }) {
   const [current] = useState<string | null>(reminderTime);
   const [saved, setSaved] = useState<string | null>(null);
@@ -422,19 +454,22 @@ function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: 
     setSaved(time);
     onDone(adds);
   };
+  const shown = saved ?? current;
+  const own = shown && !SETTINGS_TIMES.some((t) => t.time === shown) ? shown : null;
   return (
     <>
       <ChoiceCards
         label={said(ui('remindTitle', lang))}
-        current={saved ?? current}
+        current={shown}
         onPick={add}
-        options={REMINDER_TIMES.map((t) => ({
+        options={SETTINGS_TIMES.map((t) => ({
           id: t.time,
           nl: t.nl,
           text: ui(t.key, lang),
           picture: <span className="set-time">{t.time}</span>,
         }))}
       />
+      <OwnTime card lang={lang} current={own} onTime={add} />
       <p className="max3-hint" role="status"><Bi text={ui(saved && reminderTapAdds(saved, current) ? 'remindAdded' : 'remindHint', lang)} /></p>
     </>
   );

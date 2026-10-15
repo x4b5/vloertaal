@@ -35,10 +35,10 @@ export const uiEn = {
   stopLesson: 'Stop lesson',
   fullVersion: 'Full version',
   unlockFull: 'Unlock the full version',
-  unlockHint: 'Only the first unit is open now. Enter the password for all lessons.',
-  password: 'Password',
-  enterPassword: 'Enter the password',
-  wrongPassword: 'That password is not right. Try again.',
+  unlockHint: 'Only the first unit is open now. Enter the code for all lessons.',
+  password: 'Code',
+  enterPassword: 'Enter the code',
+  wrongPassword: 'That code is not right. Try again.',
   unlock: 'Unlock',
   check: 'Check',
   continue: 'Continue',
@@ -218,7 +218,7 @@ export const uiEn = {
   tapToSpeak: 'Tap and speak',
   stopRecording: 'Stop',
   micPrivacy: 'Only you hear it. Nothing is sent.',
-  micUnavailable: 'The microphone is off. That’s fine, go on.',
+  micUnavailable: 'Microphone off. Say it out loud now, then go on.',
   /** Speaking on a device that cannot record at all: self-paced, nothing recorded. */
   sayAloud: 'No microphone needed. Say it out loud, then go on.',
   /** After the microphone failed in a speaking exercise: one retry. */
@@ -294,6 +294,33 @@ export const uiEn = {
   sayAloudInstead: 'Say it out loud instead',
   wordsPractised: 'Words practised',
   reviewComplete: 'Review finished!',
+  /* G4 r4: Settings → Help language, offline, a language whose file is not on the phone yet. */
+  langNotOnPhone: 'This language is not on this phone yet. Connect to the internet to switch.',
+  /* G4 r4b: the reminder's own time ("Kies zelf", for shift work). */
+  remindChooseOwn: 'Choose a time yourself',
+  /* G4 onboarding: the password page explained (who gives the code, what is kept), the code kept
+     when you come back to it, and "Try one lesson first" (behind TRY_LESSON). */
+  gateWho: 'Your teacher, coach or employer gives you the code.',
+  gateTrust: 'No account. No name. Everything stays on this phone.',
+  codeAccepted: 'Code accepted',
+  tryLesson: 'Try one lesson first',
+  trialDone: 'You did the trial lesson. The code unlocks everything.',
+  /* Bram, the mascot: one calm line on the home screen (src/lib/greeting.ts) and after a lesson. */
+  bramHello: 'Good to see you.',
+  bramBack: 'Welcome back. Let’s go on.',
+  bramDueN: '{n} words to repeat today.',
+  bramDueOne: '{n} word to repeat today.',
+  bramDayN: 'Day {n} in a row.',
+  bramDone: 'Done for today. See you tomorrow.',
+  bramPerfect: 'Very good. You know these words.',
+  bramGood: 'Good work. Step by step.',
+  bramHard: 'Good that you practised. Hard words come back.',
+  bramReview: 'Good. Repeating helps you remember.',
+  /* G4 b3: a sentence built by ear and a chat the other way round (later units); after a review
+     with many words still due. */
+  buildListen: 'Listen and make the sentence',
+  chatWhichQuestion: 'Which question goes with this answer?',
+  reviewWaiting: '{n} more words are waiting. They come back in the next days.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;
@@ -330,12 +357,45 @@ export function forGender(text: LangText | undefined, gender?: Gender): string |
   return text.x ?? text.m;
 }
 
-/** Every form of a text (plain: just the one), for checks over all of them. */
-export function allForms(text: LangText | undefined): string[] {
+/** Every form of a text (plain: just the one; plural: every category in every gender), for checks over all of them. */
+export function allForms(text: UiText | undefined): string[] {
   if (text === undefined) return [];
   if (typeof text === 'string') return [text];
+  if (isPlural(text)) return PLURAL_CATEGORIES.flatMap((c) => allForms(text[c]));
   return [text.m, text.f, ...(text.x === undefined ? [] : [text.x])];
 }
+
+/** The CLDR plural categories, as Intl.PluralRules names them. */
+export const PLURAL_CATEGORIES = ['zero', 'one', 'two', 'few', 'many', 'other'] as const;
+export type PluralCategory = (typeof PLURAL_CATEGORIES)[number];
+
+/**
+ * A UI text with a count, in a language whose words change with the number in more ways than
+ * "1 day / 2 days": Polish 1 dzień, 2 dni, 5 dni; Romanian 20 de zile; Arabic يوم، يومان، أيام، يوماً.
+ * The form is picked with Intl.PluralRules(language) (uiCount and fillCount in src/i18n/index.ts).
+ *
+ * Shape: the plural object is on the outside, gender on the inside. Each category holds a
+ * normal LangText, so a form that changes with the learner's gender is a `{ m, f, x? }` text:
+ *
+ *   wordsUnit: { one: 'słowo', few: 'słowa', many: 'słów', other: 'słów' }
+ *   streakGrew: { one: { m: '{n} يوم على التوالي! واصل هكذا.', f: '… واصلي هكذا.' }, two: …, other: … }
+ *
+ * `other` is required: it is the fallback for every category left out (and for fractions), and
+ * the text a plain ui(key) read gets. Every form keeps the English placeholders ({n}). Only in
+ * `ui`; a language without a plural object for a key keeps the old "XxxN" / "XxxOne" pair.
+ */
+export type PluralText = { other: LangText } & Partial<Record<Exclude<PluralCategory, 'other'>, LangText>>;
+
+/** A UI text in a translation file: plain, by gender, or by count (see PluralText). */
+export type UiText = LangText | PluralText;
+
+/** Is this text a plural object (it has an `other` form; a gendered text has `m` and `f`)? */
+export function isPlural(text: UiText | undefined): text is PluralText {
+  return typeof text === 'object' && text !== null && 'other' in text;
+}
+
+/** A plural object resolved for one learner's gender: plain strings by category. */
+export type PluralForms = { other: string } & Partial<Record<Exclude<PluralCategory, 'other'>, string>>;
 
 /** Help languages with grammatical gender in the learner's own sentences ("I am sick"). */
 export const GENDERED_LANGS: readonly LangCode[] = ['ar', 'ti', 'uk', 'pl', 'ro', 'bg'];
@@ -347,7 +407,8 @@ export interface HelpLanguageSource {
   nativeName: string;
   dir: 'ltr' | 'rtl';
   reviewed: boolean;
-  ui: Partial<Record<UiKey, LangText>>;
+  /** UI strings: plain, by gender, or (count strings) by plural category, see PluralText. */
+  ui: Partial<Record<UiKey, UiText>>;
   gloss: Record<string, LangText>;
 }
 
@@ -363,8 +424,10 @@ export interface HelpLanguage {
   dir: 'ltr' | 'rtl';
   /** Set to true once a native speaker has checked every string. */
   reviewed: boolean;
-  /** UI strings; anything missing falls back to English only. */
+  /** UI strings; anything missing falls back to English only. A plural text reads its `other` form here. */
   ui: Partial<Record<UiKey, string>>;
+  /** The count strings that have plural forms in this language (see PluralText), by category. */
+  plural?: Partial<Record<UiKey, PluralForms>>;
   /** Translations of curriculum ids (units, lessons, words, sentences). */
   gloss: Record<string, string>;
 }

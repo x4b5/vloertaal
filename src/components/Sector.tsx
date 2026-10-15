@@ -7,6 +7,7 @@ import { CareIcon, ConveyorIcon, CupIcon, ForkliftIcon, HelmetIcon, QuestionIcon
 import { WordPicture } from '../pictures';
 import { ChoiceCards, QuestionHead, type ChoiceOption } from './Choice';
 import { ChromeHead } from './ChromeBack';
+import { pushSubStep } from '../lib/onbHistory';
 
 const ICONS: Record<SectorId | 'none', typeof ForkliftIcon> = {
   logistics: ForkliftIcon,
@@ -48,7 +49,7 @@ export function SectorGroupCards({ current, lang, onPick }: {
       id: g.id,
       nl: g.nl,
       text: ui(g.key, lang),
-      picture: <span className="max3-trio">{g.sectors.map((s) => <span key={s}>{sectorPicture(s, 34)}</span>)}</span>,
+      picture: <span className="max3-trio">{g.sectors.map((s) => <span key={s}>{sectorPicture(s, 44)}</span>)}</span>,
       next: true,
     })),
     { id: 'none' as const, nl: NOT_SURE.nl, text: ui(NOT_SURE.key, lang), picture: <QuestionIcon size={30} /> },
@@ -71,6 +72,12 @@ export function SectorCards({ group, current, lang, onPick }: {
   return <ChoiceCards options={options} current={current === 'none' ? null : current} onPick={onPick} label={said(ui(g.key, lang))} className="sector-step sector-step-2" />;
 }
 
+/** The group whose second step this history entry is (a reload on the second step stays there). */
+function openStep(): SectorGroupId | null {
+  const g = (history.state as { sectorStep?: string } | null)?.sectorStep;
+  return sectorGroups.some((x) => x.id === g) ? (g as SectorGroupId) : null;
+}
+
 /**
  * First run, after the password (and the gender question): where do you work? In two steps of
  * at most three cards: the kind of work, then the sector. The phone's Back button goes from the
@@ -84,7 +91,8 @@ export function SectorScreen({ lang, onDone, onBack, initialGroup }: {
   /** Open on the second step (screenshots). */
   initialGroup?: SectorGroupId;
 }) {
-  const [group, setGroup] = useState<SectorGroupId | null>(initialGroup ?? null);
+  // After a reload on the second step, the history entry still says which group was open.
+  const [group, setGroup] = useState<SectorGroupId | null>(() => initialGroup ?? openStep());
   useEffect(() => {
     if (!group) return;
     const onPop = () => setGroup(null);
@@ -93,7 +101,7 @@ export function SectorScreen({ lang, onDone, onBack, initialGroup }: {
   }, [group]);
   const open = (g: SectorGroupId | 'none') => {
     if (g === 'none') return onDone('none');
-    history.pushState({ ...(history.state ?? {}), sectorStep: g }, '');
+    pushSubStep({ sectorStep: g });
     setGroup(g);
     window.scrollTo(0, 0);
   };
@@ -104,14 +112,14 @@ export function SectorScreen({ lang, onDone, onBack, initialGroup }: {
         <>
           {/* Back to the kind of work (the phone's Back button does the same). */}
           <ChromeHead lang={lang} onBack={() => (history.state?.sectorStep ? history.back() : setGroup(null))} />
-          <QuestionHead nl="Waar werk je?" text={ui('chooseSector', lang)} />
+          <QuestionHead nl="Waar werk je?" text={ui('chooseSector', lang)} say lang={lang} />
           <p className="max3-crumb"><Bi text={ui(g.key, lang)} /></p>
           <SectorCards group={g.id} lang={lang} onPick={onDone} />
         </>
       ) : (
         <>
           {onBack && <ChromeHead lang={lang} onBack={onBack} />}
-          <QuestionHead nl="Waar werk je?" text={ui('chooseSector', lang)} hint={ui('sectorHint', lang)} />
+          <QuestionHead nl="Waar werk je?" text={ui('chooseSector', lang)} hint={ui('sectorHint', lang)} say lang={lang} />
           <SectorGroupCards lang={lang} onPick={open} />
         </>
       )}

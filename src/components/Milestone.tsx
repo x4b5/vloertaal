@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { fillCount, fillN, ui, uiCount, said } from '../i18n';
+import { fillCount, ui, uiCount, said } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { STREAK_TIERS, dayKey, emptyProgress, workWeek, type WeekDayState } from '../lib/progress';
 import { Bi, HelpText } from './Bi';
@@ -56,17 +56,29 @@ const EN_DAYS = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 /** Locales Intl knows the weekday names of (Dari is written with the Afghan Persian names). */
 const INTL_LOCALE: Partial<Record<string, string>> = { prs: 'fa-AF' };
 
-/** Short weekday letters (Monday first) in the help language, or null when Intl can't give them. */
+/**
+ * Weekday letters (Monday first) for help languages a browser may have no weekday names for
+ * (Chrome has none for Tigrinya; Dari falls back to the Persian letters it shares).
+ */
+const FALLBACK_DAYS: Partial<Record<string, string[]>> = {
+  // Two letters: one letter would give ሰ three times (Monday, Tuesday, Sunday).
+  ti: ['ሰኑ', 'ሰሉ', 'ረቡ', 'ሓሙ', 'ዓር', 'ቀዳ', 'ሰን'],
+  prs: ['د', 'س', 'چ', 'پ', 'ج', 'ش', 'ی'],
+};
+
+/** Short weekday letters (Monday first) in the help language, or null when there are none. */
 export function weekdayLetters(lang?: HelpLanguage): string[] | null {
-  if (!lang || typeof Intl === 'undefined') return null;
+  if (!lang) return null;
+  const fallback = FALLBACK_DAYS[lang.code] ?? null;
+  if (typeof Intl === 'undefined') return fallback;
   const locale = INTL_LOCALE[lang.code] ?? lang.code;
   try {
-    if (!Intl.DateTimeFormat.supportedLocalesOf([locale]).length) return null;
+    if (!Intl.DateTimeFormat.supportedLocalesOf([locale]).length) return fallback;
     const f = new Intl.DateTimeFormat(locale, { weekday: 'narrow' });
     // 5 January 2026 is a Monday.
     return Array.from({ length: 7 }, (_, i) => f.format(new Date(2026, 0, 5 + i)));
   } catch {
-    return null;
+    return fallback;
   }
 }
 
@@ -80,8 +92,9 @@ export function WeekRow({ days, lang }: {
   lang?: HelpLanguage;
 }) {
   const own = weekdayLetters(lang);
-  // A help language the browser has no weekday names for (Tigrinya): no English letters, but a
-  // dot per day, today's ringed. English only keeps the English initials.
+  // A help language with no weekday letters at all (neither the browser's nor our own, see
+  // FALLBACK_DAYS): no English letters, but a dot per day, today's ringed. English only keeps
+  // the English initials.
   const dots = !own && Boolean(lang);
   const letters = own ?? EN_DAYS;
   const anyRest = days.some((d) => d.state === 'rest');
@@ -116,7 +129,7 @@ export function WeekRow({ days, lang }: {
 
 /** The reminder and home-screen cards are offered once, after the first day's milestone. */
 const KEEP_OFFERED = 'vloertaal.keepOffered';
-function keepOffered(): boolean {
+export function keepOffered(): boolean {
   try { return localStorage.getItem(KEEP_OFFERED) === '1'; } catch { return false; }
 }
 function markKeepOffered() {
@@ -142,10 +155,11 @@ function ContinueButton({ lang, onClick }: { lang?: HelpLanguage; onClick: () =>
 }
 
 /**
- * After the first day's milestone, once: the reminder and the home-screen offer, a few small
+ * After the first day's milestone, once (or, for a learner who tried lesson 1.1 before the code,
+ * after the first lesson finished with the code: App.tsx): the reminder and the home-screen offer, a few small
  * pages with at most 3 choices each (KeepFlow in Keep.tsx; both also in Settings).
  */
-function KeepScreen({ lang, onDone }: { lang?: HelpLanguage; onDone: () => void }) {
+export function KeepScreen({ lang, onDone }: { lang?: HelpLanguage; onDone: () => void }) {
   useEffect(() => { markKeepOffered(); window.scrollTo(0, 0); }, []);
   return <KeepFlow lang={lang} onDone={onDone} />;
 }
@@ -184,12 +198,15 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
   const next = useCallback(() => (offer ? setStep('keep') : onDone()), [offer, onDone]);
   useEnter(step === 'streak' ? next : noop);
 
-  const line = ui(streak > 1 ? 'streakGrew' : 'streakStarted', lang);
-  const label = ui('dayStreak', lang);
+  // Counted strings take the help language's plural form (Polish 2 dni, 5 dni; Arabic يومان، أيام، يوماً).
+  const line = streak > 1 ? fillCount('streakGrew', streak, lang) : ui('streakStarted', lang);
+  const label = uiCount('dayStreak', streak, lang);
   const tier = (STREAK_TIERS as readonly number[]).includes(streak) ? TIERS[streak as keyof typeof TIERS] : null;
   // Without the real week (dev screenshots), the streak's days are counted back from today.
   const week = days ?? workWeek({ ...emptyProgress, streak, lastDay: dayKey(new Date()) }, new Date());
   const record = Math.max(best ?? 0, streak);
+  // The record only when it says something new: never the same number as the streak above it.
+  const showRecord = record > 1 && record > streak;
 
   if (step === 'keep') return <KeepScreen lang={lang} onDone={onDone} />;
   return (
@@ -208,19 +225,21 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
             {tier && (
               <span className="tier-stamp" lang="nl" aria-hidden>
                 <span className="tier-stamp-word">{tier.nl}</span>
+                {/* The stamp in the help language too (English without one). */}
+                <TierSub text={ui(tier.key, lang)} lang={lang} />
               </span>
             )}
             <DaysUnit n={streak} lang={lang} />
           </span>
         </div>
         <h1 className="streak-line">
-          <Bi text={fillN(line, streak)} />
+          <Bi text={line} />
         </h1>
         <WeekRow days={week} lang={lang} />
-        {(record > 1 || freezes > 0) && (
+        {(showRecord || freezes > 0) && (
           <div className="streak-facts">
             {/* The record and free days: a small icon tag, the help language large. */}
-            {record > 1 && (
+            {showRecord && (
               <p className="streak-fact">
                 <span className="fact-tag" lang="nl" aria-hidden><TrophyGlyph /> {record}</span>
                 <Bi className="fact-gloss" text={fillCount('recordN', record, lang)} />
@@ -231,7 +250,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
                 <span className="fact-tag fact-free" aria-hidden>
                   {Array.from({ length: freezes }, (_, i) => <CupIcon key={i} size={18} />)}
                 </span>
-                <Bi className="fact-gloss" text={fillN(ui('freeDaysN', lang), freezes)} />
+                <Bi className="fact-gloss" text={fillCount('freeDaysN', freezes, lang)} />
               </p>
             )}
           </div>
@@ -243,6 +262,12 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
 }
 
 const noop = () => {};
+
+/** The tier stamp's line in the help language, under the Dutch (English without one). */
+function TierSub({ text, lang }: { text: ReturnType<typeof ui>; lang?: HelpLanguage }) {
+  if (text.help && lang) return <HelpText className="tier-stamp-sub" text={text.help} lang={lang} />;
+  return <span className="tier-stamp-sub" lang="en">{text.en}</span>;
+}
 
 /** A small cup-shaped trophy for the record. */
 function TrophyGlyph() {
@@ -272,7 +297,7 @@ export function StreakStopped({ streak, best, lang, onDone }: {
           <Character who="bram" mood="pleased" size={170} />
           <span className="stopped-flame"><FlameIcon lit={false} size={64} /></span>
         </div>
-        <div className="streak-count stopped-count" role="img" aria-label={`${streak} ${said(ui('dayStreak', lang))}`}>
+        <div className="streak-count stopped-count" role="img" aria-label={`${streak} ${said(uiCount('dayStreak', streak, lang))}`}>
           <span className="streak-num" aria-hidden>{streak}</span>
           <DaysUnit n={streak} lang={lang} />
         </div>

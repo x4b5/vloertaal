@@ -2,6 +2,7 @@ import { findLesson, units } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
 import type { Unit, Word } from '../content/types';
 import type { HelpLanguage } from '../i18n/types';
+import { coursePlan, type SectorChoice } from '../content/sectors';
 import { dayKey, type Progress } from './progress';
 
 /**
@@ -82,9 +83,15 @@ export function certDate(day: string): string {
   return new Date(y, m - 1, d).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
-/** The unit's number on the path's full course (01, 02 …). */
-export function unitIndex(unit: Unit): number {
-  return units.indexOf(unit);
+/**
+ * The unit's number as the learner's own path shows it (01, 02 …): their course (the basis units
+ * with their sector's unit in its place), then the other units (lib/route.ts routeOrder). Without
+ * a sector this is the order of the whole course.
+ */
+export function unitIndex(unit: Unit, sector?: SectorChoice): number {
+  const { main, other } = coursePlan(sector);
+  const at = [...main, ...other].findIndex((u) => u.id === unit.id);
+  return at >= 0 ? at : units.indexOf(unit);
 }
 
 /* ---- The learner's name on the certificate: asked once, kept on this device only. ---- */
@@ -127,9 +134,9 @@ export interface CertData {
   words: number;
 }
 
-export function certData(unit: Unit, day: string, name: string, lang?: HelpLanguage): CertData {
+export function certData(unit: Unit, day: string, name: string, lang?: HelpLanguage, sector?: SectorChoice): CertData {
   return {
-    unitNo: String(unitIndex(unit) + 1).padStart(2, '0'),
+    unitNo: String(unitIndex(unit, sector) + 1).padStart(2, '0'),
     titleNl: unit.titleNl,
     titleEn: unit.title,
     titleHelp: lang?.gloss[unit.id],

@@ -18,13 +18,16 @@ export type Exercise =
   | { kind: 'dutch'; word: Word; options: Word[]; textOnly?: boolean }
   | { kind: 'listen'; word: Word; options: Word[] }
   | { kind: 'match'; words: Word[] }
-  /** `salt` (a retry) changes the words offered step by step (buildSteps). */
-  | { kind: 'build'; sentence: Sentence; tiles: string[]; salt?: number }
+  /** `salt` (a retry) changes the words offered step by step (buildSteps). `audio`: listen and
+   *  build (later units): the meaning is hidden until the end, the sentence is heard instead. */
+  | { kind: 'build'; sentence: Sentence; tiles: string[]; salt?: number; audio?: true }
   /** Type what you hear. `options` (the word and two others): for a learner who reads only a
    *  non-Latin script, the same exercise becomes "hear and pick the written word" (see
    *  lib/writing.ts); without them it is always typed. */
   | { kind: 'type'; word: Word; options?: Word[] }
-  | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[] }
+  /** `reverse` (later units): the reply is given and the learner picks the colleague's question;
+   *  `options` are then questions. */
+  | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[]; reverse?: true }
   /** "How it works here": a workplace-culture card (not graded). */
   | { kind: 'tip'; tip: CultureTip }
   /** "What do you do?": the tip's situation with shuffled options. */
@@ -40,6 +43,14 @@ export const AUDIO_ONLY_KINDS: readonly Exercise['kind'][] = ['listen', 'type'];
 
 export function needsAudio(ex: Exercise): boolean {
   return AUDIO_ONLY_KINDS.includes(ex.kind);
+}
+
+/**
+ * Which options of a "what does it mean" show their small picture: those with one, but none at
+ * all when the answer has no picture (the one row without a picture would give it away).
+ */
+export function choicePictures(answer: Word, options: readonly Word[]): boolean[] {
+  return options.map((o) => hasPicture(answer) && hasPicture(o));
 }
 
 /** Intros, tips and speaking practice are not graded; every other exercise is. */
@@ -129,7 +140,13 @@ export function dutchExercise(word: Word, lesson: Lesson, rng: () => number, n =
 }
 
 /** The first word of a line, lower case ("Tot morgen!" → "tot"). */
-const firstWord = (s: string) => tokenize(s)[0]?.toLowerCase() ?? '';
+const firstWords = new Map<string, string>();
+const firstWord = (s: string) => {
+  // Cached: the chat options compare the first words of every line of the course, many times.
+  let w = firstWords.get(s);
+  if (w === undefined) { w = tokenize(s)[0]?.toLowerCase() ?? ''; firstWords.set(s, w); }
+  return w;
+};
 
 /**
  * Replies the learner has been taught by the time of `lesson`: the dialogues of the lessons up
@@ -137,38 +154,138 @@ const firstWord = (s: string) => tokenize(s)[0]?.toLowerCase() ?? '';
  * up to the lesson the dialogue comes from.
  */
 function taughtReplies(dialogue: Dialogue, lesson?: Lesson): ChatLine[] {
-  let at = lesson ? allLessons.findIndex((l) => l.id === lesson.id) : -1;
-  if (at < 0) at = allLessons.findIndex((l) => l.dialogues?.some((d) => d.reply.id === dialogue.reply.id));
+  const at = chatLessonAt(dialogue, lesson);
   if (at < 0) return [];
   const upTo = new Set(allLessons.slice(0, at + 1).map((l) => l.id));
   return teachingLessons.filter((l) => upTo.has(l.id)).flatMap((l) => (l.dialogues ?? []).map((d) => d.reply));
 }
 
+/** Where a chat sits in the course: `lesson` when it is a course lesson, else the lesson the
+ *  dialogue comes from (today's review). -1 when neither. */
+function chatLessonAt(dialogue: Dialogue, lesson?: Lesson): number {
+  const at = lesson ? allLessons.findIndex((l) => l.id === lesson.id) : -1;
+  return at >= 0 ? at : allLessons.findIndex((l) => l.dialogues?.some((d) => d.reply.id === dialogue.reply.id));
+}
+
+/** The replies of the chat's unit (its later lessons too): the same level and topic. */
+function unitReplies(at: number): ChatLine[] {
+  const unit = at >= 0 ? units.find((u) => u.lessons.some((l) => l.id === allLessons[at].id)) : undefined;
+  return (unit?.lessons ?? []).filter((l) => !isMixLesson(l)).flatMap((l) => (l.dialogues ?? []).map((d) => d.reply));
+}
+
+/**
+ * Every reply of the course, best fill-in first: the nearest lessons to `at` (earlier before
+ * later at the same distance), a much longer or shorter line counting as a few lessons further
+ * away. So a fill-in is from about the same level and about as long as the right reply.
+ */
+function nearReplies(at: number, reply: ChatLine): ChatLine[] {
+  const from = Math.max(0, at);
+  const lessons = allLessons.map((l, i) => ({ l, i })).filter(({ l }) => !isMixLesson(l));
+  // Distance in teaching lessons (a mixed review in between does not count).
+  const pos = Math.max(0, lessons.findIndex(({ i }) => i >= from));
+  const scored = lessons.flatMap(({ l }, k) => (l.dialogues ?? []).map((d) => {
+    const steps = k <= pos ? pos - k : k - pos + 0.5;
+    const off = Math.abs(d.reply.nl.length - reply.nl.length) - Math.max(8, Math.round(reply.nl.length * 0.6));
+    return { r: d.reply, score: steps + Math.max(0, off) / 2 };
+  }));
+  return scored.sort((a, b) => a.score - b.score).map(({ r }) => r);
+}
+
+/** Plain text for comparing meanings ("See you tomorrow!" = "see you tomorrow"). */
+const plains = new Map<string, string>();
+const plain = (s: string) => {
+  let p = plains.get(s);
+  if (p === undefined) { p = s.toLowerCase().replace(/[^\p{L}\p{N} ]+/gu, '').replace(/\s+/g, ' ').trim(); plains.set(s, p); }
+  return p;
+};
+
+/** About as long as the right reply (a much longer line stands out, and reads above the level). */
+export function similarLength(a: string, b: string): boolean {
+  return Math.abs(a.length - b.length) <= Math.max(8, Math.round(b.length * 0.6));
+}
+
 /**
  * Reply options for a chat: the right reply plus wrong ones that are taught and not confusable.
- * Wrong replies come from the same or earlier lessons first (the rest of the course only when
- * those run out); none starts with the same word as the right reply ("Tot morgen!" next to "Tot
- * straks!"), none answers a question that opens the same way, and no two wrong replies start
- * with the same word either.
+ * Wrong replies come from the learner's level: the same or earlier lessons first, then the rest of
+ * the chat's unit, and only when those run out the nearest lessons of the course. Within each of
+ * these, a reply about as long as the right one comes first (similarLength). None starts with the
+ * same word as the right reply ("Tot morgen!" next to "Tot straks!"), means the same (same
+ * meaning, or near-synonyms), or answers a question that opens the same way, and no two wrong
+ * replies start with the same word either. `avoid`: replies to leave out where others can take
+ * their place (a retry).
  */
-export function chatOptions(dialogue: Dialogue, rng: () => number, n = 3, lesson?: Lesson): ChatLine[] {
+export function chatOptions(dialogue: Dialogue, rng: () => number, n = 3, lesson?: Lesson, avoid?: ReadonlySet<string>): ChatLine[] {
   const { reply } = dialogue;
   const first = firstWord(reply.nl);
   // A reply to a question that starts the same way ("Kun je zaterdag …?") could be right here too.
   const opening = (s: string) => tokenize(s).slice(0, 2).join(' ').toLowerCase();
   const asked = opening(dialogue.prompt.nl);
   const promptOf = (r: ChatLine) => allDialogues.find((d) => d.reply.id === r.id)?.prompt.nl ?? '';
-  const clear = (r: ChatLine) => r.id !== reply.id && r.nl !== reply.nl && firstWord(r.nl) !== first && opening(promptOf(r)) !== asked;
+  const other = (r: ChatLine) => r.id !== reply.id && r.nl !== reply.nl;
+  const clear = (r: ChatLine) =>
+    other(r) && firstWord(r.nl) !== first && opening(promptOf(r)) !== asked && plain(r.en) !== plain(reply.en) && !nearSynonyms(r.nl, reply.nl) && !avoid?.has(r.id);
+  const short = (r: ChatLine) => similarLength(r.nl, reply.nl);
+  const at = chatLessonAt(dialogue, lesson);
+  const taught = taughtReplies(dialogue, lesson).filter(clear);
+  const unit = unitReplies(at).filter(clear);
+  const near = nearReplies(at, reply).filter(clear);
   const picked: ChatLine[] = [];
-  const pools = [taughtReplies(dialogue, lesson).filter(clear), allReplies.filter(clear), allReplies.filter((r) => r.id !== reply.id && r.nl !== reply.nl)];
+  const pools: ChatLine[][] = [
+    shuffle(taught.filter(short), rng),
+    shuffle(unit.filter(short), rng),
+    shuffle(taught, rng),
+    shuffle(unit, rng),
+    // The best fill-ins first (nearReplies is in that order): a few of them, shuffled.
+    shuffle(near.slice(0, 3), rng),
+    near,
+    allReplies.filter((r) => other(r) && !avoid?.has(r.id)),
+    allReplies.filter(other),
+  ];
   for (const pool of pools) {
-    for (const r of shuffle(pool, rng)) {
+    for (const r of pool) {
       if (picked.length >= n - 1) break;
-      if (picked.some((p) => p.nl === r.nl || firstWord(p.nl) === firstWord(r.nl))) continue;
+      if (picked.some((p) => p.id === r.id || p.nl === r.nl || firstWord(p.nl) === firstWord(r.nl) || plain(p.en) === plain(r.en))) continue;
       picked.push(r);
     }
   }
   return shuffle([reply, ...picked], rng);
+}
+
+/**
+ * Question options for a reversed chat (the reply is given, pick the colleague's line): the
+ * right question plus wrong ones the learner has met (the same or earlier lessons, then the
+ * nearest). A wrong question never means the same, never starts with the same word, and its own
+ * reply starts another way than the given one (a "Ja, …" reply could answer any yes/no question
+ * whose reply is "Ja" too), so only one question fits. Seeded.
+ */
+export function chatPromptOptions(dialogue: Dialogue, rng: () => number, n = 3, lesson?: Lesson, avoid?: ReadonlySet<string>): ChatLine[] {
+  const { prompt, reply } = dialogue;
+  const at = chatLessonAt(dialogue, lesson);
+  const upTo = new Set(allLessons.slice(0, Math.max(0, at) + 1).map((l) => l.id));
+  const taught = new Set(teachingLessons.filter((l) => upTo.has(l.id)).flatMap((l) => l.dialogues ?? []));
+  const first = firstWord(prompt.nl);
+  const answered = firstWord(reply.nl);
+  const meaning = plain(prompt.en);
+  // One pass over the course's chats (the cheap checks first; near-synonyms last).
+  const fitting = allDialogues.filter((d) =>
+    d.prompt.id !== prompt.id && d.prompt.nl !== prompt.nl && !avoid?.has(d.prompt.id) && firstWord(d.prompt.nl) !== first
+    && firstWord(d.reply.nl) !== answered && plain(d.prompt.en) !== meaning && !nearSynonyms(d.prompt.nl, prompt.nl));
+  const known = fitting.filter((d) => taught.has(d));
+  const pools: Dialogue[][] = [
+    shuffle(known.filter((d) => similarLength(d.prompt.nl, prompt.nl)), rng),
+    shuffle(known, rng),
+    fitting,
+    allDialogues.filter((d) => d.prompt.id !== prompt.id && d.prompt.nl !== prompt.nl),
+  ];
+  const picked: ChatLine[] = [];
+  for (const pool of pools) {
+    for (const d of pool) {
+      if (picked.length >= n - 1) break;
+      if (picked.some((p) => p.id === d.prompt.id || p.nl === d.prompt.nl || firstWord(p.nl) === firstWord(d.prompt.nl) || plain(p.en) === plain(d.prompt.en))) continue;
+      picked.push(d.prompt);
+    }
+  }
+  return shuffle([prompt, ...picked], rng);
 }
 
 /**
@@ -324,6 +441,35 @@ export function reviewKind(i: number, box = 1, quiet = false, offset = 0): Revie
   return kind === 'listen' || (kind === 'type' && box >= 2) ? 'dutch' : kind === 'type' ? 'meaning' : kind;
 }
 
+/** At most this share of a review's graded items is one kind of question (planReviewKinds). */
+export const REVIEW_KIND_SHARE = 0.3;
+/** Sentences to build in a mixed review (its chats stay, today's review has one of each). */
+export const MIX_MAX_BUILDS = 2;
+
+/**
+ * The kinds of question for the words of a review (mixed review, today's review), as even as can
+ * be: each word gets the least used of its own directions (reviewKind: box 2 and up only the
+ * harder ones, without sound nothing to hear), ties going to its place in the rotation. `taken`:
+ * questions of the review already fixed (after the words), `cap`: at most this many of one kind
+ * where the words' directions leave a choice. Pure and deterministic.
+ */
+export function planReviewKinds(boxes: readonly number[], opts: { quiet?: boolean; offset?: number; cap?: number; taken?: Partial<Record<ReviewKind, number>>; noType?: readonly boolean[] } = {}): ReviewKind[] {
+  const count: Record<ReviewKind, number> = { meaning: 0, listen: 0, dutch: 0, type: 0, ...opts.taken };
+  const cap = opts.cap ?? Infinity;
+  return boxes.map((box, i) => {
+    const all = [...new Set([0, 1, 2, 3].map((k) => reviewKind(i + k, box, opts.quiet, opts.offset)))];
+    // A word not fair to type (typable) gets one of its other directions.
+    const own = opts.noType?.[i] && all.some((k) => k !== 'type') ? all.filter((k) => k !== 'type') : all;
+    // Under the cap first, then the least used; the rotation breaks ties.
+    const pick = own.reduce((best, k) => {
+      const score = (x: ReviewKind) => (count[x] >= cap ? 1000 : 0) + count[x];
+      return score(k) < score(best) ? k : best;
+    });
+    count[pick]++;
+    return pick;
+  });
+}
+
 /**
  * "Which one is …?" in a review. A learner who reads Latin letters gets text cards (the meaning
  * shown, pick the Dutch word: the harder direction). A learner who reads only another script
@@ -339,7 +485,19 @@ function readableDutch(word: Word, lesson: Lesson, rng: () => number, nonLatin: 
   return { kind: 'meaning', word, options: options(word, lesson, rng) };
 }
 
+/**
+ * A word that is fair to type from hearing: at most TYPE_MAX_LETTERS letters (the article not
+ * counted) and no capitals ("BSN", "DigiD", a name). Other words are heard and picked instead.
+ */
+export const TYPE_MAX_LETTERS = 12;
+export function typable(word: Word): boolean {
+  const bare = word.nl.trim().replace(/^(de|het|een)\s+/i, '');
+  return !/\p{Lu}/u.test(word.nl) && bare.replace(/[^\p{L}]/gu, '').length <= TYPE_MAX_LETTERS;
+}
+
 function reviewExercise(kind: ReviewKind, word: Word, lesson: Lesson, rng: () => number, nonLatin = false, quiet = false): Exercise {
+  // A long word or one with capitals is not typed: heard and picked instead.
+  if (kind === 'type' && !typable(word)) kind = 'listen';
   if (kind === 'dutch') return readableDutch(word, lesson, rng, nonLatin, quiet, true);
   return { kind, word, options: options(word, lesson, rng) };
 }
@@ -413,7 +571,9 @@ export function forRetry(ex: Exercise, lesson: Lesson, seed: number): Exercise {
     case 'type':
       return ex.options ? { ...ex, options: freshOptions(ex.options, ex.word.id, (avoid) => options(ex.word, lesson, rng, n(ex.options!), lesson.words, avoid), rng) } : ex;
     case 'chat':
-      return { ...ex, options: freshOptions(ex.options, ex.dialogue.reply.id, () => chatOptions(ex.dialogue, rng, n(ex.options), lesson), rng) };
+      return ex.reverse
+        ? { ...ex, options: freshOptions(ex.options, ex.dialogue.prompt.id, (avoid) => chatPromptOptions(ex.dialogue, rng, n(ex.options), lesson, avoid), rng) }
+        : { ...ex, options: freshOptions(ex.options, ex.dialogue.reply.id, (avoid) => chatOptions(ex.dialogue, rng, n(ex.options), lesson, avoid), rng) };
     case 'situation':
       return { ...ex, options: reorder(ex.options, rng, ex.tip.options.find((o) => o.best)?.id) };
     case 'build':
@@ -423,6 +583,34 @@ export function forRetry(ex: Exercise, lesson: Lesson, seed: number): Exercise {
     default:
       return ex;
   }
+}
+
+/**
+ * Progression through the course (G4 b3): later units are not the same template again. From
+ * these units on (0-based place in the course, see `units`):
+ * - `pickDutch`: the last quiz after the new words asks the other way round: the meaning shown,
+ *   pick the Dutch word (text cards; each with a speaker for a learner who reads another script);
+ * - `audioBuild`: one sentence is built by ear: the meaning is hidden until the end and the
+ *   sentence is played (never without sound; the tiles keep their own speakers);
+ * - `reverseChat`: one chat is the other way round: the reply is given and the learner picks the
+ *   colleague's question: in a unit's later lessons the chat of the lesson before it, in the
+ *   unit's mixed review its last chat.
+ */
+export const PROGRESSION = { pickDutch: 4, audioBuild: 7, reverseChat: 10 } as const;
+
+/** The 0-based place of the lesson's unit in the course (-1 outside it, e.g. today's review). */
+export function unitIndexOf(lesson: Lesson): number {
+  return units.findIndex((u) => u.lessons.some((l) => l.id === lesson.id));
+}
+
+/** The dialogue for a reversed chat in a lesson: the one of the lesson before it in its unit
+ *  (met a lesson ago, so it comes back the other way round). None in a unit's first lesson: its
+ *  own chat the other way round right after it would give the answer away. */
+function reverseDialogue(lesson: Lesson): Dialogue | undefined {
+  const unit = units.find((u) => u.lessons.some((l) => l.id === lesson.id));
+  const i = unit ? unit.lessons.findIndex((l) => l.id === lesson.id) : -1;
+  const before = i > 0 ? unit!.lessons[i - 1] : undefined;
+  return before && !isMixLesson(before) ? before.dialogues?.[0] : undefined;
 }
 
 /**
@@ -440,6 +628,19 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   const out: Exercise[] = [];
 
   const mix = isMixLesson(lesson) || Boolean(lesson.repeat);
+  const daily = lesson.id === DAILY_ID;
+  const tip = tipForLesson(lesson.id);
+  // Sentences to build: one in today's review, two in a mixed review (else 3 builds and 2 chats
+  // made a third of it), all of them in a lesson.
+  const sentences = daily ? lesson.sentences.slice(0, 1) : mix ? lesson.sentences.slice(0, MIX_MAX_BUILDS) : lesson.sentences;
+  const dialogues = daily ? (lesson.dialogues ?? []).slice(0, 1) : lesson.dialogues ?? [];
+  // Progression (PROGRESSION): only in the course's own lessons (and a reversed chat in a unit's
+  // mixed review), not in today's review.
+  const unitAt = mix ? -1 : unitIndexOf(lesson);
+  const mixTurn = mix && !daily && !lesson.repeat && dialogues.length > 1 && unitIndexOf(lesson) >= PROGRESSION.reverseChat;
+  const later = (from: number) => unitAt >= from;
+  /** The word asked "the other way round" after the new words (pick the Dutch), if any. */
+  let pickedDutch: string | undefined;
   if (!opts.review && !mix) {
     const before = wordsBefore(lesson);
     // A quiz put off by one word: its words had no fair wrong option yet (see below).
@@ -455,7 +656,16 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
         if (!putOff && !before.length && !known.some((w) => !clashes(w, target, false))) { putOff = true; return; }
         putOff = false;
         // Only words introduced so far (and earlier lessons') are wrong options here.
-        out.push({ kind: 'meaning', word: target, options: options(target, lesson, rng, 3, known) });
+        const opts3 = options(target, lesson, rng, 3, known);
+        // Later units: the last quiz (every word met by then) shows the meaning and asks for the
+        // Dutch word. Without sound a learner who reads another script can't hear the cards: the
+        // usual "what does it mean" then.
+        if (later(PROGRESSION.pickDutch) && i === words.length - 1 && !(opts.nonLatin && opts.quiet)) {
+          pickedDutch = target.id;
+          out.push({ kind: 'dutch', word: target, options: opts3, textOnly: true });
+        } else {
+          out.push({ kind: 'meaning', word: target, options: opts3 });
+        }
       }
     });
   } else {
@@ -464,8 +674,16 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
       // the same recognition question every time; words that were right before get the harder
       // directions (reviewKind).
       const offset = Math.floor(rng() * REVIEW_KINDS.length);
-      shuffle(words, rng).forEach((word, i) => {
-        out.push(reviewExercise(reviewKind(i, lesson.boxes?.[word.id] ?? 1, opts.quiet, offset), word, lesson, rng, opts.nonLatin, opts.quiet));
+      const order = shuffle(words, rng);
+      // The questions after the words (not in today's review): two listening, one "which one
+      // is", one writing; without sound their reading twins.
+      const taken: Partial<Record<ReviewKind, number>> = daily ? {} : opts.quiet ? { meaning: 2, dutch: 2 } : { listen: 2, dutch: 1, type: 1 };
+      const graded = order.length + Object.values(taken).reduce((a, b) => a + (b ?? 0), 0) + 1 + (tip ? 1 : 0) + sentences.length + dialogues.length;
+      // No kind more than about 30% of the graded items (4 of 13 picture cards was too many).
+      const cap = Math.max(2, Math.floor(graded * REVIEW_KIND_SHARE));
+      const kinds = planReviewKinds(order.map((w) => lesson.boxes?.[w.id] ?? 1), { quiet: opts.quiet, offset, cap, taken, noType: order.map((w) => !typable(w)) });
+      order.forEach((word, i) => {
+        out.push(reviewExercise(kinds[i], word, lesson, rng, opts.nonLatin, opts.quiet));
       });
     } else {
       for (const word of sample(words, 3, rng)) {
@@ -475,7 +693,6 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   }
 
   // Language first, then one workplace custom, right after the new words.
-  const tip = tipForLesson(lesson.id);
   if (tip) {
     if (!opts.review) out.push({ kind: 'tip', tip });
     out.push({ kind: 'situation', tip, options: shuffle(tip.options, rng) });
@@ -487,17 +704,22 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // Today's review stays short (about a dozen items): every word once in a rotating kind of
   // question (above), the match board, one sentence to build and one chat. Its words already
   // rotate through listening, picture and writing questions, so the extra ones are left out.
-  if (lesson.id === DAILY_ID) {
-    const sentence = lesson.sentences[0];
-    if (sentence) out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });
-    for (const dialogue of (lesson.dialogues ?? []).slice(0, 1)) {
+  if (daily) {
+    for (const sentence of sentences) out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });
+    for (const dialogue of dialogues) {
       out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
     }
     if (opts.speak && !opts.quiet) return withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);
     return out;
   }
 
-  const [l1, l2, d1, t1] = shuffle(words, rng);
+  const shuffled = shuffle(words, rng);
+  const [l1, l2, d1raw, t1raw, spare] = shuffled;
+  // The word to type: one of at most 12 letters without capitals where the lesson has one
+  // (preferably not a word already asked by ear above).
+  const t1 = typable(t1raw) ? t1raw : shuffled.slice(4).find(typable) ?? shuffled.find((w) => typable(w) && w !== l1 && w !== l2) ?? shuffled.find(typable) ?? t1raw;
+  // Not the word just asked the other way round (pick the Dutch) again.
+  const d1 = d1raw.id === pickedDutch && spare ? spare : d1raw;
   // Without sound the first listening task shows the Dutch word (pick its meaning) and the
   // second one the meaning (pick the Dutch word from picture or text cards).
   out.push({ kind: opts.quiet ? 'meaning' : 'listen', word: l1, options: options(l1, lesson, rng) });
@@ -507,16 +729,26 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // At most three answers on a screen (the "at most 3" rule).
   out.push(readableDutch(target, lesson, rng, Boolean(opts.nonLatin), Boolean(opts.quiet), false));
 
-  for (const sentence of lesson.sentences) {
-    out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });
-  }
+  sentences.forEach((sentence, k) => {
+    const build: Exercise = { kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) };
+    // Later units: the last sentence is built by ear (never without sound).
+    if (later(PROGRESSION.audioBuild) && !opts.quiet && k === sentences.length - 1 && sentences.length > 1) build.audio = true;
+    out.push(build);
+  });
 
-  // Complete the conversation: use the words in a real exchange with a colleague.
-  for (const dialogue of lesson.dialogues ?? []) {
-    out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
-  }
+  // Complete the conversation: use the words in a real exchange with a colleague. In a later
+  // unit's mixed review the last chat goes the other way round (pick the question).
+  dialogues.forEach((dialogue, k) => {
+    if (mixTurn && k === dialogues.length - 1) out.push({ kind: 'chat', dialogue, options: chatPromptOptions(dialogue, rng, 3, lesson), reverse: true });
+    else out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
+  });
 
-  out.push(opts.quiet ? readableDutch(l2, lesson, rng, Boolean(opts.nonLatin), true, false) : { kind: 'listen', word: l2, options: options(l2, lesson, rng) });
+  // Later units: the other way round, near the end (in the place of the second listening
+  // question; the sentence built by ear is listening practice too): the reply is given, pick
+  // the question.
+  const turned = later(PROGRESSION.reverseChat) ? reverseDialogue(lesson) : undefined;
+  if (turned) out.push({ kind: 'chat', dialogue: turned, options: chatPromptOptions(turned, rng, 3, lesson), reverse: true });
+  else out.push(opts.quiet ? readableDutch(l2, lesson, rng, Boolean(opts.nonLatin), true, false) : { kind: 'listen', word: l2, options: options(l2, lesson, rng) });
   // Typing what you hear has no reading twin; read the word and pick its meaning instead.
   // The written-word options for "hear and pick" come from their own generator, so the rest of
   // the lesson (and a saved place in it) stays the same as before they existed.

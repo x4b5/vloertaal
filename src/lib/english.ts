@@ -42,3 +42,12 @@ export function applyEnglish(langCode: string | null | undefined, showEnglish = 
   if (typeof document === 'undefined') return;
   document.documentElement.classList.toggle(EN_OFF_CLASS, englishHidden(langCode, showEnglish));
 }
+
+/**
+ * The help language whose English setting applies now. On the language page (not onboarded yet,
+ * also after Back to it) nothing is chosen, so the English stays; once a language is picked, even
+ * the same one again, its setting applies. App.tsx re-applies whenever this or `onboarded` changes.
+ */
+export function englishLangFor(helpLang: string | null | undefined, onboarded: boolean): string | null {
+  return onboarded ? helpLang ?? null : null;
+}

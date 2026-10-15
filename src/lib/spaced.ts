@@ -87,21 +87,56 @@ export function dailyWordIds(cards: Cards, today: string): string[] {
   return [...due, ...soon].slice(0, DAILY_MIN);
 }
 
+/** A day as a whole number (days since 1 Jan 1970), for a rotation that changes every day. */
+export function dayNumber(day: string): number {
+  const [y, m, d] = day.split('-').map(Number);
+  return Math.round(Date.UTC(y, (m || 1) - 1, d || 1) / 86400000);
+}
+
 /**
  * Today's review as a lesson: the words, plus two sentences and one chat from the lessons those
  * words come from, so they come back in use. All items exist already (their sound too). The
  * cards' boxes go along: a word that was right before gets a harder question (exercises.ts).
+ *
+ * The source lessons go weakest first (the lowest card box among today's words), then the most
+ * recent one. Each lesson offers another of its sentences (and chats) from day to day, so over
+ * the weeks every sentence of a lesson comes back, not only its first one. The chat comes from
+ * the weakest (or most recent) lesson. Deterministic: the same words, cards and day give the same
+ * review. `day`: today (YYYY-MM-DD); without it the first sentence of each lesson.
  */
-export function dailyLesson(ids: string[], cards: Cards = {}): Lesson {
+export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Lesson {
   const words = ids.map((id) => wordById.get(id)).filter((w): w is Word => Boolean(w));
-  const from = teachingLessons.filter((l) => l.words.some((w) => ids.includes(w.id)));
-  const sentences: Sentence[] = [];
-  for (const l of from) {
-    const s = l.sentences[0];
-    if (s && sentences.length < 2 && !sentences.some((x) => x.nl === s.nl)) sentences.push(s);
-  }
-  const dialogues: Dialogue[] = from.flatMap((l) => l.dialogues ?? []).slice(0, 1);
   const boxes = Object.fromEntries(words.map((w) => [w.id, cards[w.id]?.box ?? 1]));
+  const idSet = new Set(ids);
+  const n = day ? dayNumber(day) : 0;
+  const from = teachingLessons
+    .map((l, at) => ({ l, at, box: Math.min(...l.words.filter((w) => idSet.has(w.id)).map((w) => boxes[w.id] ?? 1)) }))
+    .filter(({ box }) => Number.isFinite(box))
+    .sort((a, b) => a.box - b.box || b.at - a.at);
+  // Rotate every second day (a card comes back after 1, 2, 4, 7, 14 … days; turning each day
+  // brought the same sentence back on many of those days, every second day spreads them). A
+  // lesson's place in the course shifts its turn, so lessons reviewed together differ.
+  const turn = Math.floor(n / 2);
+  const pick = <T>(xs: readonly T[], at: number, k = 0): T | undefined => (xs.length ? xs[(turn + at + k) % xs.length] : undefined);
+  const sentences: Sentence[] = [];
+  for (const { l, at } of from) {
+    if (sentences.length >= 2) break;
+    const s = pick(l.sentences, at);
+    if (s && !sentences.some((x) => x.nl === s.nl)) sentences.push(s);
+  }
+  // Only one source lesson: its second sentence comes along as the other one.
+  if (sentences.length < 2 && from.length) {
+    const { l, at } = from[0];
+    const s = pick(l.sentences, at, 1);
+    if (s && !sentences.some((x) => x.nl === s.nl)) sentences.push(s);
+  }
+  // The chat: from a lesson with the weakest words (the most recent of them, on the next day the
+  // one before it, and so on), so it is not always the same lesson's chat.
+  const chatty = from.filter(({ l }) => l.dialogues?.length);
+  const weakest = chatty.filter(({ box }) => box === chatty[0]?.box);
+  const chatFrom = weakest.length ? weakest[n % weakest.length] : undefined;
+  const chat = chatFrom ? pick(chatFrom.l.dialogues!, chatFrom.at) : undefined;
+  const dialogues: Dialogue[] = chat ? [chat] : [];
   return { id: DAILY_ID, title: 'Review today', words, sentences, dialogues, repeat: true, boxes };
 }
 
