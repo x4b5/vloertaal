@@ -45,6 +45,14 @@ export function needsAudio(ex: Exercise): boolean {
   return AUDIO_ONLY_KINDS.includes(ex.kind);
 }
 
+/**
+ * Which options of a "what does it mean" show their small picture: those with one, but none at
+ * all when the answer has no picture (the one row without a picture would give it away).
+ */
+export function choicePictures(answer: Word, options: readonly Word[]): boolean[] {
+  return options.map((o) => hasPicture(answer) && hasPicture(o));
+}
+
 /** Intros, tips and speaking practice are not graded; every other exercise is. */
 export function isGraded(ex: Exercise): boolean {
   return ex.kind !== 'intro' && ex.kind !== 'tip' && ex.kind !== 'speak';
@@ -434,11 +442,13 @@ export const MIX_MAX_BUILDS = 2;
  * questions of the review already fixed (after the words), `cap`: at most this many of one kind
  * where the words' directions leave a choice. Pure and deterministic.
  */
-export function planReviewKinds(boxes: readonly number[], opts: { quiet?: boolean; offset?: number; cap?: number; taken?: Partial<Record<ReviewKind, number>> } = {}): ReviewKind[] {
+export function planReviewKinds(boxes: readonly number[], opts: { quiet?: boolean; offset?: number; cap?: number; taken?: Partial<Record<ReviewKind, number>>; noType?: readonly boolean[] } = {}): ReviewKind[] {
   const count: Record<ReviewKind, number> = { meaning: 0, listen: 0, dutch: 0, type: 0, ...opts.taken };
   const cap = opts.cap ?? Infinity;
   return boxes.map((box, i) => {
-    const own = [...new Set([0, 1, 2, 3].map((k) => reviewKind(i + k, box, opts.quiet, opts.offset)))];
+    const all = [...new Set([0, 1, 2, 3].map((k) => reviewKind(i + k, box, opts.quiet, opts.offset)))];
+    // A word not fair to type (typable) gets one of its other directions.
+    const own = opts.noType?.[i] && all.some((k) => k !== 'type') ? all.filter((k) => k !== 'type') : all;
     // Under the cap first, then the least used; the rotation breaks ties.
     const pick = own.reduce((best, k) => {
       const score = (x: ReviewKind) => (count[x] >= cap ? 1000 : 0) + count[x];
@@ -464,7 +474,19 @@ function readableDutch(word: Word, lesson: Lesson, rng: () => number, nonLatin: 
   return { kind: 'meaning', word, options: options(word, lesson, rng) };
 }
 
+/**
+ * A word that is fair to type from hearing: at most TYPE_MAX_LETTERS letters (the article not
+ * counted) and no capitals ("BSN", "DigiD", a name). Other words are heard and picked instead.
+ */
+export const TYPE_MAX_LETTERS = 12;
+export function typable(word: Word): boolean {
+  const bare = word.nl.trim().replace(/^(de|het|een)\s+/i, '');
+  return !/\p{Lu}/u.test(word.nl) && bare.replace(/[^\p{L}]/gu, '').length <= TYPE_MAX_LETTERS;
+}
+
 function reviewExercise(kind: ReviewKind, word: Word, lesson: Lesson, rng: () => number, nonLatin = false, quiet = false): Exercise {
+  // A long word or one with capitals is not typed: heard and picked instead.
+  if (kind === 'type' && !typable(word)) kind = 'listen';
   if (kind === 'dutch') return readableDutch(word, lesson, rng, nonLatin, quiet, true);
   return { kind, word, options: options(word, lesson, rng) };
 }
@@ -648,7 +670,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
       const graded = order.length + Object.values(taken).reduce((a, b) => a + (b ?? 0), 0) + 1 + (tip ? 1 : 0) + sentences.length + dialogues.length;
       // No kind more than about 30% of the graded items (4 of 13 picture cards was too many).
       const cap = Math.max(2, Math.floor(graded * REVIEW_KIND_SHARE));
-      const kinds = planReviewKinds(order.map((w) => lesson.boxes?.[w.id] ?? 1), { quiet: opts.quiet, offset, cap, taken });
+      const kinds = planReviewKinds(order.map((w) => lesson.boxes?.[w.id] ?? 1), { quiet: opts.quiet, offset, cap, taken, noType: order.map((w) => !typable(w)) });
       order.forEach((word, i) => {
         out.push(reviewExercise(kinds[i], word, lesson, rng, opts.nonLatin, opts.quiet));
       });
@@ -680,7 +702,11 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     return out;
   }
 
-  const [l1, l2, d1raw, t1, spare] = shuffle(words, rng);
+  const shuffled = shuffle(words, rng);
+  const [l1, l2, d1raw, t1raw, spare] = shuffled;
+  // The word to type: one of at most 12 letters without capitals where the lesson has one
+  // (preferably not a word already asked by ear above).
+  const t1 = typable(t1raw) ? t1raw : shuffled.slice(4).find(typable) ?? shuffled.find((w) => typable(w) && w !== l1 && w !== l2) ?? shuffled.find(typable) ?? t1raw;
   // Not the word just asked the other way round (pick the Dutch) again.
   const d1 = d1raw.id === pickedDutch && spare ? spare : d1raw;
   // Without sound the first listening task shows the Dutch word (pick its meaning) and the

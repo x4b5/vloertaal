@@ -4060,3 +4060,17 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 .chat-blank-q { width: auto; height: auto; margin: 0; background: none; font-size: 1.6rem; font-weight: 700; line-height: 1; color: var(--ink-3); }
 /* A sentence built by ear: the big speaker is the question until the end. */
 .build-by-ear .build-bubble { gap: 12px; }
+
+/* The lesson footer with nothing in it (before a tap on an option): no room taken, so the last
+   option is never under it (XL text at 360 px); a still chevron hints at more below. */
+.player .player-foot.foot-empty { margin-top: 12px; padding-top: 0; padding-bottom: env(safe-area-inset-bottom); }
+.player .player-foot.foot-empty::before { display: none; }
+.foot-more-hint {
+  position: absolute; z-index: 3; inset: -44px 0 auto; height: 44px; display: grid; place-items: end center;
+  pointer-events: none; color: var(--ink-2);
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--bg) 0%, transparent), var(--bg) 78%);
+  animation: rm-fade 0.2s ease-out both;
+}
+/* After a review with many words still due: one calm line (not a button). */
+.result-waiting { flex-wrap: nowrap; gap: 10px; color: var(--ink-2); font-size: 0.95rem; font-weight: 500; }
+.result-waiting .bi { flex: 0 1 auto; min-width: 0; align-items: flex-start; text-align: start; }

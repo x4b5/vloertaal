@@ -4,7 +4,7 @@ import { fillN, gloss, said as srText, saidLang, ui, type Bilingual } from '../i
 import type { HelpLanguage } from '../i18n/types';
 import { checkTyped, tokenize } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
-import { buildSteps, MATCH_ASKED, sentencePicture, type Exercise } from '../lib/exercises';
+import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
@@ -256,6 +256,7 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
 /** Dutch word shown → pick the English meaning. */
 export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'meaning'>) {
   useEffect(() => { autoSpeak(ex.word.nl, false, 'nl', voiceFor('bram')); }, [ex.word]);
+  const pics = choicePictures(ex.word, ex.options);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
@@ -275,8 +276,10 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, miss
         onAnswer={onAnswer}
         render={(w) => (
           <>
-            {/* A small picture of each option (abstract words keep a text-only row). */}
-            {hasPicture(w) && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={56} />}
+            {/* A small picture of each option (abstract words keep a text-only row). When the
+                answer has no picture, no option shows one: the one row without a picture
+                would give it away. */}
+            {pics[ex.options.indexOf(w)] && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={56} />}
             <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />
           </>
         )}

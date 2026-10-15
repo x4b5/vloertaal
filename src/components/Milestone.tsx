@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { fillCount, fillN, ui, uiCount, said } from '../i18n';
+import { fillCount, ui, uiCount, said } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { STREAK_TIERS, dayKey, emptyProgress, workWeek, type WeekDayState } from '../lib/progress';
 import { Bi, HelpText } from './Bi';
@@ -198,8 +198,9 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
   const next = useCallback(() => (offer ? setStep('keep') : onDone()), [offer, onDone]);
   useEnter(step === 'streak' ? next : noop);
 
-  const line = ui(streak > 1 ? 'streakGrew' : 'streakStarted', lang);
-  const label = ui('dayStreak', lang);
+  // Counted strings take the help language's plural form (Polish 2 dni, 5 dni; Arabic يومان، أيام، يوماً).
+  const line = streak > 1 ? fillCount('streakGrew', streak, lang) : ui('streakStarted', lang);
+  const label = uiCount('dayStreak', streak, lang);
   const tier = (STREAK_TIERS as readonly number[]).includes(streak) ? TIERS[streak as keyof typeof TIERS] : null;
   // Without the real week (dev screenshots), the streak's days are counted back from today.
   const week = days ?? workWeek({ ...emptyProgress, streak, lastDay: dayKey(new Date()) }, new Date());
@@ -232,7 +233,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
           </span>
         </div>
         <h1 className="streak-line">
-          <Bi text={fillN(line, streak)} />
+          <Bi text={line} />
         </h1>
         <WeekRow days={week} lang={lang} />
         {(showRecord || freezes > 0) && (
@@ -249,7 +250,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
                 <span className="fact-tag fact-free" aria-hidden>
                   {Array.from({ length: freezes }, (_, i) => <CupIcon key={i} size={18} />)}
                 </span>
-                <Bi className="fact-gloss" text={fillN(ui('freeDaysN', lang), freezes)} />
+                <Bi className="fact-gloss" text={fillCount('freeDaysN', freezes, lang)} />
               </p>
             )}
           </div>
@@ -296,7 +297,7 @@ export function StreakStopped({ streak, best, lang, onDone }: {
           <Character who="bram" mood="pleased" size={170} />
           <span className="stopped-flame"><FlameIcon lit={false} size={64} /></span>
         </div>
-        <div className="streak-count stopped-count" role="img" aria-label={`${streak} ${said(ui('dayStreak', lang))}`}>
+        <div className="streak-count stopped-count" role="img" aria-label={`${streak} ${said(uiCount('dayStreak', streak, lang))}`}>
           <span className="streak-num" aria-hidden>{streak}</span>
           <DaysUnit n={streak} lang={lang} />
         </div>

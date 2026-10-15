@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Unit } from '../content/types';
+import type { SectorChoice } from '../content/sectors';
 import { unitIcons } from '../content/unitIcons';
 import { said, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
@@ -20,7 +21,7 @@ import { SpeakButton } from './SpeakButton';
  * button. Save as picture (for the phone's gallery) and print. Opened from the unit's row on the
  * home and "Alle onderwerpen", and after the certificate of a finished unit.
  */
-export function PocketCardScreen({ unit, lang, onBack }: { unit: Unit; lang?: HelpLanguage; onBack: () => void }) {
+export function PocketCardScreen({ unit, lang, onBack, sector }: { unit: Unit; lang?: HelpLanguage; onBack: () => void; /** The unit's number as on the learner's path. */ sector?: SectorChoice }) {
   const phrases = useMemo(() => pocketPhrases(unit), [unit]);
   const rtl = lang?.dir === 'rtl';
   const card = useRef<HTMLElement>(null);
@@ -79,7 +80,7 @@ export function PocketCardScreen({ unit, lang, onBack }: { unit: Unit; lang?: He
           <WordPicture className="pocket-unit-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={52} />
           <div className="pocket-titles">
             <span className="pocket-tab" lang="nl" aria-hidden>
-              <span className="pocket-tab-no">{String(unitIndex(unit) + 1).padStart(2, '0')}</span> Spiekkaartje
+              <span className="pocket-tab-no">{String(unitIndex(unit, sector) + 1).padStart(2, '0')}</span> Spiekkaartje
             </span>
             <h2 className="pocket-title" lang="nl" dir="ltr">{unit.titleNl}</h2>
             {help ? <HelpText className="pocket-sub" text={help} lang={lang!} /> : <span className="pocket-sub" lang="en">{unit.title}</span>}

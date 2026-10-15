@@ -27,7 +27,7 @@ import { type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from 
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
 import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
-import { DAILY_ID, addLessonWords, applyReview, dailyCard, dailyLesson, dailyWordIds, seedCards, strongerCount } from './lib/spaced';
+import { DAILY_ID, addLessonWords, applyReview, dailyCard, dailyLesson, dailyWordIds, dueIds, seedCards, strongerCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { persistStorage } from './lib/install';
 import { CertEarned, CertificateScreen } from './components/Certificate';
@@ -44,7 +44,7 @@ type View =
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[] }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean }
   /** "Certificaat behaald": once, after the result of a unit's last lesson (then the streak, if it went up). */
   | { name: 'cert-earned'; unit: string; streakUp?: number }
   /** A unit's certificate; streakUp: opened from "Certificaat behaald", the streak milestone still follows. */
@@ -282,9 +282,15 @@ export default function App() {
     else if (idx < at && cur) history.replaceState({ ...cur, onb: idx } satisfies Entry, '');
   }, [step]);
 
+  /** "Voor begeleiders" straight from #begeleiders in the address (a coach's bookmark): no
+   *  language choice or code first, it is a Dutch page for the coach. */
+  const [coachDirect, setCoachDirect] = useState(coachesRequested);
   // The owner's hidden page opens with #beheer in the address.
   useEffect(() => {
-    const onHash = () => { if (adminRequested()) setView({ name: 'admin' }); };
+    const onHash = () => {
+      if (adminRequested()) setView({ name: 'admin' });
+      if (coachesRequested()) setCoachDirect(true);
+    };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
@@ -409,6 +415,11 @@ export default function App() {
   // "Keep lessons on this phone" (Settings → This phone): the current topic is kept by itself.
   useAutoOffline(progress, access);
 
+  if (coachDirect && view.name !== 'admin') {
+    // Back leaves the coaches' page for the app itself (a learner on this phone, or its first run).
+    const leave = () => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname + location.search); setCoachDirect(false); setView(HOME); };
+    return <Coaches onBack={leave} lang={langReady && progress.onboarded ? lang : undefined} />;
+  }
   if ((!langReady || (progress.onboarded && !picsReady)) && view.name !== 'admin') return <Splash failed={langFailed} onRetry={() => location.reload()} />;
   if (view.name === 'admin') {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
@@ -500,6 +511,8 @@ export default function App() {
           kind: daily ? 'daily' : reviewing ? 'review' : 'lesson',
           repeated: daily ? found.lesson.words.length : reviewing ? Object.keys(results).length || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
+          // Still due after today's review (back after a long absence): they come in the next days.
+          waiting: daily ? dueIds(next.cards ?? {}, today).length || undefined : undefined,
           next: upNext?.id,
           cert: unitDone?.id,
           skipped: skipped || undefined,
@@ -530,6 +543,7 @@ export default function App() {
           words={view.words}
           repeated={view.repeated}
           stronger={view.stronger}
+          waiting={view.waiting}
           skipped={view.skipped}
           kind={view.kind}
           next={view.next ? nextTitle(view.next, lang) : undefined}
@@ -559,16 +573,16 @@ export default function App() {
       // After "Certificaat behaald", the day-streak milestone still follows (once per day).
       const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
       return view.name === 'cert-earned' ? (
-        <CertEarned unit={unit} day={day} lang={lang} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
+        <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
           onPocket={() => replace({ name: 'pocket', unit: unit.id, streakUp: view.streakUp })} />
       ) : (
-        <CertificateScreen unit={unit} day={day} lang={lang} onBack={onward} />
+        <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} onBack={onward} />
       );
     }
     case 'pocket': {
       const unit = findUnit(view.unit);
       // From "Certificaat behaald": the day-streak milestone still follows.
-      return unit ? <PocketCardScreen unit={unit} lang={lang} onBack={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())} /> : null;
+      return unit ? <PocketCardScreen unit={unit} lang={lang} sector={progress.sector} onBack={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())} /> : null;
     }
     case 'all':
       return (
@@ -705,4 +719,9 @@ function nextTitle(id: string, lang: ReturnType<typeof getHelpLanguage>) {
 
 function adminRequested(): boolean {
   return location.hash === '#beheer';
+}
+
+/** #begeleiders: the coaches' page, opened directly (see Coaches). */
+function coachesRequested(): boolean {
+  return typeof location !== 'undefined' && location.hash === '#begeleiders';
 }

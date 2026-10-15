@@ -18,8 +18,14 @@ import type { ChatLine, Dialogue, Lesson, Unit } from './types';
 const line = (id: string, nl: string, en: string): ChatLine => ({ id, nl, en });
 const chat = (prompt: ChatLine, reply: ChatLine): Dialogue => ({ prompt, reply });
 
-/** Closing line of every tip: this is general information, not advice for one person. */
+/** Closing line of most tips: this is general information, not advice for one person. */
 export const ADVICE_LINE = 'General information. For your situation: ask your employer, the union or the Juridisch Loket.';
+/**
+ * Closing line of the tips where the employer or agency may itself be the problem (exploitation,
+ * housing pressure, dismissal, discrimination): never send the learner back to the employer.
+ * FairWork (fairwork.nu) is the Dutch NGO for exploited (migrant) workers.
+ */
+export const ABUSE_LINE = 'General information. For your situation: ask the union, the Juridisch Loket or FairWork.';
 /** Closing line of the house-rules tips: these rules are set per company. */
 export const HOUSE_LINE = 'Rules differ per company: ask your supervisor what the rules are where you work.';
 const tip = (t: CultureTip, end = ADVICE_LINE): CultureTip => ({ ...t, body: end ? `${t.body} ${end}` : t.body });
@@ -418,7 +424,7 @@ const coreTips: CultureTip[] = [
       { id: 'c.housing.o3', en: 'Stay, and stop answering the agency.', best: false },
     ],
     why: { id: 'c.housing.w', en: 'Your rental contract has its own rules, separate from your job. Free advice helps you know your rights, for example about when you must leave and about your deposit.' },
-  }),
+  }, ABUSE_LINE),
   tip({
     id: 'c.payslip',
     lessonId: 'l.payslip',
@@ -508,7 +514,7 @@ const coreTips: CultureTip[] = [
       { id: 'c.rights.o3', en: 'Put the paper away and never talk about it.', best: false },
     ],
     why: { id: 'c.rights.w', en: 'If you sign, you can lose rights, for example to unemployment benefit (WW). Asking for time to get advice is normal and allowed.' },
-  }),
+  }, ABUSE_LINE),
   tip({
     id: 'c.leave',
     lessonId: 'l.leave',
@@ -567,7 +573,7 @@ const unit = (slug: string, title: string, titleNl: string, emoji: string, color
   lessons,
 });
 
-/** Closing line: ADVICE_LINE for rights and rules set by law, HOUSE_LINE for company rules, '' for social norms. */
+/** Closing line: ADVICE_LINE for rights and rules set by law, ABUSE_LINE where the employer may be the problem, HOUSE_LINE for company rules, '' for social norms. */
 /** Dutch said aloud in a situation (a speaker plays it in the character's voice). */
 const SAID: Record<string, string> = { interview: 'Heb je nog vragen?' };
 
@@ -1217,7 +1223,7 @@ const laterTips = [
       'Give it, but take a photo of it first.',
     ],
     'Your passport is yours. Keeping it is a way to control workers. An employer only needs a copy for the files.',
-    ADVICE_LINE,
+    ABUSE_LINE,
   ),
   tipFor(
     'gethelp',
@@ -1232,7 +1238,7 @@ const laterTips = [
       'Go to the boss and start a fight.',
     ],
     'Help is there for everyone who works in the Netherlands. A report can also be made without names.',
-    ADVICE_LINE,
+    ABUSE_LINE,
   ),
   tipFor(
     'callin',

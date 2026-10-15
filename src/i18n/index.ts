@@ -1,8 +1,8 @@
 import { mixLessonId, relatedUnits } from '../content/review';
 import { langMeta, languageMeta } from './meta';
 import type { LanguagePack } from './packs/types';
-import type { Gender, HelpLanguage, HelpLanguageSource, LangCode, LangText, UiKey } from './types';
-import { forGender, GENDERED_LANGS, uiEn } from './types';
+import type { Gender, HelpLanguage, HelpLanguageSource, LangCode, LangText, PluralCategory, PluralForms, UiKey, UiText } from './types';
+import { forGender, GENDERED_LANGS, isPlural, PLURAL_CATEGORIES, uiEn } from './types';
 
 export { languageMeta, langMeta, metaLanguage, LANG_CODES, type LangMeta } from './meta';
 
@@ -31,13 +31,14 @@ const pending = new Map<LangCode, Promise<void>>();
 /** Workplace-culture, work-and-rights, About and learning texts live in their own files; merge them in. */
 function merge(p: LanguagePack): HelpLanguageSource {
   const l = p.base;
+  const mix = l.ui.mixLesson ?? uiEn.mixLesson;
   return {
     ...l,
     ui: { ...l.ui, ...p.culture.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui },
     gloss: {
       ...l.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.about.gloss, ...p.learn.gloss,
       // Every unit's "Mixed review" lesson shares one title.
-      ...Object.fromEntries(Object.keys(relatedUnits).map((id) => [mixLessonId(id), l.ui.mixLesson ?? uiEn.mixLesson])),
+      ...Object.fromEntries(Object.keys(relatedUnits).map((id) => [mixLessonId(id), isPlural(mix) ? mix.other : mix])),
     },
   };
 }
@@ -81,13 +82,26 @@ export function loadedSources(): HelpLanguageSource[] {
 const resolveAll = (texts: Record<string, LangText | undefined>, gender?: Gender): Record<string, string> =>
   Object.fromEntries(Object.entries(texts).flatMap(([k, t]) => (t === undefined ? [] : [[k, forGender(t, gender)]])));
 
+/** A plural object's forms for one gender (only the categories it has; `other` always). */
+const pluralFor = (t: Extract<UiText, { other: LangText }>, gender?: Gender): PluralForms =>
+  Object.fromEntries(PLURAL_CATEGORIES.flatMap((c) => (t[c] === undefined ? [] : [[c, forGender(t[c], gender)]]))) as PluralForms;
+
 /**
  * A help language for one learner: every gendered text resolved once, for their gender
  * (fallback: their form, then the both-forms `x`, then the masculine). Every lookup (ui, gloss,
  * lang.ui.x, lang.gloss[id]) then reads plain strings in the right form.
  */
 function resolve(src: HelpLanguageSource, gender?: Gender): HelpLanguage {
-  return { ...src, gender, ui: resolveAll(src.ui, gender), gloss: resolveAll(src.gloss, gender) };
+  const plural: Partial<Record<UiKey, PluralForms>> = {};
+  const ui: Record<string, string> = {};
+  for (const [k, t] of Object.entries(src.ui) as [UiKey, UiText | undefined][]) {
+    if (t === undefined) continue;
+    if (isPlural(t)) {
+      plural[k] = pluralFor(t, gender);
+      ui[k] = plural[k].other;
+    } else ui[k] = forGender(t, gender);
+  }
+  return { ...src, gender, ui, plural, gloss: resolveAll(src.gloss, gender) };
 }
 
 const cache = new Map<string, HelpLanguage>();
@@ -154,9 +168,31 @@ const SINGULAR: Partial<Record<UiKey, UiKey>> = {
   bramDueN: 'bramDueOne',
 };
 
-/** A UI string for a count of `n`: the singular form when n is 1 (in every language). */
+/** Intl.PluralRules per language (Dari follows Persian; an unknown code would fall back to English). */
+const PLURAL_LOCALE: Partial<Record<LangCode, string>> = { prs: 'fa' };
+const pluralRules = new Map<string, Intl.PluralRules>();
+
+/** The CLDR plural category of `n` in a language: "one", "few", "many", … (English: "en"). */
+export function pluralCategory(code: LangCode | 'en', n: number): PluralCategory {
+  const locale = (code !== 'en' && PLURAL_LOCALE[code]) || code;
+  let rules = pluralRules.get(locale);
+  if (!rules) {
+    rules = new Intl.PluralRules(locale);
+    pluralRules.set(locale, rules);
+  }
+  return rules.select(n) as PluralCategory;
+}
+
+/**
+ * A UI string for a count of `n`. The help language picks its plural form when it has a plural
+ * object for the key (Polish 1 dzień, 2 dni, 5 dni; Arabic zero/one/two/few/many/other); without
+ * one, and in English, the old pair: the singular "XxxOne" key when n is 1, else the key itself.
+ */
 export function uiCount(key: UiKey, n: number, lang?: HelpLanguage): Bilingual {
-  return ui(n === 1 ? SINGULAR[key] ?? key : key, lang);
+  const pair = n === 1 ? SINGULAR[key] ?? key : key;
+  const forms = lang?.plural?.[key];
+  const help = forms ? forms[pluralCategory(lang!.code, n)] ?? forms.other : lang?.ui[pair];
+  return { en: uiEn[pair], help, lang };
 }
 
 /** uiCount with the number filled in. */

@@ -178,7 +178,7 @@ export function TopBar({ streak, words, lang, done = false, quiet = false, greet
   // room), and the spoken label says it in the help language (English only without one).
   const wordsText = fillCount('wordsLearnedN', words, lang);
   const wordsLabel = said(wordsText);
-  const streakText = ui('dayStreak', lang);
+  const streakText = uiCount('dayStreak', streak, lang);
   const streakLabel = `${streak} ${said(streakText)}${!done && streak > 0 ? ` · ${said(ui('stillToDo', lang))}` : ''}`;
   const daysUnit = uiCount('daysUnit', streak, lang);
   const wordsUnit = uiCount('wordsUnit', words, lang);
@@ -308,7 +308,7 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
         className="daily-card daily-due"
         dir={rtl ? 'rtl' : undefined}
         onClick={onDaily}
-        aria-label={`Herhaal vandaag · ${said(ui('reviewToday', lang))}: ${said(fillN(ui('reviewTodayN', lang), card.due))}`}
+        aria-label={`Herhaal vandaag · ${said(ui('reviewToday', lang))}: ${said(fillCount('reviewTodayN', card.due, lang))}`}
       >
         <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
         <span className="daily-n" aria-hidden>{card.due}</span>
@@ -432,7 +432,13 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   );
 }
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next, skipped = 0, kind = 'lesson', onPhrases }: {
+/** From this many words still due after a review, the result says they come in the next days. */
+export const REVIEW_WAITING_MIN = 3;
+
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases }: {
+  /** After today's review: words still due (many after a long absence); a calm line says they
+   *  come back in the next days. Not a button. */
+  waiting?: number;
   /** After the very first lesson, once: a row to the emergency phrases (Hulp → Noodzinnen). */
   onPhrases?: () => void;
   /** 'daily': after today's review; 'review': after a mixed review or a lesson done again
@@ -533,11 +539,19 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             <Bi text={withoutN(uiCount('wordsStrongerN', stronger, lang))} />
           </p>
         )}
+        {/* Back after a long absence: the words still waiting come in the next days (calm, no
+            button: one review a day is enough). */}
+        {waiting >= REVIEW_WAITING_MIN && (
+          <p className="result-line result-waiting" dir={rtl ? 'rtl' : undefined}>
+            <span className="result-skipped-icon" aria-hidden><CalendarIcon size={22} /></span>
+            <Bi text={fillN(ui('reviewWaiting', lang), waiting)} />
+          </p>
+        )}
         {/* Listening exercises left out ("I can't listen now"): counted out, visibly. */}
         {skipped > 0 && (
           <p className="result-line result-skipped" dir={rtl ? 'rtl' : undefined}>
             <span className="result-skipped-icon" aria-hidden><EarIcon size={22} /></span>
-            <Bi text={fillN(ui('skippedN', lang), skipped)} />
+            <Bi text={fillCount('skippedN', skipped, lang)} />
           </p>
         )}
         {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
-import { fillN, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
+import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, sounds, speak, speechAvailable, stopSpeech } from '../lib/audio';
 import { tileDiff } from '../lib/answers';
@@ -794,7 +794,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
               {/* Retry phase: the mistakes come back, and the learner sees how many are left. */}
               {/* The chip says it in the help language too (large), the Dutch small beside it. */}
               <RepeatTag left={repeatsLeft} lang={lang} />
-              <Bi className="ex-tag-note" text={fillN(ui('practiseMistakes', lang), repeatsLeft)} />
+              <Bi className="ex-tag-note" text={fillCount('practiseMistakes', repeatsLeft, lang)} />
             </>
           ) : (
             <KindTag kind={typePick ? 'listen' : ex.kind} lang={lang} />
@@ -803,7 +803,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         {body}
         </div>
       </main>
-      <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''}`} ref={footRef}>
+      {/* With nothing in it yet (an answer is a tap on an option), the footer takes no room, so it
+          never covers the last option; a still chevron (not a button) then says there is more. */}
+      <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''} ${!showGo && !feedback ? 'foot-empty' : ''}`} ref={footRef}>
+        {moreBelow && !checked && !showGo && (
+          <span className="foot-more-hint" aria-hidden><ChevronDownIcon size={22} /></span>
+        )}
         {/* More of the exercise underneath: a visible "more" chevron (the shadow alone is easy to miss). */}
         {/* Only beside a footer button: with nothing in the footer, nothing is hidden under it. */}
         {moreBelow && !checked && showGo && (
