@@ -37,6 +37,8 @@ import { phoneHelpLang } from '../lib/langGuess';
 import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
+import { pushSubStep } from '../lib/onbHistory';
+import { autoSpeak } from '../lib/audio';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
   /** The help language in use (Settings): the "in review" tag is written in it. */
@@ -94,27 +96,41 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   onDone: (code: LangCode | null) => void;
   /** The guessed help language (from navigator.languages); null = no guess, the list right away. */
   guess?: LangCode | null;
-  /** Back from the password page: open on the list (the guess was already seen). */
+  /** Back from the next page: open on the list (the guess was already seen). */
   startWithList?: boolean;
 }) {
   const [list, setList] = useState(startWithList || !guess);
   // Nothing is chosen yet: the English stays next to every line.
   useEffect(() => { applyEnglish(null); }, []);
-  // The guess page needs only its three strings (src/i18n/meta.ts): no pack to wait for.
+  // The list after the guess has its own history entry: the phone's Back returns to the guess.
+  const hasGuess = Boolean(guess);
+  useEffect(() => {
+    if (!list || !hasGuess) return;
+    if (!(history.state as { langList?: number } | null)?.langList) pushSubStep({ langList: 1 });
+    const onPop = () => { if (!(history.state as { langList?: number } | null)?.langList) setList(false); };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [list, hasGuess]);
+  /** The first tap: the first Dutch word ("hallo", recorded) plays, then the next page shows. */
+  const pick = (code: LangCode | null) => {
+    autoSpeak('hallo');
+    onDone(code);
+  };
+  // The guess page needs only its few strings (src/i18n/meta.ts): no pack to wait for.
   const gMeta = langMeta(guess);
   const g = gMeta ? getHelpLanguage(gMeta.code) ?? metaLanguage(gMeta) : undefined;
   if (list || !g) {
     return (
-      <div className="screen onboarding max3-page">
+      <div className="screen onboarding max3-page onb-lang-list">
         {g && (
-          <ChromeHead onBack={() => setList(false)} />
+          <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />
         )}
         <div className="hero">
           <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
           <p className="tagline">{ui('appTagline').en}</p>
         </div>
         <h2 className="onboarding-title">{ui('chooseLanguage').en}</h2>
-        <LanguagePicker onPick={onDone} />
+        <LanguagePicker onPick={pick} />
       </div>
     );
   }
@@ -123,14 +139,16 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
     <div className="screen onboarding max3-page lang-guess">
       <div className="hero">
         <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
-        <p className="tagline">{ui('appTagline').en}</p>
+        {/* What the app is, in the guessed language (large), the English small under it. */}
+        <p className="tagline onb-tagline"><Bi text={ui('appTagline', g)} /></p>
       </div>
       <h2 className="lang-guess-q">
         <span className="lang-guess-name" lang={g.code} dir={g.dir}>{g.nativeName}{q}</span>
       </h2>
       <ChoiceCards
         label={said(ui('chooseLanguage', g))}
-        onPick={(id) => (id === 'yes' ? onDone(g.code) : setList(true))}
+        dir={g.dir}
+        onPick={(id) => (id === 'yes' ? pick(g.code) : setList(true))}
         options={[
           { id: 'yes', text: ui('langGuessYes', g), picture: <CheckIcon size={30} /> },
           { id: 'other', text: ui('langGuessOther', g), picture: <GlobeIcon size={30} />, next: true },

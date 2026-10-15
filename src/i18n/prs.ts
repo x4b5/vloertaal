@@ -266,6 +266,10 @@ const lang: HelpLanguageSource = {
     langNotOnPhone: 'این زبان هنوز در مبایل شما نیست. برای تبدیل زبان، به انترنت وصل شوید.',
     /* G4 r4b: the reminder's own time ("Kies zelf"). */
     remindChooseOwn: 'خود تان وقت را انتخاب کنید',
+    gateWho: 'کد را معلم، مربی یا کارفرمای شما برای تان می‌دهد.',
+    gateTrust: 'بدون حساب. بدون نام. همه چیز در همین مبایل می‌ماند.',
+    codeAccepted: 'کد قبول شد',
+    tryLesson: 'اول یک درس را امتحان کنید',
   },
   gloss: {
     // Units

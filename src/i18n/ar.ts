@@ -266,6 +266,10 @@ const lang: HelpLanguageSource = {
     langNotOnPhone: { m: 'هذه اللغة ليست على هاتفك بعد. اتصل بالإنترنت لتغيير اللغة.', f: 'هذه اللغة ليست على هاتفك بعد. اتصلي بالإنترنت لتغيير اللغة.' },
     /* G4 r4b: the reminder's own time ("Kies zelf"). */
     remindChooseOwn: { m: 'اختر الوقت بنفسك', f: 'اختاري الوقت بنفسك' },
+    gateWho: 'معلّمك أو مرشدك أو صاحب العمل يعطيك الرمز.',
+    gateTrust: 'بدون حساب. بدون اسم. كل شيء يبقى على هذا الهاتف.',
+    codeAccepted: 'تم قبول الرمز',
+    tryLesson: { m: 'جرّب درساً واحداً أولاً', f: 'جرّبي درساً واحداً أولاً' },
   },
   gloss: {
     // Units
@@ -276,7 +280,7 @@ const lang: HelpLanguageSource = {
     'u.time': 'الوقت وجدول العمل',
 
     // Lessons
-    'l.hello': 'قل مرحباً',
+    'l.hello': { m: 'قل مرحباً', f: 'قولي مرحباً' },
     'l.people': 'الناس في العمل',
     'l.understand': 'لا أفهم',
     'l.gear': 'معدات الحماية',

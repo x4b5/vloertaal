@@ -266,6 +266,10 @@ const lang: HelpLanguageSource = {
     langNotOnPhone: 'Този език още не е на телефона ти. Свържи се с интернет, за да смениш езика.',
     /* G4 r4b: the reminder's own time ("Kies zelf"). */
     remindChooseOwn: { m: 'Избери час сам', f: 'Избери час сама' },
+    gateWho: 'Кода ти го дава учителят, наставникът или работодателят.',
+    gateTrust: 'Без акаунт. Без име. Всичко остава на този телефон.',
+    codeAccepted: 'Кодът е приет',
+    tryLesson: 'Първо пробвай един урок',
   },
   gloss: {
     // Units

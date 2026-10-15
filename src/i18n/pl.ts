@@ -266,6 +266,10 @@ const lang: HelpLanguageSource = {
     langNotOnPhone: 'Tego języka nie ma jeszcze w twoim telefonie. Połącz się z internetem, aby zmienić język.',
     /* G4 r4b: the reminder's own time ("Kies zelf"). */
     remindChooseOwn: { m: 'Wybierz godzinę sam', f: 'Wybierz godzinę sama' },
+    gateWho: 'Kod dostajesz od nauczyciela, opiekuna lub pracodawcy.',
+    gateTrust: 'Bez konta. Bez imienia. Wszystko zostaje na tym telefonie.',
+    codeAccepted: 'Kod przyjęty',
+    tryLesson: 'Najpierw wypróbuj jedną lekcję',
   },
   gloss: {
     // Unit: First day at work

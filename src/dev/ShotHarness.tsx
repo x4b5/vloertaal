@@ -134,7 +134,20 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     const g = q.get('group');
     return <SectorScreen lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} initialGroup={g === 'make' || g === 'care' ? (g as SectorGroupId) : undefined} />;
   }
-  if (shot === 'gate') return <Gate lang={getHelpLanguage(lang as LangCode, gender)} onAccess={() => {}} onLanguage={() => {}} />;
+  // The password page: &try=1 with "Try one lesson first" (TRY_LESSON on), &again=1 back from the
+  // sector with the code kept, &greet=1 with Bram's "Hallo!" (the first page after the language).
+  if (shot === 'gate') {
+    return (
+      <Gate
+        lang={getHelpLanguage(lang as LangCode, gender)}
+        onAccess={() => {}}
+        onBack={() => {}}
+        onTry={q.get('try') === '1' ? () => {} : undefined}
+        accepted={q.get('again') === '1' ? 'preview' : null}
+        greet={q.get('greet') === '1'}
+      />
+    );
+  }
   // Screens outside the lesson flow (phase-3 house-style review).
   // The language: /?shot=language is the list (no guess); &guess=pl asks "Polski?" first;
   // &guess=pl&list=1 is the list opened from "Other language" (with Back).
@@ -145,7 +158,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'coaches') return <Coaches onBack={() => {}} />;
   // The gender question right after a help language with gender: /?shot=gender&lang=pl
   // (&gender=f shows it picked; Settings has the same cards: /?shot=settings&lang=pl&gender=f).
-  if (shot === 'gender') return <GenderShot lang={(lang as LangCode) ?? 'pl'} gender={gender} />;
+  if (shot === 'gender') return <GenderShot lang={(lang as LangCode) ?? 'pl'} gender={gender} greet={q.get('greet') === '1'} />;
   if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} />;
   if (shot === 'admin') return <Admin onBack={() => {}} />;
   if (shot === 'tips' || shot === 'settings' || shot === 'words') {
@@ -382,9 +395,9 @@ function SettingsShot({ progress: start, access }: { progress: Progress; access:
 }
 
 /** The onboarding gender step for a help language, with a working choice. */
-function GenderShot({ lang, gender }: { lang: LangCode; gender?: Gender }) {
+function GenderShot({ lang, gender, greet }: { lang: LangCode; gender?: Gender; greet?: boolean }) {
   const [picked, setPicked] = useState(gender);
-  return <GenderScreen lang={getHelpLanguage(lang, picked)} current={picked} onDone={setPicked} />;
+  return <GenderScreen lang={getHelpLanguage(lang, picked)} current={picked} onDone={setPicked} greet={greet} />;
 }
 
 /** Every word of the course with its picture at 120 px and 48 px, grouped by unit, plus the

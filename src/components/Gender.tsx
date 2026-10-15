@@ -5,6 +5,8 @@ import { Character, type CharacterId } from './Characters';
 import { CheckIcon } from './Icons';
 import { ChromeHead } from './ChromeBack';
 import { LogoMark, Wordmark } from './Logo';
+import { QuestionSay } from './Choice';
+import { Greeting } from './Greeting';
 
 const OPTIONS: { id: Gender; nl: string; key: 'genderWoman' | 'genderMan' | 'genderNone'; who?: CharacterId }[] = [
   { id: 'f', nl: 'Vrouw', key: 'genderWoman', who: 'jada' },
@@ -71,26 +73,33 @@ export function GenderPicker({ current, lang, onPick, compact = false, mini = fa
 
 /**
  * "Woman or man?" on its own page, asked once for a help language with gender (Arabic, Polish, …):
- * in the first run right after the password, and once on opening for a learner from before the
- * question (see shouldAskGender). Three cards and nothing else: "rather not say" is the way past.
+ * in the first run right after the language (before the password, so the password page already
+ * talks to you in the right form), and once on opening for a learner from before the question
+ * (see shouldAskGender). Three cards and nothing else: "rather not say" is the way past. The
+ * Dutch question has a speaker (not a choice).
  */
-export function GenderScreen({ lang, onDone, current, onBack }: {
+export function GenderScreen({ lang, onDone, current, onBack, greet = false }: {
   lang?: HelpLanguage;
   onDone: (g: Gender) => void;
   current?: Gender;
-  /** First run only: back to the password page. */
+  /** First run only: back to the language. */
   onBack?: () => void;
+  /** The first page after the language was picked: Bram waves "Hallo!" once. */
+  greet?: boolean;
 }) {
+  const title = ui('genderTitle', lang);
   return (
     <div className="screen onboarding sector-screen gender-screen" dir={lang?.dir}>
       {onBack && <ChromeHead lang={lang} onBack={onBack} />}
+      {greet && <Greeting rtl={lang?.dir === 'rtl'} />}
       <div className="hero">
         <h1 className="hero-logo sector-logo"><LogoMark size={40} /><Wordmark /></h1>
       </div>
       <h2 className="onboarding-title sector-title">
-        <span className="sector-title-nl" lang="nl">Vrouw of man?</span>
-        <Bi text={ui('genderTitle', lang)} />
+        <span className="sector-title-nl" lang="nl"><bdi dir="ltr">Vrouw of man?</bdi></span>
+        <Bi text={title} />
       </h2>
+      <QuestionSay nl="Vrouw of man?" help={title.help} lang={lang} />
       <p className="sector-hint"><Bi text={ui('genderHint', lang)} /></p>
       <GenderPicker current={current} lang={lang} onPick={onDone} />
     </div>

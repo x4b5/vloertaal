@@ -36,7 +36,7 @@ import { PocketIcon } from './Offline';
  * learner first sees what the topic is before a lesson begins. "Other topic" opens All topics: a
  * list of every topic, each leading to its topic page (lessons, pocket card, certificate).
  */
-export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused }: {
+export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink }: {
   progress: Progress;
   lang?: HelpLanguage;
   access?: Access;
@@ -55,6 +55,9 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   /** Back from a finished lesson: the next lesson (or the choice) in view, stamp the done one. */
   arrived?: string | null;
   onArrived?: () => void;
+  /** A coach link to a topic outside the preview: the home stays on its block (1.1) and offers
+   *  that topic's unlock below it (when there is room for a third thing to tap). */
+  lockedLink?: string | null;
   /** From a coach link: the block to mark for a moment (App made it the current block). */
   focusUnit?: string | null;
   onFocused?: () => void;
@@ -104,6 +107,11 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
     const off = window.setTimeout(() => setMarked(null), 4000);
     return () => window.clearTimeout(off);
   }, [marked]);
+
+  // A coach link to a locked topic (preview): its unlock card, only as a third thing to tap.
+  const linked = lockedLink && !unitAllowed(lockedLink, access) ? order.find((u) => u.id === lockedLink) : undefined;
+  const restartShown = Boolean(resumeId && onRestart && !dailyDue);
+  const taps = (dailyDue ? 1 : 0) + (block ? 1 + (restartShown ? 1 : 0) + (unitAllowed(block.id, access) ? 0 : 1) : choices.length) + 1;
 
   const pick = (unit: Unit) => {
     if (!unitAllowed(unit.id, access)) { onUpgrade?.(); return; }
@@ -232,6 +240,8 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
         </section>
       )}
 
+      {linked && taps < 3 && <LinkedLocked unit={linked} lang={lang} onUpgrade={onUpgrade} />}
+
       {/* One link for every other topic: All topics (it replaces "choose another topic"). */}
       <button type="button" className="rb-all rb-other" onClick={onAll}>
         <span className="sr-only" lang="nl">Ander onderwerp. </span>
@@ -239,6 +249,33 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
         <ChevronIcon size={18} />
       </button>
     </div>
+  );
+}
+
+/**
+ * A coach sent a topic outside the preview: after the first run the home stays on lesson 1.1 and
+ * this card names that topic with "Volledige versie", leading to the unlock card.
+ */
+function LinkedLocked({ unit, lang, onUpgrade }: { unit: Unit; lang?: HelpLanguage; onUpgrade?: () => void }) {
+  const rtl = lang?.dir === 'rtl';
+  return (
+    <button
+      type="button"
+      className="linked-locked"
+      onClick={onUpgrade}
+      dir={rtl ? 'rtl' : undefined}
+      aria-label={`${said(unitTitle(unit, lang))} · ${unit.titleNl} · Volledige versie · ${said(ui('fullVersion', lang))}`}
+    >
+      <WordPicture className="linked-locked-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
+      <span className="linked-locked-text">
+        <Bi className="linked-locked-title" text={unitTitle(unit, lang)} />
+        <span className="linked-locked-full">
+          <LockIcon size={14} />
+          <span lang="nl">Volledige versie</span>
+        </span>
+      </span>
+      <ChevronIcon size={20} className="linked-locked-go" />
+    </button>
   );
 }
 
@@ -464,7 +501,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                   className="bay-card"
                   disabled={!open}
                   onClick={() => onStart(lesson.id, Boolean(record))}
-                  aria-label={`${u + 1}.${i + 1} ${said(title)}${saved ? ` · ${resumeLabel(saved, lang)}` : open ? (record ? ` · ${said(ui('practice', lang))}` : ` · ${said(ui('start', lang))}`) : ` (${said(ui('locked', lang))})`}`}
+                  aria-label={`${u + 1}.${i + 1} ${said(title)}${saved ? ` · ${resumeLabel(saved, lang)}` : open ? (record ? ` · ${said(ui('practice', lang))}` : ` · ${said(ui('start', lang))}`) : allowed ? ` (${said(ui('locked', lang))})` : ` · ${said(ui('fullVersion', lang))}`}`}
                 >
                   {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
                   <span className="bay-text" dir={rtl ? 'rtl' : undefined}>

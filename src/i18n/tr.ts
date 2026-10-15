@@ -266,6 +266,10 @@ const lang: HelpLanguageSource = {
     langNotOnPhone: 'Bu dil henüz telefonunda yok. Dili değiştirmek için internete bağlan.',
     /* G4 r4b: the reminder's own time ("Kies zelf"). */
     remindChooseOwn: 'Saati kendin seç',
+    gateWho: 'Kodu öğretmenin, koçun veya işverenin verir.',
+    gateTrust: 'Hesap yok. İsim yok. Her şey bu telefonda kalır.',
+    codeAccepted: 'Kod kabul edildi',
+    tryLesson: 'Önce bir ders dene',
   },
   gloss: {
     // Unit: First day at work

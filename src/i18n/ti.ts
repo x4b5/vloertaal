@@ -266,6 +266,10 @@ const lang: HelpLanguageSource = {
     langNotOnPhone: { m: 'እዚ ቋንቋ ገና ኣብ ተሌፎንካ የለን። ቋንቋ ንምቕያር ምስ ኢንተርነት ተራኸብ።', f: 'እዚ ቋንቋ ገና ኣብ ተሌፎንኪ የለን። ቋንቋ ንምቕያር ምስ ኢንተርነት ተራኸቢ።' },
     /* G4 r4b: the reminder's own time ("Kies zelf"). */
     remindChooseOwn: { m: 'ባዕልኻ ሰዓት ምረጽ', f: 'ባዕልኺ ሰዓት ምረጺ' },
+    gateWho: { m: 'መምህርካ፡ ኣሰልጣኒኻ ወይ ኣስራሒኻ እቲ ኮድ ይህበካ።', f: 'መምህርኪ፡ ኣሰልጣኒኺ ወይ ኣስራሒኺ እቲ ኮድ ይህበኪ።' },
+    gateTrust: 'ኣካውንት የለን። ስም የለን። ኩሉ ኣብዚ ተሌፎን ይተርፍ።',
+    codeAccepted: 'እቲ ኮድ ተቐቢሉ',
+    tryLesson: { m: 'መጀመርታ ሓደ ትምህርቲ ፈትን', f: 'መጀመርታ ሓደ ትምህርቲ ፈትኒ' },
   },
   gloss: {
     // Units
@@ -276,7 +280,7 @@ const lang: HelpLanguageSource = {
     'u.time': 'ግዜን መደብ ስራሕን',
 
     // Lessons
-    'l.hello': 'ሰላም በል',
+    'l.hello': { m: 'ሰላም በል', f: 'ሰላም በሊ' },
     'l.people': 'ሰባት ኣብ ስራሕ',
     'l.understand': 'ኣይተረድኣንን',
     'l.gear': 'ናይ ድሕንነት ክዳውንትን መሳርሒታትን',
@@ -288,7 +292,7 @@ const lang: HelpLanguageSource = {
 
     // Words
     'w.hallo': 'ሰላም',
-    'w.goedemorgen': 'ከመይ ሓዲርካ',
+    'w.goedemorgen': { m: 'ከመይ ሓዲርካ', f: 'ከመይ ሓዲርኪ', x: 'ከመይ ሓዲርኩም' },
     'w.dankjewel': 'የቐንየለይ',
     'w.ja': 'እወ',
     'w.nee': 'ኣይፋል',

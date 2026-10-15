@@ -298,6 +298,12 @@ export const uiEn = {
   langNotOnPhone: 'This language is not on this phone yet. Connect to the internet to switch.',
   /* G4 r4b: the reminder's own time ("Kies zelf", for shift work). */
   remindChooseOwn: 'Choose a time yourself',
+  /* G4 onboarding: the password page explained (who gives the code, what is kept), the code kept
+     when you come back to it, and "Try one lesson first" (behind TRY_LESSON). */
+  gateWho: 'Your teacher, coach or employer gives you the code.',
+  gateTrust: 'No account. No name. Everything stays on this phone.',
+  codeAccepted: 'Code accepted',
+  tryLesson: 'Try one lesson first',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

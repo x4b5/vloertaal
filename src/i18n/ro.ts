@@ -266,6 +266,10 @@ const lang: HelpLanguageSource = {
     langNotOnPhone: 'Această limbă nu este încă pe telefonul tău. Conectează-te la internet ca să schimbi limba.',
     /* G4 r4b: the reminder's own time ("Kies zelf"). */
     remindChooseOwn: 'Alege tu ora',
+    gateWho: 'Codul îl primești de la profesor, coach sau angajator.',
+    gateTrust: 'Fără cont. Fără nume. Totul rămâne pe acest telefon.',
+    codeAccepted: 'Cod acceptat',
+    tryLesson: 'Încearcă întâi o lecție',
   },
   gloss: {
     // Units

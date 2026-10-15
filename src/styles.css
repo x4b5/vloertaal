@@ -3846,3 +3846,96 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .keep3-own-input:focus-visible { outline: 3px solid var(--focus, #1592db); outline-offset: 2px; }
 .keep3-own > svg { margin-inline-start: 0; color: var(--ink-2); }
 .keep3-own .keep3-own-input { margin-inline-start: auto; }
+
+/* ---- Onboarding ---- */
+/* G4 onboarding round: speakers under each first-run question, the password page explained,
+   Bram's "Hallo!", the guess page's tagline in the guessed language, bigger sector pictures and a
+   language list that fits a small phone. */
+
+/* One Dutch speaker (and the help-language read-aloud when the phone has that voice) under a
+   first-run question: not choices, so they sit small and centred under the title. */
+.onb-say { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 10px 0 0; }
+.onb-say .speak { width: 44px; height: 44px; }
+
+/* Bram waves once on the first page after the language: a picture in the free top-end corner. */
+.screen:has(> .onb-greet) { position: relative; }
+.onb-greet {
+  position: absolute; top: calc(2px + env(safe-area-inset-top)); right: 8px; z-index: 0;
+  display: flex; align-items: flex-start; gap: 2px; pointer-events: none;
+}
+.onb-greet-rtl { right: auto; left: 8px; flex-direction: row-reverse; }
+.onb-greet-word {
+  margin-top: 4px; padding: 2px 8px; border-radius: 10px 10px 2px 10px; background: var(--card);
+  border: 2px solid var(--line); font-weight: 650; font-size: 0.85rem; color: var(--ink);
+}
+.onb-greet-rtl .onb-greet-word { border-radius: 10px 10px 10px 2px; }
+
+/* The guess page: what the app is, in the guessed language (large), English small. */
+.onb-tagline { display: flex; justify-content: center; }
+.onb-tagline .bi { align-items: center; }
+.onb-tagline .bi-en { font-size: 1.2rem; font-weight: 600; color: var(--ink-2); }
+.onb-tagline .bi-help { --help-size: 0.85rem; font-weight: 400; color: var(--muted); }
+
+/* The password page: the back arrow on top, then the sign. */
+.onb-gate { justify-content: flex-start; padding-top: calc(24px + env(safe-area-inset-top)); }
+.onb-gate > .chrome-head { align-self: stretch; margin: -8px 0 0; }
+.onb-gate .gate-sign { margin-block: auto; padding-top: 24px; }
+.gate-tagline { display: flex; flex-direction: column; gap: 2px; margin: 10px 0 18px; }
+.gate-tagline-help { font-size: 1.2rem; font-weight: 600; color: var(--ink-2); line-height: 1.3; }
+.gate-tagline .gate-tag { margin: 0; }
+.gate-title { display: flex; flex-direction: column; gap: 2px; margin-bottom: 0; }
+.gate-title-nl { font-size: 0.9rem; font-weight: 500; color: var(--muted); }
+.gate-q { display: flex; align-items: flex-end; gap: 10px; margin: 0 0 14px; }
+.gate-q .gate-title { flex: 1; min-width: 0; }
+.gate-q .onb-say { flex: none; margin: 0; }
+.gate-note { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 14px; color: var(--ink-2); font-size: 0.98rem; line-height: 1.4; }
+.gate-note > .icon { flex: none; margin-top: 1px; color: var(--ink-3); }
+.gate-note .bi-help { --help-size: 0.8rem; color: var(--muted); }
+.gate-who { padding: 10px 12px; border-radius: 12px; background: var(--concrete-2, var(--bg)); color: var(--ink); }
+.gate-who > .icon { color: var(--ink-2); }
+.gate-trust { margin: 14px 0 0; font-size: 0.9rem; color: var(--muted); }
+.pw-ok { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--go-right, var(--ink-2)); font-weight: 600; }
+.pw-ok .bi { flex-direction: row; flex-wrap: wrap; gap: 0 8px; align-items: baseline; }
+.pw-ok .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }
+.gate-try {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; min-height: 52px;
+  margin-top: 14px; padding: 8px 14px; background: var(--card); color: var(--ink);
+  border: 2px solid var(--line); border-radius: var(--radius); font-weight: 600; text-align: start;
+}
+.gate-try .icon { flex: none; color: var(--ink-3); }
+
+/* A coach link to a topic outside the preview: under 1.1 on the home, to the unlock card. */
+.linked-locked {
+  display: flex; align-items: center; gap: 12px; width: 100%; margin: 14px 0 0; padding: 10px 12px;
+  background: var(--card); color: var(--ink); border: 2px dashed var(--line); border-radius: var(--radius);
+  text-align: start; cursor: pointer;
+}
+.linked-locked-pic { flex: none; width: 44px; height: 44px; }
+.linked-locked-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.linked-locked-title { font-weight: 650; font-size: 1rem; }
+.linked-locked-title .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }
+.linked-locked-full { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; color: var(--tag-ink); }
+.linked-locked-go { flex: none; color: var(--ink-3); }
+
+/* Sector step 1: the three pictures of a group at about 44 px, overlapping a little. */
+.sector-step .max3-pic:has(.max3-trio) { width: 124px; }
+.max3-trio > span { width: 38px; height: 46px; }
+.max3-trio .word-pic { width: 44px; height: 44px; }
+@media (max-width: 370px) {
+  .sector-step .max3-pic:has(.max3-trio) { width: 108px; }
+  .max3-trio > span { width: 33px; }
+  .max3-trio .word-pic { width: 40px; height: 40px; }
+}
+
+/* The language list fits a 360 x 640 phone without scrolling: tighter rows and head. */
+@media (max-height: 700px) {
+  .onb-lang-list { padding-top: calc(16px + env(safe-area-inset-top)); padding-bottom: 12px; }
+  .onb-lang-list .hero-logo .wordmark { font-size: 1.9rem; }
+  .onb-lang-list .tagline { margin-top: 2px; font-size: 0.95rem; }
+  .onb-lang-list .onboarding-title { margin: 12px 0 2px; font-size: 1.2rem; }
+  .onb-lang-list .lang-grid { gap: 8px; margin: 10px 0 0; }
+  .onb-lang-list .lang-btn:not(.sector-btn, .gender-btn) { min-height: 0; padding: 8px 10px; gap: 2px; }
+  .onb-lang-list .lang-btn:not(.sector-btn, .gender-btn) .lang-native { font-size: 1.15rem; }
+  .onb-lang-list .lang-btn:not(.sector-btn, .gender-btn) .lang-native:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: 1.25rem; }
+  .onb-lang-list .lang-en { font-size: 0.8rem; }
+}
