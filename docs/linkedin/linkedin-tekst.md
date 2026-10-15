@@ -10,9 +10,9 @@ Wie in Nederland wil werken en leven, kan eigenlijk niet zonder Nederlands. Toch
 
 De cijfers bevestigen dat. Ruim 3 miljoen mensen tussen 16 en 75 jaar hebben moeite met taal, rekenen of digitale vaardigheden (PIAAC 2023). En taal doet ertoe op het werk. Van de migranten die zeer goed Nederlands spreken, heeft 69% betaald werk. Van wie het nauwelijks tot redelijk spreekt, is dat ongeveer de helft (CBS, 2023). Ondertussen wordt werk steeds taliger en digitaler: je rooster in een app, instructies op een scherm, je loonstrook in je mail.
 
-Dat zette me aan het denken. Waarom is er geen app waarmee je Nederlands leert voor je werk, die gratis is, zonder account werkt én leuk is om te doen?
+Dat zette me aan het denken. Iedereen kent Duolingo: elke dag een paar minuten, en het voelt als een spel. Waarom is er niet zo'n app waarmee je Nederlands leert voor je werk, die gratis is, zonder account werkt én leuk is om te doen?
 
-Dus heb ik hem gebouwd: **vloertaal.nl** 👷
+Dus heb ik hem gebouwd, geïnspireerd op Duolingo: **vloertaal.nl** 👷
 • Korte lessen over echte werksituaties: veiligheid, ziekmelden, je rooster, je loonstrook
 • Alles wordt voorgelezen, met plaatjes en weinig tekst
 • Hulp in 9 talen, van Arabisch en Tigrinya tot Pools en Oekraïens
