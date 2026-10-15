@@ -76,7 +76,7 @@ const t: CultureTranslation = {
     'c.time.o3': 'Dziś w ogóle nie idziesz do pracy.',
     'c.time.w': 'Wczesna wiadomość pozwala zespołowi wszystko zaplanować. Spóźnienie bez uprzedzenia jest odbierane dużo gorzej niż samo spóźnienie.',
     'c.sick': 'Jak zgłosić chorobę',
-    'c.sick.b': { m: 'Zadzwoń sam do przełożonego przed początkiem zmiany, chyba że w twojej firmie jest inna zasada. Pracujesz przez agencję? Powiadom też agencję. Nie musisz mówić, na co chorujesz.', f: 'Zadzwoń sama do przełożonego przed początkiem zmiany, chyba że w twojej firmie jest inna zasada. Pracujesz przez agencję? Powiadom też agencję. Nie musisz mówić, na co chorujesz.' },
+    'c.sick.b': { m: 'Zadzwoń sam do przełożonego przed początkiem zmiany, chyba że w twojej firmie jest inna zasada. Pracujesz przez agencję? Powiadom też agencję. Nie musisz mówić, na co chorujesz. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', f: 'Zadzwoń sama do przełożonego przed początkiem zmiany, chyba że w twojej firmie jest inna zasada. Pracujesz przez agencję? Powiadom też agencję. Nie musisz mówić, na co chorujesz. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.' },
     'c.sick.p': { m: 'Jestem chory. Nie mogę dziś przyjść do pracy.', f: 'Jestem chora. Nie mogę dziś przyjść do pracy.' },
     'c.sick.s': 'Budzisz się z gorączką. Twoja zmiana zaczyna się o 7:00. Co robisz?',
     'c.sick.o1': { m: 'Dzwonisz do przełożonego przed 7:00 i mówisz, że jesteś chory.', f: 'Dzwonisz do przełożonego przed 7:00 i mówisz, że jesteś chora.' },

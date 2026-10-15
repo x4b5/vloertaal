@@ -34,7 +34,7 @@ const t: CultureTranslation = {
     'c.bsn.a.why': "Angajatorul poate cere un act de identitate, de exemplu pașaportul.",
     'c.housing.a.why': "Banii reținuți din salariu trebuie conveniți în scris.",
     'c.payslip.a.why': "Orele lipsă de pe fluturașul de salariu trebuie semnalate.",
-    'c.extra.a.why': "Orele suplimentare se notează, ca să fie plătite.",
+    'c.extra.a.why': "Orele suplimentare se notează, ca să poată fi verificate pe fluturașul de salariu.",
     'c.phone.a.why': "Fără telefon lângă utilaje: mesajele așteaptă pauza.",
     'c.smoking.a.why': "Pauzele sunt la ore fixe, nu mai devreme.",
     'c.clock.a.why': "Pontajul pentru altcineva nu e permis.",

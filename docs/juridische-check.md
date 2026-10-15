@@ -95,7 +95,7 @@ Deze beweringen veranderen het snelst, of zijn het makkelijkst verkeerd te begri
 | c.ww | You usually need to have worked at least 26 of the last 36 weeks. | wekeneis WW |
 | c.newjob | (situatie) first you must pay 300 euros "for the job" | betalen voor werk |
 | c.gethelp | Meld Misdaad Anoniem: 0800-7000. … In danger? Call 112. | telefoonnummers |
-| c.doctor | Call 112 only when a life is in danger. | 112 of huisartsenpost |
+| c.doctor | Call 112 only in an emergency: danger to life, fire, or a crime happening now. | 112 of huisartsenpost |
 
 ---
 
@@ -108,7 +108,7 @@ Bijna elke tip eindigt met een van deze drie vaste slotregels:
 | *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.bsn, c.contract, c.diploma, c.extra, c.findwork, c.health, c.illness, c.leave, c.letters, c.payslip, c.site, c.transit, c.ww | rechten en regels uit de wet |
 | *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.housing, c.rights, c.warning, c.gethelp | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
 | *Rules differ per company: ask your supervisor what the rules are where you work.* | c.callin, c.clock, c.hygiene, c.line, c.privacy, c.smoking | huisregels |
-| (geen slotregel) | c.bike, c.boundaries, c.certs, c.doctor, c.gear, c.gossip, c.insurance, c.interview, c.newjob, c.respect, c.sick, c.unsafe | gedragstips; sommige noemen zelf een loket |
+| (geen slotregel) | c.bike, c.boundaries, c.certs, c.doctor, c.gear, c.gossip, c.interview, c.respect, c.unsafe | gedragstips; sommige noemen zelf een loket |
 
 Andere instanties die in de tips staan: Nederlandse Arbeidsinspectie (ook anoniem melden), politie,
 Meld Misdaad Anoniem 0800-7000, 112, huisartsenpost, UWV, gemeente (meldpunt huisvesting, inschrijving),
@@ -216,6 +216,8 @@ ______________________________________________________________
 **Situatie in de les:** You wake up with a fever. Your shift starts at 7:00. What do you do?  
 **Goede antwoord:** Call your supervisor before 7:00 and say you are sick.  
 **Uitleg na het antwoord (`c.sick.w`):** Calling in sick yourself and on time is the rule in most Dutch workplaces. Your employer may ask how long it will take, but not what illness it is.
+
+**✅ Inmiddels aangepast: deze tip eindigt nu met "General information. For your situation: ask your employer, the union or the Juridisch Loket."**
 
 **Onze eigen vraag hierbij:** Geen slotregel. Is dat goed bij een tip met rechten (je hoeft je ziekte niet te noemen)?
 
@@ -466,7 +468,7 @@ ______________________________________________________________
 **Goede antwoord:** Holiday pay: at least 8% of your gross wage.  
 **Uitleg na het antwoord (`c.extra.w`):** Holiday pay is your right, not a gift. You build it up with every hour you work. If you leave your job earlier, you get it with your last pay.
 
-**Uitleg bij het gesprekje (`c.extra.a.why`):** „Kun je vandaag twee uur langer blijven?” → „Ja, schrijf je de overuren op?”: Overtime is written down, so it gets paid.
+**Uitleg bij het gesprekje (`c.extra.a.why`):** „Kun je vandaag twee uur langer blijven?” → „Ja, schrijf je de overuren op?”: Overtime is written down, so it can be checked on the payslip.
 
 **⚠ Getallen en termijnen:**
 - You get holiday pay (vakantiegeld): at least 8% of your gross wage.
@@ -475,7 +477,9 @@ ______________________________________________________________
 - The amount changes every year: check it on rijksoverheid.nl.
 - Holiday pay: at least 8% of your gross wage.
 
-**Onze eigen vraag hierbij:** De uitleg bij het gesprekje zegt "Overtime is written down, so it gets paid." Een aparte overwerkvergoeding is geen wettelijk recht. Wekt dit een verkeerde verwachting?
+**✅ Inmiddels aangepast: "so it can be checked on the payslip". Klopt dit zo?**
+
+**Onze eigen vraag hierbij:** De uitleg bij het gesprekje zegt "Overtime is written down, so it can be checked on the payslip." Een aparte overwerkvergoeding is geen wettelijk recht. Wekt dit een verkeerde verwachting?
 
 **Oordeel deskundige:**
 
@@ -662,7 +666,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> Grensoverschrijdend gedrag is behaviour that crosses someone’s boundary: unwanted touching, sexual remarks or jokes, staring, sending unwanted pictures, threats or shouting. It does not matter if the other person "meant it as a joke": what counts is how it feels to you. If you can, say clearly that you want it to stop. Write down what happened, when, and who saw it. Tell your supervisor, the confidential adviser (vertrouwenspersoon) or HR. Your employer must protect you, and you may not be punished for reporting it. Did you see it happen to a colleague? Ask if they are okay, and offer to be a witness.
+> Grensoverschrijdend gedrag is behaviour that crosses someone’s boundary: unwanted touching, sexual remarks or jokes, staring, sending unwanted pictures, threats or shouting. It does not matter if the other person "meant it as a joke": what counts is how it feels to you. If you can, say clearly that you want it to stop. Write down what happened, when, and who saw it. Tell your supervisor, the confidential adviser (vertrouwenspersoon, if there is one) or HR. Your employer must protect you, and you may not be punished for reporting it. Did you see it happen to a colleague? Ask if they are okay, and offer to be a witness.
 >
 > *(geen slotregel)*
 
@@ -671,6 +675,8 @@ ______________________________________________________________
 **Situatie in de les:** Your team leader often puts his hand on your back and says you look "pretty". It makes you feel uncomfortable. He decides your shifts. What do you do?  
 **Goede antwoord:** Write down what happens and talk to the vertrouwenspersoon or HR.  
 **Uitleg na het antwoord (`c.boundaries.w`):** This is unwanted behaviour, and it is not your fault. A confidential adviser listens in confidence and helps you choose the next step. You are protected when you report it.
+
+**✅ Inmiddels aangepast: "(vertrouwenspersoon, if there is one)". Klopt dit zo?**
 
 **Onze eigen vraag hierbij:** Hier staat "tell ... the confidential adviser" zonder "if your company has one" (in c.respect staat dat wel). Is een vertrouwenspersoon in 2026 verplicht, of moet dit voorbehoud er ook hier bij?
 
@@ -1016,7 +1022,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> Register with a family doctor (huisarts) near your home. Do you need urgent care in the evening, at night or in the weekend? Call the huisartsenpost. Call 112 only when a life is in danger. You get medicines at the pharmacy (apotheek).
+> Register with a family doctor (huisarts) near your home. Do you need urgent care in the evening, at night or in the weekend? Call the huisartsenpost. Call 112 only in an emergency: danger to life, fire, or a crime happening now. You get medicines at the pharmacy (apotheek).
 >
 > *(geen slotregel)*
 
@@ -1024,11 +1030,13 @@ ______________________________________________________________
 
 **Situatie in de les:** It is Saturday night. Your child has a high fever, but is awake and breathing normally. What do you do?  
 **Goede antwoord:** Call the huisartsenpost.  
-**Uitleg na het antwoord (`c.doctor.w`):** The huisartsenpost helps with urgent care outside office hours. 112 is for emergencies when a life is in danger.
+**Uitleg na het antwoord (`c.doctor.w`):** The huisartsenpost helps with urgent care outside office hours. 112 is for emergencies: danger to life, fire, or a crime happening now.
 
 **⚠ Getallen en termijnen:**
-- Call 112 only when a life is in danger.
-- 112 is for emergencies when a life is in danger.
+- Call 112 only in an emergency: danger to life, fire, or a crime happening now.
+- 112 is for emergencies: danger to life, fire, or a crime happening now.
+
+**✅ Inmiddels aangepast: de tekst noemt nu levensgevaar, brand en een misdrijf dat nu gebeurt. Klopt dit zo?**
 
 **Onze eigen vraag hierbij:** "Call 112 only when a life is in danger" is smal: 112 is ook voor brand en voor een misdrijf dat op dat moment gebeurt. Is het risico dat iemand bij brand niet belt groot genoeg om dit aan te passen?
 
@@ -1066,6 +1074,8 @@ ______________________________________________________________
 **⚠ Getallen en termijnen:**
 - Every year there is an own risk (eigen risico): the first costs you pay yourself.
 - The amount changes: check it with your insurer.
+
+**✅ Inmiddels aangepast: deze tip eindigt nu met "General information. For your situation: ask your employer, the union or the Juridisch Loket."**
 
 **Onze eigen vraag hierbij:** Deze tip heeft geen slotregel (geen verwijzing). Is dat goed, of hoort hier een verwijzing bij? Klopt "usually required" voor iemand die hier tijdelijk werkt en in een ander EU-land verzekerd is?
 
@@ -1238,6 +1248,8 @@ ______________________________________________________________
 
 **⚠ Getallen en termijnen:**
 - Someone offers you a job, but first you must pay 300 euros "for the job".
+
+**✅ Inmiddels aangepast: deze tip eindigt nu met de verwijzing naar vakbond, Juridisch Loket of FairWork.**
 
 **Onze eigen vraag hierbij:** Deze tip heeft geen slotregel. Betalen voor een baan is een uitbuitingssignaal: moet hier de verwijzing naar vakbond, Juridisch Loket of FairWork bij?
 

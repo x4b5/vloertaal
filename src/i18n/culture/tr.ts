@@ -76,7 +76,7 @@ const t: CultureTranslation = {
     'c.time.o3': 'Bugün hiç işe gitmezsin.',
     'c.time.w': 'Erken haber vermek ekibin plan yapmasını sağlar. Haber vermeden geç kalmak, gecikmenin kendisinden çok daha kötü görülür.',
     'c.sick': 'Hastalık bildirimi nasıl yapılır',
-    'c.sick.b': 'Şirketinin başka bir kuralı yoksa, vardiyan başlamadan önce amirini kendin ara. Bir ajans üzerinden mi çalışıyorsun? Ajansa da haber ver. Hangi hastalığın olduğunu söylemek zorunda değilsin.',
+    'c.sick.b': 'Şirketinin başka bir kuralı yoksa, vardiyan başlamadan önce amirini kendin ara. Bir ajans üzerinden mi çalışıyorsun? Ajansa da haber ver. Hangi hastalığın olduğunu söylemek zorunda değilsin. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.sick.p': 'Hastayım. Bugün işe gelemiyorum.',
     'c.sick.s': 'Ateşle uyanıyorsun. Vardiyan 7:00\'de başlıyor. Ne yaparsın?',
     'c.sick.o1': 'Saat 7:00\'den önce amirini arar ve hasta olduğunu söylersin.',

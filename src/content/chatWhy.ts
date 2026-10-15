@@ -26,7 +26,7 @@ const reasons: Record<string, string> = {
   'c.bsn.a': 'An employer may ask to see an ID, such as a passport.',
   'c.housing.a': 'Money taken off the pay must be agreed on paper.',
   'c.payslip.a': 'Missing hours on a payslip must be reported.',
-  'c.extra.a': 'Overtime is written down, so it gets paid.',
+  'c.extra.a': 'Overtime is written down, so it can be checked on the payslip.',
   'c.phone.a': 'No phone near machines: messages wait for the break.',
   'c.smoking.a': 'Breaks are at set times, not before.',
   'c.clock.a': 'Clocking in for someone else is not allowed.',

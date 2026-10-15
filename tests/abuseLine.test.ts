@@ -5,10 +5,10 @@ import { helpLanguageSources } from '../src/i18n/all';
 import { allForms } from '../src/i18n/types';
 
 /**
- * Where the employer or agency may be the problem (exploitation, housing pressure, dismissal),
+ * Where the employer or agency may be the problem (exploitation, paying for a job, housing pressure, dismissal),
  * the closing line never says "ask your employer": it names the union, the Juridisch Loket and FairWork.
  */
-const ABUSE_TIPS = ['c.warning', 'c.gethelp', 'c.housing', 'c.rights'];
+const ABUSE_TIPS = ['c.warning', 'c.gethelp', 'c.housing', 'c.rights', 'c.newjob'];
 const tip = (id: string) => cultureTips.find((t) => t.id === id)!;
 /** "employer" in each help language (the old closing line named it). */
 const EMPLOYER: Record<string, RegExp> = {
@@ -46,7 +46,7 @@ describe('the closing line of the exploitation and dismissal tips', () => {
   });
 
   it('leaves the other tips with the usual closing line', () => {
-    for (const id of ['c.payslip', 'c.health', 'c.leave', 'c.illness', 'c.ww', 'c.letters']) {
+    for (const id of ['c.payslip', 'c.health', 'c.leave', 'c.illness', 'c.ww', 'c.letters', 'c.insurance', 'c.sick']) {
       expect(tip(id).body.endsWith(ADVICE_LINE), id).toBe(true);
     }
     expect(cultureTips.filter((t) => t.body.includes('FairWork')).map((t) => t.id).sort()).toEqual([...ABUSE_TIPS].sort());

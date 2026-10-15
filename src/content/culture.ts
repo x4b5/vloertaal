@@ -1,5 +1,5 @@
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
-import { toolsUnit, workTips } from './work';
+import { ADVICE_LINE, toolsUnit, workTips } from './work';
 
 /**
  * "Zo werkt het hier": Dutch workplace customs, norms and values, one per lesson.
@@ -161,7 +161,7 @@ const baseTips: CultureTip[] = [
     lessonId: 'l.sick',
     emoji: '📞',
     title: 'How to call in sick',
-    body: 'Call your supervisor yourself, before your shift starts, unless your company has another rule. Working through an agency? Tell the agency too. You do not have to say what illness you have.',
+    body: `Call your supervisor yourself, before your shift starts, unless your company has another rule. Working through an agency? Tell the agency too. You do not have to say what illness you have. ${ADVICE_LINE}`,
     phrase: { id: 'c.sick.p', nl: 'Ik ben ziek. Ik kan vandaag niet komen werken.', en: 'I am sick. I cannot come to work today.' },
     situation: { id: 'c.sick.s', en: 'You wake up with a fever. Your shift starts at 7:00. What do you do?' },
     options: [
@@ -291,7 +291,7 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.gethelp': [2, 3, 4, 5, 6], // Arbeidsinspectie, 0800-7000, Juridisch Loket, 112
   'c.texting': [0, 1, 2, 3, 4], // the example message whole
   'c.diploma': [3, 4, 5], // required training is paid working time; ask about courses
-  'c.doctor': [0, 1, 2, 3], // huisartsenpost; 112 only when a life is in danger
+  'c.doctor': [0, 1, 2, 3], // huisartsenpost; 112 only in an emergency (danger to life, fire, a crime now)
   'c.scams': [0, 1, 4], // do not click; call your bank yourself
   'c.bike': [0, 1, 2, 3], // no phone in your hand while cycling
   'c.transit': [0, 2, 3], // travel allowance: ask about it

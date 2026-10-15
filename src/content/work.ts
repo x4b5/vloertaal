@@ -916,7 +916,7 @@ const socialTips = [
     'boundaries',
     '🛑',
     'Crossing the line',
-    'Grensoverschrijdend gedrag is behaviour that crosses someone’s boundary: unwanted touching, sexual remarks or jokes, staring, sending unwanted pictures, threats or shouting. It does not matter if the other person "meant it as a joke": what counts is how it feels to you. If you can, say clearly that you want it to stop. Write down what happened, when, and who saw it. Tell your supervisor, the confidential adviser (vertrouwenspersoon) or HR. Your employer must protect you, and you may not be punished for reporting it. Did you see it happen to a colleague? Ask if they are okay, and offer to be a witness.',
+    'Grensoverschrijdend gedrag is behaviour that crosses someone’s boundary: unwanted touching, sexual remarks or jokes, staring, sending unwanted pictures, threats or shouting. It does not matter if the other person "meant it as a joke": what counts is how it feels to you. If you can, say clearly that you want it to stop. Write down what happened, when, and who saw it. Tell your supervisor, the confidential adviser (vertrouwenspersoon, if there is one) or HR. Your employer must protect you, and you may not be punished for reporting it. Did you see it happen to a colleague? Ask if they are okay, and offer to be a witness.',
     ['Ik wil dat je stopt.', 'I want you to stop.'],
     'Your team leader often puts his hand on your back and says you look "pretty". It makes you feel uncomfortable. He decides your shifts. What do you do?',
     [
@@ -1304,11 +1304,11 @@ const laterTips = [
     'doctor',
     '🧑‍⚕️',
     'Doctor or 112?',
-    'Register with a family doctor (huisarts) near your home. Do you need urgent care in the evening, at night or in the weekend? Call the huisartsenpost. Call 112 only when a life is in danger. You get medicines at the pharmacy (apotheek).',
+    'Register with a family doctor (huisarts) near your home. Do you need urgent care in the evening, at night or in the weekend? Call the huisartsenpost. Call 112 only in an emergency: danger to life, fire, or a crime happening now. You get medicines at the pharmacy (apotheek).',
     ['Ik wil me inschrijven bij de huisarts.', 'I want to register with the GP.'],
     'It is Saturday night. Your child has a high fever, but is awake and breathing normally. What do you do?',
     ['Call the huisartsenpost.', 'Call 112.', 'Wait until Monday and do nothing.'],
-    'The huisartsenpost helps with urgent care outside office hours. 112 is for emergencies when a life is in danger.',
+    'The huisartsenpost helps with urgent care outside office hours. 112 is for emergencies: danger to life, fire, or a crime happening now.',
     NONE,
   ),
   tipFor(
@@ -1324,7 +1324,7 @@ const laterTips = [
       'Use the insurance card of a friend.',
     ],
     'Without insurance, a doctor or hospital can cost a lot, and you can get a fine. Arranging it quickly protects you.',
-    NONE,
+    ADVICE_LINE,
   ),
   tipFor(
     'letters',
@@ -1414,7 +1414,7 @@ const laterTips = [
       'Pay half now and the rest later.',
     ],
     'Asking money for a job is a warning sign. A temp agency may not charge you for finding work.',
-    NONE,
+    ABUSE_LINE,
   ),
 ];
 

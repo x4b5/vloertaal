@@ -76,7 +76,7 @@ const t: CultureTranslation = {
     'c.time.o3': 'Azi nu mai mergi deloc la muncă.',
     'c.time.w': 'Dacă anunți din timp, echipa se poate organiza. Să întârzii fără să anunți e văzut ca mult mai rău decât întârzierea în sine.',
     'c.sick': { m: 'Cum anunți că ești bolnav', f: 'Cum anunți că ești bolnavă' },
-    'c.sick.b': 'Sună-l tu pe șef, înainte să înceapă tura, dacă firma nu are altă regulă. Lucrezi printr-o agenție? Anunță și agenția. Nu trebuie să spui ce boală ai.',
+    'c.sick.b': 'Sună-l tu pe șef, înainte să înceapă tura, dacă firma nu are altă regulă. Lucrezi printr-o agenție? Anunță și agenția. Nu trebuie să spui ce boală ai. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.sick.p': { m: 'Sunt bolnav. Azi nu pot veni la muncă.', f: 'Sunt bolnavă. Azi nu pot veni la muncă.' },
     'c.sick.s': 'Te trezești cu febră. Tura ta începe la 7:00. Ce faci?',
     'c.sick.o1': { m: 'Îl suni pe șef înainte de 7:00 și spui că ești bolnav.', f: 'Îl suni pe șef înainte de 7:00 și spui că ești bolnavă.' },
