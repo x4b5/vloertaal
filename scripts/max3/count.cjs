@@ -414,6 +414,21 @@ function defineRuleStates() {
   add('rule:no-voice', shot('rule&step=whatdo&id=r.l.zoeken.3.wd2'), null, { voices: false, expect: '.player-body .exercise' });
   // A real rules lesson from its start, played through the player (built from seed 1).
   add('rule:lesson-start', shot('lesson&lesson=r.l.loon.2'), null, { expect: '.player-body .exercise' });
+  // M4 around the lessons: "Herhaal vandaag" with rules questions, the home with the rules count
+  // and the review due, the result (with the "Onthoud" line and its speaker), the certificate and
+  // the pocket card of a rules unit.
+  add('rule:daily', shot('daily'), null, { expect: '.player-body .exercise' });
+  add('rule:daily-right', shot('daily'), async (p) => { await tap(p, choice, 0); await settle(p, 900); }, { expect: '.feedback-right' });
+  add('rule:daily-wrong', shot('daily'), async (p) => { await tap(p, choice, 1); await settle(p, 900); }, { expect: '.feedback-wrong' });
+  add('rule:route-daily-due', shot('route&state=shelf&daily=due'), null, { expect: '.daily-due' });
+  add('rule:route-finished-daily', shot('route&state=finished&daily=due'), null, { expect: '.daily-due' });
+  add('rule:result', shot('result'), null, { expect: '.result-remember' });
+  add('rule:result-review', shot('result&review=1'), null, { expect: '.result-stronger' });
+  add('rule:result-no-voice', shot('result'), null, { voices: false, expect: '.result-remember' });
+  add('rule:certificate', shot('certificate&cu=r.loon&name=Fatima%20Amrani'), null, { expect: '.cert-words-rules' });
+  add('rule:cert-earned', shot('cert-earned&cu=r.zoeken'), null, { expect: '.cert-words-rules' });
+  add('rule:pocket', shot('pocket&cu=r.loon'), null, { expect: '.pocket-list-rules' });
+  add('rule:pocket-sector', shot('pocket&cu=r.build'), null, { expect: '.pocket-list-rules' });
   return S;
 }
 

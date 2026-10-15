@@ -35,7 +35,7 @@ describe('the Dutch screens (src/i18n/nl.ts) of the work-rules track', () => {
   it('says what the track is about: work rules, not learning Dutch', () => {
     expect(uiNl.appTagline).toBe('Werken in Nederland: zo gaat het');
     expect(uiNl.wordsLearnedN).toBe('{n} regels geleerd');
-    expect(uiNl.reviewTodayN).toMatch(/^Regels om te herhalen: \{n\}/);
+    expect(uiNl.reviewTodayN).toMatch(/^Vragen om te herhalen: \{n\}/);
   });
 
   it('loads as its own pack, outside the nine help languages', async () => {

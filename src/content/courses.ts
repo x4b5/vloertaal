@@ -1,6 +1,7 @@
 import type { Track } from '../lib/track';
-import { units } from './curriculum';
+import { learnedWords, units } from './curriculum';
 import { rulesCourseUnits, setRulesUnits } from './rulesCourse';
+import type { RuleStep } from './regels/types';
 import type { Lesson, Unit } from './types';
 
 /**
@@ -49,4 +50,23 @@ export function unitOfLesson(lessonId: string): Unit | undefined {
 /** A lesson the player can play: words to learn (the Dutch course) or steps (the rules course). */
 export function isPlayable(lesson: Lesson): boolean {
   return lesson.words.length > 0 || (lesson.steps?.length ?? 0) > 0;
+}
+
+/** The rule cards of a lesson (the work-rules track; a language lesson has none). */
+export function ruleCards(lesson: Lesson): Extract<RuleStep, { kind: 'rule' }>[] {
+  return (lesson.steps ?? []).filter((s): s is Extract<RuleStep, { kind: 'rule' }> => s.kind === 'rule');
+}
+
+/**
+ * What the learner has learned so far, as the top bar and the result count it: in the language
+ * course the distinct words of finished lessons (learnedWords), in the work-rules course the rule
+ * cards of finished lessons ("{n} regels geleerd"). Counted from progress, nothing is stored.
+ */
+export function learnedItems(track: Track, completed: Record<string, unknown>): number {
+  if (track === 'taal') return learnedWords(completed).size;
+  const ids = new Set<string>();
+  for (const unit of courseUnits('regels')) {
+    for (const lesson of unit.lessons) if (completed[lesson.id]) for (const r of ruleCards(lesson)) ids.add(r.id);
+  }
+  return ids.size;
 }

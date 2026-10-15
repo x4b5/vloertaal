@@ -14,12 +14,12 @@ import { isSectorId, type SectorChoice } from '../content/sectors';
 import type { Access } from '../lib/access';
 import { dayKey, emptyProgress, workWeek, type Progress } from '../lib/progress';
 import { Milestone, StreakStopped } from '../components/Milestone';
-import { dailyCard } from '../lib/spaced';
+import { dailyCard, dailyRuleLesson, gradedStepIds } from '../lib/spaced';
 import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
 import { GenderScreen } from '../components/Gender';
 import type { Gender, LangCode } from '../i18n/types';
-import { allLessons, allReplies, learnedWords } from '../content/curriculum';
+import { allLessons, allReplies } from '../content/curriculum';
 import { buildLesson, buildTiles, buildRuleLesson, forRetry, RULE_KINDS, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
 import { setSpeakShotPhase } from '../components/Speaking';
@@ -38,7 +38,7 @@ import { OfflineSettingCard } from '../components/Offline';
 import type { TextSize } from '../lib/textSize';
 import { LogoMark, Wordmark } from '../components/Logo';
 import { HomeGreeting } from '../components/BramSays';
-import { courseUnits, registerRulesCourse } from '../content/courses';
+import { courseUnits, learnedItems, registerRulesCourse } from '../content/courses';
 import { toCourseUnits } from '../content/regels/course';
 import { RULES_STUB } from './rulesStub';
 
@@ -64,6 +64,24 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // &perfect=1: 11 of 11 (FOUTLOOS); &review=1: after "Herhaal vandaag" (8 words, 5 stronger);
   // &phrases=1: the first lesson's one-time row to the emergency phrases; &waiting=42: words still
   // due after the review (back after a long absence).
+  // &lang=nl: after a rules lesson (one new rule, five in all, its "Onthoud" line; &lesson=
+  // another lesson); &review=1 after "Herhaal vandaag" of that track (6 questions, 4 stronger).
+  if (shot === 'result' && lang === 'nl') {
+    const l = getHelpLanguage('nl' as LangCode);
+    const review = q.get('review') === '1';
+    const all = courseUnits('regels').flatMap((u) => u.lessons);
+    const done = all.find((x) => x.id === (q.get('lesson') ?? 'r.l.loon.2')) ?? all[0];
+    const next = all[all.indexOf(done) + 1];
+    return (
+      <Result
+        right={review ? 5 : q.get('perfect') === '1' ? 5 : 4} total={review ? 6 : 5} newWords={1} words={5} lang={l} onDone={() => {}}
+        repeated={review ? 6 : undefined} stronger={review ? 4 : undefined}
+        kind={review ? 'daily' : 'lesson'}
+        remember={review ? undefined : done?.rule?.remember}
+        next={!review && next ? { en: next.title, lang: l, id: next.id } : undefined}
+      />
+    );
+  }
   if (shot === 'result') {
     const l = getHelpLanguage(lang as LangCode, gender);
     const review = q.get('review') === '1';
@@ -97,7 +115,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'logo') return <LogoSheet px={Number(q.get('px') ?? 120)} />;
   // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety
   if (shot === 'pocket') {
-    const unit = findUnit(q.get('cu') ?? 'u.safety') ?? units[0];
+    const unit = findUnit(q.get('cu') ?? (lang === 'nl' ? 'r.loon' : 'u.safety')) ?? units[0];
     return <PocketCardScreen unit={unit} lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} />;
   }
   // "Keep lessons on this phone" (the Settings switch) in a fixed state:
@@ -123,7 +141,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // Certificates: /?shot=certificate&cu=u.safety&name=Ali%20Hassan (name=ask: asked the first
   // time; name=none: without a name); /?shot=cert-earned is the one-time moment.
   if (shot === 'certificate' || shot === 'cert-earned') {
-    const unit = findUnit(q.get('cu') ?? 'u.firstday') ?? units[0];
+    const unit = findUnit(q.get('cu') ?? (lang === 'nl' ? 'r.loon' : 'u.firstday')) ?? units[0];
     const name = q.get('name');
     try {
       if (name === 'ask') localStorage.removeItem('vloertaal:cert-name');
@@ -234,6 +252,19 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // wrong one the 2nd (a true/false shot uses a true statement). &retry=1: the step comes back
   // as a mistake at the end.
   if (shot === 'rule') return <RuleShot quiet={quiet} lang={getHelpLanguage((lang ?? 'nl') as LangCode, gender)} q={q} />;
+  // "Herhaal vandaag" of the work-rules track: /?shot=daily&lang=nl, the questions of the first
+  // two rules units (at most 6, lib/spaced.ts dailyRuleLesson), best option first; &at=2 the third.
+  if (shot === 'daily') {
+    const ids = courseUnits('regels').slice(0, 2).flatMap((u) => u.lessons.flatMap(gradedStepIds));
+    const review = dailyRuleLesson(ids);
+    const list = buildLesson(review, { review: true, seed: 1 }).map((e) => bestFirst(e as RuleExercise));
+    return (
+      <QuietLesson
+        quiet={quiet} lesson={review} review lang={getHelpLanguage((lang ?? 'nl') as LangCode, gender)}
+        exercises={list} startAt={Number(q.get('at') ?? 0)} onQuit={() => {}} onFinish={() => {}}
+      />
+    );
+  }
   const { lesson } = findLesson('l.gear')!;
   if (shot === 'lesson') {
     // &lesson=l.rights plays another lesson (default Safety gear).
@@ -388,9 +419,11 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   // &resume=1: the block's next lesson was stopped halfway ("Continue · 12/18").
   useState(() => (resume ? seedResume(resume, false) : clearSave()));
   const today = dayKey(new Date());
-  const words = findLesson('l.hello')!.lesson.words;
-  const card = daily ? dailyCard(Object.fromEntries(words.map((w) => [w.id, { box: 1, due: today }])), today) : null;
-  const words2 = learnedWords(progress.completed).size;
+  // &daily=1: the "Herhaal vandaag" card, with the words of "Hello" due (the rules track: the
+  // questions of its first lesson).
+  const dueItems = rules ? gradedStepIds(rc[0]?.lessons[0] ?? { id: '', title: '', words: [], sentences: [] }) : findLesson('l.hello')!.lesson.words.map((w) => w.id);
+  const card = daily ? dailyCard(Object.fromEntries(dueItems.map((id) => [id, { box: 1, due: today }])), today, undefined, rules ? 'regels' : 'taal') : null;
+  const words2 = learnedItems(rules ? 'regels' : 'taal', progress.completed);
   const bramParam = new URLSearchParams(location.search).get('bram');
   const bram = (['intro', 'hello', 'back', 'due', 'streak', 'done'] as const).find((k) => k === bramParam);
   const [open, setOpen] = useState<string | null>(shot === 'topic' ? unit ?? (rules ? rc[0]?.id ?? null : 'u.firstday') : null);

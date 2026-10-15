@@ -1,4 +1,4 @@
-import { CERT_NOTE, SEAL_RING, certMeta, type CertData } from './certificate';
+import { CERT_NOTE, certListLabel, certMeta, certSub, sealRing, type CertData } from './certificate';
 
 /**
  * The certificate as a picture, drawn straight on a canvas (no libraries), in the same layout
@@ -108,8 +108,10 @@ function ringText(ctx: CanvasRenderingContext2D, text: string, cx: number, cy: n
   ctx.restore();
 }
 
+/** The text around the logo's ring (src/components/Logo.tsx). */
+const LOGO_RING = 'VLOERTAAL · NEDERLANDS VOOR HET WERK ·';
 /** The black rubber-stamp logo on yellow (src/components/Logo.tsx), drawn at size s. */
-function drawLogo(ctx: CanvasRenderingContext2D, x: number, y: number, s: number) {
+function drawLogo(ctx: CanvasRenderingContext2D, x: number, y: number, s: number, ring = LOGO_RING) {
   const k = s / 120;
   ctx.save();
   ctx.translate(x, y);
@@ -130,12 +132,13 @@ function drawLogo(ctx: CanvasRenderingContext2D, x: number, y: number, s: number
   ctx.beginPath();
   ctx.arc(60, 60, 31, 0, Math.PI * 2);
   ctx.stroke();
-  ringText(ctx, 'VLOERTAAL · NEDERLANDS VOOR HET WERK ·', 60, 60, 35, 6.6, 1.25, Math.PI * 1.02);
+  // Another (shorter) ring text is spread to go once around, as the logo's own.
+  ringText(ctx, ring, 60, 60, 35, 6.6, 1.25, Math.PI * 1.02, ring !== LOGO_RING);
   ctx.fill(new Path2D('M43 41h11l6 20 6-20h11L66 79H54z'));
   ctx.restore();
 }
 
-function drawSeal(ctx: CanvasRenderingContext2D, cx: number, cy: number, s: number, unitNo: string) {
+function drawSeal(ctx: CanvasRenderingContext2D, cx: number, cy: number, s: number, unitNo: string, ring: string) {
   const k = s / 120;
   ctx.save();
   ctx.translate(cx, cy);
@@ -153,7 +156,7 @@ function drawSeal(ctx: CanvasRenderingContext2D, cx: number, cy: number, s: numb
   ctx.beginPath();
   ctx.arc(60, 60, 40, 0, Math.PI * 2);
   ctx.stroke();
-  ringText(ctx, SEAL_RING, 60, 60, 47, 7.4, 0.9, Math.PI, true);
+  ringText(ctx, ring, 60, 60, 47, 7.4, 0.9, Math.PI, true);
   ctx.lineWidth = 5;
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
@@ -215,14 +218,15 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   // Head: logo, "CERTIFICAAT · VLOERTAAL", the unit tag.
   const top = py + 3.4 * u;
   const logo = 8.5 * u;
-  drawLogo(ctx, left, top, logo);
+  // The stamp's ring says what the app is about (the work-rules track: work in the Netherlands).
+  drawLogo(ctx, left, top, logo, d.rules ? 'VLOERTAAL · WERKEN IN NEDERLAND · ' : undefined);
   ctx.fillStyle = C.ink;
   ctx.textAlign = 'left';
   ctx.font = font(800, 4.2 * u, STENCIL);
   spaced(ctx, 'CERTIFICAAT · VLOERTAAL', left + logo + 2 * u, top + logo / 2 + 0.6 * u, 0.06 * 4.2 * u);
   ctx.fillStyle = C.ink2;
   ctx.font = font(500, 1.5 * u);
-  spaced(ctx, 'Nederlands voor het werk', left + logo + 2 * u, top + logo / 2 + 3 * u, 0.02 * 1.5 * u);
+  spaced(ctx, certSub(d), left + logo + 2 * u, top + logo / 2 + 3 * u, 0.02 * 1.5 * u);
   // Unit tag: yellow, ink edge, slightly turned.
   ctx.font = font(800, 2.6 * u, STENCIL);
   const tag = `UNIT ${d.unitNo}`;
@@ -266,7 +270,8 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   }
   const nameH = d.name ? 3 * u * 1.2 + 0.6 * u : 0;
   const titleH = titleLines.length * titleSize * 1.02;
-  const subH = 0.9 * u + 2 * u * 1.3;
+  // No second title in the work-rules track (the unit's title is Dutch already).
+  const subH = d.rules ? 0 : 0.9 * u + 2 * u * 1.3;
   const wordsH = 2.4 * u + 1.15 * u * 1.3 + 0.8 * u + chipRows.length * chipH + (chipRows.length - 1) * 0.8 * u;
   const metaH = 1.8 * u + 1.45 * u * 1.3;
   const bodyH = nameH + titleH + subH + wordsH + metaH;
@@ -304,31 +309,33 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   }
 
   // English title · help-language title.
-  y += 0.9 * u;
-  const subBase = y + 2 * u;
-  ctx.font = font(500, 2 * u);
-  ctx.fillStyle = C.ink2;
-  ctx.fillText(d.titleEn, left, subBase);
-  if (d.titleHelp) {
-    let x = left + ctx.measureText(d.titleEn).width + 0.8 * u;
-    ctx.fillText('·', x, subBase);
-    x += ctx.measureText('·').width + 0.8 * u;
-    ctx.font = font(500, 2 * u, HELP);
-    if (d.helpDir === 'rtl') {
-      ctx.direction = 'rtl';
-      ctx.textAlign = 'right';
-      ctx.fillText(d.titleHelp, x + ctx.measureText(d.titleHelp).width, subBase);
-      ctx.direction = 'ltr';
-      ctx.textAlign = 'left';
-    } else {
-      ctx.fillText(d.titleHelp, x, subBase);
+  if (!d.rules) {
+    y += 0.9 * u;
+    const subBase = y + 2 * u;
+    ctx.font = font(500, 2 * u);
+    ctx.fillStyle = C.ink2;
+    ctx.fillText(d.titleEn, left, subBase);
+    if (d.titleHelp) {
+      let x = left + ctx.measureText(d.titleEn).width + 0.8 * u;
+      ctx.fillText('·', x, subBase);
+      x += ctx.measureText('·').width + 0.8 * u;
+      ctx.font = font(500, 2 * u, HELP);
+      if (d.helpDir === 'rtl') {
+        ctx.direction = 'rtl';
+        ctx.textAlign = 'right';
+        ctx.fillText(d.titleHelp, x + ctx.measureText(d.titleHelp).width, subBase);
+        ctx.direction = 'ltr';
+        ctx.textAlign = 'left';
+      } else {
+        ctx.fillText(d.titleHelp, x, subBase);
+      }
     }
+    y += 2 * u * 1.3;
   }
-  y += 2 * u * 1.3;
 
-  // Key words as chips.
+  // Key words (or key rules) as chips.
   y += 2.4 * u;
-  label('Kernwoorden', left, y + 1.15 * u);
+  label(certListLabel(d), left, y + 1.15 * u);
   y += 1.15 * u * 1.3 + 0.8 * u;
   ctx.font = font(600, 1.65 * u);
   for (const row of chipRows) {
@@ -368,7 +375,7 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   ctx.moveTo(signX, footBase);
   ctx.lineTo(signX + signW, footBase);
   ctx.stroke();
-  drawSeal(ctx, right - 6 * u, footBase - 4.6 * u, 16 * u, d.unitNo);
+  drawSeal(ctx, right - 6 * u, footBase - 4.6 * u, 16 * u, d.unitNo, sealRing(d));
 
   // "Oefencertificaat — geen officieel diploma", small, centred at the bottom.
   ctx.fillStyle = C.ink3;

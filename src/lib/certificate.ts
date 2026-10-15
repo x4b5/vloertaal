@@ -1,4 +1,4 @@
-import { allCourseUnits, courseUnits, findCourseUnit } from '../content/courses';
+import { allCourseUnits, courseUnits, findCourseUnit, ruleCards } from '../content/courses';
 import { findLesson } from '../content/curriculum';
 import { trackOf, trackOfId, type Track } from './track';
 import { isMixLesson } from '../content/review';
@@ -81,6 +81,34 @@ export function keyPhrases(unit: Unit, n = 8): string[] {
   return out;
 }
 
+/**
+ * The work-rules track: the unit's key rules (the titles of its rule cards marked `key`, the ones
+ * on the pocket card too), in lesson order.
+ */
+export function keyRules(unit: Unit): string[] {
+  const out: string[] = [];
+  for (const l of unit.lessons) for (const r of ruleCards(l)) if (r.key && !out.includes(r.title)) out.push(r.title);
+  return out;
+}
+
+/**
+ * What a rules unit's certificate lists: its key rules, or, with fewer than two of them, each
+ * lesson's "Onthoud" line (lesson.rule.remember), so the certificate never shows a single line.
+ */
+export function certRules(unit: Unit, n = 8): string[] {
+  const keys = keyRules(unit);
+  if (keys.length >= 2) return keys.slice(0, n);
+  const out: string[] = [];
+  for (const l of unit.lessons) {
+    const line = l.rule?.remember;
+    if (line && !out.includes(line)) out.push(line);
+  }
+  return out.slice(0, n);
+}
+
+/** The rule cards of a rules unit (one per lesson): the number on its certificate. */
+export const unitRuleCount = (unit: Unit): number => new Set(unit.lessons.flatMap((l) => ruleCards(l).map((r) => r.id))).size;
+
 /** "8 oktober 2026" (the certificate is a Dutch document). */
 export function certDate(day: string): string {
   const [y, m, d] = day.split('-').map(Number);
@@ -133,12 +161,33 @@ export interface CertData {
   /** "8 oktober 2026" */
   date: string;
   name: string;
+  /** Key words (the language course) or key rules (the work-rules track). */
   phrases: string[];
   lessons: number;
+  /** Words taught, or in the work-rules track the rules. */
   words: number;
+  /**
+   * A unit of the work-rules track: the certificate is about knowing how work goes here, not
+   * about learning Dutch (its sub-line, the list's label, the meta line and the seal say so), and
+   * it has no second title (the unit's title is Dutch already).
+   */
+  rules?: boolean;
 }
 
 export function certData(unit: Unit, day: string, name: string, lang?: HelpLanguage, sector?: SectorChoice): CertData {
+  if (trackOfId(unit.id) === 'regels') {
+    return {
+      unitNo: String(unitIndex(unit, sector) + 1).padStart(2, '0'),
+      titleNl: unit.titleNl,
+      titleEn: '',
+      date: certDate(day),
+      name: name.trim(),
+      phrases: certRules(unit, 8),
+      lessons: unit.lessons.length,
+      words: unitRuleCount(unit),
+      rules: true,
+    };
+  }
   return {
     unitNo: String(unitIndex(unit, sector) + 1).padStart(2, '0'),
     titleNl: unit.titleNl,
@@ -154,10 +203,20 @@ export function certData(unit: Unit, day: string, name: string, lang?: HelpLangu
   };
 }
 
-/** The line under the key words: "Nederlands voor het werk · 3 lessen · 12 woorden". */
+/** Under the brand: what the certificate is about. */
+export const certSub = (d: Pick<CertData, 'rules'>) => (d.rules ? 'Werken in Nederland' : 'Nederlands voor het werk');
+/** The label above the list. */
+export const certListLabel = (d: Pick<CertData, 'rules'>) => (d.rules ? 'Belangrijkste regels' : 'Kernwoorden');
+/** The line under the key words: "Nederlands voor het werk · 3 lessen · 12 woorden"; for the
+ *  work-rules track "Werken in Nederland · 3 lessen · 3 regels". */
 export const certMeta = (d: CertData) =>
-  `Nederlands voor het werk · ${d.lessons} ${d.lessons === 1 ? 'les' : 'lessen'} · ${d.words} ${d.words === 1 ? 'woord' : 'woorden'}`;
+  d.rules
+    ? `${certSub(d)} · ${d.lessons} ${d.lessons === 1 ? 'les' : 'lessen'} · ${d.words} ${d.words === 1 ? 'regel' : 'regels'}`
+    : `Nederlands voor het werk · ${d.lessons} ${d.lessons === 1 ? 'les' : 'lessen'} · ${d.words} ${d.words === 1 ? 'woord' : 'woorden'}`;
 export const CERT_NOTE = 'Oefencertificaat — geen officieel diploma';
 /** Around the seal; spread to fill the whole ring exactly (SVG textLength, and the canvas likewise). */
 export const SEAL_RING = 'OEFENCERTIFICAAT · VLOERTAAL · NEDERLANDS · ';
+/** The seal of the work-rules track: the same ring, about the rules (as long, so it reads the same). */
+export const SEAL_RING_RULES = 'OEFENCERTIFICAAT · VLOERTAAL · WERKREGELS · ';
+export const sealRing = (d: Pick<CertData, 'rules'>) => (d.rules ? SEAL_RING_RULES : SEAL_RING);
 

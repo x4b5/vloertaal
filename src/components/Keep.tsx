@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { learnedWords } from '../content/curriculum';
+import { learnedItems } from '../content/courses';
+import { trackOf } from '../lib/track';
 import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
@@ -271,7 +272,9 @@ export function BackupCard({ progress, lang, onRestore }: {
   const [found, setFound] = useState<Partial<Progress> | null>(null);
   const [note, setNote] = useState<'bad' | 'back' | null>(null);
   const lessons = Object.keys(progress.completed).length;
-  const words = learnedWords(progress.completed).size;
+  // Words learned, or in the work-rules track rules learned.
+  const rules = trackOf(progress) === 'regels';
+  const words = learnedItems(trackOf(progress), progress.completed);
   const today = new Date();
   const stamp = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 
@@ -298,7 +301,7 @@ export function BackupCard({ progress, lang, onRestore }: {
       {/* What the file holds, like the lines of a waybill. */}
       <dl className="waybill-lines" lang="nl">
         <div><dt>Lessen</dt><dd>{lessons}</dd></div>
-        <div><dt>Woorden</dt><dd>{words}</dd></div>
+        <div><dt>{rules ? 'Regels' : 'Woorden'}</dt><dd>{words}</dd></div>
         <div><dt>Record</dt><dd>{bestStreak(progress)}</dd></div>
       </dl>
       {found ? (

@@ -1,0 +1,58 @@
+import { describe, expect, it } from 'vitest';
+import { teachingLessons } from '../src/content/curriculum';
+import { buildLesson, type Exercise } from '../src/lib/exercises';
+import { addDays, dailyCard, dailyLesson, dailyWordIds, dueIds, type Cards } from '../src/lib/spaced';
+
+/**
+ * The language track's "Herhaal vandaag" stays exactly as it was when the work-rules track got
+ * its own review (M4): a fixed progress (cards) and a fixed seed give the same review, item for
+ * item. The snapshot was taken before the rules review was added.
+ */
+
+const TODAY = '2026-10-15';
+
+/** A learner six lessons in: cards in different boxes, some due, some later. */
+function fixedCards(): Cards {
+  const cards: Cards = {};
+  teachingLessons.slice(0, 6).forEach((l, li) => {
+    l.words.forEach((w, wi) => {
+      const box = 1 + ((li + wi) % 4);
+      const offset = ((li * 3 + wi) % 5) - 2; // -2 … +2 days from today
+      cards[w.id] = { box, due: addDays(TODAY, offset) };
+    });
+  });
+  return cards;
+}
+
+/** An exercise in a few words: its kind and what it asks (enough to see any change). */
+function brief(e: Exercise): string {
+  const r = e as unknown as Record<string, unknown> & { word?: { id: string }; sentence?: { id: string }; dialogue?: { prompt: { id: string } }; words?: { id: string }[]; options?: { id?: string }[]; reverse?: boolean };
+  const what = r.word?.id ?? r.sentence?.id ?? r.dialogue?.prompt.id ?? r.words?.map((w) => w.id).join('+') ?? '';
+  const opts = r.options?.map((o) => o.id ?? '?').join(',');
+  return [e.kind, what, opts ? `[${opts}]` : '', r.reverse ? 'reverse' : ''].filter(Boolean).join(' ');
+}
+
+describe("the language track's daily review is unchanged", () => {
+  it('picks the same words, builds the same lesson and the same exercises (fixed seed)', () => {
+    const cards = fixedCards();
+    const ids = dailyWordIds(cards, TODAY);
+    const lesson = dailyLesson(ids, cards, TODAY);
+    const run = (quiet: boolean) => buildLesson(lesson, { review: true, seed: 42, quiet }).map(brief);
+    expect({
+      due: dueIds(cards, TODAY),
+      ids,
+      card: dailyCard(cards, TODAY),
+      lesson: {
+        id: lesson.id,
+        title: lesson.title,
+        words: lesson.words.map((w) => w.id),
+        sentences: lesson.sentences.map((s) => s.id),
+        dialogues: (lesson.dialogues ?? []).map((d) => d.prompt.id),
+        boxes: lesson.boxes,
+        repeat: lesson.repeat,
+      },
+      exercises: run(false),
+      quiet: run(true),
+    }).toMatchSnapshot();
+  });
+});

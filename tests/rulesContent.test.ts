@@ -1,4 +1,6 @@
 import { describe, expect, it } from 'vitest';
+import { readFileSync } from 'node:fs';
+import { hasClip, setRecordedIndex, type ElevenIndex } from '../src/lib/audio';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import { RULES_ABUSE, RULES_ADVICE, RULES_CHECKED, RULES_DISCLAIMER, ruleAdvice, ruleAdviceLine } from '../src/content/regels/disclaimer';
 import type { RuleLesson, RuleOption, RuleStep, RuleUnit } from '../src/content/regels/types';
@@ -237,5 +239,54 @@ describe('rules content: plain Dutch', () => {
       expect(text.trim().length, id).toBeGreaterThan(0);
       expect(text, id).not.toMatch(/ {2}|\s[,?!]|\s\.(?!\.)/);
     }
+  });
+});
+
+/**
+ * "Zo zeg je het" with a recorded clip: the app plays a clip only for the whole text, and its
+ * lookup forgives capitals and a closing full stop (lib/audio.ts). So a model sentence that is
+ * almost a clip's text would still play the clip while the screen shows other words. Here a
+ * model sentence that matches a clip loosely (letters and digits only) must be spelled exactly
+ * like it: the same spaces, punctuation and capitals. All other model sentences use the phone's
+ * Dutch voice.
+ */
+describe('rules content: model sentences and recorded clips', () => {
+  const eleven = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8')) as ElevenIndex;
+  const clipTexts = [...new Set(eleven.voices.flatMap((v) => Object.values(v.said)))];
+  const models = steps.filter((s): s is Extract<RuleStep, { kind: 'model' }> => s.kind === 'model');
+  /** Only letters and digits, lower case: "Stop! Dit is niet veilig." → "stopditisnietveilig". */
+  const loose = (t: string) => t.normalize('NFC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+  const byLoose = new Map(clipTexts.map((t) => [loose(t), t]));
+  /** Model sentences that come close to a clip's text but are not spelled exactly like it. */
+  const slips = (list: { id: string; nl: string }[]) =>
+    list.filter((m) => byLoose.has(loose(m.nl)) && byLoose.get(loose(m.nl)) !== m.nl).map((m) => `${m.id}: "${m.nl}" ≠ "${byLoose.get(loose(m.nl))}"`);
+
+  it('spells every model sentence with a clip exactly like the clip (2 today)', () => {
+    expect(slips(models)).toEqual([]);
+    const withClip = models.filter((m) => clipTexts.includes(m.nl));
+    expect(withClip.map((m) => m.id)).toEqual(['r.l.veilig.1.mo1', 'r.l.veilig.2.mo1']);
+    // Each of them is recorded in every voice, so the voice a learner picks has it too.
+    for (const m of withClip) for (const v of eleven.voices) expect(Object.values(v.said), `${m.id} ${v.key}`).toContain(m.nl);
+  });
+
+  it('catches a slip of a space, a punctuation mark or a capital', () => {
+    const clip = 'Stop! Dit is niet veilig.';
+    expect(clipTexts).toContain(clip);
+    const wrong = [
+      'Stop!  Dit is niet veilig.', // two spaces
+      'Stop! Dit is niet veilig', // no full stop
+      'Stop. Dit is niet veilig.', // another mark
+      'Stop, dit is niet veilig.',
+      'Stop! dit is niet veilig.', // a capital
+      'Stop ! Dit is niet veilig.', // a space before the mark
+      'Stop! Dit is niet veilig. ', // a space at the end
+    ];
+    expect(slips(wrong.map((nl, i) => ({ id: `slip${i}`, nl })))).toHaveLength(wrong.length);
+    expect(slips([{ id: 'ok', nl: clip }])).toEqual([]);
+  });
+
+  it('plays the clip for those two, and the phone voice for the rest', () => {
+    setRecordedIndex(eleven, null);
+    for (const m of models) expect(hasClip(m.nl), m.id).toBe(clipTexts.includes(m.nl));
   });
 });

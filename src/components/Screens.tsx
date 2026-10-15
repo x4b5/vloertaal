@@ -3,7 +3,7 @@ import { LessonCelebration } from './Celebrate';
 import { BramSays } from './BramSays';
 import { Character } from './Characters';
 import { resultLineFor } from '../lib/greeting';
-import { aboutSections } from '../content/about';
+import { aboutSections, CONTACT_EMAIL } from '../content/about';
 import { cultureTips } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
@@ -11,12 +11,12 @@ import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, langu
 import type { HelpLanguage, LangCode, UiCode } from '../i18n/types';
 import { dutchUi, rulesTrackOn } from '../lib/track';
 import { NlPair } from './NlPair';
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { applyEnglish } from '../lib/english';
 import { isNextInCourse } from '../lib/exercises';
 import type { Access } from '../lib/access';
 import type { Progress } from '../lib/progress';
-import { Bi, HelpText } from './Bi';
+import { Bi, HelpText, isolateLatin } from './Bi';
 import { LogoMark, Wordmark } from './Logo';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
@@ -383,12 +383,51 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
   );
 }
 
+/**
+ * A line of About text with the contact address as a tappable mail link. The link is left to
+ * right and English (dir, lang), so a right-to-left sentence never reorders the address; the
+ * rest of the line goes through `plain` (in Arabic, Persian and Dari: its Latin runs isolated).
+ */
+function withMailLink(text: string, plain: (part: string) => React.ReactNode = (part) => part): React.ReactNode {
+  const parts = text.split(CONTACT_EMAIL);
+  if (parts.length < 2) return plain(text);
+  return parts.map((part, i) => (
+    <Fragment key={i}>
+      {i > 0 && (
+        <a href={`mailto:${CONTACT_EMAIL}`} dir="ltr" lang="en" style={{ color: 'inherit', fontWeight: 700, textUnderlineOffset: '0.15em', whiteSpace: 'nowrap' }}>
+          {CONTACT_EMAIL}
+        </a>
+      )}
+      {plain(part)}
+    </Fragment>
+  ));
+}
+
+/**
+ * An About body as <Bi> lays it out, with the address linked in the main line only (the help
+ * language, or the English without one): one tap target, not one per line. The small English
+ * line under it keeps the address as plain text.
+ */
+function AboutBody({ text }: { text: Bilingual }) {
+  if (!text.help?.includes(CONTACT_EMAIL) && !text.en.includes(CONTACT_EMAIL)) return <Bi text={text} />;
+  if (!text.help || !text.lang) return <span className="bi"><span className="bi-en">{withMailLink(text.en)}</span></span>;
+  const rtl = text.lang.dir === 'rtl';
+  return (
+    <span className="bi bi-swap" dir={rtl ? 'rtl' : undefined}>
+      <span className="bi-en" lang={text.lang.code} dir={text.lang.dir}>{withMailLink(text.help, rtl ? isolateLatin : undefined)}</span>
+      <span className="bi-sep" aria-hidden>·</span>
+      <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{text.en}</span>
+    </span>
+  );
+}
+
 /** "About Vloertaal" (the "Over" tab): what the app is, who it is for, privacy and voice credits,
  *  and one link to the page for coaches. */
 /**
  * About Vloertaal. The "NL" toggle at the top end shows every section in plain Dutch (lang nl,
  * left to right also in Arabic, Persian and Dari); pressed again, the help language (or English)
- * comes back. One tap target; the choice is remembered on this phone.
+ * comes back. The toggle is one tap target (the contact address in the last section is a mail
+ * link: one more); the Dutch choice is remembered on this phone.
  */
 export function About({ lang, onCoaches, dutch: dutchStart }: {
   lang?: HelpLanguage;
@@ -429,7 +468,7 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
               ? <span className="bi"><span className="bi-en">{s.nl.title}</span></span>
               : <Bi text={gloss(s.id, s.title, lang)} />}
           </h2>
-          <p>{dutch ? s.nl.body : <Bi text={gloss(`${s.id}.b`, s.body, lang)} />}</p>
+          <p>{dutch ? withMailLink(s.nl.body) : <AboutBody text={gloss(`${s.id}.b`, s.body, lang)} />}</p>
         </section>
       ))}
       {onCoaches && (
@@ -504,7 +543,10 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
 /** From this many words still due after a review, the result says they come in the next days. */
 export const REVIEW_WAITING_MIN = 3;
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember }: {
+  /** After a lesson of the work-rules track: its "Onthoud" line (lesson.rule.remember), in Dutch,
+   *  with one speaker (hidden when nothing can say it). Not a button. */
+  remember?: string;
   /** After today's review: words still due (many after a long absence); a calm line says they
    *  come back in the next days. Not a button. */
   waiting?: number;
@@ -600,6 +642,14 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             done={repeated !== undefined || shownNew === newWords}
           />
         </div>
+        {/* The rules track: the one line to remember from this lesson (plain Dutch, as the rule card). */}
+        {remember && (
+          <div className="result-remember" lang="nl">
+            <span className="result-remember-label">Onthoud</span>
+            <p className="result-remember-text">{remember}</p>
+            <SpeakButton text={remember} long needsDevice glyph help={lang} />
+          </div>
+        )}
         {/* After the review: how many words got stronger, the number big, the help language
             large and English small (no Dutch sentence). */}
         {stronger !== undefined && stronger > 0 && (

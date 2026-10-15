@@ -90,6 +90,19 @@ export const aboutSections: AboutSection[] = [
       body: 'Elk personage heeft een eigen Nederlandse stem: Bram praat met de stem van Thijmen, Henk met Daniel, Amina met Ariël en Jada met Noa. Deze stemmen zijn opgenomen met ElevenLabs. Heeft een zin nog geen opname? Dan hoor je de stem van je eigen telefoon of computer.',
     },
   },
+  {
+    // Last: where to send a mistake or a question. The address is a tappable mail link in the
+    // body (the About page renders CONTACT_EMAIL as one, in every language and in Dutch).
+    id: 'a.contact', emoji: '✉️', title: 'Questions or a mistake?',
+    body: 'Did you find a mistake, for example in a translation or in a tip? Or do you have a question? Send an e-mail to hoi@vloertaal.nl. A screenshot helps.',
+    nl: {
+      title: 'Vraag of fout?',
+      body: 'Zie je een fout, bijvoorbeeld in een vertaling of een tip? Of heb je een vraag? Stuur een mail naar hoi@vloertaal.nl. Een schermafbeelding helpt.',
+    },
+  },
 ];
+
+/** The owner's address: in the 'a.contact' body, written exactly so in every language. */
+export const CONTACT_EMAIL = 'hoi@vloertaal.nl';
 
 export const aboutIds: string[] = aboutSections.flatMap((s) => [s.id, `${s.id}.b`]);
