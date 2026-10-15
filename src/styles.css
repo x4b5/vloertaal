@@ -4027,3 +4027,15 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .result-hero:has(.bram-say) .cel-scene { aspect-ratio: 320 / 178; }
 .result-hero:has(.bram-say) .cel-svg { inset: auto 0 0; height: auto; aspect-ratio: 320 / 260; }
 .result-hero:has(.bram-say) { width: min(320px, 84vw); }
+
+/* ---- G4 b3 ---- */
+/* "Certificaat behaald!" on a short phone (360×640): Bram steps aside so the certificate, the
+   line and the pocket-card link fit above the buttons; anything brought into view (focus, a
+   scroll to the link) stops above the pinned footer. */
+html:has(.cert-earned) { scroll-padding-bottom: 150px; }
+@media (max-height: 760px) {
+  .cert-earned .cert-earned-bram { display: none; }
+  .cert-earned .milestone { padding-top: 10px; }
+  .cert-earned .cert-earned-line { margin-top: 14px; }
+  .cert-earned .cert-pocket { margin-top: 10px; }
+}
