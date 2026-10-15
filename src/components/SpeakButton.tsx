@@ -57,7 +57,7 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
       lang={label ? undefined : saidLang(play)}
     >
       {glyph ? <SpeakerIcon size={30} /> : slow ? <SlowIcon size={size === 'lg' ? 40 : 28} /> : <SpeakerIcon size={size === 'lg' ? 44 : 28} />}
-      {nextSlow && <span className="speak-turtle" aria-hidden><SlowIcon size={size === 'lg' ? 20 : 16} /></span>}
+      {nextSlow && <span className="speak-turtle" aria-hidden><SlowIcon size={size === 'lg' ? 26 : 22} /></span>}
     </button>
   );
 }
