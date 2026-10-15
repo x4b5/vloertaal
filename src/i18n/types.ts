@@ -304,6 +304,7 @@ export const uiEn = {
   gateTrust: 'No account. No name. Everything stays on this phone.',
   codeAccepted: 'Code accepted',
   tryLesson: 'Try one lesson first',
+  trialDone: 'You did the trial lesson. The code unlocks everything.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

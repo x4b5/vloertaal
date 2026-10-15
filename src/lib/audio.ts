@@ -245,29 +245,49 @@ export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voic
   const found = chosen && clipFor(chosen, text);
   if (found) {
     const { rec, id } = found;
-    stopAll();
-    const audio = new Audio(clipPath(rec, id));
-    audio.playbackRate = (slow ? RECORDED_RATE.slow : RECORDED_RATE.normal) * (VOICE_PACE[rec.voice.key] ?? 1);
-    audio.preservesPitch = true;
-    (audio as HTMLAudioElement & { webkitPreservesPitch?: boolean }).webkitPreservesPitch = true;
-    playing = audio;
-    const turn = ++speechTurn;
-    const end = () => {
-      if (turn === speechTurn) emitSpeech(text, false, slow);
-    };
-    audio.onended = end;
-    // A missing or broken clip: let the phone say it instead.
-    audio.onerror = () => {
-      if (turn === speechTurn) speakDevice(text, slow, lang, undefined);
-    };
-    audio.play().catch(end);
-    emitSpeech(text, true, slow);
+    playClip(clipPath(rec, id), text, slow, lang, VOICE_PACE[rec.voice.key] ?? 1);
     return;
   }
   // "device" (female characters) still honours a phone voice the learner picked.
   const isDeviceUri = (r: VoiceRef) => !!r && r !== DEVICE && !r.startsWith('piper:');
   const deviceUri = isDeviceUri(ref) ? ref! : ref === DEVICE && isDeviceUri(preferredVoice) ? preferredVoice! : undefined;
   speakDevice(text, slow, lang, deviceUri);
+}
+
+/** Plays one recorded clip; a missing or broken file lets the phone say the text instead. */
+function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', pace = 1): void {
+  stopAll();
+  const audio = new Audio(url);
+  audio.playbackRate = (slow ? RECORDED_RATE.slow : RECORDED_RATE.normal) * pace;
+  audio.preservesPitch = true;
+  (audio as HTMLAudioElement & { webkitPreservesPitch?: boolean }).webkitPreservesPitch = true;
+  playing = audio;
+  const turn = ++speechTurn;
+  const end = () => {
+    if (turn === speechTurn) emitSpeech(text, false, slow);
+  };
+  audio.onended = end;
+  // A missing or broken clip: let the phone say it instead.
+  audio.onerror = () => {
+    if (turn === speechTurn) speakDevice(text, slow, lang, undefined);
+  };
+  audio.play().catch(end);
+  emitSpeech(text, true, slow);
+}
+
+/** The default recorded voice and its "hallo" (committed in public/audio-el, like every clip). */
+const FIRST_WORD = { text: 'hallo', url: './audio-el/thijmen/w.hallo.mp3' };
+
+/**
+ * The first Dutch word of the first run, on its first tap (Yes, or a language from the list):
+ * "hallo" in the chosen or default recorded voice. On a slow first visit the voice index may not
+ * be here yet: then the default voice's own file plays (the phone's voice if that fails too).
+ * Silent in "Without sound".
+ */
+export function sayFirstWord(): void {
+  if (quietAudio) return;
+  if (recorded.length) speak(FIRST_WORD.text);
+  else playClip(FIRST_WORD.url, FIRST_WORD.text, false, 'nl');
 }
 
 function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: string | undefined): void {

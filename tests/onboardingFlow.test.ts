@@ -9,6 +9,7 @@ import {
   onboardingStep,
   previousStep,
   stepIndex,
+  trialDone,
   trialLessonAllowed,
   TRY_LESSON,
   TRY_LESSON_ID,
@@ -71,9 +72,13 @@ function tappables(html: string): string[] {
 describe('"Try one lesson first" (TRY_LESSON)', () => {
   const ar = getHelpLanguage('ar', 'f');
 
-  it('is off by default: the third slot of the password page stays empty', () => {
-    expect(TRY_LESSON).toBe(false);
-    expect(offersTryLesson(TRY_LESSON, null)).toBe(false);
+  it('is on (the owner chose the trial lesson)', () => {
+    expect(TRY_LESSON).toBe(true);
+    expect(offersTryLesson(TRY_LESSON, null)).toBe(true);
+  });
+
+  it('flag off: the third slot of the password page stays empty', () => {
+    expect(offersTryLesson(false, null)).toBe(false);
     const html = renderToStaticMarkup(createElement(Gate, {
       lang: ar, onAccess: () => {}, onBack: () => {},
       onTry: offersTryLesson(false, null) ? () => {} : undefined,
@@ -94,6 +99,18 @@ describe('"Try one lesson first" (TRY_LESSON)', () => {
     expect(html).toContain('gate-try');
     expect(html).toContain(ar!.ui.tryLesson!);
     expect(tappables(html)).toHaveLength(3);
+  });
+
+  it('once done, the page says the code unlocks everything and offers no second trial', () => {
+    expect(trialDone({ completed: {} }, null)).toBe(false);
+    expect(trialDone({ completed: { [TRY_LESSON_ID]: { best: 1, times: 1 } } as never }, null)).toBe(true);
+    expect(trialDone({ completed: { [TRY_LESSON_ID]: { best: 1, times: 1 } } as never }, 'preview')).toBe(false);
+    expect(offersTryLesson(true, null, true)).toBe(false);
+    const html = renderToStaticMarkup(createElement(Gate, { lang: ar, onAccess: () => {}, onBack: () => {}, trialDone: true }));
+    expect(html).toContain('gate-trial-done');
+    expect(html).toContain(ar!.ui.trialDone!);
+    expect(html).not.toContain('gate-try');
+    expect(tappables(html)).toHaveLength(2);
   });
 
   it('plays lesson 1.1 only', () => {
@@ -159,5 +176,15 @@ describe('a coach link is kept until the home has shown it', () => {
     expect(() => rememberLinkedUnit('u.safety')).not.toThrow();
     expect(rememberedLinkedUnit()).toBeNull();
     expect(() => forgetLinkedUnit()).not.toThrow();
+  });
+});
+
+describe('the first Dutch word on the first tap', () => {
+  it('is the default recorded voice\'s own "hallo" file (no new audio)', async () => {
+    const { readFileSync, existsSync } = await import('node:fs');
+    const voices = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8')) as { voices: { key: string; said: Record<string, string> }[] };
+    expect(voices.voices[0].key).toBe('thijmen');
+    expect(voices.voices[0].said['w.hallo']).toBe('hallo');
+    expect(existsSync('public/audio-el/thijmen/w.hallo.mp3')).toBe(true);
   });
 });

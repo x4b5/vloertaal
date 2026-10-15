@@ -8,7 +8,7 @@ import { Character } from './Characters';
 export function Greeting({ rtl = false }: { rtl?: boolean }) {
   // Right to left the back arrow is in the top-right corner, so Bram stands top-left (mirrored).
   return (
-    <div className={`onb-greet ${rtl ? 'onb-greet-rtl' : ''}`} aria-hidden>
+    <div className={`onb-greet ${rtl ? 'onb-greet-rtl' : ''}`} dir="ltr" aria-hidden>
       <span className="onb-greet-word" lang="nl">Hallo!</span>
       <Character who="bram" mood="wave" size={60} flip={rtl} />
     </div>

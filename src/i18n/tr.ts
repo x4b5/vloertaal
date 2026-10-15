@@ -270,6 +270,7 @@ const lang: HelpLanguageSource = {
     gateTrust: 'Hesap yok. İsim yok. Her şey bu telefonda kalır.',
     codeAccepted: 'Kod kabul edildi',
     tryLesson: 'Önce bir ders dene',
+    trialDone: 'Deneme dersini bitirdin. Kod her şeyin kilidini açar.',
   },
   gloss: {
     // Unit: First day at work

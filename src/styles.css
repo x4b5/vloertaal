@@ -3894,6 +3894,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .gate-who { padding: 10px 12px; border-radius: 12px; background: var(--concrete-2, var(--bg)); color: var(--ink); }
 .gate-who > .icon { color: var(--ink-2); }
 .gate-trust { margin: 14px 0 0; font-size: 0.9rem; color: var(--muted); }
+.gate-trial-done { padding: 10px 12px; border-radius: 12px; border: 2px solid var(--line); color: var(--ink); font-weight: 600; }
+.gate-trial-done > .icon { color: var(--go-right, var(--ink-2)); }
 .pw-ok { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--go-right, var(--ink-2)); font-weight: 600; }
 .pw-ok .bi { flex-direction: row; flex-wrap: wrap; gap: 0 8px; align-items: baseline; }
 .pw-ok .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }

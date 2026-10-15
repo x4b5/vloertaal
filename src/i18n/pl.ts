@@ -270,6 +270,7 @@ const lang: HelpLanguageSource = {
     gateTrust: 'Bez konta. Bez imienia. Wszystko zostaje na tym telefonie.',
     codeAccepted: 'Kod przyjęty',
     tryLesson: 'Najpierw wypróbuj jedną lekcję',
+    trialDone: { m: 'Ukończyłeś lekcję próbną. Kod odblokowuje wszystko.', f: 'Ukończyłaś lekcję próbną. Kod odblokowuje wszystko.' },
   },
   gloss: {
     // Unit: First day at work

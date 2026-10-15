@@ -38,7 +38,7 @@ import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
 import { pushSubStep } from '../lib/onbHistory';
-import { autoSpeak } from '../lib/audio';
+import { sayFirstWord } from '../lib/audio';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
   /** The help language in use (Settings): the "in review" tag is written in it. */
@@ -113,7 +113,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   }, [list, hasGuess]);
   /** The first tap: the first Dutch word ("hallo", recorded) plays, then the next page shows. */
   const pick = (code: LangCode | null) => {
-    autoSpeak('hallo');
+    sayFirstWord();
     onDone(code);
   };
   // The guess page needs only its few strings (src/i18n/meta.ts): no pack to wait for.

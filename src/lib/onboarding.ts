@@ -5,10 +5,11 @@ import { shouldAskGender } from './askGender';
 import type { Progress } from './progress';
 
 /**
- * "Try one lesson first" on the password page (lesson 1.1 only, then the password again). Off
- * until the owner decides; the slot on the password page stays empty while it is off.
+ * "Try one lesson first" on the password page (the owner's choice: on). Lesson 1.1 only, then its
+ * result, then the password page again with a line that the code unlocks everything. With the
+ * flag off the slot on the password page stays empty.
  */
-export const TRY_LESSON = false;
+export const TRY_LESSON = true;
 
 /** The one lesson the "try first" button plays: lesson 1.1. */
 export const TRY_LESSON_ID = units[0].lessons[0].id;
@@ -54,7 +55,15 @@ export function previousStep(step: OnbStep, p: OnbProgress): OnbStep | null {
   }
 }
 
-/** Whether the password page offers "Try one lesson first" (the flag, and only before a password). */
-export function offersTryLesson(flag: boolean, access: Access | null): boolean {
-  return flag && !access;
+/** The trial lesson was done on this phone (lesson 1.1 is in the progress) and there is no code yet. */
+export function trialDone(p: Pick<Progress, 'completed'>, access: Access | null): boolean {
+  return !access && Boolean(p.completed[TRY_LESSON_ID]);
+}
+
+/**
+ * Whether the password page offers "Try one lesson first": the flag, only before a password, and
+ * only once (after the trial the page says that the code unlocks everything instead).
+ */
+export function offersTryLesson(flag: boolean, access: Access | null, done = false): boolean {
+  return flag && !access && !done;
 }

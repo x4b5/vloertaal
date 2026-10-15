@@ -13,7 +13,7 @@ import { Settings } from './components/Settings';
 import { Coaches } from './components/Coaches';
 import { GenderScreen } from './components/Gender';
 import { shouldAskGender } from './lib/askGender';
-import { offersTryLesson, onboardingStep, previousStep, stepIndex, trialLessonAllowed, TRY_LESSON, TRY_LESSON_ID, type OnbStep } from './lib/onboarding';
+import { offersTryLesson, onboardingStep, previousStep, stepIndex, trialDone, trialLessonAllowed, TRY_LESSON, TRY_LESSON_ID, type OnbStep } from './lib/onboarding';
 import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
@@ -423,7 +423,8 @@ export default function App() {
           onBack={onbBack}
           accepted={gateAgain ? access : null}
           code={typedCode.current}
-          onTry={offersTryLesson(TRY_LESSON, access) ? startTrial : undefined}
+          onTry={offersTryLesson(TRY_LESSON, access, trialDone(progress, access)) ? startTrial : undefined}
+          trialDone={trialDone(progress, access)}
           greet={greet}
         />
       );
@@ -455,7 +456,9 @@ export default function App() {
         // The lesson's unit is the current block while it is unfinished (see src/lib/route.ts).
         if (!daily) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
         // The very first lesson: its result shows, once, where the emergency phrases are.
-        const phrases = !daily && !progress.phrasesShown && !Object.keys(progress.completed).length;
+        // (Not after the trial lesson: the result then leads back to the password page; the
+        // first lesson after it shows the row instead.)
+        const phrases = !daily && !inTrial && !progress.phrasesShown && Object.keys(progress.completed).every(trialLessonAllowed);
         if (phrases) next.phrasesShown = true;
         setProgress(next);
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.

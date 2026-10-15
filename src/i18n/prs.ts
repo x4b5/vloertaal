@@ -270,6 +270,7 @@ const lang: HelpLanguageSource = {
     gateTrust: 'بدون حساب. بدون نام. همه چیز در همین مبایل می‌ماند.',
     codeAccepted: 'کد قبول شد',
     tryLesson: 'اول یک درس را امتحان کنید',
+    trialDone: 'درس آزمایشی را انجام دادید. کد همه چیز را باز می‌کند.',
   },
   gloss: {
     // Units

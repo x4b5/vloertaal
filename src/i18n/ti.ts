@@ -270,6 +270,7 @@ const lang: HelpLanguageSource = {
     gateTrust: 'ኣካውንት የለን። ስም የለን። ኩሉ ኣብዚ ተሌፎን ይተርፍ።',
     codeAccepted: 'እቲ ኮድ ተቐቢሉ',
     tryLesson: { m: 'መጀመርታ ሓደ ትምህርቲ ፈትን', f: 'መጀመርታ ሓደ ትምህርቲ ፈትኒ' },
+    trialDone: { m: 'ናይ ፈተነ ትምህርቲ ወዲእካ። እቲ ኮድ ኩሉ ይኸፍት።', f: 'ናይ ፈተነ ትምህርቲ ወዲእኪ። እቲ ኮድ ኩሉ ይኸፍት።' },
   },
   gloss: {
     // Units

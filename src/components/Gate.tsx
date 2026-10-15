@@ -104,10 +104,11 @@ function PasswordForm({ onAccess, accept, lang, labelHidden = false, accepted = 
  * password was entered on this device. The help language says what the app is, who gives you the
  * code (a teacher, coach or employer) and that nothing about you leaves the phone; the Dutch
  * question has a speaker. Two things to tap (the field and the button); the top-start arrow goes
- * back one page and is chrome. The third slot is free for "Try one lesson first" (`onTry`, behind
- * TRY_LESSON in src/lib/onboarding.ts): without it the slot stays empty.
+ * back one page and is chrome. The third is "Try one lesson first" (`onTry`, TRY_LESSON in
+ * src/lib/onboarding.ts: lesson 1.1 only, then this page again with `trialDone`); without it the
+ * slot stays empty.
  */
-export function Gate({ lang, onAccess, onBack, accepted = null, code = '', onTry, greet = false }: {
+export function Gate({ lang, onAccess, onBack, accepted = null, code = '', onTry, greet = false, trialDone = false }: {
   lang?: HelpLanguage;
   onAccess: (a: Access, typed: string) => void;
   /** Back one page: to "Woman or man?" or to the language. */
@@ -120,6 +121,8 @@ export function Gate({ lang, onAccess, onBack, accepted = null, code = '', onTry
   onTry?: () => void;
   /** The first page after the language was picked: Bram waves "Hallo!" once. */
   greet?: boolean;
+  /** Back here after the trial lesson: "You did the trial lesson. The code unlocks everything." */
+  trialDone?: boolean;
 }) {
   const ask = ui('enterPassword', lang);
   const tagline = lang?.ui.appTagline;
@@ -144,6 +147,12 @@ export function Gate({ lang, onAccess, onBack, accepted = null, code = '', onTry
           </h1>
           <QuestionSay nl="Wat is de code?" help={ask.help} lang={lang} />
         </div>
+        {trialDone && (
+          <p className="gate-note gate-trial-done">
+            <CheckIcon size={20} />
+            <Bi text={ui('trialDone', lang)} />
+          </p>
+        )}
         <p className="gate-note gate-who">
           <KeyIcon size={22} />
           <Bi text={ui('gateWho', lang)} />

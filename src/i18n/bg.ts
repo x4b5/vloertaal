@@ -270,6 +270,7 @@ const lang: HelpLanguageSource = {
     gateTrust: 'Без акаунт. Без име. Всичко остава на този телефон.',
     codeAccepted: 'Кодът е приет',
     tryLesson: 'Първо пробвай един урок',
+    trialDone: 'Завърши пробния урок. Кодът отключва всичко.',
   },
   gloss: {
     // Units
