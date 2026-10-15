@@ -8,6 +8,8 @@ import { ChromeHead } from './ChromeBack';
 import { Greeting } from './Greeting';
 import { CheckIcon, ChevronIcon, KeyIcon, LockIcon, PhoneIcon } from './Icons';
 import { LogoMark, Wordmark } from './Logo';
+import { NlPair } from './NlPair';
+import { dutchUi } from '../lib/track';
 
 /**
  * One password field and a big yellow button. The field shows what is typed (no show/hide eye):
@@ -138,12 +140,14 @@ export function Gate({ lang, onAccess, onBack, accepted = null, code = '', onTry
         {/* What this is, in the help language (large); the Dutch small under it. */}
         <p className="gate-tagline">
           {tagline && lang ? <HelpText className="gate-tagline-help" text={tagline} lang={lang} /> : <span className="gate-tagline-help" lang="en">{ui('appTagline').en}</span>}
-          <span className="gate-tag" lang="nl">Nederlands voor op de werkvloer</span>
+          {/* The work-rules track is not about learning Dutch: its own tagline (above) only. */}
+          {!dutchUi(lang) && <span className="gate-tag" lang="nl">Nederlands voor op de werkvloer</span>}
         </p>
         <div className="gate-q">
           <h1 className="gate-title">
-            <span className="gate-title-nl" lang="nl"><bdi dir="ltr">Wat is de code?</bdi></span>
-            <Bi text={ask} />
+            {dutchUi(lang)
+              ? <Bi text={ask} />
+              : <><span className="gate-title-nl" lang="nl"><bdi dir="ltr">Wat is de code?</bdi></span><Bi text={ask} /></>}
           </h1>
           <QuestionSay nl="Wat is de code?" help={ask.help} lang={lang} />
         </div>
@@ -180,8 +184,7 @@ export function UpgradeCard({ lang, onAccess }: { lang?: HelpLanguage; onAccess:
       <h2 id="unlock-full-title" className="upgrade-title">
         <LockIcon size={24} />
         <span className="bi">
-          <span lang="nl" className="upgrade-nl">Volledige versie ontgrendelen</span>
-          <Bi text={ui('unlockFull', lang)} />
+          <NlPair nlFirst nl="Volledige versie ontgrendelen" nlClass="upgrade-nl" text={ui('unlockFull', lang)} />
         </span>
       </h2>
       <p className="upgrade-hint"><Bi text={ui('unlockHint', lang)} /></p>

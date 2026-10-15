@@ -8,6 +8,7 @@ import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, type Exercise
 import { shuffle } from '../lib/random';
 import { breakable, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
+import { NlPair } from './NlPair';
 import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
 import { CheckIcon, CloseIcon, SpeakerIcon } from './Icons';
 import { cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
@@ -910,8 +911,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
         <span className="tip-badge-emoji" aria-hidden>{tip.emoji}</span>
         {/* The help language large; the Dutch name is a small label under it. */}
         <span className="tip-badge-text tip-badge-swap">
-          <Bi className="tip-badge-main" text={ui('cultureBadge', lang)} />
-          <span className="tip-badge-nl" lang="nl">Zo werkt het hier</span>
+          <NlPair nl="Zo werkt het hier" nlClass="tip-badge-nl" className="tip-badge-main" text={ui('cultureBadge', lang)} />
         </span>
       </div>
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
@@ -924,8 +924,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
           <div className="speaker-bubble tip-bubble">
             <SpeakButton glyph text={tip.phrase.nl} help={lang} voice={voiceFor(tipCast(tip, lang?.gender))} />
             <span className="tip-phrase">
-              <span lang="nl" className="tip-phrase-nl">{breakable(tip.phrase.nl)}</span>
-              <Bi text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
+              <NlPair content nlFirst nl={breakable(tip.phrase.nl)} nlClass="tip-phrase-nl" text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
             </span>
           </div>
         </div>

@@ -4105,3 +4105,20 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 /* After a review with many words still due: one calm line (not a button). */
 .result-waiting { flex-wrap: nowrap; gap: 10px; color: var(--ink-2); font-size: 0.95rem; font-weight: 500; }
 .result-waiting .bi { flex: 0 1 auto; min-width: 0; align-items: flex-start; text-align: start; }
+
+/* Language list: a flag where it is not sensitive, else a calm tile with letters of the script
+   (src/i18n/meta.ts LangMeta.flag). Same box either way, so the names stay aligned. */
+.lang-mark { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 26px; flex: none; }
+.lang-flag {
+  font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+  font-size: 26px; line-height: 1;
+}
+.lang-sample {
+  display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 24px;
+  border-radius: 6px; background: var(--track); color: var(--muted);
+  font-size: 0.82rem; font-weight: 650; line-height: 1; white-space: nowrap; overflow: hidden;
+}
+.lang-sample:is([lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.95rem; }
+.lang-grid-compact .lang-mark { width: 30px; height: 22px; }
+.lang-grid-compact .lang-flag { font-size: 22px; }
+.lang-grid-compact .lang-sample { width: 30px; height: 21px; font-size: 0.75rem; }

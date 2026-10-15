@@ -17,18 +17,31 @@ export interface LangMeta<C extends UiCode = LangCode> {
   gendered: boolean;
   reviewed: boolean;
   ui: Pick<Record<UiKey, string>, 'chooseLanguage' | 'langGuessYes' | 'langGuessOther' | 'appTagline'>;
+  /**
+   * A country flag beside the name in the language list, only where a flag is not sensitive (the
+   * owner's choice). Left out ON PURPOSE, please keep it that way:
+   *  - ar: Arabic is spoken in more than 20 countries; no one flag is "Arabic";
+   *  - ti: an Eritrean (regime) flag is painful for refugees, and Tigray's is sensitive too;
+   *  - fa: the Iranian flag stands for the regime many fled;
+   *  - prs: the Afghan flag is contested (the Taliban flag or the old tricolour);
+   *  - English (no meta here) is a bridge language, not a country.
+   * Without a flag the list shows `sample` instead: a small tile with a few letters of the script.
+   */
+  flag?: string;
+  /** Letters of the language's script on a calm tile, where there is no flag (same size). */
+  sample?: string;
 }
 
 export const languageMeta: readonly LangMeta[] = [
-  { code: 'ar', name: 'Arabic', nativeName: 'العربية', dir: 'rtl', gendered: true, reviewed: false, ui: { chooseLanguage: 'اختر لغة المساعدة', langGuessYes: 'نعم', langGuessOther: 'لغة أخرى', appTagline: 'الهولندية لمكان العمل' } },
-  { code: 'ti', name: 'Tigrinya', nativeName: 'ትግርኛ', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'ቋንቋ ሓገዝካ ምረጽ', langGuessYes: 'እወ', langGuessOther: 'ካልእ ቋንቋ', appTagline: 'ሆላንድኛ ንቦታ ስራሕ' } },
-  { code: 'fa', name: 'Persian (Iran)', nativeName: 'فارسی', dir: 'rtl', gendered: false, reviewed: false, ui: { chooseLanguage: 'زبان خود را انتخاب کنید', langGuessYes: 'بله', langGuessOther: 'زبان دیگر', appTagline: 'هلندی برای محیط کار' } },
-  { code: 'prs', name: 'Dari (Afghanistan)', nativeName: 'دری', dir: 'rtl', gendered: false, reviewed: false, ui: { chooseLanguage: 'زبان کمکی خود را انتخاب کنید', langGuessYes: 'بلی', langGuessOther: 'زبان دیگر', appTagline: 'هالندی برای جای کار' } },
-  { code: 'uk', name: 'Ukrainian', nativeName: 'Українська', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Обери мову підказок', langGuessYes: 'Так', langGuessOther: 'Інша мова', appTagline: 'Нідерландська для роботи' } },
-  { code: 'tr', name: 'Turkish', nativeName: 'Türkçe', dir: 'ltr', gendered: false, reviewed: false, ui: { chooseLanguage: 'Yardım dilini seç', langGuessYes: 'Evet', langGuessOther: 'Başka dil', appTagline: 'İş yeri için Hollandaca' } },
-  { code: 'pl', name: 'Polish', nativeName: 'Polski', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Wybierz język pomocy', langGuessYes: 'Tak', langGuessOther: 'Inny język', appTagline: 'Niderlandzki do pracy' } },
-  { code: 'ro', name: 'Romanian', nativeName: 'Română', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Alege limba de ajutor', langGuessYes: 'Da', langGuessOther: 'Altă limbă', appTagline: 'Olandeză pentru locul de muncă' } },
-  { code: 'bg', name: 'Bulgarian', nativeName: 'Български', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Избери език за помощ', langGuessYes: 'Да', langGuessOther: 'Друг език', appTagline: 'Нидерландски за работното място' } },
+  { code: 'ar', name: 'Arabic', nativeName: 'العربية', dir: 'rtl', gendered: true, reviewed: false, ui: { chooseLanguage: 'اختر لغة المساعدة', langGuessYes: 'نعم', langGuessOther: 'لغة أخرى', appTagline: 'الهولندية لمكان العمل' }, sample: 'ع' },
+  { code: 'ti', name: 'Tigrinya', nativeName: 'ትግርኛ', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'ቋንቋ ሓገዝካ ምረጽ', langGuessYes: 'እወ', langGuessOther: 'ካልእ ቋንቋ', appTagline: 'ሆላንድኛ ንቦታ ስራሕ' }, sample: 'ሀ' },
+  { code: 'fa', name: 'Persian (Iran)', nativeName: 'فارسی', dir: 'rtl', gendered: false, reviewed: false, ui: { chooseLanguage: 'زبان خود را انتخاب کنید', langGuessYes: 'بله', langGuessOther: 'زبان دیگر', appTagline: 'هلندی برای محیط کار' }, sample: 'فا' },
+  { code: 'prs', name: 'Dari (Afghanistan)', nativeName: 'دری', dir: 'rtl', gendered: false, reviewed: false, ui: { chooseLanguage: 'زبان کمکی خود را انتخاب کنید', langGuessYes: 'بلی', langGuessOther: 'زبان دیگر', appTagline: 'هالندی برای جای کار' }, sample: 'دری' },
+  { code: 'uk', name: 'Ukrainian', nativeName: 'Українська', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Обери мову підказок', langGuessYes: 'Так', langGuessOther: 'Інша мова', appTagline: 'Нідерландська для роботи' }, flag: '🇺🇦' },
+  { code: 'tr', name: 'Turkish', nativeName: 'Türkçe', dir: 'ltr', gendered: false, reviewed: false, ui: { chooseLanguage: 'Yardım dilini seç', langGuessYes: 'Evet', langGuessOther: 'Başka dil', appTagline: 'İş yeri için Hollandaca' }, flag: '🇹🇷' },
+  { code: 'pl', name: 'Polish', nativeName: 'Polski', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Wybierz język pomocy', langGuessYes: 'Tak', langGuessOther: 'Inny język', appTagline: 'Niderlandzki do pracy' }, flag: '🇵🇱' },
+  { code: 'ro', name: 'Romanian', nativeName: 'Română', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Alege limba de ajutor', langGuessYes: 'Da', langGuessOther: 'Altă limbă', appTagline: 'Olandeză pentru locul de muncă' }, flag: '🇷🇴' },
+  { code: 'bg', name: 'Bulgarian', nativeName: 'Български', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Избери език за помощ', langGuessYes: 'Да', langGuessOther: 'Друг език', appTagline: 'Нидерландски за работното място' }, flag: '🇧🇬' },
 ];
 
 export const LANG_CODES: readonly LangCode[] = languageMeta.map((l) => l.code);
@@ -47,7 +60,18 @@ export const NL_META: LangMeta<'nl'> = {
   gendered: false,
   reviewed: true,
   ui: { chooseLanguage: 'Kies je taal', langGuessYes: 'Ja', langGuessOther: 'Andere taal', appTagline: 'Werken in Nederland: zo gaat het' },
+  flag: '🇳🇱',
 };
+
+/** "English only" in the language list: a bridge language, not a country, so no flag (see LangMeta.flag). */
+export const ENGLISH_SAMPLE = 'Aa';
+
+/** What the language list shows beside a name: a flag, or a tile with letters of the script. null = English. */
+export function languageMark(code: UiCode | null): { flag: string } | { sample: string } {
+  if (code === null) return { sample: ENGLISH_SAMPLE };
+  const m = langMeta(code);
+  return m?.flag ? { flag: m.flag } : { sample: m?.sample ?? '' };
+}
 
 export function langMeta(code: LangCode | null | undefined): LangMeta | undefined;
 export function langMeta(code: UiCode | null | undefined): LangMeta<UiCode> | undefined;

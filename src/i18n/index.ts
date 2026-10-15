@@ -4,7 +4,7 @@ import type { LanguagePack } from './packs/types';
 import type { Gender, HelpLanguage, HelpLanguageSource, LangCode, LangText, PluralCategory, PluralForms, UiCode, UiKey, UiText } from './types';
 import { forGender, GENDERED_LANGS, isPlural, PLURAL_CATEGORIES, uiEn } from './types';
 
-export { languageMeta, langMeta, metaLanguage, LANG_CODES, NL_META, type LangMeta } from './meta';
+export { languageMeta, langMeta, languageMark, metaLanguage, LANG_CODES, NL_META, type LangMeta } from './meta';
 
 /**
  * The help languages are loaded on demand: each is its own file (src/i18n/packs), about 50 kB

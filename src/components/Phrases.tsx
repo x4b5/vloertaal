@@ -5,6 +5,7 @@ import type { HelpLanguage } from '../i18n/types';
 import { speechAvailable } from '../lib/audio';
 import { breakable } from '../lib/dutch';
 import { Bi } from './Bi';
+import { NlPair } from './NlPair';
 import { AlertIcon, ChevronIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 
@@ -21,8 +22,7 @@ export function PhraseList({ lang }: { lang?: HelpLanguage }) {
             <li key={id} className="phrase">
               <SpeakButton text={item.nl} help={lang} />
               <div className="phrase-text">
-                <span className="phrase-nl" lang="nl">{breakable(item.nl)}</span>
-                <Bi text={gloss(id, item.en, lang)} />
+                <NlPair content nlFirst nl={breakable(item.nl)} nlClass="phrase-nl" text={gloss(id, item.en, lang)} />
               </div>
             </li>
           );
@@ -56,8 +56,7 @@ export function PhraseSheet({ lang, onClose }: { lang?: HelpLanguage; onClose: (
         <div className="phrase-sheet-head">
           <span className="phrase-sheet-icon" aria-hidden><AlertIcon size={26} /></span>
           <h2 id="phrase-sheet-title" className="sheet-title">
-            <span className="phrase-sheet-nl" lang="nl">Noodzinnen</span>
-            <Bi text={ui('phrasebook', lang)} />
+            <NlPair nlFirst nl="Noodzinnen" nlClass="phrase-sheet-nl" text={ui('phrasebook', lang)} />
           </h2>
         </div>
         <div className="phrase-sheet-list">

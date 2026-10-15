@@ -37,17 +37,17 @@ export interface Sector {
 
 export const sectors: Sector[] = [
   { id: 'logistics', nl: 'Logistiek', key: 'sectorLogistics', units: ['u.warehouse'], focus: ['u.safety', 'u.time'],
-    rules: { units: ['r.warehouse'], focus: ['r.safety', 'r.time'] } },
+    rules: { units: ['r.warehouse'], focus: ['r.veilig', 'r.tijd'] } },
   { id: 'construction', nl: 'Bouw', key: 'sectorConstruction', units: ['u.build'], focus: ['u.safety', 'u.tools'],
-    rules: { units: ['r.build'], focus: ['r.safety', 'r.contract'] } },
+    rules: { units: ['r.build'], focus: ['r.veilig', 'r.contract'] } },
   { id: 'production', nl: 'Productie', key: 'sectorProduction', units: ['u.factory'], focus: ['u.safety', 'u.tools'],
-    rules: { units: ['r.factory'], focus: ['r.safety', 'r.time'] } },
+    rules: { units: ['r.factory'], focus: ['r.veilig', 'r.tijd'] } },
   { id: 'care', nl: 'Zorg', key: 'sectorCare', units: ['u.care'], focus: ['u.teamwork', 'u.health'],
-    rules: { units: ['r.care'], focus: ['r.team', 'r.sick'] } },
+    rules: { units: ['r.care'], focus: ['r.samen', 'r.ziek'] } },
   { id: 'hospitality', nl: 'Horeca', key: 'sectorHospitality', units: ['u.horeca'], focus: ['u.teamwork', 'u.time'],
-    rules: { units: ['r.horeca'], focus: ['r.time', 'r.pay'] } },
+    rules: { units: ['r.horeca'], focus: ['r.tijd', 'r.loon'] } },
   { id: 'cleaning', nl: 'Schoonmaak', key: 'sectorCleaning', units: ['u.clean'], focus: ['u.time', 'u.safety'],
-    rules: { units: ['r.clean'], focus: ['r.safety', 'r.time'] } },
+    rules: { units: ['r.clean'], focus: ['r.veilig', 'r.tijd'] } },
 ];
 
 /** A sector's own units and focus units in one track. */
@@ -75,15 +75,15 @@ export function isOtherSector(unitId: string, sector: SectorChoice | undefined):
 
 /** The slot for the learner's own sector unit(s): where the warehouse unit sits in the course (05, right after Safety). */
 const SECTOR_SLOT = 'u.warehouse';
-/** In the work-rules track the own sector unit(s) come right after this basis unit. */
-const RULES_SLOT_AFTER = 'r.safety';
+/** In the work-rules track the own sector unit(s) come right after this basis unit ("Veilig werken"). */
+const RULES_SLOT_AFTER = 'r.veilig';
 
 /**
  * The path for a sector: `main` (basis units, with the learner's own sector unit(s) early, in the
  * warehouse's slot right after Safety) and `other` (the other sectors' units, in course order).
  * With no sector chosen, or 'none': the whole course in its own order.
- * In the work-rules track the same, with the own sector's rules unit(s) right after r.safety (at
- * the end of the basis units while r.safety is not written yet).
+ * In the work-rules track the same, with the own sector's rules unit(s) right after r.veilig (at
+ * the end of the basis units if r.veilig is not there).
  */
 export function coursePlan(sector: SectorChoice | undefined, track: Track = 'taal'): { main: Unit[]; other: Unit[] } {
   if (track === 'regels') return rulesPlan(sector);

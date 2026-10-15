@@ -1,6 +1,8 @@
-import { units } from '../content/curriculum';
+import { courseUnits, findCourseUnit, unitOfLesson } from '../content/courses';
 import { isMixLesson } from '../content/review';
-import { coursePlan, sectorPriority, sectors, type SectorChoice } from '../content/sectors';
+import { coursePlan, sectorFirstFocus, sectorPriority, type SectorChoice } from '../content/sectors';
+import type { UiCode } from '../i18n/types';
+import { trackOf, type Track } from './track';
 import type { Lesson, Unit } from '../content/types';
 import { type Access, loadAccess, unitAllowed } from './access';
 import { unitDone } from './certificate';
@@ -30,15 +32,23 @@ export interface RouteInput {
   pickedUnit?: string;
   /** Local date of the last finished "Herhaal vandaag" (Progress.reviewDay). */
   reviewDay?: string;
+  /** The help language: 'nl' is the work-rules track (src/lib/track.ts). Passing the progress gives both. */
+  helpLang?: UiCode | null;
+  /** The track; default: the one of helpLang (the Dutch course without one). */
+  track?: Track;
 }
 
+/** The track of a route input: given, else the one of its help language. */
+const trackIn = (input: RouteInput): Track => input.track ?? trackOf(input);
+
 /** Every unit in the order the learner meets them: their course, then the other sectors' units. */
-export function routeOrder(sector: SectorChoice | undefined): Unit[] {
-  const { main, other } = coursePlan(sector);
+export function routeOrder(sector: SectorChoice | undefined, track: Track = 'taal'): Unit[] {
+  const { main, other } = coursePlan(sector, track);
   return [...main, ...other];
 }
 
-const findUnit = (id: string | undefined) => (id ? units.find((u) => u.id === id) : undefined);
+/** A unit of this track's course (a current block saved in the other track does not count). */
+const findUnit = (id: string | undefined, track: Track) => (id ? courseUnits(track).find((u) => u.id === id) : undefined);
 const started = (unit: Unit, completed: Completed) => unit.lessons.some((l) => completed[l.id]);
 
 /**
@@ -48,13 +58,15 @@ const started = (unit: Unit, completed: Completed) => unit.lessons.some((l) => c
  *  - A brand-new learner (nothing done anywhere): the first unit of their course.
  *  - Otherwise (the last block is finished): null, so the home shows the 3 choices.
  */
-function blockAsSaved({ sector, completed, currentUnit }: RouteInput): Unit | null {
-  const chosen = findUnit(currentUnit);
+function blockAsSaved(input: RouteInput): Unit | null {
+  const { sector, completed, currentUnit } = input;
+  const track = trackIn(input);
+  const chosen = findUnit(currentUnit, track);
   if (chosen) return unitDone(chosen, completed) ? null : chosen;
-  const order = routeOrder(sector);
+  const order = routeOrder(sector, track);
   const busy = order.find((u) => started(u, completed) && !unitDone(u, completed));
   if (busy) return busy;
-  if (!units.some((u) => started(u, completed))) return order[0] ?? null;
+  if (!courseUnits(track).some((u) => started(u, completed))) return order[0] ?? null;
   return null;
 }
 
@@ -76,7 +88,8 @@ export function currentBlock(input: RouteInput, today: Date = new Date(), access
   const block = blockAsSaved(input);
   if (!block || input.pickedUnit === block.id || input.reviewDay !== dayKey(today) || !onlyMixLeft(block, input.completed)) return block;
   const may = access ?? loadAccess() ?? 'full';
-  const next = nextChoices(input.sector, input.completed, undefined, units.length)
+  const track = trackIn(input);
+  const next = nextChoices(input.sector, input.completed, undefined, courseUnits(track).length, track)
     .find((u) => u.id !== block.id && !onlyMixLeft(u, input.completed) && unitAllowed(u.id, may));
   return next ?? block;
 }
@@ -87,7 +100,7 @@ export function currentBlock(input: RouteInput, today: Date = new Date(), access
  * review and does not go on past it.
  */
 export function pickBlock(unitId: string, completed: Completed): { currentUnit: string; pickedUnit?: string } {
-  const unit = findUnit(unitId);
+  const unit = findCourseUnit(unitId);
   return { currentUnit: unitId, pickedUnit: unit && onlyMixLeft(unit, completed) ? unitId : undefined };
 }
 
@@ -98,21 +111,21 @@ export function pickBlock(unitId: string, completed: Completed): { currentUnit: 
  * sectors' units fill up. `include` (the unfinished current block, when the learner asks to choose
  * another topic) is always one of them: it takes the last place when it is not in the list yet.
  */
-export function nextChoices(sector: SectorChoice | undefined, completed: Completed, include?: string, n = CHOICES): Unit[] {
-  const open = routeOrder(sector).filter((u) => !unitDone(u, completed));
+export function nextChoices(sector: SectorChoice | undefined, completed: Completed, include?: string, n = CHOICES, track: Track = 'taal'): Unit[] {
+  const open = routeOrder(sector, track).filter((u) => !unitDone(u, completed));
   // Weighted by the sector: the sector's first focus unit is recommended first (Safety for
   // warehouse, building and factory work, so it comes in week 1), then the next unit in course
   // order, the sector's own unit and the other basis units that matter most in that work; then
   // the course order. So a cleaner, a carer and a warehouse worker get different choices.
-  const weighted = sectorPriority(sector).map((id) => open.find((u) => u.id === id)).filter((u): u is Unit => Boolean(u));
-  const focus = sectors.find((s) => s.id === sector)?.focus[0];
+  const weighted = sectorPriority(sector, track).map((id) => open.find((u) => u.id === id)).filter((u): u is Unit => Boolean(u));
+  const focus = sectorFirstFocus(sector, track);
   const first = open.filter((u) => u.id === focus);
   // The recommended (first) choice brings new lessons: a unit with only its mixed review left
   // still comes, but after it.
   const fresh = open.find((u) => !onlyMixLeft(u, completed));
   const lead = [...first, ...open.slice(0, 1)].filter((u) => !onlyMixLeft(u, completed));
   const list = [...new Set([...lead, ...(fresh ? [fresh] : []), ...weighted, ...open])].slice(0, n);
-  const extra = findUnit(include);
+  const extra = findUnit(include, track);
   if (extra && !unitDone(extra, completed) && !list.some((u) => u.id === extra.id)) {
     if (list.length >= n) list.pop();
     list.push(extra);
@@ -121,8 +134,8 @@ export function nextChoices(sector: SectorChoice | undefined, completed: Complet
 }
 
 /** The finished units, in the order the learner meets them (for the "Gedaan" shelf). */
-export function doneBlocks(sector: SectorChoice | undefined, completed: Completed): Unit[] {
-  return routeOrder(sector).filter((u) => unitDone(u, completed));
+export function doneBlocks(sector: SectorChoice | undefined, completed: Completed, track: Track = 'taal'): Unit[] {
+  return routeOrder(sector, track).filter((u) => unitDone(u, completed));
 }
 
 /** The next lesson to play in a block: its first lesson not done yet (lessons open in order). */
@@ -152,7 +165,7 @@ export function routeNextLesson(input: RouteInput, access: Access = 'full', toda
  * practising a lesson of an older finished unit does not move the learner out of their block.
  */
 export function blockAfterLesson(currentUnit: string | undefined, lessonId: string, completed: Completed): string | undefined {
-  const unit = units.find((u) => u.lessons.some((l) => l.id === lessonId));
+  const unit = unitOfLesson(lessonId);
   if (!unit) return currentUnit;
   return unitDone(unit, completed) ? currentUnit : unit.id;
 }
@@ -161,8 +174,8 @@ export function blockAfterLesson(currentUnit: string | undefined, lessonId: stri
  * The home after a finished block: the 2 suggested next blocks (the recommended one first). The
  * third choice on that screen is "Other topic", which opens All topics.
  */
-export function homeSuggestions(sector: SectorChoice | undefined, completed: Completed): Unit[] {
-  return nextChoices(sector, completed, undefined, HOME_SUGGESTIONS);
+export function homeSuggestions(sector: SectorChoice | undefined, completed: Completed, track: Track = 'taal'): Unit[] {
+  return nextChoices(sector, completed, undefined, HOME_SUGGESTIONS, track);
 }
 
 /**

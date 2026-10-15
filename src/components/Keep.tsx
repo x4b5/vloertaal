@@ -7,6 +7,7 @@ import { backupFile, bestStreak, mergeBackup, parseBackup, replaceWithBackup, ty
 import { REMINDER_TIMES, rememberReminder, reminderIcs, saveFile } from '../lib/reminder';
 import { REMIND_DEFAULT, REMIND_OTHER_TIMES, REMIND_OWN, keepNext, ownTime, type KeepAction, type KeepStep } from '../lib/keep';
 import { Bi } from './Bi';
+import { NlPair } from './NlPair';
 import { Character } from './Characters';
 import { CheckIcon, ChevronIcon, CloseIcon } from './Icons';
 import { ChromeHead } from './ChromeBack';
@@ -23,8 +24,7 @@ import { LogoMark } from './Logo';
 function CardHead({ nl, text }: { nl: string; text: ReturnType<typeof ui> }) {
   return (
     <div className="keep-head">
-      <span className="keep-nl" lang="nl">{nl}</span>
-      <Bi className="keep-gloss" text={text} />
+      <NlPair nlFirst nl={nl} nlClass="keep-nl" className="keep-gloss" text={text} />
     </div>
   );
 }
@@ -72,28 +72,24 @@ export function InstallCard({ lang }: { lang?: HelpLanguage }) {
         <p className="keep-ok"><CheckIcon size={20} /><span lang="nl">Klaar!</span></p>
       ) : way === 'prompt' ? (
         <button type="button" className="btn btn-dark keep-btn" onClick={() => promptInstall().then((ok) => ok && setAdded(true))}>
-          <span lang="nl">Op beginscherm</span>
-          <Bi className="keep-btn-gloss" text={ui('installAdd', lang)} />
+          <NlPair nlFirst nl="Op beginscherm" className="keep-btn-gloss" text={ui('installAdd', lang)} />
         </button>
       ) : (
         <ol className="ios-steps">
           <li>
             <span className="ios-num" aria-hidden>1</span>
             <span className="ios-pic"><ShareGlyph /></span>
-            <span className="ios-nl" lang="nl">Deel</span>
-            <Bi className="ios-gloss" text={ui('iosStep1', lang)} />
+            <NlPair nlFirst nl="Deel" nlClass="ios-nl" className="ios-gloss" text={ui('iosStep1', lang)} />
           </li>
           <li>
             <span className="ios-num" aria-hidden>2</span>
             <span className="ios-pic"><AddGlyph /></span>
-            <span className="ios-nl" lang="nl">Zet op begin&shy;scherm</span>
-            <Bi className="ios-gloss" text={ui('iosStep2', lang)} />
+            <NlPair nlFirst nl="Zet op begin&shy;scherm" nlClass="ios-nl" className="ios-gloss" text={ui('iosStep2', lang)} />
           </li>
           <li>
             <span className="ios-num" aria-hidden>3</span>
             <span className="ios-pic"><LogoMark size={30} /></span>
-            <span className="ios-nl" lang="nl">Klaar</span>
-            <Bi className="ios-gloss" text={ui('iosStep3', lang)} />
+            <NlPair nlFirst nl="Klaar" nlClass="ios-nl" className="ios-gloss" text={ui('iosStep3', lang)} />
           </li>
         </ol>
       )}
@@ -136,8 +132,7 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
             >
               {on && <span className="remind-tick" aria-hidden><CheckIcon size={16} /></span>}
               <span className="remind-time">{t.time}</span>
-              <span className="remind-nl" lang="nl">{t.nl}</span>
-              <Bi className="remind-gloss" text={ui(t.key, lang)} />
+              <NlPair nlFirst nl={t.nl} nlClass="remind-nl" className="remind-gloss" text={ui(t.key, lang)} />
             </button>
           );
         })}
@@ -145,8 +140,7 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
       {ownOpen ? (
         <label className="remind-own picked">
           <span className="remind-own-text">
-            <span lang="nl">Andere tijd</span>
-            <Bi className="remind-gloss" text={ui('remindOwn', lang)} />
+            <NlPair nlFirst nl="Andere tijd" className="remind-gloss" text={ui('remindOwn', lang)} />
           </span>
           <input
             type="time"
@@ -159,8 +153,7 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
         <button type="button" className="remind-other" onClick={() => { setOwnOpen(true); setSaved(false); }}>
           <ClockGlyph />
           <span className="remind-own-text">
-            <span lang="nl">Andere tijd</span>
-            <Bi className="remind-gloss" text={ui('remindOwn', lang)} />
+            <NlPair nlFirst nl="Andere tijd" className="remind-gloss" text={ui('remindOwn', lang)} />
           </span>
         </button>
       )}
@@ -229,8 +222,7 @@ export function OwnTime({ lang, onTime, card = false, current }: {
           <label className={`max3-card set-own ${current ? 'picked' : ''}`}>
             <span className="max3-pic" aria-hidden><ClockGlyph /></span>
             <span className="max3-names">
-              <Bi className="max3-help" text={ui(REMIND_OWN.key, lang)} />
-              <span className="max3-nl" lang="nl">{REMIND_OWN.nl}</span>
+              <NlPair nl={REMIND_OWN.nl} nlClass="max3-nl" className="max3-help" text={ui(REMIND_OWN.key, lang)} />
             </span>
             {field}
           </label>
@@ -242,8 +234,7 @@ export function OwnTime({ lang, onTime, card = false, current }: {
     <label className="keep3-time-btn keep3-own" dir={rtl ? 'rtl' : undefined}>
       <ClockGlyph />
       <span className="keep3-btn-text">
-        <Bi className="keep3-btn-gloss" text={ui(REMIND_OWN.key, lang)} />
-        <span className="keep3-btn-nl" lang="nl" dir="ltr">{REMIND_OWN.nl}</span>
+        <NlPair nl={REMIND_OWN.nl} nlClass="keep3-btn-nl" dir="ltr" className="keep3-btn-gloss" text={ui(REMIND_OWN.key, lang)} />
       </span>
       {field}
     </label>
@@ -318,28 +309,23 @@ export function BackupCard({ progress, lang, onRestore }: {
           <p className="keep-hint"><Bi text={ui('backupAsk', lang)} /></p>
           <div className="keep-row">
             <button type="button" className="btn btn-dark keep-btn" onClick={() => apply('merge')}>
-              <span lang="nl">Samenvoegen</span>
-              <Bi className="keep-btn-gloss" text={ui('backupMerge', lang)} />
+              <NlPair nlFirst nl="Samenvoegen" className="keep-btn-gloss" text={ui('backupMerge', lang)} />
             </button>
             <button type="button" className="btn btn-ghost keep-btn danger" onClick={() => apply('replace')}>
-              <span lang="nl">Vervangen</span>
-              <Bi className="keep-btn-gloss" text={ui('backupReplace', lang)} />
+              <NlPair nlFirst nl="Vervangen" className="keep-btn-gloss" text={ui('backupReplace', lang)} />
             </button>
           </div>
           <button type="button" className="keep-link" onClick={() => setFound(null)}>
-            <span lang="nl">Annuleren</span>
-            <Bi className="keep-link-gloss" text={ui('cancel', lang)} />
+            <NlPair nlFirst nl="Annuleren" className="keep-link-gloss" text={ui('cancel', lang)} />
           </button>
         </div>
       ) : (
         <div className="keep-row">
           <button type="button" className="btn btn-dark keep-btn" onClick={download}>
-            <span lang="nl">Download</span>
-            <Bi className="keep-btn-gloss" text={ui('backupSave', lang)} />
+            <NlPair nlFirst nl="Download" className="keep-btn-gloss" text={ui('backupSave', lang)} />
           </button>
           <button type="button" className="btn btn-ghost keep-btn" onClick={() => file.current?.click()}>
-            <span lang="nl">Zet terug</span>
-            <Bi className="keep-btn-gloss" text={ui('backupLoad', lang)} />
+            <NlPair nlFirst nl="Zet terug" className="keep-btn-gloss" text={ui('backupLoad', lang)} />
           </button>
           <input
             ref={file}
@@ -385,8 +371,7 @@ function useGuard(step: string) {
 function KeepTitle({ nl, text, lang }: { nl: string; text: ReturnType<typeof ui>; lang?: HelpLanguage }) {
   return (
     <h1 className="keep3-title" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
-      <span className="keep3-nl" lang="nl" dir="ltr">{nl}</span>
-      <Bi className="keep3-gloss" text={text} />
+      <NlPair nlFirst nl={nl} nlClass="keep3-nl" dir="ltr" className="keep3-gloss" text={text} />
     </h1>
   );
 }
@@ -425,15 +410,13 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
           <button type="button" className="btn btn-primary keep3-btn keep-yes" onClick={guard(() => remind(REMIND_DEFAULT.time, 'yes'))} dir={rtl ? 'rtl' : undefined}>
             <span className="keep3-time" dir="ltr">{REMIND_DEFAULT.time}</span>
             <span className="keep3-btn-text">
-              <Bi className="keep3-btn-gloss" text={ui('remindYes', lang)} />
-              <span className="keep3-btn-nl" lang="nl" dir="ltr">Ja, na het werk</span>
+              <NlPair nl="Ja, na het werk" nlClass="keep3-btn-nl" dir="ltr" className="keep3-btn-gloss" text={ui('remindYes', lang)} />
             </span>
           </button>
           <button type="button" className="btn btn-ghost keep3-btn keep-other" onClick={guard(() => go('other'))} dir={rtl ? 'rtl' : undefined}>
             <ClockGlyph />
             <span className="keep3-btn-text">
-              <Bi className="keep3-btn-gloss" text={ui('remindOwn', lang)} />
-              <span className="keep3-btn-nl" lang="nl" dir="ltr">Andere tijd</span>
+              <NlPair nl="Andere tijd" nlClass="keep3-btn-nl" dir="ltr" className="keep3-btn-gloss" text={ui('remindOwn', lang)} />
             </span>
             <ChevronIcon size={20} />
           </button>
@@ -441,8 +424,7 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
           <button type="button" className="btn btn-ghost keep3-btn keep-no" onClick={guard(() => go('no'))} dir={rtl ? 'rtl' : undefined}>
             <CloseIcon size={26} />
             <span className="keep3-btn-text">
-              <Bi className="keep3-btn-gloss" text={ui('remindNo', lang)} />
-              <span className="keep3-btn-nl" lang="nl" dir="ltr">Nee, dank je</span>
+              <NlPair nl="Nee, dank je" nlClass="keep3-btn-nl" dir="ltr" className="keep3-btn-gloss" text={ui('remindNo', lang)} />
             </span>
           </button>
         </div>
@@ -461,8 +443,7 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
               <button type="button" className="keep3-time-btn" onClick={guard(() => remind(t.time, 'time'))} dir={rtl ? 'rtl' : undefined}>
                 <span className="keep3-time" dir="ltr">{t.time}</span>
                 <span className="keep3-btn-text">
-                  <Bi className="keep3-btn-gloss" text={ui(t.key, lang)} />
-                  <span className="keep3-btn-nl" lang="nl" dir="ltr">{t.nl}</span>
+                  <NlPair nl={t.nl} nlClass="keep3-btn-nl" dir="ltr" className="keep3-btn-gloss" text={ui(t.key, lang)} />
                 </span>
                 <CalendarGlyph />
               </button>
@@ -483,9 +464,9 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
         <p className="keep3-hint"><Bi text={ui('installHint', lang)} /></p>
         {way === 'ios' && (
           <ol className="ios-steps keep3-ios">
-            <li><span className="ios-num" aria-hidden>1</span><span className="ios-pic"><ShareGlyph /></span><span className="ios-nl" lang="nl">Deel</span><Bi className="ios-gloss" text={ui('iosStep1', lang)} /></li>
-            <li><span className="ios-num" aria-hidden>2</span><span className="ios-pic"><AddGlyph /></span><span className="ios-nl" lang="nl">Zet op begin&shy;scherm</span><Bi className="ios-gloss" text={ui('iosStep2', lang)} /></li>
-            <li><span className="ios-num" aria-hidden>3</span><span className="ios-pic"><LogoMark size={30} /></span><span className="ios-nl" lang="nl">Klaar</span><Bi className="ios-gloss" text={ui('iosStep3', lang)} /></li>
+            <li><span className="ios-num" aria-hidden>1</span><span className="ios-pic"><ShareGlyph /></span><NlPair nlFirst nl="Deel" nlClass="ios-nl" className="ios-gloss" text={ui('iosStep1', lang)} /></li>
+            <li><span className="ios-num" aria-hidden>2</span><span className="ios-pic"><AddGlyph /></span><NlPair nlFirst nl="Zet op begin&shy;scherm" nlClass="ios-nl" className="ios-gloss" text={ui('iosStep2', lang)} /></li>
+            <li><span className="ios-num" aria-hidden>3</span><span className="ios-pic"><LogoMark size={30} /></span><NlPair nlFirst nl="Klaar" nlClass="ios-nl" className="ios-gloss" text={ui('iosStep3', lang)} /></li>
           </ol>
         )}
         <div className="keep3-actions">
@@ -493,8 +474,7 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
             <button type="button" className="btn btn-primary keep3-btn keep-install" onClick={guard(() => { void promptInstall().finally(() => go('next')); })} dir={rtl ? 'rtl' : undefined}>
               <AddGlyph />
               <span className="keep3-btn-text">
-                <Bi className="keep3-btn-gloss" text={ui('installAdd', lang)} />
-                <span className="keep3-btn-nl" lang="nl" dir="ltr">Op beginscherm</span>
+                <NlPair nl="Op beginscherm" nlClass="keep3-btn-nl" dir="ltr" className="keep3-btn-gloss" text={ui('installAdd', lang)} />
               </span>
             </button>
           )}

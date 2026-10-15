@@ -1,18 +1,31 @@
 import { units } from '../content/curriculum';
+import { trackOfId } from './track';
 
 /**
  * Coach links: "?unit=<slug>" (e.g. ?unit=pay) opens the path at that unit, so a coach can send
  * a learner straight to one topic. Every unit can be entered at its first lesson (isUnlocked).
+ * A unit of the work-rules track keeps its whole id (?unit=r.pay), so it never clashes with the
+ * Dutch course's "pay".
  */
 export const unitLink = (unitId: string): string =>
-  `${location.origin}${location.pathname}?unit=${encodeURIComponent(unitId.slice(2))}`;
+  `${location.origin}${location.pathname}?unit=${encodeURIComponent(trackOfId(unitId) === 'regels' ? unitId : unitId.slice(2))}`;
 
-/** The unit a link asks for (its id, e.g. 'u.pay'), or null. */
+/**
+ * A rules unit's id as a link gives it. The rules course loads with its own file (after the
+ * link is read), so only the form is checked here; a unit that is not there is left alone later.
+ */
+const RULES_ID = /^r\.[a-z]+$/;
+
+/** Is this a unit a link may name: a unit of the Dutch course, or a well-formed rules unit id. */
+const knownUnit = (id: string) => (trackOfId(id) === 'regels' ? RULES_ID.test(id) : units.some((u) => u.id === id));
+
+/** The unit a link asks for (its id, e.g. 'u.pay' or 'r.pay'), or null. */
 export function unitFromSearch(search: string): string | null {
   const slug = new URLSearchParams(search).get('unit');
   if (!slug) return null;
-  const id = `u.${slug.trim().toLowerCase()}`;
-  return units.some((u) => u.id === id) ? id : null;
+  const s = slug.trim().toLowerCase();
+  const id = s.startsWith('r.') ? s : `u.${s}`;
+  return knownUnit(id) ? id : null;
 }
 
 const KEY = 'vloertaal.linkedUnit';
@@ -30,7 +43,7 @@ export function rememberLinkedUnit(id: string): void {
 export function rememberedLinkedUnit(): string | null {
   try {
     const id = localStorage.getItem(KEY);
-    return id && units.some((u) => u.id === id) ? id : null;
+    return id && knownUnit(id) ? id : null;
   } catch {
     return null;
   }

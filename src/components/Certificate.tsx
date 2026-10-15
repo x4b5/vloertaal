@@ -7,6 +7,7 @@ import { CERT_NOTE, SEAL_RING, certData, certDate, certMeta, earnedCertificates,
 import { shareCertificateFile } from '../lib/certCanvas';
 import type { Progress } from '../lib/progress';
 import { Bi } from './Bi';
+import { NlPair } from './NlPair';
 import { Character } from './Characters';
 import { ChevronIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
@@ -144,8 +145,7 @@ function NamePage({ name, lang, onDone }: { name: string; lang?: HelpLanguage; o
       <form className="cert-name-form" onSubmit={(e) => { e.preventDefault(); if (value.trim()) onDone(value); }}>
         <span className="cert-name-icon" aria-hidden><CertIcon size={40} /></span>
         <label className="keep-head cert-name-head" htmlFor={id} dir={rtl ? 'rtl' : undefined}>
-          <span className="keep-nl" lang="nl" dir="ltr">Je naam op het certificaat?</span>
-          <Bi className="keep-gloss" text={ui('certNameAsk', lang)} />
+          <NlPair nlFirst nl="Je naam op het certificaat?" nlClass="keep-nl" dir="ltr" className="keep-gloss" text={ui('certNameAsk', lang)} />
         </label>
         <input
           id={id}
@@ -160,12 +160,10 @@ function NamePage({ name, lang, onDone }: { name: string; lang?: HelpLanguage; o
         />
         <p className="keep-hint"><Bi text={ui('certNameHint', lang)} /></p>
         <button type="submit" className="btn btn-primary keep-btn cert-name-done" disabled={!value.trim()}>
-          <span lang="nl">Klaar</span>
-          <Bi className="keep-btn-gloss" text={ui('certNameDone', lang)} />
+          <NlPair nlFirst nl="Klaar" className="keep-btn-gloss" text={ui('certNameDone', lang)} />
         </button>
         <button type="button" className="keep-link cert-no-name" onClick={() => onDone('')}>
-          <span lang="nl">Zonder naam</span>
-          <Bi className="keep-link-gloss" text={ui('certNoName', lang)} />
+          <NlPair nlFirst nl="Zonder naam" className="keep-link-gloss" text={ui('certNoName', lang)} />
         </button>
       </form>
     </div>
@@ -221,27 +219,23 @@ export function CertificateScreen({ unit, day, lang, onBack, sector }: {
       <div className="screen-head" dir={rtl ? 'rtl' : undefined}>
         <ChromeBack lang={lang} onBack={onBack} />
         <h1>
-          <span className="cert-screen-nl" lang="nl">Certificaat</span>
-          <Bi text={ui('certificate', lang)} />
+          <NlPair nlFirst nl="Certificaat" nlClass="cert-screen-nl" text={ui('certificate', lang)} />
         </h1>
       </div>
       <CertificateSheet data={data} />
       <p className="cert-practice">
-        <span lang="nl">{CERT_NOTE}</span>
-        <Bi text={ui('certPractice', lang)} />
+        <NlPair nlFirst nl={CERT_NOTE} text={ui('certPractice', lang)} />
       </p>
       <div className="cert-actions cert-actions-one">
         <button type="button" className="btn btn-primary cert-btn cert-share" onClick={share} disabled={busy} dir={rtl ? 'rtl' : undefined}>
           <ShareGlyph />
           <span className="cert-btn-text">
-            <span lang="nl">Bewaar of deel</span>
-            <Bi className="cert-btn-gloss" text={ui('certSaveShare', lang)} />
+            <NlPair nlFirst nl="Bewaar of deel" className="cert-btn-gloss" text={ui('certSaveShare', lang)} />
           </span>
         </button>
       </div>
       <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
-        <span lang="nl">Naam wijzigen</span>
-        <Bi className="keep-link-gloss" text={ui('certChangeName', lang)} />
+        <NlPair nlFirst nl="Naam wijzigen" className="keep-link-gloss" text={ui('certChangeName', lang)} />
       </button>
     </div>
   );
@@ -271,8 +265,7 @@ export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector 
           <CertificateSheet data={data} className="cert-preview" />
         </div>
         <h1 className="streak-line cert-earned-line">
-          <span className="cert-earned-nl" lang="nl">Certificaat behaald!</span>
-          <Bi text={ui('certEarned', lang)} />
+          <NlPair nlFirst nl="Certificaat behaald!" nlClass="cert-earned-nl" text={ui('certEarned', lang)} />
         </h1>
         <p className="cert-earned-unit">
           <span lang="nl">{unit.titleNl}</span>
@@ -290,8 +283,7 @@ export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector 
             </button>
             <button type="button" className="btn btn-go btn-primary cert-view" onClick={onView} dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
               <span className="cert-btn-text">
-                <span lang="nl">Bekijk</span>
-                <Bi className="cert-btn-gloss" text={ui('certView', lang)} />
+                <NlPair nlFirst nl="Bekijk" className="cert-btn-gloss" text={ui('certView', lang)} />
               </span>
               <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
             </button>
@@ -345,8 +337,7 @@ export function CertificatesCard({ progress, lang, onOpen }: {
     <section className="keep-card cert-list-card" aria-label={said(ui('myCertificates', lang))}>
       <span className="cert-list-icon" aria-hidden><CertIcon size={30} /></span>
       <div className="keep-head">
-        <span className="keep-nl" lang="nl">Mijn certificaten</span>
-        <Bi className="keep-gloss" text={ui('myCertificates', lang)} />
+        <NlPair nlFirst nl="Mijn certificaten" nlClass="keep-nl" className="keep-gloss" text={ui('myCertificates', lang)} />
       </div>
       {earned.length ? (
         <ul className="cert-list">

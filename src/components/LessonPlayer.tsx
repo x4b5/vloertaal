@@ -13,6 +13,7 @@ import { learnerCharacter, voiceFor } from '../lib/voices';
 import { nonLatinHelp, pickInsteadOfTyping, writingInput } from '../lib/writing';
 import { castFor, colleaguesOf, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
+import { NlPair } from './NlPair';
 import { FlameIcon } from './StreakArt';
 import {
   BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
@@ -926,8 +927,7 @@ function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onStop }: {
         <span className="sheet-hazard" aria-hidden />
         {/* A neutral title: the sheet offers going on, a quiet lesson (or starting again) and stopping. */}
         <h2 id="quit-title" className="sheet-title max3-title">
-          <Bi text={ui('pauseTitle', lang)} />
-          <span className="max3-title-nl" lang="nl">Pauze</span>
+          <NlPair nl="Pauze" nlClass="max3-title-nl" text={ui('pauseTitle', lang)} />
         </h2>
         <p id="quit-hint" className="sheet-hint">
           {kept && <span className="sheet-hint-nl" lang="nl">Je voortgang blijft bewaard.</span>}

@@ -18,6 +18,8 @@ import { Bi, HelpText } from './Bi';
 import { CertBadge } from './Certificate';
 import { CheckIcon, ChevronIcon, CrownIcon, LockIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
+import { NlPair } from './NlPair';
+import { dutchUi, trackOf } from '../lib/track';
 import { RestartButton, ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
 import { PocketIcon } from './Offline';
@@ -63,6 +65,8 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   onFocused?: () => void;
 }) {
   const { sector, completed } = progress;
+  const track = trackOf(progress);
+  const dutch = dutchUi(lang);
   const rtl = lang?.dir === 'rtl';
   const block = currentBlock(progress);
   const [marked, setMarked] = useState<string | null>(focusUnit ?? null);
@@ -75,9 +79,9 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   // again (that one is then on the topic page), and next to only the recommended topic when the
   // block is finished.
   const dailyDue = daily?.state === 'due';
-  const choices = block ? [] : homeSuggestions(sector, completed).slice(0, dailyDue ? 1 : 2);
+  const choices = block ? [] : homeSuggestions(sector, completed, track).slice(0, dailyDue ? 1 : 2);
   const ref = useRef<HTMLDivElement>(null);
-  const order = routeOrder(sector);
+  const order = routeOrder(sector, track);
   const unitIndex = (unit: Unit) => order.findIndex((u) => u.id === unit.id);
 
   // After a lesson or a coach link: the next step in view (the next lesson or the choice),
@@ -197,7 +201,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
           {choices.length > 0 ? (
             <>
               <h2 id="rb-choose-title" className="rb-choose-title">
-                <span className="sr-only" lang="nl">Kies je volgende onderwerp. </span>
+                {!dutch && <span className="sr-only" lang="nl">Kies je volgende onderwerp. </span>}
                 <Bi text={ui('chooseNext', lang)} />
               </h2>
               <ul className="rb-choices">
@@ -212,7 +216,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                         type="button"
                         className={`rb-choice ${rec ? 'rb-rec' : ''} ${allowed ? '' : 'rb-choice-locked'}`}
                         onClick={() => pick(unit)}
-                        aria-label={`${said(t)} · ${unit.titleNl}${rec ? ` · Aanbevolen · ${said(ui('recommended', lang))}` : ''} · ${n ? `${n} / ` : ''}${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
+                        aria-label={`${said(t)}${dutch ? '' : ` · ${unit.titleNl}`}${rec ? ` · ${dutch ? '' : 'Aanbevolen · '}${said(ui('recommended', lang))}` : ''} · ${n ? `${n} / ` : ''}${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
                       >
                         <WordPicture className="rb-choice-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={52} />
                         <span className="rb-choice-text" dir={rtl ? 'rtl' : undefined}>
@@ -244,7 +248,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
 
       {/* One link for every other topic: All topics (it replaces "choose another topic"). */}
       <button type="button" className="rb-all rb-other" onClick={onAll}>
-        <span className="sr-only" lang="nl">Ander onderwerp. </span>
+        {!dutch && <span className="sr-only" lang="nl">Ander onderwerp. </span>}
         <Bi text={ui('otherTopicLink', lang)} />
         <ChevronIcon size={18} />
       </button>
@@ -264,7 +268,7 @@ function LinkedLocked({ unit, lang, onUpgrade }: { unit: Unit; lang?: HelpLangua
       className="linked-locked"
       onClick={onUpgrade}
       dir={rtl ? 'rtl' : undefined}
-      aria-label={`${said(unitTitle(unit, lang))} · ${unit.titleNl} · Volledige versie · ${said(ui('fullVersion', lang))}`}
+      aria-label={dutchUi(lang) ? `${said(unitTitle(unit, lang))} · ${said(ui('fullVersion', lang))}` : `${said(unitTitle(unit, lang))} · ${unit.titleNl} · Volledige versie · ${said(ui('fullVersion', lang))}`}
     >
       <WordPicture className="linked-locked-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
       <span className="linked-locked-text">
@@ -284,8 +288,7 @@ function FullOnly({ lang, onUpgrade }: { lang?: HelpLanguage; onUpgrade?: () => 
   return (
     <button type="button" className="full-only-note" onClick={onUpgrade}>
       <LockIcon size={16} />
-      <span lang="nl">Volledige versie</span>
-      <Bi className="full-only-en" text={ui('fullVersion', lang)} />
+      <NlPair nlFirst nl="Volledige versie" className="full-only-en" text={ui('fullVersion', lang)} />
       <ChevronIcon size={16} />
     </button>
   );
@@ -301,6 +304,14 @@ function UnitTitle({ unit, lang, heading = false }: { unit: Unit; lang?: HelpLan
   const help = lang?.gloss[unit.id];
   const rtl = lang?.dir === 'rtl';
   const Tag = heading ? 'h2' : 'h3';
+  // The work-rules track: the unit's own (Dutch) title, once.
+  if (dutchUi(lang)) {
+    return (
+      <div className="rb-titles">
+        <Tag className="rb-title"><span className="rb-main" lang="nl">{help ?? unit.titleNl}</span></Tag>
+      </div>
+    );
+  }
   return (
     <div className="rb-titles" dir={rtl && help ? 'rtl' : undefined}>
       <Tag className="rb-title">
@@ -346,8 +357,7 @@ function ScreenHead({ lang, onBack, nl, text }: { lang?: HelpLanguage; onBack: (
     <div className="screen-head rb-all-head" dir={rtl ? 'rtl' : undefined}>
       <ChromeBack lang={lang} onBack={onBack} />
       <h1>
-        <span className="rb-all-nl" lang="nl" dir={rtl ? 'ltr' : undefined}>{nl}</span>
-        <Bi text={text} />
+        <NlPair nlFirst nl={nl} nlClass="rb-all-nl" dir={rtl ? 'ltr' : undefined} text={text} />
       </h1>
     </div>
   );
@@ -366,7 +376,7 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
   onOpen: (unitId: string) => void;
 }) {
   const { sector, completed } = progress;
-  const { main, other } = coursePlan(sector);
+  const { main, other } = coursePlan(sector, trackOf(progress));
   const block = currentBlock(progress);
   const rtl = lang?.dir === 'rtl';
   const row = (unit: Unit, u: number) => {
@@ -382,7 +392,7 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
           id={`unit-${unit.id.slice(2)}`}
           className={`topic-row ${finished ? 'topic-done' : ''} ${now ? 'topic-now' : ''} ${allowed ? '' : 'topic-locked'}`}
           onClick={() => onOpen(unit.id)}
-          aria-label={`${u + 1}. ${said(t)} · ${unit.titleNl} · ${n} / ${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
+          aria-label={`${u + 1}. ${said(t)}${dutchUi(lang) ? '' : ` · ${unit.titleNl}`} · ${n} / ${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
         >
           <span className="topic-num" aria-hidden>{String(u + 1).padStart(2, '0')}</span>
           <WordPicture className="topic-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
@@ -405,8 +415,7 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
         {other.length > 0 && (
           <>
             <h2 className="topic-group">
-              <span lang="nl" className="topic-group-nl" dir="ltr">Andere sectoren</span>
-              <Bi text={ui('otherSectors', lang)} />
+              <NlPair nlFirst nl="Andere sectoren" nlClass="topic-group-nl" dir="ltr" text={ui('otherSectors', lang)} />
             </h2>
             <ul className="topic-list" data-list="topics">{other.map((unit, i) => row(unit, main.length + i))}</ul>
           </>
@@ -449,7 +458,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
     const off = window.setTimeout(() => setMarked(false), 4000);
     return () => window.clearTimeout(off);
   }, [marked]);
-  const u = routeOrder(sector).findIndex((x) => x.id === unit.id);
+  const u = routeOrder(sector, trackOf(progress)).findIndex((x) => x.id === unit.id);
   // The next lesson, stopped halfway: "Start again" sits with the topic's tools (at most 3 there).
   const restartId = onRestart && next && !completed[next.id] && saves[next.id]?.review === false ? next.id : undefined;
   const restartLesson = restartId ? unit.lessons.find((l) => l.id === restartId) : undefined;

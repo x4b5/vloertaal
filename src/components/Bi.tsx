@@ -9,6 +9,15 @@ import type { HelpLanguage } from '../i18n/types';
  * bi-help, so every screen's sizing keeps working.)
  */
 export function Bi({ text, className }: { text: Bilingual; className?: string }) {
+  // The work-rules track reads in Dutch only: the Dutch line, and no English in the page at all
+  // (not hidden: left out, so a screen reader never reads it either).
+  if (text.lang?.code === 'nl') {
+    return (
+      <span className={`bi ${className ?? ''}`}>
+        <span className="bi-en" lang="nl">{text.help ?? text.en}</span>
+      </span>
+    );
+  }
   if (text.help && text.lang) {
     // A right-to-left help language makes the whole pair one right-to-left block, so the
     // English line under it starts on the same (right) side and nothing zig-zags. The English
@@ -31,7 +40,7 @@ export function Bi({ text, className }: { text: Bilingual; className?: string })
 }
 
 /** Help languages written in the Latin script: a Dutch phrase in them needs no isolating. */
-const LATIN_SCRIPT = new Set(['pl', 'ro', 'tr']);
+const LATIN_SCRIPT = new Set(['pl', 'ro', 'tr', 'nl']);
 
 /** A line in the help language, with its own language and direction. */
 export function HelpText({ text, lang, className = 'bi-help' }: { text: string; lang: HelpLanguage; className?: string }) {

@@ -1,4 +1,6 @@
-import { findLesson, units } from '../content/curriculum';
+import { allCourseUnits, courseUnits, findCourseUnit } from '../content/courses';
+import { findLesson } from '../content/curriculum';
+import { trackOf, trackOfId, type Track } from './track';
 import { isMixLesson } from '../content/review';
 import type { Unit, Word } from '../content/types';
 import type { HelpLanguage } from '../i18n/types';
@@ -22,7 +24,8 @@ export function unitDone(unit: Unit, completed: Record<string, unknown>): boolea
  */
 export function earnCertificates<P extends Progress>(p: P, now: Date): P {
   const certs = p.certs ?? {};
-  const fresh = units.filter((u) => !certs[u.id] && unitDone(u, p.completed));
+  // Both courses: a learner who switched tracks keeps the certificates of each.
+  const fresh = allCourseUnits().filter((u) => !certs[u.id] && unitDone(u, p.completed));
   if (!fresh.length) return p;
   const today = dayKey(now);
   return { ...p, certs: { ...certs, ...Object.fromEntries(fresh.map((u) => [u.id, today])) } };
@@ -40,15 +43,16 @@ export interface Earned {
   day: string;
 }
 
-/** Every certificate earned, in course order. A finished unit without a date yet counts from today. */
-export function earnedCertificates(p: Progress, now = new Date()): Earned[] {
-  return units
+/** Every certificate earned in the learner's track, in course order. A finished unit without a date yet counts from today. */
+export function earnedCertificates(p: Progress, now = new Date(), track: Track = trackOf(p)): Earned[] {
+  return courseUnits(track)
     .filter((u) => unitDone(u, p.completed))
     .map((unit) => ({ unit, day: p.certs?.[unit.id] ?? dayKey(now) }));
 }
 
+/** A unit by id, in either course (ids never clash). */
 export function findUnit(id: string): Unit | undefined {
-  return units.find((u) => u.id === id);
+  return findCourseUnit(id);
 }
 
 /** The lessons that teach the unit (its Mixed review only repeats). */
@@ -88,10 +92,10 @@ export function certDate(day: string): string {
  * with their sector's unit in its place), then the other units (lib/route.ts routeOrder). Without
  * a sector this is the order of the whole course.
  */
-export function unitIndex(unit: Unit, sector?: SectorChoice): number {
-  const { main, other } = coursePlan(sector);
+export function unitIndex(unit: Unit, sector?: SectorChoice, track: Track = trackOfId(unit.id)): number {
+  const { main, other } = coursePlan(sector, track);
   const at = [...main, ...other].findIndex((u) => u.id === unit.id);
-  return at >= 0 ? at : units.indexOf(unit);
+  return at >= 0 ? at : courseUnits(track).indexOf(unit);
 }
 
 /* ---- The learner's name on the certificate: asked once, kept on this device only. ---- */

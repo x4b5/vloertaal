@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { NOT_SURE, sectors, type SectorChoice } from '../content/sectors';
 import { ensureLanguage, hasGender, isLanguageLoaded, said, saidLang, ui, type Bilingual } from '../i18n';
-import type { Gender, HelpLanguage, LangCode } from '../i18n/types';
+import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
+import { dutchUi } from '../lib/track';
+import { NlPair } from './NlPair';
 import type { Access } from '../lib/access';
 import { setPreferredVoice, speak } from '../lib/audio';
 import { earnedCertificates } from '../lib/certificate';
@@ -99,8 +101,7 @@ function Head({ page, lang, onBack }: { page: SettingsPage | null; lang?: HelpLa
     <div className="screen-head max3-head">
       {onBack && <ChromeBack lang={lang} onBack={onBack} />}
       <h1 className="max3-title">
-        <Bi text={ui(row ? row.key : 'settings', lang)} />
-        <span className="max3-title-nl" lang="nl">{row ? row.nl : 'Instellingen'}</span>
+        <NlPair text={ui(row ? row.key : 'settings', lang)} nl={row ? row.nl : 'Instellingen'} nlClass="max3-title-nl" />
       </h1>
     </div>
   );
@@ -118,7 +119,7 @@ export function Settings({
   onPage: (page: SettingsPage) => void;
   /** Back up `steps` pages (a list's Back, or after an answer on a question page). */
   onReturn: (steps?: number) => void;
-  onLang: (code: LangCode | null) => void;
+  onLang: (code: UiCode | null) => void;
   onGender: (gender: Gender) => void;
   onSector: (sector: SectorChoice) => void;
   onTheme: (theme: ThemeChoice) => void;
@@ -144,7 +145,7 @@ export function Settings({
   }, []);
   // Help language offline: a language whose file is not on the phone can't be switched to. The
   // old language stays and a calm line says why (no splash, no dead end).
-  const [notHere, setNotHere] = useState<LangCode | null>(null);
+  const [notHere, setNotHere] = useState<UiCode | null>(null);
   const notHereRef = useRef<HTMLParagraphElement>(null);
   useEffect(() => {
     if (!notHere) return;
@@ -154,7 +155,7 @@ export function Settings({
     window.addEventListener('online', back);
     return () => window.removeEventListener('online', back);
   }, [notHere]);
-  const pickLanguage = (code: LangCode | null) => {
+  const pickLanguage = (code: UiCode | null) => {
     const take = () => { setNotHere(null); onLang(code); answered(); };
     if (isLanguageLoaded(code)) { take(); return; }
     ensureLanguage(code).then(take, () => {
@@ -192,6 +193,7 @@ export function Settings({
     preview: access === 'preview' && Boolean(onAccess),
     install: installWay() !== null,
     offline: offlineSupported(),
+    rules: dutchUi(lang),
   };
   const writing = nonLatinHelp(lang) && !wantsWriting() ? 'pick' : writingInput(lang);
   const voice = voiceChoiceOf(progress.voice, recorded);
@@ -229,8 +231,7 @@ export function Settings({
               {p === 'sector' && progress.sector ? <SectorIcon id={progress.sector} size={24} /> : ROWS[p].icon}
             </span>
             <span className="set-row-names">
-              <Bi className="set-row-help" text={say(ROWS[p].key)} />
-              <span className="set-row-nl" lang="nl">{ROWS[p].nl}</span>
+              <NlPair className="set-row-help" text={say(ROWS[p].key)} nl={ROWS[p].nl} nlClass="set-row-nl" />
             </span>
             {value(p)}
             <ChevronIcon size={22} className="set-row-chev" />
@@ -256,8 +257,7 @@ export function Settings({
               <p className="lang-not-here" role="status" ref={notHereRef}>
                 <GlobeIcon size={22} />
                 <span className="lang-not-here-text">
-                  <span className="lang-not-here-nl" lang="nl">Deze taal staat nog niet op je telefoon. Maak verbinding met internet.</span>
-                  <Bi text={say('langNotOnPhone')} />
+                  <NlPair nlFirst nl="Deze taal staat nog niet op je telefoon. Maak verbinding met internet." nlClass="lang-not-here-nl" text={say('langNotOnPhone')} />
                 </span>
               </p>
             )}

@@ -1,6 +1,8 @@
 import { allDialogues, allLessons, allReplies, allWords, teachingLessons, units } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
 import { coursePlan, mainLessons, type SectorChoice } from '../content/sectors';
+import { courseUnits, unitOfLesson } from '../content/courses';
+import { trackOfId, type Track } from './track';
 import { type CultureTip, tipForLesson } from '../content/culture';
 import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
 import { tokenize } from './answers';
@@ -599,10 +601,10 @@ export function forRetry(ex: Exercise, lesson: Lesson, seed: number): Exercise {
 export const PROGRESSION = { pickDutch: 4, audioBuild: 7, reverseChat: 10 } as const;
 
 /** The 0-based place of the lesson's unit on the learner's path (-1 outside it, e.g. today's review). */
-export function unitIndexOf(lesson: Lesson, sector?: SectorChoice): number {
-  const { main, other } = coursePlan(sector);
+export function unitIndexOf(lesson: Lesson, sector?: SectorChoice, track: Track = trackOfId(lesson.id)): number {
+  const { main, other } = coursePlan(sector, track);
   const at = [...main, ...other].findIndex((u) => u.lessons.some((l) => l.id === lesson.id));
-  return at >= 0 ? at : units.findIndex((u) => u.lessons.some((l) => l.id === lesson.id));
+  return at >= 0 ? at : courseUnits(track).findIndex((u) => u.lessons.some((l) => l.id === lesson.id));
 }
 
 /** The dialogue for a reversed chat in a lesson: the one of the lesson before it in its unit
@@ -771,17 +773,17 @@ export function isUnlocked(lessonId: string, completed: Record<string, unknown>,
   // The access level wins over progress: a preview never opens a later unit.
   if (!lessonAllowed(lessonId, access)) return false;
   // Every unit can be entered at its first lesson (a coach can send a learner to one topic);
-  // inside a unit the lessons open in order.
-  const unit = units.find((u) => u.lessons.some((l) => l.id === lessonId));
+  // inside a unit the lessons open in order. (Either course: lesson ids never clash.)
+  const unit = unitOfLesson(lessonId);
   if (!unit) return false;
   const i = unit.lessons.findIndex((l) => l.id === lessonId);
   return i === 0 || Boolean(completed[unit.lessons[i - 1].id]);
 }
 
 /** The next lesson along the learner's own course (basis units plus their sector), the one the path highlights. */
-export function isNextInCourse(lessonId: string, completed: Record<string, unknown>, access: Access = 'full', sector?: SectorChoice): boolean {
+export function isNextInCourse(lessonId: string, completed: Record<string, unknown>, access: Access = 'full', sector?: SectorChoice, track: Track = 'taal'): boolean {
   if (!lessonAllowed(lessonId, access) || completed[lessonId]) return false;
-  const order = mainLessons(sector);
+  const order = mainLessons(sector, track);
   const index = order.findIndex((l) => l.id === lessonId);
   if (index < 0) return false;
   return index === 0 || Boolean(completed[order[index - 1].id]);

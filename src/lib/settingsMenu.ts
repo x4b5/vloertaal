@@ -61,13 +61,16 @@ export interface SettingsContext {
   install: boolean;
   /** The phone can keep lessons (Cache Storage). */
   offline: boolean;
+  /** The work-rules track (screens in Dutch only): no "Show English too", and no speaking or
+   *  writing practice (its lessons have neither). Missing = the Dutch course. */
+  rules?: boolean;
 }
 
 /** The rows of a list, in order. */
 export function settingsRows(list: SettingsList, ctx: SettingsContext): SettingsPage[] {
   const rows: (SettingsPage | false)[] =
-    list === 'me' ? ['language', ctx.gender && 'gender', 'sector', ctx.helpLang && 'english', 'certificates']
-    : list === 'lessons' ? ['sound', 'voice', 'speaking', 'writing', 'text', 'theme']
+    list === 'me' ? ['language', !ctx.rules && ctx.gender && 'gender', 'sector', !ctx.rules && ctx.helpLang && 'english', 'certificates']
+    : list === 'lessons' ? ['sound', 'voice', !ctx.rules && 'speaking', !ctx.rules && 'writing', 'text', 'theme']
     : [ctx.preview && 'unlock', ctx.offline && 'offline', 'reminder', ctx.install && 'install', 'backup', 'counting', 'reset'];
   return rows.filter((r): r is SettingsPage => Boolean(r));
 }

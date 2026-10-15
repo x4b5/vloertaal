@@ -24,7 +24,7 @@ export function Greeting({ lang, place = 'corner' }: { lang?: HelpLanguage; plac
       <Character who="bram" mood="wave" size={place === 'hero' ? 72 : 64} flip={rtl} />
       <p className={`onb-greet-say onb-greet-tail-${tail}`}>
         <span className="onb-greet-nl" lang="nl" dir="ltr">{BRAM_HELLO}</span>
-        {hello.help && lang
+        {lang?.code === 'nl' ? null : hello.help && lang
           ? <HelpText className="onb-greet-help" text={hello.help} lang={lang} />
           : <span className="onb-greet-help" lang="en">{hello.en}</span>}
       </p>
