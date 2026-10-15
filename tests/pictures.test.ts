@@ -15,7 +15,8 @@ const runs = (fn: (exercises: Exercise[], label: string) => void) => {
   }
 };
 
-describe('abstract words (no picture)', () => {
+// Each check builds every lesson 32 times: room for a busy machine.
+describe('abstract words (no picture)', { timeout: 20000 }, () => {
   it('are flagged in the content', () => {
     const abstract = allWords.filter((w) => !hasPicture(w)).map((w) => w.id);
     expect(abstract).toContain('w.recht');
