@@ -36,6 +36,8 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.care': ['u.help', 'u.health'],
   'u.horeca': ['u.clean', 'u.safety'],
   'u.clean': ['u.safety', 'u.house'],
+  'u.shop': ['u.horeca', 'u.warehouse'],
+  'u.numbers': ['u.time', 'u.pay'],
 };
 
 /**

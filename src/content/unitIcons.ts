@@ -30,4 +30,6 @@ export const unitIcons: Record<string, string> = {
   'u.care': 'w.verpleegkundige',
   'u.horeca': 'w.pan',
   'u.clean': 'w.dweil',
+  'u.shop': 'w.betalen',
+  'u.numbers': 'w.uurloon',
 };

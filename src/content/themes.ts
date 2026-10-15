@@ -61,7 +61,7 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     regels: ['r.zoeken', 'r.contract'],
   },
   'theme.job': {
-    taal: ['u.time', 'u.pay', 'u.leave', 'u.contact', 'u.house'],
+    taal: ['u.time', 'u.pay', 'u.leave', 'u.contact', 'u.house', 'u.numbers'],
     regels: ['r.loon', 'r.tijd', 'r.ziek'],
   },
   'theme.together': {
@@ -77,7 +77,7 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     regels: ['r.geld'],
   },
   'theme.sector': {
-    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean'],
+    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.shop'],
     regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean'],
   },
 };

@@ -121,10 +121,12 @@ export function resumeCount(save: LessonSave): { done: number; of: number } {
 
 /**
  * Two letters per kind where the first two would clash: 'whatdo' and 'whoask' (rules steps)
- * both start with "wh", so 'whoask' is "wi" (wie). Every other kind keeps its first two letters,
- * so a saved run of the language course still matches its rebuilt list.
+ * both start with "wh", so 'whoask' is "wi" (wie). 'card' (the drawn card of the rules track) is
+ * "ca", written out here so no later kind takes it (tests/ruleSteps.test.ts checks they all
+ * differ). Every other kind keeps its first two letters, so a saved run of the language course
+ * still matches its rebuilt list.
  */
-const KIND_KEYS: Record<string, string> = { whoask: 'wi' };
+const KIND_KEYS: Record<string, string> = { whoask: 'wi', card: 'ca' };
 
 /** The fingerprint of a built list: its kinds in order, two letters each. */
 export function kindsOf(list: readonly { kind: string }[]): string {

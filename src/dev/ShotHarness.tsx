@@ -264,7 +264,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     );
   }
   // One step of the work-rules track: /?shot=rule&lang=nl&step=scene|rule|truefalse|whatdo|whoask|
-  // model|payslip (the default lesson for each kind is in RULE_SHOT; &lesson=r.l.loon.2 another
+  // model|payslip|card (the default lesson for each kind is in RULE_SHOT; &lesson=r.l.loon.2 another
   // lesson, &id=<step id> one exact step). The step sits at its place in its real lesson. The
   // options are best first (true/false: Waar, Niet waar), so the right one is the 1st card and a
   // wrong one the 2nd (a true/false shot uses a true statement). &retry=1: the step comes back
@@ -364,6 +364,8 @@ const RULE_SHOT: Record<RuleKind, { lesson: string; id?: string }> = {
   whoask: { lesson: 'r.l.loon.2' },
   model: { lesson: 'r.l.ziek.1' },
   payslip: { lesson: 'r.l.loon.2' },
+  // The roster (a sum). Others: &id=r.l.winkel.3.ca1 (kassabon), r.l.afronden.1.ca1 (werkbon).
+  card: { lesson: 'r.l.rekenen.1', id: 'r.l.rekenen.1.ca1' },
 };
 
 /** Best option first (a fixed order for the screenshot and the max-3 counter). */
@@ -373,6 +375,7 @@ function bestFirst(ex: RuleExercise): RuleExercise {
     case 'whatdo': return { ...ex, step: { ...ex.step, options: sort(ex.step.options) } };
     case 'whoask': return { ...ex, step: { ...ex.step, options: sort(ex.step.options) } };
     case 'payslip': return { ...ex, step: { ...ex.step, options: sort(ex.step.options) } };
+    case 'card': return { ...ex, step: { ...ex.step, options: sort(ex.step.options) } };
     default: return ex;
   }
 }

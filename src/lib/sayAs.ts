@@ -4,6 +4,8 @@
  * text; only what a voice is given changes. Used for the recorded clips (scripts/list-clips.ts:
  * the clip's `say`) and for the phone's own voice (src/lib/audio.ts).
  */
+import { sayNumbers } from './sayNumbers';
+
 const APP = /\b(groeps|vertaal)?app(en|e|je|jes|t|te|s)?\b/gi;
 
 /** "appen" → "eppen" (short e before a vowel), "app" → "ep", "groepsapp" → "groepsep". Times,

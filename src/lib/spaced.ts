@@ -192,9 +192,9 @@ export function strongerCount(before: Cards, after: Cards): number {
 /** At most this many questions in a daily review of the work-rules track. */
 export const RULE_DAILY_MAX = 6;
 
-/** The rules questions (graded steps): true/false, what do you do, who do you ask, the payslip. */
-export type GradedRuleStep = Extract<RuleStep, { kind: 'truefalse' | 'whatdo' | 'whoask' | 'payslip' }>;
-const GRADED = new Set<RuleStep['kind']>(['truefalse', 'whatdo', 'whoask', 'payslip']);
+/** The rules questions (graded steps): true/false, what do you do, who do you ask, the payslip, the card. */
+export type GradedRuleStep = Extract<RuleStep, { kind: 'truefalse' | 'whatdo' | 'whoask' | 'payslip' | 'card' }>;
+const GRADED = new Set<RuleStep['kind']>(['truefalse', 'whatdo', 'whoask', 'payslip', 'card']);
 export const isGradedStep = (s: RuleStep): s is GradedRuleStep => GRADED.has(s.kind);
 
 /** The questions of a rules lesson: the cards it adds to the box (a language lesson has none). */

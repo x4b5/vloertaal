@@ -575,7 +575,7 @@ const unit = (slug: string, title: string, titleNl: string, emoji: string, color
 
 /** Closing line: ADVICE_LINE for rights and rules set by law, ABUSE_LINE where the employer may be the problem, HOUSE_LINE for company rules, '' for social norms. */
 /** Dutch said aloud in a situation (a speaker plays it in the character's voice). */
-const SAID: Record<string, string> = { interview: 'Heb je nog vragen?' };
+const SAID: Record<string, string> = { interview: 'Heb je nog vragen?', hours: 'Morgen begin je om half negen.' };
 
 const tipFor = (
   slug: string,
@@ -1769,6 +1769,143 @@ const sectorTips = [
   ),
 ];
 
+// ---- In the shop, and Time, money and measures (docs/entree-aanvulling.md, part 5) ----
+// Basis units (no sector of their own), after the sector units: the course of every existing
+// sector keeps its order, the two units come at the end of it.
+
+const shopUnit = unit('shop', 'In the shop', 'In de winkel', '🛒', '#2a9d8f', [
+  lesson(
+    'shelves',
+    'Shelves and stock',
+    [
+      ['schap', 'het schap', 'the shelf (in a shop)', '🗄️'],
+      ['vakkenvullen', 'vakken vullen', 'to stock the shelves', '🥫'],
+      ['voorraad', 'de voorraad', 'the stock', '📦'],
+      ['houdbaarheidsdatum', 'de houdbaarheidsdatum', 'the best-before date', '📅', false],
+      ['prijskaartje', 'het prijskaartje', 'the price tag', '🏷️'],
+      ['achteraan', 'achteraan', 'at the back', '🔙', false],
+    ],
+    [
+      ['Zet de nieuwe producten achteraan.', 'Put the new products at the back.'],
+      ['Dit product is over de datum.', 'This product is past its date.'],
+      ['Is er nog voorraad?', 'Is there any stock left?'],
+    ],
+    [['Waar vind ik de rijst?', 'Where can I find the rice?'], ['In gang vier. Ik loop even met u mee.', 'In aisle four. I will walk there with you.']],
+  ),
+  lesson(
+    'checkout',
+    'At the checkout',
+    [
+      ['klant', 'de klant', 'the customer', '🛍️'],
+      ['kassa', 'de kassa', 'the checkout, the till', '🛒'],
+      ['wisselgeld', 'het wisselgeld', 'the change (money you give back)', '🪙'],
+      ['bonnetje', 'het bonnetje', 'the receipt', '🧾'],
+      ['pinnen', 'pinnen', 'to pay by card', '💳'],
+      ['contant', 'contant', 'in cash', '💵'],
+    ],
+    [
+      ['Wilt u pinnen of contant betalen?', 'Would you like to pay by card or in cash?'],
+      ['Hier is uw wisselgeld.', 'Here is your change.'],
+      ['Mag ik even uw ID zien?', 'May I see your ID, please?'],
+    ],
+    [['Kan ik hier pinnen?', 'Can I pay by card here?'], ['Ja hoor, dat kan.', 'Yes, sure, you can.']],
+  ),
+]);
+
+const numbersUnit = unit('numbers', 'Time, money and measures', 'Rekenen: tijd, geld, maten', '🔢', '#6d597a', [
+  lesson(
+    'hours',
+    'Hours and times',
+    [
+      ['uur', 'het uur', 'the hour', '🕐', false],
+      ['minuut', 'de minuut', 'the minute', '⏱️', false],
+      ['kwartier', 'het kwartier', 'a quarter of an hour (15 minutes)', '🕒', false],
+      ['halfuur', 'een half uur', 'half an hour (30 minutes)', '🕧', false],
+      ['duren', 'duren', 'to last, to take (time)', '⏳', false],
+      ['optellen', 'optellen', 'to add up', '➕', false],
+    ],
+    [
+      ['Ik begin om half acht.', 'I start at half past seven (7:30).'],
+      ['Ik werk vandaag acht uur.', 'I work eight hours today.'],
+      ['De pauze duurt een half uur.', 'The break lasts half an hour.'],
+    ],
+    [['Hoe laat ben je klaar?', 'What time do you finish?'], ['Om kwart over vier.', 'At a quarter past four.']],
+  ),
+  lesson(
+    'measures',
+    'Money and measures',
+    [
+      ['euro', 'de euro', 'the euro', '💶'],
+      ['cent', 'de cent', 'the cent', '🪙'],
+      ['kilo', 'de kilo', 'the kilo', '⚖️'],
+      ['liter', 'de liter', 'the litre', '🥛'],
+      ['meter', 'de meter', 'the metre', '📏'],
+      ['tellen', 'tellen', 'to count', '🔢', false],
+    ],
+    [
+      ['Het kost zes euro vijftig.', 'It costs six euros fifty.'],
+      ['Deze doos weegt tien kilo.', 'This box weighs ten kilos.'],
+      ['Ik heb veertig dozen geteld.', 'I counted forty boxes.'],
+    ],
+    [['Hoe lang is die plank?', 'How long is that plank?'], ['Precies twee meter.', 'Exactly two metres.']],
+  ),
+]);
+
+const shopNumbersTips = [
+  tipFor(
+    'shelves',
+    '📅',
+    'Old to the front',
+    'When you stock the shelves, look at the date on the products. Put the products with the soonest date at the front, and the new ones at the back. Customers take from the front, so the old products go first. Is a product past its date, or damaged? Take it off the shelf and ask what to do with it. Keep the aisles free of boxes and carts.',
+    ['Wat doe ik met producten over de datum?', 'What do I do with products past their date?'],
+    'You are putting new milk on the shelf. At the front there is still milk with a sooner date. What do you do?',
+    [
+      'Put the new milk at the back, and the old milk at the front.',
+      'Put the new milk at the front, because it is fresher.',
+      'Throw the old milk away, so the shelf looks nice.',
+    ],
+    'Customers take from the front. When the old products go first, less food is thrown away.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'checkout',
+    '🪪',
+    'ID for alcohol and tobacco',
+    'You may not sell alcohol or tobacco to anyone under 18: this is the law. Not sure how old a customer is? Ask for their ID. Many shops ask for ID from everyone who looks younger than 25. No ID, or under 18? Then you do not sell it, and you stay polite.',
+    ['Zonder ID mag ik dit niet verkopen.', 'Without ID I may not sell this.'],
+    'A young man wants to buy beer. He looks about 17. He says he is 19, but he has no ID with him. What do you do?',
+    [
+      'Say politely that you cannot sell it without ID.',
+      'Sell it, because he says he is 19.',
+      'Sell it, but only one can.',
+    ],
+    'Without ID you cannot know his age. Selling alcohol to someone under 18 is against the law, and the shop can get a fine.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'hours',
+    '🕧',
+    'Half acht is 7:30',
+    'In Dutch, "half" counts to the next hour: half acht is 7:30, not 8:30. Kwart over acht is 8:15, and kwart voor acht is 7:45. Check your hours yourself: the end time minus the start time, minus the break. A break is often not paid. Write down your hours every day.',
+    ['Half acht? Dus een half uur voor acht?', 'Half acht? So half an hour before eight?'],
+    'Your supervisor says: "Morgen begin je om half negen." What time do you start tomorrow?',
+    ['At 8:30.', 'At 9:30.', 'At 8:00.'],
+    '"Half negen" means half an hour before nine: 8:30. Many newcomers think it is 9:30, and come an hour late.',
+    NONE,
+  ),
+  tipFor(
+    'measures',
+    '🔢',
+    'Count smart, measure, do not guess',
+    'Many boxes to count? Count the boxes in one layer, and the number of layers. Then multiply: 8 boxes in a layer and 5 layers is 40 boxes. With cleaning products, measure the amount the label says. More is not better: it can hurt your skin and costs money. Not sure about a number? Count again, or ask.',
+    ['Ik heb het twee keer geteld.', 'I counted it twice.'],
+    'A pallet has 6 layers. Each layer has 8 boxes. Your supervisor asks how many boxes there are. What do you say?',
+    ['48 boxes.', '14 boxes.', 'About 50, I think.'],
+    '6 layers of 8 boxes is 6 times 8: 48. Counting one layer and multiplying is quick, and a real number is better than a guess.',
+    HOUSE_LINE,
+  ),
+];
+
 // ---- Smart tools (a basis unit right after "Asking for help", spliced in by curriculum.ts) ----
 
 export const toolsUnit = unit('tools', 'Smart tools', 'Slimme hulpmiddelen', '📱', '#d1495b', [
@@ -1891,12 +2028,15 @@ export const workUnits: Unit[] = [
   byId('u.leave'),
   ...laterUnits,
   ...sectorUnits,
+  // After the sector units, so no existing course changes (see "In the shop" above).
+  shopUnit,
+  numbersUnit,
 ];
 
 const lessonOrder = [toolsUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips].sort(
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

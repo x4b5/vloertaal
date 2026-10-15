@@ -45,14 +45,14 @@ export function sayEuro(whole: string, cents?: string): string {
 }
 
 /** A time: H.MM or HH:MM (hours 0–23), not part of a longer number, with an optional "uur". */
-const TIME = /(?<![\d.,:])([01]?\d|2[0-3])[.:]([0-5]\d)(?![\d.,:]\d)(\s+uur\b)?/g;
+const TIME = /(?<![\d.,:])([01]?\d|2[0-3])[.:]([0-5]\d)(?!\d)(?![.,:]\d)(\s+uur\b)?/g;
 /** A whole number with thousand dots ("1.000") or without, and an optional ",50". */
 const NUM = String.raw`(\d{1,3}(?:\.\d{3})+|\d+)(?:,(\d{1,2}))?`;
 const EURO_BEFORE = new RegExp(String.raw`€\s?${NUM}(?![\d,])`, 'g');
 const EURO_AFTER = new RegExp(String.raw`(?<![\d.,])${NUM}\s?euro\b`, 'g');
 const SIGNS: [RegExp, string][] = [
   [/\s*×\s*/g, ' keer '],
-  [/\s*[−–]\s*(?=\d)/g, ' min '],
+  [/\s*−\s*(?=\d)/g, ' min '],
   [/(?<=\d)\s*\+\s*(?=\d)/g, ' plus '],
   [/(?<=\d)\s*=\s*(?=\d)/g, ' is '],
 ];

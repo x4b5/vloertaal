@@ -15,8 +15,8 @@ const lessons: RuleLesson[] = all.flatMap((u) => u.lessons);
 const steps: RuleStep[] = lessons.flatMap((l) => l.steps);
 const rules = steps.filter((s): s is Extract<RuleStep, { kind: 'rule' }> => s.kind === 'rule');
 
-const GRADED = new Set<RuleStep['kind']>(['truefalse', 'whatdo', 'whoask', 'payslip']);
-const ABBR: Record<RuleStep['kind'], string> = { scene: 'sc', rule: 'ru', truefalse: 'tf', whatdo: 'wd', whoask: 'wa', model: 'mo', payslip: 'ps' };
+const GRADED = new Set<RuleStep['kind']>(['truefalse', 'whatdo', 'whoask', 'payslip', 'card']);
+const ABBR: Record<RuleStep['kind'], string> = { scene: 'sc', rule: 'ru', truefalse: 'tf', whatdo: 'wd', whoask: 'wa', model: 'mo', payslip: 'ps', card: 'ca' };
 
 /** Every text a learner sees or hears in a step (the picture idea is for the illustrator). */
 function shownTexts(s: RuleStep): string[] {
@@ -28,6 +28,10 @@ function shownTexts(s: RuleStep): string[] {
     case 'whoask': return [s.question, ...s.options.map((o) => o.feedback), s.why];
     case 'model': return [s.context, s.nl];
     case 'payslip': return [s.slip.periode, ...s.slip.rows.flatMap((r) => [r.label, r.value]), s.question, ...s.options.flatMap((o) => [o.text, o.feedback]), s.why];
+    case 'card': return [
+      s.card.title, ...(s.card.sub ? [s.card.sub] : []), ...s.card.rows.flatMap((r) => [r.label, ...(r.value ? [r.value] : []), ...(r.answer ? [r.answer] : [])]),
+      s.question, ...s.options.flatMap((o) => [o.text, o.feedback]), ...(s.sum ?? []), s.why,
+    ];
   }
 }
 const stepTexts = (s: RuleStep) => [...shownTexts(s), ...('picture' in s ? [s.picture] : []), ...('emoji' in s ? [s.emoji] : [])];
@@ -67,12 +71,24 @@ const LONG_SENTENCE_OK = [
   'r.l.samen.4: Je kent de gewoontes bij koffie en verjaardagen, en de regels voor je telefoon en de groepsapp.',
   'r.l.rechten.2: Je herkent gedrag dat over je grens gaat, je zegt stop, en je weet bij wie je terechtkunt.',
   'r.l.rechten.3: Je herkent de signalen van uitbuiting en van een geldezel-trucje, en je weet waar je hulp krijgt.',
+  // The goals of the Entree additions (docs/entree-aanvulling.md), word for word as well.
+  'r.l.afronden.2: Je ruimt je werkplek op, je laat je werk nakijken, en je zegt wat klaar is en wat niet.',
+  'r.l.stage.2: Je vraagt om feedback, je doet er iets mee, en je weet wat je doet met je beoordeling.',
+  'r.l.stage.3: Je weet wat je doet als je ziek bent, als je weinig leert, of als je slecht behandeld wordt.',
+  'r.l.winkel.1: Je vult vakken op de goede manier, je let op de datum, en je houdt de paden vrij.',
+  'r.l.winkel.3: Je vraagt een ID bij alcohol en tabak, je telt wisselgeld goed, en je blijft rustig bij een klacht.',
+  'r.l.digitaal.1: Je weet wat DigiD is, je houdt het voor jezelf, en je logt uit op een gedeelde computer.',
+  'r.l.digitaal.2: Je maakt een sterk wachtwoord, je herkent een nepbericht, en je meldt het als je toch klikte.',
+  'r.l.meedoen.1: Je weet wat de gemeenteraad en de Tweede Kamer doen, en wie voor welke verkiezing mag stemmen.',
+  'r.l.meedoen.2: Je kent een paar grondrechten, en je weet dat ze voor iedereen gelden, ook buiten je werk.',
+  'r.l.meedoen.3: Je weet wat de politie en de rechter doen, en een paar rechten en plichten die je hebt.',
+  'r.l.duurzaam.1: Je scheidt afval zoals het op je werk hoort, en gevaarlijk afval gooi je nooit bij het gewone afval.',
 ];
 
 /** Steps that may name a year: the uitzend-cao started on 1 January 2026 (les 3.3). */
 const YEAR_OK = new Set(['r.l.contract.3.tf2']);
 
-/** The 10 pocket-card lines (curriculum, deel 4). */
+/** The 10 pocket-card lines (curriculum, deel 4), and one per Entree unit (entree-aanvulling.md). */
 const KEY_RULES = [
   'Echt werk kost jou nooit geld.',
   'Eerst lezen, dan tekenen.',
@@ -84,12 +100,28 @@ const KEY_RULES = [
   'Afspraak is afspraak. Lukt het niet? Zeg het op tijd.',
   'Je paspoort en je bankpas geef je nooit af.',
   'Teken nooit iets over ontslag zonder advies.',
+  // The Entree additions (units 11–17): one key rule per unit.
+  'Twijfel je over de leeftijd bij alcohol of tabak? Vraag altijd een ID.',
+  'Je werktijd is: eindtijd min begintijd, min je pauze.',
+  'Klaar? Ruim op, laat het nakijken, en zeg wat klaar is en wat niet.',
+  'Eerst de POK tekenen. Dan pas beginnen met je stage.',
+  'Je DigiD is alleen van jou. Geef hem aan niemand.',
+  'Iedereen heeft dezelfde rechten. Discriminatie mag niet, ook niet buiten je werk.',
+  'Scheid je afval. Gevaarlijk afval nooit bij het gewone afval.',
 ];
 
 describe('rules content: ids', () => {
-  it('has the 10 units in path order and the 6 sector units', () => {
-    expect(rulesUnits.map((u) => u.id)).toEqual(['r.zoeken', 'r.start', 'r.contract', 'r.loon', 'r.tijd', 'r.ziek', 'r.veilig', 'r.samen', 'r.rechten', 'r.geld']);
-    expect(rulesUnits.flatMap((u) => u.lessons)).toHaveLength(36);
+  it('has the 10 units in path order, the 7 Entree units beside them, and the 6 sector units', () => {
+    const FIRST_TEN = ['r.zoeken', 'r.start', 'r.contract', 'r.loon', 'r.tijd', 'r.ziek', 'r.veilig', 'r.samen', 'r.rechten', 'r.geld'];
+    expect(rulesUnits.map((u) => u.id)).toEqual([
+      'r.zoeken', 'r.start', 'r.afronden', 'r.contract', 'r.stage', 'r.loon', 'r.rekenen', 'r.tijd', 'r.winkel',
+      'r.ziek', 'r.veilig', 'r.samen', 'r.rechten', 'r.geld', 'r.digitaal', 'r.meedoen', 'r.duurzaam',
+    ]);
+    // Only additions: the first ten keep their order among themselves.
+    expect(rulesUnits.map((u) => u.id).filter((id) => FIRST_TEN.includes(id))).toEqual(FIRST_TEN);
+    // 36 lessons of the path and the 18 of the Entree additions.
+    expect(rulesUnits.filter((u) => FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(36);
+    expect(rulesUnits.filter((u) => !FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(18);
     expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual(['r.build', 'r.care', 'r.clean', 'r.factory', 'r.horeca', 'r.warehouse']);
     for (const u of sectorRulesUnits) expect(u.lessons, u.id).toHaveLength(2);
   });
@@ -140,12 +172,12 @@ describe('rules content: lessons and steps', () => {
 
   it('gives every choice step 2–3 options with exactly one best, each with feedback', () => {
     for (const s of steps) {
-      if (s.kind !== 'whatdo' && s.kind !== 'whoask' && s.kind !== 'payslip') continue;
+      if (s.kind !== 'whatdo' && s.kind !== 'whoask' && s.kind !== 'payslip' && s.kind !== 'card') continue;
       expect(s.options.length, s.id).toBeGreaterThanOrEqual(2);
       expect(s.options.length, s.id).toBeLessThanOrEqual(3);
       expect(s.options.filter((o) => o.best), s.id).toHaveLength(1);
       for (const o of s.options) expect(o.feedback.trim().length, `${s.id}.${o.id}`).toBeGreaterThan(0);
-      if (s.kind === 'whatdo') expect(s.options, s.id).toHaveLength(3);
+      if (s.kind === 'whatdo' || s.kind === 'card') expect(s.options, s.id).toHaveLength(3);
       if (s.kind === 'whoask') expect(new Set(s.options.map((o) => o.who)).size, s.id).toBe(s.options.length);
     }
   });
@@ -195,7 +227,8 @@ describe('rules content: key rules and advice', () => {
 
   it('uses the abuse line for discriminatie, grensoverschrijdend gedrag, uitbuiting and ontslag', () => {
     const abuse = Object.entries(ruleAdvice).filter(([, v]) => v === 'abuse').map(([k]) => k).sort();
-    expect(abuse).toEqual(['r.l.rechten.1.ru1', 'r.l.rechten.2.ru1', 'r.l.rechten.3.ru1', 'r.l.rechten.4.ru1']);
+    // Discriminatie on stage (14.3) and outside work (16.2) too.
+    expect(abuse).toEqual(['r.l.meedoen.2.ru1', 'r.l.rechten.1.ru1', 'r.l.rechten.2.ru1', 'r.l.rechten.3.ru1', 'r.l.rechten.4.ru1', 'r.l.stage.3.ru1']);
     expect(ruleAdviceLine('r.l.rechten.3.ru1')).toBe(RULES_ABUSE);
     expect(ruleAdviceLine('r.l.loon.1.ru1')).toBe(RULES_ADVICE);
     expect(ruleAdviceLine('r.l.samen.1.ru1')).toBeUndefined();
@@ -288,5 +321,104 @@ describe('rules content: model sentences and recorded clips', () => {
   it('plays the clip for those two, and the phone voice for the rest', () => {
     setRecordedIndex(eleven, null);
     for (const m of models) expect(hasClip(m.nl), m.id).toBe(clipTexts.includes(m.nl));
+  });
+});
+
+/**
+ * The Entree additions (docs/entree-aanvulling.md): the drawn cards add up, the voice reads the
+ * card without giving the answer away, and the doc's own tally of right answers still holds.
+ */
+describe('rules content: the Entree additions and their drawn cards', () => {
+  const ENTREE = ['r.winkel', 'r.rekenen', 'r.afronden', 'r.stage', 'r.digitaal', 'r.meedoen', 'r.duurzaam'];
+  const entree = rulesUnits.filter((u) => ENTREE.includes(u.id));
+  const entreeSteps = entree.flatMap((u) => u.lessons.flatMap((l) => l.steps));
+  type Card = Extract<RuleStep, { kind: 'card' }>;
+  const cards = steps.filter((s): s is Card => s.kind === 'card');
+  const bestOf = (s: Card) => s.options.find((o) => o.best)!.text;
+  /** The number in a card row ("13,40 euro" → 13.4, "1.000 euro" → 1000, "5 lagen van 8 dozen" → [5, 8]). */
+  const nums = (t: string) => [...t.matchAll(/\d+(?:\.\d{3})*(?:,\d+)?/g)].map((m) => Number(m[0].replace(/\./g, '').replace(',', '.')));
+  const row = (s: Card, label: string) => {
+    const r = s.card.rows.find((x) => x.label === label);
+    expect(r, `${s.id}: row ${label}`).toBeDefined();
+    return nums(r!.value);
+  };
+  const time = (t: string) => { const [h, m] = t.match(/(\d{1,2})[.:](\d{2})/)!.slice(1).map(Number); return h + m / 60; };
+
+  it('has 7 units with 18 lessons, all in the path, with the doc\'s tally (A 12, B 12, C 12; 9 true, 9 false)', () => {
+    expect(entree.map((u) => u.id).sort()).toEqual([...ENTREE].sort());
+    expect(entree.flatMap((u) => u.lessons)).toHaveLength(18);
+    const pos: Record<string, number> = {};
+    for (const s of entreeSteps) if (s.kind === 'whatdo' || s.kind === 'card') {
+      const id = s.options.find((o) => o.best)!.id;
+      pos[id] = (pos[id] ?? 0) + 1;
+    }
+    expect(pos).toEqual({ a: 12, b: 12, c: 12 });
+    const tf = entreeSteps.filter((s): s is Extract<RuleStep, { kind: 'truefalse' }> => s.kind === 'truefalse');
+    expect(tf.filter((s) => s.answer)).toHaveLength(9);
+    expect(tf.filter((s) => !s.answer)).toHaveLength(9);
+  });
+
+  it('has the cards of units 11, 12 and 13, of every kind', () => {
+    expect(cards.map((s) => s.id)).toEqual([
+      'r.l.afronden.1.ca1', 'r.l.rekenen.1.ca1', 'r.l.rekenen.1.ca2', 'r.l.rekenen.2.ca1', 'r.l.rekenen.2.ca2',
+      'r.l.rekenen.3.ca1', 'r.l.rekenen.3.ca2', 'r.l.winkel.3.ca1',
+    ]);
+    expect(new Set(cards.map((s) => s.card.type))).toEqual(new Set(['rooster', 'kassabon', 'pakbon', 'etiket', 'werkbon', 'loonstrook']));
+  });
+
+  it('marks what each card is about, and shows a worked-out row\'s answer only after Check', () => {
+    for (const s of cards) {
+      expect(s.card.rows.some((r) => r.hit || r.answer), s.id).toBe(true);
+      for (const r of s.card.rows) if (r.answer !== undefined) {
+        expect(r.value, `${s.id}: ${r.label}`).toBe('?');
+        expect(r.answer, `${s.id}: the worked-out row is the best answer`).toBe(bestOf(s));
+      }
+      // A sum has its steps; reading a card (the werkbon) has none.
+      if (s.card.type !== 'werkbon') expect(s.sum?.length, s.id).toBeGreaterThan(0);
+      // At most 2 steps of sum (a line can be a check in brackets or the result).
+      if (s.sum) expect(s.sum.length, s.id).toBeLessThanOrEqual(3);
+    }
+  });
+
+  it('adds up: every sum\'s best answer is the value the card gives', () => {
+    const card = (id: string) => cards.find((s) => s.id === id)!;
+    const check: Record<string, (s: Card) => void> = {
+      // Kassabon: betaald − totaal.
+      'r.l.winkel.3.ca1': (s) => expect(nums(bestOf(s))[0]).toBeCloseTo(row(s, 'Betaald')[0] - row(s, 'Totaal')[0], 2),
+      // Rooster: eindtijd − begintijd − pauze.
+      'r.l.rekenen.1.ca1': (s) => {
+        const r = (l: string) => s.card.rows.find((x) => x.label === l)!.value;
+        expect(nums(bestOf(s))[0]).toBeCloseTo(time(r('Einde')) - time(r('Begin')) - row(s, 'Pauze')[0] / 60, 5);
+      },
+      // Weekrooster: the days added up, against the contract (in the card's sub line).
+      'r.l.rekenen.1.ca2': (s) => {
+        const total = s.card.rows.reduce((n, r) => n + nums(r.value)[0], 0);
+        const contract = nums(s.card.sub!)[0];
+        expect(bestOf(s)).toBe(total === contract ? 'Ja, dat is precies 24 uur.' : `Nee, het is ${Math.abs(total - contract)} uur te ${total > contract ? 'veel' : 'weinig'}.`);
+        expect(s.sum!.join(' ')).toContain(`= ${total} uur`);
+      },
+      // Uren keer uurloon.
+      'r.l.rekenen.2.ca1': (s) => expect(nums(bestOf(s))[0]).toBe(row(s, 'Gewerkte uren')[0] * row(s, 'Bruto per uur')[0]),
+      // Procent: van elke 100.
+      'r.l.rekenen.2.ca2': (s) => expect(nums(bestOf(s))[0]).toBe((row(s, 'Bruto loon')[0] * row(s, 'Vakantiegeld')[0]) / 100),
+      // Pakbon: lagen keer dozen per laag, and the same as the pakbon says.
+      'r.l.rekenen.3.ca1': (s) => {
+        const [lagen, perLaag] = row(s, 'Op de pallet');
+        expect(nums(bestOf(s))[0]).toBe(lagen * perLaag);
+        expect(nums(bestOf(s))[0]).toBe(row(s, 'Aantal dozen')[0]);
+      },
+      // Etiket: ml per liter keer de liters in the question.
+      'r.l.rekenen.3.ca2': (s) => expect(nums(bestOf(s))[0]).toBe(row(s, 'Gebruik')[0] * nums(s.question)[0]),
+    };
+    for (const s of cards.filter((c) => c.sum)) {
+      expect(check[s.id], `${s.id} has a check`).toBeDefined();
+      check[s.id](s);
+      // The steps of the sum come to the best answer's number.
+      expect(s.sum!.some((line) => nums(line).includes(nums(bestOf(s))[0])), s.id).toBe(true);
+      // Wrong options are other numbers (typical mistakes), never the same as the best one.
+      const wrong = s.options.filter((o) => !o.best).map((o) => o.text);
+      expect(new Set([bestOf(s), ...wrong]).size, s.id).toBe(3);
+    }
+    expect(card('r.l.afronden.1.ca1').card.rows.find((r) => r.hit)!.label).toBe('Materiaal');
   });
 });
