@@ -102,8 +102,10 @@ export function QuestionHead({ nl, text, hint, logo = true, say = false, lang }:
         </div>
       )}
       <h2 className="onboarding-title sector-title">
-        {nl && !dutchUi(text.lang) && <span className="sector-title-nl" lang="nl"><bdi dir="ltr">{nl}</bdi></span>}
-        <Bi text={text} />
+        {/* The work-rules track: its own Dutch question, once, at the size of the main line. */}
+        {dutchUi(text.lang)
+          ? <Bi className="sector-title-solo" text={text} />
+          : <>{nl && <span className="sector-title-nl" lang="nl"><bdi dir="ltr">{nl}</bdi></span>}<Bi text={text} /></>}
       </h2>
       {say && nl && <QuestionSay nl={nl} help={text.help} lang={lang} />}
       {hint && <p className="sector-hint"><Bi text={hint} /></p>}

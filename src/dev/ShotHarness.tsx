@@ -41,6 +41,7 @@ import { HomeGreeting } from '../components/BramSays';
 import { courseUnits, learnedItems, registerRulesCourse } from '../content/courses';
 import { toCourseUnits } from '../content/regels/course';
 import { RULES_STUB } from './rulesStub';
+import { forceNoVoiceNoteForShot, NoVoiceNote, RulesHelp, RulesShelf } from '../components/RulesHelp';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -193,11 +194,26 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'gender') return <GenderShot lang={(lang as LangCode) ?? 'pl'} gender={gender} greet={q.get('greet') === '1'} />;
   if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} />;
   if (shot === 'admin') return <Admin onBack={() => {}} />;
+  // &novoice=1 (the work-rules track): the line that this phone has no Dutch voice, on the home
+  // and on Settings › Geluid, whatever the browser has.
+  forceNoVoiceNoteForShot(q.get('novoice') === '1');
   if (shot === 'tips' || shot === 'settings' || shot === 'words') {
-    // Half the course done, so several tips are unlocked.
-    const done = Object.fromEntries(allLessons.slice(0, 8).map((l) => [l.id, { best: 1, times: 1 }]));
+    // Half the course done, so several tips are unlocked (the work-rules track: its first 8
+    // lessons, so "Alle regels" has rules of three topics).
+    const doneLessons = lang === 'nl' ? courseUnits('regels').flatMap((u) => u.lessons).slice(0, 8) : allLessons.slice(0, 8);
+    const done = Object.fromEntries(doneLessons.map((l) => [l.id, { best: 1, times: 1 }]));
     const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, quiet, completed: done, gender };
     const l = getHelpLanguage(lang as LangCode, gender);
+    if (shot === 'words' && lang === 'nl') {
+      // The Hulp tab of the work-rules track ("Wie bel je?"); &shelf=1 is "Alle regels".
+      if (q.get('shelf') === '1') return <RulesShelf progress={progress} lang={l} onBack={() => {}} />;
+      return (
+        <>
+          <RulesHelp lang={l} onShelf={() => {}} />
+          <BottomNav current="words" onTab={() => {}} lang={l} />
+        </>
+      );
+    }
     if (shot === 'words') {
       return (
         <>
@@ -220,7 +236,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     return (
       <>
         {/* &nl=1: the sections in Dutch (the "NL" toggle on); &nl=0 off, whatever this phone remembers. */}
-        <About lang={l} onCoaches={() => {}} dutch={q.get('nl') === '1' ? true : q.get('nl') === '0' ? false : undefined} />
+        <About lang={l} onCoaches={lang === 'nl' ? undefined : () => {}} dutch={q.get('nl') === '1' ? true : q.get('nl') === '0' ? false : undefined} />
         <BottomNav current="about" onTab={() => {}} lang={l} />
       </>
     );
@@ -456,6 +472,7 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
         onStart={() => {}} onRestart={() => {}} onAll={() => {}} onUpgrade={() => {}}
         onPick={(id) => setProgress((p) => ({ ...p, currentUnit: id }))}
         focusUnit={state === 'coach' ? 'u.pay' : null}
+        note={<NoVoiceNote lang={lang} />}
       />
       <BottomNav current="route" onTab={() => {}} lang={lang} />
     </>

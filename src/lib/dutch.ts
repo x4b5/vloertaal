@@ -15,6 +15,10 @@ const SEAMS: [whole: string, at: number][] = [
   ['werkkleding', 4],
   ['samenwerken', 5],
   ['overwerken', 4],
+  ['vertrouwenspersoon', 11],
+  ['arbeidsinspectie', 7],
+  ['huisartsenpost', 10],
+  ['discriminatie', 6],
 ];
 
 const SHY = '­';

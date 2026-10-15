@@ -494,8 +494,9 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
         <ul className="about-credits muted small">
           {recorded.map((v) => (
             <li key={v.key}>
-              {dutchUi(lang) ? 'Stem' : 'Voice'} “{v.label}”: {v.engine ?? 'Piper'}{v.dataset ? ` · ${v.dataset}` : ''}{v.license ? ` · ${v.license}` : ''}
-              {v.modelCard && <> · <a href={v.modelCard} target="_blank" rel="noreferrer">{dutchUi(lang) ? 'modelkaart' : 'model card'}</a></>}
+              {/* The work-rules track: the voice and its maker only (the licence lines are English). */}
+              {dutchUi(lang) ? 'Stem' : 'Voice'} “{v.label}”: {v.engine ?? 'Piper'}{!dutchUi(lang) && v.dataset ? ` · ${v.dataset}` : ''}{!dutchUi(lang) && v.license ? ` · ${v.license}` : ''}
+              {v.modelCard && !dutchUi(lang) && <> · <a href={v.modelCard} target="_blank" rel="noreferrer">model card</a></>}
             </li>
           ))}
         </ul>

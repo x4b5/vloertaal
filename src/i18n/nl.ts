@@ -85,7 +85,7 @@ export const uiNl: Record<UiKey, UiText> = {
   voice: 'Voorleesstem', // regels: the voice reads the rules aloud
   voiceAuto: 'Automatisch',
   voiceHint: 'Tik op 🔊 om te luisteren. De Vloertaal-stemmen klinken op elke telefoon hetzelfde. De andere stemmen komen van je telefoon.',
-  voiceNone: 'Dit apparaat heeft geen Nederlandse stem. Je kunt er een toevoegen bij de instellingen van je telefoon (Tekst naar spraak).',
+  voiceNone: 'Je telefoon heeft geen Nederlandse voorleesstem. Je kunt er een toevoegen in de instellingen van je telefoon. Zoek naar ‘Tekst naar spraak’.', // regels: also the one-time line on the home
   cultureBadge: 'Zo gaat het hier',
   whatDoYouDo: 'Wat doe je?',
   sayThis: 'Zo zeg je het',

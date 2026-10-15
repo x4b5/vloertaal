@@ -163,9 +163,9 @@ describe("the work-rules track ('regels')", () => {
     expect(trialLessonAllowed('r.l.start.1')).toBe(false);
     expect(trialDone({ helpLang: 'nl', completed: { 'r.l.start.1': rec } }, null)).toBe(true);
     expect(trialDone({ helpLang: 'nl', completed: { 'l.hello': rec } }, null)).toBe(false);
-    // While the rules course is not here: the planned id.
+    // While the rules course is not here: the first lesson of its first unit ("Werk zoeken" 1).
     registerRulesCourse([]);
-    expect(tryLessonId('regels')).toBe('r.l.start.1');
+    expect(tryLessonId('regels')).toBe('r.l.zoeken.1');
     registerRulesCourse(toCourseUnits(RULES_STUB));
   });
 

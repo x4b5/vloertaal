@@ -429,6 +429,46 @@ function defineRuleStates() {
   add('rule:cert-earned', shot('cert-earned&cu=r.zoeken'), null, { expect: '.cert-words-rules' });
   add('rule:pocket', shot('pocket&cu=r.loon'), null, { expect: '.pocket-list-rules' });
   add('rule:pocket-sector', shot('pocket&cu=r.build'), null, { expect: '.pocket-list-rules' });
+  // M5: the Hulp tab ("Wie bel je?": one tap or one speaker per row, the list exception), "Alle
+  // regels" (one list, one tap per rule), About in Dutch only, Settings of the track, and the
+  // line for a phone without a Dutch voice (home and Settings › Geluid).
+  add('rule:help', shot('words'), null, { list: true, expect: '.rh-rows' });
+  add('rule:help-no-voice', shot('words'), null, { list: true, voices: false, expect: '.rh-rows' });
+  add('rule:shelf', shot('words&shelf=1'), null, { list: true, expect: '.shelf-list' });
+  add('rule:shelf-open', shot('words&shelf=1'), async (p) => { await tap(p, '.tips-head', 0); await settle(p); }, { list: true, expect: '.shelf-body .rule-advice' });
+  add('rule:about', shot('about'), null, { expect: '.about-section' });
+  add('rule:settings', shot('settings'), null, { expect: '.max3-menu' });
+  for (const pg of ['me', 'lessons', 'phone', 'language']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
+  for (const pg of ['sector', 'sound', 'voice', 'text', 'theme', 'reminder', 'backup']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
+  add('rule:settings-sound-no-voice', shot('settings&page=sound&novoice=1'), null, { expect: '.no-voice-note' });
+  add('rule:route-no-voice', shot('route&state=mid&novoice=1'), null, { expect: '.no-voice-note' });
+  add('rule:gate', shot('gate&try=1&greet=1'), null, { expect: '.gate-try' });
+  add('rule:sector', shot('sector'), null, { expect: '.sector-step' });
+  add('rule:sector-make', shot('sector&group=make'), null, { expect: '.sector-step-2' });
+
+  // The real first run in this track, from a clean phone (?rules=1 turns the track on in dev):
+  // Nederlands -> (no gender page) -> the code page in Dutch -> the sector -> the home.
+  const RULES = '/?rules=1';
+  const nlStore = (extra) => async (p) => {
+    await p.evaluate((x) => { localStorage.setItem('vloertaal.access', 'full'); localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: 'nl', ...x })); }, extra);
+    await p.reload(); await settle(p, 900);
+  };
+  const toNlGate = async (p) => { await tap(p, '.lang-btn-nl'); await settle(p); };
+  add('flow:nl-language', RULES, null, { list: true, expect: '.lang-btn-nl' });
+  add('flow:nl-gate', RULES, toNlGate, { expect: '.pw-input' });
+  // Back from the code page: the language list (Dutch has no gender page in between).
+  add('flow:nl-gate-back', RULES, async (p) => { await toNlGate(p); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.lang-grid' });
+  add('flow:nl-gate-phone-back', RULES, async (p) => { await toNlGate(p); await p.goBack(); await settle(p); }, { list: true, expect: '.lang-grid' });
+  // The trial lesson of the track: the first lesson of its first unit.
+  add('flow:nl-trial-lesson', RULES, async (p) => { await toNlGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
+  add('flow:nl-sector', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'sneakpeek'); await tap(p, '.pw-go'); await settle(p, 900); }, { expect: '.sector-step' });
+  add('flow:nl-sector-back', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'sneakpeek'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.pw-ok' });
+  add('flow:nl-home', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'sneakpeek'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.max3-card', 2); await settle(p, 900); }, { expect: '.home3' });
+  const nlHome = nlStore({ sector: 'none', completed: { 'r.l.zoeken.1': { best: 1, times: 1 } } });
+  add('flow:nl-help-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); }, { list: true, expect: '.rh-rows' });
+  add('flow:nl-shelf', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); await tap(p, '.rules-shelf-link'); await settle(p); }, { list: true, expect: '.shelf-list' });
+  add('flow:nl-settings-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
+  add('flow:nl-about-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 3); await settle(p); }, { expect: '.about-section' });
   return S;
 }
 

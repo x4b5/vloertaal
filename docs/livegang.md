@@ -76,6 +76,37 @@ Een cookiebanner is niet nodig: de app gebruikt geen cookies.
 Tip voor het contactadres: een apart adres zoals `hallo@vloertaal.nl` (een doorstuuradres bij je
 registrar) of een apart Gmail-adres. Zo staat je persoonlijke adres niet in de app.
 
+## Werkregels aanzetten
+
+Werkregels is het spoor voor mensen die al Nederlands spreken ("Nederlands – ik spreek al
+Nederlands" in de talenlijst). Het is klaar, maar staat in productie nog **uit**. Jij beslist wanneer
+het aangaat. Tot dan zie je het alleen in ontwikkeling, met `?rules=1` achter het adres.
+
+**De wijziging (één regel)** in `src/lib/track.ts`:
+
+```ts
+export const RULES_TRACK: boolean = true;   // was: false
+```
+
+Daarna een gewone merge naar `main`; Vercel publiceert vanzelf.
+
+**Eerst afvinken:**
+
+- [ ] Een deskundige (jurist, vakbond of Juridisch Loket) heeft elke ⚖️ nagekeken: de lijst in
+      [`werkregels-bronnen.md`](werkregels-bronnen.md) (vooral §5, "Niet geverifieerd") en de
+      ⚖️ in [`werkregels-curriculum.md`](werkregels-curriculum.md).
+- [ ] Ook de telefoonnummers op de Hulp-pagina ("Wie bel je?", `src/content/regels/help.ts`).
+      Nummers met `// ⚖️ check` staan nog niet in de lessen of de bronnen: politie zonder spoed
+      0900-8844 en de site van FairWork (fairwork.nu).
+- [ ] De datum in `RULES_CHECKED` (`src/content/regels/disclaimer.ts`) is de datum van die
+      controle. Die datum staat in de app bij "Goed om te weten".
+- [ ] Getest op een echte telefoon (Android en iPhone), met en zonder Nederlandse voorleesstem:
+      taal kiezen → code → sector → eerste les → Hulp (een nummer bellen opent de telefoon) →
+      Instellingen → terug naar een hulptaal en weer naar Nederlands (de voortgang blijft).
+- [ ] `npm test` en `node scripts/max3/count.cjs --matrix` zijn groen.
+
+In GoatCounter verschijnt het spoor als taal `lang-nl`.
+
 ## Na elke merge naar main
 
 Vercel publiceert vanzelf. Lukt dat niet, kijk dan in Vercel bij *Deployments*.

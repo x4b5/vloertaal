@@ -6,6 +6,7 @@ import type { Unit } from '../content/types';
 import { ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { speechAvailable } from '../lib/audio';
+import { breakable } from '../lib/dutch';
 import type { Progress } from '../lib/progress';
 import { dutchUi } from '../lib/track';
 import { Bi } from './Bi';
@@ -39,9 +40,9 @@ export function RulesHelp({ lang, onShelf, onBack }: {
         <h1>Hulp</h1>
       </div>
       <RulesDisclaimer />
-      <h2 className="help-list-title">{ui('phrasebook', lang).help ?? 'Wie bel je?'}</h2>
-      <p className="muted help-list-hint">{ui('phrasebookHint', lang).help}</p>
-      <ul className="help-rows">
+      <h2 className="rh-title">{ui('phrasebook', lang).help ?? 'Wie bel je?'}</h2>
+      <p className="muted rh-hint">{ui('phrasebookHint', lang).help}</p>
+      <ul className="rh-rows">
         {HELP_ROWS.map((row) => <HelpRowItem key={row.id} row={row} lang={lang} />)}
       </ul>
       <button type="button" className="hub-card hub-tips rules-shelf-link" onClick={onShelf}>
@@ -69,35 +70,35 @@ export function RulesDisclaimer() {
 function HelpRowItem({ row, lang }: { row: HelpRow; lang?: HelpLanguage }) {
   const body = (
     <>
-      <span className="help-emoji" aria-hidden>{row.emoji}</span>
-      <span className="help-text">
-        <span className="help-name">{row.name}</span>
-        <span className="help-when">{row.when}</span>
-        <span className={`help-show ${row.href ? 'help-show-link' : ''}`} dir="auto">{row.show}</span>
+      <span className="rh-emoji" aria-hidden>{row.emoji}</span>
+      <span className="rh-text">
+        <span className="rh-name">{breakable(row.name)}</span>
+        <span className="rh-when">{breakable(row.when)}</span>
+        <span className={`rh-show ${row.href ? 'rh-show-link' : ''}`} dir="auto">{row.show}</span>
       </span>
     </>
   );
   if (row.href) {
     const call = row.href.startsWith('tel:');
     return (
-      <li className="help-row">
+      <li className="rh-row">
         <a
-          className="help-card help-link"
+          className="rh-card rh-link"
           href={row.href}
           {...(call ? {} : { target: '_blank', rel: 'noreferrer' })}
           aria-label={`${row.name}: ${call ? 'bel' : 'open'} ${row.show}. ${row.when}`}
         >
           {body}
-          <span className="help-go" aria-hidden>{call ? <CallIcon size={24} /> : <GlobeIcon size={24} />}</span>
+          <span className="rh-go" aria-hidden>{call ? <CallIcon size={24} /> : <GlobeIcon size={24} />}</span>
         </a>
       </li>
     );
   }
   return (
-    <li className="help-row">
-      <div className="help-card help-say-row">
+    <li className="rh-row">
+      <div className="rh-card rh-say">
         {body}
-        <span className="help-go help-go-say"><SpeakButton text={helpRowText(row)} long needsDevice help={lang} /></span>
+        <span className="rh-go rh-go-say"><SpeakButton text={helpRowText(row)} long needsDevice help={lang} /></span>
       </div>
     </li>
   );
@@ -166,6 +167,9 @@ export function shelfGroups(units: Unit[], completed: Record<string, unknown>) {
 }
 
 const NOTED_KEY = 'vloertaal:no-voice-noted';
+/** Screenshots (src/dev/ShotHarness.tsx, &novoice=1): the line shows whatever this phone has. */
+let shotForced = false;
+export function forceNoVoiceNoteForShot(on: boolean): void { shotForced = on; }
 /** How long the phone gets to list its voices (some browsers only do so after a while). */
 const SETTLE_MS = 1200;
 
@@ -184,6 +188,7 @@ export function NoVoiceNote({ lang, once = false, force = false }: {
   force?: boolean;
 }) {
   const { device } = useVoices();
+  force = force || shotForced;
   const [settled, setSettled] = useState(force);
   const [seen] = useState(() => once && !force && noted());
   useEffect(() => {
