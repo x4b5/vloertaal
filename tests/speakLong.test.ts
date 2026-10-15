@@ -84,8 +84,9 @@ describe('speakLong', () => {
   });
 
   it('splits on ! and ? too, but not after an abbreviation', () => {
+    // "app" is given to the voice as "ep" (src/lib/sayAs.ts).
     audio.speakLong('Ziek? Bel zelf! Gebruik bv. een app. Klaar.');
-    expect(synth.spoken.map((u) => u.text)).toEqual(['Ziek?', 'Bel zelf!', 'Gebruik bv. een app.', 'Klaar.']);
+    expect(synth.spoken.map((u) => u.text)).toEqual(['Ziek?', 'Bel zelf!', 'Gebruik bv. een ep.', 'Klaar.']);
   });
 
   it('the work-rules track reads at about 0.9; the turtle stays slow', () => {

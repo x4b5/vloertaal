@@ -1,4 +1,5 @@
 import { BRAM_HELLO, BRAM_VOICE, DEVICE, type VoiceRef } from './voices';
+import { sayAs } from './sayAs';
 import { sentences } from './dutch';
 
 /** Dutch text-to-speech through the browser, plus small feedback sounds. */
@@ -335,7 +336,7 @@ function speakSentences(text: string, slow: boolean, voiceURI: string | undefine
   const turn = ++speechTurn;
   const mine = () => turn === speechTurn;
   parts.forEach((part, i) => {
-    const u = new SpeechSynthesisUtterance(part);
+    const u = new SpeechSynthesisUtterance(sayAs(part));
     u.lang = 'nl-NL';
     if (voice) u.voice = voice;
     u.rate = deviceRate(slow);
@@ -412,7 +413,7 @@ function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: s
   playing?.pause();
   playing = null;
   synth.cancel();
-  const u = new SpeechSynthesisUtterance(text);
+  const u = new SpeechSynthesisUtterance(lang === 'en' ? text : sayAs(text));
   u.lang = lang === 'en' ? 'en-GB' : 'nl-NL';
   const voice = lang === 'en' ? undefined : dutchVoice(voiceURI);
   if (voice) u.voice = voice;
