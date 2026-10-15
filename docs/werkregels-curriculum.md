@@ -1992,3 +1992,632 @@ loon ⚖️. Schoonmaak: te veel werk in te weinig uren (onderbetaling); schrijf
 Seizoenswerk (horeca, land- en tuinbouw): let op de wekeneis voor de WW ⚖️. Bouw: WW bij onwerkbaar
 weer ⚖️. Zorg en schoonmaak: veel parttime werk, dus vaak toeslagen of een aanvulling van de gemeente;
 geef elke verandering in uren door. Uitzendwerk: werk stopt soms opeens; vraag dan meteen WW aan.
+
+---
+
+## 6. Sectorlessen
+
+*Twaalf korte lessen: 2 per sector. Ze staan in de app als losse units (`r.build`, `r.care`,
+`r.horeca`, `r.clean`, `r.factory`, `r.warehouse`), naast de 10 units hierboven. Zelfde vorm en
+taalniveau. Elke regel uit wet, richtlijn of cao heeft een ⚖️. Ook deze lessen moet een deskundige
+nakijken.*
+
+## Sector bouw · Veilig op de bouw
+
+*In deze unit: VCA, je beschermende spullen (PBM), de toolboxmeeting en eerst even kijken.*
+
+### Les B.1 · VCA en je beschermende spullen
+
+**Leerdoel:** je weet wat VCA is, en dat je beschermende spullen gratis krijgt en altijd draagt.
+
+**Scène** · *Beeld: Mohammed bij het hek van een bouwplaats. Op het hek een bord met een helm en schoenen.*
+
+> Mohammed gaat via een uitzendbureau op de bouw werken. Het bureau vraagt: "Heb je VCA?" Mohammed
+> weet niet wat dat is. Op het hek hangt een bord: "Helm en veiligheidsschoenen verplicht."
+
+**Vraag 1 · Waar of niet waar?** "VCA is een diploma over veilig werken."
+
+**Antwoord: waar.**
+**Waarom:** VCA is een cursus met een examen. Je leert de gevaren op de bouw kennen. VCA is geen
+wet ⚖️. Maar veel bedrijven laten je zonder VCA niet op de bouwplaats. Vraag wie de cursus betaalt.
+
+**Vraag 2 · Wat doe je?** Mohammed krijgt geen veiligheidsschoenen. Hij heeft alleen gewone sneakers.
+
+- **A.** Hij werkt op zijn sneakers. Het is maar voor één dag.
+  → *Begrijpelijk. Maar een spijker gaat zo door een sneaker.*
+- **B.** Hij koopt zelf schoenen, en betaalt ze van zijn loon.
+  → *Goed bedoeld. Maar je werkgever moet ze gratis geven.*
+- **C.** Hij vraagt de uitvoerder om veiligheidsschoenen.
+  → *Goed. Daar is de uitvoerder voor.*
+
+**Goed antwoord: C.**
+**Waarom:** Beschermende spullen heten ook PBM: persoonlijke beschermingsmiddelen. Denk aan een helm,
+schoenen, een bril en een hesje. Je werkgever geeft ze gratis ⚖️. Werk je via een uitzendbureau?
+Vraag dan wie ze geeft.
+
+**Vraag 3 · Waar of niet waar?** "Een helm hoef je alleen op als de baas kijkt."
+
+**Antwoord: niet waar.**
+**Waarom:** Moet je een helm of andere bescherming dragen? Dan moet je dat ook doen ⚖️. Ook als het
+warm is. Ook als niemand kijkt. Zo bescherm je jezelf.
+
+**Zo zeg je het:** "Ik heb nog geen veiligheidsschoenen. Waar krijg ik die?"
+
+**Onthoud:** Helm en schoenen verplicht? Draag ze altijd, ook als niemand kijkt.
+
+**Wie kan je helpen:** je uitvoerder · je uitzendbureau · de preventiemedewerker · de Nederlandse
+Arbeidsinspectie.
+
+---
+
+### Les B.2 · Toolbox en eerst even kijken
+
+**Leerdoel:** je gaat naar de toolbox, kijkt eerst rond, en loopt nooit onder een last.
+
+**Scène** · *Beeld: Kevin op een bouwplaats. Boven het pad hangt een betonblok aan een kraan.*
+
+> Elke maandag is er een toolboxmeeting over veiligheid. Daarna moet Kevin snel een plaat halen. De
+> kortste weg is onder de kraan door. Aan de kraan hangt een zwaar blok.
+
+**Vraag 1 · Wat doe je?** Kevin wil de plaat halen.
+
+- **A.** Hij loopt snel onder het blok door. Het hangt toch vast.
+  → *Begrijpelijk. Maar een last kan altijd vallen.*
+- **B.** Hij loopt om, ook al duurt dat langer.
+  → *Goed. Onder een hangende last loop je nooit.*
+- **C.** Hij roept naar de kraanmachinist dat hij eraan komt.
+  → *Goed bedoeld. Maar onder de last blijft het gevaarlijk.*
+
+**Goed antwoord: B.**
+**Waarom:** Loop nooit onder een hangende last. Die kan vallen of zwaaien. Een paar minuten omlopen
+is altijd beter.
+
+**Vraag 2 · Waar of niet waar?** "Werk je hoger dan 2,5 meter? Dan moet er bescherming tegen vallen zijn."
+
+**Antwoord: waar.**
+**Waarom:** Boven 2,5 meter ⚖️ is er valgevaar. Dan moet je werkgever zorgen voor bescherming ⚖️.
+Bijvoorbeeld een leuning of een harnas. Ontbreekt die? Ga dan niet verder, en zeg het meteen.
+
+**Vraag 3 · Wat doe je?** In de toolboxmeeting zegt de uitvoerder: "Doe altijd eerst een LMRA." Wat betekent dat?
+
+- **A.** Je kijkt vlak voor je begint wat er mis kan gaan.
+  → *Goed. Zo zie je gevaar op tijd.*
+- **B.** Je vult aan het eind van de dag een lijst met uren in.
+  → *Nee. Het gaat over veiligheid, niet over uren.*
+- **C.** Je wacht tot de uitvoerder het werk eerst voordoet.
+  → *Nee. Je kijkt zelf, vlak voor je begint.*
+
+**Goed antwoord: A.**
+**Waarom:** LMRA betekent: laatste minuut risicoanalyse. Vlak voor je begint, kijk je even rond. Wat
+kan er misgaan? Wat heb je nodig? Zie je gevaar? Begin dan niet, en meld het.
+
+**Zo zeg je het:** "Ik begin nog niet. Er hangt een last boven het pad."
+
+**Onthoud:** Eerst kijken, dan beginnen. Loop nooit onder een hangende last.
+
+**Wie kan je helpen:** je uitvoerder · de preventiemedewerker · de Nederlandse Arbeidsinspectie.
+
+---
+
+## Sector zorg · Schoon en zorgvuldig werken
+
+*In deze unit: hygiëne, privacy van cliënten en medicijnen.*
+
+### Les Z.1 · Hygiëne: schone handen, geen sieraden
+
+**Leerdoel:** je kent de hygiëneregels in de zorg, en je weet waarom ze er zijn.
+
+**Scène** · *Beeld: Dewi bij een wastafel in een verpleeghuis. Op de rand liggen haar ring en haar horloge.*
+
+> Dewi begint in een verpleeghuis. Ze draagt graag een ring en een horloge. Haar collega Esra zegt:
+> "Die moeten af. En je nagels zijn te lang." Dewi schrikt een beetje.
+
+**Vraag 1 · Waar of niet waar?** "In de zorg draag je geen ring en geen horloge."
+
+**Antwoord: waar.**
+**Waarom:** Onder een ring of horloge blijven bacteriën zitten. Zo kunnen cliënten ziek worden.
+Daarom draag je geen sieraden aan je handen en polsen ⚖️. Je nagels zijn kort en zonder nagellak ⚖️.
+Lang haar draag je vast.
+
+**Vraag 2 · Wat doe je?** Dewi heeft net een cliënt geholpen. Ze moet meteen naar de volgende.
+
+- **A.** Ze loopt meteen door. Haar handen zien er schoon uit.
+  → *Begrijpelijk. Maar bacteriën zie je niet.*
+- **B.** Ze trekt alleen een paar nieuwe handschoenen aan.
+  → *Handschoenen helpen. Maar ook je handen moeten schoon.*
+- **C.** Ze maakt eerst haar handen schoon.
+  → *Goed. Zo neem je geen bacteriën mee.*
+
+**Goed antwoord: C.**
+**Waarom:** Maak je handen schoon voor en na elke cliënt. Met water en zeep, of met handalcohol. Doe
+dat ook als je handschoenen uittrekt ⚖️. Zo bescherm je je cliënten en jezelf.
+
+**Vraag 3 · Wat doe je?** Dewi heeft vannacht overgegeven. Nu voelt ze zich weer goed.
+
+- **A.** Ze gaat werken. Ze voelt zich nu toch goed.
+  → *Begrijpelijk. Maar je kunt cliënten nog besmetten.*
+- **B.** Ze belt vóór haar dienst, en zegt dat het besmettelijk kan zijn.
+  → *Goed. Je hoeft niet te zeggen wat je hebt. Dit wel.*
+- **C.** Ze gaat werken, en draagt de hele dag een mondkapje.
+  → *Goed bedoeld. Maar dat helpt niet genoeg.*
+
+**Goed antwoord: B.**
+**Waarom:** Overgeven of diarree kan besmettelijk zijn. Cliënten zijn vaak kwetsbaar. Bel dus vóór je
+dienst. Volg het protocol van je werk. Daar staat in wat je moet doen.
+
+**Zo zeg je het:** "Mijn ring en horloge gaan af. Waar kan ik ze veilig leggen?"
+
+**Onthoud:** Schone handen voor en na elke cliënt. Geen sieraden aan handen en polsen.
+
+**Wie kan je helpen:** je leidinggevende · de hygiëne-deskundige van je werk · de bedrijfsarts.
+
+---
+
+### Les Z.2 · Privacy en medicijnen
+
+**Leerdoel:** je deelt niets over cliënten, geeft alleen medicijnen als je het geleerd hebt, en meldt fouten.
+
+**Scène** · *Beeld: Fatima in de huiskamer van een zorghuis. Op tafel een medicijnrol en een telefoon.*
+
+> Fatima werkt in een zorghuis. Ze heeft een gezellige middag met meneer De Vries. Ze wil een foto
+> maken voor de groepsapp. Daarna moet ze zijn medicijnen geven. Dat heeft ze nog nooit gedaan.
+
+**Vraag 1 · Waar of niet waar?** "Een leuke foto van een cliënt mag gewoon in de groepsapp."
+
+**Antwoord: niet waar.**
+**Waarom:** Wat je over cliënten weet, is privé. Dat geldt ook voor foto's ⚖️. Je deelt niets zonder
+toestemming. Ook niet thuis of online. Volg de regels van je werk.
+
+**Vraag 2 · Wat doe je?** Fatima moet medicijnen geven. Ze heeft dat nog nooit geleerd.
+
+- **A.** Ze vraagt eerst uitleg aan een ervaren collega.
+  → *Goed. Je geeft alleen medicijnen als je het geleerd hebt.*
+- **B.** Ze geeft ze toch. Het staat allemaal op de lijst.
+  → *Begrijpelijk. Maar zonder uitleg kun je een fout maken.*
+- **C.** Ze legt de pillen op tafel. Meneer neemt ze zelf wel.
+  → *Dan weet niemand of hij ze echt neemt.*
+
+**Goed antwoord: A.**
+**Waarom:** Geef alleen medicijnen als je het geleerd hebt ⚖️. En als het mag van je werk. Check
+altijd de lijst: de juiste persoon, het juiste medicijn, de juiste tijd. Twijfel je? Vraag het eerst.
+
+**Vraag 3 · Wat doe je?** Fatima geeft een pil een uur te laat. Niemand heeft het gezien.
+
+- **A.** Ze zegt niets. Het was maar een uurtje.
+  → *Begrijpelijk. Maar soms is een uur belangrijk.*
+- **B.** Ze geeft morgen een extra pil, om het goed te maken.
+  → *Niet doen. Dat kan gevaarlijk zijn.*
+- **C.** Ze meldt het, zoals het protocol zegt.
+  → *Goed. Dan kan iemand checken of het goed gaat.*
+
+**Goed antwoord: C.**
+**Waarom:** Een fout met medicijnen meld je altijd ⚖️. Dat heet een incident melden. Het gaat niet om
+straf. Het gaat erom dat de cliënt veilig is. En dat het team ervan leert.
+
+**Zo zeg je het:** "Ik heb dit nog niet geleerd. Wil je het mij uitleggen?"
+
+**Onthoud:** Wat je over cliënten weet, blijft op je werk.
+
+**Wie kan je helpen:** je leidinggevende · een ervaren collega · de vertrouwenspersoon, als je werk die heeft.
+
+---
+
+## Sector horeca · Veilig eten en gasten
+
+*In deze unit: HACCP en hygiëne in de keuken, allergenen en fooi.*
+
+### Les H.1 · Hygiëne in de keuken
+
+**Leerdoel:** je weet wat HACCP is, koelt eten goed, en houdt rauw en klaar eten apart.
+
+**Scène** · *Beeld: Jayden in een restaurantkeuken. Hij zet een bak kip in een koelkast. Op de bak een sticker.*
+
+> Jayden werkt in de keuken van een restaurant. Chef Kevin wijst naar de koelkast. "Op elke bak een
+> sticker met de datum. Dat is HACCP." Jayden knikt, maar hij snapt het niet helemaal.
+
+**Vraag 1 · Waar of niet waar?** "HACCP is een manier van werken om eten veilig te houden."
+
+**Antwoord: waar.**
+**Waarom:** HACCP is een systeem voor veilig eten. Elk bedrijf met eten moet zo werken ⚖️. In de
+horeca staat het in de hygiënecode ⚖️. Bijvoorbeeld: stickers met de datum, goed koelen en schoon
+werken. Een inspecteur van de NVWA komt soms kijken.
+
+**Vraag 2 · Wat doe je?** Een bak saus staat al 2 uur op het aanrecht. Het is warm in de keuken.
+
+- **A.** Hij zet de bak snel terug in de koelkast.
+  → *Begrijpelijk. Maar misschien is de saus al niet meer goed.*
+- **B.** Hij vraagt de chef wat ermee moet.
+  → *Goed. De chef weet wat de regels zijn.*
+- **C.** Hij ruikt eraan. Ruikt het goed, dan gebruikt hij het.
+  → *Bacteriën ruik je niet altijd.*
+
+**Goed antwoord: B.**
+**Waarom:** Koud eten bewaar je in de koelkast, op 7 graden of kouder ⚖️. Stond het te lang warm? Dan
+kunnen er bacteriën in groeien. Twijfel je? Vraag het, of gooi het weg.
+
+**Vraag 3 · Wat doe je?** Jayden heeft net rauwe kip gesneden. Nu moet hij sla snijden.
+
+- **A.** Hij wast zijn handen, en pakt een schone plank.
+  → *Goed. Zo komen er geen bacteriën van de kip op de sla.*
+- **B.** Hij spoelt het mes even af onder de kraan.
+  → *Dat is niet genoeg. De plank en je handen zijn ook vies.*
+- **C.** Hij gebruikt dezelfde plank. Hij snijdt de sla toch heel snel.
+  → *Snel helpt niet. Bacteriën gaan meteen mee.*
+
+**Goed antwoord: A.**
+**Waarom:** Rauw vlees heeft vaak bacteriën. Houd rauw en klaar eten altijd apart. Gebruik schone
+planken en messen. Was je handen na rauw vlees.
+
+**Zo zeg je het:** "Chef, deze saus stond lang buiten. Wat doe ik ermee?"
+
+**Onthoud:** Werk schoon, koel goed, en zet de datum erop.
+
+**Wie kan je helpen:** de chef of je leidinggevende · de hygiënecode voor de horeca.
+
+---
+
+### Les H.2 · Allergenen en fooi
+
+**Leerdoel:** je raadt nooit bij een vraag over allergie, en je weet hoe het zit met fooi.
+
+**Scène** · *Beeld: Esra in de bediening met een notitieblok. Een gast wijst naar de taart op de kaart.*
+
+> Esra werkt in de bediening van een café. Een gast vraagt: "Zitten er noten in de taart? Ik ben
+> allergisch." Esra weet het niet zeker. Het is druk.
+
+**Vraag 1 · Wat doe je?** De gast is allergisch voor noten.
+
+- **A.** Ze zegt: "Nee hoor, dat denk ik niet."
+  → *Begrijpelijk. Maar raden kan iemand heel ziek maken.*
+- **B.** Ze zegt: "Ik vraag het even na in de keuken."
+  → *Goed. Zo krijgt de gast het juiste antwoord.*
+- **C.** Ze raadt de gast aan om iets anders te kiezen.
+  → *Aardig bedoeld. Maar de gast wil een eerlijk antwoord.*
+
+**Goed antwoord: B.**
+**Waarom:** Sommige mensen worden heel ziek van noten, melk of gluten. Dat heet een allergie. Een
+restaurant moet weten welke allergenen in het eten zitten ⚖️. Het gaat om 14 allergenen ⚖️. Raad
+nooit. Vraag het na.
+
+**Vraag 2 · Waar of niet waar?** "Fooi telt mee voor je minimumloon."
+
+**Antwoord: niet waar.**
+**Waarom:** Fooi is extra, van de gasten. Je werkgever betaalt je gewoon minstens het minimumloon ⚖️.
+Fooi mag hij daar niet bij optellen ⚖️. Vraag hoe de fooi in jullie team wordt verdeeld.
+
+**Vraag 3 · Wat doe je?** Esra werkt er al 2 maanden. Ze hoort niets over de fooi.
+
+- **A.** Ze vraagt haar leidinggevende hoe de fooi wordt verdeeld.
+  → *Goed. Elk team doet het anders. Vragen is normaal.*
+- **B.** Ze pakt elke avond zelf wat geld uit de pot.
+  → *Niet doen. Dan lijkt het op stelen.*
+- **C.** Ze zegt niets. Fooi is toch niet zo belangrijk.
+  → *Mag. Maar fooi kan best veel geld zijn.*
+
+**Goed antwoord: A.**
+**Waarom:** Elk bedrijf verdeelt fooi op een eigen manier. Soms krijgt iedereen evenveel. Soms gaat
+het naar uren. Vraag het gewoon. Het is geen rare vraag.
+
+**Zo zeg je het:** "Ik weet het niet zeker. Ik vraag het even in de keuken."
+
+**Onthoud:** Allergie? Raad nooit. Vraag het na in de keuken.
+
+**Wie kan je helpen:** de chef of je leidinggevende · bij te weinig loon: de Nederlandse
+Arbeidsinspectie.
+
+---
+
+## Sector schoonmaak · Veilig schoonmaken
+
+*In deze unit: schoonmaakmiddelen, alleen werken, en je lichaam sparen.*
+
+### Les S.1 · Schoonmaakmiddelen: nooit mengen
+
+**Leerdoel:** je mengt nooit middelen, leest het etiket, en weet wat je doet als je alleen werkt.
+
+**Scène** · *Beeld: Fatima in een kantoortoilet met twee flessen in haar handen.*
+
+> Fatima maakt 's avonds een kantoor schoon. Ze werkt alleen. Een wc is heel vies. Ze denkt: "Met
+> twee middelen samen gaat het sneller." Ze pakt de chloor en een ontkalker.
+
+**Vraag 1 · Wat doe je?** Fatima wil de wc snel schoon krijgen.
+
+- **A.** Ze giet de twee middelen samen. Dan werkt het sterker.
+  → *Niet doen. Dan kan er giftig gas ontstaan.*
+- **B.** Ze gebruikt één middel, en spoelt goed na.
+  → *Goed. Eén middel tegelijk is veilig.*
+- **C.** Ze mengt ze, maar ze zet eerst het raam open.
+  → *Een open raam is niet genoeg. Het gas is gevaarlijk.*
+
+**Goed antwoord: B.**
+**Waarom:** Meng nooit schoonmaakmiddelen. Chloor met een ander middel kan giftig gas geven. Dat is
+slecht voor je longen. Gebruik één middel tegelijk. Spoel goed na voor je een ander middel pakt.
+
+**Vraag 2 · Waar of niet waar?** "Op het etiket staat hoe je een middel veilig gebruikt."
+
+**Antwoord: waar.**
+**Waarom:** Op het etiket staan plaatjes met een rode rand. Die laten gevaar zien. Er staat ook of je
+handschoenen of een bril nodig hebt. Je werkgever moet uitleg geven ⚖️. En beschermende spullen,
+gratis ⚖️.
+
+**Vraag 3 · Wat doe je?** Fatima werkt alleen in het gebouw. Het is 10 uur 's avonds.
+
+- **A.** Ze spreekt met haar leidinggevende af hoe ze hulp vraagt.
+  → *Goed. Dan weet iemand waar ze is.*
+- **B.** Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.
+  → *Begrijpelijk. Maar alleen ben je kwetsbaar.*
+- **C.** Ze neemt haar zoon mee, voor de veiligheid.
+  → *Begrijpelijk. Maar je werkgever moet dit regelen.*
+
+**Goed antwoord: A.**
+**Waarom:** Werk je alleen? Dan moet je werkgever zorgen dat je hulp kunt krijgen ⚖️. Spreek af wie je
+belt als er iets is. Zorg dat je telefoon opgeladen is.
+
+**Zo zeg je het:** "Ik werk vanavond alleen. Wie kan ik bellen als er iets is?"
+
+**Onthoud:** Meng nooit schoonmaakmiddelen. Lees eerst het etiket.
+
+**Wie kan je helpen:** je leidinggevende of voorman · de preventiemedewerker · de Nederlandse
+Arbeidsinspectie · bij een ongeluk: 112.
+
+---
+
+### Les S.2 · Je lichaam sparen
+
+**Leerdoel:** je werkt zo dat je rug en armen gezond blijven, en je meldt klachten op tijd.
+
+**Scène** · *Beeld: Piotr met een mop in een lange schoolgang. Hij houdt een hand op zijn rug.*
+
+> Piotr maakt elke dag een school schoon. Hij dweilt veel gangen. Zijn steel is kort, dus hij werkt
+> gebukt. 's Avonds doet zijn rug pijn.
+
+**Vraag 1 · Wat doe je?** Piotr heeft steeds last van zijn rug.
+
+- **A.** Hij neemt elke dag een pijnstiller, en werkt door.
+  → *Begrijpelijk. Maar zo pak je de oorzaak niet aan.*
+- **B.** Hij werkt sneller, dan staat hij korter gebukt.
+  → *Haast maakt het vaak erger.*
+- **C.** Hij vraagt een steel die op zijn lengte past.
+  → *Goed. Met de goede spullen werk je rechtop.*
+
+**Goed antwoord: C.**
+**Waarom:** Je werkgever moet zorgen dat je werk niet te zwaar is voor je lichaam ⚖️. Goede spullen
+helpen daarbij. Bijvoorbeeld een steel die je langer kunt maken. Of een kar, zodat je minder tilt.
+
+**Vraag 2 · Waar of niet waar?** "Pijn hoort er gewoon bij in de schoonmaak."
+
+**Antwoord: niet waar.**
+**Waarom:** Pijn is een signaal. Wacht niet tot het erger wordt. Praat erover met je leidinggevende.
+Je mag ook zelf naar de bedrijfsarts ⚖️.
+
+**Vraag 3 · Wat doe je?** Piotr moet een zware vuilniszak in een hoge container gooien.
+
+- **A.** Hij tilt de zak in één keer met een ruk omhoog.
+  → *Dat is zwaar voor je rug. Zo kun je je bezeren.*
+- **B.** Hij maakt de zak minder vol, of vraagt een collega.
+  → *Goed. Twee keer lopen is beter dan een pijnlijke rug.*
+- **C.** Hij laat de zak gewoon naast de container staan.
+  → *Dan blijft het werk liggen voor iemand anders.*
+
+**Goed antwoord: B.**
+**Waarom:** Til dicht bij je lichaam, met je knieën gebogen. Draai niet met je rug terwijl je tilt. Te
+zwaar? Maak het lichter, of vraag hulp. Gebruik een kar als dat kan.
+
+**Zo zeg je het:** "Mijn steel is te kort. Ik krijg pijn in mijn rug. Is er een langere?"
+
+**Onthoud:** Pijn door je werk? Wacht niet. Zeg het op tijd.
+
+**Wie kan je helpen:** je leidinggevende · de bedrijfsarts · de preventiemedewerker.
+
+---
+
+## Sector productie · Machines en ploegen
+
+*In deze unit: veilig bij machines, lock-out bij onderhoud, ploegendienst en nachtwerk.*
+
+### Les P.1 · Machines en lock-out
+
+**Leerdoel:** je grijpt nooit in een draaiende machine, en je weet wat lock-out is.
+
+**Scène** · *Beeld: Sanne bij een verpakkingsmachine. Een doos zit vast. Leidinggevende Henk komt aanlopen.*
+
+> Sanne werkt in een fabriek bij een verpakkingsmachine. Er zit een doos vast. De machine draait nog.
+> Ze wil de doos er snel uit trekken. Dan roept Henk: "Wacht!"
+
+**Vraag 1 · Wat doe je?** De doos zit vast, en de band draait nog.
+
+- **A.** Ze trekt de doos er snel uit. Het duurt maar een seconde.
+  → *Een seconde is genoeg voor een zwaar ongeluk.*
+- **B.** Ze drukt op de noodstop, en ze roept Henk.
+  → *Goed. Eerst moet de machine echt stilstaan.*
+- **C.** Ze duwt de doos los met een stuk karton.
+  → *Ook dan kom je dicht bij de machine. Niet doen.*
+
+**Goed antwoord: B.**
+**Waarom:** Grijp nooit in een machine die draait. Ook niet even. Druk op de noodstop als dat nodig is.
+Weet waar de noodstop zit, vóór je begint.
+
+**Vraag 2 · Waar of niet waar?** "Lock-out betekent: de machine gaat op slot, zodat niemand hem aanzet."
+
+**Antwoord: waar.**
+**Waarom:** Bij onderhoud of een storing gaat de machine uit. Dan gaat er een slot op de schakelaar ⚖️.
+Met een kaartje: wie eraan werkt. Zo kan niemand hem per ongeluk aanzetten. Haal nooit het slot van
+een ander eraf.
+
+**Vraag 3 · Wat doe je?** Een kap van de machine is kapot. Zonder kap gaat het werk sneller.
+
+- **A.** Ze werkt door zonder kap. Ze let extra goed op.
+  → *Begrijpelijk. Maar de kap is er voor jouw handen.*
+- **B.** Ze plakt de kap met tape vast, en werkt door.
+  → *Goed bedoeld. Maar zo is het niet veilig genoeg.*
+- **C.** Ze stopt, en ze meldt de kapotte kap bij Henk.
+  → *Goed. Een machine zonder goede beveiliging is gevaarlijk.*
+
+**Goed antwoord: C.**
+**Waarom:** Een kap of hek op een machine beschermt je. Haal die nooit weg, en zet die niet uit ⚖️. Is
+er iets kapot? Meld het meteen. Je werkgever moet zorgen dat machines veilig zijn ⚖️.
+
+**Zo zeg je het:** "Henk, er zit een doos vast. Ik heb de noodstop ingedrukt."
+
+**Onthoud:** Grijp nooit in een draaiende machine. Eerst moet hij stil.
+
+**Wie kan je helpen:** je leidinggevende · de technische dienst · de preventiemedewerker · de
+Nederlandse Arbeidsinspectie.
+
+---
+
+### Les P.2 · Ploegendienst en nachtwerk
+
+**Leerdoel:** je kent de rustregels na een nachtdienst, en je weet waar de ploegentoeslag staat.
+
+**Scène** · *Beeld: Mohammed bij de prikklok van een fabriek. De klok zegt 6.00. Buiten is het donker.*
+
+> Mohammed werkt in ploegen in een fabriek. Deze week heeft hij nachtdienst. Zijn dienst stopt om
+> 6 uur 's ochtends. Dan vraagt Henk: "Kun je vanmiddag om 2 uur weer komen?"
+
+**Vraag 1 · Waar of niet waar?** "Na een nachtdienst mag je meteen weer een dienst draaien."
+
+**Antwoord: niet waar.**
+**Waarom:** Na een nachtdienst heb je lang rust nodig. Stopt je nachtdienst na 2 uur 's nachts? Dan
+heb je minstens 14 uur rust ⚖️. Tussen 2 gewone diensten zit meestal minstens 11 uur ⚖️. Kijk ook in
+je cao ⚖️.
+
+**Vraag 2 · Wat doe je?** Henk vraagt Mohammed om vanmiddag terug te komen.
+
+- **A.** Hij zegt ja. Hij slaapt straks wel een paar uur.
+  → *Begrijpelijk. Maar moe werken bij machines is gevaarlijk.*
+- **B.** Hij zegt: "Te kort na mijn nacht. Morgen wel."
+  → *Goed. Je rust is ook voor je veiligheid.*
+- **C.** Hij komt, en hij drinkt de hele dag energiedrank.
+  → *Dat helpt even. Maar je blijft moe en traag.*
+
+**Goed antwoord: B.**
+**Waarom:** Rust is geen luxe. Moe werken geeft fouten en ongelukken. Zeg rustig nee, en bied een ander
+moment aan. Slaap overdag in een donkere, stille kamer.
+
+**Vraag 3 · Wat doe je?** Op Mohammeds loonstrook staat "ploegentoeslag". Hij weet niet hoeveel het moet zijn.
+
+- **A.** Hij zoekt het op in zijn cao.
+  → *Goed. Daar staat hoeveel toeslag je krijgt.*
+- **B.** Hij vraagt het aan een vriend uit een andere fabriek.
+  → *Kan. Maar die heeft misschien een andere cao.*
+- **C.** Hij denkt: de wet zegt vast hoeveel het is.
+  → *Nee. De toeslag staat niet in de wet.*
+
+**Goed antwoord: A.**
+**Waarom:** Ploegentoeslag is extra loon voor werk in ploegen. Hoeveel je krijgt, staat in je cao of
+contract ⚖️. Niet in de wet ⚖️. Zoek je cao online, of vraag het bij de loonadministratie.
+
+**Zo zeg je het:** "Ik heb net nachtdienst gehad. Ik heb eerst rust nodig."
+
+**Onthoud:** Na een nachtdienst heb je recht op lange rust ⚖️.
+
+**Wie kan je helpen:** je leidinggevende · de loonadministratie · een vakbond · de Nederlandse
+Arbeidsinspectie.
+
+---
+
+## Sector logistiek · Veilig in het magazijn
+
+*In deze unit: de heftruck en het certificaat, looppaden, tillen, scanners en tempo.*
+
+### Les L.1 · Heftruck: alleen met opleiding
+
+**Leerdoel:** je rijdt alleen op een heftruck met opleiding, en je loopt veilig.
+
+**Scène** · *Beeld: Jayden in een magazijn naast een heftruck. De sleutel zit erin.*
+
+> Jayden werkt sinds een week in een magazijn. Een pallet moet snel naar de vrachtwagen. Een collega
+> zegt: "Pak jij de heftruck even? De sleutel zit erin." Jayden heeft nog nooit op een heftruck
+> gereden.
+
+**Vraag 1 · Wat doe je?** Jayden heeft geen opleiding voor de heftruck.
+
+- **A.** Hij rijdt heel langzaam. Dan kan er niets gebeuren.
+  → *Begrijpelijk. Maar ook langzaam kan het misgaan.*
+- **B.** Hij rijdt, want de collega zegt dat het mag.
+  → *Je collega kan dat niet beslissen.*
+- **C.** Hij zegt: "Ik mag niet rijden. Kan iemand anders?"
+  → *Goed. Zonder opleiding rijd je niet.*
+
+**Goed antwoord: C.**
+**Waarom:** Je rijdt alleen op een heftruck als je opgeleid bent ⚖️. En als je werkgever zegt dat het
+mag. Een heftruck is zwaar en kan omvallen. Ongelukken met heftrucks komen vaak voor.
+
+**Vraag 2 · Waar of niet waar?** "Voor een heftruck heb je een rijbewijs van de overheid nodig."
+
+**Antwoord: niet waar.**
+**Waarom:** Er is geen rijbewijs van de overheid voor de heftruck ⚖️. Maar je werkgever moet zorgen dat
+je goed bent opgeleid ⚖️. Daarom vragen veel bedrijven een heftruckcertificaat. Dat haal je met een
+cursus.
+
+**Vraag 3 · Wat doe je?** Jayden moet naar de andere kant van het magazijn. Over de rijbaan van de heftrucks is het korter.
+
+- **A.** Hij loopt over de looppaden, ook al is het verder.
+  → *Goed. Daar zijn voetgangers veilig.*
+- **B.** Hij loopt over de rijbaan, en hij kijkt goed uit.
+  → *Begrijpelijk. Maar een bestuurder ziet je misschien niet.*
+- **C.** Hij loopt over de rijbaan, met zijn hesje aan.
+  → *Het hesje helpt. Maar de rijbaan is niet om te lopen.*
+
+**Goed antwoord: A.**
+**Waarom:** Loop altijd over de looppaden. Een bestuurder van een heftruck ziet niet alles. Moet je
+toch oversteken? Zoek oogcontact met de bestuurder. Loop nooit vlak achter een heftruck.
+
+**Zo zeg je het:** "Ik heb geen heftruckcertificaat. Ik mag niet rijden."
+
+**Onthoud:** Geen opleiding? Dan rijd je niet op de heftruck.
+
+**Wie kan je helpen:** je leidinggevende · je uitzendbureau (vraag naar een cursus) · de Nederlandse
+Arbeidsinspectie.
+
+---
+
+### Les L.2 · Tillen, scanners en tempo
+
+**Leerdoel:** je tilt veilig, en je weet wat je doet als de norm te hoog is.
+
+**Scène** · *Beeld: Esra met een scanner om haar arm, bij een rek vol dozen. Op het scherm een rood cijfer.*
+
+> Esra is orderpicker in een distributiecentrum. Ze heeft een scanner om haar arm. Die telt hoeveel
+> orders ze per uur doet. Haar teamleider zegt: "Je haalt de norm niet." Esra werkt al zo snel als
+> ze kan.
+
+**Vraag 1 · Wat doe je?** Esra haalt de norm niet.
+
+- **A.** Ze vraagt hoe de norm werkt, en wat beter kan.
+  → *Goed. Zo weet je wat er van je verwacht wordt.*
+- **B.** Ze slaat haar pauze over om meer orders te halen.
+  → *Begrijpelijk. Maar pauze is je recht.*
+- **C.** Ze tilt twee dozen tegelijk, om sneller te gaan.
+  → *Dat is zwaar voor je rug. Zo raak je geblesseerd.*
+
+**Goed antwoord: A.**
+**Waarom:** Vraag hoe de norm werkt. Wat telt de scanner mee? Is de norm voor iedereen even hoog? Vraag
+ook wat beter kan. Je pauze sla je niet over.
+
+**Vraag 2 · Waar of niet waar?** "Je werkgever moet zorgen dat het tempo niet ongezond is."
+
+**Antwoord: waar.**
+**Waarom:** Te hoge werkdruk en te veel tillen maken mensen ziek. Je werkgever moet dat voorkomen ⚖️.
+Krijg je klachten van het tempo? Meld het bij je leidinggevende. Of ga zelf naar de bedrijfsarts ⚖️.
+
+**Vraag 3 · Wat doe je?** Esra moet een zware doos van de onderste plank pakken.
+
+- **A.** Ze buigt voorover, en tilt de doos met haar rug.
+  → *Dan komt alle kracht op je rug. Dat geeft klachten.*
+- **B.** Ze zakt door haar knieën, met de doos dicht bij zich.
+  → *Goed. Zo til je met je benen, niet met je rug.*
+- **C.** Ze trekt de doos snel met één hand van de plank.
+  → *Zo kun je je pols of je rug verrekken.*
+
+**Goed antwoord: B.**
+**Waarom:** Zak door je knieën. Houd je rug recht en de doos dicht bij je. Draai niet tijdens het
+tillen. Te zwaar? Gebruik een hulpmiddel, of vraag een collega.
+
+**Zo zeg je het:** "Ik haal de norm nog niet. Hoe kan ik het beter doen?"
+
+**Onthoud:** Te hoog tempo? Vraag hoe de norm werkt. Sla je pauze niet over.
+
+**Wie kan je helpen:** je leidinggevende · de bedrijfsarts · de ondernemingsraad · een vakbond · de
+Nederlandse Arbeidsinspectie.

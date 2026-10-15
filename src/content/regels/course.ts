@@ -29,9 +29,11 @@ export function toCourseUnit(unit: RuleUnit): Unit {
   };
 }
 
-/** Every rules unit as a Unit, in course order. A unit without lessons is left out (nothing to play). */
+/** Every rules unit as a Unit, in course order. A unit without lessons is left out (nothing to
+ *  play), and a unit listed twice counts once. */
 export function toCourseUnits(units: readonly RuleUnit[]): Unit[] {
-  return units.filter((u) => u.lessons.length > 0).map(toCourseUnit);
+  const seen = new Set<string>();
+  return units.filter((u) => u.lessons.length > 0 && !seen.has(u.id) && (seen.add(u.id), true)).map(toCourseUnit);
 }
 
 /**

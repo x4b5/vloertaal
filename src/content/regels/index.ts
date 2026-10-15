@@ -1,9 +1,32 @@
 import type { RuleUnit } from './types';
+import { zoekenUnit } from './units/zoeken';
+import { startUnit } from './units/start';
+import { contractUnit } from './units/contract';
+import { loonUnit } from './units/loon';
+import { tijdUnit } from './units/tijd';
+import { ziekUnit } from './units/ziek';
+import { veiligUnit } from './units/veilig';
+import { samenUnit } from './units/samen';
+import { rechtenUnit } from './units/rechten';
+import { geldUnit } from './units/geld';
+import { buildUnit, careUnit, cleanUnit, factoryUnit, horecaUnit, warehouseUnit } from './units/sector';
 
 /**
- * The work-rules course, in course order (r.start first: its first lesson is the trial lesson and
- * it is the preview unit). Placeholder until the units in ./units are written: the content agent
- * replaces this file with the real list. src/content/regels/course.ts turns these into the app's
- * Unit/Lesson shape; src/i18n/packs/nl.ts registers them (src/content/courses.ts).
+ * The Werkregels track (docs/werkregels-curriculum.md), in path order: zoeken → beginnen →
+ * afspraken → geld → tijd → ziekte → veiligheid → samenwerken → problemen → uitkering.
  */
-export const rulesUnits: RuleUnit[] = [];
+export const rulesUnits: RuleUnit[] = [
+  zoekenUnit,
+  startUnit,
+  contractUnit,
+  loonUnit,
+  tijdUnit,
+  ziekUnit,
+  veiligUnit,
+  samenUnit,
+  rechtenUnit,
+  geldUnit,
+];
+
+/** Short sector units (curriculum, deel 6): 2 lessons each, in the order of src/content/sectors.ts. */
+export const sectorRulesUnits: RuleUnit[] = [warehouseUnit, buildUnit, factoryUnit, careUnit, horecaUnit, cleanUnit];
