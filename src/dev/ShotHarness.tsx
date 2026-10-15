@@ -38,6 +38,9 @@ import { OfflineSettingCard } from '../components/Offline';
 import type { TextSize } from '../lib/textSize';
 import { LogoMark, Wordmark } from '../components/Logo';
 import { HomeGreeting } from '../components/BramSays';
+import { courseUnits, registerRulesCourse } from '../content/courses';
+import { toCourseUnits } from '../content/regels/course';
+import { RULES_STUB } from './rulesStub';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -51,6 +54,9 @@ import { HomeGreeting } from '../components/BramSays';
  */
 export function ShotHarness({ shot, lang, word }: { shot: string; lang: string | null; word?: string | null }) {
   const q = new URLSearchParams(location.search);
+  // &lang=nl: the work-rules track (main.tsx turns RULES_TRACK on and loads its pack, with the
+  // real rules course). &stub=1, or no rules units written yet: the small fixed stub course.
+  if (lang === 'nl' && (q.get('stub') === '1' || !courseUnits('regels').length)) registerRulesCourse(toCourseUnits(RULES_STUB));
   // &gender=f|m|x: the help language's texts for a woman, a man, or "rather not say".
   const gp = q.get('gender');
   const gender: Gender | undefined = gp === 'f' || gp === 'm' || gp === 'x' ? gp : undefined;
@@ -303,7 +309,15 @@ const unitLessons = (...ids: string[]) => ids.flatMap((id) => findUnit(id)?.less
  *  "Pay" (marked). shot=all is All topics (a row opens its topic page); shot=topic opens &cu=.
  */
 function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGender, unit, resume }: { shot: string; state: string; lang?: ReturnType<typeof getHelpLanguage>; access: Access; sector?: SectorChoice; daily: boolean; askGender?: LangCode; unit?: string | null; resume?: string | null }) {
-  const completed =
+  // The work-rules track (&lang=nl): the same states on its own course.
+  const rules = shotLang?.code === 'nl';
+  const rc = courseUnits('regels');
+  const completed = rules ? (
+    state === 'new' ? {}
+    : state === 'mid' || state === 'pick' || state === 'coach' ? doneIds(rc[0]?.lessons[0]?.id ?? '')
+    : state === 'finished' ? doneIds(...unitLessons(rc[0]?.id ?? ''))
+    : doneIds(...unitLessons(...rc.slice(0, 2).map((u) => u.id)), rc[2]?.lessons[0]?.id ?? '')
+  ) :
     state === 'new' ? {}
     : state === 'mid' || state === 'pick' || state === 'coach' ? doneIds('l.hello')
     : state === 'finished' ? doneIds(...unitLessons('u.firstday'))
@@ -311,8 +325,8 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   const [progress, setProgress] = useState<Progress>({
     ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector: sector ?? 'none' as SectorChoice, completed,
     currentUnit: state === 'coach' ? 'u.pay' : undefined,
-    // &askGender=1: the help language is stored, the gender is not.
-    helpLang: askGender ?? null,
+    // &askGender=1: the help language is stored, the gender is not. The work-rules track: 'nl'.
+    helpLang: askGender ?? (rules ? 'nl' : null),
   });
   const lang = askGender ? getHelpLanguage(askGender, progress.gender) : shotLang;
   // &resume=1: the block's next lesson was stopped halfway ("Continue · 12/18").
@@ -323,7 +337,7 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   const words2 = learnedWords(progress.completed).size;
   const bramParam = new URLSearchParams(location.search).get('bram');
   const bram = (['intro', 'hello', 'back', 'due', 'streak', 'done'] as const).find((k) => k === bramParam);
-  const [open, setOpen] = useState<string | null>(shot === 'topic' ? unit ?? 'u.firstday' : null);
+  const [open, setOpen] = useState<string | null>(shot === 'topic' ? unit ?? (rules ? rc[0]?.id ?? null : 'u.firstday') : null);
   const topic = open ? findUnit(open) : undefined;
   if (topic) {
     return (

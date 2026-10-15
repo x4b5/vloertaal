@@ -7,6 +7,8 @@ import { applyTextSize } from './lib/textSize';
 import { applyEnglish } from './lib/english';
 import { refreshOfflineShell, warmLanguageCache } from './lib/offline';
 import { ensureLanguage, LANG_CODES } from './i18n';
+import type { UiCode } from './i18n/types';
+import { setRulesTrack } from './lib/track';
 import { loadPictures } from './pictures';
 import '@fontsource-variable/lexend';
 import '@fontsource/big-shoulders-stencil-display/800';
@@ -37,7 +39,9 @@ const render = (node: ReactNode) => createRoot(document.getElementById('root')!)
 
 if (import.meta.env.DEV && params.get('shot')) {
   // Dev screenshots (never in the production bundle): the shot's help language and the pictures first.
-  const shotLang = LANG_CODES.find((c) => c === params.get('lang'));
+  // &lang=nl is the work-rules track (its Dutch screens): RULES_TRACK is on for it (and with &rules=1).
+  if (params.get('lang') === 'nl' || params.get('rules') === '1') setRulesTrack(true);
+  const shotLang: UiCode | undefined = params.get('lang') === 'nl' ? 'nl' : LANG_CODES.find((c) => c === params.get('lang'));
   void Promise.all([import('./dev/ShotHarness'), loadPictures(), ensureLanguage(shotLang)]).then(([{ ShotHarness }]) =>
     render(<ShotHarness shot={params.get('shot')!} lang={params.get('lang')} word={params.get('word')} />));
 } else {

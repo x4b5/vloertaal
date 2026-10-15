@@ -49,6 +49,14 @@ describe('anonymous counting', () => {
     expect(countPaths('open', { lang: 'x/../?a=1', sector: 'care' })[1]).toBe('/e/open/lang-xa1');
   });
 
+  it('counts the work-rules track under its own language, lang-nl (no new dimension)', () => {
+    expect(countPaths('lesson-done', { lang: 'nl', sector: 'care' })).toEqual(['/e/lesson-done', '/e/lesson-done/lang-nl', '/e/lesson-done/sector-care']);
+    setCountEnv(PROD);
+    expect(countOpen({ lang: 'nl', sector: 'construction' })).toBe(true);
+    const urls = fetchMock.mock.calls.map((c) => String((c as unknown[])[0]));
+    expect(urls.some((u) => u.includes('p=%2Fe%2Fopen%2Flang-nl&'))).toBe(true);
+  });
+
   it('sends nothing when switched off in Settings, and again when switched on', () => {
     setCountEnv(PROD);
     setCounting(false);

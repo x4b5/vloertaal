@@ -88,7 +88,7 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   );
   return (
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`}>
-      {languageMeta.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed))}
+      {languageMeta.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed && !dutch))}
       {/* "Nederlands – ik spreek al Nederlands": the work-rules track, always said in Dutch. */}
       {rulesTrackOn() && (
         <button

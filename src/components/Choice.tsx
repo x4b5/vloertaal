@@ -102,7 +102,7 @@ export function QuestionHead({ nl, text, hint, logo = true, say = false, lang }:
         </div>
       )}
       <h2 className="onboarding-title sector-title">
-        {nl && <span className="sector-title-nl" lang="nl"><bdi dir="ltr">{nl}</bdi></span>}
+        {nl && !dutchUi(text.lang) && <span className="sector-title-nl" lang="nl"><bdi dir="ltr">{nl}</bdi></span>}
         <Bi text={text} />
       </h2>
       {say && nl && <QuestionSay nl={nl} help={text.help} lang={lang} />}
