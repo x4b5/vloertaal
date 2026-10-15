@@ -414,12 +414,10 @@ bij veiligheid moet je de uitleg altijd goed begrijpen.
 | **Goojendaag** | Goedendag (groet) | Maastricht ⚖️ |
 | **Wie is 't?** of **Wie is 't mèt diech?** | Hoe gaat het (met jou)? | Maastricht ⚖️ |
 | **Enne?** · antwoord: **Auch enne?** | Hoe gaat het? · Goed, en met jou? | veel plaatsen in Limburg ⚖️ |
-| **Hoe geit 't?** | Hoe gaat het? | veel plaatsen in Limburg ⚖️ (niet zeker, zie hoofdstuk 7) |
 | **Bedaank** | Bedankt | Maastricht ⚖️ |
-| **Doeg** of **Hoi** | Dag (bij weggaan) | veel plaatsen ⚖️ |
-| **Vastelaovend** · **Alaaf!** | Carnaval · een feestelijke groet met carnaval | Vastelaovend: heel Limburg ⚖️ · Alaaf: in veel plaatsen, niet overal ⚖️ |
+| **Vastelaovend** | Carnaval | heel Limburg ⚖️ |
 
-*Redactie: elke stad heeft een eigen dialect. Het Kerkraads en het Heerlens zijn anders dan het
+*Redactie (besluit eigenaar, 15-10-2026): alle woorden op deze kaart worden nagekeken in het woordenboek van **Mestreechter Taol** (mestreechtertaol.nl, Dictionair vaan de Mestreechter Taol). Twijfelgevallen ("Hoe geit 't?", "Doeg", "Alaaf" in Maastricht) zijn van de kaart gehaald tot ze daar bevestigd zijn. Elke stad heeft een eigen dialect. Het Kerkraads en het Heerlens zijn anders dan het
 Mestreechs ⚖️. Spelling verschilt per bron. De woordkaart is een stap `rule` met `rule:
 'ongeschreven'`. Ze krijgt geen geluid: de telefoonstem leest dialect niet goed voor. Laat de kaart
 nakijken door Veldeke (Maastricht) en iemand uit Heerlen of Kerkrade.*
@@ -651,6 +649,7 @@ gids). Een S-rij moet eerst nagekeken worden.
 | | Juridisch Loket Heerlen, in het Huis van het Recht | Je hebt meer problemen tegelijk, zoals schulden en huur, en woont in Heerlen. | juridischloket.nl | — | P | ⚖️ 15-10-2026 · O (rechtspraak.nl, 2020–2022; nu nog open?) |
 | **Werk** | UWV en werk.nl | Werk kwijt, WW, inschrijven als werkzoekende, vacatures. | werk.nl · uwv.nl | — | ZL | ⚖️ 15-10-2026 · O |
 | | Werkgeversservicepunt (WSP) Zuid-Limburg | Samenwerking van UWV, gemeenten en sociale werkbedrijven. Helpt werkzoekenden en werkgevers. | zuid-limburg.werkgeversanno.nu ⚖️ | — | ZL | ⚖️ 15-10-2026 · S |
+| | Werkcentrum (Maastricht) | Je zoekt werk in Maastricht: hulp bij werk zoeken, solliciteren en een opleiding. | via gemeentemaastricht.nl | — | M | ✅ naam bevestigd door de eigenaar (15-10-2026); site en adres nog nakijken ⚖️ |
 | | Sociale Zaken Maastricht Heuvelland | Je zoekt werk en hebt een uitkering van de gemeente, in Maastricht of het Heuvelland. | socialezaken-mh.nl | — | M-H | ⚖️ 15-10-2026 · O (sdg.government.nl) |
 | | WSP Parkstad, en WerkvoorHeerlen | Je zoekt werk vanuit de bijstand in Parkstad. WSP Parkstad zoekt mee naar een baan. | wspparkstad.nl | — | P | ⚖️ 15-10-2026 · O (heerlen.nl, gemeenteraad 2024) |
 | | Vidar en WSP Westelijke Mijnstreek | Werk en inkomen in Sittard-Geleen, Beek en Stein. | vidar.nl · wsp-wm.nl | — | WM | ⚖️ 15-10-2026 · O (overheid.nl) |
@@ -687,14 +686,9 @@ gids). Een S-rij moet eerst nagekeken worden.
 | | Parkstad en Westelijke Mijnstreek | Check bij je gemeente wie je begeleidt. | de site van je gemeente | 14 + netnummer | P, WM | ⚖️ 15-10-2026 · niet gevonden |
 | **Huiselijk geweld** | Veilig Thuis | Je voelt je niet veilig thuis, of je maakt je zorgen om iemand. Gratis, dag en nacht, ook anoniem. Je zegt je woonplaats en komt bij Veilig Thuis Zuid-Limburg. | veiligthuis.nl | 0800-2000 | ZL | ⚖️ 15-10-2026 · O (landelijk) |
 | | 112 | Er is nu gevaar. | — | 112 | ZL | ⚖️ 15-10-2026 · O |
-| **Wonen** | Thuis in Limburg | Een huurhuis zoeken bij een woningcorporatie. Gratis inschrijven, elk jaar verlengen. | thuisinlimburg.nl | — | ZL | ⚖️ 15-10-2026 · O |
-| | Woningcorporaties (via Thuis in Limburg) | Bevestigd: Maasvallei (Maastricht), Krijtland Wonen (Heuvelland), Wonen Meerssen, ZOwonen, Wonen Limburg. Hulp als je geen internet hebt. | via thuisinlimburg.nl | — | ZL | ⚖️ 15-10-2026 · S; andere corporaties: zie hoofdstuk 7 |
+| **Wonen** | Thuis in Limburg | Een huurhuis zoeken bij een woningcorporatie. Gratis inschrijven, elk jaar verlengen. Geen internet? De corporaties helpen je. | thuisinlimburg.nl | — | ZL | ✅ altijd noemen (eigenaar, 15-10-2026); details ⚖️ 15-10-2026 · O |
 
-*Het Werkplein: de opdracht noemt "Werkplein Maastricht" en "Werkgevers Servicepunt
-Maastricht-Heuvelland". Die namen heb ik niet gevonden. Wat ik wel vond: **Sociale Zaken
-Maastricht Heuvelland** (voor werk en bijstand) en **Podium 24**, dat met Sociale Zaken
-Maastricht-Heuvelland samenwerkt bij Grensarbeid ⚖️. Wat Podium24 voor werkzoekenden doet, kon ik
-niet vaststellen. Zie hoofdstuk 7.*
+*Werk in Maastricht: het heet **Werkcentrum** (bevestigd door de eigenaar, 15-10-2026). Niet "Werkplein". Daarnaast: **Sociale Zaken Maastricht Heuvelland** (werk en bijstand). De rol van **Podium 24** is nog niet beschreven ⚖️.*
 
 ### 5.2 Datamodel
 
@@ -866,6 +860,14 @@ zoekresultaten van deze pagina's.*
 ---
 
 ## 7. Te controleren
+
+**Antwoorden van de eigenaar (15-10-2026)**
+1. Werk in Maastricht heet **Werkcentrum**. Verwerkt.
+2. Dialect: nakijken bij **Mestreechter Taol**. Twijfelwoorden zijn van de kaart gehaald. Een controle via deze omgeving lukte niet, omdat de site hier niet bereikbaar is.
+3. Loketnamen en de 5-dagenregel: nog onbekend, blijft ⚖️.
+4. Huisartsenpost: nog onbekend, blijft ⚖️. Er staan geen regionale nummers in.
+5. **Thuis in Limburg** altijd noemen. Corporaties worden niet los genoemd; de kaart verwijst naar thuisinlimburg.nl.
+
 
 ### Belangrijkst (vóór de pilot)
 
