@@ -37,6 +37,7 @@ import { showOfflineStateForShot, type OfflineState } from '../lib/offline';
 import { OfflineSettingCard } from '../components/Offline';
 import type { TextSize } from '../lib/textSize';
 import { LogoMark, Wordmark } from '../components/Logo';
+import { HomeGreeting } from '../components/BramSays';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -317,6 +318,8 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   const words = findLesson('l.hello')!.lesson.words;
   const card = daily ? dailyCard(Object.fromEntries(words.map((w) => [w.id, { box: 1, due: today }])), today) : null;
   const words2 = learnedWords(progress.completed).size;
+  const bramParam = new URLSearchParams(location.search).get('bram');
+  const bram = (['hello', 'back', 'due', 'streak', 'done'] as const).find((k) => k === bramParam);
   const [open, setOpen] = useState<string | null>(shot === 'topic' ? unit ?? 'u.firstday' : null);
   const topic = open ? findUnit(open) : undefined;
   if (topic) {
@@ -338,7 +341,9 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   return (
     <>
       {/* &quiet=1: "Without sound" is on (the small muted speaker in the top bar). */}
-      <TopBar streak={7} done words={words2} lang={lang} quiet={new URLSearchParams(location.search).get('quiet') === '1'} />
+      {/* &bram=hello|back|due|streak|done: Bram's line in the top bar (the flame is lit only for done). */}
+      <TopBar streak={7} done={!bram || bram === 'done'} words={words2} lang={lang} quiet={new URLSearchParams(location.search).get('quiet') === '1'}
+        greeting={<HomeGreeting progress={progress} due={card?.due ?? 0} lang={lang} force={bram ? { kind: bram, n: bram === 'due' ? 6 : 7 } : undefined} />} />
       <Route
         progress={progress} lang={lang} access={access} daily={card} onDaily={() => {}}
         onStart={() => {}} onRestart={() => {}} onAll={() => {}} onUpgrade={() => {}}

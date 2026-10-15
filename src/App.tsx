@@ -9,6 +9,7 @@ import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
+import { HomeGreeting } from './components/BramSays';
 import { Settings } from './components/Settings';
 import { Coaches } from './components/Coaches';
 import { GenderScreen } from './components/Gender';
@@ -458,7 +459,7 @@ export default function App() {
   switch (view.name) {
     case 'lesson': {
       const daily = view.lessonId === DAILY_ID;
-      const found = daily ? { lesson: dailyLesson(view.ids ?? [], progress.cards) } : playLesson(view.lessonId, progress.completed);
+      const found = daily ? { lesson: dailyLesson(view.ids ?? [], progress.cards, dayKey(new Date())) } : playLesson(view.lessonId, progress.completed);
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !found.lesson.words.length || !lessonAllowed(view.lessonId, acc) || (inTrial && !trialLessonAllowed(view.lessonId))) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
@@ -663,6 +664,7 @@ export default function App() {
       if (stopped !== null) {
         return <StreakStopped streak={stopped} best={bestStreak(progress)} lang={lang} onDone={() => setStopped(null)} />;
       }
+      const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : null;
       return (
         <>
           <TopBar
@@ -671,6 +673,7 @@ export default function App() {
             words={learnedWords(progress.completed).size}
             lang={lang}
             quiet={Boolean(progress.quiet)}
+            greeting={<HomeGreeting progress={progress} due={daily?.state === 'due' ? daily.due : 0} lang={lang} />}
           />
           <Route
             progress={progress}
@@ -679,7 +682,7 @@ export default function App() {
             onRestart={(lessonId) => { clearSave(lessonId); go({ name: 'lesson', lessonId, review: false }); }}
             onPick={(unit) => setProgress((p) => ({ ...p, ...pickBlock(unit, p.completed) }))}
             onAll={() => go({ name: 'all' })}
-            daily={Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : null}
+            daily={daily}
             arrived={arrived}
             onArrived={() => setArrived(null)}
             onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: dailyWordIds(progress.cards ?? {}, dayKey(new Date())) })}

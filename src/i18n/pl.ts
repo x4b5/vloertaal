@@ -271,6 +271,16 @@ const lang: HelpLanguageSource = {
     codeAccepted: 'Kod przyjęty',
     tryLesson: 'Najpierw wypróbuj jedną lekcję',
     trialDone: { m: 'Ukończyłeś lekcję próbną. Kod odblokowuje wszystko.', f: 'Ukończyłaś lekcję próbną. Kod odblokowuje wszystko.' },
+    bramHello: 'Dobrze cię widzieć.',
+    bramBack: 'Witaj z powrotem. Idziemy dalej.',
+    bramDueN: 'Słowa do powtórki dziś: {n}',
+    bramDueOne: 'Słowa do powtórki dziś: {n}',
+    bramDayN: 'Dzień {n} z rzędu.',
+    bramDone: { m: 'Na dziś zrobiłeś wszystko. Do jutra.', f: 'Na dziś zrobiłaś wszystko. Do jutra.' },
+    bramPerfect: 'Bardzo dobrze. Znasz te słowa.',
+    bramGood: 'Dobra robota. Krok po kroku.',
+    bramHard: { m: 'Dobrze, że ćwiczyłeś. Trudne słowa wrócą.', f: 'Dobrze, że ćwiczyłaś. Trudne słowa wrócą.' },
+    bramReview: 'Dobrze. Powtarzanie pomaga zapamiętać.',
   },
   gloss: {
     // Unit: First day at work

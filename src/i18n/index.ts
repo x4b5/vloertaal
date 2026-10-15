@@ -151,6 +151,7 @@ const SINGULAR: Partial<Record<UiKey, UiKey>> = {
   recordN: 'recordOne',
   streakStopped: 'streakStoppedOne',
   lessonsUnit: 'lessonsUnitOne',
+  bramDueN: 'bramDueOne',
 };
 
 /** A UI string for a count of `n`: the singular form when n is 1 (in every language). */

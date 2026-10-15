@@ -158,8 +158,10 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   );
 }
 
-export function TopBar({ streak, words, lang, done = false, quiet = false }: {
+export function TopBar({ streak, words, lang, done = false, quiet = false, greeting }: {
   streak: number;
+  /** Bram's one line beside the logo (HomeGreeting): the logo is his head, so he says it. */
+  greeting?: React.ReactNode;
   /** "Without sound" is on: a small muted speaker beside the logo says so (not a button). */
   quiet?: boolean;
   /** Today has a finished lesson or review: the flame is lit. Until then a grey outline. */
@@ -185,6 +187,7 @@ export function TopBar({ streak, words, lang, done = false, quiet = false }: {
         <LogoMark size={36} />
         <Wordmark className="topbar-wordmark" />
       </span>
+      {greeting}
       {quiet && (
         <span className="sound-off-mark" role="img" aria-label={`${said(ui('withoutSound', lang))}${lang?.ui.withoutSound ? ` · ${ui('withoutSound', lang).help}` : ''}`} title={ui('withoutSound', lang).help ?? said(ui('withoutSound', lang))}>
           <SpeakerOffIcon size={18} />

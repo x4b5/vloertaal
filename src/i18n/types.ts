@@ -305,6 +305,17 @@ export const uiEn = {
   codeAccepted: 'Code accepted',
   tryLesson: 'Try one lesson first',
   trialDone: 'You did the trial lesson. The code unlocks everything.',
+  /* Bram, the mascot: one calm line on the home screen (src/lib/greeting.ts) and after a lesson. */
+  bramHello: 'Good to see you.',
+  bramBack: 'Welcome back. Let’s go on.',
+  bramDueN: '{n} words to repeat today.',
+  bramDueOne: '{n} word to repeat today.',
+  bramDayN: 'Day {n} in a row.',
+  bramDone: 'Done for today. See you tomorrow.',
+  bramPerfect: 'Very good. You know these words.',
+  bramGood: 'Good work. Step by step.',
+  bramHard: 'Good that you practised. Hard words come back.',
+  bramReview: 'Good. Repeating helps you remember.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;
