@@ -139,7 +139,7 @@ describe('the screens show the themes as plain headers (never a button)', () => 
     expect(m).toContain('class="rb-theme"');
     expect(m).toContain('Twoja praca');
     expect(m).toContain('Je baan');
-    expect(m).toMatch(/rb-theme-n" dir="ltr">1 \/ 6</);
+    expect(m).toMatch(/rb-theme-n" dir="ltr">1 \/ 7</);
     const label = m.match(/<p class="rb-theme"[\s\S]*?<\/p>/)![0];
     expect(label).not.toMatch(/<(button|a)\b/);
   });

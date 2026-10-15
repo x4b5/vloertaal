@@ -1,7 +1,7 @@
 import type { Gender, UiCode } from '../i18n/types';
 import { rulesTrackOn } from './track';
 import { isSectorId, type SectorChoice } from '../content/sectors';
-import { isRegionChoice, type RegionChoice } from '../content/regio';
+import { isRegionChoice, regionsOn, type RegionChoice } from '../content/regio';
 import type { Cards } from './spaced';
 import type { TextSize } from './textSize';
 
@@ -113,6 +113,8 @@ export function loadProgress(): Progress {
       // Older saves have no sector (asked once after the password); drop anything unknown.
       if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
       if (saved.region !== undefined && !isRegionChoice(saved.region)) delete saved.region;
+      // Regions while they are not offered (REGIONS_LIVE off): no region unit, no region map.
+      if (saved.region !== undefined && !regionsOn()) delete saved.region;
       // The work-rules track while it is not offered (RULES_TRACK off): the language page again.
       if (saved.helpLang === 'nl' && !rulesTrackOn()) { saved.helpLang = null; saved.onboarded = false; }
       if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;

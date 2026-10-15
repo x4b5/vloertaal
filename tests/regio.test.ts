@@ -78,12 +78,19 @@ describe('regions: the model', () => {
     const store = new Map<string, string>();
     (globalThis as { localStorage?: unknown }).localStorage = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v) };
     const { loadProgress } = await import('../src/lib/progress');
+    const { setRegionsOn } = await import('../src/content/regio');
+    setRegionsOn(true);
     store.set('vloertaal:v1', JSON.stringify({ onboarded: true, themeVersion: 2, region: 'zl' }));
     expect(loadProgress().region).toBe('zl');
     store.set('vloertaal:v1', JSON.stringify({ onboarded: true, themeVersion: 2, region: 'none' }));
     expect(loadProgress().region).toBe('none');
     store.set('vloertaal:v1', JSON.stringify({ onboarded: true, themeVersion: 2, region: 'atlantis' }));
     expect(loadProgress().region).toBeUndefined();
+    // While regions are not offered, a saved region is dropped (no region unit or map stays behind).
+    setRegionsOn(false);
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, themeVersion: 2, region: 'zl' }));
+    expect(loadProgress().region).toBeUndefined();
+    setRegionsOn(null);
   });
 });
 

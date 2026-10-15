@@ -32,7 +32,8 @@ export const isRegionUnitId = (id: string): boolean => id.startsWith('rg.');
  * The regions offered in Settings. Off in production until every row of the Sociale kaart is
  * checked on its own site (`source: 'official'`, tests/regio.test.ts) and the ⚖️ facts of the
  * lessons are checked (docs/livegang.md). On in development (the browser) and wherever
- * setRegionsOn(true) turns it on (tests, screenshots). A learner who chose a region keeps it.
+ * setRegionsOn(true) turns it on (tests, screenshots). While it is off, a saved region is dropped
+ * on load (src/lib/progress.ts), so switching it off again also removes the region unit and map.
  */
 export const REGIONS_LIVE: boolean = false;
 let forced: boolean | null = null;
