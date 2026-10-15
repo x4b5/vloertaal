@@ -281,6 +281,10 @@ const lang: HelpLanguageSource = {
     bramGood: 'Treabă bună. Pas cu pas.',
     bramHard: { m: 'E bine că ai fost harnic. Cuvintele grele revin.', f: 'E bine că ai fost harnică. Cuvintele grele revin.' },
     bramReview: 'Bine. Repetiția te ajută să ții minte.',
+    /* G4 b3 */
+    buildListen: 'Ascultă și formează propoziția',
+    chatWhichQuestion: 'Ce întrebare se potrivește cu acest răspuns?',
+    reviewWaiting: 'Mai așteaptă cuvinte: {n}. Revin în zilele următoare.',
   },
   gloss: {
     // Units

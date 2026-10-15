@@ -281,6 +281,10 @@ const lang: HelpLanguageSource = {
     bramGood: 'کار خوبی بود. قدم به قدم.',
     bramHard: 'خوب شد که تمرین کردید. کلمه‌های سخت دوباره می‌آیند.',
     bramReview: 'خوب است. تکرار به یاد ماندن کمک می‌کند.',
+    /* G4 b3 */
+    buildListen: 'گوش کنید و جمله را بسازید',
+    chatWhichQuestion: 'کدام سؤال با این جواب جور است؟',
+    reviewWaiting: 'کلمه‌های دیگری منتظرند: {n}. در روزهای بعد برمی‌گردند.',
   },
   gloss: {
     // Units

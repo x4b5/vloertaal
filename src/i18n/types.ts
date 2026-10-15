@@ -316,6 +316,11 @@ export const uiEn = {
   bramGood: 'Good work. Step by step.',
   bramHard: 'Good that you practised. Hard words come back.',
   bramReview: 'Good. Repeating helps you remember.',
+  /* G4 b3: a sentence built by ear and a chat the other way round (later units); after a review
+     with many words still due. */
+  buildListen: 'Listen and make the sentence',
+  chatWhichQuestion: 'Which question goes with this answer?',
+  reviewWaiting: '{n} more words are waiting. They come back in the next days.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

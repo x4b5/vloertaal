@@ -521,6 +521,10 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   const complete = at >= words.length;
   // A long sentence keeps room for two rows from the start, so the words below never jump.
   const twoRows = ex.sentence.nl.length > 24;
+  // Built by ear (later units): the sentence is played at the start and its speaker is there all
+  // along; the meaning shows only at the end. The words keep their own speakers.
+  const byEar = Boolean(ex.audio);
+  useEffect(() => { if (byEar) autoSpeak(ex.sentence.nl, false, 'nl', voiceFor(who)); }, [byEar, ex.sentence, who]);
 
   const tap = (w: string) => {
     if (locked || complete) return;
@@ -542,17 +546,17 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   return (
     // data-nl: the sentence, for the tap counter (scripts/max3) now that its speaker waits.
     <div className="exercise build-steps" data-nl={ex.sentence.nl}>
-      <Prompt text={ui('buildSentence', lang)} />
-      <div className="speaker speaker-build">
+      <Prompt text={ui(byEar ? 'buildListen' : 'buildSentence', lang)} />
+      <div className={`speaker speaker-build ${byEar ? 'build-by-ear' : ''}`}>
         <Speaker who={who} lines={[ex.sentence.nl, ...words]} verdict={verdict} run={run} misses={misses} />
         {/* The meaning, large in the help language, with the sentence's picture word and a
             speaker: hearing the Dutch is the listen-and-build form of the task. */}
         <div className="speaker-bubble build-bubble">
           {/* The whole sentence is held back until a wrong tap or the end: before that, hearing
               it would give the order away (the words' own speakers stay). */}
-          {(wrongs.length > 0 || complete || locked) && <SpeakButton glyph text={ex.sentence.nl} help={lang} voice={voiceFor(who)} />}
+          {(byEar || wrongs.length > 0 || complete || locked) && <SpeakButton glyph={!byEar} size={byEar ? 'lg' : undefined} hideText={byEar || undefined} text={ex.sentence.nl} help={lang} voice={voiceFor(who)} />}
           {pic && <WordPicture className="build-pic" id={pic.id} emoji={pic.emoji} size={56} />}
-          <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />
+          {(!byEar || complete || locked) && <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />}
         </div>
       </div>
       {/* The sentence so far (not tappable), with a dashed slot where the next word goes. */}
@@ -767,8 +771,14 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
 /**
  * Complete the conversation: a colleague says a Dutch line, the learner picks the reply.
  * Tapping the colleague's words shows what they mean (English + help language).
+ * Reversed (`ex.reverse`, later units): "your" reply is given (heard, with what it means) and the
+ * learner picks what the colleague asked.
  */
-export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'chat'>) {
+export function ChatExercise(props: Props<'chat'>) {
+  return props.ex.reverse ? <ChatReversed {...props} /> : <ChatForward {...props} />;
+}
+
+function ChatForward({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'chat'>) {
   const { prompt, reply } = ex.dialogue;
   const [picked, setPicked] = useState<ChatLine | null>(null);
   const mine = picked && locked ? (picked.id === reply.id ? 'right' : 'wrong') : '';
@@ -804,36 +814,85 @@ export function ChatExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
           <span className="chat-char"><MeAvatar className={reactClass(verdict, run, misses)} /></span>
         </div>
       </div>
-      <ChoiceGrid
-        className="choices-rows chat-choices"
-        options={ex.options}
-        correctId={reply.id}
-        locked={locked}
-        lang={lang}
-        onAnswer={onAnswer}
-        // The tap is the answer; the right reply is then said in "your" voice (LessonPlayer).
-        onPick={(o) => setPicked(o)}
-        // Each option's speaker is its own button: hearing a reply never picks it.
-        side={(o) => (
-          <button
-            type="button"
-            className="choice-say"
-            aria-label={`${srText(ui('playAudio', lang))}: ${o.nl}`}
-            lang={saidLang(ui('playAudio', lang))}
-            onClick={() => speak(o.nl, false, 'nl', myVoice)}
-          >
-            <SpeakerIcon size={24} />
-          </button>
-        )}
-        // After Check every reply says what it means (before, that would give the answer away).
-        render={(o) => (
-          <span className="choice-text">
-            <span lang="nl" className="choice-nl">{breakable(o.nl)}</span>
-            {locked && <Bi className="choice-gloss" text={gloss(o.id, o.en, lang)} />}
-          </span>
-        )}
-      />
+      <ChatChoices ex={ex} lang={lang} locked={locked} onAnswer={onAnswer} correctId={reply.id} voice={myVoice} onPick={setPicked} />
     </div>
+  );
+}
+
+/** The chat the other way round: your answer is there, which question did the colleague ask? */
+function ChatReversed({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'chat'>) {
+  const { prompt, reply } = ex.dialogue;
+  const [picked, setPicked] = useState<ChatLine | null>(null);
+  const theirs = picked && locked ? (picked.id === prompt.id ? 'right' : 'wrong') : '';
+  const myVoice = learnerVoice(lang?.gender);
+  const them = castFor(prompt.id, colleaguesOf(lang?.gender));
+  // "You" say your answer first; after a right pick the colleague's question is said.
+  useEffect(() => { autoSpeak(reply.nl, false, 'nl', myVoice); }, [reply, myVoice]);
+  const meTalking = useTalking([reply.nl]);
+  const askTurn = verdict === 'right' && picked ? [picked.nl] : [];
+  const themTalking = useTalking(askTurn, askTurn.length > 0);
+  return (
+    <div className="exercise chat-reversed">
+      <Prompt text={ui('chatWhichQuestion', lang)} />
+      <div className="chat">
+        <div className="chat-row chat-them">
+          <span className="chat-char"><Character who={them} mood={moodFor(verdict, 'idle', true)} talking={themTalking && !meTalking} /></span>
+          <div className={`chat-bubble chat-bubble-ask ${theirs}`} aria-live="polite">
+            {picked ? <span className="chat-line" lang="nl">{breakable(picked.nl)}</span> : <span className="chat-blank chat-blank-q" aria-hidden>?</span>}
+          </div>
+        </div>
+        <div className="chat-row chat-me">
+          <div className="chat-bubble chat-bubble-me chat-bubble-given">
+            <SpeakButton glyph text={reply.nl} help={lang} voice={myVoice} />
+            <span className="chat-line" lang="nl">{breakable(reply.nl)}</span>
+            {/* What you answered, always under it. */}
+            <span className="chat-hint">
+              <Bi text={gloss(reply.id, reply.en, lang)} />
+            </span>
+          </div>
+          <span className="chat-char"><MeAvatar className={reactClass(verdict, run, misses)} /></span>
+        </div>
+      </div>
+      <ChatChoices ex={ex} lang={lang} locked={locked} onAnswer={onAnswer} correctId={prompt.id} voice={voiceFor(them)} onPick={setPicked} />
+    </div>
+  );
+}
+
+/** The three lines to pick from in a chat, each with its own speaker (hearing never picks it). */
+function ChatChoices({ ex, lang, locked, onAnswer, correctId, voice, onPick }: Pick<Props<'chat'>, 'ex' | 'lang' | 'locked' | 'onAnswer'> & {
+  correctId: string;
+  voice: Parameters<typeof speak>[3];
+  onPick: (o: ChatLine) => void;
+}) {
+  return (
+    <ChoiceGrid
+      className="choices-rows chat-choices"
+      options={ex.options}
+      correctId={correctId}
+      locked={locked}
+      lang={lang}
+      onAnswer={onAnswer}
+      // The tap is the answer; the right line is then said (LessonPlayer).
+      onPick={onPick}
+      side={(o) => (
+        <button
+          type="button"
+          className="choice-say"
+          aria-label={`${srText(ui('playAudio', lang))}: ${o.nl}`}
+          lang={saidLang(ui('playAudio', lang))}
+          onClick={() => speak(o.nl, false, 'nl', voice)}
+        >
+          <SpeakerIcon size={24} />
+        </button>
+      )}
+      // After Check every line says what it means (before, that would give the answer away).
+      render={(o) => (
+        <span className="choice-text">
+          <span lang="nl" className="choice-nl">{breakable(o.nl)}</span>
+          {locked && <Bi className="choice-gloss" text={gloss(o.id, o.en, lang)} />}
+        </span>
+      )}
+    />
   );
 }
 

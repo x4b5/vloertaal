@@ -281,6 +281,10 @@ const lang: HelpLanguageSource = {
     bramGood: 'Dobra robota. Krok po kroku.',
     bramHard: { m: 'Dobrze, że ćwiczyłeś. Trudne słowa wrócą.', f: 'Dobrze, że ćwiczyłaś. Trudne słowa wrócą.' },
     bramReview: 'Dobrze. Powtarzanie pomaga zapamiętać.',
+    /* G4 b3 */
+    buildListen: 'Posłuchaj i ułóż zdanie',
+    chatWhichQuestion: 'Które pytanie pasuje do tej odpowiedzi?',
+    reviewWaiting: 'Czekają jeszcze słowa: {n}. Wrócą w najbliższych dniach.',
   },
   gloss: {
     // Unit: First day at work

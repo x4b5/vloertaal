@@ -4039,3 +4039,24 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
   .cert-earned .cert-earned-line { margin-top: 14px; }
   .cert-earned .cert-pocket { margin-top: 10px; }
 }
+
+/* A chat the other way round (later units): "your" answer is given with what it means, the
+   colleague's bubble waits for the question picked. */
+.chat-reversed .chat-bubble-given { flex-wrap: wrap; justify-content: flex-start; flex: 0 1 auto; border-style: solid; border-color: var(--edge); }
+.chat-reversed .chat-bubble-given::before { border-top-style: solid; border-right-style: solid; border-color: var(--edge); }
+.chat-reversed .chat-bubble-given .chat-line { flex: 1 1 0; }
+.chat-reversed .chat-bubble-given .chat-hint {
+  position: static; flex-basis: 100%; width: auto; max-width: none; margin-top: 2px;
+  padding: 0; border: 0; box-shadow: none; background: none; animation: none;
+}
+.chat-bubble-ask { min-width: 120px; min-height: 56px; justify-content: center; border-style: dashed; border-color: var(--ink-3); }
+.chat-bubble-ask::before { border-left-style: dashed; border-bottom-style: dashed; border-color: var(--ink-3); }
+.chat-bubble-ask:has(.chat-line), .chat-bubble-ask:has(.chat-line)::before { border-style: solid; border-color: var(--edge); }
+.chat-bubble-ask .chat-line { text-decoration: none; padding: 0; min-height: 0; }
+.chat-bubble-ask.right, .chat-bubble-ask.right::before { border-color: var(--green); border-style: solid; }
+.chat-bubble-ask.right .chat-line { color: var(--right-ink); }
+.chat-bubble-ask.wrong, .chat-bubble-ask.wrong::before { border-color: var(--red); border-style: solid; }
+.chat-bubble-ask.wrong .chat-line { color: var(--wrong-ink); }
+.chat-blank-q { width: auto; height: auto; margin: 0; background: none; font-size: 1.6rem; font-weight: 700; line-height: 1; color: var(--ink-3); }
+/* A sentence built by ear: the big speaker is the question until the end. */
+.build-by-ear .build-bubble { gap: 12px; }
