@@ -62,6 +62,15 @@ export interface Progress {
    * lessons done (older saves, a brand-new learner).
    */
   currentUnit?: string;
+  /**
+   * The block the learner picked themselves (a suggestion on the home or a coach link). Such a
+   * block is never skipped for a new lesson when only its mixed review is left (src/lib/route.ts).
+   */
+  pickedUnit?: string;
+  /** The days practised (YYYY-MM-DD, most recent last, the last DAYS_KEEP), for the week row. */
+  days?: string[];
+  /** The one-time emergency-phrases row on the first lesson's result was shown. */
+  phrasesShown?: boolean;
 }
 
 export const emptyProgress: Progress = {
@@ -97,6 +106,12 @@ export function loadProgress(): Progress {
       if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;
       if (saved.genderAsked !== undefined && typeof saved.genderAsked !== 'boolean') delete saved.genderAsked;
       if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;
+      if (saved.pickedUnit !== undefined && typeof saved.pickedUnit !== 'string') delete saved.pickedUnit;
+      // Saved before the practised days were kept: none (the week row then counts the streak back).
+      if (saved.days !== undefined) {
+        if (Array.isArray(saved.days)) saved.days = saved.days.filter(isDay).slice(-DAYS_KEEP);
+        else delete saved.days;
+      }
       return { ...emptyProgress, ...saved };
     }
   } catch {
@@ -144,6 +159,10 @@ export const FREEZE_EVERY = 7;
 export const FREEZE_MAX = 2;
 /** Rest days kept in the save (only the last weeks are ever shown). */
 const REST_KEEP = 30;
+/** Practised days kept in the save: two weeks cover the week row. */
+export const DAYS_KEEP = 14;
+/** The first free day is earned on this day of the first streak, so it can protect week 1. */
+export const FIRST_FREEZE_AT = 3;
 
 /** The best streak so far, also for saves from before the record was kept. */
 export function bestStreak(p: Progress): number {
@@ -178,6 +197,11 @@ export function settleStreak(p: Progress, today: Date): { progress: Progress; br
   return { progress: { ...p, streak: 0, bestStreak: bestStreak(p) }, broken: p.streak };
 }
 
+/** Adds a practised day to the kept list (sorted, no repeats, the last DAYS_KEEP). */
+function addPractised(days: string[] | undefined, key: string): string[] {
+  return [...new Set([...(days ?? []), key])].sort().slice(-DAYS_KEEP);
+}
+
 function addDay(day: string, n: number): string {
   const [y, m, d] = day.split('-').map(Number);
   return dayKey(new Date(y, m - 1, d + n));
@@ -190,11 +214,15 @@ function practise(p: Progress, today: Date): Progress {
   const gap = s.lastDay ? daysBetween(s.lastDay, key) : Infinity;
   if (gap === 0) return s; // already counted today
   const streak = gap === 1 ? s.streak + 1 : 1;
-  const earned = streak % FREEZE_EVERY === 0 ? 1 : 0;
+  // One free day per 7 days in a row, and the very first one early (day 3 of the first streak
+  // that gets there), so it can already cover a missed day in the first week.
+  const first = streak === FIRST_FREEZE_AT && bestStreak(s) < FIRST_FREEZE_AT;
+  const earned = streak % FREEZE_EVERY === 0 || first ? 1 : 0;
   return {
     ...s,
     streak,
     lastDay: key,
+    days: addPractised(s.days, key),
     freezes: Math.min(FREEZE_MAX, (s.freezes ?? 0) + earned),
     bestStreak: Math.max(bestStreak(s), streak),
   };
@@ -209,13 +237,14 @@ export type WeekDayState = 'done' | 'rest' | 'open';
 
 /**
  * The work week (Monday to Sunday) around today, for the streak milestone: which days were
- * practised (worked back from the last day over the current streak, skipping rest days) and
- * which were rest days.
+ * practised and which were rest days. The practised days are kept in the save (`days`), so a
+ * missed day never wipes the days before it; saves from before that also count back from the
+ * last day over the current streak (skipping rest days).
  */
 export function workWeek(p: Progress, today: Date): { key: string; state: WeekDayState; today: boolean }[] {
   const todayKey = dayKey(today);
   const rest = new Set(p.rest ?? []);
-  const done = new Set<string>();
+  const done = new Set<string>((p.days ?? []).filter((d) => d <= todayKey));
   if (p.lastDay && p.streak > 0 && daysBetween(p.lastDay, todayKey) <= 1) {
     let day = p.lastDay;
     let left = p.streak;
@@ -304,6 +333,7 @@ export function parseBackup(text: string): Partial<Progress> | null {
   if (isCount(src.freezes)) out.freezes = Math.min(FREEZE_MAX, Math.floor(src.freezes));
   if (isCount(src.bestStreak)) out.bestStreak = Math.floor(src.bestStreak);
   if (Array.isArray(src.rest)) out.rest = src.rest.filter(isDay).slice(-REST_KEEP);
+  if (Array.isArray(src.days)) out.days = src.days.filter(isDay).sort().slice(-DAYS_KEEP);
   if (src.cards && typeof src.cards === 'object' && !Array.isArray(src.cards)) {
     const cards: Cards = {};
     for (const [id, c] of Object.entries(src.cards as Record<string, unknown>)) {
@@ -330,10 +360,12 @@ export function replaceWithBackup(p: Progress, b: Partial<Progress>): Progress {
     reviewDay: b.reviewDay,
     freezes: b.freezes,
     rest: b.rest,
+    days: b.days,
     bestStreak: b.bestStreak,
     certs: b.certs,
     // The block follows the progress that was put back (worked out from its lessons).
     currentUnit: undefined,
+    pickedUnit: undefined,
   };
 }
 
@@ -366,6 +398,7 @@ export function mergeBackup(p: Progress, b: Partial<Progress>): Progress {
     reviewDay: max(p.reviewDay, b.reviewDay),
     freezes: Math.max(p.freezes ?? 0, b.freezes ?? 0),
     rest: [...new Set([...(p.rest ?? []), ...(b.rest ?? [])])].sort().slice(-REST_KEEP),
+    days: [...new Set([...(p.days ?? []), ...(b.days ?? [])])].sort().slice(-DAYS_KEEP),
     bestStreak: Math.max(bestStreak(p), b.bestStreak ?? 0, b.streak ?? 0),
     // A certificate keeps the date it was first earned, on either side.
     certs: Object.fromEntries(
