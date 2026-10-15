@@ -7,14 +7,14 @@ import type { CultureTranslation } from '../culture/types';
  */
 const t: CultureTranslation = {
   ui: {
-    regionTitle: 'کجا زندگی می‌کنی؟',
-    regionHint: 'در Zuid-Limburg زندگی یا کار می‌کنی؟ پس درس‌های بیشتری دربارهٔ منطقه‌ات می‌گیری. این اطلاعات روی گوشی‌ات می‌ماند. ما آن را جایی نمی‌فرستیم.',
+    regionTitle: 'کجا زندگی می‌کنید؟',
+    regionHint: 'در Zuid-Limburg زندگی یا کار می‌کنید؟ پس درس‌های بیشتری دربارهٔ منطقهٔ خودتان می‌گیرید. این اطلاعات روی گوشی شما می‌ماند. ما آن را جایی نمی‌فرستیم.',
     regionOther: 'جای دیگر / ترجیح می‌دهم نگویم',
     regionNone: 'انتخاب نشده',
     socialMap: 'نقشهٔ کمک',
-    socialMapHint: 'برای هر کاری کجا بروی. روی یک ردیف بزن تا تماس بگیری یا سایت را باز کنی.',
+    socialMapHint: 'برای هر کاری کجا بروید. روی یک ردیف بزنید تا تماس بگیرید یا سایت را باز کنید.',
     socialMapNote: 'اطلاعات کلی است، نه مشاوره. نام‌ها، شماره‌ها و سایت‌ها ممکن است تغییر کنند.',
-    socialMapWrong: 'چیزی درست نیست؟ به hoi@vloertaal.nl ایمیل بزن.',
+    socialMapWrong: 'چیزی درست نیست؟ به hoi@vloertaal.nl ایمیل بزنید.',
   },
   gloss: {
     'rg.zl.u': 'منطقهٔ تو: Zuid-Limburg',
