@@ -409,7 +409,9 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   );
 }
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next, skipped = 0, kind = 'lesson' }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next, skipped = 0, kind = 'lesson', onPhrases }: {
+  /** After the very first lesson, once: a row to the emergency phrases (Hulp → Noodzinnen). */
+  onPhrases?: () => void;
   /** 'daily': after today's review; 'review': after a mixed review or a lesson done again
    *  (words practised instead of new words, and a review title). */
   kind?: 'lesson' | 'daily' | 'review';
@@ -520,6 +522,23 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             {nextPic && <WordPicture className="result-next-pic" id={nextPic.id} emoji={nextPic.emoji} size={44} />}
             <Bi className="result-next-title" text={next} />
           </p>
+        )}
+        {/* Once, after the first lesson: where the emergency phrases are (the Hulp tab). */}
+        {onPhrases && (
+          <button
+            type="button"
+            className="hub-card result-phrases"
+            dir={rtl ? 'rtl' : undefined}
+            onClick={() => { if (ready.current) onPhrases(); }}
+            aria-label={`Noodzinnen · ${said(ui('phrasebook', lang))}`}
+          >
+            <span className="hub-icon" aria-hidden><AlertIcon size={26} /></span>
+            <span className="hub-text" aria-hidden>
+              <span className="hub-nl" lang="nl">Noodzinnen</span>
+              <Bi text={ui('phrasebook', lang)} />
+            </span>
+            <ChevronIcon size={24} />
+          </button>
         )}
       </main>
       <footer className="player-foot">

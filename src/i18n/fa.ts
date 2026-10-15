@@ -207,7 +207,7 @@ const lang: HelpLanguageSource = {
     tapToSpeak: 'بزنید و حرف بزنید',
     stopRecording: 'توقف',
     micPrivacy: 'فقط خودتان می‌شنوید. چیزی فرستاده نمی‌شود.',
-    micUnavailable: 'میکروفون در دسترس نیست. اشکالی ندارد، ادامه بدهید.',
+    micUnavailable: 'میکروفون خاموش است. حالا آن را بلند بگویید، بعد ادامه بدهید.',
     cantSpeak: 'الان نمی‌توانم حرف بزنم',
     soundsSame: 'مثل هم است',
     sayAgain: 'دوباره بگویید',
@@ -264,6 +264,8 @@ const lang: HelpLanguageSource = {
     mainMenu: 'منوی اصلی',
     spaceKey: 'فاصله',
     langNotOnPhone: 'این زبان هنوز روی گوشی شما نیست. برای تغییر زبان، به اینترنت وصل شوید.',
+    /* G4 r4b: the reminder's own time ("Kies zelf"). */
+    remindChooseOwn: 'خودتان ساعت را انتخاب کنید',
   },
   gloss: {
     // Units

@@ -207,7 +207,7 @@ const lang: HelpLanguageSource = {
     tapToSpeak: 'Dotknij i mów',
     stopRecording: 'Stop',
     micPrivacy: 'Słyszysz to tylko ty. Nic nie jest wysyłane.',
-    micUnavailable: 'Mikrofon jest niedostępny. Nic nie szkodzi, idź dalej.',
+    micUnavailable: 'Mikrofon wyłączony. Powiedz to teraz na głos, potem idź dalej.',
     cantSpeak: 'Nie mogę teraz mówić',
     soundsSame: 'Brzmi tak samo',
     sayAgain: 'Powiedz jeszcze raz',
@@ -264,6 +264,8 @@ const lang: HelpLanguageSource = {
     mainMenu: 'Menu główne',
     spaceKey: 'Spacja',
     langNotOnPhone: 'Tego języka nie ma jeszcze w twoim telefonie. Połącz się z internetem, aby zmienić język.',
+    /* G4 r4b: the reminder's own time ("Kies zelf"). */
+    remindChooseOwn: { m: 'Wybierz godzinę sam', f: 'Wybierz godzinę sama' },
   },
   gloss: {
     // Unit: First day at work

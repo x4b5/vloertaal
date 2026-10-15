@@ -21,7 +21,9 @@ export interface Sector {
   /** The units that belong to this sector. */
   units: string[];
   /** Basis units (for everyone) that matter most in this work: recommended earlier in "choose
-   *  next" (src/lib/route.ts nextChoices), after the sector's own unit. */
+   *  next" (src/lib/route.ts nextChoices). The first one is the first recommendation once it is
+   *  open (Safety in week 1 for warehouse, building and factory work); the rest come after the
+   *  sector's own unit. */
   focus: string[];
 }
 

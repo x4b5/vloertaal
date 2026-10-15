@@ -853,7 +853,8 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
         </span>
       </div>
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
-      <TipBody text={gloss(`${tip.id}.b`, tip.body, lang)} lang={lang} />
+      {/* In the lesson only the first sentences; the whole text is on "Zo werkt het hier". */}
+      <TipBody text={shortTip(gloss(`${tip.id}.b`, tip.body, lang))} lang={lang} />
       <div className="tip-say">
         <span className="tip-say-label"><Bi text={ui('sayThis', lang)} /></span>
         <div className="tip-say-row">
@@ -888,7 +889,22 @@ export function firstSentences(text: string, n: number): { head: string; more: b
   return { head: parts.slice(0, n).join(' '), more: true };
 }
 
-/** The tip's whole text (no "more" button: Continue is the only choice on a tip). */
+/** Sentences of a tip shown in a lesson. */
+export const TIP_SENTENCES = 3;
+
+/**
+ * A tip's text cut to its first TIP_SENTENCES sentences, in English and in the help language
+ * each, with "…" when there is more (the full text stays on the "Zo werkt het hier" page).
+ */
+export function shortTip(text: Bilingual, n = TIP_SENTENCES): Bilingual {
+  const cut = (t: string) => {
+    const { head, more } = firstSentences(t, n);
+    return more ? `${head} …` : head;
+  };
+  return { ...text, en: cut(text.en), help: text.help === undefined ? undefined : cut(text.help) };
+}
+
+/** The tip's text (no "more" button: Continue is the only choice on a tip). */
 function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
   return (
     <div className="tip-body">

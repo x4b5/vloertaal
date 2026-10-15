@@ -53,7 +53,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   const gp = q.get('gender');
   const gender: Gender | undefined = gp === 'f' || gp === 'm' || gp === 'x' ? gp : undefined;
   // Lesson complete: 9 of 11 right the first time, 6 new words (24 in all), next lesson named.
-  // &perfect=1: 11 of 11 (FOUTLOOS); &review=1: after "Herhaal vandaag" (8 words, 5 stronger).
+  // &perfect=1: 11 of 11 (FOUTLOOS); &review=1: after "Herhaal vandaag" (8 words, 5 stronger);
+  // &phrases=1: the first lesson's one-time row to the emergency phrases.
   if (shot === 'result') {
     const l = getHelpLanguage(lang as LangCode, gender);
     const review = q.get('review') === '1';
@@ -65,6 +66,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
         repeated={review || q.get('mix') === '1' ? 8 : undefined} stronger={review ? 5 : undefined}
         kind={review ? 'daily' : q.get('mix') === '1' ? 'review' : 'lesson'}
         next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l, id: next.id } : undefined}
+        onPhrases={q.get('phrases') === '1' ? () => {} : undefined}
       />
     );
   }

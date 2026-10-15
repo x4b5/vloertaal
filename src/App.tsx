@@ -22,7 +22,7 @@ import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
 import { isMixLesson } from './content/review';
 import { type Access, clearAccess, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
-import { blockAfterLesson, routeNextLesson } from './lib/route';
+import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { takeLinkedUnit } from './lib/unitLink';
 import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonWords, applyReview, dailyCard, dailyLesson, dailyWordIds, seedCards, strongerCount } from './lib/spaced';
@@ -41,7 +41,8 @@ type View =
   /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[] }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review' }
+  /** phrases: the first lesson's result, once: a row to the emergency phrases. */
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean }
   /** "Certificaat behaald": once, after the result of a unit's last lesson (then the streak, if it went up). */
   | { name: 'cert-earned'; unit: string; streakUp?: number }
   /** A unit's certificate; streakUp: opened from "Certificaat behaald", the streak milestone still follows. */
@@ -50,7 +51,9 @@ type View =
   | { name: 'pocket'; unit: string; streakUp?: number }
   | { name: 'streak'; streak: number }
   | { name: 'words' }
-  | { name: 'phrasebook' }
+  /** The emergency phrases. streakUp / cert: opened from the first lesson's result, so the
+   *  certificate or the streak milestone still follows. */
+  | { name: 'phrasebook'; streakUp?: number; cert?: string }
   | { name: 'tips' }
   /** upgrade: opened from a locked unit, so the unlock card is scrolled into view. */
   /** Settings: the menu, a list or one setting's page. upgrade: opened from a locked topic (the
@@ -76,7 +79,8 @@ const current = (): Entry | null => {
 /** After a reload: back on the screen you were on, but a lesson or its result starts over at home. */
 const restored = (): View => {
   const v = current()?.view;
-  return !v || v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'admin' ? HOME : v;
+  return !v || v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'admin'
+    || (v.name === 'phrasebook' && (v.streakUp || v.cert)) ? HOME : v;
 };
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 /** A coach link (?unit=pay) asks to open the path at that unit; read once at start. */
@@ -270,7 +274,7 @@ export default function App() {
       if (viewRef.current.name === 'home') go({ name: 'topic', unit: unit.id, focus: true });
       return;
     }
-    if (unitAllowed(focusUnit, access)) setProgress((p) => (p.currentUnit === focusUnit ? p : { ...p, currentUnit: focusUnit }));
+    if (unitAllowed(focusUnit, access)) setProgress((p) => (p.currentUnit === focusUnit ? p : { ...p, ...pickBlock(focusUnit, p.completed) }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focusUnit, access, progress.onboarded, progress.sector]);
 
@@ -336,6 +340,9 @@ export default function App() {
           : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: addLessonWords(cards, found.lesson.words, results, today) }, now);
         // The lesson's unit is the current block while it is unfinished (see src/lib/route.ts).
         if (!daily) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
+        // The very first lesson: its result shows, once, where the emergency phrases are.
+        const phrases = !daily && !progress.phrasesShown && !Object.keys(progress.completed).length;
+        if (phrases) next.phrasesShown = true;
         setProgress(next);
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
         const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId);
@@ -362,6 +369,7 @@ export default function App() {
           next: upNext?.id,
           cert: unitDone?.id,
           skipped: skipped || undefined,
+          phrases: phrases || undefined,
         });
       };
       return (
@@ -393,6 +401,7 @@ export default function App() {
           next={view.next ? nextTitle(view.next, lang) : undefined}
           lang={lang}
           onDone={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}
+          onPhrases={view.phrases ? () => replace({ name: 'phrasebook', streakUp: view.streakUp, cert: view.cert }) : undefined}
         />
       );
     case 'streak':
@@ -467,7 +476,13 @@ export default function App() {
     case 'coaches':
       return <Coaches onBack={back} lang={lang} />;
     case 'phrasebook':
-      return <Phrasebook lang={lang} onBack={back} />;
+      // From the first lesson's result: back goes on to the certificate or the streak milestone.
+      return (
+        <Phrasebook
+          lang={lang}
+          onBack={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : back())}
+        />
+      );
     case 'settings': {
       const up = view.up ?? 0;
       return (
@@ -527,7 +542,7 @@ export default function App() {
             lang={lang}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
             onRestart={(lessonId) => { clearSave(lessonId); go({ name: 'lesson', lessonId, review: false }); }}
-            onPick={(unit) => setProgress((p) => ({ ...p, currentUnit: unit }))}
+            onPick={(unit) => setProgress((p) => ({ ...p, ...pickBlock(unit, p.completed) }))}
             onAll={() => go({ name: 'all' })}
             daily={Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : null}
             arrived={arrived}

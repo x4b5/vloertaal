@@ -218,7 +218,7 @@ export const uiEn = {
   tapToSpeak: 'Tap and speak',
   stopRecording: 'Stop',
   micPrivacy: 'Only you hear it. Nothing is sent.',
-  micUnavailable: 'The microphone is off. That’s fine, go on.',
+  micUnavailable: 'Microphone off. Say it out loud now, then go on.',
   /** Speaking on a device that cannot record at all: self-paced, nothing recorded. */
   sayAloud: 'No microphone needed. Say it out loud, then go on.',
   /** After the microphone failed in a speaking exercise: one retry. */
@@ -296,6 +296,8 @@ export const uiEn = {
   reviewComplete: 'Review finished!',
   /* G4 r4: Settings → Help language, offline, a language whose file is not on the phone yet. */
   langNotOnPhone: 'This language is not on this phone yet. Connect to the internet to switch.',
+  /* G4 r4b: the reminder's own time ("Kies zelf", for shift work). */
+  remindChooseOwn: 'Choose a time yourself',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { units } from '../src/content/curriculum';
 import { coursePlan } from '../src/content/sectors';
-import { HOME_SUGGESTIONS, blockAfterLesson, blockDoneCount, blockNext, currentBlock, doneBlocks, homeLessonState, homeSuggestions, nextChoices, routeNextLesson } from '../src/lib/route';
+import { HOME_SUGGESTIONS, blockAfterLesson, blockDoneCount, blockNext, currentBlock, doneBlocks, homeLessonState, homeSuggestions, nextChoices, onlyMixLeft, pickBlock, routeNextLesson } from '../src/lib/route';
 import { emptyProgress, replaceWithBackup } from '../src/lib/progress';
 
 const unit = (id: string) => units.find((u) => u.id === id)!;
@@ -88,10 +88,17 @@ describe('route: one block at a time', () => {
 describe('route: "choose next" weighs the sector', () => {
   const choices = (sector: Parameters<typeof nextChoices>[0]) => nextChoices(sector, done('u.firstday')).map((u) => u.id);
 
-  it('keeps the next unit in course order first, then the sector\'s own unit and its focus units', () => {
-    expect(choices('logistics')).toEqual(['u.help', 'u.warehouse', 'u.safety']);
-    expect(choices('cleaning')).toEqual(['u.help', 'u.clean', 'u.time']);
-    expect(choices('care')).toEqual(['u.help', 'u.care', 'u.teamwork']);
+  it('puts the sector\'s first focus unit first, then the next unit in course order and the sector\'s own unit', () => {
+    // Safety comes in week 1 for warehouse, building and factory work.
+    expect(choices('logistics')).toEqual(['u.safety', 'u.help', 'u.warehouse']);
+    expect(choices('construction')).toEqual(['u.safety', 'u.help', 'u.build']);
+    expect(choices('production')).toEqual(['u.safety', 'u.help', 'u.factory']);
+    expect(choices('cleaning')).toEqual(['u.time', 'u.help', 'u.clean']);
+    expect(choices('care')).toEqual(['u.teamwork', 'u.help', 'u.care']);
+    // The focus unit done: the next unit in course order is first again.
+    expect(nextChoices('logistics', done('u.firstday', 'u.safety')).map((u) => u.id)).toEqual(['u.help', 'u.warehouse', 'u.time']);
+    // The global course order is not changed (saved progress keeps its place).
+    expect(coursePlan('logistics').main.slice(0, 4).map((u) => u.id)).toEqual(['u.firstday', 'u.help', 'u.tools', 'u.safety']);
     // No sector: plain course order.
     expect(choices('none')).toEqual(['u.help', 'u.tools', 'u.safety']);
     expect(choices(undefined)).toEqual(['u.help', 'u.tools', 'u.safety']);
@@ -104,6 +111,7 @@ describe('route: "choose next" weighs the sector', () => {
 
   it('skips weighted units that are done and fills up in course order', () => {
     expect(nextChoices('care', done('u.firstday', 'u.care', 'u.teamwork')).map((u) => u.id)).toEqual(['u.help', 'u.health', 'u.tools']);
+    expect(nextChoices('care', done('u.firstday', 'u.teamwork')).map((u) => u.id)).toEqual(['u.help', 'u.care', 'u.health']);
   });
 });
 
@@ -111,7 +119,7 @@ describe('route: at most 3 choices on the home', () => {
   it('offers 2 suggestions after a finished block ("Other topic" is the third)', () => {
     expect(HOME_SUGGESTIONS).toBe(2);
     expect(homeSuggestions('none', done('u.firstday')).map((u) => u.id)).toEqual(['u.help', 'u.tools']);
-    expect(homeSuggestions('logistics', done('u.firstday')).map((u) => u.id)).toEqual(['u.help', 'u.warehouse']);
+    expect(homeSuggestions('logistics', done('u.firstday')).map((u) => u.id)).toEqual(['u.safety', 'u.help']);
     expect(homeSuggestions('none', done(...units.map((u) => u.id)))).toEqual([]);
   });
 
@@ -123,5 +131,42 @@ describe('route: at most 3 choices on the home', () => {
     // A preview block outside the first unit: nothing to start.
     const pay = unit('u.pay');
     expect(pay.lessons.map((l) => homeLessonState(pay, l.id, {}, 'preview'))).toEqual(pay.lessons.map(() => 'later'));
+  });
+});
+
+describe('route: no day is only review', () => {
+  // 15 October 2026.
+  const today = new Date(2026, 9, 15, 12);
+  const firstday = unit('u.firstday');
+  const newDone = Object.fromEntries(firstday.lessons.filter((l) => !l.id.endsWith('.mix')).map((l) => [l.id, { best: 1, times: 1 }]));
+
+  it('knows when only the mixed review of a unit is left', () => {
+    expect(onlyMixLeft(firstday, newDone)).toBe(true);
+    expect(onlyMixLeft(firstday, {})).toBe(false);
+    expect(onlyMixLeft(firstday, done('u.firstday'))).toBe(false);
+  });
+
+  it('goes on past the mixed review to the next new lesson once today\'s review is done', () => {
+    const input = { sector: 'logistics' as const, completed: newDone, currentUnit: 'u.firstday' };
+    // Review not done today: the mixed review is the next lesson.
+    expect(routeNextLesson(input, 'full', today)?.id).toBe('l.firstday.mix');
+    expect(routeNextLesson({ ...input, reviewDay: '2026-10-14' }, 'full', today)?.id).toBe('l.firstday.mix');
+    // Done today: the recommended next unit's first lesson (Safety for warehouse work).
+    const after = { ...input, reviewDay: '2026-10-15' };
+    expect(currentBlock(after, today, 'full')?.id).toBe('u.safety');
+    expect(routeNextLesson(after, 'full', today)?.id).toBe(unit('u.safety').lessons[0].id);
+    // The mixed review stays: the unit is not finished, and it is still among the choices.
+    expect(nextChoices('logistics', newDone, undefined, 5).map((u) => u.id)).toContain('u.firstday');
+    // The recommended choice always brings new lessons; the mixed review comes right after it.
+    expect(nextChoices('none', newDone).map((u) => u.id)).toEqual(['u.help', 'u.firstday', 'u.tools']);
+  });
+
+  it('never goes past a mixed review the learner picked, nor out of the preview', () => {
+    const pick = pickBlock('u.firstday', newDone);
+    expect(pick).toEqual({ currentUnit: 'u.firstday', pickedUnit: 'u.firstday' });
+    expect(routeNextLesson({ sector: 'none', completed: newDone, ...pick, reviewDay: '2026-10-15' }, 'full', today)?.id).toBe('l.firstday.mix');
+    // A block picked with new lessons left is not marked.
+    expect(pickBlock('u.help', newDone).pickedUnit).toBeUndefined();
+    expect(routeNextLesson({ sector: 'none', completed: newDone, currentUnit: 'u.firstday', reviewDay: '2026-10-15' }, 'preview', today)?.id).toBe('l.firstday.mix');
   });
 });

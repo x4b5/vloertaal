@@ -821,7 +821,7 @@ const socialUnit = unit('social', 'Getting along', 'Omgang met collega’s', '�
     [
       ['Ik roddel niet over collega’s.', 'I do not gossip about colleagues.'],
       ['Ik zet geen foto’s van het werk online.', 'I do not put photos of work online.'],
-      ['Zeg het liever tegen mij zelf.', 'I would rather you say it to me.'],
+      ['Zeg het liever direct tegen mij.', 'I would rather you say it to me directly.'],
     ],
     [['Heb je gehoord wat Mark heeft gedaan?', 'Did you hear what Mark did?'], ['Nee, en ik praat liever niet over hem.', 'No, and I would rather not talk about him.']],
   ),

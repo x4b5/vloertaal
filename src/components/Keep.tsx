@@ -5,7 +5,7 @@ import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
 import { backupFile, bestStreak, mergeBackup, parseBackup, replaceWithBackup, type Progress } from '../lib/progress';
 import { REMINDER_TIMES, rememberReminder, reminderIcs, saveFile } from '../lib/reminder';
-import { REMIND_DEFAULT, REMIND_OTHER_TIMES, keepNext, type KeepAction, type KeepStep } from '../lib/keep';
+import { REMIND_DEFAULT, REMIND_OTHER_TIMES, REMIND_OWN, keepNext, ownTime, type KeepAction, type KeepStep } from '../lib/keep';
 import { Bi } from './Bi';
 import { Character } from './Characters';
 import { CheckIcon, ChevronIcon, CloseIcon } from './Icons';
@@ -178,6 +178,51 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
   );
 }
 
+/**
+ * "Kies zelf" on the reminder's times page: the phone's own time field, for night and shift
+ * work (one tappable: the field). The time is added once it is chosen: on a touch phone when
+ * the phone's time picker sets it, with a mouse and keyboard on Enter or on leaving the field.
+ */
+function OwnTime({ lang, onTime }: { lang?: HelpLanguage; onTime: (time: string) => void }) {
+  const input = useRef<HTMLInputElement>(null);
+  const done = useRef(false);
+  const commit = () => {
+    const t = ownTime(input.current?.value ?? '');
+    if (!t || done.current) return;
+    done.current = true;
+    onTime(t);
+  };
+  useEffect(() => {
+    const el = input.current;
+    if (!el) return;
+    const touch = window.matchMedia?.('(pointer: coarse)').matches;
+    // The native change event: on a phone it comes when the picker sets the time.
+    const onChange = () => { if (touch) commit(); };
+    el.addEventListener('change', onChange);
+    return () => el.removeEventListener('change', onChange);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const rtl = lang?.dir === 'rtl';
+  return (
+    <label className="keep3-time-btn keep3-own" dir={rtl ? 'rtl' : undefined}>
+      <ClockGlyph />
+      <span className="keep3-btn-text">
+        <Bi className="keep3-btn-gloss" text={ui(REMIND_OWN.key, lang)} />
+        <span className="keep3-btn-nl" lang="nl" dir="ltr">{REMIND_OWN.nl}</span>
+      </span>
+      <input
+        ref={input}
+        type="time"
+        className="keep3-own-input"
+        dir="ltr"
+        aria-label={`${REMIND_OWN.nl} · ${said(ui(REMIND_OWN.key, lang))}`}
+        onBlur={commit}
+        onKeyDown={(e) => { if (e.key === 'Enter') commit(); }}
+      />
+    </label>
+  );
+}
+
 function ClockGlyph() {
   return (
     <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden focusable="false">
@@ -323,7 +368,7 @@ function KeepTitle({ nl, text, lang }: { nl: string; text: ReturnType<typeof ui>
  * The reminder and home-screen offer after the first day's milestone (src/lib/keep.ts), one
  * small page at a time, at most 3 choices each:
  *  ask: [Yes, after work · 18:00] [Other time] [No thanks];
- *  times: 07:00 / 12:00 / 20:00 (a tap adds it);
+ *  times: 07:00 / 12:00 / "Kies zelf" with the phone's time field (a time adds it);
  *  install (only when the phone can): [Add to home screen] [Later];
  *  added: "Open the file to add it" and Continue (when there is no install page).
  */
@@ -396,6 +441,9 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
               </button>
             </li>
           ))}
+          <li>
+            <OwnTime lang={lang} onTime={(time) => remind(time, 'time')} />
+          </li>
         </ul>
       </>
     );

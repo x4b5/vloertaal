@@ -311,6 +311,8 @@ function defineStates(LANG) {
   add('after:result', shot('result'));
   add('after:result-perfect', shot('result&perfect=1'));
   add('after:result-review', shot('result&review=1'));
+  // The first lesson's result, once: Continue and the row to the emergency phrases.
+  add('after:result-phrases', shot('result&phrases=1'));
   add('after:streak', shot('streak&n=7'));
   add('after:streak-first', shot('streak&n=1'));
   add('after:keep', shot('streak&n=1'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); }, { expect: '.keep-no.keep3-btn' });

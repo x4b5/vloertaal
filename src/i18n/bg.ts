@@ -207,7 +207,7 @@ const lang: HelpLanguageSource = {
     tapToSpeak: 'Докосни и говори',
     stopRecording: 'Стоп',
     micPrivacy: 'Само ти го чуваш. Нищо не се изпраща.',
-    micUnavailable: 'Микрофонът не е достъпен. Няма проблем, продължи.',
+    micUnavailable: 'Микрофонът е изключен. Кажи го на глас сега, после продължи.',
     cantSpeak: 'Сега не мога да говоря',
     soundsSame: 'Звучи еднакво',
     sayAgain: 'Кажи отново',
@@ -264,6 +264,8 @@ const lang: HelpLanguageSource = {
     mainMenu: 'Главно меню',
     spaceKey: 'Интервал',
     langNotOnPhone: 'Този език още не е на телефона ти. Свържи се с интернет, за да смениш езика.',
+    /* G4 r4b: the reminder's own time ("Kies zelf"). */
+    remindChooseOwn: { m: 'Избери час сам', f: 'Избери час сама' },
   },
   gloss: {
     // Units
@@ -341,7 +343,7 @@ const lang: HelpLanguageSource = {
     'w.beter': 'по-добре',
 
     // Sentences
-    's.hello.1': { m: 'Здравейте, нов съм.', f: 'Здравейте, нова съм.' },
+    's.hello.1': { m: 'Здравей, нов съм.', f: 'Здравей, нова съм.' },
     's.hello.2': 'Добро утро, аз съм Али.',
     's.hello.3': 'Благодаря, до утре!',
     's.people.1': 'Казвам се Сара.',

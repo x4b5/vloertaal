@@ -207,7 +207,7 @@ const lang: HelpLanguageSource = {
     tapToSpeak: { m: 'ጠውቕ እሞ ተዛረብ', f: 'ጠውቒ እሞ ተዛረቢ' },
     stopRecording: { m: 'ደው ኣብል', f: 'ደው ኣብሊ' },
     micPrivacy: { m: 'ንስኻ ጥራይ ኢኻ ትሰምዖ። ዋላ ሓንቲ ኣይለኣኽን።', f: 'ንስኺ ጥራይ ኢኺ ትሰምዕዮ። ዋላ ሓንቲ ኣይለኣኽን።' },
-    micUnavailable: { m: 'ማይክሮፎን ኣይሰርሕን ዘሎ። ጸገም የለን፣ ቀጽል።', f: 'ማይክሮፎን ኣይሰርሕን ዘሎ። ጸገም የለን፣ ቀጽሊ።' },
+    micUnavailable: { m: 'ማይክሮፎን ጠፊኡ ኣሎ። ሕጂ ብዓው ኢልካ በሎ፡ ድሕሪኡ ቀጽል።', f: 'ማይክሮፎን ጠፊኡ ኣሎ። ሕጂ ብዓው ኢልኪ በልዮ፡ ድሕሪኡ ቀጽሊ።' },
     cantSpeak: 'ሕጂ ክዛረብ ኣይክእልን',
     soundsSame: 'ሓደ ዓይነት እዩ',
     sayAgain: { m: 'ደጊምካ በሎ', f: 'ደጊምኪ በልዮ' },
@@ -264,6 +264,8 @@ const lang: HelpLanguageSource = {
     mainMenu: 'ቀንዲ ዝርዝር',
     spaceKey: 'ባዶ ቦታ',
     langNotOnPhone: { m: 'እዚ ቋንቋ ገና ኣብ ተሌፎንካ የለን። ቋንቋ ንምቕያር ምስ ኢንተርነት ተራኸብ።', f: 'እዚ ቋንቋ ገና ኣብ ተሌፎንኪ የለን። ቋንቋ ንምቕያር ምስ ኢንተርነት ተራኸቢ።' },
+    /* G4 r4b: the reminder's own time ("Kies zelf"). */
+    remindChooseOwn: { m: 'ባዕልኻ ሰዓት ምረጽ', f: 'ባዕልኺ ሰዓት ምረጺ' },
   },
   gloss: {
     // Units

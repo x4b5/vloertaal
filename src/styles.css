@@ -3822,3 +3822,27 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .lang-not-here-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .lang-not-here-nl { font-size: 0.85rem; color: var(--muted); }
 .lang-not-here .bi-en { font-size: max(17px, 1.05rem); font-weight: 600; line-height: 1.35; }
+
+/* ---- G4 r4b ---- */
+/* The milestone's tier stamp ("3 OP RIJ"): a small line in the help language under the Dutch. */
+.tier-stamp-sub {
+  display: block; max-width: 8.5rem; margin-top: 3px;
+  font-family: 'Lexend Variable', sans-serif; font-weight: 700; font-size: 0.72rem; line-height: 1.15;
+  text-transform: none; white-space: normal; text-align: center; overflow-wrap: anywhere;
+}
+.tier-stamp-sub:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.8rem; }
+/* The first lesson's result, once: a row to the emergency phrases (as on the Hulp tab). */
+.result-phrases { width: 100%; max-width: 420px; min-height: 72px; margin: 18px 0 0; padding: 10px 12px; gap: 12px; }
+.result-phrases .hub-icon { width: 48px; height: 48px; color: var(--wrong-ink); }
+.result-phrases .hub-nl { font-size: 1rem; color: var(--muted); font-weight: 600; }
+.result-phrases .hub-text .bi { align-items: flex-start; text-align: start; color: var(--ink); font-weight: 650; font-size: 1.1rem; }
+/* The reminder's "Kies zelf": a row like the two times, with the phone's own time field at its end. */
+.keep3-own { cursor: pointer; }
+.keep3-own-input {
+  flex: none; min-width: 6.2em; min-height: 48px; padding: 6px 8px;
+  font: inherit; font-family: var(--stencil); font-weight: 800; font-size: 1.35rem; color: var(--ink);
+  background: var(--card); border: 2px solid var(--choice-edge); border-radius: 8px;
+}
+.keep3-own-input:focus-visible { outline: 3px solid var(--focus, #1592db); outline-offset: 2px; }
+.keep3-own > svg { margin-inline-start: 0; color: var(--ink-2); }
+.keep3-own .keep3-own-input { margin-inline-start: auto; }

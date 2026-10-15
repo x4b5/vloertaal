@@ -207,7 +207,7 @@ const lang: HelpLanguageSource = {
     tapToSpeak: 'Apasă și vorbește',
     stopRecording: 'Stop',
     micPrivacy: 'Doar tu auzi. Nimic nu este trimis.',
-    micUnavailable: 'Microfonul nu este disponibil. Nu-i nimic, mergi mai departe.',
+    micUnavailable: 'Microfonul e oprit. Spune acum cu voce tare, apoi mergi mai departe.',
     cantSpeak: 'Nu pot vorbi acum',
     soundsSame: 'Sună la fel',
     sayAgain: 'Spune din nou',
@@ -264,6 +264,8 @@ const lang: HelpLanguageSource = {
     mainMenu: 'Meniu principal',
     spaceKey: 'Spațiu',
     langNotOnPhone: 'Această limbă nu este încă pe telefonul tău. Conectează-te la internet ca să schimbi limba.',
+    /* G4 r4b: the reminder's own time ("Kies zelf"). */
+    remindChooseOwn: 'Alege tu ora',
   },
   gloss: {
     // Units

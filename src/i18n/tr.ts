@@ -207,7 +207,7 @@ const lang: HelpLanguageSource = {
     tapToSpeak: 'Dokun ve konuş',
     stopRecording: 'Dur',
     micPrivacy: 'Sadece sen duyarsın. Hiçbir şey gönderilmez.',
-    micUnavailable: 'Mikrofon kullanılamıyor. Sorun değil, devam et.',
+    micUnavailable: 'Mikrofon kapalı. Şimdi sesli söyle, sonra devam et.',
     cantSpeak: 'Şu an konuşamıyorum',
     soundsSame: 'Aynı gibi',
     sayAgain: 'Tekrar söyle',
@@ -264,6 +264,8 @@ const lang: HelpLanguageSource = {
     mainMenu: 'Ana menü',
     spaceKey: 'Boşluk',
     langNotOnPhone: 'Bu dil henüz telefonunda yok. Dili değiştirmek için internete bağlan.',
+    /* G4 r4b: the reminder's own time ("Kies zelf"). */
+    remindChooseOwn: 'Saati kendin seç',
   },
   gloss: {
     // Unit: First day at work

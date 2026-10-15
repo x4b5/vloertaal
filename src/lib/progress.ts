@@ -63,8 +63,8 @@ export interface Progress {
    */
   currentUnit?: string;
   /**
-   * The block the learner picked themselves (a suggestion on the home or a coach link). Such a
-   * block is never skipped for a new lesson when only its mixed review is left (src/lib/route.ts).
+   * A block the learner picked (a suggestion on the home or a coach link) when only its mixed
+   * review was left: the home then shows that review and does not go on past it (src/lib/route.ts).
    */
   pickedUnit?: string;
   /** The days practised (YYYY-MM-DD, most recent last, the last DAYS_KEEP), for the week row. */
