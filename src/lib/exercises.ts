@@ -140,7 +140,13 @@ export function dutchExercise(word: Word, lesson: Lesson, rng: () => number, n =
 }
 
 /** The first word of a line, lower case ("Tot morgen!" → "tot"). */
-const firstWord = (s: string) => tokenize(s)[0]?.toLowerCase() ?? '';
+const firstWords = new Map<string, string>();
+const firstWord = (s: string) => {
+  // Cached: the chat options compare the first words of every line of the course, many times.
+  let w = firstWords.get(s);
+  if (w === undefined) { w = tokenize(s)[0]?.toLowerCase() ?? ''; firstWords.set(s, w); }
+  return w;
+};
 
 /**
  * Replies the learner has been taught by the time of `lesson`: the dialogues of the lessons up
@@ -186,7 +192,12 @@ function nearReplies(at: number, reply: ChatLine): ChatLine[] {
 }
 
 /** Plain text for comparing meanings ("See you tomorrow!" = "see you tomorrow"). */
-const plain = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N} ]+/gu, '').replace(/\s+/g, ' ').trim();
+const plains = new Map<string, string>();
+const plain = (s: string) => {
+  let p = plains.get(s);
+  if (p === undefined) { p = s.toLowerCase().replace(/[^\p{L}\p{N} ]+/gu, '').replace(/\s+/g, ' ').trim(); plains.set(s, p); }
+  return p;
+};
 
 /** About as long as the right reply (a much longer line stands out, and reads above the level). */
 export function similarLength(a: string, b: string): boolean {
