@@ -8,6 +8,8 @@ import { BRAM_HELLO, BRAM_VOICE } from '../src/lib/voices';
 /** Lines whose recording is still to be made (the owner re-records them); the device voice says them meanwhile. */
 const PENDING_RECORDING = new Set([
   'Zeg het liever direct tegen mij.',
+  // Was "Het is spoed." (spoken style); the standard form is "Het heeft spoed.". Re-recorded on the next run.
+  'Het heeft spoed.',
   // x.bram, Bram introducing himself on the first tap (only Thijmen records it, see
   // scripts/list-clips.ts). Until the next "Record ElevenLabs voices" run, sayFirstWord keeps
   // playing the recorded "hallo" instead (src/lib/audio.ts).

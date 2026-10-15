@@ -1064,7 +1064,7 @@ const laterUnits: Unit[] = [
       [
         ['Ik wil een afspraak bij de huisarts.', 'I want an appointment with the GP.'],
         ['Waar is de apotheek?', 'Where is the pharmacy?'],
-        ['Het is spoed.', 'It is urgent.'],
+        ['Het heeft spoed.', 'It is urgent.'],
       ],
       [
         ['Huisartsenpost, wat kan ik voor u doen?', 'GP service, what can I do for you?'],
