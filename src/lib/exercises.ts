@@ -243,16 +243,19 @@ export function chatPromptOptions(dialogue: Dialogue, rng: () => number, n = 3, 
   const { prompt, reply } = dialogue;
   const at = chatLessonAt(dialogue, lesson);
   const upTo = new Set(allLessons.slice(0, Math.max(0, at) + 1).map((l) => l.id));
-  const taught = teachingLessons.filter((l) => upTo.has(l.id)).flatMap((l) => l.dialogues ?? []);
-  const fits = (d: Dialogue) =>
-    d.prompt.id !== prompt.id && d.prompt.nl !== prompt.nl && firstWord(d.prompt.nl) !== firstWord(prompt.nl)
-    && firstWord(d.reply.nl) !== firstWord(reply.nl) && plain(d.prompt.en) !== plain(prompt.en)
-    && !nearSynonyms(d.prompt.nl, prompt.nl) && !avoid?.has(d.prompt.id);
-  const short = (d: Dialogue) => similarLength(d.prompt.nl, prompt.nl);
+  const taught = new Set(teachingLessons.filter((l) => upTo.has(l.id)).flatMap((l) => l.dialogues ?? []));
+  const first = firstWord(prompt.nl);
+  const answered = firstWord(reply.nl);
+  const meaning = plain(prompt.en);
+  // One pass over the course's chats (the cheap checks first; near-synonyms last).
+  const fitting = allDialogues.filter((d) =>
+    d.prompt.id !== prompt.id && d.prompt.nl !== prompt.nl && !avoid?.has(d.prompt.id) && firstWord(d.prompt.nl) !== first
+    && firstWord(d.reply.nl) !== answered && plain(d.prompt.en) !== meaning && !nearSynonyms(d.prompt.nl, prompt.nl));
+  const known = fitting.filter((d) => taught.has(d));
   const pools: Dialogue[][] = [
-    shuffle(taught.filter((d) => fits(d) && short(d)), rng),
-    shuffle(taught.filter(fits), rng),
-    allDialogues.filter(fits),
+    shuffle(known.filter((d) => similarLength(d.prompt.nl, prompt.nl)), rng),
+    shuffle(known, rng),
+    fitting,
     allDialogues.filter((d) => d.prompt.id !== prompt.id && d.prompt.nl !== prompt.nl),
   ];
   const picked: ChatLine[] = [];
