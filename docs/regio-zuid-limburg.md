@@ -649,7 +649,7 @@ gids). Een S-rij moet eerst nagekeken worden.
 | | Juridisch Loket Heerlen, in het Huis van het Recht | Je hebt meer problemen tegelijk, zoals schulden en huur, en woont in Heerlen. | juridischloket.nl | — | P | ⚖️ 15-10-2026 · O (rechtspraak.nl, 2020–2022; nu nog open?) |
 | **Werk** | UWV en werk.nl | Werk kwijt, WW, inschrijven als werkzoekende, vacatures. | werk.nl · uwv.nl | — | ZL | ⚖️ 15-10-2026 · O |
 | | Werkgeversservicepunt (WSP) Zuid-Limburg | Samenwerking van UWV, gemeenten en sociale werkbedrijven. Helpt werkzoekenden en werkgevers. | zuid-limburg.werkgeversanno.nu ⚖️ | — | ZL | ⚖️ 15-10-2026 · S |
-| | Werkcentrum Zuid-Limburg | Je zoekt werk: hulp bij werk zoeken, solliciteren en een opleiding. | site nog nakijken ⚖️ | — | ZL | ✅ naam bevestigd door de eigenaar (15-10-2026); site en adres nog nakijken ⚖️ |
+| | Werkcentrum Zuid-Limburg | Je zoekt werk: hulp bij werk zoeken, solliciteren en een opleiding. | werkcentrumzuidlimburg.nl | — | ZL | ✅ naam bevestigd door de eigenaar (15-10-2026); site en adres nog nakijken ⚖️ |
 | | Sociale Zaken Maastricht Heuvelland | Je zoekt werk en hebt een uitkering van de gemeente, in Maastricht of het Heuvelland. | socialezaken-mh.nl | — | M-H | ⚖️ 15-10-2026 · O (sdg.government.nl) |
 | | WSP Parkstad, en WerkvoorHeerlen | Je zoekt werk vanuit de bijstand in Parkstad. WSP Parkstad zoekt mee naar een baan. | wspparkstad.nl | — | P | ⚖️ 15-10-2026 · O (heerlen.nl, gemeenteraad 2024) |
 | | Vidar en WSP Westelijke Mijnstreek | Werk en inkomen in Sittard-Geleen, Beek en Stein. | vidar.nl · wsp-wm.nl | — | WM | ⚖️ 15-10-2026 · O (overheid.nl) |
@@ -792,6 +792,7 @@ zoekresultaten van deze pagina's.*
 
 **Wonen en vervoer**
 
+- Werkcentrum Zuid-Limburg (opgegeven door de eigenaar): https://www.werkcentrumzuidlimburg.nl/
 - Thuis in Limburg, inschrijven: https://www.thuisinlimburg.nl/inschrijven/inschrijven-als-woningzoekende
 - Maasvallei, inschrijven bij Thuis in Limburg: https://maasvallei.nl/veelgestelde-vragen/hoe-kan-ik-mij-inschrijven-bij-thuis-in-limburg
 - ZIG, ZOwonen sluit aan bij Thuis in Limburg (2020): https://zig.nl/en/2020/07/13/zowonen-sluit-zich-succesvol-aan-bij-thuis-in-limburg/
@@ -862,7 +863,7 @@ zoekresultaten van deze pagina's.*
 ## 7. Te controleren
 
 **Antwoorden van de eigenaar (15-10-2026)**
-1. Werk: het heet **Werkcentrum Zuid-Limburg**. Verwerkt; voor heel Zuid-Limburg. Werkgebied en site nog nakijken.
+1. Werk: het heet **Werkcentrum Zuid-Limburg**. Verwerkt; voor heel Zuid-Limburg. Site: werkcentrumzuidlimburg.nl (eigenaar). Werkgebied nog nakijken.
 2. Dialect: nakijken bij **Mestreechter Taol**. Twijfelwoorden zijn van de kaart gehaald. Een controle via deze omgeving lukte niet, omdat de site hier niet bereikbaar is.
 3. Loketnamen en de 5-dagenregel: nog onbekend, blijft ⚖️.
 4. Huisartsenpost: nog onbekend, blijft ⚖️. Er staan geen regionale nummers in.
