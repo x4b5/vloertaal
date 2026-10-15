@@ -36,6 +36,7 @@ import { PocketCardScreen } from '../components/PocketCard';
 import { showOfflineStateForShot, type OfflineState } from '../lib/offline';
 import { OfflineSettingCard } from '../components/Offline';
 import type { TextSize } from '../lib/textSize';
+import { LogoMark, Wordmark } from '../components/Logo';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -83,6 +84,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The streak stopped at 12 (record 21), shown once on the next open.
   if (shot === 'stopped') return <StreakStopped streak={12} best={21} lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
+  // The app icon in every variant (scripts/icons/make-icons.cjs reads these): /?shot=logo&px=512
+  if (shot === 'logo') return <LogoSheet px={Number(q.get('px') ?? 120)} />;
   // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety
   if (shot === 'pocket') {
     const unit = findUnit(q.get('cu') ?? 'u.safety') ?? units[0];
@@ -494,4 +497,23 @@ function seedResume(mode: string | null, certUnit: boolean) {
     put(next, false, Math.min(12, n - 1), Math.max(0, 18 - n));
   }
   if (mode === 'done') put('l.hello', true, 5, 1);
+}
+
+/** Every variant of the logo at one size, each in a box the icon script can find by its id. */
+function LogoSheet({ px }: { px: number }) {
+  const variants = [
+    ['full-round', 'full', 'round'], ['full-square', 'full', 'square'], ['full-mask', 'full', 'mask'],
+    ['small-round', 'small', 'round'], ['small-square', 'small', 'square'],
+  ] as const;
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, padding: 16 }}>
+      {variants.map(([id, variant, shape]) => (
+        <div key={id} id={`icon-${id}`} style={{ width: px, height: px, lineHeight: 0 }}>
+          <LogoMark size={px} variant={variant} shape={shape} />
+        </div>
+      ))}
+      <h1 id="logo-wordmark" className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
+      <h1 id="logo-wordmark-big" className="hero-logo"><LogoMark size={88} /><Wordmark /></h1>
+    </div>
+  );
 }
