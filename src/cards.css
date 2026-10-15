@@ -19,7 +19,8 @@
 /* Long values wrap (an address, a work order): never wider than the screen. */
 .slip.card:not(.card-loonstrook) .slip-row dd,
 .slip.card-says .slip-row dd { flex: 0 1 auto; min-width: 0; white-space: normal; text-align: end; overflow-wrap: anywhere; }
-.slip.card .slip-row dt { font-weight: 500; }
+/* A label never breaks inside a word (XL text): the value next to it wraps instead. */
+.slip.card .slip-row dt { min-width: auto; font-weight: 500; overflow-wrap: normal; hyphens: manual; }
 
 /* The row still to work out: a dashed "?" box; after Check it holds the answer, lit up. */
 .card-q {
