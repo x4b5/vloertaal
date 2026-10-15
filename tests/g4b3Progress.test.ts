@@ -97,3 +97,17 @@ describe('progression through the course', () => {
     }
   });
 });
+
+describe('progression follows the learner\'s own path', () => {
+  it('a care learner\'s own sector unit (early on their path) gets no reversed chat or sentence by ear', () => {
+    const care = units.find((u) => u.id === 'u.care')!;
+    const at = unitIndexOf(care.lessons[0], 'care');
+    expect(at).toBeLessThan(PROGRESSION.audioBuild);
+    expect(unitIndexOf(care.lessons[0])).toBeGreaterThanOrEqual(PROGRESSION.reverseChat);
+    for (const l of care.lessons.filter((x) => !isMixLesson(x))) {
+      const k = kinds(buildLesson(l, { review: false, seed: 3, sector: 'care' }));
+      expect(k, l.id).not.toContain(':rev');
+      expect(k, l.id).not.toContain(':ear');
+    }
+  });
+});

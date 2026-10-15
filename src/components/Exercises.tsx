@@ -958,13 +958,6 @@ function helpLines(text: string): string[] {
   return lines;
 }
 
-/** The first `n` sentences of a text, and whether there is more after them. */
-export function firstSentences(text: string, n: number): { head: string; more: boolean } {
-  const parts = sentences(text);
-  if (parts.length <= n) return { head: text.trim(), more: false };
-  return { head: parts.slice(0, n).join(' '), more: true };
-}
-
 /** Sentences of a tip shown in a lesson. */
 export const TIP_SENTENCES = 3;
 
