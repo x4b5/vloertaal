@@ -44,14 +44,14 @@ describe('the tip in a lesson keeps the sentence the situation and the phrase ne
   it('shows the curated lead in English and in every help language', () => {
     const needs: [string, RegExp, RegExp][] = [
       // [tip, English, a term every help language keeps]
-      ['c.gethelp', /112/, /112/],
+      ['c.gethelp', /112/, /112|۱۱۲|١١٢/],
       ['c.gethelp', /0800-7000/, /0800-7000/],
       ['c.rights', /Do not sign/, /Juridisch Loket/],
       ['c.cleansafe', /wet-floor sign/, /Pas op, glad!/],
       ['c.payslip', /write down the hours/, /./],
       ['c.housing', /Juridisch Loket/, /Juridisch Loket/],
       ['c.understood', /Dus ik moet eerst/, /Dus ik moet eerst/],
-      ['c.doctor', /112/, /112/],
+      ['c.doctor', /112/, /112|۱۱۲|١١٢/],
       ['c.smalltalk', /Gefeliciteerd/, /Gefeliciteerd/],
     ];
     for (const [id, en, help] of needs) {

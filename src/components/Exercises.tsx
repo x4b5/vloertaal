@@ -926,7 +926,7 @@ export function fallbackLead(help: readonly string[], keys: readonly string[]): 
   const terms = [...new Set(keys.map((k) => k.toLowerCase()))];
   const score = (t: string) => {
     const low = t.toLowerCase();
-    return terms.filter((k) => low.includes(k)).length + (/\d/.test(t) ? 1 : 0);
+    return terms.filter((k) => low.includes(k)).length + (/\p{Nd}/u.test(t) ? 1 : 0);
   };
   const ranked = help.map((t, i) => ({ i, sc: score(t) })).filter(({ i, sc }) => i > 0 && sc > 0).sort((a, b) => b.sc - a.sc || a.i - b.i);
   const picked = [0, ...ranked.slice(0, TIP_FALLBACK_MAX - 1).map(({ i }) => i)];
@@ -938,7 +938,7 @@ export function fallbackLead(help: readonly string[], keys: readonly string[]): 
  *  inside a sentence, or with a digit), and the words of the phrase. */
 function keyTerms(enLead: readonly string[], phrase?: string): string[] {
   const words = (t: string) => t.split(/[\s,;:()"“”«»!?.]+/u).filter(Boolean);
-  const fromEn = enLead.flatMap((t) => words(t).filter((w, k) => /\d/.test(w) || (k > 0 && /^\p{Lu}/u.test(w) && w.length >= 2)));
+  const fromEn = enLead.flatMap((t) => words(t).filter((w, k) => /\p{Nd}/u.test(w) || (k > 0 && /^\p{Lu}/u.test(w) && w.length >= 2)));
   const fromPhrase = phrase ? words(phrase).filter((w) => w.length >= 4) : [];
   return [...fromEn, ...fromPhrase];
 }
