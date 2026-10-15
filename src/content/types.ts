@@ -1,3 +1,5 @@
+import type { AskWho, RuleStep } from './regels/types';
+
 /** A single Dutch word or short fixed phrase, taught with a picture (drawing or emoji) unless abstract. */
 export interface Word {
   /** Stable id, also used as the key for help-language translations. */
@@ -46,6 +48,13 @@ export interface Lesson {
   repeat?: true;
   /** Today's review: the card box of each word (lib/spaced.ts); box 2 and up get harder questions. */
   boxes?: Record<string, number>;
+  /**
+   * The work-rules track (src/content/regels): the lesson's steps. Such a lesson has no words and
+   * no sentences (`words: []`, `sentences: []`); see isPlayable in src/content/courses.ts.
+   */
+  steps?: RuleStep[];
+  /** The work-rules track: what the lesson is for, its "Onthoud" line and who can help. */
+  rule?: { goal: string; remember: string; help?: AskWho[] };
 }
 
 export interface Unit {

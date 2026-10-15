@@ -335,6 +335,13 @@ export type UiKey = keyof typeof uiEn;
 export type LangCode = 'ar' | 'ti' | 'fa' | 'prs' | 'uk' | 'tr' | 'pl' | 'ro' | 'bg';
 
 /**
+ * A language the app's screens can be read in: the nine help languages, plus 'nl' for the
+ * work-rules track ("Nederlands – ik spreek al Nederlands", src/lib/track.ts). 'nl' is not a
+ * help language: it has no glosses of the Dutch course and is not in LANG_CODES.
+ */
+export type UiCode = LangCode | 'nl';
+
+/**
  * The learner's grammatical gender for the help language ("Ik ben ziek": Polish "chory" or
  * "chora"). 'x' = rather not say: the both-forms text ("rănit / rănită") where there is one,
  * otherwise the masculine. Undefined = not asked (same as 'x').
@@ -409,7 +416,7 @@ export const GENDERED_LANGS: readonly LangCode[] = ['ar', 'ti', 'uk', 'pl', 'ro'
 
 /** A help language as written in its translation file: texts may differ by gender. */
 export interface HelpLanguageSource {
-  code: LangCode;
+  code: UiCode;
   name: string;
   nativeName: string;
   dir: 'ltr' | 'rtl';
@@ -421,7 +428,8 @@ export interface HelpLanguageSource {
 
 /** A help language resolved for one learner: every text is a plain string in their gender. */
 export interface HelpLanguage {
-  code: LangCode;
+  /** 'nl': the screens are in Dutch only (the work-rules track). */
+  code: UiCode;
   /** The gender the texts were resolved for (undefined = not chosen: both-forms or masculine). */
   gender?: Gender;
   /** English name of the language, e.g. "Dari (Afghanistan)". */

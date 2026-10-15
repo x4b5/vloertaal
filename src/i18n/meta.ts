@@ -1,4 +1,4 @@
-import type { HelpLanguage, LangCode, UiKey } from './types';
+import type { HelpLanguage, LangCode, UiCode, UiKey } from './types';
 
 /**
  * What the app needs about each help language before its pack is loaded (the packs are loaded on
@@ -9,8 +9,8 @@ import type { HelpLanguage, LangCode, UiKey } from './types';
  * the default (no gender chosen) form. They are
  * copies of the packs' own strings; tests/i18n.test.ts checks that they stay the same.
  */
-export interface LangMeta {
-  code: LangCode;
+export interface LangMeta<C extends UiCode = LangCode> {
+  code: C;
   name: string;
   nativeName: string;
   dir: 'ltr' | 'rtl';
@@ -33,11 +33,30 @@ export const languageMeta: readonly LangMeta[] = [
 
 export const LANG_CODES: readonly LangCode[] = languageMeta.map((l) => l.code);
 
-export function langMeta(code: LangCode | null | undefined): LangMeta | undefined {
+/**
+ * "Nederlands – ik spreek al Nederlands": the work-rules track (src/lib/track.ts). Not a help
+ * language, so not in languageMeta (or LANG_CODES): the language list shows it as its own option,
+ * only while RULES_TRACK is on, and the phone's languages never guess it (many learners have
+ * a Dutch phone).
+ */
+export const NL_META: LangMeta<'nl'> = {
+  code: 'nl',
+  name: 'ik spreek al Nederlands',
+  nativeName: 'Nederlands',
+  dir: 'ltr',
+  gendered: false,
+  reviewed: true,
+  ui: { chooseLanguage: 'Kies je taal', langGuessYes: 'Ja', langGuessOther: 'Andere taal', appTagline: 'Werken in Nederland: zo gaat het' },
+};
+
+export function langMeta(code: LangCode | null | undefined): LangMeta | undefined;
+export function langMeta(code: UiCode | null | undefined): LangMeta<UiCode> | undefined;
+export function langMeta(code: UiCode | null | undefined): LangMeta<UiCode> | undefined {
+  if (code === 'nl') return NL_META;
   return languageMeta.find((l) => l.code === code);
 }
 
 /** A stand-in help language with only the guess page's strings (before the pack has loaded). */
-export function metaLanguage(meta: LangMeta): HelpLanguage {
+export function metaLanguage(meta: LangMeta<UiCode>): HelpLanguage {
   return { code: meta.code, name: meta.name, nativeName: meta.nativeName, dir: meta.dir, reviewed: meta.reviewed, ui: { ...meta.ui }, gloss: {} };
 }

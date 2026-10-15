@@ -1,10 +1,10 @@
 import { mixLessonId, relatedUnits } from '../content/review';
 import { langMeta, languageMeta } from './meta';
 import type { LanguagePack } from './packs/types';
-import type { Gender, HelpLanguage, HelpLanguageSource, LangCode, LangText, PluralCategory, PluralForms, UiKey, UiText } from './types';
+import type { Gender, HelpLanguage, HelpLanguageSource, LangCode, LangText, PluralCategory, PluralForms, UiCode, UiKey, UiText } from './types';
 import { forGender, GENDERED_LANGS, isPlural, PLURAL_CATEGORIES, uiEn } from './types';
 
-export { languageMeta, langMeta, metaLanguage, LANG_CODES, type LangMeta } from './meta';
+export { languageMeta, langMeta, metaLanguage, LANG_CODES, NL_META, type LangMeta } from './meta';
 
 /**
  * The help languages are loaded on demand: each is its own file (src/i18n/packs), about 50 kB
@@ -12,7 +12,7 @@ export { languageMeta, langMeta, metaLanguage, LANG_CODES, type LangMeta } from 
  * waits for it at start and when the language changes, showing the splash); getHelpLanguage then
  * returns it straight away. The language list and the guess page need only src/i18n/meta.ts.
  */
-const loaders: Record<LangCode, () => Promise<{ default: LanguagePack }>> = {
+const loaders: Record<UiCode, () => Promise<{ default: LanguagePack }>> = {
   ar: () => import('./packs/ar'),
   ti: () => import('./packs/ti'),
   fa: () => import('./packs/fa'),
@@ -22,11 +22,13 @@ const loaders: Record<LangCode, () => Promise<{ default: LanguagePack }>> = {
   pl: () => import('./packs/pl'),
   ro: () => import('./packs/ro'),
   bg: () => import('./packs/bg'),
+  // The work-rules track: the screens in plain Dutch, plus the rules course (src/lib/track.ts).
+  nl: () => import('./packs/nl'),
 };
 
-const sources = new Map<LangCode, HelpLanguageSource>();
-const packUrls = new Map<LangCode, string>();
-const pending = new Map<LangCode, Promise<void>>();
+const sources = new Map<UiCode, HelpLanguageSource>();
+const packUrls = new Map<UiCode, string>();
+const pending = new Map<UiCode, Promise<void>>();
 
 /** Workplace-culture, work-and-rights, About and learning texts live in their own files; merge them in. */
 function merge(p: LanguagePack): HelpLanguageSource {
@@ -51,7 +53,7 @@ export function registerPack(pack: LanguagePack): void {
   for (const key of [...cache.keys()]) if (key.startsWith(`${code}:`)) cache.delete(key);
 }
 
-export function isLanguageLoaded(code: LangCode | null | undefined): boolean {
+export function isLanguageLoaded(code: UiCode | null | undefined): boolean {
   return !code || sources.has(code);
 }
 
@@ -59,7 +61,7 @@ export function isLanguageLoaded(code: LangCode | null | undefined): boolean {
  * Loads a help language's pack (once; again after a failure, e.g. offline). Resolves at once for
  * English only (null) or a pack already here.
  */
-export function ensureLanguage(code: LangCode | null | undefined): Promise<void> {
+export function ensureLanguage(code: UiCode | null | undefined): Promise<void> {
   if (!code || sources.has(code) || !loaders[code]) return Promise.resolve();
   let p = pending.get(code);
   if (!p) {
@@ -107,15 +109,15 @@ function resolve(src: HelpLanguageSource, gender?: Gender): HelpLanguage {
 const cache = new Map<string, HelpLanguage>();
 
 /** Does the help language change "I am sick" / "you are new" for a woman or a man? */
-export function hasGender(code: LangCode | null | undefined): boolean {
-  return Boolean(code && GENDERED_LANGS.includes(code));
+export function hasGender(code: UiCode | null | undefined): boolean {
+  return Boolean(code && GENDERED_LANGS.includes(code as LangCode));
 }
 
 /**
  * The help language, resolved for the learner's gender. Undefined for English only, and also
  * while its pack has not loaded yet (call ensureLanguage first; the app shows its splash meanwhile).
  */
-export function getHelpLanguage(code: LangCode | null | undefined, gender?: Gender | null): HelpLanguage | undefined {
+export function getHelpLanguage(code: UiCode | null | undefined, gender?: Gender | null): HelpLanguage | undefined {
   const src = code ? sources.get(code) : undefined;
   if (!src || !langMeta(code)) return undefined;
   const g = gender ?? undefined;
@@ -169,11 +171,11 @@ const SINGULAR: Partial<Record<UiKey, UiKey>> = {
 };
 
 /** Intl.PluralRules per language (Dari follows Persian; an unknown code falls back to the device's language). */
-const PLURAL_LOCALE: Partial<Record<LangCode, string>> = { prs: 'fa' };
+const PLURAL_LOCALE: Partial<Record<UiCode, string>> = { prs: 'fa' };
 const pluralRules = new Map<string, Intl.PluralRules>();
 
 /** The CLDR plural category of `n` in a language: "one", "few", "many", … (English: "en"). */
-export function pluralCategory(code: LangCode | 'en', n: number): PluralCategory {
+export function pluralCategory(code: UiCode | 'en', n: number): PluralCategory {
   const locale = (code !== 'en' && PLURAL_LOCALE[code]) || code;
   let rules = pluralRules.get(locale);
   if (!rules) {

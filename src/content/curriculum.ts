@@ -2,6 +2,8 @@ import { teamworkUnit } from './culture';
 import { toolsUnit, workUnits } from './work';
 import { addMixLessons, isMixLesson, mixLessonFor } from './review';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
+import { rulesCourseUnits } from './rulesCourse';
+import type { Track } from '../lib/track';
 
 /**
  * The course: Dutch for the work floor, explained in English.
@@ -306,8 +308,13 @@ export function learnedWords(completed: Record<string, unknown>): Set<string> {
   return new Set(allLessons.filter((l) => completed[l.id]).flatMap((l) => l.words.map((w) => w.id)));
 }
 
-export function findLesson(id: string): { unit: Unit; lesson: Lesson } | undefined {
-  for (const unit of units) {
+/**
+ * A lesson and its unit. With a track, only in that track's course; without one in either course
+ * (the Dutch course first): ids never clash, so a Dutch-course id finds what it always found.
+ */
+export function findLesson(id: string, track?: Track): { unit: Unit; lesson: Lesson } | undefined {
+  const where = track === 'taal' ? units : track === 'regels' ? rulesCourseUnits() : [...units, ...rulesCourseUnits()];
+  for (const unit of where) {
     const lesson = unit.lessons.find((l) => l.id === id);
     if (lesson) return { unit, lesson };
   }
