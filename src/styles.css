@@ -3619,9 +3619,33 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 }
 .topic-locked { background: transparent; color: var(--muted); }
 .topic-locked .topic-pic { opacity: 0.6; }
-.topic-group { display: flex; flex-direction: column; gap: 2px; margin: 26px 0 10px; font-size: 1rem; font-weight: 650; color: var(--ink-2); }
-.topic-group-nl { font-size: 0.78rem; font-weight: 600; color: var(--faint); }
-.topic-group .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }
+/* Themes ("hoofdstukken", src/components/Themes.tsx): a plain header row above a theme's topics in
+   a list (All topics, the certificates, the coaches page). Not a button: no card, no border. */
+.theme-head { list-style: none; margin: 16px 0 0; padding: 0 2px; }
+.theme-head:first-child { margin-top: 2px; }
+.theme-title { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 1rem; font-weight: 650; line-height: 1.2; color: var(--ink-2); }
+.theme-emoji { flex: none; font-size: 1.3rem; line-height: 1; }
+.theme-names { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; overflow-wrap: anywhere; }
+.theme-nl { font-size: 0.78rem; font-weight: 600; color: var(--faint); }
+.theme-help .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }
+.theme-count { font-size: 0.82rem; }
+.theme-head-done .rb-count-n { color: var(--right-ink); }
+.coach-links .theme-head { display: block; min-height: 0; margin-top: 14px; }
+.coach-links .theme-head:first-child { margin-top: 0; }
+.cert-list .theme-head { margin-top: 8px; }
+.cert-list .theme-head:first-child { margin-top: 0; }
+/* The home: the current block's theme as a small label above its name (not a button). */
+.rb-theme {
+  grid-column: 1 / -1; display: flex; align-items: center; gap: 8px; margin: -2px 0 -4px;
+  font-size: 0.85rem; line-height: 1.25; color: var(--muted);
+}
+.rb-theme-emoji { flex: none; font-size: 1.05rem; line-height: 1; }
+.rb-theme-text { min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 6px; row-gap: 0; }
+.rb-theme-main { font-weight: 650; color: var(--ink-2); }
+.rb-theme-nl { color: var(--faint); }
+.rb-theme-sep { color: var(--faint); }
+.rb-theme-tail { display: inline-flex; align-items: baseline; gap: 6px; white-space: nowrap; }
+.rb-theme-n { font-weight: 650; color: var(--ink-2); font-variant-numeric: tabular-nums; unicode-bidi: isolate; white-space: nowrap; }
 .topics-screen .topics { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
 
 /* A topic page: the sign, the pocket card and the certificate side by side, then the lessons. */

@@ -7,6 +7,7 @@ import { chatWhyIds } from '../src/content/chatWhy';
 import { getHelpLanguage, gloss, hasGender, helpLanguageSources, helpLanguages, ui } from '../src/i18n/all';
 import { allForms, forGender, GENDERED_LANGS, isPlural, PLURAL_CATEGORIES, uiEn, type LangText } from '../src/i18n/types';
 import { mixLessonFor } from '../src/content/review';
+import { THEMES } from '../src/content/themes';
 
 const contentIds = [
   ...units.map((u) => u.id),
@@ -27,6 +28,8 @@ const contentIds = [
   ...chatWhyIds,
   // Phrasebook-only emergency lines.
   ...phrasebookExtras.map((p) => p.id),
+  // Theme names (src/content/themes.ts): the headers of All topics and the home's theme label.
+  ...THEMES.map((t) => t.id),
 ];
 
 describe('content and translations', () => {

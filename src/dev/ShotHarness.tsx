@@ -199,8 +199,10 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   forceNoVoiceNoteForShot(q.get('novoice') === '1');
   if (shot === 'tips' || shot === 'settings' || shot === 'words') {
     // Half the course done, so several tips are unlocked (the work-rules track: its first 8
-    // lessons, so "Alle regels" has rules of three topics).
-    const doneLessons = lang === 'nl' ? courseUnits('regels').flatMap((u) => u.lessons).slice(0, 8) : allLessons.slice(0, 8);
+    // lessons, so "Alle regels" has rules of three topics). &done=40: that many lessons instead
+    // (certificates of several themes).
+    const doneN = Number(q.get('done') ?? 8) || 8;
+    const doneLessons = lang === 'nl' ? courseUnits('regels').flatMap((u) => u.lessons).slice(0, doneN) : allLessons.slice(0, doneN);
     const done = Object.fromEntries(doneLessons.map((l) => [l.id, { best: 1, times: 1 }]));
     const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, quiet, completed: done, gender };
     const l = getHelpLanguage(lang as LangCode, gender);

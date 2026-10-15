@@ -1,4 +1,4 @@
-import { useEffect, useId, useState } from 'react';
+import { Fragment, useEffect, useId, useState } from 'react';
 import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import type { SectorChoice } from '../content/sectors';
@@ -13,6 +13,8 @@ import { ChevronIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
 import { LogoMark } from './Logo';
 import { PocketIcon } from './Offline';
+import { groupByTheme } from '../content/themes';
+import { ThemeHeadRow } from './Themes';
 
 /**
  * A certificate per finished unit ("Oefencertificaat"):
@@ -326,7 +328,8 @@ export function CertBadge({ lang, onOpen }: { lang?: HelpLanguage; onOpen: () =>
 }
 
 /**
- * "Mijn certificaten" in Settings: one row per finished unit, with the date. In Settings (the
+ * "Mijn certificaten" in Settings: one row per finished unit, with the date, grouped by theme
+ * (src/content/themes.ts) under a plain header row (not a button). In Settings (the
  * learner's own page, next to their progress backup) rather than in Hulp, which is kept for
  * help on the job: emergency phrases and workplace tips, quick to scan.
  */
@@ -336,6 +339,7 @@ export function CertificatesCard({ progress, lang, onOpen }: {
   onOpen: (unitId: string) => void;
 }) {
   const earned = earnedCertificates(progress);
+  const dayOf = new Map(earned.map((e) => [e.unit.id, e.day]));
   return (
     <section className="keep-card cert-list-card" aria-label={said(ui('myCertificates', lang))}>
       <span className="cert-list-icon" aria-hidden><CertIcon size={30} /></span>
@@ -343,8 +347,11 @@ export function CertificatesCard({ progress, lang, onOpen }: {
         <NlPair nlFirst nl="Mijn certificaten" nlClass="keep-nl" className="keep-gloss" text={ui('myCertificates', lang)} />
       </div>
       {earned.length ? (
-        <ul className="cert-list">
-          {earned.map(({ unit, day }) => (
+        <ul className="cert-list cert-list-themes">
+          {groupByTheme(earned.map((e) => e.unit)).map((group) => (
+            <Fragment key={group.key}>
+              <ThemeHeadRow group={group} lang={lang} />
+              {group.units.map((unit) => ({ unit, day: dayOf.get(unit.id) ?? '' })).map(({ unit, day }) => (
             <li key={unit.id}>
               <button type="button" className="cert-row" onClick={() => onOpen(unit.id)}>
                 <span className="cert-row-no" aria-hidden>{String(unitIndex(unit, progress.sector) + 1).padStart(2, '0')}</span>
@@ -356,6 +363,8 @@ export function CertificatesCard({ progress, lang, onOpen }: {
                 <ChevronIcon size={22} />
               </button>
             </li>
+              ))}
+            </Fragment>
           ))}
         </ul>
       ) : (

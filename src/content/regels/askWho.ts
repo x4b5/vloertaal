@@ -19,6 +19,14 @@ export const ASK_WHO: Record<AskWho, { label: string; emoji: string }> = {
   uwv: { label: 'Het UWV', emoji: '📄' },
   gemeente: { label: 'De gemeente', emoji: '🏛️' },
   politie: { label: 'De politie', emoji: '👮' },
+  // The Entree additions (docs/entree-aanvulling.md). On stage you have two guides: one at school
+  // (stagebegeleider or bpv-begeleider), one at work (praktijkopleider).
+  school: { label: 'Je begeleider van school', emoji: '🏫' },
+  praktijkopleider: { label: 'Je praktijkopleider', emoji: '🧑‍🏫' },
+  bibliotheek: { label: 'De bibliotheek', emoji: '📚' },
+  meldpunt: { label: 'Een meldpunt discriminatie', emoji: '📣' },
+  ict: { label: 'De ICT-afdeling', emoji: '💻' },
+  bank: { label: 'Je bank', emoji: '🏦' },
 };
 
 /** The Dutch name of a place to go for help. */

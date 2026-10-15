@@ -14,6 +14,12 @@ export const RULES_ADVICE = 'Algemene informatie. Vraag voor jouw situatie je we
  */
 export const RULES_ABUSE = 'Algemene informatie. Vraag hulp bij een vakbond, het Juridisch Loket of FairWork.';
 
+/**
+ * Shown instead of RULES_ADVICE under the rules of "Meedoen in Nederland" and DigiD: the rules of
+ * the state, not of your work, so the help is the gemeente (not your employer or a vakbond).
+ */
+export const RULES_CIVIC = 'Algemene informatie. Vraag voor jouw situatie de gemeente of het Juridisch Loket.';
+
 /** The disclaimer of the track (about screen, first rules lesson, certificate). */
 export const RULES_DISCLAIMER = [
   'Vloertaal geeft algemene informatie. Het is geen juridisch advies.',
@@ -22,7 +28,7 @@ export const RULES_DISCLAIMER = [
 ];
 
 /** Which line goes under which written rule, keyed by rule step id. Every 'geschreven' rule has one. */
-export const ruleAdvice: Record<string, 'advice' | 'abuse'> = {
+export const ruleAdvice: Record<string, 'advice' | 'abuse' | 'civic'> = {
   'r.l.zoeken.1.ru1': 'advice',
   'r.l.zoeken.3.ru1': 'advice',
   'r.l.zoeken.4.ru1': 'advice',
@@ -63,10 +69,21 @@ export const ruleAdvice: Record<string, 'advice' | 'abuse'> = {
   'r.l.factory.2.ru1': 'advice',
   'r.l.warehouse.1.ru1': 'advice',
   'r.l.warehouse.2.ru1': 'advice',
+  // The Entree additions (docs/entree-aanvulling.md, units 11–17).
+  'r.l.winkel.3.ru1': 'advice',
+  'r.l.rekenen.1.ru1': 'advice',
+  'r.l.rekenen.2.ru1': 'advice',
+  'r.l.stage.1.ru1': 'advice',
+  'r.l.stage.3.ru1': 'abuse',
+  'r.l.digitaal.1.ru1': 'civic',
+  'r.l.meedoen.1.ru1': 'civic',
+  'r.l.meedoen.2.ru1': 'abuse',
+  'r.l.meedoen.3.ru1': 'civic',
+  'r.l.duurzaam.1.ru1': 'advice',
 };
 
 /** The line to show under a rule step, or undefined for an unwritten rule (a custom). */
 export function ruleAdviceLine(ruleId: string): string | undefined {
   const kind = ruleAdvice[ruleId];
-  return kind === 'abuse' ? RULES_ABUSE : kind === 'advice' ? RULES_ADVICE : undefined;
+  return kind === 'abuse' ? RULES_ABUSE : kind === 'civic' ? RULES_CIVIC : kind === 'advice' ? RULES_ADVICE : undefined;
 }
