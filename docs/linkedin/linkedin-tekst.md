@@ -27,7 +27,9 @@ Daarom zoek ik:
 
 Goed om te weten: ik doe dit naast mijn werk, als vrijwillig project, en ik wil er geen verdienmodel aan koppelen. De kosten zijn nu laag genoeg om zelf te betalen. Maar als de app groeit, wil ik hem graag gratis houden. Heb jij ervaring met het opschalen van een maatschappelijk initiatief, met fondsen of met partners? Ik hoor graag waar ik op moet letten.
 
-Meedenken of meedoen? Stuur me een bericht of mail naar hoi@vloertaal.nl.
+Wil je de app zelf ervaren? Stuur een mail naar hoi@vloertaal.nl, dan stuur ik je de toegangscode.
+
+Meedenken of meedoen? Stuur me gerust een bericht.
 
 #Laaggeletterdheid #NT2 #Inburgering #Werkvloer #Taal #Inclusie
 
