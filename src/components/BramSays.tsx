@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fillCount, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { greetedToday, greetingFor, greetingInput, rememberGreeted, type Greeting } from '../lib/greeting';
+import { greetedToday, greetingFor, greetingInput, neverGreeted, rememberGreeted, type Greeting } from '../lib/greeting';
 import type { Progress } from '../lib/progress';
 import { HelpText } from './Bi';
 
@@ -23,6 +23,7 @@ export function BramSays({ text, tail = 'start', className }: { text: Bilingual;
 /** The text of a home greeting. */
 export function greetingText(g: Greeting, lang?: HelpLanguage): Bilingual {
   switch (g.kind) {
+    case 'intro': return ui('bramIntro', lang);
     case 'done': return ui('bramDone', lang);
     case 'back': return ui('bramBack', lang);
     case 'due': return fillCount('bramDueN', g.n ?? 0, lang);
@@ -34,7 +35,8 @@ export function greetingText(g: Greeting, lang?: HelpLanguage): Bilingual {
 /**
  * Bram's line on the home screen, beside the logo in the top bar. The first visit of the day is
  * remembered when it is shown, so coming back to the home later that day gives the line for the
- * day's state (words to repeat, the streak) instead of the hello again.
+ * day's state (words to repeat, the streak) instead of the hello again. The very first home on
+ * this phone (nothing remembered yet) is Bram introducing himself, once.
  */
 export function HomeGreeting({ progress, due, lang, force }: {
   progress: Progress;
@@ -45,7 +47,8 @@ export function HomeGreeting({ progress, due, lang, force }: {
   force?: Greeting;
 }) {
   const [first] = useState(() => !greetedToday(new Date()));
+  const [fresh] = useState(neverGreeted);
   useEffect(() => { rememberGreeted(new Date()); }, []);
-  const g = force ?? greetingFor(greetingInput(progress, new Date(), due, first));
+  const g = force ?? greetingFor(greetingInput(progress, new Date(), due, first, fresh));
   return <BramSays text={greetingText(g, lang)} tail="start" className={`bram-greet bram-greet-${g.kind}`} />;
 }

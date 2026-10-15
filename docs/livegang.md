@@ -1,0 +1,82 @@
+# Livegang Vloertaal
+
+Vloertaal is gratis en heeft geen verdienmodel. Het doel is mensen een toegankelijke manier geven om
+Nederlands te leren voor hun werk. Daarom past het gratis **Vercel Hobby**-plan: dat is bedoeld
+voor niet-commercieel gebruik. Bij ongeveer 2.500 tot 5.000 actieve leerders per maand kom je aan
+de 100 GB per maand. Daarboven is Pro nodig (ongeveer $20 per maand) of een andere host.
+
+## Stand van zaken
+
+| | Wat | Status |
+|---|---|---|
+| ✅ | App werkt, 568 automatische tests, max. 3 tikbare dingen per scherm | klaar |
+| ✅ | Hosting op Vercel; GitHub draait alleen nog de tests (geen tweede kopie op GitHub Pages) | klaar |
+| ✅ | Instellingen voor `vloertaal.nl` (vercel.json, deelplaatje, canonical, robots, sitemap) | klaar, wacht op domein |
+| ✅ | Stemmen: ElevenLabs betaald plan, commercieel gebruik toegestaan | klaar |
+| ⏳ | Domein `vloertaal.nl` aanvragen en koppelen | jij, zie hieronder |
+| ⏳ | Contact en privacy in de app | wacht op naam + e-mailadres |
+| ⏳ | Twee zinnen opnemen ("Zeg het liever direct tegen mij.", "Hallo, ik ben Bram.") | jij: workflow draaien |
+| ⏳ | Vertalingen laten nakijken door moedertaalsprekers (91 vragen, 5 over veiligheid) | zie `vertaalcontrole.md` |
+| ⏳ | Werkvloer-tips laten nakijken door FNV / Juridisch Loket / FairWork | zie `juridische-check.md` |
+| ⏳ | Pilot met 5–10 leerders | zie `pilot.md` |
+
+## Domein koppelen (vloertaal.nl)
+
+1. **Aanvragen** bij een registrar naar keuze, bijvoorbeeld TransIP, Versio of Hostnet. Alleen de
+   domeinnaam is genoeg: geen hosting- of e-mailpakket nodig, tenzij je ook een mailadres
+   `@vloertaal.nl` wilt (zie "Contact" hieronder).
+2. **In Vercel:** open het project → *Settings* → *Domains* → voeg `vloertaal.nl` toe en ook
+   `www.vloertaal.nl`.
+3. **DNS bij je registrar:** Vercel laat precies zien welke records nodig zijn. Neem die over.
+   Meestal is dat:
+   - voor `vloertaal.nl`: een **A-record** naar het IP-adres dat Vercel toont;
+   - voor `www`: een **CNAME-record** naar het adres dat Vercel toont.
+
+   Of zet in één keer de **nameservers** van het domein op die van Vercel. Dan regelt Vercel de
+   DNS zelf.
+4. Na een paar minuten tot een paar uur staat er een groen vinkje in Vercel. Het
+   HTTPS-certificaat komt vanzelf.
+5. `www.vloertaal.nl` stuurt automatisch door naar `vloertaal.nl` (dat staat in `vercel.json`).
+   Zet in Vercel `vloertaal.nl` als hoofddomein (*primary*).
+6. **Testen:**
+   - open `https://vloertaal.nl` op je telefoon;
+   - deel de link in WhatsApp: je ziet het plaatje met Bram;
+   - installeer de app via "Toevoegen aan beginscherm".
+
+Het oude `.vercel.app`-adres blijft werken. Wie de app al heeft geïnstalleerd, houdt die versie
+met de voortgang op dat adres. Voortgang staat op de telefoon per adres en verhuist niet mee.
+Deel daarom vanaf nu alleen nog `vloertaal.nl`.
+
+## Instellingen in Vercel
+
+- **Environment Variables** → `ELEVENLABS_API_KEY` (alleen *Production*): dan toont de verborgen
+  beheerpagina (`vloertaal.nl/#beheer`) het ElevenLabs-saldo. Het saldo wordt bij elke publicatie
+  ververst. Optioneel.
+- Hobby-plan is genoeg zolang Vloertaal gratis en niet-commercieel blijft.
+
+## GoatCounter (anonieme telling)
+
+De telling werkt op elk adres. Kijk in GoatCounter bij *Settings* of er een lijst met toegestane
+domeinen is ingevuld. Zo ja, voeg `vloertaal.nl` toe.
+
+## Contact en privacy
+
+Nodig in de app, op de pagina *Over*:
+
+- wie Vloertaal maakt (naam of organisatie);
+- een contactadres voor vragen en voor fouten in een vertaling;
+- een korte privacyverklaring:
+  - geen account;
+  - voortgang alleen op de telefoon;
+  - een anonieme telling via GoatCounter, die je kunt uitzetten;
+  - de microfoon slaat niets op.
+
+Een cookiebanner is niet nodig: de app gebruikt geen cookies.
+
+Tip voor het contactadres: een apart adres zoals `hallo@vloertaal.nl` (een doorstuuradres bij je
+registrar) of een apart Gmail-adres. Zo staat je persoonlijke adres niet in de app.
+
+## Na elke merge naar main
+
+Vercel publiceert vanzelf. Lukt dat niet, kijk dan in Vercel bij *Deployments*.
+Nieuwe of gewijzigde Nederlandse zinnen: draai in GitHub **Actions → Record ElevenLabs voices**.

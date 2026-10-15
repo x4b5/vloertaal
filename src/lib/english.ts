@@ -34,6 +34,8 @@ export function setWantsEnglish(on: boolean): void {
 
 /** The English next to a help line is hidden: a help language is chosen and "Show English too" is off. */
 export function englishHidden(langCode: string | null | undefined, showEnglish: boolean): boolean {
+  // The work-rules track ('nl') has no English at all: "Show English too" is not offered there.
+  if (langCode === 'nl') return true;
   return Boolean(langCode) && !showEnglish;
 }
 

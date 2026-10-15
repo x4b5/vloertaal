@@ -1,0 +1,355 @@
+import type { RuleUnit } from '../types';
+
+/**
+ * Unit 3 · Contract en soorten werk (les 3.1–3.4).
+ * Converted from docs/werkregels-curriculum.md; edit the curriculum first, then this file.
+ * `// ⚖️ check:` marks a fact the expert must check (docs/werkregels-bronnen.md). The marker is
+ * never shown or read aloud. `// Redactie:` notes are for the makers only.
+ */
+export const contractUnit: RuleUnit = {
+  id: 'r.contract',
+  title: 'Contract en soorten werk',
+  emoji: '📄',
+  color: '#7e5428',
+  lessons: [
+    {
+      // Les 3.1 · Je contract: wat staat erin?
+      id: 'r.l.contract.1',
+      title: 'Je contract: wat staat erin?',
+      goal: 'Je weet welke afspraken op papier horen, wat een cao is, en dat papier telt.',
+      remember: 'Wat op papier staat, telt. Bewaar je contract goed.',
+      // Wie kan je helpen: het Juridisch Loket · een vakbond (FNV, CNV) · de cao van je sector.
+      help: ['juridischloket', 'vakbond'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.contract.1.sc1',
+          picture: 'Sanne aan tafel met een contract en een markeerstift. Drie woorden zijn geel.',
+          lines: [
+            'Sanne krijgt haar eerste contract bij een supermarkt.',
+            'Het zijn 4 bladzijden.',
+            'Er staan moeilijke woorden in.',
+            'Ze ziet "proeftijd", "cao" en "12 uur per week".',
+          ],
+        },
+        // ⚖️ check: Je werkgever laat weten wat je verdient en hoeveel uur je werkt. Dat moet
+        //   binnen 1 week ⚖️, op papier of digitaal.
+        {
+          kind: 'rule',
+          id: 'r.l.contract.1.ru1',
+          emoji: '📄',
+          title: 'Wat op papier staat, telt. Bewaar je contract goed.',
+          body: [
+            'Je werkgever laat weten wat je verdient en hoeveel uur je werkt.',
+            'Dat moet binnen 1 week, op papier of digitaal.',
+            'Bij ziekte, WW of ontslag kijkt men naar je contract.',
+            'Een cao is een afspraak over loon en regels voor jouw soort werk.',
+          ],
+          rule: 'geschreven',
+          key: true,
+        },
+        // ⚖️ check: En hoeveel uur je werkt. Dat moet binnen 1 week ⚖️, op papier of digitaal.
+        // ⚖️ check: Andere afspraken volgen binnen 1 maand ⚖️.
+        {
+          kind: 'truefalse',
+          id: 'r.l.contract.1.tf1',
+          statement: 'Je werkgever moet de belangrijkste afspraken op papier of per mail geven.',
+          answer: true,
+          why: 'Je werkgever moet laten weten wat je verdient. En hoeveel uur je werkt. Dat moet binnen 1 week, op papier of digitaal. Andere afspraken volgen binnen 1 maand. Bijvoorbeeld over vakantie en opzeggen.',
+        },
+        {
+          kind: 'whatdo',
+          id: 'r.l.contract.1.wd1',
+          situation: 'Sanne snapt het woord "cao" niet.',
+          options: [
+            { id: 'a', text: 'Ze slaat het woord over. Het is vast een detail.', best: false, feedback: 'Jammer. In de cao staan juist veel van je rechten.' },
+            { id: 'b', text: 'Ze tekent eerst, en ze zoekt het later op.', best: false, feedback: 'Beter andersom: eerst snappen, dan tekenen.' },
+            { id: 'c', text: 'Ze vraagt wat het is, en welke cao het is.', best: true, feedback: 'Goed. Dan kan ze de cao zelf opzoeken.' },
+          ],
+          why: 'Een cao is een afspraak over loon en regels voor jouw soort werk. Je cao staat vaak online. Zoek op "cao" en de naam van je sector.',
+        },
+        // ⚖️ check: Werk je lange tijd meer uren? Dan kun je vragen om die uren in je contract ⚖️.
+        {
+          kind: 'whatdo',
+          id: 'r.l.contract.1.wd2',
+          situation: 'In het contract staat 12 uur. De baas zegt: "Je werkt echt 30 uur."',
+          options: [
+            { id: 'a', text: 'Je vindt het goed. 30 uur is toch meer geld.', best: false, feedback: 'Nu wel. Maar bij ziekte of ontslag telt het contract.' },
+            { id: 'b', text: 'Je zegt niets. Je wilt geen gedoe op je eerste dag.', best: false, feedback: 'Begrijpelijk. Maar later is het lastiger.' },
+            { id: 'c', text: 'Je vraagt of hij 30 uur in het contract zet.', best: true, feedback: 'Goed. Wat op papier staat, telt.' },
+          ],
+          why: 'Bij ziekte, WW of ontslag kijkt men naar je contract. Werk je lange tijd meer uren? Dan kun je vragen om die uren in je contract.',
+        },
+        {
+          kind: 'whoask',
+          id: 'r.l.contract.1.wa1',
+          question: 'Je snapt een paar woorden in je contract niet. Wie legt het gratis uit?',
+          options: [
+            { id: 'a', who: 'collega', best: false, feedback: 'Een collega bedoelt het goed. Maar die weet het vaak niet zeker.' },
+            { id: 'b', who: 'juridischloket', best: true, feedback: 'Goed. Het Juridisch Loket geeft gratis advies.' },
+            { id: 'c', who: 'uwv', best: false, feedback: 'UWV gaat over uitkeringen, niet over je contract.' },
+          ],
+          why: 'Het Juridisch Loket en een vakbond kunnen je contract uitleggen.',
+        },
+        { kind: 'model', id: 'r.l.contract.1.mo1', context: 'Je wilt je echte uren op papier.', nl: 'Kunt u de afspraak over mijn uren in het contract zetten?' },
+      ],
+    },
+    {
+      // Les 3.2 · Proeftijd, tijdelijk en vast
+      id: 'r.l.contract.2',
+      title: 'Proeftijd, tijdelijk en vast',
+      goal: 'Je weet wat een proeftijd is, en wat er gebeurt aan het eind van een tijdelijk contract.',
+      remember: 'Tijdelijk contract? Vraag op tijd of je mag blijven.',
+      // Wie kan je helpen: het Juridisch Loket · een vakbond · UWV (als je werk stopt, zie les
+      //   10.1).
+      help: ['juridischloket', 'vakbond', 'uwv'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.contract.2.sc1',
+          picture: 'Mohammed bij een kalender. Er staat een rood rondje om een datum.',
+          lines: [
+            'Mohammed heeft een contract voor 1 jaar.',
+            'Er staat 1 maand proeftijd in.',
+            'Een proeftijd is een periode om te kijken of het werk past.',
+            'Na 3 weken zegt zijn baas: "Het past niet. Je kunt morgen stoppen."',
+          ],
+        },
+        // ⚖️ check: Je werkgever moet 1 maand ⚖️ van tevoren laten weten of je mag blijven.
+        // ⚖️ check: Dat geldt bij een contract van 6 maanden of langer ⚖️.
+        {
+          kind: 'rule',
+          id: 'r.l.contract.2.ru1',
+          emoji: '📅',
+          title: 'Tijdelijk contract? Vraag op tijd of je mag blijven.',
+          body: [
+            'Een tijdelijk contract stopt vanzelf op de einddatum.',
+            'Je werkgever moet 1 maand van tevoren laten weten of je mag blijven.',
+            'Dat geldt bij een contract van 6 maanden of langer.',
+            'In de proeftijd mogen jij en de baas meteen stoppen.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: Je mag vragen waarom. Dan moet de baas de reden op papier geven ⚖️.
+        {
+          kind: 'truefalse',
+          id: 'r.l.contract.2.tf1',
+          statement: 'In de proeftijd mag de baas je meteen laten stoppen.',
+          answer: true,
+          why: 'In de proeftijd mogen jij en de baas meteen stoppen. Je mag vragen waarom. Dan moet de baas de reden op papier geven. De reden mag geen discriminatie zijn.',
+        },
+        // ⚖️ check: In een contract van 6 maanden of korter mag geen proeftijd ⚖️.
+        // ⚖️ check: Contract langer dan 6 maanden, maar korter dan 2 jaar? Dan hooguit 1 maand ⚖️.
+        // ⚖️ check: Contract van 2 jaar of langer, of vast? Dan hooguit 2 maanden ⚖️.
+        {
+          kind: 'truefalse',
+          id: 'r.l.contract.2.tf2',
+          statement: 'In een contract van 6 maanden mag een proeftijd staan.',
+          answer: false,
+          why: 'In een contract van 6 maanden of korter mag geen proeftijd. Contract langer dan 6 maanden, maar korter dan 2 jaar? Dan hooguit 1 maand. Contract van 2 jaar of langer, of vast? Dan hooguit 2 maanden.',
+        },
+        // Redactie: de ketenregeling verandert waarschijnlijk per 1 januari 2028 (Wet meer
+        //   zekerheid flexwerkers). Tot die tijd geldt de regel hierboven. ⚖️
+        // ⚖️ check: Je werkgever moet 1 maand ⚖️ van tevoren laten weten of je mag blijven.
+        // ⚖️ check: Dat geldt bij een contract van 6 maanden of langer ⚖️.
+        // ⚖️ check: Had je 3 tijdelijke contracten, of werk je er 3 jaar? Dan krijg je meestal een
+        //   vast contract ⚖️.
+        {
+          kind: 'whatdo',
+          id: 'r.l.contract.2.wd1',
+          situation: 'Fatima heeft een tijdelijk contract tot 1 juni. Het is half mei. Ze hoort niets.',
+          options: [
+            { id: 'a', text: 'Ze wacht af. Geen bericht betekent: ze mag blijven.', best: false, feedback: 'Dat klopt niet. Een tijdelijk contract stopt vanzelf.' },
+            { id: 'b', text: 'Ze vraagt haar baas of ze na 1 juni mag blijven.', best: true, feedback: 'Goed. Dan weet ze op tijd waar ze aan toe is.' },
+            { id: 'c', text: 'Ze zoekt alvast ander werk en zegt niets.', best: false, feedback: 'Slim om te zoeken. Maar vragen kan ook.' },
+          ],
+          why: 'Een tijdelijk contract stopt vanzelf op de einddatum. Je werkgever moet 1 maand van tevoren laten weten of je mag blijven. Dat geldt bij een contract van 6 maanden of langer. Had je 3 tijdelijke contracten, of werk je er 3 jaar? Dan krijg je meestal een vast contract.',
+        },
+        {
+          kind: 'whoask',
+          id: 'r.l.contract.2.wa1',
+          question: 'Je tijdelijke contract stopt. Je hebt nog geen nieuw werk. Waar vraag je een uitkering aan?',
+          options: [
+            { id: 'a', who: 'juridischloket', best: false, feedback: 'Het Juridisch Loket geeft advies, maar geen uitkering.' },
+            { id: 'b', who: 'gemeente', best: false, feedback: 'Bij werk kwijt is UWV meestal de eerste stap.' },
+            { id: 'c', who: 'uwv', best: true, feedback: 'Goed. Bij UWV vraag je WW aan.' },
+          ],
+          why: 'Stopt je werk? Dan vraag je WW aan bij UWV. Zie les 10.1.',
+        },
+        { kind: 'model', id: 'r.l.contract.2.mo1', context: 'Je baas stopt je contract in de proeftijd.', nl: 'Wilt u mij de reden op papier geven?' },
+      ],
+    },
+    {
+      // Les 3.3 · Oproepwerk en uitzendwerk
+      id: 'r.l.contract.3',
+      title: 'Oproepwerk en uitzendwerk',
+      goal: 'Je kent de basisregels voor oproepwerk, en je weet wat een uitzendbureau wel en niet mag.',
+      // ⚖️ check: Minder dan 4 dagen ⚖️ van tevoren opgeroepen?
+      remember: 'Minder dan 4 dagen van tevoren opgeroepen? Je mag nee zeggen.',
+      // Wie kan je helpen: een vakbond · het Juridisch Loket · bij uitzendwerk: de SNCU (zij
+      //   controleren de uitzend-cao) · bij te weinig loon: de Nederlandse Arbeidsinspectie, ook
+      //   zonder je naam.
+      help: ['vakbond', 'juridischloket', 'arbeidsinspectie'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.contract.3.sc1',
+          picture: 'Esra in een hotelgang met een schoonmaakkar. Haar telefoon gaat.',
+          lines: [
+            'Esra werkt als oproepkracht bij een hotel.',
+            'Ze heeft een nulurencontract.',
+            'Dat betekent: geen vaste uren.',
+            'Het hotel belt als er werk is.',
+            'Vrijdag belt het hotel: "Kun je zaterdag komen?"',
+          ],
+        },
+        // ⚖️ check: Minder dan 4 dagen ⚖️ van tevoren opgeroepen?
+        // ⚖️ check: Je werkgever moet je meestal minstens 4 dagen ⚖️ van tevoren oproepen.
+        // ⚖️ check: Een cao kan die 4 dagen korter maken, maar niet korter dan 1 dag ⚖️.
+        // ⚖️ check: Bij een oproep krijg je meestal minstens 3 uur ⚖️ loon.
+        {
+          kind: 'rule',
+          id: 'r.l.contract.3.ru1',
+          emoji: '📲',
+          title: 'Minder dan 4 dagen van tevoren opgeroepen? Je mag nee zeggen.',
+          body: [
+            'Je werkgever moet je meestal minstens 4 dagen van tevoren oproepen.',
+            'Is het later? Dan mag je nee zeggen.',
+            'Een cao kan die 4 dagen korter maken, maar niet korter dan 1 dag.',
+            'Bij een oproep krijg je meestal minstens 3 uur loon.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: Je werkgever moet je meestal minstens 4 dagen ⚖️ van tevoren oproepen.
+        // ⚖️ check: Een cao kan die 4 dagen korter maken. Maar niet korter dan 1 dag ⚖️.
+        {
+          kind: 'truefalse',
+          id: 'r.l.contract.3.tf1',
+          statement: 'Esra moet zaterdag komen, want het hotel belt haar.',
+          answer: false,
+          why: 'Je werkgever moet je meestal minstens 4 dagen van tevoren oproepen. Is het later? Dan mag je nee zeggen. Een cao kan die 4 dagen korter maken. Maar niet korter dan 1 dag.',
+        },
+        // ⚖️ check: Bij oproepwerk krijg je meestal minstens 3 uur ⚖️ loon per oproep.
+        // ⚖️ check: Ook als je korter werkt. Dat geldt bij een klein contract zonder vaste
+        //   werktijden ⚖️.
+        {
+          kind: 'whatdo',
+          id: 'r.l.contract.3.wd1',
+          situation: 'Esra werkt maar 1 uur. Dan stuurt de baas haar naar huis.',
+          options: [
+            { id: 'a', text: 'Ze krijgt loon voor 1 uur. Zo werkt oproepwerk.', best: false, feedback: 'Vaak niet. Er is een regel voor korte oproepen.' },
+            { id: 'b', text: 'Ze checkt of ze loon krijgt voor 3 uur.', best: true, feedback: 'Goed. Daar heeft ze meestal recht op.' },
+            { id: 'c', text: 'Ze krijgt niets, want ze was er maar kort.', best: false, feedback: 'Nee. Gewerkte tijd wordt altijd betaald.' },
+          ],
+          why: 'Bij oproepwerk krijg je meestal minstens 3 uur loon per oproep. Ook als je korter werkt. Dat geldt bij een klein contract zonder vaste werktijden.',
+        },
+        // Redactie: vanaf 1 januari 2028 verdwijnt het nulurencontract voor de meeste mensen (Wet
+        //   meer zekerheid flexwerkers). Vanaf 2028 mogen bedrijven alleen werken met toegelaten
+        //   uitzendbureaus (Wtta). Deze les moet dan worden aangepast. ⚖️
+        // ⚖️ check: Sinds 2026 ⚖️ is er een nieuwe cao voor uitzendkrachten.
+        // ⚖️ check: Daarin staat: je krijgt minstens evenveel als vaste collega's ⚖️.
+        {
+          kind: 'truefalse',
+          id: 'r.l.contract.3.tf2',
+          statement: "Via een uitzendbureau krijg je altijd minder dan je vaste collega's.",
+          answer: false,
+          why: "Sinds 2026 is er een nieuwe cao voor uitzendkrachten. Daarin staat: je krijgt minstens evenveel als vaste collega's. Het gaat om loon, vrije dagen en pensioen samen. Twijfel je? Vraag het na bij het bureau.",
+        },
+        {
+          kind: 'whoask',
+          id: 'r.l.contract.3.wa1',
+          question: 'Je krijgt als oproepkracht veel te weinig loon. Waar meld je dat, ook zonder je naam?',
+          options: [
+            { id: 'a', who: 'arbeidsinspectie', best: true, feedback: 'Goed. De Arbeidsinspectie controleert of bedrijven genoeg betalen.' },
+            { id: 'b', who: 'politie', best: false, feedback: 'De politie is voor misdaad en gevaar. Te weinig loon meld je ergens anders.' },
+            { id: 'c', who: 'uitzendbureau', best: false, feedback: 'Werk je via een bureau? Vraag het daar. Maar melden zonder naam kan daar niet.' },
+          ],
+          why: 'Bij te weinig loon kun je naar de Nederlandse Arbeidsinspectie. Dat kan zonder je naam.',
+        },
+        { kind: 'model', id: 'r.l.contract.3.mo1', context: 'Je wordt te kort van tevoren opgeroepen.', nl: 'Zaterdag lukt niet, dat is te kort van tevoren. Volgende week kan ik wel.' },
+      ],
+    },
+    {
+      // Les 3.4 · Stage, leerwerkbaan en zzp
+      id: 'r.l.contract.4',
+      title: 'Stage, leerwerkbaan en zzp',
+      goal: "Je weet het verschil tussen stage, leerwerkbaan, werknemer en zzp'er, en je kent de risico's.",
+      remember: 'Zzp betekent: geen loon als je ziek bent, en geen WW.',
+      // Wie kan je helpen: je school of stagebegeleider · SBB (stages in het mbo) · een vakbond,
+      //   zoals FNV Zelfstandigen · het Juridisch Loket · KVK en Belastingdienst (informatie over
+      //   zzp).
+      help: ['vakbond', 'juridischloket'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.contract.4.sc1',
+          picture: 'Jayden met een grote bezorgtas op zijn rug. Naast hem een fiets.',
+          lines: [
+            'Jayden is 18.',
+            'Hij zoekt werk.',
+            'Een bezorgbedrijf zegt: "Word zzp\'er bij ons. Dan verdien je meer per uur."',
+            "Een zzp'er is iemand met een eigen bedrijf, zonder personeel.",
+            'Jayden weet niet of dat slim is.',
+          ],
+        },
+        // ⚖️ check: Bepaalt het bedrijf hoe, wanneer en waar je werkt? Dan ben je vaak gewoon
+        //   werknemer ⚖️.
+        {
+          kind: 'rule',
+          id: 'r.l.contract.4.ru1',
+          emoji: '🚲',
+          title: 'Zzp betekent: geen loon als je ziek bent, en geen WW.',
+          body: [
+            "Een zzp'er heeft een eigen bedrijf, zonder personeel.",
+            "Als zzp'er krijg je geen loon als je ziek bent.",
+            'Je krijgt geen WW als het werk stopt.',
+            'Bepaalt het bedrijf hoe, wanneer en waar je werkt? Dan ben je vaak gewoon werknemer.',
+          ],
+          rule: 'geschreven',
+        },
+        {
+          kind: 'truefalse',
+          id: 'r.l.contract.4.tf1',
+          statement: "Als zzp'er krijg je je loon door als je ziek bent.",
+          answer: false,
+          why: "Als zzp'er krijg je geen loon als je ziek bent. Je krijgt geen WW als het werk stopt. Je regelt zelf je belasting, je verzekering en je pensioen. Meer per uur is dus niet altijd meer geld.",
+        },
+        // ⚖️ check: Bepaalt het bedrijf hoe, wanneer en waar je werkt? Dan ben je vaak gewoon
+        //   werknemer ⚖️.
+        {
+          kind: 'whatdo',
+          id: 'r.l.contract.4.wd1',
+          situation: "Het bedrijf bepaalt Jaydens tijden, zijn kleding en zijn route. Toch noemen ze hem zzp'er.",
+          options: [
+            { id: 'a', text: 'Hij vraagt advies. Misschien is hij gewoon werknemer.', best: true, feedback: 'Goed. Dan weet hij welke rechten hij heeft.' },
+            { id: 'b', text: 'Hij vindt het prima. Zo gaat het bij bezorgers.', best: false, feedback: 'Begrijpelijk. Maar dan mist hij misschien rechten.' },
+            { id: 'c', text: 'Hij koopt alvast zelf een fiets en een tas.', best: false, feedback: 'Wacht daar nog even mee. Eerst advies vragen.' },
+          ],
+          why: "Bepaalt het bedrijf hoe, wanneer en waar je werkt? Dan ben je vaak gewoon werknemer. Dan heb je recht op loon bij ziekte en op WW. Iemand die zzp'er heet, maar werknemer is, heet schijnzelfstandig.",
+        },
+        // Redactie: het kabinet wil een stagevergoeding verplicht maken (brief juli 2026). Nog geen
+        //   wet. ⚖️
+        // ⚖️ check: Een stagevergoeding is nu nog geen recht in de wet ⚖️.
+        {
+          kind: 'truefalse',
+          id: 'r.l.contract.4.tf2',
+          statement: 'Op een stage krijg je altijd het minimumloon.',
+          answer: false,
+          why: 'Op een stage ben je aan het leren. Een stagevergoeding is nu nog geen recht in de wet. Veel bedrijven geven wel een vergoeding. Een leerwerkbaan (bbl) is anders. Dan heb je een contract en krijg je loon.',
+        },
+        {
+          kind: 'whoask',
+          id: 'r.l.contract.4.wa1',
+          question: "Jayden twijfelt: is hij zzp'er of gewoon werknemer? Wie geeft gratis advies?",
+          options: [
+            { id: 'a', who: 'collega', best: false, feedback: "Collega's weten het vaak ook niet zeker." },
+            { id: 'b', who: 'juridischloket', best: true, feedback: 'Goed. Het Juridisch Loket geeft gratis advies over je werk.' },
+            { id: 'c', who: 'uwv', best: false, feedback: 'UWV gaat over uitkeringen. Dit advies krijg je ergens anders.' },
+          ],
+          why: 'Het Juridisch Loket helpt gratis. Een vakbond, zoals FNV Zelfstandigen, helpt ook.',
+        },
+        { kind: 'model', id: 'r.l.contract.4.mo1', context: 'Je weet niet wat voor contract je hebt.', nl: "Ben ik hier werknemer of zzp'er? Wat staat er in mijn contract?" },
+      ],
+    },
+  ],
+};

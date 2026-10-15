@@ -1,13 +1,16 @@
 import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
 import { BramSays } from './BramSays';
+import { Character } from './Characters';
 import { resultLineFor } from '../lib/greeting';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
-import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMeta, metaLanguage, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
-import type { HelpLanguage, LangCode } from '../i18n/types';
+import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
+import type { HelpLanguage, LangCode, UiCode } from '../i18n/types';
+import { dutchUi, rulesTrackOn } from '../lib/track';
+import { NlPair } from './NlPair';
 import { useEffect, useRef, useState } from 'react';
 import { applyEnglish } from '../lib/english';
 import { isNextInCourse } from '../lib/exercises';
@@ -41,20 +44,23 @@ import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
 import { pushSubStep } from '../lib/onbHistory';
 import { sayFirstWord } from '../lib/audio';
+import { aboutDutchRemembered, rememberAboutDutch } from '../lib/aboutDutch';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
   /** The help language in use (Settings): the "in review" tag is written in it. */
   lang?: HelpLanguage;
   /** undefined = nothing chosen yet (first run). */
-  current?: LangCode | null;
-  onPick: (code: LangCode | null) => void;
+  current?: UiCode | null;
+  onPick: (code: UiCode | null) => void;
   /** Mark translations still in review (Settings only; the first-run screen stays calm). */
   showBeta?: boolean;
   /** Smaller cards (Settings); the first-run screen has the big ones. */
   compact?: boolean;
 }) {
   const betaHelp = lang?.ui.inReview ?? lang?.ui.beta;
-  const option = (code: LangCode | null, native: string, english: string, dir?: 'ltr' | 'rtl', beta = false, englishHelp?: string) => (
+  // The work-rules track reads in Dutch only: no English names under the languages.
+  const dutch = dutchUi(lang);
+  const option = (code: UiCode | null, native: string, english: string | null, dir?: 'ltr' | 'rtl', beta = false, englishHelp?: string) => (
     <button
       key={code ?? 'en'}
       type="button"
@@ -62,14 +68,14 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
       onClick={() => onPick(code)}
       aria-pressed={current === undefined ? undefined : current === code}
     >
-      {/* No flags: a flag stands for a state, not a language, and can hurt (G4 r2). The name in its own script is the sign. */}
+      <LangMark code={code} />
       <span className="lang-names">
         <span className="lang-native" lang={code ?? 'en'} dir={dir}>{native}</span>
         {/* With a help language chosen (Settings), the English name is support only: hidden
             with English off, like every other English line. */}
         {englishHelp
           ? <HelpText className="lang-en" text={englishHelp} lang={lang!} />
-          : <span className={`lang-en ${lang ? 'en-support' : ''}`} lang="en">{english}</span>}
+          : english !== null && <span className={`lang-en ${lang ? 'en-support' : ''}`} lang="en">{english}</span>}
         {beta && (
           <span className="lang-beta-tag">
             {betaHelp ? <HelpText className="lang-beta-help" text={betaHelp} lang={lang!} /> : <span className="lang-beta-help" lang="en">{ui('inReview').en}</span>}
@@ -82,9 +88,43 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   );
   return (
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`}>
-      {languageMeta.map((l) => option(l.code, l.nativeName, l.name, l.dir, showBeta && !l.reviewed))}
+      {languageMeta.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed && !dutch))}
+      {/* "Nederlands – ik spreek al Nederlands": the work-rules track, always said in Dutch. */}
+      {rulesTrackOn() && (
+        <button
+          key="nl"
+          type="button"
+          className={`lang-btn lang-btn-nl ${current === 'nl' ? 'picked' : ''}`}
+          onClick={() => onPick('nl')}
+          aria-pressed={current === undefined ? undefined : current === 'nl'}
+          lang="nl"
+        >
+          <LangMark code="nl" />
+          <span className="lang-names">
+            <span className="lang-native">{NL_META.nativeName}</span>
+            <span className="lang-en lang-nl-sub">{NL_META.name}</span>
+          </span>
+          {current === 'nl' && <CheckIcon size={20} className="lang-check" />}
+        </button>
+      )}
       {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
     </div>
+  );
+}
+
+/**
+ * Beside a language's name: its flag where a flag is not sensitive, else a calm tile with a few
+ * letters of its script, the same size (src/i18n/meta.ts LangMeta.flag says why). Decoration only.
+ */
+function LangMark({ code }: { code: UiCode | null }) {
+  const mark = languageMark(code);
+  const meta = code ? langMeta(code) : undefined;
+  return (
+    <span className="lang-mark" aria-hidden>
+      {'flag' in mark
+        ? <span className="lang-flag">{mark.flag}</span>
+        : <span className="lang-sample" lang={code ?? 'en'} dir={meta?.dir}>{mark.sample}</span>}
+    </span>
   );
 }
 
@@ -95,7 +135,7 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
  * The password, the gender question and the sector follow on their own pages (App.tsx).
  */
 export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = false }: {
-  onDone: (code: LangCode | null) => void;
+  onDone: (code: UiCode | null) => void;
   /** The guessed help language (from navigator.languages); null = no guess, the list right away. */
   guess?: LangCode | null;
   /** Back from the next page: open on the list (the guess was already seen). */
@@ -113,8 +153,8 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, [list, hasGuess]);
-  /** The first tap: the first Dutch word ("hallo", recorded) plays, then the next page shows. */
-  const pick = (code: LangCode | null) => {
+  /** The first tap: Bram says "Hallo, ik ben Bram." (until recorded: "hallo"), then the next page shows. */
+  const pick = (code: UiCode | null) => {
     sayFirstWord();
     onDone(code);
   };
@@ -238,6 +278,8 @@ const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'settings' | 
  *  Dutch (short, part of learning the work floor) with the help language in a small line under
  *  it; screen readers hear all of it. */
 export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab: Tab) => void; lang?: HelpLanguage }) {
+  // The work-rules track: the Dutch label only (no help line under it).
+  const dutch = dutchUi(lang);
   return (
     <nav className="bottom-nav" aria-label={said(ui('mainMenu', lang))} dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
       {TABS.map(({ tab, nl, key, Icon }) => {
@@ -248,12 +290,12 @@ export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab:
             type="button"
             className={`nav-tab ${current === tab ? 'nav-tab-on' : ''}`}
             aria-current={current === tab ? 'page' : undefined}
-            aria-label={`${nl} · ${said(word)}`}
+            aria-label={dutch ? nl : `${nl} · ${said(word)}`}
             onClick={() => onTab(tab)}
           >
             <span className="nav-icon" aria-hidden><Icon size={26} /></span>
             <span className="nav-label" lang="nl" aria-hidden>{nl === 'Instellingen' ? 'Instel\u00adlingen' : nl}</span>
-            {word.help && lang
+            {dutch ? null : word.help && lang
               ? <HelpText className="nav-help" text={word.help} lang={lang} />
               : <span className="nav-help" lang="en" aria-hidden>{word.en}</span>}
           </button>
@@ -273,8 +315,7 @@ export function WordsHub({ lang, onTips }: {
       <div className="hub-alert-head">
         <span className="hub-icon" aria-hidden><AlertIcon size={30} /></span>
         <h1 className="hub-title">
-          <span className="hub-nl" lang="nl">Noodzinnen</span>
-          <Bi text={ui('phrasebook', lang)} />
+          <NlPair nlFirst nl="Noodzinnen" nlClass="hub-nl" text={ui('phrasebook', lang)} />
         </h1>
       </div>
       <p className="muted hub-hint"><Bi text={ui('phrasebookHint', lang)} /></p>
@@ -282,8 +323,7 @@ export function WordsHub({ lang, onTips }: {
       <button type="button" className="hub-card hub-tips" onClick={onTips}>
         <span className="hub-icon" aria-hidden><span className="entry-emoji">💡</span></span>
         <span className="hub-text">
-          <span className="hub-nl" lang="nl">Zo werkt het hier</span>
-          <Bi text={ui('cultureTips', lang)} />
+          <NlPair nlFirst nl="Zo werkt het hier" nlClass="hub-nl" text={ui('cultureTips', lang)} />
         </span>
         <ChevronIcon size={24} />
       </button>
@@ -308,7 +348,7 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
         className="daily-card daily-due"
         dir={rtl ? 'rtl' : undefined}
         onClick={onDaily}
-        aria-label={`Herhaal vandaag · ${said(ui('reviewToday', lang))}: ${said(fillCount('reviewTodayN', card.due, lang))}`}
+        aria-label={`${dutchUi(lang) ? '' : 'Herhaal vandaag · '}${said(ui('reviewToday', lang))}: ${said(fillCount('reviewTodayN', card.due, lang))}`}
       >
         <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
         <span className="daily-n" aria-hidden>{card.due}</span>
@@ -324,7 +364,7 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
       className={`daily-card daily-${card.state}`}
       dir={rtl ? 'rtl' : undefined}
       role="group"
-      aria-label={`Herhaal vandaag · ${said(ui('reviewToday', lang))}${done && card.tomorrow > 0 ? ` · ${said(fillCount('tomorrowN', card.tomorrow, lang))}` : ''}`}
+      aria-label={`${dutchUi(lang) ? '' : 'Herhaal vandaag · '}${said(ui('reviewToday', lang))}${done && card.tomorrow > 0 ? ` · ${said(fillCount('tomorrowN', card.tomorrow, lang))}` : ''}`}
     >
       {done ? (
         // A calm badge, not a stamp: the review is done for today.
@@ -345,22 +385,51 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
 
 /** "About Vloertaal" (the "Over" tab): what the app is, who it is for, privacy and voice credits,
  *  and one link to the page for coaches. */
-export function About({ lang, onCoaches }: { lang?: HelpLanguage; /** Opens "Voor begeleiders" (the topic links to send). */ onCoaches?: () => void }) {
+/**
+ * About Vloertaal. The "NL" toggle at the top end shows every section in plain Dutch (lang nl,
+ * left to right also in Arabic, Persian and Dari); pressed again, the help language (or English)
+ * comes back. One tap target; the choice is remembered on this phone.
+ */
+export function About({ lang, onCoaches, dutch: dutchStart }: {
+  lang?: HelpLanguage;
+  /** Opens "Voor begeleiders" (the topic links to send). */
+  onCoaches?: () => void;
+  /** Start with the Dutch on or off (screenshots, tests); default: as remembered on this phone. */
+  dutch?: boolean;
+}) {
   const { recorded } = useVoices();
+  const [dutchOn, setDutch] = useState(() => dutchStart ?? aboutDutchRemembered());
+  // The work-rules track: the sections in Dutch, always (its own About comes with M5).
+  const dutch = dutchUi(lang) || dutchOn;
+  const toggle = () => setDutch((on) => { rememberAboutDutch(!on); return !on; });
+  const nlLabel = said(ui('showDutch', lang));
   return (
     <div className="screen about">
-      <div className="screen-head">
+      <div className="screen-head about-head" dir={lang?.dir}>
         <h1><Bi text={ui('about', lang)} /></h1>
+        {/* The work-rules track is in Dutch already: no NL toggle. */}
+        {!dutchUi(lang) && (
+          <button type="button" className="about-nl" aria-pressed={dutch} aria-label={`NL · ${nlLabel}`} title={nlLabel} onClick={toggle}>
+            <span lang="nl" aria-hidden>NL</span>
+          </button>
+        )}
       </div>
       <div className="about-hero">
         <LogoMark size={88} />
         <Wordmark />
-        <p className="about-tag" lang="nl">Nederlands voor op de werkvloer</p>
+        <p className="about-tag" lang="nl">{dutchUi(lang) ? ui('appTagline', lang).help : 'Nederlands voor op de werkvloer'}</p>
       </div>
       {aboutSections.map((s) => (
-        <section key={s.id} className="about-section">
-          <h2><span className="about-emoji" aria-hidden>{s.emoji}</span><Bi text={gloss(s.id, s.title, lang)} /></h2>
-          <p><Bi text={gloss(`${s.id}.b`, s.body, lang)} /></p>
+        <section key={s.id} className={dutch ? 'about-section about-nl-on' : 'about-section'} {...(dutch ? { lang: 'nl', dir: 'ltr' } : {})}>
+          <h2>
+            {s.who
+              ? <span className="about-emoji about-who" aria-hidden><Character who={s.who} crop="head" size={30} /></span>
+              : <span className="about-emoji" aria-hidden>{s.emoji}</span>}
+            {dutch
+              ? <span className="bi"><span className="bi-en">{s.nl.title}</span></span>
+              : <Bi text={gloss(s.id, s.title, lang)} />}
+          </h2>
+          <p>{dutch ? s.nl.body : <Bi text={gloss(`${s.id}.b`, s.body, lang)} />}</p>
         </section>
       ))}
       {onCoaches && (
@@ -374,8 +443,8 @@ export function About({ lang, onCoaches }: { lang?: HelpLanguage; /** Opens "Voo
         <ul className="about-credits muted small">
           {recorded.map((v) => (
             <li key={v.key}>
-              Voice “{v.label}”: {v.engine ?? 'Piper'}{v.dataset ? ` · ${v.dataset}` : ''}{v.license ? ` · ${v.license}` : ''}
-              {v.modelCard && <> · <a href={v.modelCard} target="_blank" rel="noreferrer">model card</a></>}
+              {dutchUi(lang) ? 'Stem' : 'Voice'} “{v.label}”: {v.engine ?? 'Piper'}{v.dataset ? ` · ${v.dataset}` : ''}{v.license ? ` · ${v.license}` : ''}
+              {v.modelCard && <> · <a href={v.modelCard} target="_blank" rel="noreferrer">{dutchUi(lang) ? 'modelkaart' : 'model card'}</a></>}
             </li>
           ))}
         </ul>
@@ -500,7 +569,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           <span className="stamp stamp-right result-stamp" aria-hidden>
             <span className="stamp-word" lang="nl">Klaar</span>
             {/* The Dutch stamp in the help language too (English without one). */}
-            {lang?.ui.stampDone ? <HelpText className="stamp-sub" text={lang.ui.stampDone} lang={lang} /> : <span className="stamp-sub" lang="en">{ui('stampDone').en}</span>}
+            {dutchUi(lang) ? null : lang?.ui.stampDone ? <HelpText className="stamp-sub" text={lang.ui.stampDone} lang={lang} /> : <span className="stamp-sub" lang="en">{ui('stampDone').en}</span>}
           </span>
         </div>
         <h1 className="result-title"><Bi text={title} /></h1>
@@ -569,12 +638,11 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             className="hub-card result-phrases"
             dir={rtl ? 'rtl' : undefined}
             onClick={() => { if (ready.current) onPhrases(); }}
-            aria-label={`Noodzinnen · ${said(ui('phrasebook', lang))}`}
+            aria-label={dutchUi(lang) ? said(ui('phrasebook', lang)) : `Noodzinnen · ${said(ui('phrasebook', lang))}`}
           >
             <span className="hub-icon" aria-hidden><AlertIcon size={26} /></span>
             <span className="hub-text" aria-hidden>
-              <span className="hub-nl" lang="nl">Noodzinnen</span>
-              <Bi text={ui('phrasebook', lang)} />
+              <NlPair nlFirst nl="Noodzinnen" nlClass="hub-nl" text={ui('phrasebook', lang)} />
             </span>
             <ChevronIcon size={24} />
           </button>
@@ -621,8 +689,7 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
                 <div className="phrase">
                   <SpeakButton text={t.phrase.nl} help={lang} />
                   <div className="phrase-text">
-                    <span className="phrase-nl" lang="nl">{breakable(t.phrase.nl)}</span>
-                    <Bi text={gloss(t.phrase.id, t.phrase.en, lang)} />
+                    <NlPair content nlFirst nl={breakable(t.phrase.nl)} nlClass="phrase-nl" text={gloss(t.phrase.id, t.phrase.en, lang)} />
                   </div>
                 </div>
               </div>

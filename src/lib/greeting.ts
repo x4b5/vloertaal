@@ -3,6 +3,7 @@
  * nagging, no server: it only reads the progress on this phone.
  *
  * Which line (the first that fits):
+ *  0. the home was never shown on this phone before     "I'm Bram, your colleague. …" (once)
  *  1. today is done (a lesson or the review)           "Done for today. See you tomorrow."
  *  2. the first visit today, after missed days         "Welcome back. Let's go on."
  *  3. the first visit today, with a streak of 2+       "Day N in a row."
@@ -14,9 +15,11 @@
 import { daysBetween, dayKey, doneToday, currentStreak, type Progress } from './progress';
 import type { UiKey } from '../i18n/types';
 
-export type GreetingKind = 'hello' | 'back' | 'due' | 'streak' | 'done';
+export type GreetingKind = 'intro' | 'hello' | 'back' | 'due' | 'streak' | 'done';
 
 export interface GreetingInput {
+  /** The home was never shown before on this phone: the very first visit ever. */
+  fresh: boolean;
   /** A lesson or today's review is finished today. */
   done: boolean;
   /** The learner practised before, but not yesterday or today (one or more whole days missed). */
@@ -39,6 +42,8 @@ export interface Greeting {
 const STREAK_FROM = 2;
 
 export function greetingFor(s: GreetingInput): Greeting {
+  // Bram introduces himself once, on the very first home (even after a trial lesson done today).
+  if (s.fresh) return { kind: 'intro' };
   if (s.done) return { kind: 'done' };
   if (s.first) {
     if (s.missed) return { kind: 'back' };
@@ -51,9 +56,10 @@ export function greetingFor(s: GreetingInput): Greeting {
 }
 
 /** The inputs from the saved progress (already settled for today: see settleStreak). */
-export function greetingInput(p: Progress, today: Date, due: number, first: boolean): GreetingInput {
+export function greetingInput(p: Progress, today: Date, due: number, first: boolean, fresh = false): GreetingInput {
   const key = dayKey(today);
   return {
+    fresh,
     done: doneToday(p, today),
     missed: Boolean(p.lastDay && daysBetween(p.lastDay, key) >= 2),
     first,
@@ -67,6 +73,15 @@ const GREETED_KEY = 'vloertaal:greeted';
 /** Was the home already shown today on this phone? (Private mode: every visit counts as the first.) */
 export function greetedToday(today: Date): boolean {
   try { return localStorage.getItem(GREETED_KEY) === dayKey(today); } catch { return false; }
+}
+
+/**
+ * Was the home never shown on this phone (no day remembered at all)? Then Bram introduces himself.
+ * A learner from before keeps the key, so never sees it. Unreadable storage counts as "shown":
+ * the introduction is never repeated on every visit.
+ */
+export function neverGreeted(): boolean {
+  try { return localStorage.getItem(GREETED_KEY) === null; } catch { return false; }
 }
 
 /** Remember that the home was shown today, so the next visit gets the line for the day's state. */

@@ -1,7 +1,7 @@
 import { said, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { resumeCount, type LessonSave } from '../lib/resume';
-import { Bi } from './Bi';
+import { NlPair } from './NlPair';
 import { ChevronIcon, RestartIcon } from './Icons';
 
 /**
@@ -43,8 +43,7 @@ export function ResumeChip({ save, lang }: { save: LessonSave; lang?: HelpLangua
       </span>
       <span className="bay-start bay-resume">
         <span className="resume-text">
-          <span className="resume-nl" lang="nl">Ga verder</span>
-          <Bi className="resume-help" text={ui('resumeLesson', lang)} />
+          <NlPair nlFirst nl="Ga verder" nlClass="resume-nl" className="resume-help" text={ui('resumeLesson', lang)} />
         </span>
         <ChevronIcon size={20} />
       </span>
@@ -66,8 +65,7 @@ export function RestartButton({ lang, onRestart, about }: { lang?: HelpLanguage;
     >
       <RestartIcon size={22} />
       <span className="bay-restart-text">
-        <Bi className="bay-restart-label" text={t} />
-        <span className="bay-restart-nl" lang="nl" dir="ltr">Opnieuw beginnen</span>
+        <NlPair nl="Opnieuw beginnen" nlClass="bay-restart-nl" dir="ltr" className="bay-restart-label" text={t} />
       </span>
     </button>
   );

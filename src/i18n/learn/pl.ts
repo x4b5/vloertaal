@@ -34,7 +34,7 @@ const t: CultureTranslation = {
     'c.bsn.a.why': "Pracodawca może poprosić o dokument tożsamości, np. paszport.",
     'c.housing.a.why': "Potrącenia z wypłaty muszą być uzgodnione na piśmie.",
     'c.payslip.a.why': "Brakujące godziny na pasku wypłaty trzeba zgłosić.",
-    'c.extra.a.why': "Nadgodziny się zapisuje, żeby zostały zapłacone.",
+    'c.extra.a.why': "Nadgodziny się zapisuje, żeby można je było sprawdzić na pasku wypłaty.",
     'c.phone.a.why': "Bez telefonu przy maszynach: wiadomości czekają do przerwy.",
     'c.smoking.a.why': "Przerwy są o stałych porach, nie wcześniej.",
     'c.clock.a.why': "Odbijanie karty za kogoś innego jest zabronione.",

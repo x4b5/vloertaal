@@ -1,10 +1,18 @@
-import { readFileSync } from 'node:fs';
+import { execSync } from 'node:child_process';
+import { existsSync, readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { allDialogues, allLessons, allWords } from '../src/content/curriculum';
 import { cultureTips } from '../src/content/culture';
+import { BRAM_HELLO, BRAM_VOICE } from '../src/lib/voices';
 
 /** Lines whose recording is still to be made (the owner re-records them); the device voice says them meanwhile. */
-const PENDING_RECORDING = new Set(['Zeg het liever direct tegen mij.']);
+const PENDING_RECORDING = new Set([
+  'Zeg het liever direct tegen mij.',
+  // x.bram, Bram introducing himself on the first tap (only Thijmen records it, see
+  // scripts/list-clips.ts). Until the next "Record ElevenLabs voices" run, sayFirstWord keeps
+  // playing the recorded "hallo" instead (src/lib/audio.ts).
+  BRAM_HELLO,
+]);
 
 describe('recorded clips (G4 b3)', () => {
   it('every sentence, chat line, word and "Zeg het zo" line has a recorded clip', () => {
@@ -17,8 +25,18 @@ describe('recorded clips (G4 b3)', () => {
       ...allDialogues.flatMap((d) => [d.prompt.nl, d.reply.nl]),
       ...allWords.map((w) => w.nl),
       ...cultureTips.map((t) => t.phrase.nl),
+      BRAM_HELLO,
     ]);
     const missing = [...texts].filter((t) => !said.has(t.trim()) && !said.has(plain(t)));
     expect(missing.filter((t) => !PENDING_RECORDING.has(t))).toEqual([]);
+  });
+
+  it('Bram’s own line is a clip that only his voice records (x.bram, Thijmen)', { timeout: 60_000 }, () => {
+    // public/audio/ is not in git (CI and a fresh checkout have no clips.json): make it first.
+    if (!existsSync('public/audio/clips.json')) execSync('npx tsx scripts/list-clips.ts', { stdio: 'ignore' });
+    const clips = JSON.parse(readFileSync('public/audio/clips.json', 'utf8')) as { id: string; text: string; voices?: string[] }[];
+    expect(clips.find((c) => c.id === 'x.bram')).toEqual({ id: 'x.bram', text: BRAM_HELLO, voices: [BRAM_VOICE] });
+    // Every other clip is recorded in every voice, as before.
+    expect(clips.filter((c) => c.voices).map((c) => c.id)).toEqual(['x.bram']);
   });
 });

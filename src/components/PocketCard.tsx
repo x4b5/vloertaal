@@ -10,6 +10,7 @@ import { savePocketCard } from '../lib/pocketCanvas';
 import { englishHidden, wantsEnglish } from '../lib/english';
 import { WordPicture } from '../pictures';
 import { Bi, HelpText } from './Bi';
+import { NlPair } from './NlPair';
 import { CheckIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
 import { PocketIcon } from './Offline';
@@ -70,8 +71,7 @@ export function PocketCardScreen({ unit, lang, onBack, sector }: { unit: Unit; l
       <div className="screen-head" dir={rtl ? 'rtl' : undefined}>
         <ChromeBack lang={lang} onBack={onBack} />
         <h1>
-          <span className="pocket-screen-nl" lang="nl" dir="ltr">Spiekkaartje</span>
-          <Bi text={ui('pocketCard', lang)} />
+          <NlPair nlFirst nl="Spiekkaartje" nlClass="pocket-screen-nl" dir="ltr" text={ui('pocketCard', lang)} />
         </h1>
       </div>
 
@@ -110,15 +110,13 @@ export function PocketCardScreen({ unit, lang, onBack, sector }: { unit: Unit; l
         <button type="button" className="btn btn-primary cert-btn" onClick={save} disabled={busy}>
           <PocketIcon size={26} />
           <span className="cert-btn-text">
-            <span lang="nl">Bewaar als plaatje</span>
-            <Bi className="cert-btn-gloss" text={ui('pocketSave', lang)} />
+            <NlPair nlFirst nl="Bewaar als plaatje" className="cert-btn-gloss" text={ui('pocketSave', lang)} />
           </span>
         </button>
         <button type="button" className="btn btn-dark cert-btn" onClick={() => window.print()}>
           <PrintGlyph />
           <span className="cert-btn-text">
-            <span lang="nl">Print</span>
-            <Bi className="cert-btn-gloss" text={ui('certPrint', lang)} />
+            <NlPair nlFirst nl="Print" className="cert-btn-gloss" text={ui('certPrint', lang)} />
           </span>
         </button>
       </div>

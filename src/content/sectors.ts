@@ -1,4 +1,6 @@
 import type { UiKey } from '../i18n/types';
+import type { Track } from '../lib/track';
+import { courseUnits } from './courses';
 import { units } from './curriculum';
 import type { Lesson, Unit } from './types';
 
@@ -25,21 +27,37 @@ export interface Sector {
    *  open (Safety in week 1 for warehouse, building and factory work); the rest come after the
    *  sector's own unit. */
   focus: string[];
+  /**
+   * The same for the work-rules track (src/content/regels): the sector's own rules unit(s) and
+   * the basis rules units that matter most in this work. A unit that is not written yet is left
+   * out of the path (nothing breaks).
+   */
+  rules: { units: string[]; focus: string[] };
 }
 
 export const sectors: Sector[] = [
-  { id: 'logistics', nl: 'Logistiek', key: 'sectorLogistics', units: ['u.warehouse'], focus: ['u.safety', 'u.time'] },
-  { id: 'construction', nl: 'Bouw', key: 'sectorConstruction', units: ['u.build'], focus: ['u.safety', 'u.tools'] },
-  { id: 'production', nl: 'Productie', key: 'sectorProduction', units: ['u.factory'], focus: ['u.safety', 'u.tools'] },
-  { id: 'care', nl: 'Zorg', key: 'sectorCare', units: ['u.care'], focus: ['u.teamwork', 'u.health'] },
-  { id: 'hospitality', nl: 'Horeca', key: 'sectorHospitality', units: ['u.horeca'], focus: ['u.teamwork', 'u.time'] },
-  { id: 'cleaning', nl: 'Schoonmaak', key: 'sectorCleaning', units: ['u.clean'], focus: ['u.time', 'u.safety'] },
+  { id: 'logistics', nl: 'Logistiek', key: 'sectorLogistics', units: ['u.warehouse'], focus: ['u.safety', 'u.time'],
+    rules: { units: ['r.warehouse'], focus: ['r.veilig', 'r.tijd'] } },
+  { id: 'construction', nl: 'Bouw', key: 'sectorConstruction', units: ['u.build'], focus: ['u.safety', 'u.tools'],
+    rules: { units: ['r.build'], focus: ['r.veilig', 'r.contract'] } },
+  { id: 'production', nl: 'Productie', key: 'sectorProduction', units: ['u.factory'], focus: ['u.safety', 'u.tools'],
+    rules: { units: ['r.factory'], focus: ['r.veilig', 'r.tijd'] } },
+  { id: 'care', nl: 'Zorg', key: 'sectorCare', units: ['u.care'], focus: ['u.teamwork', 'u.health'],
+    rules: { units: ['r.care'], focus: ['r.samen', 'r.ziek'] } },
+  { id: 'hospitality', nl: 'Horeca', key: 'sectorHospitality', units: ['u.horeca'], focus: ['u.teamwork', 'u.time'],
+    rules: { units: ['r.horeca'], focus: ['r.tijd', 'r.loon'] } },
+  { id: 'cleaning', nl: 'Schoonmaak', key: 'sectorCleaning', units: ['u.clean'], focus: ['u.time', 'u.safety'],
+    rules: { units: ['r.clean'], focus: ['r.veilig', 'r.tijd'] } },
 ];
+
+/** A sector's own units and focus units in one track. */
+const ofTrack = (s: Sector, track: Track) => (track === 'regels' ? s.rules : s);
 
 /** "Weet ik nog niet": shown as the last card. */
 export const NOT_SURE = { nl: 'Weet ik nog niet', key: 'notSureYet' as UiKey };
 
-const sectorOfUnit = new Map(sectors.flatMap((s) => s.units.map((u) => [u, s.id] as const)));
+// Both tracks: unit ids never clash ("u.build", "r.build").
+const sectorOfUnit = new Map(sectors.flatMap((s) => [...s.units, ...s.rules.units].map((u) => [u, s.id] as const)));
 
 /** The sector a unit belongs to, or undefined for a basis unit (for everyone). */
 export function unitSector(unitId: string): SectorId | undefined {
@@ -57,13 +75,18 @@ export function isOtherSector(unitId: string, sector: SectorChoice | undefined):
 
 /** The slot for the learner's own sector unit(s): where the warehouse unit sits in the course (05, right after Safety). */
 const SECTOR_SLOT = 'u.warehouse';
+/** In the work-rules track the own sector unit(s) come right after this basis unit ("Veilig werken"). */
+const RULES_SLOT_AFTER = 'r.veilig';
 
 /**
  * The path for a sector: `main` (basis units, with the learner's own sector unit(s) early, in the
  * warehouse's slot right after Safety) and `other` (the other sectors' units, in course order).
  * With no sector chosen, or 'none': the whole course in its own order.
+ * In the work-rules track the same, with the own sector's rules unit(s) right after r.veilig (at
+ * the end of the basis units if r.veilig is not there).
  */
-export function coursePlan(sector: SectorChoice | undefined): { main: Unit[]; other: Unit[] } {
+export function coursePlan(sector: SectorChoice | undefined, track: Track = 'taal'): { main: Unit[]; other: Unit[] } {
+  if (track === 'regels') return rulesPlan(sector);
   if (!sector || sector === 'none') return { main: units, other: [] };
   const own = units.filter((u) => unitSector(u.id) === sector);
   const basis = units.filter((u) => unitSector(u.id) === undefined);
@@ -74,16 +97,35 @@ export function coursePlan(sector: SectorChoice | undefined): { main: Unit[]; ot
   };
 }
 
+function rulesPlan(sector: SectorChoice | undefined): { main: Unit[]; other: Unit[] } {
+  const all = courseUnits('regels');
+  if (!sector || sector === 'none') return { main: all, other: [] };
+  const own = all.filter((u) => unitSector(u.id) === sector);
+  const basis = all.filter((u) => unitSector(u.id) === undefined);
+  const slot = basis.findIndex((u) => u.id === RULES_SLOT_AFTER);
+  const at = slot >= 0 ? slot + 1 : basis.length;
+  return {
+    main: [...basis.slice(0, at), ...own, ...basis.slice(at)],
+    other: all.filter((u) => isOtherSector(u.id, sector)),
+  };
+}
+
 /** Lessons in the order they unlock one after another (basis + own sector). */
-export function mainLessons(sector: SectorChoice | undefined): Lesson[] {
-  return coursePlan(sector).main.flatMap((u) => u.lessons);
+export function mainLessons(sector: SectorChoice | undefined, track: Track = 'taal'): Lesson[] {
+  return coursePlan(sector, track).main.flatMap((u) => u.lessons);
 }
 
 /** The units a sector weighs first when the learner chooses what's next: its own unit(s), then
  *  its focus units. Empty with no sector chosen (or "not sure yet"). */
-export function sectorPriority(sector: SectorChoice | undefined): string[] {
+export function sectorPriority(sector: SectorChoice | undefined, track: Track = 'taal'): string[] {
   const s = sectors.find((x) => x.id === sector);
-  return s ? [...s.units, ...s.focus] : [];
+  return s ? [...ofTrack(s, track).units, ...ofTrack(s, track).focus] : [];
+}
+
+/** The basis unit a sector recommends first (Safety in week 1 for warehouse, building and factory work). */
+export function sectorFirstFocus(sector: SectorChoice | undefined, track: Track = 'taal'): string | undefined {
+  const s = sectors.find((x) => x.id === sector);
+  return s ? ofTrack(s, track).focus[0] : undefined;
 }
 
 /**

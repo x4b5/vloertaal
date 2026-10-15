@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { greetedToday, greetingFor, greetingInput, rememberGreeted, resultLineFor, type GreetingInput } from '../src/lib/greeting';
+import { greetedToday, greetingFor, greetingInput, neverGreeted, rememberGreeted, resultLineFor, type GreetingInput } from '../src/lib/greeting';
+import { bramHelloUrl, setRecordedIndex, type ElevenIndex } from '../src/lib/audio';
+import { BRAM_HELLO } from '../src/lib/voices';
+import { readFileSync } from 'node:fs';
 import { greetingText } from '../src/components/BramSays';
 import { dayKey, emptyProgress, type Progress } from '../src/lib/progress';
 import { reminderIcs, REMINDER_TITLE } from '../src/lib/reminder';
@@ -7,7 +10,7 @@ import { uiEn } from '../src/i18n/types';
 import '../src/i18n/all';
 import { getHelpLanguage } from '../src/i18n';
 
-const base: GreetingInput = { done: false, missed: false, first: true, due: 0, streak: 0 };
+const base: GreetingInput = { fresh: false, done: false, missed: false, first: true, due: 0, streak: 0 };
 const today = new Date(2026, 9, 15, 9, 0);
 const ago = (n: number) => dayKey(new Date(2026, 9, 15 - n));
 
@@ -34,12 +37,13 @@ describe('Bram greets on the home screen', () => {
   });
 
   it('done today wins over everything: see you tomorrow', () => {
-    expect(greetingFor({ done: true, missed: true, first: true, due: 6, streak: 9 })).toEqual({ kind: 'done' });
+    expect(greetingFor({ fresh: false, done: true, missed: true, first: true, due: 6, streak: 9 })).toEqual({ kind: 'done' });
   });
 
   it('reads the saved progress: done today, missed days, and the streak as the top bar shows it', () => {
     const p = (patch: Partial<Progress>): Progress => ({ ...emptyProgress, ...patch });
-    expect(greetingInput(p({}), today, 0, true)).toEqual({ done: false, missed: false, first: true, due: 0, streak: 0 });
+    expect(greetingInput(p({}), today, 0, true)).toEqual({ fresh: false, done: false, missed: false, first: true, due: 0, streak: 0 });
+    expect(greetingInput(p({}), today, 0, true, true)).toMatchObject({ fresh: true });
     expect(greetingInput(p({ lastDay: ago(0), streak: 3 }), today, 2, false)).toMatchObject({ done: true, missed: false, streak: 3, due: 2 });
     expect(greetingInput(p({ lastDay: ago(1), streak: 4 }), today, 0, true)).toMatchObject({ done: false, missed: false, streak: 4 });
     // Three days away (the streak stopped): missed, streak 0, so "welcome back".
@@ -73,6 +77,72 @@ describe('Bram greets on the home screen', () => {
     expect(greetingText({ kind: 'streak', n: 7 }, pl).help).toBe('Dzień 7 z rzędu.');
     expect(greetingText({ kind: 'done' }, pl).help).toBe('Na dziś zrobiłaś wszystko. Do jutra.');
     expect(greetingText({ kind: 'hello' }).en).toBe(uiEn.bramHello);
+  });
+});
+
+describe('Bram introduces himself', () => {
+  /** A stand-in for the phone's storage (Node has none). */
+  const withStorage = (fn: (store: Map<string, string>) => void) => {
+    const g = globalThis as { localStorage?: unknown };
+    const before = g.localStorage;
+    const store = new Map<string, string>();
+    g.localStorage = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v) };
+    try { fn(store); } finally { g.localStorage = before; }
+  };
+
+  it('on the very first home ever, before every other line (also after a trial lesson today)', () => {
+    expect(greetingFor({ ...base, fresh: true })).toEqual({ kind: 'intro' });
+    expect(greetingFor({ fresh: true, done: true, missed: false, first: true, due: 3, streak: 1 })).toEqual({ kind: 'intro' });
+    expect(greetingFor({ ...base, fresh: false })).toEqual({ kind: 'hello' });
+  });
+
+  it('only while the home was never shown on this phone; a learner who has the key never sees it', () => {
+    withStorage((store) => {
+      expect(neverGreeted()).toBe(true);
+      rememberGreeted(today);
+      expect(neverGreeted()).toBe(false);
+      // The next day (or any later visit) the key is still there: no introduction again.
+      expect(greetedToday(new Date(2026, 9, 16, 8, 0))).toBe(false);
+      expect(neverGreeted()).toBe(false);
+      // An existing learner, greeted months ago.
+      store.set('vloertaal:greeted', '2026-05-01');
+      expect(neverGreeted()).toBe(false);
+    });
+    // No storage (private mode, or it throws): never introduced on every visit.
+    expect(neverGreeted()).toBe(false);
+    const g = globalThis as { localStorage?: unknown };
+    const before = g.localStorage;
+    g.localStorage = { getItem: () => { throw new Error('blocked'); }, setItem: () => { throw new Error('blocked'); } };
+    try { expect(neverGreeted()).toBe(false); } finally { g.localStorage = before; }
+  });
+
+  it('says who he is in the help language only, short (two lines in the top bar)', () => {
+    expect(greetingText({ kind: 'intro' }).en).toBe(uiEn.bramIntro);
+    expect(greetingText({ kind: 'intro' }, getHelpLanguage('pl', 'f')).help).toBe('Jestem Bram, twój kolega z pracy.');
+    expect(greetingText({ kind: 'intro' }, getHelpLanguage('ar', 'f')).help).toBe('أنا Bram، زميلكِ في العمل.');
+    expect(greetingText({ kind: 'intro' }, getHelpLanguage('ar', 'm')).help).toBe('أنا Bram، زميلكَ في العمل.');
+    for (const code of ['ar', 'ti', 'fa', 'prs', 'uk', 'tr', 'pl', 'ro', 'bg'] as const) {
+      for (const g of ['m', 'f'] as const) {
+        const t = greetingText({ kind: 'intro' }, getHelpLanguage(code, g));
+        expect(t.help, `${code} ${g}`).toBeTruthy();
+        expect(t.help!.length, `${code} ${g}`).toBeLessThanOrEqual(36);
+      }
+    }
+  });
+
+  it('the first tap plays his own recorded "Hallo, ik ben Bram." only once Thijmen has it, else "hallo"', () => {
+    const index = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8')) as ElevenIndex;
+    // Not recorded yet: no file, so sayFirstWord keeps playing the recorded "hallo".
+    setRecordedIndex(index, null);
+    expect(bramHelloUrl()).toBe(index.voices.some((v) => v.key === 'thijmen' && v.said['x.bram'] === BRAM_HELLO) ? './audio-el/thijmen/x.bram.mp3' : undefined);
+    // Another voice with the line does not count: only Bram's own voice says it.
+    const withLine = (key: string): ElevenIndex => ({
+      voices: index.voices.map((v) => (v.key === key ? { ...v, said: { ...v.said, 'x.bram': BRAM_HELLO } } : v)),
+    });
+    setRecordedIndex(withLine('daniel'), null);
+    expect(bramHelloUrl()).toBeUndefined();
+    setRecordedIndex(withLine('thijmen'), null);
+    expect(bramHelloUrl()).toBe('./audio-el/thijmen/x.bram.mp3');
   });
 });
 

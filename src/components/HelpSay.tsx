@@ -23,7 +23,8 @@ function useHelpVoice(lang?: HelpLanguage): boolean {
  */
 export function HelpSay({ text, lang }: { text?: string; lang?: HelpLanguage }) {
   const has = useHelpVoice(lang);
-  if (!has || !text || !lang) return null;
+  // The work-rules track: every text is Dutch and has its own Dutch speaker; no second one.
+  if (!has || !text || !lang || lang.code === 'nl') return null;
   const label = ui('readAloud', lang);
   return (
     <button

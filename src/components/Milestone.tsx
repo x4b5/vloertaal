@@ -265,6 +265,8 @@ const noop = () => {};
 
 /** The tier stamp's line in the help language, under the Dutch (English without one). */
 function TierSub({ text, lang }: { text: ReturnType<typeof ui>; lang?: HelpLanguage }) {
+  // The work-rules track: the Dutch stamp says it already.
+  if (lang?.code === 'nl') return null;
   if (text.help && lang) return <HelpText className="tier-stamp-sub" text={text.help} lang={lang} />;
   return <span className="tier-stamp-sub" lang="en">{text.en}</span>;
 }
@@ -303,7 +305,7 @@ export function StreakStopped({ streak, best, lang, onDone }: {
         </div>
         {/* The help language large, English small (the Dutch sentence is only spoken). */}
         <h1 className="streak-line">
-          <span className="sr-only" lang="nl">Je reeks is gestopt bij {streak}. Begin vandaag opnieuw. </span>
+          {lang?.code !== 'nl' && <span className="sr-only" lang="nl">Je reeks is gestopt bij {streak}. Begin vandaag opnieuw. </span>}
           <Bi text={fillCount('streakStopped', streak, lang)} />
         </h1>
         <div className="streak-facts">

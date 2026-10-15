@@ -1,25 +1,21 @@
-name: Test and deploy
+name: Test
+
+# The site is hosted on Vercel, which builds and publishes every push to main by itself (and a
+# preview for every pull request). This workflow only runs the tests, so a red change shows up
+# on the pull request before it is merged.
 
 on:
   push:
     branches: [main]
   pull_request:
   workflow_dispatch:
-  # Daily refresh of the ElevenLabs credit balance on the hidden #beheer page.
-  schedule:
-    - cron: '17 5 * * *'
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-    env:
-      # Optional. Only the credit numbers reach the site, never the key.
-      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
@@ -28,22 +24,4 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
-      - name: Fetch ElevenLabs credits for the admin page
-        if: github.ref == 'refs/heads/main' && env.ELEVENLABS_API_KEY != ''
-        run: node scripts/fetch-credits.mjs
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          path: dist
-
-  deploy:
-    if: github.ref == 'refs/heads/main'
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4

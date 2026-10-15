@@ -1,5 +1,9 @@
 import { tipForLesson } from '../content/culture';
-import { teachingLessons, units } from '../content/curriculum';
+import { teachingLessons } from '../content/curriculum';
+import { courseUnits } from '../content/courses';
+import { ruleStepTexts } from '../content/regels/course';
+import { rulesTrackOn, trackOfId } from './track';
+import type { UiCode } from '../i18n/types';
 import { mixLessonFor } from '../content/review';
 import type { Lesson, Unit } from '../content/types';
 import { tokenize } from './answers';
@@ -28,6 +32,8 @@ const CLIP_BYTES = 8_000;
 
 /** Every Dutch line spoken in one lesson: words, sentences, chats, its culture tip and the single word tiles. */
 function lessonTexts(lesson: Lesson, add: (text: string) => void): void {
+  // The work-rules track: each text block of each step (one speaker, one clip or device voice).
+  for (const step of lesson.steps ?? []) for (const text of ruleStepTexts(step)) add(text);
   for (const w of lesson.words) add(w.nl);
   for (const s of lesson.sentences) add(s.nl);
   for (const d of lesson.dialogues ?? []) {
@@ -49,7 +55,7 @@ function lessonTexts(lesson: Lesson, add: (text: string) => void): void {
  * of a unit may bring items of two related units (once those are done), so with all lessons done
  * as the widest case those are included too.
  */
-export function unitTexts(unit: Unit, all: Unit[] = units): string[] {
+export function unitTexts(unit: Unit, all: Unit[] = courseUnits(trackOfId(unit.id))): string[] {
   const seen = new Set<string>();
   const out: string[] = [];
   const add = (text: string) => {
@@ -60,6 +66,8 @@ export function unitTexts(unit: Unit, all: Unit[] = units): string[] {
     }
   };
   for (const lesson of unit.lessons) lessonTexts(lesson, add);
+  // The work-rules track has no mixed review (its lessons are all written out).
+  if (trackOfId(unit.id) === 'regels') return out;
   const everything = Object.fromEntries(teachingLessons.map((l) => [l.id, true]));
   lessonTexts(mixLessonFor(unit, all, everything), add);
   return out;
@@ -385,9 +393,13 @@ let everyLanguage: Promise<void> | null = null;
  * each), so the help language can be switched without internet too. Loads the ones not here yet
  * (once; again after a failure).
  */
+/** The files kept for switching without internet: the nine help languages, plus the Dutch work-rules track while it is offered. */
+const keptCodes = (): readonly UiCode[] => (rulesTrackOn() ? [...LANG_CODES, 'nl'] : LANG_CODES);
+
 export function loadEveryLanguage(): Promise<void> {
-  if (LANG_CODES.every((c) => isLanguageLoaded(c))) return Promise.resolve();
-  everyLanguage ??= Promise.all(LANG_CODES.map((c) => ensureLanguage(c).catch(() => {}))).then(() => { everyLanguage = null; });
+  const codes = keptCodes();
+  if (codes.every((c) => isLanguageLoaded(c))) return Promise.resolve();
+  everyLanguage ??= Promise.all(codes.map((c) => ensureLanguage(c).catch(() => {}))).then(() => { everyLanguage = null; });
   return everyLanguage;
 }
 
@@ -395,7 +407,8 @@ export function loadEveryLanguage(): Promise<void> {
 function languagesKept(): boolean {
   const shell = new Set(loadSaved().shell);
   const urls = loadedPackUrls();
-  return LANG_CODES.every((c) => isLanguageLoaded(c)) && urls.length >= LANG_CODES.length && urls.every((u) => shell.has(u));
+  const codes = keptCodes();
+  return codes.every((c) => isLanguageLoaded(c)) && urls.length >= codes.length && urls.every((u) => shell.has(u));
 }
 
 /**

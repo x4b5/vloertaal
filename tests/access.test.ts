@@ -13,11 +13,14 @@ describe('access', () => {
     expect(PASSWORD_HASHES[sha('vlaai-toer')]).toBe('full');
     // The full-version password as it is normalised now (without the hyphen).
     expect(PASSWORD_HASHES[sha(normalizePassword('vlaai-toer'))]).toBe('full');
-    expect(Object.keys(PASSWORD_HASHES)).toHaveLength(4);
-    // Every stored hash is reached by some normalised form of a known password.
+    // The pilot code (October 2026) is not written in the repository, only its hash.
+    const PILOT = '94f3f76d391ed7e22dfd2fa93a9c9c0fbfa125385ca45c1ea7702fb28457979e';
+    expect(PASSWORD_HASHES[PILOT]).toBe('full');
+    expect(Object.keys(PASSWORD_HASHES)).toHaveLength(5);
+    // Every other stored hash is reached by some normalised form of a known password.
     const known = ['sneekpeak', 'sneakpeek', 'vlaai-toer'];
     const reached = new Set(known.flatMap((p) => [sha(p), sha(normalizePassword(p))]));
-    for (const h of Object.keys(PASSWORD_HASHES)) expect(reached.has(h), h).toBe(true);
+    for (const h of Object.keys(PASSWORD_HASHES).filter((k) => k !== PILOT)) expect(reached.has(h), h).toBe(true);
   });
 
   it('normalises: lower case, no spaces, hyphens or dots, Eastern digits as 0-9', () => {

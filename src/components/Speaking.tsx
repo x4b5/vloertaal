@@ -12,6 +12,7 @@ import { voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
 import { pictureCast, WordPicture } from '../pictures';
 import { Bi } from './Bi';
+import { NlPair } from './NlPair';
 import { castFor, Character, type CharacterId } from './Characters';
 import { LockIcon, SpeakerIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
@@ -284,8 +285,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
       <div className={`card say-card ${picture ? '' : 'say-card-text'}`}>
         {picture && <WordPicture className="say-pic" id={picture.id} emoji={picture.emoji} size={76} />}
         <div className="say-words">
-          <span className="say-nl" lang="nl" dir="ltr">{breakable(item.nl)}</span>
-          <Bi className="say-meaning" text={meaning} />
+          <NlPair content nlFirst nl={breakable(item.nl)} nlClass="say-nl" dir="ltr" className="say-meaning" text={meaning} />
         </div>
         {/* The model is one tap away. While comparing, the speaker's own button below plays it
             (one speaker per item). */}

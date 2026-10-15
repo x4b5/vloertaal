@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import type { Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
+import { dutchUi } from '../lib/track';
 import { HelpSay } from './HelpSay';
 import { CheckIcon, ChevronIcon } from './Icons';
 import { LogoMark, Wordmark } from './Logo';
@@ -54,7 +55,8 @@ export function ChoiceCards<T extends string>({ options, current, onPick, label,
               {o.picture && <span className="max3-pic" aria-hidden>{o.picture}</span>}
               <span className="max3-names">
                 <Bi className="max3-help" text={o.text} />
-                {o.nl && <span className="max3-nl" lang="nl">{o.nl}</span>}
+                {/* The work-rules track: its Dutch text is the card's text already. */}
+                {o.nl && !dutchUi(o.text.lang) && <span className="max3-nl" lang="nl">{o.nl}</span>}
               </span>
               {o.next ? <ChevronIcon size={22} className="max3-chev" /> : picked && <CheckIcon size={22} className="max3-check" />}
             </button>
@@ -100,7 +102,7 @@ export function QuestionHead({ nl, text, hint, logo = true, say = false, lang }:
         </div>
       )}
       <h2 className="onboarding-title sector-title">
-        {nl && <span className="sector-title-nl" lang="nl"><bdi dir="ltr">{nl}</bdi></span>}
+        {nl && !dutchUi(text.lang) && <span className="sector-title-nl" lang="nl"><bdi dir="ltr">{nl}</bdi></span>}
         <Bi text={text} />
       </h2>
       {say && nl && <QuestionSay nl={nl} help={text.help} lang={lang} />}

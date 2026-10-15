@@ -1,12 +1,14 @@
-import { units } from '../content/curriculum';
+import { allCourseUnits, courseUnits } from '../content/courses';
 import { DAILY_ID } from './spaced';
+import type { Track } from './track';
 
 /**
  * A door lock, not security: the site is static, so anyone can read the bundle. The passwords
  * are not in the source, only their SHA-256 hashes; the typed password is normalised (see
  * normalizePassword), hashed in the browser and compared. What is stored is the access level.
  *
- *  - preview: only the first unit ("First day at work") can be played.
+ *  - preview: only the first unit of each course can be played ("First day at work"; in the
+ *    work-rules track its first unit, r.start).
  *  - full: everything.
  */
 export type Access = 'preview' | 'full';
@@ -21,6 +23,8 @@ export const PASSWORD_HASHES: Record<string, Access> = {
   '6cd4577227ec489e612717903ff4a38d338476af4fb611880538808166023c01': 'preview',
   '8b77fc0eab009ca9b4a9d6ccc967c8e8f9afe6656f0ab0bebdd96800389f482a': 'full',
   '385537df17b00100660dd3b85e9a3a6a50db31b7093fe26f2fedaabd2a17c9d5': 'full',
+  // Pilot code (October 2026), announced to pilot coaches.
+  '94f3f76d391ed7e22dfd2fa93a9c9c0fbfa125385ca45c1ea7702fb28457979e': 'full',
 };
 
 /** Arabic-Indic (٠–٩) and Persian (۰–۹) digits: the low four bits of the code point are the digit. */
@@ -81,11 +85,17 @@ export function clearAccess(): void {
   }
 }
 
-/** Units open in the preview: only "First day at work". */
-export const PREVIEW_UNITS = new Set([units[0].id]);
+/** The unit open in the preview in one track: its course's first unit (none while the course is not here). */
+export function previewUnits(track: Track = 'taal'): string[] {
+  const first = courseUnits(track)[0];
+  return first ? [first.id] : [];
+}
+
+/** Units open in the preview: the first unit of each course. */
+const previewSet = () => new Set([...previewUnits('taal'), ...previewUnits('regels')]);
 
 export function unitAllowed(unitId: string, access: Access): boolean {
-  return access === 'full' || PREVIEW_UNITS.has(unitId);
+  return access === 'full' || previewSet().has(unitId);
 }
 
 /** Can this lesson be played with this access level (whatever the progress says)? */
@@ -93,5 +103,6 @@ export function lessonAllowed(lessonId: string, access: Access): boolean {
   if (access === 'full') return true;
   // Today's review only repeats words the learner met, so it is open in the preview too.
   if (lessonId === DAILY_ID) return true;
-  return units.some((u) => PREVIEW_UNITS.has(u.id) && u.lessons.some((l) => l.id === lessonId));
+  const open = previewSet();
+  return allCourseUnits().some((u) => open.has(u.id) && u.lessons.some((l) => l.id === lessonId));
 }

@@ -1,4 +1,5 @@
-import type { Gender, LangCode } from '../i18n/types';
+import type { Gender, UiCode } from '../i18n/types';
+import { rulesTrackOn } from './track';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import type { Cards } from './spaced';
 import type { TextSize } from './textSize';
@@ -26,7 +27,8 @@ export interface Progress {
   quiet?: boolean;
   /** "Text size" in Settings (src/lib/textSize.ts). Missing = normal. */
   textSize?: TextSize;
-  helpLang: LangCode | null;
+  /** The help language; 'nl' = the screens in Dutch, the work-rules track (src/lib/track.ts). */
+  helpLang: UiCode | null;
   /**
    * Woman, man or rather not say ('x'), for the help language's own sentences ("I am sick" in
    * Polish: chory / chora). On this device only. Undefined = not asked (same as 'x').
@@ -103,6 +105,8 @@ export function loadProgress(): Progress {
       if (saved.theme === undefined) saved.theme = 'light';
       // Older saves have no sector (asked once after the password); drop anything unknown.
       if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
+      // The work-rules track while it is not offered (RULES_TRACK off): the language page again.
+      if (saved.helpLang === 'nl' && !rulesTrackOn()) { saved.helpLang = null; saved.onboarded = false; }
       if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;
       if (saved.genderAsked !== undefined && typeof saved.genderAsked !== 'boolean') delete saved.genderAsked;
       if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;

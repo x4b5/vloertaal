@@ -3,7 +3,9 @@ import { findLesson, learnedWords, playLesson } from './content/curriculum';
 import { ensureLanguage, getHelpLanguage, isLanguageLoaded } from './i18n';
 import { Splash } from './components/Splash';
 import { loadPictures, usePicturesLoaded } from './pictures';
-import type { LangCode } from './i18n/types';
+import type { UiCode } from './i18n/types';
+import { isPlayable } from './content/courses';
+import { trackOf } from './lib/track';
 import { setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
@@ -14,7 +16,7 @@ import { Settings } from './components/Settings';
 import { Coaches } from './components/Coaches';
 import { GenderScreen } from './components/Gender';
 import { shouldAskGender } from './lib/askGender';
-import { offersTryLesson, onboardingStep, previousStep, stepIndex, trialDone, trialLessonAllowed, TRY_LESSON, TRY_LESSON_ID, type OnbStep } from './lib/onboarding';
+import { offersTryLesson, onboardingStep, previousStep, stepIndex, trialDone, trialLessonAllowed, tryLessonId, TRY_LESSON, type OnbStep } from './lib/onboarding';
 import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
@@ -120,7 +122,7 @@ export default function App() {
   const typedCode = useRef('');
   /** "Try one lesson first" (TRY_LESSON): lesson 1.1 and its result before the password. */
   const [trial, setTrial] = useState(false);
-  /** The language was just picked: the next page shows Bram waving "Hallo!" (once). */
+  /** The language was just picked: the next page shows Bram waving and introducing himself (once). */
   const [greet, setGreet] = useState(false);
   /** A coach link to a topic outside the preview: the home offers its unlock (this visit). */
   const [lockedLink, setLockedLink] = useState<string | null>(null);
@@ -394,9 +396,11 @@ export default function App() {
   // The coach's locked topic is offered on the home until a lesson starts.
   useEffect(() => { if (view.name === 'lesson') setLockedLink(null); }, [view.name]);
 
-  const setLang = (code: LangCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
-  /** "Try one lesson first": lesson 1.1, its result, then the password page again. */
-  const startTrial = () => { setTrial(true); go({ name: 'lesson', lessonId: TRY_LESSON_ID, review: false }); };
+  const setLang = (code: UiCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
+  /** The learner's track: the Dutch course, or the work-rules track with the screens in Dutch ('nl'). */
+  const track = trackOf(progress);
+  /** "Try one lesson first": lesson 1.1 (of the learner's track), its result, then the password page again. */
+  const startTrial = () => { setTrial(true); go({ name: 'lesson', lessonId: tryLessonId(track), review: false }); };
   const endTrial = () => { setTrial(false); back(); };
   /** Set when a lesson is finished with the code and the reminder offer was never shown. The
    *  streak-1 milestone offers it on day 1, but a learner who tried lesson 1.1 first already has
@@ -472,7 +476,7 @@ export default function App() {
       const daily = view.lessonId === DAILY_ID;
       const found = daily ? { lesson: dailyLesson(view.ids ?? [], progress.cards, dayKey(new Date())) } : playLesson(view.lessonId, progress.completed);
       // A preview never plays a later unit, whatever the progress or history says.
-      if (!found || !found.lesson.words.length || !lessonAllowed(view.lessonId, acc) || (inTrial && !trialLessonAllowed(view.lessonId))) return null;
+      if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc) || (inTrial && !trialLessonAllowed(view.lessonId, track))) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
         const now = new Date();
         const today = dayKey(now);
@@ -485,7 +489,7 @@ export default function App() {
         // The very first lesson: its result shows, once, where the emergency phrases are.
         // (Not after the trial lesson: the result then leads back to the password page; the
         // first lesson after it shows the row instead.)
-        const phrases = !daily && !inTrial && !progress.phrasesShown && Object.keys(progress.completed).every(trialLessonAllowed);
+        const phrases = !daily && !inTrial && !progress.phrasesShown && Object.keys(progress.completed).every((id) => trialLessonAllowed(id, track));
         if (phrases) next.phrasesShown = true;
         setProgress(next);
         keepDue.current = Boolean(access) && !inTrial && !keepOffered();

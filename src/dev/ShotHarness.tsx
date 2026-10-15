@@ -38,6 +38,9 @@ import { OfflineSettingCard } from '../components/Offline';
 import type { TextSize } from '../lib/textSize';
 import { LogoMark, Wordmark } from '../components/Logo';
 import { HomeGreeting } from '../components/BramSays';
+import { courseUnits, registerRulesCourse } from '../content/courses';
+import { toCourseUnits } from '../content/regels/course';
+import { RULES_STUB } from './rulesStub';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -51,6 +54,9 @@ import { HomeGreeting } from '../components/BramSays';
  */
 export function ShotHarness({ shot, lang, word }: { shot: string; lang: string | null; word?: string | null }) {
   const q = new URLSearchParams(location.search);
+  // &lang=nl: the work-rules track (main.tsx turns RULES_TRACK on and loads its pack, with the
+  // real rules course). &stub=1, or no rules units written yet: the small fixed stub course.
+  if (lang === 'nl' && (q.get('stub') === '1' || !courseUnits('regels').length)) registerRulesCourse(toCourseUnits(RULES_STUB));
   // &gender=f|m|x: the help language's texts for a woman, a man, or "rather not say".
   const gp = q.get('gender');
   const gender: Gender | undefined = gp === 'f' || gp === 'm' || gp === 'x' ? gp : undefined;
@@ -141,7 +147,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     return <SectorScreen lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} initialGroup={g === 'make' || g === 'care' ? (g as SectorGroupId) : undefined} />;
   }
   // The password page: &try=1 with "Try one lesson first" (TRY_LESSON on), &again=1 back from the
-  // sector with the code kept, &greet=1 with Bram's "Hallo!" (the first page after the language),
+  // sector with the code kept, &greet=1 with Bram's "Hallo, ik ben Bram." (the first page after the language),
   // &trialDone=1 back after the trial lesson.
   if (shot === 'gate') {
     return (
@@ -195,7 +201,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     const l = getHelpLanguage(lang as LangCode, gender);
     return (
       <>
-        <About lang={l} onCoaches={() => {}} />
+        {/* &nl=1: the sections in Dutch (the "NL" toggle on); &nl=0 off, whatever this phone remembers. */}
+        <About lang={l} onCoaches={() => {}} dutch={q.get('nl') === '1' ? true : q.get('nl') === '0' ? false : undefined} />
         <BottomNav current="about" onTab={() => {}} lang={l} />
       </>
     );
@@ -302,7 +309,15 @@ const unitLessons = (...ids: string[]) => ids.flatMap((id) => findUnit(id)?.less
  *  "Pay" (marked). shot=all is All topics (a row opens its topic page); shot=topic opens &cu=.
  */
 function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGender, unit, resume }: { shot: string; state: string; lang?: ReturnType<typeof getHelpLanguage>; access: Access; sector?: SectorChoice; daily: boolean; askGender?: LangCode; unit?: string | null; resume?: string | null }) {
-  const completed =
+  // The work-rules track (&lang=nl): the same states on its own course.
+  const rules = shotLang?.code === 'nl';
+  const rc = courseUnits('regels');
+  const completed = rules ? (
+    state === 'new' ? {}
+    : state === 'mid' || state === 'pick' || state === 'coach' ? doneIds(rc[0]?.lessons[0]?.id ?? '')
+    : state === 'finished' ? doneIds(...unitLessons(rc[0]?.id ?? ''))
+    : doneIds(...unitLessons(...rc.slice(0, 2).map((u) => u.id)), rc[2]?.lessons[0]?.id ?? '')
+  ) :
     state === 'new' ? {}
     : state === 'mid' || state === 'pick' || state === 'coach' ? doneIds('l.hello')
     : state === 'finished' ? doneIds(...unitLessons('u.firstday'))
@@ -310,8 +325,8 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   const [progress, setProgress] = useState<Progress>({
     ...emptyProgress, onboarded: true, xp: 120, streak: 7, sector: sector ?? 'none' as SectorChoice, completed,
     currentUnit: state === 'coach' ? 'u.pay' : undefined,
-    // &askGender=1: the help language is stored, the gender is not.
-    helpLang: askGender ?? null,
+    // &askGender=1: the help language is stored, the gender is not. The work-rules track: 'nl'.
+    helpLang: askGender ?? (rules ? 'nl' : null),
   });
   const lang = askGender ? getHelpLanguage(askGender, progress.gender) : shotLang;
   // &resume=1: the block's next lesson was stopped halfway ("Continue · 12/18").
@@ -321,8 +336,8 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   const card = daily ? dailyCard(Object.fromEntries(words.map((w) => [w.id, { box: 1, due: today }])), today) : null;
   const words2 = learnedWords(progress.completed).size;
   const bramParam = new URLSearchParams(location.search).get('bram');
-  const bram = (['hello', 'back', 'due', 'streak', 'done'] as const).find((k) => k === bramParam);
-  const [open, setOpen] = useState<string | null>(shot === 'topic' ? unit ?? 'u.firstday' : null);
+  const bram = (['intro', 'hello', 'back', 'due', 'streak', 'done'] as const).find((k) => k === bramParam);
+  const [open, setOpen] = useState<string | null>(shot === 'topic' ? unit ?? (rules ? rc[0]?.id ?? null : 'u.firstday') : null);
   const topic = open ? findUnit(open) : undefined;
   if (topic) {
     return (
@@ -343,8 +358,9 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, daily, askGend
   return (
     <>
       {/* &quiet=1: "Without sound" is on (the small muted speaker in the top bar). */}
-      {/* &bram=hello|back|due|streak|done: Bram's line in the top bar (the flame is lit only for done). */}
-      <TopBar streak={7} done={!bram || bram === 'done'} words={words2} lang={lang} quiet={new URLSearchParams(location.search).get('quiet') === '1'}
+      {/* &bram=intro|hello|back|due|streak|done: Bram's line in the top bar (the flame is lit only for done;
+          intro is the very first home, so no streak yet: use it with &state=new). */}
+      <TopBar streak={bram === 'intro' ? 0 : 7} done={!bram || bram === 'done'} words={words2} lang={lang} quiet={new URLSearchParams(location.search).get('quiet') === '1'}
         greeting={<HomeGreeting progress={progress} due={card?.due ?? 0} lang={lang} force={bram ? { kind: bram, n: bram === 'due' ? 6 : 7 } : undefined} />} />
       <Route
         progress={progress} lang={lang} access={access} daily={card} onDaily={() => {}}

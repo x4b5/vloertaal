@@ -1,8 +1,10 @@
+import { courseUnits } from '../content/courses';
 import { units } from '../content/curriculum';
 import { hasGender } from '../i18n';
 import type { Access } from './access';
 import { shouldAskGender } from './askGender';
 import type { Progress } from './progress';
+import { trackOf, type Track } from './track';
 
 /**
  * "Try one lesson first" on the password page (the owner's choice: on). Lesson 1.1 only, then its
@@ -14,8 +16,17 @@ export const TRY_LESSON = true;
 /** The one lesson the "try first" button plays: lesson 1.1. */
 export const TRY_LESSON_ID = units[0].lessons[0].id;
 
-/** Only lesson 1.1 can be played before a password was entered. */
-export const trialLessonAllowed = (lessonId: string) => lessonId === TRY_LESSON_ID;
+/** The trial lesson of the work-rules track while its course is not here (the plan's "Eerste werkdag" 1). */
+export const RULES_TRY_LESSON_ID = 'r.l.start.1';
+
+/** The trial lesson of a track: lesson 1.1 of its course (it is in the preview unit, see access.ts). */
+export function tryLessonId(track: Track = 'taal'): string {
+  if (track === 'taal') return TRY_LESSON_ID;
+  return courseUnits('regels')[0]?.lessons[0]?.id ?? RULES_TRY_LESSON_ID;
+}
+
+/** Only lesson 1.1 (of the track's course) can be played before a password was entered. */
+export const trialLessonAllowed = (lessonId: string, track: Track = 'taal') => lessonId === tryLessonId(track);
 
 /**
  * The first run, one question per page, in this order: the help language, "Woman or man?" (only
@@ -55,9 +66,9 @@ export function previousStep(step: OnbStep, p: OnbProgress): OnbStep | null {
   }
 }
 
-/** The trial lesson was done on this phone (lesson 1.1 is in the progress) and there is no code yet. */
-export function trialDone(p: Pick<Progress, 'completed'>, access: Access | null): boolean {
-  return !access && Boolean(p.completed[TRY_LESSON_ID]);
+/** The trial lesson was done on this phone (lesson 1.1 of the learner's track is in the progress) and there is no code yet. */
+export function trialDone(p: Pick<Progress, 'completed'> & Partial<Pick<Progress, 'helpLang'>>, access: Access | null): boolean {
+  return !access && Boolean(p.completed[tryLessonId(trackOf(p))]);
 }
 
 /**

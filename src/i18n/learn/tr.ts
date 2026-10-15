@@ -34,7 +34,7 @@ const t: CultureTranslation = {
     'c.bsn.a.why': "İşveren pasaport gibi bir kimlik görmek isteyebilir.",
     'c.housing.a.why': "Maaştan kesilen para yazılı olarak kabul edilmelidir.",
     'c.payslip.a.why': "Maaş bordrosundaki eksik saatler bildirilmelidir.",
-    'c.extra.a.why': "Fazla mesai yazılır, böylece ödenir.",
+    'c.extra.a.why': "Fazla mesai yazılır, böylece maaş bordrosunda kontrol edilebilir.",
     'c.phone.a.why': "Makinelerin yanında telefon yok: mesajlar molayı bekler.",
     'c.smoking.a.why': "Molalar belirli saatlerdedir, daha önce değil.",
     'c.clock.a.why': "Başkası yerine giriş kaydı yapmak yasaktır.",

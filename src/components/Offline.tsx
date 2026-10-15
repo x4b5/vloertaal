@@ -23,6 +23,7 @@ import {
 import type { Progress } from '../lib/progress';
 import { currentBlock } from '../lib/route';
 import { Bi } from './Bi';
+import { NlPair } from './NlPair';
 
 /**
  * "Keep lessons on this phone" (Settings → This phone): one switch. When it is on, the topic the
@@ -140,8 +141,7 @@ export function OfflineSettingCard({ progress, lang, access = 'full' }: { progre
     <section className="keep-card offline-card" dir={rtl ? 'rtl' : undefined}>
       <div className="count-row">
         <div className="keep-head" id={label}>
-          <span className="keep-nl" lang="nl" dir="ltr">Lessen op deze telefoon</span>
-          <Bi className="keep-gloss" text={ui('settingKeepLessons', lang)} />
+          <NlPair nlFirst nl="Lessen op deze telefoon" nlClass="keep-nl" dir="ltr" className="keep-gloss" text={ui('settingKeepLessons', lang)} />
         </div>
         <button type="button" role="switch" aria-checked={on} aria-labelledby={label} className={`count-switch ${on ? 'on' : ''}`} onClick={() => setOn(!on)}>
           <span className="count-knob" aria-hidden />
