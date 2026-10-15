@@ -20,7 +20,7 @@ import { getHelpLanguage } from '../i18n';
 import { GenderScreen } from '../components/Gender';
 import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies, learnedWords } from '../content/curriculum';
-import { buildLesson, buildTiles, forRetry, type Exercise } from '../lib/exercises';
+import { buildLesson, buildTiles, buildRuleLesson, forRetry, RULE_KINDS, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
 import { setSpeakShotPhase } from '../components/Speaking';
 import { createRng } from '../lib/random';
@@ -227,6 +227,13 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       </div>
     );
   }
+  // One step of the work-rules track: /?shot=rule&lang=nl&step=scene|rule|truefalse|whatdo|whoask|
+  // model|payslip (the default lesson for each kind is in RULE_SHOT; &lesson=r.l.loon.2 another
+  // lesson, &id=<step id> one exact step). The step sits at its place in its real lesson. The
+  // options are best first (true/false: Waar, Niet waar), so the right one is the 1st card and a
+  // wrong one the 2nd (a true/false shot uses a true statement). &retry=1: the step comes back
+  // as a mistake at the end.
+  if (shot === 'rule') return <RuleShot quiet={quiet} lang={getHelpLanguage((lang ?? 'nl') as LangCode, gender)} q={q} />;
   const { lesson } = findLesson('l.gear')!;
   if (shot === 'lesson') {
     // &lesson=l.rights plays another lesson (default Safety gear).
@@ -293,6 +300,55 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       // /?shot=retry: the lesson is through and three mistakes come back (the second is on now).
       // They come back in a new form, as in a real lesson (lib/exercises.ts forRetry).
       repeats={shot === 'retry' ? [exercises.meaning, exercises.dutch, exercises.build].map((e, i) => forRetry(e, lesson, i + 1)) : undefined}
+      onQuit={() => {}}
+      onFinish={() => {}}
+    />
+  );
+}
+
+/** The default real step per kind for /?shot=rule (true/false: a true statement). */
+const RULE_SHOT: Record<RuleKind, { lesson: string; id?: string }> = {
+  scene: { lesson: 'r.l.ziek.1' },
+  rule: { lesson: 'r.l.ziek.1' },
+  truefalse: { lesson: 'r.l.ziek.1', id: 'r.l.ziek.1.tf1' },
+  whatdo: { lesson: 'r.l.ziek.1' },
+  whoask: { lesson: 'r.l.loon.2' },
+  model: { lesson: 'r.l.ziek.1' },
+  payslip: { lesson: 'r.l.loon.2' },
+};
+
+/** Best option first (a fixed order for the screenshot and the max-3 counter). */
+function bestFirst(ex: RuleExercise): RuleExercise {
+  const sort = <T extends { best: boolean }>(xs: readonly T[]) => [...xs].sort((a, b) => Number(b.best) - Number(a.best));
+  switch (ex.kind) {
+    case 'whatdo': return { ...ex, step: { ...ex.step, options: sort(ex.step.options) } };
+    case 'whoask': return { ...ex, step: { ...ex.step, options: sort(ex.step.options) } };
+    case 'payslip': return { ...ex, step: { ...ex.step, options: sort(ex.step.options) } };
+    default: return ex;
+  }
+}
+
+function RuleShot({ quiet, lang, q }: { quiet: boolean; lang?: ReturnType<typeof getHelpLanguage>; q: URLSearchParams }) {
+  const kindParam = q.get('step');
+  const kind: RuleKind = RULE_KINDS.find((k) => k === kindParam) ?? 'whatdo';
+  const id = q.get('id') ?? (q.get('lesson') ? null : RULE_SHOT[kind].id ?? null);
+  const all = courseUnits('regels').flatMap((u) => u.lessons);
+  const lesson = (id ? all.find((l) => l.steps?.some((s) => s.id === id)) : undefined)
+    ?? all.find((l) => l.id === (q.get('lesson') ?? RULE_SHOT[kind].lesson) && l.steps?.some((s) => s.kind === kind))
+    ?? all.find((l) => l.steps?.some((s) => s.kind === kind))
+    ?? all[0];
+  const list = buildRuleLesson(lesson, { seed: 1 }).map((e) => bestFirst(e as RuleExercise));
+  const at = Math.max(0, list.findIndex((e) => (e as RuleExercise).step.id === id || (!id && e.kind === kind)));
+  const retry = q.get('retry') === '1';
+  return (
+    <QuietLesson
+      quiet={quiet}
+      lesson={lesson}
+      review={false}
+      lang={lang}
+      exercises={list}
+      repeats={retry ? [list[at]] : undefined}
+      startAt={retry ? list.length : at}
       onQuit={() => {}}
       onFinish={() => {}}
     />

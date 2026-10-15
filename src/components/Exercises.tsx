@@ -6,7 +6,7 @@ import { checkTyped, tokenize } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
 import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
-import { breakable, wordSize } from '../lib/dutch';
+import { breakable, sentences, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
 import { NlPair } from './NlPair';
 import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
@@ -59,7 +59,7 @@ type Verdict = Props<'meaning'>['verdict'];
  * situation) only ever nod. The pose holds until Continue, so a still frame reads as "right"
  * or "wrong".
  */
-function moodFor(verdict: Verdict, rest: Mood = 'idle', calm = false): Mood {
+export function moodFor(verdict: Verdict, rest: Mood = 'idle', calm = false): Mood {
   if (verdict === 'right') return calm ? 'pleased' : 'happy';
   if (verdict === 'wrong') return 'sad';
   return rest;
@@ -67,7 +67,7 @@ function moodFor(verdict: Verdict, rest: Mood = 'idle', calm = false): Mood {
 
 /** Reaction tiers by run (lib/lessonRun.ts) and by misses in a row, as classes. The calm style
  *  gives them (almost) the same look; they stay as hooks. */
-function reactClass(verdict: Verdict, run = 1, misses = 1): string {
+export function reactClass(verdict: Verdict, run = 1, misses = 1): string {
   if (verdict === 'right' && cheerFor(run) === 'pump') return 'ch-small';
   if (verdict === 'right' && cheerFor(run) === 'big') return 'ch-big';
   if (verdict === 'wrong' && misses > 1) return 'ch-calm';
@@ -175,7 +175,7 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
   );
 }
 
-function ChoiceGrid<T extends { id: string }>({ options, render, correctId, locked, onAnswer, onPick, className, style, stamp = true, lang, side }: {
+export function ChoiceGrid<T extends { id: string }>({ options, render, correctId, locked, onAnswer, onPick, className, style, stamp = true, lang, side }: {
   options: T[];
   lang?: HelpLanguage;
   /** A control beside each card (its own button, e.g. a speaker that only plays the option). */
@@ -196,8 +196,9 @@ function ChoiceGrid<T extends { id: string }>({ options, render, correctId, lock
     sounds.tap();
     setPicked(w.id);
     onPick?.(w);
-    // A tap is the answer: it is graded at once and the options lock (LessonPlayer).
-    onAnswer({ correct: w.id === correctId, done: true });
+    // A tap is the answer: it is graded at once and the options lock (LessonPlayer). `given`:
+    // which option it was (a rules question shows that option's own feedback).
+    onAnswer({ correct: w.id === correctId, done: true, given: [w.id] });
   };
   // Number keys 1–9 pick an option, like the hints on each card say.
   useEffect(() => {
@@ -933,22 +934,8 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
   );
 }
 
-/**
- * A text's sentences. One ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨) and a space,
- * and the next one does not start with a small letter, and the dot is not an abbreviation's
- * ("np. w pracy", "напр. так", "bv. een", "(np. FNV)" go on in the same sentence). A sentence
- * may also end in a bracket ("… apply.) Do not …") or, before a capital, a closing quote ("… eerst
- * …?" This …"): a quoted Dutch phrase inside a sentence ("Say «Gefeliciteerd!» to …") does not
- * end it.
- */
-const SENTENCE_SPLIT = new RegExp([
-  // The Ethiopic and Arabic stops always end a sentence ("… rijksoverheid.nl። cao …").
-  '(?<=[؟።፧፨])\\s+',
-  '(?<=[.!?…])(?<!(?:^|[^\\p{L}])(?:np|bv|vb|vs|ca|bijv|örn|напр|т\\.е|e\\.g|i\\.e|z\\.B|d\\.h)\\.)\\s+(?=\\P{Ll})',
-  '(?<=[.؟።]\\))\\s+(?=\\P{Ll})',
-  '(?<=[.!?…]["”’»“])\\s+(?=\\p{Lu})',
-].join('|'), 'u');
-export const sentences = (text: string) => text.trim().split(SENTENCE_SPLIT);
+/** A text's sentences (moved to lib/dutch.ts; kept here for older imports). */
+export { sentences };
 
 /** The help text as lines, one per sentence; a folded text's closing "…" stays on the last line. */
 function helpLines(text: string): string[] {

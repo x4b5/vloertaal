@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { said, saidLang, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { speak } from '../lib/audio';
+import { canSay, speak, speakLong } from '../lib/audio';
+import { useVoices } from './useVoices';
 import type { VoiceRef } from '../lib/voices';
 import { SlowIcon, SpeakerIcon } from './Icons';
 
@@ -10,7 +11,7 @@ import { SlowIcon, SpeakerIcon } from './Icons';
  * so on, alternating. After a normal play a small turtle sits on the button: the next tap is
  * slow. (`slow` makes a button that always plays slowly.)
  */
-export function SpeakButton({ text, size = 'md', slow = false, label, hideText = false, help, lang = 'nl', glyph = false, voice }: {
+export function SpeakButton({ text, size = 'md', slow = false, label, hideText = false, help, lang = 'nl', glyph = false, voice, long = false, needsDevice = false, className }: {
   text: string;
   /** Plain blue speaker icon (as inside a speech bubble) instead of a filled button. */
   glyph?: boolean;
@@ -26,18 +27,30 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
   lang?: 'nl' | 'en';
   /** Who says it (a character's voice); default: the learner's chosen voice. */
   voice?: VoiceRef;
+  /** A longer text (a story, a rule): read sentence by sentence (speakLong in lib/audio.ts). */
+  long?: boolean;
+  /**
+   * Hidden when nothing can say it: no recording of this text and no Dutch phone voice (the
+   * work-rules track: Dutch is never read by an English voice).
+   */
+  needsDevice?: boolean;
+  className?: string;
 }) {
+  // Re-checked when the phone's voices or the recorded voices arrive.
+  useVoices();
   // Plays of this text (a new text starts at normal speed again).
   const [plays, setPlays] = useState({ text, n: 0 });
   const n = plays.text === text ? plays.n : 0;
   const nextSlow = !slow && n % 2 === 1;
   const play = ui('playAudio', help);
+  if (needsDevice && lang === 'nl' && !canSay(text, voice)) return null;
   return (
     <button
       type="button"
-      className={`${glyph ? 'speak-glyph' : `speak speak-${size} ${slow ? 'speak-slow' : ''}`} ${nextSlow ? 'speak-next-slow' : ''}`}
+      className={`${glyph ? 'speak-glyph' : `speak speak-${size} ${slow ? 'speak-slow' : ''}`} ${nextSlow ? 'speak-next-slow' : ''} ${className ?? ''}`}
       onClick={() => {
-        speak(text, slow || nextSlow, lang, voice);
+        if (long && lang === 'nl') speakLong(text, { slow: slow || nextSlow, voice });
+        else speak(text, slow || nextSlow, lang, voice);
         setPlays({ text, n: n + 1 });
       }}
       aria-label={label ?? (hideText ? said(play) : `${said(play)}: ${text}`)}

@@ -22,7 +22,8 @@
  * Usage:
  *   node count.cjs                       # every state, one configuration
  *   node count.cjs route:mid lesson:*    # some states (a trailing * is a prefix match)
- *   node count.cjs --matrix              # the matrix: pl at 390x844 light, ar at 360x640 dark
+ *   node count.cjs --matrix              # the matrix: pl at 390x844 light, ar at 360x640 dark,
+ *                                        # nl (the work-rules track) at 360x640 light
  *   node count.cjs --list                # list state names
  *   node count.cjs 'url:/?shot=meaning&lang=pl'   # any ad-hoc URL
  * Options:
@@ -31,7 +32,8 @@
  *   --viewport 390x844             phone size (default 390x844)
  *   --theme light|dark             the phone's colour scheme (default light)
  *   --matrix [cfg,cfg]             several configurations, each lang@WxH[:dark]; default
- *                                  "pl@390x844,ar@360x640:dark"
+ *                                  "pl@390x844,ar@360x640:dark,nl@360x640". The nl configuration
+ *                                  is the work-rules track: its own states (defineRuleStates)
  *   --limit 3                      the bar
  *   --out DIR                      write DIR[/<config>]/<state>.png and .json, and audit.json
  *   --no-shots                     skip screenshots
@@ -53,7 +55,7 @@ const flag = (name) => { const i = argv.indexOf(name); if (i < 0) return false; 
 const optOrFlag = (name, def) => { const i = argv.indexOf(name); if (i < 0) return null; const v = argv[i + 1]; if (v && !v.startsWith('-') && /@/.test(v)) { argv.splice(i, 2); return v; } argv.splice(i, 1); return def; };
 const BASE = opt('--base', 'http://localhost:5173');
 const ONE = { lang: opt('--lang', 'pl'), vp: opt('--viewport', '390x844'), theme: opt('--theme', 'light') };
-const MATRIX = optOrFlag('--matrix', 'pl@390x844,ar@360x640:dark');
+const MATRIX = optOrFlag('--matrix', 'pl@390x844,ar@360x640:dark,nl@360x640');
 const LIMIT = Number(opt('--limit', 3));
 const OUT = opt('--out', null);
 const NO_SHOTS = flag('--no-shots');
@@ -143,6 +145,7 @@ const GENDERED = ['ar', 'ti', 'uk', 'pl', 'ro', 'bg'];
  *   expect: 'sel'   must be visible at the end (else FAIL: the flow went somewhere else)
  */
 function defineStates(LANG) {
+  if (LANG === 'nl') return defineRuleStates();
   const shot = (q, lang = LANG) => `/?shot=${q}${lang && !/[?&]lang=/.test(q) ? `&lang=${lang}` : ''}`;
   const S = [];
   const add = (name, url, steps, extra = {}) => S.push({ name, url, steps, ...extra });
@@ -369,6 +372,48 @@ function defineStates(LANG) {
   add('screen:coaches', shot('coaches'), null, { list: true });
   add('screen:tips', shot('tips'), null, { list: true });
   add('screen:tips-open', shot('tips'), async (p) => { await tap(p, '.tips-head', 0); await settle(p); }, { list: true });
+  return S;
+}
+
+/**
+ * The work-rules track (lang nl, src/components/RuleSteps.tsx): every kind of step before and
+ * after answering, on real lessons (/?shot=rule&step=<kind>: the best option is the 1st card, a
+ * wrong one the 2nd). With a Dutch phone voice (`voices`), so every speaker is on screen and
+ * checked (one per text); one state without any voice (speakers hidden, nothing else changes).
+ */
+function defineRuleStates() {
+  const shot = (q) => `/?shot=${q}&lang=nl`;
+  const S = [];
+  const add = (name, url, steps, extra = {}) => S.push({ name, url, steps, voices: true, ...extra });
+  const choice = '.player-body .choice';
+  // `right`/`wrong`: the cards to tap (the best option is the 1st; a false statement's is "Niet waar", the 2nd).
+  const step = (key, q, graded, right = 0, wrong = 1) => {
+    add(`rule:${key}`, shot(q), null, { expect: '.player-body .exercise' });
+    if (!graded) {
+      add(`rule:${key}:next`, shot(q), async (p) => { await go(p); await settle(p, 900); }, { expect: '.player-body .exercise' });
+      return;
+    }
+    add(`rule:${key}:right`, shot(q), async (p) => { await tap(p, choice, right); await settle(p, 900); }, { expect: '.feedback-right' });
+    add(`rule:${key}:wrong`, shot(q), async (p) => { await tap(p, choice, wrong); await settle(p, 900); }, { expect: '.feedback-wrong' });
+  };
+  step('scene', 'rule&step=scene', false);
+  step('rule', 'rule&step=rule', false);
+  step('rule-custom', 'rule&step=rule&lesson=r.l.samen.1', false);
+  step('truefalse', 'rule&step=truefalse', true);
+  step('truefalse-false', 'rule&step=truefalse&id=r.l.loon.1.tf1', true, 1, 0);
+  step('whatdo', 'rule&step=whatdo', true);
+  // Options said out loud: a speaker beside each card (not counted, one per option).
+  step('whatdo-say', 'rule&step=whatdo&id=r.l.zoeken.3.wd2', true);
+  step('whoask', 'rule&step=whoask', true);
+  step('model', 'rule&step=model', false);
+  step('model-clip', 'rule&step=model&id=r.l.veilig.2.mo1', false);
+  step('payslip', 'rule&step=payslip', true);
+  add('rule:retry', shot('rule&step=whatdo&retry=1'), null, { expect: '.tag-repeat' });
+  add('rule:quiet', shot('rule&step=scene&quiet=1'), null, { expect: '.player-body .exercise' });
+  add('rule:quit-dialog', shot('rule&step=whatdo'), async (p) => { await tap(p, '.player-top .lesson-close'); }, { expect: '.pause-sheet .sheet-sound' });
+  add('rule:no-voice', shot('rule&step=whatdo&id=r.l.zoeken.3.wd2'), null, { voices: false, expect: '.player-body .exercise' });
+  // A real rules lesson from its start, played through the player (built from seed 1).
+  add('rule:lesson-start', shot('lesson&lesson=r.l.loon.2'), null, { expect: '.player-body .exercise' });
   return S;
 }
 

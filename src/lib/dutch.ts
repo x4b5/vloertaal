@@ -32,3 +32,20 @@ export function wordSize(nl: string): string {
   const longest = Math.max(...nl.split(/\s+/).map((t) => t.length));
   return longest > 13 ? 'len-l' : longest > 9 ? 'len-m' : '';
 }
+
+/**
+ * A text's sentences. One ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨) and a space,
+ * and the next one does not start with a small letter, and the dot is not an abbreviation's
+ * ("np. w pracy", "напр. так", "bv. een", "(np. FNV)" go on in the same sentence). A sentence
+ * may also end in a bracket ("… apply.) Do not …") or, before a capital, a closing quote ("… eerst
+ * …?" This …"): a quoted Dutch phrase inside a sentence ("Say «Gefeliciteerd!» to …") does not
+ * end it.
+ */
+const SENTENCE_SPLIT = new RegExp([
+  // The Ethiopic and Arabic stops always end a sentence ("… rijksoverheid.nl። cao …").
+  '(?<=[؟።፧፨])\\s+',
+  '(?<=[.!?…])(?<!(?:^|[^\\p{L}])(?:np|bv|vb|vs|ca|bijv|örn|напр|т\\.е|e\\.g|i\\.e|z\\.B|d\\.h)\\.)\\s+(?=\\P{Ll})',
+  '(?<=[.؟።]\\))\\s+(?=\\P{Ll})',
+  '(?<=[.!?…]["”’»“])\\s+(?=\\p{Lu})',
+].join('|'), 'u');
+export const sentences = (text: string) => text.trim().split(SENTENCE_SPLIT);

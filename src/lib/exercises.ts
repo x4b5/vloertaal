@@ -5,6 +5,7 @@ import { courseUnits, unitOfLesson } from '../content/courses';
 import { trackOfId, type Track } from './track';
 import { type CultureTip, tipForLesson } from '../content/culture';
 import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
+import type { RuleStep } from '../content/regels/types';
 import { tokenize } from './answers';
 import { type Access, lessonAllowed } from './access';
 import { createRng, sample, shuffle } from './random';
@@ -35,7 +36,25 @@ export type Exercise =
   /** "What do you do?": the tip's situation with shuffled options. */
   | { kind: 'situation'; tip: CultureTip; options: CultureTip['options'] }
   /** "Say it": hear the Dutch, record yourself, compare, rate yourself. Never graded (lib/speaking.ts). */
-  | { kind: 'speak'; item: SpeakItem };
+  | { kind: 'speak'; item: SpeakItem }
+  /** The work-rules track (src/content/regels): one step of a rules lesson (buildRuleLesson). */
+  | RuleExercise;
+
+/** The kinds of step of a rules lesson (src/content/regels/types.ts). */
+export type RuleKind = RuleStep['kind'];
+export const RULE_KINDS: readonly RuleKind[] = ['scene', 'rule', 'truefalse', 'whatdo', 'whoask', 'model', 'payslip'];
+
+/** A rules step as an exercise: the step itself (its options in the lesson's own order). */
+export type RuleExercise = { [K in RuleKind]: { kind: K; step: Extract<RuleStep, { kind: K }> } }[RuleKind];
+
+/** Is this exercise a step of a rules lesson? */
+export function isRuleExercise(ex: Exercise): ex is RuleExercise {
+  return (RULE_KINDS as readonly string[]).includes(ex.kind);
+}
+
+/** Rule steps that are a question (one best answer): the rest (story, rule card, "Zo zeg je
+ *  het") only goes on. */
+export const GRADED_RULE_KINDS: readonly RuleKind[] = ['truefalse', 'whatdo', 'whoask', 'payslip'];
 
 /**
  * Exercises that can only be answered by hearing: the word is not on screen. They are left out
@@ -55,8 +74,11 @@ export function choicePictures(answer: Word, options: readonly Word[]): boolean[
   return options.map((o) => hasPicture(answer) && hasPicture(o));
 }
 
-/** Intros, tips and speaking practice are not graded; every other exercise is. */
+/** Intros, tips and speaking practice are not graded; every other exercise is. In a rules
+ *  lesson: true/false, what do you do, who do you ask and the payslip are; a story, a rule card
+ *  and a model sentence just go on. */
 export function isGraded(ex: Exercise): boolean {
+  if (isRuleExercise(ex)) return GRADED_RULE_KINDS.includes(ex.kind);
   return ex.kind !== 'intro' && ex.kind !== 'tip' && ex.kind !== 'speak';
 }
 
@@ -582,9 +604,38 @@ export function forRetry(ex: Exercise, lesson: Lesson, seed: number): Exercise {
       return { ...ex, salt: (ex.salt ?? 0) + 1 };
     case 'match':
       return { ...ex, words: reorder(ex.words, rng, ex.words[0]?.id) };
+    // A rules question keeps its own options (another step's would be off-topic), in another
+    // order with the best one on another place. True/false stays Waar, Niet waar.
+    case 'whatdo':
+      return { ...ex, step: { ...ex.step, options: reorder(ex.step.options, rng, ex.step.options.find((o) => o.best)?.id) } };
+    case 'whoask':
+      return { ...ex, step: { ...ex.step, options: reorder(ex.step.options, rng, ex.step.options.find((o) => o.best)?.id) } };
+    case 'payslip':
+      return { ...ex, step: { ...ex.step, options: reorder(ex.step.options, rng, ex.step.options.find((o) => o.best)?.id) } };
     default:
       return ex;
   }
+}
+
+/**
+ * A rules lesson (lesson.steps): its steps in order, each as an exercise, with the options of
+ * every question shuffled by the seed (the same seed, the same lesson, so a saved run resumes).
+ * True/false keeps Waar before Niet waar. A review leaves out the story and the rule card (as a
+ * language review leaves out the intros and the tip): the questions and the model sentences stay.
+ */
+export function buildRuleLesson(lesson: Lesson, opts: { seed?: number; review?: boolean } = {}): Exercise[] {
+  const rng = createRng(opts.seed ?? Date.now());
+  const out: Exercise[] = [];
+  for (const step of lesson.steps ?? []) {
+    if (opts.review && (step.kind === 'scene' || step.kind === 'rule')) continue;
+    switch (step.kind) {
+      case 'whatdo': out.push({ kind: 'whatdo', step: { ...step, options: shuffle(step.options, rng) } }); break;
+      case 'whoask': out.push({ kind: 'whoask', step: { ...step, options: shuffle(step.options, rng) } }); break;
+      case 'payslip': out.push({ kind: 'payslip', step: { ...step, options: shuffle(step.options, rng) } }); break;
+      default: out.push({ kind: step.kind, step } as RuleExercise);
+    }
+  }
+  return out;
 }
 
 /**
@@ -627,6 +678,9 @@ function reverseDialogue(lesson: Lesson): Dialogue | undefined {
  * the lesson keeps its length and nothing needs to be heard.
  */
 export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice }): Exercise[] {
+  // The work-rules track: a lesson of steps (nothing in it needs to be heard, so "Without
+  // sound" and speaking practice change nothing).
+  if (lesson.steps?.length) return buildRuleLesson(lesson, { seed: opts.seed, review: opts.review });
   const rng = createRng(opts.seed ?? Date.now());
   const words = lesson.words;
   const out: Exercise[] = [];

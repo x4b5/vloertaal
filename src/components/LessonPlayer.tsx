@@ -5,7 +5,8 @@ import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, sounds, speak, speechAvailable, stopSpeech } from '../lib/audio';
 import { tileDiff } from '../lib/answers';
-import { buildLesson, forRetry, isGraded, needsAudio, wordsInSentence, type Exercise } from '../lib/exercises';
+import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
+import { dutchUi } from '../lib/track';
 import { chatWhy } from '../content/chatWhy';
 import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
@@ -16,9 +17,10 @@ import { Bi, HelpText } from './Bi';
 import { NlPair } from './NlPair';
 import { FlameIcon } from './StreakArt';
 import {
-  BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, PairIcon,
-  PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon,
+  BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, ListIcon, PairIcon,
+  PictureIcon, AskIcon, QuestionIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon,
 } from './Icons';
+import { ModelLine, PayslipStep, RuleCard, RuleFeedbackBody, ruleAnnouncement, ruleVerdict, SceneCard, TrueFalse, WhatDo, WhoAsk } from './RuleSteps';
 import { MicIcon, SpeakExercise } from './Speaking';
 import { resetMicForLesson, speakingOn, speakSkipped } from '../lib/speaking';
 import {
@@ -62,6 +64,16 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
       return { text: '', nl: false };
     case 'situation':
       return { text: ex.tip.options.find((o) => o.best)!.en, nl: false };
+    // A rules step: the feedback label shows the best answer and the why (RuleFeedbackBody);
+    // nothing is said by itself after the answer.
+    case 'scene':
+    case 'rule':
+    case 'truefalse':
+    case 'whatdo':
+    case 'whoask':
+    case 'model':
+    case 'payslip':
+      return { text: '', nl: false };
     default:
       return { text: ex.word.nl, nl: true };
   }
@@ -89,9 +101,20 @@ function PlayGlyph() {
 
 /**
  * The kraft tag above each exercise: a fixed pictogram per kind of exercise, a short Dutch
- * label, and the same word in the help language (English without one).
+ * label, and the same word in the help language (English without one). The steps of the
+ * work-rules track have a Dutch label only (the track reads in Dutch: no `key`).
  */
-const KIND_TAG: Record<Exercise['kind'], { nl: string; key: UiKey; Icon: (p: { size?: number }) => React.ReactElement }> = {
+type TagIcon = (p: { size?: number }) => React.ReactElement;
+const RULE_TAG: Record<RuleKind, { nl: string; Icon: TagIcon }> = {
+  scene: { nl: 'Verhaal', Icon: PictureIcon },
+  rule: { nl: 'Regel', Icon: BulbIcon },
+  truefalse: { nl: 'Waar of niet waar?', Icon: QuestionIcon },
+  whatdo: { nl: 'Wat doe je?', Icon: SignpostIcon },
+  whoask: { nl: 'Wie vraag je het?', Icon: AskIcon },
+  model: { nl: 'Zo zeg je het', Icon: BubblesIcon },
+  payslip: { nl: 'Je loonstrook', Icon: ListIcon },
+};
+const KIND_TAG: Record<Exclude<Exercise['kind'], RuleKind>, { nl: string; key: UiKey; Icon: TagIcon }> = {
   intro: { nl: 'Nieuw woord', key: 'newWord', Icon: SparkleIcon },
   meaning: { nl: 'Betekenis', key: 'tagMeaning', Icon: AskIcon },
   dutch: { nl: 'Kies', key: 'tagPick', Icon: PictureIcon },
@@ -106,7 +129,19 @@ const KIND_TAG: Record<Exercise['kind'], { nl: string; key: UiKey; Icon: (p: { s
 };
 
 function KindTag({ kind, lang }: { kind: Exercise['kind']; lang?: HelpLanguage }) {
-  const { nl, key, Icon } = KIND_TAG[kind];
+  if (kind in RULE_TAG || dutchUi(lang)) {
+    // Dutch only: a rules step, or the work-rules track's own Dutch label for the kind.
+    const rule = RULE_TAG[kind as RuleKind];
+    const { nl, Icon } = rule ?? KIND_TAG[kind as Exclude<Exercise['kind'], RuleKind>];
+    const label = rule ? nl : ui(KIND_TAG[kind as Exclude<Exercise['kind'], RuleKind>].key, lang).help ?? nl;
+    return (
+      <span className="tag tag-kind">
+        <span className="tag-icon" aria-hidden><Icon size={20} /></span>
+        <span className="tag-nl" lang="nl">{label}</span>
+      </span>
+    );
+  }
+  const { nl, key, Icon } = KIND_TAG[kind as Exclude<Exercise['kind'], RuleKind>];
   const word = ui(key, lang);
   const same = !word.help && word.en.toLowerCase() === nl.toLowerCase();
   return (
@@ -123,6 +158,15 @@ function KindTag({ kind, lang }: { kind: Exercise['kind']; lang?: HelpLanguage }
 /** The retry phase: "Herhalen · nog N" with the help language large (like the kind tag). */
 function RepeatTag({ left, lang }: { left: number; lang?: HelpLanguage }) {
   const word = ui('tagRepeat', lang);
+  // The work-rules track: one Dutch label, no second line.
+  if (dutchUi(lang)) {
+    return (
+      <span className="tag tag-kind tag-repeat">
+        <span className="tag-nl" lang="nl">Herhalen</span>
+        <span className="tag-count" lang="nl">· {left}</span>
+      </span>
+    );
+  }
   return (
     <span className="tag tag-kind tag-repeat">
       <span className="tag-nl" lang="nl">Herhalen</span>
@@ -439,7 +483,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         return;
       }
       // (A chat's reply bubble is not among them: the label repeats the reply, the options matter.)
-      const marked = document.querySelectorAll<HTMLElement>('.player-body .choice.wrong, .player-body .choice.right, .player-body .answer-line');
+      // (A payslip's row that lit up counts too: it is what the answer is about.)
+      const marked = document.querySelectorAll<HTMLElement>('.player-body .choice.wrong, .player-body .choice.right, .player-body .answer-line, .player-body .slip-hit');
       if (!foot || !marked.length) return;
       const bottom = Math.max(...[...marked].map((el) => el.getBoundingClientRect().bottom));
       const top = Math.min(...[...marked].map((el) => el.getBoundingClientRect().top));
@@ -498,6 +543,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       if (ex.kind === 'meaning' || ex.kind === 'dutch' || ex.kind === 'listen' || ex.kind === 'type') {
         wordResults.current[ex.word.id] = (wordResults.current[ex.word.id] ?? true) && answer.correct;
       }
+      // A rules question: per step (its id), for the daily review of the track (M4).
+      if (isRuleExercise(ex)) wordResults.current[ex.step.id] = (wordResults.current[ex.step.id] ?? true) && answer.correct;
       // A match or a sentence that counts as a mistake: the words the wrong taps were on go back
       // to the first box of the review cards too (one stray tap is forgiven, as in the grading).
       if (!answer.correct && answer.missed?.length) {
@@ -539,7 +586,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       if (index < initial.length) setQueue((q) => [...q, forRetry(ex, lesson, seed + q.length)]);
     }
     const sol = solution(ex);
-    const said = announce(ex, answer.correct, answer.almost);
+    const said = announce(ex, answer.correct, answer.almost, answer.given?.[0]);
     later(30, () => setLive(said));
     // The answer is said by the character on screen, so a woman never speaks with a man's voice:
     // in a chat the right reply is "your" line (Amina); a built sentence belongs to its speaker.
@@ -549,7 +596,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   checkRef.current = check;
 
   /** What the status region says after Check: the outcome, then the right answer. */
-  function announce(e: Exercise, correct: boolean, almost?: boolean): string {
+  function announce(e: Exercise, correct: boolean, almost?: boolean, given?: string): string {
+    const rv = isRuleExercise(e) ? ruleVerdict(e, correct, given) : null;
+    if (rv) return ruleAnnouncement(rv);
     const title = correct ? 'Goed zo!' : e.kind === 'situation' ? 'Hier gaat het anders.' : 'Nog eens!';
     const meaning = ui(correct ? (almost ? 'almost' : e.kind === 'situation' ? 'goodChoice' : 'correct') : e.kind === 'situation' ? 'otherChoice' : 'incorrect', lang);
     const p = answerPair(e, lang);
@@ -656,6 +705,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'tip': body = <TipCard key={key} ex={ex} {...props} />; break;
     case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
     case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onNext={next} onRating={setSpeakRating} />; break;
+    case 'scene': body = <SceneCard key={key} ex={ex} {...props} />; break;
+    case 'rule': body = <RuleCard key={key} ex={ex} {...props} />; break;
+    case 'truefalse': body = <TrueFalse key={key} ex={ex} {...props} />; break;
+    case 'whatdo': body = <WhatDo key={key} ex={ex} {...props} />; break;
+    case 'whoask': body = <WhoAsk key={key} ex={ex} {...props} />; break;
+    case 'model': body = <ModelLine key={key} ex={ex} {...props} />; break;
+    case 'payslip': body = <PayslipStep key={key} ex={ex} {...props} />; break;
   }
 
   const sol = solution(ex);
@@ -667,7 +723,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // A situation is graded like the rest: the usual choice is green with a check; any other
   // choice is red with a cross and the best answer under it (never a neutral sheet).
   const outcome: 'right' | 'wrong' | null = feedback ? (answer.correct ? 'right' : 'wrong') : null;
-  const headingMeaning = feedback
+  // A rules question: Dutch only (its title, the picked option's line, the best answer, why).
+  const ruleFb = feedback && isRuleExercise(ex) ? ruleVerdict(ex, answer.correct, answer.given?.[0]) : null;
+  const headingMeaning = ruleFb ? null : feedback
     ? ui(answer.correct ? (answer.almost ? 'almost' : ex.kind === 'situation' ? 'goodChoice' : 'correct') : ex.kind === 'situation' ? 'otherChoice' : 'incorrect', lang)
     : null;
   const pairHelp = pair?.meaning.help ?? '';
@@ -736,7 +794,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       {why.help && why.lang && <HelpText text={why.help} lang={why.lang} />}
     </div>
   );
-  const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip' || ex.kind === 'speak';
+  const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip' || ex.kind === 'speak' || (isRuleExercise(ex) && !isGraded(ex));
   // One bar: ink for done, yellow for where you are, a kraft tail for mistakes that come back.
   const bar = barParts(index, checked, initial.length, queue.length);
   const doneCount = Math.round(bar.done * bar.slots);
@@ -848,12 +906,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                   {headingMeaning?.help && lang && <HelpText className="feedback-help" text={headingMeaning.help} lang={lang} />}
                   <div className="feedback-line">
                     <span className="feedback-title" lang="nl" dir={rtl ? 'ltr' : undefined}>
-                      {answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Nog eens!'}
+                      {ruleFb ? ruleFb.title : answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Nog eens!'}
                     </span>
                     {headingMeaning?.help && <span className="feedback-sep en-support" aria-hidden>·</span>}
                     {headingMeaning && <span className={`feedback-en ${headingMeaning.help && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{headingMeaning.en}</span>}
                   </div>
                 </div>
+                {ruleFb && <RuleFeedbackBody v={ruleFb} lang={lang} />}
                 {(pairLine || whyLine) && <hr className="feedback-rule" />}
                 {!answer.correct && sol.text && (
                   <div className="feedback-kicker">

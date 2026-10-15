@@ -6,7 +6,7 @@ import { loadPictures, usePicturesLoaded } from './pictures';
 import type { UiCode } from './i18n/types';
 import { isPlayable } from './content/courses';
 import { trackOf } from './lib/track';
-import { setPreferredVoice, setQuietAudio } from './lib/audio';
+import { setDeviceRate, setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
@@ -353,6 +353,8 @@ export default function App() {
   // Set during render, not in an effect: a child's effect (an exercise that would say its word)
   // runs before the parent's, and must already know that sound is off.
   setQuietAudio(Boolean(progress.quiet));
+  // The phone's voice reads at an easier, normal pace in the work-rules track (lib/audio.ts).
+  setDeviceRate(trackOf(progress));
   const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);

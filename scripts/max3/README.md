@@ -7,7 +7,7 @@ taalkeuze, begeleiders) zijn een uitzondering: één soort rij, één tik per ri
 
     npx vite                                   # dev-server op :5173
     node scripts/max3/count.cjs --list         # alle schermen
-    node scripts/max3/count.cjs --matrix       # pl@390x844 en ar@360x640 donker
+    node scripts/max3/count.cjs --matrix       # pl@390x844, ar@360x640 donker, nl@360x640 (werkregels)
     node scripts/max3/count.cjs 'lesson:*' --fail-exit
 
 Nodig: Playwright met Chromium.
