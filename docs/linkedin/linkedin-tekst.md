@@ -12,7 +12,7 @@ De cijfers bevestigen dat. Ruim 3 miljoen mensen tussen 16 en 75 jaar hebben moe
 
 Dat zette me aan het denken. Waarom is er geen app waarmee je Nederlands leert voor je werk, die gratis is, zonder account werkt én leuk is om te doen?
 
-Dus heb ik hem gebouwd, in mijn vrije tijd: **vloertaal.nl** 👷
+Dus heb ik hem gebouwd: **vloertaal.nl** 👷
 • Korte lessen over echte werksituaties: veiligheid, ziekmelden, je rooster, je loonstrook
 • Alles wordt voorgelezen, met plaatjes en weinig tekst
 • Hulp in 9 talen, van Arabisch en Tigrinya tot Pools en Oekraïens
