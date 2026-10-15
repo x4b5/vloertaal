@@ -246,7 +246,7 @@ const lang: HelpLanguageSource = {
     writingPick: 'Избор на дума',
     settingWriting: 'Писане',
     settingKeepLessons: 'Пази уроците на този телефон',
-    settingKeepLessonsHint: 'Текущата тема се запазва на този телефон, така че работи и без интернет. Завършените теми се изтриват отново.',
+    settingKeepLessonsHint: 'Текущата тема се запазва на този телефон, така че работи и без интернет. Завършените теми после се изтриват.',
     otherTopicLink: 'Друга тема',
     remindAsk: 'Да ти напомняме ли всеки ден?',
     remindYes: 'Да, след работа',

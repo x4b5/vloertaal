@@ -245,7 +245,7 @@ const lang: HelpLanguageSource = {
     voiceMan: 'Głos mężczyzny',
     writingPick: 'Wybór słowa',
     settingWriting: 'Pisanie',
-    settingKeepLessons: 'Trzymaj lekcje na tym telefonie',
+    settingKeepLessons: 'Przechowuj lekcje na tym telefonie',
     settingKeepLessonsHint: 'Obecny temat zapisuje się na tym telefonie, więc działa też bez internetu. Ukończone tematy są potem usuwane.',
     otherTopicLink: 'Inny temat',
     remindAsk: 'Przypominać ci codziennie?',
