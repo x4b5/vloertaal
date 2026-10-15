@@ -873,11 +873,19 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
 }
 
 /**
- * A text's sentences: one ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨), maybe a
- * closing quote or bracket, and a space, and the next one does not start with a small letter: an abbreviation ("np. w pracy", "напр.
- * так", "bv. een") goes on in the same sentence.
+ * A text's sentences. One ends with . ! ? (also the Arabic ؟ and the Ethiopic ። ፧ ፨) and a space,
+ * and the next one does not start with a small letter, and the dot is not an abbreviation's
+ * ("np. w pracy", "напр. так", "bv. een", "(np. FNV)" go on in the same sentence). A sentence
+ * may also end in a bracket ("… apply.) Do not …") or, before a capital, a closing quote ("… eerst
+ * …?" This …"): a quoted Dutch phrase inside a sentence ("Say «Gefeliciteerd!» to …") does not
+ * end it.
  */
-export const sentences = (text: string) => text.trim().split(/(?<=[.!?؟።፧፨…]["”’»)]?)\s+(?=\P{Ll})/u);
+const SENTENCE_SPLIT = new RegExp([
+  '(?<=[.!?؟።፧፨…])(?<!(?:^|[^\\p{L}])(?:np|bv|vb|vs|ca|bijv|örn|напр|т\\.е|e\\.g|i\\.e|z\\.B|d\\.h)\\.)\\s+(?=\\P{Ll})',
+  '(?<=[.؟።]\\))\\s+(?=\\P{Ll})',
+  '(?<=[.!?…]["”’»“])\\s+(?=\\p{Lu})',
+].join('|'), 'u');
+export const sentences = (text: string) => text.trim().split(SENTENCE_SPLIT);
 
 /** The help text as lines, one per sentence; a folded text's closing "…" stays on the last line. */
 function helpLines(text: string): string[] {
