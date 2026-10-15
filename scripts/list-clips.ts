@@ -5,6 +5,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { cultureTips } from '../src/content/culture';
 import { phrasebookExtras, units } from '../src/content/curriculum';
 import { tokenize } from '../src/lib/answers';
+import { sayAs } from '../src/lib/sayAs';
 import { BRAM_HELLO, BRAM_VOICE, VOICE_SAMPLE } from '../src/lib/voices';
 
 const clips = new Map<string, string>();
@@ -51,9 +52,26 @@ for (const u of units)
         add(`t.${word}`, word);
       }
 
+// How a clip is pronounced where the spelling would mislead the voice (src/lib/sayAs.ts:
+// "app" → "ep"). The app shows `text`; the voice is given `say`. `take` re-records clips that
+// were made before their `say` existed.
+const SAY_TAKE = 2;
+
 mkdirSync('public/audio', { recursive: true });
 writeFileSync(
   'public/audio/clips.json',
-  JSON.stringify([...clips].map(([id, text]) => (onlyVoices.has(id) ? { id, text, voices: onlyVoices.get(id) } : { id, text })), null, 1),
+  JSON.stringify(
+    [...clips].map(([id, text]) => {
+      const say = sayAs(text);
+      return {
+        id,
+        text,
+        ...(say !== text ? { say, take: SAY_TAKE } : {}),
+        ...(onlyVoices.has(id) ? { voices: onlyVoices.get(id) } : {}),
+      };
+    }),
+    null,
+    1,
+  ),
 );
 console.log(`${clips.size} clips`);

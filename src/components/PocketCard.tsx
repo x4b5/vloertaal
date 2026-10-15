@@ -8,6 +8,7 @@ import { unitIndex } from '../lib/certificate';
 import { pocketPhrases } from '../lib/pocket';
 import { savePocketCard } from '../lib/pocketCanvas';
 import { englishHidden, wantsEnglish } from '../lib/english';
+import { trackOfId } from '../lib/track';
 import { WordPicture } from '../pictures';
 import { Bi, HelpText } from './Bi';
 import { NlPair } from './NlPair';
@@ -29,6 +30,10 @@ export function PocketCardScreen({ unit, lang, onBack, sector }: { unit: Unit; l
   const [busy, setBusy] = useState(false);
   const [saved, setSaved] = useState(false);
   const help = lang?.gloss[unit.id];
+  // The work-rules track: rules and sentences to say, in Dutch only (no English line, no second
+  // title: the unit's title is Dutch already). Each row has one speaker, hidden when nothing can
+  // say it (no recording of that text and no Dutch phone voice).
+  const rules = trackOfId(unit.id) === 'regels';
 
   // The tab title names the PDF when printed to a file.
   useEffect(() => {
@@ -44,10 +49,11 @@ export function PocketCardScreen({ unit, lang, onBack, sector }: { unit: Unit; l
       const how = await savePocketCard(
         {
           titleNl: unit.titleNl,
-          titleEn: unit.title,
+          titleEn: rules ? '' : unit.title,
           titleHelp: help,
           helpDir: lang?.dir ?? 'ltr',
-          english: !englishHidden(lang?.code, wantsEnglish()),
+          english: !rules && !englishHidden(lang?.code, wantsEnglish()),
+          ...(rules ? { footer: 'Vloertaal · Werken in Nederland' } : {}),
           rows: phrases.map((p, i) => ({
             nl: p.nl,
             en: p.en,
@@ -83,11 +89,24 @@ export function PocketCardScreen({ unit, lang, onBack, sector }: { unit: Unit; l
               <span className="pocket-tab-no">{String(unitIndex(unit, sector) + 1).padStart(2, '0')}</span> Spiekkaartje
             </span>
             <h2 className="pocket-title" lang="nl" dir="ltr">{unit.titleNl}</h2>
-            {help ? <HelpText className="pocket-sub" text={help} lang={lang!} /> : <span className="pocket-sub" lang="en">{unit.title}</span>}
+            {rules ? null : help ? <HelpText className="pocket-sub" text={help} lang={lang!} /> : <span className="pocket-sub" lang="en">{unit.title}</span>}
           </div>
         </header>
-        <ol className="pocket-list">
+        <ol className={`pocket-list ${rules ? 'pocket-list-rules' : ''}`}>
           {phrases.map((p, i) => {
+            if (p.rule) {
+              return (
+                <li key={p.id} className={`pocket-row pocket-row-${p.rule}`}>
+                  <span className="pocket-pic" aria-hidden>
+                    {p.picture ? <span className="pocket-rule-emoji">{p.picture.emoji}</span> : <span className="pocket-no">{i + 1}</span>}
+                  </span>
+                  <span className="pocket-text">
+                    <span className="pocket-nl" lang="nl" dir="ltr">{p.nl}</span>
+                  </span>
+                  <SpeakButton text={p.nl} long needsDevice help={lang} />
+                </li>
+              );
+            }
             const helpLine = lang?.gloss[p.id];
             return (
               <li key={p.id} className="pocket-row">

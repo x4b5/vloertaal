@@ -3,8 +3,19 @@
  * every day. The phone's own calendar does the reminding, so nothing is sent anywhere.
  */
 
+import type { Track } from './track';
+
 /** Bram, the mascot, says it: calm, one line, the time it takes. */
 export const REMINDER_TITLE = 'Bram: tijd voor je Nederlands (10 minuten)';
+/** The same in the work-rules track (src/lib/track.ts): a rules lesson takes about 5 minutes. */
+export const REMINDER_TITLE_RULES = 'Bram: tijd voor de werkregels (5 minuten)';
+
+/** What the calendar event says, per track: its title, the line under it and how long it lasts. */
+export function reminderText(track: Track = 'taal'): { title: string; description: string; minutes: number } {
+  return track === 'regels'
+    ? { title: REMINDER_TITLE_RULES, description: 'Bram van Vloertaal: leer in 5 minuten hoe het werk in Nederland gaat.', minutes: 5 }
+    : { title: REMINDER_TITLE, description: 'Bram van Vloertaal: oefen 10 minuten Nederlands voor je werk.', minutes: 10 };
+}
 
 /** The three quick choices: before work, in the break, after work. */
 export const REMINDER_TIMES = [
@@ -47,15 +58,16 @@ export function parseTime(time: string): [number, number] {
 }
 
 /**
- * The calendar file: a daily event of 10 minutes at `time` (local, "floating" time, so it stays at
+ * The calendar file: a daily event of 10 minutes (the work-rules track: 5) at `time` (local, "floating" time, so it stays at
  * 07:00 wherever the phone is), starting today if that time is still to come, else tomorrow.
  * It links back to the app and has an alert at the start.
  */
-export function reminderIcs(time: string, appUrl: string, now: Date): string {
+export function reminderIcs(time: string, appUrl: string, now: Date, track: Track = 'taal'): string {
+  const text = reminderText(track);
   const [h, m] = parseTime(time);
   const start = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m);
   if (start <= now) start.setDate(start.getDate() + 1);
-  const end = new Date(start.getTime() + 10 * 60_000);
+  const end = new Date(start.getTime() + text.minutes * 60_000);
   const local = (d: Date) =>
     `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
   const utc = (d: Date) =>
@@ -72,12 +84,12 @@ export function reminderIcs(time: string, appUrl: string, now: Date): string {
     `DTSTART:${local(start)}`,
     `DTEND:${local(end)}`,
     'RRULE:FREQ=DAILY',
-    `SUMMARY:${escapeText(REMINDER_TITLE)}`,
-    `DESCRIPTION:${escapeText(`Bram van Vloertaal: oefen 10 minuten Nederlands voor je werk. ${appUrl}`)}`,
+    `SUMMARY:${escapeText(text.title)}`,
+    `DESCRIPTION:${escapeText(`${text.description} ${appUrl}`)}`,
     `URL:${appUrl}`,
     'BEGIN:VALARM',
     'ACTION:DISPLAY',
-    `DESCRIPTION:${escapeText(REMINDER_TITLE)}`,
+    `DESCRIPTION:${escapeText(text.title)}`,
     'TRIGGER:PT0M',
     'END:VALARM',
     'END:VEVENT',

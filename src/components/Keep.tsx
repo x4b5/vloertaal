@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { learnedWords } from '../content/curriculum';
+import { learnedItems } from '../content/courses';
+import { trackOf, trackOfLang } from '../lib/track';
 import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
@@ -111,7 +112,7 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
   const add = () => {
     if (!chosen) return;
     const url = `${location.origin}${location.pathname}`;
-    saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(chosen, url, new Date()));
+    saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(chosen, url, new Date(), trackOfLang(lang?.code)));
     rememberReminder(chosen);
     setSaved(true);
   };
@@ -271,7 +272,9 @@ export function BackupCard({ progress, lang, onRestore }: {
   const [found, setFound] = useState<Partial<Progress> | null>(null);
   const [note, setNote] = useState<'bad' | 'back' | null>(null);
   const lessons = Object.keys(progress.completed).length;
-  const words = learnedWords(progress.completed).size;
+  // Words learned, or in the work-rules track rules learned.
+  const rules = trackOf(progress) === 'regels';
+  const words = learnedItems(trackOf(progress), progress.completed);
   const today = new Date();
   const stamp = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 
@@ -298,7 +301,7 @@ export function BackupCard({ progress, lang, onRestore }: {
       {/* What the file holds, like the lines of a waybill. */}
       <dl className="waybill-lines" lang="nl">
         <div><dt>Lessen</dt><dd>{lessons}</dd></div>
-        <div><dt>Woorden</dt><dd>{words}</dd></div>
+        <div><dt>{rules ? 'Regels' : 'Woorden'}</dt><dd>{words}</dd></div>
         <div><dt>Record</dt><dd>{bestStreak(progress)}</dd></div>
       </dl>
       {found ? (
@@ -349,9 +352,9 @@ export function BackupCard({ progress, lang, onRestore }: {
 /* ---- After the first day: the reminder and the home screen, a few calm pages ---- */
 
 /** Puts the daily reminder in the phone's calendar (a .ics file the phone opens). */
-function addReminder(time: string) {
+function addReminder(time: string, lang?: HelpLanguage) {
   const url = `${location.origin}${location.pathname}`;
-  saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, url, new Date()));
+  saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, url, new Date(), trackOfLang(lang?.code)));
   rememberReminder(time);
 }
 
@@ -395,7 +398,7 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
     if (next === 'done') onDone();
     else { setStep(next); window.scrollTo(0, 0); }
   };
-  const remind = (time: string, action: KeepAction) => { addReminder(time); setAdded(time); go(action); };
+  const remind = (time: string, action: KeepAction) => { addReminder(time, lang); setAdded(time); go(action); };
   const [short] = useState(() => typeof window !== 'undefined' && window.innerHeight < 720);
   const hero = (mood: 'wave' | 'cheer') => <div className="keep-hero" aria-hidden><Character who="bram" mood={mood} size={short ? 72 : 112} /></div>;
 

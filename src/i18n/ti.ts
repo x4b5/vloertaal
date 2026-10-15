@@ -284,6 +284,7 @@ const lang: HelpLanguageSource = {
     bramIntro: { m: 'ኣነ Bram እየ፣ ብጻይ ስራሕካ።', f: 'ኣነ Bram እየ፣ ብጻይ ስራሕኪ።' },
     bramIntroHello: 'ሰላም፣ ኣነ Bram እየ።',
     showDutch: 'ብሆላንድኛ ምርኣይ',
+    lastUpdated: 'ዝተሓደሰሉ ዕለት: {date}',
     /* G4 b3 */
     buildListen: { m: 'ስማዕ እሞ ነቲ ሓረግ ስራሕ', f: 'ስምዒ እሞ ነቲ ሓረግ ስርሒ' },
     chatWhichQuestion: 'ምስዚ መልሲ ዝኸይድ ኣየናይ ሕቶ እዩ?',

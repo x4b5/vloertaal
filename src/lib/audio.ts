@@ -1,4 +1,6 @@
 import { BRAM_HELLO, BRAM_VOICE, DEVICE, type VoiceRef } from './voices';
+import { sayAs } from './sayAs';
+import { sentences } from './dutch';
 
 /** Dutch text-to-speech through the browser, plus small feedback sounds. */
 
@@ -39,6 +41,11 @@ export function isQuietAudio(): boolean {
  */
 export function autoSpeak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef): void {
   if (!quietAudio) speak(text, slow, lang, voice);
+}
+
+/** speakLong() that starts by itself (a story on screen): silent in "Without sound". */
+export function autoSpeakLong(text: string, opts: LongSpeech = {}): void {
+  if (!quietAudio) speakLong(text, opts);
 }
 
 export interface RecordedVoice {
@@ -220,6 +227,20 @@ const RECORDED_RATE = { normal: 0.75, slow: 0.5 };
 const VOICE_PACE: Record<string, number> = { noa: 1.2 };
 /** The phone's own voice already speaks a little faster than the recordings. */
 const DEVICE_RATE = { normal: 0.75, slow: 0.45 };
+/** The work-rules track is for people who speak Dutch already: the phone's voice at an easy
+ *  but normal pace there. The turtle tap stays slow in both tracks. */
+const DEVICE_RATE_RULES = 0.9;
+let deviceNormal = DEVICE_RATE.normal;
+
+/** The phone voice's pace for a track ('regels': about 0.9; 'taal': 0.75, as before). */
+export function setDeviceRate(track: 'taal' | 'regels'): void {
+  deviceNormal = track === 'regels' ? DEVICE_RATE_RULES : DEVICE_RATE.normal;
+}
+
+/** The phone voice's rate now (normal or slow). */
+export function deviceRate(slow = false): number {
+  return slow ? DEVICE_RATE.slow : deviceNormal;
+}
 
 let playing: HTMLAudioElement | null = null;
 
@@ -248,14 +269,93 @@ export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voic
     playClip(clipPath(rec, id), text, slow, lang, VOICE_PACE[rec.voice.key] ?? 1);
     return;
   }
-  // "device" (female characters) still honours a phone voice the learner picked.
+  speakDevice(text, slow, lang, deviceUriFor(ref));
+}
+
+/** The phone voice a reference asks for: a device voiceURI, or for "device" (female characters)
+ *  still a phone voice the learner picked. */
+function deviceUriFor(ref: VoiceRef): string | undefined {
   const isDeviceUri = (r: VoiceRef) => !!r && r !== DEVICE && !r.startsWith('piper:');
-  const deviceUri = isDeviceUri(ref) ? ref! : ref === DEVICE && isDeviceUri(preferredVoice) ? preferredVoice! : undefined;
-  speakDevice(text, slow, lang, deviceUri);
+  return isDeviceUri(ref) ? ref! : ref === DEVICE && isDeviceUri(preferredVoice) ? preferredVoice! : undefined;
+}
+
+/** The phone has a Dutch voice (the list loads late in some browsers: ask again on voiceschanged). */
+export function hasDutchVoice(): boolean {
+  return dutchVoices().length > 0;
+}
+
+/** A recording exists for this whole Dutch text (in this voice, or one of the same gender). */
+export function hasClip(text: string, voice?: VoiceRef): boolean {
+  return clipUrl(text, voice) !== undefined;
+}
+
+/**
+ * Can this Dutch text be said: a recording of the whole text, or a Dutch phone voice. Without
+ * either a speaker is hidden (never Dutch read by an English voice).
+ */
+export function canSay(text: string, voice?: VoiceRef): boolean {
+  return hasClip(text, voice) || (speechAvailable() && hasDutchVoice());
+}
+
+export interface LongSpeech {
+  /** Who says it (a character's voice); default: the learner's chosen voice. */
+  voice?: VoiceRef;
+  slow?: boolean;
+}
+
+/**
+ * Read a longer Dutch text aloud (a story, a rule, a why). One recorded clip when the WHOLE text
+ * has one; otherwise the phone's Dutch voice, one utterance per sentence (Chrome on Android cuts
+ * long utterances off), queued. Never a clip for one sentence and the phone for the next: one
+ * block, one voice. Each sentence reports itself to onSpeech (and the whole text at its start and
+ * end), so a character talks along. Anything that speaks next (another tap) cancels the rest.
+ * Returns false when nothing can say it (no clip, no Dutch phone voice): then nothing plays.
+ */
+export function speakLong(text: string, opts: LongSpeech = {}): boolean {
+  const ref = opts.voice === undefined ? preferredVoice : opts.voice;
+  const slow = Boolean(opts.slow);
+  const chosen = recordedFor(ref);
+  const found = chosen && clipFor(chosen, text);
+  if (found) {
+    const { rec, id } = found;
+    // A broken file: the phone reads the whole block instead (still one voice for the block).
+    playClip(clipPath(rec, id), text, slow, 'nl', VOICE_PACE[rec.voice.key] ?? 1, () => speakSentences(text, slow, deviceUriFor(ref)));
+    return true;
+  }
+  return speakSentences(text, slow, deviceUriFor(ref));
+}
+
+/** The phone's Dutch voice, one queued utterance per sentence (see speakLong). */
+function speakSentences(text: string, slow: boolean, voiceURI: string | undefined): boolean {
+  stopAll();
+  if (!speechAvailable() || !hasDutchVoice()) return false;
+  const synth = window.speechSynthesis;
+  const parts = sentences(text).map((p) => p.trim()).filter(Boolean);
+  if (!parts.length) return false;
+  const voice = dutchVoice(voiceURI);
+  const turn = ++speechTurn;
+  const mine = () => turn === speechTurn;
+  parts.forEach((part, i) => {
+    const u = new SpeechSynthesisUtterance(sayAs(part));
+    u.lang = 'nl-NL';
+    if (voice) u.voice = voice;
+    u.rate = deviceRate(slow);
+    // The first sentence is reported right away (some phones never fire onstart).
+    if (i > 0) u.onstart = () => { if (mine()) emitSpeech(part, true, slow); };
+    u.onend = u.onerror = () => {
+      if (!mine()) return;
+      emitSpeech(part, false, slow);
+      if (i === parts.length - 1) emitSpeech(text, false, slow);
+    };
+    synth.speak(u);
+  });
+  emitSpeech(text, true, slow);
+  emitSpeech(parts[0], true, slow);
+  return true;
 }
 
 /** Plays one recorded clip; a missing or broken file lets the phone say the text instead. */
-function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', pace = 1): void {
+function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', pace = 1, onFail?: () => void): void {
   stopAll();
   const audio = new Audio(url);
   audio.playbackRate = (slow ? RECORDED_RATE.slow : RECORDED_RATE.normal) * pace;
@@ -269,7 +369,9 @@ function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', p
   audio.onended = end;
   // A missing or broken clip: let the phone say it instead.
   audio.onerror = () => {
-    if (turn === speechTurn) speakDevice(text, slow, lang, undefined);
+    if (turn !== speechTurn) return;
+    if (onFail) onFail();
+    else speakDevice(text, slow, lang, undefined);
   };
   audio.play().catch(end);
   emitSpeech(text, true, slow);
@@ -311,11 +413,11 @@ function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: s
   playing?.pause();
   playing = null;
   synth.cancel();
-  const u = new SpeechSynthesisUtterance(text);
+  const u = new SpeechSynthesisUtterance(lang === 'en' ? text : sayAs(text));
   u.lang = lang === 'en' ? 'en-GB' : 'nl-NL';
   const voice = lang === 'en' ? undefined : dutchVoice(voiceURI);
   if (voice) u.voice = voice;
-  u.rate = slow ? DEVICE_RATE.slow : DEVICE_RATE.normal;
+  u.rate = deviceRate(slow);
   // cancel() ends the previous utterance asynchronously; only the latest one reports its end.
   const turn = ++speechTurn;
   u.onend = u.onerror = () => {

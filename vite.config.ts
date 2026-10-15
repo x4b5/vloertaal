@@ -1,5 +1,7 @@
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+import { UPDATES } from './src/content/updates';
+import { updatesPage } from './src/lib/updatesPage';
 
 /**
  * The app's stylesheet does not block the first paint: index.html's inline splash (logo, ink on
@@ -18,8 +20,19 @@ function nonBlockingCss(): Plugin {
   };
 }
 
+/** vloertaal.nl/nieuw: "Wat is er nieuw?", a plain page made from src/content/updates.ts. */
+function updatesPagePlugin(): Plugin {
+  return {
+    name: 'vloertaal-updates-page',
+    apply: 'build',
+    generateBundle() {
+      this.emitFile({ type: 'asset', fileName: 'nieuw/index.html', source: updatesPage(UPDATES) });
+    },
+  };
+}
+
 // Relative base so the build works on GitHub Pages or any sub-path.
 export default defineConfig({
   base: './',
-  plugins: [react(), nonBlockingCss()],
+  plugins: [react(), nonBlockingCss(), updatesPagePlugin()],
 });

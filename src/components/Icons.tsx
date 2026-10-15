@@ -448,3 +448,13 @@ export const PhoneIcon = (p: IconProps) => (
     <path d="M10.5 17.6h3" {...stroke} strokeWidth={2.3} />
   </Svg>
 );
+
+/** A telephone handset: "tap to call" (the Hulp tab of the work-rules track). */
+export const CallIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path
+      d="M6.6 3.5h2.6l1.4 4.1-2 1.5a12 12 0 0 0 6.3 6.3l1.5-2 4.1 1.4v2.6a2 2 0 0 1-2.1 2A16.5 16.5 0 0 1 4.6 5.6a2 2 0 0 1 2-2.1z"
+      {...stroke} strokeWidth={2.2}
+    />
+  </Svg>
+);

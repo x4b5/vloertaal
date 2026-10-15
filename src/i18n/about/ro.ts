@@ -23,6 +23,8 @@ const t: CultureTranslation = {
     'a.disclaimer.b': 'Sfaturile din Vloertaal sunt informații generale, nu consultanță juridică. Regulile se pot schimba; textele au fost verificate în octombrie 2026. Pentru situația ta, întreabă-ți angajatorul, un sindicat sau Juridisch Loket.',
     'a.voices': 'Vocile',
     'a.voices.b': 'Fiecare personaj are propria voce olandeză: Bram vorbește cu vocea lui Thijmen, Henk cu a lui Daniel, Amina cu a lui Ariël, iar Jada cu a lui Noa. Aceste voci au fost înregistrate cu ElevenLabs. Dacă o propoziție nu are încă o înregistrare, auzi vocea telefonului ori calculatorului tău.',
+    'a.contact': 'Întrebări sau o greșeală?',
+    'a.contact.b': 'Ai găsit o greșeală, de exemplu într-o traducere sau într-un sfat? Sau ai o întrebare? Trimite un e-mail la hoi@vloertaal.nl. O captură de ecran ajută.',
   },
 };
 

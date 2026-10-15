@@ -284,6 +284,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'Jestem Bram, twój kolega z pracy.',
     bramIntroHello: 'Cześć, jestem Bram.',
     showDutch: 'Pokaż po niderlandzku',
+    lastUpdated: 'Ostatnia aktualizacja: {date}',
     /* G4 b3 */
     buildListen: 'Posłuchaj i ułóż zdanie',
     chatWhichQuestion: 'Które pytanie pasuje do tej odpowiedzi?',

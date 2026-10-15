@@ -23,6 +23,8 @@ const t: CultureTranslation = {
     'a.disclaimer.b': 'Vloertaal’daki ipuçları genel bilgidir, hukuki tavsiye değildir. Kurallar değişebilir; metinler Ekim 2026’da kontrol edildi. Kendi durumun için işverenine, bir sendikaya veya Juridisch Loket’e sor.',
     'a.voices': 'Sesler',
     'a.voices.b': 'Her karakterin kendi Hollandaca sesi var: Bram, Thijmen’in sesiyle konuşur; Henk, Daniel’in; Amina, Ariël’in ve Jada, Noa’nın sesiyle. Bu sesler ElevenLabs ile kaydedildi. Bir cümlenin henüz kaydı yoksa, kendi telefonunun veya bilgisayarının sesini duyarsın.',
+    'a.contact': 'Soru mu, hata mı?',
+    'a.contact.b': 'Bir hata mı buldun, örneğin bir çeviride ya da bir ipucunda? Ya da bir soru sormak mı istiyorsun? hoi@vloertaal.nl adresine e-posta gönder. Ekran görüntüsü yardımcı olur.',
   },
 };
 

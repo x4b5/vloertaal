@@ -1,7 +1,10 @@
 import { allWords, findItem } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
 import { tipForLesson } from '../content/culture';
+import { ruleCards } from '../content/courses';
+import type { RuleStep } from '../content/regels/types';
 import type { Unit, Word } from '../content/types';
+import { trackOfId } from './track';
 import { sentencePicture } from './exercises';
 import { hasPicture } from './wordPicture';
 
@@ -18,6 +21,11 @@ export interface PocketPhrase {
   en: string;
   /** The word whose picture goes with it (the word itself, or the pictured word in a sentence). */
   picture?: Pick<Word, 'id' | 'emoji'>;
+  /**
+   * The work-rules track: a rule ('rule': a key rule or a lesson's "Onthoud" line) or a sentence
+   * to say ('say': a "Zo zeg je het" line). Those rows have no English (`en` is empty).
+   */
+  rule?: 'rule' | 'say';
 }
 
 export const POCKET_SIZE = 5;
@@ -52,7 +60,38 @@ function roundRobin<T>(lists: T[][]): T[] {
   return out;
 }
 
+/** A sentence to say longer than this takes more than two lines on the card (it comes last). */
+const RULE_SAY_MAX = 60;
+
+/**
+ * The pocket card of a rules unit, in this order: its key rules (the titles of its `key` rule
+ * cards), then each lesson's "Onthoud" line, then the "Zo zeg je het" sentences (short ones
+ * first), the same text never twice; `n` rows, as on every pocket card. A rule row carries its
+ * rule card's emoji; a sentence row the speech balloon.
+ */
+export function rulePocketPhrases(unit: Unit, n = POCKET_SIZE): PocketPhrase[] {
+  const out: PocketPhrase[] = [];
+  const seen = new Set<string>();
+  const push = (p: PocketPhrase) => {
+    const key = p.nl.trim().toLowerCase();
+    if (out.length >= n || seen.has(key)) return;
+    seen.add(key);
+    out.push(p);
+  };
+  for (const r of unit.lessons.flatMap(ruleCards)) if (r.key) push({ id: r.id, nl: r.title, en: '', picture: { id: '', emoji: r.emoji }, rule: 'rule' });
+  for (const l of unit.lessons) {
+    const line = l.rule?.remember;
+    const card = ruleCards(l)[0];
+    if (line) push({ id: `${l.id}.onthoud`, nl: line, en: '', picture: card ? { id: '', emoji: card.emoji } : undefined, rule: 'rule' });
+  }
+  const models = unit.lessons.flatMap((l) => (l.steps ?? []).filter((s): s is Extract<RuleStep, { kind: 'model' }> => s.kind === 'model'));
+  const shortFirst = [...models.filter((m) => m.nl.length <= RULE_SAY_MAX), ...models.filter((m) => m.nl.length > RULE_SAY_MAX)];
+  for (const m of shortFirst) push({ id: m.id, nl: m.nl, en: '', picture: { id: '', emoji: '💬' }, rule: 'say' });
+  return out;
+}
+
 export function pocketPhrases(unit: Unit, n = POCKET_SIZE): PocketPhrase[] {
+  if (trackOfId(unit.id) === 'regels') return rulePocketPhrases(unit, n);
   const lessons = unit.lessons.filter((l) => !isMixLesson(l));
   const unitWords = lessons.flatMap((l) => l.words);
   const out: PocketPhrase[] = [];

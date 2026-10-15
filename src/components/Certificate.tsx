@@ -3,7 +3,7 @@ import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import type { SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
-import { CERT_NOTE, SEAL_RING, certData, certDate, certMeta, earnedCertificates, loadCertName, saveCertName, unitIndex, type CertData } from '../lib/certificate';
+import { CERT_NOTE, certData, certDate, certListLabel, certMeta, certSub, earnedCertificates, loadCertName, saveCertName, sealRing, unitIndex, type CertData } from '../lib/certificate';
 import { shareCertificateFile } from '../lib/certCanvas';
 import type { Progress } from '../lib/progress';
 import { Bi } from './Bi';
@@ -39,7 +39,7 @@ export function CertIcon({ size = 20, className }: { size?: number; className?: 
 }
 
 /** The round "BEHAALD" stamp, pressed slightly crooked. */
-function Seal({ unitNo }: { unitNo: string }) {
+function Seal({ unitNo, ring: ringText }: { unitNo: string; ring: string }) {
   const ring = `seal-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
   return (
     <svg className="cert-seal" viewBox="0 0 120 120" aria-hidden focusable="false">
@@ -47,7 +47,7 @@ function Seal({ unitNo }: { unitNo: string }) {
       <circle cx="60" cy="60" r="40" fill="none" stroke="currentColor" strokeWidth="2" />
       <path id={ring} d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1-94 0" fill="none" />
       <text fontFamily="'Lexend Variable', Lexend, sans-serif" fontWeight={800} fontSize="7.4" letterSpacing="0.9" fill="currentColor">
-        <textPath href={`#${ring}`} startOffset="0" textLength={2 * Math.PI * 47 - 2} lengthAdjust="spacing">{SEAL_RING}</textPath>
+        <textPath href={`#${ring}`} startOffset="0" textLength={2 * Math.PI * 47 - 2} lengthAdjust="spacing">{ringText}</textPath>
       </text>
       <path d="M48 38.5l7.5 7.5 15-15" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
       <text x="60" y="70" textAnchor="middle" fontFamily="'Big Shoulders Stencil Display', sans-serif" fontWeight={800} fontSize="21" letterSpacing="0.6" fill="currentColor">BEHAALD</text>
@@ -76,7 +76,7 @@ export function CertificateSheet({ data, className }: { data: CertData; classNam
           <span className="cert-logo"><LogoMark size={120} /></span>
           <span className="cert-brand">
             <span className="cert-kicker">Certificaat · Vloertaal</span>
-            <span className="cert-sub">Nederlands voor het werk</span>
+            <span className="cert-sub">{certSub(data)}</span>
           </span>
           <span className="cert-unit">Unit {data.unitNo}</span>
         </div>
@@ -88,17 +88,20 @@ export function CertificateSheet({ data, className }: { data: CertData; classNam
             </p>
           )}
           <h2 className="cert-title"><span>{data.titleNl}</span></h2>
-          <p className="cert-titles">
-            <span lang="en" className={data.titleHelp ? 'en-support' : undefined}>{data.titleEn}</span>
-            {data.titleHelp && (
-              <>
-                <span className="cert-dot en-support">·</span>
-                <span lang={data.helpCode} dir={helpRtl ? 'rtl' : undefined}>{data.titleHelp}</span>
-              </>
-            )}
-          </p>
-          <div className="cert-words">
-            <span className="cert-label">Kernwoorden</span>
+          {/* The English title · the help language's (none in the work-rules track: the title is Dutch). */}
+          {!data.rules && (
+            <p className="cert-titles">
+              <span lang="en" className={data.titleHelp ? 'en-support' : undefined}>{data.titleEn}</span>
+              {data.titleHelp && (
+                <>
+                  <span className="cert-dot en-support">·</span>
+                  <span lang={data.helpCode} dir={helpRtl ? 'rtl' : undefined}>{data.titleHelp}</span>
+                </>
+              )}
+            </p>
+          )}
+          <div className={`cert-words ${data.rules ? 'cert-words-rules' : ''}`}>
+            <span className="cert-label">{certListLabel(data)}</span>
             <ul>{data.phrases.map((p) => <li key={p}>{p}</li>)}</ul>
           </div>
           <p className="cert-meta">{certMeta(data)}</p>
@@ -112,7 +115,7 @@ export function CertificateSheet({ data, className }: { data: CertData; classNam
             <Signature />
             <span className="cert-rule" />
           </div>
-          <Seal unitNo={data.unitNo} />
+          <Seal unitNo={data.unitNo} ring={sealRing(data)} />
         </div>
         <p className="cert-note">{CERT_NOTE}</p>
       </div>

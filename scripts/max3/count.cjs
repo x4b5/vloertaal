@@ -22,7 +22,8 @@
  * Usage:
  *   node count.cjs                       # every state, one configuration
  *   node count.cjs route:mid lesson:*    # some states (a trailing * is a prefix match)
- *   node count.cjs --matrix              # the matrix: pl at 390x844 light, ar at 360x640 dark
+ *   node count.cjs --matrix              # the matrix: pl at 390x844 light, ar at 360x640 dark,
+ *                                        # nl (the work-rules track) at 360x640 light
  *   node count.cjs --list                # list state names
  *   node count.cjs 'url:/?shot=meaning&lang=pl'   # any ad-hoc URL
  * Options:
@@ -31,7 +32,8 @@
  *   --viewport 390x844             phone size (default 390x844)
  *   --theme light|dark             the phone's colour scheme (default light)
  *   --matrix [cfg,cfg]             several configurations, each lang@WxH[:dark]; default
- *                                  "pl@390x844,ar@360x640:dark"
+ *                                  "pl@390x844,ar@360x640:dark,nl@360x640". The nl configuration
+ *                                  is the work-rules track: its own states (defineRuleStates)
  *   --limit 3                      the bar
  *   --out DIR                      write DIR[/<config>]/<state>.png and .json, and audit.json
  *   --no-shots                     skip screenshots
@@ -53,7 +55,7 @@ const flag = (name) => { const i = argv.indexOf(name); if (i < 0) return false; 
 const optOrFlag = (name, def) => { const i = argv.indexOf(name); if (i < 0) return null; const v = argv[i + 1]; if (v && !v.startsWith('-') && /@/.test(v)) { argv.splice(i, 2); return v; } argv.splice(i, 1); return def; };
 const BASE = opt('--base', 'http://localhost:5173');
 const ONE = { lang: opt('--lang', 'pl'), vp: opt('--viewport', '390x844'), theme: opt('--theme', 'light') };
-const MATRIX = optOrFlag('--matrix', 'pl@390x844,ar@360x640:dark');
+const MATRIX = optOrFlag('--matrix', 'pl@390x844,ar@360x640:dark,nl@360x640');
 const LIMIT = Number(opt('--limit', 3));
 const OUT = opt('--out', null);
 const NO_SHOTS = flag('--no-shots');
@@ -143,6 +145,7 @@ const GENDERED = ['ar', 'ti', 'uk', 'pl', 'ro', 'bg'];
  *   expect: 'sel'   must be visible at the end (else FAIL: the flow went somewhere else)
  */
 function defineStates(LANG) {
+  if (LANG === 'nl') return defineRuleStates();
   const shot = (q, lang = LANG) => `/?shot=${q}${lang && !/[?&]lang=/.test(q) ? `&lang=${lang}` : ''}`;
   const S = [];
   const add = (name, url, steps, extra = {}) => S.push({ name, url, steps, ...extra });
@@ -369,6 +372,103 @@ function defineStates(LANG) {
   add('screen:coaches', shot('coaches'), null, { list: true });
   add('screen:tips', shot('tips'), null, { list: true });
   add('screen:tips-open', shot('tips'), async (p) => { await tap(p, '.tips-head', 0); await settle(p); }, { list: true });
+  return S;
+}
+
+/**
+ * The work-rules track (lang nl, src/components/RuleSteps.tsx): every kind of step before and
+ * after answering, on real lessons (/?shot=rule&step=<kind>: the best option is the 1st card, a
+ * wrong one the 2nd). With a Dutch phone voice (`voices`), so every speaker is on screen and
+ * checked (one per text); one state without any voice (speakers hidden, nothing else changes).
+ */
+function defineRuleStates() {
+  const shot = (q) => `/?shot=${q}&lang=nl`;
+  const S = [];
+  const add = (name, url, steps, extra = {}) => S.push({ name, url, steps, voices: true, ...extra });
+  const choice = '.player-body .choice';
+  // `right`/`wrong`: the cards to tap (the best option is the 1st; a false statement's is "Niet waar", the 2nd).
+  const step = (key, q, graded, right = 0, wrong = 1) => {
+    add(`rule:${key}`, shot(q), null, { expect: '.player-body .exercise' });
+    if (!graded) {
+      add(`rule:${key}:next`, shot(q), async (p) => { await go(p); await settle(p, 900); }, { expect: '.player-body .exercise' });
+      return;
+    }
+    add(`rule:${key}:right`, shot(q), async (p) => { await tap(p, choice, right); await settle(p, 900); }, { expect: '.feedback-right' });
+    add(`rule:${key}:wrong`, shot(q), async (p) => { await tap(p, choice, wrong); await settle(p, 900); }, { expect: '.feedback-wrong' });
+  };
+  step('scene', 'rule&step=scene', false);
+  step('rule', 'rule&step=rule', false);
+  step('rule-custom', 'rule&step=rule&lesson=r.l.samen.1', false);
+  step('truefalse', 'rule&step=truefalse', true);
+  step('truefalse-false', 'rule&step=truefalse&id=r.l.loon.1.tf1', true, 1, 0);
+  step('whatdo', 'rule&step=whatdo', true);
+  // Options said out loud: a speaker beside each card (not counted, one per option).
+  step('whatdo-say', 'rule&step=whatdo&id=r.l.zoeken.3.wd2', true);
+  step('whoask', 'rule&step=whoask', true);
+  step('model', 'rule&step=model', false);
+  step('model-clip', 'rule&step=model&id=r.l.veilig.2.mo1', false);
+  step('payslip', 'rule&step=payslip', true);
+  add('rule:retry', shot('rule&step=whatdo&retry=1'), null, { expect: '.tag-repeat' });
+  add('rule:quiet', shot('rule&step=scene&quiet=1'), null, { expect: '.player-body .exercise' });
+  add('rule:quit-dialog', shot('rule&step=whatdo'), async (p) => { await tap(p, '.player-top .lesson-close'); }, { expect: '.pause-sheet .sheet-sound' });
+  add('rule:no-voice', shot('rule&step=whatdo&id=r.l.zoeken.3.wd2'), null, { voices: false, expect: '.player-body .exercise' });
+  // A real rules lesson from its start, played through the player (built from seed 1).
+  add('rule:lesson-start', shot('lesson&lesson=r.l.loon.2'), null, { expect: '.player-body .exercise' });
+  // M4 around the lessons: "Herhaal vandaag" with rules questions, the home with the rules count
+  // and the review due, the result (with the "Onthoud" line and its speaker), the certificate and
+  // the pocket card of a rules unit.
+  add('rule:daily', shot('daily'), null, { expect: '.player-body .exercise' });
+  add('rule:daily-right', shot('daily'), async (p) => { await tap(p, choice, 0); await settle(p, 900); }, { expect: '.feedback-right' });
+  add('rule:daily-wrong', shot('daily'), async (p) => { await tap(p, choice, 1); await settle(p, 900); }, { expect: '.feedback-wrong' });
+  add('rule:route-daily-due', shot('route&state=shelf&daily=due'), null, { expect: '.daily-due' });
+  add('rule:route-finished-daily', shot('route&state=finished&daily=due'), null, { expect: '.daily-due' });
+  add('rule:result', shot('result'), null, { expect: '.result-remember' });
+  add('rule:result-review', shot('result&review=1'), null, { expect: '.result-stronger' });
+  add('rule:result-no-voice', shot('result'), null, { voices: false, expect: '.result-remember' });
+  add('rule:certificate', shot('certificate&cu=r.loon&name=Fatima%20Amrani'), null, { expect: '.cert-words-rules' });
+  add('rule:cert-earned', shot('cert-earned&cu=r.zoeken'), null, { expect: '.cert-words-rules' });
+  add('rule:pocket', shot('pocket&cu=r.loon'), null, { expect: '.pocket-list-rules' });
+  add('rule:pocket-sector', shot('pocket&cu=r.build'), null, { expect: '.pocket-list-rules' });
+  // M5: the Hulp tab ("Wie bel je?": one tap or one speaker per row, the list exception), "Alle
+  // regels" (one list, one tap per rule), About in Dutch only, Settings of the track, and the
+  // line for a phone without a Dutch voice (home and Settings › Geluid).
+  add('rule:help', shot('words'), null, { list: true, expect: '.rh-rows' });
+  add('rule:help-no-voice', shot('words'), null, { list: true, voices: false, expect: '.rh-rows' });
+  add('rule:shelf', shot('words&shelf=1'), null, { list: true, expect: '.shelf-list' });
+  add('rule:shelf-open', shot('words&shelf=1'), async (p) => { await tap(p, '.tips-head', 0); await settle(p); }, { list: true, expect: '.shelf-body .rule-advice' });
+  add('rule:about', shot('about'), null, { expect: '.about-section' });
+  add('rule:settings', shot('settings'), null, { expect: '.max3-menu' });
+  for (const pg of ['me', 'lessons', 'phone', 'language']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
+  for (const pg of ['sector', 'sound', 'voice', 'text', 'theme', 'reminder', 'backup']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
+  add('rule:settings-sound-no-voice', shot('settings&page=sound&novoice=1'), null, { expect: '.no-voice-note' });
+  add('rule:route-no-voice', shot('route&state=mid&novoice=1'), null, { expect: '.no-voice-note' });
+  add('rule:gate', shot('gate&try=1&greet=1'), null, { expect: '.gate-try' });
+  add('rule:sector', shot('sector'), null, { expect: '.sector-step' });
+  add('rule:sector-make', shot('sector&group=make'), null, { expect: '.sector-step-2' });
+
+  // The real first run in this track, from a clean phone (?rules=1 turns the track on in dev):
+  // Nederlands -> (no gender page) -> the code page in Dutch -> the sector -> the home.
+  const RULES = '/?rules=1';
+  const nlStore = (extra) => async (p) => {
+    await p.evaluate((x) => { localStorage.setItem('vloertaal.access', 'full'); localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: 'nl', ...x })); }, extra);
+    await p.reload(); await settle(p, 900);
+  };
+  const toNlGate = async (p) => { await tap(p, '.lang-btn-nl'); await settle(p); };
+  add('flow:nl-language', RULES, null, { list: true, expect: '.lang-btn-nl' });
+  add('flow:nl-gate', RULES, toNlGate, { expect: '.pw-input' });
+  // Back from the code page: the language list (Dutch has no gender page in between).
+  add('flow:nl-gate-back', RULES, async (p) => { await toNlGate(p); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.lang-grid' });
+  add('flow:nl-gate-phone-back', RULES, async (p) => { await toNlGate(p); await p.goBack(); await settle(p); }, { list: true, expect: '.lang-grid' });
+  // The trial lesson of the track: the first lesson of its first unit.
+  add('flow:nl-trial-lesson', RULES, async (p) => { await toNlGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
+  add('flow:nl-sector', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'sneakpeek'); await tap(p, '.pw-go'); await settle(p, 900); }, { expect: '.sector-step' });
+  add('flow:nl-sector-back', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'sneakpeek'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.pw-ok' });
+  add('flow:nl-home', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'sneakpeek'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.max3-card', 2); await settle(p, 900); }, { expect: '.home3' });
+  const nlHome = nlStore({ sector: 'none', completed: { 'r.l.zoeken.1': { best: 1, times: 1 } } });
+  add('flow:nl-help-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); }, { list: true, expect: '.rh-rows' });
+  add('flow:nl-shelf', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); await tap(p, '.rules-shelf-link'); await settle(p); }, { list: true, expect: '.shelf-list' });
+  add('flow:nl-settings-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
+  add('flow:nl-about-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 3); await settle(p); }, { expect: '.about-section' });
   return S;
 }
 

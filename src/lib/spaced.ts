@@ -1,11 +1,15 @@
 import { allWords, teachingLessons } from '../content/curriculum';
-import type { Dialogue, Lesson, Sentence, Word } from '../content/types';
+import { courseUnits } from '../content/courses';
+import type { RuleStep } from '../content/regels/types';
+import type { Dialogue, Lesson, Sentence, Unit, Word } from '../content/types';
 import { dayKey } from './progress';
+import type { Track } from './track';
 
 /**
  * "Herhaal vandaag": spaced repetition with a card box (Leitner). Every word the learner met
- * gets a card in box 1. Right in a review moves it one box up and it comes back later
- * (1, 2, 4, 7, 14, 30 days); wrong sends it back to box 1, so it comes back tomorrow.
+ * (in the work-rules track: every question of a finished lesson, by its step id) gets a card in
+ * box 1. Right in a review moves it one box up and it comes back later (1, 2, 4, 7, 14, 30
+ * days); wrong sends it back to box 1, so it comes back tomorrow.
  */
 export interface Card {
   /** 1–6 */
@@ -31,13 +35,21 @@ export function addDays(day: string, n: number): string {
 
 const wordById = new Map(allWords.map((w) => [w.id, w]));
 
-/** After a lesson: new words get a card (back tomorrow); a word answered wrong goes back to box 1. */
-export function addLessonWords(cards: Cards, words: Word[], results: Record<string, boolean>, today: string): Cards {
+/**
+ * After a lesson: new items get a card (back tomorrow); an item answered wrong goes back to box 1.
+ * The items are word ids (the language course) or the ids of a rules lesson's questions.
+ */
+export function addLessonItems(cards: Cards, ids: readonly string[], results: Record<string, boolean>, today: string): Cards {
   const next = { ...cards };
-  for (const w of words) {
-    if (!next[w.id] || results[w.id] === false) next[w.id] = { box: 1, due: addDays(today, 1) };
+  for (const id of ids) {
+    if (!next[id] || results[id] === false) next[id] = { box: 1, due: addDays(today, 1) };
   }
   return next;
+}
+
+/** After a lesson of the language course: its words (addLessonItems by word id). */
+export function addLessonWords(cards: Cards, words: Word[], results: Record<string, boolean>, today: string): Cards {
+  return addLessonItems(cards, words.map((w) => w.id), results, today);
 }
 
 /** After a daily review: right moves a card up a box, wrong sends it back to box 1. */
@@ -68,10 +80,11 @@ export function seedCards(completed: Record<string, unknown>, today: string): Ca
   return cards;
 }
 
-/** The ids of the words due today (oldest first, then the lowest box). */
-export function dueIds(cards: Cards, today: string): string[] {
+/** The ids of the words (or, in the work-rules track, the questions) due today (oldest first, then the lowest box). */
+export function dueIds(cards: Cards, today: string, track: Track = 'taal'): string[] {
+  const known = knownIn(track);
   return Object.entries(cards)
-    .filter(([id, c]) => c.due <= today && wordById.has(id))
+    .filter(([id, c]) => c.due <= today && known(id))
     .sort(([, a], [, b]) => (a.due < b.due ? -1 : a.due > b.due ? 1 : a.box - b.box))
     .map(([id]) => id);
 }
@@ -157,17 +170,73 @@ export interface DailyCard {
   extra: number;
 }
 
-export function dailyCard(cards: Cards, today: string, reviewDay?: string): DailyCard | null {
-  const ids = Object.keys(cards).filter((id) => wordById.has(id));
+export function dailyCard(cards: Cards, today: string, reviewDay?: string, track: Track = 'taal'): DailyCard | null {
+  const known = knownIn(track);
+  const max = track === 'regels' ? RULE_DAILY_MAX : DAILY_MAX;
+  const ids = Object.keys(cards).filter(known);
   if (!ids.length) return null;
-  const dueNow = dueIds(cards, today).length;
-  const tomorrow = Math.min(dueIds(cards, addDays(today, 1)).length, DAILY_MAX);
+  const dueNow = dueIds(cards, today, track).length;
+  const tomorrow = Math.min(dueIds(cards, addDays(today, 1), track).length, max);
   if (reviewDay === today) return { state: 'done', due: 0, tomorrow, extra: dueNow };
-  if (dueNow > 0) return { state: 'due', due: Math.min(dueNow, DAILY_MAX), tomorrow, extra: 0 };
+  if (dueNow > 0) return { state: 'due', due: Math.min(dueNow, max), tomorrow, extra: 0 };
   return { state: reviewDay ? 'done' : 'first', due: 0, tomorrow, extra: 0 };
 }
 
 /** "N woorden sterker": how many words moved up a box in a review. */
 export function strongerCount(before: Cards, after: Cards): number {
   return Object.entries(after).filter(([id, c]) => c.box > (before[id]?.box ?? 0) && before[id] !== undefined).length;
+}
+
+/* ---- The work-rules track: "Herhaal vandaag" asks questions of finished lessons again. ---- */
+
+/** At most this many questions in a daily review of the work-rules track. */
+export const RULE_DAILY_MAX = 6;
+
+/** The rules questions (graded steps): true/false, what do you do, who do you ask, the payslip. */
+export type GradedRuleStep = Extract<RuleStep, { kind: 'truefalse' | 'whatdo' | 'whoask' | 'payslip' }>;
+const GRADED = new Set<RuleStep['kind']>(['truefalse', 'whatdo', 'whoask', 'payslip']);
+export const isGradedStep = (s: RuleStep): s is GradedRuleStep => GRADED.has(s.kind);
+
+/** The questions of a rules lesson: the cards it adds to the box (a language lesson has none). */
+export function gradedStepIds(lesson: Lesson): string[] {
+  return (lesson.steps ?? []).filter(isGradedStep).map((s) => s.id);
+}
+
+/** Every question of the rules course by id (the course registers late: rebuilt when it changes). */
+let stepIndex: { from: Unit[]; byId: Map<string, GradedRuleStep> } | null = null;
+function ruleStepById(): Map<string, GradedRuleStep> {
+  const from = courseUnits('regels');
+  if (stepIndex?.from !== from) {
+    const byId = new Map<string, GradedRuleStep>();
+    for (const u of from) for (const l of u.lessons) for (const s of l.steps ?? []) if (isGradedStep(s)) byId.set(s.id, s);
+    stepIndex = { from, byId };
+  }
+  return stepIndex.byId;
+}
+
+/** Is this card one of the track's own (a word, or a rules question)? The two tracks share one box. */
+function knownIn(track: Track): (id: string) => boolean {
+  if (track === 'taal') return (id) => wordById.has(id);
+  const byId = ruleStepById();
+  return (id) => byId.has(id);
+}
+
+/**
+ * The questions for today's review in the work-rules track: up to RULE_DAILY_MAX due ones, oldest
+ * first, then the lowest box (the same box logic as words). Nothing is topped up: a question
+ * that is not due yet waits for its day (a rules question stands on its own, unlike a word that
+ * needs others for a match board).
+ */
+export function dailyRuleIds(cards: Cards, today: string): string[] {
+  return dueIds(cards, today, 'regels').slice(0, RULE_DAILY_MAX);
+}
+
+/**
+ * Today's review in the work-rules track, as a lesson: only questions (no story, no rule card,
+ * no model sentence), at most RULE_DAILY_MAX, in the order given. Unknown ids are left out.
+ */
+export function dailyRuleLesson(ids: readonly string[]): Lesson {
+  const byId = ruleStepById();
+  const steps = [...new Set(ids)].map((id) => byId.get(id)).filter((s): s is GradedRuleStep => Boolean(s)).slice(0, RULE_DAILY_MAX);
+  return { id: DAILY_ID, title: 'Herhaal vandaag', words: [], sentences: [], steps, repeat: true };
 }

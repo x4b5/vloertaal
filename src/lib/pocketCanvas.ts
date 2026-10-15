@@ -23,6 +23,8 @@ export interface PocketImage {
   /** Draw the English too. False when a help language is chosen and "Show English too" is off,
    *  as on screen; a line without a help translation keeps its English (the only text then). */
   english?: boolean;
+  /** The line at the foot: what the app is about (default the Dutch course's). */
+  footer?: string;
 }
 
 const W = 1080;
@@ -218,7 +220,7 @@ export async function drawPocketCard(d: PocketImage): Promise<HTMLCanvasElement>
   ctx.textAlign = 'center';
   ctx.fillStyle = C.ink3;
   ctx.font = font(600, 30);
-  ctx.fillText('Vloertaal · Nederlands voor het werk', W / 2, y + 66);
+  ctx.fillText(d.footer ?? 'Vloertaal · Nederlands voor het werk', W / 2, y + 66);
   return canvas;
 }
 

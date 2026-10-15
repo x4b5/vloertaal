@@ -284,6 +284,7 @@ const lang: HelpLanguageSource = {
     bramIntro: { m: 'أنا Bram، زميلكَ في العمل.', f: 'أنا Bram، زميلكِ في العمل.' },
     bramIntroHello: 'مرحبًا، أنا Bram.',
     showDutch: 'عرض بالهولندية',
+    lastUpdated: 'آخر تحديث: {date}',
     /* G4 b3 */
     buildListen: { m: 'استمع وكوّن الجملة', f: 'استمعي وكوّني الجملة' },
     chatWhichQuestion: 'أيّ سؤال يناسب هذا الجواب؟',

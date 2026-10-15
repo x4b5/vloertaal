@@ -47,7 +47,7 @@ const todo = voices.flatMap((v) =>
     .filter(
       (c) =>
         said[v.key]?.[c.id] !== c.text ||
-        (takes[v.key]?.[c.id] ?? 1) !== take ||
+        (takes[v.key]?.[c.id] ?? 1) !== Math.max(take, c.take ?? 0) ||
         !existsSync(`${OUT}/${v.key}/${c.id}.mp3`),
     )
     .map((c) => ({ voice: v, clip: c })),
@@ -115,9 +115,10 @@ let done = 0;
 try {
   for (const { voice, clip } of todo) {
     mkdirSync(`${OUT}/${voice.key}`, { recursive: true });
-    writeFileSync(`${OUT}/${voice.key}/${clip.id}.mp3`, await tts(voice, clip.text));
+    // `say`: how the line is pronounced when the spelling would mislead the voice ("app" → "ep").
+    writeFileSync(`${OUT}/${voice.key}/${clip.id}.mp3`, await tts(voice, clip.say ?? clip.text));
     (said[voice.key] ??= {})[clip.id] = clip.text;
-    (takes[voice.key] ??= {})[clip.id] = take;
+    (takes[voice.key] ??= {})[clip.id] = Math.max(take, clip.take ?? 0);
     if (++done % 20 === 0) { save(); console.log(`${done}/${todo.length}`); }
   }
 } finally {

@@ -7,6 +7,8 @@ import { getHelpLanguage } from '../src/i18n/all';
 import { aboutDutchRemembered, rememberAboutDutch } from '../src/lib/aboutDutch';
 
 const unescape = (html: string) => html.replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&amp;/g, '&');
+/** The text of the page without its tags (the contact address in a body is a link). */
+const textOf = (html: string) => html.replace(/<[^>]+>/g, '');
 
 describe('About in Dutch (the "NL" toggle)', () => {
   it('every section has a plain Dutch title and body', () => {
@@ -30,9 +32,9 @@ describe('About in Dutch (the "NL" toggle)', () => {
     expect(mission.body).toMatch(/no ads, no subscription/);
   });
 
-  it('ends with the disclaimer (general information, checked date, where to ask), just before the voices', () => {
+  it('ends with the disclaimer (general information, checked date, where to ask), then the voices and the contact', () => {
     const ids = aboutSections.map((s) => s.id);
-    expect(ids.slice(-2)).toEqual(['a.disclaimer', 'a.voices']);
+    expect(ids.slice(-3)).toEqual(['a.disclaimer', 'a.voices', 'a.contact']);
     const d = aboutSections.find((s) => s.id === 'a.disclaimer')!;
     expect(d.emoji).toBe('⚖️');
     expect(d.body).toMatch(/general information, not legal advice/);
@@ -59,8 +61,8 @@ describe('About in Dutch (the "NL" toggle)', () => {
     expect(on).toContain('aria-label="NL · عرض بالهولندية"');
     for (const s of aboutSections) {
       expect(on, s.id).toContain(s.nl.title);
-      expect(on, s.id).toContain(s.nl.body);
-      expect(off, s.id).not.toContain(s.nl.body);
+      expect(textOf(on), s.id).toContain(s.nl.body);
+      expect(textOf(off), s.id).not.toContain(s.nl.body);
     }
     expect(off).toContain('مهمتنا');
     expect(on).not.toContain('مهمتنا');

@@ -8,7 +8,8 @@ import type { HelpLanguageSource, UiKey, UiText } from './types';
  *
  * The track is not about learning Dutch but about how work goes in the Netherlands, so some keys
  * say something else here than in English: what is counted is rules, not words ("{n} regels
- * geleerd"), the tagline is about work, and the language list's hint is about this track. Those
+ * geleerd"), and "Herhaal vandaag" asks questions of finished lessons again ("Vragen om te
+ * herhalen: {n}"), the tagline is about work, and the language list's hint is about this track. Those
  * keys are marked `// regels`. The keys of the language exercises (writing, the microphone,
  * building a sentence) are filled in plain Dutch too, though the track does not use them.
  */
@@ -69,8 +70,8 @@ export const uiNl: Record<UiKey, UiText> = {
   readAloud: 'Voorlezen',
   lessonComplete: 'Les klaar!',
   backToPath: 'Terug naar de lessen',
-  phrasebook: 'Noodzinnen',
-  phrasebookHint: 'Tik op een zin om hem te horen. Je kunt je scherm ook aan een collega laten zien.',
+  phrasebook: 'Wie bel je?', // regels: the Hulp tab's list of who to call (RulesHelp)
+  phrasebookHint: 'Tik op een nummer om te bellen, of op een site om hem te openen.', // regels
   settings: 'Instellingen',
   helpLanguage: 'Taal', // regels: no "help language" in this track
   resetProgress: 'Mijn voortgang wissen',
@@ -84,7 +85,7 @@ export const uiNl: Record<UiKey, UiText> = {
   voice: 'Voorleesstem', // regels: the voice reads the rules aloud
   voiceAuto: 'Automatisch',
   voiceHint: 'Tik op 🔊 om te luisteren. De Vloertaal-stemmen klinken op elke telefoon hetzelfde. De andere stemmen komen van je telefoon.',
-  voiceNone: 'Dit apparaat heeft geen Nederlandse stem. Je kunt er een toevoegen bij de instellingen van je telefoon (Tekst naar spraak).',
+  voiceNone: 'Je telefoon heeft geen Nederlandse voorleesstem. Je kunt er een toevoegen in de instellingen van je telefoon. Zoek naar ‘Tekst naar spraak’.', // regels: also the one-time line on the home
   cultureBadge: 'Zo gaat het hier',
   whatDoYouDo: 'Wat doe je?',
   sayThis: 'Zo zeg je het',
@@ -99,7 +100,7 @@ export const uiNl: Record<UiKey, UiText> = {
   otherSectors: 'Andere sectoren',
   otherSectorsHint: 'Lessen voor ander werk. Die mag je ook doen.',
   reviewToday: 'Herhaal vandaag',
-  reviewTodayN: 'Regels om te herhalen: {n} · een paar minuten', // regels
+  reviewTodayN: 'Vragen om te herhalen: {n} · een paar minuten', // regels: the review asks questions of finished lessons
   notSureYet: 'Weet ik nog niet',
   sectorLogistics: 'Logistiek',
   sectorConstruction: 'Bouw',
@@ -123,10 +124,10 @@ export const uiNl: Record<UiKey, UiText> = {
   tier14: '2 weken op rij',
   tier30: '1 maand op rij',
   reviewDone: 'Klaar voor vandaag',
-  tomorrowN: 'Morgen: {n} regels', // regels
-  firstWordsTomorrow: 'Morgen komen je eerste regels terug', // regels
+  tomorrowN: 'Morgen: {n} vragen', // regels
+  firstWordsTomorrow: 'Morgen komen je eerste vragen terug', // regels
   extraRound: 'Extra ronde',
-  wordsStrongerN: '{n} regels beter onthouden', // regels
+  wordsStrongerN: '{n} antwoorden beter onthouden', // regels
   noMistakes: 'Geen fouten',
   nextUp: 'Volgende',
   installTitle: 'Zet Vloertaal op je beginscherm',
@@ -196,8 +197,8 @@ export const uiNl: Record<UiKey, UiText> = {
   daysUnitOne: 'dag',
   wordsUnitOne: 'regel', // regels
   wordsLearnedOne: '{n} regel geleerd', // regels
-  tomorrowOne: 'Morgen: {n} regel', // regels
-  wordsStrongerOne: '{n} regel beter onthouden', // regels
+  tomorrowOne: 'Morgen: {n} vraag', // regels
+  wordsStrongerOne: '{n} antwoord beter onthouden', // regels
   recordOne: 'Je record: {n} dag',
   streakStoppedOne: 'Je reeks stopte bij {n} dag. Begin vandaag opnieuw.',
   letterTiles: 'Letters',
@@ -282,7 +283,7 @@ export const uiNl: Record<UiKey, UiText> = {
   mainMenu: 'Hoofdmenu',
   spaceKey: 'Spatie',
   sayAloudInstead: 'Zeg het liever hardop',
-  wordsPractised: 'Regels geoefend', // regels
+  wordsPractised: 'Vragen geoefend', // regels
   reviewComplete: 'Herhalen klaar!',
   langNotOnPhone: 'Deze taal staat nog niet op je telefoon. Maak verbinding met internet om te wisselen.',
   remindChooseOwn: 'Kies zelf een tijd',
@@ -293,8 +294,8 @@ export const uiNl: Record<UiKey, UiText> = {
   trialDone: 'Je hebt de proefles gedaan. Met de code gaan alle lessen open.',
   bramHello: 'Fijn dat je er bent.',
   bramBack: 'Welkom terug. We gaan verder.',
-  bramDueN: 'Vandaag herhaal je {n} regels.', // regels
-  bramDueOne: 'Vandaag herhaal je {n} regel.', // regels
+  bramDueN: 'Vandaag herhaal je {n} vragen.', // regels
+  bramDueOne: 'Vandaag herhaal je {n} vraag.', // regels
   bramDayN: 'Dag {n} op rij.',
   bramDone: 'Klaar voor vandaag. Tot morgen.',
   bramPerfect: 'Heel goed. Je kent deze regels.', // regels
@@ -304,9 +305,10 @@ export const uiNl: Record<UiKey, UiText> = {
   bramIntro: 'Ik ben Bram. Ik help je op weg.', // regels: a colleague who knows how work goes here
   bramIntroHello: 'Hallo, ik ben Bram.',
   showDutch: 'Toon in het Nederlands',
+  lastUpdated: 'Laatst bijgewerkt: {date}',
   buildListen: 'Luister en maak de zin',
   chatWhichQuestion: 'Welke vraag hoort bij dit antwoord?',
-  reviewWaiting: 'Er wachten nog {n} regels. Die komen de komende dagen terug.', // regels
+  reviewWaiting: 'Er wachten nog {n} vragen. Die komen de komende dagen terug.', // regels
 };
 
 const lang: HelpLanguageSource = {

@@ -381,7 +381,8 @@ const POSES: Record<CharacterId, Partial<Record<Mood, Pose>> & { idle: Pose }> =
     wave: {
       lean: 1.5, tilt: 6, turn: 1.4,
       l: { a: 150, e: 22, w: 34, hand: 'fist', m: true },
-      r: { a: -24, e: -78, w: -84, hand: 'open', act: 'wave' },
+      // m: the thumb on the head side, so the palm (not the back of the hand) faces us.
+      r: { a: -24, e: -78, w: -84, hand: 'open', m: true, act: 'wave' },
     },
     thinking: {
       lean: 0, tilt: -6, turn: -1.6,
@@ -528,10 +529,13 @@ export function Hand({ kind, skin, shade }: { kind: HandKind; skin: string; shad
   const thumb = <rect x="1.6" y="1.6" width="5.2" height="2.6" rx="1.2" fill={skin} stroke={shade} strokeWidth=".6" transform="rotate(-14 1.6 1.6)" />;
   switch (kind) {
     case 'open':
+      // The palm side: a lighter palm with one crease, four fingers.
       return (
         <g>
           <path d="M0 -3.2L4 -4.2H12.6Q13.8 -4.2 13.8 -3V1.8Q13.8 3 12.6 3H4L0 2.8Z" fill={skin} />
-          <path d="M8.4 -1.6H13.6M8.4 0.8H13.6" stroke={shade} strokeWidth=".7" />
+          <ellipse cx="4.6" cy="-0.4" rx="3" ry="2.4" fill="#fff" opacity=".16" />
+          <path d="M2.4 1.5Q4.8 0.1 7.4 0.5" fill="none" stroke={shade} strokeWidth=".6" strokeLinecap="round" />
+          <path d="M9 -2.4H13.6M9 -0.6H13.6M9 1.2H13.6" stroke={shade} strokeWidth=".6" />
           <rect x="1.8" y="2.2" width="6" height="2.4" rx="1.1" fill={skin} transform="rotate(32 1.8 2.2)" />
         </g>
       );

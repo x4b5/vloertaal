@@ -3,7 +3,8 @@ import { LessonCelebration } from './Celebrate';
 import { BramSays } from './BramSays';
 import { Character } from './Characters';
 import { resultLineFor } from '../lib/greeting';
-import { aboutSections } from '../content/about';
+import { aboutRules, aboutSections, CONTACT_EMAIL } from '../content/about';
+import { LAST_UPDATE, updateDate } from '../content/updates';
 import { cultureTips } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
@@ -11,12 +12,12 @@ import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, langu
 import type { HelpLanguage, LangCode, UiCode } from '../i18n/types';
 import { dutchUi, rulesTrackOn } from '../lib/track';
 import { NlPair } from './NlPair';
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { applyEnglish } from '../lib/english';
 import { isNextInCourse } from '../lib/exercises';
 import type { Access } from '../lib/access';
 import type { Progress } from '../lib/progress';
-import { Bi, HelpText } from './Bi';
+import { Bi, HelpText, isolateLatin } from './Bi';
 import { LogoMark, Wordmark } from './Logo';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
@@ -24,6 +25,7 @@ import {
   AlertIcon,
   ArrowIcon,
   CalendarIcon,
+  CallIcon,
   CrateIcon,
   CheckIcon,
   ChevronIcon,
@@ -383,12 +385,51 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
   );
 }
 
+/**
+ * A line of About text with the contact address as a tappable mail link. The link is left to
+ * right and English (dir, lang), so a right-to-left sentence never reorders the address; the
+ * rest of the line goes through `plain` (in Arabic, Persian and Dari: its Latin runs isolated).
+ */
+function withMailLink(text: string, plain: (part: string) => React.ReactNode = (part) => part, dutchOnly = false): React.ReactNode {
+  const parts = text.split(CONTACT_EMAIL);
+  if (parts.length < 2) return plain(text);
+  return parts.map((part, i) => (
+    <Fragment key={i}>
+      {i > 0 && (
+        <a href={`mailto:${CONTACT_EMAIL}`} dir="ltr" lang={dutchOnly ? undefined : 'en'} style={{ color: 'inherit', fontWeight: 700, textUnderlineOffset: '0.15em', whiteSpace: 'nowrap' }}>
+          {CONTACT_EMAIL}
+        </a>
+      )}
+      {plain(part)}
+    </Fragment>
+  ));
+}
+
+/**
+ * An About body as <Bi> lays it out, with the address linked in the main line only (the help
+ * language, or the English without one): one tap target, not one per line. The small English
+ * line under it keeps the address as plain text.
+ */
+function AboutBody({ text }: { text: Bilingual }) {
+  if (!text.help?.includes(CONTACT_EMAIL) && !text.en.includes(CONTACT_EMAIL)) return <Bi text={text} />;
+  if (!text.help || !text.lang) return <span className="bi"><span className="bi-en">{withMailLink(text.en)}</span></span>;
+  const rtl = text.lang.dir === 'rtl';
+  return (
+    <span className="bi bi-swap" dir={rtl ? 'rtl' : undefined}>
+      <span className="bi-en" lang={text.lang.code} dir={text.lang.dir}>{withMailLink(text.help, rtl ? isolateLatin : undefined)}</span>
+      <span className="bi-sep" aria-hidden>·</span>
+      <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{text.en}</span>
+    </span>
+  );
+}
+
 /** "About Vloertaal" (the "Over" tab): what the app is, who it is for, privacy and voice credits,
  *  and one link to the page for coaches. */
 /**
  * About Vloertaal. The "NL" toggle at the top end shows every section in plain Dutch (lang nl,
  * left to right also in Arabic, Persian and Dari); pressed again, the help language (or English)
- * comes back. One tap target; the choice is remembered on this phone.
+ * comes back. The toggle is one tap target (the contact address in the last section is a mail
+ * link: one more); the Dutch choice is remembered on this phone.
  */
 export function About({ lang, onCoaches, dutch: dutchStart }: {
   lang?: HelpLanguage;
@@ -399,7 +440,7 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
 }) {
   const { recorded } = useVoices();
   const [dutchOn, setDutch] = useState(() => dutchStart ?? aboutDutchRemembered());
-  // The work-rules track: the sections in Dutch, always (its own About comes with M5).
+  // The work-rules track: its own sections, in Dutch only (no toggle).
   const dutch = dutchUi(lang) || dutchOn;
   const toggle = () => setDutch((on) => { rememberAboutDutch(!on); return !on; });
   const nlLabel = said(ui('showDutch', lang));
@@ -419,7 +460,18 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
         <Wordmark />
         <p className="about-tag" lang="nl">{dutchUi(lang) ? ui('appTagline', lang).help : 'Nederlands voor op de werkvloer'}</p>
       </div>
-      {aboutSections.map((s) => (
+      {/* The work-rules track: its own sections, in Dutch only (src/content/about.ts aboutRules). */}
+      {dutchUi(lang) ? aboutRules.map((s) => (
+        <section key={s.id} className="about-section about-nl-on" lang="nl" dir="ltr">
+          <h2>
+            {s.who
+              ? <span className="about-emoji about-who" aria-hidden><Character who={s.who} crop="head" size={30} /></span>
+              : <span className="about-emoji" aria-hidden>{s.emoji}</span>}
+            <span className="bi"><span className="bi-en">{s.title}</span></span>
+          </h2>
+          <p>{withMailLink(s.body, undefined, true)}</p>
+        </section>
+      )) : aboutSections.map((s) => (
         <section key={s.id} className={dutch ? 'about-section about-nl-on' : 'about-section'} {...(dutch ? { lang: 'nl', dir: 'ltr' } : {})}>
           <h2>
             {s.who
@@ -429,7 +481,7 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
               ? <span className="bi"><span className="bi-en">{s.nl.title}</span></span>
               : <Bi text={gloss(s.id, s.title, lang)} />}
           </h2>
-          <p>{dutch ? s.nl.body : <Bi text={gloss(`${s.id}.b`, s.body, lang)} />}</p>
+          <p>{dutch ? withMailLink(s.nl.body) : <AboutBody text={gloss(`${s.id}.b`, s.body, lang)} />}</p>
         </section>
       ))}
       {onCoaches && (
@@ -443,14 +495,29 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
         <ul className="about-credits muted small">
           {recorded.map((v) => (
             <li key={v.key}>
-              {dutchUi(lang) ? 'Stem' : 'Voice'} “{v.label}”: {v.engine ?? 'Piper'}{v.dataset ? ` · ${v.dataset}` : ''}{v.license ? ` · ${v.license}` : ''}
-              {v.modelCard && <> · <a href={v.modelCard} target="_blank" rel="noreferrer">{dutchUi(lang) ? 'modelkaart' : 'model card'}</a></>}
+              {/* The work-rules track: the voice and its maker only (the licence lines are English). */}
+              {dutchUi(lang) ? 'Stem' : 'Voice'} “{v.label}”: {v.engine ?? 'Piper'}{!dutchUi(lang) && v.dataset ? ` · ${v.dataset}` : ''}{!dutchUi(lang) && v.license ? ` · ${v.license}` : ''}
+              {v.modelCard && !dutchUi(lang) && <> · <a href={v.modelCard} target="_blank" rel="noreferrer">model card</a></>}
             </li>
           ))}
         </ul>
       )}
+      <p className="about-updated muted small"><Bi text={lastUpdatedText(lang)} /></p>
     </div>
   );
+}
+
+/** Locale for a date in a help language (Dari: Afghan Persian). */
+const DATE_LOCALE: Record<string, string> = { prs: 'fa-AF', nl: 'nl-NL' };
+
+/** "Last updated: 15 October 2026", each line with the date in its own language. */
+function lastUpdatedText(lang?: HelpLanguage): Bilingual {
+  const t = ui('lastUpdated', lang);
+  return {
+    ...t,
+    en: t.en.replace('{date}', updateDate(LAST_UPDATE, 'en-GB')),
+    help: t.help?.replace('{date}', updateDate(LAST_UPDATE, lang ? DATE_LOCALE[lang.code] ?? lang.code : 'nl-NL')),
+  };
 }
 
 export function Phrasebook({ lang, onBack }: { lang?: HelpLanguage; onBack: () => void }) {
@@ -504,7 +571,10 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
 /** From this many words still due after a review, the result says they come in the next days. */
 export const REVIEW_WAITING_MIN = 3;
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember }: {
+  /** After a lesson of the work-rules track: its "Onthoud" line (lesson.rule.remember), in Dutch,
+   *  with one speaker (hidden when nothing can say it). Not a button. */
+  remember?: string;
   /** After today's review: words still due (many after a long absence); a calm line says they
    *  come back in the next days. Not a button. */
   waiting?: number;
@@ -600,6 +670,14 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             done={repeated !== undefined || shownNew === newWords}
           />
         </div>
+        {/* The rules track: the one line to remember from this lesson (plain Dutch, as the rule card). */}
+        {remember && (
+          <div className="result-remember" lang="nl">
+            <span className="result-remember-label">Onthoud</span>
+            <p className="result-remember-text">{remember}</p>
+            <SpeakButton text={remember} long needsDevice glyph help={lang} />
+          </div>
+        )}
         {/* After the review: how many words got stronger, the number big, the help language
             large and English small (no Dutch sentence). */}
         {stronger !== undefined && stronger > 0 && (
@@ -640,7 +718,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             onClick={() => { if (ready.current) onPhrases(); }}
             aria-label={dutchUi(lang) ? said(ui('phrasebook', lang)) : `Noodzinnen · ${said(ui('phrasebook', lang))}`}
           >
-            <span className="hub-icon" aria-hidden><AlertIcon size={26} /></span>
+            <span className="hub-icon" aria-hidden>{dutchUi(lang) ? <CallIcon size={26} /> : <AlertIcon size={26} />}</span>
             <span className="hub-text" aria-hidden>
               <NlPair nlFirst nl="Noodzinnen" nlClass="hub-nl" text={ui('phrasebook', lang)} />
             </span>

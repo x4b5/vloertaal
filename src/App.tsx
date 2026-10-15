@@ -1,17 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
-import { findLesson, learnedWords, playLesson } from './content/curriculum';
+import { findLesson, playLesson } from './content/curriculum';
 import { ensureLanguage, getHelpLanguage, isLanguageLoaded } from './i18n';
 import { Splash } from './components/Splash';
 import { loadPictures, usePicturesLoaded } from './pictures';
 import type { UiCode } from './i18n/types';
-import { isPlayable } from './content/courses';
+import { isPlayable, learnedItems } from './content/courses';
 import { trackOf } from './lib/track';
-import { setPreferredVoice, setQuietAudio } from './lib/audio';
+import { setDeviceRate, setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
 import { HomeGreeting } from './components/BramSays';
+import { NoVoiceNote, RulesHelp, RulesShelf } from './components/RulesHelp';
 import { Settings } from './components/Settings';
 import { Coaches } from './components/Coaches';
 import { GenderScreen } from './components/Gender';
@@ -29,7 +30,7 @@ import { type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from 
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
 import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
-import { DAILY_ID, addLessonWords, applyReview, dailyCard, dailyLesson, dailyWordIds, dueIds, seedCards, strongerCount } from './lib/spaced';
+import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dailyRuleIds, dailyRuleLesson, dailyWordIds, dueIds, gradedStepIds, seedCards, strongerCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { persistStorage } from './lib/install';
 import { CertEarned, CertificateScreen } from './components/Certificate';
@@ -46,7 +47,7 @@ type View =
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[] }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; streakUp?: number; repeated?: number; stronger?: number; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean }
   /** "Certificaat behaald": once, after the result of a unit's last lesson (then the streak, if it went up). */
   | { name: 'cert-earned'; unit: string; streakUp?: number }
   /** A unit's certificate; streakUp: opened from "Certificaat behaald", the streak milestone still follows. */
@@ -353,6 +354,8 @@ export default function App() {
   // Set during render, not in an effect: a child's effect (an exercise that would say its word)
   // runs before the parent's, and must already know that sound is off.
   setQuietAudio(Boolean(progress.quiet));
+  // The phone's voice reads at an easier, normal pace in the work-rules track (lib/audio.ts).
+  setDeviceRate(trackOf(progress));
   const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);
@@ -474,7 +477,10 @@ export default function App() {
   switch (view.name) {
     case 'lesson': {
       const daily = view.lessonId === DAILY_ID;
-      const found = daily ? { lesson: dailyLesson(view.ids ?? [], progress.cards, dayKey(new Date())) } : playLesson(view.lessonId, progress.completed);
+      // Today's review of the learner's track: words (the language course) or questions (the rules course).
+      const found = daily
+        ? { lesson: track === 'regels' ? dailyRuleLesson(view.ids ?? []) : dailyLesson(view.ids ?? [], progress.cards, dayKey(new Date())) }
+        : playLesson(view.lessonId, progress.completed);
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc) || (inTrial && !trialLessonAllowed(view.lessonId, track))) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
@@ -483,7 +489,10 @@ export default function App() {
         const cards = progress.cards ?? {};
         const next = earnCertificates(daily
           ? { ...completeDaily(progress, accuracy, now), cards: applyReview(cards, results, today) }
-          : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: addLessonWords(cards, found.lesson.words, results, today) }, now);
+          : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: found.lesson.steps?.length
+            // A rules lesson: its questions get a card (by step id), for "Herhaal vandaag" of that track.
+            ? addLessonItems(cards, gradedStepIds(found.lesson), results, today)
+            : addLessonWords(cards, found.lesson.words, results, today) }, now);
         // The lesson's unit is the current block while it is unfinished (see src/lib/route.ts).
         if (!daily) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
         // The very first lesson: its result shows, once, where the emergency phrases are.
@@ -501,8 +510,9 @@ export default function App() {
         // The first finished lesson: ask the browser to keep this site's storage (the progress).
         if (!daily && !Object.keys(progress.completed).length) persistStorage();
         const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
-        const before = learnedWords(progress.completed).size;
-        const words = learnedWords(next.completed).size;
+        // Words learned, or in the rules track rules learned (the rule cards of finished lessons).
+        const before = learnedItems(track, progress.completed);
+        const words = learnedItems(track, next.completed);
         // The next lesson of the current block, for "Volgende:" on the result (none when the block
         // is finished: the home offers the choice of the next one).
         const upNext = daily || inTrial ? undefined : routeNextLesson(next, acc);
@@ -513,14 +523,16 @@ export default function App() {
         replace({
           name: 'result', right, total, newWords: words - before, words, streakUp,
           kind: daily ? 'daily' : reviewing ? 'review' : 'lesson',
-          repeated: daily ? found.lesson.words.length : reviewing ? Object.keys(results).length || found.lesson.words.length : undefined,
+          repeated: daily ? found.lesson.steps?.length ?? found.lesson.words.length : reviewing ? Object.keys(results).length || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
           // Still due after today's review (back after a long absence): they come in the next days.
-          waiting: daily ? dueIds(next.cards ?? {}, today).length || undefined : undefined,
+          waiting: daily ? dueIds(next.cards ?? {}, today, track).length || undefined : undefined,
           next: upNext?.id,
           cert: unitDone?.id,
           skipped: skipped || undefined,
           phrases: phrases || undefined,
+          // A rules lesson: its "Onthoud" line under the numbers.
+          remember: daily ? undefined : found.lesson.rule?.remember,
         });
       };
       return (
@@ -551,6 +563,7 @@ export default function App() {
           waiting={view.waiting}
           skipped={view.skipped}
           kind={view.kind}
+          remember={view.remember}
           next={view.next ? nextTitle(view.next, lang) : undefined}
           lang={lang}
           onDone={() => (inTrial ? endTrial() : view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())}
@@ -620,24 +633,28 @@ export default function App() {
       );
     }
     case 'tips':
-      return <Tips progress={progress} lang={lang} onBack={back} access={acc} />;
+      // The work-rules track: "Alle regels", the rule cards of its finished lessons.
+      return track === 'regels'
+        ? <RulesShelf progress={progress} lang={lang} onBack={back} />
+        : <Tips progress={progress} lang={lang} onBack={back} access={acc} />;
     case 'about':
       return (
         <>
-          <About lang={lang} onCoaches={() => go({ name: 'coaches' })} />
+          {/* The coaches' page lists the language course's topics: not offered in the work-rules track. */}
+          <About lang={lang} onCoaches={track === 'regels' ? undefined : () => go({ name: 'coaches' })} />
           <BottomNav current="about" onTab={tab} lang={lang} />
         </>
       );
     case 'coaches':
       return <Coaches onBack={back} lang={lang} />;
-    case 'phrasebook':
+    case 'phrasebook': {
       // From the first lesson's result: back goes on to the certificate or the streak milestone.
-      return (
-        <Phrasebook
-          lang={lang}
-          onBack={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())}
-        />
-      );
+      const onward = () => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
+      // The work-rules track: its Hulp page ("Wie bel je?") instead of the emergency phrases.
+      return track === 'regels'
+        ? <RulesHelp lang={lang} onBack={onward} onShelf={() => go({ name: 'tips' })} />
+        : <Phrasebook lang={lang} onBack={onward} />;
+    }
     case 'settings': {
       const up = view.up ?? 0;
       return (
@@ -672,10 +689,10 @@ export default function App() {
     case 'words':
       return (
         <>
-          <WordsHub
-            lang={lang}
-            onTips={() => go({ name: 'tips' })}
-          />
+          {/* The work-rules track: who to call, and "Alle regels" (instead of the emergency phrases). */}
+          {track === 'regels'
+            ? <RulesHelp lang={lang} onShelf={() => go({ name: 'tips' })} />
+            : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} />}
           <BottomNav current="words" onTab={tab} lang={lang} />
         </>
       );
@@ -683,13 +700,13 @@ export default function App() {
       if (stopped !== null) {
         return <StreakStopped streak={stopped} best={bestStreak(progress)} lang={lang} onDone={() => setStopped(null)} />;
       }
-      const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : null;
+      const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track) : null;
       return (
         <>
           <TopBar
             done={doneToday(progress, new Date())}
             streak={currentStreak(progress, new Date())}
-            words={learnedWords(progress.completed).size}
+            words={learnedItems(track, progress.completed)}
             lang={lang}
             quiet={Boolean(progress.quiet)}
             greeting={<HomeGreeting progress={progress} due={daily?.state === 'due' ? daily.due : 0} lang={lang} />}
@@ -704,12 +721,13 @@ export default function App() {
             daily={daily}
             arrived={arrived}
             onArrived={() => setArrived(null)}
-            onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: dailyWordIds(progress.cards ?? {}, dayKey(new Date())) })}
+            onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: track === 'regels' ? dailyRuleIds(progress.cards ?? {}, dayKey(new Date())) : dailyWordIds(progress.cards ?? {}, dayKey(new Date())) })}
             access={acc}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
             focusUnit={focusUnit}
             onFocused={() => { setFocusUnit(null); forgetLinkedUnit(); }}
             lockedLink={lockedLink}
+            note={<NoVoiceNote lang={lang} once />}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
         </>

@@ -1,45 +1,46 @@
 # LinkedIn: aankondiging pilot Vloertaal
 
-## Bericht (plaats met de video `vloertaal-pilot.mp4`)
+Plaats het bericht samen met de video `vloertaal-pilot.mp4`.
 
-Hoe zeg je "Pas op, glad!" als je net begint in een Nederlands magazijn, en je Nederlands nog niet zo goed is?
+---
 
-Vandaag start ik de pilot van Vloertaal 👷: een gratis app waarmee mensen Nederlands leren voor op de werkvloer, met hulp in hun eigen taal.
+**HELP** 🙋
 
-Duizenden mensen werken in Nederland in de logistiek, bouw, zorg, schoonmaak en productie, terwijl de taal nog een drempel is. Dat gaat over veiligheid, over begrijpen wat er op je loonstrook staat, en over gewoon meedoen met je collega's.
+Wie in Nederland wil werken en leven, kan eigenlijk niet zonder Nederlands. Toch zie ik in de praktijk vaak dat anderstaligen de taal nog onvoldoende beheersen. En dat lezen en schrijven voor veel mensen lastig is.
 
-Wat Vloertaal doet:
-✅ Korte lessen van zo'n 10 minuten. Alles wordt voorgelezen.
-✅ Hulp in 9 talen: Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens en Bulgaars.
-✅ Echte werksituaties: veiligheid, ziekmelden, je rooster, je rechten en de ongeschreven regels.
-✅ Gemaakt voor wie moeite heeft met lezen: plaatjes, grote knoppen, weinig tekst.
-✅ Geen account, geen reclame, werkt ook offline.
+De cijfers bevestigen dat. Ruim 3 miljoen mensen tussen 16 en 75 jaar hebben moeite met taal, rekenen of digitale vaardigheden (PIAAC 2023). En taal doet ertoe op het werk. Van de migranten die zeer goed Nederlands spreken, heeft 69% betaald werk. Van wie het nauwelijks tot redelijk spreekt, is dat ongeveer de helft (CBS, 2023). Ondertussen wordt werk steeds taliger en digitaler: je rooster in een app, instructies op een scherm, je loonstrook in je mail.
 
-Er zit geen verdienmodel achter. Het doel is simpel: iedereen een eerlijke kans geven op de Nederlandse werkvloer.
+Dat zette me aan het denken. Iedereen kent Duolingo: elke dag een paar minuten, en het voelt als een spel. Waarom is er niet zo'n app waarmee je Nederlands leert voor je werk, die gratis is, zonder account werkt én leuk is om te doen?
 
-🙋 Voor de pilot zoek ik:
-• taalcoaches, NT2-docenten en taalvrijwilligers;
-• werkgevers en uitzendbureaus met nieuwe collega's;
-• moedertaalsprekers die de vertalingen willen nakijken.
+Dus heb ik hem gebouwd, geïnspireerd op Duolingo: **vloertaal.nl** 👷
+• Korte lessen over echte werksituaties: veiligheid, ziekmelden, je rooster, je loonstrook
+• Alles wordt voorgelezen, met plaatjes en weinig tekst
+• Hulp in 9 talen, van Arabisch en Tigrinya tot Pools en Oekraïens
+• Naast de taal ook de geschreven en ongeschreven regels van de Nederlandse werkvloer
 
-Doe je mee? Stuur me een bericht. Dan krijg je de pilotcode en een korte handleiding.
+Maar eerlijk is eerlijk: de app zit echt nog in een testfase. Ik weet niet zeker of alle vertalingen goed zijn, en de uitleg over regels en rechten wil ik laten checken.
 
-👉 vloertaal.nl
+Daarom zoek ik:
+🔹 experts in NT2, inburgering of arbeidsrecht die kritisch meekijken: wat klopt niet, wat kan beter?
+🔹 werkgevers en coaches die het willen uitproberen met hun mensen
+🔹 moedertaalsprekers die een vertaling willen nakijken
 
-#Inburgering #Taal #Laaggeletterdheid #NT2 #Werkvloer #Inclusie #Arbeidsmarkt
+Goed om te weten: ik doe dit naast mijn werk, als vrijwillig project, en ik wil er geen verdienmodel aan koppelen. De kosten zijn nu laag genoeg om zelf te betalen. Maar als de app groeit, wil ik hem graag gratis houden. Heb jij ervaring met het opschalen van een maatschappelijk initiatief, met fondsen of met partners? Ik hoor graag waar ik op moet letten.
 
-## Eerste reactie onder je eigen bericht (optioneel)
+Wil je de app zelf ervaren? Stuur een mail naar hoi@vloertaal.nl, dan stuur ik je de toegangscode.
 
-Bij het bericht zelf werkt een link soms minder goed op LinkedIn. Zet dan de link hier:
+Meedenken of meedoen? Stuur me gerust een bericht.
 
-> Probeer het zelf: vloertaal.nl. De eerste les kan zonder code. Werkgevers, coaches of moedertaalsprekers die mee willen doen: stuur me een bericht.
+#Laaggeletterdheid #NT2 #Inburgering #Werkvloer #Taal #Inclusie
 
-## Korte versie (bijvoorbeeld om te delen in een groep)
+---
 
-Vloertaal is een gratis app voor Nederlands op de werkvloer, met hulp in 9 talen. Geen account, geen reclame, geen verdienmodel. Vanaf vandaag in pilot. Ik zoek coaches, werkgevers en moedertaalsprekers die mee willen doen. 👉 vloertaal.nl
+## Bronnen
+- PIAAC 2023, *Kernvaardigheden van volwassenen*. Resultaten van de Nederlandse survey, Kohnstamm Instituut / ROA (Universiteit Maastricht), december 2024. Kamerbrief: eerstekamer.nl/overig/20241210/piaac_nationaal_rapport/document
+- CBS (2023), *Arbeidsparticipatie hoger bij goede beheersing Nederlands*. cbs.nl/nl-nl/nieuws/2023/44/arbeidsparticipatie-hoger-bij-goede-beheersing-nederlands
+- CBS (2025), dashboard *Basisvaardigheden in zicht*.
 
 ## Tips
-- **Video:** upload de video zelf, als bestand. Een YouTube-link werkt minder goed.
-- **Ondertitels:** LinkedIn speelt video zonder geluid af. De video heeft daarom alleen tekst in beeld.
-- **Deelplaatje:** zet de link pas in het bericht als `vloertaal.nl` werkt. Controleer het plaatje met de LinkedIn Post Inspector (linkedin.com/post-inspector). Die haalt het plaatje met Bram opnieuw op.
+- **Video:** upload de video zelf, als bestand. Een YouTube-link werkt minder goed. LinkedIn speelt video zonder geluid af, en de video heeft daarom alleen tekst in beeld.
+- **Deelplaatje:** zet de link pas in het bericht als `vloertaal.nl` werkt. Controleer het plaatje met de LinkedIn Post Inspector (linkedin.com/post-inspector).
 - **Pilotcode:** zet de code niet openbaar in het bericht. Geef hem per bericht. Zo weet je wie meedoet, en kun je ze na een week om feedback vragen (zie `docs/pilot.md`).
