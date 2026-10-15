@@ -16,11 +16,14 @@ describe('access', () => {
     // The pilot code (October 2026) is not written in the repository, only its hash.
     const PILOT = '94f3f76d391ed7e22dfd2fa93a9c9c0fbfa125385ca45c1ea7702fb28457979e';
     expect(PASSWORD_HASHES[PILOT]).toBe('full');
-    expect(Object.keys(PASSWORD_HASHES)).toHaveLength(5);
+    // A second full-version code (15 October 2026), likewise only as a hash.
+    const SECOND = 'f439b02cc5e1a2f2e2c089e3998b3b8a1131f0d6b2e0911d4fce946516aac54a';
+    expect(PASSWORD_HASHES[SECOND]).toBe('full');
+    expect(Object.keys(PASSWORD_HASHES)).toHaveLength(6);
     // Every other stored hash is reached by some normalised form of a known password.
     const known = ['sneekpeak', 'sneakpeek', 'vlaai-toer'];
     const reached = new Set(known.flatMap((p) => [sha(p), sha(normalizePassword(p))]));
-    for (const h of Object.keys(PASSWORD_HASHES).filter((k) => k !== PILOT)) expect(reached.has(h), h).toBe(true);
+    for (const h of Object.keys(PASSWORD_HASHES).filter((k) => k !== PILOT && k !== SECOND)) expect(reached.has(h), h).toBe(true);
   });
 
   it('normalises: lower case, no spaces, hyphens or dots, Eastern digits as 0-9', () => {
