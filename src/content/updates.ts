@@ -14,6 +14,15 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-10-16',
+    items: [
+      'De onderwerpen staan nu in 8 thema\'s, zoals "Starten", "Je baan" en "Je rechten". Zo zie je beter waar je bent.',
+      'Nieuw onderwerp: In de winkel (vakken vullen, de kassa, wisselgeld, ID vragen).',
+      'Nieuw onderwerp: Rekenen (uren en tijden, geld, kilo en meter).',
+      'Lange woorden in een titel breken nu netjes af.',
+    ],
+  },
+  {
     date: '2026-10-15',
     items: [
       'De pilot is gestart: Vloertaal staat online op vloertaal.nl.',
