@@ -25,6 +25,8 @@ export const PASSWORD_HASHES: Record<string, Access> = {
   '385537df17b00100660dd3b85e9a3a6a50db31b7093fe26f2fedaabd2a17c9d5': 'full',
   // Pilot code (October 2026), announced to pilot coaches.
   '94f3f76d391ed7e22dfd2fa93a9c9c0fbfa125385ca45c1ea7702fb28457979e': 'full',
+  // A second full-version code (15 October 2026).
+  'f439b02cc5e1a2f2e2c089e3998b3b8a1131f0d6b2e0911d4fce946516aac54a': 'full',
 };
 
 /** Arabic-Indic (٠–٩) and Persian (۰–۹) digits: the low four bits of the code point are the digit. */
