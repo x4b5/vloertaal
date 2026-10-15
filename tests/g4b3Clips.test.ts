@@ -1,4 +1,5 @@
-import { readFileSync } from 'node:fs';
+import { execSync } from 'node:child_process';
+import { existsSync, readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { allDialogues, allLessons, allWords } from '../src/content/curriculum';
 import { cultureTips } from '../src/content/culture';
@@ -30,7 +31,9 @@ describe('recorded clips (G4 b3)', () => {
     expect(missing.filter((t) => !PENDING_RECORDING.has(t))).toEqual([]);
   });
 
-  it('Bram’s own line is a clip that only his voice records (x.bram, Thijmen)', () => {
+  it('Bram’s own line is a clip that only his voice records (x.bram, Thijmen)', { timeout: 60_000 }, () => {
+    // public/audio/ is not in git (CI and a fresh checkout have no clips.json): make it first.
+    if (!existsSync('public/audio/clips.json')) execSync('npx tsx scripts/list-clips.ts', { stdio: 'ignore' });
     const clips = JSON.parse(readFileSync('public/audio/clips.json', 'utf8')) as { id: string; text: string; voices?: string[] }[];
     expect(clips.find((c) => c.id === 'x.bram')).toEqual({ id: 'x.bram', text: BRAM_HELLO, voices: [BRAM_VOICE] });
     // Every other clip is recorded in every voice, as before.
