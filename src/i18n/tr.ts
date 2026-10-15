@@ -200,6 +200,8 @@ const lang: HelpLanguageSource = {
     topicsDone: 'Biten konular',
     lessonsUnit: 'ders',
     lessonsUnitOne: 'ders',
+    topicsUnit: 'konu',
+    topicsUnitOne: 'konu',
     allTopicsDone: 'Tüm konuları bitirdin. Aferin!',
     // Speaking practice
     tagSpeak: 'Konuş',
@@ -291,6 +293,15 @@ const lang: HelpLanguageSource = {
     reviewWaiting: '{n} kelime daha bekliyor. Önümüzdeki günlerde geri gelecekler.',
   },
   gloss: {
+    // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
+    'theme.start': 'İlk adımlar',
+    'theme.safe': 'Güvenli çalışma',
+    'theme.find': 'İş bulma',
+    'theme.job': 'İşin',
+    'theme.together': 'Birlikte çalışma',
+    'theme.rights': 'Hakların',
+    'theme.life': 'Hollanda’da yaşam',
+    'theme.sector': 'Sektörün',
     // Unit: First day at work
     'u.firstday': 'İş yerinde ilk gün',
     'l.hello': 'Merhaba de',

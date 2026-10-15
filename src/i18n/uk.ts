@@ -200,6 +200,8 @@ const lang: HelpLanguageSource = {
     topicsDone: 'Пройдені теми',
     lessonsUnit: { one: 'урок', few: 'уроки', many: 'уроків', other: 'уроків' },
     lessonsUnitOne: 'урок',
+    topicsUnit: { one: 'тема', few: 'теми', many: 'тем', other: 'теми' },
+    topicsUnitOne: 'тема',
     allTopicsDone: 'Усі теми пройдено. Чудово!',
     // Speaking practice
     tagSpeak: 'Говори',
@@ -291,6 +293,15 @@ const lang: HelpLanguageSource = {
     reviewWaiting: 'Ще чекають слова: {n}. Вони повернуться в наступні дні.',
   },
   gloss: {
+    // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
+    'theme.start': 'Перші кроки',
+    'theme.safe': 'Безпечна робота',
+    'theme.find': 'Пошук роботи',
+    'theme.job': 'Твоя робота',
+    'theme.together': 'Співпраця',
+    'theme.rights': 'Твої права',
+    'theme.life': 'Життя в Нідерландах',
+    'theme.sector': 'Твоя сфера',
     // Unit: First day at work
     'u.firstday': 'Перший робочий день',
     'l.hello': 'Привітання',

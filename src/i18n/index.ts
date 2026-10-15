@@ -167,6 +167,7 @@ const SINGULAR: Partial<Record<UiKey, UiKey>> = {
   recordN: 'recordOne',
   streakStopped: 'streakStoppedOne',
   lessonsUnit: 'lessonsUnitOne',
+  topicsUnit: 'topicsUnitOne',
   bramDueN: 'bramDueOne',
 };
 

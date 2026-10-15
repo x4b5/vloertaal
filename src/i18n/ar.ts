@@ -200,6 +200,8 @@ const lang: HelpLanguageSource = {
     topicsDone: 'مواضيع منتهية',
     lessonsUnit: { zero: 'درس', one: 'درس', two: 'درسان', few: 'دروس', many: 'درساً', other: 'درس' },
     lessonsUnitOne: 'درس',
+    topicsUnit: { zero: 'موضوع', one: 'موضوع', two: 'موضوعان', few: 'مواضيع', many: 'موضوعاً', other: 'موضوع' },
+    topicsUnitOne: 'موضوع',
     allTopicsDone: 'أنهيت كل المواضيع. عمل رائع!',
     // Speaking practice
     tagSpeak: { m: 'تكلّم', f: 'تكلّمي' },
@@ -291,6 +293,15 @@ const lang: HelpLanguageSource = {
     reviewWaiting: 'كلمات أخرى تنتظر: {n}. ستعود في الأيام القادمة.',
   },
   gloss: {
+    // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
+    'theme.start': 'الخطوات الأولى',
+    'theme.safe': 'العمل بأمان',
+    'theme.find': 'البحث عن عمل',
+    'theme.job': 'وظيفتك',
+    'theme.together': 'العمل معاً',
+    'theme.rights': 'حقوقك',
+    'theme.life': 'الحياة في هولندا',
+    'theme.sector': 'قطاعك',
     // Units
     'u.firstday': 'اليوم الأول في العمل',
     'u.help': 'طلب المساعدة',

@@ -200,6 +200,8 @@ const lang: HelpLanguageSource = {
     topicsDone: 'Subiecte terminate',
     lessonsUnit: { one: 'lecție', few: 'lecții', other: 'de lecții' },
     lessonsUnitOne: 'lecție',
+    topicsUnit: { one: 'subiect', few: 'subiecte', other: 'de subiecte' },
+    topicsUnitOne: 'subiect',
     allTopicsDone: 'Ai terminat toate subiectele. Bravo!',
     // Speaking practice
     tagSpeak: 'Vorbește',
@@ -291,6 +293,15 @@ const lang: HelpLanguageSource = {
     reviewWaiting: 'Mai așteaptă cuvinte: {n}. Revin în zilele următoare.',
   },
   gloss: {
+    // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
+    'theme.start': 'Primii pași',
+    'theme.safe': 'Muncă în siguranță',
+    'theme.find': 'Căutare de lucru',
+    'theme.job': 'Slujba ta',
+    'theme.together': 'Lucrul în echipă',
+    'theme.rights': 'Drepturile tale',
+    'theme.life': 'Viața în Olanda',
+    'theme.sector': 'Domeniul tău',
     // Units
     'u.firstday': 'Prima zi de muncă',
     'u.help': 'Cum ceri ajutor',

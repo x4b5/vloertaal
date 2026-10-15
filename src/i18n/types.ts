@@ -211,6 +211,9 @@ export const uiEn = {
   topicsDone: 'Finished topics',
   lessonsUnit: 'lessons',
   lessonsUnitOne: 'lesson',
+  /** "2 / 5 topics": a theme's finished topics (All topics, the home's theme label). */
+  topicsUnit: 'topics',
+  topicsUnitOne: 'topic',
   allTopicsDone: 'You finished every topic. Well done!',
   /* Speaking practice ("say it": record and compare; Settings switch). */
   tagSpeak: 'Speak',

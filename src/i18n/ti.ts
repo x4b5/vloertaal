@@ -200,6 +200,8 @@ const lang: HelpLanguageSource = {
     topicsDone: 'ዝተወድኡ ኣርእስትታት',
     lessonsUnit: 'ትምህርትታት',
     lessonsUnitOne: 'ትምህርቲ',
+    topicsUnit: 'ኣርእስትታት',
+    topicsUnitOne: 'ኣርእስቲ',
     allTopicsDone: { m: 'ኩሎም ኣርእስትታት ወዲእካ። ጽቡቕ ስራሕ!', f: 'ኩሎም ኣርእስትታት ወዲእኪ። ጽቡቕ ስራሕ!' },
     // Speaking practice
     tagSpeak: { m: 'ተዛረብ', f: 'ተዛረቢ' },
@@ -291,6 +293,15 @@ const lang: HelpLanguageSource = {
     reviewWaiting: 'ዝጽበዩ ዘለዉ ካልኦት ቃላት: {n}። ኣብ ዝመጽእ መዓልታት ክምለሱ እዮም።',
   },
   gloss: {
+    // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
+    'theme.start': 'ቀዳሞት ስጉምትታት',
+    'theme.safe': 'ብድሕንነት ምስራሕ',
+    'theme.find': 'ስራሕ ምርካብ',
+    'theme.job': { m: 'ስራሕካ', f: 'ስራሕኪ', x: 'ስራሕኩም' },
+    'theme.together': 'ብሓባር ምስራሕ',
+    'theme.rights': { m: 'መሰላትካ', f: 'መሰላትኪ', x: 'መሰላትኩም' },
+    'theme.life': 'ህይወት ኣብ ሆላንድ',
+    'theme.sector': { m: 'ዓውዲ ስራሕካ', f: 'ዓውዲ ስራሕኪ', x: 'ዓውዲ ስራሕኩም' },
     // Units
     'u.firstday': 'ቀዳማይ መዓልቲ ስራሕ',
     'u.help': 'ሓገዝ ምሕታት',

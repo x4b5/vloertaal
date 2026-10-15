@@ -215,6 +215,8 @@ export const uiNl: Record<UiKey, UiText> = {
   topicsDone: 'Klaar met deze onderwerpen',
   lessonsUnit: 'lessen',
   lessonsUnitOne: 'les',
+  topicsUnit: 'onderwerpen',
+  topicsUnitOne: 'onderwerp',
   allTopicsDone: 'Je hebt alle onderwerpen gedaan. Goed gedaan!',
   tagSpeak: 'Spreken',
   speakPrompt: 'Luister en zeg het dan',

@@ -200,6 +200,8 @@ const lang: HelpLanguageSource = {
     topicsDone: 'Ukończone tematy',
     lessonsUnit: { one: 'lekcja', few: 'lekcje', many: 'lekcji', other: 'lekcji' },
     lessonsUnitOne: 'lekcja',
+    topicsUnit: { one: 'temat', few: 'tematy', many: 'tematów', other: 'tematu' },
+    topicsUnitOne: 'temat',
     allTopicsDone: 'Wszystkie tematy ukończone. Brawo!',
     // Speaking practice
     tagSpeak: 'Mów',
@@ -291,6 +293,15 @@ const lang: HelpLanguageSource = {
     reviewWaiting: 'Czekają jeszcze słowa: {n}. Wrócą w najbliższych dniach.',
   },
   gloss: {
+    // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
+    'theme.start': 'Pierwsze kroki',
+    'theme.safe': 'Bezpieczna praca',
+    'theme.find': 'Szukanie pracy',
+    'theme.job': 'Twoja praca',
+    'theme.together': 'Współpraca',
+    'theme.rights': 'Twoje prawa',
+    'theme.life': 'Życie w Holandii',
+    'theme.sector': 'Twoja branża',
     // Unit: First day at work
     'u.firstday': 'Pierwszy dzień w pracy',
     'l.hello': 'Przywitaj się',
