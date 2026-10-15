@@ -130,7 +130,11 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
     const s = pick(l.sentences, at, 1);
     if (s && !sentences.some((x) => x.nl === s.nl)) sentences.push(s);
   }
-  const chatFrom = from.find(({ l }) => l.dialogues?.length);
+  // The chat: from a lesson with the weakest words (the most recent of them, on the next day the
+  // one before it, and so on), so it is not always the same lesson's chat.
+  const chatty = from.filter(({ l }) => l.dialogues?.length);
+  const weakest = chatty.filter(({ box }) => box === chatty[0]?.box);
+  const chatFrom = weakest.length ? weakest[n % weakest.length] : undefined;
   const chat = chatFrom ? pick(chatFrom.l.dialogues!, chatFrom.at) : undefined;
   const dialogues: Dialogue[] = chat ? [chat] : [];
   return { id: DAILY_ID, title: 'Review today', words, sentences, dialogues, repeat: true, boxes };

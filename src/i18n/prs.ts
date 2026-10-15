@@ -168,7 +168,7 @@ const lang: HelpLanguageSource = {
     certSaved: 'عکس ذخیره شد.',
     certNameAsk: 'نام شما بالای تصدیق‌نامه؟',
     certNameHint: 'تنها در همین تیلفون می‌ماند. می‌توانید خالی بگذارید.',
-    certNameSave: 'بنویسید',
+    certNameSave: 'ذخیره کنید',
     certNoName: 'بدون نام',
     certChangeName: 'تغییر نام',
     certPractice: 'تصدیق‌نامهٔ تمرینی، نه دیپلوم رسمی',
