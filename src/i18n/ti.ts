@@ -227,7 +227,7 @@ const lang: HelpLanguageSource = {
     textLarge: 'ዓቢ',
     textXl: 'ኣዝዩ ዓቢ',
     showEnglish: { m: 'እንግሊዝኛ እውን ኣርኢ', f: 'እንግሊዝኛ እውን ኣርእዪ' },
-    genderTitle: 'ሰበይቲ ወይ ሰብኣይ?',
+    genderTitle: 'ሰበይቲ ወይስ ሰብኣይ?',
     genderHint: 'ሓገዝ ብቋንቋ ብትኽክለኛ ኣገባብ ንምርካብ።',
     genderWoman: 'ሰበይቲ',
     genderMan: 'ሰብኣይ',
