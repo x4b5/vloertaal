@@ -289,7 +289,7 @@ export default function App() {
   useEffect(() => {
     const onHash = () => {
       if (adminRequested()) setView({ name: 'admin' });
-      if (coachesRequested()) setCoachDirect(true);
+      setCoachDirect(coachesRequested());
     };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
@@ -531,6 +531,7 @@ export default function App() {
           onQuit={() => { leaving.current = true; back(); }}
           onFinish={finish}
           resumable={!daily}
+          sector={progress.sector}
         />
       );
     }

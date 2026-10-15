@@ -1,6 +1,6 @@
 import { allDialogues, allLessons, allReplies, allWords, teachingLessons, units } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
-import { mainLessons, type SectorChoice } from '../content/sectors';
+import { coursePlan, mainLessons, type SectorChoice } from '../content/sectors';
 import { type CultureTip, tipForLesson } from '../content/culture';
 import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
 import { tokenize } from './answers';
@@ -587,7 +587,7 @@ export function forRetry(ex: Exercise, lesson: Lesson, seed: number): Exercise {
 
 /**
  * Progression through the course (G4 b3): later units are not the same template again. From
- * these units on (0-based place in the course, see `units`):
+ * these units on (0-based place on the learner's own path, as Route and the certificates number it):
  * - `pickDutch`: the last quiz after the new words asks the other way round: the meaning shown,
  *   pick the Dutch word (text cards; each with a speaker for a learner who reads another script);
  * - `audioBuild`: one sentence is built by ear: the meaning is hidden until the end and the
@@ -598,9 +598,11 @@ export function forRetry(ex: Exercise, lesson: Lesson, seed: number): Exercise {
  */
 export const PROGRESSION = { pickDutch: 4, audioBuild: 7, reverseChat: 10 } as const;
 
-/** The 0-based place of the lesson's unit in the course (-1 outside it, e.g. today's review). */
-export function unitIndexOf(lesson: Lesson): number {
-  return units.findIndex((u) => u.lessons.some((l) => l.id === lesson.id));
+/** The 0-based place of the lesson's unit on the learner's path (-1 outside it, e.g. today's review). */
+export function unitIndexOf(lesson: Lesson, sector?: SectorChoice): number {
+  const { main, other } = coursePlan(sector);
+  const at = [...main, ...other].findIndex((u) => u.lessons.some((l) => l.id === lesson.id));
+  return at >= 0 ? at : units.findIndex((u) => u.lessons.some((l) => l.id === lesson.id));
 }
 
 /** The dialogue for a reversed chat in a lesson: the one of the lesson before it in its unit
@@ -622,7 +624,7 @@ function reverseDialogue(lesson: Lesson): Dialogue | undefined {
  * quiet ("Without sound"): every listening exercise becomes a reading one on the same word, so
  * the lesson keeps its length and nothing needs to be heard.
  */
-export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean }): Exercise[] {
+export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice }): Exercise[] {
   const rng = createRng(opts.seed ?? Date.now());
   const words = lesson.words;
   const out: Exercise[] = [];
@@ -636,8 +638,8 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   const dialogues = daily ? (lesson.dialogues ?? []).slice(0, 1) : lesson.dialogues ?? [];
   // Progression (PROGRESSION): only in the course's own lessons (and a reversed chat in a unit's
   // mixed review), not in today's review.
-  const unitAt = mix ? -1 : unitIndexOf(lesson);
-  const mixTurn = mix && !daily && !lesson.repeat && dialogues.length > 1 && unitIndexOf(lesson) >= PROGRESSION.reverseChat;
+  const unitAt = mix ? -1 : unitIndexOf(lesson, opts.sector);
+  const mixTurn = mix && !daily && !lesson.repeat && dialogues.length > 1 && unitIndexOf(lesson, opts.sector) >= PROGRESSION.reverseChat;
   const later = (from: number) => unitAt >= from;
   /** The word asked "the other way round" after the new words (pick the Dutch), if any. */
   let pickedDutch: string | undefined;

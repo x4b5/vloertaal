@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
+import type { SectorChoice } from '../content/sectors';
 import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, sounds, speak, speechAvailable, stopSpeech } from '../lib/audio';
@@ -196,7 +197,7 @@ export function LessonPlayer(props: PlayerProps) {
   return <LessonRun {...props} />;
 }
 
-function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false }: {
+function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, sector }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -219,6 +220,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
    * the app is hidden, picked up again on the next start, cleared when the lesson is finished.
    */
   resumable?: boolean;
+  /** The learner's sector: later exercise kinds follow the place on their own path. */
+  sector?: SectorChoice;
 }) {
   const persist = resumable && !exercises;
   // An interrupted run of this lesson (same review mode), less than two days old.
@@ -240,8 +243,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const initial = useMemo(
     // A learner who reads only another script gets picture cards (or cards with speakers) where
     // a review would show Latin-only text cards (lib/exercises.ts readableDutch).
-    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart }),
-    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart],
+    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart, sector }),
+    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart, sector],
   );
   // The saved place in that list, with the mistakes queued then (null: start from the top).
   const [resumed] = useState(() => (saved ? restoreSave(saved, initial) : null));
@@ -308,12 +311,17 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     return () => clearTimeout(t);
   }, [soundNote]);
 
-  // A sentence built by ear becomes the usual one (meaning shown) when the learner can't listen.
+  // A sentence built by ear becomes the usual one (meaning shown) when the learner can't listen;
+  // so does "pick the Dutch word" on text cards for a learner who reads another script (the
+  // cards' speakers were their way in): "what does it mean" instead.
   const queued = queue[index];
-  const ex: Exercise = useMemo(
-    () => (queued && queued.kind === 'build' && queued.audio && audioOff ? { ...queued, audio: undefined } : queued),
-    [queued, audioOff],
-  );
+  const ex: Exercise = useMemo(() => {
+    if (queued && queued.kind === 'build' && queued.audio && audioOff) return { ...queued, audio: undefined };
+    if (queued && queued.kind === 'dutch' && queued.textOnly && nonLatinAtStart && audioOff) {
+      return { kind: 'meaning', word: queued.word, options: queued.options };
+    }
+    return queued;
+  }, [queued, audioOff, nonLatinAtStart]);
 
   /*
    * Resume: the place is saved after every answer (on the exercise that comes next) and when the

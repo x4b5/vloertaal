@@ -168,7 +168,7 @@ const SINGULAR: Partial<Record<UiKey, UiKey>> = {
   bramDueN: 'bramDueOne',
 };
 
-/** Intl.PluralRules per language (Dari follows Persian; an unknown code would fall back to English). */
+/** Intl.PluralRules per language (Dari follows Persian; an unknown code falls back to the device's language). */
 const PLURAL_LOCALE: Partial<Record<LangCode, string>> = { prs: 'fa' };
 const pluralRules = new Map<string, Intl.PluralRules>();
 
@@ -177,7 +177,12 @@ export function pluralCategory(code: LangCode | 'en', n: number): PluralCategory
   const locale = (code !== 'en' && PLURAL_LOCALE[code]) || code;
   let rules = pluralRules.get(locale);
   if (!rules) {
-    rules = new Intl.PluralRules(locale);
+    // Very old WebViews have no Intl.PluralRules: 1 and the rest ("other" is always there).
+    try {
+      rules = new Intl.PluralRules(locale);
+    } catch {
+      return n === 1 ? 'one' : 'other';
+    }
     pluralRules.set(locale, rules);
   }
   return rules.select(n) as PluralCategory;
