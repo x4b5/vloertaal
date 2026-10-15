@@ -1,5 +1,7 @@
 import { breakable } from '../lib/dutch';
 import { LessonCelebration } from './Celebrate';
+import { BramSays } from './BramSays';
+import { resultLineFor } from '../lib/greeting';
 import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
 import { findLesson } from '../content/curriculum';
@@ -485,6 +487,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
     <div className="player result-screen">
       <main className="player-body result">
         <div className="result-hero">
+          {/* Bram (the one with the thumb up) says one calm line. */}
+          <BramSays text={ui(resultLineFor(kind, right, total), lang)} tail="down" />
           <LessonCelebration />
           {/* Rubber stamp on the delivery note: the lesson is done. */}
           <span className="stamp stamp-right result-stamp" aria-hidden>

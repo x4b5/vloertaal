@@ -12,6 +12,7 @@
  *  7. otherwise                                        "Good to see you."
  */
 import { daysBetween, dayKey, doneToday, currentStreak, type Progress } from './progress';
+import type { UiKey } from '../i18n/types';
 
 export type GreetingKind = 'hello' | 'back' | 'due' | 'streak' | 'done';
 
@@ -71,4 +72,17 @@ export function greetedToday(today: Date): boolean {
 /** Remember that the home was shown today, so the next visit gets the line for the day's state. */
 export function rememberGreeted(today: Date): void {
   try { localStorage.setItem(GREETED_KEY, dayKey(today)); } catch { /* private mode: not remembered */ }
+}
+
+/**
+ * Bram's line on the result screen, as calm as the home line: after a review, "repeating helps";
+ * after a lesson, "you know these words" with no mistakes, "step by step" with most right, and
+ * with many mistakes only that practising was good and the hard words come back (they do: the
+ * review brings them). Never a score judgement.
+ */
+export function resultLineFor(kind: 'lesson' | 'daily' | 'review', right: number, total: number): UiKey {
+  if (kind !== 'lesson') return 'bramReview';
+  if (total > 0 && right === total) return 'bramPerfect';
+  if (total === 0 || right / total >= 0.6) return 'bramGood';
+  return 'bramHard';
 }
