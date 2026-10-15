@@ -1786,7 +1786,7 @@ export const toolsUnit = unit('tools', 'Smart tools', 'Slimme hulpmiddelen', 'ðŸ
     [
       ['Ik vertaal het met mijn telefoon.', 'I translate it with my phone.'],
       ['Mag ik dit even vertalen?', 'May I quickly translate this?'],
-      ['Kunt u in mijn telefoon spreken?', 'Can you speak into my phone?'],
+      ['Wilt u even tegen mijn telefoon praten?', 'Could you talk to my phone for a moment?'],
     ],
     [['Wat staat er op dat briefje?', 'What does that note say?'], ['Wacht even, ik vertaal het.', 'Wait a moment, I will translate it.']],
   ),
