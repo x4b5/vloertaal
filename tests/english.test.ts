@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { englishHidden, setWantsEnglish, wantsEnglish } from '../src/lib/english';
-import { helpLanguages, ui } from '../src/i18n';
+import { helpLanguages, ui } from '../src/i18n/all';
 
 describe('English next to the help language', () => {
   it('is hidden only with a help language and "Show English too" off', () => {

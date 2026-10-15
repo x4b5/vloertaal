@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { helpLanguages } from '../src/i18n';
+import { helpLanguages } from '../src/i18n/all';
 import { barParts, cheerFor, nextMisses, nextRun, runStampFor } from '../src/lib/lessonRun';
 
 describe('run of right answers in a lesson', () => {

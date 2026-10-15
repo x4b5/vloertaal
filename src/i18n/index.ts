@@ -1,71 +1,82 @@
-import ar from './ar';
-import bg from './bg';
-import fa from './fa';
-import pl from './pl';
-import prs from './prs';
-import ro from './ro';
-import ti from './ti';
-import tr from './tr';
-import uk from './uk';
-import cAr from './culture/ar';
-import cBg from './culture/bg';
-import cFa from './culture/fa';
-import cPl from './culture/pl';
-import cPrs from './culture/prs';
-import cRo from './culture/ro';
-import cTi from './culture/ti';
-import cTr from './culture/tr';
-import cUk from './culture/uk';
-import aAr from './about/ar';
-import aBg from './about/bg';
-import aFa from './about/fa';
-import aPl from './about/pl';
-import aPrs from './about/prs';
-import aRo from './about/ro';
-import aTi from './about/ti';
-import aTr from './about/tr';
-import aUk from './about/uk';
-import wAr from './work/ar';
-import wBg from './work/bg';
-import wFa from './work/fa';
-import wPl from './work/pl';
-import wPrs from './work/prs';
-import wRo from './work/ro';
-import wTi from './work/ti';
-import wTr from './work/tr';
-import wUk from './work/uk';
-import type { CultureTranslation } from './culture/types';
 import { mixLessonId, relatedUnits } from '../content/review';
+import { langMeta, languageMeta } from './meta';
+import type { LanguagePack } from './packs/types';
 import type { Gender, HelpLanguage, HelpLanguageSource, LangCode, LangText, UiKey } from './types';
 import { forGender, GENDERED_LANGS, uiEn } from './types';
 
-/** Picker order: the largest newcomer groups first, then labour-migration languages. */
-const culture: Record<LangCode, CultureTranslation> = {
-  ar: cAr, bg: cBg, fa: cFa, pl: cPl, prs: cPrs, ro: cRo, ti: cTi, tr: cTr, uk: cUk,
+export { languageMeta, langMeta, metaLanguage, LANG_CODES, type LangMeta } from './meta';
+
+/**
+ * The help languages are loaded on demand: each is its own file (src/i18n/packs), about 50 kB
+ * zipped, so the first screen does not wait for all nine. ensureLanguage(code) loads one (the app
+ * waits for it at start and when the language changes, showing the splash); getHelpLanguage then
+ * returns it straight away. The language list and the guess page need only src/i18n/meta.ts.
+ */
+const loaders: Record<LangCode, () => Promise<{ default: LanguagePack }>> = {
+  ar: () => import('./packs/ar'),
+  ti: () => import('./packs/ti'),
+  fa: () => import('./packs/fa'),
+  prs: () => import('./packs/prs'),
+  uk: () => import('./packs/uk'),
+  tr: () => import('./packs/tr'),
+  pl: () => import('./packs/pl'),
+  ro: () => import('./packs/ro'),
+  bg: () => import('./packs/bg'),
 };
 
-const about: Record<LangCode, CultureTranslation> = {
-  ar: aAr, bg: aBg, fa: aFa, pl: aPl, prs: aPrs, ro: aRo, ti: aTi, tr: aTr, uk: aUk,
-};
+const sources = new Map<LangCode, HelpLanguageSource>();
+const packUrls = new Map<LangCode, string>();
+const pending = new Map<LangCode, Promise<void>>();
 
-/** Work-and-rights units (src/content/work.ts). TODO: still English placeholders. */
-const work: Record<LangCode, CultureTranslation> = {
-  ar: wAr, bg: wBg, fa: wFa, pl: wPl, prs: wPrs, ro: wRo, ti: wTi, tr: wTr, uk: wUk,
-};
+/** Workplace-culture, work-and-rights, About and learning texts live in their own files; merge them in. */
+function merge(p: LanguagePack): HelpLanguageSource {
+  const l = p.base;
+  return {
+    ...l,
+    ui: { ...l.ui, ...p.culture.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui },
+    gloss: {
+      ...l.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.about.gloss, ...p.learn.gloss,
+      // Every unit's "Mixed review" lesson shares one title.
+      ...Object.fromEntries(Object.keys(relatedUnits).map((id) => [mixLessonId(id), l.ui.mixLesson ?? uiEn.mixLesson])),
+    },
+  };
+}
 
-/** Workplace-culture, work-and-rights and About texts live in their own files (src/i18n/culture, src/i18n/work, src/i18n/about); merge them in. */
-const withCulture = (l: HelpLanguageSource): HelpLanguageSource => ({
-  ...l,
-  ui: { ...l.ui, ...culture[l.code].ui, ...work[l.code].ui, ...about[l.code].ui },
-  gloss: {
-    ...l.gloss, ...culture[l.code].gloss, ...work[l.code].gloss, ...about[l.code].gloss,
-    // Every unit's "Mixed review" lesson shares one title.
-    ...Object.fromEntries(Object.keys(relatedUnits).map((id) => [mixLessonId(id), l.ui.mixLesson ?? uiEn.mixLesson])),
-  },
-});
+/** Puts a loaded pack in place (also used by src/i18n/all.ts, which loads every pack at once for tests). */
+export function registerPack(pack: LanguagePack): void {
+  const code = pack.base.code;
+  sources.set(code, merge(pack));
+  packUrls.set(code, pack.url);
+  for (const key of [...cache.keys()]) if (key.startsWith(`${code}:`)) cache.delete(key);
+}
 
-/** Every help language as written, texts by gender where they differ (checks and tests). */
-export const helpLanguageSources: HelpLanguageSource[] = [ar, ti, fa, prs, uk, tr, pl, ro, bg].map(withCulture);
+export function isLanguageLoaded(code: LangCode | null | undefined): boolean {
+  return !code || sources.has(code);
+}
+
+/**
+ * Loads a help language's pack (once; again after a failure, e.g. offline). Resolves at once for
+ * English only (null) or a pack already here.
+ */
+export function ensureLanguage(code: LangCode | null | undefined): Promise<void> {
+  if (!code || sources.has(code) || !loaders[code]) return Promise.resolve();
+  let p = pending.get(code);
+  if (!p) {
+    p = loaders[code]().then((m) => registerPack(m.default)).finally(() => pending.delete(code));
+    pending.set(code, p);
+  }
+  return p;
+}
+
+/** The files of the packs loaded on this visit: saved with the app for offline use (src/lib/offline.ts). */
+export function loadedPackUrls(): string[] {
+  return [...packUrls.values()].filter((u) => /^https?:/.test(u));
+}
+
+/** The loaded help languages' sources, in picker order (checks and tests; see src/i18n/all.ts). */
+export function loadedSources(): HelpLanguageSource[] {
+  return languageMeta.flatMap((m) => sources.get(m.code) ?? []);
+}
 
 const resolveAll = (texts: Record<string, LangText | undefined>, gender?: Gender): Record<string, string> =>
   Object.fromEntries(Object.entries(texts).flatMap(([k, t]) => (t === undefined ? [] : [[k, forGender(t, gender)]])));
@@ -81,17 +92,18 @@ function resolve(src: HelpLanguageSource, gender?: Gender): HelpLanguage {
 
 const cache = new Map<string, HelpLanguage>();
 
-/** The help languages with the default form (no gender chosen): the language picker and checks. */
-export const helpLanguages: HelpLanguage[] = helpLanguageSources.map((src) => getHelpLanguage(src.code)!);
-
 /** Does the help language change "I am sick" / "you are new" for a woman or a man? */
 export function hasGender(code: LangCode | null | undefined): boolean {
   return Boolean(code && GENDERED_LANGS.includes(code));
 }
 
+/**
+ * The help language, resolved for the learner's gender. Undefined for English only, and also
+ * while its pack has not loaded yet (call ensureLanguage first; the app shows its splash meanwhile).
+ */
 export function getHelpLanguage(code: LangCode | null | undefined, gender?: Gender | null): HelpLanguage | undefined {
-  const src = helpLanguageSources.find((l) => l.code === code);
-  if (!src) return undefined;
+  const src = code ? sources.get(code) : undefined;
+  if (!src || !langMeta(code)) return undefined;
   const g = gender ?? undefined;
   const key = `${src.code}:${g ?? ''}`;
   let lang = cache.get(key);
@@ -149,4 +161,18 @@ export function uiCount(key: UiKey, n: number, lang?: HelpLanguage): Bilingual {
 /** uiCount with the number filled in. */
 export function fillCount(key: UiKey, n: number, lang?: HelpLanguage): Bilingual {
   return fillN(uiCount(key, n, lang), n);
+}
+
+/**
+ * What a screen reader says for a text (aria-label, title, sr-only): the help language when
+ * there is one, English only without it. English is hidden from help-language users on screen,
+ * so it is not read out to them either.
+ */
+export function said(text: Bilingual): string {
+  return text.help ?? text.en;
+}
+
+/** The `lang` attribute for said(text): the help language's code, or English. */
+export function saidLang(text: Bilingual): string {
+  return text.help && text.lang ? text.lang.code : 'en';
 }

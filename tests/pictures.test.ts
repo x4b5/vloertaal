@@ -63,7 +63,9 @@ describe('abstract words (no picture)', () => {
     for (const lesson of allLessons) {
       if (!lesson.words.some(hasPicture)) continue;
       for (const seed of SEEDS) {
-        const ex = buildLesson(lesson, { review: false, seed }).find((e) => e.kind === 'dutch');
+        // The picture choice comes after the match board (a review asks "which one is …" before it).
+        const list = buildLesson(lesson, { review: false, seed });
+        const ex = list.slice(list.findIndex((e) => e.kind === 'match')).find((e) => e.kind === 'dutch');
         expect(ex && hasPicture(ex.word), `${lesson.id} seed ${seed}`).toBe(true);
       }
     }
@@ -106,7 +108,9 @@ describe('unit icons', () => {
   it('every unit has a drawn icon next to its title', async () => {
     const { units } = await import('../src/content/curriculum');
     const { unitIcons } = await import('../src/content/unitIcons');
-    const { pictures, iconPictures } = await import('../src/pictures');
+    const { loadPictures, iconPictures } = await import('../src/pictures');
+    await loadPictures();
+    const { pictures } = await import('../src/pictures');
     for (const u of units) {
       const id = unitIcons[u.id];
       expect(id, u.id).toBeTruthy();

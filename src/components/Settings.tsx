@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { NOT_SURE, sectors, type SectorChoice } from '../content/sectors';
-import { hasGender, ui, type Bilingual } from '../i18n';
+import { hasGender, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, LangCode } from '../i18n/types';
 import type { Access } from '../lib/access';
 import { setPreferredVoice, speak } from '../lib/audio';
@@ -23,7 +23,6 @@ import { Bi } from './Bi';
 import { CertIcon, CertificatesCard } from './Certificate';
 import { ChoiceCards, type ChoiceOption } from './Choice';
 import { ChromeBack } from './ChromeBack';
-import { Flag } from './Flags';
 import { UpgradeCard } from './Gate';
 import { GenderPicker, NeutralIcon } from './Gender';
 import {
@@ -206,7 +205,7 @@ export function Settings({
         <li key={p}>
           <button type="button" className={`set-row ${p === 'reset' ? 'danger' : ''}`} onClick={() => onPage(p)}>
             <span className="set-row-icon" aria-hidden>
-              {p === 'language' && lang ? <Flag code={lang.code} width={30} /> : p === 'sector' && progress.sector ? <SectorIcon id={progress.sector} size={24} /> : ROWS[p].icon}
+              {p === 'sector' && progress.sector ? <SectorIcon id={progress.sector} size={24} /> : ROWS[p].icon}
             </span>
             <span className="set-row-names">
               <Bi className="set-row-help" text={say(ROWS[p].key)} />
@@ -267,7 +266,7 @@ export function Settings({
         return (
           <>
             <ChoiceCards
-              label={ui('sound').en}
+              label={said(ui('sound', lang))}
               current={progress.quiet ? 'off' : 'on'}
               onPick={(id) => { onQuiet(id === 'off'); answered(); }}
               options={[
@@ -288,7 +287,7 @@ export function Settings({
         const options = base.map((o) => ({
           ...o,
           extra: (
-            <button type="button" className="speak speak-md max3-say" aria-label={`Listen: ${o.text.en}`} onClick={() => speak(VOICE_SAMPLE, false, 'nl', refOf(o.id))}>
+            <button type="button" className="speak speak-md max3-say" aria-label={`${said(ui('playAudio', lang))}: ${said(o.text)}`} lang={saidLang(ui('playAudio', lang))} onClick={() => speak(VOICE_SAMPLE, false, 'nl', refOf(o.id))}>
               <SpeakerIcon size={26} />
             </button>
           ),
@@ -298,7 +297,7 @@ export function Settings({
           <>
             <p className="max3-hint"><Bi text={say('voiceHint')} /></p>
             <ChoiceCards
-              label={ui('voice').en}
+              label={said(ui('voice', lang))}
               current={voice}
               onPick={(id) => {
                 const ref = refOf(id);
@@ -326,7 +325,7 @@ export function Settings({
         ];
         return (
           <ChoiceCards
-            label={ui('settingWriting').en}
+            label={said(ui('settingWriting', lang))}
             current={writing}
             onPick={(id) => {
               if (nonLatinHelp(lang)) setWantsWriting(id !== 'pick');
@@ -340,7 +339,7 @@ export function Settings({
       case 'text':
         return (
           <ChoiceCards
-            label={ui('textSize').en}
+            label={said(ui('textSize', lang))}
             current={progress.textSize ?? 'normal'}
             onPick={(size) => { onTextSize(size); answered(); }}
             options={TEXT_SIZES.map((size) => ({ id: size, text: say(TEXT_KEYS[size]), picture: <TextA size={size} /> }))}
@@ -349,7 +348,7 @@ export function Settings({
       case 'theme':
         return (
           <ChoiceCards
-            label={ui('theme').en}
+            label={said(ui('theme', lang))}
             current={progress.theme}
             onPick={(t) => { onTheme(t); answered(); }}
             options={(['auto', 'light', 'dark'] as const).map((t) => {
@@ -383,7 +382,7 @@ export function Settings({
           <>
             <p className="max3-hint max3-hint-top"><Bi text={say('resetConfirm')} /></p>
             <ChoiceCards
-              label={ui('resetProgress').en}
+              label={said(ui('resetProgress', lang))}
               onPick={(id) => { if (id === 'reset') onReset(); onReturn(1); }}
               options={[
                 { id: 'reset', text: say('resetProgress'), picture: <AlertIcon size={26} />, danger: true },
@@ -426,7 +425,7 @@ function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: 
   return (
     <>
       <ChoiceCards
-        label={ui('remindTitle').en}
+        label={said(ui('remindTitle', lang))}
         current={saved ?? current}
         onPick={add}
         options={REMINDER_TIMES.map((t) => ({

@@ -87,8 +87,9 @@ const navTab = (page, i) => tap(page, '.bottom-nav .nav-tab', i);
 /** Build word by word: for each place tap the offered word that is next in the sentence (read
  *  from the speaker's "Play: ..." label). `wrongFirst`: wrong taps on the first place before. */
 async function buildRight(page, wrongFirst = 0) {
-  const label = await page.locator('.build-bubble [aria-label^="Play:"]').first().getAttribute('aria-label');
-  const words = label.replace(/^Play:\s*/, '').replace(/[.,!?]/g, '').split(/\s+/).filter(Boolean);
+  // The sentence (its speaker is held back until a wrong tap, so read it from the exercise).
+  const label = await page.locator('.build-steps[data-nl]').first().getAttribute('data-nl');
+  const words = label.replace(/[.,!?]/g, '').split(/\s+/).filter(Boolean);
   for (const [k, w] of words.entries()) {
     const tiles = page.locator('.tile-steps .tile-with-say:not([disabled])');
     const n = await tiles.count();
@@ -186,10 +187,10 @@ function defineStates(LANG) {
   const stopHalfway = async (p) => {
     await startFirstLesson(p);
     for (let i = 0; i < 3; i++) { await go(p).catch(() => {}); await settle(p, 500); }
-    await tap(p, '[aria-label="Quit lesson"]'); await tap(p, '.sheet-stop'); await settle(p, 900);
+    await tap(p, '.player-top .lesson-close'); await tap(p, '.sheet-stop'); await settle(p, 900);
   };
   add('flow:lesson-first', '/', startFirstLesson);
-  add('flow:quit-dialog', '/', async (p) => { await startFirstLesson(p); await tap(p, '[aria-label="Quit lesson"]'); }, { expect: '.pause-sheet .sheet-sound' });
+  add('flow:quit-dialog', '/', async (p) => { await startFirstLesson(p); await tap(p, '.player-top .lesson-close'); }, { expect: '.pause-sheet .sheet-sound' });
   // A lesson stopped halfway: [Continue] [Start again] [Other topic].
   add('flow:home-resume', '/', stopHalfway, { expect: '.bay-restart' });
   add('flow:home-restart', '/', async (p) => { await stopHalfway(p); await tap(p, '.bay-restart'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
@@ -197,7 +198,7 @@ function defineStates(LANG) {
   add('flow:pause-resumed', '/', async (p) => {
     await stopHalfway(p);
     await tap(p, '.bay-card', 0); await settle(p, 900);
-    await tap(p, '[aria-label="Quit lesson"]');
+    await tap(p, '.player-top .lesson-close');
   }, { expect: '.pause-sheet .sheet-sound' });
   add('flow:help-tab', '/', async (p) => { await realHome(p); await navTab(p, 1); await settle(p); });
   add('flow:settings-tab', '/', async (p) => { await realHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
@@ -266,8 +267,8 @@ function defineStates(LANG) {
   add('lesson:match:done', shot('match'), async (p) => { await matchPairs(p); });
   add('lesson:build', shot('build'));
   add('lesson:build:placed', shot('build'), async (p) => {
-    const label = await p.locator('.build-bubble [aria-label^="Play:"]').first().getAttribute('aria-label');
-    await tapText(p, '.tile-steps .tile-with-say', label.replace(/^Play:\s*/, '').split(/\s+/)[0]);
+    const label = await p.locator('.build-steps[data-nl]').first().getAttribute('data-nl');
+    await tapText(p, '.tile-steps .tile-with-say', label.split(/\s+/)[0]);
   });
   add('lesson:build:right', shot('build'), async (p) => { await buildRight(p); await settle(p, 900); });
   // One stray wrong tap is forgiven (still right); two or more make it a mistake.
@@ -290,8 +291,8 @@ function defineStates(LANG) {
   add('lesson:speak:off', shot('speak-off'));
   add('lesson:retry', shot('retry'));
   add('lesson:quiet', shot('meaning&quiet=1'));
-  add('lesson:quit-dialog', shot('meaning'), async (p) => { await tap(p, '[aria-label="Quit lesson"]'); }, { expect: '.sheet-stop .sheet-stop-icon' });
-  add('lesson:quit-dialog-quiet', shot('meaning&quiet=1'), async (p) => { await tap(p, '[aria-label="Quit lesson"]'); });
+  add('lesson:quit-dialog', shot('meaning'), async (p) => { await tap(p, '.player-top .lesson-close'); }, { expect: '.sheet-stop .sheet-stop-icon' });
+  add('lesson:quit-dialog-quiet', shot('meaning&quiet=1'), async (p) => { await tap(p, '.player-top .lesson-close'); });
 
   // After the lesson
   add('after:result', shot('result'));

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Unit } from '../content/types';
 import { unitIcons } from '../content/unitIcons';
-import { ui } from '../i18n';
+import { said, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { unitIndex } from '../lib/certificate';
 import { pocketPhrases } from '../lib/pocket';
@@ -74,7 +74,7 @@ export function PocketCardScreen({ unit, lang, onBack }: { unit: Unit; lang?: He
         </h1>
       </div>
 
-      <article className="pocket-card" ref={card} dir={rtl ? 'rtl' : undefined} aria-label={`Spiekkaartje: ${unit.titleNl}`}>
+      <article className="pocket-card" ref={card} dir={rtl ? 'rtl' : undefined} aria-label={`Spiekkaartje · ${said(ui('pocketCard', lang))}: ${unit.titleNl}`}>
         <header className="pocket-head">
           <WordPicture className="pocket-unit-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={52} />
           <div className="pocket-titles">
@@ -98,7 +98,7 @@ export function PocketCardScreen({ unit, lang, onBack }: { unit: Unit; lang?: He
                   {helpLine && <HelpText className="pocket-help" text={helpLine} lang={lang!} />}
                   <span className={`pocket-en ${helpLine ? 'en-support' : ''}`} lang="en" dir="ltr">{p.en}</span>
                 </span>
-                <SpeakButton text={p.nl} label={`Play: ${p.nl}`} />
+                <SpeakButton text={p.nl} help={lang} />
               </li>
             );
           })}

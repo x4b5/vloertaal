@@ -1,10 +1,9 @@
 import { useId, useState } from 'react';
-import { ui } from '../i18n';
+import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { type Access, checkPassword } from '../lib/access';
 import { Bi } from './Bi';
-import { ChevronIcon, LockIcon } from './Icons';
-import { Flag } from './Flags';
+import { ChevronIcon, GlobeIcon, LockIcon } from './Icons';
 import { LogoMark, Wordmark } from './Logo';
 
 /**
@@ -96,9 +95,9 @@ export function Gate({ lang, onAccess, onLanguage }: {
         type="button"
         className="gate-lang"
         onClick={onLanguage}
-        aria-label={`${ui('helpLanguage').en}: ${lang ? lang.name : ui('englishOnly').en}`}
+        aria-label={`${said(ui('helpLanguage', lang))}: ${lang ? lang.nativeName : said(ui('englishOnly', lang))}`}
       >
-        <Flag code={lang?.code ?? 'en'} width={28} />
+        <GlobeIcon size={22} />
         <span lang={lang?.code ?? 'en'} dir={lang?.dir}>{lang ? lang.nativeName : 'English'}</span>
         <ChevronIcon size={18} />
       </button>

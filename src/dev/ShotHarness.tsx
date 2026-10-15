@@ -20,7 +20,7 @@ import { getHelpLanguage } from '../i18n';
 import { GenderScreen } from '../components/Gender';
 import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies, learnedWords } from '../content/curriculum';
-import { buildLesson, buildTiles, type Exercise } from '../lib/exercises';
+import { buildLesson, buildTiles, forRetry, type Exercise } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
 import { setSpeakShotPhase } from '../components/Speaking';
 import { createRng } from '../lib/random';
@@ -62,7 +62,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     return (
       <Result
         right={right} total={11} newWords={6} words={24} lang={l} onDone={() => {}}
-        repeated={review ? 8 : undefined} stronger={review ? 5 : undefined}
+        repeated={review || q.get('mix') === '1' ? 8 : undefined} stronger={review ? 5 : undefined}
+        kind={review ? 'daily' : q.get('mix') === '1' ? 'review' : 'lesson'}
         next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l, id: next.id } : undefined}
       />
     );
@@ -219,7 +220,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   const allWords = units.flatMap((u) => u.lessons.flatMap((l) => l.words));
   const focus = allWords.find((w) => w.id === word);
   const exercises: Record<string, Exercise> = {
-    dutch: { kind: 'dutch', word: helm, options: [hesje, handschoenen, helm] },
+    // &text=1: text cards (a review's help language → Dutch; a non-Latin reader gets a speaker per card).
+    dutch: { kind: 'dutch', word: helm, options: [hesje, handschoenen, helm], ...(q.get('text') === '1' ? { textOnly: true } : {}) },
     meaning: { kind: 'meaning', word: focus ?? hesje, options: [handschoenen, schoenen, focus ?? hesje] },
     intro: { kind: 'intro', word: focus ?? hesje },
     listen: { kind: 'listen', word: focus ?? schoenen, options: [helm, focus ?? schoenen, hesje] },
@@ -259,7 +261,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       exercises={[...before, ex, ...pad]}
       startAt={shot === 'retry' ? before.length + pad.length + 2 : before.length}
       // /?shot=retry: the lesson is through and three mistakes come back (the second is on now).
-      repeats={shot === 'retry' ? [exercises.meaning, exercises.dutch, exercises.build] : undefined}
+      // They come back in a new form, as in a real lesson (lib/exercises.ts forRetry).
+      repeats={shot === 'retry' ? [exercises.meaning, exercises.dutch, exercises.build].map((e, i) => forRetry(e, lesson, i + 1)) : undefined}
       onQuit={() => {}}
       onFinish={() => {}}
     />

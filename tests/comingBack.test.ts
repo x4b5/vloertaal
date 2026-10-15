@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { teachingLessons } from '../src/content/curriculum';
-import { helpLanguages } from '../src/i18n';
+import { helpLanguages } from '../src/i18n/all';
 import {
   FREEZE_MAX, backupFile, bestStreak, completeDaily, completeLesson, currentStreak, doneToday, emptyProgress,
   mergeBackup, parseBackup, replaceWithBackup, settleStreak, workWeek, type Progress,

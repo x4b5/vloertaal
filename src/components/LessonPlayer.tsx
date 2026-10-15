@@ -1,14 +1,15 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Lesson } from '../content/types';
-import { fillN, gloss, ui, withoutN, type Bilingual } from '../i18n';
+import { fillN, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, sounds, speak, speechAvailable, stopSpeech } from '../lib/audio';
 import { tileDiff } from '../lib/answers';
-import { buildLesson, isGraded, needsAudio, type Exercise } from '../lib/exercises';
+import { buildLesson, forRetry, isGraded, needsAudio, wordsInSentence, type Exercise } from '../lib/exercises';
+import { chatWhy } from '../content/chatWhy';
 import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { learnerCharacter, voiceFor } from '../lib/voices';
-import { pickInsteadOfTyping, writingInput } from '../lib/writing';
+import { nonLatinHelp, pickInsteadOfTyping, writingInput } from '../lib/writing';
 import { castFor, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { FlameIcon } from './StreakArt';
@@ -17,7 +18,7 @@ import {
   PictureIcon, AskIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon,
 } from './Icons';
 import { MicIcon, SpeakExercise } from './Speaking';
-import { canRecord, micBlocked, speakingOn } from '../lib/speaking';
+import { resetMicForLesson, speakingOn, speakSkipped } from '../lib/speaking';
 import {
   type Answer,
   BuildExercise,
@@ -229,9 +230,14 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // Speaking practice (Settings switch, on by default). A save made with the other setting no
   // longer matches the built list (its kinds differ), so that lesson simply starts fresh.
   const [speakAtStart] = useState(speakingOn);
+  // Every lesson tries the microphone again (a failure in an earlier lesson does not carry over).
+  useState(resetMicForLesson);
+  const [nonLatinAtStart] = useState(() => nonLatinHelp(lang));
   const initial = useMemo(
-    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart }),
-    [exercises, lesson, review, seed, quietAtStart, speakAtStart],
+    // A learner who reads only another script gets picture cards (or cards with speakers) where
+    // a review would show Latin-only text cards (lib/exercises.ts readableDutch).
+    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart }),
+    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart],
   );
   // The saved place in that list, with the mistakes queued then (null: start from the top).
   const [resumed] = useState(() => (saved ? restoreSave(saved, initial) : null));
@@ -474,11 +480,19 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       if (ex.kind === 'meaning' || ex.kind === 'dutch' || ex.kind === 'listen' || ex.kind === 'type') {
         wordResults.current[ex.word.id] = (wordResults.current[ex.word.id] ?? true) && answer.correct;
       }
+      // A match or a sentence that counts as a mistake: the words the wrong taps were on go back
+      // to the first box of the review cards too (one stray tap is forgiven, as in the grading).
+      if (!answer.correct && answer.missed?.length) {
+        const ids = ex.kind === 'match' ? answer.missed
+          : ex.kind === 'build' ? wordsInSentence(answer.missed, lesson.words).map((w) => w.id)
+          : [];
+        for (const id of ids) wordResults.current[id] = false;
+      }
     }
     // A finished match board already gave its feedback tile by tile. Two or more wrong taps make
     // it a mistake, which comes back once at the end (as a built sentence does).
     if (ex.kind === 'match') {
-      if (!answer.correct && index < initial.length) setQueue((q) => [...q, ex]);
+      if (!answer.correct && index < initial.length) setQueue((q) => [...q, forRetry(ex, lesson, seed + q.length)]);
       return next();
     }
     // The choreography (styles.css, "Answer moment"): t=0 the options colour, the chime plays
@@ -503,7 +517,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     } else {
       sounds.wrong();
       // A mistake comes back once at the end of the lesson; no endless loops.
-      if (index < initial.length) setQueue((q) => [...q, ex]);
+      // It comes back in a new form: other order, other wrong options (lib/exercises.ts forRetry).
+      if (index < initial.length) setQueue((q) => [...q, forRetry(ex, lesson, seed + q.length)]);
     }
     const sol = solution(ex);
     const said = announce(ex, answer.correct, answer.almost);
@@ -520,9 +535,11 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     const title = correct ? 'Goed zo!' : e.kind === 'situation' ? 'Hier gaat het anders.' : 'Nog eens!';
     const meaning = ui(correct ? (almost ? 'almost' : e.kind === 'situation' ? 'goodChoice' : 'correct') : e.kind === 'situation' ? 'otherChoice' : 'incorrect', lang);
     const p = answerPair(e, lang);
-    const answerText = p ? `${p.nl ? `${p.nl} = ` : ''}${p.meaning.en}${p.meaning.help ? ` (${p.meaning.help})` : ''}` : '';
-    const lead = !correct ? `${ui(e.kind === 'situation' ? 'bestAnswer' : 'correctAnswer').en}: ` : '';
-    return [title, `${meaning.en}${meaning.help ? ` (${meaning.help})` : ''}.`, answerText && `${lead}${answerText}`].filter(Boolean).join(' ');
+    // Help-language users hear their language, not the English that is hidden on screen.
+    const answerText = p ? `${p.nl ? `${p.nl} = ` : ''}${said(p.meaning)}` : '';
+    const lead = !correct ? `${said(ui(e.kind === 'situation' ? 'bestAnswer' : 'correctAnswer', lang))}: ` : '';
+    const outcome = said(meaning);
+    return [title, /[.!?。።؟]$/.test(outcome) ? outcome : `${outcome}.`, answerText && `${lead}${answerText}`].filter(Boolean).join(' ');
   }
 
   /** Copy the exercise on screen into the ghost layer, where it slides out while the next comes in. */
@@ -560,9 +577,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     setLive('');
   }
 
-  /** A speaking exercise that can't be done here: sound off, or no (allowed) microphone. It is
-   *  passed over quietly (not graded, so not counted as skipped either). */
-  const cantSpeak = (e: Exercise) => e.kind === 'speak' && (soundOff || !canRecord() || micBlocked());
+  /** A speaking exercise is passed over only without sound (not graded, so not counted as
+   *  skipped either). Without a usable microphone it stays, as "say it out loud" (Speaking.tsx). */
+  const cantSpeak = (e: Exercise) => e.kind === 'speak' && speakSkipped(soundOff);
 
   function next() {
     reset();
@@ -647,8 +664,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       type="button"
       className="replay-btn"
       onClick={() => speak(pair.nl!, false, 'nl', voiceFor(answerVoice(ex, lang?.gender)))}
-      aria-label={`${ui('playAgain').en}: ${pair.nl}`}
-      title={ui('playAgain', lang).help ?? ui('playAgain').en}
+      aria-label={`${said(ui('playAgain', lang))}: ${pair.nl}`}
+      title={said(ui('playAgain', lang))}
+      lang={saidLang(ui('playAgain', lang))}
     >
       <PlayGlyph />
     </button>
@@ -662,7 +680,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
             {diff.map((t, i) => (
               <span key={i} className={`ftile ${t.ok ? '' : 'ftile-miss'}`}>
                 {t.word}
-                {!t.ok && <span className="sr-only"> ({ui('incorrect').en})</span>}
+                {!t.ok && <span className="sr-only" lang={saidLang(ui('incorrect', lang))}> ({said(ui('incorrect', lang))})</span>}
               </span>
             ))}
           </span>
@@ -691,7 +709,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     </div>
   );
   // Situations explain why the usual answer works here.
-  const why = ex.kind === 'situation' ? gloss(ex.tip.why.id, ex.tip.why.en, lang) : null;
+  // A chat after a wrong pick: one short line on why the right reply fits.
+  const chatReason = ex.kind === 'chat' && feedback && !answer.correct ? chatWhy(ex.dialogue.reply.id) : undefined;
+  const why = ex.kind === 'situation' ? gloss(ex.tip.why.id, ex.tip.why.en, lang) : chatReason ? gloss(chatReason.id, chatReason.en, lang) : null;
   const whyLine = why && (
     <div className="feedback-meaning feedback-why">
       <span className={`bi-en ${why.help && why.lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{why.en}</span>
@@ -719,12 +739,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     <div className={`player ${rtl ? 'player-rtl' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
       <header className="player-top">
         {/* The only control up here: ✕ opens the pause sheet (keep going, without sound, stop). */}
-        <button type="button" className="icon-btn lesson-close" onClick={() => setAskQuit(true)} aria-label="Quit lesson" aria-haspopup="dialog"><CloseIcon size={28} /></button>
+        <button type="button" className="icon-btn lesson-close" onClick={() => setAskQuit(true)} aria-label={said(ui('quitLesson', lang))} lang={saidLang(ui('quitLesson', lang))} aria-haspopup="dialog"><CloseIcon size={28} /></button>
         <div className="bar-wrap">
           <div
             className="lbar"
             role="progressbar"
-            aria-label="Lesson progress"
+            aria-label={said(ui('lessonProgress', lang))}
             aria-valuemin={0}
             aria-valuemax={bar.slots}
             aria-valuenow={doneCount}
@@ -781,7 +801,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
           <button
             type="button"
             className="foot-more-btn"
-            aria-label="Scroll down"
+            aria-label={said(ui('scrollDown', lang))}
+            lang={saidLang(ui('scrollDown', lang))}
             onClick={() => window.scrollBy({ top: Math.round(window.innerHeight * 0.4), behavior: reducedMotion() ? 'auto' : 'smooth' })}
           >
             <ChevronDownIcon size={22} />

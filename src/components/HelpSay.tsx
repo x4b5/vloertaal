@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import { ui } from '../i18n';
+import { said, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { helpVoice, speakHelp } from '../lib/audio';
-import { HelpVoiceIcon } from './Icons';
-import { Flag } from './Flags';
+import { GlobeIcon, HelpVoiceIcon } from './Icons';
 
 /** Whether this device has a voice for the help language (voices load late on some phones). */
 function useHelpVoice(lang?: HelpLanguage): boolean {
@@ -30,12 +29,12 @@ export function HelpSay({ text, lang }: { text?: string; lang?: HelpLanguage }) 
     <button
       type="button"
       className="help-say"
-      aria-label={label.help ? `${label.help} · ${label.en}` : label.en}
-      title={label.help ?? label.en}
+      aria-label={said(label)}
+      title={said(label)}
       onClick={() => speakHelp(text, lang.code)}
     >
-      {/* The help language's flag and a speech bubble: never the Dutch speaker's look. */}
-      <Flag code={lang.code} width={20} />
+      {/* A globe and a speech bubble (no flag): never the Dutch speaker's look. */}
+      <GlobeIcon size={18} />
       <HelpVoiceIcon size={22} />
     </button>
   );

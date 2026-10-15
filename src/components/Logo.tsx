@@ -35,10 +35,11 @@ export function LogoMark({ size = 40 }: { size?: number; check?: boolean }) {
   );
 }
 
-/** "vloertaal." in ink (white in dark mode) with a yellow full stop. */
+/** "vloertaal." in ink (white in dark mode) with a yellow full stop. Always left to right, isolated
+ *  from the page direction: in Arabic or Persian the full stop must not jump to the front (".vloertaal"). */
 export function Wordmark({ className }: { className?: string }) {
   return (
-    <span className={`wordmark ${className ?? ''}`} aria-label="Vloertaal">
+    <span className={`wordmark ${className ?? ''}`} aria-label="Vloertaal" lang="nl" dir="ltr">
       vloertaal<span className="wordmark-dot">.</span>
     </span>
   );

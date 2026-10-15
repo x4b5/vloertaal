@@ -12,14 +12,14 @@ import { SpeakButton } from './SpeakButton';
 export function PhraseList({ lang }: { lang?: HelpLanguage }) {
   return (
     <>
-      {!speechAvailable() && <p className="warn">{ui('audioUnavailable').en}</p>}
+      {!speechAvailable() && <p className="warn"><Bi text={ui('audioUnavailable', lang)} /></p>}
       <ul className="phrases">
         {phrasebookIds.map((id) => {
           const item = findItem(id);
           if (!item) return null;
           return (
             <li key={id} className="phrase">
-              <SpeakButton text={item.nl} />
+              <SpeakButton text={item.nl} help={lang} />
               <div className="phrase-text">
                 <span className="phrase-nl" lang="nl">{breakable(item.nl)}</span>
                 <Bi text={gloss(id, item.en, lang)} />

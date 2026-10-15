@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { NOT_SURE, sectorGroupOf, sectorGroups, sectors, type SectorChoice, type SectorGroupId, type SectorId } from '../content/sectors';
-import { ui } from '../i18n';
+import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
 import { CareIcon, ConveyorIcon, CupIcon, ForkliftIcon, HelmetIcon, QuestionIcon, SprayIcon } from './Icons';
@@ -53,7 +53,7 @@ export function SectorGroupCards({ current, lang, onPick }: {
     })),
     { id: 'none' as const, nl: NOT_SURE.nl, text: ui(NOT_SURE.key, lang), picture: <QuestionIcon size={30} /> },
   ];
-  return <ChoiceCards options={options} current={group} onPick={onPick} label={ui('chooseSector').en} className="sector-step" />;
+  return <ChoiceCards options={options} current={group} onPick={onPick} label={said(ui('chooseSector', lang))} className="sector-step" />;
 }
 
 /** Step 2: the three sectors of a group, each with its picture. */
@@ -68,7 +68,7 @@ export function SectorCards({ group, current, lang, onPick }: {
     const s = sectors.find((x) => x.id === id)!;
     return { id, nl: s.nl, text: ui(s.key, lang), picture: sectorPicture(id, 52) };
   });
-  return <ChoiceCards options={options} current={current === 'none' ? null : current} onPick={onPick} label={ui(g.key).en} className="sector-step sector-step-2" />;
+  return <ChoiceCards options={options} current={current === 'none' ? null : current} onPick={onPick} label={said(ui(g.key, lang))} className="sector-step sector-step-2" />;
 }
 
 /**
@@ -76,9 +76,11 @@ export function SectorCards({ group, current, lang, onPick }: {
  * at most three cards: the kind of work, then the sector. The phone's Back button goes from the
  * second step to the first.
  */
-export function SectorScreen({ lang, onDone, initialGroup }: {
+export function SectorScreen({ lang, onDone, onBack, initialGroup }: {
   lang?: HelpLanguage;
   onDone: (s: SectorChoice) => void;
+  /** The first step's back arrow: to the onboarding page before it (gender question or password). */
+  onBack?: () => void;
   /** Open on the second step (screenshots). */
   initialGroup?: SectorGroupId;
 }) {
@@ -108,6 +110,7 @@ export function SectorScreen({ lang, onDone, initialGroup }: {
         </>
       ) : (
         <>
+          {onBack && <ChromeHead lang={lang} onBack={onBack} />}
           <QuestionHead nl="Waar werk je?" text={ui('chooseSector', lang)} hint={ui('sectorHint', lang)} />
           <SectorGroupCards lang={lang} onPick={open} />
         </>

@@ -257,6 +257,12 @@ const lang: HelpLanguageSource = {
     certNameDone: 'Gata',
     pauseTitle: 'Pauză',
     back: 'Înapoi',
+    quitLesson: 'Ieși din lecție',
+    playAudio: 'Ascultă',
+    scrollDown: 'Derulează în jos',
+    lessonProgress: 'Progresul lecției',
+    mainMenu: 'Meniu principal',
+    spaceKey: 'Spațiu',
   },
   gloss: {
     // Units

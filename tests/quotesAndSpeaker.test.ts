@@ -1,7 +1,7 @@
 import { isValidElement, type ReactElement } from 'react';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import { isolateLatin } from '../src/components/Bi';
-import { pictureCast } from '../src/pictures';
+import { loadPictures, pictureCast } from '../src/pictures';
 
 describe('a Dutch quote in right-to-left text', () => {
   const parts = (t: string) => ([] as unknown[]).concat(isolateLatin(t));
@@ -24,6 +24,7 @@ describe('a Dutch quote in right-to-left text', () => {
 });
 
 describe('the speaker of a picture', () => {
+  beforeAll(() => loadPictures());
   it('is the cast member drawn in it, or none', () => {
     expect(pictureCast('w.dankjewel')).toBe('jada');
     expect(pictureCast('w.goedemorgen')).toBe('amina');

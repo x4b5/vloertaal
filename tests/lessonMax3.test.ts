@@ -157,7 +157,7 @@ describe('dictation with letter tiles, three at a time', () => {
 describe('dictation input (Settings writing setting)', () => {
   it('defaults to letter tiles for another script, the keyboard for the Latin one', async () => {
     const { writingInput } = await import('../src/lib/writing');
-    const { getHelpLanguage } = await import('../src/i18n');
+    const { getHelpLanguage } = await import('../src/i18n/all');
     expect(writingInput(getHelpLanguage('ar'))).toBe('tiles');
     expect(writingInput(getHelpLanguage('pl'))).toBe('keys');
     expect(writingInput(undefined)).toBe('keys');

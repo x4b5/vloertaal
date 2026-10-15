@@ -257,6 +257,12 @@ const lang: HelpLanguageSource = {
     certNameDone: 'Готово',
     pauseTitle: 'Пауза',
     back: 'Назад',
+    quitLesson: 'Изход от урока',
+    playAudio: 'Слушай',
+    scrollDown: 'Превърти надолу',
+    lessonProgress: 'Напредък в урока',
+    mainMenu: 'Главно меню',
+    spaceKey: 'Интервал',
   },
   gloss: {
     // Units

@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { gloss, ui } from '../i18n';
+import { gloss, said, saidLang, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { autoSpeak, speak, stopSpeech } from '../lib/audio';
 import { breakable } from '../lib/dutch';
 import type { Exercise } from '../lib/exercises';
 import { sentencePicture } from '../lib/exercises';
 import {
-  canRecord, isWord, MAX_RECORD_MS, recordMime, setMicBlocked, SILENCE_MS,
+  canRecord, isWord, MAX_RECORD_MS, MIC_RETRIES, micBlocked, recordMime, setMicBlocked, SILENCE_MS, speakMode,
 } from '../lib/speaking';
 import { voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
@@ -96,7 +96,12 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
   const who: CharacterId = (picture && pictureCast(picture.id)) || (isWord(item) ? 'bram' : castFor(item.id));
   const voice = voiceFor(who);
   const name = who[0].toUpperCase() + who.slice(1);
-  const [phase, setPhase] = useState<Phase>(phaseForShot ?? (canRecord() ? 'idle' : 'off'));
+  // No usable microphone (none, or it failed earlier in this lesson): "say it out loud" at once.
+  const [phase, setPhase] = useState<Phase>(phaseForShot ?? (speakMode() === 'record' ? 'idle' : 'off'));
+  /** Retries left after the microphone failed here (one; see MIC_RETRIES). */
+  const [retries, setRetries] = useState(MIC_RETRIES);
+  /** The microphone failed in this exercise (so a retry makes sense). */
+  const [failed, setFailed] = useState(false);
   /** 0–1 of the 6 seconds used, for the ring around the stop button. */
   const [used, setUsed] = useState(phaseForShot === 'recording' ? 0.35 : 0);
   const [status, setStatus] = useState('');
@@ -195,7 +200,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
       stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true } });
     } catch {
       setMicBlocked(true);
-      if (alive.current) setPhase('off');
+      if (alive.current) { setFailed(true); setPhase('off'); }
       return;
     }
     if (!alive.current) { stream.getTracks().forEach((t) => t.stop()); return; }
@@ -207,6 +212,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
     } catch {
       release();
       setMicBlocked(true);
+      setFailed(true);
       setPhase('off');
       return;
     }
@@ -223,13 +229,13 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
       if (!blob.size) { setPhase('idle'); return; }
       urlRef.current = URL.createObjectURL(blob);
       setPhase('review');
-      setStatus(ui('speakMe').en);
+      setStatus(said(ui('speakMe', lang)));
       // Hear yourself right away.
       playMine();
     };
     rec.start();
     setPhase('recording');
-    setStatus(ui('stopRecording').en);
+    setStatus(said(ui('stopRecording', lang)));
 
     // Stop after 6 s, or after a short silence once the learner has said something.
     const began = Date.now();
@@ -283,7 +289,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
         </div>
         {/* The model is one tap away. While comparing, the speaker's own button below plays it
             (one speaker per item). */}
-        {phase !== 'review' && <SpeakButton text={item.nl} voice={voice} label={`Play: ${item.nl}`} />}
+        {phase !== 'review' && <SpeakButton text={item.nl} voice={voice} help={lang} />}
       </div>
 
       {listenFirst && (
@@ -294,7 +300,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
             onClick={recording ? stop : start}
             disabled={phase === 'asking'}
             aria-pressed={recording}
-            aria-label={recording ? ui('stopRecording').en : ui('tapToSpeak').en}
+            aria-label={said(ui(recording ? 'stopRecording' : 'tapToSpeak', lang))}
+            lang={saidLang(ui(recording ? 'stopRecording' : 'tapToSpeak', lang))}
           >
             {recording && (
               <svg className="say-ring" viewBox="0 0 120 120" aria-hidden focusable="false">
@@ -310,18 +317,25 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
               <Bi text={ui('micPrivacy', lang)} />
             </p>
           )}
+          {/* A way on without the microphone (shy, noisy floor, no permission wanted): the
+              same self-paced "say it out loud" step as without a microphone. */}
+          {phase === 'idle' && (
+            <button type="button" className="say-aloud-instead" onClick={() => { stopSpeech(); setPhase('off'); }}>
+              <Bi text={ui('sayAloudInstead', lang)} />
+            </button>
+          )}
         </div>
       )}
 
       {phase === 'review' && (
         <>
           <div className="say-compare">
-            <button type="button" className={`say-play ${playing === 'them' ? 'is-playing' : ''}`} onClick={playThem} aria-label={`${name}: ${item.nl}`}>
+            <button type="button" className={`say-play ${playing === 'them' ? 'is-playing' : ''}`} onClick={playThem} aria-label={`${name}: ${item.nl}`} lang="nl">
               <span className="say-face" aria-hidden><Character who={who} crop="head" size={48} /></span>
               <SpeakerIcon size={30} />
               <span className="say-who" lang="nl">{name}</span>
             </button>
-            <button type="button" className={`say-play say-play-me ${playing === 'me' ? 'is-playing' : ''}`} onClick={playMine} aria-label={ui('speakMe').en}>
+            <button type="button" className={`say-play say-play-me ${playing === 'me' ? 'is-playing' : ''}`} onClick={playMine} aria-label={said(ui('speakMe', lang))} lang={saidLang(ui('speakMe', lang))}>
               <span className="say-face say-face-me" aria-hidden><PersonIcon size={34} /></span>
               <SpeakerIcon size={30} />
               <Bi className="say-who" text={ui('speakMe', lang)} />
@@ -340,13 +354,28 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
         </>
       )}
 
+      {/* No usable microphone: still say it, out loud, at your own pace (nothing is recorded or
+          graded); Continue goes on. After a failure here, one retry of the microphone. */}
       {phase === 'off' && (
-        <div className="say-off">
+        <div className="say-off say-aloud">
           <MicOffIcon size={32} />
-          <Bi text={ui('micUnavailable', lang)} />
+          {/* "No microphone needed" only where the phone cannot record at all; after a failure
+              (here or earlier in the lesson) it says the microphone did not work; chosen by the
+              learner ("Say it out loud instead"): the microphone is off, that's fine. */}
+          <Bi text={ui(!canRecord() ? 'sayAloud' : failed || micBlocked() ? 'micFailed' : 'micUnavailable', lang)} />
+          {failed && retries > 0 && canRecord() && !phaseForShot && (
+            <button
+              type="button"
+              className="btn say-retry"
+              onClick={() => { setRetries((n) => n - 1); setFailed(false); setMicBlocked(false); start(); }}
+            >
+              <MicIcon size={24} />
+              <Bi text={ui('micRetry', lang)} />
+            </button>
+          )}
         </div>
       )}
-      <div className="sr-only" role="status">{status}</div>
+      <div className="sr-only" role="status" lang={saidLang(ui('speakMe', lang))}>{status}</div>
     </div>
   );
 }

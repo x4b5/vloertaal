@@ -954,7 +954,7 @@ export function castFor(seed: string, from: CharacterId[] = CAST): CharacterId {
 /**
  * The colleague of a workplace tip and its situation: a woman when the text says "she", a man
  * when it says "he" (see tipGender), any colleague otherwise. The learner's own character ("you"
- * in the chats: Amina, or Bram for a man; see learnerCharacter) never plays the other person.
+ * voice in the chats: Amina's, or Bram's for a man; see learnerCharacter) never plays the other person.
  */
 export function tipCast(tip: CultureTip, gender?: Gender | null): CharacterId {
   const me = learnerCharacter(gender);
@@ -970,4 +970,24 @@ export function tipCast(tip: CultureTip, gender?: Gender | null): CharacterId {
 export function colleaguesOf(gender?: Gender | null): CharacterId[] {
   const me = learnerCharacter(gender);
   return me === 'amina' ? ['bram', 'henk', 'jada'] : CAST.filter((c) => c !== me);
+}
+
+/**
+ * "You" in the chats: no cast member (no hijab, no narrator's face, nobody's religion or role),
+ * just the person icon of the speaking screen's "Me", kraft on kraft, in a character's box so it
+ * sits where a character would. The voice still follows the gender question (learnerVoice).
+ */
+export function MeAvatar({ className }: { className?: string }) {
+  const clip = `chme-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
+  return (
+    <svg className={`ch ch-me ${className ?? ''}`} viewBox="6 14 108 126" aria-hidden focusable="false">
+      <ellipse className="ch-shadow" cx="60" cy="135" rx="29" ry="3.6" fill="#000" opacity=".16" />
+      <circle cx="60" cy="92" r="40" fill="var(--kraft-light)" stroke="var(--kraft-dark)" strokeWidth="2.5" />
+      <clipPath id={clip}><circle cx="60" cy="92" r="38.75" /></clipPath>
+      <g clipPath={`url(#${clip})`} fill="var(--kraft-dark)">
+        <circle cx="60" cy="79" r="15.5" />
+        <path d="M27 136a33 33 0 0 1 66 0z" />
+      </g>
+    </svg>
+  );
 }

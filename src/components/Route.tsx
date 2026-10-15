@@ -3,7 +3,7 @@ import { Character } from './Characters';
 import { unitIcons } from '../content/unitIcons';
 import { coursePlan } from '../content/sectors';
 import type { Unit } from '../content/types';
-import { gloss, ui, uiCount, type Bilingual } from '../i18n';
+import { gloss, said, ui, uiCount, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { type Access, unitAllowed } from '../lib/access';
 import { unitDone } from '../lib/certificate';
@@ -148,14 +148,14 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                   type="button"
                   className="bay-card"
                   onClick={() => onStart(lesson.id, false)}
-                  aria-label={`${u + 1}.${i + 1} ${lesson.title}${title.help ? ` (${title.help})` : ''} · ${saved ? resumeLabel(saved) : ui('start').en}`}
+                  aria-label={`${u + 1}.${i + 1} ${said(title)} · ${saved ? resumeLabel(saved, lang) : said(ui('start', lang))}`}
                 >
                   {body}
                 </button>
               ) : (
                 <div className="bay-card bay-still">
                   {body}
-                  <span className="sr-only">{state === 'done' ? ` · ${ui('stampDone').en}` : ''}</span>
+                  <span className="sr-only">{state === 'done' ? ` · ${said(ui('stampDone', lang))}` : ''}</span>
                 </div>
               )}
               {restart && <RestartButton lang={lang} onRestart={() => onRestart(lesson.id)} />}
@@ -171,7 +171,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
       {dailyDue && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
 
       {block && (
-        <section className="rb-current" aria-label={`Unit ${unitIndex(block) + 1}: ${block.title}`}>
+        <section className="rb-current" aria-label={`${unitIndex(block) + 1}. ${said(unitTitle(block, lang))}`}>
           <div id={`unit-${block.id.slice(2)}`} className={`rb-block ${marked === block.id ? 'rb-marked' : ''}`}>
             <WordPicture className="rb-pic" id={unitIcons[block.id] ?? ''} emoji={block.emoji} size={64} />
             <UnitTitle unit={block} lang={lang} heading />
@@ -202,7 +202,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                         type="button"
                         className={`rb-choice ${rec ? 'rb-rec' : ''} ${allowed ? '' : 'rb-choice-locked'}`}
                         onClick={() => pick(unit)}
-                        aria-label={`${t.help ? `${t.help} · ` : ''}${unit.title} · ${unit.titleNl}${rec ? ` · Aanbevolen · ${ui('recommended').en}` : ''} · ${n ? `${n} / ` : ''}${unit.lessons.length} ${uiCount('lessonsUnit', unit.lessons.length).en}${allowed ? '' : ` · ${ui('fullVersion').en}`}`}
+                        aria-label={`${said(t)} · ${unit.titleNl}${rec ? ` · Aanbevolen · ${said(ui('recommended', lang))}` : ''} · ${n ? `${n} / ` : ''}${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
                       >
                         <WordPicture className="rb-choice-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={52} />
                         <span className="rb-choice-text" dir={rtl ? 'rtl' : undefined}>
@@ -279,7 +279,7 @@ function BlockProgress({ unit, completed, lang }: { unit: Unit; completed: Recor
   const of = unit.lessons.length;
   return (
     <div className="rb-progress">
-      <span className="sr-only">{n} / {of} {uiCount('lessonsUnit', of).en}</span>
+      <span className="sr-only">{n} / {of} {said(uiCount('lessonsUnit', of, lang))}</span>
       <span className="rb-bar" aria-hidden><span className="rb-bar-fill" style={{ width: `${(n / of) * 100}%` }} /></span>
       <LessonCount unit={unit} completed={completed} lang={lang} showDone />
     </div>
@@ -343,7 +343,7 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
           id={`unit-${unit.id.slice(2)}`}
           className={`topic-row ${finished ? 'topic-done' : ''} ${now ? 'topic-now' : ''} ${allowed ? '' : 'topic-locked'}`}
           onClick={() => onOpen(unit.id)}
-          aria-label={`${u + 1}. ${t.help ? `${t.help} · ` : ''}${unit.title} · ${unit.titleNl} · ${n} / ${unit.lessons.length} ${uiCount('lessonsUnit', unit.lessons.length).en}${allowed ? '' : ` · ${ui('fullVersion').en}`}`}
+          aria-label={`${u + 1}. ${said(t)} · ${unit.titleNl} · ${n} / ${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
         >
           <span className="topic-num" aria-hidden>{String(u + 1).padStart(2, '0')}</span>
           <WordPicture className="topic-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
@@ -414,7 +414,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
       <ScreenHead lang={lang} onBack={onBack} nl={unit.titleNl} text={unitTitle(unit, lang)} />
       <div className="path route topic-page" dir={rtl ? 'rtl' : undefined}>
         {/* The topic's sign: its picture and how far the learner is (the name is in the head). */}
-        <div className={`rb-block topic-sign ${marked ? 'rb-marked' : ''}`} aria-label={`Unit ${u + 1}: ${unit.title}`} role="group">
+        <div className={`rb-block topic-sign ${marked ? 'rb-marked' : ''}`} aria-label={`${u + 1}. ${said(unitTitle(unit, lang))}`} role="group">
           <WordPicture className="rb-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={64} />
           <BlockProgress unit={unit} completed={completed} lang={lang} />
         </div>
@@ -449,7 +449,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                   className="bay-card"
                   disabled={!open}
                   onClick={() => onStart(lesson.id, Boolean(record))}
-                  aria-label={`${u + 1}.${i + 1} ${lesson.title}${title.help ? ` (${title.help})` : ''}${saved ? ` · ${resumeLabel(saved)}` : open ? (record ? ` · ${ui('practice').en}` : ` · ${ui('start').en}`) : ` (${ui('locked').en})`}`}
+                  aria-label={`${u + 1}.${i + 1} ${said(title)}${saved ? ` · ${resumeLabel(saved, lang)}` : open ? (record ? ` · ${said(ui('practice', lang))}` : ` · ${said(ui('start', lang))}`) : ` (${said(ui('locked', lang))})`}`}
                 >
                   {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
                   <span className="bay-text" dir={rtl ? 'rtl' : undefined}>

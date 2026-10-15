@@ -4,7 +4,7 @@ import { aboutSections } from '../content/about';
 import { cultureTips } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
-import { fillCount, fillN, getHelpLanguage, gloss, helpLanguages, ui, uiCount, withoutN, type Bilingual } from '../i18n';
+import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMeta, metaLanguage, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
 import type { HelpLanguage, LangCode } from '../i18n/types';
 import { useEffect, useRef, useState } from 'react';
 import { applyEnglish } from '../lib/english';
@@ -35,7 +35,6 @@ import { useVoices } from './useVoices';
 import { ChoiceCards } from './Choice';
 import { phoneHelpLang } from '../lib/langGuess';
 import { FlameIcon } from './StreakArt';
-import { Flag } from './Flags';
 import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
 
@@ -59,7 +58,7 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
       onClick={() => onPick(code)}
       aria-pressed={current === undefined ? undefined : current === code}
     >
-      <Flag code={code ?? 'en'} width={compact ? 32 : 40} />
+      {/* No flags: a flag stands for a state, not a language, and can hurt (G4 r2). The name in its own script is the sign. */}
       <span className="lang-names">
         <span className="lang-native" lang={code ?? 'en'} dir={dir}>{native}</span>
         {/* With a help language chosen (Settings), the English name is support only: hidden
@@ -79,7 +78,7 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   );
   return (
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`}>
-      {helpLanguages.map((l) => option(l.code, l.nativeName, l.name, l.dir, showBeta && !l.reviewed))}
+      {languageMeta.map((l) => option(l.code, l.nativeName, l.name, l.dir, showBeta && !l.reviewed))}
       {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
     </div>
   );
@@ -101,7 +100,9 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   const [list, setList] = useState(startWithList || !guess);
   // Nothing is chosen yet: the English stays next to every line.
   useEffect(() => { applyEnglish(null); }, []);
-  const g = guess ? getHelpLanguage(guess) : undefined;
+  // The guess page needs only its three strings (src/i18n/meta.ts): no pack to wait for.
+  const gMeta = langMeta(guess);
+  const g = gMeta ? getHelpLanguage(gMeta.code) ?? metaLanguage(gMeta) : undefined;
   if (list || !g) {
     return (
       <div className="screen onboarding max3-page">
@@ -125,11 +126,10 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
         <p className="tagline">{ui('appTagline').en}</p>
       </div>
       <h2 className="lang-guess-q">
-        <Flag code={g.code} width={64} />
-        <span lang={g.code} dir={g.dir}>{g.nativeName}{q}</span>
+        <span className="lang-guess-name" lang={g.code} dir={g.dir}>{g.nativeName}{q}</span>
       </h2>
       <ChoiceCards
-        label={ui('chooseLanguage').en}
+        label={said(ui('chooseLanguage', g))}
         onPick={(id) => (id === 'yes' ? onDone(g.code) : setList(true))}
         options={[
           { id: 'yes', text: ui('langGuessYes', g), picture: <CheckIcon size={30} /> },
@@ -153,11 +153,11 @@ export function TopBar({ streak, words, lang, done = false, quiet = false }: {
   onLanguage?: () => void;
 }) {
   // The stats are a picture and a number; the unit is in the help language (when there is
-  // room), and the spoken label says it in English and the help language.
+  // room), and the spoken label says it in the help language (English only without one).
   const wordsText = fillCount('wordsLearnedN', words, lang);
-  const wordsLabel = wordsText.help ? `${wordsText.en} · ${wordsText.help}` : wordsText.en;
+  const wordsLabel = said(wordsText);
   const streakText = ui('dayStreak', lang);
-  const streakLabel = `${streak} ${streakText.en}${streakText.help ? ` · ${streak} ${streakText.help}` : ''}${!done && streak > 0 ? ` · ${ui('stillToDo').en}` : ''}`;
+  const streakLabel = `${streak} ${said(streakText)}${!done && streak > 0 ? ` · ${said(ui('stillToDo', lang))}` : ''}`;
   const daysUnit = uiCount('daysUnit', streak, lang);
   const wordsUnit = uiCount('wordsUnit', words, lang);
   // Right to left (Arabic, Persian, Dari): the logo moves to the right, the stats and the flag to the left.
@@ -168,7 +168,7 @@ export function TopBar({ streak, words, lang, done = false, quiet = false }: {
         <Wordmark className="topbar-wordmark" />
       </span>
       {quiet && (
-        <span className="sound-off-mark" role="img" aria-label={`${ui('withoutSound').en}${lang?.ui.withoutSound ? ` · ${ui('withoutSound', lang).help}` : ''}`} title={ui('withoutSound', lang).help ?? ui('withoutSound').en}>
+        <span className="sound-off-mark" role="img" aria-label={`${said(ui('withoutSound', lang))}${lang?.ui.withoutSound ? ` · ${ui('withoutSound', lang).help}` : ''}`} title={ui('withoutSound', lang).help ?? said(ui('withoutSound', lang))}>
           <SpeakerOffIcon size={18} />
         </span>
       )}
@@ -216,7 +216,7 @@ const TABS: { tab: Tab; nl: string; key: 'navRoute' | 'navWords' | 'settings' | 
  *  it; screen readers hear all of it. */
 export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab: Tab) => void; lang?: HelpLanguage }) {
   return (
-    <nav className="bottom-nav" aria-label="Main" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
+    <nav className="bottom-nav" aria-label={said(ui('mainMenu', lang))} dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
       {TABS.map(({ tab, nl, key, Icon }) => {
         const word = ui(key, lang);
         return (
@@ -225,7 +225,7 @@ export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab:
             type="button"
             className={`nav-tab ${current === tab ? 'nav-tab-on' : ''}`}
             aria-current={current === tab ? 'page' : undefined}
-            aria-label={`${nl} · ${word.en}${word.help ? ` · ${word.help}` : ''}`}
+            aria-label={`${nl} · ${said(word)}`}
             onClick={() => onTab(tab)}
           >
             <span className="nav-icon" aria-hidden><Icon size={26} /></span>
@@ -285,7 +285,7 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
         className="daily-card daily-due"
         dir={rtl ? 'rtl' : undefined}
         onClick={onDaily}
-        aria-label={`Herhaal vandaag · ${ui('reviewToday').en}: ${fillN(ui('reviewTodayN'), card.due).en}`}
+        aria-label={`Herhaal vandaag · ${said(ui('reviewToday', lang))}: ${said(fillN(ui('reviewTodayN', lang), card.due))}`}
       >
         <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
         <span className="daily-n" aria-hidden>{card.due}</span>
@@ -301,7 +301,7 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
       className={`daily-card daily-${card.state}`}
       dir={rtl ? 'rtl' : undefined}
       role="group"
-      aria-label={`Herhaal vandaag · ${ui('reviewToday').en}${done && card.tomorrow > 0 ? ` · ${fillCount('tomorrowN', card.tomorrow).en}` : ''}`}
+      aria-label={`Herhaal vandaag · ${said(ui('reviewToday', lang))}${done && card.tomorrow > 0 ? ` · ${said(fillCount('tomorrowN', card.tomorrow, lang))}` : ''}`}
     >
       {done ? (
         // A calm badge, not a stamp: the review is done for today.
@@ -389,7 +389,7 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   foot?: Bilingual;
 }) {
   return (
-    <div className={`stat-card stat-${tone} ${done ? 'stat-done' : ''}`} role="group" aria-label={`${label.en} ${final}`}>
+    <div className={`stat-card stat-${tone} ${done ? 'stat-done' : ''}`} role="group" aria-label={`${said(label)} ${final}`}>
       <div className="stat-card-head"><Bi text={label} /></div>
       <div className="stat-card-body" aria-hidden>
         {icon}
@@ -409,7 +409,11 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   );
 }
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next, skipped = 0 }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, next, skipped = 0, kind = 'lesson' }: {
+  /** 'daily': after today's review; 'review': after a mixed review or a lesson done again
+   *  (words practised instead of new words, and a review title). */
+  kind?: 'lesson' | 'daily' | 'review';
+
   /** Listening exercises left out in the lesson: said on their own line, not in the score. */
   skipped?: number;
   /** After today's review: how many words came back (shown instead of new words). */
@@ -453,6 +457,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   const rtl = lang?.dir === 'rtl';
   // The next lesson's first word with a picture, as on its card on the path.
   const nextPic = next?.id ? findLesson(next.id)?.lesson.words.find(hasPicture) : undefined;
+  const title = kind === 'daily' ? ui('reviewDone', lang) : kind === 'review' ? ui('reviewComplete', lang) : ui('lessonComplete', lang);
   return (
     <div className="player result-screen">
       <main className="player-body result">
@@ -465,7 +470,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             {lang?.ui.stampDone ? <HelpText className="stamp-sub" text={lang.ui.stampDone} lang={lang} /> : <span className="stamp-sub" lang="en">{ui('stampDone').en}</span>}
           </span>
         </div>
-        <h1 className="result-title"><Bi text={ui('lessonComplete', lang)} /></h1>
+        <h1 className="result-title"><Bi text={title} /></h1>
         <div className="result-stats" dir={rtl ? 'rtl' : undefined}>
           <StatCard
             tone="green"
@@ -485,18 +490,18 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           />
           <StatCard
             tone="gold"
-            label={repeated !== undefined ? ui('reviewToday', lang) : ui('newWords', lang)}
+            label={repeated !== undefined ? ui('wordsPractised', lang) : ui('newWords', lang)}
             icon={repeated !== undefined ? <CalendarIcon size={30} /> : <CrateIcon size={30} />}
             value={repeated !== undefined ? `${repeated}` : `+${shownNew}`}
             // The total is said, not printed: the top bar's crate shows it on the path.
-            final={`${repeated !== undefined ? repeated : `+${newWords}`} · ${fillCount('wordsLearnedN', words).en}`}
+            final={`${repeated !== undefined ? repeated : `+${newWords}`} · ${said(fillCount('wordsLearnedN', words, lang))}`}
             done={repeated !== undefined || shownNew === newWords}
           />
         </div>
         {/* After the review: how many words got stronger, the number big, the help language
             large and English small (no Dutch sentence). */}
         {stronger !== undefined && stronger > 0 && (
-          <p className="result-line result-stronger" aria-label={fillCount('wordsStrongerN', stronger).en}>
+          <p className="result-line result-stronger" aria-label={said(fillCount('wordsStrongerN', stronger, lang))}>
             <span className="stronger-n" aria-hidden><span className="stronger-arrow">▲</span>{stronger}</span>
             <Bi text={withoutN(uiCount('wordsStrongerN', stronger, lang))} />
           </p>
@@ -510,7 +515,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
         )}
         {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}
         {next && (
-          <p className="result-line result-next" dir={rtl ? 'rtl' : undefined} aria-label={`${ui('nextUp').en}: ${next.en}`}>
+          <p className="result-line result-next" dir={rtl ? 'rtl' : undefined} aria-label={`${said(ui('nextUp', lang))}: ${said(next)}`}>
             <span className="result-next-arrow" aria-hidden><ArrowIcon size={22} /></span>
             {nextPic && <WordPicture className="result-next-pic" id={nextPic.id} emoji={nextPic.emoji} size={44} />}
             <Bi className="result-next-title" text={next} />
@@ -556,7 +561,7 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
               <div className="tips-body">
                 <p><Bi text={gloss(`${t.id}.b`, t.body, lang)} /></p>
                 <div className="phrase">
-                  <SpeakButton text={t.phrase.nl} />
+                  <SpeakButton text={t.phrase.nl} help={lang} />
                   <div className="phrase-text">
                     <span className="phrase-nl" lang="nl">{breakable(t.phrase.nl)}</span>
                     <Bi text={gloss(t.phrase.id, t.phrase.en, lang)} />

@@ -89,9 +89,10 @@ export function dailyWordIds(cards: Cards, today: string): string[] {
 
 /**
  * Today's review as a lesson: the words, plus two sentences and one chat from the lessons those
- * words come from, so they come back in use. All items exist already (their sound too).
+ * words come from, so they come back in use. All items exist already (their sound too). The
+ * cards' boxes go along: a word that was right before gets a harder question (exercises.ts).
  */
-export function dailyLesson(ids: string[]): Lesson {
+export function dailyLesson(ids: string[], cards: Cards = {}): Lesson {
   const words = ids.map((id) => wordById.get(id)).filter((w): w is Word => Boolean(w));
   const from = teachingLessons.filter((l) => l.words.some((w) => ids.includes(w.id)));
   const sentences: Sentence[] = [];
@@ -100,7 +101,8 @@ export function dailyLesson(ids: string[]): Lesson {
     if (s && sentences.length < 2 && !sentences.some((x) => x.nl === s.nl)) sentences.push(s);
   }
   const dialogues: Dialogue[] = from.flatMap((l) => l.dialogues ?? []).slice(0, 1);
-  return { id: DAILY_ID, title: 'Review today', words, sentences, dialogues, repeat: true };
+  const boxes = Object.fromEntries(words.map((w) => [w.id, cards[w.id]?.box ?? 1]));
+  return { id: DAILY_ID, title: 'Review today', words, sentences, dialogues, repeat: true, boxes };
 }
 
 /**

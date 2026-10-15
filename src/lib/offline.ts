@@ -6,6 +6,8 @@ import { tokenize } from './answers';
 import { clipUrl, recordedIndexReady } from './audio';
 import { castVoices, type VoiceRef } from './voices';
 import { persistStorage } from './install';
+import { loadedPackUrls } from '../i18n';
+import { loadedPicturesUrl } from '../pictures';
 
 /**
  * "Save for offline", per unit: on a bus, in a greenhouse or on a site without signal the unit
@@ -197,6 +199,10 @@ export function shellUrls(): string[] {
       }
     }
   }
+  // The help language's own file (loaded on demand, src/i18n/index.ts), whatever the resource list kept.
+  for (const url of loadedPackUrls()) sameOrigin(url);
+  const pics = loadedPicturesUrl();
+  if (pics) sameOrigin(pics);
   for (const e of performance.getEntriesByType?.('resource') ?? []) {
     const u = new URL(e.name);
     // Fonts, CSS and JS; not data the app fetched for a moment (the count, backups).
@@ -358,6 +364,15 @@ export async function refreshOfflineShell(): Promise<void> {
   } catch {
     // Offline after all, or no room: the files saved before stay.
   }
+}
+
+/**
+ * Fetches the help-language files loaded on this visit once more, now through the service worker,
+ * so its cache keeps them (they loaded before it was running) and the app opens offline next time.
+ */
+export function warmLanguageCache(): void {
+  if (!navigator.serviceWorker?.controller) return;
+  for (const url of [...loadedPackUrls(), loadedPicturesUrl()]) if (url) fetch(url).catch(() => {});
 }
 
 /** Development screenshots only (src/dev/ShotHarness.tsx): show a unit in a fixed state. */

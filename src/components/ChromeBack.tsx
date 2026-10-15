@@ -1,4 +1,4 @@
-import { ui } from '../i18n';
+import { said, saidLang, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { BackIcon } from './Icons';
 
@@ -10,9 +10,8 @@ import { BackIcon } from './Icons';
  */
 export function ChromeBack({ lang, onBack }: { lang?: HelpLanguage; onBack: () => void }) {
   const t = ui('back', lang);
-  const label = t.help ? `${t.en} · ${t.help}` : t.en;
   return (
-    <button type="button" className="icon-btn chrome-back" onClick={onBack} aria-label={label} title={t.help ?? t.en}>
+    <button type="button" className="icon-btn chrome-back" onClick={onBack} aria-label={said(t)} title={said(t)} lang={saidLang(t)}>
       <BackIcon size={28} />
     </button>
   );

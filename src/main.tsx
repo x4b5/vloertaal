@@ -1,12 +1,13 @@
-import { StrictMode } from 'react';
+import { StrictMode, type ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
-import { ShotHarness } from './dev/ShotHarness';
 import { loadProgress } from './lib/progress';
 import { applyTheme } from './lib/theme';
 import { applyTextSize } from './lib/textSize';
 import { applyEnglish } from './lib/english';
-import { refreshOfflineShell } from './lib/offline';
+import { refreshOfflineShell, warmLanguageCache } from './lib/offline';
+import { ensureLanguage, LANG_CODES } from './i18n';
+import { loadPictures } from './pictures';
 import '@fontsource-variable/lexend';
 import '@fontsource/big-shoulders-stencil-display/800';
 import './styles.css';
@@ -22,21 +23,37 @@ applyTextSize(import.meta.env.DEV && params.get('shot') ? (params.get('text') as
 // English next to the help language: hidden unless "Show English too" is on (screenshots: &en=1).
 applyEnglish(import.meta.env.DEV && params.get('shot') ? params.get('lang') : loadProgress().helpLang, import.meta.env.DEV && params.get('shot') ? params.get('en') === '1' : undefined);
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    {import.meta.env.DEV && params.get('shot') ? (
-      <ShotHarness shot={params.get('shot')!} lang={params.get('lang')} word={params.get('word')} />
-    ) : (
-      <App />
-    )}
-  </StrictMode>,
-);
+const langBoot = ensureLanguage(loadProgress().helpLang).catch(() => {});
+// The word pictures load alongside (their own file); a returning learner's first screen has them.
+const picsBoot = loadPictures().catch(() => {});
+// The stylesheet loads without blocking the splash (vite.config.ts): React waits for it.
+const appCss = document.querySelector<HTMLLinkElement>('link[data-app-css]');
+const cssBoot = new Promise<void>((done) => {
+  if (!appCss || appCss.media === 'all' || appCss.sheet?.cssRules.length) return done();
+  appCss.addEventListener('load', () => done());
+  appCss.addEventListener('error', () => done());
+});
+const render = (node: ReactNode) => createRoot(document.getElementById('root')!).render(<StrictMode>{node}</StrictMode>);
+
+if (import.meta.env.DEV && params.get('shot')) {
+  // Dev screenshots (never in the production bundle): the shot's help language and the pictures first.
+  const shotLang = LANG_CODES.find((c) => c === params.get('lang'));
+  void Promise.all([import('./dev/ShotHarness'), loadPictures(), ensureLanguage(shotLang)]).then(([{ ShotHarness }]) =>
+    render(<ShotHarness shot={params.get('shot')!} lang={params.get('lang')} word={params.get('word')} />));
+} else {
+  // The saved help language's texts first (index.html's static splash stays up meanwhile), so the
+  // first screen has its help text. If that fails (offline, nothing saved), App shows the splash and retries.
+  void Promise.all([langBoot, cssBoot, loadProgress().onboarded ? picsBoot : null]).then(() => render(<App />));
+}
 
 // Offline support: cache the app after the first visit (production only).
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js').catch(() => {});
     // Units saved for offline use get the app files of this version (src/lib/offline.ts).
-    window.setTimeout(() => { refreshOfflineShell(); }, 3000);
+    // (After the help language's file is here: it is part of the app saved with them.)
+    void Promise.all([langBoot, picsBoot]).then(() => window.setTimeout(() => { refreshOfflineShell(); }, 3000));
+    // The help language's file may have loaded before the service worker ran: let it keep a copy.
+    navigator.serviceWorker.ready.then(() => window.setTimeout(warmLanguageCache, 1500)).catch(() => {});
   });
 }

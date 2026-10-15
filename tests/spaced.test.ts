@@ -51,7 +51,8 @@ describe('Herhaal vandaag (spaced repetition)', () => {
     for (const quiet of [false, true]) {
       const ex = buildLesson(lesson, { review: true, seed: 5, quiet });
       expect(ex.some((e) => e.kind === 'intro')).toBe(false);
-      const asked = new Set(ex.filter((e) => e.kind === 'meaning').map((e) => (e as { word: { id: string } }).word.id));
+      // Every word is asked first, each with one of the review questions (reviewKind).
+      const asked = new Set(ex.slice(0, ids.length).map((e) => (e as { word: { id: string } }).word.id));
       for (const id of ids) expect(asked.has(id)).toBe(true);
     }
   });

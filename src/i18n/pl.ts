@@ -257,6 +257,12 @@ const lang: HelpLanguageSource = {
     certNameDone: 'Gotowe',
     pauseTitle: 'Pauza',
     back: 'Wstecz',
+    quitLesson: 'Wyjdź z lekcji',
+    playAudio: 'Odsłuchaj',
+    scrollDown: 'Przewiń w dół',
+    lessonProgress: 'Postęp lekcji',
+    mainMenu: 'Menu główne',
+    spaceKey: 'Spacja',
   },
   gloss: {
     // Unit: First day at work

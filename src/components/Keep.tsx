@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { learnedWords } from '../content/curriculum';
-import { ui } from '../i18n';
+import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
 import { backupFile, bestStreak, mergeBackup, parseBackup, replaceWithBackup, type Progress } from '../lib/progress';
@@ -64,7 +64,7 @@ export function InstallCard({ lang }: { lang?: HelpLanguage }) {
   const [added, setAdded] = useState(false);
   if (!way && !added) return null;
   return (
-    <section className="keep-card install-card" aria-label={ui('installTitle').en}>
+    <section className="keep-card install-card" aria-label={said(ui('installTitle', lang))}>
       <span className="keep-icon" aria-hidden><LogoMark size={44} /></span>
       <CardHead nl="Zet Vloertaal op je begin&shy;scherm" text={ui('installTitle', lang)} />
       <p className="keep-hint"><Bi text={ui('installHint', lang)} /></p>
@@ -120,9 +120,9 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
     setSaved(true);
   };
   return (
-    <section className="keep-card remind-card" aria-label={ui('remindTitle').en}>
+    <section className="keep-card remind-card" aria-label={said(ui('remindTitle', lang))}>
       <CardHead nl="Herinner mij elke dag" text={ui('remindTitle', lang)} />
-      <div className="remind-chips" role="radiogroup" aria-label={ui('remindTitle').en}>
+      <div className="remind-chips" role="radiogroup" aria-label={said(ui('remindTitle', lang))}>
         {REMINDER_TIMES.map((t) => {
           const on = !ownOpen && time === t.time;
           return (
@@ -228,7 +228,7 @@ export function BackupCard({ progress, lang, onRestore }: {
   };
 
   return (
-    <section className="keep-card waybill" aria-label={ui('backupTitle').en}>
+    <section className="keep-card waybill" aria-label={said(ui('backupTitle', lang))}>
       <span className="waybill-tag" lang="nl" aria-hidden>Vrachtbrief</span>
       <CardHead nl="Bewaar je voortgang" text={ui('backupTitle', lang)} />
       <p className="keep-hint"><Bi text={ui('backupHint', lang)} /></p>
@@ -239,7 +239,7 @@ export function BackupCard({ progress, lang, onRestore }: {
         <div><dt>Record</dt><dd>{bestStreak(progress)}</dd></div>
       </dl>
       {found ? (
-        <div className="waybill-ask" role="alertdialog" aria-label={ui('backupAsk').en}>
+        <div className="waybill-ask" role="alertdialog" aria-label={said(ui('backupAsk', lang))}>
           <p lang="nl" className="waybill-ask-nl">
             Gevonden: {Object.keys(found.completed ?? {}).length} lessen. Samenvoegen of vervangen?
           </p>
