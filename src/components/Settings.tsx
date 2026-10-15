@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { NOT_SURE, sectors, type SectorChoice } from '../content/sectors';
 import { ensureLanguage, hasGender, isLanguageLoaded, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
-import { dutchUi } from '../lib/track';
+import { dutchUi, trackOfLang } from '../lib/track';
 import { NlPair } from './NlPair';
 import type { Access } from '../lib/access';
 import { setPreferredVoice, speak } from '../lib/audio';
@@ -34,6 +34,7 @@ import {
 import { BackupCard, InstallCard, OwnTime } from './Keep';
 import { LogoMark } from './Logo';
 import { LanguagePicker } from './Screens';
+import { NoVoiceNote } from './RulesHelp';
 import { SectorCards, SectorGroupCards, SectorIcon } from './Sector';
 import { MicIcon } from './Speaking';
 import { useVoices } from './useVoices';
@@ -177,7 +178,7 @@ export function Settings({
   const say = (key: Parameters<typeof ui>[0]) => ui(key, lang);
   const onOff = (on: boolean, set: (on: boolean) => void): ReactNode => (
     <ChoiceCards
-      label="On or off"
+      label={dutchUi(lang) ? 'Aan of uit' : 'On or off'}
       current={on ? 'on' : 'off'}
       onPick={(id) => { set(id === 'on'); answered(); }}
       options={[
@@ -194,6 +195,7 @@ export function Settings({
     install: installWay() !== null,
     offline: offlineSupported(),
     rules: dutchUi(lang),
+    recorded: recorded.length > 0,
   };
   const writing = nonLatinHelp(lang) && !wantsWriting() ? 'pick' : writingInput(lang);
   const voice = voiceChoiceOf(progress.voice, recorded);
@@ -305,6 +307,8 @@ export function Settings({
               ]}
             />
             <p className="max3-hint"><Bi text={say('quietHint')} /></p>
+            {/* The work-rules track on a phone without a Dutch voice: how to add one. */}
+            <NoVoiceNote lang={lang} />
           </>
         );
       case 'voice': {
@@ -448,7 +452,7 @@ function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: 
     if (saved) return; // already on its way back
     const adds = reminderTapAdds(time, current);
     if (adds) {
-      saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, `${location.origin}${location.pathname}`, new Date()));
+      saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, `${location.origin}${location.pathname}`, new Date(), trackOfLang(lang?.code)));
       rememberReminder(time);
     }
     setSaved(time);

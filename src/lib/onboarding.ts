@@ -16,8 +16,9 @@ export const TRY_LESSON = true;
 /** The one lesson the "try first" button plays: lesson 1.1. */
 export const TRY_LESSON_ID = units[0].lessons[0].id;
 
-/** The trial lesson of the work-rules track while its course is not here (the plan's "Eerste werkdag" 1). */
-export const RULES_TRY_LESSON_ID = 'r.l.start.1';
+/** The trial lesson of the work-rules track while its course is not loaded: the first lesson of
+ *  its first unit ("Werk zoeken" 1, src/content/regels/index.ts). */
+export const RULES_TRY_LESSON_ID = 'r.l.zoeken.1';
 
 /** The trial lesson of a track: lesson 1.1 of its course (it is in the preview unit, see access.ts). */
 export function tryLessonId(track: Track = 'taal'): string {

@@ -145,7 +145,7 @@ function PocketGlyph() {
 }
 
 /** A quiet "i" before the advice line. */
-function InfoGlyph() {
+export function InfoGlyph() {
   return (
     <svg className="rule-advice-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden focusable="false">
       <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2" />

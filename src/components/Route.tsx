@@ -38,8 +38,10 @@ import { PocketIcon } from './Offline';
  * learner first sees what the topic is before a lesson begins. "Other topic" opens All topics: a
  * list of every topic, each leading to its topic page (lessons, pocket card, certificate).
  */
-export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink }: {
+export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink, note }: {
   progress: Progress;
+  /** A calm line above "Other topic", not a button (the work-rules track: no Dutch voice on this phone). */
+  note?: React.ReactNode;
   lang?: HelpLanguage;
   access?: Access;
   /** "Herhaal vandaag": shown here only when words are due. */
@@ -245,6 +247,8 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
       )}
 
       {linked && taps < 3 && <LinkedLocked unit={linked} lang={lang} onUpgrade={onUpgrade} />}
+
+      {note}
 
       {/* One link for every other topic: All topics (it replaces "choose another topic"). */}
       <button type="button" className="rb-all rb-other" onClick={onAll}>

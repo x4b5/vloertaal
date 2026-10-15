@@ -1,3 +1,5 @@
+import { RULES_DISCLAIMER } from './regels/disclaimer';
+
 /**
  * The "About Vloertaal" page: short sections in simple English. Translations live in
  * src/i18n/about/<lang>.ts (gloss ids = section id for the title, id + '.b' for the body).
@@ -13,6 +15,13 @@ export interface AboutSection {
   body: string;
   /** The same in plain Dutch (the "NL" toggle on the About page). */
   nl: { title: string; body: string };
+  /**
+   * The work-rules track (Werkregels, src/lib/track.ts) reads `nl`, except where the Dutch text is
+   * about learning Dutch: then this one, about the rules of work for people who speak Dutch already.
+   */
+  nlRules?: { title: string; body: string };
+  /** Left out of the work-rules track's About (the section is only about the language course). */
+  rules?: false;
 }
 
 export const aboutSections: AboutSection[] = [
@@ -23,6 +32,10 @@ export const aboutSections: AboutSection[] = [
       title: 'Wat is Vloertaal?',
       body: 'Met Vloertaal leer je het Nederlands dat je nodig hebt op je werk: in het magazijn, in de keuken, in de fabriek of op de bouw. Niet alleen de woorden op de werkvloer. Ook de taal rond je werk: solliciteren, je contract en je loonstrook, je rechten, wonen en papieren, je ziek melden en omgaan met collega’s. De lessen zijn kort. Zo kun je elke dag een paar minuten oefenen.',
     },
+    nlRules: {
+      title: 'Wat is Vloertaal?',
+      body: 'Vloertaal legt uit hoe werken in Nederland gaat. Voor mensen die al Nederlands spreken. Je leert de regels van de wet en je contract. En de regels die nergens staan, maar die iedereen kent. Bijvoorbeeld over werk zoeken, je loonstrook, ziek zijn, veiligheid en collega’s. De lessen zijn kort. Zo leer je elke dag een paar minuten.',
+    },
   },
   {
     id: 'a.mission', emoji: '🎯', title: 'Our mission',
@@ -30,6 +43,10 @@ export const aboutSections: AboutSection[] = [
     nl: {
       title: 'Onze missie',
       body: 'Vloertaal wil iedereen die in Nederland werkt een eerlijke kans geven om Nederlands te leren voor het werk. Gratis, makkelijk en met hulp in je eigen taal. Niemand verdient geld aan Vloertaal: geen reclame, geen abonnement, en je gegevens worden nooit verkocht.',
+    },
+    nlRules: {
+      title: 'Onze missie',
+      body: 'Iedereen die in Nederland werkt, moet weten wat mag en wat moet. En waar je hulp vindt als het misgaat. Vloertaal is gratis en makkelijk. Niemand verdient geld aan Vloertaal: geen reclame, geen abonnement, en je gegevens worden nooit verkocht.',
     },
   },
   {
@@ -47,9 +64,14 @@ export const aboutSections: AboutSection[] = [
       title: 'Hoe werkt het?',
       body: 'Je leert Nederlands met eenvoudig Engels. Kies je een hulptaal? Dan zie je de uitleg en de woorden ook in je eigen taal. Je luistert, je tikt, je maakt zinnen en je oefent korte gesprekken met collega’s.',
     },
+    nlRules: {
+      title: 'Hoe werkt het?',
+      body: 'Alles is in gewoon Nederlands. Je leest een kort verhaal over het werk. Dan krijg je de regel. Daarna kies je: wat doe je, en wie vraag je om hulp? Wil je de tekst horen? Tik op de luidspreker. Vragen die moeilijk waren, komen terug bij "Herhaal vandaag".',
+    },
   },
   {
-    id: 'a.culture', emoji: '🤝', title: 'How it works here',
+    // The rules track is this, all through: left out there.
+    id: 'a.culture', emoji: '🤝', title: 'How it works here', rules: false,
     body: 'Language comes first. But Vloertaal also talks about how things usually go at a Dutch workplace: saying "je" to your boss, asking questions, being on time, and saying it when something bothers you. You find these tips in the lessons and under "Workplace tips".',
     nl: {
       title: 'Zo werkt het hier',
@@ -62,6 +84,10 @@ export const aboutSections: AboutSection[] = [
     nl: {
       title: 'Voor wie is het?',
       body: 'Voor iedereen die nieuw is op het werk in Nederland. Hulptalen: Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens en Bulgaars.',
+    },
+    nlRules: {
+      title: 'Voor wie is het?',
+      body: 'Voor iedereen die al Nederlands spreekt en in Nederland werkt of werk zoekt. Ben je nieuw op je werk? Of wil je weten wat je rechten zijn? Dan is dit voor jou.',
     },
   },
   {
@@ -81,6 +107,8 @@ export const aboutSections: AboutSection[] = [
       title: 'Goed om te weten',
       body: 'De tips in Vloertaal zijn algemene informatie. Het is geen juridisch advies. Regels kunnen veranderen: de teksten zijn gecontroleerd in oktober 2026. Gaat het om jouw situatie? Vraag je werkgever, een vakbond of het Juridisch Loket.',
     },
+    // The track's own disclaimer, word for word (also on the Hulp tab).
+    nlRules: { title: 'Goed om te weten', body: RULES_DISCLAIMER.join(' ') },
   },
   {
     id: 'a.voices', emoji: '🔊', title: 'The voices',
@@ -99,10 +127,23 @@ export const aboutSections: AboutSection[] = [
       title: 'Vraag of fout?',
       body: 'Zie je een fout, bijvoorbeeld in een vertaling of een tip? Of heb je een vraag? Stuur een mail naar hoi@vloertaal.nl. Een schermafbeelding helpt.',
     },
+    nlRules: {
+      title: 'Vraag of fout?',
+      body: 'Zie je een fout, bijvoorbeeld in een regel of een vraag? Of heb je een vraag? Stuur een mail naar hoi@vloertaal.nl. Een schermafbeelding helpt.',
+    },
   },
 ];
 
 /** The owner's address: in the 'a.contact' body, written exactly so in every language. */
 export const CONTACT_EMAIL = 'hoi@vloertaal.nl';
+
+/**
+ * The About page of the work-rules track, in Dutch only: every section that fits the track, with
+ * its rules text where the Dutch course's text is about learning Dutch (what, mission, how, who,
+ * disclaimer, contact), the others as they are (Bram, privacy, the voices).
+ */
+export const aboutRules: { id: string; emoji: string; who?: 'bram'; title: string; body: string }[] = aboutSections
+  .filter((s) => s.rules !== false)
+  .map((s) => ({ id: s.id, emoji: s.emoji, ...(s.who ? { who: s.who } : {}), ...(s.nlRules ?? s.nl) }));
 
 export const aboutIds: string[] = aboutSections.flatMap((s) => [s.id, `${s.id}.b`]);

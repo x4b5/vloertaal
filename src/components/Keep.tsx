@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { learnedItems } from '../content/courses';
-import { trackOf } from '../lib/track';
+import { trackOf, trackOfLang } from '../lib/track';
 import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
@@ -112,7 +112,7 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
   const add = () => {
     if (!chosen) return;
     const url = `${location.origin}${location.pathname}`;
-    saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(chosen, url, new Date()));
+    saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(chosen, url, new Date(), trackOfLang(lang?.code)));
     rememberReminder(chosen);
     setSaved(true);
   };
@@ -352,9 +352,9 @@ export function BackupCard({ progress, lang, onRestore }: {
 /* ---- After the first day: the reminder and the home screen, a few calm pages ---- */
 
 /** Puts the daily reminder in the phone's calendar (a .ics file the phone opens). */
-function addReminder(time: string) {
+function addReminder(time: string, lang?: HelpLanguage) {
   const url = `${location.origin}${location.pathname}`;
-  saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, url, new Date()));
+  saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, url, new Date(), trackOfLang(lang?.code)));
   rememberReminder(time);
 }
 
@@ -398,7 +398,7 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
     if (next === 'done') onDone();
     else { setStep(next); window.scrollTo(0, 0); }
   };
-  const remind = (time: string, action: KeepAction) => { addReminder(time); setAdded(time); go(action); };
+  const remind = (time: string, action: KeepAction) => { addReminder(time, lang); setAdded(time); go(action); };
   const [short] = useState(() => typeof window !== 'undefined' && window.innerHeight < 720);
   const hero = (mood: 'wave' | 'cheer') => <div className="keep-hero" aria-hidden><Character who="bram" mood={mood} size={short ? 72 : 112} /></div>;
 

@@ -70,8 +70,8 @@ export const uiNl: Record<UiKey, UiText> = {
   readAloud: 'Voorlezen',
   lessonComplete: 'Les klaar!',
   backToPath: 'Terug naar de lessen',
-  phrasebook: 'Noodzinnen',
-  phrasebookHint: 'Tik op een zin om hem te horen. Je kunt je scherm ook aan een collega laten zien.',
+  phrasebook: 'Wie bel je?', // regels: the Hulp tab's list of who to call (RulesHelp)
+  phrasebookHint: 'Tik op een nummer om te bellen, of op een site om hem te openen.', // regels
   settings: 'Instellingen',
   helpLanguage: 'Taal', // regels: no "help language" in this track
   resetProgress: 'Mijn voortgang wissen',

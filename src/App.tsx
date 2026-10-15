@@ -12,6 +12,7 @@ import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
 import { HomeGreeting } from './components/BramSays';
+import { NoVoiceNote, RulesHelp, RulesShelf } from './components/RulesHelp';
 import { Settings } from './components/Settings';
 import { Coaches } from './components/Coaches';
 import { GenderScreen } from './components/Gender';
@@ -632,24 +633,28 @@ export default function App() {
       );
     }
     case 'tips':
-      return <Tips progress={progress} lang={lang} onBack={back} access={acc} />;
+      // The work-rules track: "Alle regels", the rule cards of its finished lessons.
+      return track === 'regels'
+        ? <RulesShelf progress={progress} lang={lang} onBack={back} />
+        : <Tips progress={progress} lang={lang} onBack={back} access={acc} />;
     case 'about':
       return (
         <>
-          <About lang={lang} onCoaches={() => go({ name: 'coaches' })} />
+          {/* The coaches' page lists the language course's topics: not offered in the work-rules track. */}
+          <About lang={lang} onCoaches={track === 'regels' ? undefined : () => go({ name: 'coaches' })} />
           <BottomNav current="about" onTab={tab} lang={lang} />
         </>
       );
     case 'coaches':
       return <Coaches onBack={back} lang={lang} />;
-    case 'phrasebook':
+    case 'phrasebook': {
       // From the first lesson's result: back goes on to the certificate or the streak milestone.
-      return (
-        <Phrasebook
-          lang={lang}
-          onBack={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())}
-        />
-      );
+      const onward = () => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
+      // The work-rules track: its Hulp page ("Wie bel je?") instead of the emergency phrases.
+      return track === 'regels'
+        ? <RulesHelp lang={lang} onBack={onward} onShelf={() => go({ name: 'tips' })} />
+        : <Phrasebook lang={lang} onBack={onward} />;
+    }
     case 'settings': {
       const up = view.up ?? 0;
       return (
@@ -684,10 +689,10 @@ export default function App() {
     case 'words':
       return (
         <>
-          <WordsHub
-            lang={lang}
-            onTips={() => go({ name: 'tips' })}
-          />
+          {/* The work-rules track: who to call, and "Alle regels" (instead of the emergency phrases). */}
+          {track === 'regels'
+            ? <RulesHelp lang={lang} onShelf={() => go({ name: 'tips' })} />
+            : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} />}
           <BottomNav current="words" onTab={tab} lang={lang} />
         </>
       );
@@ -722,6 +727,7 @@ export default function App() {
             focusUnit={focusUnit}
             onFocused={() => { setFocusUnit(null); forgetLinkedUnit(); }}
             lockedLink={lockedLink}
+            note={<NoVoiceNote lang={lang} once />}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
         </>

@@ -3,7 +3,7 @@ import { LessonCelebration } from './Celebrate';
 import { BramSays } from './BramSays';
 import { Character } from './Characters';
 import { resultLineFor } from '../lib/greeting';
-import { aboutSections, CONTACT_EMAIL } from '../content/about';
+import { aboutRules, aboutSections, CONTACT_EMAIL } from '../content/about';
 import { cultureTips } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
@@ -24,6 +24,7 @@ import {
   AlertIcon,
   ArrowIcon,
   CalendarIcon,
+  CallIcon,
   CrateIcon,
   CheckIcon,
   ChevronIcon,
@@ -388,13 +389,13 @@ export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: H
  * right and English (dir, lang), so a right-to-left sentence never reorders the address; the
  * rest of the line goes through `plain` (in Arabic, Persian and Dari: its Latin runs isolated).
  */
-function withMailLink(text: string, plain: (part: string) => React.ReactNode = (part) => part): React.ReactNode {
+function withMailLink(text: string, plain: (part: string) => React.ReactNode = (part) => part, dutchOnly = false): React.ReactNode {
   const parts = text.split(CONTACT_EMAIL);
   if (parts.length < 2) return plain(text);
   return parts.map((part, i) => (
     <Fragment key={i}>
       {i > 0 && (
-        <a href={`mailto:${CONTACT_EMAIL}`} dir="ltr" lang="en" style={{ color: 'inherit', fontWeight: 700, textUnderlineOffset: '0.15em', whiteSpace: 'nowrap' }}>
+        <a href={`mailto:${CONTACT_EMAIL}`} dir="ltr" lang={dutchOnly ? undefined : 'en'} style={{ color: 'inherit', fontWeight: 700, textUnderlineOffset: '0.15em', whiteSpace: 'nowrap' }}>
           {CONTACT_EMAIL}
         </a>
       )}
@@ -438,7 +439,7 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
 }) {
   const { recorded } = useVoices();
   const [dutchOn, setDutch] = useState(() => dutchStart ?? aboutDutchRemembered());
-  // The work-rules track: the sections in Dutch, always (its own About comes with M5).
+  // The work-rules track: its own sections, in Dutch only (no toggle).
   const dutch = dutchUi(lang) || dutchOn;
   const toggle = () => setDutch((on) => { rememberAboutDutch(!on); return !on; });
   const nlLabel = said(ui('showDutch', lang));
@@ -458,7 +459,18 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
         <Wordmark />
         <p className="about-tag" lang="nl">{dutchUi(lang) ? ui('appTagline', lang).help : 'Nederlands voor op de werkvloer'}</p>
       </div>
-      {aboutSections.map((s) => (
+      {/* The work-rules track: its own sections, in Dutch only (src/content/about.ts aboutRules). */}
+      {dutchUi(lang) ? aboutRules.map((s) => (
+        <section key={s.id} className="about-section about-nl-on" lang="nl" dir="ltr">
+          <h2>
+            {s.who
+              ? <span className="about-emoji about-who" aria-hidden><Character who={s.who} crop="head" size={30} /></span>
+              : <span className="about-emoji" aria-hidden>{s.emoji}</span>}
+            <span className="bi"><span className="bi-en">{s.title}</span></span>
+          </h2>
+          <p>{withMailLink(s.body, undefined, true)}</p>
+        </section>
+      )) : aboutSections.map((s) => (
         <section key={s.id} className={dutch ? 'about-section about-nl-on' : 'about-section'} {...(dutch ? { lang: 'nl', dir: 'ltr' } : {})}>
           <h2>
             {s.who
@@ -690,7 +702,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             onClick={() => { if (ready.current) onPhrases(); }}
             aria-label={dutchUi(lang) ? said(ui('phrasebook', lang)) : `Noodzinnen · ${said(ui('phrasebook', lang))}`}
           >
-            <span className="hub-icon" aria-hidden><AlertIcon size={26} /></span>
+            <span className="hub-icon" aria-hidden>{dutchUi(lang) ? <CallIcon size={26} /> : <AlertIcon size={26} />}</span>
             <span className="hub-text" aria-hidden>
               <NlPair nlFirst nl="Noodzinnen" nlClass="hub-nl" text={ui('phrasebook', lang)} />
             </span>
