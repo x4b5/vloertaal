@@ -470,6 +470,8 @@ h2 { font-size: 1.25rem; }
 .bay-title .bi-help { font-weight: 400; }
 .bay-pic { flex: none; width: 48px; height: 48px; font-size: 38px; }
 .bay-done .bay-card:hover { border-color: var(--ink-3); }
+.bay-goal { display: block; margin-top: 4px; font-size: 0.88rem; line-height: 1.35; font-weight: 400; color: var(--muted); }
+.bay-now .bay-goal { color: #3f3a2c; }
 .bay-again { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
 .bay-again .icon { color: var(--right-ink); }
 /* Now: the focal point of the screen. Safety yellow, Bram and a dark Start button. */
