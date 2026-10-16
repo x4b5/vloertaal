@@ -8,6 +8,8 @@ import { Character } from './Characters';
 import { FlameIcon, StreakFlame } from './StreakArt';
 import { CheckIcon, ChevronIcon, CupIcon } from './Icons';
 import { KeepFlow } from './Keep';
+import { NlPair } from './NlPair';
+import { MILESTONE_FACTS } from '../content/facts';
 
 /** False for the first 700 ms (400 ms with reduced motion): a tap meant for the screen before
  *  must not skip this one. */
@@ -255,6 +257,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
             )}
           </div>
         )}
+        <MilestoneFact streak={streak} lang={lang} />
       </main>
       <ContinueButton lang={lang} onClick={next} />
     </div>
@@ -262,6 +265,25 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
 }
 
 const noop = () => {};
+
+/**
+ * "Wist je dat?" (src/content/facts.ts): one calm fact on the milestones 3, 7, 14 and 30, in the
+ * help language. Text only: nothing to tap. Not in the work-rules track (its learners already
+ * speak Dutch: the facts are about learning it).
+ */
+function MilestoneFact({ streak, lang }: { streak: number; lang?: HelpLanguage }) {
+  const key = MILESTONE_FACTS[streak];
+  if (!key || lang?.code === 'nl') return null;
+  return (
+    <aside className="milestone-fact">
+      <p className="milestone-fact-title">
+        <span aria-hidden>💡</span>
+        <NlPair nlFirst nl="Wist je dat?" nlClass="milestone-fact-nl" className="milestone-fact-help" text={ui('factTitle', lang)} />
+      </p>
+      <Bi className="milestone-fact-text" text={ui(key, lang)} />
+    </aside>
+  );
+}
 
 /** The tier stamp's line in the help language, under the Dutch (English without one). */
 function TierSub({ text, lang }: { text: ReturnType<typeof ui>; lang?: HelpLanguage }) {
