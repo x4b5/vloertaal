@@ -1239,7 +1239,7 @@ const laterTips = [
     [
       'Help him contact the Arbeidsinspectie or the Juridisch Loket, anonymously if he wants.',
       'Tell him that this is normal for new workers.',
-      'Go to the boss and start a fight.',
+      'Tell him to wait until his contract ends, then look for other work.',
     ],
     'Help is there for everyone who works in the Netherlands. A report can also be made without names.',
     ABUSE_LINE,

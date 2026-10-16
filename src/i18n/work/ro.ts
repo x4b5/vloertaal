@@ -706,7 +706,7 @@ const t: CultureTranslation = {
     'c.gethelp.s': 'Un prieten lucrează 14 ore pe zi, nu primește aproape nimic și îi e frică de șef. Ce poți face?',
     'c.gethelp.o1': 'Îl ajuți să ia legătura cu Arbeidsinspectie sau cu Juridisch Loket, anonim dacă vrea.',
     'c.gethelp.o2': 'Îi spui că asta e normal pentru lucrătorii noi.',
-    'c.gethelp.o3': 'Te duci la șef și începi o ceartă.',
+    'c.gethelp.o3': 'Îi spui să aștepte până i se termină contractul, apoi să caute altă muncă.',
     'c.gethelp.w': 'Ajutorul există pentru toți cei care lucrează în Olanda. Raportarea se poate face și fără nume.',
     'c.callin': 'Cum îl suni pe șef',
     'c.callin.b': { m: 'Când îl suni pe șef, spune-ți numele, motivul și când crezi că te întorci. Ești bolnav? Trebuie să spui doar că ești bolnav, nu ce boală ai. Sună: nu trimite doar un mesaj, decât dacă firma ta spune că un mesaj e suficient. Nu răspunde nimeni? Lasă un mesaj vocal și încearcă din nou. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.', f: 'Când îl suni pe șef, spune-ți numele, motivul și când crezi că te întorci. Ești bolnavă? Trebuie să spui doar că ești bolnavă, nu ce boală ai. Sună: nu trimite doar un mesaj, decât dacă firma ta spune că un mesaj e suficient. Nu răspunde nimeni? Lasă un mesaj vocal și încearcă din nou. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.' },

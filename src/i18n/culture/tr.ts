@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.direct.s': 'Bir iş arkadaşın diyor ki: “Nee, dat is fout. Die doos moet daar.” Ne yaparsın?',
     'c.direct.o1': 'Nasıl yapılması gerektiğini sorar ve kutuyu taşırsın.',
     'c.direct.o2': 'Alınır ve çekip gidersin.',
-    'c.direct.o3': 'Bu yüzden kavga çıkarırsın.',
+    'c.direct.o3': 'Hiçbir şey söylemezsin ve kutuyu olduğu yerde bırakırsın.',
     'c.direct.w': 'Açık geri bildirim işle ilgilidir, seninle değil. “hoe moet het dan?” diye sormak öğrenmek istediğini gösterir.',
     'c.limits': 'Çok ağırsa söyle',
     'c.limits.b': 'Kimse her şeyi tek başına kaldırmanı beklemez. “dit is te zwaar” deyip yardım veya alet istemek akıllıcadır, zayıflık değil. Belini korur.',

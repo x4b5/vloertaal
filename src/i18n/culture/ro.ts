@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.direct.s': 'Un coleg spune: „Nee, dat is fout. Die doos moet daar.” Ce faci?',
     'c.direct.o1': 'Întrebi cum trebuie făcut și muți cutia.',
     'c.direct.o2': { m: 'Te simți jignit și pleci.', f: 'Te simți jignită și pleci.' },
-    'c.direct.o3': 'Începi o ceartă din cauza asta.',
+    'c.direct.o3': 'Nu spui nimic și lași cutia unde e.',
     'c.direct.w': 'Feedbackul direct e despre muncă, nu despre tine. Când întrebi „hoe moet het dan?”, arăți că vrei să înveți.',
     'c.limits': 'Spune când e prea greu',
     'c.limits.b': { m: 'Nimeni nu se așteaptă să ridici totul singur. Să spui „dit is te zwaar” și să ceri ajutor sau o unealtă e inteligent, nu un semn de slăbiciune. Așa îți protejezi spatele.', f: 'Nimeni nu se așteaptă să ridici totul singură. Să spui „dit is te zwaar” și să ceri ajutor sau o unealtă e inteligent, nu un semn de slăbiciune. Așa îți protejezi spatele.' },
