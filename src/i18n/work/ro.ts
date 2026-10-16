@@ -789,7 +789,7 @@ const t: CultureTranslation = {
     'c.transit.o3': 'Le spui tuturor colegilor că firma e nedreaptă.',
     'c.transit.w': 'Decontarea drumului depinde de angajator sau de cao. E normal să întrebi și te ajută să-ți cunoști drepturile.',
     'c.ww': 'Ajutorul de șomaj (WW)',
-    'c.ww.b': 'Ți-ai pierdut locul de muncă? Cere WW la UWV cât mai repede, în cel mult o săptămână după ultima zi de lucru. De obicei trebuie să fi lucrat cel puțin 26 din ultimele 36 de săptămâni. Dacă demisionezi tu, de obicei nu primești WW. Înregistrează-te ca persoană care caută de lucru pe werk.nl. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
+    'c.ww.b': 'Ți-ai pierdut locul de muncă? Cere WW la UWV cât mai repede, în cel mult o săptămână după prima zi fără muncă. De obicei trebuie să fi lucrat cel puțin 26 din ultimele 36 de săptămâni. Dacă demisionezi tu, de obicei nu primești WW. Înregistrează-te ca persoană care caută de lucru pe werk.nl. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.ww.p': 'Vreau să cer ajutor de șomaj. Ce trebuie să fac?',
     'c.ww.s': { m: 'Ești supărat pe munca ta și vrei să demisionezi azi. Ce e înțelept?', f: 'Ești supărată pe munca ta și vrei să demisionezi azi. Ce e înțelept?' },
     'c.ww.o1': 'Ceri întâi un sfat: dacă demisionezi tu, de obicei nu primești WW.',

@@ -565,3 +565,4 @@ fout antwoord) en de zin over uitzendwerk en het minimumloon in `c.illness.b`.
 Ook nieuw (16 oktober 2026): `c.unsafe.w` eindigt nu met "je werkgever mag je er niet voor straffen"
 (was: "je komt niet in de problemen", een belofte die niemand kan doen), en het gesprekje van
 `l.shift` (`c.shift.q`, `c.shift.a`, `c.shift.a.why`) gaat over de dienst in plaats van koffie.
+En `c.ww.b`: "binnen een week na je eerste dag zonder werk" (was: "na je laatste werkdag"), zoals UWV en Werkregels het zeggen.

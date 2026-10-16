@@ -789,7 +789,7 @@ const t: CultureTranslation = {
     'c.transit.o3': 'Bütün iş arkadaşlarına şirketin haksız olduğunu söylersin.',
     'c.transit.w': 'Yol parası işverene veya cao’ya bağlıdır. Bunu sormak normaldir ve haklarını bilmene yardım eder.',
     'c.ww': 'İşsizlik maaşı (WW)',
-    'c.ww.b': 'İşini mi kaybettin? WW için mümkün olan en kısa sürede, son iş gününden sonraki bir hafta içinde UWV’ye başvur. Genelde son 36 haftanın en az 26’sında çalışmış olman gerekir. İşinden kendin ayrılırsan genelde WW alamazsın. werk.nl sitesinde iş arayan olarak kaydol. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
+    'c.ww.b': 'İşini mi kaybettin? WW için mümkün olan en kısa sürede, işsiz kaldığın ilk günden sonraki bir hafta içinde UWV’ye başvur. Genelde son 36 haftanın en az 26’sında çalışmış olman gerekir. İşinden kendin ayrılırsan genelde WW alamazsın. werk.nl sitesinde iş arayan olarak kaydol. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.ww.p': 'İşsizlik maaşına başvurmak istiyorum. Ne yapmalıyım?',
     'c.ww.s': 'İşine kızgınsın ve bugün istifa etmek istiyorsun. Akıllıca olan ne?',
     'c.ww.o1': 'Önce tavsiye alırsın: kendin ayrılırsan genelde WW alamazsın.',

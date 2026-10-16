@@ -1394,7 +1394,7 @@ const laterTips = [
     'ww',
     '🛟',
     'Unemployment benefit (WW)',
-    'Lost your job? Apply for WW at UWV as soon as possible, within a week after your last working day. You usually need to have worked at least 26 of the last 36 weeks. If you quit your job yourself, you usually do not get WW. Register as a job seeker on werk.nl.',
+    'Lost your job? Apply for WW at UWV as soon as possible, within a week after your first day without work. You usually need to have worked at least 26 of the last 36 weeks. If you quit your job yourself, you usually do not get WW. Register as a job seeker on werk.nl.',
     ['Ik wil WW aanvragen. Wat moet ik doen?', 'I want to apply for unemployment benefit. What must I do?'],
     'You are angry about your work and want to quit today. What is wise?',
     [
