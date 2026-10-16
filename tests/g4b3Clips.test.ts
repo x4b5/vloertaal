@@ -1,5 +1,5 @@
 import { execSync } from 'node:child_process';
-import { existsSync, readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { allDialogues, allLessons, allWords } from '../src/content/curriculum';
 import { cultureTips } from '../src/content/culture';
@@ -68,9 +68,12 @@ describe('recorded clips (G4 b3)', () => {
   });
 
   it('Bram’s own line is a clip that only his voice records (x.bram, Thijmen)', { timeout: 60_000 }, () => {
-    // public/audio/ is not in git (CI and a fresh checkout have no clips.json): make it first.
-    if (!existsSync('public/audio/clips.json')) execSync('npx tsx scripts/list-clips.ts', { stdio: 'ignore' });
+    // public/audio/ is not in git: write clips.json afresh, so the script itself is tested too (a
+    // copy left from an earlier run would hide a script that no longer runs).
+    execSync('npx tsx scripts/list-clips.ts', { stdio: 'ignore' });
     const clips = JSON.parse(readFileSync('public/audio/clips.json', 'utf8')) as { id: string; text: string; voices?: string[] }[];
+    // The regions' lines are in it, also while the regions are off (they are recorded before they go on).
+    expect(clips.some((c) => c.id.startsWith('rg.'))).toBe(true);
     expect(clips.find((c) => c.id === 'x.bram')).toEqual({ id: 'x.bram', text: BRAM_HELLO, voices: [BRAM_VOICE] });
     // Every other clip is recorded in every voice, as before.
     expect(clips.filter((c) => c.voices).map((c) => c.id)).toEqual(['x.bram']);
