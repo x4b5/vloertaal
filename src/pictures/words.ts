@@ -13,6 +13,7 @@ import group11 from './group11';
 import group12 from './group12';
 import group13 from './group13';
 import group14 from './group14';
+import group15 from './group15';
 
 /** Every word picture, keyed by word id: one file, loaded on demand (./index.ts loadPictures). */
 const words: Record<string, () => JSX.Element> = {
@@ -30,6 +31,7 @@ const words: Record<string, () => JSX.Element> = {
   ...group12,
   ...group13,
   ...group14,
+  ...group15,
 };
 export default words;
 export const url: string = import.meta.url;

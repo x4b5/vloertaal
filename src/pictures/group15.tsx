@@ -265,4 +265,4 @@ export default {
       <Shine d="M24 46A40 40 0 0 1 44 22" width={3.5} opacity={0.35} />
     </g>
   ),
-} satisfies Record<string, () => JSX.Element>;
+} as Record<string, () => JSX.Element>;
