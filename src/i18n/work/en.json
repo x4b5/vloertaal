@@ -764,7 +764,7 @@
     "c.gethelp.s": "A friend works 14 hours a day, gets almost no pay and is afraid of the boss. What can you do?",
     "c.gethelp.o1": "Help him contact the Arbeidsinspectie or the Juridisch Loket, anonymously if he wants.",
     "c.gethelp.o2": "Tell him that this is normal for new workers.",
-    "c.gethelp.o3": "Go to the boss and start a fight.",
+    "c.gethelp.o3": "Tell him to wait until his contract ends, then look for other work.",
     "c.gethelp.w": "Help is there for everyone who works in the Netherlands. A report can also be made without names.",
     "c.callin": "Calling your supervisor",
     "c.callin.b": "When you call your supervisor, say your name, the reason, and when you expect to come back. Sick? You only have to say that you are sick, not what illness you have. Call: do not only send a text, unless your company says a text is fine. No answer? Leave a voice message and try again. Rules differ per company: ask your supervisor what the rules are where you work.",

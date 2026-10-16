@@ -130,7 +130,7 @@ const baseTips: CultureTip[] = [
     options: [
       { id: 'c.direct.o1', en: 'Ask how it should be done and move the box.', best: true },
       { id: 'c.direct.o2', en: 'Feel insulted and walk away.', best: false },
-      { id: 'c.direct.o3', en: 'Start a fight about it.', best: false },
+      { id: 'c.direct.o3', en: 'Say nothing and leave the box where it is.', best: false },
     ],
     why: { id: 'c.direct.w', en: 'Direct feedback is about the work, not about you. Asking "hoe moet het dan?" shows you want to learn.' },
   }),

@@ -706,7 +706,7 @@ const t: CultureTranslation = {
     'c.gethelp.s': 'Bir arkadaşın günde 14 saat çalışıyor, neredeyse hiç ücret almıyor ve patrondan korkuyor. Ne yapabilirsin?',
     'c.gethelp.o1': 'İsterse adını vermeden Arbeidsinspectie veya Juridisch Loket ile iletişime geçmesine yardım edersin.',
     'c.gethelp.o2': 'Ona bunun yeni çalışanlar için normal olduğunu söylersin.',
-    'c.gethelp.o3': 'Patrona gider ve kavga çıkarırsın.',
+    'c.gethelp.o3': 'Sözleşmesi bitene kadar beklemesini, sonra başka iş aramasını söylersin.',
     'c.gethelp.w': 'Hollanda’da çalışan herkes için yardım vardır. Bildirim isim vermeden de yapılabilir.',
     'c.callin': 'Amirini aramak',
     'c.callin.b': 'Amirini aradığında adını, sebebi ve ne zaman geri gelmeyi düşündüğünü söyle. Hasta mısın? Sadece hasta olduğunu söylemen yeterli, hangi hastalığın olduğunu değil. Telefonla ara: şirketin mesajın yeterli olduğunu söylemiyorsa sadece mesaj atma. Cevap yok mu? Sesli mesaj bırak ve tekrar dene. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',

@@ -706,7 +706,7 @@ const t: CultureTranslation = {
     'c.gethelp.s': 'Twój przyjaciel pracuje 14 godzin dziennie, prawie nic nie zarabia i boi się szefa. Co możesz zrobić?',
     'c.gethelp.o1': 'Pomagasz mu skontaktować się z Arbeidsinspectie albo Juridisch Loket, anonimowo, jeśli chce.',
     'c.gethelp.o2': 'Mówisz mu, że to normalne dla nowych pracowników.',
-    'c.gethelp.o3': 'Idziesz do szefa i wszczynasz bójkę.',
+    'c.gethelp.o3': 'Mówisz mu, żeby poczekał do końca umowy, a potem szukał innej pracy.',
     'c.gethelp.w': 'Pomoc jest dla każdego, kto pracuje w Holandii. Zgłoszenie można też zrobić bez podawania nazwisk.',
     'c.callin': 'Telefon do przełożonego',
     'c.callin.b': { m: 'Gdy dzwonisz do przełożonego, powiedz swoje imię, powód i kiedy myślisz, że wrócisz. Jesteś chory? Musisz tylko powiedzieć, że jesteś chory, a nie na co chorujesz. Dzwoń: nie wysyłaj tylko SMS-a, chyba że twoja firma mówi, że SMS wystarczy. Nikt nie odbiera? Nagraj wiadomość głosową i spróbuj jeszcze raz. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.', f: 'Gdy dzwonisz do przełożonego, powiedz swoje imię, powód i kiedy myślisz, że wrócisz. Jesteś chora? Musisz tylko powiedzieć, że jesteś chora, a nie na co chorujesz. Dzwoń: nie wysyłaj tylko SMS-a, chyba że twoja firma mówi, że SMS wystarczy. Nikt nie odbiera? Nagraj wiadomość głosową i spróbuj jeszcze raz. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.' },

@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.direct.s': 'Kolega mówi: „Nee, dat is fout. Die doos moet daar.” Co robisz?',
     'c.direct.o1': 'Pytasz, jak trzeba to zrobić, i przestawiasz karton.',
     'c.direct.o2': 'Obrażasz się i odchodzisz.',
-    'c.direct.o3': 'Zaczynasz się o to kłócić.',
+    'c.direct.o3': 'Nic nie mówisz i zostawiasz pudło tam, gdzie jest.',
     'c.direct.w': 'Bezpośrednia uwaga dotyczy pracy, nie ciebie. Pytanie „hoe moet het dan?” pokazuje, że chcesz się nauczyć.',
     'c.limits': 'Powiedz, gdy coś jest za ciężkie',
     'c.limits.b': { m: 'Nikt nie oczekuje, że wszystko podniesiesz sam. Powiedzieć „dit is te zwaar” i poprosić o pomoc albo narzędzie to mądre, a nie oznaka słabości. To chroni twoje plecy.', f: 'Nikt nie oczekuje, że wszystko podniesiesz sama. Powiedzieć „dit is te zwaar” i poprosić o pomoc albo narzędzie to mądre, a nie oznaka słabości. To chroni twoje plecy.' },
