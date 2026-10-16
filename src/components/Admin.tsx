@@ -62,9 +62,11 @@ export function Admin({ onBack }: { onBack: () => void }) {
           Teller (GoatCounter): <a href={COUNTER} target="_blank" rel="noreferrer">{COUNTER.replace(/^https?:\/\//, '')}</a>
         </p>
         <p className="muted small">
-          Gebeurtenissen: <code>open</code> (één keer per dag per toestel), <code>lesson-done</code>, <code>review-done</code> en{' '}
-          <code>unit-done</code>, elk ook per hulptaal (<code>/lang-ti</code>) en per sector (<code>/sector-care</code>). Geen cookies,
-          geen namen, geen ids. Een andere teller instellen: <code>VITE_COUNTER_URL</code> bij het bouwen.
+          Gebeurtenissen: <code>open</code> (één keer per dag per toestel), <code>lesson-start</code>, <code>lesson-quit</code>,{' '}
+          <code>lesson-done</code>, <code>review-done</code> en <code>unit-done</code>, elk ook per hulptaal (<code>/lang-ti</code>) en
+          per sector (<code>/sector-care</code>). Een les ook per les (<code>/lesson/l-cv</code>); gestopt ook per kwart van de les
+          (<code>/q2</code>, en <code>/lesson/l-cv/q2</code>). Elke maat telt apart. Geen cookies, geen namen, geen ids van mensen.
+          Een andere teller instellen: <code>VITE_COUNTER_URL</code> bij het bouwen.
         </p>
         <p className="muted small">
           Deze browser: {mayCount() ? 'telt mee.' : countingOn() ? 'telt niet mee (ontwikkelversie, localhost of Do Not Track).' : 'telt niet mee (uitgezet in Instellingen).'}

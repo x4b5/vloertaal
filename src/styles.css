@@ -508,6 +508,9 @@ h2 { font-size: 1.25rem; }
   background: var(--bg);
 }
 .player-top .icon-btn { margin-inline-start: -8px; }
+/* Testers only (src/lib/report.ts): the flag at the far end, quieter than the ✕. */
+.player-top .lesson-report { margin-inline-start: auto; margin-inline-end: -8px; color: var(--muted); }
+.player-top .lesson-report:hover { background: var(--concrete-2); }
 /* Once the exercise scrolls under the header, a soft shadow on its bottom edge says so. */
 .player-top::after {
   content: ''; position: absolute; inset: 100% 0 auto; height: 14px; pointer-events: none; opacity: 0;

@@ -184,7 +184,7 @@ export const uiNl: Record<UiKey, UiText> = {
   wordsUnit: 'regels', // regels
   backToLesson: 'Terug naar de les',
   countTitle: 'Anoniem meetellen',
-  countHint: 'De app telt hoe vaak een les klaar is. Geen naam, geen account. Niemand volgt je.',
+  countHint: 'De app telt hoe vaak lessen worden gedaan. Geen naam, geen account. Niemand volgt je.',
   certificate: 'Certificaat',
   myCertificates: 'Mijn certificaten',
   certsEmpty: 'Maak alle lessen van een onderwerp af. Dan krijg je een certificaat.',

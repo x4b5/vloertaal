@@ -515,7 +515,8 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, region, daily,
 function QuietLesson({ quiet: start, ...props }: Omit<React.ComponentProps<typeof LessonPlayer>, 'quiet' | 'onQuiet'> & { quiet: boolean }) {
   const [quiet, setQuiet] = useState(start);
   setQuietAudio(quiet);
-  return <LessonPlayer {...props} quiet={quiet} onQuiet={setQuiet} />;
+  // &report=1: tester mode, the "Iets melden" flag in the header (src/lib/report.ts).
+  return <LessonPlayer {...props} quiet={quiet} onQuiet={setQuiet} report={new URLSearchParams(location.search).get('report') === '1'} />;
 }
 
 /**

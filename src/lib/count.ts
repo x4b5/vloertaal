@@ -1,10 +1,14 @@
 import { dayKey } from './progress';
 
 /**
- * Anonymous usage counting, without tracking. A few events (the app opened today, a lesson,
- * a review or a unit finished) are counted on GoatCounter (cookieless): one request per event,
- * plus one per aggregate dimension (the help language and the sector). No cookies, no ids,
- * no names, no lesson ids, nothing stored about the learner on our side.
+ * Anonymous usage counting, without tracking. A few events (the app opened today, a lesson
+ * started, stopped or finished, a review or a unit finished) are counted on GoatCounter
+ * (cookieless): one request per event, plus one per aggregate dimension (the help language, the
+ * sector, and for a lesson which lesson and, when it is stopped, in which quarter). Every
+ * dimension is its own count, never combined with another, so nothing singles anyone out. No
+ * cookies, no ids of people, no names, nothing stored about the learner on our side.
+ *
+ * Started, stopped and finished per lesson show where learners give up (docs/pilot.md).
  *
  * Nothing is sent:
  * - in development and tests (only a production build on a real host counts);
@@ -15,14 +19,24 @@ import { dayKey } from './progress';
 /** The owner's GoatCounter site; its root is also the dashboard. */
 export const COUNTER: string = (import.meta.env.VITE_COUNTER_URL as string | undefined) || 'https://vloertaal.goatcounter.com';
 
-export type CountEvent = 'open' | 'lesson-done' | 'review-done' | 'unit-done';
+export type CountEvent = 'open' | 'lesson-start' | 'lesson-quit' | 'lesson-done' | 'review-done' | 'unit-done';
 
-/** The only dimensions ever sent: never a lesson id, a time or anything else that could single someone out. */
+/** The only dimensions ever sent, each counted on its own: never a time, a person or anything else that could single someone out. */
 export interface CountDims {
   /** Help-language code; null/undefined = English only. */
   lang?: string | null;
   /** Sector id, 'none', or undefined when not chosen yet. */
   sector?: string | null;
+  /** The lesson (content, not a person): with lesson-start, lesson-quit and lesson-done. */
+  lesson?: string;
+  /** lesson-quit: how far the lesson got, 1–4 (the quarter it was stopped in, see quarterOf). */
+  quarter?: number;
+}
+
+/** The quarter (1–4) of a lesson a learner stopped in: at step `step` (0-based) of `steps`. */
+export function quarterOf(step: number, steps: number): number {
+  if (steps <= 0) return 1;
+  return Math.min(4, Math.max(1, Math.floor((step / steps) * 4) + 1));
 }
 
 const OFF_KEY = 'vloertaal:count-off';
@@ -84,13 +98,23 @@ export function mayCount(): boolean {
 /** A dimension value as a short, safe path segment. */
 const seg = (v: string) => v.toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 24) || 'x';
 
-/** The paths one event is counted under: the event, and the event per language and per sector. */
+/** A lesson id as a path segment: "l.cv" → "l-cv", "r.l.loon.1" → "r-l-loon-1". */
+const lessonSeg = (id: string) => id.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'x';
+
+/**
+ * The paths one event is counted under: the event, and the event per language and per sector;
+ * with a lesson also per lesson (and per quarter: overall and in that lesson).
+ */
 export function countPaths(event: CountEvent, dims: CountDims = {}): string[] {
-  return [
+  const paths = [
     `/e/${event}`,
     `/e/${event}/lang-${seg(dims.lang || 'en')}`,
     `/e/${event}/sector-${seg(dims.sector || 'unknown')}`,
   ];
+  const q = dims.quarter ? `q${Math.min(4, Math.max(1, Math.round(dims.quarter)))}` : '';
+  if (q) paths.push(`/e/${event}/${q}`);
+  if (dims.lesson) paths.push(`/e/${event}/lesson/${lessonSeg(dims.lesson)}`, ...(q ? [`/e/${event}/lesson/${lessonSeg(dims.lesson)}/${q}`] : []));
+  return paths;
 }
 
 function send(url: string): void {
