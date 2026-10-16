@@ -1,6 +1,17 @@
 /* House style "B – Magazijnvloer" (warehouse floor): concrete floor, label paper, ink,
    safety yellow, kraft tape and stencil numbers. Flat and printed, no 3D button shadows.
    Brand colours first, then the semantic tokens every screen uses. */
+/* The digits 0–9 of the stencil headings in Lexend (the same file as the body text, so nothing
+   extra to load): the stencil face's 1, 4 and 7 are hard to read for a learner who reads little. */
+@font-face {
+  font-family: 'Stencil Digits';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../node_modules/@fontsource-variable/lexend/files/lexend-latin-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0030-0039;
+}
+
 :root {
   /* Palette */
   --ink: #1e2226;
@@ -74,7 +85,8 @@
   --fwd: 1;
   /* Help-language text is never smaller than this (phones included). */
   --help-min: 15px;
-  --stencil: 'Big Shoulders Stencil Display', 'Lexend Variable', 'Arial Narrow', sans-serif;
+  /* Stencil letters, but plain digits (Stencil Digits, below): the stencil 1 and 4 read as I and |. */
+  --stencil: 'Stencil Digits', 'Big Shoulders Stencil Display', 'Lexend Variable', 'Arial Narrow', sans-serif;
   color-scheme: light dark;
   font-family: 'Lexend Variable', 'Lexend', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Noto Sans Arabic',
     'Noto Sans Ethiopic', 'Abyssinica SIL', Kefa, sans-serif;
@@ -489,9 +501,15 @@ h2 { font-size: 1.25rem; }
 .bay-card:active:not(:disabled) { transform: translateY(1px); filter: brightness(0.97); }
 .bay-card:active:not(:disabled) .bay-start { transform: translateY(1px); }
 @media (max-width: 380px) {
-  .bay-now .bay-card { padding-inline-end: 104px; }
-  .bay-char .ch { height: 100px; width: auto; }
+  .bay-now .bay-card { padding-inline-end: 96px; }
+  .bay-char .ch { height: 96px; width: auto; }
+  .bay-now .bay-title { font-size: 1.3rem; }
 }
+/* Below "Herhaal vandaag": the block without its picture and its done lessons, and a lower
+   current card, so Start is in view on a 360×640 phone (also with large text). */
+.rb-tight .rb-pic, .rb-tight .bay-done { display: none; }
+.rb-tight .bay-now .bay-card { min-height: 0; padding-block: 14px 14px; }
+.rb-tight .bay-start { margin-top: 10px; }
 
 /* Lesson player: full-bleed frame, content column centred on wide screens. */
 #root:has(.player) { max-width: none; }
@@ -2847,16 +2865,17 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   margin: 0 auto; width: auto; max-width: 420px;
 }
 
-/* A long feedback label (a situation's "why") scrolls inside itself, so the footer stays pinned
-   and Continue is always in view; a soft fade and a small arrow say there is more. */
-.feedback-text { max-height: min(34dvh, 300px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+/* A long feedback label (a situation's "why", a rule's reason): that is where the learning is, so
+   it may grow up to just under the lesson's header, over the question already answered (the
+   footer stays pinned, Continue always in view). Only longer still does it scroll inside itself,
+   with a soft fade and a small arrow saying there is more. */
+.feedback-text { max-height: max(30dvh, calc(100dvh - 290px)); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
 .feedback-text.has-more { mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent); }
 .feedback-more {
   position: absolute; bottom: 4px; left: 50%; translate: -50% 0; display: grid; place-items: center;
   width: 30px; height: 30px; border-radius: 50%; background: var(--solid); color: var(--on-solid);
   pointer-events: none; animation: up 0.2s ease-out;
 }
-@media (max-height: 700px) { .feedback-text { max-height: 30dvh; } }
 
 /* Sentence tiles: the word is the button that places it; the speaker beside it is its own
    button that only plays it. */
@@ -3433,7 +3452,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
    scrolling it never covers the exercise's question below the header. */
 .bar-wrap > .run-label { top: 50%; translate: 0 -50%; }
 /* A larger text needs a taller feedback label, so the answer's meaning is not hidden. */
-:root:is([data-text='large'], [data-text='xl']) .feedback-text { max-height: min(42dvh, 360px); }
+:root:is([data-text='large'], [data-text='xl']) .feedback-text { max-height: max(34dvh, calc(100dvh - 300px)); }
 @media (max-height: 700px) { :root:is([data-text='large'], [data-text='xl']) .feedback-text { max-height: 38dvh; } }
 /* The "more below" button sits at the end of the footer's top edge, over the page margin,
    not in the middle of the text it points to. */

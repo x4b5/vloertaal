@@ -192,7 +192,9 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
       {dailyDue && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
 
       {block && (
-        <section className="rb-current" aria-label={`${unitIndex(block) + 1}. ${said(unitTitle(block, lang))}`}>
+        // With "Herhaal vandaag" above it, the block is compact (no picture, no done lessons), so
+        // its Start stays in view on a small phone.
+        <section className={`rb-current ${dailyDue ? 'rb-tight' : ''}`} aria-label={`${unitIndex(block) + 1}. ${said(unitTitle(block, lang))}`}>
           <div id={`unit-${block.id.slice(2)}`} className={`rb-block ${marked === block.id ? 'rb-marked' : ''}`}>
             {blockGroup && <ThemeLabel group={blockGroup} lang={lang} />}
             <WordPicture className="rb-pic" id={unitIcons[block.id] ?? ''} emoji={block.emoji} size={64} />
