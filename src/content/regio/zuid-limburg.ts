@@ -1,6 +1,6 @@
 import type { CultureTip } from '../culture';
 import type { ChatLine, Dialogue, Unit } from '../types';
-import { ADVICE_LINE } from '../work';
+import { ADVICE_LINE } from '../adviceLine';
 import { zlMeta } from './meta';
 import type { Region, SocialMapEntry } from './types';
 

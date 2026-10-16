@@ -9,7 +9,7 @@ import { routeOrder } from '../src/lib/route';
 
 /**
  * The regions' content is a file of its own (src/content/regio/<region>-pack.ts, and the region
- * texts src/i18n/regio/<lang>.ts behind src/i18n/packs/regio/<lang>.ts), loaded only while the
+ * texts src/i18n/regio/<lang>.ts behind src/i18n/packs/regio-<lang>.ts), loaded only while the
  * regions are on and the learner chose a region. Nothing of it is in the main bundle or in a
  * help language's file: no static import reaches it from the app's entry or from a pack.
  *
@@ -49,7 +49,7 @@ function staticGraph(...entries: string[]): Set<string> {
   return new Set([...seen].map((f) => relative(ROOT, f).split('\\').join('/')));
 }
 
-const REGION_CONTENT = /^src\/(content\/regio\/zuid-limburg|i18n\/regio\/|i18n\/packs\/regio\/)/;
+const REGION_CONTENT = /^src\/(content\/regio\/zuid-limburg|i18n\/regio\/|i18n\/packs\/regio-)/;
 const regionFiles = (graph: Set<string>) => [...graph].filter((f) => REGION_CONTENT.test(f));
 
 afterEach(() => setRegionsOn(null));
@@ -75,7 +75,7 @@ describe('regions: their own file, never in the main bundle', () => {
     const registry = readFileSync(join(SRC, 'content/regio/index.ts'), 'utf8');
     expect(registry).toMatch(/import\('\.\/zuid-limburg-pack'\)/);
     const i18n = readFileSync(join(SRC, 'i18n/index.ts'), 'utf8');
-    for (const code of ['ar', 'bg', 'fa', 'pl', 'prs', 'ro', 'ti', 'tr', 'uk']) expect(i18n).toContain(`import('./packs/regio/${code}')`);
+    for (const code of ['ar', 'bg', 'fa', 'pl', 'prs', 'ro', 'ti', 'tr', 'uk']) expect(i18n).toContain(`import('./packs/regio-${code}')`);
     // The region's file has both units, the tips and the map.
     const pack = staticGraph('src/content/regio/zuid-limburg-pack.ts');
     expect(pack.has('src/content/regio/zuid-limburg.ts')).toBe(true);

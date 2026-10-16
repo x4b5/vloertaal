@@ -1,3 +1,4 @@
+import { ADVICE_LINE } from './adviceLine';
 import type { CultureTip } from './culture';
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
 
@@ -18,8 +19,8 @@ import type { ChatLine, Dialogue, Lesson, Unit } from './types';
 const line = (id: string, nl: string, en: string): ChatLine => ({ id, nl, en });
 const chat = (prompt: ChatLine, reply: ChatLine): Dialogue => ({ prompt, reply });
 
-/** Closing line of most tips: this is general information, not advice for one person. */
-export const ADVICE_LINE = 'General information. For your situation: ask your employer, the union or the Juridisch Loket.';
+/** Closing line of most tips: this is general information, not advice for one person (src/content/adviceLine.ts). */
+export { ADVICE_LINE };
 /**
  * Closing line of the tips where the employer or agency may itself be the problem (exploitation,
  * housing pressure, dismissal, discrimination): never send the learner back to the employer.

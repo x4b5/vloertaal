@@ -60,7 +60,7 @@ const loaders: Record<RegionId, () => Promise<{ default: RegionPack }>> = {
 const loaded = new Map<RegionId, RegionPack>();
 const pending = new Map<RegionId, Promise<void>>();
 
-/** Puts a region's content in place (its file does this when it loads; tests import that file). */
+/** Puts a region's content in place (ensureRegion, once its file is here; tests: tests/regionLoaded.ts). */
 export function registerRegion(pack: RegionPack): void {
   loaded.set(pack.region.id, pack);
 }

@@ -34,15 +34,15 @@ const loaders: Record<UiCode, () => Promise<{ default: LanguagePack }>> = {
  * (its screens are Dutch already).
  */
 const regionLoaders: Partial<Record<UiCode, () => Promise<{ default: RegionTextPack }>>> = {
-  ar: () => import('./packs/regio/ar'),
-  ti: () => import('./packs/regio/ti'),
-  fa: () => import('./packs/regio/fa'),
-  prs: () => import('./packs/regio/prs'),
-  uk: () => import('./packs/regio/uk'),
-  tr: () => import('./packs/regio/tr'),
-  pl: () => import('./packs/regio/pl'),
-  ro: () => import('./packs/regio/ro'),
-  bg: () => import('./packs/regio/bg'),
+  ar: () => import('./packs/regio-ar'),
+  ti: () => import('./packs/regio-ti'),
+  fa: () => import('./packs/regio-fa'),
+  prs: () => import('./packs/regio-prs'),
+  uk: () => import('./packs/regio-uk'),
+  tr: () => import('./packs/regio-tr'),
+  pl: () => import('./packs/regio-pl'),
+  ro: () => import('./packs/regio-ro'),
+  bg: () => import('./packs/regio-bg'),
 };
 
 const packs = new Map<UiCode, LanguagePack>();
