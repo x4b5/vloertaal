@@ -80,6 +80,9 @@ describe('regions: their own file, never in the main bundle', () => {
     const pack = staticGraph('src/content/regio/zuid-limburg-pack.ts');
     expect(pack.has('src/content/regio/zuid-limburg.ts')).toBe(true);
     expect(pack.has('src/content/regio/zuid-limburg-regels.ts')).toBe(true);
+    // It never imports the registry back (ensureRegion registers it): that cycle would make the
+    // bundler move the registry and its neighbours into a chunk shared with the main bundle.
+    expect(pack.has('src/content/regio/index.ts')).toBe(false);
   });
 });
 
