@@ -5,7 +5,7 @@ const t: CultureTranslation = {
   ui: {},
   gloss: {
     'u.sounds': 'Sunetele limbii olandeze',
-    'l.shortlong': 'Scurt sau lung?',
+    'l.shortlong': 'a sau aa, ui sau ei',
     'w.kl.man': 'bărbatul',
     'w.kl.maan': 'luna (de pe cer)',
     'w.kl.zak': 'punga, sacul',

@@ -5,7 +5,7 @@ const t: CultureTranslation = {
   ui: {},
   gloss: {
     'u.sounds': 'صداهای زبان هلندی',
-    'l.shortlong': 'کوتاه یا بلند؟',
+    'l.shortlong': 'a یا aa، ui یا ei',
     'w.kl.man': 'مرد',
     'w.kl.maan': 'ماه (در آسمان)',
     'w.kl.zak': 'کیسه',

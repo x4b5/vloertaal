@@ -5,7 +5,7 @@ const t: CultureTranslation = {
   ui: {},
   gloss: {
     'u.sounds': 'الأصوات الهولندية',
-    'l.shortlong': 'قصير أم طويل؟',
+    'l.shortlong': 'a أو aa، ui أو ei',
     'w.kl.man': 'الرجل',
     'w.kl.maan': 'القمر',
     'w.kl.zak': 'الكيس',

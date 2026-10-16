@@ -5,7 +5,7 @@ const t: CultureTranslation = {
   ui: {},
   gloss: {
     'u.sounds': 'ድምጽታት ሆላንድኛ',
-    'l.shortlong': 'ሓጺር ድዩ ነዊሕ?',
+    'l.shortlong': 'a ወይ aa፡ ui ወይ ei',
     'w.kl.man': 'ሰብኣይ',
     'w.kl.maan': 'ወርሒ (ኣብ ሰማይ)',
     'w.kl.zak': 'ከረጺት (ቦርሳ)',
