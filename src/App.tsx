@@ -36,7 +36,7 @@ import { CertEarned, CertificateScreen } from './components/Certificate';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
 import { count, countOpen, quarterOf } from './lib/count';
-import { testerMode } from './lib/report';
+import { explainReport, testerMode } from './lib/report';
 import { setReloadWhen } from './lib/appUpdate';
 import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
@@ -603,6 +603,7 @@ export default function App() {
           sector={progress.sector}
           sayings={Boolean(progress.completed[SAYINGS_FROM])}
           report={testerMode(access)}
+          reportHint={explainReport(access, track === 'regels')}
         />
       );
     }

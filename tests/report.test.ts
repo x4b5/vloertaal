@@ -5,7 +5,7 @@ import { LessonPlayer } from '../src/components/LessonPlayer';
 import { About } from '../src/components/Screens';
 import { units } from '../src/content/curriculum';
 import { buildLesson, type Exercise } from '../src/lib/exercises';
-import { deviceLabel, exerciseRef, readTesterParam, reportMail, setTesterSwitch, testerMode, testerSwitch } from '../src/lib/report';
+import { deviceLabel, exerciseRef, explainReport, readTesterParam, reportMail, setTesterSwitch, testerMode, testerSwitch } from '../src/lib/report';
 
 const store = new Map<string, string>();
 beforeEach(() => {
@@ -48,6 +48,15 @@ describe('Iets melden (testers)', () => {
     (globalThis as { localStorage?: unknown }).localStorage = { getItem: () => { throw new Error('blocked'); }, setItem: () => { throw new Error('blocked'); }, removeItem: () => { throw new Error('blocked'); } };
     expect(setTesterSwitch(false)).toBe(false);
     expect(testerMode('full')).toBe(true);
+  });
+
+  it('the note that explains the flag: for who reads Dutch and came to test, not for a learner', () => {
+    // On by default: the flag shows, the Dutch note does not (a learner who reads little Dutch).
+    expect(explainReport('full', false)).toBe(false);
+    expect(explainReport('sample', false)).toBe(true);
+    expect(explainReport('full', true)).toBe(true);
+    readTesterParam('?test');
+    expect(explainReport('full', false)).toBe(true);
   });
 
   it('Over has the switch, in Dutch', () => {

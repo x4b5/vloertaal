@@ -518,7 +518,7 @@ function QuietLesson({ quiet: start, ...props }: Omit<React.ComponentProps<typeo
   const [quiet, setQuiet] = useState(start);
   setQuietAudio(quiet);
   // &report=1: tester mode, the "Iets melden" flag in the header (src/lib/report.ts).
-  return <LessonPlayer {...props} quiet={quiet} onQuiet={setQuiet} report={new URLSearchParams(location.search).get('report') === '1'} />;
+  return <LessonPlayer {...props} quiet={quiet} onQuiet={setQuiet} report={new URLSearchParams(location.search).get('report') === '1'} reportHint />;
 }
 
 /**

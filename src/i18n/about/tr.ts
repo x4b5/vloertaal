@@ -26,7 +26,7 @@ const t: CultureTranslation = {
     'a.voices': 'Sesler',
     'a.voices.b': 'Her karakterin kendi Hollandaca sesi var: Bram, Thijmen’in sesiyle konuşur; Henk, Daniel’in; Amina, Ariël’in ve Jada, Noa’nın sesiyle. Bu sesler ElevenLabs ile kaydedildi. Bir cümlenin henüz kaydı yoksa, kendi telefonunun veya bilgisayarının sesini duyarsın.',
     'a.contact': 'Soru mu, hata mı?',
-    'a.contact.b': 'Bir hata mı buldun, örneğin bir çeviride ya da bir ipucunda? Ya da bir soru sormak mı istiyorsun? hoi@vloertaal.nl adresine e-posta gönder. Ekran görüntüsü yardımcı olur.',
+    'a.contact.b': 'Bir hata mı buldun, örneğin bir çeviride ya da bir ipucunda? Ya da bir soru sormak mı istiyorsun? hoi@vloertaal.nl adresine e-posta gönder. Ekran görüntüsü yardımcı olur. Derste üstteki "Melden" bayrağına da dokunabilirsin: o zaman e-postada nerede olduğun zaten yazar.',
   },
 };
 

@@ -253,7 +253,7 @@ export function LessonPlayer(props: PlayerProps) {
   return <LessonRun {...props} />;
 }
 
-function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, fresh = false, sector, sayings, report = false }: {
+function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, fresh = false, sector, sayings, report = false, reportHint: explain = false }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -288,6 +288,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   sayings?: boolean;
   /** Tester mode (src/lib/report.ts): a flag in the header mails this place in the lesson. */
   report?: boolean;
+  /** The first time, a short note says what the flag is for (src/lib/report.ts explainReport). */
+  reportHint?: boolean;
 }) {
   const persist = resumable && !exercises;
   // An interrupted run of this lesson (same review mode), less than two days old.
@@ -425,8 +427,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       window.removeEventListener('pagehide', writeNow);
     };
   }, [persist, writeNow]); // eslint-disable-line react-hooks/exhaustive-deps
-  // Tester mode: the "Melden" hint, once per phone (src/lib/report.ts), for 8 seconds at most.
-  const [reportHint, setReportHint] = useState(() => report && firstReportHint());
+  // The "Melden" hint, once per phone (src/lib/report.ts), for 8 seconds at most; only for who
+  // reads Dutch and came to test (explainReport).
+  const [reportHint, setReportHint] = useState(() => report && explain && firstReportHint());
   useEffect(() => {
     if (!reportHint) return;
     const t = window.setTimeout(() => setReportHint(false), 8000);

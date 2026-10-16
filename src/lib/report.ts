@@ -48,6 +48,21 @@ export function testerMode(access: Access | null | undefined): boolean {
   return access === 'sample' || testerSwitch();
 }
 
+/**
+ * Does the first lesson with the flag explain it (a short note in Dutch, once)? For who reads
+ * Dutch and came to test: the sneak preview, a phone that switched the flag on itself (?test, or
+ * the switch under Over), and the work-rules track (in Dutch). Not for a learner who reads little
+ * Dutch: a Dutch sentence over their first lesson is only in the way.
+ */
+export function explainReport(access: Access | null | undefined, dutch: boolean): boolean {
+  if (access === 'sample' || dutch) return true;
+  try {
+    return localStorage.getItem(KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
 /** What a step is about, by id (and the Dutch, so a mail is readable without the source). */
 export function exerciseRef(ex: Exercise): string {
   if (isRuleExercise(ex)) return `${ex.kind} ${ex.step.id}`;
