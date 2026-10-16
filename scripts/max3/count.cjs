@@ -269,6 +269,9 @@ function defineStates(LANG) {
   add('route:quiet', shot('route&state=mid&quiet=1'), null, { expect: '.sound-off-mark' });
   if (gendered) add('route:ask-gender', shot('route&state=mid&askGender=1', LANG));
   add('route:preview', shot('route&state=mid&access=preview'));
+  // The sneak preview (one lesson per theme): a new learner, and halfway (the open lessons played).
+  add('route:sample-new', shot('route&state=new&access=sample'));
+  add('route:sample', shot('route&state=mid&access=sample'));
   add('route:all-topics', shot('all&state=mid'), null, { list: true });
   add('route:offline-saved', shot('offline&offline=saved'));
   add('route:offline-saving', shot('offline&offline=saving'));
@@ -282,6 +285,7 @@ function defineStates(LANG) {
   add('route:topic', shot('topic&cu=u.firstday&state=mid'), null, { list: true });
   add('route:topic-done', shot('topic&cu=u.firstday&state=shelf'), null, { list: true });
   add('route:topic-locked', shot('topic&cu=u.pay&state=mid&access=preview'), null, { list: true });
+  add('route:topic-sample', shot('topic&cu=u.firstday&state=new&access=sample'), null, { list: true });
   add('route:all-topics-tap', shot('all&state=mid'), async (p) => { await tap(p, '.topic-row', 0); await settle(p); }, { list: true });
   // "Volgorde": the own course in the order of the path (the choice is kept on the device).
   add('route:all-topics-order', shot('all&state=mid'), async (p) => { await tap(p, '.topics-order-btn', 1); await settle(p); }, { list: true, expect: '.topic-list-order' });

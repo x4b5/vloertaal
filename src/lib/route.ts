@@ -4,7 +4,7 @@ import { coursePlan, sectorFirstFocus, sectorPriority, type SectorChoice } from 
 import type { UiCode } from '../i18n/types';
 import { trackOf, type Track } from './track';
 import type { Lesson, Unit } from '../content/types';
-import { type Access, loadAccess, unitAllowed } from './access';
+import { type Access, lessonAllowed, loadAccess, unitAllowed } from './access';
 import { unitDone } from './certificate';
 import { dayKey } from './progress';
 import { regionUnits } from '../content/regio';
@@ -92,11 +92,16 @@ export function onlyMixLeft(unit: Unit, completed: Completed): boolean {
  */
 export function currentBlock(input: RouteInput, today: Date = new Date(), access?: Access): Unit | null {
   const block = blockAsSaved(input);
-  if (!block || input.pickedUnit === block.id || input.reviewDay !== dayKey(today) || !onlyMixLeft(block, input.completed)) return block;
+  if (!block) return block;
   const may = access ?? loadAccess() ?? 'full';
+  // The sneak preview opens a topic at its first lesson only: after it the home goes on to the next
+  // topic that is open (or, when none is left, stays here and offers the full version).
+  const gated = unitAllowed(block.id, may) && !blockPlayable(block, input.completed, may);
+  const mixOnly = input.pickedUnit !== block.id && input.reviewDay === dayKey(today) && onlyMixLeft(block, input.completed);
+  if (!gated && !mixOnly) return block;
   const track = trackIn(input);
   const next = nextChoices(input.sector, input.completed, undefined, courseUnits(track).length + 1, track, input.region)
-    .find((u) => u.id !== block.id && !onlyMixLeft(u, input.completed) && unitAllowed(u.id, may));
+    .find((u) => u.id !== block.id && (gated || !onlyMixLeft(u, input.completed)) && blockPlayable(u, input.completed, may));
   return next ?? block;
 }
 
@@ -160,8 +165,19 @@ export function blockDoneCount(unit: Unit, completed: Completed): number {
  */
 export function routeNextLesson(input: RouteInput, access: Access = 'full', today: Date = new Date()): Lesson | undefined {
   const block = currentBlock(input, today, access);
-  if (!block || !unitAllowed(block.id, access)) return undefined;
+  if (!block || !blockPlayable(block, input.completed, access)) return undefined;
   return blockNext(block, input.completed);
+}
+
+/**
+ * Can the learner go on in this block: its next lesson is open with their access. In the sneak
+ * preview a topic is open at its first lesson only, so after that lesson the rest waits for the
+ * full version (the home then shows "Volledige versie" instead of a Start).
+ */
+export function blockPlayable(unit: Unit, completed: Completed, access: Access = 'full'): boolean {
+  if (!unitAllowed(unit.id, access)) return false;
+  const next = blockNext(unit, completed);
+  return !next || lessonAllowed(next.id, access);
 }
 
 /**
@@ -193,6 +209,6 @@ export function homeSuggestions(sector: SectorChoice | undefined, completed: Com
 export type HomeLessonState = 'now' | 'done' | 'later';
 export function homeLessonState(unit: Unit, lessonId: string, completed: Completed, access: Access = 'full'): HomeLessonState {
   if (completed[lessonId]) return 'done';
-  if (!unitAllowed(unit.id, access)) return 'later';
+  if (!unitAllowed(unit.id, access) || !lessonAllowed(lessonId, access)) return 'later';
   return blockNext(unit, completed)?.id === lessonId ? 'now' : 'later';
 }

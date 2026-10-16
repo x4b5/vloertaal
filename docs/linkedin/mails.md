@@ -6,6 +6,16 @@ deze repo en hoort daar ook niet: geef hem alleen per bericht.
 Houd per persoon bij wie de code kreeg en wanneer (een lijstje is genoeg). Dan weet je wie je na een
 week een bericht stuurt (mail 5).
 
+Er zijn drie soorten codes:
+- **Volledige versie**: alle lessen. Voor experts, coaches en de pilot.
+- **Sneak preview**: per thema de eerste les (bij „Jouw sector” de eerste les van iedere sector,
+  13 lessen in totaal), plus „Herhaal vandaag”. De rest staat op slot, met „Volledige versie”. Voor
+  wie alleen even wil kijken.
+- **Proefcode**: alleen het eerste onderwerp.
+
+Wie een code eerder invulde, houdt het niveau van toen: dat staat op de telefoon. Een code die later
+een sneak preview werd, geeft wie hem al had dus nog steeds de volledige versie.
+
 ---
 
 ## 1. Iemand wil de app proberen

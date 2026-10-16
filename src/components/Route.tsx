@@ -5,12 +5,12 @@ import { coursePlan } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { gloss, said, ui, uiCount, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { type Access, unitAllowed } from '../lib/access';
+import { type Access, lessonAllowed, unitAllowed } from '../lib/access';
 import { hasCertificate, unitDone } from '../lib/certificate';
 import { isUnlocked } from '../lib/exercises';
 import type { DailyCard } from '../lib/spaced';
 import type { Progress } from '../lib/progress';
-import { blockDoneCount, blockNext, currentBlock, homeLessonState, homeSuggestions, routeOrder } from '../lib/route';
+import { blockDoneCount, blockNext, blockPlayable, currentBlock, homeLessonState, homeSuggestions, routeOrder } from '../lib/route';
 import { loadSaves } from '../lib/resume';
 import { hasPicture } from '../lib/wordPicture';
 import { WordPicture } from '../pictures';
@@ -73,7 +73,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   const track = trackOf(progress);
   const dutch = dutchUi(lang);
   const rtl = lang?.dir === 'rtl';
-  const block = currentBlock(progress);
+  const block = currentBlock(progress, undefined, access);
   const [marked, setMarked] = useState<string | null>(focusUnit ?? null);
   // The lesson just finished: kept for this visit, for its one-time stamp.
   const [justDone] = useState<string | null>(arrived ?? null);
@@ -122,10 +122,10 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   // A coach link to a locked topic (preview): its unlock card, only as a third thing to tap.
   const linked = lockedLink && !unitAllowed(lockedLink, access) ? order.find((u) => u.id === lockedLink) : undefined;
   const restartShown = Boolean(resumeId && onRestart && !dailyDue);
-  const taps = (dailyDue ? 1 : 0) + (block ? 1 + (restartShown ? 1 : 0) + (unitAllowed(block.id, access) ? 0 : 1) : choices.length) + 1;
+  const taps = (dailyDue ? 1 : 0) + (block ? 1 + (restartShown ? 1 : 0) + (blockPlayable(block, completed, access) ? 0 : 1) : choices.length) + 1;
 
   const pick = (unit: Unit) => {
-    if (!unitAllowed(unit.id, access)) { onUpgrade?.(); return; }
+    if (!blockPlayable(unit, completed, access)) { onUpgrade?.(); return; }
     onPick(unit.id);
     window.scrollTo({ top: 0 });
   };
@@ -199,7 +199,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
             <UnitTitle unit={block} lang={lang} heading />
             <BlockProgress unit={block} completed={completed} lang={lang} />
           </div>
-          {!unitAllowed(block.id, access) && <FullOnly lang={lang} onUpgrade={onUpgrade} />}
+          {!blockPlayable(block, completed, access) && <FullOnly lang={lang} onUpgrade={onUpgrade} />}
           {lessons(block)}
         </section>
       )}
@@ -214,7 +214,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
               </h2>
               <ul className="rb-choices">
                 {choices.map((unit, i) => {
-                  const allowed = unitAllowed(unit.id, access);
+                  const allowed = blockPlayable(unit, completed, access);
                   const n = blockDoneCount(unit, completed);
                   const rec = i === 0 && allowed;
                   const t = unitTitle(unit, lang);
@@ -396,7 +396,7 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
   const { sector, completed } = progress;
   // With the learner's region (src/content/regio): its unit in its place in the own course.
   const { main, other } = coursePlan(sector, trackOf(progress), progress.region);
-  const block = currentBlock(progress);
+  const block = currentBlock(progress, undefined, access);
   const rtl = lang?.dir === 'rtl';
   const [order, setOrder] = useState<TopicsOrder>(loadTopicsOrder);
   const pickOrder = (o: TopicsOrder) => {
@@ -494,7 +494,11 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
   const rtl = lang?.dir === 'rtl';
   const allowed = unitAllowed(unit.id, access);
   const finished = unitDone(unit, completed);
-  const next = allowed ? blockNext(unit, completed) : undefined;
+  // The next lesson, if the learner may play it (the sneak preview opens a topic's first lesson only).
+  const following = allowed ? blockNext(unit, completed) : undefined;
+  const next = following && lessonAllowed(following.id, access) ? following : undefined;
+  // Lessons of an open topic that wait for the full version (the sneak preview): "Volledige versie" too.
+  const gated = allowed && unit.lessons.some((l) => !lessonAllowed(l.id, access));
   const [saves] = useState(() => loadSaves());
   const [marked, setMarked] = useState(focus);
   useEffect(() => {
@@ -539,6 +543,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
         ) : (
           <FullOnly lang={lang} onUpgrade={onUpgrade} />
         )}
+        {gated && <FullOnly lang={lang} onUpgrade={onUpgrade} />}
         <ol className="bays rb-lessons topic-lessons" data-list="lessons">
           {unit.lessons.map((lesson, i) => {
             const record = completed[lesson.id] as { best?: number } | undefined;

@@ -1,4 +1,5 @@
 import { allCourseUnits, courseUnits } from '../content/courses';
+import { THEMES, themeUnitIds } from '../content/themes';
 import { DAILY_ID } from './spaced';
 import type { Track } from './track';
 
@@ -7,11 +8,14 @@ import type { Track } from './track';
  * are not in the source, only their SHA-256 hashes; the typed password is normalised (see
  * normalizePassword), hashed in the browser and compared. What is stored is the access level.
  *
+ *  - sample: a sneak preview, the first lesson of each theme (src/content/themes.ts): of the
+ *    theme's first topic, and in "Jouw sector" of every sector's topic, so anyone can try their own
+ *    work. In both tracks. The rest shows with a lock and "Volledige versie".
  *  - preview: only the first unit of each course can be played ("First day at work"; in the
  *    work-rules track its first unit, r.start).
  *  - full: everything.
  */
-export type Access = 'preview' | 'full';
+export type Access = 'sample' | 'preview' | 'full';
 
 /**
  * SHA-256 (hex) of each normalised password and the access it gives. The first three were made
@@ -25,8 +29,9 @@ export const PASSWORD_HASHES: Record<string, Access> = {
   '385537df17b00100660dd3b85e9a3a6a50db31b7093fe26f2fedaabd2a17c9d5': 'full',
   // Pilot code (October 2026), announced to pilot coaches.
   '94f3f76d391ed7e22dfd2fa93a9c9c0fbfa125385ca45c1ea7702fb28457979e': 'full',
-  // A second full-version code (15 October 2026).
-  'f439b02cc5e1a2f2e2c089e3998b3b8a1131f0d6b2e0911d4fce946516aac54a': 'full',
+  // A second code (15 October 2026): full at first, the sneak preview since 16 October 2026. Who
+  // entered it before keeps full access (the level is stored on the phone, see loadAccess).
+  'f439b02cc5e1a2f2e2c089e3998b3b8a1131f0d6b2e0911d4fce946516aac54a': 'sample',
 };
 
 /** Arabic-Indic (٠–٩) and Persian (۰–۹) digits: the low four bits of the code point are the digit. */
@@ -64,7 +69,7 @@ const KEY = 'vloertaal.access';
 export function loadAccess(): Access | null {
   try {
     const v = localStorage.getItem(KEY);
-    return v === 'preview' || v === 'full' ? v : null;
+    return v === 'sample' || v === 'preview' || v === 'full' ? v : null;
   } catch {
     return null;
   }
@@ -96,8 +101,32 @@ export function previewUnits(track: Track = 'taal'): string[] {
 /** Units open in the preview: the first unit of each course. */
 const previewSet = () => new Set([...previewUnits('taal'), ...previewUnits('regels')]);
 
+/**
+ * The lessons open in the sneak preview, in one track: per theme the first lesson of its first
+ * topic in course order; in "Jouw sector" the first lesson of every sector's topic.
+ */
+export function sampleLessons(track: Track = 'taal'): string[] {
+  const order = courseUnits(track);
+  const out: string[] = [];
+  for (const theme of THEMES) {
+    const ids = new Set(themeUnitIds(theme.id, track));
+    const inTheme = order.filter((u) => ids.has(u.id));
+    for (const unit of theme.id === 'theme.sector' ? inTheme : inTheme.slice(0, 1)) {
+      const first = unit.lessons[0];
+      if (first) out.push(first.id);
+    }
+  }
+  return out;
+}
+
+const sampleSet = () => new Set([...sampleLessons('taal'), ...sampleLessons('regels')]);
+
+/** A topic the learner may open: everything with full access, the first unit in the preview, a topic with an open lesson in the sneak preview. */
 export function unitAllowed(unitId: string, access: Access): boolean {
-  return access === 'full' || previewSet().has(unitId);
+  if (access === 'full') return true;
+  if (access === 'preview') return previewSet().has(unitId);
+  const open = sampleSet();
+  return allCourseUnits().some((u) => u.id === unitId && u.lessons.some((l) => open.has(l.id)));
 }
 
 /** Can this lesson be played with this access level (whatever the progress says)? */
@@ -105,6 +134,7 @@ export function lessonAllowed(lessonId: string, access: Access): boolean {
   if (access === 'full') return true;
   // Today's review only repeats words the learner met, so it is open in the preview too.
   if (lessonId === DAILY_ID) return true;
+  if (access === 'sample') return sampleSet().has(lessonId);
   const open = previewSet();
   return allCourseUnits().some((u) => open.has(u.id) && u.lessons.some((l) => l.id === lessonId));
 }
