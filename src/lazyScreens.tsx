@@ -53,21 +53,37 @@ function Waiting() {
   return <div className="screen-wait" aria-busy="true" style={{ minHeight: '100dvh' }} />;
 }
 
-/** A screen's file did not load (offline, not saved): the splash with "Try again" (reloads; also by itself when back online). */
-class LoadFailed extends Component<{ children: ReactNode }, { failed: boolean }> {
-  state = { failed: false };
-  static getDerivedStateFromError() {
-    return { failed: true };
+/** A file that did not come (offline, not saved, or an old file name after an update), as the browsers word it. */
+export function isLoadError(e: unknown): boolean {
+  const text = e instanceof Error ? `${e.name} ${e.message}` : String(e);
+  return /dynamically imported module|Importing a module script failed|error loading dynamically imported|Failed to fetch|ChunkLoadError|Loading chunk/i.test(text);
+}
+
+/**
+ * A screen's file did not load (offline, not saved): the splash with "Try again" (reloads; also by
+ * itself when back online). The reload goes to the home, so a learner offline is never stuck on a
+ * screen whose file is missing (a reload would restore that screen). Any other error is not ours:
+ * it goes on up, as before.
+ */
+class LoadFailed extends Component<{ children: ReactNode }, { error: unknown }> {
+  state = { error: null as unknown };
+  static getDerivedStateFromError(error: unknown) {
+    return { error };
   }
-  private reload = () => location.reload();
+  private reload = () => {
+    try { history.replaceState(null, '', location.pathname + location.search); } catch { /* keep the address */ }
+    location.reload();
+  };
   componentDidUpdate() {
-    if (this.state.failed) window.addEventListener('online', this.reload);
+    if (this.state.error) window.addEventListener('online', this.reload);
   }
   componentWillUnmount() {
     window.removeEventListener('online', this.reload);
   }
   render() {
-    return this.state.failed ? <Splash failed onRetry={this.reload} /> : this.props.children;
+    const { error } = this.state;
+    if (error && !isLoadError(error)) throw error;
+    return error ? <Splash failed onRetry={this.reload} /> : this.props.children;
   }
 }
 

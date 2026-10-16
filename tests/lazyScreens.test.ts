@@ -146,3 +146,16 @@ describe('the service worker keeps them with the app', () => {
     expect(sw).toContain('(?:src|href)="([^"]+)"');
   });
 });
+
+describe('a screen file that does not load', () => {
+  it('is told apart from a real bug (only a missing file shows "Try again")', async () => {
+    const { isLoadError } = await import('../src/lazyScreens');
+    // Chrome, Firefox and Safari wording for a missing or unreachable file.
+    expect(isLoadError(new TypeError('Failed to fetch dynamically imported module: https://vloertaal.nl/assets/Settings-x.js'))).toBe(true);
+    expect(isLoadError(new TypeError('error loading dynamically imported module'))).toBe(true);
+    expect(isLoadError(new TypeError('Importing a module script failed.'))).toBe(true);
+    // A bug in the screen itself goes on up, as before.
+    expect(isLoadError(new TypeError("Cannot read properties of undefined (reading 'ui')"))).toBe(false);
+    expect(isLoadError(new RangeError('Invalid time value'))).toBe(false);
+  });
+});

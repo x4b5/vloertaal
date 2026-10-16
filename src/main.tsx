@@ -59,7 +59,10 @@ if (import.meta.env.DEV && params.get('shot')) {
   // The saved help language's texts first (index.html's static splash stays up meanwhile), so the
   // first screen has its help text. If that fails (offline, nothing saved), App shows the splash and retries.
   // Also the first screen's own file, when it has one (src/lazyScreens.tsx: a reload on Settings).
-  void Promise.all([langBoot, regionBoot, cssBoot, loadProgress().onboarded ? picsBoot : null, startScreens()]).then(() => render(<App />));
+  // The first screen's file waits at most 2.5 s (a stalled connection): after that the screen's own
+  // calm placeholder covers the rest (src/lazyScreens.tsx), never a splash that stays up.
+  const screensBoot = Promise.race([startScreens(), new Promise<void>((done) => window.setTimeout(done, 2500))]);
+  void Promise.all([langBoot, regionBoot, cssBoot, loadProgress().onboarded ? picsBoot : null, screensBoot]).then(() => render(<App />));
 }
 
 // Offline support: cache the app after the first visit (production only).
