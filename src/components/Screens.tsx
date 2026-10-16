@@ -11,7 +11,8 @@ import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
 import { Flag } from './Flag';
 import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, NL_MORE, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
-import type { HelpLanguage, LangCode, UiCode } from '../i18n/types';
+import type { HelpLanguage, LangCode, UiCode, UiKey } from '../i18n/types';
+import { HELP_ROWS } from '../content/regels/help';
 import { dutchUi, rulesTrackOn } from '../lib/track';
 import { NlPair } from './NlPair';
 import { Fragment, useEffect, useRef, useState } from 'react';
@@ -334,8 +335,50 @@ export function WordsHub({ lang, onTips, after }: {
         </span>
         <ChevronIcon size={24} />
       </button>
+      <WorkContacts lang={lang} />
       {after}
     </div>
+  );
+}
+
+/** "Problems at work? Who can help": the four numbers for this audience (from the work-rules track's list). */
+const WORK_CONTACTS: { id: string; when: UiKey }[] = [
+  { id: 'h.112', when: 'who112' },
+  { id: 'h.juridischloket', when: 'whoLegal' },
+  { id: 'h.arbeidsinspectie', when: 'whoInspection' },
+  { id: 'h.fairwork', when: 'whoFairwork' },
+];
+
+/**
+ * The Hulp tab of the language course: who to call about trouble at work (the Werkregels track has
+ * the full list). The name and number in Dutch, what it is for in the help language; one tap calls
+ * or opens the site. A list, like the phrases above it.
+ */
+function WorkContacts({ lang }: { lang?: HelpLanguage }) {
+  return (
+    <section className="work-contacts" aria-labelledby="work-contacts-title">
+      <h2 id="work-contacts-title" className="rh-title"><Bi text={ui('whoToCall', lang)} /></h2>
+      <ul className="rh-rows">
+        {WORK_CONTACTS.map(({ id, when }) => {
+          const row = HELP_ROWS.find((r) => r.id === id);
+          if (!row?.href) return null;
+          const call = row.href.startsWith('tel:');
+          return (
+            <li key={id} className="rh-row">
+              <a className="rh-card rh-link" href={row.href} {...(call ? {} : { target: '_blank', rel: 'noreferrer' })}>
+                <span className="rh-emoji" aria-hidden>{row.emoji}</span>
+                <span className="rh-text">
+                  <span className="rh-name" lang="nl">{row.name}</span>
+                  <Bi className="rh-when" text={ui(when, lang)} />
+                  <span className="rh-show rh-show-link" lang="nl" dir="ltr">{row.show}</span>
+                </span>
+                <span className="rh-go" aria-hidden>{call ? <CallIcon size={24} /> : <GlobeIcon size={24} />}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
   );
 }
 

@@ -555,3 +555,10 @@ vertaling hebben.
       beleefde vorm (بگذارید). Eén lijn kiezen? En `w.kl.koud`: سرد of خنک?
 - [ ] fa, ti, ro: bij `w.kl.maan` staat "(aan de hemel)", zodat het niet als "maand" gelezen wordt.
 - [ ] "de hal" (`s.pbgk.2`) is vertaald als gang/corridor.
+
+## Nieuw 16 oktober 2026: "Wie kan helpen" op het Hulp-tabblad (alle talen)
+
+Vijf korte regels in `src/i18n/<taal>.ts`, met AI geschreven: `whoToCall`, `who112`, `whoLegal`,
+`whoInspection`, `whoFairwork`. Graag nakijken, vooral Tigrinya en Arabisch (zonder werkwoord in
+de man- of vrouwvorm geschreven). Ook nieuw: `stampLater` ("Komt straks terug", het stempel bij een
+fout antwoord) en de zin over uitzendwerk en het minimumloon in `c.illness.b`.

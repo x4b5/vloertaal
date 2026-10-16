@@ -72,6 +72,11 @@ export const uiNl: Record<UiKey, UiText> = {
   backToPath: 'Terug naar de lessen',
   phrasebook: 'Wie bel je?', // regels: the Hulp tab's list of who to call (RulesHelp)
   phrasebookHint: 'Tik op een nummer om te bellen, of op een site om hem te openen.', // regels
+  whoToCall: 'Problemen op je werk? Wie kan helpen',
+  who112: 'Bij nood: levensgevaar, brand of een misdrijf dat nu gebeurt.',
+  whoLegal: 'Gratis advies over je contract, je loon of ontslag.',
+  whoInspection: 'Onveilig werk, te weinig loon of uitbuiting melden. Dat kan ook anoniem.',
+  whoFairwork: 'Je wordt uitgebuit op je werk, of je denkt dat het zo is.',
   settings: 'Instellingen',
   helpLanguage: 'Taal', // regels: no "help language" in this track
   resetProgress: 'Mijn voortgang wissen',
