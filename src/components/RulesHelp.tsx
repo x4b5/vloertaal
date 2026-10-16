@@ -99,11 +99,17 @@ function HelpRowItem({ row, lang }: { row: HelpRow; lang?: HelpLanguage }) {
       </li>
     );
   }
+  // No number or site: no action at the end (a phone or a globe there means "tap to call or open").
+  // Its read-aloud is the small speaker beside the name, as everywhere else.
   return (
     <li className="rh-row">
       <div className="rh-card rh-say">
-        {body}
-        <span className="rh-go rh-go-say"><SpeakButton text={helpRowText(row)} long needsDevice help={lang} /></span>
+        <span className="rh-emoji" aria-hidden>{row.emoji}</span>
+        <span className="rh-text">
+          <span className="rh-name">{breakable(row.name)} <SpeakButton text={helpRowText(row)} long needsDevice glyph help={lang} /></span>
+          <span className="rh-when">{breakable(row.when)}</span>
+          <span className="rh-show" dir="auto">{row.show}</span>
+        </span>
       </div>
     </li>
   );

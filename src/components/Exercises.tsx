@@ -12,7 +12,7 @@ import { Bi, HelpText } from './Bi';
 import { NlPair } from './NlPair';
 import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
 import { CheckIcon, CloseIcon, SpeakerIcon } from './Icons';
-import { cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
+import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
@@ -566,7 +566,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       setMiss(null);
       const next = at + 1;
       setAt(next);
-      if (next >= words.length) onAnswer({ ...stepGrade(wrongTaps.current), done: true, missed: [...new Set(wrongsRef.current.map((x) => words[x.at]))] });
+      if (next >= words.length) onAnswer({ ...stepGrade(wrongTaps.current, BUILD_FORGIVEN_TAPS), done: true, missed: [...new Set(wrongsRef.current.map((x) => words[x.at]))] });
     } else {
       wrongTaps.current += 1;
       wrongsRef.current = [...wrongsRef.current, { at, word: w }];

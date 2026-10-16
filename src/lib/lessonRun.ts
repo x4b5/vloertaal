@@ -64,14 +64,21 @@ export function barParts(index: number, checked: boolean, planned: number, total
 
 /** Wrong taps forgiven in an answer built by taps: one stray tap is a slip, not a mistake. */
 export const FORGIVEN_TAPS = 1;
+/**
+ * A sentence built word by word has more tiles and more taps (a phone on a moving bus, a thick
+ * finger): two stray taps are forgiven there, so a correct sentence is not marked wrong for them
+ * (critic, 16 October 2026). A match or a word's letters keep one: with three options, two
+ * wrong taps is guessing.
+ */
+export const BUILD_FORGIVEN_TAPS = 2;
 
 /**
  * An answer built tap by tap (a sentence word by word, a guided match pair by pair, a word letter
  * by letter) is graded by the wrong taps on the way, the same way for all three: one stray wrong
  * tap is forgiven (a slip of the finger on a phone), two or more count as a mistake.
  */
-export function stepGrade(wrongTaps: number): { correct: boolean; almost: boolean } {
-  return { correct: wrongTaps <= FORGIVEN_TAPS, almost: false };
+export function stepGrade(wrongTaps: number, forgiven = FORGIVEN_TAPS): { correct: boolean; almost: boolean } {
+  return { correct: wrongTaps <= forgiven, almost: false };
 }
 
 /** Guided matching: which word is on, which meanings are matched, how many wrong taps. */

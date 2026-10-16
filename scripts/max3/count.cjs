@@ -332,7 +332,9 @@ function defineStates(LANG) {
   add('lesson:build:right', shot('build'), async (p) => { await buildRight(p); await settle(p, 900); });
   // One stray wrong tap is forgiven (still right); two or more make it a mistake.
   add('lesson:build:one-slip', shot('build'), async (p) => { await buildRight(p, 1); await settle(p, 900); }, { expect: '.answer-right' });
-  add('lesson:build:wrong', shot('build'), async (p) => { await buildRight(p, 2); await settle(p, 900); }, { expect: '.answer-wrong' });
+  // Two stray taps are forgiven in a built sentence (BUILD_FORGIVEN_TAPS); three are a mistake.
+  add('lesson:build:two-slips', shot('build'), async (p) => { await buildRight(p, 2); await settle(p, 900); }, { expect: '.answer-right' });
+  add('lesson:build:wrong', shot('build'), async (p) => { await buildRight(p, 3); await settle(p, 900); }, { expect: '.answer-wrong' });
   // Keyboard dictation is for a help language in Latin letters (another script gets hear-and-pick).
   const latin = ['pl', 'tr', 'ro'].includes(LANG) ? LANG : 'pl';
   add('lesson:dictation', shot('type', latin));
