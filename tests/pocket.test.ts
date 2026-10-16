@@ -8,7 +8,7 @@ import { helpLanguages } from '../src/i18n/all';
 import { POCKET_SIZE, pocketPhrases, pocketPicks } from '../src/lib/pocket';
 import { tipForLesson } from '../src/content/culture';
 import { readFileSync } from 'node:fs';
-import { SAYINGS_PENDING } from './sayingsPending';
+import { SAYINGS_PENDING, SOUNDS_PENDING } from './sayingsPending';
 
 const teaching = (u: (typeof units)[number]) => u.lessons.filter((l) => !isMixLesson(l));
 
@@ -77,6 +77,7 @@ describe('pocket card phrases', () => {
       'het buitenland', 'het carnaval', 'het dialect', 'verstaan',
       // "Uitdrukkingen en gezegden" (src/content/sayings.ts): recorded on the next 'Record ElevenLabs voices' run.
       ...SAYINGS_PENDING,
+      ...SOUNDS_PENDING,
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

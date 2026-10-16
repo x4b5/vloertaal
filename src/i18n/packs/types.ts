@@ -11,6 +11,8 @@ export interface LanguagePack {
   learn: CultureTranslation;
   /** Sayings and expressions (src/content/sayings.ts). */
   sayings: CultureTranslation;
+  /** Dutch sounds (src/content/sounds.ts). */
+  sounds: CultureTranslation;
   /** Where the pack's file was loaded from (saved with the app for offline use). */
   url: string;
 }

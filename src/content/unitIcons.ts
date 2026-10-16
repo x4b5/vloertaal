@@ -6,6 +6,7 @@ export const unitIcons: Record<string, string> = {
   'u.firstday': 'w.hallo',
   'u.help': 'i.help',
   'u.tools': 'w.vertaalapp',
+  'u.sounds': 'w.kl.maan',
   'u.safety': 'w.helm',
   'u.warehouse': 'w.doos',
   'u.time': 'w.uren',

@@ -49,7 +49,7 @@ export const THEMES: Theme[] = [
  */
 export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
   'theme.start': {
-    taal: ['u.firstday', 'u.help', 'u.tools'],
+    taal: ['u.firstday', 'u.help', 'u.tools', 'u.sounds'],
     regels: ['r.start'],
   },
   'theme.safe': {

@@ -20,6 +20,11 @@ export interface Word {
    * under the picture, which also shows what the words say. Its help-language text: `${id}.lit`.
    */
   literal?: string;
+  /**
+   * A word of a sound pair (src/content/sounds.ts: "man" – "maan"): the id of the other word. A
+   * choice about this word always offers its partner, so the learner has to hear the difference.
+   */
+  pair?: string;
 }
 
 /** A full sentence, practised by building it from word tiles. */
