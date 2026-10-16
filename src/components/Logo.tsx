@@ -87,12 +87,17 @@ function SmallBram() {
   );
 }
 
+/** While the whole app is a test version (the pilot): a small "bèta" tag beside the wordmark. */
+export const APP_BETA = true;
+
 /** "vloertaal." in ink (white in dark mode) with a yellow full stop. Always left to right, isolated
- *  from the page direction: in Arabic or Persian the full stop must not jump to the front (".vloertaal"). */
-export function Wordmark({ className }: { className?: string }) {
+ *  from the page direction: in Arabic or Persian the full stop must not jump to the front (".vloertaal").
+ *  With APP_BETA a small "bèta" tag after it, wherever the name is shown (not a button). */
+export function Wordmark({ className, beta = APP_BETA }: { className?: string; beta?: boolean }) {
   return (
-    <span className={`wordmark ${className ?? ''}`} aria-label="Vloertaal" lang="nl" dir="ltr">
+    <span className={`wordmark ${className ?? ''}`} aria-label={beta ? 'Vloertaal bèta' : 'Vloertaal'} lang="nl" dir="ltr">
       vloertaal<span className="wordmark-dot">.</span>
+      {beta && <span className="wordmark-beta" aria-hidden>bèta</span>}
     </span>
   );
 }

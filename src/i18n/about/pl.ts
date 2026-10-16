@@ -7,6 +7,8 @@ const t: CultureTranslation = {
   gloss: {
     'a.what': 'Czym jest Vloertaal?',
     'a.what.b': 'Vloertaal pomaga ci nauczyć się niderlandzkiego, którego potrzebujesz w pracy: w magazynie, w kuchni, w fabryce albo na budowie. Nie tylko słowa na hali, ale cały język związany z pracą: szukanie pracy, umowa i pasek wypłaty, twoje prawa, mieszkanie i dokumenty, zgłaszanie choroby i dogadywanie się ze współpracownikami. Lekcje są krótkie, więc możesz ćwiczyć kilka minut każdego dnia.',
+    'a.beta': 'Wersja testowa',
+    'a.beta.b': 'Vloertaal to wciąż wersja testowa (beta). Testujemy aplikację z małą grupą uczniów i opiekunów. Jeszcze nie wszystko zostało sprawdzone: eksperci wciąż sprawdzają tłumaczenia i wskazówki o przepisach. Widzisz błąd? Nasz adres znajdziesz na dole tej strony.',
     'a.mission': 'Nasza misja',
     'a.mission.b': 'Vloertaal chce dać każdemu, kto pracuje w Holandii, uczciwą szansę na naukę niderlandzkiego do pracy: za darmo, łatwo i z pomocą w twoim języku. Nikt nie zarabia na Vloertaal: nie ma reklam ani abonamentu, a twoje dane nigdy nie są sprzedawane.',
     'a.bram': 'Kim jest Bram?',
@@ -20,7 +22,7 @@ const t: CultureTranslation = {
     'a.free': 'Twoja prywatność',
     'a.free.b': 'Nie potrzebujesz konta. Twoje postępy są zapisywane tylko na tym telefonie albo komputerze. Jeśli to jest włączone, aplikacja anonimowo liczy, jak często robi się lekcje: bez imienia, bez śledzenia. Możesz to wyłączyć w „Ustawieniach”.',
     'a.disclaimer': 'Dobrze wiedzieć',
-    'a.disclaimer.b': 'Wskazówki w Vloertaal to ogólne informacje, a nie porada prawna. Przepisy mogą się zmieniać; teksty sprawdzono w październiku 2026 roku. Jeśli chodzi o twoją sytuację, zapytaj swojego pracodawcę, związek zawodowy albo Juridisch Loket.',
+    'a.disclaimer.b': 'Wskazówki w Vloertaal to ogólne informacje, a nie porada prawna. Przepisy mogą się zmieniać; teksty ostatnio zaktualizowano w październiku 2026 roku. Jeśli chodzi o twoją sytuację, zapytaj swojego pracodawcę, związek zawodowy albo Juridisch Loket.',
     'a.voices': 'Głosy',
     'a.voices.b': 'Każda postać ma swój własny niderlandzki głos: Bram mówi głosem Thijmena, Henk głosem Daniela, Amina głosem Ariël, a Jada głosem Noi. Te głosy zostały nagrane za pomocą ElevenLabs. Jeśli zdanie nie ma jeszcze nagrania, słyszysz głos swojego telefonu lub komputera.',
     'a.contact': 'Pytanie albo błąd?',

@@ -63,6 +63,10 @@ export const NL_META: LangMeta<'nl'> = {
   flag: '🇳🇱',
 };
 
+/** Under "Nederlands – ik spreek al Nederlands" in the language list: what that track teaches (not
+ *  the language, the work: src/content/regels), so a learner who speaks Dutch knows to go there. */
+export const NL_MORE = 'Leer meer over werk: regels, rechten en geld.';
+
 /** "English only" in the language list: a bridge language, not a country, so no flag (see LangMeta.flag). */
 export const ENGLISH_SAMPLE = 'Aa';
 

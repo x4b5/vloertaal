@@ -6,48 +6,12 @@ import { cultureTips } from '../src/content/culture';
 import { allRegionTips, allRegionUnits } from '../src/content/regio';
 // The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
 import './regionLoaded';
-import { SAYINGS_PENDING, SOUNDS_PENDING } from './sayingsPending';
 import { BRAM_HELLO, BRAM_VOICE } from '../src/lib/voices';
 
 /** Lines whose recording is still to be made (the owner re-records them); the device voice says them meanwhile. */
-const PENDING_RECORDING = new Set([
-  'Zeg het liever direct tegen mij.',
-  // Was "Het is spoed." (spoken style); the standard form is "Het heeft spoed.". Re-recorded on the next run.
-  'Het heeft spoed.',
-  // Was "Kunt u in mijn telefoon spreken?" (unnatural Dutch).
-  'Wilt u even tegen mijn telefoon praten?',
-  // x.bram, Bram introducing himself on the first tap (only Thijmen records it, see
-  // scripts/list-clips.ts). Until the next "Record ElevenLabs voices" run, sayFirstWord keeps
-  // playing the recorded "hallo" instead (src/lib/audio.ts).
-  BRAM_HELLO,
-  // The units "In de winkel" (u.shop) and "Rekenen: tijd, geld, maten" (u.numbers): recorded on
-  // the next 'Record ElevenLabs voices' run.
-  'Zet de nieuwe producten achteraan.', 'Dit product is over de datum.', 'Is er nog voorraad?',
-  'Waar vind ik de rijst?', 'In gang vier. Ik loop even met u mee.',
-  'Wilt u pinnen of contant betalen?', 'Hier is uw wisselgeld.', 'Mag ik even uw ID zien?',
-  'Kan ik hier pinnen?', 'Ja hoor, dat kan.',
-  'Ik begin om half acht.', 'Ik werk vandaag acht uur.', 'De pauze duurt een half uur.',
-  'Hoe laat ben je klaar?', 'Om kwart over vier.',
-  'Het kost zes euro vijftig.', 'Deze doos weegt tien kilo.', 'Ik heb veertig dozen geteld.',
-  'Hoe lang is die plank?', 'Precies twee meter.',
-  'het schap', 'vakken vullen', 'de voorraad', 'de houdbaarheidsdatum', 'het prijskaartje', 'achteraan',
-  'de klant', 'de kassa', 'het wisselgeld', 'het bonnetje', 'pinnen', 'contant',
-  'het uur', 'de minuut', 'het kwartier', 'een half uur', 'duren', 'optellen',
-  'de euro', 'de cent', 'de kilo', 'de liter', 'de meter', 'tellen',
-  'Wat doe ik met producten over de datum?', 'Zonder ID mag ik dit niet verkopen.',
-  'Half acht? Dus een half uur voor acht?', 'Ik heb het twee keer geteld.',
-  // The region unit "Jouw regio: Zuid-Limburg" (src/content/regio, docs/regio-zuid-limburg.md):
-  // recorded on the next 'Record ElevenLabs voices' run. ("de grens" and "langzaam" are recorded
-  // already.) Listen to "Heerlen" once more after that run: it is said HEER-len.
-  'het gemeentehuis', 'het loket', 'de verhuizing', 'de woningcorporatie', 'de wachtlijst', 'de buurt',
-  'het buitenland', 'het carnaval', 'het dialect', 'verstaan',
-  'Ik wil me inschrijven bij de gemeente.', 'Ik heb om tien uur een afspraak.', 'Ik sta op de wachtlijst voor een huis.',
-  'Ik woon in Nederland en werk in Duitsland.', 'Kunt u Nederlands praten? Ik versta geen dialect.', 'Mag ik met carnaval vrij?',
-  'Waar woon je?', 'In Heerlen. Ik ben net verhuisd.', 'Sorry, ik praat te snel.', 'Ja, wat langzamer graag.',
-  'Kan ik een afspraak maken?', 'Wil je het in het Nederlands zeggen?',
-  // "Uitdrukkingen en gezegden" (src/content/sayings.ts): recorded on the next 'Record ElevenLabs voices' run.
-  ...SAYINGS_PENDING,
-  ...SOUNDS_PENDING,
+const PENDING_RECORDING = new Set<string>([
+  // Empty: every line is recorded (16 October 2026). Add a changed or new line here until the
+  // next 'Record ElevenLabs voices' run.
 ]);
 
 describe('recorded clips (G4 b3)', () => {

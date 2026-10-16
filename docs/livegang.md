@@ -77,22 +77,32 @@ Een cookiebanner is niet nodig: de app gebruikt geen cookies.
 Tip voor het contactadres: een apart adres zoals `hallo@vloertaal.nl` (een doorstuuradres bij je
 registrar) of een apart Gmail-adres. Zo staat je persoonlijke adres niet in de app.
 
+## Bèta
+
+De hele app is nog een testversie (de pilot). Dat staat op twee plekken:
+
+- een klein label "bèta" naast de naam Vloertaal, overal waar de naam staat (`APP_BETA` in
+  `src/components/Logo.tsx`);
+- de sectie "Een testversie" bij Over (`a.beta` in `src/content/about.ts`).
+
+Is de pilot klaar en zijn vertalingen en tips nagekeken? Zet dan `APP_BETA` op `false` en haal de
+sectie `a.beta` weg (met de vertalingen in `src/i18n/about/`).
+
 ## Werkregels (bèta)
 
 Werkregels is het spoor voor mensen die al Nederlands spreken ("Nederlands – ik spreek al
 Nederlands" in de talenlijst). Het staat sinds 16 oktober 2026 **aan als bèta**, zodat anderen het
 kunnen bekijken en nakijken. De app zegt dat zelf:
 
-- in de talenlijst staat "bèta" bij Nederlands;
+- de hele app heeft "bèta" naast de naam Vloertaal (zie "Bèta" hieronder);
 - de eerste regel van "Goed om te weten" (Hulp, Over, de eerste les) is `RULES_BETA` in
   `src/content/regels/disclaimer.ts`: nog een bètaversie, experts kijken het na, fouten naar
   hoi@vloertaal.nl.
 
 Weer uitzetten kan met één regel in `src/lib/track.ts` (`RULES_TRACK = false`).
 
-**Als de controle klaar is**, haal je de bèta weg: `RULES_BETA` uit `RULES_DISCLAIMER`, het
-"bèta"-label in `src/components/Screens.tsx` (`lang-nl-beta`), en zet je de datum in `RULES_CHECKED`
-op de datum van de controle. Wat er nagekeken moet worden:
+**Als de controle klaar is**, haal je `RULES_BETA` uit `RULES_DISCLAIMER` en zet je de datum in
+`RULES_CHECKED` op de datum van de controle. Wat er nagekeken moet worden:
 
 - [ ] Een deskundige (jurist, vakbond of Juridisch Loket) heeft elke ⚖️ nagekeken: de lijst in
       [`werkregels-bronnen.md`](werkregels-bronnen.md) (vooral §5, "Niet geverifieerd") en de

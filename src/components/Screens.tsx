@@ -9,7 +9,7 @@ import { cultureTips } from '../content/culture';
 import { regionTips } from '../content/regio';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
-import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
+import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, NL_MORE, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
 import type { HelpLanguage, LangCode, UiCode } from '../i18n/types';
 import { dutchUi, rulesTrackOn } from '../lib/track';
 import { NlPair } from './NlPair';
@@ -106,9 +106,8 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
           <span className="lang-names">
             <span className="lang-native">{NL_META.nativeName}</span>
             <span className="lang-en lang-nl-sub">{NL_META.name}</span>
+            <span className="lang-nl-more">{NL_MORE}</span>
           </span>
-          {/* Werkregels is a beta (src/content/regels/disclaimer.ts RULES_BETA): said here too, where it is chosen. */}
-          <span className="beta-chip lang-nl-beta">bèta</span>
           {current === 'nl' && <CheckIcon size={20} className="lang-check" />}
         </button>
       )}

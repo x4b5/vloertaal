@@ -7,6 +7,8 @@ const t: CultureTranslation = {
   gloss: {
     'a.what': 'Vloertaal nedir?',
     'a.what.b': 'Vloertaal, işinde ihtiyacın olan Hollandacayı öğrenmene yardım eder: depoda, mutfakta, fabrikada ya da inşaatta. Sadece iş yerindeki kelimeler değil, işle ilgili tüm dil: işe başvurmak, sözleşmen ve maaş bordron, hakların, konut ve belgeler, hastalık bildirmek ve iş arkadaşlarınla iyi geçinmek. Dersler kısadır, böylece her gün birkaç dakika pratik yapabilirsin.',
+    'a.beta': 'Deneme sürümü',
+    'a.beta.b': 'Vloertaal hâlâ bir deneme sürümüdür (beta). Uygulamayı küçük bir grup öğrenci ve eğitmenle test ediyoruz. Henüz her şey kontrol edilmedi: uzmanlar çevirileri ve kurallarla ilgili ipuçlarını hâlâ kontrol ediyor. Bir hata mı buldun? Adresimizi bu sayfanın en altında bulabilirsin.',
     'a.mission': 'Misyonumuz',
     'a.mission.b': 'Vloertaal, Hollanda’da çalışan herkese iş için Hollandaca öğrenmede adil bir şans vermek istiyor: ücretsiz, kolay ve kendi dilinde yardımla. Vloertaal’dan kimse para kazanmıyor: reklam yok, abonelik yok ve verilerin asla satılmaz.',
     'a.bram': 'Bram kim?',
@@ -20,7 +22,7 @@ const t: CultureTranslation = {
     'a.free': 'Gizliliğin',
     'a.free.b': 'Hesaba ihtiyacın yok. İlerlemen sadece bu telefonda ya da bilgisayarda kaydedilir. Açıksa, uygulama derslerin kaç kez yapıldığını anonim olarak sayar: isim yok, takip yok. Bunu “Ayarlar” bölümünde kapatabilirsin.',
     'a.disclaimer': 'Bilmekte fayda var',
-    'a.disclaimer.b': 'Vloertaal’daki ipuçları genel bilgidir, hukuki tavsiye değildir. Kurallar değişebilir; metinler Ekim 2026’da kontrol edildi. Kendi durumun için işverenine, bir sendikaya veya Juridisch Loket’e sor.',
+    'a.disclaimer.b': 'Vloertaal’daki ipuçları genel bilgidir, hukuki tavsiye değildir. Kurallar değişebilir; metinler en son Ekim 2026’da güncellendi. Kendi durumun için işverenine, bir sendikaya veya Juridisch Loket’e sor.',
     'a.voices': 'Sesler',
     'a.voices.b': 'Her karakterin kendi Hollandaca sesi var: Bram, Thijmen’in sesiyle konuşur; Henk, Daniel’in; Amina, Ariël’in ve Jada, Noa’nın sesiyle. Bu sesler ElevenLabs ile kaydedildi. Bir cümlenin henüz kaydı yoksa, kendi telefonunun veya bilgisayarının sesini duyarsın.',
     'a.contact': 'Soru mu, hata mı?',

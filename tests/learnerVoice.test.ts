@@ -4,7 +4,6 @@ import { allLessons } from '../src/content/curriculum';
 import { allRegionUnits } from '../src/content/regio';
 // The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
 import './regionLoaded';
-import { SAYINGS_PENDING, SOUNDS_PENDING } from './sayingsPending';
 import { tipForLesson } from '../src/content/culture';
 import { clipUrl, setRecordedIndex } from '../src/lib/audio';
 import { learnerCharacter, learnerVoice, voiceFor } from '../src/lib/voices';
@@ -16,12 +15,9 @@ const gender = Object.fromEntries((elevenIndex.voices as { key: string; gender: 
 const chats = [...allLessons, ...allRegionUnits('taal').flatMap((u) => u.lessons)].flatMap((l) => l.dialogues ?? []);
 /** Chat replies of the new units u.shop and u.numbers, and of the region unit "Jouw regio:
  *  Zuid-Limburg": recorded on the next 'Record ElevenLabs voices' run (the phone voice says them meanwhile). */
-const PENDING_RECORDING = new Set([
-  'In gang vier. Ik loop even met u mee.', 'Ja hoor, dat kan.', 'Om kwart over vier.', 'Precies twee meter.',
-  'In Heerlen. Ik ben net verhuisd.', 'Ja, wat langzamer graag.',
-  // "Uitdrukkingen en gezegden" (src/content/sayings.ts).
-  ...SAYINGS_PENDING,
-  ...SOUNDS_PENDING,
+const PENDING_RECORDING = new Set<string>([
+  // Empty: every reply is recorded (16 October 2026). Add a new reply here until the next
+  // 'Record ElevenLabs voices' run.
 ]);
 
 describe('"you" in the chats follow the gender question', () => {
