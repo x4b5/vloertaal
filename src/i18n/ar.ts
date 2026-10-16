@@ -431,8 +431,8 @@ const lang: HelpLanguageSource = {
     'c.things.a': 'على المنصة الخشبية (البالِت).',
     'c.directions.q': 'يسار أم يمين؟',
     'c.directions.a': 'يمين، عند رف التخزين.',
-    'c.shift.q': { m: 'هل تريد قهوة أم شاي؟', f: 'هل تريدين قهوة أم شاي؟' },
-    'c.shift.a': 'شاي، من فضلك.',
+    'c.shift.q': 'متى تبدأ مناوبتك؟',
+    'c.shift.a': 'غداً الساعة السابعة.',
     'c.sick.q': { m: 'هل أنت مريض؟', f: 'هل أنت مريضة؟' },
     'c.sick.a': 'نعم، سأبقى في البيت اليوم.',
     // Emergency phrases (phrasebook only)

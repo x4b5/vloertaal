@@ -23,7 +23,7 @@ const t: CultureTranslation = {
     'c.danger.a.why': "W razie wypadku najpierw dzwoni się pod 112.",
     'c.things.a.why': "Pytanie brzmi „gdzie”. Ta odpowiedź podaje miejsce.",
     'c.directions.a.why': "W lewo czy w prawo? Ta odpowiedź wybiera jedno i mówi, gdzie.",
-    'c.shift.a.why': "Kawa czy herbata? Ta odpowiedź grzecznie wybiera jedno.",
+    'c.shift.a.why': "Kiedy zaczyna się zmiana? Ta odpowiedź podaje dzień i godzinę.",
     'c.sick.a.why': "Kto jest chory, zostaje w domu i daje o tym znać.",
     'd.speakup.a.why': "Pytanie, czy coś jest nie tak: szczere „tak” jest dobre.",
     'd.agree.a.why': "Wolno odmówić. Propozycja innego dnia pomaga.",

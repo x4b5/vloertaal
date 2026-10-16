@@ -431,8 +431,8 @@ const lang: HelpLanguageSource = {
     'c.things.a': 'Pe palet.',
     'c.directions.q': 'Stânga sau dreapta?',
     'c.directions.a': 'Dreapta, lângă raft.',
-    'c.shift.q': 'Vrei cafea sau ceai?',
-    'c.shift.a': 'Ceai, te rog.',
+    'c.shift.q': 'Când începe tura ta?',
+    'c.shift.a': 'Mâine la ora șapte.',
     'c.sick.q': { m: 'Ești bolnav?', f: 'Ești bolnavă?' },
     'c.sick.a': 'Da, azi rămân acasă.',
     // Emergency phrases (phrasebook only)

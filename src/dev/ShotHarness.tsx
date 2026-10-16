@@ -337,7 +337,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     match: { kind: 'match', words: [helm, handschoenen, hesje] },
     build: { kind: 'build', sentence: lesson.sentences[0], tiles: buildTiles(lesson.sentences[0], lesson, createRng(3)) },
   };
-  // Break-room chat: "Wil je koffie of thee?" → "Thee, graag." (right), "Tot morgen!" (wrong).
+  // The shift chat: "Wanneer begint je dienst?" → "Morgen om zeven uur." (right), "Tot morgen!" (wrong).
   const coffee = findLesson('l.shift')!.lesson.dialogues![0];
   const byeReply = allReplies.find((r) => r.id === 'c.hello.a')!;
   exercises.chat = { kind: 'chat', dialogue: coffee, options: [coffee.reply, byeReply] };

@@ -434,8 +434,8 @@ const lang: HelpLanguageSource = {
     'c.things.a': 'Na paletę.',
     'c.directions.q': 'W lewo czy w prawo?',
     'c.directions.a': 'W prawo, przy regale.',
-    'c.shift.q': 'Chcesz kawę czy herbatę?',
-    'c.shift.a': 'Herbatę, poproszę.',
+    'c.shift.q': 'Kiedy zaczyna się twoja zmiana?',
+    'c.shift.a': 'Jutro o siódmej.',
     'c.sick.q': { m: 'Jesteś chory?', f: 'Jesteś chora?' },
     'c.sick.a': 'Tak, dziś zostaję w domu.',
     // Emergency phrases (phrasebook only)

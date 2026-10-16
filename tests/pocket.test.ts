@@ -65,6 +65,9 @@ describe('pocket card phrases', () => {
       'Ik ben het niet met je eens.',
       'Mag ik jij zeggen?',
       'Waar is dit middel voor?',
+      // The shift chat about the shift, not coffee (critic, 16 October 2026):
+      'Wanneer begint je dienst?',
+      'Morgen om zeven uur.',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });
