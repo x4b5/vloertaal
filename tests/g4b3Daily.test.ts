@@ -53,7 +53,15 @@ describe('Herhaal vandaag rotates sentences and chats', () => {
     let today = '2026-10-15';
     const sentences = new Set<string>();
     const chats = new Set<string>();
-    for (let d = 0; d < 42; d++) {
+    const chatsBy42 = new Set<string>();
+    const sentencesBy42 = new Set<string>();
+    // 84 days: the chat comes from the lesson with the weakest words, so chats come back more
+    // slowly than sentences (one a day); by then nearly all of them have.
+    for (let d = 0; d < 84; d++) {
+      if (d === 42) {
+        for (const c of chats) chatsBy42.add(c);
+        for (const x of sentences) sentencesBy42.add(x);
+      }
       const ids = dailyWordIds(cards, today);
       if (ids.length) {
         const l = dailyLesson(ids, cards, today);
@@ -67,10 +75,13 @@ describe('Herhaal vandaag rotates sentences and chats', () => {
     const allSentences = done.reduce((a, l) => a + l.sentences.length, 0);
     const allChats = done.reduce((a, l) => a + (l.dialogues?.length ?? 0), 0);
     // Before: only the first sentence of each lesson (37 of 111).
-    expect(sentences.size / allSentences).toBeGreaterThan(0.6);
-    expect(chats.size / allChats).toBeGreaterThan(0.7);
+    expect(sentencesBy42.size / allSentences).toBeGreaterThan(0.6);
+    // After 6 weeks more than half of the chats came back (a weak lesson keeps the chat to itself:
+    // with "Klanken" in the first 16 units 58%), after 12 weeks nearly all.
+    expect(chatsBy42.size / allChats).toBeGreaterThan(0.55);
+    expect(chats.size / allChats).toBeGreaterThan(0.9);
     // Second and third sentences of lessons come back too.
-    const later = done.flatMap((l) => l.sentences.slice(1)).filter((s) => sentences.has(s.id));
+    const later = done.flatMap((l) => l.sentences.slice(1)).filter((s) => sentencesBy42.has(s.id));
     expect(later.length).toBeGreaterThan(30);
   });
 });

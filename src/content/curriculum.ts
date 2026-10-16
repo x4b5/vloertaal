@@ -1,5 +1,6 @@
 import { teamworkUnit } from './culture';
 import { toolsUnit, workUnits } from './work';
+import { soundsUnit } from './sounds';
 import { addMixLessons, isMixLesson, mixLessonFor } from './review';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
 import { rulesCourseUnits } from './rulesCourse';
@@ -265,6 +266,9 @@ export const units: Unit[] = [
       },
     ],
   },
+  // Dutch sounds (word pairs: man – maan, pak – bak): after "Time and roster", so Safety and the
+  // learner's own sector stay early. On All topics it sits under Starten (src/content/themes.ts).
+  soundsUnit,
   teamworkUnit,
   ...workUnits,
 ];

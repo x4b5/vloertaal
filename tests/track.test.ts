@@ -23,7 +23,7 @@ const doneUnits = (...unitIds: string[]) =>
   Object.fromEntries(unitIds.flatMap((id) => allCourseUnits().find((u) => u.id === id)!.lessons.map((l) => [l.id, rec])));
 
 /** The basis course order, as before the tracks: the sector's unit takes the warehouse's slot. */
-const BASIS = ['u.firstday', 'u.help', 'u.tools', 'u.safety', '<own>', 'u.time', 'u.teamwork', 'u.apply', 'u.contract', 'u.papers', 'u.pay', 'u.house', 'u.social', 'u.sayings', 'u.rights', 'u.leave', 'u.exploit', 'u.contact', 'u.grow', 'u.health', 'u.money', 'u.travel', 'u.lost'];
+const BASIS = ['u.firstday', 'u.help', 'u.tools', 'u.safety', '<own>', 'u.time', 'u.sounds', 'u.teamwork', 'u.apply', 'u.contract', 'u.papers', 'u.pay', 'u.house', 'u.social', 'u.sayings', 'u.rights', 'u.leave', 'u.exploit', 'u.contact', 'u.grow', 'u.health', 'u.money', 'u.travel', 'u.lost'];
 const SECTOR_UNITS = ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean'];
 /**
  * Basis units added after the sector units ("In de winkel", "Rekenen"): appended, so every unit

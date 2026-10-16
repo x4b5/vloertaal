@@ -312,6 +312,9 @@ function defineStates(LANG) {
   add('lesson:saying', shot('saying'));
   add('lesson:saying-long', shot('saying&saying=l.measures'));
   add('lesson:word-card-saying', shot('intro&word=w.blad'));
+  // Klanken (src/content/sounds.ts): the picture choice and "What do you hear?" offer the word's pair.
+  add('lesson:sounds-pick', shot('lesson&lesson=l.shortlong&at=8'));
+  add('lesson:sounds-listen', shot('lesson&lesson=l.shortlong&at=10'));
   add('lesson:match', shot('match'));
   add('lesson:match:half', shot('match'), async (p) => { await matchPairs(p, 1); });
   add('lesson:match:done', shot('match'), async (p) => { await matchPairs(p); });

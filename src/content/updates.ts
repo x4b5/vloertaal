@@ -23,6 +23,7 @@ export const UPDATES: Update[] = [
       'Nieuw onderwerp: Uitdrukkingen en gezegden, zoals "een eitje" en "aan de bel trekken". Je ziet wat de woorden letterlijk zeggen en wat ze betekenen.',
       'Daarna kom je in latere lessen een uitdrukking tegen die bij het onderwerp past, zoals "De klant is koning".',
       'Bij Alle onderwerpen kies je nu zelf: op thema of op volgorde.',
+      'Nieuw onderwerp: Klanken. Hoor en zeg het verschil tussen woorden die bijna hetzelfde klinken, zoals man en maan, pak en bak.',
       'Lange woorden in een titel breken nu netjes af.',
       'Klokjes bij "uur", "kwartier" en "half uur". Euro\'s in plaats van dollars, en een gewicht bij "kilo".',
       'Een vinkje bij een thema als het helemaal af is. Geen verspringende nummers meer.',

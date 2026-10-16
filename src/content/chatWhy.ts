@@ -70,6 +70,9 @@ const reasons: Record<string, string> = {
   'c.measures.a': 'Asked how long: this reply gives a length.',
   'c.easy.a': '"Een handje helpen" is asking for help: a yes and coming over.',
   'c.plain.a': 'Very hard rain: the bus keeps you dry.',
+  'c.shortlong.a': 'An egg is offered: a polite no, with a reason.',
+  'c.roundsounds.a': 'Asked if the door is open: this reply says it is not.',
+  'c.pbgk.a': 'Asked how you are: an answer, and how you feel.',
 };
 
 /** Why the right reply of a chat fits, with its translation id; undefined when there is none. */

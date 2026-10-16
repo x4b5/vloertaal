@@ -139,12 +139,24 @@ export function wordsBefore(lesson: Lesson): Word[] {
  * word that is still to come when a known one can take its place.
  */
 export function options(word: Word, lesson: Lesson, rng: () => number, n = 3, known: readonly Word[] = lesson.words, avoid?: ReadonlySet<string>): Word[] {
+  // A word of a sound pair ("maan"): its partner ("man") is always one of the options.
+  const partner = pairPartner(word, lesson, avoid);
+  if (partner && n >= 2) {
+    const rest = options(word, lesson, rng, n - 1, known, new Set([...(avoid ?? []), partner.id]));
+    return shuffle([...rest, partner], rng);
+  }
   const before = wordsBefore(lesson);
   const met = distractors(word, [known, before], n - 1, rng, false, avoid);
   // The very first quiz of the course knows only two words: a choice of two is fair.
   if (met.length === n - 1 || (met.length >= 1 && !before.length)) return shuffle([word, ...met], rng);
   const rest = [lesson.words, allWords].map((pool) => pool.filter((w) => !met.some((m) => clashes(w, m, false))));
   return shuffle([word, ...met, ...distractors(word, rest, n - 1 - met.length, rng, false, avoid)], rng);
+}
+
+/** The other word of a sound pair (Word.pair), when the lesson or the course has it and it may be offered. */
+function pairPartner(word: Word, lesson: Lesson, avoid?: ReadonlySet<string>): Word | undefined {
+  if (!word.pair || avoid?.has(word.pair)) return undefined;
+  return lesson.words.find((w) => w.id === word.pair) ?? allWords.find((w) => w.id === word.pair);
 }
 
 /** The words of the lesson's unit: the fallback pool for picture choices (related words). */
@@ -160,10 +172,14 @@ function unitWords(lesson: Lesson): Word[] {
 export function dutchExercise(word: Word, lesson: Lesson, rng: () => number, n = 3, textOnly = false, avoid?: ReadonlySet<string>): Extract<Exercise, { kind: 'dutch' }> {
   if (hasPicture(word) && !textOnly) {
     // Known words first: the lesson's, then the unit's earlier lessons', then the rest of the unit.
+    // A word of a sound pair shows its partner's picture too (the moon beside the man).
     const unit = unitWords(lesson);
     const before = new Set(wordsBefore(lesson).map((w) => w.id));
-    const others = distractors(word, [lesson.words, unit.filter((w) => before.has(w.id)), unit], n - 1, rng, true, avoid);
-    if (others.length === n - 1) return { kind: 'dutch', word, options: shuffle([word, ...others], rng) };
+    const partner = pairPartner(word, lesson, avoid);
+    const paired = partner && hasPicture(partner) ? [partner] : [];
+    const skip = paired.length ? new Set([...(avoid ?? []), partner!.id]) : avoid;
+    const others = distractors(word, [lesson.words, unit.filter((w) => before.has(w.id)), unit], n - 1 - paired.length, rng, true, skip);
+    if (others.length === n - 1 - paired.length) return { kind: 'dutch', word, options: shuffle([word, ...paired, ...others], rng) };
   }
   return { kind: 'dutch', word, options: options(word, lesson, rng, n, lesson.words, avoid), textOnly: true };
 }

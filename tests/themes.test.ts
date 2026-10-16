@@ -124,7 +124,7 @@ describe('the screens show the themes as plain headers (never a button)', () => 
     expect(m.match(/<ul /g)).toHaveLength(1);
     expect(m.match(/class="topic-row/g)).toHaveLength(units.length);
     expect(m).toContain('Pierwsze kroki');
-    expect(m).toContain('aria-label="Pierwsze kroki · Starten · 2 / 3 tematy"');
+    expect(m).toContain('aria-label="Pierwsze kroki · Starten · 2 / 4 tematy"');
     // The count is for screen readers only: no "2 / 3" under a header, no check until all are done.
     const start = m.match(/<li class="theme-head[^"]*" data-theme="theme.start"[\s\S]*?<\/li>/)![0];
     expect(start).not.toMatch(/\d+ \/ \d+<|rb-count/);
@@ -154,11 +154,11 @@ describe('the screens show the themes as plain headers (never a button)', () => 
   });
 
   it('All topics: a calm check once every topic of a theme is done', () => {
-    const m = html(createElement(AllTopics, { progress: progress({ completed: done('u.firstday', 'u.help', 'u.tools') }), lang: pl(), onBack: () => {}, onOpen: () => {} }));
+    const m = html(createElement(AllTopics, { progress: progress({ completed: done('u.firstday', 'u.help', 'u.tools', 'u.sounds') }), lang: pl(), onBack: () => {}, onOpen: () => {} }));
     const start = m.match(/<li class="theme-head[^"]*" data-theme="theme.start"[\s\S]*?<\/li>/)![0];
     expect(start).toContain('theme-head-done');
     expect(start).toContain('theme-check');
-    expect(start).toContain('aria-label="Pierwsze kroki · Starten · 3 / 3 tematy"');
+    expect(start).toContain('aria-label="Pierwsze kroki · Starten · 4 / 4 tematy"');
   });
 
   it('"Jouw sector" without a sector: only the sector topics the learner started count', () => {
