@@ -14,7 +14,7 @@ import { HomeGreeting } from './components/BramSays';
 import { NoVoiceNote, RulesHelp, RulesShelf } from './components/RulesHelp';
 import { GenderScreen } from './components/Gender';
 import { shouldAskGender } from './lib/askGender';
-import { offersTryLesson, onboardingStep, previousStep, stepIndex, trialDone, trialLessonAllowed, tryLessonId, TRY_LESSON, type OnbStep } from './lib/onboarding';
+import { onboardingStep, previousStep, stepIndex, trialLessonAllowed, type OnbStep } from './lib/onboarding';
 import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
@@ -133,8 +133,6 @@ export default function App() {
   const [gateAgain, setGateAgain] = useState(false);
   /** The code typed on the password page (this visit only): back in the field on the way back. */
   const typedCode = useRef('');
-  /** "Try one lesson first" (TRY_LESSON): lesson 1.1 and its result before the password. */
-  const [trial, setTrial] = useState(false);
   /** The language was just picked: the next page shows Bram waving and introducing himself (once). */
   const [greet, setGreet] = useState(false);
   /** A coach link to a topic outside the preview: the home offers its unlock (this visit). */
@@ -439,8 +437,9 @@ export default function App() {
   /** The learner's track: the Dutch course, or the work-rules track with the screens in Dutch ('nl'). */
   const track = trackOf(progress);
   /** "Try one lesson first": lesson 1.1 (of the learner's track), its result, then the password page again. */
-  const startTrial = () => { setTrial(true); go({ name: 'lesson', lessonId: tryLessonId(track), review: false }); };
-  const endTrial = () => { setTrial(false); back(); };
+  // "No code?": the sneak preview (the first lesson of each theme), without a code; the code
+  // for the full version can still be entered later (Settings, or a locked topic).
+  const startFree = () => { typedCode.current = ''; grant('sample'); };
   /** Set when a lesson is finished with the code and the reminder offer was never shown. The
    *  streak-1 milestone offers it on day 1, but a learner who tried lesson 1.1 first already has
    *  that day's streak: for them it comes at the end of the first lesson with the code. */
@@ -452,7 +451,6 @@ export default function App() {
     if (keepDue.current && !keepOffered()) { keepDue.current = false; replace({ name: 'keep' }); }
     else { keepDue.current = false; back(); }
   };
-  const inTrial = trial && !access && (view.name === 'lesson' || view.name === 'result');
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
   /** "Waar woon je?" (Settings only): the region's lessons come in or go out of the path. */
   const setRegion = (region: RegionChoice) => setProgress((p) => ({ ...p, region }));
@@ -483,41 +481,38 @@ export default function App() {
   // right form), the password, then the sector. Every page has a back arrow to the one before
   // (and the phone's Back does the same). The admin page above stays reachable with #beheer.
   if (!progress.onboarded) return <Onboarding onDone={(code) => { setLang(code); setGreet(true); }} startWithList={langAgain} />;
-  if (!inTrial) {
-    if (step === 'gender') {
-      return (
-        <GenderScreen
-          lang={lang}
-          onDone={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))}
-          onBack={onbBack}
-          greet={greet}
-        />
-      );
-    }
-    if (step === 'gate') {
-      return (
-        <Gate
-          key={gateAgain ? 'again' : 'first'}
-          lang={lang}
-          onAccess={grant}
-          onBack={onbBack}
-          accepted={gateAgain ? access : null}
-          code={typedCode.current}
-          onTry={offersTryLesson(TRY_LESSON, access, trialDone(progress, access)) ? startTrial : undefined}
-          trialDone={trialDone(progress, access)}
-          greet={greet}
-        />
-      );
-    }
-    // Two steps of at most three cards; the first step's arrow goes back to the password page.
-    if (step === 'sector') return <SectorScreen lang={lang} onDone={setSector} onBack={onbBack} />;
+  if (step === 'gender') {
+    return (
+      <GenderScreen
+        lang={lang}
+        onDone={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))}
+        onBack={onbBack}
+        greet={greet}
+      />
+    );
   }
+  if (step === 'gate') {
+    return (
+      <Gate
+        key={gateAgain ? 'again' : 'first'}
+        lang={lang}
+        onAccess={grant}
+        onBack={onbBack}
+        accepted={gateAgain && typedCode.current ? access : null}
+        code={typedCode.current}
+        onFree={gateAgain && access && typedCode.current ? undefined : startFree}
+        greet={greet}
+      />
+    );
+  }
+  // Two steps of at most three cards; the first step's arrow goes back to the password page.
+  if (step === 'sector') return <SectorScreen lang={lang} onDone={setSector} onBack={onbBack} />;
   // A learner from before the gender question (or who switched to a help language with gender
   // later): asked once on its own page on opening the home, without a way back.
-  if (view.name === 'home' && shouldAskGender(progress) && !inTrial) {
+  if (view.name === 'home' && shouldAskGender(progress)) {
     return <GenderScreen lang={lang} onDone={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))} />;
   }
-  // From here on there is access (or the one trial lesson before the password).
+  // From here on there is access (a code, or the sneak preview without one).
   const acc: Access = access ?? 'preview';
 
   switch (view.name) {
@@ -528,7 +523,7 @@ export default function App() {
         ? { lesson: track === 'regels' ? dailyRuleLesson(view.ids ?? []) : dailyLesson(view.ids ?? [], progress.cards, dayKey(new Date())) }
         : playLesson(view.lessonId, progress.completed);
       // A preview never plays a later unit, whatever the progress or history says.
-      if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc) || (inTrial && !trialLessonAllowed(view.lessonId, track))) return null;
+      if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
         const now = new Date();
         const today = dayKey(now);
@@ -542,12 +537,11 @@ export default function App() {
         // The lesson's unit is the current block while it is unfinished (see src/lib/route.ts).
         if (!daily) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
         // The very first lesson: its result shows, once, where the emergency phrases are.
-        // (Not after the trial lesson: the result then leads back to the password page; the
-        // first lesson after it shows the row instead.)
-        const phrases = !daily && !inTrial && !progress.phrasesShown && Object.keys(progress.completed).every((id) => trialLessonAllowed(id, track));
+        // (A phone that did the old trial lesson before a code shows it after its next lesson.)
+        const phrases = !daily && !progress.phrasesShown && Object.keys(progress.completed).every((id) => trialLessonAllowed(id, track));
         if (phrases) next.phrasesShown = true;
         setProgress(next);
-        keepDue.current = Boolean(access) && !inTrial && !keepOffered();
+        keepDue.current = Boolean(access) && !keepOffered();
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
         const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId);
         const dims = { lang: progress.helpLang, sector: progress.sector };
@@ -563,7 +557,7 @@ export default function App() {
         const words = learnedItems(track, next.completed);
         // The next lesson of the current block, for "Volgende:" on the result (none when the block
         // is finished: the home offers the choice of the next one).
-        const upNext = daily || inTrial ? undefined : routeNextLesson(next, acc);
+        const upNext = daily ? undefined : routeNextLesson(next, acc);
         if (!daily) setArrived(view.lessonId);
         // A review (today's, a mixed review, or a lesson done again) shows the words practised,
         // not "+0 new words", under a review title.
@@ -622,8 +616,8 @@ export default function App() {
           remember={view.remember}
           next={view.next ? nextTitle(view.next, lang) : undefined}
           lang={lang}
-          onDone={() => (inTrial ? endTrial() : view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())}
-          onPhrases={view.phrases && !inTrial ? () => replace({ name: 'phrasebook', streakUp: view.streakUp, cert: view.cert }) : undefined}
+          onDone={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())}
+          onPhrases={view.phrases ? () => replace({ name: 'phrasebook', streakUp: view.streakUp, cert: view.cert }) : undefined}
         />
       );
     case 'streak':

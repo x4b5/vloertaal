@@ -10,7 +10,8 @@ import type { Track } from './track';
  *
  *  - sample: a sneak preview, the first lesson of each theme (src/content/themes.ts): of the
  *    theme's first topic, and in "Jouw sector" of every sector's topic, so anyone can try their own
- *    work. In both tracks. The rest shows with a lock and "Volledige versie".
+ *    work. In both tracks. The rest shows with a lock and "Volledige versie". Without a code: the
+ *    password page's "No code?" gives it (since 16 October 2026; before, one trial lesson).
  *  - preview: only the first unit of each course can be played ("First day at work"; in the
  *    work-rules track its first unit, r.start).
  *  - full: everything.

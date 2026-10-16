@@ -331,12 +331,11 @@ export const uiEn = {
   /* G4 r4b: the reminder's own time ("Kies zelf", for shift work). */
   remindChooseOwn: 'Choose a time yourself',
   /* G4 onboarding: the password page explained (who gives the code, what is kept), the code kept
-     when you come back to it, and "Try one lesson first" (behind TRY_LESSON). */
+     when you come back to it, and "No code?": the sneak preview without a code. */
   gateWho: 'Your teacher, coach or employer gives you the code.',
   gateTrust: 'No account. No name. Everything stays on this phone.',
   codeAccepted: 'Code accepted',
-  tryLesson: 'Try one lesson first',
-  trialDone: 'You did the trial lesson. The code unlocks everything.',
+  startFree: 'No code? Start with the first lessons',
   /* Bram, the mascot: one calm line on the home screen (src/lib/greeting.ts) and after a lesson. */
   bramHello: 'Good to see you.',
   bramBack: 'Welcome back. Let’s go on.',

@@ -185,19 +185,17 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     const g = q.get('group');
     return <SectorScreen lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} initialGroup={g === 'make' || g === 'care' ? (g as SectorGroupId) : undefined} />;
   }
-  // The password page: &try=1 with "Try one lesson first" (TRY_LESSON on), &again=1 back from the
-  // sector with the code kept, &greet=1 with Bram's "Hallo, ik ben Bram." (the first page after the language),
-  // &trialDone=1 back after the trial lesson.
+  // The password page: &try=1 with "No code? Start with the first lessons", &again=1 back from the
+  // sector with the code kept, &greet=1 with Bram's "Hallo, ik ben Bram." (the first page after the language).
   if (shot === 'gate') {
     return (
       <Gate
         lang={getHelpLanguage(lang as LangCode, gender)}
         onAccess={() => {}}
         onBack={() => {}}
-        onTry={q.get('try') === '1' ? () => {} : undefined}
+        onFree={q.get('try') === '1' ? () => {} : undefined}
         accepted={q.get('again') === '1' ? 'preview' : null}
         greet={q.get('greet') === '1'}
-        trialDone={q.get('trialDone') === '1'}
       />
     );
   }

@@ -4,16 +4,13 @@ import { hasGender } from '../i18n';
 import type { Access } from './access';
 import { shouldAskGender } from './askGender';
 import type { Progress } from './progress';
-import { trackOf, type Track } from './track';
+import type { Track } from './track';
 
 /**
- * "Try one lesson first" on the password page (the owner's choice: on). Lesson 1.1 only, then its
- * result, then the password page again with a line that the code unlocks everything. With the
- * flag off the slot on the password page stays empty.
+ * Lesson 1.1. It was the one trial lesson before a code ("Try one lesson first", until 16 October
+ * 2026; since then "No code?" opens the sneak preview). The first lesson's result still shows
+ * where the emergency phrases are when only this lesson was done before (App).
  */
-export const TRY_LESSON = true;
-
-/** The one lesson the "try first" button plays: lesson 1.1. */
 export const TRY_LESSON_ID = units[0].lessons[0].id;
 
 /** The trial lesson of the work-rules track while its course is not loaded: the first lesson of
@@ -26,7 +23,7 @@ export function tryLessonId(track: Track = 'taal'): string {
   return courseUnits('regels')[0]?.lessons[0]?.id ?? RULES_TRY_LESSON_ID;
 }
 
-/** Only lesson 1.1 (of the track's course) can be played before a password was entered. */
+/** Is this lesson 1.1 of the track's course (the old trial lesson)? */
 export const trialLessonAllowed = (lessonId: string, track: Track = 'taal') => lessonId === tryLessonId(track);
 
 /**
@@ -67,15 +64,3 @@ export function previousStep(step: OnbStep, p: OnbProgress): OnbStep | null {
   }
 }
 
-/** The trial lesson was done on this phone (lesson 1.1 of the learner's track is in the progress) and there is no code yet. */
-export function trialDone(p: Pick<Progress, 'completed'> & Partial<Pick<Progress, 'helpLang'>>, access: Access | null): boolean {
-  return !access && Boolean(p.completed[tryLessonId(trackOf(p))]);
-}
-
-/**
- * Whether the password page offers "Try one lesson first": the flag, only before a password, and
- * only once (after the trial the page says that the code unlocks everything instead).
- */
-export function offersTryLesson(flag: boolean, access: Access | null, done = false): boolean {
-  return flag && !access && !done;
-}
