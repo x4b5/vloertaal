@@ -84,7 +84,7 @@ export function useOfflineAuto(): [boolean, (on: boolean) => void] {
 
 /** The topic kept on the phone now: the current block, when the learner may play it. */
 function keptUnit(progress: Progress, access: Access) {
-  const block = progress.onboarded && progress.sector !== undefined ? currentBlock(progress) : null;
+  const block = progress.onboarded && progress.sector !== undefined ? currentBlock(progress, undefined, access) : null;
   return block && unitAllowed(block.id, access) ? block : null;
 }
 

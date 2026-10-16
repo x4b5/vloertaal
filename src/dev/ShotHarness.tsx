@@ -159,7 +159,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   }
   const quiet = new URLSearchParams(location.search).get('quiet') === '1';
   // &access=preview shows the path, tips and settings as a preview user sees them.
-  const access: Access = new URLSearchParams(location.search).get('access') === 'preview' ? 'preview' : 'full';
+  const asked = new URLSearchParams(location.search).get('access');
+  const access: Access = asked === 'preview' || asked === 'sample' ? asked : 'full';
   // &sector=construction (or none) sets the learner's sector on the path, tips and settings;
   // &other=open opens the "Andere sectoren" section.
   const sp = new URLSearchParams(location.search).get('sector');

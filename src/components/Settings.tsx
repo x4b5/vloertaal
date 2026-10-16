@@ -202,7 +202,7 @@ export function Settings({
   const ctx = {
     helpLang: Boolean(lang),
     gender: hasGender(lang?.code),
-    preview: access === 'preview' && Boolean(onAccess),
+    preview: access !== 'full' && Boolean(onAccess),
     install: installWay() !== null,
     offline: offlineSupported(),
     rules: dutchUi(lang),
