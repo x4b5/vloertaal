@@ -16,11 +16,13 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-16',
     items: [
+      'Nieuw: Werkregels, voor wie al Nederlands spreekt. Over de geschreven en ongeschreven regels op het werk. Het is nog een bètaversie: experts kijken de uitleg nog na.',
       'De onderwerpen staan nu in 8 thema\'s, zoals "Starten", "Je baan" en "Je rechten". Zo zie je beter waar je bent.',
       'Nieuw onderwerp: In de winkel (vakken vullen, de kassa, wisselgeld, ID vragen).',
       'Nieuw onderwerp: Rekenen (uren en tijden, geld, kilo en meter).',
       'Nieuw onderwerp: Uitdrukkingen en gezegden, zoals "een eitje" en "aan de bel trekken". Je ziet wat de woorden letterlijk zeggen en wat ze betekenen.',
       'Daarna kom je in latere lessen een uitdrukking tegen die bij het onderwerp past, zoals "De klant is koning".',
+      'Bij Alle onderwerpen kies je nu zelf: op thema of op volgorde.',
       'Lange woorden in een titel breken nu netjes af.',
       'Klokjes bij "uur", "kwartier" en "half uur". Euro\'s in plaats van dollars, en een gewicht bij "kilo".',
       'Een vinkje bij een thema als het helemaal af is. Geen verspringende nummers meer.',

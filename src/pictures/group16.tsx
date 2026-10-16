@@ -153,10 +153,10 @@ export default {
       </Shade>
       <Shine d="M49 84A9 9 0 0 1 55 79" width={3} opacity={0.6} />
       {/* Seat and thigh up to the knee, shin down to the boot */}
-      <path d="M60 32L88 88" stroke={PAL.navyShade} strokeWidth="22" strokeLinecap="round" />
-      <circle cx="24" cy="88" r="15" fill={PAL.navy} />
-      <path d="M26 88L58 32" stroke={PAL.navy} strokeWidth="26" strokeLinecap="round" />
-      <path d="M20 80L44 40" stroke={PAL.blueLight} strokeWidth="3.4" strokeLinecap="round" opacity=".45" />
+      <path d="M60 32L88 88" stroke={PAL.blueShade} strokeWidth="22" strokeLinecap="round" />
+      <circle cx="24" cy="88" r="15" fill={PAL.blue} />
+      <path d="M26 88L58 32" stroke={PAL.blue} strokeWidth="26" strokeLinecap="round" />
+      <path d="M20 80L44 40" stroke={PAL.blueLight} strokeWidth="3.4" strokeLinecap="round" opacity=".7" />
       {/* Knee pad on the knee */}
       <ellipse cx="62" cy="30" rx="13" ry="12" fill={PAL.orange} />
       <path d="M55 33Q62 38 69 33" fill="none" stroke={PAL.orangeShade} strokeWidth="2.2" strokeLinecap="round" />

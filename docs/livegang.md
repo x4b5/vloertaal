@@ -18,7 +18,7 @@ de 100 GB per maand. Daarboven is Pro nodig (ongeveer $20 per maand) of een ande
 | ⏳ | Nieuwe zinnen opnemen na elke merge met nieuwe Nederlandse tekst | jij: workflow draaien, zie onderaan |
 | ⏳ | Vertalingen laten nakijken door moedertaalsprekers | zie `vertaalcontrole.md` |
 | ⏳ | Werkvloer-tips laten nakijken door FNV / Juridisch Loket / FairWork | zie `juridische-check.md` |
-| ⏳ | Werkregels aanzetten (`RULES_TRACK`) | na de controle, zie hieronder |
+| ✅ | Werkregels staat aan als bèta (16 oktober 2026); de controle door een deskundige loopt nog | bèta, zie hieronder |
 | ⏳ | Regio Zuid-Limburg aanzetten (`REGIONS_LIVE`) | na controle van de sociale kaart, zie hieronder |
 
 ## Domein koppelen (vloertaal.nl)
@@ -77,21 +77,22 @@ Een cookiebanner is niet nodig: de app gebruikt geen cookies.
 Tip voor het contactadres: een apart adres zoals `hallo@vloertaal.nl` (een doorstuuradres bij je
 registrar) of een apart Gmail-adres. Zo staat je persoonlijke adres niet in de app.
 
-## Werkregels aanzetten
+## Werkregels (bèta)
 
 Werkregels is het spoor voor mensen die al Nederlands spreken ("Nederlands – ik spreek al
-Nederlands" in de talenlijst). Het is klaar, maar staat in productie nog **uit**. Jij beslist wanneer
-het aangaat. Tot dan zie je het alleen in ontwikkeling, met `?rules=1` achter het adres.
+Nederlands" in de talenlijst). Het staat sinds 16 oktober 2026 **aan als bèta**, zodat anderen het
+kunnen bekijken en nakijken. De app zegt dat zelf:
 
-**De wijziging (één regel)** in `src/lib/track.ts`:
+- in de talenlijst staat "bèta" bij Nederlands;
+- de eerste regel van "Goed om te weten" (Hulp, Over, de eerste les) is `RULES_BETA` in
+  `src/content/regels/disclaimer.ts`: nog een bètaversie, experts kijken het na, fouten naar
+  hoi@vloertaal.nl.
 
-```ts
-export const RULES_TRACK: boolean = true;   // was: false
-```
+Weer uitzetten kan met één regel in `src/lib/track.ts` (`RULES_TRACK = false`).
 
-Daarna een gewone merge naar `main`; Vercel publiceert vanzelf.
-
-**Eerst afvinken:**
+**Als de controle klaar is**, haal je de bèta weg: `RULES_BETA` uit `RULES_DISCLAIMER`, het
+"bèta"-label in `src/components/Screens.tsx` (`lang-nl-beta`), en zet je de datum in `RULES_CHECKED`
+op de datum van de controle. Wat er nagekeken moet worden:
 
 - [ ] Een deskundige (jurist, vakbond of Juridisch Loket) heeft elke ⚖️ nagekeken: de lijst in
       [`werkregels-bronnen.md`](werkregels-bronnen.md) (vooral §5, "Niet geverifieerd") en de

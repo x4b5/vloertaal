@@ -2,8 +2,16 @@
  * Lines shown with the rules track (Werkregels). Plain Dutch, never legal advice.
  */
 
-/** When the rules were last checked (shown in the disclaimer). */
+/** When the rules were last brought up to date (shown in the disclaimer). Not yet checked by an
+ *  expert: that is what RULES_BETA says. */
 export const RULES_CHECKED = 'oktober 2026';
+
+/**
+ * Werkregels is live as a beta (src/lib/track.ts): experts have not checked every fact yet. The
+ * first line of the disclaimer says so, with where to report a mistake. Drop it (and the "bèta"
+ * tag in the language list) once the expert check of docs/werkregels-bronnen.md is done.
+ */
+export const RULES_BETA = 'Werkregels is nog een bètaversie. Experts kijken de uitleg nog na. Zie je een fout? Mail naar hoi@vloertaal.nl.';
 
 /** Shown under every `rule` step with `rule: 'geschreven'` (law, contract or cao). */
 export const RULES_ADVICE = 'Algemene informatie. Vraag voor jouw situatie je werkgever, een vakbond of het Juridisch Loket.';
@@ -28,8 +36,9 @@ export const RULES_BORDER = 'Algemene informatie. Vraag voor jouw situatie het G
 
 /** The disclaimer of the track (about screen, first rules lesson, certificate). */
 export const RULES_DISCLAIMER = [
+  RULES_BETA,
   'Vloertaal geeft algemene informatie. Het is geen juridisch advies.',
-  'Regels kunnen veranderen. Gecontroleerd: ' + RULES_CHECKED + '.',
+  'Regels kunnen veranderen. Bijgewerkt: ' + RULES_CHECKED + '.',
   'Gaat het om jouw situatie? Vraag je werkgever, een vakbond of het Juridisch Loket.',
 ];
 
