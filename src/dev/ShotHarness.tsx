@@ -90,11 +90,13 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'result') {
     const l = getHelpLanguage(lang as LangCode, gender);
     const review = q.get('review') === '1';
-    const right = q.get('perfect') === '1' ? 11 : 9;
+    // &total=13&right=12: other numbers (two-digit ones are the widest).
+    const total = Number(q.get('total') ?? 11);
+    const right = q.get('perfect') === '1' ? total : Number(q.get('right') ?? 9);
     const next = findLesson('l.people')?.lesson;
     return (
       <Result
-        right={right} total={11} newWords={6} words={24} lang={l} onDone={() => {}}
+        right={right} total={total} newWords={6} words={24} lang={l} onDone={() => {}}
         repeated={review || q.get('mix') === '1' ? 8 : undefined} stronger={review ? 5 : undefined}
         waiting={Number(q.get('waiting') ?? 0)}
         kind={review ? 'daily' : q.get('mix') === '1' ? 'review' : 'lesson'}

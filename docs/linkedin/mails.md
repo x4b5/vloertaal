@@ -17,13 +17,14 @@ Er zijn drie soorten codes:
 Wie een code eerder invulde, houdt het niveau van toen: dat staat op de telefoon. Een code die later
 een sneak preview werd, geeft wie hem al had dus nog steeds de volledige versie.
 
-**Iets melden.** Testers zien in elke les rechtsboven een vlaggetje. Een tik opent een mail aan
+**Iets melden.** In elke les staat rechtsboven een vlaggetje. Een tik opent een mail aan
 hoi@vloertaal.nl met de plek al ingevuld: les, stap, het woord of de zin, hulptaal, telefoon en
-versie. De tester schrijft er alleen bij wat er mis is (en voegt een schermfoto toe). Leerlingen
-zien het vlaggetje niet. Het staat aan:
-- vanzelf bij de sneak-previewcode;
-- op een telefoon die één keer **vloertaal.nl/?test** opende. Geef experts daarom die link (in de
-  mails hieronder staat hij al). Uitzetten: **vloertaal.nl/?test=0**.
+versie. De tester schrijft er alleen bij wat er mis is (en voegt een schermfoto toe).
+
+Zolang de app een bètaversie is, staat het vlaggetje **standaard aan**, voor iedereen. Uitzetten
+kan onderaan **Over** ("Knop Melden staat aan in de lessen. Tik om uit te zetten"), of met
+**vloertaal.nl/?test=0**. De schakelaar onder Over werkt ook in een app op het beginscherm van een
+iPhone (die heeft een eigen geheugen, los van Safari).
 
 ---
 

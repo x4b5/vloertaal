@@ -34,6 +34,7 @@ import {
   ChevronIcon,
   LifebuoyIcon,
   EarIcon,
+  FlagIcon,
   RouteIcon,
   GearIcon,
   GlobeIcon,
@@ -42,6 +43,7 @@ import {
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { useVoices } from './useVoices';
+import { setTesterSwitch, testerSwitch } from '../lib/report';
 import { ChoiceCards } from './Choice';
 import { phoneHelpLang } from '../lib/langGuess';
 import { FlameIcon } from './StreakArt';
@@ -472,6 +474,22 @@ function AboutBody({ text }: { text: Bilingual }) {
   );
 }
 
+/**
+ * The "Melden" flag in every lesson (on by default, src/lib/report.ts) off or on again, in the app
+ * itself: a link opened in Safari does not reach an app on an iPhone's home screen, this does. In
+ * Dutch, like the flag and its mail. Small, at the bottom of Over.
+ */
+function TesterSwitch() {
+  const [on, setOn] = useState(testerSwitch);
+  const flip = () => { if (setTesterSwitch(!on)) setOn(!on); };
+  return (
+    <button type="button" className="about-tester" aria-pressed={on} onClick={flip} lang="nl" dir="ltr">
+      <FlagIcon size={18} />
+      <span>{on ? 'Knop Melden staat aan in de lessen. Tik om uit te zetten' : 'Knop Melden staat uit. Tik om aan te zetten'}</span>
+    </button>
+  );
+}
+
 /** "About Vloertaal" (the "Over" tab): what the app is, who it is for, privacy and voice credits,
  *  and one link to the page for coaches. */
 /**
@@ -551,6 +569,7 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
           ))}
         </ul>
       )}
+      <TesterSwitch />
       <p className="about-updated muted small"><Bi text={lastUpdatedText(lang)} /></p>
       {/* Which deploy runs on this phone (the commit; src/lib/appUpdate.ts loads a newer one). */}
       <p className="about-version muted small" dir="ltr" lang="nl">Versie {(import.meta.env.VITE_BUILD as string | undefined) ?? 'dev'}</p>
@@ -598,12 +617,14 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   /** Small line under the value. */
   foot?: Bilingual;
 }) {
+  // "12 / 13": the total smaller, like a fraction, so two two-digit numbers fit a card on any phone.
+  const ofTotal = /^(\S+) \/ (\S+)$/.exec(value);
   return (
     <div className={`stat-card stat-${tone} ${done ? 'stat-done' : ''}`} role="group" aria-label={`${said(label)} ${final}`}>
       <div className="stat-card-head"><Bi text={label} /></div>
       <div className="stat-card-body" aria-hidden>
         {icon}
-        <span className="stat-card-value" dir="ltr">{value}</span>
+        <span className="stat-card-value" dir="ltr">{ofTotal ? <>{ofTotal[1]}<span className="stat-of">/{ofTotal[2]}</span></> : value}</span>
       </div>
       {/* The stamp sits beside the line under the value, in the flow (never over its words);
           on a narrow card it wraps under it. */}
