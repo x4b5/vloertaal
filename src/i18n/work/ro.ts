@@ -653,7 +653,7 @@ const t: CultureTranslation = {
     'c.mistakes.o3': 'Spui că a făcut-o un coleg.',
     'c.mistakes.w': 'O greșeală spusă devreme e ușor de reparat. Sinceritatea construiește încredere, iar asta contează mai mult decât să nu greșești niciodată.',
     'c.respect': 'Respect pentru toți',
-    'c.respect.b': 'La muncă toți sunt egali și toți sunt tratați cu respect, indiferent de gen, origine, religie sau orientare sexuală. Șeful tău poate fi bărbat sau femeie. Tu decizi despre contactul fizic. Strângerea de mână e obișnuită, dar poți saluta și în alt mod politicos, de exemplu cu o înclinare din cap și un zâmbet, și să explici scurt. Glumele despre originea sau religia cuiva, amenințările, hărțuirea (pesten) și comportamentul sexual nedorit nu sunt acceptate. Poți raporta la șef sau la o persoană de încredere (vertrouwenspersoon), dacă firma ta are una.',
+    'c.respect.b': 'La muncă toți sunt egali și toți sunt tratați cu respect, indiferent de gen, origine, religie sau orientare sexuală. Tu decizi despre contactul fizic. Strângerea de mână e obișnuită, dar poți saluta și în alt mod politicos, de exemplu cu o înclinare din cap și un zâmbet, și să explici scurt. Glumele despre originea sau religia cuiva, amenințările, hărțuirea (pesten) și comportamentul sexual nedorit nu sunt acceptate. Poți raporta la șef sau la o persoană de încredere (vertrouwenspersoon), dacă firma ta are una.',
     'c.respect.p': 'Prefer să nu dau mâna, dar mă bucur să te salut.',
     'c.respect.s': 'Un coleg face des glume despre religia ta. I-ai cerut să se oprească, dar continuă. Ce faci?',
     'c.respect.o1': 'Îi spui șefului sau persoanei de încredere (vertrouwenspersoon).',

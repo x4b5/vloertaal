@@ -653,7 +653,7 @@ const t: CultureTranslation = {
     'c.mistakes.o3': 'Bir iş arkadaşının yaptığını söylersin.',
     'c.mistakes.w': 'Erken söylenen bir hata kolay düzeltilir. Dürüst olmak güven oluşturur ve bu, hiç hata yapmamaktan daha önemlidir.',
     'c.respect': 'Herkese saygı',
-    'c.respect.b': 'İş yerinde herkes eşittir ve cinsiyeti, kökeni, dini veya cinsel yönelimi ne olursa olsun herkese saygıyla davranılır. Amirin bir erkek veya bir kadın olabilir. Fiziksel temas konusunda sen karar verirsin. Tokalaşmak yaygındır, ama başka kibar bir şekilde de selam verebilirsin, örneğin başını sallayıp gülümseyerek, ve bunu kısaca açıklayabilirsin. Birinin kökeni veya diniyle ilgili şakalar, tehditler, zorbalık (pesten) ve istenmeyen cinsel davranış kabul edilmez. Bunu amirine veya şirketinde varsa bir güven danışmanına (vertrouwenspersoon) bildirebilirsin.',
+    'c.respect.b': 'İş yerinde herkes eşittir ve cinsiyeti, kökeni, dini veya cinsel yönelimi ne olursa olsun herkese saygıyla davranılır. Fiziksel temas konusunda sen karar verirsin. Tokalaşmak yaygındır, ama başka kibar bir şekilde de selam verebilirsin, örneğin başını sallayıp gülümseyerek, ve bunu kısaca açıklayabilirsin. Birinin kökeni veya diniyle ilgili şakalar, tehditler, zorbalık (pesten) ve istenmeyen cinsel davranış kabul edilmez. Bunu amirine veya şirketinde varsa bir güven danışmanına (vertrouwenspersoon) bildirebilirsin.',
     'c.respect.p': 'Tokalaşmamayı tercih ederim, ama seni selamlamaktan memnuniyet duyarım.',
     'c.respect.s': 'Bir iş arkadaşın sık sık dininle ilgili şakalar yapıyor. Durmasını istedin ama devam ediyor. Ne yaparsın?',
     'c.respect.o1': 'Amirine veya vertrouwenspersoon’a söylersin.',
