@@ -9,16 +9,17 @@ de 100 GB per maand. Daarboven is Pro nodig (ongeveer $20 per maand) of een ande
 
 | | Wat | Status |
 |---|---|---|
-| ✅ | App werkt, 568 automatische tests, max. 3 tikbare dingen per scherm | klaar |
+| ✅ | App werkt, 873 automatische tests, max. 3 tikbare dingen per scherm | klaar |
 | ✅ | Hosting op Vercel; GitHub draait alleen nog de tests (geen tweede kopie op GitHub Pages) | klaar |
-| ✅ | Instellingen voor `vloertaal.nl` (vercel.json, deelplaatje, canonical, robots, sitemap) | klaar, wacht op domein |
+| ✅ | Domein `vloertaal.nl` gekoppeld (vercel.json, deelplaatje, canonical, robots, sitemap) | klaar |
+| ✅ | Contact `hoi@vloertaal.nl` en privacy op de pagina *Over* | klaar |
 | ✅ | Stemmen: ElevenLabs betaald plan, commercieel gebruik toegestaan | klaar |
-| ⏳ | Domein `vloertaal.nl` aanvragen en koppelen | jij, zie hieronder |
-| ⏳ | Contact en privacy in de app | wacht op naam + e-mailadres |
-| ⏳ | Twee zinnen opnemen ("Zeg het liever direct tegen mij.", "Hallo, ik ben Bram.") | jij: workflow draaien |
-| ⏳ | Vertalingen laten nakijken door moedertaalsprekers (91 vragen, 5 over veiligheid) | zie `vertaalcontrole.md` |
+| ✅ | Pilot gestart (15 oktober 2026, LinkedIn); code per bericht, niet openbaar | loopt |
+| ⏳ | Nieuwe zinnen opnemen na elke merge met nieuwe Nederlandse tekst | jij: workflow draaien, zie onderaan |
+| ⏳ | Vertalingen laten nakijken door moedertaalsprekers | zie `vertaalcontrole.md` |
 | ⏳ | Werkvloer-tips laten nakijken door FNV / Juridisch Loket / FairWork | zie `juridische-check.md` |
-| ⏳ | Pilot met 5–10 leerders | zie `pilot.md` |
+| ⏳ | Werkregels aanzetten (`RULES_TRACK`) | na de controle, zie hieronder |
+| ⏳ | Regio Zuid-Limburg aanzetten (`REGIONS_LIVE`) | na controle van de sociale kaart, zie hieronder |
 
 ## Domein koppelen (vloertaal.nl)
 
@@ -106,6 +107,30 @@ Daarna een gewone merge naar `main`; Vercel publiceert vanzelf.
 - [ ] `npm test` en `node scripts/max3/count.cjs --matrix` zijn groen.
 
 In GoatCounter verschijnt het spoor als taal `lang-nl`.
+
+## Regio's aanzetten
+
+De regio Zuid-Limburg (wonen en werken in de regio, met de sociale kaart) staat in productie nog
+**uit**. Zolang hij uit staat, wordt het bestand van de regio nooit opgehaald. In ontwikkeling zie je
+hem wel.
+
+**De wijziging (één regel)** in `src/content/regio/index.ts`:
+
+```ts
+export const REGIONS_LIVE: boolean = true;   // was: false
+```
+
+**Eerst afvinken:**
+
+- [ ] Elke regel van de sociale kaart (`src/content/regio/zuid-limburg.ts`) is nagekeken: naam,
+      telefoonnummer, website en wanneer je er terecht kunt. Zet daarna bij elke regel
+      `source: 'official'`. Een test laat de regio pas aangaan als dat bij alle regels zo is.
+- [ ] De ⚖️ in de regiolessen (`src/content/regio/zuid-limburg-regels.ts` en `zuid-limburg.ts`) zijn
+      nagekeken, net als bij Werkregels.
+- [ ] De dialectwoorden zijn nagekeken (bijvoorbeeld door Mestreechter Taol).
+- [ ] In `tests/regio.test.ts` staat een test die controleert dat de regio's nog uit staan
+      (`expect(REGIONS_LIVE).toBe(false)`). Pas die in dezelfde wijziging aan.
+- [ ] Draai **Record ElevenLabs voices**: de zinnen van de regio worden altijd al meegenomen.
 
 ## Na elke merge naar main
 
