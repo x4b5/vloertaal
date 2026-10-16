@@ -13,6 +13,8 @@ import { hasPicture, lookKey } from './wordPicture';
 import { type SpeakItem, withSpeaking } from './speaking';
 import { nearSynonyms } from '../content/synonyms';
 import { DAILY_ID } from './spaced';
+import { regionTaalLessons } from '../content/regio';
+import { type LessonSaying, sayingForLesson, sayingQuestion } from '../content/sayings';
 
 export type Exercise =
   | { kind: 'intro'; word: Word }
@@ -33,6 +35,9 @@ export type Exercise =
   | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[]; reverse?: true }
   /** "How it works here": a workplace-culture card (not graded). */
   | { kind: 'tip'; tip: CultureTip }
+  /** A saying in a lesson of another topic (src/content/sayings.ts): "Zo zeggen ze het". Not graded;
+   *  a "What does she mean?" situation (sayingQuestion) follows it. */
+  | { kind: 'saying'; saying: LessonSaying }
   /** "What do you do?": the tip's situation with shuffled options. */
   | { kind: 'situation'; tip: CultureTip; options: CultureTip['options'] }
   /** "Say it": hear the Dutch, record yourself, compare, rate yourself. Never graded (lib/speaking.ts). */
@@ -74,12 +79,12 @@ export function choicePictures(answer: Word, options: readonly Word[]): boolean[
   return options.map((o) => hasPicture(answer) && hasPicture(o));
 }
 
-/** Intros, tips and speaking practice are not graded; every other exercise is. In a rules
+/** Intros, tips, sayings and speaking practice are not graded; every other exercise is. In a rules
  *  lesson: true/false, what do you do, who do you ask, the payslip and the card are; a story, a rule card
  *  and a model sentence just go on. */
 export function isGraded(ex: Exercise): boolean {
   if (isRuleExercise(ex)) return GRADED_RULE_KINDS.includes(ex.kind);
-  return ex.kind !== 'intro' && ex.kind !== 'tip' && ex.kind !== 'speak';
+  return ex.kind !== 'intro' && ex.kind !== 'tip' && ex.kind !== 'saying' && ex.kind !== 'speak';
 }
 
 /** Same answer, near-synonyms (content/synonyms.ts), or the same (or a near-identical) picture:
@@ -367,15 +372,20 @@ function hashText(text: string): number {
 }
 
 let names: Set<string> | null = null;
+/** How many regional lessons `names` was made with: a region loaded later adds its names. */
+let namesWith = 0;
 /**
- * Proper names in the course ("Ali", "Mark"): words written with a capital in the middle of a
- * sentence (not after a full stop). A name offered as a wrong word keeps its capital.
+ * Proper names in the course ("Ali", "Mark", and a region's "Duitsland"): words written with a
+ * capital in the middle of a sentence (not after a full stop). A name offered as a wrong word
+ * keeps its capital, and a name is never written small as the first tile.
  */
 export function courseNames(): Set<string> {
-  if (names) return names;
+  const region = regionTaalLessons();
+  if (names && namesWith === region.length) return names;
   names = new Set();
+  namesWith = region.length;
   const texts = [
-    ...allLessons.flatMap((l) => [...l.sentences.map((s) => s.nl), ...l.words.map((w) => w.nl)]),
+    ...[...allLessons, ...region].flatMap((l) => [...l.sentences.map((s) => s.nl), ...l.words.map((w) => w.nl)]),
     ...allDialogues.flatMap((d) => [d.prompt.nl, d.reply.nl]),
     ...allReplies.map((r) => r.nl),
   ];
@@ -406,8 +416,8 @@ export const MATCH_ASKED = 2;
  * to step so the wrong words keep changing. Near the end, with no later words left, both are
  * extras. None of them is the right word or one letter or a stem apart from it ("je" / "ja"),
  * and the two wrong ones never look alike either. At the start of the sentence every option
- * starts with a capital, so the capital gives nothing away; further on the extras are lower case
- * (names keep their capital). Pure and seeded by the sentence (and `salt`, which a retry
+ * starts with a capital, so the capital gives nothing away (the screen writes them all small:
+ * tileLabel); further on the extras are lower case (names and abbreviations keep their capitals). Pure and seeded by the sentence (and `salt`, which a retry
  * changes), so the same sentence always offers the same words.
  */
 export function buildSteps(nl: string, tiles: readonly string[], n = 3, salt = 0): string[][] {
@@ -425,7 +435,7 @@ export function buildSteps(nl: string, tiles: readonly string[], n = 3, salt = 0
   const off = Math.floor(rng() * Math.max(1, order.length));
   const cap = (w: string) => w.charAt(0).toUpperCase() + w.slice(1);
   // Further on the extras are lower case, except a name ("Ali" never becomes "ali").
-  const lower = (w: string) => (courseNames().has(w) ? w : w.toLowerCase());
+  const lower = (w: string) => (courseNames().has(w) || /^\p{Lu}{2,}/u.test(w) ? w : w.toLowerCase());
   return real.map((word, i) => {
     const later = shuffle(real.slice(i + 1).filter((w) => w.toLowerCase() !== word.toLowerCase()), rng).map((w) => (i === 0 ? cap(w) : w));
     const rotated = order.map((_, k) => order[(off + i + k) % order.length]).map((w) => (i === 0 ? cap(w) : lower(w)));
@@ -445,6 +455,25 @@ export function buildSteps(nl: string, tiles: readonly string[], n = 3, salt = 0
     return shuffle([word, ...picked], rng);
   });
 }
+
+/**
+ * How a word option of a built sentence is written on its tile. At the first place every option
+ * comes with a capital (buildSteps), so no capital gives the answer away; on screen they are all
+ * written small instead ("zet", "de", "vakken", not "Zet", "De", "Vakken"), and only the word
+ * placed first in the sentence gets its capital (the answer line shows the sentence's own words).
+ * A name or an abbreviation keeps its capitals ("Ali", "BSN"); when the sentence itself starts
+ * with one, the first options stay as they are (all with a capital), so the capital still
+ * gives nothing away.
+ */
+export function tileLabel(tile: string, step: number, sentenceNl: string): string {
+  if (step > 0) return tile;
+  const first = tokenize(sentenceNl)[0] ?? '';
+  if (!plainCapital(first)) return tile;
+  return plainCapital(tile) ? tile.charAt(0).toLowerCase() + tile.slice(1) : tile;
+}
+
+/** A word written with only its first letter as a capital, and not a name of the course ("Zet", "Ik", not "Ali" or "BSN"). */
+const plainCapital = (w: string) => /^\p{Lu}[\p{Ll}'’-]*$/u.test(w) && !courseNames().has(w);
 
 /** The exercise kinds a review rotates through, per word (see reviewKind). */
 export const REVIEW_KINDS = ['meaning', 'listen', 'dutch', 'type'] as const;
@@ -680,7 +709,11 @@ function reverseDialogue(lesson: Lesson): Dialogue | undefined {
  * quiet ("Without sound"): every listening exercise becomes a reading one on the same word, so
  * the lesson keeps its length and nothing needs to be heard.
  */
-export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice }): Exercise[] {
+/**
+ * `sayings`: the learner has done the first lesson of "Uitdrukkingen en gezegden" (SAYINGS_FROM),
+ * so a lesson with a saying of its own (src/content/sayings.ts) shows it near the end.
+ */
+export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice; sayings?: boolean }): Exercise[] {
   // The work-rules track: a lesson of steps (nothing in it needs to be heard, so "Without
   // sound" and speaking practice change nothing).
   if (lesson.steps?.length) return buildRuleLesson(lesson, { seed: opts.seed, review: opts.review });
@@ -804,6 +837,16 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     else out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
   });
 
+  // A saying that fits this lesson's topic, after the sayings unit: its card, then "What does she
+  // mean?". Only in the lesson itself (not when it is repeated as a review), and from its own
+  // generator, so every other exercise stays the same with or without it.
+  const saying = opts.sayings && !opts.review ? sayingForLesson(lesson.id) : undefined;
+  if (saying) {
+    const question = sayingQuestion(saying);
+    const sayRng = createRng(((opts.seed ?? 0) ^ 0x5a1d) >>> 0);
+    out.push({ kind: 'saying', saying }, { kind: 'situation', tip: question, options: shuffle(question.options, sayRng) });
+  }
+
   // Later units: the other way round, near the end (in the place of the second listening
   // question; the sentence built by ear is listening practice too): the reply is given, pick
   // the question.
@@ -814,7 +857,10 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // The written-word options for "hear and pick" come from their own generator, so the rest of
   // the lesson (and a saved place in it) stays the same as before they existed.
   const pickRng = createRng(((opts.seed ?? 0) ^ 0x5eed) >>> 0);
-  out.push(opts.quiet ? { kind: 'meaning', word: t1, options: options(t1, lesson, rng) } : { kind: 'type', word: t1, options: options(t1, lesson, pickRng) });
+  // A lesson with nothing short enough to type (only long sayings): heard and picked instead.
+  out.push(opts.quiet ? { kind: 'meaning', word: t1, options: options(t1, lesson, rng) }
+    : typable(t1) ? { kind: 'type', word: t1, options: options(t1, lesson, pickRng) }
+    : { kind: 'listen', word: t1, options: options(t1, lesson, pickRng) });
   // Speaking practice (Settings, on by default; never "Without sound"): one "say it" near the
   // end, placed after the rest is built so the other exercises stay the same with or without it.
   if (opts.speak && !opts.quiet) return withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);

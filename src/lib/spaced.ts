@@ -35,7 +35,15 @@ export function addDays(day: string, n: number): string {
 }
 
 // With the words of the regions' lessons (src/content/regio): they come back like any other word.
-const wordById = new Map([...allWords, ...regionTaalLessons().flatMap((l) => l.words)].map((w) => [w.id, w]));
+// A region's file loads late (only for a learner of that region): rebuilt when one comes in.
+let wordIndex: { regions: number; byId: Map<string, Word> } | null = null;
+function wordById(): Map<string, Word> {
+  const regionLessons = regionTaalLessons();
+  if (wordIndex?.regions !== regionLessons.length) {
+    wordIndex = { regions: regionLessons.length, byId: new Map([...allWords, ...regionLessons.flatMap((l) => l.words)].map((w) => [w.id, w])) };
+  }
+  return wordIndex.byId;
+}
 
 /**
  * After a lesson: new items get a card (back tomorrow); an item answered wrong goes back to box 1.
@@ -95,8 +103,9 @@ export function dueIds(cards: Cards, today: string, track: Track = 'taal'): stri
 export function dailyWordIds(cards: Cards, today: string): string[] {
   const due = dueIds(cards, today).slice(0, DAILY_MAX);
   if (!due.length || due.length >= DAILY_MIN) return due;
+  const words = wordById();
   const soon = Object.entries(cards)
-    .filter(([id, c]) => c.due > today && wordById.has(id))
+    .filter(([id, c]) => c.due > today && words.has(id))
     .sort(([, a], [, b]) => (a.due < b.due ? -1 : a.due > b.due ? 1 : a.box - b.box))
     .map(([id]) => id);
   return [...due, ...soon].slice(0, DAILY_MIN);
@@ -120,7 +129,7 @@ export function dayNumber(day: string): number {
  * review. `day`: today (YYYY-MM-DD); without it the first sentence of each lesson.
  */
 export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Lesson {
-  const words = ids.map((id) => wordById.get(id)).filter((w): w is Word => Boolean(w));
+  const words = ids.map((id) => wordById().get(id)).filter((w): w is Word => Boolean(w));
   const boxes = Object.fromEntries(words.map((w) => [w.id, cards[w.id]?.box ?? 1]));
   const idSet = new Set(ids);
   const n = day ? dayNumber(day) : 0;
@@ -208,7 +217,7 @@ export function gradedStepIds(lesson: Lesson): string[] {
 let stepIndex: { from: Unit[]; regions: number; byId: Map<string, GradedRuleStep> } | null = null;
 function ruleStepById(): Map<string, GradedRuleStep> {
   const from = courseUnits('regels');
-  // The regions' rules units (src/content/regio) register late too, with the track's file.
+  // The regions' rules units (src/content/regio) register late too, with the region's own file.
   const regions = allRegionUnits('regels');
   if (stepIndex?.from !== from || stepIndex.regions !== regions.length) {
     const byId = new Map<string, GradedRuleStep>();
@@ -220,7 +229,10 @@ function ruleStepById(): Map<string, GradedRuleStep> {
 
 /** Is this card one of the track's own (a word, or a rules question)? The two tracks share one box. */
 function knownIn(track: Track): (id: string) => boolean {
-  if (track === 'taal') return (id) => wordById.has(id);
+  if (track === 'taal') {
+    const words = wordById();
+    return (id) => words.has(id);
+  }
   const byId = ruleStepById();
   return (id) => byId.has(id);
 }

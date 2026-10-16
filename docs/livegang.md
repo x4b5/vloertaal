@@ -9,16 +9,17 @@ de 100 GB per maand. Daarboven is Pro nodig (ongeveer $20 per maand) of een ande
 
 | | Wat | Status |
 |---|---|---|
-| ✅ | App werkt, 568 automatische tests, max. 3 tikbare dingen per scherm | klaar |
+| ✅ | App werkt, 873 automatische tests, max. 3 tikbare dingen per scherm | klaar |
 | ✅ | Hosting op Vercel; GitHub draait alleen nog de tests (geen tweede kopie op GitHub Pages) | klaar |
-| ✅ | Instellingen voor `vloertaal.nl` (vercel.json, deelplaatje, canonical, robots, sitemap) | klaar, wacht op domein |
+| ✅ | Domein `vloertaal.nl` gekoppeld (vercel.json, deelplaatje, canonical, robots, sitemap) | klaar |
+| ✅ | Contact `hoi@vloertaal.nl` en privacy op de pagina *Over* | klaar |
 | ✅ | Stemmen: ElevenLabs betaald plan, commercieel gebruik toegestaan | klaar |
-| ⏳ | Domein `vloertaal.nl` aanvragen en koppelen | jij, zie hieronder |
-| ⏳ | Contact en privacy in de app | wacht op naam + e-mailadres |
-| ⏳ | Twee zinnen opnemen ("Zeg het liever direct tegen mij.", "Hallo, ik ben Bram.") | jij: workflow draaien |
-| ⏳ | Vertalingen laten nakijken door moedertaalsprekers (91 vragen, 5 over veiligheid) | zie `vertaalcontrole.md` |
+| ✅ | Pilot gestart (15 oktober 2026, LinkedIn); code per bericht, niet openbaar | loopt |
+| ⏳ | Nieuwe zinnen opnemen na elke merge met nieuwe Nederlandse tekst | jij: workflow draaien, zie onderaan |
+| ⏳ | Vertalingen laten nakijken door moedertaalsprekers | zie `vertaalcontrole.md` |
 | ⏳ | Werkvloer-tips laten nakijken door FNV / Juridisch Loket / FairWork | zie `juridische-check.md` |
-| ⏳ | Pilot met 5–10 leerders | zie `pilot.md` |
+| ✅ | Werkregels staat aan als bèta (16 oktober 2026); de controle door een deskundige loopt nog | bèta, zie hieronder |
+| ⏳ | Regio Zuid-Limburg aanzetten (`REGIONS_LIVE`) | na controle van de sociale kaart, zie hieronder |
 
 ## Domein koppelen (vloertaal.nl)
 
@@ -76,21 +77,22 @@ Een cookiebanner is niet nodig: de app gebruikt geen cookies.
 Tip voor het contactadres: een apart adres zoals `hallo@vloertaal.nl` (een doorstuuradres bij je
 registrar) of een apart Gmail-adres. Zo staat je persoonlijke adres niet in de app.
 
-## Werkregels aanzetten
+## Werkregels (bèta)
 
 Werkregels is het spoor voor mensen die al Nederlands spreken ("Nederlands – ik spreek al
-Nederlands" in de talenlijst). Het is klaar, maar staat in productie nog **uit**. Jij beslist wanneer
-het aangaat. Tot dan zie je het alleen in ontwikkeling, met `?rules=1` achter het adres.
+Nederlands" in de talenlijst). Het staat sinds 16 oktober 2026 **aan als bèta**, zodat anderen het
+kunnen bekijken en nakijken. De app zegt dat zelf:
 
-**De wijziging (één regel)** in `src/lib/track.ts`:
+- in de talenlijst staat "bèta" bij Nederlands;
+- de eerste regel van "Goed om te weten" (Hulp, Over, de eerste les) is `RULES_BETA` in
+  `src/content/regels/disclaimer.ts`: nog een bètaversie, experts kijken het na, fouten naar
+  hoi@vloertaal.nl.
 
-```ts
-export const RULES_TRACK: boolean = true;   // was: false
-```
+Weer uitzetten kan met één regel in `src/lib/track.ts` (`RULES_TRACK = false`).
 
-Daarna een gewone merge naar `main`; Vercel publiceert vanzelf.
-
-**Eerst afvinken:**
+**Als de controle klaar is**, haal je de bèta weg: `RULES_BETA` uit `RULES_DISCLAIMER`, het
+"bèta"-label in `src/components/Screens.tsx` (`lang-nl-beta`), en zet je de datum in `RULES_CHECKED`
+op de datum van de controle. Wat er nagekeken moet worden:
 
 - [ ] Een deskundige (jurist, vakbond of Juridisch Loket) heeft elke ⚖️ nagekeken: de lijst in
       [`werkregels-bronnen.md`](werkregels-bronnen.md) (vooral §5, "Niet geverifieerd") en de
@@ -106,6 +108,30 @@ Daarna een gewone merge naar `main`; Vercel publiceert vanzelf.
 - [ ] `npm test` en `node scripts/max3/count.cjs --matrix` zijn groen.
 
 In GoatCounter verschijnt het spoor als taal `lang-nl`.
+
+## Regio's aanzetten
+
+De regio Zuid-Limburg (wonen en werken in de regio, met de sociale kaart) staat in productie nog
+**uit**. Zolang hij uit staat, wordt het bestand van de regio nooit opgehaald. In ontwikkeling zie je
+hem wel.
+
+**De wijziging (één regel)** in `src/content/regio/index.ts`:
+
+```ts
+export const REGIONS_LIVE: boolean = true;   // was: false
+```
+
+**Eerst afvinken:**
+
+- [ ] Elke regel van de sociale kaart (`src/content/regio/zuid-limburg.ts`) is nagekeken: naam,
+      telefoonnummer, website en wanneer je er terecht kunt. Zet daarna bij elke regel
+      `source: 'official'`. Een test laat de regio pas aangaan als dat bij alle regels zo is.
+- [ ] De ⚖️ in de regiolessen (`src/content/regio/zuid-limburg-regels.ts` en `zuid-limburg.ts`) zijn
+      nagekeken, net als bij Werkregels.
+- [ ] De dialectwoorden zijn nagekeken (bijvoorbeeld door Mestreechter Taol).
+- [ ] In `tests/regio.test.ts` staat een test die controleert dat de regio's nog uit staan
+      (`expect(REGIONS_LIVE).toBe(false)`). Pas die in dezelfde wijziging aan.
+- [ ] Draai **Record ElevenLabs voices**: de zinnen van de regio worden altijd al meegenomen.
 
 ## Na elke merge naar main
 

@@ -1,5 +1,7 @@
-import type { CultureTip } from './culture';
+import { ADVICE_LINE } from './adviceLine';
+import type { CultureTip, SituationAsk } from './culture';
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
+import { sayingsTips, sayingsUnit } from './sayings';
 
 /**
  * Work and rights in the Netherlands: contracts, papers and housing, pay, house rules, rights,
@@ -18,8 +20,8 @@ import type { ChatLine, Dialogue, Lesson, Unit } from './types';
 const line = (id: string, nl: string, en: string): ChatLine => ({ id, nl, en });
 const chat = (prompt: ChatLine, reply: ChatLine): Dialogue => ({ prompt, reply });
 
-/** Closing line of most tips: this is general information, not advice for one person. */
-export const ADVICE_LINE = 'General information. For your situation: ask your employer, the union or the Juridisch Loket.';
+/** Closing line of most tips: this is general information, not advice for one person (src/content/adviceLine.ts). */
+export { ADVICE_LINE };
 /**
  * Closing line of the tips where the employer or agency may itself be the problem (exploitation,
  * housing pressure, dismissal, discrimination): never send the learner back to the employer.
@@ -447,7 +449,7 @@ const coreTips: CultureTip[] = [
     title: 'Holiday pay and minimum wage',
     body: 'You get holiday pay (vakantiegeld): at least 8% of your gross wage. Most employers pay it once a year, in May or June. Your pay may never be lower than the legal minimum wage (minimumloon); for workers under 21 it is lower. The amount changes every year: check it on rijksoverheid.nl. A cao often gives extra pay for overtime or night work.',
     phrase: { id: 'c.extra.p', nl: 'Wanneer krijg ik mijn vakantiegeld?', en: 'When do I get my holiday pay?' },
-    situation: { id: 'c.extra.s', en: 'A colleague says: "In May you get extra money from the boss." What is it?' },
+    situation: { id: 'c.extra.s', en: 'A colleague says: "In May you get extra money from the boss." What is it?', ask: 'which' },
     options: [
       { id: 'c.extra.o1', en: 'Holiday pay: at least 8% of your gross wage.', best: true },
       { id: 'c.extra.o2', en: 'A present, only for the best workers.', best: false },
@@ -576,6 +578,8 @@ const unit = (slug: string, title: string, titleNl: string, emoji: string, color
 /** Closing line: ADVICE_LINE for rights and rules set by law, ABUSE_LINE where the employer may be the problem, HOUSE_LINE for company rules, '' for social norms. */
 /** Dutch said aloud in a situation (a speaker plays it in the character's voice). */
 const SAID: Record<string, string> = { interview: 'Heb je nog vragen?', hours: 'Morgen begin je om half negen.' };
+/** The heading of a situation that does not ask "What do you do?" (see SituationAsk). */
+const ASK: Record<string, SituationAsk> = { texting: 'which', diploma: 'which', hours: 'which', measures: 'whatsay' };
 
 const tipFor = (
   slug: string,
@@ -596,7 +600,7 @@ const tipFor = (
       title,
       body,
       phrase: { id: `c.${slug}.p`, nl, en },
-      situation: { id: `c.${slug}.s`, en: situation, ...(SAID[slug] ? { nl: SAID[slug] } : {}) },
+      situation: { id: `c.${slug}.s`, en: situation, ...(SAID[slug] ? { nl: SAID[slug] } : {}), ...(ASK[slug] ? { ask: ASK[slug] } : {}) },
       options: options.map((o, i) => ({ id: `c.${slug}.o${i + 1}`, en: o, best: i === 0 })),
       why: { id: `c.${slug}.w`, en: why },
     },
@@ -1778,7 +1782,7 @@ const shopUnit = unit('shop', 'In the shop', 'In de winkel', '🛒', '#2a9d8f', 
     'shelves',
     'Shelves and stock',
     [
-      ['schap', 'het schap', 'the shelf (in a shop)', '🗄️'],
+      ['schap', 'het schap', 'the shelf (in a shop)', '🗃️'],
       ['vakkenvullen', 'vakken vullen', 'to stock the shelves', '🥫'],
       ['voorraad', 'de voorraad', 'the stock', '📦'],
       ['houdbaarheidsdatum', 'de houdbaarheidsdatum', 'the best-before date', '📅', false],
@@ -1797,11 +1801,11 @@ const shopUnit = unit('shop', 'In the shop', 'In de winkel', '🛒', '#2a9d8f', 
     'At the checkout',
     [
       ['klant', 'de klant', 'the customer', '🛍️'],
-      ['kassa', 'de kassa', 'the checkout, the till', '🛒'],
-      ['wisselgeld', 'het wisselgeld', 'the change (money you give back)', '🪙'],
+      ['kassa', 'de kassa', 'the checkout, the till', '🏪'],
+      ['wisselgeld', 'het wisselgeld', 'the change (money you give back)', '🫴'],
       ['bonnetje', 'het bonnetje', 'the receipt', '🧾'],
       ['pinnen', 'pinnen', 'to pay by card', '💳'],
-      ['contant', 'contant', 'in cash', '💵'],
+      ['contant', 'contant', 'in cash', '💶'],
     ],
     [
       ['Wilt u pinnen of contant betalen?', 'Would you like to pay by card or in cash?'],
@@ -1817,12 +1821,12 @@ const numbersUnit = unit('numbers', 'Time, money and measures', 'Rekenen: tijd, 
     'hours',
     'Hours and times',
     [
-      ['uur', 'het uur', 'the hour', '🕐', false],
-      ['minuut', 'de minuut', 'the minute', '⏱️', false],
-      ['kwartier', 'het kwartier', 'a quarter of an hour (15 minutes)', '🕒', false],
-      ['halfuur', 'een half uur', 'half an hour (30 minutes)', '🕧', false],
-      ['duren', 'duren', 'to last, to take (time)', '⏳', false],
-      ['optellen', 'optellen', 'to add up', '➕', false],
+      ['uur', 'het uur', 'the hour', '🕐'],
+      ['minuut', 'de minuut', 'the minute', '⏱️'],
+      ['kwartier', 'het kwartier', 'a quarter of an hour (15 minutes)', '🕒'],
+      ['halfuur', 'een half uur', 'half an hour (30 minutes)', '🕧'],
+      ['duren', 'duren', 'to last, to take (time)', '⏳'],
+      ['optellen', 'optellen', 'to add up', '➕'],
     ],
     [
       ['Ik begin om half acht.', 'I start at half past seven (7:30).'],
@@ -1837,7 +1841,7 @@ const numbersUnit = unit('numbers', 'Time, money and measures', 'Rekenen: tijd, 
     [
       ['euro', 'de euro', 'the euro', '💶'],
       ['cent', 'de cent', 'the cent', '🪙'],
-      ['kilo', 'de kilo', 'the kilo', '⚖️'],
+      ['kilo', 'de kilo', 'the kilo', '🏋️'],
       ['liter', 'de liter', 'the litre', '🥛'],
       ['meter', 'de meter', 'the metre', '📏'],
       ['tellen', 'tellen', 'to count', '🔢', false],
@@ -2024,6 +2028,9 @@ export const workUnits: Unit[] = [
   byId('u.pay'),
   { ...byId('u.house'), lessons: [...byId('u.house').lessons, ...houseMore] },
   socialUnit,
+  // Sayings right after "Omgang met collega's": the later lessons each show one saying after it
+  // (src/content/sayings.ts lessonSayings), so it comes before them.
+  sayingsUnit,
   byId('u.rights'),
   byId('u.leave'),
   ...laterUnits,
@@ -2036,7 +2043,7 @@ export const workUnits: Unit[] = [
 const lessonOrder = [toolsUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips].sort(
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...sayingsTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

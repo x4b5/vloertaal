@@ -416,7 +416,8 @@ groen "nieuw" / "gewijzigd" = gewoon nakijken.
   je ze op je loonstrook kunt controleren" (`c.extra.a.why`); "als die er is" bij de vertrouwenspersoon
   (`c.boundaries.b`); valbeveiliging (`fa`/`prs`) en natte vloer (`ti`) uit de vragen hierboven.
 - **Niet bijgewerkt:** `s.translate.3` is in het Nederlands veranderd ("Kunt u in mijn telefoon spreken?" → "Wilt u
-  even tegen mijn telefoon praten?"), maar de vertalingen volgen in alle negen talen nog de oude zin.
+  even tegen mijn telefoon praten?"), maar de vertalingen volgden in alle negen talen nog de oude zin. ✅ aangepast
+  16-10, zie hieronder.
 
 **Aantallen per taal** (sleutels; tussen haakjes alle vormen, dus m/v en meervoud apart):
 
@@ -436,17 +437,29 @@ groen "nieuw" / "gewijzigd" = gewoon nakijken.
 
 **Voor alle talen**
 
-- [ ] `s.translate.3`: opnieuw vertalen (zie hierboven).
-- [ ] `ui.socialMap`: in alle talen "kaart/map van hulp" (خريطة المساعدة, Mapa pomocy, Карта допомоги, Harta
+- [x] `s.translate.3`: opnieuw vertalen (zie hierboven). ✅ aangepast 16-10 (beleefd tegen een onbekende, met
+  "even"; ook de Engelse bron in `work/en.json`: "Could you talk to my phone for a moment?"):
+  `ar` "لو سمحت، هل يمكنك التحدث إلى هاتفي قليلاً؟" · `ti` "በጃኹም፡ ሓንሳብ ናብ ተሌፎነይ ክትዛረቡ ትኽእሉ ዶ?" ·
+  `fa` "می‌شود لطفاً یک لحظه رو به گوشی‌ام صحبت کنید؟" (was تو, nu شما) · `prs` "لطفاً یک لحظه طرف تیلفون من گپ زده
+  می‌توانید؟" · `uk` "Чи не могли б ви хвилинку поговорити в мій телефон?" · `tr` "Bir saniye telefonuma konuşur
+  musunuz?" · `pl` "Czy może pan/pani przez chwilę mówić do mojego telefonu?" · `ro` "Ați putea să vorbiți puțin în
+  telefonul meu?" · `bg` "Бихте ли поговорили за малко в телефона ми?". Geen gesprek of uitlegzin (`learn/*`) verwijst
+  naar deze zin (`c.translate.a.why` gaat over het briefje).
+- [x] `ui.socialMap`: in alle talen "kaart/map van hulp" (خريطة المساعدة, Mapa pomocy, Карта допомоги, Harta
   ajutorului, Yardım haritası, نقشهٔ کمک, ካርታ ሓገዝ …). Het is een lijst met loketten en telefoonnummers, geen kaart.
-  Verwachten mensen een plattegrond?
+  Verwachten mensen een plattegrond? ✅ aangepast 16-10: "waar vind je hulp / hulpadressen" (max. 3 woorden). Engels
+  "Social map" → "Where to get help"; Nederlands blijft "Sociale kaart". `ar` "جهات المساعدة" · `ti` "ቦታታት ሓገዝ" ·
+  `fa` "نشانی‌های کمک" · `prs` "آدرس‌های کمک" · `uk` "Де знайти допомогу" · `tr` "Yardım adresleri" · `pl` "Gdzie
+  szukać pomocy" · `ro` "Unde găsești ajutor" · `bg` "Адреси за помощ". (Het icoon 🗺️ is nog een kaart.)
 
 **Vragen per taal**
 
 - **`ti`**
-  - [ ] `s.hours.1`, `c.hours.a`, `rg.zl.s.1.2`, `c.hours.p`, `c.hours.w`: kloktijden staan weer in woorden
+  - [x] `s.hours.1`, `c.hours.a`, `rg.zl.s.1.2`, `c.hours.p`, `c.hours.w`: kloktijden staan weer in woorden
     ("ሰዓት ሸውዓተን ፍርቅን", "ሰዓት ዓሰርተ"). Eerder zijn uitgeschreven tijden vervangen door cijfers, omdat ze als
-    Ge'ez-tijd gelezen kunnen worden (7 = 13:00). Deze unit gaat juist over tijden. Alleen cijfers?
+    Ge'ez-tijd gelezen kunnen worden (7 = 13:00). Deze unit gaat juist over tijden. Alleen cijfers? ✅ aangepast
+    16-10, alleen cijfers: "ኣብ ሰዓት 7:30 እጅምር።", "ኣብ ሰዓት 16:15።", "ሰዓት 10:00 ቆጸራ ኣለኒ።", "…ማለት ቅድሚ ሰዓት 8:00
+    ፍርቂ ሰዓት?", "«Half negen» ማለት ቅድሚ ሰዓት 9:00 ፍርቂ ሰዓት፡ 8:30 እዩ። …".
   - [ ] `theme.job`, `theme.rights`, `theme.sector`: vormen m / v / x ("ስራሕካ / ስራሕኪ / ስራሕኩም"). De x-vorm
     (meervoud/beleefd) staat er zolang er geen geslacht gekozen is. Natuurlijk als titel? En de vijf andere
     thema's als werkwoordelijk naamwoord ("ብድሕንነት ምስራሕ", "ብሓባር ምስራሕ")?
@@ -456,16 +469,25 @@ groen "nieuw" / "gewijzigd" = gewoon nakijken.
     voor Afghaanse lezers (ook `w.baan`)?
   - [ ] `theme.rights`: "حقوق شما". Het Perzisch (`fa`) vermijdt حقوق omdat het ook "salaris" is; Dari zegt معاش
     voor salaris. Is "حقوق شما" hier duidelijk "je rechten"?
-  - [ ] `rg.zl.c.2.o2`: "سر خود را تکان بدهید" kan knikken of nee schudden zijn. Elders staat nu "به معنای بلی".
+  - [x] `rg.zl.c.2.o2`: "سر خود را تکان بدهید" kan knikken of nee schudden zijn. Elders staat nu "به معنای بلی".
+    ✅ aangepast 16-10: "سر خود را به معنای بلی تکان بدهید و فقط حدس بزنید که چه کنید." (zoals `c.ask.o2`)
   - [ ] `c.checkout.o3`: "یک قطی" voor één blikje; قطی is in de cursus ook "doos". Duidelijk?
 - **`fa`**
-  - [ ] `ui.regionTitle`, `ui.regionHint`, `ui.socialMapHint`, `ui.socialMapWrong`: nieuwe knopteksten staan in تو,
+  - [x] `ui.regionTitle`, `ui.regionHint`, `ui.socialMapHint`, `ui.socialMapWrong`: nieuwe knopteksten staan in تو,
     terwijl de rest van de schermen bij de eerste controle شما is geworden (ook `ui.bramIntro`: "همکار شما"). شما maken?
+    Staat bij controle op 16-10 al in شما ("کجا زندگی می‌کنید؟", "…کجا بروید…", "…ایمیل بزنید."); niets veranderd.
   - [ ] `theme.rights`: "حق‌های شما" (om حقوق = salaris te vermijden). Natuurlijk als titel?
-  - [ ] `rg.zl.c.2.o2`: "سر تکان بده": knikken of nee schudden?
+  - [x] `rg.zl.c.2.o2`: "سر تکان بده": knikken of nee schudden? ✅ aangepast 16-10: "به نشانهٔ تأیید سر تکان بده و
+    فقط حدس بزن چه کار کنی." Nog niet gedaan, zelfde twijfel: `c.ask.o2` "سر تکان بده و سعی کن حدس بزنی." (In
+    `c.understood.o2` maakt «ja, ja» het duidelijk.)
 - **`ar`**
-  - [ ] `ui.streakGrew`, `ui.recordN`, `ui.tomorrowN`, `ui.wordsStrongerN` (en de `*Unit`-labels): de vorm voor 2
+  - [x] `ui.streakGrew`, `ui.recordN`, `ui.tomorrowN`, `ui.wordsStrongerN` (en de `*Unit`-labels): de vorm voor 2
     zet het getal vóór de dualis ("2 يومان", "2 كلمتان"). Dubbel, of goed? Ook 11–99 ("11 يوماً") en 0 ("0 يوم") nakijken.
+    ✅ aangepast 16-10: de vorm `two` is nu de dualis zonder cijfer, zoals in standaard-Arabisch en in de CLDR:
+    "يومان على التوالي! واصل/واصلي هكذا." · "أفضل نتيجة لك: يومان" · "غداً: كلمتان" · "كلمتان أقوى", en ook
+    `ui.wordsLearnedN` "تعلّمت كلمتين" en `ui.streakStopped` "توقفت سلسلتك عند يومين. …". De tests staan dit alleen toe
+    voor Arabisch `two` (`tests/plural.test.ts`, `tests/i18n.test.ts`). Niet veranderd: de `*Unit`-labels ("يومان"
+    onder een groot cijfer, als bijschrift), 11–99 ("11 يوماً", goed) en 0 ("0 يوم"); laten nakijken.
   - [ ] `s.checkout.1`, `s.checkout.2`, `c.shelves.a`: zinnen tegen een klant ("u") in de mannelijke vorm
     (تريد، تفضّل، معك). Goed voor elke klant, of beleefder/neutraal (حضرتك)?
   - [ ] `rg.zl.s.2.2`: "هل يمكن التكلم بالهولندية؟" is onpersoonlijk ("kan er Nederlands gesproken worden?").
@@ -483,16 +505,40 @@ groen "nieuw" / "gewijzigd" = gewoon nakijken.
   - [ ] `rg.zl.c.1.s`, `rg.zl.c.1.o1`, `rg.zl.c.2.b`: "Маастрихт", "Лімбург" in het Cyrillisch, maar "Heerlen" en
     "Zuid-Limburg" in Latijnse letters (`rg.zl.c.1.a`). Overal één manier?
 - **`tr`**
-  - [ ] `rg.zl.c.2.b`: "İşte birçok kişi…": "İşte" kan "hier is…" lezen; bij de eerste controle is dat in ~15
-    teksten "İş yerinde" geworden.
+  - [x] `rg.zl.c.2.b`: "İşte birçok kişi…": "İşte" kan "hier is…" lezen; bij de eerste controle is dat in ~15
+    teksten "İş yerinde" geworden. ✅ aangepast 16-10: "İş yerinde birçok kişi Limburg lehçesiyle konuşur."
   - [ ] `c.checkout.o3`: "bir kutu" voor één blikje bier; "kutu" is in de cursus "doos". Duidelijk?
 - **`ro`**
   - [ ] `ui.dayStreak`, `ui.daysUnit`, `ui.lessonsUnit`, `ui.topicsUnit`: vanaf 20 "de" ("de zile la rând",
     "de lecții"). Natuurlijk als label los van het grote getal?
-  - [ ] `rg.zl.c.2.o2`: "Dai din cap" kan knikken of nee schudden zijn. Beter "Aprobi din cap"?
+  - [x] `rg.zl.c.2.o2`: "Dai din cap" kan knikken of nee schudden zijn. Beter "Aprobi din cap"? ✅ aangepast 16-10:
+    "Aprobi din cap și ghicești ce ai de făcut." Nog niet gedaan, zelfde twijfel: `c.ask.o2` "Dai din cap și încerci să
+    ghicești." (In `c.understood.o2` maakt „ja, ja” het duidelijk.)
 - **`bg`**
   - [ ] `s.checkout.3`, `c.checkout.p`, `c.checkout.b`: "лична карта" (alleen de identiteitskaart) naast "документ"
     in de titel en de andere teksten. Het Nederlandse "ID" is elk identiteitsbewijs. Overal "документ за самоличност"?
-  - [ ] `rg.zl.c.2.o2`: "Кимаш" (knikken). In Bulgarije is knikken van oudsher "nee". Duidelijk dat dit "doen alsof
-    je het snapt" is?
+  - [x] `rg.zl.c.2.o2`: "Кимаш" (knikken). In Bulgarije is knikken van oudsher "nee". Duidelijk dat dit "doen alsof
+    je het snapt" is? ✅ aangepast 16-10: "Кимаш утвърдително и просто гадаеш какво да правиш." ("je knikt
+    instemmend"); de uitleg `rg.zl.c.2.w` eindigt nu met "Тук кимането значи „да, разбрах“." Zo ook in de werkvloertip
+    "Vragen stellen is goed": `c.ask.b` "Ако кимаш утвърдително, без да разбираш, …", `c.ask.o2` "Кимаш утвърдително и
+    се опитваш да познаеш.", `c.ask.w` + "Тук кимането значи „да“ или „разбрах“." Niet veranderd: `c.understood.o2`
+    («ja, ja» maakt het duidelijk) en `c.respect.b` (кимване als groet, geen ja/nee).
   - [ ] `rg.zl.s.1.2`: "Имам час в десет часа": twee keer "час" (afspraak en uur). Natuurlijk?
+
+## Uitdrukkingen en gezegden (`src/i18n/sayings/*.ts`, 16 oktober 2026)
+
+Nieuw, vertaald door AI-agents, nog niet door moedertaalsprekers nagekeken. Zie
+[`uitdrukkingen.md`](uitdrukkingen.md) voor de lijst.
+
+- [ ] **"Letterlijk"** (`w.*.lit`, `zg.*.lit`): echt woord voor woord vertaald, niet vervangen door
+      een uitdrukking uit de eigen taal. De vreemde letterlijke betekenis is juist de bedoeling.
+- [ ] **De betekenis** (`w.*`, `zg.*.m`): klopt die, en is hij eenvoudig genoeg?
+- [ ] **De situaties** (`zg.*.s`, `c.easy.s`, `c.plain.s`): de Nederlandse zin staat er letterlijk in,
+      tussen aanhalingstekens.
+- [ ] **Twijfelpunten van de vertalers:**
+  - fa: de uitdrukkingen gebruiken شما (beleefd). De andere fa-uitleg (tips, werk) gebruikt vaak تو. Eén lijn kiezen?
+  - prs: `tagSaying` en `u.sayings` gebruiken متل (spreekwoord). Is اصطلاح beter?
+  - ar: `tagSaying` is تعبير (uitdrukking), niet مثل (leest zonder klinkertekens ook als "zoals").
+  - ti: `w.tandvlees.lit` (tandvlees), `w.pijpenstelen.lit` (ፒፓ), `zg.zeil.lit` (ሸራ, zeil), `zg.pluis.lit` (ልስሉስ, "zacht" voor "pluizig"), `zg.zeil.o3` en `zg.batterij.lit` (ቻርጅ).
+  - pl: `w.pijpenstelen.lit` zegt "pijpbuisjes" (cybuch is te zeldzaam).
+  - uk, bg, ti, pl, ro: "coach" in `zg.waagt.s` (наставниця, наставничката, ኣሰልጣኒት, doradczyni, consiliera).

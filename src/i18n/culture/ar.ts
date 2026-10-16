@@ -4,6 +4,8 @@ const t: CultureTranslation = {
   ui: {
     cultureBadge: 'هكذا تسير الأمور هنا',
     whatDoYouDo: { m: 'ماذا تفعل؟', f: 'ماذا تفعلين؟' },
+    whatDoYouSay: { m: 'ماذا تقول؟', f: 'ماذا تقولين؟' },
+    whatIsRight: 'ما الصحيح؟',
     sayThis: { m: 'قلها هكذا', f: 'قوليها هكذا' },
     goodChoice: 'اختيار جيد!',
     otherChoice: 'هنا تسير الأمور عادةً بشكل مختلف',

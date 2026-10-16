@@ -4,10 +4,19 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { cultureTips } from '../src/content/culture';
 import { phrasebookExtras, units as courseUnits } from '../src/content/curriculum';
-import { allRegionTips, allRegionUnits } from '../src/content/regio';
+import { allRegionTips, allRegionUnits, isRegionLoaded, REGIONS, registerRegion, setRegionsOn } from '../src/content/regio';
+import zlPack from '../src/content/regio/zuid-limburg-pack';
+import { lessonSayings } from '../src/content/sayings';
 import { tokenize } from '../src/lib/answers';
 import { sayAs } from '../src/lib/sayAs';
 import { BRAM_HELLO, BRAM_VOICE, VOICE_SAMPLE } from '../src/lib/voices';
+
+// The app loads a region's file only when a learner chose it (src/content/regio ensureRegion);
+// here every region is put in place, so its lines are recorded before the region goes on.
+setRegionsOn(true);
+registerRegion(zlPack);
+const missing = REGIONS.filter((r) => !isRegionLoaded(r.id)).map((r) => r.id);
+if (missing.length) throw new Error(`scripts/list-clips.ts: register the region pack of ${missing.join(', ')}`);
 
 // The course, then the regions' language units (src/content/regio): their lines are recorded too.
 const units = [...courseUnits, ...allRegionUnits('taal')];
@@ -29,11 +38,14 @@ for (const u of units)
       add(d.reply.id, d.reply.nl);
     }
   }
-for (const t of [...cultureTips, ...allRegionTips]) {
+for (const t of [...cultureTips, ...allRegionTips()]) {
   add(t.phrase.id, t.phrase.nl);
   // The Dutch quoted in a situation ("Zeg maar je, hoor!"), played beside its text.
   if (t.situation.nl) add(`${t.situation.id}.nl`, t.situation.nl);
 }
+// The sayings in lessons of other topics ("Hou je een oogje in het zeil?"), said by a colleague on
+// the "Zo zeggen ze het" card and in the question after it (src/content/sayings.ts).
+for (const s of lessonSayings) add(`${s.id}.s.nl`, s.nl);
 // Emergency phrases that only live in the phrasebook ("Bel 112!").
 for (const p of phrasebookExtras) add(p.id, p.nl);
 add('x.sample', VOICE_SAMPLE);

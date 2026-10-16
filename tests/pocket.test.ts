@@ -1,11 +1,14 @@
 import { describe, expect, it } from 'vitest';
 import { units } from '../src/content/curriculum';
 import { allRegionUnits } from '../src/content/regio';
+// The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
+import './regionLoaded';
 import { isMixLesson } from '../src/content/review';
 import { helpLanguages } from '../src/i18n/all';
 import { POCKET_SIZE, pocketPhrases, pocketPicks } from '../src/lib/pocket';
 import { tipForLesson } from '../src/content/culture';
 import { readFileSync } from 'node:fs';
+import { SAYINGS_PENDING } from './sayingsPending';
 
 const teaching = (u: (typeof units)[number]) => u.lessons.filter((l) => !isMixLesson(l));
 
@@ -72,6 +75,8 @@ describe('pocket card phrases', () => {
       'Waar woon je?', 'In Heerlen. Ik ben net verhuisd.', 'Sorry, ik praat te snel.', 'Ja, wat langzamer graag.',
       'het gemeentehuis', 'het loket', 'de verhuizing', 'de woningcorporatie', 'de wachtlijst', 'de buurt',
       'het buitenland', 'het carnaval', 'het dialect', 'verstaan',
+      // "Uitdrukkingen en gezegden" (src/content/sayings.ts): recorded on the next 'Record ElevenLabs voices' run.
+      ...SAYINGS_PENDING,
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

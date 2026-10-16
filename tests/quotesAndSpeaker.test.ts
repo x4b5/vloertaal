@@ -21,6 +21,11 @@ describe('a Dutch quote in right-to-left text', () => {
     expect(plain.props.children).toBe('helm');
     expect(plain.props.className).toBeUndefined();
   });
+
+  it('keeps a time or an amount in one piece ("8:30", never "30:8")', () => {
+    expect(bdis('في الساعة 8:30.').map((b) => b.props.children)).toEqual(['8:30']);
+    expect(bdis('يكلف 6,50 يورو').map((b) => b.props.children)).toEqual(['6,50']);
+  });
 });
 
 describe('the speaker of a picture', () => {

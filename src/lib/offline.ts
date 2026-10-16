@@ -10,7 +10,8 @@ import { tokenize } from './answers';
 import { clipUrl, recordedIndexReady } from './audio';
 import { castVoices, type VoiceRef } from './voices';
 import { persistStorage } from './install';
-import { ensureLanguage, isLanguageLoaded, LANG_CODES, loadedPackUrls } from '../i18n';
+import { ensureLanguage, ensureRegionTexts, isLanguageLoaded, isRegionTextsLoaded, LANG_CODES, loadedPackUrls } from '../i18n';
+import { anyRegionLoaded, loadedRegionUrls } from '../content/regio';
 import { loadedPicturesUrl } from '../pictures';
 
 /**
@@ -185,7 +186,9 @@ export function shellUrls(): string[] {
     }
   };
   document.querySelectorAll<HTMLScriptElement>('script[src]').forEach((s) => sameOrigin(s.src));
-  document.querySelectorAll<HTMLLinkElement>('link[href]:is([rel="stylesheet"], [rel="modulepreload"], [rel="manifest"], [rel~="icon"], [rel="apple-touch-icon"])').forEach((l) => sameOrigin(l.href));
+  // (vloertaal-screen: the files of the screens loaded when needed, src/lazyScreens.tsx, which the
+  // build names in index.html: also the ones not opened on this visit, so they open offline too.)
+  document.querySelectorAll<HTMLLinkElement>('link[href]:is([rel="stylesheet"], [rel="modulepreload"], [rel="vloertaal-screen"], [rel="manifest"], [rel~="icon"], [rel="apple-touch-icon"])').forEach((l) => sameOrigin(l.href));
   // Every font file the app declares, also the ones not used yet on this visit (a font face
   // loads only when its characters show up: the emoji font's parts, Polish or Vietnamese
   // letters), so a saved unit never shows empty boxes offline.
@@ -207,8 +210,9 @@ export function shellUrls(): string[] {
       }
     }
   }
-  // The help language's own file (loaded on demand, src/i18n/index.ts), whatever the resource list kept.
-  for (const url of loadedPackUrls()) sameOrigin(url);
+  // The help language's own file (loaded on demand, src/i18n/index.ts), whatever the resource list
+  // kept; and the learner's region's file and its texts (src/content/regio), when a region is on.
+  for (const url of [...loadedPackUrls(), ...loadedRegionUrls()]) sameOrigin(url);
   const pics = loadedPicturesUrl();
   if (pics) sameOrigin(pics);
   for (const e of performance.getEntriesByType?.('resource') ?? []) {
@@ -383,7 +387,7 @@ export async function refreshOfflineShell(): Promise<void> {
  */
 export function warmLanguageCache(): void {
   if (!navigator.serviceWorker?.controller) return;
-  for (const url of [...loadedPackUrls(), loadedPicturesUrl()]) if (url) fetch(url).catch(() => {});
+  for (const url of [...loadedPackUrls(), ...loadedRegionUrls(), loadedPicturesUrl()]) if (url) fetch(url).catch(() => {});
 }
 
 let everyLanguage: Promise<void> | null = null;
@@ -396,10 +400,14 @@ let everyLanguage: Promise<void> | null = null;
 /** The files kept for switching without internet: the nine help languages, plus the Dutch work-rules track while it is offered. */
 const keptCodes = (): readonly UiCode[] => (rulesTrackOn() ? [...LANG_CODES, 'nl'] : LANG_CODES);
 
+/** A help language's files are here: its pack, and its region texts while a region's file is (a learner of a region). */
+const languageHere = (c: UiCode): boolean => isLanguageLoaded(c) && (!anyRegionLoaded() || isRegionTextsLoaded(c));
+
 export function loadEveryLanguage(): Promise<void> {
   const codes = keptCodes();
-  if (codes.every((c) => isLanguageLoaded(c))) return Promise.resolve();
-  everyLanguage ??= Promise.all(codes.map((c) => ensureLanguage(c).catch(() => {}))).then(() => { everyLanguage = null; });
+  if (codes.every(languageHere)) return Promise.resolve();
+  const region = anyRegionLoaded();
+  everyLanguage ??= Promise.all(codes.flatMap((c) => [ensureLanguage(c).catch(() => {}), region ? ensureRegionTexts(c).catch(() => {}) : null])).then(() => { everyLanguage = null; });
   return everyLanguage;
 }
 
@@ -408,7 +416,7 @@ function languagesKept(): boolean {
   const shell = new Set(loadSaved().shell);
   const urls = loadedPackUrls();
   const codes = keptCodes();
-  return codes.every((c) => isLanguageLoaded(c)) && urls.length >= codes.length && urls.every((u) => shell.has(u));
+  return codes.every(languageHere) && urls.length >= codes.length && [...urls, ...loadedRegionUrls()].every((u) => shell.has(u));
 }
 
 /**

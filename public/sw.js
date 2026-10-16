@@ -3,7 +3,7 @@
 // offline" chip under a unit, src/lib/offline.ts) is answered from its own cache first.
 // Bump CACHE when the caching rules change; OFFLINE keeps the learner's saved units across
 // updates and is only changed when its contents would no longer fit the app.
-const CACHE = 'vloertaal-v2';
+const CACHE = 'vloertaal-v3';
 const OFFLINE = 'vloertaal-offline-v1';
 
 const scope = () => self.registration.scope;
@@ -98,5 +98,10 @@ self.addEventListener('fetch', (e) => {
     e.respondWith(audio(req));
     return;
   }
-  e.respondWith(fetch(req).then((res) => keep(req, res)).catch(() => fromCache(req)));
+  // A hashed app file the server no longer has (an old tab after an update): the cached copy, if any.
+  e.respondWith(
+    fetch(req)
+      .then((res) => (!res.ok && url.pathname.includes('/assets/') ? caches.match(req.url).then((hit) => hit || res) : keep(req, res)))
+      .catch(() => fromCache(req)),
+  );
 });

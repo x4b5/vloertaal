@@ -894,7 +894,7 @@ const t: CultureTranslation = {
     'w.vertaling': 'tłumaczenie',
     's.translate.1': 'Tłumaczę to telefonem.',
     's.translate.2': 'Mogę to szybko przetłumaczyć?',
-    's.translate.3': 'Czy może pan/pani powiedzieć to do mojego telefonu?',
+    's.translate.3': 'Czy może pan/pani przez chwilę mówić do mojego telefonu?',
     'c.translate.q': 'Co jest napisane na tej karteczce?',
     'c.translate.a': 'Chwileczkę, przetłumaczę to.',
     'l.understood': 'Rozumieć i być rozumianym',

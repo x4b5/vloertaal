@@ -96,12 +96,14 @@ async function buildRight(page, wrongFirst = 0) {
     const tiles = page.locator('.tile-steps .tile-with-say:not([disabled])');
     const n = await tiles.count();
     const texts = [];
-    for (let i = 0; i < n; i++) texts.push((await tiles.nth(i).innerText()).replace(/[.,!?]/g, '').trim());
+    // Without soft hyphens (long compounds, src/lib/dutch.ts breakable).
+    for (let i = 0; i < n; i++) texts.push((await tiles.nth(i).innerText()).replace(/[.,!?\u00ad]/g, '').trim());
     if (wrongFirst && k === 0) {
       const wrong = texts.map((t, j) => (t.toLowerCase() !== w.toLowerCase() ? j : -1)).filter((j) => j >= 0);
       for (let x = 0; x < wrongFirst; x++) { await tiles.nth(wrong[x % wrong.length]).click(); await settle(page, 150); }
     }
-    const i = texts.findIndex((t) => t === w);
+    // The first word's tiles are written small (src/lib/exercises.ts tileLabel): "draag" for "Draag".
+    const i = texts.findIndex((t) => t === w || (k === 0 && t.toLowerCase() === w.toLowerCase()));
     if (i >= 0) { await tiles.nth(i).click(); await settle(page, 150); }
   }
   await settle(page, 300);
@@ -281,6 +283,8 @@ function defineStates(LANG) {
   add('route:topic-done', shot('topic&cu=u.firstday&state=shelf'), null, { list: true });
   add('route:topic-locked', shot('topic&cu=u.pay&state=mid&access=preview'), null, { list: true });
   add('route:all-topics-tap', shot('all&state=mid'), async (p) => { await tap(p, '.topic-row', 0); await settle(p); }, { list: true });
+  // "Volgorde": the own course in the order of the path (the choice is kept on the device).
+  add('route:all-topics-order', shot('all&state=mid'), async (p) => { await tap(p, '.topics-order-btn', 1); await settle(p); }, { list: true, expect: '.topic-list-order' });
 
   // Lesson exercises: before, after a right tap, after a wrong tap.
   // Shot option order is fixed: dutch -> 3rd right; meaning -> 3rd; listen -> 2nd; type(pick) -> 2nd; chat -> 1st; situation -> 1st.
@@ -296,6 +300,8 @@ function defineStates(LANG) {
   graded('hear-pick', 'type', 1, 0, 'ar');
   graded('chat', 'chat', 0, 1);
   graded('situation', 'situation', 0, 1);
+  // A saying in a later lesson (src/content/sayings.ts): its card, and "What does he mean?".
+  graded('saying-ask', 'saying-ask', 0, 1);
   // With a device voice for the help language: the situation and the tip show the help-language
   // read-aloud (.help-say, counted apart) next to at most one Dutch speaker per item.
   add('lesson:situation-voice', shot('situation'), null, { voices: true, expect: '.help-say' });
@@ -303,6 +309,9 @@ function defineStates(LANG) {
   add('lesson:situation-quote-voice', shot('situation&tip=l.hello'), null, { voices: true, expect: '.situation-quote .speak-glyph' });
   add('lesson:word-card', shot('intro'));
   add('lesson:tip', shot('tip'));
+  add('lesson:saying', shot('saying'));
+  add('lesson:saying-long', shot('saying&saying=l.measures'));
+  add('lesson:word-card-saying', shot('intro&word=w.blad'));
   add('lesson:match', shot('match'));
   add('lesson:match:half', shot('match'), async (p) => { await matchPairs(p, 1); });
   add('lesson:match:done', shot('match'), async (p) => { await matchPairs(p); });

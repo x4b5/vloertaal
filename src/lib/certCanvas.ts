@@ -195,6 +195,9 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   canvas.height = H;
   const ctx = canvas.getContext('2d')!;
   ctx.textBaseline = 'alphabetic';
+  // The sheet is Dutch, left to right, whatever the page's direction: a detached canvas could
+  // otherwise take an Arabic page's right-to-left and turn "16 oktober 2026" round.
+  ctx.direction = 'ltr';
 
   // Kraft border, paper sheet with an ink edge and a thin kraft rule inside.
   ctx.fillStyle = C.kraft;
@@ -365,6 +368,8 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   label('Behaald op', left, footBase - 3.4 * u);
   ctx.fillStyle = C.ink;
   ctx.font = font(700, 2.1 * u);
+  ctx.direction = 'ltr';
+  ctx.textAlign = 'left';
   ctx.fillText(d.date, left, footBase - 0.4 * u);
   const signW = 30 * u;
   const signX = right - 9 * u - signW;

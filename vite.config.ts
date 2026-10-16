@@ -20,6 +20,44 @@ function nonBlockingCss(): Plugin {
   };
 }
 
+/**
+ * The screens loaded when needed (src/lazyScreens.tsx: import() of a src/components/ file) are
+ * named in index.html, as `<link rel="vloertaal-screen" href="…">`: a list the browser does not
+ * fetch (the start stays as small as it can be; the app loads them itself when the phone is idle),
+ * while the service worker keeps them with the app (public/sw.js takes every href of the page) and
+ * "Lessen bewaren" saves them (src/lib/offline.ts, shellUrls). So a screen not opened yet still
+ * opens offline. Each with the files only it needs; not the help languages' files (src/i18n).
+ */
+export function screenChunkFiles(bundle: Record<string, { type: string; fileName: string; isEntry?: boolean; isDynamicEntry?: boolean; facadeModuleId?: string | null; imports?: string[] }>): string[] {
+  const chunks = Object.values(bundle).filter((c) => c.type === 'chunk');
+  const walk = (file: string, into: Set<string>) => {
+    if (into.has(file)) return;
+    into.add(file);
+    for (const dep of bundle[file]?.imports ?? []) walk(dep, into);
+  };
+  const main = new Set<string>();
+  for (const c of chunks) if (c.isEntry) walk(c.fileName, main);
+  const screens = new Set<string>();
+  for (const c of chunks)
+    if (c.isDynamicEntry && c.facadeModuleId && /[\\/]src[\\/]components[\\/]/.test(c.facadeModuleId)) walk(c.fileName, screens);
+  return [...screens].filter((f) => !main.has(f)).sort();
+}
+
+function lazyScreenLinks(): Plugin {
+  return {
+    name: 'vloertaal-lazy-screen-links',
+    apply: 'build',
+    transformIndexHtml: {
+      order: 'post',
+      handler: (html, ctx) => {
+        if (!ctx.bundle) return html;
+        const links = screenChunkFiles(ctx.bundle).map((f) => `<link rel="vloertaal-screen" href="./${f}">`).join('');
+        return html.replace('</head>', `${links}</head>`);
+      },
+    },
+  };
+}
+
 /** vloertaal.nl/nieuw: "Wat is er nieuw?", a plain page made from src/content/updates.ts. */
 function updatesPagePlugin(): Plugin {
   return {
@@ -34,5 +72,17 @@ function updatesPagePlugin(): Plugin {
 // Relative base so the build works on GitHub Pages or any sub-path.
 export default defineConfig({
   base: './',
-  plugins: [react(), nonBlockingCss(), updatesPagePlugin()],
+  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin()],
+  build: {
+    rolldownOptions: {
+      output: {
+        codeSplitting: {
+          // Everything the start needs in one file (index-*.js): without this, the code shared by the
+          // start and a screen loaded later (src/lazyScreens.tsx) or a help language's file would be cut
+          // into many small files the start must fetch too, one more request each on a slow connection.
+          groups: [{ name: 'index', tags: ['$initial'] }],
+        },
+      },
+    },
+  },
 });

@@ -12,11 +12,11 @@ import type { HelpLanguage, UiCode } from '../i18n/types';
 export type Track = 'taal' | 'regels';
 
 /**
- * The work-rules track is built behind this flag: off in production until it launches (M5).
- * Tests and the screenshot harness turn it on with setRulesTrack(true); in development
- * `?rules=1` in the address turns it on for that tab.
+ * The work-rules track is behind this flag. On since 16 October 2026 as a beta: experts still
+ * check the facts (docs/werkregels-bronnen.md), and the track says so (RULES_BETA, the "bèta"
+ * tag beside "Nederlands" in the language list). Tests turn it on or off with setRulesTrack.
  */
-export const RULES_TRACK: boolean = false;
+export const RULES_TRACK: boolean = true;
 
 let forced: boolean | null = null;
 

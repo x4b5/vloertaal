@@ -22,7 +22,7 @@ import { REGIONS } from '../src/content/regio';
 /** Every unit of both courses: the Dutch course and the real work-rules course (not the stub),
  *  with the regions' units of each track (src/content/regio: only in a region's path). */
 const COURSE: Record<Track, string[]> = {
-  taal: [...units.map((u) => u.id), ...REGIONS.flatMap((r) => (r.taalUnit ? [r.taalUnit.id] : []))],
+  taal: [...units.map((u) => u.id), ...REGIONS.flatMap((r) => (r.taalUnitId ? [r.taalUnitId] : []))],
   regels: [...[...rulesUnits, ...sectorRulesUnits].map((u) => u.id), ...REGIONS.flatMap((r) => (r.regelsUnitId ? [r.regelsUnitId] : []))],
 };
 const TRACKS: Track[] = ['taal', 'regels'];
@@ -52,7 +52,7 @@ describe('themes ("hoofdstukken"): every unit in exactly one theme', () => {
 
   it('the eight themes, in the agreed order', () => {
     expect(THEMES.map((t) => `${t.emoji} ${t.titleNl}`)).toEqual([
-      '🟡 Starten', '🦺 Veilig werken', '💼 Werk vinden', '🗓️ Je baan', '🤝 Samenwerken', '⚖️ Je rechten', '🏠 Leven in Nederland', '🏭 Jouw sector',
+      '👋 Starten', '🦺 Veilig werken', '💼 Werk vinden', '🗓️ Je baan', '🤝 Samenwerken', '⚖️ Je rechten', '🏠 Leven in Nederland', '🏭 Jouw sector',
     ]);
     expect(new Set(THEMES.map((t) => t.id)).size).toBe(THEMES.length);
   });
@@ -125,6 +125,55 @@ describe('the screens show the themes as plain headers (never a button)', () => 
     expect(m.match(/class="topic-row/g)).toHaveLength(units.length);
     expect(m).toContain('Pierwsze kroki');
     expect(m).toContain('aria-label="Pierwsze kroki · Starten · 2 / 3 tematy"');
+    // The count is for screen readers only: no "2 / 3" under a header, no check until all are done.
+    const start = m.match(/<li class="theme-head[^"]*" data-theme="theme.start"[\s\S]*?<\/li>/)![0];
+    expect(start).not.toMatch(/\d+ \/ \d+<|rb-count/);
+    expect(start).not.toContain('theme-check');
+    // No route numbers in the rows (grouped by theme they would jump: 09, 18, 22).
+    expect(m).not.toContain('topic-num');
+  });
+
+  it('All topics "Volgorde": the own course in the order of the path, the other sectors under their header', () => {
+    const store = new Map<string, string>([['vloertaal:topicsOrder', 'route']]);
+    const was = (globalThis as { localStorage?: unknown }).localStorage;
+    (globalThis as { localStorage?: unknown }).localStorage = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => store.set(k, v), removeItem: (k: string) => store.delete(k) };
+    try {
+      const p = progress({ sector: 'care' });
+      const m = html(createElement(AllTopics, { progress: p, lang: pl(), onBack: () => {}, onOpen: () => {} }));
+      // Two buttons above the list, "Volgorde" pressed; no theme headers but the other sectors'.
+      expect(m.match(/class="topics-order-btn/g)).toHaveLength(2);
+      expect(m).toMatch(/aria-pressed="true"[^>]*>(?:(?!<\/button>)[\s\S])*Volgorde/);
+      expect(m).toContain('topic-list-order');
+      expect(headers(m)).toEqual(['other']);
+      const { main, other } = coursePlan('care');
+      const rows = [...m.matchAll(/id="unit-([^"]+)"/g)].map((r) => `u.${r[1]}`);
+      expect(rows).toEqual([...main, ...other].map((u) => u.id));
+    } finally {
+      (globalThis as { localStorage?: unknown }).localStorage = was;
+    }
+  });
+
+  it('All topics: a calm check once every topic of a theme is done', () => {
+    const m = html(createElement(AllTopics, { progress: progress({ completed: done('u.firstday', 'u.help', 'u.tools') }), lang: pl(), onBack: () => {}, onOpen: () => {} }));
+    const start = m.match(/<li class="theme-head[^"]*" data-theme="theme.start"[\s\S]*?<\/li>/)![0];
+    expect(start).toContain('theme-head-done');
+    expect(start).toContain('theme-check');
+    expect(start).toContain('aria-label="Pierwsze kroki · Starten · 3 / 3 tematy"');
+  });
+
+  it('"Jouw sector" without a sector: only the sector topics the learner started count', () => {
+    const none = (completed: Record<string, unknown>) => {
+      const m = html(createElement(AllTopics, { progress: progress({ completed }), lang: pl(), onBack: () => {}, onOpen: () => {} }));
+      return m.match(/<li class="theme-head[^"]*" data-theme="theme.sector"[\s\S]*?<\/li>/)![0];
+    };
+    expect(none({})).not.toContain('theme-check');
+    expect(none({})).not.toMatch(/ 6 /);
+    const one = none(done('u.warehouse'));
+    expect(one).toContain('theme-check');
+    expect(one).toMatch(/· 1 \/ 1 /);
+    // With a sector, "Jouw sector" holds only the own topic.
+    const m = html(createElement(AllTopics, { progress: progress({ sector: 'construction', completed: done('u.build') }), lang: pl(), onBack: () => {}, onOpen: () => {} }));
+    expect(m.match(/<li class="theme-head[^"]*" data-theme="theme.sector"[\s\S]*?<\/li>/)![0]).toContain('theme-check');
   });
 
   it('All topics with a sector: "Jouw sector" holds the own unit, the other sectors stay apart', () => {
@@ -139,9 +188,11 @@ describe('the screens show the themes as plain headers (never a button)', () => 
     expect(m).toContain('class="rb-theme"');
     expect(m).toContain('Twoja praca');
     expect(m).toContain('Je baan');
-    expect(m).toMatch(/rb-theme-n" dir="ltr">1 \/ 7</);
     const label = m.match(/<p class="rb-theme"[\s\S]*?<\/p>/)![0];
     expect(label).not.toMatch(/<(button|a)\b/);
+    // No count in the label: the block's own "1 / 3 lessons" is right under it.
+    expect(label).not.toMatch(/\d+ \/ \d+/);
+    expect(label).toContain('aria-label="Twoja praca · Je baan"');
   });
 
   it('the certificates: grouped by theme', () => {
@@ -149,6 +200,9 @@ describe('the screens show the themes as plain headers (never a button)', () => 
     expect(headers(m)).toEqual(['theme.start', 'theme.safe', 'theme.job']);
     plain(m);
     expect(m.match(/class="cert-row"/g)).toHaveLength(3);
+    // No route numbers in the rows; the date in its own left-to-right island (Arabic, Persian).
+    expect(m).not.toContain('cert-row-no');
+    expect(m.match(/class="cert-row-date" lang="nl"><bdi dir="ltr">/g)).toHaveLength(3);
   });
 
   it('the coaches page: grouped by theme, in Dutch', () => {
@@ -181,8 +235,7 @@ describe('the screens show the themes as plain headers (never a button)', () => 
       const m = html(createElement(Route, { progress: nlProgress({ completed: done('r.zoeken'), currentUnit: 'r.contract' }), lang: getHelpLanguage('nl'), onStart: () => {}, onPick: () => {}, onAll: () => {} }));
       const label = m.match(/<p class="rb-theme"[\s\S]*?<\/p>/)![0];
       expect(label).toContain('>Werk vinden<');
-      // Werk vinden: r.zoeken, r.contract and r.stage (Entree addition, docs/entree-aanvulling.md).
-      expect(label).toMatch(/>1 \/ 3</);
+      expect(label).not.toMatch(/\d+ \/ \d+/);
       expect(label).not.toContain('lang="en"');
     });
   });

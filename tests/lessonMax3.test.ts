@@ -36,7 +36,8 @@ describe('build word by word', () => {
           const wrong = options.filter((o) => o !== words[i]);
           for (const w of wrong) expect(nearMiss(w, words[i]), `${sentence.nl}: ${w} / ${words[i]}`).toBe(false);
           if (wrong.length === 2) expect(nearMiss(wrong[0], wrong[1]), `${sentence.nl}: ${wrong.join(' / ')}`).toBe(false);
-          // At the start every option has a capital, so the capital gives nothing away.
+          // At the start every option has a capital, so the capital gives nothing away (the screen
+          // writes them all small: tileLabel, tests/dutchBreak.test.ts).
           if (i === 0) for (const o of options) expect(o[0], sentence.nl).toBe(o[0].toUpperCase());
         });
       }

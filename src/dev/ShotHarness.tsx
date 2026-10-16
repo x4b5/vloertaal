@@ -1,4 +1,5 @@
 import { tipForLesson } from '../content/culture';
+import { sayingForLesson, sayingQuestion } from '../content/sayings';
 import { findLesson } from '../content/curriculum';
 import { useState } from 'react';
 import { LessonPlayer } from '../components/LessonPlayer';
@@ -28,6 +29,7 @@ import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
 import * as kit from '../pictures/kit';
 import { hasPicture } from '../lib/wordPicture';
+import { lessonSayings } from '../content/sayings';
 import { CertEarned, CertificateScreen } from '../components/Certificate';
 import { AllTopics, Route, TopicPage } from '../components/Route';
 import { findUnit } from '../lib/certificate';
@@ -311,7 +313,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
         lesson={picked}
         review={false}
         lang={getHelpLanguage(lang as LangCode, gender)}
-        exercises={buildLesson(picked, { review: false, seed: 1, quiet })}
+        exercises={buildLesson(picked, { review: false, seed: 1, quiet, sayings: q.get('sayings') === '1' })}
         startAt={at}
         onQuit={() => {}}
         onFinish={() => {}}
@@ -343,6 +345,12 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   const speakTip = tipForLesson(q.get('tip') ?? 'l.speakup') ?? tipForLesson('l.speakup')!;
   exercises.tip = { kind: 'tip', tip: speakTip };
   exercises.situation = { kind: 'situation', tip: speakTip, options: speakTip.options };
+  // A saying in a later lesson (src/content/sayings.ts): /?shot=saying, and its question
+  // /?shot=saying-ask; &saying=l.health another lesson's saying (default De klant is koning).
+  const saying = sayingForLesson(q.get('saying') ?? 'l.checkout') ?? sayingForLesson('l.checkout')!;
+  exercises.saying = { kind: 'saying', saying };
+  const sayingAsk = sayingQuestion(saying);
+  exercises['saying-ask'] = { kind: 'situation', tip: sayingAsk, options: sayingAsk.options };
   // Speaking practice: /?shot=speak (idle), speak-rec (recording), speak-compare (after recording),
   // speak-off (no microphone); &item=sentence asks a short sentence instead of a word.
   if (shot.startsWith('speak')) {
@@ -613,6 +621,22 @@ function PicturesSheet() {
           </section>
         );
       })}
+      {/* The "Zo zeggen ze het" card's pictures (src/content/sayings.ts lessonSayings, by saying id). */}
+      <section>
+        <div className="pics-unit"><div><h2 style={{ margin: 0 }}>Zo zeggen ze het</h2><span className="pics-id">lessonSayings (zg.*)</span></div></div>
+        <div className="pics-grid">
+          {lessonSayings.map((s) => (
+            <div key={s.id} className={`pics-cell ${pictures[s.id] ? '' : 'pics-missing'}`}>
+              <div className="pics-row">
+                <WordPicture id={s.id} emoji={s.emoji} size={120} />
+                <WordPicture id={s.id} emoji={s.emoji} size={48} />
+              </div>
+              <span className="pics-nl" lang="nl">{s.nl}</span>
+              <span className="pics-id">{s.id}</span>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

@@ -4,6 +4,8 @@ const t: CultureTranslation = {
   ui: {
     cultureBadge: 'Cum merg lucrurile aici',
     whatDoYouDo: 'Ce faci?',
+    whatDoYouSay: 'Ce spui?',
+    whatIsRight: 'Ce este corect?',
     sayThis: 'Spune așa',
     goodChoice: 'Alegere bună!',
     otherChoice: 'Aici de obicei se face altfel',

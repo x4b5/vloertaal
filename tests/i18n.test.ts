@@ -3,12 +3,15 @@ import { allLessons, teachingLessons, phrasebookExtras, phrasebookIds, findItem,
 import { aboutIds } from '../src/content/about';
 import { cultureIds, cultureTips } from '../src/content/culture';
 import { workIds } from '../src/content/work';
+import { sayingsIds } from '../src/content/sayings';
 import { chatWhyIds } from '../src/content/chatWhy';
 import { getHelpLanguage, gloss, hasGender, helpLanguageSources, helpLanguages, ui } from '../src/i18n/all';
 import { allForms, forGender, GENDERED_LANGS, isPlural, PLURAL_CATEGORIES, uiEn, type LangText } from '../src/i18n/types';
 import { mixLessonFor } from '../src/content/review';
 import { THEMES } from '../src/content/themes';
 import { regionIds } from '../src/content/regio';
+// The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
+import './regionLoaded';
 
 const contentIds = [
   ...units.map((u) => u.id),
@@ -23,6 +26,8 @@ const contentIds = [
   ...cultureIds,
   // Tips of the work-and-rights units (src/content/work.ts).
   ...workIds,
+  // Sayings (src/content/sayings.ts): what their words say, and the sayings in later lessons.
+  ...sayingsIds,
   // The About page (src/content/about.ts).
   ...aboutIds,
   // Why a chat's right reply fits (src/content/chatWhy.ts).
@@ -32,7 +37,7 @@ const contentIds = [
   // Theme names (src/content/themes.ts): the headers of All topics and the home's theme label.
   ...THEMES.map((t) => t.id),
   // The regions (src/content/regio): their lessons and tips, and the Sociale kaart's categories.
-  ...regionIds,
+  ...regionIds(),
 ];
 
 describe('content and translations', () => {
@@ -78,6 +83,8 @@ describe('content and translations', () => {
   /** Every form of a text is filled in (a gendered text has an m and an f, both non-empty). */
   const filled = (t: LangText | undefined) => allForms(t).length > 0 && allForms(t).every((x) => x.trim());
   const placeholders = (x: string) => [...x.matchAll(/\{\w+\}/g)].map((m) => m[0]).sort();
+  /** The Arabic dual (يومان "two days") says the number itself: that one form leaves {n} out (tests/plural.test.ts). */
+  const dualWithoutN = (code: string, c?: string) => code === 'ar' && c === 'two';
 
   for (const lang of helpLanguageSources) {
     it(`${lang.code} translates every UI string and every lesson item`, () => {
@@ -86,7 +93,9 @@ describe('content and translations', () => {
       expect(missingUi).toEqual([]);
       // Templates keep their placeholders, or the number/word would vanish (in every gender form).
       for (const [key, ph] of [['practiseMistakes', '{n}'], ['wordsLearnedN', '{n}'], ['streakGrew', '{n}'], ['whichOneIs', '{word}']] as const) {
-        for (const form of allForms(lang.ui[key])) expect(form, `${lang.code} ${key}`).toContain(ph);
+        const t = lang.ui[key];
+        const forms = isPlural(t) ? PLURAL_CATEGORIES.flatMap((c) => (dualWithoutN(lang.code, c) ? [] : allForms(t[c]))) : allForms(t);
+        for (const form of forms) expect(form, `${lang.code} ${key}`).toContain(ph);
       }
       expect(missingGloss).toEqual([]);
       expect(Object.keys(lang.gloss).filter((id) => !contentIds.includes(id) && !id.endsWith('.mix'))).toEqual([]);
@@ -94,12 +103,12 @@ describe('content and translations', () => {
 
     it(`${lang.code} gender forms keep the same placeholders and only appear where gender matters`, () => {
       // A plural text (src/i18n/types.ts PluralText) is checked form by form: each may be gendered.
-      const texts: [string, LangText | undefined][] = [
-        ...Object.entries(lang.ui).flatMap(([k, t]): [string, LangText | undefined][] =>
-          isPlural(t) ? PLURAL_CATEGORIES.map((c) => [k, t[c]]) : [[k, t]]),
+      const texts: [string, LangText | undefined, string?][] = [
+        ...Object.entries(lang.ui).flatMap(([k, t]): [string, LangText | undefined, string?][] =>
+          isPlural(t) ? PLURAL_CATEGORIES.map((c) => [k, t[c], c]) : [[k, t]]),
         ...Object.entries(lang.gloss),
       ];
-      for (const [key, t] of texts) {
+      for (const [key, t, category] of texts) {
         if (t === undefined || typeof t === 'string') continue;
         // Only languages with grammatical gender carry gendered texts.
         expect(hasGender(lang.code), `${lang.code} ${key}`).toBe(true);
@@ -107,7 +116,7 @@ describe('content and translations', () => {
         // A gendered text with the same m and f is just a string.
         expect(t.m, `${lang.code} ${key}`).not.toBe(t.f);
         // Every form keeps the English placeholders ({n}, {word}): m, f and x alike.
-        const en = placeholders(uiEn[key as keyof typeof uiEn] ?? '');
+        const en = placeholders(uiEn[key as keyof typeof uiEn] ?? '').filter((p) => !(p === '{n}' && dualWithoutN(lang.code, category)));
         for (const form of allForms(t)) expect(placeholders(form), `${lang.code} ${key}`).toEqual(placeholders(t.m));
         if (key in uiEn) expect(placeholders(t.m), `${lang.code} ${key}`).toEqual(en);
       }

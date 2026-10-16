@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { hasClip, setRecordedIndex, type ElevenIndex } from '../src/lib/audio';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
-import { RULES_ABUSE, RULES_ADVICE, RULES_CHECKED, RULES_DISCLAIMER, ruleAdvice, ruleAdviceLine } from '../src/content/regels/disclaimer';
+import { RULES_ABUSE, RULES_ADVICE, RULES_BETA, RULES_CHECKED, RULES_DISCLAIMER, ruleAdvice, ruleAdviceLine } from '../src/content/regels/disclaimer';
 import type { RuleLesson, RuleOption, RuleStep, RuleUnit } from '../src/content/regels/types';
 
 /**
@@ -236,8 +236,13 @@ describe('rules content: key rules and advice', () => {
 
   it('dates the disclaimer', () => {
     expect(RULES_CHECKED).toBe('oktober 2026');
-    expect(RULES_DISCLAIMER).toHaveLength(3);
-    expect(RULES_DISCLAIMER[1]).toContain(RULES_CHECKED);
+    // A beta first: experts still check the facts, so it never says "checked" (only "updated").
+    expect(RULES_DISCLAIMER).toHaveLength(4);
+    expect(RULES_DISCLAIMER[0]).toBe(RULES_BETA);
+    expect(RULES_BETA).toContain('bètaversie');
+    expect(RULES_BETA).toContain('hoi@vloertaal.nl');
+    expect(RULES_DISCLAIMER[2]).toContain(RULES_CHECKED);
+    expect(RULES_DISCLAIMER.join(' ')).not.toContain('Gecontroleerd');
   });
 });
 

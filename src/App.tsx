@@ -8,20 +8,19 @@ import { isPlayable, learnedItems } from './content/courses';
 import { trackOf } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
-import { Admin } from './components/Admin';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
 import { HomeGreeting } from './components/BramSays';
 import { NoVoiceNote, RulesHelp, RulesShelf } from './components/RulesHelp';
-import { Settings } from './components/Settings';
-import { Coaches } from './components/Coaches';
 import { GenderScreen } from './components/Gender';
 import { shouldAskGender } from './lib/askGender';
 import { offersTryLesson, onboardingStep, previousStep, stepIndex, trialDone, trialLessonAllowed, tryLessonId, TRY_LESSON, type OnbStep } from './lib/onboarding';
 import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
-import { KeepScreen, Milestone, StreakStopped, keepOffered } from './components/Milestone';
+// Screens in files of their own (loaded when needed, and in the background after the start).
+import { Admin, Coaches, KeepScreen, Milestone, PocketCardScreen, Settings, StreakStopped, needAtStart, warmScreensLater } from './lazyScreens';
+import { keepOffered } from './lib/keepOffered';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
@@ -34,14 +33,15 @@ import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, daily
 import { gloss } from './i18n';
 import { persistStorage } from './lib/install';
 import { CertEarned, CertificateScreen } from './components/Certificate';
+import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
 import { count, countOpen } from './lib/count';
 import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
 import { applyEnglish, englishLangFor } from './lib/english';
-import { PocketCardScreen } from './components/PocketCard';
 import { SocialMap, SocialMapLink } from './components/SocialMap';
 import { regionOf, type RegionChoice } from './content/regio';
+import { ensureRegionFor, regionReady } from './lib/region';
 
 type View =
   | { name: 'home' }
@@ -101,6 +101,9 @@ const restored = (): View => {
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 /** A coach link (?unit=pay) asks to open the path at that unit; read once at start. */
 const linkedUnit = takeLinkedUnit();
+// The first screen's own file, when it has one (src/lazyScreens.tsx): main.tsx renders once it is here,
+// so the splash stays up meanwhile. 'stopped': the streak stopped, its page shows on the home first.
+needAtStart(adminRequested() ? 'admin' : coachesRequested() ? 'coaches' : linkedUnit ? 'home' : restored().name, settleStreak(loadProgress(), new Date()).broken ? 'stopped' : '');
 
 /**
  * The saved progress, brought up to date for today: a free day covers one missed day; when the
@@ -324,6 +327,19 @@ export default function App() {
     window.addEventListener('online', back);
     return () => window.removeEventListener('online', back);
   }, [langFailed]);
+  // The learner's region (src/content/regio): its own file and its texts in the help language load
+  // on demand, only while the regions are on (src/lib/region.ts); the texts also while Settings is
+  // open (its row "Waar woon je?"). Until they are here the app works without them: the path
+  // without the region's unit, the Hulp tab without the map. At start main.tsx waits for them.
+  const [, setRegionTry] = useState(0);
+  const askingRegion = view.name === 'settings';
+  const regionHere = regionReady(progress.region, progress.helpLang, askingRegion);
+  useEffect(() => {
+    if (regionHere) return;
+    let live = true;
+    ensureRegionFor(progress.region, progress.helpLang, askingRegion).then(() => { if (live) setRegionTry((n) => n + 1); }, () => {});
+    return () => { live = false; };
+  }, [progress.region, progress.helpLang, askingRegion, regionHere]);
   // The word pictures (their own file, loading since the start): every screen after the language page has them.
   const picsReady = usePicturesLoaded();
   useEffect(() => {
@@ -424,12 +440,17 @@ export default function App() {
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
   /** "Waar woon je?" (Settings only): the region's lessons come in or go out of the path. */
   const setRegion = (region: RegionChoice) => setProgress((p) => ({ ...p, region }));
-  /** The learner's region (src/content/regio), for its Sociale kaart on the Hulp tab. */
+  /** The learner's region (src/content/regio), for its Sociale kaart on the Hulp tab (once its file is here). */
   const region = regionOf(progress.region);
   const mapLink = region ? <SocialMapLink region={region} lang={lang} onOpen={() => go({ name: 'socialmap' })} /> : undefined;
 
   // "Keep lessons on this phone" (Settings → This phone): the current topic is kept by itself.
   useAutoOffline(progress, access);
+  // The other screens' files, a few seconds after the start (each then opens at once, also offline later).
+  useEffect(() => {
+    const cancel = warmScreensLater();
+    return cancel;
+  }, []);
 
   if (coachDirect && view.name !== 'admin') {
     // Back leaves the coaches' page for the app itself (a learner on this phone, or its first run).
@@ -557,6 +578,7 @@ export default function App() {
           onFinish={finish}
           resumable={!daily}
           sector={progress.sector}
+          sayings={Boolean(progress.completed[SAYINGS_FROM])}
         />
       );
     }
@@ -707,7 +729,7 @@ export default function App() {
         </>
       );
     case 'socialmap':
-      // Back from a region switched off meanwhile: the Hulp tab.
+      // Back from a region switched off meanwhile (or its file not here): the Hulp tab.
       if (!region) return null;
       return (
         <>

@@ -22,7 +22,10 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     expect(abstract).toContain('w.recht');
     expect(abstract).toContain('w.premie');
     expect(abstract).toContain('w.eerlijk');
-    expect(abstract.length).toBe(111);
+    // 105: the six words of l.hours (u.numbers) got pictures (drawn clocks, ⏱️ ⏳ ➕).
+    expect(abstract.length).toBe(105);
+    const { lesson: hours } = findLesson('l.hours')!;
+    expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).
     for (const w of allWords) expect(w.emoji, w.id).toBeTruthy();
   });

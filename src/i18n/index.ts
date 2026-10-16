@@ -1,6 +1,7 @@
 import { mixLessonId, relatedUnits } from '../content/review';
 import { langMeta, languageMeta } from './meta';
-import type { LanguagePack } from './packs/types';
+import type { LanguagePack, RegionTextPack } from './packs/types';
+import type { CultureTranslation } from './culture/types';
 import type { Gender, HelpLanguage, HelpLanguageSource, LangCode, LangText, PluralCategory, PluralForms, UiCode, UiKey, UiText } from './types';
 import { forGender, GENDERED_LANGS, isPlural, PLURAL_CATEGORIES, uiEn } from './types';
 
@@ -26,19 +27,41 @@ const loaders: Record<UiCode, () => Promise<{ default: LanguagePack }>> = {
   nl: () => import('./packs/nl'),
 };
 
+/**
+ * The region texts (src/i18n/regio/<lang>.ts) are a file of their own per help language, loaded
+ * only while the regions are on and needed (ensureRegionTexts: a learner of a region, or the
+ * Settings row "Waar woon je?"), so no language's file carries them. The Dutch track has none
+ * (its screens are Dutch already).
+ */
+const regionLoaders: Partial<Record<UiCode, () => Promise<{ default: RegionTextPack }>>> = {
+  ar: () => import('./packs/regio-ar'),
+  ti: () => import('./packs/regio-ti'),
+  fa: () => import('./packs/regio-fa'),
+  prs: () => import('./packs/regio-prs'),
+  uk: () => import('./packs/regio-uk'),
+  tr: () => import('./packs/regio-tr'),
+  pl: () => import('./packs/regio-pl'),
+  ro: () => import('./packs/regio-ro'),
+  bg: () => import('./packs/regio-bg'),
+};
+
+const packs = new Map<UiCode, LanguagePack>();
 const sources = new Map<UiCode, HelpLanguageSource>();
 const packUrls = new Map<UiCode, string>();
 const pending = new Map<UiCode, Promise<void>>();
+const regionTexts = new Map<UiCode, RegionTextPack>();
+const regionPending = new Map<UiCode, Promise<void>>();
+const NO_TEXTS: CultureTranslation = { ui: {}, gloss: {} };
 
-/** Workplace-culture, work-and-rights, About, learning and region texts live in their own files; merge them in. */
-function merge(p: LanguagePack): HelpLanguageSource {
+/** Workplace-culture, work-and-rights, About, learning and (once loaded) region texts live in their own files; merge them in. */
+function merge(p: LanguagePack, r: CultureTranslation = NO_TEXTS): HelpLanguageSource {
   const l = p.base;
   const mix = l.ui.mixLesson ?? uiEn.mixLesson;
   return {
     ...l,
-    ui: { ...l.ui, ...p.culture.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui, ...p.regio.ui },
+    ui: { ...l.ui, ...p.culture.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui, ...p.sayings.ui, ...r.ui },
     gloss: {
-      ...l.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.about.gloss, ...p.learn.gloss, ...p.regio.gloss,
+      ...l.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.about.gloss, ...p.learn.gloss, ...p.sayings.gloss, ...r.gloss,
       // Every unit's "Mixed review" lesson shares one title.
       ...Object.fromEntries(Object.keys(relatedUnits).map((id) => [mixLessonId(id), isPlural(mix) ? mix.other : mix])),
     },
@@ -48,8 +71,21 @@ function merge(p: LanguagePack): HelpLanguageSource {
 /** Puts a loaded pack in place (also used by src/i18n/all.ts, which loads every pack at once for tests). */
 export function registerPack(pack: LanguagePack): void {
   const code = pack.base.code;
-  sources.set(code, merge(pack));
+  packs.set(code, pack);
   packUrls.set(code, pack.url);
+  rebuild(code);
+}
+
+/** Puts a help language's region texts in place (merged into its pack now, or when that loads). */
+export function registerRegionTexts(pack: RegionTextPack): void {
+  regionTexts.set(pack.code, pack);
+  rebuild(pack.code);
+}
+
+function rebuild(code: UiCode): void {
+  const pack = packs.get(code);
+  if (!pack) return;
+  sources.set(code, merge(pack, regionTexts.get(code)?.texts));
   for (const key of [...cache.keys()]) if (key.startsWith(`${code}:`)) cache.delete(key);
 }
 
@@ -71,9 +107,30 @@ export function ensureLanguage(code: UiCode | null | undefined): Promise<void> {
   return p;
 }
 
-/** The files of the packs loaded on this visit: saved with the app for offline use (src/lib/offline.ts). */
+/** Are a help language's region texts here (or does it have none: English only, the Dutch track)? */
+export function isRegionTextsLoaded(code: UiCode | null | undefined): boolean {
+  return !code || !regionLoaders[code] || regionTexts.has(code);
+}
+
+/**
+ * Loads a help language's region texts (once; again after a failure). The caller decides that they
+ * are needed (src/lib/region.ts): never while the regions are off, so nothing is fetched then.
+ */
+export function ensureRegionTexts(code: UiCode | null | undefined): Promise<void> {
+  const load = code ? regionLoaders[code] : undefined;
+  if (!code || !load || regionTexts.has(code)) return Promise.resolve();
+  let p = regionPending.get(code);
+  if (!p) {
+    p = load().then((m) => registerRegionTexts(m.default)).finally(() => regionPending.delete(code));
+    regionPending.set(code, p);
+  }
+  return p;
+}
+
+/** The files of the packs loaded on this visit: saved with the app for offline use (src/lib/offline.ts).
+ *  The region texts loaded on this visit too (each is a file of its own). */
 export function loadedPackUrls(): string[] {
-  return [...packUrls.values()].filter((u) => /^https?:/.test(u));
+  return [...packUrls.values(), ...[...regionTexts.values()].map((r) => r.url)].filter((u) => /^https?:/.test(u));
 }
 
 /** The loaded help languages' sources, in picker order (checks and tests; see src/i18n/all.ts). */

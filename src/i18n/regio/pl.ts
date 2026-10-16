@@ -11,7 +11,7 @@ const t: CultureTranslation = {
     regionHint: 'Mieszkasz albo pracujesz w regionie Zuid-Limburg? Wtedy dostajesz dodatkowe lekcje o swoim regionie. To zostaje w twoim telefonie. Nigdzie tego nie wysyłamy.',
     regionOther: 'Gdzie indziej / wolę nie mówić',
     regionNone: 'Nie wybrano',
-    socialMap: 'Mapa pomocy',
+    socialMap: 'Gdzie szukać pomocy',
     socialMapHint: 'Gdzie iść w jakiej sprawie. Dotknij wiersza, żeby zadzwonić albo otworzyć stronę.',
     socialMapNote: 'Ogólne informacje, nie porada. Nazwy, numery i strony mogą się zmienić.',
     socialMapWrong: 'Coś się nie zgadza? Napisz e-mail na hoi@vloertaal.nl.',

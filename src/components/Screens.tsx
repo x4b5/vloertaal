@@ -107,6 +107,8 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
             <span className="lang-native">{NL_META.nativeName}</span>
             <span className="lang-en lang-nl-sub">{NL_META.name}</span>
           </span>
+          {/* Werkregels is a beta (src/content/regels/disclaimer.ts RULES_BETA): said here too, where it is chosen. */}
+          <span className="beta-chip lang-nl-beta">bèta</span>
           {current === 'nl' && <CheckIcon size={20} className="lang-check" />}
         </button>
       )}
