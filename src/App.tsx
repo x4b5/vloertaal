@@ -35,7 +35,9 @@ import { persistStorage } from './lib/install';
 import { CertEarned, CertificateScreen } from './components/Certificate';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
-import { count, countOpen } from './lib/count';
+import { count, countOpen, quarterOf } from './lib/count';
+import { testerMode } from './lib/report';
+import { setReloadWhen } from './lib/appUpdate';
 import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
 import { applyEnglish, englishLangFor } from './lib/english';
@@ -92,11 +94,13 @@ const current = (): Entry | null => {
   const st = history.state as Partial<Entry> | null;
   return st && st.view ? (st as Entry) : null;
 };
+/** A screen a reload would not bring back: a lesson, its result and what follows it, the admin page. */
+const passing = (v: View) => v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'admin'
+  || (v.name === 'phrasebook' && Boolean(v.streakUp || v.cert));
 /** After a reload: back on the screen you were on, but a lesson or its result starts over at home. */
 const restored = (): View => {
   const v = current()?.view;
-  return !v || v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'admin'
-    || (v.name === 'phrasebook' && (v.streakUp || v.cert)) ? HOME : v;
+  return !v || passing(v) ? HOME : v;
 };
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 /** A coach link (?unit=pay) asks to open the path at that unit; read once at start. */
@@ -147,6 +151,8 @@ export default function App() {
   const [lessonBack, setLessonBack] = useState(0);
   const viewRef = useRef(view);
   viewRef.current = view;
+  // A new version is loaded only at a calm moment: past the first run, on a screen a reload brings back.
+  const calmRef = useRef(false);
   /** Set while the app itself goes back out of a lesson, so that Back is not intercepted. */
   const leaving = useRef(false);
 
@@ -366,6 +372,15 @@ export default function App() {
     if (readyToCount) countOpen({ lang: progress.helpLang, sector: progress.sector });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [readyToCount]);
+  calmRef.current = progress.onboarded && Boolean(access) && !passing(view);
+  useEffect(() => { setReloadWhen(() => calmRef.current); }, []);
+  // A lesson (or today's review) started: counted per lesson, so started, stopped (onQuit below) and
+  // finished show where learners give up.
+  const lessonOpen = view.name === 'lesson' ? view.lessonId : null;
+  useEffect(() => {
+    if (lessonOpen) count('lesson-start', { lang: progress.helpLang, sector: progress.sector, lesson: lessonOpen });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lessonOpen]);
   // Learners from before "Herhaal vandaag" get cards for the words they already learned.
   useEffect(() => {
     if (!progress.cards) setProgress((p) => (p.cards ? p : { ...p, cards: seedCards(p.completed, dayKey(new Date())) }));
@@ -535,7 +550,7 @@ export default function App() {
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
         const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId);
         const dims = { lang: progress.helpLang, sector: progress.sector };
-        count(daily ? 'review-done' : 'lesson-done', dims);
+        count(daily ? 'review-done' : 'lesson-done', daily ? dims : { ...dims, lesson: view.lessonId });
         if (unitDone) count('unit-done', dims);
         // The first finished lesson: ask the browser to keep this site's storage (the progress).
         if (!daily && !Object.keys(progress.completed).length) persistStorage();
@@ -574,11 +589,16 @@ export default function App() {
           backSignal={lessonBack}
           quiet={Boolean(progress.quiet)}
           onQuiet={setQuiet}
-          onQuit={() => { leaving.current = true; back(); }}
+          onQuit={({ step, steps }) => {
+            count('lesson-quit', { lang: progress.helpLang, sector: progress.sector, lesson: view.lessonId, quarter: quarterOf(step, steps) });
+            leaving.current = true;
+            back();
+          }}
           onFinish={finish}
           resumable={!daily}
           sector={progress.sector}
           sayings={Boolean(progress.completed[SAYINGS_FROM])}
+          report={testerMode(access)}
         />
       );
     }

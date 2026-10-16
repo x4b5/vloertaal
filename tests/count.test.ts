@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { count, countOpen, countPaths, mayCount, setCountEnv, setCounting } from '../src/lib/count';
+import { count, countOpen, countPaths, mayCount, quarterOf, setCountEnv, setCounting } from '../src/lib/count';
 
 const store = new Map<string, string>();
 const ls = {
@@ -44,9 +44,28 @@ describe('anonymous counting', () => {
     expect(init).toMatchObject({ mode: 'no-cors', keepalive: true, credentials: 'omit' });
   });
 
-  it('only ever uses language and sector as dimensions', () => {
+  it('only ever uses language and sector as dimensions, and for a lesson which one and where it stopped', () => {
     expect(countPaths('unit-done', {})).toEqual(['/e/unit-done', '/e/unit-done/lang-en', '/e/unit-done/sector-unknown']);
     expect(countPaths('open', { lang: 'x/../?a=1', sector: 'care' })[1]).toBe('/e/open/lang-xa1');
+    expect(countPaths('lesson-start', { lang: 'pl', lesson: 'l.cv' })).toEqual([
+      '/e/lesson-start', '/e/lesson-start/lang-pl', '/e/lesson-start/sector-unknown', '/e/lesson-start/lesson/l-cv',
+    ]);
+    // Each dimension on its own path: a lesson is never combined with a language or a sector.
+    expect(countPaths('lesson-quit', { lang: 'ti', sector: 'care', lesson: 'r.l.loon.1', quarter: 2 })).toEqual([
+      '/e/lesson-quit', '/e/lesson-quit/lang-ti', '/e/lesson-quit/sector-care', '/e/lesson-quit/q2',
+      '/e/lesson-quit/lesson/r-l-loon-1', '/e/lesson-quit/lesson/r-l-loon-1/q2',
+    ]);
+    expect(countPaths('lesson-quit', { lesson: '../x?y', quarter: 9 }).slice(-2)).toEqual(['/e/lesson-quit/lesson/x-y', '/e/lesson-quit/lesson/x-y/q4']);
+  });
+
+  it('the quarter a lesson was stopped in', () => {
+    expect(quarterOf(0, 12)).toBe(1);
+    expect(quarterOf(2, 12)).toBe(1);
+    expect(quarterOf(3, 12)).toBe(2);
+    expect(quarterOf(6, 12)).toBe(3);
+    expect(quarterOf(11, 12)).toBe(4);
+    expect(quarterOf(20, 12)).toBe(4);
+    expect(quarterOf(0, 0)).toBe(1);
   });
 
   it('counts the work-rules track under its own language, lang-nl (no new dimension)', () => {

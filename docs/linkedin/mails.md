@@ -7,7 +7,8 @@ Houd per persoon bij wie de code kreeg en wanneer (een lijstje is genoeg). Dan w
 week een bericht stuurt (mail 5).
 
 Er zijn drie soorten codes:
-- **Volledige versie**: alle lessen. Voor experts, coaches en de pilot.
+- **Volledige versie**: alle lessen. Voor experts, coaches en de pilot. Kandidaten die met de app
+  leren, krijgen een eigen code voor de volledige versie.
 - **Sneak preview**: per thema de eerste les (bij „Jouw sector” de eerste les van iedere sector,
   13 lessen in totaal), plus „Herhaal vandaag”. De rest staat op slot, met „Volledige versie”. Voor
   wie alleen even wil kijken.
@@ -15,6 +16,14 @@ Er zijn drie soorten codes:
 
 Wie een code eerder invulde, houdt het niveau van toen: dat staat op de telefoon. Een code die later
 een sneak preview werd, geeft wie hem al had dus nog steeds de volledige versie.
+
+**Iets melden.** Testers zien in elke les rechtsboven een vlaggetje. Een tik opent een mail aan
+hoi@vloertaal.nl met de plek al ingevuld: les, stap, het woord of de zin, hulptaal, telefoon en
+versie. De tester schrijft er alleen bij wat er mis is (en voegt een schermfoto toe). Leerlingen
+zien het vlaggetje niet. Het staat aan:
+- vanzelf bij de sneak-previewcode;
+- op een telefoon die één keer **vloertaal.nl/?test** opende. Geef experts daarom die link (in de
+  mails hieronder staat hij al). Uitzetten: **vloertaal.nl/?test=0**.
 
 ---
 
@@ -27,8 +36,8 @@ Hoi [naam],
 Leuk dat je Vloertaal wilt proberen! Je toegangscode is: **[CODE]**
 
 Zo begin je:
-1. Open **vloertaal.nl** op je telefoon. De app is gemaakt voor de telefoon. Op een computer werkt hij
-   ook, maar dan zie je hem smal.
+1. Open **vloertaal.nl/?test** op je telefoon. De app is gemaakt voor de telefoon. Op een computer
+   werkt hij ook, maar dan zie je hem smal.
 2. Kies een hulptaal. Wil je zien hoe het voor een leerling is? Kies dan een taal die je niet kent.
 3. Vul de code in als de app erom vraagt.
 4. Doe een paar lessen. Zet het geluid aan: alles wordt voorgelezen.
@@ -38,8 +47,10 @@ Tip: je kunt de app op je beginscherm zetten. In de app staat hoe dat moet, bij 
 Geef de code alsjeblieft niet zelf door. Wie hem ook wil hebben, kan mij mailen. Zo weet ik wie
 meedoet.
 
-Over een week stuur ik je een korte mail met een paar vragen. Zie je eerder iets wat niet klopt?
-Stuur dan gerust meteen een schermfoto.
+Zie je iets wat niet klopt? Tik in de les rechtsboven op het **vlaggetje**. Dan opent een mail aan
+mij met de plek al ingevuld. Schrijf erbij wat je zag; een schermfoto helpt.
+
+Over een week stuur ik je een korte mail met een paar vragen.
 
 Groet,
 [jouw naam]
@@ -53,8 +64,8 @@ Vloertaal · hoi@vloertaal.nl
 
 Hoi [naam],
 
-Dank je wel dat je wilt meekijken. Je toegangscode is: **[CODE]**. Open **vloertaal.nl** op je
-telefoon, kies een hulptaal en vul de code in.
+Dank je wel dat je wilt meekijken. Je toegangscode is: **[CODE]**. Open **vloertaal.nl/?test** op
+je telefoon, kies een hulptaal en vul de code in.
 
 Waar ik vooral benieuwd naar ben:
 - **Niveau:** passen de woorden en zinnen bij beginners (A1 tot A2)? Wat is te moeilijk?
@@ -64,8 +75,8 @@ Waar ik vooral benieuwd naar ben:
   vragen?
 - **Toon:** voelt het volwassen en respectvol, niet kinderachtig?
 
-Je antwoord mag kort zijn, ook in steekwoorden. Een schermfoto met een opmerking is vaak het
-handigst.
+Je antwoord mag kort zijn, ook in steekwoorden. Het handigst: tik in de les rechtsboven op het
+**vlaggetje**. Dan opent een mail aan mij met de plek al ingevuld; schrijf erbij wat je opvalt.
 
 Groet,
 [jouw naam]
@@ -79,8 +90,8 @@ Vloertaal · hoi@vloertaal.nl
 
 Hoi [naam],
 
-Dank je wel dat je wilt meekijken. Je toegangscode is: **[CODE]**. Open **vloertaal.nl** op je
-telefoon, kies een hulptaal en vul de code in.
+Dank je wel dat je wilt meekijken. Je toegangscode is: **[CODE]**. Open **vloertaal.nl/?test** op
+je telefoon, kies een hulptaal en vul de code in.
 
 In de taallessen staan korte tips over hoe het werkt op de Nederlandse werkvloer: ziekmelden,
 loonstrook, proeftijd, veiligheid. Klopt wat daar staat? Is er iets wat te kort door de bocht is?
@@ -107,12 +118,13 @@ Bijlage bij een ja: `docs/juridische-check.md`, `docs/werkregels-bronnen.md` en
 
 Hoi [naam],
 
-Wat fijn dat je wilt helpen! Je toegangscode is: **[CODE]**. Open **vloertaal.nl** op je telefoon,
-kies **[taal]** als hulptaal en vul de code in.
+Wat fijn dat je wilt helpen! Je toegangscode is: **[CODE]**. Open **vloertaal.nl/?test** op je
+telefoon, kies **[taal]** als hulptaal en vul de code in.
 
 Ik heb twee vragen:
 1. **Doe een paar lessen** en let op de teksten in het [taal]. Klinkt iets vreemd, onbeleefd,
-   kinderachtig of gewoon fout? Stuur een schermfoto en schrijf erbij hoe het wel moet.
+   kinderachtig of gewoon fout? Tik rechtsboven op het **vlaggetje** en schrijf in de mail hoe het
+   wel moet.
 2. **Wil je meer doen?** Dan stuur ik je een lijst met vragen over de vertaling, in een Excel-bestand
    met per regel de Engelse tekst en de vertaling. Je kunt het bestand invullen wanneer het je
    uitkomt.

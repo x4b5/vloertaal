@@ -423,6 +423,14 @@ export const RestartIcon = (p: IconProps) => (
   <Svg {...p}><path d="M4.6 12a7.4 7.4 0 1 0 2.2-5.3M6.4 2.8v4.4h4.4" {...stroke} /></Svg>
 );
 
+/** A flag on a pole: "Iets melden" for testers (src/lib/report.ts). */
+export const FlagIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M6 21V4" {...stroke} />
+    <path d="M6 4.5h10.5l-2.4 4 2.4 4H6" {...stroke} />
+  </Svg>
+);
+
 /** Stop: a filled square in a ring (the pause sheet's "Stop lesson"). */
 export const StopIcon = (p: IconProps) => (
   <Svg {...p}>

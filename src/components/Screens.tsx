@@ -508,6 +508,8 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
         </ul>
       )}
       <p className="about-updated muted small"><Bi text={lastUpdatedText(lang)} /></p>
+      {/* Which deploy runs on this phone (the commit; src/lib/appUpdate.ts loads a newer one). */}
+      <p className="about-version muted small" dir="ltr" lang="nl">Versie {(import.meta.env.VITE_BUILD as string | undefined) ?? 'dev'}</p>
     </div>
   );
 }

@@ -32,6 +32,8 @@ export const PASSWORD_HASHES: Record<string, Access> = {
   // A second code (15 October 2026): full at first, the sneak preview since 16 October 2026. Who
   // entered it before keeps full access (the level is stored on the phone, see loadAccess).
   'f439b02cc5e1a2f2e2c089e3998b3b8a1131f0d6b2e0911d4fce946516aac54a': 'sample',
+  // Candidates' code (16 October 2026): the full version, for candidates who learn with the app.
+  '90a18ecf6549148fe4a16dae942bb664d6a5f5e3b0510401058d98b3f73e1764': 'full',
 };
 
 /** Arabic-Indic (٠–٩) and Persian (۰–۹) digits: the low four bits of the code point are the digit. */

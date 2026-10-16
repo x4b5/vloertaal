@@ -72,6 +72,8 @@ function updatesPagePlugin(): Plugin {
 // Relative base so the build works on GitHub Pages or any sub-path.
 export default defineConfig({
   base: './',
+  // Which deploy a tester's report came from (src/lib/report.ts): the commit on Vercel, "dev" here.
+  define: { 'import.meta.env.VITE_BUILD': JSON.stringify((process.env.VERCEL_GIT_COMMIT_SHA ?? 'dev').slice(0, 7)) },
   plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin()],
   build: {
     rolldownOptions: {

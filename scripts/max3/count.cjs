@@ -3,9 +3,9 @@
  * Vloertaal "max 3 choices per screen" counter.
  *
  * Opens each named state in Chromium, counts the visible, enabled, tappable elements (in view or
- * reachable by scrolling), leaves out the fixed chrome (the bottom nav, the lesson ✕ and the back
- * arrow `.chrome-back`) and speaker/play buttons, and prints screen -> count -> elements with
- * PASS/FAIL against the limit.
+ * reachable by scrolling), leaves out the fixed chrome (the bottom nav, the lesson ✕, the back
+ * arrow `.chrome-back` and the testers' flag `.lesson-report`) and speaker/play buttons, and
+ * prints screen -> count -> elements with PASS/FAIL against the limit.
  *
  * A state FAILS when
  *  - more than --limit things can be tapped (list states: see below);
@@ -312,6 +312,8 @@ function defineStates(LANG) {
   add('lesson:tip-voice', shot('tip'), null, { voices: true, expect: '.help-say' });
   add('lesson:situation-quote-voice', shot('situation&tip=l.hello'), null, { voices: true, expect: '.situation-quote .speak-glyph' });
   add('lesson:word-card', shot('intro'));
+  // Tester mode: the "Iets melden" flag in the header (chrome, like the ✕).
+  add('lesson:report', shot('meaning&report=1'), null, { expect: '.player-top .lesson-report' });
   add('lesson:tip', shot('tip'));
   add('lesson:saying', shot('saying'));
   add('lesson:saying-long', shot('saying&saying=l.measures'));
@@ -620,8 +622,9 @@ function countInPage() {
     const cls = (typeof el.className === 'string' ? el.className : '').trim();
     const item = { label: label(el), tag: el.tagName.toLowerCase(), cls: cls.slice(0, 60), inView: r.top < innerHeight && r.bottom > 0, y: Math.round(r.top + scrollY), _el: el };
     if (el.closest('.bottom-nav')) { nav.push(item); continue; }
-    // Fixed chrome: the lesson ✕ and the back arrow (same component, same corner everywhere).
-    if (el.matches('.lesson-close') || (el.closest('.player-top') && el.getAttribute('aria-label') === 'Quit lesson') || el.matches('.chrome-back')) { chrome.push(item); continue; }
+    // Fixed chrome: the lesson ✕ and the back arrow (same component, same corner everywhere), and
+    // the testers' "Iets melden" flag (never shown to learners, src/lib/report.ts).
+    if (el.matches('.lesson-close') || el.matches('.lesson-report') || (el.closest('.player-top') && el.getAttribute('aria-label') === 'Quit lesson') || el.matches('.chrome-back')) { chrome.push(item); continue; }
     if (transparent(el)) { hiddenTappables.push(item); continue; }
     const al = el.getAttribute('aria-label') || '';
     if (/(^|\s)help-say(\s|$)/.test(cls)) { helpSpeakers.push(item); continue; }

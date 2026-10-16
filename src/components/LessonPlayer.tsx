@@ -7,6 +7,7 @@ import { autoSpeak, sounds, speak, speechAvailable, stopSpeech } from '../lib/au
 import { tileDiff } from '../lib/answers';
 import { breakable } from '../lib/dutch';
 import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
+import { deviceLabel, reportMail } from '../lib/report';
 import { dutchUi } from '../lib/track';
 import { chatWhy } from '../content/chatWhy';
 import { sayingQuestion } from '../content/sayings';
@@ -19,7 +20,7 @@ import { Bi, HelpText } from './Bi';
 import { NlPair } from './NlPair';
 import { FlameIcon } from './StreakArt';
 import {
-  BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, KeyboardIcon, ListIcon, PairIcon,
+  BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, FlagIcon, KeyboardIcon, ListIcon, PairIcon,
   PictureIcon, AskIcon, CalcIcon, QuestionIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon,
 } from './Icons';
 import { CardStep, cardTag, ModelLine, PayslipStep, RuleCard, RuleFeedbackBody, ruleAnnouncement, ruleVerdict, SceneCard, TrueFalse, WhatDo, WhoAsk } from './RuleSteps';
@@ -251,7 +252,7 @@ export function LessonPlayer(props: PlayerProps) {
   return <LessonRun {...props} />;
 }
 
-function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, sector, sayings }: {
+function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, sector, sayings, report = false }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -260,7 +261,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   repeats?: Exercise[];
   startAt?: number;
   lang?: HelpLanguage;
-  onQuit: () => void;
+  /** Stop (the pause sheet): where the lesson was, step `step` (0-based) of `steps`, for the count. */
+  onQuit: (at: { step: number; steps: number }) => void;
   /** Goes up by one each time the system Back button is pressed during the lesson. */
   backSignal?: number;
   onFinish: (r: LessonResult) => void;
@@ -278,6 +280,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   sector?: SectorChoice;
   /** The first lesson of "Uitdrukkingen en gezegden" is done: a lesson with a saying of its own shows it. */
   sayings?: boolean;
+  /** Tester mode (src/lib/report.ts): a flag in the header mails this place in the lesson. */
+  report?: boolean;
 }) {
   const persist = resumable && !exercises;
   // An interrupted run of this lesson (same review mode), less than two days old.
@@ -856,6 +860,27 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         <span className="lesson-name">
           <Bi text={gloss(lesson.id, lesson.title, lang)} />
         </span>
+        {/* Testers only: mail this place (lesson, step, word) to hoi@vloertaal.nl. In Dutch: testers write Dutch. */}
+        {report && (
+          <a
+            className="icon-btn lesson-report"
+            href={reportMail({
+              lessonId: lesson.id,
+              title: lesson.title,
+              step: index,
+              steps: queue.length,
+              exercise: ex,
+              lang: lang?.code,
+              device: deviceLabel(navigator.userAgent),
+              build: (import.meta.env.VITE_BUILD as string | undefined) ?? 'dev',
+            })}
+            aria-label="Iets melden"
+            title="Iets melden"
+            lang="nl"
+          >
+            <FlagIcon size={24} />
+          </a>
+        )}
         {/* The sound note hangs just under the header, never over the close button, the sound
             toggle or the progress bar. */}
         {soundNote && (
@@ -966,7 +991,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
           soundOff={soundOff}
           onKeep={() => setAskQuit(false)}
           onSound={() => { setAskQuit(false); setSound(!soundOff); }}
-          onStop={onQuit}
+          onStop={() => onQuit({ step: index, steps: queue.length })}
         />
       )}
     </div>

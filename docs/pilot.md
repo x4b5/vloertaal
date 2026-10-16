@@ -104,13 +104,23 @@ vloertaal.goatcounter.com). Er zijn geen cookies, geen account en geen namen.
 | Wat wordt geteld | Hoe |
 |---|---|
 | App geopend | hoogstens één keer per dag per telefoon |
+| Les gestart | bij elke les (of herhaling van de dag) die begint |
+| Les gestopt | als iemand op ✕ → Stoppen tikt, met het kwart van de les waarin dat was (q1 tot q4) |
 | Les afgerond | bij elke afgeronde les |
 | Herhaling afgerond | bij elke afgeronde herhaling van de dag |
 | Unit afgerond | bij elk afgerond onderwerp |
 
-Elk van deze getallen is er ook **per hulptaal** en **per sector**. Er wordt **niets per persoon**
-geteld: geen lesnummer, geen tijdstip per persoon, geen toestel-id. Er wordt niets geteld als de leerling
-„Anoniem meetellen” uitzet, of als de browser „niet volgen” vraagt.
+Elk van deze getallen is er ook **per hulptaal** en **per sector**. Gestart, gestopt en afgerond
+zijn er ook **per les** (in GoatCounter: `/e/lesson-start/lesson/l-cv`). Elke maat telt apart: u
+ziet hoe vaak les `l-cv` begon, en hoe vaak in het Pools werd begonnen, maar niet hoe vaak les
+`l-cv` in het Pools begon. Er wordt **niets per persoon** geteld: geen tijdstip per persoon, geen
+toestel-id. Er wordt niets geteld als de leerling „Anoniem meetellen” uitzet, of als de browser
+„niet volgen” vraagt.
+
+**Waar haken mensen af?** Zet per les naast elkaar: gestart, gestopt en afgerond. Begint een les
+vaak maar wordt hij weinig afgerond, dan is die les te lang of te moeilijk. Bij gestopt zie je ook
+waar: `q1` is in het eerste kwart, `q4` vlak voor het eind. Wie de app gewoon wegklikt, telt niet
+als gestopt; dat zie je alleen aan het verschil tussen gestart en afgerond.
 
 **Wat dit betekent voor de pilot:**
 
