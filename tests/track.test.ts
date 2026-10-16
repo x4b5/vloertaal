@@ -9,7 +9,7 @@ import { lessonAllowed, previewUnits, unitAllowed } from '../src/lib/access';
 import { earnCertificates, earnedCertificates, unitIndex } from '../src/lib/certificate';
 import { isNextInCourse, isUnlocked, unitIndexOf } from '../src/lib/exercises';
 import { unitTexts } from '../src/lib/offline';
-import { onboardingStep, previousStep, trialDone, trialLessonAllowed, tryLessonId, TRY_LESSON_ID } from '../src/lib/onboarding';
+import { onboardingStep, previousStep, trialLessonAllowed, tryLessonId, TRY_LESSON_ID } from '../src/lib/onboarding';
 import { emptyProgress } from '../src/lib/progress';
 import { currentBlock, homeSuggestions, nextChoices, routeNextLesson, routeOrder } from '../src/lib/route';
 import { trackOf, trackOfId } from '../src/lib/track';
@@ -168,8 +168,6 @@ describe("the work-rules track ('regels')", () => {
     expect(trialLessonAllowed('r.l.start.1', 'regels')).toBe(true);
     expect(trialLessonAllowed('l.hello', 'regels')).toBe(false);
     expect(trialLessonAllowed('r.l.start.1')).toBe(false);
-    expect(trialDone({ helpLang: 'nl', completed: { 'r.l.start.1': rec } }, null)).toBe(true);
-    expect(trialDone({ helpLang: 'nl', completed: { 'l.hello': rec } }, null)).toBe(false);
     // While the rules course is not here: the first lesson of its first unit ("Werk zoeken" 1).
     registerRulesCourse([]);
     expect(tryLessonId('regels')).toBe('r.l.zoeken.1');

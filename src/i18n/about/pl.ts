@@ -26,7 +26,7 @@ const t: CultureTranslation = {
     'a.voices': 'Głosy',
     'a.voices.b': 'Każda postać ma swój własny niderlandzki głos: Bram mówi głosem Thijmena, Henk głosem Daniela, Amina głosem Ariël, a Jada głosem Noi. Te głosy zostały nagrane za pomocą ElevenLabs. Jeśli zdanie nie ma jeszcze nagrania, słyszysz głos swojego telefonu lub komputera.',
     'a.contact': 'Pytanie albo błąd?',
-    'a.contact.b': 'Widzisz błąd, na przykład w tłumaczeniu albo we wskazówce? Albo masz pytanie? Wyślij e-mail na adres hoi@vloertaal.nl. Zrzut ekranu pomaga.',
+    'a.contact.b': 'Widzisz błąd, na przykład w tłumaczeniu albo we wskazówce? Albo masz pytanie? Wyślij e-mail na adres hoi@vloertaal.nl. Zrzut ekranu pomaga. Na lekcji możesz też dotknąć chorągiewki „Melden” u góry: wtedy w e-mailu jest już napisane, gdzie jesteś.',
   },
 };
 

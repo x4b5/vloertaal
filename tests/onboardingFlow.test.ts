@@ -5,13 +5,10 @@ import { units } from '../src/content/curriculum';
 import { getHelpLanguage } from '../src/i18n/all';
 import { Gate } from '../src/components/Gate';
 import {
-  offersTryLesson,
   onboardingStep,
   previousStep,
   stepIndex,
-  trialDone,
   trialLessonAllowed,
-  TRY_LESSON,
   TRY_LESSON_ID,
 } from '../src/lib/onboarding';
 import { forgetLinkedUnit, rememberedLinkedUnit, rememberLinkedUnit } from '../src/lib/unitLink';
@@ -69,51 +66,24 @@ function tappables(html: string): string[] {
   return out;
 }
 
-describe('"Try one lesson first" (TRY_LESSON)', () => {
+describe('"No code? Start with the first lessons": the sneak preview without a code', () => {
   const ar = getHelpLanguage('ar', 'f');
 
-  it('is on (the owner chose the trial lesson)', () => {
-    expect(TRY_LESSON).toBe(true);
-    expect(offersTryLesson(TRY_LESSON, null)).toBe(true);
-  });
-
-  it('flag off: the third slot of the password page stays empty', () => {
-    expect(offersTryLesson(false, null)).toBe(false);
-    const html = renderToStaticMarkup(createElement(Gate, {
-      lang: ar, onAccess: () => {}, onBack: () => {},
-      onTry: offersTryLesson(false, null) ? () => {} : undefined,
-    }));
+  it('without the button: the field and "Unlock", two things to tap', () => {
+    const html = renderToStaticMarkup(createElement(Gate, { lang: ar, onAccess: () => {}, onBack: () => {} }));
     expect(html).not.toContain('gate-try');
     expect(tappables(html)).toHaveLength(2); // the field and "Unlock"
     expect(html).toContain('chrome-back');
   });
 
-  it('when on: one more button, still at most three things to tap, only before a password', () => {
-    expect(offersTryLesson(true, null)).toBe(true);
-    expect(offersTryLesson(true, 'preview')).toBe(false);
-    expect(offersTryLesson(true, 'full')).toBe(false);
-    const html = renderToStaticMarkup(createElement(Gate, {
-      lang: ar, onAccess: () => {}, onBack: () => {},
-      onTry: offersTryLesson(true, null) ? () => {} : undefined,
-    }));
+  it('with it: one more button, in the help language and gender, still at most three things to tap', () => {
+    const html = renderToStaticMarkup(createElement(Gate, { lang: ar, onAccess: () => {}, onBack: () => {}, onFree: () => {} }));
     expect(html).toContain('gate-try');
-    expect(html).toContain(ar!.ui.tryLesson!);
+    expect(html).toContain(ar!.ui.startFree!);
     expect(tappables(html)).toHaveLength(3);
   });
 
-  it('once done, the page says the code unlocks everything and offers no second trial', () => {
-    expect(trialDone({ completed: {} }, null)).toBe(false);
-    expect(trialDone({ completed: { [TRY_LESSON_ID]: { best: 1, times: 1 } } as never }, null)).toBe(true);
-    expect(trialDone({ completed: { [TRY_LESSON_ID]: { best: 1, times: 1 } } as never }, 'preview')).toBe(false);
-    expect(offersTryLesson(true, null, true)).toBe(false);
-    const html = renderToStaticMarkup(createElement(Gate, { lang: ar, onAccess: () => {}, onBack: () => {}, trialDone: true }));
-    expect(html).toContain('gate-trial-done');
-    expect(html).toContain(ar!.ui.trialDone!);
-    expect(html).not.toContain('gate-try');
-    expect(tappables(html)).toHaveLength(2);
-  });
-
-  it('plays lesson 1.1 only', () => {
+  it('lesson 1.1 is the old trial lesson', () => {
     expect(TRY_LESSON_ID).toBe(units[0].lessons[0].id);
     expect(trialLessonAllowed(TRY_LESSON_ID)).toBe(true);
     expect(trialLessonAllowed(units[0].lessons[1].id)).toBe(false);

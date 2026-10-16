@@ -162,7 +162,6 @@ function defineStates(LANG) {
   add('onb:gate-typed', shot('gate'), async (p) => { await p.fill('.pw-input', 'abc'); await settle(p, 200); });
   add('onb:gate-try', shot('gate&try=1'), async (p) => { await p.fill('.pw-input', 'abc'); await settle(p, 200); }, { expect: '.gate-try' });
   add('onb:gate-again', shot('gate&again=1&greet=1'), null, { expect: '.pw-ok' });
-  add('onb:gate-trial-done', shot('gate&trialDone=1'), null, { expect: '.gate-trial-done' });
   add('onb:gender-greet', shot('gender&greet=1'), null, { expect: '.onb-greet' });
   add('onb:gender', shot('gender'));
   add('onb:gender-picked', shot('gender&gender=f'));
@@ -182,18 +181,10 @@ function defineStates(LANG) {
   // The password page's back arrow and the phone's Back go one page back (gender or language).
   add('flow:gate-back', '/', async (p) => { await toGate(p); await tap(p, '.chrome-back'); await settle(p); }, gendered ? { expect: '.gender-screen' } : { list: true, expect: '.lang-grid' });
   add('flow:gate-phone-back', '/', async (p) => { await toGate(p); await p.goBack(); await settle(p); }, gendered ? { expect: '.gender-screen' } : { list: true, expect: '.lang-grid' });
-  // "Try one lesson first": lesson 1.1 before the password; its ✕ and Stop lead back to the password page.
-  add('flow:trial-lesson', '/', async (p) => { await toGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
-  add('flow:trial-quit', '/', async (p) => {
-    await toGate(p); await tap(p, '.gate-try'); await settle(p, 900);
-    await tap(p, '.player-top .lesson-close'); await tap(p, '.sheet-stop'); await settle(p, 900);
-  }, { expect: '.gate-try' });
-  // After the trial lesson (1.1 done, no code): the password page says the code unlocks everything.
-  const noCode = (extra) => async (p) => {
-    await p.evaluate(([x, lang]) => { localStorage.removeItem('vloertaal.access'); localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: lang, gender: 'f', genderAsked: true, completed: {}, ...x })); }, [extra, LANG]);
-    await p.reload(); await settle(p, 900);
-  };
-  add('flow:trial-done', '/', noCode({ completed: { 'l.hello': { best: 1, times: 1 } } }), { expect: '.gate-trial-done' });
+  // "No code? Start with the first lessons": the sneak preview without a code, on to the sector;
+  // back from there, the password page again (still with the button, no code shown as accepted).
+  add('flow:free-sector', '/', async (p) => { await toGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { expect: '.sector-step' });
+  add('flow:free-sector-back', '/', async (p) => { await toGate(p); await tap(p, '.gate-try'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.gate-try' });
   if (gendered) {
     // Right after the language: "Woman or man?", with the back arrow to the language.
     add('flow:gender', '/', firstRun({}), { expect: '.gender-screen .chrome-back' });
@@ -523,8 +514,8 @@ function defineRuleStates() {
   // Back from the code page: the language list (Dutch has no gender page in between).
   add('flow:nl-gate-back', RULES, async (p) => { await toNlGate(p); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.lang-grid' });
   add('flow:nl-gate-phone-back', RULES, async (p) => { await toNlGate(p); await p.goBack(); await settle(p); }, { list: true, expect: '.lang-grid' });
-  // The trial lesson of the track: the first lesson of its first unit.
-  add('flow:nl-trial-lesson', RULES, async (p) => { await toNlGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
+  // Without a code: the sneak preview of the track, on to the sector.
+  add('flow:nl-free-sector', RULES, async (p) => { await toNlGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { expect: '.sector-step' });
   add('flow:nl-sector', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); }, { expect: '.sector-step' });
   add('flow:nl-sector-back', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.pw-ok' });
   add('flow:nl-home', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.max3-card', 2); await settle(p, 900); }, { expect: '.home3' });

@@ -319,8 +319,7 @@ export const uiNl: Record<UiKey, UiText> = {
   gateWho: 'Je krijgt de code van je werkgever, je coach of je begeleider.', // regels
   gateTrust: 'Geen account. Geen naam. Alles blijft op deze telefoon.',
   codeAccepted: 'De code is goed',
-  tryLesson: 'Probeer eerst één les',
-  trialDone: 'Je hebt de proefles gedaan. Met de code gaan alle lessen open.',
+  startFree: 'Geen code? Begin met de eerste lessen',
   bramHello: 'Fijn dat je er bent.',
   bramBack: 'Welkom terug. We gaan verder.',
   bramDueN: 'Vandaag herhaal je {n} vragen.', // regels

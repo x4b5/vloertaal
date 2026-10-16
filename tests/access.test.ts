@@ -16,9 +16,12 @@ describe('access', () => {
   it('stores only hashes: no code is written in the repository (it is public)', () => {
     const levels = Object.values(PASSWORD_HASHES);
     for (const h of Object.keys(PASSWORD_HASHES)) expect(h).toMatch(/^[0-9a-f]{64}$/);
-    // Two first-unit previews, four full codes (pilot, candidates and the first one in two forms), one sneak preview.
+    // Two first-unit previews, two full codes (pilot, candidates), one sneak preview.
     expect(levels.filter((l) => l === 'preview')).toHaveLength(2);
-    expect(levels.filter((l) => l === 'full')).toHaveLength(4);
+    expect(levels.filter((l) => l === 'full')).toHaveLength(2);
+    // The first full code (in plain text in the history) is retired, in both its forms.
+    expect(PASSWORD_HASHES['8b77fc0eab009ca9b4a9d6ccc967c8e8f9afe6656f0ab0bebdd96800389f482a']).toBeUndefined();
+    expect(PASSWORD_HASHES['385537df17b00100660dd3b85e9a3a6a50db31b7093fe26f2fedaabd2a17c9d5']).toBeUndefined();
     expect(levels.filter((l) => l === 'sample')).toHaveLength(1);
     // The pilot code (October 2026).
     expect(PASSWORD_HASHES['94f3f76d391ed7e22dfd2fa93a9c9c0fbfa125385ca45c1ea7702fb28457979e']).toBe('full');

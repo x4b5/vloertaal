@@ -135,8 +135,8 @@ als gestopt; dat zie je alleen aan het verschil tussen gestart en afgerond.
 ## Praktisch
 
 - **Toegangscode op papier.** Geef ieder een briefje met de link en de code in grote letters. Voor
-  een pilot van een week is de code van de **volledige versie** nodig: de proefcode opent alleen de
-  eerste unit, en de sneak-previewcode alleen de eerste les van ieder thema. De code werkt ook met spaties, streepjes of Arabische cijfers. Neem het briefje na
+  een pilot van een week is de code van de **volledige versie** nodig: zonder code (of met de proefcode)
+  is alleen de eerste les van ieder thema open. De code werkt ook met spaties, streepjes of Arabische cijfers. Neem het briefje na
   afloop niet terug: de leerling heeft het nodig als hij of zij een andere telefoon gebruikt.
 - **Lessen bewaren voor zonder internet.** Zet bij wie weinig data of slecht bereik heeft (in de
   kas, op de bouw, in de bus) de instelling aan: **Instellingen → Deze telefoon → „Lessen op deze

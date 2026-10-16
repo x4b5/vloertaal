@@ -10,7 +10,8 @@ import type { Track } from './track';
  *
  *  - sample: a sneak preview, the first lesson of each theme (src/content/themes.ts): of the
  *    theme's first topic, and in "Jouw sector" of every sector's topic, so anyone can try their own
- *    work. In both tracks. The rest shows with a lock and "Volledige versie".
+ *    work. In both tracks. The rest shows with a lock and "Volledige versie". Without a code: the
+ *    password page's "No code?" gives it (since 16 October 2026; before, one trial lesson).
  *  - preview: only the first unit of each course can be played ("First day at work"; in the
  *    work-rules track its first unit, r.start).
  *  - full: everything.
@@ -18,9 +19,12 @@ import type { Track } from './track';
 export type Access = 'sample' | 'preview' | 'full';
 
 /**
- * SHA-256 (hex) of each normalised password and the access it gives. The first three were made
- * with the old normalising (trimmed, lower case) and still match; the fourth is the full-version
- * password without its hyphen, as normalizePassword makes it now.
+ * SHA-256 (hex) of each normalised password and the access it gives. The first two were made
+ * with the old normalising (trimmed, lower case) and still match.
+ *
+ * Retired (16 October 2026): the first full-version code, in its two forms. It stood in plain text
+ * in the repository's history, so it no longer opens anything new; who entered it before keeps
+ * full access (the level is stored on the phone, see loadAccess).
  *
  * The repository is public: a code itself never goes in it (not in a test, a script or a doc),
  * only its hash. Tests and the screenshot scripts use DEV_CODES, which a production build drops.
@@ -28,8 +32,6 @@ export type Access = 'sample' | 'preview' | 'full';
 export const PASSWORD_HASHES: Record<string, Access> = {
   '82a3dd97f7aff9c6ceb3c198b8923d35ffab1d9c83db73f81d406ade24a32e54': 'preview',
   '6cd4577227ec489e612717903ff4a38d338476af4fb611880538808166023c01': 'preview',
-  '8b77fc0eab009ca9b4a9d6ccc967c8e8f9afe6656f0ab0bebdd96800389f482a': 'full',
-  '385537df17b00100660dd3b85e9a3a6a50db31b7093fe26f2fedaabd2a17c9d5': 'full',
   // Pilot code (October 2026), announced to pilot coaches.
   '94f3f76d391ed7e22dfd2fa93a9c9c0fbfa125385ca45c1ea7702fb28457979e': 'full',
   // A second code (15 October 2026): full at first, the sneak preview since 16 October 2026. Who

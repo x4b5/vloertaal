@@ -80,13 +80,15 @@ Hulptalen in het spoor Taal:
 
 ## Toegang
 
-Je krijgt een code van een docent, coach of werkgever. Zonder code kun je één proefles doen.
+Zonder code krijg je de **sneak preview**: op de codepagina staat "Geen code? Begin met de eerste
+lessen". Voor de volledige versie krijg je een code van een docent, coach of werkgever. Die vul je
+in op de codepagina, of later bij Instellingen of bij een onderwerp op slot.
 
 | Niveau | Wat is open |
 |---|---|
-| **Volledig** | alles (pilot, experts, kandidaten) |
-| **Sneak preview** | per thema de eerste les (bij Jouw sector van elke sector), plus Herhaal vandaag |
-| **Proef** | alleen het eerste onderwerp |
+| **Volledig** | alles (met een code: pilot, experts, kandidaten) |
+| **Sneak preview** | per thema de eerste les (bij Jouw sector van elke sector), plus Herhaal vandaag. Zonder code, of met de oude sneak-previewcode |
+| **Proef** | alleen het eerste onderwerp (oude proefcodes) |
 
 - In de code staan **alleen SHA-256-hashes** van de codes (`src/lib/access.ts`), nooit de codes
   zelf. Een code geef je per bericht, niet openbaar.
@@ -100,7 +102,7 @@ Je krijgt een code van een docent, coach of werkgever. Zonder code kun je één 
   Zet de hash met het niveau in `PASSWORD_HASHES` en pas `tests/access.test.ts` aan.
 - Wie een code al invulde, houdt het niveau van toen: dat staat op de telefoon.
 - **Melden**: in elke les staat rechtsboven een knop **Melden** met een vlaggetje (de eerste keer
-  met uitleg). Een tik opent een mail met de plek al ingevuld (les, stap, woord, telefoon, versie).
+  met een korte uitleg in het Nederlands, voor testers en in Werkregels). Een tik opent een mail met de plek al ingevuld (les, stap, woord, telefoon, versie).
   Zolang de app een bètaversie is, staat de knop standaard aan, voor iedereen. Uitzetten kan met de
   schakelaar onderaan **Over** (die werkt ook in een app op het beginscherm van een iPhone), of met
   `vloertaal.nl/?test=0`. Met `?test` gaat hij weer aan.

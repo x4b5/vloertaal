@@ -6,13 +6,15 @@ deze repo en hoort daar ook niet: geef hem alleen per bericht.
 Houd per persoon bij wie de code kreeg en wanneer (een lijstje is genoeg). Dan weet je wie je na een
 week een bericht stuurt (mail 5).
 
-Er zijn drie soorten codes:
-- **Volledige versie**: alle lessen. Voor experts, coaches en de pilot. Kandidaten die met de app
-  leren, krijgen een eigen code voor de volledige versie.
-- **Sneak preview**: per thema de eerste les (bij „Jouw sector” de eerste les van iedere sector,
-  13 lessen in totaal), plus „Herhaal vandaag”. De rest staat op slot, met „Volledige versie”. Voor
-  wie alleen even wil kijken.
-- **Proefcode**: alleen het eerste onderwerp.
+Wat iemand ziet:
+- **Zonder code: de sneak preview.** Per thema de eerste les (bij „Jouw sector” de eerste les van
+  iedere sector, 13 lessen in totaal), plus „Herhaal vandaag”. De rest staat op slot, met „Volledige
+  versie”. Op de codepagina staat „Geen code? Begin met de eerste lessen”. Wie alleen even wil
+  kijken, heeft dus geen code nodig: stuur alleen de link **vloertaal.nl**.
+- **Met een code: de volledige versie.** Alle lessen. Voor experts, coaches en de pilot. Kandidaten
+  die met de app leren, krijgen een eigen code. De code kan ook later nog: bij Instellingen, of bij
+  een onderwerp op slot.
+- De oude sneak-previewcode en de proefcode werken nog, maar zijn niet meer nodig.
 
 Wie een code eerder invulde, houdt het niveau van toen: dat staat op de telefoon. Een code die later
 een sneak preview werd, geeft wie hem al had dus nog steeds de volledige versie.
