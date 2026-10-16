@@ -294,6 +294,11 @@ const lang: HelpLanguageSource = {
     buildListen: 'Posłuchaj i ułóż zdanie',
     chatWhichQuestion: 'Które pytanie pasuje do tej odpowiedzi?',
     reviewWaiting: 'Czekają jeszcze słowa: {n}. Wrócą w najbliższych dniach.',
+    factTitle: 'Czy wiesz?',
+    fact3: { m: 'Nie jesteś sam: ponad 3 miliony dorosłych w Holandii mają trudności z czytaniem, liczeniem lub komputerem. Ćwiczenie pomaga.', f: 'Nie jesteś sama: ponad 3 miliony dorosłych w Holandii mają trudności z czytaniem, liczeniem lub komputerem. Ćwiczenie pomaga.' },
+    fact7: 'Spośród migrantów, którzy bardzo dobrze mówią po niderlandzku, 69 na 100 ma płatną pracę.',
+    fact14: 'W wielu bibliotekach jest Taalhuis („dom języka”): darmowa pomoc w dalszej nauce niderlandzkiego.',
+    fact30: { m: 'Lepiej ćwiczyć trochę codziennie niż dużo od czasu do czasu. Ćwiczyłeś już 30 dni z rzędu!', f: 'Lepiej ćwiczyć trochę codziennie niż dużo od czasu do czasu. Ćwiczyłaś już 30 dni z rzędu!' },
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

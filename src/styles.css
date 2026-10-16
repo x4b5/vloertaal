@@ -1160,6 +1160,22 @@ h2 { font-size: 1.25rem; }
 .speak { --icon-cut: var(--blue); }
 .speak-slow { --icon-cut: var(--card); }
 
+/* "Wist je dat?" on a streak milestone (src/content/facts.ts): a calm card, text only. */
+.milestone-fact {
+  margin: 16px auto 0; max-width: 420px; padding: 12px 14px; text-align: start;
+  background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
+}
+.milestone-fact-title { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin: 0 0 4px; font-weight: 650; }
+.milestone-fact-nl { font-size: 0.85rem; font-weight: 500; color: var(--muted); }
+.milestone-fact-text { font-size: 1.05rem; line-height: 1.45; }
+/* Voor begeleiders: the facts with their sources. */
+.coach-facts { margin: 12px 0 18px; padding: 12px 14px; background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); }
+.coach-facts-title { font-size: 1.05rem; margin: 0 0 8px; }
+.coach-facts-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.coach-facts-list li { display: flex; flex-direction: column; gap: 2px; }
+.coach-fact { font-size: 1rem; line-height: 1.45; }
+.coach-fact-source { font-size: 0.85rem; color: var(--muted); }
+
 /* Settings: theme and voice */
 .segmented { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0 20px; }
 .segmented button {
@@ -1863,6 +1879,19 @@ svg.emoji-xl { width: 140px; height: 140px; }
   .milestone .streak-count { margin: 10px 0 8px; }
   .milestone .streak-num { font-size: 4.6rem; }
   .milestone .week { margin-top: 14px; }
+}
+/* A milestone with "Wist je dat?" (src/content/facts.ts): the board celebrates, the podium makes
+   room for the fact, so it is above Continue without scrolling (smaller, or gone on short screens). */
+.milestone:has(.milestone-fact) .streak-hero { width: min(170px, 44vw); }
+@media (max-height: 760px) {
+  .milestone:has(.milestone-fact) { padding-top: 12px; }
+  .milestone:has(.milestone-fact) .streak-hero { display: none; }
+  .milestone:has(.milestone-fact) .streak-count { margin: 4px 0 4px; }
+  .milestone:has(.milestone-fact) .streak-line { font-size: 1.3rem; margin: 4px 0; }
+  .milestone:has(.milestone-fact) .week { margin-top: 6px; }
+  .milestone:has(.milestone-fact) .streak-facts { margin-top: 4px; gap: 2px; }
+  .milestone-fact { margin-top: 8px; padding: 10px 12px; }
+  .milestone-fact-text { font-size: 1rem; line-height: 1.4; }
 }
 /* The follow-up screen after day 1: Bram waves, then the two cards. */
 .keep-hero { display: flex; justify-content: center; }

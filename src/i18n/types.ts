@@ -79,6 +79,12 @@ export const uiEn = {
   whatDoYouSay: "What do you say?",
   whatIsRight: "What is right?",
   sayingBadge: "How they say it",
+  /* "Wist je dat?" on the day-streak milestones (src/content/facts.ts). */
+  factTitle: "Did you know?",
+  fact3: "You are not alone: more than 3 million adults in the Netherlands find reading, maths or computers hard. Practising helps.",
+  fact7: "Of the migrants who speak Dutch very well, 69 out of 100 have paid work.",
+  fact14: "Many libraries have a Taalhuis: free help to keep learning Dutch.",
+  fact30: "A little practice every day works better than a lot now and then. You have done it for 30 days!",
   topicsOrder: "Show the topics",
   byTheme: "By theme",
   inOrder: "In order",

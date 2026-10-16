@@ -355,6 +355,8 @@ function defineStates(LANG) {
   add('after:result-phrases', shot('result&phrases=1'));
   add('after:streak', shot('streak&n=7'));
   add('after:streak-first', shot('streak&n=1'));
+  // The fullest milestone: "Wist je dat?" (src/content/facts.ts) with a record and a free day.
+  add('after:streak-30', shot('streak&n=30&rest=1&best=40'));
   add('after:keep', shot('streak&n=1'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); }, { expect: '.keep-no.keep3-btn' });
   add('after:keep-install', shot('streak&n=1&install=prompt'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); await tap(p, '.keep-no'); await settle(p, 700); });
   // The reminder's "Other time" page: three times and the back arrow.

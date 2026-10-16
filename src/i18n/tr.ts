@@ -294,6 +294,11 @@ const lang: HelpLanguageSource = {
     buildListen: 'Dinle ve cümleyi kur',
     chatWhichQuestion: 'Bu cevaba hangi soru uyuyor?',
     reviewWaiting: '{n} kelime daha bekliyor. Önümüzdeki günlerde geri gelecekler.',
+    factTitle: 'Biliyor muydun?',
+    fact3: 'Yalnız değilsin: Hollanda’da 3 milyondan fazla yetişkin okumayı, hesap yapmayı ya da bilgisayar kullanmayı zor buluyor. Pratik yapmak işe yarar.',
+    fact7: 'Hollandacayı çok iyi konuşan her 100 göçmenden 69’unun ücretli bir işi var.',
+    fact14: 'Birçok kütüphanede bir Taalhuis (“dil evi”) var: Hollandaca öğrenmeye devam etmen için ücretsiz yardım.',
+    fact30: 'Her gün biraz pratik yapmak, arada bir çok pratik yapmaktan daha iyidir. Sen bunu 30 gündür yapıyorsun!',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
