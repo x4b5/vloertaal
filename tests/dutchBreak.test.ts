@@ -5,7 +5,9 @@ import { gloss } from '../src/i18n';
 import { getHelpLanguage, helpLanguageSources } from '../src/i18n/all';
 import { tokenize } from '../src/lib/answers';
 import { breakable, plain, SEAM_WORDS, SHY, splitQuote } from '../src/lib/dutch';
-import { buildSteps, buildTiles, tileLabel } from '../src/lib/exercises';
+import { buildSteps, buildTiles, courseNames, tileLabel } from '../src/lib/exercises';
+import { registerRegion } from '../src/content/regio';
+import zlPack from '../src/content/regio/zuid-limburg-pack';
 import { createRng } from '../src/lib/random';
 
 /** Every Dutch text a lesson shows. */
@@ -57,6 +59,15 @@ describe('building a sentence: no capital in the middle of it', () => {
     expect(tileLabel('BSN', 0, s)).toBe('BSN');
     // A sentence that starts with a name: its first options keep their capitals (no give-away).
     expect(tileLabel('Morgen', 0, 'Ali werkt morgen.')).toBe('Morgen');
+  });
+
+  it('keeps the capital of a name from a region that loads later ("Duitsland")', () => {
+    const s = 'Ik woon in Nederland en werk in Duitsland.';
+    expect(courseNames().has('Duitsland')).toBe(false);
+    registerRegion(zlPack);
+    expect(courseNames().has('Duitsland')).toBe(true);
+    expect(tileLabel('Duitsland', 0, s)).toBe('Duitsland');
+    expect(tileLabel('Ik', 0, s)).toBe('ik');
   });
 
   it('never shows a capital that gives the first word away, in any lesson', () => {

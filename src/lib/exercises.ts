@@ -13,6 +13,7 @@ import { hasPicture, lookKey } from './wordPicture';
 import { type SpeakItem, withSpeaking } from './speaking';
 import { nearSynonyms } from '../content/synonyms';
 import { DAILY_ID } from './spaced';
+import { regionTaalLessons } from '../content/regio';
 
 export type Exercise =
   | { kind: 'intro'; word: Word }
@@ -367,15 +368,20 @@ function hashText(text: string): number {
 }
 
 let names: Set<string> | null = null;
+/** How many regional lessons `names` was made with: a region loaded later adds its names. */
+let namesWith = 0;
 /**
- * Proper names in the course ("Ali", "Mark"): words written with a capital in the middle of a
- * sentence (not after a full stop). A name offered as a wrong word keeps its capital.
+ * Proper names in the course ("Ali", "Mark", and a region's "Duitsland"): words written with a
+ * capital in the middle of a sentence (not after a full stop). A name offered as a wrong word
+ * keeps its capital, and a name is never written small as the first tile.
  */
 export function courseNames(): Set<string> {
-  if (names) return names;
+  const region = regionTaalLessons();
+  if (names && namesWith === region.length) return names;
   names = new Set();
+  namesWith = region.length;
   const texts = [
-    ...allLessons.flatMap((l) => [...l.sentences.map((s) => s.nl), ...l.words.map((w) => w.nl)]),
+    ...[...allLessons, ...region].flatMap((l) => [...l.sentences.map((s) => s.nl), ...l.words.map((w) => w.nl)]),
     ...allDialogues.flatMap((d) => [d.prompt.nl, d.reply.nl]),
     ...allReplies.map((r) => r.nl),
   ];
