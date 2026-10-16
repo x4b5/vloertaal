@@ -4,6 +4,7 @@ import App from './App';
 import { startScreens } from './lazyScreens';
 import { loadProgress } from './lib/progress';
 import { readTesterParam } from './lib/report';
+import { watchForUpdates } from './lib/appUpdate';
 import { applyTheme } from './lib/theme';
 import { applyTextSize } from './lib/textSize';
 import { applyEnglish } from './lib/english';
@@ -78,4 +79,6 @@ if (import.meta.env.PROD && 'serviceWorker' in navigator) {
     // The help language's file may have loaded before the service worker ran: let it keep a copy.
     navigator.serviceWorker.ready.then(() => window.setTimeout(warmLanguageCache, 1500)).catch(() => {});
   });
+  // An app kept open on the home screen picks up a new version when it comes back (src/lib/appUpdate.ts).
+  watchForUpdates();
 }
