@@ -4,7 +4,7 @@
  *
  * Opens each named state in Chromium, counts the visible, enabled, tappable elements (in view or
  * reachable by scrolling), leaves out the fixed chrome (the bottom nav, the lesson ✕, the back
- * arrow `.chrome-back`, the testers' flag `.lesson-report` and its switch `.about-tester`) and speaker/play buttons, and
+ * arrow `.chrome-back`, the "Melden" flag `.lesson-report` and its switch `.about-tester`) and speaker/play buttons, and
  * prints screen -> count -> elements with PASS/FAIL against the limit.
  *
  * A state FAILS when
@@ -626,8 +626,8 @@ function countInPage() {
     const item = { label: label(el), tag: el.tagName.toLowerCase(), cls: cls.slice(0, 60), inView: r.top < innerHeight && r.bottom > 0, y: Math.round(r.top + scrollY), _el: el };
     if (el.closest('.bottom-nav')) { nav.push(item); continue; }
     // Fixed chrome: the lesson ✕ and the back arrow (same component, same corner everywhere), and
-    // the testers' "Iets melden" flag (never shown to learners, src/lib/report.ts), and its
-    // switch at the bottom of Over (a tool for testers, after the credits, like the flag).
+    // the "Iets melden" flag (a tool, not a step of the lesson; src/lib/report.ts), and its
+    // switch at the bottom of Over (after the credits, like the flag a tool).
     if (el.matches('.lesson-close') || el.matches('.lesson-report') || el.matches('.about-tester') || (el.closest('.player-top') && el.getAttribute('aria-label') === 'Quit lesson') || el.matches('.chrome-back')) { chrome.push(item); continue; }
     if (transparent(el)) { hiddenTappables.push(item); continue; }
     const al = el.getAttribute('aria-label') || '';

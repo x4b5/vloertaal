@@ -475,9 +475,9 @@ function AboutBody({ text }: { text: Bilingual }) {
 }
 
 /**
- * For testers: the "Melden" flag in every lesson on or off, in the app itself (src/lib/report.ts).
- * A ?test link opened in Safari does not reach an app on an iPhone's home screen: this does.
- * In Dutch, like the flag and its mail. Small, at the bottom: learners pass it by.
+ * The "Melden" flag in every lesson (on by default, src/lib/report.ts) off or on again, in the app
+ * itself: a link opened in Safari does not reach an app on an iPhone's home screen, this does. In
+ * Dutch, like the flag and its mail. Small, at the bottom of Over.
  */
 function TesterSwitch() {
   const [on, setOn] = useState(testerSwitch);
@@ -485,7 +485,7 @@ function TesterSwitch() {
   return (
     <button type="button" className="about-tester" aria-pressed={on} onClick={flip} lang="nl" dir="ltr">
       <FlagIcon size={18} />
-      <span>{on ? 'Knop Melden staat aan in de lessen. Tik om uit te zetten' : 'Test je de app? Zet de knop Melden aan'}</span>
+      <span>{on ? 'Knop Melden staat aan in de lessen. Tik om uit te zetten' : 'Knop Melden staat uit. Tik om aan te zetten'}</span>
     </button>
   );
 }
@@ -617,12 +617,14 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   /** Small line under the value. */
   foot?: Bilingual;
 }) {
+  // "12 / 13": the total smaller, like a fraction, so two two-digit numbers fit a card on any phone.
+  const ofTotal = /^(\S+) \/ (\S+)$/.exec(value);
   return (
     <div className={`stat-card stat-${tone} ${done ? 'stat-done' : ''}`} role="group" aria-label={`${said(label)} ${final}`}>
       <div className="stat-card-head"><Bi text={label} /></div>
       <div className="stat-card-body" aria-hidden>
         {icon}
-        <span className="stat-card-value" dir="ltr">{value}</span>
+        <span className="stat-card-value" dir="ltr">{ofTotal ? <>{ofTotal[1]}<span className="stat-of">/{ofTotal[2]}</span></> : value}</span>
       </div>
       {/* The stamp sits beside the line under the value, in the flow (never over its words);
           on a narrow card it wraps under it. */}

@@ -7,51 +7,43 @@ import { type Exercise, isRuleExercise } from './exercises';
  * hoi@vloertaal.nl with the place already filled in (lesson, step, the word or sentence, help
  * language, phone, deploy). The tester only writes what they saw (and adds a screenshot).
  *
- * Learners never see it. It is on for:
- *  - the sneak preview ('sample'): that code goes to people who come to look;
- *  - a phone that opened vloertaal.nl/?test once (the mails to experts give that link); ?test=0
- *    switches it off again;
- *  - a phone where the tester switched it on at the bottom of Over ("Zet de knop Melden aan"). An app on the home
- *    screen of an iPhone keeps its own storage, apart from Safari, so a ?test opened in Safari
- *    does not reach it: the switch in the app does.
+ * On by default, for everyone, while the app is a beta: every user can say what they saw. Off:
+ *  - with the switch at the bottom of Over ("Tik om uit te zetten"), remembered on this phone. In
+ *    the app itself, because an app on an iPhone's home screen keeps its own storage, apart from
+ *    Safari: a link opened in Safari does not reach it;
+ *  - or by opening vloertaal.nl/?test=0 (?test switches it on again).
  * It is a tool, not a step of the lesson: like the ✕ it is not one of the three things to tap.
  */
 
 const KEY = 'vloertaal:tester';
 
-/** ?test (or ?test=1) switches tester mode on for this phone, ?test=0 off. Called once at the start. */
+/** ?test=0 switches the flag off for this phone, ?test (or ?test=1) on again. Called once at the start. */
 export function readTesterParam(search: string): void {
   const v = new URLSearchParams(search).get('test');
   if (v === null) return;
-  try {
-    if (v === '0') localStorage.removeItem(KEY);
-    else localStorage.setItem(KEY, '1');
-  } catch {
-    // Blocked storage: no tester mode (the sneak preview still has it).
-  }
+  setTesterSwitch(v !== '0');
 }
 
-/** Did this phone switch tester mode on (?test, or the switch under Over)? */
+/** Is the flag on on this phone? On unless switched off ('0'); also on when storage is blocked. */
 export function testerSwitch(): boolean {
   try {
-    return localStorage.getItem(KEY) === '1';
+    return localStorage.getItem(KEY) !== '0';
   } catch {
-    return false;
+    return true;
   }
 }
 
 /** The switch under Over. False when the phone can't remember it (blocked storage). */
 export function setTesterSwitch(on: boolean): boolean {
   try {
-    if (on) localStorage.setItem(KEY, '1');
-    else localStorage.removeItem(KEY);
+    localStorage.setItem(KEY, on ? '1' : '0');
     return testerSwitch() === on;
   } catch {
     return false;
   }
 }
 
-/** Does this phone show "Iets melden"? */
+/** Does this phone show "Iets melden"? The sneak preview always does. */
 export function testerMode(access: Access | null | undefined): boolean {
   return access === 'sample' || testerSwitch();
 }

@@ -528,7 +528,7 @@ h2 { font-size: 1.25rem; }
   background: var(--bg);
 }
 .player-top .icon-btn { margin-inline-start: -8px; }
-/* Testers only (src/lib/report.ts): the flag at the far end, quieter than the ✕. */
+/* "Melden" (src/lib/report.ts): the flag at the far end, quieter than the ✕. */
 .player-top .lesson-report {
   margin-inline-start: auto; margin-inline-end: -4px; width: auto; padding: 6px 10px; gap: 6px;
   display: inline-flex; align-items: center; border-radius: 999px;
@@ -1685,12 +1685,17 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .full-only-en .bi-help { display: inline; }
 .full-only-en .bi-sep { display: inline; }
 
-/* Small phones: the result numbers stay on one line ("9 / 11"). */
+/* Small phones: the result numbers stay on one line, inside the card ("12/13", the total smaller).
+   The card is the size container: the number shrinks before it would run past the card's edge
+   (40px: the icon and the gap before the number). */
 .stat-card-value { white-space: nowrap; }
+.stat-of { font-size: 0.6em; margin-inline-start: 0.06em; }
+.stat-card { container-type: inline-size; }
+.stat-card-value { font-size: min(2.6rem, calc((100cqi - 40px) / 2.4)); }
 @media (max-width: 360px) {
   .result-stats { gap: 12px; }
   .stat-card-body { gap: 6px; }
-  .stat-card-value { font-size: 2.1rem; }
+  .stat-card-value { font-size: min(2.1rem, calc((100cqi - 30px) / 2.4)); }
   .stat-card-body .icon { width: 24px; height: 24px; }
 }
 .unit-locked .bay-lock { display: none; }
