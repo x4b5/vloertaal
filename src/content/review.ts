@@ -48,7 +48,7 @@ export const relatedUnits: Record<string, [string, string]> = {
  */
 const relatedWords: Record<string, string[]> = {
   'u.safety': ['w.steiger', 'w.machine'],
-  'u.sounds': ['w.hallo', 'w.ja'],
+  'u.sounds': ['w.hallo', 'w.dankjewel'],
   'u.warehouse': ['w.helm', 'w.pauze'],
   'u.papers': ['w.brief', 'w.contract'],
   'u.pay': ['w.contract', 'w.brief'],
