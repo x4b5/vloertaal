@@ -135,9 +135,13 @@ describe('Bram introduces himself', () => {
     // Not recorded yet: no file, so sayFirstWord keeps playing the recorded "hallo".
     setRecordedIndex(index, null);
     expect(bramHelloUrl()).toBe(index.voices.some((v) => v.key === 'thijmen' && v.said['x.bram'] === BRAM_HELLO) ? './audio-el/thijmen/x.bram.mp3' : undefined);
-    // Another voice with the line does not count: only Bram's own voice says it.
+    // Another voice with the line does not count: only Bram's own voice says it. Made from the
+    // index without the line in any voice, so it holds before and after it is recorded.
     const withLine = (key: string): ElevenIndex => ({
-      voices: index.voices.map((v) => (v.key === key ? { ...v, said: { ...v.said, 'x.bram': BRAM_HELLO } } : v)),
+      voices: index.voices.map((v) => {
+        const { ['x.bram']: _, ...said } = v.said;
+        return v.key === key ? { ...v, said: { ...said, 'x.bram': BRAM_HELLO } } : { ...v, said };
+      }),
     });
     setRecordedIndex(withLine('daniel'), null);
     expect(bramHelloUrl()).toBeUndefined();
