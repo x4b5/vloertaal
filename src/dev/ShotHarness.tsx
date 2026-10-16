@@ -29,6 +29,7 @@ import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
 import * as kit from '../pictures/kit';
 import { hasPicture } from '../lib/wordPicture';
+import { lessonSayings } from '../content/sayings';
 import { CertEarned, CertificateScreen } from '../components/Certificate';
 import { AllTopics, Route, TopicPage } from '../components/Route';
 import { findUnit } from '../lib/certificate';
@@ -620,6 +621,22 @@ function PicturesSheet() {
           </section>
         );
       })}
+      {/* The "Zo zeggen ze het" card's pictures (src/content/sayings.ts lessonSayings, by saying id). */}
+      <section>
+        <div className="pics-unit"><div><h2 style={{ margin: 0 }}>Zo zeggen ze het</h2><span className="pics-id">lessonSayings (zg.*)</span></div></div>
+        <div className="pics-grid">
+          {lessonSayings.map((s) => (
+            <div key={s.id} className={`pics-cell ${pictures[s.id] ? '' : 'pics-missing'}`}>
+              <div className="pics-row">
+                <WordPicture id={s.id} emoji={s.emoji} size={120} />
+                <WordPicture id={s.id} emoji={s.emoji} size={48} />
+              </div>
+              <span className="pics-nl" lang="nl">{s.nl}</span>
+              <span className="pics-id">{s.id}</span>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

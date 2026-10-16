@@ -133,6 +133,26 @@ describe('the screens show the themes as plain headers (never a button)', () => 
     expect(m).not.toContain('topic-num');
   });
 
+  it('All topics "Volgorde": the own course in the order of the path, the other sectors under their header', () => {
+    const store = new Map<string, string>([['vloertaal:topicsOrder', 'route']]);
+    const was = (globalThis as { localStorage?: unknown }).localStorage;
+    (globalThis as { localStorage?: unknown }).localStorage = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => store.set(k, v), removeItem: (k: string) => store.delete(k) };
+    try {
+      const p = progress({ sector: 'care' });
+      const m = html(createElement(AllTopics, { progress: p, lang: pl(), onBack: () => {}, onOpen: () => {} }));
+      // Two buttons above the list, "Volgorde" pressed; no theme headers but the other sectors'.
+      expect(m.match(/class="topics-order-btn/g)).toHaveLength(2);
+      expect(m).toMatch(/aria-pressed="true"[^>]*>(?:(?!<\/button>)[\s\S])*Volgorde/);
+      expect(m).toContain('topic-list-order');
+      expect(headers(m)).toEqual(['other']);
+      const { main, other } = coursePlan('care');
+      const rows = [...m.matchAll(/id="unit-([^"]+)"/g)].map((r) => `u.${r[1]}`);
+      expect(rows).toEqual([...main, ...other].map((u) => u.id));
+    } finally {
+      (globalThis as { localStorage?: unknown }).localStorage = was;
+    }
+  });
+
   it('All topics: a calm check once every topic of a theme is done', () => {
     const m = html(createElement(AllTopics, { progress: progress({ completed: done('u.firstday', 'u.help', 'u.tools') }), lang: pl(), onBack: () => {}, onOpen: () => {} }));
     const start = m.match(/<li class="theme-head[^"]*" data-theme="theme.start"[\s\S]*?<\/li>/)![0];

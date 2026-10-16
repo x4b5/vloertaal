@@ -25,6 +25,7 @@ import { DailyReview } from './Screens';
 import { PocketIcon } from './Offline';
 import { countedUnits, groupOf, planGroups } from '../content/themes';
 import { ThemeHeadRow, ThemeLabel } from './Themes';
+import { loadTopicsOrder, saveTopicsOrder, type TopicsOrder } from '../lib/topicsOrder';
 
 /**
  * The home ("Route"): at most 3 things to tap (src/lib/route.ts).
@@ -379,6 +380,11 @@ function ScreenHead({ lang, onBack, nl, text }: { lang?: HelpLanguage; onBack: (
  * learner's own course by theme first (in route order within a theme), then the other sectors
  * under a header of their own. A row opens the topic page. One list, so the headers are rows of
  * it too, without a tap.
+ *
+ * Above the list two buttons switch between "Thema's" (as above) and "Volgorde": the own course
+ * in the order of the path, without theme headers, then the other sectors under their header.
+ * The choice is kept on the device (src/lib/topicsOrder.ts). With the back arrow (not counted)
+ * that is two things to tap outside the list.
  */
 export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
   progress: Progress;
@@ -392,6 +398,12 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
   const { main, other } = coursePlan(sector, trackOf(progress), progress.region);
   const block = currentBlock(progress);
   const rtl = lang?.dir === 'rtl';
+  const [order, setOrder] = useState<TopicsOrder>(loadTopicsOrder);
+  const pickOrder = (o: TopicsOrder) => {
+    setOrder(o);
+    saveTopicsOrder(o);
+  };
+  const groups = planGroups({ main, other });
   // No route numbers in the rows: grouped by theme they would jump ("09, 18, 22"). A topic keeps
   // its number on its own page, its pocket card and its certificate.
   const row = (unit: Unit) => {
@@ -425,13 +437,32 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
     <div className="rb-all-screen topics-screen">
       <ScreenHead lang={lang} onBack={onBack} nl="Alle onderwerpen" text={ui('allTopics', lang)} />
       <div className="topics" dir={rtl ? 'rtl' : undefined}>
-        <ul className="topic-list topic-list-themes" data-list="topics">
-          {planGroups({ main, other }).map((group) => (
-            <Fragment key={group.key}>
-              <ThemeHeadRow group={group} lang={lang} completed={completed} counted={countedUnits(group, sector, completed)} />
-              {group.units.map((unit) => row(unit))}
-            </Fragment>
+        <div className="topics-order" role="group" aria-label={said(ui('topicsOrder', lang))}>
+          {(['theme', 'route'] as const).map((o) => (
+            <button key={o} type="button" className={`topics-order-btn ${order === o ? 'is-on' : ''}`} aria-pressed={order === o} onClick={() => pickOrder(o)}>
+              <NlPair nl={o === 'theme' ? 'Thema\u2019s' : 'Volgorde'} nlClass="topics-order-nl" className="topics-order-help" text={ui(o === 'theme' ? 'byTheme' : 'inOrder', lang)} />
+            </button>
           ))}
+        </div>
+        <ul className={`topic-list ${order === 'theme' ? 'topic-list-themes' : 'topic-list-order'}`} data-list="topics">
+          {order === 'theme'
+            ? groups.map((group) => (
+              <Fragment key={group.key}>
+                <ThemeHeadRow group={group} lang={lang} completed={completed} counted={countedUnits(group, sector, completed)} />
+                {group.units.map((unit) => row(unit))}
+              </Fragment>
+            ))
+            : (
+              <>
+                {main.map((unit) => row(unit))}
+                {groups.filter((g) => g.key === 'other').map((group) => (
+                  <Fragment key={group.key}>
+                    <ThemeHeadRow group={group} lang={lang} completed={completed} counted={countedUnits(group, sector, completed)} />
+                    {group.units.map((unit) => row(unit))}
+                  </Fragment>
+                ))}
+              </>
+            )}
         </ul>
       </div>
     </div>

@@ -3613,6 +3613,17 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 
 /* All topics: one row per topic, one tap per row (the list exception). */
 .topics { padding: 8px 16px 0; }
+/* "Thema's | Volgorde" above All topics: like the Settings choices (.segmented), one row of two. */
+.topics-order { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 14px; }
+.topics-order-btn {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 52px; padding: 6px 8px;
+  background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); color: var(--ink);
+  font-weight: 600; font-size: 1rem; line-height: 1.2;
+}
+.topics-order-btn.is-on { border-color: var(--edge); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); color: var(--pick-ink); }
+.topics-order-btn .bi { align-items: center; gap: 0; }
+.topics-order-nl { font-size: 0.9rem; font-weight: 500; color: var(--muted); }
+.topics-order-btn.is-on .topics-order-nl { color: inherit; }
 .topic-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .topic-row {
   width: 100%; display: flex; align-items: center; gap: 12px; min-height: 68px; padding: 8px 12px;

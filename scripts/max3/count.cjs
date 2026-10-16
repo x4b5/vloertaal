@@ -283,6 +283,8 @@ function defineStates(LANG) {
   add('route:topic-done', shot('topic&cu=u.firstday&state=shelf'), null, { list: true });
   add('route:topic-locked', shot('topic&cu=u.pay&state=mid&access=preview'), null, { list: true });
   add('route:all-topics-tap', shot('all&state=mid'), async (p) => { await tap(p, '.topic-row', 0); await settle(p); }, { list: true });
+  // "Volgorde": the own course in the order of the path (the choice is kept on the device).
+  add('route:all-topics-order', shot('all&state=mid'), async (p) => { await tap(p, '.topics-order-btn', 1); await settle(p); }, { list: true, expect: '.topic-list-order' });
 
   // Lesson exercises: before, after a right tap, after a wrong tap.
   // Shot option order is fixed: dutch -> 3rd right; meaning -> 3rd; listen -> 2nd; type(pick) -> 2nd; chat -> 1st; situation -> 1st.

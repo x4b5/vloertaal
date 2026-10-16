@@ -986,7 +986,7 @@ export function SayingCard({ ex, lang, onAnswer }: Props<'saying'>) {
         </div>
       </div>
       <div className="card saying-card">
-        <span className="saying-picture" aria-hidden>{saying.emoji}</span>
+        <WordPicture className="saying-picture" id={saying.id} emoji={saying.emoji} size={116} />
         <SayingLines literal={gloss(`${saying.id}.lit`, saying.literal, lang)} meaning={gloss(`${saying.id}.m`, saying.meaning, lang)} lang={lang} />
       </div>
     </div>
