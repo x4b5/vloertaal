@@ -4,9 +4,13 @@ import { describe, expect, it } from 'vitest';
 import { Milestone } from '../src/components/Milestone';
 import { Coaches } from '../src/components/Coaches';
 import { COACH_FACTS, MILESTONE_FACTS } from '../src/content/facts';
-import { getHelpLanguage, ui } from '../src/i18n/all';
+import { getHelpLanguage, registerPack, ui } from '../src/i18n/all';
+import nlPack from '../src/i18n/packs/nl';
 import { uiEn } from '../src/i18n/types';
 import { STREAK_TIERS } from '../src/lib/progress';
+
+// The work-rules track's Dutch screens, as the app loads them for a learner of that track.
+registerPack(nlPack);
 
 const html = (streak: number, code?: 'pl' | 'nl') =>
   renderToStaticMarkup(createElement(Milestone, { streak, lang: code ? getHelpLanguage(code) : undefined, onDone: () => {}, keep: false }));

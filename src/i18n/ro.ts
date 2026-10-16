@@ -294,6 +294,11 @@ const lang: HelpLanguageSource = {
     buildListen: 'Ascultă și formează propoziția',
     chatWhichQuestion: 'Ce întrebare se potrivește cu acest răspuns?',
     reviewWaiting: 'Mai așteaptă cuvinte: {n}. Revin în zilele următoare.',
+    factTitle: 'Știai că?',
+    fact3: { m: 'Nu ești singur: peste 3 milioane de adulți din Olanda se descurcă greu cu cititul, socotitul sau calculatorul. Exercițiul ajută.', f: 'Nu ești singură: peste 3 milioane de adulți din Olanda se descurcă greu cu cititul, socotitul sau calculatorul. Exercițiul ajută.' },
+    fact7: 'Dintre migranții care vorbesc foarte bine olandeza, 69 din 100 au un loc de muncă plătit.',
+    fact14: 'Multe biblioteci au un Taalhuis („casa limbii”): ajutor gratuit ca să înveți olandeza mai departe.',
+    fact30: 'Puțin exercițiu în fiecare zi e mai bun decât mult din când în când. Exersezi deja de 30 de zile!',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

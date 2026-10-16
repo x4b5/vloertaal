@@ -92,7 +92,7 @@ export const uiNl: Record<UiKey, UiText> = {
   whatIsRight: 'Wat klopt?',
   sayingBadge: 'Zo zeggen ze het',
   factTitle: 'Wist je dat?',
-  fact3: 'Je bent niet de enige: ruim 3 miljoen volwassenen in Nederland vinden lezen, rekenen of de computer moeilijk. Oefenen helpt.',
+  fact3: 'Je bent niet de enige. Ruim 3 miljoen volwassenen in Nederland vinden lezen, rekenen of de computer moeilijk. Oefenen helpt.',
   fact7: 'Van de migranten die heel goed Nederlands spreken, hebben 69 van de 100 betaald werk.',
   fact14: 'In veel bibliotheken is een Taalhuis: gratis hulp om verder te leren.',
   fact30: 'Elke dag een beetje oefenen werkt beter dan af en toe heel veel. Jij doet het al 30 dagen!',
