@@ -567,6 +567,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                   {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
                   <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
                     <Bi className="bay-title" text={title} />
+                    {/* Werkregels: what you can do after the lesson (its goal), under the title. */}
+                    {lesson.rule?.goal && <span className="bay-goal" lang="nl">{lesson.rule.goal}</span>}
                     {saved && <ResumeChip save={saved} lang={lang} />}
                     {state === 'done' && !saved && (
                       <span className="bay-again">
