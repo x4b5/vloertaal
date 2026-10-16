@@ -1880,6 +1880,19 @@ svg.emoji-xl { width: 140px; height: 140px; }
   .milestone .streak-num { font-size: 4.6rem; }
   .milestone .week { margin-top: 14px; }
 }
+/* A milestone with "Wist je dat?" (src/content/facts.ts): the board celebrates, the podium makes
+   room for the fact, so it is above Continue without scrolling (smaller, or gone on short screens). */
+.milestone:has(.milestone-fact) .streak-hero { width: min(170px, 44vw); }
+@media (max-height: 760px) {
+  .milestone:has(.milestone-fact) { padding-top: 12px; }
+  .milestone:has(.milestone-fact) .streak-hero { display: none; }
+  .milestone:has(.milestone-fact) .streak-count { margin: 4px 0 4px; }
+  .milestone:has(.milestone-fact) .streak-line { font-size: 1.3rem; margin: 4px 0; }
+  .milestone:has(.milestone-fact) .week { margin-top: 6px; }
+  .milestone:has(.milestone-fact) .streak-facts { margin-top: 4px; gap: 2px; }
+  .milestone-fact { margin-top: 8px; padding: 10px 12px; }
+  .milestone-fact-text { font-size: 1rem; line-height: 1.4; }
+}
 /* The follow-up screen after day 1: Bram waves, then the two cards. */
 .keep-hero { display: flex; justify-content: center; }
 @media (prefers-reduced-motion: reduce) {
