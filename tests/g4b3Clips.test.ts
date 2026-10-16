@@ -10,8 +10,12 @@ import { BRAM_HELLO, BRAM_VOICE } from '../src/lib/voices';
 
 /** Lines whose recording is still to be made (the owner re-records them); the device voice says them meanwhile. */
 const PENDING_RECORDING = new Set<string>([
-  // Empty: every line is recorded (16 October 2026). Add a changed or new line here until the
-  // next 'Record ElevenLabs voices' run.
+  // Add a changed or new line here until the next 'Record ElevenLabs voices' run.
+  // More natural Dutch (critic, 16 October 2026):
+  'Kunt u langzamer praten?',
+  'Ik ben het niet met je eens.',
+  'Mag ik jij zeggen?',
+  'Waar is dit middel voor?',
 ]);
 
 describe('recorded clips (G4 b3)', () => {

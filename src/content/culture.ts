@@ -50,7 +50,7 @@ const baseTips: CultureTip[] = [
     emoji: '👋',
     title: '"Je" or "u"?',
     body: 'At work most people say "je" to each other, often also to the boss. If you are not sure, start with "u" and listen to what others do. Saying "je" is not rude here.',
-    phrase: { id: 'c.je.p', nl: 'Mag ik je zeggen?', en: 'May I say "je" to you?' },
+    phrase: { id: 'c.je.p', nl: 'Mag ik jij zeggen?', en: 'May I say "je" to you?' },
     situation: { id: 'c.je.s', en: 'Your new supervisor says: "Zeg maar je, hoor!" What does she mean?', nl: 'Zeg maar je, hoor!', ask: 'which' },
     options: [
       { id: 'c.je.o1', en: 'She wants you to say "je" to her.', best: true },
@@ -255,7 +255,7 @@ export const teamworkUnit: Unit = {
       ],
       sentences: [
         { id: 's.agree.1', nl: 'Nee, dat lukt vandaag niet.', en: 'No, that does not work today.' },
-        { id: 's.agree.2', nl: 'Ik ben het er niet mee eens.', en: 'I do not agree with it.' },
+        { id: 's.agree.2', nl: 'Ik ben het niet met je eens.', en: 'I do not agree with you.' },
         { id: 's.agree.3', nl: 'Afspraak is afspraak.', en: 'An agreement is an agreement.' },
       ],
       dialogues: [

@@ -191,7 +191,7 @@ const lang: HelpLanguageSource = {
     deleteLetter: 'Șterge',
     listenSkipped: 'Întrebările de ascultare din această lecție sunt sărite. Sunetul rămâne pornit.',
     skippedN: { one: '{n} exercițiu sărit, nu se numără', few: '{n} exerciții sărite, nu se numără', other: '{n} de exerciții sărite, nu se numără' },
-    stampAgain: 'Încă o dată',
+    stampLater: 'Revine mai târziu',
     stampDone: 'Gata',
     chooseNext: 'Alege următorul subiect',
     recommended: 'Recomandat',

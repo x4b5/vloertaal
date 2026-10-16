@@ -191,7 +191,7 @@ const lang: HelpLanguageSource = {
     deleteLetter: 'Usuń',
     listenSkipped: 'Zadania ze słuchania w tej lekcji są pominięte. Dźwięk zostaje włączony.',
     skippedN: { one: '{n} ćwiczenie pominięte, nie liczy się', few: '{n} ćwiczenia pominięte, nie liczą się', many: '{n} ćwiczeń pominiętych, nie liczą się', other: '{n} ćwiczeń pominiętych, nie liczą się' },
-    stampAgain: 'Jeszcze raz',
+    stampLater: 'Wróci później',
     stampDone: 'Gotowe',
     chooseNext: 'Wybierz następny temat',
     recommended: 'Polecane',

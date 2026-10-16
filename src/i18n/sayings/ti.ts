@@ -101,7 +101,7 @@ const t: CultureTranslation = {
     'zg.oefening.w': 'እዚ ምስላ እዩ፡ ብልምምድ ኩሉ ይመሓየሽ። ንምምሃር ሆላንድኛ እውን ሓቂ እዩ።',
     'zg.zwartwit.lit': { m: 'ብጸሊም ኣብ ጻዕዳ ሕተቶ።', f: 'ብጸሊም ኣብ ጻዕዳ ሕተትዮ።' },
     'zg.zwartwit.m': { m: 'ብጽሑፍ፡ ኣብ ወረቐት ሕተቶ።', f: 'ብጽሑፍ፡ ኣብ ወረቐት ሕተትዮ።' },
-    'zg.zwartwit.s': { m: 'ሓላፊኻ ዝያዳ ደሞዝ ክህበካ ቃል ይኣትወልካ። ብጸይቲ ስራሕካ «Vraag het zwart op wit.» ትብል። እንታይ ማለታ እያ?', f: 'ሓላፊኺ ዝያዳ ደሞዝ ክህበኪ ቃል ይኣትወልኪ። ብጸይቲ ስራሕኪ «Vraag het zwart op wit.» ትብል። እንታይ ማለታ እያ?' },
+    'zg.zwartwit.s': { m: 'ሓላፊኻ ዝያዳ ደሞዝ ክህበካ ቃል ይኣትወልካ። ብጸይቲ ስራሕካ «Zorg dat je het zwart op wit hebt.» ትብል። እንታይ ማለታ እያ?', f: 'ሓላፊኺ ዝያዳ ደሞዝ ክህበኪ ቃል ይኣትወልኪ። ብጸይቲ ስራሕኪ «Zorg dat je het zwart op wit hebt.» ትብል። እንታይ ማለታ እያ?' },
     'zg.zwartwit.o1': { m: 'እቲ ቃል ብጽሑፍ ሕተቶ።', f: 'እቲ ቃል ብጽሑፍ ሕተትዮ።' },
     'zg.zwartwit.o2': { m: 'ጸሊምን ጻዕዳን ወረቐት ሕተት።', f: 'ጸሊምን ጻዕዳን ወረቐት ሕተቲ።' },
     'zg.zwartwit.o3': { m: 'ገለ ኣይትሕተት።', f: 'ገለ ኣይትሕተቲ።' },

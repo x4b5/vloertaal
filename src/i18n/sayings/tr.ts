@@ -101,7 +101,7 @@ const t: CultureTranslation = {
     'zg.oefening.w': 'Bu bir atasözüdür: alıştırma yaptıkça daha iyi olursun. Hollandaca öğrenmek için de bu doğrudur.',
     'zg.zwartwit.lit': 'Onu beyaz üstünde siyah iste.',
     'zg.zwartwit.m': 'Onu kâğıt üzerinde, yazılı olarak iste.',
-    'zg.zwartwit.s': 'Patronun sana daha fazla maaş sözü veriyor. İş arkadaşın diyor ki: “Vraag het zwart op wit.” Ne demek istiyor?',
+    'zg.zwartwit.s': 'Patronun sana daha fazla maaş sözü veriyor. İş arkadaşın diyor ki: “Zorg dat je het zwart op wit hebt.” Ne demek istiyor?',
     'zg.zwartwit.o1': 'Bu sözü yazılı olarak iste.',
     'zg.zwartwit.o2': 'Siyah ve beyaz kâğıt iste.',
     'zg.zwartwit.o3': 'Hiçbir şey isteme.',

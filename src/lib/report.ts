@@ -109,3 +109,16 @@ export function reportMail(p: ReportPlace): string {
   ].join('\n');
   return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
+const HINT_KEY = 'vloertaal:report-hint';
+
+/** The first time on this phone the flag shows: say what it is for (once; then remembered). */
+export function firstReportHint(): boolean {
+  try {
+    if (localStorage.getItem(HINT_KEY)) return false;
+    localStorage.setItem(HINT_KEY, '1');
+    return true;
+  } catch {
+    return false;
+  }
+}

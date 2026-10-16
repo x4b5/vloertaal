@@ -63,7 +63,7 @@ Zinnen: "Trek aan de bel als het niet veilig is." · "Ik loop echt op mijn tandv
 | Days off (Verlof en ziekte) | Ik ga even mijn batterij opladen. | I am going to charge my battery. | I am going to rest, so I have energy again. |
 | Warning signs (Uitbuiting herkennen) | Er is iets niet pluis. | Something is not fluffy. | Something is wrong, or not to be trusted. |
 | Your diploma and training (Diploma’s en verder komen) | Oefening baart kunst. | Practice gives birth to art. | If you practise a lot, you get good at it. |
-| Official letters (Geld en post) | Vraag het zwart op wit. | Ask for it black on white. | Ask for it on paper, in writing. |
+| Official letters (Geld en post) | Zorg dat je het zwart op wit hebt. | Ask for it black on white. | Ask for it on paper, in writing. |
 | Watch out for scams (Geld en post) | Dat is te mooi om waar te zijn. | That is too beautiful to be true. | It sounds so good that it is probably not true. |
 | By bike (Naar je werk) | Haastige spoed is zelden goed. | Hasty speed is rarely good. | When you rush, things often go wrong. |
 | Looking for new work (Werk kwijt) | Wie niet waagt, die niet wint. | Who does not dare, does not win. | You have to try, or you can never succeed. |

@@ -31,7 +31,7 @@ import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
 import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dailyRuleIds, dailyRuleLesson, dailyWordIds, dueIds, gradedStepIds, seedCards, strongerCount } from './lib/spaced';
 import { gloss } from './i18n';
-import { persistStorage } from './lib/install';
+import { keepStorageAgain, persistStorage } from './lib/install';
 import { CertEarned, CertificateScreen } from './components/Certificate';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
@@ -48,7 +48,8 @@ import { ensureRegionFor, regionReady } from './lib/region';
 type View =
   | { name: 'home' }
   /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
-  | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[] }
+  /** fresh: "Start again" (the saved place is kept until the first answer, see LessonPlayer). */
+  | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
   | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean }
@@ -554,6 +555,8 @@ export default function App() {
         if (unitDone) count('unit-done', dims);
         // The first finished lesson: ask the browser to keep this site's storage (the progress).
         if (!daily && !Object.keys(progress.completed).length) persistStorage();
+        // Not granted (yet): ask again now and then, so the progress is not cleared with the cache.
+        else keepStorageAgain();
         const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
         // Words learned, or in the rules track rules learned (the rule cards of finished lessons).
         const before = learnedItems(track, progress.completed);
@@ -596,6 +599,7 @@ export default function App() {
           }}
           onFinish={finish}
           resumable={!daily}
+          fresh={Boolean(view.fresh)}
           sector={progress.sector}
           sayings={Boolean(progress.completed[SAYINGS_FROM])}
           report={testerMode(access)}
@@ -674,7 +678,7 @@ export default function App() {
             focus={view.focus}
             onBack={back}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
-            onRestart={(lessonId) => { clearSave(lessonId); go({ name: 'lesson', lessonId, review: false }); }}
+            onRestart={(lessonId) => go({ name: 'lesson', lessonId, review: false, fresh: true })}
             onPocket={(id) => go({ name: 'pocket', unit: id })}
             onCertificate={(id) => go({ name: 'certificate', unit: id })}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
@@ -776,7 +780,7 @@ export default function App() {
             progress={progress}
             lang={lang}
             onStart={(lessonId, review) => go({ name: 'lesson', lessonId, review })}
-            onRestart={(lessonId) => { clearSave(lessonId); go({ name: 'lesson', lessonId, review: false }); }}
+            onRestart={(lessonId) => go({ name: 'lesson', lessonId, review: false, fresh: true })}
             onPick={(unit) => setProgress((p) => ({ ...p, ...pickBlock(unit, p.completed) }))}
             onAll={() => go({ name: 'all' })}
             daily={daily}

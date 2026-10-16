@@ -14,7 +14,7 @@ const t: CultureTranslation = {
     'a.bram': 'Cine este Bram?',
     'a.bram.b': 'Bram este colegul tău din aplicație. Lucrează de mulți ani în depozite și pe șantiere și îi place să-i ajute pe colegii noi. Vorbește calm, iar cu el poți să greșești.',
     'a.how': 'Cum funcționează?',
-    'a.how.b': 'Înveți olandeză prin engleză simplă. Dacă alegi o limbă de ajutor, vezi instrucțiunile și cuvintele și în limba ta. Asculți, atingi, construiești propoziții și exersezi conversații scurte cu colegii.',
+    'a.how.b': 'Înveți olandeză cu ajutor în limba ta: instrucțiunile și cuvintele le vezi și în română. Asculți, atingi, construiești propoziții și exersezi conversații scurte cu colegii.',
     'a.culture': 'Cum merg lucrurile aici',
     'a.culture.b': 'Limba e pe primul loc. Dar Vloertaal vorbește și despre cum merg de obicei lucrurile la un loc de muncă olandez: să-i spui „je” șefului, să pui întrebări, să vii la timp și să spui când te deranjează ceva. Găsești aceste sfaturi în lecții și la „Sfaturi pentru locul de muncă”.',
     'a.who': 'Pentru cine este?',

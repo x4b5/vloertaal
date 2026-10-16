@@ -7,7 +7,7 @@ het hele bestand heeft gecontroleerd. Hieronder de punten waar de vertaler zelf 
 Zinnen als "Ik ben nieuw", "Ik ben een nieuwe collega", "Ik ben ziek" en "Ik ben te laat" staan in de
 mannelijke vorm (Arabisch, Pools, Oekraïens, Roemeens, Bulgaars, Tigrinya). Op termijn: varianten per geslacht.
 
-Beleefde vragen aan een leidinggevende ("Kunt u dat herhalen?", "Wilt u langzaam praten?") gebruiken
+Beleefde vragen aan een leidinggevende ("Kunt u dat herhalen?", "Kunt u langzamer praten?") gebruiken
 de beleefdheidsvorm, net als het Nederlandse "u".
 
 ## Tigrinya (`ti.ts`) — hele bestand laten nakijken

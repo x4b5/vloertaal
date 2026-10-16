@@ -73,10 +73,10 @@ export const aboutSections: AboutSection[] = [
   },
   {
     id: 'a.how', emoji: '👂', title: 'How does it work?',
-    body: 'You learn Dutch through simple English. If you choose a help language, you also see the instructions and words in your own language. You listen, tap, build sentences and practise short conversations with colleagues.',
+    body: 'You learn Dutch with help in your own language, or in simple English if you chose no help language. You listen, tap, build sentences and practise short conversations with colleagues.',
     nl: {
       title: 'Hoe werkt het?',
-      body: 'Je leert Nederlands met eenvoudig Engels. Kies je een hulptaal? Dan zie je de uitleg en de woorden ook in je eigen taal. Je luistert, je tikt, je maakt zinnen en je oefent korte gesprekken met collega’s.',
+      body: 'Je leert Nederlands met hulp in je eigen taal, of in eenvoudig Engels als je geen hulptaal koos. Je luistert, je tikt, je maakt zinnen en je oefent korte gesprekken met collega’s.',
     },
     nlRules: {
       title: 'Hoe werkt het?',

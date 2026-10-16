@@ -87,7 +87,7 @@ export const units: Unit[] = [
         ],
         sentences: [
           { id: 's.understand.1', nl: 'Kunt u dat herhalen?', en: 'Can you repeat that?' },
-          { id: 's.understand.2', nl: 'Wilt u langzaam praten?', en: 'Could you speak slowly?' },
+          { id: 's.understand.2', nl: 'Kunt u langzamer praten?', en: 'Could you speak slowly?' },
           { id: 's.understand.3', nl: 'Waar is de wc?', en: 'Where is the toilet?' },
         ],
         dialogues: [

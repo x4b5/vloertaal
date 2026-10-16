@@ -21,6 +21,9 @@ export type Access = 'sample' | 'preview' | 'full';
  * SHA-256 (hex) of each normalised password and the access it gives. The first three were made
  * with the old normalising (trimmed, lower case) and still match; the fourth is the full-version
  * password without its hyphen, as normalizePassword makes it now.
+ *
+ * The repository is public: a code itself never goes in it (not in a test, a script or a doc),
+ * only its hash. Tests and the screenshot scripts use DEV_CODES, which a production build drops.
  */
 export const PASSWORD_HASHES: Record<string, Access> = {
   '82a3dd97f7aff9c6ceb3c198b8923d35ffab1d9c83db73f81d406ade24a32e54': 'preview',
@@ -36,14 +39,19 @@ export const PASSWORD_HASHES: Record<string, Access> = {
   '90a18ecf6549148fe4a16dae942bb664d6a5f5e3b0510401058d98b3f73e1764': 'full',
 };
 
+/** Codes for development and tests only (the dev server, vitest): never in a production build. */
+const DEV_CODES: Readonly<Record<string, Access>> = import.meta.env.DEV
+  ? { testcode: 'preview', testvol: 'full', testproef: 'sample' }
+  : {};
+
 /** Arabic-Indic (٠–٩) and Persian (۰–۹) digits: the low four bits of the code point are the digit. */
 const EASTERN_DIGITS = /[\u0660-\u0669\u06F0-\u06F9]/g;
 const westernDigits = (s: string) => s.replace(EASTERN_DIGITS, (d) => String(d.charCodeAt(0) & 0xf));
 
 /**
  * How a typed code is compared: lower case, Arabic-Indic and Persian digits as 0–9, and without
- * spaces, hyphens (also the dashes a phone keyboard puts in) or dots, so "vlaaitoer",
- * "Vlaai-toer" and "vlaai toer" are the same code.
+ * spaces, hyphens (also the dashes a phone keyboard puts in) or dots, so "appeltaart12",
+ * "Appel-taart 12" and "appel taart 12" are the same code.
  */
 export const normalizePassword = (input: string) =>
   westernDigits(input).toLowerCase().replace(/[\s.\-\u2010-\u2015\u00b7\u2022\u2219]/g, '');
@@ -60,7 +68,7 @@ async function sha256Hex(text: string): Promise<string> {
 export async function checkPassword(input: string): Promise<Access | null> {
   for (const typed of new Set([normalizePassword(input), legacyNormalize(input)])) {
     if (!typed) continue;
-    const access = PASSWORD_HASHES[await sha256Hex(typed)];
+    const access = DEV_CODES[typed] ?? PASSWORD_HASHES[await sha256Hex(typed)];
     if (access) return access;
   }
   return null;

@@ -60,8 +60,11 @@ describe('pocket card phrases', () => {
     const said = new Set(voices.flatMap((v) => Object.values(v.said)));
     // Changed text, recorded on the next "Record ElevenLabs voices" run (the phone voice says it meanwhile).
     const pending = new Set<string>([
-      // Empty: every phrase is recorded (16 October 2026). Add a new phrase here until the next
-      // 'Record ElevenLabs voices' run.
+      // Add a new phrase here until the next 'Record ElevenLabs voices' run.
+      'Kunt u langzamer praten?',
+      'Ik ben het niet met je eens.',
+      'Mag ik jij zeggen?',
+      'Waar is dit middel voor?',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

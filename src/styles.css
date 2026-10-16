@@ -509,8 +509,26 @@ h2 { font-size: 1.25rem; }
 }
 .player-top .icon-btn { margin-inline-start: -8px; }
 /* Testers only (src/lib/report.ts): the flag at the far end, quieter than the ✕. */
-.player-top .lesson-report { margin-inline-start: auto; margin-inline-end: -8px; color: var(--muted); }
+.player-top .lesson-report {
+  margin-inline-start: auto; margin-inline-end: -4px; width: auto; padding: 6px 10px; gap: 6px;
+  display: inline-flex; align-items: center; border-radius: 999px;
+  color: var(--ink); background: var(--tag-bg); text-decoration: none;
+}
 .player-top .lesson-report:hover { background: var(--concrete-2); }
+.lesson-report-label { font-size: 0.85rem; font-weight: 650; line-height: 1; }
+/* Once: what "Melden" is for, a note under the header at the flag's end (not tappable). */
+.player-top > .report-hint {
+  position: absolute; top: calc(100% + 6px); inset-inline-end: 12px; z-index: 30;
+  max-width: min(300px, calc(100% - 24px)); padding: 10px 14px; pointer-events: none;
+  background: var(--solid); color: var(--on-solid); border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); font-size: 0.9rem; line-height: 1.35;
+  animation: up 0.25s ease-out;
+}
+.player-top > .report-hint::before {
+  content: ''; position: absolute; top: -6px; inset-inline-end: 28px; width: 12px; height: 12px;
+  background: var(--solid); transform: rotate(45deg);
+}
+@media (prefers-reduced-motion: reduce) { .player-top > .report-hint { animation: none; } }
 /* Once the exercise scrolls under the header, a soft shadow on its bottom edge says so. */
 .player-top::after {
   content: ''; position: absolute; inset: 100% 0 auto; height: 14px; pointer-events: none; opacity: 0;
@@ -4202,10 +4220,7 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 /* Language list: a flag where it is not sensitive, else a calm tile with letters of the script
    (src/i18n/meta.ts LangMeta.flag). Same box either way, so the names stay aligned. */
 .lang-mark { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 26px; flex: none; }
-.lang-flag {
-  font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
-  font-size: 26px; line-height: 1;
-}
+.lang-flag { width: 30px; height: 20px; display: block; }
 .lang-sample {
   display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 24px;
   border-radius: 6px; background: var(--track); color: var(--muted);
@@ -4213,7 +4228,7 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 }
 .lang-sample:is([lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.95rem; }
 .lang-grid-compact .lang-mark { width: 30px; height: 22px; }
-.lang-grid-compact .lang-flag { font-size: 22px; }
+.lang-grid-compact .lang-flag { width: 27px; height: 18px; }
 .lang-grid-compact .lang-sample { width: 30px; height: 21px; font-size: 0.75rem; }
 
 /* ------------------------------------------------------------------------------------------

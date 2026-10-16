@@ -122,7 +122,7 @@ const t: CultureTranslation = {
     'w.overwerken': 'fazla mesai yapmak',
     'w.misschien': 'belki',
     's.agree.1': 'Hayır, bugün olmuyor.',
-    's.agree.2': 'Buna katılmıyorum.',
+    's.agree.2': 'Sana katılmıyorum.',
     's.agree.3': 'Söz sözdür.',
     'd.agree.q': 'Cumartesi fazla mesai yapabilir misin?',
     'd.agree.a': 'Hayır, olmuyor. Pazar olur.',

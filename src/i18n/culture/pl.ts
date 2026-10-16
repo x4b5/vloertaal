@@ -122,7 +122,7 @@ const t: CultureTranslation = {
     'w.overwerken': 'pracować w nadgodzinach',
     'w.misschien': 'może',
     's.agree.1': 'Nie, dziś się nie da.',
-    's.agree.2': 'Nie zgadzam się z tym.',
+    's.agree.2': 'Nie zgadzam się z tobą.',
     's.agree.3': 'Umowa to umowa.',
     'd.agree.q': 'Możesz popracować w nadgodzinach w sobotę?',
     'd.agree.a': 'Nie, nie da się. W niedzielę mogę.',

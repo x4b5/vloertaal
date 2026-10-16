@@ -101,7 +101,7 @@ const t: CultureTranslation = {
     'zg.oefening.w': 'To przysłowie: dzięki ćwiczeniu robisz coś coraz lepiej. To dotyczy też nauki niderlandzkiego.',
     'zg.zwartwit.lit': 'Poproś o to czarno na białym.',
     'zg.zwartwit.m': 'Poproś o to na papierze, na piśmie.',
-    'zg.zwartwit.s': 'Szef obiecuje ci wyższą pensję. Koleżanka mówi: „Vraag het zwart op wit.” Co ma na myśli?',
+    'zg.zwartwit.s': 'Szef obiecuje ci wyższą pensję. Koleżanka mówi: „Zorg dat je het zwart op wit hebt.” Co ma na myśli?',
     'zg.zwartwit.o1': 'Poproś o tę obietnicę na piśmie.',
     'zg.zwartwit.o2': 'Poproś o czarny i biały papier.',
     'zg.zwartwit.o3': 'O nic nie proś.',

@@ -220,7 +220,7 @@ export const uiNl: Record<UiKey, UiText> = {
   deleteLetter: 'Wissen',
   listenSkipped: 'De luistervragen van deze les slaan we over. Het geluid blijft aan.',
   skippedN: '{n} overgeslagen, telt niet mee',
-  stampAgain: 'Nog eens',
+  stampLater: 'Komt straks terug',
   stampDone: 'Klaar',
   chooseNext: 'Kies je volgende onderwerp',
   recommended: 'Aanbevolen',

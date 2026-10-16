@@ -14,7 +14,7 @@ const t: CultureTranslation = {
     'a.bram': 'Bram kim?',
     'a.bram.b': 'Bram, uygulamadaki iş arkadaşın. Yıllardır depolarda ve inşaatlarda çalışıyor ve yeni iş arkadaşlarına yardım etmeyi seviyor. Sakin konuşur; onunla hata yapabilirsin.',
     'a.how': 'Nasıl çalışır?',
-    'a.how.b': 'Hollandacayı basit İngilizce üzerinden öğrenirsin. Bir yardım dili seçersen, talimatları ve kelimeleri kendi dilinde de görürsün. Dinlersin, dokunursun, cümle kurarsın ve iş arkadaşlarınla kısa konuşmalar yaparak pratik yaparsın.',
+    'a.how.b': 'Hollandacayı kendi dilinde yardımla öğrenirsin: talimatları ve kelimeleri Türkçe olarak da görürsün. Dinlersin, dokunursun, cümle kurarsın ve iş arkadaşlarınla kısa konuşmalar yaparak pratik yaparsın.',
     'a.culture': 'Burada nasıl yapılır',
     'a.culture.b': 'Önce dil gelir. Ama Vloertaal, bir Hollanda iş yerinde işlerin genelde nasıl yürüdüğünü de anlatır: patronuna “je” demek, soru sormak, zamanında gelmek ve bir şey seni rahatsız ettiğinde bunu söylemek. Bu ipuçlarını derslerde ve “İş yeri ipuçları” bölümünde bulursun.',
     'a.who': 'Kimin için?',

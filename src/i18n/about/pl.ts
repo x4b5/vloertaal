@@ -14,7 +14,7 @@ const t: CultureTranslation = {
     'a.bram': 'Kim jest Bram?',
     'a.bram.b': 'Bram to twój kolega w aplikacji. Od wielu lat pracuje w magazynach i na budowach i lubi pomagać nowym kolegom. Mówi spokojnie, a przy nim możesz się mylić.',
     'a.how': 'Jak to działa?',
-    'a.how.b': 'Uczysz się niderlandzkiego przez prosty angielski. Jeśli wybierzesz język pomocy, zobaczysz polecenia i słowa także w swoim języku. Słuchasz, dotykasz ekranu, budujesz zdania i ćwiczysz krótkie rozmowy z kolegami z pracy.',
+    'a.how.b': 'Uczysz się niderlandzkiego z pomocą w swoim języku: polecenia i słowa widzisz też po polsku. Słuchasz, dotykasz ekranu, budujesz zdania i ćwiczysz krótkie rozmowy z kolegami z pracy.',
     'a.culture': 'Jak to tu działa',
     'a.culture.b': 'Język jest najważniejszy. Ale Vloertaal mówi też o tym, jak zwykle wygląda praca w Holandii: mówić „je” do szefa, zadawać pytania, przychodzić na czas i mówić, kiedy coś ci przeszkadza. Te wskazówki znajdziesz w lekcjach i w części „Wskazówki do pracy”.',
     'a.who': 'Dla kogo to jest?',

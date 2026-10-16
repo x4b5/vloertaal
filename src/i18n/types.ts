@@ -216,7 +216,7 @@ export const uiEn = {
   deleteLetter: 'Delete',
   listenSkipped: 'The listening questions in this lesson are skipped. Sound stays on.',
   skippedN: '{n} skipped, not counted',
-  stampAgain: 'Again',
+  stampLater: 'Comes back later',
   stampDone: 'Done',
   /* Route, one block at a time: the choice of the next block, the shelf, all topics. */
   chooseNext: 'Choose your next topic',

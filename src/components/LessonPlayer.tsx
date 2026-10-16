@@ -7,7 +7,7 @@ import { autoSpeak, sounds, speak, speechAvailable, stopSpeech } from '../lib/au
 import { tileDiff } from '../lib/answers';
 import { breakable } from '../lib/dutch';
 import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
-import { deviceLabel, reportMail } from '../lib/report';
+import { deviceLabel, firstReportHint, reportMail } from '../lib/report';
 import { dutchUi } from '../lib/track';
 import { chatWhy } from '../content/chatWhy';
 import { sayingQuestion } from '../content/sayings';
@@ -39,6 +39,7 @@ import {
   SituationExercise,
   TipCard,
   SayingCard,
+  ComesBack,
 } from './Exercises';
 
 export interface LessonResult {
@@ -252,7 +253,7 @@ export function LessonPlayer(props: PlayerProps) {
   return <LessonRun {...props} />;
 }
 
-function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, sector, sayings, report = false }: {
+function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, fresh = false, sector, sayings, report = false }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -276,6 +277,11 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
    * the app is hidden, picked up again on the next start, cleared when the lesson is finished.
    */
   resumable?: boolean;
+  /**
+   * "Start again": the lesson starts from the top, but the saved place is kept until the first
+   * answer (a mis-tap on "Start again" followed by Stop loses nothing).
+   */
+  fresh?: boolean;
   /** The learner's sector: later exercise kinds follow the place on their own path. */
   sector?: SectorChoice;
   /** The first lesson of "Uitdrukkingen en gezegden" is done: a lesson with a saying of its own shows it. */
@@ -286,7 +292,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const persist = resumable && !exercises;
   // An interrupted run of this lesson (same review mode), less than two days old.
   const [saved] = useState(() => {
-    const s = persist ? loadSave(lesson.id) : null;
+    const s = persist && !fresh ? loadSave(lesson.id) : null;
     return s && s.review === review ? s : null;
   });
   // The lesson is built from a seed, so a saved run rebuilds the same exercises.
@@ -397,13 +403,15 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     const s = latest.current;
     const at = s.checked ? s.index + 1 : s.index;
     if (at >= s.queue.length) return;
+    // Started again: the old save stays until the first answer.
+    if (fresh && at === 0) return;
     const save = makeSave({
       lessonId: lesson.id, review, quiet: quietAtStart, seed, initial, queue: s.queue, index: at,
       right: graded.current.right, total: graded.current.total, words: wordResults.current,
       run: s.run, misses: s.misses, now: Date.now(),
     });
     if (save) writeSave(save);
-  }, [persist, lesson.id, review, quietAtStart, seed, initial]);
+  }, [persist, fresh, lesson.id, review, quietAtStart, seed, initial]);
   useEffect(() => { writeNow(); }, [writeNow, index, checked, queue.length]);
   useEffect(() => {
     if (!persist) return;
@@ -417,6 +425,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       window.removeEventListener('pagehide', writeNow);
     };
   }, [persist, writeNow]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Tester mode: the "Melden" hint, once per phone (src/lib/report.ts), for 8 seconds at most.
+  const [reportHint, setReportHint] = useState(() => report && firstReportHint());
+  useEffect(() => {
+    if (!reportHint) return;
+    const t = window.setTimeout(() => setReportHint(false), 8000);
+    return () => window.clearTimeout(t);
+  }, [reportHint]);
   // The ✕ and the system Back button open the pause sheet (a resumable lesson keeps its place).
   const [askQuit, setAskQuit] = useState(false);
   const firstBack = useRef(backSignal);
@@ -615,7 +630,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   function announce(e: Exercise, correct: boolean, almost?: boolean, given?: string): string {
     const rv = isRuleExercise(e) ? ruleVerdict(e, correct, given) : null;
     if (rv) return ruleAnnouncement(rv);
-    const title = correct ? 'Goed zo!' : e.kind === 'situation' ? 'Hier gaat het anders.' : 'Nog eens!';
+    const title = correct ? 'Goed zo!' : e.kind === 'situation' ? 'Hier gaat het anders.' : 'Niet helemaal.';
     const meaning = ui(correct ? (almost ? 'almost' : e.kind === 'situation' ? 'goodChoice' : 'correct') : e.kind === 'situation' ? 'otherChoice' : 'incorrect', lang);
     const p = answerPair(e, lang);
     // Help-language users hear their language, not the English that is hidden on screen.
@@ -737,7 +752,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // The answer as a pair: "het hesje = the safety vest", help language underneath.
   // (In a chat this is what the right reply means; in a situation, the usual choice.)
   const pair = answerPair(ex, lang);
-  // The heading is Dutch ("Goed zo!" / "Nog eens!"); its meaning sits under it in small type.
+  // The heading is Dutch ("Goed zo!" / "Niet helemaal"); its meaning sits under it in small type.
   // A situation is graded like the rest: the usual choice is green with a check; any other
   // choice is red with a cross and the best answer under it (never a neutral sheet).
   const outcome: 'right' | 'wrong' | null = feedback ? (answer.correct ? 'right' : 'wrong') : null;
@@ -878,8 +893,16 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
             title="Iets melden"
             lang="nl"
           >
-            <FlagIcon size={24} />
+            <FlagIcon size={22} />
+            <span className="lesson-report-label">Melden</span>
           </a>
+        )}
+        {/* Once per phone, in the first lesson with the flag: what it is for. Not a button (it
+            goes by itself, after the first answer or a few seconds). */}
+        {report && reportHint && !checked && (
+          <div className="report-hint" role="note" lang="nl">
+            Iets gezien, of een tip? Tik op <strong>Melden</strong>. Dan mail je ons, met de plek erbij.
+          </div>
         )}
         {/* The sound note hangs just under the header, never over the close button, the sound
             toggle or the progress bar. */}
@@ -891,6 +914,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         )}
       </header>
 
+      {/* A wrong answer in the first round comes back at the end; in the retry round it does not (the stamp says which). */}
+      <ComesBack.Provider value={index < initial.length}>
       <main className="player-body" ref={bodyRef}>
         <div className="ex-ghost" ref={ghostRef} aria-hidden />
         <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
@@ -909,6 +934,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         {body}
         </div>
       </main>
+      </ComesBack.Provider>
       {/* With nothing in it yet (an answer is a tap on an option), the footer takes no room, so it
           never covers the last option; a still chevron (not a button) then says there is more. */}
       <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''} ${!showGo && !feedback ? 'foot-empty' : ''}`} ref={footRef}>
@@ -945,7 +971,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                   {headingMeaning?.help && lang && <HelpText className="feedback-help" text={headingMeaning.help} lang={lang} />}
                   <div className="feedback-line">
                     <span className="feedback-title" lang="nl" dir={rtl ? 'ltr' : undefined}>
-                      {ruleFb ? ruleFb.title : answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Nog eens!'}
+                      {ruleFb ? ruleFb.title : answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Niet helemaal'}
                     </span>
                     {headingMeaning?.help && <span className="feedback-sep en-support" aria-hidden>·</span>}
                     {headingMeaning && <span className={`feedback-en ${headingMeaning.help && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{headingMeaning.en}</span>}

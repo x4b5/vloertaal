@@ -217,7 +217,7 @@ export const tijdUnit: RuleUnit = {
             'Je moet niet altijd overwerken. Het hangt af van je contract en je cao.',
             'Schrijf je extra uren op, met datum en tijd.',
             'Check daarna je loonstrook.',
-            'Loon zonder loonstrook is zwart werk.',
+            'Krijg je extra uren contant, buiten je loonstrook om? Dat is zwart werk.',
           ],
           rule: 'geschreven',
         },
@@ -241,18 +241,19 @@ export const tijdUnit: RuleUnit = {
           answer: false,
           why: 'Het hangt af van je contract en je cao. Bij een noodgeval moet je soms wel. Maar jouw situatie telt ook mee. Bijvoorbeeld zorg voor een kind.',
         },
-        // ⚖️ check: Loon zonder loonstrook is zwart werk. Dan bouw je bijvoorbeeld geen WW en
-        //   pensioen op ⚖️.
+        // ⚖️ check: Loon contant, buiten de loonstrook om, is zwart werk. Dan bouw je bijvoorbeeld
+        //   geen WW en pensioen op ⚖️. (Niet: "loon zonder loonstrook is zwart werk": een loonstrook
+        //   hoeft alleen bij de eerste betaling en als het bedrag verandert, zie loon.ts.)
         {
           kind: 'whatdo',
           id: 'r.l.tijd.3.wd2',
           situation: 'Kevin werkt deze week voor de derde keer over.',
           options: [
             { id: 'a', text: 'Hij vertrouwt erop dat Henk het zelf bijhoudt.', best: false, feedback: 'Henk vergeet misschien iets. Je eigen lijst is zekerder.' },
-            { id: 'b', text: 'Hij vraagt Henk om de extra uren contant te betalen.', best: false, feedback: 'Contant zonder loonstrook is zwart werk. Dan mis je rechten.' },
+            { id: 'b', text: 'Hij vraagt Henk om de extra uren contant te betalen.', best: false, feedback: 'Contant en buiten de loonstrook om is zwart werk. Dan mis je rechten.' },
             { id: 'c', text: 'Hij schrijft de extra uren op, met datum en tijd.', best: true, feedback: 'Goed. Daarna checkt hij zijn loonstrook.' },
           ],
-          why: 'Je eigen lijst helpt als er iets misgaat. Check daarna je loonstrook. Loon zonder loonstrook is zwart werk. Dan bouw je bijvoorbeeld geen WW en pensioen op.',
+          why: 'Je eigen lijst helpt als er iets misgaat. Check daarna je loonstrook. Krijg je loon contant, buiten je loonstrook om? Dan is het zwart werk. Dan bouw je bijvoorbeeld geen WW en pensioen op.',
         },
         {
           kind: 'whoask',
@@ -316,13 +317,14 @@ export const tijdUnit: RuleUnit = {
           why: 'Vraag vrij op tijd en op papier. Je werkgever moet in principe ja zeggen. Alleen bij een heel goede reden van het bedrijf mag hij nee zeggen. Dat moet hij binnen 2 weken op papier laten weten.',
         },
         // ⚖️ check: Je krijgt minstens 4 keer ⚖️ zoveel vrije dagen als je dagen per week werkt.
-        // ⚖️ check: Vrije dagen van de wet vervallen meestal na een half jaar ⚖️.
+        // ⚖️ check: Vrije dagen van de wet vervallen meestal op 1 juli van het jaar erna ⚖️ (6 maanden
+        //   na het jaar waarin je ze opbouwde, art. 7:640a BW; was eerder fout: "na een half jaar").
         {
           kind: 'truefalse',
           id: 'r.l.tijd.4.tf1',
           statement: 'Werk je 5 dagen per week? Dan heb je minstens 20 vrije dagen per jaar.',
           answer: true,
-          why: 'Je krijgt minstens 4 keer zoveel vrije dagen als je dagen per week werkt. Je cao geeft vaak meer. Vrije dagen van de wet vervallen meestal na een half jaar. Wil je vrij voor een feestdag, zoals het Suikerfeest of Kerst? Vraag die dag op tijd aan.',
+          why: 'Je krijgt minstens 4 keer zoveel vrije dagen als je dagen per week werkt. Je cao geeft vaak meer. Vrije dagen van de wet vervallen meestal op 1 juli van het jaar erna. Wil je vrij voor een feestdag, zoals het Suikerfeest of Kerst? Vraag die dag op tijd aan.',
         },
         // ⚖️ check: Bij een noodgeval mag je meteen weg. Dat heet calamiteitenverlof ⚖️.
         // ⚖️ check: Je krijgt dan meestal gewoon loon ⚖️.

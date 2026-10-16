@@ -191,7 +191,7 @@ const lang: HelpLanguageSource = {
     deleteLetter: 'پاک کنید',
     listenSkipped: 'سوال‌های شنیدنی این درس تیر شدند. صدا روشن می‌ماند.',
     skippedN: '{n} تیر شد، حساب نمی‌شود',
-    stampAgain: 'دوباره',
+    stampLater: 'بعداً دوباره می‌آید',
     stampDone: 'ختم شد',
     chooseNext: 'موضوع بعدی را انتخاب کنید',
     recommended: 'پیشنهادی',

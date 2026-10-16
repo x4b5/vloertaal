@@ -137,9 +137,9 @@ describe('the password page explained', () => {
 
   it('back from the sector: the accepted code shows as accepted and the button is on', () => {
     const pl = getHelpLanguage('pl', 'f')!;
-    const html = renderToStaticMarkup(createElement(Gate, { lang: pl, onAccess: () => {}, onBack: () => {}, accepted: 'preview', code: 'sneakpeek' }));
+    const html = renderToStaticMarkup(createElement(Gate, { lang: pl, onAccess: () => {}, onBack: () => {}, accepted: 'preview', code: 'testcode' }));
     expect(html).toContain('pw-ok');
-    expect(html).toContain('value="sneakpeek"');
+    expect(html).toContain('value="testcode"');
     expect(html).not.toMatch(/<button type="submit"[^>]*disabled/);
   });
 });
