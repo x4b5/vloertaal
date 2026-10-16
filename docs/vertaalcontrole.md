@@ -562,3 +562,6 @@ Vijf korte regels in `src/i18n/<taal>.ts`, met AI geschreven: `whoToCall`, `who1
 `whoInspection`, `whoFairwork`. Graag nakijken, vooral Tigrinya en Arabisch (zonder werkwoord in
 de man- of vrouwvorm geschreven). Ook nieuw: `stampLater` ("Komt straks terug", het stempel bij een
 fout antwoord) en de zin over uitzendwerk en het minimumloon in `c.illness.b`.
+Ook nieuw (16 oktober 2026): `c.unsafe.w` eindigt nu met "je werkgever mag je er niet voor straffen"
+(was: "je komt niet in de problemen", een belofte die niemand kan doen), en het gesprekje van
+`l.shift` (`c.shift.q`, `c.shift.a`, `c.shift.a.why`) gaat over de dienst in plaats van koffie.

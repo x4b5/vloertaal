@@ -52,7 +52,7 @@ const t: CultureTranslation = {
     'c.unsafe.o1': 'Îi avertizezi pe colegi și îi spui șefului.',
     'c.unsafe.o2': 'Nu spui nimic, pentru că nu s-a întâmplat nimic.',
     'c.unsafe.o3': { m: 'Repari singur și nu spui nimănui.', f: 'Repari singură și nu spui nimănui.' },
-    'c.unsafe.w': 'Un aproape-accident e un avertisment. Dacă îl raportezi, ajuți la prevenirea unui accident adevărat; nu vei avea probleme pentru că ai vorbit.',
+    'c.unsafe.w': 'Un aproape-accident e un avertisment. Dacă îl raportezi, ajuți la prevenirea unui accident adevărat. Angajatorul nu are voie să te pedepsească pentru asta.',
     'c.direct': 'Direct nu înseamnă nepoliticos',
     'c.direct.b': { m: 'Colegii din Olanda spun des lucrurile foarte direct, de exemplu „Dat is fout” sau „Doe het zo”. De obicei nu vor să fie nepoliticoși. Și tu poți fi direct, atâta timp cât rămâi prietenos.', f: 'Colegii din Olanda spun des lucrurile foarte direct, de exemplu „Dat is fout” sau „Doe het zo”. De obicei nu vor să fie nepoliticoși. Și tu poți fi directă, atâta timp cât rămâi prietenoasă.' },
     'c.direct.p': 'Bine, atunci cum trebuie făcut?',

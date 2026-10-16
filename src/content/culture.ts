@@ -117,7 +117,7 @@ const baseTips: CultureTip[] = [
       { id: 'c.unsafe.o2', en: 'Say nothing, because nothing happened.', best: false },
       { id: 'c.unsafe.o3', en: 'Fix it alone and tell nobody.', best: false },
     ],
-    why: { id: 'c.unsafe.w', en: 'A near-accident is a warning. Reporting it helps prevent a real accident; you will not get in trouble for speaking up.' },
+    why: { id: 'c.unsafe.w', en: 'A near-accident is a warning. Reporting it helps prevent a real accident. Your employer may not punish you for reporting it.' },
   }),
   tip({
     id: 'c.direct',
