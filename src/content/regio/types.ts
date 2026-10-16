@@ -43,21 +43,40 @@ export interface SocialMapEntry {
   emoji: string;
 }
 
-export interface Region {
+/**
+ * What the app always knows of a region (the main bundle, src/content/regio/index.ts REGIONS): its
+ * name for Settings and the ids of its units. Everything else comes with the region's own file
+ * (RegionPack), loaded only for a learner who chose that region while the regions are on.
+ */
+export interface RegionMeta {
   id: RegionId;
   /** The name on the button and in the path (a name: never translated). */
   nl: string;
   /** Places in the explanation, so people recognise their own. */
   places: string[];
+  /** The id of its unit of the language track. */
+  taalUnitId?: string;
+  /** The id of its unit of the work-rules track. */
+  regelsUnitId?: string;
+}
+
+/** A region with its content: in the region's own file (src/content/regio/<region>-pack.ts). */
+export interface Region extends RegionMeta {
   /** The region's unit of the language track (src/content/types.ts Unit). */
   taalUnit?: Unit;
   /** Its "Zo werkt het hier" tips, one per lesson of taalUnit. */
   taalTips: CultureTip[];
-  /** The id of its unit of the work-rules track. The unit itself is Dutch-only content and comes
-   *  with the track's own file (src/i18n/packs/nl.ts registers it, registerRegionRules). */
-  regelsUnitId?: string;
+  /** Its unit of the work-rules track (Dutch-only content), as the course plays it. */
+  regelsUnit?: Unit;
   /** The names of its areas, for the Sociale kaart. */
   areas: Partial<Record<Area, string>>;
   /** The Sociale kaart (docs/regio-zuid-limburg.md, section 5). */
   socialMap: SocialMapEntry[];
+}
+
+/** A region's own file, loaded on demand (src/content/regio/index.ts ensureRegion). */
+export interface RegionPack {
+  region: Region;
+  /** Where the file was loaded from (saved with the app for offline use). */
+  url: string;
 }

@@ -894,7 +894,7 @@ const t: CultureTranslation = {
     'w.vertaling': 'traducerea',
     's.translate.1': 'Îl traduc cu telefonul.',
     's.translate.2': 'Pot să traduc repede asta?',
-    's.translate.3': 'Puteți să vorbiți în telefonul meu?',
+    's.translate.3': 'Ați putea să vorbiți puțin în telefonul meu?',
     'c.translate.q': 'Ce scrie pe bilețelul ăla?',
     'c.translate.a': 'Stai puțin, îl traduc.',
     'l.understood': { m: 'Să înțelegi și să fii înțeles', f: 'Să înțelegi și să fii înțeleasă' },

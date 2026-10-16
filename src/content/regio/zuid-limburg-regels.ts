@@ -4,8 +4,8 @@ import type { RuleUnit } from '../regels/types';
  * Werkregels · "Leven in Zuid-Limburg" (docs/regio-zuid-limburg.md, section 3): the work-rules
  * unit of the region Zuid-Limburg, 5 lessons. Only for learners who chose Zuid-Limburg in
  * Settings; it comes into their path after unit 10 (src/content/regio/index.ts REGION_SLOT) and is
- * never on a certificate. Loaded with the track's own file (src/i18n/packs/nl.ts), like the rules
- * course itself.
+ * never on a certificate. Loaded with the region's own file (./zuid-limburg-pack.ts), only for a
+ * learner of the region.
  *
  * Plain Dutch (1F), short sentences, the region's two rules for lessons: no address and no
  * regional phone number in a lesson (they are in the Sociale kaart), and the kind of place rather

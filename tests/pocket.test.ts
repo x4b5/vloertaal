@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { units } from '../src/content/curriculum';
 import { allRegionUnits } from '../src/content/regio';
+// The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
+import './regionLoaded';
 import { isMixLesson } from '../src/content/review';
 import { helpLanguages } from '../src/i18n/all';
 import { POCKET_SIZE, pocketPhrases, pocketPicks } from '../src/lib/pocket';

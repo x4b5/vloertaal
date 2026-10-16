@@ -15,6 +15,8 @@ import type { RuleLesson, RuleStep } from '../src/content/regels/types';
 import {
   allRegionUnits, isRegionChoice, mapChecked, mapHref, REGION_SLOT, REGIONS, REGIONS_LIVE, regionIds, regionUnits, setRegionsOn, SOCIAL_CATEGORIES,
 } from '../src/content/regio';
+// The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
+import './regionLoaded';
 import { zlRegelsUnit } from '../src/content/regio/zuid-limburg-regels';
 import { zlSocialMap, zlTaalTips, zlTaalUnit, zuidLimburg } from '../src/content/regio/zuid-limburg';
 import { coursePlan, sectors, type SectorChoice } from '../src/content/sectors';
@@ -41,7 +43,7 @@ const SECTORS: (SectorChoice | undefined)[] = [undefined, 'none', ...sectors.map
 const TRACKS: Track[] = ['taal', 'regels'];
 
 beforeAll(() => {
-  registerPack(nlPack); // also registers the region's rules unit
+  registerPack(nlPack);
   registerRulesCourse(toCourseUnits([...rulesUnits, ...sectorRulesUnits]));
 });
 afterAll(() => registerRulesCourse(toCourseUnits(RULES_STUB)));
@@ -54,7 +56,7 @@ describe('regions: the model', () => {
     expect(isRegionChoice('zl')).toBe(true);
     expect(isRegionChoice('none')).toBe(true);
     expect(isRegionChoice('zuid-limburg')).toBe(false);
-    for (const id of regionIds) expect(id, id).toMatch(/^rg\./);
+    for (const id of regionIds()) expect(id, id).toMatch(/^rg\./);
     expect(zlTaalUnit.id).toBe('rg.zl.u');
     expect(zlRegelsUnit.id).toBe('rg.zl.r');
     expect(zuidLimburg.regelsUnitId).toBe(zlRegelsUnit.id);
@@ -292,7 +294,7 @@ describe('Taal: "Jouw regio: Zuid-Limburg"', () => {
       expect(w.id, w.id).toMatch(/^rg\.zl\.w\./);
       expect(course.has(w.id), w.id).toBe(false);
     }
-    expect(new Set(regionIds).size).toBe(regionIds.length);
+    expect(new Set(regionIds()).size).toBe(regionIds().length);
   });
 
   it('speaks standard Dutch only (no dialect for the voice)', () => {
@@ -301,7 +303,7 @@ describe('Taal: "Jouw regio: Zuid-Limburg"', () => {
   });
 
   it('has every text in every help language', () => {
-    for (const lang of helpLanguages) for (const id of regionIds) expect(lang.gloss[id]?.trim(), `${lang.code} ${id}`).toBeTruthy();
+    for (const lang of helpLanguages) for (const id of regionIds()) expect(lang.gloss[id]?.trim(), `${lang.code} ${id}`).toBeTruthy();
   });
 });
 
@@ -392,7 +394,7 @@ describe('the screens', () => {
     const m = html(createElement(WordsHub, { lang: pl(), onTips: () => {}, after: createElement(SocialMapLink, { region: zuidLimburg, lang: pl(), onOpen: () => {} }) }));
     expect(m.match(/class="hub-card/g)).toHaveLength(2);
     expect(m).toMatch(/Sociale kaart <span class="sm-nobr">Zuid-Limburg<\/span>/);
-    expect(m).toContain('Mapa pomocy');
+    expect(m).toContain('Gdzie szukać pomocy');
   });
 
   it('Settings › "Waar woon je?": two cards, the name never translated', () => {

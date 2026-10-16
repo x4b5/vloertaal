@@ -45,8 +45,10 @@ describe('plural forms', () => {
   });
 
   it('a gendered form inside a plural object follows the learner (Arabic)', () => {
-    expect(fillCount('streakGrew', 2, getHelpLanguage('ar', 'f')).help).toBe('2 يومان على التوالي! واصلي هكذا.');
-    expect(fillCount('streakGrew', 2, getHelpLanguage('ar', 'm')).help).toBe('2 يومان على التوالي! واصل هكذا.');
+    // The dual says "two" by itself: no "2" in front of it (see the next test).
+    expect(fillCount('streakGrew', 2, getHelpLanguage('ar', 'f')).help).toBe('يومان على التوالي! واصلي هكذا.');
+    expect(fillCount('streakGrew', 2, getHelpLanguage('ar', 'm')).help).toBe('يومان على التوالي! واصل هكذا.');
+    expect(fillCount('recordN', 2, lang('ar')).help).toBe('أفضل نتيجة لك: يومان');
     expect(fillCount('streakStopped', 5, getHelpLanguage('ar', 'f')).help).toContain('ابدئي');
     // A plain ui() read of a plural text gets its `other` form.
     expect(lang('pl').ui.wordsUnit).toBe('słów');
@@ -61,10 +63,17 @@ describe('plural forms', () => {
         plurals++;
         const en = uiEn[key as UiKey];
         expect(en, key).toBeDefined();
-        for (const c of PLURAL_CATEGORIES) if (t[c] !== undefined) expect(cats, `${src.code} ${key} ${c}`).toContain(c);
-        for (const form of allForms(t)) {
-          expect(form.trim(), `${src.code} ${key}`).toBeTruthy();
-          expect(form.includes('{n}'), `${src.code} ${key}: ${form}`).toBe(en.includes('{n}'));
+        for (const c of PLURAL_CATEGORIES) {
+          if (t[c] === undefined) continue;
+          expect(cats, `${src.code} ${key} ${c}`).toContain(c);
+          for (const form of allForms(t[c])) {
+            expect(form.trim(), `${src.code} ${key}`).toBeTruthy();
+            // Arabic `two` is the dual (يومان "two days", كلمتين "two words"): the noun itself says
+            // the number, so "2 يومان" would say it twice. Standard Arabic, and CLDR's own Arabic
+            // patterns, drop the numeral there. So that one form leaves {n} out (the only exception).
+            const wantN = en.includes('{n}') && !(src.code === 'ar' && c === 'two');
+            expect(form.includes('{n}'), `${src.code} ${key} ${c}: ${form}`).toBe(wantN);
+          }
         }
         // Every whole number has its own form (no silent fallback to `other` for integers).
         for (let n = 0; n <= 200; n++) expect(t[pluralCategory(src.code, n)], `${src.code} ${key} ${n}`).toBeDefined();

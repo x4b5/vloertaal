@@ -331,7 +331,7 @@ export function tipGender(t: CultureTip): 'f' | 'm' | null {
 
 export function tipForLesson(lessonId: string): CultureTip | undefined {
   // A region's lessons have their own tips (src/content/regio), kept apart from the course's.
-  return cultureTips.find((t) => t.lessonId === lessonId) ?? allRegionTips.find((t) => t.lessonId === lessonId);
+  return cultureTips.find((t) => t.lessonId === lessonId) ?? allRegionTips().find((t) => t.lessonId === lessonId);
 }
 
 /** Every id in this file that needs a help-language translation (work tips: see workIds in work.ts). */

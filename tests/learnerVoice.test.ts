@@ -2,6 +2,8 @@ import { readFileSync } from 'node:fs';
 import { beforeAll, describe, expect, it } from 'vitest';
 import { allLessons } from '../src/content/curriculum';
 import { allRegionUnits } from '../src/content/regio';
+// The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
+import './regionLoaded';
 import { tipForLesson } from '../src/content/culture';
 import { clipUrl, setRecordedIndex } from '../src/lib/audio';
 import { learnerCharacter, learnerVoice, voiceFor } from '../src/lib/voices';

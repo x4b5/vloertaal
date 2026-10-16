@@ -274,7 +274,7 @@ export const uiEn = {
   regionHint: 'Do you live or work in South Limburg? Then you get extra lessons about your region. This stays on your phone. We send it nowhere.',
   regionOther: 'Somewhere else / I’d rather not say',
   regionNone: 'Not chosen',
-  socialMap: 'Social map',
+  socialMap: 'Where to get help',
   socialMapHint: 'Where to go for what. Tap a row to call or to open the website.',
   socialMapNote: 'General information, not advice. Names, numbers and websites can change.',
   socialMapWrong: 'Is something not right? Send an e-mail to hoi@vloertaal.nl.',

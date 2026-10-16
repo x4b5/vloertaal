@@ -1,13 +1,15 @@
 import type { CultureTip } from '../culture';
 import type { ChatLine, Dialogue, Unit } from '../types';
 import { ADVICE_LINE } from '../work';
+import { zlMeta } from './meta';
 import type { Region, SocialMapEntry } from './types';
 
 /**
  * Zuid-Limburg (docs/regio-zuid-limburg.md): the language track's unit "Jouw regio: Zuid-Limburg"
  * (2 lessons, in the shape of src/content/work.ts), its two "Zo werkt het hier" tips, and the
  * Sociale kaart. The work-rules unit "Leven in Zuid-Limburg" is Dutch-only content and lives in
- * ./zuid-limburg-regels.ts, loaded with the track's own file (src/i18n/packs/nl.ts).
+ * ./zuid-limburg-regels.ts. Both come in the region's own file (./zuid-limburg-pack.ts), loaded
+ * only for a learner who chose the region: never in the main bundle or a language's file.
  *
  * Plain standard Dutch, short sentences, no dialect: the voice only reads standard Dutch. Word
  * ids are the region's own (rg.zl.w.*): w.grens already means "the limit" (u.social) and
@@ -461,13 +463,11 @@ export const zlSocialMap: SocialMapEntry[] = [
   },
 ];
 
+/** The region without its work-rules unit (that one is added in ./zuid-limburg-pack.ts). */
 export const zuidLimburg: Region = {
-  id: 'zl',
-  nl: 'Zuid-Limburg',
-  places: ['Maastricht', 'Heerlen', 'Sittard-Geleen', 'Kerkrade', 'Heuvelland'],
+  ...zlMeta,
   taalUnit: zlTaalUnit,
   taalTips: zlTaalTips,
-  regelsUnitId: 'rg.zl.r',
   areas: {
     all: 'Heel Zuid-Limburg',
     mh: 'Maastricht en Heuvelland',

@@ -1,10 +1,10 @@
 import type { Track } from '../../lib/track';
 import type { CultureTip } from '../culture';
 import type { Lesson, Unit } from '../types';
-import type { Area, Region, RegionChoice, RegionId, SocialCategory } from './types';
-import { zuidLimburg } from './zuid-limburg';
+import { zlMeta } from './meta';
+import type { Area, Region, RegionChoice, RegionId, RegionMeta, RegionPack, SocialCategory } from './types';
 
-export type { Area, Region, RegionChoice, RegionId, SocialCategory, SocialMapEntry } from './types';
+export type { Area, Region, RegionChoice, RegionId, RegionMeta, RegionPack, SocialCategory, SocialMapEntry } from './types';
 
 /**
  * The regions (docs/regio-zuid-limburg.md): asked only in Settings ("Waar woon je?", under "Taal
@@ -14,14 +14,21 @@ export type { Area, Region, RegionChoice, RegionId, SocialCategory, SocialMapEnt
  *
  * A region's units are never part of a certificate: the certificates are the same for everyone,
  * wherever they live (src/lib/certificate.ts).
+ *
+ * This file is the small registry in the main bundle: the regions' names and ids. A region's
+ * content (its units, tips, Sociale kaart; src/content/regio/<region>-pack.ts) is a file of its
+ * own, loaded only while the regions are on and the learner chose that region (ensureRegion), like
+ * a help language's file. Until it is here the app works without it: the path without the region
+ * unit, the Hulp tab without the map. Its translations load the same way (src/i18n/index.ts
+ * ensureRegionTexts).
  */
-export const REGIONS: Region[] = [zuidLimburg];
+export const REGIONS: RegionMeta[] = [zlMeta];
 
 export const isRegionId = (x: unknown): x is RegionId => REGIONS.some((r) => r.id === x);
 export const isRegionChoice = (x: unknown): x is RegionChoice => x === 'none' || isRegionId(x);
 
-/** The learner's region, or undefined for none ('none', not asked, or an unknown id). */
-export function regionOf(choice: string | null | undefined): Region | undefined {
+/** The learner's region's name and ids (Settings), or undefined for none ('none', not asked, or an unknown id). */
+export function regionMetaOf(choice: string | null | undefined): RegionMeta | undefined {
   return REGIONS.find((r) => r.id === choice);
 }
 
@@ -45,6 +52,56 @@ export function regionsOn(): boolean {
   return REGIONS_LIVE || Boolean(import.meta.env?.DEV && typeof location !== 'undefined');
 }
 
+/* ---- A region's own file ---- */
+
+const loaders: Record<RegionId, () => Promise<{ default: RegionPack }>> = {
+  zl: () => import('./zuid-limburg-pack'),
+};
+const loaded = new Map<RegionId, RegionPack>();
+const pending = new Map<RegionId, Promise<void>>();
+
+/** Puts a region's content in place (its file does this when it loads; tests import that file). */
+export function registerRegion(pack: RegionPack): void {
+  loaded.set(pack.region.id, pack);
+}
+
+/** Does the app need a region's file for this choice: the regions on, and a region chosen. */
+export const regionWanted = (choice: string | null | undefined): choice is RegionId => regionsOn() && isRegionId(choice);
+
+/** Is everything for this choice here (also for no region, or while the regions are off)? */
+export function isRegionLoaded(choice: string | null | undefined): boolean {
+  return !regionWanted(choice) || loaded.has(choice);
+}
+
+/**
+ * Loads the chosen region's file (once; again after a failure, e.g. offline). Resolves at once
+ * for no region, a region already here, and while the regions are off: then nothing is fetched.
+ */
+export function ensureRegion(choice: string | null | undefined): Promise<void> {
+  if (!regionWanted(choice) || loaded.has(choice)) return Promise.resolve();
+  let p = pending.get(choice);
+  if (!p) {
+    p = loaders[choice]().then((m) => registerRegion(m.default)).finally(() => pending.delete(choice));
+    pending.set(choice, p);
+  }
+  return p;
+}
+
+/** Has a region's file loaded on this visit (so its translations come along offline too)? */
+export const anyRegionLoaded = (): boolean => loaded.size > 0;
+
+/** The files of the regions loaded on this visit: saved with the app for offline use (src/lib/offline.ts). */
+export function loadedRegionUrls(): string[] {
+  return [...loaded.values()].map((p) => p.url).filter((u) => /^https?:/.test(u));
+}
+
+/** The learner's region with its content, or undefined for none, or while its file has not loaded. */
+export function regionOf(choice: string | null | undefined): Region | undefined {
+  return isRegionId(choice) ? loaded.get(choice)?.region : undefined;
+}
+
+const loadedRegions = (): Region[] => [...loaded.values()].map((p) => p.region);
+
 /* ---- The region units in the course ---- */
 
 /**
@@ -54,29 +111,20 @@ export function regionsOn(): boolean {
  */
 export const REGION_SLOT: Record<Track, string> = { taal: 'u.travel', regels: 'r.geld' };
 
-/**
- * The work-rules units of the regions, registered with the track's own file (src/i18n/packs/nl.ts),
- * so a learner of the language course downloads none of it (like the rules course itself).
- */
-const rulesUnits = new Map<RegionId, Unit>();
-export function registerRegionRules(region: RegionId, unit: Unit): void {
-  rulesUnits.set(region, unit);
-}
+/** The unit of a region of one track. */
+const unitOf = (region: Region, track: Track): Unit | undefined => (track === 'taal' ? region.taalUnit : region.regelsUnit);
 
-/** A region's unit(s) of one track (none for no region, or while the rules unit has not loaded). */
+/** A region's unit(s) of one track (none for no region, or while its file has not loaded). */
 export function regionUnits(choice: string | null | undefined, track: Track): Unit[] {
   const region = regionOf(choice);
-  if (!region) return [];
-  if (track === 'taal') return region.taalUnit ? [region.taalUnit] : [];
-  const unit = rulesUnits.get(region.id);
+  const unit = region && unitOf(region, track);
   return unit ? [unit] : [];
 }
 
-/** Every region's units of one track, or of both: for looking a unit or lesson up by id. */
+/** Every loaded region's units of one track, or of both: for looking a unit or lesson up by id. */
 export function allRegionUnits(track?: Track): Unit[] {
-  const taal = REGIONS.flatMap((r) => (r.taalUnit ? [r.taalUnit] : []));
-  const regels = [...rulesUnits.values()];
-  return track === 'taal' ? taal : track === 'regels' ? regels : [...taal, ...regels];
+  const tracks: Track[] = track ? [track] : ['taal', 'regels'];
+  return tracks.flatMap((t) => loadedRegions().flatMap((r) => unitOf(r, t) ?? []));
 }
 
 /** Every region's lessons of the language track (their words count as learned words). */
@@ -91,8 +139,8 @@ export function withRegion(main: Unit[], choice: string | null | undefined, trac
   return [...main.slice(0, cut), ...extra, ...main.slice(cut)];
 }
 
-/** The "Zo werkt het hier" tips of every region (src/content/culture.ts tipForLesson finds them). */
-export const allRegionTips: CultureTip[] = REGIONS.flatMap((r) => r.taalTips);
+/** The "Zo werkt het hier" tips of every loaded region (src/content/culture.ts tipForLesson finds them). */
+export const allRegionTips = (): CultureTip[] => loadedRegions().flatMap((r) => r.taalTips);
 
 /** The tips of the learner's region (the "Zo werkt het hier" page). */
 export const regionTips = (choice: string | null | undefined): CultureTip[] => regionOf(choice)?.taalTips ?? [];
@@ -138,8 +186,8 @@ export const shortUrl = (url: string): string => url.replace(/^https?:\/\/(www\.
 
 /* ---- Translations ---- */
 
-/** Every id of the regions that needs a help-language translation (tests/i18n.test.ts). */
-export const regionIds: string[] = [
+/** Every id of the loaded regions that needs a help-language translation (tests/i18n.test.ts). */
+export const regionIds = (): string[] => [
   ...allRegionUnits('taal').flatMap((u) => [
     u.id,
     ...u.lessons.flatMap((l) => [
@@ -149,6 +197,6 @@ export const regionIds: string[] = [
       ...(l.dialogues ?? []).flatMap((d) => [d.prompt.id, d.reply.id]),
     ]),
   ]),
-  ...allRegionTips.flatMap((t) => [t.id, `${t.id}.b`, t.phrase.id, t.situation.id, ...t.options.map((o) => o.id), t.why.id]),
+  ...allRegionTips().flatMap((t) => [t.id, `${t.id}.b`, t.phrase.id, t.situation.id, ...t.options.map((o) => o.id), t.why.id]),
   ...SOCIAL_CATEGORIES.map((c) => categoryGlossId(c.id)),
 ];

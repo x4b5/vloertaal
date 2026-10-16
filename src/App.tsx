@@ -42,6 +42,7 @@ import { applyEnglish, englishLangFor } from './lib/english';
 import { PocketCardScreen } from './components/PocketCard';
 import { SocialMap, SocialMapLink } from './components/SocialMap';
 import { regionOf, type RegionChoice } from './content/regio';
+import { ensureRegionFor, regionReady } from './lib/region';
 
 type View =
   | { name: 'home' }
@@ -324,6 +325,19 @@ export default function App() {
     window.addEventListener('online', back);
     return () => window.removeEventListener('online', back);
   }, [langFailed]);
+  // The learner's region (src/content/regio): its own file and its texts in the help language load
+  // on demand, only while the regions are on (src/lib/region.ts); the texts also while Settings is
+  // open (its row "Waar woon je?"). Until they are here the app works without them: the path
+  // without the region's unit, the Hulp tab without the map. At start main.tsx waits for them.
+  const [, setRegionTry] = useState(0);
+  const askingRegion = view.name === 'settings';
+  const regionHere = regionReady(progress.region, progress.helpLang, askingRegion);
+  useEffect(() => {
+    if (regionHere) return;
+    let live = true;
+    ensureRegionFor(progress.region, progress.helpLang, askingRegion).then(() => { if (live) setRegionTry((n) => n + 1); }, () => {});
+    return () => { live = false; };
+  }, [progress.region, progress.helpLang, askingRegion, regionHere]);
   // The word pictures (their own file, loading since the start): every screen after the language page has them.
   const picsReady = usePicturesLoaded();
   useEffect(() => {
@@ -424,7 +438,7 @@ export default function App() {
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
   /** "Waar woon je?" (Settings only): the region's lessons come in or go out of the path. */
   const setRegion = (region: RegionChoice) => setProgress((p) => ({ ...p, region }));
-  /** The learner's region (src/content/regio), for its Sociale kaart on the Hulp tab. */
+  /** The learner's region (src/content/regio), for its Sociale kaart on the Hulp tab (once its file is here). */
   const region = regionOf(progress.region);
   const mapLink = region ? <SocialMapLink region={region} lang={lang} onOpen={() => go({ name: 'socialmap' })} /> : undefined;
 
@@ -707,7 +721,7 @@ export default function App() {
         </>
       );
     case 'socialmap':
-      // Back from a region switched off meanwhile: the Hulp tab.
+      // Back from a region switched off meanwhile (or its file not here): the Hulp tab.
       if (!region) return null;
       return (
         <>

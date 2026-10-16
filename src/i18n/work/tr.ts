@@ -894,7 +894,7 @@ const t: CultureTranslation = {
     'w.vertaling': 'çeviri',
     's.translate.1': 'Telefonumla çeviriyorum.',
     's.translate.2': 'Bunu hızlıca çevirebilir miyim?',
-    's.translate.3': 'Telefonuma konuşabilir misiniz?',
+    's.translate.3': 'Bir saniye telefonuma konuşur musunuz?',
     'c.translate.q': 'O notta ne yazıyor?',
     'c.translate.a': 'Bir dakika, çeviriyorum.',
     'l.understood': 'Anlamak ve anlaşılmak',

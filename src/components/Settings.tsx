@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { NOT_SURE, sectors, type SectorChoice } from '../content/sectors';
-import { REGIONS, regionOf, regionsOn, type RegionChoice } from '../content/regio';
+import { REGIONS, regionMetaOf, regionsOn, type RegionChoice } from '../content/regio';
 import { ensureLanguage, hasGender, isLanguageLoaded, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
 import { dutchUi, trackOfLang } from '../lib/track';
@@ -224,7 +224,7 @@ export function Settings({
         return progress.sector ? <Value text={say(s ? s.key : NOT_SURE.key)} /> : null;
       }
       case 'region': {
-        const r = regionOf(progress.region);
+        const r = regionMetaOf(progress.region);
         return r ? <span className="set-row-value" lang="nl">{r.nl}</span> : <Value text={say('regionNone')} />;
       }
       case 'english': return <Value text={say(wantsEnglish() ? 'settingOn' : 'settingOff')} />;
@@ -316,7 +316,7 @@ export function Settings({
             <p className="max3-hint max3-hint-top"><Bi text={say('regionHint')} /></p>
             <ChoiceCards
               label={said(ui('regionTitle', lang))}
-              current={progress.region === 'none' ? 'none' : regionOf(progress.region)?.id ?? null}
+              current={progress.region === 'none' ? 'none' : regionMetaOf(progress.region)?.id ?? null}
               onPick={(id) => { onRegion?.(id); answered(); }}
               options={[
                 { id: zl.id, text: { en: zl.nl, lang }, picture: <PinIcon size={28} /> },

@@ -7,14 +7,25 @@ import ro from './packs/ro';
 import ti from './packs/ti';
 import tr from './packs/tr';
 import uk from './packs/uk';
-import { getHelpLanguage, loadedSources, registerPack } from './index';
+import arRegio from './packs/regio/ar';
+import bgRegio from './packs/regio/bg';
+import faRegio from './packs/regio/fa';
+import plRegio from './packs/regio/pl';
+import prsRegio from './packs/regio/prs';
+import roRegio from './packs/regio/ro';
+import tiRegio from './packs/regio/ti';
+import trRegio from './packs/regio/tr';
+import ukRegio from './packs/regio/uk';
+import { getHelpLanguage, loadedSources, registerPack, registerRegionTexts } from './index';
 import type { HelpLanguage, HelpLanguageSource } from './types';
 
 /**
- * Every help language loaded at once, for tests and checks (never imported by the app, which
- * loads one pack on demand: src/i18n/index.ts ensureLanguage).
+ * Every help language loaded at once, with its region texts, for tests and checks (never imported
+ * by the app, which loads one pack on demand: src/i18n/index.ts ensureLanguage).
  */
 for (const pack of [ar, ti, fa, prs, uk, tr, pl, ro, bg]) registerPack(pack);
+// With the region texts (in the app their own files, loaded only for a learner of a region).
+for (const pack of [arRegio, tiRegio, faRegio, prsRegio, ukRegio, trRegio, plRegio, roRegio, bgRegio]) registerRegionTexts(pack);
 
 export * from './index';
 

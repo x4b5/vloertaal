@@ -4,6 +4,8 @@ import { describe, expect, it } from 'vitest';
 import { allDialogues, allLessons, allWords } from '../src/content/curriculum';
 import { cultureTips } from '../src/content/culture';
 import { allRegionTips, allRegionUnits } from '../src/content/regio';
+// The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
+import './regionLoaded';
 import { BRAM_HELLO, BRAM_VOICE } from '../src/lib/voices';
 
 /** Lines whose recording is still to be made (the owner re-records them); the device voice says them meanwhile. */
@@ -58,7 +60,7 @@ describe('recorded clips (G4 b3)', () => {
       ...allWords.map((w) => w.nl),
       ...cultureTips.map((t) => t.phrase.nl),
       ...regionLessons.flatMap((l) => [...l.words.map((w) => w.nl), ...l.sentences.map((s) => s.nl), ...(l.dialogues ?? []).flatMap((d) => [d.prompt.nl, d.reply.nl])]),
-      ...allRegionTips.map((t) => t.phrase.nl),
+      ...allRegionTips().map((t) => t.phrase.nl),
       BRAM_HELLO,
     ]);
     const missing = [...texts].filter((t) => !said.has(t.trim()) && !said.has(plain(t)));

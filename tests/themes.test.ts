@@ -22,7 +22,7 @@ import { REGIONS } from '../src/content/regio';
 /** Every unit of both courses: the Dutch course and the real work-rules course (not the stub),
  *  with the regions' units of each track (src/content/regio: only in a region's path). */
 const COURSE: Record<Track, string[]> = {
-  taal: [...units.map((u) => u.id), ...REGIONS.flatMap((r) => (r.taalUnit ? [r.taalUnit.id] : []))],
+  taal: [...units.map((u) => u.id), ...REGIONS.flatMap((r) => (r.taalUnitId ? [r.taalUnitId] : []))],
   regels: [...[...rulesUnits, ...sectorRulesUnits].map((u) => u.id), ...REGIONS.flatMap((r) => (r.regelsUnitId ? [r.regelsUnitId] : []))],
 };
 const TRACKS: Track[] = ['taal', 'regels'];
