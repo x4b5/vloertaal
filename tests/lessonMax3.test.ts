@@ -3,7 +3,7 @@ import { allLessons, allWords } from '../src/content/curriculum';
 import { tokenize } from '../src/lib/answers';
 import { buildLesson, buildSteps, buildTiles, courseNames, MATCH_PAIRS, nearMiss } from '../src/lib/exercises';
 import { letterSteps } from '../src/lib/letters';
-import { matchStart, matchTap, stepGrade } from '../src/lib/lessonRun';
+import { BUILD_FORGIVEN_TAPS, matchStart, matchTap, stepGrade } from '../src/lib/lessonRun';
 import { createRng } from '../src/lib/random';
 
 /** The "at most 3" rule inside a lesson: never more than three answers to tap. */
@@ -90,6 +90,9 @@ describe('build word by word', () => {
     expect(stepGrade(1)).toEqual({ correct: true, almost: false });
     expect(stepGrade(2).correct).toBe(false);
     expect(stepGrade(3).correct).toBe(false);
+    // A built sentence forgives two (more tiles, more taps).
+    expect(stepGrade(2, BUILD_FORGIVEN_TAPS).correct).toBe(true);
+    expect(stepGrade(3, BUILD_FORGIVEN_TAPS).correct).toBe(false);
   });
 });
 
