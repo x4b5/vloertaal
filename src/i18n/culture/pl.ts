@@ -52,7 +52,7 @@ const t: CultureTranslation = {
     'c.unsafe.o1': 'Ostrzegasz kolegów i mówisz przełożonemu.',
     'c.unsafe.o2': 'Nic nie mówisz, bo nic się nie stało.',
     'c.unsafe.o3': { m: 'Naprawiasz to sam i nikomu nie mówisz.', f: 'Naprawiasz to sama i nikomu nie mówisz.' },
-    'c.unsafe.w': 'Sytuacja, w której prawie doszło do wypadku, to ostrzeżenie. Zgłoszenie go pomaga zapobiec prawdziwemu wypadkowi; nie będziesz mieć kłopotów za to, że coś powiesz.',
+    'c.unsafe.w': 'Sytuacja, w której prawie doszło do wypadku, to ostrzeżenie. Zgłoszenie go pomaga zapobiec prawdziwemu wypadkowi. Pracodawca nie może cię za to ukarać.',
     'c.direct': 'Bezpośredniość to nie niegrzeczność',
     'c.direct.b': { m: 'Holenderscy koledzy często mówią bardzo bezpośrednio, np. „Dat is fout” albo „Doe het zo”. Zwykle nie chcą być niegrzeczni. Ty też możesz mówić bezpośrednio, dopóki jesteś uprzejmy.', f: 'Holenderscy koledzy często mówią bardzo bezpośrednio, np. „Dat is fout” albo „Doe het zo”. Zwykle nie chcą być niegrzeczni. Ty też możesz mówić bezpośrednio, dopóki jesteś uprzejma.' },
     'c.direct.p': 'Dobrze, to jak trzeba to zrobić?',

@@ -23,7 +23,7 @@ const t: CultureTranslation = {
     'c.danger.a.why': "Kazada önce 112 aranır.",
     'c.things.a.why': "Soru \"nereye\" diye soruyor. Bu cevap bir yer söylüyor.",
     'c.directions.a.why': "Sol mu sağ mı? Bu cevap birini seçip yerini söylüyor.",
-    'c.shift.a.why': "Kahve mi çay mı? Bu cevap kibarca birini seçiyor.",
+    'c.shift.a.why': "Vardiya ne zaman başlıyor? Bu cevap günü ve saati söylüyor.",
     'c.sick.a.why': "Hasta olmak evde kalmak ve bunu haber vermek demektir.",
     'd.speakup.a.why': "Bir sorun olup olmadığı sorulunca dürüst bir \"evet\" iyidir.",
     'd.agree.a.why': "Hayır demek sorun değildir. Başka bir gün önermek yardımcı olur.",

@@ -23,7 +23,7 @@ const t: CultureTranslation = {
     'c.danger.a.why': "La un accident, întâi se sună la 112.",
     'c.things.a.why': "Întrebarea e „unde”. Acest răspuns numește un loc.",
     'c.directions.a.why': "Stânga sau dreapta? Acest răspuns alege una și spune unde.",
-    'c.shift.a.why': "Cafea sau ceai? Acest răspuns alege politicos una.",
+    'c.shift.a.why': "Când începe tura? Acest răspuns spune ziua și ora.",
     'c.sick.a.why': "Boala înseamnă: rămâi acasă și anunți asta.",
     'd.speakup.a.why': "La întrebarea dacă e ceva în neregulă, un „da” sincer e bine.",
     'd.agree.a.why': "Ai voie să refuzi. Ajută să propui altă zi.",

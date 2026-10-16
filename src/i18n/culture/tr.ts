@@ -52,7 +52,7 @@ const t: CultureTranslation = {
     'c.unsafe.o1': 'İş arkadaşlarını uyarır ve amirine söylersin.',
     'c.unsafe.o2': 'Bir şey olmadığı için hiçbir şey söylemezsin.',
     'c.unsafe.o3': 'Tek başına düzeltir ve kimseye söylemezsin.',
-    'c.unsafe.w': 'Ucuz atlatılan bir kaza bir uyarıdır. Bildirmek gerçek bir kazayı önlemeye yardım eder; söylediğin için başın derde girmez.',
+    'c.unsafe.w': 'Ucuz atlatılan bir kaza bir uyarıdır. Bildirmek gerçek bir kazayı önlemeye yardım eder. İşveren seni bunun için cezalandıramaz.',
     'c.direct': 'Açık sözlü olmak kabalık değil',
     'c.direct.b': 'Hollandalı iş arkadaşları çoğu zaman çok açık konuşur, örneğin “Dat is fout” veya “Doe het zo”. Genelde kaba olmak istemezler. Sen de nazik kaldığın sürece açık konuşabilirsin.',
     'c.direct.p': 'Tamam, o zaman nasıl yapmalı?',

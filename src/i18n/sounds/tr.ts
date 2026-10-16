@@ -5,7 +5,7 @@ const t: CultureTranslation = {
   ui: {},
   gloss: {
     'u.sounds': 'Hollandacanın sesleri',
-    'l.shortlong': 'Kısa mı, uzun mu?',
+    'l.shortlong': 'a mı aa mı, ui mi ei mi',
     'w.kl.man': 'adam',
     'w.kl.maan': 'ay (gökyüzündeki)',
     'w.kl.zak': 'poşet, torba',

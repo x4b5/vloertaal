@@ -50,7 +50,7 @@
     "c.unsafe.o1": "Warn colleagues and tell your supervisor.",
     "c.unsafe.o2": "Say nothing, because nothing happened.",
     "c.unsafe.o3": "Fix it alone and tell nobody.",
-    "c.unsafe.w": "A near-accident is a warning. Reporting it helps prevent a real accident; you will not get in trouble for speaking up.",
+    "c.unsafe.w": "A near-accident is a warning. Reporting it helps prevent a real accident. Your employer may not punish you for reporting it.",
     "c.direct": "Direct is not rude",
     "c.direct.b": "Dutch colleagues often say things very directly, like \"Dat is fout\" or \"Doe het zo\". They usually do not mean it rudely. You may also be direct, as long as you stay friendly.",
     "c.direct.p": "Okay, how should it be done then?",

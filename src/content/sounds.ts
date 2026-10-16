@@ -38,7 +38,8 @@ const lesson = (slug: string, title: string, pairs: PairRow[], sentences: Pair[]
 export const soundLessons: Lesson[] = [
   lesson(
     'shortlong',
-    'Short or long?',
+    // man/maan and zak/zaak differ in length; ui/ei is another vowel (critic: not "short or long").
+    'a or aa, ui or ei',
     [
       [['man', 'de man', 'the man', '🧔'], ['maan', 'de maan', 'the moon', '🌙']],
       [['zak', 'de zak', 'the bag', '🛍️'], ['zaak', 'de zaak', 'the shop', '🏬']],

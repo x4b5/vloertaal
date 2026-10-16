@@ -434,8 +434,8 @@ const lang: HelpLanguageSource = {
     'c.things.a': 'Paletin üstüne.',
     'c.directions.q': 'Sol mu, sağ mı?',
     'c.directions.a': 'Sağ, rafın yanında.',
-    'c.shift.q': 'Kahve mi çay mı istersin?',
-    'c.shift.a': 'Çay, lütfen.',
+    'c.shift.q': 'Vardiyan ne zaman başlıyor?',
+    'c.shift.a': 'Yarın saat yedide.',
     'c.sick.q': 'Hasta mısın?',
     'c.sick.a': 'Evet, bugün evde kalıyorum.',
     // Emergency phrases (phrasebook only)

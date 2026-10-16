@@ -431,8 +431,8 @@ const lang: HelpLanguageSource = {
     'c.things.a': 'روی پالت.',
     'c.directions.q': 'چپ یا راست؟',
     'c.directions.a': 'راست، کنار قفسه.',
-    'c.shift.q': 'قهوه می‌خواهی یا چای؟',
-    'c.shift.a': 'چای، لطفاً.',
+    'c.shift.q': 'شیفتت کی شروع می‌شود؟',
+    'c.shift.a': 'فردا ساعت هفت.',
     'c.sick.q': 'مریضی؟',
     'c.sick.a': 'بله، امروز خانه می‌مانم.',
     // Emergency phrases (phrasebook only)

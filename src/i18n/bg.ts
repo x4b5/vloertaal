@@ -431,8 +431,8 @@ const lang: HelpLanguageSource = {
     'c.things.a': 'На палета.',
     'c.directions.q': 'Наляво или надясно?',
     'c.directions.a': 'Надясно, до стелажа.',
-    'c.shift.q': 'Искаш ли кафе или чай?',
-    'c.shift.a': 'Чай, моля.',
+    'c.shift.q': 'Кога започва твоята смяна?',
+    'c.shift.a': 'Утре в седем часа.',
     'c.sick.q': { m: 'Болен ли си?', f: 'Болна ли си?' },
     'c.sick.a': 'Да, днес оставам вкъщи.',
     // Emergency phrases (phrasebook only)

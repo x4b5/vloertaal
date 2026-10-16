@@ -36,7 +36,7 @@ Werkwoorden in het Bulgaars in de 1e persoon (er is geen infinitief). Heftruck: 
 Krat: lada / касетката. "Klaar": gata / готов.
 
 ## Chatgesprekken (`c.*`, alle talen)
-De korte dialogen ("Wil je koffie of thee?" → "Thee, graag.") gebruiken informeel "je", net als in het
+De korte dialogen ("Wanneer begint je dienst?" → "Morgen om zeven uur.") gebruiken informeel "je", net als in het
 Nederlands. "Ben je ziek?" en "Ja, ik draag hem." (de helm) staan in de mannelijke vorm waar de taal dat
 vraagt. `inARow` is een sjabloon: `{n}` moet blijven staan (de test controleert dat).
 
@@ -562,3 +562,7 @@ Vijf korte regels in `src/i18n/<taal>.ts`, met AI geschreven: `whoToCall`, `who1
 `whoInspection`, `whoFairwork`. Graag nakijken, vooral Tigrinya en Arabisch (zonder werkwoord in
 de man- of vrouwvorm geschreven). Ook nieuw: `stampLater` ("Komt straks terug", het stempel bij een
 fout antwoord) en de zin over uitzendwerk en het minimumloon in `c.illness.b`.
+Ook nieuw (16 oktober 2026): `c.unsafe.w` eindigt nu met "je werkgever mag je er niet voor straffen"
+(was: "je komt niet in de problemen", een belofte die niemand kan doen), en het gesprekje van
+`l.shift` (`c.shift.q`, `c.shift.a`, `c.shift.a.why`) gaat over de dienst in plaats van koffie.
+En `c.ww.b`: "binnen een week na je eerste dag zonder werk" (was: "na je laatste werkdag"), zoals UWV en Werkregels het zeggen.

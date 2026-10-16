@@ -16,6 +16,9 @@ const PENDING_RECORDING = new Set<string>([
   'Ik ben het niet met je eens.',
   'Mag ik jij zeggen?',
   'Waar is dit middel voor?',
+  // The shift chat about the shift, not coffee (critic, 16 October 2026):
+  'Wanneer begint je dienst?',
+  'Morgen om zeven uur.',
 ]);
 
 describe('recorded clips (G4 b3)', () => {

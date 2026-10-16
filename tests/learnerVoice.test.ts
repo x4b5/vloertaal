@@ -16,8 +16,9 @@ const chats = [...allLessons, ...allRegionUnits('taal').flatMap((u) => u.lessons
 /** Chat replies of the new units u.shop and u.numbers, and of the region unit "Jouw regio:
  *  Zuid-Limburg": recorded on the next 'Record ElevenLabs voices' run (the phone voice says them meanwhile). */
 const PENDING_RECORDING = new Set<string>([
-  // Empty: every reply is recorded (16 October 2026). Add a new reply here until the next
-  // 'Record ElevenLabs voices' run.
+  // Add a new reply here until the next 'Record ElevenLabs voices' run.
+  'Ik ben het niet met je eens.',
+  'Morgen om zeven uur.',
 ]);
 
 describe('"you" in the chats follow the gender question', () => {

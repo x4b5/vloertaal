@@ -431,8 +431,8 @@ const lang: HelpLanguageSource = {
     'c.things.a': 'ኣብ ልዕሊ ፓለት።',
     'c.directions.q': 'ጸጋም ዶ የማን?',
     'c.directions.a': 'የማን፣ ኣብ ጥቓ መደርደሪ።',
-    'c.shift.q': { m: 'ቡን ዶ ሻሂ ትደሊ?', f: 'ቡን ዶ ሻሂ ትደልዪ?' },
-    'c.shift.a': 'ሻሂ፣ በጃኻ።',
+    'c.shift.q': { m: 'ፈረቓኻ መዓስ ይጅምር?', f: 'ፈረቓኺ መዓስ ይጅምር?' },
+    'c.shift.a': 'ጽባሕ ሰዓት ሸውዓተ።',
     'c.sick.q': { m: 'ሓሚምካ ዲኻ?', f: 'ሓሚምኪ ዲኺ?' },
     'c.sick.a': 'እወ፣ ሎሚ ኣብ ገዛ እጸንሕ።',
     // Emergency phrases (phrasebook only)

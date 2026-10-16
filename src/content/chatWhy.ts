@@ -15,7 +15,7 @@ const reasons: Record<string, string> = {
   'c.danger.a': 'In an accident, 112 is called first.',
   'c.things.a': 'The question asks where. This reply names a place.',
   'c.directions.a': 'Left or right? This reply picks one and says where.',
-  'c.shift.a': 'Coffee or tea? This reply picks one, politely.',
+  'c.shift.a': 'When does the shift start? This reply gives the day and the time.',
   'c.sick.a': 'Sick means staying home, and saying so.',
   'd.speakup.a': 'Asked if something is wrong: an honest yes is good.',
   'd.agree.a': 'Saying no is allowed. Offering another day helps.',

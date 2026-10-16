@@ -236,8 +236,8 @@ export const units: Unit[] = [
         ],
         dialogues: [
           {
-            prompt: { id: 'c.shift.q', nl: 'Wil je koffie of thee?', en: 'Do you want coffee or tea?' },
-            reply: { id: 'c.shift.a', nl: 'Thee, graag.', en: 'Tea, please.' },
+            prompt: { id: 'c.shift.q', nl: 'Wanneer begint je dienst?', en: 'When does your shift start?' },
+            reply: { id: 'c.shift.a', nl: 'Morgen om zeven uur.', en: 'Tomorrow at seven o’clock.' },
           },
         ],
       },

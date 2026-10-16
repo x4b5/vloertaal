@@ -890,7 +890,7 @@ const socialTips = [
     'respect',
     '🫂',
     'Respect for everyone',
-    'At work, everyone is equal and everyone is treated with respect, whatever their gender, origin, religion or sexual orientation. Your supervisor can be a man or a woman. You decide about physical contact. A handshake is common, but you may also greet in another polite way, like a nod and a smile, and explain it briefly. Jokes about someone’s origin or religion, threats, bullying (pesten) and unwanted sexual behaviour are not accepted. You can report it to your supervisor, or to a confidential adviser (vertrouwenspersoon) if your company has one.',
+    'At work, everyone is equal and everyone is treated with respect, whatever their gender, origin, religion or sexual orientation. You decide about physical contact. A handshake is common, but you may also greet in another polite way, like a nod and a smile, and explain it briefly. Jokes about someone’s origin or religion, threats, bullying (pesten) and unwanted sexual behaviour are not accepted. You can report it to your supervisor, or to a confidential adviser (vertrouwenspersoon) if your company has one.',
     ['Ik geef liever geen hand, maar ik groet je graag.', 'I prefer not to shake hands, but I am happy to greet you.'],
     'A colleague often makes jokes about your religion. You asked him to stop, but he goes on. What do you do?',
     [
@@ -1394,7 +1394,7 @@ const laterTips = [
     'ww',
     '🛟',
     'Unemployment benefit (WW)',
-    'Lost your job? Apply for WW at UWV as soon as possible, within a week after your last working day. You usually need to have worked at least 26 of the last 36 weeks. If you quit your job yourself, you usually do not get WW. Register as a job seeker on werk.nl.',
+    'Lost your job? Apply for WW at UWV as soon as possible, within a week after your first day without work. You usually need to have worked at least 26 of the last 36 weeks. If you quit your job yourself, you usually do not get WW. Register as a job seeker on werk.nl.',
     ['Ik wil WW aanvragen. Wat moet ik doen?', 'I want to apply for unemployment benefit. What must I do?'],
     'You are angry about your work and want to quit today. What is wise?',
     [

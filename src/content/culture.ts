@@ -117,7 +117,7 @@ const baseTips: CultureTip[] = [
       { id: 'c.unsafe.o2', en: 'Say nothing, because nothing happened.', best: false },
       { id: 'c.unsafe.o3', en: 'Fix it alone and tell nobody.', best: false },
     ],
-    why: { id: 'c.unsafe.w', en: 'A near-accident is a warning. Reporting it helps prevent a real accident; you will not get in trouble for speaking up.' },
+    why: { id: 'c.unsafe.w', en: 'A near-accident is a warning. Reporting it helps prevent a real accident. Your employer may not punish you for reporting it.' },
   }),
   tip({
     id: 'c.direct',
@@ -290,7 +290,7 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.smoking': [0, 2, 3], // only outside, in your break
   'c.hygiene': [0, 2, 3], // a medicine that makes you sleepy: tell your supervisor
   'c.smalltalk': [0, 2, 6, 7], // welcome at the table; "Gefeliciteerd!"
-  'c.respect': [2, 3, 4, 5], // another polite greeting; report jokes and bullying
+  'c.respect': [1, 2, 3, 4], // another polite greeting; report jokes and bullying
   'c.gossip': [0, 3, 4], // nothing online without permission
   'c.boundaries': [0, 2, 3, 4], // say stop; write it down; tell the vertrouwenspersoon
   'c.rights': [1, 3, 6], // do not sign; get help first
