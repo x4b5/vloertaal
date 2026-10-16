@@ -16,6 +16,7 @@ export const unitIcons: Record<string, string> = {
   'u.pay': 'w.loonstrook',
   'u.house': 'w.kluisje',
   'u.social': 'w.compliment',
+  'u.sayings': 'w.eitje',
   'u.rights': 'i.rights',
   'u.leave': 'w.ziekmelden',
   'u.exploit': 'w.paspoort',

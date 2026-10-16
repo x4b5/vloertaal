@@ -298,6 +298,8 @@ function defineStates(LANG) {
   graded('hear-pick', 'type', 1, 0, 'ar');
   graded('chat', 'chat', 0, 1);
   graded('situation', 'situation', 0, 1);
+  // A saying in a later lesson (src/content/sayings.ts): its card, and "What does he mean?".
+  graded('saying-ask', 'saying-ask', 0, 1);
   // With a device voice for the help language: the situation and the tip show the help-language
   // read-aloud (.help-say, counted apart) next to at most one Dutch speaker per item.
   add('lesson:situation-voice', shot('situation'), null, { voices: true, expect: '.help-say' });
@@ -305,6 +307,9 @@ function defineStates(LANG) {
   add('lesson:situation-quote-voice', shot('situation&tip=l.hello'), null, { voices: true, expect: '.situation-quote .speak-glyph' });
   add('lesson:word-card', shot('intro'));
   add('lesson:tip', shot('tip'));
+  add('lesson:saying', shot('saying'));
+  add('lesson:saying-long', shot('saying&saying=l.measures'));
+  add('lesson:word-card-saying', shot('intro&word=w.blad'));
   add('lesson:match', shot('match'));
   add('lesson:match:half', shot('match'), async (p) => { await matchPairs(p, 1); });
   add('lesson:match:done', shot('match'), async (p) => { await matchPairs(p); });

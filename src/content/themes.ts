@@ -65,7 +65,7 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     regels: ['r.loon', 'r.tijd', 'r.ziek', 'r.rekenen', 'r.afronden', 'r.duurzaam', 'r.winkel'],
   },
   'theme.together': {
-    taal: ['u.teamwork', 'u.social'],
+    taal: ['u.teamwork', 'u.social', 'u.sayings'],
     regels: ['r.samen'],
   },
   'theme.rights': {

@@ -6,6 +6,7 @@ import { cultureTips } from '../src/content/culture';
 import { allRegionTips, allRegionUnits } from '../src/content/regio';
 // The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
 import './regionLoaded';
+import { SAYINGS_PENDING } from './sayingsPending';
 import { BRAM_HELLO, BRAM_VOICE } from '../src/lib/voices';
 
 /** Lines whose recording is still to be made (the owner re-records them); the device voice says them meanwhile. */
@@ -44,6 +45,8 @@ const PENDING_RECORDING = new Set([
   'Ik woon in Nederland en werk in Duitsland.', 'Kunt u Nederlands praten? Ik versta geen dialect.', 'Mag ik met carnaval vrij?',
   'Waar woon je?', 'In Heerlen. Ik ben net verhuisd.', 'Sorry, ik praat te snel.', 'Ja, wat langzamer graag.',
   'Kan ik een afspraak maken?', 'Wil je het in het Nederlands zeggen?',
+  // "Uitdrukkingen en gezegden" (src/content/sayings.ts): recorded on the next 'Record ElevenLabs voices' run.
+  ...SAYINGS_PENDING,
 ]);
 
 describe('recorded clips (G4 b3)', () => {

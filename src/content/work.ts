@@ -1,6 +1,7 @@
 import { ADVICE_LINE } from './adviceLine';
 import type { CultureTip, SituationAsk } from './culture';
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
+import { sayingsTips, sayingsUnit } from './sayings';
 
 /**
  * Work and rights in the Netherlands: contracts, papers and housing, pay, house rules, rights,
@@ -2027,6 +2028,9 @@ export const workUnits: Unit[] = [
   byId('u.pay'),
   { ...byId('u.house'), lessons: [...byId('u.house').lessons, ...houseMore] },
   socialUnit,
+  // Sayings right after "Omgang met collega's": the later lessons each show one saying after it
+  // (src/content/sayings.ts lessonSayings), so it comes before them.
+  sayingsUnit,
   byId('u.rights'),
   byId('u.leave'),
   ...laterUnits,
@@ -2039,7 +2043,7 @@ export const workUnits: Unit[] = [
 const lessonOrder = [toolsUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips].sort(
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...sayingsTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

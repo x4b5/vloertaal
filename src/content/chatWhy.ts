@@ -68,6 +68,8 @@ const reasons: Record<string, string> = {
   'c.checkout.a': 'Asked if paying by card is possible: a friendly yes.',
   'c.hours.a': 'Asked what time: this reply gives a time.',
   'c.measures.a': 'Asked how long: this reply gives a length.',
+  'c.easy.a': '"Een handje helpen" is asking for help: a yes and coming over.',
+  'c.plain.a': 'Very hard rain: the bus keeps you dry.',
 };
 
 /** Why the right reply of a chat fits, with its translation id; undefined when there is none. */

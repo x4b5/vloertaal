@@ -1,4 +1,5 @@
 import { tipForLesson } from '../content/culture';
+import { sayingForLesson, sayingQuestion } from '../content/sayings';
 import { findLesson } from '../content/curriculum';
 import { useState } from 'react';
 import { LessonPlayer } from '../components/LessonPlayer';
@@ -311,7 +312,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
         lesson={picked}
         review={false}
         lang={getHelpLanguage(lang as LangCode, gender)}
-        exercises={buildLesson(picked, { review: false, seed: 1, quiet })}
+        exercises={buildLesson(picked, { review: false, seed: 1, quiet, sayings: q.get('sayings') === '1' })}
         startAt={at}
         onQuit={() => {}}
         onFinish={() => {}}
@@ -343,6 +344,12 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   const speakTip = tipForLesson(q.get('tip') ?? 'l.speakup') ?? tipForLesson('l.speakup')!;
   exercises.tip = { kind: 'tip', tip: speakTip };
   exercises.situation = { kind: 'situation', tip: speakTip, options: speakTip.options };
+  // A saying in a later lesson (src/content/sayings.ts): /?shot=saying, and its question
+  // /?shot=saying-ask; &saying=l.health another lesson's saying (default De klant is koning).
+  const saying = sayingForLesson(q.get('saying') ?? 'l.checkout') ?? sayingForLesson('l.checkout')!;
+  exercises.saying = { kind: 'saying', saying };
+  const sayingAsk = sayingQuestion(saying);
+  exercises['saying-ask'] = { kind: 'situation', tip: sayingAsk, options: sayingAsk.options };
   // Speaking practice: /?shot=speak (idle), speak-rec (recording), speak-compare (after recording),
   // speak-off (no microphone); &item=sentence asks a short sentence instead of a word.
   if (shot.startsWith('speak')) {

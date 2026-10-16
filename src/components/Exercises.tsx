@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ChatLine } from '../content/types';
+import { sayingQuestion } from '../content/sayings';
 import { fillN, gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { checkTyped, tokenize } from '../lib/answers';
@@ -169,8 +170,29 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
             <SpeakButton text={word.nl} help={lang} />
           </span>
         </div>
-        <Bi className="intro-meaning" text={gloss(word.id, word.en, lang)} />
+        {word.literal ? (
+          // A saying: what the words say (the picture shows that too), then what it means.
+          <SayingLines literal={gloss(`${word.id}.lit`, word.literal, lang)} meaning={gloss(word.id, word.en, lang)} lang={lang} />
+        ) : (
+          <Bi className="intro-meaning" text={gloss(word.id, word.en, lang)} />
+        )}
       </div>
+    </div>
+  );
+}
+
+/** A saying's two lines: "Literally: a little egg" (small), then "It means: very easy" (as a word's meaning). */
+function SayingLines({ literal, meaning, lang }: { literal: Bilingual; meaning: Bilingual; lang?: HelpLanguage }) {
+  return (
+    <div className="saying-lines">
+      <p className="saying-literal">
+        <span className="saying-label"><Bi text={ui('literally', lang)} /></span>
+        <Bi text={literal} />
+      </p>
+      <p className="saying-meaning">
+        <span className="saying-label"><Bi text={ui('itMeans', lang)} /></span>
+        <Bi className="intro-meaning" text={meaning} />
+      </p>
     </div>
   );
 }
@@ -930,6 +952,42 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
             </span>
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * "Zo zeggen ze het": a saying in a lesson of another topic (src/content/sayings.ts), after the
+ * sayings unit. A colleague says it (read aloud in their voice), the picture and "Literally" show
+ * what the words say, "It means" what it means. Not graded; "What does she mean?" comes next.
+ */
+export function SayingCard({ ex, lang, onAnswer }: Props<'saying'>) {
+  const { saying } = ex;
+  const who = tipCast(sayingQuestion(saying), lang?.gender);
+  const talking = useTalking([saying.nl]);
+  useEffect(() => {
+    autoSpeak(saying.nl, false, 'nl', voiceFor(who));
+    onAnswer({ correct: true });
+  }, [saying, who, onAnswer]);
+  return (
+    <div className="exercise tip saying">
+      <div className="tip-badge">
+        <span className="tip-badge-emoji" aria-hidden>💬</span>
+        <span className="tip-badge-text tip-badge-swap">
+          <NlPair nl="Zo zeggen ze het" nlClass="tip-badge-nl" className="tip-badge-main" text={ui('sayingBadge', lang)} />
+        </span>
+      </div>
+      <div className="tip-say-row">
+        <span className="tip-char"><Character who={who} talking={talking} size={96} /></span>
+        <div className="speaker-bubble tip-bubble">
+          <SpeakButton glyph text={saying.nl} help={lang} voice={voiceFor(who)} />
+          <span className="tip-phrase"><span lang="nl" className="tip-phrase-nl saying-nl">{breakable(saying.nl)}</span></span>
+        </div>
+      </div>
+      <div className="card saying-card">
+        <span className="saying-picture" aria-hidden>{saying.emoji}</span>
+        <SayingLines literal={gloss(`${saying.id}.lit`, saying.literal, lang)} meaning={gloss(`${saying.id}.m`, saying.meaning, lang)} lang={lang} />
       </div>
     </div>
   );

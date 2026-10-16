@@ -1340,6 +1340,21 @@ h2 { font-size: 1.25rem; }
 .tip-bubble::before { top: auto; bottom: 22px; }
 .tip-phrase { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .tip-phrase-nl { font-weight: 700; font-size: 1.2rem; }
+/* A saying (src/content/sayings.ts): on a new word's card, and the "Zo zeggen ze het" card. The
+   literal line is small and muted (what the words say), the meaning is the word's meaning. */
+.saying-lines { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; }
+.saying-lines p { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.saying-label { font-size: 0.85rem; font-weight: 650; color: var(--muted); }
+.saying-label .bi { gap: 0; }
+.saying-literal { font-size: 1.05rem; color: var(--muted); font-style: italic; }
+.saying-literal > .bi { font-style: italic; }
+.saying .tip-say-row { margin: 8px 0 16px; }
+.saying-nl { font-size: 1.3rem; line-height: 1.3; }
+.saying-card { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 18px 16px; }
+.saying-picture {
+  font-size: 72px; line-height: 1;
+  font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+}
 /* Phones: a tip is a lot of text. Keep it compact so the "Say it like this" label (the point
    of the tip) is on screen above the sticky Continue bar at 390×844 without scrolling. */
 @media (max-width: 759px) {

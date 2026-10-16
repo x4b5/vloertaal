@@ -3,6 +3,7 @@ import { allLessons, teachingLessons, phrasebookExtras, phrasebookIds, findItem,
 import { aboutIds } from '../src/content/about';
 import { cultureIds, cultureTips } from '../src/content/culture';
 import { workIds } from '../src/content/work';
+import { sayingsIds } from '../src/content/sayings';
 import { chatWhyIds } from '../src/content/chatWhy';
 import { getHelpLanguage, gloss, hasGender, helpLanguageSources, helpLanguages, ui } from '../src/i18n/all';
 import { allForms, forGender, GENDERED_LANGS, isPlural, PLURAL_CATEGORIES, uiEn, type LangText } from '../src/i18n/types';
@@ -25,6 +26,8 @@ const contentIds = [
   ...cultureIds,
   // Tips of the work-and-rights units (src/content/work.ts).
   ...workIds,
+  // Sayings (src/content/sayings.ts): what their words say, and the sayings in later lessons.
+  ...sayingsIds,
   // The About page (src/content/about.ts).
   ...aboutIds,
   // Why a chat's right reply fits (src/content/chatWhy.ts).

@@ -4,6 +4,7 @@ import { allLessons } from '../src/content/curriculum';
 import { allRegionUnits } from '../src/content/regio';
 // The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
 import './regionLoaded';
+import { SAYINGS_PENDING } from './sayingsPending';
 import { tipForLesson } from '../src/content/culture';
 import { clipUrl, setRecordedIndex } from '../src/lib/audio';
 import { learnerCharacter, learnerVoice, voiceFor } from '../src/lib/voices';
@@ -18,6 +19,8 @@ const chats = [...allLessons, ...allRegionUnits('taal').flatMap((u) => u.lessons
 const PENDING_RECORDING = new Set([
   'In gang vier. Ik loop even met u mee.', 'Ja hoor, dat kan.', 'Om kwart over vier.', 'Precies twee meter.',
   'In Heerlen. Ik ben net verhuisd.', 'Ja, wat langzamer graag.',
+  // "Uitdrukkingen en gezegden" (src/content/sayings.ts).
+  ...SAYINGS_PENDING,
 ]);
 
 describe('"you" in the chats follow the gender question', () => {

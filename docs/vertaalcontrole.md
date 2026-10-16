@@ -524,3 +524,14 @@ groen "nieuw" / "gewijzigd" = gewoon nakijken.
     се опитваш да познаеш.", `c.ask.w` + "Тук кимането значи „да“ или „разбрах“." Niet veranderd: `c.understood.o2`
     («ja, ja» maakt het duidelijk) en `c.respect.b` (кимване als groet, geen ja/nee).
   - [ ] `rg.zl.s.1.2`: "Имам час в десет часа": twee keer "час" (afspraak en uur). Natuurlijk?
+
+## Uitdrukkingen en gezegden (`src/i18n/sayings/*.ts`, 16 oktober 2026)
+
+Nieuw, vertaald door AI-agents, nog niet door moedertaalsprekers nagekeken. Zie
+[`uitdrukkingen.md`](uitdrukkingen.md) voor de lijst.
+
+- [ ] **"Letterlijk"** (`w.*.lit`, `zg.*.lit`): echt woord voor woord vertaald, niet vervangen door
+      een uitdrukking uit de eigen taal. De vreemde letterlijke betekenis is juist de bedoeling.
+- [ ] **De betekenis** (`w.*`, `zg.*.m`): klopt die, en is hij eenvoudig genoeg?
+- [ ] **De situaties** (`zg.*.s`, `c.easy.s`, `c.plain.s`): de Nederlandse zin staat er letterlijk in,
+      tussen aanhalingstekens.

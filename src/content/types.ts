@@ -14,6 +14,12 @@ export interface Word {
    * The emoji stays for data compatibility but is not shown.
    */
   picture?: false;
+  /**
+   * A saying (src/content/sayings.ts): what its words say, word for word, in plain English
+   * ("een eitje": "a little egg"); `en` is what it means ("very easy"). The word card shows it
+   * under the picture, which also shows what the words say. Its help-language text: `${id}.lit`.
+   */
+  literal?: string;
 }
 
 /** A full sentence, practised by building it from word tiles. */

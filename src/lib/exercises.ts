@@ -14,6 +14,7 @@ import { type SpeakItem, withSpeaking } from './speaking';
 import { nearSynonyms } from '../content/synonyms';
 import { DAILY_ID } from './spaced';
 import { regionTaalLessons } from '../content/regio';
+import { type LessonSaying, sayingForLesson, sayingQuestion } from '../content/sayings';
 
 export type Exercise =
   | { kind: 'intro'; word: Word }
@@ -34,6 +35,9 @@ export type Exercise =
   | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[]; reverse?: true }
   /** "How it works here": a workplace-culture card (not graded). */
   | { kind: 'tip'; tip: CultureTip }
+  /** A saying in a lesson of another topic (src/content/sayings.ts): "Zo zeggen ze het". Not graded;
+   *  a "What does she mean?" situation (sayingQuestion) follows it. */
+  | { kind: 'saying'; saying: LessonSaying }
   /** "What do you do?": the tip's situation with shuffled options. */
   | { kind: 'situation'; tip: CultureTip; options: CultureTip['options'] }
   /** "Say it": hear the Dutch, record yourself, compare, rate yourself. Never graded (lib/speaking.ts). */
@@ -75,12 +79,12 @@ export function choicePictures(answer: Word, options: readonly Word[]): boolean[
   return options.map((o) => hasPicture(answer) && hasPicture(o));
 }
 
-/** Intros, tips and speaking practice are not graded; every other exercise is. In a rules
+/** Intros, tips, sayings and speaking practice are not graded; every other exercise is. In a rules
  *  lesson: true/false, what do you do, who do you ask, the payslip and the card are; a story, a rule card
  *  and a model sentence just go on. */
 export function isGraded(ex: Exercise): boolean {
   if (isRuleExercise(ex)) return GRADED_RULE_KINDS.includes(ex.kind);
-  return ex.kind !== 'intro' && ex.kind !== 'tip' && ex.kind !== 'speak';
+  return ex.kind !== 'intro' && ex.kind !== 'tip' && ex.kind !== 'saying' && ex.kind !== 'speak';
 }
 
 /** Same answer, near-synonyms (content/synonyms.ts), or the same (or a near-identical) picture:
@@ -705,7 +709,11 @@ function reverseDialogue(lesson: Lesson): Dialogue | undefined {
  * quiet ("Without sound"): every listening exercise becomes a reading one on the same word, so
  * the lesson keeps its length and nothing needs to be heard.
  */
-export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice }): Exercise[] {
+/**
+ * `sayings`: the learner has done the first lesson of "Uitdrukkingen en gezegden" (SAYINGS_FROM),
+ * so a lesson with a saying of its own (src/content/sayings.ts) shows it near the end.
+ */
+export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice; sayings?: boolean }): Exercise[] {
   // The work-rules track: a lesson of steps (nothing in it needs to be heard, so "Without
   // sound" and speaking practice change nothing).
   if (lesson.steps?.length) return buildRuleLesson(lesson, { seed: opts.seed, review: opts.review });
@@ -829,6 +837,16 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     else out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
   });
 
+  // A saying that fits this lesson's topic, after the sayings unit: its card, then "What does she
+  // mean?". Only in the lesson itself (not when it is repeated as a review), and from its own
+  // generator, so every other exercise stays the same with or without it.
+  const saying = opts.sayings && !opts.review ? sayingForLesson(lesson.id) : undefined;
+  if (saying) {
+    const question = sayingQuestion(saying);
+    const sayRng = createRng(((opts.seed ?? 0) ^ 0x5a1d) >>> 0);
+    out.push({ kind: 'saying', saying }, { kind: 'situation', tip: question, options: shuffle(question.options, sayRng) });
+  }
+
   // Later units: the other way round, near the end (in the place of the second listening
   // question; the sentence built by ear is listening practice too): the reply is given, pick
   // the question.
@@ -839,7 +857,10 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // The written-word options for "hear and pick" come from their own generator, so the rest of
   // the lesson (and a saved place in it) stays the same as before they existed.
   const pickRng = createRng(((opts.seed ?? 0) ^ 0x5eed) >>> 0);
-  out.push(opts.quiet ? { kind: 'meaning', word: t1, options: options(t1, lesson, rng) } : { kind: 'type', word: t1, options: options(t1, lesson, pickRng) });
+  // A lesson with nothing short enough to type (only long sayings): heard and picked instead.
+  out.push(opts.quiet ? { kind: 'meaning', word: t1, options: options(t1, lesson, rng) }
+    : typable(t1) ? { kind: 'type', word: t1, options: options(t1, lesson, pickRng) }
+    : { kind: 'listen', word: t1, options: options(t1, lesson, pickRng) });
   // Speaking practice (Settings, on by default; never "Without sound"): one "say it" near the
   // end, placed after the rest is built so the other exercises stay the same with or without it.
   if (opts.speak && !opts.quiet) return withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);

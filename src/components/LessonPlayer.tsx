@@ -9,6 +9,7 @@ import { breakable } from '../lib/dutch';
 import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
 import { dutchUi } from '../lib/track';
 import { chatWhy } from '../content/chatWhy';
+import { sayingQuestion } from '../content/sayings';
 import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { learnerCharacter, voiceFor } from '../lib/voices';
@@ -36,6 +37,7 @@ import {
   TypeExercise,
   SituationExercise,
   TipCard,
+  SayingCard,
 } from './Exercises';
 
 export interface LessonResult {
@@ -61,6 +63,7 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
       return { text: ex.reverse ? ex.dialogue.prompt.nl : ex.dialogue.reply.nl, nl: true };
     case 'match':
     case 'tip':
+    case 'saying':
     case 'speak':
       return { text: '', nl: false };
     case 'situation':
@@ -89,6 +92,7 @@ function answerVoice(ex: Exercise, gender?: Gender): CharacterId {
     : ex.kind === 'chat' ? learnerCharacter(gender)
     : ex.kind === 'build' ? castFor(ex.sentence.id)
     : ex.kind === 'situation' || ex.kind === 'tip' ? tipCast(ex.tip, gender)
+    : ex.kind === 'saying' ? tipCast(sayingQuestion(ex.saying), gender)
     : 'bram';
 }
 
@@ -128,6 +132,7 @@ const KIND_TAG: Record<Exclude<Exercise['kind'], RuleKind>, { nl: string; key: U
   build: { nl: 'Zin', key: 'tagBuild', Icon: BlocksIcon },
   chat: { nl: 'Gesprek', key: 'tagChat', Icon: BubblesIcon },
   tip: { nl: 'Tip', key: 'tagTip', Icon: BulbIcon },
+  saying: { nl: 'Gezegde', key: 'tagSaying', Icon: BubblesIcon },
   situation: { nl: 'Situatie', key: 'tagSituation', Icon: SignpostIcon },
   speak: { nl: 'Spreken', key: 'tagSpeak', Icon: MicIcon },
 };
@@ -246,7 +251,7 @@ export function LessonPlayer(props: PlayerProps) {
   return <LessonRun {...props} />;
 }
 
-function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, sector }: {
+function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, sector, sayings }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -271,6 +276,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   resumable?: boolean;
   /** The learner's sector: later exercise kinds follow the place on their own path. */
   sector?: SectorChoice;
+  /** The first lesson of "Uitdrukkingen en gezegden" is done: a lesson with a saying of its own shows it. */
+  sayings?: boolean;
 }) {
   const persist = resumable && !exercises;
   // An interrupted run of this lesson (same review mode), less than two days old.
@@ -289,11 +296,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // Every lesson tries the microphone again (a failure in an earlier lesson does not carry over).
   useState(resetMicForLesson);
   const [nonLatinAtStart] = useState(() => nonLatinHelp(lang));
+  const [sayingsAtStart] = useState(() => Boolean(sayings));
   const initial = useMemo(
     // A learner who reads only another script gets picture cards (or cards with speakers) where
     // a review would show Latin-only text cards (lib/exercises.ts readableDutch).
-    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart, sector }),
-    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart, sector],
+    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart, sector, sayings: sayingsAtStart }),
+    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart, sector, sayingsAtStart],
   );
   // The saved place in that list, with the mistakes queued then (null: start from the top).
   const [resumed] = useState(() => (saved ? restoreSave(saved, initial) : null));
@@ -707,6 +715,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'type': body = <TypeExercise key={key} ex={ex} {...props} />; break;
     case 'chat': body = <ChatExercise key={key} ex={ex} {...props} />; break;
     case 'tip': body = <TipCard key={key} ex={ex} {...props} />; break;
+    case 'saying': body = <SayingCard key={key} ex={ex} {...props} />; break;
     case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
     case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onNext={next} onRating={setSpeakRating} />; break;
     case 'scene': body = <SceneCard key={key} ex={ex} {...props} />; break;
@@ -799,7 +808,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       {why.help && why.lang && <HelpText text={why.help} lang={why.lang} />}
     </div>
   );
-  const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip' || ex.kind === 'speak' || (isRuleExercise(ex) && !isGraded(ex));
+  const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip' || ex.kind === 'saying' || ex.kind === 'speak' || (isRuleExercise(ex) && !isGraded(ex));
   // One bar: ink for done, yellow for where you are, a kraft tail for mistakes that come back.
   const bar = barParts(index, checked, initial.length, queue.length);
   const doneCount = Math.round(bar.done * bar.slots);

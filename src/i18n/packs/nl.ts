@@ -17,5 +17,5 @@ registerRulesCourse(toCourseUnits([...rulesUnits, ...sectorRulesUnits]));
 // learner of that region (src/content/regio ensureRegion).
 
 const empty = { ui: {}, gloss: {} };
-const pack: LanguagePack = { base, culture: empty, work: empty, about: empty, learn: empty, url: import.meta.url };
+const pack: LanguagePack = { base, culture: empty, work: empty, about: empty, learn: empty, sayings: empty, url: import.meta.url };
 export default pack;

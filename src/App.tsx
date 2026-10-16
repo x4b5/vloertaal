@@ -33,6 +33,7 @@ import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, daily
 import { gloss } from './i18n';
 import { persistStorage } from './lib/install';
 import { CertEarned, CertificateScreen } from './components/Certificate';
+import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
 import { count, countOpen } from './lib/count';
 import { clearSave } from './lib/resume';
@@ -577,6 +578,7 @@ export default function App() {
           onFinish={finish}
           resumable={!daily}
           sector={progress.sector}
+          sayings={Boolean(progress.completed[SAYINGS_FROM])}
         />
       );
     }
