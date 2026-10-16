@@ -58,6 +58,20 @@ export const aboutSections: AboutSection[] = [
     },
   },
   {
+    // The whole app is a beta (the pilot): said once, calmly, high on the page. No e-mail address
+    // here (it would be one more thing to tap): the contact section at the end has it.
+    id: 'a.beta', emoji: '🧪', title: 'A test version',
+    body: 'Vloertaal is still a test version (beta). We are testing it with a small group of learners and coaches. Not everything has been checked yet: experts are still checking the translations and the tips about rules. Did you find a mistake? You find our address at the bottom of this page.',
+    nl: {
+      title: 'Een testversie',
+      body: 'Vloertaal is nog een testversie (bèta). We testen de app met een kleine groep leerlingen en begeleiders. Nog niet alles is nagekeken: experts kijken de vertalingen en de tips over regels nog na. Zie je een fout? Ons adres staat onderaan deze pagina.',
+    },
+    nlRules: {
+      title: 'Een testversie',
+      body: 'Vloertaal is nog een testversie (bèta). We testen de app met een kleine groep. Nog niet alles is nagekeken: experts kijken de regels nog na. Zie je een fout? Ons adres staat onderaan deze pagina.',
+    },
+  },
+  {
     id: 'a.how', emoji: '👂', title: 'How does it work?',
     body: 'You learn Dutch through simple English. If you choose a help language, you also see the instructions and words in your own language. You listen, tap, build sentences and practise short conversations with colleagues.',
     nl: {
@@ -100,12 +114,13 @@ export const aboutSections: AboutSection[] = [
     },
   },
   {
-    // The general disclaimer for the rights-and-rules tips (date: when the texts were last checked).
+    // The general disclaimer for the rights-and-rules tips (date: when the texts were last updated;
+    // not "checked": the expert check is still to come, see 'a.beta').
     id: 'a.disclaimer', emoji: '⚖️', title: 'Good to know',
-    body: 'The tips in Vloertaal are general information, not legal advice. Rules can change; the texts were checked in October 2026. For your own situation, ask your employer, a union or the Juridisch Loket.',
+    body: 'The tips in Vloertaal are general information, not legal advice. Rules can change; the texts were last updated in October 2026. For your own situation, ask your employer, a union or the Juridisch Loket.',
     nl: {
       title: 'Goed om te weten',
-      body: 'De tips in Vloertaal zijn algemene informatie. Het is geen juridisch advies. Regels kunnen veranderen: de teksten zijn gecontroleerd in oktober 2026. Gaat het om jouw situatie? Vraag je werkgever, een vakbond of het Juridisch Loket.',
+      body: 'De tips in Vloertaal zijn algemene informatie. Het is geen juridisch advies. Regels kunnen veranderen: de teksten zijn bijgewerkt in oktober 2026. Gaat het om jouw situatie? Vraag je werkgever, een vakbond of het Juridisch Loket.',
     },
     // The track's own disclaimer, word for word (also on the Hulp tab).
     nlRules: { title: 'Goed om te weten', body: RULES_DISCLAIMER.join(' ') },
