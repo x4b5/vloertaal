@@ -20,6 +20,12 @@ export const UPDATES: Update[] = [
       'Nieuw onderwerp: In de winkel (vakken vullen, de kassa, wisselgeld, ID vragen).',
       'Nieuw onderwerp: Rekenen (uren en tijden, geld, kilo en meter).',
       'Lange woorden in een titel breken nu netjes af.',
+      'Klokjes bij "uur", "kwartier" en "half uur". Euro\'s in plaats van dollars, en een gewicht bij "kilo".',
+      'Een vinkje bij een thema als het helemaal af is. Geen verspringende nummers meer.',
+      'Grotere letters op de nieuwe schermen. Lange woorden breken tussen de woorddelen.',
+      'Tijden en datums staan in het Arabisch, Perzisch en Dari de goede kant op.',
+      'Vertalingen verbeterd, onder andere in het Arabisch, Bulgaars en Tigrinya.',
+      'De app opent sneller: sommige schermen laden pas als je ze nodig hebt.',
     ],
   },
   {
