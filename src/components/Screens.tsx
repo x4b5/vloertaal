@@ -9,6 +9,7 @@ import { cultureTips } from '../content/culture';
 import { regionTips } from '../content/regio';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
+import { Flag } from './Flag';
 import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, NL_MORE, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
 import type { HelpLanguage, LangCode, UiCode } from '../i18n/types';
 import { dutchUi, rulesTrackOn } from '../lib/track';
@@ -126,7 +127,7 @@ function LangMark({ code }: { code: UiCode | null }) {
   return (
     <span className="lang-mark" aria-hidden>
       {'flag' in mark
-        ? <span className="lang-flag">{mark.flag}</span>
+        ? <Flag className="lang-flag" flag={mark.flag} />
         : <span className="lang-sample" lang={code ?? 'en'} dir={meta?.dir}>{mark.sample}</span>}
     </span>
   );

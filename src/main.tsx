@@ -1,6 +1,7 @@
 import { StrictMode, type ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import { Crashed } from './components/Splash';
 import { startScreens } from './lazyScreens';
 import { loadProgress } from './lib/progress';
 import { readTesterParam } from './lib/report';
@@ -48,7 +49,8 @@ const cssBoot = new Promise<void>((done) => {
   appCss.addEventListener('load', () => done());
   appCss.addEventListener('error', () => done());
 });
-const render = (node: ReactNode) => createRoot(document.getElementById('root')!).render(<StrictMode>{node}</StrictMode>);
+// Crashed: a drawing error shows the splash with "Try again", never a blank screen.
+const render = (node: ReactNode) => createRoot(document.getElementById('root')!).render(<StrictMode><Crashed>{node}</Crashed></StrictMode>);
 
 if (import.meta.env.DEV && params.get('shot')) {
   // Dev screenshots (never in the production bundle): the shot's help language and the pictures first.

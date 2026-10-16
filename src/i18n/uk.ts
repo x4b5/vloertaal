@@ -191,7 +191,7 @@ const lang: HelpLanguageSource = {
     deleteLetter: 'Стерти',
     listenSkipped: 'Завдання на слухання в цьому уроці пропущено. Звук залишається увімкненим.',
     skippedN: 'Пропущено: {n}, не враховано',
-    stampAgain: 'Ще раз',
+    stampLater: 'Повернеться пізніше',
     stampDone: 'Готово',
     chooseNext: 'Обери наступну тему',
     recommended: 'Рекомендовано',

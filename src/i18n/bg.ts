@@ -191,7 +191,7 @@ const lang: HelpLanguageSource = {
     deleteLetter: 'Изтрий',
     listenSkipped: 'Задачите за слушане в този урок са пропуснати. Звукът остава включен.',
     skippedN: { one: '{n} пропуснато упражнение, не се брои', other: '{n} пропуснати упражнения, не се броят' },
-    stampAgain: 'Още веднъж',
+    stampLater: 'Ще се върне по-късно',
     stampDone: 'Готово',
     chooseNext: 'Избери следващата тема',
     recommended: 'Препоръчано',

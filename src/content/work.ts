@@ -537,7 +537,7 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.illness',
     emoji: '👩‍⚕️',
     title: 'Your rights when you are sick',
-    body: 'When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. Your boss may not ask what illness you have: you talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (beter melden). Working through an agency? The rules can be different: ask your agency.',
+    body: 'When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. Your boss may not ask what illness you have: you talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (beter melden). In the first year you get at least the minimum wage. Working through an agency? Your contract can end when you get sick. Then UWV pays you (Ziektewet). Ask UWV or a union.',
     phrase: { id: 'c.illness.p', nl: 'Ik ben weer beter. Ik kom morgen werken.', en: 'I am better again. I will come to work tomorrow.' },
     situation: { id: 'c.illness.s', en: 'You are sick for a week. Your employer asks you to visit the company doctor. What do you do?' },
     options: [
@@ -1746,7 +1746,7 @@ const sectorTips = [
     '🧴',
     'Read the label',
     'Every cleaning product has a label. Pictograms (small pictures in a red diamond) show the danger, for example for your skin, eyes or lungs. Read the label, or ask what the product is for and how to use it. Wear the gloves your employer gives you.',
-    ['Waarvoor is dit middel?', 'What is this product for?'],
+    ['Waar is dit middel voor?', 'What is this product for?'],
     'You get a new cleaning product. You cannot read the label well. What do you do?',
     [
       'Ask your supervisor what it is for and how to use it safely.',

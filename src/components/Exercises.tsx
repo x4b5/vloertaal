@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import type { ChatLine } from '../content/types';
 import { sayingQuestion } from '../content/sayings';
 import { fillN, gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
@@ -19,7 +19,7 @@ import { hasPicture } from '../lib/wordPicture';
 import { SpeakButton } from './SpeakButton';
 import { letterSteps } from '../lib/letters';
 import { createRng } from '../lib/random';
-import { nonLatinHelp, pickInsteadOfTyping, writingInput } from '../lib/writing';
+import { pickInsteadOfTyping, writingInput } from '../lib/writing';
 import { HelpSay } from './HelpSay';
 
 export interface Answer {
@@ -114,14 +114,19 @@ function PromptWithBram({ text, verdict, run, misses, word, quietUntilChecked }:
   );
 }
 
-/** The one rubber stamp in a lesson: brick-red NOG EENS on a wrong pick. A right answer gets no
- *  stamp (its check, the green label and the green button say it already). Decorative: the
- *  feedback label below says the same in words. */
+/** Does a wrong answer here come back later in the lesson (its first round), or not (the retry round)? */
+export const ComesBack = createContext(true);
+
+/** The one rubber stamp in a lesson, brick-red on a wrong pick: STRAKS WEER when the question
+ *  comes back at the end of the lesson, NIET GOED in the retry round. A right answer gets no stamp
+ *  (its check, the green label and the green button say it already). Decorative: the feedback
+ *  label below says the same in words. */
 function WrongStamp({ lang }: { lang?: HelpLanguage }) {
-  const sub = ui('stampAgain', lang);
+  const back = useContext(ComesBack);
+  const sub = ui(back ? 'stampLater' : 'incorrect', lang);
   return (
     <span className="stamp stamp-wrong" aria-hidden>
-      <span className="stamp-word" lang="nl">Nog<br />eens</span>
+      <span className="stamp-word" lang="nl">{back ? <>Straks<br />weer</> : <>Niet<br />goed</>}</span>
       {/* The Dutch marker in the help language too, small under it (English without one). */}
       {sub.help && lang ? <HelpText className="stamp-sub" text={sub.help} lang={lang} /> : <span className="stamp-sub" lang="en">{sub.en}</span>}
     </span>
@@ -373,19 +378,20 @@ function DutchFromMeaning({ ex, lang, locked, onAnswer, verdict, run, misses }: 
         <PromptWithBram text={question} word={ex.word.nl} verdict={verdict} run={run} misses={misses} quietUntilChecked />
       </div>
       <ChoiceGrid
-        className={`choices-rows choices-words ${nonLatinHelp(lang) ? 'hear-pick-choices' : ''}`}
+        className="choices-rows choices-words hear-pick-choices"
         options={ex.options}
         correctId={ex.word.id}
         locked={locked}
         lang={lang}
         onAnswer={onAnswer}
-        // A learner who reads only another script hears each card on its own speaker (as in
-        // "hear and pick"): Latin-only cards alone would leave them guessing.
-        side={nonLatinHelp(lang) ? (w) => (
+        // Every card has its own speaker (as in "hear and pick"): a learner who reads little, in
+        // any script, can hear the words instead of having to read them (speakers are not one of
+        // the three things to tap).
+        side={(w) => (
           <button type="button" className="choice-say" aria-label={`${srText(ui('playAudio', lang))}: ${w.nl}`} lang={saidLang(ui('playAudio', lang))} onClick={() => speak(w.nl)}>
             <SpeakerIcon size={24} />
           </button>
-        ) : undefined}
+        )}
         render={(w) => <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>}
       />
     </div>

@@ -191,7 +191,7 @@ const lang: HelpLanguageSource = {
     deleteLetter: { m: 'ደምስስ', f: 'ደምስሲ' },
     listenSkipped: 'ናይ ምስማዕ ሕቶታት ናይዚ ትምህርቲ ተሰጊሮም። ድምጺ ክፉት ይጸንሕ።',
     skippedN: '{n} ተሰጊሩ፡ ኣይተቖጽረን',
-    stampAgain: { m: 'ደጊምካ', f: 'ደጊምኪ' },
+    stampLater: 'ደሓር ክምለስ እዩ',
     stampDone: 'ተወዲኡ',
     chooseNext: { m: 'ዝቕጽል ኣርእስቲ ምረጽ', f: 'ዝቕጽል ኣርእስቲ ምረጺ' },
     recommended: 'ዝምከር',

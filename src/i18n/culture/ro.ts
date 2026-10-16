@@ -122,7 +122,7 @@ const t: CultureTranslation = {
     'w.overwerken': 'a face ore suplimentare',
     'w.misschien': 'poate',
     's.agree.1': 'Nu, azi nu se poate.',
-    's.agree.2': 'Nu sunt de acord cu asta.',
+    's.agree.2': 'Nu sunt de acord cu tine.',
     's.agree.3': 'O înțelegere e o înțelegere.',
     'd.agree.q': 'Poți face ore suplimentare sâmbătă?',
     'd.agree.a': 'Nu, nu se poate. Duminică pot.',

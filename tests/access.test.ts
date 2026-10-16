@@ -13,48 +13,52 @@ import { DAILY_ID } from '../src/lib/spaced';
 const sha = (s: string) => createHash('sha256').update(s).digest('hex');
 
 describe('access', () => {
-  it('stores hashes of the normalised passwords, not the passwords', () => {
-    expect(PASSWORD_HASHES[sha('sneekpeak')]).toBe('preview');
-    expect(PASSWORD_HASHES[sha('sneakpeek')]).toBe('preview');
-    expect(PASSWORD_HASHES[sha('vlaai-toer')]).toBe('full');
-    // The full-version password as it is normalised now (without the hyphen).
-    expect(PASSWORD_HASHES[sha(normalizePassword('vlaai-toer'))]).toBe('full');
-    // The pilot code (October 2026) is not written in the repository, only its hash.
-    const PILOT = '94f3f76d391ed7e22dfd2fa93a9c9c0fbfa125385ca45c1ea7702fb28457979e';
-    expect(PASSWORD_HASHES[PILOT]).toBe('full');
-    // A second code (15 October 2026), likewise only as a hash: the sneak preview since 16 October.
-    const SECOND = 'f439b02cc5e1a2f2e2c089e3998b3b8a1131f0d6b2e0911d4fce946516aac54a';
-    expect(PASSWORD_HASHES[SECOND]).toBe('sample');
-    // The candidates' code (16 October 2026): full, likewise only as a hash.
-    const CANDIDATES = '90a18ecf6549148fe4a16dae942bb664d6a5f5e3b0510401058d98b3f73e1764';
-    expect(PASSWORD_HASHES[CANDIDATES]).toBe('full');
-    expect(Object.keys(PASSWORD_HASHES)).toHaveLength(7);
-    // Every other stored hash is reached by some normalised form of a known password.
-    const known = ['sneekpeak', 'sneakpeek', 'vlaai-toer'];
-    const reached = new Set(known.flatMap((p) => [sha(p), sha(normalizePassword(p))]));
-    for (const h of Object.keys(PASSWORD_HASHES).filter((k) => k !== PILOT && k !== SECOND && k !== CANDIDATES)) expect(reached.has(h), h).toBe(true);
+  it('stores only hashes: no code is written in the repository (it is public)', () => {
+    const levels = Object.values(PASSWORD_HASHES);
+    for (const h of Object.keys(PASSWORD_HASHES)) expect(h).toMatch(/^[0-9a-f]{64}$/);
+    // Two first-unit previews, four full codes (pilot, candidates and the first one in two forms), one sneak preview.
+    expect(levels.filter((l) => l === 'preview')).toHaveLength(2);
+    expect(levels.filter((l) => l === 'full')).toHaveLength(4);
+    expect(levels.filter((l) => l === 'sample')).toHaveLength(1);
+    // The pilot code (October 2026).
+    expect(PASSWORD_HASHES['94f3f76d391ed7e22dfd2fa93a9c9c0fbfa125385ca45c1ea7702fb28457979e']).toBe('full');
+    // A second code (15 October 2026): the sneak preview since 16 October.
+    expect(PASSWORD_HASHES['f439b02cc5e1a2f2e2c089e3998b3b8a1131f0d6b2e0911d4fce946516aac54a']).toBe('sample');
+    // The candidates' code (16 October 2026).
+    expect(PASSWORD_HASHES['90a18ecf6549148fe4a16dae942bb664d6a5f5e3b0510401058d98b3f73e1764']).toBe('full');
   });
 
   it('normalises: lower case, no spaces, hyphens or dots, Eastern digits as 0-9', () => {
-    expect(normalizePassword('  Vlaai-Toer ')).toBe('vlaaitoer');
-    expect(normalizePassword('vlaai toer')).toBe('vlaaitoer');
-    expect(normalizePassword('vlaai.toer')).toBe('vlaaitoer');
-    expect(normalizePassword('vlaai\u2013toer')).toBe('vlaaitoer'); // a dash a phone keyboard puts in
+    expect(normalizePassword('  Appel-Taart ')).toBe('appeltaart');
+    expect(normalizePassword('appel taart')).toBe('appeltaart');
+    expect(normalizePassword('appel.taart')).toBe('appeltaart');
+    expect(normalizePassword('appel\u2013taart')).toBe('appeltaart'); // a dash a phone keyboard puts in
     expect(normalizePassword('code \u0661\u0662\u0663')).toBe('code123'); // Arabic-Indic
     expect(normalizePassword('code \u06f4\u06f5\u06f6')).toBe('code456'); // Persian
     expect(normalizePassword('\u0660\u0669\u06f0\u06f9')).toBe('0909');
   });
 
-  it('checks typed passwords (any case, with or without separators)', async () => {
-    expect(await checkPassword(' SneekPeak ')).toBe('preview');
-    expect(await checkPassword('sneak peek')).toBe('preview');
-    expect(await checkPassword('Sneak-Peek.')).toBe('preview');
-    expect(await checkPassword('vlaai-toer')).toBe('full');
-    expect(await checkPassword('vlaaitoer')).toBe('full');
-    expect(await checkPassword('Vlaai Toer')).toBe('full');
-    expect(await checkPassword('vlaai')).toBeNull();
+  it('checks typed passwords by hash (any case, with or without separators)', async () => {
+    // A made-up code, added for this test only.
+    const h = sha('appeltaart12');
+    PASSWORD_HASHES[h] = 'full';
+    try {
+      expect(await checkPassword('appeltaart12')).toBe('full');
+      expect(await checkPassword(' Appel-Taart 12.')).toBe('full');
+      expect(await checkPassword('appel taart \u0661\u0662')).toBe('full');
+      expect(await checkPassword('appeltaart')).toBeNull();
+    } finally {
+      delete PASSWORD_HASHES[h];
+    }
+    expect(await checkPassword('appeltaart12')).toBeNull();
     expect(await checkPassword('')).toBeNull();
     expect(await checkPassword(' - . ')).toBeNull();
+  });
+
+  it('development codes (tests, the screenshot scripts): one per level, typed in any form', async () => {
+    expect(await checkPassword('Test-Code')).toBe('preview');
+    expect(await checkPassword('test vol')).toBe('full');
+    expect(await checkPassword('TESTPROEF')).toBe('sample');
   });
 
   it('a preview only opens the first unit, whatever the progress says', () => {

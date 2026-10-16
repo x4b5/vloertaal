@@ -191,7 +191,7 @@ const lang: HelpLanguageSource = {
     deleteLetter: 'پاک کنید',
     listenSkipped: 'سؤال‌های شنیداری این درس رد شدند. صدا روشن می‌ماند.',
     skippedN: '{n} رد شد، حساب نمی‌شود',
-    stampAgain: 'دوباره',
+    stampLater: 'بعداً برمی‌گردد',
     stampDone: 'تمام شد',
     chooseNext: 'موضوع بعدی را انتخاب کنید',
     recommended: 'پیشنهادی',

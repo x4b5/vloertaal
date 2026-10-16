@@ -535,8 +535,9 @@ Dan hooguit 2 maanden ⚖️.
 
 **Goed antwoord: B.**
 **Waarom:** Een tijdelijk contract stopt vanzelf op de einddatum. Je werkgever moet 1 maand ⚖️ van
-tevoren laten weten of je mag blijven. Dat geldt bij een contract van 6 maanden of langer ⚖️. Had je
-3 tijdelijke contracten, of werk je er 3 jaar? Dan krijg je meestal een vast contract ⚖️.
+tevoren laten weten of je mag blijven. Dat geldt bij een contract van 6 maanden of langer ⚖️. Krijg je
+een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je contract meestal vanzelf vast ⚖️.
+Maar na het 3e contract mag je baas ook stoppen.
 
 *Redactie: de ketenregeling verandert waarschijnlijk per 1 januari 2028 (Wet meer zekerheid
 flexwerkers). Tot die tijd geldt de regel hierboven. ⚖️*
@@ -969,7 +970,7 @@ laten weten.
 
 **Antwoord: waar.**
 **Waarom:** Je krijgt minstens 4 keer ⚖️ zoveel vrije dagen als je dagen per week werkt. Je cao geeft
-vaak meer. Vrije dagen van de wet vervallen meestal na een half jaar ⚖️. Wil je vrij voor een
+vaak meer. Vrije dagen van de wet vervallen meestal op 1 juli van het jaar erna ⚖️. Wil je vrij voor een
 feestdag, zoals het Suikerfeest of Kerst? Vraag die dag op tijd aan.
 
 **Vraag 3 · Wat doe je?** Piotr krijgt een telefoontje. Zijn zoon is gevallen op school en moet naar het ziekenhuis.

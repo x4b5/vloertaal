@@ -111,7 +111,9 @@ describe('the language list', () => {
     setRulesTrack(true);
     const m = html(createElement(LanguagePicker, { onPick: () => {} }));
     expect(m.match(/<button/g)).toHaveLength(11);
-    for (const flag of ['🇺🇦', '🇹🇷', '🇵🇱', '🇷🇴', '🇧🇬', '🇳🇱']) expect(m).toContain(flag);
+    // Drawn flags, no flag emoji: the emoji font for flags alone was 709 KB on the first screen.
+    expect(m).not.toMatch(/[\u{1F1E6}-\u{1F1FF}]/u);
+    expect(m.match(/<svg class="lang-flag"[^>]*aria-hidden="true"/g)).toHaveLength(6);
     expect(m.match(/class="lang-mark" aria-hidden="true"/g)).toHaveLength(11);
     expect(m.match(/class="lang-flag"/g)).toHaveLength(6);
     expect(m.match(/class="lang-sample"/g)).toHaveLength(5);

@@ -101,7 +101,7 @@ const t: CultureTranslation = {
     'zg.oefening.w': 'Acesta e un proverb: cu exercițiu faci totul tot mai bine. E adevărat și când înveți olandeză.',
     'zg.zwartwit.lit': 'Cere-o negru pe alb.',
     'zg.zwartwit.m': 'Cere-o pe hârtie, în scris.',
-    'zg.zwartwit.s': 'Șeful tău îți promite un salariu mai mare. Colega ta spune: „Vraag het zwart op wit.” Ce vrea să spună?',
+    'zg.zwartwit.s': 'Șeful tău îți promite un salariu mai mare. Colega ta spune: „Zorg dat je het zwart op wit hebt.” Ce vrea să spună?',
     'zg.zwartwit.o1': 'Cere promisiunea în scris.',
     'zg.zwartwit.o2': 'Cere hârtie neagră și albă.',
     'zg.zwartwit.o3': 'Nu cere nimic.',

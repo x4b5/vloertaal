@@ -202,7 +202,7 @@ function defineStates(LANG) {
   add('flow:sector', '/', firstRun({ gender: 'm' }));
   // Back from the sector: the password page with the accepted code kept (not cleared).
   add('flow:sector-back', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.pw-ok' });
-  add('flow:sector-phone-back', '/', async (p) => { await toGate(p); await p.fill('.pw-input', 'sneakpeek'); await tap(p, '.pw-go'); await settle(p, 900); await p.goBack(); await settle(p); }, { expect: '.pw-ok' });
+  add('flow:sector-phone-back', '/', async (p) => { await toGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await p.goBack(); await settle(p); }, { expect: '.pw-ok' });
   add('flow:sector-step2', '/', async (p) => { await firstRun({ gender: 'm' })(p); await tap(p, '.max3-card', 0); await settle(p); }, { expect: '.sector-step-2' });
   add('flow:sector-step2-back', '/', async (p) => { await firstRun({ gender: 'm' })(p); await tap(p, '.max3-card', 0); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.sector-step:not(.sector-step-2)' });
   // A learner from before the gender question: a one-time page instead of the home card (no back).
@@ -522,9 +522,9 @@ function defineRuleStates() {
   add('flow:nl-gate-phone-back', RULES, async (p) => { await toNlGate(p); await p.goBack(); await settle(p); }, { list: true, expect: '.lang-grid' });
   // The trial lesson of the track: the first lesson of its first unit.
   add('flow:nl-trial-lesson', RULES, async (p) => { await toNlGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
-  add('flow:nl-sector', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'sneakpeek'); await tap(p, '.pw-go'); await settle(p, 900); }, { expect: '.sector-step' });
-  add('flow:nl-sector-back', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'sneakpeek'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.pw-ok' });
-  add('flow:nl-home', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'sneakpeek'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.max3-card', 2); await settle(p, 900); }, { expect: '.home3' });
+  add('flow:nl-sector', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); }, { expect: '.sector-step' });
+  add('flow:nl-sector-back', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.pw-ok' });
+  add('flow:nl-home', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.max3-card', 2); await settle(p, 900); }, { expect: '.home3' });
   const nlHome = nlStore({ sector: 'none', completed: { 'r.l.zoeken.1': { best: 1, times: 1 } } });
   add('flow:nl-help-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); }, { list: true, expect: '.rh-rows' });
   add('flow:nl-shelf', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); await tap(p, '.rules-shelf-link'); await settle(p); }, { list: true, expect: '.shelf-list' });

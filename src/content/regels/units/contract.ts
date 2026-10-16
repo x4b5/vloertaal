@@ -152,8 +152,9 @@ export const contractUnit: RuleUnit = {
         //   zekerheid flexwerkers). Tot die tijd geldt de regel hierboven. ⚖️
         // ⚖️ check: Je werkgever moet 1 maand ⚖️ van tevoren laten weten of je mag blijven.
         // ⚖️ check: Dat geldt bij een contract van 6 maanden of langer ⚖️.
-        // ⚖️ check: Had je 3 tijdelijke contracten, of werk je er 3 jaar? Dan krijg je meestal een
-        //   vast contract ⚖️.
+        // ⚖️ check: Krijg je een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je
+        //   contract meestal vanzelf vast. Na het 3e contract mag je baas ook stoppen ⚖️ (ketenregeling,
+        //   art. 7:668a BW; was eerder fout: "na 3 contracten vast", critic 16 okt 2026).
         {
           kind: 'whatdo',
           id: 'r.l.contract.2.wd1',
@@ -163,7 +164,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', text: 'Ze vraagt haar baas of ze na 1 juni mag blijven.', best: true, feedback: 'Goed. Dan weet ze op tijd waar ze aan toe is.' },
             { id: 'c', text: 'Ze zoekt alvast ander werk en zegt niets.', best: false, feedback: 'Slim om te zoeken. Maar vragen kan ook.' },
           ],
-          why: 'Een tijdelijk contract stopt vanzelf op de einddatum. Je werkgever moet 1 maand van tevoren laten weten of je mag blijven. Dat geldt bij een contract van 6 maanden of langer. Had je 3 tijdelijke contracten, of werk je er 3 jaar? Dan krijg je meestal een vast contract.',
+          why: 'Een tijdelijk contract stopt vanzelf op de einddatum. Je werkgever moet 1 maand van tevoren laten weten of je mag blijven. Dat geldt bij een contract van 6 maanden of langer. Krijg je een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je contract meestal vanzelf vast. Maar na het 3e contract mag je baas ook stoppen.',
         },
         {
           kind: 'whoask',

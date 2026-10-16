@@ -80,3 +80,25 @@ export function persistStorage(): void {
     // Not supported: nothing to do.
   }
 }
+
+const PERSIST_KEY = 'vloertaal:persist-asked';
+
+/**
+ * After a finished lesson: ask again to keep this site's storage (the progress lives only there),
+ * while the browser has not granted it yet, at most once a week (Firefox asks the learner).
+ */
+export function keepStorageAgain(now = Date.now()): void {
+  try {
+    const storage = navigator.storage;
+    if (!storage?.persist || !storage.persisted) return;
+    void storage.persisted().then((yes) => {
+      if (yes) return;
+      const last = Number(localStorage.getItem(PERSIST_KEY) ?? 0);
+      if (now - last < 7 * 24 * 3600 * 1000) return;
+      localStorage.setItem(PERSIST_KEY, String(now));
+      storage.persist().catch(() => {});
+    }).catch(() => {});
+  } catch {
+    // Not supported, or storage blocked: nothing to do.
+  }
+}
