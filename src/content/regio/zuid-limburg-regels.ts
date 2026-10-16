@@ -26,7 +26,8 @@ export const zlRegelsUnit: RuleUnit = {
       // Redactie: Maastricht calls its desk "GemeenteLoket" (Mosae Forum) ⚖️, Heerlen works from the
       //   Stadskantoor ⚖️, Sittard-Geleen from the Stadskantoor Sittard and the Stadswinkel Geleen ⚖️,
       //   Kerkrade from the Burgerplein ⚖️. Not in the lesson: they change more often than the rule.
-      //   They are in the Sociale kaart.
+      //   They are in the Sociale kaart. 16-10-2026 (docs/regio-controle.md): for Sittard-Geleen only the
+      //   Stadswinkel Geleen was found as the desk (temporary building since 29-06-2026), not the Stadskantoor.
       id: 'rg.zl.r.l.1',
       title: 'Je adres en de gemeente',
       goal: 'Je weet dat je je adres op tijd doorgeeft aan de gemeente, en hoe je een afspraak maakt.',
@@ -402,7 +403,9 @@ export const zlRegelsUnit: RuleUnit = {
           rule: 'geschreven',
         },
         // ⚖️ check: three posts, at the MUMC+ in Maastricht and at Zuyderland in Heerlen and Geleen ⚖️
-        //   (is Geleen still open? doc 7.3); you call the post of your own area ⚖️.
+        //   (is Geleen still open? doc 7.3); you call the post of your own area ⚖️. 16-10-2026: zuyderland.nl/spoedzorg
+        //   (search result) names two Zuyderland posts (Heerlen; Westelijke Mijnstreek in Sittard-Geleen) and
+        //   hapmaastricht.nl the third: Geleen is still open (docs/regio-controle.md).
         {
           kind: 'whatdo',
           id: 'rg.zl.r.l.5.wd1',

@@ -535,3 +535,10 @@ Nieuw, vertaald door AI-agents, nog niet door moedertaalsprekers nagekeken. Zie
 - [ ] **De betekenis** (`w.*`, `zg.*.m`): klopt die, en is hij eenvoudig genoeg?
 - [ ] **De situaties** (`zg.*.s`, `c.easy.s`, `c.plain.s`): de Nederlandse zin staat er letterlijk in,
       tussen aanhalingstekens.
+- [ ] **Twijfelpunten van de vertalers:**
+  - fa: de uitdrukkingen gebruiken شما (beleefd). De andere fa-uitleg (tips, werk) gebruikt vaak تو. Eén lijn kiezen?
+  - prs: `tagSaying` en `u.sayings` gebruiken متل (spreekwoord). Is اصطلاح beter?
+  - ar: `tagSaying` is تعبير (uitdrukking), niet مثل (leest zonder klinkertekens ook als "zoals").
+  - ti: `w.tandvlees.lit` (tandvlees), `w.pijpenstelen.lit` (ፒፓ), `zg.zeil.lit` (ሸራ, zeil), `zg.pluis.lit` (ልስሉስ, "zacht" voor "pluizig"), `zg.zeil.o3` en `zg.batterij.lit` (ቻርጅ).
+  - pl: `w.pijpenstelen.lit` zegt "pijpbuisjes" (cybuch is te zeldzaam).
+  - uk, bg, ti, pl, ro: "coach" in `zg.waagt.s` (наставниця, наставничката, ኣሰልጣኒት, doradczyni, consiliera).
