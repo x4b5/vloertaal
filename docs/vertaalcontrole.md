@@ -542,3 +542,16 @@ Nieuw, vertaald door AI-agents, nog niet door moedertaalsprekers nagekeken. Zie
   - ti: `w.tandvlees.lit` (tandvlees), `w.pijpenstelen.lit` (ፒፓ), `zg.zeil.lit` (ሸራ, zeil), `zg.pluis.lit` (ልስሉስ, "zacht" voor "pluizig"), `zg.zeil.o3` en `zg.batterij.lit` (ቻርጅ).
   - pl: `w.pijpenstelen.lit` zegt "pijpbuisjes" (cybuch is te zeldzaam).
   - uk, bg, ti, pl, ro: "coach" in `zg.waagt.s` (наставниця, наставничката, ኣሰልጣኒት, doradczyni, consiliera).
+
+## Klanken (`src/i18n/sounds/*.ts`, 16 oktober 2026)
+
+Nieuw, vertaald door een AI-agent, nog niet door moedertaalsprekers nagekeken. Woordparen die één
+klank verschillen (man – maan, pak – bak): de twee woorden van een paar moeten een duidelijk andere
+vertaling hebben.
+
+- [ ] ti: `w.kl.moer` (ዳዶ, moer van een bout), `w.kl.pak` (ሱፍ, kostuum), `w.kl.hoed` (ባርኔጣ), `w.kl.zak`
+      (ከረጺት), en de vrouwelijke gebiedende wijs in `s.shortlong.2` en `s.roundsounds.2`.
+- [ ] prs: de zinnen gebruiken de enkelvoudige je-vorm (بگذار), de uitdrukkingen en het werkdeel de
+      beleefde vorm (بگذارید). Eén lijn kiezen? En `w.kl.koud`: سرد of خنک?
+- [ ] fa, ti, ro: bij `w.kl.maan` staat "(aan de hemel)", zodat het niet als "maand" gelezen wordt.
+- [ ] "de hal" (`s.pbgk.2`) is vertaald als gang/corridor.
