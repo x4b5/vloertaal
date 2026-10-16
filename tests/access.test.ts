@@ -25,11 +25,14 @@ describe('access', () => {
     // A second code (15 October 2026), likewise only as a hash: the sneak preview since 16 October.
     const SECOND = 'f439b02cc5e1a2f2e2c089e3998b3b8a1131f0d6b2e0911d4fce946516aac54a';
     expect(PASSWORD_HASHES[SECOND]).toBe('sample');
-    expect(Object.keys(PASSWORD_HASHES)).toHaveLength(6);
+    // The candidates' code (16 October 2026): full, likewise only as a hash.
+    const CANDIDATES = '90a18ecf6549148fe4a16dae942bb664d6a5f5e3b0510401058d98b3f73e1764';
+    expect(PASSWORD_HASHES[CANDIDATES]).toBe('full');
+    expect(Object.keys(PASSWORD_HASHES)).toHaveLength(7);
     // Every other stored hash is reached by some normalised form of a known password.
     const known = ['sneekpeak', 'sneakpeek', 'vlaai-toer'];
     const reached = new Set(known.flatMap((p) => [sha(p), sha(normalizePassword(p))]));
-    for (const h of Object.keys(PASSWORD_HASHES).filter((k) => k !== PILOT && k !== SECOND)) expect(reached.has(h), h).toBe(true);
+    for (const h of Object.keys(PASSWORD_HASHES).filter((k) => k !== PILOT && k !== SECOND && k !== CANDIDATES)) expect(reached.has(h), h).toBe(true);
   });
 
   it('normalises: lower case, no spaces, hyphens or dots, Eastern digits as 0-9', () => {

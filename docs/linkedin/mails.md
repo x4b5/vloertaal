@@ -7,7 +7,8 @@ Houd per persoon bij wie de code kreeg en wanneer (een lijstje is genoeg). Dan w
 week een bericht stuurt (mail 5).
 
 Er zijn drie soorten codes:
-- **Volledige versie**: alle lessen. Voor experts, coaches en de pilot.
+- **Volledige versie**: alle lessen. Voor experts, coaches en de pilot. Kandidaten die met de app
+  leren, krijgen een eigen code voor de volledige versie.
 - **Sneak preview**: per thema de eerste les (bij „Jouw sector” de eerste les van iedere sector,
   13 lessen in totaal), plus „Herhaal vandaag”. De rest staat op slot, met „Volledige versie”. Voor
   wie alleen even wil kijken.
