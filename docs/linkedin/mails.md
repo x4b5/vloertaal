@@ -23,7 +23,12 @@ versie. De tester schrijft er alleen bij wat er mis is (en voegt een schermfoto 
 zien het vlaggetje niet. Het staat aan:
 - vanzelf bij de sneak-previewcode;
 - op een telefoon die één keer **vloertaal.nl/?test** opende. Geef experts daarom die link (in de
-  mails hieronder staat hij al). Uitzetten: **vloertaal.nl/?test=0**.
+  mails hieronder staat hij al). Uitzetten: **vloertaal.nl/?test=0**;
+- als je het zelf aanzet: onderaan **Over** staat de knop "Test je de app? Zet de knop Melden aan".
+  Nog een tik zet het weer uit.
+
+Let op bij een iPhone: een app op het beginscherm heeft een eigen geheugen, los van Safari. Een
+?test-link die je in Safari opende, komt daar dus niet aan. Zet het vlaggetje dan aan onder **Over**.
 
 ---
 
@@ -42,7 +47,8 @@ Zo begin je:
 3. Vul de code in als de app erom vraagt.
 4. Doe een paar lessen. Zet het geluid aan: alles wordt voorgelezen.
 
-Tip: je kunt de app op je beginscherm zetten. In de app staat hoe dat moet, bij Instellingen.
+Tip: je kunt de app op je beginscherm zetten. In de app staat hoe dat moet, bij Instellingen. Zie
+je daarna in een les geen vlaggetje **Melden**? Zet het aan onderaan **Over**.
 
 Geef de code alsjeblieft niet zelf door. Wie hem ook wil hebben, kan mij mailen. Zo weet ik wie
 meedoet.

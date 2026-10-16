@@ -34,6 +34,7 @@ import {
   ChevronIcon,
   LifebuoyIcon,
   EarIcon,
+  FlagIcon,
   RouteIcon,
   GearIcon,
   GlobeIcon,
@@ -42,6 +43,7 @@ import {
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { useVoices } from './useVoices';
+import { setTesterSwitch, testerSwitch } from '../lib/report';
 import { ChoiceCards } from './Choice';
 import { phoneHelpLang } from '../lib/langGuess';
 import { FlameIcon } from './StreakArt';
@@ -472,6 +474,22 @@ function AboutBody({ text }: { text: Bilingual }) {
   );
 }
 
+/**
+ * For testers: the "Melden" flag in every lesson on or off, in the app itself (src/lib/report.ts).
+ * A ?test link opened in Safari does not reach an app on an iPhone's home screen: this does.
+ * In Dutch, like the flag and its mail. Small, at the bottom: learners pass it by.
+ */
+function TesterSwitch() {
+  const [on, setOn] = useState(testerSwitch);
+  const flip = () => { if (setTesterSwitch(!on)) setOn(!on); };
+  return (
+    <button type="button" className="about-tester" aria-pressed={on} onClick={flip} lang="nl" dir="ltr">
+      <FlagIcon size={18} />
+      <span>{on ? 'Knop Melden staat aan in de lessen. Tik om uit te zetten' : 'Test je de app? Zet de knop Melden aan'}</span>
+    </button>
+  );
+}
+
 /** "About Vloertaal" (the "Over" tab): what the app is, who it is for, privacy and voice credits,
  *  and one link to the page for coaches. */
 /**
@@ -551,6 +569,7 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
           ))}
         </ul>
       )}
+      <TesterSwitch />
       <p className="about-updated muted small"><Bi text={lastUpdatedText(lang)} /></p>
       {/* Which deploy runs on this phone (the commit; src/lib/appUpdate.ts loads a newer one). */}
       <p className="about-version muted small" dir="ltr" lang="nl">Versie {(import.meta.env.VITE_BUILD as string | undefined) ?? 'dev'}</p>

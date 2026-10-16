@@ -29,6 +29,7 @@ export const UPDATES: Update[] = [
       'Vloertaal is nog een testversie: dat staat nu naast de naam ("bèta") en bij Over.',
       'Een nieuwe code voor een sneak preview: per thema de eerste les.',
       'Voor testers: een vlaggetje in elke les. Een tik opent een mail met de plek al ingevuld.',
+      'Voor testers: het vlaggetje zet je nu zelf aan, onderaan bij Over.',
       'De app telt nu ook, zonder naam, welke lessen beginnen en waar iemand stopt. Zo zien we welke les te lang of te moeilijk is.',
       'Staat de app op je beginscherm? Dan haalt hij zelf de nieuwe versie op als je hem weer opent. Bij Over staat welke versie je hebt.',
       'Bij Hulp: wie je kunt bellen over je werk (112, het Juridisch Loket, de Arbeidsinspectie en FairWork).',

@@ -99,10 +99,13 @@ Je krijgt een code van een docent, coach of werkgever. Zonder code kun je één 
 
   Zet de hash met het niveau in `PASSWORD_HASHES` en pas `tests/access.test.ts` aan.
 - Wie een code al invulde, houdt het niveau van toen: dat staat op de telefoon.
-- **Testers**: met de sneak-previewcode, of na één keer `vloertaal.nl/?test` openen, staat in elke
-  les rechtsboven een knop **Melden** met een vlaggetje (de eerste keer met uitleg). Een tik opent
-  een mail met de plek al ingevuld (les, stap, woord, telefoon, versie). Leerlingen zien het niet.
-  Uitzetten: `?test=0`.
+- **Testers**: in elke les staat rechtsboven een knop **Melden** met een vlaggetje (de eerste keer
+  met uitleg). Een tik opent een mail met de plek al ingevuld (les, stap, woord, telefoon, versie).
+  Leerlingen zien het niet. Het staat aan:
+  - met de sneak-previewcode;
+  - na één keer `vloertaal.nl/?test` openen (uitzetten: `?test=0`);
+  - met de schakelaar onderaan **Over**. Die is nodig op een iPhone: een app op het beginscherm
+    heeft daar een eigen geheugen, en een `?test` uit Safari komt er niet aan.
 
 ## Starten
 

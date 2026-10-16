@@ -10,7 +10,10 @@ import { type Exercise, isRuleExercise } from './exercises';
  * Learners never see it. It is on for:
  *  - the sneak preview ('sample'): that code goes to people who come to look;
  *  - a phone that opened vloertaal.nl/?test once (the mails to experts give that link); ?test=0
- *    switches it off again.
+ *    switches it off again;
+ *  - a phone where the tester switched it on at the bottom of Over ("Zet de knop Melden aan"). An app on the home
+ *    screen of an iPhone keeps its own storage, apart from Safari, so a ?test opened in Safari
+ *    does not reach it: the switch in the app does.
  * It is a tool, not a step of the lesson: like the ✕ it is not one of the three things to tap.
  */
 
@@ -28,14 +31,29 @@ export function readTesterParam(search: string): void {
   }
 }
 
-/** Does this phone show "Iets melden"? */
-export function testerMode(access: Access | null | undefined): boolean {
-  if (access === 'sample') return true;
+/** Did this phone switch tester mode on (?test, or the switch under Over)? */
+export function testerSwitch(): boolean {
   try {
     return localStorage.getItem(KEY) === '1';
   } catch {
     return false;
   }
+}
+
+/** The switch under Over. False when the phone can't remember it (blocked storage). */
+export function setTesterSwitch(on: boolean): boolean {
+  try {
+    if (on) localStorage.setItem(KEY, '1');
+    else localStorage.removeItem(KEY);
+    return testerSwitch() === on;
+  } catch {
+    return false;
+  }
+}
+
+/** Does this phone show "Iets melden"? */
+export function testerMode(access: Access | null | undefined): boolean {
+  return access === 'sample' || testerSwitch();
 }
 
 /** What a step is about, by id (and the Dutch, so a mail is readable without the source). */

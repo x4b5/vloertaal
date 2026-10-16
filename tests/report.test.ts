@@ -2,9 +2,10 @@ import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { LessonPlayer } from '../src/components/LessonPlayer';
+import { About } from '../src/components/Screens';
 import { units } from '../src/content/curriculum';
 import { buildLesson, type Exercise } from '../src/lib/exercises';
-import { deviceLabel, exerciseRef, readTesterParam, reportMail, testerMode } from '../src/lib/report';
+import { deviceLabel, exerciseRef, readTesterParam, reportMail, setTesterSwitch, testerMode, testerSwitch } from '../src/lib/report';
 
 const store = new Map<string, string>();
 beforeEach(() => {
@@ -33,6 +34,26 @@ describe('Iets melden (testers)', () => {
     expect(testerMode('full')).toBe(false);
     readTesterParam('?test=1');
     expect(testerMode('preview')).toBe(true);
+  });
+
+  it('the switch under Over turns it on and off in the app itself (a home-screen app on an iPhone never sees ?test)', () => {
+    expect(testerSwitch()).toBe(false);
+    expect(setTesterSwitch(true)).toBe(true);
+    expect(testerMode('full')).toBe(true);
+    expect(setTesterSwitch(false)).toBe(true);
+    expect(testerMode('full')).toBe(false);
+    // The sneak preview keeps the flag, switch or not.
+    expect(testerMode('sample')).toBe(true);
+    // Blocked storage: the switch says it could not remember.
+    (globalThis as { localStorage?: unknown }).localStorage = { getItem: () => { throw new Error('blocked'); }, setItem: () => { throw new Error('blocked'); }, removeItem: () => { throw new Error('blocked'); } };
+    expect(setTesterSwitch(true)).toBe(false);
+    expect(testerMode('full')).toBe(false);
+  });
+
+  it('Over has the switch, in Dutch', () => {
+    const html = renderToStaticMarkup(createElement(About, { lang: undefined }));
+    expect(html).toContain('class="about-tester"');
+    expect(html).toContain('Zet de knop Melden aan');
   });
 
   it('names the step by id, with the Dutch', () => {

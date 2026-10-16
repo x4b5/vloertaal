@@ -548,6 +548,10 @@ h2 { font-size: 1.25rem; }
   content: ''; position: absolute; top: -6px; inset-inline-end: 28px; width: 12px; height: 12px;
   background: var(--solid); transform: rotate(45deg);
 }
+/* The note is Dutch (left to right), so its own inline end is the right: in a right-to-left lesson
+   the flag is on the left, and the note and its point go there. */
+.player-rtl .player-top > .report-hint { inset-inline-end: auto; left: 12px; }
+.player-rtl .player-top > .report-hint::before { inset-inline-end: auto; left: 28px; }
 @media (prefers-reduced-motion: reduce) { .player-top > .report-hint { animation: none; } }
 /* Once the exercise scrolls under the header, a soft shadow on its bottom edge says so. */
 .player-top::after {
@@ -1488,6 +1492,13 @@ svg.emoji-xl { width: 140px; height: 140px; }
 
 /* About Vloertaal */
 .about-banner { margin-top: 24px; }
+/* Testers: the "Melden" switch, small and quiet at the bottom of Over. */
+.about-tester {
+  display: inline-flex; align-items: center; gap: 8px; margin: 18px 0 4px; padding: 8px 14px;
+  border: 1.5px dashed var(--line); border-radius: 999px; background: none; color: var(--muted);
+  font: inherit; font-size: 0.9rem; font-weight: 600; text-align: start; cursor: pointer;
+}
+.about-tester[aria-pressed='true'] { border-style: solid; background: var(--tag-bg); color: var(--ink); }
 .about-link {
   display: flex; align-items: center; justify-content: center; gap: 10px; margin: 32px auto 8px;
   background: none; border: 0; color: var(--muted); font: inherit; font-weight: 700; cursor: pointer; padding: 10px 16px;
