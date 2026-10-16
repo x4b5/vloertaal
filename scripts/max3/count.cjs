@@ -96,12 +96,14 @@ async function buildRight(page, wrongFirst = 0) {
     const tiles = page.locator('.tile-steps .tile-with-say:not([disabled])');
     const n = await tiles.count();
     const texts = [];
-    for (let i = 0; i < n; i++) texts.push((await tiles.nth(i).innerText()).replace(/[.,!?]/g, '').trim());
+    // Without soft hyphens (long compounds, src/lib/dutch.ts breakable).
+    for (let i = 0; i < n; i++) texts.push((await tiles.nth(i).innerText()).replace(/[.,!?\u00ad]/g, '').trim());
     if (wrongFirst && k === 0) {
       const wrong = texts.map((t, j) => (t.toLowerCase() !== w.toLowerCase() ? j : -1)).filter((j) => j >= 0);
       for (let x = 0; x < wrongFirst; x++) { await tiles.nth(wrong[x % wrong.length]).click(); await settle(page, 150); }
     }
-    const i = texts.findIndex((t) => t === w);
+    // The first word's tiles are written small (src/lib/exercises.ts tileLabel): "draag" for "Draag".
+    const i = texts.findIndex((t) => t === w || (k === 0 && t.toLowerCase() === w.toLowerCase()));
     if (i >= 0) { await tiles.nth(i).click(); await settle(page, 150); }
   }
   await settle(page, 300);

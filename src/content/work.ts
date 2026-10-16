@@ -1,5 +1,5 @@
 import { ADVICE_LINE } from './adviceLine';
-import type { CultureTip } from './culture';
+import type { CultureTip, SituationAsk } from './culture';
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
 
 /**
@@ -448,7 +448,7 @@ const coreTips: CultureTip[] = [
     title: 'Holiday pay and minimum wage',
     body: 'You get holiday pay (vakantiegeld): at least 8% of your gross wage. Most employers pay it once a year, in May or June. Your pay may never be lower than the legal minimum wage (minimumloon); for workers under 21 it is lower. The amount changes every year: check it on rijksoverheid.nl. A cao often gives extra pay for overtime or night work.',
     phrase: { id: 'c.extra.p', nl: 'Wanneer krijg ik mijn vakantiegeld?', en: 'When do I get my holiday pay?' },
-    situation: { id: 'c.extra.s', en: 'A colleague says: "In May you get extra money from the boss." What is it?' },
+    situation: { id: 'c.extra.s', en: 'A colleague says: "In May you get extra money from the boss." What is it?', ask: 'which' },
     options: [
       { id: 'c.extra.o1', en: 'Holiday pay: at least 8% of your gross wage.', best: true },
       { id: 'c.extra.o2', en: 'A present, only for the best workers.', best: false },
@@ -577,6 +577,8 @@ const unit = (slug: string, title: string, titleNl: string, emoji: string, color
 /** Closing line: ADVICE_LINE for rights and rules set by law, ABUSE_LINE where the employer may be the problem, HOUSE_LINE for company rules, '' for social norms. */
 /** Dutch said aloud in a situation (a speaker plays it in the character's voice). */
 const SAID: Record<string, string> = { interview: 'Heb je nog vragen?', hours: 'Morgen begin je om half negen.' };
+/** The heading of a situation that does not ask "What do you do?" (see SituationAsk). */
+const ASK: Record<string, SituationAsk> = { texting: 'which', diploma: 'which', hours: 'which', measures: 'whatsay' };
 
 const tipFor = (
   slug: string,
@@ -597,7 +599,7 @@ const tipFor = (
       title,
       body,
       phrase: { id: `c.${slug}.p`, nl, en },
-      situation: { id: `c.${slug}.s`, en: situation, ...(SAID[slug] ? { nl: SAID[slug] } : {}) },
+      situation: { id: `c.${slug}.s`, en: situation, ...(SAID[slug] ? { nl: SAID[slug] } : {}), ...(ASK[slug] ? { ask: ASK[slug] } : {}) },
       options: options.map((o, i) => ({ id: `c.${slug}.o${i + 1}`, en: o, best: i === 0 })),
       why: { id: `c.${slug}.w`, en: why },
     },

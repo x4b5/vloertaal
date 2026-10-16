@@ -88,6 +88,8 @@ export const uiNl: Record<UiKey, UiText> = {
   voiceNone: 'Je telefoon heeft geen Nederlandse voorleesstem. Je kunt er een toevoegen in de instellingen van je telefoon. Zoek naar ‘Tekst naar spraak’.', // regels: also the one-time line on the home
   cultureBadge: 'Zo gaat het hier',
   whatDoYouDo: 'Wat doe je?',
+  whatDoYouSay: 'Wat zeg je?',
+  whatIsRight: 'Wat klopt?',
   sayThis: 'Zo zeg je het',
   goodChoice: 'Goede keus!',
   otherChoice: 'Hier gaat het meestal anders',

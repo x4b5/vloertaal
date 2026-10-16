@@ -4,9 +4,9 @@ import { fillN, gloss, said as srText, saidLang, ui, type Bilingual } from '../i
 import type { HelpLanguage } from '../i18n/types';
 import { checkTyped, tokenize } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
-import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, type Exercise } from '../lib/exercises';
+import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, tileLabel, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
-import { breakable, sentences, wordSize } from '../lib/dutch';
+import { breakable, sentences, splitQuote, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
 import { NlPair } from './NlPair';
 import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
@@ -491,7 +491,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
               {hasPicture(w) && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={56} />}
               <span className="match-text">
                 <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />
-                {made && <span className="match-made" lang="nl" dir="ltr">{w.nl}</span>}
+                {made && <span className="match-made" lang="nl" dir="ltr">{breakable(w.nl)}</span>}
               </span>
               {made && <span className="match-check" aria-hidden><CheckIcon size={20} /></span>}
               {miss === w.id && <span className="match-x" aria-hidden><CloseIcon size={16} /></span>}
@@ -573,7 +573,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
             <span className="sr-only" lang={saidLang(ui('correctAnswer', lang))}>{srText(ui('correctAnswer', lang))}</span>
           </span>
         )}
-        {words.slice(0, at).map((w, i) => <span key={i} className="tile tile-placed">{w}</span>)}
+        {words.slice(0, at).map((w, i) => <span key={i} className="tile tile-placed">{breakable(w)}</span>)}
         {!complete && <span className="tile-next" aria-hidden />}
       </div>
       {/* After the last word: how many wrong taps there were (in the help language), and the
@@ -582,7 +582,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
         <div className="build-misses">
           <Bi className="build-misses-n" text={fillN(ui('wrongTapsN', lang), wrongs.length)} />
           <span className="build-misses-tiles" lang="nl" dir="ltr">
-            {wrongs.map((x, i) => <s key={i} className="tile tile-wrong-tap">{x.word}</s>)}
+            {wrongs.map((x, i) => <s key={i} className="tile tile-wrong-tap">{breakable(tileLabel(x.word, x.at, ex.sentence.nl))}</s>)}
           </span>
         </div>
       )}
@@ -598,14 +598,15 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
                 disabled={locked}
                 onClick={() => tap(t)}
               >
-                {t}
+                {/* Written small at the first place too (tileLabel); the tap is checked on the word itself. */}
+                {breakable(tileLabel(t, at, ex.sentence.nl))}
                 {miss === t && <span className="tile-x" aria-hidden><CloseIcon size={14} /></span>}
                 {miss === t && <span className="sr-only" lang={saidLang(ui('incorrect', lang))}>, {srText(ui('incorrect', lang))}</span>}
               </button>
               <button
                 type="button"
                 className="tile-say"
-                aria-label={`${srText(ui('playAudio', lang))}: ${t}`}
+                aria-label={`${srText(ui('playAudio', lang))}: ${tileLabel(t, at, ex.sentence.nl)}`}
                 lang={saidLang(ui('playAudio', lang))}
                 onClick={(e) => {
                   e.stopPropagation();
@@ -1028,32 +1029,77 @@ function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
   );
 }
 
-/** "What do you do?": pick the most usual way to handle a workplace situation. */
+/** The heading of each kind of situation (src/content/culture.ts SituationAsk). */
+const ASK_PROMPT = { whatdo: 'whatDoYouDo', whatsay: 'whatDoYouSay', which: 'whatIsRight' } as const;
+
+/**
+ * The situation's text, with the Dutch said in it once: in its own place, on a line of its own
+ * with its speaker ('Przełożony mówi:' / [🔊 Morgen begin je om half negen.] / 'O której …?').
+ * A text that does not quote the Dutch as it is keeps the Dutch line above it.
+ */
+function SituationText({ text, said, who, lang }: { text: Bilingual; said: string; who: CharacterId; lang?: HelpLanguage }) {
+  const main = text.help ?? text.en;
+  const parts = splitQuote(main, said);
+  const rtl = text.help && text.lang?.dir === 'rtl';
+  const quote = (
+    <span className="situation-quote" dir="ltr">
+      <SpeakButton glyph text={said} help={lang} voice={voiceFor(who)} />
+      <span lang="nl" className="situation-nl">{breakable(said)}</span>
+    </span>
+  );
+  if (!parts) {
+    return (
+      <>
+        {quote}
+        <span className="help-say-row">
+          <Bi text={text} />
+          <HelpSay text={text.help} lang={lang} />
+        </span>
+      </>
+    );
+  }
+  const line = (t: string) => (text.help && text.lang ? <HelpText className="situation-line" text={t} lang={text.lang} /> : <span className="situation-line">{t}</span>);
+  return (
+    <span className="help-say-row">
+      <span className={`bi situation-lines ${text.help ? 'bi-swap' : ''}`} dir={rtl ? 'rtl' : undefined}>
+        <span className="bi-en">
+          {parts.before && line(parts.before)}
+          {quote}
+          {parts.after && line(parts.after)}
+        </span>
+        {/* The English under it (hidden unless "Show English" is on), as in every pair. */}
+        {text.help && <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{text.en}</span>}
+      </span>
+      <HelpSay text={text.help} lang={lang} />
+    </span>
+  );
+}
+
+/** "What do you do?" (or "What do you say?", "What is right?"): pick the usual answer to a workplace situation. */
 export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props<'situation'>) {
   const { tip } = ex;
   const best = tip.options.find((o) => o.best)!;
   const who = tipCast(tip, lang?.gender);
   const said = tip.situation.nl;
+  const text = gloss(tip.situation.id, tip.situation.en, lang);
   // The Dutch in the situation ("Zeg maar je, hoor!") is said by the character, as in a chat.
   useEffect(() => { if (said) autoSpeak(said, false, 'nl', voiceFor(who)); }, [said, who]);
   const talking = useTalking(said ? [said] : [], Boolean(said));
   return (
     <div className="exercise situation">
-      <Prompt text={ui('whatDoYouDo', lang)} />
+      <Prompt text={ui(ASK_PROMPT[tip.situation.ask ?? 'whatdo'], lang)} />
       <div className="speaker">
         <span className="speaker-char"><Character who={who} mood={moodFor(verdict, 'thinking', true)} talking={talking && !verdict} /></span>
         <div className={`speaker-bubble situation-text ${said ? 'situation-says' : ''}`}>
-          {said && (
-            <span className="situation-quote" dir="ltr">
-              <SpeakButton glyph text={said} help={lang} voice={voiceFor(who)} />
-              <span lang="nl" className="situation-nl">{said}</span>
+          {said ? (
+            <SituationText text={text} said={said} who={who} lang={lang} />
+          ) : (
+            // Much help-language text: the device reads it aloud when it has a voice for it.
+            <span className="help-say-row">
+              <Bi text={text} />
+              <HelpSay text={text.help} lang={lang} />
             </span>
           )}
-          {/* Much help-language text: the device reads it aloud when it has a voice for it. */}
-          <span className="help-say-row">
-            <Bi text={gloss(tip.situation.id, tip.situation.en, lang)} />
-            <HelpSay text={gloss(tip.situation.id, tip.situation.en, lang).help} lang={lang} />
-          </span>
         </div>
       </div>
       <ChoiceGrid

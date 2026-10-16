@@ -76,6 +76,8 @@ export const uiEn = {
   voiceNone: 'This device has no Dutch voice. You can add one in your phone settings (Text-to-speech).',
   cultureBadge: "How it works here",
   whatDoYouDo: "What do you do?",
+  whatDoYouSay: "What do you say?",
+  whatIsRight: "What is right?",
   sayThis: "Say it like this",
   goodChoice: "Good choice!",
   otherChoice: "Here it usually works differently",

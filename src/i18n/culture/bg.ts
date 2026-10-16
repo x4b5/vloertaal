@@ -4,6 +4,8 @@ const t: CultureTranslation = {
   ui: {
     cultureBadge: 'Как е тук',
     whatDoYouDo: 'Какво правиш?',
+    whatDoYouSay: 'Какво казваш?',
+    whatIsRight: 'Кое е вярно?',
     sayThis: 'Кажи го така',
     goodChoice: 'Добър избор!',
     otherChoice: 'Тук обикновено е по-различно',

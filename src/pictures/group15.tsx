@@ -73,8 +73,8 @@ function Board({ x, y, w, children }: { x: number; y: number; w: number; childre
       {children}
       <rect x={x} y={y} width={w} height="7" rx="1.5" fill={PAL.paperShade} />
       <rect x={x} y={y} width={w} height="4.5" rx="1.5" fill={PAL.white} />
-      <rect x={x + w * 0.2} y={y + 1} width="7" height="5" rx="1" fill={PAL.yellow} />
-      <rect x={x + w * 0.66} y={y + 1} width="7" height="5" rx="1" fill={PAL.yellow} />
+      <rect x={r1(x + w * 0.2)} y={y + 1} width="7" height="5" rx="1" fill={PAL.yellow} />
+      <rect x={r1(x + w * 0.66)} y={y + 1} width="7" height="5" rx="1" fill={PAL.yellow} />
     </g>
   );
 }
@@ -158,12 +158,13 @@ export default {
       <Ground cx={60} cy={104} rx={40} ry={5} />
       <path d="M45 40Q45 22 60 22Q75 22 75 40" fill="none" stroke={PAL.slateDark} strokeWidth="8" strokeLinecap="round" />
       <path d="M46 40Q46 25 60 25Q74 25 74 40" fill="none" stroke={PAL.steel} strokeWidth="3" strokeLinecap="round" opacity=".6" />
-      <Shade color={PAL.slateDark} opacity={1} at={[104, 72, 18, 40]}>
-        <path d="M34 40H86L100 100Q100 104 96 104H24Q20 104 20 100Z" fill={PAL.slate} />
+      {/* Steel grey, so it stands out on the white card and on the dark one alike. */}
+      <Shade color={PAL.slate} opacity={0.55} at={[104, 72, 18, 40]}>
+        <path d="M34 40H86L100 100Q100 104 96 104H24Q20 104 20 100Z" fill={PAL.steel} />
       </Shade>
-      <rect x="32" y="36" width="56" height="8" rx="3" fill={PAL.slateDark} />
+      <rect x="32" y="36" width="56" height="8" rx="3" fill={PAL.slate} />
       {/* "1 kg" as strokes */}
-      <g fill="none" stroke={PAL.white} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round">
+      <g fill="none" stroke={PAL.slateDark} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M36 66L42 61V90" />
         <path d="M56 58V90M70 70L57 80L71 90" />
         <path d="M89 80A6.5 7 0 1 1 89 79.9M89 73V93Q89 99 83 99Q79 99 77 96" />

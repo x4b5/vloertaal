@@ -4,6 +4,8 @@ const t: CultureTranslation = {
   ui: {
     cultureBadge: 'ኣብዚ ከምዚ እዩ ዝሰርሕ',
     whatDoYouDo: { m: 'እንታይ ትገብር?', f: 'እንታይ ትገብሪ?' },
+    whatDoYouSay: { m: 'እንታይ ትብል?', f: 'እንታይ ትብሊ?' },
+    whatIsRight: 'ኣየናይ ቅኑዕ እዩ?',
     sayThis: { m: 'ከምዚ በሎ', f: 'ከምዚ በልዮ' },
     goodChoice: 'ጽቡቕ ምርጫ!',
     otherChoice: 'ኣብዚ ብተለምዶ ብኻልእ መንገዲ እዩ ዝኸይድ',

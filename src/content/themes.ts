@@ -33,7 +33,7 @@ export interface Theme {
 
 /** The themes, in the order they are shown. */
 export const THEMES: Theme[] = [
-  { id: 'theme.start', emoji: '🟡', title: 'Getting started', titleNl: 'Starten' },
+  { id: 'theme.start', emoji: '👋', title: 'Getting started', titleNl: 'Starten' },
   { id: 'theme.safe', emoji: '🦺', title: 'Working safely', titleNl: 'Veilig werken' },
   { id: 'theme.find', emoji: '💼', title: 'Finding work', titleNl: 'Werk vinden' },
   { id: 'theme.job', emoji: '🗓️', title: 'Your job', titleNl: 'Je baan' },
@@ -143,4 +143,15 @@ export function planGroups(plan: { main: Unit[]; other: Unit[] }): ThemeGroup[] 
 /** The group of a unit in the plan's groups (the home's small theme label), if any. */
 export function groupOf(groups: ThemeGroup[], unitId: string): ThemeGroup | undefined {
   return groups.find((g) => g.units.some((u) => u.id === unitId));
+}
+
+/**
+ * The topics of a group that count for its ✓ (and its screen-reader count) in All topics: all
+ * of them, except in "Jouw sector" for a learner without a sector ("not sure yet"), whose course
+ * holds all six sector topics: there only the ones they started count, so a learner who did one
+ * sector topic is not held to all six. (A learner with a sector has only their own one there.)
+ */
+export function countedUnits(group: ThemeGroup, sector: string | undefined, completed: Record<string, unknown>): Unit[] {
+  if (group.key !== 'theme.sector' || (sector && sector !== 'none')) return group.units;
+  return group.units.filter((u) => u.lessons.some((l) => completed[l.id]));
 }

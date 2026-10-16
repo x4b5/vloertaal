@@ -1,9 +1,11 @@
 import { gloss, said, ui, uiCount, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import type { Theme, ThemeGroup } from '../content/themes';
+import type { Unit } from '../content/types';
 import { unitDone } from '../lib/certificate';
 import { dutchUi } from '../lib/track';
 import { HelpText } from './Bi';
+import { CheckIcon } from './Icons';
 import { NlPair } from './NlPair';
 
 /**
@@ -23,59 +25,57 @@ function groupNames(group: ThemeGroup, lang?: HelpLanguage): { nl: string; text:
   return { nl: group.theme.titleNl, text: themeText(group.theme, lang) };
 }
 
-/** How many of a group's topics are finished. */
-export function groupDone(group: ThemeGroup, completed: Record<string, unknown>): number {
-  return group.units.filter((u) => unitDone(u, completed)).length;
+/** How many of these topics are finished. */
+export function groupDone(units: readonly Unit[], completed: Record<string, unknown>): number {
+  return units.filter((u) => unitDone(u, completed)).length;
 }
 
 /**
  * The header row of a group, as an <li> of the list it heads (so the list stays one list with
- * one kind of tappable row). `completed`: show "3 / 5 topics" (finished topics of the group).
+ * one kind of tappable row). `completed`: a calm ✓ once every topic of the group is finished
+ * (nothing before that: the rows under it show their own progress); the count ("3 / 5
+ * topics") is for screen readers only. `counted`: the topics that count (default: all of the
+ * group; see countedUnits in src/content/themes.ts).
  */
-export function ThemeHeadRow({ group, lang, completed, dutchOnly = false }: {
+export function ThemeHeadRow({ group, lang, completed, counted = group.units, dutchOnly = false }: {
   group: ThemeGroup;
   lang?: HelpLanguage;
   completed?: Record<string, unknown>;
+  counted?: readonly Unit[];
   /** A Dutch-only page (the coaches page): the Dutch name only. */
   dutchOnly?: boolean;
 }) {
   const { nl, text } = groupNames(group, lang);
-  const of = group.units.length;
-  const n = completed ? groupDone(group, completed) : 0;
+  const of = counted.length;
+  const n = completed ? groupDone(counted, completed) : 0;
+  const done = Boolean(completed) && of > 0 && n === of;
   const word = uiCount('topicsUnit', of, lang);
   const rtl = !dutchOnly && lang?.dir === 'rtl';
-  const spoken = `${dutchOnly || dutchUi(lang) ? nl : `${said(text)} · ${nl}`}${completed ? ` · ${n} / ${of} ${dutchOnly ? '' : said(word)}`.trimEnd() : ''}`;
+  const spoken = `${dutchOnly || dutchUi(lang) ? nl : `${said(text)} · ${nl}`}${completed && of ? ` · ${n} / ${of} ${dutchOnly ? '' : said(word)}`.trimEnd() : ''}`;
   return (
-    <li className={`theme-head ${completed && n === of ? 'theme-head-done' : ''}`} data-theme={group.key}>
+    <li className={`theme-head ${done ? 'theme-head-done' : ''}`} data-theme={group.key}>
       <h2 className="theme-title" aria-label={spoken} dir={rtl ? 'rtl' : undefined}>
         {group.theme && <span className="theme-emoji" aria-hidden>{group.theme.emoji}</span>}
         <span className="theme-names" aria-hidden>
           {dutchOnly ? <span className="theme-nl-only" lang="nl">{nl}</span> : <NlPair nlFirst nl={nl} nlClass="theme-nl" dir={rtl ? 'ltr' : undefined} className="theme-help" text={text} />}
         </span>
-        {completed && (
-          <span className="theme-count rb-count" aria-hidden>
-            <b className="rb-count-n" dir="ltr">{n} / {of}</b>
-            {word.help && lang ? <HelpText className="rb-count-word" text={word.help} lang={lang} /> : <span className="rb-count-word" lang={dutchOnly ? 'nl' : 'en'}>{word.en}</span>}
-          </span>
-        )}
+        {done && <span className="theme-check" aria-hidden><CheckIcon size={16} /></span>}
       </h2>
     </li>
   );
 }
 
 /**
- * The home's small label above the current block's name: "💼 Twoja praca · Je baan · 2 / 5" (the
- * help language, then the Dutch, as a unit title shows them; the work-rules track: the Dutch only).
- * Not a button.
+ * The home's small label above the current block's name: "💼 Twoja praca · Je baan" (the help
+ * language, then the Dutch, as a unit title shows them; the work-rules track: the Dutch only).
+ * No count: the block's own "1 / 3 lessons" sits right under it. Not a button.
  */
-export function ThemeLabel({ group, lang, completed }: { group: ThemeGroup; lang?: HelpLanguage; completed: Record<string, unknown> }) {
+export function ThemeLabel({ group, lang }: { group: ThemeGroup; lang?: HelpLanguage }) {
   const { nl, text } = groupNames(group, lang);
-  const of = group.units.length;
-  const n = groupDone(group, completed);
   const dutch = dutchUi(lang);
   const rtl = lang?.dir === 'rtl';
   const help = !dutch && text.help && lang ? text.help : undefined;
-  const spoken = `${dutch ? nl : `${said(text)} · ${nl}`} · ${n} / ${of} ${said(uiCount('topicsUnit', of, lang))}`;
+  const spoken = dutch ? nl : `${said(text)} · ${nl}`;
   return (
     <p className="rb-theme" aria-label={spoken} role="note" dir={rtl ? 'rtl' : undefined}>
       {group.theme && <span className="rb-theme-emoji" aria-hidden>{group.theme.emoji}</span>}
@@ -89,11 +89,6 @@ export function ThemeLabel({ group, lang, completed }: { group: ThemeGroup; lang
             <span className="rb-theme-nl" lang="nl" dir={rtl ? 'ltr' : undefined}>{nl}</span>
           </>
         )}
-        {/* The count keeps its dot: a narrow screen moves both to the next line together. */}
-        <span className="rb-theme-tail">
-          <span className="rb-theme-sep">·</span>
-          <b className="rb-theme-n" dir="ltr">{n} / {of}</b>
-        </span>
       </span>
     </p>
   );

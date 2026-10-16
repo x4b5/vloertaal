@@ -23,7 +23,7 @@ import { dutchUi, trackOf } from '../lib/track';
 import { RestartButton, ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
 import { PocketIcon } from './Offline';
-import { groupOf, planGroups } from '../content/themes';
+import { countedUnits, groupOf, planGroups } from '../content/themes';
 import { ThemeHeadRow, ThemeLabel } from './Themes';
 
 /**
@@ -193,7 +193,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
       {block && (
         <section className="rb-current" aria-label={`${unitIndex(block) + 1}. ${said(unitTitle(block, lang))}`}>
           <div id={`unit-${block.id.slice(2)}`} className={`rb-block ${marked === block.id ? 'rb-marked' : ''}`}>
-            {blockGroup && <ThemeLabel group={blockGroup} lang={lang} completed={completed} />}
+            {blockGroup && <ThemeLabel group={blockGroup} lang={lang} />}
             <WordPicture className="rb-pic" id={unitIcons[block.id] ?? ''} emoji={block.emoji} size={64} />
             <UnitTitle unit={block} lang={lang} heading />
             <BlockProgress unit={block} completed={completed} lang={lang} />
@@ -392,10 +392,9 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
   const { main, other } = coursePlan(sector, trackOf(progress), progress.region);
   const block = currentBlock(progress);
   const rtl = lang?.dir === 'rtl';
-  // A topic keeps its number on the path (as on its pocket card and certificate).
-  const order = [...main, ...other];
-  const number = (unit: Unit) => order.findIndex((u) => u.id === unit.id);
-  const row = (unit: Unit, u: number) => {
+  // No route numbers in the rows: grouped by theme they would jump ("09, 18, 22"). A topic keeps
+  // its number on its own page, its pocket card and its certificate.
+  const row = (unit: Unit) => {
     const allowed = unitAllowed(unit.id, access);
     const finished = unitDone(unit, completed);
     const n = blockDoneCount(unit, completed);
@@ -408,9 +407,8 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
           id={`unit-${unit.id.slice(2)}`}
           className={`topic-row ${finished ? 'topic-done' : ''} ${now ? 'topic-now' : ''} ${allowed ? '' : 'topic-locked'}`}
           onClick={() => onOpen(unit.id)}
-          aria-label={`${u + 1}. ${said(t)}${dutchUi(lang) ? '' : ` · ${unit.titleNl}`} · ${n} / ${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
+          aria-label={`${said(t)}${dutchUi(lang) ? '' : ` · ${unit.titleNl}`} · ${n} / ${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
         >
-          <span className="topic-num" aria-hidden>{String(u + 1).padStart(2, '0')}</span>
           <WordPicture className="topic-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
           <span className="topic-text" dir={rtl ? 'rtl' : undefined} aria-hidden>
             <Bi className="topic-title" text={t} />
@@ -430,8 +428,8 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
         <ul className="topic-list topic-list-themes" data-list="topics">
           {planGroups({ main, other }).map((group) => (
             <Fragment key={group.key}>
-              <ThemeHeadRow group={group} lang={lang} completed={completed} />
-              {group.units.map((unit) => row(unit, number(unit)))}
+              <ThemeHeadRow group={group} lang={lang} completed={completed} counted={countedUnits(group, sector, completed)} />
+              {group.units.map((unit) => row(unit))}
             </Fragment>
           ))}
         </ul>

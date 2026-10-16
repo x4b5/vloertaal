@@ -4,6 +4,8 @@ const t: CultureTranslation = {
   ui: {
     cultureBadge: 'Burada nasıl yapılır',
     whatDoYouDo: 'Ne yaparsın?',
+    whatDoYouSay: 'Ne dersin?',
+    whatIsRight: 'Hangisi doğru?',
     sayThis: 'Böyle söyle',
     goodChoice: 'İyi seçim!',
     otherChoice: 'Burada genelde farklı yapılır',

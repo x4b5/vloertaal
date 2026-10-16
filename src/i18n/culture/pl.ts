@@ -4,6 +4,8 @@ const t: CultureTranslation = {
   ui: {
     cultureBadge: 'Jak to tu działa',
     whatDoYouDo: 'Co robisz?',
+    whatDoYouSay: 'Co mówisz?',
+    whatIsRight: 'Co się zgadza?',
     sayThis: 'Powiedz tak',
     goodChoice: 'Dobry wybór!',
     otherChoice: 'Tutaj zwykle robi się to inaczej',

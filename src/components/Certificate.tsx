@@ -3,7 +3,7 @@ import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import type { SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
-import { CERT_NOTE, certData, certDate, certListLabel, certMeta, certSub, earnedCertificates, loadCertName, saveCertName, sealRing, unitIndex, type CertData } from '../lib/certificate';
+import { CERT_NOTE, certData, certDate, certListLabel, certMeta, certSub, earnedCertificates, loadCertName, saveCertName, sealRing, type CertData } from '../lib/certificate';
 import { shareCertificateFile } from '../lib/certCanvas';
 import type { Progress } from '../lib/progress';
 import { Bi } from './Bi';
@@ -111,7 +111,7 @@ export function CertificateSheet({ data, className }: { data: CertData; classNam
         <div className="cert-foot">
           <p className="cert-date">
             <span className="cert-label">Behaald op</span>
-            <span className="cert-date-v">{data.date}</span>
+            <span className="cert-date-v"><bdi dir="ltr">{data.date}</bdi></span>
           </p>
           <div className="cert-sign">
             <Signature />
@@ -354,11 +354,10 @@ export function CertificatesCard({ progress, lang, onOpen }: {
               {group.units.map((unit) => ({ unit, day: dayOf.get(unit.id) ?? '' })).map(({ unit, day }) => (
             <li key={unit.id}>
               <button type="button" className="cert-row" onClick={() => onOpen(unit.id)}>
-                <span className="cert-row-no" aria-hidden>{String(unitIndex(unit, progress.sector) + 1).padStart(2, '0')}</span>
                 <span className="cert-row-text">
                   <span className="cert-row-nl" lang="nl">{unit.titleNl}</span>
                   {lang?.gloss[unit.id] && <span className="cert-row-help" lang={lang.code} dir={lang.dir}>{lang.gloss[unit.id]}</span>}
-                  <span className="cert-row-date" lang="nl">{certDate(day)}</span>
+                  <span className="cert-row-date" lang="nl"><bdi dir="ltr">{certDate(day)}</bdi></span>
                 </span>
                 <ChevronIcon size={22} />
               </button>

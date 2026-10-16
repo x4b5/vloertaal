@@ -5,7 +5,7 @@
  * hyphen at their seam; anything else falls back to `overflow-wrap: anywhere` in CSS.
  * Only for showing text: speech and answer checking keep using the plain string.
  */
-const SEAMS: [whole: string, at: number][] = [
+const SEAMS: [whole: string, at: number | number[]][] = [
   ['veiligheidsschoenen', 11],
   ['veiligheidsbril', 11],
   ['leidinggevende', 7],
@@ -19,16 +19,72 @@ const SEAMS: [whole: string, at: number][] = [
   ['arbeidsinspectie', 7],
   ['huisartsenpost', 10],
   ['discriminatie', 6],
+  // Every other word of 14 letters or more in the course (tests/dutchBreak.test.ts finds new ones).
+  ['houdbaarheidsdatum', 13],
+  ['beschermingsmiddelen', 12],
+  ['reiskostenvergoeding', [4, 10]],
+  ['sollicitatiegesprek', 12],
+  ['heftruckcertificaat', 8],
+  ['calamiteitenverlof', 12],
+  ['schoonmaakmiddelen', 10],
+  ['schoonmaakmiddel', 10],
+  ['identiteitsbewijs', 11],
+  ['zorgverzekering', 4],
+  ['belastingdienst', 9],
+  ['verpleegkundige', 8],
+  ['valbeveiliging', 3],
 ];
 
-const SHY = '­';
+export const SHY = '\u00ad';
 
-/** The text with a soft hyphen in the seam of every long compound it contains. */
+/** The long compounds that get a soft hyphen (lower case). */
+export const SEAM_WORDS: readonly string[] = SEAMS.map(([whole]) => whole);
+
+/**
+ * The text with a soft hyphen in the seam(s) of every long compound it contains. Display only:
+ * the letters stay the same (plain(breakable(x)) === x), and speech and answer checking keep
+ * using the plain string.
+ */
 export function breakable(nl: string): string {
   return nl.replace(/\p{L}{10,}/gu, (token) => {
     const seam = SEAMS.find(([whole]) => whole === token.toLowerCase());
-    return seam ? token.slice(0, seam[1]) + SHY + token.slice(seam[1]) : token;
+    if (!seam) return token;
+    const cuts = typeof seam[1] === 'number' ? [seam[1]] : seam[1];
+    let out = '';
+    let from = 0;
+    for (const at of cuts) { out += token.slice(from, at) + SHY; from = at; }
+    return out + token.slice(from);
   });
+}
+
+/** The text without soft hyphens (what was shown, back to what is said and checked). */
+export const plain = (text: string): string => text.replace(/\u00ad/g, '');
+
+const OPEN_Q = '«„“"\'‘‹';
+const CLOSE_Q = '»”“"\'’›';
+
+/**
+ * A situation's text split around the Dutch sentence quoted in it, so the Dutch is shown once
+ * (with its speaker) in its own place: 'Przełożony mówi: „Morgen begin je om half negen.” O
+ * której …?' gives before 'Przełożony mówi:' and after 'O której …?'. The quote marks go with
+ * the Dutch (its own line marks it out). Null when the text does not quote the sentence as it is.
+ */
+export function splitQuote(text: string, nl: string): { before: string; after: string } | null {
+  const bare = nl.replace(/[.!?…]+$/u, '');
+  let at = text.indexOf(nl);
+  let end = at + nl.length;
+  if (at < 0) {
+    at = text.indexOf(bare);
+    if (at < 0 || !bare) return null;
+    end = at + bare.length;
+    // The translation may end the quote with other punctuation ("…negen”." or "…negen!»").
+    while (end < text.length && /[.!?…]/u.test(text[end])) end++;
+  }
+  if (at > 0 && OPEN_Q.includes(text[at - 1])) at--;
+  if (end < text.length && CLOSE_Q.includes(text[end])) end++;
+  const before = text.slice(0, at).trim();
+  const after = text.slice(end).replace(/^[\s.,;:،]+/u, '').trim();
+  return { before, after };
 }
 
 /** Size class for a Dutch word shown big, by its longest word: len-m from 10 letters, len-l from 14. */

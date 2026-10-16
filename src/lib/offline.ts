@@ -186,7 +186,9 @@ export function shellUrls(): string[] {
     }
   };
   document.querySelectorAll<HTMLScriptElement>('script[src]').forEach((s) => sameOrigin(s.src));
-  document.querySelectorAll<HTMLLinkElement>('link[href]:is([rel="stylesheet"], [rel="modulepreload"], [rel="manifest"], [rel~="icon"], [rel="apple-touch-icon"])').forEach((l) => sameOrigin(l.href));
+  // (vloertaal-screen: the files of the screens loaded when needed, src/lazyScreens.tsx, which the
+  // build names in index.html: also the ones not opened on this visit, so they open offline too.)
+  document.querySelectorAll<HTMLLinkElement>('link[href]:is([rel="stylesheet"], [rel="modulepreload"], [rel="vloertaal-screen"], [rel="manifest"], [rel~="icon"], [rel="apple-touch-icon"])').forEach((l) => sameOrigin(l.href));
   // Every font file the app declares, also the ones not used yet on this visit (a font face
   // loads only when its characters show up: the emoji font's parts, Polish or Vietnamese
   // letters), so a saved unit never shows empty boxes offline.

@@ -1,6 +1,7 @@
 import { StrictMode, type ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import { startScreens } from './lazyScreens';
 import { loadProgress } from './lib/progress';
 import { applyTheme } from './lib/theme';
 import { applyTextSize } from './lib/textSize';
@@ -57,7 +58,8 @@ if (import.meta.env.DEV && params.get('shot')) {
 } else {
   // The saved help language's texts first (index.html's static splash stays up meanwhile), so the
   // first screen has its help text. If that fails (offline, nothing saved), App shows the splash and retries.
-  void Promise.all([langBoot, regionBoot, cssBoot, loadProgress().onboarded ? picsBoot : null]).then(() => render(<App />));
+  // Also the first screen's own file, when it has one (src/lazyScreens.tsx: a reload on Settings).
+  void Promise.all([langBoot, regionBoot, cssBoot, loadProgress().onboarded ? picsBoot : null, startScreens()]).then(() => render(<App />));
 }
 
 // Offline support: cache the app after the first visit (production only).

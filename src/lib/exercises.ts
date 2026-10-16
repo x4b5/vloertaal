@@ -406,8 +406,8 @@ export const MATCH_ASKED = 2;
  * to step so the wrong words keep changing. Near the end, with no later words left, both are
  * extras. None of them is the right word or one letter or a stem apart from it ("je" / "ja"),
  * and the two wrong ones never look alike either. At the start of the sentence every option
- * starts with a capital, so the capital gives nothing away; further on the extras are lower case
- * (names keep their capital). Pure and seeded by the sentence (and `salt`, which a retry
+ * starts with a capital, so the capital gives nothing away (the screen writes them all small:
+ * tileLabel); further on the extras are lower case (names and abbreviations keep their capitals). Pure and seeded by the sentence (and `salt`, which a retry
  * changes), so the same sentence always offers the same words.
  */
 export function buildSteps(nl: string, tiles: readonly string[], n = 3, salt = 0): string[][] {
@@ -425,7 +425,7 @@ export function buildSteps(nl: string, tiles: readonly string[], n = 3, salt = 0
   const off = Math.floor(rng() * Math.max(1, order.length));
   const cap = (w: string) => w.charAt(0).toUpperCase() + w.slice(1);
   // Further on the extras are lower case, except a name ("Ali" never becomes "ali").
-  const lower = (w: string) => (courseNames().has(w) ? w : w.toLowerCase());
+  const lower = (w: string) => (courseNames().has(w) || /^\p{Lu}{2,}/u.test(w) ? w : w.toLowerCase());
   return real.map((word, i) => {
     const later = shuffle(real.slice(i + 1).filter((w) => w.toLowerCase() !== word.toLowerCase()), rng).map((w) => (i === 0 ? cap(w) : w));
     const rotated = order.map((_, k) => order[(off + i + k) % order.length]).map((w) => (i === 0 ? cap(w) : lower(w)));
@@ -445,6 +445,25 @@ export function buildSteps(nl: string, tiles: readonly string[], n = 3, salt = 0
     return shuffle([word, ...picked], rng);
   });
 }
+
+/**
+ * How a word option of a built sentence is written on its tile. At the first place every option
+ * comes with a capital (buildSteps), so no capital gives the answer away; on screen they are all
+ * written small instead ("zet", "de", "vakken", not "Zet", "De", "Vakken"), and only the word
+ * placed first in the sentence gets its capital (the answer line shows the sentence's own words).
+ * A name or an abbreviation keeps its capitals ("Ali", "BSN"); when the sentence itself starts
+ * with one, the first options stay as they are (all with a capital), so the capital still
+ * gives nothing away.
+ */
+export function tileLabel(tile: string, step: number, sentenceNl: string): string {
+  if (step > 0) return tile;
+  const first = tokenize(sentenceNl)[0] ?? '';
+  if (!plainCapital(first)) return tile;
+  return plainCapital(tile) ? tile.charAt(0).toLowerCase() + tile.slice(1) : tile;
+}
+
+/** A word written with only its first letter as a capital, and not a name of the course ("Zet", "Ik", not "Ali" or "BSN"). */
+const plainCapital = (w: string) => /^\p{Lu}[\p{Ll}'’-]*$/u.test(w) && !courseNames().has(w);
 
 /** The exercise kinds a review rotates through, per word (see reviewKind). */
 export const REVIEW_KINDS = ['meaning', 'listen', 'dutch', 'type'] as const;

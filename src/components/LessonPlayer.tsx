@@ -5,6 +5,7 @@ import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, sounds, speak, speechAvailable, stopSpeech } from '../lib/audio';
 import { tileDiff } from '../lib/answers';
+import { breakable } from '../lib/dutch';
 import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
 import { dutchUi } from '../lib/track';
 import { chatWhy } from '../content/chatWhy';
@@ -759,13 +760,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
           <span className="pair-tiles" lang="nl">
             {diff.map((t, i) => (
               <span key={i} className={`ftile ${t.ok ? '' : 'ftile-miss'}`}>
-                {t.word}
+                {breakable(t.word)}
                 {!t.ok && <span className="sr-only" lang={saidLang(ui('incorrect', lang))}> ({said(ui('incorrect', lang))})</span>}
               </span>
             ))}
           </span>
         ) : (
-          <strong className="pair-nl" lang="nl">{pair.nl}</strong>
+          <strong className="pair-nl" lang="nl">{breakable(pair.nl ?? '')}</strong>
         )}
       </div>
       {pairHelp && lang && <HelpText className="pair-gloss" text={pairHelp} lang={lang} />}
@@ -775,7 +776,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     <div className="feedback-pair">
       {/* "de helm = the helmet" is one left-to-right unit, also inside right-to-left text. */}
       <span className="pair-main" dir="ltr">
-        {pair.nl && <strong lang="nl" dir="ltr">{pair.nl}</strong>}
+        {pair.nl && <strong lang="nl" dir="ltr">{breakable(pair.nl)}</strong>}
         {/* "= thank you" stays on one line when it is short; it may move under the Dutch as a
             whole, but never breaks inside. */}
         <span className={`pair-rest ${pair.meaning.en.length <= 28 ? 'pair-short' : ''} ${pairHelp && lang ? 'en-support' : ''}`} dir="ltr">

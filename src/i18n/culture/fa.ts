@@ -4,6 +4,8 @@ const t: CultureTranslation = {
   ui: {
     cultureBadge: 'اینجا کارها این‌طور است',
     whatDoYouDo: 'چه کار می‌کنید؟',
+    whatDoYouSay: 'چه می‌گویید؟',
+    whatIsRight: 'کدام درست است؟',
     sayThis: 'این‌طور بگویید',
     goodChoice: 'انتخاب خوبی بود!',
     otherChoice: 'اینجا معمولاً کارها جور دیگری است',
