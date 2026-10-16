@@ -241,7 +241,8 @@ function defineStates(LANG) {
   add('flow:home-resume-daily', '/', stopHalfwayDue, { expect: '.home3 .daily-due ~ .rb-current .bay-saved' });
   add('flow:topic-restart', '/', async (p) => { await stopHalfwayDue(p); await tap(p, '.rb-other'); await settle(p); await tap(p, '.topic-row', 0); await settle(p); }, { list: true, expect: '.topic-tools .bay-restart' });
   add('flow:topic-restart-go', '/', async (p) => { await stopHalfwayDue(p); await tap(p, '.rb-other'); await settle(p); await tap(p, '.topic-row', 0); await settle(p); await tap(p, '.topic-tools .bay-restart'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
-  add('flow:help-tab', '/', async (p) => { await realHome(p); await navTab(p, 1); await settle(p); });
+  // The Hulp tab: the phrases, then "Wie kan helpen" (a list of numbers to call, as in Werkregels).
+  add('flow:help-tab', '/', async (p) => { await realHome(p); await navTab(p, 1); await settle(p); }, { list: true });
   add('flow:settings-tab', '/', async (p) => { await realHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
   add('flow:about-tab', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); });
   add('flow:coaches', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); await tap(p, '.coach-link'); await settle(p); }, { list: true });
@@ -389,7 +390,7 @@ function defineStates(LANG) {
   add('settings:install', shot('settings&page=install&install=prompt'));
   add('settings:unlock', shot('settings&page=unlock&access=preview'));
   add('settings:reminder-added', shot('settings&page=reminder'), async (p) => { await tap(p, '.max3-card', 1); });
-  add('tab:help', shot('words'));
+  add('tab:help', shot('words'), null, { list: true });
   add('tab:about', shot('about'));
   add('screen:coaches', shot('coaches'), null, { list: true });
   add('screen:tips', shot('tips'), null, { list: true });
@@ -402,7 +403,7 @@ function defineStates(LANG) {
   add('settings:region', shot('settings&page=region&region=zl'), null, { expect: '.chrome-back' });
   add('settings:region-none', shot('settings&page=region'), null, { expect: '.chrome-back' });
   add('settings:me-region', shot('settings&page=me&region=zl'), null, { list: true, expect: '.chrome-back' });
-  add('tab:help-region', shot('words&region=zl'), null, { expect: '.social-map-link' });
+  add('tab:help-region', shot('words&region=zl'), null, { list: true, expect: '.social-map-link' });
   add('screen:social-map', shot('socialmap&region=zl'), null, { list: true, expect: '.sm-rows' });
   add('route:all-topics-region', shot('all&state=mid&region=zl'), null, { list: true });
   add('route:topic-region', shot('topic&cu=rg.zl.u&state=mid&region=zl'), null, { list: true });
