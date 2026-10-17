@@ -205,27 +205,34 @@ ______________________________________________________________
 
 *Unit „Veiligheid”, les „Report an accident” (`l.accident`), nieuw 17 oktober 2026*
 
-**Samenvatting (NL):** Elk ongeluk, ook een klein, melden bij de leidinggevende of de BHV’er; in een noodgeval eerst 112; een ernstig arbeidsongeval (dood, blijvend letsel of ziekenhuisopname) moet de werkgever melden bij de Nederlandse Arbeidsinspectie; je mag niet gestraft worden voor het melden.
+**Samenvatting (NL):** Elk ongeluk, ook een klein, melden bij de leidinggevende of de BHV’er; via een uitzendbureau: ook het uitzendbureau inlichten; in een noodgeval eerst 112; een ernstig arbeidsongeval (dood, blijvend letsel of ziekenhuisopname) moet het bedrijf waar het gebeurde melden bij de Nederlandse Arbeidsinspectie, ook bij een uitzendkracht; je werkgever mag je niet straffen voor het melden.
 
 **Tekst (Engels, wordt vertaald):**
 
-> Tell your supervisor or the BHV’er (the company first-aider) about every accident, also a small one. In an emergency, call 112 first. Your employer must report a serious accident to the Nederlandse Arbeidsinspectie: when someone dies, is hurt for life or must stay in hospital.
+> Tell your supervisor or the BHV’er (the company first-aider) about every accident, also a small one. Working through an agency? Tell the agency too. In an emergency, call 112 first. The company where the accident happened must report a serious accident to the Nederlandse Arbeidsinspectie (also if you work through an agency): when someone dies, is hurt for life or must stay in hospital.
 >
 > *Slotregel:* General information. For your situation: ask your employer, the union or the Juridisch Loket.
 
 **Zeg het zo (Nederlands):** „Mijn collega is gewond. Waar is de BHV’er?” — *My colleague is hurt. Where is the first-aider?*
 
-**Situatie in de les:** A colleague cuts his hand at work. It is only a small cut. What do you do?  
-**Goede antwoord:** Help him get first aid and tell your supervisor.  
-**Uitleg na het antwoord (`c.accident.w`):** A small accident is reported too: it helps prevent the next one. Your employer may not punish you for reporting it.
+**Situatie in de les:** You hurt your back while lifting. You are afraid to lose your job. What do you do?  
+**Goede antwoord:** Tell your supervisor today, and your agency too if you work through one.  
+**Uitleg na het antwoord (`c.accident.w`):** Report it the same day, also if it seems small: the pain can get worse later. Your employer is not allowed to punish you for reporting it.
 
-**Uitleg bij het gesprekje (`c.accident.a.why`):** „Wat is er gebeurd?” → „Hij is van de ladder gevallen.”: Asked what happened: this reply says it, short and clear.
+**Uitleg bij het gesprekje (`c.accident.a.why`):** „Wat is er gebeurd?” → „Hij is gevallen. Hij bloedt.”: Asked what happened: this reply says what happened and how he is.
 
 **⚠ Getallen en termijnen:**
 - In an emergency, call 112 first.
-- Your employer must report a serious accident to the Nederlandse Arbeidsinspectie: when someone dies, is hurt for life or must stay in hospital.
+- The company where the accident happened must report a serious accident to the Nederlandse Arbeidsinspectie (also if you work through an agency): when someone dies, is hurt for life or must stay in hospital.
 
 **Onze eigen vraag hierbij:** Wij baseren de meldplicht op artikel 9 Arbowet (ernstig arbeidsongeval: dood, blijvend letsel of ziekenhuisopname, „onverwijld” melden). Klopt „must stay in hospital” als eenvoudige weergave van een ziekenhuisopname (niet alleen een bezoek aan de spoedeisende hulp)? Wij noemen bewust geen termijn. En „Your employer may not punish you for reporting it” (zoals in `c.unsafe.w`): de werknemer moet gevaren melden (art. 11 Arbowet). Is de belofte zo houdbaar? Is „the BHV’er” juist, of is „the BHV’er or the first-aider (EHBO’er)” beter, omdat niet elk bedrijf een BHV’er met EHBO-taak heeft?
+
+**✅ Inmiddels aangepast (17 oktober, na de kritische ronde):** wie meldt bij een uitzendkracht. Eerst stond er „Your employer must report”; voor een uitzendkracht is dat het uitzendbureau, terwijl het ongeval bij het inlenende bedrijf gebeurt. Nu: „The company where the accident happened must report … (also if you work through an agency)”, plus „Working through an agency? Tell the agency too.” (zoals in `c.sick`). „Your employer may not punish you” is nu „Your employer is not allowed to punish you for reporting it”, en de situatie gaat over rugpijn na het tillen en de angst om je werk te verliezen.
+
+**Vragen voor de deskundige hierbij:**
+- Wij gaan ervan uit dat het inlenende bedrijf voor de arbeidsomstandigheden als werkgever geldt (art. 1 lid 1 Arbowet: wie arbeid laat verrichten door een ter beschikking gestelde werknemer), en daarom het ernstige ongeval van een uitzendkracht moet melden (art. 9 Arbowet). Klopt dat zonder voorbehoud? Heeft het uitzendbureau daarnaast een eigen meldplicht of alleen een informatieplicht?
+- „Tell the agency too”: is dit voor een uitzendkracht de goede raad (ook voor loondoorbetaling en een eventuele Ziektewet-melding), of moet het bedrijf het bureau zelf inlichten?
+- „Your employer is not allowed to punish you for reporting it”: bij een uitzendkracht is de werkgever het bureau; geldt dit ook voor het inlenende bedrijf (bijvoorbeeld de opdracht niet verlengen na een melding)? Is de zin zo houdbaar, of moet er „The company may not punish you either” bij?
 
 **Oordeel deskundige:**
 
@@ -387,11 +394,11 @@ ______________________________________________________________
 
 *Unit „Werk en contract”, les „Working through an agency” (`l.agency`), nieuw 17 oktober 2026*
 
-**Samenvatting (NL):** Werk je via een uitzendbureau, dan is het uitzendbureau je werkgever, niet het bedrijf waar je werkt; je contract en je loon komen van het uitzendbureau; er is een cao voor uitzendkrachten (uitzend-cao); je krijgt ook vakantiegeld en bouwt vakantiedagen op; houd zelf je gewerkte uren bij en controleer ze op je loonstrook. Situatie: op de loonstrook 32 uur, gewerkt 38: laat je eigen urenlijst aan de intercedent zien en vraag om correctie.
+**Samenvatting (NL):** Werk je via een uitzendbureau, dan is het uitzendbureau je werkgever, niet het bedrijf waar je werkt; je contract en je loon komen van het uitzendbureau; er is een cao voor uitzendkrachten (uitzend-cao); je hebt recht op hetzelfde loon als werknemers van het bedrijf die hetzelfde werk doen; je krijgt ook vakantiegeld en bouwt vakantiedagen op; houd zelf je gewerkte uren bij en controleer ze op je loonstrook. Situatie: op de loonstrook 32 uur, gewerkt 38: laat je eigen urenlijst aan de intercedent zien en vraag om correctie.
 
 **Tekst (Engels, wordt vertaald):**
 
-> If you work through a temp agency (uitzendbureau), the agency is your employer, not the company where you work. Your contract and your pay come from the agency, and there is a cao for temp workers (uitzend-cao). You also get holiday pay (vakantiegeld) and you build up days off. Keep your own list of the hours you worked, and check them on your payslip.
+> If you work through a temp agency (uitzendbureau), the agency is your employer, not the company where you work. Your contract and your pay come from the agency, and there is a cao for temp workers (uitzend-cao). You have a right to the same pay as workers of the company who do the same work. You also get holiday pay (vakantiegeld) and you build up days off. Keep your own list of the hours you worked, and check them on your payslip.
 >
 > *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
 
@@ -400,6 +407,8 @@ ______________________________________________________________
 **Situatie in de les:** Your payslip shows 32 hours, but you worked 38. What do you do?  
 **Goede antwoord:** Show your own list of hours to your contact at the agency (intercedent) and ask to correct it.  
 **Uitleg na het antwoord (`c.agency.w`):** The agency pays you, so the agency must correct the mistake. Your own list of dates and hours helps. Asking about it is your right.
+
+**Fout antwoord (`c.agency.o3`):** Ask the boss at the company where you work to pay the 6 hours. (Toetst dat het uitzendbureau betaalt.)
 
 **Uitleg bij het gesprekje (`c.agency.a.why`):** „Heb je je uren doorgegeven?” → „Ja, gisteren in de app.”: Asked about the hours: yes, and it says when and how.
 
@@ -411,6 +420,12 @@ ______________________________________________________________
 - „You also get holiday pay (vakantiegeld) and you build up days off”: klopt dit zonder voorbehoud? Uitzendbureaus reserveren vakantiegeld en vakantiedagen vaak en betalen ze soms per week of bij het einde van de opdracht uit. Moeten we iets zeggen over het uitbetalen van vakantiedagen (het wettelijke minimum mag tijdens het dienstverband meestal niet worden uitbetaald)?
 - De goede keuze laat de uitzendkracht naar de intercedent gaan, niet naar de leidinggevende bij het inlenende bedrijf. Is dat het juiste eerste loket voor fouten in de uren, ook als het bedrijf de uren goedkeurt?
 - „Asking about it is your right” (zoals `c.payslip.w`): houdbaar?
+
+**✅ Inmiddels aangepast (17 oktober, na de kritische ronde):** de zin over gelijke beloning is erbij, „You have a right to the same pay as workers of the company who do the same work.” De les toont nu deze zin, met „the agency is your employer” en „keep your own list of hours”.
+
+**Vragen voor de deskundige hierbij:**
+- Wij baseren de zin op art. 8 Waadi (gelijke arbeidsvoorwaarden: minstens het loon en de vergoedingen van werknemers in gelijke of gelijkwaardige functies bij de inlener) en op de inlenersbeloning in de uitzend-cao. Klopt „the same pay” zonder voorbehoud, ook in de eerste weken van een uitzending en bij een uitzendkracht met een contract voor onbepaalde tijd bij het bureau?
+- Moet „the same work” zijn „the same or similar work” (gelijke of gelijkwaardige functie)? En horen toeslagen en reiskosten erbij (we zeggen alleen „pay”)?
 
 **Oordeel deskundige:**
 

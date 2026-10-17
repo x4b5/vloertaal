@@ -21,7 +21,7 @@ const t: CultureTranslation = {
     'c.keeplearning.a.why': "E în regulă să ceri să se vorbească olandeză: exercițiul ajută.",
     'c.gear.a.why': "Întrebarea e despre cască: da, e pe cap.",
     'c.danger.a.why': "La un accident, întâi se sună la 112.",
-    'c.accident.a.why': "Întrebarea e ce s-a întâmplat: răspunsul spune asta scurt și clar.",
+    'c.accident.a.why': "Întrebarea e ce s-a întâmplat: răspunsul spune ce s-a întâmplat și cum e el.",
     'c.things.a.why': "Întrebarea e „unde”. Acest răspuns numește un loc.",
     'c.directions.a.why': "Stânga sau dreapta? Acest răspuns alege una și spune unde.",
     'c.shift.a.why': "Când începe tura? Acest răspuns spune ziua și ora.",

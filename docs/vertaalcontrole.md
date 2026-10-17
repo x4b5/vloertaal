@@ -657,6 +657,46 @@ Graag nakijken:
   uitzendkrachten; vakantiegeld en vakantiedagen) laat een deskundige nakijken, zie
   `docs/juridische-check.md` (c.agency). Wordt de Engelse tekst aangepast, dan alle negen talen mee.
 
+## Na de kritische ronde (17 oktober): Een ongeluk melden en Werken via een uitzendbureau (alle talen)
+
+Na een kritische lezing zijn deze teksten veranderd, in het Engels en in alle negen talen (met AI
+vertaald, nog niet door een moedertaalspreker gecontroleerd):
+
+- `c.agency.b` heeft een zin erbij, na de cao-zin: "You have a right to the same pay as workers of
+  the company who do the same work." (gelijke beloning, zie `docs/juridische-check.md`). De les
+  toont nu de zinnen 0, 2 en 4 (`TIP_LEADS`): het uitzendbureau is je werkgever, hetzelfde loon,
+  je eigen urenlijst.
+- `c.agency.o3` (fout antwoord): "Ask the boss at the company where you work to pay the 6 hours."
+  (was: "Stop going to work."). Zo toetst de vraag dat het uitzendbureau betaalt.
+- `s.agency.2` is nu "Wordt mijn opdracht verlengd?" (was "Ik geef mijn uren door."), zodat
+  "verlengen" in een zin staat. `c.agency.q` in het Engels: "Have you handed in your hours?".
+- **De opdracht**: Pools nu "projekt (praca w danej firmie)" ("zlecenie" las als een umowa
+  zlecenie, een ander soort contract), ook in `s.agency.2` en `s.agency.3`. Perzisch "کار در یک
+  شرکت مشخص (پروژه)" en Dari "کار در یک کمپنی معین (پروژه)" ("مأموریت" klonk als een dienstreis);
+  de zinnen zeggen "کارم در این شرکت / کمپنی" (mijn werk bij dit bedrijf). Oekraïens
+  "направлення" blijft (geen contractwoord, wel ook "verwijzing" bij de dokter): goed zo?
+- `c.agency.q`: Pools "Zgłosiłeś / Zgłosiłaś swoje godziny?", Oekraïens "Ти подав / подала свої
+  години?" (doorgeven = opgeven, niet doorsturen).
+- `c.accident.b`: na de eerste zin "Working through an agency? Tell the agency too." (zoals in
+  `c.sick.b`, dezelfde vertalingen), en de meldplicht zegt nu wie meldt: "The company where the
+  accident happened must report a serious accident … (also if you work through an agency)". De
+  les toont de zinnen 0 tot en met 3 (leidinggevende of BHV’er, ook het uitzendbureau, 112).
+  Roemeens nu "rămâne cu o vătămare permanentă" (was "rămâne rănit pe viață").
+- De situatie van `c.accident` is nieuw: rugpijn na het tillen en bang zijn je werk te
+  verliezen (`c.accident.s`, `c.accident.o1`–`o3`), en `c.accident.w` zegt "Your employer is not
+  allowed to punish you for reporting it". Oekraïens heeft in de situatie een man- en vrouwvorm
+  ("пошкодив / пошкодила"), Arabisch en Tigrinya overal; Pools, Bulgaars en Roemeens zijn
+  neutraal (tegenwoordige tijd).
+- `c.accident.a` is nu "Hij is gevallen. Hij bloedt." (zo staat "bloeden" in de les, en het
+  onbekende "ladder" is weg), met een nieuwe uitleg `c.accident.a.why`.
+- `w.bhver` (de uitleg bij het woord): "the company emergency helper (first aid, fire,
+  evacuation)", in alle talen. Het plaatje blijft 🧑‍🚒: ⛑️ is al de helm (`w.helm`) en 🆘 al
+  "help" (`w.help`).
+- Tigrinya `w.gebeuren` nu "ምግጣም (ምኽሳት)", zoals "ኣጋጢሙ" in het gesprekje.
+
+Graag nakijken: Tigrinya "ዕማመይ ክናዋሕ ድዩ?" (`s.agency.2`) en "ካብ ህንጻ ምውጻእ" (evacuatie, in
+`w.bhver`); Arabisch "أن يدفع لك 6 ساعات" in `c.agency.o3`.
+
 ## Nieuw 17 oktober 2026: les Opdrachten van je leidinggevende (alle talen)
 
 Een nieuwe les in Samenwerken (`u.teamwork`), na "Agreements and saying no" (`l.agree`). Alles met

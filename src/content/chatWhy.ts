@@ -13,7 +13,7 @@ const reasons: Record<string, string> = {
   'c.keeplearning.a': 'Asking for Dutch is fine: practice helps.',
   'c.gear.a': 'The question is about the helmet: yes, it is on.',
   'c.danger.a': 'In an accident, 112 is called first.',
-  'c.accident.a': 'Asked what happened: this reply says it, short and clear.',
+  'c.accident.a': 'Asked what happened: this reply says what happened and how he is.',
   'c.things.a': 'The question asks where. This reply names a place.',
   'c.directions.a': 'Left or right? This reply picks one and says where.',
   'c.shift.a': 'When does the shift start? This reply gives the day and the time.',

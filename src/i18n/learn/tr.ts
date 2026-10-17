@@ -21,7 +21,7 @@ const t: CultureTranslation = {
     'c.keeplearning.a.why': "Hollandaca konuşmayı istemek sorun değil: pratik yardımcı olur.",
     'c.gear.a.why': "Soru baretle ilgili: evet, takılı.",
     'c.danger.a.why': "Kazada önce 112 aranır.",
-    'c.accident.a.why': "Ne olduğu soruluyor: bu cevap bunu kısa ve açık söylüyor.",
+    'c.accident.a.why': "Ne olduğu soruluyor: bu cevap ne olduğunu ve onun durumunu söylüyor.",
     'c.things.a.why': "Soru \"nereye\" diye soruyor. Bu cevap bir yer söylüyor.",
     'c.directions.a.why': "Sol mu sağ mı? Bu cevap birini seçip yerini söylüyor.",
     'c.shift.a.why': "Vardiya ne zaman başlıyor? Bu cevap günü ve saati söylüyor.",

@@ -124,15 +124,15 @@ const baseTips: CultureTip[] = [
     lessonId: 'l.accident',
     emoji: '🩹',
     title: 'Report every accident',
-    body: `Tell your supervisor or the BHV’er (the company first-aider) about every accident, also a small one. In an emergency, call 112 first. Your employer must report a serious accident to the Nederlandse Arbeidsinspectie: when someone dies, is hurt for life or must stay in hospital. ${ADVICE_LINE}`,
+    body: `Tell your supervisor or the BHV’er (the company first-aider) about every accident, also a small one. Working through an agency? Tell the agency too. In an emergency, call 112 first. The company where the accident happened must report a serious accident to the Nederlandse Arbeidsinspectie (also if you work through an agency): when someone dies, is hurt for life or must stay in hospital. ${ADVICE_LINE}`,
     phrase: { id: 'c.accident.p', nl: 'Mijn collega is gewond. Waar is de BHV’er?', en: 'My colleague is hurt. Where is the first-aider?' },
-    situation: { id: 'c.accident.s', en: 'A colleague cuts his hand at work. It is only a small cut. What do you do?' },
+    situation: { id: 'c.accident.s', en: 'You hurt your back while lifting. You are afraid to lose your job. What do you do?' },
     options: [
-      { id: 'c.accident.o1', en: 'Help him get first aid and tell your supervisor.', best: true },
-      { id: 'c.accident.o2', en: 'Say nothing, because it is only a small cut.', best: false },
-      { id: 'c.accident.o3', en: 'Wait until the end of the shift to tell someone.', best: false },
+      { id: 'c.accident.o1', en: 'Tell your supervisor today, and your agency too if you work through one.', best: true },
+      { id: 'c.accident.o2', en: 'Say nothing, so you do not lose your job.', best: false },
+      { id: 'c.accident.o3', en: 'Wait and see if the pain goes away by itself.', best: false },
     ],
-    why: { id: 'c.accident.w', en: 'A small accident is reported too: it helps prevent the next one. Your employer may not punish you for reporting it.' },
+    why: { id: 'c.accident.w', en: 'Report it the same day, also if it seems small: the pain can get worse later. Your employer is not allowed to punish you for reporting it.' },
   }),
   tip({
     id: 'c.direct',
@@ -331,6 +331,7 @@ const afterHelp = baseTips.findIndex((t) => t.lessonId === 'l.understand') + 1;
  * the English sentences, including the closing advice line (src/content/work.ts).
  */
 export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
+  'c.accident': [0, 1, 2, 3], // tell your supervisor; through an agency: tell the agency too; 112 first
   'c.translate': [0, 4, 6], // ask first; ask a person to explain important papers
   'c.understood': [0, 2, 4], // say back: "Dus ik moet eerst …?"
   'c.keeplearning': [0, 4, 5], // colleagues switch to English; ask them to speak Dutch
@@ -338,7 +339,7 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.interview': [0, 2, 3], // asking questions yourself is normal
   'c.bsn': [0, 5, 8], // ask why they need it; never give your DigiD
   'c.housing': [2, 10, 11, 13], // proof of payment; job ends: advice first (Juridisch Loket)
-  'c.agency': [0, 1, 3], // the agency is your employer; keep your own list of hours
+  'c.agency': [0, 2, 4], // the agency is your employer; the same pay as the company's workers; keep your own list of hours
   'c.payslip': [0, 1, 3], // check the hours, write down the hours you work
   'c.phone': [0, 3, 4], // urgent call: tell your supervisor first
   'c.smoking': [0, 2, 3], // only outside, in your break

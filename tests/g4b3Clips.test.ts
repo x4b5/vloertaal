@@ -30,7 +30,7 @@ const PENDING_RECORDING = new Set<string>([
   'Ik heb me gesneden.',
   'Ik wil een ongeluk melden.',
   'Wat is er gebeurd?',
-  'Hij is van de ladder gevallen.',
+  'Hij is gevallen. Hij bloedt.',
   'Mijn collega is gewond. Waar is de BHV’er?',
   // New lesson "Werken via een uitzendbureau" (l.agency, 17 October 2026):
   'de uitzendkracht',
@@ -40,7 +40,7 @@ const PENDING_RECORDING = new Set<string>([
   'verlengen',
   'uitbetalen',
   'Ik werk via een uitzendbureau.',
-  'Ik geef mijn uren door.',
+  'Wordt mijn opdracht verlengd?',
   'Wanneer stopt mijn opdracht?',
   'Heb je je uren doorgegeven?',
   'Ja, gisteren in de app.',
