@@ -313,6 +313,11 @@ function defineStates(LANG) {
   // Klanken (src/content/sounds.ts): the picture choice and "What do you hear?" offer the word's pair.
   add('lesson:sounds-pick', shot('lesson&lesson=l.shortlong&at=8'));
   add('lesson:sounds-listen', shot('lesson&lesson=l.shortlong&at=10'));
+  // "Een ongeluk melden" (l.accident, seed 1): a word card, the abstract word "gebeuren", the tip
+  // and its situation, a sentence to build, the chat and typing "gewond".
+  for (const [key, at] of [['intro', 0], ['word-abstract', 7], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+    add(`lesson:accident-${key}`, shot(`lesson&lesson=l.accident&at=${at}`));
+  }
   add('lesson:match', shot('match'));
   add('lesson:match:half', shot('match'), async (p) => { await matchPairs(p, 1); });
   add('lesson:match:done', shot('match'), async (p) => { await matchPairs(p); });

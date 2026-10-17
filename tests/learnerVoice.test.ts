@@ -19,6 +19,8 @@ const PENDING_RECORDING = new Set<string>([
   // Add a new reply here until the next 'Record ElevenLabs voices' run.
   'Ik ben het niet met je eens.',
   'Morgen om zeven uur.',
+  // New lesson "Een ongeluk melden" (l.accident, 17 October 2026):
+  'Hij is van de ladder gevallen.',
 ]);
 
 describe('"you" in the chats follow the gender question', () => {

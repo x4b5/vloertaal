@@ -120,6 +120,21 @@ const baseTips: CultureTip[] = [
     why: { id: 'c.unsafe.w', en: 'A near-accident is a warning. Reporting it helps prevent a real accident. Your employer may not punish you for reporting it.' },
   }),
   tip({
+    id: 'c.accident',
+    lessonId: 'l.accident',
+    emoji: '🩹',
+    title: 'Report every accident',
+    body: `Tell your supervisor or the BHV’er (the company first-aider) about every accident, also a small one. In an emergency, call 112 first. Your employer must report a serious accident to the Nederlandse Arbeidsinspectie: when someone dies, is hurt for life or must stay in hospital. ${ADVICE_LINE}`,
+    phrase: { id: 'c.accident.p', nl: 'Mijn collega is gewond. Waar is de BHV’er?', en: 'My colleague is hurt. Where is the first-aider?' },
+    situation: { id: 'c.accident.s', en: 'A colleague cuts his hand at work. It is only a small cut. What do you do?' },
+    options: [
+      { id: 'c.accident.o1', en: 'Help him get first aid and tell your supervisor.', best: true },
+      { id: 'c.accident.o2', en: 'Say nothing, because it is only a small cut.', best: false },
+      { id: 'c.accident.o3', en: 'Wait until the end of the shift to tell someone.', best: false },
+    ],
+    why: { id: 'c.accident.w', en: 'A small accident is reported too: it helps prevent the next one. Your employer may not punish you for reporting it.' },
+  }),
+  tip({
     id: 'c.direct',
     lessonId: 'l.things',
     emoji: '💬',

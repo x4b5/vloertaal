@@ -1,6 +1,6 @@
 # Vloertaal: controle van de informatie over werk en rechten
 
-*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026.*
+*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tip c.accident: 17 oktober 2026).*
 
 **Terugsturen naar:** ____________________________ (naam en e-mail van de eigenaar van Vloertaal)
 
@@ -68,6 +68,8 @@ Deze beweringen veranderen het snelst, of zijn het makkelijkst verkeerd te begri
 
 | Tip | Wat er staat (Engels, letterlijk) | Onderwerp |
 |---|---|---|
+| c.accident | In an emergency, call 112 first. | 112 |
+| c.accident | Your employer must report a serious accident to the Nederlandse Arbeidsinspectie: when someone dies, is hurt for life or must stay in hospital. | meldplicht ernstig arbeidsongeval |
 | c.contract | It is not allowed in a contract of 6 months or shorter. | proeftijd |
 | c.contract | In a longer contract of less than 2 years, it is at most 1 month. | proeftijd |
 | c.contract | In a contract of 2 years or longer, or a permanent one, it is at most 2 months. | proeftijd |
@@ -105,12 +107,12 @@ Bijna elke tip eindigt met een van deze drie vaste slotregels:
 
 | Slotregel (Engels, letterlijk) | Bij welke tips | Waarom deze |
 |---|---|---|
-| *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.bsn, c.contract, c.diploma, c.extra, c.findwork, c.health, c.illness, c.leave, c.letters, c.payslip, c.site, c.transit, c.ww | rechten en regels uit de wet |
+| *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.accident, c.bsn, c.contract, c.diploma, c.extra, c.findwork, c.health, c.illness, c.leave, c.letters, c.payslip, c.site, c.transit, c.ww | rechten en regels uit de wet |
 | *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.housing, c.rights, c.warning, c.gethelp | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
 | *Rules differ per company: ask your supervisor what the rules are where you work.* | c.callin, c.clock, c.hygiene, c.line, c.privacy, c.smoking | huisregels |
 | (geen slotregel) | c.bike, c.boundaries, c.certs, c.doctor, c.gear, c.gossip, c.interview, c.respect, c.unsafe | gedragstips; sommige noemen zelf een loket |
 
-Andere instanties die in de tips staan: Nederlandse Arbeidsinspectie (ook anoniem melden), politie,
+Andere instanties die in de tips staan: Nederlandse Arbeidsinspectie (ook anoniem melden; de werkgever meldt er ernstige ongevallen), BHV’er, politie,
 Meld Misdaad Anoniem 0800-7000, 112, huisartsenpost, UWV, gemeente (meldpunt huisvesting, inschrijving),
 RNI-loket, Huurcommissie, huurteam of woonadvies, discriminatiemeldpunt, vertrouwenspersoon, IDW
 (diplomawaardering), rijksoverheid.nl, werk.nl.
@@ -185,6 +187,45 @@ ______________________________________________________________
 - In an accident, 112 is called first.
 
 **Onze eigen vraag hierbij:** "You will not get in trouble for speaking up" is een stellige belofte. Klopt dat zo, of moeten we het voorzichtiger zeggen?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.accident — Report every accident
+
+*Unit „Veiligheid”, les „Report an accident” (`l.accident`), nieuw 17 oktober 2026*
+
+**Samenvatting (NL):** Elk ongeluk, ook een klein, melden bij de leidinggevende of de BHV’er; in een noodgeval eerst 112; een ernstig arbeidsongeval (dood, blijvend letsel of ziekenhuisopname) moet de werkgever melden bij de Nederlandse Arbeidsinspectie; je mag niet gestraft worden voor het melden.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Tell your supervisor or the BHV’er (the company first-aider) about every accident, also a small one. In an emergency, call 112 first. Your employer must report a serious accident to the Nederlandse Arbeidsinspectie: when someone dies, is hurt for life or must stay in hospital.
+>
+> *Slotregel:* General information. For your situation: ask your employer, the union or the Juridisch Loket.
+
+**Zeg het zo (Nederlands):** „Mijn collega is gewond. Waar is de BHV’er?” — *My colleague is hurt. Where is the first-aider?*
+
+**Situatie in de les:** A colleague cuts his hand at work. It is only a small cut. What do you do?  
+**Goede antwoord:** Help him get first aid and tell your supervisor.  
+**Uitleg na het antwoord (`c.accident.w`):** A small accident is reported too: it helps prevent the next one. Your employer may not punish you for reporting it.
+
+**Uitleg bij het gesprekje (`c.accident.a.why`):** „Wat is er gebeurd?” → „Hij is van de ladder gevallen.”: Asked what happened: this reply says it, short and clear.
+
+**⚠ Getallen en termijnen:**
+- In an emergency, call 112 first.
+- Your employer must report a serious accident to the Nederlandse Arbeidsinspectie: when someone dies, is hurt for life or must stay in hospital.
+
+**Onze eigen vraag hierbij:** Wij baseren de meldplicht op artikel 9 Arbowet (ernstig arbeidsongeval: dood, blijvend letsel of ziekenhuisopname, „onverwijld” melden). Klopt „must stay in hospital” als eenvoudige weergave van een ziekenhuisopname (niet alleen een bezoek aan de spoedeisende hulp)? Wij noemen bewust geen termijn. En „Your employer may not punish you for reporting it” (zoals in `c.unsafe.w`): de werknemer moet gevaren melden (art. 11 Arbowet). Is de belofte zo houdbaar? Is „the BHV’er” juist, of is „the BHV’er or the first-aider (EHBO’er)” beter, omdat niet elk bedrijf een BHV’er met EHBO-taak heeft?
 
 **Oordeel deskundige:**
 
