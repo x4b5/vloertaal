@@ -157,9 +157,11 @@ describe("the work-rules track ('regels')", () => {
   it('opens the first rules unit in the preview, next to the first Dutch-course unit', () => {
     expect(previewUnits('regels')).toEqual(['r.start']);
     expect(unitAllowed('r.start', 'preview')).toBe(true);
-    expect(unitAllowed('r.loon', 'preview')).toBe(false);
     expect(lessonAllowed('r.l.start.2', 'preview')).toBe(true);
-    expect(lessonAllowed('r.l.loon.1', 'preview')).toBe(false);
+    // Beyond the first unit: what the sneak preview opens, no more (a preview code never opens less than no code).
+    expect(unitAllowed('r.loon', 'preview')).toBe(unitAllowed('r.loon', 'sample'));
+    expect(lessonAllowed('r.l.loon.1', 'preview')).toBe(lessonAllowed('r.l.loon.1', 'sample'));
+    expect(lessonAllowed('r.l.loon.2', 'preview')).toBe(false);
     expect(unitAllowed('u.firstday', 'preview')).toBe(true);
   });
 

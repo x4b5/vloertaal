@@ -12,8 +12,9 @@ import type { Track } from './track';
  *    theme's first topic, and in "Jouw sector" of every sector's topic, so anyone can try their own
  *    work. In both tracks. The rest shows with a lock and "Volledige versie". Without a code: the
  *    password page's "No code?" gives it (since 16 October 2026; before, one trial lesson).
- *  - preview: only the first unit of each course can be played ("First day at work"; in the
- *    work-rules track its first unit, r.start).
+ *  - preview: the sneak preview plus the whole first unit of each course ("First day at work"; in
+ *    the work-rules track r.start). Old codes; since the sneak preview needs no code, a preview
+ *    code must not open less than no code.
  *  - full: everything.
  */
 export type Access = 'sample' | 'preview' | 'full';
@@ -133,10 +134,14 @@ export function sampleLessons(track: Track = 'taal'): string[] {
 
 const sampleSet = () => new Set([...sampleLessons('taal'), ...sampleLessons('regels')]);
 
-/** A topic the learner may open: everything with full access, the first unit in the preview, a topic with an open lesson in the sneak preview. */
+/**
+ * A topic the learner may open: everything with full access, a topic with an open lesson in the
+ * sneak preview, and in the preview the first unit too. The preview is the sneak preview plus the
+ * whole first unit: since the sneak preview needs no code, an old preview code must not open less.
+ */
 export function unitAllowed(unitId: string, access: Access): boolean {
   if (access === 'full') return true;
-  if (access === 'preview') return previewSet().has(unitId);
+  if (access === 'preview' && previewSet().has(unitId)) return true;
   const open = sampleSet();
   return allCourseUnits().some((u) => u.id === unitId && u.lessons.some((l) => open.has(l.id)));
 }
@@ -146,7 +151,9 @@ export function lessonAllowed(lessonId: string, access: Access): boolean {
   if (access === 'full') return true;
   // Today's review only repeats words the learner met, so it is open in the preview too.
   if (lessonId === DAILY_ID) return true;
-  if (access === 'sample') return sampleSet().has(lessonId);
+  if (sampleSet().has(lessonId)) return true;
+  if (access === 'sample') return false;
+  // The preview: also every lesson of the first unit.
   const open = previewSet();
   return allCourseUnits().some((u) => open.has(u.id) && u.lessons.some((l) => l.id === lessonId));
 }

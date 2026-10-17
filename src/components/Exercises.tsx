@@ -559,6 +559,9 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   const byEar = Boolean(ex.audio);
   useEffect(() => { if (byEar) autoSpeak(ex.sentence.nl, false, 'nl', voiceFor(who)); }, [byEar, ex.sentence, who]);
 
+  // The wrong taps shown after the sentence: each wrong word at each place once (tapping the same
+  // wrong tile again is the same mistake).
+  const shownWrongs = wrongs.filter((x, i) => wrongs.findIndex((y) => y.at === x.at && y.word === x.word) === i);
   const tap = (w: string) => {
     if (locked || complete) return;
     if (w === words[at]) {
@@ -606,11 +609,11 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       </div>
       {/* After the last word: how many wrong taps there were (in the help language), and the
           words tapped wrongly, crossed out. */}
-      {complete && wrongs.length > 0 && (
+      {complete && shownWrongs.length > 0 && (
         <div className="build-misses">
-          <Bi className="build-misses-n" text={fillN(ui('wrongTapsN', lang), wrongs.length)} />
+          <Bi className="build-misses-n" text={fillN(ui('wrongTapsN', lang), shownWrongs.length)} />
           <span className="build-misses-tiles" lang="nl" dir="ltr">
-            {wrongs.map((x, i) => <s key={i} className="tile tile-wrong-tap">{breakable(tileLabel(x.word, x.at, ex.sentence.nl))}</s>)}
+            {shownWrongs.map((x, i) => <s key={i} className="tile tile-wrong-tap">{breakable(tileLabel(x.word, x.at, ex.sentence.nl))}</s>)}
           </span>
         </div>
       )}

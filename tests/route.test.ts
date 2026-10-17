@@ -167,6 +167,9 @@ describe('route: no day is only review', () => {
     expect(routeNextLesson({ sector: 'none', completed: newDone, ...pick, reviewDay: '2026-10-15' }, 'full', today)?.id).toBe('l.firstday.mix');
     // A block picked with new lessons left is not marked.
     expect(pickBlock('u.help', newDone).pickedUnit).toBeUndefined();
-    expect(routeNextLesson({ sector: 'none', completed: newDone, currentUnit: 'u.firstday', reviewDay: '2026-10-15' }, 'preview', today)?.id).toBe('l.firstday.mix');
+    // A preview (old code) also has the sneak preview: after the first unit's lessons it goes on
+    // to the first lesson of the next theme, never to a lesson the preview does not open.
+    expect(routeNextLesson({ sector: 'none', completed: newDone, currentUnit: 'u.firstday', reviewDay: '2026-10-15' }, 'preview', today)?.id).toBe('l.gear');
+    expect(routeNextLesson({ sector: 'none', completed: newDone, currentUnit: 'u.firstday', reviewDay: '2026-10-15' }, 'sample', today)?.id).toBe('l.gear');
   });
 });

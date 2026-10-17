@@ -201,7 +201,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
             <UnitTitle unit={block} lang={lang} heading />
             <BlockProgress unit={block} completed={completed} lang={lang} />
           </div>
-          {!blockPlayable(block, completed, access) && <FullOnly lang={lang} onUpgrade={onUpgrade} />}
+          {!blockPlayable(block, completed, access) && <FullOnly lang={lang} onUpgrade={onUpgrade} big />}
           {lessons(block)}
         </section>
       )}
@@ -295,8 +295,23 @@ function LinkedLocked({ unit, lang, onUpgrade }: { unit: Unit; lang?: HelpLangua
   );
 }
 
-/** "Volledige versie": a preview learner's way to the unlock card. */
-function FullOnly({ lang, onUpgrade }: { lang?: HelpLanguage; onUpgrade?: () => void }) {
+/**
+ * "Volledige versie": a preview learner's way to the unlock card. `big` on the home when the
+ * sneak preview has nothing left to play there: then it is the next step, as large as a lesson
+ * card (a small link under a finished block is a dead end for who reads little).
+ */
+function FullOnly({ lang, onUpgrade, big = false }: { lang?: HelpLanguage; onUpgrade?: () => void; big?: boolean }) {
+  if (big) {
+    return (
+      <button type="button" className="full-only-big" onClick={onUpgrade}>
+        <LockIcon size={30} />
+        <span className="full-only-big-text">
+          <NlPair nlFirst nl="Volledige versie ontgrendelen" nlClass="full-only-big-nl" className="full-only-big-help" text={ui('unlockFull', lang)} />
+        </span>
+        <ChevronIcon size={26} />
+      </button>
+    );
+  }
   return (
     <button type="button" className="full-only-note" onClick={onUpgrade}>
       <LockIcon size={16} />
@@ -562,7 +577,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                   className="bay-card"
                   disabled={!open}
                   onClick={() => onStart(lesson.id, Boolean(record))}
-                  aria-label={`${u + 1}.${i + 1} ${said(title)}${saved ? ` · ${resumeLabel(saved, lang)}` : open ? (record ? ` · ${said(ui('practice', lang))}` : ` · ${said(ui('start', lang))}`) : allowed ? ` (${said(ui('locked', lang))})` : ` · ${said(ui('fullVersion', lang))}`}`}
+                  aria-label={`${u + 1}.${i + 1} ${said(title)}${saved ? ` · ${resumeLabel(saved, lang)}` : open ? (record ? ` · ${said(ui('practice', lang))}` : ` · ${said(ui('start', lang))}`) : allowed && lessonAllowed(lesson.id, access) ? ` (${said(ui('locked', lang))})` : ` · ${said(ui('fullVersion', lang))}`}`}
                 >
                   {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
                   <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
