@@ -68,6 +68,19 @@ describe('pocket card phrases', () => {
       // The shift chat about the shift, not coffee (critic, 16 October 2026):
       'Wanneer begint je dienst?',
       'Morgen om zeven uur.',
+      // New lesson "Een ongeluk melden" (l.accident, 17 October 2026):
+      'gewond',
+      'bloeden',
+      'de EHBO-doos',
+      'de BHV’er',
+      'het ziekenhuis',
+      'gebeuren',
+      'Mijn collega is gevallen.',
+      'Ik heb me gesneden.',
+      'Ik wil een ongeluk melden.',
+      'Wat is er gebeurd?',
+      'Hij is van de ladder gevallen.',
+      'Mijn collega is gewond. Waar is de BHV’er?',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

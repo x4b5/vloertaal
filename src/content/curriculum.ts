@@ -154,6 +154,31 @@ export const units: Unit[] = [
           },
         ],
       },
+      {
+        // "vallen" (w.vallen, l.site) and "melden" (w.melden, l.gethelp) are already words of
+        // other lessons: here they come in the sentences and the chat.
+        id: 'l.accident',
+        title: 'Report an accident',
+        words: [
+          { id: 'w.gewond', nl: 'gewond', en: 'hurt', emoji: '🩹' },
+          { id: 'w.bloeden', nl: 'bloeden', en: 'to bleed', emoji: '🩸' },
+          { id: 'w.ehbodoos', nl: 'de EHBO-doos', en: 'the first-aid kit', emoji: '🧰' },
+          { id: 'w.bhver', nl: 'de BHV’er', en: 'the company first-aider', emoji: '🧑‍🚒' },
+          { id: 'w.ziekenhuis', nl: 'het ziekenhuis', en: 'the hospital', emoji: '🏥' },
+          { id: 'w.gebeuren', nl: 'gebeuren', en: 'to happen', emoji: '💥', picture: false },
+        ],
+        sentences: [
+          { id: 's.accident.1', nl: 'Mijn collega is gevallen.', en: 'My colleague has fallen.' },
+          { id: 's.accident.2', nl: 'Ik heb me gesneden.', en: 'I have cut myself.' },
+          { id: 's.accident.3', nl: 'Ik wil een ongeluk melden.', en: 'I want to report an accident.' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.accident.q', nl: 'Wat is er gebeurd?', en: 'What happened?' },
+            reply: { id: 'c.accident.a', nl: 'Hij is van de ladder gevallen.', en: 'He fell off the ladder.' },
+          },
+        ],
+      },
     ],
   },
   {

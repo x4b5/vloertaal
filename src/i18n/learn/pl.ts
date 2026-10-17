@@ -21,6 +21,7 @@ const t: CultureTranslation = {
     'c.keeplearning.a.why': "Prośba o mówienie po niderlandzku jest w porządku: ćwiczenie pomaga.",
     'c.gear.a.why': "Pytanie dotyczy kasku: tak, jest na głowie.",
     'c.danger.a.why': "W razie wypadku najpierw dzwoni się pod 112.",
+    'c.accident.a.why': "Pytanie, co się stało: ta odpowiedź mówi to krótko i jasno.",
     'c.things.a.why': "Pytanie brzmi „gdzie”. Ta odpowiedź podaje miejsce.",
     'c.directions.a.why': "W lewo czy w prawo? Ta odpowiedź wybiera jedno i mówi, gdzie.",
     'c.shift.a.why': "Kiedy zaczyna się zmiana? Ta odpowiedź podaje dzień i godzinę.",
