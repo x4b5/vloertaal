@@ -29,7 +29,8 @@ function PasswordForm({ onAccess, accept, lang, labelHidden = false, accepted = 
   initial?: string;
 }) {
   const [value, setValue] = useState(initial);
-  const [error, setError] = useState(false);
+  /** 'wrong': not a code; 'small': a real code, but not one this form takes (the upgrade card: not the full version). */
+  const [error, setError] = useState<false | 'wrong' | 'small'>(false);
   const [busy, setBusy] = useState(false);
   /** Bumped on every wrong try, so the shake plays again. */
   const [tries, setTries] = useState(0);
@@ -56,7 +57,7 @@ function PasswordForm({ onAccess, accept, lang, labelHidden = false, accepted = 
       setError(false);
       onAccess(access, value);
     } else {
-      setError(true);
+      setError(access ? 'small' : 'wrong');
       setTries((n) => n + 1);
     }
   };
@@ -79,7 +80,7 @@ function PasswordForm({ onAccess, accept, lang, labelHidden = false, accepted = 
           autoCorrect="off"
           spellCheck={false}
           enterKeyHint="go"
-          aria-invalid={error}
+          aria-invalid={Boolean(error)}
           aria-describedby={error ? `${id}-err` : kept ? `${id}-ok` : undefined}
         />
       </div>
@@ -91,7 +92,7 @@ function PasswordForm({ onAccess, accept, lang, labelHidden = false, accepted = 
       )}
       {error && (
         <p id={`${id}-err`} className="pw-error" role="alert">
-          <Bi text={ui('wrongPassword', lang)} />
+          <Bi text={ui(error === 'small' ? 'codeNotFull' : 'wrongPassword', lang)} />
         </p>
       )}
       <button type="submit" className="btn btn-go btn-primary pw-go" disabled={(!kept && !value.trim()) || busy}>
@@ -170,6 +171,13 @@ export function Gate({ lang, onAccess, onBack, accepted = null, code = '', onFre
   );
 }
 
+/** The mail asking for a code: subject and body already written (in Dutch), with the help language,
+ *  so a learner who writes little only taps Send. */
+export function codeMail(lang?: HelpLanguage): string {
+  const body = `Hallo,\n\nIk wil graag een code voor de volledige versie van Vloertaal.\nMijn taal: ${lang?.code ?? 'en'}\n\nDank je wel!`;
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Code voor de volledige versie')}&body=${encodeURIComponent(body)}`;
+}
+
 /** Without the full version: a card in Settings ("Instellingen") to unlock it with its password, and where to ask for one. */
 export function UpgradeCard({ lang, onAccess }: { lang?: HelpLanguage; onAccess: (a: Access) => void }) {
   return (
@@ -182,8 +190,8 @@ export function UpgradeCard({ lang, onAccess }: { lang?: HelpLanguage; onAccess:
       </h2>
       <p className="upgrade-hint"><Bi text={ui('unlockHint', lang)} /></p>
       {/* "No code yet? ... or e-mail us:": who came without a coach (the sneak preview needs no
-          code) asks for one here. The subject is filled in, in Dutch. */}
-      <a className="upgrade-mail" href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Code voor de volledige versie')}`} dir="ltr" lang="en">
+          code) asks for one here. The mail is written already (codeMail). */}
+      <a className="upgrade-mail" href={codeMail(lang)} dir="ltr" lang="en">
         <MailIcon size={20} />
         <span>{CONTACT_EMAIL}</span>
       </a>

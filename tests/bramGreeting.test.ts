@@ -36,8 +36,10 @@ describe('Bram greets on the home screen', () => {
     expect(greetingFor({ ...base, first: false })).toEqual({ kind: 'hello' });
   });
 
-  it('done today wins over everything: see you tomorrow', () => {
-    expect(greetingFor({ fresh: false, done: true, missed: true, first: true, due: 6, streak: 9 })).toEqual({ kind: 'done' });
+  it('done today wins over everything but words still to repeat: see you tomorrow', () => {
+    expect(greetingFor({ fresh: false, done: true, missed: true, first: true, due: 0, streak: 9 })).toEqual({ kind: 'done' });
+    // A lesson done, but today's review still waits on the home: never "see you tomorrow" above it.
+    expect(greetingFor({ fresh: false, done: true, missed: true, first: true, due: 6, streak: 9 })).toEqual({ kind: 'due', n: 6 });
   });
 
   it('reads the saved progress: done today, missed days, and the streak as the top bar shows it', () => {

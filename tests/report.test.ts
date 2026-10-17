@@ -29,8 +29,8 @@ describe('Iets melden (testers)', () => {
     expect(testerMode('full')).toBe(true);
     readTesterParam('?test=0');
     expect(testerMode('full')).toBe(false);
-    // The sneak preview keeps the flag.
-    expect(testerMode('sample')).toBe(true);
+    // The sneak preview too (it needs no code: every new learner has it, the switch decides).
+    expect(testerMode('sample')).toBe(false);
     readTesterParam('?test');
     expect(testerMode('full')).toBe(true);
     readTesterParam('?test=0');
@@ -53,7 +53,8 @@ describe('Iets melden (testers)', () => {
   it('the note that explains the flag: for who reads Dutch and came to test, not for a learner', () => {
     // On by default: the flag shows, the Dutch note does not (a learner who reads little Dutch).
     expect(explainReport('full', false)).toBe(false);
-    expect(explainReport('sample', false)).toBe(true);
+    // Not for the sneak preview: every new learner has it, also who reads no Dutch.
+    expect(explainReport('sample', false)).toBe(false);
     expect(explainReport('full', true)).toBe(true);
     readTesterParam('?test');
     expect(explainReport('full', false)).toBe(true);

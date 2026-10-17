@@ -91,7 +91,7 @@ slot (daar staat ook het mailadres om een code te vragen).
 |---|---|
 | **Volledig** | alles (met een code: pilot, experts, kandidaten) |
 | **Sneak preview** | per thema de eerste les (bij Jouw sector van elke sector), plus Herhaal vandaag. Zonder code, of met de oude sneak-previewcode |
-| **Proef** | alleen het eerste onderwerp (oude proefcodes) |
+| **Proef** | de sneak preview plus het hele eerste onderwerp (oude proefcodes) |
 
 - In de code staan **alleen SHA-256-hashes** van de codes (`src/lib/access.ts`), nooit de codes
   zelf. Een code geef je per bericht, niet openbaar.

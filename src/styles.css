@@ -1686,6 +1686,18 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 @media (max-width: 380px) { .full-only-note { padding-inline-start: 4px; } }
 .full-only-note > .icon { flex: none; }
+/* The home with nothing left to play in the sneak preview: the way to the full version is the
+   next step, a big yellow card like a lesson's. */
+.full-only-big {
+  display: flex; align-items: center; gap: 14px; width: 100%; min-height: 96px; margin: 12px 0 4px;
+  padding: 18px; text-align: start; font: inherit; font-weight: 650; color: #1e2226;
+  background: var(--yellow); border: 2.5px solid #1e2226; border-radius: 14px; cursor: pointer;
+}
+.full-only-big:hover { background: #ffcd3a; }
+.full-only-big > .icon { flex: none; }
+.full-only-big-text { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: start; }
+.full-only-big-help { font-size: 1.25rem; line-height: 1.2; }
+.full-only-big-nl { font-size: 0.8rem; font-weight: 600; color: #3f3a2c; }
 .full-only-en { flex: 1; min-width: 0; flex-direction: row; flex-wrap: wrap; gap: 0 6px; font-weight: 600; font-size: 0.85rem; color: var(--muted); }
 .full-only-en .bi-help { display: inline; }
 .full-only-en .bi-sep { display: inline; }

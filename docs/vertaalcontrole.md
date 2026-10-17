@@ -574,3 +574,4 @@ En `startFree` (de codepagina, "Geen code? Begin met de eerste lessen"): vervang
 
 - `unlockHint` (de kaart "Volledige versie" bij Instellingen en bij een onderwerp op slot) is herschreven: "Met de code gaan alle lessen open. Nog geen code? Vraag het je docent of coach, of mail ons:". Het mailadres staat eronder. Het oude "alleen het eerste onderwerp is open" klopte niet meer voor de sneak preview.
 - `countHint` (Instellingen, "Anoniem meetellen") zegt nu ook dat de app ongeveer telt hoe lang lessen duren.
+- Ook 17 oktober: `unlockHint` heeft een zin erbij, "De code is gratis." (de criticus: "Volledige versie" klinkt als iets om te betalen). Nieuw: `codeNotFull`, "Deze code opent niet de volledige versie. Vraag een nieuwe code." (een geldige code die niet alles opent, gaf eerst "Verkeerde code").
