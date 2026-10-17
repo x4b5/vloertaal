@@ -105,7 +105,7 @@ describe('pocket card phrases', () => {
       'Kunt u het nog een keer laten zien?',
       'Ben je klaar?',
       'Bijna. Nog vijf minuten.',
-      'Klaar! Wat is de volgende taak?',
+      'Klaar! Wat moet ik nu doen?',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

@@ -61,7 +61,7 @@ export const soundLessons: Lesson[] = [
       [['deur', 'de deur', 'the door', '🚪'], ['duur', 'duur', 'expensive', '💸']],
     ],
     [
-      ['Draai de moer goed vast.', 'Turn the nut on tightly.'],
+      ['Draai de moer goed vast.', 'Tighten the nut well.'],
       ['Doe de deur dicht, alsjeblieft.', 'Close the door, please.'],
       ['Die jas is te duur.', 'That coat is too expensive.'],
     ],

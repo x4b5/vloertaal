@@ -111,7 +111,7 @@ const t: CultureTranslation = {
     'c.no.w': 'Jasne „nee” jest szanowane. Powiedzieć „ja” i nie przyjść niszczy zaufanie o wiele bardziej.',
     'c.task': 'Powiedz, gdy skończysz, i pytaj, gdy coś jest niejasne',
     'c.task.b': 'W Holandii przełożony często daje zadanie w kilku słowach i oczekuje, że powiesz, gdy skończysz. Gdy mówisz „ja”, choć nie wszystko rozumiesz, często dochodzi do błędów. Zapytać jeszcze raz albo poprosić, żeby ktoś to pokazał, to tutaj normalne, a nie niegrzeczne.',
-    'c.task.p': 'Gotowe! Jakie jest następne zadanie?',
+    'c.task.p': 'Gotowe! Co mam teraz robić?',
     'c.task.s': { m: 'Przełożony bardzo szybko tłumaczy zadanie. Zrozumiałeś tylko połowę. Co robisz?', f: 'Przełożony bardzo szybko tłumaczy zadanie. Zrozumiałaś tylko połowę. Co robisz?' },
     'c.task.o1': 'Pytasz: „Kunt u het nog een keer laten zien?”',
     'c.task.o2': 'Mówisz „ja” i zgadujesz.',

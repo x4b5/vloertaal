@@ -109,7 +109,7 @@
     "c.no.w": "A clear \"nee\" is respected. Saying \"ja\" and not coming breaks trust much more.",
     "c.task": "Say when it is done, ask when it is not clear",
     "c.task.b": "In the Netherlands a supervisor often gives a task in a few words, and expects you to say when it is done. Saying \"ja\" when you did not understand often leads to mistakes. Asking again, or asking to be shown, is normal here and not rude.",
-    "c.task.p": "Done! What is the next task?",
+    "c.task.p": "Done! What must I do now?",
     "c.task.s": "Your supervisor explains a task very fast. You understood only half. What do you do?",
     "c.task.o1": "Ask: \"Kunt u het nog een keer laten zien?\"",
     "c.task.o2": "Say \"ja\" and guess.",

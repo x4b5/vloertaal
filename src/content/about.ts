@@ -30,7 +30,7 @@ export const aboutSections: AboutSection[] = [
     body: 'Vloertaal helps you learn the Dutch you need at work: in the warehouse, the kitchen, the factory or on the building site. Not only the words on the work floor, but all the language around work: applying for a job, your contract and pay slip, your rights, housing and papers, calling in sick and getting along with colleagues. The lessons are short, so you can practise a few minutes every day.',
     nl: {
       title: 'Wat is Vloertaal?',
-      body: 'Met Vloertaal leer je het Nederlands dat je nodig hebt op je werk: in het magazijn, in de keuken, in de fabriek of op de bouw. Niet alleen de woorden op de werkvloer. Ook de taal rond je werk: solliciteren, je contract en je loonstrook, je rechten, wonen en papieren, je ziek melden en omgaan met collega’s. De lessen zijn kort. Zo kun je elke dag een paar minuten oefenen.',
+      body: 'Met Vloertaal leer je het Nederlands dat je nodig hebt op je werk: in het magazijn, in de keuken, in de fabriek of op de bouw. Niet alleen de woorden op de werkvloer. Ook de taal rond je werk: solliciteren, je contract en je loonstrook, je rechten, wonen en papieren, je ziekmelden en omgaan met collega’s. De lessen zijn kort. Zo kun je elke dag een paar minuten oefenen.',
     },
     nlRules: {
       title: 'Wat is Vloertaal?',

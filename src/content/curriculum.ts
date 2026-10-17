@@ -87,7 +87,7 @@ export const units: Unit[] = [
         ],
         sentences: [
           { id: 's.understand.1', nl: 'Kunt u dat herhalen?', en: 'Can you repeat that?' },
-          { id: 's.understand.2', nl: 'Kunt u langzamer praten?', en: 'Could you speak slowly?' },
+          { id: 's.understand.2', nl: 'Kunt u langzamer praten?', en: 'Could you speak more slowly?' },
           { id: 's.understand.3', nl: 'Waar is de wc?', en: 'Where is the toilet?' },
         ],
         dialogues: [
@@ -217,7 +217,7 @@ export const units: Unit[] = [
         words: [
           { id: 'w.links', nl: 'links', en: 'left', emoji: '⬅️' },
           { id: 'w.rechts', nl: 'rechts', en: 'right', emoji: '➡️' },
-          { id: 'w.boven', nl: 'boven', en: 'at the top', emoji: '⬆️' },
+          { id: 'w.boven', nl: 'boven', en: 'up, above', emoji: '⬆️' },
           { id: 'w.beneden', nl: 'beneden', en: 'down, below', emoji: '⬇️' },
           { id: 'w.tillen', nl: 'tillen', en: 'to lift', emoji: '🏋️' },
           { id: 'w.pakken', nl: 'pakken', en: 'to take', emoji: '✋' },

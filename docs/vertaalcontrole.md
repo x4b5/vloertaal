@@ -730,7 +730,7 @@ Graag nakijken:
   разбираш"), om geen man- en vrouwvorm nodig te hebben. Arabisch en Tigrinya: titel, tip,
   situatie en keuzes in man- en vrouwvorm. In de situatie ("je begreep maar de helft") hebben
   Pools, Oekraïens en Bulgaars een man- en vrouwvorm.
-- **"Zeg het zo"** ("Klaar! Wat is de volgende taak?") is overal genderneutraal: Pools/Oekraïens/
+- **"Zeg het zo"** ("Klaar! Wat moet ik nu doen?") is overal genderneutraal: Pools/Oekraïens/
   Bulgaars "Gotowe! / Готово!", Arabisch "انتهيت!", Tigrinya "ወዲአ!", Turks "Bitti!", Perzisch
   "تمام شد!", Dari "خلاص شد!". Turks "Sıradaki iş ne?": goed, of liever "Sıradaki görev ne?"?
 - **De Nederlandse vraag** in de beste keuze ("Kunt u het nog een keer laten zien?") en "ja" blijven
@@ -749,3 +749,15 @@ Graag nakijken:
 - `bramRested` (Bram op het beginscherm): "Gisteren was je vrije dag. Je reeks gaat door." Eerst werd een vrije dag zonder woord gebruikt.
 - `remindEvent`: de herinnering in de agenda krijgt achter de Nederlandse titel ook de hulptaal: "Tijd voor je Nederlands (10 minuten)".
 - Dari: "code" stond op de codepagina op twee manieren (کد en کود). Nu overal کد, zoals in de oudere teksten.
+
+## 17 oktober 2026: na de NT2-taalcontrole
+
+Een NT2-docent las 20 lessen na: "zeer goed, kort en dicht bij de werkvloer". Verwerkt:
+- Spelling: `w.ziekmelden` "ziekmelden" en `w.betermelden` "betermelden" (één woord, Woordenlijst). De opnames blijven: het klinkt hetzelfde, alleen de tekst in `public/audio-el/voices.json` is aangepast.
+- Engels nauwkeuriger (de hulptalen zijn daaruit vertaald; kijk of ze mee moeten): `s.understand.2` "Could you speak more slowly?", `s.contract.3` "Which collective agreement applies to me?", `s.findwork.1` "I want to apply for a job.", `w.boven` "up, above", `s.roundsounds.1` "Tighten the nut well."
+- `c.task.p` "Klaar! Wat moet ik nu doen?" (was "Wat is de volgende taak?", te schools), in 9 talen.
+
+**Nog te doen zodra er weer opgenomen kan worden** (deze zinnen hebben nu een opname; een nieuwe tekst valt tot dan terug op de telefoonstem):
+- `s.boundaries.1` "Raak me niet aan, alstublieft." → "Raak me niet aan." (de rest van de les zegt "je"; een grens zeg je stevig, zonder "alstublieft").
+- `c.texting.q/a` "Kun je zaterdag een extra dienst draaien?" → "Ja, ik reageer meteen in de app." past niet als paar. Voorstel: "Zie je de extra dienst in de app?" → "Ja, ik reageer meteen."
+- Mogelijke nieuwe zinnen: "Is dit goed zo?", "Hoe zeg je dat in het Nederlands?", "Mag ik even naar de wc?", "Ik weet het niet."

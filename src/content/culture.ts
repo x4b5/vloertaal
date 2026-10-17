@@ -230,7 +230,7 @@ const baseTips: CultureTip[] = [
     emoji: '✅',
     title: 'Say when it is done, ask when it is not clear',
     body: 'In the Netherlands a supervisor often gives a task in a few words, and expects you to say when it is done. Saying "ja" when you did not understand often leads to mistakes. Asking again, or asking to be shown, is normal here and not rude.',
-    phrase: { id: 'c.task.p', nl: 'Klaar! Wat is de volgende taak?', en: 'Done! What is the next task?' },
+    phrase: { id: 'c.task.p', nl: 'Klaar! Wat moet ik nu doen?', en: 'Done! What must I do now?' },
     situation: { id: 'c.task.s', en: 'Your supervisor explains a task very fast. You understood only half. What do you do?' },
     options: [
       { id: 'c.task.o1', en: 'Ask: "Kunt u het nog een keer laten zien?"', best: true },

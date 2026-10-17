@@ -111,7 +111,7 @@ const t: CultureTranslation = {
     'c.no.w': 'Net bir “nee” saygı görür. “ja” deyip gelmemek güveni çok daha fazla bozar.',
     'c.task': 'Bitince söyle, anlamadığında sor',
     'c.task.b': 'Hollanda’da amir bir işi çoğu zaman birkaç kelimeyle verir ve iş bitince söylemeni bekler. Anlamadığın hâlde “ja” demek çoğu zaman hatalara yol açar. Tekrar sormak ya da göstermesini istemek burada normaldir, kabalık değildir.',
-    'c.task.p': 'Bitti! Sıradaki iş ne?',
+    'c.task.p': 'Bitti! Şimdi ne yapayım?',
     'c.task.s': 'Amirin bir işi çok hızlı anlatıyor. Sadece yarısını anladın. Ne yaparsın?',
     'c.task.o1': 'Sorarsın: “Kunt u het nog een keer laten zien?”',
     'c.task.o2': '“ja” der ve tahmin edersin.',

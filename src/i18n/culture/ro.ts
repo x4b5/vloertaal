@@ -111,7 +111,7 @@ const t: CultureTranslation = {
     'c.no.w': 'Un „nee” clar e respectat. Să spui „ja” și să nu vii strică mult mai mult încrederea.',
     'c.task': 'Spune când ai terminat, întreabă când nu e clar',
     'c.task.b': 'În Olanda, un șef dă adesea o sarcină în câteva cuvinte și se așteaptă să spui când ai terminat. Dacă spui „ja” când nu ai înțeles, apar des greșeli. Să întrebi din nou sau să ceri să ți se arate e normal aici și nu e nepoliticos.',
-    'c.task.p': 'Gata! Care e următoarea sarcină?',
+    'c.task.p': 'Gata! Ce să fac acum?',
     'c.task.s': 'Șeful îți explică o sarcină foarte repede. Ai înțeles doar jumătate. Ce faci?',
     'c.task.o1': 'Întrebi: „Kunt u het nog een keer laten zien?”',
     'c.task.o2': 'Spui „ja” și ghicești.',

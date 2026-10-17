@@ -56,7 +56,7 @@ const PENDING_RECORDING = new Set<string>([
   'Kunt u het nog een keer laten zien?',
   'Ben je klaar?',
   'Bijna. Nog vijf minuten.',
-  'Klaar! Wat is de volgende taak?',
+  'Klaar! Wat moet ik nu doen?',
 ]);
 
 describe('recorded clips (G4 b3)', () => {
