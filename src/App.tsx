@@ -35,7 +35,7 @@ import { keepStorageAgain, persistStorage } from './lib/install';
 import { CertEarned, CertificateScreen } from './components/Certificate';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
-import { count, countOpen, quarterOf } from './lib/count';
+import { clockMinutes, count, countOpen, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
 import { explainReport, testerMode } from './lib/report';
 import { setReloadWhen } from './lib/appUpdate';
 import { clearSave } from './lib/resume';
@@ -138,6 +138,9 @@ export default function App() {
   /** A coach link to a topic outside the preview: the home offers its unlock (this visit). */
   const [lockedLink, setLockedLink] = useState<string | null>(null);
   const grant = (a: Access, typed?: string) => {
+    // A code for the full version: counted with the version it replaces (none yet, or the sneak
+    // preview), so the owner sees how many ask for a code after looking around.
+    if (a === 'full' && access !== 'full') count('unlock', { lang: progress.helpLang, access });
     saveAccess(a);
     setAccess(a);
     setGateAgain(false);
@@ -368,16 +371,25 @@ export default function App() {
   // so a new learner is counted under their sector, not as "sector-unknown".
   const readyToCount = progress.onboarded && Boolean(access) && progress.sector !== undefined;
   useEffect(() => {
-    if (readyToCount) countOpen({ lang: progress.helpLang, sector: progress.sector });
+    if (readyToCount) countOpen({ lang: progress.helpLang, sector: progress.sector, access });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [readyToCount]);
   calmRef.current = progress.onboarded && Boolean(access) && !passing(view);
   useEffect(() => { setReloadWhen(() => calmRef.current); }, []);
   // A lesson (or today's review) started: counted per lesson, so started, stopped (onQuit below) and
   // finished show where learners give up.
+  // How long the open lesson is on screen (the time the app is out of view does not count): for
+  // the band of minutes counted when it is finished.
+  const lessonClock = useRef(startClock());
+  useEffect(() => {
+    const onVis = () => { lessonClock.current = document.visibilityState === 'visible' ? resumeClock(lessonClock.current) : pauseClock(lessonClock.current); };
+    document.addEventListener('visibilitychange', onVis);
+    return () => document.removeEventListener('visibilitychange', onVis);
+  }, []);
   const lessonOpen = view.name === 'lesson' ? view.lessonId : null;
   useEffect(() => {
-    if (lessonOpen) count('lesson-start', { lang: progress.helpLang, sector: progress.sector, lesson: lessonOpen });
+    lessonClock.current = startClock();
+    if (lessonOpen) count('lesson-start', { lang: progress.helpLang, sector: progress.sector, lesson: lessonOpen, access });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonOpen]);
   // Learners from before "Herhaal vandaag" get cards for the words they already learned.
@@ -544,8 +556,9 @@ export default function App() {
         keepDue.current = Boolean(access) && !keepOffered();
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
         const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId);
-        const dims = { lang: progress.helpLang, sector: progress.sector };
-        count(daily ? 'review-done' : 'lesson-done', daily ? dims : { ...dims, lesson: view.lessonId });
+        const dims = { lang: progress.helpLang, sector: progress.sector, access };
+        const minutes = clockMinutes(lessonClock.current);
+        count(daily ? 'review-done' : 'lesson-done', daily ? { ...dims, minutes } : { ...dims, lesson: view.lessonId, minutes });
         if (unitDone) count('unit-done', dims);
         // The first finished lesson: ask the browser to keep this site's storage (the progress).
         if (!daily && !Object.keys(progress.completed).length) persistStorage();
@@ -587,7 +600,7 @@ export default function App() {
           quiet={Boolean(progress.quiet)}
           onQuiet={setQuiet}
           onQuit={({ step, steps }) => {
-            count('lesson-quit', { lang: progress.helpLang, sector: progress.sector, lesson: view.lessonId, quarter: quarterOf(step, steps) });
+            count('lesson-quit', { lang: progress.helpLang, sector: progress.sector, lesson: view.lessonId, quarter: quarterOf(step, steps), access });
             leaving.current = true;
             back();
           }}

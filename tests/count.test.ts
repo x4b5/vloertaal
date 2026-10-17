@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { count, countOpen, countPaths, mayCount, quarterOf, setCountEnv, setCounting } from '../src/lib/count';
+import { clockMinutes, count, countOpen, countPaths, mayCount, minutesBand, pauseClock, quarterOf, resumeClock, setCountEnv, setCounting, startClock } from '../src/lib/count';
 
 const store = new Map<string, string>();
 const ls = {
@@ -44,7 +44,7 @@ describe('anonymous counting', () => {
     expect(init).toMatchObject({ mode: 'no-cors', keepalive: true, credentials: 'omit' });
   });
 
-  it('only ever uses language and sector as dimensions, and for a lesson which one and where it stopped', () => {
+  it('only ever uses language and sector as dimensions (and the version), and for a lesson which one and where it stopped', () => {
     expect(countPaths('unit-done', {})).toEqual(['/e/unit-done', '/e/unit-done/lang-en', '/e/unit-done/sector-unknown']);
     expect(countPaths('open', { lang: 'x/../?a=1', sector: 'care' })[1]).toBe('/e/open/lang-xa1');
     expect(countPaths('lesson-start', { lang: 'pl', lesson: 'l.cv' })).toEqual([
@@ -56,6 +56,32 @@ describe('anonymous counting', () => {
       '/e/lesson-quit/lesson/r-l-loon-1', '/e/lesson-quit/lesson/r-l-loon-1/q2',
     ]);
     expect(countPaths('lesson-quit', { lesson: '../x?y', quarter: 9 }).slice(-2)).toEqual(['/e/lesson-quit/lesson/x-y', '/e/lesson-quit/lesson/x-y/q4']);
+  });
+
+  it('the version (sneak preview or full) and how long a finished lesson took, each on its own path too', () => {
+    expect(countPaths('open', { lang: 'pl', sector: 'care', access: 'sample' })).toEqual([
+      '/e/open', '/e/open/lang-pl', '/e/open/sector-care', '/e/open/access-sample',
+    ]);
+    // A code for the full version, after the sneak preview (or on the code page: no access yet).
+    expect(countPaths('unlock', { lang: 'ar', access: 'sample' }).at(-1)).toBe('/e/unlock/access-sample');
+    expect(countPaths('unlock', { access: null }).at(-1)).toBe('/e/unlock/access-none');
+    expect(countPaths('lesson-done', { lang: 'uk', lesson: 'l.cv', access: 'full', minutes: 3.4 })).toEqual([
+      '/e/lesson-done', '/e/lesson-done/lang-uk', '/e/lesson-done/sector-unknown', '/e/lesson-done/access-full',
+      '/e/lesson-done/t2-5', '/e/lesson-done/lesson/l-cv', '/e/lesson-done/lesson/l-cv/t2-5',
+    ]);
+    expect(countPaths('review-done', { minutes: Number.NaN })).toEqual(['/e/review-done', '/e/review-done/lang-en', '/e/review-done/sector-unknown']);
+  });
+
+  it('bands of minutes, and the clock leaves out the time the app is out of view', () => {
+    expect([0, 1.9, 2, 4.99, 5, 9.9, 10, 95].map(minutesBand)).toEqual(['t0-2', 't0-2', 't2-5', 't2-5', 't5-10', 't5-10', 't10plus', 't10plus']);
+    const min = 60000;
+    let c = startClock(0);
+    c = pauseClock(c, 3 * min); // 3 minutes, then the phone in the pocket
+    c = resumeClock(c, 60 * min); // back an hour later
+    expect(clockMinutes(c, 61 * min)).toBe(4);
+    // Pausing twice or resuming twice changes nothing.
+    expect(pauseClock(pauseClock(c, 61 * min), 70 * min).ms).toBe(4 * min);
+    expect(resumeClock(c, 65 * min)).toBe(c);
   });
 
   it('the quarter a lesson was stopped in', () => {

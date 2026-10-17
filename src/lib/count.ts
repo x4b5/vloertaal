@@ -8,7 +8,10 @@ import { dayKey } from './progress';
  * dimension is its own count, never combined with another, so nothing singles anyone out. No
  * cookies, no ids of people, no names, nothing stored about the learner on our side.
  *
- * Started, stopped and finished per lesson show where learners give up (docs/pilot.md).
+ * Started, stopped and finished per lesson show where learners give up (docs/pilot.md). A finished
+ * lesson also says roughly how long it took (a band of minutes, never a time of day), and every
+ * event which version it came from (the sneak preview without a code, or the full version), so
+ * the owner sees how many only look and how many ask for a code ('unlock').
  *
  * Nothing is sent:
  * - in development and tests (only a production build on a real host counts);
@@ -19,7 +22,7 @@ import { dayKey } from './progress';
 /** The owner's GoatCounter site; its root is also the dashboard. */
 export const COUNTER: string = (import.meta.env.VITE_COUNTER_URL as string | undefined) || 'https://vloertaal.goatcounter.com';
 
-export type CountEvent = 'open' | 'lesson-start' | 'lesson-quit' | 'lesson-done' | 'review-done' | 'unit-done';
+export type CountEvent = 'open' | 'lesson-start' | 'lesson-quit' | 'lesson-done' | 'review-done' | 'unit-done' | 'unlock';
 
 /** The only dimensions ever sent, each counted on its own: never a time, a person or anything else that could single someone out. */
 export interface CountDims {
@@ -31,6 +34,18 @@ export interface CountDims {
   lesson?: string;
   /** lesson-quit: how far the lesson got, 1–4 (the quarter it was stopped in, see quarterOf). */
   quarter?: number;
+  /** The version in use: 'sample' (the sneak preview, no code), 'preview', 'full'; null = no access yet. With 'unlock': the version before the code. */
+  access?: string | null;
+  /** lesson-done, review-done: minutes the lesson was on screen, counted as a band (see minutesBand). */
+  minutes?: number;
+}
+
+/** How long a lesson took, as a band: "t0-2", "t2-5", "t5-10" or "t10plus" (minutes). */
+export function minutesBand(minutes: number): string {
+  if (minutes < 2) return 't0-2';
+  if (minutes < 5) return 't2-5';
+  if (minutes < 10) return 't5-10';
+  return 't10plus';
 }
 
 /** The quarter (1–4) of a lesson a learner stopped in: at step `step` (0-based) of `steps`. */
@@ -38,6 +53,14 @@ export function quarterOf(step: number, steps: number): number {
   if (steps <= 0) return 1;
   return Math.min(4, Math.max(1, Math.floor((step / steps) * 4) + 1));
 }
+
+/** The time a lesson is on screen: ms counted so far, and since when it runs (null while paused). */
+export interface LessonClock { ms: number; since: number | null }
+export const startClock = (now = Date.now()): LessonClock => ({ ms: 0, since: now });
+export const pauseClock = (c: LessonClock, now = Date.now()): LessonClock => (c.since === null ? c : { ms: c.ms + Math.max(0, now - c.since), since: null });
+export const resumeClock = (c: LessonClock, now = Date.now()): LessonClock => (c.since === null ? { ms: c.ms, since: now } : c);
+/** Minutes on screen up to now. */
+export const clockMinutes = (c: LessonClock, now = Date.now()): number => pauseClock(c, now).ms / 60000;
 
 const OFF_KEY = 'vloertaal:count-off';
 const OPEN_KEY = 'vloertaal:count-open';
@@ -102,8 +125,9 @@ const seg = (v: string) => v.toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 2
 const lessonSeg = (id: string) => id.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'x';
 
 /**
- * The paths one event is counted under: the event, and the event per language and per sector;
- * with a lesson also per lesson (and per quarter: overall and in that lesson).
+ * The paths one event is counted under: the event, and the event per language, per sector and
+ * per version; with a lesson also per lesson (and per quarter or band of minutes: overall and in
+ * that lesson).
  */
 export function countPaths(event: CountEvent, dims: CountDims = {}): string[] {
   const paths = [
@@ -111,9 +135,15 @@ export function countPaths(event: CountEvent, dims: CountDims = {}): string[] {
     `/e/${event}/lang-${seg(dims.lang || 'en')}`,
     `/e/${event}/sector-${seg(dims.sector || 'unknown')}`,
   ];
+  if (dims.access !== undefined) paths.push(`/e/${event}/access-${seg(dims.access || 'none')}`);
   const q = dims.quarter ? `q${Math.min(4, Math.max(1, Math.round(dims.quarter)))}` : '';
   if (q) paths.push(`/e/${event}/${q}`);
-  if (dims.lesson) paths.push(`/e/${event}/lesson/${lessonSeg(dims.lesson)}`, ...(q ? [`/e/${event}/lesson/${lessonSeg(dims.lesson)}/${q}`] : []));
+  const t = dims.minutes !== undefined && Number.isFinite(dims.minutes) ? minutesBand(dims.minutes) : '';
+  if (t) paths.push(`/e/${event}/${t}`);
+  if (dims.lesson) {
+    const l = `/e/${event}/lesson/${lessonSeg(dims.lesson)}`;
+    paths.push(l, ...(q ? [`${l}/${q}`] : []), ...(t ? [`${l}/${t}`] : []));
+  }
   return paths;
 }
 

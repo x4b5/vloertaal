@@ -1,12 +1,13 @@
 import { useId, useState } from 'react';
 import { ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
+import { CONTACT_EMAIL } from '../content/about';
 import { type Access, checkPassword } from '../lib/access';
 import { Bi, HelpText } from './Bi';
 import { QuestionSay } from './Choice';
 import { ChromeHead } from './ChromeBack';
 import { Greeting } from './Greeting';
-import { CheckIcon, ChevronIcon, KeyIcon, LockIcon, PhoneIcon } from './Icons';
+import { CheckIcon, ChevronIcon, KeyIcon, LockIcon, MailIcon, PhoneIcon } from './Icons';
 import { LogoMark, Wordmark } from './Logo';
 import { NlPair } from './NlPair';
 import { dutchUi } from '../lib/track';
@@ -169,7 +170,7 @@ export function Gate({ lang, onAccess, onBack, accepted = null, code = '', onFre
   );
 }
 
-/** Preview only: a card in Settings ("Instellingen") to unlock the full version with its password. */
+/** Without the full version: a card in Settings ("Instellingen") to unlock it with its password, and where to ask for one. */
 export function UpgradeCard({ lang, onAccess }: { lang?: HelpLanguage; onAccess: (a: Access) => void }) {
   return (
     <section className="upgrade-card" id="unlock-full" aria-labelledby="unlock-full-title">
@@ -180,6 +181,12 @@ export function UpgradeCard({ lang, onAccess }: { lang?: HelpLanguage; onAccess:
         </span>
       </h2>
       <p className="upgrade-hint"><Bi text={ui('unlockHint', lang)} /></p>
+      {/* "No code yet? ... or e-mail us:": who came without a coach (the sneak preview needs no
+          code) asks for one here. The subject is filled in, in Dutch. */}
+      <a className="upgrade-mail" href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Code voor de volledige versie')}`} dir="ltr" lang="en">
+        <MailIcon size={20} />
+        <span>{CONTACT_EMAIL}</span>
+      </a>
       <PasswordForm onAccess={onAccess} accept={(a) => a === 'full'} lang={lang} />
     </section>
   );

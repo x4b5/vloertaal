@@ -35,7 +35,7 @@ export const uiEn = {
   stopLesson: 'Stop lesson',
   fullVersion: 'Full version',
   unlockFull: 'Unlock the full version',
-  unlockHint: 'Only the first unit is open now. Enter the code for all lessons.',
+  unlockHint: 'With the code, all lessons open. No code yet? Ask your teacher or coach, or e-mail us:',
   password: 'Code',
   enterPassword: 'Enter the code',
   wrongPassword: 'That code is not right. Try again.',
@@ -182,7 +182,7 @@ export const uiEn = {
   backToLesson: 'Back to the lesson',
   /* Retention: anonymous counting (Settings) and a certificate per finished unit. */
   countTitle: 'Count anonymously',
-  countHint: 'The app counts how often lessons are done. No name, no account, no tracking.',
+  countHint: 'The app counts how often lessons are done, and about how long they take. No name, no account, no tracking.',
   certificate: 'Certificate',
   myCertificates: 'My certificates',
   certsEmpty: 'Finish all lessons of a unit. Then you get a certificate.',

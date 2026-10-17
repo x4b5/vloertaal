@@ -458,6 +458,14 @@ export const KeyIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** An envelope: write us an e-mail (ask for a code). */
+export const MailIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" strokeWidth="2.2" />
+    <path d="M3.8 7l8.2 6.2L20.2 7" {...stroke} strokeWidth={2.2} />
+  </Svg>
+);
+
 /** A phone: "everything stays on this phone". */
 export const PhoneIcon = (p: IconProps) => (
   <Svg {...p}>
