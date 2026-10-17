@@ -81,6 +81,19 @@ describe('pocket card phrases', () => {
       'Wat is er gebeurd?',
       'Hij is van de ladder gevallen.',
       'Mijn collega is gewond. Waar is de BHV’er?',
+      // New lesson "Werken via een uitzendbureau" (l.agency, 17 October 2026):
+      'de uitzendkracht',
+      'de intercedent',
+      'het urenbriefje',
+      'de opdracht',
+      'verlengen',
+      'uitbetalen',
+      'Ik werk via een uitzendbureau.',
+      'Ik geef mijn uren door.',
+      'Wanneer stopt mijn opdracht?',
+      'Heb je je uren doorgegeven?',
+      'Ja, gisteren in de app.',
+      'Op mijn loonstrook staan te weinig uren.',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

@@ -21,6 +21,8 @@ const PENDING_RECORDING = new Set<string>([
   'Morgen om zeven uur.',
   // New lesson "Een ongeluk melden" (l.accident, 17 October 2026):
   'Hij is van de ladder gevallen.',
+  // New lesson "Werken via een uitzendbureau" (l.agency, 17 October 2026):
+  'Ja, gisteren in de app.',
 ]);
 
 describe('"you" in the chats follow the gender question', () => {

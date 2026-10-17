@@ -32,6 +32,19 @@ const PENDING_RECORDING = new Set<string>([
   'Wat is er gebeurd?',
   'Hij is van de ladder gevallen.',
   'Mijn collega is gewond. Waar is de BHV’er?',
+  // New lesson "Werken via een uitzendbureau" (l.agency, 17 October 2026):
+  'de uitzendkracht',
+  'de intercedent',
+  'het urenbriefje',
+  'de opdracht',
+  'verlengen',
+  'uitbetalen',
+  'Ik werk via een uitzendbureau.',
+  'Ik geef mijn uren door.',
+  'Wanneer stopt mijn opdracht?',
+  'Heb je je uren doorgegeven?',
+  'Ja, gisteren in de app.',
+  'Op mijn loonstrook staan te weinig uren.',
 ]);
 
 describe('recorded clips (G4 b3)', () => {

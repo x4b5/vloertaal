@@ -137,10 +137,15 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
     .map((l, at) => ({ l, at, box: Math.min(...l.words.filter((w) => idSet.has(w.id)).map((w) => boxes[w.id] ?? 1)) }))
     .filter(({ box }) => Number.isFinite(box))
     .sort((a, b) => a.box - b.box || b.at - a.at);
-  // Rotate every second day (a card comes back after 1, 2, 4, 7, 14 … days; turning each day
-  // brought the same sentence back on many of those days, every second day spreads them). A
-  // lesson's place in the course shifts its turn, so lessons reviewed together differ.
-  const turn = Math.floor(n / 2);
+  // Four turns every three days. Half a turn a day (as before) locked on parity: on the 2-4-7-14
+  // schedule a lesson first reviewed on an even day is 0, 1, 3, 6 turns on, so with 3 sentences
+  // it never shows its third (one lesson more, l.agency, moved many lessons onto even days: 47% of
+  // the sentences came back in 6 weeks). A whole turn a day brings the same sentence back after
+  // any multiple of 3 days (3 = 1 + 2, 6 = 2 + 4, and the 24 days a lesson often waits for its
+  // next turn as a source). 4/3 a day turns 3 days into 4 and 24 into 32: another sentence.
+  // Over 108 simulated learners 64% came back on average (half a turn 58%, a whole turn 60%).
+  // A lesson's place in the course shifts its turn, so lessons reviewed together differ.
+  const turn = Math.floor((4 * n) / 3);
   const pick = <T>(xs: readonly T[], at: number, k = 0): T | undefined => (xs.length ? xs[(turn + at + k) % xs.length] : undefined);
   const sentences: Sentence[] = [];
   for (const { l, at } of from) {
