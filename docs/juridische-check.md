@@ -1462,6 +1462,37 @@ ______________________________________________________________
 
 ---
 
+## Werkregels: gewijzigde beweringen (17 oktober 2026)
+
+De track **Werkregels** is voor mensen die al Nederlands spreken. De teksten staan alleen in het
+Nederlands (src/content/regels), er is geen vertaling. Op 17 oktober 2026 hebben we de beweringen
+hieronder aangepast of toegevoegd. Wilt u per regel nagaan of de zin klopt, en of hij niet te kort
+door de bocht is? De tekst staat letterlijk zoals in de app.
+
+| Les / stap | Wat er nu staat (letterlijk) | Grondslag | Onze vraag aan u |
+|---|---|---|---|
+| contract.1 ru1, tf1 | Je werkgever laat weten wat je verdient en hoeveel uur je werkt. Dat moet binnen 1 week na je eerste werkdag, op papier of digitaal. | art. 7:655 BW | Klopt "na je eerste werkdag" als startpunt van de termijn van 1 week? |
+| contract.2 ru1, wd1 | Je werkgever moet minstens 1 maand voor het einde laten weten of je contract doorgaat. Dat geldt bij een contract van 6 maanden of langer. | art. 7:668 lid 1 BW (aanzegplicht) | Klopt dit zo? |
+| contract.2 ru1 | Doet hij dat niet, of te laat? Dan krijg je extra geld, tot 1 maandloon. | art. 7:668 lid 3 en 4 BW (aanzegvergoeding) | Is "tot 1 maandloon" goed voor zowel niet als te laat aanzeggen? |
+| contract.2 wd1 | Zit er meer dan 6 maanden tussen twee contracten? Dan begint de telling opnieuw. | art. 7:668a lid 1 BW (ketenregeling) | Moeten we noemen dat een cao de tussenpoos soms korter mag maken (seizoenswerk)? |
+| contract.2 wd1 | Werk je via een uitzendbureau? Dan gelden vaak andere regels. Kijk in de uitzend-cao. | art. 7:691 BW, uitzend-cao | Is deze verwijzing genoeg? |
+| contract.3 ru1 | Zegt je werkgever een oproep minder dan 4 dagen van tevoren af? Dan krijg je toch loon. | art. 7:628a BW (Wab) | Klopt dit, ook bij een kortere termijn uit de cao (minstens 1 dag)? |
+| contract.3 ru1 | Werk je 12 maanden als oproepkracht? Dan moet je werkgever je vaste uren aanbieden. | art. 7:628a BW (Wab) | Klopt dit? We noemen niet hoeveel uur (het gemiddelde) en niet binnen welke termijn. |
+| contract.3 tf2 (waar) | Een uitzendkracht heeft recht op hetzelfde loon als de vaste mensen die hetzelfde werk doen. | art. 8 Waadi | Eerder stond hier "Sinds 2026 … minstens evenveel, loon, vrije dagen en pensioen samen". Die datum konden we niet checken, dus die is weg. Is de stelling "waar" te stellig, omdat een cao soms mag afwijken? |
+| ziek.2 ru1 | Heb je een tijdelijk contract? Dan stopt je loon op de einddatum. Vraag dan UWV naar de Ziektewet. | art. 7:629 BW; Ziektewet (vangnet, art. 29) | Klopt dit? |
+| tijd.4 ru1, wd1 | Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd. | art. 7:638 lid 3 BW | Klopt dit, ook als je de vraag niet op papier deed? |
+| veilig.3 tf1 | Bij een ernstig ongeluk meldt je werkgever het meteen bij de Arbeidsinspectie. Bijvoorbeeld als iemand in het ziekenhuis moet blijven, blijvend letsel heeft of overlijdt. | art. 9 Arbowet | Eerder stond hier "naar het ziekenhuis moet". Klopt "in het ziekenhuis moet blijven" als korte vorm van "opname"? |
+| rechten.4 ru1, wd1 | Staat er iets verkeerd in? Dan kun je je WW kwijtraken. | WW; art. 7:900 BW (vaststellingsovereenkomst) | Eerder: "Als je tekent, kun je rechten verliezen. Bijvoorbeeld je WW." Is de nieuwe zin juist? |
+| rechten.4 ru1, tf1 | Binnen 14 dagen na het tekenen mag je je nog bedenken. (tf1: Staat die termijn niet in het papier? Dan heb je 3 weken.) | art. 7:670b BW (bedenktermijn) | Klopt het samen zo? We zeggen er "op papier of per mail" bij. |
+| loon.1 ru1, tf1 | Het verschil is vooral loonheffing: belasting en premie voor verzekeringen. Vaak gaat er ook geld af voor je pensioen. | Wet op de loonbelasting 1964; pensioenregeling of cao | Is "premie voor verzekeringen" goed genoeg voor de premie volksverzekeringen? |
+| Hulp ("Wie bel je?") | Discriminatie melden: discriminatie.nl (een site, geen telefoonnummer). | Wet gemeentelijke antidiscriminatievoorzieningen | Is discriminatie.nl de juiste plek, en werkt het adres met www.? |
+
+Opmerkingen:
+
+______________________________________________________________
+
+---
+
 ## Ontbreekt er iets?
 
 Wij hebben deze onderwerpen (nog) niet in de app. Zou het een werknemer uit deze doelgroep schade

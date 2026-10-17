@@ -13,10 +13,10 @@ export const ziekUnit: RuleUnit = {
   color: '#8a5cb8',
   lessons: [
     {
-      // Les 6.1 · Je ziek melden
+      // Les 6.1 · Je ziekmelden
       id: 'r.l.ziek.1',
-      title: 'Je ziek melden',
-      goal: 'Je meldt je zelf ziek, op tijd, en je weet wat je wel en niet hoeft te zeggen.',
+      title: 'Je ziekmelden',
+      goal: 'Je meldt je zelf ziek, op tijd. Je weet wat je wel en niet hoeft te zeggen.',
       remember: 'Ziek? Bel zelf, vóór je dienst begint.',
       // Wie kan je helpen: je leidinggevende · het verzuimprotocol van je bedrijf · je
       //   uitzendbureau.
@@ -56,7 +56,7 @@ export const ziekUnit: RuleUnit = {
             { id: 'b', text: 'Hij appt een collega: "Zeg jij het even tegen de chef?"', best: false, feedback: 'Begrijpelijk. Maar je meldt je meestal zelf ziek.' },
             { id: 'c', text: 'Hij stuurt om 10 uur een appje: "Ziek."', best: false, feedback: 'Dat is laat, en vaak is een appje niet genoeg.' },
           ],
-          why: 'Bel zelf, en bel vóór je dienst begint. Dat is in de meeste bedrijven de regel. Kijk in je contract of het verzuimprotocol. Dat zijn de regels voor ziek melden bij jouw bedrijf.',
+          why: 'Bel zelf, en bel vóór je dienst begint. Dat is in de meeste bedrijven de regel. Kijk in je contract of het verzuimprotocol. Dat zijn de regels voor ziekmelden bij jouw bedrijf.',
         },
         {
           kind: 'truefalse',
@@ -83,7 +83,7 @@ export const ziekUnit: RuleUnit = {
           options: [
             { id: 'a', who: 'collega', best: false, feedback: 'Een collega kan het doorgeven. Maar je meldt je zelf.' },
             { id: 'b', who: 'uitzendbureau', best: true, feedback: 'Goed. Meld je bij het bureau. Vaak ook bij het bedrijf.' },
-            { id: 'c', who: 'huisarts', best: false, feedback: 'De huisarts helpt je beter worden. Je ziek melden doe je op je werk.' },
+            { id: 'c', who: 'huisarts', best: false, feedback: 'De huisarts helpt je beter worden. Je ziekmelden doe je op je werk.' },
           ],
           why: 'Werk je via een uitzendbureau? Meld je ziek bij het bureau, en vaak ook bij het bedrijf.',
         },
@@ -94,7 +94,7 @@ export const ziekUnit: RuleUnit = {
       // Les 6.2 · Je rechten als je ziek bent
       id: 'r.l.ziek.2',
       title: 'Je rechten als je ziek bent',
-      goal: 'Je weet dat je loon meestal doorloopt, en wat je wel en niet hoeft te vertellen.',
+      goal: 'Je weet dat je loon meestal doorloopt. Je weet wat je wel en niet hoeft te vertellen.',
       // ⚖️ check: Je krijgt meestal minstens 70 procent ⚖️ van je loon.
       remember: 'Ziek? Je krijgt meestal minstens 70 procent van je loon.',
       // Wie kan je helpen: de bedrijfsarts · UWV (heb je geen werkgever meer, of werk je via een
@@ -117,6 +117,8 @@ export const ziekUnit: RuleUnit = {
         // ⚖️ check: Je werkgever betaalt minstens 70 procent ⚖️ van je loon door.
         // ⚖️ check: Dat kan tot 2 jaar ⚖️ duren.
         // ⚖️ check: In het eerste jaar krijg je minstens het minimumloon ⚖️.
+        // ⚖️ check: Heb je een tijdelijk contract? Dan stopt je loon op de einddatum ⚖️. Vraag dan
+        //   UWV naar de Ziektewet (art. 7:629 BW, Ziektewet art. 29).
         {
           kind: 'rule',
           id: 'r.l.ziek.2.ru1',
@@ -125,8 +127,9 @@ export const ziekUnit: RuleUnit = {
           body: [
             'Je werkgever betaalt minstens 70 procent van je loon door.',
             'Dat kan tot 2 jaar duren.',
-            'In het eerste jaar krijg je minstens het minimumloon.',
-            'Een cao geeft vaak meer.',
+            'In het eerste jaar krijg je minstens het minimumloon. Een cao geeft vaak meer.',
+            'Heb je een tijdelijk contract? Dan stopt je loon op de einddatum.',
+            'Vraag dan UWV naar de Ziektewet.',
           ],
           rule: 'geschreven',
         },
@@ -157,7 +160,7 @@ export const ziekUnit: RuleUnit = {
         {
           kind: 'truefalse',
           id: 'r.l.ziek.2.tf2',
-          statement: 'Word je ziek op vakantie? Dan kun je je ziek melden.',
+          statement: 'Word je ziek op vakantie? Dan kun je je ziekmelden.',
           answer: true,
           why: 'Meld je meteen ziek bij je werkgever, ook vanuit het buitenland. Dan tellen die dagen meestal niet als vakantie. Vraag een briefje van een dokter daar.',
         },
@@ -179,7 +182,7 @@ export const ziekUnit: RuleUnit = {
       // Les 6.3 · Langer ziek en weer beter
       id: 'r.l.ziek.3',
       title: 'Langer ziek en weer beter',
-      goal: 'Je weet wat de bedrijfsarts doet, dat je meewerkt aan herstel, en dat je je beter meldt.',
+      goal: 'Je weet wat de bedrijfsarts doet en dat je meewerkt aan herstel. Je meldt je ook beter.',
       remember: 'De bedrijfsarts vertelt je baas niet wat je hebt.',
       // Wie kan je helpen: de bedrijfsarts · je huisarts · UWV (deskundigenoordeel) · een vakbond.
       help: ['bedrijfsarts', 'huisarts', 'uwv', 'vakbond'],
@@ -240,7 +243,7 @@ export const ziekUnit: RuleUnit = {
             { id: 'b', text: 'Hij wacht tot zijn baas hem zelf belt.', best: false, feedback: 'Dat kan lang duren. Zelf melden is sneller.' },
             { id: 'c', text: 'Hij belt zijn leidinggevende, en hij meldt zich beter.', best: true, feedback: 'Goed. Dan weet iedereen dat hij weer kan.' },
           ],
-          why: 'Beter melden is net zo belangrijk als ziek melden. Dan weet je baas dat je weer komt. En dan klopt je loon weer.',
+          why: 'Betermelden is net zo belangrijk als ziekmelden. Dan weet je baas dat je weer komt. En dan klopt je loon weer.',
         },
         {
           kind: 'whoask',

@@ -54,39 +54,13 @@ const sentencesOf = (text: string) => text.split(/(?<=[.!?]"?)\s+/).filter((s) =
 const wordCount = (sentence: string) => sentence.split(/\s+/).filter((w) => /[\p{L}\d]/u.test(w)).length;
 
 /**
- * Sentences allowed to be longer than 16 words: the lesson goals ("Leerdoel") of the
- * owner-approved curriculum, kept word for word. A goal is a list of what you can do, not a
- * sentence from the story. Warn-list: shorten them in the curriculum first, then remove them here.
+ * Sentences allowed to be longer than 16 words. Empty: the lesson goals ("Leerdoel") were split
+ * into short sentences too (17 October 2026). Warn-list: a sentence here must still be too long.
  */
-const LONG_SENTENCE_OK = [
-  'r.l.zoeken.3: Je weet wat je in een gesprek kunt vragen, en welke vragen je niet hoeft te beantwoorden.',
-  'r.l.start.1: Je weet wat je meeneemt, wat "op tijd" hier betekent, en wat je doet als je te laat bent.',
-  'r.l.start.2: Je weet hoe je je voorstelt, wanneer je "je" zegt, en dat je zelf kiest over aanraken.',
-  'r.l.start.3: Je durft te zeggen dat je iets niet snapt, en je checkt het door terug te zeggen.',
-  'r.l.contract.2: Je weet wat een proeftijd is, en wat er gebeurt aan het eind van een tijdelijk contract.',
-  'r.l.tijd.1: Je kent de grenzen voor werktijden, ook voor jongeren, en je weet dat het rooster op tijd moet komen.',
-  'r.l.tijd.4: Je vraagt vrij op tijd en op papier, en je weet wat je doet bij een noodgeval.',
-  'r.l.ziek.1: Je meldt je zelf ziek, op tijd, en je weet wat je wel en niet hoeft te zeggen.',
-  'r.l.ziek.3: Je weet wat de bedrijfsarts doet, dat je meewerkt aan herstel, en dat je je beter meldt.',
-  'r.l.samen.4: Je kent de gewoontes bij koffie en verjaardagen, en de regels voor je telefoon en de groepsapp.',
-  'r.l.rechten.2: Je herkent gedrag dat over je grens gaat, je zegt stop, en je weet bij wie je terechtkunt.',
-  'r.l.rechten.3: Je herkent de signalen van uitbuiting en van een geldezel-trucje, en je weet waar je hulp krijgt.',
-  // The goals of the Entree additions (docs/entree-aanvulling.md), word for word as well.
-  'r.l.afronden.2: Je ruimt je werkplek op, je laat je werk nakijken, en je zegt wat klaar is en wat niet.',
-  'r.l.stage.2: Je vraagt om feedback, je doet er iets mee, en je weet wat je doet met je beoordeling.',
-  'r.l.stage.3: Je weet wat je doet als je ziek bent, als je weinig leert, of als je slecht behandeld wordt.',
-  'r.l.winkel.1: Je vult vakken op de goede manier, je let op de datum, en je houdt de paden vrij.',
-  'r.l.winkel.3: Je vraagt een ID bij alcohol en tabak, je telt wisselgeld goed, en je blijft rustig bij een klacht.',
-  'r.l.digitaal.1: Je weet wat DigiD is, je houdt het voor jezelf, en je logt uit op een gedeelde computer.',
-  'r.l.digitaal.2: Je maakt een sterk wachtwoord, je herkent een nepbericht, en je meldt het als je toch klikte.',
-  'r.l.meedoen.1: Je weet wat de gemeenteraad en de Tweede Kamer doen, en wie voor welke verkiezing mag stemmen.',
-  'r.l.meedoen.2: Je kent een paar grondrechten, en je weet dat ze voor iedereen gelden, ook buiten je werk.',
-  'r.l.meedoen.3: Je weet wat de politie en de rechter doen, en een paar rechten en plichten die je hebt.',
-  'r.l.duurzaam.1: Je scheidt afval zoals het op je werk hoort, en gevaarlijk afval gooi je nooit bij het gewone afval.',
-];
+const LONG_SENTENCE_OK: string[] = [];
 
-/** Steps that may name a year: the uitzend-cao started on 1 January 2026 (les 3.3). */
-const YEAR_OK = new Set(['r.l.contract.3.tf2']);
+/** Steps that may name a year. None now: les 3.3 states the equal-pay rule without a date. */
+const YEAR_OK = new Set<string>([]);
 
 /** The 10 pocket-card lines (curriculum, deel 4), and one per Entree unit (entree-aanvulling.md). */
 const KEY_RULES = [
@@ -196,6 +170,13 @@ describe('rules content: lessons and steps', () => {
     const slips = steps.filter((s): s is Extract<RuleStep, { kind: 'payslip' }> => s.kind === 'payslip');
     expect(slips.map((s) => s.id)).toEqual(['r.l.loon.2.ps1']);
     for (const s of slips) expect(s.slip.rows.map((r) => r.field), s.id).toContain(s.highlight);
+    // The missing gross wage adds up from the slip's own rows: (hours counted - hours on the slip) x wage.
+    const num = (t: string) => Number(t.match(/\d+(?:\.\d{3})*/)![0].replace(/\./g, ''));
+    const [slip] = slips;
+    const field = (f: string) => num(slip.slip.rows.find((r) => r.field === f)!.value);
+    const best = num(slip.options.find((o) => o.best)!.text);
+    expect(best).toBe((num(slip.question) - field('uren')) * field('uurloon'));
+    expect(new Set(slip.options.map((o) => num(o.text))).size).toBe(slip.options.length);
   });
 
   it('does not make the best answer the longest option in more than half of the steps', () => {
@@ -266,6 +247,11 @@ describe('rules content: plain Dutch', () => {
     expect(long.filter((l) => !LONG_SENTENCE_OK.includes(l))).toEqual([]);
     // The warn-list holds only sentences that are still too long.
     for (const ok of LONG_SENTENCE_OK) expect(long, ok).toContain(ok);
+  });
+
+  it('keeps every sentence of a lesson goal at 15 words or fewer', () => {
+    const long = lessons.flatMap((l) => sentencesOf(l.goal).filter((s) => wordCount(s) > 15).map((s) => `${l.id}: ${s}`));
+    expect(long).toEqual([]);
   });
 
   it('never uses the name Ali', () => {

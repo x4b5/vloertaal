@@ -16,7 +16,7 @@ export const rechtenUnit: RuleUnit = {
       // Les 9.1 · Discriminatie
       id: 'r.l.rechten.1',
       title: 'Discriminatie',
-      goal: 'Je herkent discriminatie bij solliciteren en op het werk, en je weet hoe je het meldt.',
+      goal: 'Je herkent discriminatie bij solliciteren en op het werk. Je weet hoe je het meldt.',
       remember: 'Discriminatie is verboden. Schrijf het op en meld het.',
       // Wie kan je helpen: discriminatie.nl (een meldpunt in je regio) · het College voor de
       //   Rechten van de Mens · de vertrouwenspersoon, als je bedrijf die heeft · een vakbond · het
@@ -96,7 +96,7 @@ export const rechtenUnit: RuleUnit = {
       // Les 9.2 · Grensoverschrijdend gedrag
       id: 'r.l.rechten.2',
       title: 'Grensoverschrijdend gedrag',
-      goal: 'Je herkent gedrag dat over je grens gaat, je zegt stop, en je weet bij wie je terechtkunt.',
+      goal: 'Je herkent gedrag dat over je grens gaat, en je zegt stop. Je weet bij wie je terechtkunt.',
       remember: 'Het gaat om hoe het voor jou voelt, niet om de grap.',
       // Wie kan je helpen: de vertrouwenspersoon, als je bedrijf die heeft · je leidinggevende of
       //   HR · de Nederlandse Arbeidsinspectie · bij aanranding of verkrachting: de politie of het
@@ -178,7 +178,7 @@ export const rechtenUnit: RuleUnit = {
       // Les 9.3 · Uitbuiting en oplichting
       id: 'r.l.rechten.3',
       title: 'Uitbuiting en oplichting',
-      goal: 'Je herkent de signalen van uitbuiting en van een geldezel-trucje, en je weet waar je hulp krijgt.',
+      goal: 'Je herkent de signalen van uitbuiting en van een geldezel-trucje. Je weet waar je hulp krijgt.',
       remember: 'Je paspoort en je bankpas geef je nooit af.',
       // Wie kan je helpen: de Nederlandse Arbeidsinspectie (melden kan zonder je naam) · Meld
       //   Misdaad Anoniem: 0800-7000 ⚖️ · de politie · bij gevaar: 112 · FairWork · een vakbond ·
@@ -278,7 +278,8 @@ export const rechtenUnit: RuleUnit = {
             'Het papier heet een vaststellingsovereenkomst.',
           ],
         },
-        // ⚖️ check: Je kunt meestal binnen 14 dagen ⚖️ na het tekenen nog stoppen.
+        // ⚖️ check: Staat er iets verkeerd in? Dan kun je je WW kwijtraken ⚖️.
+        // ⚖️ check: Binnen 14 dagen ⚖️ na het tekenen mag je je nog bedenken (art. 7:670b BW).
         // ⚖️ check: Je baas heeft meestal toestemming nodig van UWV of de rechter ⚖️.
         {
           kind: 'rule',
@@ -286,9 +287,9 @@ export const rechtenUnit: RuleUnit = {
           emoji: '🖊️',
           title: 'Teken nooit iets over ontslag zonder advies.',
           body: [
-            'Als je tekent, kun je rechten verliezen. Bijvoorbeeld je WW.',
+            'Staat er iets verkeerd in? Dan kun je je WW kwijtraken.',
             'Om tijd vragen is normaal.',
-            'Je kunt meestal binnen 14 dagen na het tekenen nog stoppen.',
+            'Binnen 14 dagen na het tekenen mag je je nog bedenken.',
             'Je baas heeft meestal toestemming nodig van UWV of de rechter.',
           ],
           rule: 'geschreven',
@@ -303,16 +304,16 @@ export const rechtenUnit: RuleUnit = {
             { id: 'b', text: 'Ze vraagt tijd, en ze laat het papier eerst nakijken.', best: true, feedback: 'Goed. Daar heeft ze recht op.' },
             { id: 'c', text: 'Ze tekent, en ze schrijft erbij dat ze twijfelt.', best: false, feedback: 'Dan heeft ze toch getekend. Twijfel erbij schrijven helpt niet.' },
           ],
-          why: 'Een vaststellingsovereenkomst is een afspraak om je baan samen te stoppen. Als je tekent, kun je rechten verliezen. Bijvoorbeeld je WW. Vraag eerst advies. Om tijd vragen is normaal.',
+          why: 'Een vaststellingsovereenkomst is een afspraak om je baan samen te stoppen. Staat er iets verkeerd in? Dan kun je je WW kwijtraken. Vraag eerst advies. Om tijd vragen is normaal.',
         },
-        // ⚖️ check: Je kunt meestal binnen 14 dagen ⚖️ na het tekenen nog stoppen.
-        // ⚖️ check: Staat die termijn niet in het papier? Dan heb je 3 weken ⚖️.
+        // ⚖️ check: Binnen 14 dagen ⚖️ na het tekenen mag je je nog bedenken.
+        // ⚖️ check: Staat die termijn niet in het papier? Dan heb je 3 weken ⚖️ (art. 7:670b lid 2 BW).
         {
           kind: 'truefalse',
           id: 'r.l.rechten.4.tf1',
           statement: 'Heb je toch getekend? Dan kun je het nooit meer terugdraaien.',
           answer: false,
-          why: 'Je kunt meestal binnen 14 dagen na het tekenen nog stoppen. Doe dat op papier of per mail. Staat die termijn niet in het papier? Dan heb je 3 weken.',
+          why: 'Binnen 14 dagen na het tekenen mag je je nog bedenken. Doe dat op papier of per mail. Staat die termijn niet in het papier? Dan heb je 3 weken.',
         },
         // ⚖️ check: Je baas heeft meestal toestemming nodig van UWV of de rechter ⚖️.
         // ⚖️ check: Bij ontslag krijg je vaak geld mee: de transitievergoeding ⚖️.

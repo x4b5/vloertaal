@@ -19,7 +19,7 @@ export const afrondenUnit: RuleUnit = {
       // Les 13.1 · Een werkbon lezen en voorbereiden
       id: 'r.l.afronden.1',
       title: 'Een werkbon lezen en voorbereiden',
-      goal: 'Je leest een werkbon, je vraagt wat je niet snapt, en je legt je spullen klaar.',
+      goal: 'Je leest een werkbon en je vraagt wat je niet snapt. Je legt je spullen klaar.',
       remember: 'Eerst lezen, vragen en klaarleggen. Dan pas beginnen.',
       steps: [
         {
@@ -92,7 +92,7 @@ export const afrondenUnit: RuleUnit = {
       // Les 13.2 · Opruimen, laten controleren en afmelden
       id: 'r.l.afronden.2',
       title: 'Opruimen, laten controleren en afmelden',
-      goal: 'Je ruimt je werkplek op, je laat je werk nakijken, en je zegt wat klaar is en wat niet.',
+      goal: 'Je ruimt je werkplek op en je laat je werk nakijken. Je zegt wat klaar is en wat niet.',
       remember: 'Klaar? Ruim op, laat het nakijken, en zeg wat klaar is en wat niet.',
       steps: [
         {

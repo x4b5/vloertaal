@@ -33,6 +33,7 @@ export const UPDATES: Update[] = [
       'Alle gratis lessen gedaan? Dan staat op het beginscherm een grote gele kaart naar de volledige versie. De code is gratis, en de mail om er een te vragen is al geschreven.',
       'Bram zegt niet meer "tot morgen" als er nog woorden te herhalen zijn.',
       'Zin bouwen: elk fout stukje staat er na de zin nog één keer, niet bij elke tik opnieuw.',
+      'Werkregels: meer uitleg over uitzendwerk, oproepwerk, je contract en vakantie aanvragen.',
     ],
   },
   {

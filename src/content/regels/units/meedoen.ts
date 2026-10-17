@@ -21,7 +21,7 @@ export const meedoenUnit: RuleUnit = {
       // Les 16.1 · Hoe Nederland bestuurd wordt, en stemmen
       id: 'r.l.meedoen.1',
       title: 'Hoe Nederland bestuurd wordt, en stemmen',
-      goal: 'Je weet wat de gemeenteraad en de Tweede Kamer doen, en wie voor welke verkiezing mag stemmen.',
+      goal: 'Je weet wat de gemeenteraad en de Tweede Kamer doen. Je weet wie voor welke verkiezing mag stemmen.',
       remember: 'Of je mag stemmen, hangt af van de verkiezing en je nationaliteit. Vraag het de gemeente.',
       // Wie kan je helpen: de gemeente · rijksoverheid.nl (verkiezingen) · ProDemos, voor neutrale
       //   uitleg over politiek ⚖️.
@@ -106,7 +106,7 @@ export const meedoenUnit: RuleUnit = {
       // Les 16.2 · Grondrechten en gelijke behandeling
       id: 'r.l.meedoen.2',
       title: 'Grondrechten en gelijke behandeling',
-      goal: 'Je kent een paar grondrechten, en je weet dat ze voor iedereen gelden, ook buiten je werk.',
+      goal: 'Je kent een paar grondrechten. Je weet dat ze voor iedereen gelden, ook buiten je werk.',
       remember: 'Iedereen heeft dezelfde rechten. Discriminatie mag niet, ook niet buiten je werk.',
       // Wie kan je helpen: discriminatie.nl · het College voor de Rechten van de Mens · het
       //   Juridisch Loket · bij bedreiging: de politie.
@@ -191,7 +191,7 @@ export const meedoenUnit: RuleUnit = {
       // Les 16.3 · Recht en plicht: politie, rechter, bezwaar
       id: 'r.l.meedoen.3',
       title: 'Recht en plicht: politie, rechter, bezwaar',
-      goal: 'Je weet wat de politie en de rechter doen, en een paar rechten en plichten die je hebt.',
+      goal: 'Je weet wat de politie en de rechter doen. Je kent een paar rechten en plichten die je hebt.',
       remember: 'De wet geldt voor iedereen. Oneens met een besluit? Maak op tijd bezwaar.',
       // Wie kan je helpen: het Juridisch Loket · de politie: 112 bij spoed, het nummer zonder spoed
       //   ⚖️ (the one in help.ts, still to check) · een advocaat (soms betaalt de overheid mee ⚖️).

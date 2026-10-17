@@ -16,7 +16,7 @@ export const digitaalUnit: RuleUnit = {
       // Les 15.1 · DigiD en inloggen
       id: 'r.l.digitaal.1',
       title: 'DigiD en inloggen',
-      goal: 'Je weet wat DigiD is, je houdt het voor jezelf, en je logt uit op een gedeelde computer.',
+      goal: 'Je weet wat DigiD is, en je houdt het voor jezelf. Je logt uit op een gedeelde computer.',
       remember: 'Je DigiD is alleen van jou. Geef hem aan niemand.',
       // Wie kan je helpen: de bibliotheek (Informatiepunt Digitale Overheid) · de helpdesk van
       //   DigiD ⚖️ · de gemeente.
@@ -98,7 +98,7 @@ export const digitaalUnit: RuleUnit = {
       // Les 15.2 · Veilig wachtwoord en phishing
       id: 'r.l.digitaal.2',
       title: 'Veilig wachtwoord en phishing',
-      goal: 'Je maakt een sterk wachtwoord, je herkent een nepbericht, en je meldt het als je toch klikte.',
+      goal: 'Je maakt een sterk wachtwoord en je herkent een nepbericht. Klikte je toch? Dan meld je het.',
       remember: 'Haast en een knop? Niet klikken. Ga zelf naar de echte app.',
       // Wie kan je helpen: je leidinggevende of de ICT-afdeling · je bank · fraudehelpdesk.nl ·
       //   veiliginternetten.nl.
