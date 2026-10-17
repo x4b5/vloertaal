@@ -569,3 +569,8 @@ En `c.ww.b`: "binnen een week na je eerste dag zonder werk" (was: "na je laatste
 En twee foute antwoorden die nu geloofwaardig zijn: `c.direct.o3` ("Niets zeggen en de doos laten staan") en `c.gethelp.o3` ("Zeg dat hij moet wachten tot zijn contract afloopt").
 En `a.contact.b` (Over, "Vraag of fout?") heeft een zin erbij: in een les kun je ook bovenaan op het vlaggetje "Melden" tikken, dan staat in de mail al waar je bent. Het woord "Melden" blijft Nederlands (zo staat het op de knop).
 En `startFree` (de codepagina, "Geen code? Begin met de eerste lessen"): vervangt `tryLesson` en `trialDone`. Zonder code krijg je nu de sneak preview, de eerste les van elk thema.
+
+## Nieuw 17 oktober 2026: een code vragen, en wat de app telt (alle talen)
+
+- `unlockHint` (de kaart "Volledige versie" bij Instellingen en bij een onderwerp op slot) is herschreven: "Met de code gaan alle lessen open. Nog geen code? Vraag het je docent of coach, of mail ons:". Het mailadres staat eronder. Het oude "alleen het eerste onderwerp is open" klopte niet meer voor de sneak preview.
+- `countHint` (Instellingen, "Anoniem meetellen") zegt nu ook dat de app ongeveer telt hoe lang lessen duren.

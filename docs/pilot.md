@@ -106,11 +106,13 @@ vloertaal.goatcounter.com). Er zijn geen cookies, geen account en geen namen.
 | App geopend | hoogstens één keer per dag per telefoon |
 | Les gestart | bij elke les (of herhaling van de dag) die begint |
 | Les gestopt | als iemand op ✕ → Stoppen tikt, met het kwart van de les waarin dat was (q1 tot q4) |
-| Les afgerond | bij elke afgeronde les |
-| Herhaling afgerond | bij elke afgeronde herhaling van de dag |
+| Les afgerond | bij elke afgeronde les, met hoe lang ongeveer (`t0-2`, `t2-5`, `t5-10`, `t10plus` minuten; de tijd dat de app weg was telt niet) |
+| Herhaling afgerond | bij elke afgeronde herhaling van de dag, ook met de minuten |
 | Unit afgerond | bij elk afgerond onderwerp |
+| Code ingevuld | als iemand een code voor de volledige versie invult (`unlock`), met de versie daarvoor: `access-sample` (na de sneak preview) of `access-none` (meteen op de codepagina) |
 
-Elk van deze getallen is er ook **per hulptaal** en **per sector**. Gestart, gestopt en afgerond
+Elk van deze getallen is er ook **per hulptaal**, **per sector** en **per versie** (`access-sample`
+is de sneak preview zonder code, `access-full` de volledige versie). Gestart, gestopt en afgerond
 zijn er ook **per les** (in GoatCounter: `/e/lesson-start/lesson/l-cv`). Elke maat telt apart: u
 ziet hoe vaak les `l-cv` begon, en hoe vaak in het Pools werd begonnen, maar niet hoe vaak les
 `l-cv` in het Pools begon. Er wordt **niets per persoon** geteld: geen tijdstip per persoon, geen
@@ -121,6 +123,12 @@ toestel-id. Er wordt niets geteld als de leerling „Anoniem meetellen” uitzet
 vaak maar wordt hij weinig afgerond, dan is die les te lang of te moeilijk. Bij gestopt zie je ook
 waar: `q1` is in het eerste kwart, `q4` vlak voor het eind. Wie de app gewoon wegklikt, telt niet
 als gestopt; dat zie je alleen aan het verschil tussen gestart en afgerond.
+
+**Welke les duurt te lang?** Kijk per les bij afgerond naar de minuten
+(`/e/lesson-done/lesson/l-cv/t10plus`). Duurt een les vaak meer dan 10 minuten, dan is hij te lang.
+
+**Hoeveel mensen kijken alleen, en hoeveel vragen een code?** Vergelijk `/e/open/access-sample` (de
+sneak preview geopend) met `/e/unlock/access-sample` (daarna een code ingevuld).
 
 **Wat dit betekent voor de pilot:**
 

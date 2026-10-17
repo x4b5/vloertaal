@@ -49,7 +49,7 @@ export const uiNl: Record<UiKey, UiText> = {
   stopLesson: 'Les stoppen',
   fullVersion: 'Volledige versie',
   unlockFull: 'Volledige versie openen',
-  unlockHint: 'Nu is alleen het eerste onderwerp open. Met de code gaan alle lessen open.',
+  unlockHint: 'Met de code gaan alle lessen open. Nog geen code? Vraag het je docent of coach, of mail ons:',
   password: 'Code',
   enterPassword: 'Wat is de code?',
   wrongPassword: 'Deze code klopt niet. Probeer het nog een keer.',
@@ -189,7 +189,7 @@ export const uiNl: Record<UiKey, UiText> = {
   wordsUnit: 'regels', // regels
   backToLesson: 'Terug naar de les',
   countTitle: 'Anoniem meetellen',
-  countHint: 'De app telt hoe vaak lessen worden gedaan. Geen naam, geen account. Niemand volgt je.',
+  countHint: 'De app telt hoe vaak lessen worden gedaan, en ongeveer hoe lang ze duren. Geen naam, geen account. Niemand volgt je.',
   certificate: 'Certificaat',
   myCertificates: 'Mijn certificaten',
   certsEmpty: 'Maak alle lessen van een onderwerp af. Dan krijg je een certificaat.',

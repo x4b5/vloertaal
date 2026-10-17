@@ -69,8 +69,10 @@ Hulptalen in het spoor Taal:
 - **Echte stemmen** (ElevenLabs, 1389 opnames); zonder opname leest de telefoonstem voor.
 - **Privacy**:
   - geen account en geen cookies; voortgang alleen op het toestel;
-  - alleen een anonieme telling (GoatCounter): app geopend, les gestart, gestopt en afgerond, per
-    hulptaal, per sector en per les, elk apart. Respecteert Do Not Track, uit te zetten;
+  - alleen een anonieme telling (GoatCounter): app geopend, les gestart, gestopt en afgerond (met
+    hoe lang ongeveer: 0–2, 2–5, 5–10 of meer dan 10 minuten), en een code ingevuld. Per hulptaal,
+    per sector, per versie (sneak preview of volledig) en per les, elk apart. Respecteert Do Not
+    Track, uit te zetten;
   - de microfoon slaat niets op.
 - **Offline**: met "Lessen op deze telefoon" staat het huidige onderwerp op de telefoon (PWA).
   Een app op het beginscherm haalt zelf een nieuwe versie op als hij weer in beeld komt. Bij
@@ -81,8 +83,9 @@ Hulptalen in het spoor Taal:
 ## Toegang
 
 Zonder code krijg je de **sneak preview**: op de codepagina staat "Geen code? Begin met de eerste
-lessen". Voor de volledige versie krijg je een code van een docent, coach of werkgever. Die vul je
-in op de codepagina, of later bij Instellingen of bij een onderwerp op slot.
+lessen". Voor de volledige versie krijg je een code van een docent, coach of werkgever, of via
+hoi@vloertaal.nl. Die vul je in op de codepagina, of later bij Instellingen of bij een onderwerp op
+slot (daar staat ook het mailadres om een code te vragen).
 
 | Niveau | Wat is open |
 |---|---|

@@ -1674,6 +1674,11 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .upgrade-title > .icon { flex: none; margin-top: 2px; }
 .upgrade-nl { font-weight: 650; font-size: 1.15rem; line-height: 1.2; }
 .upgrade-hint { margin: 0 0 12px; color: var(--muted); }
+/* Where to ask for a code: the address, one tap opens a mail with the subject filled in. */
+.upgrade-mail {
+  display: inline-flex; align-items: center; gap: 8px; margin: -4px 0 14px; padding: 6px 2px;
+  color: var(--ink); font-weight: 700; text-decoration: underline; text-underline-offset: 0.15em;
+}
 .unit-full-only .unit-head { cursor: pointer; }
 .full-only-note {
   display: flex; align-items: center; gap: 8px; width: 100%; min-height: 44px; margin: 6px 0 0; padding: 6px 0;
