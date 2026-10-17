@@ -32,6 +32,7 @@ const t: CultureTranslation = {
     'c.interview.a.why': "İş görüşmesinde iş deneyimi önemlidir.",
     'c.findwork.a.why': "Soru ne tür iş olduğunu soruyor. Bu cevap onu söylüyor.",
     'c.contract.a.why': "\"Evet\" artı saat sorusu açık ve isteklidir.",
+    'c.agency.a.why': "Soru saatlerle ilgili: evet, ne zaman ve nasıl olduğunu da söylüyor.",
     'c.bsn.a.why': "İşveren pasaport gibi bir kimlik görmek isteyebilir.",
     'c.housing.a.why': "Maaştan kesilen para yazılı olarak kabul edilmelidir.",
     'c.payslip.a.why': "Maaş bordrosundaki eksik saatler bildirilmelidir.",

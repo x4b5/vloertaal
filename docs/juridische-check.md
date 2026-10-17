@@ -1,6 +1,6 @@
 # Vloertaal: controle van de informatie over werk en rechten
 
-*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tip c.accident: 17 oktober 2026).*
+*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026).*
 
 **Terugsturen naar:** ____________________________ (naam en e-mail van de eigenaar van Vloertaal)
 
@@ -107,7 +107,7 @@ Bijna elke tip eindigt met een van deze drie vaste slotregels:
 
 | Slotregel (Engels, letterlijk) | Bij welke tips | Waarom deze |
 |---|---|---|
-| *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.accident, c.bsn, c.contract, c.diploma, c.extra, c.findwork, c.health, c.illness, c.leave, c.letters, c.payslip, c.site, c.transit, c.ww | rechten en regels uit de wet |
+| *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.accident, c.agency, c.bsn, c.contract, c.diploma, c.extra, c.findwork, c.health, c.illness, c.leave, c.letters, c.payslip, c.site, c.transit, c.ww | rechten en regels uit de wet |
 | *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.housing, c.rights, c.warning, c.gethelp | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
 | *Rules differ per company: ask your supervisor what the rules are where you work.* | c.callin, c.clock, c.hygiene, c.line, c.privacy, c.smoking | huisregels |
 | (geen slotregel) | c.bike, c.boundaries, c.certs, c.doctor, c.gear, c.gossip, c.interview, c.respect, c.unsafe | gedragstips; sommige noemen zelf een loket |
@@ -369,6 +369,48 @@ ______________________________________________________________
 - It says: "Proeftijd: 1 maand".
 
 **Onze eigen vraag hierbij:** Is de 3-urenregel goed genoeg samengevat met "usually"? En is er in 2026 al nieuwe wetgeving over oproep- en uitzendwerk van kracht, of op korte termijn te verwachten, die deze tekst raakt?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.agency — Your agency is your employer
+
+*Unit „Werk en contract”, les „Working through an agency” (`l.agency`), nieuw 17 oktober 2026*
+
+**Samenvatting (NL):** Werk je via een uitzendbureau, dan is het uitzendbureau je werkgever, niet het bedrijf waar je werkt; je contract en je loon komen van het uitzendbureau; er is een cao voor uitzendkrachten (uitzend-cao); je krijgt ook vakantiegeld en bouwt vakantiedagen op; houd zelf je gewerkte uren bij en controleer ze op je loonstrook. Situatie: op de loonstrook 32 uur, gewerkt 38: laat je eigen urenlijst aan de intercedent zien en vraag om correctie.
+
+**Tekst (Engels, wordt vertaald):**
+
+> If you work through a temp agency (uitzendbureau), the agency is your employer, not the company where you work. Your contract and your pay come from the agency, and there is a cao for temp workers (uitzend-cao). You also get holiday pay (vakantiegeld) and you build up days off. Keep your own list of the hours you worked, and check them on your payslip.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Zeg het zo (Nederlands):** „Op mijn loonstrook staan te weinig uren.” — *My payslip shows too few hours.*
+
+**Situatie in de les:** Your payslip shows 32 hours, but you worked 38. What do you do?  
+**Goede antwoord:** Show your own list of hours to your contact at the agency (intercedent) and ask to correct it.  
+**Uitleg na het antwoord (`c.agency.w`):** The agency pays you, so the agency must correct the mistake. Your own list of dates and hours helps. Asking about it is your right.
+
+**Uitleg bij het gesprekje (`c.agency.a.why`):** „Heb je je uren doorgegeven?” → „Ja, gisteren in de app.”: Asked about the hours: yes, and it says when and how.
+
+**⚠ Getallen en termijnen:** geen wettelijke getallen in de tip. De getallen in de situatie (32 en 38 uur, het verschil van 6 uur) zijn een voorbeeld. Bewust weggelaten: het percentage vakantiegeld (staat al in c.extra), fasen en weken van de uitzend-cao, namen van organisaties.
+
+**Onze eigen vraag hierbij:**
+- „The agency is your employer, not the company where you work”: wij gaan uit van de uitzendovereenkomst (art. 7:690 BW), waarin het uitzendbureau de werkgever is. Klopt dit zonder voorbehoud voor alle uitzendkrachten, ook bij payrolling en bij detachering via een bureau? Moet er „usually” bij?
+- „There is a cao for temp workers (uitzend-cao)”: wij noemen bewust geen naam of organisatie (sinds 2026 één cao voor uitzendkrachten? Zie ook de ⚖️-noot in `src/content/regels/units/contract.ts`). Geldt deze cao voor (vrijwel) elk uitzendbureau, of zijn er bureaus met een eigen cao, zodat „there is a cao for temp workers” misleidend is?
+- „You also get holiday pay (vakantiegeld) and you build up days off”: klopt dit zonder voorbehoud? Uitzendbureaus reserveren vakantiegeld en vakantiedagen vaak en betalen ze soms per week of bij het einde van de opdracht uit. Moeten we iets zeggen over het uitbetalen van vakantiedagen (het wettelijke minimum mag tijdens het dienstverband meestal niet worden uitbetaald)?
+- De goede keuze laat de uitzendkracht naar de intercedent gaan, niet naar de leidinggevende bij het inlenende bedrijf. Is dat het juiste eerste loket voor fouten in de uren, ook als het bedrijf de uren goedkeurt?
+- „Asking about it is your right” (zoals `c.payslip.w`): houdbaar?
 
 **Oordeel deskundige:**
 

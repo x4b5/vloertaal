@@ -35,7 +35,7 @@ Hulptalen in het spoor Taal:
 ## Wat zit erin
 
 **Spoor Taal**
-- **31 onderwerpen, 100 lessen** (414 woorden, 207 zinnen, 130 gesprekjes), in **8 thema's**:
+- **31 onderwerpen, 101 lessen** (420 woorden, 210 zinnen, 131 gesprekjes), in **8 thema's**:
   Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland en
   Jouw sector (Logistiek, Bouw, Productie, Zorg, Horeca, Schoonmaak).
 - Ook: **Klanken** (woordparen als man/maan, pak/bak), **Uitdrukkingen en gezegden** (daarna komt
@@ -43,7 +43,7 @@ Hulptalen in het spoor Taal:
 - **Oefeningen**: nieuw woord met plaatje en uitspraak, betekenis kiezen, Nederlands woord kiezen,
   luisteren, paren verbinden, zin bouwen (later op het gehoor), typen, gesprekken en spreken
   (opnemen en vergelijken). Latere onderwerpen worden stap voor stap moeilijker.
-- **Werkvloer-tips** (66): hoe het hier gaat op het werk, en je rechten, met een verwijzing naar
+- **Werkvloer-tips** (67): hoe het hier gaat op het werk, en je rechten, met een verwijzing naar
   vakbond, Juridisch Loket of FairWork bij uitbuiting.
 
 **Spoor Werkregels** (bèta, alleen Nederlands)

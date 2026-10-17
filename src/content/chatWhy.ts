@@ -24,6 +24,7 @@ const reasons: Record<string, string> = {
   'c.interview.a': 'In a job interview, work experience is what counts.',
   'c.findwork.a': 'The question asks what work. This reply names it.',
   'c.contract.a': 'A yes plus a question about the time is clear and keen.',
+  'c.agency.a': 'Asked about the hours: yes, and it says when and how.',
   'c.bsn.a': 'An employer may ask to see an ID, such as a passport.',
   'c.housing.a': 'Money taken off the pay must be agreed on paper.',
   'c.payslip.a': 'Missing hours on a payslip must be reported.',

@@ -32,6 +32,7 @@ const t: CultureTranslation = {
     'c.interview.a.why': "La un interviu de angajare contează experiența de muncă.",
     'c.findwork.a.why': "Întrebarea e ce fel de muncă. Acest răspuns o numește.",
     'c.contract.a.why': "Un „da” plus o întrebare despre oră e clar și arată interes.",
+    'c.agency.a.why': "Întrebarea e despre ore: da, și spune când și cum.",
     'c.bsn.a.why': "Angajatorul poate cere un act de identitate, de exemplu pașaportul.",
     'c.housing.a.why': "Banii reținuți din salariu trebuie conveniți în scris.",
     'c.payslip.a.why': "Orele lipsă de pe fluturașul de salariu trebuie semnalate.",
