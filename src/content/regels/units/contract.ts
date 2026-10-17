@@ -117,7 +117,7 @@ export const contractUnit: RuleUnit = {
           ],
         },
         // ⚖️ check: Je werkgever moet minstens 1 maand ⚖️ voor het einde laten weten of je contract
-        //   doorgaat (aanzegplicht, art. 7:668 BW).
+        //   doorgaat (aanzegplicht, art. 7:668 BW; alleen bij een contract van 6 maanden of langer).
         // ⚖️ check: Dat geldt bij een contract van 6 maanden of langer ⚖️.
         // ⚖️ check: Doet hij dat niet, of te laat? Dan krijg je extra geld, tot 1 maandloon ⚖️
         //   (aanzegvergoeding, art. 7:668 lid 3 en 4 BW).
@@ -128,7 +128,7 @@ export const contractUnit: RuleUnit = {
           title: 'Tijdelijk contract? Vraag op tijd of je mag blijven.',
           body: [
             'Een tijdelijk contract stopt vanzelf op de einddatum.',
-            'Je werkgever moet minstens 1 maand voor het einde laten weten of je contract doorgaat.',
+            'Duurt je contract 6 maanden of langer? Dan moet je werkgever 1 maand voor het einde laten weten of het doorgaat.',
             'Dat geldt bij een contract van 6 maanden of langer.',
             'Doet hij dat niet, of te laat? Dan krijg je extra geld, tot 1 maandloon.',
             'In de proeftijd mogen jij en de baas meteen stoppen.',
@@ -173,7 +173,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', text: 'Ze vraagt haar baas of ze na 1 juni mag blijven.', best: true, feedback: 'Goed. Dan weet ze op tijd waar ze aan toe is.' },
             { id: 'c', text: 'Ze zoekt alvast ander werk en zegt niets.', best: false, feedback: 'Slim om te zoeken. Maar vragen kan ook.' },
           ],
-          why: 'Een tijdelijk contract stopt vanzelf op de einddatum. Je werkgever moet minstens 1 maand voor het einde laten weten of je contract doorgaat. Krijg je een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je contract meestal vanzelf vast. Maar na het 3e contract mag je baas ook stoppen. Zit er meer dan 6 maanden tussen twee contracten? Dan begint de telling opnieuw. Werk je via een uitzendbureau? Dan gelden vaak andere regels. Kijk in de uitzend-cao.',
+          why: 'Een tijdelijk contract stopt vanzelf op de einddatum. Duurt je contract 6 maanden of langer? Dan moet je werkgever 1 maand voor het einde laten weten of het doorgaat. Krijg je een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je contract meestal vanzelf vast. Maar na het 3e contract mag je baas ook stoppen. Zit er meer dan 6 maanden tussen twee contracten? Dan begint de telling opnieuw. Werk je via een uitzendbureau? Dan gelden vaak andere regels. Kijk in de uitzend-cao.',
         },
         {
           kind: 'whoask',
