@@ -5,6 +5,7 @@
  * Which line (the first that fits):
  *  0. the home was never shown on this phone before     "I'm Bram, your colleague. …" (once)
  *  1. today is done (a lesson or the review)           "Done for today. See you tomorrow."
+ *     (with words still to repeat today: line 5 instead)
  *  2. the first visit today, after missed days         "Welcome back. Let's go on."
  *  3. the first visit today, with a streak of 2+       "Day N in a row."
  *  4. the first visit today                            "Good to see you."
@@ -44,6 +45,8 @@ const STREAK_FROM = 2;
 export function greetingFor(s: GreetingInput): Greeting {
   // Bram introduces himself once, on the very first home (even after a trial lesson done today).
   if (s.fresh) return { kind: 'intro' };
+  // Done today, unless today's review still waits: then Bram says that, not "see you tomorrow".
+  if (s.done && s.due > 0) return { kind: 'due', n: s.due };
   if (s.done) return { kind: 'done' };
   if (s.first) {
     if (s.missed) return { kind: 'back' };

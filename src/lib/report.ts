@@ -43,19 +43,24 @@ export function setTesterSwitch(on: boolean): boolean {
   }
 }
 
-/** Does this phone show "Iets melden"? The sneak preview always does. */
-export function testerMode(access: Access | null | undefined): boolean {
-  return access === 'sample' || testerSwitch();
+/**
+ * Does this phone show "Iets melden"? The switch decides (on by default), for every version: the
+ * sneak preview needs no code, so 'sample' says nothing about who is testing. `access` stays for
+ * the callers.
+ */
+export function testerMode(_access?: Access | null): boolean {
+  return testerSwitch();
 }
 
 /**
  * Does the first lesson with the flag explain it (a short note in Dutch, once)? For who reads
- * Dutch and came to test: the sneak preview, a phone that switched the flag on itself (?test, or
- * the switch under Over), and the work-rules track (in Dutch). Not for a learner who reads little
- * Dutch: a Dutch sentence over their first lesson is only in the way.
+ * Dutch and came to test: a phone that switched the flag on itself (?test, or the switch under
+ * Over), and the work-rules track (in Dutch). Not for a learner who reads little Dutch: a Dutch
+ * sentence over their first lesson is only in the way. (Not "the sneak preview" either: since it
+ * needs no code, every new learner has it.)
  */
-export function explainReport(access: Access | null | undefined, dutch: boolean): boolean {
-  if (access === 'sample' || dutch) return true;
+export function explainReport(_access: Access | null | undefined, dutch: boolean): boolean {
+  if (dutch) return true;
   try {
     return localStorage.getItem(KEY) === '1';
   } catch {

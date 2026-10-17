@@ -53,9 +53,11 @@ describe('sectors', () => {
     expect(isUnlocked(warehouse.lessons[0].id, {}, 'full')).toBe(true);
     expect(isUnlocked(warehouse.lessons[1].id, {}, 'full')).toBe(false);
     expect(isUnlocked(warehouse.lessons[1].id, { [warehouse.lessons[0].id]: {} }, 'full')).toBe(true);
-    // A preview still only opens the first unit.
-    expect(isUnlocked(warehouse.lessons[0].id, {}, 'preview')).toBe(false);
-    expect(isUnlocked(build.lessons[0].id, safetyDone, 'preview')).toBe(false);
+    // A preview (old code) opens the first unit and the sneak preview: the first lesson of every
+    // sector's topic, not the rest of it.
+    expect(isUnlocked(warehouse.lessons[0].id, {}, 'preview')).toBe(true);
+    expect(isUnlocked(warehouse.lessons[1].id, { [warehouse.lessons[0].id]: {} }, 'preview')).toBe(false);
+    expect(isUnlocked(build.lessons[0].id, safetyDone, 'preview')).toBe(true);
     expect(unitSector('u.build')).toBe('construction');
     expect(unitSector('u.firstday')).toBeUndefined();
   });
