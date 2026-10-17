@@ -699,7 +699,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   const rtl = lang?.dir === 'rtl';
   // The next lesson's first word with a picture, as on its card on the path.
   const nextPic = next?.id ? findLesson(next.id)?.lesson.words.find(hasPicture) : undefined;
-  const title = kind === 'daily' ? ui('reviewDone', lang) : kind === 'review' ? ui('reviewComplete', lang) : ui('lessonComplete', lang);
+  // Today's review is not the day's end (the next lesson waits): "Review finished!", not "Done for today".
+  const title = kind === 'lesson' ? ui('lessonComplete', lang) : ui('reviewComplete', lang);
   return (
     <div className="player result-screen">
       <main className="player-body result">

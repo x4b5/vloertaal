@@ -16,6 +16,12 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-17',
     items: [
+      'Een onderwerp wordt nu ook afgemaakt (met certificaat) als je elke dag eerst "Herhaal vandaag" doet.',
+      'Na het eerste onderwerp voor jouw werk komen de woorden van je eigen sector eerder, bijvoorbeeld in de zorg.',
+      'Bram zegt pas "tot morgen" na een les, niet al na de herhaling. Na een vrije dag zegt hij dat je reeks doorgaat.',
+      'In de week bovenaan staat elke dag anders, ook in het Turks, Pools, Oekraïens, Bulgaars en Roemeens.',
+      'Het vinkje in plaatjes (bij "ja", "klaar") is blauw, zodat het niet lijkt op "goed antwoord".',
+      'De herinnering in je agenda staat er nu ook in je eigen taal.',
       'Nog geen code? Bij "Volledige versie" staat nu waar je er een vraagt: bij je docent of coach, of via hoi@vloertaal.nl.',
       'De app telt nu ook, zonder naam, ongeveer hoe lang een les duurt. Zo zien we welke les te lang is.',
       'Nieuwe les bij Veiligheid: Een ongeluk melden. Met woorden als gewond, de EHBO-doos en de BHV’er.',

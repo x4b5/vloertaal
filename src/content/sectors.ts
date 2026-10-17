@@ -129,6 +129,12 @@ export function sectorPriority(sector: SectorChoice | undefined, track: Track = 
   return s ? [...ofTrack(s, track).units, ...ofTrack(s, track).focus] : [];
 }
 
+/** A sector's own unit in a track (its words: the warehouse, the building site, care …). */
+export function sectorOwnUnit(sector: SectorChoice | undefined, track: Track = 'taal'): string | undefined {
+  const s = sectors.find((x) => x.id === sector);
+  return s ? ofTrack(s, track).units[0] : undefined;
+}
+
 /** The basis unit a sector recommends first (Safety in week 1 for warehouse, building and factory work). */
 export function sectorFirstFocus(sector: SectorChoice | undefined, track: Track = 'taal'): string | undefined {
   const s = sectors.find((x) => x.id === sector);

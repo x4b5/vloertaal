@@ -743,3 +743,9 @@ Graag nakijken:
   `c.task.w`, "laten het liever twee keer zien"): duidelijk?
 - **Arabisch** `c.task.w`: "يفضّل معظم المشرفين أن يعرضوا الأمر مرتين" ("het twee keer laten
   zien"); is "يشرحوا" (uitleggen) natuurlijker?
+
+## Nieuw 17 oktober 2026 (avond): na de kritische ronde "eerste week"
+
+- `bramRested` (Bram op het beginscherm): "Gisteren was je vrije dag. Je reeks gaat door." Eerst werd een vrije dag zonder woord gebruikt.
+- `remindEvent`: de herinnering in de agenda krijgt achter de Nederlandse titel ook de hulptaal: "Tijd voor je Nederlands (10 minuten)".
+- Dari: "code" stond op de codepagina op twee manieren (کد en کود). Nu overal کد, zoals in de oudere teksten.

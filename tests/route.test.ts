@@ -88,15 +88,16 @@ describe('route: one block at a time', () => {
 describe('route: "choose next" weighs the sector', () => {
   const choices = (sector: Parameters<typeof nextChoices>[0]) => nextChoices(sector, done('u.firstday')).map((u) => u.id);
 
-  it('puts the sector\'s first focus unit first, then the next unit in course order and the sector\'s own unit', () => {
+  it('puts the sector\'s first focus unit first, then the next unit in course order and the sector\'s own unit (recommended once the focus unit is done)', () => {
     // Safety comes in week 1 for warehouse, building and factory work.
     expect(choices('logistics')).toEqual(['u.safety', 'u.help', 'u.warehouse']);
     expect(choices('construction')).toEqual(['u.safety', 'u.help', 'u.build']);
     expect(choices('production')).toEqual(['u.safety', 'u.help', 'u.factory']);
     expect(choices('cleaning')).toEqual(['u.time', 'u.help', 'u.clean']);
     expect(choices('care')).toEqual(['u.teamwork', 'u.help', 'u.care']);
-    // The focus unit done: the next unit in course order is first again.
-    expect(nextChoices('logistics', done('u.firstday', 'u.safety')).map((u) => u.id)).toEqual(['u.help', 'u.warehouse', 'u.time']);
+    // The focus unit done: the sector's own unit is recommended (the words of that work in week 1),
+    // the next unit in course order right after it.
+    expect(nextChoices('logistics', done('u.firstday', 'u.safety')).map((u) => u.id)).toEqual(['u.warehouse', 'u.help', 'u.time']);
     // The global course order is not changed (saved progress keeps its place).
     expect(coursePlan('logistics').main.slice(0, 4).map((u) => u.id)).toEqual(['u.firstday', 'u.help', 'u.tools', 'u.safety']);
     // No sector: plain course order.
@@ -111,7 +112,8 @@ describe('route: "choose next" weighs the sector', () => {
 
   it('skips weighted units that are done and fills up in course order', () => {
     expect(nextChoices('care', done('u.firstday', 'u.care', 'u.teamwork')).map((u) => u.id)).toEqual(['u.help', 'u.health', 'u.tools']);
-    expect(nextChoices('care', done('u.firstday', 'u.teamwork')).map((u) => u.id)).toEqual(['u.help', 'u.care', 'u.health']);
+    // Care: once Working together is done, the care words come first (not only after the basis units).
+    expect(nextChoices('care', done('u.firstday', 'u.teamwork')).map((u) => u.id)).toEqual(['u.care', 'u.help', 'u.health']);
   });
 });
 
@@ -139,6 +141,19 @@ describe('route: no day is only review', () => {
   const today = new Date(2026, 9, 15, 12);
   const firstday = unit('u.firstday');
   const newDone = Object.fromEntries(firstday.lessons.filter((l) => !l.id.endsWith('.mix')).map((l) => [l.id, { best: 1, times: 1 }]));
+
+  it('lets only one topic wait for its mixed review: with one waiting already, the mixed review comes now', () => {
+    // First day at work waits for its mixed review; Safety's new lessons are done too.
+    const safety = unit('u.safety');
+    const safetyNew = Object.fromEntries(safety.lessons.filter((l) => !l.id.endsWith('.mix')).map((l) => [l.id, { best: 1, times: 1 }]));
+    const both = { ...newDone, ...safetyNew };
+    expect(onlyMixLeft(safety, both)).toBe(true);
+    const input = { sector: 'logistics' as const, completed: both, currentUnit: 'u.safety', reviewDay: '2026-10-15' };
+    // Today's review is done, but First day at work already waits: Safety's mixed review is played,
+    // so the topic is finished (and its certificate earned) instead of a second one waiting.
+    expect(currentBlock(input, today, 'full')?.id).toBe('u.safety');
+    expect(routeNextLesson(input, 'full', today)?.id).toBe(safety.lessons.find((l) => l.id.endsWith('.mix'))!.id);
+  });
 
   it('knows when only the mixed review of a unit is left', () => {
     expect(onlyMixLeft(firstday, newDone)).toBe(true);

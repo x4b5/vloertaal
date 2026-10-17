@@ -62,8 +62,11 @@ export function parseTime(time: string): [number, number] {
  * 07:00 wherever the phone is), starting today if that time is still to come, else tomorrow.
  * It links back to the app and has an alert at the start.
  */
-export function reminderIcs(time: string, appUrl: string, now: Date, track: Track = 'taal'): string {
+export function reminderIcs(time: string, appUrl: string, now: Date, track: Track = 'taal', help?: string): string {
   const text = reminderText(track);
+  // The help language too (the learner may not read the Dutch yet): "Bram: tijd voor je
+  // Nederlands (10 minuten) · Czas na niderlandzki (10 minut)".
+  const title = help ? `${text.title} · ${help}` : text.title;
   const [h, m] = parseTime(time);
   const start = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m);
   if (start <= now) start.setDate(start.getDate() + 1);
@@ -84,12 +87,12 @@ export function reminderIcs(time: string, appUrl: string, now: Date, track: Trac
     `DTSTART:${local(start)}`,
     `DTEND:${local(end)}`,
     'RRULE:FREQ=DAILY',
-    `SUMMARY:${escapeText(text.title)}`,
+    `SUMMARY:${escapeText(title)}`,
     `DESCRIPTION:${escapeText(`${text.description} ${appUrl}`)}`,
     `URL:${appUrl}`,
     'BEGIN:VALARM',
     'ACTION:DISPLAY',
-    `DESCRIPTION:${escapeText(text.title)}`,
+    `DESCRIPTION:${escapeText(title)}`,
     'TRIGGER:PT0M',
     'END:VALARM',
     'END:VEVENT',

@@ -167,6 +167,7 @@ export const uiNl: Record<UiKey, UiText> = {
   backupBack: 'Je voortgang is terug.',
   cancel: 'Annuleren',
   remindTitle: 'Herinner mij elke dag',
+  remindEvent: 'Tijd voor je Nederlands (10 minuten)',
   remindHint: 'De agenda van je telefoon herinnert je. We krijgen daar niets van te zien.',
   remindBefore: 'Voor het werk',
   remindBreak: 'In de pauze',
@@ -323,6 +324,7 @@ export const uiNl: Record<UiKey, UiText> = {
   startFree: 'Geen code? Begin met de eerste lessen',
   bramHello: 'Fijn dat je er bent.',
   bramBack: 'Welkom terug. We gaan verder.',
+  bramRested: 'Gisteren was je vrije dag. Je reeks gaat door.',
   bramDueN: 'Vandaag herhaal je {n} vragen.', // regels
   bramDueOne: 'Vandaag herhaal je {n} vraag.', // regels
   bramDayN: 'Dag {n} op rij.',

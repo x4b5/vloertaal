@@ -158,6 +158,7 @@ export const uiEn = {
   backupBack: 'Your progress is back.',
   cancel: 'Cancel',
   remindTitle: 'Remind me every day',
+  remindEvent: 'Time for your Dutch (10 minutes)',
   remindHint: 'Your phone calendar reminds you. Nothing is sent to us.',
   remindBefore: 'Before work',
   remindBreak: 'In the break',
@@ -340,6 +341,7 @@ export const uiEn = {
   /* Bram, the mascot: one calm line on the home screen (src/lib/greeting.ts) and after a lesson. */
   bramHello: 'Good to see you.',
   bramBack: 'Welcome back. Let’s go on.',
+  bramRested: 'Yesterday was your free day. Your streak keeps going.',
   bramDueN: '{n} words to repeat today.',
   bramDueOne: '{n} word to repeat today.',
   bramDayN: 'Day {n} in a row.',

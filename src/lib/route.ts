@@ -1,6 +1,6 @@
 import { courseUnits, findCourseUnit, unitOfLesson } from '../content/courses';
 import { isMixLesson } from '../content/review';
-import { coursePlan, sectorFirstFocus, sectorPriority, type SectorChoice } from '../content/sectors';
+import { coursePlan, sectorFirstFocus, sectorOwnUnit, sectorPriority, type SectorChoice } from '../content/sectors';
 import type { UiCode } from '../i18n/types';
 import { trackOf, type Track } from './track';
 import type { Lesson, Unit } from '../content/types';
@@ -87,8 +87,9 @@ export function onlyMixLeft(unit: Unit, completed: Completed): boolean {
  * one. One exception, so that no day is only review: when today's "Herhaal vandaag" is done and
  * only the block's mixed review is left, the home goes on to the next block with a new lesson
  * (the recommended one). The mixed review stays on the topic page, and the block comes back
- * among the choices later. A block the learner picked when only its mixed review was left
- * (pickBlock) is never skipped.
+ * among the choices later. But only one topic waits like that: with another one waiting already,
+ * the mixed review is played (else no topic is ever finished). A block the learner picked when
+ * only its mixed review was left (pickBlock) is never skipped.
  */
 export function currentBlock(input: RouteInput, today: Date = new Date(), access?: Access): Unit | null {
   const block = blockAsSaved(input);
@@ -97,9 +98,13 @@ export function currentBlock(input: RouteInput, today: Date = new Date(), access
   // The sneak preview opens a topic at its first lesson only: after it the home goes on to the next
   // topic that is open (or, when none is left, stays here and offers the full version).
   const gated = unitAllowed(block.id, may) && !blockPlayable(block, input.completed, may);
-  const mixOnly = input.pickedUnit !== block.id && input.reviewDay === dayKey(today) && onlyMixLeft(block, input.completed);
-  if (!gated && !mixOnly) return block;
   const track = trackIn(input);
+  // At most one topic waits for its mixed review: when another one already does, this block's
+  // mixed review is played now, so topics get finished (and their certificate earned) also by a
+  // learner who does "Herhaal vandaag" every day.
+  const parked = courseUnits(track).some((u) => u.id !== block.id && started(u, input.completed) && onlyMixLeft(u, input.completed));
+  const mixOnly = !parked && input.pickedUnit !== block.id && input.reviewDay === dayKey(today) && onlyMixLeft(block, input.completed);
+  if (!gated && !mixOnly) return block;
   const next = nextChoices(input.sector, input.completed, undefined, courseUnits(track).length + 1, track, input.region)
     .find((u) => u.id !== block.id && (gated || !onlyMixLeft(u, input.completed)) && blockPlayable(u, input.completed, may));
   return next ?? block;
@@ -129,8 +134,11 @@ export function nextChoices(sector: SectorChoice | undefined, completed: Complet
   // order, the sector's own unit and the other basis units that matter most in that work; then
   // the course order. So a cleaner, a carer and a warehouse worker get different choices.
   const weighted = sectorPriority(sector, track).map((id) => open.find((u) => u.id === id)).filter((u): u is Unit => Boolean(u));
-  const focus = sectorFirstFocus(sector, track);
-  const first = open.filter((u) => u.id === focus);
+  // Recommended first: the sector's first focus unit (Safety in week 1 for warehouse, building and
+  // factory work), and once that is done the sector's own unit (the words of that work: a carer
+  // gets the care words in week 1, not only after the basis units).
+  const firsts = [sectorFirstFocus(sector, track), sectorOwnUnit(sector, track)].filter(Boolean);
+  const first = firsts.map((id) => open.find((u) => u.id === id)).filter((u): u is Unit => Boolean(u)).slice(0, 1);
   // The recommended (first) choice brings new lessons: a unit with only its mixed review left
   // still comes, but after it.
   const fresh = open.find((u) => !onlyMixLeft(u, completed));

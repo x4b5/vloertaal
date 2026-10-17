@@ -76,9 +76,19 @@ export function weekdayLetters(lang?: HelpLanguage): string[] | null {
   const locale = INTL_LOCALE[lang.code] ?? lang.code;
   try {
     if (!Intl.DateTimeFormat.supportedLocalesOf([locale]).length) return fallback;
-    const f = new Intl.DateTimeFormat(locale, { weekday: 'narrow' });
     // 5 January 2026 is a Monday.
-    return Array.from({ length: 7 }, (_, i) => f.format(new Date(2026, 0, 5 + i)));
+    const week = (weekday: 'narrow' | 'short') => {
+      const f = new Intl.DateTimeFormat(locale, { weekday });
+      return Array.from({ length: 7 }, (_, i) => f.format(new Date(2026, 0, 5 + i)).replace(/\.$/, ''));
+    };
+    // One letter, unless two days share it (Turkish P S Ç P C C P, Polish, Ukrainian,
+    // Bulgarian, Romanian): then the short names ("Pzt", "пн"), so every day can be told apart.
+    const narrow = week('narrow');
+    if (new Set(narrow).size === 7) return narrow;
+    // At most three characters, so they fit the tile ("niedz" → "nie"), as long as they stay apart.
+    const short = week('short');
+    const cut = short.map((d) => Array.from(d).slice(0, 3).join(''));
+    return new Set(cut).size === 7 ? cut : short;
   } catch {
     return fallback;
   }

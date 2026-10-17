@@ -26,6 +26,7 @@ export function greetingText(g: Greeting, lang?: HelpLanguage): Bilingual {
     case 'intro': return ui('bramIntro', lang);
     case 'done': return ui('bramDone', lang);
     case 'back': return ui('bramBack', lang);
+    case 'rested': return ui('bramRested', lang);
     case 'due': return fillCount('bramDueN', g.n ?? 0, lang);
     case 'streak': return fillCount('bramDayN', g.n ?? 0, lang);
     default: return ui('bramHello', lang);

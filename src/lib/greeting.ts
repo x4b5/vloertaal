@@ -7,6 +7,7 @@
  *  1. today is done (a lesson or the review)           "Done for today. See you tomorrow."
  *     (with words still to repeat today: line 5 instead)
  *  2. the first visit today, after missed days         "Welcome back. Let's go on."
+ *     (yesterday a free day kept the streak            "Yesterday was your free day. …")
  *  3. the first visit today, with a streak of 2+       "Day N in a row."
  *  4. the first visit today                            "Good to see you."
  *  5. later visits: words to repeat today              "N words to repeat today."
@@ -16,7 +17,7 @@
 import { daysBetween, dayKey, doneToday, currentStreak, type Progress } from './progress';
 import type { UiKey } from '../i18n/types';
 
-export type GreetingKind = 'intro' | 'hello' | 'back' | 'due' | 'streak' | 'done';
+export type GreetingKind = 'intro' | 'hello' | 'back' | 'due' | 'streak' | 'done' | 'rested';
 
 export interface GreetingInput {
   /** The home was never shown before on this phone: the very first visit ever. */
@@ -31,6 +32,8 @@ export interface GreetingInput {
   due: number;
   /** The day streak as the top bar shows it. */
   streak: number;
+  /** Yesterday was a free day (a missed day the streak kept, see settleStreak). */
+  rested?: boolean;
 }
 
 export interface Greeting {
@@ -50,6 +53,8 @@ export function greetingFor(s: GreetingInput): Greeting {
   if (s.done) return { kind: 'done' };
   if (s.first) {
     if (s.missed) return { kind: 'back' };
+    // Yesterday a free day kept the streak: say so (it was used without a word before).
+    if (s.rested) return { kind: 'rested' };
     if (s.streak >= STREAK_FROM) return { kind: 'streak', n: s.streak };
     return { kind: 'hello' };
   }
@@ -63,11 +68,14 @@ export function greetingInput(p: Progress, today: Date, due: number, first: bool
   const key = dayKey(today);
   return {
     fresh,
-    done: doneToday(p, today),
+    // A lesson done today (only today's review is not "done for today": the next lesson still
+    // waits). A save from before lessonDay: done today as before.
+    done: doneToday(p, today) && (p.lessonDay === undefined || p.lessonDay === key),
     missed: Boolean(p.lastDay && daysBetween(p.lastDay, key) >= 2),
     first,
     due,
     streak: currentStreak(p, today),
+    rested: (p.rest ?? []).some((d) => daysBetween(d, key) === 1),
   };
 }
 

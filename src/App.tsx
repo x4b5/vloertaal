@@ -28,7 +28,7 @@ import { isMixLesson } from './content/review';
 import { type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
-import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
+import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dailyRuleIds, dailyRuleLesson, dailyWordIds, dueIds, gradedStepIds, seedCards, strongerCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
@@ -580,8 +580,10 @@ export default function App() {
           kind: daily ? 'daily' : reviewing ? 'review' : 'lesson',
           repeated: daily ? found.lesson.steps?.length ?? found.lesson.words.length : reviewing ? Object.keys(results).length || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
-          // Still due after today's review (back after a long absence): they come in the next days.
-          waiting: daily ? dueIds(next.cards ?? {}, today, track).length || undefined : undefined,
+          // Still due after today's review, only for who was away 2 days or more ("they come in the
+          // next days"): a learner who practises every day and learns many words a day would read
+          // a growing number every day, as if they were behind.
+          waiting: daily && progress.lastDay && daysBetween(progress.lastDay, today) >= 2 ? dueIds(next.cards ?? {}, today, track).length || undefined : undefined,
           next: upNext?.id,
           cert: unitDone?.id,
           skipped: skipped || undefined,

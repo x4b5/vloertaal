@@ -14,6 +14,7 @@ import { installWay } from '../lib/install';
 import { offlineAuto, offlineSupported, setOfflineAuto } from '../lib/offline';
 import type { Progress, ThemeChoice } from '../lib/progress';
 import { REMINDER_TIMES, rememberReminder, reminderIcs, reminderTapAdds, reminderTime, saveFile } from '../lib/reminder';
+import { reminderHelp } from './Keep';
 import {
   settingsDepth, settingsRows, SETTINGS_LIST_PAGES, voiceChoiceOf, voiceRefs,
   type SettingsList, type SettingsPage, type VoiceChoice,
@@ -489,7 +490,7 @@ function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: 
     if (saved) return; // already on its way back
     const adds = reminderTapAdds(time, current);
     if (adds) {
-      saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, `${location.origin}${location.pathname}`, new Date(), trackOfLang(lang?.code)));
+      saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, `${location.origin}${location.pathname}`, new Date(), trackOfLang(lang?.code), reminderHelp(lang)));
       rememberReminder(time);
     }
     setSaved(time);
