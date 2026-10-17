@@ -19,7 +19,7 @@ Nederlandstalige volwassenen die weinig lezen en schrijven, en die (weer) gaan w
 
 Het lespad leert **geen Nederlands**. Het leert de **geschreven regels** (wet, contract, cao, loon,
 belasting, ziekte, veiligheid, uitkering, discriminatie) en de **ongeschreven regels** (op tijd
-komen, ziek melden per telefoon, direct zijn, koffie en verjaardagen, vragen stellen, feedback,
+komen, ziekmelden per telefoon, direct zijn, koffie en verjaardagen, vragen stellen, feedback,
 "afspraak is afspraak", de groepsapp, het oneens zijn, kleding, telefoon, persoonlijke ruimte).
 
 ### Leerdoelen
@@ -29,7 +29,7 @@ Na het lespad kan de leerling:
 1. echte vacatures herkennen, en weet: voor werk betaal je nooit;
 2. een contract eerst lezen of laten lezen, en weet wat proeftijd, tijdelijk, vast, oproep, uitzend, stage en zzp betekenen;
 3. een loonstrook globaal checken: uren, bruto en netto, vakantiegeld;
-4. zich goed ziek melden, beter melden, vrij vragen en nee zeggen tegen extra werk;
+4. zich goed ziekmelden, betermelden, vrij vragen en nee zeggen tegen extra werk;
 5. de basisregels noemen voor werktijden, pauze en veiligheid, en durft te stoppen bij gevaar;
 6. omgaan met de ongeschreven regels: op tijd, direct, afspraak is afspraak, vragen stellen, het oneens zijn;
 7. discriminatie, grensoverschrijdend gedrag en uitbuiting herkennen, en weet waar hulp is;
@@ -52,6 +52,9 @@ Daarna komt altijd het waarom. Nooit "Fout!" in het rood, nooit een strafpunt.
 de reden. De andere: rustig zeggen wat er mis kan gaan, zonder schuld ("Dit kan problemen geven",
 "Begrijpelijk, maar ...").
 
+**Regelkaart.** In de app komt na de scène een kaart met de regel van de les. Staat er hieronder een
+*Regelkaart* bij een les, dan is dat de tekst van die kaart, precies zoals in de app.
+
 ### Schrijfregels (checklist voor redactie)
 
 - Taalniveau 1F (ongeveer A2). Zinnen van hooguit ongeveer 12 woorden. Eén idee per zin.
@@ -59,7 +62,7 @@ de reden. De andere: rustig zeggen wat er mis kan gaan, zonder schuld ("Dit kan 
 - Altijd "je". Zo min mogelijk lijdende vorm.
 - Namen wisselen: Sanne, Mohammed, Kevin, Fatima, Dewi, Piotr, Esra, Jayden. Leidinggevenden: Linda, Mark, Henk. De leerling is "je", nooit standaard één naam.
 - Rustig en volwassen. Niet kinderachtig, niet belerend, geen schuld.
-- Per vraag precies één goed antwoord. De foute antwoorden zijn geloofwaardig en ongeveer even lang. Het goede antwoord staat wisselend op plek A, B of C (telling: A 21, B 20, C 23). Bij "waar of niet waar" is het ongeveer half om half (21 waar, 23 niet waar).
+- Per vraag precies één goed antwoord. De foute antwoorden zijn geloofwaardig en ongeveer even lang. Het goede antwoord staat wisselend op plek A, B of C (telling: A 21, B 21, C 23). Bij "waar of niet waar" is het ongeveer half om half (22 waar, 22 niet waar).
 - **⚖️ is een markering voor de redactie.** Niet tonen en niet voorlezen in de app.
 - Bedragen die vaak veranderen (minimumloon, beslagvrije voet, eigen risico) noemen we niet. We zeggen: "kijk op rijksoverheid.nl".
 - Getallen als cijfers ("30 minuten"). Procent voluit ("8 procent"): dat leest de stem beter voor.
@@ -83,7 +86,7 @@ de reden. De andere: rustig zeggen wat er mis kan gaan, zonder schuld ("Dit kan 
 | 3 | Contract en soorten werk | 3.1 Je contract: wat staat erin? · 3.2 Proeftijd, tijdelijk en vast · 3.3 Oproepwerk en uitzendwerk · 3.4 Stage, leerwerkbaan en zzp |
 | 4 | Loon en loonstrook | 4.1 Bruto en netto · 4.2 Je loonstrook checken · 4.3 Vakantiegeld, toeslag en overwerk |
 | 5 | Werktijden, pauze en vrij | 5.1 Je rooster en je werktijden · 5.2 Pauze · 5.3 Overwerk en nee zeggen · 5.4 Vrij vragen en verlof |
-| 6 | Ziek zijn | 6.1 Je ziek melden · 6.2 Je rechten als je ziek bent · 6.3 Langer ziek en weer beter |
+| 6 | Ziek zijn | 6.1 Je ziekmelden · 6.2 Je rechten als je ziek bent · 6.3 Langer ziek en weer beter |
 | 7 | Veilig en gezond werken | 7.1 Beschermende spullen en uitleg · 7.2 Onveilig? Zeg het en stop · 7.3 Een ongeluk, of te veel stress |
 | 8 | Samenwerken: de ongeschreven regels | 8.1 Direct zeggen en feedback · 8.2 Het oneens zijn · 8.3 Afspraak is afspraak · 8.4 Koffie, verjaardagen en je telefoon |
 | 9 | Problemen en je rechten | 9.1 Discriminatie · 9.2 Grensoverschrijdend gedrag · 9.3 Uitbuiting en oplichting · 9.4 Ontslag en het einde van je baan |
@@ -203,7 +206,7 @@ loopbaanbegeleider · de gemeente.
 
 ### Les 1.3 · Het sollicitatiegesprek
 
-**Leerdoel:** je weet wat je in een gesprek kunt vragen, en welke vragen je niet hoeft te beantwoorden.
+**Leerdoel:** je weet wat je in een gesprek kunt vragen. Je weet ook welke vragen je niet hoeft te beantwoorden.
 
 **Scène** · *Beeld: Mohammed in een klein kantoor van een bakkerij. Tegenover hem zit Linda met een map.*
 
@@ -309,12 +312,18 @@ iemand die je vertrouwt.
 
 ### Les 2.1 · Op tijd en goed voorbereid
 
-**Leerdoel:** je weet wat je meeneemt, wat "op tijd" hier betekent, en wat je doet als je te laat bent.
+**Leerdoel:** je weet wat je meeneemt en wat "op tijd" hier betekent. Je weet wat je doet als je te laat bent.
 
 **Scène** · *Beeld: Dewi bij de voordeur. In haar hand: een tas, haar ID-kaart en een broodtrommel.*
 
 > Dewi begint morgen in een verzorgingshuis. Haar dienst begint om 7 uur. Ze zet twee wekkers. Ze
 > wil om kwart voor 7 binnen zijn. Wat neemt ze mee?
+
+**Regelkaart** · 📞 *Te laat? Bel of app vóór je dienst begint.*
+
+- Laat het weten vóór je dienst begint.
+- Dan kan het team plannen.
+- Te laat, zonder bericht? Dat vinden mensen hier erger dan de vertraging zelf.
 
 **Vraag 1 · Wat doe je?** Wat neemt Dewi mee op haar eerste dag?
 
@@ -339,8 +348,8 @@ nodig. Je BSN is je burgerservicenummer. Het staat op je ID-kaart. Je ID geef je
   → *Goed. Dan kan het team plannen.*
 
 **Goed antwoord: C.**
-**Waarom:** Laat het weten vóór je dienst begint. Dan kan het team plannen. Te laat zonder bericht
-vinden mensen hier veel erger dan de vertraging zelf.
+**Waarom:** Laat het weten vóór je dienst begint. Dan kan het team plannen. Te laat, zonder bericht?
+Dat vinden mensen hier erger dan de vertraging zelf.
 
 **Vraag 3 · Waar of niet waar?** "Op je werk mag je altijd dragen wat je wilt."
 
@@ -356,7 +365,7 @@ moet wel een goede reden hebben ⚖️. Vraag op je eerste dag naar de regels.
 
 ### Les 2.2 · Kennismaken
 
-**Leerdoel:** je weet hoe je je voorstelt, wanneer je "je" zegt, en dat je zelf kiest over aanraken.
+**Leerdoel:** je weet hoe je je voorstelt en wanneer je "je" zegt. Je weet ook dat je zelf kiest over aanraken.
 
 **Scène** · *Beeld: Jayden in de keuken van een restaurant. Chef Sanne steekt haar hand uit.*
 
@@ -403,7 +412,7 @@ normaal.
 
 ### Les 2.3 · Vragen stellen en terugzeggen
 
-**Leerdoel:** je durft te zeggen dat je iets niet snapt, en je checkt het door terug te zeggen.
+**Leerdoel:** je durft te zeggen dat je iets niet snapt. Je checkt het door terug te zeggen.
 
 **Scène** · *Beeld: Piotr bij een machine in een fabriek. Collega Mark wijst en praat snel.*
 
@@ -461,11 +470,18 @@ stage, leerwerkbaan en zzp. Ook voor herintreders.*
 > Sanne krijgt haar eerste contract bij een supermarkt. Het zijn 4 bladzijden. Er staan moeilijke
 > woorden in. Ze ziet "proeftijd", "cao" en "12 uur per week".
 
+**Regelkaart** · 📄 *Wat op papier staat, telt. Bewaar je contract goed.*
+
+- Je werkgever laat weten wat je verdient en hoeveel uur je werkt.
+- Dat moet binnen 1 week na je eerste werkdag ⚖️, op papier of digitaal.
+- Bij ziekte, WW of ontslag kijken ze naar je contract.
+- Een cao is een afspraak over loon en regels voor jouw soort werk.
+
 **Vraag 1 · Waar of niet waar?** "Je werkgever moet de belangrijkste afspraken op papier of per mail geven."
 
 **Antwoord: waar.**
 **Waarom:** Je werkgever moet laten weten wat je verdient. En hoeveel uur je werkt. Dat moet binnen
-1 week ⚖️, op papier of digitaal. Andere afspraken volgen binnen 1 maand ⚖️. Bijvoorbeeld over vakantie en opzeggen.
+1 week na je eerste werkdag ⚖️, op papier of digitaal. Andere afspraken volgen binnen 1 maand ⚖️. Bijvoorbeeld over vakantie en opzeggen.
 
 **Vraag 2 · Wat doe je?** Sanne snapt het woord "cao" niet.
 
@@ -490,7 +506,7 @@ online. Zoek op "cao" en de naam van je sector.
   → *Goed. Wat op papier staat, telt.*
 
 **Goed antwoord: C.**
-**Waarom:** Bij ziekte, WW of ontslag kijkt men naar je contract. Werk je lange tijd meer uren? Dan
+**Waarom:** Bij ziekte, WW of ontslag kijken ze naar je contract. Werk je lange tijd meer uren? Dan
 kun je vragen om die uren in je contract ⚖️.
 
 **Zo zeg je het:** "Kunt u de afspraak over mijn uren in het contract zetten?"
@@ -503,13 +519,21 @@ kun je vragen om die uren in je contract ⚖️.
 
 ### Les 3.2 · Proeftijd, tijdelijk en vast
 
-**Leerdoel:** je weet wat een proeftijd is, en wat er gebeurt aan het eind van een tijdelijk contract.
+**Leerdoel:** je weet wat een proeftijd is. Je weet wat er gebeurt aan het eind van een tijdelijk contract.
 
 **Scène** · *Beeld: Mohammed bij een kalender. Er staat een rood rondje om een datum.*
 
 > Mohammed heeft een contract voor 1 jaar. Er staat 1 maand proeftijd in. Een proeftijd is een
 > periode om te kijken of het werk past. Na 3 weken zegt zijn baas: "Het past niet. Je kunt morgen
 > stoppen."
+
+**Regelkaart** · 📅 *Tijdelijk contract? Vraag op tijd of je mag blijven.*
+
+- Een tijdelijk contract stopt vanzelf op de einddatum.
+- Duurt je contract 6 maanden of langer? Dan moet je werkgever 1 maand ⚖️ voor het einde laten weten of het doorgaat.
+- Dat geldt bij een contract van 6 maanden of langer ⚖️.
+- Doet hij dat niet, of te laat? Dan krijg je extra geld, tot 1 maandloon ⚖️.
+- In de proeftijd mogen jij en de baas meteen stoppen.
 
 **Vraag 1 · Waar of niet waar?** "In de proeftijd mag de baas je meteen laten stoppen."
 
@@ -534,10 +558,12 @@ Dan hooguit 2 maanden ⚖️.
   → *Slim om te zoeken. Maar vragen kan ook.*
 
 **Goed antwoord: B.**
-**Waarom:** Een tijdelijk contract stopt vanzelf op de einddatum. Je werkgever moet 1 maand ⚖️ van
-tevoren laten weten of je mag blijven. Dat geldt bij een contract van 6 maanden of langer ⚖️. Krijg je
+**Waarom:** Een tijdelijk contract stopt vanzelf op de einddatum. Duurt je contract 6 maanden of
+langer ⚖️? Dan moet je werkgever 1 maand ⚖️ voor het einde laten weten of het doorgaat. Krijg je
 een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je contract meestal vanzelf vast ⚖️.
-Maar na het 3e contract mag je baas ook stoppen.
+Maar na het 3e contract mag je baas ook stoppen. Zit er meer dan 6 maanden ⚖️ tussen twee contracten?
+Dan begint de telling opnieuw. Werk je via een uitzendbureau? Dan gelden vaak andere regels ⚖️. Kijk
+in de uitzend-cao.
 
 *Redactie: de ketenregeling verandert waarschijnlijk per 1 januari 2028 (Wet meer zekerheid
 flexwerkers). Tot die tijd geldt de regel hierboven. ⚖️*
@@ -552,12 +578,20 @@ flexwerkers). Tot die tijd geldt de regel hierboven. ⚖️*
 
 ### Les 3.3 · Oproepwerk en uitzendwerk
 
-**Leerdoel:** je kent de basisregels voor oproepwerk, en je weet wat een uitzendbureau wel en niet mag.
+**Leerdoel:** je kent de basisregels voor oproepwerk. Je weet wat een uitzendbureau wel en niet mag.
 
 **Scène** · *Beeld: Esra in een hotelgang met een schoonmaakkar. Haar telefoon gaat.*
 
 > Esra werkt als oproepkracht bij een hotel. Ze heeft een nulurencontract. Dat betekent: geen vaste
 > uren. Het hotel belt als er werk is. Vrijdag belt het hotel: "Kun je zaterdag komen?"
+
+**Regelkaart** · 📲 *Minder dan 4 dagen van tevoren opgeroepen? Je mag nee zeggen.*
+
+- Je werkgever moet je meestal minstens 4 dagen ⚖️ van tevoren oproepen. Is het later? Dan mag je nee zeggen.
+- Een cao kan die 4 dagen korter maken, maar niet korter dan 1 dag ⚖️.
+- Zegt je werkgever een oproep minder dan 4 dagen ⚖️ van tevoren af? Dan krijg je toch loon.
+- Bij een oproep krijg je meestal minstens 3 uur ⚖️ loon.
+- Werk je 12 maanden ⚖️ als oproepkracht? Dan moet je werkgever je vaste uren aanbieden.
 
 **Vraag 1 · Waar of niet waar?** "Esra moet zaterdag komen, want het hotel belt haar."
 
@@ -578,12 +612,11 @@ Dan mag je nee zeggen. Een cao kan die 4 dagen korter maken. Maar niet korter da
 **Waarom:** Bij oproepwerk krijg je meestal minstens 3 uur ⚖️ loon per oproep. Ook als je korter
 werkt. Dat geldt bij een klein contract zonder vaste werktijden ⚖️.
 
-**Vraag 3 · Waar of niet waar?** "Via een uitzendbureau krijg je altijd minder dan je vaste collega's."
+**Vraag 3 · Waar of niet waar?** "Een uitzendkracht heeft recht op hetzelfde loon als de vaste mensen die hetzelfde werk doen."
 
-**Antwoord: niet waar.**
-**Waarom:** Sinds 2026 ⚖️ is er een nieuwe cao voor uitzendkrachten. Daarin staat: je krijgt minstens
-evenveel als vaste collega's ⚖️. Het gaat om loon, vrije dagen en pensioen samen.
-Twijfel je? Vraag het na bij het bureau.
+**Antwoord: waar.**
+**Waarom:** Dat klopt. Doe je hetzelfde werk als vaste collega's? Dan krijg je hetzelfde loon ⚖️. Zo
+staat het in de wet. Twijfel je? Vraag het na bij het bureau.
 
 *Redactie: vanaf 1 januari 2028 verdwijnt het nulurencontract voor de meeste mensen (Wet meer
 zekerheid flexwerkers). Vanaf 2028 mogen bedrijven alleen werken met toegelaten uitzendbureaus
@@ -660,12 +693,20 @@ vakantiegeld, toeslagen en overwerk.*
 > Fatima werkt in de schoonmaak. In haar contract staat een bedrag per maand. Op haar bankrekening
 > komt veel minder binnen. Is er iets fout gegaan?
 
+**Regelkaart** · 💶 *Bruto is vóór belasting. Netto krijg je op je rekening.*
+
+- Bruto is je loon vóór belasting.
+- Netto is wat je echt op je rekening krijgt.
+- Het verschil is vooral loonheffing: belasting en premie voor verzekeringen.
+- Je werkgever betaalt die voor jou aan de Belastingdienst.
+- Vaak gaat er ook geld af voor je pensioen.
+
 **Vraag 1 · Waar of niet waar?** "Bruto is het geld dat op je bankrekening komt."
 
 **Antwoord: niet waar.**
 **Waarom:** Bruto is je loon vóór belasting. Netto is wat je echt op je rekening krijgt. Het
-verschil is vooral loonheffing. Loonheffing is belasting en premie. Je werkgever betaalt die voor
-jou aan de Belastingdienst.
+verschil is vooral loonheffing. Loonheffing is belasting en premie voor verzekeringen. Je werkgever
+betaalt die voor jou aan de Belastingdienst. Vaak gaat er ook geld af voor je pensioen.
 
 **Vraag 2 · Wat doe je?** Fatima is 20. Een collega van 25 verdient meer. Ze doen hetzelfde werk.
 
@@ -705,7 +746,7 @@ rijksoverheid.nl (minimumloon) · een vakbond.
 
 ### Les 4.2 · Je loonstrook checken
 
-**Leerdoel:** je schrijft je uren op, je checkt je loonstrook, en je vraagt na wat niet klopt.
+**Leerdoel:** je schrijft je uren op en je checkt je loonstrook. Je vraagt na wat niet klopt.
 
 **Scène** · *Beeld: Piotr met een schriftje en een pen. Naast hem ligt een loonstrook.*
 
@@ -743,6 +784,19 @@ De meeste werkgevers geven elke maand een loonstrook, vaak in een app. Bewaar ze
 **Goed antwoord: A.**
 **Waarom:** Je werkgever mag niet zomaar geld van je loon afhalen. Daar moet je eerst schriftelijk
 mee instemmen ⚖️. Ook dan zijn er grenzen ⚖️. Klopt het niet? Vraag hulp.
+
+**Vraag 4 · Reken het uit.** *Loonstrook (fictief, ronde bedragen):* Maart · Gewerkte uren: 140 · Uurloon: 20 euro · Bruto loon: 2.800 euro · Loonheffing: - 400 euro · Inhouding huisvesting: - 300 euro · Netto loon: 2.100 euro · Vakantiegeld (opgebouwd): 224 euro. Piotr telde zelf 152 uur. Hoeveel bruto loon mist Piotr?
+
+- **A.** 12 euro
+  → *Nee. Hij mist 12 uur. Elk uur is 20 euro.*
+- **B.** 240 euro
+  → *Goed. 12 uur keer 20 euro is 240 euro.*
+- **C.** 3.040 euro
+  → *Nee. Dat is het loon voor alle 152 uur. Hij mist alleen het verschil.*
+
+**Goed antwoord: B.**
+**Waarom:** Op de loonstrook staat 140 uur. Piotr werkte 152 uur. Hij mist dus 12 uur. 12 keer 20 euro
+is 240 euro bruto. Vergelijk je loonstrook altijd met je eigen lijstje.
 
 **Zo zeg je het:** "Op mijn loonstrook staan 140 uur. Ik heb 152 uur gewerkt. Kunt u dat nakijken?"
 
@@ -809,7 +863,7 @@ van geld. Of je extra toeslag krijgt, staat in je cao of contract ⚖️. Schrij
 
 ### Les 5.1 · Je rooster en je werktijden
 
-**Leerdoel:** je kent de grenzen voor werktijden, ook voor jongeren, en je weet dat het rooster op tijd moet komen.
+**Leerdoel:** je kent de grenzen voor werktijden. Ook voor jongeren. Je weet dat het rooster op tijd moet komen.
 
 **Scène** · *Beeld: Mohammed in een magazijn voor een rooster aan de muur. Eén vakje is rood.*
 
@@ -945,12 +999,20 @@ loonstrook is zwart werk. Dan bouw je bijvoorbeeld geen WW en pensioen op ⚖️
 
 ### Les 5.4 · Vrij vragen en verlof
 
-**Leerdoel:** je vraagt vrij op tijd en op papier, en je weet wat je doet bij een noodgeval.
+**Leerdoel:** je vraagt vrij op tijd en op papier. Je weet wat je doet bij een noodgeval.
 
 **Scène** · *Beeld: Esra achter een computer. Op het scherm een kalender en een vliegtuigje.*
 
 > Esra wil in de zomer 3 weken naar haar familie. Het is nu februari. Haar collega zegt: "Vraag het
 > pas in juni. Dan weet je het zeker." Esra twijfelt.
+
+**Regelkaart** · 🌴 *Vraag vrij op tijd, en altijd op papier of in de app.*
+
+- Vraag vrij op tijd en op papier.
+- Je werkgever moet in principe ja zeggen.
+- Zegt hij nee? Dat moet hij binnen 2 weken ⚖️ op papier laten weten.
+- Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️.
+- Bij een noodgeval mag je meteen weg. Laat het wel meteen weten.
 
 **Vraag 1 · Wat doe je?** Wanneer vraagt Esra haar vakantie aan?
 
@@ -964,7 +1026,7 @@ loonstrook is zwart werk. Dan bouw je bijvoorbeeld geen WW en pensioen op ⚖️
 **Goed antwoord: C.**
 **Waarom:** Vraag vrij op tijd en op papier. Je werkgever moet in principe ja zeggen. Alleen bij een
 heel goede reden van het bedrijf mag hij nee zeggen ⚖️. Dat moet hij binnen 2 weken ⚖️ op papier
-laten weten.
+laten weten. Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️.
 
 **Vraag 2 · Waar of niet waar?** "Werk je 5 dagen per week? Dan heb je minstens 20 vrije dagen per jaar."
 
@@ -996,11 +1058,11 @@ meestal gewoon loon ⚖️. Moet je langer voor iemand zorgen? Vraag naar zorgve
 
 ## Unit 6 · Ziek zijn
 
-*In deze unit: hoe je je ziek meldt, je loon bij ziekte, de bedrijfsarts, en weer beter melden.*
+*In deze unit: hoe je je ziekmeldt, je loon bij ziekte, de bedrijfsarts, en weer betermelden.*
 
-### Les 6.1 · Je ziek melden
+### Les 6.1 · Je ziekmelden
 
-**Leerdoel:** je meldt je zelf ziek, op tijd, en je weet wat je wel en niet hoeft te zeggen.
+**Leerdoel:** je meldt je zelf ziek, op tijd. Je weet wat je wel en niet hoeft te zeggen.
 
 **Scène** · *Beeld: Jayden in bed met een rode neus. De wekker zegt 7.15.*
 
@@ -1018,7 +1080,7 @@ meestal gewoon loon ⚖️. Moet je langer voor iemand zorgen? Vraag naar zorgve
 
 **Goed antwoord: A.**
 **Waarom:** Bel zelf, en bel vóór je dienst begint. Dat is in de meeste bedrijven de regel. Kijk in
-je contract of het verzuimprotocol. Dat zijn de regels voor ziek melden bij jouw bedrijf.
+je contract of het verzuimprotocol. Dat zijn de regels voor ziekmelden bij jouw bedrijf.
 
 **Vraag 2 · Waar of niet waar?** "Je hoeft je baas niet te vertellen welke ziekte je hebt."
 
@@ -1049,12 +1111,20 @@ waar je werkt. Vraag aan het begin hoe het moet.
 
 ### Les 6.2 · Je rechten als je ziek bent
 
-**Leerdoel:** je weet dat je loon meestal doorloopt, en wat je wel en niet hoeft te vertellen.
+**Leerdoel:** je weet dat je loon meestal doorloopt. Je weet wat je wel en niet hoeft te vertellen.
 
 **Scène** · *Beeld: Esra op de bank met haar been in het gips. Haar telefoon gaat.*
 
 > Esra is gevallen. Ze heeft haar been gebroken. Ze kan 6 weken niet werken. Ze is bang dat ze geen
 > loon krijgt. Dan belt haar leidinggevende om te vragen hoe het gaat.
+
+**Regelkaart** · 🩹 *Ziek? Je krijgt meestal minstens 70 procent van je loon.*
+
+- Je werkgever betaalt minstens 70 procent ⚖️ van je loon door.
+- Dat kan tot 2 jaar ⚖️ duren.
+- In het eerste jaar krijg je minstens het minimumloon ⚖️. Een cao geeft vaak meer.
+- Heb je een tijdelijk contract? Dan stopt je loon op de einddatum ⚖️.
+- Vraag dan UWV naar de Ziektewet.
 
 **Vraag 1 · Waar of niet waar?** "Als je ziek bent, krijg je geen loon."
 
@@ -1076,7 +1146,7 @@ er 2 wachtdagen ⚖️ zonder loon, als je contract of cao dat zegt.
 **Waarom:** Je mag zelf iets vertellen, als je dat wilt. Maar het hoeft niet. Je baas mag vragen hoe
 lang het duurt. En of je misschien ander werk kunt doen.
 
-**Vraag 3 · Waar of niet waar?** "Word je ziek op vakantie? Dan kun je je ziek melden."
+**Vraag 3 · Waar of niet waar?** "Word je ziek op vakantie? Dan kun je je ziekmelden."
 
 **Antwoord: waar.**
 **Waarom:** Meld je meteen ziek bij je werkgever, ook vanuit het buitenland. Dan tellen die dagen
@@ -1093,7 +1163,7 @@ uitzendbureau? Vraag naar de Ziektewet) · een vakbond · het Juridisch Loket.
 
 ### Les 6.3 · Langer ziek en weer beter
 
-**Leerdoel:** je weet wat de bedrijfsarts doet, dat je meewerkt aan herstel, en dat je je beter meldt.
+**Leerdoel:** je weet wat de bedrijfsarts doet en dat je meewerkt aan herstel. Je meldt je ook beter.
 
 **Scène** · *Beeld: Mohammed tegenover een vriendelijke arts met een laptop.*
 
@@ -1130,7 +1200,7 @@ Vraag dan een deskundigenoordeel bij UWV ⚖️.
   → *Goed. Dan weet iedereen dat hij weer kan.*
 
 **Goed antwoord: C.**
-**Waarom:** Beter melden is net zo belangrijk als ziek melden. Dan weet je baas dat je weer komt. En
+**Waarom:** Betermelden is net zo belangrijk als ziekmelden. Dan weet je baas dat je weer komt. En
 dan klopt je loon weer.
 
 **Zo zeg je het:** "Ik ben weer beter. Ik kan morgen weer komen werken."
@@ -1147,7 +1217,7 @@ dan klopt je loon weer.
 
 ### Les 7.1 · Beschermende spullen en uitleg
 
-**Leerdoel:** je weet dat je werkgever gratis bescherming en uitleg geeft, en dat je erom mag vragen.
+**Leerdoel:** je weet dat je werkgever gratis bescherming en uitleg geeft. Je weet dat je erom mag vragen.
 
 **Scène** · *Beeld: Piotr op een bouwplaats met helm. Zijn handschoenen hebben gaten. Een zaag ligt klaar.*
 
@@ -1271,7 +1341,7 @@ voordat je ziek wordt. Je mag ook zelf naar de bedrijfsarts ⚖️.
 
 **Antwoord: waar.**
 **Waarom:** Bij een ernstig ongeluk meldt je werkgever het meteen bij de Arbeidsinspectie ⚖️.
-Bijvoorbeeld als iemand naar het ziekenhuis moet. Of als iemand blijvend letsel heeft ⚖️.
+Bijvoorbeeld als iemand in het ziekenhuis moet blijven, blijvend letsel heeft of overlijdt ⚖️.
 
 **Vraag 3 · Wat doe je?** Fatima glijdt uit op een natte vloer. Ze bezeert haar pols. Het lijkt niet erg.
 
@@ -1397,7 +1467,7 @@ niet fijn dat ...". Helpt dat niet? Ga dan naar je leidinggevende.
 
 ### Les 8.3 · Afspraak is afspraak
 
-**Leerdoel:** je weet dat een ja telt, en je zegt het op tijd als iets niet lukt.
+**Leerdoel:** je weet dat een ja telt. Lukt iets niet? Dan zeg je het op tijd.
 
 **Scène** · *Beeld: Mohammed en Esra in een kantine. Esra kijkt op haar telefoon naar haar agenda.*
 
@@ -1444,7 +1514,7 @@ meer vertrouwen. Zo kan Sanne op tijd iets anders regelen.
 
 ### Les 8.4 · Koffie, verjaardagen en je telefoon
 
-**Leerdoel:** je kent de gewoontes bij koffie en verjaardagen, en de regels voor je telefoon en de groepsapp.
+**Leerdoel:** je kent de gewoontes bij koffie en verjaardagen. Je kent de regels voor je telefoon en de groepsapp.
 
 **Scène** · *Beeld: een kantine om 10 uur. Op tafel staat taart. Iemand hangt een slinger op.*
 
@@ -1499,7 +1569,7 @@ altijd ook hulp van buiten het bedrijf.*
 
 ### Les 9.1 · Discriminatie
 
-**Leerdoel:** je herkent discriminatie bij solliciteren en op het werk, en je weet hoe je het meldt.
+**Leerdoel:** je herkent discriminatie bij solliciteren en op het werk. Je weet hoe je het meldt.
 
 **Scène** · *Beeld: Mohammed en Sanne, ieder met een telefoon. Op beide schermen dezelfde vacature.*
 
@@ -1551,7 +1621,7 @@ politie, bij bedreiging.
 
 ### Les 9.2 · Grensoverschrijdend gedrag
 
-**Leerdoel:** je herkent gedrag dat over je grens gaat, je zegt stop, en je weet bij wie je terechtkunt.
+**Leerdoel:** je herkent gedrag dat over je grens gaat, en je zegt stop. Je weet bij wie je terechtkunt.
 
 **Scène** · *Beeld: Dewi in een hotelgang. Een collega staat veel te dicht bij haar.*
 
@@ -1604,7 +1674,7 @@ Geweld (0800-0188 ⚖️).
 
 ### Les 9.3 · Uitbuiting en oplichting
 
-**Leerdoel:** je herkent de signalen van uitbuiting en van een geldezel-trucje, en je weet waar je hulp krijgt.
+**Leerdoel:** je herkent de signalen van uitbuiting en van een geldezel-trucje. Je weet waar je hulp krijgt.
 
 **Scène** · *Beeld: Piotr in een volle kamer met stapelbedden. Een man houdt een paspoort vast.*
 
@@ -1662,6 +1732,13 @@ Anoniem: 0800-7000 ⚖️ · de politie · bij gevaar: 112 · FairWork · een va
 > Sanne werkt 2 jaar bij een webshop. Haar baas roept haar binnen. Hij zegt: "We moeten bezuinigen.
 > Teken dit maar, dan regelen we het netjes." Het papier heet een vaststellingsovereenkomst.
 
+**Regelkaart** · 🖊️ *Teken nooit iets over ontslag zonder advies.*
+
+- Staat er iets verkeerd in? Dan kun je je WW kwijtraken ⚖️.
+- Om tijd vragen is normaal.
+- Binnen 14 dagen ⚖️ na het tekenen mag je je nog bedenken.
+- Je baas heeft meestal toestemming nodig van UWV of de rechter ⚖️.
+
 **Vraag 1 · Wat doe je?** De baas legt een pen neer.
 
 - **A.** Ze tekent meteen. Dan krijgt ze vast een goede referentie.
@@ -1672,13 +1749,13 @@ Anoniem: 0800-7000 ⚖️ · de politie · bij gevaar: 112 · FairWork · een va
   → *Dan heeft ze toch getekend. Twijfel erbij schrijven helpt niet.*
 
 **Goed antwoord: B.**
-**Waarom:** Een vaststellingsovereenkomst is een afspraak om je baan samen te stoppen. Als je tekent,
-kun je rechten verliezen. Bijvoorbeeld je WW. Vraag eerst advies. Om tijd vragen is normaal.
+**Waarom:** Een vaststellingsovereenkomst is een afspraak om je baan samen te stoppen. Staat er iets
+verkeerd in? Dan kun je je WW kwijtraken ⚖️. Vraag eerst advies. Om tijd vragen is normaal.
 
 **Vraag 2 · Waar of niet waar?** "Heb je toch getekend? Dan kun je het nooit meer terugdraaien."
 
 **Antwoord: niet waar.**
-**Waarom:** Je kunt meestal binnen 14 dagen ⚖️ na het tekenen nog stoppen. Doe dat op papier of per
+**Waarom:** Binnen 14 dagen ⚖️ na het tekenen mag je je nog bedenken. Doe dat op papier of per
 mail. Staat die termijn niet in het papier? Dan heb je 3 weken ⚖️.
 
 **Vraag 3 · Waar of niet waar?** "Je baas mag je zomaar ontslaan, als hij dat wil."
@@ -1756,7 +1833,7 @@ noemt deze les geen duur.*
 
 ### Les 10.2 · Van uitkering naar werk
 
-**Leerdoel:** je geeft nieuw werk meteen door, en je laat uitrekenen wat het betekent voor je geld.
+**Leerdoel:** je geeft nieuw werk meteen door. Je laat uitrekenen wat het betekent voor je geld.
 
 **Scène** · *Beeld: Fatima aan tafel. Voor haar een brief van de gemeente en een nieuw contract.*
 
@@ -1811,7 +1888,7 @@ kinderopvang. Dan kies je met de juiste cijfers.
 
 ### Les 10.3 · Belasting terug en je post
 
-**Leerdoel:** je opent brieven van de overheid, en je weet dat je vaak belasting terug kunt vragen.
+**Leerdoel:** je opent brieven van de overheid. Je weet dat je vaak belasting terug kunt vragen.
 
 **Scène** · *Beeld: Jayden met een blauwe envelop in zijn hand. Een la staat open.*
 
@@ -1963,7 +2040,7 @@ nachtwerk. Bouw: bij vorst of storm kan het werk stilliggen; daar is een aparte 
 (vroeg in de ochtend en laat in de avond).
 
 **Unit 6 · Ziek zijn.**
-Zorg: vaak moet je je eerder ziek melden, omdat er vervanging nodig is; check het verzuimprotocol.
+Zorg: vaak moet je je eerder ziekmelden, omdat er vervanging nodig is; check het verzuimprotocol.
 Horeca en productie van eten: braken of diarree? Meld het vóór je begint, ook als je je goed genoeg
 voelt (hygiëne). Uitzendwerk (vooral logistiek en productie): soms betaalt UWV via de Ziektewet in
 plaats van het bureau ⚖️. Bouw en logistiek: veel rug- en tilklachten; ga op tijd naar de bedrijfsarts.
@@ -2156,7 +2233,7 @@ dienst. Volg het protocol van je werk. Daar staat in wat je moet doen.
 
 ### Les Z.2 · Privacy en medicijnen
 
-**Leerdoel:** je deelt niets over cliënten, geeft alleen medicijnen als je het geleerd hebt, en meldt fouten.
+**Leerdoel:** je deelt niets over cliënten. Je geeft alleen medicijnen als je het geleerd hebt, en je meldt fouten.
 
 **Scène** · *Beeld: Fatima in de huiskamer van een zorghuis. Op tafel een medicijnrol en een telefoon.*
 
@@ -2259,7 +2336,7 @@ planken en messen. Was je handen na rauw vlees.
 
 ### Les H.2 · Allergenen en fooi
 
-**Leerdoel:** je raadt nooit bij een vraag over allergie, en je weet hoe het zit met fooi.
+**Leerdoel:** je raadt nooit bij een vraag over allergie. Je weet hoe het zit met fooi.
 
 **Scène** · *Beeld: Esra in de bediening met een notitieblok. Een gast wijst naar de taart op de kaart.*
 
@@ -2314,7 +2391,7 @@ Arbeidsinspectie.
 
 ### Les S.1 · Schoonmaakmiddelen: nooit mengen
 
-**Leerdoel:** je mengt nooit middelen, leest het etiket, en weet wat je doet als je alleen werkt.
+**Leerdoel:** je mengt nooit middelen en je leest het etiket. Je weet wat je doet als je alleen werkt.
 
 **Scène** · *Beeld: Fatima in een kantoortoilet met twee flessen in haar handen.*
 
@@ -2365,7 +2442,7 @@ Arbeidsinspectie · bij een ongeluk: 112.
 
 ### Les S.2 · Je lichaam sparen
 
-**Leerdoel:** je werkt zo dat je rug en armen gezond blijven, en je meldt klachten op tijd.
+**Leerdoel:** je werkt zo dat je rug en armen gezond blijven. Je meldt klachten op tijd.
 
 **Scène** · *Beeld: Piotr met een mop in een lange schoolgang. Hij houdt een hand op zijn rug.*
 
