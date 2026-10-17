@@ -94,6 +94,18 @@ describe('pocket card phrases', () => {
       'Heb je je uren doorgegeven?',
       'Ja, gisteren in de app.',
       'Op mijn loonstrook staan te weinig uren.',
+      // New lesson "Opdrachten van je leidinggevende" (l.task, 17 October 2026):
+      'de taak',
+      'daarna',
+      'afmaken',
+      'snel',
+      'bijna',
+      'Wat moet ik eerst doen?',
+      'Ik ben klaar met deze taak.',
+      'Kunt u het nog een keer laten zien?',
+      'Ben je klaar?',
+      'Bijna. Nog vijf minuten.',
+      'Klaar! Wat is de volgende taak?',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

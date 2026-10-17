@@ -28,6 +28,7 @@ const t: CultureTranslation = {
     'c.sick.a.why': "Hasta olmak evde kalmak ve bunu haber vermek demektir.",
     'd.speakup.a.why': "Bir sorun olup olmadığı sorulunca dürüst bir \"evet\" iyidir.",
     'd.agree.a.why': "Hayır demek sorun değildir. Başka bir gün önermek yardımcı olur.",
+    'd.task.a.why': "Bitip bitmediği soruluyor: bu cevap \"neredeyse\" diyor ve ne kadar süreceğini söylüyor.",
     'c.cv.a.why': "Referans, işi anlatabilecek eski bir patrondur.",
     'c.interview.a.why': "İş görüşmesinde iş deneyimi önemlidir.",
     'c.findwork.a.why': "Soru ne tür iş olduğunu soruyor. Bu cevap onu söylüyor.",

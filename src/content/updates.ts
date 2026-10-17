@@ -20,6 +20,7 @@ export const UPDATES: Update[] = [
       'De app telt nu ook, zonder naam, ongeveer hoe lang een les duurt. Zo zien we welke les te lang is.',
       'Nieuwe les bij Veiligheid: Een ongeluk melden. Met woorden als gewond, de EHBO-doos en de BHV’er.',
       'Nieuwe les bij Werk en contract: Werken via een uitzendbureau. Met woorden als de uitzendkracht, de intercedent en het urenbriefje.',
+      'Nieuwe les bij Samenwerken: Opdrachten van je leidinggevende. Met woorden als de taak, eerst, daarna en bijna.',
       'Alle gratis lessen gedaan? Dan staat op het beginscherm een grote gele kaart naar de volledige versie. De code is gratis, en de mail om er een te vragen is al geschreven.',
       'Bram zegt niet meer "tot morgen" als er nog woorden te herhalen zijn.',
       'Zin bouwen: elk fout stukje staat er na de zin nog één keer, niet bij elke tik opnieuw.',

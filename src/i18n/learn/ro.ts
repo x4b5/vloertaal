@@ -28,6 +28,7 @@ const t: CultureTranslation = {
     'c.sick.a.why': "Boala înseamnă: rămâi acasă și anunți asta.",
     'd.speakup.a.why': "La întrebarea dacă e ceva în neregulă, un „da” sincer e bine.",
     'd.agree.a.why': "Ai voie să refuzi. Ajută să propui altă zi.",
+    'd.task.a.why': "Întrebat dacă e gata: răspunsul spune „aproape” și cât mai durează.",
     'c.cv.a.why': "O referință e un fost șef care poate vorbi despre muncă.",
     'c.interview.a.why': "La un interviu de angajare contează experiența de muncă.",
     'c.findwork.a.why': "Întrebarea e ce fel de muncă. Acest răspuns o numește.",

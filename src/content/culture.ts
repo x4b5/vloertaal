@@ -224,6 +224,21 @@ const baseTips: CultureTip[] = [
     ],
     why: { id: 'c.no.w', en: 'A clear "nee" is respected. Saying "ja" and not coming breaks trust much more.' },
   }),
+  tip({
+    id: 'c.task',
+    lessonId: 'l.task',
+    emoji: '✅',
+    title: 'Say when it is done, ask when it is not clear',
+    body: 'In the Netherlands a supervisor often gives a task in a few words, and expects you to say when it is done. Saying "ja" when you did not understand often leads to mistakes. Asking again, or asking to be shown, is normal here and not rude.',
+    phrase: { id: 'c.task.p', nl: 'Klaar! Wat is de volgende taak?', en: 'Done! What is the next task?' },
+    situation: { id: 'c.task.s', en: 'Your supervisor explains a task very fast. You understood only half. What do you do?' },
+    options: [
+      { id: 'c.task.o1', en: 'Ask: "Kunt u het nog een keer laten zien?"', best: true },
+      { id: 'c.task.o2', en: 'Say "ja" and guess.', best: false },
+      { id: 'c.task.o3', en: 'Wait until a colleague does it.', best: false },
+    ],
+    why: { id: 'c.task.w', en: 'Asking again is normal and takes a minute. Fixing a mistake takes much longer. Most supervisors would rather show it twice.' },
+  }),
 ];
 
 const line = (id: string, nl: string, en: string): ChatLine => ({ id, nl, en });
@@ -278,6 +293,29 @@ export const teamworkUnit: Unit = {
           line('d.agree.q', 'Kun je zaterdag overwerken?', 'Can you work overtime on Saturday?'),
           line('d.agree.a', 'Nee, dat lukt niet. Zondag wel.', 'No, that does not work. Sunday I can.'),
         ),
+      ],
+    },
+    {
+      // "klaar" (w.klaar, l.shift), "laten zien" (w.latenzien, l.understood) and "nog een keer"
+      // (w.nogeenkeer, l.understand) are already words of other lessons: here they come in the
+      // sentences, the chat and the tip.
+      id: 'l.task',
+      title: 'Instructions from your supervisor',
+      words: [
+        { id: 'w.taak', nl: 'de taak', en: 'the task', emoji: '📌' },
+        { id: 'w.eerst', nl: 'eerst', en: 'first', emoji: '1️⃣', picture: false },
+        { id: 'w.daarna', nl: 'daarna', en: 'after that', emoji: '⏭️', picture: false },
+        { id: 'w.afmaken', nl: 'afmaken', en: 'to finish', emoji: '✅' },
+        { id: 'w.snel', nl: 'snel', en: 'fast', emoji: '🏃' },
+        { id: 'w.bijna', nl: 'bijna', en: 'almost', emoji: '🤏', picture: false },
+      ],
+      sentences: [
+        { id: 's.task.1', nl: 'Wat moet ik eerst doen?', en: 'What must I do first?' },
+        { id: 's.task.2', nl: 'Ik ben klaar met deze taak.', en: 'I am done with this task.' },
+        { id: 's.task.3', nl: 'Kunt u het nog een keer laten zien?', en: 'Can you show it one more time?' },
+      ],
+      dialogues: [
+        chat(line('d.task.q', 'Ben je klaar?', 'Are you done?'), line('d.task.a', 'Bijna. Nog vijf minuten.', 'Almost. Five more minutes.')),
       ],
     },
   ] satisfies Lesson[],

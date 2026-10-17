@@ -656,3 +656,50 @@ Graag nakijken:
 - **De juridische feiten** in `c.agency.b` (het uitzendbureau is je werkgever; er is een cao voor
   uitzendkrachten; vakantiegeld en vakantiedagen) laat een deskundige nakijken, zie
   `docs/juridische-check.md` (c.agency). Wordt de Engelse tekst aangepast, dan alle negen talen mee.
+
+## Nieuw 17 oktober 2026: les Opdrachten van je leidinggevende (alle talen)
+
+Een nieuwe les in Samenwerken (`u.teamwork`), na "Agreements and saying no" (`l.agree`). Alles met
+AI vertaald en nog niet door een moedertaalspreker gecontroleerd. Nieuwe ids:
+
+- Les en woorden (`src/i18n/culture/<taal>.ts`, Engelse bron in `culture/en.json`): `l.task`,
+  `w.taak`, `w.eerst`, `w.daarna`, `w.afmaken`, `w.snel`, `w.bijna`; zinnen `s.task.1` ("Wat moet
+  ik eerst doen?"), `s.task.2` ("Ik ben klaar met deze taak."), `s.task.3` ("Kunt u het nog een
+  keer laten zien?"); gesprekje `d.task.q` ("Ben je klaar?"), `d.task.a` ("Bijna. Nog vijf minuten.").
+- Uitleg bij het gesprekje (`src/i18n/learn/<taal>.ts`): `d.task.a.why`.
+- Werkvloer-tip (ook in `src/i18n/culture/<taal>.ts`): `c.task`, `c.task.b`, `c.task.p`, `c.task.s`,
+  `c.task.o1`, `c.task.o2`, `c.task.o3`, `c.task.w`. Geen juridische tip: geen adviesregel, en
+  niets voor `docs/juridische-check.md`.
+
+Graag nakijken:
+
+- **De taak** naast **de opdracht** (`w.opdracht`, de plaatsing via het uitzendbureau): in het
+  Arabisch "المهمة" en in het Tigrinya "ዕማም" voor allebei; bij de opdracht staat de uitleg tussen
+  haakjes, dus ze zijn uit elkaar te houden. Turks "görev, iş", Perzisch en Dari "کار، وظیفه",
+  Pools "zadanie", Oekraïens "завдання", Roemeens "sarcina", Bulgaars "задачата".
+- **Klaar zijn** (`s.task.2`, `d.task.q`, `c.task.p`): Pools en Oekraïens hebben een man-, vrouw-
+  en beide-vorm voor "Ik ben klaar met deze taak." ("Skończyłem / skończyłam", "Я закінчив /
+  закінчила") en een man- en vrouwvorm voor de vraag. Bulgaars bewust neutraal met de
+  verleden tijd ("Приключих", "Приключи ли?") in plaats van "готов / готова". Roemeens ("Am
+  terminat", "Ai terminat?") en Arabisch ("انتهيت", de vraag zonder klinkertekens) zijn voor beiden
+  gelijk. Tigrinya: de vraag in man- en vrouwvorm ("ወዲእካ ዲኻ?" / "ወዲእኪ ዲኺ?"), de zin neutraal.
+- **Bijna** (`w.bijna`, `d.task.a`): Dari "نزدیک است" (zoals in `c.cleaning.a`), Perzisch "تقریباً".
+  Klinkt "نزدیک است. پنج دقیقهٔ دیگر." natuurlijk als antwoord?
+- **De tip**: "Saying "ja" when you did not understand" is in het Pools, Oekraïens en Bulgaars
+  neutraal omschreven ("choć nie wszystko rozumiesz", "хоча щось незрозуміло", "без да
+  разбираш"), om geen man- en vrouwvorm nodig te hebben. Arabisch en Tigrinya: titel, tip,
+  situatie en keuzes in man- en vrouwvorm. In de situatie ("je begreep maar de helft") hebben
+  Pools, Oekraïens en Bulgaars een man- en vrouwvorm.
+- **"Zeg het zo"** ("Klaar! Wat is de volgende taak?") is overal genderneutraal: Pools/Oekraïens/
+  Bulgaars "Gotowe! / Готово!", Arabisch "انتهيت!", Tigrinya "ወዲአ!", Turks "Bitti!", Perzisch
+  "تمام شد!", Dari "خلاص شد!". Turks "Sıradaki iş ne?": goed, of liever "Sıradaki görev ne?"?
+- **De Nederlandse vraag** in de beste keuze ("Kunt u het nog een keer laten zien?") en "ja" blijven
+  overal Nederlands, tussen de aanhalingstekens van elke taal.
+- **Dari**: "شما" overal (ook in de vraag "کار شما خلاص شد؟", terwijl het Nederlands "je" zegt),
+  تیز (snel), خلاص (klaar), هدایات (instructies). Perzisch (Iran) houdt "تو", تند en تمام.
+  Afghaans genoeg?
+- **Tigrinya** (hele les): ዕማም (taak), ቅድም (eerst), ድሕሪኡ (daarna), ምውዳእ (afmaken), ቀልጢፉ (snel),
+  ዳርጋ (bijna), ተቖጻጻሪ (leidinggevende, zoals in `w.leidinggevende`). "ክልተ ግዜ ከርእዩ ይመርጹ" (in
+  `c.task.w`, "laten het liever twee keer zien"): duidelijk?
+- **Arabisch** `c.task.w`: "يفضّل معظم المشرفين أن يعرضوا الأمر مرتين" ("het twee keer laten
+  zien"); is "يشرحوا" (uitleggen) natuurlijker?

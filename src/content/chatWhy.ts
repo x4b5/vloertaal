@@ -20,6 +20,7 @@ const reasons: Record<string, string> = {
   'c.sick.a': 'Sick means staying home, and saying so.',
   'd.speakup.a': 'Asked if something is wrong: an honest yes is good.',
   'd.agree.a': 'Saying no is allowed. Offering another day helps.',
+  'd.task.a': 'Asked if it is done: this reply says almost, and how long.',
   'c.cv.a': 'A reference is a former boss who can tell about the work.',
   'c.interview.a': 'In a job interview, work experience is what counts.',
   'c.findwork.a': 'The question asks what work. This reply names it.',

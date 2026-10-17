@@ -45,6 +45,18 @@ const PENDING_RECORDING = new Set<string>([
   'Heb je je uren doorgegeven?',
   'Ja, gisteren in de app.',
   'Op mijn loonstrook staan te weinig uren.',
+  // New lesson "Opdrachten van je leidinggevende" (l.task, 17 October 2026):
+  'de taak',
+  'daarna',
+  'afmaken',
+  'snel',
+  'bijna',
+  'Wat moet ik eerst doen?',
+  'Ik ben klaar met deze taak.',
+  'Kunt u het nog een keer laten zien?',
+  'Ben je klaar?',
+  'Bijna. Nog vijf minuten.',
+  'Klaar! Wat is de volgende taak?',
 ]);
 
 describe('recorded clips (G4 b3)', () => {

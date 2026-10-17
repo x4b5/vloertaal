@@ -10,6 +10,7 @@ import { addDays, dailyCard, dailyLesson, dailyWordIds, dueIds, type Cards } fro
  * October 2026): the chat's lesson turns differently (src/lib/spaced.ts dailyLesson), only the chat
  * changed; then the sentences turn 4/3 a day instead of 1/2 (l.agency): the two sentences changed,
  * and with the other sentence to build, the chat's wrong options too. The words are the same.
+ * Then, of equally weak lessons the otherwise strongest gives the chat (l.task): only the chat changed.
  */
 
 const TODAY = '2026-10-15';
