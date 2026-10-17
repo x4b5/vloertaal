@@ -574,3 +574,36 @@ En `startFree` (de codepagina, "Geen code? Begin met de eerste lessen"): vervang
 
 - `unlockHint` (de kaart "Volledige versie" bij Instellingen en bij een onderwerp op slot) is herschreven: "Met de code gaan alle lessen open. Nog geen code? Vraag het je docent of coach, of mail ons:". Het mailadres staat eronder. Het oude "alleen het eerste onderwerp is open" klopte niet meer voor de sneak preview.
 - `countHint` (Instellingen, "Anoniem meetellen") zegt nu ook dat de app ongeveer telt hoe lang lessen duren.
+
+## Nieuw 17 oktober 2026: les Een ongeluk melden (alle talen)
+
+Een nieuwe les in Veiligheid (`u.safety`), na "Gevaar!" (`l.danger`). Alles met AI vertaald en nog
+niet door een moedertaalspreker gecontroleerd. Nieuwe ids:
+
+- Les en woorden (`src/i18n/<taal>.ts`): `l.accident`, `w.gewond`, `w.bloeden`, `w.ehbodoos`, `w.bhver`,
+  `w.ziekenhuis`, `w.gebeuren`; zinnen `s.accident.1` ("Mijn collega is gevallen."), `s.accident.2`
+  ("Ik heb me gesneden."), `s.accident.3` ("Ik wil een ongeluk melden."); gesprekje `c.accident.q`
+  ("Wat is er gebeurd?"), `c.accident.a` ("Hij is van de ladder gevallen.").
+- Uitleg bij het gesprekje (`src/i18n/learn/<taal>.ts`): `c.accident.a.why`.
+- Werkvloer-tip (`src/i18n/culture/<taal>.ts`): `c.accident`, `c.accident.b`, `c.accident.p`, `c.accident.s`,
+  `c.accident.o1`, `c.accident.o2`, `c.accident.o3`, `c.accident.w`.
+
+Graag nakijken:
+
+- **BHV’er en EHBO** blijven in de tip Nederlands (zo heet het op het werk), met uitleg tussen haakjes.
+  Als los woord (`w.bhver`) staat alleen de uitleg ("wie op het werk eerste hulp geeft"). Klopt die
+  uitleg, en is hij niet te lang?
+- **"Ik heb me gesneden"** (`s.accident.2`): Pools en Oekraïens in de man- en vrouwvorm (met een
+  x-vorm "Skaleczyłem / skaleczyłam się"). Perzisch en Dari "خودم را بریده‌ام / خود را بریده‌ام" is
+  letterlijk; misschien zegt men eerder "دستم را بریدم" (mijn hand). Tigrinya "ተቖሪጸ".
+- **De collega** in `s.accident.1` en `c.accident.a` is een man (het gesprekje zegt "Hij"): overal
+  mannelijk vertaald.
+- **Dari**: شفاخانه (ziekenhuis), زینه (ladder), قطی کمک‌های اولیه (EHBO-doos), کمک‌رسان اولیه در
+  کمپنی (BHV’er). Is dat Afghaans genoeg, en is کمک‌رسان gangbaar?
+- **Tigrinya** (hele les): ቀዳማይ ረዲኤት (eerste hulp), ሳጹን ቀዳማይ ረዲኤት (EHBO-doos), ምድማይ (bloeden),
+  ምኽሳት (gebeuren), ዝተጎድአ (gewond).
+- **Arabisch**: مسؤول الإسعافات الأولية في الشركة voor BHV’er; de tip in man- en vrouwvorm.
+- **Turks**: "ilk yardım görevlisi" voor BHV’er; "BHV’er’e" met Nederlandse naam en Turkse uitgang.
+- **De juridische feiten** in `c.accident.b` en `c.accident.w` (een ernstig ongeval melden bij de
+  Nederlandse Arbeidsinspectie; niet gestraft worden voor melden) laat een deskundige nakijken, zie
+  `docs/juridische-check.md` (c.accident). Wordt de Engelse tekst aangepast, dan alle negen talen mee.

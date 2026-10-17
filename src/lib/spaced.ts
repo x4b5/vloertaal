@@ -158,7 +158,11 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
   // one before it, and so on), so it is not always the same lesson's chat.
   const chatty = from.filter(({ l }) => l.dialogues?.length);
   const weakest = chatty.filter(({ box }) => box === chatty[0]?.box);
-  const chatFrom = weakest.length ? weakest[n % weakest.length] : undefined;
+  // The day number alone keeps its parity when a card comes back 2, 4 or 14 days later, so of two
+  // equally weak lessons the same one always gave the chat (one lesson more in Safety, l.accident,
+  // left about 1 in 8 chats out for 12 weeks). Adding half the day number breaks that lock; the
+  // lesson still turns every one or two days.
+  const chatFrom = weakest.length ? weakest[(n + Math.floor(n / 2)) % weakest.length] : undefined;
   const chat = chatFrom ? pick(chatFrom.l.dialogues!, chatFrom.at) : undefined;
   const dialogues: Dialogue[] = chat ? [chat] : [];
   return { id: DAILY_ID, title: 'Review today', words, sentences, dialogues, repeat: true, boxes };
