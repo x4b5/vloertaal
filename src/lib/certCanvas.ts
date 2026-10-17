@@ -164,8 +164,9 @@ function drawSeal(ctx: CanvasRenderingContext2D, cx: number, cy: number, s: numb
   ctx.textAlign = 'center';
   ctx.font = font(800, 21, STENCIL);
   spaced(ctx, 'BEHAALD', 60, 70, 0.6);
-  ctx.font = font(700, 8.5);
-  spaced(ctx, `UNIT ${unitNo}`, 60, 86, 1.5);
+  // The certificate is Dutch ("BEHAALD"): "ONDERWERP", a little smaller to fit the seal.
+  ctx.font = font(700, 7);
+  spaced(ctx, `ONDERWERP ${unitNo}`, 60, 86, 0.6);
   ctx.restore();
 }
 
@@ -232,7 +233,7 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   spaced(ctx, certSub(d), left + logo + 2 * u, top + logo / 2 + 3 * u, 0.02 * 1.5 * u);
   // Unit tag: yellow, ink edge, slightly turned.
   ctx.font = font(800, 2.6 * u, STENCIL);
-  const tag = `UNIT ${d.unitNo}`;
+  const tag = `ONDERWERP ${d.unitNo}`;
   const tw = ctx.measureText(tag).width + 0.08 * 2.6 * u * tag.length + 2.8 * u;
   const th = 2.6 * u + 1.4 * u;
   ctx.save();

@@ -105,7 +105,7 @@ export const uiEn = {
   about: 'About Vloertaal',
   sector: 'Your work',
   chooseSector: 'Where do you work?',
-  sectorHint: 'The lessons for your work come first. You can change this later in Settings.',
+  sectorHint: 'The lessons for your work come early. You can change this later in Settings.',
   otherSectors: 'Other sectors',
   otherSectorsHint: 'Lessons for other kinds of work. You can do them too.',
   /** "Herhaal vandaag": the daily review of words met before (spaced repetition). */

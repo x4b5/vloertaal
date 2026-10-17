@@ -87,7 +87,7 @@ const lang: HelpLanguageSource = {
     unlock: 'Deblochează',
     sector: 'Munca ta',
     chooseSector: 'Unde lucrezi?',
-    sectorHint: 'Lecțiile pentru munca ta vin primele. Poți schimba asta mai târziu în Setări.',
+    sectorHint: 'Lecțiile pentru munca ta vin devreme. Poți schimba asta mai târziu în Setări.',
     otherSectors: 'Alte domenii',
     otherSectorsHint: 'Lecții pentru alte meserii. Le poți face și pe ele.',
     reviewToday: 'Recapitularea de azi',

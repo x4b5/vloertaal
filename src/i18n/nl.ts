@@ -116,7 +116,7 @@ export const uiNl: Record<UiKey, UiText> = {
   about: 'Over Vloertaal',
   sector: 'Je werk',
   chooseSector: 'Waar werk je?',
-  sectorHint: 'De lessen voor jouw werk komen eerst. Je kunt dit later veranderen bij Instellingen.',
+  sectorHint: 'De lessen voor jouw werk komen al vroeg. Je kunt dit later veranderen bij Instellingen.',
   otherSectors: 'Andere sectoren',
   otherSectorsHint: 'Lessen voor ander werk. Die mag je ook doen.',
   reviewToday: 'Herhaal vandaag',

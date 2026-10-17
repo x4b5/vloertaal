@@ -1,3 +1,4 @@
+import { dutchUi } from '../lib/track';
 import { Fragment, useEffect, useId, useState } from 'react';
 import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
@@ -53,7 +54,7 @@ function Seal({ unitNo, ring: ringText }: { unitNo: string; ring: string }) {
       </text>
       <path d="M48 38.5l7.5 7.5 15-15" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
       <text x="60" y="70" textAnchor="middle" fontFamily="'Big Shoulders Stencil Display', sans-serif" fontWeight={800} fontSize="21" letterSpacing="0.6" fill="currentColor">BEHAALD</text>
-      <text x="60" y="86" textAnchor="middle" fontFamily="'Lexend Variable', Lexend, sans-serif" fontWeight={700} fontSize="8.5" letterSpacing="1.5" fill="currentColor">UNIT {unitNo}</text>
+      <text x="60" y="86" textAnchor="middle" fontFamily="'Lexend Variable', Lexend, sans-serif" fontWeight={700} fontSize="7" letterSpacing="0.6" fill="currentColor">ONDERWERP {unitNo}</text>
     </svg>
   );
 }
@@ -80,7 +81,7 @@ export function CertificateSheet({ data, className }: { data: CertData; classNam
             <span className="cert-kicker">Certificaat · Vloertaal</span>
             <span className="cert-sub">{certSub(data)}</span>
           </span>
-          <span className="cert-unit">Unit {data.unitNo}</span>
+          <span className="cert-unit">Onderwerp {data.unitNo}</span>
         </div>
         <div className="cert-body">
           {data.name && (
@@ -284,7 +285,7 @@ export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector 
             <button type="button" className="btn btn-ghost cert-later" onClick={onLater}>
               <span lang="nl">Later</span>
               {/* "Later" is the same word in English: only the help language is added. */}
-              {lang && <Bi className="cert-btn-gloss" text={ui('certLater', lang)} />}
+              {lang && !dutchUi(lang) && <Bi className="cert-btn-gloss" text={ui('certLater', lang)} />}
             </button>
             <button type="button" className="btn btn-go btn-primary cert-view" onClick={onView} dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
               <span className="cert-btn-text">

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { learnedItems } from '../content/courses';
-import { trackOf, trackOfLang } from '../lib/track';
+import { dutchUi, trackOf, trackOfLang } from '../lib/track';
 import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
@@ -491,7 +491,7 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
               {way === 'prompt' ? (
                 <>
                   <span className="keep3-btn-nl" lang="nl">Later</span>
-                  {lang && <Bi className="keep3-btn-gloss" text={ui('certLater', lang)} />}
+                  {lang && !dutchUi(lang) && <Bi className="keep3-btn-gloss" text={ui('certLater', lang)} />}
                 </>
               ) : (
                 <Bi className="keep3-btn-gloss" text={ui('continue', lang)} />

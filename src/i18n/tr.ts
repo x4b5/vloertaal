@@ -87,7 +87,7 @@ const lang: HelpLanguageSource = {
     unlock: 'Aç',
     sector: 'İşin',
     chooseSector: 'Nerede çalışıyorsun?',
-    sectorHint: 'Önce kendi işinin dersleri gelir. Bunu sonra Ayarlar’da değiştirebilirsin.',
+    sectorHint: 'Kendi işinin dersleri erkenden gelir. Bunu sonra Ayarlar’da değiştirebilirsin.',
     otherSectors: 'Diğer sektörler',
     otherSectorsHint: 'Başka işler için dersler. Bunları da yapabilirsin.',
     reviewToday: 'Bugünün tekrarı',

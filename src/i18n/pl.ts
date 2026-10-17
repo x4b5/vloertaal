@@ -87,7 +87,7 @@ const lang: HelpLanguageSource = {
     unlock: 'Odblokuj',
     sector: 'Twoja praca',
     chooseSector: 'Gdzie pracujesz?',
-    sectorHint: 'Najpierw są lekcje do twojej pracy. Możesz to później zmienić w Ustawieniach.',
+    sectorHint: 'Lekcje do twojej pracy są już na początku. Możesz to później zmienić w Ustawieniach.',
     otherSectors: 'Inne branże',
     otherSectorsHint: 'Lekcje do innych rodzajów pracy. Możesz je też robić.',
     reviewToday: 'Powtórka na dziś',
