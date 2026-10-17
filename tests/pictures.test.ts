@@ -25,7 +25,9 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     // 105: the six words of l.hours (u.numbers) got pictures (drawn clocks, ⏱️ ⏳ ➕).
     // 106: "gebeuren" (to happen, l.accident) has no picture.
     expect(abstract).toContain('w.gebeuren');
-    expect(abstract.length).toBe(106);
+    // 109: "de opdracht", "verlengen" and "uitbetalen" (l.agency) have no picture.
+    for (const id of ['w.opdracht', 'w.verlengen', 'w.uitbetalen']) expect(abstract).toContain(id);
+    expect(abstract.length).toBe(109);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).

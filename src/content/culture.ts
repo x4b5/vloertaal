@@ -300,6 +300,7 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.interview': [0, 2, 3], // asking questions yourself is normal
   'c.bsn': [0, 5, 8], // ask why they need it; never give your DigiD
   'c.housing': [2, 10, 11, 13], // proof of payment; job ends: advice first (Juridisch Loket)
+  'c.agency': [0, 1, 3], // the agency is your employer; keep your own list of hours
   'c.payslip': [0, 1, 3], // check the hours, write down the hours you work
   'c.phone': [0, 3, 4], // urgent call: tell your supervisor first
   'c.smoking': [0, 2, 3], // only outside, in your break

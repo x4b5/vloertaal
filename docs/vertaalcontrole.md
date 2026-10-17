@@ -608,3 +608,51 @@ Graag nakijken:
 - **De juridische feiten** in `c.accident.b` en `c.accident.w` (een ernstig ongeval melden bij de
   Nederlandse Arbeidsinspectie; niet gestraft worden voor melden) laat een deskundige nakijken, zie
   `docs/juridische-check.md` (c.accident). Wordt de Engelse tekst aangepast, dan alle negen talen mee.
+
+## Nieuw 17 oktober 2026: les Werken via een uitzendbureau (alle talen)
+
+Een nieuwe les in Werk en contract (`u.contract`), na "Your contract" (`l.contract`). Alles met AI
+vertaald en nog niet door een moedertaalspreker gecontroleerd. Nieuwe ids:
+
+- Les en woorden (`src/i18n/work/<taal>.ts`, Engelse bron in `work/en.json`): `l.agency`,
+  `w.uitzendkracht`, `w.intercedent`, `w.urenbriefje`, `w.opdracht`, `w.verlengen`, `w.uitbetalen`;
+  zinnen `s.agency.1` ("Ik werk via een uitzendbureau."), `s.agency.2` ("Ik geef mijn uren door."),
+  `s.agency.3` ("Wanneer stopt mijn opdracht?"); gesprekje `c.agency.q` ("Heb je je uren
+  doorgegeven?"), `c.agency.a` ("Ja, gisteren in de app.").
+- Uitleg bij het gesprekje (`src/i18n/learn/<taal>.ts`): `c.agency.a.why`.
+- Werkvloer-tip (ook in `src/i18n/work/<taal>.ts`): `c.agency`, `c.agency.b`, `c.agency.p`, `c.agency.s`,
+  `c.agency.o1`, `c.agency.o2`, `c.agency.o3`, `c.agency.w`.
+
+Graag nakijken:
+
+- **De opdracht** (de plaatsing bij een bedrijf) is lastig: Pools "zlecenie", Oekraïens
+  "направлення", Roemeens "misiunea" (zo heet het in de Roemeense wet), Bulgaars "назначение",
+  Arabisch "المهمة", Tigrinya "ዕማም", Perzisch en Dari "مأموریت کاری", Turks "görevlendirme".
+  Overal met uitleg tussen haakjes. Begrijpt een uitzendkracht dit, of is "het werk bij dat
+  bedrijf" duidelijker?
+- **De intercedent** heeft in geen taal een vast woord: overal "de contactpersoon bij het
+  uitzendbureau" (Pools "osoba kontaktowa w agencji pracy", Turks "ajanstaki irtibat kişisi",
+  Arabisch "مسؤول التواصل في وكالة التوظيف", Perzisch "کارمند رابط در شرکت کاریابی", Dari
+  "مسئول تماس در دفتر کاریابی"). In de tip staat "intercedent" tussen haakjes erbij.
+- **Het urenbriefje**: Pools "karta godzin pracy", Oekraïens "табель годин", Roemeens "fișa de ore
+  (pontajul)", Bulgaars "лист за отработените часове", Turks "çalışma saatleri formu". Gangbaar?
+- **Uren doorgeven** (`s.agency.2`, `c.agency.q`): Arabisch "أُرسل ساعات عملي" (sturen; met damma, anders leest het als "stuur!"), Perzisch
+  "اعلام می‌کنم", Dari "خبر می‌دهم" (zoals `w.doorgeven`), Tigrinya "እሕብር", Turks "bildiriyorum".
+- **Gender**: de vraag `c.agency.q` en de situatie `c.agency.s` ("je hebt 38 uur gewerkt") hebben in
+  het Pools en Oekraïens een man- en vrouwvorm, in het Bulgaars alleen de situatie ("си работил /
+  работила"); de vraag "Подаде ли часовете си?" is voor beiden gelijk. Arabisch: de tip, de
+  situatie en de keuzes in man- en vrouwvorm; de vraag "هل أرسلت ساعاتك؟" zonder klinkertekens
+  voor beiden. Tigrinya: titel, vraag, tip, situatie, keuzes en uitleg in man- en vrouwvorm. Roemeens is
+  hier overal genderneutraal.
+- **"Zeg het zo"** ("Op mijn loonstrook staan te weinig uren.") is in alle talen genderneutraal
+  vertaald. Tigrinya "ኣብ ወረቐት ደሞዘይ ዘሎ ሰዓታት ውሑድ እዩ።": natuurlijk genoeg?
+- **Uitzend-cao** blijft overal Nederlands tussen haakjes; Pools, Oekraïens, Bulgaars, Arabisch en
+  Tigrinya zeggen ervoor "collectieve arbeidsovereenkomst voor uitzendkrachten", Roemeens,
+  Perzisch, Dari en Turks "een cao" (zoals in `c.contract.b`).
+- **Dari**: کمپنی (bedrijf), ورق معاش (loonstrook), پول رخصتی (vakantiegeld), روزهای رخصتی,
+  کنترول کردن, beleefd "شما". Perzisch (Iran) houdt شرکت en "تو". Afghaans genoeg?
+- **Tigrinya** (hele les): ኤጀንሲ ስራሕ (uitzendbureau), ትካል (bedrijf), ተራኺቢ ሰብ (contactpersoon),
+  ምንዋሕ (verlengen), ምኽፋል (uitbetalen).
+- **De juridische feiten** in `c.agency.b` (het uitzendbureau is je werkgever; er is een cao voor
+  uitzendkrachten; vakantiegeld en vakantiedagen) laat een deskundige nakijken, zie
+  `docs/juridische-check.md` (c.agency). Wordt de Engelse tekst aangepast, dan alle negen talen mee.

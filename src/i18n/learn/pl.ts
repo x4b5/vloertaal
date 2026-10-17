@@ -32,6 +32,7 @@ const t: CultureTranslation = {
     'c.interview.a.why': "Na rozmowie o pracę liczy się doświadczenie zawodowe.",
     'c.findwork.a.why': "Pytanie dotyczy rodzaju pracy. Ta odpowiedź ją nazywa.",
     'c.contract.a.why': "„Tak” i pytanie o godzinę to jasna i chętna odpowiedź.",
+    'c.agency.a.why': "Pytanie o godziny: tak, a do tego kiedy i jak.",
     'c.bsn.a.why': "Pracodawca może poprosić o dokument tożsamości, np. paszport.",
     'c.housing.a.why': "Potrącenia z wypłaty muszą być uzgodnione na piśmie.",
     'c.payslip.a.why': "Brakujące godziny na pasku wypłaty trzeba zgłosić.",

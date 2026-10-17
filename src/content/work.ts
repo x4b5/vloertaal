@@ -86,6 +86,32 @@ const coreUnits: Unit[] = [
           ),
         ],
       },
+      {
+        // "het uitzendbureau" (w.uitzendbureau, l.findwork), "de uren" (w.uren, l.contract),
+        // "doorgeven" (w.doorgeven, l.privacy) and "de loonstrook" (w.loonstrook, l.payslip) are
+        // already words of other lessons: here they come in the sentences, the chat and the tip.
+        id: 'l.agency',
+        title: 'Working through an agency',
+        words: [
+          { id: 'w.uitzendkracht', nl: 'de uitzendkracht', en: 'the temp worker', emoji: '👷' },
+          { id: 'w.intercedent', nl: 'de intercedent', en: 'the agency contact person', emoji: '🧑‍💼' },
+          { id: 'w.urenbriefje', nl: 'het urenbriefje', en: 'the timesheet', emoji: '🗒️' },
+          { id: 'w.opdracht', nl: 'de opdracht', en: 'the assignment (the job at a company)', emoji: '📋', picture: false },
+          { id: 'w.verlengen', nl: 'verlengen', en: 'to extend (make longer)', emoji: '⏩', picture: false },
+          { id: 'w.uitbetalen', nl: 'uitbetalen', en: 'to pay out', emoji: '💰', picture: false },
+        ],
+        sentences: [
+          { id: 's.agency.1', nl: 'Ik werk via een uitzendbureau.', en: 'I work through a temp agency.' },
+          { id: 's.agency.2', nl: 'Ik geef mijn uren door.', en: 'I pass on my hours.' },
+          { id: 's.agency.3', nl: 'Wanneer stopt mijn opdracht?', en: 'When does my assignment end?' },
+        ],
+        dialogues: [
+          chat(
+            line('c.agency.q', 'Heb je je uren doorgegeven?', 'Have you passed on your hours?'),
+            line('c.agency.a', 'Ja, gisteren in de app.', 'Yes, yesterday in the app.'),
+          ),
+        ],
+      },
     ],
   },
   {
@@ -396,6 +422,21 @@ const coreTips: CultureTip[] = [
       { id: 'c.contract.o3', en: 'Sign and never ask, because the boss knows best.', best: false },
     ],
     why: { id: 'c.contract.w', en: 'A trial period in a contract of 6 months or shorter does not count. Asking calmly is normal. If the answer is not clear, get advice from the union or the Juridisch Loket.' },
+  }),
+  tip({
+    id: 'c.agency',
+    lessonId: 'l.agency',
+    emoji: '🏢',
+    title: 'Your agency is your employer',
+    body: 'If you work through a temp agency (uitzendbureau), the agency is your employer, not the company where you work. Your contract and your pay come from the agency, and there is a cao for temp workers (uitzend-cao). You also get holiday pay (vakantiegeld) and you build up days off. Keep your own list of the hours you worked, and check them on your payslip.',
+    phrase: { id: 'c.agency.p', nl: 'Op mijn loonstrook staan te weinig uren.', en: 'My payslip shows too few hours.' },
+    situation: { id: 'c.agency.s', en: 'Your payslip shows 32 hours, but you worked 38. What do you do?' },
+    options: [
+      { id: 'c.agency.o1', en: 'Show your own list of hours to your contact at the agency (intercedent) and ask to correct it.', best: true },
+      { id: 'c.agency.o2', en: 'Say nothing, because it is only 6 hours.', best: false },
+      { id: 'c.agency.o3', en: 'Stop going to work.', best: false },
+    ],
+    why: { id: 'c.agency.w', en: 'The agency pays you, so the agency must correct the mistake. Your own list of dates and hours helps. Asking about it is your right.' },
   }),
   tip({
     id: 'c.bsn',

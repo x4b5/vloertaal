@@ -318,6 +318,11 @@ function defineStates(LANG) {
   for (const [key, at] of [['intro', 0], ['word-abstract', 7], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
     add(`lesson:accident-${key}`, shot(`lesson&lesson=l.accident&at=${at}`));
   }
+  // "Werken via een uitzendbureau" (l.agency, seed 1): a word card, the abstract word "de opdracht",
+  // the tip and its situation, a sentence to build, the chat and typing "de opdracht".
+  for (const [key, at] of [['intro', 0], ['word-abstract', 4], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+    add(`lesson:agency-${key}`, shot(`lesson&lesson=l.agency&at=${at}`));
+  }
   add('lesson:match', shot('match'));
   add('lesson:match:half', shot('match'), async (p) => { await matchPairs(p, 1); });
   add('lesson:match:done', shot('match'), async (p) => { await matchPairs(p); });

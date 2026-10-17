@@ -6,8 +6,10 @@ import { addDays, dailyCard, dailyLesson, dailyWordIds, dueIds, type Cards } fro
 /**
  * The language track's "Herhaal vandaag" stays exactly as it was when the work-rules track got
  * its own review (M4): a fixed progress (cards) and a fixed seed give the same review, item for
- * item. The snapshot was taken before the rules review was added. Updated once on purpose (17
- * October 2026): the chat's lesson turns differently (src/lib/spaced.ts dailyLesson), only the chat changed.
+ * item. The snapshot was taken before the rules review was added. Updated on purpose (17
+ * October 2026): the chat's lesson turns differently (src/lib/spaced.ts dailyLesson), only the chat
+ * changed; then the sentences turn 4/3 a day instead of 1/2 (l.agency): the two sentences changed,
+ * and with the other sentence to build, the chat's wrong options too. The words are the same.
  */
 
 const TODAY = '2026-10-15';
