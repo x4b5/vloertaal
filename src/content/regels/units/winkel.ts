@@ -18,7 +18,7 @@ export const winkelUnit: RuleUnit = {
       // Les 11.1 · Vakken vullen en voorraad
       id: 'r.l.winkel.1',
       title: 'Vakken vullen en voorraad',
-      goal: 'Je vult vakken op de goede manier, je let op de datum, en je houdt de paden vrij.',
+      goal: 'Je vult vakken op de goede manier en je let op de datum. Je houdt de paden vrij.',
       remember: 'Oud naar voren, nieuw naar achteren. Houd de paden vrij.',
       // Wie kan je helpen: je leidinggevende of teamleider · een ervaren collega.
       help: ['leidinggevende', 'collega'],
@@ -165,7 +165,7 @@ export const winkelUnit: RuleUnit = {
       // Les 11.3 · Kassa, wisselgeld en een klacht
       id: 'r.l.winkel.3',
       title: 'Kassa, wisselgeld en een klacht',
-      goal: 'Je vraagt een ID bij alcohol en tabak, je telt wisselgeld goed, en je blijft rustig bij een klacht.',
+      goal: 'Je vraagt een ID bij alcohol en tabak. Je telt wisselgeld goed en je blijft rustig bij een klacht.',
       remember: 'Twijfel je over de leeftijd bij alcohol of tabak? Vraag altijd een ID.',
       // Wie kan je helpen: je leidinggevende · bij agressie of diefstal: je leidinggevende of de
       //   beveiliging, en bij gevaar 112. Ren nooit zelf achter een dief aan.

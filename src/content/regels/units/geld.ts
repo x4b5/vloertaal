@@ -103,7 +103,7 @@ export const geldUnit: RuleUnit = {
       //   januari 2027 (Participatiewet in balans) ⚖️. Daarom noemt de les geen percentage.
       id: 'r.l.geld.2',
       title: 'Van uitkering naar werk',
-      goal: 'Je geeft nieuw werk meteen door, en je laat uitrekenen wat het betekent voor je geld.',
+      goal: 'Je geeft nieuw werk meteen door. Je laat uitrekenen wat het betekent voor je geld.',
       remember: 'Nieuw werk? Geef het meteen door: aan de gemeente of UWV, en bij toeslagen.',
       // Wie kan je helpen: de gemeente (sociale dienst of Werkplein) · UWV · Dienst Toeslagen
       //   (Belastingdienst) · Geldfit: 0800-8115 ⚖️ · het Juridisch Loket.
@@ -183,7 +183,7 @@ export const geldUnit: RuleUnit = {
       // Les 10.3 · Belasting terug en je post
       id: 'r.l.geld.3',
       title: 'Belasting terug en je post',
-      goal: 'Je opent brieven van de overheid, en je weet dat je vaak belasting terug kunt vragen.',
+      goal: 'Je opent brieven van de overheid. Je weet dat je vaak belasting terug kunt vragen.',
       remember: 'Een brief van de Belastingdienst, UWV of de gemeente: altijd openmaken.',
       // Wie kan je helpen: de BelastingTelefoon · het Informatiepunt Digitale Overheid in de
       //   bibliotheek · de sociaal raadslieden of de formulierenhulp van je gemeente.

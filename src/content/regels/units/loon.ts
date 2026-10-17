@@ -41,8 +41,9 @@ export const loonUnit: RuleUnit = {
           body: [
             'Bruto is je loon vóór belasting.',
             'Netto is wat je echt op je rekening krijgt.',
-            'Het verschil is vooral loonheffing: belasting en premie.',
+            'Het verschil is vooral loonheffing: belasting en premie voor verzekeringen.',
             'Je werkgever betaalt die voor jou aan de Belastingdienst.',
+            'Vaak gaat er ook geld af voor je pensioen.',
           ],
           rule: 'geschreven',
         },
@@ -51,7 +52,7 @@ export const loonUnit: RuleUnit = {
           id: 'r.l.loon.1.tf1',
           statement: 'Bruto is het geld dat op je bankrekening komt.',
           answer: false,
-          why: 'Bruto is je loon vóór belasting. Netto is wat je echt op je rekening krijgt. Het verschil is vooral loonheffing. Loonheffing is belasting en premie. Je werkgever betaalt die voor jou aan de Belastingdienst.',
+          why: 'Bruto is je loon vóór belasting. Netto is wat je echt op je rekening krijgt. Het verschil is vooral loonheffing. Loonheffing is belasting en premie voor verzekeringen. Je werkgever betaalt die voor jou aan de Belastingdienst. Vaak gaat er ook geld af voor je pensioen.',
         },
         // ⚖️ check: Ben je jonger dan 21 ⚖️?
         // ⚖️ check: Vanaf 21 ⚖️ krijg je het volle minimumloon.
@@ -95,7 +96,7 @@ export const loonUnit: RuleUnit = {
       // Les 4.2 · Je loonstrook checken
       id: 'r.l.loon.2',
       title: 'Je loonstrook checken',
-      goal: 'Je schrijft je uren op, je checkt je loonstrook, en je vraagt na wat niet klopt.',
+      goal: 'Je schrijft je uren op en je checkt je loonstrook. Je vraagt na wat niet klopt.',
       remember: 'Schrijf je uren op. Check elke loonstrook.',
       // Wie kan je helpen: de loonadministratie · een vakbond · het Juridisch Loket · de
       //   Nederlandse Arbeidsinspectie (bij te weinig loon, ook zonder je naam) · bij uitzendwerk:
@@ -177,14 +178,15 @@ export const loonUnit: RuleUnit = {
               { field: 'vakantiegeld', label: 'Vakantiegeld (opgebouwd)', value: '224 euro' },
             ],
           },
-          question: 'Piotr telde zelf 152 uur. Welke regel op zijn loonstrook klopt dan niet?',
+          // The answer from the slip's own rows: (152 - 140) uur x 20 euro = 240 euro bruto.
+          question: 'Piotr telde zelf 152 uur. Hoeveel bruto loon mist Piotr?',
           highlight: 'uren',
           options: [
-            { id: 'a', text: 'De loonheffing', best: false, feedback: 'Nee. Loonheffing is belasting. Die gaat niet over je uren.' },
-            { id: 'b', text: 'De gewerkte uren', best: true, feedback: 'Goed. Hier staat 140 uur. Piotr werkte er 152.' },
-            { id: 'c', text: 'Het vakantiegeld', best: false, feedback: 'Nee. Vakantiegeld bouw je op. Het gaat hier om de uren.' },
+            { id: 'a', text: '12 euro', best: false, feedback: 'Nee. Hij mist 12 uur. Elk uur is 20 euro.' },
+            { id: 'b', text: '240 euro', best: true, feedback: 'Goed. 12 uur keer 20 euro is 240 euro.' },
+            { id: 'c', text: '3.040 euro', best: false, feedback: 'Nee. Dat is het loon voor alle 152 uur. Hij mist alleen het verschil.' },
           ],
-          why: 'Op je loonstrook staan je gewerkte uren. Vergelijk ze met je eigen lijstje. Klopt het niet? Vraag het na.',
+          why: 'Op de loonstrook staat 140 uur. Piotr werkte 152 uur. Hij mist dus 12 uur. 12 keer 20 euro is 240 euro bruto. Vergelijk je loonstrook altijd met je eigen lijstje.',
         },
         {
           kind: 'whoask',

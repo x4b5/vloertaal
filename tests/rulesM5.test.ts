@@ -59,8 +59,11 @@ describe('Hulp in the work-rules track: "Wie bel je?"', () => {
     expect(byName['h.politie'].show).toBe('0900-8844');
     expect(byName['h.fairwork'].href).toBe('https://www.fairwork.nu');
     expect(byName['h.uwv'].href).toBe('https://www.uwv.nl');
+    // Discriminatie: the site the lessons name, no phone number.
+    expect(byName['h.discriminatie'].show).toBe('discriminatie.nl');
+    expect(byName['h.discriminatie'].href).toBe('https://www.discriminatie.nl');
     for (const id of ['h.huisartsenpost', 'h.vertrouwenspersoon', 'h.vakbond', 'h.gemeente']) expect(byName[id], id).toBeDefined();
-    expect(HELP_ROWS).toHaveLength(12);
+    expect(HELP_ROWS).toHaveLength(13);
     expect(new Set(HELP_ROWS.map((r) => r.id)).size).toBe(HELP_ROWS.length);
   });
 

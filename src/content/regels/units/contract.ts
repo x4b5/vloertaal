@@ -33,7 +33,7 @@ export const contractUnit: RuleUnit = {
           ],
         },
         // ⚖️ check: Je werkgever laat weten wat je verdient en hoeveel uur je werkt. Dat moet
-        //   binnen 1 week ⚖️, op papier of digitaal.
+        //   binnen 1 week na je eerste werkdag ⚖️, op papier of digitaal (art. 7:655 BW).
         {
           kind: 'rule',
           id: 'r.l.contract.1.ru1',
@@ -41,21 +41,22 @@ export const contractUnit: RuleUnit = {
           title: 'Wat op papier staat, telt. Bewaar je contract goed.',
           body: [
             'Je werkgever laat weten wat je verdient en hoeveel uur je werkt.',
-            'Dat moet binnen 1 week, op papier of digitaal.',
-            'Bij ziekte, WW of ontslag kijkt men naar je contract.',
+            'Dat moet binnen 1 week na je eerste werkdag, op papier of digitaal.',
+            'Bij ziekte, WW of ontslag kijken ze naar je contract.',
             'Een cao is een afspraak over loon en regels voor jouw soort werk.',
           ],
           rule: 'geschreven',
           key: true,
         },
-        // ⚖️ check: En hoeveel uur je werkt. Dat moet binnen 1 week ⚖️, op papier of digitaal.
+        // ⚖️ check: En hoeveel uur je werkt. Dat moet binnen 1 week na je eerste werkdag ⚖️, op
+        //   papier of digitaal.
         // ⚖️ check: Andere afspraken volgen binnen 1 maand ⚖️.
         {
           kind: 'truefalse',
           id: 'r.l.contract.1.tf1',
           statement: 'Je werkgever moet de belangrijkste afspraken op papier of per mail geven.',
           answer: true,
-          why: 'Je werkgever moet laten weten wat je verdient. En hoeveel uur je werkt. Dat moet binnen 1 week, op papier of digitaal. Andere afspraken volgen binnen 1 maand. Bijvoorbeeld over vakantie en opzeggen.',
+          why: 'Je werkgever moet laten weten wat je verdient. En hoeveel uur je werkt. Dat moet binnen 1 week na je eerste werkdag, op papier of digitaal. Andere afspraken volgen binnen 1 maand. Bijvoorbeeld over vakantie en opzeggen.',
         },
         {
           kind: 'whatdo',
@@ -78,7 +79,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', text: 'Je zegt niets. Je wilt geen gedoe op je eerste dag.', best: false, feedback: 'Begrijpelijk. Maar later is het lastiger.' },
             { id: 'c', text: 'Je vraagt of hij 30 uur in het contract zet.', best: true, feedback: 'Goed. Wat op papier staat, telt.' },
           ],
-          why: 'Bij ziekte, WW of ontslag kijkt men naar je contract. Werk je lange tijd meer uren? Dan kun je vragen om die uren in je contract.',
+          why: 'Bij ziekte, WW of ontslag kijken ze naar je contract. Werk je lange tijd meer uren? Dan kun je vragen om die uren in je contract.',
         },
         {
           kind: 'whoask',
@@ -98,7 +99,7 @@ export const contractUnit: RuleUnit = {
       // Les 3.2 · Proeftijd, tijdelijk en vast
       id: 'r.l.contract.2',
       title: 'Proeftijd, tijdelijk en vast',
-      goal: 'Je weet wat een proeftijd is, en wat er gebeurt aan het eind van een tijdelijk contract.',
+      goal: 'Je weet wat een proeftijd is. Je weet wat er gebeurt aan het eind van een tijdelijk contract.',
       remember: 'Tijdelijk contract? Vraag op tijd of je mag blijven.',
       // Wie kan je helpen: het Juridisch Loket · een vakbond · UWV (als je werk stopt, zie les
       //   10.1).
@@ -115,8 +116,11 @@ export const contractUnit: RuleUnit = {
             'Na 3 weken zegt zijn baas: "Het past niet. Je kunt morgen stoppen."',
           ],
         },
-        // ⚖️ check: Je werkgever moet 1 maand ⚖️ van tevoren laten weten of je mag blijven.
+        // ⚖️ check: Je werkgever moet minstens 1 maand ⚖️ voor het einde laten weten of je contract
+        //   doorgaat (aanzegplicht, art. 7:668 BW).
         // ⚖️ check: Dat geldt bij een contract van 6 maanden of langer ⚖️.
+        // ⚖️ check: Doet hij dat niet, of te laat? Dan krijg je extra geld, tot 1 maandloon ⚖️
+        //   (aanzegvergoeding, art. 7:668 lid 3 en 4 BW).
         {
           kind: 'rule',
           id: 'r.l.contract.2.ru1',
@@ -124,8 +128,9 @@ export const contractUnit: RuleUnit = {
           title: 'Tijdelijk contract? Vraag op tijd of je mag blijven.',
           body: [
             'Een tijdelijk contract stopt vanzelf op de einddatum.',
-            'Je werkgever moet 1 maand van tevoren laten weten of je mag blijven.',
+            'Je werkgever moet minstens 1 maand voor het einde laten weten of je contract doorgaat.',
             'Dat geldt bij een contract van 6 maanden of langer.',
+            'Doet hij dat niet, of te laat? Dan krijg je extra geld, tot 1 maandloon.',
             'In de proeftijd mogen jij en de baas meteen stoppen.',
           ],
           rule: 'geschreven',
@@ -150,11 +155,15 @@ export const contractUnit: RuleUnit = {
         },
         // Redactie: de ketenregeling verandert waarschijnlijk per 1 januari 2028 (Wet meer
         //   zekerheid flexwerkers). Tot die tijd geldt de regel hierboven. ⚖️
-        // ⚖️ check: Je werkgever moet 1 maand ⚖️ van tevoren laten weten of je mag blijven.
-        // ⚖️ check: Dat geldt bij een contract van 6 maanden of langer ⚖️.
+        // ⚖️ check: Je werkgever moet minstens 1 maand ⚖️ voor het einde laten weten of je contract
+        //   doorgaat (art. 7:668 BW).
         // ⚖️ check: Krijg je een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je
         //   contract meestal vanzelf vast. Na het 3e contract mag je baas ook stoppen ⚖️ (ketenregeling,
         //   art. 7:668a BW; was eerder fout: "na 3 contracten vast", critic 16 okt 2026).
+        // ⚖️ check: Zit er meer dan 6 maanden ⚖️ tussen twee contracten? Dan begint de telling
+        //   opnieuw (art. 7:668a lid 1 BW; een cao kan dat soms korter maken).
+        // ⚖️ check: Werk je via een uitzendbureau? Dan gelden vaak andere regels ⚖️ (art. 7:691 BW,
+        //   de uitzend-cao).
         {
           kind: 'whatdo',
           id: 'r.l.contract.2.wd1',
@@ -164,7 +173,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', text: 'Ze vraagt haar baas of ze na 1 juni mag blijven.', best: true, feedback: 'Goed. Dan weet ze op tijd waar ze aan toe is.' },
             { id: 'c', text: 'Ze zoekt alvast ander werk en zegt niets.', best: false, feedback: 'Slim om te zoeken. Maar vragen kan ook.' },
           ],
-          why: 'Een tijdelijk contract stopt vanzelf op de einddatum. Je werkgever moet 1 maand van tevoren laten weten of je mag blijven. Dat geldt bij een contract van 6 maanden of langer. Krijg je een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je contract meestal vanzelf vast. Maar na het 3e contract mag je baas ook stoppen.',
+          why: 'Een tijdelijk contract stopt vanzelf op de einddatum. Je werkgever moet minstens 1 maand voor het einde laten weten of je contract doorgaat. Krijg je een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je contract meestal vanzelf vast. Maar na het 3e contract mag je baas ook stoppen. Zit er meer dan 6 maanden tussen twee contracten? Dan begint de telling opnieuw. Werk je via een uitzendbureau? Dan gelden vaak andere regels. Kijk in de uitzend-cao.',
         },
         {
           kind: 'whoask',
@@ -184,7 +193,7 @@ export const contractUnit: RuleUnit = {
       // Les 3.3 · Oproepwerk en uitzendwerk
       id: 'r.l.contract.3',
       title: 'Oproepwerk en uitzendwerk',
-      goal: 'Je kent de basisregels voor oproepwerk, en je weet wat een uitzendbureau wel en niet mag.',
+      goal: 'Je kent de basisregels voor oproepwerk. Je weet wat een uitzendbureau wel en niet mag.',
       // ⚖️ check: Minder dan 4 dagen ⚖️ van tevoren opgeroepen?
       remember: 'Minder dan 4 dagen van tevoren opgeroepen? Je mag nee zeggen.',
       // Wie kan je helpen: een vakbond · het Juridisch Loket · bij uitzendwerk: de SNCU (zij
@@ -208,16 +217,21 @@ export const contractUnit: RuleUnit = {
         // ⚖️ check: Je werkgever moet je meestal minstens 4 dagen ⚖️ van tevoren oproepen.
         // ⚖️ check: Een cao kan die 4 dagen korter maken, maar niet korter dan 1 dag ⚖️.
         // ⚖️ check: Bij een oproep krijg je meestal minstens 3 uur ⚖️ loon.
+        // ⚖️ check: Zegt je werkgever een oproep minder dan 4 dagen ⚖️ van tevoren af? Dan krijg je
+        //   toch loon (art. 7:628a BW).
+        // ⚖️ check: Werk je 12 maanden ⚖️ als oproepkracht? Dan moet je werkgever je vaste uren
+        //   aanbieden (art. 7:628a BW).
         {
           kind: 'rule',
           id: 'r.l.contract.3.ru1',
           emoji: '📲',
           title: 'Minder dan 4 dagen van tevoren opgeroepen? Je mag nee zeggen.',
           body: [
-            'Je werkgever moet je meestal minstens 4 dagen van tevoren oproepen.',
-            'Is het later? Dan mag je nee zeggen.',
+            'Je werkgever moet je meestal minstens 4 dagen van tevoren oproepen. Is het later? Dan mag je nee zeggen.',
             'Een cao kan die 4 dagen korter maken, maar niet korter dan 1 dag.',
+            'Zegt je werkgever een oproep minder dan 4 dagen van tevoren af? Dan krijg je toch loon.',
             'Bij een oproep krijg je meestal minstens 3 uur loon.',
+            'Werk je 12 maanden als oproepkracht? Dan moet je werkgever je vaste uren aanbieden.',
           ],
           rule: 'geschreven',
         },
@@ -247,14 +261,15 @@ export const contractUnit: RuleUnit = {
         // Redactie: vanaf 1 januari 2028 verdwijnt het nulurencontract voor de meeste mensen (Wet
         //   meer zekerheid flexwerkers). Vanaf 2028 mogen bedrijven alleen werken met toegelaten
         //   uitzendbureaus (Wtta). Deze les moet dan worden aangepast. ⚖️
-        // ⚖️ check: Sinds 2026 ⚖️ is er een nieuwe cao voor uitzendkrachten.
-        // ⚖️ check: Daarin staat: je krijgt minstens evenveel als vaste collega's ⚖️.
+        // ⚖️ check: Een uitzendkracht heeft recht op hetzelfde loon als de vaste mensen die
+        //   hetzelfde werk doen ⚖️ (art. 8 Waadi; een cao mag soms afwijken). Eerder stond hier een
+        //   nieuwe uitzend-cao "sinds 2026": die datum is niet gecheckt, dus weggehaald.
         {
           kind: 'truefalse',
           id: 'r.l.contract.3.tf2',
-          statement: "Via een uitzendbureau krijg je altijd minder dan je vaste collega's.",
-          answer: false,
-          why: "Sinds 2026 is er een nieuwe cao voor uitzendkrachten. Daarin staat: je krijgt minstens evenveel als vaste collega's. Het gaat om loon, vrije dagen en pensioen samen. Twijfel je? Vraag het na bij het bureau.",
+          statement: 'Een uitzendkracht heeft recht op hetzelfde loon als de vaste mensen die hetzelfde werk doen.',
+          answer: true,
+          why: "Dat klopt. Doe je hetzelfde werk als vaste collega's? Dan krijg je hetzelfde loon. Zo staat het in de wet. Twijfel je? Vraag het na bij het bureau.",
         },
         {
           kind: 'whoask',

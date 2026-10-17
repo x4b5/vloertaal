@@ -16,7 +16,7 @@ export const stageUnit: RuleUnit = {
       // Les 14.1 · Je stageovereenkomst (POK) en wie wie is
       id: 'r.l.stage.1',
       title: 'Je stageovereenkomst (POK) en wie wie is',
-      goal: 'Je weet wat de POK is, wie je begeleidt, en wat je regelt vóór je begint.',
+      goal: 'Je weet wat de POK is en wie je begeleidt. Je weet wat je regelt vóór je begint.',
       remember: 'Eerst de POK tekenen. Dan pas beginnen met je stage.',
       // Wie kan je helpen: je stagebegeleider of bpv-begeleider van school · je praktijkopleider ·
       //   stagemarkt.nl (van SBB).
@@ -100,7 +100,7 @@ export const stageUnit: RuleUnit = {
       // Les 14.2 · Feedback en beoordeling
       id: 'r.l.stage.2',
       title: 'Feedback en beoordeling',
-      goal: 'Je vraagt om feedback, je doet er iets mee, en je weet wat je doet met je beoordeling.',
+      goal: 'Je vraagt om feedback en je doet er iets mee. Je weet wat je doet met je beoordeling.',
       remember: 'Vraag zelf om feedback. Vraag om een voorbeeld.',
       // Wie kan je helpen: je praktijkopleider · je stagebegeleider of bpv-begeleider van school.
       help: ['praktijkopleider', 'school'],
@@ -176,7 +176,7 @@ export const stageUnit: RuleUnit = {
       // Les 14.3 · Als het niet goed gaat
       id: 'r.l.stage.3',
       title: 'Als het niet goed gaat',
-      goal: 'Je weet wat je doet als je ziek bent, als je weinig leert, of als je slecht behandeld wordt.',
+      goal: 'Je weet wat je doet als je ziek bent of weinig leert. Ook als je slecht behandeld wordt.',
       remember: 'Gaat het niet goed op stage? Praat erover: eerst op je werk, dan met school.',
       // Wie kan je helpen: je stagebegeleider of bpv-begeleider · de vertrouwenspersoon van school ·
       //   het meldpunt van je school of van SBB ⚖️ · discriminatie.nl · JOB, de organisatie voor

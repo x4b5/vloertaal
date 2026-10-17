@@ -173,7 +173,7 @@ export const zoekenUnit: RuleUnit = {
       // Les 1.3 · Het sollicitatiegesprek
       id: 'r.l.zoeken.3',
       title: 'Het sollicitatiegesprek',
-      goal: 'Je weet wat je in een gesprek kunt vragen, en welke vragen je niet hoeft te beantwoorden.',
+      goal: 'Je weet wat je in een gesprek kunt vragen. Je weet ook welke vragen je niet hoeft te beantwoorden.',
       remember: 'Vragen over kinderen, geloof of gezondheid hoef je niet te beantwoorden.',
       // Wie kan je helpen: discriminatie.nl (een meldpunt in je eigen regio) · het College voor de
       //   Rechten van de Mens.

@@ -16,7 +16,7 @@ export const duurzaamUnit: RuleUnit = {
       // Les 17.1 · Afval scheiden op je werk
       id: 'r.l.duurzaam.1',
       title: 'Afval scheiden op je werk',
-      goal: 'Je scheidt afval zoals het op je werk hoort, en gevaarlijk afval gooi je nooit bij het gewone afval.',
+      goal: 'Je scheidt afval zoals het op je werk hoort. Gevaarlijk afval gooi je nooit bij het gewone afval.',
       remember: 'Scheid je afval. Gevaarlijk afval nooit bij het gewone afval.',
       steps: [
         {
@@ -86,7 +86,7 @@ export const duurzaamUnit: RuleUnit = {
       // Les 17.2 · Zuinig met materiaal en energie
       id: 'r.l.duurzaam.2',
       title: 'Zuinig met materiaal en energie',
-      goal: 'Je gebruikt niet meer materiaal en energie dan nodig, en je meldt verspilling of een lek.',
+      goal: 'Je gebruikt niet meer materiaal en energie dan nodig. Je meldt verspilling of een lek.',
       remember: 'Uit als het mag, dicht als het kan. Meld een lek meteen.',
       steps: [
         {

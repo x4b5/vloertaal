@@ -45,6 +45,12 @@ export const HELP_ROWS: HelpRow[] = [
     show: 'Vraag HR of je leidinggevende wie het is.',
   },
   {
+    // The lessons send you here (rechten.1, stage.3, meedoen.2): a site, no one number for everyone.
+    id: 'h.discriminatie', emoji: '📣', name: 'Discriminatie melden',
+    when: 'Je wordt gediscrimineerd, op je werk of ergens anders. Melden helpt, ook voor anderen.',
+    show: 'discriminatie.nl', href: 'https://www.discriminatie.nl', // ⚖️ check: the www. address still works
+  },
+  {
     id: 'h.juridischloket', emoji: '⚖️', name: 'Juridisch Loket',
     when: 'Gratis advies over je contract, je loon of ontslag.',
     show: '0800-8020 (gratis)', href: 'tel:08008020',
