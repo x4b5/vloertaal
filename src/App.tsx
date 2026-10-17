@@ -504,15 +504,18 @@ export default function App() {
     );
   }
   if (step === 'gate') {
+    // Back here with a code that counts (also after a reload, when the typed code is gone): it
+    // stays accepted, never "No code?" that would drop it. The sneak preview has no code to keep.
+    const codeKept = gateAgain && access !== null && access !== 'sample';
     return (
       <Gate
         key={gateAgain ? 'again' : 'first'}
         lang={lang}
         onAccess={grant}
         onBack={onbBack}
-        accepted={gateAgain && typedCode.current ? access : null}
+        accepted={codeKept ? access : null}
         code={typedCode.current}
-        onFree={gateAgain && access && typedCode.current ? undefined : startFree}
+        onFree={codeKept ? undefined : startFree}
         greet={greet}
       />
     );
