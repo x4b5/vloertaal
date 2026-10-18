@@ -21,7 +21,7 @@ export const rekenenUnit: RuleUnit = {
       // Les 12.1 · Uren en je rooster narekenen
       id: 'r.l.rekenen.1',
       title: 'Uren en je rooster narekenen',
-      goal: 'Je rekent uit hoeveel uur je werkt, met de pauze eraf, en je checkt je rooster.',
+      goal: 'Je rekent uit hoeveel uur je werkt, met de pauze eraf. Je checkt je rooster.',
       remember: 'Je werktijd is: eindtijd min begintijd, min je pauze.',
       // Wie kan je helpen: je leidinggevende of de planner · de loonadministratie.
       help: ['leidinggevende', 'hr'],
@@ -126,7 +126,7 @@ export const rekenenUnit: RuleUnit = {
       // Les 12.2 · Geld en loon per uur
       id: 'r.l.rekenen.2',
       title: 'Geld en loon per uur',
-      goal: 'Je rekent je loon per week globaal uit, je rekent met procenten, en je telt wisselgeld.',
+      goal: 'Je rekent je loon per week globaal uit. Je rekent met procenten en je telt wisselgeld.',
       remember: 'Uren keer uurloon is je bruto loon. Reken het na.',
       // Wie kan je helpen: de loonadministratie · rijksoverheid.nl (minimumloon).
       help: ['hr'],

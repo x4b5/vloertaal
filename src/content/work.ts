@@ -52,7 +52,7 @@ const coreUnits: Unit[] = [
           { id: 'w.tijdelijk', nl: 'tijdelijk', en: 'temporary', emoji: '⏳', picture: false },
         ],
         sentences: [
-          { id: 's.findwork.1', nl: 'Ik wil solliciteren.', en: 'I want to apply for the job.' },
+          { id: 's.findwork.1', nl: 'Ik wil solliciteren.', en: 'I want to apply for a job.' },
           { id: 's.findwork.2', nl: 'Is het contract tijdelijk of vast?', en: 'Is the contract temporary or permanent?' },
           { id: 's.findwork.3', nl: 'Mag ik een kopie van het contract?', en: 'May I have a copy of the contract?' },
         ],
@@ -77,7 +77,7 @@ const coreUnits: Unit[] = [
         sentences: [
           { id: 's.contract.1', nl: 'Hoeveel uur werk ik per week?', en: 'How many hours do I work per week?' },
           { id: 's.contract.2', nl: 'Hoe lang is de proeftijd?', en: 'How long is the trial period?' },
-          { id: 's.contract.3', nl: 'Welke cao geldt voor mij?', en: 'Which collective agreement is for me?' },
+          { id: 's.contract.3', nl: 'Welke cao geldt voor mij?', en: 'Which collective agreement applies to me?' },
         ],
         dialogues: [
           chat(
@@ -102,12 +102,12 @@ const coreUnits: Unit[] = [
         ],
         sentences: [
           { id: 's.agency.1', nl: 'Ik werk via een uitzendbureau.', en: 'I work through a temp agency.' },
-          { id: 's.agency.2', nl: 'Ik geef mijn uren door.', en: 'I pass on my hours.' },
+          { id: 's.agency.2', nl: 'Wordt mijn opdracht verlengd?', en: 'Will my assignment be extended?' },
           { id: 's.agency.3', nl: 'Wanneer stopt mijn opdracht?', en: 'When does my assignment end?' },
         ],
         dialogues: [
           chat(
-            line('c.agency.q', 'Heb je je uren doorgegeven?', 'Have you passed on your hours?'),
+            line('c.agency.q', 'Heb je je uren doorgegeven?', 'Have you handed in your hours?'),
             line('c.agency.a', 'Ja, gisteren in de app.', 'Yes, yesterday in the app.'),
           ),
         ],
@@ -368,8 +368,8 @@ const coreUnits: Unit[] = [
         id: 'l.illness',
         title: 'Sick at home',
         words: [
-          { id: 'w.ziekmelden', nl: 'ziek melden', en: 'to call in sick', emoji: '🤒' },
-          { id: 'w.betermelden', nl: 'beter melden', en: 'to say you are better', emoji: '🙂' },
+          { id: 'w.ziekmelden', nl: 'ziekmelden', en: 'to call in sick', emoji: '🤒' },
+          { id: 'w.betermelden', nl: 'betermelden', en: 'to say you are better', emoji: '🙂' },
           { id: 'w.bedrijfsarts', nl: 'de bedrijfsarts', en: 'the company doctor', emoji: '👩‍⚕️' },
           { id: 'w.ziekte', nl: 'de ziekte', en: 'the illness', emoji: '🦠' },
           { id: 'w.doorbetalen', nl: 'doorbetalen', en: 'to keep paying', emoji: '💶', picture: false },
@@ -428,13 +428,13 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.agency',
     emoji: '🏢',
     title: 'Your agency is your employer',
-    body: 'If you work through a temp agency (uitzendbureau), the agency is your employer, not the company where you work. Your contract and your pay come from the agency, and there is a cao for temp workers (uitzend-cao). You also get holiday pay (vakantiegeld) and you build up days off. Keep your own list of the hours you worked, and check them on your payslip.',
+    body: 'If you work through a temp agency (uitzendbureau), the agency is your employer, not the company where you work. Your contract and your pay come from the agency, and there is a cao for temp workers (uitzend-cao). You have a right to the same pay as workers of the company who do the same work. You also get holiday pay (vakantiegeld) and you build up days off. Keep your own list of the hours you worked, and check them on your payslip.',
     phrase: { id: 'c.agency.p', nl: 'Op mijn loonstrook staan te weinig uren.', en: 'My payslip shows too few hours.' },
     situation: { id: 'c.agency.s', en: 'Your payslip shows 32 hours, but you worked 38. What do you do?' },
     options: [
       { id: 'c.agency.o1', en: 'Show your own list of hours to your contact at the agency (intercedent) and ask to correct it.', best: true },
       { id: 'c.agency.o2', en: 'Say nothing, because it is only 6 hours.', best: false },
-      { id: 'c.agency.o3', en: 'Stop going to work.', best: false },
+      { id: 'c.agency.o3', en: 'Ask the boss at the company where you work to pay the 6 hours.', best: false },
     ],
     why: { id: 'c.agency.w', en: 'The agency pays you, so the agency must correct the mistake. Your own list of dates and hours helps. Asking about it is your right.' },
   }),
@@ -578,7 +578,7 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.illness',
     emoji: '👩‍⚕️',
     title: 'Your rights when you are sick',
-    body: 'When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. Your boss may not ask what illness you have: you talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (beter melden). In the first year you get at least the minimum wage. Working through an agency? Your contract can end when you get sick. Then UWV pays you (Ziektewet). Ask UWV or a union.',
+    body: 'When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. Your boss may not ask what illness you have: you talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (betermelden). In the first year you get at least the minimum wage. Working through an agency? Your contract can end when you get sick. Then UWV pays you (Ziektewet). Ask UWV or a union.',
     phrase: { id: 'c.illness.p', nl: 'Ik ben weer beter. Ik kom morgen werken.', en: 'I am better again. I will come to work tomorrow.' },
     situation: { id: 'c.illness.s', en: 'You are sick for a week. Your employer asks you to visit the company doctor. What do you do?' },
     options: [

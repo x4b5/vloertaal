@@ -569,14 +569,16 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
             const first = lesson.words.find(hasPicture);
             const title = gloss(lesson.id, lesson.title, lang);
             const saved = open && saves[lesson.id]?.review === Boolean(record) ? saves[lesson.id] : undefined;
+            // Waits for the full version (not only for the lesson before it): a tap opens the unlock card.
+            const full = !open && allowed && !lessonAllowed(lesson.id, access) && Boolean(onUpgrade);
             return (
               <li key={lesson.id} className={`bay bay-${state} ${saved ? 'bay-saved' : ''}`}>
                 <span className="bay-marker" aria-hidden>{state === 'done' ? <CheckIcon size={18} /> : i + 1}</span>
                 <button
                   type="button"
                   className="bay-card"
-                  disabled={!open}
-                  onClick={() => onStart(lesson.id, Boolean(record))}
+                  disabled={!open && !full}
+                  onClick={() => (full ? onUpgrade?.() : onStart(lesson.id, Boolean(record)))}
                   aria-label={`${u + 1}.${i + 1} ${said(title)}${saved ? ` · ${resumeLabel(saved, lang)}` : open ? (record ? ` · ${said(ui('practice', lang))}` : ` · ${said(ui('start', lang))}`) : allowed && lessonAllowed(lesson.id, access) ? ` (${said(ui('locked', lang))})` : ` · ${said(ui('fullVersion', lang))}`}`}
                 >
                   {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}

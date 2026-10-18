@@ -256,7 +256,7 @@ export const careUnit: RuleUnit = {
       // Les Z.2 · Privacy en medicijnen
       id: 'r.l.care.2',
       title: 'Privacy en medicijnen',
-      goal: 'Je deelt niets over cliënten, geeft alleen medicijnen als je het geleerd hebt, en meldt fouten.',
+      goal: 'Je deelt niets over cliënten. Je geeft alleen medicijnen als je het geleerd hebt, en je meldt fouten.',
       remember: 'Wat je over cliënten weet, blijft op je werk.',
       // Wie kan je helpen: je leidinggevende · een ervaren collega · de vertrouwenspersoon, als je
       //   werk die heeft.
@@ -327,7 +327,7 @@ export const careUnit: RuleUnit = {
           id: 'r.l.care.2.wa1',
           question: 'Je weet niet hoe je een medicijn moet geven. Wie vraag je het?',
           options: [
-            { id: 'a', who: 'huisarts', best: false, feedback: 'De huisarts is er niet. Vraag het op je werk.' },
+            { id: 'a', who: 'huisarts', best: false, feedback: 'De huisarts werkt niet op je afdeling. Vraag het op je werk.' },
             { id: 'b', who: 'leidinggevende', best: true, feedback: 'Goed. Je leidinggevende regelt uitleg of hulp.' },
             { id: 'c', who: 'uwv', best: false, feedback: 'UWV gaat over uitkeringen, niet over medicijnen.' },
           ],
@@ -420,7 +420,7 @@ export const horecaUnit: RuleUnit = {
       // Les H.2 · Allergenen en fooi
       id: 'r.l.horeca.2',
       title: 'Allergenen en fooi',
-      goal: 'Je raadt nooit bij een vraag over allergie, en je weet hoe het zit met fooi.',
+      goal: 'Je raadt nooit bij een vraag over allergie. Je weet hoe het zit met fooi.',
       remember: 'Allergie? Raad nooit. Vraag het na in de keuken.',
       // Wie kan je helpen: de chef of je leidinggevende · bij te weinig loon: de Nederlandse
       //   Arbeidsinspectie.
@@ -513,7 +513,7 @@ export const cleanUnit: RuleUnit = {
       // Les S.1 · Schoonmaakmiddelen: nooit mengen
       id: 'r.l.clean.1',
       title: 'Schoonmaakmiddelen: nooit mengen',
-      goal: 'Je mengt nooit middelen, leest het etiket, en weet wat je doet als je alleen werkt.',
+      goal: 'Je mengt nooit middelen en je leest het etiket. Je weet wat je doet als je alleen werkt.',
       remember: 'Meng nooit schoonmaakmiddelen. Lees eerst het etiket.',
       // Wie kan je helpen: je leidinggevende of voorman · de preventiemedewerker · de Nederlandse
       //   Arbeidsinspectie · bij een ongeluk: 112.
@@ -596,7 +596,7 @@ export const cleanUnit: RuleUnit = {
       // Les S.2 · Je lichaam sparen
       id: 'r.l.clean.2',
       title: 'Je lichaam sparen',
-      goal: 'Je werkt zo dat je rug en armen gezond blijven, en je meldt klachten op tijd.',
+      goal: 'Je werkt zo dat je rug en armen gezond blijven. Je meldt klachten op tijd.',
       remember: 'Pijn door je werk? Wacht niet. Zeg het op tijd.',
       // Wie kan je helpen: je leidinggevende · de bedrijfsarts · de preventiemedewerker.
       help: ['leidinggevende', 'bedrijfsarts'],

@@ -6,6 +6,7 @@ import { readFileSync } from 'node:fs';
 import { greetingText } from '../src/components/BramSays';
 import { dayKey, emptyProgress, type Progress } from '../src/lib/progress';
 import { reminderIcs, REMINDER_TITLE } from '../src/lib/reminder';
+import { reminderHelp } from '../src/components/Keep';
 import { uiEn } from '../src/i18n/types';
 import '../src/i18n/all';
 import { getHelpLanguage } from '../src/i18n';
@@ -42,9 +43,27 @@ describe('Bram greets on the home screen', () => {
     expect(greetingFor({ fresh: false, done: true, missed: true, first: true, due: 6, streak: 9 })).toEqual({ kind: 'due', n: 6 });
   });
 
+  it('says when yesterday\'s free day kept the streak (first visit today)', () => {
+    const p = (patch: Partial<Progress>): Progress => ({ ...emptyProgress, ...patch });
+    const input = greetingInput(p({ lastDay: ago(1), streak: 3, rest: [ago(1)] }), today, 0, true);
+    expect(input.rested).toBe(true);
+    expect(greetingFor(input)).toEqual({ kind: 'rested' });
+    // Not on a later visit that day, and not without a free day.
+    expect(greetingFor({ ...input, first: false })).not.toEqual({ kind: 'rested' });
+    expect(greetingInput(p({ lastDay: ago(1), streak: 3 }), today, 0, true).rested).toBe(false);
+  });
+
+  it('only today\'s review is not "done for today": the next lesson still waits', () => {
+    const p = (patch: Partial<Progress>): Progress => ({ ...emptyProgress, ...patch });
+    expect(greetingInput(p({ lastDay: ago(0), reviewDay: ago(0), lessonDay: ago(1) }), today, 0, false)).toMatchObject({ done: false });
+    expect(greetingInput(p({ lastDay: ago(0), lessonDay: ago(0) }), today, 0, false)).toMatchObject({ done: true });
+    // A save from before lessonDay: as before.
+    expect(greetingInput(p({ lastDay: ago(0) }), today, 0, false)).toMatchObject({ done: true });
+  });
+
   it('reads the saved progress: done today, missed days, and the streak as the top bar shows it', () => {
     const p = (patch: Partial<Progress>): Progress => ({ ...emptyProgress, ...patch });
-    expect(greetingInput(p({}), today, 0, true)).toEqual({ fresh: false, done: false, missed: false, first: true, due: 0, streak: 0 });
+    expect(greetingInput(p({}), today, 0, true)).toEqual({ fresh: false, done: false, missed: false, first: true, due: 0, streak: 0, rested: false });
     expect(greetingInput(p({}), today, 0, true, true)).toMatchObject({ fresh: true });
     expect(greetingInput(p({ lastDay: ago(0), streak: 3 }), today, 2, false)).toMatchObject({ done: true, missed: false, streak: 3, due: 2 });
     expect(greetingInput(p({ lastDay: ago(1), streak: 4 }), today, 0, true)).toMatchObject({ done: false, missed: false, streak: 4 });
@@ -165,6 +184,12 @@ describe('Bram on the result screen and in the calendar', () => {
   it('the calendar reminder is in Bram’s voice', () => {
     expect(REMINDER_TITLE).toBe('Bram: tijd voor je Nederlands (10 minuten)');
     expect(reminderIcs('18:00', 'x', today)).toContain('DESCRIPTION:Bram van Vloertaal');
+    // The help language too: who does not read the Dutch yet still knows what the alarm is.
+    const ics = reminderIcs('18:00', 'x', today, 'taal', 'Czas na niderlandzki (10 minut)').replace(/\r\n /g, '');
+    expect(ics).toContain('SUMMARY:Bram: tijd voor je Nederlands (10 minuten) · Czas na niderlandzki (10 minut)');
+    expect(reminderHelp(getHelpLanguage('pl', 'm'))).toBe('Czas na niderlandzki (10 minut)');
+    // The work-rules track is in Dutch: no second line.
+    expect(reminderHelp(getHelpLanguage('nl' as never))).toBeUndefined();
   });
 });
 

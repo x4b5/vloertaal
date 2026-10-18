@@ -4316,6 +4316,9 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 }
 .rule-narrator { min-width: 0; font-size: 1.0625rem; font-weight: 650; color: var(--ink-strong); }
 .rule-stage-say .speak-glyph { order: -1; }
+/* Without a speaker (no Dutch voice on the phone) the bubble's point covers the first letter
+   ("3ram vertelt"): more room at the start. */
+.rule-stage-say:not(:has(.speak-glyph)) { padding-left: 14px; }
 .rule-story, .rule-label {
   position: relative; background: var(--card); border: 2.5px solid var(--edge); border-radius: 6px;
   box-shadow: 5px 5px 0 var(--label-shadow);

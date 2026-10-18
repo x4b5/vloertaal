@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { learnedItems } from '../content/courses';
-import { trackOf, trackOfLang } from '../lib/track';
+import { dutchUi, trackOf, trackOfLang } from '../lib/track';
 import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
@@ -13,6 +13,11 @@ import { Character } from './Characters';
 import { CheckIcon, ChevronIcon, CloseIcon } from './Icons';
 import { ChromeHead } from './ChromeBack';
 import { LogoMark } from './Logo';
+
+/** The reminder's line in the help language (none in the work-rules track: its screens are Dutch). */
+export function reminderHelp(lang?: HelpLanguage): string | undefined {
+  return trackOfLang(lang?.code) === 'taal' ? ui('remindEvent', lang).help : undefined;
+}
 
 /**
  * Keeping the habit and the progress, without accounts or servers:
@@ -112,7 +117,7 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
   const add = () => {
     if (!chosen) return;
     const url = `${location.origin}${location.pathname}`;
-    saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(chosen, url, new Date(), trackOfLang(lang?.code)));
+    saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(chosen, url, new Date(), trackOfLang(lang?.code), reminderHelp(lang)));
     rememberReminder(chosen);
     setSaved(true);
   };
@@ -354,7 +359,7 @@ export function BackupCard({ progress, lang, onRestore }: {
 /** Puts the daily reminder in the phone's calendar (a .ics file the phone opens). */
 function addReminder(time: string, lang?: HelpLanguage) {
   const url = `${location.origin}${location.pathname}`;
-  saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, url, new Date(), trackOfLang(lang?.code)));
+  saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, url, new Date(), trackOfLang(lang?.code), reminderHelp(lang)));
   rememberReminder(time);
 }
 
@@ -486,7 +491,7 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
               {way === 'prompt' ? (
                 <>
                   <span className="keep3-btn-nl" lang="nl">Later</span>
-                  {lang && <Bi className="keep3-btn-gloss" text={ui('certLater', lang)} />}
+                  {lang && !dutchUi(lang) && <Bi className="keep3-btn-gloss" text={ui('certLater', lang)} />}
                 </>
               ) : (
                 <Bi className="keep3-btn-gloss" text={ui('continue', lang)} />

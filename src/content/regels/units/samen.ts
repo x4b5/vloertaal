@@ -143,7 +143,7 @@ export const samenUnit: RuleUnit = {
       // Les 8.3 · Afspraak is afspraak
       id: 'r.l.samen.3',
       title: 'Afspraak is afspraak',
-      goal: 'Je weet dat een ja telt, en je zegt het op tijd als iets niet lukt.',
+      goal: 'Je weet dat een ja telt. Lukt iets niet? Dan zeg je het op tijd.',
       remember: 'Afspraak is afspraak. Lukt het niet? Zeg het op tijd.',
       steps: [
         {
@@ -206,7 +206,7 @@ export const samenUnit: RuleUnit = {
       // Les 8.4 · Koffie, verjaardagen en je telefoon
       id: 'r.l.samen.4',
       title: 'Koffie, verjaardagen en je telefoon',
-      goal: 'Je kent de gewoontes bij koffie en verjaardagen, en de regels voor je telefoon en de groepsapp.',
+      goal: 'Je kent de gewoontes bij koffie en verjaardagen. Je kent de regels voor je telefoon en de groepsapp.',
       remember: 'Jarig? Dan trakteer je zelf.',
       steps: [
         {

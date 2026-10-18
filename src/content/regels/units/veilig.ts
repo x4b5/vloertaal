@@ -16,7 +16,7 @@ export const veiligUnit: RuleUnit = {
       // Les 7.1 · Beschermende spullen en uitleg
       id: 'r.l.veilig.1',
       title: 'Beschermende spullen en uitleg',
-      goal: 'Je weet dat je werkgever gratis bescherming en uitleg geeft, en dat je erom mag vragen.',
+      goal: 'Je weet dat je werkgever gratis bescherming en uitleg geeft. Je weet dat je erom mag vragen.',
       // ⚖️ check: Beschermende spullen krijg je gratis van je werkgever ⚖️.
       remember: 'Beschermende spullen krijg je gratis van je werkgever.',
       // Wie kan je helpen: je uitvoerder of leidinggevende · de preventiemedewerker (de collega die
@@ -229,13 +229,15 @@ export const veiligUnit: RuleUnit = {
         },
         // ⚖️ check: Bij een ernstig ongeluk meldt je werkgever het meteen bij de Arbeidsinspectie
         //   ⚖️.
-        // ⚖️ check: Of als iemand blijvend letsel heeft ⚖️.
+        // ⚖️ check: Bijvoorbeeld als iemand in het ziekenhuis moet blijven, blijvend letsel heeft of
+        //   overlijdt ⚖️ (art. 9 Arbowet: ernstig letsel = blijvend letsel of opname in het
+        //   ziekenhuis; was eerder: "naar het ziekenhuis moet").
         {
           kind: 'truefalse',
           id: 'r.l.veilig.3.tf1',
           statement: 'Een ernstig ongeluk op het werk moet je werkgever melden.',
           answer: true,
-          why: 'Bij een ernstig ongeluk meldt je werkgever het meteen bij de Arbeidsinspectie. Bijvoorbeeld als iemand naar het ziekenhuis moet. Of als iemand blijvend letsel heeft.',
+          why: 'Bij een ernstig ongeluk meldt je werkgever het meteen bij de Arbeidsinspectie. Bijvoorbeeld als iemand in het ziekenhuis moet blijven, blijvend letsel heeft of overlijdt.',
         },
         {
           kind: 'whatdo',

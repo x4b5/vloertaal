@@ -30,7 +30,7 @@ const PENDING_RECORDING = new Set<string>([
   'Ik heb me gesneden.',
   'Ik wil een ongeluk melden.',
   'Wat is er gebeurd?',
-  'Hij is van de ladder gevallen.',
+  'Hij is gevallen. Hij bloedt.',
   'Mijn collega is gewond. Waar is de BHV’er?',
   // New lesson "Werken via een uitzendbureau" (l.agency, 17 October 2026):
   'de uitzendkracht',
@@ -40,11 +40,23 @@ const PENDING_RECORDING = new Set<string>([
   'verlengen',
   'uitbetalen',
   'Ik werk via een uitzendbureau.',
-  'Ik geef mijn uren door.',
+  'Wordt mijn opdracht verlengd?',
   'Wanneer stopt mijn opdracht?',
   'Heb je je uren doorgegeven?',
   'Ja, gisteren in de app.',
   'Op mijn loonstrook staan te weinig uren.',
+  // New lesson "Opdrachten van je leidinggevende" (l.task, 17 October 2026):
+  'de taak',
+  'daarna',
+  'afmaken',
+  'snel',
+  'bijna',
+  'Wat moet ik eerst doen?',
+  'Ik ben klaar met deze taak.',
+  'Kunt u het nog een keer laten zien?',
+  'Ben je klaar?',
+  'Bijna. Nog vijf minuten.',
+  'Klaar! Wat moet ik nu doen?',
 ]);
 
 describe('recorded clips (G4 b3)', () => {

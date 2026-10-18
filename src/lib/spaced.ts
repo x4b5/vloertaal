@@ -167,7 +167,17 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
   // equally weak lessons the same one always gave the chat (one lesson more in Safety, l.accident,
   // left about 1 in 8 chats out for 12 weeks). Adding half the day number breaks that lock; the
   // lesson still turns every one or two days.
-  const chatFrom = weakest.length ? weakest[(n + Math.floor(n / 2)) % weakest.length] : undefined;
+  // Of the equally weak lessons, the one that is otherwise strongest (the highest mean box over
+  // all its words) gives the chat: a strong lesson is among the weakest only on a rare day, while
+  // a weak one soon will be again. A turn by the day alone gave each of them the same coin flip
+  // on every meeting, and the same two lessons meet again and again (they were learned and are
+  // reviewed together): one lesson more in Samenwerken, l.task, left 15% of the chats out for 12
+  // weeks. Over 108 simulated learners 97.8% of the chats came back in 12 weeks, none at 90% or
+  // less (the turn alone: 94.6%, 28 learners); with random mistakes 95.3% (94.9%).
+  const strength = (l: Lesson) => l.words.reduce((a, w) => a + (cards[w.id]?.box ?? 1), 0) / l.words.length;
+  const strongest = Math.max(...weakest.map(({ l }) => strength(l)));
+  const rare = weakest.filter(({ l }) => strength(l) === strongest);
+  const chatFrom = rare.length ? rare[(n + Math.floor(n / 2)) % rare.length] : undefined;
   const chat = chatFrom ? pick(chatFrom.l.dialogues!, chatFrom.at) : undefined;
   const dialogues: Dialogue[] = chat ? [chat] : [];
   return { id: DAILY_ID, title: 'Review today', words, sentences, dialogues, repeat: true, boxes };

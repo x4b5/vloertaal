@@ -57,6 +57,8 @@ export interface Progress {
   cards?: Cards;
   /** Local date of the last finished "Herhaal vandaag", so the card can say it is done for today. */
   reviewDay?: string;
+  /** The last day a lesson (not only today's review) was finished: Bram's "done for today". */
+  lessonDay?: string;
   /** Free days ("vrije dag") in hand: one is earned per 7 practised days, at most FREEZE_MAX. */
   freezes?: number;
   /** Days a free day was used for (YYYY-MM-DD, most recent last). Shown grey on the week row. */
@@ -290,6 +292,7 @@ export function completeLesson(
   const prev = p.completed[lessonId];
   return {
     ...practise(p, today),
+    lessonDay: dayKey(today),
     xp: p.xp + xpFor(accuracy, review),
     completed: {
       ...p.completed,
@@ -344,6 +347,7 @@ export function parseBackup(text: string): Partial<Progress> | null {
   if (isCount(src.streak)) out.streak = Math.floor(src.streak);
   if (isDay(src.lastDay)) out.lastDay = src.lastDay;
   if (isDay(src.reviewDay)) out.reviewDay = src.reviewDay;
+  if (isDay(src.lessonDay)) out.lessonDay = src.lessonDay;
   if (isCount(src.freezes)) out.freezes = Math.min(FREEZE_MAX, Math.floor(src.freezes));
   if (isCount(src.bestStreak)) out.bestStreak = Math.floor(src.bestStreak);
   if (Array.isArray(src.rest)) out.rest = src.rest.filter(isDay).slice(-REST_KEEP);
@@ -372,6 +376,7 @@ export function replaceWithBackup(p: Progress, b: Partial<Progress>): Progress {
     completed: b.completed ?? {},
     cards: b.cards ?? {},
     reviewDay: b.reviewDay,
+    lessonDay: b.lessonDay,
     freezes: b.freezes,
     rest: b.rest,
     days: b.days,
@@ -410,6 +415,7 @@ export function mergeBackup(p: Progress, b: Partial<Progress>): Progress {
     streak: later.streak ?? 0,
     lastDay: later.lastDay ?? null,
     reviewDay: max(p.reviewDay, b.reviewDay),
+    lessonDay: max(p.lessonDay, b.lessonDay),
     freezes: Math.max(p.freezes ?? 0, b.freezes ?? 0),
     rest: [...new Set([...(p.rest ?? []), ...(b.rest ?? [])])].sort().slice(-REST_KEEP),
     days: [...new Set([...(p.days ?? []), ...(b.days ?? [])])].sort().slice(-DAYS_KEEP),

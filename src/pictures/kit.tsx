@@ -462,7 +462,9 @@ export function Calendar({ x = 24, y = 22, w = 72, h = 76, mark = 9, header = PA
 }
 
 /** Round badge with a tick (yes / right / done). */
-export function Tick({ x = 60, y = 60, r = 30, color = PAL.ok, shade = PAL.okShade }: { x?: number; y?: number; r?: number; color?: string; shade?: string }) {
+// Blue, not the green of a right answer: on an answer card a green tick in a picture ("ja",
+// "klaar", "op tijd") read as "this one is right" before any answer.
+export function Tick({ x = 60, y = 60, r = 30, color = PAL.blue, shade = PAL.blueShade }: { x?: number; y?: number; r?: number; color?: string; shade?: string }) {
   return (
     <g>
       <circle cx={x} cy={y + r * 0.1} r={r} fill={shade} />

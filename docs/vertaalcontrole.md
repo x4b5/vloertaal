@@ -656,3 +656,108 @@ Graag nakijken:
 - **De juridische feiten** in `c.agency.b` (het uitzendbureau is je werkgever; er is een cao voor
   uitzendkrachten; vakantiegeld en vakantiedagen) laat een deskundige nakijken, zie
   `docs/juridische-check.md` (c.agency). Wordt de Engelse tekst aangepast, dan alle negen talen mee.
+
+## Na de kritische ronde (17 oktober): Een ongeluk melden en Werken via een uitzendbureau (alle talen)
+
+Na een kritische lezing zijn deze teksten veranderd, in het Engels en in alle negen talen (met AI
+vertaald, nog niet door een moedertaalspreker gecontroleerd):
+
+- `c.agency.b` heeft een zin erbij, na de cao-zin: "You have a right to the same pay as workers of
+  the company who do the same work." (gelijke beloning, zie `docs/juridische-check.md`). De les
+  toont nu de zinnen 0, 2 en 4 (`TIP_LEADS`): het uitzendbureau is je werkgever, hetzelfde loon,
+  je eigen urenlijst.
+- `c.agency.o3` (fout antwoord): "Ask the boss at the company where you work to pay the 6 hours."
+  (was: "Stop going to work."). Zo toetst de vraag dat het uitzendbureau betaalt.
+- `s.agency.2` is nu "Wordt mijn opdracht verlengd?" (was "Ik geef mijn uren door."), zodat
+  "verlengen" in een zin staat. `c.agency.q` in het Engels: "Have you handed in your hours?".
+- **De opdracht**: Pools nu "projekt (praca w danej firmie)" ("zlecenie" las als een umowa
+  zlecenie, een ander soort contract), ook in `s.agency.2` en `s.agency.3`. Perzisch "کار در یک
+  شرکت مشخص (پروژه)" en Dari "کار در یک کمپنی معین (پروژه)" ("مأموریت" klonk als een dienstreis);
+  de zinnen zeggen "کارم در این شرکت / کمپنی" (mijn werk bij dit bedrijf). Oekraïens
+  "направлення" blijft (geen contractwoord, wel ook "verwijzing" bij de dokter): goed zo?
+- `c.agency.q`: Pools "Zgłosiłeś / Zgłosiłaś swoje godziny?", Oekraïens "Ти подав / подала свої
+  години?" (doorgeven = opgeven, niet doorsturen).
+- `c.accident.b`: na de eerste zin "Working through an agency? Tell the agency too." (zoals in
+  `c.sick.b`, dezelfde vertalingen), en de meldplicht zegt nu wie meldt: "The company where the
+  accident happened must report a serious accident … (also if you work through an agency)". De
+  les toont de zinnen 0 tot en met 3 (leidinggevende of BHV’er, ook het uitzendbureau, 112).
+  Roemeens nu "rămâne cu o vătămare permanentă" (was "rămâne rănit pe viață").
+- De situatie van `c.accident` is nieuw: rugpijn na het tillen en bang zijn je werk te
+  verliezen (`c.accident.s`, `c.accident.o1`–`o3`), en `c.accident.w` zegt "Your employer is not
+  allowed to punish you for reporting it". Oekraïens heeft in de situatie een man- en vrouwvorm
+  ("пошкодив / пошкодила"), Arabisch en Tigrinya overal; Pools, Bulgaars en Roemeens zijn
+  neutraal (tegenwoordige tijd).
+- `c.accident.a` is nu "Hij is gevallen. Hij bloedt." (zo staat "bloeden" in de les, en het
+  onbekende "ladder" is weg), met een nieuwe uitleg `c.accident.a.why`.
+- `w.bhver` (de uitleg bij het woord): "the company emergency helper (first aid, fire,
+  evacuation)", in alle talen. Het plaatje blijft 🧑‍🚒: ⛑️ is al de helm (`w.helm`) en 🆘 al
+  "help" (`w.help`).
+- Tigrinya `w.gebeuren` nu "ምግጣም (ምኽሳት)", zoals "ኣጋጢሙ" in het gesprekje.
+
+Graag nakijken: Tigrinya "ዕማመይ ክናዋሕ ድዩ?" (`s.agency.2`) en "ካብ ህንጻ ምውጻእ" (evacuatie, in
+`w.bhver`); Arabisch "أن يدفع لك 6 ساعات" in `c.agency.o3`.
+
+## Nieuw 17 oktober 2026: les Opdrachten van je leidinggevende (alle talen)
+
+Een nieuwe les in Samenwerken (`u.teamwork`), na "Agreements and saying no" (`l.agree`). Alles met
+AI vertaald en nog niet door een moedertaalspreker gecontroleerd. Nieuwe ids:
+
+- Les en woorden (`src/i18n/culture/<taal>.ts`, Engelse bron in `culture/en.json`): `l.task`,
+  `w.taak`, `w.eerst`, `w.daarna`, `w.afmaken`, `w.snel`, `w.bijna`; zinnen `s.task.1` ("Wat moet
+  ik eerst doen?"), `s.task.2` ("Ik ben klaar met deze taak."), `s.task.3` ("Kunt u het nog een
+  keer laten zien?"); gesprekje `d.task.q` ("Ben je klaar?"), `d.task.a` ("Bijna. Nog vijf minuten.").
+- Uitleg bij het gesprekje (`src/i18n/learn/<taal>.ts`): `d.task.a.why`.
+- Werkvloer-tip (ook in `src/i18n/culture/<taal>.ts`): `c.task`, `c.task.b`, `c.task.p`, `c.task.s`,
+  `c.task.o1`, `c.task.o2`, `c.task.o3`, `c.task.w`. Geen juridische tip: geen adviesregel, en
+  niets voor `docs/juridische-check.md`.
+
+Graag nakijken:
+
+- **De taak** naast **de opdracht** (`w.opdracht`, de plaatsing via het uitzendbureau): in het
+  Arabisch "المهمة" en in het Tigrinya "ዕማም" voor allebei; bij de opdracht staat de uitleg tussen
+  haakjes, dus ze zijn uit elkaar te houden. Turks "görev, iş", Perzisch en Dari "کار، وظیفه",
+  Pools "zadanie", Oekraïens "завдання", Roemeens "sarcina", Bulgaars "задачата".
+- **Klaar zijn** (`s.task.2`, `d.task.q`, `c.task.p`): Pools en Oekraïens hebben een man-, vrouw-
+  en beide-vorm voor "Ik ben klaar met deze taak." ("Skończyłem / skończyłam", "Я закінчив /
+  закінчила") en een man- en vrouwvorm voor de vraag. Bulgaars bewust neutraal met de
+  verleden tijd ("Приключих", "Приключи ли?") in plaats van "готов / готова". Roemeens ("Am
+  terminat", "Ai terminat?") en Arabisch ("انتهيت", de vraag zonder klinkertekens) zijn voor beiden
+  gelijk. Tigrinya: de vraag in man- en vrouwvorm ("ወዲእካ ዲኻ?" / "ወዲእኪ ዲኺ?"), de zin neutraal.
+- **Bijna** (`w.bijna`, `d.task.a`): Dari "نزدیک است" (zoals in `c.cleaning.a`), Perzisch "تقریباً".
+  Klinkt "نزدیک است. پنج دقیقهٔ دیگر." natuurlijk als antwoord?
+- **De tip**: "Saying "ja" when you did not understand" is in het Pools, Oekraïens en Bulgaars
+  neutraal omschreven ("choć nie wszystko rozumiesz", "хоча щось незрозуміло", "без да
+  разбираш"), om geen man- en vrouwvorm nodig te hebben. Arabisch en Tigrinya: titel, tip,
+  situatie en keuzes in man- en vrouwvorm. In de situatie ("je begreep maar de helft") hebben
+  Pools, Oekraïens en Bulgaars een man- en vrouwvorm.
+- **"Zeg het zo"** ("Klaar! Wat moet ik nu doen?") is overal genderneutraal: Pools/Oekraïens/
+  Bulgaars "Gotowe! / Готово!", Arabisch "انتهيت!", Tigrinya "ወዲአ!", Turks "Bitti!", Perzisch
+  "تمام شد!", Dari "خلاص شد!". Turks "Sıradaki iş ne?": goed, of liever "Sıradaki görev ne?"?
+- **De Nederlandse vraag** in de beste keuze ("Kunt u het nog een keer laten zien?") en "ja" blijven
+  overal Nederlands, tussen de aanhalingstekens van elke taal.
+- **Dari**: "شما" overal (ook in de vraag "کار شما خلاص شد؟", terwijl het Nederlands "je" zegt),
+  تیز (snel), خلاص (klaar), هدایات (instructies). Perzisch (Iran) houdt "تو", تند en تمام.
+  Afghaans genoeg?
+- **Tigrinya** (hele les): ዕማም (taak), ቅድም (eerst), ድሕሪኡ (daarna), ምውዳእ (afmaken), ቀልጢፉ (snel),
+  ዳርጋ (bijna), ተቖጻጻሪ (leidinggevende, zoals in `w.leidinggevende`). "ክልተ ግዜ ከርእዩ ይመርጹ" (in
+  `c.task.w`, "laten het liever twee keer zien"): duidelijk?
+- **Arabisch** `c.task.w`: "يفضّل معظم المشرفين أن يعرضوا الأمر مرتين" ("het twee keer laten
+  zien"); is "يشرحوا" (uitleggen) natuurlijker?
+
+## Nieuw 17 oktober 2026 (avond): na de kritische ronde "eerste week"
+
+- `bramRested` (Bram op het beginscherm): "Gisteren was je vrije dag. Je reeks gaat door." Eerst werd een vrije dag zonder woord gebruikt.
+- `remindEvent`: de herinnering in de agenda krijgt achter de Nederlandse titel ook de hulptaal: "Tijd voor je Nederlands (10 minuten)".
+- Dari: "code" stond op de codepagina op twee manieren (کد en کود). Nu overal کد, zoals in de oudere teksten.
+
+## 17 oktober 2026: na de NT2-taalcontrole
+
+Een NT2-docent las 20 lessen na: "zeer goed, kort en dicht bij de werkvloer". Verwerkt:
+- Spelling: `w.ziekmelden` "ziekmelden" en `w.betermelden` "betermelden" (één woord, Woordenlijst). De opnames blijven: het klinkt hetzelfde, alleen de tekst in `public/audio-el/voices.json` is aangepast.
+- Engels nauwkeuriger (de hulptalen zijn daaruit vertaald; kijk of ze mee moeten): `s.understand.2` "Could you speak more slowly?", `s.contract.3` "Which collective agreement applies to me?", `s.findwork.1` "I want to apply for a job.", `w.boven` "up, above", `s.roundsounds.1` "Tighten the nut well."
+- `c.task.p` "Klaar! Wat moet ik nu doen?" (was "Wat is de volgende taak?", te schools), in 9 talen.
+
+**Nog te doen zodra er weer opgenomen kan worden** (deze zinnen hebben nu een opname; een nieuwe tekst valt tot dan terug op de telefoonstem):
+- `s.boundaries.1` "Raak me niet aan, alstublieft." → "Raak me niet aan." (de rest van de les zegt "je"; een grens zeg je stevig, zonder "alstublieft").
+- `c.texting.q/a` "Kun je zaterdag een extra dienst draaien?" → "Ja, ik reageer meteen in de app." past niet als paar. Voorstel: "Zie je de extra dienst in de app?" → "Ja, ik reageer meteen."
+- Mogelijke nieuwe zinnen: "Is dit goed zo?", "Hoe zeg je dat in het Nederlands?", "Mag ik even naar de wc?", "Ik weet het niet."

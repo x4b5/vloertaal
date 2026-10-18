@@ -16,7 +16,7 @@ export const startUnit: RuleUnit = {
       // Les 2.1 · Op tijd en goed voorbereid
       id: 'r.l.start.1',
       title: 'Op tijd en goed voorbereid',
-      goal: 'Je weet wat je meeneemt, wat "op tijd" hier betekent, en wat je doet als je te laat bent.',
+      goal: 'Je weet wat je meeneemt en wat "op tijd" hier betekent. Je weet wat je doet als je te laat bent.',
       remember: 'Te laat? Bel of app vóór je dienst begint.',
       steps: [
         {
@@ -39,7 +39,7 @@ export const startUnit: RuleUnit = {
           body: [
             'Laat het weten vóór je dienst begint.',
             'Dan kan het team plannen.',
-            'Te laat zonder bericht vinden mensen hier veel erger dan de vertraging zelf.',
+            'Te laat, zonder bericht? Dat vinden mensen hier erger dan de vertraging zelf.',
           ],
           rule: 'ongeschreven',
           key: true,
@@ -64,7 +64,7 @@ export const startUnit: RuleUnit = {
             { id: 'b', text: 'Ze rent extra hard en zegt er niets over.', best: false, feedback: 'Haasten is niet nodig. Even laten weten wel.' },
             { id: 'c', text: 'Ze belt of appt haar leidinggevende meteen.', best: true, feedback: 'Goed. Dan kan het team plannen.' },
           ],
-          why: 'Laat het weten vóór je dienst begint. Dan kan het team plannen. Te laat zonder bericht vinden mensen hier veel erger dan de vertraging zelf.',
+          why: 'Laat het weten vóór je dienst begint. Dan kan het team plannen. Te laat, zonder bericht? Dat vinden mensen hier erger dan de vertraging zelf.',
         },
         // ⚖️ check: Een regel moet wel een goede reden hebben ⚖️.
         {
@@ -81,7 +81,7 @@ export const startUnit: RuleUnit = {
       // Les 2.2 · Kennismaken
       id: 'r.l.start.2',
       title: 'Kennismaken',
-      goal: 'Je weet hoe je je voorstelt, wanneer je "je" zegt, en dat je zelf kiest over aanraken.',
+      goal: 'Je weet hoe je je voorstelt en wanneer je "je" zegt. Je weet ook dat je zelf kiest over aanraken.',
       remember: 'Op het werk zeg je meestal "je", ook tegen de baas.',
       steps: [
         {
@@ -144,7 +144,7 @@ export const startUnit: RuleUnit = {
       // Les 2.3 · Vragen stellen en terugzeggen
       id: 'r.l.start.3',
       title: 'Vragen stellen en terugzeggen',
-      goal: 'Je durft te zeggen dat je iets niet snapt, en je checkt het door terug te zeggen.',
+      goal: 'Je durft te zeggen dat je iets niet snapt. Je checkt het door terug te zeggen.',
       remember: 'Snap je het niet? Vraag het. Zeg terug wat je hebt begrepen.',
       steps: [
         {

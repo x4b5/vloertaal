@@ -124,15 +124,15 @@ const baseTips: CultureTip[] = [
     lessonId: 'l.accident',
     emoji: '🩹',
     title: 'Report every accident',
-    body: `Tell your supervisor or the BHV’er (the company first-aider) about every accident, also a small one. In an emergency, call 112 first. Your employer must report a serious accident to the Nederlandse Arbeidsinspectie: when someone dies, is hurt for life or must stay in hospital. ${ADVICE_LINE}`,
+    body: `Tell your supervisor or the BHV’er (the company first-aider) about every accident, also a small one. Working through an agency? Tell the agency too. In an emergency, call 112 first. The company where the accident happened must report a serious accident to the Nederlandse Arbeidsinspectie (also if you work through an agency): when someone dies, is hurt for life or must stay in hospital. ${ADVICE_LINE}`,
     phrase: { id: 'c.accident.p', nl: 'Mijn collega is gewond. Waar is de BHV’er?', en: 'My colleague is hurt. Where is the first-aider?' },
-    situation: { id: 'c.accident.s', en: 'A colleague cuts his hand at work. It is only a small cut. What do you do?' },
+    situation: { id: 'c.accident.s', en: 'You hurt your back while lifting. You are afraid to lose your job. What do you do?' },
     options: [
-      { id: 'c.accident.o1', en: 'Help him get first aid and tell your supervisor.', best: true },
-      { id: 'c.accident.o2', en: 'Say nothing, because it is only a small cut.', best: false },
-      { id: 'c.accident.o3', en: 'Wait until the end of the shift to tell someone.', best: false },
+      { id: 'c.accident.o1', en: 'Tell your supervisor today, and your agency too if you work through one.', best: true },
+      { id: 'c.accident.o2', en: 'Say nothing, so you do not lose your job.', best: false },
+      { id: 'c.accident.o3', en: 'Wait and see if the pain goes away by itself.', best: false },
     ],
-    why: { id: 'c.accident.w', en: 'A small accident is reported too: it helps prevent the next one. Your employer may not punish you for reporting it.' },
+    why: { id: 'c.accident.w', en: 'Report it the same day, also if it seems small: the pain can get worse later. Your employer is not allowed to punish you for reporting it.' },
   }),
   tip({
     id: 'c.direct',
@@ -224,6 +224,21 @@ const baseTips: CultureTip[] = [
     ],
     why: { id: 'c.no.w', en: 'A clear "nee" is respected. Saying "ja" and not coming breaks trust much more.' },
   }),
+  tip({
+    id: 'c.task',
+    lessonId: 'l.task',
+    emoji: '✅',
+    title: 'Say when it is done, ask when it is not clear',
+    body: 'In the Netherlands a supervisor often gives a task in a few words, and expects you to say when it is done. Saying "ja" when you did not understand often leads to mistakes. Asking again, or asking to be shown, is normal here and not rude.',
+    phrase: { id: 'c.task.p', nl: 'Klaar! Wat moet ik nu doen?', en: 'Done! What must I do now?' },
+    situation: { id: 'c.task.s', en: 'Your supervisor explains a task very fast. You understood only half. What do you do?' },
+    options: [
+      { id: 'c.task.o1', en: 'Ask: "Kunt u het nog een keer laten zien?"', best: true },
+      { id: 'c.task.o2', en: 'Say "ja" and guess.', best: false },
+      { id: 'c.task.o3', en: 'Wait until a colleague does it.', best: false },
+    ],
+    why: { id: 'c.task.w', en: 'Asking again is normal and takes a minute. Fixing a mistake takes much longer. Most supervisors would rather show it twice.' },
+  }),
 ];
 
 const line = (id: string, nl: string, en: string): ChatLine => ({ id, nl, en });
@@ -280,6 +295,29 @@ export const teamworkUnit: Unit = {
         ),
       ],
     },
+    {
+      // "klaar" (w.klaar, l.shift), "laten zien" (w.latenzien, l.understood) and "nog een keer"
+      // (w.nogeenkeer, l.understand) are already words of other lessons: here they come in the
+      // sentences, the chat and the tip.
+      id: 'l.task',
+      title: 'Instructions from your supervisor',
+      words: [
+        { id: 'w.taak', nl: 'de taak', en: 'the task', emoji: '📌' },
+        { id: 'w.eerst', nl: 'eerst', en: 'first', emoji: '1️⃣', picture: false },
+        { id: 'w.daarna', nl: 'daarna', en: 'after that', emoji: '⏭️', picture: false },
+        { id: 'w.afmaken', nl: 'afmaken', en: 'to finish', emoji: '✅' },
+        { id: 'w.snel', nl: 'snel', en: 'fast', emoji: '🏃' },
+        { id: 'w.bijna', nl: 'bijna', en: 'almost', emoji: '🤏', picture: false },
+      ],
+      sentences: [
+        { id: 's.task.1', nl: 'Wat moet ik eerst doen?', en: 'What must I do first?' },
+        { id: 's.task.2', nl: 'Ik ben klaar met deze taak.', en: 'I am done with this task.' },
+        { id: 's.task.3', nl: 'Kunt u het nog een keer laten zien?', en: 'Can you show it one more time?' },
+      ],
+      dialogues: [
+        chat(line('d.task.q', 'Ben je klaar?', 'Are you done?'), line('d.task.a', 'Bijna. Nog vijf minuten.', 'Almost. Five more minutes.')),
+      ],
+    },
   ] satisfies Lesson[],
 };
 
@@ -293,6 +331,7 @@ const afterHelp = baseTips.findIndex((t) => t.lessonId === 'l.understand') + 1;
  * the English sentences, including the closing advice line (src/content/work.ts).
  */
 export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
+  'c.accident': [0, 1, 2, 3], // tell your supervisor; through an agency: tell the agency too; 112 first
   'c.translate': [0, 4, 6], // ask first; ask a person to explain important papers
   'c.understood': [0, 2, 4], // say back: "Dus ik moet eerst …?"
   'c.keeplearning': [0, 4, 5], // colleagues switch to English; ask them to speak Dutch
@@ -300,7 +339,7 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.interview': [0, 2, 3], // asking questions yourself is normal
   'c.bsn': [0, 5, 8], // ask why they need it; never give your DigiD
   'c.housing': [2, 10, 11, 13], // proof of payment; job ends: advice first (Juridisch Loket)
-  'c.agency': [0, 1, 3], // the agency is your employer; keep your own list of hours
+  'c.agency': [0, 2, 4], // the agency is your employer; the same pay as the company's workers; keep your own list of hours
   'c.payslip': [0, 1, 3], // check the hours, write down the hours you work
   'c.phone': [0, 3, 4], // urgent call: tell your supervisor first
   'c.smoking': [0, 2, 3], // only outside, in your break
