@@ -737,7 +737,7 @@ const t: CultureTranslation = {
     'c.callin.o3': 'Îl rogi pe vecin să sune în locul tău.',
     'c.callin.w': 'Un apel e clar și rapid, iar șeful poate pune întrebări. Dacă spui când crezi că te întorci, îl ajuți să planifice.',
     'c.texting': 'Mesaje la muncă: scurte și politicoase',
-    'c.texting.b': 'Scrie mesaje scurte și politicoase la muncă. Spune cine ești și ce se întâmplă și încheie cu un salut. De exemplu: „Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”. Verifică des programul (rooster) în aplicație. Răspunde la timp la cererile pentru ture. Ca să schimbi o tură, trebuie mai întâi să fie de acord șeful sau planificatorul: „Vraag het eerst aan je leidinggevende.” Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.',
+    'c.texting.b': 'Scrie mesaje scurte și politicoase la muncă. Spune cine ești și ce se întâmplă și încheie cu un salut. De exemplu: „Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”. Verifică des programul (rooster) în aplicație. Răspunde la timp la cererile pentru ture. Ca să schimbi o tură, trebuie mai întâi să fie de acord șeful sau planificatorul, așa că întreabă: „Mag ik mijn dienst ruilen?” Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.',
     'c.texting.p': 'Salut Mark, întârzii 10 minute. Scuze! Salutări, Ali',
     'c.texting.s': 'Vei întârzia 10 minute. Ce mesaj către șef e cel mai bun?',
     'c.texting.o1': '„Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”',

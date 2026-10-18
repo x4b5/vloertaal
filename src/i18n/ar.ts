@@ -471,7 +471,7 @@ const lang: HelpLanguageSource = {
     'w.proberen': 'يحاول، يجرّب',
     'w.voordoen': 'يُري كيف (يفعله أمامك أولاً)',
     'w.gevaarlijk': 'خطير',
-    'w.zeker': 'متأكد، أكيد',
+    'w.uitleg': 'الشرح',
     's.notyet.1': 'لم أتعلّم هذا بعد.',
     's.notyet.2': 'لم أحصل على شرح بعد.',
     's.notyet.3': 'هل يُسمَح لي أن أفعل هذا وحدي الآن؟',

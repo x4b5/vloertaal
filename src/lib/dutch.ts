@@ -107,5 +107,41 @@ const SENTENCE_SPLIT = new RegExp([
   '(?<=[.!?…])(?<!(?:^|[^\\p{L}])(?:np|bv|vb|vs|ca|bijv|örn|напр|т\\.е|e\\.g|i\\.e|z\\.B|d\\.h)\\.)\\s+(?=\\P{Ll})',
   '(?<=[.؟።]\\))\\s+(?=\\P{Ll})',
   '(?<=[.!?…]["”’»“])\\s+(?=\\p{Lu})',
-].join('|'), 'u');
-export const sentences = (text: string) => text.trim().split(SENTENCE_SPLIT);
+].join('|'), 'gu');
+
+/**
+ * How deep in quotation marks each place of a text is: “…”, "…", «…», „…“ and „…” (a “ after
+ * „ closes it, as in Bulgarian). null when the marks do not pair up (then no place counts as
+ * quoted).
+ */
+function quoteDepths(text: string): number[] | null {
+  const open: string[] = [];
+  const depth: number[] = [];
+  for (const ch of text) {
+    const top = open[open.length - 1];
+    if (ch === '„' || ch === '«') open.push(ch);
+    else if (ch === '»') { if (top !== '«') return null; open.pop(); }
+    else if (ch === '“') { if (top === '„') open.pop(); else open.push(ch); }
+    else if (ch === '”') { if (top !== '„' && top !== '“') return null; open.pop(); }
+    else if (ch === '"') { if (top === '"') open.pop(); else open.push(ch); }
+    // One entry per UTF-16 unit, so the indices match the regex's.
+    for (let k = 0; k < ch.length; k++) depth.push(open.length);
+  }
+  return open.length ? null : depth;
+}
+
+/** A text's sentences, never split inside a quotation ("For example: «… te laat. Sorry! Groet, Ali»." is one). */
+export function sentences(text: string): string[] {
+  const t = text.trim();
+  const depth = quoteDepths(t);
+  const out: string[] = [];
+  let from = 0;
+  for (const m of t.matchAll(SENTENCE_SPLIT)) {
+    const at = m.index ?? 0;
+    if (depth && depth[at]) continue;
+    out.push(t.slice(from, at));
+    from = at + m[0].length;
+  }
+  out.push(t.slice(from));
+  return out;
+}

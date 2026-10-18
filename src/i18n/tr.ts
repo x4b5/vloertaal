@@ -474,7 +474,7 @@ const lang: HelpLanguageSource = {
     'w.proberen': 'denemek',
     'w.voordoen': 'yaparak göstermek',
     'w.gevaarlijk': 'tehlikeli',
-    'w.zeker': 'emin',
+    'w.uitleg': 'açıklama',
     's.notyet.1': 'Bunu henüz öğrenmedim.',
     's.notyet.2': 'Henüz bir açıklama almadım.',
     's.notyet.3': 'Bunu artık tek başıma yapmama izin var mı?',
