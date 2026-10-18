@@ -306,6 +306,18 @@ const lang: HelpLanguageSource = {
     fact7: 'Hollandacayı çok iyi konuşan her 100 göçmenden 69’unun ücretli bir işi var.',
     fact14: 'Birçok kütüphanede bir Taalhuis (“dil evi”) var: Hollandaca öğrenmeye devam etmen için ücretsiz yardım.',
     fact30: 'Her gün biraz pratik yapmak, arada bir çok pratik yapmaktan daha iyidir. Sen bunu 30 gündür yapıyorsun!',
+    /* Backup, reminder and reset, a second look */
+    backupFileN: 'Bu dosyada {n} ders var.',
+    backupFileOne: 'Bu dosyada {n} ders var.',
+    backupPhoneN: '{n} dersin var.',
+    backupPhoneOne: '{n} dersin var.',
+    backupFewer: '“Yerine koy” dosyada olmayan dersleri siler. “Birleştir” her şeyi korur.',
+    backupTooBig: 'Bu dosya çok büyük. Bir Vloertaal dosyası çok daha küçüktür.',
+    backupNewPhone: 'Yeni telefon mu? Orada da kodun gerekecek.',
+    remindEveryDay: 'Hatırlatman: her gün saat {time}',
+    remindStop: 'Hatırlatmayı durdur',
+    remindStopped: 'Hatırlatmayı takviminden kaldırmak için dosyayı aç.',
+    resetKeeps: 'Derslerin, kelimelerin, günlük serin ve sertifikaların silinir. Dilin, kodun ve ayarların kalır.',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

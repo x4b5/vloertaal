@@ -137,6 +137,20 @@ async function spellRight(page, word = 'de helm') {
   await settle(page, 300);
 }
 
+/** Settings › "Bewaar je voortgang" › "Zet terug" with a backup file of these lesson ids (or `bytes`
+ *  of filler: a file too big to be one). */
+async function putBack(page, lessons, bytes = 0) {
+  const completed = Object.fromEntries(lessons.map((id) => [id, { best: 1, times: 1 }]));
+  const text = bytes ? 'x'.repeat(bytes) : JSON.stringify({ app: 'vloertaal', version: 1, progress: { completed } });
+  await page.setInputFiles('.waybill input[type=file]', { name: 'vloertaal-voortgang.json', mimeType: 'application/json', buffer: Buffer.from(text) });
+  await settle(page, 400);
+}
+/** A daily reminder already in the calendar (Settings › reminder then offers another time or Stop). */
+async function withReminder(page, time = '18:00') {
+  await page.evaluate((t) => localStorage.setItem('vloertaal:reminder-time', t), time);
+  await page.reload(); await settle(page, 900);
+}
+
 const NATIVE = { ar: 'العربية', ti: 'ትግርኛ', fa: 'فارسی', prs: 'دری', uk: 'Українська', tr: 'Türkçe', pl: 'Polski', ro: 'Română', bg: 'Български' };
 const GENDERED = ['ar', 'ti', 'uk', 'pl', 'ro', 'bg'];
 
@@ -396,6 +410,19 @@ function defineStates(LANG) {
   add('settings:install', shot('settings&page=install&install=prompt'));
   add('settings:unlock', shot('settings&page=unlock&access=preview'));
   add('settings:reminder-added', shot('settings&page=reminder'), async (p) => { await tap(p, '.max3-card', 1); });
+  // A reminder in the calendar: its time, [Andere tijd] [Stop de herinnering]; the times one page
+  // deeper; Stop downloads the file that cancels it.
+  add('settings:reminder-set', shot('settings&page=reminder'), withReminder, { expect: '.set-remind-now' });
+  add('settings:reminder-time', shot('settings&page=reminder'), async (p) => { await withReminder(p); await tap(p, '.max3-card', 0); await settle(p); }, { expect: '.set-own-cards' });
+  add('settings:reminder-stopped', shot('settings&page=reminder'), async (p) => { await withReminder(p); await tap(p, '.max3-card', 1); }, { expect: '.set-remind-now' });
+  // "Lessen op deze telefoon" switched on: it stays, and says what is being saved.
+  add('settings:offline-on', shot('settings&page=offline&sector=logistics'), async (p) => { await tap(p, '.max3-card', 0); await settle(p, 400); });
+  // "Zet terug": the file's lessons ([Samenvoegen] [Vervangen], Cancel); Replace with fewer lessons
+  // asks again with both numbers; a file without lessons only adds; a file too big says so.
+  add('settings:backup-ask', shot('settings&page=backup'), async (p) => { await putBack(p, ['l.hello', 'l.people', 'l.understand', 'l.gear', 'l.danger', 'l.accident', 'l.things', 'l.directions', 'l.shift']); }, { expect: '.waybill-ask' });
+  add('settings:backup-fewer', shot('settings&page=backup'), async (p) => { await putBack(p, ['l.hello', 'l.oldlesson']); await tap(p, '.waybill-ask .danger'); }, { expect: '.waybill-fewer' });
+  add('settings:backup-empty', shot('settings&page=backup'), async (p) => { await putBack(p, []); }, { expect: '.waybill-ask' });
+  add('settings:backup-big', shot('settings&page=backup'), async (p) => { await putBack(p, [], 2_100_000); }, { expect: '.keep-note' });
   add('tab:help', shot('words'), null, { list: true });
   add('tab:about', shot('about'));
   add('screen:coaches', shot('coaches'), null, { list: true });
@@ -501,6 +528,9 @@ function defineRuleStates() {
   add('rule:settings', shot('settings'), null, { expect: '.max3-menu' });
   for (const pg of ['me', 'lessons', 'phone', 'language']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   for (const pg of ['sector', 'sound', 'voice', 'text', 'theme', 'reminder', 'backup']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
+  add('rule:settings-reminder-set', shot('settings&page=reminder'), withReminder, { expect: '.set-remind-now' });
+  add('rule:settings-backup-fewer', shot('settings&page=backup'), async (p) => { await putBack(p, ['r.l.zoeken.1']); await tap(p, '.waybill-ask .danger'); }, { expect: '.waybill-fewer' });
+  add('rule:settings-reset', shot('settings&page=reset'), null, { expect: '.reset-actions' });
   add('rule:settings-sound-no-voice', shot('settings&page=sound&novoice=1'), null, { expect: '.no-voice-note' });
   add('rule:route-no-voice', shot('route&state=mid&novoice=1'), null, { expect: '.no-voice-note' });
   add('rule:gate', shot('gate&try=1&greet=1'), null, { expect: '.gate-try' });

@@ -306,6 +306,18 @@ const lang: HelpLanguageSource = {
     fact7: 'Spośród migrantów, którzy bardzo dobrze mówią po niderlandzku, 69 na 100 ma płatną pracę.',
     fact14: 'W wielu bibliotekach jest Taalhuis („dom języka”): darmowa pomoc w dalszej nauce niderlandzkiego.',
     fact30: { m: 'Lepiej ćwiczyć trochę codziennie niż dużo od czasu do czasu. Ćwiczyłeś już 30 dni z rzędu!', f: 'Lepiej ćwiczyć trochę codziennie niż dużo od czasu do czasu. Ćwiczyłaś już 30 dni z rzędu!' },
+    /* Backup, reminder and reset, a second look */
+    backupFileN: { one: 'Ten plik ma {n} lekcję.', few: 'Ten plik ma {n} lekcje.', many: 'Ten plik ma {n} lekcji.', other: 'Ten plik ma {n} lekcji.' },
+    backupFileOne: 'Ten plik ma {n} lekcję.',
+    backupPhoneN: { one: 'Masz {n} lekcję.', few: 'Masz {n} lekcje.', many: 'Masz {n} lekcji.', other: 'Masz {n} lekcji.' },
+    backupPhoneOne: 'Masz {n} lekcję.',
+    backupFewer: '„Zastąp” usuwa lekcje, których nie ma w pliku. „Połącz” zachowuje wszystko.',
+    backupTooBig: 'Ten plik jest za duży. Plik Vloertaal jest dużo mniejszy.',
+    backupNewPhone: 'Nowy telefon? Tam też będzie potrzebny twój kod.',
+    remindEveryDay: 'Twoje przypomnienie: codziennie o {time}',
+    remindStop: 'Wyłącz przypomnienie',
+    remindStopped: 'Otwórz plik, aby usunąć przypomnienie z kalendarza.',
+    resetKeeps: 'Twoje lekcje, słowa, dni z rzędu i certyfikaty zostaną usunięte. Twój język, kod i ustawienia zostają.',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

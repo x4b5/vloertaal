@@ -745,9 +745,15 @@ export default function App() {
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
             onReset={() => {
-              // Keep look, voice, sound, sector, region and gender; only learning progress is wiped (and lessons in progress).
+              // Keep the help language, look, voice, sound, sector, region and gender (the code is
+              // stored apart and stays too); only learning progress is wiped (and lessons in
+              // progress). So the app goes on at the home, not at the language list again.
               clearSave();
-              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, region: p.region, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked }));
+              setProgress((p) => ({
+                ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
+                sector: p.sector, region: p.region, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked,
+              }));
+              tab('route');
             }}
             onRestore={(next) => setProgress(next)}
             access={acc}

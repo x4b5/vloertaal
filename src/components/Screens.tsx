@@ -110,7 +110,8 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
           <span className="lang-names">
             <span className="lang-native">{NL_META.nativeName}</span>
             <span className="lang-en lang-nl-sub">{NL_META.name}</span>
-            <span className="lang-nl-more">{NL_MORE}</span>
+            {/* Its own direction: in a right-to-left list the full stop stays at its end. */}
+            <span className="lang-nl-more"><bdi dir="ltr">{NL_MORE}</bdi></span>
           </span>
           {current === 'nl' && <CheckIcon size={20} className="lang-check" />}
         </button>

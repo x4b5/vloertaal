@@ -306,6 +306,18 @@ const lang: HelpLanguageSource = {
     fact7: 'Dintre migranții care vorbesc foarte bine olandeza, 69 din 100 au un loc de muncă plătit.',
     fact14: 'Multe biblioteci au un Taalhuis („casa limbii”): ajutor gratuit ca să înveți olandeza mai departe.',
     fact30: 'Puțin exercițiu în fiecare zi e mai bun decât mult din când în când. Exersezi deja de 30 de zile!',
+    /* Backup, reminder and reset, a second look */
+    backupFileN: { one: 'Acest fișier are {n} lecție.', few: 'Acest fișier are {n} lecții.', other: 'Acest fișier are {n} de lecții.' },
+    backupFileOne: 'Acest fișier are {n} lecție.',
+    backupPhoneN: { one: 'Ai {n} lecție.', few: 'Ai {n} lecții.', other: 'Ai {n} de lecții.' },
+    backupPhoneOne: 'Ai {n} lecție.',
+    backupFewer: '„Înlocuiește” șterge lecțiile care nu sunt în fișier. „Adaugă” păstrează tot.',
+    backupTooBig: 'Acest fișier este prea mare. Un fișier Vloertaal este mult mai mic.',
+    backupNewPhone: 'Telefon nou? Și acolo ai nevoie de codul tău.',
+    remindEveryDay: 'Reamintirea ta: în fiecare zi la {time}',
+    remindStop: 'Oprește reamintirea',
+    remindStopped: 'Deschide fișierul ca să scoți reamintirea din calendar.',
+    resetKeeps: 'Lecțiile, cuvintele, zilele la rând și certificatele tale se șterg. Limba, codul și setările tale rămân.',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
