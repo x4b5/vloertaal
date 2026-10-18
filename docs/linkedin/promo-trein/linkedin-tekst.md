@@ -5,7 +5,7 @@ minder goed.
 
 ---
 
-In de trein. Op een terras in de pauze. Of achter de laptop in de kantine. 🚆☕💻
+In de trein. Op een terras op je vrije dag. Of achter de laptop in de kantine. 🚆☕💻
 
 Nederlands leren voor je werk hoeft geen avondcursus te zijn. Met **Vloertaal** oefen je een paar
 minuten per dag, op je eigen telefoon, met uitleg in je eigen taal.

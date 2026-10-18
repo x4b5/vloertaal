@@ -22,7 +22,7 @@ mee naar de telefoon of laptop.
 | Tijd | Scène | Tekst in beeld |
 |---|---|---|
 | 0–9 s | drone → gele trein → door het raam → Amina, les in het Arabisch, "Goed zo!" | Nederlands leren voor je werk. / In de trein. Op je telefoon. |
-| 9–15 s | het terras op → achter Jada's krullen → telefoon (gesprek in het Pools) → "Dag 7 op rij" | In je pauze. Een paar minuten per dag. |
+| 9–15 s | het terras op → achter Jada's krullen → telefoon (gesprek in het Pools) → "Dag 7 op rij" | Op een vrije dag. Een paar minuten per dag. |
 | 15–21 s | door de glazen wand de kantine in → achter Henks hoofd → laptop (alle talen) → de link gaat naar nieuwe collega's | Deel het met je nieuwe collega's. |
 | 21–30 s | VLOERTAAL in stencil, 3D-Bram loopt in beeld en zwaait, de vinkjes | Gratis · Geen account · Geen reclame · vloertaal.nl |
 
