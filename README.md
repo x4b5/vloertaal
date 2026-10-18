@@ -152,6 +152,10 @@ nieuwe id's aan. `npm test` faalt zolang er in een taal iets ontbreekt. Neem daa
 **Wat is er nieuw:** zet een regel bovenaan in `src/content/updates.ts`. Die komt op
 vloertaal.nl/nieuw en als datum onder Over.
 
+## Licenties
+
+Lettertypes, software en stemmen van anderen, en onder welke licentie we ze gebruiken: [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+
 ## ⚠️ Nog na te kijken
 
 - **Vertalingen**: alle hulptaal-teksten zijn met AI geschreven en daarna met een blinde
@@ -163,3 +167,6 @@ vloertaal.nl/nieuw en als datum onder Over.
 - **Uitdrukkingen**: [`docs/uitdrukkingen.md`](docs/uitdrukkingen.md).
 - **Regio Zuid-Limburg**: de sociale kaart en de regels, zie
   [`docs/regio-controle.md`](docs/regio-controle.md). Pas daarna aanzetten.
+- **Rechten op de stemmen**: ga na met welk ElevenLabs-abonnement de opnames zijn gemaakt (zie
+  [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)). En kies of de code en de lessen "alle rechten
+  voorbehouden" blijven (zo is het nu, want er is geen licentiebestand) of een open licentie krijgen.
