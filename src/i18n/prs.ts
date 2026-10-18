@@ -306,6 +306,8 @@ const lang: HelpLanguageSource = {
     fact7: 'از هر ۱۰۰ مهاجری که هالندی را بسیار خوب گپ می‌زنند، ۶۹ نفر کار با معاش دارند.',
     fact14: 'در بسیاری از کتابخانه‌ها یک Taalhuis (خانهٔ زبان) هست: کمک رایگان تا آموختن هالندی را ادامه بدهید.',
     fact30: 'هر روز کمی تمرین، از گاه‌گاهی تمرین زیاد بهتر است. شما ۳۰ روز پی‌هم تمرین کرده‌اید!',
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'بارگیری نشد. انترنت وصل است؟',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

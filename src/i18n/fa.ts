@@ -306,6 +306,8 @@ const lang: HelpLanguageSource = {
     fact7: 'از هر ۱۰۰ مهاجری که هلندی را خیلی خوب صحبت می‌کنند، ۶۹ نفر کار با حقوق دارند.',
     fact14: 'خیلی از کتابخانه‌ها یک Taalhuis (خانهٔ زبان) دارند: کمک رایگان برای ادامهٔ یادگیری هلندی.',
     fact30: 'هر روز کمی تمرین، از گاهی زیاد تمرین کردن بهتر است. شما ۳۰ روز پشت سر هم تمرین کرده‌اید!',
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'بارگیری نشد. اینترنت وصل است؟',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -41,11 +41,15 @@
       .boot-label svg { flex: none; border-radius: 22%; }
       .boot-word { font: 700 2.4rem/1 'Lexend Variable', Lexend, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; letter-spacing: -0.02em; }
       .boot-dot { color: #c58a00; }
+      .boot-failed { margin: 0; max-width: 320px; display: flex; flex-direction: column; gap: 6px; text-align: center; font: 600 1.05rem/1.35 'Lexend Variable', Lexend, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #1e2226; }
+      .boot-failed > :first-child { font-weight: 700; }
       .boot-retry { display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; border: 2px solid #1e2226; background: #fffdf8; color: #1e2226; cursor: pointer; }
       @media (prefers-color-scheme: dark) {
         html:not([data-theme='light']), html:not([data-theme='light']) body { background: #16191c; }
+        html:not([data-theme='light']) .boot-failed { color: #ece8e1; }
       }
       html[data-theme='dark'], html[data-theme='dark'] body { background: #16191c; }
+      html[data-theme='dark'] .boot-failed { color: #ece8e1; }
     </style>
   </head>
   <body>

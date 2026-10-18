@@ -38,7 +38,7 @@ import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
 import { clockMinutes, count, countOpen, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
 import { explainReport, testerMode } from './lib/report';
-import { setReloadWhen } from './lib/appUpdate';
+import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpdate';
 import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
 import { applyEnglish, englishLangFor } from './lib/english';
@@ -144,12 +144,17 @@ export default function App() {
     // A code for the full version: counted with the version it replaces (none yet, or the sneak
     // preview), so the owner sees how many ask for a code after looking around.
     if (a === 'full' && access !== 'full') count('unlock', { lang: progress.helpLang, access });
+    // Unlocked from a locked topic (its unlock card): the topic (or home) it goes back to says so.
+    const at = viewRef.current;
+    if (a === 'full' && access !== 'full' && at.name === 'settings' && at.upgrade) setUnlocked(true);
     saveAccess(a);
     setAccess(a);
     setGateAgain(false);
     if (typed !== undefined) typedCode.current = typed;
   };
   const [view, setView] = useState<View>(() => adminRequested() ? { name: 'admin' } : linkedUnit ? HOME : restored());
+  /** The full version was just unlocked: "De code is goed" on the topic or home it goes back to, a few seconds. */
+  const [unlocked, setUnlocked] = useState(false);
   /** The unit to show first on the path (from a coach link), until the path has shown it. */
   const [focusUnit, setFocusUnit] = useState<string | null>(linkedUnit);
   /** Bumped when the system Back button is pressed in a lesson (the lesson asks before quitting). */
@@ -326,7 +331,8 @@ export default function App() {
     setLangFailed(false);
     ensureLanguage(progress.helpLang).then(
       () => { if (live) setLangTry((n) => n + 1); },
-      () => { if (live) setLangFailed(true); },
+      // A file of an older version, gone after an update: the page reloads into the new one.
+      (e: unknown) => { void recoverFromLoadError(e).then((reloading) => { if (live && !reloading) setLangFailed(true); }); },
     );
     return () => { live = false; };
   }, [progress.helpLang, langReady, langTry]);
@@ -356,7 +362,7 @@ export default function App() {
   useEffect(() => {
     if (picsReady || !progress.onboarded) return;
     setLangFailed(false);
-    loadPictures().catch(() => setLangFailed(true));
+    loadPictures().catch((e: unknown) => { void recoverFromLoadError(e).then((reloading) => { if (!reloading) setLangFailed(true); }); });
   }, [picsReady, progress.onboarded, langTry]);
   const lang = getHelpLanguage(progress.helpLang, progress.gender);
   // The page's language is the help language (Dutch without one). The direction is set where the
@@ -379,6 +385,15 @@ export default function App() {
   }, [readyToCount]);
   calmRef.current = progress.onboarded && Boolean(access) && !passing(view);
   useEffect(() => { setReloadWhen(() => calmRef.current); }, []);
+  // A new version found while the app was open loads with the next calm screen (src/lib/appUpdate.ts).
+  useEffect(() => { screenChanged(); }, [view.name]);
+  // The "code is right" line shows on the screen after the unlock card, then goes.
+  const unlockedShown = unlocked && view.name !== 'settings';
+  useEffect(() => {
+    if (!unlockedShown) return;
+    const t = window.setTimeout(() => setUnlocked(false), 6000);
+    return () => window.clearTimeout(t);
+  }, [unlockedShown]);
   // A lesson (or today's review) started: counted per lesson, so started, stopped (onQuit below) and
   // finished show where learners give up.
   // How long the open lesson is on screen (the time the app is out of view does not count): for
@@ -486,7 +501,7 @@ export default function App() {
     const leave = () => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname + location.search); setCoachDirect(false); setView(HOME); };
     return <Coaches onBack={leave} lang={langReady && progress.onboarded ? lang : undefined} />;
   }
-  if ((!langReady || (progress.onboarded && !picsReady)) && view.name !== 'admin') return <Splash failed={langFailed} onRetry={() => location.reload()} />;
+  if ((!langReady || (progress.onboarded && !picsReady)) && view.name !== 'admin') return <Splash failed={langFailed} onRetry={() => location.reload()} lang={progress.helpLang} />;
   if (view.name === 'admin') {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
@@ -698,6 +713,7 @@ export default function App() {
             onPocket={(id) => go({ name: 'pocket', unit: id })}
             onCertificate={(id) => go({ name: 'certificate', unit: id })}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
+            unlocked={unlockedShown}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
         </>
@@ -809,6 +825,7 @@ export default function App() {
             onFocused={() => { setFocusUnit(null); forgetLinkedUnit(); }}
             lockedLink={lockedLink}
             note={<NoVoiceNote lang={lang} once />}
+            unlocked={unlockedShown}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
         </>

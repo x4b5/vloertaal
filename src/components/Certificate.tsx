@@ -1,11 +1,11 @@
 import { dutchUi } from '../lib/track';
-import { Fragment, useEffect, useId, useState } from 'react';
+import { Fragment, useEffect, useId, useRef, useState } from 'react';
 import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import type { SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { CERT_NOTE, certData, certDate, certListLabel, certMeta, certSub, earnedCertificates, loadCertName, saveCertName, sealRing, type CertData } from '../lib/certificate';
-import { shareCertificateFile } from '../lib/certCanvas';
+import { certificatePng, shareCertificate } from '../lib/certCanvas';
 import type { Progress } from '../lib/progress';
 import { Bi } from './Bi';
 import { NlPair } from './NlPair';
@@ -87,7 +87,7 @@ export function CertificateSheet({ data, className }: { data: CertData; classNam
           {data.name && (
             <p className="cert-to">
               <span className="cert-label">Uitgereikt aan</span>
-              <span className="cert-name">{data.name}</span>
+              <span className="cert-name" dir="auto">{data.name}</span>
             </p>
           )}
           <h2 className="cert-title"><span>{data.titleNl}</span></h2>
@@ -178,7 +178,7 @@ function NamePage({ name, lang, onDone }: { name: string; lang?: HelpLanguage; o
 
 /**
  * The certificate of one unit: Back, one [Save / share] (the phone's share sheet, where it can
- * also be printed; the print dialog, which saves a PDF, where files cannot be shared) and
+ * also be printed; the picture saved as a PNG where files cannot be shared) and
  * [Change name]. The name is asked first, on its own page.
  */
 export function CertificateScreen({ unit, day, lang, onBack, sector }: {
@@ -206,12 +206,28 @@ export function CertificateScreen({ unit, day, lang, onBack, sector }: {
   }, [unit.titleNl]);
   useEffect(() => { window.scrollTo(0, 0); }, [asking]);
 
+  // The picture is drawn ahead (a moment after the sheet shows), so a tap shares it at once: a
+  // phone refuses the share sheet when the tap was too long ago.
+  const key = JSON.stringify(data);
+  const png = useRef<{ key: string; blob: Promise<Blob> } | null>(null);
+  useEffect(() => {
+    if (asking) return;
+    const t = window.setTimeout(() => {
+      const blob = certificatePng(data);
+      blob.catch(() => {});
+      png.current = { key, blob };
+    }, 300);
+    return () => window.clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key, asking]);
+
   const done = (n: string) => { saveCertName(n); setName(n.trim()); setAsking(false); };
+  // Shared where the phone can share files, else (or when sharing fails) saved as a PNG, like the
+  // pocket card. Only a picture that could not be drawn at all opens the print dialog.
   const share = async () => {
     setBusy(true);
     try {
-      const how = await shareCertificateFile(data, `vloertaal-certificaat-${unit.id.slice(2)}.png`);
-      if (how === 'unsupported') window.print();
+      await shareCertificate(data, `vloertaal-certificaat-${unit.id.slice(2)}.png`, png.current?.key === key ? png.current.blob : undefined);
     } catch {
       window.print();
     } finally {

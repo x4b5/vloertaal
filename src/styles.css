@@ -498,6 +498,10 @@ h2 { font-size: 1.25rem; }
 .bay-locked .bay-title { font-weight: 500; }
 .bay-lock { color: var(--ink-3); }
 .bay-card:disabled { cursor: default; }
+/* Locked for the full version (Route.tsx TopicPage): a tap opens the unlock card, so a faint
+   dashed edge says it can be tapped (a lesson waiting for the one before it has none). */
+.bay-full .bay-card { border-color: var(--line); border-style: dashed; cursor: pointer; }
+.bay-full .bay-card:hover { border-color: var(--ink-3); }
 /* Tactile: lesson cards and Start press in. */
 .bay-card { transition: transform 0.12s var(--ease-out), background-color 0.12s, border-color 0.12s; }
 .bay-card:active:not(:disabled) { transform: translateY(1px); filter: brightness(0.97); }
@@ -1686,6 +1690,15 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 @media (max-width: 380px) { .full-only-note { padding-inline-start: 4px; } }
 .full-only-note > .icon { flex: none; }
+/* Back from the unlock card with a right code (Route.tsx UnlockedNote): one calm green line. */
+.unlocked-note {
+  display: flex; align-items: center; gap: 10px; margin: 0 0 12px; padding: 10px 14px;
+  color: var(--right-ink); background: var(--green-bg); border: 2px solid currentColor; border-radius: 12px;
+  font-weight: 700; animation: calm-up 0.3s var(--ease-out) both;
+}
+.unlocked-note > .icon { flex: none; }
+.unlocked-note .unlocked-help { color: var(--ink); font-weight: 500; }
+@media (prefers-reduced-motion: reduce) { .unlocked-note { animation: none; } }
 /* The home with nothing left to play in the sneak preview: the way to the full version is the
    next step, a big yellow card like a lesson's. */
 .full-only-big {
@@ -3040,6 +3053,14 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   font-size: 0.66rem; font-weight: 650; line-height: 1.15; color: var(--wrong-ink);
 }
 .stamp.stamp-wrong .stamp-sub:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.76rem; }
+/* A picture card: the line under the ring would run over the picture (unreadable on a dark
+   one), so it wraps to about the ring's width on the card's own colour, and the picture is a
+   little smaller to leave it room. */
+.choices-pics .stamp.stamp-wrong .stamp-sub {
+  width: max-content; min-width: 0; max-width: 84px; white-space: normal;
+  padding: 1px 4px; border-radius: 6px; background: var(--red-bg); line-height: 1.1;
+}
+.choices-pics .choice:has(> .stamp-wrong) svg.pic-emoji { width: min(84px, 56%); }
 .choices:not(.choices-pics) .stamp.stamp-wrong { width: 50px; height: 50px; margin-top: -33px; inset-inline-end: 10px; }
 .choices:not(.choices-pics) .choice-wrap .choice:has(> .stamp-wrong) { padding-inline-end: 84px; }
 .choices:not(.choices-pics) .choice:has(> .stamp-wrong) { padding-inline-end: 84px; }

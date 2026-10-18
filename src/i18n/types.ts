@@ -364,6 +364,8 @@ export const uiEn = {
   buildListen: 'Listen and make the sentence',
   chatWhichQuestion: 'Which question goes with this answer?',
   reviewWaiting: '{n} more words are waiting. They come back in the next days.',
+  /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+  loadFailed: 'Not loaded. Is the internet on?',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

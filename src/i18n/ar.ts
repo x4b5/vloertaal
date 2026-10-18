@@ -306,6 +306,8 @@ const lang: HelpLanguageSource = {
     fact7: 'من بين المهاجرين الذين يتكلمون الهولندية جيداً جداً، 69 من كل 100 لديهم عمل بأجر.',
     fact14: 'في مكتبات كثيرة يوجد Taalhuis (بيت اللغة): مساعدة مجانية لمواصلة تعلّم الهولندية.',
     fact30: { m: 'قليل من التمرين كل يوم أفضل من كثير من وقت لآخر. وأنت تتدرّب منذ 30 يوماً!', f: 'قليل من التمرين كل يوم أفضل من كثير من وقت لآخر. وأنتِ تتدرّبين منذ 30 يوماً!' },
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'لم يتم التحميل. هل الإنترنت متصل؟',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

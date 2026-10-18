@@ -1,5 +1,6 @@
 import { Component, lazy, Suspense, type ComponentType, type ReactNode } from 'react';
 import { Splash } from './components/Splash';
+import { recoverFromLoadError } from './lib/appUpdate';
 
 /**
  * Screens a learner does not need on the first open, each in a file of its own, so the app's
@@ -60,20 +61,25 @@ export function isLoadError(e: unknown): boolean {
 }
 
 /**
- * A screen's file did not load (offline, not saved): the splash with "Try again" (reloads; also by
- * itself when back online). The reload goes to the home, so a learner offline is never stuck on a
- * screen whose file is missing (a reload would restore that screen). Any other error is not ours:
- * it goes on up, as before.
+ * A screen's file did not load. An older version's file, gone after an update: the page reloads
+ * into the new version by itself (src/lib/appUpdate.ts). Offline, not saved: the splash with "Try
+ * again" (reloads; also by itself when back online). That reload goes to the home, so a learner
+ * offline is never stuck on a screen whose file is missing (a reload would restore that screen).
+ * Any other error is not ours: it goes on up, as before.
  */
-class LoadFailed extends Component<{ children: ReactNode }, { error: unknown }> {
-  state = { error: null as unknown };
+class LoadFailed extends Component<{ children: ReactNode }, { error: unknown; checked: boolean }> {
+  state = { error: null as unknown, checked: false };
   static getDerivedStateFromError(error: unknown) {
-    return { error };
+    return { error, checked: false };
   }
   private reload = () => {
     try { history.replaceState(null, '', location.pathname + location.search); } catch { /* keep the address */ }
     location.reload();
   };
+  componentDidCatch(error: unknown) {
+    if (!isLoadError(error)) return;
+    void recoverFromLoadError(error).then((reloading) => { if (!reloading) this.setState({ checked: true }); });
+  }
   componentDidUpdate() {
     if (this.state.error) window.addEventListener('online', this.reload);
   }
@@ -81,9 +87,10 @@ class LoadFailed extends Component<{ children: ReactNode }, { error: unknown }> 
     window.removeEventListener('online', this.reload);
   }
   render() {
-    const { error } = this.state;
+    const { error, checked } = this.state;
     if (error && !isLoadError(error)) throw error;
-    return error ? <Splash failed onRetry={this.reload} /> : this.props.children;
+    // While it asks the server for a newer version: the calm splash, without "Try again" yet.
+    return error ? <Splash failed={checked} onRetry={this.reload} /> : this.props.children;
   }
 }
 

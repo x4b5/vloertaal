@@ -340,6 +340,7 @@ export const uiNl: Record<UiKey, UiText> = {
   buildListen: 'Luister en maak de zin',
   chatWhichQuestion: 'Welke vraag hoort bij dit antwoord?',
   reviewWaiting: 'Er wachten nog {n} vragen. Die komen de komende dagen terug.', // regels
+  loadFailed: 'Niet geladen. Is er internet?',
 };
 
 const lang: HelpLanguageSource = {

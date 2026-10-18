@@ -306,6 +306,8 @@ const lang: HelpLanguageSource = {
     fact7: 'Dintre migranții care vorbesc foarte bine olandeza, 69 din 100 au un loc de muncă plătit.',
     fact14: 'Multe biblioteci au un Taalhuis („casa limbii”): ajutor gratuit ca să înveți olandeza mai departe.',
     fact30: 'Puțin exercițiu în fiecare zi e mai bun decât mult din când în când. Exersezi deja de 30 de zile!',
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'Nu s-a încărcat. Este internet?',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

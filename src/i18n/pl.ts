@@ -306,6 +306,8 @@ const lang: HelpLanguageSource = {
     fact7: 'Spośród migrantów, którzy bardzo dobrze mówią po niderlandzku, 69 na 100 ma płatną pracę.',
     fact14: 'W wielu bibliotekach jest Taalhuis („dom języka”): darmowa pomoc w dalszej nauce niderlandzkiego.',
     fact30: { m: 'Lepiej ćwiczyć trochę codziennie niż dużo od czasu do czasu. Ćwiczyłeś już 30 dni z rzędu!', f: 'Lepiej ćwiczyć trochę codziennie niż dużo od czasu do czasu. Ćwiczyłaś już 30 dni z rzędu!' },
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'Nie załadowało się. Czy jest internet?',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

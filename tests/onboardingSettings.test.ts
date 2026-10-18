@@ -40,7 +40,7 @@ describe('the first-run language guess', () => {
       const m = languageMeta.find((x) => x.code === l.code)!;
       expect({ name: m.name, nativeName: m.nativeName, dir: m.dir, reviewed: m.reviewed, gendered: m.gendered }, l.code)
         .toEqual({ name: l.name, nativeName: l.nativeName, dir: l.dir, reviewed: l.reviewed, gendered: GENDERED_LANGS.includes(l.code) });
-      expect(m.ui, l.code).toEqual({ chooseLanguage: l.ui.chooseLanguage, langGuessYes: l.ui.langGuessYes, langGuessOther: l.ui.langGuessOther, appTagline: l.ui.appTagline });
+      expect(m.ui, l.code).toEqual({ chooseLanguage: l.ui.chooseLanguage, langGuessYes: l.ui.langGuessYes, langGuessOther: l.ui.langGuessOther, appTagline: l.ui.appTagline, loadFailed: l.ui.loadFailed });
     }
   });
 });

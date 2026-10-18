@@ -1,13 +1,25 @@
 import { Component, type ReactNode } from 'react';
+import { langMeta, NL_META } from '../i18n/meta';
+import { uiEn, type UiCode } from '../i18n/types';
+import { loadProgress } from '../lib/progress';
 import { RestartIcon } from './Icons';
 import { LogoMark } from './Logo';
 
 /**
  * The calm start screen while a help language's texts load: the same label as the static splash in
  * index.html (ink on kraft, the logo: Bram with the V on his hat), so nothing jumps when React takes over. With no connection
- * and no saved copy, one button tries again (it also retries by itself when the phone is back online).
+ * and no saved copy, one line says so (in Dutch and the help language, from src/i18n/meta.ts: its
+ * pack may be the file that did not come) and one button tries again (it also retries by itself
+ * when the phone is back online).
  */
-export function Splash({ failed = false, onRetry }: { failed?: boolean; onRetry?: () => void }) {
+export function Splash({ failed = false, onRetry, lang }: {
+  failed?: boolean;
+  onRetry?: () => void;
+  /** The help language (null: English); the saved one when not given. */
+  lang?: UiCode | null;
+}) {
+  const code = lang === undefined ? loadProgress().helpLang : lang;
+  const help = code === 'nl' ? null : code ? langMeta(code) : undefined;
   return (
     <div className="boot-splash" aria-busy={!failed}>
       <div className="boot-label" role="img" aria-label="Vloertaal">
@@ -15,9 +27,15 @@ export function Splash({ failed = false, onRetry }: { failed?: boolean; onRetry?
         <span className="boot-word" lang="nl" dir="ltr">vloertaal<span className="boot-dot">.</span></span>
       </div>
       {failed && onRetry && (
-        <button type="button" className="boot-retry" onClick={onRetry} aria-label="Try again" title="Try again">
-          <RestartIcon size={28} />
-        </button>
+        <>
+          <p className="boot-failed" role="alert">
+            <span lang="nl" dir="ltr">{NL_META.ui.loadFailed}</span>
+            {help !== null && (help ? <span lang={help.code} dir={help.dir}>{help.ui.loadFailed}</span> : <span lang="en" dir="ltr">{uiEn.loadFailed}</span>)}
+          </p>
+          <button type="button" className="boot-retry" onClick={onRetry} aria-label="Try again" title="Try again">
+            <RestartIcon size={28} />
+          </button>
+        </>
       )}
     </div>
   );

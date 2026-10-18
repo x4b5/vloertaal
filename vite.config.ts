@@ -1,3 +1,6 @@
+import { createHash } from 'node:crypto';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import { UPDATES } from './src/content/updates';
@@ -69,12 +72,47 @@ function updatesPagePlugin(): Plugin {
   };
 }
 
+/**
+ * The service worker of this build (public/sw.js): its BUILD (a hash of every file the build
+ * writes, so the same code gives the same worker) and FILES (the hashed files under assets/). So
+ * sw.js changes with each deploy that changes the app: the browser installs the new worker, which
+ * keeps this build's files and removes the old build's cache.
+ */
+export function swSource(sw: string, files: { fileName: string; source: string | Uint8Array }[]): string {
+  const hash = createHash('sha256');
+  for (const f of [...files].sort((a, b) => a.fileName.localeCompare(b.fileName))) hash.update(f.fileName).update(f.source);
+  const assets = files.map((f) => f.fileName).filter((f) => f.startsWith('assets/')).sort();
+  return sw
+    .replace(/^const BUILD = '[^']*';$/m, `const BUILD = '${hash.digest('hex').slice(0, 12)}';`)
+    .replace(/^const FILES = \[\];$/m, `const FILES = ${JSON.stringify(assets.map((f) => `./${f}`))};`);
+}
+
+function swBuild(): Plugin {
+  let files: { fileName: string; source: string | Uint8Array }[] = [];
+  let outDir = 'dist';
+  return {
+    name: 'vloertaal-sw-build',
+    apply: 'build',
+    configResolved(config) {
+      outDir = resolve(config.root, config.build.outDir);
+    },
+    generateBundle(_options, bundle) {
+      files = Object.values(bundle).map((f) => ({ fileName: f.fileName, source: f.type === 'chunk' ? f.code : f.source }));
+    },
+    // After the public folder is copied: its sw.js gets this build's id and files.
+    closeBundle() {
+      const file = resolve(outDir, 'sw.js');
+      if (existsSync(file)) writeFileSync(file, swSource(readFileSync(file, 'utf8'), files));
+    },
+  };
+}
+
 // Relative base so the build works on GitHub Pages or any sub-path.
 export default defineConfig({
   base: './',
   // Which deploy a tester's report came from (src/lib/report.ts): the commit on Vercel, "dev" here.
   define: { 'import.meta.env.VITE_BUILD': JSON.stringify((process.env.VERCEL_GIT_COMMIT_SHA ?? 'dev').slice(0, 7)) },
-  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin()],
+  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), swBuild()],
   build: {
     rolldownOptions: {
       output: {

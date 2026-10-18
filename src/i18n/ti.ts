@@ -306,6 +306,8 @@ const lang: HelpLanguageSource = {
     fact7: 'ካብቶም ሆላንድኛ ኣዝዮም ጽቡቕ ዝዛረቡ ካብ ካልእ ሃገር ዝመጹ ሰባት፡ 69 ካብ 100 ደሞዝ ዘለዎ ስራሕ ኣለዎም።',
     fact14: 'ኣብ ብዙሓት ቤተ-መጻሕፍቲ Taalhuis (ገዛ ቋንቋ) ኣሎ፡ ሆላንድኛ ምምሃር ንምቕጻል ናጻ ሓገዝ።',
     fact30: { m: 'መዓልታዊ ቁሩብ ምልምማድ ካብ ሓሓሊፉ ብዙሕ ምልምማድ ይሓይሽ። ንስኻ 30 መዓልትታት ተኸታቲልካ ተለማሚድካ!', f: 'መዓልታዊ ቁሩብ ምልምማድ ካብ ሓሓሊፉ ብዙሕ ምልምማድ ይሓይሽ። ንስኺ 30 መዓልትታት ተኸታቲልኪ ተለማሚድኪ!' },
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'ኣይተጻዕነን። ኢንተርነት ኣሎ ድዩ?',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

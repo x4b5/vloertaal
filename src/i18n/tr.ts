@@ -306,6 +306,8 @@ const lang: HelpLanguageSource = {
     fact7: 'Hollandacayı çok iyi konuşan her 100 göçmenden 69’unun ücretli bir işi var.',
     fact14: 'Birçok kütüphanede bir Taalhuis (“dil evi”) var: Hollandaca öğrenmeye devam etmen için ücretsiz yardım.',
     fact30: 'Her gün biraz pratik yapmak, arada bir çok pratik yapmaktan daha iyidir. Sen bunu 30 gündür yapıyorsun!',
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'Yüklenmedi. İnternet var mı?',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
