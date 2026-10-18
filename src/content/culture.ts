@@ -75,6 +75,21 @@ const baseTips: CultureTip[] = [
     why: { id: 'c.names.w', en: 'A short introduction with your first name is the normal start. It helps colleagues remember you and ask you along.' },
   }),
   tip({
+    id: 'c.arrive',
+    lessonId: 'l.arrive',
+    emoji: '🧭',
+    title: 'Your first day: where to go',
+    body: 'On your first day, go to the reception or the main entrance first. Say your name, your agency if you have one, and who you must see. Many companies give you a buddy: you may ask them everything.',
+    phrase: { id: 'c.arrive.p', nl: 'Goedemorgen, ik ben Ali. Ik begin vandaag. Bij wie moet ik zijn?', en: 'Good morning, I am Ali. I start today. Who should I go to?' },
+    situation: { id: 'c.arrive.s', en: 'It is 6:45 on your first day. The gate is shut. There is an intercom. What do you do?' },
+    options: [
+      { id: 'c.arrive.o1', en: 'Ring and say your name, your agency if you have one, and that you start today.', best: true },
+      { id: 'c.arrive.o2', en: 'Wait at the gate until someone comes out.', best: false },
+      { id: 'c.arrive.o3', en: 'Walk around the building to find another door.', best: false },
+    ],
+    why: { id: 'c.arrive.w', en: 'The intercom is there for visitors and new workers. When you say who you are, they can call the right person.' },
+  }),
+  tip({
     id: 'c.ask',
     lessonId: 'l.understand',
     emoji: '🙋',
@@ -94,7 +109,7 @@ const baseTips: CultureTip[] = [
     lessonId: 'l.gear',
     emoji: '⛑️',
     title: 'Safety rules are for everyone',
-    body: 'Rules about helmets, shoes and gloves are not a suggestion: everyone follows them, also the boss. Your employer must give you the protective gear you need, for free.',
+    body: 'Rules about helmets, shoes and gloves are not a suggestion: everyone follows them, also the boss. Your employer must give you the protective gear you need, for free. Gear that does not fit does not protect you well, so ask for your size: "Heeft u dit in mijn maat?"',
     phrase: { id: 'c.gear.p', nl: 'Mijn handschoenen zijn kapot. Waar krijg ik nieuwe?', en: 'My gloves are broken. Where do I get new ones?' },
     situation: { id: 'c.gear.s', en: 'Your gloves are torn. What do you do?' },
     options: [
@@ -133,6 +148,27 @@ const baseTips: CultureTip[] = [
       { id: 'c.accident.o3', en: 'Wait and see if the pain goes away by itself.', best: false },
     ],
     why: { id: 'c.accident.w', en: 'Report it the same day, also if it seems small: the pain can get worse later. Your employer is not allowed to punish you for reporting it.' },
+  }),
+  tip({
+    id: 'c.notyet',
+    lessonId: 'l.notyet',
+    emoji: '✋',
+    title: 'Not learned yet? Say so',
+    body: 'Your employer must explain how to do your work safely. Do not use a machine or forklift that nobody taught you. Saying "nog niet geleerd" is normal here: it shows that you work safely.',
+    phrase: { id: 'c.notyet.p', nl: 'Dit heb ik nog niet geleerd. Kun je het voordoen?', en: 'I have not learned this yet. Can you show me how?' },
+    situation: {
+      id: 'c.notyet.s',
+      en: 'A busy morning. Your supervisor says: "Pak jij even de heftruck? Het is makkelijk." You have never driven a forklift. What do you do?',
+      nl: 'Pak jij even de heftruck? Het is makkelijk.',
+    },
+    // The help languages say "he says" (a supervisor, masculine in most of them): a man speaks.
+    speaker: 'm',
+    options: [
+      { id: 'c.notyet.o1', en: 'Say that you have not learned it yet. Ask for instruction, or for other work.', best: true },
+      { id: 'c.notyet.o2', en: 'Drive slowly, just this once.', best: false },
+      { id: 'c.notyet.o3', en: 'Say "ja" and hope that it goes well.', best: false },
+    ],
+    why: { id: 'c.notyet.w', en: 'A forklift without instruction is dangerous, for you and for others. Asking for instruction or other work is normal, also when it is busy.' },
   }),
   tip({
     id: 'c.direct',
@@ -352,7 +388,7 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.leave': [0, 1, 2, 4], // ask for leave in time, in writing
   'c.illness': [0, 3, 4], // the company doctor; call when you are better
   'c.gethelp': [2, 3, 4, 5, 6], // Arbeidsinspectie, 0800-7000, Juridisch Loket, 112
-  'c.texting': [0, 1, 2, 3, 4], // the example message whole
+  'c.texting': [0, 1, 2, 3, 4, 7], // the example message whole; a swap needs the supervisor's yes first
   'c.diploma': [3, 4, 5], // required training is paid working time; ask about courses
   'c.doctor': [0, 1, 2, 3], // huisartsenpost; 112 only in an emergency (danger to life, fire, a crime now)
   'c.scams': [0, 1, 4], // do not click; call your bank yourself

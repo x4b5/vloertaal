@@ -16,6 +16,11 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-18',
     items: [
+      'Nieuwe les bij Eerste werkdag: De eerste dag: je weg vinden. Met woorden als de ingang, de receptie, de kantine en de buddy.',
+      'Nieuwe les bij Veiligheid: Dit heb ik nog niet geleerd. Met woorden als nog niet, mogen, proberen en voordoen.',
+      'Tip over berichten en het rooster: een dienst ruilen mag pas als je leidinggevende of de planner het goed vindt.',
+      'Tip over beschermende kleding: vraag om je eigen maat. Wat niet past, beschermt niet goed.',
+      'Herhaal vandaag: de zinnen wisselen weer elke dag, zodat er meer verschillende zinnen terugkomen.',
       'Voortgang terugzetten: heeft het bestand minder lessen dan je telefoon, dan vraagt de app het nog een keer, met beide aantallen. Samenvoegen is de eerste keuze; een bestand zonder lessen kun je alleen samenvoegen.',
       'Bij "Bewaar je voortgang" staat nu: nieuwe telefoon? Je code heb je daar ook nodig. Een te groot bestand krijgt een eigen melding, en er staat "1 les" in plaats van "1 lessen".',
       'Herinnering: een andere tijd kiezen verandert de herinnering in je agenda, er komt geen tweede bij. En je kunt de herinnering nu ook stoppen.',

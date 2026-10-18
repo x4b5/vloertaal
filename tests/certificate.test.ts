@@ -25,7 +25,7 @@ describe('certificates', () => {
     const again = finish(after, [ids[0]], 3);
     expect(unitJustDone(after.completed, again.completed, ids[0])).toBeUndefined();
     // Any order: the last missing lesson is the one that finishes it.
-    const other = finish(emptyProgress, [ids[2], ids[1]], 1);
+    const other = finish(emptyProgress, ids.slice(1).reverse(), 1);
     const done = finish(other, [ids[0]], 1);
     expect(unitJustDone(other.completed, done.completed, ids[0])?.id).toBe(first.id);
   });
