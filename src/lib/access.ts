@@ -19,6 +19,12 @@ import type { Track } from './track';
  */
 export type Access = 'sample' | 'preview' | 'full';
 
+const ACCESS_RANK: Record<Access, number> = { sample: 0, preview: 1, full: 2 };
+
+/** The access after a code: a code never lowers what the phone already has (an older or smaller code typed later keeps the full version). */
+export const higherAccess = (had: Access | null, given: Access): Access =>
+  had && ACCESS_RANK[had] > ACCESS_RANK[given] ? had : given;
+
 /**
  * SHA-256 (hex) of each normalised password and the access it gives. The first two were made
  * with the old normalising (trimmed, lower case) and still match.

@@ -3,10 +3,14 @@ import type { Lesson } from '../content/types';
 import type { SectorChoice } from '../content/sectors';
 import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
-import { autoSpeak, sounds, speak, speechAvailable, stopSpeech } from '../lib/audio';
+import { autoSpeak, sounds, speak, speechAvailable, stopSpeech, surelySilent } from '../lib/audio';
+
+/** Can the phone say this line, as far as is known (see surelySilent: no index yet counts as yes). */
+const mayBeHeard = (text: string) => !surelySilent(text);
+import { useVoices } from './useVoices';
 import { tileDiff } from '../lib/answers';
 import { breakable } from '../lib/dutch';
-import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
+import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, unheard, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
 import { deviceLabel, firstReportHint, reportMail } from '../lib/report';
 import { dutchUi } from '../lib/track';
 import { chatWhy } from '../content/chatWhy';
@@ -384,13 +388,15 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // so does "pick the Dutch word" on text cards for a learner who reads another script (the
   // cards' speakers were their way in): "what does it mean" instead.
   const queued = queue[index];
+  // Re-checked when the phone's voices or the recorded voices arrive (see unheard).
+  const voices = useVoices();
   const ex: Exercise = useMemo(() => {
-    if (queued && queued.kind === 'build' && queued.audio && audioOff) return { ...queued, audio: undefined };
+    if (queued && queued.kind === 'build' && queued.audio && (audioOff || unheard(queued, mayBeHeard))) return { ...queued, audio: undefined };
     if (queued && queued.kind === 'dutch' && queued.textOnly && nonLatinAtStart && audioOff) {
       return { kind: 'meaning', word: queued.word, options: queued.options };
     }
     return queued;
-  }, [queued, audioOff, nonLatinAtStart]);
+  }, [queued, audioOff, nonLatinAtStart, voices.device, voices.recorded]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /*
    * Resume: the place is saved after every answer (on the exercise that comes next) and when the
@@ -528,7 +534,11 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       // The pick and the right answer matter more than the tag and the question above them
       // (both stay one scroll away): they may slide under the header, the marked options not.
       const room = top - head - 8;
-      const by = Math.min(bottom - limit, Math.max(0, room));
+      let by = Math.min(bottom - limit, Math.max(0, room));
+      // Not both in view (a picture choice on a short phone, the pick in the row below): the
+      // learner's own pick, with its word, comes first; the label names the right answer.
+      const pick = document.querySelector<HTMLElement>('.player-body .choice.wrong')?.getBoundingClientRect();
+      if (pick && pick.bottom - by > limit) by = Math.min(pick.bottom - limit, Math.max(0, pick.top - head - 8));
       if (bottom > limit && by > 0) window.scrollBy({ top: by, behavior: reducedMotion() ? 'auto' : 'smooth' });
     });
     return () => cancelAnimationFrame(raf);
@@ -685,8 +695,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   function next() {
     reset();
     let i = index + 1;
-    // Skip audio-only exercises when the learner can't listen right now (and speaking that can't happen).
-    while (i < queue.length && ((audioOff && needsAudio(queue[i])) || cantSpeak(queue[i]))) {
+    // Skip audio-only exercises when the learner can't listen right now, or when nothing on this
+    // phone can say the line (no recording yet, no Dutch phone voice: lib/exercises.ts unheard);
+    // and speaking that can't happen.
+    while (i < queue.length && (((audioOff || unheard(queue[i], mayBeHeard)) && needsAudio(queue[i])) || cantSpeak(queue[i]))) {
       if (i < initial.length && needsAudio(queue[i])) skipped.current += 1;
       i++;
     }

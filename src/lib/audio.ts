@@ -130,15 +130,29 @@ export function setRecordedIndex(eleven: ElevenIndex | null, piper: RecordedInde
 
 /** Settles once the recorded-voice index has loaded (or failed to load). */
 let indexLoaded: Promise<void> = Promise.resolve();
+/** The index came (so a line without a clip really has none). */
+let indexArrived = false;
 
 if (typeof window !== 'undefined' && typeof fetch === 'function') {
   // Only the ElevenLabs index: the old Piper voices (./audio/voices.json, built in CI) are no
   // longer made, so asking for that file only failed, on every load and offline.
-  indexLoaded = loadJson<ElevenIndex>('./audio-el/voices.json').then((eleven) => setRecordedIndex(eleven, null));
+  indexLoaded = loadJson<ElevenIndex>('./audio-el/voices.json').then((eleven) => {
+    indexArrived = Boolean(eleven);
+    setRecordedIndex(eleven, null);
+  });
 }
 
 export function recordedIndexReady(): Promise<void> {
   return indexLoaded;
+}
+
+/**
+ * Is this line surely silent on this phone: no recording and no Dutch phone voice? Not while the
+ * recorded-voice index has not come (yet, or offline without it): then it may well have a clip, and
+ * a listening step is better kept than skipped for a whole lesson.
+ */
+export function surelySilent(text: string): boolean {
+  return indexArrived && !canSay(text);
 }
 
 /** Whether a recorded voice with this key has been loaded. */

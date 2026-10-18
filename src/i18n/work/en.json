@@ -795,7 +795,7 @@
     "c.callin.o3": "Ask your neighbour to call for you.",
     "c.callin.w": "A call is clear and quick, and your supervisor can ask questions. Saying when you expect to be back helps them plan.",
     "c.texting": "Messages to work: short and polite",
-    "c.texting.b": "Keep messages to work short and polite. Say who you are and what is happening, and end with a greeting. For example: \"Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali\". Check your roster (rooster) in the app often. Reply to shift requests in time. Rules differ per company: ask your supervisor what the rules are where you work.",
+    "c.texting.b": "Keep messages to work short and polite. Say who you are and what is happening, and end with a greeting. For example: \"Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali\". Check your roster (rooster) in the app often. Reply to shift requests in time. To swap a shift, your supervisor or the planner must agree first, so ask: \"Mag ik mijn dienst ruilen?\" Rules differ per company: ask your supervisor what the rules are where you work.",
     "c.texting.p": "Hi Mark, I am 10 minutes late. Sorry! Regards, Ali",
     "c.texting.s": "You will be 10 minutes late. Which message to your supervisor is best?",
     "c.texting.o1": "\"Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali\"",

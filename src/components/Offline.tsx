@@ -1,6 +1,6 @@
 import { useEffect, useId, useReducer } from 'react';
 import { findUnit, unitDone } from '../lib/certificate';
-import { gloss, ui } from '../i18n';
+import { gloss, said, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { type Access, unitAllowed } from '../lib/access';
 import { onRecordedVoices, preferredVoiceRef } from '../lib/audio';
@@ -23,6 +23,8 @@ import {
 import type { Progress } from '../lib/progress';
 import { currentBlock } from '../lib/route';
 import { Bi } from './Bi';
+import { ChoiceCards } from './Choice';
+import { CloseIcon } from './Icons';
 import { NlPair } from './NlPair';
 
 /**
@@ -125,18 +127,42 @@ export function useAutoOffline(progress: Progress, access: Access | null) {
 }
 
 /**
- * The switch for Settings → This phone: "Keep lessons on this phone", one hint line, and while
- * it is on, what is on the phone now (saving 40%, saved · 1.9 MB, or why it did not work).
- * One tappable thing. Hidden where the browser cannot keep files.
+ * "Keep lessons on this phone": one hint line, and while it is on, what is on the phone now
+ * (saving 40%, saved · 1.9 MB, or why it did not work), so the learner sees whether it worked.
+ * One tappable thing: the switch, or in Settings (`cards`) its page's two cards, On and Off, as
+ * every Settings page has them. Hidden where the browser cannot keep files.
  */
-export function OfflineSettingCard({ progress, lang, access = 'full' }: { progress: Progress; lang?: HelpLanguage; access?: Access }) {
+export function OfflineSettingCard({ progress, lang, access = 'full', cards = false, onPicked }: {
+  progress: Progress;
+  lang?: HelpLanguage;
+  access?: Access;
+  /** Settings → This phone: the On / Off cards under the page's own title, no card around them. */
+  cards?: boolean;
+  /** After a pick on the cards (Settings leads back after Off; after On it stays, to show the saving). */
+  onPicked?: (on: boolean) => void;
+}) {
   const [on, setOn] = useOfflineAuto();
   const label = useId();
   if (!offlineSupported()) return null;
-  const unit = keptUnit(progress, access);
-  const state = unit ? offlineState(unit.id, voicesKey(currentVoices(preferredVoiceRef()))) : null;
-  const title = unit ? gloss(unit.id, unit.title, lang) : null;
   const rtl = lang?.dir === 'rtl';
+  const status = on && <OfflineStatus progress={progress} lang={lang} access={access} />;
+  if (cards) {
+    return (
+      <>
+        <ChoiceCards
+          label={said(ui('settingKeepLessons', lang))}
+          current={on ? 'on' : 'off'}
+          onPick={(id) => { setOn(id === 'on'); onPicked?.(id === 'on'); }}
+          options={[
+            { id: 'on', nl: 'Aan', text: ui('settingOn', lang), picture: <DownloadIcon size={28} /> },
+            { id: 'off', nl: 'Uit', text: ui('settingOff', lang), picture: <CloseIcon size={26} /> },
+          ]}
+        />
+        {status}
+        <p className="max3-hint"><Bi text={ui('settingKeepLessonsHint', lang)} /></p>
+      </>
+    );
+  }
   return (
     <section className="keep-card offline-card" dir={rtl ? 'rtl' : undefined}>
       <div className="count-row">
@@ -149,25 +175,34 @@ export function OfflineSettingCard({ progress, lang, access = 'full' }: { progre
         </button>
       </div>
       <p className="keep-hint"><Bi text={ui('settingKeepLessonsHint', lang)} /></p>
-      {on && state && title && (
-        <p className={`offline-status offline-${state.status}`} role="status">
-          {state.status === 'error' ? (
-            <Bi text={ui(state.reason === 'space' ? 'offlineNoSpace' : 'offlineFailed', lang)} />
-          ) : (
-            <>
-              <span className="offline-status-icon" aria-hidden>{state.status === 'saved' ? <DownloadDoneIcon size={20} /> : <DownloadIcon size={20} />}</span>
-              <span className="offline-status-text">
-                <Bi className="offline-status-topic" text={title} />
-                <span className="offline-status-line">
-                  <Bi text={ui(state.status === 'saved' ? 'savedOffline' : 'savingOffline', lang)} />
-                  {state.status === 'saved' && <b dir="ltr">{formatBytes(state.bytes)}</b>}
-                  {state.status === 'saving' && <b dir="ltr">{Math.round((state.done / Math.max(1, state.total)) * 100)}%</b>}
-                </span>
-              </span>
-            </>
-          )}
-        </p>
-      )}
+      {status}
     </section>
+  );
+}
+
+/** What is on the phone now for the current topic (nothing before there is one). */
+function OfflineStatus({ progress, lang, access }: { progress: Progress; lang?: HelpLanguage; access: Access }) {
+  const unit = keptUnit(progress, access);
+  const state = unit ? offlineState(unit.id, voicesKey(currentVoices(preferredVoiceRef()))) : null;
+  const title = unit ? gloss(unit.id, unit.title, lang) : null;
+  if (!state || !title) return null;
+  return (
+    <p className={`offline-status offline-${state.status}`} role="status">
+      {state.status === 'error' ? (
+        <Bi text={ui(state.reason === 'space' ? 'offlineNoSpace' : 'offlineFailed', lang)} />
+      ) : (
+        <>
+          <span className="offline-status-icon" aria-hidden>{state.status === 'saved' ? <DownloadDoneIcon size={20} /> : <DownloadIcon size={20} />}</span>
+          <span className="offline-status-text">
+            <Bi className="offline-status-topic" text={title} />
+            <span className="offline-status-line">
+              <Bi text={ui(state.status === 'saved' ? 'savedOffline' : 'savingOffline', lang)} />
+              {state.status === 'saved' && <b dir="ltr">{formatBytes(state.bytes)}</b>}
+              {state.status === 'saving' && <b dir="ltr">{Math.round((state.done / Math.max(1, state.total)) * 100)}%</b>}
+            </span>
+          </span>
+        </>
+      )}
+    </p>
   );
 }

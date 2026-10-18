@@ -9,7 +9,7 @@ export type SettingsPage =
   | SettingsList
   | 'language' | 'gender' | 'sector' | 'sector-make' | 'sector-care' | 'region' | 'english' | 'certificates'
   | 'sound' | 'voice' | 'speaking' | 'writing' | 'text' | 'theme'
-  | 'offline' | 'reminder' | 'install' | 'backup' | 'counting' | 'reset' | 'unlock';
+  | 'offline' | 'reminder' | 'reminder-time' | 'install' | 'backup' | 'counting' | 'reset' | 'unlock';
 
 export const SETTINGS_LISTS: SettingsList[] = ['me', 'lessons', 'phone'];
 
@@ -34,6 +34,8 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   theme: 'lessons',
   offline: 'phone',
   reminder: 'phone',
+  // With a reminder in the calendar, its page offers another time (this page) or Stop.
+  'reminder-time': 'reminder',
   install: 'phone',
   backup: 'phone',
   counting: 'phone',

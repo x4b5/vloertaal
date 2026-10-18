@@ -1,7 +1,9 @@
 import type { Gender, UiCode } from '../i18n/types';
 import { rulesTrackOn } from './track';
 import { isSectorId, type SectorChoice } from '../content/sectors';
-import { isRegionChoice, regionsOn, type RegionChoice } from '../content/regio';
+import { isRegionChoice, isRegionId, regionOf, regionsOn, type RegionChoice } from '../content/regio';
+import { unitOfLesson } from '../content/courses';
+import { rulesCourseUnits } from '../content/rulesCourse';
 import type { Cards } from './spaced';
 import type { TextSize } from './textSize';
 
@@ -315,6 +317,25 @@ export const STREAK_TIERS = [3, 7, 14, 30] as const;
 /* ---- Backup ("Bewaar je voortgang"): a .json file the learner keeps, and puts back. ---- */
 
 export const BACKUP_APP = 'vloertaal';
+/** A real backup is a few kilobytes; a file this big is something else (and is not read). */
+export const BACKUP_MAX_BYTES = 2_000_000;
+
+/**
+ * A lesson id this app knows: a lesson of either course or of a region. An id of a course whose
+ * file is not on this phone yet (the work-rules course, a region's units) cannot be checked, so
+ * it is kept; any other unknown id (a lesson that was removed, a typo) is left out.
+ */
+export function knownLessonId(id: string): boolean {
+  if (unitOfLesson(id)) return true;
+  const region = /^rg\.([a-z]+)\./.exec(id)?.[1];
+  if (region) return isRegionId(region) && !regionOf(region);
+  return id.startsWith('r.') && rulesCourseUnits().length === 0;
+}
+
+/** How many finished lessons count (the ones this app knows): the backup's numbers. */
+export function knownLessons(completed: Record<string, unknown>): number {
+  return Object.keys(completed).filter(knownLessonId).length;
+}
 
 export function backupFile(p: Progress, now: Date): string {
   return JSON.stringify({ app: BACKUP_APP, version: 1, saved: now.toISOString(), progress: p }, null, 1);
@@ -325,7 +346,8 @@ const isCount = (v: unknown): v is number => typeof v === 'number' && Number.isF
 
 /**
  * Reads a backup file. Returns null for anything that is not a Vloertaal backup; keeps only
- * well-formed learning progress (lessons, words, streak), never settings from another phone.
+ * well-formed learning progress (lessons the app knows, words, streak), never settings from
+ * another phone.
  */
 export function parseBackup(text: string): Partial<Progress> | null {
   let data: unknown;
@@ -338,6 +360,8 @@ export function parseBackup(text: string): Partial<Progress> | null {
   const completed: Record<string, LessonRecord> = {};
   for (const [id, r] of Object.entries(src.completed as Record<string, unknown>)) {
     const rec = r as Partial<LessonRecord> | null;
+    // A lesson the app does not know is neither counted nor merged.
+    if (!knownLessonId(id)) continue;
     if (rec && typeof rec.best === 'number' && rec.best >= 0 && rec.best <= 1 && isCount(rec.times)) {
       completed[id] = { best: rec.best, times: Math.floor(rec.times) };
     }

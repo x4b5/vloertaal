@@ -340,6 +340,18 @@ export const uiNl: Record<UiKey, UiText> = {
   buildListen: 'Luister en maak de zin',
   chatWhichQuestion: 'Welke vraag hoort bij dit antwoord?',
   reviewWaiting: 'Er wachten nog {n} vragen. Die komen de komende dagen terug.', // regels
+  backupFileN: 'Dit bestand heeft {n} lessen.',
+  backupFileOne: 'Dit bestand heeft {n} les.',
+  backupPhoneN: 'Je hebt {n} lessen.',
+  backupPhoneOne: 'Je hebt {n} les.',
+  backupFewer: '“Vervangen” wist de lessen die niet in het bestand staan. “Samenvoegen” houdt alles.',
+  backupTooBig: 'Dit bestand is te groot. Een bestand van Vloertaal is veel kleiner.',
+  backupNewPhone: 'Nieuwe telefoon? Je code heb je daar ook nodig.',
+  remindEveryDay: 'Je herinnering: elke dag om {time}',
+  remindStop: 'Stop de herinnering',
+  remindStopped: 'Open het bestand. Dan haal je de herinnering uit je agenda.',
+  resetKeeps: 'Je lessen, je dagen op rij en je certificaten worden gewist. Je taal, je code en je instellingen blijven.', // regels: no words
+  loadFailed: 'Niet geladen. Is er internet?',
 };
 
 const lang: HelpLanguageSource = {

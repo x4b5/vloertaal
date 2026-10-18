@@ -737,7 +737,7 @@ const t: CultureTranslation = {
     'c.callin.o3': 'Prosisz sąsiada, żeby zadzwonił za ciebie.',
     'c.callin.w': 'Telefon jest jasny i szybki, a przełożony może zadać pytania. Gdy powiesz, kiedy myślisz, że wrócisz, łatwiej mu planować.',
     'c.texting': 'Wiadomości do pracy: krótko i grzecznie',
-    'c.texting.b': 'Wiadomości do pracy pisz krótko i grzecznie. Napisz, kim jesteś i co się dzieje, a na końcu dodaj pozdrowienie. Na przykład: „Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”. Często sprawdzaj grafik (rooster) w aplikacji. Na prośby o wzięcie zmiany odpowiadaj na czas. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.',
+    'c.texting.b': 'Wiadomości do pracy pisz krótko i grzecznie. Napisz, kim jesteś i co się dzieje, a na końcu dodaj pozdrowienie. Na przykład: „Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”. Często sprawdzaj grafik (rooster) w aplikacji. Na prośby o wzięcie zmiany odpowiadaj na czas. Żeby zamienić się zmianą, najpierw musi się zgodzić przełożony albo planista, więc zapytaj: „Mag ik mijn dienst ruilen?” Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.',
     'c.texting.p': 'Cześć Mark, spóźnię się 10 minut. Przepraszam! Pozdrawiam, Ali',
     'c.texting.s': 'Spóźnisz się 10 minut. Która wiadomość do przełożonego jest najlepsza?',
     'c.texting.o1': '„Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”',

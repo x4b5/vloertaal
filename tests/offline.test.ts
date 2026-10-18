@@ -7,6 +7,19 @@ import { OFFLINE_CACHE, autoOfflinePlan, clipPaths, currentVoices, formatBytes, 
 
 const firstDay = units.find((u) => u.id === 'u.firstday')!;
 const elevenIndex = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8'));
+/** Lines of the first unit still to be recorded (the phone voice says them meanwhile); as in tests/g4b3Clips.test.ts. */
+const PENDING_RECORDING = new Set<string>([
+  // New lesson "De eerste dag: je weg vinden" (l.arrive, 18 October 2026):
+  'de ingang',
+  'de receptie',
+  'de kantine',
+  'de kleedkamer',
+  'de buddy',
+  'vinden',
+  'Bij wie moet ik me melden?',
+  'Ik kan de kleedkamer niet vinden.',
+  'Wie is mijn buddy vandaag?',
+]);
 
 describe('the Dutch lines of a unit', () => {
   it('has its words, sentences, chats, culture tips and single tiles, once each', () => {
@@ -42,7 +55,9 @@ describe('the recorded clips of a unit', () => {
 
   it('covers every word and sentence of the unit in the chosen voice', () => {
     const paths = new Set(clipPaths(unitTexts(firstDay), ['piper:daniel'], clipUrl));
-    for (const l of firstDay.lessons) for (const x of [...l.words, ...l.sentences]) expect(paths.has(`./audio-el/daniel/${x.id}.mp3`), x.id).toBe(true);
+    for (const l of firstDay.lessons) {
+      for (const x of [...l.words, ...l.sentences]) if (!PENDING_RECORDING.has(x.nl)) expect(paths.has(`./audio-el/daniel/${x.id}.mp3`), x.id).toBe(true);
+    }
   });
 
   it('skips lines no voice recorded (the phone says those)', () => {
@@ -65,7 +80,9 @@ describe('offline odds and ends', () => {
   it('uses the same offline cache as the service worker, apart from the app cache', () => {
     const sw = readFileSync('public/sw.js', 'utf8');
     expect(sw).toContain(`const OFFLINE = '${OFFLINE_CACHE}'`);
-    expect(sw).toMatch(/const CACHE = 'vloertaal-v\d+'/);
+    // The app cache is per build (vite.config.ts writes BUILD); the offline cache is not.
+    expect(sw).toContain('const CACHE = `vloertaal-app-${BUILD}`');
+    expect(sw).toMatch(/const AUDIO = 'vloertaal-audio-v\d+'/);
     expect(sw).toContain('skipWaiting');
     expect(sw).toContain('clients.claim');
   });

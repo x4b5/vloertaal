@@ -81,6 +81,39 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, max: number): string[
   return lines;
 }
 
+/** Letters of a right-to-left script (Arabic, Persian, Dari; Hebrew). */
+const RTL_LETTERS = /[\u0590-\u08ff\ufb1d-\ufdff\ufe70-\ufeff]/;
+
+/**
+ * The learner's name on one line at `size`, or smaller down to `min`; still too long at `min`: on
+ * two lines (by words; a single long word is cut where it no longer fits). `measure` gives a
+ * text's width at a size.
+ */
+export function fitName(name: string, max: number, size: number, min: number, measure: (text: string, size: number) => number): { size: number; lines: string[] } {
+  const text = name.trim().replace(/\s+/g, ' ');
+  const one = measure(text, size);
+  if (one <= max) return { size, lines: [text] };
+  const fit = Math.max(min, Math.floor(size * (max / one) * 100) / 100);
+  if (measure(text, fit) <= max) return { size: fit, lines: [text] };
+  // Two lines: the break that keeps the longer line shortest.
+  const words = text.split(' ');
+  let best: string[] | null = null;
+  for (let i = 1; i < words.length; i++) {
+    const pair = [words.slice(0, i).join(' '), words.slice(i).join(' ')];
+    if (!best || Math.max(...pair.map((l) => measure(l, min))) < Math.max(...best.map((l) => measure(l, min)))) best = pair;
+  }
+  const lines = (best ?? [text]).map((line) => {
+    if (measure(line, min) <= max) return line;
+    // One word longer than the line: as many letters as fit, with an ellipsis.
+    const chars = [...line];
+    while (chars.length > 1 && measure(`${chars.join('')}…`, min) > max) chars.pop();
+    return `${chars.join('')}…`;
+  });
+  // The two lines may be bigger than `min` when both fit.
+  const two = Math.max(min, Math.min(size, ...lines.map((l) => Math.floor(size * (max / measure(l, size)) * 100) / 100)));
+  return { size: two, lines };
+}
+
 /** Text around a circle, clockwise from the left (as the SVG textPath on the logo and seal). */
 function ringText(ctx: CanvasRenderingContext2D, text: string, cx: number, cy: number, r: number, size: number, spacing: number, start = Math.PI, fill = false) {
   ctx.save();
@@ -272,7 +305,14 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
     chipRows[chipRows.length - 1].push({ text: p, w });
     rowW += w + 0.8 * u;
   }
-  const nameH = d.name ? 3 * u * 1.2 + 0.6 * u : 0;
+  // The name after "UITGEREIKT AAN": smaller to fit, or on two lines (fitName).
+  ctx.font = font(700, 1.15 * u);
+  const toLeft = ctx.measureText('UITGEREIKT AAN').width + 0.14 * 1.15 * u * 14 + 1 * u;
+  const name = d.name ? fitName(d.name, width - toLeft, 3 * u, 2 * u, (text, size) => {
+    ctx.font = font(700, size, HELP);
+    return ctx.measureText(text).width;
+  }) : null;
+  const nameH = name ? name.lines.length * name.size * 1.2 + 0.6 * u : 0;
   const titleH = titleLines.length * titleSize * 1.02;
   // No second title in the work-rules track (the unit's title is Dutch already).
   const subH = d.rules ? 0 : 0.9 * u + 2 * u * 1.3;
@@ -289,14 +329,22 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
     spaced(ctx, text.toUpperCase(), x, yy, 0.14 * 1.15 * u);
   };
 
-  if (d.name) {
-    const base = y + 3 * u;
+  if (name) {
+    const base = y + name.size * 1.2 - 0.6 * u;
     label('Uitgereikt aan', left, base - 0.3 * u);
-    ctx.font = font(700, 1.15 * u);
-    const lw = ctx.measureText('UITGEREIKT AAN').width + 0.14 * 1.15 * u * 14;
     ctx.fillStyle = C.ink;
-    ctx.font = font(700, 3 * u);
-    ctx.fillText(d.name, left + lw + 1 * u, base);
+    ctx.font = font(700, name.size, HELP);
+    // A name in Arabic or Persian letters is drawn right to left, from the end of its own width
+    // (its start is on the right), so a long one is never cut at its start.
+    const rtl = RTL_LETTERS.test(name.lines.join(''));
+    ctx.direction = rtl ? 'rtl' : 'ltr';
+    ctx.textAlign = rtl ? 'right' : 'left';
+    name.lines.forEach((line, i) => {
+      const x = rtl ? left + toLeft + ctx.measureText(line).width : left + toLeft;
+      ctx.fillText(line, x, base + i * name.size * 1.2);
+    });
+    ctx.direction = 'ltr';
+    ctx.textAlign = 'left';
     y += nameH;
   }
 
@@ -394,12 +442,19 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
 const toBlob = (canvas: HTMLCanvasElement) =>
   new Promise<Blob>((resolve, reject) => canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('no image'))), 'image/png'));
 
+/** The certificate as a PNG (drawn ahead on the certificate screen, so a tap shares at once). */
+export async function certificatePng(d: CertData): Promise<Blob> {
+  return toBlob(await drawCertificate(d));
+}
+
 /**
- * Shares the certificate as a PNG (the phone's share sheet), or saves it when sharing files
- * is not supported. Returns what happened; 'cancelled' when the learner closed the share sheet.
+ * Shares the certificate as a PNG (the phone's share sheet, where the learner can save, send or
+ * print it), or saves the PNG when sharing files is not supported or fails (a computer; a share
+ * sheet the phone refused because the picture took too long). Returns what happened;
+ * 'cancelled' when the learner closed the share sheet. `png`: the picture drawn ahead.
  */
-export async function shareCertificate(d: CertData, fileName: string): Promise<'shared' | 'saved' | 'cancelled'> {
-  const blob = await toBlob(await drawCertificate(d));
+export async function shareCertificate(d: CertData, fileName: string, png: Promise<Blob> = certificatePng(d)): Promise<'shared' | 'saved' | 'cancelled'> {
+  const blob = await png;
   const file = new File([blob], fileName, { type: 'image/png' });
   const nav = navigator as Navigator & { canShare?: (data: ShareData) => boolean };
   if (nav.share && nav.canShare?.({ files: [file] })) {
@@ -420,23 +475,4 @@ export async function shareCertificate(d: CertData, fileName: string): Promise<'
   a.remove();
   window.setTimeout(() => URL.revokeObjectURL(url), 10_000);
   return 'saved';
-}
-
-/**
- * "Save / share" on the certificate: the picture to the phone's share sheet (where the learner can
- * save it, send it or print it). 'unsupported' when the browser cannot share files (a computer):
- * the caller then opens the print dialog, which saves a PDF too.
- */
-export async function shareCertificateFile(d: CertData, fileName: string): Promise<'shared' | 'cancelled' | 'unsupported'> {
-  const nav = navigator as Navigator & { canShare?: (data: ShareData) => boolean };
-  if (!nav.share || !nav.canShare) return 'unsupported';
-  const blob = await toBlob(await drawCertificate(d));
-  const file = new File([blob], fileName, { type: 'image/png' });
-  if (!nav.canShare({ files: [file] })) return 'unsupported';
-  try {
-    await nav.share({ files: [file], title: `Certificaat · ${d.titleNl}` });
-    return 'shared';
-  } catch (e) {
-    return (e as DOMException)?.name === 'AbortError' ? 'cancelled' : 'unsupported';
-  }
 }

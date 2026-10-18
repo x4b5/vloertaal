@@ -16,7 +16,7 @@ import { hasPicture } from '../lib/wordPicture';
 import { WordPicture } from '../pictures';
 import { Bi, HelpText } from './Bi';
 import { CertBadge } from './Certificate';
-import { CheckIcon, ChevronIcon, CrownIcon, LockIcon } from './Icons';
+import { CheckIcon, ChevronIcon, CrownIcon, HourglassIcon, LockIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
 import { NlPair } from './NlPair';
 import { dutchUi, trackOf } from '../lib/track';
@@ -41,10 +41,12 @@ import { loadTopicsOrder, saveTopicsOrder, type TopicsOrder } from '../lib/topic
  * learner first sees what the topic is before a lesson begins. "Other topic" opens All topics: a
  * list of every topic, each leading to its topic page (lessons, pocket card, certificate).
  */
-export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink, note }: {
+export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink, note, unlocked = false }: {
   progress: Progress;
   /** A calm line above "Other topic", not a button (the work-rules track: no Dutch voice on this phone). */
   note?: React.ReactNode;
+  /** The full version was unlocked a moment ago: a short line says the code was right. */
+  unlocked?: boolean;
   lang?: HelpLanguage;
   access?: Access;
   /** "Herhaal vandaag": shown here only when words are due. */
@@ -189,6 +191,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
 
   return (
     <div className="path route home3" ref={ref} dir={rtl ? 'rtl' : undefined}>
+      {unlocked && <UnlockedNote lang={lang} />}
       {dailyDue && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
 
       {block && (
@@ -292,6 +295,21 @@ function LinkedLocked({ unit, lang, onUpgrade }: { unit: Unit; lang?: HelpLangua
       </span>
       <ChevronIcon size={20} className="linked-locked-go" />
     </button>
+  );
+}
+
+/**
+ * Just back from the unlock card with a right code: "De code is goed" (the help language's
+ * "Code accepted" too), so the topics and lessons now open read as the result, not as chance.
+ */
+function UnlockedNote({ lang }: { lang?: HelpLanguage }) {
+  return (
+    <p className="unlocked-note" role="status">
+      <CheckIcon size={20} />
+      <span className="bi">
+        <NlPair nlFirst nl="De code is goed" nlClass="unlocked-nl" className="unlocked-help" text={ui('codeAccepted', lang)} />
+      </span>
+    </p>
   );
 }
 
@@ -491,7 +509,7 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
  * and the certificate once the topic is finished) and its lessons. Done lessons can be practised
  * again here; the next one says Start (or Continue when it was stopped halfway).
  */
-export function TopicPage({ unit, progress, lang, access = 'full', onBack, onStart, onRestart, onPocket, onCertificate, onUpgrade, focus = false }: {
+export function TopicPage({ unit, progress, lang, access = 'full', onBack, onStart, onRestart, onPocket, onCertificate, onUpgrade, focus = false, unlocked = false }: {
   unit: Unit;
   progress: Progress;
   lang?: HelpLanguage;
@@ -506,6 +524,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
   onUpgrade?: () => void;
   /** From a coach link: mark the topic for a moment. */
   focus?: boolean;
+  /** The full version was unlocked a moment ago (from this page): the code was right. */
+  unlocked?: boolean;
 }) {
   const { completed, sector } = progress;
   const rtl = lang?.dir === 'rtl';
@@ -537,6 +557,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
           <WordPicture className="rb-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={64} />
           <BlockProgress unit={unit} completed={completed} lang={lang} />
         </div>
+        {unlocked && <UnlockedNote lang={lang} />}
         {allowed ? (
           (onPocket || restartLesson || (finished && onCertificate && hasCertificate(unit.id))) && (
             <div className="topic-tools" dir={rtl ? 'rtl' : undefined}>
@@ -569,10 +590,12 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
             const first = lesson.words.find(hasPicture);
             const title = gloss(lesson.id, lesson.title, lang);
             const saved = open && saves[lesson.id]?.review === Boolean(record) ? saves[lesson.id] : undefined;
-            // Waits for the full version (not only for the lesson before it): a tap opens the unlock card.
-            const full = !open && allowed && !lessonAllowed(lesson.id, access) && Boolean(onUpgrade);
+            // Waits for the full version (the topic, or this lesson of it): a padlock, and a tap opens
+            // the unlock card. Waits only for the lesson before it: an hourglass, nothing to tap.
+            const forFull = !open && !(allowed && lessonAllowed(lesson.id, access));
+            const full = forFull && Boolean(onUpgrade);
             return (
-              <li key={lesson.id} className={`bay bay-${state} ${saved ? 'bay-saved' : ''}`}>
+              <li key={lesson.id} className={`bay bay-${state} ${full ? 'bay-full' : ''} ${saved ? 'bay-saved' : ''}`}>
                 <span className="bay-marker" aria-hidden>{state === 'done' ? <CheckIcon size={18} /> : i + 1}</span>
                 <button
                   type="button"
@@ -601,7 +624,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                     )}
                   </span>
                   {state === 'open' && !saved && <ChevronIcon size={22} className="bay-chev" />}
-                  {state === 'locked' && <LockIcon size={18} className="bay-lock" />}
+                  {state === 'locked' && (forFull ? <LockIcon size={18} className="bay-lock" /> : <HourglassIcon size={18} className="bay-lock bay-wait" />)}
                 </button>
               </li>
             );

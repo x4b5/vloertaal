@@ -54,8 +54,37 @@ export function tokenize(sentence: string): string[] {
     .filter(Boolean);
 }
 
-export function checkTiles(chosen: string[], sentence: string): boolean {
-  return normalize(chosen.join(' ')) === normalize(tokenize(sentence).join(' '));
+/** The same tiles (written small), whatever their order. */
+const sameTiles = (a: readonly string[], b: readonly string[]) => {
+  const key = (t: readonly string[]) => t.map((w) => w.toLowerCase()).sort().join(' ');
+  return key(a) === key(b);
+};
+
+/**
+ * Every right order of a sentence as tiles: its own first, then its `alt` orders (only those
+ * made of exactly the same tiles; anything else is never offered by the builder).
+ */
+export function sentenceOrders(sentence: { nl: string; alt?: readonly string[] }): string[][] {
+  const own = tokenize(sentence.nl);
+  const alts = (sentence.alt ?? []).map(tokenize).filter((t) => sameTiles(t, own));
+  return [own, ...alts];
+}
+
+/**
+ * Building word by word: is `word` right as the next tile after `placed`, and in which order
+ * (an index of sentenceOrders) does the sentence then go on? The order already followed wins;
+ * else the first one that starts with these words. -1: wrong here in every order.
+ */
+export function nextTileOrder(orders: readonly (readonly string[])[], placed: readonly string[], word: string, current = 0): number {
+  const fits = (o: readonly string[]) =>
+    o.length > placed.length && [...placed, word].every((w, i) => w.toLowerCase() === o[i].toLowerCase());
+  if (orders[current] && fits(orders[current])) return current;
+  return orders.findIndex(fits);
+}
+
+export function checkTiles(chosen: string[], sentence: string | { nl: string; alt?: readonly string[] }): boolean {
+  const orders = typeof sentence === 'string' ? [tokenize(sentence)] : sentenceOrders(sentence);
+  return orders.some((o) => normalize(chosen.join(' ')) === normalize(o.join(' ')));
 }
 
 /**

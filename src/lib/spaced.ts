@@ -145,7 +145,12 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
   // next turn as a source). 4/3 a day turns 3 days into 4 and 24 into 32: another sentence.
   // Over 108 simulated learners 64% came back on average (half a turn 58%, a whole turn 60%).
   // A lesson's place in the course shifts its turn, so lessons reviewed together differ.
-  const turn = Math.floor((4 * n) / 3);
+  // Back to a whole turn a day (18 October 2026): two lessons more, l.arrive in the first unit and
+  // l.notyet in Safety, moved every later lesson one or two places on, and with 4/3 a day only 53%
+  // of the sentences of the first 16 units came back in 6 weeks (2 a day: at most 65%). Over 324
+  // simulated learners with random mistakes (10, 16 and 22 units done) a whole turn brings back
+  // 59.5% on average, 4/3 58.2%, 7/6 59.0%, 2/3 57.6%; with 16 units 58.9% against 54.8%.
+  const turn = n;
   const pick = <T>(xs: readonly T[], at: number, k = 0): T | undefined => (xs.length ? xs[(turn + at + k) % xs.length] : undefined);
   const sentences: Sentence[] = [];
   for (const { l, at } of from) {

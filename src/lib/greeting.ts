@@ -75,9 +75,13 @@ export function greetingInput(p: Progress, today: Date, due: number, first: bool
     first,
     due,
     streak: currentStreak(p, today),
-    rested: (p.rest ?? []).some((d) => daysBetween(d, key) === 1),
+    rested: restedYesterday(p, key),
   };
 }
+
+/** Yesterday was a free day (it kept the streak): the learner was away, though lastDay says yesterday. */
+export const restedYesterday = (p: Pick<Progress, 'rest'>, todayKey: string): boolean =>
+  (p.rest ?? []).some((d) => daysBetween(d, todayKey) === 1);
 
 const GREETED_KEY = 'vloertaal:greeted';
 

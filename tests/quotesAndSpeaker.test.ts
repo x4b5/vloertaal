@@ -22,6 +22,13 @@ describe('a Dutch quote in right-to-left text', () => {
     expect(plain.props.className).toBeUndefined();
   });
 
+  it('keeps a quoted message of a few sentences in one piece, with its marks', () => {
+    // c.texting: "Sorry!" in the middle no longer ends the run ("«… laat. Sorry !Groet, Ali»").
+    const msg = '«Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali»';
+    expect(bdis(`مثلاً: ${msg}. انظر في جدول عملك.`).map((b) => b.props.children)).toEqual([msg]);
+    expect(bdis('لذلك اسأل: «Mag ik mijn dienst ruilen?».').map((b) => b.props.children)).toEqual(['«Mag ik mijn dienst ruilen?»']);
+  });
+
   it('keeps a time or an amount in one piece ("8:30", never "30:8")', () => {
     expect(bdis('في الساعة 8:30.').map((b) => b.props.children)).toEqual(['8:30']);
     expect(bdis('يكلف 6,50 يورو').map((b) => b.props.children)).toEqual(['6,50']);

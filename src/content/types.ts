@@ -32,6 +32,12 @@ export interface Sentence {
   id: string;
   nl: string;
   en: string;
+  /**
+   * Other right word orders of the same words ("Wie is vandaag mijn buddy?" for "Wie is mijn
+   * buddy vandaag?"): building any of them is right too (lib/answers.ts sentenceOrders). Only
+   * the same tiles in another order; the recording, the meaning and the feedback stay `nl`'s.
+   */
+  alt?: string[];
 }
 
 /** One spoken line in a workplace chat; the id is also its translation key. */
