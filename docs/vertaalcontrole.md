@@ -844,3 +844,55 @@ Graag nakijken:
 - **Tigrinya** (beide lessen): ገና (nog niet), ምፍቃድ (mogen), ምፍታን (proberen), ሓደገኛ (gevaarlijk),
   ርግጸኛ (zeker), መእተዊ (ingang), መቐበሊ ኣጋይሽ (receptie), ክፍሊ ምቕያር ክዳን (kleedkamer), ምርካብ (vinden),
   "እዚ ገና ኣይተማሃርክዎን" (dit heb ik nog niet geleerd). Graag de spelling en de vrouwvormen nakijken.
+
+### Bijgewerkt 18 oktober 2026, na een NT2-review van deze twee lessen
+
+Een NT2-docent en een criticus lazen `l.arrive`, `l.notyet` en de tips `c.arrive`, `c.notyet`,
+`c.texting` en `c.gear`. Wat er veranderde (alle talen, weer met AI vertaald en nog niet door een
+moedertaalspreker gecontroleerd):
+
+- **`c.arrive.q`** is nu "Goedemorgen, waar komt u voor?" (was "waarvoor komt u?"); de vertalingen
+  bleven, behalve Roemeens "Bună dimineața, în ce problemă veniți?" (was "cu ce treabă", te los) en
+  Tigrinya "ደሓን ሓዲርኩም፡ ብምንታይ ጉዳይ ኢኹም መጺእኹም?" ("voor welke zaak"). **Tigrinya graag door een
+  moedertaalspreker laten nakijken.**
+- **`w.zeker` is weg** (de les gebruikte het nergens); in de plaats `w.uitleg` "de uitleg" (het woord van
+  `s.notyet.2`): Arabisch "الشرح", Tigrinya "መብርሂ", Perzisch en Dari "توضیح", Oekraïens "пояснення", Turks
+  "açıklama", Pools "wyjaśnienie", Roemeens "explicația", Bulgaars "обяснението". Klopt het lidwoord
+  (Roemeens en Bulgaars bepaald, de rest zonder)?
+- **Tigrinya `w.mogen`** is nu "ፍቓድ ምርካብ (ይፍቀደኒ)" ("toestemming krijgen (het is me toegestaan)"; was
+  "ምፍቃድ (ይፍቀድ)", dat is "toestaan"). **Graag door een moedertaalspreker laten nakijken.**
+- **De intercom**: Arabisch nu "جرس بسمّاعة (إنترفون)" in `c.arrive.s` en, bepaald, "الجرس بالسمّاعة
+  (الإنترفون)" in `c.arrive.w` (die bepaalde vorm graag nakijken); Tigrinya "ደወል ምስ መዛረቢ (ኢንተርኮም)";
+  Perzisch "آیفون (زنگ در)" (in Iran heet een intercom "آیفون", maar dat lijkt op de telefoon).
+- **Arabisch `c.arrive.p`**: "…إلى مَن يجب أن أذهب؟" (was "عند من": bij wie zijn, niet naar wie gaan).
+- **Bulgaars `c.arrive.w`** heeft nu een vrouwvorm ("Когато кажеш коя си").
+- **Pools** les `l.notyet` "Jeszcze mnie tego nie nauczyli" en tip `c.notyet` "Nikt cię jeszcze tego
+  nie nauczył? Powiedz to" (minder stijf dan "nauczono"); **Roemeens** tip `c.notyet` "N-ai învățat
+  încă? Spune asta".
+- **Dari `c.notyet.a.why`**: "… جواب مصئون این است که بخواهید اول برای شما نشان بدهند." (de lerende vraagt
+  het zelf).
+- **`c.texting.b`**: de Nederlandse zin is nu die van de lerende zelf: "To swap a shift, your
+  supervisor or the planner must agree first, so ask: "Mag ik mijn dienst ruilen?"" (was "Vraag het
+  eerst aan je leidinggevende.", onvertaald en zonder duidelijke spreker). Per taal "dus vraag": Arabisch
+  "لذلك اسأل / اسألي", Tigrinya "ስለዚ ሕተት / ሕተቲ", Perzisch "پس بپرس", Dari "پس بپرسید", Oekraïens "тож
+  запитай", Turks "bu yüzden sor", Pools "więc zapytaj", Roemeens "așa că întreabă", Bulgaars "затова
+  питай". De voorbeeldboodschap ("Hoi Mark, … Sorry! Groet, Ali") staat in de les nu op één regel: de
+  app knipt een tekst niet meer binnen aanhalingstekens.
+- **`c.gear.b`**: "Heb je dit ook in mijn maat?" (was "Heeft u dit in mijn maat?"; op de werkvloer
+  zeg je "je").
+- **`c.notyet.b`**: "The company where you work must explain …" (was "Your employer": een uitzendkracht
+  denkt dan aan het bureau) en de hele zin "Dit heb ik nog niet geleerd" (was alleen "nog niet
+  geleerd"). Arabisch "الشركة التي تعمل / تعملين فيها", Tigrinya "እቲ እትሰርሓሉ / እትሰርሕሉ ትካል", Perzisch
+  "شرکتی که در آن کار می‌کنی", Dari "کمپنی‌ای که در آن کار می‌کنید", Oekraïens "Фірма, де ти працюєш",
+  Turks "Çalıştığın şirket", Pools "Firma, w której pracujesz", Roemeens "Firma la care lucrezi",
+  Bulgaars "Фирмата, в която работиш". **Tigrinya-vrouwvorm graag nakijken.**
+- **De goede antwoorden zijn korter** (ze waren steeds het langste): `c.arrive.o1` "Ring, say your name
+  and that you start today." (het bureau staat al in de tip zelf) en `c.notyet.o1` "Say you have not
+  learned it. Ask for instruction."; `c.notyet.o2` is iets langer: "Drive slowly and carefully, just
+  this once." In alle talen; in het Tigrinya "ደውል፡ ስምካን ሎሚ ከም እትጅምርን ንገር።", "ከም ዘይተማሃርካዮ ንገር።
+  መምርሒ ሕተት።" en "… ቀስ ኢልካን ተጠንቂቕካን ዘውር።", met de vrouwvormen: **graag nakijken.**
+- **De zinnen bouwen** accepteert nu ook een tweede goede volgorde: "Wie is vandaag mijn buddy?" naast
+  "Wie is mijn buddy vandaag?" en "Ik heb dit nog niet geleerd." naast "Dit heb ik nog niet geleerd."
+  (alleen Nederlands, geen vertaling).
+- **Geen plaatje meer** bij `w.proberen` (🤞 zegt "hopen dat het goed gaat", het foute antwoord van de
+  situatie) en `w.voordoen` (🧑‍🔧 lijkt "monteur").

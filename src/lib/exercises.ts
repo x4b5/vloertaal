@@ -72,6 +72,27 @@ export function needsAudio(ex: Exercise): boolean {
 }
 
 /**
+ * The Dutch this exercise can only be done by hearing: the word of a listening or writing
+ * exercise, the sentence of one built by ear. undefined for any other exercise.
+ */
+export function heardText(ex: Exercise): string | undefined {
+  if (ex.kind === 'listen' || ex.kind === 'type') return ex.word.nl;
+  if (ex.kind === 'build' && ex.audio) return ex.sentence.nl;
+  return undefined;
+}
+
+/**
+ * Nothing on this phone can say what the exercise needs heard: no recording of the line (a new
+ * one, still to be recorded) and no Dutch phone voice (`canSay`, lib/audio.ts). A listening or
+ * writing exercise is then left out (counted as skipped, as without sound) and a sentence built
+ * by ear becomes the usual one, instead of a guess at a silent speaker.
+ */
+export function unheard(ex: Exercise, canSay: (text: string) => boolean): boolean {
+  const text = heardText(ex);
+  return text !== undefined && !canSay(text);
+}
+
+/**
  * Which options of a "what does it mean" show their small picture: those with one, but none at
  * all when the answer has no picture (the one row without a picture would give it away).
  */

@@ -83,11 +83,11 @@ export const units: Unit[] = [
         sentences: [
           { id: 's.arrive.1', nl: 'Bij wie moet ik me melden?', en: 'Who do I check in with?' },
           { id: 's.arrive.2', nl: 'Ik kan de kleedkamer niet vinden.', en: 'I cannot find the changing room.' },
-          { id: 's.arrive.3', nl: 'Wie is mijn buddy vandaag?', en: 'Who is my buddy today?' },
+          { id: 's.arrive.3', nl: 'Wie is mijn buddy vandaag?', en: 'Who is my buddy today?', alt: ['Wie is vandaag mijn buddy?'] },
         ],
         dialogues: [
           {
-            prompt: { id: 'c.arrive.q', nl: 'Goedemorgen, waarvoor komt u?', en: 'Good morning, what are you here for?' },
+            prompt: { id: 'c.arrive.q', nl: 'Goedemorgen, waar komt u voor?', en: 'Good morning, what are you here for?' },
             reply: { id: 'c.arrive.a', nl: 'Ik ben nieuw. Ik begin vandaag.', en: 'I am new. I start today.' },
           },
         ],
@@ -208,19 +208,21 @@ export const units: Unit[] = [
       },
       {
         // "leren" (w.leren, l.mistakes) and "de heftruck" (w.heftruck, l.things) are already words
-        // of other lessons: here they come in the sentences, the tip and its situation.
+        // of other lessons: here they come in the sentences, the tip and its situation. No picture
+        // for "proberen" (🤞 says "hope it goes well", the situation's wrong answer) or "voordoen"
+        // (🧑‍🔧 reads as "mechanic"). "de uitleg" is the word of s.notyet.2.
         id: 'l.notyet',
         title: 'I have not learned this yet',
         words: [
           { id: 'w.nogniet', nl: 'nog niet', en: 'not yet', emoji: '⏳', picture: false },
           { id: 'w.mogen', nl: 'mogen', en: 'to be allowed to, may', emoji: '🆗', picture: false },
-          { id: 'w.proberen', nl: 'proberen', en: 'to try', emoji: '🤞' },
-          { id: 'w.voordoen', nl: 'voordoen', en: 'to show how (by doing it first)', emoji: '🧑‍🔧' },
+          { id: 'w.proberen', nl: 'proberen', en: 'to try', emoji: '🤞', picture: false },
+          { id: 'w.voordoen', nl: 'voordoen', en: 'to show how (by doing it first)', emoji: '🧑‍🔧', picture: false },
           { id: 'w.gevaarlijk', nl: 'gevaarlijk', en: 'dangerous', emoji: '☠️' },
-          { id: 'w.zeker', nl: 'zeker', en: 'sure, certain', emoji: '💯', picture: false },
+          { id: 'w.uitleg', nl: 'de uitleg', en: 'the explanation', emoji: '💬', picture: false },
         ],
         sentences: [
-          { id: 's.notyet.1', nl: 'Dit heb ik nog niet geleerd.', en: 'I have not learned this yet.' },
+          { id: 's.notyet.1', nl: 'Dit heb ik nog niet geleerd.', en: 'I have not learned this yet.', alt: ['Ik heb dit nog niet geleerd.'] },
           { id: 's.notyet.2', nl: 'Ik heb nog geen uitleg gehad.', en: 'I have not had an explanation yet.' },
           { id: 's.notyet.3', nl: 'Mag ik dit al alleen doen?', en: 'Am I allowed to do this alone yet?' },
         ],

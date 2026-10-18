@@ -52,7 +52,8 @@ export function HelpText({ text, lang, className = 'bi-help' }: { text: string; 
 }
 
 // A run of Latin-script words (a Dutch phrase quoted in an Arabic or Persian sentence), with
-// the "!", "?" or "…" that closes it when a quote mark follows ("«Zeg maar je, hoor!»").
+// the "!", "?" or "…" that closes it when a quote mark follows ("«Zeg maar je, hoor!»"). A
+// quoted message of a few sentences is one run too ("«… te laat. Sorry! Groet, Ali»").
 const L = 'A-Za-z\\u00C0-\\u024F';
 const WORD = `[${L}0-9][${L}0-9'’\\-]*`;
 // A time or an amount ("8:30", "6,50", "1.200") is one run: isolating "8" and "30" apart would
@@ -63,7 +64,7 @@ const OPEN_QUOTE = '«„“"\'‘';
 const CLOSE_QUOTE = '»”“"\'’';
 /** Quotes up to this many characters stay on one line. */
 const SHORT_QUOTE = 20;
-const LATIN_RUN = new RegExp(`${TOKEN}(?:[.,:;]?\\s+${TOKEN})*(?:\\s?(?:…|[!?.])+(?=[»”"“«']))?`, 'g');
+const LATIN_RUN = new RegExp(`${TOKEN}(?:[.,:;!?…]?\\s+${TOKEN})*(?:\\s?(?:…|[!?.])+(?=[»”"“«']))?`, 'g');
 
 /**
  * In right-to-left text the bidi algorithm reorders the punctuation around an embedded

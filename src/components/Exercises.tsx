@@ -3,7 +3,7 @@ import type { ChatLine } from '../content/types';
 import { sayingQuestion } from '../content/sayings';
 import { fillN, gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { checkTyped, tokenize } from '../lib/answers';
+import { checkTyped, nextTileOrder, sentenceOrders } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
 import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, tileLabel, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
@@ -542,8 +542,13 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   // One voice per exercise: the speaker says the words and, when it is done, the whole sentence.
   const who = castFor(ex.sentence.id);
   const pic = useMemo(() => sentencePicture(ex.sentence), [ex.sentence]);
-  const words = useMemo(() => tokenize(ex.sentence.nl), [ex.sentence]);
-  const steps = useMemo(() => buildSteps(ex.sentence.nl, ex.tiles, 3, ex.salt), [ex]);
+  // Every right order (the sentence's own, then its `alt` ones): a tap that fits another order
+  // goes on in that order, with that order's words offered from then on.
+  const orders = useMemo(() => sentenceOrders(ex.sentence), [ex.sentence]);
+  const allSteps = useMemo(() => orders.map((o, k) => buildSteps(k === 0 ? ex.sentence.nl : o.join(' '), ex.tiles, 3, ex.salt)), [ex, orders]);
+  const [path, setPath] = useState(0);
+  const words = orders[path];
+  const steps = allSteps[path];
   const [at, setAt] = useState(0);
   const wrongTaps = useRef(0);
   /** Every wrong tap: the word tapped and the place it was tapped for (shown after the end). */
@@ -564,12 +569,15 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   const shownWrongs = wrongs.filter((x, i) => wrongs.findIndex((y) => y.at === x.at && y.word === x.word) === i);
   const tap = (w: string) => {
     if (locked || complete) return;
-    if (w === words[at]) {
+    const order = nextTileOrder(orders, words.slice(0, at), w, path);
+    if (order >= 0) {
       speak(w, false, 'nl', voiceFor(who));
       setMiss(null);
+      if (order !== path) setPath(order);
+      const built = orders[order];
       const next = at + 1;
       setAt(next);
-      if (next >= words.length) onAnswer({ ...stepGrade(wrongTaps.current, BUILD_FORGIVEN_TAPS), done: true, missed: [...new Set(wrongsRef.current.map((x) => words[x.at]))] });
+      if (next >= built.length) onAnswer({ ...stepGrade(wrongTaps.current, BUILD_FORGIVEN_TAPS), done: true, missed: [...new Set(wrongsRef.current.map((x) => built[x.at]))] });
     } else {
       wrongTaps.current += 1;
       wrongsRef.current = [...wrongsRef.current, { at, word: w }];

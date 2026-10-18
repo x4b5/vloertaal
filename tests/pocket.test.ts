@@ -116,7 +116,7 @@ describe('pocket card phrases', () => {
       'Bij wie moet ik me melden?',
       'Ik kan de kleedkamer niet vinden.',
       'Wie is mijn buddy vandaag?',
-      'Goedemorgen, waarvoor komt u?',
+      'Goedemorgen, waar komt u voor?',
       'Ik ben nieuw. Ik begin vandaag.',
       'Goedemorgen, ik ben Ali. Ik begin vandaag. Bij wie moet ik zijn?',
       // New lesson "Dit heb ik nog niet geleerd" (l.notyet, 18 October 2026), and the Dutch its
@@ -126,7 +126,7 @@ describe('pocket card phrases', () => {
       'proberen',
       'voordoen',
       'gevaarlijk',
-      'zeker',
+      'de uitleg',
       'Dit heb ik nog niet geleerd.',
       'Ik heb nog geen uitleg gehad.',
       'Mag ik dit al alleen doen?',

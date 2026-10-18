@@ -352,6 +352,13 @@ function defineStates(LANG) {
   for (const [key, at] of [['word-abstract', 0], ['intro', 3], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
     add(`lesson:notyet-${key}`, shot(`lesson&lesson=l.notyet&at=${at}`));
   }
+  // The tips of "Messages and the roster app" (l.texting: the example message on one line, never
+  // split inside its quotes, and "Mag ik mijn dienst ruilen?") and "Beschermende kleding" (l.gear:
+  // "Heb je dit ook in mijn maat?"), with their situations (seed 1).
+  for (const [key, at] of [['tip', 9], ['situation', 10]]) {
+    add(`lesson:texting-${key}`, shot(`lesson&lesson=l.texting&at=${at}`));
+    add(`lesson:gear-${key}`, shot(`lesson&lesson=l.gear&at=${at}`));
+  }
   add('lesson:match', shot('match'));
   add('lesson:match:half', shot('match'), async (p) => { await matchPairs(p, 1); });
   add('lesson:match:done', shot('match'), async (p) => { await matchPairs(p); });
