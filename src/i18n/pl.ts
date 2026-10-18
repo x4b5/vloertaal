@@ -318,6 +318,8 @@ const lang: HelpLanguageSource = {
     remindStop: 'Wyłącz przypomnienie',
     remindStopped: 'Otwórz plik, aby usunąć przypomnienie z kalendarza.',
     resetKeeps: 'Twoje lekcje, słowa, dni z rzędu i certyfikaty zostaną usunięte. Twój język, kod i ustawienia zostają.',
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'Nie załadowało się. Czy jest internet?',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

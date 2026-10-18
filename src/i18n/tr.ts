@@ -318,6 +318,8 @@ const lang: HelpLanguageSource = {
     remindStop: 'Hatırlatmayı durdur',
     remindStopped: 'Hatırlatmayı takviminden kaldırmak için dosyayı aç.',
     resetKeeps: 'Derslerin, kelimelerin, günlük serin ve sertifikaların silinir. Dilin, kodun ve ayarların kalır.',
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'Yüklenmedi. İnternet var mı?',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

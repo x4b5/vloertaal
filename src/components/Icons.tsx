@@ -85,6 +85,15 @@ export const LockIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** "Not yet": a lesson that opens after the one before it (the padlock is for the full version). */
+export const HourglassIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M6.5 3.5h11M6.5 20.5h11" {...stroke} />
+    <path d="M8 3.5v2.2c0 2.2 4 4.1 4 6.3 0-2.2 4-4.1 4-6.3V3.5M8 20.5v-2.2c0-2.2 4-4.1 4-6.3 0 2.2 4 4.1 4 6.3v2.2" {...stroke} strokeWidth={2.2} />
+    <path d="M9.6 19.2c0-1.4 2.4-2.6 2.4-3.4 0 .8 2.4 2 2.4 3.4z" fill="currentColor" />
+  </Svg>
+);
+
 export const CrownIcon = (p: IconProps) => (
   <Svg {...p}>
     <path d="M3.5 8l4.5 4 4-6.5 4 6.5 4.5-4-1.8 10.5H5.3z" fill="currentColor" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />

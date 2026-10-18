@@ -528,7 +528,11 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       // The pick and the right answer matter more than the tag and the question above them
       // (both stay one scroll away): they may slide under the header, the marked options not.
       const room = top - head - 8;
-      const by = Math.min(bottom - limit, Math.max(0, room));
+      let by = Math.min(bottom - limit, Math.max(0, room));
+      // Not both in view (a picture choice on a short phone, the pick in the row below): the
+      // learner's own pick, with its word, comes first; the label names the right answer.
+      const pick = document.querySelector<HTMLElement>('.player-body .choice.wrong')?.getBoundingClientRect();
+      if (pick && pick.bottom - by > limit) by = Math.min(pick.bottom - limit, Math.max(0, pick.top - head - 8));
       if (bottom > limit && by > 0) window.scrollBy({ top: by, behavior: reducedMotion() ? 'auto' : 'smooth' });
     });
     return () => cancelAnimationFrame(raf);

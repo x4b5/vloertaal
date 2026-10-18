@@ -318,6 +318,8 @@ const lang: HelpLanguageSource = {
     remindStop: 'Oprește reamintirea',
     remindStopped: 'Deschide fișierul ca să scoți reamintirea din calendar.',
     resetKeeps: 'Lecțiile, cuvintele, zilele la rând și certificatele tale se șterg. Limba, codul și setările tale rămân.',
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'Nu s-a încărcat. Este internet?',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -5,8 +5,9 @@ import type { HelpLanguage, LangCode, UiCode, UiKey } from './types';
  * demand, src/i18n/index.ts): the language list and the "Polski?" guess page. Picker order: the
  * largest newcomer groups first, then labour-migration languages.
  *
- * `ui` holds the strings of the guess page (the question, its two answers and what the app is), in
- * the default (no gender chosen) form. They are
+ * `ui` holds the strings of the guess page (the question, its two answers and what the app is), and
+ * the start screen's line when a file did not load (src/components/Splash.tsx), in the default (no
+ * gender chosen) form. They are
  * copies of the packs' own strings; tests/i18n.test.ts checks that they stay the same.
  */
 export interface LangMeta<C extends UiCode = LangCode> {
@@ -16,7 +17,7 @@ export interface LangMeta<C extends UiCode = LangCode> {
   dir: 'ltr' | 'rtl';
   gendered: boolean;
   reviewed: boolean;
-  ui: Pick<Record<UiKey, string>, 'chooseLanguage' | 'langGuessYes' | 'langGuessOther' | 'appTagline'>;
+  ui: Pick<Record<UiKey, string>, 'chooseLanguage' | 'langGuessYes' | 'langGuessOther' | 'appTagline' | 'loadFailed'>;
   /**
    * A country flag beside the name in the language list, only where a flag is not sensitive (the
    * owner's choice). Left out ON PURPOSE, please keep it that way:
@@ -33,15 +34,15 @@ export interface LangMeta<C extends UiCode = LangCode> {
 }
 
 export const languageMeta: readonly LangMeta[] = [
-  { code: 'ar', name: 'Arabic', nativeName: 'العربية', dir: 'rtl', gendered: true, reviewed: false, ui: { chooseLanguage: 'اختر لغة المساعدة', langGuessYes: 'نعم', langGuessOther: 'لغة أخرى', appTagline: 'الهولندية لمكان العمل' }, sample: 'ع' },
-  { code: 'ti', name: 'Tigrinya', nativeName: 'ትግርኛ', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'ቋንቋ ሓገዝካ ምረጽ', langGuessYes: 'እወ', langGuessOther: 'ካልእ ቋንቋ', appTagline: 'ሆላንድኛ ንቦታ ስራሕ' }, sample: 'ሀ' },
-  { code: 'fa', name: 'Persian (Iran)', nativeName: 'فارسی', dir: 'rtl', gendered: false, reviewed: false, ui: { chooseLanguage: 'زبان خود را انتخاب کنید', langGuessYes: 'بله', langGuessOther: 'زبان دیگر', appTagline: 'هلندی برای محیط کار' }, sample: 'فا' },
-  { code: 'prs', name: 'Dari (Afghanistan)', nativeName: 'دری', dir: 'rtl', gendered: false, reviewed: false, ui: { chooseLanguage: 'زبان کمکی خود را انتخاب کنید', langGuessYes: 'بلی', langGuessOther: 'زبان دیگر', appTagline: 'هالندی برای جای کار' }, sample: 'دری' },
-  { code: 'uk', name: 'Ukrainian', nativeName: 'Українська', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Обери мову підказок', langGuessYes: 'Так', langGuessOther: 'Інша мова', appTagline: 'Нідерландська для роботи' }, flag: '🇺🇦' },
-  { code: 'tr', name: 'Turkish', nativeName: 'Türkçe', dir: 'ltr', gendered: false, reviewed: false, ui: { chooseLanguage: 'Yardım dilini seç', langGuessYes: 'Evet', langGuessOther: 'Başka dil', appTagline: 'İş yeri için Hollandaca' }, flag: '🇹🇷' },
-  { code: 'pl', name: 'Polish', nativeName: 'Polski', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Wybierz język pomocy', langGuessYes: 'Tak', langGuessOther: 'Inny język', appTagline: 'Niderlandzki do pracy' }, flag: '🇵🇱' },
-  { code: 'ro', name: 'Romanian', nativeName: 'Română', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Alege limba de ajutor', langGuessYes: 'Da', langGuessOther: 'Altă limbă', appTagline: 'Olandeză pentru locul de muncă' }, flag: '🇷🇴' },
-  { code: 'bg', name: 'Bulgarian', nativeName: 'Български', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Избери език за помощ', langGuessYes: 'Да', langGuessOther: 'Друг език', appTagline: 'Нидерландски за работното място' }, flag: '🇧🇬' },
+  { code: 'ar', name: 'Arabic', nativeName: 'العربية', dir: 'rtl', gendered: true, reviewed: false, ui: { chooseLanguage: 'اختر لغة المساعدة', langGuessYes: 'نعم', langGuessOther: 'لغة أخرى', appTagline: 'الهولندية لمكان العمل', loadFailed: 'لم يتم التحميل. هل الإنترنت متصل؟' }, sample: 'ع' },
+  { code: 'ti', name: 'Tigrinya', nativeName: 'ትግርኛ', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'ቋንቋ ሓገዝካ ምረጽ', langGuessYes: 'እወ', langGuessOther: 'ካልእ ቋንቋ', appTagline: 'ሆላንድኛ ንቦታ ስራሕ', loadFailed: 'ኣይተጻዕነን። ኢንተርነት ኣሎ ድዩ?' }, sample: 'ሀ' },
+  { code: 'fa', name: 'Persian (Iran)', nativeName: 'فارسی', dir: 'rtl', gendered: false, reviewed: false, ui: { chooseLanguage: 'زبان خود را انتخاب کنید', langGuessYes: 'بله', langGuessOther: 'زبان دیگر', appTagline: 'هلندی برای محیط کار', loadFailed: 'بارگیری نشد. اینترنت وصل است؟' }, sample: 'فا' },
+  { code: 'prs', name: 'Dari (Afghanistan)', nativeName: 'دری', dir: 'rtl', gendered: false, reviewed: false, ui: { chooseLanguage: 'زبان کمکی خود را انتخاب کنید', langGuessYes: 'بلی', langGuessOther: 'زبان دیگر', appTagline: 'هالندی برای جای کار', loadFailed: 'بارگیری نشد. انترنت وصل است؟' }, sample: 'دری' },
+  { code: 'uk', name: 'Ukrainian', nativeName: 'Українська', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Обери мову підказок', langGuessYes: 'Так', langGuessOther: 'Інша мова', appTagline: 'Нідерландська для роботи', loadFailed: 'Не завантажилося. Чи є інтернет?' }, flag: '🇺🇦' },
+  { code: 'tr', name: 'Turkish', nativeName: 'Türkçe', dir: 'ltr', gendered: false, reviewed: false, ui: { chooseLanguage: 'Yardım dilini seç', langGuessYes: 'Evet', langGuessOther: 'Başka dil', appTagline: 'İş yeri için Hollandaca', loadFailed: 'Yüklenmedi. İnternet var mı?' }, flag: '🇹🇷' },
+  { code: 'pl', name: 'Polish', nativeName: 'Polski', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Wybierz język pomocy', langGuessYes: 'Tak', langGuessOther: 'Inny język', appTagline: 'Niderlandzki do pracy', loadFailed: 'Nie załadowało się. Czy jest internet?' }, flag: '🇵🇱' },
+  { code: 'ro', name: 'Romanian', nativeName: 'Română', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Alege limba de ajutor', langGuessYes: 'Da', langGuessOther: 'Altă limbă', appTagline: 'Olandeză pentru locul de muncă', loadFailed: 'Nu s-a încărcat. Este internet?' }, flag: '🇷🇴' },
+  { code: 'bg', name: 'Bulgarian', nativeName: 'Български', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Избери език за помощ', langGuessYes: 'Да', langGuessOther: 'Друг език', appTagline: 'Нидерландски за работното място', loadFailed: 'Не се зареди. Има ли интернет?' }, flag: '🇧🇬' },
 ];
 
 export const LANG_CODES: readonly LangCode[] = languageMeta.map((l) => l.code);
@@ -59,7 +60,7 @@ export const NL_META: LangMeta<'nl'> = {
   dir: 'ltr',
   gendered: false,
   reviewed: true,
-  ui: { chooseLanguage: 'Kies je taal', langGuessYes: 'Ja', langGuessOther: 'Andere taal', appTagline: 'Werken in Nederland: zo gaat het' },
+  ui: { chooseLanguage: 'Kies je taal', langGuessYes: 'Ja', langGuessOther: 'Andere taal', appTagline: 'Werken in Nederland: zo gaat het', loadFailed: 'Niet geladen. Is er internet?' },
   flag: '🇳🇱',
 };
 

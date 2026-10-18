@@ -318,6 +318,8 @@ const lang: HelpLanguageSource = {
     remindStop: { m: 'መዘኻኸሪ ኣቋርጽ', f: 'መዘኻኸሪ ኣቋርጺ' },
     remindStopped: { m: 'መዘኻኸሪ ካብ ካሌንደርካ ንምእላይ ነቲ ፋይል ክፈቶ።', f: 'መዘኻኸሪ ካብ ካሌንደርኪ ንምእላይ ነቲ ፋይል ክፈትዮ።' },
     resetKeeps: { m: 'ትምህርትታትካ፡ ቃላትካ፡ ተኸታታሊ መዓልትታትካን ምስክር ወረቐታትካን ይድምሰሱ። ቋንቋኻ፡ ኮድካን ምድላዋትካን ይጸንሑ።', f: 'ትምህርትታትኪ፡ ቃላትኪ፡ ተኸታታሊ መዓልትታትኪን ምስክር ወረቐታትኪን ይድምሰሱ። ቋንቋኺ፡ ኮድኪን ምድላዋትኪን ይጸንሑ።' },
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'ኣይተጻዕነን። ኢንተርነት ኣሎ ድዩ?',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

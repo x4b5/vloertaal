@@ -318,6 +318,8 @@ const lang: HelpLanguageSource = {
     remindStop: 'یادآوری را خاموش کنید',
     remindStopped: 'فایل را باز کنید تا یادآوری از تقویم شما برداشته شود.',
     resetKeeps: 'درس‌ها، کلمه‌ها، روزهای پی‌هم و تصدیق‌نامه‌های شما پاک می‌شوند. زبان، کد و تنظیمات شما می‌مانند.',
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'بارگیری نشد. انترنت وصل است؟',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

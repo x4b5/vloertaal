@@ -377,6 +377,8 @@ export const uiEn = {
   remindStop: 'Stop the reminder',
   remindStopped: 'Open the file to take the reminder out of your calendar.',
   resetKeeps: 'Your lessons, words, streak and certificates are deleted. Your language, your code and your settings stay.',
+  /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+  loadFailed: 'Not loaded. Is the internet on?',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

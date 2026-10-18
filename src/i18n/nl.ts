@@ -351,6 +351,7 @@ export const uiNl: Record<UiKey, UiText> = {
   remindStop: 'Stop de herinnering',
   remindStopped: 'Open het bestand. Dan haal je de herinnering uit je agenda.',
   resetKeeps: 'Je lessen, je dagen op rij en je certificaten worden gewist. Je taal, je code en je instellingen blijven.', // regels: no words
+  loadFailed: 'Niet geladen. Is er internet?',
 };
 
 const lang: HelpLanguageSource = {

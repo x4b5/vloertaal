@@ -80,7 +80,9 @@ describe('offline odds and ends', () => {
   it('uses the same offline cache as the service worker, apart from the app cache', () => {
     const sw = readFileSync('public/sw.js', 'utf8');
     expect(sw).toContain(`const OFFLINE = '${OFFLINE_CACHE}'`);
-    expect(sw).toMatch(/const CACHE = 'vloertaal-v\d+'/);
+    // The app cache is per build (vite.config.ts writes BUILD); the offline cache is not.
+    expect(sw).toContain('const CACHE = `vloertaal-app-${BUILD}`');
+    expect(sw).toMatch(/const AUDIO = 'vloertaal-audio-v\d+'/);
     expect(sw).toContain('skipWaiting');
     expect(sw).toContain('clients.claim');
   });

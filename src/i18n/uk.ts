@@ -318,6 +318,8 @@ const lang: HelpLanguageSource = {
     remindStop: 'Вимкнути нагадування',
     remindStopped: 'Відкрий файл, щоб прибрати нагадування з календаря.',
     resetKeeps: 'Твої уроки, слова, дні поспіль і сертифікати буде видалено. Твоя мова, код і налаштування залишаться.',
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'Не завантажилося. Чи є інтернет?',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -318,6 +318,8 @@ const lang: HelpLanguageSource = {
     remindStop: 'Спри напомнянето',
     remindStopped: 'Отвори файла, за да махнеш напомнянето от календара.',
     resetKeeps: 'Уроците, думите, дните поред и сертификатите ти се изтриват. Езикът, кодът и настройките ти остават.',
+    /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
+    loadFailed: 'Не се зареди. Има ли интернет?',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
