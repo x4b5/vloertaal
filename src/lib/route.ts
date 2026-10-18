@@ -138,7 +138,9 @@ export function nextChoices(sector: SectorChoice | undefined, completed: Complet
   // factory work), and once that is done the sector's own unit (the words of that work: a carer
   // gets the care words in week 1, not only after the basis units).
   const firsts = [sectorFirstFocus(sector, track), sectorOwnUnit(sector, track)].filter(Boolean);
-  const first = firsts.map((id) => open.find((u) => u.id === id)).filter((u): u is Unit => Boolean(u)).slice(0, 1);
+  // A focus unit with only its mixed review left gives way to the next one here (it still comes
+  // after the lead, below), so the sector's own unit is not skipped while that review waits.
+  const first = firsts.map((id) => open.find((u) => u.id === id)).filter((u): u is Unit => Boolean(u) && !onlyMixLeft(u!, completed)).slice(0, 1);
   // The recommended (first) choice brings new lessons: a unit with only its mixed review left
   // still comes, but after it.
   const fresh = open.find((u) => !onlyMixLeft(u, completed));
