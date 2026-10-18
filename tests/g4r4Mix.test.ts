@@ -12,7 +12,8 @@ describe('chat replies stay at the learner\'s level', () => {
   /** A wrong reply is fair when it is taught already, of the same unit, or from a lesson close by. */
   const near = (replyId: string, at: number, lessonId: string) => {
     const from = lessonOfReply(replyId);
-    return from <= at || unitOf(teachingLessons[from].id) === unitOf(lessonId) || Math.abs(from - at) <= 6;
+    // Within 7 lessons: since l.arrive (18 October 2026) Protective gear is 7 lessons after Say hello.
+    return from <= at || unitOf(teachingLessons[from].id) === unitOf(lessonId) || Math.abs(from - at) <= 7;
   };
 
   it('lesson 1.1 offers short replies of its own unit and the next lessons (no far-off long lines)', () => {
@@ -23,8 +24,8 @@ describe('chat replies stay at the learner\'s level', () => {
       const wrong = opts.filter((o) => o.id !== d.reply.id);
       expect(wrong).toHaveLength(2);
       for (const w of wrong) {
-        // Lessons 1.1 to 3.1 at most (the first chats of the course).
-        expect(lessonOfReply(w.id), `${seed}: ${w.nl}`).toBeLessThanOrEqual(6);
+        // Lessons 1.1 to 4.1 (Protective gear) at most: the first chats of the course.
+        expect(lessonOfReply(w.id), `${seed}: ${w.nl}`).toBeLessThanOrEqual(7);
         expect(w.nl.length, `${seed}: ${w.nl}`).toBeLessThanOrEqual(25);
         expect(w.nl).not.toBe('Die geef ik niet. Ik hang op.');
       }
@@ -67,7 +68,7 @@ describe('chat replies stay at the learner\'s level', () => {
       const ex = buildLesson(hello, { review: false, seed }).find((e): e is Chat => e.kind === 'chat')!;
       const again = forRetry(ex, hello, seed + 9) as Chat;
       expect(again.options.map((o) => o.id)).toContain(ex.dialogue.reply.id);
-      for (const w of again.options.filter((o) => o.id !== ex.dialogue.reply.id)) expect(lessonOfReply(w.id), w.nl).toBeLessThanOrEqual(6);
+      for (const w of again.options.filter((o) => o.id !== ex.dialogue.reply.id)) expect(lessonOfReply(w.id), w.nl).toBeLessThanOrEqual(7);
       expect(again.options.some((o) => !ex.options.some((x) => x.id === o.id)), `seed ${seed}`).toBe(true);
     }
     const words = teachingLessons.slice(0, 2).flatMap((l) => l.words).slice(0, 8);

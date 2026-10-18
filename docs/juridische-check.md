@@ -1,6 +1,6 @@
 # Vloertaal: controle van de informatie over werk en rechten
 
-*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026).*
+*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026).*
 
 **Terugsturen naar:** ____________________________ (naam en e-mail van de eigenaar van Vloertaal)
 
@@ -110,7 +110,7 @@ Bijna elke tip eindigt met een van deze drie vaste slotregels:
 | *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.accident, c.agency, c.bsn, c.contract, c.diploma, c.extra, c.findwork, c.health, c.illness, c.leave, c.letters, c.payslip, c.site, c.transit, c.ww | rechten en regels uit de wet |
 | *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.housing, c.rights, c.warning, c.gethelp | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
 | *Rules differ per company: ask your supervisor what the rules are where you work.* | c.callin, c.clock, c.hygiene, c.line, c.privacy, c.smoking | huisregels |
-| (geen slotregel) | c.bike, c.boundaries, c.certs, c.doctor, c.gear, c.gossip, c.interview, c.respect, c.unsafe | gedragstips; sommige noemen zelf een loket |
+| (geen slotregel) | c.bike, c.boundaries, c.certs, c.doctor, c.gear, c.gossip, c.interview, c.notyet, c.respect, c.unsafe | gedragstips; sommige noemen zelf een loket |
 
 Andere instanties die in de tips staan: Nederlandse Arbeidsinspectie (ook anoniem melden; de werkgever meldt er ernstige ongevallen), BHV’er, politie,
 Meld Misdaad Anoniem 0800-7000, 112, huisartsenpost, UWV, gemeente (meldpunt huisvesting, inschrijving),
@@ -140,11 +140,13 @@ De tips staan in de volgorde van de lessen in de app.
 
 **Tekst (Engels, wordt vertaald):**
 
-> Rules about helmets, shoes and gloves are not a suggestion: everyone follows them, also the boss. Your employer must give you the protective gear you need, for free.
+> Rules about helmets, shoes and gloves are not a suggestion: everyone follows them, also the boss. Your employer must give you the protective gear you need, for free. Gear that does not fit does not protect you well, so ask for your size: "Heeft u dit in mijn maat?"
 >
 > *(geen slotregel)*
 
 **Zeg het zo (Nederlands):** „Mijn handschoenen zijn kapot. Waar krijg ik nieuwe?” — *My gloves are broken. Where do I get new ones?*
+
+**Nieuw 18 oktober 2026:** de laatste zin (vraag om je maat). Bedoeld als praktische raad, niet als wettelijke regel. **Vraag:** mogen we zeggen dat de werkgever beschermingsmiddelen in de goede maat moet geven (persoonlijke beschermingsmiddelen moeten passen bij de drager; Arbobesluit hoofdstuk 8)? Dan kan „It must fit you” erbij.
 
 **Situatie in de les:** Your gloves are torn. What do you do?  
 **Goede antwoord:** Ask your supervisor for new gloves.  
@@ -233,6 +235,43 @@ ______________________________________________________________
 - Wij gaan ervan uit dat het inlenende bedrijf voor de arbeidsomstandigheden als werkgever geldt (art. 1 lid 1 Arbowet: wie arbeid laat verrichten door een ter beschikking gestelde werknemer), en daarom het ernstige ongeval van een uitzendkracht moet melden (art. 9 Arbowet). Klopt dat zonder voorbehoud? Heeft het uitzendbureau daarnaast een eigen meldplicht of alleen een informatieplicht?
 - „Tell the agency too”: is dit voor een uitzendkracht de goede raad (ook voor loondoorbetaling en een eventuele Ziektewet-melding), of moet het bedrijf het bureau zelf inlichten?
 - „Your employer is not allowed to punish you for reporting it”: bij een uitzendkracht is de werkgever het bureau; geldt dit ook voor het inlenende bedrijf (bijvoorbeeld de opdracht niet verlengen na een melding)? Is de zin zo houdbaar, of moet er „The company may not punish you either” bij?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.notyet — Not learned yet? Say so
+
+*Unit „Veiligheid”, les „I have not learned this yet” (`l.notyet`), nieuw 18 oktober 2026*
+
+**Samenvatting (NL):** De werkgever moet uitleggen hoe je je werk veilig doet; gebruik geen machine of heftruck waarmee niemand je heeft leren werken; „nog niet geleerd” zeggen is hier normaal en laat zien dat je veilig werkt.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Your employer must explain how to do your work safely. Do not use a machine or forklift that nobody taught you. Saying "nog niet geleerd" is normal here: it shows that you work safely.
+>
+> *(geen slotregel)*
+
+**Zeg het zo (Nederlands):** „Dit heb ik nog niet geleerd. Kun je het voordoen?” — *I have not learned this yet. Can you show me how?*
+
+**Situatie in de les:** A busy morning. Your supervisor says: "Pak jij even de heftruck? Het is makkelijk." You have never driven a forklift. What do you do?  
+**Goede antwoord:** Say that you have not learned it yet. Ask for instruction, or for other work.  
+**Uitleg na het antwoord (`c.notyet.w`):** A forklift without instruction is dangerous, for you and for others. Asking for instruction or other work is normal, also when it is busy.
+
+**Uitleg bij het gesprekje (`c.notyet.a.why`):** „Probeer het maar, het is makkelijk.” → „Kun je het eerst voordoen?”: Told to just try: asking to be shown first is the safe reply.
+
+**Bron:** artikel 8 Arbowet (voorlichting en onderricht): de werkgever zorgt dat werknemers doeltreffend worden ingelicht over het werk, de risico's en de maatregelen daartegen, en houdt toezicht op de naleving van de instructies.
+
+**Onze eigen vraag hierbij:** Wij zeggen bewust níet dat een heftruckcertificaat wettelijk verplicht is (de tip `c.certs` zegt „usually”): wij gaan ervan uit dat de wet geen certificaat eist, maar wel dat wie met een heftruck of een machine met bijzondere risico's werkt, daarvoor voldoende is opgeleid en geïnstrueerd (Arbobesluit hoofdstuk 7, arbeidsmiddelen). Klopt dat? Is „Your employer must explain how to do your work safely” een juiste, eenvoudige weergave van artikel 8, ook voor een uitzendkracht (wie instrueert dan: het inlenende bedrijf)? En mag een werknemer zonder gevolgen weigeren een heftruck te besturen waarvoor hij geen instructie kreeg, of is „vraag om instructie of ander werk” (zoals de tip zegt) de veiligere raad?
 
 **Oordeel deskundige:**
 
@@ -1521,12 +1560,12 @@ Deze tips staan ook in de app, maar gaan over omgangsvormen, taal leren of prakt
 werkinstructies, zonder juridische bewering. U hoeft ze niet te controleren. Wilt u ze toch zien,
 dan sturen we ze graag na.
 
-c.je („Je" of „u"?), c.names (voornamen en een hand), c.ask (vragen stellen), c.translate
+c.je („Je" of „u"?), c.names (voornamen en een hand), c.arrive (de eerste dag: waar je heen gaat), c.ask (vragen stellen), c.translate
 (vertaalapps), c.understood (controleren of je het begrepen hebt), c.keeplearning (elke dag een
 beetje), c.direct (direct is niet onbeleefd), c.limits (zeggen dat het te zwaar is), c.time (op tijd
 komen), c.speakup (zeggen wat je dwarszit), c.no („Afspraak is afspraak"), c.cv (een kort Nederlands
 cv), c.phone (telefoon op het werk), c.smalltalk (praatje in de pauze), c.mistakes (fouten zijn
-normaal), c.texting (berichten naar het werk), c.scams (oplichting en de bank), c.tools
+normaal), c.texting (berichten naar het werk; sinds 18 oktober ook: een dienst ruilen pas als de leidinggevende of planner het goedvindt, een huisregel), c.scams (oplichting en de bank), c.tools
 (toolboxmeeting), c.quality (kwaliteit), c.client (respect voor de cliënt), c.kitchen
 (voedselveiligheid), c.service (gasten), c.cleaning (etiket lezen), c.cleansafe (middelen niet mengen).
 

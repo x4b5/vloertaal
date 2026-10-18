@@ -328,6 +328,16 @@ function defineStates(LANG) {
   for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
     add(`lesson:task-${key}`, shot(`lesson&lesson=l.task&at=${at}`));
   }
+  // "De eerste dag: je weg vinden" (l.arrive, seed 1): a word card, the picture choice "de buddy",
+  // the tip and its situation, a sentence to build, the chat and typing "de ingang".
+  for (const [key, at] of [['intro', 0], ['pick', 13], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+    add(`lesson:arrive-${key}`, shot(`lesson&lesson=l.arrive&at=${at}`));
+  }
+  // "Dit heb ik nog niet geleerd" (l.notyet, seed 1): the abstract word "nog niet", a word card, the
+  // tip and its situation (a Dutch quote with its speaker), a sentence to build, the chat and typing "mogen".
+  for (const [key, at] of [['word-abstract', 0], ['intro', 3], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+    add(`lesson:notyet-${key}`, shot(`lesson&lesson=l.notyet&at=${at}`));
+  }
   add('lesson:match', shot('match'));
   add('lesson:match:half', shot('match'), async (p) => { await matchPairs(p, 1); });
   add('lesson:match:done', shot('match'), async (p) => { await matchPairs(p); });

@@ -11,14 +11,18 @@ import { addDays, dailyCard, dailyLesson, dailyWordIds, dueIds, type Cards } fro
  * changed; then the sentences turn 4/3 a day instead of 1/2 (l.agency): the two sentences changed,
  * and with the other sentence to build, the chat's wrong options too. The words are the same.
  * Then, of equally weak lessons the otherwise strongest gives the chat (l.task): only the chat changed.
+ * Then (18 October 2026) the sentences turn a whole turn a day again (l.arrive, l.notyet): on this
+ * day it picks the same sentences, so nothing changed.
  */
 
 const TODAY = '2026-10-15';
 
-/** A learner six lessons in: cards in different boxes, some due, some later. */
+/** A learner six lessons in: cards in different boxes, some due, some later. The six lessons by
+ *  name, as they were the first six (l.arrive came in as the third, 18 October 2026). */
+const FIRST_SIX = ['l.hello', 'l.people', 'l.understand', 'l.translate', 'l.understood', 'l.keeplearning'];
 function fixedCards(): Cards {
   const cards: Cards = {};
-  teachingLessons.slice(0, 6).forEach((l, li) => {
+  FIRST_SIX.map((id) => teachingLessons.find((l) => l.id === id)!).forEach((l, li) => {
     l.words.forEach((w, wi) => {
       const box = 1 + ((li + wi) % 4);
       const offset = ((li * 3 + wi) % 5) - 2; // -2 … +2 days from today

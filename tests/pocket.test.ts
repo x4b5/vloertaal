@@ -106,6 +106,34 @@ describe('pocket card phrases', () => {
       'Ben je klaar?',
       'Bijna. Nog vijf minuten.',
       'Klaar! Wat moet ik nu doen?',
+      // New lesson "De eerste dag: je weg vinden" (l.arrive, 18 October 2026):
+      'de ingang',
+      'de receptie',
+      'de kantine',
+      'de kleedkamer',
+      'de buddy',
+      'vinden',
+      'Bij wie moet ik me melden?',
+      'Ik kan de kleedkamer niet vinden.',
+      'Wie is mijn buddy vandaag?',
+      'Goedemorgen, waarvoor komt u?',
+      'Ik ben nieuw. Ik begin vandaag.',
+      'Goedemorgen, ik ben Ali. Ik begin vandaag. Bij wie moet ik zijn?',
+      // New lesson "Dit heb ik nog niet geleerd" (l.notyet, 18 October 2026), and the Dutch its
+      // situation quotes (a clip of its own, scripts/list-clips.ts):
+      'nog niet',
+      'mogen',
+      'proberen',
+      'voordoen',
+      'gevaarlijk',
+      'zeker',
+      'Dit heb ik nog niet geleerd.',
+      'Ik heb nog geen uitleg gehad.',
+      'Mag ik dit al alleen doen?',
+      'Probeer het maar, het is makkelijk.',
+      'Kun je het eerst voordoen?',
+      'Dit heb ik nog niet geleerd. Kun je het voordoen?',
+      'Pak jij even de heftruck? Het is makkelijk.',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

@@ -737,7 +737,7 @@ const t: CultureTranslation = {
     'c.callin.o3': 'Komşundan senin yerine aramasını istersin.',
     'c.callin.w': 'Telefonla aramak açık ve hızlıdır, amirin de soru sorabilir. Ne zaman döneceğini düşündüğünü söylemek plan yapmasına yardım eder.',
     'c.texting': 'İşe mesaj: kısa ve kibar',
-    'c.texting.b': 'İşe attığın mesajları kısa ve kibar tut. Kim olduğunu ve ne olduğunu söyle, sonunda selam ver. Örneğin: “Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”. Uygulamadaki çalışma planına (rooster) sık sık bak. Vardiya isteklerine zamanında cevap ver. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
+    'c.texting.b': 'İşe attığın mesajları kısa ve kibar tut. Kim olduğunu ve ne olduğunu söyle, sonunda selam ver. Örneğin: “Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”. Uygulamadaki çalışma planına (rooster) sık sık bak. Vardiya isteklerine zamanında cevap ver. Vardiya değiştirmek için önce amirinin ya da planlamacının onay vermesi gerekir: “Vraag het eerst aan je leidinggevende.” Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.texting.p': 'Merhaba Mark, 10 dakika geç kalacağım. Pardon! Selamlar, Ali',
     'c.texting.s': '10 dakika geç kalacaksın. Amirine hangi mesaj en iyisi?',
     'c.texting.o1': '“Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”',

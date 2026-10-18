@@ -15,6 +15,7 @@ const t: CultureTranslation = {
   gloss: {
     'c.hello.a.why': "Na pożegnanie odpowiada się pożegnaniem.",
     'c.people.a.why': "Pytanie dotyczy imienia. Ta odpowiedź je podaje.",
+    'c.arrive.a.why': "Pytanie, w jakiej sprawie: ta odpowiedź mówi, że to nowa osoba, która zaczyna dzisiaj.",
     'c.understand.a.why': "Czegoś nie rozumiesz? Prośba o powtórzenie jest normalna.",
     'c.translate.a.why': "Karteczka jest jeszcze niezrozumiała, więc najpierw się ją tłumaczy.",
     'c.understood.a.why': "Powtórzenie zadania sprawdza, czy polecenie jest jasne.",
@@ -22,6 +23,7 @@ const t: CultureTranslation = {
     'c.gear.a.why': "Pytanie dotyczy kasku: tak, jest na głowie.",
     'c.danger.a.why': "W razie wypadku najpierw dzwoni się pod 112.",
     'c.accident.a.why': "Pytanie, co się stało: ta odpowiedź mówi, co się stało i w jakim on jest stanie.",
+    'c.notyet.a.why': "Gdy ktoś mówi „po prostu spróbuj”, bezpieczna odpowiedź to poprosić, żeby najpierw pokazał.",
     'c.things.a.why': "Pytanie brzmi „gdzie”. Ta odpowiedź podaje miejsce.",
     'c.directions.a.why': "W lewo czy w prawo? Ta odpowiedź wybiera jedno i mówi, gdzie.",
     'c.shift.a.why': "Kiedy zaczyna się zmiana? Ta odpowiedź podaje dzień i godzinę.",

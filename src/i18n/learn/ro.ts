@@ -15,6 +15,7 @@ const t: CultureTranslation = {
   gloss: {
     'c.hello.a.why': "La un salut de rămas-bun se răspunde tot cu un salut de rămas-bun.",
     'c.people.a.why': "Întrebarea cere un nume. Acest răspuns îl dă.",
+    'c.arrive.a.why': "Întrebarea e de ce a venit cineva. Răspunsul spune: e nou și începe azi.",
     'c.understand.a.why': "Ceva neînțeles? E normal să ceri repetarea.",
     'c.translate.a.why': "Bilețelul încă nu e clar, așa că întâi se traduce.",
     'c.understood.a.why': "Repetarea sarcinii verifică dacă instrucțiunea e clară.",
@@ -22,6 +23,7 @@ const t: CultureTranslation = {
     'c.gear.a.why': "Întrebarea e despre cască: da, e pe cap.",
     'c.danger.a.why': "La un accident, întâi se sună la 112.",
     'c.accident.a.why': "Întrebarea e ce s-a întâmplat: răspunsul spune ce s-a întâmplat și cum e el.",
+    'c.notyet.a.why': "La „încearcă, e ușor”, răspunsul sigur e să ceri să ți se arate întâi.",
     'c.things.a.why': "Întrebarea e „unde”. Acest răspuns numește un loc.",
     'c.directions.a.why': "Stânga sau dreapta? Acest răspuns alege una și spune unde.",
     'c.shift.a.why': "Când începe tura? Acest răspuns spune ziua și ora.",

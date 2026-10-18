@@ -65,6 +65,33 @@ export const units: Unit[] = [
           },
         ],
       },
+      {
+        // "melden" (w.melden, l.gethelp: "to report") and "nieuw" (w.nieuw, l.people) are already
+        // words of other lessons: here they come in the sentences and the chat ("me melden" is
+        // "to check in" here). "de ingang" is the building's front (🏢), not a door: 🚪 is the
+        // emergency exit's (w.nooduitgang), and two emoji side by side wrap on a choice card.
+        id: 'l.arrive',
+        title: 'Finding your way on day one',
+        words: [
+          { id: 'w.ingang', nl: 'de ingang', en: 'the entrance', emoji: '🏢' },
+          { id: 'w.receptie', nl: 'de receptie', en: 'the reception (desk)', emoji: '💁' },
+          { id: 'w.kantine', nl: 'de kantine', en: 'the canteen', emoji: '🥪' },
+          { id: 'w.kleedkamer', nl: 'de kleedkamer', en: 'the changing room', emoji: '🧥' },
+          { id: 'w.buddy', nl: 'de buddy', en: 'the buddy (a colleague who helps you at the start)', emoji: '🤗' },
+          { id: 'w.vinden', nl: 'vinden', en: 'to find', emoji: '🗺️' },
+        ],
+        sentences: [
+          { id: 's.arrive.1', nl: 'Bij wie moet ik me melden?', en: 'Who do I check in with?' },
+          { id: 's.arrive.2', nl: 'Ik kan de kleedkamer niet vinden.', en: 'I cannot find the changing room.' },
+          { id: 's.arrive.3', nl: 'Wie is mijn buddy vandaag?', en: 'Who is my buddy today?' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.arrive.q', nl: 'Goedemorgen, waarvoor komt u?', en: 'Good morning, what are you here for?' },
+            reply: { id: 'c.arrive.a', nl: 'Ik ben nieuw. Ik begin vandaag.', en: 'I am new. I start today.' },
+          },
+        ],
+      },
     ],
   },
   {
@@ -176,6 +203,31 @@ export const units: Unit[] = [
           {
             prompt: { id: 'c.accident.q', nl: 'Wat is er gebeurd?', en: 'What happened?' },
             reply: { id: 'c.accident.a', nl: 'Hij is gevallen. Hij bloedt.', en: 'He fell. He is bleeding.' },
+          },
+        ],
+      },
+      {
+        // "leren" (w.leren, l.mistakes) and "de heftruck" (w.heftruck, l.things) are already words
+        // of other lessons: here they come in the sentences, the tip and its situation.
+        id: 'l.notyet',
+        title: 'I have not learned this yet',
+        words: [
+          { id: 'w.nogniet', nl: 'nog niet', en: 'not yet', emoji: '⏳', picture: false },
+          { id: 'w.mogen', nl: 'mogen', en: 'to be allowed to, may', emoji: '🆗', picture: false },
+          { id: 'w.proberen', nl: 'proberen', en: 'to try', emoji: '🤞' },
+          { id: 'w.voordoen', nl: 'voordoen', en: 'to show how (by doing it first)', emoji: '🧑‍🔧' },
+          { id: 'w.gevaarlijk', nl: 'gevaarlijk', en: 'dangerous', emoji: '☠️' },
+          { id: 'w.zeker', nl: 'zeker', en: 'sure, certain', emoji: '💯', picture: false },
+        ],
+        sentences: [
+          { id: 's.notyet.1', nl: 'Dit heb ik nog niet geleerd.', en: 'I have not learned this yet.' },
+          { id: 's.notyet.2', nl: 'Ik heb nog geen uitleg gehad.', en: 'I have not had an explanation yet.' },
+          { id: 's.notyet.3', nl: 'Mag ik dit al alleen doen?', en: 'Am I allowed to do this alone yet?' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.notyet.q', nl: 'Probeer het maar, het is makkelijk.', en: 'Just try it, it is easy.' },
+            reply: { id: 'c.notyet.a', nl: 'Kun je het eerst voordoen?', en: 'Can you show me how first?' },
           },
         ],
       },
