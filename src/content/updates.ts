@@ -30,6 +30,11 @@ export const UPDATES: Update[] = [
       'Voortgang wissen: "Annuleren" staat nu bovenaan. Je taal, je code en je instellingen blijven; de app begint niet opnieuw bij de taalkeuze.',
       'Schrijven: in het Arabisch, Tigrinya, Perzisch, Dari, Oekraïens en Bulgaars staat nu uitgelegd wat de drie keuzes betekenen.',
       'In het Arabisch, Perzisch en Dari staat de punt of het vraagteken van een Nederlandse zin weer aan het eind.',
+      'Een certificaat dat je al had, blijft staan als er een nieuwe les bij dat onderwerp komt.',
+      'Na een update laadt de app zelf opnieuw als iets niet meer laadt, in plaats van een leeg scherm. Oude bestanden worden opgeruimd, zodat de app op je telefoon niet steeds groter wordt.',
+      'Certificaat: een lange naam past nu op het certificaat, en "Bewaar of deel" bewaart het plaatje als delen niet lukt.',
+      'Een les op slot in de proefversie opent met één tik de uitleg over de volledige versie. Een les die op de vorige les wacht, heeft een zandloper.',
+      'Klanken: na een fout antwoord zie je nog wat je koos.',
     ],
   },
   {
