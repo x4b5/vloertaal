@@ -35,7 +35,7 @@ Hulptalen in het spoor Taal:
 ## Wat zit erin
 
 **Spoor Taal**
-- **31 onderwerpen, 102 lessen** (426 woorden, 213 zinnen, 132 gesprekjes), in **8 thema's**:
+- **31 onderwerpen, 104 lessen** (438 woorden, 219 zinnen, 134 gesprekjes), in **8 thema's**:
   Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland en
   Jouw sector (Logistiek, Bouw, Productie, Zorg, Horeca, Schoonmaak).
 - Ook: **Klanken** (woordparen als man/maan, pak/bak), **Uitdrukkingen en gezegden** (daarna komt
@@ -43,7 +43,7 @@ Hulptalen in het spoor Taal:
 - **Oefeningen**: nieuw woord met plaatje en uitspraak, betekenis kiezen, Nederlands woord kiezen,
   luisteren, paren verbinden, zin bouwen (later op het gehoor), typen, gesprekken en spreken
   (opnemen en vergelijken). Latere onderwerpen worden stap voor stap moeilijker.
-- **Werkvloer-tips** (68): hoe het hier gaat op het werk, en je rechten, met een verwijzing naar
+- **Werkvloer-tips** (70): hoe het hier gaat op het werk, en je rechten, met een verwijzing naar
   vakbond, Juridisch Loket of FairWork bij uitbuiting.
 
 **Spoor Werkregels** (bèta, alleen Nederlands)
@@ -152,6 +152,10 @@ nieuwe id's aan. `npm test` faalt zolang er in een taal iets ontbreekt. Neem daa
 **Wat is er nieuw:** zet een regel bovenaan in `src/content/updates.ts`. Die komt op
 vloertaal.nl/nieuw en als datum onder Over.
 
+## Licenties
+
+Lettertypes, software en stemmen van anderen, en onder welke licentie we ze gebruiken: [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+
 ## ⚠️ Nog na te kijken
 
 - **Vertalingen**: alle hulptaal-teksten zijn met AI geschreven en daarna met een blinde
@@ -163,3 +167,6 @@ vloertaal.nl/nieuw en als datum onder Over.
 - **Uitdrukkingen**: [`docs/uitdrukkingen.md`](docs/uitdrukkingen.md).
 - **Regio Zuid-Limburg**: de sociale kaart en de regels, zie
   [`docs/regio-controle.md`](docs/regio-controle.md). Pas daarna aanzetten.
+- **Rechten op de stemmen**: ga na met welk ElevenLabs-abonnement de opnames zijn gemaakt (zie
+  [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)). En kies of de code en de lessen "alle rechten
+  voorbehouden" blijven (zo is het nu, want er is geen licentiebestand) of een open licentie krijgen.

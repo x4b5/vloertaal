@@ -3,7 +3,7 @@ import { NOT_SURE, sectors, type SectorChoice } from '../content/sectors';
 import { REGIONS, regionMetaOf, regionsOn, type RegionChoice } from '../content/regio';
 import { ensureLanguage, hasGender, isLanguageLoaded, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
-import { dutchUi, trackOfLang } from '../lib/track';
+import { dutchUi } from '../lib/track';
 import { NlPair } from './NlPair';
 import type { Access } from '../lib/access';
 import { setPreferredVoice, speak } from '../lib/audio';
@@ -11,10 +11,9 @@ import { earnedCertificates } from '../lib/certificate';
 import { countingOn, setCounting } from '../lib/count';
 import { applyEnglish, setWantsEnglish, wantsEnglish } from '../lib/english';
 import { installWay } from '../lib/install';
-import { offlineAuto, offlineSupported, setOfflineAuto } from '../lib/offline';
+import { offlineAuto, offlineSupported } from '../lib/offline';
 import type { Progress, ThemeChoice } from '../lib/progress';
-import { REMINDER_TIMES, rememberReminder, reminderIcs, reminderTapAdds, reminderTime, saveFile } from '../lib/reminder';
-import { reminderHelp } from './Keep';
+import { REMINDER_TIMES, reminderTapAdds, reminderTime } from '../lib/reminder';
 import {
   settingsDepth, settingsRows, SETTINGS_LIST_PAGES, voiceChoiceOf, voiceRefs,
   type SettingsList, type SettingsPage, type VoiceChoice,
@@ -30,10 +29,11 @@ import { ChromeBack } from './ChromeBack';
 import { UpgradeCard } from './Gate';
 import { GenderPicker, NeutralIcon } from './Gender';
 import {
-  AlertIcon, AutoThemeIcon, BackIcon, CalendarIcon, CheckIcon, ChevronIcon, CloseIcon, CrateIcon, GlobeIcon, KeyboardIcon,
+  AlertIcon, AutoThemeIcon, CalendarIcon, CheckIcon, ChevronIcon, CloseIcon, CrateIcon, GlobeIcon, KeyboardIcon,
   LettersIcon, LockIcon, MoonIcon, PencilIcon, RouteIcon, SpeakerIcon, SpeakerOffIcon, SunIcon,
 } from './Icons';
-import { BackupCard, InstallCard, OwnTime } from './Keep';
+import { BackupCard, ClockGlyph, InstallCard, OwnTime, addReminder, stopReminder } from './Keep';
+import { DownloadIcon, OfflineSettingCard } from './Offline';
 import { LogoMark } from './Logo';
 import { LanguagePicker } from './Screens';
 import { NoVoiceNote } from './RulesHelp';
@@ -88,8 +88,10 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   writing: { nl: 'Schrijven', key: 'settingWriting', icon: <PencilIcon size={24} /> },
   text: { nl: 'Tekstgrootte', key: 'textSize', icon: <TextA size="normal" /> },
   theme: { nl: 'Weergave', key: 'theme', icon: <AutoThemeIcon size={24} /> },
-  offline: { nl: 'Lessen op deze telefoon', key: 'settingKeepLessons', icon: <CrateIcon size={24} /> },
+  // An arrow into the phone's tray: lessons downloaded (the crate is the backup's file).
+  offline: { nl: 'Lessen op deze telefoon', key: 'settingKeepLessons', icon: <DownloadIcon size={24} /> },
   reminder: { nl: 'Herinner mij elke dag', key: 'remindTitle', icon: <CalendarIcon size={24} /> },
+  'reminder-time': { nl: 'Hoe laat?', key: 'remindPickTime', icon: null },
   install: { nl: 'Op beginscherm', key: 'installTitle', icon: <LogoMark size={26} check={false} /> },
   backup: { nl: 'Bewaar je voortgang', key: 'backupTitle', icon: <CrateIcon size={24} /> },
   counting: { nl: 'Anoniem meetellen', key: 'countTitle', icon: <BarsIcon size={24} /> },
@@ -237,6 +239,10 @@ export function Settings({
       case 'text': return <Value text={say(TEXT_KEYS[progress.textSize ?? 'normal'])} />;
       case 'theme': return <Value text={say(THEME_KEYS[progress.theme])} />;
       case 'offline': return <Value text={say(offlineAuto() ? 'settingOn' : 'settingOff')} />;
+      case 'reminder': {
+        const t = reminderTime();
+        return t ? <span className="set-row-value" dir="ltr">{t}</span> : null;
+      }
       case 'counting': return <Value text={say(countingOn() ? 'settingOn' : 'settingOff')} />;
       default: return null;
     }
@@ -396,16 +402,22 @@ export function Settings({
           { id: 'keys', text: say('useKeyboard'), picture: <KeyboardIcon size={28} /> },
         ];
         return (
-          <ChoiceCards
-            label={said(ui('settingWriting', lang))}
-            current={writing}
-            onPick={(id) => {
-              if (nonLatinHelp(lang)) setWantsWriting(id !== 'pick');
-              if (id !== 'pick') setWritingInput(id);
-              answered();
-            }}
-            options={options}
-          />
+          <>
+            {/* Another script: "Pick the word" is not writing, Letters and Keyboard are. The question
+                and its hint say what the three mean (else they are three bare words). */}
+            {nonLatinHelp(lang) && <p className="max3-hint max3-hint-top"><Bi text={say('learnWriting')} /></p>}
+            <ChoiceCards
+              label={said(ui('settingWriting', lang))}
+              current={writing}
+              onPick={(id) => {
+                if (nonLatinHelp(lang)) setWantsWriting(id !== 'pick');
+                if (id !== 'pick') setWritingInput(id);
+                answered();
+              }}
+              options={options}
+            />
+            {nonLatinHelp(lang) && <p className="max3-hint"><Bi text={say('learnWritingHint')} /></p>}
+          </>
         );
       }
       case 'text':
@@ -430,14 +442,12 @@ export function Settings({
           />
         );
       case 'offline':
-        return (
-          <>
-            {onOff(offlineAuto(), setOfflineAuto)}
-            <p className="max3-hint"><Bi text={say('settingKeepLessonsHint')} /></p>
-          </>
-        );
+        // Off leads back; On stays, so the learner sees the topic being saved (or why it was not).
+        return <OfflineSettingCard cards progress={progress} lang={lang} access={access} onPicked={(on) => (on ? setTick((n) => n + 1) : answered())} />;
       case 'reminder':
-        return <ReminderTimes lang={lang} onDone={(added) => answered(1, added ? 1600 : 420)} />;
+        return <ReminderPage lang={lang} onOther={() => onPage('reminder-time')} onDone={(added) => answered(1, added ? 1600 : 420)} />;
+      case 'reminder-time':
+        return <ReminderTimes lang={lang} onDone={(added) => answered(2, added ? 1600 : 420)} />;
       case 'install':
         return <InstallCard lang={lang} />;
       case 'backup':
@@ -450,17 +460,23 @@ export function Settings({
           </>
         );
       case 'reset':
+        // Cancel first and as the main button; wiping is the small red one under it. What goes
+        // and what stays is said before (the language, the code and the settings stay).
         return (
           <>
             <p className="max3-hint max3-hint-top"><Bi text={say('resetConfirm')} /></p>
-            <ChoiceCards
-              label={said(ui('resetProgress', lang))}
-              onPick={(id) => { if (id === 'reset') onReset(); onReturn(1); }}
-              options={[
-                { id: 'reset', text: say('resetProgress'), picture: <AlertIcon size={26} />, danger: true },
-                { id: 'keep', text: say('cancel'), picture: <BackIcon size={26} /> },
-              ]}
-            />
+            <p className="max3-hint"><Bi text={say('resetKeeps')} /></p>
+            <div className="reset-actions">
+              <button type="button" className="btn btn-primary keep-btn reset-keep" onClick={() => onReturn(1)}>
+                <NlPair nlFirst nl="Annuleren" className="keep-btn-gloss" text={say('cancel')} />
+              </button>
+              <button type="button" className="btn btn-ghost keep-btn danger reset-wipe" onClick={onReset}>
+                <AlertIcon size={22} />
+                <span className="reset-wipe-text">
+                  <NlPair nlFirst nl="Voortgang wissen" className="keep-btn-gloss" text={say('resetProgress')} />
+                </span>
+              </button>
+            </div>
           </>
         );
       case 'unlock':
@@ -489,10 +505,7 @@ function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: 
   const add = (time: string) => {
     if (saved) return; // already on its way back
     const adds = reminderTapAdds(time, current);
-    if (adds) {
-      saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, `${location.origin}${location.pathname}`, new Date(), trackOfLang(lang?.code), reminderHelp(lang)));
-      rememberReminder(time);
-    }
+    if (adds) addReminder(time, lang);
     setSaved(time);
     onDone(adds);
   };
@@ -513,6 +526,54 @@ function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: 
       />
       <OwnTime card lang={lang} current={own} onTime={add} />
       <p className="max3-hint" role="status"><Bi text={ui(saved && reminderTapAdds(saved, current) ? 'remindAdded' : 'remindHint', lang)} /></p>
+    </>
+  );
+}
+
+/** The reminder page: the times, or (a reminder already in the calendar) ReminderNow. Which one
+ *  is fixed when the page opens, so Stop's "open the file" line stays until it leads back. */
+function ReminderPage({ lang, onOther, onDone }: { lang?: HelpLanguage; onOther: () => void; onDone: (changed: boolean) => void }) {
+  const [now] = useState<string | null>(reminderTime);
+  return now
+    ? <ReminderNow time={now} lang={lang} onOther={onOther} onStopped={() => onDone(true)} />
+    : <ReminderTimes lang={lang} onDone={onDone} />;
+}
+
+/**
+ * The reminder page once a reminder is in the calendar: its time, then "Andere tijd" (the times
+ * page) and "Stop de herinnering": a file that takes this phone's one reminder event out of the
+ * calendar again (src/lib/reminder.ts reminderCancelIcs). Two tappables.
+ */
+function ReminderNow({ time, lang, onOther, onStopped }: {
+  time: string;
+  lang?: HelpLanguage;
+  onOther: () => void;
+  onStopped: () => void;
+}) {
+  const [stopped, setStopped] = useState(false);
+  const every = ui('remindEveryDay', lang);
+  const at = (s: string) => s.replace('{time}', time);
+  return (
+    <>
+      <p className="max3-hint max3-hint-top set-remind-now">
+        <CalendarIcon size={22} />
+        <Bi text={{ ...every, en: at(every.en), help: every.help && at(every.help) }} />
+      </p>
+      <ChoiceCards
+        label={said(ui('remindTitle', lang))}
+        onPick={(id) => {
+          if (stopped) return; // already on its way back
+          if (id === 'time') { onOther(); return; }
+          stopReminder(time, lang);
+          setStopped(true);
+          onStopped();
+        }}
+        options={[
+          { id: 'time', nl: 'Andere tijd', text: ui('remindOwn', lang), picture: <ClockGlyph />, next: true },
+          { id: 'stop', nl: 'Stop de herinnering', text: ui('remindStop', lang), picture: <CloseIcon size={26} /> },
+        ]}
+      />
+      <p className="max3-hint" role="status"><Bi text={ui(stopped ? 'remindStopped' : 'remindHint', lang)} /></p>
     </>
   );
 }

@@ -110,7 +110,8 @@ describe('streak: today, free days and the record', () => {
 });
 
 describe('backup', () => {
-  const p = practise([1, 2]);
+  // Real lesson ids: a backup keeps only lessons the app knows (tests/backupReminder.test.ts).
+  const p = { ...practise([1, 2]), completed: { 'l.hello': { best: 1, times: 1 }, 'l.people': { best: 1, times: 1 } } };
   it('round-trips a backup file and rejects other files', () => {
     const back = parseBackup(backupFile({ ...p, cards: { 'w.helm': { box: 3, due: '2026-10-09' } } }, day(2)));
     expect(back?.completed).toEqual(p.completed);
@@ -120,8 +121,8 @@ describe('backup', () => {
     expect(parseBackup('{"app":"other","progress":{"completed":{}}}')).toBeNull();
     expect(parseBackup('{"app":"vloertaal","progress":{}}')).toBeNull();
     // Junk inside is dropped, not trusted.
-    const junk = parseBackup('{"app":"vloertaal","progress":{"completed":{"a":{"best":5,"times":1},"b":{"best":1,"times":2}},"xp":-3,"lastDay":"yesterday"}}');
-    expect(junk?.completed).toEqual({ b: { best: 1, times: 2 } });
+    const junk = parseBackup('{"app":"vloertaal","progress":{"completed":{"l.hello":{"best":5,"times":1},"l.people":{"best":1,"times":2}},"xp":-3,"lastDay":"yesterday"}}');
+    expect(junk?.completed).toEqual({ 'l.people': { best: 1, times: 2 } });
     expect(junk?.xp).toBeUndefined();
     expect(junk?.lastDay).toBeUndefined();
   });

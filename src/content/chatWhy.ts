@@ -7,6 +7,7 @@
 const reasons: Record<string, string> = {
   'c.hello.a': 'A goodbye is answered with a goodbye.',
   'c.people.a': 'The question asks for a name. This reply gives one.',
+  'c.arrive.a': 'Asked why you came: this reply says you are new and start today.',
   'c.understand.a': 'Not understood? Asking to hear it again is normal.',
   'c.translate.a': 'The note is not clear yet, so it gets translated first.',
   'c.understood.a': 'Saying the task back checks that the order is clear.',
@@ -14,6 +15,7 @@ const reasons: Record<string, string> = {
   'c.gear.a': 'The question is about the helmet: yes, it is on.',
   'c.danger.a': 'In an accident, 112 is called first.',
   'c.accident.a': 'Asked what happened: this reply says what happened and how he is.',
+  'c.notyet.a': 'Told to just try: asking to be shown first is the safe reply.',
   'c.things.a': 'The question asks where. This reply names a place.',
   'c.directions.a': 'Left or right? This reply picks one and says where.',
   'c.shift.a': 'When does the shift start? This reply gives the day and the time.',

@@ -37,9 +37,11 @@ export function earnCertificates<P extends Progress>(p: P, now: Date): P {
  * unit (src/content/regio) has no certificate: it does not count, so the certificate is the same
  * for everyone, wherever they live.
  */
-export function unitJustDone(before: Record<string, unknown>, after: Record<string, unknown>, lessonId: string): Unit | undefined {
+export function unitJustDone(before: Record<string, unknown>, after: Record<string, unknown>, lessonId: string, certs: Record<string, string> = {}): Unit | undefined {
   const unit = findLesson(lessonId)?.unit;
-  return unit && !isRegionUnitId(unit.id) && !unitDone(unit, before) && unitDone(unit, after) ? unit : undefined;
+  // A unit earned before (a lesson was added to it since): the new lesson finishes it again, but
+  // the certificate is the one from then, not a second one.
+  return unit && !isRegionUnitId(unit.id) && !certs[unit.id] && !unitDone(unit, before) && unitDone(unit, after) ? unit : undefined;
 }
 
 /** Can this unit have a certificate? Not a region's unit (see unitJustDone). */
@@ -51,10 +53,14 @@ export interface Earned {
   day: string;
 }
 
-/** Every certificate earned in the learner's track, in course order. A finished unit without a date yet counts from today. */
+/**
+ * Every certificate earned in the learner's track, in course order. A finished unit without a date
+ * yet counts from today. A certificate once earned stays, also when a lesson was added to its unit
+ * since (the route offers that lesson; the certificate does not disappear meanwhile).
+ */
 export function earnedCertificates(p: Progress, now = new Date(), track: Track = trackOf(p)): Earned[] {
   return courseUnits(track)
-    .filter((u) => unitDone(u, p.completed))
+    .filter((u) => unitDone(u, p.completed) || (hasCertificate(u.id) && Boolean(p.certs?.[u.id])))
     .map((unit) => ({ unit, day: p.certs?.[unit.id] ?? dayKey(now) }));
 }
 

@@ -15,6 +15,7 @@ const t: CultureTranslation = {
   gloss: {
     'c.hello.a.why': "Vedalaşmaya vedayla karşılık verilir.",
     'c.people.a.why': "Soru bir isim soruyor. Bu cevap bir isim veriyor.",
+    'c.arrive.a.why': "Soru neden gelindiğini soruyor. Bu cevap yeni olduğunu ve bugün başladığını söylüyor.",
     'c.understand.a.why': "Anlaşılmadı mı? Tekrar söylenmesini istemek normaldir.",
     'c.translate.a.why': "Not henüz anlaşılmadı, bu yüzden önce çevrilir.",
     'c.understood.a.why': "Görevi tekrar etmek, talimatın anlaşıldığını kontrol eder.",
@@ -22,6 +23,7 @@ const t: CultureTranslation = {
     'c.gear.a.why': "Soru baretle ilgili: evet, takılı.",
     'c.danger.a.why': "Kazada önce 112 aranır.",
     'c.accident.a.why': "Ne olduğu soruluyor: bu cevap ne olduğunu ve onun durumunu söylüyor.",
+    'c.notyet.a.why': "“Bir dene” denince güvenli cevap, önce gösterilmesini istemektir.",
     'c.things.a.why': "Soru \"nereye\" diye soruyor. Bu cevap bir yer söylüyor.",
     'c.directions.a.why': "Sol mu sağ mı? Bu cevap birini seçip yerini söylüyor.",
     'c.shift.a.why': "Vardiya ne zaman başlıyor? Bu cevap günü ve saati söylüyor.",

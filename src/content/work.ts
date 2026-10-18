@@ -1304,7 +1304,7 @@ const laterTips = [
     'texting',
     '💬',
     'Messages to work: short and polite',
-    'Keep messages to work short and polite. Say who you are and what is happening, and end with a greeting. For example: "Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali". Check your roster (rooster) in the app often. Reply to shift requests in time.',
+    'Keep messages to work short and polite. Say who you are and what is happening, and end with a greeting. For example: "Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali". Check your roster (rooster) in the app often. Reply to shift requests in time. To swap a shift, your supervisor or the planner must agree first: "Vraag het eerst aan je leidinggevende."',
     ['Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali', 'Hi Mark, I am 10 minutes late. Sorry! Regards, Ali'],
     'You will be 10 minutes late. Which message to your supervisor is best?',
     [

@@ -29,7 +29,9 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     for (const id of ['w.opdracht', 'w.verlengen', 'w.uitbetalen']) expect(abstract).toContain(id);
     // 112: "eerst", "daarna" and "bijna" (l.task) have no picture.
     for (const id of ['w.eerst', 'w.daarna', 'w.bijna']) expect(abstract).toContain(id);
-    expect(abstract.length).toBe(112);
+    // 115: "nog niet", "mogen" and "zeker" (l.notyet) have no picture; l.arrive has a picture for every word.
+    for (const id of ['w.nogniet', 'w.mogen', 'w.zeker']) expect(abstract).toContain(id);
+    expect(abstract.length).toBe(115);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).

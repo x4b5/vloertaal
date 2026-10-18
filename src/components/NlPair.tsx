@@ -27,7 +27,11 @@ export function NlPair({ nl, text, className, nlClass, nlFirst = false, dir, con
   /** The Dutch is the content itself (a phrase to say), the help line only its meaning. */
   content?: boolean;
 }) {
-  const label = <span className={nlClass} lang="nl" dir={dir}>{nl}</span>;
+  // In a right-to-left screen the Dutch keeps its own direction, so its full stop or question
+  // mark stays at its end (".Maak verbinding" otherwise). Isolated inside the label, so a label
+  // that is a block keeps the screen's alignment.
+  const rtl = !dir && text.lang?.dir === 'rtl';
+  const label = <span className={nlClass} lang="nl" dir={dir}>{rtl ? <bdi dir="ltr">{nl}</bdi> : nl}</span>;
   if (dutchUi(text.lang)) return content ? label : <Bi className={className} text={text} />;
   const help = <Bi className={className} text={text} />;
   return nlFirst ? <>{label}{help}</> : <>{help}{label}</>;

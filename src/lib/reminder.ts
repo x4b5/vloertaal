@@ -60,9 +60,23 @@ export function parseTime(time: string): [number, number] {
 /**
  * The calendar file: a daily event of 10 minutes (the work-rules track: 5) at `time` (local, "floating" time, so it stays at
  * 07:00 wherever the phone is), starting today if that time is still to come, else tomorrow.
- * It links back to the app and has an alert at the start.
+ * It links back to the app and has an alert at the start. `event`: this phone's one reminder
+ * (reminderEvent), so a new time updates that event instead of adding a second alarm.
  */
-export function reminderIcs(time: string, appUrl: string, now: Date, track: Track = 'taal', help?: string): string {
+export function reminderIcs(time: string, appUrl: string, now: Date, track: Track = 'taal', help?: string, event: ReminderEvent = oneOffEvent()): string {
+  return calendar('PUBLISH', time, appUrl, now, track, help, event);
+}
+
+/**
+ * "Stop de herinnering": the same event (same UID, a higher SEQUENCE) as cancelled. Opening it
+ * takes the daily reminder out of the calendar; `time` is the reminder's last time, so a calendar
+ * that shows it before removing it shows the right one.
+ */
+export function reminderCancelIcs(time: string, appUrl: string, now: Date, track: Track = 'taal', help: string | undefined, event: ReminderEvent): string {
+  return calendar('CANCEL', time, appUrl, now, track, help, event);
+}
+
+function calendar(method: 'PUBLISH' | 'CANCEL', time: string, appUrl: string, now: Date, track: Track, help: string | undefined, event: ReminderEvent): string {
   const text = reminderText(track);
   // The help language too (the learner may not read the Dutch yet): "Bram: tijd voor je
   // Nederlands (10 minuten) · Czas na niderlandzki (10 minut)".
@@ -80,9 +94,10 @@ export function reminderIcs(time: string, appUrl: string, now: Date, track: Trac
     'VERSION:2.0',
     'PRODID:-//Vloertaal//Herinnering//NL',
     'CALSCALE:GREGORIAN',
-    'METHOD:PUBLISH',
+    `METHOD:${method}`,
     'BEGIN:VEVENT',
-    `UID:vloertaal-${local(start)}-${Math.random().toString(36).slice(2, 10)}@vloertaal`,
+    `UID:${event.uid}`,
+    `SEQUENCE:${event.sequence}`,
     `DTSTAMP:${utc(now)}`,
     `DTSTART:${local(start)}`,
     `DTEND:${local(end)}`,
@@ -90,11 +105,14 @@ export function reminderIcs(time: string, appUrl: string, now: Date, track: Trac
     `SUMMARY:${escapeText(title)}`,
     `DESCRIPTION:${escapeText(`${text.description} ${appUrl}`)}`,
     `URL:${appUrl}`,
-    'BEGIN:VALARM',
-    'ACTION:DISPLAY',
-    `DESCRIPTION:${escapeText(title)}`,
-    'TRIGGER:PT0M',
-    'END:VALARM',
+    // A cancelled event has no alarm left to ring.
+    ...(method === 'CANCEL' ? ['STATUS:CANCELLED'] : [
+      'BEGIN:VALARM',
+      'ACTION:DISPLAY',
+      `DESCRIPTION:${escapeText(title)}`,
+      'TRIGGER:PT0M',
+      'END:VALARM',
+    ]),
     'END:VEVENT',
     'END:VCALENDAR',
   ];
@@ -123,6 +141,52 @@ export function reminderTime(): string | null {
 /** Remember the time just put in the calendar, so Settings shows it as the chosen one. */
 export function rememberReminder(time: string): void {
   try { localStorage.setItem(REMINDER_KEY, time); } catch { /* private mode: only not remembered */ }
+}
+
+/** Stop: no reminder in the calendar any more, so Settings offers the times again. */
+export function forgetReminder(): void {
+  try { localStorage.removeItem(REMINDER_KEY); } catch { /* private mode: nothing was remembered */ }
+}
+
+/** The calendar event's identity: its UID and its version (SEQUENCE, higher on every new file). */
+export interface ReminderEvent { uid: string; sequence: number }
+
+const UID_KEY = 'vloertaal:reminder-uid';
+const SEQ_KEY = 'vloertaal:reminder-seq';
+
+/** A random id, from the phone's crypto where it has one. */
+function randomId(): string {
+  try {
+    const b = new Uint8Array(10);
+    crypto.getRandomValues(b);
+    return [...b].map((x) => x.toString(16).padStart(2, '0')).join('');
+  } catch {
+    return Math.random().toString(36).slice(2, 12) + Math.random().toString(36).slice(2, 12);
+  }
+}
+
+/** Without storage (private mode) every file is its own event, as before. */
+const oneOffEvent = (): ReminderEvent => ({ uid: `vloertaal-${randomId()}@vloertaal`, sequence: 0 });
+
+/**
+ * The one reminder event of this phone, for the next file: the same UID every time (random,
+ * made once, kept on this phone only and never sent anywhere) and a SEQUENCE one higher than the
+ * last file's. So a new time, or Stop, changes that one event in the calendar: no second alarm.
+ */
+export function reminderEvent(): ReminderEvent {
+  try {
+    let uid = localStorage.getItem(UID_KEY);
+    if (!uid) {
+      uid = `vloertaal-${randomId()}@vloertaal`;
+      localStorage.setItem(UID_KEY, uid);
+    }
+    const last = Number(localStorage.getItem(SEQ_KEY) ?? -1);
+    const sequence = Number.isInteger(last) && last >= 0 ? last + 1 : 0;
+    localStorage.setItem(SEQ_KEY, String(sequence));
+    return { uid, sequence };
+  } catch {
+    return oneOffEvent();
+  }
 }
 
 /** A tap on a time in Settings adds a calendar event only for a new time; the one already there

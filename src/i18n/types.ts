@@ -364,6 +364,19 @@ export const uiEn = {
   buildListen: 'Listen and make the sentence',
   chatWhichQuestion: 'Which question goes with this answer?',
   reviewWaiting: '{n} more words are waiting. They come back in the next days.',
+  /* Backup, reminder and reset, a second look: both numbers before a Replace that loses lessons,
+     a file too big, the code on a new phone, Stop the reminder, what a reset keeps. */
+  backupFileN: 'This file has {n} lessons.',
+  backupFileOne: 'This file has {n} lesson.',
+  backupPhoneN: 'You have {n} lessons.',
+  backupPhoneOne: 'You have {n} lesson.',
+  backupFewer: '“Replace” deletes the lessons that are not in the file. “Add together” keeps everything.',
+  backupTooBig: 'This file is too big. A Vloertaal file is much smaller.',
+  backupNewPhone: 'New phone? You need your code there too.',
+  remindEveryDay: 'Your reminder: every day at {time}',
+  remindStop: 'Stop the reminder',
+  remindStopped: 'Open the file to take the reminder out of your calendar.',
+  resetKeeps: 'Your lessons, words, streak and certificates are deleted. Your language, your code and your settings stay.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

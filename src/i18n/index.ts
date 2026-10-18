@@ -226,6 +226,8 @@ const SINGULAR: Partial<Record<UiKey, UiKey>> = {
   lessonsUnit: 'lessonsUnitOne',
   topicsUnit: 'topicsUnitOne',
   bramDueN: 'bramDueOne',
+  backupFileN: 'backupFileOne',
+  backupPhoneN: 'backupPhoneOne',
 };
 
 /** Intl.PluralRules per language (Dari follows Persian; an unknown code falls back to the device's language). */

@@ -25,7 +25,8 @@ import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
 import { isMixLesson } from './content/review';
-import { type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
+import { restedYesterday } from './lib/greeting';
+import { higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
 import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
@@ -137,7 +138,9 @@ export default function App() {
   const [greet, setGreet] = useState(false);
   /** A coach link to a topic outside the preview: the home offers its unlock (this visit). */
   const [lockedLink, setLockedLink] = useState<string | null>(null);
-  const grant = (a: Access, typed?: string) => {
+  const grant = (given: Access, typed?: string) => {
+    // Back on the password page, a smaller code typed after a bigger one keeps the bigger one.
+    const a = higherAccess(access, given);
     // A code for the full version: counted with the version it replaces (none yet, or the sneak
     // preview), so the owner sees how many ask for a code after looking around.
     if (a === 'full' && access !== 'full') count('unlock', { lang: progress.helpLang, access });
@@ -558,7 +561,7 @@ export default function App() {
         setProgress(next);
         keepDue.current = Boolean(access) && !keepOffered();
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
-        const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId);
+        const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId, progress.certs);
         const dims = { lang: progress.helpLang, sector: progress.sector, access };
         const minutes = clockMinutes(lessonClock.current);
         count(daily ? 'review-done' : 'lesson-done', daily ? { ...dims, minutes } : { ...dims, lesson: view.lessonId, minutes });
@@ -586,7 +589,7 @@ export default function App() {
           // Still due after today's review, only for who was away 2 days or more ("they come in the
           // next days"): a learner who practises every day and learns many words a day would read
           // a growing number every day, as if they were behind.
-          waiting: daily && progress.lastDay && daysBetween(progress.lastDay, today) >= 2 ? dueIds(next.cards ?? {}, today, track).length || undefined : undefined,
+          waiting: daily && progress.lastDay && (daysBetween(progress.lastDay, today) >= 2 || restedYesterday(progress, today)) ? dueIds(next.cards ?? {}, today, track).length || undefined : undefined,
           next: upNext?.id,
           cert: unitDone?.id,
           skipped: skipped || undefined,
@@ -742,9 +745,15 @@ export default function App() {
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
             onReset={() => {
-              // Keep look, voice, sound, sector, region and gender; only learning progress is wiped (and lessons in progress).
+              // Keep the help language, look, voice, sound, sector, region and gender (the code is
+              // stored apart and stays too); only learning progress is wiped (and lessons in
+              // progress). So the app goes on at the home, not at the language list again.
               clearSave();
-              setProgress((p) => ({ ...emptyProgress, theme: p.theme, voice: p.voice, quiet: p.quiet, sector: p.sector, region: p.region, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked }));
+              setProgress((p) => ({
+                ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
+                sector: p.sector, region: p.region, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked,
+              }));
+              tab('route');
             }}
             onRestore={(next) => setProgress(next)}
             access={acc}

@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { learnedItems } from '../content/courses';
 import { dutchUi, trackOf, trackOfLang } from '../lib/track';
-import { ui, said } from '../i18n';
+import { fillCount, ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
-import { backupFile, bestStreak, mergeBackup, parseBackup, replaceWithBackup, type Progress } from '../lib/progress';
-import { REMINDER_TIMES, rememberReminder, reminderIcs, saveFile } from '../lib/reminder';
+import { BACKUP_MAX_BYTES, backupFile, bestStreak, knownLessons, mergeBackup, parseBackup, replaceWithBackup, type Progress } from '../lib/progress';
+import { REMINDER_TIMES, forgetReminder, rememberReminder, reminderCancelIcs, reminderEvent, reminderIcs, saveFile } from '../lib/reminder';
 import { REMIND_DEFAULT, REMIND_OTHER_TIMES, REMIND_OWN, keepNext, ownTime, type KeepAction, type KeepStep } from '../lib/keep';
 import { Bi } from './Bi';
 import { NlPair } from './NlPair';
 import { Character } from './Characters';
-import { CheckIcon, ChevronIcon, CloseIcon } from './Icons';
+import { AlertIcon, CheckIcon, ChevronIcon, CloseIcon } from './Icons';
 import { ChromeHead } from './ChromeBack';
 import { LogoMark } from './Logo';
 
@@ -116,9 +116,7 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
   const chosen = ownOpen ? own || null : time;
   const add = () => {
     if (!chosen) return;
-    const url = `${location.origin}${location.pathname}`;
-    saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(chosen, url, new Date(), trackOfLang(lang?.code), reminderHelp(lang)));
-    rememberReminder(chosen);
+    addReminder(chosen, lang);
     setSaved(true);
   };
   return (
@@ -247,7 +245,7 @@ export function OwnTime({ lang, onTime, card = false, current }: {
   );
 }
 
-function ClockGlyph() {
+export function ClockGlyph() {
   return (
     <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden focusable="false">
       <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2.2" />
@@ -268,6 +266,9 @@ function CalendarGlyph() {
 
 /* ---- Backup ---- */
 
+/** "1 les", "6 lessen": the Dutch line's count. */
+const lessenNl = (n: number) => `${n} ${n === 1 ? 'les' : 'lessen'}`;
+
 export function BackupCard({ progress, lang, onRestore }: {
   progress: Progress;
   lang?: HelpLanguage;
@@ -275,8 +276,12 @@ export function BackupCard({ progress, lang, onRestore }: {
 }) {
   const file = useRef<HTMLInputElement>(null);
   const [found, setFound] = useState<Partial<Progress> | null>(null);
-  const [note, setNote] = useState<'bad' | 'back' | null>(null);
-  const lessons = Object.keys(progress.completed).length;
+  /** The second question: the file has fewer lessons than this phone, and Replace was tapped. */
+  const [fewer, setFewer] = useState(false);
+  const [note, setNote] = useState<'bad' | 'big' | 'back' | null>(null);
+  // Only lessons the app knows count, here and in the file (src/lib/progress.ts knownLessonId).
+  const lessons = knownLessons(progress.completed);
+  const theirs = found ? knownLessons(found.completed ?? {}) : 0;
   // Words learned, or in the work-rules track rules learned.
   const rules = trackOf(progress) === 'regels';
   const words = learnedItems(trackOf(progress), progress.completed);
@@ -286,44 +291,84 @@ export function BackupCard({ progress, lang, onRestore }: {
   const download = () => saveFile(`vloertaal-voortgang-${stamp}.json`, 'application/json', backupFile(progress, new Date()));
   const pick = async (f: File | undefined) => {
     if (!f) return;
-    const parsed = f.size < 2_000_000 ? parseBackup(await f.text()) : null;
-    setNote(parsed ? null : 'bad');
+    const big = f.size >= BACKUP_MAX_BYTES;
+    const parsed = big ? null : parseBackup(await f.text());
+    setNote(parsed ? null : big ? 'big' : 'bad');
     setFound(parsed);
+    setFewer(false);
     if (file.current) file.current.value = '';
   };
+  const close = () => { setFound(null); setFewer(false); };
   const apply = (how: 'merge' | 'replace') => {
     if (!found) return;
+    // Replacing with a file that has fewer lessons loses lessons: ask once more, with both numbers.
+    if (how === 'replace' && !fewer && theirs < lessons) { setFewer(true); return; }
     onRestore(how === 'merge' ? mergeBackup(progress, found) : replaceWithBackup(progress, found));
-    setFound(null);
+    close();
     setNote('back');
   };
+  const dutch = !dutchUi(lang);
 
   return (
     <section className="keep-card waybill" aria-label={said(ui('backupTitle', lang))}>
       <span className="waybill-tag" lang="nl" aria-hidden>Vrachtbrief</span>
       <CardHead nl="Bewaar je voortgang" text={ui('backupTitle', lang)} />
       <p className="keep-hint"><Bi text={ui('backupHint', lang)} /></p>
+      {/* The code is not in the file (and stays out of it): a new phone needs it again. */}
+      <p className="keep-hint keep-hint-code"><Bi text={ui('backupNewPhone', lang)} /></p>
       {/* What the file holds, like the lines of a waybill. */}
       <dl className="waybill-lines" lang="nl">
         <div><dt>Lessen</dt><dd>{lessons}</dd></div>
         <div><dt>{rules ? 'Regels' : 'Woorden'}</dt><dd>{words}</dd></div>
         <div><dt>Record</dt><dd>{bestStreak(progress)}</dd></div>
       </dl>
-      {found ? (
-        <div className="waybill-ask" role="alertdialog" aria-label={said(ui('backupAsk', lang))}>
-          <p lang="nl" className="waybill-ask-nl">
-            Gevonden: {Object.keys(found.completed ?? {}).length} lessen. Samenvoegen of vervangen?
-          </p>
-          <p className="keep-hint"><Bi text={ui('backupAsk', lang)} /></p>
-          <div className="keep-row">
-            <button type="button" className="btn btn-dark keep-btn" onClick={() => apply('merge')}>
+      {found && fewer ? (
+        <div className="waybill-ask waybill-fewer" role="alertdialog" aria-label={said(ui('backupFewer', lang))}>
+          {dutch && (
+            <p lang="nl" dir="ltr" className="waybill-ask-nl">
+              Je hebt {lessenNl(lessons)}. Dit bestand heeft {lessenNl(theirs)}.
+            </p>
+          )}
+          <p className="keep-hint"><Bi text={fillCount('backupPhoneN', lessons, lang)} /></p>
+          <p className="keep-hint"><Bi text={fillCount('backupFileN', theirs, lang)} /></p>
+          <p className="keep-hint"><Bi text={ui('backupFewer', lang)} /></p>
+          {/* Add together is the main button; Replace is the small red one under it. */}
+          <div className="keep-stack">
+            <button type="button" className="btn btn-primary keep-btn" onClick={() => apply('merge')}>
               <NlPair nlFirst nl="Samenvoegen" className="keep-btn-gloss" text={ui('backupMerge', lang)} />
             </button>
-            <button type="button" className="btn btn-ghost keep-btn danger" onClick={() => apply('replace')}>
-              <NlPair nlFirst nl="Vervangen" className="keep-btn-gloss" text={ui('backupReplace', lang)} />
+            <button type="button" className="btn btn-ghost keep-btn danger keep-btn-small" onClick={() => apply('replace')}>
+              <AlertIcon size={20} />
+              <span className="keep-btn-text">
+                <NlPair nlFirst nl="Toch vervangen" className="keep-btn-gloss" text={ui('backupReplace', lang)} />
+              </span>
             </button>
           </div>
-          <button type="button" className="keep-link" onClick={() => setFound(null)}>
+          <button type="button" className="keep-link" onClick={close}>
+            <NlPair nlFirst nl="Annuleren" className="keep-link-gloss" text={ui('cancel', lang)} />
+          </button>
+        </div>
+      ) : found ? (
+        <div className="waybill-ask" role="alertdialog" aria-label={said(ui('backupAsk', lang))}>
+          {dutch && (
+            <p lang="nl" dir="ltr" className="waybill-ask-nl">
+              Gevonden: {lessenNl(theirs)}.{theirs > 0 && ' Samenvoegen of vervangen?'}
+            </p>
+          )}
+          <p className="keep-hint"><Bi text={fillCount('backupFileN', theirs, lang)} /></p>
+          {theirs > 0 && <p className="keep-hint"><Bi text={ui('backupAsk', lang)} /></p>}
+          <div className="keep-row">
+            <button type="button" className="btn btn-primary keep-btn" onClick={() => apply('merge')}>
+              <NlPair nlFirst nl="Samenvoegen" className="keep-btn-gloss" text={ui('backupMerge', lang)} />
+            </button>
+            {/* A file without lessons can only be added: replacing would only wipe this phone. */}
+            {theirs > 0 && (
+              <button type="button" className="btn btn-ghost keep-btn danger" onClick={() => apply('replace')}>
+                <NlPair nlFirst nl="Vervangen" className="keep-btn-gloss" text={ui('backupReplace', lang)} />
+              </button>
+            )}
+          </div>
+          <button type="button" className="keep-link" onClick={close}>
             <NlPair nlFirst nl="Annuleren" className="keep-link-gloss" text={ui('cancel', lang)} />
           </button>
         </div>
@@ -345,9 +390,9 @@ export function BackupCard({ progress, lang, onRestore }: {
         </div>
       )}
       {note && (
-        <p className={note === 'bad' ? 'warn keep-note' : 'keep-ok'} role="status">
+        <p className={note === 'back' ? 'keep-ok' : 'warn keep-note'} role="status">
           {note === 'back' && <CheckIcon size={20} />}
-          <Bi text={ui(note === 'bad' ? 'backupBad' : 'backupBack', lang)} />
+          <Bi text={ui(note === 'big' ? 'backupTooBig' : note === 'bad' ? 'backupBad' : 'backupBack', lang)} />
         </p>
       )}
     </section>
@@ -356,11 +401,19 @@ export function BackupCard({ progress, lang, onRestore }: {
 
 /* ---- After the first day: the reminder and the home screen, a few calm pages ---- */
 
-/** Puts the daily reminder in the phone's calendar (a .ics file the phone opens). */
-function addReminder(time: string, lang?: HelpLanguage) {
-  const url = `${location.origin}${location.pathname}`;
-  saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, url, new Date(), trackOfLang(lang?.code), reminderHelp(lang)));
+const appUrl = () => `${location.origin}${location.pathname}`;
+
+/** Puts the daily reminder in the phone's calendar (a .ics file the phone opens). Always this
+ *  phone's one event (reminderEvent): a new time moves it, it never adds a second alarm. */
+export function addReminder(time: string, lang?: HelpLanguage) {
+  saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, appUrl(), new Date(), trackOfLang(lang?.code), reminderHelp(lang), reminderEvent()));
   rememberReminder(time);
+}
+
+/** "Stop de herinnering": a file that cancels that one event (`time`: its last time). */
+export function stopReminder(time: string, lang?: HelpLanguage) {
+  saveFile('vloertaal-herinnering-stop.ics', 'text/calendar;charset=utf-8', reminderCancelIcs(time, appUrl(), new Date(), trackOfLang(lang?.code), reminderHelp(lang), reminderEvent()));
+  forgetReminder();
 }
 
 /** A tap meant for the page before is ignored for a moment (as on the milestone). */

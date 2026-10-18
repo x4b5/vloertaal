@@ -761,3 +761,86 @@ Een NT2-docent las 20 lessen na: "zeer goed, kort en dicht bij de werkvloer". Ve
 - `s.boundaries.1` "Raak me niet aan, alstublieft." → "Raak me niet aan." (de rest van de les zegt "je"; een grens zeg je stevig, zonder "alstublieft").
 - `c.texting.q/a` "Kun je zaterdag een extra dienst draaien?" → "Ja, ik reageer meteen in de app." past niet als paar. Voorstel: "Zie je de extra dienst in de app?" → "Ja, ik reageer meteen."
 - Mogelijke nieuwe zinnen: "Is dit goed zo?", "Hoe zeg je dat in het Nederlands?", "Mag ik even naar de wc?", "Ik weet het niet."
+
+## Nieuw 18 oktober 2026: lessen De eerste dag: je weg vinden en Dit heb ik nog niet geleerd (alle talen)
+
+Twee nieuwe lessen: in Eerste werkdag (`u.firstday`), na "People at work" (`l.people`), en in Veiligheid
+(`u.safety`), na "Report an accident" (`l.accident`). Daarnaast een zin erbij in twee bestaande tips.
+Alles met AI vertaald en nog niet door een moedertaalspreker gecontroleerd. Nieuwe ids:
+
+- Lessen en woorden (`src/i18n/<taal>.ts`, Engelse bron in `src/content/curriculum.ts`): `l.arrive`,
+  `w.ingang`, `w.receptie`, `w.kantine`, `w.kleedkamer`, `w.buddy`, `w.vinden`; zinnen `s.arrive.1`
+  ("Bij wie moet ik me melden?"), `s.arrive.2` ("Ik kan de kleedkamer niet vinden."), `s.arrive.3`
+  ("Wie is mijn buddy vandaag?"); gesprekje `c.arrive.q` ("Goedemorgen, waarvoor komt u?"),
+  `c.arrive.a` ("Ik ben nieuw. Ik begin vandaag."). En `l.notyet`, `w.nogniet`, `w.mogen`,
+  `w.proberen`, `w.voordoen`, `w.gevaarlijk`, `w.zeker`; zinnen `s.notyet.1` ("Dit heb ik nog niet
+  geleerd."), `s.notyet.2` ("Ik heb nog geen uitleg gehad."), `s.notyet.3` ("Mag ik dit al alleen
+  doen?"); gesprekje `c.notyet.q` ("Probeer het maar, het is makkelijk."), `c.notyet.a` ("Kun je het
+  eerst voordoen?").
+- Uitleg bij de gesprekjes (`src/i18n/learn/<taal>.ts`): `c.arrive.a.why`, `c.notyet.a.why`.
+- Werkvloer-tips (`src/i18n/culture/<taal>.ts`, Engelse bron in `culture/en.json`): `c.arrive`, `c.notyet`,
+  elk met `.b`, `.p`, `.s`, `.o1`–`.o3` en `.w`. `c.notyet.b` noemt de plicht van de werkgever om
+  uit te leggen hoe je veilig werkt (art. 8 Arbowet): zie `docs/juridische-check.md` (c.notyet).
+- Gewijzigd: `c.gear.b` (een zin erbij: "Gear that does not fit does not protect you well, so ask for
+  your size: "Heeft u dit in mijn maat?"") en `c.texting.b` (`src/i18n/work/<taal>.ts`, een zin voor
+  de slotregel: "To swap a shift, your supervisor or the planner must agree first: "Vraag het eerst aan
+  je leidinggevende.""). De opgenomen "Zeg het zo"-zinnen van beide tips bleven gelijk.
+
+Graag nakijken:
+
+- **Melden** is hier "je melden" (aankomen, inchecken), niet "iets melden" zoals in `w.melden`
+  ("to report", `l.gethelp`). Daarom vertaalt `s.arrive.1` het aankomen: Arabisch "أسجّل حضوري",
+  Tigrinya "ክቐርብ", Perzisch en Dari "خود را معرفی کنم", Oekraïens "звернутися", Turks "Geldiğimi kime
+  bildirmeliyim?", Pools "zgłosić się", Roemeens "să mă prezint", Bulgaars "да се явя". Duidelijk?
+- **De buddy** heeft in geen taal een vast woord: Arabisch "الزميل المرافق", Tigrinya "ሓጋዚ ብጻይ",
+  Perzisch en Dari "همراه", Oekraïens "наставник, бадді", Turks "rehber iş arkadaşı", Pools "opiekun,
+  buddy", Roemeens "colegul îndrumător", Bulgaars "наставникът". In de tip staat "buddy" tussen haakjes
+  erbij. Is "наставник" / "opiekun" (begeleider, mentor) niet te zwaar voor een collega die helpt?
+- **De ingang en de poort**: in de situatie is de poort dicht (Arabisch "البوابة", Tigrinya "ኣፍ-ደገ",
+  Perzisch "در", Dari "دروازه", Oekraïens "ворота", Pools "brama", Roemeens "poarta", Bulgaars
+  "портата", Turks "kapı"). In het Dari is "دروازه" ook een deur, en `w.ingang` "دروازهٔ ورود": klopt
+  dat onderscheid? Turks "kapı" is zowel poort als deur.
+- **De intercom**: Arabisch "جهاز اتصال داخلي", Tigrinya "ኢንተርኮም", Perzisch "آیفون" (zo heet het in
+  Iran), Dari "زنگ با بلندگو (انترکام)", Oekraïens, Pools en Bulgaars "домофон / domofon", Roemeens
+  "interfon", Turks "diyafon". Gangbaar?
+- **De kantine**: Arabisch "المقصف، مطعم العاملين", Tigrinya "መመገቢ ሰራሕተኛታት (ካንቲን)", Perzisch
+  "غذاخوری (سلف)", Dari "طعام‌خانه (کانتین)", Turks "yemekhane", Pools "stołówka", Oekraïens "їдальня",
+  Roemeens "cantina", Bulgaars "столът". **De kleedkamer**: Dari "اتاق تبدیل لباس", Perzisch "رختکن".
+- **"Waarvoor komt u?"** (`c.arrive.q`, aan de bezoeker) is overal beleefd en genderneutraal: Pools "w
+  jakiej sprawie?", Oekraïens "ви з якого питання?", Roemeens "cu ce treabă veniți?" (te los?),
+  Bulgaars "по какъв въпрос идвате?", Tigrinya meervoud "መጺእኹም", Arabisch "ما سبب حضورك؟" (zonder
+  klinkertekens voor beiden). Het antwoord `c.arrive.a` heeft in het Arabisch, Tigrinya, Oekraïens,
+  Pools, Roemeens en Bulgaars een man- en vrouwvorm ("nieuw").
+- **De les- en tiptitel van l.notyet** zijn in het Pools, Oekraïens en Bulgaars onpersoonlijk ("Tego
+  mnie jeszcze nie nauczono", "Цього мене ще не навчили", "Това още не са ме учили": "dat hebben ze me
+  nog niet geleerd"), om geen man- en vrouwvorm nodig te hebben; de zin `s.notyet.1` zelf heeft die wel
+  ("nauczyłem / nauczyłam", "навчився / навчилася", "научил / научила"). "Zeg het zo" (`c.notyet.p`):
+  Pools met man- en vrouwvorm, Oekraïens en Bulgaars onpersoonlijk. Natuurlijk zo?
+- **Alleen** in `s.notyet.3` ("Mag ik dit al alleen doen?") is in het Pools, Oekraïens, Roemeens en
+  Bulgaars gegendered ("sam / sama", "самому / самій", "singur / singură", "сам / сама"). "Al" is
+  vertaald als "nu / al" (Arabisch "الآن", Turks "artık", Pools "już").
+- **Voordoen** (`w.voordoen`, `c.notyet.a`): Arabisch "يُري كيف (يفعله أمامك أولاً)", Turks "yaparak
+  göstermek", Perzisch en Dari "عملاً نشان دادن", Pools "pokazywać (robiąc to najpierw samemu)",
+  Tigrinya "ብተግባር ምርኣይ". Is het verschil met "laten zien" (`w.latenzien`) duidelijk?
+- **Zeker** (`w.zeker`): Roemeens "sigur (de ceva), convins", omdat "sigur" al "veilig" (`w.veilig`)
+  is. Arabisch "متأكد، أكيد", Turks "emin".
+- **De situatie van c.notyet**: de leidinggevende is in alle talen een man ("Przełożony mówi",
+  "Керівник каже", "مشرفك يقول"), en de app laat er nu ook een man bij zien (`speaker: 'm'`). "Je hebt
+  nog nooit een heftruck bestuurd" heeft in het Arabisch, Tigrinya, Oekraïens, Pools en Bulgaars een
+  man- en vrouwvorm. Pools `c.notyet.o1` zegt "dat je het nog niet kunt" ("jeszcze tego nie umiesz"),
+  neutraal.
+- **"nog niet geleerd"** en **"ja"** blijven in de tip en de keuzes overal Nederlands, tussen de
+  aanhalingstekens van elke taal.
+- **c.gear**: "Heeft u dit in mijn maat?" blijft Nederlands. Turks "beden" (kledingmaat; voor schoenen
+  zeg je "numara"): goed genoeg? Pools "Niedopasowany sprzęt", Oekraïens "Засоби захисту не твого
+  розміру".
+- **c.texting**: "de planner" is Arabisch "مسؤول التخطيط", Tigrinya "እቲ መደብ ዘውጽእ ሰብ", Perzisch
+  "برنامه‌ریز", Dari "مسئول تقسیم اوقات", Oekraïens "планувальник", Turks "planlamacı", Pools
+  "planista", Roemeens "planificatorul", Bulgaars "човекът, който прави графика". In het Arabisch,
+  Perzisch en Dari staat de punt van "Vraag het eerst aan je leidinggevende" na het sluitende
+  aanhalingsteken, anders telt de app de zin samen met de volgende (de les toont dan andere zinnen).
+- **Dari**: "شما" overal, کمپنی, دفتر کاریابی, مصئون, تعمیر (gebouw), "پیدا کرده نمی‌توانم". Perzisch
+  (Iran) houdt "تو", شرکت کاریابی, ایمن. Afghaans genoeg?
+- **Tigrinya** (beide lessen): ገና (nog niet), ምፍቃድ (mogen), ምፍታን (proberen), ሓደገኛ (gevaarlijk),
+  ርግጸኛ (zeker), መእተዊ (ingang), መቐበሊ ኣጋይሽ (receptie), ክፍሊ ምቕያር ክዳን (kleedkamer), ምርካብ (vinden),
+  "እዚ ገና ኣይተማሃርክዎን" (dit heb ik nog niet geleerd). Graag de spelling en de vrouwvormen nakijken.
