@@ -39,18 +39,24 @@ async function cacheShell() {
     .map((m) => new URL(m[1], scope()))
     .filter((u) => u.origin === self.location.origin && !isAudio(u))
     .map((u) => u.href);
-  // The build's own files must come; an icon or the manifest may fail without stopping the update.
-  await Promise.all(urls.map((u) => cache.add(u).catch((e) => { if (built.has(u)) throw e; })));
+  // The build's own files must come; an icon, the manifest or the recorded-voice index may fail
+  // without stopping the update (the index: without it offline, every speaker would fall silent).
+  const optional = [...urls, new URL('audio-el/voices.json', scope()).href];
+  await Promise.all(optional.map((u) => cache.add(u).catch((e) => { if (built.has(u)) throw e; })));
   const had = new Set();
   const fonts = new URL('fonts/', scope()).pathname;
   for (const key of await caches.keys()) {
     if (key === CACHE || !key.startsWith('vloertaal-') || key === OFFLINE || key === AUDIO) continue;
     const old = await caches.open(key);
+    const audio = await caches.open(AUDIO);
     for (const req of await old.keys()) {
       const u = new URL(req.url);
       if (u.pathname.includes('/assets/')) had.add(stem(u.pathname));
       else if (u.pathname.startsWith(fonts)) await old.match(req).then((res) => res && cache.put(req, res)).catch(() => {});
+      // Clips played before (the caches of earlier builds kept them with the app files): to AUDIO.
+      else if (isAudio(u)) await old.match(req).then((res) => res && res.status === 200 && audio.put(req, res)).catch(() => {});
     }
+    await trimAudio(audio).catch(() => {});
   }
   const carry = [...built].filter((u) => had.has(stem(new URL(u).pathname)) && !urls.includes(u));
   await Promise.all(carry.map((u) => cache.add(u).catch(() => {})));
@@ -101,10 +107,13 @@ async function trimAudio(cache) {
 
 /**
  * Only whole, plain responses are kept (no partial audio, no errors). Also a newer build's file
- * while this worker still runs: the newer worker then takes it along (cacheShell).
+ * while this worker still runs: the newer worker then takes it along (cacheShell). Never the page:
+ * only cacheShell puts it, so the cached page always names files of its own build (a page of a
+ * build whose worker never finished installing would open offline to files no cache has).
  */
 function keep(req, res, name = CACHE) {
-  if (res.ok && res.status === 200 && res.type === 'basic') {
+  const page = req.mode === 'navigate' || req.cache === 'no-store' || (res.headers.get('Content-Type') || '').includes('text/html');
+  if (!page && res.ok && res.status === 200 && res.type === 'basic') {
     const copy = res.clone();
     caches.open(name).then((c) => c.put(req.url, copy).then(() => (name === AUDIO ? trimAudio(c) : undefined))).catch(() => {});
   }
@@ -127,9 +136,13 @@ async function audio(req) {
   const saved = await caches.open(OFFLINE).then((c) => c.match(req.url));
   if (saved) return ranged(saved, req);
   try {
-    const res = await fetch(req);
     // The page is saving a unit (it puts the file in OFFLINE itself): no second copy here.
-    return req.headers.get('x-vloertaal-save') ? res : keep(req, res, AUDIO);
+    if (req.headers.get('x-vloertaal-save')) return await fetch(req);
+    // A player asks for a part (Range: bytes=0-) and gets 206, which can't be kept: ask for the
+    // whole clip (they are small), keep it, and answer the part asked for from it.
+    const res = await fetch(req.url);
+    keep(req, res, AUDIO);
+    return res.ok ? ranged(res, req) : res;
   } catch {
     const hit = await caches.match(req.url);
     return hit ? ranged(hit, req) : Response.error();

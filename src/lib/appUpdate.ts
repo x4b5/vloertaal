@@ -73,7 +73,10 @@ export function watchForUpdates(): void {
   // A new service worker took over this page (a new version was deployed; the first one, on the
   // very first visit, does not count): the old version's files are going.
   const sw = navigator.serviceWorker;
-  if (sw?.controller) sw.addEventListener('controllerchange', () => { waiting = true; });
+  // The page itself may already be that version (pages come from the network first): only a
+  // server version other than the running one counts, so the first session after a deploy does
+  // not reload once more for nothing.
+  if (sw?.controller) sw.addEventListener('controllerchange', () => { void newerOnServer(running, serverPage).then((n) => { waiting = waiting || n; }); });
 }
 
 /** Another screen opened: a known new version loads now if the moment is calm (see setReloadWhen). */
