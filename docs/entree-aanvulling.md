@@ -16,7 +16,7 @@ samenwerken en solliciteren. Er missen vooral: rekenen, het afronden en afmelden
 (bpv), digitale vaardigheden, democratie en rechtsstaat, duurzaam werken en het profiel
 verkoop/retail. Deze aanvulling geeft:
 
-- **7 nieuwe units (11 tot en met 17) met 18 lessen**, helemaal uitgeschreven (deel 3);
+- **7 nieuwe units (11 tot en met 17) met 19 lessen**, helemaal uitgeschreven (deel 3; les 15.3 kwam er later bij);
 - **5 korte sectorschetsen** met titels en leerdoelen (deel 4);
 - **3 voorstellen voor het spoor Taal** (deel 5).
 
@@ -103,12 +103,12 @@ Regels voor een som:
 | 12 | Rekenen op je werk | 12.1 Uren en je rooster narekenen · 12.2 Geld en loon per uur · 12.3 Maten, gewichten en tellen | rekenen (mbo-rekenniveau 1) |
 | 13 | Je werk goed afronden | 13.1 Een werkbon lezen en voorbereiden · 13.2 Opruimen, laten controleren en afmelden | basisdeel B1-K1, W1 en W3 |
 | 14 | Stage lopen | 14.1 Je stageovereenkomst (POK) en wie wie is · 14.2 Feedback en beoordeling · 14.3 Als het niet goed gaat | bpv; loopbaan |
-| 15 | Digitaal op je werk | 15.1 DigiD en inloggen · 15.2 Veilig wachtwoord en phishing | digitale vaardigheden |
+| 15 | Digitaal op je werk | 15.1 DigiD en inloggen · 15.2 Veilig wachtwoord en phishing · 15.3 AI op je werk | digitale vaardigheden |
 | 16 | Meedoen in Nederland | 16.1 Hoe Nederland bestuurd wordt, en stemmen · 16.2 Grondrechten en gelijke behandeling · 16.3 Recht en plicht: politie, rechter, bezwaar | burgerschap, politiek-juridisch |
 | 17 | Duurzaam werken | 17.1 Afval scheiden op je werk · 17.2 Zuinig met materiaal en energie | burgerschap; werkhouding |
 
-**7 units, 18 lessen.** Samen met het lespad (36 lessen) en de sectorlessen (12 lessen) worden dat
-66 Werkregels-lessen.
+**7 units, 19 lessen.** Samen met het lespad (36 lessen) en de sectorlessen (12 lessen) worden dat
+67 Werkregels-lessen. (Les 15.3 "AI op je werk" kwam er op 19 oktober 2026 bij.)
 
 ---
 
@@ -700,7 +700,7 @@ bij te lange werktijden: de Nederlandse Arbeidsinspectie.
 
 ## Unit 15 · Digitaal op je werk
 
-*In deze unit: DigiD, inloggen en uitloggen, een sterk wachtwoord, en nepberichten (phishing).*
+*In deze unit: DigiD, inloggen en uitloggen, een sterk wachtwoord, nepberichten (phishing), en AI op je werk.*
 
 ### Les 15.1 · DigiD en inloggen
 
@@ -801,6 +801,96 @@ ICT-afdeling. Gaat het om je bank? Bel dan meteen je bank. Dit overkomt veel men
 
 **Wie kan je helpen:** je leidinggevende of de ICT-afdeling · je bank · fraudehelpdesk.nl ·
 veiliginternetten.nl.
+
+---
+
+### Les 15.3 · AI op je werk
+
+**Leerdoel:** je gebruikt AI slim en veilig, en belangrijke dingen check je bij een mens.
+
+**Scène** · *Beeld: Malik kijkt naar zijn telefoon. Op het scherm een chatbot met een lang antwoord.*
+
+> Malik krijgt een brief van zijn werk. Hij begrijpt de brief niet goed. Hij vraagt het aan een
+> chatbot. Dat is een app met AI. De chatbot zegt: "Je krijgt dit jaar geen vakantiegeld."
+
+**Regel (ongeschreven) · AI helpt, maar maakt fouten. Check belangrijke dingen bij een mens.**
+AI kan vertalen, een brief uitleggen of een bericht schrijven. Maar AI maakt fouten. En het klinkt
+toch heel zeker. Gaat het om je contract, loon, veiligheid of medicijnen? Vraag het een mens. Zet
+geen BSN, wachtwoord of namen van klanten in een chatbot.
+
+**Vraag 1 · Wat doe je?** Wat doet Malik?
+
+- **A.** Hij gaat met de brief naar HR, en vraagt hoe het zit.
+  → *Goed. Een mens van je werk weet hoe het echt zit.*
+- **B.** Hij gelooft de chatbot. Die weet het vast.
+  → *Begrijpelijk. Maar AI kan het mis hebben, ook als het zeker klinkt.*
+- **C.** Hij belt boos naar zijn werk. Hij wil zijn geld.
+  → *Eerst checken. Het antwoord van de chatbot kan fout zijn.*
+
+**Goed antwoord: A.**
+**Waarom:** AI kan een brief goed uitleggen. Maar AI maakt ook fouten, en klinkt toch zeker. Gaat het
+om je contract of je loon? Check het bij een mens. Bijvoorbeeld bij HR of je leidinggevende.
+
+**Vraag 2 · Waar of niet waar?** "Je mag namen en adressen van klanten in een chatbot zetten. Dan werk
+je sneller."
+
+**Antwoord: niet waar.**
+**Waarom:** Wat je in een chatbot zet, kan worden bewaard. Zet er dus geen persoonsgegevens in. Geen
+BSN, wachtwoord of bankgegevens. En geen namen of foto's van klanten, patiënten of collega's. Ook geen
+papieren van je werk. Vraag eerst naar de regels voor AI op je werk.
+
+**Vraag 3 · Wat doe je?** Ewa krijgt een spraakbericht van een nieuw nummer. Het klinkt als haar
+leidinggevende: "Ik heb snel je inlogcode nodig. Stuur hem nu, het is dringend."
+
+- **A.** Ze stuurt de code. Het is haar baas.
+  → *Begrijpelijk. Maar met AI kan iemand een stem nadoen.*
+- **B.** Ze stuurt niets. Ze belt haar leidinggevende zelf, op het nummer dat ze kent.
+  → *Goed. Zo weet je zeker wie het is.*
+- **C.** Ze vraagt in een bericht: "Ben jij het echt?"
+  → *Een oplichter zegt gewoon ja.*
+
+**Goed antwoord: B.**
+**Waarom:** Met AI kunnen oplichters een stem of een filmpje nadoen. Haast, geld of een code, en een
+nieuw nummer? Dat is een alarm. Stuur niets. Bel zelf terug op het nummer dat je kent.
+
+**Vraag 4 · Waar of niet waar?** "Een computer beslist dat je minder uren krijgt. Je mag vragen dat een
+mens ernaar kijkt."
+
+**Antwoord: waar.**
+**Waarom:** Beslist een computer alleen over iets belangrijks voor jou? Bijvoorbeeld minder uren of
+ontslag? Dan mag je om uitleg vragen ⚖️. En je mag vragen dat een mens ernaar kijkt ⚖️. Dat staat in de
+privacywet (AVG).
+
+**Vraag 5 · Wat doe je?** Op je werk komt een nieuwe camera met AI. Die "leest" aan je gezicht of je
+moe of boos bent.
+
+- **A.** Prima. Dan weet de baas hoe ik me voel.
+  → *Dit mag juist niet op het werk.*
+- **B.** Ik kijk de hele dag vrolijk. Dan is er niets aan de hand.
+  → *Het probleem blijft. En dat is vermoeiend.*
+- **C.** Ik vraag het de ondernemingsraad of de vakbond. Dit mag niet zomaar.
+  → *Goed. Zij kunnen er iets aan doen.*
+
+**Goed antwoord: C.**
+**Waarom:** Een computer mag op het werk niet je gevoelens lezen. Dat staat in de Europese AI-wet ⚖️.
+Alleen voor je gezondheid of je veiligheid mag het wel. Heeft je bedrijf een ondernemingsraad? Dan
+moet die instemmen met systemen die personeel volgen ⚖️.
+
+**Vraag 6 · Wie vraag je het?** Je wilt AI gebruiken voor je werk. Je weet niet of het mag.
+Goed antwoord: je leidinggevende. *Veel bedrijven hebben regels voor AI. Vraag je leidinggevende wat
+mag. Soms weet de ICT-afdeling het ook.*
+
+**Zo zeg je het:** "Mag ik hier AI voor gebruiken?"
+
+**Onthoud:** AI helpt, maar maakt fouten. Check belangrijke dingen bij een mens.
+
+**Wie kan je helpen:** je leidinggevende (de regels voor AI op je werk) · de ICT-afdeling · de
+ondernemingsraad of de vakbond · het Juridisch Loket.
+
+*Redactie:* geen jaartallen in de app (vaste schrijfregel). De datum van het verbod op
+emotieherkenning (2 februari 2025) staat alleen hier en in `docs/juridische-check.md`. Les 15.3 telt
+mee in de tally van de Entree-aanvulling: A, B en C zijn elk 1 keer het goede antwoord, en de
+waar/niet-waar-vragen zijn 1 keer waar en 1 keer niet waar.
 
 ---
 
@@ -1317,6 +1407,10 @@ zelf.*
 | 15 | Logius (digid.nl, machtigen.digid.nl) | aanvragen, activeringscode per post, machtigen |
 | 15 | Bibliotheken, Informatiepunt Digitale Overheid | gratis hulp |
 | 15 | Fraudehelpdesk, Veilig Internetten (veiliginternetten.nl) | phishing, wachtwoorden |
+| 15 | AVG (Verordening (EU) 2016/679), art. 22 en art. 13–15 | geen besluit alleen door een computer; uitleg vragen en een mens laten kijken (15.3) |
+| 15 | AI-verordening (Verordening (EU) 2024/1689), art. 4, art. 5 lid 1 sub f en art. 113 | emotieherkenning op het werk verboden sinds 2 februari 2025, behalve om medische redenen of voor de veiligheid; AI-geletterdheid (15.3) |
+| 15 | Wet op de ondernemingsraden (WOR), art. 27 lid 1 sub l | instemming van de OR bij systemen die aanwezigheid, gedrag of prestaties volgen (15.3) |
+| 15 | Autoriteit Persoonsgegevens (autoriteitpersoonsgegevens.nl), over datalekken door AI-chatbots (augustus 2024) | geen persoonsgegevens in een chatbot (15.3) |
 | 16 | Kieswet; rijksoverheid.nl "Wie mag stemmen bij de gemeenteraadsverkiezingen" | stemrecht EU-burgers en niet-EU-burgers |
 | 16 | Grondwet (artikel 1, 6, 7) | gelijke behandeling, vrijheid van geloof en meningsuiting |
 | 16 | Wetboek van Strafrecht | bedreiging, discriminatie, haat zaaien |
@@ -1374,3 +1468,13 @@ zelf.*
 15. **Tweede Kamer: 150 leden.** Klopt dat nog, en willen we dat getal in de les?
 16. **Activeringscode DigiD.** Hoe lang is de code geldig? Een gids zegt 21 dagen. Daarom staat er
     alleen: "de code werkt maar kort".
+17. **Een mens laten kijken (15.3).** AVG art. 22 lid 1 verbiedt een besluit met grote gevolgen dat
+    alleen door een computer is genomen; lid 3 geeft (bij de uitzonderingen) recht op menselijke
+    tussenkomst. Is "je mag vragen dat een mens ernaar kijkt" in beide gevallen goed genoeg? En is
+    "minder uren" een goed voorbeeld van een besluit met "aanmerkelijke" gevolgen?
+18. **Emotieherkenning (15.3).** Art. 5 lid 1 sub f AI-verordening: geldt het verbod ook voor een
+    camera die alleen "moe" herkent (vermoeidheid) bij chauffeurs? Dat valt mogelijk onder de
+    uitzondering voor veiligheid. Daarom zegt de les: "Alleen voor je gezondheid of je veiligheid mag
+    het wel."
+19. **AI-geletterdheid (art. 4).** Staat bewust niet in de les (te abstract voor de leerling). Wel in
+    de bronnen, voor de deskundige.

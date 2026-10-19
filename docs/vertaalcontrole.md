@@ -896,3 +896,52 @@ moedertaalspreker gecontroleerd):
   (alleen Nederlands, geen vertaling).
 - **Geen plaatje meer** bij `w.proberen` (🤞 zegt "hopen dat het goed gaat", het foute antwoord van de
   situatie) en `w.voordoen` (🧑‍🔧 lijkt "monteur").
+
+## Nieuw 19 oktober 2026: onderwerp Slimme apps en AI (alle talen)
+
+Een nieuw onderwerp bij Je baan (`u.ai`, "Slimme apps en AI"), achteraan in de route (na Rekenen),
+alleen in de volledige versie. Vier lessen: `l.aihelp` (AI als hulp), `l.aiprivate` (wat je niet
+deelt), `l.aifake` (nep of echt) en `l.aiplan` (als een app beslist). Alles met AI vertaald en nog
+niet door een moedertaalspreker gecontroleerd.
+
+- Les, woorden, zinnen en gesprekjes (`src/i18n/work/<taal>.ts`, Engelse bron in `work/en.json`):
+  `u.ai`, `l.aihelp`, `l.aiprivate`, `l.aifake`, `l.aiplan`; woorden `w.ai`, `w.chatbot`,
+  `w.antwoord`, `w.meekijken`, `w.kloppen`, `w.zeker`, `w.persoonlijk`, `w.gegevens`,
+  `w.wachtwoord`, `w.typen`, `w.opslaan`, `w.inloggen`, `w.echt`, `w.stem`, `w.filmpje`,
+  `w.ophangen`, `w.nummer`, `w.haast`, `w.planning`, `w.mens`, `w.computer`, `w.tempo`,
+  `w.automatisch`, `w.besluit`; zinnen `s.aihelp.1-3`, `s.aiprivate.1-3`, `s.aifake.1-3`,
+  `s.aiplan.1-3`; gesprekjes `c.aihelp.q/a`, `c.aiprivate.q/a`, `c.aifake.q/a`, `c.aiplan.q/a`.
+- Uitleg bij de gesprekjes (`src/i18n/learn/<taal>.ts`): `c.aihelp.a.why`, `c.aiprivate.a.why`,
+  `c.aifake.a.why`, `c.aiplan.a.why`.
+- Werkvloer-tips (ook in `src/i18n/work/<taal>.ts`): `c.aihelp`, `c.aiprivate` (met de regel "Regels
+  verschillen per bedrijf"), `c.aifake`, `c.aiplan` (met de adviesregel; zie ook
+  `docs/juridische-check.md`), elk met `.b`, `.p`, `.s`, `.o1-3` en `.w`.
+
+Graag nakijken:
+
+- **"AI"**: Oekraïens en Bulgaars "ШІ" en "ИИ" (de gewone afkorting), Turks "yapay zekâ", Perzisch,
+  Dari en Arabisch "هوش مصنوعی" / "الذكاء الاصطناعي", Tigrinya "ሰብ-ሰርሖ ኣእምሮ (AI)" (in de lessen
+  verder kort "AI"), Pools en Roemeens "AI". Begrijpt een lerende dit, of liever overal "AI"?
+- **De chatbot**: Turks "sohbet robotu", Arabisch "روبوت الدردشة", de rest "chatbot / чат-бот /
+  чатбот / چت‌بات / ቻትቦት". Natuurlijk genoeg?
+- **Vakantiegeld** (`c.aihelp.s`, `c.aihelp.w`): Pools "dodatek urlopowy", Oekraïens "відпускні",
+  Bulgaars "добавка за отпуск", Roemeens "bani de concediu", Turks "tatil parası", Perzisch "پول
+  تعطیلات", Dari "پول رخصتی", Arabisch "بدل العطلة", Tigrinya "ገንዘብ ዕረፍቲ"; in de situatie staat
+  "(vakantiegeld)" erachter.
+- **Man- en vrouwvormen**: Pools, Oekraïens, Bulgaars en Roemeens in "Heb je dit zelf geschreven?"
+  (`c.aihelp.q`, "sam/sama", "сам/сама", "singur/singură") en "Ik hang op en bel zelf terug."
+  (`s.aifake.2`, `c.aifake.p`; Roemeens neutraal "sun eu înapoi"). Oekraïens `c.aifake.b` "Будь
+  обережним / обережною", Roemeens `c.aifake.b` "Fii atent / atentă". Arabisch en Tigrinya: tips,
+  situaties, keuzes en de gesprekjes die "je" zeggen in man- en vrouwvorm. Arabisch `c.aiprivate.o3`
+  in de vrouwvorm "صديقة" (een vriendin): goed, of liever overal "صديق"?
+- **Het oplichtersbericht** (`c.aifake.q`, "Hoi, dit is mijn nieuwe nummer. Kun je snel geld
+  sturen?"): bewust zonder "mam", zodat het voor iedereen past. Turks `c.aifake.a` "Önce eski
+  numaranı arayacağım." (eerst bel ik je oude nummer); Tigrinya neutraal "ቅድም ናብቲ ናይ ቀደም ቁጽሪ
+  እድውል።".
+- **Dari**: "شما" overal, ook in de gesprekjes, zoals in de andere lessen. Woorden: تقسیم اوقات
+  (rooster), کمپیوتر, سکنر, کود (code), تیلفون. Afghaans genoeg?
+- **Tigrinya** (hele onderwerp, **graag door een moedertaalspreker laten nakijken**): ቻትቦት, መሕለፊ ቃል
+  (wachtwoord), ስልኪ ምዕጻው (ophangen), መደብ ስራሕ (rooster/planning), ውሳነ (besluit), ኣውቶማቲክ, ስካነር.
+- **Juridisch** (`c.aiplan`): "you may ask a person to look at it again and explain it" volgt de AVG
+  (art. 22 lid 3 en art. 13–15); in alle talen even voorzichtig vertaald ("mag vragen", niet "heeft
+  recht op"). Zie `docs/juridische-check.md`.

@@ -32,7 +32,10 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     // 117: "nog niet", "mogen", "proberen", "voordoen" and "de uitleg" (l.notyet) have no picture
     // (🤞 would say "hope it goes well", 🧑‍🔧 "mechanic"); l.arrive has a picture for every word.
     for (const id of ['w.nogniet', 'w.mogen', 'w.proberen', 'w.voordoen', 'w.uitleg']) expect(abstract).toContain(id);
-    expect(abstract.length).toBe(117);
+    // 125: kloppen, zeker, persoonlijk, de gegevens, echt, de haast, automatisch and het besluit (u.ai,
+    // "Slimme apps en AI") have no picture.
+    for (const id of ['w.kloppen', 'w.zeker', 'w.persoonlijk', 'w.gegevens', 'w.echt', 'w.haast', 'w.automatisch', 'w.besluit']) expect(abstract).toContain(id);
+    expect(abstract.length).toBe(125);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).

@@ -81,6 +81,10 @@ const t: CultureTranslation = {
     'c.checkout.a.why': "Kartla ödeme soruluyor: kısa ve nazik bir \"evet\".",
     'c.hours.a.why': "Soru saati soruyor. Bu cevap bir saat söylüyor.",
     'c.measures.a.why': "Soru uzunluğu soruyor. Bu cevap bir uzunluk söylüyor.",
+    'c.aihelp.a.why': "Kimin yazdığı soruluyor: yardımı da söyleyen dürüst bir “evet”.",
+    'c.aiprivate.a.why': "Sohbet robotuna isim yazman isteniyor: bu cevap “hayır” diyor ve nedenini söylüyor.",
+    'c.aifake.a.why': "Yeni bir numara para istiyor: bu cevap önce kontrol ediyor.",
+    'c.aiplan.a.why': "Çalışma planını uygulama yaptı: bu cevap bir insan istiyor.",
   },
 };
 

@@ -19,6 +19,7 @@ import group17 from './group17';
 import group18 from './group18';
 import group19 from './group19';
 import group20 from './group20';
+import group23 from './group23';
 
 /** Every word picture, keyed by word id (and the sayings' pictures, by saying id "zg.*"): one file, loaded on demand (./index.ts loadPictures). */
 const words: Record<string, () => JSX.Element> = {
@@ -42,6 +43,7 @@ const words: Record<string, () => JSX.Element> = {
   ...group18,
   ...group19,
   ...group20,
+  ...group23,
 };
 export default words;
 export const url: string = import.meta.url;
