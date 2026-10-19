@@ -4,7 +4,6 @@ import type { Theme, ThemeGroup } from '../content/themes';
 import type { Unit } from '../content/types';
 import { unitDone } from '../lib/certificate';
 import { dutchUi } from '../lib/track';
-import { HelpText } from './Bi';
 import { CheckIcon } from './Icons';
 import { NlPair } from './NlPair';
 
@@ -65,31 +64,3 @@ export function ThemeHeadRow({ group, lang, completed, counted = group.units, du
   );
 }
 
-/**
- * The home's small label above the current block's name: "💼 Twoja praca · Je baan" (the help
- * language, then the Dutch, as a unit title shows them; the work-rules track: the Dutch only).
- * No count: the block's own "1 / 3 lessons" sits right under it. Not a button.
- */
-export function ThemeLabel({ group, lang }: { group: ThemeGroup; lang?: HelpLanguage }) {
-  const { nl, text } = groupNames(group, lang);
-  const dutch = dutchUi(lang);
-  const rtl = lang?.dir === 'rtl';
-  const help = !dutch && text.help && lang ? text.help : undefined;
-  const spoken = dutch ? nl : `${said(text)} · ${nl}`;
-  return (
-    <p className="rb-theme" aria-label={spoken} role="note" dir={rtl ? 'rtl' : undefined}>
-      {group.theme && <span className="rb-theme-emoji" aria-hidden>{group.theme.emoji}</span>}
-      <span className="rb-theme-text" aria-hidden>
-        {dutch ? (
-          <span className="rb-theme-main" lang="nl">{nl}</span>
-        ) : (
-          <>
-            {help ? <HelpText className="rb-theme-main" text={help} lang={lang!} /> : <span className="rb-theme-main" lang="en">{text.en}</span>}
-            <span className="rb-theme-sep">·</span>
-            <span className="rb-theme-nl" lang="nl" dir={rtl ? 'ltr' : undefined}>{nl}</span>
-          </>
-        )}
-      </span>
-    </p>
-  );
-}

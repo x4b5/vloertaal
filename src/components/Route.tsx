@@ -23,8 +23,8 @@ import { dutchUi, trackOf } from '../lib/track';
 import { RestartButton, ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
 import { PocketIcon } from './Offline';
-import { countedUnits, groupOf, planGroups } from '../content/themes';
-import { ThemeHeadRow, ThemeLabel } from './Themes';
+import { countedUnits, planGroups } from '../content/themes';
+import { ThemeHeadRow } from './Themes';
 import { loadTopicsOrder, saveTopicsOrder, type TopicsOrder } from '../lib/topicsOrder';
 
 /**
@@ -90,8 +90,6 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   const ref = useRef<HTMLDivElement>(null);
   const order = routeOrder(sector, track, region);
   const unitIndex = (unit: Unit) => order.findIndex((u) => u.id === unit.id);
-  // The block's theme (as All topics groups it), for the small label on its card.
-  const blockGroup = block ? groupOf(planGroups(coursePlan(sector, track, region)), block.id) : undefined;
 
   // After a lesson or a coach link: the next step in view (the next lesson or the choice),
   // between the sticky top bar and the bottom bar.
@@ -148,7 +146,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
               {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
               <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
                 <Bi className="bay-title" text={title} />
-                {saved && <ResumeChip save={saved} lang={lang} />}
+                {saved && <ResumeChip save={saved} lang={lang} count={false} />}
                 {state === 'now' && !saved && (
                   <span className="bay-start">
                     <Bi className="bay-start-label" text={ui('start', lang)} />
@@ -199,10 +197,9 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
         // its Start stays in view on a small phone.
         <section className={`rb-current ${dailyDue ? 'rb-tight' : ''}`} aria-label={`${unitIndex(block) + 1}. ${said(unitTitle(block, lang))}`}>
           <div id={`unit-${block.id.slice(2)}`} className={`rb-block ${marked === block.id ? 'rb-marked' : ''}`}>
-            {blockGroup && <ThemeLabel group={blockGroup} lang={lang} />}
             <WordPicture className="rb-pic" id={unitIcons[block.id] ?? ''} emoji={block.emoji} size={64} />
             <UnitTitle unit={block} lang={lang} heading />
-            <BlockProgress unit={block} completed={completed} lang={lang} />
+            <BlockProgress unit={block} completed={completed} lang={lang} count={false} />
           </div>
           {!blockPlayable(block, completed, access) && <FullOnly lang={lang} onUpgrade={onUpgrade} big />}
           {lessons(block)}
@@ -369,14 +366,14 @@ function UnitTitle({ unit, lang, heading = false }: { unit: Unit; lang?: HelpLan
 }
 
 /** "2 / 4 lessons" with a thin line under the block's title. */
-function BlockProgress({ unit, completed, lang }: { unit: Unit; completed: Record<string, unknown>; lang?: HelpLanguage }) {
+function BlockProgress({ unit, completed, lang, count = true }: { unit: Unit; completed: Record<string, unknown>; lang?: HelpLanguage; /** "1 / 3 lessons" beside the bar (the home: the bar only, the lessons under it show the rest). */ count?: boolean }) {
   const n = blockDoneCount(unit, completed);
   const of = unit.lessons.length;
   return (
     <div className="rb-progress">
       <span className="sr-only">{n} / {of} {said(uiCount('lessonsUnit', of, lang))}</span>
       <span className="rb-bar" aria-hidden><span className="rb-bar-fill" style={{ width: `${(n / of) * 100}%` }} /></span>
-      <LessonCount unit={unit} completed={completed} lang={lang} showDone />
+      {count && <LessonCount unit={unit} completed={completed} lang={lang} showDone />}
     </div>
   );
 }

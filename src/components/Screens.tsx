@@ -259,17 +259,9 @@ export function TopBar({ streak, words, lang, done = false, quiet = false, greet
         <span className="stat-num">{words}</span>
         {wordsUnit.help && lang ? <HelpText className="stat-unit" text={wordsUnit.help} lang={lang} /> : <span className="stat-unit" lang="en">{wordsUnit.en}</span>}
       </span>
-      {/* No language flag here: the help language is in Settings (it was a duplicate tap). */}
-      {/* The streak is on, but today still needs a lesson or the review: a small unlit flame
-          and the word "today" in the help language (not a sentence). */}
-      {streak > 0 && !done && (
-        <span className="todo-tag" aria-hidden>
-          <span className="todo-chip todo-flame">
-            <FlameIcon lit={false} size={18} />
-            {lang?.ui.today ? <HelpText className="todo-word" text={lang.ui.today} lang={lang} /> : <span className="todo-word" lang="en">{ui('today').en}</span>}
-          </span>
-        </span>
-      )}
+      {/* No language flag here: the help language is in Settings (it was a duplicate tap). No
+          "today" chip either: the grey, unlit flame already says today still needs a lesson (the
+          chip looked like a button and made the home busy). */}
     </header>
   );
 }

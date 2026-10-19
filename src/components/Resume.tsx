@@ -32,15 +32,17 @@ export function resumeLabel(save: LessonSave, lang?: HelpLanguage): string {
   return `Ga verder, ${done} / ${of} · ${said(ui('resumeLesson', lang))}`;
 }
 
-export function ResumeChip({ save, lang }: { save: LessonSave; lang?: HelpLanguage }) {
+export function ResumeChip({ save, lang, count = true }: { save: LessonSave; lang?: HelpLanguage; /** The ring and "12/18" (not on the home: there it is just "Ga verder"). */ count?: boolean }) {
   const { done, of } = resumeCount(save);
   return (
     <>
       {/* How far the lesson got: a small ring and "12/18". */}
-      <span className="resume-meta" dir="ltr">
-        <ProgressRing done={done} of={of} />
-        <b className="resume-n">{done}/{of}</b>
-      </span>
+      {count && (
+        <span className="resume-meta" dir="ltr">
+          <ProgressRing done={done} of={of} />
+          <b className="resume-n">{done}/{of}</b>
+        </span>
+      )}
       <span className="bay-start bay-resume">
         <span className="resume-text">
           <NlPair nlFirst nl="Ga verder" nlClass="resume-nl" className="resume-help" text={ui('resumeLesson', lang)} />
