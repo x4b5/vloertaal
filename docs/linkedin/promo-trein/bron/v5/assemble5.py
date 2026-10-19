@@ -92,3 +92,20 @@ for d, name in ((out, f'film-v5-{MODE}'), (outsq, f'film-v5-{MODE}-1x1')):
     subprocess.run([FF, '-y', '-loglevel', 'error', '-framerate', '30', '-i', f'{d}/f%04d.png', *enc, f'v5/tmp/{name}-silent.mp4'], check=True)
     subprocess.run([FF, '-y', '-loglevel', 'error', '-i', f'v5/tmp/{name}-silent.mp4', '-i', aud, '-map', '0:v', '-map', '1:a', '-c', 'copy', '-movflags', '+faststart', '-t', '42', f'v5/{name}.mp4'], check=True)
     print('wrote', f'v5/{name}.mp4')
+# ---- overview sheet (12 labelled frames) + poster (last frame)
+from PIL import ImageDraw, ImageFont
+F = [(1.5, 'drone over the polder'), (10.0, 'Amina looks up and smiles'), (15.9, 'into her screen'), (16.8, 'the page turns: Jada'),
+     (19.1, '"Dag 7 op rij"'), (22.0, 'the terrace'), (25.5, 'up as a drone'), (27.6, 'the business park'),
+     (29.2, 'through the loading door'), (31.0, 'Henk in the canteen'), (34.0, 'shared with colleagues'), (41.9, 'end card, Bram waves')]
+TW, TH, G, LAB = 450, 562, 16, 50
+cols, rows = 4, 3
+s = Image.new('RGB', (cols * TW + (cols + 1) * G, rows * (TH + LAB) + (rows + 1) * G), '#1e2226'); d = ImageDraw.Draw(s)
+fb = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 24); fr = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 21)
+for k, (t, lab) in enumerate(F):
+    im = Image.open(f'{out}/f{min(N - 1, round(t * 30)):04d}.png').convert('RGB').resize((TW, TH), Image.LANCZOS)
+    x, y = G + (k % cols) * (TW + G), G + (k // cols) * (TH + LAB + G)
+    s.paste(im, (x, y + LAB)); d.rectangle([x, y + 8, x + 92, y + LAB - 8], fill='#ffc414'); d.text((x + 8, y + 11), f'{t:.1f} s', fill='#1e2226', font=fb)
+    d.text((x + 104, y + 13), lab, fill='#eef1f3', font=fr)
+s.save(f'v5/film-v5-{MODE}-sheet.png')
+Image.open(f'{out}/f{N - 1:04d}.png').convert('RGB').save(f'v5/film-v5-{MODE}-poster.png')
+print('sheet + poster done')

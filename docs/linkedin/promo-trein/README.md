@@ -65,7 +65,7 @@ De film is gebouwd met three.js (in Chromium, beeld voor beeld) en ffmpeg:
     Henk (`canteen.js`);
   - `shotC` is de eindkaart;
   - `render5.cjs` rendert de beelden, met `--dpr 1.5 --q hi` op de hoge kwaliteit;
-  - `renderB.sh` en `renderC.sh` maken de beelden;
+  - `renderB.sh`, `renderB2.sh` en `renderC.sh` maken de beelden;
   - `assemble5.py` zet de film in elkaar en doet de grading;
   - `fixpl.cjs` heeft in Jada's Poolse scherm "Skończyłeś?" vervangen door de vrouwelijke vorm
     "Skończyłaś?". Dat is ook wat de app een vrouw laat zien.
