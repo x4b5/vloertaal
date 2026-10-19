@@ -3,7 +3,10 @@
 // sub-frame accumulation (motion blur + temporal AA). Every shot imports this.
 import * as THREE from 'three';
 
-export const W = 1080, H = Number(new URLSearchParams(location.search).get('h') ?? 1350);
+const QS = new URLSearchParams(location.search);
+export const W = 1080, H = Number(QS.get('h') ?? 1350);
+/** v5 quality: ?dpr=1.5 renders at 1.5× (downscaled after, for clean edges); ?q=hi = soft shadows (the film's grade is applied in v5/assemble5.py; ?grade=1 previews it here). */
+export const DPR = Number(QS.get('dpr') ?? 1), HIQ = QS.get('q') === 'hi';
 if (H !== 1350) { const st = document.createElement('style'); st.textContent = `#stage, #gl { height: ${H}px !important; }`; document.head.appendChild(st); const c = document.getElementById('gl'); if (c) c.height = H; }
 
 // src/pictures/kit.tsx PAL + house colours
@@ -138,12 +141,13 @@ export async function loadTex(url, renderer) {
 // ---------- renderer with sub-frame accumulation ----------
 export function makeRenderer(canvas) {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, preserveDrawingBuffer: true, logarithmicDepthBuffer: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(1); renderer.setSize(W, H, false);
+  renderer.setPixelRatio(DPR); renderer.setSize(W, H, false);
   renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.NoToneMapping;
-  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFShadowMap;
+  renderer.shadowMap.enabled = true; renderer.shadowMap.type = HIQ ? THREE.PCFSoftShadowMap : THREE.PCFShadowMap;
   const opt = { type: THREE.HalfFloatType, colorSpace: THREE.LinearSRGBColorSpace };
-  const rtScene = new THREE.WebGLRenderTarget(W, H, { ...opt, samples: 4 });
-  const rtAcc = new THREE.WebGLRenderTarget(W, H, opt);
+  const RW = Math.round(W * DPR), RH = Math.round(H * DPR);
+  const rtScene = new THREE.WebGLRenderTarget(RW, RH, { ...opt, samples: 4 });
+  const rtAcc = new THREE.WebGLRenderTarget(RW, RH, opt);
   const quadCam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
   const quadGeo = new THREE.PlaneGeometry(2, 2);
   const accMat = new THREE.ShaderMaterial({
@@ -155,10 +159,11 @@ export function makeRenderer(canvas) {
   // output pass: the glass crossing = one soft diagonal specular sweep (≤35 %), a short refraction
   // ripple with a little blur, and a slight dolly push (zoom); never a white flash.
   const outMat = new THREE.ShaderMaterial({
-    uniforms: { tex: { value: rtAcc.texture }, sweep: { value: -9 }, sweepAmt: { value: 0 }, ripple: { value: 0 }, zoom: { value: 1 }, texel: { value: new THREE.Vector2(1 / W, 1 / H) } },
+    uniforms: { tex: { value: rtAcc.texture }, sweep: { value: -9 }, sweepAmt: { value: 0 }, ripple: { value: 0 }, zoom: { value: 1 }, texel: { value: new THREE.Vector2(1 / RW, 1 / RH) }, grade: { value: QS.get("grade") === "1" ? 1 : 0 }, seed: { value: 0 }, mixTex: { value: null }, mixAmt: { value: 0 } },
     depthTest: false, depthWrite: false,
     vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0., 1.); }',
-    fragmentShader: `uniform sampler2D tex; uniform float sweep, sweepAmt, ripple, zoom; uniform vec2 texel; varying vec2 vUv;
+    fragmentShader: `uniform sampler2D tex; uniform sampler2D mixTex; uniform float sweep, sweepAmt, ripple, zoom, grade, seed, mixAmt; uniform vec2 texel; varying vec2 vUv;
+      float hash(vec2 p){ return fract(sin(dot(p, vec2(12.9898, 78.233)) + seed) * 43758.5453); }
       void main(){
         vec2 uv = (vUv - 0.5) / zoom + 0.5;
         // refraction ripple: diagonal waves bending the image, plus a small blur
@@ -172,6 +177,18 @@ export function makeRenderer(canvas) {
         float d = w - sweep;
         float e = exp(-pow(d / 0.11, 2.0)) + 0.5 * exp(-pow((d + 0.25) / 0.035, 2.0));
         c.rgb = mix(c.rgb, vec3(1.0, 0.99, 0.96), clamp(e * sweepAmt, 0.0, 0.35));
+        if (mixAmt > 0.0) c.rgb = mix(c.rgb, texture2D(mixTex, vUv).rgb, mixAmt);
+        if (grade > 0.0) {
+          // v5 grade (linear light): a touch of contrast and warmth, a soft vignette, fine grain (hides banding)
+          vec3 g = c.rgb;
+          float l = dot(g, vec3(0.2126, 0.7152, 0.0722));
+          g = mix(vec3(l), g, 1.06);
+          g = g * vec3(1.015, 1.0, 0.985);
+          vec2 q = vUv - 0.5; q.x *= 0.85;
+          g *= mix(1.0, 0.86, smoothstep(0.32, 0.78, length(q)));
+          g += (hash(vUv * 1024.0) - 0.5) * 0.012;
+          c.rgb = mix(c.rgb, max(g, 0.0), grade);
+        }
         gl_FragColor = vec4(c.rgb, 1.0);
         #include <colorspace_fragment>
       }`,
@@ -179,7 +196,7 @@ export function makeRenderer(canvas) {
   const accScene = new THREE.Scene(); accScene.add(new THREE.Mesh(quadGeo, accMat));
   const outScene = new THREE.Scene(); outScene.add(new THREE.Mesh(quadGeo, outMat));
   /** Render `n` sub-frames (prepare(i, n) poses the world for each) averaged into the canvas. */
-  function frame(scene, camera, n, prepare, { sweep = -9, sweepAmt = 0, ripple = 0, zoom = 1 } = {}) {
+  function frame(scene, camera, n, prepare, { sweep = -9, sweepAmt = 0, ripple = 0, zoom = 1, seed = 0, mixTex = null, mixAmt = 0 } = {}) {
     // autoClear off: each sub-frame is added onto the accumulation target
     renderer.autoClear = false; renderer.setClearColor(0x000000, 0);
     renderer.setRenderTarget(rtAcc); renderer.clear();
@@ -189,11 +206,28 @@ export function makeRenderer(canvas) {
       accMat.uniforms.tex.value = rtScene.texture; accMat.uniforms.w.value = 1 / n;
       renderer.setRenderTarget(rtAcc); renderer.render(accScene, quadCam);
     }
+    outMat.uniforms.seed.value = seed; outMat.uniforms.mixTex.value = mixTex; outMat.uniforms.mixAmt.value = mixTex ? mixAmt : 0;
     Object.assign(outMat.uniforms.sweep, { value: sweep }); outMat.uniforms.sweepAmt.value = sweepAmt; outMat.uniforms.ripple.value = ripple; outMat.uniforms.zoom.value = zoom;
     renderer.setRenderTarget(null); renderer.clear(); renderer.render(outScene, quadCam);
     renderer.autoClear = true;
   }
   return { renderer, frame };
+}
+
+/**
+ * Accumulation depth of field (v5): sub-frame i of n moves the camera on a small lens disk (Vogel
+ * spiral) and re-aims it at the same focus point, so whatever sits at `focusDist` stays sharp and the
+ * rest blurs as through a real lens. Call after the camera is posed, inside a frame's prepare.
+ */
+export function lensJitter(camera, i, n, focusDist, aperture) {
+  if (!(aperture > 0) || n < 2) return;
+  const r = aperture * Math.sqrt((i + 0.5) / n), a = i * 2.39996323;
+  const fwd = new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion);
+  const up = new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion);
+  const right = new THREE.Vector3(1, 0, 0).applyQuaternion(camera.quaternion);
+  const focus = camera.position.clone().addScaledVector(fwd, focusDist);
+  camera.position.addScaledVector(right, Math.cos(a) * r).addScaledVector(up, Math.sin(a) * r);
+  camera.up.copy(up); camera.lookAt(focus); camera.updateMatrixWorld(true);
 }
 
 /** Sky dome: vertical gradient, follows the camera. */

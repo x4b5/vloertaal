@@ -1,8 +1,13 @@
 # LinkedIn-promo "Past in elk gaatje van je dag" (oktober 2026)
 
-Een 3D-animatie van 42 seconden: een drone vliegt over de polder naar een gele trein, door het raam
-naar binnen naar Amina, die Vloertaal speelt. Daarna Jada op een terras, Henk die de link deelt met
-nieuwe collega's, en de eindkaart met Bram.
+Een 3D-animatie van 42 seconden, **in één doorlopend shot**, zonder knippen:
+- Een drone vliegt over de polder naar een gele trein en gaat door het raam naar binnen, naar Amina, die
+  Vloertaal speelt.
+- De camera duikt in haar scherm. De app slaat de bladzijde om, en het scherm is nu van Jada.
+- De camera trekt terug, over Jada's schouder, het terras op.
+- Als drone gaat de camera omhoog en over de stad naar het bedrijf van Henk: door de laaddeur, langs
+  de stellingen en door de glazen wand de kantine in.
+- Henk deelt de link. De camera duikt in zijn laptop, en daaruit komt de eindkaart met Bram.
 
 Bram, Amina, Henk en Jada zijn echte 3D-figuren met het gezicht en de kleding uit de app. Bij elk
 scherm zoomt de camera over hun schouder in: eerst zie je de figuur, dan kijk je vanachter het hoofd
@@ -19,14 +24,23 @@ mee naar de telefoon of laptop.
 
 ## Tijdlijn
 
-| Tijd | Scène | Tekst in beeld |
+| Tijd | Wat je ziet | Tekst in beeld |
 |---|---|---|
-| 0–16 s | drone → gele trein → door het raam → Amina kijkt op en lacht → achter haar hoofd → les in het Arabisch, "Goed zo!" | Nederlands leren voor je werk. / In de trein. Op je telefoon. |
-| 16–24 s | het terras op → achter Jada's krullen → telefoon (gesprek in het Pools) → "Dag 7 op rij" | Op een vrije dag. Een paar minuten per dag. |
-| 24–33 s | door de glazen wand de kantine in → achter Henks hoofd → laptop (alle talen) → de link gaat naar nieuwe collega's | Deel het met je nieuwe collega's. |
-| 33–42 s | VLOERTAAL in stencil, 3D-Bram loopt in beeld en zwaait, de vinkjes | Gratis · Geen account · Geen reclame · vloertaal.nl |
+| 0–16,5 s | drone → gele trein → door het raam → Amina kijkt op en lacht → achter haar hoofd → les in het Arabisch, "Goed zo!" → de camera duikt in haar scherm | Nederlands leren voor je werk. / In de trein. Op je telefoon. |
+| 16,5–19 s | de app slaat de bladzijde om: het scherm is van Jada (gesprek in het Pools), haar duim tikt, "Dag 7 op rij" | |
+| 19–24 s | over haar schouder en om haar heen terug, het terras op | Op een vrije dag. Een paar minuten per dag. |
+| 24–30 s | omhoog als drone, over de stad en het bedrijventerrein, door de laaddeur, langs de stellingen, door de glazen wand | |
+| 30–35,5 s | Henk in de kantine → achter zijn hoofd → laptop → de link gaat naar nieuwe collega's → de camera duikt in het scherm | Deel het met je nieuwe collega's. |
+| 35,5–42 s | VLOERTAAL in stencil, 3D-Bram loopt in beeld en zwaait, de vinkjes | Gratis · Geen account · Geen reclame · vloertaal.nl |
 
-De scènes wisselen op 16, 24 en 33 seconden, op de tel van de muziek (120 BPM).
+Er wordt nergens geknipt. Amina's scherm wordt Jada's scherm terwijl het hele beeld scherm is; de laatste
+beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop gaat in 0,3 s over in de eindkaart.
+
+**Kwaliteit (v5):**
+- **Scherper:** het middenstuk en de eindkaart zijn op 1,5× gerenderd en daarna verkleind.
+- **Diepte:** in de close-ups is de achtergrond licht onscherp, zoals bij een echte lens.
+- **Grading:** alle beelden kregen dezelfde lichte kleurcorrectie, met wat meer contrast en verzadiging, een zacht
+  vignet en fijne korrel.
 
 ## Muziek en rechten
 
@@ -34,7 +48,7 @@ De scènes wisselen op 16, 24 en 33 seconden, op de tel van de muziek (120 BPM).
   met een betaald abonnement, dus voor commercieel gebruik.
 - **Langer gemaakt:** de muziek herhaalt zich na 12 seconden. Eén keer die 12 seconden extra
   (na 24 s gaat de muziek verder vanaf 12 s) maakt er 42 seconden van, met de naad op de tel.
-- **Geluid onder de film:** 100 ms later gezet, zodat de tel op de wissels valt, met een
+- **Geluid onder de film:** 100 ms later gezet (zo viel de tel in v4 op de wissels), met een
   luidheid van −14 LUFS (de norm voor sociale media).
 - **Figuren:** Bram, Amina, Henk en Jada komen uit de app (`src/components/Characters.tsx`). Hun
   gezicht uit de app staat op een 3D-hoofd; de rest van de figuur is in 3D nagebouwd.
@@ -45,7 +59,18 @@ De scènes wisselen op 16, 24 en 33 seconden, op de tel van de muziek (120 BPM).
 
 De film is gebouwd met three.js (in Chromium, beeld voor beeld) en ffmpeg:
 - `bron/lib/`: het 3D-decor (polder, trein) en de 3D-figuren (`char3d.js`);
-- `bron/v4/`: deze versie van 42 seconden: `shot1` tot en met `shot3` spelen de camerabewegingen van v3
+- `bron/v5/`: deze versie, het doorlopende shot:
+  - `shotA` is Amina (v4 shot 1, met de duik in het scherm);
+  - `shotB` is één wereld: het terras (`terrace.js`), de stad en het bedrijventerrein (`town.js`) en de kantine van
+    Henk (`canteen.js`);
+  - `shotC` is de eindkaart;
+  - `render5.cjs` rendert de beelden, met `--dpr 1.5 --q hi` op de hoge kwaliteit;
+  - `renderB.sh` en `renderC.sh` maken de beelden;
+  - `assemble5.py` zet de film in elkaar en doet de grading;
+  - `fixpl.cjs` heeft in Jada's Poolse scherm "Skończyłeś?" vervangen door de vrouwelijke vorm
+    "Skończyłaś?". Dat is ook wat de app een vrouw laat zien.
+  - De beelden 0 tot en met 469 van Amina komen uit v4.
+- `bron/v4/`: de versie van 42 seconden met wissels: `shot1` tot en met `shot3` spelen de camerabewegingen van v3
   op een langzamere klok, `renderall.sh` maakt de beelden, `assemble4.py` zet de film in elkaar en
   `muziek42.py` maakt de muziek van 42 seconden;
 - `bron/v3/`: de vorige versie van 30 seconden (`shot1` tot en met `shot4`; `shot4`, de eindkaart, wordt
