@@ -14,6 +14,15 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-10-19',
+    items: [
+      'Nieuw onderwerp bij Je baan: Slimme apps en AI. Vier lessen: AI als hulp, wat je niet deelt, nep of echt, en als een app beslist. Met woorden als de chatbot, het wachtwoord, de stem en het besluit.',
+      'Werkregels: nieuwe les AI op je werk. AI maakt fouten, wat zet je niet in een chatbot, neppe stemmen, en wat als een computer over jou beslist.',
+      'Rustiger beginscherm: wat dubbel stond is weg. Bram herhaalt niet meer wat de kaart Herhaal vandaag al zegt.',
+      '30 woorden hadden nog een emoji. Ze hebben nu een eigen tekening, zoals de ingang, de EHBO-doos, het bonnetje en de meter.',
+    ],
+  },
+  {
     date: '2026-10-18',
     items: [
       'Nieuwe les bij Eerste werkdag: De eerste dag: je weg vinden. Met woorden als de ingang, de receptie, de kantine en de buddy.',

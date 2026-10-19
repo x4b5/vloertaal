@@ -81,6 +81,10 @@ const t: CultureTranslation = {
     'c.checkout.a.why': "Pytanie o płatność kartą: krótkie, miłe „tak”.",
     'c.hours.a.why': "Pytanie o godzinę. Ta odpowiedź podaje godzinę.",
     'c.measures.a.why': "Pytanie o długość. Ta odpowiedź podaje długość.",
+    'c.aihelp.a.why': "Pytanie, kto to napisał: szczere „tak”, które mówi, kto pomógł.",
+    'c.aiprivate.a.why': "Prośba o wpisanie nazwisk do chatbota: ta odpowiedź mówi „nie” i dlaczego.",
+    'c.aifake.a.why': "Nowy numer prosi o pieniądze: ta odpowiedź najpierw to sprawdza.",
+    'c.aiplan.a.why': "Grafik zrobiła aplikacja: ta odpowiedź prosi o człowieka.",
   },
 };
 

@@ -93,9 +93,9 @@ describe('rules content: ids', () => {
     ]);
     // Only additions: the first ten keep their order among themselves.
     expect(rulesUnits.map((u) => u.id).filter((id) => FIRST_TEN.includes(id))).toEqual(FIRST_TEN);
-    // 36 lessons of the path and the 18 of the Entree additions.
+    // 36 lessons of the path and the 19 of the Entree additions (15.3 "AI op je werk" came later).
     expect(rulesUnits.filter((u) => FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(36);
-    expect(rulesUnits.filter((u) => !FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(18);
+    expect(rulesUnits.filter((u) => !FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(19);
     expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual(['r.build', 'r.care', 'r.clean', 'r.factory', 'r.horeca', 'r.warehouse']);
     for (const u of sectorRulesUnits) expect(u.lessons, u.id).toHaveLength(2);
   });
@@ -335,18 +335,18 @@ describe('rules content: the Entree additions and their drawn cards', () => {
   };
   const time = (t: string) => { const [h, m] = t.match(/(\d{1,2})[.:](\d{2})/)!.slice(1).map(Number); return h + m / 60; };
 
-  it('has 7 units with 18 lessons, all in the path, with the doc\'s tally (A 12, B 12, C 12; 9 true, 9 false)', () => {
+  it('has 7 units with 19 lessons, all in the path, with the doc\'s tally (A 13, B 13, C 13; 10 true, 10 false)', () => {
     expect(entree.map((u) => u.id).sort()).toEqual([...ENTREE].sort());
-    expect(entree.flatMap((u) => u.lessons)).toHaveLength(18);
+    expect(entree.flatMap((u) => u.lessons)).toHaveLength(19);
     const pos: Record<string, number> = {};
     for (const s of entreeSteps) if (s.kind === 'whatdo' || s.kind === 'card') {
       const id = s.options.find((o) => o.best)!.id;
       pos[id] = (pos[id] ?? 0) + 1;
     }
-    expect(pos).toEqual({ a: 12, b: 12, c: 12 });
+    expect(pos).toEqual({ a: 13, b: 13, c: 13 });
     const tf = entreeSteps.filter((s): s is Extract<RuleStep, { kind: 'truefalse' }> => s.kind === 'truefalse');
-    expect(tf.filter((s) => s.answer)).toHaveLength(9);
-    expect(tf.filter((s) => !s.answer)).toHaveLength(9);
+    expect(tf.filter((s) => s.answer)).toHaveLength(10);
+    expect(tf.filter((s) => !s.answer)).toHaveLength(10);
   });
 
   it('has the cards of units 11, 12 and 13, of every kind', () => {

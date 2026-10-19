@@ -1505,6 +1505,52 @@ ______________________________________________________________
 
 ---
 
+### c.aiplan — Who decided this? (nieuw, 19 oktober 2026)
+
+*Unit „Slimme apps en AI”, les „When an app decides” (`l.aiplan`)*
+
+**Samenvatting (NL):** Bedrijven laten apps het rooster maken, je tempo meten of dingen beslissen. Je mag vragen welke gegevens over je worden verzameld. Bij een groot besluit over jou (minder uren, waarschuwing, ontslag): vraag wie het besliste. Nam een computer zo'n besluit alleen, dan mag je vragen dat een mens er opnieuw naar kijkt en het uitlegt. Schrijf je eigen uren op.
+
+**Tekst (Engels, wordt vertaald):**
+
+> More and more companies let an app or a computer make the roster, count your speed with the scanner, or decide things. You may ask which information about you is collected. Is there a big decision about you, like fewer hours, a warning or dismissal? Ask who decided it. When a computer made such a decision on its own, you may ask a person to look at it again and explain it. Write down your own hours.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** AVG art. 13–15 (informatie over en inzage in je gegevens); AVG art. 22 (geen besluit met rechtsgevolgen dat alleen op geautomatiseerde verwerking berust; waar het toch mag, art. 22 lid 3: recht op menselijke tussenkomst, je standpunt geven en het besluit aanvechten). Bij een ondernemingsraad: instemmingsrecht bij personeelsvolgsystemen (WOR art. 27 lid 1 sub l), niet in de tip genoemd.
+
+**Zeg het zo (Nederlands):** „Kan een mens hier even naar kijken?” — *Can a person have a look at this?*
+
+**Situatie in de les:** The planning app gives you far fewer hours next month. Nobody tells you why. What do you do?  
+**Goede antwoord:** Ask your supervisor who decided it, and ask a person to explain it.  
+**Uitleg na het antwoord (`c.aiplan.w`):** Apps make mistakes, and they do not know everything about you. You may ask for an explanation, and a person can look at it again.
+
+**Onze vraag aan u:** Is „you may ask a person to look at it again and explain it” juist en niet te stellig, ook voor een rooster dat een planner met een app maakt (geen besluit „alleen” door een computer)?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+---
+
+### c.aihelp — AI helps, a person checks (nieuw, 19 oktober 2026)
+
+*Unit „Slimme apps en AI”, les „AI as a helper” (`l.aihelp`)*
+
+**Bewering in de uitleg (`c.aihelp.w`):** „In the Netherlands almost every worker gets holiday pay.” (Wet minimumloon en minimumvakantiebijslag, art. 15: minstens 8%; voor een loon boven drie keer het minimumloon mag het anders zijn afgesproken.)
+
+**Onze vraag aan u:** Is „almost every worker” goed genoeg?
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+---
+
 ## Werkregels: gewijzigde beweringen (17 oktober 2026)
 
 De track **Werkregels** is voor mensen die al Nederlands spreken. De teksten staan alleen in het
@@ -1529,6 +1575,28 @@ door de bocht is? De tekst staat letterlijk zoals in de app.
 | rechten.4 ru1, tf1 | Binnen 14 dagen na het tekenen mag je je nog bedenken. (tf1: Staat die termijn niet in het papier? Dan heb je 3 weken.) | art. 7:670b BW (bedenktermijn) | Klopt het samen zo? We zeggen er "op papier of per mail" bij. |
 | loon.1 ru1, tf1 | Het verschil is vooral loonheffing: belasting en premie voor verzekeringen. Vaak gaat er ook geld af voor je pensioen. | Wet op de loonbelasting 1964; pensioenregeling of cao | Is "premie voor verzekeringen" goed genoeg voor de premie volksverzekeringen? |
 | Hulp ("Wie bel je?") | Discriminatie melden: discriminatie.nl (een site, geen telefoonnummer). | Wet gemeentelijke antidiscriminatievoorzieningen | Is discriminatie.nl de juiste plek, en werkt het adres met www.? |
+
+Opmerkingen:
+
+______________________________________________________________
+
+---
+
+## Werkregels: nieuwe les 15.3 "AI op je werk" (19 oktober 2026)
+
+Een nieuwe les in de track **Werkregels** (unit 15, Digitaal op je werk; alleen Nederlands). De tekst
+staat letterlijk zoals in de app. Jaartallen staan bewust niet in de app; de datum hieronder is
+alleen voor u.
+
+| Les / stap | Wat er nu staat (letterlijk) | Grondslag | Onze vraag aan u |
+|---|---|---|---|
+| digitaal.3 ru1, wd1 | AI maakt fouten. En het klinkt toch heel zeker. Gaat het om je contract, loon, veiligheid of medicijnen? Vraag het een mens. | geen wet; algemene voorzichtigheid | Geen juridische bewering. Klopt de toon? |
+| digitaal.3 ru1, tf1 (niet waar) | Wat je in een chatbot zet, kan worden bewaard. Zet er dus geen persoonsgegevens in. Geen BSN, wachtwoord of bankgegevens. En geen namen of foto's van klanten, patiënten of collega's. Ook geen papieren van je werk. Vraag eerst naar de regels voor AI op je werk. | AVG (art. 5, 6, 32: verwerking en beveiliging; art. 33: datalek); Autoriteit Persoonsgegevens, waarschuwing over datalekken door AI-chatbots (augustus 2024) | Is "kan worden bewaard" juist en niet te vaag? |
+| digitaal.3 wd2 | Met AI kunnen oplichters een stem of een filmpje nadoen. Haast, geld of een code, en een nieuw nummer? Dat is een alarm. Stuur niets. Bel zelf terug op het nummer dat je kent. | geen wet; voorlichting Fraudehelpdesk | Geen juridische bewering. |
+| digitaal.3 tf2 (waar) | Beslist een computer alleen over iets belangrijks voor jou? Bijvoorbeeld minder uren of ontslag? Dan mag je om uitleg vragen. En je mag vragen dat een mens ernaar kijkt. Dat staat in de privacywet (AVG). | art. 22 AVG (lid 1: geen besluit met rechtsgevolgen of aanmerkelijke gevolgen alleen op basis van geautomatiseerde verwerking; lid 3: recht op menselijke tussenkomst, je standpunt geven en het besluit aanvechten); art. 13 lid 2 sub f, 14 lid 2 sub g en 15 lid 1 sub h AVG (nuttige informatie over de onderliggende logica) | Is "je mag vragen dat een mens ernaar kijkt" goed als korte vorm voor zowel het verbod (lid 1) als de waarborg (lid 3)? Is "minder uren" een goed voorbeeld? |
+| digitaal.3 wd3 | Een computer mag op het werk niet je gevoelens lezen. Dat staat in de Europese AI-wet. Alleen voor je gezondheid of je veiligheid mag het wel. | art. 5 lid 1 sub f Verordening (EU) 2024/1689 (AI-verordening): verbod op AI-systemen die emoties afleiden op de werkplek, behalve om medische of veiligheidsredenen; van toepassing sinds 2 februari 2025 (art. 113 sub a) | Klopt dit zo kort? Is "je gevoelens lezen" een goede vertaling van "emoties afleiden"? |
+| digitaal.3 wd3 | Heeft je bedrijf een ondernemingsraad? Dan moet die instemmen met systemen die personeel volgen. | art. 27 lid 1 sub l WOR (instemmingsrecht bij voorzieningen voor waarneming van of controle op aanwezigheid, gedrag of prestaties) | Is "systemen die personeel volgen" een goede korte vorm? |
+| (niet in de les) | Werkgevers die AI gebruiken, zorgen voor genoeg AI-kennis bij wie ermee werkt. | art. 4 AI-verordening (AI-geletterdheid), van toepassing sinds 2 februari 2025 | Bewust niet in de les (te abstract). Moet het er toch in? |
 
 Opmerkingen:
 

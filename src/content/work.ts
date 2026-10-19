@@ -598,12 +598,14 @@ const coreTips: CultureTip[] = [
 /** A word row; a fifth `false` marks an abstract word (no picture, see Word.picture). */
 type WordRow = [id: string, nl: string, en: string, emoji: string, picture?: false];
 type Pair = [nl: string, en: string];
+/** A sentence; `alt`: other word orders that are also right when building it (Sentence.alt). */
+type SentenceRow = [nl: string, en: string, alt?: string[]];
 
-const lesson = (slug: string, title: string, words: WordRow[], sentences: Pair[], [q, a]: [Pair, Pair]): Lesson => ({
+const lesson = (slug: string, title: string, words: WordRow[], sentences: SentenceRow[], [q, a]: [Pair, Pair]): Lesson => ({
   id: `l.${slug}`,
   title,
   words: words.map(([id, nl, en, emoji, picture]) => ({ id: `w.${id}`, nl, en, emoji, ...(picture === false ? { picture } : {}) })),
-  sentences: sentences.map(([nl, en], i) => ({ id: `s.${slug}.${i + 1}`, nl, en })),
+  sentences: sentences.map(([nl, en, alt], i) => ({ id: `s.${slug}.${i + 1}`, nl, en, ...(alt ? { alt } : {}) })),
   dialogues: [chat(line(`c.${slug}.q`, ...q), line(`c.${slug}.a`, ...a))],
 });
 
@@ -1951,6 +1953,151 @@ const shopNumbersTips = [
   ),
 ];
 
+// ---- AI and smart apps (19 October 2026) ----
+// A basis unit appended after "Rekenen", as "In de winkel" and "Rekenen" were: every existing course
+// keeps its order. Full version only (not in the preview).
+
+const aiUnit = unit('ai', 'AI and smart apps', 'Slimme apps en AI', '🤖', '#5a4fcf', [
+  lesson(
+    'aihelp',
+    'AI as a helper',
+    [
+      ['ai', 'de AI', 'AI (artificial intelligence)', '🤖'],
+      ['chatbot', 'de chatbot', 'the chatbot (an app you can chat with)', '📲'],
+      ['antwoord', 'het antwoord', 'the answer', '💡'],
+      ['meekijken', 'meekijken', 'to look at it together with someone', '🧐'],
+      ['kloppen', 'kloppen', 'to be right, to be correct', '✔️', false],
+      ['zeker', 'zeker', 'sure, certain', '💯', false],
+    ],
+    [
+      ['Kun je deze brief uitleggen?', 'Can you explain this letter?'],
+      ['Klopt dit antwoord?', 'Is this answer right?'],
+      ['Kunt u even meekijken?', 'Could you have a look with me?'],
+    ],
+    [['Heb je dit zelf geschreven?', 'Did you write this yourself?'], ['Ja, met hulp van AI.', 'Yes, with help from AI.']],
+  ),
+  lesson(
+    'aiprivate',
+    'What you do not share',
+    [
+      ['persoonlijk', 'persoonlijk', 'personal', '🙋', false],
+      ['gegevens', 'de gegevens', 'the details, the data (name, address, number)', '📇', false],
+      ['wachtwoord', 'het wachtwoord', 'the password', '🔐'],
+      ['typen', 'typen', 'to type', '⌨️'],
+      ['opslaan', 'opslaan', 'to save, to store', '💾'],
+      ['inloggen', 'inloggen', 'to log in', '🔓'],
+    ],
+    [
+      ['Ik deel geen namen van klanten.', 'I do not share names of customers.'],
+      ['Mag ik AI gebruiken voor mijn werk?', 'May I use AI for my work?', ['Mag ik voor mijn werk AI gebruiken?']],
+      ['Mijn wachtwoord is geheim.', 'My password is secret.'],
+    ],
+    [['Zet dit even in de chatbot.', 'Just put this in the chatbot.'], ['Liever niet, er staan namen van klanten in.', 'I would rather not, it has names of customers in it.']],
+  ),
+  lesson(
+    'aifake',
+    'Fake or real?',
+    [
+      ['echt', 'echt', 'real', '✅', false],
+      ['stem', 'de stem', 'the voice', '👄'],
+      ['filmpje', 'het filmpje', 'the (short) video', '🎬'],
+      ['ophangen', 'ophangen', 'to hang up (the phone)', '📵'],
+      ['nummer', 'het nummer', 'the (phone) number', '📇'],
+      ['haast', 'de haast', 'the hurry, the rush', '⏰', false],
+    ],
+    [
+      ['Is dit echt of nep?', 'Is this real or fake?'],
+      ['Ik hang op en bel zelf terug.', 'I hang up and call back myself.'],
+      ['Ik stuur geen geld.', 'I do not send money.'],
+    ],
+    [
+      ['Hoi, dit is mijn nieuwe nummer. Kun je snel geld sturen?', 'Hi, this is my new number. Can you quickly send money?'],
+      ['Ik bel je eerst op je oude nummer.', 'First I will call you on your old number.'],
+    ],
+  ),
+  lesson(
+    'aiplan',
+    'When an app decides',
+    [
+      ['planning', 'de planning', 'the planning, the schedule', '📊'],
+      ['mens', 'de mens', 'the human, the person', '🧑'],
+      ['computer', 'de computer', 'the computer', '💻'],
+      ['tempo', 'het tempo', 'the (work) speed', '⚡'],
+      ['automatisch', 'automatisch', 'automatic, by itself', '⚙️', false],
+      ['besluit', 'het besluit', 'the decision', '⚖️', false],
+    ],
+    [
+      ['Wie heeft dit besluit genomen?', 'Who made this decision?'],
+      ['Ik wil met een mens praten.', 'I want to talk to a person.', ['Ik wil praten met een mens.']],
+      ['Waarom heb ik minder uren in mijn rooster?', 'Why do I have fewer hours in my schedule?', ['Waarom heb ik in mijn rooster minder uren?']],
+    ],
+    [['De app heeft je rooster gemaakt.', 'The app made your schedule.'], ['Kan ik er met een mens over praten?', 'Can I talk to a person about it?']],
+  ),
+]);
+
+const aiTips = [
+  tipFor(
+    'aihelp',
+    '🤖',
+    'AI helps, a person checks',
+    'AI apps and chatbots, like ChatGPT, can translate, explain a letter or help you write a message. That is useful. But AI sometimes makes mistakes, and still sounds very sure. For important things, like your contract, your pay, medicine or safety, always check the answer with a person: your supervisor, HR or the Juridisch Loket.',
+    ['Klopt dit? Kunt u even meekijken?', 'Is this right? Could you have a look with me?'],
+    'You ask a chatbot about your contract. It says you get no holiday pay. What do you do?',
+    [
+      'Ask your supervisor or HR to look at your contract with you, or ask the Juridisch Loket.',
+      'Believe it: the chatbot sounds very sure.',
+      'Say nothing and forget about it.',
+    ],
+    'A chatbot can be wrong about rules and contracts. In the Netherlands almost every worker gets holiday pay. A person who knows the rules can check it.',
+    NONE,
+  ),
+  tipFor(
+    'aiprivate',
+    '🔐',
+    'Think before you type',
+    'What you type into a chatbot can be saved and used by the company that makes it. So never type your BSN, a password or your bank details. Do not put in names or photos of customers, patients or colleagues, or papers from work. Many employers have rules about AI. Ask first if you may use it for your work.',
+    ['Mag ik hier AI voor gebruiken?', 'May I use AI for this?'],
+    'You want a chatbot to write a report about a customer. The report has the name and address of the customer. What do you do?',
+    [
+      'Ask your supervisor first, and leave the name and address out.',
+      'Put everything in the chatbot: it is faster.',
+      'Send the report to a friend to check it.',
+    ],
+    'Names and addresses are personal data. They may not just go to another company. Your employer knows which apps are allowed.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'aifake',
+    '🎭',
+    'Fake voices and videos',
+    'With AI, criminals can copy a voice and make fake photos and videos. A call or message that sounds like your boss, your bank or someone in your family can be fake. Be careful when there is haste, money and a new number. Hang up, and call back yourself on the number you know. A real bank, employer or the police never asks for your codes.',
+    ['Ik hang op en bel zelf terug.', 'I hang up and call back myself.'],
+    'Your phone rings. A voice that sounds just like your boss says: "Pay this bill now, it is urgent." What do you do?',
+    [
+      'Hang up and call your boss yourself, on the number you know.',
+      'Pay quickly: it is your boss.',
+      'Give your bank code, so your boss can pay it.',
+    ],
+    'A voice can be copied with AI. Haste and money together are a warning sign. Calling back on a number you know is a quick and safe check.',
+    NONE,
+  ),
+  tipFor(
+    'aiplan',
+    '⚖️',
+    'Who decided this?',
+    'More and more companies let an app or a computer make the roster, count your speed with the scanner, or decide things. You may ask which information about you is collected. Is there a big decision about you, like fewer hours, a warning or dismissal? Ask who decided it. When a computer made such a decision on its own, you may ask a person to look at it again and explain it. Write down your own hours.',
+    ['Kan een mens hier even naar kijken?', 'Can a person have a look at this?'],
+    'The planning app gives you far fewer hours next month. Nobody tells you why. What do you do?',
+    [
+      'Ask your supervisor who decided it, and ask a person to explain it.',
+      'Accept it: the app is always right.',
+      'Stop coming to work.',
+    ],
+    'Apps make mistakes, and they do not know everything about you. You may ask for an explanation, and a person can look at it again.',
+    ADVICE_LINE,
+  ),
+];
+
 // ---- Smart tools (a basis unit right after "Asking for help", spliced in by curriculum.ts) ----
 
 export const toolsUnit = unit('tools', 'Smart tools', 'Slimme hulpmiddelen', '📱', '#d1495b', [
@@ -2079,12 +2226,14 @@ export const workUnits: Unit[] = [
   // After the sector units, so no existing course changes (see "In the shop" above).
   shopUnit,
   numbersUnit,
+  // After "Rekenen", appended the same way (see "AI and smart apps" above).
+  aiUnit,
 ];
 
 const lessonOrder = [toolsUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...sayingsTips].sort(
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...sayingsTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

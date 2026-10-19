@@ -74,6 +74,7 @@ de reden. De andere: rustig zeggen wat er mis kan gaan, zonder schuld ("Dit kan 
 - Het lespad gebruikt de feiten uit de 59 tips in `src/content/culture.ts` en `src/content/work.ts` (bijvoorbeeld `c.contract`, `c.payslip`, `c.health`, `c.illness`, `c.rights`, `c.warning`, `c.ww`) en de twijfels uit `docs/juridische-check.md`. Het gaat dieper: meer regels, meer situaties, en eigen units voor geld, uitkering en soorten werk.
 - De lessen in `curriculum.ts` zijn taallessen (woorden, zinnen, gesprekjes). Dit lespad heeft een andere vorm. Er is een nieuw lestype nodig met de stappen `scene`, `choice`, `truefalse`, `phrase`, `remember` en `help`. Voorstel voor ids: `wr.u1`, `wr.l1.1`, `wr.l1.1.q1`, enzovoort.
 - De wetten veranderen in 2027 en 2028 (oproepcontracten, uitzendwerk, WW). Zie het blok "Wat gaat er veranderen" in het bronnenbestand. Lessen met zo'n regel hebben een *Redactie:*-regel.
+- De units 11–17 (de Entree-aanvulling) staan in `docs/entree-aanvulling.md`, niet hier. Daar staat ook les 15.3 "AI op je werk" (19 oktober 2026): AI maakt fouten, geen persoonsgegevens in een chatbot, neppe stemmen, een besluit door een computer (AVG art. 22) en emotieherkenning op het werk (AI-verordening art. 5).
 
 ---
 

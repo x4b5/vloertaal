@@ -28,7 +28,13 @@ const PENDING_RECORDING = new Set<string>([
   // New lessons "De eerste dag: je weg vinden" (l.arrive) and "Dit heb ik nog niet geleerd" (l.notyet), 18 October 2026:
   'Ik ben nieuw. Ik begin vandaag.',
   'Kun je het eerst voordoen?',
+  // New unit "Slimme apps en AI" (u.ai, 19 October 2026):
+  'Ja, met hulp van AI.',
+  'Liever niet, er staan namen van klanten in.',
+  'Ik bel je eerst op je oude nummer.',
+  'Kan ik er met een mens over praten?',
 ]);
+
 
 describe('"you" in the chats follow the gender question', () => {
   beforeAll(() => setRecordedIndex(elevenIndex, null));

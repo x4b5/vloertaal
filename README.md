@@ -35,19 +35,20 @@ Hulptalen in het spoor Taal:
 ## Wat zit erin
 
 **Spoor Taal**
-- **31 onderwerpen, 104 lessen** (438 woorden, 219 zinnen, 134 gesprekjes), in **8 thema's**:
+- **32 onderwerpen, 109 lessen** (462 woorden, 231 zinnen, 138 gesprekjes), in **8 thema's**:
   Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland en
   Jouw sector (Logistiek, Bouw, Productie, Zorg, Horeca, Schoonmaak).
 - Ook: **Klanken** (woordparen als man/maan, pak/bak), **Uitdrukkingen en gezegden** (daarna komt
-  in latere lessen een passende uitdrukking terug), **In de winkel** en **Rekenen**.
+  in latere lessen een passende uitdrukking terug), **In de winkel**, **Rekenen** en **Slimme apps en AI**
+  (AI als hulp, wat je niet deelt, nep of echt, en als een app beslist).
 - **Oefeningen**: nieuw woord met plaatje en uitspraak, betekenis kiezen, Nederlands woord kiezen,
   luisteren, paren verbinden, zin bouwen (later op het gehoor), typen, gesprekken en spreken
   (opnemen en vergelijken). Latere onderwerpen worden stap voor stap moeilijker.
-- **Werkvloer-tips** (70): hoe het hier gaat op het werk, en je rechten, met een verwijzing naar
+- **Werkvloer-tips** (74): hoe het hier gaat op het werk, en je rechten, met een verwijzing naar
   vakbond, Juridisch Loket of FairWork bij uitbuiting.
 
 **Spoor Werkregels** (bèta, alleen Nederlands)
-- **23 onderwerpen, 66 lessen**: korte verhalen, regelkaarten, waar-of-niet-waar, "wat doe je?",
+- **23 onderwerpen, 67 lessen**: korte verhalen, regelkaarten, waar-of-niet-waar, "wat doe je?",
   een getekende loonstrook, rekenen met kaartjes. Per les een "Onthoud"-zin.
 - Hulp-pagina "Wie bel je?" met de juiste instanties.
 

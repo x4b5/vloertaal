@@ -28,6 +28,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.lost",
   "u.shop",
   "u.numbers",
+  "u.ai",
   "u.warehouse",
   "u.build",
   "u.factory",
@@ -64,6 +65,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.lost",
   "u.shop",
   "u.numbers",
+  "u.ai",
   "u.warehouse",
   "u.build",
   "u.factory",
@@ -100,6 +102,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.lost",
   "u.shop",
   "u.numbers",
+  "u.ai",
   "u.warehouse",
   "u.factory",
   "u.care",
@@ -136,6 +139,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.lost",
   "u.shop",
   "u.numbers",
+  "u.ai",
   "u.warehouse",
   "u.build",
   "u.factory",
@@ -172,6 +176,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.lost",
   "u.shop",
   "u.numbers",
+  "u.ai",
   "u.build",
   "u.factory",
   "u.care",
@@ -213,6 +218,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.clean",
   "u.shop",
   "u.numbers",
+  "u.ai",
 ]
 `;
 
@@ -244,6 +250,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.lost",
   "u.shop",
   "u.numbers",
+  "u.ai",
   "u.warehouse",
   "u.build",
   "u.care",
@@ -285,5 +292,6 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.clean",
   "u.shop",
   "u.numbers",
+  "u.ai",
 ]
 `;

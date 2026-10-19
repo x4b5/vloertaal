@@ -81,6 +81,10 @@ const t: CultureTranslation = {
     'c.checkout.a.why': "Se întreabă dacă se poate plăti cu cardul: un „da” scurt și prietenos.",
     'c.hours.a.why': "Întrebarea e despre oră. Răspunsul dă o oră.",
     'c.measures.a.why': "Întrebarea e despre lungime. Răspunsul dă o lungime.",
+    'c.aihelp.a.why': "Te întreabă cine a scris: un „da” sincer, care spune cine a ajutat.",
+    'c.aiprivate.a.why': "Ți se cere să pui nume într-un chatbot: răspunsul spune „nu” și de ce.",
+    'c.aifake.a.why': "Un număr nou cere bani: răspunsul verifică întâi.",
+    'c.aiplan.a.why': "Programul l-a făcut o aplicație: răspunsul cere un om.",
   },
 };
 

@@ -352,6 +352,11 @@ function defineStates(LANG) {
   for (const [key, at] of [['word-abstract', 0], ['intro', 3], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
     add(`lesson:notyet-${key}`, shot(`lesson&lesson=l.notyet&at=${at}`));
   }
+  // "Slimme apps en AI" (u.ai, seed 1): every step of its four lessons (word cards, the abstract
+  // words, picture and listen choices, the tip and its situation, the sentences, the chats, typing).
+  for (const lesson of ['aihelp', 'aiprivate', 'aifake', 'aiplan']) {
+    for (let at = 0; at < 20; at++) add(`lesson:${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
+  }
   // The tips of "Messages and the roster app" (l.texting: the example message on one line, never
   // split inside its quotes, and "Mag ik mijn dienst ruilen?") and "Beschermende kleding" (l.gear:
   // "Heb je dit ook in mijn maat?"), with their situations (seed 1).
@@ -509,6 +514,10 @@ function defineRuleStates() {
   // The new places to go for help (school, praktijkopleider, ICT-afdeling).
   step('whoask-stage', 'rule&step=whoask&id=r.l.stage.1.wa1', true);
   step('whoask-ict', 'rule&step=whoask&id=r.l.digitaal.2.wa1', true);
+  // 15.3 "AI op je werk": a whatdo with a quote (a faked voice), a long situation, and its whoask.
+  step('whatdo-ai-voice', 'rule&step=whatdo&id=r.l.digitaal.3.wd2', true);
+  step('whatdo-ai-camera', 'rule&step=whatdo&id=r.l.digitaal.3.wd3', true);
+  step('whoask-ai', 'rule&step=whoask&id=r.l.digitaal.3.wa1', true);
   // A written rule with the civic line (Meedoen in Nederland).
   step('rule-civic', 'rule&step=rule&lesson=r.l.meedoen.1', false);
   add('rule:retry', shot('rule&step=whatdo&retry=1'), null, { expect: '.tag-repeat' });
@@ -519,6 +528,7 @@ function defineRuleStates() {
   add('rule:lesson-start', shot('lesson&lesson=r.l.loon.2'), null, { expect: '.player-body .exercise' });
   add('rule:lesson-stage', shot('lesson&lesson=r.l.stage.3'), null, { expect: '.player-body .exercise' });
   add('rule:lesson-meedoen', shot('lesson&lesson=r.l.meedoen.1'), null, { expect: '.player-body .exercise' });
+  add('rule:lesson-ai', shot('lesson&lesson=r.l.digitaal.3'), null, { expect: '.player-body .exercise' });
   // M4 around the lessons: "Herhaal vandaag" with rules questions, the home with the rules count
   // and the review due, the result (with the "Onthoud" line and its speaker), the certificate and
   // the pocket card of a rules unit.

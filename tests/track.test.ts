@@ -30,7 +30,7 @@ const SECTOR_UNITS = ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca
  * above keeps its place. With a sector they end the learner's own course (before the other
  * sectors' units); with none, they come after the sector units.
  */
-const APPENDED = ['u.shop', 'u.numbers'];
+const APPENDED = ['u.shop', 'u.numbers', 'u.ai'];
 const expectedOrder = (own: string | null) => {
   const main = BASIS.map((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
