@@ -1820,20 +1820,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .flame-icon-out { color: var(--ink-3); }
 .stat-streak .flame-icon-lit { animation: flame-lit 0.24s var(--ease-out) both; }
 @keyframes flame-lit { from { transform: scale(0.97); opacity: 0; } }
-/* "Still to do today": a calm chip on its own line under the stats (not a stamp). */
-.topbar:has(.todo-tag) { flex-wrap: wrap; row-gap: 2px; }
-.todo-tag {
-  order: 10; flex: 1 0 100%; display: flex; align-items: center; justify-content: flex-end;
-  margin-top: -4px; min-width: 0;
-}
-.todo-chip {
-  display: inline-flex; align-items: center; gap: 7px; min-width: 0; padding: 3px 10px 3px 8px;
-  border: 1.5px solid var(--line); border-radius: 999px; background: var(--card);
-}
-.todo-dot { flex: none; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--yellow-dark); }
-.todo-gloss { flex: 0 1 auto; min-width: 0; font-size: 0.85rem; font-weight: 600; color: var(--ink-2); }
-.todo-gloss .bi-en { line-height: 1.15; }
-.todo-gloss.bi-swap .bi-help { display: none; }
 
 /* "Herhaal vandaag": done today (GEDAAN stamp) and "first words tomorrow" stay on the path. */
 .daily-done, .daily-first { border-color: var(--line); }
@@ -2405,7 +2391,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .topbar { gap: 6px; padding-inline: 10px; }
   .brand .logo-mark { width: 28px; height: 28px; }
   .stat { gap: 3px; }
-  .todo-tag { flex-wrap: wrap; justify-content: flex-start; margin-top: 0; }
   /* Bottom bar: two rows of two, icon beside the words. */
   .bottom-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; padding: 4px 4px calc(4px + env(safe-area-inset-bottom)); }
   .nav-tab, .bottom-nav:has(.nav-help) .nav-tab {
@@ -2879,12 +2864,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .lang-beta-tag { display: flex; align-items: center; flex-wrap: wrap; gap: 2px 6px; margin-top: 2px; }
 .lang-beta-help { font-size: 0.85rem; font-weight: 600; color: var(--ink-2); }
 
-/* Path: the done card keeps one line ("Practise again" in the help language only), and the
-   streak's "today" is a small unlit flame with one word, not a sentence. */
+/* Path: the done card keeps one line ("Practise again" in the help language only). */
 .bay-again-label.bi-swap > .bi-help { display: none; }
-.todo-flame { gap: 5px; }
-.todo-flame .flame-icon { flex: none; }
-.todo-word { font-size: 0.9rem; font-weight: 650; color: var(--ink-2); line-height: 1.15; }
 .cert-later > span[lang='nl']:only-child { font-size: 1.05rem; font-weight: 650; }
 /* Right to left: Bram stands at the card's end like the picture (both on the left). */
 .bay-char { right: auto; inset-inline-end: 4px; }
@@ -3808,16 +3789,6 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .coach-links .theme-head:first-child { margin-top: 0; }
 .cert-list .theme-head { margin-top: 8px; }
 .cert-list .theme-head:first-child { margin-top: 0; }
-/* The home: the current block's theme as a small label above its name (not a button). */
-.rb-theme {
-  grid-column: 1 / -1; display: flex; align-items: center; gap: 8px; margin: -2px 0 -4px;
-  font-size: 0.9375rem; line-height: 1.25; color: var(--muted);
-}
-.rb-theme-emoji { flex: none; font-size: 1.05rem; line-height: 1; }
-.rb-theme-text { min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 6px; row-gap: 0; }
-.rb-theme-main { font-weight: 650; color: var(--ink-2); }
-.rb-theme-nl { color: var(--muted); }
-.rb-theme-sep { color: var(--faint); }
 .topics-screen .topics { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
 
 /* A topic page: the sign, the pocket card and the certificate side by side, then the lessons. */

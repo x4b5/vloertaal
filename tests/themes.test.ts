@@ -182,17 +182,11 @@ describe('the screens show the themes as plain headers (never a button)', () => 
     expect(m).toContain('Inne branże');
   });
 
-  it('the home: the block’s theme as a small label, no extra tappable', () => {
+  it('the home: no theme label above the block (the theme is in All topics; the home stays calm)', () => {
     const p = progress({ completed: done('u.firstday', 'u.help', 'u.tools', 'u.safety', 'u.warehouse', 'u.time'), currentUnit: 'u.pay' });
     const m = html(createElement(Route, { progress: p, lang: pl(), onStart: () => {}, onPick: () => {}, onAll: () => {} }));
-    expect(m).toContain('class="rb-theme"');
-    expect(m).toContain('Twoja praca');
-    expect(m).toContain('Je baan');
-    const label = m.match(/<p class="rb-theme"[\s\S]*?<\/p>/)![0];
-    expect(label).not.toMatch(/<(button|a)\b/);
-    // No count in the label: the block's own "1 / 3 lessons" is right under it.
-    expect(label).not.toMatch(/\d+ \/ \d+/);
-    expect(label).toContain('aria-label="Twoja praca · Je baan"');
+    expect(m).not.toContain('rb-theme');
+    expect(m).not.toContain('Twoja praca');
   });
 
   it('the certificates: grouped by theme', () => {
@@ -231,12 +225,10 @@ describe('the screens show the themes as plain headers (never a button)', () => 
       expect(m).not.toContain('Getting started');
     });
 
-    it('the home label: the Dutch name only', () => {
+    it('the home: no theme label here either', () => {
       const m = html(createElement(Route, { progress: nlProgress({ completed: done('r.zoeken'), currentUnit: 'r.contract' }), lang: getHelpLanguage('nl'), onStart: () => {}, onPick: () => {}, onAll: () => {} }));
-      const label = m.match(/<p class="rb-theme"[\s\S]*?<\/p>/)![0];
-      expect(label).toContain('>Werk vinden<');
-      expect(label).not.toMatch(/\d+ \/ \d+/);
-      expect(label).not.toContain('lang="en"');
+      expect(m).not.toContain('rb-theme');
+      expect(m).not.toContain('lang="en"');
     });
   });
 });

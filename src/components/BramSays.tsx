@@ -51,5 +51,7 @@ export function HomeGreeting({ progress, due, lang, force }: {
   const [fresh] = useState(neverGreeted);
   useEffect(() => { rememberGreeted(new Date()); }, []);
   const g = force ?? greetingFor(greetingInput(progress, new Date(), due, first, fresh));
+  // "N words to repeat today" is the Review card right under the top bar: Bram does not say it twice.
+  if (g.kind === 'due' && !force) return null;
   return <BramSays text={greetingText(g, lang)} tail="start" className={`bram-greet bram-greet-${g.kind}`} />;
 }
