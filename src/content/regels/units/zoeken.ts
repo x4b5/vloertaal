@@ -173,6 +173,8 @@ export const zoekenUnit: RuleUnit = {
       // Les 1.3 · Het sollicitatiegesprek
       id: 'r.l.zoeken.3',
       title: 'Het sollicitatiegesprek',
+      // The first rule card is 🤐 (questions you need not answer): right for the card, odd for the lesson.
+      icon: '🤝',
       goal: 'Je weet wat je in een gesprek kunt vragen. Je weet ook welke vragen je niet hoeft te beantwoorden.',
       remember: 'Vragen over kinderen, geloof of gezondheid hoef je niet te beantwoorden.',
       // Wie kan je helpen: discriminatie.nl (een meldpunt in je eigen regio) · het College voor de

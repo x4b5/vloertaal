@@ -14,7 +14,7 @@ export function toCourseLesson(lesson: RuleLesson): Lesson {
     words: [],
     sentences: [],
     steps: lesson.steps,
-    rule: { goal: lesson.goal, remember: lesson.remember, ...(lesson.help?.length ? { help: lesson.help } : {}) },
+    rule: { goal: lesson.goal, remember: lesson.remember, ...(lesson.help?.length ? { help: lesson.help } : {}), ...(lesson.icon ? { icon: lesson.icon } : {}) },
   };
 }
 
