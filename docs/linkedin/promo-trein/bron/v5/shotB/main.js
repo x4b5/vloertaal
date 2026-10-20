@@ -15,9 +15,13 @@ import { V3, frameDist } from '../../lib/v3cam.js';
 import { terrace } from './terrace.js';
 import { canteen } from './canteen.js';
 import { buildTown, buildPark } from './town.js';
+import { extrasB } from './extras.js';
 
 const P = new URLSearchParams(location.search);
-const DURATION = 19.0, FPS = 30, SUBQ = P.get('sub') ?? 'auto', SHUTTER = 0.5;
+// v5b: the film is 54 s; this shot plays its 19-s choreography (clock u) on a slower clock over 29 s (clock w):
+// more time on Jada, the flight, the hall and Henk. WARP keys [w, u]; a monotone cubic between them.
+const WARP = [[0, 0], [0.55, 0.55], [3.6, 2.6], [10.8, 7.3], [17.95, 11.45], [21.85, 13.85], [26.65, 17.15], [29.0, 19.0]];
+const DURATION = 19.0, FILM_DURATION = 29.0, FPS = 30, SUBQ = P.get('sub') ?? 'auto', SHUTTER = 0.5;
 // the hand-off pose of shot A (v5/shotA HANDOFF_*): kept in step by hand
 const HANDOFF_FILL = 0.96, HANDOFF_FOV = 40, HANDOFF_V = 0.62;
 const SLIDE = [0.1, 0.5];                      // Amina's screen → Jada's chat
@@ -42,6 +46,7 @@ const G = new THREE.Group(); G.position.set(-14, 0, -205); G.rotation.y = Math.P
 buildPark(scene, G);
 const T3 = canteen(G, renderer, { SHARE_TAP, LINK_T0, world: scene });
 buildTown(scene);
+const EX = extrasB(scene, G);   // v5b: figuranten
 const Gw = (x, y, z) => G.localToWorld(V3(x, y, z));
 
 // ---------------- Jada's screen: the page turn from Amina's lesson ----------------
@@ -176,19 +181,23 @@ function glassFx(u) {
     zoom: 1 + 0.04 * Math.sin(Math.PI * clamp((dc + 0.12) / 0.5)),
   };
 }
-function setTime(u) {
+let warp;
+function setTime(w) {
+  const u = warp(w);
   placeCap(cap1, u, 5.5, 7.9);
   placeCap(cap2, u, 13.95, 16.85);
   drawScreenAt(u);
   const n = subAt(u);
   frame(scene, camera, n, (i, nn) => {
-    const us = nn > 1 ? u + ((i + 0.5) / nn - 0.5) * (SHUTTER / FPS) : u;
+    const ws = nn > 1 ? w + ((i + 0.5) / nn - 0.5) * (SHUTTER / FPS) : w;
+    const us = warp(clamp(ws, 0, FILM_DURATION));
+    EX.update(clamp(ws, 0, FILM_DURATION));
     poseAt(clamp(us, 0, DURATION));
     if (HIQ) lensJitter(camera, i, nn, lastFocus, apertureAt(us));
-  }, { seed: u + 16.5, ...glassFx(u) });
+  }, { seed: w + 16.5, ...glassFx(u) });
   return true;
 }
-window.DURATION = DURATION; window.setTime = setTime;
+window.DURATION = FILM_DURATION; window.setTime = setTime;
 window.crossU = () => crossU;
 window.camInfo = (u) => { poseAt(u); return { p: camera.position.toArray().map((x) => +x.toFixed(2)), fov: camera.fov }; };
 window.ready = (async () => {
@@ -197,6 +206,7 @@ window.ready = (async () => {
   await T3.buildScreen(); await T3.buildHenk(); await T3.buildShare();
   AMINA = await loadImg('../../assets/shots/dutch_ar_ok.png');
   buildCamera();
+  warp = monotone(WARP.map((k) => k[0]), WARP.map((k) => k[1]));
   setTime(Number(P.get('t') ?? 0));
   return true;
 })().catch((e) => { console.error(e.stack || e); throw e; });

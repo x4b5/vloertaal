@@ -11,10 +11,12 @@
 // phone in her hands; her right thumb taps (7.8 s) → "Goed zo!"; at 9.0 s the screen fills the frame
 // exactly as film-v2's hand-off frame.
 import * as THREE from 'three';
-import { W, H, PAL, clamp, seg, lerp, inOut, smooth, track, makeRenderer, skyDome, canvasTex, lensJitter, HIQ } from '../../lib/kit.js';
+import { W, H, PAL, clamp, seg, lerp, inOut, smooth, track, makeRenderer, skyDome, canvasTex, lensJitter, HIQ, rng } from '../../lib/kit.js';
 import { buildPolder, animatePolder } from '../../lib/polder.js';
 import { buildTrain, glassMaterial, carCenter, CAR, WIN } from '../../lib/train.js';
 import { buildCharacter, holdPhone } from '../../lib/char3d.js';
+import { buildExtra, randomLook } from '../../lib/extras.js';
+import { BAYS } from '../../lib/train.js';
 
 const P = new URLSearchParams(location.search);
 const DURATION = 16.5, FPS = 30, CAM_END = 9.0, DIVE0 = 16.0;
@@ -62,6 +64,42 @@ key.castShadow = true; key.shadow.mapSize.set(2048, 2048); key.shadow.bias = -0.
 car2.add(key, key.target);
 // the ceiling strip behind her: a soft top light so the back of the scarf keeps its shape
 const back = new THREE.PointLight('#fff6e8', 2.0, 2.4, 0); back.position.set(3.0, 3.75, -0.55); car2.add(back);
+
+// ---------------- v5b: fellow passengers (figuranten) ----------------
+// seat (bay T, side s, facing f, window or aisle) → a seated extra in that car; none on the bays the camera flies through
+const PAX = [];
+{
+  const R = rng(41);
+  const seatPax = (car, T, s, f, win, o, act) => {
+    const e = buildExtra(o); const x = T - f * 0.8 - f * 0.04, z = s * (win ? 1.13 : 0.63);
+    e.root.position.set(x, CAR.floor, z); e.root.rotation.y = f > 0 ? Math.PI / 2 : -Math.PI / 2;
+    e.sit({ seatH: 0.505, knees: 0.4, lean: 0.02 }); car.add(e.root); PAX.push({ e, act });
+  };
+  const phoneA = (ph) => (t, e) => { e.head2(0.05 * Math.sin(t * 0.4 + ph), 0.42); e.armAt('R', -0.07, 0.95, 0.32); e.armAt('L', 0.07, 0.95, 0.32); };
+  const lookOut = (side, ph) => (t, e) => { e.head2(side * (0.75 + 0.08 * Math.sin(t * 0.3 + ph)), 0.02); e.armAt('R', -0.14, 0.78, 0.36); e.armAt('L', 0.14, 0.78, 0.36); };
+  const read = (ph) => (t, e) => { e.head2(0.03 * Math.sin(t * 0.5 + ph), 0.5); e.armAt('R', -0.1, 0.9, 0.36); e.armAt('L', 0.1, 0.9, 0.36); };
+  const doze = (t, e) => { e.head2(0.15, 0.35, 0.22 + 0.02 * Math.sin(t * 0.8)); e.armAt('R', -0.12, 0.66, 0.3); e.armAt('L', 0.12, 0.66, 0.3); };
+  seatPax(car2, 3.45, 1, -1, false, randomLook(R, { hair: 'short', top: '#3c4a56', skin: '#e0a87e' }), phoneA(0.3));
+  seatPax(car2, 3.45, 1, -1, true, randomLook(R, { hair: 'long', hairColor: '#5a4236', top: '#d63b3b' }), lookOut(1, 1.1));
+  seatPax(car2, 1.15, 1, -1, true, randomLook(R, { hair: 'bun', hairColor: '#aab1b8', top: '#2f8f9d', skin: '#f0c29b' }), read(0.6));
+  seatPax(car2, -3.45, 1, 1, true, randomLook(R, { hair: 'cap', capColor: '#1a86d8', top: '#ffc414' }), phoneA(2.0));
+  seatPax(car2, -3.45, -1, -1, true, randomLook(R, { hair: 'bald', beard: true, top: '#5d4a3e' }), doze);
+  { // standing in the aisle by the door, one hand on the yellow pole, phone in the other (seen over the seats behind her)
+    const e = buildExtra(randomLook(R, { hair: 'short', hairColor: '#1e1a18', top: '#7ac70c', skin: '#8d5536' }));
+    e.root.position.set(5.25, CAR.floor, 0.12); e.root.rotation.y = -Math.PI / 2; car2.add(e.root);
+    PAX.push({ e, act: (t, e) => { e.stand(t); e.spine.rotation.z = 0.02 * Math.sin(t * 0.9); e.armAt('L', 0.3, 1.5, 0.5); e.armAt('R', -0.08, 1.18, 0.3); e.head2(0.06 * Math.sin(t * 0.5), 0.4); } });
+  }
+  for (const k of [0, 2, 3]) {
+    const car = train.userData.cars[k];
+    for (let i = 0; i < 5; i++) {
+      const T = BAYS[Math.floor(R() * 4)], s = R() < 0.5 ? 1 : -1, f = R() < 0.5 ? 1 : -1;
+      if (PAX.some((p) => p.car === car && p.key === `${T},${s},${f}`)) continue;
+      seatPax(car, T, s, f, true, randomLook(R, { far: true }), R() < 0.5 ? phoneA(R() * 6) : lookOut(s * -f, R() * 6));
+      PAX[PAX.length - 1].car = car; PAX[PAX.length - 1].key = `${T},${s},${f}`;
+    }
+  }
+}
+const posePax = (t) => { for (const p of PAX) p.act(t, p.e); };
 
 // ---------------- 3D Amina + phone ----------------
 let amina, hold, phone, screenMat, screenInfo, IMG = {}, TEX = {}, screenCanvas, screenTex;
@@ -281,11 +319,13 @@ window.handoff = () => { train.position.x = 0; train.updateMatrixWorld(true); po
 
 let lastFocus = 1;
 /** v5 lens: shallow focus on Amina and her phone while the camera is in the train; sharp at the hand-off. */
-const apertureAt = (t) => 0.007 * smooth(seg(t, 6.2, 7.2)) * (1 - smooth(seg(t, 14.8, 15.5)));
+// v5b: opens from 9.0 s, where the film's 1.5× render of this shot starts (before that: v4's sharp render + extras)
+const apertureAt = (t) => 0.007 * smooth(seg(t, 9.0, 10.0)) * (1 - smooth(seg(t, 14.8, 15.5)));
 function poseAt(t) {
   train.position.x = trainX(t);
   animatePolder(polder, t);
   poseAmina(t);
+  posePax(t);
   const tau = tauOf(t);
   let c = camAt(tau);
   if (t > DIVE0) c = dive(c, inOut(seg(t, DIVE0, DURATION)));
