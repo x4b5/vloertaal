@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "typecheck": "tsc -b",
-    "clips": "tsx scripts/list-clips.ts"
+    "clips": "tsx scripts/list-clips.ts",
+    "splash": "tsx scripts/splash-html.ts"
   },
   "dependencies": {
     "@fontsource-variable/lexend": "^5.3.0",

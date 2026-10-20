@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import { CastHead, SOLID_V } from './Characters';
+import { CastHead, SOLID_V, type CharacterId } from './Characters';
 
 /**
  * The Vloertaal logo: Bram, the mascot, on ink. His yellow hard hat carries a bold stencil V
@@ -16,15 +16,17 @@ import { CastHead, SOLID_V } from './Characters';
  * (Android's maskable icon). public/icon*.svg and the PNG icons are made from this file:
  * `node scripts/icons/make-icons.cjs` (dev server on :5173). Keep index.html's splash in step.
  * `check` is kept for older call sites and no longer changes the mark.
+ * `who`: another cast member in the same frame (the start screen shows all four); always `full`.
  */
-export function LogoMark({ size = 40, variant, shape = 'round' }: {
+export function LogoMark({ size = 40, variant, shape = 'round', who = 'bram' }: {
   size?: number;
   check?: boolean;
   variant?: 'full' | 'small';
   shape?: 'round' | 'square' | 'mask';
+  who?: CharacterId;
 }) {
   const id = useId().replace(/[^a-zA-Z0-9_-]/g, '');
-  const full = (variant ?? (size >= 56 ? 'full' : 'small')) === 'full';
+  const full = who !== 'bram' || (variant ?? (size >= 56 ? 'full' : 'small')) === 'full';
   const clip = `logo-${id}`;
   return (
     <svg className="logo-mark" viewBox="0 0 120 120" width={size} height={size} aria-hidden focusable="false">
@@ -34,7 +36,7 @@ export function LogoMark({ size = 40, variant, shape = 'round' }: {
       <g clipPath={`url(#${clip})`}>
         <rect width="120" height="120" fill="#1e2226" />
         <g transform={shape === 'mask' ? 'translate(12 14) scale(.8)' : undefined}>
-          {full ? <FullBram vest={`${clip}-vest`} /> : <SmallBram />}
+          {full ? <FullBust who={who} vest={`${clip}-vest`} /> : <SmallBram />}
         </g>
       </g>
     </svg>
@@ -43,8 +45,8 @@ export function LogoMark({ size = 40, variant, shape = 'round' }: {
 
 const VEST = 'M30 150L31 104Q32.5 94 43 91H77Q87.5 94 89 104L90 150Z';
 
-/** Bram's bust from the lessons, scaled up so the hat and face fill the icon. */
-function FullBram({ vest }: { vest: string }) {
+/** A cast member's bust from the lessons (Bram: the logo), scaled up so the head fills the icon. */
+function FullBust({ who, vest }: { who: CharacterId; vest: string }) {
   return (
     <>
       {/* Hi-vis vest and the blue shirt collar, cut off by the bottom edge. */}
@@ -55,7 +57,7 @@ function FullBram({ vest }: { vest: string }) {
         <path d="M52 91L60 97.5L56 101ZM68 91L60 97.5L64 101Z" fill="#5fb8f5" />
         <path d="M44.5 95V150M75.5 95V150" stroke="#eef5f7" strokeWidth="4" />
         <path d="M79 88L104 88L104 150L82 150Z" fill="#000" opacity=".13" clipPath={`url(#${vest})`} />
-        <CastHead who="bram" expr="pleased" />
+        <CastHead who={who} expr="pleased" />
       </g>
     </>
   );
