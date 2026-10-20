@@ -12,7 +12,7 @@ import type { DailyCard } from '../lib/spaced';
 import type { Progress } from '../lib/progress';
 import { blockDoneCount, blockNext, blockPlayable, currentBlock, homeLessonState, homeSuggestions, routeOrder } from '../lib/route';
 import { loadSaves } from '../lib/resume';
-import { hasPicture } from '../lib/wordPicture';
+import { lessonIcon } from '../lib/lessonIcon';
 import { WordPicture } from '../pictures';
 import { Bi, HelpText } from './Bi';
 import { CertBadge } from './Certificate';
@@ -137,13 +137,13 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
       <ol className="bays rb-lessons">
         {unit.lessons.map((lesson, i) => {
           const state = homeLessonState(unit, lesson.id, completed, access);
-          const first = lesson.words.find(hasPicture);
+          const icon = lessonIcon(lesson);
           const title = gloss(lesson.id, lesson.title, lang);
           const saved = state === 'now' && saves[lesson.id]?.review === false ? saves[lesson.id] : undefined;
           const css = state === 'later' ? 'locked' : state;
           const body = (
             <>
-              {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
+              {icon && <WordPicture className="bay-pic" id={icon.id} emoji={icon.emoji} size={48} />}
               <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
                 <Bi className="bay-title" text={title} />
                 {saved && <ResumeChip save={saved} lang={lang} count={false} />}
@@ -584,7 +584,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
             const record = completed[lesson.id] as { best?: number } | undefined;
             const open = allowed && isUnlocked(lesson.id, completed, access);
             const state = !open ? 'locked' : record ? 'done' : lesson.id === next?.id ? 'now' : 'open';
-            const first = lesson.words.find(hasPicture);
+            const icon = lessonIcon(lesson);
             const title = gloss(lesson.id, lesson.title, lang);
             const saved = open && saves[lesson.id]?.review === Boolean(record) ? saves[lesson.id] : undefined;
             // Waits for the full version (the topic, or this lesson of it): a padlock, and a tap opens
@@ -601,7 +601,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                   onClick={() => (full ? onUpgrade?.() : onStart(lesson.id, Boolean(record)))}
                   aria-label={`${u + 1}.${i + 1} ${said(title)}${saved ? ` · ${resumeLabel(saved, lang)}` : open ? (record ? ` · ${said(ui('practice', lang))}` : ` · ${said(ui('start', lang))}`) : allowed && lessonAllowed(lesson.id, access) ? ` (${said(ui('locked', lang))})` : ` · ${said(ui('fullVersion', lang))}`}`}
                 >
-                  {first && <WordPicture className="bay-pic" id={first.id} emoji={first.emoji} size={48} />}
+                  {icon && <WordPicture className="bay-pic" id={icon.id} emoji={icon.emoji} size={48} />}
                   <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
                     <Bi className="bay-title" text={title} />
                     {/* Werkregels: what you can do after the lesson (its goal), under the title. */}
