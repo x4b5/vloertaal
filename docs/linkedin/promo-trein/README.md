@@ -46,8 +46,9 @@ beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop 
   op de grond in plaats van erboven te zweven.
 - **Metaal:** alleen metaal (de rails, chroom en de bistrostoelen) weerspiegelt nu een zachte studioruimte. Echte
   reflecties op alles maakten de render 3× zo traag; zo kost het bijna niets.
-- **Resolutie:** alles is weer op 1,5× gerenderd, met alle deelbeelden voor de bewegingsonscherpte. Dat is
-  een nachtrender van ongeveer 11 uur op 4 processen.
+- **Resolutie:** het middenstuk en Amina vanaf 9 s zijn weer op 1,5× gerenderd. De drone over de polder en de trein
+  (de eerste 9 s) zijn op 1,25× gerenderd. De close-ups van Amina (9 tot 14 s) hebben alle deelbeelden voor de
+  bewegingsonscherpte; de rest heeft er 80 % van, zoals in v6. Zo was de film in een nacht klaar.
 
 **Versie 6 (realistischer, met geluid):**
 - **Licht en schaduw:** de figuren en het decor hebben echte, ronde schaduw in plaats van platte vlakken, met meer
@@ -127,8 +128,8 @@ De film is gebouwd met three.js (in Chromium, beeld voor beeld) en ffmpeg:
       ermee;
     - `real.js` zet de textures aan (`detail=0` zet ze uit) en geeft metaal een kleine omgeving (`metalenv=0`
       zet die uit); `shotA` en `shotB` nemen `ao=0` tot `1` voor de sterkte van de schaduw;
-    - `renderV7.sh` rendert A en B helemaal opnieuw op 1,5×. Een onderbroken render kun je opnieuw starten, want
-      klare blokken worden overgeslagen;
+    - `renderV7.sh` rendert A en B helemaal opnieuw (de instellingen per stuk staan bovenin). Een onderbroken
+      render kun je opnieuw starten, want klare blokken worden overgeslagen;
     - `assemble7.py` zet de film in elkaar, met dezelfde grading en dezelfde geluidsmix als v6.
   - In v5b (54 s) speelt `shotB` dezelfde camerabewegingen op een langzamere klok (`WARP`): 29 s in plaats van
     19 s. De meeste extra tijd gaat naar Jada, de vlucht, de hal en Henk. De eindkaart duurt 8,5 s.
