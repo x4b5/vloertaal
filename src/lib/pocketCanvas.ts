@@ -42,7 +42,7 @@ const C = {
 const LEXEND = "'Lexend Variable', Lexend, system-ui, sans-serif";
 const STENCIL = "'Big Shoulders Stencil Display', 'Lexend Variable', sans-serif";
 const HELP = `${LEXEND}, 'Noto Sans Arabic', 'Noto Sans Ethiopic', 'Abyssinica SIL', sans-serif`;
-const EMOJI = "'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif";
+const EMOJI = "'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Emoji', sans-serif";
 const font = (weight: number, size: number, family = LEXEND) => `${weight} ${size}px ${family}`;
 
 /** Splits text into lines that fit `max` px (words kept whole; a single long word on its own line). */
