@@ -27,22 +27,22 @@ export interface AboutSection {
 export const aboutSections: AboutSection[] = [
   {
     id: 'a.what', emoji: '🦺', title: 'What is Vloertaal?',
-    body: 'Vloertaal helps you learn the Dutch you need at work: in the warehouse, the kitchen, the factory or on the building site. Not only the words on the work floor, but all the language around work: applying for a job, your contract and pay slip, your rights, housing and papers, calling in sick and getting along with colleagues. The lessons are short, so you can practise a few minutes every day.',
+    body: 'Vloertaal helps you learn the Dutch you need at work: in the warehouse, the kitchen, the factory or on the building site. Not only the words on the work floor, but all the language around work: applying for a job, your contract and pay slip, your rights, housing and papers, calling in sick and getting along with colleagues. The lessons are short, so you can practise a few minutes every day. Think of Vloertaal as a small extra for in between. It does not replace a language course or a language coach.',
     nl: {
       title: 'Wat is Vloertaal?',
-      body: 'Met Vloertaal leer je het Nederlands dat je nodig hebt op je werk: in het magazijn, in de keuken, in de fabriek of op de bouw. Niet alleen de woorden op de werkvloer. Ook de taal rond je werk: solliciteren, je contract en je loonstrook, je rechten, wonen en papieren, je ziekmelden en omgaan met collega’s. De lessen zijn kort. Zo kun je elke dag een paar minuten oefenen.',
+      body: 'Met Vloertaal leer je het Nederlands dat je nodig hebt op je werk: in het magazijn, in de keuken, in de fabriek of op de bouw. Niet alleen de woorden op de werkvloer. Ook de taal rond je werk: solliciteren, je contract en je loonstrook, je rechten, wonen en papieren, je ziekmelden en omgaan met collega’s. De lessen zijn kort. Zo kun je elke dag een paar minuten oefenen. Zie Vloertaal als een tussendoortje. Het is een aanvulling op een taalcursus of een taalcoach, geen vervanging.',
     },
     nlRules: {
       title: 'Wat is Vloertaal?',
-      body: 'Vloertaal legt uit hoe werken in Nederland gaat. Voor mensen die al Nederlands spreken. Je leert de regels van de wet en je contract. En de regels die nergens staan, maar die iedereen kent. Bijvoorbeeld over werk zoeken, je loonstrook, ziek zijn, veiligheid en collega’s. De lessen zijn kort. Zo leer je elke dag een paar minuten.',
+      body: 'Vloertaal legt uit hoe werken in Nederland gaat. Voor mensen die al Nederlands spreken. Je leert de regels van de wet en je contract. En de regels die nergens staan, maar die iedereen kent. Bijvoorbeeld over werk zoeken, je loonstrook, ziek zijn, veiligheid en collega’s. De lessen zijn kort. Zo leer je elke dag een paar minuten. Zie Vloertaal als een tussendoortje. Het is een aanvulling, geen vervanging van advies van je werkgever, een vakbond of het Juridisch Loket.',
     },
   },
   {
     id: 'a.mission', emoji: '🎯', title: 'Our mission',
-    body: 'Vloertaal wants to give everyone who works in the Netherlands a fair chance to learn Dutch for work: free, easy to use, and with help in your own language. Nobody earns money from Vloertaal: no ads, no subscription, and your data is never sold.',
+    body: 'Vloertaal wants to help a little, so that learning Dutch for work becomes a bit easier: free, easy to use, and with help in your own language. Nobody earns money from Vloertaal: no ads, no subscription, and your data is never sold.',
     nl: {
       title: 'Onze missie',
-      body: 'Vloertaal wil iedereen die in Nederland werkt een eerlijke kans geven om Nederlands te leren voor het werk. Gratis, makkelijk en met hulp in je eigen taal. Niemand verdient geld aan Vloertaal: geen reclame, geen abonnement, en je gegevens worden nooit verkocht.',
+      body: 'Vloertaal wil een klein steentje bijdragen, zodat Nederlands leren voor je werk iets makkelijker wordt. Gratis, makkelijk en met hulp in je eigen taal. Niemand verdient geld aan Vloertaal: geen reclame, geen abonnement, en je gegevens worden nooit verkocht.',
     },
     nlRules: {
       title: 'Onze missie',
