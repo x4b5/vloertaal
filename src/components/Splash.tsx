@@ -3,11 +3,13 @@ import { langMeta, NL_META } from '../i18n/meta';
 import { uiEn, type UiCode } from '../i18n/types';
 import { loadProgress } from '../lib/progress';
 import { RestartIcon } from './Icons';
+import { CAST } from './Characters';
 import { LogoMark } from './Logo';
 
 /**
- * The calm start screen while a help language's texts load: the same label as the static splash in
- * index.html (ink on kraft, the logo: Bram with the V on his hat), so nothing jumps when React takes over. With no connection
+ * The calm start screen while a help language's texts load: the same as the static splash in
+ * index.html (the four colleagues, Bram, Amina, Henk and Jada, above the name in ink on kraft), so
+ * nothing jumps when React takes over. index.html's copy is made from this: `npm run splash`. With no connection
  * and no saved copy, one line says so (in Dutch and the help language, from src/i18n/meta.ts: its
  * pack may be the file that did not come) and one button tries again (it also retries by itself
  * when the phone is back online).
@@ -22,8 +24,12 @@ export function Splash({ failed = false, onRetry, lang }: {
   const help = code === 'nl' ? null : code ? langMeta(code) : undefined;
   return (
     <div className="boot-splash" aria-busy={!failed}>
+      <div className="boot-cast" aria-hidden="true">
+        {CAST.map((who) => (
+          <span key={who} className="boot-cast-one"><LogoMark size={64} variant="full" who={who} /></span>
+        ))}
+      </div>
       <div className="boot-label" role="img" aria-label="Vloertaal">
-        <LogoMark size={64} variant="full" />
         <span className="boot-word" lang="nl" dir="ltr">vloertaal<span className="boot-dot">.</span></span>
       </div>
       {failed && onRetry && (
