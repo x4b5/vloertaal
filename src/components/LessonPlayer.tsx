@@ -11,6 +11,7 @@ import { useVoices } from './useVoices';
 import { tileDiff } from '../lib/answers';
 import { breakable } from '../lib/dutch';
 import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, unheard, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
+import { offerSkipSound } from '../lib/skipSound';
 import { deviceLabel, firstReportHint, reportMail } from '../lib/report';
 import { dutchUi } from '../lib/track';
 import { chatWhy } from '../content/chatWhy';
@@ -947,6 +948,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
           )}
         </div>
         {body}
+        {/* The pause sheet's "Zonder geluid", right where it is needed (src/lib/skipSound.ts). */}
+        {offerSkipSound(ex, { checked, soundOff }) && (
+          <button type="button" className="skip-sound" onClick={() => setSound(true)}>
+            <SpeakerOffIcon size={18} />
+            <Bi text={ui('cantListen', lang)} />
+          </button>
+        )}
         </div>
       </main>
       </ComesBack.Provider>
