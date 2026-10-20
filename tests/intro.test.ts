@@ -27,8 +27,11 @@ describe('intro (vloertaal.nl/intro)', () => {
     expect(open[0].options.some((o) => o.right)).toBe(false);
   });
 
-  it('calls Vloertaal an addition, not a replacement', () => {
-    expect(WHY.join(' ')).toMatch(/aanvulling/);
+  it('calls Vloertaal a tussendoortje, not a replacement, and leaves breaks alone', () => {
+    const why = WHY.join(' ');
+    expect(why).toMatch(/tussendoortje/);
+    expect(why).toMatch(/geen vervanging/);
+    expect(why).not.toMatch(/pauze/);
   });
 
   it('makes a Dutch page with every question, answer and source, escaped', () => {

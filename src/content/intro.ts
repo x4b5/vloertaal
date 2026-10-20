@@ -39,9 +39,9 @@ export const INTRO_QUESTIONS: IntroQuestion[] = [
   },
 ];
 
-/** "Waarom Vloertaal?": modest, an addition to courses and coaches, not instead of them. */
+/** "Waarom Vloertaal?": modest, a snack ("tussendoortje") next to courses and coaches, not instead of them. Not "in de pauze": a break is for rest. */
 export const WHY: string[] = [
   'Taal leer je het best waar je hem nodig hebt. Vloertaal is een gratis app om Nederlands te oefenen voor je werk: een paar minuten per dag, op je eigen telefoon, met uitleg in je eigen taal.',
-  'Geen vervanging van een taalcursus of taalcoach, maar een aanvulling: voor tussendoor, in de trein of in de pauze.',
+  'Zie het als een tussendoortje: geen vervanging van een taalcursus of taalcoach, maar iets voor ertussendoor, in de trein, in de wachtkamer of thuis op de bank.',
   'De app is nog in de testfase. Ik bouw hem in mijn vrije tijd, en ik hoor graag wat beter kan.',
 ];
