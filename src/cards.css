@@ -11,7 +11,7 @@
 .slip.card-says .slip-head { justify-content: flex-start; }
 .card-pic {
   flex: none; font-size: 1.35rem; line-height: 1;
-  font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+  font-family: 'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Emoji', sans-serif;
 }
 .card-say { flex: none; margin-inline-start: auto; }
 .slip.card .slip-title { min-width: 0; overflow-wrap: anywhere; }
