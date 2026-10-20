@@ -24,6 +24,20 @@ describe('lessonIcon (the picture beside a lesson in the overview)', () => {
     expect(icon).toEqual({ id: '', emoji: '🧤' });
   });
 
+  it("prefers a lesson's own icon over its first rule card", () => {
+    const icon = lessonIcon(lesson({
+      rule: { goal: 'g', remember: 'r', icon: '🤝' },
+      steps: [{ kind: 'rule', id: 'r1', emoji: '🤐', title: 'T', body: [], rule: 'geschreven' }],
+    }));
+    expect(icon).toEqual({ id: '', emoji: '🤝' });
+  });
+
+  it('shows the job interview with a handshake, not a closed mouth', () => {
+    const units = toCourseUnits([...rulesUnits, ...sectorRulesUnits]);
+    const interview = units.flatMap((u) => u.lessons).find((l) => l.id === 'r.l.zoeken.3');
+    expect(interview && lessonIcon(interview)?.emoji).toBe('🤝');
+  });
+
   it('gives nothing when there is neither a picture nor a rule card', () => {
     expect(lessonIcon(lesson({}))).toBeUndefined();
   });

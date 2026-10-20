@@ -71,7 +71,7 @@ export interface Lesson {
    */
   steps?: RuleStep[];
   /** The work-rules track: what the lesson is for, its "Onthoud" line and who can help. */
-  rule?: { goal: string; remember: string; help?: AskWho[] };
+  rule?: { goal: string; remember: string; help?: AskWho[]; icon?: string };
 }
 
 export interface Unit {

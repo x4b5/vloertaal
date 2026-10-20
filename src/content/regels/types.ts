@@ -114,6 +114,9 @@ export interface RuleLesson {
   remember: string;
   /** "Wie kan je helpen", if relevant. */
   help?: AskWho[];
+  /** The lesson's icon in the overview, when its first rule card's emoji says too little about
+   *  the whole lesson (src/lib/lessonIcon.ts). */
+  icon?: string;
 }
 
 export interface RuleUnit {
