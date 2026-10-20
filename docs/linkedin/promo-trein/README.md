@@ -36,6 +36,19 @@ mee naar de telefoon of laptop.
 Er wordt nergens geknipt. Amina's scherm wordt Jada's scherm terwijl het hele beeld scherm is; de laatste
 beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop gaat in 0,3 s over in de eindkaart.
 
+**Versie 7 (oppervlakken en contactschaduw; de video wordt nog gerenderd, de mp4's hierboven zijn nog v6):**
+- **Textures:** het decor heeft nu een oppervlak in plaats van een egale kleur. Muren en gevels hebben bakstenen
+  met voegen, het terras heeft klinkers, en beton en asfalt hebben korrel en vlekken. Bureaus en tafels hebben
+  houtnerf en planken, gras en struiken hebben fijne sprietjes, en de blauwe treinstoelen hebben stof. Alles krijgt
+  ook lichte verwering. De kleuren blijven hetzelfde: de structuur maakt een vlak alleen iets lichter of donkerder.
+- **Contactschaduw:** waar dingen elkaar raken of dicht bij elkaar staan, wordt het donkerder. Denk aan onder een
+  stoel, tussen bank en wand, onder de kin, en in hoeken en naden. Daardoor staan de figuren en de meubels echt
+  op de grond in plaats van erboven te zweven.
+- **Metaal:** alleen metaal (de rails, chroom en de bistrostoelen) weerspiegelt nu een zachte studioruimte. Echte
+  reflecties op alles maakten de render 3× zo traag; zo kost het bijna niets.
+- **Resolutie:** alles is weer op 1,5× gerenderd, met alle deelbeelden voor de bewegingsonscherpte. Dat is
+  een nachtrender van ongeveer 11 uur op 4 processen.
+
 **Versie 6 (realistischer, met geluid):**
 - **Licht en schaduw:** de figuren en het decor hebben echte, ronde schaduw in plaats van platte vlakken, met meer
   zon en minder vlak licht. De figuren houden hun gezicht uit de app.
@@ -105,6 +118,18 @@ De film is gebouwd met three.js (in Chromium, beeld voor beeld) en ffmpeg:
     - `assemble6.py` zet de film in elkaar, met het label uit `chip/`;
     - `bron/v6-geluid/` maakt de geluidseffecten en de mix met de muziek (`build.sh`; de effecten staan in
       `sfx-notes.md`, de originele opnames in `raw/`).
+  - Versie 7:
+    - `bron/lib/detail.js` maakt één textuur van 1 × 1 m met vier patronen (baksteen, sprietjes/stof,
+      beton/asfalt, hout) en legt die in wereldruimte op het decor. Het patroon hangt af van de kleur van het
+      oppervlak;
+    - `bron/lib/ao.js` is de contactschaduw: een extra pass tekent de normaal en de diepte, en een shader telt
+      per pixel hoeveel van de omgeving erboven uitsteekt (ambient occlusion). `kit.js` vermenigvuldigt het beeld
+      ermee;
+    - `real.js` zet de textures aan (`detail=0` zet ze uit) en geeft metaal een kleine omgeving (`metalenv=0`
+      zet die uit); `shotA` en `shotB` nemen `ao=0` tot `1` voor de sterkte van de schaduw;
+    - `renderV7.sh` rendert A en B helemaal opnieuw op 1,5×. Een onderbroken render kun je opnieuw starten, want
+      klare blokken worden overgeslagen;
+    - `assemble7.py` zet de film in elkaar, met dezelfde grading en dezelfde geluidsmix als v6.
   - In v5b (54 s) speelt `shotB` dezelfde camerabewegingen op een langzamere klok (`WARP`): 29 s in plaats van
     19 s. De meeste extra tijd gaat naar Jada, de vlucht, de hal en Henk. De eindkaart duurt 8,5 s.
 - `bron/v4/`: de versie van 42 seconden met wissels: `shot1` tot en met `shot3` spelen de camerabewegingen van v3

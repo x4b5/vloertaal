@@ -9,11 +9,15 @@
 // Basic and shader materials (screens, captions, glass, sky) are left alone.
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { addDetail } from './detail.js';
 
 const METAL = new Set(['#2a2e33', '#cfd8de', '#8a96a0', '#6d7880', '#9aa5ab', '#3a3f44', '#1e2226']);
 const hex = (c) => '#' + c.getHexString();
 const cache = new Map();
-const QP = new URLSearchParams(location.search), VAR = QP.get('var') === '1', ENV = QP.get('env') === '1';   // both off by default: 2–3× the render time
+let METAL_ENV = null;
+// var and env are off by default (2–3× the render time); detail (v7 textures, lib/detail.js) is on
+const QP = new URLSearchParams(location.search), VAR = QP.get('var') === '1', ENV = QP.get('env') === '1';
+const DETAIL = QP.get('detail') !== '0';
 
 function variation(mat) {
   mat.onBeforeCompile = (sh) => {
@@ -48,13 +52,19 @@ function convert(m, kind) {
     roughness: metal ? 0.42 : kind === 'cast' ? 0.62 : 0.86, metalness: metal ? 0.55 : 0.0,
   });
   s.name = m.name; s.toneMapped = m.toneMapped;
+  if (metal && METAL_ENV && !ENV) { s.envMap = METAL_ENV; s.envMapIntensity = 0.7; s.roughness = 0.32; }   // v7: reflections on metal only
   if (kind === 'set' && !m.transparent && VAR) variation(s);
+  else if (kind === 'set' && !m.transparent && DETAIL) addDetail(s);
   cache.set(key, s);
   return s;
 }
 
 /** Swap the scene's materials (see above) and give it an environment. Call after everything is built. */
 export function realify(scene, renderer, { env = 0.32 } = {}) {
+  if (!ENV && QP.get('metalenv') !== '0' && !METAL_ENV) {   // a small studio room, sampled by the metal materials only (cheap)
+    const pm = new THREE.PMREMGenerator(renderer);
+    METAL_ENV = pm.fromScene(new RoomEnvironment(), 0.04).texture; pm.dispose();
+  }
   scene.traverse((o) => {
     if (!o.isMesh || !o.material) return;
     const one = (m) => {

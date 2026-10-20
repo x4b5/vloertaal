@@ -359,6 +359,7 @@ function captions(t) {
 }
 /** Sub-frames: 8 while the camera moves fast (drone, glass, arc), fewer on the slow push and the lock. */
 const SUBK = Number(P.get('subk') ?? 1);   // v6: scales the sub-frame counts (render time)
+const AOK = Number(P.get('ao') ?? 1);   // v7: contact shadow strength (lib/ao.js); 0 = off
 const subAt0 = (t) => (SUBQ !== 'auto' ? Number(SUBQ) : t < 9.0 ? 8 : t < 15.5 ? (HIQ ? 6 : t < 10.8 ? 3 : t < 13.6 ? 6 : 4) : 2);
 const subAt = (t) => (SUBQ !== 'auto' ? Number(SUBQ) : Math.max(2, Math.round(subAt0(t) * SUBK)));
 
@@ -377,7 +378,7 @@ function setTime(t) {
     const ts = nn > 1 ? t + ((i + 0.5) / nn - 0.5) * (SHUTTER / FPS) : t;
     poseAt(clamp(ts, 0, DURATION));
     if (HIQ) lensJitter(camera, i, nn, lastFocus, apertureAt(ts));
-  }, { ...fx, seed: t });
+  }, { ...fx, seed: t, ao: AOK });
   return true;
 }
 
