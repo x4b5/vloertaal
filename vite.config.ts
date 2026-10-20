@@ -5,6 +5,8 @@ import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import { UPDATES } from './src/content/updates';
 import { updatesPage } from './src/lib/updatesPage';
+import { INTRO_QUESTIONS } from './src/content/intro';
+import { introPage } from './src/lib/introPage';
 
 /**
  * The app's stylesheet does not block the first paint: index.html's inline splash (logo, ink on
@@ -72,6 +74,17 @@ function updatesPagePlugin(): Plugin {
   };
 }
 
+/** vloertaal.nl/intro: three questions and why Vloertaal exists, made from src/content/intro.ts. */
+function introPagePlugin(): Plugin {
+  return {
+    name: 'vloertaal-intro-page',
+    apply: 'build',
+    generateBundle() {
+      this.emitFile({ type: 'asset', fileName: 'intro/index.html', source: introPage(INTRO_QUESTIONS) });
+    },
+  };
+}
+
 /**
  * The service worker of this build (public/sw.js): its BUILD (a hash of every file the build
  * writes, so the same code gives the same worker) and FILES (the hashed files under assets/). So
@@ -112,7 +125,7 @@ export default defineConfig({
   base: './',
   // Which deploy a tester's report came from (src/lib/report.ts): the commit on Vercel, "dev" here.
   define: { 'import.meta.env.VITE_BUILD': JSON.stringify((process.env.VERCEL_GIT_COMMIT_SHA ?? 'dev').slice(0, 7)) },
-  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), swBuild()],
+  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), introPagePlugin(), swBuild()],
   build: {
     rolldownOptions: {
       output: {
