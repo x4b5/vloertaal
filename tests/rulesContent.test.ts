@@ -285,10 +285,10 @@ describe('rules content: model sentences and recorded clips', () => {
   const slips = (list: { id: string; nl: string }[]) =>
     list.filter((m) => byLoose.has(loose(m.nl)) && byLoose.get(loose(m.nl)) !== m.nl).map((m) => `${m.id}: "${m.nl}" ≠ "${byLoose.get(loose(m.nl))}"`);
 
-  it('spells every model sentence with a clip exactly like the clip (2 today)', () => {
+  it('spells every model sentence with a clip exactly like the clip (3 today)', () => {
     expect(slips(models)).toEqual([]);
     const withClip = models.filter((m) => clipTexts.includes(m.nl));
-    expect(withClip.map((m) => m.id)).toEqual(['r.l.veilig.1.mo1', 'r.l.veilig.2.mo1']);
+    expect(withClip.map((m) => m.id)).toEqual(['r.l.veilig.1.mo1', 'r.l.veilig.2.mo1', 'r.l.digitaal.3.mo1']);
     // Each of them is recorded in every voice, so the voice a learner picks has it too.
     for (const m of withClip) for (const v of eleven.voices) expect(Object.values(v.said), `${m.id} ${v.key}`).toContain(m.nl);
   });
