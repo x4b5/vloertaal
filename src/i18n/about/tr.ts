@@ -6,11 +6,11 @@ const t: CultureTranslation = {
   },
   gloss: {
     'a.what': 'Vloertaal nedir?',
-    'a.what.b': 'Vloertaal, işinde ihtiyacın olan Hollandacayı öğrenmene yardım eder: depoda, mutfakta, fabrikada ya da inşaatta. Sadece iş yerindeki kelimeler değil, işle ilgili tüm dil: işe başvurmak, sözleşmen ve maaş bordron, hakların, konut ve belgeler, hastalık bildirmek ve iş arkadaşlarınla iyi geçinmek. Dersler kısadır, böylece her gün birkaç dakika pratik yapabilirsin.',
+    'a.what.b': 'Vloertaal, işinde ihtiyacın olan Hollandacayı öğrenmene yardım eder: depoda, mutfakta, fabrikada ya da inşaatta. Sadece iş yerindeki kelimeler değil, işle ilgili tüm dil: işe başvurmak, sözleşmen ve maaş bordron, hakların, konut ve belgeler, hastalık bildirmek ve iş arkadaşlarınla iyi geçinmek. Dersler kısadır, böylece her gün birkaç dakika pratik yapabilirsin. Vloertaal’ı boş anlar için küçük bir ek olarak düşün. Bir dil kursunun ya da bir dil öğretmeninin yerini tutmaz.',
     'a.beta': 'Deneme sürümü',
     'a.beta.b': 'Vloertaal hâlâ bir deneme sürümüdür (beta). Uygulamayı küçük bir grup öğrenci ve eğitmenle test ediyoruz. Henüz her şey kontrol edilmedi: uzmanlar çevirileri ve kurallarla ilgili ipuçlarını hâlâ kontrol ediyor. Bir hata mı buldun? Adresimizi bu sayfanın en altında bulabilirsin.',
     'a.mission': 'Misyonumuz',
-    'a.mission.b': 'Vloertaal, Hollanda’da çalışan herkese iş için Hollandaca öğrenmede adil bir şans vermek istiyor: ücretsiz, kolay ve kendi dilinde yardımla. Vloertaal’dan kimse para kazanmıyor: reklam yok, abonelik yok ve verilerin asla satılmaz.',
+    'a.mission.b': 'Vloertaal biraz yardım etmek istiyor, böylece iş için Hollandaca öğrenmek biraz daha kolay olsun: ücretsiz, kolay ve kendi dilinde yardımla. Vloertaal’dan kimse para kazanmıyor: reklam yok, abonelik yok ve verilerin asla satılmaz.',
     'a.bram': 'Bram kim?',
     'a.bram.b': 'Bram, uygulamadaki iş arkadaşın. Yıllardır depolarda ve inşaatlarda çalışıyor ve yeni iş arkadaşlarına yardım etmeyi seviyor. Sakin konuşur; onunla hata yapabilirsin.',
     'a.how': 'Nasıl çalışır?',

@@ -6,11 +6,11 @@ const t: CultureTranslation = {
   },
   gloss: {
     'a.what': 'Czym jest Vloertaal?',
-    'a.what.b': 'Vloertaal pomaga ci nauczyć się niderlandzkiego, którego potrzebujesz w pracy: w magazynie, w kuchni, w fabryce albo na budowie. Nie tylko słowa na hali, ale cały język związany z pracą: szukanie pracy, umowa i pasek wypłaty, twoje prawa, mieszkanie i dokumenty, zgłaszanie choroby i dogadywanie się ze współpracownikami. Lekcje są krótkie, więc możesz ćwiczyć kilka minut każdego dnia.',
+    'a.what.b': 'Vloertaal pomaga ci nauczyć się niderlandzkiego, którego potrzebujesz w pracy: w magazynie, w kuchni, w fabryce albo na budowie. Nie tylko słowa na hali, ale cały język związany z pracą: szukanie pracy, umowa i pasek wypłaty, twoje prawa, mieszkanie i dokumenty, zgłaszanie choroby i dogadywanie się ze współpracownikami. Lekcje są krótkie, więc możesz ćwiczyć kilka minut każdego dnia. Traktuj Vloertaal jak mały dodatek na wolną chwilę. Nie zastępuje kursu językowego ani nauczyciela języka.',
     'a.beta': 'Wersja testowa',
     'a.beta.b': 'Vloertaal to wciąż wersja testowa (beta). Testujemy aplikację z małą grupą uczniów i opiekunów. Jeszcze nie wszystko zostało sprawdzone: eksperci wciąż sprawdzają tłumaczenia i wskazówki o przepisach. Widzisz błąd? Nasz adres znajdziesz na dole tej strony.',
     'a.mission': 'Nasza misja',
-    'a.mission.b': 'Vloertaal chce dać każdemu, kto pracuje w Holandii, uczciwą szansę na naukę niderlandzkiego do pracy: za darmo, łatwo i z pomocą w twoim języku. Nikt nie zarabia na Vloertaal: nie ma reklam ani abonamentu, a twoje dane nigdy nie są sprzedawane.',
+    'a.mission.b': 'Vloertaal chce trochę pomóc, żeby nauka niderlandzkiego do pracy była trochę łatwiejsza: za darmo, łatwo i z pomocą w twoim języku. Nikt nie zarabia na Vloertaal: nie ma reklam ani abonamentu, a twoje dane nigdy nie są sprzedawane.',
     'a.bram': 'Kim jest Bram?',
     'a.bram.b': 'Bram to twój kolega w aplikacji. Od wielu lat pracuje w magazynach i na budowach i lubi pomagać nowym kolegom. Mówi spokojnie, a przy nim możesz się mylić.',
     'a.how': 'Jak to działa?',
