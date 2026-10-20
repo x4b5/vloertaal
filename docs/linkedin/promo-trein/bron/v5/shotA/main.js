@@ -16,6 +16,7 @@ import { buildPolder, animatePolder } from '../../lib/polder.js';
 import { buildTrain, glassMaterial, carCenter, CAR, WIN } from '../../lib/train.js';
 import { buildCharacter, holdPhone } from '../../lib/char3d.js';
 import { buildExtra, randomLook } from '../../lib/extras.js';
+import { realify } from '../../lib/real.js';
 import { BAYS } from '../../lib/train.js';
 
 const P = new URLSearchParams(location.search);
@@ -149,6 +150,8 @@ const tapK = (t) => clamp(Math.min(smooth(seg(t, TAP - 0.3, TAP - 0.1)), 1 - smo
 function poseAmina(t) {
   const k = LOOK(t);
   amina.pose.headPitch = lerp(0.38, 0.02, k); amina.pose.headYaw = -0.14 * k; amina.pose.lean = lerp(0.08, 0.05, k);
+  // v6: the app's faces: happy when she looks up, concentrating on the lesson, happy again after "Goed zo!"
+  amina.expression = k > 0.35 ? 'happy' : t > 11.6 && t < TAP + 0.2 ? 'thinking' : t >= TAP + 0.2 ? 'happy' : 'idle';
   amina.update(t);
   amina.root.updateMatrixWorld(true);
   hold(t, { tap: { u: 0.5, v: (1416 + 449 / 2 + 40) / 2532, k: tapK(t) } });
@@ -355,7 +358,9 @@ function captions(t) {
   place(cap2, k2 * (1 - smooth(seg(t, 12.4, 12.75))), (1 - k2) * 36);
 }
 /** Sub-frames: 8 while the camera moves fast (drone, glass, arc), fewer on the slow push and the lock. */
-const subAt = (t) => (SUBQ !== 'auto' ? Number(SUBQ) : t < 9.0 ? 8 : t < 15.5 ? (HIQ ? 6 : t < 10.8 ? 3 : t < 13.6 ? 6 : 4) : 2);
+const SUBK = Number(P.get('subk') ?? 1);   // v6: scales the sub-frame counts (render time)
+const subAt0 = (t) => (SUBQ !== 'auto' ? Number(SUBQ) : t < 9.0 ? 8 : t < 15.5 ? (HIQ ? 6 : t < 10.8 ? 3 : t < 13.6 ? 6 : 4) : 2);
+const subAt = (t) => (SUBQ !== 'auto' ? Number(SUBQ) : Math.max(2, Math.round(subAt0(t) * SUBK)));
 
 function setTime(t) {
   captions(t);
@@ -383,6 +388,7 @@ window.ready = (async () => {
   await document.fonts.load('700 66px "Lexend V"');
   await document.fonts.ready;
   await buildAmina();
+  if (P.get('real') !== '0') realify(scene, renderer);   // v6: physically based materials + environment
   await buildCamera();
   setTime(Number(P.get('t') ?? 0));
   return true;

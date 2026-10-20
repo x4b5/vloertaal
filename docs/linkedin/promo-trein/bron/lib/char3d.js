@@ -304,6 +304,19 @@ export async function buildCharacter(who, { renderer, base = '../assets/chars/',
   };
   const faceOpen = tex(await rasterize(faceSvg(false), fvb, ppu), renderer);
   const faceShut = tex(await rasterize(faceSvg(true), fvb, ppu), renderer);
+  // v6: the app's other expressions (happy, pleased, cheer, thinking), open and blinking, set via `expression`
+  const faces = { idle: { open: faceOpen, shut: faceShut } };
+  for (const ex of ['happy', 'pleased', 'cheer', 'thinking']) {
+    let other;
+    try { other = parseFigure(await loadText(`${base}${who}-${ex}.svg.html`)); } catch { continue; }
+    const lk = other.querySelector('.ch-look'); if (!lk) continue;
+    const fs = (closed) => {
+      let h = lk.outerHTML;
+      if (closed) h = h.replace(/<ellipse([^>]*?)ry="[0-9.]+"/g, '<ellipse$1ry="0.32"');
+      return `<g transform="translate(${shiftX} 0)">${FACE_PAINT[who]}${h}</g>`;
+    };
+    faces[ex] = { open: tex(await rasterize(fs(false), fvb, ppu), renderer), shut: tex(await rasterize(fs(true), fvb, ppu), renderer) };
+  }
   const faceMat = new THREE.MeshToonMaterial({ map: faceOpen, gradientMap: toonGradient(), transparent: true, depthWrite: false });
   const V = (x, y, z) => new THREE.Vector3(x, y, z);
   const both = mergeGeometries([flatGeo(headGeo.clone()), flatGeo(noseGeo.clone())].map((g) => { const h = g.index ? g.toNonIndexed() : g; for (const k of Object.keys(h.attributes)) if (k !== 'position' && k !== 'normal') h.deleteAttribute(k); return h; }));
@@ -381,6 +394,7 @@ export async function buildCharacter(who, { renderer, base = '../assets/chars/',
     pose: { lean: 0, headPitch: 0, headYaw: 0, headRoll: 0, blinkOffset: 0.7 },
     base: { neckY: BODY.neckY, shY: BODY.shoulderY },
     eyesClosed: false,
+    expression: 'idle',   // v6: idle | happy | pleased | cheer | thinking (the app's faces)
     update(t) {
       const p = this.pose, br = Math.sin((t / 4.0) * Math.PI * 2);           // the app's 4 s breath
       spine.rotation.x = p.lean;
@@ -393,7 +407,9 @@ export async function buildCharacter(who, { renderer, base = '../assets/chars/',
       // blink: 0.08 scale for ~1/8 of 0.2 s in the app; here the eyes are shut for 0.1 s each period
       const ph = (((t + p.blinkOffset) % L.blink) + L.blink) % L.blink;
       const shut = ph < 0.1;
-      if (shut !== this.eyesClosed) { this.eyesClosed = shut; faceMat.map = shut ? faceShut : faceOpen; faceMat.needsUpdate = true; }
+      const fx = faces[this.expression] ?? faces.idle, map = shut ? fx.shut : fx.open;
+      const fm = rig.faceDecal.material;   // the decal's material (it may have been swapped, see lib/real.js)
+      if (fm.map !== map) { this.eyesClosed = shut; fm.map = map; fm.needsUpdate = true; }
       root.updateMatrixWorld(true);
     },
     /** Swap the mitten for the open hand (palm forward wave) on one side. */
@@ -717,7 +733,7 @@ export function holdPhone(ch, phone, { pw, ph, depth, grip = 0.3, spread = 0.55 
       th.parent.getWorldQuaternion(tmpQ);
       const dirL = dirW.applyQuaternion(tmpQ.invert());
       th.quaternion.setFromUnitVectors(new THREE.Vector3(0, -1, 0), dirL);
-      if (k > 0) th.scale.y = lerp(1, clamp(dist / 0.044, 0.6, 1.9), k);
+      if (k > 0) { th.scale.y = lerp(1, clamp(dist / 0.044, 0.6, 1.9), k); th.scale.x = th.scale.z = lerp(1, 0.78, k); }   // v6: slimmer while tapping
       th.updateWorldMatrix(false, true);
     }
   };

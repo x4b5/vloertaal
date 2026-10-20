@@ -118,7 +118,9 @@ export function canteen(root, renderer, T) {
     g.fillStyle = '#ffffff'; g.beginPath(); g.roundRect(560, 34, 1440, 92, 46); g.fill();
     g.strokeStyle = '#3c4a56'; g.lineWidth = 6; g.beginPath(); g.roundRect(612, 74, 30, 24, 4); g.stroke(); g.beginPath(); g.arc(627, 74, 10, Math.PI, 0); g.stroke();
     g.fillStyle = '#1e2226'; g.font = '600 52px "Lexend V"'; g.textBaseline = 'middle'; g.fillText('vloertaal.nl', 670, 82);
-    g.drawImage(page, 0, 160);
+    // v6: 1.5x zoom on the top of the page (logo + the first languages): the whole page was too small to read
+    g.fillStyle = '#f4f2ee'; g.fillRect(0, 160, 2560, 1600);
+    g.drawImage(page, 426, 0, 1707, 1067, 0, 160, 2560, 1600);
     const tex = canvasTex(c, renderer);
     screenMesh = new THREE.Mesh(new THREE.PlaneGeometry(scrInfo.sw, scrInfo.sh), new THREE.MeshBasicMaterial({ map: tex, toneMapped: false }));
     screenMesh.position.set(0, scrInfo.cy, 0.0036); scrInfo.lid.add(screenMesh);
@@ -190,6 +192,11 @@ export function canteen(root, renderer, T) {
   const HANDQ = new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().makeBasis(V3(1, 0, 0), V3(0, 0, 1), V3(0, -1, 0)));
   const { SHARE_TAP } = T;
   function poseHenk(t) {
+    // v6: a pleased nod while the camera is at his face, happy when he shares the link
+    henk.pose.basePitch ??= henk.pose.headPitch;
+    const nod = Math.sin(Math.PI * clamp((t - 14.55) / 0.7));
+    henk.pose.headPitch = henk.pose.basePitch + 0.09 * nod;
+    henk.expression = t < 14.3 ? 'idle' : t < SHARE_TAP - 0.4 ? 'pleased' : 'happy';
     henk.update(t);
     henk.root.updateMatrixWorld(true);
     const tap = Math.sin(Math.PI * clamp((t - SHARE_TAP + 0.12) / 0.24));

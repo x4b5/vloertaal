@@ -36,6 +36,24 @@ mee naar de telefoon of laptop.
 Er wordt nergens geknipt. Amina's scherm wordt Jada's scherm terwijl het hele beeld scherm is; de laatste
 beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop gaat in 0,3 s over in de eindkaart.
 
+**Versie 6 (realistischer, met geluid):**
+- **Licht en schaduw:** de figuren en het decor hebben echte, ronde schaduw in plaats van platte vlakken, met meer
+  zon en minder vlak licht. De figuren houden hun gezicht uit de app.
+- **Tijd van de dag:** ochtend in de trein, met licht van het raam; late middag op het terras en boven de stad,
+  met warm licht en waas in de verte; warm binnenlicht in de hal en de kantine. De schermen van de app blijven
+  neutraal, zodat de kleuren van het merk kloppen.
+- **Natuurlijke kleuren:** minder knalgroen gras en een zachtere lucht, en een filmische contrastcurve.
+- **Gezichten:** de uitdrukkingen uit de app wisselen. Amina lacht als ze opkijkt, Jada denkt na en juicht bij
+  "Dag 7 op rij", en Henk knikt tevreden en lacht als hij de link deelt. De figuranten lachen ook.
+- **Foutjes opgelost:** Jada tikt met haar duim op het nummer van het antwoord, dus haar duim bedekt de tekst
+  niet meer. De website op Henks laptop staat 1,5× groter. Bij het delen verschijnt een scherp label
+  "vloertaal.nl · Link gedeeld".
+- **Geluid:** onder de muziek zitten 21 geluidseffecten van ElevenLabs. Je hoort wind, de trein, het terras, een
+  belletje bij "Goed zo!", een vrachtwagen die achteruit rijdt, de heftruck en de hal, een melding als de link
+  gedeeld wordt, en een stempel en vinkjes op de eindkaart. Stemmen zitten er niet in.
+- **Resolutie:** de film is op 1,25× gerenderd in plaats van 1,5×, met iets minder deelbeelden voor de
+  bewegingsonscherpte. De echte materialen kostten anders 3× zoveel rekentijd.
+
 **Kwaliteit (v5):**
 - **Scherper:** het middenstuk, de eindkaart en Amina vanaf 9 s zijn op 1,5× gerenderd en daarna verkleind.
 - **Diepte:** in de close-ups is de achtergrond licht onscherp, zoals bij een echte lens.
@@ -79,6 +97,14 @@ De film is gebouwd met three.js (in Chromium, beeld voor beeld) en ffmpeg:
   - De figuranten: `bron/lib/extras.js` bouwt ze (zitten, lopen, fietsen); `shotB/extras.js` zet ze op het terras,
     in de stad, op het bedrijventerrein en in de hal en de kantine. De reizigers staan in `shotA/main.js`.
   - `renderX54.sh` rendert alle beelden die door de figuranten veranderd zijn.
+  - Versie 6:
+    - `bron/lib/real.js` geeft het decor en de figuren echte materialen (ronde schaduw);
+    - `char3d.js` wisselt de gezichtsuitdrukkingen uit de app;
+    - `renderV6.sh` rendert alles opnieuw;
+    - `grade6.py` maakt het licht van de tijd van de dag en de natuurlijke kleuren;
+    - `assemble6.py` zet de film in elkaar, met het label uit `chip/`;
+    - `bron/v6-geluid/` maakt de geluidseffecten en de mix met de muziek (`build.sh`; de effecten staan in
+      `sfx-notes.md`, de originele opnames in `raw/`).
   - In v5b (54 s) speelt `shotB` dezelfde camerabewegingen op een langzamere klok (`WARP`): 29 s in plaats van
     19 s. De meeste extra tijd gaat naar Jada, de vlucht, de hal en Henk. De eindkaart duurt 8,5 s.
 - `bron/v4/`: de versie van 42 seconden met wissels: `shot1` tot en met `shot3` spelen de camerabewegingen van v3

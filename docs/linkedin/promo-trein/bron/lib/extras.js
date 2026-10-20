@@ -57,6 +57,11 @@ export function buildExtra(o = {}) {
   const HR = 0.112;
   const hd = mesh(sphere(HR, SW, SH), skin, head, 0, HR * 1.08, 0.005); hd.scale.set(0.95, 1.12, 1.02);
   if (!far) for (const s of [-1, 1]) mesh(sphere(0.011, 8, 6), '#1e2226', head, s * 0.04, HR * 1.12, HR * 0.98);
+  if (!far) {   // v6: a small smile and a hint of brows, so the extras read as friendly faces up close
+    const sm = mesh(G('smile', () => new THREE.TorusGeometry(0.022, 0.0045, 4, 10, Math.PI * 0.8)), '#5a2e22', head, 0, HR * 0.86, HR * 1.03);
+    sm.rotation.set(0, 0, Math.PI * 1.1); sm.material = toon('#5a2e22');
+    for (const s of [-1, 1]) { const b = mesh(G('brow', () => new THREE.BoxGeometry(0.03, 0.006, 0.006)), o.hairColor ?? '#2e201a', head, s * 0.042, HR * 1.38, HR * 1.02); b.rotation.z = -s * 0.15; }
+  }
   const hc = o.hairColor ?? '#2e201a', hy = HR * 1.08;
   const cap = (r, color, thetaLen = Math.PI * 0.5, tilt = -0.42) => {
     const k = mesh(G(`cap${r},${thetaLen},${SW}`, () => new THREE.SphereGeometry(r, SW, SH, 0, Math.PI * 2, 0, thetaLen)), color, head, 0, hy, 0);

@@ -214,12 +214,15 @@ export function terrace(root, renderer, T) {
     for (const k of ['chat_pl', 'chat_pl_ok', 'streak_pl']) IMG[k] = await loadImg(`../../assets/shots/${k}.png`);
   }
   const { TAP, STREAK, DAG } = T;
-  // her left thumb taps answer 1 ("Bijna. Nog vijf minuten.", at x 330, y 1509 of 1170 × 2532)
+  // her left thumb taps answer 1 ("Bijna. Nog vijf minuten."): v6 on its number badge (x 165, y 1509 of 1170 × 2532),
+  // near the left edge, so the thumb comes in short and leaves the text free
   const tapK = (t) => clamp(Math.min(smooth(seg(t, TAP - 0.3, TAP - 0.08)), 1 - smooth(seg(t, TAP + 0.08, TAP + 0.32))));
   function poseJada(t) {
+    // v6: the app's faces: thinking while she chooses, a cheer at "Dag 7 op rij", then happy
+    jada.expression = t < TAP + 0.25 ? 'thinking' : t < DAG + 0.05 ? 'idle' : t < DAG + 1.6 ? 'cheer' : 'happy';
     jada.update(t);
     jada.root.updateMatrixWorld(true);
-    hold(t, { tap: { u: 330 / 1170, v: 1509 / 2532, k: tapK(t), side: 'L' } });
+    hold(t, { tap: { u: 165 / 1170, v: 1509 / 2532, k: tapK(t), side: 'L' } });
   }
 
   // ---------------- the screen (the app's real screenshots) ----------------
