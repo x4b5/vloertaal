@@ -26,7 +26,7 @@ import { SectorScreen } from './components/Sector';
 import type { SectorChoice } from './content/sectors';
 import { isMixLesson } from './content/review';
 import { restedYesterday } from './lib/greeting';
-import { higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
+import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
 import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
@@ -127,7 +127,13 @@ export default function App() {
   const [stopped, setStopped] = useState<number | null>(start.stopped);
   /** The lesson just finished: the path scrolls to the next one and stamps this one in. */
   const [arrived, setArrived] = useState<string | null>(null);
-  const [access, setAccess] = useState<Access | null>(loadAccess);
+  // From the intro page (?intro): the sneak preview, without the password page.
+  const [access, setAccess] = useState<Access | null>(() => {
+    const had = loadAccess();
+    const a = accessFromIntro(had, location.search);
+    if (a && !had) saveAccess(a);
+    return a;
+  });
   /** Back to the language from the next page: the list opens (the guess was seen). */
   const [langAgain, setLangAgain] = useState(false);
   /** Back from the sector to the password page: the accepted code is kept (not cleared). */

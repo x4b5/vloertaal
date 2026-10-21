@@ -125,7 +125,7 @@ ${qs}
 <h2 id="why" tabindex="-1">Waarom Vloertaal?</h2>
 ${why}
 <p class="checks">✅ Gratis · ✅ Geen account · ✅ Geen reclame</p>
-<a class="cta" href="/">Bekijk de app</a>
+<a class="cta" href="/?intro">Bekijk de app</a>
 <p>Meedenken of meedoen? Mail naar <a class="mail" href="mailto:hoi@vloertaal.nl">hoi@vloertaal.nl</a>.</p>
 </section>
 <footer><p>Vloertaal is een vrijwillig project, nog in de testfase.</p></footer>
