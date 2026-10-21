@@ -36,7 +36,7 @@ mee naar de telefoon of laptop.
 Er wordt nergens geknipt. Amina's scherm wordt Jada's scherm terwijl het hele beeld scherm is; de laatste
 beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop gaat in 0,3 s over in de eindkaart.
 
-**Versie 8 (figuranten af, handen, looproutes; de video wordt nog gerenderd, de mp4's hierboven zijn nog v7):**
+**Versie 8 (figuranten af, handen, looproutes):**
 - **Figuranten:**
   - Ze hebben nu een ronde borst en rug, een kraag, oren, een neus en handen met een duim. Eerst waren het
     cilinders met bolletjes als handen.
