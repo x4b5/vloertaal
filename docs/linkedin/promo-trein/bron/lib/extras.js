@@ -156,8 +156,16 @@ export function buildExtra(o = {}) {
     A.sh.rotation.set(a, 0, A.s * roll); A.el.rotation.set(b, 0, 0);
   }
   function reset() { hips.position.set(0, HIP, 0); hips.rotation.set(0, 0, 0); spine.rotation.set(0, 0, 0); neck.rotation.set(0, 0, 0); head.rotation.set(0, 0, 0); }
+  let cup = null;
   const api = {
     root, hips, spine, head, arm, leg, armAt, legAt,
+    /** v8: a coffee cup in the right hand (for the extras who take a sip). */
+    holdCup() {
+      if (cup) return;
+      cup = new THREE.Group(); arm.R.el.add(cup); cup.position.set(0, -FORE - 0.085, 0.045);
+      const body = new THREE.Mesh(G('cupb', () => new THREE.CylinderGeometry(0.038, 0.03, 0.085, 14)), toon('#f4f7f9')); body.castShadow = true; cup.add(body);
+      const cof = new THREE.Mesh(G('cupc', () => new THREE.CircleGeometry(0.034, 14)), toon('#5a3a24')); cof.rotation.x = -Math.PI / 2; cof.position.y = 0.036; cup.add(cof);
+    },
     head2(yaw = 0, pitch = 0, roll = 0) { head.rotation.set(pitch, yaw, roll); },
     /** Standing, weight on both feet; `sway` a gentle idle. */
     stand(t = 0, { sway = 1 } = {}) {
@@ -168,7 +176,7 @@ export function buildExtra(o = {}) {
     /** A walk cycle at phase p (radians; one stride per 2π). */
     walk(p) {
       reset();
-      hips.position.y = HIP - 0.035 + 0.025 * Math.abs(Math.cos(p)); spine.rotation.x = 0.04; spine.rotation.y = 0.08 * Math.sin(p);
+      hips.position.y = HIP + 0.02 + 0.02 * Math.abs(Math.cos(p));   // v8: soles on the ground (they sank 3–7 cm) spine.rotation.x = 0.04; spine.rotation.y = 0.08 * Math.sin(p);
       for (const [s, k] of [['L', 1], ['R', -1]]) {
         const q = p + (k > 0 ? 0 : Math.PI), sw = Math.sin(q);
         leg[s].hp.rotation.set(-0.42 * sw, 0, 0);

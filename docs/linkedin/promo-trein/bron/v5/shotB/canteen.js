@@ -72,7 +72,9 @@ export function canteen(root, renderer, T) {
   const fl = new THREE.Group(); fl.position.set(-6.4, 0, -0.4); fl.rotation.y = 1.15; root.add(fl);   // v5: out of the camera's aisle
   {
     const y = lam('#ffc414'), yd = lam('#e0a800'), blk = lam('#1e2226'), grey = lam('#3c4a56');
-    add(new THREE.BoxGeometry(1.1, 0.6, 0.85), y, 0, 0.55, 0, { parent: fl });
+    // v8: a low floor plate and a front cowl instead of one tall box (the driver's shins were inside it)
+    add(new THREE.BoxGeometry(1.1, 0.19, 0.85), y, 0, 0.345, 0, { parent: fl });
+    add(new THREE.BoxGeometry(0.12, 0.6, 0.85), y, 0.52, 0.55, 0, { parent: fl });
     add(new THREE.BoxGeometry(0.5, 0.55, 0.8), yd, -0.45, 0.6, 0, { parent: fl });
     for (const [x, z] of [[0.35, 0.45], [0.35, -0.45], [-0.4, 0.45], [-0.4, -0.45]]) add(new THREE.CylinderGeometry(0.24, 0.24, 0.18, 16), blk, x, 0.24, z, { rx: Math.PI / 2, parent: fl });
     for (const [x, z] of [[0.2, 0.36], [0.2, -0.36], [-0.35, 0.36], [-0.35, -0.36]]) add(new THREE.BoxGeometry(0.05, 1.2, 0.05), grey, x, 1.45, z, { parent: fl });
@@ -82,6 +84,9 @@ export function canteen(root, renderer, T) {
     add(new THREE.BoxGeometry(0.06, 0.5, 0.8), grey, 0.66, 0.5, 0, { parent: fl });
     for (const z of [-0.22, 0.22]) add(new THREE.BoxGeometry(0.9, 0.04, 0.1), grey, 1.1, 0.3, z, { parent: fl });
     add(new THREE.BoxGeometry(0.9, 0.12, 0.9), lam('#b47a45'), 1.1, 0.38, 0, { parent: fl });
+    // v8: a steering column and wheel in front of the driver (his hands held nothing)
+    const col = add(new THREE.CylinderGeometry(0.022, 0.022, 0.62, 8), blk, 0.3, 1.12, 0, { parent: fl }); col.rotation.z = 0.35;
+    const wh = add(new THREE.TorusGeometry(0.15, 0.018, 6, 20), blk, 0.2, 1.42, 0, { parent: fl }); wh.rotation.set(0, Math.PI / 2, 0); wh.rotateX(0.55);
     add(new THREE.BoxGeometry(0.75, 0.5, 0.75), lam('#c98a4b'), 1.1, 0.69, 0, { parent: fl });
   }
 

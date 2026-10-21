@@ -30,14 +30,15 @@ export function extrasB(scene, G) {
   const chat = (yaw0, ph) => (w, e) => {
     const k = Math.sin(w * 0.9 + ph);
     e.head2(yaw0 + 0.18 * k, 0.05 + 0.05 * Math.sin(w * 2.3 + ph), 0.04 * k);
-    e.armAt('R', -0.2, 0.78 + 0.05 * Math.max(0, Math.sin(w * 1.7 + ph)), 0.42);
-    e.armAt('L', 0.22, 0.76, 0.38);
+    e.armAt('R', -0.2, 0.81 + 0.05 * Math.max(0, Math.sin(w * 1.7 + ph)), 0.42);   // v8: +3 cm, on the table top instead of in it
+    e.armAt('L', 0.22, 0.79, 0.38);
   };
   const sip = (ph) => (w, e) => {
+    e.holdCup();                                                       // v8: something to drink from
     const q = smooth(clamp(Math.sin(w * 0.55 + ph) * 3 - 2));            // now and then the cup goes up
     e.head2(0.1 * Math.sin(w * 0.4 + ph), 0.1 - 0.12 * q);
-    e.armAt('R', -0.14 + 0.08 * q, 0.8 + 0.62 * q, 0.42 - 0.18 * q);
-    e.armAt('L', 0.22, 0.76, 0.38);
+    e.armAt('R', -0.14 + 0.08 * q, 0.83 + 0.59 * q, 0.42 - 0.18 * q);
+    e.armAt('L', 0.22, 0.79, 0.38);
   };
   const phone = (ph) => (w, e) => { e.head2(0.05 * Math.sin(w * 0.3 + ph), 0.45); e.armAt('R', -0.06, 0.92, 0.33); e.armAt('L', 0.06, 0.92, 0.33); };
   guest(-4.3, 0.85, 0, { hair: 'curly', top: '#e0703f' }, chat(-0.5, 0));
@@ -53,7 +54,7 @@ export function extrasB(scene, G) {
   // where half of him was inside the wall)
   { const tray = new THREE.Mesh(new THREE.CylinderGeometry(0.17, 0.17, 0.015, 20), new THREE.MeshLambertMaterial({ color: '#cfd8de' }));
     tray.castShadow = true;
-    const walk = route([[0, -2.45], [-0.9, -2.3], [-1.75, -2.15]], 0.9, 3.4);
+    const walk = route([[0, -2.35], [-0.9, -2.0], [-1.5, -1.7]], 0.9, 3.4);   // v8: ends clear of the planter
     const e = add({ skin: '#a86c45', top: '#26313a', pants: '#1e2226', hair: 'short', hairColor: '#1e1a18' }, scene, (w, e) => {
       walk(w, e); e.armAt('L', 0.28, 1.08, 0.3); e.head2(0.12 * Math.sin(w * 0.7), 0.08);
     });
@@ -88,7 +89,7 @@ export function extrasB(scene, G) {
     });
   };
   cyclist({ hair: 'long', top: '#ffc414' }, 3, 6.0, -1, 0, 4.2, 0);
-  cyclist({ hair: 'short', top: '#1592db' }, -46, 5.0, 1, 0, 3.8, 1.3);   // v8: from further up the street, so it never reaches the canal
+  cyclist({ hair: 'short', top: '#1592db' }, -46, 10.0, 1, 0, 3.8, 1.3, false, scene, [-75, 3.4, 0, 20]);   // v8: on the far lane (it rode through a guest's table), gone before the canal
   // ---------------- the town (seen from the air: lighter figures) ----------------
   const TOWN = [-75, 3.6, -138, 60];     // v8: the town's streets west of the canal (x < 3.6), north of the business park (z > −138)
   for (let i = 0; i < 9; i++) {           // the long street at x ≈ −19, both ways
@@ -97,7 +98,7 @@ export function extrasB(scene, G) {
   }
   for (let i = 0; i < 10; i++) {
     const side = i % 2 ? -14.7 : -23.3, dir = R() < 0.5 ? -1 : 1;
-    walker({ far: true }, side, 30 - i * 17 + R() * 8, 0, dir, 1.2 + R() * 0.3, R() * 6, scene, 1e9, TOWN);
+    walker({ far: true }, side + (side < -19 ? 1 : -1) * (dir > 0 ? 0.8 : 0), 30 - i * 17 + R() * 8, 0, dir, 1.2 + R() * 0.3, R() * 6, scene, 1e9, TOWN);   // v8: a lane per direction
   }
   for (let i = 0; i < 8; i++) {           // the quays along the canal
     const x = i % 2 ? 4.0 : 12.4, dir = R() < 0.5 ? -1 : 1;
@@ -121,9 +122,10 @@ export function extrasB(scene, G) {
   { const fl = G.children.find((c) => c.isGroup && Math.abs(c.position.x + 6.4) < 0.01 && Math.abs(c.position.z + 0.4) < 0.01);
     if (fl) { const e = buildExtra(look({ vest: true, helmet: '#f4f7f9', hair: 'short' })); fl.add(e.root);
       list.push({ e, fn: (w, e) => { e.root.position.set(-0.18, 0.43, 0); e.root.rotation.y = Math.PI / 2; e.sit({ seatH: 0.5, knees: 0.4 }); e.armAt('R', -0.18, 1.05, 0.38); e.armAt('L', 0.18, 1.05, 0.38); e.head2(0.25 * Math.sin(w * 0.5), 0.05); } }); } }
-  // a picker at the first rack (local z −5.1), reaching for a box; another walking the next aisle
+  // a picker at the first rack (local z −5.1), reaching for a box (v8: hands above the beam, not in it); another
+  // walking the next aisle
   inG({ vest: true, helmet: '#ffc414' }, (w, e) => { e.root.position.set(2.9, 0, -4.2); e.root.rotation.y = Math.PI; e.stand(w);
-    const k = 0.5 + 0.5 * Math.sin(w * 0.8); e.armAt('R', -0.2, 1.35 + 0.15 * k, 0.4); e.armAt('L', 0.2, 1.3 + 0.15 * k, 0.4); e.head2(0, -0.2); });
+    const k = 0.5 + 0.5 * Math.sin(w * 0.8); e.armAt('R', -0.2, 1.62 + 0.12 * k, 0.36); e.armAt('L', 0.2, 1.58 + 0.12 * k, 0.36); e.head2(0, -0.2); });
   { const r = route([[-9, -6.85], [12, -6.85]], 1.2, 17);   // v8: one walk down the aisle (it used to jump back to the start)
     inG({ vest: '#d7e83a', helmet: '#ffc414' }, (w, e) => r(w, e)); }
   // canteen colleagues: two at the left table (−1.6, 3.2), one at the right (1.9, 4.2), one at the coffee machine
@@ -131,7 +133,8 @@ export function extrasB(scene, G) {
   sitG(-1.95, 2.6, 1, { hair: 'long', top: '#3fa34d' }, chat(0.25, 0.3));
   sitG(-1.25, 3.8, -1, { hair: 'short', beard: true, top: '#ff7a00', vest: true }, sip(1.1));
   sitG(2.25, 4.8, -1, { hair: 'scarf', scarfColor: '#1f5fa8', top: '#e9ecef' }, phone(0.2));
-  inG({ hair: 'bald', top: '#244a7d' }, (w, e) => { e.root.position.set(2.55, 0, 2.45); e.root.rotation.y = Math.PI / 2; e.stand(w); e.armAt('R', -0.1, 1.05, 0.35); e.head2(0.1, 0.15); });
+  // v8: the colleague at the coffee machine stands in front of the counter (x ≥ 2.5), not in it
+  inG({ hair: 'bald', top: '#244a7d' }, (w, e) => { e.root.position.set(2.15, 0, 2.55); e.root.rotation.y = Math.PI / 2; e.stand(w); e.armAt('R', -0.1, 1.05, 0.35); e.head2(0.1, 0.15); });
   return {
     update(w) { for (const { e, fn } of list) fn(w, e); },
     count: list.length,

@@ -52,6 +52,21 @@ beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop 
   - De fietsers en voetgangers in de stad blijven in de stad. Eerst reed een fietser door de lange straat
     tot in de hal op het bedrijventerrein.
   - De man in het gangpad van de hal loopt één keer door en springt niet meer terug.
+- **Nog meer foutjes**, gevonden door een criticus die de film beeld voor beeld bekeek en door een botsingscontrole in
+  de browser, die elk kwart seconde meet of iemand ergens in zit:
+  - Jada's benen staken door het tafelblad; haar voeten staan nu verder naar voren.
+  - Het kaartje "Dag 7 op rij" zakt terug in het scherm voordat de camera opzij draait. Van opzij leek het een
+    zwevend wit balkje.
+  - Een fietser op het terras reed door een tafel met een gast; hij rijdt nu op de verste rijstrook.
+  - De ober eindigt niet meer in de plantenbak.
+  - In de stad staan geen bomen meer op de dwarsstraten en geen geparkeerde auto's meer op de kruispunten, waar
+    mensen er dwars doorheen liepen. Voetgangers in de lange straat hebben een eigen strook per richting.
+  - In de kantine staat de collega bij de koffiemachine vóór het aanrecht in plaats van erin. Wie drinkt, heeft
+    nu een kopje in de hand.
+  - De heftruck heeft een stuur, en de benen van de chauffeur zitten niet meer in de bak.
+  - De orderpicker pakt boven de ligger in plaats van erin.
+  - Wandelaars zakten 3 tot 12 cm door de grond, en de stoepranden staken iets uit. Handen van zittende
+    gasten zakten in het tafelblad.
 - **Rustiger oppervlak:** de textures, de contactschaduw en het glimmende metaal zijn in de shader zelf ongeveer
   half zo sterk als in v7. Het achteraf dempen tegen v6 (`tame7.py`) kan niet meer, omdat de figuren nu anders
   zijn dan in v6.
