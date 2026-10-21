@@ -70,7 +70,9 @@ beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop 
 - **Rustiger oppervlak:** de textures, de contactschaduw en het glimmende metaal zijn in de shader zelf ongeveer
   half zo sterk als in v7. Het achteraf dempen tegen v6 (`tame7.py`) kan niet meer, omdat de figuren nu anders
   zijn dan in v6.
-- **Resolutie:** alles op 1,25× met 80 % van de subframes, zoals in v6, zodat de film in ongeveer 6 uur klaar was.
+- **Resolutie:** alles op 1,25× met 80 % van de subframes, zoals in v6, zodat de film in ongeveer 5 uur klaar was.
+  De eerste 5 seconden (de drone boven de polder: geen mensen, geen handen) komen uit de v7-render, getemperd
+  tegen v6 met `tame7.py`, net als in v7.
 
 **Versie 7 (oppervlakken en contactschaduw):**
 - **Textures:** het decor heeft nu een oppervlak in plaats van een egale kleur. Muren en gevels hebben bakstenen
