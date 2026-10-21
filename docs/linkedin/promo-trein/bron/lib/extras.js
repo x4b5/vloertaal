@@ -44,6 +44,10 @@ export function buildExtra(o = {}) {
   const spine = new THREE.Group(); spine.position.y = 0.04; hips.add(spine);
   const tor = mesh(G(`tor${S}`, () => { const g = new THREE.CylinderGeometry(0.185, 0.16, 0.5, S); g.translate(0, 0.25, 0); return g; }), top, spine); tor.scale.z = 0.64;
   for (const s of [-1, 1]) mesh(sphere(0.06, SW, SH), sleeve, spine, s * 0.19, 0.455, 0);
+  // v8: a rounded chest and back over the top of the torso (the bare cylinder read as unfinished), and a collar
+  { const y = mesh(sphere(0.19, SW, SH), top, spine, 0, 0.4, 0); y.scale.set(1.02, 0.42, 0.66);
+    const c = mesh(G(`collar${S}`, () => new THREE.TorusGeometry(0.058, 0.014, 6, S + 4)), top, spine, 0, 0.5, 0); c.rotation.x = Math.PI / 2; }
+  { const b = mesh(sphere(0.165, SW, SH), pants, hips, 0, -0.06, 0); b.scale.set(1, 0.5, 0.72); }   // seat of the trousers
   if (o.vest) {
     const vc = o.vest === true ? '#ff7a00' : o.vest;
     const v = mesh(G(`vest${S}`, () => { const g = new THREE.CylinderGeometry(0.195, 0.175, 0.42, S, 1, true); g.translate(0, 0.27, 0); return g; }), vc, spine); v.scale.z = 0.68;
@@ -56,7 +60,11 @@ export function buildExtra(o = {}) {
   const head = new THREE.Group(); head.position.y = 0.08; neck.add(head);
   const HR = 0.112;
   const hd = mesh(sphere(HR, SW, SH), skin, head, 0, HR * 1.08, 0.005); hd.scale.set(0.95, 1.12, 1.02);
-  if (!far) for (const s of [-1, 1]) mesh(sphere(0.011, 8, 6), '#1e2226', head, s * 0.04, HR * 1.12, HR * 0.98);
+  if (!far) for (const s of [-1, 1]) mesh(sphere(0.012, 8, 6), '#1e2226', head, s * 0.04, HR * 1.12, HR * 0.98);
+  if (!far) {   // v8: ears and a nose
+    for (const s of [-1, 1]) { const ear = mesh(sphere(0.022, 8, 6), skin, head, s * HR * 0.93, HR * 1.05, -0.005); ear.scale.set(0.45, 1, 0.8); }
+    const nose = mesh(sphere(0.016, 8, 6), skin, head, 0, HR * 0.99, HR * 1.12); nose.scale.set(0.85, 1, 0.9);
+  }
   if (!far) {   // v6: a small smile and a hint of brows, so the extras read as friendly faces up close
     const sm = mesh(G('smile', () => new THREE.TorusGeometry(0.022, 0.0045, 4, 10, Math.PI * 0.8)), '#5a2e22', head, 0, HR * 0.86, HR * 1.03);
     sm.rotation.set(0, 0, Math.PI * 1.1); sm.material = toon('#5a2e22');
@@ -97,7 +105,15 @@ export function buildExtra(o = {}) {
     const el = new THREE.Group(); el.position.y = -UPPER; sh.add(el);
     mesh(sphere(0.045, SW, SH), o.shortSleeve ? skin : sleeve, el);
     mesh(limb(FORE, 0.044, 0.036, S), o.shortSleeve ? skin : sleeve, el);
-    const hand = mesh(sphere(0.045, SW, SH), skin, el, 0, -FORE - 0.025, 0); hand.scale.set(0.8, 1.1, 0.95);
+    if (far) { const hand = mesh(sphere(0.045, SW, SH), skin, el, 0, -FORE - 0.025, 0); hand.scale.set(0.8, 1.1, 0.95); }
+    else {   // v8: a hand with a thumb (it was a ball): wrist, flat palm with the fingers together, thumb toward the body
+      mesh(limb(0.03, 0.034, 0.03, S), skin, el, 0, -FORE + 0.005, 0);
+      const pg = G('xpalm', () => { const g = new THREE.BoxGeometry(0.07, 0.095, 0.032, 1, 2, 1); g.translate(0, -0.047, 0); return g; });
+      const palm = mesh(pg, skin, el, 0, -FORE - 0.02, 0); palm.rotation.y = s * 0.0;
+      const tip = mesh(sphere(0.035, SW, SH), skin, el, 0, -FORE - 0.11, 0); tip.scale.set(1, 0.45, 0.46);
+      const th = mesh(G('xthumb', () => { const g = new THREE.CapsuleGeometry(0.013, 0.035, 3, 8); g.translate(0, -0.024, 0); return g; }), skin, el, -s * 0.012, -FORE - 0.025, 0.022);
+      th.rotation.set(-0.45, 0, -s * 0.2);
+    }
     arm[side] = { sh, el, s };
   }
   // legs: hip › knee › foot

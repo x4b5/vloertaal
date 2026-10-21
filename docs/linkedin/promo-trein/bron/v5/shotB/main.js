@@ -165,7 +165,7 @@ function poseCamera(u) {
 /** Lens: shallow focus near Jada and near Henk; none in the air and at both hand-offs. */
 const apertureAt = (u) => 0.006 * (smooth(seg(u, 0.9, 1.6)) * (1 - smooth(seg(u, 6.7, 7.4))) + smooth(seg(u, 13.9, 14.5)) * (1 - smooth(seg(u, 16.9, 17.4))));
 const SUBK = Number(P.get('subk') ?? 1);   // v6: scales the sub-frame counts (render time)
-const AOK = Number(P.get('ao') ?? 1);   // v7: contact shadow strength (lib/ao.js); 0 = off
+const AOK = Number(P.get('ao') ?? 0.6);   // v7: contact shadow strength (lib/ao.js); 0 = off
 const subAt0 = (u) => (SUBQ !== 'auto' ? Number(SUBQ) : u < 0.55 ? 2 : u < 7.2 ? 5 : u < 13.9 ? 6 : u < 17.3 ? 5 : u < 18.45 ? 3 : 5);
 
 const subAt = (t) => (SUBQ !== 'auto' ? Number(SUBQ) : Math.max(2, Math.round(subAt0(t) * SUBK)));

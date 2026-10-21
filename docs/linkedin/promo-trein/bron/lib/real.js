@@ -52,7 +52,7 @@ function convert(m, kind) {
     roughness: metal ? 0.42 : kind === 'cast' ? 0.62 : 0.86, metalness: metal ? 0.55 : 0.0,
   });
   s.name = m.name; s.toneMapped = m.toneMapped;
-  if (metal && METAL_ENV && !ENV) { s.envMap = METAL_ENV; s.envMapIntensity = 0.7; s.roughness = 0.32; }   // v7: reflections on metal only
+  if (metal && METAL_ENV && !ENV) { s.envMap = METAL_ENV; s.envMapIntensity = 0.3; s.roughness = 0.45; }   // v7: reflections on metal only (v8: softer)
   if (kind === 'set' && !m.transparent && VAR) variation(s);
   else if (kind === 'set' && !m.transparent && DETAIL) addDetail(s);
   cache.set(key, s);

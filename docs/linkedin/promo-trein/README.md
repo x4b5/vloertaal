@@ -36,6 +36,27 @@ mee naar de telefoon of laptop.
 Er wordt nergens geknipt. Amina's scherm wordt Jada's scherm terwijl het hele beeld scherm is; de laatste
 beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop gaat in 0,3 s over in de eindkaart.
 
+**Versie 8 (figuranten af, handen, looproutes; de video wordt nog gerenderd, de mp4's hierboven zijn nog v7):**
+- **Figuranten:**
+  - Ze hebben nu een ronde borst en rug, een kraag, oren, een neus en handen met een duim. Eerst waren het
+    cilinders met bolletjes als handen.
+  - Van ver blijven ze eenvoudig, zodat de render niet trager wordt.
+- **Handen van Amina, Jada en Henk:**
+  - De pols loopt nu geleidelijk over in de hand; eerst zat er een dun bolletje tussen.
+  - De hand heeft vier vingers die iets om de telefoon buigen. Eerst was het een want.
+  - De duim rekt bij het tikken bijna niet meer uit.
+- **Looproutes:**
+  - De ober komt uit de deur van het café. Eerst liep hij langs de gevel, half in de muur.
+  - De twee voorbijgangers aan de kant van de kade lopen niet meer dwars door het café.
+  - Wie naar de gracht loopt, slaat af de kade op, in plaats van over het water door te lopen.
+  - De fietsers en voetgangers in de stad blijven in de stad. Eerst reed een fietser door de lange straat
+    tot in de hal op het bedrijventerrein.
+  - De man in het gangpad van de hal loopt één keer door en springt niet meer terug.
+- **Rustiger oppervlak:** de textures, de contactschaduw en het glimmende metaal zijn in de shader zelf ongeveer
+  half zo sterk als in v7. Het achteraf dempen tegen v6 (`tame7.py`) kan niet meer, omdat de figuren nu anders
+  zijn dan in v6.
+- **Resolutie:** alles op 1,25× met 80 % van de subframes, zoals in v6, zodat de film in ongeveer 6 uur klaar was.
+
 **Versie 7 (oppervlakken en contactschaduw):**
 - **Textures:** het decor heeft nu een oppervlak in plaats van een egale kleur. Muren en gevels hebben bakstenen
   met voegen, het terras heeft klinkers, en beton en asfalt hebben korrel en vlekken. Bureaus en tafels hebben
@@ -137,6 +158,8 @@ De film is gebouwd met three.js (in Chromium, beeld voor beeld) en ffmpeg:
       render kun je opnieuw starten, want klare blokken worden overgeslagen;
     - `assemble7.py` zet de film in elkaar, met dezelfde grading en dezelfde geluidsmix als v6. Eerst haalt
       `tame7.py` de nieuwe structuur voor een deel terug, door elk beeld te vergelijken met hetzelfde beeld uit v6.
+  - Versie 8: `bron/lib/extras.js` (figuranten), `bron/lib/char3d.js` (handen), `bron/v5/shotB/extras.js`
+    (looproutes; `box` verbergt wie de stad uit zou rijden), `renderV8.sh` en `assemble8.py`.
   - In v5b (54 s) speelt `shotB` dezelfde camerabewegingen op een langzamere klok (`WARP`): 29 s in plaats van
     19 s. De meeste extra tijd gaat naar Jada, de vlucht, de hal en Henk. De eindkaart duurt 8,5 s.
 - `bron/v4/`: de versie van 42 seconden met wissels: `shot1` tot en met `shot3` spelen de camerabewegingen van v3

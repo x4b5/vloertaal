@@ -86,15 +86,16 @@ vec3 rgb2hsv(vec3 c){ vec4 K = vec4(0., -1./3., 2./3., -1.); vec4 p = mix(vec4(c
   float fabric = smoothstep(0.45, 0.55, s) * smoothstep(210.0, 218.0, h) * (1.0 - smoothstep(240.0, 250.0, h)) * (1.0 - smoothstep(0.5, 0.6, v));
   float grey = 1.0 - smoothstep(0.10, 0.20, s);
   // each pattern is centred on its own mean, so it adds structure without changing the average colour
+  // (v8: about half as strong as v7, and far less weathering: the critic read v7 as cork walls and a styrofoam laptop)
   float m = 1.0;
-  m *= 1.0 + brick * 1.10 * (d.r - 0.80);
-  m *= 1.0 + wood * 1.60 * (d.a - 0.80);
-  m *= 1.0 + green * 1.30 * (d.g - 0.55);
-  m *= 1.0 + fabric * 0.90 * (d.g - 0.55);
-  m *= 1.0 + grey * 1.30 * (d.b - 0.75);
-  m *= 1.0 + 0.55 * (big.b - 0.75);                           // slow blotches: weathering
+  m *= 1.0 + brick * 0.75 * (d.r - 0.80);
+  m *= 1.0 + wood * 0.85 * (d.a - 0.80);
+  m *= 1.0 + green * 0.75 * (d.g - 0.55);
+  m *= 1.0 + fabric * 0.55 * (d.g - 0.55);
+  m *= 1.0 + grey * 0.60 * (d.b - 0.75);
+  m *= 1.0 + 0.22 * (big.b - 0.75);                           // slow blotches: weathering
   diffuseColor.rgb *= m; }
 #endif`);
   };
-  mat.customProgramCacheKey = () => 'detail7';
+  mat.customProgramCacheKey = () => 'detail8';
 }
