@@ -36,7 +36,7 @@ mee naar de telefoon of laptop.
 Er wordt nergens geknipt. Amina's scherm wordt Jada's scherm terwijl het hele beeld scherm is; de laatste
 beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop gaat in 0,3 s over in de eindkaart.
 
-**Versie 7 (oppervlakken en contactschaduw; de video wordt nog samengevoegd, de mp4's hierboven zijn nog v6):**
+**Versie 7 (oppervlakken en contactschaduw):**
 - **Textures:** het decor heeft nu een oppervlak in plaats van een egale kleur. Muren en gevels hebben bakstenen
   met voegen, het terras heeft klinkers, en beton en asfalt hebben korrel en vlekken. Bureaus en tafels hebben
   houtnerf en planken, gras en struiken hebben fijne sprietjes, en de blauwe treinstoelen hebben stof. Alles krijgt
