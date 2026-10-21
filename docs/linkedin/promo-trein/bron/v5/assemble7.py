@@ -37,6 +37,12 @@ for d in (out, outsq):
 FW, FH = 1080, 1350
 import numpy as np
 from grade6 import grade
+from tame7 import tame
+# v7 round 2 (critic): the new detail is toned down against the v6 render of the same frame (tame7.py)
+def raw6(p):
+    d, f = p.split('/')[-2:]; i = int(f[1:5])
+    if d == 'fB7': return f'v5/fB/{f}'
+    return f'v5/fA1/{f}' if i < 270 else f'v5/fA15/{f}'
 def load(p):
     im = Image.open(p).convert('RGB')
     return im
@@ -60,6 +66,7 @@ def unwarp(u):
     return WARP[-1][0]
 fB = lambda u: 16.5 + unwarp(u)
 Y = [(0, 20), (13.4, 20), (15.0, 170), (16.5, 170), (fB(0.5), 135), (fB(3.0), 135), (fB(4.5), 20), (fB(7.5), 20), (fB(8.5), 135),
+     (37.7, 135), (38.3, 70), (42.9, 70), (43.5, 135),   # v7: the whole caption box of "Deel het met…" in the square
      (fB(17.5), 135), (fB(18.5), 135)]
 def y0(t):
     for (a, ya), (b, yb) in zip(Y, Y[1:]):
@@ -79,6 +86,7 @@ def chip(img, i):
 for i in (range(I0, I1) if ENC != 'only' else []):
     p, c, w = src(i)
     im = load(p)
+    if MODE == 'final' and ('/fA7/' in p or '/fB7/' in p): im = tame(im, load(raw6(p)))
     s = im.width / FW                      # 1.0 (previz) or 1.5 (final)
     if c:
         imc = load(c)

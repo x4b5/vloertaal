@@ -36,7 +36,7 @@ mee naar de telefoon of laptop.
 Er wordt nergens geknipt. Amina's scherm wordt Jada's scherm terwijl het hele beeld scherm is; de laatste
 beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop gaat in 0,3 s over in de eindkaart.
 
-**Versie 7 (oppervlakken en contactschaduw; de video wordt nog gerenderd, de mp4's hierboven zijn nog v6):**
+**Versie 7 (oppervlakken en contactschaduw; de video wordt nog samengevoegd, de mp4's hierboven zijn nog v6):**
 - **Textures:** het decor heeft nu een oppervlak in plaats van een egale kleur. Muren en gevels hebben bakstenen
   met voegen, het terras heeft klinkers, en beton en asfalt hebben korrel en vlekken. Bureaus en tafels hebben
   houtnerf en planken, gras en struiken hebben fijne sprietjes, en de blauwe treinstoelen hebben stof. Alles krijgt
@@ -46,6 +46,11 @@ beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop 
   op de grond in plaats van erboven te zweven.
 - **Metaal:** alleen metaal (de rails, chroom en de bistrostoelen) weerspiegelt nu een zachte studioruimte. Echte
   reflecties op alles maakten de render 3× zo traag; zo kost het bijna niets.
+- **Getemperd:** een criticus vond de nieuwe structuur te luid. De muren van de hal leken van kurk, de laptop van
+  piepschuim en het tafelblad op het terras van badstof. Daarom wordt elk beeld vergeleken met hetzelfde beeld
+  uit v6, dat precies gelijk ligt. Van wat v7 donkerder of lichter maakt, blijft 40 % van de grove vlekken en 50 %
+  van de fijne korrel over. Van wat lichter wordt, zoals het glimmende metaal, blijft nog minder over.
+- **Vierkant:** in de vierkante versie valt het hele kader van "Deel het met je nieuwe collega's" nu in beeld.
 - **Resolutie:** het middenstuk en Amina vanaf 9 s zijn weer op 1,5× gerenderd. De drone over de polder en de trein
   (de eerste 9 s) zijn op 1,25× gerenderd. De close-ups van Amina (9 tot 14 s) hebben alle deelbeelden voor de
   bewegingsonscherpte; de rest heeft er 80 % van, zoals in v6. Zo was de film in een nacht klaar.
@@ -130,7 +135,8 @@ De film is gebouwd met three.js (in Chromium, beeld voor beeld) en ffmpeg:
       zet die uit); `shotA` en `shotB` nemen `ao=0` tot `1` voor de sterkte van de schaduw;
     - `renderV7.sh` rendert A en B helemaal opnieuw (de instellingen per stuk staan bovenin). Een onderbroken
       render kun je opnieuw starten, want klare blokken worden overgeslagen;
-    - `assemble7.py` zet de film in elkaar, met dezelfde grading en dezelfde geluidsmix als v6.
+    - `assemble7.py` zet de film in elkaar, met dezelfde grading en dezelfde geluidsmix als v6. Eerst haalt
+      `tame7.py` de nieuwe structuur voor een deel terug, door elk beeld te vergelijken met hetzelfde beeld uit v6.
   - In v5b (54 s) speelt `shotB` dezelfde camerabewegingen op een langzamere klok (`WARP`): 29 s in plaats van
     19 s. De meeste extra tijd gaat naar Jada, de vlucht, de hal en Henk. De eindkaart duurt 8,5 s.
 - `bron/v4/`: de versie van 42 seconden met wissels: `shot1` tot en met `shot3` spelen de camerabewegingen van v3
