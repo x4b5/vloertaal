@@ -304,6 +304,19 @@ export async function buildCharacter(who, { renderer, base = '../assets/chars/',
   };
   const faceOpen = tex(await rasterize(faceSvg(false), fvb, ppu), renderer);
   const faceShut = tex(await rasterize(faceSvg(true), fvb, ppu), renderer);
+  // v6: the app's other expressions (happy, pleased, cheer, thinking), open and blinking, set via `expression`
+  const faces = { idle: { open: faceOpen, shut: faceShut } };
+  for (const ex of ['happy', 'pleased', 'cheer', 'thinking']) {
+    let other;
+    try { other = parseFigure(await loadText(`${base}${who}-${ex}.svg.html`)); } catch { continue; }
+    const lk = other.querySelector('.ch-look'); if (!lk) continue;
+    const fs = (closed) => {
+      let h = lk.outerHTML;
+      if (closed) h = h.replace(/<ellipse([^>]*?)ry="[0-9.]+"/g, '<ellipse$1ry="0.32"');
+      return `<g transform="translate(${shiftX} 0)">${FACE_PAINT[who]}${h}</g>`;
+    };
+    faces[ex] = { open: tex(await rasterize(fs(false), fvb, ppu), renderer), shut: tex(await rasterize(fs(true), fvb, ppu), renderer) };
+  }
   const faceMat = new THREE.MeshToonMaterial({ map: faceOpen, gradientMap: toonGradient(), transparent: true, depthWrite: false });
   const V = (x, y, z) => new THREE.Vector3(x, y, z);
   const both = mergeGeometries([flatGeo(headGeo.clone()), flatGeo(noseGeo.clone())].map((g) => { const h = g.index ? g.toNonIndexed() : g; for (const k of Object.keys(h.attributes)) if (k !== 'position' && k !== 'normal') h.deleteAttribute(k); return h; }));
@@ -351,7 +364,9 @@ export async function buildCharacter(who, { renderer, base = '../assets/chars/',
     el.add(mesh(limbGeo(BODY.fore - 0.02, L.bareForearm ? 0.032 : 0.038, L.bareForearm ? 0.027 : 0.034), foreMat));
     if (!L.bareForearm) { const cf = mesh(limbGeo(0.04, 0.037, 0.037), cuff); cf.position.y = -(BODY.fore - 0.045); el.add(cf); }
     const wr = new THREE.Group(); wr.position.y = -BODY.fore; el.add(wr);
-    wr.add(mesh(ball(0.026, 8, 6), skin));
+    // v8: the wrist tapers from the forearm into the hand (it was a small ball, which read as a pinched joint)
+    const fr = L.bareForearm ? 0.027 : 0.031;
+    wr.add(mesh(limbGeo(0.024, fr, 0.024, 12), skin), mesh(ball(fr, 12, 8), skin));
     const hand = buildMitten(sx, skin); wr.add(hand);
     const open = buildOpenHand(sx, skin, new THREE.MeshBasicMaterial({ color: L.shade, toneMapped: false })); open.visible = false; wr.add(open);
     rig['open' + side] = open;
@@ -381,6 +396,7 @@ export async function buildCharacter(who, { renderer, base = '../assets/chars/',
     pose: { lean: 0, headPitch: 0, headYaw: 0, headRoll: 0, blinkOffset: 0.7 },
     base: { neckY: BODY.neckY, shY: BODY.shoulderY },
     eyesClosed: false,
+    expression: 'idle',   // v6: idle | happy | pleased | cheer | thinking (the app's faces)
     update(t) {
       const p = this.pose, br = Math.sin((t / 4.0) * Math.PI * 2);           // the app's 4 s breath
       spine.rotation.x = p.lean;
@@ -393,7 +409,9 @@ export async function buildCharacter(who, { renderer, base = '../assets/chars/',
       // blink: 0.08 scale for ~1/8 of 0.2 s in the app; here the eyes are shut for 0.1 s each period
       const ph = (((t + p.blinkOffset) % L.blink) + L.blink) % L.blink;
       const shut = ph < 0.1;
-      if (shut !== this.eyesClosed) { this.eyesClosed = shut; faceMat.map = shut ? faceShut : faceOpen; faceMat.needsUpdate = true; }
+      const fx = faces[this.expression] ?? faces.idle, map = shut ? fx.shut : fx.open;
+      const fm = rig.faceDecal.material;   // the decal's material (it may have been swapped, see lib/real.js)
+      if (fm.map !== map) { this.eyesClosed = shut; fm.map = map; fm.needsUpdate = true; }
       root.updateMatrixWorld(true);
     },
     /** Swap the mitten for the open hand (palm forward wave) on one side. */
@@ -428,13 +446,25 @@ function buildOpenHand(sx, skin, shade) {
   return g;
 }
 
-/** Mitten hand: palm block along −Y from the wrist, palm facing +Z; thumb on the ±X side (sx). */
+/**
+ * Hand (v8): a rounded palm, four fingers that curl a little toward the palm, and a two-part thumb on the ±X side
+ * (sx). Fingers along −Y from the wrist, palm facing +Z. (v3–v7: one block, a mitten, which read as a stump.)
+ */
 function buildMitten(sx, skin) {
   const hand = new THREE.Group();
-  const pg = new RoundedBoxGeometry(0.058, 0.078, 0.028, 2, 0.012); pg.translate(0, -0.044, 0);
+  const pg = new RoundedBoxGeometry(0.056, 0.054, 0.026, 3, 0.012); pg.translate(0, -0.03, 0);
   hand.add(mesh(pg, skin));
-  const th = new THREE.Group(); th.position.set(sx * 0.026, -0.022, 0.008); hand.add(th);
-  const tg = new THREE.CapsuleGeometry(0.0115, 0.026, 3, 8); tg.translate(0, -0.021, 0);
+  const fingers = new THREE.Group(); fingers.position.set(0, -0.054, 0.001); fingers.rotation.x = -0.32; hand.add(fingers);
+  const FL = [0.03, 0.034, 0.032, 0.026];                 // index … little finger
+  for (let i = 0; i < 4; i++) {
+    const fg = new THREE.CapsuleGeometry(0.0072, FL[i], 3, 8); fg.translate(0, -FL[i] / 2 - 0.002, 0);
+    const f = mesh(fg, skin); f.position.x = sx * (0.019 - i * 0.0127); f.rotation.z = sx * (0.03 - i * 0.025); fingers.add(f);
+  }
+  hand.userData.fingers = fingers;
+  // thumb: a soft pad at its root (so it grows out of the palm) and the thumb itself
+  const pad = mesh(ball(0.014, 10, 8), skin); pad.position.set(sx * 0.022, -0.02, 0.006); pad.scale.set(0.9, 1.3, 0.8); hand.add(pad);
+  const th = new THREE.Group(); th.position.set(sx * 0.026, -0.024, 0.008); hand.add(th);
+  const tg = new THREE.CapsuleGeometry(0.0098, 0.026, 3, 10); tg.translate(0, -0.019, 0);
   th.add(mesh(tg, skin));
   th.rotation.set(0.35, 0, sx * 0.55);
   hand.userData.thumb = th;
@@ -717,7 +747,7 @@ export function holdPhone(ch, phone, { pw, ph, depth, grip = 0.3, spread = 0.55 
       th.parent.getWorldQuaternion(tmpQ);
       const dirL = dirW.applyQuaternion(tmpQ.invert());
       th.quaternion.setFromUnitVectors(new THREE.Vector3(0, -1, 0), dirL);
-      if (k > 0) th.scale.y = lerp(1, clamp(dist / 0.044, 0.6, 1.9), k);
+      if (k > 0) { th.scale.y = lerp(1, clamp(dist / 0.044, 0.8, 1.25), k); th.scale.x = th.scale.z = lerp(1, 0.9, k); }   // v8: stretches far less (it read as a rubber thumb)
       th.updateWorldMatrix(false, true);
     }
   };

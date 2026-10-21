@@ -86,8 +86,9 @@ export function buildTown(scene) {
   for (let bz = -146; bz < 70; bz += 40) street.push(painted(box, '#8f8c88', M4(-10, 0.01, bz - 5, 0, 260, 0.02, 10)));
   for (let bx = -126; bx < 110; bx += 56) street.push(painted(box, '#8f8c88', M4(bx - 5, 0.01, -40, 0, 10, 0.02, 230)));
   // trees along the canal (both quays)
+  const onCrossStreet = (z) => [-151, -111, -71, -31, 9, 49].some((c) => Math.abs(z - c) < 6.5);   // v8: no trees on the road
   for (let z = -150; z < 60; z += 11) for (const x of [4.9, 11.6]) {
-    if (z > -20 && z < 12) continue;
+    if ((z > -20 && z < 12) || onCrossStreet(z)) continue;
     const s = 0.85 + R() * 0.4;
     trunk.push(painted(box, '#6b4f3a', M4(x, 1.3 * s, z, 0, 0.25, 2.6 * s, 0.25)));
     tree.push(painted(new THREE.IcosahedronGeometry(1.6 * s, 1), R() < 0.5 ? '#6fae45' : '#82c050', M4(x, 3.4 * s, z)));
@@ -95,6 +96,7 @@ export function buildTown(scene) {
   // parked cars along the streets
   for (let bz = -146; bz < 70; bz += 40) for (let x = -120; x < 100; x += 7 + R() * 9) {
     if (!free(x - 2, x + 2, bz - 9, bz - 1)) continue;
+    if ([-131, -75, -19, 37, 93].some((c) => Math.abs(x - c) < 7.5)) continue;   // v8: not in the crossings (people walked through them)
     const col = CAR[Math.floor(R() * CAR.length)], zz = bz - (R() < 0.5 ? 2.2 : 7.8);
     car.push(painted(box, col, M4(x, 0.55, zz, 0, 4.0, 0.7, 1.75)));
     car.push(painted(box, col, M4(x - 0.2, 1.1, zz, 0, 2.2, 0.55, 1.6)));
@@ -112,7 +114,7 @@ export function buildTown(scene) {
   ground.rotation.x = -Math.PI / 2; ground.position.y = -0.03; ground.receiveShadow = true; scene.add(ground);
   const water = new THREE.Mesh(new THREE.PlaneGeometry(7, 600), new THREE.MeshLambertMaterial({ color: '#4f9cc4' }));
   water.rotation.x = -Math.PI / 2; water.position.set(8.2, -0.62, -100); scene.add(water);
-  for (const x of [4.45, 11.95]) street.push(painted(box, '#d8d2c6', M4(x, -0.1, -100, 0, 0.5, 0.3, 600)));
+  for (const x of [4.45, 11.95]) street.push(painted(box, '#d8d2c6', M4(x, -0.15, -100, 0, 0.5, 0.3, 600)));   // v8: kerbs flush with the street
   street.push(painted(box, '#7d7468', M4(8.2, -1.25, -100, 0, 7, 1.2, 600)));
   mesh(body); mesh(roof); mesh(win, { cast: false }); mesh(green, { cast: false }); mesh(tree); mesh(trunk); mesh(street, { cast: false }); mesh(car);
   return { };

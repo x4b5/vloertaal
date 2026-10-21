@@ -2,6 +2,7 @@
 // SVG cut-out cards (the app's own figures), and a deterministic renderer with
 // sub-frame accumulation (motion blur + temporal AA). Every shot imports this.
 import * as THREE from 'three';
+import { makeAO } from './ao.js';
 
 const QS = new URLSearchParams(location.search);
 export const W = 1080, H = Number(QS.get('h') ?? 1350);
@@ -159,10 +160,10 @@ export function makeRenderer(canvas) {
   // output pass: the glass crossing = one soft diagonal specular sweep (≤35 %), a short refraction
   // ripple with a little blur, and a slight dolly push (zoom); never a white flash.
   const outMat = new THREE.ShaderMaterial({
-    uniforms: { tex: { value: rtAcc.texture }, sweep: { value: -9 }, sweepAmt: { value: 0 }, ripple: { value: 0 }, zoom: { value: 1 }, texel: { value: new THREE.Vector2(1 / RW, 1 / RH) }, grade: { value: QS.get("grade") === "1" ? 1 : 0 }, seed: { value: 0 }, mixTex: { value: null }, mixAmt: { value: 0 } },
+    uniforms: { tex: { value: rtAcc.texture }, sweep: { value: -9 }, sweepAmt: { value: 0 }, ripple: { value: 0 }, zoom: { value: 1 }, texel: { value: new THREE.Vector2(1 / RW, 1 / RH) }, grade: { value: QS.get("grade") === "1" ? 1 : 0 }, seed: { value: 0 }, mixTex: { value: null }, mixAmt: { value: 0 }, aoTex: { value: null }, aoAmt: { value: 0 } },
     depthTest: false, depthWrite: false,
     vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0., 1.); }',
-    fragmentShader: `uniform sampler2D tex; uniform sampler2D mixTex; uniform float sweep, sweepAmt, ripple, zoom, grade, seed, mixAmt; uniform vec2 texel; varying vec2 vUv;
+    fragmentShader: `uniform sampler2D tex; uniform sampler2D mixTex; uniform sampler2D aoTex; uniform float sweep, sweepAmt, ripple, zoom, grade, seed, mixAmt, aoAmt; uniform vec2 texel; varying vec2 vUv;
       float hash(vec2 p){ return fract(sin(dot(p, vec2(12.9898, 78.233)) + seed) * 43758.5453); }
       void main(){
         vec2 uv = (vUv - 0.5) / zoom + 0.5;
@@ -170,6 +171,7 @@ export function makeRenderer(canvas) {
         float w = (uv.x * 0.8 + (1.0 - uv.y) * 0.6);
         uv += ripple * vec2(0.006, 0.0035) * sin(w * 38.0 - ripple * 6.0);
         vec4 c = texture2D(tex, uv);
+        if (aoAmt > 0.0) c.rgb *= mix(1.0, texture2D(aoTex, uv).r, aoAmt);   // v7 contact shadow (lib/ao.js)
         if (ripple > 0.001) {
           vec2 o = texel * 3.0 * ripple;
           c = (c * 2.0 + texture2D(tex, uv + vec2(o.x, 0.)) + texture2D(tex, uv - vec2(o.x, 0.)) + texture2D(tex, uv + vec2(0., o.y)) + texture2D(tex, uv - vec2(0., o.y))) / 6.0;
@@ -196,16 +198,21 @@ export function makeRenderer(canvas) {
   const accScene = new THREE.Scene(); accScene.add(new THREE.Mesh(quadGeo, accMat));
   const outScene = new THREE.Scene(); outScene.add(new THREE.Mesh(quadGeo, outMat));
   /** Render `n` sub-frames (prepare(i, n) poses the world for each) averaged into the canvas. */
-  function frame(scene, camera, n, prepare, { sweep = -9, sweepAmt = 0, ripple = 0, zoom = 1, seed = 0, mixTex = null, mixAmt = 0 } = {}) {
+  let ao = null;
+  /** `ao` (0–1): contact shadow (lib/ao.js), drawn once per frame from the middle sub-frame's pose. */
+  function frame(scene, camera, n, prepare, { sweep = -9, sweepAmt = 0, ripple = 0, zoom = 1, seed = 0, mixTex = null, mixAmt = 0, ao: aoAmt = 0 } = {}) {
+    if (aoAmt > 0 && !ao) ao = makeAO(renderer, Math.round(RW / 2), Math.round(RH / 2));
     // autoClear off: each sub-frame is added onto the accumulation target
     renderer.autoClear = false; renderer.setClearColor(0x000000, 0);
     renderer.setRenderTarget(rtAcc); renderer.clear();
     for (let i = 0; i < n; i++) {
       prepare(i, n);
       renderer.setRenderTarget(rtScene); renderer.clear(); renderer.render(scene, camera);
+      if (aoAmt > 0 && i === (n >> 1)) ao.render(scene, camera);
       accMat.uniforms.tex.value = rtScene.texture; accMat.uniforms.w.value = 1 / n;
       renderer.setRenderTarget(rtAcc); renderer.render(accScene, quadCam);
     }
+    outMat.uniforms.aoTex.value = ao ? ao.texture : null; outMat.uniforms.aoAmt.value = ao ? aoAmt : 0;
     outMat.uniforms.seed.value = seed; outMat.uniforms.mixTex.value = mixTex; outMat.uniforms.mixAmt.value = mixTex ? mixAmt : 0;
     Object.assign(outMat.uniforms.sweep, { value: sweep }); outMat.uniforms.sweepAmt.value = sweepAmt; outMat.uniforms.ripple.value = ripple; outMat.uniforms.zoom.value = zoom;
     renderer.setRenderTarget(null); renderer.clear(); renderer.render(outScene, quadCam);

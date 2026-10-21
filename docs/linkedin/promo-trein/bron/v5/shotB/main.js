@@ -16,6 +16,7 @@ import { terrace } from './terrace.js';
 import { canteen } from './canteen.js';
 import { buildTown, buildPark } from './town.js';
 import { extrasB } from './extras.js';
+import { realify } from '../../lib/real.js';
 
 const P = new URLSearchParams(location.search);
 // v5b: the film is 54 s; this shot plays its 19-s choreography (clock u) on a slower clock over 29 s (clock w):
@@ -163,8 +164,11 @@ function poseCamera(u) {
 }
 /** Lens: shallow focus near Jada and near Henk; none in the air and at both hand-offs. */
 const apertureAt = (u) => 0.006 * (smooth(seg(u, 0.9, 1.6)) * (1 - smooth(seg(u, 6.7, 7.4))) + smooth(seg(u, 13.9, 14.5)) * (1 - smooth(seg(u, 16.9, 17.4))));
-const subAt = (u) => (SUBQ !== 'auto' ? Number(SUBQ) : u < 0.55 ? 2 : u < 7.2 ? 5 : u < 13.9 ? 6 : u < 17.3 ? 5 : u < 18.45 ? 3 : 5);
+const SUBK = Number(P.get('subk') ?? 1);   // v6: scales the sub-frame counts (render time)
+const AOK = Number(P.get('ao') ?? 0.6);   // v7: contact shadow strength (lib/ao.js); 0 = off
+const subAt0 = (u) => (SUBQ !== 'auto' ? Number(SUBQ) : u < 0.55 ? 2 : u < 7.2 ? 5 : u < 13.9 ? 6 : u < 17.3 ? 5 : u < 18.45 ? 3 : 5);
 
+const subAt = (t) => (SUBQ !== 'auto' ? Number(SUBQ) : Math.max(2, Math.round(subAt0(t) * SUBK)));
 function poseAt(u) {
   T1.poseJada(u); T1.poseDag(u);
   T3.poseHenk(u); T3.poseShare(u);
@@ -194,7 +198,7 @@ function setTime(w) {
     EX.update(clamp(ws, 0, FILM_DURATION));
     poseAt(clamp(us, 0, DURATION));
     if (HIQ) lensJitter(camera, i, nn, lastFocus, apertureAt(us));
-  }, { seed: w + 16.5, ...glassFx(u) });
+  }, { seed: w + 16.5, ...glassFx(u), ao: AOK });
   return true;
 }
 window.DURATION = FILM_DURATION; window.setTime = setTime;
@@ -205,6 +209,7 @@ window.ready = (async () => {
   T1.buildSign(); await T1.buildJada(); T1.buildDag();
   await T3.buildScreen(); await T3.buildHenk(); await T3.buildShare();
   AMINA = await loadImg('../../assets/shots/dutch_ar_ok.png');
+  if (P.get('real') !== '0') realify(scene, renderer);   // v6: physically based materials + environment
   buildCamera();
   warp = monotone(WARP.map((k) => k[0]), WARP.map((k) => k[1]));
   setTime(Number(P.get('t') ?? 0));

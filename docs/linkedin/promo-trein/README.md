@@ -36,6 +36,81 @@ mee naar de telefoon of laptop.
 Er wordt nergens geknipt. Amina's scherm wordt Jada's scherm terwijl het hele beeld scherm is; de laatste
 beelden van Amina en de eerste van Jada zijn pixel voor pixel gelijk. De laptop gaat in 0,3 s over in de eindkaart.
 
+**Versie 8 (figuranten af, handen, looproutes):**
+- **Figuranten:**
+  - Ze hebben nu een ronde borst en rug, een kraag, oren, een neus en handen met een duim. Eerst waren het
+    cilinders met bolletjes als handen.
+  - Van ver blijven ze eenvoudig, zodat de render niet trager wordt.
+- **Handen van Amina, Jada en Henk:**
+  - De pols loopt nu geleidelijk over in de hand; eerst zat er een dun bolletje tussen.
+  - De hand heeft vier vingers die iets om de telefoon buigen. Eerst was het een want.
+  - De duim rekt bij het tikken bijna niet meer uit.
+- **Looproutes:**
+  - De ober komt uit de deur van het café. Eerst liep hij langs de gevel, half in de muur.
+  - De twee voorbijgangers aan de kant van de kade lopen niet meer dwars door het café.
+  - Wie naar de gracht loopt, slaat af de kade op, in plaats van over het water door te lopen.
+  - De fietsers en voetgangers in de stad blijven in de stad. Eerst reed een fietser door de lange straat
+    tot in de hal op het bedrijventerrein.
+  - De man in het gangpad van de hal loopt één keer door en springt niet meer terug.
+- **Nog meer foutjes**, gevonden door een criticus die de film beeld voor beeld bekeek en door een botsingscontrole in
+  de browser, die elk kwart seconde meet of iemand ergens in zit:
+  - Jada's benen staken door het tafelblad; haar voeten staan nu verder naar voren.
+  - Het kaartje "Dag 7 op rij" zakt terug in het scherm voordat de camera opzij draait. Van opzij leek het een
+    zwevend wit balkje.
+  - Een fietser op het terras reed door een tafel met een gast; hij rijdt nu op de verste rijstrook.
+  - De ober eindigt niet meer in de plantenbak.
+  - In de stad staan geen bomen meer op de dwarsstraten en geen geparkeerde auto's meer op de kruispunten, waar
+    mensen er dwars doorheen liepen. Voetgangers in de lange straat hebben een eigen strook per richting.
+  - In de kantine staat de collega bij de koffiemachine vóór het aanrecht in plaats van erin. Wie drinkt, heeft
+    nu een kopje in de hand.
+  - De heftruck heeft een stuur, en de benen van de chauffeur zitten niet meer in de bak.
+  - De orderpicker pakt boven de ligger in plaats van erin.
+  - Wandelaars zakten 3 tot 12 cm door de grond, en de stoepranden staken iets uit. Handen van zittende
+    gasten zakten in het tafelblad.
+- **Rustiger oppervlak:** de textures, de contactschaduw en het glimmende metaal zijn in de shader zelf ongeveer
+  half zo sterk als in v7. Het achteraf dempen tegen v6 (`tame7.py`) kan niet meer, omdat de figuren nu anders
+  zijn dan in v6.
+- **Resolutie:** alles op 1,25× met 80 % van de subframes, zoals in v6, zodat de film in ongeveer 5 uur klaar was.
+  De eerste 5 seconden (de drone boven de polder: geen mensen, geen handen) komen uit de v7-render, getemperd
+  tegen v6 met `tame7.py`, net als in v7.
+
+**Versie 7 (oppervlakken en contactschaduw):**
+- **Textures:** het decor heeft nu een oppervlak in plaats van een egale kleur. Muren en gevels hebben bakstenen
+  met voegen, het terras heeft klinkers, en beton en asfalt hebben korrel en vlekken. Bureaus en tafels hebben
+  houtnerf en planken, gras en struiken hebben fijne sprietjes, en de blauwe treinstoelen hebben stof. Alles krijgt
+  ook lichte verwering. De kleuren blijven hetzelfde: de structuur maakt een vlak alleen iets lichter of donkerder.
+- **Contactschaduw:** waar dingen elkaar raken of dicht bij elkaar staan, wordt het donkerder. Denk aan onder een
+  stoel, tussen bank en wand, onder de kin, en in hoeken en naden. Daardoor staan de figuren en de meubels echt
+  op de grond in plaats van erboven te zweven.
+- **Metaal:** alleen metaal (de rails, chroom en de bistrostoelen) weerspiegelt nu een zachte studioruimte. Echte
+  reflecties op alles maakten de render 3× zo traag; zo kost het bijna niets.
+- **Getemperd:** een criticus vond de nieuwe structuur te luid. De muren van de hal leken van kurk, de laptop van
+  piepschuim en het tafelblad op het terras van badstof. Daarom wordt elk beeld vergeleken met hetzelfde beeld
+  uit v6, dat precies gelijk ligt. Van wat v7 donkerder of lichter maakt, blijft 40 % van de grove vlekken en 50 %
+  van de fijne korrel over. Van wat lichter wordt, zoals het glimmende metaal, blijft nog minder over.
+- **Vierkant:** in de vierkante versie valt het hele kader van "Deel het met je nieuwe collega's" nu in beeld.
+- **Resolutie:** het middenstuk en Amina vanaf 9 s zijn weer op 1,5× gerenderd. De drone over de polder en de trein
+  (de eerste 9 s) zijn op 1,25× gerenderd. De close-ups van Amina (9 tot 14 s) hebben alle deelbeelden voor de
+  bewegingsonscherpte; de rest heeft er 80 % van, zoals in v6. Zo was de film in een nacht klaar.
+
+**Versie 6 (realistischer, met geluid):**
+- **Licht en schaduw:** de figuren en het decor hebben echte, ronde schaduw in plaats van platte vlakken, met meer
+  zon en minder vlak licht. De figuren houden hun gezicht uit de app.
+- **Tijd van de dag:** ochtend in de trein, met licht van het raam; late middag op het terras en boven de stad,
+  met warm licht en waas in de verte; warm binnenlicht in de hal en de kantine. De schermen van de app blijven
+  neutraal, zodat de kleuren van het merk kloppen.
+- **Natuurlijke kleuren:** minder knalgroen gras en een zachtere lucht, en een filmische contrastcurve.
+- **Gezichten:** de uitdrukkingen uit de app wisselen. Amina lacht als ze opkijkt, Jada denkt na en juicht bij
+  "Dag 7 op rij", en Henk knikt tevreden en lacht als hij de link deelt. De figuranten lachen ook.
+- **Foutjes opgelost:** Jada tikt met haar duim op het nummer van het antwoord, dus haar duim bedekt de tekst
+  niet meer. De website op Henks laptop staat 1,5× groter. Bij het delen verschijnt een scherp label
+  "vloertaal.nl · Link gedeeld".
+- **Geluid:** onder de muziek zitten 21 geluidseffecten van ElevenLabs. Je hoort wind, de trein, het terras, een
+  belletje bij "Goed zo!", een vrachtwagen die achteruit rijdt, de heftruck en de hal, een melding als de link
+  gedeeld wordt, en een stempel en vinkjes op de eindkaart. Stemmen zitten er niet in.
+- **Resolutie:** de film is op 1,25× gerenderd in plaats van 1,5×, met iets minder deelbeelden voor de
+  bewegingsonscherpte. De echte materialen kostten anders 3× zoveel rekentijd.
+
 **Kwaliteit (v5):**
 - **Scherper:** het middenstuk, de eindkaart en Amina vanaf 9 s zijn op 1,5× gerenderd en daarna verkleind.
 - **Diepte:** in de close-ups is de achtergrond licht onscherp, zoals bij een echte lens.
@@ -79,6 +154,29 @@ De film is gebouwd met three.js (in Chromium, beeld voor beeld) en ffmpeg:
   - De figuranten: `bron/lib/extras.js` bouwt ze (zitten, lopen, fietsen); `shotB/extras.js` zet ze op het terras,
     in de stad, op het bedrijventerrein en in de hal en de kantine. De reizigers staan in `shotA/main.js`.
   - `renderX54.sh` rendert alle beelden die door de figuranten veranderd zijn.
+  - Versie 6:
+    - `bron/lib/real.js` geeft het decor en de figuren echte materialen (ronde schaduw);
+    - `char3d.js` wisselt de gezichtsuitdrukkingen uit de app;
+    - `renderV6.sh` rendert alles opnieuw;
+    - `grade6.py` maakt het licht van de tijd van de dag en de natuurlijke kleuren;
+    - `assemble6.py` zet de film in elkaar, met het label uit `chip/`;
+    - `bron/v6-geluid/` maakt de geluidseffecten en de mix met de muziek (`build.sh`; de effecten staan in
+      `sfx-notes.md`, de originele opnames in `raw/`).
+  - Versie 7:
+    - `bron/lib/detail.js` maakt één textuur van 1 × 1 m met vier patronen (baksteen, sprietjes/stof,
+      beton/asfalt, hout) en legt die in wereldruimte op het decor. Het patroon hangt af van de kleur van het
+      oppervlak;
+    - `bron/lib/ao.js` is de contactschaduw: een extra pass tekent de normaal en de diepte, en een shader telt
+      per pixel hoeveel van de omgeving erboven uitsteekt (ambient occlusion). `kit.js` vermenigvuldigt het beeld
+      ermee;
+    - `real.js` zet de textures aan (`detail=0` zet ze uit) en geeft metaal een kleine omgeving (`metalenv=0`
+      zet die uit); `shotA` en `shotB` nemen `ao=0` tot `1` voor de sterkte van de schaduw;
+    - `renderV7.sh` rendert A en B helemaal opnieuw (de instellingen per stuk staan bovenin). Een onderbroken
+      render kun je opnieuw starten, want klare blokken worden overgeslagen;
+    - `assemble7.py` zet de film in elkaar, met dezelfde grading en dezelfde geluidsmix als v6. Eerst haalt
+      `tame7.py` de nieuwe structuur voor een deel terug, door elk beeld te vergelijken met hetzelfde beeld uit v6.
+  - Versie 8: `bron/lib/extras.js` (figuranten), `bron/lib/char3d.js` (handen), `bron/v5/shotB/extras.js`
+    (looproutes; `box` verbergt wie de stad uit zou rijden), `renderV8.sh` en `assemble8.py`.
   - In v5b (54 s) speelt `shotB` dezelfde camerabewegingen op een langzamere klok (`WARP`): 29 s in plaats van
     19 s. De meeste extra tijd gaat naar Jada, de vlucht, de hal en Henk. De eindkaart duurt 8,5 s.
 - `bron/v4/`: de versie van 42 seconden met wissels: `shot1` tot en met `shot3` spelen de camerabewegingen van v3

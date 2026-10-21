@@ -28,6 +28,19 @@ describe('sayNumbers: times', () => {
   });
 });
 
+describe('sayNumbers: 112', () => {
+  it('says the emergency number digit by digit', () => {
+    expect(sayNumbers('Bel 112!')).toBe('Bel één één twee!');
+    expect(sayNumbers('Ja, bel 112!')).toBe('Ja, bel één één twee!');
+    expect(sayNumbers('Bij gevaar bel je 112.')).toBe('Bij gevaar bel je één één twee.');
+    expect(sayAs('112 is alleen voor spoed.')).toBe('één één twee is alleen voor spoed.');
+  });
+
+  it('leaves other numbers with 112 in them alone', () => {
+    for (const t of ['1120 gram', '2112', '112,50', '1.112', '0112-34']) expect(sayNumbers(t), t).toBe(t);
+  });
+});
+
 describe('sayNumbers: amounts', () => {
   it('says euros and cents', () => {
     expect(sayNumbers('€ 7,50')).toBe('7 euro 50');
@@ -57,7 +70,7 @@ describe('sayNumbers: sums and units', () => {
   });
 
   it('leaves plain Dutch alone', () => {
-    for (const t of ['Ik ben 18, hoor.', 'Ze werkt 3–5 dagen.', 'Kamer 4 zat op slot.', 'Bel 112.', 'De mail is weg.']) expect(sayNumbers(t)).toBe(t);
+    for (const t of ['Ik ben 18, hoor.', 'Ze werkt 3–5 dagen.', 'Kamer 4 zat op slot.', 'De mail is weg.']) expect(sayNumbers(t)).toBe(t);
   });
 
   it('is what the phone voice gets (sayAs), together with "app"', () => {

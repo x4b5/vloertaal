@@ -9,6 +9,7 @@ import zlPack from '../src/content/regio/zuid-limburg-pack';
 import { lessonSayings } from '../src/content/sayings';
 import { tokenize } from '../src/lib/answers';
 import { sayAs } from '../src/lib/sayAs';
+import { DIGIT_NUMBERS } from '../src/lib/sayNumbers';
 import { BRAM_HELLO, BRAM_VOICE, VOICE_SAMPLE } from '../src/lib/voices';
 
 // The app loads a region's file only when a learner chose it (src/content/regio ensureRegion);
@@ -70,8 +71,10 @@ for (const u of units)
 
 // How a clip is pronounced where the spelling would mislead the voice (src/lib/sayAs.ts:
 // "app" → "ep"). The app shows `text`; the voice is given `say`. `take` re-records clips that
-// were made before their `say` existed.
+// were made before their `say` existed; take 3: the clips with 112, recorded as "honderdtwaalf" before
+// it was said digit by digit ("één één twee").
 const SAY_TAKE = 2;
+const takeFor = (text: string) => (new RegExp(DIGIT_NUMBERS.source).test(text) ? 3 : SAY_TAKE);
 
 mkdirSync('public/audio', { recursive: true });
 writeFileSync(
@@ -82,7 +85,7 @@ writeFileSync(
       return {
         id,
         text,
-        ...(say !== text ? { say, take: SAY_TAKE } : {}),
+        ...(say !== text ? { say, take: takeFor(text) } : {}),
         ...(onlyVoices.has(id) ? { voices: onlyVoices.get(id) } : {}),
       };
     }),

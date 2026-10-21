@@ -8,7 +8,9 @@
  * - an amount ("6,60 euro", "€ 7,50", "€7", "1.000 euro") as "6 euro 60", "7 euro 50", "7 euro",
  *   "1000 euro"; below one euro "60 cent";
  * - the signs of a sum (× − + =) as "keer", "min", "plus", "is";
- * - ml, kg and cm after a number as "milliliter", "kilo", "centimeter".
+ * - ml, kg and cm after a number as "milliliter", "kilo", "centimeter";
+ * - the emergency number 112 digit by digit, "één één twee", the way it is said in the Netherlands
+ *   (a voice would read "honderdtwaalf").
  *
  * Anything else stays as it is: a decimal ("8,5 uur" is "acht komma vijf uur", which is what a
  * learner must learn to read), a phone number ("0900-8844"), a year, a big count ("12.000 gram").
@@ -62,6 +64,10 @@ const UNITS: [RegExp, string][] = [
   [/(?<=\d)\s?cm\b/g, ' centimeter'],
 ];
 
+/** Numbers said digit by digit: the emergency number 112 ("één één twee"). Also used by scripts/list-clips.ts
+ *  to re-record the clips made before this rule. */
+export const DIGIT_NUMBERS = /(?<![\d.,-])112(?![\d,]|\.\d)/g;
+
 /** The spoken form of a Dutch text: times, amounts, signs and units as words (see above). */
 export function sayNumbers(text: string): string {
   let out = text
@@ -69,5 +75,6 @@ export function sayNumbers(text: string): string {
     .replace(EURO_BEFORE, (_m, whole: string, cents?: string) => sayEuro(whole, cents))
     .replace(EURO_AFTER, (_m, whole: string, cents?: string) => sayEuro(whole, cents));
   for (const [re, word] of [...SIGNS, ...UNITS]) out = out.replace(re, word);
+  out = out.replace(DIGIT_NUMBERS, 'één één twee');
   return out.replace(/ {2,}/g, ' ');
 }

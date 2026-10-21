@@ -72,7 +72,9 @@ export function canteen(root, renderer, T) {
   const fl = new THREE.Group(); fl.position.set(-6.4, 0, -0.4); fl.rotation.y = 1.15; root.add(fl);   // v5: out of the camera's aisle
   {
     const y = lam('#ffc414'), yd = lam('#e0a800'), blk = lam('#1e2226'), grey = lam('#3c4a56');
-    add(new THREE.BoxGeometry(1.1, 0.6, 0.85), y, 0, 0.55, 0, { parent: fl });
+    // v8: a low floor plate and a front cowl instead of one tall box (the driver's shins were inside it)
+    add(new THREE.BoxGeometry(1.1, 0.19, 0.85), y, 0, 0.345, 0, { parent: fl });
+    add(new THREE.BoxGeometry(0.12, 0.6, 0.85), y, 0.52, 0.55, 0, { parent: fl });
     add(new THREE.BoxGeometry(0.5, 0.55, 0.8), yd, -0.45, 0.6, 0, { parent: fl });
     for (const [x, z] of [[0.35, 0.45], [0.35, -0.45], [-0.4, 0.45], [-0.4, -0.45]]) add(new THREE.CylinderGeometry(0.24, 0.24, 0.18, 16), blk, x, 0.24, z, { rx: Math.PI / 2, parent: fl });
     for (const [x, z] of [[0.2, 0.36], [0.2, -0.36], [-0.35, 0.36], [-0.35, -0.36]]) add(new THREE.BoxGeometry(0.05, 1.2, 0.05), grey, x, 1.45, z, { parent: fl });
@@ -82,6 +84,9 @@ export function canteen(root, renderer, T) {
     add(new THREE.BoxGeometry(0.06, 0.5, 0.8), grey, 0.66, 0.5, 0, { parent: fl });
     for (const z of [-0.22, 0.22]) add(new THREE.BoxGeometry(0.9, 0.04, 0.1), grey, 1.1, 0.3, z, { parent: fl });
     add(new THREE.BoxGeometry(0.9, 0.12, 0.9), lam('#b47a45'), 1.1, 0.38, 0, { parent: fl });
+    // v8: a steering column and wheel in front of the driver (his hands held nothing)
+    const col = add(new THREE.CylinderGeometry(0.022, 0.022, 0.62, 8), blk, 0.3, 1.12, 0, { parent: fl }); col.rotation.z = 0.35;
+    const wh = add(new THREE.TorusGeometry(0.15, 0.018, 6, 20), blk, 0.2, 1.42, 0, { parent: fl }); wh.rotation.set(0, Math.PI / 2, 0); wh.rotateX(0.55);
     add(new THREE.BoxGeometry(0.75, 0.5, 0.75), lam('#c98a4b'), 1.1, 0.69, 0, { parent: fl });
   }
 
@@ -118,7 +123,9 @@ export function canteen(root, renderer, T) {
     g.fillStyle = '#ffffff'; g.beginPath(); g.roundRect(560, 34, 1440, 92, 46); g.fill();
     g.strokeStyle = '#3c4a56'; g.lineWidth = 6; g.beginPath(); g.roundRect(612, 74, 30, 24, 4); g.stroke(); g.beginPath(); g.arc(627, 74, 10, Math.PI, 0); g.stroke();
     g.fillStyle = '#1e2226'; g.font = '600 52px "Lexend V"'; g.textBaseline = 'middle'; g.fillText('vloertaal.nl', 670, 82);
-    g.drawImage(page, 0, 160);
+    // v6: 1.5x zoom on the top of the page (logo + the first languages): the whole page was too small to read
+    g.fillStyle = '#f4f2ee'; g.fillRect(0, 160, 2560, 1600);
+    g.drawImage(page, 426, 0, 1707, 1067, 0, 160, 2560, 1600);
     const tex = canvasTex(c, renderer);
     screenMesh = new THREE.Mesh(new THREE.PlaneGeometry(scrInfo.sw, scrInfo.sh), new THREE.MeshBasicMaterial({ map: tex, toneMapped: false }));
     screenMesh.position.set(0, scrInfo.cy, 0.0036); scrInfo.lid.add(screenMesh);
@@ -190,6 +197,11 @@ export function canteen(root, renderer, T) {
   const HANDQ = new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().makeBasis(V3(1, 0, 0), V3(0, 0, 1), V3(0, -1, 0)));
   const { SHARE_TAP } = T;
   function poseHenk(t) {
+    // v6: a pleased nod while the camera is at his face, happy when he shares the link
+    henk.pose.basePitch ??= henk.pose.headPitch;
+    const nod = Math.sin(Math.PI * clamp((t - 14.55) / 0.7));
+    henk.pose.headPitch = henk.pose.basePitch + 0.09 * nod;
+    henk.expression = t < 14.3 ? 'idle' : t < SHARE_TAP - 0.4 ? 'pleased' : 'happy';
     henk.update(t);
     henk.root.updateMatrixWorld(true);
     const tap = Math.sin(Math.PI * clamp((t - SHARE_TAP + 0.12) / 0.24));

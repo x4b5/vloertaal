@@ -37,7 +37,7 @@ export function terrace(root, renderer, T) {
     for (let y = 0; y < h; y += 32) for (let x = 0; x < w; x += 32) { g.fillStyle = ['#a29d96', '#9a958d', '#aaa49c'][Math.floor(R() * 3)]; g.fillRect(x + 2 + ((y / 32) % 2) * 16, y + 2, 28, 28); } }, [20, 3]);
   add(new THREE.PlaneGeometry(24.4, 6), new THREE.MeshLambertMaterial({ map: cobTex }), -7.6, 0.002, 6.5, { rx: -Math.PI / 2, cast: false });
   // canal along the right: quay, water, houses across
-  add(new THREE.BoxGeometry(0.35, 0.3, 60), lam('#d8d2c6'), 4.6, -0.12, -10);
+  add(new THREE.BoxGeometry(0.35, 0.3, 60), lam('#d8d2c6'), 4.6, -0.15, -10);   // v8: flush with the pavement
   add(new THREE.BoxGeometry(7, 1.2, 60), lam('#7d7468'), 8.2, -1.25, -10, { cast: false });
   const waterTex = texCanvas(256, 256, (g, w, h) => { g.fillStyle = '#4f9cc4'; g.fillRect(0, 0, w, h); g.strokeStyle = 'rgba(220,240,255,.55)'; g.lineWidth = 3;
     for (let i = 0; i < 26; i++) { const x = R() * w, y = R() * h; g.beginPath(); g.moveTo(x, y); g.lineTo(x + 14 + R() * 30, y); g.stroke(); } }, [3, 18]);
@@ -207,19 +207,23 @@ export function terrace(root, renderer, T) {
     const tilt = new THREE.Group(); tilt.rotation.x = -1.05; pv.add(tilt); tilt.add(PH.phone);
     hold = holdPhone(jada, PH.phone, { pw: PH.pw, ph: PH.ph, depth: PH.depth, grip: 0.26 });
     jada.root.updateMatrixWorld(true);
+    // v8: feet further forward and apart, so her thighs slope down and stay under the table top (they cut through it)
     for (const s of ['L', 'R']) {
       const sx = s === 'L' ? 1 : -1;
-      jada.legIK(s, jada.root.localToWorld(V3(sx * 0.1, -0.49, 0.42)), jada.root.localToWorld(V3(sx * 0.05, 0.3, 1.5)), new THREE.Quaternion().setFromRotationMatrix(jada.root.matrixWorld));
+      jada.legIK(s, jada.root.localToWorld(V3(sx * 0.14, -0.5, 0.64)), jada.root.localToWorld(V3(sx * 0.1, -0.1, 1.5)), new THREE.Quaternion().setFromRotationMatrix(jada.root.matrixWorld));
     }
     for (const k of ['chat_pl', 'chat_pl_ok', 'streak_pl']) IMG[k] = await loadImg(`../../assets/shots/${k}.png`);
   }
   const { TAP, STREAK, DAG } = T;
-  // her left thumb taps answer 1 ("Bijna. Nog vijf minuten.", at x 330, y 1509 of 1170 × 2532)
+  // her left thumb taps answer 1 ("Bijna. Nog vijf minuten."): v6 on its number badge (x 165, y 1509 of 1170 × 2532),
+  // near the left edge, so the thumb comes in short and leaves the text free
   const tapK = (t) => clamp(Math.min(smooth(seg(t, TAP - 0.3, TAP - 0.08)), 1 - smooth(seg(t, TAP + 0.08, TAP + 0.32))));
   function poseJada(t) {
+    // v6: the app's faces: thinking while she chooses, a cheer at "Dag 7 op rij", then happy
+    jada.expression = t < TAP + 0.25 ? 'thinking' : t < DAG + 0.05 ? 'idle' : t < DAG + 1.6 ? 'cheer' : 'happy';
     jada.update(t);
     jada.root.updateMatrixWorld(true);
-    hold(t, { tap: { u: 330 / 1170, v: 1509 / 2532, k: tapK(t), side: 'L' } });
+    hold(t, { tap: { u: 165 / 1170, v: 1509 / 2532, k: tapK(t), side: 'L' } });
   }
 
   // ---------------- the screen (the app's real screenshots) ----------------
@@ -268,11 +272,14 @@ export function terrace(root, renderer, T) {
     const k = seg(t, DAG, DAG + 0.42);
     if (k <= 0) { dag.visible = false; return; }
     dag.visible = true;
-    const s = backOut(k, 2.4) * DAG_W / 0.17;
+    // v8: it sinks back into the screen before the camera swings round to the side (edge-on it read as a floating bar)
+    const out = smooth(seg(t, 5.0, 5.5));
+    if (out >= 1) { dag.visible = false; return; }
+    const s = backOut(k, 2.4) * DAG_W / 0.17 * (1 - out);
     dag.scale.setScalar(Math.max(0.001, s));
     const S = PH.point(0.5, 0.56);
     const bob = 0.0012 * Math.sin((t - DAG) * 3.1);
-    dag.position.copy(S.pt).addScaledVector(S.n, 0.004 + 0.022 * easeOut(k) + bob);
+    dag.position.copy(S.pt).addScaledVector(S.n, (0.004 + 0.022 * easeOut(k) + bob) * (1 - out));
     dag.quaternion.copy(PH.phone.getWorldQuaternion(new THREE.Quaternion()));
     dag.rotateZ(0.05 + 0.1 * (1 - easeOut(k)) + 0.01 * Math.sin((t - DAG) * 2.3)); dag.rotateY(-0.3 * (1 - easeOut(k)));
   }
