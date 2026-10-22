@@ -45,6 +45,8 @@ describe('intro (vloertaal.nl/intro)', () => {
   it('leads to the app and to the mail address', () => {
     const html = introPage(INTRO_QUESTIONS);
     expect(html).toContain('href="/"');
+    // "Bekijk de app" goes past the password page, straight to the sneak preview.
+    expect(html).toContain('<a class="cta" href="/?intro">');
     expect(html).toContain('mailto:hoi@vloertaal.nl');
     expect(html).toContain('<link rel="canonical" href="https://vloertaal.nl/intro/" />');
     expect(html).toContain('property="og:title"');

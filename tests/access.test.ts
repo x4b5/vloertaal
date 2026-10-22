@@ -5,7 +5,7 @@ import { units } from '../src/content/curriculum';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import { toCourseUnits } from '../src/content/regels/course';
 import { THEMES, themeUnitIds } from '../src/content/themes';
-import { checkPassword, lessonAllowed, normalizePassword, PASSWORD_HASHES, sampleLessons, unitAllowed } from '../src/lib/access';
+import { accessFromIntro, checkPassword, lessonAllowed, normalizePassword, PASSWORD_HASHES, sampleLessons, unitAllowed } from '../src/lib/access';
 import { isUnlocked } from '../src/lib/exercises';
 import { blockPlayable, homeLessonState, routeNextLesson } from '../src/lib/route';
 import { DAILY_ID } from '../src/lib/spaced';
@@ -147,5 +147,19 @@ describe('access', () => {
         }
       }
     });
+  });
+});
+
+describe('arriving from the intro page', () => {
+  it('gives the sneak preview without the password page', () => {
+    expect(accessFromIntro(null, '?intro')).toBe('sample');
+    expect(accessFromIntro(null, '?unit=x&intro')).toBe('sample');
+  });
+
+  it('keeps a code the phone already has, and does nothing without ?intro', () => {
+    expect(accessFromIntro('full', '?intro')).toBe('full');
+    expect(accessFromIntro('preview', '?intro')).toBe('preview');
+    expect(accessFromIntro(null, '')).toBeNull();
+    expect(accessFromIntro(null, '?test')).toBeNull();
   });
 });

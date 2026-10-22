@@ -102,6 +102,15 @@ export function saveAccess(a: Access): void {
   }
 }
 
+/**
+ * vloertaal.nl/?intro, the "Bekijk de app" of the intro page (src/lib/introPage.ts): the sneak
+ * preview without the password page. A code the phone already has is kept.
+ */
+export function accessFromIntro(had: Access | null, search: string): Access | null {
+  if (had) return had;
+  return new URLSearchParams(search).has('intro') ? 'sample' : null;
+}
+
 /** Forget the access (no longer used by the first run: its back arrows keep an accepted code). */
 export function clearAccess(): void {
   try {
