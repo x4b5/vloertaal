@@ -32,6 +32,18 @@ describe('anonymous counting', () => {
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
+  it('only counts on vloertaal.nl itself, never on preview or other hosts', () => {
+    for (const host of ['vloertaal-git-feat-x-x4b5.vercel.app', 'vloertaal.vercel.app', 'example.org', 'vloertaal.nl.evil.com']) {
+      setCountEnv({ ...PROD, host });
+      expect(mayCount()).toBe(false);
+    }
+    expect(fetchMock).not.toHaveBeenCalled();
+    for (const host of ['vloertaal.nl', 'www.vloertaal.nl']) {
+      setCountEnv({ ...PROD, host });
+      expect(mayCount()).toBe(true);
+    }
+  });
+
   it('sends the event plus its language and sector variant, without cookies', () => {
     setCountEnv(PROD);
     expect(count('lesson-done', { lang: 'ti', sector: 'construction' })).toBe(true);

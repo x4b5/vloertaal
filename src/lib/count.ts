@@ -14,7 +14,7 @@ import { dayKey } from './progress';
  * the owner sees how many only look and how many ask for a code ('unlock').
  *
  * Nothing is sent:
- * - in development and tests (only a production build on a real host counts);
+ * - in development and tests (only a production build on vloertaal.nl counts, not a preview);
  * - when the learner switched "Anoniem meetellen" off in Settings;
  * - when the browser asks not to be tracked (Do Not Track).
  */
@@ -84,7 +84,8 @@ export function setCountEnv(env: Partial<Env> | null): void {
 }
 const env = (): Env => ({ ...realEnv(), ...envOverride });
 
-const LOCAL = /^(localhost|127\.\d+\.\d+\.\d+|\[?::1\]?|0\.0\.0\.0|.*\.local)$/;
+/** The only hosts that count: the live site. Previews (*.vercel.app), localhost and copies never do. */
+const LIVE = /^(www\.)?vloertaal\.nl$/;
 
 function storage(): Storage | null {
   try {
@@ -115,7 +116,7 @@ export function setCounting(on: boolean): void {
 /** True when an event may be sent from here, now. */
 export function mayCount(): boolean {
   const e = env();
-  return e.prod && Boolean(e.host) && !LOCAL.test(e.host) && !e.dnt && countingOn();
+  return e.prod && LIVE.test(e.host) && !e.dnt && countingOn();
 }
 
 /** A dimension value as a short, safe path segment. */
