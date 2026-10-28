@@ -1,3 +1,4 @@
+import { roundRect, sharePng } from './canvasShare';
 /**
  * The pocket card as a picture for the phone's gallery: drawn on a canvas (no libraries), portrait
  * 1080 wide. The word pictures are the same SVGs as on screen, serialised and drawn in; a phrase
@@ -59,16 +60,6 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, max: number): string[
   }
   if (cur) lines.push(cur);
   return lines;
-}
-
-function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.arcTo(x + w, y, x + w, y + h, r);
-  ctx.arcTo(x + w, y + h, x, y + h, r);
-  ctx.arcTo(x, y + h, x, y, r);
-  ctx.arcTo(x, y, x + w, y, r);
-  ctx.closePath();
 }
 
 /** An on-screen SVG as an image (sized to `px`), or null when it cannot be drawn. */
@@ -242,24 +233,5 @@ const toBlob = (canvas: HTMLCanvasElement) =>
 
 /** Shares the card as a PNG (the phone's share sheet, to keep it in the gallery), or downloads it. */
 export async function savePocketCard(d: PocketImage, fileName: string): Promise<'shared' | 'saved' | 'cancelled'> {
-  const blob = await toBlob(await drawPocketCard(d));
-  const file = new File([blob], fileName, { type: 'image/png' });
-  const nav = navigator as Navigator & { canShare?: (data: ShareData) => boolean };
-  if (nav.share && nav.canShare?.({ files: [file] })) {
-    try {
-      await nav.share({ files: [file], title: `Spiekkaartje · ${d.titleNl}` });
-      return 'shared';
-    } catch (e) {
-      if ((e as DOMException)?.name === 'AbortError') return 'cancelled';
-    }
-  }
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = fileName;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  window.setTimeout(() => URL.revokeObjectURL(url), 10_000);
-  return 'saved';
+  return sharePng(await toBlob(await drawPocketCard(d)), fileName, `Spiekkaartje · ${d.titleNl}`);
 }

@@ -1,4 +1,5 @@
 import { CERT_NOTE, certListLabel, certMeta, certSub, sealRing, type CertData } from './certificate';
+import { roundRect, sharePng } from './canvasShare';
 
 /**
  * The certificate as a picture, drawn straight on a canvas (no libraries), in the same layout
@@ -41,16 +42,6 @@ async function fontsReady(): Promise<void> {
     document.fonts.load(font(700, 40)),
     document.fonts.load(font(800, 40)),
   ]).catch(() => {});
-}
-
-function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.arcTo(x + w, y, x + w, y + h, r);
-  ctx.arcTo(x + w, y + h, x, y + h, r);
-  ctx.arcTo(x, y + h, x, y, r);
-  ctx.arcTo(x, y, x + w, y, r);
-  ctx.closePath();
 }
 
 /** Text with letter spacing (canvas letterSpacing where supported, else drawn as is). */
@@ -454,25 +445,5 @@ export async function certificatePng(d: CertData): Promise<Blob> {
  * 'cancelled' when the learner closed the share sheet. `png`: the picture drawn ahead.
  */
 export async function shareCertificate(d: CertData, fileName: string, png: Promise<Blob> = certificatePng(d)): Promise<'shared' | 'saved' | 'cancelled'> {
-  const blob = await png;
-  const file = new File([blob], fileName, { type: 'image/png' });
-  const nav = navigator as Navigator & { canShare?: (data: ShareData) => boolean };
-  if (nav.share && nav.canShare?.({ files: [file] })) {
-    try {
-      await nav.share({ files: [file], title: `Certificaat · ${d.titleNl}` });
-      return 'shared';
-    } catch (e) {
-      if ((e as DOMException)?.name === 'AbortError') return 'cancelled';
-      // Sharing failed for another reason: save the picture instead.
-    }
-  }
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = fileName;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  window.setTimeout(() => URL.revokeObjectURL(url), 10_000);
-  return 'saved';
+  return sharePng(await png, fileName, `Certificaat · ${d.titleNl}`);
 }
