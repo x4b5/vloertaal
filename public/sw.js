@@ -35,8 +35,10 @@ async function cacheShell() {
   const res = await fetch(scope(), { cache: 'no-cache' });
   if (!res.ok) throw new Error(`page ${res.status}`);
   const html = await res.clone().text();
-  // Not the page's other languages (hreflang): those are pages of their own, not the app's files.
-  const urls = [...html.replace(/<link rel="alternate"[^>]*>/g, '').matchAll(/(?:src|href)="([^"]+)"/g)]
+  // Not the pages the start page links to (its other languages, hreflang, and the links under the
+  // splash, src/lib/siteLinks.ts): those are pages of their own, not the app's files.
+  const own = html.replace(/<link rel="alternate"[^>]*>/g, '').replace(/<section id="site-links"[\s\S]*?<\/section>/, '');
+  const urls = [...own.matchAll(/(?:src|href)="([^"]+)"/g)]
     .map((m) => new URL(m[1], scope()))
     .filter((u) => u.origin === self.location.origin && !isAudio(u))
     .map((u) => u.href);
@@ -126,6 +128,9 @@ async function fromCache(req) {
   const hit = await caches.match(req.url, { ignoreSearch: navigate });
   if (hit) return hit;
   if (navigate) {
+    // Another page of the site (/bouw/, /pl/ …) that is not kept: to the app. Its page can't stand
+    // in at that address (its files are named relative to the start).
+    if (new URL(req.url).pathname !== new URL(scope()).pathname) return Response.redirect(scope(), 302);
     const page = (await caches.match(scope())) || (await caches.match(new URL('index.html', scope()).href));
     if (page) return page;
   }

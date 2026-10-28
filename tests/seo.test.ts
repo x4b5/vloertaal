@@ -6,7 +6,7 @@ import { rulesPage, SECTOR_PAGES, sectorPage } from '../src/lib/sectorPages';
 import { coachPage } from '../src/lib/coachPage';
 import { COACH_PATH, RULES_PATH } from '../src/lib/paths';
 import { notFoundPage, siteLinks } from '../src/lib/siteLinks';
-import { slugOf, TOPIC_PAGES, topicPage, topicsIndexPage } from '../src/lib/topicPages';
+import { HEADINGS, slugOf, TOPIC_PAGES, topicPage, topicsIndexPage } from '../src/lib/topicPages';
 import { unitFromSearch } from '../src/lib/unitLink';
 import { sitemap } from '../src/lib/sitemap';
 
@@ -86,7 +86,7 @@ describe('a page per help language (docs/seo-plan.md, step 3)', () => {
       });
 
       it('has a title with the name and a description of search-result length', () => {
-        expect(html).toMatch(/<title>Vloertaal – [^<]+<\/title>/);
+        expect(html).toMatch(/<title>[^<]+ – Vloertaal<\/title>/);
         expect([...desc].length).toBeGreaterThanOrEqual(50);
         expect([...desc].length).toBeLessThanOrEqual(160);
       });
@@ -137,7 +137,7 @@ describe('a page per sector and for Werkregels (docs/seo-plan.md, step 4)', () =
 
       it('has one h1, a way into the app, and links to the other pages', () => {
         expect(html.match(/<h1>/g)).toHaveLength(1);
-        expect(html).toContain('class="cta" href="/"');
+        expect(html).toMatch(/class="cta" href="\/(\?unit=[a-z]+)?"/);
         for (const other of SECTOR_PAGES) expect(html).toContain(`href="${other.path}"`);
         expect(html).toContain('href="/pl/"');
       });
@@ -212,7 +212,7 @@ describe('the 404 page and the hosting', () => {
 
 describe('a page per topic', () => {
   it('has every topic of the Dutch course once, at a Dutch address', () => {
-    expect(TOPIC_PAGES.length).toBeGreaterThanOrEqual(30);
+    expect(TOPIC_PAGES.length).toBeGreaterThanOrEqual(25);
     expect(new Set(TOPIC_PAGES.map((t) => t.path)).size).toBe(TOPIC_PAGES.length);
     expect(slugOf('Rekenen: tijd, geld, maten')).toBe('rekenen-tijd-geld-maten');
     expect(slugOf('Omgang met collega’s')).toBe('omgang-met-collegas');
@@ -231,4 +231,32 @@ describe('a page per topic', () => {
       expect(unitFromSearch(`?unit=${slug}`)).toBe(t.unit.id);
     });
   }
+});
+
+describe('the second critic round', () => {
+  it('gives no sector topic a page of its own: its sector page has the same words', () => {
+    for (const s of SECTOR_PAGES) expect(TOPIC_PAGES.some((t) => t.path === s.path)).toBe(false);
+    expect(TOPIC_PAGES.map((t) => t.path)).not.toContain('/onderwerpen/op-de-bouw/');
+    expect(topicsIndexPage()).toContain('href="/bouw/"');
+  });
+
+  it('gives every topic page a heading of its own that fits a search result', () => {
+    for (const t of TOPIC_PAGES) {
+      expect(HEADINGS[t.unit.id], t.unit.id).toBeDefined();
+      expect(`${t.heading} | Vloertaal`.length, t.unit.id).toBeLessThanOrEqual(60);
+    }
+  });
+
+  it('lets a sector page open its own topic in the app', () => {
+    expect(sectorPage('construction')).toContain('class="cta" href="/?unit=build"');
+    expect(sectorPage('logistics')).toContain('class="cta" href="/?unit=warehouse"');
+  });
+
+  it('keeps the service worker to the app: not the pages the start page links to', () => {
+    const sw = readFileSync('public/sw.js', 'utf8');
+    expect(sw).toContain('<section id="site-links"');
+    expect(siteLinks()).toMatch(/^<section id="site-links"[\s\S]*<\/section>$/);
+    // Offline, another page of the site goes to the app instead of a broken copy of it.
+    expect(sw).toContain('Response.redirect(scope(), 302)');
+  });
 });

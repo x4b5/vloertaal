@@ -123,8 +123,9 @@ export function langPage(code: PageCode): string {
   const page = LANG_PAGES.find((p) => p.code === code)!;
   const t = texts(code);
   // Persian and Dari share a script and much of the words: the name tells the two pages apart.
-  const title = `Vloertaal – ${t.tagline}${code === 'fa' || code === 'prs' ? ` (${page.nativeName})` : ''}`;
-  const description = describe(t.body('a.what'));
+  const title = `${t.tagline}${code === 'fa' || code === 'prs' ? ` (${page.nativeName})` : ''} – Vloertaal`;
+  // What it is, then (when it fits) that it is free and in your own language: the mission's first sentence.
+  const description = describe(`${describe(t.body('a.what'), 160)} ${t.body('a.mission')}`);
   const sections = SECTIONS.map(
     (id, i) => `<section aria-labelledby="s${i}"><h2 id="s${i}">${esc(t.title(id))}</h2><p>${esc(t.body(id))}</p></section>`,
   ).join('\n');
@@ -135,7 +136,7 @@ export function langPage(code: PageCode): string {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: title,
+    name: t.tagline,
     url: `${SITE}${page.path}`,
     description,
     inLanguage: page.tag,

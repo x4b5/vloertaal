@@ -20,7 +20,11 @@ Al goed: `robots.txt`, `sitemap.xml` (één adres), canonical, deelplaatje (`og-
 www → kaal domein. En er is al een patroon voor losse HTML-pagina's die bij de build ontstaan
 (`src/lib/introPage.ts`): dat gebruiken we voor de nieuwe pagina's.
 
-## ⚠️ Eerst beslissen: het slot
+## ✅ Het slot (opgelost)
+
+*Sinds 28 oktober staat de volledige versie open voor iedereen (`OPEN_TO_ALL` in `src/lib/access.ts`):
+de codepagina komt niet meer in beeld. De pagina's linken daarom gewoon naar de app, een onderwerp
+(`/?unit=…`) of een taal (`/?taal=…`). Hieronder de oorspronkelijke afweging.*
 
 Wie via Google binnenkomt, belandt nu op de codepagina. Zonder code is er een proefversie: de
 eerste les van elk thema. Een zoeker die een slot ziet, klikt weg, en Google merkt dat.
@@ -140,7 +144,8 @@ Gedaan, in code en getest (`tests/seo.test.ts`):
 - **Stap 4** — `/logistiek` `/bouw` `/productie` `/zorg` `/horeca` `/schoonmaak` en `/werkregels`
   (`src/lib/sectorPages.ts`), met de woorden in het Pools, Roemeens, Oekraïens en Arabisch.
 - **Stap 5** — `/voor-begeleiders` (`src/lib/coachPage.ts`), met een link naar elk onderwerp.
-- **Extra** — `/onderwerpen` en een pagina per onderwerp (32, `src/lib/topicPages.ts`): woorden met
+- **Extra** — `/onderwerpen` en een pagina per onderwerp (26; de 6 sectoronderwerpen staan op hun
+  sectorpagina, `src/lib/topicPages.ts`), met een kop waarop gezocht wordt: woorden met
   vertaling, zinnen en gesprekjes, en een knop die het onderwerp in de app opent. Geen pagina per
   les (zie hieronder); een onderwerp is groot genoeg om iets te zoeken en klein genoeg om bij te houden.
 - De voorpagina heeft vóór JavaScript een kop, drie alinea's en links naar alle pagina's

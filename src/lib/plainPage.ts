@@ -101,6 +101,7 @@ ${body}
 /** What every page is about: the free web app (structured data). */
 export const APP_DATA = {
   '@type': 'WebApplication',
+  '@id': `${SITE}/#app`,
   name: 'Vloertaal',
   url: `${SITE}/`,
   applicationCategory: 'EducationalApplication',

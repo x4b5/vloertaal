@@ -2,10 +2,10 @@ import { units } from '../content/curriculum';
 import { RULES_DISCLAIMER } from '../content/regels/disclaimer';
 import { rulesUnits, sectorRulesUnits } from '../content/regels';
 import type { RuleUnit } from '../content/regels/types';
-import { type SectorId, sectors } from '../content/sectors';
+import { type SectorId, sectorGroups, sectors } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { languageNav } from './langPages';
-import { RULES_PATH } from './paths';
+import { appLink, COACH_PATH, RULES_PATH } from './paths';
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
 import { unitSections } from './unitContent';
 
@@ -72,6 +72,8 @@ export function sectorPage(id: SectorId): string {
   const sector = sectors.find((s) => s.id === id)!;
   const own = sector.units.map(unit);
   const focus = sector.focus.map((f) => unit(f).titleNl);
+  const group = sectorGroups.find((g) => g.sectors.includes(id))!;
+  const names = own.map((u) => `‘${esc(u.titleNl)}’`).join(' en ');
   const rules = sector.rules.units.map(rulesUnit).flatMap((u) => u.lessons);
   const title = `Nederlands leren voor ${page.short} – gratis | Vloertaal`;
   const description = `Gratis Nederlands leren voor ${page.phrase}: woorden, zinnen en gesprekjes van de werkvloer, met uitleg in je eigen taal. Geen account nodig.`;
@@ -79,7 +81,7 @@ export function sectorPage(id: SectorId): string {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: title,
+      name: `Nederlands leren voor ${page.phrase}`,
       url: `${SITE}${page.path}`,
       description,
       inLanguage: 'nl',
@@ -90,16 +92,17 @@ export function sectorPage(id: SectorId): string {
   return plainPage(
     { path: page.path, lang: 'nl', title, description, ogLocale: 'nl_NL', data },
     `<h1>Nederlands leren voor ${esc(page.phrase)}</h1>
-<p class="lead">Vloertaal is een gratis app om Nederlands te leren voor je werk. Voor ${esc(page.phrase)} is er een eigen onderwerp: <strong>${esc(own.map((u) => u.titleNl).join(', '))}</strong>. Je leert de woorden en zinnen die je daar elke dag hoort, met uitleg in je eigen taal: ${HELP_LANGS}. Of in eenvoudig Engels.</p>
-<a class="cta" href="/">Open Vloertaal →</a>
+<p class="lead">Vloertaal is een gratis app om Nederlands te leren voor je werk. Voor ${esc(page.phrase)} is er een apart onderwerp, ${names}, met de woorden en zinnen die je daar elke dag hoort. Met uitleg in je eigen taal (${HELP_LANGS}), of in eenvoudig Engels.</p>
+<a class="cta" href="${appLink(own[0].id)}">Oefen ${names} in Vloertaal →</a>
 ${unitSections(own)}
 <section aria-labelledby="path"><h2 id="path">Wat komt er eerst?</h2>
-<p>Kies je in de app de sector ${esc(page.name)}? Dan komen na de basis eerst deze onderwerpen: ${esc(focus.join(' en '))}, en dan ${esc(own.map((u) => u.titleNl).join(', '))}. De andere onderwerpen blijven open: je kiest zelf.</p></section>
+<p>Kies je in de app bij de vraag waar je werkt voor ‘${esc(group.nl)}’ en dan ‘${esc(page.name)}’? Dan staat ${names} al vroeg in je lespad, meteen na de eerste basisonderwerpen. Ook ${esc(focus.map((f) => `‘${f}’`).join(' en '))} komen eerder aan de beurt. Alle andere onderwerpen blijven open: je kiest zelf.</p>
+<p>Leidinggevende of werkgever in ${esc(page.short)}? Stuur je nieuwe collega’s de link naar deze pagina, of naar de pagina in hun eigen taal (hieronder). Meer tips staan bij <a href="${COACH_PATH}">Voor begeleiders</a>.</p></section>
 ${rules.length ? `<section aria-labelledby="rules"><h2 id="rules">Werkregels voor ${esc(page.phrase)}</h2>
 <p>Spreek je al Nederlands? Kies dan in de app “Nederlands”. Dan leer je de regels op het werk, ook voor ${esc(page.phrase)}:</p>
 ${rules.map((l) => `<h3>${esc(l.title)}</h3><p>${esc(l.goal)}</p><p class="remember">Onthoud: ${esc(l.remember)}</p>`).join('\n')}
 <p><a href="${RULES_PATH}">Alle werkregels</a></p></section>` : ''}
-<a class="cta" href="/">Open Vloertaal →</a>
+<a class="cta" href="${appLink(own[0].id)}">Oefen ${names} in Vloertaal →</a>
 ${footer(page.path)}`,
   );
 }
@@ -114,7 +117,7 @@ export function rulesPage(): string {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: title,
+      name: 'Werkregels',
       url: `${SITE}${RULES_PATH}`,
       description,
       inLanguage: 'nl',
@@ -130,7 +133,7 @@ export function rulesPage(): string {
 ${all
   .map(
     (u, i) => `<section aria-labelledby="u${i}"><h2 id="u${i}">${esc(u.title)}</h2>
-<ul class="lines">${u.lessons.map((l) => `<li><strong>${esc(l.title)}</strong>: ${esc(l.goal)}</li>`).join('')}</ul>
+<ul class="lines">${u.lessons.map((l) => `<li><strong>${esc(l.title)}</strong> – ${esc(l.goal)}</li>`).join('')}</ul>
 <p class="remember">Onthoud: ${esc(u.lessons[0].remember)}</p></section>`,
   )
   .join('\n')}
