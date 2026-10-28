@@ -1317,7 +1317,8 @@ h1[tabindex="-1"]:focus { outline: none; }
   font-family: inherit; font-size: max(0.32em, 0.68rem); font-weight: 650; letter-spacing: 0.06em; line-height: 1.2; text-transform: uppercase;
 }
 .brand .logo-mark, .hero-logo .logo-mark { flex: none; border-radius: 22%; }
-.hero-logo { display: inline-flex; align-items: center; gap: 12px; margin: 8px 0 0; }
+/* The logo and the name are one picture: the same way round in a right-to-left language. */
+.hero-logo { display: inline-flex; align-items: center; gap: 12px; margin: 8px 0 0; direction: ltr; }
 .hero-logo .wordmark { font-size: 2.6rem; }
 
 /* "Zo werkt het hier" tip card */
@@ -2474,7 +2475,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   position: absolute; top: 4px; left: 4px; width: 30px; height: 30px; border-radius: 50%;
   background: var(--card); border: 2px solid var(--edge); transition: transform 0.15s var(--ease-out);
 }
-.count-state { position: absolute; top: 50%; right: 10px; translate: 0 -50%; font-size: 0.8rem; font-weight: 700; line-height: 1; color: var(--muted); }
+/* A fixed size: the switch is, so "Aan" never runs under the knob with larger text. */
+.count-state { position: absolute; top: 50%; right: 10px; translate: 0 -50%; font-size: 13px; font-weight: 700; line-height: 1; color: var(--muted); }
 .count-switch.on { background: var(--yellow); border-color: #1e2226; }
 .count-switch.on .count-knob { transform: translateX(38px); background: #1e2226; border-color: #1e2226; }
 .count-switch.on .count-state { right: auto; left: 12px; color: #1e2226; }
@@ -3086,7 +3088,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .say-who .bi-help { --help-size: 0.8em; font-weight: 400; color: var(--muted); }
 
 /* Rate yourself: no score, no stamp. "Sounds the same" goes on; "again" listens and tries again. */
-.say-rate { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.say-rate { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
 .say-rate-btn {
   display: flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 64px; padding: 8px 10px; border: 2px solid; border-radius: var(--radius);
@@ -3130,6 +3132,35 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 :root[data-text='xl'] body { font-size: 22.5px; }
 /* Long words may break rather than run off a narrow screen at the larger sizes. */
 :root:is([data-text='large'], [data-text='xl']) :is(h1, h2, h3, p, li, button, label) { overflow-wrap: break-word; }
+/* Larger text in a narrow column: a long word is split with a hyphen where the language allows it
+   (every text has its lang), not anywhere ("veiligheid / sschoenen"). */
+:root:is([data-text='large'], [data-text='xl']) :is(h1, h2, h3, p, li, button, label, .choice-nl, .chat-line, .rh-name, .pocket-nl, .say-nl, .max3-names, .coach-title, .tips-head) {
+  overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto;
+}
+/* The largest text on a narrow phone (up to 380 px): what stands beside a text makes room for it. */
+@media (max-width: 380px) {
+  /* The chat bubble under the colleague, as below 300 px. */
+  :root[data-text='xl'] .chat-row { flex-wrap: wrap; }
+  :root[data-text='xl'] .chat-bubble { flex: 1 1 100%; }
+  :root[data-text='xl'] .chat-bubble::before { display: none; }
+  :root[data-text='xl'] .chat-me .chat-char { order: -1; margin-inline-start: auto; }
+  /* The colleague's line (a chat, a situation) under the colleague, as below 300 px. */
+  :root[data-text='xl'] .speaker { flex-wrap: wrap; }
+  :root[data-text='xl'] .speaker > .speaker-bubble, :root[data-text='xl'] .speaker-word .speaker-bubble { flex: 1 1 140px; max-width: 100%; margin-bottom: 8px; }
+  :root[data-text='xl'] .speaker-bubble::before { display: none; }
+  /* A long Dutch word in a list of words: a size that fits the column ("de veiligheidsschoenen"). */
+  :root[data-text='xl'] .choice-nl.len-l { font-size: 1.05rem; }
+  /* "Later" and "Bekijk" one above the other, each its full width. */
+  :root[data-text='xl'] .cert-earned-actions { grid-template-columns: minmax(0, 1fr); }
+  :root[data-text='xl'] .cert-earned-actions .btn-go { order: -1; padding-inline: 10px 58px; }
+  /* The topic card on the path: no colleague over the Start button, the title its full width. */
+  :root[data-text='xl'] .bay-char { display: none; }
+  :root[data-text='xl'] .bay-now .bay-card { padding-inline: 12px; }
+  /* Speaking: the word gets the card's width (the picture is on the card before it too). */
+  :root[data-text='xl'] .say-card .say-pic { display: none; }
+  /* "The same" and "Say it again" one above the other: side by side a word would break. */
+  :root[data-text='xl'] .say-rate { grid-template-columns: minmax(0, 1fr); }
+}
 .text-size-picker button { justify-content: center; min-height: 64px; }
 .text-size-a { font-weight: 700; line-height: 1; color: var(--ink); }
 /* Fixed px, so the three A's keep their steps whatever the size now is. */
@@ -3225,6 +3256,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .pocket-card[dir='rtl'] .pocket-title { text-align: right; }
 .pocket-row .speak { width: 44px; height: 44px; }
 .pocket-actions { margin-top: 16px; }
+/* A right-to-left help line over the Dutch one: both centred, so they line up. */
+.pocket-actions .cert-btn-text:has([dir='rtl']) { align-items: center; text-align: center; }
 @media (max-width: 380px) {
   .pocket-card { padding: 10px 10px 4px; margin-inline: 4px; }
   .pocket-row { gap: 10px; padding: 8px 0; }
