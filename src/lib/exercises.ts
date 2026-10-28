@@ -577,12 +577,14 @@ function readableDutch(word: Word, lesson: Lesson, rng: () => number, nonLatin: 
 
 /**
  * A word that is fair to type from hearing: at most TYPE_MAX_LETTERS letters (the article not
- * counted) and no capitals ("BSN", "DigiD", a name). Other words are heard and picked instead.
+ * counted), no capitals ("BSN", "DigiD", a name), and no hyphen or digit ("e-sigaret"): the
+ * letter tiles (lib/letters.ts) spell letters only, so they would teach "esigaret". Other words
+ * are heard and picked instead.
  */
 export const TYPE_MAX_LETTERS = 12;
 export function typable(word: Word): boolean {
   const bare = word.nl.trim().replace(/^(de|het|een)\s+/i, '');
-  return !/\p{Lu}/u.test(word.nl) && bare.replace(/[^\p{L}]/gu, '').length <= TYPE_MAX_LETTERS;
+  return !/\p{Lu}/u.test(word.nl) && !/[-\d]/.test(word.nl) && bare.replace(/[^\p{L}]/gu, '').length <= TYPE_MAX_LETTERS;
 }
 
 function reviewExercise(kind: ReviewKind, word: Word, lesson: Lesson, rng: () => number, nonLatin = false, quiet = false): Exercise {
