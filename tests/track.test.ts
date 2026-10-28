@@ -5,7 +5,7 @@ import { findLesson } from '../src/content/curriculum';
 import { toCourseUnits } from '../src/content/regels/course';
 import { coursePlan, sectors, type SectorChoice } from '../src/content/sectors';
 import { RULES_STUB } from '../src/dev/rulesStub';
-import { lessonAllowed, previewUnits, unitAllowed } from '../src/lib/access';
+import { lessonAllowed, OPEN_TO_ALL, previewUnits, unitAllowed } from '../src/lib/access';
 import { earnCertificates, earnedCertificates, unitIndex } from '../src/lib/certificate';
 import { isNextInCourse, isUnlocked, unitIndexOf } from '../src/lib/exercises';
 import { unitTexts } from '../src/lib/offline';
@@ -240,7 +240,7 @@ describe("the work-rules track ('regels')", () => {
     expect(onboardingStep(nl, null)).toBe('gate');
     expect(previousStep('gate', nl)).toBe('language');
     expect(onboardingStep(nl, 'preview')).toBe('sector');
-    expect(previousStep('sector', nl)).toBe('gate');
+    expect(previousStep('sector', nl)).toBe(OPEN_TO_ALL ? 'language' : 'gate');
   });
 
   it('works with the real course as the Dutch pack registers it', async () => {

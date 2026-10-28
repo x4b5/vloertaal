@@ -23,6 +23,7 @@ import { settingsRows, type SettingsPage } from '../src/lib/settingsMenu';
 import { dailyCard } from '../src/lib/spaced';
 import { trackOf } from '../src/lib/track';
 import { greetingText } from '../src/components/BramSays';
+import { OPEN_TO_ALL } from '../src/lib/access';
 
 // The real rules course (the pack registers it), and the Dutch screens.
 beforeAll(() => registerPack(nlPack));
@@ -261,7 +262,7 @@ describe('the first run in Dutch: language → (no gender) → code → sector �
     expect(onboardingStep(p, null)).toBe('gate');
     expect(previousStep('gate', p)).toBe('language');
     expect(onboardingStep(p, 'full')).toBe('sector');
-    expect(previousStep('sector', p)).toBe('gate');
+    expect(previousStep('sector', p)).toBe(OPEN_TO_ALL ? 'language' : 'gate');
     expect(onboardingStep({ ...p, sector: 'none' }, 'full')).toBe('done');
     expect(previousStep('gate', { ...p, sector: 'none' })).toBe('language');
   });

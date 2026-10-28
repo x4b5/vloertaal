@@ -12,6 +12,7 @@ import {
   TRY_LESSON_ID,
 } from '../src/lib/onboarding';
 import { forgetLinkedUnit, rememberedLinkedUnit, rememberLinkedUnit } from '../src/lib/unitLink';
+import { OPEN_TO_ALL } from '../src/lib/access';
 
 const fresh = { onboarded: false, helpLang: null, gender: undefined, genderAsked: false, sector: undefined } as const;
 
@@ -34,7 +35,7 @@ describe('first-run order: language, gender (gendered only), password, sector', 
   it('back from the sector shows the password page again, with the code kept', () => {
     const p = { ...fresh, onboarded: true, helpLang: 'ar' as const, gender: 'm' as const, genderAsked: true };
     expect(onboardingStep(p, 'full', true)).toBe('gate');
-    expect(previousStep('sector', p)).toBe('gate');
+    expect(previousStep('sector', p)).toBe(OPEN_TO_ALL ? 'gender' : 'gate');
   });
 
   it('every back arrow goes to the page before it', () => {
