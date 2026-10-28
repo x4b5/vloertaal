@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Losse luisterpagina, nergens gelinkt: niet in zoekmachines. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Vloertaal · Stemmen kiezen</title>
+  <link rel="icon" href="../favicon-32.png?v=4" type="image/png" sizes="32x32" />
+  <style>
+    :root {
+      --bg: #e7e3dc;
+      --card: #fffdf8;
+      --ink: #1e2226;
+      --muted: #4a5058;
+      --line: #cfc8bc;
+      --yellow: #ffc414;
+      --on-yellow: #1e2226;
+      --green: #137a55;
+      --green-bg: #e3efe7;
+      --focus: #1e2226;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #16191c;
+        --card: #22272c;
+        --ink: #f1ede6;
+        --muted: #b4b0a8;
+        --line: #3a4048;
+        --green: #3fbf8a;
+        --green-bg: #1d3a2f;
+        --focus: #f1ede6;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 17px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 560px; margin: 0 auto; padding: 24px 16px 120px; }
+    h1 { font-size: 1.6rem; line-height: 1.2; margin: 0 0 8px; }
+    .intro { color: var(--muted); margin: 0 0 8px; }
+    .zinnen {
+      margin: 0 0 24px; padding: 12px 14px; border-left: 4px solid var(--yellow);
+      background: var(--card); border-radius: 0 10px 10px 0; color: var(--muted); font-size: 0.95rem;
+    }
+    section {
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: 16px; margin: 0 0 16px;
+    }
+    .kop { display: flex; align-items: center; gap: 14px; margin: 0 0 12px; }
+    .gezicht {
+      flex: none; width: 64px; height: 64px; border-radius: 50%;
+      background: var(--bg); border: 2px solid var(--line);
+    }
+    h2 { font-size: 1.2rem; margin: 0; }
+    .rol { color: var(--muted); margin: 0; font-size: 0.95rem; }
+    .stem {
+      display: flex; align-items: center; gap: 12px; padding: 8px;
+      border: 2px solid transparent; border-radius: 10px;
+    }
+    .stem + .stem { margin-top: 4px; }
+    .stem:has(input:checked) { border-color: var(--green); background: var(--green-bg); }
+    .play {
+      flex: none; width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--ink);
+      background: var(--card); color: var(--ink); font-size: 1rem; cursor: pointer;
+    }
+    .play[aria-pressed="true"] { background: var(--yellow); color: var(--on-yellow); border-color: var(--yellow); }
+    label { flex: 1; display: flex; align-items: center; gap: 10px; cursor: pointer; min-height: 48px; }
+    input[type="radio"] { width: 22px; height: 22px; accent-color: var(--green); margin: 0; }
+    button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+    .balk {
+      position: fixed; left: 0; right: 0; bottom: 0; padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+      background: var(--bg); border-top: 1px solid var(--line);
+    }
+    .balk-binnen { max-width: 560px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
+    .teller { flex: 1; color: var(--muted); font-size: 0.95rem; }
+    .stuur {
+      display: inline-block; padding: 14px 20px; border-radius: 12px; font-weight: 700; text-decoration: none;
+      background: var(--yellow); color: var(--on-yellow); border: 2px solid var(--ink);
+    }
+    .stuur[aria-disabled="true"] { opacity: 0.45; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Welke stem past het best?</h1>
+    <p class="intro">
+      In de app Vloertaal praten vier collega's. Luister per persoon naar drie stemmen en tik aan
+      welke jij het best vindt passen. Stuur daarna je keuze met één knop.
+    </p>
+    <p class="zinnen">Elke stem zegt: "Goedemorgen! Draag altijd je helm." · "Hallo, ik ben nieuw." · "Kunt u dat herhalen?"</p>
+    <div id="lijst"></div>
+  </main>
+
+  <div class="balk">
+    <div class="balk-binnen">
+      <span class="teller" id="teller" aria-live="polite">0 van 4 gekozen</span>
+      <a class="stuur" id="stuur" href="#" target="_blank" rel="noopener" aria-disabled="true">Stuur mijn keuze</a>
+    </div>
+  </div>
+
+  <script>
+    // Stem 1-3 staan per persoon in een andere volgorde dan in de app, zodat de huidige stem
+    // niet steeds bovenaan staat. Alleen het appje noemt de namen.
+    const PERSONEN = [
+      { key: 'bram', naam: 'Bram', rol: 'Jonge magazijnmedewerker, gretig en vrolijk.', stemmen: ['Devin', 'Thijmen', 'Finn'] },
+      { key: 'henk', naam: 'Henk', rol: 'Oudere ploegleider, rustig, met zijn mok koffie.', stemmen: ['Dennis', 'Simon', 'Daniel'] },
+      { key: 'amina', naam: 'Amina', rol: 'Werkt in de kas, wat verlegen en zacht.', stemmen: ['Sandrine', 'Jasmijn', 'Ariël'] },
+      { key: 'jada', naam: 'Jada', rol: 'Orderpicker, stoer en een tikje brutaal.', stemmen: ['Iris', 'Noa', 'Mette'] },
+    ];
+
+    const keuze = {};
+    const speler = new Audio();
+    let actief = null;
+
+    function zetKnop(knop, speelt) {
+      knop.setAttribute('aria-pressed', String(speelt));
+      knop.textContent = speelt ? '■' : '▶';
+      knop.setAttribute('aria-label', (speelt ? 'Stop ' : 'Speel ') + knop.dataset.label);
+    }
+
+    function speel(knop) {
+      if (actief === knop) {
+        speler.pause();
+        zetKnop(knop, false);
+        actief = null;
+        return;
+      }
+      if (actief) zetKnop(actief, false);
+      actief = knop;
+      zetKnop(knop, true);
+      speler.src = knop.dataset.src;
+      speler.play().catch(() => { zetKnop(knop, false); actief = null; });
+    }
+
+    speler.addEventListener('ended', () => {
+      if (actief) zetKnop(actief, false);
+      actief = null;
+    });
+
+    function bouwPersoon(p) {
+      const sectie = document.createElement('section');
+      // Gezichten: getekend door de app zelf (Character, crop 'head'), eenmalig als SVG weggeschreven.
+      sectie.innerHTML = `<div class="kop"><img class="gezicht" src="${p.key}.svg" alt="" width="64" height="64">`
+        + `<div><h2>${p.naam}</h2><p class="rol">${p.rol}</p></div></div>`;
+      p.stemmen.forEach((_, i) => {
+        const nr = i + 1;
+        const rij = document.createElement('div');
+        rij.className = 'stem';
+        const knop = document.createElement('button');
+        knop.type = 'button';
+        knop.className = 'play';
+        knop.dataset.src = `${p.key}-${nr}.mp3`;
+        knop.dataset.label = `${p.naam}, stem ${nr}`;
+        zetKnop(knop, false);
+        knop.addEventListener('click', () => speel(knop));
+        const label = document.createElement('label');
+        label.innerHTML = `<input type="radio" name="${p.key}" value="${i}"> Stem ${nr}`;
+        label.querySelector('input').addEventListener('change', () => { keuze[p.key] = i; werkBalkBij(); });
+        rij.append(knop, label);
+        sectie.append(rij);
+      });
+      return sectie;
+    }
+
+    function werkBalkBij() {
+      const gekozen = PERSONEN.filter((p) => p.key in keuze);
+      document.getElementById('teller').textContent = `${gekozen.length} van ${PERSONEN.length} gekozen`;
+      const knop = document.getElementById('stuur');
+      if (!gekozen.length) {
+        knop.setAttribute('aria-disabled', 'true');
+        knop.href = '#';
+        return;
+      }
+      const regels = PERSONEN.map((p) =>
+        p.key in keuze ? `${p.naam}: ${p.stemmen[keuze[p.key]]} (stem ${keuze[p.key] + 1})` : `${p.naam}: geen keuze`,
+      );
+      const tekst = ['Mijn stemkeuze voor Vloertaal:', ...regels].join('\n');
+      knop.href = `https://wa.me/?text=${encodeURIComponent(tekst)}`;
+      knop.setAttribute('aria-disabled', 'false');
+    }
+
+    document.getElementById('lijst').append(...PERSONEN.map(bouwPersoon));
+  </script>
+</body>
+</html>
