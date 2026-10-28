@@ -32,6 +32,12 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | Het regiobestand (Zuid-Limburg) dat niet laadde, werd niet opnieuw geprobeerd | Zuid-Limburg | opnieuw als internet terugkomt |
 | Een back-upbestand dat niet te lezen is: geen melding | wie herstelt | "geen Vloertaal-bestand" |
 | Enter deed niets in de type-oefening | toetsenbord | Enter controleert |
+| Het bewaarde spiekkaartje sneed lange titels af ("…de ongeschreven" zonder "regels") | Werkregels, lange vertalingen | titel en regel eronder lopen door |
+| Annuleren van het deelscherm bij "Voor begeleiders" opende een kopieervenster | coaches | annuleren doet niets |
+| Enter ingedrukt houden sloeg het reeksscherm over | toetsenbord | herhaalde toetsen tellen niet |
+| De lettertegels leerden "de esigaret" (zonder streepje) | Tigrinya, Arabisch, Perzisch, Dari, Oekraïens, Bulgaars | woorden met een streepje of cijfer worden geluisterd, niet gespeld |
+| Certificaat als download bewaard: geen melding | computer, Firefox op Android | "De afbeelding is bewaard" |
+| "€ 112" zou als "één één twee euro" klinken | (nog geen les) | een bedrag blijft een bedrag |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
@@ -52,6 +58,8 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
   - acht functies en constanten die niets meer gebruikt.
 - **Certificaat**: het scherm en de tekenfunctie laden pas als je ze ziet. Het hoofdbestand ging
   van 739 naar 721 kB.
+- **Dubbele code**: certificaat en spiekkaartje delen nu één `roundRect` en één "delen of bewaren"
+  (`src/lib/canvasShare.ts`). Volgens jscpd is dat de enige doublure buiten de tekeningen.
 
 ## Bewust níét gedaan (graag een besluit)
 
