@@ -112,7 +112,15 @@ export async function drawPocketCard(d: PocketImage): Promise<HTMLCanvasElement>
     const h = Math.max(PIC, nl.length * NL * 1.15 + help.length * HELP_PX * 1.3 + en.length * EN * 1.3 + 18) + 2 * 30;
     return { row, nl, help, en, h };
   });
-  const headH = 250;
+  // The head: the title and the line under it wrap (a long title, a help-language title with the
+  // English beside it), and the head grows with them.
+  const headW = W - 2 * PAD - 2 * 36;
+  measure.font = font(700, 58);
+  const titleLines = wrap(measure, d.titleNl, headW);
+  const sub = [d.titleHelp, d.english !== false || !d.titleHelp ? d.titleEn : ''].filter(Boolean).join('  ·  ');
+  measure.font = font(400, 34, HELP);
+  const subLines = sub ? wrap(measure, sub, headW) : [];
+  const headH = 250 + (titleLines.length - 1) * 62 + Math.max(0, subLines.length - 1) * 44;
   const footH = 110;
   const H = Math.round(PAD + headH + laid.reduce((s, l) => s + l.h, 0) + footH + PAD);
   const canvas = document.createElement('canvas');
@@ -147,18 +155,23 @@ export async function drawPocketCard(d: PocketImage): Promise<HTMLCanvasElement>
   y += 62 + 54;
   ctx.textBaseline = 'alphabetic';
   ctx.font = font(700, 58);
-  ctx.fillText(d.titleNl, x0, y);
+  for (const [i, line] of titleLines.entries()) {
+    if (i) y += 62;
+    ctx.fillText(line, x0, y);
+  }
   y += 54;
-  const sub = [d.titleHelp, d.english !== false || !d.titleHelp ? d.titleEn : ''].filter(Boolean).join('  ·  ');
   ctx.font = font(400, 34, HELP);
   ctx.fillStyle = C.ink2;
-  if (rtl && d.titleHelp) {
-    ctx.direction = 'rtl';
-    ctx.textAlign = 'right';
-    ctx.fillText(sub, x1, y);
-    ctx.direction = 'ltr';
-    ctx.textAlign = 'left';
-  } else ctx.fillText(sub, x0, y);
+  for (const [i, line] of subLines.entries()) {
+    if (i) y += 44;
+    if (rtl && d.titleHelp) {
+      ctx.direction = 'rtl';
+      ctx.textAlign = 'right';
+      ctx.fillText(line, x1, y);
+      ctx.direction = 'ltr';
+      ctx.textAlign = 'left';
+    } else ctx.fillText(line, x0, y);
+  }
   y = PAD + headH;
 
   for (const [i, l] of laid.entries()) {
