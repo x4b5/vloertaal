@@ -4,7 +4,8 @@ import { rulesUnits, sectorRulesUnits } from '../content/regels';
 import type { RuleUnit } from '../content/regels/types';
 import { type SectorId, sectors } from '../content/sectors';
 import type { Unit } from '../content/types';
-import { languageNav } from './langPages';
+import { LANG_PAGES, languageNav } from './langPages';
+import { packText } from './pageTexts';
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
 
 /**
@@ -45,6 +46,13 @@ const rulesUnit = (id: string): RuleUnit => {
   return u;
 };
 
+/** The words' translations shown on a sector page: the largest groups of labour migrants, and Arabic. */
+const SHOWN = ([['pl', 'Pools'], ['ro', 'Roemeens'], ['uk', 'Oekraïens'], ['ar', 'Arabisch']] as const).map(([code, nl]) => ({
+  nl,
+  page: LANG_PAGES.find((p) => p.code === code)!,
+  text: packText(code),
+}));
+
 const HELP_LANGS = 'Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens en Bulgaars';
 
 /** The other sector pages and /werkregels: one tap to the neighbour pages. */
@@ -79,7 +87,7 @@ export function sectorPage(id: SectorId): string {
   const chats = once(lessons.flatMap((l) => l.dialogues ?? []), (c) => c.prompt.nl);
   const focus = sector.focus.map((f) => unit(f).titleNl);
   const rules = sector.rules.units.map(rulesUnit).flatMap((u) => u.lessons);
-  const title = `Nederlands voor ${page.short} – gratis | Vloertaal`;
+  const title = `Nederlands leren voor ${page.short} – gratis | Vloertaal`;
   const description = `Gratis Nederlands leren voor ${page.phrase}: woorden, zinnen en gesprekjes van de werkvloer, met uitleg in je eigen taal. Geen account nodig.`;
   const data = [
     {
@@ -95,11 +103,17 @@ export function sectorPage(id: SectorId): string {
   ];
   return plainPage(
     { path: page.path, lang: 'nl', title, description, ogLocale: 'nl_NL', data },
-    `<h1>Nederlands voor ${esc(page.phrase)}</h1>
+    `<h1>Nederlands leren voor ${esc(page.phrase)}</h1>
 <p class="lead">Vloertaal is een gratis app om Nederlands te leren voor je werk. Voor ${esc(page.phrase)} is er een eigen onderwerp: <strong>${esc(own.map((u) => u.titleNl).join(', '))}</strong>. Je leert de woorden en zinnen die je daar elke dag hoort, met uitleg in je eigen taal: ${HELP_LANGS}. Of in eenvoudig Engels.</p>
 <a class="cta" href="/">Open Vloertaal →</a>
 <section aria-labelledby="words"><h2 id="words">${words.length} woorden die je leert</h2>
-<ul class="words">${words.map((w) => `<li>${esc(w.nl)}</li>`).join('')}</ul></section>
+<p>Met de vertaling uit de app, hier in het ${SHOWN.map((l) => `<a href="${l.page.path}">${l.nl}</a>`).join(', ').replace(/, ([^,]*)$/, ' en $1')}:</p>
+<ul class="lines">${words
+  .map((w) => `<li><strong>${esc(w.nl)}</strong>: ${SHOWN.map((l) => {
+    const t = l.text.gloss(w.id);
+    return t ? `<span lang="${l.page.tag}" dir="${l.page.dir}">${esc(t)}</span>` : '';
+  }).filter(Boolean).join(' · ')}</li>`)
+  .join('')}</ul></section>
 <section aria-labelledby="sentences"><h2 id="sentences">Zinnen die je oefent</h2>
 <ul class="lines">${sentences.map((s) => `<li>${esc(s.nl)}</li>`).join('')}</ul>
 ${chats.length ? `<h3>Korte gesprekjes met collega’s</h3>

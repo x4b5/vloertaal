@@ -1,26 +1,10 @@
 import { aboutSections } from '../content/about';
+import { units } from '../content/curriculum';
+import { THEME_UNITS, THEMES } from '../content/themes';
 import { APP_DATA, esc, plainPage, SITE } from './plainPage';
-import type { CultureTranslation } from '../i18n/culture/types';
 import { languageMeta } from '../i18n/meta';
-import { forGender, isPlural, type HelpLanguageSource, type LangCode, type UiText, uiEn } from '../i18n/types';
-import ar from '../i18n/ar';
-import bg from '../i18n/bg';
-import fa from '../i18n/fa';
-import pl from '../i18n/pl';
-import prs from '../i18n/prs';
-import ro from '../i18n/ro';
-import ti from '../i18n/ti';
-import tr from '../i18n/tr';
-import uk from '../i18n/uk';
-import arAbout from '../i18n/about/ar';
-import bgAbout from '../i18n/about/bg';
-import faAbout from '../i18n/about/fa';
-import plAbout from '../i18n/about/pl';
-import prsAbout from '../i18n/about/prs';
-import roAbout from '../i18n/about/ro';
-import tiAbout from '../i18n/about/ti';
-import trAbout from '../i18n/about/tr';
-import ukAbout from '../i18n/about/uk';
+import { type LangCode, uiEn } from '../i18n/types';
+import { packText } from './pageTexts';
 
 /**
  * The pages vloertaal.nl/pl, /ar, /uk … and /en: what Vloertaal is, in that language, for whoever
@@ -29,18 +13,6 @@ import ukAbout from '../i18n/about/uk';
  * tagline of each help language), so a page says nothing the app does not, and a correction there
  * corrects the page too. The button opens the app with that language already asked ("Polski?").
  */
-
-const PACKS: Record<LangCode, { ui: HelpLanguageSource['ui']; about: CultureTranslation }> = {
-  ar: { ui: ar.ui, about: arAbout },
-  ti: { ui: ti.ui, about: tiAbout },
-  fa: { ui: fa.ui, about: faAbout },
-  prs: { ui: prs.ui, about: prsAbout },
-  uk: { ui: uk.ui, about: ukAbout },
-  tr: { ui: tr.ui, about: trAbout },
-  pl: { ui: pl.ui, about: plAbout },
-  ro: { ui: ro.ui, about: roAbout },
-  bg: { ui: bg.ui, about: bgAbout },
-};
 
 /** The sections a newcomer needs to decide: what, how, for whom, free, privacy, and that it is a beta. */
 const SECTIONS = ['a.what', 'a.how', 'a.who', 'a.mission', 'a.free', 'a.beta'] as const;
@@ -86,23 +58,20 @@ export function hreflangLinks(): string {
 }
 
 /** A page's texts: the help language's, or the app's own English. */
-function texts(code: PageCode): { tagline: string; start: string; title: (id: string) => string; body: (id: string) => string } {
+function texts(code: PageCode): { tagline: string; start: string; topics: string; title: (id: string) => string; body: (id: string) => string; gloss: (id: string) => string | undefined } {
   if (code === 'en') {
     const find = (id: string) => aboutSections.find((s) => s.id === id)!;
-    return { tagline: uiEn.appTagline, start: uiEn.start, title: (id) => find(id).title, body: (id) => find(id).body };
+    const words = new Map(units.flatMap((u) => u.lessons.flatMap((l) => l.words)).map((w) => [w.id, w.en]));
+    const theme = (id: string) => THEMES.find((t) => t.id === id)?.title;
+    return { tagline: uiEn.appTagline, start: uiEn.start, topics: uiEn.allTopics, title: (id) => find(id).title, body: (id) => find(id).body, gloss: (id) => theme(id) ?? words.get(id) };
   }
-  const p = PACKS[code];
-  // The default form (no gender chosen), as the app shows it before the learner picks one.
-  const one = (t: UiText | undefined, id: string) => {
-    if (t === undefined || isPlural(t)) throw new Error(`langPages: ${code} has no plain text for ${id}`);
-    return forGender(t);
+  const p = packText(code);
+  const one = (id: string) => {
+    const t = p.gloss(id);
+    if (t === undefined) throw new Error(`langPages: ${code} has no text for ${id}`);
+    return t;
   };
-  return {
-    tagline: one(p.ui.appTagline, 'appTagline'),
-    start: one(p.ui.start, 'start'),
-    title: (id) => one(p.about.gloss[id], id),
-    body: (id) => one(p.about.gloss[`${id}.b`], `${id}.b`),
-  };
+  return { tagline: p.ui('appTagline'), start: p.ui('start'), topics: p.ui('allTopics'), title: one, body: (id) => one(`${id}.b`), gloss: p.gloss };
 }
 
 /** The search result's line: the first sentences of "What is Vloertaal?" that fit in 160 characters. */
@@ -128,11 +97,33 @@ export function languageNav(current?: PageCode): string {
   return `<nav aria-label="Vloertaal"><ul>${items.join('')}</ul></nav>`;
 }
 
+/**
+ * The themes of the course in this language, each with a few words of its first lessons: Dutch
+ * beside the translation, as the app teaches them.
+ */
+function topicsSection(t: ReturnType<typeof texts>, dir: 'ltr' | 'rtl'): string {
+  const rows = THEMES.map((th) => {
+    const words = THEME_UNITS[th.id].taal
+      .map((id) => units.find((u) => u.id === id))
+      .filter((u) => u !== undefined)
+      .flatMap((u) => u.lessons[0].words.filter((w) => w.picture !== false).slice(0, 2))
+      .filter((w) => t.gloss(w.id))
+      .slice(0, 4);
+    const name = t.gloss(th.id);
+    if (!name || words.length === 0) return '';
+    return `<h3>${esc(name)}</h3><ul class="lines">${words
+      .map((w) => `<li><span lang="nl" dir="ltr">${esc(w.nl)}</span> — ${esc(t.gloss(w.id)!)}</li>`)
+      .join('')}</ul>`;
+  }).join('');
+  return `<section aria-labelledby="topics" dir="${dir}"><h2 id="topics">${esc(t.topics)}</h2>${rows}</section>`;
+}
+
 /** The page for one language. */
 export function langPage(code: PageCode): string {
   const page = LANG_PAGES.find((p) => p.code === code)!;
   const t = texts(code);
-  const title = `Vloertaal – ${t.tagline}`;
+  // Persian and Dari share a script and much of the words: the name tells the two pages apart.
+  const title = `Vloertaal – ${t.tagline}${code === 'fa' || code === 'prs' ? ` (${page.nativeName})` : ''}`;
   const description = describe(t.body('a.what'));
   const sections = SECTIONS.map(
     (id, i) => `<section aria-labelledby="s${i}"><h2 id="s${i}">${esc(t.title(id))}</h2><p>${esc(t.body(id))}</p></section>`,
@@ -152,10 +143,11 @@ export function langPage(code: PageCode): string {
     about: APP_DATA,
   };
   return plainPage(
-    { path: page.path, lang: page.tag, dir: page.dir, title, description, ogLocale: page.ogLocale, links: hreflangLinks(), data },
+    { path: page.path, lang: page.tag, dir: page.dir, title, description, ogLocale: page.ogLocale, ogAlt: `Vloertaal – ${t.tagline}`, links: hreflangLinks(), data },
     `<h1>${esc(t.tagline)}</h1>
 <a class="cta" href="${app}">${esc(t.start)} ${arrow}</a>
 ${sections}
+${topicsSection(t, page.dir)}
 <a class="cta" href="${app}">${esc(t.start)} ${arrow}</a>
 <footer>
 ${languageNav(code)}

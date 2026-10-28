@@ -48,16 +48,20 @@ export interface PageHead {
   title: string;
   description: string;
   ogLocale: string;
+  /** The share image's text in the page's language (default: the Dutch one). */
+  ogAlt?: string;
   /** More `<link>`s (hreflang). */
   links?: string;
   /** Structured data (JSON-LD), one object or a list. */
-  data: object | object[];
+  data?: object | object[];
+  /** Not for search results (the 404 page): no canonical, no structured data, robots noindex. */
+  noindex?: true;
 }
 
 /** The whole page: head, the hazard stripe, the logo, then `body` inside <main>. */
 export function plainPage(head: PageHead, body: string): string {
   const url = `${SITE}${head.path}`;
-  const data = JSON.stringify(head.data).replace(/</g, '\\u003c');
+  const data = head.data ? `<script type="application/ld+json">${JSON.stringify(head.data).replace(/</g, '\\u003c')}</script>\n` : '';
   return `<!doctype html>
 <html lang="${head.lang}" dir="${head.dir ?? 'ltr'}">
 <head>
@@ -65,7 +69,7 @@ export function plainPage(head: PageHead, body: string): string {
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${esc(head.title)}</title>
 <meta name="description" content="${esc(head.description)}" />
-<link rel="canonical" href="${url}" />
+${head.noindex ? '<meta name="robots" content="noindex" />' : `<link rel="canonical" href="${url}" />`}
 ${head.links ? `${head.links}\n` : ''}<meta property="og:type" content="website" />
 <meta property="og:site_name" content="Vloertaal" />
 <meta property="og:locale" content="${head.ogLocale}" />
@@ -75,14 +79,13 @@ ${head.links ? `${head.links}\n` : ''}<meta property="og:type" content="website"
 <meta property="og:image" content="${SITE}/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Vloertaal: Bram met gele helm, Nederlands voor op de werkvloer" />
+<meta property="og:image:alt" content="${esc(head.ogAlt ?? 'Vloertaal: Bram met gele helm, Nederlands voor op de werkvloer')}" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#e7e3dc" />
 <link rel="icon" href="/favicon.ico?v=4" sizes="48x48" />
 <link rel="icon" href="/icon.svg?v=4" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=4" />
-<script type="application/ld+json">${data}</script>
-<style>${STYLE}</style>
+${data}<style>${STYLE}</style>
 </head>
 <body>
 <div class="stripe" aria-hidden="true"></div>

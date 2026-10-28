@@ -10,7 +10,7 @@ import { introPage } from './src/lib/introPage';
 import { hreflangLinks, LANG_PAGES, langPage } from './src/lib/langPages';
 import { coachPage } from './src/lib/coachPage';
 import { rulesPage, SECTOR_PAGES, sectorPage } from './src/lib/sectorPages';
-import { siteLinks } from './src/lib/siteLinks';
+import { notFoundPage, siteLinks } from './src/lib/siteLinks';
 import { sitemap } from './src/lib/sitemap';
 
 /**
@@ -104,6 +104,7 @@ function langPagesPlugin(): Plugin {
       for (const p of SECTOR_PAGES) this.emitFile({ type: 'asset', fileName: `${p.path.slice(1)}index.html`, source: sectorPage(p.id) });
       this.emitFile({ type: 'asset', fileName: 'werkregels/index.html', source: rulesPage() });
       this.emitFile({ type: 'asset', fileName: 'voor-begeleiders/index.html', source: coachPage() });
+      this.emitFile({ type: 'asset', fileName: '404.html', source: notFoundPage() });
       this.emitFile({ type: 'asset', fileName: 'sitemap.xml', source: sitemap() });
     },
     // The start page names its other languages (hreflang) and links to every page, from the same lists.

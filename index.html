@@ -14,6 +14,7 @@
     <!-- Link previews (WhatsApp, Signal, Facebook): the share image and one line in Dutch. -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Vloertaal" />
+    <meta property="og:locale" content="nl_NL" />
     <meta property="og:title" content="Vloertaal – Nederlands voor op de werkvloer" />
     <meta property="og:description" content="Gratis Nederlands leren voor je werk, met hulp in je eigen taal. Geen account nodig." />
     <meta property="og:url" content="https://vloertaal.nl/" />
@@ -34,16 +35,37 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Vloertaal",
-        "url": "https://vloertaal.nl/",
-        "description": "Gratis Nederlands leren voor je werk, met uitleg in je eigen taal. Ook de regels op het werk: loon, contract, ziek zijn.",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "Web",
-        "inLanguage": "nl",
-        "isAccessibleForFree": true,
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-        "email": "hoi@vloertaal.nl"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://vloertaal.nl/#website",
+            "name": "Vloertaal",
+            "url": "https://vloertaal.nl/",
+            "inLanguage": "nl",
+            "publisher": { "@id": "https://vloertaal.nl/#org" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://vloertaal.nl/#org",
+            "name": "Vloertaal",
+            "url": "https://vloertaal.nl/",
+            "logo": "https://vloertaal.nl/icon-512.png",
+            "email": "hoi@vloertaal.nl"
+          },
+          {
+            "@type": "WebApplication",
+            "name": "Vloertaal",
+            "url": "https://vloertaal.nl/",
+            "description": "Gratis Nederlands leren voor je werk, met uitleg in je eigen taal. Ook de regels op het werk: loon, contract, ziek zijn.",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Web",
+            "inLanguage": "nl",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "audience": { "@type": "Audience", "audienceType": "Mensen die in Nederland werken of werk zoeken en Nederlands leren" },
+            "publisher": { "@id": "https://vloertaal.nl/#org" }
+          }
+        ]
       }
     </script>
     <!-- The start screen before any script has run (and while the help language loads): the logo
@@ -65,14 +87,15 @@
       .boot-failed > :first-child { font-weight: 700; }
       .site-links { max-width: 640px; margin: 0 auto; padding: 24px 16px 40px; font: 1rem/1.6 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #4a4f55; }
       .site-links a { color: inherit; }
+      .site-links h1 { font-size: 1.3rem; line-height: 1.3; color: #1e2226; }
       .boot-retry { display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; border: 2px solid #1e2226; background: #fffdf8; color: #1e2226; cursor: pointer; }
       @media (prefers-color-scheme: dark) {
         html:not([data-theme='light']), html:not([data-theme='light']) body { background: #16191c; }
-        html:not([data-theme='light']) .boot-failed, html:not([data-theme='light']) .site-links { color: #ece8e1; }
+        html:not([data-theme='light']) .boot-failed, html:not([data-theme='light']) .site-links, html:not([data-theme='light']) .site-links h1 { color: #ece8e1; }
         html:not([data-theme='light']) .boot-cast-one svg { box-shadow: 0 0 0 2px #3a4047; border-radius: 22%; }
       }
       html[data-theme='dark'], html[data-theme='dark'] body { background: #16191c; }
-      html[data-theme='dark'] .boot-failed, html[data-theme='dark'] .site-links { color: #ece8e1; }
+      html[data-theme='dark'] .boot-failed, html[data-theme='dark'] .site-links, html[data-theme='dark'] .site-links h1 { color: #ece8e1; }
       html[data-theme='dark'] .boot-cast-one svg { box-shadow: 0 0 0 2px #3a4047; border-radius: 22%; }
     </style>
   </head>

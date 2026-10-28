@@ -4,7 +4,7 @@ import { askedHelpLang } from '../src/lib/langGuess';
 import { describe as describeLine, hreflangLinks, LANG_PAGES, langPage } from '../src/lib/langPages';
 import { RULES_PATH, rulesPage, SECTOR_PAGES, sectorPage } from '../src/lib/sectorPages';
 import { COACH_PATH, coachPage } from '../src/lib/coachPage';
-import { siteLinks } from '../src/lib/siteLinks';
+import { notFoundPage, siteLinks } from '../src/lib/siteLinks';
 import { unitFromSearch } from '../src/lib/unitLink';
 import { sitemap } from '../src/lib/sitemap';
 
@@ -37,8 +37,9 @@ describe('start page for search engines', () => {
   it('describes itself as a free web app in structured data', () => {
     const json = page.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
     expect(json).toBeDefined();
-    const data = JSON.parse(json!);
-    expect(data['@type']).toBe('WebApplication');
+    const graph = JSON.parse(json!)['@graph'];
+    expect(graph.find((d: { '@type': string }) => d['@type'] === 'WebSite').name).toBe('Vloertaal');
+    const data = graph.find((d: { '@type': string }) => d['@type'] === 'WebApplication');
     expect(data.url).toBe('https://vloertaal.nl/');
     expect(data.isAccessibleForFree).toBe(true);
     expect(data.offers.price).toBe('0');
@@ -51,6 +52,10 @@ describe('sitemap', () => {
     for (const path of ['/', '/intro/', '/nieuw/', '/pl/', '/ar/', '/prs/', '/en/']) {
       expect(xml).toContain(`<loc>https://vloertaal.nl${path}</loc>`);
     }
+  });
+
+  it('dates /nieuw by its newest entry', () => {
+    expect(sitemap()).toMatch(/<loc>https:\/\/vloertaal.nl\/nieuw\/<\/loc><lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/);
   });
 
   it('is not also a static file that could drift from the built one', () => {
@@ -145,7 +150,8 @@ describe('a page per sector and for Werkregels (docs/seo-plan.md, step 4)', () =
   }
 
   it('shows each word of a sector once', () => {
-    const words = [...sectorPage('construction').matchAll(/<ul class="words">(.*?)<\/ul>/g)][0][1].split('<li>');
+    const words = [...sectorPage('construction').matchAll(/<li><strong>([^<]+)<\/strong>:/g)].map((m) => m[1]);
+    expect(words).toContain('de steiger');
     expect(new Set(words).size).toBe(words.length);
   });
 
@@ -185,5 +191,18 @@ describe('links from the start page, before any script', () => {
 
   it('are removed when the app draws', () => {
     expect(readFileSync('src/main.tsx', 'utf8')).toContain("getElementById('site-links')?.remove()");
+  });
+});
+
+describe('the 404 page and the hosting', () => {
+  it('is not for search results and links on', () => {
+    const html = notFoundPage();
+    expect(html).toContain('<meta name="robots" content="noindex" />');
+    expect(html).not.toContain('rel="canonical"');
+    expect(html).toContain('href="/bouw/"');
+  });
+
+  it('one address per page: /bouw goes to /bouw/', () => {
+    expect(JSON.parse(readFileSync('vercel.json', 'utf8')).trailingSlash).toBe(true);
   });
 });

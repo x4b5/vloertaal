@@ -128,3 +128,38 @@ doorlopend ── 6 links van buitenaf ───────────┤
                                               ▼
 ± half dec ───────────────────────── 7 meten en bijsturen
 ```
+
+## Voortgang (gauntlet-rondes, 28 oktober 2026)
+
+Gedaan, in code en getest (`tests/seo.test.ts`):
+
+- **Stap 3** — taalpagina's `/ar` `/ti` `/fa` `/prs` `/uk` `/tr` `/pl` `/ro` `/bg` `/en`
+  (`src/lib/langPages.ts`). Alleen teksten die al in de app staan: de "Over"-pagina, de tagline,
+  de thema's en voorbeeldwoorden uit de lessen. Dus géén nieuwe vertalingen. De knop opent de app
+  met de taal al gevraagd (`/?taal=pl` → "Polski?"). hreflang tussen alle pagina's en `/`.
+- **Stap 4** — `/logistiek` `/bouw` `/productie` `/zorg` `/horeca` `/schoonmaak` en `/werkregels`
+  (`src/lib/sectorPages.ts`), met de woorden in het Pools, Roemeens, Oekraïens en Arabisch.
+- **Stap 5** — `/voor-begeleiders` (`src/lib/coachPage.ts`), met een link naar elk onderwerp.
+- De voorpagina heeft vóór JavaScript een kop, drie alinea's en links naar alle pagina's
+  (`src/lib/siteLinks.ts`); /intro, /nieuw en de nieuwe 404-pagina linken ook door.
+- `sitemap.xml` wordt bij de build gemaakt; `trailingSlash: true` in `vercel.json` (één adres per
+  pagina: `/bouw` → `/bouw/`); JSON-LD op `/` met `WebSite`, `Organization` en `WebApplication`.
+
+### Nog te doen: zoekwoorden in de eigen taal (moedertaalsprekers)
+
+De titels van de taalpagina's zijn nu de tagline van de app ("Niderlandzki do pracy"). Een
+SEO-criticus wees erop dat mensen vaak met een ander woord zoeken. Dit zijn **voorstellen, niet
+gecontroleerd en niet gemeten**; graag laten nakijken via `docs/vertaalcontrole.md` en daarna in
+`src/lib/langPages.ts` als eigen titel en beschrijving per taal zetten:
+
+| Taal | Huidige titel | Voorstel (na controle) |
+|---|---|---|
+| pl | Vloertaal – Niderlandzki do pracy | Nauka holenderskiego do pracy – za darmo \| Vloertaal |
+| uk | Vloertaal – Нідерландська для роботи | Вивчити голландську (нідерландську) для роботи безкоштовно \| Vloertaal |
+| bg | Vloertaal – Нидерландски за работното място | Безплатно холандски (нидерландски) за работа \| Vloertaal |
+| ar | Vloertaal – الهولندية لمكان العمل | تعلم اللغة الهولندية للعمل مجانا \| Vloertaal |
+| ro | Vloertaal – Olandeză pentru locul de muncă | Învață olandeză pentru muncă, gratuit \| Vloertaal |
+| tr | Vloertaal – İş yeri için Hollandaca | İş için ücretsiz Hollandaca öğren \| Vloertaal |
+
+Ook per taal een eigen beschrijving van ±150 tekens met "gratis" en "leren" (nu het begin van
+"Wat is Vloertaal?").
