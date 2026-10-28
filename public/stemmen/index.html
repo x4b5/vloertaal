@@ -39,7 +39,7 @@
       color: var(--ink);
       font: 17px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     }
-    main { max-width: 560px; margin: 0 auto; padding: 24px 16px 120px; }
+    main { max-width: 560px; margin: 0 auto; padding: 24px 16px 170px; }
     h1 { font-size: 1.6rem; line-height: 1.2; margin: 0 0 8px; }
     .intro { color: var(--muted); margin: 0 0 8px; }
     .zinnen {
@@ -74,13 +74,16 @@
       position: fixed; left: 0; right: 0; bottom: 0; padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
       background: var(--bg); border-top: 1px solid var(--line);
     }
-    .balk-binnen { max-width: 560px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
-    .teller { flex: 1; color: var(--muted); font-size: 0.95rem; }
-    .stuur {
-      display: inline-block; padding: 14px 20px; border-radius: 12px; font-weight: 700; text-decoration: none;
-      background: var(--yellow); color: var(--on-yellow); border: 2px solid var(--ink);
+    .balk-binnen { max-width: 560px; margin: 0 auto; }
+    .teller { display: block; color: var(--muted); font-size: 0.9rem; margin: 0 0 8px; }
+    .knoppen { display: flex; gap: 10px; }
+    .stuur, .kopieer {
+      flex: 1; padding: 13px 10px; border-radius: 12px; font: inherit; font-weight: 700; text-align: center;
+      text-decoration: none; border: 2px solid var(--ink); cursor: pointer;
     }
-    .stuur[aria-disabled="true"] { opacity: 0.45; pointer-events: none; }
+    .kopieer { background: var(--card); color: var(--ink); }
+    .stuur { background: var(--yellow); color: var(--on-yellow); }
+    .stuur[aria-disabled="true"], .kopieer:disabled { opacity: 0.45; pointer-events: none; }
   </style>
 </head>
 <body>
@@ -88,7 +91,7 @@
     <h1>Welke stem past het best?</h1>
     <p class="intro">
       In de app Vloertaal praten vier collega's. Luister per persoon naar drie stemmen en tik aan
-      welke jij het best vindt passen. Stuur daarna je keuze met één knop.
+      welke jij het best vindt passen. Kopieer of stuur daarna je keuze met de knoppen onderaan.
     </p>
     <p class="zinnen">Elke stem zegt: "Goedemorgen! Draag altijd je helm." · "Hallo, ik ben nieuw." · "Kunt u dat herhalen?"</p>
     <div id="lijst"></div>
@@ -97,7 +100,10 @@
   <div class="balk">
     <div class="balk-binnen">
       <span class="teller" id="teller" aria-live="polite">0 van 4 gekozen</span>
-      <a class="stuur" id="stuur" href="#" target="_blank" rel="noopener" aria-disabled="true">Stuur mijn keuze</a>
+      <div class="knoppen">
+        <button class="kopieer" id="kopieer" type="button" disabled>Kopieer mijn keuze</button>
+        <a class="stuur" id="stuur" href="#" target="_blank" rel="noopener" aria-disabled="true">Via WhatsApp</a>
+      </div>
     </div>
   </div>
 
@@ -165,22 +171,48 @@
       return sectie;
     }
 
-    function werkBalkBij() {
-      const gekozen = PERSONEN.filter((p) => p.key in keuze);
-      document.getElementById('teller').textContent = `${gekozen.length} van ${PERSONEN.length} gekozen`;
-      const knop = document.getElementById('stuur');
-      if (!gekozen.length) {
-        knop.setAttribute('aria-disabled', 'true');
-        knop.href = '#';
-        return;
-      }
+    function keuzeTekst() {
       const regels = PERSONEN.map((p) =>
         p.key in keuze ? `${p.naam}: ${p.stemmen[keuze[p.key]]} (stem ${keuze[p.key] + 1})` : `${p.naam}: geen keuze`,
       );
-      const tekst = ['Mijn stemkeuze voor Vloertaal:', ...regels].join('\n');
-      knop.href = `https://wa.me/?text=${encodeURIComponent(tekst)}`;
-      knop.setAttribute('aria-disabled', 'false');
+      return ['Mijn stemkeuze voor Vloertaal:', ...regels].join('\n');
     }
+
+    function werkBalkBij() {
+      const gekozen = PERSONEN.filter((p) => p.key in keuze);
+      document.getElementById('teller').textContent = `${gekozen.length} van ${PERSONEN.length} gekozen`;
+      const stuur = document.getElementById('stuur');
+      const kopieer = document.getElementById('kopieer');
+      kopieer.disabled = !gekozen.length;
+      stuur.setAttribute('aria-disabled', String(!gekozen.length));
+      stuur.href = gekozen.length ? `https://wa.me/?text=${encodeURIComponent(keuzeTekst())}` : '#';
+    }
+
+    // Klembord: de nette weg, en anders de oude (een verborgen tekstvak selecteren en kopiëren).
+    async function naarKlembord(tekst) {
+      try {
+        await navigator.clipboard.writeText(tekst);
+        return true;
+      } catch {
+        const vak = document.createElement('textarea');
+        vak.value = tekst;
+        vak.setAttribute('readonly', '');
+        vak.style.position = 'fixed';
+        vak.style.opacity = '0';
+        document.body.append(vak);
+        vak.select();
+        const gelukt = document.execCommand('copy');
+        vak.remove();
+        return gelukt;
+      }
+    }
+
+    document.getElementById('kopieer').addEventListener('click', async (e) => {
+      const knop = e.currentTarget;
+      const gelukt = await naarKlembord(keuzeTekst());
+      knop.textContent = gelukt ? 'Gekopieerd ✓' : 'Kopiëren lukte niet';
+      setTimeout(() => { knop.textContent = 'Kopieer mijn keuze'; }, 2500);
+    });
 
     document.getElementById('lijst').append(...PERSONEN.map(bouwPersoon));
   </script>
