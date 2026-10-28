@@ -31,10 +31,13 @@ function DaysUnit({ n, lang }: { n: number; lang?: HelpLanguage }) {
   return <span className="streak-unit" lang="nl" aria-hidden>{n === 1 ? 'dag' : 'dagen'}</span>;
 }
 
-/** Enter continues, as on every other screen in the lesson flow. */
+/** Enter continues, as on every other screen in the lesson flow. Not a key still held from the
+ *  screen before (a repeat), and not in the first moment (as a tap: useTapGuard). */
 function useEnter(onDone: () => void) {
+  const ready = useTapGuard();
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if (e.repeat || !ready.current) return;
       if (e.key === 'Enter' && !(e.target instanceof HTMLButtonElement) && !(e.target instanceof HTMLInputElement)) onDone();
     };
     window.addEventListener('keydown', onKey);
