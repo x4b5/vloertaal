@@ -48,7 +48,7 @@ const rulesUnit = (id: string): RuleUnit => {
 const HELP_LANGS = 'Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens en Bulgaars';
 
 /** The other sector pages and /werkregels: one tap to the neighbour pages. */
-function sectorNav(current?: string): string {
+export function sectorNav(current?: string): string {
   const items = [...SECTOR_PAGES.map((p) => ({ path: p.path, name: p.name })), { path: RULES_PATH, name: 'Werkregels' }];
   return `<nav aria-label="Sectoren"><ul>${items
     .map((p) => `<li><a href="${p.path}"${p.path === current ? ' aria-current="page"' : ''}>${esc(p.name)}</a></li>`)

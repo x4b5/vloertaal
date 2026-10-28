@@ -1,0 +1,74 @@
+import { aboutSections } from '../content/about';
+import { units } from '../content/curriculum';
+import { COACH_FACTS } from '../content/facts';
+import { THEME_UNITS, THEMES } from '../content/themes';
+import { languageNav } from './langPages';
+import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
+import { sectorNav } from './sectorPages';
+
+/**
+ * vloertaal.nl/voor-begeleiders: for language coaches, teachers, employers and organisations
+ * who search in Dutch (docs/seo-plan.md, step 5). How to use Vloertaal with a group, a direct link
+ * to every topic (?unit=…, src/lib/unitLink.ts), and the facts with their sources (the same as
+ * the app's own "Voor begeleiders" page). Made at build time from src/content.
+ */
+
+export const COACH_PATH = '/voor-begeleiders/';
+
+const about = (id: string) => aboutSections.find((s) => s.id === id)!.nl;
+
+/** A unit's link as the app reads it (src/lib/unitLink.ts): "?unit=pay" for u.pay. */
+const unitHref = (id: string) => `/?unit=${encodeURIComponent(id.slice(2))}`;
+
+export function coachPage(): string {
+  const title = 'Voor taalcoaches, docenten en werkgevers | Vloertaal';
+  const description = 'Zet Vloertaal in bij je taalcafé, NT2-les of op de werkvloer: gratis, zonder account, met uitleg in 9 talen en een directe link naar elk onderwerp.';
+  const themes = THEMES.map((t) => ({
+    t,
+    list: THEME_UNITS[t.id].taal.map((id) => units.find((u) => u.id === id)).filter((u) => u !== undefined),
+  })).filter((g) => g.list.length > 0);
+  const data = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: title,
+      url: `${SITE}${COACH_PATH}`,
+      description,
+      inLanguage: 'nl',
+      audience: { '@type': 'EducationalAudience', educationalRole: 'teacher' },
+      about: APP_DATA,
+    },
+    breadcrumbs({ name: 'Voor begeleiders', path: COACH_PATH }),
+  ];
+  return plainPage(
+    { path: COACH_PATH, lang: 'nl', title, description, ogLocale: 'nl_NL', data },
+    `<h1>Vloertaal voor begeleiders</h1>
+<p class="lead">Voor taalcoaches, NT2-docenten, taalhuizen, werkgevers en uitzendbureaus. ${esc(about('a.what').body)}</p>
+<a class="cta" href="/">Open Vloertaal →</a>
+<section aria-labelledby="how"><h2 id="how">Zo zet je het in</h2>
+<ul class="lines">
+<li><strong>Op de eigen telefoon.</strong> Stuur de link vloertaal.nl. De leerling kiest zelf een hulptaal en een sector. Geen account, geen app-winkel.</li>
+<li><strong>Elke dag tien minuten.</strong> Korte lessen werken beter dan af en toe lang. “Herhaal vandaag” brengt de woorden terug die nog lastig zijn.</li>
+<li><strong>Naar één onderwerp.</strong> Elk onderwerp heeft een eigen link (hieronder). Handig na een les over het loonstrookje of veiligheid.</li>
+<li><strong>Bij een taalcafé of in de klas.</strong> Samen één les doen, daarna zelf verder. Een certificaat per onderwerp en een zakkaart met de belangrijkste zinnen.</li>
+<li><strong>Wie al Nederlands spreekt</strong> kiest “Nederlands”: dan leert die de regels op het werk (<a href="/werkregels/">Werkregels</a>).</li>
+</ul></section>
+<section aria-labelledby="topics"><h2 id="topics">Een link naar elk onderwerp</h2>
+${themes
+  .map(({ t, list }) => `<h3>${esc(t.titleNl)}</h3><ul class="lines">${list.map((u) => `<li><a href="${unitHref(u.id)}">${esc(u.titleNl)}</a></li>`).join('')}</ul>`)
+  .join('\n')}</section>
+<section aria-labelledby="facts"><h2 id="facts">Waarom Nederlands leren helpt</h2>
+${COACH_FACTS.map((f) => `<p>${esc(f.text)}</p><p><small>Bron: ${esc(f.source)}</small></p>`).join('\n')}</section>
+<section aria-labelledby="free"><h2 id="free">${esc(about('a.mission').title)}</h2><p>${esc(about('a.mission').body)}</p></section>
+<section aria-labelledby="privacy"><h2 id="privacy">${esc(about('a.free').title)}</h2><p>${esc(about('a.free').body)}</p></section>
+<section aria-labelledby="beta"><h2 id="beta">${esc(about('a.beta').title)}</h2><p>${esc(about('a.beta').body)}</p></section>
+<section aria-labelledby="contact"><h2 id="contact">Meedoen of meedenken?</h2><p>Wil je Vloertaal gebruiken met een groep, of heb je een vraag of een fout gevonden? Mail naar <a href="mailto:hoi@vloertaal.nl">hoi@vloertaal.nl</a>.</p></section>
+<footer>
+<h2>Per sector</h2>
+${sectorNav()}
+<h2>In de eigen taal van je leerlingen</h2>
+${languageNav()}
+<p><a href="/intro/">Waarom Vloertaal?</a> · <a href="/nieuw/">Wat is er nieuw?</a></p>
+</footer>`,
+  );
+}

@@ -8,7 +8,9 @@ import { updatesPage } from './src/lib/updatesPage';
 import { INTRO_QUESTIONS } from './src/content/intro';
 import { introPage } from './src/lib/introPage';
 import { hreflangLinks, LANG_PAGES, langPage } from './src/lib/langPages';
+import { coachPage } from './src/lib/coachPage';
 import { rulesPage, SECTOR_PAGES, sectorPage } from './src/lib/sectorPages';
+import { siteLinks } from './src/lib/siteLinks';
 import { sitemap } from './src/lib/sitemap';
 
 /**
@@ -101,12 +103,13 @@ function langPagesPlugin(): Plugin {
       for (const p of LANG_PAGES) this.emitFile({ type: 'asset', fileName: `${p.code}/index.html`, source: langPage(p.code) });
       for (const p of SECTOR_PAGES) this.emitFile({ type: 'asset', fileName: `${p.path.slice(1)}index.html`, source: sectorPage(p.id) });
       this.emitFile({ type: 'asset', fileName: 'werkregels/index.html', source: rulesPage() });
+      this.emitFile({ type: 'asset', fileName: 'voor-begeleiders/index.html', source: coachPage() });
       this.emitFile({ type: 'asset', fileName: 'sitemap.xml', source: sitemap() });
     },
-    // The start page names its other languages too (hreflang), from the same list.
+    // The start page names its other languages (hreflang) and links to every page, from the same lists.
     transformIndexHtml: {
       order: 'post',
-      handler: (html) => html.replace('</head>', `${hreflangLinks()}\n</head>`),
+      handler: (html) => html.replace('</head>', `${hreflangLinks()}\n</head>`).replace('</body>', `${siteLinks()}\n</body>`),
     },
   };
 }

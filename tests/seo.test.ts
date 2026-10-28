@@ -3,6 +3,9 @@ import { describe, expect, it } from 'vitest';
 import { askedHelpLang } from '../src/lib/langGuess';
 import { describe as describeLine, hreflangLinks, LANG_PAGES, langPage } from '../src/lib/langPages';
 import { RULES_PATH, rulesPage, SECTOR_PAGES, sectorPage } from '../src/lib/sectorPages';
+import { COACH_PATH, coachPage } from '../src/lib/coachPage';
+import { siteLinks } from '../src/lib/siteLinks';
+import { unitFromSearch } from '../src/lib/unitLink';
 import { sitemap } from '../src/lib/sitemap';
 
 // What search engines read before any script runs (docs/seo-plan.md, step 2).
@@ -148,5 +151,39 @@ describe('a page per sector and for Werkregels (docs/seo-plan.md, step 4)', () =
 
   it('are in the sitemap', () => {
     for (const { path } of pages) expect(sitemap()).toContain(`<loc>https://vloertaal.nl${path}</loc>`);
+  });
+});
+
+describe('the page for coaches (docs/seo-plan.md, step 5)', () => {
+  const html = coachPage();
+
+  it('is Dutch, with a short title, its own address and a search-length description', () => {
+    const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? '';
+    const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '';
+    expect(html).toContain(`<link rel="canonical" href="https://vloertaal.nl${COACH_PATH}" />`);
+    expect(title.length).toBeLessThanOrEqual(60);
+    expect(desc.length).toBeLessThanOrEqual(160);
+    expect(sitemap()).toContain(`<loc>https://vloertaal.nl${COACH_PATH}</loc>`);
+  });
+
+  it('links every topic in a way the app opens', () => {
+    const links = [...html.matchAll(/href="\/\?unit=([^"]+)"/g)].map((m) => m[1]);
+    expect(links.length).toBeGreaterThan(25);
+    for (const slug of links) expect(unitFromSearch(`?unit=${slug}`), slug).not.toBeNull();
+  });
+});
+
+describe('links from the start page, before any script', () => {
+  const links = siteLinks();
+
+  it('reach every plain page', () => {
+    for (const path of sitemap().match(/<loc>[^<]+<\/loc>/g)!.map((l) => l.slice(5 + 'https://vloertaal.nl'.length, -6))) {
+      if (path === '/') continue;
+      expect(links).toContain(`href="${path}"`);
+    }
+  });
+
+  it('are removed when the app draws', () => {
+    expect(readFileSync('src/main.tsx', 'utf8')).toContain("getElementById('site-links')?.remove()");
   });
 });
