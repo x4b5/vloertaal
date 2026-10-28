@@ -11,7 +11,7 @@ import { Bi } from './Bi';
 import { NlPair } from './NlPair';
 import { Character } from './Characters';
 import { CertIcon } from './CertBadge';
-import { ChevronIcon } from './Icons';
+import { CheckIcon, ChevronIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
 import { LogoMark } from './Logo';
 import { PocketIcon } from './Offline';
@@ -184,6 +184,7 @@ export function CertificateScreen({ unit, day, lang, onBack, sector }: {
   /** The name page shows the first time (never asked), or after "Change name". */
   const [asking, setAsking] = useState(stored === null);
   const [busy, setBusy] = useState(false);
+  const [saved, setSaved] = useState(false);
   const data = certData(unit, day, name, lang, sector);
   const rtl = lang?.dir === 'rtl';
 
@@ -215,8 +216,11 @@ export function CertificateScreen({ unit, day, lang, onBack, sector }: {
   // pocket card. Only a picture that could not be drawn at all opens the print dialog.
   const share = async () => {
     setBusy(true);
+    setSaved(false);
     try {
-      await shareCertificate(data, `vloertaal-certificaat-${unit.id.slice(2)}.png`, png.current?.key === key ? png.current.blob : undefined);
+      const how = await shareCertificate(data, `vloertaal-certificaat-${unit.id.slice(2)}.png`, png.current?.key === key ? png.current.blob : undefined);
+      // Downloaded (no share sheet on this phone or computer): say so, as the pocket card does.
+      if (how === 'saved') setSaved(true);
     } catch {
       window.print();
     } finally {
@@ -245,6 +249,9 @@ export function CertificateScreen({ unit, day, lang, onBack, sector }: {
           </span>
         </button>
       </div>
+      {saved && (
+        <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
+      )}
       <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
         <NlPair nlFirst nl="Naam wijzigen" className="keep-link-gloss" text={ui('certChangeName', lang)} />
       </button>
