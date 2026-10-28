@@ -320,8 +320,9 @@ export async function saveUnitOffline(unit: Unit, voices: VoiceRef[]): Promise<v
     after.shell = shell;
     writeSaved(after);
     jobs.delete(unit.id);
-    // App files of an older version, still listed with the units saved before.
-    if (cache) await prune(cache, after, before.shell);
+    // App files of an older version, still listed with the units saved before; and this unit's
+    // clips of before (another voice) that no saved unit uses any more.
+    if (cache) await prune(cache, after, [...before.shell, ...(before.units[unit.id]?.urls ?? [])]);
   } catch (e) {
     // Undo what this attempt added (files other saved units use stay).
     if (cache) await prune(cache, loadSaved(), [...shell, ...clips].filter((u) => !had.has(u))).catch(() => {});
