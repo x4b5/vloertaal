@@ -85,7 +85,15 @@ export async function checkPassword(input: string): Promise<Access | null> {
 
 const KEY = 'vloertaal.access';
 
+/**
+ * Open to all (since 28 October 2026): every phone has the full version, without a code. The
+ * password page is skipped in the first run (src/lib/onboarding.ts) and nothing shows a lock.
+ * The codes above stay, so switching this off brings the door lock back as it was.
+ */
+export const OPEN_TO_ALL = true;
+
 export function loadAccess(): Access | null {
+  if (OPEN_TO_ALL) return 'full';
   try {
     const v = localStorage.getItem(KEY);
     return v === 'sample' || v === 'preview' || v === 'full' ? v : null;

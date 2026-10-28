@@ -1,7 +1,7 @@
 import { courseUnits } from '../content/courses';
 import { units } from '../content/curriculum';
 import { hasGender } from '../i18n';
-import type { Access } from './access';
+import { type Access, OPEN_TO_ALL } from './access';
 import { shouldAskGender } from './askGender';
 import type { Progress } from './progress';
 import type { Track } from './track';
@@ -58,7 +58,8 @@ export function previousStep(step: OnbStep, p: OnbProgress): OnbStep | null {
     case 'gate':
       return p.sector === undefined && hasGender(p.helpLang) ? 'gender' : 'language';
     case 'sector':
-      return 'gate';
+      // Open to all: no password page, so back goes to the page before it.
+      return OPEN_TO_ALL ? previousStep('gate', p) : 'gate';
     default:
       return null;
   }
