@@ -231,6 +231,9 @@ function practise(p: Progress, today: Date): Progress {
   const s = settleStreak(p, today).progress;
   const gap = s.lastDay ? daysBetween(s.lastDay, key) : Infinity;
   if (gap === 0) return s; // already counted today
+  // The last practised day is later than today (practised abroad ahead of Dutch time, a phone
+  // clock set wrong, a backup from such a phone): the streak stays; today is a practised day too.
+  if (gap < 0) return { ...s, days: addPractised(s.days, key) };
   const streak = gap === 1 ? s.streak + 1 : 1;
   // One free day per 7 days in a row, and the very first one early (day 3 of the first streak
   // that gets there), so it can already cover a missed day in the first week.

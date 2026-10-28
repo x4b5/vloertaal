@@ -82,3 +82,15 @@ describe('theme default', () => {
     expect(loadProgress().gender).toBeUndefined();
   });
 });
+
+describe('a last practised day later than today', () => {
+  // Practised just after midnight abroad (ahead of Dutch time), then again at home the evening
+  // before by Dutch time; or a phone clock set wrong. The streak must not drop to 1.
+  it('keeps the streak and the last day, and counts today as practised', () => {
+    const p = { ...emptyProgress, streak: 20, lastDay: '2026-10-29', days: ['2026-10-29'] };
+    const q = completeLesson(p, 'l.hello', 1, false, new Date(2026, 9, 28, 23));
+    expect(q.streak).toBe(20);
+    expect(q.lastDay).toBe('2026-10-29');
+    expect(q.days).toEqual(['2026-10-28', '2026-10-29']);
+  });
+});
