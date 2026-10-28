@@ -64,9 +64,10 @@ const UNITS: [RegExp, string][] = [
   [/(?<=\d)\s?cm\b/g, ' centimeter'],
 ];
 
-/** Numbers said digit by digit: the emergency number 112 ("één één twee"). Also used by scripts/list-clips.ts
+/** Numbers said digit by digit: the emergency number 112 ("één één twee"), not an amount of 112
+ *  euro (the euro rules have run by then: "€ 112" is "112 euro"). Also used by scripts/list-clips.ts
  *  to re-record the clips made before this rule. */
-export const DIGIT_NUMBERS = /(?<![\d.,-])112(?![\d,]|\.\d)/g;
+export const DIGIT_NUMBERS = /(?<![\d.,-])112(?![\d,]|\.\d|\s?euro\b)/g;
 
 /** The spoken form of a Dutch text: times, amounts, signs and units as words (see above). */
 export function sayNumbers(text: string): string {
