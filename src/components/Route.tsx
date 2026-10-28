@@ -15,7 +15,7 @@ import { loadSaves } from '../lib/resume';
 import { lessonIcon } from '../lib/lessonIcon';
 import { WordPicture } from '../pictures';
 import { Bi, HelpText } from './Bi';
-import { CertBadge } from './Certificate';
+import { CertBadge } from './CertBadge';
 import { CheckIcon, ChevronIcon, CrownIcon, HourglassIcon, LockIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
 import { NlPair } from './NlPair';

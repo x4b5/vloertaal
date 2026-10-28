@@ -44,10 +44,11 @@ const pocket = part(() => import('./components/PocketCard'));
 const milestone = part(() => import('./components/Milestone'));
 const coaches = part(() => import('./components/Coaches'));
 const admin = part(() => import('./components/Admin'));
-const PARTS: Part<unknown>[] = [settings, pocket, milestone, coaches, admin];
+const certificate = part(() => import('./components/Certificate'));
+const PARTS: Part<unknown>[] = [settings, pocket, milestone, coaches, admin, certificate];
 
 /** The file of a screen of App (its View name), when it has one of its own. */
-const OF_VIEW: Partial<Record<string, Part<unknown>>> = { settings, pocket, coaches, admin, keep: milestone, streak: milestone, stopped: milestone };
+const OF_VIEW: Partial<Record<string, Part<unknown>>> = { settings, pocket, coaches, admin, certificate, keep: milestone, streak: milestone, stopped: milestone };
 
 /** The app background while a screen's file loads: no spinner, nothing to tap, nothing jumps. */
 function Waiting() {
@@ -134,6 +135,8 @@ export const KeepScreen = screen(milestone, (m) => m.KeepScreen, 'KeepScreen');
 export const StreakStopped = screen(milestone, (m) => m.StreakStopped, 'StreakStopped');
 export const Coaches = screen(coaches, (m) => m.Coaches, 'Coaches');
 export const Admin = screen(admin, (m) => m.Admin, 'Admin');
+export const CertificateScreen = screen(certificate, (m) => m.CertificateScreen, 'CertificateScreen');
+export const CertEarned = screen(certificate, (m) => m.CertEarned, 'CertEarned');
 
 let start: Promise<void> = Promise.resolve();
 

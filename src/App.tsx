@@ -19,7 +19,7 @@ import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
 // Screens in files of their own (loaded when needed, and in the background after the start).
-import { Admin, Coaches, KeepScreen, Milestone, PocketCardScreen, Settings, StreakStopped, needAtStart, warmScreensLater } from './lazyScreens';
+import { Admin, CertEarned, CertificateScreen, Coaches, KeepScreen, Milestone, PocketCardScreen, Settings, StreakStopped, needAtStart, warmScreensLater } from './lazyScreens';
 import { keepOffered } from './lib/keepOffered';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
@@ -33,7 +33,6 @@ import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysB
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dailyRuleIds, dailyRuleLesson, dailyWordIds, dueIds, gradedStepIds, seedCards, strongerCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
-import { CertEarned, CertificateScreen } from './components/Certificate';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
 import { clockMinutes, count, countOpen, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
