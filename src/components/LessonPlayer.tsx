@@ -450,6 +450,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   }, [reportHint]);
   // The ✕ and the system Back button open the pause sheet (a resumable lesson keeps its place).
   const [askQuit, setAskQuit] = useState(false);
+  /** The ✕: focus goes back to it when the pause sheet closes (its buttons are gone then). */
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const hadSheet = useRef(false);
+  useEffect(() => {
+    if (hadSheet.current && !askQuit) closeRef.current?.focus({ preventScroll: true });
+    hadSheet.current = askQuit;
+  }, [askQuit]);
   const firstBack = useRef(backSignal);
   useEffect(() => {
     if (backSignal === firstBack.current) return;
@@ -874,9 +881,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     // A right-to-left help language mirrors the whole player (header, cards, feedback); the Dutch
     // and English in it keep their own direction (lang="nl" / lang="en" isolates, styles.css).
     <div className={`player ${rtl ? 'player-rtl' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
-      <header className="player-top">
+      <header className="player-top" inert={askQuit}>
         {/* The only control up here: ✕ opens the pause sheet (keep going, without sound, stop). */}
-        <button type="button" className="icon-btn lesson-close" onClick={() => setAskQuit(true)} aria-label={said(ui('quitLesson', lang))} lang={saidLang(ui('quitLesson', lang))} aria-haspopup="dialog"><CloseIcon size={28} /></button>
+        <button ref={closeRef} type="button" className="icon-btn lesson-close" onClick={() => setAskQuit(true)} aria-label={said(ui('quitLesson', lang))} lang={saidLang(ui('quitLesson', lang))} aria-haspopup="dialog"><CloseIcon size={28} /></button>
         <div className="bar-wrap">
           <div
             className="lbar"
@@ -944,7 +951,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
 
       {/* A wrong answer in the first round comes back at the end; in the retry round it does not (the stamp says which). */}
       <ComesBack.Provider value={index < initial.length}>
-      <div className="player-body" ref={bodyRef}>
+      <div className="player-body" ref={bodyRef} inert={askQuit}>
         <div className="ex-ghost" ref={ghostRef} aria-hidden />
         <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
         <div className="ex-tag">
@@ -972,7 +979,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       </ComesBack.Provider>
       {/* With nothing in it yet (an answer is a tap on an option), the footer takes no room, so it
           never covers the last option; a still chevron (not a button) then says there is more. */}
-      <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''} ${!showGo && !feedback ? 'foot-empty' : ''}`} ref={footRef}>
+      <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''} ${!showGo && !feedback ? 'foot-empty' : ''}`} ref={footRef} inert={askQuit}>
         {moreBelow && !checked && !showGo && (
           <span className="foot-more-hint" aria-hidden><ChevronDownIcon size={22} /></span>
         )}
