@@ -156,9 +156,19 @@ export function Settings({
   /** Bumped when a stored-on-this-device switch changes, so the page shows it at once. */
   const [, setTick] = useState(0);
   const timer = useRef<number | null>(null);
+  // An answer's way back (answered) is for the page it was given on: another page (Back, the
+  // arrow) or leaving Settings cancels it, so it never takes the learner a page too far.
   useEffect(() => {
-    return () => { if (timer.current) clearTimeout(timer.current); };
+    return () => { if (timer.current) clearTimeout(timer.current); timer.current = null; };
+  }, [page]);
+  /** Still on screen: a help language whose file comes late does nothing once Settings is left. */
+  const shown = useRef(true);
+  useEffect(() => {
+    shown.current = true;
+    return () => { shown.current = false; };
   }, []);
+  /** The language tapped last: a file that comes later than another tap's does not undo it. */
+  const wanted = useRef<UiCode | null | undefined>(undefined);
   // Help language offline: a language whose file is not on the phone can't be switched to. The
   // old language stays and a calm line says why (no splash, no dead end).
   const [notHere, setNotHere] = useState<UiCode | null>(null);
@@ -172,12 +182,18 @@ export function Settings({
     return () => window.removeEventListener('online', back);
   }, [notHere]);
   const pickLanguage = (code: UiCode | null) => {
-    const take = () => { setNotHere(null); onLang(code); answered(); };
+    wanted.current = code;
+    const take = () => {
+      if (!shown.current || wanted.current !== code) return;
+      setNotHere(null);
+      onLang(code);
+      answered();
+    };
     if (isLanguageLoaded(code)) { take(); return; }
     ensureLanguage(code).then(take, () => {
       // Online after all (a server hiccup): App's own splash retries. Offline: stay here.
       if (typeof navigator !== 'undefined' && navigator.onLine !== false) take();
-      else setNotHere(code);
+      else if (shown.current && wanted.current === code) setNotHere(code);
     });
   };
   /**
