@@ -87,7 +87,7 @@ ${head.links ? `${head.links}\n` : ''}<meta property="og:type" content="website"
 <body>
 <div class="stripe" aria-hidden="true"></div>
 <main>
-<header><img src="/icon-192.png?v=4" alt="" width="48" height="48" /><a href="/" lang="nl" dir="ltr">vloertaal.</a></header>
+<header><img src="/icon.svg?v=4" alt="" width="48" height="48" /><a href="/" lang="nl" dir="ltr">vloertaal.</a></header>
 ${body}
 </main>
 </body>
