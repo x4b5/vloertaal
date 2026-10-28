@@ -134,18 +134,23 @@ export function kindsOf(list: readonly { kind: string }[]): string {
 }
 
 /**
- * A save for the lesson state: `queue` is the built list plus the queued mistakes (the same
- * objects), `index` the exercise to go on with. Null when there is nothing to save yet.
+ * A save for the lesson state: `queue` is the built list plus the queued mistakes, `index` the
+ * exercise to go on with. `from` says which exercise of the built list each queued mistake came
+ * back from (the player queues a new form of it, lib/exercises.ts forRetry, not the same object);
+ * without it, a queued mistake must be the built exercise itself. Null when there is nothing to
+ * save yet, or a queued exercise has no place in the built list (-1).
  */
 export function makeSave<T extends { kind: string }>(args: {
   lessonId: string; review: boolean; quiet: boolean; seed: number;
-  initial: readonly T[]; queue: readonly T[]; index: number;
+  initial: readonly T[]; queue: readonly T[]; index: number; from?: readonly number[];
   right: number; total: number; words: Record<string, boolean>; run: number; misses: number; now: number;
 }): LessonSave | null {
-  const { initial, queue, index } = args;
+  const { initial, queue, index, from } = args;
   if (index <= 0 || index >= queue.length) return null;
-  const repeats = queue.slice(initial.length).map((e) => initial.indexOf(e));
-  if (repeats.some((i) => i < 0)) return null;
+  const extra = queue.slice(initial.length);
+  if (from && from.length !== extra.length) return null;
+  const repeats = from ? [...from] : extra.map((e) => initial.indexOf(e));
+  if (repeats.some((i) => i < 0 || i >= initial.length)) return null;
   return {
     lessonId: args.lessonId, review: args.review, quiet: args.quiet, seed: args.seed,
     planned: initial.length, kinds: kindsOf(initial), index, repeats,
@@ -156,11 +161,18 @@ export function makeSave<T extends { kind: string }>(args: {
 
 /**
  * The lesson state from a save and the list rebuilt from its seed; null when the rebuilt list
- * does not match (the lesson changed in an update), so the lesson starts fresh.
+ * does not match (the lesson changed in an update), so the lesson starts fresh. `retry` makes a
+ * queued mistake again as the player made it (its exercise, and its place in the queue).
  */
-export function restoreSave<T extends { kind: string }>(save: LessonSave, initial: readonly T[]): { queue: T[]; index: number } | null {
+export function restoreSave<T extends { kind: string }>(
+  save: LessonSave,
+  initial: readonly T[],
+  retry: (ex: T, at: number) => T = (ex) => ex,
+): { queue: T[]; index: number } | null {
   if (initial.length !== save.planned || kindsOf(initial) !== save.kinds) return null;
-  const queue = [...initial, ...save.repeats.map((i) => initial[i])];
+  if (save.repeats.some((i) => !(i >= 0 && i < initial.length))) return null;
+  const queue = [...initial];
+  for (const i of save.repeats) queue.push(retry(initial[i], queue.length));
   if (save.index >= queue.length) return null;
   return { queue, index: save.index };
 }

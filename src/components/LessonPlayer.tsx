@@ -321,9 +321,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart, sector, sayingsAtStart],
   );
   // The saved place in that list, with the mistakes queued then (null: start from the top).
-  const [resumed] = useState(() => (saved ? restoreSave(saved, initial) : null));
+  // A mistake comes back in a new form made from its place in the queue (forRetry, as check() does).
+  const [resumed] = useState(() => (saved ? restoreSave(saved, initial, (e, at) => forRetry(e, lesson, seed + at)) : null));
   const [queue, setQueue] = useState<Exercise[]>(() => resumed?.queue ?? [...initial, ...(repeats ?? [])]);
   const [index, setIndex] = useState(() => resumed?.index ?? startAt);
+  /** For each exercise queued after the built list: the built exercise it came back from (-1: given
+   *  from outside, `repeats`), so the place can be saved (lib/resume.ts makeSave). */
+  const retryFrom = useRef<number[]>(resumed ? [...saved!.repeats] : (repeats ?? []).map(() => -1));
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [checked, setChecked] = useState(false);
   /** A speaking exercise in its compare-and-rate step: its own buttons go on, Continue hides. */
@@ -415,7 +419,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     // Started again: the old save stays until the first answer.
     if (fresh && at === 0) return;
     const save = makeSave({
-      lessonId: lesson.id, review, quiet: quietAtStart, seed, initial, queue: s.queue, index: at,
+      lessonId: lesson.id, review, quiet: quietAtStart, seed, initial, queue: s.queue, index: at, from: retryFrom.current,
       right: graded.current.right, total: graded.current.total, words: wordResults.current,
       run: s.run, misses: s.misses, now: Date.now(),
     });
@@ -578,6 +582,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     // Only the index matters: the queue grows when a mistake is queued, on the same exercise.
   }, [index]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  /** The exercise on screen comes back once at the end, in a new form (lib/exercises.ts forRetry). */
+  function queueRetry() {
+    retryFrom.current = [...retryFrom.current, index];
+    setQueue((q) => [...q, forRetry(ex, lesson, seed + q.length)]);
+  }
+
   function check(given: Answer | null = answer) {
     const answer = given;
     if (!answer || checked) return;
@@ -602,7 +612,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     // A finished match board already gave its feedback tile by tile. Two or more wrong taps make
     // it a mistake, which comes back once at the end (as a built sentence does).
     if (ex.kind === 'match') {
-      if (!answer.correct && index < initial.length) setQueue((q) => [...q, forRetry(ex, lesson, seed + q.length)]);
+      if (!answer.correct && index < initial.length) queueRetry();
       return next();
     }
     // The choreography (styles.css, "Answer moment"): t=0 the options colour, the chime plays
@@ -628,7 +638,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       sounds.wrong();
       // A mistake comes back once at the end of the lesson; no endless loops.
       // It comes back in a new form: other order, other wrong options (lib/exercises.ts forRetry).
-      if (index < initial.length) setQueue((q) => [...q, forRetry(ex, lesson, seed + q.length)]);
+      if (index < initial.length) queueRetry();
     }
     const sol = solution(ex);
     const said = announce(ex, answer.correct, answer.almost, answer.given?.[0]);
