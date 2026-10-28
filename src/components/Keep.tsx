@@ -292,7 +292,10 @@ export function BackupCard({ progress, lang, onRestore }: {
   const pick = async (f: File | undefined) => {
     if (!f) return;
     const big = f.size >= BACKUP_MAX_BYTES;
-    const parsed = big ? null : parseBackup(await f.text());
+    // A file that can't be read (in the cloud and not on the phone, permission gone) is a bad
+    // file too; the input is emptied either way, so the same file can be chosen again.
+    const text = big ? null : await f.text().catch(() => null);
+    const parsed = text === null ? null : parseBackup(text);
     setNote(parsed ? null : big ? 'big' : 'bad');
     setFound(parsed);
     setFewer(false);
