@@ -1,4 +1,4 @@
-import { useEffect, useId, useReducer } from 'react';
+import { useEffect, useId, useReducer, useState } from 'react';
 import { findUnit, unitDone } from '../lib/certificate';
 import { gloss, said, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
@@ -101,6 +101,13 @@ export function useAutoOffline(progress: Progress, access: Access | null) {
   const voices = currentVoices(preferredVoiceRef());
   const vk = voicesKey(voices);
   const doneKey = Object.keys(progress.completed).length;
+  // Switched on (or a topic due) without a connection: try again when it comes back.
+  const [online, setOnline] = useState(0);
+  useEffect(() => {
+    const back = () => setOnline((n) => n + 1);
+    window.addEventListener('online', back);
+    return () => window.removeEventListener('online', back);
+  }, []);
   useEffect(() => {
     if (!on || !offlineSupported()) return;
     const t = window.setTimeout(() => {
@@ -123,7 +130,7 @@ export function useAutoOffline(progress: Progress, access: Access | null) {
     return () => window.clearTimeout(t);
     // `tick` repaints after a save or a removal, so a finished save is not started again.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [on, unit?.id, vk, doneKey, tick]);
+  }, [on, unit?.id, vk, doneKey, tick, online]);
 }
 
 /**

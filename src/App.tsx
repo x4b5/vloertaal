@@ -347,14 +347,21 @@ export default function App() {
   // open (its row "Waar woon je?"). Until they are here the app works without them: the path
   // without the region's unit, the Hulp tab without the map. At start main.tsx waits for them.
   const [, setRegionTry] = useState(0);
+  /** Bumped when the connection comes back after the region's file failed: it is asked again. */
+  const [regionRetry, setRegionRetry] = useState(0);
   const askingRegion = view.name === 'settings';
   const regionHere = regionReady(progress.region, progress.helpLang, askingRegion);
   useEffect(() => {
     if (regionHere) return;
     let live = true;
-    ensureRegionFor(progress.region, progress.helpLang, askingRegion).then(() => { if (live) setRegionTry((n) => n + 1); }, () => {});
-    return () => { live = false; };
-  }, [progress.region, progress.helpLang, askingRegion, regionHere]);
+    const again = () => { if (live) setRegionRetry((n) => n + 1); };
+    ensureRegionFor(progress.region, progress.helpLang, askingRegion).then(
+      () => { if (live) setRegionTry((n) => n + 1); },
+      // Not loaded (offline, a bad connection): asked again when the connection comes back.
+      () => { if (live) window.addEventListener('online', again, { once: true }); },
+    );
+    return () => { live = false; window.removeEventListener('online', again); };
+  }, [progress.region, progress.helpLang, askingRegion, regionHere, regionRetry]);
   // The word pictures (their own file, loading since the start): every screen after the language page has them.
   const picsReady = usePicturesLoaded();
   useEffect(() => {
