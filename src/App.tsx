@@ -186,6 +186,29 @@ export default function App() {
       setGateAgain(true);
     }
   };
+  // A new screen (outside a lesson, which sees to its own focus): when the focus was lost with the
+  // button that led here, it goes to the screen's heading, so a screen reader says where you are
+  // and Tab goes on from there, not from the top of the page. A screen that put the focus on a
+  // button itself keeps it.
+  const screenKey = `${view.name}|${'page' in view ? view.page ?? '' : ''}|${'unit' in view ? view.unit : ''}|${step}`;
+  const firstScreen = useRef(true);
+  useEffect(() => {
+    if (firstScreen.current) { firstScreen.current = false; return; }
+    if (view.name === 'lesson') return;
+    // A screen of a file of its own (src/lazyScreens.tsx) may draw its heading a moment later.
+    let tries = 0;
+    let t = 0;
+    const look = () => {
+      const now = document.activeElement;
+      if (now && now !== document.body) return;
+      const h = document.querySelector<HTMLElement>('#root h1');
+      if (!h) { if (++tries < 20) t = window.setTimeout(look, 100); return; }
+      if (!h.hasAttribute('tabindex')) h.tabIndex = -1;
+      h.focus({ preventScroll: true });
+    };
+    t = window.setTimeout(look, 0);
+    return () => window.clearTimeout(t);
+  }, [screenKey]); // eslint-disable-line react-hooks/exhaustive-deps
   const onbRef = useRef({ step, back: stepBack });
   onbRef.current = { step, back: stepBack };
   /** A first-run page's back arrow: through the history when the page has its own entry (so the
