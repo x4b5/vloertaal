@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -9,7 +9,7 @@
     <!-- Not render-blocking (it only maps the emoji font's files): the splash paints without waiting for it. -->
     <link href="./fonts/noto-color-emoji.css" rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript><link href="./fonts/noto-color-emoji.css" rel="stylesheet" /></noscript>
-    <meta name="description" content="Learn Dutch for the work floor, through English, with help in your own language." />
+    <meta name="description" content="Gratis Nederlands leren voor je werk, met uitleg in je eigen taal: Arabisch, Pools, Oekraïens, Tigrinya en meer. Geen account, geen reclame." />
     <link rel="canonical" href="https://vloertaal.nl/" />
     <!-- Link previews (WhatsApp, Signal, Facebook): the share image and one line in Dutch. -->
     <meta property="og:type" content="website" />
@@ -29,7 +29,23 @@
     <link rel="icon" href="./favicon-16.png?v=4" type="image/png" sizes="16x16" />
     <link rel="icon" href="./icon.svg?v=4" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png?v=4" />
-    <title>Vloertaal</title>
+    <title>Vloertaal – gratis Nederlands leren voor je werk</title>
+    <!-- For search engines: what this is, in their own vocabulary (docs/seo-plan.md). -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Vloertaal",
+        "url": "https://vloertaal.nl/",
+        "description": "Gratis Nederlands leren voor je werk, met uitleg in je eigen taal. Ook de regels op het werk: loon, contract, ziek zijn.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "inLanguage": "nl",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "email": "hoi@vloertaal.nl"
+      }
+    </script>
     <!-- The start screen before any script has run (and while the help language loads): the logo
          (Bram) and the name in ink on a kraft label on the floor colour, no JavaScript needed, so
          the screen is never blank.
