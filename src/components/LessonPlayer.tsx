@@ -3,7 +3,7 @@ import type { Lesson } from '../content/types';
 import type { SectorChoice } from '../content/sectors';
 import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
-import { autoSpeak, sounds, speak, speechAvailable, stopSpeech, surelySilent } from '../lib/audio';
+import { autoSpeak, sounds, speak, stopSpeech, surelySilent } from '../lib/audio';
 
 /** Can the phone say this line, as far as is known (see surelySilent: no index yet counts as yes). */
 const mayBeHeard = (text: string) => !surelySilent(text);
@@ -378,7 +378,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   /** "Without sound" without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
   const soundOff = quiet || cantListen;
-  const audioOff = !speechAvailable() || soundOff;
+  // Not "no speech engine": the recorded clips play without one (a WebView inside WhatsApp has
+  // none). An exercise nothing can say is left out on its own (unheard, mayBeHeard).
+  const audioOff = soundOff;
   /** Listening exercises left out, counted out loud on the result. */
   const skipped = useRef(0);
   /** Short line after the sound changed: 'off' = without sound, 'on' = sound on. */
