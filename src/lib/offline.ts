@@ -234,15 +234,6 @@ export async function unitFiles(unit: Unit, voices: VoiceRef[]): Promise<{ shell
   return { shell: shellUrls(), clips: clipPaths(unitTexts(unit), voices, clipUrl).map(abs) };
 }
 
-/**
- * About how much the unit's sound takes (the number shown before and after saving is the sound;
- * the app files are shared by all saved units and kept by the browser anyway).
- */
-export async function estimateBytes(unit: Unit, voices: VoiceRef[]): Promise<number> {
-  const { clips } = await unitFiles(unit, voices);
-  return clips.length * CLIP_BYTES;
-}
-
 const isQuota = (e: unknown) => {
   const name = (e as { name?: string })?.name ?? '';
   return name === 'QuotaExceededError' || name === 'NS_ERROR_DOM_QUOTA_REACHED' || /quota/i.test(String((e as Error)?.message ?? ''));

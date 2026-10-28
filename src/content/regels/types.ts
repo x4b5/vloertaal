@@ -100,8 +100,6 @@ export type RuleStep =
    */
   | { kind: 'card'; id: string; card: DrawnCard; question: string; options: RuleOption[]; why: string; sum?: string[] };
 
-export type RuleStepKind = RuleStep['kind'];
-
 /** One lesson of the track: the content, before it is turned into a `Lesson`. */
 export interface RuleLesson {
   /** "r.l.<unit>.<n>", e.g. "r.l.pay.2". */

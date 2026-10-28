@@ -119,15 +119,6 @@ export function accessFromIntro(had: Access | null, search: string): Access | nu
   return new URLSearchParams(search).has('intro') ? 'sample' : null;
 }
 
-/** Forget the access (no longer used by the first run: its back arrows keep an accepted code). */
-export function clearAccess(): void {
-  try {
-    localStorage.removeItem(KEY);
-  } catch {
-    // Blocked storage: nothing was kept.
-  }
-}
-
 /** The unit open in the preview in one track: its course's first unit (none while the course is not here). */
 export function previewUnits(track: Track = 'taal'): string[] {
   const first = courseUnits(track)[0];

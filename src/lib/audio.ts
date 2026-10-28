@@ -31,10 +31,6 @@ export function setQuietAudio(quiet: boolean): void {
   quietAudio = quiet;
 }
 
-export function isQuietAudio(): boolean {
-  return quietAudio;
-}
-
 /**
  * Speech that starts by itself (a new word on screen, the right answer after Check, a tile or
  * card that says its word when picked). Silent in "Without sound"; buttons use speak().

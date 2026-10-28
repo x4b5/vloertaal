@@ -2032,7 +2032,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .btn-primary .btn-label.bi-swap > .bi-help { color: #3f3a2c; opacity: 1; }
 .btn:disabled .btn-label.bi-swap > .bi-help { color: inherit; opacity: 1; }
 .foot-actions .btn-go { padding-block: 8px; }
-.phrase-sheet-back .btn-label .bi-en, .foot-actions .btn-go .btn-label .bi-en { font-size: 1.15rem; }
+.foot-actions .btn-go .btn-label .bi-en { font-size: 1.15rem; }
 .btn-label .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.24rem; }
 
 /* Exercise tag: pictogram, the Dutch word, and the same word in the help language. */
@@ -2180,25 +2180,6 @@ html { scroll-padding-bottom: calc(var(--foot-h, 0px) + 12px); }
 html:has(.bottom-nav) { scroll-padding-bottom: 104px; }
 html:has(.topbar) { scroll-padding-top: 72px; }
 
-/* Emergency phrases as a sheet over the lesson. */
-.phrase-sheet { display: flex; flex-direction: column; max-height: 90dvh; padding-top: 22px; }
-.phrase-sheet-head { flex: none; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-.phrase-sheet-back { flex: none; }
-.phrase-sheet-icon {
-  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 8px;
-  background: var(--red-bg); color: var(--wrong-ink);
-}
-.phrase-sheet .sheet-title { flex: 1; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; font-size: 1.3rem; }
-.phrase-sheet .sheet-title .bi { font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
-.phrase-sheet-list {
-  flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
-  margin-inline: -16px; padding-inline: 16px; border-block: 2px dashed var(--line);
-}
-.phrase-sheet-list .phrases { margin: 12px 0; }
-.phrase-sheet-list .phrase { background: var(--bg); }
-.phrase-sheet-back { width: 100%; min-height: 60px; margin-top: 12px; padding-inline: 64px; }
-@media (min-width: 760px) { .phrase-sheet { max-height: 86dvh; } .phrase-sheet-list { margin-inline: -24px; padding-inline: 24px; } }
-
 /* "Hulp" tab: the emergency phrases straight away, the workplace tips under them. */
 .hub-alert-head { display: flex; align-items: center; gap: 12px; margin: 4px 0 0; }
 .hub-alert-head .hub-icon { color: var(--wrong-ink); }
@@ -2302,7 +2283,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .player-foot { padding-inline: 10px; }
   .prompt { font-size: 1.3rem; }
   .btn-go, .foot-actions .btn-go { padding-inline: 8px 58px; font-size: 1rem; }
-  .phrase-sheet-back { padding-inline: 8px 58px; }
   .speaker { gap: 8px; }
   .speaker-char, .speaker-build .speaker-char, .situation .speaker-char,
   .speaker-word.len-m .speaker-char, .speaker-word.len-l .speaker-char { font-size: 64px; }
@@ -2350,11 +2330,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .tip-say-row { flex-wrap: wrap; }
   .sheet { padding-inline: 10px; }
   .phrase { gap: 10px; padding: 10px; flex-wrap: wrap; }
-  .phrase-sheet-list { margin-inline: -10px; padding-inline: 10px; }
-  .phrase-sheet { max-height: 96dvh; padding-top: 18px; }
-  .phrase-sheet .sheet-title { font-size: 1.1rem; overflow-wrap: anywhere; }
-  .phrase-sheet-icon { display: none; }
-  .phrase-sheet-back { min-height: 52px; margin-top: 8px; }
   /* Settings and other screens */
   .lang-grid { grid-template-columns: minmax(0, 1fr); }
   .keep-row, .remind-chips { grid-template-columns: minmax(0, 1fr); }

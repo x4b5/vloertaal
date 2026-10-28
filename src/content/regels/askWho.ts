@@ -31,6 +31,3 @@ export const ASK_WHO: Record<AskWho, { label: string; emoji: string }> = {
   grensinfopunt: { label: 'Het GrensInfoPunt', emoji: '🌍' },
   woningcorporatie: { label: 'De woningcorporatie', emoji: '🏘️' },
 };
-
-/** The Dutch name of a place to go for help. */
-export const askWhoLabel = (who: AskWho): string => ASK_WHO[who].label;

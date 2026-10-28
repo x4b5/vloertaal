@@ -272,10 +272,6 @@ export function ModelLine({ ex, lang, onAnswer }: RuleProps<'model'>) {
   );
 }
 
-/** The name of each kind of drawn card (for screen readers: "Kassabon", "Werkbon"). */
-export const CARD_NAME: Record<CardType, string> = {
-  rooster: 'Rooster', kassabon: 'Kassabon', pakbon: 'Pakbon', etiket: 'Etiket', werkbon: 'Werkbon', loonstrook: 'Loonstrook',
-};
 /** A small picture beside the card's heading (decoration). The payslip keeps its plain head. */
 const CARD_PIC: Partial<Record<CardType, string>> = { rooster: '🗓️', kassabon: '🧾', pakbon: '📦', etiket: '🏷️', werkbon: '📋' };
 
