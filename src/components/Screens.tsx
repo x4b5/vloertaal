@@ -50,7 +50,6 @@ import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
 import { pushSubStep } from '../lib/onbHistory';
-import { sayFirstWord } from '../lib/audio';
 import { aboutDutchRemembered, rememberAboutDutch } from '../lib/aboutDutch';
 
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
@@ -162,9 +161,8 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, [list, hasGuess]);
-  /** The first tap: Bram says "Hallo, ik ben Bram." (until recorded: "hallo"), then the next page shows. */
+  /** The first tap: the next page shows (silent since 28 October 2026: no "Hallo, ik ben Bram."). */
   const pick = (code: UiCode | null) => {
-    sayFirstWord();
     onDone(code);
   };
   // The guess page needs only its few strings (src/i18n/meta.ts): no pack to wait for.
