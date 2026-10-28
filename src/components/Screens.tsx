@@ -232,10 +232,11 @@ export function TopBar({ streak, words, lang, done = false, quiet = false, greet
   // Right to left (Arabic, Persian, Dari): the logo moves to the right, the stats and the flag to the left.
   return (
     <header className="topbar" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
-      <span className="brand">
+      {/* The home's one heading: the name. Named here, as the wordmark is hidden on a phone. */}
+      <h1 className="brand" aria-label="Vloertaal" lang="nl">
         <LogoMark size={36} />
         <Wordmark className="topbar-wordmark" />
-      </span>
+      </h1>
       {greeting}
       {quiet && (
         <span className="sound-off-mark" role="img" aria-label={`${said(ui('withoutSound', lang))}${lang?.ui.withoutSound ? ` · ${ui('withoutSound', lang).help}` : ''}`} title={ui('withoutSound', lang).help ?? said(ui('withoutSound', lang))}>
