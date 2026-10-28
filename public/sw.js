@@ -35,7 +35,8 @@ async function cacheShell() {
   const res = await fetch(scope(), { cache: 'no-cache' });
   if (!res.ok) throw new Error(`page ${res.status}`);
   const html = await res.clone().text();
-  const urls = [...html.matchAll(/(?:src|href)="([^"]+)"/g)]
+  // Not the page's other languages (hreflang): those are pages of their own, not the app's files.
+  const urls = [...html.replace(/<link rel="alternate"[^>]*>/g, '').matchAll(/(?:src|href)="([^"]+)"/g)]
     .map((m) => new URL(m[1], scope()))
     .filter((u) => u.origin === self.location.origin && !isAudio(u))
     .map((u) => u.href);
