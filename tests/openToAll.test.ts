@@ -24,4 +24,13 @@ describe('open to all (since 28 October 2026): the full version without a code',
     expect(previousStep('sector', tr)).toBe('language');
     expect(previousStep('sector', pl)).toBe('gender');
   });
+
+  // Back from the sector, then the language (or gender) again: on to the sector, not to a
+  // password page saying the code was accepted.
+  it('does not bring the password page back on the way back from the sector', () => {
+    const tr = { ...fresh, onboarded: true, helpLang: 'tr' as const };
+    const pl = { ...fresh, onboarded: true, helpLang: 'pl' as const, gender: 'f' as const, genderAsked: true };
+    expect(onboardingStep(tr, loadAccess(), true)).toBe('sector');
+    expect(onboardingStep(pl, loadAccess(), true)).toBe('sector');
+  });
 });
