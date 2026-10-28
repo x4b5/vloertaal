@@ -140,8 +140,6 @@ export default function App() {
   const [gateAgain, setGateAgain] = useState(false);
   /** The code typed on the password page (this visit only): back in the field on the way back. */
   const typedCode = useRef('');
-  /** The language was just picked: the next page shows Bram waving and introducing himself (once). */
-  const [greet, setGreet] = useState(false);
   /** A coach link to a topic outside the preview: the home offers its unlock (this visit). */
   const [lockedLink, setLockedLink] = useState<string | null>(null);
   const grant = (given: Access, typed?: string) => {
@@ -283,13 +281,8 @@ export default function App() {
   // First run: one history entry per page, so the phone's Back goes one question back (the
   // popstate handler above) instead of leaving the app halfway. When the run is done, the history
   // steps back to its first entry and the home takes that place: Back from the home leaves the app.
-  const prevStep = useRef(step);
   useEffect(() => {
     if (adminRequested()) return;
-    const was = prevStep.current;
-    prevStep.current = step;
-    // Bram's "Hallo!" is only on the first page after the language.
-    if (was !== step && was !== 'language') setGreet(false);
     const cur = current();
     const at = cur?.onb ?? 0;
     const idx = stepIndex(step);
@@ -516,14 +509,13 @@ export default function App() {
   // "Woman or man?" (only for a help language with gender, so the password page already uses the
   // right form), the password, then the sector. Every page has a back arrow to the one before
   // (and the phone's Back does the same). The admin page above stays reachable with #beheer.
-  if (!progress.onboarded) return <Onboarding onDone={(code) => { setLang(code); setGreet(true); }} startWithList={langAgain} />;
+  if (!progress.onboarded) return <Onboarding onDone={setLang} startWithList={langAgain} />;
   if (step === 'gender') {
     return (
       <GenderScreen
         lang={lang}
         onDone={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))}
         onBack={onbBack}
-        greet={greet}
       />
     );
   }
@@ -540,7 +532,6 @@ export default function App() {
         accepted={codeKept ? access : null}
         code={typedCode.current}
         onFree={codeKept ? undefined : startFree}
-        greet={greet}
       />
     );
   }
