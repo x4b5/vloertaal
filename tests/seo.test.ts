@@ -2,9 +2,11 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { askedHelpLang } from '../src/lib/langGuess';
 import { describe as describeLine, hreflangLinks, LANG_PAGES, langPage } from '../src/lib/langPages';
-import { RULES_PATH, rulesPage, SECTOR_PAGES, sectorPage } from '../src/lib/sectorPages';
-import { COACH_PATH, coachPage } from '../src/lib/coachPage';
+import { rulesPage, SECTOR_PAGES, sectorPage } from '../src/lib/sectorPages';
+import { coachPage } from '../src/lib/coachPage';
+import { COACH_PATH, RULES_PATH } from '../src/lib/paths';
 import { notFoundPage, siteLinks } from '../src/lib/siteLinks';
+import { slugOf, TOPIC_PAGES, topicPage, topicsIndexPage } from '../src/lib/topicPages';
 import { unitFromSearch } from '../src/lib/unitLink';
 import { sitemap } from '../src/lib/sitemap';
 
@@ -182,10 +184,11 @@ describe('the page for coaches (docs/seo-plan.md, step 5)', () => {
 describe('links from the start page, before any script', () => {
   const links = siteLinks();
 
-  it('reach every plain page', () => {
+  it('reach every plain page, the topics through their list', () => {
+    const reach = links + topicsIndexPage();
     for (const path of sitemap().match(/<loc>[^<]+<\/loc>/g)!.map((l) => l.slice(5 + 'https://vloertaal.nl'.length, -6))) {
       if (path === '/') continue;
-      expect(links).toContain(`href="${path}"`);
+      expect(reach).toContain(`href="${path}"`);
     }
   });
 
@@ -205,4 +208,27 @@ describe('the 404 page and the hosting', () => {
   it('one address per page: /bouw goes to /bouw/', () => {
     expect(JSON.parse(readFileSync('vercel.json', 'utf8')).trailingSlash).toBe(true);
   });
+});
+
+describe('a page per topic', () => {
+  it('has every topic of the Dutch course once, at a Dutch address', () => {
+    expect(TOPIC_PAGES.length).toBeGreaterThanOrEqual(30);
+    expect(new Set(TOPIC_PAGES.map((t) => t.path)).size).toBe(TOPIC_PAGES.length);
+    expect(slugOf('Rekenen: tijd, geld, maten')).toBe('rekenen-tijd-geld-maten');
+    expect(slugOf('Omgang met collega’s')).toBe('omgang-met-collegas');
+    for (const t of TOPIC_PAGES) expect(sitemap()).toContain(`<loc>https://vloertaal.nl${t.path}</loc>`);
+  });
+
+  for (const t of TOPIC_PAGES) {
+    it(`${t.path}: short title, search-length description, a way into the topic`, () => {
+      const html = topicPage(t);
+      const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? '';
+      const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '';
+      expect(title.length).toBeLessThanOrEqual(60);
+      expect(desc.length).toBeLessThanOrEqual(160);
+      expect(html.match(/<h1>/g)).toHaveLength(1);
+      const slug = html.match(/class="cta" href="\/\?unit=([^"]+)"/)?.[1];
+      expect(unitFromSearch(`?unit=${slug}`)).toBe(t.unit.id);
+    });
+  }
 });

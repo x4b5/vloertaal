@@ -140,6 +140,9 @@ Gedaan, in code en getest (`tests/seo.test.ts`):
 - **Stap 4** — `/logistiek` `/bouw` `/productie` `/zorg` `/horeca` `/schoonmaak` en `/werkregels`
   (`src/lib/sectorPages.ts`), met de woorden in het Pools, Roemeens, Oekraïens en Arabisch.
 - **Stap 5** — `/voor-begeleiders` (`src/lib/coachPage.ts`), met een link naar elk onderwerp.
+- **Extra** — `/onderwerpen` en een pagina per onderwerp (32, `src/lib/topicPages.ts`): woorden met
+  vertaling, zinnen en gesprekjes, en een knop die het onderwerp in de app opent. Geen pagina per
+  les (zie hieronder); een onderwerp is groot genoeg om iets te zoeken en klein genoeg om bij te houden.
 - De voorpagina heeft vóór JavaScript een kop, drie alinea's en links naar alle pagina's
   (`src/lib/siteLinks.ts`); /intro, /nieuw en de nieuwe 404-pagina linken ook door.
 - `sitemap.xml` wordt bij de build gemaakt; `trailingSlash: true` in `vercel.json` (één adres per

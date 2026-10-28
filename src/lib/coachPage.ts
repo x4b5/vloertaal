@@ -1,10 +1,11 @@
 import { aboutSections } from '../content/about';
-import { units } from '../content/curriculum';
 import { COACH_FACTS } from '../content/facts';
-import { THEME_UNITS, THEMES } from '../content/themes';
+import { THEMES } from '../content/themes';
 import { languageNav } from './langPages';
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
+import { COACH_PATH } from './paths';
 import { sectorNav } from './sectorPages';
+import { appLink, TOPIC_PAGES } from './topicPages';
 
 /**
  * vloertaal.nl/voor-begeleiders: for language coaches, teachers, employers and organisations
@@ -13,20 +14,13 @@ import { sectorNav } from './sectorPages';
  * the app's own "Voor begeleiders" page). Made at build time from src/content.
  */
 
-export const COACH_PATH = '/voor-begeleiders/';
-
 const about = (id: string) => aboutSections.find((s) => s.id === id)!.nl;
 
-/** A unit's link as the app reads it (src/lib/unitLink.ts): "?unit=pay" for u.pay. */
-const unitHref = (id: string) => `/?unit=${encodeURIComponent(id.slice(2))}`;
 
 export function coachPage(): string {
   const title = 'Voor taalcoaches, docenten en werkgevers | Vloertaal';
   const description = 'Zet Vloertaal in bij je taalcafé, NT2-les of op de werkvloer: gratis, zonder account, met uitleg in 9 talen en een directe link naar elk onderwerp.';
-  const themes = THEMES.map((t) => ({
-    t,
-    list: THEME_UNITS[t.id].taal.map((id) => units.find((u) => u.id === id)).filter((u) => u !== undefined),
-  })).filter((g) => g.list.length > 0);
+  const themes = THEMES.map((t) => ({ t, list: TOPIC_PAGES.filter((p) => p.theme.id === t.id) })).filter((g) => g.list.length > 0);
   const data = [
     {
       '@context': 'https://schema.org',
@@ -49,13 +43,13 @@ export function coachPage(): string {
 <ul class="lines">
 <li><strong>Op de eigen telefoon.</strong> Stuur de link vloertaal.nl. De leerling kiest zelf een hulptaal en een sector. Geen account, geen app-winkel.</li>
 <li><strong>Elke dag tien minuten.</strong> Korte lessen werken beter dan af en toe lang. “Herhaal vandaag” brengt de woorden terug die nog lastig zijn.</li>
-<li><strong>Naar één onderwerp.</strong> Elk onderwerp heeft een eigen link (hieronder). Handig na een les over het loonstrookje of veiligheid.</li>
+<li><strong>Naar één onderwerp.</strong> Elk onderwerp heeft een eigen link die het in de app opent (hieronder: “open”). Handig na een les over het loonstrookje of veiligheid.</li>
 <li><strong>Bij een taalcafé of in de klas.</strong> Samen één les doen, daarna zelf verder. Een certificaat per onderwerp en een zakkaart met de belangrijkste zinnen.</li>
 <li><strong>Wie al Nederlands spreekt</strong> kiest “Nederlands”: dan leert die de regels op het werk (<a href="/werkregels/">Werkregels</a>).</li>
 </ul></section>
 <section aria-labelledby="topics"><h2 id="topics">Een link naar elk onderwerp</h2>
 ${themes
-  .map(({ t, list }) => `<h3>${esc(t.titleNl)}</h3><ul class="lines">${list.map((u) => `<li><a href="${unitHref(u.id)}">${esc(u.titleNl)}</a></li>`).join('')}</ul>`)
+  .map(({ t, list }) => `<h3>${esc(t.titleNl)}</h3><ul class="lines">${list.map((p) => `<li><a href="${p.path}">${esc(p.unit.titleNl)}</a> · <a href="${appLink(p.unit.id)}" rel="nofollow">open</a></li>`).join('')}</ul>`)
   .join('\n')}</section>
 <section aria-labelledby="facts"><h2 id="facts">Waarom Nederlands leren helpt</h2>
 ${COACH_FACTS.map((f) => `<p>${esc(f.text)}</p><p><small>Bron: ${esc(f.source)}</small></p>`).join('\n')}</section>

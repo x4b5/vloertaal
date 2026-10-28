@@ -1,5 +1,5 @@
 import { LAST_UPDATE, type Update, updateDate } from '../content/updates';
-import { linkRows } from './siteLinks';
+import { linkRows } from './linkRows';
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 

@@ -1,16 +1,6 @@
 import { aboutSections } from '../content/about';
-import { COACH_PATH } from './coachPage';
-import { LANG_PAGES } from './langPages';
+import { linkRows } from './linkRows';
 import { esc, plainPage } from './plainPage';
-import { RULES_PATH, SECTOR_PAGES } from './sectorPages';
-
-const a = (href: string, text: string, lang = 'nl', dir = 'ltr') => `<a href="${href}" lang="${lang}" dir="${dir}">${esc(text)}</a>`;
-
-/** Two plain rows of links: every language page, then the Dutch pages. Also on /intro, /nieuw and the 404 page. */
-export function linkRows(): string {
-  return `<nav aria-label="Talen">${LANG_PAGES.map((p) => a(p.path, p.nativeName, p.tag, p.dir)).join(' · ')}</nav>
-<nav aria-label="Sectoren">${[...SECTOR_PAGES.map((p) => a(p.path, p.name)), a(RULES_PATH, 'Werkregels'), a(COACH_PATH, 'Voor begeleiders'), a('/intro/', 'Waarom Vloertaal?'), a('/nieuw/', 'Wat is er nieuw?')].join(' · ')}</nav>`;
-}
 
 /**
  * Below the start page's splash, in the HTML itself (vite.config.ts): a heading and a few lines on
