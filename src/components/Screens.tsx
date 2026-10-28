@@ -694,7 +694,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   const title = kind === 'lesson' ? ui('lessonComplete', lang) : ui('reviewComplete', lang);
   return (
     <div className="player result-screen">
-      <main className="player-body result">
+      <div className="player-body result">
         <div className="result-hero">
           {/* Bram (the one with the thumb up) says one calm line. */}
           <BramSays text={ui(resultLineFor(kind, right, total), lang)} tail="down" />
@@ -789,7 +789,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             <ChevronIcon size={24} />
           </button>
         )}
-      </main>
+      </div>
       <footer className="player-foot">
         <div className="foot-inner">
           <div className="foot-actions">

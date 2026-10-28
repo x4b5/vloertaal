@@ -223,7 +223,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
   if (step === 'keep') return <KeepScreen lang={lang} onDone={onDone} />;
   return (
     <div className="player milestone-screen">
-      <main className="player-body milestone">
+      <div className="player-body milestone">
         <StreakHero lit={lit} />
         <div className={`streak-count ${lit ? 'streak-lit' : ''}`} role="img" aria-label={`${streak} ${said(label)}${tier ? ` · ${said(ui(tier.key, lang))}` : ''}`}>
           <span className="streak-flame-wrap">
@@ -268,7 +268,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
           </div>
         )}
         <MilestoneFact streak={streak} lang={lang} />
-      </main>
+      </div>
       <ContinueButton lang={lang} onClick={next} />
     </div>
   );
@@ -326,7 +326,7 @@ export function StreakStopped({ streak, best, lang, onDone }: {
   useEnter(onDone);
   return (
     <div className="player milestone-screen streak-stopped">
-      <main className="player-body milestone">
+      <div className="player-body milestone">
         <div className="stopped-hero" aria-hidden>
           <Character who="bram" mood="pleased" size={170} />
           <span className="stopped-flame"><FlameIcon lit={false} size={64} /></span>
@@ -346,7 +346,7 @@ export function StreakStopped({ streak, best, lang, onDone }: {
             <Bi className="fact-gloss" text={fillCount('recordN', best, lang)} />
           </p>
         </div>
-      </main>
+      </div>
       <ContinueButton lang={lang} onClick={onDone} />
     </div>
   );

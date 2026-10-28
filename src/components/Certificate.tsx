@@ -270,7 +270,7 @@ export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector 
   const data = certData(unit, day, name, lang, sector);
   return (
     <div className="player milestone-screen cert-earned">
-      <main className="player-body milestone">
+      <div className="player-body milestone">
         <div className="cert-earned-hero">
           <span className="cert-earned-bram" aria-hidden><Character who="bram" mood="cheer" size={150} /></span>
           <CertificateSheet data={data} className="cert-preview" />
@@ -283,7 +283,7 @@ export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector 
           <Bi className="cert-earned-hint" text={ui('certEarnedHint', lang)} />
         </p>
         {onPocket && <PocketLink lang={lang} onOpen={onPocket} />}
-      </main>
+      </div>
       <footer className="player-foot milestone-foot">
         <div className="foot-inner">
           <div className="foot-actions cert-earned-actions">

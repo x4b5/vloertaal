@@ -451,7 +451,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     setAskQuit((open) => !open);
   }, [backSignal]);
   const footRef = useRef<HTMLElement>(null);
-  const bodyRef = useRef<HTMLElement>(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
   /**
    * The footer is pinned to the bottom, unless it would take more than three quarters of the
    * screen (200% zoom): then it scrolls with the page. A long feedback label scrolls inside
@@ -932,7 +932,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
 
       {/* A wrong answer in the first round comes back at the end; in the retry round it does not (the stamp says which). */}
       <ComesBack.Provider value={index < initial.length}>
-      <main className="player-body" ref={bodyRef}>
+      <div className="player-body" ref={bodyRef}>
         <div className="ex-ghost" ref={ghostRef} aria-hidden />
         <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
         <div className="ex-tag">
@@ -956,7 +956,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
           </button>
         )}
         </div>
-      </main>
+      </div>
       </ComesBack.Provider>
       {/* With nothing in it yet (an answer is a tap on an option), the footer takes no room, so it
           never covers the last option; a still chevron (not a button) then says there is more. */}

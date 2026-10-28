@@ -570,7 +570,7 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
   }
   return (
     <div className="player milestone-screen keep-screen keep3">
-      <main className={`player-body milestone keep3-page keep3-step-${step}`}>{body}</main>
+      <div className={`player-body milestone keep3-page keep3-step-${step}`}>{body}</div>
     </div>
   );
 }

@@ -3211,7 +3211,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 
 /* The pocket card ("Spiekkaartje"): label paper on a kraft board, five phrases. */
 .pocket-screen .screen-head h1 { display: flex; flex-direction: column; line-height: 1.15; }
-.pocket-screen-nl { font-size: 0.8rem; font-weight: 600; color: var(--faint); letter-spacing: 0.02em; }
+.pocket-screen-nl { font-size: 0.8rem; font-weight: 600; color: var(--ink-2); letter-spacing: 0.02em; }
 .pocket-screen .screen-head h1 .bi { font-size: 1em; }
 .pocket-screen > .screen-head[dir='rtl'] > .icon-btn .icon { scale: -1 1; }
 .pocket-card {
