@@ -775,6 +775,14 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
           placeholder="…"
           aria-label={srText(ui('yourAnswer', lang))}
           onChange={(e) => typed(e.target.value)}
+          // Enter (or the phone keyboard's Done) checks the word, as the Check button does.
+          enterKeyHint="done"
+          onKeyDown={(e) => {
+            if (e.key !== 'Enter' || locked || !value.trim()) return;
+            e.preventDefault();
+            const r = checkTyped(value, ex.word.nl);
+            onAnswer({ correct: r !== 'wrong', almost: r === 'almost', done: true });
+          }}
         />
       ) : (
         <>
