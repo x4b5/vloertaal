@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { askedHelpLang } from '../src/lib/langGuess';
 import { describe as describeLine, hreflangLinks, LANG_PAGES, langPage } from '../src/lib/langPages';
+import { RULES_PATH, rulesPage, SECTOR_PAGES, sectorPage } from '../src/lib/sectorPages';
 import { sitemap } from '../src/lib/sitemap';
 
 // What search engines read before any script runs (docs/seo-plan.md, step 2).
@@ -104,5 +105,48 @@ describe('a page per help language (docs/seo-plan.md, step 3)', () => {
     expect(askedHelpLang('?taal=xx')).toBeNull();
     expect(askedHelpLang('?taal=en')).toBeNull();
     expect(askedHelpLang('')).toBeNull();
+  });
+});
+
+describe('a page per sector and for Werkregels (docs/seo-plan.md, step 4)', () => {
+  const pages = [...SECTOR_PAGES.map((p) => ({ path: p.path, html: sectorPage(p.id) })), { path: RULES_PATH, html: rulesPage() }];
+
+  for (const { path, html } of pages) {
+    describe(path, () => {
+      const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? '';
+      const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '';
+
+      it('is Dutch, with its own address, a short title and a search-length description', () => {
+        expect(html).toContain('<html lang="nl" dir="ltr">');
+        expect(html).toContain(`<link rel="canonical" href="https://vloertaal.nl${path}" />`);
+        expect(title).toContain('Vloertaal');
+        expect(title.length).toBeLessThanOrEqual(60);
+        expect(desc.length).toBeGreaterThanOrEqual(70);
+        expect(desc.length).toBeLessThanOrEqual(160);
+      });
+
+      it('has one h1, a way into the app, and links to the other pages', () => {
+        expect(html.match(/<h1>/g)).toHaveLength(1);
+        expect(html).toContain('class="cta" href="/"');
+        for (const other of SECTOR_PAGES) expect(html).toContain(`href="${other.path}"`);
+        expect(html).toContain('href="/pl/"');
+      });
+
+      it('has structured data with breadcrumbs', () => {
+        const json = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
+        const data = JSON.parse(json!);
+        expect(data[1]['@type']).toBe('BreadcrumbList');
+        expect(data[1].itemListElement.at(-1).item).toBe(`https://vloertaal.nl${path}`);
+      });
+    });
+  }
+
+  it('shows each word of a sector once', () => {
+    const words = [...sectorPage('construction').matchAll(/<ul class="words">(.*?)<\/ul>/g)][0][1].split('<li>');
+    expect(new Set(words).size).toBe(words.length);
+  });
+
+  it('are in the sitemap', () => {
+    for (const { path } of pages) expect(sitemap()).toContain(`<loc>https://vloertaal.nl${path}</loc>`);
   });
 });

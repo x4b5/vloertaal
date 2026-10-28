@@ -8,6 +8,7 @@ import { updatesPage } from './src/lib/updatesPage';
 import { INTRO_QUESTIONS } from './src/content/intro';
 import { introPage } from './src/lib/introPage';
 import { hreflangLinks, LANG_PAGES, langPage } from './src/lib/langPages';
+import { rulesPage, SECTOR_PAGES, sectorPage } from './src/lib/sectorPages';
 import { sitemap } from './src/lib/sitemap';
 
 /**
@@ -88,8 +89,9 @@ function introPagePlugin(): Plugin {
 }
 
 /**
- * vloertaal.nl/pl, /ar, /uk … /en: what Vloertaal is, in each help language (src/lib/langPages.ts),
- * and the sitemap that lists them (src/lib/sitemap.ts).
+ * vloertaal.nl/pl, /ar, /uk … /en: what Vloertaal is, in each help language (src/lib/langPages.ts);
+ * /bouw, /logistiek … and /werkregels in Dutch (src/lib/sectorPages.ts); and the sitemap that lists
+ * them all (src/lib/sitemap.ts).
  */
 function langPagesPlugin(): Plugin {
   return {
@@ -97,6 +99,8 @@ function langPagesPlugin(): Plugin {
     apply: 'build',
     generateBundle() {
       for (const p of LANG_PAGES) this.emitFile({ type: 'asset', fileName: `${p.code}/index.html`, source: langPage(p.code) });
+      for (const p of SECTOR_PAGES) this.emitFile({ type: 'asset', fileName: `${p.path.slice(1)}index.html`, source: sectorPage(p.id) });
+      this.emitFile({ type: 'asset', fileName: 'werkregels/index.html', source: rulesPage() });
       this.emitFile({ type: 'asset', fileName: 'sitemap.xml', source: sitemap() });
     },
     // The start page names its other languages too (hreflang), from the same list.
