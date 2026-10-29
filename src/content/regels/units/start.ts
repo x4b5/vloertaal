@@ -49,16 +49,16 @@ export const startUnit: RuleUnit = {
           id: 'r.l.start.1.wd1',
           situation: 'Wat neemt Dewi mee op haar eerste dag?',
           options: [
-            { id: 'a', text: 'Haar ID-kaart en haar bankrekeningnummer.', best: true, feedback: 'Goed. Die heeft je werkgever nodig.' },
-            { id: 'b', text: 'Haar paspoort, om bij de baas achter te laten.', best: false, feedback: 'Niet doen. Je paspoort houd je altijd zelf.' },
-            { id: 'c', text: 'Alleen haar telefoon. De rest staat online.', best: false, feedback: 'Je werkgever moet je ID echt zien.' },
+            { id: 'a', text: 'Haar ID-kaart en haar bankrekeningnummer.', best: true, feedback: 'Goed. Die heeft haar werkgever nodig.' },
+            { id: 'b', text: 'Haar paspoort, om bij de baas achter te laten.', best: false, feedback: 'Niet doen. Haar paspoort houdt ze altijd zelf.' },
+            { id: 'c', text: 'Alleen haar telefoon. De rest staat online.', best: false, feedback: 'Haar werkgever moet haar ID echt zien.' },
           ],
           why: 'Je werkgever moet je ID-kaart of paspoort zien en een kopie maken. Hij heeft ook je BSN nodig. Je BSN is je burgerservicenummer. Het staat op je ID-kaart. Je ID geef je nooit af.',
         },
         {
           kind: 'whatdo',
           id: 'r.l.start.1.wd2',
-          situation: 'De bus heeft vertraging. Dewi is 15 minuten te laat.',
+          situation: 'De bus heeft vertraging. Dewi is 15 minuten te laat. Wat kan Dewi het beste doen?',
           options: [
             { id: 'a', text: 'Ze legt het uit als ze binnen is.', best: false, feedback: 'Dan weet het team te laat dat ze later komt.' },
             { id: 'b', text: 'Ze rent extra hard en zegt er niets over.', best: false, feedback: 'Haasten is niet nodig. Even laten weten wel.' },
@@ -186,11 +186,11 @@ export const startUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.start.3.wd2',
-          situation: 'Mark legt het opnieuw uit. Hoe check je dat je het snapt?',
+          situation: 'Mark legt het opnieuw uit. Hoe checkt Piotr dat hij het snapt?',
           options: [
-            { id: 'a', text: 'Je zegt in je eigen woorden wat je gaat doen.', best: true, feedback: 'Goed. Zo hoort Mark of je het goed begrijpt.' },
-            { id: 'b', text: 'Je zegt "ja, ja" en begint snel.', best: false, feedback: 'Dan weet niemand of je het echt snapt.' },
-            { id: 'c', text: 'Je vraagt of hij het de eerste keer voor je doet.', best: false, feedback: 'Kijken helpt. Maar zelf terugzeggen is beter.' },
+            { id: 'a', text: 'Hij zegt in zijn eigen woorden wat hij gaat doen.', best: true, feedback: 'Goed. Zo hoort Mark of hij het goed begrijpt.' },
+            { id: 'b', text: 'Hij zegt "ja, ja" en begint snel.', best: false, feedback: 'Dan weet niemand of hij het echt snapt.' },
+            { id: 'c', text: 'Hij vraagt of Mark het de eerste keer voor hem doet.', best: false, feedback: 'Kijken helpt. Maar zelf terugzeggen is beter.' },
           ],
           why: 'Terugzeggen is slim. "Dus eerst dit, en dan dat?" Zo merk je meteen of je iets mist.',
         },
