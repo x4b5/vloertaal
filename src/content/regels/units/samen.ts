@@ -17,7 +17,7 @@ export const samenUnit: RuleUnit = {
       id: 'r.l.samen.1',
       title: 'Direct zeggen en feedback',
       goal: 'Je begrijpt directe feedback, en je meldt een fout meteen.',
-      remember: 'Direct is niet onbeleefd. Het gaat over het werk, niet over jou.',
+      remember: 'Direct zeggen is hier normaal. Het gaat over het werk, niet over jou.',
       steps: [
         {
           kind: 'scene',
@@ -35,7 +35,7 @@ export const samenUnit: RuleUnit = {
           kind: 'rule',
           id: 'r.l.samen.1.ru1',
           emoji: '🗣️',
-          title: 'Direct is niet onbeleefd. Het gaat over het werk, niet over jou.',
+          title: 'Direct zeggen is hier normaal. Het gaat over het werk, niet over jou.',
           body: [
             'Nederlanders zeggen het vaak heel direct.',
             'Ze bedoelen het meestal niet onaardig.',
@@ -47,31 +47,31 @@ export const samenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.samen.1.wd1',
-          situation: 'Sanne zei het heel direct.',
+          situation: 'Sanne zei het heel direct. Wat kan Jayden het beste doen?',
           options: [
-            { id: 'a', text: 'Je zegt: "Oké, zo dan?" En je doet het opnieuw.', best: true, feedback: 'Goed. Je laat zien dat je wilt leren.' },
-            { id: 'b', text: 'Je zegt niets meer tegen haar, de rest van de dag.', best: false, feedback: 'Begrijpelijk. Maar ze bedoelde het niet persoonlijk.' },
-            { id: 'c', text: 'Je zegt: "Zo deed ik het bij mijn vorige werk."', best: false, feedback: 'Mag je zeggen. Maar hier wil ze het anders.' },
+            { id: 'a', text: 'Hij zegt: "Oké, zo dan?" En hij doet het opnieuw.', best: true, feedback: 'Goed. Hij laat zien dat hij wil leren.' },
+            { id: 'b', text: 'Hij zegt niets meer tegen haar, de rest van de dag.', best: false, feedback: 'Begrijpelijk. Maar ze bedoelde het niet persoonlijk.' },
+            { id: 'c', text: 'Hij zegt: "Zo deed ik het bij mijn vorige werk."', best: false, feedback: 'Dat mag hij zeggen. Maar hier wil ze het anders.' },
           ],
           why: 'Nederlanders zeggen het vaak heel direct. Ze bedoelen het meestal niet onaardig. Het gaat over het werk, niet over jou. Jij mag ook direct zijn, als je vriendelijk blijft.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.samen.1.tf1',
-          statement: 'Een functioneringsgesprek betekent dat je bijna ontslagen wordt.',
+          statement: 'Een functioneringsgesprek betekent dat je baas je bijna ontslaat.',
           answer: false,
           why: 'Een functioneringsgesprek is een gewoon gesprek over je werk. Wat gaat goed? Wat kan beter? Jij mag ook zeggen wat je nodig hebt. Bereid het voor met een paar vragen.',
         },
         {
           kind: 'whatdo',
           id: 'r.l.samen.1.wd2',
-          situation: 'Jayden laat een bak saus vallen. Niemand zag het.',
+          situation: 'Jayden laat een bak saus vallen. Niemand zag het. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij ruimt het snel op, en hij zegt er niets over.', best: false, feedback: 'Opruimen is goed. Maar de saus is nu op.' },
             { id: 'b', text: 'Hij zegt het meteen tegen Sanne.', best: true, feedback: 'Goed. Dan kan zij op tijd nieuwe saus regelen.' },
             { id: 'c', text: 'Hij zegt dat de bak al scheef stond.', best: false, feedback: 'Dan klopt het verhaal niet. Dat kost vertrouwen.' },
           ],
-          why: 'Iedereen maakt fouten. Zeg het snel, dan kan het worden opgelost. Een fout verbergen vinden mensen hier veel erger dan de fout zelf.',
+          why: 'Iedereen maakt fouten. Zeg het snel, dan kan iemand het oplossen. Een fout verbergen vinden mensen hier veel erger dan de fout zelf.',
         },
         { kind: 'model', id: 'r.l.samen.1.mo1', context: 'Je krijgt directe feedback.', nl: 'Oké, zo dan? Fijn dat je het laat zien.' },
       ],
@@ -89,7 +89,7 @@ export const samenUnit: RuleUnit = {
           picture: 'een werkoverleg in een kantine. Fatima steekt haar hand op.',
           lines: [
             'Fatima werkt in een schoonmaakteam.',
-            'In het werkoverleg zegt de leidinggevende: "Vanaf nu begint iedereen een half uur eerder."',
+            'Er is werkoverleg. De leidinggevende zegt: "Vanaf nu begint iedereen een half uur eerder."',
             'Fatima brengt eerst haar kinderen naar school.',
             'Ze is het er niet mee eens.',
           ],
@@ -110,9 +110,9 @@ export const samenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.samen.2.wd1',
-          situation: 'Fatima kan niet eerder beginnen.',
+          situation: 'Fatima kan niet eerder beginnen. Wat kan Fatima het beste doen?',
           options: [
-            { id: 'a', text: 'Ze zegt niets, en ze komt voortaan een half uur te laat.', best: false, feedback: 'Dan breekt ze de nieuwe afspraak. Dat geeft problemen.' },
+            { id: 'a', text: 'Ze zegt niets, en ze komt vanaf nu een half uur te laat.', best: false, feedback: 'Dan breekt ze de nieuwe afspraak. Dat geeft problemen.' },
             { id: 'b', text: "Ze klaagt na het overleg bij haar collega's.", best: false, feedback: 'Dan weet de leidinggevende het niet.' },
             { id: 'c', text: 'Ze legt in het overleg rustig uit waarom het niet lukt.', best: true, feedback: 'Goed. Dan kan er samen een oplossing komen.' },
           ],
@@ -128,7 +128,7 @@ export const samenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.samen.2.wd2',
-          situation: 'Een collega laat het zware werk steeds aan Fatima over.',
+          situation: 'Een collega laat het zware werk steeds aan Fatima over. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze zegt het rustig tegen die collega zelf.', best: true, feedback: 'Goed. Zo krijgt hij de kans om het te veranderen.' },
             { id: 'b', text: 'Ze zegt niets, maar ze wordt steeds bozer.', best: false, feedback: 'Begrijpelijk. Maar zo verandert er niets.' },
@@ -173,11 +173,11 @@ export const samenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.samen.3.wd1',
-          situation: 'Mohammed kan vrijdag niet helpen.',
+          situation: 'Mohammed kan vrijdag niet helpen. Wat kan Mohammed het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt het donderdag al tegen Esra.', best: true, feedback: 'Goed. Dan kan zij nog iets anders regelen.' },
             { id: 'b', text: 'Hij zegt het vrijdag, als hij haar ziet.', best: false, feedback: 'Dan is het voor Esra te laat om iets te regelen.' },
-            { id: 'c', text: 'Hij zegt niets. De baas gaf hem toch die klus.', best: false, feedback: 'Esra rekent op hem. Ze verdient een bericht.' },
+            { id: 'c', text: 'Hij zegt niets. De baas gaf hem toch die klus.', best: false, feedback: 'Esra rekent op hem. Hij moet het haar laten weten.' },
           ],
           why: 'Als je ja zegt, rekenen mensen erop. Afspraak is afspraak. Lukt het niet? Zeg het zo vroeg mogelijk. Bied een andere tijd aan.',
         },
@@ -197,7 +197,7 @@ export const samenUnit: RuleUnit = {
             { id: 'b', text: 'Je zegt eerlijk: "3 uur lukt niet. 4 uur wel."', best: true, feedback: 'Goed. Nu kan Sanne plannen.' },
             { id: 'c', text: 'Je zegt niets, en je werkt extra snel door.', best: false, feedback: 'Dan weet Sanne niet wat ze kan verwachten.' },
           ],
-          why: 'Een eerlijk "nee" of "later" wordt hier gewaardeerd. Ja zeggen en het niet halen, kost meer vertrouwen. Zo kan Sanne op tijd iets anders regelen.',
+          why: 'Mensen hier vinden een eerlijk "nee" of "later" prettig. Ja zeggen en het niet halen, kost meer vertrouwen. Zo kan Sanne op tijd iets anders regelen.',
         },
         { kind: 'model', id: 'r.l.samen.3.mo1', context: 'Je kunt een afspraak niet nakomen.', nl: 'Het lukt vrijdag toch niet. Kan het maandag?' },
       ],
