@@ -54,7 +54,7 @@ export const ziekUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Hij belt zelf de chef, ruim vóór 10 uur.', best: true, feedback: 'Goed. Zo weet de chef het op tijd.' },
             { id: 'b', text: 'Hij appt een collega: "Zeg jij het even tegen de chef?"', best: false, feedback: 'Begrijpelijk. Maar je meldt je meestal zelf ziek.' },
-            { id: 'c', text: 'Hij stuurt om 10 uur een appje: "Ziek."', best: false, feedback: 'Dat is laat, en vaak is een appje niet genoeg.' },
+            { id: 'c', text: 'Hij stuurt om 10 uur een bericht: "Ziek."', best: false, feedback: 'Dat is laat, en vaak is een bericht niet genoeg.' },
           ],
           why: 'Bel zelf, en bel vóór je dienst begint. Dat is in de meeste bedrijven de regel. Kijk in je contract of het verzuimprotocol. Dat zijn de regels voor ziekmelden bij jouw bedrijf.',
         },
@@ -68,10 +68,10 @@ export const ziekUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.ziek.1.wd2',
-          situation: 'Kevin werkt via een uitzendbureau. Hij is ziek.',
+          situation: 'Kevin werkt via een uitzendbureau. Hij is ziek. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: "Hij meldt het alleen aan de collega's op zijn werk.", best: false, feedback: 'Dan weet het bureau het niet. Dat geeft problemen.' },
-            { id: 'b', text: 'Hij meldt zich niet ziek. Hij heeft toch geen vast werk.', best: false, feedback: 'Toch wel melden. Dan houd je je rechten.' },
+            { id: 'b', text: 'Hij meldt zich niet ziek. Hij heeft toch geen vast werk.', best: false, feedback: 'Toch wel melden. Dan houdt hij zijn rechten.' },
             { id: 'c', text: 'Hij meldt het bij het bureau, en bij het bedrijf.', best: true, feedback: 'Goed. Dan weten ze het allebei.' },
           ],
           why: 'Werk je via een uitzendbureau? Meld je ziek bij het bureau. En vaak ook bij het bedrijf waar je werkt. Vraag aan het begin hoe het moet.',
@@ -147,7 +147,7 @@ export const ziekUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.ziek.2.wd1',
-          situation: 'De leidinggevende vraagt: "Wat is er precies met je been?"',
+          situation: 'De leidinggevende vraagt: "Wat is er precies met je been?" Wat kan Esra het beste doen?',
           options: [
             { id: 'a', text: 'Ze vertelt alles, ook wat de dokter precies zei.', best: false, feedback: 'Dat mag, als ze wil. Maar het hoeft niet.' },
             { id: 'b', text: 'Ze zegt niets, en ze hangt snel weer op.', best: false, feedback: 'Contact met je werk is wel normaal en goed.' },
@@ -182,7 +182,7 @@ export const ziekUnit: RuleUnit = {
       // Les 6.3 · Langer ziek en weer beter
       id: 'r.l.ziek.3',
       title: 'Langer ziek en weer beter',
-      goal: 'Je weet wat de bedrijfsarts doet en dat je meewerkt aan herstel. Je meldt je ook beter.',
+      goal: 'Je weet wat de bedrijfsarts doet. Je werkt mee aan je herstel. Je meldt je ook beter.',
       remember: 'De bedrijfsarts vertelt je baas niet wat je hebt.',
       // Wie kan je helpen: de bedrijfsarts · je huisarts · UWV (deskundigenoordeel) · een vakbond.
       help: ['bedrijfsarts', 'huisarts', 'uwv', 'vakbond'],
@@ -226,18 +226,18 @@ export const ziekUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.ziek.3.wd1',
-          situation: 'De bedrijfsarts zegt: "Begin met 2 uur per dag licht werk."',
+          situation: 'De bedrijfsarts zegt: "Begin met 2 uur per dag licht werk." Wat kan Mohammed het beste doen?',
           options: [
-            { id: 'a', text: 'Je doet mee, en je zegt wat wel en niet lukt.', best: true, feedback: 'Goed. Zo bouw je het samen rustig op.' },
-            { id: 'b', text: 'Je zegt nee. Je bent nog niet helemaal beter.', best: false, feedback: 'Begrijpelijk. Maar meewerken aan herstel hoort erbij.' },
-            { id: 'c', text: 'Je werkt meteen weer hele dagen, om te laten zien dat je wilt.', best: false, feedback: 'Te snel. Dan kun je opnieuw uitvallen.' },
+            { id: 'a', text: 'Hij doet mee, en hij zegt wat wel en niet lukt.', best: true, feedback: 'Goed. Zo bouwt hij het samen rustig op.' },
+            { id: 'b', text: 'Hij zegt nee. Hij is nog niet helemaal beter.', best: false, feedback: 'Begrijpelijk. Maar meewerken aan herstel hoort erbij.' },
+            { id: 'c', text: 'Hij werkt meteen weer hele dagen, om te laten zien dat hij wil.', best: false, feedback: 'Te snel. Dan kan hij weer ziek worden.' },
           ],
           why: 'Ben je lang ziek? Dan moet je meewerken aan je herstel. Jij, je baas en de bedrijfsarts maken samen een plan. Werk je niet mee? Dan kan je loon stoppen. Ben je het oneens? Vraag dan een deskundigenoordeel bij UWV.',
         },
         {
           kind: 'whatdo',
           id: 'r.l.ziek.3.wd2',
-          situation: 'Mohammed is weer beter.',
+          situation: 'Mohammed is weer beter. Wat kan Mohammed het beste doen?',
           options: [
             { id: 'a', text: 'Hij komt morgen gewoon weer, zonder iets te zeggen.', best: false, feedback: 'Dan klopt het rooster misschien niet.' },
             { id: 'b', text: 'Hij wacht tot zijn baas hem zelf belt.', best: false, feedback: 'Dat kan lang duren. Zelf melden is sneller.' },
