@@ -70,11 +70,11 @@ export const afrondenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.afronden.1.wd1',
-          situation: 'Mohammed weet niet wat "type B" is.',
+          situation: 'Mohammed weet niet wat "type B" is. Wat kan Mohammed het beste doen?',
           options: [
-            { id: 'a', text: 'Hij neemt de kraan die er het meest op lijkt.', best: false, feedback: 'Dan klopt het misschien niet. Dan moet je terug.' },
+            { id: 'a', text: 'Hij neemt de kraan die er het meest op lijkt.', best: false, feedback: 'Dan klopt het misschien niet. Dan moet hij terug.' },
             { id: 'b', text: 'Hij vraagt het aan Henk, vóór hij vertrekt.', best: true, feedback: 'Goed. Dan weet hij het zeker.' },
-            { id: 'c', text: 'Hij gaat eerst naar de klant, en kijkt daar.', best: false, feedback: 'Dan ga je misschien twee keer heen en weer.' },
+            { id: 'c', text: 'Hij gaat eerst naar de klant, en kijkt daar.', best: false, feedback: 'Dan gaat hij misschien twee keer heen en weer.' },
           ],
           why: 'Vraag het vóór je begint. Een vraag aan het begin is normaal. Een fout achteraf kost veel meer tijd. Voor jou, en voor de klant.',
         },
@@ -93,7 +93,7 @@ export const afrondenUnit: RuleUnit = {
       id: 'r.l.afronden.2',
       title: 'Opruimen, laten controleren en afmelden',
       goal: 'Je ruimt je werkplek op en je laat je werk nakijken. Je zegt wat klaar is en wat niet.',
-      remember: 'Klaar? Ruim op, laat het nakijken, en zeg wat klaar is en wat niet.',
+      remember: 'Klaar? Ruim op en laat het nakijken. Zeg wat klaar is en wat niet.',
       steps: [
         {
           kind: 'scene',
@@ -110,7 +110,7 @@ export const afrondenUnit: RuleUnit = {
           kind: 'rule',
           id: 'r.l.afronden.2.ru1',
           emoji: '🧹',
-          title: 'Klaar? Ruim op, laat het nakijken, en zeg wat klaar is en wat niet.',
+          title: 'Klaar? Ruim op en laat het nakijken. Zeg wat klaar is en wat niet.',
           body: [
             'Ruim je werkplek op vóór je weggaat.',
             'Controleren hoort bij goed werk.',
@@ -133,11 +133,11 @@ export const afrondenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.afronden.2.wd2',
-          situation: 'Sanne is klaar. Haar kar staat nog in de gang.',
+          situation: 'Sanne is klaar. Haar kar staat nog in de gang. Wat kan Sanne het beste doen?',
           options: [
             { id: 'a', text: 'Ze laat de kar staan. Morgen komt ze toch weer.', best: false, feedback: 'Dan staat hij in de weg. Iemand kan erover vallen.' },
             { id: 'b', text: 'Ze ruimt de kar op en zet de middelen weg.', best: true, feedback: 'Goed. Zo kan de volgende meteen beginnen.' },
-            { id: 'c', text: 'Ze vraagt een collega om de kar op te ruimen.', best: false, feedback: 'Dat is jouw werk. Je collega heeft eigen werk.' },
+            { id: 'c', text: 'Ze vraagt een collega om de kar op te ruimen.', best: false, feedback: 'Dat is haar werk. Haar collega heeft eigen werk.' },
           ],
           why: 'Ruim je werkplek op vóór je weggaat. Zet middelen en gereedschap terug op hun plek. Dan kan de volgende meteen beginnen. En niemand struikelt.',
         },
