@@ -44,16 +44,24 @@ meetlat zegt wanneer een zin goed genoeg is, en wanneer hij korter of eenvoudige
 
 ## Waar het geldt
 
-Voorlopig alleen **Werkregels**: `src/content/regels/units/*.ts`. Dat spoor is alleen Nederlands
-en heeft geen opgenomen stemmen, dus een zin aanpassen raakt niets anders.
+In de hele app, overal waar de leerling Nederlands leest of hoort. In deze volgorde:
 
-**Niet** het taalspoor (`src/content/curriculum.ts`, `src/content/work.ts`, `src/i18n/`): daar hangt
-aan elke zin een vertaling in tien hulptalen en vaak een opname. Een zin daar aanpassen is een
-eigen besluit.
+1. **Werkregels**: `src/content/regels/units/*.ts`. Alleen Nederlands, alle teksten.
+2. **Regio**: `src/content/regio/*.ts`. De Nederlandse teksten.
+3. **Taalspoor**: `src/content/curriculum.ts`, `src/content/work.ts`, `src/content/culture.ts`.
+   Hier gelden drie extra regels:
+   - **De woorden die je leert, blijven staan** (ids die beginnen met `w.`). Die woorden zijn de
+     lesstof zelf. Ook uitdrukkingen (`src/content/sayings.ts`) blijven staan.
+   - **Alleen het Nederlands verandert.** Het Engels (`en`) en de vertalingen in `src/i18n/` blijven
+     zoals ze zijn. Past de Engelse betekenis niet meer bij de nieuwe Nederlandse zin? Dan is het
+     een twijfelgeval: niet veranderen.
+   - **Een lijst van veranderde ids** in de pull request. Die zinnen worden later opnieuw opgenomen,
+     in één keer met de nieuwe stemmen. Tot dan spreekt de telefoonstem ze uit.
+4. **De Nederlandse schermteksten**: `src/i18n/nl.ts`.
 
 ## Werkwijze per ronde
 
-1. Eén bestand in `src/content/regels/units/` per ronde, één pull request per bestand.
+1. Eén bestand per ronde, één pull request per bestand. Een groot bestand (meer dan ±500 regels) mag in delen.
 2. Loop elke tekst langs de regels hierboven: `title`, `goal`, `remember`, scène, `situation`,
    `quote`, `options`, `feedback`, `body`, `why`.
 3. Verander alleen wat een regel overtreedt. Een zin die al goed is, blijft staan.
