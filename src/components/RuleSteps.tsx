@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import type { HelpLanguage } from '../i18n/types';
 import type { CardRow, CardType, DrawnCard, RuleCharacter } from '../content/regels/types';
-import { cardSpeech } from '../content/regels/course';
+import { cardSpeech, payslipCard } from '../content/regels/course';
 import { ASK_WHO } from '../content/regels/askWho';
 import { ruleAdviceLine } from '../content/regels/disclaimer';
 import { autoSpeakLong } from '../lib/audio';
@@ -78,8 +78,13 @@ export function SceneCard({ ex, lang, onAnswer }: RuleProps<'scene'>) {
   const who = step.who ?? 'bram';
   const story = step.lines.join(' ');
   const voice = voiceFor(who);
+  // Read once per story: the voice can change while it is read (the recorded voices arrive),
+  // and the story must not start over in another voice.
+  const said = useRef('');
   useEffect(() => {
     onAnswer({ correct: true });
+    if (said.current === story) return;
+    said.current = story;
     autoSpeakLong(story, { voice });
   }, [story, voice, onAnswer]);
   // The phone reads it sentence by sentence; the narrator talks along with each.
@@ -252,8 +257,12 @@ export function ModelLine({ ex, lang, onAnswer }: RuleProps<'model'>) {
   // of the exact sentence is used when there is one (most "Zo zeg je het" lines of the course
   // tips have one); otherwise the phone's voice.
   const voice = learnerVoice(lang?.gender);
+  // Once per line (the voice may change while it is said: see SceneCard).
+  const said = useRef('');
   useEffect(() => {
     onAnswer({ correct: true });
+    if (said.current === step.nl) return;
+    said.current = step.nl;
     autoSpeakLong(step.nl, { voice });
   }, [step, voice, onAnswer]);
   return (
@@ -290,7 +299,7 @@ export function DrawnCardView({ card, locked, lang, say, rowClass }: {
   rowClass?: (r: CardRow, i: number) => string;
 }) {
   const pic = CARD_PIC[card.type];
-  const label = card.sub ? `${card.title} ${card.sub}` : card.title;
+  const label = card.sub ? `${card.title}, ${card.sub}` : card.title;
   return (
     <figure className={`slip card card-${card.type}${say ? ' card-says' : ''}`} aria-label={label} lang="nl">
       <div className="slip-head">
@@ -304,7 +313,8 @@ export function DrawnCardView({ card, locked, lang, say, rowClass }: {
           const hit = locked && (r.hit || r.answer !== undefined);
           return (
             <div key={i} className={['slip-row', rowClass?.(r, i), r.answer !== undefined && 'card-todo', hit && 'slip-hit'].filter(Boolean).join(' ')}>
-              <dt>{r.label}</dt>
+              {/* After the answer: the row the question was about, also for a screen reader. */}
+              <dt>{r.label}{hit && r.answer === undefined && <span className="sr-only"> (hier gaat het om)</span>}</dt>
               {r.answer !== undefined
                 ? <dd>{locked ? r.answer : <><span className="card-q" aria-hidden>?</span><span className="sr-only">nog uitrekenen</span></>}</dd>
                 : r.value && <dd>{r.value}</dd>}
@@ -321,16 +331,11 @@ export function DrawnCardView({ card, locked, lang, say, rowClass }: {
 export function PayslipStep({ ex, lang, locked, onAnswer }: RuleProps<'payslip'>) {
   const { step } = ex;
   const best = step.options.find((o) => o.best)!;
-  const card: DrawnCard = {
-    type: 'loonstrook',
-    title: 'Loonstrook',
-    sub: step.slip.periode,
-    rows: step.slip.rows.map((r) => ({ label: r.label, value: r.value, ...(r.field === step.highlight ? { hit: true as const } : {}) })),
-  };
+  const card = payslipCard(step);
   return (
     <div className="exercise rule-payslip">
       <Question text={step.question} lang={lang} />
-      <DrawnCardView card={card} locked={locked} lang={lang} rowClass={(_r, i) => `slip-${step.slip.rows[i].field}`} />
+      <DrawnCardView card={card} locked={locked} lang={lang} say rowClass={(_r, i) => `slip-${step.slip.rows[i].field}`} />
       <ChoiceGrid
         className="choices-rows rule-options"
         options={step.options}

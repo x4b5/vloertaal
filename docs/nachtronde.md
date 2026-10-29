@@ -103,6 +103,8 @@ Na het mergen van #90 en #91 nog twee uur, met dezelfde werkwijze.
 | De kaart "Herhaal vandaag" zei 2 woorden, de herhaling vroeg er 4 (aangevuld) | iedereen met weinig herhaalwoorden | hetzelfde getal |
 | Luisteroefeningen die in de herhaling werden overgeslagen (geluid uit), telden op de uitslag toch als herhaald | zonder geluid | alleen wat gevraagd is, telt |
 | "Minder beweging" (telefooninstelling): het scrollen naar een taal in Instellingen bewoog toch; de schaduw onder de kop in een les (die niet beweegt) viel weg | wie last heeft van beweging | geen beweging, schaduw blijft |
+| Werkregels: een verhaal kon opnieuw beginnen in een andere stem (als de opgenomen stemmen binnenkwamen) | trage verbinding | één keer voorgelezen |
+| Werkregels: de oplichtende rij op een kaart of loonstrook was alleen te zien, niet te horen; de loonstrook had geen luidspreker (en ging niet mee offline) | schermlezer, wie liever luistert | "hier gaat het om" voor de schermlezer; de loonstrook heeft een luidspreker en gaat mee |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 

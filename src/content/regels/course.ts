@@ -49,7 +49,7 @@ export function ruleStepTexts(step: RuleStep): string[] {
     case 'whatdo': return [step.situation, ...(step.quote ? [step.quote] : []), ...step.options.filter((o) => o.say).map((o) => o.text), step.why];
     case 'whoask': return [step.question, step.why];
     case 'model': return [step.nl];
-    case 'payslip': return [step.question, step.why];
+    case 'payslip': return [cardSpeech(payslipCard(step)), step.question, step.why];
     case 'card': return [cardSpeech(step.card), step.question, ...(step.sum?.length ? [step.sum.join(' ')] : []), step.why];
   }
 }
@@ -59,6 +59,16 @@ export function ruleStepTexts(step: RuleStep): string[] {
  * euro."). A row still to work out ("?") is left out: the voice never gives the answer away. The
  * voice says the times and amounts as words (src/lib/sayNumbers.ts).
  */
+/** A payslip step's slip as a drawn card (the `loonstrook` card), its asked-about row lit after the answer. */
+export function payslipCard(step: Extract<RuleStep, { kind: 'payslip' }>): DrawnCard {
+  return {
+    type: 'loonstrook',
+    title: 'Loonstrook',
+    sub: step.slip.periode,
+    rows: step.slip.rows.map((r) => ({ label: r.label, value: r.value, ...(r.field === step.highlight ? { hit: true as const } : {}) })),
+  };
+}
+
 export function cardSpeech(card: DrawnCard): string {
   const end = (s: string) => (/[.!?]$/.test(s) ? s : `${s}.`);
   const head = end(card.sub ? `${card.title}, ${card.sub}` : card.title);

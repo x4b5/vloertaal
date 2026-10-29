@@ -262,10 +262,14 @@ describe('rule steps on screen', () => {
     const before = html(createElement(PayslipStep, { ex: { kind: 'payslip', step }, lang: nl(), locked: false, onAnswer: () => {} }));
     const after = html(createElement(PayslipStep, { ex: { kind: 'payslip', step }, lang: nl(), locked: true, onAnswer: () => {} }));
     expect(before).toContain('card-loonstrook');
-    expect(before).toContain(`aria-label="Loonstrook ${step.slip.periode}"`);
+    expect(before).toContain(`aria-label="Loonstrook, ${step.slip.periode}"`);
     for (const r of step.slip.rows) expect(before).toContain(`slip-${r.field}`);
     expect(before).not.toContain('slip-hit');
     expect(after).toMatch(new RegExp(`slip-${step.highlight} slip-hit`));
     expect(after.match(/slip-hit/g)).toHaveLength(1);
+    // The lit-up row is named for a screen reader too, and the slip has its speaker.
+    expect(after.match(/hier gaat het om/g)).toHaveLength(1);
+    expect(before).not.toContain('hier gaat het om');
+    expect(before).toContain('card-says');
   });
 });
