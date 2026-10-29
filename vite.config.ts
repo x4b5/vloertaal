@@ -57,7 +57,8 @@ function lazyScreenLinks(): Plugin {
       handler: (html, ctx) => {
         if (!ctx.bundle) return html;
         const links = screenChunkFiles(ctx.bundle).map((f) => `<link rel="vloertaal-screen" href="./${f}">`).join('');
-        return html.replace('</head>', `${links}</head>`);
+        // And what a returning learner's first screen needs, asked for right away (bootPreloadScript).
+        return html.replace('</head>', `${links}${bootPreloadScript(ctx.bundle)}</head>`);
       },
     },
   };
@@ -80,17 +81,6 @@ export function bootPreloadScript(bundle: Record<string, { type: string; fileNam
     if (/[\\/]src[\\/]pictures[\\/]words\.tsx?$/.test(c.facadeModuleId)) pictures = `./${c.fileName}`;
   }
   return `<script>try{var p=JSON.parse(localStorage.getItem('vloertaal:v1')||'null'),f=${JSON.stringify(packs)},a=function(h){if(!h)return;var l=document.createElement('link');l.rel='modulepreload';l.href=h;document.head.appendChild(l)};if(p&&p.onboarded){a(f[p.helpLang]);a(${JSON.stringify(pictures)})}}catch(e){}</script>`;
-}
-
-function bootPreload(): Plugin {
-  return {
-    name: 'vloertaal-boot-preload',
-    apply: 'build',
-    transformIndexHtml: {
-      order: 'post',
-      handler: (html, ctx) => (ctx.bundle ? html.replace('</head>', `${bootPreloadScript(ctx.bundle)}</head>`) : html),
-    },
-  };
 }
 
 /** vloertaal.nl/nieuw: "Wat is er nieuw?", a plain page made from src/content/updates.ts. */
@@ -155,7 +145,7 @@ export default defineConfig({
   base: './',
   // Which deploy a tester's report came from (src/lib/report.ts): the commit on Vercel, "dev" here.
   define: { 'import.meta.env.VITE_BUILD': JSON.stringify((process.env.VERCEL_GIT_COMMIT_SHA ?? 'dev').slice(0, 7)) },
-  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), bootPreload(), updatesPagePlugin(), introPagePlugin(), swBuild()],
+  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), introPagePlugin(), swBuild()],
   build: {
     rolldownOptions: {
       output: {

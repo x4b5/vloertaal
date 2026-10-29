@@ -42,6 +42,15 @@ describe('the service worker on a stalling link', () => {
     expect(await (await page).text()).toBe('cached page');
   });
 
+  it('waits for another page of the site: the app page cannot stand in at its address', async () => {
+    let answer: (r: Response) => void = () => {};
+    const ask = worker({ [SCOPE]: 'cached page' }, () => new Promise((r) => (answer = r)));
+    const page = ask(`${SCOPE}bouw/`, 'navigate');
+    await vi.advanceTimersByTimeAsync(10_000);
+    answer(new Response('bouw page'));
+    expect(await (await page).text()).toBe('bouw page');
+  });
+
   it('plays a clip played before from the phone', async () => {
     const clip = `${SCOPE}audio-el/noa/abc.mp3`;
     const ask = worker({ [clip]: 'mp3' }, stall);

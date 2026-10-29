@@ -1,6 +1,7 @@
 // App files: network first, cache as fallback (also when the network stalls), so the app is
-// always fresh online and still opens offline; this build's hashed files straight from the cache. Recorded sound of a unit the learner saved for offline use (the "Save for
-// offline" chip under a unit, src/lib/offline.ts) is answered from its own cache first.
+// always fresh online and still opens offline; this build's hashed files straight from the cache.
+// Recorded sound of a unit the learner saved for offline use (the "Save for offline" chip under
+// a unit, src/lib/offline.ts) is answered from its own cache first.
 //
 // Each build gets its own app cache: the build writes its id and its hashed files into BUILD and
 // FILES below (vite.config.ts, swBuild), so this file changes with every deploy, the browser
@@ -120,16 +121,15 @@ function keep(req, res, name = CACHE) {
   return res;
 }
 
-/** The cached copy of a request (the page, for a visit to any address in scope), or undefined. */
-async function cached(req) {
+async function fromCache(req) {
   const navigate = req.mode === 'navigate';
   const hit = await caches.match(req.url, { ignoreSearch: navigate });
-  if (hit || !navigate) return hit;
-  return (await caches.match(scope())) || (await caches.match(new URL('index.html', scope()).href));
-}
-
-async function fromCache(req) {
-  return (await cached(req)) || Response.error();
+  if (hit) return hit;
+  if (navigate) {
+    const page = (await caches.match(scope())) || (await caches.match(new URL('index.html', scope()).href));
+    if (page) return page;
+  }
+  return Response.error();
 }
 
 /** A link that connects but stalls (a bus, a greenhouse): after this long a cached copy answers. */
@@ -151,6 +151,17 @@ function orCopy(net, copy) {
     const timer = setTimeout(() => copy().then((hit) => hit && settle(resolve, hit), () => {}), STALL_MS);
     net.then((res) => settle(resolve, res), (e) => settle(reject, e));
   });
+}
+
+/**
+ * What answers a stalled request: its own cached copy; for the start page, the app's page. Another
+ * page of the site is waited for (the app's page can't stand in at its address).
+ */
+async function stallCopy(req, url) {
+  const navigate = req.mode === 'navigate';
+  const hit = await caches.match(req.url, { ignoreSearch: navigate });
+  if (hit || !navigate || url.pathname !== new URL(scope()).pathname) return hit;
+  return fromCache(req);
 }
 
 async function audio(req) {
@@ -189,5 +200,5 @@ self.addEventListener('fetch', (e) => {
   // A hashed app file the server no longer has (an old tab after an update): the cached copy, if
   // any. None: the page sees the failed file and loads the new version (src/lib/appUpdate.ts).
   const net = fetch(req).then((res) => (!res.ok && url.pathname.includes('/assets/') ? caches.match(req.url).then((hit) => hit || res) : keep(req, res)));
-  e.respondWith(orCopy(net, () => cached(req)).catch(() => fromCache(req)));
+  e.respondWith(orCopy(net, () => stallCopy(req, url)).catch(() => fromCache(req)));
 });
