@@ -63,7 +63,7 @@ export const stageUnit: RuleUnit = {
           id: 'r.l.stage.1.wd1',
           situation: 'Op de eerste dag ontmoet Jayden Linda. Zij is zijn praktijkopleider. Wat doet een praktijkopleider?',
           options: [
-            { id: 'a', text: 'Ze begeleidt je op het werk, en leert je het vak.', best: true, feedback: 'Goed. Zij is je eerste aanspreekpunt in het bedrijf.' },
+            { id: 'a', text: 'Ze begeleidt je op het werk, en leert je het vak.', best: true, feedback: 'Goed. Met vragen ga je in het bedrijf eerst naar haar.' },
             { id: 'b', text: 'Ze is je docent, en ze geeft je cijfers op school.', best: false, feedback: 'Nee. Ze werkt in het bedrijf, niet op school.' },
             { id: 'c', text: 'Ze regelt je loon en je arbeidscontract.', best: false, feedback: 'Nee. Op stage heb je meestal geen arbeidscontract.' },
           ],
@@ -74,9 +74,9 @@ export const stageUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.stage.1.wd2',
-          situation: 'Het bedrijf zegt: "Dat papiertje van school komt later wel. Begin maandag maar."',
+          situation: 'Het bedrijf zegt: "Dat papiertje van school komt later wel. Begin maandag maar." Wat kan Jayden het beste doen?',
           options: [
-            { id: 'a', text: 'Hij begint maandag. Het papier komt later wel.', best: false, feedback: 'Begrijpelijk. Maar dan telt je stage misschien niet mee.' },
+            { id: 'a', text: 'Hij begint maandag. Het papier komt later wel.', best: false, feedback: 'Begrijpelijk. Maar dan telt zijn stage misschien niet mee.' },
             { id: 'b', text: 'Hij vraagt eerst aan school of de POK klaar is.', best: true, feedback: 'Goed. Dan weet hij zeker dat alles klopt.' },
             { id: 'c', text: 'Hij zoekt meteen een ander stagebedrijf.', best: false, feedback: 'Dat hoeft niet. Eerst even vragen.' },
           ],
@@ -85,13 +85,13 @@ export const stageUnit: RuleUnit = {
         {
           kind: 'whoask',
           id: 'r.l.stage.1.wa1',
-          question: 'Je weet niet of je POK al getekend is. Wie vraag je het?',
+          question: 'Je weet niet of iedereen je POK al heeft getekend. Wie vraag je het?',
           options: [
             { id: 'a', who: 'uitzendbureau', best: false, feedback: 'Een uitzendbureau gaat niet over je stage.' },
             { id: 'b', who: 'praktijkopleider', best: false, feedback: 'Zij weet het misschien. Maar school regelt de POK.' },
             { id: 'c', who: 'school', best: true, feedback: 'Goed. School regelt de POK met jou en het bedrijf.' },
           ],
-          why: 'Je stagebegeleider of bpv-begeleider van school regelt de POK. Op het werk is je praktijkopleider je aanspreekpunt.',
+          why: 'Je stagebegeleider of bpv-begeleider van school regelt de POK. Op het werk ga je met vragen naar je praktijkopleider.',
         },
         { kind: 'model', id: 'r.l.stage.1.mo1', context: 'Het bedrijf wil dat je begint. Je weet niet of de POK klaar is.', nl: 'Is mijn POK al getekend? Dan kan ik beginnen.' },
       ],
@@ -131,9 +131,9 @@ export const stageUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.stage.2.wd1',
-          situation: 'Fatima vindt dat niet leuk om te horen.',
+          situation: 'Fatima vindt dat niet leuk om te horen. Wat kan Fatima het beste doen?',
           options: [
-            { id: 'a', text: 'Ze zegt: "Dat klopt niet. Ik weet alles al."', best: false, feedback: 'Begrijpelijk. Maar zo leer je er niets van.' },
+            { id: 'a', text: 'Ze zegt: "Dat klopt niet. Ik weet alles al."', best: false, feedback: 'Begrijpelijk. Maar zo leert ze er niets van.' },
             { id: 'b', text: 'Ze knikt, en ze zegt verder niets.', best: false, feedback: 'Dan weet ze nog niet wat ze anders kan doen.' },
             { id: 'c', text: 'Ze vraagt: "Wanneer had ik iets moeten vragen?"', best: true, feedback: 'Goed. Met een voorbeeld weet ze wat beter kan.' },
           ],
@@ -150,7 +150,7 @@ export const stageUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.stage.2.wd2',
-          situation: 'Aan het eind krijgt Fatima een beoordeling. Ze is het er niet mee eens.',
+          situation: 'Aan het eind krijgt Fatima een beoordeling. Ze is het er niet mee eens. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze bespreekt het met Mark, en met haar begeleider van school.', best: true, feedback: 'Goed. Zo kan ze uitleggen waarom.' },
             { id: 'b', text: 'Ze tekent het formulier niet, en ze stopt met haar stage.', best: false, feedback: 'Begrijpelijk. Maar dan mist ze misschien haar diploma.' },
@@ -176,7 +176,7 @@ export const stageUnit: RuleUnit = {
       // Les 14.3 · Als het niet goed gaat
       id: 'r.l.stage.3',
       title: 'Als het niet goed gaat',
-      goal: 'Je weet wat je doet als je ziek bent of weinig leert. Ook als je slecht behandeld wordt.',
+      goal: 'Je weet wat je doet als je ziek bent of weinig leert. Ook als ze je slecht behandelen.',
       remember: 'Gaat het niet goed op stage? Praat erover: eerst op je werk, dan met school.',
       // Wie kan je helpen: je stagebegeleider of bpv-begeleider · de vertrouwenspersoon van school ·
       //   het meldpunt van je school of van SBB ⚖️ · discriminatie.nl · JOB, de organisatie voor
@@ -218,7 +218,7 @@ export const stageUnit: RuleUnit = {
           situation: 'Wat doet Kevin?',
           options: [
             { id: 'a', text: 'Hij blijft gewoon gaan. Over 2 maanden is het klaar.', best: false, feedback: 'Begrijpelijk. Maar dan leert hij weinig.' },
-            { id: 'b', text: 'Hij stopt met de stage, zonder iets te zeggen.', best: false, feedback: 'Niet doen. Dan heb je misschien een probleem met school.' },
+            { id: 'b', text: 'Hij stopt met de stage, zonder iets te zeggen.', best: false, feedback: 'Niet doen. Dan heeft hij misschien een probleem met school.' },
             { id: 'c', text: 'Hij praat met zijn praktijkopleider, en ook met school.', best: true, feedback: 'Goed. Zo kan er iets veranderen.' },
           ],
           why: 'Een stage is om te leren. Je bent geen goedkope werknemer. Ook op stage gelden de regels voor werktijden en pauze. Leer je weinig? Zeg het eerst tegen je praktijkopleider. Helpt dat niet? Ga naar je begeleider van school. Stop nooit zomaar.',
@@ -237,10 +237,10 @@ export const stageUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.stage.3.wd2',
-          situation: 'Een collega maakt grappen over Kevins afkomst. Andere stagiairs krijgen beter werk.',
+          situation: 'Een collega maakt grappen over Kevins afkomst. Andere stagiairs krijgen beter werk. Wat kan Kevin het beste doen?',
           options: [
-            { id: 'a', text: 'Hij meldt het bij school. Daar is een meldpunt.', best: true, feedback: 'Goed. School moet je dan helpen.' },
-            { id: 'b', text: 'Hij lacht mee. Hij wil geen gedoe op zijn stage.', best: false, feedback: 'Begrijpelijk. Maar het mag niet, en je hoeft het niet te pikken.' },
+            { id: 'a', text: 'Hij meldt het bij school. Daar is een meldpunt.', best: true, feedback: 'Goed. School moet hem dan helpen.' },
+            { id: 'b', text: 'Hij lacht mee. Hij wil geen gedoe op zijn stage.', best: false, feedback: 'Begrijpelijk. Maar het mag niet, en hij hoeft dat niet goed te vinden.' },
             { id: 'c', text: 'Hij zoekt zelf een nieuwe stage, zonder iets te zeggen.', best: false, feedback: 'Dan gaat het bij de volgende stagiair misschien ook zo.' },
           ],
           why: 'Discriminatie op stage is verboden. Elke mbo-school moet een meldpunt hebben. Je kunt ook naar de vertrouwenspersoon van school. Of naar discriminatie.nl. SBB kan het bedrijf erop aanspreken.',
