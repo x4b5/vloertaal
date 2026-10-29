@@ -30,7 +30,7 @@ export const zlRegelsUnit: RuleUnit = {
       //   Stadswinkel Geleen was found as the desk (temporary building since 29-06-2026), not the Stadskantoor.
       id: 'rg.zl.r.l.1',
       title: 'Je adres en de gemeente',
-      goal: 'Je weet dat je je adres op tijd doorgeeft aan de gemeente, en hoe je een afspraak maakt.',
+      goal: 'Je geeft je adres op tijd door aan de gemeente. Je weet hoe je een afspraak maakt.',
       remember: 'Verhuisd? Geef je adres binnen 5 dagen door aan je nieuwe gemeente.',
       // Wie kan je helpen: je gemeente (de site, of 14 met het netnummer ⚖️) · rijksoverheid.nl ⚖️ ·
       //   in de app: de Sociale kaart, bij "Gemeente".
@@ -70,7 +70,7 @@ export const zlRegelsUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Ze belt haar oude gemeente in Den Haag.', best: false, feedback: 'Dat hoeft niet. Je oude gemeente krijgt het vanzelf door.' },
             { id: 'b', text: 'Ze geeft het door aan haar nieuwe gemeente, Heerlen.', best: true, feedback: 'Goed. Je geeft je verhuizing door aan de gemeente waar je nu woont.' },
-            { id: 'c', text: 'Ze wacht tot ze een brief van de gemeente krijgt.', best: false, feedback: 'Die brief komt niet vanzelf. Jij moet het zelf doorgeven.' },
+            { id: 'c', text: 'Ze wacht tot ze een brief van de gemeente krijgt.', best: false, feedback: 'Die brief komt niet vanzelf. Ze moet het zelf doorgeven.' },
           ],
           why: 'Je geeft je nieuwe adres door aan je nieuwe gemeente. Binnen Nederland kan dat vaak online, met DigiD. Je oude gemeente krijgt het dan vanzelf. Kom je uit het buitenland? Dan ga je zelf naar de gemeente, met een afspraak.',
         },
@@ -110,8 +110,8 @@ export const zlRegelsUnit: RuleUnit = {
       //   name in the lesson: Thuis in Limburg is always named, the list is on thuisinlimburg.nl.
       id: 'rg.zl.r.l.2',
       title: 'Wonen en reizen in de regio',
-      goal: 'Je weet hoe je in Zuid-Limburg een sociale huurwoning zoekt, en hoe je met bus en trein naar je werk reist.',
-      remember: 'Huis zoeken? Schrijf je op tijd in, en betaal nooit voor een huis dat je niet zag.',
+      goal: 'Je weet hoe je in Zuid-Limburg een sociale huurwoning zoekt. Je weet hoe je met bus en trein naar je werk reist.',
+      remember: 'Huis zoeken? Schrijf je op tijd in. Betaal nooit voor een huis dat je niet zag.',
       // Wie kan je helpen: thuisinlimburg.nl ⚖️ · je woningcorporatie · arriva.nl, ns.nl of 9292.nl ⚖️ ·
       //   je werkgever of HR, voor reiskosten · in de app: de Sociale kaart, bij "Wonen".
       help: ['woningcorporatie', 'hr', 'leidinggevende'],
@@ -132,7 +132,7 @@ export const zlRegelsUnit: RuleUnit = {
           kind: 'rule',
           id: 'rg.zl.r.l.2.ru1',
           emoji: '🏘️',
-          title: 'Huis zoeken? Schrijf je op tijd in, en betaal nooit voor een huis dat je niet zag.',
+          title: 'Huis zoeken? Schrijf je op tijd in. Betaal nooit voor een huis dat je niet zag.',
           body: [
             'De meeste woningcorporaties in Zuid-Limburg staan op thuisinlimburg.nl.',
             'Inschrijven is gratis. Verleng je inschrijving elk jaar.',
@@ -149,7 +149,7 @@ export const zlRegelsUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Ze schrijven zich in op de site van Thuis in Limburg.', best: true, feedback: 'Goed. Daar staan de huizen van veel corporaties in Limburg.' },
             { id: 'b', text: 'Ze betalen iemand op Facebook die zegt dat hij een huis heeft.', best: false, feedback: 'Pas op. Betaal nooit geld voor een huis dat je niet hebt gezien.' },
-            { id: 'c', text: 'Ze wachten tot de gemeente hun een huis geeft.', best: false, feedback: 'Dat gebeurt meestal niet. Je moet je zelf inschrijven.' },
+            { id: 'c', text: 'Ze wachten tot de gemeente hun een huis geeft.', best: false, feedback: 'Dat gebeurt meestal niet. Ze moeten zich zelf inschrijven.' },
           ],
           why: 'De meeste woningcorporaties in Zuid-Limburg bieden hun huizen aan op thuisinlimburg.nl. Inschrijven is gratis. Je moet 18 jaar of ouder zijn en in Nederland mogen wonen. Verleng je inschrijving elk jaar. Wachten duurt vaak lang. Begin dus op tijd.',
         },
@@ -172,7 +172,7 @@ export const zlRegelsUnit: RuleUnit = {
             { id: 'b', text: 'Hij zegt de baan af. Zonder auto lukt het niet.', best: false, feedback: 'Jammer. Vaak is er een andere oplossing.' },
             { id: 'c', text: 'Hij vraagt op zijn werk of hij met iemand kan meerijden, of hij gaat fietsen.', best: true, feedback: 'Goed. Bij grote bedrijven rijden collega’s vaak samen.' },
           ],
-          why: 'In Zuid-Limburg wonen en werken veel mensen in verschillende plaatsen. Bij vroege of late diensten rijdt de bus soms niet. Vraag op je werk naar samen rijden of een busje van de baas. Vraag ook of je reiskosten terugkrijgt. Dat staat in je contract of cao. Kijk op 9292.nl hoe je reist. Let op: Zuid-Limburg is heuvelachtig. Een elektrische fiets helpt.',
+          why: 'In Zuid-Limburg wonen en werken veel mensen in verschillende plaatsen. Bij vroege of late diensten rijdt de bus soms niet. Vraag op je werk naar samen rijden of een busje van de baas. Vraag ook of je reiskosten terugkrijgt. Dat staat in je contract of cao. Kijk op 9292.nl hoe je reist. Let op: in Zuid-Limburg zijn veel heuvels. Een elektrische fiets helpt.',
         },
         {
           kind: 'model',
@@ -188,7 +188,7 @@ export const zlRegelsUnit: RuleUnit = {
       //   Germany ⚖️). The rule for social security comes from EU regulation 883/2004 ⚖️.
       id: 'rg.zl.r.l.3',
       title: 'Werken over de grens',
-      goal: 'Je weet dat werken in België of Duitsland andere regels kan geven, en dat je vóór je tekent gratis advies vraagt.',
+      goal: 'Je weet dat werken in België of Duitsland andere regels kan geven. Je vraagt gratis advies vóór je tekent.',
       remember: 'Werk over de grens? Vraag eerst gratis advies. Dan pas tekenen.',
       // Wie kan je helpen: het GrensInfoPunt Maastricht ⚖️ · het GrenzInfoPunkt Aachen-Eurode ⚖️ ·
       //   Grensarbeid ⚖️ · UWV · in de app: de Sociale kaart, bij "Grens".
@@ -225,9 +225,9 @@ export const zlRegelsUnit: RuleUnit = {
           id: 'rg.zl.r.l.3.wd1',
           situation: 'Bogdan wil het werk wel. Wat doet hij eerst?',
           options: [
-            { id: 'a', text: 'Hij tekent snel. Hij regelt de rest later wel.', best: false, feedback: 'Begrijpelijk, maar dan kun je voor verrassingen komen te staan.' },
+            { id: 'a', text: 'Hij tekent snel. Hij regelt de rest later wel.', best: false, feedback: 'Begrijpelijk. Maar dan krijgt hij later misschien problemen.' },
             { id: 'b', text: 'Hij vraagt eerst gratis advies bij het GrensInfoPunt.', best: true, feedback: 'Goed. Die kennen de regels van alle drie de landen.' },
-            { id: 'c', text: 'Hij vraagt het aan zijn buurman. Die werkte vroeger ook in Duitsland.', best: false, feedback: 'Je buurman bedoelt het goed. Maar elke situatie is anders.' },
+            { id: 'c', text: 'Hij vraagt het aan zijn buurman. Die werkte vroeger ook in Duitsland.', best: false, feedback: 'Zijn buurman bedoelt het goed. Maar elke situatie is anders.' },
           ],
           why: 'Werk je in het ene land en woon je in het andere? Dan heet je grensarbeider. Er gelden dan andere regels voor belasting, je uitkering, je pensioen en je zorgverzekering. Het GrensInfoPunt geeft gratis advies. Dat kan per telefoon, online of op afspraak. Er is een GrensInfoPunt in Maastricht, en een in Aken en Herzogenrath, vlak bij Kerkrade.',
         },
@@ -246,7 +246,7 @@ export const zlRegelsUnit: RuleUnit = {
         {
           kind: 'whoask',
           id: 'rg.zl.r.l.3.wa1',
-          question: 'Yonas woont in Maastricht. Hij wil werk zoeken in België. Hij wil ook weten hoe je een cv voor België schrijft. Waar gaat hij heen?',
+          question: 'Yonas woont in Maastricht. Hij wil werk zoeken in België. Hij wil ook weten hoe hij een cv voor België schrijft. Waar gaat hij heen?',
           options: [
             { id: 'a', who: 'grensinfopunt', best: true, feedback: 'Goed. Zij helpen met werk zoeken over de grens, en met je cv.' },
             { id: 'b', who: 'huisarts', best: false, feedback: 'De huisarts helpt met je gezondheid, niet met werk zoeken.' },
@@ -267,7 +267,7 @@ export const zlRegelsUnit: RuleUnit = {
       // Redactie: no date in the lesson. Carnival Sunday is the seventh Sunday before Easter ⚖️.
       id: 'rg.zl.r.l.4',
       title: 'Carnaval, dialect en collega’s',
-      goal: 'Je vraagt op tijd vrij voor carnaval, en je durft collega’s te vragen om Nederlands te praten.',
+      goal: 'Je vraagt op tijd vrij voor carnaval. Je durft collega’s te vragen om Nederlands te praten.',
       remember: 'Carnaval? Vraag vroeg vrij. Dialect? Vraag vriendelijk om Nederlands.',
       // Wie kan je helpen: je leidinggevende of HR (vrij vragen) · je cao (vakantiedagen) · een collega die je vertrouwt.
       help: ['leidinggevende', 'hr', 'collega'],
@@ -303,7 +303,7 @@ export const zlRegelsUnit: RuleUnit = {
           id: 'rg.zl.r.l.4.wd1',
           situation: 'Dewi wil met carnaval graag vrij. Wat doet ze?',
           options: [
-            { id: 'a', text: 'Ze meldt zich die maandag ziek. Dat doen anderen ook.', best: false, feedback: 'Niet doen. Ziek melden als je niet ziek bent, kan je baan kosten.' },
+            { id: 'a', text: 'Ze meldt zich die maandag ziek. Dat doen anderen ook.', best: false, feedback: 'Niet doen. Zich ziek melden als ze niet ziek is, kan haar baan kosten.' },
             { id: 'b', text: 'Ze vraagt het een week van tevoren. Dan is het nog vroeg genoeg.', best: false, feedback: 'Dat is vaak te laat. Dan zijn de vrije dagen al weg.' },
             { id: 'c', text: 'Ze vraagt het nu al aan haar leidinggevende, en ze krijgt het antwoord op papier.', best: true, feedback: 'Goed. Vroeg vragen is slim met carnaval.' },
           ],
@@ -324,10 +324,10 @@ export const zlRegelsUnit: RuleUnit = {
           situation: 'Joep legt iets uit in het Limburgs. Dewi verstaat het niet. Wat doet ze?',
           options: [
             { id: 'a', text: 'Ze vraagt vriendelijk: "Wil je het in het Nederlands zeggen?"', best: true, feedback: 'Goed. De meeste collega’s doen dat graag.' },
-            { id: 'b', text: 'Ze knikt, en doet maar wat.', best: false, feedback: 'Begrijpelijk, maar dan kun je fouten maken.' },
+            { id: 'b', text: 'Ze knikt, en doet maar wat.', best: false, feedback: 'Begrijpelijk, maar dan kan ze fouten maken.' },
             { id: 'c', text: 'Ze zegt boos dat dialect onbeleefd is.', best: false, feedback: 'Dat kan pijn doen. Voor veel mensen is dialect hun eigen taal.' },
           ],
-          why: 'In Zuid-Limburg praten veel mensen dialect, ook op het werk. Het is normaal dat je het niet verstaat, ook als je goed Nederlands spreekt. Vraag het vriendelijk. Dialect is voor veel collega’s hun moedertaal. Het is geen onbeleefdheid. Bij de grens werken ook veel mensen uit Duitsland en België. Soms praten collega’s Duits of Frans. Ook dan mag je vragen om Nederlands. En bij veiligheid moet je de uitleg altijd goed begrijpen.',
+          why: 'In Zuid-Limburg praten veel mensen dialect, ook op het werk. Het is normaal dat je het niet verstaat, ook als je goed Nederlands spreekt. Vraag het vriendelijk. Dialect is voor veel collega’s hun moedertaal. Het is niet onbeleefd. Bij de grens werken ook veel mensen uit Duitsland en België. Soms praten collega’s Duits of Frans. Ook dan mag je vragen om Nederlands. En bij veiligheid moet je de uitleg altijd goed begrijpen.',
         },
         // The word card "Dit kun je horen": only to recognise, never to say. No sound (the phone's
         // voice reads dialect badly), and each word is marked as Limburgish (lang "li"), so a screen
@@ -369,7 +369,7 @@ export const zlRegelsUnit: RuleUnit = {
       //   around 2030 it moves to Sittard-Geleen ⚖️. That is also why the lesson says "bel eerst".
       id: 'rg.zl.r.l.5',
       title: 'Hulp in de buurt: zorg, taal, geld',
-      goal: 'Je weet waar je heen gaat als je huisarts dicht is, als je Nederlands wilt oefenen, en als je geldzorgen hebt.',
+      goal: 'Je weet waar je heen gaat als je huisarts dicht is. Ook als je Nederlands wilt oefenen, of als je geldzorgen hebt.',
       remember: 'Huisarts dicht? Bel de huisartsenpost. Geldzorgen? Vraag vroeg hulp bij de gemeente.',
       // Wie kan je helpen: je huisarts of de huisartsenpost ⚖️ · 112 bij levensgevaar · de gemeente en de
       //   Kredietbank Limburg ⚖️ · Geldfit: 0800-8115 ⚖️ · de bibliotheek of het Taalhuis ⚖️ · het buurtteam
@@ -411,9 +411,9 @@ export const zlRegelsUnit: RuleUnit = {
           id: 'rg.zl.r.l.5.wd1',
           situation: 'De huisarts is dicht. Wat doet Hatice?',
           options: [
-            { id: 'a', text: 'Ze rijdt meteen naar de spoedeisende hulp van het ziekenhuis.', best: false, feedback: 'Daar heb je meestal eerst een verwijzing nodig. Bel eerst.' },
+            { id: 'a', text: 'Ze rijdt meteen naar de spoedeisende hulp van het ziekenhuis.', best: false, feedback: 'Daar heeft ze meestal eerst een verwijzing nodig. Bel eerst.' },
             { id: 'b', text: 'Ze belt de huisartsenpost.', best: true, feedback: 'Goed. Die helpt ’s avonds, ’s nachts en in het weekend.' },
-            { id: 'c', text: 'Ze wacht tot maandag en kijkt op internet.', best: false, feedback: 'Bij hoge koorts bij een kind kun je beter nu bellen.' },
+            { id: 'c', text: 'Ze wacht tot maandag en kijkt op internet.', best: false, feedback: 'Bij hoge koorts bij een kind kan ze beter nu bellen.' },
           ],
           why: 'Is je huisarts dicht en kan het niet wachten? Bel dan de huisartsenpost. Bel eerst, ga er niet zomaar heen. In Zuid-Limburg zijn er drie posten. Ze zitten bij het MUMC+ in Maastricht, en bij Zuyderland in Heerlen en Geleen. Je belt de post van je eigen streek. Het nummer staat op de site van je huisarts. Bij levensgevaar bel je 112.',
         },
@@ -425,8 +425,8 @@ export const zlRegelsUnit: RuleUnit = {
           question: 'Hatice kan haar rekeningen niet meer betalen. Waar gaat ze heen?',
           options: [
             { id: 'a', who: 'gemeente', best: true, feedback: 'Goed. Die hulp is gratis.' },
-            { id: 'b', who: 'bank', best: false, feedback: 'Pas op met een nieuwe lening. Dan krijg je vaak nog meer schulden.' },
-            { id: 'c', who: 'politie', best: false, feedback: 'De politie helpt niet bij schulden. Wacht ook niet: schulden worden meestal groter.' },
+            { id: 'b', who: 'bank', best: false, feedback: 'Pas op met een nieuwe lening. Dan krijgt ze vaak nog meer schulden.' },
+            { id: 'c', who: 'politie', best: false, feedback: 'De politie helpt niet bij schulden. Ze moet ook niet wachten: schulden worden meestal groter.' },
           ],
           why: 'Elke gemeente moet je helpen bij schulden. Dat is gratis. In veel gemeenten in Zuid-Limburg doet de Kredietbank Limburg dat voor de gemeente. Er zijn ook vrijwilligers die helpen met je post en je geld. Vraag vroeg hulp. Hoe eerder, hoe makkelijker. Kijk in de Sociale kaart bij "Schulden".',
         },
