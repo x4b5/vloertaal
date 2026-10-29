@@ -24,9 +24,11 @@ export interface HelpRow {
 
 export const HELP_ROWS: HelpRow[] = [
   {
+    // No one-tap call: a tap by accident, or "to try", would dial the emergency number (feedback from an NT2 teacher, 29 okt 2026).
+    // ⚖️ check: misuse of 112 is punishable (art. 142 Sr)
     id: 'h.112', emoji: '🚨', name: '112',
-    when: 'Bij nood: levensgevaar, brand of een misdrijf dat nu gebeurt.',
-    show: '112', href: 'tel:112',
+    when: 'Bij nood: levensgevaar, brand of een misdrijf dat nu gebeurt. Bel alleen bij echte nood. Voor niks bellen is strafbaar.',
+    show: '112',
   },
   {
     // There is no one national number: each region has its own post.
