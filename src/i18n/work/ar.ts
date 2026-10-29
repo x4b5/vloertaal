@@ -68,7 +68,7 @@ const t: CultureTranslation = {
     'c.agency.a': 'نعم، أمس في التطبيق.',
     'u.papers': 'السكن والأوراق',
     'l.bsn': 'رقم BSN وأوراقك',
-    'w.bsn': 'رقم المواطن (رقم الخدمة المدنية)',
+    'w.bsn': 'رقم المواطن (رقم خدمة المواطن)',
     'w.identiteitsbewijs': 'وثيقة الهوية',
     'w.gemeente': 'البلدية',
     'w.inschrijven': 'يسجّل',
