@@ -224,7 +224,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
     keuze vrouw/man/automatisch): die leerlingen horen altijd de telefoonstem, en Instellingen
     toont geen keuze. Omzetten naar "automatisch" zou de opnames geven; dat verandert wat ze
     horen, dus niet zelf gedaan.
-13. **Na een les uit een afgerond onderwerp** noemt de uitslag als "volgende" een les van het
+13. *Besloten en gedaan (29 oktober): na een les uit een ander (afgerond) onderwerp gaat Verder terug naar de route, waar de genoemde "volgende" les staat; het "net gedaan"-sprongetje komt dan niet.* **Na een les uit een afgerond onderwerp** noemt de uitslag als "volgende" een les van het
     huidige onderwerp, terwijl Verder teruggaat naar het afgeronde onderwerp; en het "net
     gedaan"-sprongetje op de home kan later bij een ander onderwerp komen. Klein; de juiste
     tekst hangt af van wat je daar wilt laten zien.

@@ -577,9 +577,13 @@ export default function App() {
   // Left the screens after a lesson another way (the phone's Back): offered after the next one.
   useEffect(() => { if (['home', 'topic', 'all', 'settings', 'words', 'tips', 'about', 'socialmap'].includes(view.name)) keepDue.current = false; }, [view.name]);
   /** The end of the screens after a lesson (result, certificate, milestone): home, or the offer. */
+  /** The last lesson was outside the current block: the screens after it end on the route. */
+  const toRoute = useRef(false);
   const afterLesson = () => {
+    const route = toRoute.current;
+    toRoute.current = false;
     if (keepDue.current && !keepOffered()) { keepDue.current = false; replace({ name: 'keep' }); }
-    else { keepDue.current = false; back(); }
+    else { keepDue.current = false; if (route) tab('route'); else back(); }
   };
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
   /** "Waar woon je?" (Settings only): the region's lessons come in or go out of the path. */
@@ -701,7 +705,13 @@ export default function App() {
         // The next lesson of the current block, for "Volgende:" on the result (none when the block
         // is finished: the home offers the choice of the next one).
         const upNext = daily ? undefined : routeNextLesson(next, acc);
-        if (!daily) setArrived(view.lessonId);
+        // A lesson outside the current block (a finished topic, practised again): "Volgende" names
+        // the route's lesson, so the screens after the result end on the route, not on that topic,
+        // and the home's "just done" stamp (a lesson of the route) is left out.
+        const lessonUnit = daily ? undefined : findLesson(view.lessonId)?.unit.id;
+        const offRoute = Boolean(lessonUnit) && lessonUnit !== progress.currentUnit && lessonUnit !== next.currentUnit;
+        toRoute.current = offRoute;
+        if (!daily && !offRoute) setArrived(view.lessonId);
         // A review (today's, a mixed review, or a lesson done again) shows the words practised,
         // not "+0 new words", under a review title.
         const reviewing = daily || view.review || isMixLesson(found.lesson) || Boolean(found.lesson.repeat);
