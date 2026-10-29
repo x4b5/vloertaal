@@ -164,7 +164,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
 
 ## Bewust níét gedaan (graag een besluit)
 
-0. **Privacy van het anoniem meetellen (belangrijk).** Een review van alles wat de app verstuurt:
+0. **Privacy van het anoniem meetellen (belangrijk).** *Besloten 29 oktober: minder, en aan. Gedaan: één verzoek per gebeurtenis, alleen de les, het kwart en de minutenband; geen hulptaal, sector, versie, openen of code meer (zie `docs/pilot.md`). Zo klopt de privacytekst zoals hij is.* Een review van alles wat de app verstuurt:
    - Wat goed is: geen verzoeken naar derden behalve de teller; uit is echt uit (ook "Do Not
      Track", en sinds vannacht ook "Global Privacy Control" en een uitgezette schakelaar bij
      geblokkeerde opslag); "Melden" opent je eigen mail met precies wat je ziet.
