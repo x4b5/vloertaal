@@ -97,6 +97,7 @@ Na het mergen van #90 en #91 nog twee uur, met dezelfde werkwijze.
 | Eerste start: bij elke nieuwe vraag ging de schermlezerfocus naar het logo, niet naar de vraag; binnen een pagina ("Andere taal", sectorgroep → sectoren) ging de focus helemaal weg | schermlezer | de focus gaat naar de vraag |
 | De talenlijst stond als Nederlands (of, na Terug, als Arabisch …) gemarkeerd; Dari in de lijst als `prs` | schermlezer | de lijst is Engels, elke taalnaam heeft zijn eigen code, Dari `fa-AF` |
 | Twee keer snel op een tabblad onderin (vanaf een onderwerp) kwam op de home uit, en Terug ging daarna de app uit | iedereen met haast | het laatst getikte tabblad, en Terug werkt gewoon |
+| De noodzinnen op het Hulp-tabblad bleven offline stil als ze nooit eerder waren afgespeeld (ze stonden niet bij de bewaarde lessen) | offline, de belangrijkste zinnen | ze worden één keer stil opgehaald zodra de app online is, en gaan mee met elk bewaard onderwerp |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 

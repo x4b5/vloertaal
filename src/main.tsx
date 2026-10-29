@@ -9,7 +9,7 @@ import { watchForUpdates } from './lib/appUpdate';
 import { applyTheme } from './lib/theme';
 import { applyTextSize } from './lib/textSize';
 import { applyEnglish } from './lib/english';
-import { refreshOfflineShell, warmLanguageCache } from './lib/offline';
+import { refreshOfflineShell, warmLanguageCache, warmPhrases } from './lib/offline';
 import { ensureLanguage, ensureRegionTexts, LANG_CODES } from './i18n';
 import { ensureRegion } from './content/regio';
 import { ensureRegionFor } from './lib/region';
@@ -97,6 +97,9 @@ if (import.meta.env.PROD && 'serviceWorker' in navigator) {
     void Promise.all([langBoot, regionBoot, picsBoot]).then(() => window.setTimeout(() => { refreshOfflineShell(); }, 3000));
     // The help language's file may have loaded before the service worker ran: let it keep a copy.
     navigator.serviceWorker.ready.then(() => window.setTimeout(warmLanguageCache, 1500)).catch(() => {});
+    // The emergency phrases of the language course, for offline (not in the work-rules track).
+    const saved = loadProgress();
+    if (saved.onboarded && saved.helpLang !== 'nl') navigator.serviceWorker.ready.then(() => window.setTimeout(() => { void warmPhrases(saved.voice ?? null); }, 6000)).catch(() => {});
   });
   // An app kept open on the home screen picks up a new version when it comes back (src/lib/appUpdate.ts).
   watchForUpdates();
