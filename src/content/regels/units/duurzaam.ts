@@ -54,7 +54,7 @@ export const duurzaamUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Plat gemaakt in de bak voor papier en karton.', best: true, feedback: 'Goed. Plat past er veel meer in.' },
             { id: 'b', text: 'In de bak voor restafval. Dat is het snelst.', best: false, feedback: 'Begrijpelijk. Maar karton hoort apart.' },
-            { id: 'c', text: 'Naast de bakken. Iemand anders ruimt het wel op.', best: false, feedback: 'Dan ligt het in de weg. En het is jouw afval.' },
+            { id: 'c', text: 'Naast de bakken. Iemand anders ruimt het wel op.', best: false, feedback: 'Dan ligt het in de weg. En het is zijn afval.' },
           ],
           why: 'Bedrijven moeten afval scheiden. Welke bakken er zijn, verschilt per bedrijf. Weet je het niet? Kijk op de sticker van de bak, of vraag het.',
         },
@@ -71,13 +71,13 @@ export const duurzaamUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.duurzaam.1.wd2',
-          situation: 'Een collega zegt: "Scheiden heeft geen zin. Het gaat toch allemaal op één hoop."',
+          situation: 'Een collega zegt: "Scheiden heeft geen zin. Het gaat toch allemaal op één hoop." Wat kan Mohammed het beste doen?',
           options: [
-            { id: 'a', text: 'Hij gooit voortaan ook alles in één bak.', best: false, feedback: 'Begrijpelijk. Maar op je werk volg je de regels.' },
-            { id: 'b', text: 'Hij gaat er lang met de collega over in discussie.', best: false, feedback: 'Dat mag. Maar het lost de vraag niet op.' },
-            { id: 'c', text: 'Hij blijft scheiden, en hij vraagt het aan Henk.', best: true, feedback: 'Goed. Henk weet hoe het afval wordt opgehaald.' },
+            { id: 'a', text: 'Hij gooit vanaf nu ook alles in één bak.', best: false, feedback: 'Begrijpelijk. Maar op je werk volg je de regels.' },
+            { id: 'b', text: 'Hij praat er lang met de collega over.', best: false, feedback: 'Dat mag. Maar het lost de vraag niet op.' },
+            { id: 'c', text: 'Hij blijft scheiden, en hij vraagt het aan Henk.', best: true, feedback: 'Goed. Henk weet hoe ze het afval ophalen.' },
           ],
-          why: 'Gescheiden afval wordt meestal ook apart opgehaald. Van oud papier maken ze weer nieuw papier. Twijfel je? Vraag het je leidinggevende. De regels op je werk volg je, ook als een collega het anders doet.',
+          why: 'Gescheiden afval wordt meestal ook apart opgehaald. Van oud papier maken ze weer nieuw papier. Weet je het niet zeker? Vraag het je leidinggevende. De regels op je werk volg je, ook als een collega het anders doet.',
         },
         { kind: 'model', id: 'r.l.duurzaam.1.mo1', context: 'Je weet niet waar je afval heen moet.', nl: 'In welke bak moet dit?' },
       ],
@@ -118,9 +118,9 @@ export const duurzaamUnit: RuleUnit = {
           id: 'r.l.duurzaam.2.wd1',
           situation: 'Wat doet Dewi?',
           options: [
-            { id: 'a', text: 'Ze doet uit wat uit mag, en ze meldt de kraan.', best: true, feedback: 'Goed. Zo bespaar je energie en water.' },
+            { id: 'a', text: 'Ze doet uit wat uit mag, en ze meldt de kraan.', best: true, feedback: 'Goed. Zo bespaart ze energie en water.' },
             { id: 'b', text: 'Ze laat alles zo. Het is niet haar gebouw.', best: false, feedback: 'Begrijpelijk. Maar een lek kost veel water.' },
-            { id: 'c', text: 'Ze probeert de kraan zelf te maken.', best: false, feedback: 'Goed bedoeld. Maar dat is niet jouw werk.' },
+            { id: 'c', text: 'Ze probeert de kraan zelf te maken.', best: false, feedback: 'Goed bedoeld. Maar dat is niet haar werk.' },
           ],
           why: 'Doe lampen en apparaten uit als dat mag. Vraag wat aan moet blijven, zoals de noodverlichting. Meld een lek meteen. Zelf repareren doe je alleen als dat jouw werk is.',
         },
@@ -134,11 +134,11 @@ export const duurzaamUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.duurzaam.2.wd2',
-          situation: 'Piotr werkt in de bouw. Er liggen veel stukken hout over. Hij heeft een stuk van 60 centimeter nodig.',
+          situation: 'Piotr werkt in de bouw. Er liggen veel stukken hout over. Hij heeft een stuk van 60 centimeter nodig. Wat kan Piotr het beste doen?',
           options: [
             { id: 'a', text: 'Hij zaagt een stuk van een nieuwe plank. Dat gaat sneller.', best: false, feedback: 'Begrijpelijk. Maar dan blijven de restjes liggen.' },
             { id: 'b', text: 'Hij kijkt eerst of er een restje is dat past.', best: true, feedback: 'Goed. Dat scheelt geld en afval.' },
-            { id: 'c', text: 'Hij neemt de restjes mee naar huis.', best: false, feedback: 'Vraag dat eerst. Het hout is van het bedrijf.' },
+            { id: 'c', text: 'Hij neemt de restjes mee naar huis.', best: false, feedback: 'Dat moet hij eerst vragen. Het hout is van het bedrijf.' },
           ],
           why: 'Zuinig werken scheelt geld en afval. Meet eerst, dan zaag je. Gebruik restjes als het kan. Iets mee naar huis nemen? Vraag het altijd eerst. Het materiaal is van het bedrijf.',
         },
