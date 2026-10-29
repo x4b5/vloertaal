@@ -7,6 +7,12 @@ import { UPDATES } from './src/content/updates';
 import { updatesPage } from './src/lib/updatesPage';
 import { INTRO_QUESTIONS } from './src/content/intro';
 import { introPage } from './src/lib/introPage';
+import { hreflangLinks, LANG_PAGES, langPage } from './src/lib/langPages';
+import { coachPage } from './src/lib/coachPage';
+import { rulesPage, SECTOR_PAGES, sectorPage } from './src/lib/sectorPages';
+import { notFoundPage, siteLinks } from './src/lib/siteLinks';
+import { sitemap } from './src/lib/sitemap';
+import { TOPIC_PAGES, topicPage, topicsIndexPage } from './src/lib/topicPages';
 
 /**
  * The app's stylesheet does not block the first paint: index.html's inline splash (logo, ink on
@@ -110,6 +116,34 @@ function introPagePlugin(): Plugin {
 }
 
 /**
+ * vloertaal.nl/pl, /ar, /uk … /en: what Vloertaal is, in each help language (src/lib/langPages.ts);
+ * /bouw, /logistiek … and /werkregels in Dutch (src/lib/sectorPages.ts); /onderwerpen and a page per
+ * topic (src/lib/topicPages.ts); /voor-begeleiders; a 404 page; and the sitemap that lists
+ * them all (src/lib/sitemap.ts).
+ */
+function langPagesPlugin(): Plugin {
+  return {
+    name: 'vloertaal-lang-pages',
+    apply: 'build',
+    generateBundle() {
+      for (const p of LANG_PAGES) this.emitFile({ type: 'asset', fileName: `${p.code}/index.html`, source: langPage(p.code) });
+      for (const p of SECTOR_PAGES) this.emitFile({ type: 'asset', fileName: `${p.path.slice(1)}index.html`, source: sectorPage(p.id) });
+      this.emitFile({ type: 'asset', fileName: 'werkregels/index.html', source: rulesPage() });
+      this.emitFile({ type: 'asset', fileName: 'voor-begeleiders/index.html', source: coachPage() });
+      for (const t of TOPIC_PAGES) this.emitFile({ type: 'asset', fileName: `${t.path.slice(1)}index.html`, source: topicPage(t) });
+      this.emitFile({ type: 'asset', fileName: 'onderwerpen/index.html', source: topicsIndexPage() });
+      this.emitFile({ type: 'asset', fileName: '404.html', source: notFoundPage() });
+      this.emitFile({ type: 'asset', fileName: 'sitemap.xml', source: sitemap() });
+    },
+    // The start page names its other languages (hreflang) and links to every page, from the same lists.
+    transformIndexHtml: {
+      order: 'post',
+      handler: (html) => html.replace('</head>', `${hreflangLinks()}\n</head>`).replace('</body>', `${siteLinks()}\n</body>`),
+    },
+  };
+}
+
+/**
  * The service worker of this build (public/sw.js): its BUILD (a hash of every file the build
  * writes, so the same code gives the same worker) and FILES (the hashed files under assets/). So
  * sw.js changes with each deploy that changes the app: the browser installs the new worker, which
@@ -149,7 +183,7 @@ export default defineConfig({
   base: './',
   // Which deploy a tester's report came from (src/lib/report.ts): the commit on Vercel, "dev" here.
   define: { 'import.meta.env.VITE_BUILD': JSON.stringify((process.env.VERCEL_GIT_COMMIT_SHA ?? 'dev').slice(0, 7)) },
-  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), introPagePlugin(), swBuild()],
+  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild()],
   build: {
     rolldownOptions: {
       output: {

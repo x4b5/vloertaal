@@ -28,8 +28,21 @@ export function guessHelpLang(languages: readonly string[] | undefined): LangCod
   return null;
 }
 
-/** The guess for this phone (none outside a browser). */
+/**
+ * The language a page asked for: vloertaal.nl/?taal=pl, the button on a language's own page
+ * (vloertaal.nl/pl, src/lib/langPages.ts). Only a help language's code counts.
+ */
+export function askedHelpLang(search: string): LangCode | null {
+  const asked = new URLSearchParams(search).get('taal')?.toLowerCase();
+  return asked ? (Object.values(CODES).find((c) => c === asked) ?? null) : null;
+}
+
+/** The guess for this phone (none outside a browser): the language a page asked for, else the phone's. */
 export function phoneHelpLang(): LangCode | null {
+  if (typeof location !== 'undefined') {
+    const asked = askedHelpLang(location.search);
+    if (asked) return asked;
+  }
   if (typeof navigator === 'undefined') return null;
   return guessHelpLang(navigator.languages?.length ? navigator.languages : [navigator.language].filter(Boolean));
 }
