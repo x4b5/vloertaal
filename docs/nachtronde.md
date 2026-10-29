@@ -152,6 +152,22 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
 
 ## Bewust níét gedaan (graag een besluit)
 
+0. **Privacy van het anoniem meetellen (belangrijk).** Een review van alles wat de app verstuurt:
+   - Wat goed is: geen verzoeken naar derden behalve de teller; uit is echt uit (ook "Do Not
+     Track", en sinds vannacht ook "Global Privacy Control" en een uitgezette schakelaar bij
+     geblokkeerde opslag); "Melden" opent je eigen mail met precies wat je ziet.
+   - Wat niet goed is: één gebeurtenis gaat als tot 8 losse verzoeken tegelijk naar
+     vloertaal.goatcounter.com (hulptaal, sector, versie, les, kwart, minuten). GoatCounter slaat
+     elk verzoek op met IP-locatie, browser en tijd op de seconde, en kan ze per bezoek samenvoegen.
+     Voor een kleine taalgroep in één plaats ("Tigrinya, zorg, Heerlen, 14:03") kan dat één
+     persoon aanwijzen. De hulptaal zegt bij deze groep vaak de nationaliteit.
+   - De privacytekst ("telt alleen hoe vaak lessen gedaan worden … niemand volgt je") zegt minder
+     dan er gebeurt: ook dagelijks openen, hulptaal, sector, waar iemand stopt, regiolessen.
+     Meetellen staat standaard aan en begint vóór iemand het weet.
+   - Mogelijke keuzes: één verzoek per gebeurtenis zonder hulptaal; zelf tellen (eigen server,
+     geen IP); standaard uit of een vraag in de eerste start; de tekst eerlijk maken (en laten
+     vertalen). Niet zelf veranderd: dit is een keuze over beleid en vraagt nieuwe vertalingen.
+
 1. **`aria-label` met "·"** (bijvoorbeeld "Route · Lekcje"). axe meldt dat de zichtbare tekst
    ("Route Lekcje") niet letterlijk in de naam staat, en dat helpt spraakbesturing niet. Het
    patroon zit overal en is bewust gekozen (een pauze voor de schermlezer). Daarom niet zelf
