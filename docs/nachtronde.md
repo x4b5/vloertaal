@@ -69,6 +69,12 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 - **Dubbele code**: certificaat en spiekkaartje delen nu één `roundRect` en één "delen of bewaren"
   (`src/lib/canvasShare.ts`). Volgens jscpd is dat de enige doublure buiten de tekeningen.
 
+## Samen met PR #90 (SEO)
+
+De twee PR's raken allebei `index.html`. Een proefmerge van beide (29 oktober, 00:15) gaat zonder
+conflict. Samen slagen alle 1169 tests en de build. In de browser toont `/?taal=pl` "Polski?", is er
+één `<main>`, en verdwijnen de SEO-links zodra de app tekent. De volgorde van mergen maakt niet uit.
+
 ## Bewust níét gedaan (graag een besluit)
 
 1. **`aria-label` met "·"** (bijvoorbeeld "Route · Lekcje"). axe meldt dat de zichtbare tekst
