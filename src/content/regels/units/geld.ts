@@ -18,7 +18,7 @@ export const geldUnit: RuleUnit = {
       //   ⚖️. Daarom noemt deze les geen duur.
       id: 'r.l.geld.1',
       title: 'Werk kwijt: WW',
-      goal: 'Je vraagt op tijd WW aan, en je weet wanneer je er recht op hebt.',
+      goal: 'Je vraagt op tijd WW aan. Je weet wanneer je er recht op hebt.',
       // ⚖️ check: Vraag binnen 1 week ⚖️ WW aan.
       remember: 'Werk kwijt? Vraag binnen 1 week WW aan.',
       // Wie kan je helpen: UWV (uwv.nl en werk.nl) · een vakbond · het Juridisch Loket.
@@ -55,7 +55,7 @@ export const geldUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.geld.1.wd1',
-          situation: 'Kevins laatste werkdag is vrijdag.',
+          situation: 'Kevins laatste werkdag is vrijdag. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij vraagt meteen WW aan bij UWV.', best: true, feedback: 'Goed. Dan krijgt hij op tijd geld.' },
             { id: 'b', text: 'Hij wacht een maand. Misschien vindt hij snel werk.', best: false, feedback: 'Dan is hij te laat, en krijgt hij misschien minder.' },
@@ -75,7 +75,7 @@ export const geldUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.geld.1.wd2',
-          situation: 'Kevin krijgt WW. Dan vindt hij een baantje van 10 uur per week.',
+          situation: 'Kevin krijgt WW. Dan vindt hij een baantje van 10 uur per week. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt niets. Het is maar een klein baantje.', best: false, feedback: 'Niet doen. Dan moet hij later veel terugbetalen.' },
             { id: 'b', text: 'Hij stopt zelf meteen met zijn hele WW.', best: false, feedback: 'Dat hoeft niet. Hij kan vaak een deel houden.' },
@@ -139,7 +139,7 @@ export const geldUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.geld.2.wd1',
-          situation: 'Fatima begint over 2 weken.',
+          situation: 'Fatima begint over 2 weken. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze vertelt het pas als ze een maand gewerkt heeft.', best: false, feedback: 'Te laat. Dan krijgt ze te veel, en moet ze terugbetalen.' },
             { id: 'b', text: 'Ze zegt de baan af. Ze is bang om geld te verliezen.', best: false, feedback: 'Begrijpelijk. Maar laat het eerst uitrekenen.' },
@@ -157,9 +157,9 @@ export const geldUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.geld.2.wd2',
-          situation: 'Fatima wil weten wat ze straks overhoudt.',
+          situation: 'Fatima wil weten wat ze straks overhoudt. Wat kan Fatima het beste doen?',
           options: [
-            { id: 'a', text: 'Ze vraagt de gemeente om het samen uit te rekenen.', best: true, feedback: 'Goed. Dan weet ze waar ze aan toe is.' },
+            { id: 'a', text: 'Ze vraagt de gemeente om het samen uit te rekenen.', best: true, feedback: 'Goed. Dan weet ze hoeveel geld ze overhoudt.' },
             { id: 'b', text: 'Ze vraagt het aan een buurman die ook werkt.', best: false, feedback: 'Aardig. Maar zijn situatie is anders dan die van haar.' },
             { id: 'c', text: 'Ze rekent het zelf uit met haar oude bijstand.', best: false, feedback: 'Dan mist ze misschien toeslagen of kosten.' },
           ],
@@ -197,7 +197,7 @@ export const geldUnit: RuleUnit = {
             'Jayden werkte vorig jaar 4 maanden in de zomer.',
             'Daarna ging hij weer naar school.',
             'In maart krijgt hij een blauwe brief van de Belastingdienst.',
-            'Hij legt hem ongeopend in een la.',
+            'Hij maakt hem niet open, en legt hem in een la.',
           ],
         },
         {
@@ -238,7 +238,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.3.tf2',
           statement: 'De aangifte over vorig jaar doe je meestal vóór 1 mei.',
           answer: true,
-          why: 'Een aangifte is een formulier over je inkomen van vorig jaar. Krijg je een brief dat je aangifte moet doen? Doe het dan vóór 1 mei. Lukt dat niet? Vraag op tijd om uitstel. Je doet aangifte online, met je DigiD.',
+          why: 'Een aangifte is een formulier over je inkomen van vorig jaar. Krijg je een brief dat je aangifte moet doen? Doe het dan vóór 1 mei. Lukt dat niet? Vraag op tijd om meer tijd. Je doet aangifte online, met je DigiD.',
         },
         { kind: 'model', id: 'r.l.geld.3.mo1', context: 'Je vraagt hulp bij een brief.', nl: 'Ik heb een brief van de Belastingdienst. Wil je mij helpen met lezen?' },
       ],
@@ -247,7 +247,7 @@ export const geldUnit: RuleUnit = {
       // Les 10.4 · Schulden: vroeg hulp vragen
       id: 'r.l.geld.4',
       title: 'Schulden: vroeg hulp vragen',
-      goal: 'Je vraagt vroeg hulp bij schulden, en je weet dat er gratis hulp is.',
+      goal: 'Je vraagt vroeg hulp bij schulden. Je weet dat er gratis hulp is.',
       remember: 'Geldzorgen? Vraag op tijd hulp. Hulp van de gemeente is gratis.',
       // Wie kan je helpen: de gemeente (schuldhulp) · Geldfit: 0800-8115 ⚖️ (gratis en anoniem) ·
       //   SchuldHulpMaatje · het Juridisch Loket.
@@ -283,7 +283,7 @@ export const geldUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.geld.4.wd1',
-          situation: 'Esra weet niet meer hoe ze moet betalen.',
+          situation: 'Esra weet niet meer hoe ze moet betalen. Wat kan Esra het beste doen?',
           options: [
             { id: 'a', text: 'Ze wacht tot ze meer verdient. Dan betaalt ze alles.', best: false, feedback: 'Begrijpelijk. Maar schulden worden snel groter door extra kosten.' },
             { id: 'b', text: 'Ze vraagt nu hulp, bij de gemeente of bij Geldfit.', best: true, feedback: 'Goed. Hoe eerder, hoe makkelijker.' },
@@ -302,7 +302,7 @@ export const geldUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.geld.4.wd2',
-          situation: 'Esra heeft nieuw werk. Ze wil haar schulden aanpakken.',
+          situation: 'Esra heeft nieuw werk. Ze wil haar schulden aanpakken. Wat kan Esra het beste doen?',
           options: [
             { id: 'a', text: 'Ze maakt een lijst: wat moet ze aan wie betalen?', best: true, feedback: 'Goed. Met een overzicht kan iemand haar helpen.' },
             { id: 'b', text: 'Ze betaalt eerst wie het vaakst belt of mailt.', best: false, feedback: 'Begrijpelijk. Maar dat is niet altijd de belangrijkste.' },
