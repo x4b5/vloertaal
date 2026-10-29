@@ -57,9 +57,12 @@ de reden. De andere: rustig zeggen wat er mis kan gaan, zonder schuld ("Dit kan 
 
 ### Schrijfregels (checklist voor redactie)
 
+Zie ook de meetlat voor A2-niveau: [`taal-a2.md`](taal-a2.md).
+
+
 - Taalniveau 1F (ongeveer A2). Zinnen van hooguit ongeveer 12 woorden. Eén idee per zin.
 - Gewone woorden. Eén vakwoord per keer, met één korte uitlegzin erbij ("Een cao is een afspraak over loon en regels voor jouw soort werk.").
-- Altijd "je". Zo min mogelijk lijdende vorm.
+- Altijd "je", behalve als het verhaal over een ander gaat: dan gaan de vraag en de antwoorden over die persoon ("Wat kan Kevin het beste doen?"). Zie [`taal-a2.md`](taal-a2.md), regel 5. Zo min mogelijk lijdende vorm.
 - Namen wisselen: Sanne, Mohammed, Kevin, Fatima, Dewi, Piotr, Esra, Jayden. Leidinggevenden: Linda, Mark, Henk. De leerling is "je", nooit standaard één naam.
 - Rustig en volwassen. Niet kinderachtig, niet belerend, geen schuld.
 - Per vraag precies één goed antwoord. De foute antwoorden zijn geloofwaardig en ongeveer even lang. Het goede antwoord staat wisselend op plek A, B of C (telling: A 21, B 21, C 23). Bij "waar of niet waar" is het ongeveer half om half (22 waar, 22 niet waar).
