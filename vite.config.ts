@@ -63,6 +63,36 @@ function lazyScreenLinks(): Plugin {
   };
 }
 
+/**
+ * A returning learner's first screen waits for their help language's file and the word pictures
+ * (src/main.tsx), which the app only asks for once its main file has loaded and run. A few lines
+ * in index.html ask for those two right away instead, next to the main file (modulepreload), when
+ * this phone's progress says which language: one wait instead of two in a row on a slow
+ * connection. A new visitor gets nothing extra. The names come from this build.
+ */
+export function bootPreloadScript(bundle: Record<string, { type: string; fileName: string; facadeModuleId?: string | null }>): string {
+  const packs: Record<string, string> = {};
+  let pictures = '';
+  for (const c of Object.values(bundle)) {
+    if (c.type !== 'chunk' || !c.facadeModuleId) continue;
+    const pack = c.facadeModuleId.match(/[\\/]src[\\/]i18n[\\/]packs[\\/]([a-z]+)\.ts$/);
+    if (pack) packs[pack[1]] = `./${c.fileName}`;
+    if (/[\\/]src[\\/]pictures[\\/]words\.tsx?$/.test(c.facadeModuleId)) pictures = `./${c.fileName}`;
+  }
+  return `<script>try{var p=JSON.parse(localStorage.getItem('vloertaal:v1')||'null'),f=${JSON.stringify(packs)},a=function(h){if(!h)return;var l=document.createElement('link');l.rel='modulepreload';l.href=h;document.head.appendChild(l)};if(p&&p.onboarded){a(f[p.helpLang]);a(${JSON.stringify(pictures)})}}catch(e){}</script>`;
+}
+
+function bootPreload(): Plugin {
+  return {
+    name: 'vloertaal-boot-preload',
+    apply: 'build',
+    transformIndexHtml: {
+      order: 'post',
+      handler: (html, ctx) => (ctx.bundle ? html.replace('</head>', `${bootPreloadScript(ctx.bundle)}</head>`) : html),
+    },
+  };
+}
+
 /** vloertaal.nl/nieuw: "Wat is er nieuw?", a plain page made from src/content/updates.ts. */
 function updatesPagePlugin(): Plugin {
   return {
@@ -125,7 +155,7 @@ export default defineConfig({
   base: './',
   // Which deploy a tester's report came from (src/lib/report.ts): the commit on Vercel, "dev" here.
   define: { 'import.meta.env.VITE_BUILD': JSON.stringify((process.env.VERCEL_GIT_COMMIT_SHA ?? 'dev').slice(0, 7)) },
-  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), introPagePlugin(), swBuild()],
+  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), bootPreload(), updatesPagePlugin(), introPagePlugin(), swBuild()],
   build: {
     rolldownOptions: {
       output: {
