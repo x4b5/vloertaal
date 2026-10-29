@@ -22,6 +22,8 @@ export function Splash({ failed = false, onRetry, lang }: {
 }) {
   const code = lang === undefined ? loadProgress().helpLang : lang;
   const help = code === 'nl' ? null : code ? langMeta(code) : undefined;
+  // "Opnieuw proberen", with the help language (English before one is chosen), from src/i18n/meta.ts.
+  const retryLabel = `${NL_META.ui.retry} · ${help === null ? '' : help ? help.ui.retry : 'Try again'}`.replace(/ · $/, '');
   return (
     <div className="boot-splash" aria-busy={!failed}>
       <div className="boot-cast" aria-hidden="true">
@@ -38,7 +40,7 @@ export function Splash({ failed = false, onRetry, lang }: {
             <span lang="nl" dir="ltr">{NL_META.ui.loadFailed}</span>
             {help !== null && (help ? <span lang={langTag(help.code)} dir={help.dir}>{help.ui.loadFailed}</span> : <span lang="en" dir="ltr">{uiEn.loadFailed}</span>)}
           </p>
-          <button type="button" className="boot-retry" onClick={onRetry} aria-label="Try again" title="Try again">
+          <button type="button" className="boot-retry" onClick={onRetry} aria-label={retryLabel} title={retryLabel}>
             <RestartIcon size={28} />
           </button>
         </>

@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     backupMerge: 'Обʼєднати',
     backupReplace: 'Замінити',
     backupBack: 'Твій прогрес повернувся.',
+    backupNothingNew: 'Нічого нового: це вже було на твоєму телефоні.',
     cancel: 'Скасувати',
     remindTitle: 'Нагадуй мені щодня',
     remindEvent: 'Час для нідерландської (10 хвилин)',
@@ -300,9 +301,11 @@ const lang: HelpLanguageSource = {
     remindEveryDay: 'Твоє нагадування: щодня о {time}',
     remindStop: 'Вимкнути нагадування',
     remindStopped: 'Відкрий файл, щоб прибрати нагадування з календаря.',
+    remindStoppedAndroid: 'Видали нагадування власноруч у Google Календарі.',
     resetKeeps: 'Твої уроки, слова, дні поспіль і сертифікати буде видалено. Твоя мова, код і налаштування залишаться.',
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Не завантажилося. Чи є інтернет?',
+    retry: 'Спробувати ще раз',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

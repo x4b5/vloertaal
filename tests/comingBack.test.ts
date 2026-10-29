@@ -3,7 +3,7 @@ import { teachingLessons } from '../src/content/curriculum';
 import { helpLanguages } from '../src/i18n/all';
 import {
   FREEZE_MAX, backupFile, backupForTrack, bestStreak, completeDaily, completeLesson, currentStreak, doneToday, emptyProgress,
-  mergeBackup, parseBackup, replaceWithBackup, settleStreak, workWeek, type Progress,
+  mergeAddsNothing, mergeBackup, parseBackup, replaceWithBackup, settleStreak, workWeek, type Progress,
 } from '../src/lib/progress';
 import { addLessonWords, applyReview, dailyCard, strongerCount } from '../src/lib/spaced';
 import { googleCalendarUrl, isAndroid, parseTime, reminderIcs } from '../src/lib/reminder';
@@ -156,6 +156,13 @@ describe('backup', () => {
     expect(old.track).toBeUndefined();
     expect(old.parked).toBeUndefined(); // its route is not known, so neither is the other one
     expect(mergeBackup(here, old).reviewDay).toBe('2026-10-08');
+  });
+
+  it('knows when adding a file brought nothing new (the same file again)', () => {
+    const file = parseBackup(backupFile(p, day(2)))!;
+    expect(mergeAddsNothing(p, mergeBackup(p, file))).toBe(true);
+    const more = { ...p, completed: { ...p.completed, 'l.cv': { best: 1, times: 1 } } };
+    expect(mergeAddsNothing(p, mergeBackup(p, parseBackup(backupFile(more, day(2)))!))).toBe(false);
   });
 
   it('merges (best of both) or replaces, keeping this phone\'s settings', () => {

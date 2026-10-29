@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     backupMerge: { m: 'ሓብር', f: 'ሓብሪ' },
     backupReplace: { m: 'ተክእ', f: 'ተክኢ' },
     backupBack: { m: 'ምዕባለኻ ተመሊሱ።', f: 'ምዕባለኺ ተመሊሱ።' },
+    backupNothingNew: { m: 'ሓድሽ ነገር የለን፡ እዚ ድሮ ኣብ ተሌፎንካ ነይሩ።', f: 'ሓድሽ ነገር የለን፡ እዚ ድሮ ኣብ ተሌፎንኪ ነይሩ።' },
     cancel: { m: 'ሰርዝ', f: 'ሰርዚ' },
     remindTitle: 'መዓልታዊ ኣዘኻኽረኒ',
     remindEvent: 'ግዜ ንሆላንድኛ (10 ደቓይቕ)',
@@ -300,9 +301,11 @@ const lang: HelpLanguageSource = {
     remindEveryDay: 'መዘኻኸሪ: መዓልታዊ ሰዓት {time}',
     remindStop: { m: 'መዘኻኸሪ ኣቋርጽ', f: 'መዘኻኸሪ ኣቋርጺ' },
     remindStopped: { m: 'መዘኻኸሪ ካብ ካሌንደርካ ንምእላይ ነቲ ፋይል ክፈቶ።', f: 'መዘኻኸሪ ካብ ካሌንደርኪ ንምእላይ ነቲ ፋይል ክፈትዮ።' },
+    remindStoppedAndroid: { m: 'መዘኻኸሪ ባዕልኻ ካብ Google ካሌንደር ኣልግሶ።', f: 'መዘኻኸሪ ባዕልኺ ካብ Google ካሌንደር ኣልግስዮ።' },
     resetKeeps: { m: 'ትምህርትታትካ፡ ቃላትካ፡ ተኸታታሊ መዓልትታትካን ምስክር ወረቐታትካን ይድምሰሱ። ቋንቋኻ፡ ኮድካን ምድላዋትካን ይጸንሑ።', f: 'ትምህርትታትኪ፡ ቃላትኪ፡ ተኸታታሊ መዓልትታትኪን ምስክር ወረቐታትኪን ይድምሰሱ። ቋንቋኺ፡ ኮድኪን ምድላዋትኪን ይጸንሑ።' },
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'ኣይተጻዕነን። ኢንተርነት ኣሎ ድዩ?',
+    retry: 'ደጊም ምፍታን',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     backupMerge: 'Połącz',
     backupReplace: 'Zastąp',
     backupBack: 'Twoje postępy wróciły.',
+    backupNothingNew: 'Nic nowego: to już było na twoim telefonie.',
     cancel: 'Anuluj',
     remindTitle: 'Przypominaj mi codziennie',
     remindEvent: 'Czas na niderlandzki (10 minut)',
@@ -300,9 +301,11 @@ const lang: HelpLanguageSource = {
     remindEveryDay: 'Twoje przypomnienie: codziennie o {time}',
     remindStop: 'Wyłącz przypomnienie',
     remindStopped: 'Otwórz plik, aby usunąć przypomnienie z kalendarza.',
+    remindStoppedAndroid: 'Usuń przypomnienie samodzielnie w Kalendarzu Google.',
     resetKeeps: 'Twoje lekcje, słowa, dni z rzędu i certyfikaty zostaną usunięte. Twój język, kod i ustawienia zostają.',
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nie załadowało się. Czy jest internet?',
+    retry: 'Spróbuj ponownie',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     backupMerge: 'Birleştir',
     backupReplace: 'Yerine koy',
     backupBack: 'İlerlemen geri geldi.',
+    backupNothingNew: 'Yeni bir şey yok: bu zaten telefonunda vardı.',
     cancel: 'İptal',
     remindTitle: 'Bana her gün hatırlat',
     remindEvent: 'Hollandaca zamanı (10 dakika)',
@@ -300,9 +301,11 @@ const lang: HelpLanguageSource = {
     remindEveryDay: 'Hatırlatman: her gün saat {time}',
     remindStop: 'Hatırlatmayı durdur',
     remindStopped: 'Hatırlatmayı takviminden kaldırmak için dosyayı aç.',
+    remindStoppedAndroid: 'Hatırlatmayı Google Takvim\'den kendin sil.',
     resetKeeps: 'Derslerin, kelimelerin, günlük serin ve sertifikaların silinir. Dilin, kodun ve ayarların kalır.',
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Yüklenmedi. İnternet var mı?',
+    retry: 'Tekrar dene',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

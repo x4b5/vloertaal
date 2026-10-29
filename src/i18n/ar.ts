@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     backupMerge: { m: 'اجمعهما', f: 'اجمعيهما' },
     backupReplace: { m: 'استبدل', f: 'استبدلي' },
     backupBack: 'عاد تقدمك.',
+    backupNothingNew: 'لا شيء جديد: هذا كان موجوداً على هاتفك من قبل.',
     cancel: 'إلغاء',
     remindTitle: 'ذكّرني كل يوم',
     remindEvent: 'وقت الهولندية (10 دقائق)',
@@ -300,9 +301,11 @@ const lang: HelpLanguageSource = {
     remindEveryDay: 'تذكيرك: كل يوم الساعة {time}',
     remindStop: { m: 'أوقف التذكير', f: 'أوقفي التذكير' },
     remindStopped: { m: 'افتح الملف لإزالة التذكير من تقويمك.', f: 'افتحي الملف لإزالة التذكير من تقويمك.' },
+    remindStoppedAndroid: { m: 'احذف التذكير بنفسك من تقويم Google.', f: 'احذفي التذكير بنفسكِ من تقويم Google.' },
     resetKeeps: 'ستُحذف دروسك وكلماتك وأيامك المتتالية وشهاداتك. تبقى لغتك ورمزك وإعداداتك.',
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'لم يتم التحميل. هل الإنترنت متصل؟',
+    retry: 'إعادة المحاولة',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

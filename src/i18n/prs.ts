@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     backupMerge: 'یکجا کنید',
     backupReplace: 'عوض کنید',
     backupBack: 'پیشرفت شما دوباره آمد.',
+    backupNothingNew: 'چیز نو نبود: این از پیش در تیلفون شما بود.',
     cancel: 'لغو',
     remindTitle: 'هر روز به من یادآوری کن',
     remindEvent: 'وقت هالندی (10 دقیقه)',
@@ -300,9 +301,11 @@ const lang: HelpLanguageSource = {
     remindEveryDay: 'یادآوری شما: هر روز ساعت {time}',
     remindStop: 'یادآوری را خاموش کنید',
     remindStopped: 'فایل را باز کنید تا یادآوری از تقویم شما برداشته شود.',
+    remindStoppedAndroid: 'یادآوری را خودتان در تقویم Google پاک کنید.',
     resetKeeps: 'درس‌ها، کلمه‌ها، روزهای پی‌هم و تصدیق‌نامه‌های شما پاک می‌شوند. زبان، کد و تنظیمات شما می‌مانند.',
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'بارگیری نشد. انترنت وصل است؟',
+    retry: 'دوباره کوشش کنید',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -530,6 +530,15 @@ function joinedStreak(later: Partial<Progress>, earlier: Partial<Progress>, days
   return Math.max(own, n);
 }
 
+/** A value as text with its keys in order, so two objects built in another order compare equal. */
+const canon = (v: unknown): string => JSON.stringify(v, (_, x) => (x && typeof x === 'object' && !Array.isArray(x) ? Object.fromEntries(Object.entries(x).sort(([a], [b]) => (a < b ? -1 : 1))) : x));
+
+/** Did adding a backup change nothing that counts (lessons, words, certificates, streak, days)? Then "Niets nieuws". */
+export function mergeAddsNothing(before: Progress, after: Progress): boolean {
+  const learnt = (p: Progress) => canon([p.completed, p.cards ?? {}, p.certs ?? {}, p.xp, p.streak, bestStreak(p), p.lastDay, [...(p.days ?? [])].sort(), [...(p.rest ?? [])].sort(), p.reviewDay, p.parked?.reviewDay]);
+  return learnt(before) === learnt(after);
+}
+
 /** Adds a backup to the progress on this phone: the best of both, nothing is lost. */
 export function mergeBackup(p: Progress, file: Backup): Progress {
   const b = backupForTrack(file, trackOf(p));

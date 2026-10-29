@@ -158,6 +158,7 @@ export const uiNl: Record<UiKey, UiText> = {
   backupMerge: 'Samenvoegen',
   backupReplace: 'Vervangen',
   backupBack: 'Je voortgang is terug.',
+  backupNothingNew: 'Niets nieuws: dit stond al op je telefoon.',
   cancel: 'Annuleren',
   remindTitle: 'Herinner mij elke dag',
   remindEvent: 'Tijd voor je Nederlands (10 minuten)',
@@ -333,8 +334,10 @@ export const uiNl: Record<UiKey, UiText> = {
   remindEveryDay: 'Je herinnering: elke dag om {time}',
   remindStop: 'Stop de herinnering',
   remindStopped: 'Open het bestand. Dan haal je de herinnering uit je agenda.',
+  remindStoppedAndroid: 'Haal de herinnering zelf weg in Google Agenda.',
   resetKeeps: 'Je lessen, je dagen op rij en je certificaten worden gewist. Je taal, je code en je instellingen blijven.', // regels: no words
   loadFailed: 'Niet geladen. Is er internet?',
+  retry: 'Opnieuw proberen',
 };
 
 const lang: HelpLanguageSource = {

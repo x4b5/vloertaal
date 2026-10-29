@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     backupMerge: 'Adaugă',
     backupReplace: 'Înlocuiește',
     backupBack: 'Progresul tău a fost recuperat.',
+    backupNothingNew: 'Nimic nou: asta era deja pe telefonul tău.',
     cancel: 'Anulează',
     remindTitle: 'Amintește-mi în fiecare zi',
     remindEvent: 'E timpul pentru olandeză (10 minute)',
@@ -300,9 +301,11 @@ const lang: HelpLanguageSource = {
     remindEveryDay: 'Reamintirea ta: în fiecare zi la {time}',
     remindStop: 'Oprește reamintirea',
     remindStopped: 'Deschide fișierul ca să scoți reamintirea din calendar.',
+    remindStoppedAndroid: 'Șterge tu reamintirea din Google Calendar.',
     resetKeeps: 'Lecțiile, cuvintele, zilele la rând și certificatele tale se șterg. Limba, codul și setările tale rămân.',
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nu s-a încărcat. Este internet?',
+    retry: 'Încearcă din nou',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
