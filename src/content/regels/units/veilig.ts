@@ -136,11 +136,11 @@ export const veiligUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.veilig.2.wd1',
-          situation: 'Er is niemand gewond. Wat doe je?',
+          situation: 'Er is niemand gewond. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Niets. Er is toch niemand gewond geraakt.', best: false, feedback: 'Gelukkig niet. Maar de volgende keer misschien wel.' },
             { id: 'b', text: 'Hij zet de doos zelf recht, en zegt het niemand.', best: false, feedback: 'Goed dat hij helpt. Maar zo leert niemand ervan.' },
-            { id: 'c', text: "Hij waarschuwt de collega's en meldt het bij de leiding.", best: true, feedback: 'Goed. Zo voorkom je een echt ongeluk.' },
+            { id: 'c', text: "Hij waarschuwt de collega's en meldt het bij de leiding.", best: true, feedback: 'Goed. Zo voorkomt hij een echt ongeluk.' },
           ],
           why: 'Een bijna-ongeluk is een waarschuwing. Melden helpt om een echt ongeluk te voorkomen. Ook kleine dingen mag je melden.',
         },

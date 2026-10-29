@@ -175,11 +175,11 @@ export const startUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.start.3.wd1',
-          situation: 'Piotr snapt het niet goed. Wat doe je?',
+          situation: 'Piotr snapt het niet goed. Wat kan Piotr het beste doen?',
           options: [
-            { id: 'a', text: 'Je knikt, en je kijkt straks hoe de anderen het doen.', best: false, feedback: 'Begrijpelijk. Maar zo kun je een fout maken.' },
-            { id: 'b', text: 'Je zegt "ja", en je vraagt het later aan iemand anders.', best: false, feedback: 'Dan denkt Mark dat het goed gaat.' },
-            { id: 'c', text: 'Je zegt: "Nog een keer graag, iets langzamer."', best: true, feedback: 'Goed. Zo leer je het meteen goed.' },
+            { id: 'a', text: 'Hij knikt, en hij kijkt straks hoe de anderen het doen.', best: false, feedback: 'Begrijpelijk. Maar zo kan hij een fout maken.' },
+            { id: 'b', text: 'Hij zegt "ja", en hij vraagt het later aan iemand anders.', best: false, feedback: 'Dan denkt Mark dat het goed gaat.' },
+            { id: 'c', text: 'Hij zegt: "Nog een keer graag, iets langzamer."', best: true, feedback: 'Goed. Zo leert hij het meteen goed.' },
           ],
           why: 'Vragen stellen is hier normaal. Het laat zien dat je het goed wilt doen. Knikken zonder te snappen geeft fouten. Bij machines kan dat gevaarlijk zijn.',
         },
