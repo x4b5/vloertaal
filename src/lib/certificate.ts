@@ -134,9 +134,10 @@ export function certDate(day: string): string {
  * with their sector's unit in its place), then the other units (lib/route.ts routeOrder). Without
  * a sector this is the order of the whole course.
  */
-export function unitIndex(unit: Unit, sector?: SectorChoice, track: Track = trackOfId(unit.id)): number {
-  // A region's unit ("rg.zl.u") has its number in the path of a learner of that region.
-  const region = /^rg\.([a-z]+)\./.exec(unit.id)?.[1];
+export function unitIndex(unit: Unit, sector?: SectorChoice, track: Track = trackOfId(unit.id), learnerRegion?: string): number {
+  // A region's unit ("rg.zl.u") has its number in the path of a learner of that region; the
+  // units after it, in the path of a learner with a region, count it too.
+  const region = /^rg\.([a-z]+)\./.exec(unit.id)?.[1] ?? learnerRegion;
   const { main, other } = coursePlan(sector, track, region);
   const at = [...main, ...other].findIndex((u) => u.id === unit.id);
   return at >= 0 ? at : courseUnits(track).indexOf(unit);
@@ -190,10 +191,10 @@ export interface CertData {
   rules?: boolean;
 }
 
-export function certData(unit: Unit, day: string, name: string, lang?: HelpLanguage, sector?: SectorChoice): CertData {
+export function certData(unit: Unit, day: string, name: string, lang?: HelpLanguage, sector?: SectorChoice, region?: string): CertData {
   if (trackOfId(unit.id) === 'regels') {
     return {
-      unitNo: String(unitIndex(unit, sector) + 1).padStart(2, '0'),
+      unitNo: String(unitIndex(unit, sector, undefined, region) + 1).padStart(2, '0'),
       titleNl: unit.titleNl,
       titleEn: '',
       date: certDate(day),
@@ -205,7 +206,7 @@ export function certData(unit: Unit, day: string, name: string, lang?: HelpLangu
     };
   }
   return {
-    unitNo: String(unitIndex(unit, sector) + 1).padStart(2, '0'),
+    unitNo: String(unitIndex(unit, sector, undefined, region) + 1).padStart(2, '0'),
     titleNl: unit.titleNl,
     titleEn: unit.title,
     titleHelp: lang?.gloss[unit.id],

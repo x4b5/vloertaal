@@ -556,6 +556,15 @@ export default function App() {
   /** The learner's region (src/content/regio), for its Sociale kaart on the Hulp tab (once its file is here). */
   const region = regionOf(progress.region);
   const mapLink = region ? <SocialMapLink region={region} lang={lang} onOpen={() => go({ name: 'socialmap' })} /> : undefined;
+  /** The Hulp tab. The work-rules track: who to call, and "Alle regels" (instead of the emergency phrases). */
+  const hulpTab = () => (
+    <>
+      {track === 'regels'
+        ? <RulesHelp lang={lang} onShelf={() => go({ name: 'tips' })} after={mapLink} />
+        : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} after={mapLink} />}
+      <BottomNav current="words" onTab={tab} lang={lang} />
+    </>
+  );
 
   // "Keep lessons on this phone" (Settings → This phone): the current topic is kept by itself.
   useAutoOffline(progress, access);
@@ -744,16 +753,16 @@ export default function App() {
       // After "Certificaat behaald", the day-streak milestone still follows (once per day).
       const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
       return view.name === 'cert-earned' ? (
-        <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
+        <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} region={progress.region} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
           onPocket={() => replace({ name: 'pocket', unit: unit.id, streakUp: view.streakUp })} />
       ) : (
-        <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} onBack={onward} />
+        <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} region={progress.region} onBack={onward} />
       );
     }
     case 'pocket': {
       const unit = findUnit(view.unit);
       // From "Certificaat behaald": the day-streak milestone still follows.
-      return unit ? <PocketCardScreen unit={unit} lang={lang} sector={progress.sector} onBack={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())} /> : null;
+      return unit ? <PocketCardScreen unit={unit} lang={lang} sector={progress.sector} region={progress.region} onBack={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())} /> : null;
     }
     case 'all':
       return (
@@ -847,25 +856,17 @@ export default function App() {
         </>
       );
     }
-    case 'words':
-      return (
-        <>
-          {/* The work-rules track: who to call, and "Alle regels" (instead of the emergency phrases). */}
-          {track === 'regels'
-            ? <RulesHelp lang={lang} onShelf={() => go({ name: 'tips' })} after={mapLink} />
-            : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} after={mapLink} />}
-          <BottomNav current="words" onTab={tab} lang={lang} />
-        </>
-      );
     case 'socialmap':
       // Back from a region switched off meanwhile (or its file not here): the Hulp tab.
-      if (!region) return null;
-      return (
+      if (region) return (
         <>
           <SocialMap region={region} lang={lang} onBack={back} />
           <BottomNav current="words" onTab={tab} lang={lang} />
         </>
       );
+      return hulpTab();
+    case 'words':
+      return hulpTab();
     default:
       if (stopped !== null) {
         return <StreakStopped streak={stopped} best={bestStreak(progress)} lang={lang} onDone={() => setStopped(null)} />;

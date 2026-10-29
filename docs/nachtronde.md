@@ -58,6 +58,8 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | Dezelfde back-up opnieuw samenvoegen gaf een gebruikte vrije dag terug (eindeloos herhaalbaar) | iedereen met een back-up | de vrije dagen komen van de kant met de laatste oefendag |
 | Na een klok die terugging, stond in de weekrij een dag die nog moest komen als gedaan | reizigers | alleen dagen tot vandaag |
 | De app 's nachts open laten (op de achtergrond): de vlam en reeks bleven op gisteren, en "je reeks is gestopt" kwam nooit | iedereen | bijgewerkt zodra de app weer in beeld komt (niet midden in een les) |
+| Met een regio: certificaat en spiekkaartje gaven een ander onderwerpnummer dan het pad (24 tegen 25) | Zuid-Limburg (zodra regio's live gaan) | hetzelfde nummer als op het pad |
+| De Sociale kaart zonder het regiobestand: een leeg scherm zonder balk | Zuid-Limburg, slechte verbinding | het Hulp-tabblad |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
@@ -131,5 +133,8 @@ slagen alle 1179 tests en de build. In de browser toont `/?taal=pl` "Polski?", i
    en niet de geparkeerde plek van de andere route. Samenvoegen kan "Herhaal vandaag" van de ene
    route als klaar tellen voor de andere. Ook wordt het `version`-nummer van het bestand niet
    gecontroleerd. Klein, maar het bestandsformaat aanpassen wilde ik niet zonder overleg.
-10. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+10. **Een onderwerp dat na een update een les extra krijgt**: het certificaat blijft (bewust),
+    maar het knopje "Certificaat" op de onderwerppagina verdwijnt, en het certificaat telt de
+    nieuwe les mee ("4 lessen" waar er 3 gedaan zijn). Kiezen wat de bedoeling is.
+11. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
    vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.
