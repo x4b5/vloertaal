@@ -38,6 +38,10 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | De lettertegels leerden "de esigaret" (zonder streepje) | Tigrinya, Arabisch, Perzisch, Dari, Oekraïens, Bulgaars | woorden met een streepje of cijfer worden geluisterd, niet gespeld |
 | Certificaat als download bewaard: geen melding | computer, Firefox op Android | "De afbeelding is bewaard" |
 | "€ 112" zou als "één één twee euro" klinken | (nog geen les) | een bedrag blijft een bedrag |
+| Lukte het stylesheet niet bij de start, dan bleef het startscherm voor altijd staan | slechte verbinding | "Opnieuw" (ook vanzelf als internet terug is) |
+| Bleef het taalbestand hangen (geen antwoord), dan bleef het startscherm zonder knop staan | slechte verbinding | na 8 s "Opnieuw"; komt het bestand toch, dan gaat de app verder |
+| De luidsprekerknop liet de schermlezer "Vrouw of man?" met een Arabische (Poolse …) stem lezen | blinde en slechtziende leerlingen | het Nederlandse deel heeft `lang="nl"` |
+| Kaarten die naar een volgende pagina gaan heetten "keuzerondje" | schermlezer | gewone knoppen; echte keuzes kregen pijltjestoetsen |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
@@ -85,5 +89,10 @@ conflict. Samen slagen alle 1169 tests en de build. In de browser toont `/?taal=
    op het hoofdbestand (±220 kB gzip). Alleen de lesspeler lui laden scheelt maar 10 kB, met
    risico op een wachtscherm bij de eerste les; daarom teruggedraaid. Echte winst vraagt een
    grotere opsplitsing (de inhoud per thema, de oefeningen per soort). Dat is een eigen project.
-3. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+3. **"Opnieuw proberen" op het foutscherm** heeft een Engelse naam voor de schermlezer. Het
+   scherm komt vóór het taalbestand, dus er is nog geen vertaling. Er moet een korte vertaling bij
+   in `src/i18n/meta.ts` (via de vertaalcontrole).
+4. **Sectorpagina na Terug en dan Vooruit** kan op stap 2 openen. Dat kan alleen met een
+   Vooruit-knop (een computer), en het gevolg is klein. Niet aangepast.
+5. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
    vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.
