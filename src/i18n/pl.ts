@@ -181,7 +181,7 @@ const lang: HelpLanguageSource = {
     wordsUnitOne: 'słowo',
     wordsLearnedOne: 'Nauczone słowo: {n}',
     tomorrowOne: 'Jutro: {n} słowo',
-    wordsStrongerOne: '{n} słowo mocniej',
+    wordsStrongerOne: '{n} słowo lepiej utrwalone',
     recordOne: 'Twój rekord: {n} dzień',
     streakStoppedOne: 'Twoja seria skończyła się na {n} dniu. Zacznij dziś od nowa.',
     letterTiles: 'Litery',
