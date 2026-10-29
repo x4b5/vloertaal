@@ -325,7 +325,7 @@ Per taal: aantallen, de belangrijkste verbeteringen en de open vragen.
 - [ ] `w.oproepkracht`, `c.contract.b`: "نیروی کار آنکال": duidelijk voor laaggeletterde werkers?
 - [ ] `ui.sectorLogistics`: "انبار و لجستیک": past dat op de sectorknop?
 - [ ] `c.texting.p`: "با احترام، علی" is formeler dan het Nederlandse "Groet". Beter "ممنون، علی"?
-- [ ] `ui.remindEvening`: "شب": duidelijker als "عصر" of "سر شب"?
+- [x] ~~`ui.remindEvening`~~: niet meer in de app (weggehaald 29 oktober 2026).
 - [ ] `c.leave.a`: "ژوئیه (جولای)": zijn Gregoriaanse maandnamen duidelijk voor deze lezers?
 - [ ] `ui.genderHint`: Perzisch heeft geen geslachtsvormen. Wordt dit scherm voor fa wel getoond, en zo ja: klopt de tekst?
 - [ ] `c.understood.q`, `c.understood.a`: "مرتب کن": leest dat als opruimen of als sorteren?

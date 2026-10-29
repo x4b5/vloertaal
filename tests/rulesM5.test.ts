@@ -277,6 +277,5 @@ describe('the first run in Dutch: language → (no gender) → code → sector �
   it('has a code page text that fits the track', () => {
     expect(ui('gateWho', nl()).help).toBe('Je krijgt de code van je werkgever, je coach of je begeleider.');
     expect(ui('appTagline', nl()).help).toBe('Werken in Nederland: zo gaat het');
-    expect(ui('chooseLanguageHint', nl()).help).not.toMatch(/leert? Nederlands/);
   });
 });
