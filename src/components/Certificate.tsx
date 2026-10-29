@@ -170,8 +170,10 @@ function NamePage({ name, lang, onDone }: { name: string; lang?: HelpLanguage; o
  * also be printed; the picture saved as a PNG where files cannot be shared) and
  * [Change name]. The name is asked first, on its own page.
  */
-export function CertificateScreen({ unit, day, lang, onBack, sector, region }: {
+export function CertificateScreen({ unit, day, lang, onBack, sector, region, completed }: {
   unit: Unit;
+  /** The lessons done: the certificate counts only those (certData). */
+  completed?: Record<string, unknown>;
   /** The learner's sector and region: the unit's number as on their own path. */
   sector?: SectorChoice;
   region?: string;
@@ -186,7 +188,7 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region }: {
   const [asking, setAsking] = useState(stored === null);
   const [busy, setBusy] = useState(false);
   const [saved, setSaved] = useState(false);
-  const data = certData(unit, day, name, lang, sector, region);
+  const data = certData(unit, day, name, lang, sector, region, completed);
   const rtl = lang?.dir === 'rtl';
 
   // The tab title becomes the PDF's file name when it is saved from the print dialog.
@@ -264,8 +266,9 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region }: {
  * "Certificaat behaald": shown once, after the result of a unit's last lesson. The milestone
  * shell (Bram, one line, the footer button), with the certificate preview and Bekijk / Later.
  */
-export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector, region }: {
+export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector, region, completed }: {
   unit: Unit;
+  completed?: Record<string, unknown>;
   sector?: SectorChoice;
   region?: string;
   /** Opens the unit's pocket card, next to the certificate. */
@@ -276,7 +279,7 @@ export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector,
   onLater: () => void;
 }) {
   const [name] = useState(() => loadCertName() ?? '');
-  const data = certData(unit, day, name, lang, sector, region);
+  const data = certData(unit, day, name, lang, sector, region, completed);
   return (
     <div className="player milestone-screen cert-earned">
       <div className="player-body milestone">

@@ -1,41 +1,31 @@
-import { dayKey } from './progress';
-
 /**
- * Anonymous usage counting, without tracking. A few events (the app opened today, a lesson
- * started, stopped or finished, a review or a unit finished) are counted on GoatCounter
- * (cookieless): one request per event, plus one per aggregate dimension (the help language, the
- * sector, and for a lesson which lesson and, when it is stopped, in which quarter). Every
- * dimension is its own count, never combined with another, so nothing singles anyone out. No
- * cookies, no ids of people, no names, nothing stored about the learner on our side.
+ * Anonymous usage counting, without tracking: what the privacy text says (Settings, About) and
+ * nothing more — how often lessons are done, and about how long they take. Counted on GoatCounter
+ * (cookieless): **one request per event**, whose path names only content: the event, the lesson,
+ * and for a stopped lesson the quarter it was stopped in, for a finished one a band of minutes.
+ * Nothing about the learner goes along: no help language, no sector, no version, no id, no name.
+ * (GoatCounter itself sees the request's IP address and browser, as every web server does; with
+ * only content in the path, a count cannot say who it was.)
  *
- * Started, stopped and finished per lesson show where learners give up (docs/pilot.md). A finished
- * lesson also says roughly how long it took (a band of minutes, never a time of day), and every
- * event which version it came from (the sneak preview without a code, or the full version), so
- * the owner sees how many only look and how many ask for a code ('unlock').
+ * Started, stopped and finished per lesson show where learners give up (docs/pilot.md).
  *
  * Nothing is sent:
  * - in development and tests (only a production build on vloertaal.nl counts, not a preview);
  * - when the learner switched "Anoniem meetellen" off in Settings;
- * - when the browser asks not to be tracked (Do Not Track).
+ * - when the browser asks not to be tracked (Do Not Track, Global Privacy Control).
  */
 
 /** The owner's GoatCounter site; its root is also the dashboard. */
 export const COUNTER: string = (import.meta.env.VITE_COUNTER_URL as string | undefined) || 'https://vloertaal.goatcounter.com';
 
-export type CountEvent = 'open' | 'lesson-start' | 'lesson-quit' | 'lesson-done' | 'review-done' | 'unit-done' | 'unlock';
+export type CountEvent = 'lesson-start' | 'lesson-quit' | 'lesson-done' | 'review-done' | 'unit-done';
 
-/** The only dimensions ever sent, each counted on its own: never a time, a person or anything else that could single someone out. */
+/** What a count may say: only about the content, never about the learner. */
 export interface CountDims {
-  /** Help-language code; null/undefined = English only. */
-  lang?: string | null;
-  /** Sector id, 'none', or undefined when not chosen yet. */
-  sector?: string | null;
   /** The lesson (content, not a person): with lesson-start, lesson-quit and lesson-done. */
   lesson?: string;
   /** lesson-quit: how far the lesson got, 1–4 (the quarter it was stopped in, see quarterOf). */
   quarter?: number;
-  /** The version in use: 'sample' (the sneak preview, no code), 'preview', 'full'; null = no access yet. With 'unlock': the version before the code. */
-  access?: string | null;
   /** lesson-done, review-done: minutes the lesson was on screen, counted as a band (see minutesBand). */
   minutes?: number;
 }
@@ -63,7 +53,6 @@ export const resumeClock = (c: LessonClock, now = Date.now()): LessonClock => (c
 export const clockMinutes = (c: LessonClock, now = Date.now()): number => pauseClock(c, now).ms / 60000;
 
 const OFF_KEY = 'vloertaal:count-off';
-const OPEN_KEY = 'vloertaal:count-open';
 
 interface Env {
   prod: boolean;
@@ -126,33 +115,17 @@ export function mayCount(): boolean {
   return e.prod && LIVE.test(e.host) && !e.dnt && countingOn();
 }
 
-/** A dimension value as a short, safe path segment. */
-const seg = (v: string) => v.toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 24) || 'x';
-
 /** A lesson id as a path segment: "l.cv" → "l-cv", "r.l.loon.1" → "r-l-loon-1". */
 const lessonSeg = (id: string) => id.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'x';
 
 /**
- * The paths one event is counted under: the event, and the event per language, per sector and
- * per version; with a lesson also per lesson (and per quarter or band of minutes: overall and in
- * that lesson).
+ * The one path an event is counted under: the event, then the lesson, then the quarter it was
+ * stopped in or the band of minutes it took ("/e/lesson-quit/l-cv/q2", "/e/review-done/t2-5").
  */
-export function countPaths(event: CountEvent, dims: CountDims = {}): string[] {
-  const paths = [
-    `/e/${event}`,
-    `/e/${event}/lang-${seg(dims.lang || 'en')}`,
-    `/e/${event}/sector-${seg(dims.sector || 'unknown')}`,
-  ];
-  if (dims.access !== undefined) paths.push(`/e/${event}/access-${seg(dims.access || 'none')}`);
+export function countPath(event: CountEvent, dims: CountDims = {}): string {
   const q = dims.quarter ? `q${Math.min(4, Math.max(1, Math.round(dims.quarter)))}` : '';
-  if (q) paths.push(`/e/${event}/${q}`);
   const t = dims.minutes !== undefined && Number.isFinite(dims.minutes) ? minutesBand(dims.minutes) : '';
-  if (t) paths.push(`/e/${event}/${t}`);
-  if (dims.lesson) {
-    const l = `/e/${event}/lesson/${lessonSeg(dims.lesson)}`;
-    paths.push(l, ...(q ? [`${l}/${q}`] : []), ...(t ? [`${l}/${t}`] : []));
-  }
-  return paths;
+  return ['/e', event, dims.lesson ? lessonSeg(dims.lesson) : '', q, t].filter(Boolean).join('/');
 }
 
 function send(url: string): void {
@@ -167,27 +140,10 @@ function send(url: string): void {
   }
 }
 
-/** Counts one event (and its language and sector variants). A no-op unless mayCount(). */
+/** Counts one event (one request). A no-op unless mayCount(). */
 export function count(event: CountEvent, dims: CountDims = {}): boolean {
   if (!mayCount()) return false;
   const base = COUNTER.replace(/\/+$/, '');
-  for (const p of countPaths(event, dims)) {
-    send(`${base}/count?p=${encodeURIComponent(p)}&e=true&t=${encodeURIComponent(event)}`);
-  }
+  send(`${base}/count?p=${encodeURIComponent(countPath(event, dims))}&e=true&t=${encodeURIComponent(event)}`);
   return true;
-}
-
-/** "open": at most once per local day per device (the day is kept in localStorage). */
-export function countOpen(dims: CountDims = {}, now = new Date()): boolean {
-  if (!mayCount()) return false;
-  const today = dayKey(now);
-  try {
-    const s = storage();
-    if (!s || s.getItem(OPEN_KEY) === today) return false;
-    s.setItem(OPEN_KEY, today);
-  } catch {
-    // Without storage we can't tell a second open from the first: don't count it at all.
-    return false;
-  }
-  return count('open', dims);
 }

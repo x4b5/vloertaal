@@ -33,7 +33,7 @@ import {
   AlertIcon, AutoThemeIcon, CalendarIcon, CheckIcon, ChevronIcon, CloseIcon, CrateIcon, GlobeIcon, KeyboardIcon,
   LettersIcon, LockIcon, MoonIcon, PencilIcon, RouteIcon, SpeakerIcon, SpeakerOffIcon, SunIcon,
 } from './Icons';
-import { BackupCard, ClockGlyph, InstallCard, OwnTime, addReminder, stopReminder } from './Keep';
+import { BackupCard, ClockGlyph, InstallCard, OwnTime, addReminder, remindAddedKey, stopReminder } from './Keep';
 import { DownloadIcon, OfflineSettingCard } from './Offline';
 import { LogoMark } from './Logo';
 import { LanguagePicker } from './Screens';
@@ -547,7 +547,7 @@ function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: 
         }))}
       />
       <OwnTime card lang={lang} current={own} onTime={add} />
-      <p className="max3-hint" role="status"><Bi text={ui(saved && reminderTapAdds(saved, current) ? 'remindAdded' : 'remindHint', lang)} /></p>
+      <p className="max3-hint" role="status"><Bi text={ui(saved && reminderTapAdds(saved, current) ? remindAddedKey() : 'remindHint', lang)} /></p>
     </>
   );
 }

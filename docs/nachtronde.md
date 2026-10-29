@@ -164,7 +164,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
 
 ## Bewust níét gedaan (graag een besluit)
 
-0. **Privacy van het anoniem meetellen (belangrijk).** Een review van alles wat de app verstuurt:
+0. **Privacy van het anoniem meetellen (belangrijk).** *Besloten 29 oktober: minder, en aan. Gedaan: één verzoek per gebeurtenis, alleen de les, het kwart en de minutenband; geen hulptaal, sector, versie, openen of code meer (zie `docs/pilot.md`). Zo klopt de privacytekst zoals hij is.* Een review van alles wat de app verstuurt:
    - Wat goed is: geen verzoeken naar derden behalve de teller; uit is echt uit (ook "Do Not
      Track", en sinds vannacht ook "Global Privacy Control" en een uitgezette schakelaar bij
      geblokkeerde opslag); "Melden" opent je eigen mail met precies wat je ziet.
@@ -193,38 +193,38 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
    in `src/i18n/meta.ts` (via de vertaalcontrole).
 4. **Sectorpagina na Terug en dan Vooruit** kan op stap 2 openen. Dat kan alleen met een
    Vooruit-knop (een computer), en het gevolg is klein. Niet aangepast.
-5. **Een ander lidwoord telt als "bijna goed"** ("het tafel" voor "de tafel"). Bedoeld voor een
+5. *Besloten en gedaan (29 oktober): een verkeerd lidwoord is fout; een vergeten lidwoord blijft "bijna goed".* **Een ander lidwoord telt als "bijna goed"** ("het tafel" voor "de tafel"). Bedoeld voor een
    *vergeten* lidwoord; een *verkeerd* lidwoord gaat er nu ook door, en het woord gaat in de
    herhaling omhoog. Zo wordt de/het nooit als fout geoefend. Strenger maken is een keuze over
    de lesaanpak; daarom niet zelf gedaan.
-6. **Herhaling aanvullen** met woorden die nog niet aan de beurt waren: goed beantwoord gaan ze
+6. *Besloten en gedaan (29 oktober): een woord dat nog niet aan de beurt was houdt bij goed zijn vak; de datum schuift een dag op.* **Herhaling aanvullen** met woorden die nog niet aan de beurt waren: goed beantwoord gaan ze
    een vak omhoog, gerekend vanaf vandaag (een woord uit vak 5 komt dan pas over 30 dagen terug).
    Kan door alleen de datum te verschuiven en het vak te laten. Ontwerpkeuze, niet aangepast.
 7. **Tigrinya: vier paren met dezelfde vertaling** (gevaar/ongeluk ሓደጋ, beschadigd/gewond ዝተጎድአ,
    hygiëne/kwaliteit ጽሬት, persoonlijk/privé ውልቃዊ). In een meerkeuzevraag staan ze dan als twee
    gelijke antwoorden naast elkaar. Voor de vertaalcontrole: nieuwe vertalingen niet zelf gemaakt.
-8. **Twee vrije dagen dekken geen weekend**: wie er twee heeft en zaterdag en zondag overslaat,
+8. *Besloten en gedaan (29 oktober): elke gemiste dag kost één vrije dag; met twee is een weekend vrij gedekt.* **Twee vrije dagen dekken geen weekend**: wie er twee heeft en zaterdag en zondag overslaat,
    verliest de reeks (een vrije dag dekt alleen precies één gemiste dag). Voor mensen die werken is
    een vrij weekend normaal. Bewust zo? Anders: één vrije dag per gemiste dag.
-9. **Back-up en de twee routes**: het bestand bewaart niet bij welke route de herhaaldag hoort,
+9. *Besloten en gedaan (29 oktober): het bestand (versie 2) zegt nu bij welke route het hoort; bij samenvoegen en terugzetten blijft de herhaaldag van elke route bij die route, en de plek van de andere route komt mee. Oude bestanden werken als voorheen. Het versienummer wordt nog steeds niet gecontroleerd (een nieuwer bestand weigeren zou "geen Vloertaal-bestand" zeggen, wat niet klopt).* **Back-up en de twee routes**: het bestand bewaart niet bij welke route de herhaaldag hoort,
    en niet de geparkeerde plek van de andere route. Samenvoegen kan "Herhaal vandaag" van de ene
    route als klaar tellen voor de andere. Ook wordt het `version`-nummer van het bestand niet
    gecontroleerd. Klein, maar het bestandsformaat aanpassen wilde ik niet zonder overleg.
-10. **Een onderwerp dat na een update een les extra krijgt**: het certificaat blijft (bewust),
+10. *Besloten en gedaan (29 oktober): het knopje "Certificaat" blijft, en het certificaat telt alleen de gedane lessen (en hun woorden).* **Een onderwerp dat na een update een les extra krijgt**: het certificaat blijft (bewust),
     maar het knopje "Certificaat" op de onderwerppagina verdwijnt, en het certificaat telt de
     nieuwe les mee ("4 lessen" waar er 3 gedaan zijn). Kiezen wat de bedoeling is.
-11. **De dagelijkse herinnering op Android**: het agendabestand (.ics) belandt in Downloads, en
+11. *Besloten en gedaan (29 oktober): op Android opent "Zet in mijn agenda" een ingevulde Google Agenda-pagina (elke dag, tijdzone van de telefoon); daarna staat er niet meer "Open het bestand". Nog open: "Stop de herinnering" op Android (Google Agenda kan geen annulering via een link; de leerling haalt hem zelf weg, en die tekst vraagt een vertaling), en een nieuwe tijd geeft daar een tweede gebeurtenis.* **De dagelijkse herinnering op Android**: het agendabestand (.ics) belandt in Downloads, en
     Google Agenda op Android kan zo'n bestand niet openen; toch zegt de app "toegevoegd", en in
     Instellingen kan dezelfde tijd niet opnieuw. Delen via het deelmenu helpt niet (Chrome deelt
     geen .ics). Een oplossing is een link naar Google Agenda ("nieuwe gebeurtenis, elke dag"),
     maar dat is een externe dienst: graag een besluit. Ook: "Stop de herinnering" stuurt een
     annulering als bestand, wat agenda's waarschijnlijk niet als annulering lezen; en op iOS
     buiten Safari (in-app-browser) wijzen de installatiestappen naar een knop die er niet is.
-12. **Een oude opgeslagen telefoonstem** (bijvoorbeeld "Google Nederlands", van vóór de
+12. *Besloten en gedaan (29 oktober): een oude opgeslagen telefoonstem wordt bij het laden één keer "automatisch"; ze horen dan de opnames en zien de gewone keuze.* **Een oude opgeslagen telefoonstem** (bijvoorbeeld "Google Nederlands", van vóór de
     keuze vrouw/man/automatisch): die leerlingen horen altijd de telefoonstem, en Instellingen
     toont geen keuze. Omzetten naar "automatisch" zou de opnames geven; dat verandert wat ze
     horen, dus niet zelf gedaan.
-13. **Na een les uit een afgerond onderwerp** noemt de uitslag als "volgende" een les van het
+13. *Besloten en gedaan (29 oktober): na een les uit een ander (afgerond) onderwerp gaat Verder terug naar de route, waar de genoemde "volgende" les staat; het "net gedaan"-sprongetje komt dan niet.* **Na een les uit een afgerond onderwerp** noemt de uitslag als "volgende" een les van het
     huidige onderwerp, terwijl Verder teruggaat naar het afgeronde onderwerp; en het "net
     gedaan"-sprongetje op de home kan later bij een ander onderwerp komen. Klein; de juiste
     tekst hangt af van wat je daar wilt laten zien.
@@ -233,11 +233,11 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
     Misschien bewust; graag even kijken. En: Nederlandse woorden in een schermlezerlabel
     (bijvoorbeeld "Aanbevolen · …") worden met de stem van de hulptaal gelezen; dat vraagt een
     andere opbouw van die labels.
-15. **"Extra ronde" bij "Herhaal vandaag"** kan nooit getikt worden: de kaart staat alleen op de
+15. *Besloten en gedaan (29 oktober): als de herhaling klaar is en er nog woorden wachten, staat er een kleine kaart met "Extra ronde" op de home.* **"Extra ronde" bij "Herhaal vandaag"** kan nooit getikt worden: de kaart staat alleen op de
     home zolang er woorden aan de beurt zijn (het ontwerp "hooguit 3 tikken"), en de knop zit in de
     kaart als de herhaling klaar is. Zo wachten de woorden boven de 10 tot morgen. Kaart (klein)
     terug als klaar, of de knop weghalen: graag een besluit.
-16. **De figuren ademen en knipperen eindeloos** op de home en in de les, zolang het scherm aan
+16. *Besloten en gedaan (29 oktober): de figuren ademen drie keer en knipperen daarna alleen nog; een nieuw scherm of een nieuwe oefening start het ademen opnieuw.* **De figuren ademen en knipperen eindeloos** op de home en in de les, zolang het scherm aan
     staat (ook als de telefoon blijft liggen). Klein, maar het kost doorlopend rekenwerk en dus
     batterij. Bijvoorbeeld na een paar keer ademen stoppen en alleen knipperen? Ontwerpkeuze.
 17. **Back-up**: er is geen herinnering om een back-up te maken (alleen de herinnering om te

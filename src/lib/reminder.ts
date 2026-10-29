@@ -1,6 +1,7 @@
 /**
  * "Herinner mij elke dag" without a server: a calendar file (.ics) with one event that repeats
- * every day. The phone's own calendar does the reminding, so nothing is sent anywhere.
+ * every day. The phone's own calendar does the reminding, so nothing is sent anywhere. On Android
+ * a filled-in Google Calendar page instead (googleCalendarUrl).
  */
 
 import type { Track } from './track';
@@ -76,7 +77,8 @@ export function reminderCancelIcs(time: string, appUrl: string, now: Date, track
   return calendar('CANCEL', time, appUrl, now, track, help, event);
 }
 
-function calendar(method: 'PUBLISH' | 'CANCEL', time: string, appUrl: string, now: Date, track: Track, help: string | undefined, event: ReminderEvent): string {
+/** The first event: its title (with the help language), start (today if `time` is still to come, else tomorrow) and end. */
+function firstEvent(time: string, now: Date, track: Track, help: string | undefined) {
   const text = reminderText(track);
   // The help language too (the learner may not read the Dutch yet): "Bram: tijd voor je
   // Nederlands (10 minuten) · Czas na niderlandzki (10 minut)".
@@ -85,8 +87,39 @@ function calendar(method: 'PUBLISH' | 'CANCEL', time: string, appUrl: string, no
   const start = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m);
   if (start <= now) start.setDate(start.getDate() + 1);
   const end = new Date(start.getTime() + text.minutes * 60_000);
-  const local = (d: Date) =>
-    `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+  return { text, title, start, end };
+}
+
+/** Local time as in a calendar: 20261009T070000. */
+const local = (d: Date) =>
+  `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+
+/**
+ * Android: Google Calendar cannot open a .ics file from Downloads, so the reminder is a link to
+ * Google Calendar's own "new event" page, filled in (every day, at `time` in the phone's time
+ * zone). Nothing is sent until the learner saves it there. The event has no UID, so a new time
+ * is a new event there (the old one is deleted in the calendar).
+ */
+export function googleCalendarUrl(time: string, appUrl: string, now: Date, track: Track = 'taal', help?: string, zone?: string): string {
+  const { text, title, start, end } = firstEvent(time, now, track, help);
+  const q = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: title,
+    dates: `${local(start)}/${local(end)}`,
+    recur: 'RRULE:FREQ=DAILY',
+    details: `${text.description} ${appUrl}`,
+  });
+  if (zone) q.set('ctz', zone);
+  return `https://calendar.google.com/calendar/render?${q}`;
+}
+
+/** Android, where a calendar file lands in Downloads and Google Calendar cannot open it. */
+export function isAndroid(ua: string = typeof navigator === 'undefined' ? '' : navigator.userAgent): boolean {
+  return /Android/i.test(ua);
+}
+
+function calendar(method: 'PUBLISH' | 'CANCEL', time: string, appUrl: string, now: Date, track: Track, help: string | undefined, event: ReminderEvent): string {
+  const { text, title, start, end } = firstEvent(time, now, track, help);
   const utc = (d: Date) =>
     `${d.getUTCFullYear()}${pad(d.getUTCMonth() + 1)}${pad(d.getUTCDate())}T${pad(d.getUTCHours())}${pad(d.getUTCMinutes())}${pad(d.getUTCSeconds())}Z`;
   const lines = [

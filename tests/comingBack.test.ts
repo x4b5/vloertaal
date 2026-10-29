@@ -2,11 +2,11 @@ import { describe, expect, it } from 'vitest';
 import { teachingLessons } from '../src/content/curriculum';
 import { helpLanguages } from '../src/i18n/all';
 import {
-  FREEZE_MAX, backupFile, bestStreak, completeDaily, completeLesson, currentStreak, doneToday, emptyProgress,
+  FREEZE_MAX, backupFile, backupForTrack, bestStreak, completeDaily, completeLesson, currentStreak, doneToday, emptyProgress,
   mergeBackup, parseBackup, replaceWithBackup, settleStreak, workWeek, type Progress,
 } from '../src/lib/progress';
 import { addLessonWords, applyReview, dailyCard, strongerCount } from '../src/lib/spaced';
-import { parseTime, reminderIcs } from '../src/lib/reminder';
+import { googleCalendarUrl, isAndroid, parseTime, reminderIcs } from '../src/lib/reminder';
 
 // October 2026: the 5th is a Monday.
 const day = (d: number) => new Date(2026, 9, d, 12);
@@ -45,17 +45,27 @@ describe('streak: today, free days and the record', () => {
     expect(after.rest).toEqual(['2026-10-08']);
   });
 
-  it('stops the streak after two missed days, or one without a free day, and keeps the record', () => {
+  it('two free days cover two missed days (a weekend off)', () => {
+    const p = practise([1, 2, 3, 4, 5, 6, 7]); // free days earned on day 3 and day 7
+    expect(p.freezes).toBe(2);
+    const s = settleStreak(p, day(10)); // days 8 and 9 missed
+    expect(s.broken).toBeUndefined();
+    expect(s.progress).toMatchObject({ streak: 7, freezes: 0, lastDay: '2026-10-09' });
+    expect(s.progress.rest).toEqual(['2026-10-08', '2026-10-09']);
+    expect(completeLesson(s.progress, 'l.y', 1, false, day(10)).streak).toBe(8);
+  });
+
+  it('stops the streak after more missed days than free days, or one without a free day, and keeps the record', () => {
     const p = practise([1, 2, 3, 4, 5, 6, 7]);
-    const s = settleStreak(p, day(10));
+    const s = settleStreak(p, day(11)); // three missed, two free days
     expect(s.broken).toBe(7);
     expect(s.progress.streak).toBe(0);
     expect(bestStreak(s.progress)).toBe(7);
     // Shown once: settling again reports nothing.
-    expect(settleStreak(s.progress, day(10)).broken).toBeUndefined();
+    expect(settleStreak(s.progress, day(11)).broken).toBeUndefined();
     const q = practise([1, 2, 3], { ...emptyProgress, bestStreak: 5 }); // no free day in hand
     expect(settleStreak(q, day(5)).broken).toBe(3);
-    const again = completeLesson(s.progress, 'l.y', 1, false, day(10));
+    const again = completeLesson(s.progress, 'l.y', 1, false, day(11));
     expect(again.streak).toBe(1);
     expect(again.bestStreak).toBe(7);
   });
@@ -127,6 +137,27 @@ describe('backup', () => {
     expect(junk?.lastDay).toBeUndefined();
   });
 
+  it('keeps each route\'s review day apart (the file says its route)', () => {
+    // Saved on the work-rules route ('nl'): its review was done on the 8th, the language route's on the 5th.
+    const rules = { ...p, helpLang: 'nl' as const, reviewDay: '2026-10-08', parked: { reviewDay: '2026-10-05' } };
+    const file = parseBackup(backupFile(rules, day(8)))!;
+    expect(file.track).toBe('regels');
+    expect(backupForTrack(file, 'regels').reviewDay).toBe('2026-10-08');
+    // Read on a phone on the language route: the rules review does not count as its own.
+    const here = { ...emptyProgress, helpLang: 'pl' as const };
+    const merged = mergeBackup(here, file);
+    expect(merged.reviewDay).toBe('2026-10-05');
+    expect(merged.parked?.reviewDay).toBe('2026-10-08');
+    const replaced = replaceWithBackup(here, file);
+    expect(replaced.reviewDay).toBe('2026-10-05');
+    expect(replaced.parked?.reviewDay).toBe('2026-10-08');
+    // A version-1 file (no route) is taken as it is.
+    const old = parseBackup(JSON.stringify({ app: 'vloertaal', version: 1, progress: { completed: {}, reviewDay: '2026-10-08', parked: { reviewDay: '2026-10-07' } } }))!;
+    expect(old.track).toBeUndefined();
+    expect(old.parked).toBeUndefined(); // its route is not known, so neither is the other one
+    expect(mergeBackup(here, old).reviewDay).toBe('2026-10-08');
+  });
+
   it('merges (best of both) or replaces, keeping this phone\'s settings', () => {
     const here = { ...practise([5]), theme: 'dark' as const, xp: 5, completed: { a: { best: 0.5, times: 3 } } };
     const file = { completed: { a: { best: 1, times: 1 }, b: { best: 1, times: 1 } }, xp: 40, streak: 9, lastDay: '2026-10-04', bestStreak: 12 };
@@ -179,6 +210,26 @@ describe('daily reminder (.ics)', () => {
     expect(ics.split('\r\n').every((l) => new TextEncoder().encode(l).length <= 75)).toBe(true);
     expect(reminderIcs('18:00', 'x', new Date(2026, 9, 8, 9, 30))).toContain('DTSTART:20261008T180000');
     expect(parseTime('25:00')).toEqual([18, 0]);
+  });
+});
+
+describe('daily reminder on Android (Google Calendar)', () => {
+  it('fills in Google Calendar\'s own page: every day, the next such time, in the phone\'s time zone', () => {
+    const url = new URL(googleCalendarUrl('07:00', 'https://vloertaal.nl/', new Date(2026, 9, 8, 9, 30), 'taal', 'Czas na niderlandzki', 'Europe/Amsterdam'));
+    expect(url.origin + url.pathname).toBe('https://calendar.google.com/calendar/render');
+    const q = url.searchParams;
+    expect(q.get('action')).toBe('TEMPLATE');
+    expect(q.get('dates')).toBe('20261009T070000/20261009T071000');
+    expect(q.get('recur')).toBe('RRULE:FREQ=DAILY');
+    expect(q.get('text')).toBe('Bram: tijd voor je Nederlands (10 minuten) · Czas na niderlandzki');
+    expect(q.get('details')).toContain('https://vloertaal.nl/');
+    expect(q.get('ctz')).toBe('Europe/Amsterdam');
+    expect(new URL(googleCalendarUrl('18:00', 'x', new Date(2026, 9, 8, 9, 30), 'regels')).searchParams.get('dates')).toBe('20261008T180000/20261008T180500');
+  });
+
+  it('knows Android from the browser', () => {
+    expect(isAndroid('Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 Chrome/130 Mobile')).toBe(true);
+    expect(isAndroid('Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Safari/604.1')).toBe(false);
   });
 });
 

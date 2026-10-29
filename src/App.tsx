@@ -35,7 +35,7 @@ import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
-import { clockMinutes, count, countOpen, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
+import { clockMinutes, count, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
 import { explainReport, testerMode } from './lib/report';
 import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpdate';
 import { clearSave } from './lib/resume';
@@ -164,9 +164,6 @@ export default function App() {
   const grant = (given: Access, typed?: string) => {
     // Back on the password page, a smaller code typed after a bigger one keeps the bigger one.
     const a = higherAccess(access, given);
-    // A code for the full version: counted with the version it replaces (none yet, or the sneak
-    // preview), so the owner sees how many ask for a code after looking around.
-    if (a === 'full' && access !== 'full') count('unlock', { lang: progress.helpLang, access });
     // Unlocked from a locked topic (its unlock card): the topic (or home) it goes back to says so.
     const at = viewRef.current;
     if (a === 'full' && access !== 'full' && at.name === 'settings' && at.upgrade) setUnlocked(true);
@@ -463,14 +460,6 @@ export default function App() {
   useEffect(() => { saveProgress(progress); }, [progress]);
   // Certificates: units finished before certificates existed (or put back from a backup) get today's date.
   useEffect(() => { setProgress((p) => earnCertificates(p, new Date())); }, [progress.completed]);
-  // Anonymous count of app opens: at most once a day, never in development or with Do Not
-  // Track (src/lib/count.ts). Only once the first run is through (language, password, sector),
-  // so a new learner is counted under their sector, not as "sector-unknown".
-  const readyToCount = progress.onboarded && Boolean(access) && progress.sector !== undefined;
-  useEffect(() => {
-    if (readyToCount) countOpen({ lang: progress.helpLang, sector: progress.sector, access });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [readyToCount]);
   calmRef.current = progress.onboarded && Boolean(access) && !passing(view);
   useEffect(() => { setReloadWhen(() => calmRef.current); }, []);
   // A new version found while the app was open loads with the next calm screen (src/lib/appUpdate.ts).
@@ -498,7 +487,7 @@ export default function App() {
   useEffect(() => {
     lessonClock.current = startClock();
     lessonStarted.current = new Date();
-    if (lessonOpen) count('lesson-start', { lang: progress.helpLang, sector: progress.sector, lesson: lessonOpen, access });
+    if (lessonOpen) count('lesson-start', { lesson: lessonOpen });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonOpen]);
   // Learners from before "Herhaal vandaag" get cards for the words they already learned.
@@ -585,12 +574,18 @@ export default function App() {
    *  streak-1 milestone offers it on day 1, but a learner who tried lesson 1.1 first already has
    *  that day's streak: for them it comes at the end of the first lesson with the code. */
   const keepDue = useRef(false);
+  /** The last lesson was outside the current block: the screens after it end on the route.
+   *  Left the screens after a lesson another way (Back, the keep offer): forgotten. */
+  const toRoute = useRef(false);
   // Left the screens after a lesson another way (the phone's Back): offered after the next one.
-  useEffect(() => { if (['home', 'topic', 'all', 'settings', 'words', 'tips', 'about', 'socialmap'].includes(view.name)) keepDue.current = false; }, [view.name]);
+  useEffect(() => { if (['home', 'topic', 'all', 'settings', 'words', 'tips', 'about', 'socialmap'].includes(view.name)) { keepDue.current = false; toRoute.current = false; } }, [view.name]);
   /** The end of the screens after a lesson (result, certificate, milestone): home, or the offer. */
   const afterLesson = () => {
-    if (keepDue.current && !keepOffered()) { keepDue.current = false; replace({ name: 'keep' }); }
-    else { keepDue.current = false; back(); }
+    if (keepDue.current && !keepOffered()) { keepDue.current = false; replace({ name: 'keep' }); return; }
+    keepDue.current = false;
+    const route = toRoute.current;
+    toRoute.current = false;
+    if (route) tab('route'); else back();
   };
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
   /** "Waar woon je?" (Settings only): the region's lessons come in or go out of the path. */
@@ -698,10 +693,9 @@ export default function App() {
         keepDue.current = Boolean(access) && !keepOffered();
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
         const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId, progress.certs);
-        const dims = { lang: progress.helpLang, sector: progress.sector, access };
         const minutes = clockMinutes(lessonClock.current);
-        count(daily ? 'review-done' : 'lesson-done', daily ? { ...dims, minutes } : { ...dims, lesson: view.lessonId, minutes });
-        if (unitDone) count('unit-done', dims);
+        count(daily ? 'review-done' : 'lesson-done', daily ? { minutes } : { lesson: view.lessonId, minutes });
+        if (unitDone) count('unit-done');
         // The first finished lesson: ask the browser to keep this site's storage (the progress).
         if (!daily && !Object.keys(progress.completed).length) persistStorage();
         // Not granted (yet): ask again now and then, so the progress is not cleared with the cache.
@@ -713,7 +707,13 @@ export default function App() {
         // The next lesson of the current block, for "Volgende:" on the result (none when the block
         // is finished: the home offers the choice of the next one).
         const upNext = daily ? undefined : routeNextLesson(next, acc);
-        if (!daily) setArrived(view.lessonId);
+        // A lesson outside the current block (a finished topic, practised again): "Volgende" names
+        // the route's lesson, so the screens after the result end on the route, not on that topic,
+        // and the home's "just done" stamp (a lesson of the route) is left out.
+        const lessonUnit = daily ? undefined : findLesson(view.lessonId)?.unit.id;
+        const offRoute = Boolean(lessonUnit) && lessonUnit !== progress.currentUnit && lessonUnit !== next.currentUnit;
+        toRoute.current = offRoute;
+        if (!daily && !offRoute) setArrived(view.lessonId);
         // A review (today's, a mixed review, or a lesson done again) shows the words practised,
         // not "+0 new words", under a review title.
         const reviewing = daily || view.review || isMixLesson(found.lesson) || Boolean(found.lesson.repeat);
@@ -744,7 +744,7 @@ export default function App() {
           quiet={Boolean(progress.quiet)}
           onQuiet={setQuiet}
           onQuit={({ step, steps }) => {
-            count('lesson-quit', { lang: progress.helpLang, sector: progress.sector, lesson: view.lessonId, quarter: quarterOf(step, steps), access });
+            count('lesson-quit', { lesson: view.lessonId, quarter: quarterOf(step, steps) });
             leaving.current = true;
             back();
           }}
@@ -798,10 +798,10 @@ export default function App() {
       // After "Certificaat behaald", the day-streak milestone still follows (once per day).
       const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
       return view.name === 'cert-earned' ? (
-        <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} region={progress.region} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
+        <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} completed={progress.completed} region={progress.region} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
           onPocket={() => replace({ name: 'pocket', unit: unit.id, streakUp: view.streakUp })} />
       ) : (
-        <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} region={progress.region} onBack={onward} />
+        <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} completed={progress.completed} region={progress.region} onBack={onward} />
       );
     }
     case 'pocket': {

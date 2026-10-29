@@ -69,6 +69,17 @@ describe('theme default', () => {
     expect(loadProgress().xp).toBe(30);
   });
 
+  it('moves an old saved phone voice to automatic, and keeps a chosen recording', async () => {
+    (globalThis as { localStorage?: unknown }).localStorage = ls;
+    const { loadProgress } = await import('../src/lib/progress');
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, voice: 'Google Nederlands' }));
+    expect(loadProgress().voice).toBeNull();
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, voice: 'piper:nl_NL-mls-medium' }));
+    expect(loadProgress().voice).toBe('piper:nl_NL-mls-medium');
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, voice: null }));
+    expect(loadProgress().voice).toBeNull();
+  });
+
   it('keeps the gender choice on the device; older saves have none, unknown values are dropped', async () => {
     (globalThis as { localStorage?: unknown }).localStorage = ls;
     const { loadProgress, saveProgress } = await import('../src/lib/progress');

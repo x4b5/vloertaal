@@ -62,11 +62,19 @@ export function addLessonWords(cards: Cards, words: Word[], results: Record<stri
   return addLessonItems(cards, words.map((w) => w.id), results, today);
 }
 
-/** After a daily review: right moves a card up a box, wrong sends it back to box 1. */
+/**
+ * After a daily review: right moves a card up a box, wrong sends it back to box 1. A word that was
+ * not due yet (a top-up, dailyWordIds) keeps its box when right: its date moves one day on, so a
+ * strong word is not sent away for a month by an early answer.
+ */
 export function applyReview(cards: Cards, results: Record<string, boolean>, today: string): Cards {
   const next = { ...cards };
   for (const [id, right] of Object.entries(results)) {
     const card = next[id] ?? { box: 1, due: today };
+    if (right && card.due > today) {
+      next[id] = { box: card.box, due: addDays(card.due, 1) };
+      continue;
+    }
     const box = right ? Math.min(card.box + 1, MAX_BOX) : 1;
     next[id] = { box, due: addDays(today, right ? INTERVALS[box - 1] : 1) };
   }

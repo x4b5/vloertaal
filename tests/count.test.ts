@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { clockMinutes, count, countOpen, countPaths, mayCount, minutesBand, pauseClock, quarterOf, resumeClock, setCountEnv, setCounting, startClock } from '../src/lib/count';
+import { clockMinutes, count, countPath, mayCount, minutesBand, pauseClock, quarterOf, resumeClock, setCountEnv, setCounting, startClock } from '../src/lib/count';
 
 const store = new Map<string, string>();
 const ls = {
@@ -24,7 +24,7 @@ afterEach(() => {
 describe('anonymous counting', () => {
   it('sends nothing outside a production build (dev, tests, localhost)', () => {
     expect(mayCount()).toBe(false);
-    expect(count('lesson-done', { lang: 'ti', sector: 'care' })).toBe(false);
+    expect(count('lesson-done', { lesson: 'l.cv' })).toBe(false);
     setCountEnv({ ...PROD, host: 'localhost' });
     expect(count('lesson-done')).toBe(false);
     setCountEnv({ ...PROD, prod: false });
@@ -44,44 +44,26 @@ describe('anonymous counting', () => {
     }
   });
 
-  it('sends the event plus its language and sector variant, without cookies', () => {
+  it('sends one request per event, without cookies', () => {
     setCountEnv(PROD);
-    expect(count('lesson-done', { lang: 'ti', sector: 'construction' })).toBe(true);
+    expect(count('lesson-done', { lesson: 'l.cv', minutes: 3 })).toBe(true);
     const urls = fetchMock.mock.calls.map((c) => String((c as unknown[])[0]));
-    expect(urls).toHaveLength(3);
-    expect(urls[0]).toBe('https://vloertaal.goatcounter.com/count?p=%2Fe%2Flesson-done&e=true&t=lesson-done');
-    expect(urls[1]).toContain('p=%2Fe%2Flesson-done%2Flang-ti&');
-    expect(urls[2]).toContain('p=%2Fe%2Flesson-done%2Fsector-construction&');
+    expect(urls).toEqual(['https://vloertaal.goatcounter.com/count?p=%2Fe%2Flesson-done%2Fl-cv%2Ft2-5&e=true&t=lesson-done']);
     const init = (fetchMock.mock.calls[0] as unknown[])[1] as RequestInit;
     expect(init).toMatchObject({ mode: 'no-cors', keepalive: true, credentials: 'omit' });
   });
 
-  it('only ever uses language and sector as dimensions (and the version), and for a lesson which one and where it stopped', () => {
-    expect(countPaths('unit-done', {})).toEqual(['/e/unit-done', '/e/unit-done/lang-en', '/e/unit-done/sector-unknown']);
-    expect(countPaths('open', { lang: 'x/../?a=1', sector: 'care' })[1]).toBe('/e/open/lang-xa1');
-    expect(countPaths('lesson-start', { lang: 'pl', lesson: 'l.cv' })).toEqual([
-      '/e/lesson-start', '/e/lesson-start/lang-pl', '/e/lesson-start/sector-unknown', '/e/lesson-start/lesson/l-cv',
-    ]);
-    // Each dimension on its own path: a lesson is never combined with a language or a sector.
-    expect(countPaths('lesson-quit', { lang: 'ti', sector: 'care', lesson: 'r.l.loon.1', quarter: 2 })).toEqual([
-      '/e/lesson-quit', '/e/lesson-quit/lang-ti', '/e/lesson-quit/sector-care', '/e/lesson-quit/q2',
-      '/e/lesson-quit/lesson/r-l-loon-1', '/e/lesson-quit/lesson/r-l-loon-1/q2',
-    ]);
-    expect(countPaths('lesson-quit', { lesson: '../x?y', quarter: 9 }).slice(-2)).toEqual(['/e/lesson-quit/lesson/x-y', '/e/lesson-quit/lesson/x-y/q4']);
-  });
-
-  it('the version (sneak preview or full) and how long a finished lesson took, each on its own path too', () => {
-    expect(countPaths('open', { lang: 'pl', sector: 'care', access: 'sample' })).toEqual([
-      '/e/open', '/e/open/lang-pl', '/e/open/sector-care', '/e/open/access-sample',
-    ]);
-    // A code for the full version, after the sneak preview (or on the code page: no access yet).
-    expect(countPaths('unlock', { lang: 'ar', access: 'sample' }).at(-1)).toBe('/e/unlock/access-sample');
-    expect(countPaths('unlock', { access: null }).at(-1)).toBe('/e/unlock/access-none');
-    expect(countPaths('lesson-done', { lang: 'uk', lesson: 'l.cv', access: 'full', minutes: 3.4 })).toEqual([
-      '/e/lesson-done', '/e/lesson-done/lang-uk', '/e/lesson-done/sector-unknown', '/e/lesson-done/access-full',
-      '/e/lesson-done/t2-5', '/e/lesson-done/lesson/l-cv', '/e/lesson-done/lesson/l-cv/t2-5',
-    ]);
-    expect(countPaths('review-done', { minutes: Number.NaN })).toEqual(['/e/review-done', '/e/review-done/lang-en', '/e/review-done/sector-unknown']);
+  it('says only what the privacy text says: which lesson, where it stopped, about how long — nothing about the learner', () => {
+    expect(countPath('lesson-start', { lesson: 'l.cv' })).toBe('/e/lesson-start/l-cv');
+    expect(countPath('lesson-quit', { lesson: 'r.l.loon.1', quarter: 2 })).toBe('/e/lesson-quit/r-l-loon-1/q2');
+    expect(countPath('lesson-quit', { lesson: '../x?y', quarter: 9 })).toBe('/e/lesson-quit/x-y/q4');
+    expect(countPath('lesson-done', { lesson: 'l.cv', minutes: 3.4 })).toBe('/e/lesson-done/l-cv/t2-5');
+    expect(countPath('review-done', { minutes: 12 })).toBe('/e/review-done/t10plus');
+    expect(countPath('review-done', { minutes: Number.NaN })).toBe('/e/review-done');
+    expect(countPath('unit-done')).toBe('/e/unit-done');
+    // No help language, sector or version can be passed at all (CountDims has no such fields).
+    const dims: Record<string, unknown> = { lang: 'ti', sector: 'care', access: 'full', lesson: 'l.cv' };
+    expect(countPath('lesson-start', dims as never)).toBe('/e/lesson-start/l-cv');
   });
 
   it('bands of minutes, and the clock leaves out the time the app is out of view', () => {
@@ -104,14 +86,6 @@ describe('anonymous counting', () => {
     expect(quarterOf(11, 12)).toBe(4);
     expect(quarterOf(20, 12)).toBe(4);
     expect(quarterOf(0, 0)).toBe(1);
-  });
-
-  it('counts the work-rules track under its own language, lang-nl (no new dimension)', () => {
-    expect(countPaths('lesson-done', { lang: 'nl', sector: 'care' })).toEqual(['/e/lesson-done', '/e/lesson-done/lang-nl', '/e/lesson-done/sector-care']);
-    setCountEnv(PROD);
-    expect(countOpen({ lang: 'nl', sector: 'construction' })).toBe(true);
-    const urls = fetchMock.mock.calls.map((c) => String((c as unknown[])[0]));
-    expect(urls.some((u) => u.includes('p=%2Fe%2Fopen%2Flang-nl&'))).toBe(true);
   });
 
   it('sends nothing with Global Privacy Control on (as with Do Not Track)', () => {
@@ -143,24 +117,6 @@ describe('anonymous counting', () => {
   it('respects Do Not Track', () => {
     setCountEnv({ ...PROD, dnt: true });
     expect(count('unit-done')).toBe(false);
-    expect(countOpen({}, new Date(2026, 9, 8))).toBe(false);
     expect(fetchMock).not.toHaveBeenCalled();
-  });
-
-  it('counts "open" at most once per local day per device', () => {
-    setCountEnv(PROD);
-    expect(countOpen({ lang: 'ar' }, new Date(2026, 9, 8, 7))).toBe(true);
-    expect(countOpen({ lang: 'ar' }, new Date(2026, 9, 8, 23))).toBe(false);
-    expect(fetchMock).toHaveBeenCalledTimes(3);
-    expect(countOpen({ lang: 'ar' }, new Date(2026, 9, 9, 6))).toBe(true);
-    expect(fetchMock).toHaveBeenCalledTimes(6);
-  });
-
-  it('does not count "open" when it is switched off (and does not use up the day)', () => {
-    setCountEnv(PROD);
-    setCounting(false);
-    expect(countOpen({}, new Date(2026, 9, 8))).toBe(false);
-    setCounting(true);
-    expect(countOpen({}, new Date(2026, 9, 8))).toBe(true);
   });
 });

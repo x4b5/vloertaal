@@ -86,7 +86,12 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   // again (that one is then on the topic page), and next to only the recommended topic when the
   // block is finished.
   const dailyDue = daily?.state === 'due';
-  const choices = block ? [] : homeSuggestions(sector, completed, track, region).slice(0, dailyDue ? 1 : 2);
+  // Today's review done with words still waiting: a small card with "Extra ronde" (only then: a
+  // home with nothing to do there shows no card).
+  const dailyExtra = daily?.state === 'done' && daily.extra > 0;
+  // Either card is one of the three (as above).
+  const dailyShown = dailyDue || dailyExtra;
+  const choices = block ? [] : homeSuggestions(sector, completed, track, region).slice(0, dailyShown ? 1 : 2);
   const ref = useRef<HTMLDivElement>(null);
   const order = routeOrder(sector, track, region);
   const unitIndex = (unit: Unit) => order.findIndex((u) => u.id === unit.id);
@@ -121,8 +126,8 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
 
   // A coach link to a locked topic (preview): its unlock card, only as a third thing to tap.
   const linked = lockedLink && !unitAllowed(lockedLink, access) ? order.find((u) => u.id === lockedLink) : undefined;
-  const restartShown = Boolean(resumeId && onRestart && !dailyDue);
-  const taps = (dailyDue ? 1 : 0) + (block ? 1 + (restartShown ? 1 : 0) + (blockPlayable(block, completed, access) ? 0 : 1) : choices.length) + 1;
+  const restartShown = Boolean(resumeId && onRestart && !dailyShown);
+  const taps = (dailyShown ? 1 : 0) + (block ? 1 + (restartShown ? 1 : 0) + (blockPlayable(block, completed, access) ? 0 : 1) : choices.length) + 1;
 
   const pick = (unit: Unit) => {
     if (!blockPlayable(unit, completed, access)) { onUpgrade?.(); return; }
@@ -190,7 +195,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   return (
     <div className="path route home3" ref={ref} dir={rtl ? 'rtl' : undefined}>
       {unlocked && <UnlockedNote lang={lang} />}
-      {dailyDue && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
+      {dailyShown && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
 
       {block && (
         // With "Herhaal vandaag" above it, the block is compact (no picture, no done lessons), so
@@ -528,6 +533,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
   const rtl = lang?.dir === 'rtl';
   const allowed = unitAllowed(unit.id, access);
   const finished = unitDone(unit, completed);
+  // A certificate once earned stays offered, also when a lesson was added to the topic since.
+  const certified = Boolean(onCertificate) && hasCertificate(unit.id) && (finished || Boolean(progress.certs?.[unit.id]));
   // The next lesson, if the learner may play it (the sneak preview opens a topic's first lesson only).
   const following = allowed ? blockNext(unit, completed) : undefined;
   const next = following && lessonAllowed(following.id, access) ? following : undefined;
@@ -556,7 +563,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
         </div>
         {unlocked && <UnlockedNote lang={lang} />}
         {allowed ? (
-          (onPocket || restartLesson || (finished && onCertificate && hasCertificate(unit.id))) && (
+          (onPocket || restartLesson || certified) && (
             <div className="topic-tools" dir={rtl ? 'rtl' : undefined}>
               {restartLesson && onRestart && (
                 <RestartButton
@@ -572,7 +579,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                 </button>
               )}
               {/* A region's unit has no certificate (src/lib/certificate.ts hasCertificate). */}
-              {finished && onCertificate && hasCertificate(unit.id) && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
+              {certified && onCertificate && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
             </div>
           )
         ) : (

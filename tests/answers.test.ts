@@ -17,6 +17,18 @@ describe('answers', () => {
     expect(checkTyped('de handschonen', 'de handschoenen')).toBe('almost');
   });
 
+  it('a forgotten article is almost right, a wrong one is a mistake (de/het is part of the word)', () => {
+    expect(checkTyped('tafel', 'de tafel')).toBe('almost');
+    expect(checkTyped('het tafel', 'de tafel')).toBe('wrong');
+    expect(checkTyped('de ei', 'het ei')).toBe('wrong');
+    expect(checkTyped('een helm', 'de helm')).toBe('wrong');
+    // Also with a typo on top: the article decides.
+    expect(checkTyped('het tafell', 'de tafel')).toBe('wrong');
+    expect(checkTyped('de tafell', 'de tafel')).toBe('almost');
+    // A word asked without article: one typed with it is still almost.
+    expect(checkTyped('de pauze', 'pauze')).toBe('almost');
+  });
+
   it('rejects wrong or empty answers', () => {
     expect(checkTyped('', 'de helm')).toBe('wrong');
     expect(checkTyped('de doos', 'de helm')).toBe('wrong');

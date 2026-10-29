@@ -1,8 +1,8 @@
 import type { Gender, UiCode } from '../i18n/types';
-import { rulesTrackOn, trackOf, trackOfLang } from './track';
+import { rulesTrackOn, trackOf, trackOfLang, type Track } from './track';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import { isRegionChoice, isRegionId, regionOf, regionsOn, type RegionChoice } from '../content/regio';
-import { unitOfLesson } from '../content/courses';
+import { findCourseUnit, unitOfLesson } from '../content/courses';
 import { rulesCourseUnits } from '../content/rulesCourse';
 import type { Cards } from './spaced';
 import type { TextSize } from './textSize';
@@ -143,6 +143,9 @@ export function loadProgress(): Progress {
       if (saved.region !== undefined && !regionsOn()) delete saved.region;
       // The work-rules track while it is not offered (RULES_TRACK off): the language page again.
       if (saved.helpLang === 'nl' && !rulesTrackOn()) { saved.helpLang = null; saved.onboarded = false; }
+      // A phone voice saved before the choice woman / man / automatic (Settings offers only the
+      // recordings now): automatic, so these learners hear the recordings and see the choice.
+      if (typeof saved.voice === 'string' && !saved.voice.startsWith('piper:')) saved.voice = null;
       if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;
       if (saved.genderAsked !== undefined && typeof saved.genderAsked !== 'boolean') delete saved.genderAsked;
       if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;
@@ -220,10 +223,11 @@ export function bestStreak(p: Progress): number {
 }
 
 /**
- * Brings the streak up to date when the app opens (and before practising). When exactly one day
- * was missed and a free day is in hand, it is used: that day becomes a rest day and the streak
- * goes on. When more was missed, the streak stops; `broken` is the streak that was lost, so the
- * app can say so once. The record (bestStreak) is kept either way.
+ * Brings the streak up to date when the app opens (and before practising). Each missed day takes
+ * one free day in hand: when there are enough for all the days missed (a weekend off with two),
+ * those days become rest days and the streak goes on. When there are not enough, the streak stops
+ * (and the free days stay for the next streak); `broken` is the streak that was lost, so the app
+ * can say so once. The record (bestStreak) is kept either way.
  */
 export function settleStreak(p: Progress, today: Date): { progress: Progress; broken?: number } {
   if (!p.lastDay || p.streak === 0) return { progress: p };
@@ -231,15 +235,16 @@ export function settleStreak(p: Progress, today: Date): { progress: Progress; br
   const gap = daysBetween(p.lastDay, key);
   if (gap <= 1) return { progress: p };
   const freezes = p.freezes ?? 0;
-  if (gap === 2 && freezes > 0) {
-    const missed = addDay(p.lastDay, 1);
+  const missedDays = gap - 1;
+  if (missedDays <= freezes) {
+    const missed = Array.from({ length: missedDays }, (_, i) => addDay(p.lastDay!, i + 1));
     return {
       progress: {
         ...p,
-        freezes: freezes - 1,
-        rest: [...(p.rest ?? []), missed].slice(-REST_KEEP),
-        // The rest day counts as "kept up", so tomorrow's gap is measured from it.
-        lastDay: missed,
+        freezes: freezes - missedDays,
+        rest: [...(p.rest ?? []), ...missed].slice(-REST_KEEP),
+        // The rest days count as "kept up", so tomorrow's gap is measured from the last of them.
+        lastDay: missed[missed.length - 1],
         bestStreak: bestStreak(p),
       },
     };
@@ -384,8 +389,26 @@ export function knownLessons(completed: Record<string, unknown>): number {
   return Object.keys(completed).filter(knownLessonId).length;
 }
 
+/**
+ * The backup file. Version 2 also says which track the progress was on (`track`): its review day
+ * and block are that track's, its `parked` place the other's (see switchTrack).
+ */
 export function backupFile(p: Progress, now: Date): string {
-  return JSON.stringify({ app: BACKUP_APP, version: 1, saved: now.toISOString(), progress: p }, null, 1);
+  return JSON.stringify({ app: BACKUP_APP, version: 2, saved: now.toISOString(), track: trackOf(p), progress: p }, null, 1);
+}
+
+/** A backup as read: the progress, and the track it was on (a version-1 file does not say). */
+export type Backup = Partial<Progress> & { track?: Track };
+
+/**
+ * The backup seen from this phone's track: a file saved on the other track has its review day
+ * and the other track's place swapped (as switchTrack would), so a review done in one track
+ * never counts as done in the other. A file that does not say its track is taken as it is.
+ */
+export function backupForTrack(b: Backup, track: Track): Backup {
+  if (!b.track || b.track === track) return b;
+  const other = b.parked ?? {};
+  return { ...b, track, reviewDay: other.reviewDay, parked: { reviewDay: b.reviewDay, currentUnit: b.currentUnit } };
 }
 
 const isDay = (v: unknown): v is string => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
@@ -396,11 +419,11 @@ const isCount = (v: unknown): v is number => typeof v === 'number' && Number.isF
  * well-formed learning progress (lessons the app knows, words, streak), never settings from
  * another phone.
  */
-export function parseBackup(text: string): Partial<Progress> | null {
+export function parseBackup(text: string): Backup | null {
   let data: unknown;
   try { data = JSON.parse(text); } catch { return null; }
   if (!data || typeof data !== 'object') return null;
-  const d = data as { app?: unknown; progress?: unknown };
+  const d = data as { app?: unknown; progress?: unknown; track?: unknown };
   if (d.app !== BACKUP_APP || !d.progress || typeof d.progress !== 'object') return null;
   const src = d.progress as Record<string, unknown>;
   if (!src.completed || typeof src.completed !== 'object' || Array.isArray(src.completed)) return null;
@@ -413,7 +436,19 @@ export function parseBackup(text: string): Partial<Progress> | null {
       completed[id] = { best: rec.best, times: Math.floor(rec.times) };
     }
   }
-  const out: Partial<Progress> = { completed };
+  const out: Backup = { completed };
+  if (d.track === 'taal' || d.track === 'regels') out.track = d.track;
+  // The block the file was on (only one the app knows), for the other track's place (backupForTrack).
+  if (typeof src.currentUnit === 'string' && findCourseUnit(src.currentUnit)) out.currentUnit = src.currentUnit;
+  // The other track's place only from a file that says its track (version 2): in an older file
+  // it may be this phone's own track's place.
+  if (out.track && src.parked && typeof src.parked === 'object') {
+    const k = src.parked as Record<string, unknown>;
+    out.parked = {
+      reviewDay: isDay(k.reviewDay) ? k.reviewDay : undefined,
+      currentUnit: typeof k.currentUnit === 'string' && findCourseUnit(k.currentUnit) ? k.currentUnit : undefined,
+    };
+  }
   if (isCount(src.xp)) out.xp = Math.floor(src.xp);
   if (isCount(src.streak)) out.streak = Math.floor(src.streak);
   if (isDay(src.lastDay)) out.lastDay = src.lastDay;
@@ -450,7 +485,8 @@ export function replaceLoses(p: Progress, b: Partial<Progress>): boolean {
 }
 
 /** Puts a backup back in place of the progress on this phone (settings stay as they are). */
-export function replaceWithBackup(p: Progress, b: Partial<Progress>): Progress {
+export function replaceWithBackup(p: Progress, file: Backup): Progress {
+  const b = backupForTrack(file, trackOf(p));
   return {
     ...p,
     xp: b.xp ?? 0,
@@ -465,10 +501,11 @@ export function replaceWithBackup(p: Progress, b: Partial<Progress>): Progress {
     days: b.days,
     bestStreak: b.bestStreak,
     certs: b.certs,
-    // The block follows the progress that was put back (worked out from its lessons).
+    // The block follows the progress that was put back (worked out from its lessons); the other
+    // track's place is the file's (a version-2 file has it).
     currentUnit: undefined,
     pickedUnit: undefined,
-    parked: undefined,
+    parked: b.parked?.reviewDay || b.parked?.currentUnit ? { reviewDay: b.parked.reviewDay, currentUnit: b.parked.currentUnit } : undefined,
   };
 }
 
@@ -494,7 +531,8 @@ function joinedStreak(later: Partial<Progress>, earlier: Partial<Progress>, days
 }
 
 /** Adds a backup to the progress on this phone: the best of both, nothing is lost. */
-export function mergeBackup(p: Progress, b: Partial<Progress>): Progress {
+export function mergeBackup(p: Progress, file: Backup): Progress {
+  const b = backupForTrack(file, trackOf(p));
   const completed = { ...p.completed };
   for (const [id, r] of Object.entries(b.completed ?? {})) {
     const mine = completed[id];
@@ -523,6 +561,12 @@ export function mergeBackup(p: Progress, b: Partial<Progress>): Progress {
     lastDay: later.lastDay ?? null,
     reviewDay: max(p.reviewDay, b.reviewDay),
     lessonDay: max(p.lessonDay, b.lessonDay),
+    // The other track: its later review day; its block stays this phone's (the file's if none).
+    parked: p.parked || b.parked ? {
+      ...p.parked,
+      reviewDay: max(p.parked?.reviewDay, b.parked?.reviewDay),
+      currentUnit: p.parked?.currentUnit ?? b.parked?.currentUnit,
+    } : undefined,
     freezes: later.freezes ?? 0,
     rest,
     days,
