@@ -16,7 +16,7 @@ export const contractUnit: RuleUnit = {
       // Les 3.1 · Je contract: wat staat erin?
       id: 'r.l.contract.1',
       title: 'Je contract: wat staat erin?',
-      goal: 'Je weet welke afspraken op papier horen, wat een cao is, en dat papier telt.',
+      goal: 'Je weet welke afspraken op papier horen. Je weet wat een cao is. En je weet dat papier telt.',
       remember: 'Wat op papier staat, telt. Bewaar je contract goed.',
       // Wie kan je helpen: het Juridisch Loket · een vakbond (FNV, CNV) · de cao van je sector.
       help: ['juridischloket', 'vakbond'],
@@ -61,9 +61,9 @@ export const contractUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.contract.1.wd1',
-          situation: 'Sanne snapt het woord "cao" niet.',
+          situation: 'Sanne snapt het woord "cao" niet. Wat kan Sanne het beste doen?',
           options: [
-            { id: 'a', text: 'Ze slaat het woord over. Het is vast een detail.', best: false, feedback: 'Jammer. In de cao staan juist veel van je rechten.' },
+            { id: 'a', text: 'Ze slaat het woord over. Het is vast een detail.', best: false, feedback: 'Jammer. In de cao staan juist veel van haar rechten.' },
             { id: 'b', text: 'Ze tekent eerst, en ze zoekt het later op.', best: false, feedback: 'Beter andersom: eerst snappen, dan tekenen.' },
             { id: 'c', text: 'Ze vraagt wat het is, en welke cao het is.', best: true, feedback: 'Goed. Dan kan ze de cao zelf opzoeken.' },
           ],
@@ -167,10 +167,10 @@ export const contractUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.contract.2.wd1',
-          situation: 'Fatima heeft een tijdelijk contract tot 1 juni. Het is half mei. Ze hoort niets.',
+          situation: 'Fatima heeft een tijdelijk contract tot 1 juni. Het is half mei. Ze hoort niets. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze wacht af. Geen bericht betekent: ze mag blijven.', best: false, feedback: 'Dat klopt niet. Een tijdelijk contract stopt vanzelf.' },
-            { id: 'b', text: 'Ze vraagt haar baas of ze na 1 juni mag blijven.', best: true, feedback: 'Goed. Dan weet ze op tijd waar ze aan toe is.' },
+            { id: 'b', text: 'Ze vraagt haar baas of ze na 1 juni mag blijven.', best: true, feedback: 'Goed. Dan weet ze op tijd of ze mag blijven.' },
             { id: 'c', text: 'Ze zoekt alvast ander werk en zegt niets.', best: false, feedback: 'Slim om te zoeken. Maar vragen kan ook.' },
           ],
           why: 'Een tijdelijk contract stopt vanzelf op de einddatum. Duurt je contract 6 maanden of langer? Dan moet je werkgever 1 maand voor het einde laten weten of het doorgaat. Krijg je een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je contract meestal vanzelf vast. Maar na het 3e contract mag je baas ook stoppen. Zit er meer dan 6 maanden tussen twee contracten? Dan begint de telling opnieuw. Werk je via een uitzendbureau? Dan gelden vaak andere regels. Kijk in de uitzend-cao.',
@@ -254,7 +254,7 @@ export const contractUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Ze krijgt loon voor 1 uur. Zo werkt oproepwerk.', best: false, feedback: 'Vaak niet. Er is een regel voor korte oproepen.' },
             { id: 'b', text: 'Ze checkt of ze loon krijgt voor 3 uur.', best: true, feedback: 'Goed. Daar heeft ze meestal recht op.' },
-            { id: 'c', text: 'Ze krijgt niets, want ze was er maar kort.', best: false, feedback: 'Nee. Gewerkte tijd wordt altijd betaald.' },
+            { id: 'c', text: 'Ze krijgt niets, want ze was er maar kort.', best: false, feedback: 'Nee. De baas betaalt gewerkte tijd altijd.' },
           ],
           why: 'Bij oproepwerk krijg je meestal minstens 3 uur loon per oproep. Ook als je korter werkt. Dat geldt bij een klein contract zonder vaste werktijden.',
         },
@@ -269,7 +269,7 @@ export const contractUnit: RuleUnit = {
           id: 'r.l.contract.3.tf2',
           statement: 'Een uitzendkracht heeft recht op hetzelfde loon als de vaste mensen die hetzelfde werk doen.',
           answer: true,
-          why: "Dat klopt. Doe je hetzelfde werk als vaste collega's? Dan krijg je hetzelfde loon. Zo staat het in de wet. Twijfel je? Vraag het na bij het bureau.",
+          why: "Dat klopt. Doe je hetzelfde werk als vaste collega's? Dan krijg je hetzelfde loon. Zo staat het in de wet. Weet je het niet zeker? Vraag het na bij het bureau.",
         },
         {
           kind: 'whoask',
@@ -289,7 +289,7 @@ export const contractUnit: RuleUnit = {
       // Les 3.4 · Stage, leerwerkbaan en zzp
       id: 'r.l.contract.4',
       title: 'Stage, leerwerkbaan en zzp',
-      goal: "Je weet het verschil tussen stage, leerwerkbaan, werknemer en zzp'er, en je kent de risico's.",
+      goal: "Je weet het verschil tussen stage, leerwerkbaan, werknemer en zzp'er. Je kent de risico's.",
       remember: 'Zzp betekent: geen loon als je ziek bent, en geen WW.',
       // Wie kan je helpen: je school of stagebegeleider · SBB (stages in het mbo) · een vakbond,
       //   zoals FNV Zelfstandigen · het Juridisch Loket · KVK en Belastingdienst (informatie over
@@ -335,7 +335,7 @@ export const contractUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.contract.4.wd1',
-          situation: "Het bedrijf bepaalt Jaydens tijden, zijn kleding en zijn route. Toch noemen ze hem zzp'er.",
+          situation: "Het bedrijf bepaalt Jaydens tijden, zijn kleding en zijn route. Toch noemen ze hem zzp'er. Wat kan Jayden het beste doen?",
           options: [
             { id: 'a', text: 'Hij vraagt advies. Misschien is hij gewoon werknemer.', best: true, feedback: 'Goed. Dan weet hij welke rechten hij heeft.' },
             { id: 'b', text: 'Hij vindt het prima. Zo gaat het bij bezorgers.', best: false, feedback: 'Begrijpelijk. Maar dan mist hij misschien rechten.' },
@@ -356,7 +356,7 @@ export const contractUnit: RuleUnit = {
         {
           kind: 'whoask',
           id: 'r.l.contract.4.wa1',
-          question: "Jayden twijfelt: is hij zzp'er of gewoon werknemer? Wie geeft gratis advies?",
+          question: "Jayden weet het niet zeker: is hij zzp'er of gewoon werknemer? Wie geeft gratis advies?",
           options: [
             { id: 'a', who: 'collega', best: false, feedback: "Collega's weten het vaak ook niet zeker." },
             { id: 'b', who: 'juridischloket', best: true, feedback: 'Goed. Het Juridisch Loket geeft gratis advies over je werk.' },
