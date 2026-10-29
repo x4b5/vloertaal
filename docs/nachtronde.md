@@ -74,6 +74,9 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | Stem-pagina: "deze telefoon heeft geen Nederlandse stem" zolang de opgenomen stemmen nog laadden | trage verbinding | niets tot ze er zijn |
 | Met geblokkeerde opslag (privé-modus, sommige apps) bleven Spreken, Schrijven en "Lessen bewaren" niet eens dit bezoek staan | privé-modus | ze blijven voor dit bezoek, zoals "Ook Engels tonen" |
 | "Voortgang wissen" liet de naam op de certificaten staan | gedeelde telefoon | ook de naam gaat weg (wordt opnieuw gevraagd) |
+| Een oude les opnieuw oefenen (via "Ander onderwerp") trok de home weg van het onderwerp waar je mee bezig was | wie herhaalt | het onderwerp blijft staan |
+| "Alle onderwerpen": na Terug van een onderwerp weer bovenaan de lange lijst | wie andere sectoren bekijkt | terug op dezelfde plek |
+| Dubbeltik op "Verder" na een les kon twee schermen teruggaan (of de app uit) | iedereen met haast | de tweede tik doet niets |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
@@ -161,5 +164,9 @@ slagen alle 1179 tests en de build. In de browser toont `/?taal=pl` "Polski?", i
     keuze vrouw/man/automatisch): die leerlingen horen altijd de telefoonstem, en Instellingen
     toont geen keuze. Omzetten naar "automatisch" zou de opnames geven; dat verandert wat ze
     horen, dus niet zelf gedaan.
-13. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+13. **Na een les uit een afgerond onderwerp** noemt de uitslag als "volgende" een les van het
+    huidige onderwerp, terwijl Verder teruggaat naar het afgeronde onderwerp; en het "net
+    gedaan"-sprongetje op de home kan later bij een ander onderwerp komen. Klein; de juiste
+    tekst hangt af van wat je daar wilt laten zien.
+14. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
    vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.

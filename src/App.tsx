@@ -289,14 +289,21 @@ export default function App() {
     land();
   };
   /** Back to the previous screen (as the Back button would), or home when there is none. */
+  // (A second tap before the first Back has landed, as a double tap on Continue, does nothing:
+  // it would go one more screen back, or out of the app.)
+  const goingBack = useRef(false);
   const back = () => {
-    if ((current()?.depth ?? 0) > 0) history.back();
-    else replace(HOME);
+    if (goingBack.current) return;
+    if ((current()?.depth ?? 0) > 0) {
+      goingBack.current = true;
+      history.back();
+    } else replace(HOME);
   };
 
   useEffect(() => {
     if (!current() && !adminRequested()) history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '');
     const onPop = () => {
+      goingBack.current = false;
       if (adminRequested()) return; // #beheer: the hashchange handler opens the admin page
       if (viewRef.current.name === 'lesson' && !leaving.current) {
         // Stay in the lesson (put its entry back) and open its pause sheet.
@@ -489,7 +496,20 @@ export default function App() {
   // Also on `onboarded`: Back to the language page clears the setting (English shows there), and
   // picking the same language again must hide the English again, though helpLang did not change.
   useEffect(() => { applyEnglish(englishLangFor(progress.helpLang, progress.onboarded)); }, [progress.helpLang, progress.onboarded]);
-  useEffect(() => { window.scrollTo(0, 0); }, [view.name]);
+  // A new screen starts at the top; Back from a topic to "Alle onderwerpen" goes back to where the
+  // list was (a long list with the other sectors' topics).
+  const scrollAt = useRef<Record<string, number>>({});
+  useEffect(() => {
+    const on = () => { scrollAt.current[viewRef.current.name] = window.scrollY; };
+    window.addEventListener('scroll', on, { passive: true });
+    return () => window.removeEventListener('scroll', on);
+  }, []);
+  const lastScreen = useRef(view.name);
+  useEffect(() => {
+    const from = lastScreen.current;
+    lastScreen.current = view.name;
+    window.scrollTo(0, view.name === 'all' && from === 'topic' ? scrollAt.current.all ?? 0 : 0);
+  }, [view.name]);
   // A preview never plays a later unit (e.g. via Back/Forward into an old entry): go home.
   useEffect(() => {
     if (view.name === 'lesson' && access && !lessonAllowed(view.lessonId, access)) replace(HOME);
@@ -645,7 +665,8 @@ export default function App() {
             ? addLessonItems(cards, gradedStepIds(found.lesson), results, today)
             : addLessonWords(cards, found.lesson.words, results, today) }, now);
         // The lesson's unit is the current block while it is unfinished (see src/lib/route.ts).
-        if (!daily) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
+        // (A lesson done before, practised again, leaves the block where it is.)
+        if (!daily && !progress.completed[view.lessonId]) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
         // The very first lesson: its result shows, once, where the emergency phrases are.
         // (A phone that did the old trial lesson before a code shows it after its next lesson.)
         const phrases = !daily && !progress.phrasesShown && Object.keys(progress.completed).every((id) => trialLessonAllowed(id, track));
