@@ -206,7 +206,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
 8. *Besloten en gedaan (29 oktober): elke gemiste dag kost één vrije dag; met twee is een weekend vrij gedekt.* **Twee vrije dagen dekken geen weekend**: wie er twee heeft en zaterdag en zondag overslaat,
    verliest de reeks (een vrije dag dekt alleen precies één gemiste dag). Voor mensen die werken is
    een vrij weekend normaal. Bewust zo? Anders: één vrije dag per gemiste dag.
-9. **Back-up en de twee routes**: het bestand bewaart niet bij welke route de herhaaldag hoort,
+9. *Besloten en gedaan (29 oktober): het bestand (versie 2) zegt nu bij welke route het hoort; bij samenvoegen en terugzetten blijft de herhaaldag van elke route bij die route, en de plek van de andere route komt mee. Oude bestanden werken als voorheen. Het versienummer wordt nog steeds niet gecontroleerd (een nieuwer bestand weigeren zou "geen Vloertaal-bestand" zeggen, wat niet klopt).* **Back-up en de twee routes**: het bestand bewaart niet bij welke route de herhaaldag hoort,
    en niet de geparkeerde plek van de andere route. Samenvoegen kan "Herhaal vandaag" van de ene
    route als klaar tellen voor de andere. Ook wordt het `version`-nummer van het bestand niet
    gecontroleerd. Klein, maar het bestandsformaat aanpassen wilde ik niet zonder overleg.

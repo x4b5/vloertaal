@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { teachingLessons } from '../src/content/curriculum';
 import { helpLanguages } from '../src/i18n/all';
 import {
-  FREEZE_MAX, backupFile, bestStreak, completeDaily, completeLesson, currentStreak, doneToday, emptyProgress,
+  FREEZE_MAX, backupFile, backupForTrack, bestStreak, completeDaily, completeLesson, currentStreak, doneToday, emptyProgress,
   mergeBackup, parseBackup, replaceWithBackup, settleStreak, workWeek, type Progress,
 } from '../src/lib/progress';
 import { addLessonWords, applyReview, dailyCard, strongerCount } from '../src/lib/spaced';
@@ -135,6 +135,26 @@ describe('backup', () => {
     expect(junk?.completed).toEqual({ 'l.people': { best: 1, times: 2 } });
     expect(junk?.xp).toBeUndefined();
     expect(junk?.lastDay).toBeUndefined();
+  });
+
+  it('keeps each route\'s review day apart (the file says its route)', () => {
+    // Saved on the work-rules route ('nl'): its review was done on the 8th, the language route's on the 5th.
+    const rules = { ...p, helpLang: 'nl' as const, reviewDay: '2026-10-08', parked: { reviewDay: '2026-10-05' } };
+    const file = parseBackup(backupFile(rules, day(8)))!;
+    expect(file.track).toBe('regels');
+    expect(backupForTrack(file, 'regels').reviewDay).toBe('2026-10-08');
+    // Read on a phone on the language route: the rules review does not count as its own.
+    const here = { ...emptyProgress, helpLang: 'pl' as const };
+    const merged = mergeBackup(here, file);
+    expect(merged.reviewDay).toBe('2026-10-05');
+    expect(merged.parked?.reviewDay).toBe('2026-10-08');
+    const replaced = replaceWithBackup(here, file);
+    expect(replaced.reviewDay).toBe('2026-10-05');
+    expect(replaced.parked?.reviewDay).toBe('2026-10-08');
+    // A version-1 file (no route) is taken as it is.
+    const old = parseBackup(JSON.stringify({ app: 'vloertaal', version: 1, progress: { completed: {}, reviewDay: '2026-10-08' } }))!;
+    expect(old.track).toBeUndefined();
+    expect(mergeBackup(here, old).reviewDay).toBe('2026-10-08');
   });
 
   it('merges (best of both) or replaces, keeping this phone\'s settings', () => {
