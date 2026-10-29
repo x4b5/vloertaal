@@ -14,7 +14,7 @@ describe('index.html asks for a returning learner’s files at once (vite.config
   const script = bootPreloadScript(bundle);
   const run = (saved: unknown) => {
     const links: string[] = [];
-    const doc = { createElement: () => ({}) as { rel?: string; href?: string }, head: { appendChild: (l: { href: string }) => links.push(l.href) } };
+    const doc = { createElement: () => ({}) as { rel?: string; href?: string }, head: { appendChild: (l: { href: string }) => links.push(l.href) }, documentElement: { dataset: {} }, querySelectorAll: () => [] };
     const store = { getItem: () => (saved === undefined ? null : JSON.stringify(saved)) };
     new Function('localStorage', 'document', script.replace(/^<script>|<\/script>$/g, ''))(store, doc);
     return links;
@@ -31,5 +31,19 @@ describe('index.html asks for a returning learner’s files at once (vite.config
     expect(run({ onboarded: true, helpLang: null })).toEqual(['./assets/words-e.js']);
     expect(run(undefined)).toEqual([]);
     expect(run({ onboarded: false, helpLang: 'ar' })).toEqual([]);
+  });
+
+  it('puts the saved look and text size on the page before it is drawn', () => {
+    const look = (saved: unknown) => {
+      const root = { dataset: {} as Record<string, string> };
+      const metas: string[] = [];
+      const doc = { createElement: () => ({}), head: { appendChild: () => 0 }, documentElement: root, querySelectorAll: () => [{ setAttribute: (_: string, v: string) => metas.push(v) }, { setAttribute: (_: string, v: string) => metas.push(v) }] };
+      new Function('localStorage', 'document', script.replace(/^<script>|<\/script>$/g, ''))({ getItem: () => JSON.stringify(saved) }, doc);
+      return { ...root.dataset, metas: metas.join(' ') };
+    };
+    expect(look({ theme: 'dark', textSize: 'xl' })).toEqual({ theme: 'dark', text: 'xl', metas: '#16191c #16191c' });
+    expect(look({ theme: 'auto', textSize: 'normal' })).toEqual({ metas: '' });
+    // A save from before the choice: light, as the app reads it.
+    expect(look({})).toEqual({ theme: 'light', metas: '#e7e3dc #e7e3dc' });
   });
 });

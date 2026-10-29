@@ -458,19 +458,23 @@ const AUTO_KEY = 'vloertaal:offline-auto';
  * Whether lessons are kept on this phone automatically. Never chosen yet: on when a unit was
  * saved by hand before (the old per-unit button), else off (saving costs mobile data).
  */
+/** The switch while storage is blocked: it holds for this visit. */
+let autoMemory: boolean | null = null;
+
 export function offlineAuto(): boolean {
   try {
     const v = localStorage.getItem(AUTO_KEY);
     if (v === '1') return true;
     if (v === '0') return false;
   } catch {
-    return false;
+    return autoMemory ?? false;
   }
   return savedUnitIds().length > 0;
 }
 
 /** Turns the setting on or off (off removes every saved topic from this phone). */
 export function setOfflineAuto(on: boolean): void {
+  autoMemory = on;
   try {
     localStorage.setItem(AUTO_KEY, on ? '1' : '0');
   } catch {

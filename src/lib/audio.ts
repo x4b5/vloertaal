@@ -135,11 +135,17 @@ if (typeof window !== 'undefined' && typeof fetch === 'function') {
   indexLoaded = loadJson<ElevenIndex>('./audio-el/voices.json').then((eleven) => {
     indexArrived = Boolean(eleven);
     setRecordedIndex(eleven, null);
-  });
+  }).finally(() => { indexSettled = true; });
 }
 
 export function recordedIndexReady(): Promise<void> {
   return indexLoaded;
+}
+
+/** The recorded-voice index came or failed: until then, "no voice on this phone" is not known yet. */
+let indexSettled = typeof window === 'undefined' || typeof fetch !== 'function';
+export function recordedIndexSettled(): boolean {
+  return indexSettled;
 }
 
 /**

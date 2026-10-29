@@ -80,7 +80,11 @@ export function bootPreloadScript(bundle: Record<string, { type: string; fileNam
     if (pack) packs[pack[1]] = `./${c.fileName}`;
     if (/[\\/]src[\\/]pictures[\\/]words\.tsx?$/.test(c.facadeModuleId)) pictures = `./${c.fileName}`;
   }
-  return `<script>try{var p=JSON.parse(localStorage.getItem('vloertaal:v1')||'null'),f=${JSON.stringify(packs)},a=function(h){if(!h)return;var l=document.createElement('link');l.rel='modulepreload';l.href=h;document.head.appendChild(l)};if(p&&p.onboarded){a(f[p.helpLang]);a(${JSON.stringify(pictures)})}}catch(e){}</script>`;
+  // Also the learner's look and text size, before the first paint (src/lib/theme.ts and
+  // textSize.ts again, small): a dark theme on a light phone must not flash light while the app
+  // file loads. A save without a theme is from before the choice: light (src/lib/progress.ts).
+  const look = `var d=document.documentElement,t=p.theme===undefined?'light':p.theme;if(t==='light'||t==='dark'){d.dataset.theme=t;document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute('content',t==='dark'?'#16191c':'#e7e3dc')})}if(p.textSize==='large'||p.textSize==='xl')d.dataset.text=p.textSize`;
+  return `<script>try{var p=JSON.parse(localStorage.getItem('vloertaal:v1')||'null'),f=${JSON.stringify(packs)},a=function(h){if(!h)return;var l=document.createElement('link');l.rel='modulepreload';l.href=h;document.head.appendChild(l)};if(p){${look}}if(p&&p.onboarded){a(f[p.helpLang]);a(${JSON.stringify(pictures)})}}catch(e){}</script>`;
 }
 
 /** vloertaal.nl/nieuw: "Wat is er nieuw?", a plain page made from src/content/updates.ts. */

@@ -6,7 +6,7 @@ import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
 import { dutchUi } from '../lib/track';
 import { NlPair } from './NlPair';
 import type { Access } from '../lib/access';
-import { setPreferredVoice, speak } from '../lib/audio';
+import { recordedIndexSettled, setPreferredVoice, speak } from '../lib/audio';
 import { earnedCertificates } from '../lib/certificate';
 import { countingOn, setCounting } from '../lib/count';
 import { applyEnglish, setWantsEnglish, wantsEnglish } from '../lib/english';
@@ -181,10 +181,14 @@ export function Settings({
     window.addEventListener('online', back);
     return () => window.removeEventListener('online', back);
   }, [notHere]);
+  /** The page on screen now: a file that comes after Back (another page) does nothing either. */
+  const pageNow = useRef(page);
+  pageNow.current = page;
   const pickLanguage = (code: UiCode | null) => {
     wanted.current = code;
+    const on = page;
     const take = () => {
-      if (!shown.current || wanted.current !== code) return;
+      if (!shown.current || wanted.current !== code || pageNow.current !== on) return;
       setNotHere(null);
       onLang(code);
       answered();
@@ -387,7 +391,8 @@ export function Settings({
             </button>
           ),
         }));
-        if (!recorded.length && !device.length) return <p className="warn"><Bi text={say('voiceNone')} /></p>;
+        // (While the recorded voices are still coming: nothing yet, not "no voice".)
+        if (!recorded.length && !device.length) return recordedIndexSettled() ? <p className="warn"><Bi text={say('voiceNone')} /></p> : null;
         return (
           <>
             <p className="max3-hint"><Bi text={say('voiceHint')} /></p>

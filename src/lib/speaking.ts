@@ -14,15 +14,19 @@ import { createRng } from './random';
 const KEY = 'vloertaal:speaking';
 
 /** The Settings switch "Speaking practice": on unless the learner turned it off (this device). */
+/** The switch while storage is blocked (private mode): it holds for this visit. */
+let memory: boolean | null = null;
+
 export function speakingOn(): boolean {
   try {
     return localStorage.getItem(KEY) !== '0';
   } catch {
-    return true;
+    return memory ?? true;
   }
 }
 
 export function setSpeakingOn(on: boolean): void {
+  memory = on;
   try {
     if (on) localStorage.removeItem(KEY);
     else localStorage.setItem(KEY, '0');

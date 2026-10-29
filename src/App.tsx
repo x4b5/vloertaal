@@ -34,7 +34,7 @@ import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, daily
 import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
 import { SAYINGS_FROM } from './content/sayings';
-import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
+import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
 import { clockMinutes, count, countOpen, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
 import { explainReport, testerMode } from './lib/report';
 import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpdate';
@@ -842,6 +842,7 @@ export default function App() {
               // stored apart and stays too); only learning progress is wiped (and lessons in
               // progress). So the app goes on at the home, not at the language list again.
               clearSave();
+              forgetCertName();
               setProgress((p) => ({
                 ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
                 sector: p.sector, region: p.region, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked,

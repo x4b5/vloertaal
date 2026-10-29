@@ -164,6 +164,15 @@ export function saveCertName(name: string): void {
   }
 }
 
+/** "Voortgang wissen": the certificates go, and so does the name on them (asked again next time). */
+export function forgetCertName(): void {
+  try {
+    localStorage.removeItem(NAME_KEY);
+  } catch {
+    // Blocked storage: nothing was kept.
+  }
+}
+
 /* ---- What a certificate shows (the sheet on screen and the shared picture). ---- */
 
 /** Everything a certificate shows, for the sheet and for the canvas. */

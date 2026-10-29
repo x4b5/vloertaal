@@ -69,6 +69,11 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | Een fout gekoppeld rijtje als allerlaatste oefening kwam niet terug | dagelijkse herhaling | komt terug, zoals elders |
 | Een nieuwe versie kon herladen terwijl de herinnering-vraag na de les open stond (de agenda stuurt je weg en terug) | wie een herinnering zet | niet op dat scherm |
 | Op een trage verbinding kon het herladen naar een nieuwe versie de oude versie terugkrijgen, en dat elke 5 minuten herhalen (door de 4-secondenregel van vannacht) | slechte verbinding | eerst wachten tot de nieuwe versie geïnstalleerd is; hooguit één keer per versie |
+| Donker thema op een lichte telefoon: bij het starten eerst licht, dan donker (en grote letters sprongen pas later groot) | wie donker of grote letters kiest | thema, balkkleur en lettergrootte staan er vóór het eerste beeld |
+| Instellingen: een taal tikken, Terug, en het trage taalbestand zette alsnog de taal om en ging een pagina te ver terug | trage verbinding | na Terug doet het late bestand niets meer |
+| Stem-pagina: "deze telefoon heeft geen Nederlandse stem" zolang de opgenomen stemmen nog laadden | trage verbinding | niets tot ze er zijn |
+| Met geblokkeerde opslag (privé-modus, sommige apps) bleven Spreken, Schrijven en "Lessen bewaren" niet eens dit bezoek staan | privé-modus | ze blijven voor dit bezoek, zoals "Ook Engels tonen" |
+| "Voortgang wissen" liet de naam op de certificaten staan | gedeelde telefoon | ook de naam gaat weg (wordt opnieuw gevraagd) |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
@@ -152,5 +157,9 @@ slagen alle 1179 tests en de build. In de browser toont `/?taal=pl` "Polski?", i
     maar dat is een externe dienst: graag een besluit. Ook: "Stop de herinnering" stuurt een
     annulering als bestand, wat agenda's waarschijnlijk niet als annulering lezen; en op iOS
     buiten Safari (in-app-browser) wijzen de installatiestappen naar een knop die er niet is.
-12. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+12. **Een oude opgeslagen telefoonstem** (bijvoorbeeld "Google Nederlands", van vóór de
+    keuze vrouw/man/automatisch): die leerlingen horen altijd de telefoonstem, en Instellingen
+    toont geen keuze. Omzetten naar "automatisch" zou de opnames geven; dat verandert wat ze
+    horen, dus niet zelf gedaan.
+13. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
    vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.
