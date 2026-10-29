@@ -1,7 +1,7 @@
 import { StrictMode, type ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
-import { Crashed } from './components/Splash';
+import { Crashed, Splash } from './components/Splash';
 import { startScreens } from './lazyScreens';
 import { loadProgress } from './lib/progress';
 import { readTesterParam } from './lib/report';
@@ -42,13 +42,23 @@ const langBoot = ensureLanguage(loadProgress().helpLang).catch(() => {});
 const regionBoot = ensureRegionFor(loadProgress().region, loadProgress().helpLang).catch(() => {});
 // The word pictures load alongside (their own file); a returning learner's first screen has them.
 const picsBoot = loadPictures().catch(() => {});
-// The stylesheet loads without blocking the splash (vite.config.ts): React waits for it.
+// The stylesheet loads without blocking the splash (vite.config.ts): React waits for it. Its link
+// notes a failure itself (data-failed), as it may come before this script runs.
 const appCss = document.querySelector<HTMLLinkElement>('link[data-app-css]');
-const cssBoot = new Promise<void>((done) => {
-  if (!appCss || appCss.media === 'all' || appCss.sheet?.cssRules.length) return done();
-  appCss.addEventListener('load', () => done());
-  appCss.addEventListener('error', () => done());
+const cssBoot = new Promise<boolean>((done) => {
+  if (appCss?.dataset.failed) return done(false);
+  // A sheet that did not load throws on reading its rules.
+  const hasRules = () => { try { return Boolean(appCss?.sheet?.cssRules.length); } catch { return false; } };
+  if (!appCss || appCss.media === 'all' || hasRules()) return done(true);
+  appCss.addEventListener('load', () => done(true));
+  appCss.addEventListener('error', () => done(false));
 });
+/** Without the stylesheet the app can't draw: the splash says so, with "Try again" (also when back online). */
+const cssFailed = () => {
+  const again = () => location.reload();
+  window.addEventListener('online', again, { once: true });
+  render(<Splash failed onRetry={again} />);
+};
 // Crashed: a drawing error shows the splash with "Try again", never a blank screen.
 const render = (node: ReactNode) => createRoot(document.getElementById('root')!).render(<StrictMode><Crashed>{node}</Crashed></StrictMode>);
 
@@ -68,7 +78,10 @@ if (import.meta.env.DEV && params.get('shot')) {
   // The first screen's file waits at most 2.5 s (a stalled connection): after that the screen's own
   // calm placeholder covers the rest (src/lazyScreens.tsx), never a splash that stays up.
   const screensBoot = Promise.race([startScreens(), new Promise<void>((done) => window.setTimeout(done, 2500))]);
-  void Promise.all([langBoot, regionBoot, cssBoot, loadProgress().onboarded ? picsBoot : null, screensBoot]).then(() => render(<App />));
+  // The help language's file, the region and the pictures wait at most 8 s (a connection that hangs):
+  // then App draws its own splash, which offers "Try again" and goes on when the file comes.
+  const filesBoot = Promise.race([Promise.all([langBoot, regionBoot, loadProgress().onboarded ? picsBoot : null]), new Promise<void>((done) => window.setTimeout(done, 8000))]);
+  void Promise.all([cssBoot, filesBoot, screensBoot]).then(([css]) => (css ? render(<App />) : cssFailed()));
 }
 
 // Offline support: cache the app after the first visit (production only).

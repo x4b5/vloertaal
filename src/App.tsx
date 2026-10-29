@@ -119,6 +119,9 @@ function startProgress() {
   return { progress, stopped: broken ?? null };
 }
 
+/** How long the start waits for a file that neither comes nor fails before it offers "Try again". */
+const STALLED_MS = 8000;
+
 export default function App() {
   const [start] = useState(startProgress);
   const [progress, setProgress] = useState(start.progress);
@@ -392,6 +395,14 @@ export default function App() {
     setLangFailed(false);
     loadPictures().catch((e: unknown) => { void recoverFromLoadError(e).then((reloading) => { if (!reloading) setLangFailed(true); }); });
   }, [picsReady, progress.onboarded, langTry]);
+  // A file that neither comes nor fails (a connection that hangs): after a while the splash offers
+  // "Try again" too (a reload), and still goes on by itself if the file comes after all.
+  const waiting = !langReady || (progress.onboarded && !picsReady);
+  useEffect(() => {
+    if (!waiting || langFailed) return;
+    const t = window.setTimeout(() => setLangFailed(true), STALLED_MS);
+    return () => window.clearTimeout(t);
+  }, [waiting, langFailed]);
   const lang = getHelpLanguage(progress.helpLang, progress.gender);
   // The page's language is the help language (Dutch without one). The direction is set where the
   // layout is mirrored (the lesson player and the path), so Dutch never inherits right-to-left.

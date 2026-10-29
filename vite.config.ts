@@ -20,7 +20,7 @@ function nonBlockingCss(): Plugin {
       order: 'post',
       handler: (html) =>
         html.replace(/<link rel="stylesheet"((?:(?!>)[^])*?) href="(\.\/assets\/[^"]+\.css)"([^>]*)>/g,
-          (_m, a: string, href: string, b: string) => `<link rel="stylesheet"${a} href="${href}"${b} data-app-css media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="${href}"></noscript>`),
+          (_m, a: string, href: string, b: string) => `<link rel="stylesheet"${a} href="${href}"${b} data-app-css media="print" onload="this.media='all'" onerror="this.dataset.failed='1'"><noscript><link rel="stylesheet" href="${href}"></noscript>`),
     },
   };
 }
