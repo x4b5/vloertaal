@@ -89,7 +89,13 @@ zelf kapotmaakten; wat ze vonden is ook gerepareerd (zie de tabel).
 
 ### Verlenging (29 oktober, 04:20–06:20)
 
-Na het mergen van #90 en #91 nog twee uur, met dezelfde werkwijze.
+Na het mergen van #90 en #91 nog twee uur, met dezelfde werkwijze. Bekeken: de eerste start,
+de schermen naast de lessen (tips, noodzinnen, Over, onderwerpen), "Herhaal vandaag", wat de app
+verstuurt (privacy), beweging en timers, de Werkregels-oefeningen, en de 48 SEO-pagina's (axe en
+alle 1668 interne links). Tot slot een review van alleen deze wijzigingen; wat die vond, is
+gerepareerd (onder meer een focusring rond de eerste vraag). Daarna in de gebouwde app: hele
+lessen in drie talen, de eerste start in drie talen, offline, een hangende verbinding, en een
+les hervatten na herladen.
 
 | Wat ging er mis | Wie merkte het | Nu |
 |---|---|---|
@@ -105,6 +111,7 @@ Na het mergen van #90 en #91 nog twee uur, met dezelfde werkwijze.
 | "Minder beweging" (telefooninstelling): het scrollen naar een taal in Instellingen bewoog toch; de schaduw onder de kop in een les (die niet beweegt) viel weg | wie last heeft van beweging | geen beweging, schaduw blijft |
 | Werkregels: een verhaal kon opnieuw beginnen in een andere stem (als de opgenomen stemmen binnenkwamen) | trage verbinding | één keer voorgelezen |
 | Werkregels: de oplichtende rij op een kaart of loonstrook was alleen te zien, niet te horen; de loonstrook had geen luidspreker (en ging niet mee offline) | schermlezer, wie liever luistert | "hier gaat het om" voor de schermlezer; de loonstrook heeft een luidspreker en gaat mee |
+| "Meetellen" uitgezet in privé-modus (geblokkeerde opslag) telde stil door; "Global Privacy Control" werd niet gezien | privacy | uit is uit, ook dan; GPC telt als "niet meetellen" |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
