@@ -39,7 +39,7 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | Certificaat als download bewaard: geen melding | computer, Firefox op Android | "De afbeelding is bewaard" |
 | "€ 112" zou als "één één twee euro" klinken | (nog geen les) | een bedrag blijft een bedrag |
 | Lukte het stylesheet niet bij de start, dan bleef het startscherm voor altijd staan | slechte verbinding | "Opnieuw" (ook vanzelf als internet terug is) |
-| Bleef het taalbestand hangen (geen antwoord), dan bleef het startscherm zonder knop staan | slechte verbinding | na 8 s "Opnieuw"; komt het bestand toch, dan gaat de app verder |
+| Bleef het taalbestand hangen (geen antwoord), dan bleef het startscherm zonder knop staan | slechte verbinding | na 15 s "Opnieuw"; komt het bestand toch, dan gaat de app verder (en laadt later niet vanzelf opnieuw) |
 | De luidsprekerknop liet de schermlezer "Vrouw of man?" met een Arabische (Poolse …) stem lezen | blinde en slechtziende leerlingen | het Nederlandse deel heeft `lang="nl"` |
 | Kaarten die naar een volgende pagina gaan heetten "keuzerondje" | schermlezer | gewone knoppen; echte keuzes kregen pijltjestoetsen |
 | Eén ontbrekend bestand bij "Lessen bewaren": het onderwerp bleef op "bewaren …" staan tot herladen, en kon niet opnieuw | wie lessen bewaart | de andere downloads stoppen, "mislukt", en opnieuw proberen kan |

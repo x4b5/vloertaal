@@ -242,6 +242,14 @@ const isQuota = (e: unknown) => {
 /** How long one file may take before a save counts as failed (a link that connects but stalls). */
 const FILE_MS = 60_000;
 
+/** A signal that aborts after `ms` (AbortSignal.timeout is missing before iOS 16). */
+function timeoutSignal(ms: number): AbortSignal {
+  if (typeof AbortSignal.timeout === 'function') return AbortSignal.timeout(ms);
+  const c = new AbortController();
+  setTimeout(() => c.abort(), ms);
+  return c.signal;
+}
+
 /**
  * Fetches each URL and puts it in the cache, a few at a time; returns the bytes stored. One file
  * that fails stops the others, and the error comes only once every worker has stopped: no file
@@ -260,7 +268,7 @@ export async function fill(cache: Cache, urls: string[], progress: (n: number) =
         return;
       }
     }
-    const res = await fetch(url, { cache: 'no-cache', headers: { 'x-vloertaal-save': '1' }, signal: AbortSignal.timeout?.(FILE_MS) });
+    const res = await fetch(url, { cache: 'no-cache', headers: { 'x-vloertaal-save': '1' }, signal: timeoutSignal(FILE_MS) });
     if (!res.ok || res.status !== 200) throw new Error(`${res.status} ${url}`);
     const blob = await res.clone().blob();
     await cache.put(url, res);

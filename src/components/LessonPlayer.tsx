@@ -399,7 +399,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const voices = useVoices();
   const ex: Exercise = useMemo(() => {
     if (queued && queued.kind === 'build' && queued.audio && (audioOff || unheard(queued, mayBeHeard))) return { ...queued, audio: undefined };
-    if (queued && queued.kind === 'dutch' && queued.textOnly && nonLatinAtStart && audioOff) {
+    if (queued && queued.kind === 'dutch' && queued.textOnly && nonLatinAtStart && (audioOff || surelySilent(queued.word.nl))) {
       return { kind: 'meaning', word: queued.word, options: queued.options };
     }
     return queued;

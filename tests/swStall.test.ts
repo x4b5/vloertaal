@@ -23,8 +23,8 @@ function worker(stored: Record<string, string>, network: (url: string) => Promis
     fetch: (r: string | { url: string }) => network(typeof r === 'string' ? r : r.url),
     Response, URL, Set, Promise, setTimeout, clearTimeout,
   });
-  return (url: string, mode = 'no-cors', fetched?: string[]) => new Promise<Response>((resolve) => {
-    const request = { url, method: 'GET', mode, cache: 'default', headers: new Headers() };
+  return (url: string, mode = 'no-cors', fetched?: string[], cache = 'default') => new Promise<Response>((resolve) => {
+    const request = { url, method: 'GET', mode, cache, headers: new Headers() };
     handlers.fetch({ request, respondWith: (p: Promise<Response>) => p.then(resolve) });
     fetched?.push(url);
   });
@@ -49,6 +49,15 @@ describe('the service worker on a stalling link', () => {
     await vi.advanceTimersByTimeAsync(10_000);
     answer(new Response('bouw page'));
     expect(await (await page).text()).toBe('bouw page');
+  });
+
+  it("waits for the server when the page asks for the server's answer (the update check)", async () => {
+    let answer: (r: Response) => void = () => {};
+    const ask = worker({ [SCOPE]: 'cached page' }, () => new Promise((r) => (answer = r)));
+    const page = ask(SCOPE, 'cors', undefined, 'no-store');
+    await vi.advanceTimersByTimeAsync(10_000);
+    answer(new Response('new page'));
+    expect(await (await page).text()).toBe('new page');
   });
 
   it('plays a clip played before from the phone', async () => {

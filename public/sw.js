@@ -200,5 +200,6 @@ self.addEventListener('fetch', (e) => {
   // A hashed app file the server no longer has (an old tab after an update): the cached copy, if
   // any. None: the page sees the failed file and loads the new version (src/lib/appUpdate.ts).
   const net = fetch(req).then((res) => (!res.ok && url.pathname.includes('/assets/') ? caches.match(req.url).then((hit) => hit || res) : keep(req, res)));
-  e.respondWith(orCopy(net, () => stallCopy(req, url)).catch(() => fromCache(req)));
+  // A request that asks for the server's answer (the update check, src/lib/appUpdate.ts) waits for it.
+  e.respondWith((req.cache === 'no-store' ? net : orCopy(net, () => stallCopy(req, url))).catch(() => fromCache(req)));
 });

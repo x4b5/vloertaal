@@ -120,7 +120,7 @@ function startProgress() {
 }
 
 /** How long the start waits for a file that neither comes nor fails before it offers "Try again". */
-const STALLED_MS = 8000;
+const STALLED_MS = 15_000;
 
 export default function App() {
   const [start] = useState(startProgress);
@@ -397,10 +397,14 @@ export default function App() {
   }, [picsReady, progress.onboarded, langTry]);
   // A file that neither comes nor fails (a connection that hangs): after a while the splash offers
   // "Try again" too (a reload), and still goes on by itself if the file comes after all.
+  // Only a button: no reload when the connection comes back (that is for a file that failed), and
+  // nothing left behind once the file is here.
   const waiting = !langReady || (progress.onboarded && !picsReady);
+  const [stalled, setStalled] = useState(false);
   useEffect(() => {
     if (!waiting || langFailed) return;
-    const t = window.setTimeout(() => setLangFailed(true), STALLED_MS);
+    setStalled(false);
+    const t = window.setTimeout(() => setStalled(true), STALLED_MS);
     return () => window.clearTimeout(t);
   }, [waiting, langFailed]);
   const lang = getHelpLanguage(progress.helpLang, progress.gender);
@@ -547,7 +551,7 @@ export default function App() {
     const leave = () => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname + location.search); setCoachDirect(false); setView(HOME); };
     return <Coaches onBack={leave} lang={langReady && progress.onboarded ? lang : undefined} />;
   }
-  if ((!langReady || (progress.onboarded && !picsReady)) && view.name !== 'admin') return <Splash failed={langFailed} onRetry={() => location.reload()} lang={progress.helpLang} />;
+  if ((!langReady || (progress.onboarded && !picsReady)) && view.name !== 'admin') return <Splash failed={langFailed || stalled} onRetry={() => location.reload()} lang={progress.helpLang} />;
   if (view.name === 'admin') {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
