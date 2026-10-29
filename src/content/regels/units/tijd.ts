@@ -31,7 +31,7 @@ export const tijdUnit: RuleUnit = {
             'Mohammed werkt in een magazijn.',
             'Het rooster hangt aan de muur en staat in een app.',
             'Op dinsdag staat hij ineens 13 uur ingeroosterd.',
-            'Hij twijfelt of dat mag.',
+            'Hij weet niet of dat mag.',
           ],
         },
         // ⚖️ check: Hooguit 12 uur ⚖️ per dienst.
@@ -78,13 +78,13 @@ export const tijdUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.tijd.1.wd1',
-          situation: 'Het rooster verandert steeds een dag van tevoren. Mohammed kan zo niets plannen.',
+          situation: 'Het rooster verandert steeds een dag van tevoren. Mohammed kan zo niets plannen. Wat kan Mohammed het beste doen?',
           options: [
             { id: 'a', text: 'Hij past zich aan. Zo gaat het nu eenmaal.', best: false, feedback: 'Begrijpelijk. Maar er zijn regels voor het rooster.' },
             { id: 'b', text: 'Hij vraagt wanneer het rooster vast hoort te staan.', best: true, feedback: 'Goed. Rustig vragen is de eerste stap.' },
-            { id: 'c', text: 'Hij komt alleen nog op de dagen die hem uitkomen.', best: false, feedback: 'Dan breekt hij zelf afspraken. Praten werkt beter.' },
+            { id: 'c', text: 'Hij komt alleen nog op de dagen die hij zelf wil.', best: false, feedback: 'Dan breekt hij zelf afspraken. Praten werkt beter.' },
           ],
-          why: 'Je werkgever moet je werktijden op tijd laten weten. Meestal 4 weken van tevoren, tenzij de cao iets anders zegt. Een wijziging moet een goede reden hebben.',
+          why: 'Je werkgever moet je werktijden op tijd laten weten. Meestal 4 weken van tevoren, tenzij de cao iets anders zegt. Een verandering moet een goede reden hebben.',
         },
         {
           kind: 'whoask',
@@ -136,7 +136,7 @@ export const tijdUnit: RuleUnit = {
             'Werk je meer dan 5,5 uur? Dan krijg je minstens 30 minuten pauze.',
             'Werk je meer dan 10 uur? Dan minstens 45 minuten.',
             'Ben je 16 of 17? Dan krijg je al pauze na 4,5 uur.',
-            'Pauze is de wet, geen gunst.',
+            'Pauze is je recht. Dat staat in de wet.',
           ],
           rule: 'geschreven',
         },
@@ -156,19 +156,19 @@ export const tijdUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.tijd.2.wd1',
-          situation: 'De leidinggevende wil vandaag geen pauze.',
+          situation: 'De leidinggevende wil vandaag geen pauze. Wat kan Sanne het beste doen?',
           options: [
-            { id: 'a', text: 'Je vraagt rustig wanneer je vandaag wel pauze kunt nemen.', best: true, feedback: 'Goed. Zo zoek je samen een moment.' },
-            { id: 'b', text: 'Je slaat je pauze over. Het is nu eenmaal druk.', best: false, feedback: 'Begrijpelijk. Maar pauze is je recht, ook als het druk is.' },
-            { id: 'c', text: 'Je neemt meteen pauze, ook al staat er een rij.', best: false, feedback: 'Je hebt recht op pauze. Maar overleg eerst even.' },
+            { id: 'a', text: 'Ze vraagt rustig wanneer ze vandaag wel pauze kan nemen.', best: true, feedback: 'Goed. Zo zoeken ze samen een moment.' },
+            { id: 'b', text: 'Ze slaat haar pauze over. Het is nu eenmaal druk.', best: false, feedback: 'Begrijpelijk. Maar pauze is haar recht, ook als het druk is.' },
+            { id: 'c', text: 'Ze neemt meteen pauze, ook al staat er een rij.', best: false, feedback: 'Ze heeft recht op pauze. Maar ze vraagt het beter eerst even.' },
           ],
-          why: 'Pauze is de wet, geen gunst. Rust helpt je ook om veilig te werken. Zoek samen een moment, ook als het druk is.',
+          why: 'Pauze is je recht. Dat staat in de wet. Rust helpt je ook om veilig te werken. Zoek samen een moment, ook als het druk is.',
         },
         // ⚖️ check: Pauze is vaak onbetaald. Dat hangt af van je contract of cao ⚖️.
         {
           kind: 'truefalse',
           id: 'r.l.tijd.2.tf2',
-          statement: 'Je pauze wordt altijd betaald.',
+          statement: 'Je baas betaalt je pauze altijd.',
           answer: false,
           why: 'Pauze is vaak onbetaald. Dat hangt af van je contract of cao. In je pauze hoef je niet te werken. Je mag dan echt stoppen.',
         },
@@ -190,7 +190,7 @@ export const tijdUnit: RuleUnit = {
       // Les 5.3 · Overwerk en nee zeggen
       id: 'r.l.tijd.3',
       title: 'Overwerk en nee zeggen',
-      goal: 'Je kunt nee zeggen tegen extra uren, en je houdt je overuren bij.',
+      goal: 'Je kunt nee zeggen tegen extra uren. Je houdt je overuren bij.',
       remember: 'Overwerk? Schrijf de uren op, met datum en tijd.',
       // Wie kan je helpen: je cao · een vakbond · de loonadministratie.
       help: ['vakbond', 'hr'],
@@ -224,13 +224,13 @@ export const tijdUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.tijd.3.wd1',
-          situation: 'Kevin kan vandaag niet langer blijven.',
+          situation: 'Kevin kan vandaag niet langer blijven. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt ja, en hij gaat toch om 5 uur weg.', best: false, feedback: 'Dan rekent Henk op iemand die er niet is.' },
             { id: 'b', text: 'Hij zegt: "Vandaag niet. Morgen kan ik wel."', best: true, feedback: 'Goed. Duidelijk, en hij biedt iets anders aan.' },
-            { id: 'c', text: 'Hij zegt "misschien", en hij belt zijn moeder.', best: false, feedback: 'Dan weet Henk niet waar hij aan toe is.' },
+            { id: 'c', text: 'Hij zegt "misschien", en hij belt zijn moeder.', best: false, feedback: 'Dan weet Henk niet of Kevin blijft.' },
           ],
-          why: 'Een duidelijk nee wordt hier gewaardeerd. Ja zeggen en het niet doen, kost veel vertrouwen. Bied een andere keer aan als dat kan.',
+          why: 'Mensen hier vinden een duidelijk nee prettig. Ja zeggen en het niet doen, kost veel vertrouwen. Bied een andere keer aan als dat kan.',
         },
         // ⚖️ check: Het hangt af van je contract en je cao ⚖️.
         // ⚖️ check: Bij een noodgeval moet je soms wel ⚖️.
@@ -247,10 +247,10 @@ export const tijdUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.tijd.3.wd2',
-          situation: 'Kevin werkt deze week voor de derde keer over.',
+          situation: 'Kevin werkt deze week voor de derde keer over. Wat kan Kevin het beste doen?',
           options: [
-            { id: 'a', text: 'Hij vertrouwt erop dat Henk het zelf bijhoudt.', best: false, feedback: 'Henk vergeet misschien iets. Je eigen lijst is zekerder.' },
-            { id: 'b', text: 'Hij vraagt Henk om de extra uren contant te betalen.', best: false, feedback: 'Contant en buiten de loonstrook om is zwart werk. Dan mis je rechten.' },
+            { id: 'a', text: 'Hij vertrouwt erop dat Henk het zelf bijhoudt.', best: false, feedback: 'Henk vergeet misschien iets. Zijn eigen lijst is zekerder.' },
+            { id: 'b', text: 'Hij vraagt Henk om de extra uren contant te betalen.', best: false, feedback: 'Contant en buiten de loonstrook om is zwart werk. Dan mist hij rechten.' },
             { id: 'c', text: 'Hij schrijft de extra uren op, met datum en tijd.', best: true, feedback: 'Goed. Daarna checkt hij zijn loonstrook.' },
           ],
           why: 'Je eigen lijst helpt als er iets misgaat. Check daarna je loonstrook. Krijg je loon contant, buiten je loonstrook om? Dan is het zwart werk. Dan bouw je bijvoorbeeld geen WW en pensioen op.',
@@ -286,7 +286,7 @@ export const tijdUnit: RuleUnit = {
             'Esra wil in de zomer 3 weken naar haar familie.',
             'Het is nu februari.',
             'Haar collega zegt: "Vraag het pas in juni. Dan weet je het zeker."',
-            'Esra twijfelt.',
+            'Esra weet niet wat ze moet doen.',
           ],
         },
         // ⚖️ check: Zegt hij nee? Dat moet hij binnen 2 weken ⚖️ op papier laten weten.
@@ -335,11 +335,11 @@ export const tijdUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.tijd.4.wd2',
-          situation: 'Piotr krijgt een telefoontje. Zijn zoon is gevallen op school en moet naar het ziekenhuis.',
+          situation: 'Piotr krijgt een telefoontje. Zijn zoon is gevallen op school en moet naar het ziekenhuis. Wat kan Piotr het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt het meteen tegen zijn leidinggevende, en gaat.', best: true, feedback: 'Goed. Zo weet het werk wat er aan de hand is.' },
             { id: 'b', text: 'Hij werkt eerst zijn dienst af, en gaat dan.', best: false, feedback: 'Dat hoeft niet. Bij een noodgeval mag je weg.' },
-            { id: 'c', text: 'Hij gaat meteen weg, en hij belt morgen zijn baas.', best: false, feedback: 'Gaan is goed. Maar laat het meteen weten.' },
+            { id: 'c', text: 'Hij gaat meteen weg, en hij belt morgen zijn baas.', best: false, feedback: 'Gaan is goed. Maar hij moet het meteen laten weten.' },
           ],
           why: 'Bij een noodgeval mag je meteen weg. Dat heet calamiteitenverlof. Je krijgt dan meestal gewoon loon. Moet je langer voor iemand zorgen? Vraag naar zorgverlof.',
         },
