@@ -74,7 +74,7 @@ export const winkelUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.winkel.1.wd2',
-          situation: 'Kevin zet drie rolcontainers in het pad. Een klant met een rollator wil erlangs.',
+          situation: 'Kevin zet drie rolcontainers in het pad. Een klant met een rollator wil erlangs. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt sorry en schuift de containers aan de kant.', best: true, feedback: 'Goed. Het pad moet vrij zijn voor klanten.' },
             { id: 'b', text: 'Hij vraagt de klant om even om te lopen.', best: false, feedback: 'Begrijpelijk. Maar het pad is er voor de klant.' },
@@ -100,7 +100,7 @@ export const winkelUnit: RuleUnit = {
       // Les 11.2 · De klant helpen en doorverwijzen
       id: 'r.l.winkel.2',
       title: 'De klant helpen en doorverwijzen',
-      goal: 'Je helpt een klant vriendelijk, en je zegt het eerlijk als je iets niet weet.',
+      goal: 'Je helpt een klant vriendelijk. Je zegt het eerlijk als je iets niet weet.',
       remember: 'Weet je het niet? Zeg het eerlijk, en haal iemand die het weet.',
       steps: [
         {
@@ -131,7 +131,7 @@ export const winkelUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.winkel.2.wd1',
-          situation: 'Fatima weet het antwoord niet.',
+          situation: 'Fatima weet het antwoord niet. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze kiest een lamp die er goed uitziet.', best: false, feedback: 'Dan krijgt de klant misschien de verkeerde lamp.' },
             { id: 'b', text: 'Ze zegt: "Dat weet ik niet," en werkt door.', best: false, feedback: 'Eerlijk. Maar de klant heeft nog geen hulp.' },
@@ -142,11 +142,11 @@ export const winkelUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.winkel.2.wd2',
-          situation: 'Fatima is druk bezig. Een klant zegt: "Mag ik u iets vragen?"',
+          situation: 'Fatima is druk bezig. Een klant zegt: "Mag ik u iets vragen?" Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze stopt even, kijkt de klant aan en luistert.', best: true, feedback: 'Goed. In een winkel gaat de klant voor.' },
             { id: 'b', text: 'Ze zegt "moment" en maakt eerst haar doos leeg.', best: false, feedback: 'Begrijpelijk. Maar dan moet de klant lang wachten.' },
-            { id: 'c', text: 'Ze wijst naar de servicebalie, zonder iets te zeggen.', best: false, feedback: 'Dat kan onvriendelijk overkomen.' },
+            { id: 'c', text: 'Ze wijst naar de servicebalie, zonder iets te zeggen.', best: false, feedback: 'Dat kan onvriendelijk lijken.' },
           ],
           why: 'In een winkel gaat de klant voor. Stop even met je werk. Kijk de klant aan en groet. Tegen klanten zeg je meestal "u".',
         },
@@ -156,7 +156,7 @@ export const winkelUnit: RuleUnit = {
           id: 'r.l.winkel.2.tf1',
           statement: 'Vraagt een klant of er noten in een product zitten? Dan zeg je wat je denkt.',
           answer: false,
-          why: 'Bij een allergie kan een fout gevaarlijk zijn. Raad dus nooit. Lees samen met de klant het etiket. Allergenen staan daar extra duidelijk, bijvoorbeeld vet gedrukt. Twijfel je nog? Vraag het na.',
+          why: 'Bij een allergie kan een fout gevaarlijk zijn. Raad dus nooit. Lees samen met de klant het etiket. Allergenen staan daar extra duidelijk, bijvoorbeeld vet gedrukt. Weet je het nog niet zeker? Vraag het na.',
         },
         { kind: 'model', id: 'r.l.winkel.2.mo1', context: 'Een klant vraagt iets. Je weet het antwoord niet zeker.', nl: 'Dat weet ik niet zeker. Ik vraag het even aan mijn collega.' },
       ],
@@ -205,11 +205,11 @@ export const winkelUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.winkel.3.wd1',
-          situation: 'Jayden twijfelt over de leeftijd van de jongen.',
+          situation: 'Jayden weet niet zeker hoe oud de jongen is. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij vraagt rustig: "Mag ik je ID zien?"', best: true, feedback: 'Goed. Zonder bewijs van 18 jaar geen alcohol.' },
-            { id: 'b', text: 'Hij gelooft de jongen. De rij is al lang.', best: false, feedback: 'Begrijpelijk. Maar je moet de leeftijd echt zien.' },
-            { id: 'c', text: 'Hij zegt dat hij geen bier verkoopt aan jongeren.', best: false, feedback: 'Misschien is hij wel 18. Vraag eerst zijn ID.' },
+            { id: 'b', text: 'Hij gelooft de jongen. De rij is al lang.', best: false, feedback: 'Begrijpelijk. Maar hij moet de leeftijd echt zien.' },
+            { id: 'c', text: 'Hij zegt dat hij geen bier verkoopt aan jongeren.', best: false, feedback: 'Misschien is hij wel 18. Jayden kan beter eerst zijn ID vragen.' },
           ],
           why: 'Alcohol en tabak verkoop je alleen aan mensen vanaf 18 jaar. Twijfel je? Dan moet je een ID zien. Lijkt iemand jonger dan 25? Dan vragen veel winkels een ID. Geen ID? Dan geen alcohol.',
         },
