@@ -4,7 +4,7 @@ export function normalize(text: string): string {
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
-    .replace(/[’'`]/g, '')
+    .replace(/[’‘ʼ'`]/g, '')
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim();
@@ -31,9 +31,11 @@ export type TypedResult = 'correct' | 'almost' | 'wrong';
 /**
  * Forgiving check for typed answers. Beginners should not fail on a capital
  * letter, a missing article or one typo; those count as "almost" (still correct,
- * but we show the right spelling).
+ * but we show the right spelling). `others`: words the learner could mix it up with
+ * (the other word of a sound pair, "man" for "maan"): typing one of those is wrong,
+ * even when it is only a letter away.
  */
-export function checkTyped(input: string, expected: string): TypedResult {
+export function checkTyped(input: string, expected: string, others: readonly string[] = []): TypedResult {
   const got = normalize(input);
   const want = normalize(expected);
   if (!got) return 'wrong';
@@ -41,6 +43,7 @@ export function checkTyped(input: string, expected: string): TypedResult {
   const wantBare = want.replace(ARTICLES, '');
   const gotBare = got.replace(ARTICLES, '');
   if (gotBare === wantBare) return 'almost';
+  if (others.some((o) => normalize(o).replace(ARTICLES, '') === gotBare)) return 'wrong';
   const allowed = wantBare.length >= 4 ? 1 : 0;
   if (levenshtein(gotBare, wantBare) <= allowed) return 'almost';
   return 'wrong';

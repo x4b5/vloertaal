@@ -180,6 +180,15 @@ function pairPartner(word: Word, lesson: Lesson, avoid?: ReadonlySet<string>): W
   return lesson.words.find((w) => w.id === word.pair) ?? allWords.find((w) => w.id === word.pair);
 }
 
+/**
+ * What a typed answer must not be taken for (lib/answers.ts checkTyped): the other words on offer
+ * and the other word of its sound pair, which may be only a letter away ("man" for "maan").
+ */
+export function typedLookalikes(ex: { word: Word; options?: readonly Word[] }): string[] {
+  const partner = ex.word.pair ? allWords.find((w) => w.id === ex.word.pair) : undefined;
+  return [...(ex.options ?? []), ...(partner ? [partner] : [])].filter((w) => w.id !== ex.word.id && w.nl !== ex.word.nl).map((w) => w.nl);
+}
+
 /** The words of the lesson's unit: the fallback pool for picture choices (related words). */
 function unitWords(lesson: Lesson): Word[] {
   return units.find((u) => u.lessons.some((l) => l.id === lesson.id))?.lessons.flatMap((l) => l.words) ?? [];

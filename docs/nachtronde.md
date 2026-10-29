@@ -48,6 +48,8 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | Na stoppen bleef de mond van een figuur nog tot 8 s bewegen, ook tijdens het opnemen | iedereen | stoppen is ook stoppen voor de figuur |
 | Tijdens het opnemen kon je op de luidspreker tikken: het voorbeeld kwam in je eigen opname | spreekoefening | de luidspreker is weg tijdens het opnemen (de plek blijft) |
 | "Voortgang wissen" in rood met te weinig contrast | slechtziend | donkerder rood |
+| In de type-oefening telde het andere woord van een klankpaar als "bijna goed" ("de man" voor "de maan", "koud" voor "goud") | Klanken-lessen | het andere woord is fout; een echte tikfout blijft "bijna" |
+| iOS kon een getypt woord "verbeteren" | iPhone | autocorrectie uit in het invoerveld |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
@@ -85,7 +87,7 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 ## Samen met PR #90 (SEO)
 
 De twee PR's raken allebei `index.html`, `vite.config.ts` en `public/sw.js`. Een proefmerge van
-beide (29 oktober, 00:55) gaat zonder conflict: de wijzigingen staan bewust op andere regels. Samen
+beide (29 oktober, 00:50) gaat zonder conflict: de wijzigingen staan bewust op andere regels. Samen
 slagen alle 1179 tests en de build. In de browser toont `/?taal=pl` "Polski?", is er
 één `<main>`, en verdwijnen de SEO-links zodra de app tekent. De volgorde van mergen maakt niet uit.
 
@@ -104,5 +106,15 @@ slagen alle 1179 tests en de build. In de browser toont `/?taal=pl` "Polski?", i
    in `src/i18n/meta.ts` (via de vertaalcontrole).
 4. **Sectorpagina na Terug en dan Vooruit** kan op stap 2 openen. Dat kan alleen met een
    Vooruit-knop (een computer), en het gevolg is klein. Niet aangepast.
-5. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+5. **Een ander lidwoord telt als "bijna goed"** ("het tafel" voor "de tafel"). Bedoeld voor een
+   *vergeten* lidwoord; een *verkeerd* lidwoord gaat er nu ook door, en het woord gaat in de
+   herhaling omhoog. Zo wordt de/het nooit als fout geoefend. Strenger maken is een keuze over
+   de lesaanpak; daarom niet zelf gedaan.
+6. **Herhaling aanvullen** met woorden die nog niet aan de beurt waren: goed beantwoord gaan ze
+   een vak omhoog, gerekend vanaf vandaag (een woord uit vak 5 komt dan pas over 30 dagen terug).
+   Kan door alleen de datum te verschuiven en het vak te laten. Ontwerpkeuze, niet aangepast.
+7. **Tigrinya: vier paren met dezelfde vertaling** (gevaar/ongeluk ሓደጋ, beschadigd/gewond ዝተጎድአ,
+   hygiëne/kwaliteit ጽሬት, persoonlijk/privé ውልቃዊ). In een meerkeuzevraag staan ze dan als twee
+   gelijke antwoorden naast elkaar. Voor de vertaalcontrole: nieuwe vertalingen niet zelf gemaakt.
+8. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
    vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.

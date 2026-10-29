@@ -5,7 +5,7 @@ import { fillN, gloss, said as srText, saidLang, ui, type Bilingual } from '../i
 import type { HelpLanguage } from '../i18n/types';
 import { checkTyped, nextTileOrder, sentenceOrders } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
-import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, tileLabel, type Exercise } from '../lib/exercises';
+import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, sentences, splitQuote, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
@@ -730,10 +730,11 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
   const wrongTaps = useRef(0);
   const [miss, setMiss] = useMiss<number>();
   useEffect(() => { autoSpeak(ex.word.nl); }, [ex.word]);
+  const lookalikes = useMemo(() => typedLookalikes(ex), [ex]);
   const typed = (v: string) => {
     setValue(v);
     if (!v.trim()) return onAnswer(null);
-    const r = checkTyped(v, ex.word.nl);
+    const r = checkTyped(v, ex.word.nl, lookalikes);
     onAnswer({ correct: r !== 'wrong', almost: r === 'almost' });
   };
   const tapTile = (i: number) => {
@@ -767,6 +768,7 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
           autoFocus
           autoComplete="off"
           autoCapitalize="off"
+          autoCorrect="off"
           spellCheck={false}
           readOnly={locked}
           aria-invalid={verdict === 'wrong' || undefined}
@@ -780,7 +782,7 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
           onKeyDown={(e) => {
             if (e.key !== 'Enter' || locked || !value.trim()) return;
             e.preventDefault();
-            const r = checkTyped(value, ex.word.nl);
+            const r = checkTyped(value, ex.word.nl, lookalikes);
             onAnswer({ correct: r !== 'wrong', almost: r === 'almost', done: true });
           }}
         />
