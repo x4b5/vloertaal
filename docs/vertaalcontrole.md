@@ -1247,3 +1247,65 @@ Opvallend in het Tigrinya: vijf zinnen met "ik" stonden in de derde persoon ("�
 - `gloss.c.direct.o1 / c.direct.o3`: In the same tip, the box is قطی in o1 and جعبه in o3 (and قطی in the rest of the file). Should o3 also say قطی?
 - `gloss.s.understand.2`: NL 'langzamer' (more slowly) is 'آهسته گپ بزنید' (speak slowly), while rg.zl.c.2.a uses the comparative آهسته‌تر. Would 'آهسته‌تر گپ بزنید' be better here?
 - `gloss.s.findwork.1`: 'Ik wil solliciteren' is 'می‌خواهم برای این کار درخواست بدهم' (for THIS job). EN says 'apply for a job'. Is 'برای یک کار' better, or is 'this job' fine in the lesson?
+
+### Ronde 4 (29 oktober): blinde terugvertaling van de kritieke teksten
+
+Andere methode: een vertaler die de bron **niet** zag, vertaalde de teksten terug naar het Engels; een tweede agent vergeleek dat met de bron (en met een tabel van hoe kerntermen als BSN, loonstrook, uitzendbureau en cao elders in die taal staan). Zo komt betekenisverschuiving boven die je bij naast-elkaar-lezen mist. Alleen de teksten waar een fout schade doet: veiligheid, ziekte en gezondheid, loon, contracten, rechten, uitbuiting, oplichting, AI-privacy, de noodzinnen en de wie-helpt-schermen (784 per taal, 7.056 in totaal). Twee keurders per wijziging, alleen doorgevoerd als beide het eens waren.
+
+**Doorgevoerd (14):**
+
+- **Tigrinya**: `c.letters.b`: 'ብዙሕ እንተ ረኺብካ' says 'if you receive a lot', not 'too much', which suggests that a large allowance has to be paid back; it should say more than you are entitled to.; `c.cleansafe.p`: ኣቐምጦ is the imperative ('put it down!') placed before 1st-person ኣለኹ, which is ungrammatical. 'I am putting it' needs the 1sg imperfect የቐምጦ. This is the same person/form mismatch that was fixed in s.sick.3 and c.service.a.; `c.aiplan.b`: For 'dismissal' this text uses ምስንባት, which mainly means farewell or discharge. Every other text in the app (w.ontslag, c.rights, ui.whoLegal) says ካብ ስራሕ ምስጓግ, so in a rights text the learner may not see that this means being fired.; `c.aihelp.b`: ክትርጉሙ is a misspelling that reads as 'you (plural)'. 'They (the apps) can translate' is ክተርጉሙ (from ተርጎመ), which matches ክገልጹ next to it.; `a.disclaimer.b`: Agreement error: the singular demonstrative እዚ is used with the plural noun ጽሑፋት and the plural verb ተሓዲሶም. The plural demonstrative is እዞም.
+- **Arabisch**: `w.bsn`: "الخدمة المدنية" means the civil service (government employment), so the gloss reads as a civil servant's staff number; burgerservicenummer is literally 'citizen service number'. The phrase occurs only here, and c.bsn.b uses رقم المواطن.
+- **Perzisch**: `c.contract`: "کار تماسی" is a calque that reads like call-centre or contact work. Everywhere else in the app (w.oproepkracht, c.contract.b) on-call work is "آنکال", so the title should match the body below it.
+- **Turks**: `c.client.b`: 'sana “je” demeni' literally says 'your saying je to you', which is ungrammatical and unclear. 'senden ... istemek' means 'to ask you to', which is what EN says.; `s.findwork.1`: NL 'Ik wil solliciteren' and EN 'I want to apply for a job' say nothing about a specific job, but 'Bu işe' adds 'this job'. Romanian had the same error and it was fixed today.
+- **Bulgaars**: `c.client.o1`: This plain string uses the masculine 'кой си' to address the learner; a woman says 'коя си'. The same issue was fixed in c.client.b with 'представи се', which fits both genders, and many care-work learners are women.
+
+Geen fouten gevonden in de kritieke teksten van Dari, Oekraïens, Pools en Roemeens.
+
+**Vragen voor een moedertaalspreker:**
+
+*Tigrinya*
+
+- `gloss.c.gethelp.o2`: In 'ንሓደሽቲ ሰራሕተኛታት እዚ ልሙድ ምዃኑ ንገሮ', can ን- before ሓደሽቲ ሰራሕተኛታት be read as 'tell the new workers' instead of 'normal for new workers'? Would 'እዚ ንሓደሽቲ ሰራሕተኛታት ልሙድ ምዃኑ ንገሮ' be clearer?
+- `gloss.a.free / gloss.w.privacy`: 'Privacy' is ብሕታውነት in a.free but ውልቃውነት in w.privacy, l.privacy and c.privacy. ውልቃውነት can also be read as 'individuality'. Which word do Eritrean readers know as 'privacy', and should the app use only that one? a.free also leaves out 'your' ('Your privacy').
+- `gloss.a.free.b`: For 'If it is switched on', the text says 'እንተ ተኸፊቱ' (literally 'if it is opened'). Is that clear for a setting that is on or off, or is something like 'እንተ ተወሊዑ' better?
+- `gloss.c.aihelp.b`: 'ይጋገ፡ ኮይኑ ግን ኣዝዩ ርግጸኛ ይመስል' (makes mistakes, yet still sounds very sure): is this natural, or is 'ይጋገ፡ ግን ከኣ ኣዝዩ ርግጸኛ ይመስል' better?
+- `gloss.w.begrijpniet`: It is spelled ኣይተረድኣንን. Is the more common spelling ኣይተረደኣንን?
+
+*Dari*
+
+- `ui.whoFairwork`: EN 'exploited' is rendered 'سوءاستفاده می‌شود' (abused/misused). ui.whoInspection, u.exploit, c.warning and c.gethelp.p all use 'استثمار'. Would 'از شما استثمار می‌شود' be clearer, so the FairWork line uses the same word for exploitation as the rest of the app?
+- `gloss.w.toeslag`: 'پول اضافی، امتیاز': 'امتیاز' can read as 'privilege/bonus' instead of the extra pay you are owed for nights or weekends. Keep only 'پول اضافی' (maybe with 'معاش اضافی')?
+- `gloss.w.ladder`: 'زینه' means both stairs and ladder in Dari. Is it clear enough on a building site (s.tools.2), or is 'زینهٔ دستی' / 'نردبان' better?
+
+*Arabisch*
+
+- `gloss.c.letters.a.why`: "يُقدَّم حتى 1 مايو" ('is filed until 1 May') could be read as a filing period that runs up to and includes 1 May, while c.letters.a says "قبل 1 مايو". Would "قبل 1 مايو" or "آخر موعد لتقديمه 1 مايو" be clearer and more consistent?
+- `ui.backupBack`: "عاد تقدمك." ('your progress came back') reads a bit oddly as a success message after a restore. Is "تمّت استعادة تقدّمك." more natural?
+- `gloss.s.aifake.2, gloss.c.aifake.p`: "أُنهي المكالمة وأتصل أنا بنفسي." leaves out "back" (terug), and on its own "أتصل ... بنفسي" can read as "I call myself". Would "أُنهي المكالمة وأعاود الاتصال أنا." be clearer?
+- `gloss.c.aiplan.b#f, gloss.a.disclaimer.b#f`: The f form ends with "لوضعك أنت". Other f texts in this lesson (e.g. c.aifake.b#f) write "أنتِ" with a kasra. Should the f form be "لوضعكِ أنتِ" so it matches?
+
+*Perzisch*
+
+- `gloss.c.notyet.a`: 'می‌توانی اول نشانم بدهی چطور است؟' literally says 'show me how it is' (what it is like), not 'show me how to do it'. Would 'می‌توانی اول نشانم بدهی چطور انجامش بدهم؟' be clearer for 'Kun je het eerst voordoen?'
+- `gloss.c.findwork.o3`: 'بدون هیچ سؤالی برو' for 'Walk away without asking anything': can 'برو' be read as 'go along with it' rather than 'leave'? Would 'بدون اینکه چیزی بپرسی، آنجا را ترک کن' be clearer?
+
+*Oekraïens*
+
+- `gloss.s.findwork.1`: 'Ik wil solliciteren' / 'I want to apply for a job' is 'Я хочу податися на цю роботу' ('apply for THIS job'). The word 'цю' is added. Is that fine, or is 'Я хочу податися на роботу' closer? (The same question is open for Tigrinya.)
+- `gloss.c.aihelp.s, gloss.c.aihelp.o1, gloss.c.aihelp.w`: The AI texts call the work contract 'договір', but the rest of the course says 'контракт' (w.contract, c.findwork.*, c.contract.*). Both words are correct. Should one word be used everywhere so learners do not think these are two different papers?
+
+*Turks*
+
+- `c.health.o3`: 'Tek kelime etmeden işi bırakıp eve gidersin': 'işi bırakmak' can also mean 'to quit the job'. EN means 'stop working (for today) and go home'. It is a wrong-answer option, so either reading works, but would 'işi yarım bırakıp' or 'çalışmayı bırakıp' be clearer?
+- `c.doctor.a`: 'Oğlumun ateşi çok yüksek' adds 'very' (çok) to NL 'hoge koorts' / EN 'high fever'. In this lesson the line is about choosing the huisartsenpost over 112. Is 'Oğlumun ateşi yüksek' better, so it does not sound like an emergency?
+- `c.gear.b`: 'kendi bedenini iste' for 'ask for your size': is 'beden' (clothing size) clear here for gloves and shoes, or could it read as 'body'? Would 'kendi bedenini/numaranı iste' be clearer?
+
+*Pools*
+
+- `gloss.c.notyet.o3`: The Dutch word „ja” is kept from the source, but in Polish „ja” means „I” (the back-translator read it that way). Would „Mówisz „ja” (tak) i masz nadzieję...” or plain „Mówisz „tak”...” be clearer for learners?
+
+*Bulgaars*
+
+- `c.sick.b`: 'освен ако фирмата няма друго правило' is meant as 'unless the company has another rule'. Is it read that way, or can it be read as 'unless the company does NOT have another rule'? 'освен ако във фирмата няма друго правило' or 'освен ако фирмата има друго правило' might be clearer.
+- `s.findwork.1`: 'Искам да кандидатствам за работата' uses the definite form ('the job'). NL/EN mean applying for a job in general. Is 'Искам да кандидатствам за работа' better?
