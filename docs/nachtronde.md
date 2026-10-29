@@ -237,7 +237,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
     home zolang er woorden aan de beurt zijn (het ontwerp "hooguit 3 tikken"), en de knop zit in de
     kaart als de herhaling klaar is. Zo wachten de woorden boven de 10 tot morgen. Kaart (klein)
     terug als klaar, of de knop weghalen: graag een besluit.
-16. **De figuren ademen en knipperen eindeloos** op de home en in de les, zolang het scherm aan
+16. *Besloten en gedaan (29 oktober): de figuren ademen drie keer en knipperen daarna alleen nog; een nieuw scherm of een nieuwe oefening start het ademen opnieuw.* **De figuren ademen en knipperen eindeloos** op de home en in de les, zolang het scherm aan
     staat (ook als de telefoon blijft liggen). Klein, maar het kost doorlopend rekenwerk en dus
     batterij. Bijvoorbeeld na een paar keer ademen stoppen en alleen knipperen? Ontwerpkeuze.
 17. **Back-up**: er is geen herinnering om een back-up te maken (alleen de herinnering om te

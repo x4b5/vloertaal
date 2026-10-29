@@ -1168,8 +1168,10 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus { outline: none;
 .ch-head { transform-origin: 60px 94px; }
 .ch-eyes { transform-box: fill-box; transform-origin: center; animation: ch-blink var(--blink, 4.2s) infinite; }
 
-/* Idle: a slow breath (1 px, 4 s) and a blink. No sway, no look-around. */
-.ch-fig { animation: ch-breathe 4s ease-in-out infinite; }
+/* Idle: a slow breath (1 px, 4 s) and a blink. No sway, no look-around. The breath stops after
+   three (a phone left lying on the home is not kept busy); a new screen or exercise draws the
+   figure again, and so starts it again. The blink goes on. */
+.ch-fig { animation: ch-breathe 4s ease-in-out 3; }
 @keyframes ch-breathe { 50% { transform: translateY(-1px) scale(1, 1.006); } }
 /* Blink early in the cycle (so it shows soon after an exercise appears), then every --blink seconds. */
 @keyframes ch-blink { 0%, 10%, 15%, 100% { transform: scaleY(1); } 12.5% { transform: scaleY(0.08); } }
