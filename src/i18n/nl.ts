@@ -17,7 +17,7 @@ export const uiNl: Record<UiKey, UiText> = {
   appTagline: 'Werken in Nederland: zo gaat het', // regels
   chooseLanguage: 'Kies je taal',
   englishOnly: 'Ik leer Nederlands via het Engels', // regels: the other track, under "English"
-  beta: 'Deze tekst wordt nog nagekeken',
+  beta: 'We kijken deze tekst nog na',
   dayStreak: { one: 'dag op rij', other: 'dagen op rij' },
   streakStarted: 'Je bent een reeks begonnen! Kom morgen terug.',
   streakGrew: { one: '{n} dag op rij! Ga zo door.', other: '{n} dagen op rij! Ga zo door.' },
@@ -71,7 +71,7 @@ export const uiNl: Record<UiKey, UiText> = {
   who112: 'Bij nood: levensgevaar, brand of een misdrijf dat nu gebeurt.',
   whoLegal: 'Gratis advies over je contract, je loon of ontslag.',
   whoInspection: 'Onveilig werk, te weinig loon of uitbuiting melden. Dat kan ook anoniem.',
-  whoFairwork: 'Je wordt uitgebuit op je werk, of je denkt dat het zo is.',
+  whoFairwork: 'Iemand buit je uit op je werk, of je denkt dat het zo is.',
   settings: 'Instellingen',
   helpLanguage: 'Taal', // regels: no "help language" in this track
   resetProgress: 'Mijn voortgang wissen',
@@ -92,8 +92,8 @@ export const uiNl: Record<UiKey, UiText> = {
   whatIsRight: 'Wat klopt?',
   sayingBadge: 'Zo zeggen ze het',
   factTitle: 'Wist je dat?',
-  fact3: 'Je bent niet de enige. Ruim 3 miljoen volwassenen in Nederland vinden lezen, rekenen of de computer moeilijk. Oefenen helpt.',
-  fact7: 'Van de migranten die heel goed Nederlands spreken, hebben 69 van de 100 betaald werk.',
+  fact3: 'Je bent niet de enige. Meer dan 3 miljoen volwassenen in Nederland vinden lezen, rekenen of de computer moeilijk. Oefenen helpt.',
+  fact7: 'Sommige migranten spreken heel goed Nederlands. Van die groep hebben 69 van de 100 betaald werk.',
   fact14: 'In veel bibliotheken is een Taalhuis: gratis hulp om verder te leren.',
   fact30: 'Elke dag een beetje oefenen werkt beter dan af en toe heel veel. Jij doet het al 30 dagen!',
   topicsOrder: 'Toon de onderwerpen',
@@ -184,7 +184,7 @@ export const uiNl: Record<UiKey, UiText> = {
   daysUnit: 'dagen',
   wordsUnit: 'regels', // regels
   countTitle: 'Anoniem meetellen',
-  countHint: 'De app telt hoe vaak lessen worden gedaan, en ongeveer hoe lang ze duren. Geen naam, geen account. Niemand volgt je.',
+  countHint: 'De app telt hoe vaak mensen lessen doen, en ongeveer hoe lang dat duurt. Geen naam, geen account. Niemand volgt je.',
   certificate: 'Certificaat',
   myCertificates: 'Mijn certificaten',
   certsEmpty: 'Maak alle lessen van een onderwerp af. Dan krijg je een certificaat.',
@@ -335,7 +335,7 @@ export const uiNl: Record<UiKey, UiText> = {
   remindStop: 'Stop de herinnering',
   remindStopped: 'Open het bestand. Dan haal je de herinnering uit je agenda.',
   remindStoppedAndroid: 'Haal de herinnering zelf weg in Google Agenda.',
-  resetKeeps: 'Je lessen, je dagen op rij en je certificaten worden gewist. Je taal, je code en je instellingen blijven.', // regels: no words
+  resetKeeps: 'We wissen je lessen, je dagen op rij en je certificaten. Je taal, je code en je instellingen blijven.', // regels: no words
   loadFailed: 'Niet geladen. Is er internet?',
   retry: 'Opnieuw proberen',
 };
