@@ -87,6 +87,34 @@ zelf kapotmaakten; wat ze vonden is ook gerepareerd (zie de tabel).
 | Dari stond als `lang="prs"`, een code die telefoonstemmen niet kennen | Dari, schermlezer | `fa-AF`, zoals al voor de datums |
 | Alleen-Engels: de Engelse tekst stond als Nederlands gemarkeerd (Nederlandse stem leest Engels) | alleen-Engels, schermlezer | `lang="en"` |
 
+### Verlenging (29 oktober, 04:20–06:20)
+
+Na het mergen van #90 en #91 nog twee uur, met dezelfde werkwijze. Bekeken: de eerste start,
+de schermen naast de lessen (tips, noodzinnen, Over, onderwerpen), "Herhaal vandaag", wat de app
+verstuurt (privacy), beweging en timers, de Werkregels-oefeningen, en de 48 SEO-pagina's (axe en
+alle 1668 interne links). Tot slot een review van alleen deze wijzigingen; wat die vond, is
+gerepareerd (onder meer een focusring rond de eerste vraag). Daarna in de gebouwde app: hele
+lessen in drie talen, de eerste start in drie talen, offline, een hangende verbinding, en een
+les hervatten na herladen.
+
+| Wat ging er mis | Wie merkte het | Nu |
+|---|---|---|
+| Eerste start: een dubbeltik beantwoordde ook de volgende vraag (Engels: de sectorgroep én de sector zonder die te zien; Pools: "Kobieta" én een sectorgroep) | nieuwe leerlingen | een tik in het eerste moment na nieuwe kaarten telt niet |
+| Eerste start: bij elke nieuwe vraag ging de schermlezerfocus naar het logo, niet naar de vraag; binnen een pagina ("Andere taal", sectorgroep → sectoren) ging de focus helemaal weg | schermlezer | de focus gaat naar de vraag |
+| De talenlijst stond als Nederlands (of, na Terug, als Arabisch …) gemarkeerd; Dari in de lijst als `prs` | schermlezer | de lijst is Engels, elke taalnaam heeft zijn eigen code, Dari `fa-AF` |
+| Twee keer snel op een tabblad onderin (vanaf een onderwerp) kwam op de home uit, en Terug ging daarna de app uit | iedereen met haast | het laatst getikte tabblad, en Terug werkt gewoon |
+| De noodzinnen op het Hulp-tabblad bleven offline stil als ze nooit eerder waren afgespeeld (ze stonden niet bij de bewaarde lessen) | offline, de belangrijkste zinnen | ze worden één keer stil opgehaald zodra de app online is, en gaan mee met elk bewaard onderwerp |
+| De SEO-pagina's: twee menu's met dezelfde naam op /voor-begeleiders/, en de stemknoppen van /stemmen/ buiten elk oriëntatiepunt | schermlezer | axe over alle 48 pagina's, licht en donker: geen meldingen meer |
+| "Herhaal vandaag" begonnen om 23:58 en na middernacht klaar: de herhaling van vandaag stond als gedaan, de woorden die vandaag aan de beurt waren schoven een dag op | avondleerders | de herhaling telt voor de dag waarvoor ze begon; die van vandaag staat nog open |
+| De kaart "Herhaal vandaag" zei 2 woorden, de herhaling vroeg er 4 (aangevuld) | iedereen met weinig herhaalwoorden | hetzelfde getal |
+| Luisteroefeningen die in de herhaling werden overgeslagen (geluid uit), telden op de uitslag toch als herhaald | zonder geluid | alleen wat gevraagd is, telt |
+| "Minder beweging" (telefooninstelling): het scrollen naar een taal in Instellingen bewoog toch; de schaduw onder de kop in een les (die niet beweegt) viel weg | wie last heeft van beweging | geen beweging, schaduw blijft |
+| Werkregels: een verhaal kon opnieuw beginnen in een andere stem (als de opgenomen stemmen binnenkwamen) | trage verbinding | één keer voorgelezen |
+| Werkregels: de oplichtende rij op een kaart of loonstrook was alleen te zien, niet te horen; de loonstrook had geen luidspreker (en ging niet mee offline) | schermlezer, wie liever luistert | "hier gaat het om" voor de schermlezer; de loonstrook heeft een luidspreker en gaat mee |
+| "Meetellen" uitgezet in privé-modus (geblokkeerde opslag) telde stil door; "Global Privacy Control" werd niet gezien | privacy | uit is uit, ook dan; GPC telt als "niet meetellen" |
+| Back-up "Vervangen": vroeg alleen opnieuw bij een bestand met mínder lessen; een bestand met evenveel (andere) lessen of een lager record wiste lessen, reeks en record in één tik | wie een back-up terugzet | het vraagt opnieuw zodra er iets verloren gaat (een les, certificaat of record) |
+| Back-up terugzetten: de focus verdween na het kiezen van een bestand en na het antwoord; de melding werd vaak niet voorgelezen; bestanden uit WhatsApp of Drive (als .txt) waren soms niet te kiezen | schermlezer, telefoon | de vraag krijgt de focus en geeft die terug; de melding wordt voorgelezen; ook .txt kan |
+
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
 - Eén `<main>` op elk scherm (de app tekent in `<main id="root">`).
@@ -135,6 +163,22 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
 één `<main>`, en verdwijnen de SEO-links zodra de app tekent. De volgorde van mergen maakt niet uit.
 
 ## Bewust níét gedaan (graag een besluit)
+
+0. **Privacy van het anoniem meetellen (belangrijk).** Een review van alles wat de app verstuurt:
+   - Wat goed is: geen verzoeken naar derden behalve de teller; uit is echt uit (ook "Do Not
+     Track", en sinds vannacht ook "Global Privacy Control" en een uitgezette schakelaar bij
+     geblokkeerde opslag); "Melden" opent je eigen mail met precies wat je ziet.
+   - Wat niet goed is: één gebeurtenis gaat als tot 8 losse verzoeken tegelijk naar
+     vloertaal.goatcounter.com (hulptaal, sector, versie, les, kwart, minuten). GoatCounter slaat
+     elk verzoek op met IP-locatie, browser en tijd op de seconde, en kan ze per bezoek samenvoegen.
+     Voor een kleine taalgroep in één plaats ("Tigrinya, zorg, Heerlen, 14:03") kan dat één
+     persoon aanwijzen. De hulptaal zegt bij deze groep vaak de nationaliteit.
+   - De privacytekst ("telt alleen hoe vaak lessen gedaan worden … niemand volgt je") zegt minder
+     dan er gebeurt: ook dagelijks openen, hulptaal, sector, waar iemand stopt, regiolessen.
+     Meetellen staat standaard aan en begint vóór iemand het weet.
+   - Mogelijke keuzes: één verzoek per gebeurtenis zonder hulptaal; zelf tellen (eigen server,
+     geen IP); standaard uit of een vraag in de eerste start; de tekst eerlijk maken (en laten
+     vertalen). Niet zelf veranderd: dit is een keuze over beleid en vraagt nieuwe vertalingen.
 
 1. **`aria-label` met "·"** (bijvoorbeeld "Route · Lekcje"). axe meldt dat de zichtbare tekst
    ("Route Lekcje") niet letterlijk in de naam staat, en dat helpt spraakbesturing niet. Het
@@ -189,5 +233,16 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
     Misschien bewust; graag even kijken. En: Nederlandse woorden in een schermlezerlabel
     (bijvoorbeeld "Aanbevolen · …") worden met de stem van de hulptaal gelezen; dat vraagt een
     andere opbouw van die labels.
-15. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+15. **"Extra ronde" bij "Herhaal vandaag"** kan nooit getikt worden: de kaart staat alleen op de
+    home zolang er woorden aan de beurt zijn (het ontwerp "hooguit 3 tikken"), en de knop zit in de
+    kaart als de herhaling klaar is. Zo wachten de woorden boven de 10 tot morgen. Kaart (klein)
+    terug als klaar, of de knop weghalen: graag een besluit.
+16. **De figuren ademen en knipperen eindeloos** op de home en in de les, zolang het scherm aan
+    staat (ook als de telefoon blijft liggen). Klein, maar het kost doorlopend rekenwerk en dus
+    batterij. Bijvoorbeeld na een paar keer ademen stoppen en alleen knipperen? Ontwerpkeuze.
+17. **Back-up**: er is geen herinnering om een back-up te maken (alleen de herinnering om te
+    oefenen); op een iPhone (app op het beginscherm) is "Download" onbetrouwbaar en zonder
+    melding; en samenvoegen met hetzelfde bestand zegt opnieuw "je voortgang is terug" (een
+    "niets nieuws"-melding vraagt een nieuwe vertaling).
+18. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
    vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.

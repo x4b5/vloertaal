@@ -1,6 +1,7 @@
 import { ui, said } from '../i18n';
 import type { Gender, HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
+import { useFreshCards } from './useFreshScreen';
 import { NlPair } from './NlPair';
 import { Character, type CharacterId } from './Characters';
 import { CheckIcon } from './Icons';
@@ -40,6 +41,7 @@ export function GenderPicker({ current, lang, onPick, compact = false, mini = fa
   mini?: boolean;
 }) {
   const small = compact || mini;
+  const fresh = useFreshCards('gender');
   return (
     <div className={`lang-grid sector-grid gender-grid ${small ? 'lang-grid-compact' : ''} ${mini ? 'gender-grid-mini' : ''}`} role="radiogroup" aria-label={said(ui('genderTitle', lang))}>
       {(mini ? OPTIONS.filter((o) => o.who) : OPTIONS).map((o) => {
@@ -51,7 +53,7 @@ export function GenderPicker({ current, lang, onPick, compact = false, mini = fa
             role="radio"
             aria-checked={picked}
             className={`lang-btn sector-btn gender-btn ${o.who ? '' : 'sector-none gender-none'} ${picked ? 'picked' : ''}`}
-            onClick={() => onPick(o.id)}
+            onClick={() => { if (!fresh()) onPick(o.id); }}
           >
             {o.who ? (
               <span className="gender-face" aria-hidden>

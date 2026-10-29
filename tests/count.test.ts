@@ -114,6 +114,23 @@ describe('anonymous counting', () => {
     expect(urls.some((u) => u.includes('p=%2Fe%2Fopen%2Flang-nl&'))).toBe(true);
   });
 
+  it('sends nothing with Global Privacy Control on (as with Do Not Track)', () => {
+    vi.stubGlobal('navigator', { globalPrivacyControl: true });
+    setCountEnv({ prod: true, host: 'vloertaal.nl' });
+    expect(mayCount()).toBe(false);
+    vi.unstubAllGlobals();
+    vi.stubGlobal('fetch', fetchMock);
+  });
+
+  it('switched off holds for the visit when the phone blocks storage', () => {
+    (globalThis as { localStorage?: unknown }).localStorage = { getItem: () => { throw new Error('blocked'); }, setItem: () => { throw new Error('blocked'); }, removeItem: () => { throw new Error('blocked'); } };
+    setCountEnv(PROD);
+    setCounting(false);
+    expect(mayCount()).toBe(false);
+    setCounting(true);
+    expect(mayCount()).toBe(true);
+  });
+
   it('sends nothing when switched off in Settings, and again when switched on', () => {
     setCountEnv(PROD);
     setCounting(false);

@@ -76,7 +76,7 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
     >
       <LangMark code={code} />
       <span className="lang-names">
-        <span className="lang-native" lang={code ?? 'en'} dir={dir}>{native}</span>
+        <span className="lang-native" lang={code ? langTag(code) : 'en'} dir={dir}>{native}</span>
         {/* With a help language chosen (Settings), the English name is support only: hidden
             with English off, like every other English line. */}
         {englishHelp
@@ -131,7 +131,7 @@ function LangMark({ code }: { code: UiCode | null }) {
     <span className="lang-mark" aria-hidden>
       {'flag' in mark
         ? <Flag className="lang-flag" flag={mark.flag} />
-        : <span className="lang-sample" lang={code ?? 'en'} dir={meta?.dir}>{mark.sample}</span>}
+        : <span className="lang-sample" lang={code ? langTag(code) : 'en'} dir={meta?.dir}>{mark.sample}</span>}
     </span>
   );
 }
@@ -161,6 +161,17 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, [list, hasGuess]);
+  // "Other language": the tapped card is gone; the list's question gets the focus (a screen reader
+  // reads it), as on a new page.
+  useEffect(() => {
+    if (!list) return;
+    const now = document.activeElement;
+    if (now && now !== document.body) return;
+    const q = document.querySelector<HTMLElement>('#root .onboarding-title');
+    if (!q) return;
+    if (!q.hasAttribute('tabindex')) q.tabIndex = -1;
+    q.focus({ preventScroll: true });
+  }, [list]);
   /** The first tap: the next page shows (silent since 28 October 2026: no "Hallo, ik ben Bram."). */
   const pick = (code: UiCode | null) => {
     onDone(code);
@@ -176,9 +187,9 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
         )}
         <div className="hero">
           <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
-          <p className="tagline">{ui('appTagline').en}</p>
+          <p className="tagline" lang="en">{ui('appTagline').en}</p>
         </div>
-        <h2 className="onboarding-title">{ui('chooseLanguage').en}</h2>
+        <h2 className="onboarding-title" lang="en">{ui('chooseLanguage').en}</h2>
         <LanguagePicker onPick={pick} />
       </div>
     );

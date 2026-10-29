@@ -3,7 +3,7 @@ import { beforeAll, describe, expect, it } from 'vitest';
 import { tipForLesson } from '../src/content/culture';
 import { units } from '../src/content/curriculum';
 import { clipUrl, setRecordedIndex } from '../src/lib/audio';
-import { OFFLINE_CACHE, autoOfflinePlan, clipPaths, currentVoices, formatBytes, offlineAuto, setOfflineAuto, unitTexts, voicesKey } from '../src/lib/offline';
+import { OFFLINE_CACHE, autoOfflinePlan, clipPaths, currentVoices, formatBytes, offlineAuto, phrasebookTexts, setOfflineAuto, unitTexts, voicesKey } from '../src/lib/offline';
 
 const firstDay = units.find((u) => u.id === 'u.firstday')!;
 const elevenIndex = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8'));
@@ -57,6 +57,16 @@ describe('the recorded clips of a unit', () => {
     const paths = new Set(clipPaths(unitTexts(firstDay), ['piper:daniel'], clipUrl));
     for (const l of firstDay.lessons) {
       for (const x of [...l.words, ...l.sentences]) if (!PENDING_RECORDING.has(x.nl)) expect(paths.has(`./audio-el/daniel/${x.id}.mp3`), x.id).toBe(true);
+    }
+  });
+
+  it('has every emergency phrase recorded in every voice (saved with each topic, for offline)', () => {
+    const texts = phrasebookTexts();
+    expect(texts.length).toBeGreaterThan(5);
+    for (const voice of currentVoices(null)) {
+      const paths = clipPaths(texts, [voice], clipUrl);
+      expect(paths, String(voice)).toHaveLength(texts.length);
+      for (const p of paths) expect(existsSync(`public/${p.replace(/^\.\//, '')}`), p).toBe(true);
     }
   });
 

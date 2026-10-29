@@ -221,7 +221,8 @@ export default function App() {
     const look = () => {
       const now = document.activeElement;
       if (now && now !== document.body) return;
-      const h = document.querySelector<HTMLElement>('#root h1');
+      // A first-run page's heading is the logo; its question says where you are.
+      const h = document.querySelector<HTMLElement>('#root .onboarding-title') ?? document.querySelector<HTMLElement>('#root h1');
       if (!h) { if (++tries < 20) t = window.setTimeout(look, 100); return; }
       if (!h.hasAttribute('tabindex')) h.tabIndex = -1;
       h.focus({ preventScroll: true });
@@ -265,28 +266,44 @@ export default function App() {
    * level above the home), so the phone's Back from a tab returns home and never steps back into
    * the pages that were open before.
    */
+  /** A tab tapped while the history walks back for an earlier tab: that walk lands on this one. */
+  const tabWalk = useRef<{ to: Tab } | null>(null);
+  const tabView = (t: Tab): View => (t === 'words' ? { name: 'words' } : t === 'me' ? { name: 'settings' } : t === 'about' ? { name: 'about' } : HOME);
   const tab = (t: Tab) => {
-    const next: View =
-      t === 'words' ? { name: 'words' } : t === 'me' ? { name: 'settings' } : t === 'about' ? { name: 'about' } : HOME;
+    // (A second tap before the walk back has landed: the walk lands on the tab tapped last.
+    // Another walk would go on from the old depth, past the home and out of the app.)
+    if (tabWalk.current) { tabWalk.current.to = t; return; }
+    const next = tabView(t);
     const now = viewRef.current;
     if (now.name === next.name && !(now.name === 'settings' && (now.page || now.upgrade))) return;
     const depth = current()?.depth ?? 0;
-    const land = () => {
-      if (next.name === 'home') { replace(HOME); return; }
+    const land = (to: View) => {
+      if (to.name === 'home') { replace(HOME); return; }
       // On the home: one entry above it; anywhere else this entry is already one above the home.
-      if ((current()?.depth ?? 0) === 0) go(next);
-      else replace(next);
+      if ((current()?.depth ?? 0) === 0) go(to);
+      else replace(to);
     };
     // Deeper than one level above the home: walk the history back to depth 1 (or the home), then land.
     const target = next.name === 'home' ? 0 : 1;
     if (depth > target) {
-      const onPop = () => { window.removeEventListener('popstate', onPop); leaving.current = false; land(); };
+      tabWalk.current = { to: t };
+      // (Should no popstate come, tabs must not stay dead: the walk is let go after a second.)
+      window.setTimeout(() => { tabWalk.current = null; }, 1000);
+      const onPop = () => {
+        window.removeEventListener('popstate', onPop);
+        leaving.current = false;
+        const to = tabView(tabWalk.current?.to ?? t);
+        tabWalk.current = null;
+        // Route tapped last, while walking to a tab one above the home: one more step, to the home.
+        if (to.name === 'home' && (current()?.depth ?? 0) > 0) history.back();
+        else land(to);
+      };
       window.addEventListener('popstate', onPop);
       leaving.current = true;
       history.go(target - depth);
       return;
     }
-    land();
+    land(next);
   };
   /** Back to the previous screen (as the Back button would), or home when there is none. */
   // (A second tap before the first Back has landed, as a double tap on Continue, does nothing:
@@ -436,10 +453,12 @@ export default function App() {
   const lang = getHelpLanguage(progress.helpLang, progress.gender);
   // The page's language is the help language (Dutch without one). The direction is set where the
   // layout is mirrored (the lesson player and the path), so Dutch never inherits right-to-left.
+  // The language list itself is English (each language's own name carries its own lang).
+  const onLanguageList = step === 'language';
   useEffect(() => {
-    document.documentElement.lang = lang ? langTag(lang.code) : 'nl';
+    document.documentElement.lang = onLanguageList ? 'en' : lang ? langTag(lang.code) : 'nl';
     document.documentElement.dir = 'ltr';
-  }, [lang]);
+  }, [lang, onLanguageList]);
 
   useEffect(() => { saveProgress(progress); }, [progress]);
   // Certificates: units finished before certificates existed (or put back from a backup) get today's date.
@@ -661,7 +680,9 @@ export default function App() {
         const today = dayKey(now);
         const cards = progress.cards ?? {};
         const next = earnCertificates(daily
-          ? { ...completeDaily(progress, accuracy, now), cards: applyReview(cards, results, today) }
+          // (Its review day is the day it was started for, with that day's words: one begun at
+          // 23:58 and finished after midnight leaves today's own review to do.)
+          ? { ...completeDaily(progress, accuracy, now), reviewDay: dayKey(lessonStarted.current), cards: applyReview(cards, results, today) }
           : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: found.lesson.steps?.length
             // A rules lesson: its questions get a card (by step id), for "Herhaal vandaag" of that track.
             ? addLessonItems(cards, gradedStepIds(found.lesson), results, today)
@@ -699,7 +720,7 @@ export default function App() {
         replace({
           name: 'result', right, total, newWords: words - before, words, streakUp,
           kind: daily ? 'daily' : reviewing ? 'review' : 'lesson',
-          repeated: daily ? found.lesson.steps?.length ?? found.lesson.words.length : reviewing ? Object.keys(results).length || found.lesson.words.length : undefined,
+          repeated: daily ? Object.keys(results).length || (found.lesson.steps?.length ?? found.lesson.words.length) : reviewing ? Object.keys(results).length || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
           // Still due after today's review, only for who was away 2 days or more ("they come in the
           // next days"): a learner who practises every day and learns many words a day would read

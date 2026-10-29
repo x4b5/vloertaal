@@ -1,5 +1,5 @@
 import { tipForLesson } from '../content/culture';
-import { teachingLessons } from '../content/curriculum';
+import { findItem, phrasebookIds, teachingLessons } from '../content/curriculum';
 import { courseUnits } from '../content/courses';
 import { ruleStepTexts } from '../content/regels/course';
 import { rulesTrackOn, trackOfId } from './track';
@@ -228,10 +228,18 @@ export function fontFileUrls(src: string): string[] {
   return [...src.matchAll(/url\(\s*["']?([^"')]+?)["']?\s*\)/g)].map((m) => m[1]).filter((u) => /\.woff2(?:[?#]|$)/.test(u));
 }
 
-/** The files a unit needs, as absolute URLs: the app and the unit's clips in these voices. */
+/** The emergency phrases (the Hulp tab), in Dutch: they go along with every saved topic of the
+ *  language course, so they speak offline too, also the ones never played. */
+export function phrasebookTexts(): string[] {
+  return phrasebookIds.map((id) => findItem(id)?.nl.trim()).filter((t): t is string => Boolean(t));
+}
+
+/** The files a unit needs, as absolute URLs: the app and the unit's clips in these voices (and,
+ *  in the language course, the emergency phrases in the learner's own voice). */
 export async function unitFiles(unit: Unit, voices: VoiceRef[]): Promise<{ shell: string[]; clips: string[] }> {
   await recordedIndexReady();
-  return { shell: shellUrls(), clips: clipPaths(unitTexts(unit), voices, clipUrl).map(abs) };
+  const phrases = trackOfId(unit.id) === 'taal' ? clipPaths(phrasebookTexts(), voices.slice(0, 1), clipUrl) : [];
+  return { shell: shellUrls(), clips: [...new Set([...clipPaths(unitTexts(unit), voices, clipUrl), ...phrases])].map(abs) };
 }
 
 const isQuota = (e: unknown) => {
@@ -403,6 +411,19 @@ export async function refreshOfflineShell(): Promise<void> {
 export function warmLanguageCache(): void {
   if (!navigator.serviceWorker?.controller) return;
   for (const url of [...loadedPackUrls(), ...loadedRegionUrls(), loadedPicturesUrl()]) if (url) fetch(url).catch(() => {});
+}
+
+/**
+ * The emergency phrases in the learner's voice, fetched once while online (the service worker
+ * keeps played clips): the Hulp tab speaks offline too, also without "Keep lessons on this phone".
+ */
+export async function warmPhrases(voice: VoiceRef): Promise<void> {
+  if (!navigator.serviceWorker?.controller || navigator.onLine === false) return;
+  await recordedIndexReady();
+  for (const p of clipPaths(phrasebookTexts(), [voice], clipUrl)) {
+    const url = abs(p);
+    if (!(await caches.match(url).catch(() => undefined))) await fetch(url).catch(() => {});
+  }
 }
 
 let everyLanguage: Promise<void> | null = null;

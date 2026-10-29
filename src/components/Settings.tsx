@@ -176,7 +176,7 @@ export function Settings({
   useEffect(() => {
     if (!notHere) return;
     // A language far down the list was tapped: the line comes into view.
-    notHereRef.current?.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' });
+    notHereRef.current?.scrollIntoView?.({ block: 'nearest', behavior: window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
     const back = () => setNotHere(null);
     window.addEventListener('online', back);
     return () => window.removeEventListener('online', back);

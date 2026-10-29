@@ -213,7 +213,9 @@ export function dailyCard(cards: Cards, today: string, reviewDay?: string, track
   const dueNow = dueIds(cards, today, track).length;
   const tomorrow = Math.min(dueIds(cards, addDays(today, 1), track).length, max);
   if (reviewDay === today) return { state: 'done', due: 0, tomorrow, extra: dueNow };
-  if (dueNow > 0) return { state: 'due', due: Math.min(dueNow, max), tomorrow, extra: 0 };
+  // The number on the card is the number the review asks: the language course tops a short
+  // review up with the next words (dailyWordIds).
+  if (dueNow > 0) return { state: 'due', due: track === 'taal' ? dailyWordIds(cards, today).length : Math.min(dueNow, max), tomorrow, extra: 0 };
   return { state: reviewDay ? 'done' : 'first', due: 0, tomorrow, extra: 0 };
 }
 

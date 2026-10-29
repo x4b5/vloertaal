@@ -155,11 +155,14 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
     audio.play().catch(() => { if (alive.current) setPlaying(null); });
   }, []);
 
+  // (One timer: a second tap starts it again, so the first one does not end the second play early.)
+  const themTimer = useRef(0);
   const playThem = useCallback(() => {
     mineRef.current?.pause();
     setPlaying('them');
     speak(item.nl, false, 'nl', voice);
-    window.setTimeout(() => { if (alive.current) setPlaying((p) => (p === 'them' ? null : p)); }, 1600);
+    window.clearTimeout(themTimer.current);
+    themTimer.current = window.setTimeout(() => { if (alive.current) setPlaying((p) => (p === 'them' ? null : p)); }, 1600);
   }, [item.nl, voice]);
 
   // Say it once when the exercise opens (not in "Without sound"); let go of everything on leave.

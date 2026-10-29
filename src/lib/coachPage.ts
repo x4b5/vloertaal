@@ -49,7 +49,7 @@ export function coachPage(): string {
 </ul></section>
 <section aria-labelledby="employers"><h2 id="employers">Voor werkgevers en uitzendbureaus</h2>
 <p>Nieuwe collega’s die weinig Nederlands spreken, leren met Vloertaal de woorden van hun eigen werk: de veiligheidsinstructie, beschermingsmiddelen en de toolbox, het rooster en het loonstrookje. Per sector staan de woorden en zinnen op een eigen pagina, met vertaling:</p>
-${sectorNav()}
+${sectorNav(undefined, 'Woorden per sector')}
 <p>Zo kun je een instructie of een eerste werkdag voorbereiden. Vloertaal vervangt geen veiligheidsinstructie of VCA-cursus: het helpt om die beter te begrijpen.</p></section>
 <section aria-labelledby="topics"><h2 id="topics">Een link naar elk onderwerp</h2>
 ${themes

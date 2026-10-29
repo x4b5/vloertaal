@@ -74,7 +74,9 @@ interface Env {
 const realEnv = (): Env => ({
   prod: Boolean(import.meta.env.PROD),
   host: typeof location === 'undefined' ? '' : location.hostname,
-  dnt: typeof navigator !== 'undefined' && (navigator.doNotTrack === '1' || (globalThis as { doNotTrack?: string }).doNotTrack === '1'),
+  // Do Not Track, and its successor Global Privacy Control: both mean "don't count me".
+  dnt: typeof navigator !== 'undefined' && (navigator.doNotTrack === '1' || (globalThis as { doNotTrack?: string }).doNotTrack === '1'
+    || (navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl === true),
 });
 
 let envOverride: Partial<Env> | null = null;
@@ -95,8 +97,12 @@ function storage(): Storage | null {
   }
 }
 
+/** The switch while storage is blocked: switched off holds for this visit (nothing is sent). */
+let offMemory = false;
+
 /** "Anoniem meetellen": on unless the learner switched it off on this device. */
 export function countingOn(): boolean {
+  if (offMemory) return false;
   try {
     return storage()?.getItem(OFF_KEY) !== '1';
   } catch {
@@ -105,6 +111,7 @@ export function countingOn(): boolean {
 }
 
 export function setCounting(on: boolean): void {
+  offMemory = !on;
   try {
     if (on) storage()?.removeItem(OFF_KEY);
     else storage()?.setItem(OFF_KEY, '1');

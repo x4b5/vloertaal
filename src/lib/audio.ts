@@ -40,8 +40,9 @@ export function autoSpeak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', 
 }
 
 /** speakLong() that starts by itself (a story on screen): silent in "Without sound". */
-export function autoSpeakLong(text: string, opts: LongSpeech = {}): void {
-  if (!quietAudio) speakLong(text, opts);
+/** Says a longer text unless sound is off; true when something is being said. */
+export function autoSpeakLong(text: string, opts: LongSpeech = {}): boolean {
+  return quietAudio ? false : speakLong(text, opts);
 }
 
 export interface RecordedVoice {

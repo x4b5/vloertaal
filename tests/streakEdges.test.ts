@@ -42,3 +42,16 @@ describe('streak edges', () => {
     expect(week.find((d) => d.key === '2026-10-27')?.state).toBe('done');
   });
 });
+
+describe('replacing with a backup', () => {
+  it('asks again whenever something here would be lost, not only with fewer lessons', async () => {
+    const { replaceLoses } = await import('../src/lib/progress');
+    const here: Progress = { ...emptyProgress, completed: { 'l.hello': { best: 1, times: 1 } }, streak: 5, bestStreak: 5, lastDay: '2026-10-28' };
+    // As many lessons, but another one: l.hello would be gone.
+    expect(replaceLoses(here, { completed: { 'l.people': { best: 1, times: 1 } }, streak: 5, bestStreak: 5 })).toBe(true);
+    // The same lesson, a lower record.
+    expect(replaceLoses(here, { completed: { 'l.hello': { best: 1, times: 1 } }, streak: 1, bestStreak: 2 })).toBe(true);
+    // Everything here is in the file: replacing loses nothing.
+    expect(replaceLoses(here, { completed: { 'l.hello': { best: 1, times: 1 }, 'l.people': { best: 1, times: 1 } }, streak: 6, bestStreak: 6 })).toBe(false);
+  });
+});
