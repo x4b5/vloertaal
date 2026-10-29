@@ -352,7 +352,7 @@ export const zlSocialMap: SocialMapEntry[] = [
     // 16-10: geldfit.nl (search result): 0800-8115, free and anonymous, also WhatsApp and chat.
     id: 'rg.zl.k.geldfit', category: 'schulden', emoji: '💶',
     name: 'Geldfit',
-    when: 'Je twijfelt of je geldzorgen hebt. Gratis en anoniem.',
+    when: 'Je weet niet zeker of je geldzorgen hebt. Gratis en anoniem.',
     url: 'https://www.geldfit.nl', tel: '0800-8115', area: ['all'], checked: C, source: 'other',
   },
   {
@@ -425,7 +425,7 @@ export const zlSocialMap: SocialMapEntry[] = [
     // 16-10: mumc.nl (search result): the academic hospital; outpatient clinics need a referral.
     id: 'rg.zl.k.mumc', category: 'zorg', emoji: '🏥',
     name: 'MUMC+ (Maastricht UMC+)',
-    when: 'Het academisch ziekenhuis in Maastricht. Meestal ga je erheen met een verwijzing.',
+    when: 'Het ziekenhuis van de universiteit in Maastricht. Meestal ga je erheen met een verwijzing.',
     url: 'https://www.mumc.nl', area: ['mh'], checked: C, source: 'other',
   },
   {
