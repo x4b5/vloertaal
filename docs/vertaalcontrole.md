@@ -1204,3 +1204,46 @@ taal (betekenis en taal). Alle 35 wijzigingen bleven staan. Drie nieuwe teksten 
 Tigrinya `retry` "ደጊም ምፍታን" → "ዳግማይ ምፍታን" (ደጊም alleen betekent "voortaan"), Arabisch
 `remindStoppedAndroid` (f) zonder losse kasra zoals de rest, Pools `backupNothingNew` "w telefonie"
 (zoals elders in de app).
+
+### Ronde 3 (29 oktober): tweede, frisse ronde voor Tigrinya en Dari
+
+Nieuwe agents lazen opnieuw elke tekst (andere indeling van de bestanden), met de vragen van ronde 1 erbij om niet te herhalen. Twee keurders per wijziging, alleen doorgevoerd als beide het eens waren.
+
+**Doorgevoerd (13):**
+
+- **Tigrinya**: `c.aiprivate.b` (f): The suffix 'your (f)' after ክ is written ኺ (ባንክኺ), as in every other f text (c.scams.b, c.aifake.b). ባንክኪ is a misspelling.; `s.sick.3`: The verb has the 3rd-person prefix (ይድውል, 'he calls'), but ኣለኹ is 1st person. 'I am calling' needs እድውል.; `s.interview.2`: ይመሃር is 3rd person masculine ('he learns') next to 1st-person ኣለኹ. 'I am learning' needs እመሃር.; `c.gethelp.a`: ይተሓዝ is 3rd person ('he is treated') next to 1st-person ኣለኹ. 'I am treated' needs እተሓዝ.; `c.service.a`: ይመጽእ is 3rd person ('he is coming') next to 1st-person ኣለኹ. 'I am coming' needs እመጽእ.; `c.agency.b` (f): ውዕልክን ደሞዝክን reads as 'your (feminine plural) contract and pay'. For one woman it must be ውዕልኪን ደሞዝኪን, as the rest of the file writes it (BSNኪን, ወረቓቕትኪን).; `whoInspection`: 'ምዝማዕ' is a misspelling of the word for exploitation (root ዘመዘ); every other rights text uses ምዝመዛ (c.warning, c.gethelp). Rights text, so the key word must be clear.; `whoFairwork`: Same misspelling 'ምዝማዕ' for exploitation; the course uses ምዝመዛ everywhere else.; `unlockHint` (f): The feminine imperative with the dative suffix drops the -i vowel: ስደድልና (as in ክትሰድድለይ, fixed in round 1); 'ስደዲልና' is not a correct form.; `w.kl.pak`: 'Complete/full' is spelled ምሉእ in Tigrinya (as everywhere else in the app, e.g. ምሉእ ቨርዥን); ሙሉእ is an Amharic-influenced spelling.; `c.easy.a`: Same person mismatch as c.service.a (ይመጽእ is 3rd person next to 1st-person ኣለኹ); flagged by a verifier, applied with the same fix.
+- **Dari**: `zg.haast.o3`: قطار for 'train' is Iranian; in Afghan Dari قطار means a row or queue. The file's own word gloss w.trein uses ریل.; `w.alseentrein.lit`: In Dari قطار reads as 'like a row/queue'. The Afghan word for train is ریل, as in w.trein.
+
+Opvallend in het Tigrinya: vijf zinnen met "ik" stonden in de derde persoon ("ይመጽእ ኣለኹ" = "hij komt, ik ben"); allemaal verbeterd.
+
+**Vragen voor een moedertaalspreker:**
+
+*Tigrinya*
+
+- `gloss.a.how.b`: The ti text leaves out 'or in simple English if you chose no help language' and adds 'you also see the instructions and words in Tigrinya'. That makes sense for a Tigrinya reader, but it does not match EN. Is this adaptation fine?
+- `gloss.a.what.b`: 'ንኮርስ ቋንቋ ወይ ንመምህር ቋንቋ ኣይትክእን እዩ' is meant as 'it does not replace a language course' (ተክአ). Will low-literate readers read it as 'replace', or confuse it with ክኢሉ ('can')? Would 'ኣብ ክንዲ ኮርስ ቋንቋ ወይ መምህር ቋንቋ ኣይኮነን' be clearer?
+- `gloss.c.extra.w`: 'ቀልጢፍካ ስራሕካ እንተ ገዲፍካ' for 'if you leave your job earlier' (before holiday pay is paid): does ቀልጢፍካ clearly mean 'earlier' here, rather than 'quickly'?
+- `gloss.c.aiprivate.a`: 'Liever niet' is rendered 'ይሓይሽ ኣይፋል' (literally 'better no'). Is that natural, or is it a calque? A possible alternative is 'ዘይገብሮ ይሓይሽ' or 'ኣይፋልን፡ ...'.
+- `gloss.c.aifake.a`: 'Ik bel je eerst op je oude nummer' is 'ቅድም ናብቲ ናይ ቀደም ቁጽሪ እድውል' ('first I call the old number'), without 'you' or 'your'. Is it clear enough, or is 'ቅድም ናብቲ ናይ ቀደም ቁጽርኻ ክድውለልካ እየ' better?
+- `gloss.c.transit.b`: The f text writes 'ምስ ኣተኺን' and the m text 'ምስ ኣተኻን' for 'when you get on'. The usual perfect of ኣተወ is ኣቶኻ / ኣቶኺ. Please confirm the spelling.
+- `gloss.c.direct.o3`: The box is 'ሳንዱቕ' here, but 'ሳጹን' in o1 of the same tip and in c.limits, c.understood.p and the rest of the app. Both mean box. Should it be ሳጹን here too, so learners see that it is the same box?
+- `gloss.c.kitchen.w`: 'ንእሽቶ ጌጋ ኣዝያ ሓደገኛ ክትከውን ትኽእል' makes ጌጋ (mistake) feminine (ኣዝያ, ክትከውን). Is ጌጋ feminine here, or should it be masculine: 'ኣዝዩ ሓደገኛ ክኸውን ይኽእል'?
+- `gloss.l.understood`: The lesson title 'ምርዳእን ክትርዳእን' puts a verbal noun (ምርዳእ) next to an infinitive with 'you' (ክትርዳእ). Is that natural as a title, or would 'ምርዳእን ምርዳእ ምግባርን' (or something similar) read better?
+- `gloss.c.line.a`: 'De machine is erg langzaam' is translated with ደንጓዪ, which mostly means 'late / delaying'. Is that natural for 'slow' here, or is ዝሑል / ቀስ ዝብል better?
+- `gloss.w.kwaliteit / gloss.l.quality`: ጽሬት is used for quality, but also for hygiene (w.hygiene) and cleaning (u.clean). Is that clear enough on a factory line, or should quality be ብቕዓት / ዓይነት?
+- `gloss.s.callin.1`: The name is written in Latin letters, 'Ali', but s.hello.2 writes ዓሊ. Is that on purpose (the learner says this sentence in Dutch), or should it be ዓሊ?
+- `gloss.w.nietfijn`: "ዘየሐጉስ": the usual spelling seems to be ዘየሕጉስ (from ኣሕጎሰ). Spelling variant or typo?
+- `ui.offlineNoSpace`: "ቦታ ኣጽሪ / ኣጽርዪ" ('clean space') for 'free up space': is this clear on a phone, or is "ቦታ ኣውጽእ / ቦታ ፍጠር" better?
+
+*Dari*
+
+- `gloss.s.pbgk.2`: 'Het is koud in de hal' is 'در دهلیز سرد است' (corridor). Other languages already have this question: if 'de hal' means the work hall of a warehouse or factory, would 'در سالون / در گدام سرد است' fit better?
+- `gloss.c.extra.w`: 'If you leave your job earlier' is 'اگر زودتر از کار بروید', which can also read as 'if you leave work early (today)'. Would 'اگر پیش از آن کار خود را ترک کنید' be clearer?
+- `gloss.c.bsn.b`: 'DigiD is your login' is 'DigiD رمز ورود شما ...' (login password), but c.bsn.s/o1/o3/w say 'معلومات ورود DigiD'. Should c.bsn.b also say 'وسیلهٔ ورود' / 'معلومات ورود' so it does not read as a password?
+- `gloss.c.hygiene.w`: 'only that you cannot drive or work with machines now' is 'نمی‌توانید موتر برانید' (drive a car). The situation is about a forklift. Is plain 'نمی‌توانید برانید' or 'فورک‌لیفت برانید' better?
+- `gloss.c.gossip.w`: Rights text: 'Nobody may put a video of you online' is 'هیچ کس ... نمی‌تواند' (nobody can). Is 'هیچ کس ... اجازه ندارد' clearer for 'is not allowed'?
+- `gloss.c.boundaries.b`: 'You may not be punished for reporting it' is 'جزا داده نمی‌شوید' (you will not be punished), a promise and not a rule. Is 'کسی اجازه ندارد شما را به خاطر گزارش دادن جزا بدهد' (as in c.unsafe.w) better? Also, '«آن را به شوخی گفته بود»' says 'said it as a joke', but EN 'meant it as a joke' also covers touching and staring. Is 'به شوخی کرده بود' / 'منظورش شوخی بود' better?
+- `gloss.c.gear.b`: 'are not a suggestion' is 'تنها یک پیشنهاد نیست' (not merely a suggestion), which could suggest the rules are partly optional. Is 'پیشنهاد نیست' clearer?
+- `gloss.c.direct.o1 / c.direct.o3`: In the same tip, the box is قطی in o1 and جعبه in o3 (and قطی in the rest of the file). Should o3 also say قطی?
+- `gloss.s.understand.2`: NL 'langzamer' (more slowly) is 'آهسته گپ بزنید' (speak slowly), while rg.zl.c.2.a uses the comparative آهسته‌تر. Would 'آهسته‌تر گپ بزنید' be better here?
+- `gloss.s.findwork.1`: 'Ik wil solliciteren' is 'می‌خواهم برای این کار درخواست بدهم' (for THIS job). EN says 'apply for a job'. Is 'برای یک کار' better, or is 'this job' fine in the lesson?
