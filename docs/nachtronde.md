@@ -81,7 +81,7 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
 - Eén `<main>` op elk scherm (de app tekent in `<main id="root">`).
-- Een h1 op de home.
+- Een h1 op de home, en in de les (de naam van de les, voor de schermlezer).
 - Na een schermwissel gaat de focus naar de kop van het nieuwe scherm.
 - Het pauzescherm houdt de toetsenbordfocus vast en geeft die bij sluiten terug aan ✕.
 - Het label boven het spiekkaartje heeft genoeg contrast.
