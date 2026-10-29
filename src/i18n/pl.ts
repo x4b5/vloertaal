@@ -53,7 +53,7 @@ const lang: HelpLanguageSource = {
     who112: 'Nagły wypadek: zagrożenie życia, pożar albo przestępstwo, które dzieje się teraz.',
     whoLegal: 'Bezpłatna porada w sprawie umowy, wynagrodzenia lub zwolnienia.',
     whoInspection: 'Zgłoś niebezpieczną pracę, za niską pensję lub wyzysk. Możesz to zrobić anonimowo.',
-    whoFairwork: 'Ktoś wykorzystuje cię w pracy albo tak myślisz.',
+    whoFairwork: 'Ktoś cię wyzyskuje w pracy albo tak myślisz.',
     settings: 'Ustawienia',
     helpLanguage: 'Język pomocy',
     resetProgress: 'Zresetuj mój postęp',

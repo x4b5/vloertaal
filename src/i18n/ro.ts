@@ -269,7 +269,7 @@ const lang: HelpLanguageSource = {
     bramBack: 'Bine ai revenit. Mergem mai departe.',
     bramRested: 'Ieri a fost ziua ta liberă. Seria continuă.',
     bramDueN: { one: '{n} cuvânt de repetat azi.', few: '{n} cuvinte de repetat azi.', other: '{n} de cuvinte de repetat azi.' },
-    bramDueOne: 'Cuvinte de repetat azi: {n}',
+    bramDueOne: '{n} cuvânt de repetat azi.',
     bramDayN: 'Ziua {n} la rând.',
     bramDone: 'Gata pentru azi. Ne vedem mâine.',
     bramPerfect: 'Foarte bine. Știi aceste cuvinte.',

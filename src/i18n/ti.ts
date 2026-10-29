@@ -263,7 +263,7 @@ const lang: HelpLanguageSource = {
     remindChooseOwn: { m: 'ባዕልኻ ሰዓት ምረጽ', f: 'ባዕልኺ ሰዓት ምረጺ' },
     gateWho: { m: 'መምህርካ፡ ኣሰልጣኒኻ ወይ ኣስራሒኻ እቲ ኮድ ይህበካ።', f: 'መምህርኪ፡ ኣሰልጣኒኺ ወይ ኣስራሒኺ እቲ ኮድ ይህበኪ።' },
     gateTrust: 'ኣካውንት የለን። ስም የለን። ኩሉ ኣብዚ ተሌፎን ይተርፍ።',
-    codeAccepted: 'እቲ ኮድ ተቐቢሉ',
+    codeAccepted: 'እቲ ኮድ ቅኑዕ እዩ',
     startFree: { m: 'ኮድ የብልካን? ብቀዳሞት ትምህርትታት ጀምር', f: 'ኮድ የብልክን? ብቀዳሞት ትምህርትታት ጀምሪ' },
     bramHello: { m: 'ብምርኣይካ ሕጉስ እየ።', f: 'ብምርኣይኪ ሕጉስ እየ።' },
     bramBack: { m: 'እንቋዕ ብደሓን መጻእካ። ንቀጽል።', f: 'እንቋዕ ብደሓን መጻእኪ። ንቀጽል።' },
@@ -467,7 +467,7 @@ const lang: HelpLanguageSource = {
     'c.directions.q': 'ጸጋም ዶ የማን?',
     'c.directions.a': 'የማን፣ ኣብ ጥቓ መደርደሪ።',
     'c.shift.q': { m: 'ፈረቓኻ መዓስ ይጅምር?', f: 'ፈረቓኺ መዓስ ይጅምር?' },
-    'c.shift.a': 'ጽባሕ ሰዓት ሸውዓተ።',
+    'c.shift.a': 'ጽባሕ ሰዓት 7:00።',
     'c.sick.q': { m: 'ሓሚምካ ዲኻ?', f: 'ሓሚምኪ ዲኺ?' },
     'c.sick.a': 'እወ፣ ሎሚ ኣብ ገዛ እጸንሕ።',
     // Emergency phrases (phrasebook only)
