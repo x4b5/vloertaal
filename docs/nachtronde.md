@@ -130,7 +130,7 @@ zelf kapotmaakten; wat ze vonden is ook gerepareerd (zie de tabel).
 ## Samen met PR #90 (SEO)
 
 De twee PR's raken allebei `index.html`, `vite.config.ts` en `public/sw.js`. Een proefmerge van
-beide (29 oktober, 04:10) gaat zonder conflict: de wijzigingen staan bewust op andere regels.
+beide (29 oktober, 04:00) gaat zonder conflict: de wijzigingen staan bewust op andere regels.
 Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", is er
 één `<main>`, en verdwijnen de SEO-links zodra de app tekent. De volgorde van mergen maakt niet uit.
 
