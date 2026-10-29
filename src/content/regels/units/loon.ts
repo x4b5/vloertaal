@@ -160,7 +160,7 @@ export const loonUnit: RuleUnit = {
             { id: 'b', text: 'Hij denkt: dat hoort er vast bij, iedereen heeft het.', best: false, feedback: 'Begrijpelijk. Maar het mag niet zomaar.' },
             { id: 'c', text: 'Hij vraagt een voorschot om het verschil te betalen.', best: false, feedback: 'Dan leent hij geld dat misschien van hem is.' },
           ],
-          why: 'Je werkgever mag niet zomaar geld van je loon afhalen. Daar moet je eerst schriftelijk mee instemmen. Ook dan zijn er grenzen. Klopt het niet? Vraag hulp.',
+          why: 'Een inhouding is geld dat je baas van je loon afhaalt. Je werkgever mag niet zomaar geld van je loon afhalen. Daar moet je eerst schriftelijk mee instemmen. Ook dan zijn er grenzen. Klopt het niet? Vraag hulp.',
         },
         // Fictieve loonstrook: ronde bedragen, geen echt minimumloon.
         {

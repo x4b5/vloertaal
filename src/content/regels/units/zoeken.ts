@@ -86,7 +86,7 @@ export const zoekenUnit: RuleUnit = {
             { id: 'b', who: 'gemeente', best: true, feedback: 'Goed. Vraag naar het Werkplein of het Jongerenloket.' },
             { id: 'c', who: 'bedrijfsarts', best: false, feedback: 'De bedrijfsarts gaat over ziek zijn en werk.' },
           ],
-          why: 'De gemeente helpt bij werk zoeken. Kijk ook op werk.nl van UWV.',
+          why: 'De gemeente helpt bij werk zoeken. Kijk ook op werk.nl van UWV. Daar staan veel vacatures. Een vacature is een baan die nog vrij is.',
         },
         { kind: 'model', id: 'r.l.zoeken.1.mo1', context: 'Je belt een bedrijf over een vacature.', nl: 'Hallo, ik zag uw vacature. Is die nog open?' },
       ],
