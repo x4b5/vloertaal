@@ -84,8 +84,9 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 
 ## Samen met PR #90 (SEO)
 
-De twee PR's raken allebei `index.html`. Een proefmerge van beide (29 oktober, 00:15) gaat zonder
-conflict. Samen slagen alle 1169 tests en de build. In de browser toont `/?taal=pl` "Polski?", is er
+De twee PR's raken allebei `index.html`, `vite.config.ts` en `public/sw.js`. Een proefmerge van
+beide (29 oktober, 00:55) gaat zonder conflict: de wijzigingen staan bewust op andere regels. Samen
+slagen alle 1179 tests en de build. In de browser toont `/?taal=pl` "Polski?", is er
 één `<main>`, en verdwijnen de SEO-links zodra de app tekent. De volgorde van mergen maakt niet uit.
 
 ## Bewust níét gedaan (graag een besluit)
