@@ -203,8 +203,13 @@ describe('rule steps on screen', () => {
     expect(right).toMatchObject({ title: 'Goed zo!', own: best.feedback, why: wd.step.why });
     expect(right.best).toBeUndefined();
     const wrong = ruleVerdict(wd, false, other.id)!;
-    expect(wrong).toMatchObject({ own: other.feedback, best: { text: best.text }, why: wd.step.why });
+    expect(wrong).toMatchObject({ title: 'Het beste antwoord is:', own: other.feedback, best: { text: best.text }, why: wd.step.why });
     expect(ruleAnnouncement(wrong)).toContain(other.feedback);
+    expect(ruleAnnouncement(wrong)).toContain(`Het beste antwoord is: ${best.text}`);
+    // The answer itself in green with a check, and no second "Beste antwoord" under the heading.
+    const body = html(createElement(RuleFeedbackBody, { v: wrong, lang: nl() }));
+    expect(body).toContain('feedback-answer');
+    expect(body).not.toContain('Beste antwoord');
     const wa = buildRuleLesson(lessons.find((l) => l.id === 'r.l.loon.2')!, { seed: 1 }).find((e) => e.kind === 'whoask') as Extract<Exercise, { kind: 'whoask' }>;
     const bestWho = wa.step.options.find((o) => o.best)!;
     expect(ruleVerdict(wa, false, wa.step.options.find((o) => !o.best)!.id)!.best!.text).toBe(ASK_WHO[bestWho.who].label);
@@ -244,7 +249,7 @@ describe('rule steps on screen', () => {
     const best = ex.step.options.find((o) => o.best)!;
     const other = ex.step.options.find((o) => !o.best)!;
     const wrong = ruleVerdict(ex, false, other.id)!;
-    expect(wrong).toMatchObject({ own: other.feedback, best: { text: best.text }, sum: ex.step.sum, why: ex.step.why });
+    expect(wrong).toMatchObject({ title: 'Het goede antwoord is:', own: other.feedback, best: { text: best.text }, sum: ex.step.sum, why: ex.step.why });
     expect(ruleAnnouncement(wrong)).toContain(ex.step.sum![0]);
     const out = html(createElement(RuleFeedbackBody, { v: wrong, lang: nl() }));
     expect(out).toContain('Zo reken je het');

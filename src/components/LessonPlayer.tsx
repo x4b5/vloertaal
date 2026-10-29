@@ -11,6 +11,7 @@ import { useVoices } from './useVoices';
 import { tileDiff } from '../lib/answers';
 import { breakable } from '../lib/dutch';
 import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, unheard, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
+import { feedbackMeaningKey, feedbackTitle } from '../lib/feedbackTitle';
 import { offerSkipSound } from '../lib/skipSound';
 import { deviceLabel, firstReportHint, reportMail } from '../lib/report';
 import { dutchUi } from '../lib/track';
@@ -666,14 +667,14 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   function announce(e: Exercise, correct: boolean, almost?: boolean, given?: string): string {
     const rv = isRuleExercise(e) ? ruleVerdict(e, correct, given) : null;
     if (rv) return ruleAnnouncement(rv);
-    const title = correct ? 'Goed zo!' : e.kind === 'situation' ? 'Hier gaat het anders.' : 'Niet helemaal.';
-    const meaning = ui(correct ? (almost ? 'almost' : e.kind === 'situation' ? 'goodChoice' : 'correct') : e.kind === 'situation' ? 'otherChoice' : 'incorrect', lang);
+    const title = feedbackTitle(correct, e.kind);
     const p = answerPair(e, lang);
     // Help-language users hear their language, not the English that is hidden on screen.
     const answerText = p ? `${p.nl ? `${p.nl} = ` : ''}${said(p.meaning)}` : '';
-    const lead = !correct ? `${said(ui(e.kind === 'situation' ? 'bestAnswer' : 'correctAnswer', lang))}: ` : '';
-    const outcome = said(meaning);
-    return [title, /[.!?。።؟]$/.test(outcome) ? outcome : `${outcome}.`, answerText && `${lead}${answerText}`].filter(Boolean).join(' ');
+    // Right: "Goed zo! Correct. <answer>". Wrong: "Het goede antwoord is: <answer>" (the title is the lead).
+    if (!correct) return [title, answerText].filter(Boolean).join(' ');
+    const outcome = said(ui(feedbackMeaningKey(correct, almost, e.kind), lang));
+    return [title, /[.!?。።؟]$/.test(outcome) ? outcome : `${outcome}.`, answerText].filter(Boolean).join(' ');
   }
 
   /** Copy the exercise on screen into the ghost layer, where it slides out while the next comes in. */
@@ -796,20 +797,17 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'card': body = <CardStep key={key} ex={ex} {...props} />; break;
   }
 
-  const sol = solution(ex);
   const feedback = checked && isGraded(ex) && answer;
   // The answer as a pair: "het hesje = the safety vest", help language underneath.
   // (In a chat this is what the right reply means; in a situation, the usual choice.)
   const pair = answerPair(ex, lang);
-  // The heading is Dutch ("Goed zo!" / "Niet helemaal"); its meaning sits under it in small type.
+  // The heading is Dutch ("Goed zo!" / "Het goede antwoord is:"); its meaning sits under it in small type.
   // A situation is graded like the rest: the usual choice is green with a check; any other
   // choice is red with a cross and the best answer under it (never a neutral sheet).
   const outcome: 'right' | 'wrong' | null = feedback ? (answer.correct ? 'right' : 'wrong') : null;
   // A rules question: Dutch only (its title, the picked option's line, the best answer, why).
   const ruleFb = feedback && isRuleExercise(ex) ? ruleVerdict(ex, answer.correct, answer.given?.[0]) : null;
-  const headingMeaning = ruleFb ? null : feedback
-    ? ui(answer.correct ? (answer.almost ? 'almost' : ex.kind === 'situation' ? 'goodChoice' : 'correct') : ex.kind === 'situation' ? 'otherChoice' : 'incorrect', lang)
-    : null;
+  const headingMeaning = ruleFb ? null : feedback ? ui(feedbackMeaningKey(answer.correct, answer.almost, ex.kind), lang) : null;
   const pairHelp = pair?.meaning.help ?? '';
   // A wrong sentence: the right one as tiles, the words that were out of place or missing
   // underlined in red (a position diff of the tiles laid against the solution).
@@ -1030,7 +1028,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                   {headingMeaning?.help && lang && <HelpText className="feedback-help" text={headingMeaning.help} lang={lang} />}
                   <div className="feedback-line">
                     <span className="feedback-title" lang="nl" dir={rtl ? 'ltr' : undefined}>
-                      {ruleFb ? ruleFb.title : answer.correct ? 'Goed zo!' : ex.kind === 'situation' ? 'Hier gaat het anders' : 'Niet helemaal'}
+                      {ruleFb ? ruleFb.title : feedbackTitle(answer.correct, ex.kind)}
                     </span>
                     {headingMeaning?.help && <span className="feedback-sep en-support" aria-hidden>·</span>}
                     {headingMeaning && <span className={`feedback-en ${headingMeaning.help && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{headingMeaning.en}</span>}
@@ -1038,12 +1036,14 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                 </div>
                 {ruleFb && <RuleFeedbackBody v={ruleFb} lang={lang} />}
                 {(pairLine || whyLine) && <hr className="feedback-rule" />}
-                {!answer.correct && sol.text && (
-                  <div className="feedback-kicker">
-                    <Bi text={ui(ex.kind === 'situation' ? 'bestAnswer' : 'correctAnswer', lang)} />
+                {/* After a wrong answer the heading is the lead; the answer itself is green with a check. */}
+                {!answer.correct && pairLine ? (
+                  <div className="feedback-answer">
+                    <span className="feedback-answer-check" aria-hidden><CheckIcon size={20} /></span>
+                    {pairLine}
                   </div>
-                )}
-                {pairLine}{whyLine}
+                ) : pairLine}
+                {whyLine}
               </div>
               {fbMore && <span className="feedback-more" aria-hidden><ChevronDownIcon size={20} /></span>}
             </div>
