@@ -6,7 +6,7 @@ import {
   mergeBackup, parseBackup, replaceWithBackup, settleStreak, workWeek, type Progress,
 } from '../src/lib/progress';
 import { addLessonWords, applyReview, dailyCard, strongerCount } from '../src/lib/spaced';
-import { parseTime, reminderIcs } from '../src/lib/reminder';
+import { googleCalendarUrl, isAndroid, parseTime, reminderIcs } from '../src/lib/reminder';
 
 // October 2026: the 5th is a Monday.
 const day = (d: number) => new Date(2026, 9, d, 12);
@@ -189,6 +189,26 @@ describe('daily reminder (.ics)', () => {
     expect(ics.split('\r\n').every((l) => new TextEncoder().encode(l).length <= 75)).toBe(true);
     expect(reminderIcs('18:00', 'x', new Date(2026, 9, 8, 9, 30))).toContain('DTSTART:20261008T180000');
     expect(parseTime('25:00')).toEqual([18, 0]);
+  });
+});
+
+describe('daily reminder on Android (Google Calendar)', () => {
+  it('fills in Google Calendar\'s own page: every day, the next such time, in the phone\'s time zone', () => {
+    const url = new URL(googleCalendarUrl('07:00', 'https://vloertaal.nl/', new Date(2026, 9, 8, 9, 30), 'taal', 'Czas na niderlandzki', 'Europe/Amsterdam'));
+    expect(url.origin + url.pathname).toBe('https://calendar.google.com/calendar/render');
+    const q = url.searchParams;
+    expect(q.get('action')).toBe('TEMPLATE');
+    expect(q.get('dates')).toBe('20261009T070000/20261009T071000');
+    expect(q.get('recur')).toBe('RRULE:FREQ=DAILY');
+    expect(q.get('text')).toBe('Bram: tijd voor je Nederlands (10 minuten) · Czas na niderlandzki');
+    expect(q.get('details')).toContain('https://vloertaal.nl/');
+    expect(q.get('ctz')).toBe('Europe/Amsterdam');
+    expect(new URL(googleCalendarUrl('18:00', 'x', new Date(2026, 9, 8, 9, 30), 'regels')).searchParams.get('dates')).toBe('20261008T180000/20261008T180500');
+  });
+
+  it('knows Android from the browser', () => {
+    expect(isAndroid('Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 Chrome/130 Mobile')).toBe(true);
+    expect(isAndroid('Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Safari/604.1')).toBe(false);
   });
 });
 

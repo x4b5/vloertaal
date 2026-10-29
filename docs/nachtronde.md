@@ -213,7 +213,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
 10. *Besloten en gedaan (29 oktober): het knopje "Certificaat" blijft, en het certificaat telt alleen de gedane lessen (en hun woorden).* **Een onderwerp dat na een update een les extra krijgt**: het certificaat blijft (bewust),
     maar het knopje "Certificaat" op de onderwerppagina verdwijnt, en het certificaat telt de
     nieuwe les mee ("4 lessen" waar er 3 gedaan zijn). Kiezen wat de bedoeling is.
-11. **De dagelijkse herinnering op Android**: het agendabestand (.ics) belandt in Downloads, en
+11. *Besloten en gedaan (29 oktober): op Android opent "Zet in mijn agenda" een ingevulde Google Agenda-pagina (elke dag, tijdzone van de telefoon); daarna staat er niet meer "Open het bestand". Nog open: "Stop de herinnering" op Android (Google Agenda kan geen annulering via een link; de leerling haalt hem zelf weg, en die tekst vraagt een vertaling), en een nieuwe tijd geeft daar een tweede gebeurtenis.* **De dagelijkse herinnering op Android**: het agendabestand (.ics) belandt in Downloads, en
     Google Agenda op Android kan zo'n bestand niet openen; toch zegt de app "toegevoegd", en in
     Instellingen kan dezelfde tijd niet opnieuw. Delen via het deelmenu helpt niet (Chrome deelt
     geen .ics). Een oplossing is een link naar Google Agenda ("nieuwe gebeurtenis, elke dag"),

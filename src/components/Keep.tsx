@@ -5,7 +5,7 @@ import { fillCount, ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
 import { BACKUP_MAX_BYTES, backupFile, bestStreak, knownLessons, mergeBackup, parseBackup, replaceLoses, replaceWithBackup, type Progress } from '../lib/progress';
-import { REMINDER_TIMES, forgetReminder, rememberReminder, reminderCancelIcs, reminderEvent, reminderIcs, saveFile } from '../lib/reminder';
+import { REMINDER_TIMES, forgetReminder, googleCalendarUrl, isAndroid, rememberReminder, reminderCancelIcs, reminderEvent, reminderIcs, saveFile } from '../lib/reminder';
 import { REMIND_DEFAULT, REMIND_OTHER_TIMES, REMIND_OWN, keepNext, ownTime, type KeepAction, type KeepStep } from '../lib/keep';
 import { Bi } from './Bi';
 import { NlPair } from './NlPair';
@@ -169,7 +169,7 @@ export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; seconda
         </span>
       </button>
       <p className="keep-hint" role="status">
-        <Bi text={ui(saved ? 'remindAdded' : 'remindHint', lang)} />
+        <Bi text={ui(saved ? remindAddedKey() : 'remindHint', lang)} />
       </p>
     </section>
   );
@@ -420,11 +420,22 @@ export function BackupCard({ progress, lang, onRestore }: {
 const appUrl = () => `${location.origin}${location.pathname}`;
 
 /** Puts the daily reminder in the phone's calendar (a .ics file the phone opens). Always this
- *  phone's one event (reminderEvent): a new time moves it, it never adds a second alarm. */
+ *  phone's one event (reminderEvent): a new time moves it, it never adds a second alarm. On
+ *  Android: Google Calendar's own page, filled in (googleCalendarUrl). */
 export function addReminder(time: string, lang?: HelpLanguage) {
+  if (isAndroid()) {
+    const zone = (() => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone; } catch { return undefined; } })();
+    window.open(googleCalendarUrl(time, appUrl(), new Date(), trackOfLang(lang?.code), reminderHelp(lang), zone), '_blank', 'noopener');
+    rememberReminder(time);
+    return;
+  }
   saveFile('vloertaal-herinnering.ics', 'text/calendar;charset=utf-8', reminderIcs(time, appUrl(), new Date(), trackOfLang(lang?.code), reminderHelp(lang), reminderEvent()));
   rememberReminder(time);
 }
+
+/** The line after "Zet in mijn agenda": "Open the file" for the .ics, and on Android (Google
+ *  Calendar's own page, with its Save button) the plain line that the calendar reminds you. */
+export const remindAddedKey = (): 'remindAdded' | 'remindHint' => (isAndroid() ? 'remindHint' : 'remindAdded');
 
 /** "Stop de herinnering": a file that cancels that one event (`time`: its last time). */
 export function stopReminder(time: string, lang?: HelpLanguage) {
@@ -536,7 +547,7 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
     body = (
       <>
         <div className="keep-hero keep3-logo" aria-hidden><LogoMark size={short ? 64 : 88} /></div>
-        {added && <p className="keep-ok keep3-added" role="status"><CheckIcon size={20} /><span dir="ltr">{added}</span><Bi text={ui('remindAdded', lang)} /></p>}
+        {added && <p className="keep-ok keep3-added" role="status"><CheckIcon size={20} /><span dir="ltr">{added}</span><Bi text={ui(remindAddedKey(), lang)} /></p>}
         <KeepTitle nl="Zet Vloertaal op je beginscherm" text={ui('installTitle', lang)} lang={lang} />
         <p className="keep3-hint"><Bi text={ui('installHint', lang)} /></p>
         {way === 'ios' && (
@@ -575,7 +586,7 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
       <>
         {hero('cheer')}
         <p className="keep-ok keep3-added keep3-added-big" role="status"><CheckIcon size={24} /><span dir="ltr">{added}</span></p>
-        <KeepTitle nl="Zet in je agenda" text={ui('remindAdded', lang)} lang={lang} />
+        <KeepTitle nl="Zet in je agenda" text={ui(remindAddedKey(), lang)} lang={lang} />
         <div className="keep3-actions">
           <button type="button" className="btn btn-primary keep3-btn keep-continue" onClick={guard(() => go('next'))}>
             <span className="keep3-btn-text keep3-center"><Bi className="keep3-btn-gloss" text={ui('continue', lang)} /></span>
