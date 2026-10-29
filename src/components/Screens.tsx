@@ -357,7 +357,7 @@ const WORK_CONTACTS: { id: string; when: UiKey }[] = [
 /**
  * The Hulp tab of the language course: who to call about trouble at work (the Werkregels track has
  * the full list). The name and number in Dutch, what it is for in the help language; one tap calls
- * or opens the site. A list, like the phrases above it.
+ * or opens the site, except 112, which is only shown. A list, like the phrases above it.
  */
 function WorkContacts({ lang }: { lang?: HelpLanguage }) {
   return (
@@ -366,7 +366,20 @@ function WorkContacts({ lang }: { lang?: HelpLanguage }) {
       <ul className="rh-rows">
         {WORK_CONTACTS.map(({ id, when }) => {
           const row = HELP_ROWS.find((r) => r.id === id);
-          if (!row?.href) return null;
+          if (!row) return null;
+          // 112 has no link: the number is shown, not dialled with one tap (src/content/regels/help.ts).
+          if (!row.href) return (
+            <li key={id} className="rh-row">
+              <div className="rh-card">
+                <span className="rh-emoji" aria-hidden>{row.emoji}</span>
+                <span className="rh-text">
+                  <span className="rh-name" lang="nl">{row.name}</span>
+                  <Bi className="rh-when" text={ui(when, lang)} />
+                  <span className="rh-show" lang="nl" dir="ltr">{row.show}</span>
+                </span>
+              </div>
+            </li>
+          );
           const call = row.href.startsWith('tel:');
           return (
             <li key={id} className="rh-row">

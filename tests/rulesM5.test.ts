@@ -68,6 +68,14 @@ describe('Hulp in the work-rules track: "Wie bel je?"', () => {
     expect(new Set(HELP_ROWS.map((r) => r.id)).size).toBe(HELP_ROWS.length);
   });
 
+  it('shows 112 without a call button, and says that calling it for nothing is punishable', () => {
+    const row = HELP_ROWS.find((r) => r.id === 'h.112')!;
+    expect(row.href).toBeUndefined();
+    expect(row.when).toContain('Voor niks bellen is strafbaar.');
+    const m = html(createElement(RulesHelp, { lang: nl(), onShelf: () => {} }));
+    expect(m).not.toContain('href="tel:112"');
+  });
+
   it('dials what it shows, and every number is one the content already uses (or marked ⚖️ check)', () => {
     const helpSource = readFileSync(join(__dirname, '../src/content/regels/help.ts'), 'utf8');
     for (const r of HELP_ROWS.filter((x) => x.href?.startsWith('tel:'))) {
