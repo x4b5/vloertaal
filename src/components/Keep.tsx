@@ -421,7 +421,8 @@ const appUrl = () => `${location.origin}${location.pathname}`;
 
 /** Puts the daily reminder in the phone's calendar (a .ics file the phone opens). Always this
  *  phone's one event (reminderEvent): a new time moves it, it never adds a second alarm. On
- *  Android: Google Calendar's own page, filled in (googleCalendarUrl). */
+ *  Android: Google Calendar's own page, filled in (googleCalendarUrl); that event has no UID, so
+ *  there a new time is a second event, and Stop's file cannot remove it (docs/nachtronde.md 11). */
 export function addReminder(time: string, lang?: HelpLanguage) {
   if (isAndroid()) {
     const zone = (() => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone; } catch { return undefined; } })();

@@ -62,10 +62,10 @@ export function Admin({ onBack }: { onBack: () => void }) {
           Teller (GoatCounter): <a href={COUNTER} target="_blank" rel="noreferrer">{COUNTER.replace(/^https?:\/\//, '')}</a>
         </p>
         <p className="muted small">
-          Gebeurtenissen: <code>open</code> (één keer per dag per toestel), <code>lesson-start</code>, <code>lesson-quit</code>,{' '}
-          <code>lesson-done</code>, <code>review-done</code> en <code>unit-done</code>, elk ook per hulptaal (<code>/lang-ti</code>) en
-          per sector (<code>/sector-care</code>). Een les ook per les (<code>/lesson/l-cv</code>); gestopt ook per kwart van de les
-          (<code>/q2</code>, en <code>/lesson/l-cv/q2</code>). Elke maat telt apart. Geen cookies, geen namen, geen ids van mensen.
+          Gebeurtenissen: <code>lesson-start</code>, <code>lesson-quit</code>, <code>lesson-done</code>, <code>review-done</code> en{' '}
+          <code>unit-done</code>, één verzoek per keer: met de les (<code>/e/lesson-done/l-cv</code>), bij gestopt het kwart van de
+          les (<code>/q2</code>) en bij klaar ongeveer hoe lang (<code>/t2-5</code>). Geen hulptaal, sector of versie; geen cookies,
+          geen namen, geen ids van mensen.
           Een andere teller instellen: <code>VITE_COUNTER_URL</code> bij het bouwen.
         </p>
         <p className="muted small">

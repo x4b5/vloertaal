@@ -440,7 +440,9 @@ export function parseBackup(text: string): Backup | null {
   if (d.track === 'taal' || d.track === 'regels') out.track = d.track;
   // The block the file was on (only one the app knows), for the other track's place (backupForTrack).
   if (typeof src.currentUnit === 'string' && findCourseUnit(src.currentUnit)) out.currentUnit = src.currentUnit;
-  if (src.parked && typeof src.parked === 'object') {
+  // The other track's place only from a file that says its track (version 2): in an older file
+  // it may be this phone's own track's place.
+  if (out.track && src.parked && typeof src.parked === 'object') {
     const k = src.parked as Record<string, unknown>;
     out.parked = {
       reviewDay: isDay(k.reviewDay) ? k.reviewDay : undefined,

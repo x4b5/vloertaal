@@ -574,16 +574,18 @@ export default function App() {
    *  streak-1 milestone offers it on day 1, but a learner who tried lesson 1.1 first already has
    *  that day's streak: for them it comes at the end of the first lesson with the code. */
   const keepDue = useRef(false);
-  // Left the screens after a lesson another way (the phone's Back): offered after the next one.
-  useEffect(() => { if (['home', 'topic', 'all', 'settings', 'words', 'tips', 'about', 'socialmap'].includes(view.name)) keepDue.current = false; }, [view.name]);
-  /** The end of the screens after a lesson (result, certificate, milestone): home, or the offer. */
-  /** The last lesson was outside the current block: the screens after it end on the route. */
+  /** The last lesson was outside the current block: the screens after it end on the route.
+   *  Left the screens after a lesson another way (Back, the keep offer): forgotten. */
   const toRoute = useRef(false);
+  // Left the screens after a lesson another way (the phone's Back): offered after the next one.
+  useEffect(() => { if (['home', 'topic', 'all', 'settings', 'words', 'tips', 'about', 'socialmap'].includes(view.name)) { keepDue.current = false; toRoute.current = false; } }, [view.name]);
+  /** The end of the screens after a lesson (result, certificate, milestone): home, or the offer. */
   const afterLesson = () => {
+    if (keepDue.current && !keepOffered()) { keepDue.current = false; replace({ name: 'keep' }); return; }
+    keepDue.current = false;
     const route = toRoute.current;
     toRoute.current = false;
-    if (keepDue.current && !keepOffered()) { keepDue.current = false; replace({ name: 'keep' }); }
-    else { keepDue.current = false; if (route) tab('route'); else back(); }
+    if (route) tab('route'); else back();
   };
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
   /** "Waar woon je?" (Settings only): the region's lessons come in or go out of the path. */

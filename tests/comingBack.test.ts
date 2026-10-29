@@ -152,8 +152,9 @@ describe('backup', () => {
     expect(replaced.reviewDay).toBe('2026-10-05');
     expect(replaced.parked?.reviewDay).toBe('2026-10-08');
     // A version-1 file (no route) is taken as it is.
-    const old = parseBackup(JSON.stringify({ app: 'vloertaal', version: 1, progress: { completed: {}, reviewDay: '2026-10-08' } }))!;
+    const old = parseBackup(JSON.stringify({ app: 'vloertaal', version: 1, progress: { completed: {}, reviewDay: '2026-10-08', parked: { reviewDay: '2026-10-07' } } }))!;
     expect(old.track).toBeUndefined();
+    expect(old.parked).toBeUndefined(); // its route is not known, so neither is the other one
     expect(mergeBackup(here, old).reviewDay).toBe('2026-10-08');
   });
 
