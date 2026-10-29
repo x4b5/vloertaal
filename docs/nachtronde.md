@@ -87,6 +87,17 @@ zelf kapotmaakten; wat ze vonden is ook gerepareerd (zie de tabel).
 | Dari stond als `lang="prs"`, een code die telefoonstemmen niet kennen | Dari, schermlezer | `fa-AF`, zoals al voor de datums |
 | Alleen-Engels: de Engelse tekst stond als Nederlands gemarkeerd (Nederlandse stem leest Engels) | alleen-Engels, schermlezer | `lang="en"` |
 
+### Verlenging (29 oktober, 04:20–06:20)
+
+Na het mergen van #90 en #91 nog twee uur, met dezelfde werkwijze.
+
+| Wat ging er mis | Wie merkte het | Nu |
+|---|---|---|
+| Eerste start: een dubbeltik beantwoordde ook de volgende vraag (Engels: de sectorgroep én de sector zonder die te zien; Pools: "Kobieta" én een sectorgroep) | nieuwe leerlingen | een tik in het eerste moment na nieuwe kaarten telt niet |
+| Eerste start: bij elke nieuwe vraag ging de schermlezerfocus naar het logo, niet naar de vraag; binnen een pagina ("Andere taal", sectorgroep → sectoren) ging de focus helemaal weg | schermlezer | de focus gaat naar de vraag |
+| De talenlijst stond als Nederlands (of, na Terug, als Arabisch …) gemarkeerd; Dari in de lijst als `prs` | schermlezer | de lijst is Engels, elke taalnaam heeft zijn eigen code, Dari `fa-AF` |
+| Twee keer snel op een tabblad onderin (vanaf een onderwerp) kwam op de home uit, en Terug ging daarna de app uit | iedereen met haast | het laatst getikte tabblad, en Terug werkt gewoon |
+
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
 - Eén `<main>` op elk scherm (de app tekent in `<main id="root">`).

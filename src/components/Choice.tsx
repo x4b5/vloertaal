@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react';
+import { useEffect, type ReactNode } from 'react';
+import { useFreshCards } from './useFreshScreen';
 import type { Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
@@ -42,6 +43,18 @@ export function ChoiceCards<T extends string>({ options, current, onPick, label,
   // A card that leads on to another page is a button to that page, not one of several radio
   // options: then the cards are a plain group of buttons.
   const leads = options.some((o) => o.next);
+  const ids = options.map((o) => o.id).join('|');
+  const fresh = useFreshCards(ids);
+  // Other cards on the same page (a group, then its choices): the tapped card is gone, so the
+  // focus goes to the question, as on a new page (App.tsx), and a screen reader reads it.
+  useEffect(() => {
+    const now = document.activeElement;
+    if (now && now !== document.body) return;
+    const q = document.querySelector<HTMLElement>('#root .onboarding-title');
+    if (!q) return;
+    if (!q.hasAttribute('tabindex')) q.tabIndex = -1;
+    q.focus({ preventScroll: true });
+  }, [ids]);
   return (
     <div
       className={`max3-cards ${className}`}
@@ -70,7 +83,7 @@ export function ChoiceCards<T extends string>({ options, current, onPick, label,
               role={leads ? undefined : 'radio'}
               aria-checked={leads ? undefined : picked}
               className={`max3-card ${picked ? 'picked' : ''} ${o.danger ? 'danger' : ''}`}
-              onClick={() => onPick(o.id)}
+              onClick={() => { if (!fresh()) onPick(o.id); }}
             >
               {o.picture && <span className="max3-pic" aria-hidden>{o.picture}</span>}
               <span className="max3-names">
