@@ -64,3 +64,14 @@ describe("the language track's daily review is unchanged", () => {
     }).toMatchSnapshot();
   });
 });
+
+describe('the number on the review card', () => {
+  it('is the number the review asks, also when a short review is topped up', () => {
+    const words = teachingLessons.find((l) => l.id === 'l.hello')!.words;
+    const cards: Cards = {};
+    words.forEach((w, i) => { cards[w.id] = { box: 2, due: addDays(TODAY, i < 2 ? 0 : 3) }; });
+    expect(dueIds(cards, TODAY)).toHaveLength(2);
+    expect(dailyCard(cards, TODAY)?.due).toBe(dailyWordIds(cards, TODAY).length);
+    expect(dailyWordIds(cards, TODAY).length).toBeGreaterThan(2);
+  });
+});

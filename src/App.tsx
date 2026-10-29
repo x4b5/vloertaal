@@ -678,7 +678,9 @@ export default function App() {
         const today = dayKey(now);
         const cards = progress.cards ?? {};
         const next = earnCertificates(daily
-          ? { ...completeDaily(progress, accuracy, now), cards: applyReview(cards, results, today) }
+          // (Its review day is the day it was started for, with that day's words: one begun at
+          // 23:58 and finished after midnight leaves today's own review to do.)
+          ? { ...completeDaily(progress, accuracy, now), reviewDay: dayKey(lessonStarted.current), cards: applyReview(cards, results, today) }
           : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: found.lesson.steps?.length
             // A rules lesson: its questions get a card (by step id), for "Herhaal vandaag" of that track.
             ? addLessonItems(cards, gradedStepIds(found.lesson), results, today)
@@ -716,7 +718,7 @@ export default function App() {
         replace({
           name: 'result', right, total, newWords: words - before, words, streakUp,
           kind: daily ? 'daily' : reviewing ? 'review' : 'lesson',
-          repeated: daily ? found.lesson.steps?.length ?? found.lesson.words.length : reviewing ? Object.keys(results).length || found.lesson.words.length : undefined,
+          repeated: daily ? Object.keys(results).length || (found.lesson.steps?.length ?? found.lesson.words.length) : reviewing ? Object.keys(results).length || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
           // Still due after today's review, only for who was away 2 days or more ("they come in the
           // next days"): a learner who practises every day and learns many words a day would read

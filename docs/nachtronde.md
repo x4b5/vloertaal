@@ -99,6 +99,9 @@ Na het mergen van #90 en #91 nog twee uur, met dezelfde werkwijze.
 | Twee keer snel op een tabblad onderin (vanaf een onderwerp) kwam op de home uit, en Terug ging daarna de app uit | iedereen met haast | het laatst getikte tabblad, en Terug werkt gewoon |
 | De noodzinnen op het Hulp-tabblad bleven offline stil als ze nooit eerder waren afgespeeld (ze stonden niet bij de bewaarde lessen) | offline, de belangrijkste zinnen | ze worden één keer stil opgehaald zodra de app online is, en gaan mee met elk bewaard onderwerp |
 | De SEO-pagina's: twee menu's met dezelfde naam op /voor-begeleiders/, en de stemknoppen van /stemmen/ buiten elk oriëntatiepunt | schermlezer | axe over alle 48 pagina's, licht en donker: geen meldingen meer |
+| "Herhaal vandaag" begonnen om 23:58 en na middernacht klaar: de herhaling van vandaag stond als gedaan, de woorden die vandaag aan de beurt waren schoven een dag op | avondleerders | de herhaling telt voor de dag waarvoor ze begon; die van vandaag staat nog open |
+| De kaart "Herhaal vandaag" zei 2 woorden, de herhaling vroeg er 4 (aangevuld) | iedereen met weinig herhaalwoorden | hetzelfde getal |
+| Luisteroefeningen die in de herhaling werden overgeslagen (geluid uit), telden op de uitslag toch als herhaald | zonder geluid | alleen wat gevraagd is, telt |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
@@ -202,5 +205,9 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
     Misschien bewust; graag even kijken. En: Nederlandse woorden in een schermlezerlabel
     (bijvoorbeeld "Aanbevolen · …") worden met de stem van de hulptaal gelezen; dat vraagt een
     andere opbouw van die labels.
-15. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+15. **"Extra ronde" bij "Herhaal vandaag"** kan nooit getikt worden: de kaart staat alleen op de
+    home zolang er woorden aan de beurt zijn (het ontwerp "hooguit 3 tikken"), en de knop zit in de
+    kaart als de herhaling klaar is. Zo wachten de woorden boven de 10 tot morgen. Kaart (klein)
+    terug als klaar, of de knop weghalen: graag een besluit.
+16. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
    vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.
