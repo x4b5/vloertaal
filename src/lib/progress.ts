@@ -143,6 +143,9 @@ export function loadProgress(): Progress {
       if (saved.region !== undefined && !regionsOn()) delete saved.region;
       // The work-rules track while it is not offered (RULES_TRACK off): the language page again.
       if (saved.helpLang === 'nl' && !rulesTrackOn()) { saved.helpLang = null; saved.onboarded = false; }
+      // A phone voice saved before the choice woman / man / automatic (Settings offers only the
+      // recordings now): automatic, so these learners hear the recordings and see the choice.
+      if (typeof saved.voice === 'string' && !saved.voice.startsWith('piper:')) saved.voice = null;
       if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;
       if (saved.genderAsked !== undefined && typeof saved.genderAsked !== 'boolean') delete saved.genderAsked;
       if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;

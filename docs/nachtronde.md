@@ -220,7 +220,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
     maar dat is een externe dienst: graag een besluit. Ook: "Stop de herinnering" stuurt een
     annulering als bestand, wat agenda's waarschijnlijk niet als annulering lezen; en op iOS
     buiten Safari (in-app-browser) wijzen de installatiestappen naar een knop die er niet is.
-12. **Een oude opgeslagen telefoonstem** (bijvoorbeeld "Google Nederlands", van vóór de
+12. *Besloten en gedaan (29 oktober): een oude opgeslagen telefoonstem wordt bij het laden één keer "automatisch"; ze horen dan de opnames en zien de gewone keuze.* **Een oude opgeslagen telefoonstem** (bijvoorbeeld "Google Nederlands", van vóór de
     keuze vrouw/man/automatisch): die leerlingen horen altijd de telefoonstem, en Instellingen
     toont geen keuze. Omzetten naar "automatisch" zou de opnames geven; dat verandert wat ze
     horen, dus niet zelf gedaan.
