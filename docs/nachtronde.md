@@ -233,7 +233,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
     Misschien bewust; graag even kijken. En: Nederlandse woorden in een schermlezerlabel
     (bijvoorbeeld "Aanbevolen · …") worden met de stem van de hulptaal gelezen; dat vraagt een
     andere opbouw van die labels.
-15. **"Extra ronde" bij "Herhaal vandaag"** kan nooit getikt worden: de kaart staat alleen op de
+15. *Besloten en gedaan (29 oktober): als de herhaling klaar is en er nog woorden wachten, staat er een kleine kaart met "Extra ronde" op de home.* **"Extra ronde" bij "Herhaal vandaag"** kan nooit getikt worden: de kaart staat alleen op de
     home zolang er woorden aan de beurt zijn (het ontwerp "hooguit 3 tikken"), en de knop zit in de
     kaart als de herhaling klaar is. Zo wachten de woorden boven de 10 tot morgen. Kaart (klein)
     terug als klaar, of de knop weghalen: graag een besluit.

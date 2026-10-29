@@ -86,6 +86,9 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   // again (that one is then on the topic page), and next to only the recommended topic when the
   // block is finished.
   const dailyDue = daily?.state === 'due';
+  // Today's review done with words still waiting: a small card with "Extra ronde" (only then: a
+  // home with nothing to do there shows no card).
+  const dailyExtra = daily?.state === 'done' && daily.extra > 0;
   const choices = block ? [] : homeSuggestions(sector, completed, track, region).slice(0, dailyDue ? 1 : 2);
   const ref = useRef<HTMLDivElement>(null);
   const order = routeOrder(sector, track, region);
@@ -122,7 +125,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   // A coach link to a locked topic (preview): its unlock card, only as a third thing to tap.
   const linked = lockedLink && !unitAllowed(lockedLink, access) ? order.find((u) => u.id === lockedLink) : undefined;
   const restartShown = Boolean(resumeId && onRestart && !dailyDue);
-  const taps = (dailyDue ? 1 : 0) + (block ? 1 + (restartShown ? 1 : 0) + (blockPlayable(block, completed, access) ? 0 : 1) : choices.length) + 1;
+  const taps = (dailyDue || dailyExtra ? 1 : 0) + (block ? 1 + (restartShown ? 1 : 0) + (blockPlayable(block, completed, access) ? 0 : 1) : choices.length) + 1;
 
   const pick = (unit: Unit) => {
     if (!blockPlayable(unit, completed, access)) { onUpgrade?.(); return; }
@@ -190,7 +193,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   return (
     <div className="path route home3" ref={ref} dir={rtl ? 'rtl' : undefined}>
       {unlocked && <UnlockedNote lang={lang} />}
-      {dailyDue && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
+      {(dailyDue || dailyExtra) && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
 
       {block && (
         // With "Herhaal vandaag" above it, the block is compact (no picture, no done lessons), so
