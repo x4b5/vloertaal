@@ -103,7 +103,7 @@ export const startUnit: RuleUnit = {
           body: [
             'Op het werk zeggen de meeste mensen "je".',
             'Ook tegen de baas.',
-            'Twijfel je? Begin met "u", en luister wat anderen doen.',
+            'Weet je het niet zeker? Begin met "u", en luister wat anderen doen.',
             'Tegen klanten en cliënten zeg je vaak wel "u".',
           ],
           rule: 'ongeschreven',
@@ -117,7 +117,7 @@ export const startUnit: RuleUnit = {
             { id: 'b', text: 'Ze wil dat hij haar "chef" noemt.', best: false, feedback: 'Nee. Ze noemt juist haar voornaam.' },
             { id: 'c', text: 'Ze wil dat hij "je" zegt, en niet "u".', best: true, feedback: 'Goed. Ze wil minder afstand.' },
           ],
-          why: 'Op het werk zeggen de meeste mensen "je". Ook tegen de baas. Twijfel je? Begin met "u". Luister wat anderen doen. Tegen klanten en cliënten zeg je vaak wel "u".',
+          why: 'Op het werk zeggen de meeste mensen "je". Ook tegen de baas. Weet je het niet zeker? Begin met "u". Luister wat anderen doen. Tegen klanten en cliënten zeg je vaak wel "u".',
         },
         {
           kind: 'whatdo',
