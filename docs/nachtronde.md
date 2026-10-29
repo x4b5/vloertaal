@@ -197,7 +197,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
    *vergeten* lidwoord; een *verkeerd* lidwoord gaat er nu ook door, en het woord gaat in de
    herhaling omhoog. Zo wordt de/het nooit als fout geoefend. Strenger maken is een keuze over
    de lesaanpak; daarom niet zelf gedaan.
-6. **Herhaling aanvullen** met woorden die nog niet aan de beurt waren: goed beantwoord gaan ze
+6. *Besloten en gedaan (29 oktober): een woord dat nog niet aan de beurt was houdt bij goed zijn vak; de datum schuift een dag op.* **Herhaling aanvullen** met woorden die nog niet aan de beurt waren: goed beantwoord gaan ze
    een vak omhoog, gerekend vanaf vandaag (een woord uit vak 5 komt dan pas over 30 dagen terug).
    Kan door alleen de datum te verschuiven en het vak te laten. Ontwerpkeuze, niet aangepast.
 7. **Tigrinya: vier paren met dezelfde vertaling** (gevaar/ongeluk ሓደጋ, beschadigd/gewond ዝተጎድአ,

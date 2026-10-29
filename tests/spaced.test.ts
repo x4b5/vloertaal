@@ -34,6 +34,13 @@ describe('Herhaal vandaag (spaced repetition)', () => {
     expect(cards[a]).toEqual({ box: 6, due: addDays(TODAY, 30) });
   });
 
+  it('keeps the box of a word answered right before it was due (a top-up)', () => {
+    const [a, b] = first.words.map((w) => w.id);
+    const cards = applyReview({ [a]: { box: 5, due: addDays(TODAY, 3) }, [b]: { box: 4, due: addDays(TODAY, 2) } }, { [a]: true, [b]: false }, TODAY);
+    expect(cards[a]).toEqual({ box: 5, due: addDays(TODAY, 4) });
+    expect(cards[b]).toEqual({ box: 1, due: addDays(TODAY, 1) }); // wrong is wrong, early or not
+  });
+
   it('asks at most a few minutes of words a day, oldest first, topped up when only a few are due', () => {
     const words = teachingLessons.slice(0, 5).flatMap((l) => l.words);
     const cards = Object.fromEntries(words.map((w, i) => [w.id, { box: 1, due: addDays(TODAY, i < 15 ? -1 - (i % 3) : 3) }]));
