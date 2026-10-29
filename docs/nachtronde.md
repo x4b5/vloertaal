@@ -70,6 +70,9 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
   - acht functies en constanten die niets meer gebruikt.
 - **Certificaat**: het scherm en de tekenfunctie laden pas als je ze ziet. Het hoofdbestand ging
   van 739 naar 721 kB.
+- **Starttijd voor wie terugkomt**: het eigen taalbestand en de plaatjes worden nu tegelijk met
+  het hoofdbestand opgevraagd (een paar regels in `index.html`, door de build geschreven). Op een
+  gesimuleerde trage 4G-telefoon staat de home er na 3,3 s in plaats van 4,0 s.
 - **Dubbele code**: certificaat en spiekkaartje delen nu één `roundRect` en één "delen of bewaren"
   (`src/lib/canvasShare.ts`). Volgens jscpd is dat de enige doublure buiten de tekeningen.
 
