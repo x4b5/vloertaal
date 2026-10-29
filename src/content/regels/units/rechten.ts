@@ -58,7 +58,7 @@ export const rechtenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.rechten.1.wd1',
-          situation: 'Mohammed denkt dat het om zijn naam gaat.',
+          situation: 'Mohammed denkt dat het om zijn naam gaat. Wat kan Mohammed het beste doen?',
           options: [
             { id: 'a', text: 'Hij laat het gaan. Bewijzen kan hij het toch niet.', best: false, feedback: 'Begrijpelijk. Maar melden kan ook zonder hard bewijs.' },
             { id: 'b', text: 'Hij schrijft op wat er gebeurde, en hij meldt het.', best: true, feedback: 'Goed. Zo kan iemand hem helpen.' },
@@ -70,18 +70,18 @@ export const rechtenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.rechten.1.wd2',
-          situation: 'Esra draagt een hoofddoek. Haar teamleider zegt: "Hier geen hoofddoek." Er is geen reden van veiligheid of hygiëne.',
+          situation: 'Esra draagt een hoofddoek. Haar teamleider zegt: "Hier geen hoofddoek." Er is geen reden van veiligheid of hygiëne. Wat kan Esra het beste doen?',
           options: [
-            { id: 'a', text: 'Ze vraagt waarom, en ze vraagt advies.', best: true, feedback: 'Goed. Dan weet ze waar ze staat.' },
+            { id: 'a', text: 'Ze vraagt waarom, en ze vraagt advies.', best: true, feedback: 'Goed. Dan weet ze wat haar rechten zijn.' },
             { id: 'b', text: 'Ze doet hem af, en ze zegt er niets van.', best: false, feedback: 'Begrijpelijk. Maar het kan discriminatie zijn.' },
-            { id: 'c', text: 'Ze neemt meteen ontslag.', best: false, feedback: 'Dan verliest ze misschien rechten. Vraag eerst advies.' },
+            { id: 'c', text: 'Ze neemt meteen ontslag.', best: false, feedback: 'Dan verliest ze misschien rechten. Ze kan beter eerst advies vragen.' },
           ],
           why: 'Een regel over kleding moet een goede reden hebben. Bijvoorbeeld veiligheid of hygiëne. Zonder goede reden kan het discriminatie zijn. Het College voor de Rechten van de Mens kan daar gratis een oordeel over geven.',
         },
         {
           kind: 'whoask',
           id: 'r.l.rechten.1.wa1',
-          question: 'Je denkt dat een bedrijf je niet nam om je naam. Wie geeft gratis juridisch advies?',
+          question: 'Je denkt dat een bedrijf je niet nam om je naam. Wie geeft gratis advies over je rechten?',
           options: [
             { id: 'a', who: 'uwv', best: false, feedback: 'UWV gaat over uitkeringen, niet over discriminatie.' },
             { id: 'b', who: 'juridischloket', best: true, feedback: 'Goed. Het Juridisch Loket geeft gratis advies.' },
@@ -89,14 +89,14 @@ export const rechtenUnit: RuleUnit = {
           ],
           why: 'Het Juridisch Loket helpt gratis. Melden kan ook bij discriminatie.nl.',
         },
-        { kind: 'model', id: 'r.l.rechten.1.mo1', context: 'Je wilt praten over hoe je behandeld wordt.', nl: 'Ik heb het gevoel dat ik anders behandeld word. Kunnen we praten?' },
+        { kind: 'model', id: 'r.l.rechten.1.mo1', context: 'Je vindt dat ze je anders behandelen dan anderen.', nl: 'Ik heb het gevoel dat ik anders behandeld word. Kunnen we praten?' },
       ],
     },
     {
       // Les 9.2 · Grensoverschrijdend gedrag
       id: 'r.l.rechten.2',
       title: 'Grensoverschrijdend gedrag',
-      goal: 'Je herkent gedrag dat over je grens gaat, en je zegt stop. Je weet bij wie je terechtkunt.',
+      goal: 'Je herkent gedrag dat over je grens gaat, en je zegt stop. Je weet wie je kan helpen.',
       remember: 'Het gaat om hoe het voor jou voelt, niet om de grap.',
       // Wie kan je helpen: de vertrouwenspersoon, als je bedrijf die heeft · je leidinggevende of
       //   HR · de Nederlandse Arbeidsinspectie · bij aanranding of verkrachting: de politie of het
@@ -141,7 +141,7 @@ export const rechtenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.rechten.2.wd1',
-          situation: 'Dewi wil dat het stopt.',
+          situation: 'Dewi wil dat het stopt. Wat kan Dewi het beste doen?',
           options: [
             { id: 'a', text: 'Ze lacht mee. Dan houdt het vanzelf wel op.', best: false, feedback: 'Begrijpelijk. Maar vaak gaat het dan juist door.' },
             { id: 'b', text: 'Ze zegt duidelijk: "Stop. Ik wil dit niet."', best: true, feedback: 'Goed. Dan weet hij het, en anderen horen het ook.' },
@@ -152,11 +152,11 @@ export const rechtenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.rechten.2.wd2',
-          situation: 'Kevin ziet dat een collega steeds wordt uitgelachen en gepest.',
+          situation: 'Kevin ziet dat anderen een collega steeds uitlachen en pesten. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij lacht mee. Anders is hij straks zelf de volgende.', best: false, feedback: 'Begrijpelijk. Maar zo gaat het pesten door.' },
             { id: 'b', text: 'Hij doet alsof hij niets heeft gezien.', best: false, feedback: 'Dan voelt de collega zich alleen.' },
-            { id: 'c', text: 'Hij vraagt de collega of het goed met hem gaat.', best: true, feedback: 'Goed. Dat helpt meer dan je denkt.' },
+            { id: 'c', text: 'Hij vraagt de collega of het goed met hem gaat.', best: true, feedback: 'Goed. Dat helpt meer dan hij denkt.' },
           ],
           why: 'Pesten maakt mensen ziek. Vraag of het goed gaat. Bied aan om getuige te zijn. Samen sta je sterker.',
         },
@@ -178,7 +178,7 @@ export const rechtenUnit: RuleUnit = {
       // Les 9.3 · Uitbuiting en oplichting
       id: 'r.l.rechten.3',
       title: 'Uitbuiting en oplichting',
-      goal: 'Je herkent de signalen van uitbuiting en van een geldezel-trucje. Je weet waar je hulp krijgt.',
+      goal: 'Je herkent uitbuiting en een geldezel-trucje. Je weet waar je hulp krijgt.',
       remember: 'Je paspoort en je bankpas geef je nooit af.',
       // Wie kan je helpen: de Nederlandse Arbeidsinspectie (melden kan zonder je naam) · Meld
       //   Misdaad Anoniem: 0800-7000 ⚖️ · de politie · bij gevaar: 112 · FairWork · een vakbond ·
@@ -222,18 +222,18 @@ export const rechtenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.rechten.3.wd1',
-          situation: 'Piotr is bang zijn werk en zijn kamer te verliezen.',
+          situation: 'Piotr is bang dat hij zijn werk en zijn kamer kwijtraakt. Wat kan Piotr het beste doen?',
           options: [
             { id: 'a', text: 'Hij zoekt hulp, ook al is hij bang.', best: true, feedback: 'Goed. Er zijn mensen die hem kunnen helpen.' },
             { id: 'b', text: 'Hij wacht af. Het wordt vast beter als hij hard werkt.', best: false, feedback: 'Begrijpelijk. Maar dit gaat meestal niet vanzelf over.' },
             { id: 'c', text: 'Hij vraagt de baas beleefd om iets meer loon.', best: false, feedback: 'Mag. Maar het paspoort en de uren blijven een probleem.' },
           ],
-          why: 'Uitbuiting is niet normaal en niet toegestaan. Iedereen die in Nederland werkt, kan hulp krijgen. Je kunt het melden bij de Arbeidsinspectie, ook zonder je naam. Ben je in gevaar? Bel 112.',
+          why: 'Uitbuiting is niet normaal, en het mag niet. Iedereen die in Nederland werkt, kan hulp krijgen. Je kunt het melden bij de Arbeidsinspectie, ook zonder je naam. Ben je in gevaar? Bel 112.',
         },
         {
           kind: 'whatdo',
           id: 'r.l.rechten.3.wd2',
-          situation: 'Jayden krijgt een appje: "Mogen we je bankpas een week lenen? Je krijgt 500 euro."',
+          situation: 'Jayden krijgt een bericht: "Mogen we je bankpas een week lenen? Je krijgt 500 euro." Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij doet het één keer. Het is snel verdiend.', best: false, feedback: 'Niet doen. Dit is een bekend trucje van criminelen.' },
             { id: 'b', text: 'Hij zegt nee, en hij blokkeert het nummer.', best: true, feedback: 'Goed. Zo voorkomt hij grote problemen.' },
@@ -259,7 +259,7 @@ export const rechtenUnit: RuleUnit = {
       // Les 9.4 · Ontslag en het einde van je baan
       id: 'r.l.rechten.4',
       title: 'Ontslag en het einde van je baan',
-      goal: 'Je tekent niets over ontslag zonder advies, en je kent je basisrechten bij ontslag.',
+      goal: 'Je tekent niets over ontslag zonder advies. Je kent je basisrechten bij ontslag.',
       remember: 'Teken nooit iets over ontslag zonder advies.',
       // Wie kan je helpen: het Juridisch Loket · een vakbond (word lid vóór je een probleem hebt:
       //   soms is er een wachttijd ⚖️) · een rechtsbijstandverzekering, als je die hebt · UWV (WW,
@@ -298,11 +298,11 @@ export const rechtenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.rechten.4.wd1',
-          situation: 'De baas legt een pen neer.',
+          situation: 'De baas legt een pen neer. Wat kan Sanne het beste doen?',
           options: [
             { id: 'a', text: 'Ze tekent meteen. Dan krijgt ze vast een goede referentie.', best: false, feedback: 'Begrijpelijk. Maar ze weet nog niet wat ze opgeeft.' },
             { id: 'b', text: 'Ze vraagt tijd, en ze laat het papier eerst nakijken.', best: true, feedback: 'Goed. Daar heeft ze recht op.' },
-            { id: 'c', text: 'Ze tekent, en ze schrijft erbij dat ze twijfelt.', best: false, feedback: 'Dan heeft ze toch getekend. Twijfel erbij schrijven helpt niet.' },
+            { id: 'c', text: 'Ze tekent, en ze schrijft erbij dat ze het niet zeker weet.', best: false, feedback: 'Dan heeft ze toch getekend. Dat erbij schrijven helpt niet.' },
           ],
           why: 'Een vaststellingsovereenkomst is een afspraak om je baan samen te stoppen. Staat er iets verkeerd in? Dan kun je je WW kwijtraken. Vraag eerst advies. Om tijd vragen is normaal.',
         },
