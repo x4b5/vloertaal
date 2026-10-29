@@ -77,7 +77,7 @@ const KEY_RULES = [
   // The Entree additions (units 11–17): one key rule per unit.
   'Twijfel je over de leeftijd bij alcohol of tabak? Vraag altijd een ID.',
   'Je werktijd is: eindtijd min begintijd, min je pauze.',
-  'Klaar? Ruim op, laat het nakijken, en zeg wat klaar is en wat niet.',
+  'Klaar? Ruim op en laat het nakijken. Zeg wat klaar is en wat niet.',
   'Eerst de POK tekenen. Dan pas beginnen met je stage.',
   'Je DigiD is alleen van jou. Geef hem aan niemand.',
   'Iedereen heeft dezelfde rechten. Discriminatie mag niet, ook niet buiten je werk.',
