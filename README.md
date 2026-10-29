@@ -83,6 +83,10 @@ Hulptalen in het spoor Taal:
 
 ## Toegang
 
+**Sinds 28 oktober 2026 staat alles open voor iedereen** (`OPEN_TO_ALL` in `src/lib/access.ts`):
+de codepagina komt niet meer in beeld, en elke telefoon heeft de volledige versie. De codes en
+niveaus hieronder blijven bestaan. Zet je `OPEN_TO_ALL` op `false`, dan werkt het weer zo:
+
 Zonder code krijg je de **sneak preview**: op de codepagina staat "Geen code? Begin met de eerste
 lessen". Voor de volledige versie krijg je een code van een docent, coach of werkgever, of via
 hoi@vloertaal.nl. Die vul je in op de codepagina, of later bij Instellingen of bij een onderwerp op
