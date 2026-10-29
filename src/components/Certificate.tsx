@@ -1,6 +1,6 @@
 import { dutchUi } from '../lib/track';
 import { Fragment, useEffect, useId, useRef, useState } from 'react';
-import { ui, said } from '../i18n';
+import { langTag, ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import type { SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
@@ -354,7 +354,7 @@ export function CertificatesCard({ progress, lang, onOpen }: {
               <button type="button" className="cert-row" onClick={() => onOpen(unit.id)}>
                 <span className="cert-row-text">
                   <span className="cert-row-nl" lang="nl">{unit.titleNl}</span>
-                  {lang?.gloss[unit.id] && <span className="cert-row-help" lang={lang.code} dir={lang.dir}>{lang.gloss[unit.id]}</span>}
+                  {lang?.gloss[unit.id] && <span className="cert-row-help" lang={langTag(lang.code)} dir={lang.dir}>{lang.gloss[unit.id]}</span>}
                   <span className="cert-row-date" lang="nl"><bdi dir="ltr">{certDate(day)}</bdi></span>
                 </span>
                 <ChevronIcon size={22} />

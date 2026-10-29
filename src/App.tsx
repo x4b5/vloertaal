@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { findLesson, playLesson } from './content/curriculum';
-import { ensureLanguage, getHelpLanguage, isLanguageLoaded } from './i18n';
+import { ensureLanguage, getHelpLanguage, isLanguageLoaded, langTag } from './i18n';
 import { Splash } from './components/Splash';
 import { loadPictures, usePicturesLoaded } from './pictures';
 import type { UiCode } from './i18n/types';
@@ -437,7 +437,7 @@ export default function App() {
   // The page's language is the help language (Dutch without one). The direction is set where the
   // layout is mirrored (the lesson player and the path), so Dutch never inherits right-to-left.
   useEffect(() => {
-    document.documentElement.lang = lang?.code ?? 'nl';
+    document.documentElement.lang = lang ? langTag(lang.code) : 'nl';
     document.documentElement.dir = 'ltr';
   }, [lang]);
 

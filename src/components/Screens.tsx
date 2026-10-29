@@ -10,7 +10,7 @@ import { regionTips } from '../content/regio';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
 import { Flag } from './Flag';
-import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, NL_MORE, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
+import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, NL_MORE, ui, uiCount, withoutN, type Bilingual, said, saidLang, langTag } from '../i18n';
 import type { HelpLanguage, LangCode, UiCode, UiKey } from '../i18n/types';
 import { HELP_ROWS } from '../content/regels/help';
 import { dutchUi, rulesTrackOn } from '../lib/track';
@@ -192,7 +192,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
         <p className="tagline onb-tagline"><Bi text={ui('appTagline', g)} /></p>
       </div>
       <h2 className="lang-guess-q">
-        <span className="lang-guess-name" lang={g.code} dir={g.dir}>{g.nativeName}{q}</span>
+        <span className="lang-guess-name" lang={langTag(g.code)} dir={g.dir}>{g.nativeName}{q}</span>
       </h2>
       <ChoiceCards
         label={said(ui('chooseLanguage', g))}
@@ -239,7 +239,7 @@ export function TopBar({ streak, words, lang, done = false, quiet = false, greet
       </h1>
       {greeting}
       {quiet && (
-        <span className="sound-off-mark" role="img" aria-label={`${said(ui('withoutSound', lang))}${lang?.ui.withoutSound ? ` · ${ui('withoutSound', lang).help}` : ''}`} title={ui('withoutSound', lang).help ?? said(ui('withoutSound', lang))}>
+        <span className="sound-off-mark" role="img" aria-label={said(ui('withoutSound', lang))} lang={saidLang(ui('withoutSound', lang))} title={ui('withoutSound', lang).help ?? said(ui('withoutSound', lang))}>
           <SpeakerOffIcon size={18} />
         </span>
       )}
@@ -459,7 +459,7 @@ function AboutBody({ text }: { text: Bilingual }) {
   const rtl = text.lang.dir === 'rtl';
   return (
     <span className="bi bi-swap" dir={rtl ? 'rtl' : undefined}>
-      <span className="bi-en" lang={text.lang.code} dir={text.lang.dir}>{withMailLink(text.help, rtl ? isolateLatin : undefined)}</span>
+      <span className="bi-en" lang={langTag(text.lang.code)} dir={text.lang.dir}>{withMailLink(text.help, rtl ? isolateLatin : undefined)}</span>
       <span className="bi-sep" aria-hidden>·</span>
       <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{text.en}</span>
     </span>

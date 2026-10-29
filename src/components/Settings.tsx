@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { NOT_SURE, sectors, type SectorChoice } from '../content/sectors';
 import { REGIONS, regionMetaOf, regionsOn, type RegionChoice } from '../content/regio';
-import { ensureLanguage, hasGender, isLanguageLoaded, said, saidLang, ui, type Bilingual } from '../i18n';
+import { ensureLanguage, hasGender, isLanguageLoaded, langTag, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
 import { dutchUi } from '../lib/track';
 import { NlPair } from './NlPair';
@@ -103,7 +103,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
 /** A short value in the help language only (English when there is none). */
 function Value({ text }: { text: Bilingual }) {
   return text.help && text.lang
-    ? <span className="set-row-value" lang={text.lang.code} dir={text.lang.dir}>{text.help}</span>
+    ? <span className="set-row-value" lang={langTag(text.lang.code)} dir={text.lang.dir}>{text.help}</span>
     : <span className="set-row-value" lang="en">{text.en}</span>;
 }
 
@@ -241,7 +241,7 @@ export function Settings({
   /** The current value shown on a row. */
   const value = (p: SettingsPage): ReactNode => {
     switch (p) {
-      case 'language': return lang ? <span className="set-row-value" lang={lang.code} dir={lang.dir}>{lang.nativeName}</span> : <span className="set-row-value" lang="en">English</span>;
+      case 'language': return lang ? <span className="set-row-value" lang={langTag(lang.code)} dir={lang.dir}>{lang.nativeName}</span> : <span className="set-row-value" lang="en">English</span>;
       case 'gender': return progress.gender ? <Value text={say(progress.gender === 'f' ? 'genderWoman' : progress.gender === 'm' ? 'genderMan' : 'genderNone')} /> : null;
       case 'sector': {
         const s = sectors.find((x) => x.id === progress.sector);

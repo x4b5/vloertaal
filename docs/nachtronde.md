@@ -77,6 +77,9 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | Een oude les opnieuw oefenen (via "Ander onderwerp") trok de home weg van het onderwerp waar je mee bezig was | wie herhaalt | het onderwerp blijft staan |
 | "Alle onderwerpen": na Terug van een onderwerp weer bovenaan de lange lijst | wie andere sectoren bekijkt | terug op dezelfde plek |
 | Dubbeltik op "Verder" na een les kon twee schermen teruggaan (of de app uit) | iedereen met haast | de tweede tik doet niets |
+| Het "zonder geluid"-icoon had een naam die de vertaling twee keer zei | schermlezer | één keer |
+| Dari stond als `lang="prs"`, een code die telefoonstemmen niet kennen | Dari, schermlezer | `fa-AF`, zoals al voor de datums |
+| Alleen-Engels: de Engelse tekst stond als Nederlands gemarkeerd (Nederlandse stem leest Engels) | alleen-Engels, schermlezer | `lang="en"` |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
@@ -168,5 +171,10 @@ slagen alle 1179 tests en de build. In de browser toont `/?taal=pl` "Polski?", i
     huidige onderwerp, terwijl Verder teruggaat naar het afgeronde onderwerp; en het "net
     gedaan"-sprongetje op de home kan later bij een ander onderwerp komen. Klein; de juiste
     tekst hangt af van wat je daar wilt laten zien.
-14. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+14. **Perzisch en Dari: de datum "laatst bijgewerkt"** staat in de Perzische kalender met
+    Perzische cijfers (۲۳ مهر ۱۴۰۵), naast "15 October 2026"; elders staan cijfers als 1, 2, 3.
+    Misschien bewust; graag even kijken. En: Nederlandse woorden in een schermlezerlabel
+    (bijvoorbeeld "Aanbevolen · …") worden met de stem van de hulptaal gelezen; dat vraagt een
+    andere opbouw van die labels.
+15. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
    vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.
