@@ -234,45 +234,59 @@ export async function unitFiles(unit: Unit, voices: VoiceRef[]): Promise<{ shell
   return { shell: shellUrls(), clips: clipPaths(unitTexts(unit), voices, clipUrl).map(abs) };
 }
 
-/**
- * About how much the unit's sound takes (the number shown before and after saving is the sound;
- * the app files are shared by all saved units and kept by the browser anyway).
- */
-export async function estimateBytes(unit: Unit, voices: VoiceRef[]): Promise<number> {
-  const { clips } = await unitFiles(unit, voices);
-  return clips.length * CLIP_BYTES;
-}
-
 const isQuota = (e: unknown) => {
   const name = (e as { name?: string })?.name ?? '';
   return name === 'QuotaExceededError' || name === 'NS_ERROR_DOM_QUOTA_REACHED' || /quota/i.test(String((e as Error)?.message ?? ''));
 };
 
-/** Fetches each URL and puts it in the cache, a few at a time; returns the bytes stored. */
-async function fill(cache: Cache, urls: string[], progress: (n: number) => void, have: Set<string>): Promise<number> {
+/** How long one file may take before a save counts as failed (a link that connects but stalls). */
+const FILE_MS = 60_000;
+
+/** A signal that aborts after `ms` (AbortSignal.timeout is missing before iOS 16). */
+function timeoutSignal(ms: number): AbortSignal {
+  if (typeof AbortSignal.timeout === 'function') return AbortSignal.timeout(ms);
+  const c = new AbortController();
+  setTimeout(() => c.abort(), ms);
+  return c.signal;
+}
+
+/**
+ * Fetches each URL and puts it in the cache, a few at a time; returns the bytes stored. One file
+ * that fails stops the others, and the error comes only once every worker has stopped: no file
+ * lands (or repaints the progress) after the caller's clean-up.
+ */
+export async function fill(cache: Cache, urls: string[], progress: (n: number) => void, have: Set<string>): Promise<number> {
   let bytes = 0;
   let done = 0;
   let next = 0;
-  const worker = async () => {
-    while (next < urls.length) {
-      const url = urls[next++];
-      if (have.has(url)) {
-        const hit = await cache.match(url);
-        if (hit) {
-          bytes += (await hit.blob()).size;
-          progress(++done);
-          continue;
-        }
+  let failed: { error: unknown } | undefined;
+  const one = async (url: string) => {
+    if (have.has(url)) {
+      const hit = await cache.match(url);
+      if (hit) {
+        bytes += (await hit.blob()).size;
+        return;
       }
-      const res = await fetch(url, { cache: 'no-cache', headers: { 'x-vloertaal-save': '1' } });
-      if (!res.ok || res.status !== 200) throw new Error(`${res.status} ${url}`);
-      const blob = await res.clone().blob();
-      await cache.put(url, res);
-      bytes += blob.size;
-      progress(++done);
+    }
+    const res = await fetch(url, { cache: 'no-cache', headers: { 'x-vloertaal-save': '1' }, signal: timeoutSignal(FILE_MS) });
+    if (!res.ok || res.status !== 200) throw new Error(`${res.status} ${url}`);
+    const blob = await res.clone().blob();
+    await cache.put(url, res);
+    bytes += blob.size;
+  };
+  const worker = async () => {
+    while (!failed && next < urls.length) {
+      try {
+        await one(urls[next++]);
+      } catch (error) {
+        failed ??= { error };
+        return;
+      }
+      if (!failed) progress(++done);
     }
   };
   await Promise.all(Array.from({ length: 6 }, worker));
+  if (failed) throw failed.error;
   return bytes;
 }
 
@@ -320,8 +334,9 @@ export async function saveUnitOffline(unit: Unit, voices: VoiceRef[]): Promise<v
     after.shell = shell;
     writeSaved(after);
     jobs.delete(unit.id);
-    // App files of an older version, still listed with the units saved before.
-    if (cache) await prune(cache, after, before.shell);
+    // App files of an older version, still listed with the units saved before; and this unit's
+    // clips of before (another voice) that no saved unit uses any more.
+    if (cache) await prune(cache, after, [...before.shell, ...(before.units[unit.id]?.urls ?? [])]);
   } catch (e) {
     // Undo what this attempt added (files other saved units use stay).
     if (cache) await prune(cache, loadSaved(), [...shell, ...clips].filter((u) => !had.has(u))).catch(() => {});
@@ -443,19 +458,23 @@ const AUTO_KEY = 'vloertaal:offline-auto';
  * Whether lessons are kept on this phone automatically. Never chosen yet: on when a unit was
  * saved by hand before (the old per-unit button), else off (saving costs mobile data).
  */
+/** The switch while storage is blocked: it holds for this visit. */
+let autoMemory: boolean | null = null;
+
 export function offlineAuto(): boolean {
   try {
     const v = localStorage.getItem(AUTO_KEY);
     if (v === '1') return true;
     if (v === '0') return false;
   } catch {
-    return false;
+    return autoMemory ?? false;
   }
   return savedUnitIds().length > 0;
 }
 
 /** Turns the setting on or off (off removes every saved topic from this phone). */
 export function setOfflineAuto(on: boolean): void {
+  autoMemory = on;
   try {
     localStorage.setItem(AUTO_KEY, on ? '1' : '0');
   } catch {

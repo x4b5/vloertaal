@@ -17,7 +17,7 @@ describe('start screen: the four colleagues above the name', () => {
 
   it('has the same four in the static splash of index.html (shown before any script runs)', () => {
     const page = readFileSync('index.html', 'utf8');
-    const root = page.slice(page.indexOf('<div id="root">'), page.indexOf('<script type="module"'));
+    const root = page.slice(page.indexOf('<main id="root">'), page.indexOf('<script type="module"'));
     expect(count(root, 'class="boot-cast-one"')).toBe(4);
     expect(root.slice(root.indexOf('boot-label'))).not.toContain('<svg');
   });

@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { findLesson } from '../src/content/curriculum';
-import { buildLesson } from '../src/lib/exercises';
+import { buildLesson, forRetry } from '../src/lib/exercises';
 import {
   RESUME_MAX_AGE, clearSave, fresh, loadSave, loadSaves, makeSave, parseSave, restoreSave, resumeCount, writeSave,
   type LessonSave,
@@ -108,5 +108,32 @@ describe('resume an interrupted lesson', () => {
     expect(loadSaves(NOW)).toEqual({});
     store.set('vloertaal:resume', JSON.stringify({ [lesson.id]: { ...save, lessonId: 'l.other' } }));
     expect(loadSaves(NOW)).toEqual({});
+  });
+});
+
+describe('resume after a mistake, as the player queues it', () => {
+  // The player never queues the built exercise itself: it queues a new form (forRetry), made
+  // from the exercise's place in the queue. Before, the save then stopped for the rest of the lesson.
+  it('keeps saving after the first mistake, and brings the same new forms back', () => {
+    const seed = 7;
+    const initial = buildLesson(lesson, { review: false, seed });
+    const queue = [...initial];
+    const from: number[] = [];
+    for (const i of [2, 4]) { from.push(i); queue.push(forRetry(initial[i], lesson, seed + queue.length)); }
+    const save = makeSave({
+      lessonId: lesson.id, review: false, quiet: false, seed, initial, queue, index: 6, from,
+      right: 3, total: 5, words: {}, run: 0, misses: 1, now: NOW,
+    });
+    expect(save).not.toBeNull();
+    expect(save!.repeats).toEqual([2, 4]);
+    const restored = restoreSave(save!, buildLesson(lesson, { review: false, seed }), (e, at) => forRetry(e, lesson, seed + at))!;
+    expect(restored.queue).toEqual(queue);
+    expect(restored.index).toBe(6);
+  });
+
+  it('saves nothing for an exercise given from outside (no place in the built list)', () => {
+    const initial = buildLesson(lesson, { review: false, seed: 1 });
+    const queue = [...initial, forRetry(initial[0], lesson, 99)];
+    expect(makeSave({ lessonId: lesson.id, review: false, quiet: false, seed: 1, initial, queue, index: 3, from: [-1], right: 0, total: 0, words: {}, run: 0, misses: 0, now: NOW })).toBeNull();
   });
 });

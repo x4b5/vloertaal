@@ -99,11 +99,6 @@ export function themeOf(unitId: string): Theme | undefined {
   return id ? themeById.get(id) : undefined;
 }
 
-/** A theme by id. */
-export function findTheme(id: string): Theme | undefined {
-  return themeById.get(id as ThemeId);
-}
-
 /** The unit ids of a theme in one track. */
 export function themeUnitIds(theme: ThemeId, track: Track): string[] {
   return THEME_UNITS[theme][track];

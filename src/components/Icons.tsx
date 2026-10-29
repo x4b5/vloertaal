@@ -128,17 +128,6 @@ export const AutoThemeIcon = (p: IconProps) => (
   </Svg>
 );
 
-/** Bullseye with an arrow in the middle: the accuracy card. Colour follows the card. */
-export const BullseyeIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <circle cx="11" cy="13" r="9" fill="currentColor" />
-    <circle cx="11" cy="13" r="6.2" fill="var(--bg)" />
-    <circle cx="11" cy="13" r="3.6" fill="currentColor" />
-    <path d="M11 13l9-9" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    <path d="M17.5 2.5l.6 3.4 3.4.6" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-  </Svg>
-);
-
 /** Calendar page with a tick: the day streak in the top bar (orange accent). */
 export const CalendarIcon = (p: IconProps) => (
   <Svg {...p}>
@@ -209,23 +198,6 @@ export const GearIcon = (p: IconProps) => (
   <Svg {...p}>
     <path d="M10.30 4.90 L10.72 2.49 L13.28 2.49 L13.70 4.90 L15.81 5.78 L17.82 4.37 L19.63 6.18 L18.22 8.19 L19.10 10.30 L21.51 10.72 L21.51 13.28 L19.10 13.70 L18.22 15.81 L19.63 17.82 L17.82 19.63 L15.81 18.22 L13.70 19.10 L13.28 21.51 L10.72 21.51 L10.30 19.10 L8.19 18.22 L6.18 19.63 L4.37 17.82 L5.78 15.81 L4.90 13.70 L2.49 13.28 L2.49 10.72 L4.90 10.30 L5.78 8.19 L4.37 6.18 L6.18 4.37 L8.19 5.78Z" {...stroke} strokeWidth={2.1} />
     <circle cx="12" cy="12" r="3.2" {...stroke} strokeWidth={2.2} />
-  </Svg>
-);
-
-/** Eye: show the password. */
-export const EyeIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" {...stroke} strokeWidth={2.2} />
-    <circle cx="12" cy="12" r="3" fill="currentColor" />
-  </Svg>
-);
-
-/** Eye struck through: hide the password. */
-export const EyeOffIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" {...stroke} strokeWidth={2.2} />
-    <circle cx="12" cy="12" r="3" fill="currentColor" />
-    <path d="M4 4l16 16" {...stroke} strokeWidth={2.4} />
   </Svg>
 );
 
@@ -405,14 +377,6 @@ export const SparkleIcon = (p: IconProps) => (
   <Svg {...p}>
     <path d="M10 2.5l1.9 5.6 5.6 1.9-5.6 1.9L10 17.5l-1.9-5.6L2.5 10l5.6-1.9z" fill="currentColor" />
     <path d="M18.5 14l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z" fill="currentColor" />
-  </Svg>
-);
-
-/** Delete the last letter: a key with a cross, pointing back along the (left-to-right) Dutch word. */
-export const BackspaceIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <path d="M8.6 5.5H20a1.8 1.8 0 0 1 1.8 1.8v9.4a1.8 1.8 0 0 1-1.8 1.8H8.6L2.6 12z" {...stroke} strokeWidth={2.2} />
-    <path d="M11.6 9.4l5.2 5.2M16.8 9.4l-5.2 5.2" {...stroke} strokeWidth={2.2} />
   </Svg>
 );
 

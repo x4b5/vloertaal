@@ -45,7 +45,8 @@ export function onboardingStep(p: OnbProgress, access: Access | null, gateAgain 
   if (!p.onboarded) return 'language';
   // In the first run (no sector yet) the gender question comes before the password.
   if (p.sector === undefined && shouldAskGender(p)) return 'gender';
-  if (!access || gateAgain) return 'gate';
+  // Open to all (src/lib/access.ts): no password page, also not on the way back from the sector.
+  if (!access || (gateAgain && !OPEN_TO_ALL)) return 'gate';
   if (p.sector === undefined) return 'sector';
   return 'done';
 }

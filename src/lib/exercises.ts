@@ -180,6 +180,15 @@ function pairPartner(word: Word, lesson: Lesson, avoid?: ReadonlySet<string>): W
   return lesson.words.find((w) => w.id === word.pair) ?? allWords.find((w) => w.id === word.pair);
 }
 
+/**
+ * What a typed answer must not be taken for (lib/answers.ts checkTyped): the other words on offer
+ * and the other word of its sound pair, which may be only a letter away ("man" for "maan").
+ */
+export function typedLookalikes(ex: { word: Word; options?: readonly Word[] }): string[] {
+  const partner = ex.word.pair ? allWords.find((w) => w.id === ex.word.pair) : undefined;
+  return [...(ex.options ?? []), ...(partner ? [partner] : [])].filter((w) => w.id !== ex.word.id && w.nl !== ex.word.nl).map((w) => w.nl);
+}
+
 /** The words of the lesson's unit: the fallback pool for picture choices (related words). */
 function unitWords(lesson: Lesson): Word[] {
   return units.find((u) => u.lessons.some((l) => l.id === lesson.id))?.lessons.flatMap((l) => l.words) ?? [];
@@ -577,12 +586,14 @@ function readableDutch(word: Word, lesson: Lesson, rng: () => number, nonLatin: 
 
 /**
  * A word that is fair to type from hearing: at most TYPE_MAX_LETTERS letters (the article not
- * counted) and no capitals ("BSN", "DigiD", a name). Other words are heard and picked instead.
+ * counted), no capitals ("BSN", "DigiD", a name), and no hyphen or digit ("e-sigaret"): the
+ * letter tiles (lib/letters.ts) spell letters only, so they would teach "esigaret". Other words
+ * are heard and picked instead.
  */
 export const TYPE_MAX_LETTERS = 12;
 export function typable(word: Word): boolean {
   const bare = word.nl.trim().replace(/^(de|het|een)\s+/i, '');
-  return !/\p{Lu}/u.test(word.nl) && bare.replace(/[^\p{L}]/gu, '').length <= TYPE_MAX_LETTERS;
+  return !/\p{Lu}/u.test(word.nl) && !/[-\d]/.test(word.nl) && bare.replace(/[^\p{L}]/gu, '').length <= TYPE_MAX_LETTERS;
 }
 
 function reviewExercise(kind: ReviewKind, word: Word, lesson: Lesson, rng: () => number, nonLatin = false, quiet = false): Exercise {

@@ -241,14 +241,12 @@ h2 { font-size: 1.25rem; }
 /* After Check, Continue takes the outcome's colour: green, brick red, or ink for a situation.
    No colour transition here (yellow → green would pass through olive): the class swaps at
    120 ms and the button gives one small press (.98 → 1). */
-.btn-right, .btn-wrong, .btn-other { color: #fff; }
+.btn-right, .btn-wrong { color: #fff; }
 .btn-right { background: var(--go-right); border-color: var(--go-right); }
 .btn-wrong { background: var(--go-wrong); border-color: var(--go-wrong); }
-.btn-other { background: var(--solid); color: var(--on-solid); border-color: var(--solid); }
 .btn-right .btn-block, .btn-wrong .btn-block { background: #fff; }
 .btn-right .btn-block { color: var(--go-right); }
 .btn-wrong .btn-block { color: var(--go-wrong); }
-.btn-other .btn-block { background: var(--yellow); color: #1e2226; }
 .btn-go { animation: btn-in 0.2s var(--ease-out) both; }
 .btn-go.btn-swap { transition: transform 0.06s; animation: btn-press 0.12s var(--ease-out) both; }
 @keyframes btn-in { from { opacity: 0.25; } }
@@ -355,47 +353,17 @@ h2 { font-size: 1.25rem; }
 .lang-grid-compact .gender-btn:not(.gender-none) { padding-top: 12px; }
 .gender-btn .lang-native { overflow-wrap: anywhere; }
 
-/* Path: the other sectors' units, folded away at the bottom (still playable when opened). */
-.other-sectors { margin-top: 44px; }
-.other-toggle {
-  width: 100%; display: flex; align-items: center; gap: 12px; padding: 12px 14px; text-align: start;
-  color: var(--ink); background: var(--card); border: 2px dashed var(--line); border-radius: var(--radius);
-}
-.other-toggle:hover { border-color: var(--ink-3); }
-.other-icons { flex: none; display: grid; grid-template-columns: repeat(3, 20px); gap: 4px; color: var(--ink-2); }
-.other-text { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.other-nl { font-weight: 650; font-size: 1.1rem; }
-.other-text .bi-en { font-size: 0.92rem; color: var(--ink-2); }
-.other-chev { flex: none; color: var(--ink-3); transition: transform 0.2s ease; }
-.other-chev.open { transform: rotate(180deg); }
-.other-hint { margin: 12px 0 0; }
-.other-units > .unit:first-of-type { margin-top: 20px; }
-.other-units > .unit + .unit { margin-top: 44px; }
-.unit { scroll-margin-top: 88px; }
-/* Opened from a coach link: the unit's sign lights up for a moment. */
-.unit-marked .unit-head { border-radius: var(--radius); animation: unit-mark 4s ease-out both; }
-@keyframes unit-mark {
-  0%, 60% { background: color-mix(in srgb, var(--yellow) 28%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, var(--yellow) 28%, transparent); }
-  100% { background: transparent; box-shadow: 0 0 0 6px transparent; }
-}
-@media (prefers-reduced-motion: reduce) { .unit-marked .unit-head { animation: none; background: color-mix(in srgb, var(--yellow) 22%, transparent); } }
-
 /* Top bar: logo and two quiet stats (no boxes). */
 .topbar {
   position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 16px;
   padding: calc(10px + env(safe-area-inset-top)) 16px 10px; background: var(--bg);
 }
-.brand { display: inline-flex; align-items: center; gap: 8px; margin-inline-end: auto; font-weight: 700; color: var(--ink); font-size: 1.25rem; }
+.brand { display: inline-flex; align-items: center; gap: 8px; margin: 0; margin-inline-end: auto; font-weight: 700; color: var(--ink); font-size: 1.25rem; line-height: inherit; }
 .topbar-wordmark { display: none; }
 .stat { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--ink-2); white-space: nowrap; }
 .stat .icon { color: var(--ink-3); }
 .stat-num { font-size: 1.05rem; font-weight: 650; color: var(--ink); font-variant-numeric: tabular-nums; }
 .stat-unit { font-size: 0.85rem; }
-.lang-chip {
-  display: grid; place-items: center; min-width: 44px; min-height: 44px; margin-inline-end: -6px;
-  background: none; border: 0; border-radius: 10px;
-}
-.lang-chip:hover { background: var(--concrete-2); }
 @media (max-width: 370px) { .stat-unit { display: none; } .topbar { gap: 12px; } }
 @media (min-width: 560px) { .topbar-wordmark { display: inline; } }
 
@@ -412,32 +380,11 @@ h2 { font-size: 1.25rem; }
 .entry-emoji { font-family: 'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Emoji', sans-serif; font-size: 1.4rem; line-height: 1; }
 .phrase-banner > span:first-child { font-size: 1.6rem; }
 
-/* Units: a stencil number and a plain heading on the floor; a calm gap between units. */
-.unit { margin-top: 12px; }
-.unit + .unit { margin-top: 44px; }
-.unit { scroll-margin-top: 88px; }
-/* Opened from a coach link: the unit's sign lights up for a moment. */
-.unit-marked .unit-head { border-radius: var(--radius); animation: unit-mark 4s ease-out both; }
+/* Opened from a coach link: the topic's block lights up for a moment (.rb-marked). */
 @keyframes unit-mark {
   0%, 60% { background: color-mix(in srgb, var(--yellow) 28%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, var(--yellow) 28%, transparent); }
   100% { background: transparent; box-shadow: 0 0 0 6px transparent; }
 }
-@media (prefers-reduced-motion: reduce) { .unit-marked .unit-head { animation: none; background: color-mix(in srgb, var(--yellow) 22%, transparent); } }
-.unit-head { display: flex; align-items: center; gap: 14px; padding: 4px 0; }
-.unit-num {
-  flex: none; width: 56px; text-align: center; color: var(--ink);
-  font-family: var(--stencil); font-weight: 800; font-size: 2.5rem; line-height: 1;
-}
-.unit-titles { flex: 1; display: flex; flex-direction: column; min-width: 0; }
-.unit-head h2 { margin: 0; font-size: 1.3rem; font-weight: 650; line-height: 1.2; }
-.unit-nl { color: var(--muted); font-size: 0.95rem; }
-.unit-head .bi-help { --help-size: 0.95rem; margin-top: 1px; }
-.unit-lock { flex: none; color: var(--ink-3); }
-/* The topic's picture in a calm round tile between the number and the title. */
-.unit-icon { flex: none; width: 68px; height: 68px; padding: 4px; border-radius: 50%; background: var(--card); border: 2px solid var(--line); }
-.unit-locked .unit-icon { opacity: 0.75; }
-.unit-locked .unit-num { color: var(--ink-3); opacity: 0.7; }
-.unit-locked .unit-head h2 { color: var(--ink-2); font-weight: 600; }
 
 /* The aisle: one thin line down the left, a marker per lesson. */
 .bays {
@@ -617,19 +564,15 @@ h2 { font-size: 1.25rem; }
 .ex-leave { animation: ex-out 0.14s var(--ease-in) both; }
 @keyframes ex-out { to { opacity: 0; transform: translateX(calc(var(--fwd) * -8px)); } }
 .ex-enter > .ex-tag,
-.ex-enter .exercise > *,
-.ex-enter :is(.choices, .match-grid, .tile-bank) > * {
+.ex-enter .exercise > * {
   animation: ex-in 0.2s var(--ease-out) var(--in, 0.14s) both;
 }
 .ex-enter > .ex-tag, .ex-enter .exercise > :first-child { --in: 0.12s; }
-.ex-enter :is(.choices, .match-grid, .tile-bank) { animation: none; }
-.ex-enter :is(.choices, .match-grid, .tile-bank) > :nth-child(1) { --in: 0.14s; }
-.ex-enter :is(.choices, .match-grid, .tile-bank) > :nth-child(2) { --in: 0.15s; }
-.ex-enter :is(.choices, .match-grid, .tile-bank) > :nth-child(3) { --in: 0.16s; }
-.ex-enter :is(.choices, .match-grid, .tile-bank) > :nth-child(n + 4) { --in: 0.17s; }
 @keyframes ex-in { from { opacity: 0; transform: translateX(calc(var(--fwd) * 8px)); } }
 /* The question takes focus on a new exercise (for screen readers); it is not a control, so no ring. */
 .prompt:focus { outline: none; }
+/* A screen's heading gets the focus after a screen change (App.tsx): no ring around a heading. */
+h1[tabindex="-1"]:focus { outline: none; }
 
 /* Kraft tag above the question: what kind of exercise, and where you are in the lesson. */
 .ex-tag { display: flex; align-items: center; gap: 12px; margin: 0 0 6px; }
@@ -644,7 +587,6 @@ h2 { font-size: 1.25rem; }
 .ex-tag-note::before { content: '·'; color: var(--ink-3); }
 /* Phones: the translation of the tag gets its own line (no dangling dot when it wraps). */
 @media (max-width: 759px) { .ex-tag-note { flex-basis: 100%; } .ex-tag-note::before { content: none; } }
-.ex-count { color: var(--muted); font-weight: 400; font-size: 0.9rem; font-variant-numeric: tabular-nums; word-spacing: 0.1em; }
 
 /* Action bar, pinned to the bottom of the lesson; the feedback label sits on top of it. */
 .player-foot {
@@ -671,7 +613,6 @@ h2 { font-size: 1.25rem; }
 @keyframes label-in { from { transform: translateY(8px); opacity: 0; } }
 .feedback-right { border-color: var(--right-ink); background: var(--green-bg); }
 .feedback-wrong { border-color: var(--wrong-ink); background: var(--red-bg); }
-.feedback-other { border-color: var(--kraft-dark); background: color-mix(in srgb, var(--kraft-light) 60%, var(--card)); }
 .feedback-tape {
   position: absolute; top: -10px; left: 50%; width: 92px; height: 18px; margin-left: -46px;
   background: var(--tape); rotate: 1.5deg;
@@ -683,7 +624,6 @@ h2 { font-size: 1.25rem; }
   border-radius: 50%; color: #fff; background: var(--go-right);
 }
 .feedback-wrong .feedback-icon { background: var(--go-wrong); }
-.feedback-other .feedback-icon { background: var(--kraft-dark); color: var(--card); }
 /* A long explanation (situations) scrolls inside the label instead of covering the question. */
 .feedback-text { flex: 1; min-width: 0; }
 /* Heading: the help language first and large; under it the Dutch words and the English. */
@@ -745,7 +685,6 @@ h2 { font-size: 1.25rem; }
 .card { border: 2px solid var(--line); border-radius: var(--radius); padding: 24px; text-align: center; background: var(--card); }
 .intro-card { display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .emoji-xl { font-size: 96px; line-height: 1; }
-.emoji-lg { font-size: 64px; line-height: 1; }
 .intro-nl { display: flex; align-items: center; gap: 10px; font-size: 2rem; font-weight: 700; flex-wrap: wrap; justify-content: center; }
 .intro-nl > span { min-width: 0; max-width: 100%; overflow-wrap: anywhere; text-align: center; }
 .intro-nl.len-m { font-size: clamp(1.6rem, 7.6vw, 2rem); }
@@ -841,7 +780,6 @@ h2 { font-size: 1.25rem; }
 .choice.faded { border-color: color-mix(in srgb, var(--line) 70%, transparent); background: transparent; color: var(--muted); }
 .choice.faded .choice-num { background: transparent; border: 2px dashed var(--line); color: var(--muted); }
 .choice.faded :is(.choice-num, .pic-emoji, .choice-pic) { opacity: 0.45; }
-.choice-emoji { font-size: 1.8rem; }
 .choices-rows .choice { min-height: 68px; padding: 8px 16px 8px 16px; }
 .choice > .bi { flex: 1 1 auto; }
 .choices-rows .choice-label { font-size: 1.15rem; line-height: 1.25; min-width: 0; }
@@ -920,27 +858,16 @@ h2 { font-size: 1.25rem; }
   .choices-pics.checked :is(.right, .wrong) > .choice-num { display: grid; width: 30px; height: 30px; }
   .choices-pics.checked .faded .choice-nl { grid-column: 1 / -1; }
 }
-
-.match-grid {
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-auto-rows: 1fr; gap: 10px;
-}
 .match { justify-content: center; text-align: center; min-height: 72px; min-width: 0; padding: 8px 10px; gap: 8px; }
-.match-nl .choice-nl { font-size: 1.1rem; line-height: 1.2; }
-.match-nl .choice-nl.len-m { font-size: 1rem; }
-.match-nl .choice-nl.len-l { font-size: 0.95rem; }
 .match-en { flex-direction: column; gap: 2px; padding: 6px 8px; }
 .match-en .bi { align-items: center; min-width: 0; max-width: 100%; overflow-wrap: anywhere; hyphens: auto; line-height: 1.2; }
-.match .choice-emoji { flex: none; }
-.match .choice-emoji.icon, .match svg.choice-emoji { width: 36px; height: 36px; }
 .match .bi { font-size: 0.95rem; }
 /* Phones: four pairs above the footer at 360×640. The picture sits beside the meaning, and
    the help line keeps the 15 px minimum. */
 @media (max-width: 759px) {
-  .match-grid { gap: 8px; }
   .match { min-height: 60px; padding: 6px 8px; }
   .match-en { flex-direction: row; justify-content: flex-start; gap: 6px; text-align: start; padding-inline: 6px 8px; }
   .match-en .bi { align-items: stretch; flex: 1 1 auto; }
-  .match .choice-emoji.icon, .match svg.choice-emoji { width: 28px; height: 28px; }
   .match .bi { font-size: 0.88rem; line-height: 1.15; gap: 1px; }
 }
 .match { transition: background-color 0.12s, border-color 0.12s, opacity 0.24s var(--ease-out), transform 0.12s var(--ease-out); }
@@ -986,12 +913,6 @@ h2 { font-size: 1.25rem; }
 /* A sentence that needs two rows gets both from the start, so the tile bank never jumps. */
 .answer-line.answer-two { min-height: 130px; }
 .answer-line .stamp { top: 0; right: 0; margin-top: 0; width: 60px; height: 60px; }
-.answer-say {
-  position: absolute; top: 12px; inset-inline-end: 8px; display: grid; place-items: center;
-  width: 44px; height: 44px; border: 0; border-radius: 10px;
-  color: var(--blue); background: color-mix(in srgb, var(--blue) 14%, transparent);
-}
-.answer-say:active { transform: translateY(1px); filter: brightness(0.94); }
 .answer-line .stamp-word { font-size: 1.3rem; }
 .answer-line .stamp-wrong .stamp-word { font-size: 0.95rem; }
 .answer-line .stamp-sub { margin-top: 1px; }
@@ -1000,7 +921,6 @@ h2 { font-size: 1.25rem; }
   border-radius: 50%; color: #fff; background: var(--go-right);
   animation: stamp-in 0.16s var(--ease-out) 0.06s both;
 }
-.answer-mark.mark-wrong { background: var(--go-wrong); }
 /* The right sentence in the feedback label, as tiles; a word that was out of place or missing
    is underlined in red (thick, so it is not only a colour). */
 .pair-tiles { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 4px; }
@@ -1022,7 +942,6 @@ h2 { font-size: 1.25rem; }
 .type-input.type-right { border-color: var(--green); background: var(--green-bg); }
 .type-input.type-wrong { border-color: var(--red); background: var(--red-bg); }
 .answer-line .tile { border-color: var(--edge); }
-.tile-used { color: transparent; background: var(--track); border-style: dashed; }
 .type-input {
   width: 100%; padding: 16px; font-size: 1.3rem; font-weight: 600;
   border: 2px solid var(--ink-3); border-radius: var(--radius); background: var(--input-bg); color: var(--ink);
@@ -1100,10 +1019,6 @@ h2 { font-size: 1.25rem; }
   .choices-pics .choice { min-height: 250px; padding: 20px 16px 16px; }
   .choices-pics .pic-emoji { font-size: 96px; }
   /* Four pictures: a 2×2 grid keeps every word on its own line next to its number. */
-  .choices-pics.n4 { grid-template-columns: 1fr 1fr; gap: 14px; }
-  .choices-pics.n4 .choice { min-height: 170px; padding: 12px 16px 14px; }
-  .choices-pics.n4 .pic-emoji { font-size: 76px; }
-  .choices-pics.n4 .choice-nl.len-l { font-size: 1rem; }
   .player-foot { padding: 12px 40px 24px; margin-top: 8px; display: flex; align-items: center; }
   /* Same column as the exercise (player-body: 640 px minus its padding). */
   .foot-inner { max-width: 592px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
@@ -1187,9 +1102,7 @@ h2 { font-size: 1.25rem; }
     transition-delay: 0s !important;
   }
   .ex-enter > .ex-tag,
-  .ex-enter .exercise > *,
-  .ex-enter :is(.choices, .match-grid, .tile-bank) > * { animation: rm-fade 0.15s linear var(--in, 0.12s) both !important; }
-  .ex-enter :is(.choices, .match-grid, .tile-bank) { animation: none !important; }
+  .ex-enter .exercise > * { animation: rm-fade 0.15s linear var(--in, 0.12s) both !important; }
   .ex-leave { animation: rm-fade-out 0.12s linear both !important; }
   .choice .stamp, .answer-line .stamp, .answer-mark { animation: rm-fade 0.15s linear 0.06s both !important; }
   .feedback { animation: rm-fade 0.15s linear 0.12s both !important; }
@@ -1226,27 +1139,11 @@ h2 { font-size: 1.25rem; }
 .coach-fact-source { font-size: 0.85rem; color: var(--muted); }
 
 /* Settings: theme and voice */
-.segmented { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0 20px; }
-.segmented button {
-  display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 72px; padding: 10px 6px;
-  background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
-  font-weight: 500; font-size: 0.95rem;
-}
-.segmented button.picked { border-color: var(--edge); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); color: var(--pick-ink); }
-.segmented .bi { align-items: center; }
 .voices { list-style: none; padding: 0; margin: 8px 0 20px; display: flex; flex-direction: column; gap: 10px; }
-.voice-row {
-  display: flex; align-items: center; gap: 12px; padding: 10px 12px;
-  border: 2px solid var(--line); border-radius: var(--radius); background: var(--card);
-}
-.voice-row.picked { border-color: var(--edge); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
-.voice-pick { flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: start; background: none; border: none; padding: 4px 0; min-height: 44px; justify-content: center; }
-.voice-name { font-weight: 600; }
-.voice-lang { font-size: 0.8rem; color: var(--muted); }
 
 /* Word pictures: Apple's own emoji on Apple devices, the self-hosted Noto set everywhere else. Not Noto
    first: it is COLRv1, which Safari loads but does not draw (empty squares on an iPhone, Oct 2026). */
-.emoji-xl, .emoji-lg, .pic-emoji, .choice-emoji, .confetti, .word-emoji {
+.emoji-xl, .pic-emoji, .confetti, .word-emoji {
   font-family: 'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Emoji', sans-serif;
 }
 .speaker-char .ch, .chat-char .ch { display: block; height: 1em; width: auto; }
@@ -1334,8 +1231,7 @@ h2 { font-size: 1.25rem; }
 @keyframes cel-title { from { transform: translateY(8px); opacity: 0; } }
 .cel-scene { position: relative; width: min(320px, 84vw); aspect-ratio: 320 / 260; margin: 4px 0 6px; }
 .cel-svg, .streak-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.fig, .fig-arm, .fig-leg, .fig-hand, .fig-head,
-.lv-bram, .lv-jada, .lv-idle, .lv-shadow, .sk-bram, .sk-jump, .sk-idle, .sk-flame { transform-box: view-box; }
+.fig, .fig-arm, .fig-leg, .fig-hand, .fig-head, .lv-bram, .lv-jada, .lv-shadow, .sk-bram, .sk-jump, .sk-idle, .sk-flame { transform-box: view-box; }
 .cel-svg, .streak-svg { animation: calm-up 0.3s var(--ease-out) both; }
 /* Blink: the eyes close for a beat every ~3 s. */
 .cel-scene .ch-eyes, .streak-hero .ch-eyes { animation: cel-blink var(--blink, 2.8s) 0.9s infinite; }
@@ -1376,7 +1272,8 @@ h2 { font-size: 1.25rem; }
   font-family: inherit; font-size: max(0.32em, 0.68rem); font-weight: 650; letter-spacing: 0.06em; line-height: 1.2; text-transform: uppercase;
 }
 .brand .logo-mark, .hero-logo .logo-mark { flex: none; border-radius: 22%; }
-.hero-logo { display: inline-flex; align-items: center; gap: 12px; margin: 8px 0 0; }
+/* The logo and the name are one picture: the same way round in a right-to-left language. */
+.hero-logo { display: inline-flex; align-items: center; gap: 12px; margin: 8px 0 0; direction: ltr; }
 .hero-logo .wordmark { font-size: 2.6rem; }
 
 /* "Zo werkt het hier" tip card */
@@ -1390,8 +1287,6 @@ h2 { font-size: 1.25rem; }
 }
 .tip-badge-nl { font-weight: 650; font-size: 1.05rem; line-height: 1.1; }
 .tip-badge-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
-.tip-badge-en { font-size: 0.85rem; font-weight: 500; color: var(--muted); }
-.tip-badge-en .bi { gap: 0; }
 .tip-title { margin-top: 4px; }
 .tip-body { font-size: 1.1rem; line-height: 1.5; margin: 0 0 20px; }
 .tip-body .bi { gap: 8px; }
@@ -1436,9 +1331,6 @@ h2 { font-size: 1.25rem; }
   .tip-badge-emoji { width: 34px; height: 34px; font-size: 1.1rem; border-radius: 6px; }
   .tip-badge-nl { font-size: 0.98rem; }
   .tip-badge-text { gap: 1px; }
-  .tip-badge-en { flex-direction: row; flex-wrap: wrap; gap: 0 6px; font-size: 0.8rem; }
-  .tip-badge-en .bi-help { --help-size: 1em; }
-  .tip-badge-en .bi-sep { display: inline; }
   .tip-title { font-size: 1.35rem; line-height: 1.2; margin: 6px 0 8px; }
   .tip-title .bi-help { --help-size: 0.7em; }
   .tip-body { font-size: 1.0625rem; line-height: 1.42; margin: 0 0 16px; }
@@ -1504,12 +1396,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
   font: inherit; font-size: 0.9rem; font-weight: 600; text-align: start; cursor: pointer;
 }
 .about-tester[aria-pressed='true'] { border-style: solid; background: var(--tag-bg); color: var(--ink); }
-.about-link {
-  display: flex; align-items: center; justify-content: center; gap: 10px; margin: 32px auto 8px;
-  background: none; border: 0; color: var(--muted); font: inherit; font-weight: 700; cursor: pointer; padding: 10px 16px;
-}
-.about-link .bi { text-align: start; }
-.about-link:hover, .about-link:focus-visible { color: var(--ink-strong); text-decoration: underline; }
 .about-hero { display: flex; flex-direction: column; align-items: center; gap: 6px; margin: 12px 0 20px; text-align: center; }
 .about-hero .wordmark { font-size: 2.2rem; }
 .about-tag { margin: 0; color: var(--muted); font-weight: 600; }
@@ -1621,12 +1507,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
 /* Password gate: a calm card on the floor, one thin hazard stripe on top; the chosen
    language (tap to change) sits above it. */
 .gate { min-height: 100dvh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
-.gate-lang {
-  align-self: flex-end; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 10px 6px 8px;
-  background: none; border: 0; border-radius: 10px; color: var(--ink-2); font-weight: 500;
-}
-.gate-lang:hover { background: var(--concrete-2); color: var(--ink); }
-.gate-lang > .icon { transform: rotate(90deg); color: var(--ink-3); }
 .gate-sign {
   position: relative; width: 100%; max-width: 440px; overflow: hidden;
   padding: 30px 20px 22px; background: var(--card);
@@ -1636,7 +1516,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
   content: ''; position: absolute; inset: 0 0 auto; height: 6px;
   background: repeating-linear-gradient(-45deg, var(--yellow) 0 8px, #1e2226 8px 16px);
 }
-@media (min-width: 480px) { .gate-lang { align-self: auto; width: 100%; max-width: 440px; justify-content: flex-end; } }
 .gate-logo { display: flex; align-items: center; gap: 12px; }
 .gate-logo .wordmark { font-size: 2.2rem; }
 .gate-tag { margin: 6px 0 26px; color: var(--muted); font-size: 0.9rem; }
@@ -1654,11 +1533,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
   color: var(--ink); background: var(--input-bg); border: 2px solid var(--edge); border-radius: var(--radius);
 }
 .pw-input:focus { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 60%, transparent); }
-.pw-eye {
-  position: absolute; top: 50%; right: 6px; width: 48px; height: 48px; margin-top: -24px;
-  display: grid; place-items: center; background: none; border: 0; border-radius: 8px; color: var(--ink-2);
-}
-.pw-eye:hover { background: var(--track); }
 .pw-wrong .pw-input { border-color: var(--red); background: var(--red-bg); }
 .pw-wrong { animation: pw-shake 0.24s; }
 @keyframes pw-shake { 25%, 75% { transform: translateX(-3px); } 50% { transform: translateX(3px); } }
@@ -1684,7 +1558,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
   display: inline-flex; align-items: center; gap: 8px; margin: -4px 0 14px; padding: 6px 2px;
   color: var(--ink); font-weight: 700; text-decoration: underline; text-underline-offset: 0.15em;
 }
-.unit-full-only .unit-head { cursor: pointer; }
 .full-only-note {
   display: flex; align-items: center; gap: 8px; width: 100%; min-height: 44px; margin: 6px 0 0; padding: 6px 0;
   padding-inline-start: 70px; text-align: start; font-weight: 600; color: var(--tag-ink); background: none; border: 0;
@@ -1729,29 +1602,13 @@ svg.emoji-xl { width: 140px; height: 140px; }
   .stat-card-value { font-size: min(2.1rem, calc((100cqi - 30px) / 2.4)); }
   .stat-card-body .icon { width: 24px; height: 24px; }
 }
-.unit-locked .bay-lock { display: none; }
 @media (max-width: 350px) { .sector-btn .lang-native { font-size: 1rem; } }
-/* Other sectors: their open first lessons stay calm (one big yellow card on the path is enough). */
-.other-units .bay-now .bay-card { min-height: 0; padding: 14px 16px; background: var(--card); color: var(--ink); border-color: var(--edge); }
-.other-units .bay-now .bay-card:hover { background: color-mix(in srgb, var(--yellow) 12%, var(--card)); }
-.other-units .bay-now .bay-title { font-size: 1.1rem; }
-.other-units .bay-now .bay-title .bi-help { color: var(--muted); }
-.other-units .bay-now .bay-char { display: none; }
-.other-units .bay-now .bay-start { margin-top: 6px; min-height: 40px; font-size: 1rem; }
-.other-units .bay-now .bay-marker { width: 36px; height: 36px; font-size: 1.25rem; }
-.other-units .bay-now .bay-start { background: var(--yellow); color: #1e2226; }
-.other-units .bay-now .bay-start .icon { color: #1e2226; }
 /* Settings: the sector heading as on the first-run screen, Dutch first. */
 .settings-sector-title { display: flex; flex-direction: column; gap: 2px; }
 .settings-sector-title .bi-en { font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
 .settings-sector-title .bi-help { --help-size: 0.8rem; }
 
 /* Sound: "Without sound" (Settings, lesson header, the short note after switching). */
-.segmented-2 { grid-template-columns: repeat(2, 1fr); margin-bottom: 8px; }
-.sound-hint { margin: 0 0 20px; }
-.player-top .sound-toggle { flex: none; margin-inline-start: -6px; color: var(--muted); }
-.player-top .sound-toggle:hover { background: var(--concrete-2); }
-.player-top .sound-toggle.is-off { color: var(--ink); background: var(--tag-bg); }
 .sound-note {
   position: fixed; z-index: 30; inset-inline: 16px; top: calc(64px + env(safe-area-inset-top));
   margin: 0 auto; max-width: 420px; width: fit-content;
@@ -1799,13 +1656,12 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .daily-go { flex: none; color: var(--ink-3); }
 
 /* Route: a unit's picture (and a done lesson's picture) grows a little under the mouse (8 %). */
-.unit-icon, .bay-pic { transition: transform 0.18s ease-out; }
+.bay-pic { transition: transform 0.18s ease-out; }
 @media (hover: hover) {
-  .unit-icon:hover, .unit-head:hover .unit-icon { transform: scale(1.08); }
   .bay-card:hover .bay-pic { transform: scale(1.08); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .unit-icon, .bay-pic { transition: none; }
+  .bay-pic { transition: none; }
 }
 
 /* ---- Round 3: coming back ---- */
@@ -1882,8 +1738,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
   margin: 6px 0 0; max-width: 440px; font-weight: 650; animation: result-go 0.4s 1.2s var(--ease-out) both;
 }
 .result-line .bi-help { --help-size: 0.85em; }
-.result-flawless { color: var(--stamp-ink); }
-.result-flawless .bi-help { color: var(--muted); }
 /* After the review: ▲ and the number big in green, "words stronger" in the help language. */
 .result-stronger { flex-wrap: nowrap; gap: 12px; font-size: 1.15rem; color: var(--ink); }
 .stronger-n { display: inline-flex; align-items: center; gap: 4px; font-family: var(--stencil); font-weight: 800; font-size: 2.2rem; line-height: 1; color: var(--right-ink); }
@@ -1952,7 +1806,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .fact-gloss { font-size: 0.95rem; font-weight: 600; color: var(--ink); max-width: 26em; line-height: 1.3; }
 .fact-gloss.bi-swap > .bi-help { --help-size: 0.82em; font-weight: 400; color: var(--muted); }
 .milestone .fact-gloss.bi { align-items: center; }
-.milestone-keep { display: flex; flex-direction: column; gap: 18px; width: 100%; max-width: 440px; margin-top: 18px; text-align: start; }
 /* Room under the last line, so the record is never under the pinned Continue. */
 .milestone { padding-bottom: 12px; }
 /* Short screens (360×640 and the like): a smaller podium, so the record stays above Continue. */
@@ -2020,12 +1873,13 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .keep-link .bi { flex-direction: row; gap: 6px; }
 .keep-link-gloss.bi-swap .bi-help { display: none; }
 /* A destructive keep button (Replace, wipe): red text, never the main one. */
-.keep-btn.danger { margin-top: 0; color: var(--red); border-color: color-mix(in srgb, var(--red) 55%, transparent); }
+.keep-btn.danger { margin-top: 0; color: var(--wrong-ink); border-color: color-mix(in srgb, var(--red) 55%, transparent); }
 /* Main button over a smaller red one (backup "fewer lessons", reset). */
 .keep-stack, .reset-actions { display: flex; flex-direction: column; gap: 10px; }
 .keep-btn-small, .reset-wipe { flex-direction: row; gap: 10px; min-height: 52px; font-size: 0.95rem; }
 .keep-btn-text, .reset-wipe-text { display: flex; flex-direction: column; align-items: center; }
 .keep-btn-text > span[lang='nl'], .reset-wipe-text > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; opacity: 0.9; }
+.reset-wipe-text > span[lang='nl'] { opacity: 1; }
 .keep-hint-code { color: var(--ink-2); font-weight: 600; }
 .reset-actions { margin-top: 18px; }
 .reset-keep { min-height: 64px; }
@@ -2121,7 +1975,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
 
 /* A Dutch line stacked over a right-to-left pair (cards, labels, headings): the whole stack
    starts on the right, so the eye does not jump from side to side. */
-:is(.hub-title, .phrase-sheet .sheet-title, .hub-text, .daily-title, .tip-badge-text, .phrase-text, .other-text, .keep-head, .remind-own-text, .sector-names):has(> .bi[dir='rtl']) { text-align: right; }
 :is(.phrase-text):has(> .bi[dir='rtl']) > * { align-self: stretch; }
 .phrase-text { flex: 1; }
 /* The end block stays a square-ish block when a label wraps and the button grows taller. */
@@ -2135,7 +1988,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .btn-primary .btn-label.bi-swap > .bi-help { color: #3f3a2c; opacity: 1; }
 .btn:disabled .btn-label.bi-swap > .bi-help { color: inherit; opacity: 1; }
 .foot-actions .btn-go { padding-block: 8px; }
-.phrase-sheet-back .btn-label .bi-en, .foot-actions .btn-go .btn-label .bi-en { font-size: 1.15rem; }
+.foot-actions .btn-go .btn-label .bi-en { font-size: 1.15rem; }
 .btn-label .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.24rem; }
 
 /* Exercise tag: pictogram, the Dutch word, and the same word in the help language. */
@@ -2162,20 +2015,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .tip-lines .tip-line + .tip-line { margin-top: 0.4em; }
 .tip-lines .tip-line:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.12em; }
 .tip-lines > .bi-help { margin-top: 4px; }
-.tip-more {
-  display: inline-flex; align-items: center; flex-wrap: wrap; gap: 2px 8px; min-height: 44px; margin-top: 8px;
-  padding: 4px 12px 4px 14px; text-align: start; color: var(--ink);
-  background: var(--card); border: 2px solid var(--choice-edge); border-radius: 8px; font-weight: 650; font-size: 0.95rem;
-}
-.tip-more:hover { border-color: var(--edge); }
-.tip-more-gloss { flex-direction: row; font-weight: 500; color: var(--ink-2); }
-.tip-more-gloss.bi-swap > .bi-help { display: none; }
-.tip-more-chev { color: var(--ink-3); transition: transform 0.2s var(--ease-out); }
-.tip-more-chev.open { transform: rotate(180deg); }
-
-/* Lesson header: the emergency phrases, one tap away. */
-.player-top .sos-btn { flex: none; margin-inline-end: -8px; color: var(--wrong-ink); }
-.player-top .sos-btn:hover { background: var(--red-bg); }
 
 /* The footer: a soft shadow on its top edge while the exercise goes on underneath it, and no
    longer pinned when it would fill half the screen (it then scrolls with the page). */
@@ -2203,18 +2042,8 @@ svg.emoji-xl { width: 140px; height: 140px; }
 /* "Type what you hear" as "hear and pick the written word": the word's picture after Check. */
 .hear-pick-pic { flex: none; animation: rm-fade 0.2s ease-out both; }
 .hear-pick-choices .choice-nl { font-size: 1.3rem; }
-/* Dictation: "I can't write this yet", the help language large, with a pencil. */
-.btn-cant-write { display: flex; align-items: center; justify-content: center; gap: 10px; }
-.cant-write-icon { flex: none; display: grid; place-items: center; color: var(--ink-2); }
-.cant-write-text { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; min-width: 0; text-align: start; }
-.cant-write-text .bi { align-items: flex-start; }
-.cant-write-nl { font-size: 0.78rem; font-weight: 500; color: var(--muted); }
 /* The retry chip: HERHALEN, the help language large, and how many are left. */
 .tag-repeat .tag-count { font-weight: 650; font-variant-numeric: tabular-nums; }
-/* Settings: "I also want to learn to write". */
-.writing-icon { flex: none; display: grid; place-items: center; color: var(--ink-2); }
-.writing-card .keep-gloss { order: 0; }
-.writing-card .keep-nl { order: 1; }
 /* A help-language text read aloud by the device's own voice (when it has one). */
 .help-say {
   /* A pill with a globe and a speech bubble, in ink, not the Dutch speaker's
@@ -2305,27 +2134,6 @@ html { scroll-padding-bottom: calc(var(--foot-h, 0px) + 12px); }
 html:has(.bottom-nav) { scroll-padding-bottom: 104px; }
 html:has(.topbar) { scroll-padding-top: 72px; }
 
-/* Emergency phrases as a sheet over the lesson. */
-.phrase-sheet { display: flex; flex-direction: column; max-height: 90dvh; padding-top: 22px; }
-.phrase-sheet-head { flex: none; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-.phrase-sheet-back { flex: none; }
-.phrase-sheet-icon {
-  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 8px;
-  background: var(--red-bg); color: var(--wrong-ink);
-}
-.phrase-sheet .sheet-title { flex: 1; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; font-size: 1.3rem; }
-.phrase-sheet .sheet-title .bi { font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
-.phrase-sheet-x { flex: none; margin-inline-end: -6px; }
-.phrase-sheet-x:hover { background: var(--concrete-2); }
-.phrase-sheet-list {
-  flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
-  margin-inline: -16px; padding-inline: 16px; border-block: 2px dashed var(--line);
-}
-.phrase-sheet-list .phrases { margin: 12px 0; }
-.phrase-sheet-list .phrase { background: var(--bg); }
-.phrase-sheet-back { width: 100%; min-height: 60px; margin-top: 12px; padding-inline: 64px; }
-@media (min-width: 760px) { .phrase-sheet { max-height: 86dvh; } .phrase-sheet-list { margin-inline: -24px; padding-inline: 24px; } }
-
 /* "Hulp" tab: the emergency phrases straight away, the workplace tips under them. */
 .hub-alert-head { display: flex; align-items: center; gap: 12px; margin: 4px 0 0; }
 .hub-alert-head .hub-icon { color: var(--wrong-ink); }
@@ -2342,7 +2150,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* The next lesson: Bram is its picture, so the small word picture (often Bram too) is left out;
    it comes back where Bram is hidden (very narrow screens, the all-topics list). */
 .bay-now .bay-pic { display: none; width: 56px; height: 56px; align-self: flex-start; }
-.other-units .bay-now .bay-pic { display: inline-block; }
 @media (max-width: 300px) { .bay-now .bay-pic { display: inline-block; } }
 .bay-start-label { align-items: flex-start; line-height: 1.15; }
 .bay-start-label.bi-swap > .bi-help { --help-size: 0.72em; color: rgba(255, 253, 248, 0.8); font-weight: 500; }
@@ -2351,7 +2158,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .bay-again { flex-wrap: wrap; }
 .bay-again-label { line-height: 1.2; }
 .bay-again-label.bi-swap > .bi-help { --help-size: 0.9em; }
-.other-units .bay-now .bay-start-label.bi-swap > .bi-help { color: #3f3a2c; }
 /* Right-to-left: every forward chevron (Start, Continue, the review card, open lessons) points
    the way the line reads, to the left. */
 .icon-fwd:dir(rtl), .icon-fwd.icon-flip, .player-rtl .feedback-icon .icon-fwd { scale: -1 1; }
@@ -2404,11 +2210,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .path, .words-hub, .screen:has(+ .bottom-nav) { padding-bottom: calc(132px + env(safe-area-inset-bottom)); }
   html:has(.bottom-nav) { scroll-padding-bottom: 120px; }
   /* Path */
-  .unit-head { flex-wrap: wrap; gap: 6px 10px; }
-  .unit-num { width: auto; font-size: 2rem; }
-  .unit-icon { width: 48px; height: 48px; }
-  .unit-titles { flex-basis: 100%; }
-  .unit-head h2 { font-size: 1.15rem; }
   .bays::before { inset-inline-start: 15px; }
   .bay { grid-template-columns: 32px minmax(0, 1fr); column-gap: 6px; }
   .bay-marker { width: 28px; height: 28px; font-size: 1rem; }
@@ -2420,7 +2221,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .bay-text { flex: 1 1 96px; }
   .bay-title { overflow-wrap: anywhere; }
   .bay-now .bay-pic { position: static; }
-  .voice-row { flex-wrap: wrap; }
   .bay-now .bay-title { font-size: 1.2rem; }
   .full-only-note { padding-inline-start: 0; }
   .daily-card { flex-wrap: wrap; }
@@ -2428,12 +2228,10 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   /* Lesson */
   .player-top { flex-wrap: wrap; row-gap: 4px; padding-inline: 10px; }
   .player-top .bar-wrap { order: 5; flex-basis: 100%; }
-  .player-top .sos-btn { margin-inline-start: auto; }
   .player-body { padding-inline: 10px; }
   .player-foot { padding-inline: 10px; }
   .prompt { font-size: 1.3rem; }
   .btn-go, .foot-actions .btn-go { padding-inline: 8px 58px; font-size: 1rem; }
-  .phrase-sheet-back { padding-inline: 8px 58px; }
   .speaker { gap: 8px; }
   .speaker-char, .speaker-build .speaker-char, .situation .speaker-char,
   .speaker-word.len-m .speaker-char, .speaker-word.len-l .speaker-char { font-size: 64px; }
@@ -2473,7 +2271,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .choices:not(.choices-pics) .stamp-wrong .stamp-word { font-size: 0.8rem; }
   .choices-pics { gap: 8px; }
   .choices-pics .choice { min-height: 112px; padding: 8px; }
-  .match-grid { grid-template-columns: minmax(0, 1fr); }
   .listen-buttons .speak-lg { width: 80px; height: 68px; }
   .tile { padding: 6px 10px; font-size: 1.05rem; }
   .answer-line { padding-inline-end: 56px; }
@@ -2482,14 +2279,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .tip-say-row { flex-wrap: wrap; }
   .sheet { padding-inline: 10px; }
   .phrase { gap: 10px; padding: 10px; flex-wrap: wrap; }
-  .phrase-sheet-list { margin-inline: -10px; padding-inline: 10px; }
-  .phrase-sheet { max-height: 96dvh; padding-top: 18px; }
-  .phrase-sheet .sheet-title { font-size: 1.1rem; overflow-wrap: anywhere; }
-  .phrase-sheet-icon { display: none; }
-  .phrase-sheet-back { min-height: 52px; margin-top: 8px; }
   /* Settings and other screens */
   .lang-grid { grid-template-columns: minmax(0, 1fr); }
-  .segmented { grid-template-columns: minmax(0, 1fr); }
   .keep-row, .remind-chips { grid-template-columns: minmax(0, 1fr); }
   .remind-chip { min-height: 0; }
   .remind-own { flex-wrap: wrap; }
@@ -2561,7 +2352,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* The certificate screen: name (asked once), the sheet, Print / PDF and Share as picture. */
 .cert-screen .screen-head h1 { display: flex; flex-direction: column; }
 .cert-screen > .cert-frame { margin-top: 12px; }
-.cert-name-card { margin: 8px 0 22px; }
 .cert-name-input {
   width: 100%; min-height: 54px; padding: 10px 14px; font: inherit; font-size: 1.15rem; font-weight: 600;
   color: var(--ink); background: var(--input-bg); border: 2px solid var(--edge); border-radius: 10px;
@@ -2631,7 +2421,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   position: absolute; top: 4px; left: 4px; width: 30px; height: 30px; border-radius: 50%;
   background: var(--card); border: 2px solid var(--edge); transition: transform 0.15s var(--ease-out);
 }
-.count-state { position: absolute; top: 50%; right: 10px; translate: 0 -50%; font-size: 0.8rem; font-weight: 700; line-height: 1; color: var(--muted); }
+/* A fixed size: the switch is, so "Aan" never runs under the knob with larger text. */
+.count-state { position: absolute; top: 50%; right: 10px; translate: 0 -50%; font-size: 13px; font-weight: 700; line-height: 1; color: var(--muted); }
 .count-switch.on { background: var(--yellow); border-color: #1e2226; }
 .count-switch.on .count-knob { transform: translateX(38px); background: #1e2226; border-color: #1e2226; }
 .count-switch.on .count-state { right: auto; left: 12px; color: #1e2226; }
@@ -2685,26 +2476,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* ---- Gauntlet loop 3: no stuck points for a learner who reads only the help language ---- */
 
 /* A small speaker on every Dutch-only card or tile: a tap plays it. */
-.opt-sound {
-  flex: none; display: inline-grid; place-items: center; width: 26px; height: 26px;
-  border-radius: 7px; background: color-mix(in srgb, var(--blue) 14%, transparent); color: var(--blue);
-}
-.opt-sound .icon { width: 17px; height: 17px; }
-.choices-rows .choice > .opt-sound, .choices:not(.choices-pics):not(.choices-rows) .choice > .opt-sound { margin-inline-start: auto; }
-.choice.faded > .opt-sound { opacity: 0.45; }
 .tile { display: inline-flex; align-items: center; gap: 6px; }
-.tile .opt-sound { width: 20px; height: 20px; border-radius: 5px; }
-.tile .opt-sound .icon { width: 14px; height: 14px; }
-.tile-used .opt-sound { visibility: hidden; }
-.tile:disabled .opt-sound { opacity: 0.5; }
-/* Match: the speaker sits at the start of the Dutch card. */
-.match-nl { gap: 6px; }
-.match-nl .opt-sound { width: 22px; height: 22px; }
-.match-nl .opt-sound .icon { width: 15px; height: 15px; }
-.match .choice-emoji.icon, .match svg.choice-emoji { width: 40px; height: 40px; }
-@media (max-width: 759px) {
-  .match .choice-emoji.icon, .match svg.choice-emoji { width: 40px; height: 40px; }
-}
 
 /* Intro: the two speakers stay together; a long word wraps on its own line above them. */
 .intro-sounds { display: inline-flex; gap: 10px; flex: none; }
@@ -2753,16 +2525,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .pair-gloss:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.22rem; }
 .pair-en { font-size: 0.85rem; font-weight: 500; color: var(--muted); }
 
-/* The emergency phrases in the lesson header: the Hulp tab's lifebuoy in calm ink, with its
-   word in the help language under it (no red, nothing that reads as an error). */
-.player-top .sos-btn {
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0;
-  width: auto; min-width: 44px; max-width: 72px; padding: 2px 4px; color: var(--ink-2);
-}
-.player-top .sos-btn:hover { background: var(--track); }
-.sos-label { display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.68rem; font-weight: 650; line-height: 1.1; color: var(--ink-2); }
-.sos-label:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.75rem; }
-
 /* Tip card: the heading in the help language large, the Dutch name a small label. */
 .tip-badge-swap .tip-badge-main { font-size: 1.05rem; font-weight: 650; color: var(--ink); line-height: 1.2; }
 .tip-badge-swap .tip-badge-main.bi-swap > .bi-help { --help-size: 0.75em; font-weight: 500; }
@@ -2798,7 +2560,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* Short screens (360×640): the reminder card fits above the pinned Continue. */
 @media (max-height: 720px) {
   .keep-screen .milestone { padding-top: 8px; }
-  .keep-screen .milestone-keep { margin-top: 8px; gap: 12px; }
   .keep-screen .keep-card { gap: 8px; padding: 12px; }
   .keep-screen .remind-chip { min-height: 0; padding-block: 8px; }
   .keep-screen .remind-other { min-height: 46px; }
@@ -2943,12 +2704,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .type-display.type-empty { color: var(--ink-3); }
 .type-caret { display: inline-block; width: 2px; height: 1.2em; margin-inline-start: 2px; background: var(--ink); animation: caret 1.05s steps(1) infinite; }
 @keyframes caret { 50% { opacity: 0; } }
-.letter-back {
-  flex: none; width: 64px; display: grid; place-items: center;
-  border: 2px solid var(--line); border-bottom-width: 4px; border-radius: var(--radius); background: var(--card); color: var(--ink);
-}
-.letter-back:disabled { color: var(--ink-3); }
-.letter-back:active:not(:disabled) { transform: translateY(1px); filter: brightness(0.97); }
 .letter-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
 .letter-tile {
   min-width: 50px; height: 54px; padding: 0 12px; display: grid; place-items: center;
@@ -2960,19 +2715,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .letter-tile:active:not(:disabled) { transform: translateY(1px); filter: brightness(0.97); }
 .letter-space { min-width: 76px; color: var(--ink-3); font-size: 1.3rem; }
 .letter-article { font-size: 1.3rem; }
-.letter-used { color: transparent; background: var(--track); border-style: dashed; border-bottom-width: 2px; }
 @media (max-width: 380px) { .letter-tile { min-width: 44px; height: 50px; padding: 0 9px; font-size: 1.4rem; } .letter-bank { gap: 6px; } }
-.type-mode {
-  align-self: center; display: inline-flex; align-items: center; gap: 8px; margin: 16px auto 0;
-  min-height: 40px; padding: 4px 14px; border: 2px solid var(--line); border-radius: 999px;
-  background: transparent; color: var(--ink-2); font-size: 0.92rem; font-weight: 600;
-}
-.type-mode:hover { border-color: var(--ink-3); }
-.type-mode .icon { flex: none; }
-.type-mode-label { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 6px; }
-.type-mode-label .bi-sep { display: inline; }
-.type-mode-label.bi-swap > .bi-help { --help-size: 0.85em; }
-.exercise:has(> .type-mode) { display: flex; flex-direction: column; }
 
 /* Chat replies: the card picks, the speaker beside it only plays. After Check each reply says
    what it means, small, under the Dutch. */
@@ -3105,7 +2848,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .type-display { min-height: 54px; }
   .letter-bank { margin-top: 10px; gap: 6px; }
   .letter-tile { height: 46px; min-width: 44px; font-size: 1.35rem; }
-  .type-mode { margin-top: 10px; }
 }
 
 /* ---- Route: one block at a time ---- */
@@ -3151,18 +2893,16 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .rb-lessons .bay-locked .bay-marker { width: 30px; height: 30px; font-size: 1.05rem; }
 
 /* Small links: "Ander onderwerp kiezen" under the block, "Alle onderwerpen" at the foot. */
-.rb-switch, .rb-all {
+.rb-all {
   display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 4px; margin: 10px 0 0;
   background: none; border: 0; color: var(--muted); font: inherit; font-weight: 600; text-align: start; cursor: pointer;
 }
-.rb-switch { margin-inline-start: 68px; }
-.rb-switch .bi, .rb-all .bi { min-width: 0; }
-.rb-switch .bi-help, .rb-all .bi-help { --help-size: 0.8rem; font-weight: 400; }
-.rb-switch > .icon, .rb-all > .icon { flex: none; color: var(--ink-3); }
-.rb-switch:hover, .rb-all:hover { color: var(--ink); }
-.rb-switch:hover .bi-en, .rb-all:hover .bi-en { text-decoration: underline; }
+.rb-all .bi { min-width: 0; }
+.rb-all .bi-help { --help-size: 0.8rem; font-weight: 400; }
+.rb-all > .icon { flex: none; color: var(--ink-3); }
+.rb-all:hover { color: var(--ink); }
+.rb-all:hover .bi-en { text-decoration: underline; }
 .rb-all { margin: 28px auto 0; justify-content: center; }
-@media (max-width: 380px) { .rb-switch { margin-inline-start: 4px; } }
 
 /* The choice of the next block: a heading and 3 cards; the first is the recommended one. */
 .rb-choose { margin-top: 4px; }
@@ -3204,31 +2944,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   background: var(--green-bg); color: var(--right-ink); box-shadow: inset 0 0 0 2px var(--right-ink);
 }
 
-/* "Gedaan": the finished units as a row of small pictures with a check. */
-.rb-shelf { margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--line); }
-.rb-shelf-title { margin: 0 0 10px; font-size: 1rem; font-weight: 650; color: var(--ink-2); }
-.rb-shelf-title .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }
-.rb-chips { display: flex; flex-wrap: wrap; gap: 10px; }
-.rb-chip {
-  position: relative; display: grid; place-items: center; width: 56px; height: 56px; padding: 0;
-  background: var(--card); border: 2px solid var(--line); border-radius: 50%;
-}
-.rb-chip:hover { border-color: var(--ink-3); }
-.rb-chip-on { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
-.rb-chip-pic { width: 40px; height: 40px; }
-.rb-chip-check {
-  position: absolute; inset-block-end: -3px; inset-inline-end: -3px; display: grid; place-items: center;
-  width: 22px; height: 22px; border-radius: 50%; background: var(--solid); color: var(--yellow);
-  border: 2px solid var(--bg);
-}
-.rb-done-panel { margin-top: 14px; padding: 12px; background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); }
-.rb-done-head { display: flex; align-items: center; gap: 12px; }
-.rb-done-pic { flex: none; width: 48px; height: 48px; }
-.rb-done-panel .rb-title { font-size: 1.15rem; }
-.rb-done-panel .cert-badge { margin-top: 10px; }
-.rb-done-panel .bays.rb-lessons { padding-top: 10px; }
-.rb-done-panel .bays::before { inset-inline-start: 27px; }
-
 /* "Alle onderwerpen": the long path on its own screen, under a plain heading with a back arrow. */
 .rb-all-head { padding: calc(10px + env(safe-area-inset-top)) 16px 0; margin-bottom: 0; }
 .rb-all-head h1 { display: flex; flex-direction: column; font-size: 1.35rem; line-height: 1.2; }
@@ -3248,6 +2963,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .say-meaning { font-size: 1.1rem; }
 .say-meaning .bi-help { --help-size: 0.8em; color: var(--muted); }
 .say-card .speak { flex: none; }
+.say-card .say-model-off { visibility: hidden; }
 
 .say-mic-area { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 20px; }
 .say-mic {
@@ -3300,7 +3016,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .say-who .bi-help { --help-size: 0.8em; font-weight: 400; color: var(--muted); }
 
 /* Rate yourself: no score, no stamp. "Sounds the same" goes on; "again" listens and tries again. */
-.say-rate { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.say-rate { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
 .say-rate-btn {
   display: flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 64px; padding: 8px 10px; border: 2px solid; border-radius: var(--radius);
@@ -3344,7 +3060,35 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 :root[data-text='xl'] body { font-size: 22.5px; }
 /* Long words may break rather than run off a narrow screen at the larger sizes. */
 :root:is([data-text='large'], [data-text='xl']) :is(h1, h2, h3, p, li, button, label) { overflow-wrap: break-word; }
-.text-size-picker button { justify-content: center; min-height: 64px; }
+/* Larger text in a narrow column: a long word is split with a hyphen where the language allows it
+   (every text has its lang), not anywhere ("veiligheid / sschoenen"). */
+:root:is([data-text='large'], [data-text='xl']) :is(h1, h2, h3, p, li, button, label, .choice-nl, .chat-line, .rh-name, .pocket-nl, .say-nl, .max3-names, .coach-title, .tips-head) {
+  overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto;
+}
+/* The largest text on a narrow phone (up to 380 px): what stands beside a text makes room for it. */
+@media (max-width: 380px) {
+  /* The chat bubble under the colleague, as below 300 px. */
+  :root[data-text='xl'] .chat-row { flex-wrap: wrap; }
+  :root[data-text='xl'] .chat-bubble { flex: 1 1 100%; }
+  :root[data-text='xl'] .chat-bubble::before { display: none; }
+  :root[data-text='xl'] .chat-me .chat-char { order: -1; margin-inline-start: auto; }
+  /* The colleague's line (a chat, a situation) under the colleague, as below 300 px. */
+  :root[data-text='xl'] .speaker { flex-wrap: wrap; }
+  :root[data-text='xl'] .speaker > .speaker-bubble, :root[data-text='xl'] .speaker-word .speaker-bubble { flex: 1 1 140px; max-width: 100%; margin-bottom: 8px; }
+  :root[data-text='xl'] .speaker-bubble::before { display: none; }
+  /* A long Dutch word in a list of words: a size that fits the column ("de veiligheidsschoenen"). */
+  :root[data-text='xl'] .choice-nl.len-l { font-size: 1.05rem; }
+  /* "Later" and "Bekijk" one above the other, each its full width. */
+  :root[data-text='xl'] .cert-earned-actions { grid-template-columns: minmax(0, 1fr); }
+  :root[data-text='xl'] .cert-earned-actions .btn-go { order: -1; padding-inline: 10px 58px; }
+  /* The topic card on the path: no colleague over the Start button, the title its full width. */
+  :root[data-text='xl'] .bay-char { display: none; }
+  :root[data-text='xl'] .bay-now .bay-card { padding-inline: 12px; }
+  /* Speaking: the word gets the card's width (the picture is on the card before it too). */
+  :root[data-text='xl'] .say-card .say-pic { display: none; }
+  /* "The same" and "Say it again" one above the other: side by side a word would break. */
+  :root[data-text='xl'] .say-rate { grid-template-columns: minmax(0, 1fr); }
+}
 .text-size-a { font-weight: 700; line-height: 1; color: var(--ink); }
 /* Fixed px, so the three A's keep their steps whatever the size now is. */
 .text-size-normal { font-size: 18px; }
@@ -3352,10 +3096,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .text-size-xl { font-size: 31px; }
 
 /* The row under a unit's header: "Save for offline" and the pocket card, two quiet chips. */
-.unit-tools { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
-.rb-block + .unit-tools { margin: 4px 0 14px; }
-.unit-head + .unit-tools { margin: 4px 0 10px; }
-.rb-done-panel .unit-tools { margin: 10px 0 0; }
 .unit-tool {
   position: relative; overflow: hidden; flex: 1 1 140px; min-width: 0; min-height: 48px;
   display: flex; align-items: center; gap: 8px; padding: 6px 12px; text-align: start;
@@ -3366,32 +3106,13 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .unit-tool > .icon { flex: none; color: var(--ink-2); position: relative; }
 .unit-tool-text { flex: 1; min-width: 0; position: relative; display: flex; flex-direction: column; gap: 1px; }
 .unit-tool-label .bi-help { --help-size: 0.72rem; font-weight: 400; }
-.unit-tool-size {
-  align-self: flex-start; font-size: 0.74rem; font-weight: 600; color: var(--faint);
-  font-variant-numeric: tabular-nums; white-space: nowrap;
-}
-.offline-save, .offline-saving, .offline-saved { flex: 1.5 1 0; }
+.offline-saving, .offline-saved { flex: 1.5 1 0; }
 .unit-tool-label { hyphens: auto; overflow-wrap: anywhere; }
 .pocket-open:not(.cert-pocket) { flex: 1 1 0; padding-inline: 10px; }
 /* Saving: the chip fills with kraft from the start side, like tape being pulled. */
 .offline-saving { border-color: var(--kraft); }
-.offline-fill {
-  position: absolute; inset-block: 0; inset-inline-start: 0; background: var(--kraft-light);
-  transition: width 240ms var(--ease-out);
-}
-@media (prefers-reduced-motion: reduce) { .offline-fill { transition: none; } }
-.offline-saving .unit-tool-size { color: var(--ink); }
 /* Saved: a calm green tick in a tray, the size, and a small cross to remove it again. */
 .offline-saved { border-color: color-mix(in srgb, var(--green) 45%, var(--line)); padding-inline-end: 2px; }
-.offline-done {
-  flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
-  color: var(--right-ink); background: var(--green-bg);
-}
-.offline-remove {
-  flex: none; display: grid; place-items: center; width: 40px; height: 40px; padding: 0;
-  color: var(--faint); background: none; border: none; border-radius: 10px;
-}
-.offline-remove:hover { color: var(--ink); background: var(--concrete-2); }
 .offline-error {
   order: 3; flex: 1 1 100%; margin: 0; padding: 8px 12px; font-size: 0.88rem;
   color: var(--warn-ink); background: var(--warn-bg); border-inline-start: 5px solid var(--kraft); border-radius: 6px;
@@ -3403,7 +3124,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 
 /* The pocket card ("Spiekkaartje"): label paper on a kraft board, five phrases. */
 .pocket-screen .screen-head h1 { display: flex; flex-direction: column; line-height: 1.15; }
-.pocket-screen-nl { font-size: 0.8rem; font-weight: 600; color: var(--faint); letter-spacing: 0.02em; }
+.pocket-screen-nl { font-size: 0.8rem; font-weight: 600; color: var(--ink-2); letter-spacing: 0.02em; }
 .pocket-screen .screen-head h1 .bi { font-size: 1em; }
 .pocket-screen > .screen-head[dir='rtl'] > .icon-btn .icon { scale: -1 1; }
 .pocket-card {
@@ -3440,6 +3161,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .pocket-card[dir='rtl'] .pocket-title { text-align: right; }
 .pocket-row .speak { width: 44px; height: 44px; }
 .pocket-actions { margin-top: 16px; }
+/* A right-to-left help line over the Dutch one: both centred, so they line up. */
+.pocket-actions .cert-btn-text:has([dir='rtl']) { align-items: center; text-align: center; }
 @media (max-width: 380px) {
   .pocket-card { padding: 10px 10px 4px; margin-inline: 4px; }
   .pocket-row { gap: 10px; padding: 8px 0; }
@@ -3477,8 +3200,6 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 :root.en-off .en-support { display: none !important; }
 /* An answer without Dutch (a situation's usual choice): with "= English" gone the row is empty. */
 :root.en-off .pair-main:has(> .en-support):not(:has(> strong)) { display: none; }
-/* The settings switch: "EN" as its icon. */
-.show-en-icon { width: 24px; height: 24px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.02em; border: 2px solid currentColor; border-radius: 6px; line-height: 1; }
 
 /* ---- Larger text on a small phone (360×640, Polish at XL) ---- */
 /* Unit chips ("Zapisz do użytku offline", "Ściągawka"): words stay whole. A chip is never
@@ -3512,27 +3233,10 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   :root:is([data-text='large'], [data-text='xl']) .keep-screen .keep-hero { display: none; }
 }
 .nl-quote { white-space: nowrap; }
-/* "Remove from this phone?" in place of the saved chip: two small buttons, Nee first in focus. */
-.offline-confirm { flex: 1 1 100%; flex-wrap: wrap; row-gap: 6px; padding-block: 6px; }
-.offline-confirm-btns { display: flex; gap: 6px; flex: none; }
-.offline-confirm-btns button {
-  min-width: 52px; min-height: 40px; padding: 0 12px; border-radius: 10px; font-weight: 700;
-  border: 1.5px solid var(--line); background: var(--card); color: var(--ink);
-}
-.offline-confirm-btns .offline-yes { border-color: color-mix(in srgb, var(--wrong-ink) 55%, var(--line)); color: var(--wrong-ink); }
 
 /* The home's one-time "Woman or man?" (learners from before the question): a calm card above the
    block, the question in the help language with the Dutch small under it, three small tiles on
    one row and a ✕ to put it away. */
-.gender-card {
-  margin: 0 0 12px; padding: 8px 10px 10px 12px; background: var(--card);
-  border: 2px solid var(--line); border-radius: var(--radius);
-}
-.gender-card-head { display: flex; align-items: flex-start; gap: 8px; }
-.gender-card-title { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 1px; margin: 2px 0 0; font-size: 1.08rem; font-weight: 650; line-height: 1.25; }
-.gender-card-title .bi-help { --help-size: 0.8rem; font-weight: 500; color: var(--muted); }
-.gender-card-nl { font-size: 0.82rem; font-weight: 500; color: var(--muted); }
-.gender-card-x { flex: none; width: 36px; height: 36px; margin-block-start: -2px; margin-inline-end: -4px; color: var(--ink-2); }
 .gender-grid-mini { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 8px 0 0; }
 .lang-grid-compact.gender-grid-mini .gender-btn:not(.gender-none) {
   flex-direction: row; align-items: center; gap: 8px; padding-block: 5px; padding-inline: 5px 8px; text-align: start;
@@ -3644,7 +3348,6 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 }
 .max3-hint { margin: 4px 2px 0; color: var(--muted); font-size: 0.92rem; line-height: 1.45; }
 .max3-hint-top { margin: 6px 2px 0; color: var(--ink-2); font-size: 1rem; }
-[dir='rtl'] :is(.max3-head, .max3-back) .icon-btn .icon { scale: -1 1; }
 
 /* The back arrow: fixed chrome, the same button in the same top-start corner on every page. */
 .chrome-back { flex: none; width: 44px; height: 44px; margin-inline-start: -8px; color: var(--ink); cursor: pointer; }
@@ -3656,7 +3359,6 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .keep3-page > .chrome-head { align-self: stretch; margin: -4px 0 -40px; }
 
 /* First run: the language guess ("Polski?" [Yes] [Other language]) and the list's way back. */
-.max3-back { margin: -8px 0 -36px; position: relative; z-index: 1; }
 .lang-guess-q {
   display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 40px 0 6px;
   font-size: 2rem; font-weight: 700; text-align: center;
@@ -4094,8 +3796,6 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .gate-who { padding: 10px 12px; border-radius: 12px; background: var(--concrete-2, var(--bg)); color: var(--ink); }
 .gate-who > .icon { color: var(--ink-2); }
 .gate-trust { margin: 14px 0 0; font-size: 0.9rem; color: var(--muted); }
-.gate-trial-done { padding: 10px 12px; border-radius: 12px; border: 2px solid var(--line); color: var(--ink); font-weight: 600; }
-.gate-trial-done > .icon { color: var(--go-right, var(--ink-2)); }
 .pw-ok { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--go-right, var(--ink-2)); font-weight: 600; }
 .pw-ok .bi { flex-direction: row; flex-wrap: wrap; gap: 0 8px; align-items: baseline; }
 .pw-ok .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }

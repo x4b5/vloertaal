@@ -10,7 +10,7 @@ import { regionTips } from '../content/regio';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
 import { Flag } from './Flag';
-import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, NL_MORE, ui, uiCount, withoutN, type Bilingual, said } from '../i18n';
+import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, NL_MORE, ui, uiCount, withoutN, type Bilingual, said, saidLang, langTag } from '../i18n';
 import type { HelpLanguage, LangCode, UiCode, UiKey } from '../i18n/types';
 import { HELP_ROWS } from '../content/regels/help';
 import { dutchUi, rulesTrackOn } from '../lib/track';
@@ -192,7 +192,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
         <p className="tagline onb-tagline"><Bi text={ui('appTagline', g)} /></p>
       </div>
       <h2 className="lang-guess-q">
-        <span className="lang-guess-name" lang={g.code} dir={g.dir}>{g.nativeName}{q}</span>
+        <span className="lang-guess-name" lang={langTag(g.code)} dir={g.dir}>{g.nativeName}{q}</span>
       </h2>
       <ChoiceCards
         label={said(ui('chooseLanguage', g))}
@@ -232,13 +232,14 @@ export function TopBar({ streak, words, lang, done = false, quiet = false, greet
   // Right to left (Arabic, Persian, Dari): the logo moves to the right, the stats and the flag to the left.
   return (
     <header className="topbar" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
-      <span className="brand">
+      {/* The home's one heading: the name. Named here, as the wordmark is hidden on a phone. */}
+      <h1 className="brand" aria-label="Vloertaal" lang="nl">
         <LogoMark size={36} />
         <Wordmark className="topbar-wordmark" />
-      </span>
+      </h1>
       {greeting}
       {quiet && (
-        <span className="sound-off-mark" role="img" aria-label={`${said(ui('withoutSound', lang))}${lang?.ui.withoutSound ? ` · ${ui('withoutSound', lang).help}` : ''}`} title={ui('withoutSound', lang).help ?? said(ui('withoutSound', lang))}>
+        <span className="sound-off-mark" role="img" aria-label={said(ui('withoutSound', lang))} lang={saidLang(ui('withoutSound', lang))} title={ui('withoutSound', lang).help ?? said(ui('withoutSound', lang))}>
           <SpeakerOffIcon size={18} />
         </span>
       )}
@@ -458,7 +459,7 @@ function AboutBody({ text }: { text: Bilingual }) {
   const rtl = text.lang.dir === 'rtl';
   return (
     <span className="bi bi-swap" dir={rtl ? 'rtl' : undefined}>
-      <span className="bi-en" lang={text.lang.code} dir={text.lang.dir}>{withMailLink(text.help, rtl ? isolateLatin : undefined)}</span>
+      <span className="bi-en" lang={langTag(text.lang.code)} dir={text.lang.dir}>{withMailLink(text.help, rtl ? isolateLatin : undefined)}</span>
       <span className="bi-sep" aria-hidden>·</span>
       <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{text.en}</span>
     </span>
@@ -694,7 +695,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   const title = kind === 'lesson' ? ui('lessonComplete', lang) : ui('reviewComplete', lang);
   return (
     <div className="player result-screen">
-      <main className="player-body result">
+      <div className="player-body result">
         <div className="result-hero">
           {/* Bram (the one with the thumb up) says one calm line. */}
           <BramSays text={ui(resultLineFor(kind, right, total), lang)} tail="down" />
@@ -789,7 +790,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             <ChevronIcon size={24} />
           </button>
         )}
-      </main>
+      </div>
       <footer className="player-foot">
         <div className="foot-inner">
           <div className="foot-actions">

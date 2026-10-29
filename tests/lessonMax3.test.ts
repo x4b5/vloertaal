@@ -111,6 +111,13 @@ describe('guided match', () => {
     expect(r.state.step).toBe(0);
     expect(r.state.wrong).toBe(1);
   });
+  it('the same wrong card twice (a double tap) counts once', () => {
+    const once = matchTap(words, matchStart, 'b').state;
+    const twice = matchTap(words, once, 'b');
+    expect(twice.hit).toBe(false);
+    expect(twice.state.wrong).toBe(1);
+    expect(matchTap(words, twice.state, 'c').state.wrong).toBe(2);
+  });
   it('a matched meaning is no choice any more', () => {
     const one = matchTap(words, matchStart, 'a').state;
     const again = matchTap(words, one, 'a');

@@ -1,6 +1,6 @@
 import { dutchUi } from '../lib/track';
 import { Fragment, useEffect, useId, useRef, useState } from 'react';
-import { ui, said } from '../i18n';
+import { langTag, ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import type { SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
@@ -10,7 +10,8 @@ import type { Progress } from '../lib/progress';
 import { Bi } from './Bi';
 import { NlPair } from './NlPair';
 import { Character } from './Characters';
-import { ChevronIcon } from './Icons';
+import { CertIcon } from './CertBadge';
+import { CheckIcon, ChevronIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
 import { LogoMark } from './Logo';
 import { PocketIcon } from './Offline';
@@ -23,23 +24,11 @@ import { ThemeHeadRow } from './Themes';
  *   and, drawn again on a canvas, as the shared picture: see src/lib/certCanvas.ts);
  * - CertificateScreen: the sheet, one Save / share and Change name (the name asked on its own page);
  * - CertEarned: the one-time "Certificaat behaald" moment after a unit's last lesson;
- * - CertBadge: the calm chip on a finished unit's sign on the path;
+ * - CertBadge, CertIcon: in src/components/CertBadge.tsx (on the path, in the main file);
  * - CertificatesCard: "Mijn certificaten" in Settings.
+ * This file loads when a certificate is first shown (src/lazyScreens.tsx).
  * The certificate is a Dutch document; around it, the app explains in the help language.
  */
-
-/** A small certificate: a sheet with a rosette. */
-export function CertIcon({ size = 20, className }: { size?: number; className?: string }) {
-  return (
-    <svg className={`icon ${className ?? ''}`} viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
-      <path d="M4 4.5h16v11H13" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
-      <path d="M4 4.5v11h3" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
-      <path d="M7.5 8h9M13 11.5h3.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <circle cx="9.5" cy="15" r="3" fill="none" stroke="currentColor" strokeWidth="2" />
-      <path d="M8 17.6 7.2 21.5l2.3-1.2 2.3 1.2-.8-3.9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-    </svg>
-  );
-}
 
 /** The round "BEHAALD" stamp, pressed slightly crooked. */
 function Seal({ unitNo, ring: ringText }: { unitNo: string; ring: string }) {
@@ -181,10 +170,11 @@ function NamePage({ name, lang, onDone }: { name: string; lang?: HelpLanguage; o
  * also be printed; the picture saved as a PNG where files cannot be shared) and
  * [Change name]. The name is asked first, on its own page.
  */
-export function CertificateScreen({ unit, day, lang, onBack, sector }: {
+export function CertificateScreen({ unit, day, lang, onBack, sector, region }: {
   unit: Unit;
-  /** The learner's sector: the unit's number as on their own path. */
+  /** The learner's sector and region: the unit's number as on their own path. */
   sector?: SectorChoice;
+  region?: string;
   /** YYYY-MM-DD it was earned. */
   day: string;
   lang?: HelpLanguage;
@@ -195,7 +185,8 @@ export function CertificateScreen({ unit, day, lang, onBack, sector }: {
   /** The name page shows the first time (never asked), or after "Change name". */
   const [asking, setAsking] = useState(stored === null);
   const [busy, setBusy] = useState(false);
-  const data = certData(unit, day, name, lang, sector);
+  const [saved, setSaved] = useState(false);
+  const data = certData(unit, day, name, lang, sector, region);
   const rtl = lang?.dir === 'rtl';
 
   // The tab title becomes the PDF's file name when it is saved from the print dialog.
@@ -226,8 +217,11 @@ export function CertificateScreen({ unit, day, lang, onBack, sector }: {
   // pocket card. Only a picture that could not be drawn at all opens the print dialog.
   const share = async () => {
     setBusy(true);
+    setSaved(false);
     try {
-      await shareCertificate(data, `vloertaal-certificaat-${unit.id.slice(2)}.png`, png.current?.key === key ? png.current.blob : undefined);
+      const how = await shareCertificate(data, `vloertaal-certificaat-${unit.id.slice(2)}.png`, png.current?.key === key ? png.current.blob : undefined);
+      // Downloaded (no share sheet on this phone or computer): say so, as the pocket card does.
+      if (how === 'saved') setSaved(true);
     } catch {
       window.print();
     } finally {
@@ -256,6 +250,9 @@ export function CertificateScreen({ unit, day, lang, onBack, sector }: {
           </span>
         </button>
       </div>
+      {saved && (
+        <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
+      )}
       <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
         <NlPair nlFirst nl="Naam wijzigen" className="keep-link-gloss" text={ui('certChangeName', lang)} />
       </button>
@@ -267,9 +264,10 @@ export function CertificateScreen({ unit, day, lang, onBack, sector }: {
  * "Certificaat behaald": shown once, after the result of a unit's last lesson. The milestone
  * shell (Bram, one line, the footer button), with the certificate preview and Bekijk / Later.
  */
-export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector }: {
+export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector, region }: {
   unit: Unit;
   sector?: SectorChoice;
+  region?: string;
   /** Opens the unit's pocket card, next to the certificate. */
   onPocket?: () => void;
   day: string;
@@ -278,10 +276,10 @@ export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector 
   onLater: () => void;
 }) {
   const [name] = useState(() => loadCertName() ?? '');
-  const data = certData(unit, day, name, lang, sector);
+  const data = certData(unit, day, name, lang, sector, region);
   return (
     <div className="player milestone-screen cert-earned">
-      <main className="player-body milestone">
+      <div className="player-body milestone">
         <div className="cert-earned-hero">
           <span className="cert-earned-bram" aria-hidden><Character who="bram" mood="cheer" size={150} /></span>
           <CertificateSheet data={data} className="cert-preview" />
@@ -294,7 +292,7 @@ export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector 
           <Bi className="cert-earned-hint" text={ui('certEarnedHint', lang)} />
         </p>
         {onPocket && <PocketLink lang={lang} onOpen={onPocket} />}
-      </main>
+      </div>
       <footer className="player-foot milestone-foot">
         <div className="foot-inner">
           <div className="foot-actions cert-earned-actions">
@@ -323,23 +321,6 @@ function PocketLink({ lang, onOpen }: { lang?: HelpLanguage; onOpen: () => void 
       <PocketIcon />
       <span className="unit-tool-text"><Bi className="unit-tool-label" text={ui('pocketCard', lang)} /></span>
       <ChevronIcon size={18} />
-    </button>
-  );
-}
-
-/** On a finished unit's sign: a calm chip that opens its certificate. */
-export function CertBadge({ lang, onOpen }: { lang?: HelpLanguage; onOpen: () => void }) {
-  const help = ui('certificate', lang);
-  return (
-    <button
-      type="button"
-      className="cert-badge"
-      onClick={(e) => { e.stopPropagation(); onOpen(); }}
-      aria-label={`Certificaat · ${said(help)}`}
-    >
-      <CertIcon size={18} />
-      <span lang="nl">Certificaat</span>
-      <ChevronIcon size={16} />
     </button>
   );
 }
@@ -373,7 +354,7 @@ export function CertificatesCard({ progress, lang, onOpen }: {
               <button type="button" className="cert-row" onClick={() => onOpen(unit.id)}>
                 <span className="cert-row-text">
                   <span className="cert-row-nl" lang="nl">{unit.titleNl}</span>
-                  {lang?.gloss[unit.id] && <span className="cert-row-help" lang={lang.code} dir={lang.dir}>{lang.gloss[unit.id]}</span>}
+                  {lang?.gloss[unit.id] && <span className="cert-row-help" lang={langTag(lang.code)} dir={lang.dir}>{lang.gloss[unit.id]}</span>}
                   <span className="cert-row-date" lang="nl"><bdi dir="ltr">{certDate(day)}</bdi></span>
                 </span>
                 <ChevronIcon size={22} />

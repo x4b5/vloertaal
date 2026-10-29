@@ -78,3 +78,11 @@ describe('sayNumbers: sums and units', () => {
     expect(sayAs('Je krijgt 6,60 euro terug.')).toBe('Je krijgt 6 euro 60 terug.');
   });
 });
+
+describe('112 in an amount', () => {
+  it('is said as a number of euro, not digit by digit', () => {
+    expect(sayNumbers('€ 112')).not.toContain('één één twee');
+    expect(sayNumbers('112,50 euro')).not.toContain('één één twee');
+    expect(sayNumbers('Bel 112.')).toContain('één één twee');
+  });
+});

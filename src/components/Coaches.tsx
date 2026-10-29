@@ -32,8 +32,10 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
       }
       await navigator.clipboard.writeText(url);
       setCopied(unit.id);
-    } catch {
-      // Share sheet closed, or no clipboard access: show the link to copy by hand.
+    } catch (e) {
+      // The coach closed the share sheet: nothing more to do.
+      if ((e as DOMException | undefined)?.name === 'AbortError') return;
+      // Sharing or the clipboard did not work: show the link to copy by hand.
       window.prompt('Kopieer deze link:', url);
     }
   };

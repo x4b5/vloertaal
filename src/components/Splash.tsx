@@ -1,5 +1,5 @@
 import { Component, type ReactNode } from 'react';
-import { langMeta, NL_META } from '../i18n/meta';
+import { langMeta, langTag, NL_META } from '../i18n/meta';
 import { uiEn, type UiCode } from '../i18n/types';
 import { loadProgress } from '../lib/progress';
 import { RestartIcon } from './Icons';
@@ -36,7 +36,7 @@ export function Splash({ failed = false, onRetry, lang }: {
         <>
           <p className="boot-failed" role="alert">
             <span lang="nl" dir="ltr">{NL_META.ui.loadFailed}</span>
-            {help !== null && (help ? <span lang={help.code} dir={help.dir}>{help.ui.loadFailed}</span> : <span lang="en" dir="ltr">{uiEn.loadFailed}</span>)}
+            {help !== null && (help ? <span lang={langTag(help.code)} dir={help.dir}>{help.ui.loadFailed}</span> : <span lang="en" dir="ltr">{uiEn.loadFailed}</span>)}
           </p>
           <button type="button" className="boot-retry" onClick={onRetry} aria-label="Try again" title="Try again">
             <RestartIcon size={28} />

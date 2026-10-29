@@ -52,7 +52,8 @@ describe('the work-rules track renders in Dutch only', () => {
     noEnglish(m);
     expect(m).toContain('Werken in Nederland: zo gaat het');
     expect(m).not.toContain('Nederlands voor op de werkvloer');
-    expect(m.match(/Wat is de code\?</g)).toHaveLength(1);
+    // Once on screen (a speaker's name for screen readers, hidden, says it too).
+    expect(m.replace(/<span class="sr-only"[^>]*>[^<]*<\/span>/g, '').match(/Wat is de code\?</g)).toHaveLength(1);
     expect(m).toContain('Je krijgt de code van je werkgever');
     // No second (help-language) speaker: Dutch has its own.
     expect(m).not.toContain('help-say');

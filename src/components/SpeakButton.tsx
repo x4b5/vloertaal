@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { said, saidLang, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { canSay, speak, speakLong } from '../lib/audio';
+import { canSay, speak, speakLong, stopSaying } from '../lib/audio';
 import { useVoices } from './useVoices';
 import type { VoiceRef } from '../lib/voices';
 import { SlowIcon, SpeakerIcon } from './Icons';
@@ -43,6 +43,10 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
   const n = plays.text === text ? plays.n : 0;
   const nextSlow = !slow && n % 2 === 1;
   const play = ui('playAudio', help);
+  // A long text read sentence by sentence stops when its speaker goes (another screen, the next rule).
+  useEffect(() => {
+    if (long) return () => stopSaying(text);
+  }, [long, text]);
   if (needsDevice && lang === 'nl' && !canSay(text, voice)) return null;
   return (
     <button
@@ -53,9 +57,16 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
         else speak(text, slow || nextSlow, lang, voice);
         setPlays({ text, n: n + 1 });
       }}
-      aria-label={label ?? (hideText ? said(play) : `${said(play)}: ${text}`)}
-      lang={label ? undefined : saidLang(play)}
+      aria-label={label ?? (hideText ? said(play) : undefined)}
+      lang={label || !hideText ? undefined : saidLang(play)}
     >
+      {/* "Listen: Vrouw of man?" in two languages: the Dutch is read with a Dutch voice, not the help language's. */}
+      {!label && !hideText && (
+        <>
+          <span className="sr-only" lang={saidLang(play)}>{`${said(play)}: `}</span>
+          <span className="sr-only" lang={lang}>{text}</span>
+        </>
+      )}
       {glyph ? <SpeakerIcon size={30} /> : slow ? <SlowIcon size={size === 'lg' ? 40 : 28} /> : <SpeakerIcon size={size === 'lg' ? 44 : 28} />}
       {nextSlow && <span className="speak-turtle" aria-hidden><SlowIcon size={size === 'lg' ? 26 : 22} /></span>}
     </button>

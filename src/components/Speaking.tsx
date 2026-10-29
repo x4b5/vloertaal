@@ -178,10 +178,26 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
 
   // No microphone: Continue is open. After recording, the learner rates instead: "Sounds the
   // same" goes on (nothing is scored), "Say it again" records once more; Continue stays hidden.
+  // A new try after the microphone failed: Continue goes until it is over (a tap on it would end the
+  // recording halfway).
+  // A try that ends without a recording (an empty one, the app hidden) after the microphone had
+  // failed: Continue comes back, as before the try.
+  const wasOff = useRef(false);
   useEffect(() => {
-    if (phase === 'off') onAnswer({ correct: true });
+    if (phase === 'off') wasOff.current = true;
+    if (phase === 'off' || (phase === 'idle' && wasOff.current)) onAnswer({ correct: true });
+    if (phase === 'asking') onAnswer(null);
     onRating?.(phase === 'review');
   }, [phase, onAnswer, onRating]);
+  // The button that had the focus is gone (the microphone after recording, "Say it again"): the
+  // first button of the new phase gets it, so a keyboard or screen-reader user keeps their place.
+  const box = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const active = document.activeElement;
+    if (active && active !== document.body) return;
+    const to = box.current?.querySelector<HTMLButtonElement>('.say-compare button, button.say-mic') ?? document.querySelector<HTMLButtonElement>('.player-foot .btn-go:not([disabled])');
+    to?.focus({ preventScroll: true });
+  }, [phase]);
 
   // The app goes to the background mid-recording: stop, so the microphone is not left on.
   useEffect(() => {
@@ -205,6 +221,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
       return;
     }
     if (!alive.current) { stream.getTracks().forEach((t) => t.stop()); return; }
+    // The app went to the background while the microphone was asked for: no recording there.
+    if (document.visibilityState === 'hidden') { stream.getTracks().forEach((t) => t.stop()); setPhase('idle'); return; }
     streamRef.current = stream;
     let rec: MediaRecorder;
     try {
@@ -231,8 +249,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
       urlRef.current = URL.createObjectURL(blob);
       setPhase('review');
       setStatus(said(ui('speakMe', lang)));
-      // Hear yourself right away.
-      playMine();
+      // Hear yourself right away (not in the background: stopped because the app was hidden).
+      if (document.visibilityState !== 'hidden') playMine();
     };
     rec.start();
     setPhase('recording');
@@ -280,7 +298,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
   const meaning = gloss(item.id, item.en, lang);
 
   return (
-    <div className={`exercise say-ex say-is-${phase}`}>
+    <div className={`exercise say-ex say-is-${phase}`} ref={box}>
       <h2 className="prompt" tabIndex={-1}><Bi text={ui('speakPrompt', lang)} /></h2>
       <div className={`card say-card ${picture ? '' : 'say-card-text'}`}>
         {picture && <WordPicture className="say-pic" id={picture.id} emoji={picture.emoji} size={76} />}
@@ -288,8 +306,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
           <NlPair content nlFirst nl={breakable(item.nl)} nlClass="say-nl" dir="ltr" className="say-meaning" text={meaning} />
         </div>
         {/* The model is one tap away. While comparing, the speaker's own button below plays it
-            (one speaker per item). */}
-        {phase !== 'review' && <SpeakButton text={item.nl} voice={voice} help={lang} />}
+            (one speaker per item). Hidden while recording (its sound would be recorded too), its place kept. */}
+        {phase !== 'review' && <SpeakButton text={item.nl} voice={voice} help={lang} className={recording ? 'say-model-off' : undefined} />}
       </div>
 
       {listenFirst && (

@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { findLesson, playLesson } from './content/curriculum';
-import { ensureLanguage, getHelpLanguage, isLanguageLoaded } from './i18n';
+import { ensureLanguage, getHelpLanguage, isLanguageLoaded, langTag } from './i18n';
 import { Splash } from './components/Splash';
 import { loadPictures, usePicturesLoaded } from './pictures';
 import type { UiCode } from './i18n/types';
 import { isPlayable, learnedItems } from './content/courses';
-import { trackOf } from './lib/track';
+import { trackOf, trackOfId } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
@@ -19,7 +19,7 @@ import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
 // Screens in files of their own (loaded when needed, and in the background after the start).
-import { Admin, Coaches, KeepScreen, Milestone, PocketCardScreen, Settings, StreakStopped, needAtStart, warmScreensLater } from './lazyScreens';
+import { Admin, CertEarned, CertificateScreen, Coaches, KeepScreen, Milestone, PocketCardScreen, Settings, StreakStopped, needAtStart, warmScreensLater } from './lazyScreens';
 import { keepOffered } from './lib/keepOffered';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
@@ -29,13 +29,12 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
-import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
+import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dailyRuleIds, dailyRuleLesson, dailyWordIds, dueIds, gradedStepIds, seedCards, strongerCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
-import { CertEarned, CertificateScreen } from './components/Certificate';
 import { SAYINGS_FROM } from './content/sayings';
-import { earnCertificates, findUnit, unitDone, unitJustDone } from './lib/certificate';
+import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
 import { clockMinutes, count, countOpen, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
 import { explainReport, testerMode } from './lib/report';
 import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpdate';
@@ -96,8 +95,9 @@ const current = (): Entry | null => {
   const st = history.state as Partial<Entry> | null;
   return st && st.view ? (st as Entry) : null;
 };
-/** A screen a reload would not bring back: a lesson, its result and what follows it, the admin page. */
-const passing = (v: View) => v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'admin'
+/** A screen a reload would not bring back: a lesson, its result and what follows it (the reminder
+ *  offer too: its calendar file sends the learner away and back), the admin page. */
+const passing = (v: View) => v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'keep' || v.name === 'admin'
   || (v.name === 'phrasebook' && Boolean(v.streakUp || v.cert));
 /** After a reload: back on the screen you were on, but a lesson or its result starts over at home. */
 const restored = (): View => {
@@ -120,11 +120,30 @@ function startProgress() {
   return { progress, stopped: broken ?? null };
 }
 
+/** How long the start waits for a file that neither comes nor fails before it offers "Try again". */
+const STALLED_MS = 15_000;
+
 export default function App() {
   const [start] = useState(startProgress);
   const [progress, setProgress] = useState(start.progress);
+  const progressRef = useRef(progress);
+  progressRef.current = progress;
   /** "Je reeks is gestopt bij N": shown once on this open, before the path. */
   const [stopped, setStopped] = useState<number | null>(start.stopped);
+  // An app left open overnight (a phone that keeps it in the background): brought up to date for
+  // the new day when it comes back into view, as at the start.
+  useEffect(() => {
+    const onVis = () => {
+      // (Not during a lesson: one begun yesterday still counts for yesterday when it is finished.)
+      if (document.visibilityState !== 'visible' || viewRef.current.name === 'lesson') return;
+      const { progress: settled, broken } = settleStreak(progressRef.current, new Date());
+      if (settled === progressRef.current) return;
+      setProgress(settled);
+      if (broken) setStopped(broken);
+    };
+    document.addEventListener('visibilitychange', onVis);
+    return () => document.removeEventListener('visibilitychange', onVis);
+  }, []);
   /** The lesson just finished: the path scrolls to the next one and stamps this one in. */
   const [arrived, setArrived] = useState<string | null>(null);
   // From the intro page (?intro): the sneak preview, without the password page.
@@ -187,6 +206,29 @@ export default function App() {
       setGateAgain(true);
     }
   };
+  // A new screen (outside a lesson, which sees to its own focus): when the focus was lost with the
+  // button that led here, it goes to the screen's heading, so a screen reader says where you are
+  // and Tab goes on from there, not from the top of the page. A screen that put the focus on a
+  // button itself keeps it.
+  const screenKey = `${view.name}|${'page' in view ? view.page ?? '' : ''}|${'unit' in view ? view.unit : ''}|${step}`;
+  const firstScreen = useRef(true);
+  useEffect(() => {
+    if (firstScreen.current) { firstScreen.current = false; return; }
+    if (view.name === 'lesson') return;
+    // A screen of a file of its own (src/lazyScreens.tsx) may draw its heading a moment later.
+    let tries = 0;
+    let t = 0;
+    const look = () => {
+      const now = document.activeElement;
+      if (now && now !== document.body) return;
+      const h = document.querySelector<HTMLElement>('#root h1');
+      if (!h) { if (++tries < 20) t = window.setTimeout(look, 100); return; }
+      if (!h.hasAttribute('tabindex')) h.tabIndex = -1;
+      h.focus({ preventScroll: true });
+    };
+    t = window.setTimeout(look, 0);
+    return () => window.clearTimeout(t);
+  }, [screenKey]); // eslint-disable-line react-hooks/exhaustive-deps
   const onbRef = useRef({ step, back: stepBack });
   onbRef.current = { step, back: stepBack };
   /** A first-run page's back arrow: through the history when the page has its own entry (so the
@@ -247,14 +289,23 @@ export default function App() {
     land();
   };
   /** Back to the previous screen (as the Back button would), or home when there is none. */
+  // (A second tap before the first Back has landed, as a double tap on Continue, does nothing:
+  // it would go one more screen back, or out of the app.)
+  const goingBack = useRef(false);
   const back = () => {
-    if ((current()?.depth ?? 0) > 0) history.back();
-    else replace(HOME);
+    if (goingBack.current) return;
+    if ((current()?.depth ?? 0) > 0) {
+      goingBack.current = true;
+      // (Cleared by the popstate; also after a moment, so Back never stays dead.)
+      window.setTimeout(() => { goingBack.current = false; }, 1000);
+      history.back();
+    } else replace(HOME);
   };
 
   useEffect(() => {
     if (!current() && !adminRequested()) history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '');
     const onPop = () => {
+      goingBack.current = false;
       if (adminRequested()) return; // #beheer: the hashchange handler opens the admin page
       if (viewRef.current.name === 'lesson' && !leaving.current) {
         // Stay in the lesson (put its entry back) and open its pause sheet.
@@ -348,14 +399,21 @@ export default function App() {
   // open (its row "Waar woon je?"). Until they are here the app works without them: the path
   // without the region's unit, the Hulp tab without the map. At start main.tsx waits for them.
   const [, setRegionTry] = useState(0);
+  /** Bumped when the connection comes back after the region's file failed: it is asked again. */
+  const [regionRetry, setRegionRetry] = useState(0);
   const askingRegion = view.name === 'settings';
   const regionHere = regionReady(progress.region, progress.helpLang, askingRegion);
   useEffect(() => {
     if (regionHere) return;
     let live = true;
-    ensureRegionFor(progress.region, progress.helpLang, askingRegion).then(() => { if (live) setRegionTry((n) => n + 1); }, () => {});
-    return () => { live = false; };
-  }, [progress.region, progress.helpLang, askingRegion, regionHere]);
+    const again = () => { if (live) setRegionRetry((n) => n + 1); };
+    ensureRegionFor(progress.region, progress.helpLang, askingRegion).then(
+      () => { if (live) setRegionTry((n) => n + 1); },
+      // Not loaded (offline, a bad connection): asked again when the connection comes back.
+      () => { if (live) window.addEventListener('online', again, { once: true }); },
+    );
+    return () => { live = false; window.removeEventListener('online', again); };
+  }, [progress.region, progress.helpLang, askingRegion, regionHere, regionRetry]);
   // The word pictures (their own file, loading since the start): every screen after the language page has them.
   const picsReady = usePicturesLoaded();
   useEffect(() => {
@@ -363,11 +421,23 @@ export default function App() {
     setLangFailed(false);
     loadPictures().catch((e: unknown) => { void recoverFromLoadError(e).then((reloading) => { if (!reloading) setLangFailed(true); }); });
   }, [picsReady, progress.onboarded, langTry]);
+  // A file that neither comes nor fails (a connection that hangs): after a while the splash offers
+  // "Try again" too (a reload), and still goes on by itself if the file comes after all.
+  // Only a button: no reload when the connection comes back (that is for a file that failed), and
+  // nothing left behind once the file is here.
+  const waiting = !langReady || (progress.onboarded && !picsReady);
+  const [stalled, setStalled] = useState(false);
+  useEffect(() => {
+    if (!waiting || langFailed) return;
+    setStalled(false);
+    const t = window.setTimeout(() => setStalled(true), STALLED_MS);
+    return () => window.clearTimeout(t);
+  }, [waiting, langFailed]);
   const lang = getHelpLanguage(progress.helpLang, progress.gender);
   // The page's language is the help language (Dutch without one). The direction is set where the
   // layout is mirrored (the lesson player and the path), so Dutch never inherits right-to-left.
   useEffect(() => {
-    document.documentElement.lang = lang?.code ?? 'nl';
+    document.documentElement.lang = lang ? langTag(lang.code) : 'nl';
     document.documentElement.dir = 'ltr';
   }, [lang]);
 
@@ -404,8 +474,11 @@ export default function App() {
     return () => document.removeEventListener('visibilitychange', onVis);
   }, []);
   const lessonOpen = view.name === 'lesson' ? view.lessonId : null;
+  /** When the open lesson started: one begun before midnight counts for that day (practisedAt). */
+  const lessonStarted = useRef(new Date());
   useEffect(() => {
     lessonClock.current = startClock();
+    lessonStarted.current = new Date();
     if (lessonOpen) count('lesson-start', { lang: progress.helpLang, sector: progress.sector, lesson: lessonOpen, access });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonOpen]);
@@ -425,7 +498,20 @@ export default function App() {
   // Also on `onboarded`: Back to the language page clears the setting (English shows there), and
   // picking the same language again must hide the English again, though helpLang did not change.
   useEffect(() => { applyEnglish(englishLangFor(progress.helpLang, progress.onboarded)); }, [progress.helpLang, progress.onboarded]);
-  useEffect(() => { window.scrollTo(0, 0); }, [view.name]);
+  // A new screen starts at the top; Back from a topic to "Alle onderwerpen" goes back to where the
+  // list was (a long list with the other sectors' topics).
+  const scrollAt = useRef<Record<string, number>>({});
+  useEffect(() => {
+    const on = () => { scrollAt.current[viewRef.current.name] = window.scrollY; };
+    window.addEventListener('scroll', on, { passive: true });
+    return () => window.removeEventListener('scroll', on);
+  }, []);
+  const lastScreen = useRef(view.name);
+  useEffect(() => {
+    const from = lastScreen.current;
+    lastScreen.current = view.name;
+    window.scrollTo(0, view.name === 'all' && from === 'topic' ? scrollAt.current.all ?? 0 : 0);
+  }, [view.name]);
   // A preview never plays a later unit (e.g. via Back/Forward into an old entry): go home.
   useEffect(() => {
     if (view.name === 'lesson' && access && !lessonAllowed(view.lessonId, access)) replace(HOME);
@@ -441,16 +527,23 @@ export default function App() {
     if (!focusUnit || linkHandled.current || !access || step !== 'done') return;
     linkHandled.current = true;
     const unit = findUnit(focusUnit);
+    // A topic this app or this track does not have (a link to the other track's topic): the home
+    // stays on the learner's own block.
+    if (!unit || trackOfId(unit.id) !== trackOf(progress)) {
+      setFocusUnit(null);
+      forgetLinkedUnit();
+      return;
+    }
     // Outside the preview: never land on a locked topic. The home stays on its block (1.1) and
     // offers this topic's unlock.
-    if (unit && !unitAllowed(focusUnit, access)) {
+    if (!unitAllowed(focusUnit, access)) {
       setFocusUnit(null);
       forgetLinkedUnit();
       setLockedLink(unit.id);
       return;
     }
     // A finished topic (to practise again): its topic page.
-    if (unit && unitDone(unit, progress.completed)) {
+    if (unitDone(unit, progress.completed)) {
       setFocusUnit(null);
       forgetLinkedUnit();
       if (viewRef.current.name === 'home') go({ name: 'topic', unit: unit.id, focus: true });
@@ -462,7 +555,7 @@ export default function App() {
   // The coach's locked topic is offered on the home until a lesson starts.
   useEffect(() => { if (view.name === 'lesson') setLockedLink(null); }, [view.name]);
 
-  const setLang = (code: UiCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
+  const setLang = (code: UiCode | null) => setProgress((p) => ({ ...switchTrack(p, code), onboarded: true }));
   /** The learner's track: the Dutch course, or the work-rules track with the screens in Dutch ('nl'). */
   const track = trackOf(progress);
   /** "Try one lesson first": lesson 1.1 (of the learner's track), its result, then the password page again. */
@@ -486,6 +579,15 @@ export default function App() {
   /** The learner's region (src/content/regio), for its Sociale kaart on the Hulp tab (once its file is here). */
   const region = regionOf(progress.region);
   const mapLink = region ? <SocialMapLink region={region} lang={lang} onOpen={() => go({ name: 'socialmap' })} /> : undefined;
+  /** The Hulp tab. The work-rules track: who to call, and "Alle regels" (instead of the emergency phrases). */
+  const hulpTab = () => (
+    <>
+      {track === 'regels'
+        ? <RulesHelp lang={lang} onShelf={() => go({ name: 'tips' })} after={mapLink} />
+        : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} after={mapLink} />}
+      <BottomNav current="words" onTab={tab} lang={lang} />
+    </>
+  );
 
   // "Keep lessons on this phone" (Settings → This phone): the current topic is kept by itself.
   useAutoOffline(progress, access);
@@ -500,7 +602,7 @@ export default function App() {
     const leave = () => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname + location.search); setCoachDirect(false); setView(HOME); };
     return <Coaches onBack={leave} lang={langReady && progress.onboarded ? lang : undefined} />;
   }
-  if ((!langReady || (progress.onboarded && !picsReady)) && view.name !== 'admin') return <Splash failed={langFailed} onRetry={() => location.reload()} lang={progress.helpLang} />;
+  if ((!langReady || (progress.onboarded && !picsReady)) && view.name !== 'admin') return <Splash failed={langFailed || stalled} onRetry={() => location.reload()} lang={progress.helpLang} />;
   if (view.name === 'admin') {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
@@ -555,7 +657,7 @@ export default function App() {
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
-        const now = new Date();
+        const now = practisedAt(lessonStarted.current, new Date(), progress.lastDay);
         const today = dayKey(now);
         const cards = progress.cards ?? {};
         const next = earnCertificates(daily
@@ -565,7 +667,8 @@ export default function App() {
             ? addLessonItems(cards, gradedStepIds(found.lesson), results, today)
             : addLessonWords(cards, found.lesson.words, results, today) }, now);
         // The lesson's unit is the current block while it is unfinished (see src/lib/route.ts).
-        if (!daily) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
+        // (A lesson done before, practised again, leaves the block where it is.)
+        if (!daily && !progress.completed[view.lessonId]) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
         // The very first lesson: its result shows, once, where the emergency phrases are.
         // (A phone that did the old trial lesson before a code shows it after its next lesson.)
         const phrases = !daily && !progress.phrasesShown && Object.keys(progress.completed).every((id) => trialLessonAllowed(id, track));
@@ -674,16 +777,16 @@ export default function App() {
       // After "Certificaat behaald", the day-streak milestone still follows (once per day).
       const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
       return view.name === 'cert-earned' ? (
-        <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
+        <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} region={progress.region} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
           onPocket={() => replace({ name: 'pocket', unit: unit.id, streakUp: view.streakUp })} />
       ) : (
-        <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} onBack={onward} />
+        <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} region={progress.region} onBack={onward} />
       );
     }
     case 'pocket': {
       const unit = findUnit(view.unit);
       // From "Certificaat behaald": the day-streak milestone still follows.
-      return unit ? <PocketCardScreen unit={unit} lang={lang} sector={progress.sector} onBack={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())} /> : null;
+      return unit ? <PocketCardScreen unit={unit} lang={lang} sector={progress.sector} region={progress.region} onBack={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())} /> : null;
     }
     case 'all':
       return (
@@ -762,6 +865,7 @@ export default function App() {
               // stored apart and stays too); only learning progress is wiped (and lessons in
               // progress). So the app goes on at the home, not at the language list again.
               clearSave();
+              forgetCertName();
               setProgress((p) => ({
                 ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
                 sector: p.sector, region: p.region, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked,
@@ -777,25 +881,17 @@ export default function App() {
         </>
       );
     }
-    case 'words':
-      return (
-        <>
-          {/* The work-rules track: who to call, and "Alle regels" (instead of the emergency phrases). */}
-          {track === 'regels'
-            ? <RulesHelp lang={lang} onShelf={() => go({ name: 'tips' })} after={mapLink} />
-            : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} after={mapLink} />}
-          <BottomNav current="words" onTab={tab} lang={lang} />
-        </>
-      );
     case 'socialmap':
       // Back from a region switched off meanwhile (or its file not here): the Hulp tab.
-      if (!region) return null;
-      return (
+      if (region) return (
         <>
           <SocialMap region={region} lang={lang} onBack={back} />
           <BottomNav current="words" onTab={tab} lang={lang} />
         </>
       );
+      return hulpTab();
+    case 'words':
+      return hulpTab();
     default:
       if (stopped !== null) {
         return <StreakStopped streak={stopped} best={bestStreak(progress)} lang={lang} onDone={() => setStopped(null)} />;

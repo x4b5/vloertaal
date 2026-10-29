@@ -1,6 +1,7 @@
-// App files: network first, cache as fallback, so the app is always fresh online and still
-// opens offline. Recorded sound of a unit the learner saved for offline use (the "Save for
-// offline" chip under a unit, src/lib/offline.ts) is answered from its own cache first.
+// App files: network first, cache as fallback (also when the network stalls), so the app is
+// always fresh online and still opens offline; this build's hashed files straight from the cache.
+// Recorded sound of a unit the learner saved for offline use (the "Save for offline" chip under
+// a unit, src/lib/offline.ts) is answered from its own cache first.
 //
 // Each build gets its own app cache: the build writes its id and its hashed files into BUILD and
 // FILES below (vite.config.ts, swBuild), so this file changes with every deploy, the browser
@@ -137,6 +138,38 @@ async function fromCache(req) {
   return Response.error();
 }
 
+/** A link that connects but stalls (a bus, a greenhouse): after this long a cached copy answers. */
+const STALL_MS = 4000;
+
+/**
+ * The network's answer (`net`), or, when it takes longer than STALL_MS, the copy `copy()` finds
+ * (none: keep waiting for the network). A failed fetch rejects as before (the caller's fallback).
+ */
+function orCopy(net, copy) {
+  return new Promise((resolve, reject) => {
+    let settled = false;
+    const settle = (fn, value) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      fn(value);
+    };
+    const timer = setTimeout(() => copy().then((hit) => hit && settle(resolve, hit), () => {}), STALL_MS);
+    net.then((res) => settle(resolve, res), (e) => settle(reject, e));
+  });
+}
+
+/**
+ * What answers a stalled request: its own cached copy; for the start page, the app's page. Another
+ * page of the site is waited for (the app's page can't stand in at its address).
+ */
+async function stallCopy(req, url) {
+  const navigate = req.mode === 'navigate';
+  const hit = await caches.match(req.url, { ignoreSearch: navigate });
+  if (hit || !navigate || url.pathname !== new URL(scope()).pathname) return hit;
+  return fromCache(req);
+}
+
 async function audio(req) {
   // Saved for offline: from the phone, no network needed.
   const saved = await caches.open(OFFLINE).then((c) => c.match(req.url));
@@ -146,9 +179,11 @@ async function audio(req) {
     if (req.headers.get('x-vloertaal-save')) return await fetch(req);
     // A player asks for a part (Range: bytes=0-) and gets 206, which can't be kept: ask for the
     // whole clip (they are small), keep it, and answer the part asked for from it.
-    const res = await fetch(req.url);
-    keep(req, res, AUDIO);
-    return res.ok ? ranged(res, req) : res;
+    const net = fetch(req.url).then((res) => {
+      keep(req, res, AUDIO);
+      return res.ok ? ranged(res, req) : res;
+    });
+    return await orCopy(net, () => caches.match(req.url).then((hit) => hit && ranged(hit, req)));
   } catch {
     const hit = await caches.match(req.url);
     return hit ? ranged(hit, req) : Response.error();
@@ -163,11 +198,14 @@ self.addEventListener('fetch', (e) => {
     e.respondWith(audio(req));
     return;
   }
+  // A hashed app file never changes (a new version has a new name): the cached copy, no network.
+  if (built.has(url.href)) {
+    e.respondWith(caches.match(req.url).then((hit) => hit || fetch(req).then((res) => keep(req, res))));
+    return;
+  }
   // A hashed app file the server no longer has (an old tab after an update): the cached copy, if
   // any. None: the page sees the failed file and loads the new version (src/lib/appUpdate.ts).
-  e.respondWith(
-    fetch(req)
-      .then((res) => (!res.ok && url.pathname.includes('/assets/') ? caches.match(req.url).then((hit) => hit || res) : keep(req, res)))
-      .catch(() => fromCache(req)),
-  );
+  const net = fetch(req).then((res) => (!res.ok && url.pathname.includes('/assets/') ? caches.match(req.url).then((hit) => hit || res) : keep(req, res)));
+  // A request that asks for the server's answer (the update check, src/lib/appUpdate.ts) waits for it.
+  e.respondWith((req.cache === 'no-store' ? net : orCopy(net, () => stallCopy(req, url))).catch(() => fromCache(req)));
 });

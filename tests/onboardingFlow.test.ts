@@ -32,9 +32,9 @@ describe('first-run order: language, gender (gendered only), password, sector', 
     expect(onboardingStep({ ...fresh, onboarded: true, helpLang: null }, null)).toBe('gate');
   });
 
-  it('back from the sector shows the password page again, with the code kept', () => {
+  it('back from the sector shows the password page again, with the code kept (not while open to all)', () => {
     const p = { ...fresh, onboarded: true, helpLang: 'ar' as const, gender: 'm' as const, genderAsked: true };
-    expect(onboardingStep(p, 'full', true)).toBe('gate');
+    expect(onboardingStep(p, 'full', true)).toBe(OPEN_TO_ALL ? 'sector' : 'gate');
     expect(previousStep('sector', p)).toBe(OPEN_TO_ALL ? 'gender' : 'gate');
   });
 

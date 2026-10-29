@@ -1,11 +1,11 @@
-import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { createContext, type RefObject, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import type { ChatLine } from '../content/types';
 import { sayingQuestion } from '../content/sayings';
 import { fillN, gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { checkTyped, nextTileOrder, sentenceOrders } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
-import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, tileLabel, type Exercise } from '../lib/exercises';
+import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, sentences, splitQuote, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
@@ -135,6 +135,36 @@ function WrongStamp({ lang }: { lang?: HelpLanguage }) {
 
 /** A wrong tap's mark (a short shake, red, a small cross) stays a moment, then goes: calm
  *  feedback, and the exercise waits for the right one. */
+/**
+ * Tiles that change under the finger: after a right tile the next set appears in the same place,
+ * and the second tap of a double tap would land on it (and count as a wrong tap). A tap in the
+ * first moment after a change is not counted.
+ */
+function useSettledTiles(ms = 250) {
+  const changed = useRef(0);
+  return {
+    changed: () => { changed.current = performance.now(); },
+    settling: () => performance.now() - changed.current < ms,
+  };
+}
+
+/**
+ * After the tile or card that had the focus is gone (a new set of tiles) or switched off (a pair
+ * made), the first one still to tap gets it: a keyboard or screen-reader user keeps their place.
+ * Not on the first draw (the prompt has the focus then).
+ */
+function useRefocus(box: RefObject<HTMLElement | null>, change: unknown) {
+  const first = useRef(true);
+  useEffect(() => {
+    if (first.current) { first.current = false; return; }
+    const active = document.activeElement as HTMLButtonElement | null;
+    if (active && active !== document.body && !active.disabled) return;
+    // None left (the last pair made): the footer's Continue.
+    const to = box.current?.querySelector<HTMLButtonElement>('button:not([disabled])') ?? document.querySelector<HTMLButtonElement>('.player-foot .btn-go:not([disabled])');
+    to?.focus({ preventScroll: true });
+  }, [change]); // eslint-disable-line react-hooks/exhaustive-deps
+}
+
 function useMiss<T>(): [T | null, (v: T | null) => void] {
   const [miss, setMiss] = useState<{ v: T } | null>(null);
   useEffect(() => {
@@ -473,6 +503,10 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
     return () => window.clearTimeout(t);
   }, [hit, words.length]);
 
+  const cardBox = useRef<HTMLDivElement>(null);
+  useRefocus(cardBox, hit);
+  /** Said to a screen reader: the pair made, or a wrong card (the cards themselves change silently). */
+  const [heard, setHeard] = useState<{ nl?: string; ok: boolean; n: number } | null>(null);
   const pick = (w: (typeof words)[number]) => {
     if (hit) return;
     const r = matchTap(words, state, w.id);
@@ -482,11 +516,13 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
       sounds.correct();
       setMiss(null);
       setHit(w.id);
+      setHeard((h) => ({ nl: w.nl, ok: true, n: (h?.n ?? 0) + 1 }));
       // Graded like a sentence built word by word: one stray wrong tap is forgiven, more is a mistake.
       if (r.finished) onAnswer({ ...stepGrade(r.state.wrong), missed: [...missed.current] });
     } else {
       sounds.tap();
       setMiss(w.id);
+      setHeard((h) => ({ ok: false, n: (h?.n ?? 0) + 1 }));
       missed.current.add(current.id);
     }
   };
@@ -505,7 +541,13 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
       <div className="match-dots" aria-hidden>
         {words.map((w, i) => <span key={w.id} className={`match-dot ${done.has(w.id) ? 'is-done' : i === step ? 'is-now' : ''}`} />)}
       </div>
-      <div className="choices choices-rows match-cards">
+      {/* Always there (a live region that comes and goes is not read); the same words twice in a
+          row differ by a space at the end, so they are read again. */}
+      <p className="sr-only" aria-live="polite">
+        {heard?.nl && <span lang="nl">{heard.nl}: </span>}
+        {heard && <span lang={saidLang(ui(heard.ok ? 'correct' : 'incorrect', lang))}>{srText(ui(heard.ok ? 'correct' : 'incorrect', lang))}{heard.n % 2 ? '\u00a0' : ''}</span>}
+      </p>
+      <div className="choices choices-rows match-cards" ref={cardBox}>
         {cards.map((w) => {
           const made = done.has(w.id);
           return (
@@ -567,10 +609,14 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   // The wrong taps shown after the sentence: each wrong word at each place once (tapping the same
   // wrong tile again is the same mistake).
   const shownWrongs = wrongs.filter((x, i) => wrongs.findIndex((y) => y.at === x.at && y.word === x.word) === i);
+  const tiles = useSettledTiles();
+  const bankBox = useRef<HTMLDivElement>(null);
+  useRefocus(bankBox, at);
   const tap = (w: string) => {
-    if (locked || complete) return;
+    if (locked || complete || tiles.settling()) return;
     const order = nextTileOrder(orders, words.slice(0, at), w, path);
     if (order >= 0) {
+      tiles.changed();
       speak(w, false, 'nl', voiceFor(who));
       setMiss(null);
       if (order !== path) setPath(order);
@@ -579,7 +625,8 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       setAt(next);
       if (next >= built.length) onAnswer({ ...stepGrade(wrongTaps.current, BUILD_FORGIVEN_TAPS), done: true, missed: [...new Set(wrongsRef.current.map((x) => built[x.at]))] });
     } else {
-      wrongTaps.current += 1;
+      // The same wrong tile again is the same mistake (as in the line after the sentence).
+      if (!wrongsRef.current.some((x) => x.at === at && x.word === w)) wrongTaps.current += 1;
       wrongsRef.current = [...wrongsRef.current, { at, word: w }];
       setWrongs(wrongsRef.current);
       sounds.tap();
@@ -627,7 +674,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       )}
       {/* Three words for the next place; each has its own small speaker that only plays it. */}
       {!complete && (
-        <div className="tile-bank tile-steps" dir="ltr" key={at}>
+        <div className="tile-bank tile-steps" dir="ltr" key={at} ref={bankBox}>
           {steps[at].map((t) => (
             <span key={t} className="tile-slot">
               <button
@@ -730,21 +777,29 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
   const wrongTaps = useRef(0);
   const [miss, setMiss] = useMiss<number>();
   useEffect(() => { autoSpeak(ex.word.nl); }, [ex.word]);
+  const lookalikes = useMemo(() => typedLookalikes(ex), [ex]);
   const typed = (v: string) => {
     setValue(v);
     if (!v.trim()) return onAnswer(null);
-    const r = checkTyped(v, ex.word.nl);
+    const r = checkTyped(v, ex.word.nl, lookalikes);
     onAnswer({ correct: r !== 'wrong', almost: r === 'almost' });
   };
+  const tiles = useSettledTiles();
+  const triedWrong = useRef(new Set<string>());
+  const letterBox = useRef<HTMLDivElement>(null);
+  useRefocus(letterBox, at);
   const tapTile = (i: number) => {
-    if (locked || at >= steps.length) return;
+    if (locked || at >= steps.length || tiles.settling()) return;
     const step = steps[at];
     if (step.options[i] !== step.answer) {
-      wrongTaps.current += 1;
+      // The same wrong tile again is the same mistake.
+      if (!triedWrong.current.has(`${at}:${i}`)) wrongTaps.current += 1;
+      triedWrong.current.add(`${at}:${i}`);
       sounds.tap();
       setMiss(i);
       return;
     }
+    tiles.changed();
     sounds.tap();
     setMiss(null);
     const v = value + step.answer.text;
@@ -767,6 +822,7 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
           autoFocus
           autoComplete="off"
           autoCapitalize="off"
+          autoCorrect="off"
           spellCheck={false}
           readOnly={locked}
           aria-invalid={verdict === 'wrong' || undefined}
@@ -775,6 +831,14 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
           placeholder="…"
           aria-label={srText(ui('yourAnswer', lang))}
           onChange={(e) => typed(e.target.value)}
+          // Enter (or the phone keyboard's Done) checks the word, as the Check button does.
+          enterKeyHint="done"
+          onKeyDown={(e) => {
+            if (e.key !== 'Enter' || locked || !value.trim()) return;
+            e.preventDefault();
+            const r = checkTyped(value, ex.word.nl, lookalikes);
+            onAnswer({ correct: r !== 'wrong', almost: r === 'almost', done: true });
+          }}
         />
       ) : (
         <>
@@ -791,7 +855,7 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
             </output>
           </div>
           {at < steps.length && (
-            <div className="letter-bank letter-steps" dir="ltr" key={at}>
+            <div className="letter-bank letter-steps" dir="ltr" key={at} ref={letterBox}>
               {steps[at].options.map((t, i) => (
                 <button
                   key={`${at}-${i}`}

@@ -139,6 +139,12 @@ describe('regions: the path', () => {
     // Numbered in the region's path (pocket card): right after u.travel.
     const travel = units.findIndex((u) => u.id === 'u.travel');
     expect(unitIndex(zlTaalUnit, 'none')).toBe(travel + 1);
+    // A unit after it, for a learner of the region: the number on their path (certificate, pocket card).
+    for (const sector of ['none', 'construction'] as const) {
+      const order = routeOrder(sector, 'taal', 'zl');
+      expect(order.some((x) => x.id === 'rg.zl.u')).toBe(true);
+      for (const u of order.filter((x) => !x.id.startsWith('rg.'))) expect(unitIndex(u, sector, 'taal', 'zl'), u.id).toBe(order.indexOf(u));
+    }
   });
 
   it('is in the theme "Leven in Nederland", in both tracks', () => {

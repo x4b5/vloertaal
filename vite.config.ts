@@ -26,7 +26,7 @@ function nonBlockingCss(): Plugin {
       order: 'post',
       handler: (html) =>
         html.replace(/<link rel="stylesheet"((?:(?!>)[^])*?) href="(\.\/assets\/[^"]+\.css)"([^>]*)>/g,
-          (_m, a: string, href: string, b: string) => `<link rel="stylesheet"${a} href="${href}"${b} data-app-css media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="${href}"></noscript>`),
+          (_m, a: string, href: string, b: string) => `<link rel="stylesheet"${a} href="${href}"${b} data-app-css media="print" onload="this.media='all'" onerror="this.dataset.failed='1'"><noscript><link rel="stylesheet" href="${href}"></noscript>`),
     },
   };
 }
@@ -63,10 +63,34 @@ function lazyScreenLinks(): Plugin {
       handler: (html, ctx) => {
         if (!ctx.bundle) return html;
         const links = screenChunkFiles(ctx.bundle).map((f) => `<link rel="vloertaal-screen" href="./${f}">`).join('');
-        return html.replace('</head>', `${links}</head>`);
+        // And what a returning learner's first screen needs, asked for right away (bootPreloadScript).
+        return html.replace('</head>', `${links}${bootPreloadScript(ctx.bundle)}</head>`);
       },
     },
   };
+}
+
+/**
+ * A returning learner's first screen waits for their help language's file and the word pictures
+ * (src/main.tsx), which the app only asks for once its main file has loaded and run. A few lines
+ * in index.html ask for those two right away instead, next to the main file (modulepreload), when
+ * this phone's progress says which language: one wait instead of two in a row on a slow
+ * connection. A new visitor gets nothing extra. The names come from this build.
+ */
+export function bootPreloadScript(bundle: Record<string, { type: string; fileName: string; facadeModuleId?: string | null }>): string {
+  const packs: Record<string, string> = {};
+  let pictures = '';
+  for (const c of Object.values(bundle)) {
+    if (c.type !== 'chunk' || !c.facadeModuleId) continue;
+    const pack = c.facadeModuleId.match(/[\\/]src[\\/]i18n[\\/]packs[\\/]([a-z]+)\.ts$/);
+    if (pack) packs[pack[1]] = `./${c.fileName}`;
+    if (/[\\/]src[\\/]pictures[\\/]words\.tsx?$/.test(c.facadeModuleId)) pictures = `./${c.fileName}`;
+  }
+  // Also the learner's look and text size, before the first paint (src/lib/theme.ts and
+  // textSize.ts again, small): a dark theme on a light phone must not flash light while the app
+  // file loads. A save without a theme is from before the choice: light (src/lib/progress.ts).
+  const look = `var d=document.documentElement,t=p.theme===undefined?'light':p.theme;if(t==='light'||t==='dark'){d.dataset.theme=t;document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute('content',t==='dark'?'#16191c':'#e7e3dc')})}if(p.textSize==='large'||p.textSize==='xl')d.dataset.text=p.textSize`;
+  return `<script>try{var p=JSON.parse(localStorage.getItem('vloertaal:v1')||'null'),f=${JSON.stringify(packs)},a=function(h){if(!h)return;var l=document.createElement('link');l.rel='modulepreload';l.href=h;document.head.appendChild(l)};if(p){${look}}if(p&&p.onboarded){a(f[p.helpLang]);a(${JSON.stringify(pictures)})}}catch(e){}</script>`;
 }
 
 /** vloertaal.nl/nieuw: "Wat is er nieuw?", a plain page made from src/content/updates.ts. */

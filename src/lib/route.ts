@@ -102,7 +102,7 @@ export function currentBlock(input: RouteInput, today: Date = new Date(), access
   // At most one topic waits for its mixed review: when another one already does, this block's
   // mixed review is played now, so topics get finished (and their certificate earned) also by a
   // learner who does "Herhaal vandaag" every day.
-  const parked = courseUnits(track).some((u) => u.id !== block.id && started(u, input.completed) && onlyMixLeft(u, input.completed));
+  const parked = [...courseUnits(track), ...regionUnits(input.region, track)].some((u) => u.id !== block.id && started(u, input.completed) && onlyMixLeft(u, input.completed));
   const mixOnly = !parked && input.pickedUnit !== block.id && input.reviewDay === dayKey(today) && onlyMixLeft(block, input.completed);
   if (!gated && !mixOnly) return block;
   const next = nextChoices(input.sector, input.completed, undefined, courseUnits(track).length + 1, track, input.region)

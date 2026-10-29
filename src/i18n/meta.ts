@@ -89,3 +89,9 @@ export function langMeta(code: UiCode | null | undefined): LangMeta<UiCode> | un
 export function metaLanguage(meta: LangMeta<UiCode>): HelpLanguage {
   return { code: meta.code, name: meta.name, nativeName: meta.nativeName, dir: meta.dir, reviewed: meta.reviewed, ui: { ...meta.ui }, gloss: {} };
 }
+
+/** A help language's code as a `lang` attribute: Dari ("prs") as "fa-AF", which phones' voices
+ *  and screen readers know (as for its dates and plurals). */
+export function langTag(code: string): string {
+  return code === 'prs' ? 'fa-AF' : code;
+}

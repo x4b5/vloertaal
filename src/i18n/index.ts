@@ -1,11 +1,11 @@
 import { mixLessonId, relatedUnits } from '../content/review';
-import { langMeta, languageMeta } from './meta';
+import { langMeta, languageMeta, langTag } from './meta';
 import type { LanguagePack, RegionTextPack } from './packs/types';
 import type { CultureTranslation } from './culture/types';
 import type { Gender, HelpLanguage, HelpLanguageSource, LangCode, LangText, PluralCategory, PluralForms, UiCode, UiKey, UiText } from './types';
 import { forGender, GENDERED_LANGS, isPlural, PLURAL_CATEGORIES, uiEn } from './types';
 
-export { languageMeta, langMeta, languageMark, metaLanguage, LANG_CODES, NL_META, NL_MORE, type LangMeta } from './meta';
+export { languageMeta, langMeta, langTag, languageMark, metaLanguage, LANG_CODES, NL_META, NL_MORE, type LangMeta } from './meta';
 
 /**
  * The help languages are loaded on demand: each is its own file (src/i18n/packs), about 50 kB
@@ -278,5 +278,5 @@ export function said(text: Bilingual): string {
 
 /** The `lang` attribute for said(text): the help language's code, or English. */
 export function saidLang(text: Bilingual): string {
-  return text.help && text.lang ? text.lang.code : 'en';
+  return text.help && text.lang ? langTag(text.lang.code) : 'en';
 }

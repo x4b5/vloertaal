@@ -3,7 +3,7 @@ import type { Lesson } from '../content/types';
 import type { SectorChoice } from '../content/sectors';
 import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
-import { autoSpeak, sounds, speak, speechAvailable, stopSpeech, surelySilent } from '../lib/audio';
+import { autoSpeak, sounds, speak, stopSpeech, surelySilent } from '../lib/audio';
 
 /** Can the phone say this line, as far as is known (see surelySilent: no index yet counts as yes). */
 const mayBeHeard = (text: string) => !surelySilent(text);
@@ -321,9 +321,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart, sector, sayingsAtStart],
   );
   // The saved place in that list, with the mistakes queued then (null: start from the top).
-  const [resumed] = useState(() => (saved ? restoreSave(saved, initial) : null));
+  // A mistake comes back in a new form made from its place in the queue (forRetry, as check() does).
+  const [resumed] = useState(() => (saved ? restoreSave(saved, initial, (e, at) => forRetry(e, lesson, seed + at)) : null));
   const [queue, setQueue] = useState<Exercise[]>(() => resumed?.queue ?? [...initial, ...(repeats ?? [])]);
   const [index, setIndex] = useState(() => resumed?.index ?? startAt);
+  /** For each exercise queued after the built list: the built exercise it came back from (-1: given
+   *  from outside, `repeats`), so the place can be saved (lib/resume.ts makeSave). */
+  const retryFrom = useRef<number[]>(resumed ? [...saved!.repeats] : (repeats ?? []).map(() => -1));
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [checked, setChecked] = useState(false);
   /** A speaking exercise in its compare-and-rate step: its own buttons go on, Continue hides. */
@@ -374,7 +378,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   /** "Without sound" without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
   const soundOff = quiet || cantListen;
-  const audioOff = !speechAvailable() || soundOff;
+  // Not "no speech engine": the recorded clips play without one (a WebView inside WhatsApp has
+  // none). An exercise nothing can say is left out on its own (unheard, mayBeHeard).
+  const audioOff = soundOff;
   /** Listening exercises left out, counted out loud on the result. */
   const skipped = useRef(0);
   /** Short line after the sound changed: 'off' = without sound, 'on' = sound on. */
@@ -393,7 +399,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const voices = useVoices();
   const ex: Exercise = useMemo(() => {
     if (queued && queued.kind === 'build' && queued.audio && (audioOff || unheard(queued, mayBeHeard))) return { ...queued, audio: undefined };
-    if (queued && queued.kind === 'dutch' && queued.textOnly && nonLatinAtStart && audioOff) {
+    if (queued && queued.kind === 'dutch' && queued.textOnly && nonLatinAtStart && (audioOff || surelySilent(queued.word.nl))) {
       return { kind: 'meaning', word: queued.word, options: queued.options };
     }
     return queued;
@@ -415,7 +421,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     // Started again: the old save stays until the first answer.
     if (fresh && at === 0) return;
     const save = makeSave({
-      lessonId: lesson.id, review, quiet: quietAtStart, seed, initial, queue: s.queue, index: at,
+      lessonId: lesson.id, review, quiet: quietAtStart, seed, initial, queue: s.queue, index: at, from: retryFrom.current,
       right: graded.current.right, total: graded.current.total, words: wordResults.current,
       run: s.run, misses: s.misses, now: Date.now(),
     });
@@ -444,6 +450,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   }, [reportHint]);
   // The ✕ and the system Back button open the pause sheet (a resumable lesson keeps its place).
   const [askQuit, setAskQuit] = useState(false);
+  /** The ✕: focus goes back to it when the pause sheet closes (its buttons are gone then). */
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const hadSheet = useRef(false);
+  useEffect(() => {
+    if (hadSheet.current && !askQuit) closeRef.current?.focus({ preventScroll: true });
+    hadSheet.current = askQuit;
+  }, [askQuit]);
   const firstBack = useRef(backSignal);
   useEffect(() => {
     if (backSignal === firstBack.current) return;
@@ -451,7 +464,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     setAskQuit((open) => !open);
   }, [backSignal]);
   const footRef = useRef<HTMLElement>(null);
-  const bodyRef = useRef<HTMLElement>(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
   /**
    * The footer is pinned to the bottom, unless it would take more than three quarters of the
    * screen (200% zoom): then it scrolls with the page. A long feedback label scrolls inside
@@ -578,6 +591,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     // Only the index matters: the queue grows when a mistake is queued, on the same exercise.
   }, [index]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  /** The exercise on screen comes back once at the end, in a new form (lib/exercises.ts forRetry). */
+  function queueRetry() {
+    retryFrom.current = [...retryFrom.current, index];
+    setQueue((q) => [...q, forRetry(ex, lesson, seed + q.length)]);
+  }
+
   function check(given: Answer | null = answer) {
     const answer = given;
     if (!answer || checked) return;
@@ -602,7 +621,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     // A finished match board already gave its feedback tile by tile. Two or more wrong taps make
     // it a mistake, which comes back once at the end (as a built sentence does).
     if (ex.kind === 'match') {
-      if (!answer.correct && index < initial.length) setQueue((q) => [...q, forRetry(ex, lesson, seed + q.length)]);
+      if (!answer.correct && index < initial.length) {
+        queueRetry();
+        return next(1);
+      }
       return next();
     }
     // The choreography (styles.css, "Answer moment"): t=0 the options colour, the chime plays
@@ -628,7 +650,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       sounds.wrong();
       // A mistake comes back once at the end of the lesson; no endless loops.
       // It comes back in a new form: other order, other wrong options (lib/exercises.ts forRetry).
-      if (index < initial.length) setQueue((q) => [...q, forRetry(ex, lesson, seed + q.length)]);
+      if (index < initial.length) queueRetry();
     }
     const sol = solution(ex);
     const said = announce(ex, answer.correct, answer.almost, answer.given?.[0]);
@@ -693,7 +715,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
    *  skipped either). Without a usable microphone it stays, as "say it out loud" (Speaking.tsx). */
   const cantSpeak = (e: Exercise) => e.kind === 'speak' && speakSkipped(soundOff);
 
-  function next() {
+  /** On to the next exercise; `queued`: retries just added this moment (not in `queue` yet). */
+  function next(queued?: number) {
+    const coming = typeof queued === 'number' ? queued : 0;
     reset();
     let i = index + 1;
     // Skip audio-only exercises when the learner can't listen right now, or when nothing on this
@@ -703,7 +727,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       if (i < initial.length && needsAudio(queue[i])) skipped.current += 1;
       i++;
     }
-    if (i >= queue.length) {
+    if (i >= queue.length + coming) {
       finish();
     } else {
       leave();
@@ -739,6 +763,15 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const verdict: 'right' | 'wrong' | undefined = checked && answer && isGraded(ex) ? (answer.correct ? 'right' : 'wrong') : undefined;
   const props = { lang, locked: checked, onAnswer, verdict, run, misses };
   const key = `${index}`;
+  // The footer button changes under the finger (Check becomes Continue; Continue brings a card
+  // that answers itself, as a new word does): the second tap of a double tap is not a new tap.
+  const footChanged = useRef(0);
+  useEffect(() => { footChanged.current = performance.now(); }, [index, checked]);
+  const footTap = () => {
+    if (performance.now() - footChanged.current < 300) return;
+    if (checked) next();
+    else check();
+  };
   let body: React.ReactNode;
   switch (ex.kind) {
     case 'intro': body = <IntroCard key={key} ex={ex} {...props} />; break;
@@ -862,9 +895,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     // A right-to-left help language mirrors the whole player (header, cards, feedback); the Dutch
     // and English in it keep their own direction (lang="nl" / lang="en" isolates, styles.css).
     <div className={`player ${rtl ? 'player-rtl' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
-      <header className="player-top">
+      <header className="player-top" inert={askQuit}>
         {/* The only control up here: ✕ opens the pause sheet (keep going, without sound, stop). */}
-        <button type="button" className="icon-btn lesson-close" onClick={() => setAskQuit(true)} aria-label={said(ui('quitLesson', lang))} lang={saidLang(ui('quitLesson', lang))} aria-haspopup="dialog"><CloseIcon size={28} /></button>
+        <button ref={closeRef} type="button" className="icon-btn lesson-close" onClick={() => setAskQuit(true)} aria-label={said(ui('quitLesson', lang))} lang={saidLang(ui('quitLesson', lang))} aria-haspopup="dialog"><CloseIcon size={28} /></button>
         <div className="bar-wrap">
           <div
             className="lbar"
@@ -888,7 +921,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
               exercise's tag or question. */}
           {runLabel && <RunLabel key={sweep} n={runLabel} lang={lang} />}
         </div>
-        <span className="lesson-name">
+        {/* The screen's heading for screen readers (one h1 per screen, as elsewhere); the visible
+            name shows on wider screens only. */}
+        <h1 className="sr-only"><Bi text={gloss(lesson.id, lesson.title, lang)} /></h1>
+        <span className="lesson-name" aria-hidden>
           <Bi text={gloss(lesson.id, lesson.title, lang)} />
         </span>
         {/* "Melden" (on by default in the beta, src/lib/report.ts): mail this place (lesson, step, word) to hoi@vloertaal.nl. In Dutch. */}
@@ -932,7 +968,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
 
       {/* A wrong answer in the first round comes back at the end; in the retry round it does not (the stamp says which). */}
       <ComesBack.Provider value={index < initial.length}>
-      <main className="player-body" ref={bodyRef}>
+      <div className="player-body" ref={bodyRef} inert={askQuit}>
         <div className="ex-ghost" ref={ghostRef} aria-hidden />
         <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
         <div className="ex-tag">
@@ -956,11 +992,11 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
           </button>
         )}
         </div>
-      </main>
+      </div>
       </ComesBack.Provider>
       {/* With nothing in it yet (an answer is a tap on an option), the footer takes no room, so it
           never covers the last option; a still chevron (not a button) then says there is more. */}
-      <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''} ${!showGo && !feedback ? 'foot-empty' : ''}`} ref={footRef}>
+      <footer className={`player-foot ${footStatic ? 'foot-static' : ''} ${moreBelow ? 'foot-more' : ''} ${!showGo && !feedback ? 'foot-empty' : ''}`} ref={footRef} inert={askQuit}>
         {moreBelow && !checked && !showGo && (
           <span className="foot-more-hint" aria-hidden><ChevronDownIcon size={22} /></span>
         )}
@@ -1023,7 +1059,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
               className={`btn btn-go ${checked && swapped && outcome ? `btn-${outcome} btn-swap` : 'btn-primary'}`}
               dir={rtl ? 'rtl' : undefined}
               disabled={!answer}
-              onClick={checked ? next : () => check()}
+              onClick={footTap}
               ref={goRef}
             >
               {/* The help language large, the English small under it (just English without one). */}

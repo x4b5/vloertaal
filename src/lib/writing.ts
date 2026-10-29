@@ -10,15 +10,20 @@ import { NON_LATIN_HELP } from './letters';
  */
 const KEY = 'vloertaal:learn-writing';
 
+/** The choices while storage is blocked (private mode): they hold for this visit. */
+let wantsMemory: boolean | null = null;
+let inputMemory: WritingInput | null = null;
+
 export function wantsWriting(): boolean {
   try {
     return localStorage.getItem(KEY) === '1';
   } catch {
-    return false;
+    return wantsMemory ?? false;
   }
 }
 
 export function setWantsWriting(on: boolean): void {
+  wantsMemory = on;
   try {
     if (on) localStorage.setItem(KEY, '1');
     else localStorage.removeItem(KEY);
@@ -52,13 +57,15 @@ export function writingInput(lang?: HelpLanguage): WritingInput {
     const v = localStorage.getItem(INPUT_KEY);
     if (v === 'tiles' || v === 'keys') return v;
   } catch {
-    // No storage: the default below.
+    // No storage: this visit's choice, else the default below.
+    if (inputMemory) return inputMemory;
   }
   return nonLatinHelp(lang) ? 'tiles' : 'keys';
 }
 
 /** Sets the dictation input (null: back to the default for the help language). */
 export function setWritingInput(mode: WritingInput | null): void {
+  inputMemory = mode;
   try {
     if (mode) localStorage.setItem(INPUT_KEY, mode);
     else localStorage.removeItem(INPUT_KEY);

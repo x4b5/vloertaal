@@ -1,5 +1,5 @@
 import type { Gender, UiCode } from '../i18n/types';
-import { rulesTrackOn } from './track';
+import { rulesTrackOn, trackOf, trackOfLang } from './track';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import { isRegionChoice, isRegionId, regionOf, regionsOn, type RegionChoice } from '../content/regio';
 import { unitOfLesson } from '../content/courses';
@@ -84,6 +84,28 @@ export interface Progress {
   days?: string[];
   /** The one-time emergency-phrases row on the first lesson's result was shown. */
   phrasesShown?: boolean;
+  /**
+   * The other track's own place (src/lib/track.ts), put away while this one is on: its block,
+   * its day of "Herhaal vandaag", its one-time pointer. Swapped back when the help language
+   * switches track (switchTrack), so neither track overwrites the other's.
+   */
+  parked?: TrackPlace;
+}
+
+/** What each track keeps for itself (Progress.parked). */
+export interface TrackPlace {
+  currentUnit?: string;
+  pickedUnit?: string;
+  reviewDay?: string;
+  phrasesShown?: boolean;
+}
+
+/** A new help language: when it changes track, this track's place is put away and the other's comes back. */
+export function switchTrack(p: Progress, helpLang: UiCode | null): Progress {
+  if (trackOfLang(helpLang) === trackOf(p)) return { ...p, helpLang };
+  const back = p.parked ?? {};
+  const away: TrackPlace = { currentUnit: p.currentUnit, pickedUnit: p.pickedUnit, reviewDay: p.reviewDay, phrasesShown: p.phrasesShown };
+  return { ...p, helpLang, currentUnit: back.currentUnit, pickedUnit: back.pickedUnit, reviewDay: back.reviewDay, phrasesShown: back.phrasesShown, parked: away };
 }
 
 export const emptyProgress: Progress = {
@@ -125,6 +147,16 @@ export function loadProgress(): Progress {
       if (saved.genderAsked !== undefined && typeof saved.genderAsked !== 'boolean') delete saved.genderAsked;
       if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;
       if (saved.pickedUnit !== undefined && typeof saved.pickedUnit !== 'string') delete saved.pickedUnit;
+      if (saved.parked !== undefined) {
+        const k = saved.parked as Record<string, unknown> | null;
+        if (!k || typeof k !== 'object') delete saved.parked;
+        else saved.parked = {
+          currentUnit: typeof k.currentUnit === 'string' ? k.currentUnit : undefined,
+          pickedUnit: typeof k.pickedUnit === 'string' ? k.pickedUnit : undefined,
+          reviewDay: isDay(k.reviewDay) ? k.reviewDay : undefined,
+          phrasesShown: k.phrasesShown === true || undefined,
+        };
+      }
       // Saved before the practised days were kept: none (the week row then counts the streak back).
       if (saved.days !== undefined) {
         if (Array.isArray(saved.days)) saved.days = saved.days.filter(isDay).slice(-DAYS_KEEP);
@@ -231,6 +263,9 @@ function practise(p: Progress, today: Date): Progress {
   const s = settleStreak(p, today).progress;
   const gap = s.lastDay ? daysBetween(s.lastDay, key) : Infinity;
   if (gap === 0) return s; // already counted today
+  // The last practised day is later than today (practised abroad ahead of Dutch time, a phone
+  // clock set wrong, a backup from such a phone): the streak stays; today is a practised day too.
+  if (gap < 0) return { ...s, days: addPractised(s.days, key) };
   const streak = gap === 1 ? s.streak + 1 : 1;
   // One free day per 7 days in a row, and the very first one early (day 3 of the first streak
   // that gets there), so it can already cover a missed day in the first week.
@@ -244,6 +279,16 @@ function practise(p: Progress, today: Date): Progress {
     freezes: Math.min(FREEZE_MAX, (s.freezes ?? 0) + earned),
     bestStreak: Math.max(bestStreak(s), streak),
   };
+}
+
+/**
+ * The moment a finished lesson counts for: the end, or the start when the lesson began the day
+ * before and that day has no practice yet (started at 23:58, finished at 00:03: yesterday is kept
+ * up, not missed). When yesterday already counts, the lesson counts for today.
+ */
+export function practisedAt(started: Date, ended: Date, lastDay?: string | null): Date {
+  const begun = dayKey(started);
+  return daysBetween(begun, dayKey(ended)) === 1 && lastDay !== begun ? started : ended;
 }
 
 /** True once today has a finished lesson or review (the flame is lit). */
@@ -263,7 +308,9 @@ export function workWeek(p: Progress, today: Date): { key: string; state: WeekDa
   const todayKey = dayKey(today);
   const rest = new Set(p.rest ?? []);
   const done = new Set<string>((p.days ?? []).filter((d) => d <= todayKey));
-  if (p.lastDay && p.streak > 0 && daysBetween(p.lastDay, todayKey) <= 1) {
+  const sinceLast = p.lastDay ? daysBetween(p.lastDay, todayKey) : -1;
+  // (A last day after today, a clock moved back: no walking back from a day still to come.)
+  if (p.lastDay && p.streak > 0 && sinceLast >= 0 && sinceLast <= 1) {
     let day = p.lastDay;
     let left = p.streak;
     // Walk back over the streak; rest days sit inside it without counting.
@@ -409,11 +456,30 @@ export function replaceWithBackup(p: Progress, b: Partial<Progress>): Progress {
     // The block follows the progress that was put back (worked out from its lessons).
     currentUnit: undefined,
     pickedUnit: undefined,
+    parked: undefined,
   };
 }
 
 /** The earlier of two dates (either may be missing). */
 const earlier = (x?: string, y?: string): string => (!x ? y! : !y ? x : x < y ? x : y);
+
+/**
+ * The streak of two phones together: the later side's, walking back over the practised days of
+ * both (rest days count as kept up); reaching the earlier side's last day, its streak goes on.
+ */
+function joinedStreak(later: Partial<Progress>, earlier: Partial<Progress>, days: Set<string>, rest: Set<string>): number {
+  const own = later.streak ?? 0;
+  if (!later.lastDay || !own) return own;
+  let n = 0;
+  let day = later.lastDay;
+  for (let guard = 0; guard < 400; guard++) {
+    if (day === earlier.lastDay && earlier.streak) return Math.max(own, n + earlier.streak);
+    if (days.has(day)) n++;
+    else if (!rest.has(day)) break;
+    day = addDay(day, -1);
+  }
+  return Math.max(own, n);
+}
 
 /** Adds a backup to the progress on this phone: the best of both, nothing is lost. */
 export function mergeBackup(p: Progress, b: Partial<Progress>): Progress {
@@ -427,23 +493,28 @@ export function mergeBackup(p: Progress, b: Partial<Progress>): Progress {
     const mine = cards[id];
     if (!mine || c.box > mine.box || (c.box === mine.box && c.due < mine.due)) cards[id] = c;
   }
-  // The streak comes from whichever side practised last.
+  // The streak comes from whichever side practised last, carried on by the other side's when
+  // the days join up; so do the free days (the max of both would hand out a used one again).
   const theirsLater = Boolean(b.lastDay && (!p.lastDay || b.lastDay > p.lastDay));
   const later = theirsLater ? b : p;
+  const earlierSide = theirsLater ? p : b;
+  const days = [...new Set([...(p.days ?? []), ...(b.days ?? [])])].sort().slice(-DAYS_KEEP);
+  const rest = [...new Set([...(p.rest ?? []), ...(b.rest ?? [])])].sort().slice(-REST_KEEP);
+  const streak = joinedStreak(later, earlierSide, new Set(days), new Set(rest));
   const max = (x?: string, y?: string) => (!x ? y : !y ? x : x > y ? x : y);
   return {
     ...p,
     xp: Math.max(p.xp, b.xp ?? 0),
     completed,
     cards,
-    streak: later.streak ?? 0,
+    streak,
     lastDay: later.lastDay ?? null,
     reviewDay: max(p.reviewDay, b.reviewDay),
     lessonDay: max(p.lessonDay, b.lessonDay),
-    freezes: Math.max(p.freezes ?? 0, b.freezes ?? 0),
-    rest: [...new Set([...(p.rest ?? []), ...(b.rest ?? [])])].sort().slice(-REST_KEEP),
-    days: [...new Set([...(p.days ?? []), ...(b.days ?? [])])].sort().slice(-DAYS_KEEP),
-    bestStreak: Math.max(bestStreak(p), b.bestStreak ?? 0, b.streak ?? 0),
+    freezes: later.freezes ?? 0,
+    rest,
+    days,
+    bestStreak: Math.max(bestStreak(p), b.bestStreak ?? 0, b.streak ?? 0, streak),
     // A certificate keeps the date it was first earned, on either side.
     certs: Object.fromEntries(
       [...new Set([...Object.keys(p.certs ?? {}), ...Object.keys(b.certs ?? {})])]

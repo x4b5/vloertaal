@@ -29,15 +29,54 @@ function runningEntry(): string | null {
   return s ? entryOf(s.src) : null;
 }
 
-/** Is a different version on the server than the one running? (False when it can't tell, e.g. offline.) */
-export async function newerOnServer(running: string | null, fetchPage: () => Promise<string>): Promise<boolean> {
-  if (!running) return false;
+/** The version on the server, when it differs from the one running (null when the same, or it can't tell, e.g. offline). */
+export async function serverVersion(running: string | null, fetchPage: () => Promise<string>): Promise<string | null> {
+  if (!running) return null;
   try {
     const there = entryOf(await fetchPage());
-    return Boolean(there && there !== running);
+    return there && there !== running ? there : null;
   } catch {
-    return false;
+    return null;
   }
+}
+
+/** Is a different version on the server than the one running? (False when it can't tell, e.g. offline.) */
+export async function newerOnServer(running: string | null, fetchPage: () => Promise<string>): Promise<boolean> {
+  return (await serverVersion(running, fetchPage)) !== null;
+}
+
+/** The server version this tab reloaded for already, and when (sessionStorage): once per version
+ *  for a while (a phone keeps the app open for days: then it tries again). */
+const RELOADED_FOR = 'vloertaal:update-for';
+const AGAIN_AFTER = 30 * 60 * 1000;
+
+/**
+ * Reload into `version`, once. The new service worker first gets a moment to install (at most
+ * 15 s): on a slow connection the page may come from the phone, and only the new worker's copy
+ * is the new version. Still the old one after that reload (the worker did not install): no
+ * reload again for the same version for half an hour.
+ */
+async function reloadInto(version: string): Promise<void> {
+  try {
+    const [was, at] = (sessionStorage.getItem(RELOADED_FOR) ?? '').split('|');
+    if (was === version && Date.now() - Number(at) < AGAIN_AFTER) return;
+    sessionStorage.setItem(RELOADED_FOR, `${version}|${Date.now()}`);
+  } catch {
+    return;
+  }
+  const reg = await navigator.serviceWorker?.getRegistration().catch(() => undefined);
+  await reg?.update().catch(() => {});
+  const installing = reg?.installing ?? reg?.waiting;
+  if (installing) {
+    await new Promise<void>((done) => {
+      const t = window.setTimeout(done, 15_000);
+      const settled = () => installing.state === 'activated' || installing.state === 'redundant';
+      if (settled()) { window.clearTimeout(t); done(); return; }
+      installing.addEventListener('statechange', () => { if (settled()) { window.clearTimeout(t); done(); } });
+    });
+  }
+  if (calm()) location.reload();
+  else try { sessionStorage.removeItem(RELOADED_FOR); } catch { /* the next check tries again */ }
 }
 
 let calm: () => boolean = () => false;
@@ -51,7 +90,7 @@ const serverPage = () => fetch(new URL('./', document.baseURI), { cache: 'no-sto
 
 /** Watching (production only), and whether a newer version is known to be on the server. */
 let check: (() => Promise<void>) | null = null;
-let waiting = false;
+let waiting: string | null = null;
 
 /** Starts watching (production only, once). */
 export function watchForUpdates(): void {
@@ -65,9 +104,9 @@ export function watchForUpdates(): void {
       last = Date.now();
       // The service worker too, so the next start has its newest rules.
       navigator.serviceWorker?.getRegistration().then((r) => r?.update()).catch(() => {});
-      waiting = await newerOnServer(running, serverPage);
+      waiting = await serverVersion(running, serverPage);
     }
-    if (waiting && calm()) location.reload();
+    if (waiting && calm()) await reloadInto(waiting);
   };
   document.addEventListener('visibilitychange', () => { void check?.(); });
   // A new service worker took over this page (a new version was deployed; the first one, on the
@@ -76,7 +115,7 @@ export function watchForUpdates(): void {
   // The page itself may already be that version (pages come from the network first): only a
   // server version other than the running one counts, so the first session after a deploy does
   // not reload once more for nothing.
-  if (sw?.controller) sw.addEventListener('controllerchange', () => { void newerOnServer(running, serverPage).then((n) => { waiting = waiting || n; }); });
+  if (sw?.controller) sw.addEventListener('controllerchange', () => { void serverVersion(running, serverPage).then((v) => { waiting = waiting ?? v; }); });
 }
 
 /** Another screen opened: a known new version loads now if the moment is calm (see setReloadWhen). */
@@ -116,7 +155,7 @@ export async function recoverFromLoadError(e?: unknown): Promise<boolean> {
     return false;
   }
   if (!mayReloadAgain(last, Date.now())) return false;
-  let newer = waiting || (await newerOnServer(runningEntry(), serverPage));
+  let newer = Boolean(waiting) || (await newerOnServer(runningEntry(), serverPage));
   const file = newer ? null : failedFile(e);
   if (file) newer = await fetch(file, { method: 'HEAD', cache: 'no-store' }).then((r) => r.status === 404, () => false);
   if (!newer) return false;

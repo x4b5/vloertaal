@@ -47,7 +47,7 @@ function staticGraph(entry: string): Set<string> {
   return new Set([...seen].map((f) => relative(ROOT, f).split('\\').join('/')));
 }
 
-const LAZY = ['Settings', 'PocketCard', 'Milestone', 'Keep', 'Coaches', 'Admin'];
+const LAZY = ['Settings', 'PocketCard', 'Milestone', 'Keep', 'Coaches', 'Admin', 'Certificate'];
 
 describe('screens in files of their own', () => {
   it('are not in the main file: no static import reaches them from the entry', () => {
@@ -57,13 +57,13 @@ describe('screens in files of their own', () => {
     expect(main.has('src/lazyScreens.tsx')).toBe(true);
     for (const name of LAZY) expect(main.has(`src/components/${name}.tsx`), name).toBe(false);
     // Nor what only they use.
-    for (const lib of ['src/lib/pocketCanvas.ts', 'src/lib/pocket.ts', 'src/lib/keep.ts', 'src/lib/reminder.ts']) expect(main.has(lib), lib).toBe(false);
+    for (const lib of ['src/lib/pocketCanvas.ts', 'src/lib/pocket.ts', 'src/lib/keep.ts', 'src/lib/reminder.ts', 'src/lib/certCanvas.ts']) expect(main.has(lib), lib).toBe(false);
   });
 
   it('are loaded with import() of a src/components/ file (how the build finds them for offline use)', () => {
     const code = readFileSync(join(ROOT, 'src/lazyScreens.tsx'), 'utf8');
     const targets = [...code.matchAll(/import\('([^']+)'\)/g)].map((m) => m[1]);
-    expect(targets.sort()).toEqual(['./components/Admin', './components/Coaches', './components/Milestone', './components/PocketCard', './components/Settings']);
+    expect(targets.sort()).toEqual(['./components/Admin', './components/Certificate', './components/Coaches', './components/Milestone', './components/PocketCard', './components/Settings']);
   });
 
   it('render at once, without the waiting screen, once their file is here', async () => {

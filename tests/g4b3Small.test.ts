@@ -10,6 +10,8 @@ describe('G4 b3 smaller items', () => {
     expect(typable({ id: 'x', nl: 'de helm', en: '', emoji: '' })).toBe(true);
     expect(typable({ id: 'x', nl: 'het BSN', en: '', emoji: '' })).toBe(false);
     expect(typable({ id: 'x', nl: 'de veiligheidsschoenen', en: '', emoji: '' })).toBe(false);
+    // The letter tiles spell letters only: a hyphen would be taught away ("esigaret").
+    expect(typable({ id: 'x', nl: 'de e-sigaret', en: '', emoji: '' })).toBe(false);
     let typed = 0;
     let fair = 0;
     for (const lesson of allLessons) {

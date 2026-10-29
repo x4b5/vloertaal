@@ -11,8 +11,6 @@ export type SettingsPage =
   | 'sound' | 'voice' | 'speaking' | 'writing' | 'text' | 'theme'
   | 'offline' | 'reminder' | 'reminder-time' | 'install' | 'backup' | 'counting' | 'reset' | 'unlock';
 
-export const SETTINGS_LISTS: SettingsList[] = ['me', 'lessons', 'phone'];
-
 /** The page each page is opened from (null: the Settings menu itself). */
 export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   me: null,

@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { NOT_SURE, sectors, type SectorChoice } from '../content/sectors';
 import { REGIONS, regionMetaOf, regionsOn, type RegionChoice } from '../content/regio';
-import { ensureLanguage, hasGender, isLanguageLoaded, said, saidLang, ui, type Bilingual } from '../i18n';
+import { ensureLanguage, hasGender, isLanguageLoaded, langTag, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
 import { dutchUi } from '../lib/track';
 import { NlPair } from './NlPair';
 import type { Access } from '../lib/access';
-import { setPreferredVoice, speak } from '../lib/audio';
+import { recordedIndexSettled, setPreferredVoice, speak } from '../lib/audio';
 import { earnedCertificates } from '../lib/certificate';
 import { countingOn, setCounting } from '../lib/count';
 import { applyEnglish, setWantsEnglish, wantsEnglish } from '../lib/english';
@@ -23,7 +23,8 @@ import { TEXT_SIZES, type TextSize } from '../lib/textSize';
 import { VOICE_SAMPLE } from '../lib/voices';
 import { nonLatinHelp, setWantsWriting, setWritingInput, wantsWriting, writingInput } from '../lib/writing';
 import { Bi } from './Bi';
-import { CertIcon, CertificatesCard } from './Certificate';
+import { CertIcon } from './CertBadge';
+import { CertificatesCard } from './Certificate';
 import { ChoiceCards, type ChoiceOption } from './Choice';
 import { ChromeBack } from './ChromeBack';
 import { UpgradeCard } from './Gate';
@@ -102,7 +103,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
 /** A short value in the help language only (English when there is none). */
 function Value({ text }: { text: Bilingual }) {
   return text.help && text.lang
-    ? <span className="set-row-value" lang={text.lang.code} dir={text.lang.dir}>{text.help}</span>
+    ? <span className="set-row-value" lang={langTag(text.lang.code)} dir={text.lang.dir}>{text.help}</span>
     : <span className="set-row-value" lang="en">{text.en}</span>;
 }
 
@@ -155,9 +156,19 @@ export function Settings({
   /** Bumped when a stored-on-this-device switch changes, so the page shows it at once. */
   const [, setTick] = useState(0);
   const timer = useRef<number | null>(null);
+  // An answer's way back (answered) is for the page it was given on: another page (Back, the
+  // arrow) or leaving Settings cancels it, so it never takes the learner a page too far.
   useEffect(() => {
-    return () => { if (timer.current) clearTimeout(timer.current); };
+    return () => { if (timer.current) clearTimeout(timer.current); timer.current = null; };
+  }, [page]);
+  /** Still on screen: a help language whose file comes late does nothing once Settings is left. */
+  const shown = useRef(true);
+  useEffect(() => {
+    shown.current = true;
+    return () => { shown.current = false; };
   }, []);
+  /** The language tapped last: a file that comes later than another tap's does not undo it. */
+  const wanted = useRef<UiCode | null | undefined>(undefined);
   // Help language offline: a language whose file is not on the phone can't be switched to. The
   // old language stays and a calm line says why (no splash, no dead end).
   const [notHere, setNotHere] = useState<UiCode | null>(null);
@@ -170,13 +181,23 @@ export function Settings({
     window.addEventListener('online', back);
     return () => window.removeEventListener('online', back);
   }, [notHere]);
+  /** The page on screen now: a file that comes after Back (another page) does nothing either. */
+  const pageNow = useRef(page);
+  pageNow.current = page;
   const pickLanguage = (code: UiCode | null) => {
-    const take = () => { setNotHere(null); onLang(code); answered(); };
+    wanted.current = code;
+    const on = page;
+    const take = () => {
+      if (!shown.current || wanted.current !== code || pageNow.current !== on) return;
+      setNotHere(null);
+      onLang(code);
+      answered();
+    };
     if (isLanguageLoaded(code)) { take(); return; }
     ensureLanguage(code).then(take, () => {
       // Online after all (a server hiccup): App's own splash retries. Offline: stay here.
       if (typeof navigator !== 'undefined' && navigator.onLine !== false) take();
-      else setNotHere(code);
+      else if (shown.current && wanted.current === code) setNotHere(code);
     });
   };
   /**
@@ -220,7 +241,7 @@ export function Settings({
   /** The current value shown on a row. */
   const value = (p: SettingsPage): ReactNode => {
     switch (p) {
-      case 'language': return lang ? <span className="set-row-value" lang={lang.code} dir={lang.dir}>{lang.nativeName}</span> : <span className="set-row-value" lang="en">English</span>;
+      case 'language': return lang ? <span className="set-row-value" lang={langTag(lang.code)} dir={lang.dir}>{lang.nativeName}</span> : <span className="set-row-value" lang="en">English</span>;
       case 'gender': return progress.gender ? <Value text={say(progress.gender === 'f' ? 'genderWoman' : progress.gender === 'm' ? 'genderMan' : 'genderNone')} /> : null;
       case 'sector': {
         const s = sectors.find((x) => x.id === progress.sector);
@@ -370,7 +391,8 @@ export function Settings({
             </button>
           ),
         }));
-        if (!recorded.length && !device.length) return <p className="warn"><Bi text={say('voiceNone')} /></p>;
+        // (While the recorded voices are still coming: nothing yet, not "no voice".)
+        if (!recorded.length && !device.length) return recordedIndexSettled() ? <p className="warn"><Bi text={say('voiceNone')} /></p> : null;
         return (
           <>
             <p className="max3-hint"><Bi text={say('voiceHint')} /></p>
