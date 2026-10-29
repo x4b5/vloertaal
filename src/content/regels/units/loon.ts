@@ -16,7 +16,7 @@ export const loonUnit: RuleUnit = {
       // Les 4.1 · Bruto en netto
       id: 'r.l.loon.1',
       title: 'Bruto en netto',
-      goal: 'Je weet het verschil tussen bruto en netto, en waar je het minimumloon vindt.',
+      goal: 'Je weet het verschil tussen bruto en netto. Je weet waar je het minimumloon vindt.',
       remember: 'Bruto is vóór belasting. Netto krijg je op je rekening.',
       // Wie kan je helpen: de loonadministratie of HR van je werk · de BelastingTelefoon ·
       //   rijksoverheid.nl (minimumloon) · een vakbond.
@@ -59,7 +59,7 @@ export const loonUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.loon.1.wd1',
-          situation: 'Fatima is 20. Een collega van 25 verdient meer. Ze doen hetzelfde werk.',
+          situation: 'Fatima is 20. Een collega van 25 verdient meer. Ze doen hetzelfde werk. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze zoekt het minimumloon voor haar leeftijd op.', best: true, feedback: 'Goed. Dan weet ze of haar loon klopt.' },
             { id: 'b', text: 'Ze vraagt meteen hetzelfde loon als haar collega.', best: false, feedback: 'Vragen mag. Maar er is een regel voor leeftijd.' },
@@ -70,7 +70,7 @@ export const loonUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.loon.1.wd2',
-          situation: 'Fatima krijgt er een baan bij, in een winkel. Bij allebei vragen ze: "Wil je loonheffingskorting?"',
+          situation: 'Fatima krijgt er een baan bij, in een winkel. Bij allebei vragen ze: "Wil je loonheffingskorting?" Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze zegt bij allebei ja. Dan houdt ze meer over.', best: false, feedback: 'Nu wel. Maar later moet ze dan geld terugbetalen.' },
             { id: 'b', text: 'Ze zegt ja bij één baan, en nee bij de andere.', best: true, feedback: 'Goed. De korting krijg je maar één keer.' },
@@ -154,7 +154,7 @@ export const loonUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.loon.2.wd2',
-          situation: 'Op de loonstrook staat "inhouding huisvesting". Piotr heeft daar nooit iets over getekend.',
+          situation: 'Op de loonstrook staat "inhouding huisvesting". Piotr heeft daar nooit iets over getekend. Wat kan Piotr het beste doen?',
           options: [
             { id: 'a', text: 'Hij vraagt waar hij daarvoor getekend heeft.', best: true, feedback: 'Goed. Zonder zijn handtekening mag het meestal niet.' },
             { id: 'b', text: 'Hij denkt: dat hoort er vast bij, iedereen heeft het.', best: false, feedback: 'Begrijpelijk. Maar het mag niet zomaar.' },
@@ -206,7 +206,7 @@ export const loonUnit: RuleUnit = {
       // Les 4.3 · Vakantiegeld, toeslag en overwerk
       id: 'r.l.loon.3',
       title: 'Vakantiegeld, toeslag en overwerk',
-      goal: 'Je weet wat vakantiegeld is, wat een toeslag is, en hoe overwerk betaald wordt.',
+      goal: 'Je weet wat vakantiegeld en een toeslag zijn. Je weet hoe je baas overwerk betaalt.',
       // ⚖️ check: Vakantiegeld is jouw recht: minstens 8 procent ⚖️ van je loon.
       remember: 'Vakantiegeld is jouw recht: minstens 8 procent van je loon.',
       // Wie kan je helpen: je cao (zoek hem online) · een vakbond · de loonadministratie.
@@ -265,10 +265,10 @@ export const loonUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.loon.3.wd2',
-          situation: 'Dewi werkt deze maand 10 uur over. Ze ziet die uren niet op haar loonstrook.',
+          situation: 'Dewi werkt deze maand 10 uur over. Ze ziet die uren niet op haar loonstrook. Wat kan Dewi het beste doen?',
           options: [
-            { id: 'a', text: 'Ze denkt: overwerk wordt in de zorg nooit betaald.', best: false, feedback: 'Dat klopt niet. Gewerkte uren tellen.' },
-            { id: 'b', text: 'Ze besluit voortaan nooit meer over te werken.', best: false, feedback: 'Dat mag ze zelf weten. Maar de 10 uur zijn nog niet geregeld.' },
+            { id: 'a', text: 'Ze denkt: in de zorg betalen ze overwerk nooit.', best: false, feedback: 'Dat klopt niet. Gewerkte uren tellen.' },
+            { id: 'b', text: 'Ze besluit dat ze nooit meer overwerkt.', best: false, feedback: 'Dat mag ze zelf weten. Maar de 10 uur zijn nog niet geregeld.' },
             { id: 'c', text: 'Ze vraagt waar de 10 uur zijn gebleven.', best: true, feedback: 'Goed. Navragen is haar recht.' },
           ],
           why: 'Je werkgever betaalt elk uur dat je werkt. Soms krijg je vrije tijd terug in plaats van geld. Of je extra toeslag krijgt, staat in je cao of contract. Schrijf je overuren altijd op.',
