@@ -758,6 +758,15 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const verdict: 'right' | 'wrong' | undefined = checked && answer && isGraded(ex) ? (answer.correct ? 'right' : 'wrong') : undefined;
   const props = { lang, locked: checked, onAnswer, verdict, run, misses };
   const key = `${index}`;
+  // The footer button changes under the finger (Check becomes Continue; Continue brings a card
+  // that answers itself, as a new word does): the second tap of a double tap is not a new tap.
+  const footChanged = useRef(0);
+  useEffect(() => { footChanged.current = performance.now(); }, [index, checked]);
+  const footTap = () => {
+    if (performance.now() - footChanged.current < 300) return;
+    if (checked) next();
+    else check();
+  };
   let body: React.ReactNode;
   switch (ex.kind) {
     case 'intro': body = <IntroCard key={key} ex={ex} {...props} />; break;
@@ -1042,7 +1051,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
               className={`btn btn-go ${checked && swapped && outcome ? `btn-${outcome} btn-swap` : 'btn-primary'}`}
               dir={rtl ? 'rtl' : undefined}
               disabled={!answer}
-              onClick={checked ? next : () => check()}
+              onClick={footTap}
               ref={goRef}
             >
               {/* The help language large, the English small under it (just English without one). */}

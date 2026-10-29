@@ -86,6 +86,8 @@ export interface MatchState {
   step: number;
   done: string[];
   wrong: number;
+  /** The wrong taps so far ("step:id"): the same wrong card again is the same mistake. */
+  tried?: string[];
 }
 
 export const matchStart: MatchState = { step: 0, done: [], wrong: 0 };
@@ -102,5 +104,7 @@ export function matchTap(words: readonly { id: string }[], state: MatchState, id
     const done = [...state.done, id];
     return { state: { ...state, step: state.step + 1, done }, hit: true, finished: done.length >= words.length };
   }
-  return { state: { ...state, wrong: state.wrong + 1 }, hit: false, finished: false };
+  const key = `${state.step}:${id}`;
+  if (state.tried?.includes(key)) return { state: { ...state }, hit: false, finished: false };
+  return { state: { ...state, wrong: state.wrong + 1, tried: [...(state.tried ?? []), key] }, hit: false, finished: false };
 }

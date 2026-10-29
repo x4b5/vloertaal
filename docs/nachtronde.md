@@ -60,6 +60,10 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | De app 's nachts open laten (op de achtergrond): de vlam en reeks bleven op gisteren, en "je reeks is gestopt" kwam nooit | iedereen | bijgewerkt zodra de app weer in beeld komt (niet midden in een les) |
 | Met een regio: certificaat en spiekkaartje gaven een ander onderwerpnummer dan het pad (24 tegen 25) | Zuid-Limburg (zodra regio's live gaan) | hetzelfde nummer als op het pad |
 | De Sociale kaart zonder het regiobestand: een leeg scherm zonder balk | Zuid-Limburg, slechte verbinding | het Hulp-tabblad |
+| Dubbeltik op "Verder" sloeg de volgende kaart over (een nieuw woord werd nooit getoond) | iedereen met haast | de tweede tik telt niet |
+| Dubbeltik op het goede woordtegeltje: de tweede tik viel op het volgende rijtje en telde als fout | zinnen bouwen, letters | een tik in het eerste moment na een nieuw rijtje telt niet |
+| Twee keer op hetzelfde foute kaartje of tegeltje telde als twee fouten (en werd zo "Niet helemaal") | koppelen, zinnen, letters | dezelfde fout telt één keer |
+| Na een goed tegeltje of paar was de toetsenbordfocus weg; koppelen zei niets tegen de schermlezer | toetsenbord, schermlezer | de focus gaat naar het volgende tegeltje; goed/fout wordt voorgelezen |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
