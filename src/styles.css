@@ -572,7 +572,7 @@ h2 { font-size: 1.25rem; }
 /* The question takes focus on a new exercise (for screen readers); it is not a control, so no ring. */
 .prompt:focus { outline: none; }
 /* A screen's heading gets the focus after a screen change (App.tsx): no ring around a heading. */
-h1[tabindex="-1"]:focus { outline: none; }
+h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus { outline: none; }
 
 /* Kraft tag above the question: what kind of exercise, and where you are in the lesson. */
 .ex-tag { display: flex; align-items: center; gap: 12px; margin: 0 0 6px; }

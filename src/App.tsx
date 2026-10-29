@@ -287,6 +287,8 @@ export default function App() {
     const target = next.name === 'home' ? 0 : 1;
     if (depth > target) {
       tabWalk.current = { to: t };
+      // (Should no popstate come, tabs must not stay dead: the walk is let go after a second.)
+      window.setTimeout(() => { tabWalk.current = null; }, 1000);
       const onPop = () => {
         window.removeEventListener('popstate', onPop);
         leaving.current = false;

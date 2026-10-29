@@ -83,9 +83,10 @@ export function SceneCard({ ex, lang, onAnswer }: RuleProps<'scene'>) {
   const said = useRef('');
   useEffect(() => {
     onAnswer({ correct: true });
+    // (Only once it was really said: a phone without a Dutch voice says nothing, and the story
+    // then waits for the recorded voices.)
     if (said.current === story) return;
-    said.current = story;
-    autoSpeakLong(story, { voice });
+    if (autoSpeakLong(story, { voice })) said.current = story;
   }, [story, voice, onAnswer]);
   // The phone reads it sentence by sentence; the narrator talks along with each.
   const talking = useTalking([story, ...sentences(story)]);
@@ -262,8 +263,7 @@ export function ModelLine({ ex, lang, onAnswer }: RuleProps<'model'>) {
   useEffect(() => {
     onAnswer({ correct: true });
     if (said.current === step.nl) return;
-    said.current = step.nl;
-    autoSpeakLong(step.nl, { voice });
+    if (autoSpeakLong(step.nl, { voice })) said.current = step.nl;
   }, [step, voice, onAnswer]);
   return (
     <div className="exercise rule-model">
