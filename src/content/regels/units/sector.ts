@@ -18,7 +18,7 @@ export const buildUnit: RuleUnit = {
       // Les B.1 · VCA en je beschermende spullen
       id: 'r.l.build.1',
       title: 'VCA en je beschermende spullen',
-      goal: 'Je weet wat VCA is, en dat je beschermende spullen gratis krijgt en altijd draagt.',
+      goal: 'Je weet wat VCA is. Je weet dat je beschermende spullen gratis krijgt en altijd draagt.',
       remember: 'Helm en schoenen verplicht? Draag ze altijd, ook als niemand kijkt.',
       // Wie kan je helpen: je uitvoerder · je uitzendbureau · de preventiemedewerker · de
       //   Nederlandse Arbeidsinspectie.
@@ -62,11 +62,11 @@ export const buildUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.build.1.wd1',
-          situation: 'Mohammed krijgt geen veiligheidsschoenen. Hij heeft alleen gewone sneakers.',
+          situation: 'Mohammed krijgt geen veiligheidsschoenen. Hij heeft alleen gewone sneakers. Wat kan Mohammed het beste doen?',
           options: [
             { id: 'a', text: 'Hij werkt op zijn sneakers. Het is maar voor één dag.', best: false, feedback: 'Begrijpelijk. Maar een spijker gaat zo door een sneaker.' },
-            { id: 'b', text: 'Hij koopt zelf schoenen, en betaalt ze van zijn loon.', best: false, feedback: 'Goed bedoeld. Maar je werkgever moet ze gratis geven.' },
-            { id: 'c', text: 'Hij vraagt de uitvoerder om veiligheidsschoenen.', best: true, feedback: 'Goed. Daar is de uitvoerder voor.' },
+            { id: 'b', text: 'Hij koopt zelf schoenen, en betaalt ze van zijn loon.', best: false, feedback: 'Goed bedoeld. Maar zijn werkgever moet ze gratis geven.' },
+            { id: 'c', text: 'Hij vraagt de uitvoerder om veiligheidsschoenen.', best: true, feedback: 'Goed. De uitvoerder is de baas op de bouwplaats. Hij regelt dit.' },
           ],
           why: 'Beschermende spullen heten ook PBM: persoonlijke beschermingsmiddelen. Denk aan een helm, schoenen, een bril en een hesje. Je werkgever geeft ze gratis. Werk je via een uitzendbureau? Vraag dan wie ze geeft.',
         },
@@ -96,7 +96,7 @@ export const buildUnit: RuleUnit = {
       // Les B.2 · Toolbox en eerst even kijken
       id: 'r.l.build.2',
       title: 'Toolbox en eerst even kijken',
-      goal: 'Je gaat naar de toolbox, kijkt eerst rond, en loopt nooit onder een last.',
+      goal: 'Je gaat naar de toolbox en je kijkt eerst rond. Je loopt nooit onder een last.',
       remember: 'Eerst kijken, dan beginnen. Loop nooit onder een hangende last.',
       // Wie kan je helpen: je uitvoerder · de preventiemedewerker · de Nederlandse
       //   Arbeidsinspectie.
@@ -130,7 +130,7 @@ export const buildUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.build.2.wd1',
-          situation: 'Kevin wil de plaat halen.',
+          situation: 'Kevin wil de plaat halen. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij loopt snel onder het blok door. Het hangt toch vast.', best: false, feedback: 'Begrijpelijk. Maar een last kan altijd vallen.' },
             { id: 'b', text: 'Hij loopt om, ook al duurt dat langer.', best: true, feedback: 'Goed. Onder een hangende last loop je nooit.' },
@@ -145,7 +145,7 @@ export const buildUnit: RuleUnit = {
           id: 'r.l.build.2.tf1',
           statement: 'Werk je hoger dan 2,5 meter? Dan moet er bescherming tegen vallen zijn.',
           answer: true,
-          why: 'Boven 2,5 meter is er valgevaar. Dan moet je werkgever zorgen voor bescherming. Bijvoorbeeld een leuning of een harnas. Ontbreekt die? Ga dan niet verder, en zeg het meteen.',
+          why: 'Boven 2,5 meter is er valgevaar. Dan moet je werkgever zorgen voor bescherming. Bijvoorbeeld een leuning of een harnas. Is die er niet? Ga dan niet verder, en zeg het meteen.',
         },
         {
           kind: 'whatdo',
@@ -175,7 +175,7 @@ export const careUnit: RuleUnit = {
       // Les Z.1 · Hygiëne: schone handen, geen sieraden
       id: 'r.l.care.1',
       title: 'Hygiëne: schone handen, geen sieraden',
-      goal: 'Je kent de hygiëneregels in de zorg, en je weet waarom ze er zijn.',
+      goal: 'Je kent de hygiëneregels in de zorg. Je weet waarom ze er zijn.',
       remember: 'Schone handen voor en na elke cliënt. Geen sieraden aan handen en polsen.',
       // Wie kan je helpen: je leidinggevende · de hygiëne-deskundige van je werk · de bedrijfsarts.
       help: ['leidinggevende', 'bedrijfsarts'],
@@ -219,24 +219,24 @@ export const careUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.care.1.wd1',
-          situation: 'Dewi heeft net een cliënt geholpen. Ze moet meteen naar de volgende.',
+          situation: 'Dewi heeft net een cliënt geholpen. Ze moet meteen naar de volgende. Wat kan Dewi het beste doen?',
           options: [
             { id: 'a', text: 'Ze loopt meteen door. Haar handen zien er schoon uit.', best: false, feedback: 'Begrijpelijk. Maar bacteriën zie je niet.' },
             { id: 'b', text: 'Ze trekt alleen een paar nieuwe handschoenen aan.', best: false, feedback: 'Handschoenen helpen. Maar ook je handen moeten schoon.' },
-            { id: 'c', text: 'Ze maakt eerst haar handen schoon.', best: true, feedback: 'Goed. Zo neem je geen bacteriën mee.' },
+            { id: 'c', text: 'Ze maakt eerst haar handen schoon.', best: true, feedback: 'Goed. Zo neemt ze geen bacteriën mee.' },
           ],
           why: 'Maak je handen schoon voor en na elke cliënt. Met water en zeep, of met handalcohol. Doe dat ook als je handschoenen uittrekt. Zo bescherm je je cliënten en jezelf.',
         },
         {
           kind: 'whatdo',
           id: 'r.l.care.1.wd2',
-          situation: 'Dewi heeft vannacht overgegeven. Nu voelt ze zich weer goed.',
+          situation: 'Dewi heeft vannacht overgegeven. Nu voelt ze zich weer goed. Wat kan Dewi het beste doen?',
           options: [
-            { id: 'a', text: 'Ze gaat werken. Ze voelt zich nu toch goed.', best: false, feedback: 'Begrijpelijk. Maar je kunt cliënten nog besmetten.' },
-            { id: 'b', text: 'Ze belt vóór haar dienst, en zegt dat het besmettelijk kan zijn.', best: true, feedback: 'Goed. Je hoeft niet te zeggen wat je hebt. Dit wel.' },
+            { id: 'a', text: 'Ze gaat werken. Ze voelt zich nu toch goed.', best: false, feedback: 'Begrijpelijk. Maar ze kan cliënten nog besmetten.' },
+            { id: 'b', text: 'Ze belt vóór haar dienst, en zegt dat het besmettelijk kan zijn.', best: true, feedback: 'Goed. Ze hoeft niet te zeggen wat ze heeft. Dit wel.' },
             { id: 'c', text: 'Ze gaat werken, en draagt de hele dag een mondkapje.', best: false, feedback: 'Goed bedoeld. Maar dat helpt niet genoeg.' },
           ],
-          why: 'Overgeven of diarree kan besmettelijk zijn. Cliënten zijn vaak kwetsbaar. Bel dus vóór je dienst. Volg het protocol van je werk. Daar staat in wat je moet doen.',
+          why: 'Overgeven of diarree kan besmettelijk zijn. Cliënten worden vaak sneller ziek. Bel dus vóór je dienst. Volg het protocol van je werk. Daar staat in wat je moet doen.',
         },
         {
           kind: 'whoask',
@@ -256,7 +256,7 @@ export const careUnit: RuleUnit = {
       // Les Z.2 · Privacy en medicijnen
       id: 'r.l.care.2',
       title: 'Privacy en medicijnen',
-      goal: 'Je deelt niets over cliënten. Je geeft alleen medicijnen als je het geleerd hebt, en je meldt fouten.',
+      goal: 'Je deelt niets over cliënten. Je geeft alleen medicijnen als je het geleerd hebt. Je meldt fouten.',
       remember: 'Wat je over cliënten weet, blijft op je werk.',
       // Wie kan je helpen: je leidinggevende · een ervaren collega · de vertrouwenspersoon, als je
       //   werk die heeft.
@@ -302,19 +302,19 @@ export const careUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.care.2.wd1',
-          situation: 'Fatima moet medicijnen geven. Ze heeft dat nog nooit geleerd.',
+          situation: 'Fatima moet medicijnen geven. Ze heeft dat nog nooit geleerd. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze vraagt eerst uitleg aan een ervaren collega.', best: true, feedback: 'Goed. Je geeft alleen medicijnen als je het geleerd hebt.' },
-            { id: 'b', text: 'Ze geeft ze toch. Het staat allemaal op de lijst.', best: false, feedback: 'Begrijpelijk. Maar zonder uitleg kun je een fout maken.' },
+            { id: 'b', text: 'Ze geeft ze toch. Het staat allemaal op de lijst.', best: false, feedback: 'Begrijpelijk. Maar zonder uitleg kan ze een fout maken.' },
             { id: 'c', text: 'Ze legt de pillen op tafel. Meneer neemt ze zelf wel.', best: false, feedback: 'Dan weet niemand of hij ze echt neemt.' },
           ],
-          why: 'Geef alleen medicijnen als je het geleerd hebt. En als het mag van je werk. Check altijd de lijst: de juiste persoon, het juiste medicijn, de juiste tijd. Twijfel je? Vraag het eerst.',
+          why: 'Geef alleen medicijnen als je het geleerd hebt. En als het mag van je werk. Check altijd de lijst: de juiste persoon, het juiste medicijn, de juiste tijd. Weet je het niet zeker? Vraag het eerst.',
         },
         // ⚖️ check: Een fout met medicijnen meld je altijd ⚖️.
         {
           kind: 'whatdo',
           id: 'r.l.care.2.wd2',
-          situation: 'Fatima geeft een pil een uur te laat. Niemand heeft het gezien.',
+          situation: 'Fatima geeft een pil een uur te laat. Niemand heeft het gezien. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze zegt niets. Het was maar een uurtje.', best: false, feedback: 'Begrijpelijk. Maar soms is een uur belangrijk.' },
             { id: 'b', text: 'Ze geeft morgen een extra pil, om het goed te maken.', best: false, feedback: 'Niet doen. Dat kan gevaarlijk zijn.' },
@@ -350,7 +350,7 @@ export const horecaUnit: RuleUnit = {
       // Les H.1 · Hygiëne in de keuken
       id: 'r.l.horeca.1',
       title: 'Hygiëne in de keuken',
-      goal: 'Je weet wat HACCP is, koelt eten goed, en houdt rauw en klaar eten apart.',
+      goal: 'Je weet wat HACCP is. Je koelt eten goed, en je houdt rauw en klaar eten apart.',
       remember: 'Werk schoon, koel goed, en zet de datum erop.',
       // Wie kan je helpen: de chef of je leidinggevende · de hygiënecode voor de horeca.
       help: ['leidinggevende'],
@@ -394,26 +394,26 @@ export const horecaUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.horeca.1.wd1',
-          situation: 'Een bak saus staat al 2 uur op het aanrecht. Het is warm in de keuken.',
+          situation: 'Een bak saus staat al 2 uur op het aanrecht. Het is warm in de keuken. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij zet de bak snel terug in de koelkast.', best: false, feedback: 'Begrijpelijk. Maar misschien is de saus al niet meer goed.' },
             { id: 'b', text: 'Hij vraagt de chef wat ermee moet.', best: true, feedback: 'Goed. De chef weet wat de regels zijn.' },
             { id: 'c', text: 'Hij ruikt eraan. Ruikt het goed, dan gebruikt hij het.', best: false, feedback: 'Bacteriën ruik je niet altijd.' },
           ],
-          why: 'Koud eten bewaar je in de koelkast, op 7 graden of kouder. Stond het te lang warm? Dan kunnen er bacteriën in groeien. Twijfel je? Vraag het, of gooi het weg.',
+          why: 'Koud eten bewaar je in de koelkast, op 7 graden of kouder. Stond het te lang warm? Dan kunnen er bacteriën in groeien. Weet je het niet zeker? Vraag het, of gooi het weg.',
         },
         {
           kind: 'whatdo',
           id: 'r.l.horeca.1.wd2',
-          situation: 'Jayden heeft net rauwe kip gesneden. Nu moet hij sla snijden.',
+          situation: 'Jayden heeft net rauwe kip gesneden. Nu moet hij sla snijden. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij wast zijn handen, en pakt een schone plank.', best: true, feedback: 'Goed. Zo komen er geen bacteriën van de kip op de sla.' },
-            { id: 'b', text: 'Hij spoelt het mes even af onder de kraan.', best: false, feedback: 'Dat is niet genoeg. De plank en je handen zijn ook vies.' },
+            { id: 'b', text: 'Hij spoelt het mes even af onder de kraan.', best: false, feedback: 'Dat is niet genoeg. De plank en zijn handen zijn ook vies.' },
             { id: 'c', text: 'Hij gebruikt dezelfde plank. Hij snijdt de sla toch heel snel.', best: false, feedback: 'Snel helpt niet. Bacteriën gaan meteen mee.' },
           ],
           why: 'Rauw vlees heeft vaak bacteriën. Houd rauw en klaar eten altijd apart. Gebruik schone planken en messen. Was je handen na rauw vlees.',
         },
-        { kind: 'model', id: 'r.l.horeca.1.mo1', context: 'Je twijfelt of eten nog goed is.', nl: 'Chef, deze saus stond lang buiten. Wat doe ik ermee?' },
+        { kind: 'model', id: 'r.l.horeca.1.mo1', context: 'Je weet niet zeker of eten nog goed is.', nl: 'Chef, deze saus stond lang buiten. Wat doe ik ermee?' },
       ],
     },
     {
@@ -448,7 +448,7 @@ export const horecaUnit: RuleUnit = {
             'Een restaurant moet weten welke allergenen in het eten zitten.',
             'Raad nooit. Vraag het na in de keuken.',
             'Fooi telt niet mee voor je minimumloon.',
-            'Vraag hoe de fooi wordt verdeeld.',
+            'Vraag hoe jullie de fooi verdelen.',
           ],
           rule: 'geschreven',
         },
@@ -457,7 +457,7 @@ export const horecaUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.horeca.2.wd1',
-          situation: 'De gast is allergisch voor noten.',
+          situation: 'De gast is allergisch voor noten. Wat kan Esra het beste doen?',
           options: [
             { id: 'a', text: 'Ze zegt: "Nee hoor, dat denk ik niet."', best: false, feedback: 'Begrijpelijk. Maar raden kan iemand heel ziek maken.' },
             { id: 'b', text: 'Ze zegt: "Ik vraag het even na in de keuken."', best: true, feedback: 'Goed. Zo krijgt de gast het juiste antwoord.' },
@@ -472,14 +472,14 @@ export const horecaUnit: RuleUnit = {
           id: 'r.l.horeca.2.tf1',
           statement: 'Fooi telt mee voor je minimumloon.',
           answer: false,
-          why: 'Fooi is extra, van de gasten. Je werkgever betaalt je gewoon minstens het minimumloon. Fooi mag hij daar niet bij optellen. Vraag hoe de fooi in jullie team wordt verdeeld.',
+          why: 'Fooi is extra, van de gasten. Je werkgever betaalt je gewoon minstens het minimumloon. Fooi mag hij daar niet bij optellen. Vraag hoe jullie team de fooi verdeelt.',
         },
         {
           kind: 'whatdo',
           id: 'r.l.horeca.2.wd2',
-          situation: 'Esra werkt er al 2 maanden. Ze hoort niets over de fooi.',
+          situation: 'Esra werkt er al 2 maanden. Ze hoort niets over de fooi. Wat kan Esra het beste doen?',
           options: [
-            { id: 'a', text: 'Ze vraagt haar leidinggevende hoe de fooi wordt verdeeld.', best: true, feedback: 'Goed. Elk team doet het anders. Vragen is normaal.' },
+            { id: 'a', text: 'Ze vraagt haar leidinggevende hoe ze de fooi verdelen.', best: true, feedback: 'Goed. Elk team doet het anders. Vragen is normaal.' },
             { id: 'b', text: 'Ze pakt elke avond zelf wat geld uit de pot.', best: false, feedback: 'Niet doen. Dan lijkt het op stelen.' },
             { id: 'c', text: 'Ze zegt niets. Fooi is toch niet zo belangrijk.', best: false, feedback: 'Mag. Maar fooi kan best veel geld zijn.' },
           ],
