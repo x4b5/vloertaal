@@ -129,7 +129,7 @@ const lang: HelpLanguageSource = {
     backupMerge: 'Połącz',
     backupReplace: 'Zastąp',
     backupBack: 'Twoje postępy wróciły.',
-    backupNothingNew: 'Nic nowego: to już było na twoim telefonie.',
+    backupNothingNew: 'Nic nowego: to już było w twoim telefonie.',
     cancel: 'Anuluj',
     remindTitle: 'Przypominaj mi codziennie',
     remindEvent: 'Czas na niderlandzki (10 minut)',

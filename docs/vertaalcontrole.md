@@ -1195,3 +1195,12 @@ Elke tekst van ar, fa, uk, tr, pl, ro en bg (samen ~13.700), drie zoekers per ta
 - `c.cv.a`: 'Да, от предишния ми шеф.' ('from my previous boss') for 'Ja, mijn vorige baas'. Natural as a reply to 'Имаш ли препоръка?', or should it be 'Да, предишният ми шеф.'?
 - `c.illness.p`: 'Вече съм по-добре.' means 'I am feeling better', not quite 'I am well again' (weer beter = recovered). It is clear with the next sentence, but would 'Вече съм добре.' or 'Оздравях.' fit better?
 - `c.aihelp.s / c.aihelp.w`: Here vakantiegeld is 'добавка за отпуск', but everywhere else it is 'пари за отпуск' (c.extra, c.agency). Should it be one term everywhere?
+
+### Tweede keuring van ronde 1 (29 oktober)
+
+Ronde 1 had één keurder per taal, en die liet de valse Over-pagina-voorstellen door. Daarom zijn alle
+35 wijzigingen uit ronde 1 en de 27 nieuwe teksten opnieuw gekeurd door twee onafhankelijke agents per
+taal (betekenis en taal). Alle 35 wijzigingen bleven staan. Drie nieuwe teksten zijn verbeterd:
+Tigrinya `retry` "ደጊም ምፍታን" → "ዳግማይ ምፍታን" (ደጊም alleen betekent "voortaan"), Arabisch
+`remindStoppedAndroid` (f) zonder losse kasra zoals de rest, Pools `backupNothingNew` "w telefonie"
+(zoals elders in de app).

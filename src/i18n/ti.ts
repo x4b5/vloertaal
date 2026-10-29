@@ -305,7 +305,7 @@ const lang: HelpLanguageSource = {
     resetKeeps: { m: 'ትምህርትታትካ፡ ቃላትካ፡ ተኸታታሊ መዓልትታትካን ምስክር ወረቐታትካን ይድምሰሱ። ቋንቋኻ፡ ኮድካን ምድላዋትካን ይጸንሑ።', f: 'ትምህርትታትኪ፡ ቃላትኪ፡ ተኸታታሊ መዓልትታትኪን ምስክር ወረቐታትኪን ይድምሰሱ። ቋንቋኺ፡ ኮድኪን ምድላዋትኪን ይጸንሑ።' },
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'ኣይተጻዕነን። ኢንተርነት ኣሎ ድዩ?',
-    retry: 'ደጊም ምፍታን',
+    retry: 'ዳግማይ ምፍታን',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
