@@ -64,6 +64,9 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | Dubbeltik op het goede woordtegeltje: de tweede tik viel op het volgende rijtje en telde als fout | zinnen bouwen, letters | een tik in het eerste moment na een nieuw rijtje telt niet |
 | Twee keer op hetzelfde foute kaartje of tegeltje telde als twee fouten (en werd zo "Niet helemaal") | koppelen, zinnen, letters | dezelfde fout telt één keer |
 | Na een goed tegeltje of paar was de toetsenbordfocus weg; koppelen zei niets tegen de schermlezer | toetsenbord, schermlezer | de focus gaat naar het volgende tegeltje; goed/fout wordt voorgelezen |
+| Spreken: de microfoon kon starten terwijl de app op de achtergrond stond, en de opname speelde daar af | spreekoefening | niet op de achtergrond |
+| Spreken: na een mislukte microfoon bleef "Verder" staan tijdens de nieuwe poging | spreekoefening | weg tot de poging klaar is; de focus gaat naar de volgende knop |
+| Een fout gekoppeld rijtje als allerlaatste oefening kwam niet terug | dagelijkse herhaling | komt terug, zoals elders |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 

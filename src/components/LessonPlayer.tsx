@@ -621,7 +621,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     // A finished match board already gave its feedback tile by tile. Two or more wrong taps make
     // it a mistake, which comes back once at the end (as a built sentence does).
     if (ex.kind === 'match') {
-      if (!answer.correct && index < initial.length) queueRetry();
+      if (!answer.correct && index < initial.length) {
+        queueRetry();
+        return next(1);
+      }
       return next();
     }
     // The choreography (styles.css, "Answer moment"): t=0 the options colour, the chime plays
@@ -712,7 +715,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
    *  skipped either). Without a usable microphone it stays, as "say it out loud" (Speaking.tsx). */
   const cantSpeak = (e: Exercise) => e.kind === 'speak' && speakSkipped(soundOff);
 
-  function next() {
+  /** On to the next exercise; `queued`: retries just added this moment (not in `queue` yet). */
+  function next(queued?: number) {
+    const coming = typeof queued === 'number' ? queued : 0;
     reset();
     let i = index + 1;
     // Skip audio-only exercises when the learner can't listen right now, or when nothing on this
@@ -722,7 +727,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       if (i < initial.length && needsAudio(queue[i])) skipped.current += 1;
       i++;
     }
-    if (i >= queue.length) {
+    if (i >= queue.length + coming) {
       finish();
     } else {
       leave();
