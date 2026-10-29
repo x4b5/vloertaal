@@ -53,9 +53,16 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
         else speak(text, slow || nextSlow, lang, voice);
         setPlays({ text, n: n + 1 });
       }}
-      aria-label={label ?? (hideText ? said(play) : `${said(play)}: ${text}`)}
-      lang={label ? undefined : saidLang(play)}
+      aria-label={label ?? (hideText ? said(play) : undefined)}
+      lang={label || !hideText ? undefined : saidLang(play)}
     >
+      {/* "Listen: Vrouw of man?" in two languages: the Dutch is read with a Dutch voice, not the help language's. */}
+      {!label && !hideText && (
+        <>
+          <span className="sr-only" lang={saidLang(play)}>{`${said(play)}: `}</span>
+          <span className="sr-only" lang={lang}>{text}</span>
+        </>
+      )}
       {glyph ? <SpeakerIcon size={30} /> : slow ? <SlowIcon size={size === 'lg' ? 40 : 28} /> : <SpeakerIcon size={size === 'lg' ? 44 : 28} />}
       {nextSlow && <span className="speak-turtle" aria-hidden><SlowIcon size={size === 'lg' ? 26 : 22} /></span>}
     </button>
