@@ -47,11 +47,19 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 - Het pauzescherm houdt de toetsenbordfocus vast en geeft die bij sluiten terug aan ✕.
 - Het label boven het spiekkaartje heeft genoeg contrast.
 
+### Tests erbij
+
+- `tests/lessonRender.test.ts`: elke oefening van elke les tekent, in het Pools, Arabisch,
+  Tigrinya en alleen-Engels, en Werkregels in het Nederlands (meer dan 5.000 schermen).
+- `tests/screensRender.test.ts`: Instellingen (elke pagina), Over, Hulp, noodzinnen, alle tips en
+  de uitslag, in alle negen talen, ook in de vrouwelijke vormen.
+
 ### Opruimen en snelheid
 
 - **CSS**: 165 selectors van klassen die nergens meer voorkomen, weggehaald met een CSS-parser.
   Gecontroleerd door alle schermen in drie talen door te klikken: geen van de 719 klassen die de app
-  echt toont, is geraakt. De stylesheet ging van 203 naar 191 kB.
+  echt toont, is geraakt. Een tweede ronde nam de klassen die alleen dynamisch *leken* (zoals
+  `` `offline-${status}` ``) per mogelijke waarde door. De stylesheet ging van 203 naar 187 kB.
 - **Dode code**:
   - het oude noodzinnen-scherm over de les, met zijn stijlen;
   - vier iconen;
@@ -71,5 +79,5 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
    op het hoofdbestand (±220 kB gzip). Alleen de lesspeler lui laden scheelt maar 10 kB, met
    risico op een wachtscherm bij de eerste les; daarom teruggedraaid. Echte winst vraagt een
    grotere opsplitsing (de inhoud per thema, de oefeningen per soort). Dat is een eigen project.
-3. **Dode CSS die dynamisch lijkt**: 66 klassen worden alleen als begin van een samengestelde naam
-   gevonden (zoals `` `bay-${x}` ``). Die zijn laten staan; per klasse nagaan kan later.
+3. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+   vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.
