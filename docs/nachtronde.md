@@ -15,6 +15,12 @@ avond staat apart in PR #90 en `docs/seo-plan.md`.*
 Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app met Playwright
 (echte klikken, echte bestanden). Wat niet na te doen was, is niet aangepast.
 
+Zo zijn deze delen bekeken, elk door een eigen reviewer: offline en geluid, antwoorden nakijken en
+herhaling, Werkregels, back-up en reeks, Hulp/regio/begeleiders/certificaten, de oefenschermen,
+herinnering/installeren/updates, Instellingen, home en uitslag, en de vertaalmachinerie. Daarna
+hebben twee aparte reviews alleen naar de wijzigingen van deze nacht gekeken, op zoek naar wat die
+zelf kapotmaakten; wat ze vonden is ook gerepareerd (zie de tabel).
+
 ## Wat er veranderd is
 
 ### Bugs
@@ -95,6 +101,13 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
   Tigrinya en alleen-Engels, en Werkregels in het Nederlands (meer dan 5.000 schermen).
 - `tests/screensRender.test.ts`: Instellingen (elke pagina), Over, Hulp, noodzinnen, alle tips en
   de uitslag, in alle negen talen, ook in de vrouwelijke vormen.
+- `tests/swStall.test.ts`: de service worker in een zandbak: een hangende verbinding, de eigen
+  bestanden van de build, de updatecontrole.
+- `tests/offlineFill.test.ts`, `tests/trackPlace.test.ts`, `tests/streakEdges.test.ts`: bewaren
+  voor offline, elke route zijn eigen plek, de reeks rond middernacht en bij samenvoegen.
+- In de gebouwde app (niet in de repo): een hele les in het Pools, Arabisch, Tigrinya en
+  Oekraïens; de eerste start in drie talen; axe over elke oefening in drie talen, licht en donker;
+  geen horizontaal scrollen op 320 px.
 
 ### Opruimen en snelheid
 
@@ -117,8 +130,8 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 ## Samen met PR #90 (SEO)
 
 De twee PR's raken allebei `index.html`, `vite.config.ts` en `public/sw.js`. Een proefmerge van
-beide (29 oktober, 00:50) gaat zonder conflict: de wijzigingen staan bewust op andere regels. Samen
-slagen alle 1179 tests en de build. In de browser toont `/?taal=pl` "Polski?", is er
+beide (29 oktober, ±05:00) gaat zonder conflict: de wijzigingen staan bewust op andere regels.
+Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", is er
 één `<main>`, en verdwijnen de SEO-links zodra de app tekent. De volgorde van mergen maakt niet uit.
 
 ## Bewust níét gedaan (graag een besluit)
