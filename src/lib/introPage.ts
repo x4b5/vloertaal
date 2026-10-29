@@ -1,4 +1,5 @@
 import { type IntroQuestion, WHY } from '../content/intro';
+import { linkRows } from './linkRows';
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -43,6 +44,7 @@ const STYLE = `
   .next, .begin, .cta { display: block; width: 100%; margin-top: 12px; background: var(--yellow); color: #1e2226; border: 2px solid #1e2226; text-decoration: none; }
   .src { color: var(--ink2); font-size: 0.85rem; }
   .src a, footer a, .mail { color: inherit; }
+  footer nav { margin: 8px 0; }
   .checks { font-weight: 600; }
   footer { color: var(--ink2); font-size: 0.95rem; margin-top: 24px; }
   .stripe { height: 12px; background: repeating-linear-gradient(-45deg, var(--yellow) 0 16px, #1e2226 16px 32px); }
@@ -97,10 +99,11 @@ export function introPage(questions: IntroQuestion[]): string {
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${esc(TITLE)} · Vloertaal</title>
-<meta name="description" content="Drie korte vragen over taal op de werkvloer, en waarom Vloertaal er is." />
+<meta name="description" content="Drie korte vragen over Nederlands op de werkvloer: wat weet jij? En waarom Vloertaal er is: gratis Nederlands leren voor je werk, in je eigen taal." />
 <link rel="canonical" href="https://vloertaal.nl/intro/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Vloertaal" />
+<meta property="og:locale" content="nl_NL" />
 <meta property="og:title" content="${esc(TITLE)}" />
 <meta property="og:description" content="Drie korte vragen, één minuut. Daarna zie je waarom Vloertaal er is." />
 <meta property="og:url" content="https://vloertaal.nl/intro/" />
@@ -114,7 +117,7 @@ export function introPage(questions: IntroQuestion[]): string {
 <body>
 <div class="stripe" aria-hidden="true"></div>
 <main>
-<header><img src="/icon-192.png?v=4" alt="" /><a href="/">vloertaal.</a></header>
+<header><img src="/icon.svg?v=4" alt="" width="44" height="44" /><a href="/">vloertaal.</a></header>
 <section aria-labelledby="start">
 <h1 id="start" tabindex="-1">${esc(TITLE)}</h1>
 <p>Drie korte vragen, één minuut. Daarna zie je waarom Vloertaal er is.</p>
@@ -128,7 +131,8 @@ ${why}
 <a class="cta" href="/?intro">Bekijk de app</a>
 <p>Meedenken of meedoen? Mail naar <a class="mail" href="mailto:hoi@vloertaal.nl">hoi@vloertaal.nl</a>.</p>
 </section>
-<footer><p>Vloertaal is een vrijwillig project, nog in de testfase.</p></footer>
+<footer><p>Vloertaal is een vrijwillig project, nog in de testfase.</p>
+${linkRows()}</footer>
 </main>
 <script>${SCRIPT}</script>
 </body>

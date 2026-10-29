@@ -1,9 +1,17 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
+import { askedHelpLang } from '../src/lib/langGuess';
+import { describe as describeLine, hreflangLinks, LANG_PAGES, langPage } from '../src/lib/langPages';
+import { rulesPage, SECTOR_PAGES, sectorPage } from '../src/lib/sectorPages';
+import { coachPage } from '../src/lib/coachPage';
+import { COACH_PATH, RULES_PATH } from '../src/lib/paths';
+import { notFoundPage, siteLinks } from '../src/lib/siteLinks';
+import { HEADINGS, slugOf, TOPIC_PAGES, topicPage, topicsIndexPage } from '../src/lib/topicPages';
+import { unitFromSearch } from '../src/lib/unitLink';
+import { sitemap } from '../src/lib/sitemap';
 
 // What search engines read before any script runs (docs/seo-plan.md, step 2).
 const page = readFileSync('index.html', 'utf8');
-const sitemap = readFileSync('public/sitemap.xml', 'utf8');
 
 const meta = (name: string) => page.match(new RegExp(`<meta name="${name}" content="([^"]*)"`))?.[1] ?? '';
 
@@ -31,8 +39,9 @@ describe('start page for search engines', () => {
   it('describes itself as a free web app in structured data', () => {
     const json = page.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
     expect(json).toBeDefined();
-    const data = JSON.parse(json!);
-    expect(data['@type']).toBe('WebApplication');
+    const graph = JSON.parse(json!)['@graph'];
+    expect(graph.find((d: { '@type': string }) => d['@type'] === 'WebSite').name).toBe('Vloertaal');
+    const data = graph.find((d: { '@type': string }) => d['@type'] === 'WebApplication');
     expect(data.url).toBe('https://vloertaal.nl/');
     expect(data.isAccessibleForFree).toBe(true);
     expect(data.offers.price).toBe('0');
@@ -41,8 +50,213 @@ describe('start page for search engines', () => {
 
 describe('sitemap', () => {
   it('lists the readable pages', () => {
-    for (const url of ['https://vloertaal.nl/', 'https://vloertaal.nl/intro/', 'https://vloertaal.nl/nieuw/']) {
-      expect(sitemap).toContain(`<loc>${url}</loc>`);
+    const xml = sitemap();
+    for (const path of ['/', '/intro/', '/nieuw/', '/pl/', '/ar/', '/prs/', '/en/']) {
+      expect(xml).toContain(`<loc>https://vloertaal.nl${path}</loc>`);
     }
+  });
+
+  it('dates /nieuw by its newest entry', () => {
+    expect(sitemap()).toMatch(/<loc>https:\/\/vloertaal.nl\/nieuw\/<\/loc><lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/);
+  });
+
+  it('is not also a static file that could drift from the built one', () => {
+    expect(() => readFileSync('public/sitemap.xml', 'utf8')).toThrow();
+  });
+});
+
+describe('a page per help language (docs/seo-plan.md, step 3)', () => {
+  it('has the nine help languages and English', () => {
+    expect(LANG_PAGES.map((p) => p.code).sort()).toEqual(['ar', 'bg', 'en', 'fa', 'pl', 'prs', 'ro', 'ti', 'tr', 'uk']);
+  });
+
+  for (const p of LANG_PAGES) {
+    describe(p.code, () => {
+      const html = langPage(p.code);
+      const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '';
+
+      it('is in its own language and direction, with its own address', () => {
+        expect(html).toContain(`<html lang="${p.tag}" dir="${p.dir}">`);
+        expect(html).toContain(`<link rel="canonical" href="https://vloertaal.nl${p.path}" />`);
+      });
+
+      it('names every other language page, and the Dutch start page as default', () => {
+        expect(html).toContain(hreflangLinks());
+        expect(html).toContain('hreflang="x-default" href="https://vloertaal.nl/"');
+      });
+
+      it('has a title with the name and a description of search-result length', () => {
+        expect(html).toMatch(/<title>[^<]+ – Vloertaal<\/title>/);
+        expect([...desc].length).toBeGreaterThanOrEqual(50);
+        expect([...desc].length).toBeLessThanOrEqual(160);
+      });
+
+      it('opens the app with its language asked', () => {
+        expect(html).toContain(p.code === 'en' ? 'class="cta" href="/"' : `class="cta" href="/?taal=${p.code}"`);
+      });
+
+      it('has readable structured data', () => {
+        const json = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
+        const data = JSON.parse(json!);
+        expect(data.inLanguage).toBe(p.tag);
+        expect(data.about.isAccessibleForFree).toBe(true);
+      });
+    });
+  }
+
+  it('cuts the search line at a sentence', () => {
+    expect(describeLine('One. Two. ' + 'x'.repeat(200) + '.')).toBe('One. Two.');
+    expect(describeLine('y'.repeat(300)).length).toBe(160);
+  });
+
+  it('the app takes the asked language as its first guess', () => {
+    expect(askedHelpLang('?taal=pl')).toBe('pl');
+    expect(askedHelpLang('?taal=PRS')).toBe('prs');
+    expect(askedHelpLang('?taal=xx')).toBeNull();
+    expect(askedHelpLang('?taal=en')).toBeNull();
+    expect(askedHelpLang('')).toBeNull();
+  });
+});
+
+describe('a page per sector and for Werkregels (docs/seo-plan.md, step 4)', () => {
+  const pages = [...SECTOR_PAGES.map((p) => ({ path: p.path, html: sectorPage(p.id) })), { path: RULES_PATH, html: rulesPage() }];
+
+  for (const { path, html } of pages) {
+    describe(path, () => {
+      const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? '';
+      const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '';
+
+      it('is Dutch, with its own address, a short title and a search-length description', () => {
+        expect(html).toContain('<html lang="nl" dir="ltr">');
+        expect(html).toContain(`<link rel="canonical" href="https://vloertaal.nl${path}" />`);
+        expect(title).toContain('Vloertaal');
+        expect(title.length).toBeLessThanOrEqual(60);
+        expect(desc.length).toBeGreaterThanOrEqual(70);
+        expect(desc.length).toBeLessThanOrEqual(160);
+      });
+
+      it('has one h1, a way into the app, and links to the other pages', () => {
+        expect(html.match(/<h1>/g)).toHaveLength(1);
+        expect(html).toMatch(/class="cta" href="\/(\?unit=[a-z]+)?"/);
+        for (const other of SECTOR_PAGES) expect(html).toContain(`href="${other.path}"`);
+        expect(html).toContain('href="/pl/"');
+      });
+
+      it('has structured data with breadcrumbs', () => {
+        const json = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
+        const data = JSON.parse(json!);
+        expect(data[1]['@type']).toBe('BreadcrumbList');
+        expect(data[1].itemListElement.at(-1).item).toBe(`https://vloertaal.nl${path}`);
+      });
+    });
+  }
+
+  it('shows each word of a sector once', () => {
+    const words = [...sectorPage('construction').matchAll(/<li><strong>([^<]+)<\/strong>:/g)].map((m) => m[1]);
+    expect(words).toContain('de steiger');
+    expect(new Set(words).size).toBe(words.length);
+  });
+
+  it('are in the sitemap', () => {
+    for (const { path } of pages) expect(sitemap()).toContain(`<loc>https://vloertaal.nl${path}</loc>`);
+  });
+});
+
+describe('the page for coaches (docs/seo-plan.md, step 5)', () => {
+  const html = coachPage();
+
+  it('is Dutch, with a short title, its own address and a search-length description', () => {
+    const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? '';
+    const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '';
+    expect(html).toContain(`<link rel="canonical" href="https://vloertaal.nl${COACH_PATH}" />`);
+    expect(title.length).toBeLessThanOrEqual(60);
+    expect(desc.length).toBeLessThanOrEqual(160);
+    expect(sitemap()).toContain(`<loc>https://vloertaal.nl${COACH_PATH}</loc>`);
+  });
+
+  it('links every topic in a way the app opens', () => {
+    const links = [...html.matchAll(/href="\/\?unit=([^"]+)"/g)].map((m) => m[1]);
+    expect(links.length).toBeGreaterThan(25);
+    for (const slug of links) expect(unitFromSearch(`?unit=${slug}`), slug).not.toBeNull();
+  });
+});
+
+describe('links from the start page, before any script', () => {
+  const links = siteLinks();
+
+  it('reach every plain page, the topics through their list', () => {
+    const reach = links + topicsIndexPage();
+    for (const path of sitemap().match(/<loc>[^<]+<\/loc>/g)!.map((l) => l.slice(5 + 'https://vloertaal.nl'.length, -6))) {
+      if (path === '/') continue;
+      expect(reach).toContain(`href="${path}"`);
+    }
+  });
+
+  it('are removed when the app draws', () => {
+    expect(readFileSync('src/main.tsx', 'utf8')).toContain("getElementById('site-links')?.remove()");
+  });
+});
+
+describe('the 404 page and the hosting', () => {
+  it('is not for search results and links on', () => {
+    const html = notFoundPage();
+    expect(html).toContain('<meta name="robots" content="noindex" />');
+    expect(html).not.toContain('rel="canonical"');
+    expect(html).toContain('href="/bouw/"');
+  });
+
+  it('one address per page: /bouw goes to /bouw/', () => {
+    expect(JSON.parse(readFileSync('vercel.json', 'utf8')).trailingSlash).toBe(true);
+  });
+});
+
+describe('a page per topic', () => {
+  it('has every topic of the Dutch course once, at a Dutch address', () => {
+    expect(TOPIC_PAGES.length).toBeGreaterThanOrEqual(25);
+    expect(new Set(TOPIC_PAGES.map((t) => t.path)).size).toBe(TOPIC_PAGES.length);
+    expect(slugOf('Rekenen: tijd, geld, maten')).toBe('rekenen-tijd-geld-maten');
+    expect(slugOf('Omgang met collega’s')).toBe('omgang-met-collegas');
+    for (const t of TOPIC_PAGES) expect(sitemap()).toContain(`<loc>https://vloertaal.nl${t.path}</loc>`);
+  });
+
+  for (const t of TOPIC_PAGES) {
+    it(`${t.path}: short title, search-length description, a way into the topic`, () => {
+      const html = topicPage(t);
+      const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? '';
+      const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '';
+      expect(title.length).toBeLessThanOrEqual(60);
+      expect(desc.length).toBeLessThanOrEqual(160);
+      expect(html.match(/<h1>/g)).toHaveLength(1);
+      const slug = html.match(/class="cta" href="\/\?unit=([^"]+)"/)?.[1];
+      expect(unitFromSearch(`?unit=${slug}`)).toBe(t.unit.id);
+    });
+  }
+});
+
+describe('the second critic round', () => {
+  it('gives no sector topic a page of its own: its sector page has the same words', () => {
+    for (const s of SECTOR_PAGES) expect(TOPIC_PAGES.some((t) => t.path === s.path)).toBe(false);
+    expect(TOPIC_PAGES.map((t) => t.path)).not.toContain('/onderwerpen/op-de-bouw/');
+    expect(topicsIndexPage()).toContain('href="/bouw/"');
+  });
+
+  it('gives every topic page a heading of its own that fits a search result', () => {
+    for (const t of TOPIC_PAGES) {
+      expect(HEADINGS[t.unit.id], t.unit.id).toBeDefined();
+      expect(`${t.heading} | Vloertaal`.length, t.unit.id).toBeLessThanOrEqual(60);
+    }
+  });
+
+  it('lets a sector page open its own topic in the app', () => {
+    expect(sectorPage('construction')).toContain('class="cta" href="/?unit=build"');
+    expect(sectorPage('logistics')).toContain('class="cta" href="/?unit=warehouse"');
+  });
+
+  it('keeps the service worker to the app: not the pages the start page links to', () => {
+    const sw = readFileSync('public/sw.js', 'utf8');
+    expect(sw).toContain('<section id="site-links"');
+    expect(siteLinks()).toMatch(/^<section id="site-links"[\s\S]*<\/section>$/);
+    // Offline, another page of the site goes to the app instead of a broken copy of it.
+    expect(sw).toContain('Response.redirect(scope(), 302)');
   });
 });

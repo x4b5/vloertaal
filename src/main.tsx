@@ -50,7 +50,11 @@ const cssBoot = new Promise<void>((done) => {
   appCss.addEventListener('error', () => done());
 });
 // Crashed: a drawing error shows the splash with "Try again", never a blank screen.
-const render = (node: ReactNode) => createRoot(document.getElementById('root')!).render(<StrictMode><Crashed>{node}</Crashed></StrictMode>);
+const render = (node: ReactNode) => {
+  // The links for search engines under the splash (src/lib/siteLinks.ts): the app has its own ways.
+  document.getElementById('site-links')?.remove();
+  createRoot(document.getElementById('root')!).render(<StrictMode><Crashed>{node}</Crashed></StrictMode>);
+};
 
 if (import.meta.env.DEV && params.get('shot')) {
   // Dev screenshots (never in the production bundle): the shot's help language and the pictures first.

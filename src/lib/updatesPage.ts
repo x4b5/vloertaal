@@ -1,4 +1,5 @@
 import { LAST_UPDATE, type Update, updateDate } from '../content/updates';
+import { linkRows } from './linkRows';
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -20,7 +21,17 @@ export function updatesPage(updates: Update[]): string {
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Wat is er nieuw? · Vloertaal</title>
-<meta name="description" content="Wat er veranderd is in Vloertaal, de gratis app voor Nederlands op de werkvloer." />
+<meta name="description" content="Wat er nieuw is in Vloertaal, de gratis app om Nederlands te leren voor je werk: nieuwe lessen, talen en verbeteringen, de nieuwste eerst." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Vloertaal" />
+<meta property="og:locale" content="nl_NL" />
+<meta property="og:title" content="Wat is er nieuw? · Vloertaal" />
+<meta property="og:description" content="Nieuwe lessen, talen en verbeteringen in Vloertaal, de nieuwste eerst." />
+<meta property="og:url" content="https://vloertaal.nl/nieuw/" />
+<meta property="og:image" content="https://vloertaal.nl/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://vloertaal.nl/nieuw/" />
 <link rel="icon" href="/icon.svg?v=4" type="image/svg+xml" />
 <style>
@@ -41,19 +52,21 @@ export function updatesPage(updates: Update[]): string {
   li { margin: 6px 0; }
   footer { color: var(--ink2); font-size: 0.95rem; margin-top: 24px; }
   footer a { color: inherit; }
+  footer nav { margin: 8px 0; }
   .stripe { height: 12px; background: repeating-linear-gradient(-45deg, var(--yellow) 0 16px, #1e2226 16px 32px); }
 </style>
 </head>
 <body>
 <div class="stripe" aria-hidden="true"></div>
 <main>
-<header><img src="/icon-192.png?v=4" alt="" /><a href="/">vloertaal.</a></header>
+<header><img src="/icon.svg?v=4" alt="" width="48" height="48" /><a href="/">vloertaal.</a></header>
 <h1>Wat is er nieuw?</h1>
 <p class="sub">Laatst bijgewerkt: <time datetime="${LAST_UPDATE}">${esc(updateDate(LAST_UPDATE))}</time>. Vloertaal is gratis en nog in de testfase.</p>
 ${days}
 <footer>
 <p>Zie je een fout, of heb je een vraag? Mail naar <a href="mailto:hoi@vloertaal.nl">hoi@vloertaal.nl</a>.</p>
 <p><a href="/">Naar de app: vloertaal.nl</a></p>
+${linkRows()}
 </footer>
 </main>
 </body>
