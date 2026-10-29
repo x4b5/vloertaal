@@ -335,7 +335,7 @@ export const uiNl: Record<UiKey, UiText> = {
   remindStop: 'Stop de herinnering',
   remindStopped: 'Open het bestand. Dan haal je de herinnering uit je agenda.',
   remindStoppedAndroid: 'Haal de herinnering zelf weg in Google Agenda.',
-  resetKeeps: 'We wissen je lessen, je dagen op rij en je certificaten. Je taal, je code en je instellingen blijven.', // regels: no words
+  resetKeeps: 'De app wist je lessen, je dagen op rij en je certificaten. Je taal, je code en je instellingen blijven.', // regels: no words
   loadFailed: 'Niet geladen. Is er internet?',
   retry: 'Opnieuw proberen',
 };

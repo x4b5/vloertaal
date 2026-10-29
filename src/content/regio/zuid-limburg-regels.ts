@@ -303,7 +303,7 @@ export const zlRegelsUnit: RuleUnit = {
           id: 'rg.zl.r.l.4.wd1',
           situation: 'Dewi wil met carnaval graag vrij. Wat doet ze?',
           options: [
-            { id: 'a', text: 'Ze meldt zich die maandag ziek. Dat doen anderen ook.', best: false, feedback: 'Niet doen. Zich ziek melden als ze niet ziek is, kan haar baan kosten.' },
+            { id: 'a', text: 'Ze meldt zich die maandag ziek. Dat doen anderen ook.', best: false, feedback: 'Niet doen. Meldt ze zich ziek terwijl ze niet ziek is? Dan kan ze haar baan kwijtraken.' },
             { id: 'b', text: 'Ze vraagt het een week van tevoren. Dan is het nog vroeg genoeg.', best: false, feedback: 'Dat is vaak te laat. Dan zijn de vrije dagen al weg.' },
             { id: 'c', text: 'Ze vraagt het nu al aan haar leidinggevende, en ze krijgt het antwoord op papier.', best: true, feedback: 'Goed. Vroeg vragen is slim met carnaval.' },
           ],
@@ -369,7 +369,7 @@ export const zlRegelsUnit: RuleUnit = {
       //   around 2030 it moves to Sittard-Geleen ⚖️. That is also why the lesson says "bel eerst".
       id: 'rg.zl.r.l.5',
       title: 'Hulp in de buurt: zorg, taal, geld',
-      goal: 'Je weet waar je heen gaat als je huisarts dicht is. Ook als je Nederlands wilt oefenen, of als je geldzorgen hebt.',
+      goal: 'Je weet waar je heen gaat als je huisarts dicht is. Je weet ook waar je Nederlands oefent en hulp krijgt bij geldzorgen.',
       remember: 'Huisarts dicht? Bel de huisartsenpost. Geldzorgen? Vraag vroeg hulp bij de gemeente.',
       // Wie kan je helpen: je huisarts of de huisartsenpost ⚖️ · 112 bij levensgevaar · de gemeente en de
       //   Kredietbank Limburg ⚖️ · Geldfit: 0800-8115 ⚖️ · de bibliotheek of het Taalhuis ⚖️ · het buurtteam
@@ -411,7 +411,7 @@ export const zlRegelsUnit: RuleUnit = {
           id: 'rg.zl.r.l.5.wd1',
           situation: 'De huisarts is dicht. Wat doet Hatice?',
           options: [
-            { id: 'a', text: 'Ze rijdt meteen naar de spoedeisende hulp van het ziekenhuis.', best: false, feedback: 'Daar heeft ze meestal eerst een verwijzing nodig. Bel eerst.' },
+            { id: 'a', text: 'Ze rijdt meteen naar de spoedeisende hulp van het ziekenhuis.', best: false, feedback: 'Daar heeft ze meestal eerst een verwijzing nodig. Ze kan beter eerst bellen.' },
             { id: 'b', text: 'Ze belt de huisartsenpost.', best: true, feedback: 'Goed. Die helpt ’s avonds, ’s nachts en in het weekend.' },
             { id: 'c', text: 'Ze wacht tot maandag en kijkt op internet.', best: false, feedback: 'Bij hoge koorts bij een kind kan ze beter nu bellen.' },
           ],

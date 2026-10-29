@@ -150,7 +150,7 @@ export const ziekUnit: RuleUnit = {
           situation: 'De leidinggevende vraagt: "Wat is er precies met je been?" Wat kan Esra het beste doen?',
           options: [
             { id: 'a', text: 'Ze vertelt alles, ook wat de dokter precies zei.', best: false, feedback: 'Dat mag, als ze wil. Maar het hoeft niet.' },
-            { id: 'b', text: 'Ze zegt niets, en ze hangt snel weer op.', best: false, feedback: 'Contact met je werk is wel normaal en goed.' },
+            { id: 'b', text: 'Ze zegt niets, en ze hangt snel weer op.', best: false, feedback: 'Contact met haar werk is wel normaal en goed.' },
             { id: 'c', text: 'Ze zegt hoe lang het ongeveer gaat duren.', best: true, feedback: 'Goed. Dat wil de leidinggevende vooral weten.' },
           ],
           why: 'Je mag zelf iets vertellen, als je dat wilt. Maar het hoeft niet. Je baas mag vragen hoe lang het duurt. En of je misschien ander werk kunt doen.',

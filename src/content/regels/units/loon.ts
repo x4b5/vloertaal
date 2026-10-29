@@ -73,7 +73,7 @@ export const loonUnit: RuleUnit = {
           situation: 'Fatima krijgt er een baan bij, in een winkel. Bij allebei vragen ze: "Wil je loonheffingskorting?" Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze zegt bij allebei ja. Dan houdt ze meer over.', best: false, feedback: 'Nu wel. Maar later moet ze dan geld terugbetalen.' },
-            { id: 'b', text: 'Ze zegt ja bij één baan, en nee bij de andere.', best: true, feedback: 'Goed. De korting krijg je maar één keer.' },
+            { id: 'b', text: 'Ze zegt ja bij één baan, en nee bij de andere.', best: true, feedback: 'Goed. De korting krijgt ze maar één keer.' },
             { id: 'c', text: 'Ze zegt bij allebei nee. Dat lijkt haar het veiligst.', best: false, feedback: 'Dan betaalt ze eerst te veel belasting.' },
           ],
           why: 'Loonheffingskorting is korting op je belasting. Je krijgt die maar bij één werkgever. Kies meestal de baan waar je het meest verdient.',

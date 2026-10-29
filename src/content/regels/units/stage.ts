@@ -240,7 +240,7 @@ export const stageUnit: RuleUnit = {
           situation: 'Een collega maakt grappen over Kevins afkomst. Andere stagiairs krijgen beter werk. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij meldt het bij school. Daar is een meldpunt.', best: true, feedback: 'Goed. School moet hem dan helpen.' },
-            { id: 'b', text: 'Hij lacht mee. Hij wil geen gedoe op zijn stage.', best: false, feedback: 'Begrijpelijk. Maar het mag niet, en hij hoeft dat niet goed te vinden.' },
+            { id: 'b', text: 'Hij lacht mee. Hij wil geen gedoe op zijn stage.', best: false, feedback: 'Begrijpelijk. Maar het mag niet, en hij hoeft het niet te accepteren.' },
             { id: 'c', text: 'Hij zoekt zelf een nieuwe stage, zonder iets te zeggen.', best: false, feedback: 'Dan gaat het bij de volgende stagiair misschien ook zo.' },
           ],
           why: 'Discriminatie op stage is verboden. Elke mbo-school moet een meldpunt hebben. Je kunt ook naar de vertrouwenspersoon van school. Of naar discriminatie.nl. SBB kan het bedrijf erop aanspreken.',
