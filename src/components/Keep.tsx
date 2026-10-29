@@ -4,7 +4,7 @@ import { dutchUi, trackOf, trackOfLang } from '../lib/track';
 import { fillCount, ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
-import { BACKUP_MAX_BYTES, backupFile, bestStreak, knownLessons, mergeBackup, parseBackup, replaceWithBackup, type Progress } from '../lib/progress';
+import { BACKUP_MAX_BYTES, backupFile, bestStreak, knownLessons, mergeBackup, parseBackup, replaceLoses, replaceWithBackup, type Progress } from '../lib/progress';
 import { REMINDER_TIMES, forgetReminder, rememberReminder, reminderCancelIcs, reminderEvent, reminderIcs, saveFile } from '../lib/reminder';
 import { REMIND_DEFAULT, REMIND_OTHER_TIMES, REMIND_OWN, keepNext, ownTime, type KeepAction, type KeepStep } from '../lib/keep';
 import { Bi } from './Bi';
@@ -302,10 +302,20 @@ export function BackupCard({ progress, lang, onRestore }: {
     if (file.current) file.current.value = '';
   };
   const close = () => { setFound(null); setFewer(false); };
+  // The question takes the focus when it comes (the button tapped is gone), and gives it back to
+  // "Zet terug" when it goes: a keyboard or screen-reader user keeps their place.
+  const ask = useRef<HTMLDivElement>(null);
+  const loadBtn = useRef<HTMLButtonElement>(null);
+  const asked = useRef(false);
+  useEffect(() => {
+    if (found) { asked.current = true; ask.current?.focus({ preventScroll: true }); return; }
+    if (asked.current) { asked.current = false; loadBtn.current?.focus({ preventScroll: true }); }
+  }, [found, fewer]);
   const apply = (how: 'merge' | 'replace') => {
     if (!found) return;
-    // Replacing with a file that has fewer lessons loses lessons: ask once more, with both numbers.
-    if (how === 'replace' && !fewer && theirs < lessons) { setFewer(true); return; }
+    // Replacing would lose something here (a lesson the file lacks, a certificate, the record):
+    // ask once more, with both numbers.
+    if (how === 'replace' && !fewer && replaceLoses(progress, found)) { setFewer(true); return; }
     onRestore(how === 'merge' ? mergeBackup(progress, found) : replaceWithBackup(progress, found));
     close();
     setNote('back');
@@ -326,7 +336,7 @@ export function BackupCard({ progress, lang, onRestore }: {
         <div><dt>Record</dt><dd>{bestStreak(progress)}</dd></div>
       </dl>
       {found && fewer ? (
-        <div className="waybill-ask waybill-fewer" role="alertdialog" aria-label={said(ui('backupFewer', lang))}>
+        <div className="waybill-ask waybill-fewer" role="alertdialog" aria-label={said(ui('backupFewer', lang))} ref={ask} tabIndex={-1}>
           {dutch && (
             <p lang="nl" dir="ltr" className="waybill-ask-nl">
               Je hebt {lessenNl(lessons)}. Dit bestand heeft {lessenNl(theirs)}.
@@ -352,7 +362,7 @@ export function BackupCard({ progress, lang, onRestore }: {
           </button>
         </div>
       ) : found ? (
-        <div className="waybill-ask" role="alertdialog" aria-label={said(ui('backupAsk', lang))}>
+        <div className="waybill-ask" role="alertdialog" aria-label={said(ui('backupAsk', lang))} ref={ask} tabIndex={-1}>
           {dutch && (
             <p lang="nl" dir="ltr" className="waybill-ask-nl">
               Gevonden: {lessenNl(theirs)}.{theirs > 0 && ' Samenvoegen of vervangen?'}
@@ -380,24 +390,27 @@ export function BackupCard({ progress, lang, onRestore }: {
           <button type="button" className="btn btn-dark keep-btn" onClick={download}>
             <NlPair nlFirst nl="Download" className="keep-btn-gloss" text={ui('backupSave', lang)} />
           </button>
-          <button type="button" className="btn btn-ghost keep-btn" onClick={() => file.current?.click()}>
+          <button type="button" className="btn btn-ghost keep-btn" onClick={() => file.current?.click()} ref={loadBtn}>
             <NlPair nlFirst nl="Zet terug" className="keep-btn-gloss" text={ui('backupLoad', lang)} />
           </button>
           <input
             ref={file}
             type="file"
-            accept="application/json,.json"
+            accept="application/json,.json,text/plain,.txt"
             hidden
             onChange={(e) => pick(e.target.files?.[0])}
           />
         </div>
       )}
-      {note && (
-        <p className={note === 'back' ? 'keep-ok' : 'warn keep-note'} role="status">
-          {note === 'back' && <CheckIcon size={20} />}
-          <Bi text={ui(note === 'big' ? 'backupTooBig' : note === 'bad' ? 'backupBad' : 'backupBack', lang)} />
-        </p>
-      )}
+      {/* Always on the page (a live region that appears with its text is often not read). */}
+      <div role="status">
+        {note && (
+          <p className={note === 'back' ? 'keep-ok' : 'warn keep-note'}>
+            {note === 'back' && <CheckIcon size={20} />}
+            <Bi text={ui(note === 'big' ? 'backupTooBig' : note === 'bad' ? 'backupBad' : 'backupBack', lang)} />
+          </p>
+        )}
+      </div>
     </section>
   );
 }

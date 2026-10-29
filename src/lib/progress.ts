@@ -437,6 +437,18 @@ export function parseBackup(text: string): Partial<Progress> | null {
   return out;
 }
 
+/**
+ * Would putting this backup in place lose something on this phone: a lesson the file does not
+ * have, a certificate, or the record? (Then the learner is asked once more: a file with as many
+ * lessons as the phone can still be missing the ones done here.)
+ */
+export function replaceLoses(p: Progress, b: Partial<Progress>): boolean {
+  const theirs = b.completed ?? {};
+  if (Object.keys(p.completed).some((id) => knownLessonId(id) && !theirs[id])) return true;
+  if (Object.keys(p.certs ?? {}).some((id) => !b.certs?.[id])) return true;
+  return bestStreak(p) > Math.max(b.bestStreak ?? 0, b.streak ?? 0);
+}
+
 /** Puts a backup back in place of the progress on this phone (settings stay as they are). */
 export function replaceWithBackup(p: Progress, b: Partial<Progress>): Progress {
   return {

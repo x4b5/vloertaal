@@ -112,6 +112,8 @@ les hervatten na herladen.
 | Werkregels: een verhaal kon opnieuw beginnen in een andere stem (als de opgenomen stemmen binnenkwamen) | trage verbinding | één keer voorgelezen |
 | Werkregels: de oplichtende rij op een kaart of loonstrook was alleen te zien, niet te horen; de loonstrook had geen luidspreker (en ging niet mee offline) | schermlezer, wie liever luistert | "hier gaat het om" voor de schermlezer; de loonstrook heeft een luidspreker en gaat mee |
 | "Meetellen" uitgezet in privé-modus (geblokkeerde opslag) telde stil door; "Global Privacy Control" werd niet gezien | privacy | uit is uit, ook dan; GPC telt als "niet meetellen" |
+| Back-up "Vervangen": vroeg alleen opnieuw bij een bestand met mínder lessen; een bestand met evenveel (andere) lessen of een lager record wiste lessen, reeks en record in één tik | wie een back-up terugzet | het vraagt opnieuw zodra er iets verloren gaat (een les, certificaat of record) |
+| Back-up terugzetten: de focus verdween na het kiezen van een bestand en na het antwoord; de melding werd vaak niet voorgelezen; bestanden uit WhatsApp of Drive (als .txt) waren soms niet te kiezen | schermlezer, telefoon | de vraag krijgt de focus en geeft die terug; de melding wordt voorgelezen; ook .txt kan |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
@@ -238,5 +240,9 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
 16. **De figuren ademen en knipperen eindeloos** op de home en in de les, zolang het scherm aan
     staat (ook als de telefoon blijft liggen). Klein, maar het kost doorlopend rekenwerk en dus
     batterij. Bijvoorbeeld na een paar keer ademen stoppen en alleen knipperen? Ontwerpkeuze.
-17. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+17. **Back-up**: er is geen herinnering om een back-up te maken (alleen de herinnering om te
+    oefenen); op een iPhone (app op het beginscherm) is "Download" onbetrouwbaar en zonder
+    melding; en samenvoegen met hetzelfde bestand zegt opnieuw "je voortgang is terug" (een
+    "niets nieuws"-melding vraagt een nieuwe vertaling).
+18. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
    vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.
