@@ -549,7 +549,7 @@ export const cleanUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.clean.1.wd1',
-          situation: 'Fatima wil de wc snel schoon krijgen.',
+          situation: 'Fatima wil de wc snel schoon krijgen. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze giet de twee middelen samen. Dan werkt het sterker.', best: false, feedback: 'Niet doen. Dan kan er giftig gas ontstaan.' },
             { id: 'b', text: 'Ze gebruikt één middel, en spoelt goed na.', best: true, feedback: 'Goed. Eén middel tegelijk is veilig.' },
@@ -570,11 +570,11 @@ export const cleanUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.clean.1.wd2',
-          situation: "Fatima werkt alleen in het gebouw. Het is 10 uur 's avonds.",
+          situation: "Fatima werkt alleen in het gebouw. Het is 10 uur 's avonds. Wat kan Fatima het beste doen?",
           options: [
             { id: 'a', text: 'Ze spreekt met haar leidinggevende af hoe ze hulp vraagt.', best: true, feedback: 'Goed. Dan weet iemand waar ze is.' },
-            { id: 'b', text: 'Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.', best: false, feedback: 'Begrijpelijk. Maar alleen ben je kwetsbaar.' },
-            { id: 'c', text: 'Ze neemt haar zoon mee, voor de veiligheid.', best: false, feedback: 'Begrijpelijk. Maar je werkgever moet dit regelen.' },
+            { id: 'b', text: 'Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.', best: false, feedback: 'Begrijpelijk. Maar als ze alleen is, kan niemand haar helpen.' },
+            { id: 'c', text: 'Ze neemt haar zoon mee, voor de veiligheid.', best: false, feedback: 'Begrijpelijk. Maar haar werkgever moet dit regelen.' },
           ],
           why: 'Werk je alleen? Dan moet je werkgever zorgen dat je hulp kunt krijgen. Spreek af wie je belt als er iets is. Zorg dat je telefoon opgeladen is.',
         },
@@ -631,11 +631,11 @@ export const cleanUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.clean.2.wd1',
-          situation: 'Piotr heeft steeds last van zijn rug.',
+          situation: 'Piotr heeft steeds last van zijn rug. Wat kan Piotr het beste doen?',
           options: [
-            { id: 'a', text: 'Hij neemt elke dag een pijnstiller, en werkt door.', best: false, feedback: 'Begrijpelijk. Maar zo pak je de oorzaak niet aan.' },
+            { id: 'a', text: 'Hij neemt elke dag een pijnstiller, en werkt door.', best: false, feedback: 'Begrijpelijk. Maar zo lost hij het probleem niet op.' },
             { id: 'b', text: 'Hij werkt sneller, dan staat hij korter gebukt.', best: false, feedback: 'Haast maakt het vaak erger.' },
-            { id: 'c', text: 'Hij vraagt een steel die op zijn lengte past.', best: true, feedback: 'Goed. Met de goede spullen werk je rechtop.' },
+            { id: 'c', text: 'Hij vraagt een steel die op zijn lengte past.', best: true, feedback: 'Goed. Met de goede spullen werkt hij rechtop.' },
           ],
           why: 'Je werkgever moet zorgen dat je werk niet te zwaar is voor je lichaam. Goede spullen helpen daarbij. Bijvoorbeeld een steel die je langer kunt maken. Of een kar, zodat je minder tilt.',
         },
@@ -645,14 +645,14 @@ export const cleanUnit: RuleUnit = {
           id: 'r.l.clean.2.tf1',
           statement: 'Pijn hoort er gewoon bij in de schoonmaak.',
           answer: false,
-          why: 'Pijn is een signaal. Wacht niet tot het erger wordt. Praat erover met je leidinggevende. Je mag ook zelf naar de bedrijfsarts.',
+          why: 'Pijn is een waarschuwing. Wacht niet tot het erger wordt. Praat erover met je leidinggevende. Je mag ook zelf naar de bedrijfsarts.',
         },
         {
           kind: 'whatdo',
           id: 'r.l.clean.2.wd2',
-          situation: 'Piotr moet een zware vuilniszak in een hoge container gooien.',
+          situation: 'Piotr moet een zware vuilniszak in een hoge container gooien. Wat kan Piotr het beste doen?',
           options: [
-            { id: 'a', text: 'Hij tilt de zak in één keer met een ruk omhoog.', best: false, feedback: 'Dat is zwaar voor je rug. Zo kun je je bezeren.' },
+            { id: 'a', text: 'Hij tilt de zak in één keer met een ruk omhoog.', best: false, feedback: 'Dat is zwaar voor zijn rug. Zo kan hij zich bezeren.' },
             { id: 'b', text: 'Hij maakt de zak minder vol, of vraagt een collega.', best: true, feedback: 'Goed. Twee keer lopen is beter dan een pijnlijke rug.' },
             { id: 'c', text: 'Hij laat de zak gewoon naast de container staan.', best: false, feedback: 'Dan blijft het werk liggen voor iemand anders.' },
           ],
@@ -686,7 +686,7 @@ export const factoryUnit: RuleUnit = {
       // Les P.1 · Machines en lock-out
       id: 'r.l.factory.1',
       title: 'Machines en lock-out',
-      goal: 'Je grijpt nooit in een draaiende machine, en je weet wat lock-out is.',
+      goal: 'Je grijpt nooit in een draaiende machine. Je weet wat lock-out is.',
       remember: 'Grijp nooit in een draaiende machine. Eerst moet hij stil.',
       // Wie kan je helpen: je leidinggevende · de technische dienst · de preventiemedewerker · de
       //   Nederlandse Arbeidsinspectie.
@@ -723,11 +723,11 @@ export const factoryUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.factory.1.wd1',
-          situation: 'De doos zit vast, en de band draait nog.',
+          situation: 'De doos zit vast, en de band draait nog. Wat kan Sanne het beste doen?',
           options: [
             { id: 'a', text: 'Ze trekt de doos er snel uit. Het duurt maar een seconde.', best: false, feedback: 'Een seconde is genoeg voor een zwaar ongeluk.' },
             { id: 'b', text: 'Ze drukt op de noodstop, en ze roept Henk.', best: true, feedback: 'Goed. Eerst moet de machine echt stilstaan.' },
-            { id: 'c', text: 'Ze duwt de doos los met een stuk karton.', best: false, feedback: 'Ook dan kom je dicht bij de machine. Niet doen.' },
+            { id: 'c', text: 'Ze duwt de doos los met een stuk karton.', best: false, feedback: 'Ook dan komt ze dicht bij de machine. Niet doen.' },
           ],
           why: 'Grijp nooit in een machine die draait. Ook niet even. Druk op de noodstop als dat nodig is. Weet waar de noodstop zit, vóór je begint.',
         },
@@ -745,9 +745,9 @@ export const factoryUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.factory.1.wd2',
-          situation: 'Een kap van de machine is kapot. Zonder kap gaat het werk sneller.',
+          situation: 'Een kap van de machine is kapot. Zonder kap gaat het werk sneller. Wat kan Sanne het beste doen?',
           options: [
-            { id: 'a', text: 'Ze werkt door zonder kap. Ze let extra goed op.', best: false, feedback: 'Begrijpelijk. Maar de kap is er voor jouw handen.' },
+            { id: 'a', text: 'Ze werkt door zonder kap. Ze let extra goed op.', best: false, feedback: 'Begrijpelijk. Maar de kap is er voor haar handen.' },
             { id: 'b', text: 'Ze plakt de kap met tape vast, en werkt door.', best: false, feedback: 'Goed bedoeld. Maar zo is het niet veilig genoeg.' },
             { id: 'c', text: 'Ze stopt, en ze meldt de kapotte kap bij Henk.', best: true, feedback: 'Goed. Een machine zonder goede beveiliging is gevaarlijk.' },
           ],
@@ -771,7 +771,7 @@ export const factoryUnit: RuleUnit = {
       // Les P.2 · Ploegendienst en nachtwerk
       id: 'r.l.factory.2',
       title: 'Ploegendienst en nachtwerk',
-      goal: 'Je kent de rustregels na een nachtdienst, en je weet waar de ploegentoeslag staat.',
+      goal: 'Je kent de rustregels na een nachtdienst. Je weet waar de ploegentoeslag staat.',
       // ⚖️ check: Na een nachtdienst heb je recht op lange rust ⚖️.
       remember: 'Na een nachtdienst heb je recht op lange rust.',
       // Wie kan je helpen: je leidinggevende · de loonadministratie · een vakbond · de Nederlandse
@@ -820,20 +820,20 @@ export const factoryUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.factory.2.wd1',
-          situation: 'Henk vraagt Mohammed om vanmiddag terug te komen.',
+          situation: 'Henk vraagt Mohammed om vanmiddag terug te komen. Wat kan Mohammed het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt ja. Hij slaapt straks wel een paar uur.', best: false, feedback: 'Begrijpelijk. Maar moe werken bij machines is gevaarlijk.' },
-            { id: 'b', text: 'Hij zegt: "Te kort na mijn nacht. Morgen wel."', best: true, feedback: 'Goed. Je rust is ook voor je veiligheid.' },
-            { id: 'c', text: 'Hij komt, en hij drinkt de hele dag energiedrank.', best: false, feedback: 'Dat helpt even. Maar je blijft moe en traag.' },
+            { id: 'b', text: 'Hij zegt: "Te kort na mijn nacht. Morgen wel."', best: true, feedback: 'Goed. Zijn rust is ook voor zijn veiligheid.' },
+            { id: 'c', text: 'Hij komt, en hij drinkt de hele dag energiedrank.', best: false, feedback: 'Dat helpt even. Maar hij blijft moe en traag.' },
           ],
-          why: 'Rust is geen luxe. Moe werken geeft fouten en ongelukken. Zeg rustig nee, en bied een ander moment aan. Slaap overdag in een donkere, stille kamer.',
+          why: 'Rust heb je echt nodig. Moe werken geeft fouten en ongelukken. Zeg rustig nee, en bied een ander moment aan. Slaap overdag in een donkere, stille kamer.',
         },
         // ⚖️ check: Hoeveel je krijgt, staat in je cao of contract ⚖️.
         // ⚖️ check: Niet in de wet ⚖️.
         {
           kind: 'whatdo',
           id: 'r.l.factory.2.wd2',
-          situation: 'Op Mohammeds loonstrook staat "ploegentoeslag". Hij weet niet hoeveel het moet zijn.',
+          situation: 'Op Mohammeds loonstrook staat "ploegentoeslag". Hij weet niet hoeveel het moet zijn. Wat kan Mohammed het beste doen?',
           options: [
             { id: 'a', text: 'Hij zoekt het op in zijn cao.', best: true, feedback: 'Goed. Daar staat hoeveel toeslag je krijgt.' },
             { id: 'b', text: 'Hij vraagt het aan een vriend uit een andere fabriek.', best: false, feedback: 'Kan. Maar die heeft misschien een andere cao.' },
@@ -905,10 +905,10 @@ export const warehouseUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.warehouse.1.wd1',
-          situation: 'Jayden heeft geen opleiding voor de heftruck.',
+          situation: 'Jayden heeft geen opleiding voor de heftruck. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij rijdt heel langzaam. Dan kan er niets gebeuren.', best: false, feedback: 'Begrijpelijk. Maar ook langzaam kan het misgaan.' },
-            { id: 'b', text: 'Hij rijdt, want de collega zegt dat het mag.', best: false, feedback: 'Je collega kan dat niet beslissen.' },
+            { id: 'b', text: 'Hij rijdt, want de collega zegt dat het mag.', best: false, feedback: 'Zijn collega kan dat niet beslissen.' },
             { id: 'c', text: 'Hij zegt: "Ik mag niet rijden. Kan iemand anders?"', best: true, feedback: 'Goed. Zonder opleiding rijd je niet.' },
           ],
           why: 'Je rijdt alleen op een heftruck als je opgeleid bent. En als je werkgever zegt dat het mag. Een heftruck is zwaar en kan omvallen. Ongelukken met heftrucks komen vaak voor.',
@@ -925,10 +925,10 @@ export const warehouseUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.warehouse.1.wd2',
-          situation: 'Jayden moet naar de andere kant van het magazijn. Over de rijbaan van de heftrucks is het korter.',
+          situation: 'Jayden moet naar de andere kant van het magazijn. Over de rijbaan van de heftrucks is het korter. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij loopt over de looppaden, ook al is het verder.', best: true, feedback: 'Goed. Daar zijn voetgangers veilig.' },
-            { id: 'b', text: 'Hij loopt over de rijbaan, en hij kijkt goed uit.', best: false, feedback: 'Begrijpelijk. Maar een bestuurder ziet je misschien niet.' },
+            { id: 'b', text: 'Hij loopt over de rijbaan, en hij kijkt goed uit.', best: false, feedback: 'Begrijpelijk. Maar een bestuurder ziet hem misschien niet.' },
             { id: 'c', text: 'Hij loopt over de rijbaan, met zijn hesje aan.', best: false, feedback: 'Het hesje helpt. Maar de rijbaan is niet om te lopen.' },
           ],
           why: 'Loop altijd over de looppaden. Een bestuurder van een heftruck ziet niet alles. Moet je toch oversteken? Zoek oogcontact met de bestuurder. Loop nooit vlak achter een heftruck.',
@@ -951,7 +951,7 @@ export const warehouseUnit: RuleUnit = {
       // Les L.2 · Tillen, scanners en tempo
       id: 'r.l.warehouse.2',
       title: 'Tillen, scanners en tempo',
-      goal: 'Je tilt veilig, en je weet wat je doet als de norm te hoog is.',
+      goal: 'Je tilt veilig. Je weet wat je doet als de norm te hoog is.',
       remember: 'Te hoog tempo? Vraag hoe de norm werkt. Sla je pauze niet over.',
       // Wie kan je helpen: je leidinggevende · de bedrijfsarts · de ondernemingsraad · een vakbond
       //   · de Nederlandse Arbeidsinspectie.
@@ -986,11 +986,11 @@ export const warehouseUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.warehouse.2.wd1',
-          situation: 'Esra haalt de norm niet.',
+          situation: 'Esra haalt de norm niet. Wat kan Esra het beste doen?',
           options: [
-            { id: 'a', text: 'Ze vraagt hoe de norm werkt, en wat beter kan.', best: true, feedback: 'Goed. Zo weet je wat er van je verwacht wordt.' },
-            { id: 'b', text: 'Ze slaat haar pauze over om meer orders te halen.', best: false, feedback: 'Begrijpelijk. Maar pauze is je recht.' },
-            { id: 'c', text: 'Ze tilt twee dozen tegelijk, om sneller te gaan.', best: false, feedback: 'Dat is zwaar voor je rug. Zo raak je geblesseerd.' },
+            { id: 'a', text: 'Ze vraagt hoe de norm werkt, en wat beter kan.', best: true, feedback: 'Goed. Zo weet ze wat haar baas van haar wil.' },
+            { id: 'b', text: 'Ze slaat haar pauze over om meer orders te halen.', best: false, feedback: 'Begrijpelijk. Maar pauze is haar recht.' },
+            { id: 'c', text: 'Ze tilt twee dozen tegelijk, om sneller te gaan.', best: false, feedback: 'Dat is zwaar voor haar rug. Zo kan ze zich bezeren.' },
           ],
           why: 'Vraag hoe de norm werkt. Wat telt de scanner mee? Is de norm voor iedereen even hoog? Vraag ook wat beter kan. Je pauze sla je niet over.',
         },
@@ -1006,11 +1006,11 @@ export const warehouseUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.warehouse.2.wd2',
-          situation: 'Esra moet een zware doos van de onderste plank pakken.',
+          situation: 'Esra moet een zware doos van de onderste plank pakken. Wat kan Esra het beste doen?',
           options: [
-            { id: 'a', text: 'Ze buigt voorover, en tilt de doos met haar rug.', best: false, feedback: 'Dan komt alle kracht op je rug. Dat geeft klachten.' },
-            { id: 'b', text: 'Ze zakt door haar knieën, met de doos dicht bij zich.', best: true, feedback: 'Goed. Zo til je met je benen, niet met je rug.' },
-            { id: 'c', text: 'Ze trekt de doos snel met één hand van de plank.', best: false, feedback: 'Zo kun je je pols of je rug verrekken.' },
+            { id: 'a', text: 'Ze buigt voorover, en tilt de doos met haar rug.', best: false, feedback: 'Dan komt alle kracht op haar rug. Dat geeft klachten.' },
+            { id: 'b', text: 'Ze zakt door haar knieën, met de doos dicht bij zich.', best: true, feedback: 'Goed. Zo tilt ze met haar benen, niet met haar rug.' },
+            { id: 'c', text: 'Ze trekt de doos snel met één hand van de plank.', best: false, feedback: 'Zo kan ze haar pols of haar rug verrekken.' },
           ],
           why: 'Zak door je knieën. Houd je rug recht en de doos dicht bij je. Draai niet tijdens het tillen. Te zwaar? Gebruik een hulpmiddel, of vraag een collega.',
         },
