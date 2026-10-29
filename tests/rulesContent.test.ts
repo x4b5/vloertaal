@@ -64,7 +64,7 @@ const YEAR_OK = new Set<string>([]);
 
 /** The 10 pocket-card lines (curriculum, deel 4), and one per Entree unit (entree-aanvulling.md). */
 const KEY_RULES = [
-  'Echt werk kost jou nooit geld.',
+  'Voor echt werk hoef jij zelf niet te betalen.',
   'Eerst lezen, dan tekenen.',
   'Wat op papier staat, telt. Bewaar je contract goed.',
   'Schrijf je uren op. Check elke loonstrook.',

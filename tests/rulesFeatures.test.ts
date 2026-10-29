@@ -150,7 +150,7 @@ describe('daily review of the rules track', () => {
 describe('certificate of a rules unit', () => {
   it('lists the key rules of a unit with two or more of them', () => {
     const zoeken = unit('r.zoeken');
-    expect(keyRules(zoeken)).toEqual(['Echt werk kost jou nooit geld.', 'Eerst lezen, dan tekenen.']);
+    expect(keyRules(zoeken)).toEqual(['Voor echt werk hoef jij zelf niet te betalen.', 'Eerst lezen, dan tekenen.']);
     expect(certRules(zoeken)).toEqual(keyRules(zoeken));
     expect(certRules(unit('r.rechten'))).toEqual(['Je paspoort en je bankpas geef je nooit af.', 'Teken nooit iets over ontslag zonder advies.']);
   });

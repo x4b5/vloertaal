@@ -17,7 +17,7 @@ export const zoekenUnit: RuleUnit = {
       id: 'r.l.zoeken.1',
       title: 'Waar vind je werk?',
       goal: 'Je weet waar je echte vacatures vindt, en je herkent nepwerk.',
-      remember: 'Echt werk kost jou nooit geld.',
+      remember: 'Voor echt werk hoef jij zelf niet te betalen.',
       // Wie kan je helpen: werk.nl (van UWV) · de gemeente: vraag naar het Werkplein of het
       //   Jongerenloket · uitzendbureaus · twijfel je over een vacature? Kijk op fraudehelpdesk.nl.
       help: ['uwv', 'gemeente', 'uitzendbureau'],
@@ -29,16 +29,16 @@ export const zoekenUnit: RuleUnit = {
           lines: [
             'Kevin zoekt zijn eerste baan.',
             'Hij kijkt op werk.nl en bij een uitzendbureau.',
-            'Dan krijgt hij een appje van een onbekend nummer.',
+            'Dan krijgt hij een bericht van een onbekend nummer.',
             '"Verdien 250 euro per dag. Je werkt vanuit huis."',
-            'Kevin twijfelt.',
+            'Kevin weet niet wat hij moet doen.',
           ],
         },
         {
           kind: 'rule',
           id: 'r.l.zoeken.1.ru1',
           emoji: '💸',
-          title: 'Echt werk kost jou nooit geld.',
+          title: 'Voor echt werk hoef jij zelf niet te betalen.',
           body: [
             'Voor werk betaal je nooit.',
             'Een uitzendbureau mag jou geen geld vragen voor werk.',
@@ -51,7 +51,7 @@ export const zoekenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.zoeken.1.wd1',
-          situation: 'Kevin weet niet of het appje echt is. Wat kan Kevin het beste doen?',
+          situation: 'Kevin weet niet of het bericht echt is. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: "Hij antwoordt meteen. Zo'n kans krijgt hij niet vaak.", best: false, feedback: 'Begrijpelijk, maar pas op. Dit lijkt op oplichting.' },
             { id: 'b', text: 'Hij zoekt het bedrijf zelf op en belt het.', best: true, feedback: 'Goed. Zo checkt hij of het bedrijf echt bestaat.' },
@@ -72,7 +72,7 @@ export const zoekenUnit: RuleUnit = {
           situation: 'Fatima wil weer werken. Ze zorgde 6 jaar voor haar kinderen. Hoe begint ze?',
           options: [
             { id: 'a', text: 'Ze wacht tot de gemeente haar een baan aanbiedt.', best: false, feedback: 'Dat kan lang duren. Zelf zoeken werkt sneller.' },
-            { id: 'b', text: 'Ze zoekt alleen naar precies haar oude functie.', best: false, feedback: 'Dat mag, maar dan mist ze veel banen.' },
+            { id: 'b', text: 'Ze zoekt alleen precies hetzelfde werk als vroeger.', best: false, feedback: 'Dat mag, maar dan mist ze veel banen.' },
             { id: 'c', text: 'Ze vertelt vrienden en buren dat ze werk zoekt.', best: true, feedback: 'Goed. Veel banen vind je via mensen die je kent.' },
           ],
           why: 'De mensen die je kent, heten je netwerk. Via hen hoor je vaak over werk. Kijk ook op werk.nl en vraag de gemeente om hulp bij zoeken.',
@@ -95,7 +95,7 @@ export const zoekenUnit: RuleUnit = {
       // Les 1.2 · Je cv: kort en eerlijk
       id: 'r.l.zoeken.2',
       title: 'Je cv: kort en eerlijk',
-      goal: 'Je maakt een kort, eerlijk cv, en je weet dat zorg en vrijwilligerswerk ook tellen.',
+      goal: 'Je maakt een kort en eerlijk cv. Je weet dat zorg en vrijwilligerswerk ook tellen.',
       remember: 'Een cv is kort en eerlijk. Ook zorg en vrijwilligerswerk tellen.',
       // Wie kan je helpen: de bibliotheek · werk.nl (voorbeelden van een cv) · je school of
       //   loopbaanbegeleider · de gemeente.
@@ -147,7 +147,7 @@ export const zoekenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.zoeken.2.wd2',
-          situation: 'Jayden heeft geen diploma. Hij werkte wel 2 jaar in een supermarkt.',
+          situation: 'Jayden heeft geen diploma. Hij werkte wel 2 jaar in een supermarkt. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij schrijft de supermarkt op, en wat hij daar deed.', best: true, feedback: 'Goed. Werkervaring telt, ook zonder diploma.' },
             { id: 'b', text: 'Hij schrijft op dat hij bijna een diploma heeft.', best: false, feedback: 'Dat klopt niet. Eerlijk zijn werkt beter.' },
@@ -158,7 +158,7 @@ export const zoekenUnit: RuleUnit = {
         {
           kind: 'whoask',
           id: 'r.l.zoeken.2.wa1',
-          question: 'Je wilt gratis hulp bij je cv. Waar kun je terecht?',
+          question: 'Je wilt gratis hulp bij je cv. Waar ga je heen?',
           options: [
             { id: 'a', who: 'arbeidsinspectie', best: false, feedback: 'De Arbeidsinspectie controleert bedrijven. Ze helpt niet met je cv.' },
             { id: 'b', who: 'bedrijfsarts', best: false, feedback: 'De bedrijfsarts gaat over je gezondheid op het werk.' },
@@ -197,7 +197,7 @@ export const zoekenUnit: RuleUnit = {
           emoji: '🤐',
           title: 'Vragen over kinderen, geloof of gezondheid hoef je niet te beantwoorden.',
           body: [
-            'Een werkgever mag niet vragen naar zwangerschap, kinderwens, geloof of gezondheid.',
+            'Een werkgever mag niet vragen of je zwanger bent of kinderen wilt. Vragen over je geloof of gezondheid mogen ook niet.',
             'Je hoeft daar geen antwoord op te geven.',
             'Blijf rustig en beleefd.',
             'Je kunt het later melden als discriminatie.',
@@ -213,16 +213,16 @@ export const zoekenUnit: RuleUnit = {
             { id: 'b', text: 'Hij geeft toch antwoord, anders krijgt hij de baan niet.', best: false, feedback: 'Begrijpelijk. Maar hij hoeft dit niet te vertellen.' },
             { id: 'c', text: 'Hij zegt dat ze dit niet mag vragen, en hij gaat weg.', best: false, feedback: 'Hij heeft gelijk, maar weggaan sluit de deur.' },
           ],
-          why: 'Een werkgever mag niet vragen naar zwangerschap, kinderwens, geloof of gezondheid. Je hoeft daar geen antwoord op te geven. Je kunt het later melden als discriminatie.',
+          why: 'Een werkgever mag niet vragen of je zwanger bent of kinderen wilt. Vragen over je geloof of gezondheid mogen ook niet. Je hoeft daar geen antwoord op te geven. Je kunt het later melden als discriminatie.',
         },
         {
           kind: 'whatdo',
           id: 'r.l.zoeken.3.wd2',
-          situation: 'Aan het eind vraagt Linda: "Heb jij nog vragen?"',
+          situation: 'Aan het eind vraagt Linda: "Heb jij nog vragen?" Wat zegt Mohammed het beste?',
           options: [
-            { id: 'a', text: 'Nee, dank u. Ik wil u niet lastigvallen.', best: false, feedback: 'Beleefd bedoeld. Maar hier kan het lijken alsof je niet wilt.', say: true },
+            { id: 'a', text: 'Nee, dank u. Ik wil u niet lastigvallen.', best: false, feedback: 'Beleefd bedoeld. Maar hier kan het lijken alsof hij niet wil.', say: true },
             { id: 'b', text: 'Ja. Wat zijn de werktijden, en wat verdien ik?', best: true, feedback: 'Goed. Vragen stellen laat zien dat je de baan wilt.', say: true },
-            { id: 'c', text: 'Nee, dat hoor ik wel als ik begin.', best: false, feedback: 'Dan weet je te weinig als je moet tekenen.', say: true },
+            { id: 'c', text: 'Nee, dat hoor ik wel als ik begin.', best: false, feedback: 'Dan weet hij te weinig als hij moet tekenen.', say: true },
           ],
           why: 'Hier is het normaal om zelf vragen te stellen. Vraag naar de uren, het loon en het werk. Je mag ook vragen wanneer je iets hoort.',
         },
@@ -240,7 +240,7 @@ export const zoekenUnit: RuleUnit = {
       // Les 1.4 · Proefdag en het aanbod
       id: 'r.l.zoeken.4',
       title: 'Proefdag en het aanbod',
-      goal: 'Je weet wat een proefdag is, en je stelt de goede vragen vóór je tekent.',
+      goal: 'Je weet wat een proefdag is. Je stelt de goede vragen vóór je tekent.',
       remember: 'Eerst lezen, dan tekenen.',
       // Wie kan je helpen: het Juridisch Loket (gratis, 0800-8020 ⚖️) · een vakbond, zoals FNV of
       //   CNV · iemand die je vertrouwt.
@@ -285,7 +285,7 @@ export const zoekenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.zoeken.4.wd1',
-          situation: 'De baas wil dat Piotr meteen tekent.',
+          situation: 'De baas wil dat Piotr meteen tekent. Wat kan Piotr het beste doen?',
           options: [
             { id: 'a', text: 'Hij tekent meteen. Anders krijgt een ander de baan.', best: false, feedback: 'Begrijpelijk. Maar dan weet hij niet wat hij tekent.' },
             { id: 'b', text: 'Hij vraagt of hij het contract mee naar huis mag nemen.', best: true, feedback: 'Goed. Thuis kan hij rustig lezen en vragen stellen.' },
@@ -298,9 +298,9 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.4.wd2',
           situation: 'Welke vraag stelt Piotr vóór hij tekent?',
           options: [
-            { id: 'a', text: 'Hoe heet de directeur van het hele bedrijf?', best: false, feedback: 'Mag je vragen. Maar het zegt niets over jouw rechten.', say: true },
+            { id: 'a', text: 'Hoe heet de directeur van het hele bedrijf?', best: false, feedback: 'Dat mag hij vragen. Maar het zegt niets over zijn rechten.', say: true },
             { id: 'b', text: 'Mag ik in de pauze mijn eigen muziek luisteren?', best: false, feedback: 'Kan later ook. Eerst de belangrijke dingen.', say: true },
-            { id: 'c', text: 'Welke cao hoort bij dit werk?', best: true, feedback: 'Goed. In de cao staan veel regels over jouw loon.', say: true },
+            { id: 'c', text: 'Welke cao hoort bij dit werk?', best: true, feedback: 'Goed. In de cao staan veel regels over zijn loon.', say: true },
           ],
           why: 'Een cao is een afspraak over loon en regels voor jouw soort werk. Vakbonden en werkgevers maken die samen. Er staan bijvoorbeeld toeslagen en vrije dagen in.',
         },
