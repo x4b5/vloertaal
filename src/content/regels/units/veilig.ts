@@ -54,11 +54,11 @@ export const veiligUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.veilig.1.wd1',
-          situation: 'Piotr moet zo zagen, zonder goede spullen.',
+          situation: 'Piotr moet zo zagen, zonder goede spullen. Wat kan Piotr het beste doen?',
           options: [
             { id: 'a', text: 'Hij zaagt even zonder bril. Het duurt maar kort.', best: false, feedback: 'Een splinter in je oog gaat heel snel.' },
-            { id: 'b', text: 'Hij vraagt nieuwe spullen aan zijn uitvoerder.', best: true, feedback: 'Goed. Daar is de uitvoerder voor.' },
-            { id: 'c', text: 'Hij koopt na het werk zelf nieuwe spullen.', best: false, feedback: 'Goed bedoeld. Maar je werkgever moet ze geven.' },
+            { id: 'b', text: 'Hij vraagt nieuwe spullen aan zijn uitvoerder.', best: true, feedback: 'Goed. De uitvoerder is de baas op de bouwplaats. Hij regelt dit.' },
+            { id: 'c', text: 'Hij koopt na het werk zelf nieuwe spullen.', best: false, feedback: 'Goed bedoeld. Maar zijn werkgever moet ze geven.' },
           ],
           why: 'Je werkgever moet beschermende spullen gratis geven. Denk aan handschoenen, een bril of veiligheidsschoenen. Erom vragen is normaal. Zonder bescherming werken is gevaarlijk.',
         },
@@ -73,9 +73,9 @@ export const veiligUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.veilig.1.wd2',
-          situation: 'Op de bouw is geregeld een korte veiligheidsvergadering: de toolboxmeeting. Piotr vindt het saai.',
+          situation: 'Op de bouw is vaak een korte vergadering over veiligheid: de toolboxmeeting. Piotr vindt het saai. Wat kan Piotr het beste doen?',
           options: [
-            { id: 'a', text: 'Hij blijft weg. Hij weet het meeste toch al.', best: false, feedback: 'Er kan nieuws zijn. En het hoort bij je werk.' },
+            { id: 'a', text: 'Hij blijft weg. Hij weet het meeste toch al.', best: false, feedback: 'Er kan nieuws zijn. En het hoort bij zijn werk.' },
             { id: 'b', text: 'Hij gaat, maar hij zit op zijn telefoon.', best: false, feedback: 'Dan mist hij wat er gezegd wordt.' },
             { id: 'c', text: 'Hij gaat erheen, luistert en stelt een vraag.', best: true, feedback: 'Goed. Zo hoort hij wat er nieuw is.' },
           ],
@@ -99,7 +99,7 @@ export const veiligUnit: RuleUnit = {
       // Les 7.2 · Onveilig? Zeg het en stop
       id: 'r.l.veilig.2',
       title: 'Onveilig? Zeg het en stop',
-      goal: 'Je meldt gevaar en bijna-ongelukken, en je weet dat je mag stoppen bij groot gevaar.',
+      goal: 'Je meldt gevaar en bijna-ongelukken. Je weet dat je mag stoppen bij groot gevaar.',
       remember: 'Onveilig? Zeg het meteen. Bij groot gevaar mag je stoppen.',
       // Wie kan je helpen: je leidinggevende · de preventiemedewerker · de ondernemingsraad · de
       //   Nederlandse Arbeidsinspectie (nlarbeidsinspectie.nl) · bij direct gevaar: 112.
@@ -156,11 +156,11 @@ export const veiligUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.veilig.2.wd2',
-          situation: 'Kevin heeft het gemeld. Weken later is het nog steeds onveilig.',
+          situation: 'Kevin heeft het gemeld. Weken later is het nog steeds onveilig. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij meldt het bij de Arbeidsinspectie, als het moet zonder naam.', best: true, feedback: 'Goed. Daar is de Arbeidsinspectie voor.' },
-            { id: 'b', text: 'Hij zet een filmpje van het magazijn online.', best: false, feedback: 'Begrijpelijk, maar dat kan jou problemen geven.' },
-            { id: 'c', text: 'Hij stopt met melden. Het helpt toch niet.', best: false, feedback: 'Jammer. Er is nog een plek waar je terechtkunt.' },
+            { id: 'b', text: 'Hij zet een filmpje van het magazijn online.', best: false, feedback: 'Begrijpelijk, maar dat kan hem problemen geven.' },
+            { id: 'c', text: 'Hij stopt met melden. Het helpt toch niet.', best: false, feedback: 'Jammer. Er is nog een plek waar hij heen kan.' },
           ],
           why: 'Helpt melden binnen het bedrijf niet? Dan kun je naar de Nederlandse Arbeidsinspectie. Dat mag ook zonder je naam. Een filmpje online kan juist problemen geven, ook voor jou.',
         },
@@ -182,7 +182,7 @@ export const veiligUnit: RuleUnit = {
       // Les 7.3 · Een ongeluk, of te veel stress
       id: 'r.l.veilig.3',
       title: 'Een ongeluk, of te veel stress',
-      goal: 'Je meldt elk ongeluk, en je praat erover als het werk te zwaar wordt.',
+      goal: 'Je meldt elk ongeluk. Je praat erover als het werk te zwaar wordt.',
       remember: 'Meld elk ongeluk, ook een klein ongeluk.',
       // Wie kan je helpen: bij spoed: 112 · de BHV'er of EHBO'er op je werk · je leidinggevende ·
       //   de bedrijfsarts · een vakbond of het Juridisch Loket (bij schade).
@@ -219,9 +219,9 @@ export const veiligUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.veilig.3.wd1',
-          situation: 'Dewi merkt dat het te veel wordt.',
+          situation: 'Dewi merkt dat het te veel wordt. Wat kan Dewi het beste doen?',
           options: [
-            { id: 'a', text: 'Ze zegt niets. In de zorg heeft iedereen het druk.', best: false, feedback: 'Begrijpelijk. Maar zo kun je ziek worden.' },
+            { id: 'a', text: 'Ze zegt niets. In de zorg heeft iedereen het druk.', best: false, feedback: 'Begrijpelijk. Maar zo kan ze ziek worden.' },
             { id: 'b', text: 'Ze praat erover met haar leidinggevende of de bedrijfsarts.', best: true, feedback: 'Goed. Dan kan er samen iets veranderen.' },
             { id: 'c', text: 'Ze werkt sneller, dan is ze eerder klaar.', best: false, feedback: 'Haast geeft fouten en meer stress.' },
           ],
@@ -242,11 +242,11 @@ export const veiligUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.veilig.3.wd2',
-          situation: 'Fatima glijdt uit op een natte vloer. Ze bezeert haar pols. Het lijkt niet erg.',
+          situation: 'Fatima glijdt uit op een natte vloer. Ze bezeert haar pols. Het lijkt niet erg. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze meldt het toch, en schrijft op wat er gebeurde.', best: true, feedback: 'Goed. Soms krijg je later pas klachten.' },
             { id: 'b', text: 'Ze zegt niets. Ze wil niet lastig zijn.', best: false, feedback: 'Melden is niet lastig. Het hoort erbij.' },
-            { id: 'c', text: 'Ze werkt door, en ze kijkt morgen hoe het gaat.', best: false, feedback: 'Kan, maar meld het wel vandaag.' },
+            { id: 'c', text: 'Ze werkt door, en ze kijkt morgen hoe het gaat.', best: false, feedback: 'Kan, maar ze moet het wel vandaag melden.' },
           ],
           why: 'Meld elk ongeluk, ook als het klein lijkt. Schrijf op wat er gebeurde, wanneer, en wie het zag. Maak een foto van de plek. Dan heb je bewijs als je later klachten krijgt.',
         },
