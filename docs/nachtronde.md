@@ -98,6 +98,7 @@ Na het mergen van #90 en #91 nog twee uur, met dezelfde werkwijze.
 | De talenlijst stond als Nederlands (of, na Terug, als Arabisch …) gemarkeerd; Dari in de lijst als `prs` | schermlezer | de lijst is Engels, elke taalnaam heeft zijn eigen code, Dari `fa-AF` |
 | Twee keer snel op een tabblad onderin (vanaf een onderwerp) kwam op de home uit, en Terug ging daarna de app uit | iedereen met haast | het laatst getikte tabblad, en Terug werkt gewoon |
 | De noodzinnen op het Hulp-tabblad bleven offline stil als ze nooit eerder waren afgespeeld (ze stonden niet bij de bewaarde lessen) | offline, de belangrijkste zinnen | ze worden één keer stil opgehaald zodra de app online is, en gaan mee met elk bewaard onderwerp |
+| De SEO-pagina's: twee menu's met dezelfde naam op /voor-begeleiders/, en de stemknoppen van /stemmen/ buiten elk oriëntatiepunt | schermlezer | axe over alle 48 pagina's, licht en donker: geen meldingen meer |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
