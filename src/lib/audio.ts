@@ -135,7 +135,11 @@ if (typeof window !== 'undefined' && typeof fetch === 'function') {
   indexLoaded = loadJson<ElevenIndex>('./audio-el/voices.json').then((eleven) => {
     indexArrived = Boolean(eleven);
     setRecordedIndex(eleven, null);
-  }).finally(() => { indexSettled = true; });
+  }).finally(() => {
+    indexSettled = true;
+    // Also when it failed: a screen waiting for it (Settings › Voice) can say there is none.
+    recordedListeners.forEach((fn) => fn());
+  });
 }
 
 export function recordedIndexReady(): Promise<void> {

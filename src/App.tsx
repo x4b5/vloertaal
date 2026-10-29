@@ -296,6 +296,8 @@ export default function App() {
     if (goingBack.current) return;
     if ((current()?.depth ?? 0) > 0) {
       goingBack.current = true;
+      // (Cleared by the popstate; also after a moment, so Back never stays dead.)
+      window.setTimeout(() => { goingBack.current = false; }, 1000);
       history.back();
     } else replace(HOME);
   };
@@ -655,7 +657,7 @@ export default function App() {
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
-        const now = practisedAt(lessonStarted.current, new Date());
+        const now = practisedAt(lessonStarted.current, new Date(), progress.lastDay);
         const today = dayKey(now);
         const cards = progress.cards ?? {};
         const next = earnCertificates(daily

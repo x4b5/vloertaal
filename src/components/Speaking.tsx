@@ -180,8 +180,12 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
   // same" goes on (nothing is scored), "Say it again" records once more; Continue stays hidden.
   // A new try after the microphone failed: Continue goes until it is over (a tap on it would end the
   // recording halfway).
+  // A try that ends without a recording (an empty one, the app hidden) after the microphone had
+  // failed: Continue comes back, as before the try.
+  const wasOff = useRef(false);
   useEffect(() => {
-    if (phase === 'off') onAnswer({ correct: true });
+    if (phase === 'off') wasOff.current = true;
+    if (phase === 'off' || (phase === 'idle' && wasOff.current)) onAnswer({ correct: true });
     if (phase === 'asking') onAnswer(null);
     onRating?.(phase === 'review');
   }, [phase, onAnswer, onRating]);

@@ -45,19 +45,22 @@ export async function newerOnServer(running: string | null, fetchPage: () => Pro
   return (await serverVersion(running, fetchPage)) !== null;
 }
 
-/** The server version this tab reloaded for already (sessionStorage): once per version. */
+/** The server version this tab reloaded for already, and when (sessionStorage): once per version
+ *  for a while (a phone keeps the app open for days: then it tries again). */
 const RELOADED_FOR = 'vloertaal:update-for';
+const AGAIN_AFTER = 30 * 60 * 1000;
 
 /**
  * Reload into `version`, once. The new service worker first gets a moment to install (at most
  * 15 s): on a slow connection the page may come from the phone, and only the new worker's copy
  * is the new version. Still the old one after that reload (the worker did not install): no
- * reload again for the same version; the next start brings it.
+ * reload again for the same version for half an hour.
  */
 async function reloadInto(version: string): Promise<void> {
   try {
-    if (sessionStorage.getItem(RELOADED_FOR) === version) return;
-    sessionStorage.setItem(RELOADED_FOR, version);
+    const [was, at] = (sessionStorage.getItem(RELOADED_FOR) ?? '').split('|');
+    if (was === version && Date.now() - Number(at) < AGAIN_AFTER) return;
+    sessionStorage.setItem(RELOADED_FOR, `${version}|${Date.now()}`);
   } catch {
     return;
   }

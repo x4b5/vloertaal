@@ -9,6 +9,8 @@ describe('streak edges', () => {
   it('a lesson started before midnight counts for the day it started', () => {
     expect(practisedAt(oct(27, 23, 58), oct(28, 0, 3))).toEqual(oct(27, 23, 58));
     expect(practisedAt(oct(28, 9), oct(28, 9, 10))).toEqual(oct(28, 9, 10));
+    // Yesterday already counted: this lesson counts for today.
+    expect(practisedAt(oct(27, 23, 58), oct(28, 0, 3), '2026-10-27')).toEqual(oct(28, 0, 3));
     // Monday practised, Tuesday's lesson from 23:58 to 00:03: the streak goes on.
     const mon: Progress = { ...emptyProgress, streak: 4, lastDay: '2026-10-26', days: run(23, 26) };
     const p = completeLesson(mon, 'l.hello', 1, false, practisedAt(oct(27, 23, 58), oct(28, 0, 3)));

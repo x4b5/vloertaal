@@ -283,10 +283,12 @@ function practise(p: Progress, today: Date): Progress {
 
 /**
  * The moment a finished lesson counts for: the end, or the start when the lesson began the day
- * before (started at 23:58, finished at 00:03: yesterday is kept up, not missed).
+ * before and that day has no practice yet (started at 23:58, finished at 00:03: yesterday is kept
+ * up, not missed). When yesterday already counts, the lesson counts for today.
  */
-export function practisedAt(started: Date, ended: Date): Date {
-  return daysBetween(dayKey(started), dayKey(ended)) === 1 ? started : ended;
+export function practisedAt(started: Date, ended: Date, lastDay?: string | null): Date {
+  const begun = dayKey(started);
+  return daysBetween(begun, dayKey(ended)) === 1 && lastDay !== begun ? started : ended;
 }
 
 /** True once today has a finished lesson or review (the flame is lit). */
