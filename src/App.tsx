@@ -29,7 +29,7 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
-import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, switchTrack, workWeek } from './lib/progress';
+import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dailyRuleIds, dailyRuleLesson, dailyWordIds, dueIds, gradedStepIds, seedCards, strongerCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
@@ -125,8 +125,24 @@ const STALLED_MS = 15_000;
 export default function App() {
   const [start] = useState(startProgress);
   const [progress, setProgress] = useState(start.progress);
+  const progressRef = useRef(progress);
+  progressRef.current = progress;
   /** "Je reeks is gestopt bij N": shown once on this open, before the path. */
   const [stopped, setStopped] = useState<number | null>(start.stopped);
+  // An app left open overnight (a phone that keeps it in the background): brought up to date for
+  // the new day when it comes back into view, as at the start.
+  useEffect(() => {
+    const onVis = () => {
+      // (Not during a lesson: one begun yesterday still counts for yesterday when it is finished.)
+      if (document.visibilityState !== 'visible' || viewRef.current.name === 'lesson') return;
+      const { progress: settled, broken } = settleStreak(progressRef.current, new Date());
+      if (settled === progressRef.current) return;
+      setProgress(settled);
+      if (broken) setStopped(broken);
+    };
+    document.addEventListener('visibilitychange', onVis);
+    return () => document.removeEventListener('visibilitychange', onVis);
+  }, []);
   /** The lesson just finished: the path scrolls to the next one and stamps this one in. */
   const [arrived, setArrived] = useState<string | null>(null);
   // From the intro page (?intro): the sneak preview, without the password page.
@@ -448,8 +464,11 @@ export default function App() {
     return () => document.removeEventListener('visibilitychange', onVis);
   }, []);
   const lessonOpen = view.name === 'lesson' ? view.lessonId : null;
+  /** When the open lesson started: one begun before midnight counts for that day (practisedAt). */
+  const lessonStarted = useRef(new Date());
   useEffect(() => {
     lessonClock.current = startClock();
+    lessonStarted.current = new Date();
     if (lessonOpen) count('lesson-start', { lang: progress.helpLang, sector: progress.sector, lesson: lessonOpen, access });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonOpen]);
@@ -606,7 +625,7 @@ export default function App() {
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
-        const now = new Date();
+        const now = practisedAt(lessonStarted.current, new Date());
         const today = dayKey(now);
         const cards = progress.cards ?? {};
         const next = earnCertificates(daily

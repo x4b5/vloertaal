@@ -281,6 +281,14 @@ function practise(p: Progress, today: Date): Progress {
   };
 }
 
+/**
+ * The moment a finished lesson counts for: the end, or the start when the lesson began the day
+ * before (started at 23:58, finished at 00:03: yesterday is kept up, not missed).
+ */
+export function practisedAt(started: Date, ended: Date): Date {
+  return daysBetween(dayKey(started), dayKey(ended)) === 1 ? started : ended;
+}
+
 /** True once today has a finished lesson or review (the flame is lit). */
 export function doneToday(p: Progress, today: Date): boolean {
   return p.lastDay === dayKey(today);
@@ -298,7 +306,9 @@ export function workWeek(p: Progress, today: Date): { key: string; state: WeekDa
   const todayKey = dayKey(today);
   const rest = new Set(p.rest ?? []);
   const done = new Set<string>((p.days ?? []).filter((d) => d <= todayKey));
-  if (p.lastDay && p.streak > 0 && daysBetween(p.lastDay, todayKey) <= 1) {
+  const sinceLast = p.lastDay ? daysBetween(p.lastDay, todayKey) : -1;
+  // (A last day after today, a clock moved back: no walking back from a day still to come.)
+  if (p.lastDay && p.streak > 0 && sinceLast >= 0 && sinceLast <= 1) {
     let day = p.lastDay;
     let left = p.streak;
     // Walk back over the streak; rest days sit inside it without counting.
@@ -451,6 +461,24 @@ export function replaceWithBackup(p: Progress, b: Partial<Progress>): Progress {
 /** The earlier of two dates (either may be missing). */
 const earlier = (x?: string, y?: string): string => (!x ? y! : !y ? x : x < y ? x : y);
 
+/**
+ * The streak of two phones together: the later side's, walking back over the practised days of
+ * both (rest days count as kept up); reaching the earlier side's last day, its streak goes on.
+ */
+function joinedStreak(later: Partial<Progress>, earlier: Partial<Progress>, days: Set<string>, rest: Set<string>): number {
+  const own = later.streak ?? 0;
+  if (!later.lastDay || !own) return own;
+  let n = 0;
+  let day = later.lastDay;
+  for (let guard = 0; guard < 400; guard++) {
+    if (day === earlier.lastDay && earlier.streak) return Math.max(own, n + earlier.streak);
+    if (days.has(day)) n++;
+    else if (!rest.has(day)) break;
+    day = addDay(day, -1);
+  }
+  return Math.max(own, n);
+}
+
 /** Adds a backup to the progress on this phone: the best of both, nothing is lost. */
 export function mergeBackup(p: Progress, b: Partial<Progress>): Progress {
   const completed = { ...p.completed };
@@ -463,23 +491,28 @@ export function mergeBackup(p: Progress, b: Partial<Progress>): Progress {
     const mine = cards[id];
     if (!mine || c.box > mine.box || (c.box === mine.box && c.due < mine.due)) cards[id] = c;
   }
-  // The streak comes from whichever side practised last.
+  // The streak comes from whichever side practised last, carried on by the other side's when
+  // the days join up; so do the free days (the max of both would hand out a used one again).
   const theirsLater = Boolean(b.lastDay && (!p.lastDay || b.lastDay > p.lastDay));
   const later = theirsLater ? b : p;
+  const earlierSide = theirsLater ? p : b;
+  const days = [...new Set([...(p.days ?? []), ...(b.days ?? [])])].sort().slice(-DAYS_KEEP);
+  const rest = [...new Set([...(p.rest ?? []), ...(b.rest ?? [])])].sort().slice(-REST_KEEP);
+  const streak = joinedStreak(later, earlierSide, new Set(days), new Set(rest));
   const max = (x?: string, y?: string) => (!x ? y : !y ? x : x > y ? x : y);
   return {
     ...p,
     xp: Math.max(p.xp, b.xp ?? 0),
     completed,
     cards,
-    streak: later.streak ?? 0,
+    streak,
     lastDay: later.lastDay ?? null,
     reviewDay: max(p.reviewDay, b.reviewDay),
     lessonDay: max(p.lessonDay, b.lessonDay),
-    freezes: Math.max(p.freezes ?? 0, b.freezes ?? 0),
-    rest: [...new Set([...(p.rest ?? []), ...(b.rest ?? [])])].sort().slice(-REST_KEEP),
-    days: [...new Set([...(p.days ?? []), ...(b.days ?? [])])].sort().slice(-DAYS_KEEP),
-    bestStreak: Math.max(bestStreak(p), b.bestStreak ?? 0, b.streak ?? 0),
+    freezes: later.freezes ?? 0,
+    rest,
+    days,
+    bestStreak: Math.max(bestStreak(p), b.bestStreak ?? 0, b.streak ?? 0, streak),
     // A certificate keeps the date it was first earned, on either side.
     certs: Object.fromEntries(
       [...new Set([...Object.keys(p.certs ?? {}), ...Object.keys(b.certs ?? {})])]

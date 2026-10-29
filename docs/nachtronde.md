@@ -53,6 +53,11 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | Wie wisselde tussen Nederlands (Werkregels) en een andere taal, verloor het gekozen onderwerp; "Herhaal vandaag" van de ene route stond als klaar in de andere | wie beide routes doet | elke route houdt zijn eigen onderwerp, herhaaldag en eenmalige wegwijzer |
 | Een begeleiderslink naar een onderwerp van de andere route (of een onbekend onderwerp) verving het gekozen onderwerp | coaches | zo'n link wordt genegeerd; het eigen onderwerp blijft |
 | De schermlezer zei "Spiekkaartje · Spiekkaartje" | Werkregels, schermlezer | één keer |
+| Een les begonnen om 23:58 en klaar om 00:03 telde voor de volgende dag: de dag ervoor gold als gemist (vrije dag weg of reeks gestopt) | avondleerders | de les telt voor de dag waarop hij begon |
+| Een back-up samenvoegen op een nieuwe telefoon gaf de reeks van één kant (20 dagen → 1) | wie van telefoon wisselt | de reeksen lopen door als de dagen aansluiten |
+| Dezelfde back-up opnieuw samenvoegen gaf een gebruikte vrije dag terug (eindeloos herhaalbaar) | iedereen met een back-up | de vrije dagen komen van de kant met de laatste oefendag |
+| Na een klok die terugging, stond in de weekrij een dag die nog moest komen als gedaan | reizigers | alleen dagen tot vandaag |
+| De app 's nachts open laten (op de achtergrond): de vlam en reeks bleven op gisteren, en "je reeks is gestopt" kwam nooit | iedereen | bijgewerkt zodra de app weer in beeld komt (niet midden in een les) |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
@@ -119,5 +124,12 @@ slagen alle 1179 tests en de build. In de browser toont `/?taal=pl` "Polski?", i
 7. **Tigrinya: vier paren met dezelfde vertaling** (gevaar/ongeluk ሓደጋ, beschadigd/gewond ዝተጎድአ,
    hygiëne/kwaliteit ጽሬት, persoonlijk/privé ውልቃዊ). In een meerkeuzevraag staan ze dan als twee
    gelijke antwoorden naast elkaar. Voor de vertaalcontrole: nieuwe vertalingen niet zelf gemaakt.
-8. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+8. **Twee vrije dagen dekken geen weekend**: wie er twee heeft en zaterdag en zondag overslaat,
+   verliest de reeks (een vrije dag dekt alleen precies één gemiste dag). Voor mensen die werken is
+   een vrij weekend normaal. Bewust zo? Anders: één vrije dag per gemiste dag.
+9. **Back-up en de twee routes**: het bestand bewaart niet bij welke route de herhaaldag hoort,
+   en niet de geparkeerde plek van de andere route. Samenvoegen kan "Herhaal vandaag" van de ene
+   route als klaar tellen voor de andere. Ook wordt het `version`-nummer van het bestand niet
+   gecontroleerd. Klein, maar het bestandsformaat aanpassen wilde ik niet zonder overleg.
+10. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
    vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.
