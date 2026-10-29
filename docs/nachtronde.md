@@ -50,6 +50,9 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | "Voortgang wissen" in rood met te weinig contrast | slechtziend | donkerder rood |
 | In de type-oefening telde het andere woord van een klankpaar als "bijna goed" ("de man" voor "de maan", "koud" voor "goud") | Klanken-lessen | het andere woord is fout; een echte tikfout blijft "bijna" |
 | iOS kon een getypt woord "verbeteren" | iPhone | autocorrectie uit in het invoerveld |
+| Wie wisselde tussen Nederlands (Werkregels) en een andere taal, verloor het gekozen onderwerp; "Herhaal vandaag" van de ene route stond als klaar in de andere | wie beide routes doet | elke route houdt zijn eigen onderwerp, herhaaldag en eenmalige wegwijzer |
+| Een begeleiderslink naar een onderwerp van de andere route (of een onbekend onderwerp) verving het gekozen onderwerp | coaches | zo'n link wordt genegeerd; het eigen onderwerp blijft |
+| De schermlezer zei "Spiekkaartje · Spiekkaartje" | Werkregels, schermlezer | één keer |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 

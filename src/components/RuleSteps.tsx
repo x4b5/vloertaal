@@ -306,7 +306,7 @@ export function DrawnCardView({ card, locked, lang, say, rowClass }: {
             <div key={i} className={['slip-row', rowClass?.(r, i), r.answer !== undefined && 'card-todo', hit && 'slip-hit'].filter(Boolean).join(' ')}>
               <dt>{r.label}</dt>
               {r.answer !== undefined
-                ? <dd>{locked ? r.answer : <span className="card-q" aria-label="nog uitrekenen">?</span>}</dd>
+                ? <dd>{locked ? r.answer : <><span className="card-q" aria-hidden>?</span><span className="sr-only">nog uitrekenen</span></>}</dd>
                 : r.value && <dd>{r.value}</dd>}
             </div>
           );

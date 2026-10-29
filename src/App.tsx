@@ -5,7 +5,7 @@ import { Splash } from './components/Splash';
 import { loadPictures, usePicturesLoaded } from './pictures';
 import type { UiCode } from './i18n/types';
 import { isPlayable, learnedItems } from './content/courses';
-import { trackOf } from './lib/track';
+import { trackOf, trackOfId } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio } from './lib/audio';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
@@ -29,7 +29,7 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
-import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, workWeek } from './lib/progress';
+import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, settleStreak, streakWentUp, switchTrack, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dailyRuleIds, dailyRuleLesson, dailyWordIds, dueIds, gradedStepIds, seedCards, strongerCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
@@ -481,16 +481,23 @@ export default function App() {
     if (!focusUnit || linkHandled.current || !access || step !== 'done') return;
     linkHandled.current = true;
     const unit = findUnit(focusUnit);
+    // A topic this app or this track does not have (a link to the other track's topic): the home
+    // stays on the learner's own block.
+    if (!unit || trackOfId(unit.id) !== trackOf(progress)) {
+      setFocusUnit(null);
+      forgetLinkedUnit();
+      return;
+    }
     // Outside the preview: never land on a locked topic. The home stays on its block (1.1) and
     // offers this topic's unlock.
-    if (unit && !unitAllowed(focusUnit, access)) {
+    if (!unitAllowed(focusUnit, access)) {
       setFocusUnit(null);
       forgetLinkedUnit();
       setLockedLink(unit.id);
       return;
     }
     // A finished topic (to practise again): its topic page.
-    if (unit && unitDone(unit, progress.completed)) {
+    if (unitDone(unit, progress.completed)) {
       setFocusUnit(null);
       forgetLinkedUnit();
       if (viewRef.current.name === 'home') go({ name: 'topic', unit: unit.id, focus: true });
@@ -502,7 +509,7 @@ export default function App() {
   // The coach's locked topic is offered on the home until a lesson starts.
   useEffect(() => { if (view.name === 'lesson') setLockedLink(null); }, [view.name]);
 
-  const setLang = (code: UiCode | null) => setProgress((p) => ({ ...p, helpLang: code, onboarded: true }));
+  const setLang = (code: UiCode | null) => setProgress((p) => ({ ...switchTrack(p, code), onboarded: true }));
   /** The learner's track: the Dutch course, or the work-rules track with the screens in Dutch ('nl'). */
   const track = trackOf(progress);
   /** "Try one lesson first": lesson 1.1 (of the learner's track), its result, then the password page again. */

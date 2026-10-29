@@ -1,5 +1,5 @@
 import type { Gender, UiCode } from '../i18n/types';
-import { rulesTrackOn } from './track';
+import { rulesTrackOn, trackOf, trackOfLang } from './track';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import { isRegionChoice, isRegionId, regionOf, regionsOn, type RegionChoice } from '../content/regio';
 import { unitOfLesson } from '../content/courses';
@@ -84,6 +84,28 @@ export interface Progress {
   days?: string[];
   /** The one-time emergency-phrases row on the first lesson's result was shown. */
   phrasesShown?: boolean;
+  /**
+   * The other track's own place (src/lib/track.ts), put away while this one is on: its block,
+   * its day of "Herhaal vandaag", its one-time pointer. Swapped back when the help language
+   * switches track (switchTrack), so neither track overwrites the other's.
+   */
+  parked?: TrackPlace;
+}
+
+/** What each track keeps for itself (Progress.parked). */
+export interface TrackPlace {
+  currentUnit?: string;
+  pickedUnit?: string;
+  reviewDay?: string;
+  phrasesShown?: boolean;
+}
+
+/** A new help language: when it changes track, this track's place is put away and the other's comes back. */
+export function switchTrack(p: Progress, helpLang: UiCode | null): Progress {
+  if (trackOfLang(helpLang) === trackOf(p)) return { ...p, helpLang };
+  const back = p.parked ?? {};
+  const away: TrackPlace = { currentUnit: p.currentUnit, pickedUnit: p.pickedUnit, reviewDay: p.reviewDay, phrasesShown: p.phrasesShown };
+  return { ...p, helpLang, currentUnit: back.currentUnit, pickedUnit: back.pickedUnit, reviewDay: back.reviewDay, phrasesShown: back.phrasesShown, parked: away };
 }
 
 export const emptyProgress: Progress = {
@@ -125,6 +147,16 @@ export function loadProgress(): Progress {
       if (saved.genderAsked !== undefined && typeof saved.genderAsked !== 'boolean') delete saved.genderAsked;
       if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;
       if (saved.pickedUnit !== undefined && typeof saved.pickedUnit !== 'string') delete saved.pickedUnit;
+      if (saved.parked !== undefined) {
+        const k = saved.parked as Record<string, unknown> | null;
+        if (!k || typeof k !== 'object') delete saved.parked;
+        else saved.parked = {
+          currentUnit: typeof k.currentUnit === 'string' ? k.currentUnit : undefined,
+          pickedUnit: typeof k.pickedUnit === 'string' ? k.pickedUnit : undefined,
+          reviewDay: isDay(k.reviewDay) ? k.reviewDay : undefined,
+          phrasesShown: k.phrasesShown === true || undefined,
+        };
+      }
       // Saved before the practised days were kept: none (the week row then counts the streak back).
       if (saved.days !== undefined) {
         if (Array.isArray(saved.days)) saved.days = saved.days.filter(isDay).slice(-DAYS_KEEP);
@@ -412,6 +444,7 @@ export function replaceWithBackup(p: Progress, b: Partial<Progress>): Progress {
     // The block follows the progress that was put back (worked out from its lessons).
     currentUnit: undefined,
     pickedUnit: undefined,
+    parked: undefined,
   };
 }
 

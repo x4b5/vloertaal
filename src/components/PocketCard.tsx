@@ -81,7 +81,7 @@ export function PocketCardScreen({ unit, lang, onBack, sector }: { unit: Unit; l
         </h1>
       </div>
 
-      <article className="pocket-card" ref={card} dir={rtl ? 'rtl' : undefined} aria-label={`Spiekkaartje · ${said(ui('pocketCard', lang))}: ${unit.titleNl}`}>
+      <article className="pocket-card" ref={card} dir={rtl ? 'rtl' : undefined} aria-label={`${[...new Set(['Spiekkaartje', said(ui('pocketCard', lang))])].join(' · ')}: ${unit.titleNl}`}>
         <header className="pocket-head">
           <WordPicture className="pocket-unit-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={52} />
           <div className="pocket-titles">
