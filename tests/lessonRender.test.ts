@@ -47,14 +47,17 @@ function drawAll(lessons: readonly Lesson[], lang: HelpLanguage | undefined): nu
   return drawn;
 }
 
+/** Some 1,500 screens per language: seconds, longer than a single test's default 5 s on a slow runner. */
+const SLOW = 60_000;
+
 describe('every exercise of every lesson draws', () => {
   for (const code of LANGS) {
     it(`Taal, in ${code ?? 'English only'}`, () => {
       expect(drawAll(teachingLessons, code ? getHelpLanguage(code) : undefined)).toBeGreaterThan(1000);
-    });
+    }, SLOW);
   }
 
   it('Werkregels, in Dutch', () => {
     expect(drawAll(rulesCourse.flatMap((u) => u.lessons), getHelpLanguage('nl'))).toBeGreaterThan(300);
-  });
+  }, SLOW);
 });

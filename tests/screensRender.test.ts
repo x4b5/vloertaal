@@ -47,6 +47,6 @@ describe('the screens around the lessons draw', () => {
       draw('Phrasebook', createElement(Phrasebook, { lang, onBack: noop }));
       draw('Tips', createElement(Tips, { progress: done, lang, onBack: noop }));
       draw('Result', createElement(Result, { right: 9, total: 10, newWords: 6, words: 40, lang, onDone: noop, repeated: 2, stronger: 3, waiting: 4, skipped: 1 }));
-    });
+    }, 30_000); // dozens of screens: more than a single test's default 5 s on a slow runner
   }
 });
