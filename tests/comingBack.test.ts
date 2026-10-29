@@ -45,17 +45,27 @@ describe('streak: today, free days and the record', () => {
     expect(after.rest).toEqual(['2026-10-08']);
   });
 
-  it('stops the streak after two missed days, or one without a free day, and keeps the record', () => {
+  it('two free days cover two missed days (a weekend off)', () => {
+    const p = practise([1, 2, 3, 4, 5, 6, 7]); // free days earned on day 3 and day 7
+    expect(p.freezes).toBe(2);
+    const s = settleStreak(p, day(10)); // days 8 and 9 missed
+    expect(s.broken).toBeUndefined();
+    expect(s.progress).toMatchObject({ streak: 7, freezes: 0, lastDay: '2026-10-09' });
+    expect(s.progress.rest).toEqual(['2026-10-08', '2026-10-09']);
+    expect(completeLesson(s.progress, 'l.y', 1, false, day(10)).streak).toBe(8);
+  });
+
+  it('stops the streak after more missed days than free days, or one without a free day, and keeps the record', () => {
     const p = practise([1, 2, 3, 4, 5, 6, 7]);
-    const s = settleStreak(p, day(10));
+    const s = settleStreak(p, day(11)); // three missed, two free days
     expect(s.broken).toBe(7);
     expect(s.progress.streak).toBe(0);
     expect(bestStreak(s.progress)).toBe(7);
     // Shown once: settling again reports nothing.
-    expect(settleStreak(s.progress, day(10)).broken).toBeUndefined();
+    expect(settleStreak(s.progress, day(11)).broken).toBeUndefined();
     const q = practise([1, 2, 3], { ...emptyProgress, bestStreak: 5 }); // no free day in hand
     expect(settleStreak(q, day(5)).broken).toBe(3);
-    const again = completeLesson(s.progress, 'l.y', 1, false, day(10));
+    const again = completeLesson(s.progress, 'l.y', 1, false, day(11));
     expect(again.streak).toBe(1);
     expect(again.bestStreak).toBe(7);
   });

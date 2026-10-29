@@ -203,7 +203,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
 7. **Tigrinya: vier paren met dezelfde vertaling** (gevaar/ongeluk ሓደጋ, beschadigd/gewond ዝተጎድአ,
    hygiëne/kwaliteit ጽሬት, persoonlijk/privé ውልቃዊ). In een meerkeuzevraag staan ze dan als twee
    gelijke antwoorden naast elkaar. Voor de vertaalcontrole: nieuwe vertalingen niet zelf gemaakt.
-8. **Twee vrije dagen dekken geen weekend**: wie er twee heeft en zaterdag en zondag overslaat,
+8. *Besloten en gedaan (29 oktober): elke gemiste dag kost één vrije dag; met twee is een weekend vrij gedekt.* **Twee vrije dagen dekken geen weekend**: wie er twee heeft en zaterdag en zondag overslaat,
    verliest de reeks (een vrije dag dekt alleen precies één gemiste dag). Voor mensen die werken is
    een vrij weekend normaal. Bewust zo? Anders: één vrije dag per gemiste dag.
 9. **Back-up en de twee routes**: het bestand bewaart niet bij welke route de herhaaldag hoort,

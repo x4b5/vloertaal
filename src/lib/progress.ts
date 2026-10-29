@@ -220,10 +220,11 @@ export function bestStreak(p: Progress): number {
 }
 
 /**
- * Brings the streak up to date when the app opens (and before practising). When exactly one day
- * was missed and a free day is in hand, it is used: that day becomes a rest day and the streak
- * goes on. When more was missed, the streak stops; `broken` is the streak that was lost, so the
- * app can say so once. The record (bestStreak) is kept either way.
+ * Brings the streak up to date when the app opens (and before practising). Each missed day takes
+ * one free day in hand: when there are enough for all the days missed (a weekend off with two),
+ * those days become rest days and the streak goes on. When there are not enough, the streak stops
+ * (and the free days stay for the next streak); `broken` is the streak that was lost, so the app
+ * can say so once. The record (bestStreak) is kept either way.
  */
 export function settleStreak(p: Progress, today: Date): { progress: Progress; broken?: number } {
   if (!p.lastDay || p.streak === 0) return { progress: p };
@@ -231,15 +232,16 @@ export function settleStreak(p: Progress, today: Date): { progress: Progress; br
   const gap = daysBetween(p.lastDay, key);
   if (gap <= 1) return { progress: p };
   const freezes = p.freezes ?? 0;
-  if (gap === 2 && freezes > 0) {
-    const missed = addDay(p.lastDay, 1);
+  const missedDays = gap - 1;
+  if (missedDays <= freezes) {
+    const missed = Array.from({ length: missedDays }, (_, i) => addDay(p.lastDay!, i + 1));
     return {
       progress: {
         ...p,
-        freezes: freezes - 1,
-        rest: [...(p.rest ?? []), missed].slice(-REST_KEEP),
-        // The rest day counts as "kept up", so tomorrow's gap is measured from it.
-        lastDay: missed,
+        freezes: freezes - missedDays,
+        rest: [...(p.rest ?? []), ...missed].slice(-REST_KEEP),
+        // The rest days count as "kept up", so tomorrow's gap is measured from the last of them.
+        lastDay: missed[missed.length - 1],
         bestStreak: bestStreak(p),
       },
     };
