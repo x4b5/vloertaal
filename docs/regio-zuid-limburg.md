@@ -173,7 +173,7 @@ dialect, en waar je hulp vindt. Voor iedereen die in Zuid-Limburg woont of werkt
 
 ### Les ZL.1 · Je adres en de gemeente
 
-**Leerdoel:** je weet dat je je adres op tijd doorgeeft aan de gemeente, en hoe je een afspraak maakt.
+**Leerdoel:** je geeft je adres op tijd door aan de gemeente. Je weet hoe je een afspraak maakt.
 
 **Scène** · *Beeld: Oksana (34) met een doos in haar handen voor een nieuw rijtjeshuis. Op de achtergrond een bus.*
 
@@ -188,7 +188,7 @@ dialect, en waar je hulp vindt. Voor iedereen die in Zuid-Limburg woont of werkt
 - **B.** Ze geeft het door aan haar nieuwe gemeente, Heerlen.
   → *Goed. Je geeft je verhuizing door aan de gemeente waar je nu woont.*
 - **C.** Ze wacht tot ze een brief van de gemeente krijgt.
-  → *Die brief komt niet vanzelf. Jij moet het zelf doorgeven.*
+  → *Die brief komt niet vanzelf. Ze moet het zelf doorgeven.*
 
 **Goed antwoord: B.**
 **Waarom:** Je geeft je nieuwe adres door aan je **nieuwe** gemeente ⚖️. Binnen Nederland kan dat
@@ -233,7 +233,7 @@ rijksoverheid.nl ⚖️ · in de app: de Sociale kaart, bij "Gemeente".
 
 ### Les ZL.2 · Wonen en reizen in de regio
 
-**Leerdoel:** je weet hoe je in Zuid-Limburg een sociale huurwoning zoekt, en hoe je met bus en trein naar je werk reist.
+**Leerdoel:** je weet hoe je in Zuid-Limburg een sociale huurwoning zoekt. Je weet hoe je met bus en trein naar je werk reist.
 
 **Scène** · *Beeld: Mehmet (27) en Nadia (25) aan een keukentafel. Op de telefoon een site met huizen. Een busje van Arriva rijdt voorbij.*
 
@@ -248,7 +248,7 @@ rijksoverheid.nl ⚖️ · in de app: de Sociale kaart, bij "Gemeente".
 - **B.** Ze betalen iemand op Facebook die zegt dat hij een huis heeft.
   → *Pas op. Betaal nooit geld voor een huis dat je niet hebt gezien.*
 - **C.** Ze wachten tot de gemeente hen een huis geeft.
-  → *Dat gebeurt meestal niet. Je moet je zelf inschrijven.*
+  → *Dat gebeurt meestal niet. Ze moeten zich zelf inschrijven.*
 
 **Goed antwoord: A.**
 **Waarom:** De meeste woningcorporaties in Zuid-Limburg bieden hun huizen aan op
@@ -279,11 +279,11 @@ je in Duitsland of België verder? Kijk dan eerst welk kaartje je nodig hebt ⚖
 **Waarom:** In Zuid-Limburg wonen en werken veel mensen in verschillende plaatsen. Bij vroege of
 late diensten rijdt de bus soms niet. Vraag op je werk naar samen rijden of een busje van de baas.
 Vraag ook of je reiskosten terugkrijgt. Dat staat in je contract of cao. Kijk op 9292.nl ⚖️ hoe
-je reist. Let op: Zuid-Limburg is heuvelachtig. Een elektrische fiets helpt.
+je reist. Let op: in Zuid-Limburg zijn veel heuvels. Een elektrische fiets helpt.
 
 **Zo zeg je het:** "Ik begin om 6 uur, maar dan rijdt er geen bus. Rijdt er iemand van hier mee?"
 
-**Onthoud:** Huis zoeken? Schrijf je op tijd in, en betaal nooit voor een huis dat je niet zag.
+**Onthoud:** Huis zoeken? Schrijf je op tijd in. Betaal nooit voor een huis dat je niet zag.
 
 **Wie kan je helpen:** thuisinlimburg.nl ⚖️ · je woningcorporatie · voor bus en trein: arriva.nl
 en ns.nl ⚖️, of 9292.nl ⚖️ · je werkgever of HR, voor reiskosten · in de app: de Sociale kaart,
@@ -293,7 +293,7 @@ bij "Wonen".
 
 ### Les ZL.3 · Werken over de grens
 
-**Leerdoel:** je weet dat werken in België of Duitsland andere regels kan geven, en dat je vóór je tekent gratis advies vraagt.
+**Leerdoel:** je weet dat werken in België of Duitsland andere regels kan geven. Je vraagt gratis advies vóór je tekent.
 
 **Scène** · *Beeld: Bogdan (41) bij een bushalte in Kerkrade. Aan de overkant een straatnaambord in het Duits. De grens is een gewone straat.*
 
@@ -304,11 +304,11 @@ bij "Wonen".
 **Vraag 1 · Wat doe je?** Bogdan wil het werk wel. Wat doet hij eerst?
 
 - **A.** Hij tekent snel. Hij regelt de rest later wel.
-  → *Begrijpelijk, maar dan kun je voor verrassingen komen te staan.*
+  → *Begrijpelijk. Maar dan krijgt hij later misschien problemen.*
 - **B.** Hij vraagt eerst gratis advies bij het GrensInfoPunt.
   → *Goed. Die kennen de regels van alle drie de landen.*
 - **C.** Hij vraagt het aan zijn buurman. Die werkte vroeger ook in Duitsland.
-  → *Je buurman bedoelt het goed. Maar elke situatie is anders.*
+  → *Zijn buurman bedoelt het goed. Maar elke situatie is anders.*
 
 **Goed antwoord: B.**
 **Waarom:** Werk je in het ene land en woon je in het andere? Dan heet je **grensarbeider**. Er
@@ -328,7 +328,7 @@ werkt ⚖️. Werk je in twee landen? Dan kan het anders zijn ⚖️. Vraag het 
 Duitsland ⚖️). De regel voor sociale zekerheid komt uit de EU-verordening 883/2004 ⚖️.*
 
 **Vraag 3 · Waar ga je heen?** Nadia woont in Maastricht. Ze wil werk zoeken in België. Ze wil
-ook weten hoe je een cv voor België schrijft. Waar gaat ze heen?
+ook weten hoe ze een cv voor België schrijft. Waar gaat ze heen?
 
 - **A.** Naar Grensarbeid of het GrensInfoPunt.
   → *Goed. Zij helpen met werk zoeken over de grens, en met je cv.*
@@ -356,7 +356,7 @@ Grensarbeid ⚖️ · UWV · in de app: de Sociale kaart, bij "Grens".
 
 ### Les ZL.4 · Carnaval, dialect en collega's
 
-**Leerdoel:** je vraagt op tijd vrij voor carnaval, en je durft collega's te vragen om Nederlands te praten.
+**Leerdoel:** je vraagt op tijd vrij voor carnaval. Je durft collega's te vragen om Nederlands te praten.
 
 **Scène** · *Beeld: Dewi (30) in een magazijn bij Sittard. Aan de muur een poster met kleurige mutsen en de tekst "Vastelaovend".*
 
@@ -367,7 +367,7 @@ Grensarbeid ⚖️ · UWV · in de app: de Sociale kaart, bij "Grens".
 **Vraag 1 · Wat doe je?** Dewi wil met carnaval graag vrij. Wat doet ze?
 
 - **A.** Ze meldt zich die maandag ziek. Dat doen anderen ook.
-  → *Niet doen. Ziek melden als je niet ziek bent, kan je baan kosten.*
+  → *Niet doen. Zich ziek melden als ze niet ziek is, kan haar baan kosten.*
 - **B.** Ze vraagt het een week van tevoren. Dan is het nog vroeg genoeg.
   → *Dat is vaak te laat. Dan zijn de vrije dagen al weg.*
 - **C.** Ze vraagt het nu al aan haar leidinggevende, en ze krijgt het antwoord op papier.
@@ -395,14 +395,14 @@ Vier je geen carnaval? Dan hoef je niet mee te doen. Je kunt ook gewoon werken.
 - **A.** Ze vraagt vriendelijk: "Wil je het in het Nederlands zeggen?"
   → *Goed. De meeste collega's doen dat graag.*
 - **B.** Ze knikt, en doet maar wat.
-  → *Begrijpelijk, maar dan kun je fouten maken.*
+  → *Begrijpelijk, maar dan kan ze fouten maken.*
 - **C.** Ze zegt boos dat dialect onbeleefd is.
   → *Dat kan pijn doen. Voor veel mensen is dialect hun eigen taal.*
 
 **Goed antwoord: A.**
 **Waarom:** In Zuid-Limburg praten veel mensen dialect, ook op het werk. Het is normaal dat je het
 niet verstaat, ook als je goed Nederlands spreekt. Vraag het vriendelijk. Dialect is voor veel
-collega's hun moedertaal. Het is geen onbeleefdheid. Bij de grens werken ook veel mensen uit
+collega's hun moedertaal. Het is niet onbeleefd. Bij de grens werken ook veel mensen uit
 Duitsland en België. Soms praten collega's Duits of Frans. Ook dan mag je vragen om Nederlands. En
 bij veiligheid moet je de uitleg altijd goed begrijpen.
 
@@ -432,7 +432,7 @@ nakijken door Veldeke (Maastricht) en iemand uit Heerlen of Kerkrade.*
 
 ### Les ZL.5 · Hulp in de buurt: zorg, taal, geld
 
-**Leerdoel:** je weet waar je heen gaat als je huisarts dicht is, als je Nederlands wilt oefenen, en als je geldzorgen hebt.
+**Leerdoel:** je weet waar je heen gaat als je huisarts dicht is. Ook als je Nederlands wilt oefenen, of als je geldzorgen hebt.
 
 **Scène** · *Beeld: Hatice (38) op zaterdagavond op de bank in Heerlen. Haar zoontje heeft hoge koorts. Op tafel ligt een stapel brieven.*
 
@@ -443,11 +443,11 @@ nakijken door Veldeke (Maastricht) en iemand uit Heerlen of Kerkrade.*
 **Vraag 1 · Wat doe je?** De huisarts is dicht. Wat doet Hatice?
 
 - **A.** Ze rijdt meteen naar de spoedeisende hulp van het ziekenhuis.
-  → *Daar heb je meestal eerst een verwijzing nodig. Bel eerst.*
+  → *Daar heeft ze meestal eerst een verwijzing nodig. Bel eerst.*
 - **B.** Ze belt de huisartsenpost.
   → *Goed. Die helpt 's avonds, 's nachts en in het weekend.*
 - **C.** Ze wacht tot maandag en kijkt op internet.
-  → *Bij hoge koorts bij een kind kun je beter nu bellen.*
+  → *Bij hoge koorts bij een kind kan ze beter nu bellen.*
 
 **Goed antwoord: B.**
 **Waarom:** Is je huisarts dicht en kan het niet wachten? Bel dan de **huisartsenpost** ⚖️. Bel
@@ -460,7 +460,7 @@ Het nummer staat op de site van je huisarts. Bij levensgevaar bel je 112.
 - **A.** Naar de gemeente, voor hulp bij schulden.
   → *Goed. Die hulp is gratis.*
 - **B.** Naar een bedrijf dat snel geld leent via internet.
-  → *Pas op. Dan krijg je vaak nog meer schulden.*
+  → *Pas op. Dan krijgt ze vaak nog meer schulden.*
 - **C.** Nergens. Ze wacht tot de schulden vanzelf weggaan.
   → *Begrijpelijk, maar schulden worden meestal groter als je wacht.*
 
