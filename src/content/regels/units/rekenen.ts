@@ -126,7 +126,7 @@ export const rekenenUnit: RuleUnit = {
       // Les 12.2 · Geld en loon per uur
       id: 'r.l.rekenen.2',
       title: 'Geld en loon per uur',
-      goal: 'Je rekent je loon per week globaal uit. Je rekent met procenten en je telt wisselgeld.',
+      goal: 'Je rekent ongeveer uit wat je per week verdient. Je rekent met procenten en je telt wisselgeld.',
       remember: 'Uren keer uurloon is je bruto loon. Reken het na.',
       // Wie kan je helpen: de loonadministratie · rijksoverheid.nl (minimumloon).
       help: ['hr'],
@@ -233,7 +233,7 @@ export const rekenenUnit: RuleUnit = {
       // Les 12.3 · Maten, gewichten en tellen
       id: 'r.l.rekenen.3',
       title: 'Maten, gewichten en tellen',
-      goal: 'Je rekent met kilo, gram, liter en milliliter, en je telt voorraad slim.',
+      goal: 'Je rekent met kilo, gram, liter en milliliter. Je telt voorraad slim.',
       remember: 'Tel slim: één laag, keer het aantal lagen. Meet af, en gok niet.',
       steps: [
         {
