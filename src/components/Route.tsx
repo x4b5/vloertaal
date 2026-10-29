@@ -531,6 +531,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
   const rtl = lang?.dir === 'rtl';
   const allowed = unitAllowed(unit.id, access);
   const finished = unitDone(unit, completed);
+  // A certificate once earned stays offered, also when a lesson was added to the topic since.
+  const certified = Boolean(onCertificate) && hasCertificate(unit.id) && (finished || Boolean(progress.certs?.[unit.id]));
   // The next lesson, if the learner may play it (the sneak preview opens a topic's first lesson only).
   const following = allowed ? blockNext(unit, completed) : undefined;
   const next = following && lessonAllowed(following.id, access) ? following : undefined;
@@ -559,7 +561,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
         </div>
         {unlocked && <UnlockedNote lang={lang} />}
         {allowed ? (
-          (onPocket || restartLesson || (finished && onCertificate && hasCertificate(unit.id))) && (
+          (onPocket || restartLesson || certified) && (
             <div className="topic-tools" dir={rtl ? 'rtl' : undefined}>
               {restartLesson && onRestart && (
                 <RestartButton
@@ -575,7 +577,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                 </button>
               )}
               {/* A region's unit has no certificate (src/lib/certificate.ts hasCertificate). */}
-              {finished && onCertificate && hasCertificate(unit.id) && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
+              {certified && onCertificate && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
             </div>
           )
         ) : (

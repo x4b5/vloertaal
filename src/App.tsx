@@ -786,10 +786,10 @@ export default function App() {
       // After "Certificaat behaald", the day-streak milestone still follows (once per day).
       const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
       return view.name === 'cert-earned' ? (
-        <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} region={progress.region} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
+        <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} completed={progress.completed} region={progress.region} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
           onPocket={() => replace({ name: 'pocket', unit: unit.id, streakUp: view.streakUp })} />
       ) : (
-        <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} region={progress.region} onBack={onward} />
+        <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} completed={progress.completed} region={progress.region} onBack={onward} />
       );
     }
     case 'pocket': {

@@ -69,4 +69,15 @@ describe('certificates', () => {
     expect(d.lessons).toBe(first.lessons.length);
     expect(certDate('2026-10-08')).toMatch(/8 oktober 2026/);
   });
+
+  it('counts only the lessons done when a lesson was added to the unit since', () => {
+    const ids = first.lessons.map((l) => l.id);
+    const all = Object.fromEntries(ids.map((id) => [id, { best: 1, times: 1 }]));
+    expect(certData(first, '2026-10-08', '', undefined, undefined, undefined, all)).toEqual(certData(first, '2026-10-08', ''));
+    // As if the second lesson were new: the certificate counts the others, and not its words.
+    const { [ids[1]]: _, ...before } = all;
+    const d = certData(first, '2026-10-08', '', undefined, undefined, undefined, before);
+    expect(d.lessons).toBe(ids.length - 1);
+    expect(d.words).toBeLessThan(certData(first, '2026-10-08', '').words);
+  });
 });

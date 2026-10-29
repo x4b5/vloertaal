@@ -210,7 +210,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
    en niet de geparkeerde plek van de andere route. Samenvoegen kan "Herhaal vandaag" van de ene
    route als klaar tellen voor de andere. Ook wordt het `version`-nummer van het bestand niet
    gecontroleerd. Klein, maar het bestandsformaat aanpassen wilde ik niet zonder overleg.
-10. **Een onderwerp dat na een update een les extra krijgt**: het certificaat blijft (bewust),
+10. *Besloten en gedaan (29 oktober): het knopje "Certificaat" blijft, en het certificaat telt alleen de gedane lessen (en hun woorden).* **Een onderwerp dat na een update een les extra krijgt**: het certificaat blijft (bewust),
     maar het knopje "Certificaat" op de onderwerppagina verdwijnt, en het certificaat telt de
     nieuwe les mee ("4 lessen" waar er 3 gedaan zijn). Kiezen wat de bedoeling is.
 11. **De dagelijkse herinnering op Android**: het agendabestand (.ics) belandt in Downloads, en

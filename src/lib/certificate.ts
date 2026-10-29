@@ -200,7 +200,13 @@ export interface CertData {
   rules?: boolean;
 }
 
-export function certData(unit: Unit, day: string, name: string, lang?: HelpLanguage, sector?: SectorChoice, region?: string): CertData {
+/**
+ * What the certificate says. With `completed`, it names the lessons actually done: a lesson added
+ * to the unit after it was earned is not counted (nor its words) until it is done too.
+ */
+export function certData(unit: Unit, day: string, name: string, lang?: HelpLanguage, sector?: SectorChoice, region?: string, completed?: Record<string, unknown>): CertData {
+  const done = completed ? unit.lessons.filter((l) => completed[l.id]) : unit.lessons;
+  const shown = done.length ? { ...unit, lessons: done } : unit;
   if (trackOfId(unit.id) === 'regels') {
     return {
       unitNo: String(unitIndex(unit, sector, undefined, region) + 1).padStart(2, '0'),
@@ -208,9 +214,9 @@ export function certData(unit: Unit, day: string, name: string, lang?: HelpLangu
       titleEn: '',
       date: certDate(day),
       name: name.trim(),
-      phrases: certRules(unit, 8),
-      lessons: unit.lessons.length,
-      words: unitRuleCount(unit),
+      phrases: certRules(shown, 8),
+      lessons: shown.lessons.length,
+      words: unitRuleCount(shown),
       rules: true,
     };
   }
@@ -223,9 +229,9 @@ export function certData(unit: Unit, day: string, name: string, lang?: HelpLangu
     helpDir: lang?.dir,
     date: certDate(day),
     name: name.trim(),
-    phrases: keyPhrases(unit, 8),
-    lessons: unit.lessons.length,
-    words: unitWords(unit).length,
+    phrases: keyPhrases(shown, 8),
+    lessons: shown.lessons.length,
+    words: unitWords(shown).length,
   };
 }
 
