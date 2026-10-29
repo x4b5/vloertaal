@@ -10,6 +10,7 @@ import type { Exercise, RuleExercise, RuleKind } from '../lib/exercises';
 import { learnerVoice, voiceFor, type VoiceRef } from '../lib/voices';
 import { Character, MeAvatar, useTalking } from './Characters';
 import { type Answer, ChoiceGrid, moodFor, reactClass } from './Exercises';
+import { CheckIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { DialectLine } from './Dialect';
 
@@ -384,7 +385,7 @@ export interface RuleVerdict {
   title: string;
   /** The picked option's own feedback. */
   own?: string;
-  /** After another choice: the best answer, with its lead ("Beste antwoord"). */
+  /** After another choice: the best answer. Its lead ("Het beste antwoord") is the title then. */
   best?: { lead: string; text: string };
   /** A card's sum: its steps, in words and numbers ("20 × 15 = 300 euro."). */
   sum?: string[];
@@ -397,7 +398,7 @@ export function ruleVerdict(ex: RuleExercise, correct: boolean, given?: string):
   switch (ex.kind) {
     case 'truefalse':
       return {
-        title: correct ? 'Goed zo!' : 'Niet helemaal',
+        title: correct ? 'Goed zo!' : 'Het goede antwoord is:',
         best: correct ? undefined : { lead: 'Het goede antwoord', text: ex.step.answer ? 'Waar' : 'Niet waar' },
         why: ex.step.why,
       };
@@ -407,10 +408,11 @@ export function ruleVerdict(ex: RuleExercise, correct: boolean, given?: string):
       const opts: readonly { id: string; text: string; best: boolean; feedback: string }[] = ex.step.options;
       const picked = opts.find((o) => o.id === given);
       const best = opts.find((o) => o.best)!;
+      const lead = ex.kind === 'card' && ex.step.sum?.length ? 'Het goede antwoord' : 'Het beste antwoord';
       return {
-        title: correct ? 'Goed zo!' : ex.kind === 'whatdo' ? 'Hier gaat het anders' : 'Niet helemaal',
+        title: correct ? 'Goed zo!' : `${lead} is:`,
         own: picked?.feedback,
-        best: correct ? undefined : { lead: ex.kind === 'card' && ex.step.sum?.length ? 'Het goede antwoord' : 'Beste antwoord', text: best.text },
+        best: correct ? undefined : { lead, text: best.text },
         ...(ex.kind === 'card' && ex.step.sum?.length ? { sum: ex.step.sum } : {}),
         why: ex.step.why,
       };
@@ -419,9 +421,9 @@ export function ruleVerdict(ex: RuleExercise, correct: boolean, given?: string):
       const picked = ex.step.options.find((o) => o.id === given);
       const best = ex.step.options.find((o) => o.best)!;
       return {
-        title: correct ? 'Goed zo!' : 'Hier gaat het anders',
+        title: correct ? 'Goed zo!' : 'Het beste antwoord is:',
         own: picked?.feedback,
-        best: correct ? undefined : { lead: 'Beste antwoord', text: ASK_WHO[best.who].label },
+        best: correct ? undefined : { lead: 'Het beste antwoord', text: ASK_WHO[best.who].label },
         why: ex.step.why,
       };
     }
@@ -433,7 +435,9 @@ export function ruleVerdict(ex: RuleExercise, correct: boolean, given?: string):
 /** The text of the feedback label (Dutch), for the screen reader's status line. */
 export function ruleAnnouncement(v: RuleVerdict): string {
   const end = (s: string) => (/[.!?]$/.test(s) ? s : `${s}.`);
-  return [v.title, v.own, v.best && `${v.best.lead}: ${end(v.best.text)}`, ...(v.sum ?? []), v.why].filter(Boolean).map((s) => end(s!)).join(' ');
+  // A wrong pick: "Het beste antwoord is: <best>", then the picked option's own line.
+  const head = v.best ? `${v.title} ${end(v.best.text)}` : v.title;
+  return [head, v.own, ...(v.sum ?? []), v.why].filter(Boolean).map((s) => end(s!)).join(' ');
 }
 
 /** The feedback label's body for a rules question: the own line, the best answer, the why with
@@ -441,13 +445,14 @@ export function ruleAnnouncement(v: RuleVerdict): string {
 export function RuleFeedbackBody({ v, lang }: { v: RuleVerdict; lang?: HelpLanguage }) {
   return (
     <>
-      {v.own && <p className="rule-fb-own" lang="nl">{v.own}</p>}
+      {/* The heading is the lead ("Het beste antwoord is:"); the answer itself green with a check. */}
       {v.best && (
-        <p className="rule-fb-best" lang="nl">
-          <span className="feedback-kicker">{v.best.lead}</span>
+        <p className="rule-fb-best feedback-answer" lang="nl">
+          <span className="feedback-answer-check" aria-hidden><CheckIcon size={20} /></span>
           <strong>{v.best.text}</strong>
         </p>
       )}
+      {v.own && <p className="rule-fb-own" lang="nl">{v.own}</p>}
       {v.sum && (
         <div className="rule-fb-sum">
           <Say text={v.sum.join(' ')} lang={lang} />

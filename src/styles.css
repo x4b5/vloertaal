@@ -4123,8 +4123,13 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 
 /* The feedback label of a rules question: the picked option's own line, the best answer, why. */
 .rule-fb-own { margin: 8px 0 0; font-size: 1.0625rem; font-weight: 600; line-height: 1.35; color: var(--ink); }
-.rule-fb-best { display: flex; flex-direction: column; gap: 2px; margin: 8px 0 0; font-size: 1.0625rem; line-height: 1.35; }
-.rule-fb-best .feedback-kicker { margin: 0; font-size: 0.95rem; }
+.rule-fb-best { margin: 8px 0 0; font-size: 1.0625rem; line-height: 1.35; }
+/* After a wrong answer: the right answer in green with a check, inside the red label. The check
+   carries the meaning without colour too (red and green look alike to many colour-blind people). */
+.feedback-answer { display: flex; align-items: flex-start; gap: 8px; }
+.feedback-answer > :not(.feedback-answer-check) { flex: 1; min-width: 0; }
+.feedback-answer-check { flex: none; display: inline-flex; margin-top: 2px; color: var(--right-ink); }
+.feedback-answer strong, .feedback-answer .pair-tiles, .feedback-answer .feedback-pair { color: var(--right-ink); }
 .rule-fb-why { display: flex; align-items: flex-start; gap: 10px; max-width: none; margin: 0; }
 .rule-fb-why p { min-width: 0; margin: 0; font-size: 1.0625rem; line-height: 1.4; }
 
