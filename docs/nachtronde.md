@@ -188,7 +188,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
    op het hoofdbestand (±220 kB gzip). Alleen de lesspeler lui laden scheelt maar 10 kB, met
    risico op een wachtscherm bij de eerste les; daarom teruggedraaid. Echte winst vraagt een
    grotere opsplitsing (de inhoud per thema, de oefeningen per soort). Dat is een eigen project.
-3. **"Opnieuw proberen" op het foutscherm** heeft een Engelse naam voor de schermlezer. Het
+3. *Gedaan (29 oktober): "Opnieuw proberen" met de hulptaal, vertaald en gekeurd door twee agents (docs/vertaalcontrole.md).* **"Opnieuw proberen" op het foutscherm** heeft een Engelse naam voor de schermlezer. Het
    scherm komt vóór het taalbestand, dus er is nog geen vertaling. Er moet een korte vertaling bij
    in `src/i18n/meta.ts` (via de vertaalcontrole).
 4. **Sectorpagina na Terug en dan Vooruit** kan op stap 2 openen. Dat kan alleen met een
@@ -213,7 +213,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
 10. *Besloten en gedaan (29 oktober): het knopje "Certificaat" blijft, en het certificaat telt alleen de gedane lessen (en hun woorden).* **Een onderwerp dat na een update een les extra krijgt**: het certificaat blijft (bewust),
     maar het knopje "Certificaat" op de onderwerppagina verdwijnt, en het certificaat telt de
     nieuwe les mee ("4 lessen" waar er 3 gedaan zijn). Kiezen wat de bedoeling is.
-11. *Besloten en gedaan (29 oktober): op Android opent "Zet in mijn agenda" een ingevulde Google Agenda-pagina (elke dag, tijdzone van de telefoon); daarna staat er niet meer "Open het bestand". Nog open: "Stop de herinnering" op Android (Google Agenda kan geen annulering via een link; de leerling haalt hem zelf weg, en die tekst vraagt een vertaling), en een nieuwe tijd geeft daar een tweede gebeurtenis.* **De dagelijkse herinnering op Android**: het agendabestand (.ics) belandt in Downloads, en
+11. *Besloten en gedaan (29 oktober): op Android opent "Zet in mijn agenda" een ingevulde Google Agenda-pagina (elke dag, tijdzone van de telefoon); daarna staat er niet meer "Open het bestand". Ook gedaan: "Stop de herinnering" op Android zegt nu dat je hem zelf weghaalt in Google Agenda (geen bestand meer). Nog open: een nieuwe tijd geeft daar een tweede gebeurtenis.* **De dagelijkse herinnering op Android**: het agendabestand (.ics) belandt in Downloads, en
     Google Agenda op Android kan zo'n bestand niet openen; toch zegt de app "toegevoegd", en in
     Instellingen kan dezelfde tijd niet opnieuw. Delen via het deelmenu helpt niet (Chrome deelt
     geen .ics). Een oplossing is een link naar Google Agenda ("nieuwe gebeurtenis, elke dag"),
@@ -240,7 +240,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
 16. *Besloten en gedaan (29 oktober): de figuren ademen drie keer en knipperen daarna alleen nog; een nieuw scherm of een nieuwe oefening start het ademen opnieuw.* **De figuren ademen en knipperen eindeloos** op de home en in de les, zolang het scherm aan
     staat (ook als de telefoon blijft liggen). Klein, maar het kost doorlopend rekenwerk en dus
     batterij. Bijvoorbeeld na een paar keer ademen stoppen en alleen knipperen? Ontwerpkeuze.
-17. **Back-up**: er is geen herinnering om een back-up te maken (alleen de herinnering om te
+17. *Deels gedaan (29 oktober): hetzelfde bestand opnieuw samenvoegen zegt nu "Niets nieuws". Nog open: een herinnering om een back-up te maken, en Download op een iPhone.* **Back-up**: er is geen herinnering om een back-up te maken (alleen de herinnering om te
     oefenen); op een iPhone (app op het beginscherm) is "Download" onbetrouwbaar en zonder
     melding; en samenvoegen met hetzelfde bestand zegt opnieuw "je voortgang is terug" (een
     "niets nieuws"-melding vraagt een nieuwe vertaling).

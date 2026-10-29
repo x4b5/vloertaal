@@ -15,7 +15,8 @@ describe('a drawing error', () => {
     guard.state = { failed: true };
     const html = renderToStaticMarkup(guard.render() as React.ReactElement);
     expect(html).toContain('boot-retry');
-    expect(html).toContain('aria-label="Try again"');
+    // Dutch first, with the help language (English before one is chosen).
+    expect(html).toContain('aria-label="Opnieuw proberen · Try again"');
   });
 
   it('draws the app as it is while nothing breaks', () => {

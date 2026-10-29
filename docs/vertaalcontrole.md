@@ -945,3 +945,305 @@ Graag nakijken:
 - **Juridisch** (`c.aiplan`): "you may ask a person to look at it again and explain it" volgt de AVG
   (art. 22 lid 3 en art. 13–15); in alle talen even voorzichtig vertaald ("mag vragen", niet "heeft
   recht op"). Zie `docs/juridische-check.md`.
+
+## Tweede AI-controle (29 oktober 2026)
+
+Opnieuw zonder moedertaalspreker. Per taal zocht een agent naar **duidelijke** fouten (A = verkeerde betekenis, B = verkeerde vorm, variant of spelling); een tweede, onafhankelijke agent keurde elke wijziging. Twijfel is niet aangepast maar staat hieronder als vraag (in het Engels, zoals de agents ze schreven). `reviewed` blijft `false`.
+
+- **Diep** (elke tekst): Tigrinya en Dari.
+- **Licht** (de schermteksten en alle 241 teksten die na de controle van 16 oktober zijn toegevoegd of veranderd): de andere zeven talen.
+- **Teruggedraaid vóór het doorvoeren:** 13 voorstellen voor de Over-pagina (`a.*`, Dari en Bulgaars). De agents kregen daar per vergissing de Werkregels-tekst als bron; de huidige vertalingen kloppen met de echte bron.
+- **Mechanisch nagelopen** (script, alle talen): placeholders, Arabische ي/ك in Perzisch en Dari, Russische letters in het Oekraïens, Engelse resten, gelijke m/v-vormen, twee gelijke vertalingen in één les. Niets gevonden behalve bewust Nederlandse termen.
+
+### Doorgevoerd (35 wijzigingen, plus `betermelden` als één woord in alle talen)
+
+- **Tigrinya** (2026 teksten gelezen): `c.aifake.q` (m); `c.aiplan.b` (f); `c.aiplan.b` (m); `c.aiprivate.o3` (f); `c.bike.b` (f); `c.bike.b` (m); `c.limits.o2` (f); `c.limits.o2` (m); `c.shift.a`; `codeAccepted`.
+  - `c.shift.a`: The clock time is spelled out, so it can be read as Ge'ez/Eritrean time (7 = 13:00). The October fix switched clock times to digits, and this one was missed (s.shift.1 already uses 7:00).
+  - `c.limits.o2`: Without ኢኻ the clause has no 'you' and reads 'lest it seem weak to him'; it does not say that people would think the learner is weak.
+  - `c.bike.b`: "ዝወር" is not a form of ዘወረ (to ride); the imperative is ዘውር (the same text uses እናዘወርካ).
+  - `c.aifake.q`: A letter of the verb ሰደደ (send) is missing: "ክትሰደለይ" should be ክትሰድደለይ, matching the f form ክትሰድድለይ.
+  - `c.aiplan.b`: "ንኣፕ ወይ ንኮምፒተር የዳልውዎ" says companies make the roster "for the app/computer"; EN means the app or computer makes it, so ብኣፕ ወይ ብኮምፒተር.
+  - `codeAccepted`: ተቐቢሉ is active: 'the code has received (something)'. It does not mean 'was accepted'. NL says 'De code is goed'.
+- **Dari** (1842 teksten gelezen): `c.accident.o3`; `c.aiprivate.a.why`; `c.aiprivate.a`; `c.aiprivate.b`; `d.task.a.why`; `w.opslaan`; `w.tandvlees.lit`.
+  - `c.accident.o3`: Iranian نه for 'or not'; Dari uses نی (as in the rest of the Dari texts).
+  - `d.task.a.why`: Iranian نه in a .why text; the .why block was moved to Dari نی elsewhere.
+  - `c.aiprivate.a.why`: Quoted 'no' is Iranian «نه»; Dari 'no' is «نی» (as in d.agree.a.why, c.certs.a.why).
+  - `w.tandvlees.lit`: بیخ دندان means the root of the teeth, not the gums (tandvlees); the literal gloss should name the gums.
+  - `w.opslaan`: In Dari, نگه کردن reads as 'to look'. The October pass changed it to نگه داشتن in 14 other keys; this one was missed.
+  - `c.aiprivate.a`: Here نه is the stand-alone 'no/not' (not the 'X, not Y' contrast left open as a question). In Dari that is نی, as in c.gossip.a and c.boundaries.a.
+  - `c.aiprivate.b`: 'Or not' is یا نه in Iranian Persian and یا نی in Dari, as in c.boundaries.b (خوب است یا نی).
+- **Arabisch** (690 teksten gelezen): `c.aiprivate.a`; `c.illness.b` (f); `c.illness.b` (m).
+  - `c.aiprivate.a`: "أفضّل لا" is a calque of "I'd rather not". In MSA, أفضّل needs a following clause (ألّا أفعل).
+  - `c.illness.b`: The quoted Dutch term must stay as in the source: "betermelden", not "beter melden".
+- **Perzisch** (691 teksten gelezen): `c.illness.b`; `whoFairwork`; `whoInspection`.
+  - `whoInspection`: Screen text uses informal تو; since the October check all UI screens use polite شما (the other who* lines use it too).
+  - `whoFairwork`: Screen text uses informal تو; the UI uses polite شما everywhere else.
+  - `c.illness.b`: The quoted Dutch term must stay exactly as in the source and in the course word w.betermelden: 'betermelden', not 'beter melden'.
+- **Oekraïens** (520 teksten gelezen): `c.illness.b` (f); `c.illness.b` (m); `sectorHint`.
+  - `c.illness.b`: The Dutch term in brackets must match the source, which now writes it as one word, 'betermelden' (NT2 review); the Ukrainian still has the old 'beter melden'.
+  - `sectorHint`: 'йдуть рано' is a word-for-word copy of 'come early' and reads as 'the lessons leave/happen early (in the day)'; the meaning is that they come near the start of the course.
+- **Pools** (560 teksten gelezen): `c.direct.o3`; `c.illness.b` (f); `c.illness.b` (m); `whoFairwork`.
+  - `whoFairwork`: "wykorzystywać" can sound like sexual abuse. In October c.gethelp.p was changed to "wyzyskiwany" (exploitation) for this reason, and ui.whoInspection already says "wyzysk". This is a rights text, so the word should be unmistakable and consistent.
+  - `c.illness.b`: The Dutch term has to stay as it is in the source: the EN source and the NT2 review write "betermelden" as one word, but the Polish splits it into "beter melden".
+  - `c.direct.o3`: The same tip's option o1 and the rest of the app call the box "karton" (made consistent in October). "pudło" here can read as a different object.
+- **Roemeens** (400 teksten gelezen): `bramDueOne`; `c.illness.b` (f); `c.illness.b` (m).
+  - `c.illness.b`: The quoted Dutch word must stay as in the source: 'betermelden' is one word (the app fixed this spelling deliberately), not 'beter melden'.
+  - `bramDueOne`: This is the singular (n = 1) form, but it uses the plural 'Cuvinte'; the 'one' form of bramDueN already has the correct singular.
+- **Bulgaars** (520 teksten gelezen): `c.illness.b` (f); `c.illness.b` (m).
+  - `c.illness.b`: Quoted Dutch term must stay as in the source: 'betermelden' (one word), not 'beter melden'.
+
+### Nieuwe teksten (alle talen, door twee agents vertaald en gekeurd)
+
+`retry` ("Opnieuw proberen" op het foutscherm, ook in `src/i18n/meta.ts`), `remindStoppedAndroid` ("Haal de herinnering zelf weg in Google Agenda."), `backupNothingNew` ("Niets nieuws: dit stond al op je telefoon."). Graag nakijken, vooral Tigrinya en Arabisch (man- en vrouwvorm).
+
+### Vragen voor een moedertaalspreker
+
+(10 vragen weggelaten: ze vergeleken schermteksten met de Nederlandse Werkregels-teksten of de Werkregels-versie van de Over-pagina, niet met de echte bron.)
+
+**Tigrinya**
+
+- `c.hello.a.why`: Is ንሰናብት ብሰናብት ይምለስ natural for 'a goodbye is answered with a goodbye'? Would ስንብታ or መሰናበቲ be the usual word?
+- `c.notyet.a.why`: Does ቅድም ክርአ ምሕታት clearly mean 'asking to be shown first'? Or would ቅድም ከርእዩኻ ምሕታት be clearer?
+- `c.arrive.s`: Does ቀዳመይቲ መዓልትኻ ሰዓት 6:45 እዩ read naturally as 'it is 6:45 on your first day'? Or should it be ቀዳመይቲ መዓልትኻ እያ፡ ሰዓት 6:45 እዩ?
+- `d.agree.a.why`: EN says 'offering another day'. ካልእ መዓልቲ ምሕባር means 'announcing another day'. Is ምቕራብ better here?
+- `w.juridischloket, w.vrij, s.leave.2 (and ~25 other places)`: 'Free' is written ነጻ (Amharic-style) here but ናጻ in other ti texts (e.g. rg.zl.c.1.b, rg.zl.c.2.b). Is ነጻ fine in Eritrean Tigrinya, or should it be ናጻ everywhere for consistency?
+- `s.findwork.1`: 'Ik wil solliciteren' is 'ነዚ ስራሕ ክሓትት እደሊ' ('I want to apply for THIS job'). Is the added 'this' OK, or is 'ስራሕ ክሓትት እደሊ' better?
+- `s.letters.1`: Spelling 'ኣይተረድኣንን' vs 'ኣይተረደኣንን' (other texts use ኣይተረደኣካን). Which spelling is standard?
+- `s.texting.1`: 'Ik ben tien minuten te laat' is 'ዓሰርተ ደቓይቕ ክድንጒ እየ' ('I will be ten minutes late'). Fits a text message, but please confirm it reads naturally.
+- `gloss.w.nooit`: "ፈጺሙ (ዋላ ሓንሳብ)": without a negative verb, ፈጺሙ can read as "completely". Is this clear as a gloss for "never", or should it be shown with the negative, e.g. "ፈጺሙ ኣይ… / ዋላ ሓንሳብ ኣይ…"?
+- `gloss.w.noodstop`: "ናይ ህጹጽ መጠጠዊ": is መጠጠዊ a real, understood word for a stop button? Alternatives: "ናይ ህጹጽ ግዜ መጠፍኢ" or "መቖጸሪ ህጹጽ".
+- `gloss.c.extra.b`: "ደሞዝካ ፈጺሙ ካብ ሕጋዊ ዝተሓተ ደሞዝ ክትሕት የብሉን": ደሞዝ is masculine. Is "ክትሕት" right here, or should it be "ክሕት" (or "ክትሓት")? Same in the f text.
+- `gloss.c.clock.b / gloss.c.texting.s`: The f form "ክትድንጊ" sits next to the m form "ክትድንጒ". Is the female form right, or should it be "ክትድንጒዪ"?
+- `gloss.c.illness.b`: The m text has "ትረክብ" and the f text has "ትረኽቢ"; everywhere else the file writes ትረኽብ. Is this only a spelling variant, or should it be made the same?
+- `gloss.c.phone.p`: "ተሌፎነይ ክውላዕ ይኽእል ዶ?" is meant as "may my phone stay on". Is ክውላዕ natural for a phone (or does it sound like "be lit")? A possible alternative is "ተሌፎነይ ተኸፊቱ ክጸንሕ ይኽእል ዶ?".
+- `gloss.c.transit.b`: "ብሓደ ካርድ ኣንክእ" for check in/out with the card (tap): is ኣንክእ a real, clear word? Would ብሓደ ካርድ ተንክፍ / ኣርእይ be better?
+- `gloss.c.line.b / c.line.p / c.line.o1`: "ናይ ህጹጽ መጠጠዊ" for emergency stop: is this a known term, or would "ናይ ህጹጽ ደው መበሊ (መጠወቒ)" be clearer?
+- `gloss.c.translate.b / c.translate.o1 / c.translate.o3 / c.aihelp.b`: The forms of ተርጐመ are spelled ክትትርጕም, ክትትርጕሞ, ክትርጕምዎ, ክትርጉሙ. Expected: ክትተርጕም, ክትተርጕሞ, ክተርጕምዎ, ክተርጕሙ (imperfect ይተርጕም). Please confirm the spelling.
+- `gloss.c.measures / c.measures.b`: "ልክዕ" / "ልክዒ" is used as the imperative "measure!". ልክዕ usually means "exact". Should it be ልከዕ / ልከዒ, or a clearer verb like "ዕቀን"?
+- `gloss.c.measures.q`: "እቲ ጣውላ" for "plank": ጣውላ is also used for "table" (e.g. c.service.s). Is it clear as plank/board here?
+- `gloss.c.keeplearning.p`: "ምሳይ ሆላንድኛ ጥራይ ተዛረብ" says "speak ONLY Dutch with me". NL "Praat maar Nederlands" means "just go ahead and speak Dutch". Is this OK, or is a softer wording better?
+
+**Dari**
+
+- `c.limits.w`: 'یک کمر زخمی' (injured back): زخمی sounds like an open wound. Would 'کمر آسیب‌دیده' be clearer for a lifting injury?
+- `ui.whoLegal, ui.unlockHint, ui.fact14`: These still say 'رایگان' (free); the October pass moved other texts to Afghan 'مفت'. Should they be the same everywhere?
+- `s.leave.3`: 'Ik heb een noodgeval thuis' is now 'در خانه یک کار عاجل دارم' (an urgent matter/task at home). Is that strong enough for 'emergency', or is 'در خانه یک حالت عاجل پیش آمده' clearer?
+- `w.tandvlees.lit`: Proposed لثه for gums; is the Afghan word بیره (بیرهٔ دندان) more natural for Dari speakers?
+- `c.easy.b`: 'Then just ask what it means' is rendered 'پس به آسانی بپرسید' (ask easily). Fine, or better 'پس فقط بپرسید'?
+- `rg.cat.uitzend / w.uitzendbureau`: Temp agency is 'دفتر کاریابی' in work texts but 'دفترهای کار موقت' in the regional help category. Pick one term?
+- `c.aifake.b, c.aifake.o3`: These two use کود (کودهای شما، کود بانکی) for 'code', but c.scams.b and the UI use کد. کود also means 'fertilizer'. Should they say کد, to be clear and consistent?
+- `c.aifake.*, c.aihelp.b, c.aiprivate.b`: The newer AI texts say رئیس / رییس, مانند, هیچ‌گاه and هرگز, while the rest of the file says آمر, مثل and هیچ وقت. Should these be made the same as the rest, in everyday Afghan Dari?
+- `s.aiprivate.3`: 'Mijn wachtwoord is geheim' is now رمز من پنهان است ('hidden'). Is محرم / راز clearer for 'secret'?
+- `c.diploma.b`: 'You can have it assessed at IDW' is now می‌توانید آن را در IDW ارزیابی کنید, which reads as 'you can assess it yourself'. Is ارزیابی کنانید / بدهید که ارزیابی شود better?
+- `c.illness.b`: The Dari text writes '(beter melden)', but the English source has the Dutch term as one word: 'betermelden'. Should it match the source?
+- `c.newjob.b, c.newjob.p`: 'Reference' is translated as معرف (a person who vouches for you). Does that fit 'ask for a reference (referentie)' in b, or should it also mention a letter (معرفی‌نامه)?
+- `gloss.p.call112`: Uses Latin digits 112 while c.danger.a uses Persian digits ۱۱۲. Should this be the same everywhere?
+- `gloss.w.nogniet`: 'هنوز نه' for 'not yet': is 'هنوز نی' more natural in Dari? This belongs to the open نه/نی question.
+- `gloss.c.notyet.q`: NL uses informal 'je' ('Probeer het maar'), but Dari uses the polite plural 'امتحانش کنید'. Is that intended, like the other chats?
+
+**Arabisch**
+
+- `ui.tier7, ui.tier30`: "أسبوع متتالٍ" / "شهر متتالٍ" for "1 week / 1 month in a row" reads oddly ("a consecutive week"). Would "أسبوع كامل على التوالي" / "شهر كامل على التوالي" be clearer?
+- `c.texting.b#m`: "وانهِ الرسالة بتحية" is missing the hamza (the f form has "وأنهي"). Should it be "وأنهِ"?
+
+**Perzisch**
+
+- `c.aiplan`: Title 'چه کسی این را تصمیم گرفت؟' (also 'بپرس چه کسی آن را تصمیم گرفت' in c.aiplan.b): is 'X را تصمیم گرفتن' natural, or should it be 'چه کسی این تصمیم را گرفت؟' (as in s.aiplan.1)?
+- `c.arrive.a.why`: 'سؤال این است که برای چه آمده… تازه‌وارد است' is in the third person ('why he came… he is new'), while EN says 'you'. Clear enough to the learner, or better 'پرسیده‌اند برای چه آمده‌ای: این جواب می‌گوید تازه‌واردی و امروز شروع می‌کنی'?
+
+**Oekraïens**
+
+- `w.gewond, p.hurt, c.accident.p`: 'поранений' (wounded) for 'gewond/hurt' at work: is that natural, or is 'травмований' clearer for a workplace injury?
+- `c.direct.o3`: This answer option is in the present tense ('Нічого не кажеш і залишаєш…'). The other tip options use the future ('скажеш', 'зробиш'). Make it consistent?
+- `d.task.a, gloss.w.gegevens, c.aiprivate.*, w.computer`: The newer texts use the apostrophe ’ (п’ять, ім’я, комп’ютер). The October check standardised on ʼ. Make them all the same?
+
+**Turks**
+
+- `ui.freeDaysN, ui.restDay, ui.bramRested`: "Serbest gün" is used for a streak rest day. In October w.vrij was changed from "boş" to "izinli" because "serbest" can read as "free of charge". Is "serbest gün" clear here as "a day off from practising", or is "dinlenme günü" / "izin günü" better?
+- `c.illness.b`: The Dutch term is written "(beter melden)" with two words, while the English source has "(betermelden)". Both spellings exist in Dutch. Should it match the source exactly?
+- `c.aiplan.b`: Scanner is "el tarayıcısıyla" here but "barkod okuyucu" elsewhere in the course (an open question from October). Should one term be used everywhere?
+
+**Pools**
+
+- `gloss.c.unsafe.w`: "Zgłoszenie go pomaga...": "go" points back to "Sytuacja" (feminine) or to "ostrzeżenie". Is it clear, or should it be "Zgłoszenie jej" / "Zgłoszenie takiej sytuacji"?
+- `ui.micUnavailable`: "potem idź dalej" for "then go on" (in the app) can read as "walk further". Is "potem przejdź dalej" clearer?
+- `ui.certNameHint`: "Możesz zostawić puste." has no noun. Is "Możesz zostawić to pole puste." more natural?
+- `gloss.c.agency.b`: "zbierasz dni urlopu" for "build up days off": is it natural, or is "nabywasz prawo do dni urlopu" better?
+
+**Roemeens**
+
+- `gloss.c.aihelp.s / gloss.c.aihelp.w`: Here vakantiegeld is 'bani de concediu', but in October it was changed elsewhere to 'prima de vacanță' (c.agency.b uses that too). Should these two use 'prima de vacanță' as well, so it is the same everywhere?
+- `gloss.w.telaat`: 'te laat' (as in 'Sorry, ik ben te laat' = I am late) is glossed 'prea târziu' (too late). Would 'în întârziere' / 'întârziat' be clearer as a gloss?
+- `gloss.c.aihelp.w`: This text uses 'Țările de Jos'; the rest of the app says 'Olanda'. Should it be the same?
+- `ui.loadFailed`: 'Nu s-a încărcat. Este internet?': is 'Ai internet?' more natural?
+- `gloss.d.task.a.why`: 'Întrebat dacă e gata:' sounds like it was copied from the English 'Asked if...'. Would 'Întrebarea e dacă e gata:' match the other .why texts better?
+- `about (a.*) dump`: For a.what.b, a.mission.b, a.how.b, a.beta.b and a.disclaimer.b the dump's 'EN' line shows the Dutch work-rules text (nlRules), not the English body. The RO text matches the real English body in src/content/about.ts, so I left it unchanged. The dump tool may need fixing.
+
+**Bulgaars**
+
+- `c.arrive.a.why`: '…Този отговор казва: нов е и започва днес.' says 'he is new' in the third person; EN says 'you are new'. Is that natural here, or should it be rephrased neutrally?
+- `s.understand.2`: 'Може ли да говорите бавно?' = 'speak slowly'; NL 'langzamer'. Would 'по-бавно' be more natural?
+
+### Ronde 2 (29 oktober): diep voor de andere zeven talen
+
+Elke tekst van ar, fa, uk, tr, pl, ro en bg (samen ~13.700), drie zoekers per taal. Strenger dan ronde 1: elke wijziging is door **twee** onafhankelijke agents gekeurd (een op betekenis, een op taal), en alleen doorgevoerd als beide het eens waren. Bron voor de Over-pagina nu de goede (de cursustekst); schermteksten alleen tegen het Engels.
+
+**Doorgevoerd (13):**
+
+- **Arabisch** (2132 gelezen): `c.texting.b` (m): The imperative of أنهى (form IV) starts with hamzat al-qat': أنهِ. Without the hamza, 'وانهِ' is a spelling error and reads as a different verb (انتهى/نهى). The f form already has وأنهي.; `c.site.b` (m): 'في آخر لحظة' is a calque of 'last-minute' and reads as 'too late, at the very last moment'; October already changed this for s.site.3 to 'قبل البدء مباشرة' (right before starting).
+- **Perzisch** (1899 gelezen): `s.understood.1`: The Dutch uses polite 'u' (Wilt u het opschrijven?), but the Persian uses informal تو. Mirror it with شما, as in s.task.3 and s.aihelp.3.; `s.understood.2`: The Dutch uses polite 'u' (Kunt u het laten zien?), but the Persian uses informal تو. Mirror it with شما.; `w.waarderen`: NL 'laten waarderen' / EN 'to have (a diploma) assessed' means an office (IDW) assesses it. 'ارزیابی کردن' means assessing it yourself, the same error the October check fixed elsewhere; c.diploma.b already says 'به IDW بدهی تا ارزیابی شود'.
+- **Turks** (1885 gelezen): `c.shortlong.a.why`: "bir nedenle" means "for some reason" in Turkish, not "with a reason" (the reply gives its reason).
+- **Pools** (2132 gelezen): `wordsStrongerOne`: "słowo mocniej" (word more strongly) is a calque that does not make sense in Polish; use the same wording as the plural ui.wordsStrongerN.
+- **Roemeens** (1680 gelezen): `w.zeker`: w.veilig (safe) is also glossed 'sigur', so the two words get the same gloss. docs/vertaalcontrole.md records 'sigur (de ceva), convins' as the chosen RO gloss for w.zeker, but the change was never applied.; `s.findwork.1`: NL/EN say only 'I want to apply for a job'; 'acest post' adds 'this (specific) job', which is not in the source.
+- **Bulgaars** (1862 gelezen): `c.client.b`: Plain string speaks to the learner with masculine 'кой си' (a woman is 'коя си'); this is care work, where many learners are women. The app gives m/f forms for the same phrase elsewhere (c.arrive.w). 'Представи се' works for both.; `c.texting.b`: Plain string speaks to the learner with masculine 'кой си'. Neutral wording fits both genders.; `c.texting.w`: Plain string speaks to the learner with masculine 'кой си'. 'Кой пише' (who is writing) works for both genders.
+
+**Niet doorgevoerd, de keurders waren het niet eens (8), graag beslissen:**
+
+- Arabisch `c.aiprivate.o3`: voorstel: m and f must say the same thing: the f form turns 'a friend' into 'a female friend' (صديقة); only the learner's verb should change. Oordelen: reject, accept.
+- Oekraïens `w.gegevens`: voorstel: Wrong apostrophe character (’ U+2019); the rest of the uk file uses ʼ (U+02BC), standardised in the October check. Oordelen: reject, reject.
+- Oekraïens `w.computer`: voorstel: Wrong apostrophe character (’); the file convention is ʼ. Oordelen: reject, reject.
+- Oekraïens `c.aiprivate.s`: voorstel: Wrong apostrophe character (’); the file convention is ʼ. Oordelen: reject, reject.
+- Oekraïens `c.aiprivate.o1`: voorstel: Wrong apostrophe character (’); the file convention is ʼ. Oordelen: reject, reject.
+- Oekraïens `c.aiprivate.w`: voorstel: Wrong apostrophe character (’); the file convention is ʼ. Oordelen: reject, reject.
+- Oekraïens `c.aiplan.b`: voorstel: Wrong apostrophe character (’, twice); the file convention is ʼ. Oordelen: reject, reject.
+- Oekraïens `c.bsn.b`: voorstel: 'вхід' reads as 'entrance'. In October DigiD 'вхід' was changed to 'логін' everywhere else (c.bsn.o1–o3 and .w say 'логін DigiD'), so this sentence was missed. Oordelen: accept, reject.
+
+**Vragen voor een moedertaalspreker:**
+
+*Arabisch*
+
+- `gloss.c.keeplearning.p`: "تكلّم معي بالهولندية فقط" reads as "speak ONLY Dutch with me". NL "Praat maar Nederlands" means "just go ahead and speak Dutch". A softer wording could be "تكلّم معي بالهولندية، هكذا أتعلّمها أسرع" (or with لا بأس). Is "فقط" OK here?
+- `gloss.w.houdbaarheidsdatum / gloss.s.shelves.2 / gloss.c.shelves.*`: "تاريخ انتهاء الصلاحية" means expiry date; EN says best-before date. That is the usual everyday term. Is it fine, or is "يُفضَّل استهلاكه قبل" needed somewhere?
+- `gloss.s.boundaries.3`: "أريد أن أبلّغ عن شيء عند الشخص المؤتمن": would "إلى الشخص المؤتمن" or "لدى الشخص المؤتمن" sound more natural than "عند"?
+- `gloss.rg.zl.s.2.2`: "Kunt u Nederlands praten?" is now the impersonal "هل يمكن التكلم بالهولندية؟" ("is it possible to speak Dutch?"). Clear and polite enough, or is "هل يمكنك/حضرتك أن تتكلم بالهولندية؟" better?
+- `ui.sectorHint`: "دروس عملك تأتي مبكراً" copies 'come early' word for word, and it could be read as 'early in the day'. The meaning is that these lessons come near the start of the course (the same point was fixed in Ukrainian). Would "دروس عملك تأتي في البداية" or "تأتي أولاً" be clearer?
+- `c.texting.p#f`: The f form ends with "مع التحية، (اسمك)" instead of "علي" as in NL, EN and the m form. Is this intended, or should both forms keep "علي"?
+- `s.understand.2`: "هل يمكنك أن تتكلم ببطء؟" means 'slowly', not 'more slowly' (NL langzamer). Would "بشكل أبطأ" be better, or is ببطء natural enough here?
+- `s.findwork.1`: 'Ik wil solliciteren' is 'أريد أن أتقدّم لهذه الوظيفة' ('...for THIS job'). EN is 'apply for a job'. Is 'أريد أن أتقدّم لوظيفة' better, or is 'this job' fine in the lesson?
+- `s.pbgk.2`: 'in de hal' is 'في الممر' (corridor). In a warehouse 'hal' is often a large hall. Is 'في القاعة' / 'في الصالة' more accurate, or is الممر fine?
+
+*Perzisch*
+
+- `c.limits.w`: 'کمر آسیب‌دیده خیلی بیشتر از یک دقیقه کمک هزینه دارد': the words 'کمک هزینه' sit side by side and can be read as کمک‌هزینه (allowance/benefit, the term now used for uitkering). Clearer: 'هزینهٔ کمر آسیب‌دیده خیلی بیشتر از یک دقیقه کمک است.'?
+- `c.site.b`: 'اینجا چه چیزی ممکن است خراب شود؟' for 'what can go wrong here?': خراب شدن reads as 'break down'. Is 'چه چیزی ممکن است اشتباه پیش برود / چه خطری اینجا هست؟' clearer for a risk check?
+- `c.client.o3`: 'شستشو را حذف کن' (delete the washing) for 'Skip the washing': is 'شستشو را انجام نده' more natural?
+- `w.nummer`: 'شمارهٔ (تلفن)' has an ezafe left hanging before the bracket. Better 'شماره (تلفن)'?
+- `gloss.c.easy.q, gloss.c.easy.p`: NL uses informal 'je' ('Kun je even een handje helpen?', 'Wat bedoel je daarmee?'), but FA uses polite شما ('می‌توانید یک لحظه کمک کنید؟', 'منظورتان از این چیست؟'). Other chat lines mirror je with تو. Should these be 'می‌توانی یک لحظه کمک کنی؟' and 'منظورت از این چیست؟'?
+- `gloss.c.phone.p`: 'بچه‌ام بیمار است': in October 'ziek' was standardised from بیمار to مریض (gloss.w.ziek = مریض). Should this be 'بچه‌ام مریض است' for consistency?
+- `ui.sectorHint`: 'درس‌های کار شما زود می‌آیند' is a literal 'come early'. Is it clear that these lessons come near the start of the course, or would 'زودتر می‌آیند' / 'اول می‌آیند' be clearer?
+- `gloss.p.call112`: Uses Latin digits 'با 112 تماس بگیر!' while gloss.c.danger.a uses Persian digits '۱۱۲'. Make it consistent?
+- `s.pbgk.2`: 'in de hal' is translated as 'توی راهرو' (in the corridor). On a work floor 'hal' usually means a hall or shed (سالن). Would 'توی سالن سرد است' be better?
+- `c.sick.a.why`: 'بیماری یعنی در خانه ماندن و خبر دادن' reads as 'Illness means…'. Is 'مریض بودن یعنی…' clearer for 'Sick means staying home'?
+- `a.how.b`: The FA text leaves out 'or in simple English if you chose no help language' and adds 'you also see instructions and words in Persian'. This seems to be a deliberate change for Persian readers. Is it OK?
+
+*Oekraïens*
+
+- `gloss.c.direct.w`: 'Direct feedback' is 'Пряма порада' (direct advice). The tip is about remarks like 'Dat is fout', and c.mistakes.b uses 'Зауваження' for feedback. Would 'Пряме зауваження' / 'Пряма критика' be clearer?
+- `gloss.c.limits.s`: 'much too heavy' is 'значно заважка'. Is that natural, or is 'набагато заважка' / 'занадто важка' better?
+- `gloss.c.hygiene.b`: The opening 'Алкоголь і наркотики на роботі, або прийти на роботу після них, заборонено…' mixes nouns and an infinitive as the subject. It can be understood, but would 'Вживати алкоголь і наркотики на роботі або приходити на роботу після них заборонено…' read better?
+- `s.pbgk.2`: 'Het is koud in de hal' is translated 'У коридорі холодно' (corridor). In this app 'de hal' is probably the work hall (warehouse/factory hall). Would 'У цеху / на складі холодно' be better?
+- `c.gossip.w, c.boundaries.b, c.warning.a`: Rights texts use 'не може / не можуть / можете' for 'may (not)' ('Ніхто не може викладати…', 'тебе не можуть покарати', 'ви можете тільки зробити копію'). Is that clearly 'not allowed', or should it be 'не має права / не мають права / маєте право'?
+- `c.boundaries.b`: 'Запитай, чи все з ним гаразд' fixes the colleague as male; EN says 'they'. Would 'чи все гаразд' be better?
+- `w.bang`: 'наляканий, боїшся' has only the male adjective form; acceptable for a word gloss?
+- `c.shelves.o2`: 'бо воно свіже' for 'because it is fresher': should it be 'свіжіше'?
+- `c.gethelp.o3`: This answer option is in the present tense ('Кажеш йому почекати…'), but o1 and o2 use the future ('Допоможеш', 'Скажеш'). Should it be 'Скажеш йому почекати…'? This is the same question as for c.direct.o3.
+- `s.transit.2, c.transit.b`: 'зареєструватися на виході' / 'Реєструйся на вході і на виході' for OV check-in and check-out: is this clear, or is 'прикласти картку на виході' more natural?
+
+*Turks*
+
+- `gloss.s.kitchen.3, gloss.c.kitchen.q`: 'noten' / nut allergy is 'kuruyemiş' (which also covers dried fruit and seeds). Is 'kuruyemiş alerjisi' clear for a nut allergy, or is 'fındık/fıstık alerjisi' (or 'sert kabuklu yemiş') more usual?
+- `gloss.c.findwork.b`: 'sana iş bulmak için senden para isteyemez' has both 'sana' and 'senden'. It reads a bit heavy. Would 'sana iş bulmak için para isteyemez' be smoother?
+- `gloss.c.gear.p`: NL 'kapot' / EN 'broken' is given as 'yırtıldı' (torn). That fits gloves and matches c.gear.s, but is 'yırtıldı' fine as the general phrase, or is 'bozuldu/eskidi' better?
+- `s.gossip.3`: "Bunu bana kendin söylemeni tercih ederim" says "yourself" (kendin) for EN "directly" / NL "direct". The point is "to my face, not behind my back". Is "Bunu bana doğrudan söylemeni tercih ederim" clearer?
+- `ui.whoToCall, ui.whoFairwork`: These two still start with "İşte" ("İşte sorun mu var?", "İşte sömürülüyorsun"). In October about 15 texts were changed from "İşte" to "İş yerinde" because "İşte" can read as "here is". Change these two the same way for consistency?
+- `c.boundaries.b`: "bunu 'şaka olarak' söylemiş olması" says "said it as a joke", but EN "meant it as a joke" also covers touching and staring. Is "şaka olarak yapmış olması" or "şaka amaçlı olması" better?
+- `gloss.s.pbgk.2`: "de hal" (warehouse hall) is rendered "Koridor" (corridor). Is "Salon soğuk" or "Depo soğuk" closer?
+- `gloss.c.texting.b, gloss.c.texting.w`: "kim olduğunu ve ne olduğunu söyle": can "ne olduğunu" be read as "what you are"? Would "neler olduğunu" / "ne durumda olduğunu" be clearer for "what is happening"?
+
+*Pools*
+
+- `gloss.s.pbgk.2`: "Het is koud in de hal." is translated as "Na korytarzu" (in the corridor). If "hal" here means a work hall (warehouse or factory), "W hali jest zimno." would be the right text. Which meaning does the source intend?
+- `gloss.w.opdracht, gloss.s.agency.2, gloss.s.agency.3`: An agency assignment is translated as "projekt". Polish agency workers do use this word, but "zlecenie" (or "praca w firmie") may be clearer to learners with little schooling. Keep "projekt"?
+- `gloss.c.hours.b`: "Check your hours yourself" became "Sprawdzaj swoje godziny", so "yourself" is gone. Should "sam/sama" be added (this would need m/f forms), or is the text fine as it is?
+- `gloss.c.gossip.s`: "Kolega nagrywa cię, kiedy poślizgnąłeś/poślizgnęłaś się" mixes present and past tense. Would "Kolega nagrał, jak poślizgnąłeś/poślizgnęłaś się na mokrej podłodze" sound more natural?
+- `gloss.c.privacy.o1`: "Miło mówisz, że zawołasz pielęgniarkę": is "Uprzejmie mówisz" better for "say kindly"?
+- `gloss.c.ww.b`: "Zwykle musisz przepracować co najmniej 26 z ostatnich 36 tygodni" can be read as a future duty ("you must work 26 weeks") instead of a condition ("you must have worked"). Is "musisz mieć przepracowane" clearer?
+- `gloss.c.ww.w`: EN says "Talking first with...". The Polish "Rozmowa z przełożonym..." leaves out "first" (najpierw). Should it be added?
+- `gloss.c.housing.b`: "umowa najmu musi być osobno od umowy o pracę": is "osobna/oddzielna od umowy o pracę" more natural?
+- `gloss.a.how.b`: The Polish text drops "or in simple English if you chose no help language" and says that instructions and words are also shown in Polish. This seems deliberate for Polish readers. Is that OK?
+- `gloss.c.findwork`: "Weź umowę na piśmie" for "Get your contract on paper": is "Miej umowę na piśmie" or "Poproś o umowę na piśmie" more natural?
+
+*Roemeens*
+
+- `gloss.c.notyet.b`: 'Nu folosi o mașină sau un motostivuitor': on its own 'mașină' first reads as 'car'. In October, 'mașini' was changed to 'utilaje' in c.hygiene, c.phone and c.understood for this reason, but the word list glosses machine as 'mașina (utilajul)'. Should this be 'un utilaj'?
+- `gloss.c.ask.o2`: This is still open from the 16-10 notes: 'Dai din cap și încerci să ghicești.' 'Dai din cap' can mean nodding or shaking your head. Would 'Aprobi din cap' be clearer, as in rg.zl.c.2.o2?
+- `ui.bramHard`: EN says 'Good that you practised'. RO says 'E bine că ai fost harnic/harnică' (good that you were hard-working). Would 'E bine că ai exersat.' be closer, and the same for m and f?
+- `gloss.c.diploma.b`: 'O poți evalua la IDW' reads as if the learner assesses the diploma themselves. Would 'Poți cere evaluarea ei la IDW' be clearer for 'have it assessed'?
+- `gloss.s.pbgk.2`: 'E frig pe hol' turns 'de hal' into a corridor. In a warehouse or factory, 'în hală' may fit better. Which reading is intended?
+- `gloss.c.line / gloss.c.line.b`: Here 'mașină/mașinile în funcțiune' is used for machines. In October, 'mașini' was changed to 'utilaje' elsewhere because it can read as 'cars'. Is it clear enough here because of 'în funcțiune', or should this use 'utilaje' too?
+- `gloss.c.boundaries.b (f)`: The female form ends with 'oferă-te să fii martor'. Would 'martoră' fit better, since the same text already uses 'pedepsită'?
+- `gloss.u.contact`: 'Apeluri și mesaje către muncă' copies 'to work' word for word. Would 'Apeluri și mesaje cu locul de muncă' or '... către șef' sound more natural?
+- `gloss.w.houdbaarheidsdatum`: EN says best-before date, but the gloss is 'data de expirare (a se consuma înainte de)'. Is that fine, or is 'a se consuma de preferință înainte de' more exact?
+
+*Bulgaars*
+
+- `gloss.s.pbgk.2`: 'Het is koud in de hal' is translated 'В коридора е студено' (corridor). On the work floor 'de hal' can also mean a warehouse or factory hall ('халето'). Is 'коридора' the meaning intended here, or would 'в халето' fit better?
+- `gloss.c.boundaries.b`: 'не може да бъдеш наказан(а), защото си съобщил(а)' stands for 'you may not be punished'. Is 'не може' clearly read as 'they are not allowed to', or would 'нямат право да те накажат' be clearer for a rights text?
+- `gloss.c.privacy`: The title 'Privacy' is translated 'Лични данни' (personal data). The text is also about not talking about clients. Would 'Поверителност' fit better?
+- `c.limits.s`: 'много тежък за теб' means 'very heavy for you'. EN says 'much too heavy'. Would 'твърде тежък' or 'прекалено тежък' be clearer?
+- `c.ask.w / rg.zl.c.2.w`: Bulgarian alone adds 'Тук кимането значи „да“…' (in Bulgaria nodding traditionally means 'no'). This looks deliberate. Please confirm it reads naturally and is not confusing.
+- `c.cv.a`: 'Да, от предишния ми шеф.' ('from my previous boss') for 'Ja, mijn vorige baas'. Natural as a reply to 'Имаш ли препоръка?', or should it be 'Да, предишният ми шеф.'?
+- `c.illness.p`: 'Вече съм по-добре.' means 'I am feeling better', not quite 'I am well again' (weer beter = recovered). It is clear with the next sentence, but would 'Вече съм добре.' or 'Оздравях.' fit better?
+- `c.aihelp.s / c.aihelp.w`: Here vakantiegeld is 'добавка за отпуск', but everywhere else it is 'пари за отпуск' (c.extra, c.agency). Should it be one term everywhere?
+
+### Tweede keuring van ronde 1 (29 oktober)
+
+Ronde 1 had één keurder per taal, en die liet de valse Over-pagina-voorstellen door. Daarom zijn alle
+35 wijzigingen uit ronde 1 en de 27 nieuwe teksten opnieuw gekeurd door twee onafhankelijke agents per
+taal (betekenis en taal). Alle 35 wijzigingen bleven staan. Drie nieuwe teksten zijn verbeterd:
+Tigrinya `retry` "ደጊም ምፍታን" → "ዳግማይ ምፍታን" (ደጊም alleen betekent "voortaan"), Arabisch
+`remindStoppedAndroid` (f) zonder losse kasra zoals de rest, Pools `backupNothingNew` "w telefonie"
+(zoals elders in de app).
+
+### Ronde 3 (29 oktober): tweede, frisse ronde voor Tigrinya en Dari
+
+Nieuwe agents lazen opnieuw elke tekst (andere indeling van de bestanden), met de vragen van ronde 1 erbij om niet te herhalen. Twee keurders per wijziging, alleen doorgevoerd als beide het eens waren.
+
+**Doorgevoerd (13):**
+
+- **Tigrinya**: `c.aiprivate.b` (f): The suffix 'your (f)' after ክ is written ኺ (ባንክኺ), as in every other f text (c.scams.b, c.aifake.b). ባንክኪ is a misspelling.; `s.sick.3`: The verb has the 3rd-person prefix (ይድውል, 'he calls'), but ኣለኹ is 1st person. 'I am calling' needs እድውል.; `s.interview.2`: ይመሃር is 3rd person masculine ('he learns') next to 1st-person ኣለኹ. 'I am learning' needs እመሃር.; `c.gethelp.a`: ይተሓዝ is 3rd person ('he is treated') next to 1st-person ኣለኹ. 'I am treated' needs እተሓዝ.; `c.service.a`: ይመጽእ is 3rd person ('he is coming') next to 1st-person ኣለኹ. 'I am coming' needs እመጽእ.; `c.agency.b` (f): ውዕልክን ደሞዝክን reads as 'your (feminine plural) contract and pay'. For one woman it must be ውዕልኪን ደሞዝኪን, as the rest of the file writes it (BSNኪን, ወረቓቕትኪን).; `whoInspection`: 'ምዝማዕ' is a misspelling of the word for exploitation (root ዘመዘ); every other rights text uses ምዝመዛ (c.warning, c.gethelp). Rights text, so the key word must be clear.; `whoFairwork`: Same misspelling 'ምዝማዕ' for exploitation; the course uses ምዝመዛ everywhere else.; `unlockHint` (f): The feminine imperative with the dative suffix drops the -i vowel: ስደድልና (as in ክትሰድድለይ, fixed in round 1); 'ስደዲልና' is not a correct form.; `w.kl.pak`: 'Complete/full' is spelled ምሉእ in Tigrinya (as everywhere else in the app, e.g. ምሉእ ቨርዥን); ሙሉእ is an Amharic-influenced spelling.; `c.easy.a`: Same person mismatch as c.service.a (ይመጽእ is 3rd person next to 1st-person ኣለኹ); flagged by a verifier, applied with the same fix.
+- **Dari**: `zg.haast.o3`: قطار for 'train' is Iranian; in Afghan Dari قطار means a row or queue. The file's own word gloss w.trein uses ریل.; `w.alseentrein.lit`: In Dari قطار reads as 'like a row/queue'. The Afghan word for train is ریل, as in w.trein.
+
+Opvallend in het Tigrinya: vijf zinnen met "ik" stonden in de derde persoon ("ይመጽእ ኣለኹ" = "hij komt, ik ben"); allemaal verbeterd.
+
+**Vragen voor een moedertaalspreker:**
+
+*Tigrinya*
+
+- `gloss.a.how.b`: The ti text leaves out 'or in simple English if you chose no help language' and adds 'you also see the instructions and words in Tigrinya'. That makes sense for a Tigrinya reader, but it does not match EN. Is this adaptation fine?
+- `gloss.a.what.b`: 'ንኮርስ ቋንቋ ወይ ንመምህር ቋንቋ ኣይትክእን እዩ' is meant as 'it does not replace a language course' (ተክአ). Will low-literate readers read it as 'replace', or confuse it with ክኢሉ ('can')? Would 'ኣብ ክንዲ ኮርስ ቋንቋ ወይ መምህር ቋንቋ ኣይኮነን' be clearer?
+- `gloss.c.extra.w`: 'ቀልጢፍካ ስራሕካ እንተ ገዲፍካ' for 'if you leave your job earlier' (before holiday pay is paid): does ቀልጢፍካ clearly mean 'earlier' here, rather than 'quickly'?
+- `gloss.c.aiprivate.a`: 'Liever niet' is rendered 'ይሓይሽ ኣይፋል' (literally 'better no'). Is that natural, or is it a calque? A possible alternative is 'ዘይገብሮ ይሓይሽ' or 'ኣይፋልን፡ ...'.
+- `gloss.c.aifake.a`: 'Ik bel je eerst op je oude nummer' is 'ቅድም ናብቲ ናይ ቀደም ቁጽሪ እድውል' ('first I call the old number'), without 'you' or 'your'. Is it clear enough, or is 'ቅድም ናብቲ ናይ ቀደም ቁጽርኻ ክድውለልካ እየ' better?
+- `gloss.c.transit.b`: The f text writes 'ምስ ኣተኺን' and the m text 'ምስ ኣተኻን' for 'when you get on'. The usual perfect of ኣተወ is ኣቶኻ / ኣቶኺ. Please confirm the spelling.
+- `gloss.c.direct.o3`: The box is 'ሳንዱቕ' here, but 'ሳጹን' in o1 of the same tip and in c.limits, c.understood.p and the rest of the app. Both mean box. Should it be ሳጹን here too, so learners see that it is the same box?
+- `gloss.c.kitchen.w`: 'ንእሽቶ ጌጋ ኣዝያ ሓደገኛ ክትከውን ትኽእል' makes ጌጋ (mistake) feminine (ኣዝያ, ክትከውን). Is ጌጋ feminine here, or should it be masculine: 'ኣዝዩ ሓደገኛ ክኸውን ይኽእል'?
+- `gloss.l.understood`: The lesson title 'ምርዳእን ክትርዳእን' puts a verbal noun (ምርዳእ) next to an infinitive with 'you' (ክትርዳእ). Is that natural as a title, or would 'ምርዳእን ምርዳእ ምግባርን' (or something similar) read better?
+- `gloss.c.line.a`: 'De machine is erg langzaam' is translated with ደንጓዪ, which mostly means 'late / delaying'. Is that natural for 'slow' here, or is ዝሑል / ቀስ ዝብል better?
+- `gloss.w.kwaliteit / gloss.l.quality`: ጽሬት is used for quality, but also for hygiene (w.hygiene) and cleaning (u.clean). Is that clear enough on a factory line, or should quality be ብቕዓት / ዓይነት?
+- `gloss.s.callin.1`: The name is written in Latin letters, 'Ali', but s.hello.2 writes ዓሊ. Is that on purpose (the learner says this sentence in Dutch), or should it be ዓሊ?
+- `gloss.w.nietfijn`: "ዘየሐጉስ": the usual spelling seems to be ዘየሕጉስ (from ኣሕጎሰ). Spelling variant or typo?
+- `ui.offlineNoSpace`: "ቦታ ኣጽሪ / ኣጽርዪ" ('clean space') for 'free up space': is this clear on a phone, or is "ቦታ ኣውጽእ / ቦታ ፍጠር" better?
+
+*Dari*
+
+- `gloss.s.pbgk.2`: 'Het is koud in de hal' is 'در دهلیز سرد است' (corridor). Other languages already have this question: if 'de hal' means the work hall of a warehouse or factory, would 'در سالون / در گدام سرد است' fit better?
+- `gloss.c.extra.w`: 'If you leave your job earlier' is 'اگر زودتر از کار بروید', which can also read as 'if you leave work early (today)'. Would 'اگر پیش از آن کار خود را ترک کنید' be clearer?
+- `gloss.c.bsn.b`: 'DigiD is your login' is 'DigiD رمز ورود شما ...' (login password), but c.bsn.s/o1/o3/w say 'معلومات ورود DigiD'. Should c.bsn.b also say 'وسیلهٔ ورود' / 'معلومات ورود' so it does not read as a password?
+- `gloss.c.hygiene.w`: 'only that you cannot drive or work with machines now' is 'نمی‌توانید موتر برانید' (drive a car). The situation is about a forklift. Is plain 'نمی‌توانید برانید' or 'فورک‌لیفت برانید' better?
+- `gloss.c.gossip.w`: Rights text: 'Nobody may put a video of you online' is 'هیچ کس ... نمی‌تواند' (nobody can). Is 'هیچ کس ... اجازه ندارد' clearer for 'is not allowed'?
+- `gloss.c.boundaries.b`: 'You may not be punished for reporting it' is 'جزا داده نمی‌شوید' (you will not be punished), a promise and not a rule. Is 'کسی اجازه ندارد شما را به خاطر گزارش دادن جزا بدهد' (as in c.unsafe.w) better? Also, '«آن را به شوخی گفته بود»' says 'said it as a joke', but EN 'meant it as a joke' also covers touching and staring. Is 'به شوخی کرده بود' / 'منظورش شوخی بود' better?
+- `gloss.c.gear.b`: 'are not a suggestion' is 'تنها یک پیشنهاد نیست' (not merely a suggestion), which could suggest the rules are partly optional. Is 'پیشنهاد نیست' clearer?
+- `gloss.c.direct.o1 / c.direct.o3`: In the same tip, the box is قطی in o1 and جعبه in o3 (and قطی in the rest of the file). Should o3 also say قطی?
+- `gloss.s.understand.2`: NL 'langzamer' (more slowly) is 'آهسته گپ بزنید' (speak slowly), while rg.zl.c.2.a uses the comparative آهسته‌تر. Would 'آهسته‌تر گپ بزنید' be better here?
+- `gloss.s.findwork.1`: 'Ik wil solliciteren' is 'می‌خواهم برای این کار درخواست بدهم' (for THIS job). EN says 'apply for a job'. Is 'برای یک کار' better, or is 'this job' fine in the lesson?

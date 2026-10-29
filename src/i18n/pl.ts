@@ -53,7 +53,7 @@ const lang: HelpLanguageSource = {
     who112: 'Nagły wypadek: zagrożenie życia, pożar albo przestępstwo, które dzieje się teraz.',
     whoLegal: 'Bezpłatna porada w sprawie umowy, wynagrodzenia lub zwolnienia.',
     whoInspection: 'Zgłoś niebezpieczną pracę, za niską pensję lub wyzysk. Możesz to zrobić anonimowo.',
-    whoFairwork: 'Ktoś wykorzystuje cię w pracy albo tak myślisz.',
+    whoFairwork: 'Ktoś cię wyzyskuje w pracy albo tak myślisz.',
     settings: 'Ustawienia',
     helpLanguage: 'Język pomocy',
     resetProgress: 'Zresetuj mój postęp',
@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     backupMerge: 'Połącz',
     backupReplace: 'Zastąp',
     backupBack: 'Twoje postępy wróciły.',
+    backupNothingNew: 'Nic nowego: to już było w twoim telefonie.',
     cancel: 'Anuluj',
     remindTitle: 'Przypominaj mi codziennie',
     remindEvent: 'Czas na niderlandzki (10 minut)',
@@ -180,7 +181,7 @@ const lang: HelpLanguageSource = {
     wordsUnitOne: 'słowo',
     wordsLearnedOne: 'Nauczone słowo: {n}',
     tomorrowOne: 'Jutro: {n} słowo',
-    wordsStrongerOne: '{n} słowo mocniej',
+    wordsStrongerOne: '{n} słowo lepiej utrwalone',
     recordOne: 'Twój rekord: {n} dzień',
     streakStoppedOne: 'Twoja seria skończyła się na {n} dniu. Zacznij dziś od nowa.',
     letterTiles: 'Litery',
@@ -300,9 +301,11 @@ const lang: HelpLanguageSource = {
     remindEveryDay: 'Twoje przypomnienie: codziennie o {time}',
     remindStop: 'Wyłącz przypomnienie',
     remindStopped: 'Otwórz plik, aby usunąć przypomnienie z kalendarza.',
+    remindStoppedAndroid: 'Usuń przypomnienie samodzielnie w Kalendarzu Google.',
     resetKeeps: 'Twoje lekcje, słowa, dni z rzędu i certyfikaty zostaną usunięte. Twój język, kod i ustawienia zostają.',
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nie załadowało się. Czy jest internet?',
+    retry: 'Spróbuj ponownie',
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

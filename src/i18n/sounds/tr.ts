@@ -17,7 +17,7 @@ const t: CultureTranslation = {
     's.shortlong.3': 'Dükkân saat dokuzda açılıyor.',
     'c.shortlong.q': 'Yumurta ister misin?',
     'c.shortlong.a': 'Hayır, teşekkürler. Ben zaten yemek yedim.',
-    'c.shortlong.a.why': 'Yumurta ikram ediliyor: kibar bir hayır, bir nedenle.',
+    'c.shortlong.a.why': 'Yumurta ikram ediliyor: kibar bir hayır ve nedeni.',
     'l.roundsounds': 'uu, oe ve eu',
     'w.kl.muur': 'duvar',
     'w.kl.moer': 'somun (cıvata için)',

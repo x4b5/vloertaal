@@ -33,7 +33,7 @@ import {
   AlertIcon, AutoThemeIcon, CalendarIcon, CheckIcon, ChevronIcon, CloseIcon, CrateIcon, GlobeIcon, KeyboardIcon,
   LettersIcon, LockIcon, MoonIcon, PencilIcon, RouteIcon, SpeakerIcon, SpeakerOffIcon, SunIcon,
 } from './Icons';
-import { BackupCard, ClockGlyph, InstallCard, OwnTime, addReminder, remindAddedKey, stopReminder } from './Keep';
+import { BackupCard, ClockGlyph, InstallCard, OwnTime, addReminder, remindAddedKey, remindStoppedKey, stopReminder } from './Keep';
 import { DownloadIcon, OfflineSettingCard } from './Offline';
 import { LogoMark } from './Logo';
 import { LanguagePicker } from './Screens';
@@ -595,7 +595,7 @@ function ReminderNow({ time, lang, onOther, onStopped }: {
           { id: 'stop', nl: 'Stop de herinnering', text: ui('remindStop', lang), picture: <CloseIcon size={26} /> },
         ]}
       />
-      <p className="max3-hint" role="status"><Bi text={ui(stopped ? 'remindStopped' : 'remindHint', lang)} /></p>
+      <p className="max3-hint" role="status"><Bi text={ui(stopped ? remindStoppedKey() : 'remindHint', lang)} /></p>
     </>
   );
 }

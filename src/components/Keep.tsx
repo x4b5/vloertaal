@@ -4,7 +4,7 @@ import { dutchUi, trackOf, trackOfLang } from '../lib/track';
 import { fillCount, ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
-import { BACKUP_MAX_BYTES, backupFile, bestStreak, knownLessons, mergeBackup, parseBackup, replaceLoses, replaceWithBackup, type Progress } from '../lib/progress';
+import { BACKUP_MAX_BYTES, backupFile, bestStreak, knownLessons, mergeAddsNothing, mergeBackup, parseBackup, replaceLoses, replaceWithBackup, type Progress } from '../lib/progress';
 import { REMINDER_TIMES, forgetReminder, googleCalendarUrl, isAndroid, rememberReminder, reminderCancelIcs, reminderEvent, reminderIcs, saveFile } from '../lib/reminder';
 import { REMIND_DEFAULT, REMIND_OTHER_TIMES, REMIND_OWN, keepNext, ownTime, type KeepAction, type KeepStep } from '../lib/keep';
 import { Bi } from './Bi';
@@ -278,7 +278,7 @@ export function BackupCard({ progress, lang, onRestore }: {
   const [found, setFound] = useState<Partial<Progress> | null>(null);
   /** The second question: the file has fewer lessons than this phone, and Replace was tapped. */
   const [fewer, setFewer] = useState(false);
-  const [note, setNote] = useState<'bad' | 'big' | 'back' | null>(null);
+  const [note, setNote] = useState<'bad' | 'big' | 'back' | 'same' | null>(null);
   // Only lessons the app knows count, here and in the file (src/lib/progress.ts knownLessonId).
   const lessons = knownLessons(progress.completed);
   const theirs = found ? knownLessons(found.completed ?? {}) : 0;
@@ -316,9 +316,12 @@ export function BackupCard({ progress, lang, onRestore }: {
     // Replacing would lose something here (a lesson the file lacks, a certificate, the record):
     // ask once more, with both numbers.
     if (how === 'replace' && !fewer && replaceLoses(progress, found)) { setFewer(true); return; }
-    onRestore(how === 'merge' ? mergeBackup(progress, found) : replaceWithBackup(progress, found));
+    const next = how === 'merge' ? mergeBackup(progress, found) : replaceWithBackup(progress, found);
+    // Added together with nothing new in the file (the same file again): say so, not "it is back".
+    const same = how === 'merge' && mergeAddsNothing(progress, next);
+    onRestore(next);
     close();
-    setNote('back');
+    setNote(same ? 'same' : 'back');
   };
   const dutch = !dutchUi(lang);
 
@@ -405,9 +408,9 @@ export function BackupCard({ progress, lang, onRestore }: {
       {/* Always on the page (a live region that appears with its text is often not read). */}
       <div role="status">
         {note && (
-          <p className={note === 'back' ? 'keep-ok' : 'warn keep-note'}>
-            {note === 'back' && <CheckIcon size={20} />}
-            <Bi text={ui(note === 'big' ? 'backupTooBig' : note === 'bad' ? 'backupBad' : 'backupBack', lang)} />
+          <p className={note === 'back' || note === 'same' ? 'keep-ok' : 'warn keep-note'}>
+            {(note === 'back' || note === 'same') && <CheckIcon size={20} />}
+            <Bi text={ui(note === 'big' ? 'backupTooBig' : note === 'bad' ? 'backupBad' : note === 'same' ? 'backupNothingNew' : 'backupBack', lang)} />
           </p>
         )}
       </div>
@@ -437,9 +440,14 @@ export function addReminder(time: string, lang?: HelpLanguage) {
 /** The line after "Zet in mijn agenda": "Open the file" for the .ics, and on Android (Google
  *  Calendar's own page, with its Save button) the plain line that the calendar reminds you. */
 export const remindAddedKey = (): 'remindAdded' | 'remindHint' => (isAndroid() ? 'remindHint' : 'remindAdded');
+/** After Stop: open the cancel file, or on Android delete it in Google Calendar (the app cannot). */
+export const remindStoppedKey = (): 'remindStopped' | 'remindStoppedAndroid' => (isAndroid() ? 'remindStoppedAndroid' : 'remindStopped');
 
 /** "Stop de herinnering": a file that cancels that one event (`time`: its last time). */
 export function stopReminder(time: string, lang?: HelpLanguage) {
+  // Android: the event came from Google Calendar's own page (no UID), so a cancel file cannot
+  // remove it; the learner deletes it there (remindStoppedAndroid).
+  if (isAndroid()) { forgetReminder(); return; }
   saveFile('vloertaal-herinnering-stop.ics', 'text/calendar;charset=utf-8', reminderCancelIcs(time, appUrl(), new Date(), trackOfLang(lang?.code), reminderHelp(lang), reminderEvent()));
   forgetReminder();
 }

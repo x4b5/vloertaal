@@ -149,6 +149,7 @@ export const uiEn = {
   backupMerge: 'Add together',
   backupReplace: 'Replace',
   backupBack: 'Your progress is back.',
+  backupNothingNew: 'Nothing new: this was already on your phone.',
   cancel: 'Cancel',
   remindTitle: 'Remind me every day',
   remindEvent: 'Time for your Dutch (10 minutes)',
@@ -359,9 +360,12 @@ export const uiEn = {
   remindEveryDay: 'Your reminder: every day at {time}',
   remindStop: 'Stop the reminder',
   remindStopped: 'Open the file to take the reminder out of your calendar.',
+  remindStoppedAndroid: 'Delete the reminder yourself in Google Calendar.',
   resetKeeps: 'Your lessons, words, streak and certificates are deleted. Your language, your code and your settings stay.',
   /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
   loadFailed: 'Not loaded. Is the internet on?',
+  /** The error screen's "Try again" button, for screen readers (also in src/i18n/meta.ts: the screen comes before the pack). */
+  retry: 'Try again',
 } as const;
 
 export type UiKey = keyof typeof uiEn;
