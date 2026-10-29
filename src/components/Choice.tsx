@@ -39,16 +39,36 @@ export function ChoiceCards<T extends string>({ options, current, onPick, label,
   /** The cards' language direction (right to left: the picture on the right, the chevron mirrored). */
   dir?: 'ltr' | 'rtl';
 }) {
+  // A card that leads on to another page is a button to that page, not one of several radio
+  // options: then the cards are a plain group of buttons.
+  const leads = options.some((o) => o.next);
   return (
-    <div className={`max3-cards ${className}`} role="radiogroup" aria-label={label} dir={dir}>
+    <div
+      className={`max3-cards ${className}`}
+      role={leads ? 'group' : 'radiogroup'}
+      aria-label={label}
+      dir={dir}
+      // In a radio group the arrow keys go from card to card (a pick still needs Enter or a tap:
+      // picking leads on at once). Left and right follow the cards' direction.
+      onKeyDown={leads ? undefined : (e) => {
+        const back = e.key === 'ArrowUp' || e.key === (dir === 'rtl' ? 'ArrowRight' : 'ArrowLeft');
+        const on = e.key === 'ArrowDown' || e.key === (dir === 'rtl' ? 'ArrowLeft' : 'ArrowRight');
+        if (!back && !on) return;
+        const cards = [...e.currentTarget.querySelectorAll<HTMLButtonElement>('.max3-card')];
+        const at = cards.indexOf(document.activeElement as HTMLButtonElement);
+        if (at < 0) return;
+        e.preventDefault();
+        cards[(at + (on ? 1 : cards.length - 1)) % cards.length].focus();
+      }}
+    >
       {options.map((o) => {
         const picked = current === o.id;
         return (
           <div key={o.id} className={`max3-card-wrap ${o.extra ? 'has-extra' : ''}`}>
             <button
               type="button"
-              role="radio"
-              aria-checked={picked}
+              role={leads ? undefined : 'radio'}
+              aria-checked={leads ? undefined : picked}
               className={`max3-card ${picked ? 'picked' : ''} ${o.danger ? 'danger' : ''}`}
               onClick={() => onPick(o.id)}
             >
