@@ -51,11 +51,11 @@ export const zoekenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.zoeken.1.wd1',
-          situation: 'Kevin weet niet of het appje echt is. Wat doe je?',
+          situation: 'Kevin weet niet of het appje echt is. Wat kan Kevin het beste doen?',
           options: [
-            { id: 'a', text: "Je antwoordt meteen. Zo'n kans krijg je niet vaak.", best: false, feedback: 'Begrijpelijk, maar pas op. Dit lijkt op oplichting.' },
-            { id: 'b', text: 'Je zoekt het bedrijf zelf op en belt het.', best: true, feedback: 'Goed. Zo check je of het bedrijf echt bestaat.' },
-            { id: 'c', text: 'Je stuurt je gegevens, dan kunnen ze je betalen.', best: false, feedback: 'Niet doen. Met je gegevens kunnen ze je oplichten.' },
+            { id: 'a', text: "Hij antwoordt meteen. Zo'n kans krijgt hij niet vaak.", best: false, feedback: 'Begrijpelijk, maar pas op. Dit lijkt op oplichting.' },
+            { id: 'b', text: 'Hij zoekt het bedrijf zelf op en belt het.', best: true, feedback: 'Goed. Zo checkt hij of het bedrijf echt bestaat.' },
+            { id: 'c', text: 'Hij stuurt zijn gegevens, dan kunnen ze hem betalen.', best: false, feedback: 'Niet doen. Met zijn gegevens kunnen ze hem oplichten.' },
           ],
           why: 'Veel geld voor makkelijk werk is vaak nep. Oplichters zoeken mensen via WhatsApp, TikTok of Telegram. Een echt bedrijf kun je opzoeken en bellen.',
         },
@@ -207,11 +207,11 @@ export const zoekenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.zoeken.3.wd1',
-          situation: 'Mohammed wil daar niets over zeggen. Wat doe je?',
+          situation: 'Mohammed wil daar niets over zeggen. Wat kan Mohammed het beste doen?',
           options: [
-            { id: 'a', text: 'Je zegt rustig: "Daar praat ik liever niet over."', best: true, feedback: 'Goed. Je blijft beleefd en je hoeft niets te vertellen.' },
-            { id: 'b', text: 'Je geeft toch antwoord, anders krijg je de baan niet.', best: false, feedback: 'Begrijpelijk. Maar je hoeft dit niet te vertellen.' },
-            { id: 'c', text: 'Je zegt dat ze dit niet mag vragen, en je gaat weg.', best: false, feedback: 'Je hebt gelijk, maar weggaan sluit de deur.' },
+            { id: 'a', text: 'Hij zegt rustig: "Daar praat ik liever niet over."', best: true, feedback: 'Goed. Hij blijft beleefd en hij hoeft niets te vertellen.' },
+            { id: 'b', text: 'Hij geeft toch antwoord, anders krijgt hij de baan niet.', best: false, feedback: 'Begrijpelijk. Maar hij hoeft dit niet te vertellen.' },
+            { id: 'c', text: 'Hij zegt dat ze dit niet mag vragen, en hij gaat weg.', best: false, feedback: 'Hij heeft gelijk, maar weggaan sluit de deur.' },
           ],
           why: 'Een werkgever mag niet vragen naar zwangerschap, kinderwens, geloof of gezondheid. Je hoeft daar geen antwoord op te geven. Je kunt het later melden als discriminatie.',
         },

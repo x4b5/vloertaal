@@ -132,9 +132,9 @@ export const loonUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.loon.2.wd1',
-          situation: 'Piotr ziet het verschil. Wat doe je?',
+          situation: 'Piotr ziet het verschil. Wat kan Piotr het beste doen?',
           options: [
-            { id: 'a', text: 'Hij zegt niets. Het verschil is niet zo groot.', best: false, feedback: '12 uur is veel loon. Het is jouw geld.' },
+            { id: 'a', text: 'Hij zegt niets. Het verschil is niet zo groot.', best: false, feedback: '12 uur is veel loon. Het is zijn geld.' },
             { id: 'b', text: 'Hij werkt volgende maand gewoon 12 uur minder.', best: false, feedback: 'Dat lost het niet op, en het kan problemen geven.' },
             { id: 'c', text: 'Hij laat zijn lijstje zien en vraagt het na.', best: true, feedback: 'Goed. Met zijn lijstje kan hij het laten zien.' },
           ],
