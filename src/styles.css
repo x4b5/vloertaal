@@ -241,14 +241,12 @@ h2 { font-size: 1.25rem; }
 /* After Check, Continue takes the outcome's colour: green, brick red, or ink for a situation.
    No colour transition here (yellow → green would pass through olive): the class swaps at
    120 ms and the button gives one small press (.98 → 1). */
-.btn-right, .btn-wrong, .btn-other { color: #fff; }
+.btn-right, .btn-wrong { color: #fff; }
 .btn-right { background: var(--go-right); border-color: var(--go-right); }
 .btn-wrong { background: var(--go-wrong); border-color: var(--go-wrong); }
-.btn-other { background: var(--solid); color: var(--on-solid); border-color: var(--solid); }
 .btn-right .btn-block, .btn-wrong .btn-block { background: #fff; }
 .btn-right .btn-block { color: var(--go-right); }
 .btn-wrong .btn-block { color: var(--go-wrong); }
-.btn-other .btn-block { background: var(--yellow); color: #1e2226; }
 .btn-go { animation: btn-in 0.2s var(--ease-out) both; }
 .btn-go.btn-swap { transition: transform 0.06s; animation: btn-press 0.12s var(--ease-out) both; }
 @keyframes btn-in { from { opacity: 0.25; } }
@@ -355,15 +353,6 @@ h2 { font-size: 1.25rem; }
 .lang-grid-compact .gender-btn:not(.gender-none) { padding-top: 12px; }
 .gender-btn .lang-native { overflow-wrap: anywhere; }
 
-.unit { scroll-margin-top: 88px; }
-/* Opened from a coach link: the unit's sign lights up for a moment. */
-.unit-marked .unit-head { border-radius: var(--radius); animation: unit-mark 4s ease-out both; }
-@keyframes unit-mark {
-  0%, 60% { background: color-mix(in srgb, var(--yellow) 28%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, var(--yellow) 28%, transparent); }
-  100% { background: transparent; box-shadow: 0 0 0 6px transparent; }
-}
-@media (prefers-reduced-motion: reduce) { .unit-marked .unit-head { animation: none; background: color-mix(in srgb, var(--yellow) 22%, transparent); } }
-
 /* Top bar: logo and two quiet stats (no boxes). */
 .topbar {
   position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 16px;
@@ -375,11 +364,6 @@ h2 { font-size: 1.25rem; }
 .stat .icon { color: var(--ink-3); }
 .stat-num { font-size: 1.05rem; font-weight: 650; color: var(--ink); font-variant-numeric: tabular-nums; }
 .stat-unit { font-size: 0.85rem; }
-.lang-chip {
-  display: grid; place-items: center; min-width: 44px; min-height: 44px; margin-inline-end: -6px;
-  background: none; border: 0; border-radius: 10px;
-}
-.lang-chip:hover { background: var(--concrete-2); }
 @media (max-width: 370px) { .stat-unit { display: none; } .topbar { gap: 12px; } }
 @media (min-width: 560px) { .topbar-wordmark { display: inline; } }
 
@@ -396,32 +380,11 @@ h2 { font-size: 1.25rem; }
 .entry-emoji { font-family: 'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Emoji', sans-serif; font-size: 1.4rem; line-height: 1; }
 .phrase-banner > span:first-child { font-size: 1.6rem; }
 
-/* Units: a stencil number and a plain heading on the floor; a calm gap between units. */
-.unit { margin-top: 12px; }
-.unit + .unit { margin-top: 44px; }
-.unit { scroll-margin-top: 88px; }
-/* Opened from a coach link: the unit's sign lights up for a moment. */
-.unit-marked .unit-head { border-radius: var(--radius); animation: unit-mark 4s ease-out both; }
+/* Opened from a coach link: the topic's block lights up for a moment (.rb-marked). */
 @keyframes unit-mark {
   0%, 60% { background: color-mix(in srgb, var(--yellow) 28%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, var(--yellow) 28%, transparent); }
   100% { background: transparent; box-shadow: 0 0 0 6px transparent; }
 }
-@media (prefers-reduced-motion: reduce) { .unit-marked .unit-head { animation: none; background: color-mix(in srgb, var(--yellow) 22%, transparent); } }
-.unit-head { display: flex; align-items: center; gap: 14px; padding: 4px 0; }
-.unit-num {
-  flex: none; width: 56px; text-align: center; color: var(--ink);
-  font-family: var(--stencil); font-weight: 800; font-size: 2.5rem; line-height: 1;
-}
-.unit-titles { flex: 1; display: flex; flex-direction: column; min-width: 0; }
-.unit-head h2 { margin: 0; font-size: 1.3rem; font-weight: 650; line-height: 1.2; }
-.unit-nl { color: var(--muted); font-size: 0.95rem; }
-.unit-head .bi-help { --help-size: 0.95rem; margin-top: 1px; }
-.unit-lock { flex: none; color: var(--ink-3); }
-/* The topic's picture in a calm round tile between the number and the title. */
-.unit-icon { flex: none; width: 68px; height: 68px; padding: 4px; border-radius: 50%; background: var(--card); border: 2px solid var(--line); }
-.unit-locked .unit-icon { opacity: 0.75; }
-.unit-locked .unit-num { color: var(--ink-3); opacity: 0.7; }
-.unit-locked .unit-head h2 { color: var(--ink-2); font-weight: 600; }
 
 /* The aisle: one thin line down the left, a marker per lesson. */
 .bays {
@@ -650,7 +613,6 @@ h1[tabindex="-1"]:focus { outline: none; }
 @keyframes label-in { from { transform: translateY(8px); opacity: 0; } }
 .feedback-right { border-color: var(--right-ink); background: var(--green-bg); }
 .feedback-wrong { border-color: var(--wrong-ink); background: var(--red-bg); }
-.feedback-other { border-color: var(--kraft-dark); background: color-mix(in srgb, var(--kraft-light) 60%, var(--card)); }
 .feedback-tape {
   position: absolute; top: -10px; left: 50%; width: 92px; height: 18px; margin-left: -46px;
   background: var(--tape); rotate: 1.5deg;
@@ -662,7 +624,6 @@ h1[tabindex="-1"]:focus { outline: none; }
   border-radius: 50%; color: #fff; background: var(--go-right);
 }
 .feedback-wrong .feedback-icon { background: var(--go-wrong); }
-.feedback-other .feedback-icon { background: var(--kraft-dark); color: var(--card); }
 /* A long explanation (situations) scrolls inside the label instead of covering the question. */
 .feedback-text { flex: 1; min-width: 0; }
 /* Heading: the help language first and large; under it the Dutch words and the English. */
@@ -952,12 +913,6 @@ h1[tabindex="-1"]:focus { outline: none; }
 /* A sentence that needs two rows gets both from the start, so the tile bank never jumps. */
 .answer-line.answer-two { min-height: 130px; }
 .answer-line .stamp { top: 0; right: 0; margin-top: 0; width: 60px; height: 60px; }
-.answer-say {
-  position: absolute; top: 12px; inset-inline-end: 8px; display: grid; place-items: center;
-  width: 44px; height: 44px; border: 0; border-radius: 10px;
-  color: var(--blue); background: color-mix(in srgb, var(--blue) 14%, transparent);
-}
-.answer-say:active { transform: translateY(1px); filter: brightness(0.94); }
 .answer-line .stamp-word { font-size: 1.3rem; }
 .answer-line .stamp-wrong .stamp-word { font-size: 0.95rem; }
 .answer-line .stamp-sub { margin-top: 1px; }
@@ -1603,7 +1558,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
   display: inline-flex; align-items: center; gap: 8px; margin: -4px 0 14px; padding: 6px 2px;
   color: var(--ink); font-weight: 700; text-decoration: underline; text-underline-offset: 0.15em;
 }
-.unit-full-only .unit-head { cursor: pointer; }
 .full-only-note {
   display: flex; align-items: center; gap: 8px; width: 100%; min-height: 44px; margin: 6px 0 0; padding: 6px 0;
   padding-inline-start: 70px; text-align: start; font-weight: 600; color: var(--tag-ink); background: none; border: 0;
@@ -1648,7 +1602,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
   .stat-card-value { font-size: min(2.1rem, calc((100cqi - 30px) / 2.4)); }
   .stat-card-body .icon { width: 24px; height: 24px; }
 }
-.unit-locked .bay-lock { display: none; }
 @media (max-width: 350px) { .sector-btn .lang-native { font-size: 1rem; } }
 /* Settings: the sector heading as on the first-run screen, Dutch first. */
 .settings-sector-title { display: flex; flex-direction: column; gap: 2px; }
@@ -1703,13 +1656,12 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .daily-go { flex: none; color: var(--ink-3); }
 
 /* Route: a unit's picture (and a done lesson's picture) grows a little under the mouse (8 %). */
-.unit-icon, .bay-pic { transition: transform 0.18s ease-out; }
+.bay-pic { transition: transform 0.18s ease-out; }
 @media (hover: hover) {
-  .unit-icon:hover, .unit-head:hover .unit-icon { transform: scale(1.08); }
   .bay-card:hover .bay-pic { transform: scale(1.08); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .unit-icon, .bay-pic { transition: none; }
+  .bay-pic { transition: none; }
 }
 
 /* ---- Round 3: coming back ---- */
@@ -2089,8 +2041,6 @@ svg.emoji-xl { width: 140px; height: 140px; }
 /* "Type what you hear" as "hear and pick the written word": the word's picture after Check. */
 .hear-pick-pic { flex: none; animation: rm-fade 0.2s ease-out both; }
 .hear-pick-choices .choice-nl { font-size: 1.3rem; }
-/* Dictation: "I can't write this yet", the help language large, with a pencil. */
-.btn-cant-write { display: flex; align-items: center; justify-content: center; gap: 10px; }
 /* The retry chip: HERHALEN, the help language large, and how many are left. */
 .tag-repeat .tag-count { font-weight: 650; font-variant-numeric: tabular-nums; }
 /* A help-language text read aloud by the device's own voice (when it has one). */
@@ -2259,11 +2209,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .path, .words-hub, .screen:has(+ .bottom-nav) { padding-bottom: calc(132px + env(safe-area-inset-bottom)); }
   html:has(.bottom-nav) { scroll-padding-bottom: 120px; }
   /* Path */
-  .unit-head { flex-wrap: wrap; gap: 6px 10px; }
-  .unit-num { width: auto; font-size: 2rem; }
-  .unit-icon { width: 48px; height: 48px; }
-  .unit-titles { flex-basis: 100%; }
-  .unit-head h2 { font-size: 1.15rem; }
   .bays::before { inset-inline-start: 15px; }
   .bay { grid-template-columns: 32px minmax(0, 1fr); column-gap: 6px; }
   .bay-marker { width: 28px; height: 28px; font-size: 1rem; }
@@ -2758,12 +2703,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .type-display.type-empty { color: var(--ink-3); }
 .type-caret { display: inline-block; width: 2px; height: 1.2em; margin-inline-start: 2px; background: var(--ink); animation: caret 1.05s steps(1) infinite; }
 @keyframes caret { 50% { opacity: 0; } }
-.letter-back {
-  flex: none; width: 64px; display: grid; place-items: center;
-  border: 2px solid var(--line); border-bottom-width: 4px; border-radius: var(--radius); background: var(--card); color: var(--ink);
-}
-.letter-back:disabled { color: var(--ink-3); }
-.letter-back:active:not(:disabled) { transform: translateY(1px); filter: brightness(0.97); }
 .letter-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
 .letter-tile {
   min-width: 50px; height: 54px; padding: 0 12px; display: grid; place-items: center;
@@ -2775,19 +2714,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .letter-tile:active:not(:disabled) { transform: translateY(1px); filter: brightness(0.97); }
 .letter-space { min-width: 76px; color: var(--ink-3); font-size: 1.3rem; }
 .letter-article { font-size: 1.3rem; }
-.letter-used { color: transparent; background: var(--track); border-style: dashed; border-bottom-width: 2px; }
 @media (max-width: 380px) { .letter-tile { min-width: 44px; height: 50px; padding: 0 9px; font-size: 1.4rem; } .letter-bank { gap: 6px; } }
-.type-mode {
-  align-self: center; display: inline-flex; align-items: center; gap: 8px; margin: 16px auto 0;
-  min-height: 40px; padding: 4px 14px; border: 2px solid var(--line); border-radius: 999px;
-  background: transparent; color: var(--ink-2); font-size: 0.92rem; font-weight: 600;
-}
-.type-mode:hover { border-color: var(--ink-3); }
-.type-mode .icon { flex: none; }
-.type-mode-label { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 6px; }
-.type-mode-label .bi-sep { display: inline; }
-.type-mode-label.bi-swap > .bi-help { --help-size: 0.85em; }
-.exercise:has(> .type-mode) { display: flex; flex-direction: column; }
 
 /* Chat replies: the card picks, the speaker beside it only plays. After Check each reply says
    what it means, small, under the Dutch. */
@@ -2920,7 +2847,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .type-display { min-height: 54px; }
   .letter-bank { margin-top: 10px; gap: 6px; }
   .letter-tile { height: 46px; min-width: 44px; font-size: 1.35rem; }
-  .type-mode { margin-top: 10px; }
 }
 
 /* ---- Route: one block at a time ---- */
@@ -3161,7 +3087,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   /* "The same" and "Say it again" one above the other: side by side a word would break. */
   :root[data-text='xl'] .say-rate { grid-template-columns: minmax(0, 1fr); }
 }
-.text-size-picker button { justify-content: center; min-height: 64px; }
 .text-size-a { font-weight: 700; line-height: 1; color: var(--ink); }
 /* Fixed px, so the three A's keep their steps whatever the size now is. */
 .text-size-normal { font-size: 18px; }
@@ -3169,9 +3094,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .text-size-xl { font-size: 31px; }
 
 /* The row under a unit's header: "Save for offline" and the pocket card, two quiet chips. */
-.unit-tools { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
-.rb-block + .unit-tools { margin: 4px 0 14px; }
-.unit-head + .unit-tools { margin: 4px 0 10px; }
 .unit-tool {
   position: relative; overflow: hidden; flex: 1 1 140px; min-width: 0; min-height: 48px;
   display: flex; align-items: center; gap: 8px; padding: 6px 12px; text-align: start;
@@ -3182,32 +3104,13 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .unit-tool > .icon { flex: none; color: var(--ink-2); position: relative; }
 .unit-tool-text { flex: 1; min-width: 0; position: relative; display: flex; flex-direction: column; gap: 1px; }
 .unit-tool-label .bi-help { --help-size: 0.72rem; font-weight: 400; }
-.unit-tool-size {
-  align-self: flex-start; font-size: 0.74rem; font-weight: 600; color: var(--faint);
-  font-variant-numeric: tabular-nums; white-space: nowrap;
-}
-.offline-save, .offline-saving, .offline-saved { flex: 1.5 1 0; }
+.offline-saving, .offline-saved { flex: 1.5 1 0; }
 .unit-tool-label { hyphens: auto; overflow-wrap: anywhere; }
 .pocket-open:not(.cert-pocket) { flex: 1 1 0; padding-inline: 10px; }
 /* Saving: the chip fills with kraft from the start side, like tape being pulled. */
 .offline-saving { border-color: var(--kraft); }
-.offline-fill {
-  position: absolute; inset-block: 0; inset-inline-start: 0; background: var(--kraft-light);
-  transition: width 240ms var(--ease-out);
-}
-@media (prefers-reduced-motion: reduce) { .offline-fill { transition: none; } }
-.offline-saving .unit-tool-size { color: var(--ink); }
 /* Saved: a calm green tick in a tray, the size, and a small cross to remove it again. */
 .offline-saved { border-color: color-mix(in srgb, var(--green) 45%, var(--line)); padding-inline-end: 2px; }
-.offline-done {
-  flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
-  color: var(--right-ink); background: var(--green-bg);
-}
-.offline-remove {
-  flex: none; display: grid; place-items: center; width: 40px; height: 40px; padding: 0;
-  color: var(--faint); background: none; border: none; border-radius: 10px;
-}
-.offline-remove:hover { color: var(--ink); background: var(--concrete-2); }
 .offline-error {
   order: 3; flex: 1 1 100%; margin: 0; padding: 8px 12px; font-size: 0.88rem;
   color: var(--warn-ink); background: var(--warn-bg); border-inline-start: 5px solid var(--kraft); border-radius: 6px;
@@ -3328,14 +3231,6 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   :root:is([data-text='large'], [data-text='xl']) .keep-screen .keep-hero { display: none; }
 }
 .nl-quote { white-space: nowrap; }
-/* "Remove from this phone?" in place of the saved chip: two small buttons, Nee first in focus. */
-.offline-confirm { flex: 1 1 100%; flex-wrap: wrap; row-gap: 6px; padding-block: 6px; }
-.offline-confirm-btns { display: flex; gap: 6px; flex: none; }
-.offline-confirm-btns button {
-  min-width: 52px; min-height: 40px; padding: 0 12px; border-radius: 10px; font-weight: 700;
-  border: 1.5px solid var(--line); background: var(--card); color: var(--ink);
-}
-.offline-confirm-btns .offline-yes { border-color: color-mix(in srgb, var(--wrong-ink) 55%, var(--line)); color: var(--wrong-ink); }
 
 /* The home's one-time "Woman or man?" (learners from before the question): a calm card above the
    block, the question in the help language with the Dutch small under it, three small tiles on
