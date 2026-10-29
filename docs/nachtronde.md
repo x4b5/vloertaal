@@ -193,7 +193,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
    in `src/i18n/meta.ts` (via de vertaalcontrole).
 4. **Sectorpagina na Terug en dan Vooruit** kan op stap 2 openen. Dat kan alleen met een
    Vooruit-knop (een computer), en het gevolg is klein. Niet aangepast.
-5. **Een ander lidwoord telt als "bijna goed"** ("het tafel" voor "de tafel"). Bedoeld voor een
+5. *Besloten en gedaan (29 oktober): een verkeerd lidwoord is fout; een vergeten lidwoord blijft "bijna goed".* **Een ander lidwoord telt als "bijna goed"** ("het tafel" voor "de tafel"). Bedoeld voor een
    *vergeten* lidwoord; een *verkeerd* lidwoord gaat er nu ook door, en het woord gaat in de
    herhaling omhoog. Zo wordt de/het nooit als fout geoefend. Strenger maken is een keuze over
    de lesaanpak; daarom niet zelf gedaan.

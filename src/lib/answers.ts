@@ -31,7 +31,8 @@ export type TypedResult = 'correct' | 'almost' | 'wrong';
 /**
  * Forgiving check for typed answers. Beginners should not fail on a capital
  * letter, a missing article or one typo; those count as "almost" (still correct,
- * but we show the right spelling). `others`: words the learner could mix it up with
+ * but we show the right spelling). A *wrong* article ("het tafel" for "de tafel")
+ * is a mistake: de or het is part of the word to learn. `others`: words the learner could mix it up with
  * (the other word of a sound pair, "man" for "maan"): typing one of those is wrong,
  * even when it is only a letter away.
  */
@@ -40,6 +41,9 @@ export function checkTyped(input: string, expected: string, others: readonly str
   const want = normalize(expected);
   if (!got) return 'wrong';
   if (got === want) return 'correct';
+  const wantArticle = ARTICLES.exec(want)?.[1];
+  const gotArticle = ARTICLES.exec(got)?.[1];
+  if (wantArticle && gotArticle && wantArticle !== gotArticle) return 'wrong';
   const wantBare = want.replace(ARTICLES, '');
   const gotBare = got.replace(ARTICLES, '');
   if (gotBare === wantBare) return 'almost';
