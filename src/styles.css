@@ -1873,12 +1873,13 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .keep-link .bi { flex-direction: row; gap: 6px; }
 .keep-link-gloss.bi-swap .bi-help { display: none; }
 /* A destructive keep button (Replace, wipe): red text, never the main one. */
-.keep-btn.danger { margin-top: 0; color: var(--red); border-color: color-mix(in srgb, var(--red) 55%, transparent); }
+.keep-btn.danger { margin-top: 0; color: var(--wrong-ink); border-color: color-mix(in srgb, var(--red) 55%, transparent); }
 /* Main button over a smaller red one (backup "fewer lessons", reset). */
 .keep-stack, .reset-actions { display: flex; flex-direction: column; gap: 10px; }
 .keep-btn-small, .reset-wipe { flex-direction: row; gap: 10px; min-height: 52px; font-size: 0.95rem; }
 .keep-btn-text, .reset-wipe-text { display: flex; flex-direction: column; align-items: center; }
 .keep-btn-text > span[lang='nl'], .reset-wipe-text > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; opacity: 0.9; }
+.reset-wipe-text > span[lang='nl'] { opacity: 1; }
 .keep-hint-code { color: var(--ink-2); font-weight: 600; }
 .reset-actions { margin-top: 18px; }
 .reset-keep { min-height: 64px; }
@@ -2962,6 +2963,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .say-meaning { font-size: 1.1rem; }
 .say-meaning .bi-help { --help-size: 0.8em; color: var(--muted); }
 .say-card .speak { flex: none; }
+.say-card .say-model-off { visibility: hidden; }
 
 .say-mic-area { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 20px; }
 .say-mic {

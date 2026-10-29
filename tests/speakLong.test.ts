@@ -60,6 +60,7 @@ beforeAll(async () => {
 });
 afterAll(() => vi.unstubAllGlobals());
 beforeEach(() => {
+  audio.stopSpeech(); // what the test before left playing
   synth.voices = [DUTCH, ENGLISH];
   synth.queue = [];
   synth.spoken = [];
@@ -128,6 +129,23 @@ describe('speakLong', () => {
     // speak() (a short word) cancels a long block too.
     audio.speak('hallo');
     expect(synth.queue.map((u) => u.text)).toEqual(['hallo']);
+    off();
+  });
+
+  it('a stop ends what was cut off (a talking mouth stops), and a later speaker only stops its own text', () => {
+    const heard: string[] = [];
+    const off = audio.onSpeech((text, on) => heard.push(`${on ? '+' : '-'}${text}`));
+    audio.speakLong('Eén. Twee.');
+    heard.length = 0;
+    audio.stopSpeech();
+    expect(heard.sort()).toEqual(['-Eén.', '-Eén. Twee.']);
+    // A speaker leaving the screen stops its text, not someone else's.
+    audio.speakLong('Drie. Vier.');
+    const cancels = synth.cancels;
+    audio.stopSaying('Eén. Twee.');
+    expect(synth.cancels).toBe(cancels);
+    audio.stopSaying('Drie. Vier.');
+    expect(synth.cancels).toBe(cancels + 1);
     off();
   });
 

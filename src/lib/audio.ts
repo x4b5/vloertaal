@@ -225,7 +225,11 @@ export function onSpeech(fn: SpeechListener): () => void {
 
 let speechTurn = 0;
 
+/** The lines that started and did not end yet: a stop ends them (a talking mouth, a speaker button). */
+const sounding = new Map<string, boolean>();
 function emitSpeech(text: string, speaking: boolean, slow: boolean): void {
+  if (speaking) sounding.set(text, slow);
+  else sounding.delete(text);
   speechListeners.forEach((fn) => fn(text, speaking, slow));
 }
 
@@ -259,10 +263,18 @@ export function stopSpeech(): void {
   stopAll();
 }
 
+/** Stops `text` if it is still being said (a long text's speaker that leaves the screen). */
+export function stopSaying(text: string): void {
+  if (sounding.has(text)) stopAll();
+}
+
 function stopAll(): void {
   playing?.pause();
   playing = null;
+  // The cut-off line's own end events no longer count (cancel fires them late, or not at all).
+  speechTurn++;
   if (speechAvailable()) window.speechSynthesis.cancel();
+  for (const [text, slow] of [...sounding]) emitSpeech(text, false, slow);
 }
 
 /**
@@ -368,7 +380,9 @@ function speakSentences(text: string, slow: boolean, voiceURI: string | undefine
 function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', pace = 1, onFail?: () => void): void {
   stopAll();
   const audio = new Audio(url);
-  audio.playbackRate = (slow ? RECORDED_RATE.slow : RECORDED_RATE.normal) * pace;
+  const rate = (slow ? RECORDED_RATE.slow : RECORDED_RATE.normal) * pace;
+  // Both: some WebKit versions reset playbackRate to the default while the clip loads.
+  audio.defaultPlaybackRate = audio.playbackRate = rate;
   audio.preservesPitch = true;
   (audio as HTMLAudioElement & { webkitPreservesPitch?: boolean }).webkitPreservesPitch = true;
   playing = audio;
@@ -420,9 +434,7 @@ export function sayFirstWord(): void {
 function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: string | undefined): void {
   if (!speechAvailable()) return;
   const synth = window.speechSynthesis;
-  playing?.pause();
-  playing = null;
-  synth.cancel();
+  stopAll();
   const u = new SpeechSynthesisUtterance(lang === 'en' ? text : sayAs(text));
   u.lang = lang === 'en' ? 'en-GB' : 'nl-NL';
   const voice = lang === 'en' ? undefined : dutchVoice(voiceURI);

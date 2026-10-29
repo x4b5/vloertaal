@@ -288,8 +288,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
           <NlPair content nlFirst nl={breakable(item.nl)} nlClass="say-nl" dir="ltr" className="say-meaning" text={meaning} />
         </div>
         {/* The model is one tap away. While comparing, the speaker's own button below plays it
-            (one speaker per item). */}
-        {phase !== 'review' && <SpeakButton text={item.nl} voice={voice} help={lang} />}
+            (one speaker per item). Hidden while recording (its sound would be recorded too), its place kept. */}
+        {phase !== 'review' && <SpeakButton text={item.nl} voice={voice} help={lang} className={recording ? 'say-model-off' : undefined} />}
       </div>
 
       {listenFirst && (

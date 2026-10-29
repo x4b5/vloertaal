@@ -42,6 +42,12 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | Bleef het taalbestand hangen (geen antwoord), dan bleef het startscherm zonder knop staan | slechte verbinding | na 8 s "Opnieuw"; komt het bestand toch, dan gaat de app verder |
 | De luidsprekerknop liet de schermlezer "Vrouw of man?" met een Arabische (Poolse …) stem lezen | blinde en slechtziende leerlingen | het Nederlandse deel heeft `lang="nl"` |
 | Kaarten die naar een volgende pagina gaan heetten "keuzerondje" | schermlezer | gewone knoppen; echte keuzes kregen pijltjestoetsen |
+| Eén ontbrekend bestand bij "Lessen bewaren": het onderwerp bleef op "bewaren …" staan tot herladen, en kon niet opnieuw | wie lessen bewaart | de andere downloads stoppen, "mislukt", en opnieuw proberen kan |
+| Een verbinding die wel verbindt maar blijft hangen (bus, kas): leeg scherm, stille luidsprekers, ook als alles op de telefoon stond | slecht bereik | na 4 s antwoordt de kopie op de telefoon; de vaste app-bestanden komen meteen van de telefoon |
+| Een lange tekst (regel, uitleg) las verder na het verlaten van het scherm | Werkregels | hij stopt met het scherm |
+| Na stoppen bleef de mond van een figuur nog tot 8 s bewegen, ook tijdens het opnemen | iedereen | stoppen is ook stoppen voor de figuur |
+| Tijdens het opnemen kon je op de luidspreker tikken: het voorbeeld kwam in je eigen opname | spreekoefening | de luidspreker is weg tijdens het opnemen (de plek blijft) |
+| "Voortgang wissen" in rood met te weinig contrast | slechtziend | donkerder rood |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 

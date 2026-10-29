@@ -239,31 +239,46 @@ const isQuota = (e: unknown) => {
   return name === 'QuotaExceededError' || name === 'NS_ERROR_DOM_QUOTA_REACHED' || /quota/i.test(String((e as Error)?.message ?? ''));
 };
 
-/** Fetches each URL and puts it in the cache, a few at a time; returns the bytes stored. */
-async function fill(cache: Cache, urls: string[], progress: (n: number) => void, have: Set<string>): Promise<number> {
+/** How long one file may take before a save counts as failed (a link that connects but stalls). */
+const FILE_MS = 60_000;
+
+/**
+ * Fetches each URL and puts it in the cache, a few at a time; returns the bytes stored. One file
+ * that fails stops the others, and the error comes only once every worker has stopped: no file
+ * lands (or repaints the progress) after the caller's clean-up.
+ */
+export async function fill(cache: Cache, urls: string[], progress: (n: number) => void, have: Set<string>): Promise<number> {
   let bytes = 0;
   let done = 0;
   let next = 0;
-  const worker = async () => {
-    while (next < urls.length) {
-      const url = urls[next++];
-      if (have.has(url)) {
-        const hit = await cache.match(url);
-        if (hit) {
-          bytes += (await hit.blob()).size;
-          progress(++done);
-          continue;
-        }
+  let failed: { error: unknown } | undefined;
+  const one = async (url: string) => {
+    if (have.has(url)) {
+      const hit = await cache.match(url);
+      if (hit) {
+        bytes += (await hit.blob()).size;
+        return;
       }
-      const res = await fetch(url, { cache: 'no-cache', headers: { 'x-vloertaal-save': '1' } });
-      if (!res.ok || res.status !== 200) throw new Error(`${res.status} ${url}`);
-      const blob = await res.clone().blob();
-      await cache.put(url, res);
-      bytes += blob.size;
-      progress(++done);
+    }
+    const res = await fetch(url, { cache: 'no-cache', headers: { 'x-vloertaal-save': '1' }, signal: AbortSignal.timeout?.(FILE_MS) });
+    if (!res.ok || res.status !== 200) throw new Error(`${res.status} ${url}`);
+    const blob = await res.clone().blob();
+    await cache.put(url, res);
+    bytes += blob.size;
+  };
+  const worker = async () => {
+    while (!failed && next < urls.length) {
+      try {
+        await one(urls[next++]);
+      } catch (error) {
+        failed ??= { error };
+        return;
+      }
+      if (!failed) progress(++done);
     }
   };
   await Promise.all(Array.from({ length: 6 }, worker));
+  if (failed) throw failed.error;
   return bytes;
 }
 
