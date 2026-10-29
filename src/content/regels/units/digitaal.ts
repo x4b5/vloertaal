@@ -53,9 +53,9 @@ export const digitaalUnit: RuleUnit = {
           id: 'r.l.digitaal.1.wd1',
           situation: 'Wat doet Piotr?',
           options: [
-            { id: 'a', text: 'Hij geeft zijn DigiD. Het bureau bedoelt het goed.', best: false, feedback: 'Begrijpelijk. Maar dan kunnen zij alles met jouw gegevens.' },
+            { id: 'a', text: 'Hij geeft zijn DigiD. Het bureau bedoelt het goed.', best: false, feedback: 'Begrijpelijk. Maar dan kunnen zij alles met zijn gegevens.' },
             { id: 'b', text: 'Hij zegt nee, en hij vraagt hulp in de bibliotheek.', best: true, feedback: 'Goed. Daar helpen ze gratis, en veilig.' },
-            { id: 'c', text: 'Hij geeft alleen zijn wachtwoord, niet zijn naam.', best: false, feedback: 'Met je wachtwoord kunnen ze ook alles.' },
+            { id: 'c', text: 'Hij geeft alleen zijn wachtwoord, niet zijn naam.', best: false, feedback: 'Met zijn wachtwoord kunnen ze ook alles.' },
           ],
           why: 'Je DigiD is alleen van jou. Je geeft hem nooit aan iemand anders. Ook niet aan je werkgever of uitzendbureau. Wil iemand je helpen? Dat kan veilig met DigiD Machtigen.',
         },
@@ -72,11 +72,11 @@ export const digitaalUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.digitaal.1.wd2',
-          situation: 'Op het werk staat één computer voor iedereen. Sanne heeft haar uren ingevuld.',
+          situation: 'Op het werk staat één computer voor iedereen. Sanne heeft haar uren ingevuld. Wat kan Sanne het beste doen?',
           options: [
-            { id: 'a', text: 'Ze laat het scherm aan. Haar collega begint zo.', best: false, feedback: 'Dan kan een ander in jouw account.' },
-            { id: 'b', text: 'Ze zet de computer uit met de knop.', best: false, feedback: 'Dan ben je misschien niet goed uitgelogd.' },
-            { id: 'c', text: 'Ze logt uit, en dan gaat ze weg.', best: true, feedback: 'Goed. Zo blijft jouw account van jou.' },
+            { id: 'a', text: 'Ze laat het scherm aan. Haar collega begint zo.', best: false, feedback: 'Dan kan een ander in haar account.' },
+            { id: 'b', text: 'Ze zet de computer uit met de knop.', best: false, feedback: 'Dan is ze misschien niet goed uitgelogd.' },
+            { id: 'c', text: 'Ze logt uit, en dan gaat ze weg.', best: true, feedback: 'Goed. Zo blijft haar account van haar.' },
           ],
           why: 'Op een gedeelde computer log je altijd uit. Anders kan een ander in jouw account. Bijvoorbeeld in je rooster of je loonstrook. Zet ook je telefoon op slot.',
         },
@@ -131,9 +131,9 @@ export const digitaalUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.digitaal.2.wd1',
-          situation: 'Esra schrikt van de mail.',
+          situation: 'Esra schrikt van de mail. Wat kan Esra het beste doen?',
           options: [
-            { id: 'a', text: 'Ze klikt snel op de knop. Ze wil haar loon niet kwijt.', best: false, feedback: 'Begrijpelijk. Maar zo stelen oplichters je wachtwoord.' },
+            { id: 'a', text: 'Ze klikt snel op de knop. Ze wil haar loon niet kwijt.', best: false, feedback: 'Begrijpelijk. Maar zo stelen oplichters haar wachtwoord.' },
             { id: 'b', text: 'Ze stuurt de mail door naar haar collega\'s.', best: false, feedback: 'Dan klikken zij er misschien op.' },
             { id: 'c', text: 'Ze klikt niet. Ze opent zelf de app van haar werk.', best: true, feedback: 'Goed. Daar ziet ze of de loonstrook er echt is.' },
           ],
@@ -149,13 +149,13 @@ export const digitaalUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.digitaal.2.wd2',
-          situation: 'Kevin heeft toch op een nep-link geklikt. Hij vulde zijn wachtwoord in.',
+          situation: 'Kevin heeft toch op een nep-link geklikt. Hij vulde zijn wachtwoord in. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt niets. Misschien gebeurt er niets.', best: false, feedback: 'Begrijpelijk. Maar dan kan een oplichter verder.' },
             { id: 'b', text: 'Hij verandert meteen zijn wachtwoord, en meldt het op zijn werk.', best: true, feedback: 'Goed. Hoe sneller, hoe beter.' },
-            { id: 'c', text: 'Hij gooit de mail weg. Dan is het probleem weg.', best: false, feedback: 'De mail is weg. Maar je wachtwoord is gestolen.' },
+            { id: 'c', text: 'Hij gooit de mail weg. Dan is het probleem weg.', best: false, feedback: 'De mail is weg. Maar oplichters hebben zijn wachtwoord nu.' },
           ],
-          why: 'Snel zijn helpt. Verander je wachtwoord meteen. Meld het bij je leidinggevende of de ICT-afdeling. Gaat het om je bank? Bel dan meteen je bank. Dit overkomt veel mensen. Schaam je niet.',
+          why: 'Snel zijn helpt. Verander je wachtwoord meteen. Meld het bij je leidinggevende of de ICT-afdeling. Gaat het om je bank? Bel dan meteen je bank. Dit gebeurt bij veel mensen. Schaam je niet.',
         },
         {
           kind: 'whoask',
@@ -210,7 +210,7 @@ export const digitaalUnit: RuleUnit = {
           id: 'r.l.digitaal.3.wd1',
           situation: 'Wat doet Malik?',
           options: [
-            { id: 'a', text: 'Hij gaat met de brief naar HR, en vraagt hoe het zit.', best: true, feedback: 'Goed. Een mens van je werk weet hoe het echt zit.' },
+            { id: 'a', text: 'Hij gaat met de brief naar HR, en vraagt hoe het zit.', best: true, feedback: 'Goed. Een mens van zijn werk weet hoe het echt zit.' },
             { id: 'b', text: 'Hij gelooft de chatbot. Die weet het vast.', best: false, feedback: 'Begrijpelijk. Maar AI kan het mis hebben, ook als het zeker klinkt.' },
             { id: 'c', text: 'Hij belt boos naar zijn werk. Hij wil zijn geld.', best: false, feedback: 'Eerst checken. Het antwoord van de chatbot kan fout zijn.' },
           ],
@@ -221,7 +221,7 @@ export const digitaalUnit: RuleUnit = {
           id: 'r.l.digitaal.3.tf1',
           statement: 'Je mag namen en adressen van klanten in een chatbot zetten. Dan werk je sneller.',
           answer: false,
-          why: 'Wat je in een chatbot zet, kan worden bewaard. Zet er dus geen persoonsgegevens in. Geen BSN, wachtwoord of bankgegevens. En geen namen of foto\'s van klanten, patiënten of collega\'s. Ook geen papieren van je werk. Vraag eerst naar de regels voor AI op je werk.',
+          why: 'Het bedrijf achter de chatbot kan bewaren wat je erin zet. Zet er dus geen persoonsgegevens in. Geen BSN, wachtwoord of bankgegevens. En geen namen of foto\'s van klanten, patiënten of collega\'s. Ook geen papieren van je werk. Vraag eerst naar de regels voor AI op je werk.',
         },
         {
           kind: 'whatdo',
@@ -230,7 +230,7 @@ export const digitaalUnit: RuleUnit = {
           quote: 'Ik heb snel je inlogcode nodig. Stuur hem nu, het is dringend.',
           options: [
             { id: 'a', text: 'Ze stuurt de code. Het is haar baas.', best: false, feedback: 'Begrijpelijk. Maar met AI kan iemand een stem nadoen.' },
-            { id: 'b', text: 'Ze stuurt niets. Ze belt haar leidinggevende zelf, op het nummer dat ze kent.', best: true, feedback: 'Goed. Zo weet je zeker wie het is.' },
+            { id: 'b', text: 'Ze stuurt niets. Ze belt haar leidinggevende zelf, op het nummer dat ze kent.', best: true, feedback: 'Goed. Zo weet ze zeker wie het is.' },
             { id: 'c', text: 'Ze vraagt in een bericht: "Ben jij het echt?"', best: false, feedback: 'Een oplichter zegt gewoon ja.' },
           ],
           why: 'Met AI kunnen oplichters een stem of een filmpje nadoen. Haast, geld of een code, en een nieuw nummer? Dat is een alarm. Stuur niets. Bel zelf terug op het nummer dat je kent.',
