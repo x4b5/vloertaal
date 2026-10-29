@@ -74,7 +74,7 @@ export const meedoenUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'De gemeenteraad maakt de wetten voor heel Nederland.', best: false, feedback: 'Nee. Dat doen de Tweede Kamer en de regering samen.' },
             { id: 'b', text: 'De gemeenteraad beslist over je eigen stad of dorp.', best: true, feedback: 'Goed. Bijvoorbeeld over wegen, afval en sport.' },
-            { id: 'c', text: 'De gemeenteraad kiest de koning.', best: false, feedback: 'Nee. De koning wordt niet gekozen.' },
+            { id: 'c', text: 'De gemeenteraad kiest de koning.', best: false, feedback: 'Nee. Niemand kiest de koning.' },
           ],
           why: 'De gemeenteraad beslist over je stad of dorp. De burgemeester en de wethouders voeren het uit. De Tweede Kamer maakt wetten voor heel Nederland, samen met de regering. De Tweede Kamer heeft 150 leden.',
         },
@@ -165,11 +165,11 @@ export const meedoenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.meedoen.2.wd2',
-          situation: 'Fatima belt over een kamer. De verhuurder hoort haar naam. "Hij is al weg." Een dag later staat de kamer weer online.',
+          situation: 'Fatima belt over een kamer. De verhuurder hoort haar naam. "Hij is al weg." Een dag later staat de kamer weer online. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze laat het gaan. Zo gaat het nou eenmaal.', best: false, feedback: 'Begrijpelijk. Maar het mag niet.' },
             { id: 'b', text: 'Ze stuurt de verhuurder een boos bericht.', best: false, feedback: 'Begrijpelijk. Maar zo verandert er niets.' },
-            { id: 'c', text: 'Ze schrijft op wat er gebeurde, en meldt het.', best: true, feedback: 'Goed. Bij een meldpunt helpen ze je gratis.' },
+            { id: 'c', text: 'Ze schrijft op wat er gebeurde, en meldt het.', best: true, feedback: 'Goed. Bij een meldpunt helpen ze haar gratis.' },
           ],
           why: 'Discriminatie is ook verboden bij wonen. Schrijf op wat er gebeurde, met de datum. Maak een screenshot van de advertentie. Meld het bij discriminatie.nl. Daar helpen ze je gratis.',
         },
@@ -231,8 +231,8 @@ export const meedoenUnit: RuleUnit = {
           situation: 'Wat doet Jayden?',
           options: [
             { id: 'a', text: 'Hij laat rustig zijn ID zien.', best: true, feedback: 'Goed. Dat moet als de politie erom vraagt.' },
-            { id: 'b', text: 'Hij zegt: "Ik heb niets gedaan," en loopt weg.', best: false, feedback: 'Begrijpelijk. Maar dan kun je een boete krijgen.' },
-            { id: 'c', text: 'Hij zegt dat zijn ID thuis ligt. Dat is niet waar.', best: false, feedback: 'Niet doen. Dan maak je het moeilijker voor jezelf.' },
+            { id: 'b', text: 'Hij zegt: "Ik heb niets gedaan," en loopt weg.', best: false, feedback: 'Begrijpelijk. Maar dan kan hij een boete krijgen.' },
+            { id: 'c', text: 'Hij zegt dat zijn ID thuis ligt. Dat is niet waar.', best: false, feedback: 'Niet doen. Dan maakt hij het moeilijker voor zichzelf.' },
           ],
           why: 'Vraagt de politie om je ID? Vanaf 14 jaar moet je het laten zien. Dat heet de identificatieplicht. Geen ID bij je? Dan kun je een boete krijgen. Vond je het niet eerlijk? Je kunt later een klacht indienen bij de politie.',
         },
@@ -249,7 +249,7 @@ export const meedoenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.meedoen.3.wd2',
-          situation: 'Esra krijgt een brief van de gemeente met een boete. Ze vindt dat de boete niet klopt.',
+          situation: 'Esra krijgt een brief van de gemeente met een boete. Ze vindt dat de boete niet klopt. Wat kan Esra het beste doen?',
           options: [
             { id: 'a', text: 'Ze betaalt niet, en ze gooit de brief weg.', best: false, feedback: 'Niet doen. Dan wordt de boete vaak hoger.' },
             { id: 'b', text: 'Ze belt 112 om te klagen.', best: false, feedback: '112 is alleen voor spoed. Dit is geen spoed.' },
