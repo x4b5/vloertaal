@@ -1110,6 +1110,10 @@ h1[tabindex="-1"]:focus { outline: none; }
   .btn-go { animation: rm-fade 0.15s linear both !important; }
   .lbar-sweep { animation: lbar-glow 0.4s linear both !important; }
   .match.match-hit { animation: none !important; }
+  /* The header's shade follows the scroll (opacity only, nothing moves): it stays. */
+  @supports (animation-timeline: scroll()) {
+    .player-top::after { animation: head-shade linear both !important; animation-timeline: scroll(root) !important; animation-range: 0 24px !important; }
+  }
 }
 @keyframes rm-fade { from { opacity: 0; } }
 @keyframes rm-label { 0% { opacity: 0; } 8%, 90% { opacity: 1; } 100% { opacity: 0; } }
