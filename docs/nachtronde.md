@@ -67,6 +67,8 @@ Elke bevinding is eerst nagedaan: met een test die faalde, of in de gebouwde app
 | Spreken: de microfoon kon starten terwijl de app op de achtergrond stond, en de opname speelde daar af | spreekoefening | niet op de achtergrond |
 | Spreken: na een mislukte microfoon bleef "Verder" staan tijdens de nieuwe poging | spreekoefening | weg tot de poging klaar is; de focus gaat naar de volgende knop |
 | Een fout gekoppeld rijtje als allerlaatste oefening kwam niet terug | dagelijkse herhaling | komt terug, zoals elders |
+| Een nieuwe versie kon herladen terwijl de herinnering-vraag na de les open stond (de agenda stuurt je weg en terug) | wie een herinnering zet | niet op dat scherm |
+| Op een trage verbinding kon het herladen naar een nieuwe versie de oude versie terugkrijgen, en dat elke 5 minuten herhalen (door de 4-secondenregel van vannacht) | slechte verbinding | eerst wachten tot de nieuwe versie geïnstalleerd is; hooguit één keer per versie |
 
 ### Toegankelijkheid (axe-core en toetsenbord in de gebouwde app)
 
@@ -143,5 +145,12 @@ slagen alle 1179 tests en de build. In de browser toont `/?taal=pl` "Polski?", i
 10. **Een onderwerp dat na een update een les extra krijgt**: het certificaat blijft (bewust),
     maar het knopje "Certificaat" op de onderwerppagina verdwijnt, en het certificaat telt de
     nieuwe les mee ("4 lessen" waar er 3 gedaan zijn). Kiezen wat de bedoeling is.
-11. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
+11. **De dagelijkse herinnering op Android**: het agendabestand (.ics) belandt in Downloads, en
+    Google Agenda op Android kan zo'n bestand niet openen; toch zegt de app "toegevoegd", en in
+    Instellingen kan dezelfde tijd niet opnieuw. Delen via het deelmenu helpt niet (Chrome deelt
+    geen .ics). Een oplossing is een link naar Google Agenda ("nieuwe gebeurtenis, elke dag"),
+    maar dat is een externe dienst: graag een besluit. Ook: "Stop de herinnering" stuurt een
+    annulering als bestand, wat agenda's waarschijnlijk niet als annulering lezen; en op iOS
+    buiten Safari (in-app-browser) wijzen de installatiestappen naar een knop die er niet is.
+12. **Afhankelijkheden**: geen kwetsbaarheden (`npm audit`). Er zijn alleen patch-updates (react 19.3.1,
    vite 8.3.5, vitest 5.0.5). Die heb ik niet zelf doorgevoerd.

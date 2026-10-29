@@ -95,8 +95,9 @@ const current = (): Entry | null => {
   const st = history.state as Partial<Entry> | null;
   return st && st.view ? (st as Entry) : null;
 };
-/** A screen a reload would not bring back: a lesson, its result and what follows it, the admin page. */
-const passing = (v: View) => v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'admin'
+/** A screen a reload would not bring back: a lesson, its result and what follows it (the reminder
+ *  offer too: its calendar file sends the learner away and back), the admin page. */
+const passing = (v: View) => v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'keep' || v.name === 'admin'
   || (v.name === 'phrasebook' && Boolean(v.streakUp || v.cert));
 /** After a reload: back on the screen you were on, but a lesson or its result starts over at home. */
 const restored = (): View => {
