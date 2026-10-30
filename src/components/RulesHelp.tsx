@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { courseUnits, ruleCards } from '../content/courses';
 import { withRegion } from '../content/regio';
-import { RULES_DISCLAIMER, ruleAdviceLine } from '../content/regels/disclaimer';
-import { HELP_ROWS, helpRowText, type HelpRow } from '../content/regels/help';
+import { RULES_BE_NOTE, RULES_DISCLAIMER, ruleAdviceLine } from '../content/regels/disclaimer';
+import { helpRowsFor, helpRowText, type HelpRow } from '../content/regels/help';
 import type { Unit } from '../content/types';
 import { ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
@@ -28,8 +28,10 @@ import { useVoices } from './useVoices';
  * your own vertrouwenspersoon) has one speaker instead, which is not counted, and is hidden when
  * nothing can say it. Outside the list: the one link to the shelf.
  */
-export function RulesHelp({ lang, onShelf, onBack, after }: {
+export function RulesHelp({ lang, country, onShelf, onBack, after }: {
   lang?: HelpLanguage;
+  /** Works in Belgium ('be'): a note that the rules are the Netherlands', and the Belgian rows. */
+  country?: 'nl' | 'be';
   /** "Alle regels": the rule cards of finished lessons. */
   onShelf: () => void;
   /** One more link below it (the region's Sociale kaart, src/components/SocialMap.tsx). */
@@ -43,11 +45,17 @@ export function RulesHelp({ lang, onShelf, onBack, after }: {
         {onBack && <ChromeBack lang={lang} onBack={onBack} />}
         <h1>Hulp</h1>
       </div>
+      {country === 'be' && (
+        <section className="rules-disclaimer rules-be-note" aria-label="Je werkt in België">
+          <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={24} /></span>
+          <p>{RULES_BE_NOTE.map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
+        </section>
+      )}
       <RulesDisclaimer />
       <h2 className="rh-title">{ui('phrasebook', lang).help ?? 'Wie bel je?'}</h2>
       <p className="muted rh-hint">{ui('phrasebookHint', lang).help}</p>
       <ul className="rh-rows">
-        {HELP_ROWS.map((row) => <HelpRowItem key={row.id} row={row} lang={lang} />)}
+        {helpRowsFor(country).map((row) => <HelpRowItem key={row.id} row={row} lang={lang} />)}
       </ul>
       <button type="button" className="hub-card hub-tips rules-shelf-link" onClick={onShelf}>
         <span className="hub-icon" aria-hidden><span className="entry-emoji">📘</span></span>

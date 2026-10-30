@@ -81,6 +81,11 @@ const lang: HelpLanguageSource = {
     unlock: 'Відкрити',
     sector: 'Твоя робота',
     chooseSector: 'Де ти працюєш?',
+    // nieuw, nog nalezen (land: Nederland of België)
+    countryTitle: 'У якій країні ти працюєш?',
+    countryHint: 'Правила роботи у Vloertaal стосуються Нідерландів. У Бельгії багато правил інші. Це залишається на твоєму телефоні. Ми нікуди це не надсилаємо.',
+    countryNl: 'Нідерланди',
+    countryBe: 'Бельгія (Фландрія)',
     sectorHint: 'Уроки для твоєї роботи будуть серед перших. Пізніше це можна змінити в Налаштуваннях.',
     otherSectors: 'Інші сфери',
     reviewToday: 'Повторення на сьогодні',

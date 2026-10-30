@@ -219,7 +219,9 @@ describe('rules content: key rules and advice', () => {
   it('dates the disclaimer', () => {
     expect(RULES_CHECKED).toBe('oktober 2026');
     // A beta first: experts still check the facts, so it never says "checked" (only "updated").
-    expect(RULES_DISCLAIMER).toHaveLength(4);
+    // Its last line: the rules are those of the Netherlands (also for a learner in Belgium).
+    expect(RULES_DISCLAIMER).toHaveLength(5);
+    expect(RULES_DISCLAIMER[4]).toContain('Nederland');
     expect(RULES_DISCLAIMER[0]).toBe(RULES_BETA);
     expect(RULES_BETA).toContain('bètaversie');
     expect(RULES_BETA).toContain('hoi@vloertaal.nl');
