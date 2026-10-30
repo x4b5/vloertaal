@@ -18,6 +18,7 @@ export const UPDATES: Update[] = [
     items: [
       'Vier nieuwe hulptalen: Spaans, Portugees, Frans en Duits. Alle uitleg, woorden, zinnen en tips staan nu ook in die talen.',
       'Een telefoon in het Spaans, Portugees, Frans of Duits kiest die taal bij de eerste start zelf voor (je kunt altijd een andere kiezen).',
+      'Nieuwe sector: Tuinbouw. Bij "Waar werk je?" kies je "Kas en ander werk". Nieuw onderwerp In de kas, met twee lessen: oogsten en sorteren, en veilig in de kas. Met woorden als de krat, het gewas, de plukkar en de spuitmiddelen. Werkregels: Veilig in kas en veld, en Tempo en stukloon.',
     ],
   },
   {

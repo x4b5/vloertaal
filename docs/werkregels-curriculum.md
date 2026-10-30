@@ -2077,6 +2077,9 @@ geef elke verandering in uren door. Uitzendwerk: werk stopt soms opeens; vraag d
 taalniveau. Elke regel uit wet, richtlijn of cao heeft een ⚖️. Ook deze lessen moet een deskundige
 nakijken.*
 
+*Later erbij (30 oktober 2026): de sector tuinbouw (`r.kas`, les T.1 Veilig in kas en veld en T.2
+Tempo en stukloon). Die staat uitgewerkt in [`entree-aanvulling.md`](entree-aanvulling.md), deel 4.*
+
 ## Sector bouw · Veilig op de bouw
 
 *In deze unit: VCA, je beschermende spullen (PBM), de toolboxmeeting en eerst even kijken.*

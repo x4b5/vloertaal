@@ -3,11 +3,12 @@ import { NOT_SURE, sectorGroupOf, sectorGroups, sectors, type SectorChoice, type
 import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
-import { CareIcon, ConveyorIcon, CupIcon, ForkliftIcon, HelmetIcon, QuestionIcon, SprayIcon } from './Icons';
+import { CareIcon, CheckIcon, ConveyorIcon, CupIcon, ForkliftIcon, HelmetIcon, QuestionIcon, SproutIcon, SprayIcon } from './Icons';
 import { WordPicture } from '../pictures';
 import { ChoiceCards, QuestionHead, type ChoiceOption } from './Choice';
 import { ChromeHead } from './ChromeBack';
 import { pushSubStep } from '../lib/onbHistory';
+import { dutchUi } from '../lib/track';
 
 const ICONS: Record<SectorId | 'none', typeof ForkliftIcon> = {
   logistics: ForkliftIcon,
@@ -16,6 +17,7 @@ const ICONS: Record<SectorId | 'none', typeof ForkliftIcon> = {
   care: CareIcon,
   hospitality: CupIcon,
   cleaning: SprayIcon,
+  horticulture: SproutIcon,
   none: QuestionIcon,
 };
 
@@ -33,31 +35,45 @@ export const SECTOR_PICTURES: Record<SectorId, string> = {
   care: 'w.verpleegkundige',
   hospitality: 'w.pan',
   cleaning: 'w.dweil',
+  horticulture: 'w.kas',
 };
 
 const sectorPicture = (id: SectorId, size: number) => <WordPicture id={SECTOR_PICTURES[id]} emoji="" size={size} />;
 
-/** Step 1: the kind of work (two groups, each shown by its three pictures) or "not sure yet". */
+/**
+ * Step 1: the kind of work (three groups, each shown by its pictures), and under them "not sure
+ * yet" as a plain text button: never a fourth card.
+ */
 export function SectorGroupCards({ current, lang, onPick }: {
   current?: SectorChoice;
   lang?: HelpLanguage;
   onPick: (g: SectorGroupId | 'none') => void;
 }) {
-  const group = current === 'none' ? 'none' : sectorGroupOf(current);
-  const options: ChoiceOption<SectorGroupId | 'none'>[] = [
-    ...sectorGroups.map((g) => ({
-      id: g.id,
-      nl: g.nl,
-      text: ui(g.key, lang),
-      picture: <span className="max3-trio">{g.sectors.map((s) => <span key={s}>{sectorPicture(s, 44)}</span>)}</span>,
-      next: true,
-    })),
-    { id: 'none' as const, nl: NOT_SURE.nl, text: ui(NOT_SURE.key, lang), picture: <QuestionIcon size={30} /> },
-  ];
-  return <ChoiceCards options={options} current={group} onPick={onPick} label={said(ui('chooseSector', lang))} className="sector-step" />;
+  const group = sectorGroupOf(current);
+  const options: ChoiceOption<SectorGroupId>[] = sectorGroups.map((g) => ({
+    id: g.id,
+    nl: g.nl,
+    text: ui(g.key, lang),
+    picture: <span className="max3-trio">{g.sectors.map((s) => <span key={s}>{sectorPicture(s, 44)}</span>)}</span>,
+    next: true,
+  }));
+  const notSure = ui(NOT_SURE.key, lang);
+  return (
+    <>
+      <ChoiceCards options={options} current={group} onPick={onPick} label={said(ui('chooseSector', lang))} className="sector-step" />
+      <button type="button" className={`sector-notsure ${current === 'none' ? 'picked' : ''}`} aria-pressed={current === 'none'} onClick={() => onPick('none')}>
+        <QuestionIcon size={22} />
+        <span className="sector-notsure-names">
+          <Bi text={notSure} />
+          {!dutchUi(notSure.lang) && <span className="sector-notsure-nl" lang="nl">{NOT_SURE.nl}</span>}
+        </span>
+        {current === 'none' && <CheckIcon size={20} className="max3-check" />}
+      </button>
+    </>
+  );
 }
 
-/** Step 2: the three sectors of a group, each with its picture. */
+/** Step 2: the sectors of a group (at most three), each with its picture. */
 export function SectorCards({ group, current, lang, onPick }: {
   group: SectorGroupId;
   current?: SectorChoice;

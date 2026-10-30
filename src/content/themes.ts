@@ -78,8 +78,8 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     regels: ['r.geld', 'r.digitaal', 'r.meedoen', 'rg.zl.r'],
   },
   'theme.sector': {
-    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean'],
-    regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean'],
+    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.kas'],
+    regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean', 'r.kas'],
   },
 };
 

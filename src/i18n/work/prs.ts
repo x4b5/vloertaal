@@ -1168,6 +1168,48 @@ const t: CultureTranslation = {
     'c.aiplan.o2': 'قبول کنید: اپ همیشه درست می‌گوید.',
     'c.aiplan.o3': 'دیگر سر کار نروید.',
     'c.aiplan.w': 'اپ‌ها اشتباه می‌کنند و همه چیز را دربارهٔ شما نمی‌دانند. می‌توانید توضیح بخواهید، و یک انسان می‌تواند دوباره آن را ببیند.',
+    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
+    'u.kas': 'In the greenhouse', // TODO vertalen
+    'l.harvest': 'Harvesting and sorting', // TODO vertalen
+    'w.kas': 'the greenhouse', // TODO vertalen
+    'w.gewas': 'the crop (the plants that grow)', // TODO vertalen
+    'w.rij': 'the row (of plants)', // TODO vertalen
+    'w.oogsten': 'to harvest', // TODO vertalen
+    'w.sorteren': 'to sort', // TODO vertalen
+    'w.krat': 'the crate', // TODO vertalen
+    's.harvest.1': 'I work in the greenhouse.', // TODO vertalen
+    's.harvest.2': 'Which row do I start in?', // TODO vertalen
+    's.harvest.3': 'The crate is full.', // TODO vertalen
+    'c.harvest.q': 'How many rows have you done?', // TODO vertalen
+    'c.harvest.a': 'Four. Two more to go.', // TODO vertalen
+    'l.greensafe': 'Safe in the greenhouse', // TODO vertalen
+    'w.spuitmiddelen': 'the crop sprays (chemicals for plants)', // TODO vertalen
+    'w.bespoten': 'sprayed (with crop sprays)', // TODO vertalen
+    'w.plukkar': 'the picking trolley', // TODO vertalen
+    'w.bukken': 'to bend down', // TODO vertalen
+    'w.drinken': 'to drink', // TODO vertalen
+    'w.hitte': 'the heat (when it is very hot)', // TODO vertalen
+    's.greensafe.1': 'Has this greenhouse been sprayed?', // TODO vertalen
+    's.greensafe.2': 'I am going to drink some water.', // TODO vertalen
+    's.greensafe.3': 'Where is the picking trolley?', // TODO vertalen
+    'c.greensafe.q': 'May I work in greenhouse three?', // TODO vertalen
+    'c.greensafe.a': 'No, not yet. It was just sprayed.', // TODO vertalen
+    'c.harvest': 'Tempo and piece rate', // TODO vertalen
+    'c.harvest.b': 'In a greenhouse you often work at a set pace (tempo). Some employers pay per crate, per row or per kilo: piece rate (stukloon). Even with piece rate, you must earn at least the minimum wage for every hour you work. Check the amount on rijksoverheid.nl. Write down your hours and your crates every day, and compare them with your payslip. Working fast is good, but working safely comes first. General information. For your situation: ask the union, the Juridisch Loket or FairWork.', // TODO vertalen
+    'c.harvest.p': 'How many crates did I do today?', // TODO vertalen
+    'c.harvest.s': 'You are paid per crate. At the end of the week, your pay is much lower than the minimum wage for the hours you worked. What do you do?', // TODO vertalen
+    'c.harvest.o1': 'Show your own list of hours and crates to your employer, and ask for help if it is not fixed.', // TODO vertalen
+    'c.harvest.o2': 'Say nothing and work faster next week, so you earn more.', // TODO vertalen
+    'c.harvest.o3': 'Accept it: with piece rate, a low pay is normal.', // TODO vertalen
+    'c.harvest.w': 'With piece rate you must still get at least the minimum wage for every hour you worked. Your own list of hours and crates helps you show what you did.', // TODO vertalen
+    'c.greensafe': 'Heat and sprays', // TODO vertalen
+    'c.greensafe.b': 'In a greenhouse it can get very hot, also in spring. Drink water often, also before you feel thirsty, and take your breaks in a cool place. Do you feel dizzy or sick, or do you get a headache? Stop and tell someone. Plants are sometimes sprayed with chemicals (spuitmiddelen). A greenhouse that was just sprayed often has a sign at the door. Do not go in until your supervisor says it is safe again. General information. For your situation: ask your employer, the union or the Juridisch Loket.', // TODO vertalen
+    'c.greensafe.p': 'May I already work in this greenhouse?', // TODO vertalen
+    'c.greensafe.s': 'A greenhouse was sprayed this morning. There is a sign on the door. A colleague says: "Come on, it is only for a moment." What do you do?', // TODO vertalen
+    'c.greensafe.o1': 'Stay outside, and ask your supervisor when it is safe again.', // TODO vertalen
+    'c.greensafe.o2': 'Go in quickly and hold your breath.', // TODO vertalen
+    'c.greensafe.o3': 'Go in, and wash your hands well afterwards.', // TODO vertalen
+    'c.greensafe.w': 'Crop sprays can hurt your skin, eyes and lungs, also when you smell nothing. After spraying there is a waiting time before people may go in again. Your supervisor knows when it is over.', // TODO vertalen
   },
 };
 

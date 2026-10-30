@@ -52,18 +52,22 @@ describe('the first-run language guess', () => {
 });
 
 describe('the sector in two steps', () => {
-  it('puts every sector in exactly one group of three', () => {
+  // Three groups since the seventh sector (Tuinbouw, 30 October 2026): three cards on step 1, with
+  // "not sure yet" as a text button under them, and at most three sectors per group.
+  it('puts every sector in exactly one of three groups, at most three per group', () => {
     const all = sectorGroups.flatMap((g) => g.sectors);
-    expect(sectorGroups).toHaveLength(2);
-    for (const g of sectorGroups) expect(g.sectors).toHaveLength(3);
+    expect(sectorGroups).toHaveLength(3);
+    for (const g of sectorGroups) expect(g.sectors.length).toBeLessThanOrEqual(3);
     expect([...all].sort()).toEqual(sectors.map((s) => s.id).sort());
     expect(sectorGroups.find((g) => g.id === 'make')!.sectors).toEqual(['logistics', 'construction', 'production']);
     expect(sectorGroups.find((g) => g.id === 'care')!.sectors).toEqual(['care', 'hospitality', 'cleaning']);
+    expect(sectorGroups.find((g) => g.id === 'other')!.sectors).toEqual(['horticulture']);
     for (const g of sectorGroups) expect(uiEn[g.key]).toBeTruthy();
   });
   it('finds the group of a sector, none for "not sure yet"', () => {
     expect(sectorGroupOf('construction')).toBe('make');
     expect(sectorGroupOf('cleaning')).toBe('care');
+    expect(sectorGroupOf('horticulture')).toBe('other');
     expect(sectorGroupOf('none')).toBeUndefined();
     expect(sectorGroupOf(undefined)).toBeUndefined();
   });

@@ -356,4 +356,32 @@ export default {
       <path d="M44 104H76" stroke={PAL.red} strokeWidth="3" strokeLinecap="round" />
     </g>
   ),
+
+  // "de kas": the greenhouse (In de kas, u.kas; also the Tuinbouw sector card) — a glass house
+  // with two roof ridges, tomato plants growing inside behind the panes
+  'w.kas': () => (
+    <g>
+      <Ground cx={60} cy={106} rx={50} ry={5} />
+      {/* Plants behind the glass: green stems and leaves, red tomatoes */}
+      {[30, 60, 90].map((x) => (
+        <g key={x}>
+          <path d={`M${x} 104V56`} stroke={PAL.greenShade} strokeWidth="3" strokeLinecap="round" />
+          <ellipse cx={x - 7} cy={66} rx={8} ry={4.5} fill={PAL.green} transform={`rotate(-25 ${x - 7} 66)`} />
+          <ellipse cx={x + 7} cy={78} rx={8} ry={4.5} fill={PAL.green} transform={`rotate(25 ${x + 7} 78)`} />
+          <ellipse cx={x - 7} cy={90} rx={8} ry={4.5} fill={PAL.leafShade} transform={`rotate(-25 ${x - 7} 90)`} />
+          <circle cx={x + 5} cy={62} r={4.5} fill={PAL.red} />
+          <circle cx={x - 5} cy={80} r={4.5} fill={PAL.red} />
+          <circle cx={x + 6} cy={94} r={4.5} fill={PAL.redShade} />
+        </g>
+      ))}
+      {/* The glass: walls and a double roof, see-through */}
+      <path d="M12 104V50L36 28L60 50L84 28L108 50V104Z" fill={PAL.ice} opacity=".38" />
+      <path d="M84 28L108 50V104H84Z" fill={PAL.sky} opacity=".14" />
+      {/* The frame */}
+      <path d="M12 104V50L36 28L60 50L84 28L108 50V104" fill="none" stroke={PAL.steel} strokeWidth="3.5" strokeLinejoin="round" />
+      <path d="M12 50H108M36 28V104M60 50V104M84 28V104M12 76H108" stroke={PAL.steel} strokeWidth="2.2" />
+      <path d="M8 104H112" stroke={PAL.slate} strokeWidth="4" strokeLinecap="round" />
+      <Shine d="M18 70L30 58M42 70L54 58" width={3} opacity={0.8} />
+    </g>
+  ),
 } as Record<string, () => JSX.Element>;

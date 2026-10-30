@@ -85,6 +85,9 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "از شما می‌خواهند نام‌ها را در چت‌بات بگذارید: این جواب «نی» می‌گوید و دلیل آن را.",
     'c.aifake.a.why': "یک شمارهٔ نو پول می‌خواهد: این جواب اول کنترول می‌کند.",
     'c.aiplan.a.why': "تقسیم اوقات را اپ ساخته: این جواب یک انسان می‌خواهد.",
+    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
+    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
+    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
   },
 };
 

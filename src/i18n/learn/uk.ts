@@ -85,6 +85,9 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Просять вставити імена в чат-бот: ця відповідь каже «ні» і пояснює чому.",
     'c.aifake.a.why': "Новий номер просить грошей: ця відповідь спершу перевіряє.",
     'c.aiplan.a.why': "Графік склав застосунок: ця відповідь просить людину.",
+    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
+    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
+    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
   },
 };
 

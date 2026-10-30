@@ -182,6 +182,7 @@ function defineStates(LANG) {
   add('onb:sector', shot('sector'));
   add('onb:sector-make', shot('sector&group=make'), null, { expect: '.chrome-back' });
   add('onb:sector-care', shot('sector&group=care'), null, { expect: '.chrome-back' });
+  add('onb:sector-other', shot('sector&group=other'), null, { expect: '.chrome-back' });
   // ... and the real first-run flow from a clean device (the test browser is Dutch: no guess)
   const firstRun = (extra) => async (p) => {
     await p.evaluate(([x, lang]) => { localStorage.setItem('vloertaal.access', 'full'); localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: lang, ...x })); }, [extra, LANG]);
@@ -427,7 +428,7 @@ function defineStates(LANG) {
   // with the back arrow (the "look only" way out).
   for (const pg of ['me', 'lessons', 'phone', 'language', 'certificates']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('settings:phone-preview', shot('settings&page=phone&access=preview'), null, { list: true });
-  for (const pg of ['gender', 'sector', 'sector-make', 'sector-care', 'english', 'sound', 'voice', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
+  for (const pg of ['gender', 'sector', 'sector-make', 'sector-care', 'sector-other', 'english', 'sound', 'voice', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
   add('settings:writing-ar', shot('settings&page=writing', 'ar'));
   add('settings:install', shot('settings&page=install&install=prompt'));
   add('settings:unlock', shot('settings&page=unlock&access=preview'));

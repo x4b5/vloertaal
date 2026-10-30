@@ -32,6 +32,7 @@ export const SECTOR_PAGES: readonly SectorPage[] = [
   { id: 'care', path: '/zorg/', name: 'Zorg', phrase: 'de zorg', short: 'de zorg' },
   { id: 'hospitality', path: '/horeca/', name: 'Horeca', phrase: 'de horeca', short: 'de horeca' },
   { id: 'cleaning', path: '/schoonmaak/', name: 'Schoonmaak', phrase: 'de schoonmaak', short: 'de schoonmaak' },
+  { id: 'horticulture', path: '/tuinbouw/', name: 'Tuinbouw', phrase: 'de tuinbouw en de kas', short: 'de tuinbouw' },
 ];
 
 const unit = (id: string): Unit => {

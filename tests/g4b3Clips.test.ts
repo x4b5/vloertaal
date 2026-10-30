@@ -133,6 +133,27 @@ const PENDING_RECORDING = new Set<string>([
   'Klopt dit? Kunt u even meekijken?',
   'Mag ik hier AI voor gebruiken?',
   'Kan een mens hier even naar kijken?',
+  // New sector unit "In de kas" (u.kas, l.harvest and l.greensafe, 30 October 2026). "de kas",
+  // "de krat", "drinken", "Ik werk in de kas." and "De krat is vol." have a clip already.
+  'het gewas',
+  'de rij',
+  'oogsten',
+  'sorteren',
+  'de spuitmiddelen',
+  'bespoten',
+  'de plukkar',
+  'bukken',
+  'de hitte',
+  'In welke rij begin ik?',
+  'Is deze kas bespoten?',
+  'Ik ga even water drinken.',
+  'Waar staat de plukkar?',
+  'Hoeveel rijen heb je gedaan?',
+  'Vier. Nog twee te gaan.',
+  'Mag ik in kas drie werken?',
+  'Nee, nog niet. Die is net bespoten.',
+  'Hoeveel kratten heb ik vandaag gedaan?',
+  'Mag ik al in deze kas werken?',
 ]);
 
 describe('recorded clips (G4 b3)', () => {

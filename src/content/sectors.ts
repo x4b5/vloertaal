@@ -10,7 +10,7 @@ import { withRegion } from './regio';
  * path: the basis units plus the learner's own sector unit(s) come first, the other sectors'
  * units wait in a collapsed section at the bottom (still playable, never locked by sector).
  */
-export type SectorId = 'logistics' | 'construction' | 'production' | 'care' | 'hospitality' | 'cleaning';
+export type SectorId = 'logistics' | 'construction' | 'production' | 'care' | 'hospitality' | 'cleaning' | 'horticulture';
 
 /** What is stored: a sector, or 'none' for "not sure yet" (= the whole course as one path). */
 export type SectorChoice = SectorId | 'none';
@@ -49,6 +49,9 @@ export const sectors: Sector[] = [
     rules: { units: ['r.horeca'], focus: ['r.tijd', 'r.loon'] } },
   { id: 'cleaning', nl: 'Schoonmaak', key: 'sectorCleaning', units: ['u.clean'], focus: ['u.time', 'u.safety'],
     rules: { units: ['r.clean'], focus: ['r.veilig', 'r.tijd'] } },
+  // Tuinbouw en kas (30 October 2026): heat, sprays and lifting (Safety), and piece rate (Pay).
+  { id: 'horticulture', nl: 'Tuinbouw', key: 'sectorHorticulture', units: ['u.kas'], focus: ['u.safety', 'u.pay'],
+    rules: { units: ['r.kas'], focus: ['r.veilig', 'r.loon'] } },
 ];
 
 /** A sector's own units and focus units in one track. */
@@ -143,9 +146,11 @@ export function sectorFirstFocus(sector: SectorChoice | undefined, track: Track 
 
 /**
  * The sector choice in two small steps (never more than three cards on a page): first the kind
- * of work, then the three sectors in it. "Weet ik nog niet" sits next to the two groups.
+ * of work (three groups), then the sectors in it (at most three). "Weet ik nog niet" is a plain
+ * text button under the three group cards, not a fourth card (src/components/Sector.tsx).
+ * The third group has room for one more sector.
  */
-export type SectorGroupId = 'make' | 'care';
+export type SectorGroupId = 'make' | 'care' | 'other';
 
 export interface SectorGroup {
   id: SectorGroupId;
@@ -157,6 +162,7 @@ export interface SectorGroup {
 export const sectorGroups: SectorGroup[] = [
   { id: 'make', nl: 'Maken en verplaatsen', key: 'sectorGroupMake', sectors: ['logistics', 'construction', 'production'] },
   { id: 'care', nl: 'Zorg en service', key: 'sectorGroupCare', sectors: ['care', 'hospitality', 'cleaning'] },
+  { id: 'other', nl: 'Kas en ander werk', key: 'sectorGroupOther', sectors: ['horticulture'] },
 ];
 
 /** The group a sector is in (undefined for "not sure yet" or nothing chosen). */

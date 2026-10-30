@@ -77,6 +77,8 @@ const reasons: Record<string, string> = {
   'c.aiprivate.a': 'Asked to put names in a chatbot: this reply says no, and why.',
   'c.aifake.a': 'A new number asks for money: this reply checks first.',
   'c.aiplan.a': 'An app made the roster: this reply asks for a person.',
+  'c.harvest.a': 'Asked how many rows: this reply gives a number, and what is left.',
+  'c.greensafe.a': 'Just sprayed: this reply says not yet, and why.',
   'c.easy.a': '"Een handje helpen" is asking for help: a yes and coming over.',
   'c.plain.a': 'Very hard rain: the bus keeps you dry.',
   'c.shortlong.a': 'An egg is offered: a polite no, with a reason.',

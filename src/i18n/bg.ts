@@ -92,6 +92,7 @@ const lang: HelpLanguageSource = {
     sectorCare: 'Грижа за хора',
     sectorHospitality: 'Хотели и ресторанти',
     sectorCleaning: 'Почистване',
+    sectorHorticulture: 'Градинарство', // nieuw (30 okt 2026), nog nalezen
     sound: 'Звук',
     soundOn: 'Със звук',
     withoutSound: 'Без звук',
@@ -238,6 +239,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Изключено',
     sectorGroupMake: 'Производство и превоз',
     sectorGroupCare: 'Грижа и обслужване',
+    sectorGroupOther: 'Оранжерия и друга работа', // nieuw (30 okt 2026), nog nalezen
     voiceWoman: 'Женски глас',
     voiceMan: 'Мъжки глас',
     writingPick: 'Избор на дума',

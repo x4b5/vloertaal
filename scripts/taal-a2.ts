@@ -16,7 +16,7 @@ import { uiNl } from '../src/i18n/nl';
 type Text = { file: string; where: string; field: string; text: string };
 type Choice = { file: string; where: string; situation: string; options: RuleOption[] };
 
-const SECTOR = new Set(['r.build', 'r.care', 'r.horeca', 'r.clean', 'r.factory', 'r.warehouse']);
+const SECTOR = new Set(['r.build', 'r.care', 'r.horeca', 'r.clean', 'r.factory', 'r.warehouse', 'r.kas']);
 const fileOf = (unitId: string) =>
   unitId === zlRegelsUnit.id ? 'src/content/regio/zuid-limburg-regels.ts'
   : SECTOR.has(unitId) ? 'src/content/regels/units/sector.ts'

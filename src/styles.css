@@ -3347,6 +3347,18 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .max3-trio .word-pic { width: 34px; height: 34px; }
 .sector-step-2 .max3-pic { width: 64px; height: 64px; }
 .sector-step-2 .max3-pic .word-pic { width: 58px; height: 58px; }
+/* "Weet ik nog niet" under the three group cards: a plain text button, not a fourth card. */
+.sector-notsure {
+  display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 48px;
+  margin-top: 10px; padding: 8px 14px; background: none; border: 0; color: var(--ink-2); cursor: pointer;
+  text-align: start;
+}
+.sector-notsure .icon { flex: none; color: var(--ink-3); }
+.sector-notsure-names { display: flex; flex-direction: column; gap: 1px; text-decoration: underline; text-underline-offset: 3px; }
+.sector-notsure-names .bi-help { --help-size: 0.8rem; color: var(--muted); }
+.sector-notsure-nl { font-size: 0.85rem; color: var(--muted); }
+.sector-notsure.picked { color: var(--ink); font-weight: 650; }
+.sector-notsure.picked .max3-check { color: var(--ink); }
 .max3-crumb { display: flex; justify-content: center; margin: 14px 0 0; }
 .max3-crumb .bi {
   padding: 4px 12px; border-radius: 999px; background: var(--concrete-2, var(--bg)); color: var(--ink-2);

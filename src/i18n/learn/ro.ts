@@ -85,6 +85,9 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Ți se cere să pui nume într-un chatbot: răspunsul spune „nu” și de ce.",
     'c.aifake.a.why': "Un număr nou cere bani: răspunsul verifică întâi.",
     'c.aiplan.a.why': "Programul l-a făcut o aplicație: răspunsul cere un om.",
+    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
+    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
+    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
   },
 };
 

@@ -182,6 +182,13 @@ describe('pocket card phrases', () => {
       'Klopt dit? Kunt u even meekijken?',
       'Mag ik hier AI voor gebruiken?',
       'Kan een mens hier even naar kijken?',
+      // New sector unit "In de kas" (u.kas, 30 October 2026):
+      'Hoeveel kratten heb ik vandaag gedaan?',
+      'Mag ik al in deze kas werken?',
+      'In welke rij begin ik?',
+      'Is deze kas bespoten?',
+      'Ik ga even water drinken.',
+      'Waar staat de plukkar?',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

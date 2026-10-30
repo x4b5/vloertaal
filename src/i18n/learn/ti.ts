@@ -85,6 +85,9 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "ኣስማት ኣብ ቻትቦት ከተእቱ ተሓቲቱ፡ እዚ መልሲ «ኣይፋል» ይብል፡ ምኽንያቱ ድማ ይገልጽ።",
     'c.aifake.a.why': "ሓድሽ ቁጽሪ ገንዘብ ይሓትት፡ እዚ መልሲ ቅድም የረጋግጽ።",
     'c.aiplan.a.why': "መደብ ስራሕ ብኣፕ ተዳልዩ፡ እዚ መልሲ ሰብ ይሓትት።",
+    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
+    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
+    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
   },
 };
 

@@ -271,6 +271,16 @@ export const SprayIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** A sprout under a greenhouse roof: horticulture (tuinbouw en kas). */
+export const SproutIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M3 10.5L12 4l9 6.5" {...stroke} strokeWidth={2} />
+    <path d="M12 21v-6.5" {...stroke} strokeWidth={2} />
+    <path d="M12 16c-3.4 0-5-1.8-5-4.6 3.2 0 5 1.6 5 4.6zM12 14.5c0-3 1.8-4.6 5-4.6 0 2.8-1.6 4.6-5 4.6z" {...stroke} strokeWidth={1.8} />
+    <path d="M7 21h10" {...stroke} strokeWidth={2} />
+  </Svg>
+);
+
 /** A question mark in a circle: "not sure yet". */
 export const QuestionIcon = (p: IconProps) => (
   <Svg {...p}>

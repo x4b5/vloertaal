@@ -85,6 +85,9 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Sohbet robotuna isim yazman isteniyor: bu cevap “hayır” diyor ve nedenini söylüyor.",
     'c.aifake.a.why': "Yeni bir numara para istiyor: bu cevap önce kontrol ediyor.",
     'c.aiplan.a.why': "Çalışma planını uygulama yaptı: bu cevap bir insan istiyor.",
+    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
+    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
+    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
   },
 };
 

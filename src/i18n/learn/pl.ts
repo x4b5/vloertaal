@@ -85,6 +85,9 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Prośba o wpisanie nazwisk do chatbota: ta odpowiedź mówi „nie” i dlaczego.",
     'c.aifake.a.why': "Nowy numer prosi o pieniądze: ta odpowiedź najpierw to sprawdza.",
     'c.aiplan.a.why': "Grafik zrobiła aplikacja: ta odpowiedź prosi o człowieka.",
+    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
+    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
+    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
   },
 };
 
