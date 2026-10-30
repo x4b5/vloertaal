@@ -2631,7 +2631,7 @@ const techUnit = unit('tech', 'In the workshop', 'In de werkplaats', '🔩', '#5
 const garageUnit = unit('garage', 'In the garage', 'In de garage', '🚗', '#1f6f8b', [
   lesson(
     'garage',
-    'In the garage',
+    'Tyres, oil and the lift',
     [
       ['band', 'de band', 'the tyre', '🛞'],
       ['olie', 'de olie', 'the oil', '🫗'],
