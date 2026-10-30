@@ -4275,3 +4275,115 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 }
 .skip-sound:hover, .skip-sound:focus-visible { color: var(--ink-strong); }
 .skip-sound .bi { text-align: center; }
+
+/*
+ * Old phones (iOS 13 – 16.1, Chrome before 111: docs in tests/oldPhones.test.ts). Each block only
+ * counts where the browser lacks what it names, so a newer phone never reads it.
+ *
+ * color-mix(): a plain colour written before it in the same rule would not help, because each
+ * of these mixes has a var() in it: the browser keeps such a declaration when it reads the sheet
+ * and only finds out later that it cannot use it, and then the property is unset (no background,
+ * no border), not the colour before. So the plain colours are here, from the theme's own colours.
+ */
+@supports not (color: color-mix(in srgb, red 50%, blue)) {
+  .lang-btn.picked, .max3-card.picked, .topics-order-btn.is-on,
+  .choice.picked, .rb-marked { background: var(--kraft-light); }
+  /* Before Chrome 88 the picked option's own rule is lost whole (its :not(a, b)): its border too. */
+  .choice.picked, .choice.picked:hover:not(:disabled) { border-color: var(--edge); background: var(--kraft-light); }
+  .gender-btn.picked .gender-face { background: var(--kraft-light); }
+  .lbar-tail { background: var(--kraft); }
+  .feedback-rule, .chat-hint { border-top: 2px dashed var(--line); }
+  .choice.faded { border-color: var(--line); }
+  .stamp.stamp-wrong { color: var(--wrong-ink); }
+  .type-input:focus, .pw-input:focus, .remind-own input:focus { box-shadow: 0 0 0 3px var(--yellow); }
+  .keep-btn.danger { border-color: var(--red-line); }
+  .tag-help { border-left: 2px solid var(--line); }
+  .tile-say { background: var(--track); }
+  .choice-say { border: 2px solid var(--blue); }
+  .offline-saved { border-color: var(--green); }
+  .pocket-pic, .rule-stage { background: var(--kraft-light); }
+  .foot-more-hint { background: linear-gradient(to bottom, transparent, var(--bg) 78%); }
+}
+
+/* inset (iOS before 14.5, Chrome before 87): without it the bottom bar, the "Stop this lesson?"
+   sheet and the overlays have no place, so they are given top/right/bottom/left here. Never all
+   four in one rule: the minifier would write them back as inset (width and height instead). */
+@supports not (inset: 0) {
+  .player-top::after { top: 100%; right: 0; left: 0; }
+  .ex-ghost { top: 20px; right: 16px; left: 16px; }
+  .cel-svg, .streak-svg { top: 0; left: 0; }
+  .sheet-backdrop { top: 0; left: 0; width: 100%; height: 100%; }
+  .sheet-hazard, .gate-sign::before { top: 0; right: 0; left: 0; }
+  .bottom-nav { right: 0; bottom: 0; left: 0; }
+  .stat-card .stat-card-foot-row .flawless-stamp { bottom: auto; right: auto; }
+  .player-foot::before { top: -18px; right: 0; left: 0; }
+  .say-mic.is-rec::before { top: -16px; left: -16px; width: calc(100% + 32px); height: calc(100% + 32px); }
+  .say-ring { top: -12px; left: -12px; }
+  .foot-more-hint { top: -44px; right: 0; left: 0; }
+  @media (max-height: 760px) { .result .cel-svg { top: auto; bottom: 0; left: 0; } }
+  /* inset-inline-start/end and inset-block came in the same versions: the left-to-right sides
+     here, the lesson's right-to-left ones (.player-rtl, dir="rtl") mirrored after them. */
+  .lbar > span { top: 0; bottom: 0; }
+  .lbar-ticks { left: 0; right: 0; }
+  .lang-check { right: 12px; }
+  .lang-grid-compact .lang-check { right: 10px; }
+  .bays::before { left: 27px; }
+  [dir='rtl'] .bays::before { left: auto; right: 27px; }
+  @media (max-width: 300px) {
+    .bays::before { left: 15px; }
+    [dir='rtl'] .bays::before { left: auto; right: 15px; }
+  }
+  .player-top > .report-hint { right: 12px; }
+  .player-top > .report-hint::before { right: 28px; }
+  .player-rtl .player-top > .report-hint, .player-rtl .player-top > .report-hint::before { right: auto; }
+  .answer-mark { right: 12px; }
+  .stamp { right: -8px; }
+  .choices:not(.choices-pics) .stamp, .choices-pics .stamp { right: 8px; }
+  .answer-line .stamp { right: 0; }
+  .choices:not(.choices-pics) .choice-wrap .choice > .stamp, .choices:not(.choices-pics) .stamp.stamp-wrong { right: 10px; }
+  .answer-line .stamp.stamp-wrong { right: 9px; }
+  .stamp.stamp-wrong .stamp-sub { right: -4px; }
+  .flawless-stamp { right: 8px; }
+  .result-stamp { right: 0; }
+  .player-rtl .answer-mark { right: auto; left: 12px; }
+  .player-rtl .stamp { right: auto; left: -8px; }
+  .player-rtl .choices .stamp, .player-rtl .choices .stamp.stamp-wrong { right: auto; left: 8px; }
+  .player-rtl .answer-line .stamp, .player-rtl .answer-line .stamp.stamp-wrong { right: auto; left: 4px; }
+  .player-rtl .stamp.stamp-wrong .stamp-sub { right: auto; left: -4px; }
+  .bar-wrap > .run-label { right: 0; }
+  .player-rtl .bar-wrap > .run-label { right: auto; left: 0; }
+  .foot-more-btn { right: 8px; }
+  .player-rtl .foot-more-btn { right: auto; left: 8px; }
+  .sound-note, .player-top > .sound-note { left: 16px; right: 16px; }
+  .keep-icon, .cert-list-icon { right: 14px; }
+  .waybill-tag { right: 12px; }
+  .ios-num { left: 8px; }
+  .remind-tick { right: -7px; }
+  .speak-turtle { right: -10px; }
+  .tile-x { left: -7px; }
+  .onb-greet-corner { right: 8px; }
+  [dir='rtl'] .keep-icon, [dir='rtl'] .cert-list-icon, [dir='rtl'] .waybill-tag, [dir='rtl'] .remind-tick,
+  [dir='rtl'] .speak-turtle, [dir='rtl'] .onb-greet-corner, [dir='rtl'] .lang-check { right: auto; left: 12px; }
+  /* The square end block of Check / Continue (its aspect-ratio is from iOS 15: a width instead). */
+  .btn-block { top: 6px; bottom: 6px; right: 6px; width: 50px; }
+  [dir='rtl'] .btn-block { right: auto; left: 6px; }
+  .btn-go { padding-left: 72px; padding-right: 72px; }
+  @media (max-width: 300px) {
+    .btn-go, .foot-actions .btn-go { padding-left: 8px; padding-right: 58px; }
+    [dir='rtl'] .btn-go, [dir='rtl'] .foot-actions .btn-go { padding-left: 58px; padding-right: 8px; }
+  }
+  /* The path's topic card: Bram at its end, and room for him so he is not over Start (padding-inline
+     came in the same versions as inset). Right to left: mirrored. */
+  .bay-char { right: 4px; }
+  [dir='rtl'] .bay-char { right: auto; left: 4px; }
+  .bay-now .bay-card { padding-left: 18px; padding-right: 128px; }
+  [dir='rtl'] .bay-now .bay-card { padding-left: 128px; padding-right: 18px; }
+  @media (max-width: 380px) {
+    .bay-now .bay-card { padding-left: 12px; padding-right: 104px; }
+    [dir='rtl'] .bay-now .bay-card { padding-left: 104px; padding-right: 12px; }
+  }
+  @media (max-width: 300px) { .bay-now .bay-card, [dir='rtl'] .bay-now .bay-card { padding-left: 12px; padding-right: 12px; } }
+  @media (max-width: 380px) {
+    :root[data-text='xl'] .bay-now .bay-card, :root[data-text='xl'] [dir='rtl'] .bay-now .bay-card { padding-left: 12px; padding-right: 12px; }
+  }
+}
