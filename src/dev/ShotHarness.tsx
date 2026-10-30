@@ -22,7 +22,7 @@ import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies } from '../content/curriculum';
 import { buildLesson, buildTiles, buildRuleLesson, forRetry, RULE_KINDS, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
-import { setSpeakShotPhase } from '../components/Speaking';
+import { setSpeakShotHeard, setSpeakShotPhase } from '../components/Speaking';
 import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
@@ -61,6 +61,8 @@ import { SamenShot } from './SamenShot';
  */
 export function ShotHarness({ shot, lang, word }: { shot: string; lang: string | null; word?: string | null }) {
   const q = new URLSearchParams(location.search);
+  // &listen=available|downloadable|downloading: a mocked on-device SpeechRecognition (see fakeListenApi).
+  fakeListenApi(q.get('listen'));
   // &lang=nl: the work-rules track (main.tsx turns RULES_TRACK on and loads its pack, with the
   // real rules course). &stub=1, or no rules units written yet: the small fixed stub course.
   if (lang === 'nl' && (q.get('stub') === '1' || !courseUnits('regels').length)) registerRulesCourse(toCourseUnits(RULES_STUB));
@@ -369,7 +371,13 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot.startsWith('speak')) {
     const phase = ({ 'speak-rec': 'recording', 'speak-compare': 'review', 'speak-off': 'off' } as const)[shot] ?? 'idle';
     setSpeakShotPhase(phase);
-    exercises[shot] = { kind: 'speak', item: q.get('item') === 'sentence' ? lesson.sentences[0] : focus ?? handschoenen };
+    const item = q.get('item') === 'sentence' ? lesson.sentences[0] : focus ?? handschoenen;
+    // &heard=ik%20draag%20mijn: with "Laat de telefoon luisteren (proef)", what the phone heard
+    // (judged as in the app); &heard=same the item itself, &heard=almost without its last word,
+    // &heard=wait while it listens.
+    const heard = q.get('heard');
+    setSpeakShotHeard(heard === 'same' ? item.nl : heard === 'almost' ? item.nl.split(' ').slice(0, -1).join(' ') : heard ?? undefined);
+    exercises[shot] = { kind: 'speak', item };
   }
   const ex = exercises[shot] ?? exercises.dutch;
   // A few intro exercises in front would move the progress bar; pad so it sits at ~40%.
@@ -753,3 +761,31 @@ function LogoSheet({ px }: { px: number }) {
     </div>
   );
 }
+
+/**
+ * "Laat de telefoon luisteren (proef)" in the shots: a stand-in for the on-device part of
+ * SpeechRecognition (available() answers `status`; install() makes it 'available'; start() hears
+ * nothing). No real recognition and no microphone. Without &listen= nothing is changed.
+ */
+function fakeListenApi(status: string | null) {
+  if (!status) return;
+  const state = { status };
+  class FakeRecognition {
+    lang = '';
+    continuous = false;
+    interimResults = false;
+    maxAlternatives = 1;
+    onresult = null;
+    onerror = null;
+    onend: (() => void) | null = null;
+    start() {}
+    stop() { this.onend?.(); }
+    abort() { this.onend?.(); }
+    static available() { return Promise.resolve(state.status); }
+    static install() { state.status = 'available'; return new Promise((r) => setTimeout(() => r(true), 600)); }
+  }
+  let local = false;
+  Object.defineProperty(FakeRecognition.prototype, 'processLocally', { get: () => local, set: (v: boolean) => { local = v; }, configurable: true });
+  (window as unknown as { SpeechRecognition: unknown }).SpeechRecognition = FakeRecognition;
+}
+

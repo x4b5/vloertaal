@@ -505,6 +505,17 @@ function defineStates(LANG) {
   add('flow:toets-offer', '/', (p) => realHome(p, { toets: undefined }), { expect: '.toets-offer' });
   add('flow:toets-start', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
   add('flow:toets-later', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3 .bay-now' });
+  // "Laat de telefoon luisteren (proef)" (src/lib/listen.ts), with a mocked on-device API
+  // (&listen=, src/dev/ShotHarness.tsx fakeListenApi): its row in Lessen, its page (Dutch on the
+  // phone, or still to download, and the wifi question), and the three outcomes after speaking.
+  add('verstaan:lessons', shot('settings&page=lessons&listen=available'), null, { list: true, expect: '.chrome-back' });
+  add('verstaan:settings', shot('settings&page=listen&listen=available'), null, { expect: '.chrome-back' });
+  add('verstaan:settings-download', shot('settings&page=listen&listen=downloadable'), null, { expect: '.chrome-back' });
+  add('verstaan:settings-wifi', shot('settings&page=listen&listen=downloadable'), async (p) => { await tap(p, '.max3-card', 0); await settle(p); }, { expect: '.listen-download' });
+  add('verstaan:ok', shot('speak-compare&item=sentence&heard=same'), null, { expect: '.say-heard-ok' });
+  add('verstaan:almost', shot('speak-compare&item=sentence&heard=almost'), null, { expect: '.say-heard-almost' });
+  add('verstaan:notyet', shot('speak-compare&item=sentence&heard=de%20bus%20komt'), null, { expect: '.say-heard-notyet' });
+  add('verstaan:wait', shot('speak-compare&item=sentence&heard=wait'), null, { expect: '.say-heard-wait' });
   // Lessons at the learner's level (src/lib/pace.ts): "Wil je sneller?" (Ja / Nee in place of
   // Continue), the line after many mistakes, Settings › Lessen › Sneller leren, and today's review
   // with its sentence cards (a sentence to build, the spoken sentence).

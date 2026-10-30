@@ -345,6 +345,20 @@ const lang: HelpLanguageSource = {
     coachDays: 'Dias de prática nas últimas 4 semanas', // nieuw, nalezen
     coachLast: 'Última lição, com a data', // nieuw, nalezen
     coachNameAsk: 'O teu nome no cartão?', // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'O telemóvel ouve (teste)', // nieuw, nalezen
+    listenHint: 'Depois de falares, o telemóvel diz se te percebeu. Isto acontece no próprio telemóvel. Nada vai para nós nem para outros.', // nieuw, nalezen
+    listenNeedsPack: 'Primeiro o telemóvel precisa do neerlandês. É uma transferência grande: usa Wi-Fi.', // nieuw, nalezen
+    listenDownload: 'Transferir neerlandês', // nieuw, nalezen
+    listenNotNow: 'Agora não', // nieuw, nalezen
+    listenDownloading: 'O neerlandês está a chegar. Tenta mais tarde.', // nieuw, nalezen
+    listenFailed: 'Não funcionou. Tenta mais tarde, com Wi-Fi.', // nieuw, nalezen
+    listenPrivacy: 'Só o telemóvel ouve. Nada é enviado.', // nieuw, nalezen
+    heardWait: 'O telemóvel está a ouvir…', // nieuw, nalezen
+    heardOk: 'Percebido', // nieuw, nalezen
+    heardAlmost: 'Quase: diz {word} outra vez', // nieuw, nalezen
+    heardNotYet: 'Ainda não percebido', // nieuw, nalezen
+    goOnAnyway: 'Continuar mesmo assim', // nieuw, nalezen
     fasterAsk: 'Queres ir mais rápido?', // nieuw, nalezen
     fasterHint: 'Menos explicação nas lições novas. O neerlandês a velocidade normal.', // nieuw, nalezen
     fasterYes: 'Sim', // nieuw, nalezen

@@ -345,6 +345,20 @@ const lang: HelpLanguageSource = {
     coachDays: 'روزهای تمرین در 4 هفتهٔ گذشته', // nieuw, nalezen
     coachLast: 'آخرین درس، با تاریخ', // nieuw, nalezen
     coachNameAsk: 'نامت روی کارت؟', // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'گوش دادن تیلفون (آزمایشی)', // nieuw, nalezen
+    listenHint: 'بعد از گپ زدن، تیلفون می‌گوید که گپ شما را فهمید یا نی. این کار در خود تیلفون انجام می‌شود. هیچ چیزی به ما یا دیگران فرستاده نمی‌شود.', // nieuw, nalezen
+    listenNeedsPack: 'تیلفون اول زبان هالندی کار دارد. دانلود کلان است: از وای‌فای استفاده کنید.', // nieuw, nalezen
+    listenDownload: 'دانلود هالندی', // nieuw, nalezen
+    listenNotNow: 'حالا نی', // nieuw, nalezen
+    listenDownloading: 'هالندی در راه است. بعداً دوباره کوشش کنید.', // nieuw, nalezen
+    listenFailed: 'نشد. بعداً با وای‌فای دوباره کوشش کنید.', // nieuw, nalezen
+    listenPrivacy: 'خود تیلفون گوش می‌دهد. هیچ چیزی فرستاده نمی‌شود.', // nieuw, nalezen
+    heardWait: 'تیلفون گوش می‌دهد…', // nieuw, nalezen
+    heardOk: 'فهمید', // nieuw, nalezen
+    heardAlmost: 'تقریباً: {word} را دوباره بگویید', // nieuw, nalezen
+    heardNotYet: 'هنوز نفهمید', // nieuw, nalezen
+    goOnAnyway: 'باز هم ادامه', // nieuw, nalezen
     fasterAsk: 'می‌خواهی تیزتر یاد بگیری؟', // nieuw, nalezen
     fasterHint: 'توضیح کمتر در درس‌های نو. هالندی با سرعت عادی.', // nieuw, nalezen
     fasterYes: 'بلی', // nieuw, nalezen

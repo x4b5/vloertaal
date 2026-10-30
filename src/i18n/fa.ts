@@ -345,6 +345,20 @@ const lang: HelpLanguageSource = {
     coachDays: 'روزهای تمرین در 4 هفتهٔ گذشته', // nieuw, nalezen
     coachLast: 'آخرین درس، با تاریخ', // nieuw, nalezen
     coachNameAsk: 'اسمت روی کارت؟', // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'گوش دادن گوشی (آزمایشی)', // nieuw, nalezen
+    listenHint: 'بعد از حرف زدن، گوشی می‌گوید که حرف شما را فهمید یا نه. این کار روی خود گوشی انجام می‌شود. چیزی برای ما یا دیگران فرستاده نمی‌شود.', // nieuw, nalezen
+    listenNeedsPack: 'گوشی اول زبان هلندی لازم دارد. دانلود بزرگی است: از وای‌فای استفاده کنید.', // nieuw, nalezen
+    listenDownload: 'دانلود هلندی', // nieuw, nalezen
+    listenNotNow: 'الان نه', // nieuw, nalezen
+    listenDownloading: 'هلندی در راه است. بعداً دوباره امتحان کنید.', // nieuw, nalezen
+    listenFailed: 'نشد. بعداً با وای‌فای دوباره امتحان کنید.', // nieuw, nalezen
+    listenPrivacy: 'خود گوشی گوش می‌دهد. چیزی فرستاده نمی‌شود.', // nieuw, nalezen
+    heardWait: 'گوشی گوش می‌دهد…', // nieuw, nalezen
+    heardOk: 'فهمید', // nieuw, nalezen
+    heardAlmost: 'تقریباً: {word} را دوباره بگویید', // nieuw, nalezen
+    heardNotYet: 'هنوز نفهمید', // nieuw, nalezen
+    goOnAnyway: 'با این حال ادامه', // nieuw, nalezen
     fasterAsk: 'می‌خواهی سریع‌تر یاد بگیری؟', // nieuw, nalezen
     fasterHint: 'توضیح کمتر در درس‌های تازه. هلندی با سرعت عادی.', // nieuw, nalezen
     fasterYes: 'بله', // nieuw, nalezen

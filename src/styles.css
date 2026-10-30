@@ -4481,6 +4481,20 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   }
 }
 
+/* "Laat de telefoon luisteren (proef)" (src/components/Speaking.tsx Heard): what the phone made of
+   it. Calm colours: green when understood, kraft (never red) for almost and not yet. */
+.say-heard {
+  display: flex; align-items: center; gap: 10px; margin: 14px 0 0; padding: 10px 14px;
+  border-radius: var(--radius); border-inline-start: 5px solid var(--kraft);
+  background: var(--warn-bg); color: var(--warn-ink); font-weight: 600; text-align: start;
+}
+.say-heard-ok { background: var(--green-bg); color: var(--right-ink); border-inline-start-color: var(--green); }
+.say-heard-wait { background: var(--card); color: var(--muted); border-inline-start-color: var(--line); }
+.say-heard-icon { flex: none; display: inline-flex; }
+.say-heard .bi-help { --help-size: 0.8em; font-weight: 400; }
+.say-heard-word { font-weight: 800; color: var(--ink-strong); }
+.say-heard-ok .say-heard-word { color: inherit; }
+.listen-actions .keep-btn { min-height: 52px; }
 /* Lessons at the learner's level (src/lib/pace.ts): "Wil je sneller?" on the result, and the plain
    line after many mistakes. */
 .result-easier, .result-faster { flex-direction: column; gap: 2px; }
