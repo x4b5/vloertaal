@@ -15,7 +15,7 @@ export const RULES_STUB: RuleUnit[] = [
     lessons: [
       {
         id: 'r.l.start.1',
-        title: 'Op tijd en goed voorbereid',
+        title: 'Op tijd, en alles bij je',
         goal: 'Je weet wat je meeneemt op je eerste dag.',
         remember: 'Neem je ID-bewijs mee. Wees op tijd.',
         steps: [

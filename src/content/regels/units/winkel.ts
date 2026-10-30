@@ -52,7 +52,7 @@ export const winkelUnit: RuleUnit = {
           id: 'r.l.winkel.1.wd1',
           situation: 'Waar zet Kevin de nieuwe melk?',
           options: [
-            { id: 'a', text: 'Vooraan. Dan ziet het schap er vers uit.', best: false, feedback: 'Begrijpelijk. Maar dan blijft de oude melk staan.' },
+            { id: 'a', text: 'Vooraan. Dan ziet het schap er vers uit.', best: false, feedback: 'Dat is logisch. Maar dan blijft de oude melk staan.' },
             { id: 'b', text: 'Achteraan. De oude melk blijft vooraan staan.', best: true, feedback: 'Goed. Zo gaat de oude melk het eerst weg.' },
             { id: 'c', text: 'Ergens waar plek is. Klanten kiezen zelf wel.', best: false, feedback: 'Dan raakt de oude melk over de datum.' },
           ],
@@ -77,7 +77,7 @@ export const winkelUnit: RuleUnit = {
           situation: 'Kevin zet drie rolcontainers in het pad. Een klant met een rollator wil erlangs. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt sorry en schuift de containers aan de kant.', best: true, feedback: 'Goed. Het pad moet vrij zijn voor klanten.' },
-            { id: 'b', text: 'Hij vraagt de klant om even om te lopen.', best: false, feedback: 'Begrijpelijk. Maar het pad is er voor de klant.' },
+            { id: 'b', text: 'Hij vraagt de klant om even om te lopen.', best: false, feedback: 'Dat is logisch. Maar het pad is er voor de klant.' },
             { id: 'c', text: 'Hij werkt snel door. Over 5 minuten is hij klaar.', best: false, feedback: 'Dan moet de klant wachten. En iemand kan vallen.' },
           ],
           why: 'Houd de paden vrij. Dat is veiliger voor klanten en collega\'s. Nooduitgangen moeten altijd vrij zijn. Zet lege dozen en folie meteen weg.',
@@ -145,7 +145,7 @@ export const winkelUnit: RuleUnit = {
           situation: 'Fatima is druk bezig. Een klant zegt: "Mag ik u iets vragen?" Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze stopt even, kijkt de klant aan en luistert.', best: true, feedback: 'Goed. In een winkel gaat de klant voor.' },
-            { id: 'b', text: 'Ze zegt "moment" en maakt eerst haar doos leeg.', best: false, feedback: 'Begrijpelijk. Maar dan moet de klant lang wachten.' },
+            { id: 'b', text: 'Ze zegt "moment" en maakt eerst haar doos leeg.', best: false, feedback: 'Dat is logisch. Maar dan moet de klant lang wachten.' },
             { id: 'c', text: 'Ze wijst naar de servicebalie, zonder iets te zeggen.', best: false, feedback: 'Dat kan onvriendelijk lijken.' },
           ],
           why: 'In een winkel gaat de klant voor. Stop even met je werk. Kijk de klant aan en groet. Tegen klanten zeg je meestal "u".',
@@ -208,7 +208,7 @@ export const winkelUnit: RuleUnit = {
           situation: 'Jayden weet niet zeker hoe oud de jongen is. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij vraagt rustig: "Mag ik je ID zien?"', best: true, feedback: 'Goed. Zonder bewijs van 18 jaar geen alcohol.' },
-            { id: 'b', text: 'Hij gelooft de jongen. De rij is al lang.', best: false, feedback: 'Begrijpelijk. Maar hij moet de leeftijd echt zien.' },
+            { id: 'b', text: 'Hij gelooft de jongen. De rij is al lang.', best: false, feedback: 'Dat snap ik. Maar hij moet de leeftijd echt zien.' },
             { id: 'c', text: 'Hij zegt dat hij geen bier verkoopt aan jongeren.', best: false, feedback: 'Misschien is hij wel 18. Jayden kan beter eerst zijn ID vragen.' },
           ],
           why: 'Alcohol en tabak verkoop je alleen aan mensen vanaf 18 jaar. Twijfel je? Dan moet je een ID zien. Lijkt iemand jonger dan 25? Dan vragen veel winkels een ID. Geen ID? Dan geen alcohol.',

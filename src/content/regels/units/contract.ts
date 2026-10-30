@@ -76,7 +76,7 @@ export const contractUnit: RuleUnit = {
           situation: 'In het contract staat 12 uur. De baas zegt: "Je werkt echt 30 uur."',
           options: [
             { id: 'a', text: 'Je vindt het goed. 30 uur is toch meer geld.', best: false, feedback: 'Nu wel. Maar bij ziekte of ontslag telt het contract.' },
-            { id: 'b', text: 'Je zegt niets. Je wilt geen gedoe op je eerste dag.', best: false, feedback: 'Begrijpelijk. Maar later is het lastiger.' },
+            { id: 'b', text: 'Je zegt niets. Je wilt geen gedoe op je eerste dag.', best: false, feedback: 'Dat snap ik. Maar later is het lastiger.' },
             { id: 'c', text: 'Je vraagt of hij 30 uur in het contract zet.', best: true, feedback: 'Goed. Wat op papier staat, telt.' },
           ],
           why: 'Bij ziekte, WW of ontslag kijken ze naar je contract. Werk je lange tijd meer uren? Dan kun je vragen om die uren in je contract.',
@@ -363,7 +363,7 @@ export const contractUnit: RuleUnit = {
           situation: "Het bedrijf bepaalt Jaydens tijden, zijn kleding en zijn route. Toch noemen ze hem zzp'er. Wat kan Jayden het beste doen?",
           options: [
             { id: 'a', text: 'Hij vraagt advies. Misschien is hij gewoon werknemer.', best: true, feedback: 'Goed. Dan weet hij welke rechten hij heeft.' },
-            { id: 'b', text: 'Hij vindt het prima. Zo gaat het bij bezorgers.', best: false, feedback: 'Begrijpelijk. Maar dan mist hij misschien rechten.' },
+            { id: 'b', text: 'Hij vindt het prima. Zo gaat het bij bezorgers.', best: false, feedback: 'Dat is logisch. Maar dan mist hij misschien rechten.' },
             { id: 'c', text: 'Hij koopt alvast zelf een fiets en een tas.', best: false, feedback: 'Wacht daar nog even mee. Eerst advies vragen.' },
           ],
           why: "Bepaalt het bedrijf hoe, wanneer en waar je werkt? Dan ben je vaak gewoon werknemer. Dan heb je recht op loon bij ziekte en op WW. Iemand die zzp'er heet, maar werknemer is, heet schijnzelfstandig.",

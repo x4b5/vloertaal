@@ -80,7 +80,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.1.wd1',
           situation: 'Het rooster verandert steeds een dag van tevoren. Mohammed kan zo niets plannen. Wat kan Mohammed het beste doen?',
           options: [
-            { id: 'a', text: 'Hij past zich aan. Zo gaat het nu eenmaal.', best: false, feedback: 'Begrijpelijk. Maar er zijn regels voor het rooster.' },
+            { id: 'a', text: 'Hij past zich aan. Zo gaat het nu eenmaal.', best: false, feedback: 'Ik snap het. Maar er zijn regels voor het rooster.' },
             { id: 'b', text: 'Hij vraagt wanneer het rooster vast hoort te staan.', best: true, feedback: 'Goed. Rustig vragen is de eerste stap.' },
             { id: 'c', text: 'Hij komt alleen nog op de dagen die hij zelf wil.', best: false, feedback: 'Dan breekt hij zelf afspraken. Praten werkt beter.' },
           ],
@@ -159,7 +159,7 @@ export const tijdUnit: RuleUnit = {
           situation: 'De leidinggevende wil vandaag geen pauze. Wat kan Sanne het beste doen?',
           options: [
             { id: 'a', text: 'Ze vraagt rustig wanneer ze vandaag wel pauze kan nemen.', best: true, feedback: 'Goed. Zo zoekt ze samen met haar leidinggevende een moment.' },
-            { id: 'b', text: 'Ze slaat haar pauze over. Het is nu eenmaal druk.', best: false, feedback: 'Begrijpelijk. Maar pauze is haar recht, ook als het druk is.' },
+            { id: 'b', text: 'Ze slaat haar pauze over. Het is nu eenmaal druk.', best: false, feedback: 'Dat snap ik. Maar pauze is haar recht, ook als het druk is.' },
             { id: 'c', text: 'Ze neemt meteen pauze, ook al staat er een rij.', best: false, feedback: 'Ze heeft recht op pauze. Maar ze vraagt het beter eerst even.' },
           ],
           why: 'Pauze is je recht. Dat staat in de wet. Rust helpt je ook om veilig te werken. Zoek samen een moment, ook als het druk is.',
@@ -263,7 +263,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.3.wd3',
           situation: 'Jayden is oproepkracht. Donderdagavond belt Mark: "Kun je zaterdag komen?" Jayden heeft al andere plannen. Wat kan Jayden het beste doen?',
           options: [
-            { id: 'a', text: 'Hij zegt ja. Anders krijgt hij misschien geen werk meer.', best: false, feedback: 'Begrijpelijk. Maar hier mag hij nee zeggen.' },
+            { id: 'a', text: 'Hij zegt ja. Anders krijgt hij misschien geen werk meer.', best: false, feedback: 'Dat snap ik. Maar hier mag hij nee zeggen.' },
             { id: 'b', text: 'Hij zegt rustig nee. Het is te kort van tevoren.', best: true, feedback: 'Goed. Bij minder dan 4 dagen mag hij nee zeggen.' },
             { id: 'c', text: 'Hij zegt niets, en hij komt zaterdag gewoon niet.', best: false, feedback: 'Dan rekent Mark op hem. Zeg het duidelijk.' },
           ],

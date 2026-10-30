@@ -168,7 +168,7 @@ export const zlRegelsUnit: RuleUnit = {
           id: 'rg.zl.r.l.2.wd2',
           situation: 'Mehmet begint om 6 uur in Geleen. Zo vroeg rijdt er bijna geen bus. Wat doet hij?',
           options: [
-            { id: 'a', text: 'Hij komt elke dag een uur te laat. De bus is niet zijn schuld.', best: false, feedback: 'Begrijpelijk, maar dat geeft snel problemen. Op tijd komen is belangrijk.' },
+            { id: 'a', text: 'Hij komt elke dag een uur te laat. De bus is niet zijn schuld.', best: false, feedback: 'Ik snap het, maar dat geeft snel problemen. Op tijd komen is belangrijk.' },
             { id: 'b', text: 'Hij zegt de baan af. Zonder auto lukt het niet.', best: false, feedback: 'Jammer. Vaak is er een andere oplossing.' },
             { id: 'c', text: 'Hij vraagt op zijn werk of hij met iemand kan meerijden, of hij gaat fietsen.', best: true, feedback: 'Goed. Bij grote bedrijven rijden collega’s vaak samen.' },
           ],
@@ -225,7 +225,7 @@ export const zlRegelsUnit: RuleUnit = {
           id: 'rg.zl.r.l.3.wd1',
           situation: 'Bogdan wil het werk wel. Wat doet hij eerst?',
           options: [
-            { id: 'a', text: 'Hij tekent snel. Hij regelt de rest later wel.', best: false, feedback: 'Begrijpelijk. Maar dan krijgt hij later misschien problemen.' },
+            { id: 'a', text: 'Hij tekent snel. Hij regelt de rest later wel.', best: false, feedback: 'Dat snap ik. Maar dan krijgt hij later misschien problemen.' },
             { id: 'b', text: 'Hij vraagt eerst gratis advies bij het GrensInfoPunt.', best: true, feedback: 'Goed. Die kennen de regels van alle drie de landen.' },
             { id: 'c', text: 'Hij vraagt het aan zijn buurman. Die werkte vroeger ook in Duitsland.', best: false, feedback: 'Zijn buurman bedoelt het goed. Maar elke situatie is anders.' },
           ],
@@ -324,7 +324,7 @@ export const zlRegelsUnit: RuleUnit = {
           situation: 'Joep legt iets uit in het Limburgs. Dewi verstaat het niet. Wat doet ze?',
           options: [
             { id: 'a', text: 'Ze vraagt vriendelijk: "Wil je het in het Nederlands zeggen?"', best: true, feedback: 'Goed. De meeste collega’s doen dat graag.' },
-            { id: 'b', text: 'Ze knikt, en doet maar wat.', best: false, feedback: 'Begrijpelijk, maar dan kan ze fouten maken.' },
+            { id: 'b', text: 'Ze knikt, en doet maar wat.', best: false, feedback: 'Dat snap ik, maar dan kan ze fouten maken.' },
             { id: 'c', text: 'Ze zegt boos dat dialect onbeleefd is.', best: false, feedback: 'Dat kan pijn doen. Voor veel mensen is dialect hun eigen taal.' },
           ],
           why: 'In Zuid-Limburg praten veel mensen dialect, ook op het werk. Het is normaal dat je het niet verstaat, ook als je goed Nederlands spreekt. Vraag het vriendelijk. Dialect is voor veel collega’s hun moedertaal. Het is niet onbeleefd. Bij de grens werken ook veel mensen uit Duitsland en België. Soms praten collega’s Duits of Frans. Ook dan mag je vragen om Nederlands. En bij veiligheid moet je de uitleg altijd goed begrijpen.',

@@ -53,7 +53,7 @@ export const digitaalUnit: RuleUnit = {
           id: 'r.l.digitaal.1.wd1',
           situation: 'Wat doet Piotr?',
           options: [
-            { id: 'a', text: 'Hij geeft zijn DigiD. Het bureau bedoelt het goed.', best: false, feedback: 'Begrijpelijk. Maar dan kunnen zij alles met zijn gegevens.' },
+            { id: 'a', text: 'Hij geeft zijn DigiD. Het bureau bedoelt het goed.', best: false, feedback: 'Dat snap ik. Maar dan kunnen zij alles met zijn gegevens.' },
             { id: 'b', text: 'Hij zegt nee, en hij vraagt hulp in de bibliotheek.', best: true, feedback: 'Goed. Daar helpen ze gratis, en veilig.' },
             { id: 'c', text: 'Hij geeft alleen zijn wachtwoord, niet zijn naam.', best: false, feedback: 'Met zijn wachtwoord kunnen ze ook alles.' },
           ],
@@ -133,7 +133,7 @@ export const digitaalUnit: RuleUnit = {
           id: 'r.l.digitaal.2.wd1',
           situation: 'Esra schrikt van de mail. Wat kan Esra het beste doen?',
           options: [
-            { id: 'a', text: 'Ze klikt snel op de knop. Ze wil haar loon niet kwijt.', best: false, feedback: 'Begrijpelijk. Maar zo stelen oplichters haar wachtwoord.' },
+            { id: 'a', text: 'Ze klikt snel op de knop. Ze wil haar loon niet kwijt.', best: false, feedback: 'Dat snap ik. Maar zo stelen oplichters haar wachtwoord.' },
             { id: 'b', text: 'Ze stuurt de mail door naar haar collega\'s.', best: false, feedback: 'Dan klikken zij er misschien op.' },
             { id: 'c', text: 'Ze klikt niet. Ze opent zelf de app van haar werk.', best: true, feedback: 'Goed. Daar ziet ze of de loonstrook er echt is.' },
           ],
@@ -151,7 +151,7 @@ export const digitaalUnit: RuleUnit = {
           id: 'r.l.digitaal.2.wd2',
           situation: 'Kevin heeft toch op een nep-link geklikt. Hij vulde zijn wachtwoord in. Wat kan Kevin het beste doen?',
           options: [
-            { id: 'a', text: 'Hij zegt niets. Misschien gebeurt er niets.', best: false, feedback: 'Begrijpelijk. Maar dan kan een oplichter verder.' },
+            { id: 'a', text: 'Hij zegt niets. Misschien gebeurt er niets.', best: false, feedback: 'Ik snap het. Maar dan kan een oplichter verder.' },
             { id: 'b', text: 'Hij verandert meteen zijn wachtwoord, en meldt het op zijn werk.', best: true, feedback: 'Goed. Hoe sneller, hoe beter.' },
             { id: 'c', text: 'Hij gooit de mail weg. Dan is het probleem weg.', best: false, feedback: 'De mail is weg. Maar oplichters hebben zijn wachtwoord nu.' },
           ],
@@ -211,7 +211,7 @@ export const digitaalUnit: RuleUnit = {
           situation: 'Wat doet Malik?',
           options: [
             { id: 'a', text: 'Hij gaat met de brief naar HR, en vraagt hoe het zit.', best: true, feedback: 'Goed. Een mens van zijn werk weet hoe het echt zit.' },
-            { id: 'b', text: 'Hij gelooft de chatbot. Die weet het vast.', best: false, feedback: 'Begrijpelijk. Maar AI kan het mis hebben, ook als het zeker klinkt.' },
+            { id: 'b', text: 'Hij gelooft de chatbot. Die weet het vast.', best: false, feedback: 'Dat is logisch. Maar AI kan het mis hebben, ook als het zeker klinkt.' },
             { id: 'c', text: 'Hij belt boos naar zijn werk. Hij wil zijn geld.', best: false, feedback: 'Eerst checken. Het antwoord van de chatbot kan fout zijn.' },
           ],
           why: 'AI kan een brief goed uitleggen. Maar AI maakt ook fouten, en klinkt toch zeker. Gaat het om je contract of je loon? Check het bij een mens. Bijvoorbeeld bij HR of je leidinggevende.',
@@ -229,7 +229,7 @@ export const digitaalUnit: RuleUnit = {
           situation: 'Ewa krijgt een spraakbericht van een nieuw nummer. Het klinkt als haar leidinggevende.',
           quote: 'Ik heb snel je inlogcode nodig. Stuur hem nu, het is dringend.',
           options: [
-            { id: 'a', text: 'Ze stuurt de code. Het is haar baas.', best: false, feedback: 'Begrijpelijk. Maar met AI kan iemand een stem nadoen.' },
+            { id: 'a', text: 'Ze stuurt de code. Het is haar baas.', best: false, feedback: 'Dat snap ik. Maar met AI kan iemand een stem nadoen.' },
             { id: 'b', text: 'Ze belt zelf terug, op het nummer dat ze kent.', best: true, feedback: 'Goed. Zo weet ze zeker wie het is.' },
             { id: 'c', text: 'Ze vraagt in een bericht: "Ben jij het echt?"', best: false, feedback: 'Een oplichter zegt gewoon ja.' },
           ],

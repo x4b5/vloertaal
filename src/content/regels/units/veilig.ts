@@ -159,7 +159,7 @@ export const veiligUnit: RuleUnit = {
           situation: 'Kevin heeft het gemeld. Weken later is het nog steeds onveilig. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij meldt het bij de Arbeidsinspectie.', best: true, feedback: 'Goed. Daar is de Arbeidsinspectie voor.' },
-            { id: 'b', text: 'Hij zet een filmpje van het magazijn online.', best: false, feedback: 'Begrijpelijk, maar dat kan hem problemen geven.' },
+            { id: 'b', text: 'Hij zet een filmpje van het magazijn online.', best: false, feedback: 'Dat snap ik, maar dat kan hem problemen geven.' },
             { id: 'c', text: 'Hij stopt met melden. Het helpt toch niet.', best: false, feedback: 'Jammer. Er is nog een plek waar hij heen kan.' },
           ],
           why: 'Helpt melden binnen het bedrijf niet? Dan kun je naar de Nederlandse Arbeidsinspectie. Dat mag ook zonder je naam. Een filmpje online kan juist problemen geven, ook voor jou.',
@@ -221,7 +221,7 @@ export const veiligUnit: RuleUnit = {
           id: 'r.l.veilig.3.wd1',
           situation: 'Dewi merkt dat het te veel wordt. Wat kan Dewi het beste doen?',
           options: [
-            { id: 'a', text: 'Ze zegt niets. In de zorg heeft iedereen het druk.', best: false, feedback: 'Begrijpelijk. Maar zo kan ze ziek worden.' },
+            { id: 'a', text: 'Ze zegt niets. In de zorg heeft iedereen het druk.', best: false, feedback: 'Dat snap ik. Maar zo kan ze ziek worden.' },
             { id: 'b', text: 'Ze praat erover met haar leidinggevende of de bedrijfsarts.', best: true, feedback: 'Goed. Dan kan er samen iets veranderen.' },
             { id: 'c', text: 'Ze werkt sneller, dan is ze eerder klaar.', best: false, feedback: 'Haast geeft fouten en meer stress.' },
           ],
