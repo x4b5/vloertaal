@@ -19,7 +19,7 @@ const about = (id: string) => aboutSections.find((s) => s.id === id)!.nl;
 
 export function coachPage(): string {
   const title = 'Gratis NT2-oefenapp voor werk | Vloertaal voor begeleiders';
-  const description = 'Zet Vloertaal in bij je taalcafé, NT2-les of op de werkvloer: gratis, zonder account, met uitleg in negen talen en een directe link naar elk onderwerp.';
+  const description = 'Zet Vloertaal in bij je taalcafé, NT2-les of op de werkvloer: gratis, zonder account, met uitleg in dertien talen en een directe link naar elk onderwerp.';
   const themes = THEMES.map((t) => ({ t, list: TOPIC_LINKS.filter((p) => p.theme.id === t.id) })).filter((g) => g.list.length > 0);
   const data = [
     {
@@ -37,14 +37,14 @@ export function coachPage(): string {
   return plainPage(
     { path: COACH_PATH, lang: 'nl', title, description, ogLocale: 'nl_NL', data },
     `<h1>Vloertaal voor begeleiders</h1>
-<p class="lead">Voor taalcoaches, NT2-docenten, taalhuizen, werkgevers en uitzendbureaus. Vloertaal is een gratis web-app waarmee nieuwkomers en arbeidsmigranten Nederlands oefenen voor hun werk: korte lessen met woorden, zinnen en gesprekjes van de werkvloer, met uitleg in negen talen. Geen account, geen reclame, en het werkt op elke telefoon. Een aanvulling op een taalcursus of taalcoach, geen vervanging.</p>
+<p class="lead">Voor taalcoaches, NT2-docenten, taalhuizen, werkgevers en uitzendbureaus. Vloertaal is een gratis web-app waarmee nieuwkomers en arbeidsmigranten Nederlands oefenen voor hun werk: korte lessen met woorden, zinnen en gesprekjes van de werkvloer, met uitleg in dertien talen. Geen account, geen reclame, en het werkt op elke telefoon. Een aanvulling op een taalcursus of taalcoach, geen vervanging.</p>
 <a class="cta" href="/">Open Vloertaal →</a>
 <section aria-labelledby="how"><h2 id="how">Zo zet je het in</h2>
 <ul class="lines">
 <li><strong>Op de eigen telefoon.</strong> Stuur de link in de taal van je leerling, bijvoorbeeld <a href="/pl/">vloertaal.nl/pl</a> voor Poolse collega’s: de app vraagt dan meteen ‘Polski?’. De leerling kiest zelf een sector. Geen account, geen app-winkel.</li>
 <li><strong>Elke dag een paar minuten.</strong> Korte lessen werken beter dan af en toe lang. “Herhaal vandaag” brengt de woorden terug die nog lastig zijn.</li>
 <li><strong>Naar één onderwerp.</strong> Elk onderwerp heeft een eigen link die het in de app opent (hieronder: “open”). Handig na een les over het loonstrookje of veiligheid.</li>
-<li><strong>Bij een taalcafé of in de klas.</strong> Samen één les doen, daarna zelf verder. Een certificaat per onderwerp en een zakkaart met de belangrijkste zinnen.</li>
+<li><strong>Bij een taalcafé of in de klas.</strong> Samen één les doen, daarna zelf verder. Een certificaat per onderwerp en een spiekkaartje met de belangrijkste zinnen.</li>
 <li><strong>Wie al Nederlands spreekt</strong> kiest “Nederlands”: dan leert die de regels op het werk (<a href="/werkregels/">Werkregels</a>).</li>
 </ul></section>
 <section aria-labelledby="employers"><h2 id="employers">Voor werkgevers en uitzendbureaus</h2>
