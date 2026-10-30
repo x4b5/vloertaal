@@ -63,8 +63,7 @@ const BY_NL: Record<string, BeUnit | undefined> = {
 export const BE_TODO: readonly string[] = [
   // Agent A: werk vinden, beginnen, contract (klaar)
 
-  // Agent B: tijd, rekenen, geld
-  'r.rekenen', 'r.tijd', 'r.winkel', 'r.geld',
+  // Agent B: tijd, rekenen, geld (klaar)
 
   // Agent C: ziek, veilig, rechten, samen, sectoren magazijn, fabriek en zorg
   'r.ziek', 'r.veilig', 'r.rechten', 'r.samen', 'r.warehouse', 'r.factory', 'r.care',
