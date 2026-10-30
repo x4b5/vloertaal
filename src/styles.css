@@ -2177,7 +2177,11 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .bay-again-label.bi-swap > .bi-help { --help-size: 0.9em; }
 /* Right-to-left: every forward chevron (Start, Continue, the review card, open lessons) points
    the way the line reads, to the left. */
-.icon-fwd:dir(rtl), .icon-fwd.icon-flip, .player-rtl .feedback-icon .icon-fwd { scale: -1 1; }
+/* transform, not the `scale` property (iOS 14.5 / Chrome 104), and :dir() in a rule of its own
+   (iOS 16.4 / Chrome 120): an unknown selector drops the whole list, so on older phones none
+   of these arrows turned round. */
+.icon-fwd.icon-flip, .player-rtl .feedback-icon .icon-fwd { transform: scaleX(-1); }
+.icon-fwd:dir(rtl) { transform: scaleX(-1); }
 
 /* Situation on a phone: a smaller colleague and a wider bubble, so the options start higher. */
 @media (max-width: 759px) {
@@ -2831,8 +2835,10 @@ html:has(.topbar) { scroll-padding-top: 72px; }
    close and help swap sides, the number badge and picture of a card sit on the right with the
    text right-aligned, the tag, the feedback icon and the speech-bubble tails follow. Dutch and
    English stay left to right inside it, each in its own isolate. */
-.player[dir='rtl'] :is([lang='nl'], [lang='en']) { direction: ltr; unicode-bidi: isolate; }
-.player[dir='rtl'] :is(.answer-line, .tile-bank, .pair-say, .pair-tiles) { direction: ltr; }
+/* Written out, not :is() (iOS 14 / Chrome 88): on older phones the whole rule fell away and a
+   Dutch line in a mirrored card showed its full stop at the wrong end (".uur"). */
+.player[dir='rtl'] [lang='nl'], .player[dir='rtl'] [lang='en'] { direction: ltr; unicode-bidi: isolate; }
+.player[dir='rtl'] .answer-line, .player[dir='rtl'] .tile-bank, .player[dir='rtl'] .pair-say, .player[dir='rtl'] .pair-tiles { direction: ltr; }
 .player[dir='rtl'] .speaker-bubble { padding-left: 18px; padding-right: 9px; }
 .player[dir='rtl'] .chat-bubble:not(.chat-bubble-me) { padding-left: 18px; padding-right: 8px; }
 .player[dir='rtl'] :is(.speaker-bubble, .chat-bubble:not(.chat-bubble-me))::before {
@@ -2847,7 +2853,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .player[dir='rtl'] .chat-bubble-me.right::before { border-color: var(--green); }
 .player[dir='rtl'] .chat-bubble-me.wrong::before { border-color: var(--red); }
 /* The colleagues turn to face the bubble, now on their left. */
-.player[dir='rtl'] :is(.speaker-char, .chat-char, .tip-char) { scale: -1 1; }
+.player[dir='rtl'] .speaker-char, .player[dir='rtl'] .chat-char, .player[dir='rtl'] .tip-char { transform: scaleX(-1); }
 .player[dir='rtl'] .feedback { padding: 12px 12px 10px 16px; rotate: 0.6deg; }
 .player[dir='rtl'] .match-x { right: auto; left: -6px; }
 .player[dir='rtl'] .type-display, .player[dir='rtl'] .type-input { text-align: center; }
@@ -2856,8 +2862,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .player[dir='rtl'] [lang='nl']:not(.type-input, .type-display, .tile, .letter-tile, .tag-nl) { text-align: right; }
 /* Forward chevrons follow the dir attribute too (:dir() is not always re-evaluated for cards
    that change state, e.g. the next lesson's Start right after a lesson). */
-[dir='rtl'] .icon-fwd { scale: -1 1; }
-[dir='rtl'] [dir='ltr'] .icon-fwd { scale: 1 1; }
+[dir='rtl'] .icon-fwd { transform: scaleX(-1); }
+[dir='rtl'] [dir='ltr'] .icon-fwd { transform: none; }
 /* Short phones (360×640): the letter tiles sit higher, so most of them clear the footer. */
 @media (max-height: 700px) {
   .exercise:has(.letter-bank) .listen-buttons { margin: 0 0 12px; }
@@ -2968,7 +2974,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .rb-all-head h1 { display: flex; flex-direction: column; font-size: 1.35rem; line-height: 1.2; }
 .rb-all-nl { font-size: 0.9375rem; font-weight: 600; color: var(--muted); letter-spacing: 0.02em; }
 .rb-all-head h1 .bi-help { --help-size: 0.62em; }
-[dir='rtl'] .rb-all-head .icon-btn .icon { scale: -1 1; }
+[dir='rtl'] .rb-all-head .icon-btn .icon { transform: scaleX(-1); }
 
 /* ---- Speaking practice ---- */
 /* "Say it" (src/components/Speaking.tsx): the word card, one big mic button with a calm pulsing
@@ -3148,7 +3154,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .pocket-screen .screen-head h1 { display: flex; flex-direction: column; line-height: 1.15; }
 .pocket-screen-nl { font-size: 0.8rem; font-weight: 600; color: var(--ink-2); letter-spacing: 0.02em; }
 .pocket-screen .screen-head h1 .bi { font-size: 1em; }
-.pocket-screen > .screen-head[dir='rtl'] > .icon-btn .icon { scale: -1 1; }
+.pocket-screen > .screen-head[dir='rtl'] > .icon-btn .icon { transform: scaleX(-1); }
 .pocket-card {
   padding: 14px 14px 6px; background: var(--card); color: var(--ink);
   border: 2px solid var(--kraft); border-radius: 16px; box-shadow: 0 0 0 6px var(--kraft-light);
@@ -3374,7 +3380,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* The back arrow: fixed chrome, the same button in the same top-start corner on every page. */
 .chrome-back { flex: none; width: 44px; height: 44px; margin-inline-start: -8px; color: var(--ink); cursor: pointer; }
 .chrome-back:hover { background: var(--concrete-2); }
-[dir='rtl'] .chrome-back .icon { scale: -1 1; }
+[dir='rtl'] .chrome-back .icon { transform: scaleX(-1); }
 /* A head with only the arrow (first-run pages, the reminder times): it sits over the page's
    top margin, so the centred title below does not move. */
 .chrome-head { position: relative; z-index: 1; margin: -8px 0 -36px; }
@@ -3608,8 +3614,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .cert-no-name .keep-link-gloss { order: 1; font-size: 1rem; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
 .cert-no-name .bi { align-items: center; }
 /* Right to left: a Dutch line keeps its own direction ("Vrouw of man?", not "?Vrouw of man"). */
-[dir='rtl'] :is(.set-row-nl, .max3-nl, .max3-title-nl, .sector-title-nl)[lang='nl'] { direction: ltr; unicode-bidi: isolate; }
-[dir='rtl'] :is(.set-row-nl, .max3-nl, .max3-title-nl)[lang='nl'] { text-align: right; }
+[dir='rtl'] .set-row-nl[lang='nl'], [dir='rtl'] .max3-nl[lang='nl'], [dir='rtl'] .max3-title-nl[lang='nl'], [dir='rtl'] .sector-title-nl[lang='nl'] { direction: ltr; unicode-bidi: isolate; }
+[dir='rtl'] .set-row-nl[lang='nl'], [dir='rtl'] .max3-nl[lang='nl'], [dir='rtl'] .max3-title-nl[lang='nl'] { text-align: right; }
 /* The waybill's stamp sits where its (hidden) head was: keep the hint clear of it. */
 .max3-settings > .waybill { padding-top: 48px; }
 .offline-status-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; }
