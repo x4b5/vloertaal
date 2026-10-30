@@ -54,7 +54,8 @@ export const meedoenUnit: RuleUnit = {
         },
         // ⚖️ check: Voor de gemeenteraad mogen meer mensen stemmen dan alleen Nederlanders ⚖️.
         // ⚖️ check: Mensen uit een ander EU-land mogen stemmen als ze hier wonen ⚖️.
-        // ⚖️ check: Mensen van buiten de EU mogen na 5 jaar wonen met een verblijfsvergunning ⚖️.
+        // ⚖️ check: Mensen van buiten de EU mogen stemmen na 5 jaar in Nederland. Ze moeten al die
+        //   tijd een verblijfsvergunning hebben ⚖️.
         // ⚖️ check: Je moet wel 18 jaar of ouder zijn ⚖️.
         // Redactie: voorwaarden voor niet-EU-burgers: 5 jaar onafgebroken legaal verblijf, op de
         //   peildatum van de verkiezing ⚖️ (Kieswet; rijksoverheid.nl, "Wie mag stemmen bij de
@@ -64,7 +65,7 @@ export const meedoenUnit: RuleUnit = {
           id: 'r.l.meedoen.1.tf1',
           statement: 'Piotr mag ook stemmen voor de gemeenteraad.',
           answer: true,
-          why: 'Voor de gemeenteraad mogen meer mensen stemmen dan alleen Nederlanders. Mensen uit een ander EU-land mogen stemmen als ze hier wonen. Polen hoort bij de EU. Mensen van buiten de EU mogen na 5 jaar wonen met een verblijfsvergunning. Je moet wel 18 jaar of ouder zijn.',
+          why: 'Voor de gemeenteraad mogen meer mensen stemmen dan alleen Nederlanders. Mensen uit een ander EU-land mogen stemmen als ze hier wonen. Polen hoort bij de EU. Mensen van buiten de EU mogen stemmen na 5 jaar in Nederland. Ze moeten al die tijd een verblijfsvergunning hebben. Je moet wel 18 jaar of ouder zijn.',
         },
         // ⚖️ check: De Tweede Kamer heeft 150 leden ⚖️ (twijfel 15).
         {
