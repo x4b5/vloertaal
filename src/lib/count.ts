@@ -63,8 +63,9 @@ interface Env {
 const realEnv = (): Env => ({
   prod: Boolean(import.meta.env.PROD),
   host: typeof location === 'undefined' ? '' : location.hostname,
-  // Do Not Track, and its successor Global Privacy Control: both mean "don't count me".
-  dnt: typeof navigator !== 'undefined' && (navigator.doNotTrack === '1' || (globalThis as { doNotTrack?: string }).doNotTrack === '1'
+  // Do Not Track, and its successor Global Privacy Control: both mean "don't count me". (window, not
+  // globalThis: that is missing in Chrome 70.)
+  dnt: typeof navigator !== 'undefined' && (navigator.doNotTrack === '1' || (typeof window !== 'undefined' && (window as Window & { doNotTrack?: string }).doNotTrack === '1')
     || (navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl === true),
 });
 

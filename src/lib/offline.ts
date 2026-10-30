@@ -7,6 +7,7 @@ import type { UiCode } from '../i18n/types';
 import { mixLessonFor } from '../content/review';
 import type { Lesson, Unit } from '../content/types';
 import { tokenize } from './answers';
+import { allMatches } from './matches';
 import { clipUrl, recordedIndexReady } from './audio';
 import { castVoices, type VoiceRef } from './voices';
 import { persistStorage } from './install';
@@ -225,7 +226,7 @@ export function shellUrls(): string[] {
 
 /** The .woff2 files in a @font-face `src` (the .woff fallbacks are for browsers this app doesn't run in). */
 export function fontFileUrls(src: string): string[] {
-  return [...src.matchAll(/url\(\s*["']?([^"')]+?)["']?\s*\)/g)].map((m) => m[1]).filter((u) => /\.woff2(?:[?#]|$)/.test(u));
+  return allMatches(src, /url\(\s*["']?([^"')]+?)["']?\s*\)/g).map((m) => m[1]).filter((u) => /\.woff2(?:[?#]|$)/.test(u));
 }
 
 /** The emergency phrases (the Hulp tab), in Dutch: they go along with every saved topic of the

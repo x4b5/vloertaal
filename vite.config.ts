@@ -183,8 +183,27 @@ export default defineConfig({
   base: './',
   // Which deploy a tester's report came from (src/lib/report.ts): the commit on Vercel, "dev" here.
   define: { 'import.meta.env.VITE_BUILD': JSON.stringify((process.env.VERCEL_GIT_COMMIT_SHA ?? 'dev').slice(0, 7)) },
+  css: {
+    lightningcss: {
+      // The CSS minifier writes media queries the old way, (max-width: 380px), never (width<=380px)
+      // as it would for build.cssTarget: iOS before 16.4 and Chrome before 104 skip such a query
+      // whole, so every small-screen rule would be lost on a 320 px iPhone SE. 448 is Lightning
+      // CSS's Features.MediaQueries (range, interval and custom media); tests/oldPhones.test.ts.
+      include: 448,
+    },
+  },
   plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild()],
   build: {
+    // Old, cheap phones (Android 7–10 with an old Chrome or Samsung Internet, iPhones on iOS 13–15):
+    // Vite's own default is 'baseline-widely-available' (Chrome 111, iOS 16.4), whose ?. ?? ??= and
+    // class fields such a phone cannot parse: the whole app file would fail, the splash stays up.
+    // Guarded by tests/oldPhones.test.ts.
+    target: ['es2019', 'chrome70', 'safari13', 'ios13', 'firefox78', 'edge79'],
+    // The CSS keeps Vite's own default list: for these old targets Lightning CSS would turn every
+    // margin-inline, inset-inline-end … into left/right picked by :lang() (twice the file), and an
+    // element with dir="rtl" but no RTL lang (src/components/Route.tsx) would then be laid out
+    // left-to-right on every phone, new ones too. Old phones get fallbacks in styles.css instead.
+    cssTarget: ['chrome111', 'edge111', 'firefox114', 'safari16.4', 'ios16.4'],
     rolldownOptions: {
       output: {
         codeSplitting: {
