@@ -5,6 +5,7 @@ import { fillCount, ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
 import { BACKUP_MAX_BYTES, backupFile, bestStreak, knownLessons, mergeAddsNothing, mergeBackup, parseBackup, replaceLoses, replaceWithBackup, type Progress } from '../lib/progress';
+import { OPEN_TO_ALL } from '../lib/access';
 import { REMINDER_TIMES, forgetReminder, googleCalendarUrl, isAndroid, rememberReminder, reminderCancelIcs, reminderEvent, reminderIcs, saveFile } from '../lib/reminder';
 import { REMIND_DEFAULT, REMIND_OTHER_TIMES, REMIND_OWN, keepNext, ownTime, type KeepAction, type KeepStep } from '../lib/keep';
 import { Bi } from './Bi';
@@ -330,8 +331,9 @@ export function BackupCard({ progress, lang, onRestore }: {
       <span className="waybill-tag" lang="nl" aria-hidden>Vrachtbrief</span>
       <CardHead nl="Bewaar je voortgang" text={ui('backupTitle', lang)} />
       <p className="keep-hint"><Bi text={ui('backupHint', lang)} /></p>
-      {/* The code is not in the file (and stays out of it): a new phone needs it again. */}
-      <p className="keep-hint keep-hint-code"><Bi text={ui('backupNewPhone', lang)} /></p>
+      {/* The code is not in the file (and stays out of it): a new phone needs it again. Not while
+          the app is open to all (OPEN_TO_ALL): then no phone needs a code. */}
+      {!OPEN_TO_ALL && <p className="keep-hint keep-hint-code"><Bi text={ui('backupNewPhone', lang)} /></p>}
       {/* What the file holds, like the lines of a waybill. */}
       <dl className="waybill-lines" lang="nl">
         <div><dt>Lessen</dt><dd>{lessons}</dd></div>

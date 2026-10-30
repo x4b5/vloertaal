@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'Tu gardes un petit œil sur la voile ?',
     'zg.zeil.m': 'Tu surveilles que tout se passe bien et en sécurité ?',
     'zg.zeil.s': 'Ta responsable doit partir un moment. Elle dit : “Hou je een oogje in het zeil?” Qu’est-ce qu’elle veut dire ?',
-    'zg.zeil.o1': 'Surveille que tout se passe bien pendant son absence.',
+    'zg.zeil.o1': "Surveille pendant qu’elle est absente.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zeil.o2': 'Va regarder un bateau.',
     'zg.zeil.o3': 'Ferme les yeux un moment.',
     'zg.zeil.w': '“Een oogje in het zeil houden” veut dire : faire attention que tout se passe bien. Tu ne sais pas quoi surveiller ? Demande-lui avant qu’elle parte.',
@@ -99,8 +99,8 @@ const t: CultureTranslation = {
     'zg.oefening.o2': 'Tu dois aller à un cours d’art.',
     'zg.oefening.o3': 'Arrête, c’est trop difficile pour toi.',
     'zg.oefening.w': 'C’est un proverbe : avec la pratique, on devient meilleur. C’est vrai aussi pour apprendre le néerlandais.',
-    'zg.zwartwit.lit': 'Demande-le noir sur blanc.',
-    'zg.zwartwit.m': 'Demande-le sur papier, par écrit.',
+    'zg.zwartwit.lit': "Fais en sorte de l’avoir noir sur blanc.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zwartwit.m': "Fais en sorte de l’avoir sur papier, par écrit.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zwartwit.s': 'Ton patron te promet plus de salaire. Ta collègue dit : “Zorg dat je het zwart op wit hebt.” Qu’est-ce qu’elle veut dire ?',
     'zg.zwartwit.o1': 'Demande la promesse par écrit.',
     'zg.zwartwit.o2': 'Demande du papier noir et blanc.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'Le temps, c’est de l’argent.',
     'zg.tijdgeld.m': 'Le temps est précieux : ne le perds pas.',
     'zg.tijdgeld.s': 'Ton patron veut que le camion soit chargé vite. Il dit : “Tijd is geld.” Qu’est-ce qu’il veut dire ?',
-    'zg.tijdgeld.o1': 'Le temps de travail coûte de l’argent, alors travaille sans perdre de temps.',
+    'zg.tijdgeld.o1': "Travaille vite, ne perds pas de temps.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.tijdgeld.o2': 'Tu reçois de l’argent quand tu arrives en retard.',
     'zg.tijdgeld.o3': 'L’horloge est très chère.',
     'zg.tijdgeld.w': 'Cette expression veut dire que le temps est précieux. Ce n’est jamais une raison pour un travail dangereux ou des heures non payées.',

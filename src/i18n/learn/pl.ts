@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Prośba o wpisanie nazwisk do chatbota: ta odpowiedź mówi „nie” i dlaczego.",
     'c.aifake.a.why': "Nowy numer prosi o pieniądze: ta odpowiedź najpierw to sprawdza.",
     'c.aiplan.a.why': "Grafik zrobiła aplikacja: ta odpowiedź prosi o człowieka.",
-    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
-    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
-    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
-    // TODO vertalen: why the chat replies of the new lessons fit (30 October 2026). English for now; the translators replace it.
-    "c.details.a.why": "Asked for a last name: this reply gives it and offers to spell it.",
-    "c.dates.a.why": "Asked for the date: this reply gives the day and the date.",
-    "c.permit.a.why": "A no is fine with a reason. Offering another day helps.",
-    "c.kids.a.why": "Asked why: this reply gives the reason, the daycare called.",
-    "c.body.a.why": "Asked where it hurts: this reply names the place and the cause.",
-    "c.jobends.a.why": "The house goes with the job: this reply asks about the notice period.",
+    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
+    'c.harvest.a.why': "Pytanie, ile rzędów: ta odpowiedź podaje liczbę i to, co zostało.", // nieuw, nog nalezen
+    'c.greensafe.a.why': "Dopiero co opryskana: ta odpowiedź mówi „jeszcze nie” i dlaczego.", // nieuw, nog nalezen
+    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    'c.details.a.why': "Pytanie o nazwisko: ta odpowiedź je podaje i proponuje przeliterowanie.",
+    'c.dates.a.why': "Pytanie o datę: ta odpowiedź podaje dzień i datę.",
+    'c.permit.a.why': "Odmowa jest w porządku, jeśli podasz powód. Zaproponowanie innego dnia pomaga.",
+    'c.kids.a.why': "Pytanie „dlaczego”: ta odpowiedź podaje powód, dzwonili ze żłobka.",
+    'c.body.a.why': "Pytanie, gdzie boli: ta odpowiedź mówi, gdzie i dlaczego.",
+    'c.jobends.a.why': "Mieszkanie jest związane z pracą: ta odpowiedź pyta o okres wypowiedzenia.",
   },
 };
 

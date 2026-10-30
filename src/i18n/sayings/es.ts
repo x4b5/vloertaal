@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': '¿Mantienes un ojito en la vela?',
     'zg.zeil.m': '¿Vigilas que todo vaya bien y de forma segura?',
     'zg.zeil.s': 'Tu encargada tiene que irse un momento. Dice: “Hou je een oogje in het zeil?” ¿Qué quiere decir?',
-    'zg.zeil.o1': 'Vigila que todo vaya bien mientras ella no está.',
+    'zg.zeil.o1': "Vigila mientras ella no está.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zeil.o2': 'Ve a mirar un barco.',
     'zg.zeil.o3': 'Cierra los ojos un momento.',
     'zg.zeil.w': '“Een oogje in het zeil houden” quiere decir: prestar atención para que todo vaya bien. ¿No sabes bien qué vigilar? Pregúntale antes de que se vaya.',
@@ -99,8 +99,8 @@ const t: CultureTranslation = {
     'zg.oefening.o2': 'Tienes que ir a una clase de arte.',
     'zg.oefening.o3': 'Para, es demasiado difícil para ti.',
     'zg.oefening.w': 'Es un refrán: con práctica lo haces mejor. También vale para aprender neerlandés.',
-    'zg.zwartwit.lit': 'Pídelo negro sobre blanco.',
-    'zg.zwartwit.m': 'Pídelo en papel, por escrito.',
+    'zg.zwartwit.lit': "Asegúrate de tenerlo negro sobre blanco.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zwartwit.m': "Asegúrate de tenerlo en papel, por escrito.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zwartwit.s': 'Tu jefe te promete más sueldo. Tu compañera dice: “Zorg dat je het zwart op wit hebt.” ¿Qué quiere decir?',
     'zg.zwartwit.o1': 'Pide la promesa por escrito.',
     'zg.zwartwit.o2': 'Pide papel negro y blanco.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'El tiempo es dinero.',
     'zg.tijdgeld.m': 'El tiempo vale mucho: no lo pierdas.',
     'zg.tijdgeld.s': 'Tu jefe quiere que el camión se cargue rápido. Dice: “Tijd is geld.” ¿Qué quiere decir?',
-    'zg.tijdgeld.o1': 'El tiempo de trabajo cuesta dinero, así que trabaja sin perder tiempo.',
+    'zg.tijdgeld.o1': "Trabaja rápido, no pierdas tiempo.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.tijdgeld.o2': 'Te dan dinero por llegar tarde.',
     'zg.tijdgeld.o3': 'El reloj es muy caro.',
     'zg.tijdgeld.w': 'Este dicho quiere decir que el tiempo vale mucho. Nunca es una razón para un trabajo peligroso ni para horas sin pagar.',

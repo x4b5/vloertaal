@@ -1168,170 +1168,170 @@ const t: CultureTranslation = {
     'c.aiplan.o2': { m: 'ተቐበሎ፡ እቲ ኣፕ ኩሉ ግዜ ቅኑዕ እዩ።', f: 'ተቐበልዮ፡ እቲ ኣፕ ኩሉ ግዜ ቅኑዕ እዩ።' },
     'c.aiplan.o3': { m: 'ናብ ስራሕ ምምጻእ ኣቋርጽ።', f: 'ናብ ስራሕ ምምጻእ ኣቋርጺ።' },
     'c.aiplan.w': { m: 'ኣፕታት ይጋገዩ፡ ብዛዕባኻ ድማ ኩሉ ኣይፈልጡን። መግለጺ ክትሓትት ትኽእል ኢኻ፡ ሰብ ድማ ደጊሙ ክርእዮ ይኽእል።', f: 'ኣፕታት ይጋገዩ፡ ብዛዕባኺ ድማ ኩሉ ኣይፈልጡን። መግለጺ ክትሓትቲ ትኽእሊ ኢኺ፡ ሰብ ድማ ደጊሙ ክርእዮ ይኽእል።' },
-    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
-    'u.kas': 'In the greenhouse', // TODO vertalen
-    'l.harvest': 'Harvesting and sorting', // TODO vertalen
-    'w.kas': 'the greenhouse', // TODO vertalen
-    'w.gewas': 'the crop (the plants that grow)', // TODO vertalen
-    'w.rij': 'the row (of plants)', // TODO vertalen
-    'w.oogsten': 'to harvest', // TODO vertalen
-    'w.sorteren': 'to sort', // TODO vertalen
-    'w.krat': 'the crate', // TODO vertalen
-    's.harvest.1': 'I work in the greenhouse.', // TODO vertalen
-    's.harvest.2': 'Which row do I start in?', // TODO vertalen
-    's.harvest.3': 'The crate is full.', // TODO vertalen
-    'c.harvest.q': 'How many rows have you done?', // TODO vertalen
-    'c.harvest.a': 'Four. Two more to go.', // TODO vertalen
-    'l.greensafe': 'Safe in the greenhouse', // TODO vertalen
-    'w.spuitmiddelen': 'the crop sprays (chemicals for plants)', // TODO vertalen
-    'w.bespoten': 'sprayed (with crop sprays)', // TODO vertalen
-    'w.plukkar': 'the picking trolley', // TODO vertalen
-    'w.bukken': 'to bend down', // TODO vertalen
-    'w.drinken': 'to drink', // TODO vertalen
-    'w.hitte': 'the heat (when it is very hot)', // TODO vertalen
-    's.greensafe.1': 'Has this greenhouse been sprayed?', // TODO vertalen
-    's.greensafe.2': 'I am going to drink some water.', // TODO vertalen
-    's.greensafe.3': 'Where is the picking trolley?', // TODO vertalen
-    'c.greensafe.q': 'May I work in greenhouse three?', // TODO vertalen
-    'c.greensafe.a': 'No, not yet. It was just sprayed.', // TODO vertalen
-    'c.harvest': 'Tempo and piece rate', // TODO vertalen
-    'c.harvest.b': 'In a greenhouse you often work at a set pace (tempo). Some employers pay per crate, per row or per kilo: piece rate (stukloon). Even with piece rate, you must earn at least the minimum wage for every hour you work. Check the amount on rijksoverheid.nl. Write down your hours and your crates every day, and compare them with your payslip. Working fast is good, but working safely comes first. General information. For your situation: ask the union, the Juridisch Loket or FairWork.', // TODO vertalen
-    'c.harvest.p': 'How many crates did I do today?', // TODO vertalen
-    'c.harvest.s': 'You are paid per crate. At the end of the week, your pay is much lower than the minimum wage for the hours you worked. What do you do?', // TODO vertalen
-    'c.harvest.o1': 'Show your own list of hours and crates to your employer, and ask for help if it is not fixed.', // TODO vertalen
-    'c.harvest.o2': 'Say nothing and work faster next week, so you earn more.', // TODO vertalen
-    'c.harvest.o3': 'Accept it: with piece rate, a low pay is normal.', // TODO vertalen
-    'c.harvest.w': 'With piece rate you must still get at least the minimum wage for every hour you worked. Your own list of hours and crates helps you show what you did.', // TODO vertalen
-    'c.greensafe': 'Heat and sprays', // TODO vertalen
-    'c.greensafe.b': 'In a greenhouse it can get very hot, also in spring. Drink water often, also before you feel thirsty, and take your breaks in a cool place. Do you feel dizzy or sick, or do you get a headache? Stop and tell someone. Plants are sometimes sprayed with chemicals (spuitmiddelen). A greenhouse that was just sprayed often has a sign at the door. Do not go in until your supervisor says it is safe again. General information. For your situation: ask your employer, the union or the Juridisch Loket.', // TODO vertalen
-    'c.greensafe.p': 'May I already work in this greenhouse?', // TODO vertalen
-    'c.greensafe.s': 'A greenhouse was sprayed this morning. There is a sign on the door. A colleague says: "Come on, it is only for a moment." What do you do?', // TODO vertalen
-    'c.greensafe.o1': 'Stay outside, and ask your supervisor when it is safe again.', // TODO vertalen
-    'c.greensafe.o2': 'Go in quickly and hold your breath.', // TODO vertalen
-    'c.greensafe.o3': 'Go in, and wash your hands well afterwards.', // TODO vertalen
-    'c.greensafe.w': 'Crop sprays can hurt your skin, eyes and lungs, also when you smell nothing. After spraying there is a waiting time before people may go in again. Your supervisor knows when it is over.', // TODO vertalen
-    // TODO vertalen: Getallen en gegevens (u.data), l.permit, l.kids, l.body, l.jobends and their tips (30 October 2026). English for now; the translators replace it.
-    "u.data": "Numbers and details",
-    "l.details": "Your details",
-    "w.voornaam": "the first name",
-    "w.achternaam": "the last name, the family name",
-    "w.spellen": "to spell (say the letters one by one)",
-    "w.telefoonnummer": "the phone number",
-    "w.geboortedatum": "the date of birth",
-    "w.formulier": "the form (a paper or page to fill in)",
-    "s.details.1": "Can you spell that?",
-    "s.details.2": "I am passing on my new phone number.",
-    "s.details.3": "This form is for the Tax Office.",
-    "c.details.q": "What is your last name?",
-    "c.details.a": "Haddad. Shall I spell it?",
-    "l.dates": "Days and dates",
-    "w.maandag": "Monday",
-    "w.week": "the week",
-    "w.maand": "the month",
-    "w.volgendeweek": "next week",
-    "w.vorigeweek": "last week",
-    "w.totenmet": "up to and including (the last day counts too)",
-    "s.dates.1": "I can work Monday to Thursday (Thursday too).",
-    "s.dates.2": "Next week I work four days.",
-    "s.dates.3": "Last week I worked forty hours.",
-    "c.dates.q": "What is the date today?",
-    "c.dates.a": "It is Monday, 3 June.",
-    "l.permit": "Papers, integration and your job",
-    "w.papieren": "the papers (documents)",
-    "w.werkvergunning": "the work permit",
-    "w.werknemer": "the employee (you work for an employer)",
-    "w.zzper": "the self-employed worker (you work for yourself)",
-    "w.inburgering": "the civic integration (the course and exams for newcomers)",
-    "w.taalles": "the language class",
-    "s.permit.1": "May I work here with my papers?",
-    "s.permit.2": "Am I an employee or self-employed?",
-    "s.permit.3": "I work as an on-call worker.",
-    "c.permit.q": "Can you work on Tuesday?",
-    "c.permit.a": "No, then I have a language class. Wednesday is fine.",
-    "l.kids": "Children and work",
-    "w.zwanger": "pregnant",
-    "w.kinderopvang": "the childcare, the daycare",
-    "w.ophalen": "to pick up (go and get someone)",
-    "w.ziekkind": "a sick child",
-    "w.ouderschapsverlof": "the parental leave",
-    "w.zorgverlof": "the care leave (time off to care for a sick family member)",
-    "s.kids.1": "My child is sick. I have to pick my child up.",
-    "s.kids.2": "May I take emergency leave?",
-    "s.kids.3": "Does my employer keep paying my wage?",
-    "c.kids.q": "Why do you have to leave now?",
-    "c.kids.a": "The daycare called. My son has a fever.",
-    "l.body": "Body and pain",
-    "w.hoofd": "the head",
-    "w.rug": "the back (of your body)",
-    "w.arm": "the arm",
-    "w.hand": "the hand",
-    "w.buik": "the belly, the stomach",
-    "w.oog": "the eye",
-    "s.body.1": "I have pain in my hand.",
-    "s.body.2": "I do not feel well.",
-    "s.body.3": "I fell on my arm.",
-    "c.body.q": "Where does it hurt?",
-    "c.body.a": "In my back. I lifted a heavy box.",
-    "l.jobends": "When your job ends",
-    "w.eindafrekening": "the final pay (your last pay when a job ends)",
-    "w.opzeggen": "to end (a contract), to cancel",
-    "w.uitschrijven": "to deregister (take your name off a list)",
-    "w.sleutel": "the key",
-    "w.verhuizen": "to move (to another home)",
-    "w.busje": "the van (a small bus)",
-    "s.jobends.1": "Do I get my holiday pay and my days off paid out?",
-    "s.jobends.2": "I ask for advice at the Juridisch Loket.",
-    "s.jobends.3": "I arrange new health insurance myself.",
-    "c.jobends.q": "Your work ends on Friday. Then you must leave the house too.",
-    "c.jobends.a": "What is the notice period of my rental contract?",
-    "c.details": "Your details: give them right",
-    "c.details.b": "At the start of a job, you give your details: your name, address, phone number, date of birth and BSN. Spell your name slowly, letter by letter. Then check your name on your contract and your payslip. A mistake in your name or BSN can give problems with your pay or tax. New address or phone number? Tell your employer.",
-    "c.details.p": "Let me spell it: A, L, I.",
-    "c.details.s": "On the phone, the agency writes down your last name. You hear that they write it wrong. What do you do?",
-    "c.details.o1": "Spell your name slowly, letter by letter, and ask them to read it back.",
-    "c.details.o2": "Say nothing: a small mistake in your name does not matter.",
-    "c.details.o3": "Hang up, and hope they find the mistake later.",
-    "c.details.w": "Your name must be the same on your contract, your payslip and your ID. Then your pay and your tax go right. Spelling and reading back is a quick check.",
-    "c.dates": "Dates: the day comes first",
-    "c.dates.b": "In Dutch, the day comes before the month: 3-6 is 3 June, not 6 March. \"Tot en met\" means that the last day counts too. Days and months start with a small letter: maandag, juni. Not sure about a date? Ask, and say it back.",
-    "c.dates.p": "Do you mean 3 June?",
-    "c.dates.s": "Your roster says: \"Vrij: 3-6 tot en met 5-6\". When are you free?",
-    "c.dates.o1": "On 3, 4 and 5 June.",
-    "c.dates.o2": "On 3 and 4 June only.",
-    "c.dates.o3": "From 6 March to 6 May.",
-    "c.dates.w": "The day comes first, then the month: 3-6 is 3 June. \"Tot en met\" means that 5 June counts too, so you are free for three days.",
-    "c.permit": "Work and integration",
-    "c.permit.b": "Do you have to do the civic integration (inburgering)? Tell your employer, and tell the gemeente that you work. Ask early if your language classes can fit around your roster. Not sure if you may work here? Check it before you start, for example at the IND, UWV or VluchtelingenWerk. Do they ask you to register as self-employed (zzp’er) for this job? Ask for advice first. General information. For your situation: ask your employer, the union or the Juridisch Loket.",
-    "c.permit.p": "I have a language class on Tuesday. Can my roster take that into account?",
-    "c.permit.s": "You start a new job. Your language class is on Tuesday mornings, but your roster has you working on Tuesdays. What do you do?",
-    "c.permit.o1": "Tell your supervisor about the class, and ask if the roster can change.",
-    "c.permit.o2": "Skip the language class, because work comes first.",
-    "c.permit.o3": "Stay home on Tuesdays without saying anything.",
-    "c.permit.w": "Your integration is a duty too. Many employers help when they know it early. The gemeente can also help you fit your plan around your work.",
-    "c.kids": "Your child is sick",
-    "c.kids.b": "Is your child suddenly sick? Tell your employer right away. For the first hours or days you can take emergency leave (calamiteitenverlof), and your employer keeps paying you. Does your child need care for longer? Then you can ask for care leave (zorgverlof). Pregnant? Your employer may not fire you because of that. Ask in time about pregnancy leave and parental leave (ouderschapsverlof). General information. For your situation: ask your employer, the union or the Juridisch Loket.",
-    "c.kids.p": "My child is sick. Can I leave early today?",
-    "c.kids.s": "The daycare (kinderopvang) calls you at work. Your child has a fever and must go home. What do you do?",
-    "c.kids.o1": "Tell your supervisor right away, and ask for emergency leave to pick up your child.",
-    "c.kids.o2": "Leave without a word, and explain it tomorrow.",
-    "c.kids.o3": "Stay at work, and let your child wait until your shift ends.",
-    "c.kids.w": "A sick child is an emergency at home. When you tell your supervisor first, they can plan the work. Emergency leave is for moments like this.",
-    "c.body": "Say what happened and where it hurts",
-    "c.body.b": "At the doctor, say what happened and where it hurts. For example: \"Ik ben gevallen. Mijn arm doet pijn.\" Also say how long you have had the pain. You do not have to guess what you have: the doctor checks that. Did it happen at work? Tell your supervisor the same day.",
-    "c.body.p": "I fell. My arm hurts.",
-    "c.body.s": "You lifted a heavy box at work. Now your back hurts a lot. You are at the family doctor (huisarts). What do you say?",
-    "c.body.o1": "Where it hurts, and what happened: you lifted a heavy box.",
-    "c.body.o2": "Only that you feel bad, nothing more.",
-    "c.body.o3": "The name of an illness you found on the internet.",
-    "c.body.w": "When you say where it hurts and what happened, the doctor understands you faster. The doctor checks what it is. Did it happen at work? Tell your supervisor too.",
-    "c.jobends": "Your job ends: what else stops?",
-    "c.jobends.b": "When your job ends, check your final pay (eindafrekening). Days off you did not use and your holiday pay are usually paid out with it. Housing, health insurance or a van through the agency can stop at the same time. Arrange your own health insurance in time. Your rental contract has its own rules: ask for advice before you leave the house. Moving, or leaving the Netherlands? Tell the gemeente. General information. For your situation: ask your employer, the union or the Juridisch Loket.",
-    "c.jobends.p": "When do I get my final pay?",
-    "c.jobends.s": "Your job ends on Friday. Your health insurance goes through the agency. What do you do?",
-    "c.jobends.o1": "Ask the agency when the insurance stops, and arrange your own in time.",
-    "c.jobends.o2": "Nothing: the insurance goes on by itself.",
-    "c.jobends.o3": "Wait until you get sick, and arrange it then.",
-    "c.jobends.w": "Insurance through the agency often stops when your job stops. When you live or work in the Netherlands, you usually must have health insurance. Arranging it in time keeps you covered.",
+    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
+    'u.kas': 'ኣብ ገዛ ኣትክልቲ', // nieuw, nog nalezen
+    'l.harvest': 'ምእራይን ምፍላይን', // nieuw, nog nalezen
+    'w.kas': 'ገዛ ኣትክልቲ (ናይ መስተዋት ወይ ፕላስቲክ ገዛ ንኣትክልቲ)', // nieuw, nog nalezen
+    'w.gewas': 'ዘራእቲ (ዝበቝሉ ኣትክልቲ)', // nieuw, nog nalezen
+    'w.rij': 'መስርዕ (ናይ ኣትክልቲ)', // nieuw, nog nalezen
+    'w.oogsten': 'ምእራይ', // nieuw, nog nalezen
+    'w.sorteren': 'ምፍላይ (ብዓይነት ምስራዕ)', // nieuw, nog nalezen
+    'w.krat': 'ሳጹን (ናይ ፕላስቲክ)', // nieuw, nog nalezen
+    's.harvest.1': 'ኣብ ገዛ ኣትክልቲ እሰርሕ።', // nieuw, nog nalezen
+    's.harvest.2': 'ኣብ ኣየናይ መስርዕ እጅምር?', // nieuw, nog nalezen
+    's.harvest.3': 'እቲ ሳጹን መሊኡ።', // nieuw, nog nalezen
+    'c.harvest.q': { m: 'ክንደይ መስርዕ ወዲእካ?', f: 'ክንደይ መስርዕ ወዲእኪ?' }, // nieuw, nog nalezen
+    'c.harvest.a': 'ኣርባዕተ። ገና ክልተ ተሪፎም።', // nieuw, nog nalezen
+    'l.greensafe': 'ብድሕንነት ኣብ ገዛ ኣትክልቲ', // nieuw, nog nalezen
+    'w.spuitmiddelen': 'መድሃኒት ኣትክልቲ (ኣብ ኣትክልቲ ዝንስነስ ኬሚካል)', // nieuw, nog nalezen
+    'w.bespoten': 'ዝተነስነሰ (ብመድሃኒት ኣትክልቲ)', // nieuw, nog nalezen
+    'w.plukkar': 'ናይ ምእራይ ዓረብያ', // nieuw, nog nalezen
+    'w.bukken': 'ምድናን', // nieuw, nog nalezen
+    'w.drinken': 'ምስታይ', // nieuw, nog nalezen
+    'w.hitte': 'ሃሩር (ኣዝዩ ምስ ዝውዕይ)', // nieuw, nog nalezen
+    's.greensafe.1': 'እዚ ገዛ ኣትክልቲ ተነስኒሱ ድዩ?', // nieuw, nog nalezen
+    's.greensafe.2': 'ቁሩብ ማይ ክሰቲ እኸይድ።', // nieuw, nog nalezen
+    's.greensafe.3': 'እታ ናይ ምእራይ ዓረብያ ኣበይ ኣላ?', // nieuw, nog nalezen
+    'c.greensafe.q': 'ኣብ ገዛ ኣትክልቲ ቁጽሪ ሰለስተ ክሰርሕ ይፍቀደለይ ዶ?', // nieuw, nog nalezen
+    'c.greensafe.a': 'ኣይፋል፡ ገና። ሕጂ እዩ ተነስኒሱ።', // nieuw, nog nalezen
+    'c.harvest': 'ቅልጣፈን ብብዝሒ ዝኽፈል ደሞዝን', // nieuw, nog nalezen
+    'c.harvest.b': { m: 'ኣብ ገዛ ኣትክልቲ ብዙሕ ግዜ ብዝተወሰነ ቅልጣፈ (tempo) ትሰርሕ። ገለ ኣስራሕቲ ብሳጹን፡ ብመስርዕ ወይ ብኪሎ ይኸፍሉ፡ እዚ ብብዝሒ ዝኽፈል ደሞዝ (stukloon) እዩ። ብstukloon እኳ እንተ ኾነ፡ ንዝሰራሕካዮ ነፍሲ ወከፍ ሰዓት እንተ ወሓደ ዝተሓተ ደሞዝ ክትረክብ ኣለካ። እቲ መጠን ኣብ rijksoverheid.nl ርአ። መዓልታዊ ሰዓታትካን ሳጹናትካን ጽሓፍ፡ ምስ ወረቐት ደሞዝካ ድማ ኣወዳድሮም። ቀልጢፍካ ምስራሕ ጽቡቕ እዩ፡ ግን ብድሕንነት ምስራሕ ይቕድም። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንማሕበር ሰራሕተኛታት፡ ንJuridisch Loket ወይ ንFairWork ሕተት።', f: 'ኣብ ገዛ ኣትክልቲ ብዙሕ ግዜ ብዝተወሰነ ቅልጣፈ (tempo) ትሰርሒ። ገለ ኣስራሕቲ ብሳጹን፡ ብመስርዕ ወይ ብኪሎ ይኸፍሉ፡ እዚ ብብዝሒ ዝኽፈል ደሞዝ (stukloon) እዩ። ብstukloon እኳ እንተ ኾነ፡ ንዝሰራሕክዮ ነፍሲ ወከፍ ሰዓት እንተ ወሓደ ዝተሓተ ደሞዝ ክትረክቢ ኣለኪ። እቲ መጠን ኣብ rijksoverheid.nl ርኣዪ። መዓልታዊ ሰዓታትኪን ሳጹናትኪን ጽሓፊ፡ ምስ ወረቐት ደሞዝኪ ድማ ኣወዳድርዮም። ቀልጢፍኪ ምስራሕ ጽቡቕ እዩ፡ ግን ብድሕንነት ምስራሕ ይቕድም። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንማሕበር ሰራሕተኛታት፡ ንJuridisch Loket ወይ ንFairWork ሕተቲ።' }, // nieuw, nog nalezen
+    'c.harvest.p': 'ሎሚ ክንደይ ሳጹን ወዲአ?', // nieuw, nog nalezen
+    'c.harvest.s': { m: 'ብሳጹን ትኽፈል። ኣብ መወዳእታ ሰሙን፡ ደሞዝካ ንዝሰራሕካዮ ሰዓታት ካብ ዝተሓተ ደሞዝ ኣዝዩ ዝወሓደ እዩ። እንታይ ትገብር?', f: 'ብሳጹን ትኽፈሊ። ኣብ መወዳእታ ሰሙን፡ ደሞዝኪ ንዝሰራሕክዮ ሰዓታት ካብ ዝተሓተ ደሞዝ ኣዝዩ ዝወሓደ እዩ። እንታይ ትገብሪ?' }, // nieuw, nog nalezen
+    'c.harvest.o1': { m: 'ናይ ባዕልኻ ዝርዝር ሰዓታትን ሳጹናትን ንኣስራሒኻ ኣርኢ፡ እንተ ዘይተኣሪሙ ድማ ሓገዝ ሕተት።', f: 'ናይ ባዕልኺ ዝርዝር ሰዓታትን ሳጹናትን ንኣስራሒኺ ኣርእዪ፡ እንተ ዘይተኣሪሙ ድማ ሓገዝ ሕተቲ።' }, // nieuw, nog nalezen
+    'c.harvest.o2': { m: 'ገለ ኣይትበል፡ ዝያዳ ክትረክብ ድማ ኣብ ዝመጽእ ሰሙን ቀልጢፍካ ስራሕ።', f: 'ገለ ኣይትበሊ፡ ዝያዳ ክትረክቢ ድማ ኣብ ዝመጽእ ሰሙን ቀልጢፍኪ ስርሒ።' }, // nieuw, nog nalezen
+    'c.harvest.o3': { m: 'ተቐበሎ፡ ብstukloon ትሑት ደሞዝ ንቡር እዩ።', f: 'ተቐበልዮ፡ ብstukloon ትሑት ደሞዝ ንቡር እዩ።' }, // nieuw, nog nalezen
+    'c.harvest.w': { m: 'ብstukloon እኳ፡ ንዝሰራሕካዮ ነፍሲ ወከፍ ሰዓት እንተ ወሓደ ዝተሓተ ደሞዝ ክትረክብ ኣለካ። ናይ ባዕልኻ ዝርዝር ሰዓታትን ሳጹናትን እንታይ ከም ዝሰራሕካ ንምርኣይ ይሕግዘካ።', f: 'ብstukloon እኳ፡ ንዝሰራሕክዮ ነፍሲ ወከፍ ሰዓት እንተ ወሓደ ዝተሓተ ደሞዝ ክትረክቢ ኣለኪ። ናይ ባዕልኺ ዝርዝር ሰዓታትን ሳጹናትን እንታይ ከም ዝሰራሕኪ ንምርኣይ ይሕግዘኪ።' }, // nieuw, nog nalezen
+    'c.greensafe': 'ሃሩርን መድሃኒት ኣትክልትን', // nieuw, nog nalezen
+    'c.greensafe.b': { m: 'ኣብ ገዛ ኣትክልቲ ኣዝዩ ክውዕይ ይኽእል፡ ኣብ ጽድያ እውን። ብዙሕ ግዜ ማይ ስተ፡ ቅድሚ ምጽማእካ እውን፡ ዕረፍትኻ ድማ ኣብ ዝዛሓለ ቦታ ውሰድ። ርእሲ ምዝዋር፡ ምምላስ ዘምጽእ ስምዒት ወይ ቃንዛ ርእሲ ይስመዓካ ድዩ? ደው በል፡ ንሓደ ሰብ ድማ ንገሮ። ኣትክልቲ ሓደ ሓደ ግዜ ብኬሚካል (spuitmiddelen) ይንስነሱ። ሕጂ ዝተነስነሰ ገዛ ኣትክልቲ ብዙሕ ግዜ ኣብ ማዕጾኡ ምልክት ኣለዎ። ተቖጻጻሪኻ ውሑስ ምዃኑ ክሳብ ዝነግረካ ኣይትእቶ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተት።', f: 'ኣብ ገዛ ኣትክልቲ ኣዝዩ ክውዕይ ይኽእል፡ ኣብ ጽድያ እውን። ብዙሕ ግዜ ማይ ስተዪ፡ ቅድሚ ምጽማእኪ እውን፡ ዕረፍትኺ ድማ ኣብ ዝዛሓለ ቦታ ውሰዲ። ርእሲ ምዝዋር፡ ምምላስ ዘምጽእ ስምዒት ወይ ቃንዛ ርእሲ ይስመዓኪ ድዩ? ደው በሊ፡ ንሓደ ሰብ ድማ ንገርዮ። ኣትክልቲ ሓደ ሓደ ግዜ ብኬሚካል (spuitmiddelen) ይንስነሱ። ሕጂ ዝተነስነሰ ገዛ ኣትክልቲ ብዙሕ ግዜ ኣብ ማዕጾኡ ምልክት ኣለዎ። ተቖጻጻሪኺ ውሑስ ምዃኑ ክሳብ ዝነግረኪ ኣይትእተዊ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቲ።' }, // nieuw, nog nalezen
+    'c.greensafe.p': 'ኣብዚ ገዛ ኣትክልቲ ሕጂ ክሰርሕ ይፍቀደለይ ድዩ?', // nieuw, nog nalezen
+    'c.greensafe.s': { m: 'ሓደ ገዛ ኣትክልቲ ሎሚ ንግሆ ተነስኒሱ። ኣብ ማዕጾ ምልክት ኣሎ። ሓደ ብጻይ ስራሕካ «ንዓ፡ ንሓጺር ግዜ ጥራይ እዩ» ይብል። እንታይ ትገብር?', f: 'ሓደ ገዛ ኣትክልቲ ሎሚ ንግሆ ተነስኒሱ። ኣብ ማዕጾ ምልክት ኣሎ። ሓደ ብጻይ ስራሕኪ «ንዒ፡ ንሓጺር ግዜ ጥራይ እዩ» ይብል። እንታይ ትገብሪ?' }, // nieuw, nog nalezen
+    'c.greensafe.o1': { m: 'ኣብ ደገ ጽናሕ፡ መዓስ ደጊሙ ውሑስ ከም ዝኸውን ድማ ንተቖጻጻሪኻ ሕተቶ።', f: 'ኣብ ደገ ጽናሒ፡ መዓስ ደጊሙ ውሑስ ከም ዝኸውን ድማ ንተቖጻጻሪኺ ሕተትዮ።' }, // nieuw, nog nalezen
+    'c.greensafe.o2': { m: 'ቀልጢፍካ እቶ፡ ትንፋስካ ድማ ሓዝ።', f: 'ቀልጢፍኪ እተዊ፡ ትንፋስኪ ድማ ሓዚ።' }, // nieuw, nog nalezen
+    'c.greensafe.o3': { m: 'እቶ፡ ድሕሪኡ ኣእዳውካ ጽቡቕ ገይርካ ተሓጸብ።', f: 'እተዊ፡ ድሕሪኡ ኣእዳውኪ ጽቡቕ ገይርኪ ተሓጸቢ።' }, // nieuw, nog nalezen
+    'c.greensafe.w': { m: 'መድሃኒት ኣትክልቲ ንቖርበትካ፡ ንኣዒንትኻን ንሳንቡእካን ክጎድእ ይኽእል፡ ዋላ ገለ እንተ ዘይሸተተካ። ድሕሪ ምንስናስ፡ ሰባት ደጊሞም ቅድሚ ምእታዎም ናይ ምጽባይ ግዜ ኣሎ። መዓስ ከም ዝውዳእ ተቖጻጻሪኻ ይፈልጥ።', f: 'መድሃኒት ኣትክልቲ ንቖርበትኪ፡ ንኣዒንትኺን ንሳንቡእኪን ክጎድእ ይኽእል፡ ዋላ ገለ እንተ ዘይሸተተኪ። ድሕሪ ምንስናስ፡ ሰባት ደጊሞም ቅድሚ ምእታዎም ናይ ምጽባይ ግዜ ኣሎ። መዓስ ከም ዝውዳእ ተቖጻጻሪኺ ይፈልጥ።' }, // nieuw, nog nalezen
+    // nieuw, nog nalezen: Getallen en gegevens (u.data), l.permit, l.kids, l.body, l.jobends and their tips (30 October 2026).
+    'u.data': 'ቁጽርታትን ሓበሬታን', // nieuw, nog nalezen
+    'l.details': { m: 'ሓበሬታኻ', f: 'ሓበሬታኺ' }, // nieuw, nog nalezen
+    'w.voornaam': 'ቀዳማይ ስም', // nieuw, nog nalezen
+    'w.achternaam': 'ስም ስድራ፡ ናይ መወዳእታ ስም', // nieuw, nog nalezen
+    'w.spellen': 'ብፊደል ምባል (ፊደላት ሓደ ብሓደ ምባል)', // nieuw, nog nalezen
+    'w.telefoonnummer': 'ቁጽሪ ተሌፎን', // nieuw, nog nalezen
+    'w.geboortedatum': 'ዕለት ልደት', // nieuw, nog nalezen
+    'w.formulier': 'ቅጥዒ (ዝምላእ ወረቐት ወይ ገጽ)', // nieuw, nog nalezen
+    's.details.1': 'ነዚ ብፊደል ክትብልዎ ትኽእሉ ዶ?', // nieuw, nog nalezen
+    's.details.2': 'ሓድሽ ቁጽሪ ተሌፎነይ እሕብር።', // nieuw, nog nalezen
+    's.details.3': 'እዚ ቅጥዒ ንቤት ጽሕፈት ግብሪ እዩ።', // nieuw, nog nalezen
+    'c.details.q': { m: 'ስም ስድራኻ እንታይ እዩ?', f: 'ስም ስድራኺ እንታይ እዩ?' }, // nieuw, nog nalezen
+    'c.details.a': 'Haddad። ብፊደል ክብሎ ዶ?', // nieuw, nog nalezen
+    'l.dates': 'መዓልታትን ዕለታትን', // nieuw, nog nalezen
+    'w.maandag': 'ሰኑይ', // nieuw, nog nalezen
+    'w.week': 'ሰሙን', // nieuw, nog nalezen
+    'w.maand': 'ወርሒ', // nieuw, nog nalezen
+    'w.volgendeweek': 'ዝመጽእ ሰሙን', // nieuw, nog nalezen
+    'w.vorigeweek': 'ዝሓለፈ ሰሙን', // nieuw, nog nalezen
+    'w.totenmet': 'ክሳብ፡ ምስኡ ብምሕዋስ (እታ ናይ መወዳእታ መዓልቲ እውን ትቑጸር)', // nieuw, nog nalezen
+    's.dates.1': 'ካብ ሰኑይ ክሳብ ሓሙስ (ሓሙስ እውን) ክሰርሕ እኽእል።', // nieuw, nog nalezen
+    's.dates.2': 'ኣብ ዝመጽእ ሰሙን ኣርባዕተ መዓልቲ እሰርሕ።', // nieuw, nog nalezen
+    's.dates.3': 'ኣብ ዝሓለፈ ሰሙን ኣርብዓ ሰዓት ሰሪሐ።', // nieuw, nog nalezen
+    'c.dates.q': 'ሎሚ ዕለት ክንደይ እዩ?', // nieuw, nog nalezen
+    'c.dates.a': 'ሰኑይ 3 ሰነ እዩ።', // nieuw, nog nalezen
+    'l.permit': { m: 'ወረቓቕቲ፡ ምውህሃድን ስራሕካን', f: 'ወረቓቕቲ፡ ምውህሃድን ስራሕኪን' }, // nieuw, nog nalezen
+    'w.papieren': 'ወረቓቕቲ (ሰነዳት)', // nieuw, nog nalezen
+    'w.werkvergunning': 'ፍቓድ ስራሕ', // nieuw, nog nalezen
+    'w.werknemer': { m: 'ሰራሕተኛ (ንኣስራሒ ትሰርሕ)', f: 'ሰራሕተኛ (ንኣስራሒ ትሰርሒ)' }, // nieuw, nog nalezen
+    'w.zzper': { m: 'ናይ ርእሱ ሰራሕተኛ (ንርእስኻ ትሰርሕ)', f: 'ናይ ርእሳ ሰራሕተኛ (ንርእስኺ ትሰርሒ)' }, // nieuw, nog nalezen
+    'w.inburgering': 'ምውህሃድ (ትምህርትን ፈተናታትን ንሓደስቲ መጻእቲ)', // nieuw, nog nalezen
+    'w.taalles': 'ትምህርቲ ቋንቋ', // nieuw, nog nalezen
+    's.permit.1': 'ብወረቓቕተይ ኣብዚ ክሰርሕ ይፍቀደለይ ዶ?', // nieuw, nog nalezen
+    's.permit.2': 'ሰራሕተኛ ድየ ወይስ ናይ ርእሰይ ሰራሕተኛ?', // nieuw, nog nalezen
+    's.permit.3': 'ብጻውዒት ዝሰርሕ ሰራሕተኛ ኮይነ እሰርሕ።', // nieuw, nog nalezen
+    'c.permit.q': { m: 'ሰሉስ ክትሰርሕ ትኽእል ዶ?', f: 'ሰሉስ ክትሰርሒ ትኽእሊ ዶ?' }, // nieuw, nog nalezen
+    'c.permit.a': 'ኣይፋል፡ ሽዑ ትምህርቲ ቋንቋ ኣለኒ። ረቡዕ ግን ይኸኣለኒ።', // nieuw, nog nalezen
+    'l.kids': 'ቆልዑን ስራሕን', // nieuw, nog nalezen
+    'w.zwanger': 'ነፍሰ ጾር', // nieuw, nog nalezen
+    'w.kinderopvang': 'መውዓሊ ህጻናት', // nieuw, nog nalezen
+    'w.ophalen': 'ምምጻእ (ንሓደ ሰብ ኬድካ ምውሳድ)', // nieuw, nog nalezen
+    'w.ziekkind': 'ሕሙም ቆልዓ', // nieuw, nog nalezen
+    'w.ouderschapsverlof': 'ፍቓድ ወለዲ', // nieuw, nog nalezen
+    'w.zorgverlof': 'ፍቓድ ክንክን (ንሕሙም ኣባል ስድራ ንምክንኻን ዝውሰድ ግዜ)', // nieuw, nog nalezen
+    's.kids.1': 'ቆልዓይ ሓሚሙ። ክወስዶ ኣለኒ።', // nieuw, nog nalezen
+    's.kids.2': 'ናይ ህጹጽ ኩነታት ፍቓድ ክወስድ ይፍቀደለይ ዶ?', // nieuw, nog nalezen
+    's.kids.3': 'ኣስራሒየ ደሞዘይ ምኽፋል ይቕጽል ድዩ?', // nieuw, nog nalezen
+    'c.kids.q': { m: 'ስለምንታይ ሕጂ ክትከይድ ኣለካ?', f: 'ስለምንታይ ሕጂ ክትከዲ ኣለኪ?' }, // nieuw, nog nalezen
+    'c.kids.a': 'ካብ መውዓሊ ህጻናት ደዊሎም። ወደይ ረስኒ ኣለዎ።', // nieuw, nog nalezen
+    'l.body': 'ኣካልን ቃንዛን', // nieuw, nog nalezen
+    'w.hoofd': 'ርእሲ', // nieuw, nog nalezen
+    'w.rug': { m: 'ሕቖ (ናይ ኣካልካ)', f: 'ሕቖ (ናይ ኣካልኪ)' }, // nieuw, nog nalezen
+    'w.arm': 'ቅልጽም', // nieuw, nog nalezen
+    'w.hand': 'ኢድ', // nieuw, nog nalezen
+    'w.buik': 'ከብዲ', // nieuw, nog nalezen
+    'w.oog': 'ዓይኒ', // nieuw, nog nalezen
+    's.body.1': 'ኢደይ የቐንዝወኒ ኣሎ።', // nieuw, nog nalezen
+    's.body.2': 'ጽቡቕ ኣይተሰምዓንን።', // nieuw, nog nalezen
+    's.body.3': 'ኣብ ቅልጽመይ ወዲቐ።', // nieuw, nog nalezen
+    'c.body.q': { m: 'ኣበይ እዩ ዘቐንዝወካ?', f: 'ኣበይ እዩ ዘቐንዝወኪ?' }, // nieuw, nog nalezen
+    'c.body.a': 'ሕቖይ። ከቢድ ሳጹን ኣልዒለ።', // nieuw, nog nalezen
+    'l.jobends': { m: 'ስራሕካ ምስ ዝውዳእ', f: 'ስራሕኪ ምስ ዝውዳእ' }, // nieuw, nog nalezen
+    'w.eindafrekening': { m: 'ናይ መወዳእታ ክፍሊት (ስራሕ ምስ ተወድአ ናይ መወዳእታ ደሞዝካ)', f: 'ናይ መወዳእታ ክፍሊት (ስራሕ ምስ ተወድአ ናይ መወዳእታ ደሞዝኪ)' }, // nieuw, nog nalezen
+    'w.opzeggen': 'ምቁራጽ (ውዕል)፡ ምስራዝ', // nieuw, nog nalezen
+    'w.uitschrijven': { m: 'ምዝገባ ምስራዝ (ስምካ ካብ ዝርዝር ምውጻእ)', f: 'ምዝገባ ምስራዝ (ስምኪ ካብ ዝርዝር ምውጻእ)' }, // nieuw, nog nalezen
+    'w.sleutel': 'መፍትሕ', // nieuw, nog nalezen
+    'w.verhuizen': 'ገዛ ምቕያር (ናብ ካልእ ገዛ ምግዓዝ)', // nieuw, nog nalezen
+    'w.busje': 'ሚኒባስ (ንእሽቶ ኣውቶቡስ)', // nieuw, nog nalezen
+    's.jobends.1': 'ተወሳኺ ክፍሊት ዕረፍተይን ዘይወሰድክዎም መዓልታት ዕረፍትን ይኽፈለኒ ድዩ?', // nieuw, nog nalezen
+    's.jobends.2': 'ኣብ Juridisch Loket ምኽሪ እሓትት።', // nieuw, nog nalezen
+    's.jobends.3': 'ሓድሽ መድሕን ጥዕና ባዕለይ የዳሉ።', // nieuw, nog nalezen
+    'c.jobends.q': { m: 'ስራሕካ ዓርቢ ይውዳእ። ሽዑ ነቲ ገዛ እውን ክትገድፎ ኣለካ።', f: 'ስራሕኪ ዓርቢ ይውዳእ። ሽዑ ነቲ ገዛ እውን ክትገድፍዮ ኣለኪ።' }, // nieuw, nog nalezen
+    'c.jobends.a': 'ግዜ ቅድመ-ምሕባር ናይ ውዕል ክራየይ ክንደይ እዩ?', // nieuw, nog nalezen
+    'c.details': { m: 'ሓበሬታኻ፡ ብቕኑዕ ሃቦ', f: 'ሓበሬታኺ፡ ብቕኑዕ ሃብዮ' }, // nieuw, nog nalezen
+    'c.details.b': { m: 'ኣብ መጀመርታ ስራሕ ሓበሬታኻ ትህብ፡ ስምካ፡ ኣድራሻኻ፡ ቁጽሪ ተሌፎንካ፡ ዕለት ልደትካን BSNካን። ስምካ ቀስ ኢልካ ፊደል ብፊደል በሎ። ድሕሪኡ ኣብ ውዕልካን ወረቐት ደሞዝካን ስምካ ኣረጋግጽ። ኣብ ስምካ ወይ BSNካ ዘሎ ጌጋ ኣብ ደሞዝካ ወይ ግብርኻ ጸገም ከምጽእ ይኽእል። ሓድሽ ኣድራሻ ወይ ቁጽሪ ተሌፎን ኣለካ ድዩ? ንኣስራሒኻ ንገሮ።', f: 'ኣብ መጀመርታ ስራሕ ሓበሬታኺ ትህቢ፡ ስምኪ፡ ኣድራሻኺ፡ ቁጽሪ ተሌፎንኪ፡ ዕለት ልደትኪን BSNኪን። ስምኪ ቀስ ኢልኪ ፊደል ብፊደል በልዮ። ድሕሪኡ ኣብ ውዕልኪን ወረቐት ደሞዝኪን ስምኪ ኣረጋግጺ። ኣብ ስምኪ ወይ BSNኪ ዘሎ ጌጋ ኣብ ደሞዝኪ ወይ ግብርኺ ጸገም ከምጽእ ይኽእል። ሓድሽ ኣድራሻ ወይ ቁጽሪ ተሌፎን ኣለኪ ድዩ? ንኣስራሒኺ ንገርዮ።' }, // nieuw, nog nalezen
+    'c.details.p': 'ብፊደል ክብሎ፡ A, L, I።', // nieuw, nog nalezen
+    'c.details.s': { m: 'ብተሌፎን እቲ ኤጀንሲ ስም ስድራኻ ይጽሕፎ። ብጌጋ ከም ዝጽሕፍዎ ትሰምዕ። እንታይ ትገብር?', f: 'ብተሌፎን እቲ ኤጀንሲ ስም ስድራኺ ይጽሕፎ። ብጌጋ ከም ዝጽሕፍዎ ትሰምዒ። እንታይ ትገብሪ?' }, // nieuw, nog nalezen
+    'c.details.o1': { m: 'ስምካ ቀስ ኢልካ ፊደል ብፊደል በሎ፡ ደጊሞም ከንብብዎ ድማ ሕተቶም።', f: 'ስምኪ ቀስ ኢልኪ ፊደል ብፊደል በልዮ፡ ደጊሞም ከንብብዎ ድማ ሕተትዮም።' }, // nieuw, nog nalezen
+    'c.details.o2': { m: 'ገለ ኣይትበል፡ ኣብ ስምካ ዘሎ ንእሽቶ ጌጋ ጸገም የብሉን።', f: 'ገለ ኣይትበሊ፡ ኣብ ስምኪ ዘሎ ንእሽቶ ጌጋ ጸገም የብሉን።' }, // nieuw, nog nalezen
+    'c.details.o3': { m: 'ስልኪ ዕጸው፡ ነቲ ጌጋ ደሓር ክረኽብዎ ድማ ተስፋ ግበር።', f: 'ስልኪ ዕጸዊ፡ ነቲ ጌጋ ደሓር ክረኽብዎ ድማ ተስፋ ግበሪ።' }, // nieuw, nog nalezen
+    'c.details.w': { m: 'ስምካ ኣብ ውዕልካ፡ ኣብ ወረቐት ደሞዝካን ኣብ መንነት ወረቐትካን ሓደ ዓይነት ክኸውን ኣለዎ። ሽዑ ደሞዝካን ግብርኻን ብቕኑዕ ይኸዱ። ብፊደል ምባልን ደጊምካ ምስማዕን ቅልጡፍ መረጋገጺ እዩ።', f: 'ስምኪ ኣብ ውዕልኪ፡ ኣብ ወረቐት ደሞዝኪን ኣብ መንነት ወረቐትኪን ሓደ ዓይነት ክኸውን ኣለዎ። ሽዑ ደሞዝኪን ግብርኺን ብቕኑዕ ይኸዱ። ብፊደል ምባልን ደጊምኪ ምስማዕን ቅልጡፍ መረጋገጺ እዩ።' }, // nieuw, nog nalezen
+    'c.dates': 'ዕለታት፡ መዓልቲ ቅድም ትመጽእ', // nieuw, nog nalezen
+    'c.dates.b': { m: 'ብሆላንድኛ መዓልቲ ቅድሚ ወርሒ ትመጽእ፡ 3-6 ማለት 3 ሰነ እዩ፡ 6 መጋቢት ኣይኮነን። «Tot en met» ማለት እታ ናይ መወዳእታ መዓልቲ እውን ትቑጸር። መዓልታትን ኣዋርሕን ብንኡስ ፊደል ይጅምሩ፡ maandag, juni። ብዛዕባ ሓደ ዕለት ርግጸኛ ኣይኮንካን? ሕተት፡ ደጊምካ ድማ በሎ።', f: 'ብሆላንድኛ መዓልቲ ቅድሚ ወርሒ ትመጽእ፡ 3-6 ማለት 3 ሰነ እዩ፡ 6 መጋቢት ኣይኮነን። «Tot en met» ማለት እታ ናይ መወዳእታ መዓልቲ እውን ትቑጸር። መዓልታትን ኣዋርሕን ብንኡስ ፊደል ይጅምሩ፡ maandag, juni። ብዛዕባ ሓደ ዕለት ርግጸኛ ኣይኮንኪን? ሕተቲ፡ ደጊምኪ ድማ በልዮ።' }, // nieuw, nog nalezen
+    'c.dates.p': '3 ሰነ ማለት ድዩ?', // nieuw, nog nalezen
+    'c.dates.s': { m: 'መደብ ስራሕካ «Vrij: 3-6 tot en met 5-6» ይብል። መዓስ ኢኻ ነጻ?', f: 'መደብ ስራሕኪ «Vrij: 3-6 tot en met 5-6» ይብል። መዓስ ኢኺ ነጻ?' }, // nieuw, nog nalezen
+    'c.dates.o1': 'ኣብ 3፡ 4ን 5ን ሰነ።', // nieuw, nog nalezen
+    'c.dates.o2': 'ኣብ 3ን 4ን ሰነ ጥራይ።', // nieuw, nog nalezen
+    'c.dates.o3': 'ካብ 6 መጋቢት ክሳብ 6 ግንቦት።', // nieuw, nog nalezen
+    'c.dates.w': { m: 'መዓልቲ ቅድም፡ ድሕሪኡ ወርሒ ትመጽእ፡ 3-6 ማለት 3 ሰነ እዩ። «Tot en met» ማለት 5 ሰነ እውን ትቑጸር፡ ስለዚ ሰለስተ መዓልቲ ነጻ ኢኻ።', f: 'መዓልቲ ቅድም፡ ድሕሪኡ ወርሒ ትመጽእ፡ 3-6 ማለት 3 ሰነ እዩ። «Tot en met» ማለት 5 ሰነ እውን ትቑጸር፡ ስለዚ ሰለስተ መዓልቲ ነጻ ኢኺ።' }, // nieuw, nog nalezen
+    'c.permit': 'ስራሕን ምውህሃድን', // nieuw, nog nalezen
+    'c.permit.b': { m: 'ምውህሃድ (inburgering) ክትገብር ኣለካ ድዩ? ንኣስራሒኻ ንገሮ፡ ከም እትሰርሕ ድማ ንgemeente ንገሮም። ትምህርቲ ቋንቋኻ ምስ መደብ ስራሕካ ክሰማማዕ ይኽእል እንተ ኾይኑ ኣቐዲምካ ሕተት። ኣብዚ ክትሰርሕ ከም ዝፍቀደልካ ርግጸኛ ኣይኮንካን? ቅድሚ ምጅማርካ ኣረጋግጽ፡ ንኣብነት ኣብ IND፡ UWV ወይ VluchtelingenWerk። ነዚ ስራሕ ከም ናይ ርእሱ ሰራሕተኛ (zzp’er) ክትምዝገብ ይሓቱኻ ድዮም? ቅድም ምኽሪ ሕተት። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተት።', f: 'ምውህሃድ (inburgering) ክትገብሪ ኣለኪ ድዩ? ንኣስራሒኺ ንገርዮ፡ ከም እትሰርሒ ድማ ንgemeente ንገርዮም። ትምህርቲ ቋንቋኺ ምስ መደብ ስራሕኪ ክሰማማዕ ይኽእል እንተ ኾይኑ ኣቐዲምኪ ሕተቲ። ኣብዚ ክትሰርሒ ከም ዝፍቀደልኪ ርግጸኛ ኣይኮንኪን? ቅድሚ ምጅማርኪ ኣረጋግጺ፡ ንኣብነት ኣብ IND፡ UWV ወይ VluchtelingenWerk። ነዚ ስራሕ ከም ናይ ርእሳ ሰራሕተኛ (zzp’er) ክትምዝገቢ ይሓቱኺ ድዮም? ቅድም ምኽሪ ሕተቲ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቲ።' }, // nieuw, nog nalezen
+    'c.permit.p': 'ሰሉስ ትምህርቲ ቋንቋ ኣለኒ። መደብ ስራሐይ ነዚ ኣብ ግምት ከእትዎ ይኽእል ዶ?', // nieuw, nog nalezen
+    'c.permit.s': { m: 'ሓድሽ ስራሕ ትጅምር። ትምህርቲ ቋንቋኻ ሰሉስ ንግሆ እዩ፡ ግን ብመደብ ስራሕካ ሰሉስ ትሰርሕ ኢኻ። እንታይ ትገብር?', f: 'ሓድሽ ስራሕ ትጅምሪ። ትምህርቲ ቋንቋኺ ሰሉስ ንግሆ እዩ፡ ግን ብመደብ ስራሕኪ ሰሉስ ትሰርሒ ኢኺ። እንታይ ትገብሪ?' }, // nieuw, nog nalezen
+    'c.permit.o1': { m: 'ብዛዕባ እቲ ትምህርቲ ንተቖጻጻሪኻ ንገሮ፡ መደብ ስራሕ ክቕየር ይኽእል እንተ ኾይኑ ድማ ሕተቶ።', f: 'ብዛዕባ እቲ ትምህርቲ ንተቖጻጻሪኺ ንገርዮ፡ መደብ ስራሕ ክቕየር ይኽእል እንተ ኾይኑ ድማ ሕተትዮ።' }, // nieuw, nog nalezen
+    'c.permit.o2': { m: 'ስራሕ ይቕድም፡ ስለዚ ነቲ ትምህርቲ ቋንቋ ግደፎ።', f: 'ስራሕ ይቕድም፡ ስለዚ ነቲ ትምህርቲ ቋንቋ ግደፍዮ።' }, // nieuw, nog nalezen
+    'c.permit.o3': { m: 'ገለ ከይበልካ ኩሉ ሰሉስ ኣብ ገዛ ጽናሕ።', f: 'ገለ ከይበልኪ ኩሉ ሰሉስ ኣብ ገዛ ጽናሒ።' }, // nieuw, nog nalezen
+    'c.permit.w': { m: 'ምውህሃድካ እውን ግዴታ እዩ። ብዙሓት ኣስራሕቲ ኣቐዲሞም እንተ ፈሊጦም ይሕግዙ። እቲ gemeente እውን መደብካ ምስ ስራሕካ ንምስምማዕ ክሕግዘካ ይኽእል።', f: 'ምውህሃድኪ እውን ግዴታ እዩ። ብዙሓት ኣስራሕቲ ኣቐዲሞም እንተ ፈሊጦም ይሕግዙ። እቲ gemeente እውን መደብኪ ምስ ስራሕኪ ንምስምማዕ ክሕግዘኪ ይኽእል።' }, // nieuw, nog nalezen
+    'c.kids': { m: 'ቆልዓኻ ሓሚሙ', f: 'ቆልዓኺ ሓሚሙ' }, // nieuw, nog nalezen
+    'c.kids.b': { m: 'ቆልዓኻ ብሃንደበት ሓሚሙ ድዩ? ብቕጽበት ንኣስራሒኻ ንገሮ። ንመጀመርታ ሰዓታት ወይ መዓልታት ናይ ህጹጽ ኩነታት ፍቓድ (calamiteitenverlof) ክትወስድ ትኽእል፡ ኣስራሒኻ ድማ ደሞዝካ ምኽፋል ይቕጽል። ቆልዓኻ ንነዊሕ ግዜ ክንክን የድልዮ ድዩ? ሽዑ ፍቓድ ክንክን (zorgverlof) ክትሓትት ትኽእል። ነፍሰ ጾር ዝኾነት ሰራሕተኛ፡ ኣስራሒኣ ብሰንኪ እዚ ካብ ስራሕ ክሰጉጋ ኣይፍቀዶን። ብዛዕባ ፍቓድ ጥንስን ሕርስን ፍቓድ ወለድን (ouderschapsverlof) ብግዜኡ ሕተት። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተት።', f: 'ቆልዓኺ ብሃንደበት ሓሚሙ ድዩ? ብቕጽበት ንኣስራሒኺ ንገርዮ። ንመጀመርታ ሰዓታት ወይ መዓልታት ናይ ህጹጽ ኩነታት ፍቓድ (calamiteitenverlof) ክትወስዲ ትኽእሊ፡ ኣስራሒኺ ድማ ደሞዝኪ ምኽፋል ይቕጽል። ቆልዓኺ ንነዊሕ ግዜ ክንክን የድልዮ ድዩ? ሽዑ ፍቓድ ክንክን (zorgverlof) ክትሓትቲ ትኽእሊ። ነፍሰ ጾር ኢኺ? ኣስራሒኺ ብሰንኪ እዚ ካብ ስራሕ ክሰጉገኪ ኣይፍቀዶን። ብዛዕባ ፍቓድ ጥንስን ሕርስን ፍቓድ ወለድን (ouderschapsverlof) ብግዜኡ ሕተቲ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቲ።' }, // nieuw, nog nalezen
+    'c.kids.p': 'ቆልዓይ ሓሚሙ። ሎሚ ኣቐዲመ ክኸይድ ይኽእል ዶ?', // nieuw, nog nalezen
+    'c.kids.s': { m: 'መውዓሊ ህጻናት (kinderopvang) ኣብ ስራሕ ይድውለልካ። ቆልዓኻ ረስኒ ኣለዎ፡ ናብ ገዛ ድማ ክኸይድ ኣለዎ። እንታይ ትገብር?', f: 'መውዓሊ ህጻናት (kinderopvang) ኣብ ስራሕ ይድውለልኪ። ቆልዓኺ ረስኒ ኣለዎ፡ ናብ ገዛ ድማ ክኸይድ ኣለዎ። እንታይ ትገብሪ?' }, // nieuw, nog nalezen
+    'c.kids.o1': { m: 'ብቕጽበት ንተቖጻጻሪኻ ንገሮ፡ ቆልዓኻ ክትወስድ ድማ ናይ ህጹጽ ኩነታት ፍቓድ ሕተት።', f: 'ብቕጽበት ንተቖጻጻሪኺ ንገርዮ፡ ቆልዓኺ ክትወስዲ ድማ ናይ ህጹጽ ኩነታት ፍቓድ ሕተቲ።' }, // nieuw, nog nalezen
+    'c.kids.o2': { m: 'ቃል ከይበልካ ኪድ፡ ጽባሕ ድማ ግለጾ።', f: 'ቃል ከይበልኪ ኪዲ፡ ጽባሕ ድማ ግለጽዮ።' }, // nieuw, nog nalezen
+    'c.kids.o3': { m: 'ኣብ ስራሕ ጽናሕ፡ ቆልዓኻ ድማ ክሳብ ፈረቓኻ ዝውዳእ ይጽበ።', f: 'ኣብ ስራሕ ጽናሒ፡ ቆልዓኺ ድማ ክሳብ ፈረቓኺ ዝውዳእ ይጽበ።' }, // nieuw, nog nalezen
+    'c.kids.w': { m: 'ሕሙም ቆልዓ ኣብ ገዛ ህጹጽ ኩነታት እዩ። ቅድም ንተቖጻጻሪኻ ምስ እትነግሮ፡ ነቲ ስራሕ ከመሓድሮ ይኽእል። ናይ ህጹጽ ኩነታት ፍቓድ ንከምዚ ዝኣመሰለ ግዜ እዩ።', f: 'ሕሙም ቆልዓ ኣብ ገዛ ህጹጽ ኩነታት እዩ። ቅድም ንተቖጻጻሪኺ ምስ እትነግርዮ፡ ነቲ ስራሕ ከመሓድሮ ይኽእል። ናይ ህጹጽ ኩነታት ፍቓድ ንከምዚ ዝኣመሰለ ግዜ እዩ።' }, // nieuw, nog nalezen
+    'c.body': { m: 'እንታይ ከም ዘጋጠመን ኣበይ ከም ዘቐንዝወካን ንገር', f: 'እንታይ ከም ዘጋጠመን ኣበይ ከም ዘቐንዝወኪን ንገሪ' }, // nieuw, nog nalezen
+    'c.body.b': { m: 'ኣብ ሓኪም እንታይ ከም ዘጋጠመን ኣበይ ከም ዘቐንዝወካን ንገር። ንኣብነት፡ «Ik ben gevallen. Mijn arm doet pijn.» ካብ መዓስ ጀሚሩ እቲ ቃንዛ ከም ዘለካ እውን ንገር። እንታይ ከም ዘለካ ክትግምት ኣየድልየካን፡ ሓኪም የረጋግጾ። ኣብ ስራሕ ድዩ ኣጋጢሙ? ኣብታ መዓልቲ እቲኣ ንተቖጻጻሪኻ ንገሮ።', f: 'ኣብ ሓኪም እንታይ ከም ዘጋጠመን ኣበይ ከም ዘቐንዝወኪን ንገሪ። ንኣብነት፡ «Ik ben gevallen. Mijn arm doet pijn.» ካብ መዓስ ጀሚሩ እቲ ቃንዛ ከም ዘለኪ እውን ንገሪ። እንታይ ከም ዘለኪ ክትግምቲ ኣየድልየክን፡ ሓኪም የረጋግጾ። ኣብ ስራሕ ድዩ ኣጋጢሙ? ኣብታ መዓልቲ እቲኣ ንተቖጻጻሪኺ ንገርዮ።' }, // nieuw, nog nalezen
+    'c.body.p': 'ወዲቐ። ቅልጽመይ የቐንዝወኒ ኣሎ።', // nieuw, nog nalezen
+    'c.body.s': { m: 'ኣብ ስራሕ ከቢድ ሳጹን ኣልዒልካ። ሕጂ ሕቖኻ ኣዝዩ የቐንዝወካ ኣሎ። ኣብ ሓኪም ስድራ (huisarts) ኢኻ። እንታይ ትብል?', f: 'ኣብ ስራሕ ከቢድ ሳጹን ኣልዒልኪ። ሕጂ ሕቖኺ ኣዝዩ የቐንዝወኪ ኣሎ። ኣብ ሓኪም ስድራ (huisarts) ኢኺ። እንታይ ትብሊ?' }, // nieuw, nog nalezen
+    'c.body.o1': { m: 'ኣበይ ከም ዘቐንዝወካን እንታይ ከም ዘጋጠመን፡ ከቢድ ሳጹን ኣልዒልካ።', f: 'ኣበይ ከም ዘቐንዝወኪን እንታይ ከም ዘጋጠመን፡ ከቢድ ሳጹን ኣልዒልኪ።' }, // nieuw, nog nalezen
+    'c.body.o2': { m: 'ሕማቕ ከም ዝስምዓካ ጥራይ፡ ካልእ የለን።', f: 'ሕማቕ ከም ዝስምዓኪ ጥራይ፡ ካልእ የለን።' }, // nieuw, nog nalezen
+    'c.body.o3': { m: 'ኣብ ኢንተርነት ዝረኸብካዮ ስም ሕማም።', f: 'ኣብ ኢንተርነት ዝረኸብክዮ ስም ሕማም።' }, // nieuw, nog nalezen
+    'c.body.w': { m: 'ኣበይ ከም ዘቐንዝወካን እንታይ ከም ዘጋጠመን ምስ እትነግር፡ ሓኪም ቀልጢፉ ይርድኣካ። እንታይ ምዃኑ ሓኪም የረጋግጽ። ኣብ ስራሕ ድዩ ኣጋጢሙ? ንተቖጻጻሪኻ እውን ንገሮ።', f: 'ኣበይ ከም ዘቐንዝወኪን እንታይ ከም ዘጋጠመን ምስ እትነግሪ፡ ሓኪም ቀልጢፉ ይርድኣኪ። እንታይ ምዃኑ ሓኪም የረጋግጽ። ኣብ ስራሕ ድዩ ኣጋጢሙ? ንተቖጻጻሪኺ እውን ንገርዮ።' }, // nieuw, nog nalezen
+    'c.jobends': { m: 'ስራሕካ ይውዳእ፡ ካልእ እንታይ ይቋረጽ?', f: 'ስራሕኪ ይውዳእ፡ ካልእ እንታይ ይቋረጽ?' }, // nieuw, nog nalezen
+    'c.jobends.b': { m: 'ስራሕካ ምስ ዝውዳእ፡ ናይ መወዳእታ ክፍሊትካ (eindafrekening) ኣረጋግጽ። ዘይተጠቐምካሎም መዓልታት ዕረፍትን ተወሳኺ ክፍሊት ዓመታዊ ዕረፍትኻን ብዙሕ ግዜ ምስኡ ይኽፈሉ። ብኤጀንሲ ዝረኸብካዮ ገዛ፡ መድሕን ጥዕና ወይ ሚኒባስ ኣብ ሓደ ግዜ ክቋረጽ ይኽእል። ናይ ባዕልኻ መድሕን ጥዕና ብግዜኡ ኣዳሉ። ውዕል ክራይካ ናይ ባዕሉ ሕግታት ኣለዎ፡ ነቲ ገዛ ቅድሚ ምግዳፍካ ምኽሪ ሕተት። ገዛ ትቕይር ወይ ካብ ሆላንድ ትወጽእ ኣለኻ? ንgemeente ንገሮም። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተት።', f: 'ስራሕኪ ምስ ዝውዳእ፡ ናይ መወዳእታ ክፍሊትኪ (eindafrekening) ኣረጋግጺ። ዘይተጠቐምክሎም መዓልታት ዕረፍትን ተወሳኺ ክፍሊት ዓመታዊ ዕረፍትኺን ብዙሕ ግዜ ምስኡ ይኽፈሉ። ብኤጀንሲ ዝረኸብክዮ ገዛ፡ መድሕን ጥዕና ወይ ሚኒባስ ኣብ ሓደ ግዜ ክቋረጽ ይኽእል። ናይ ባዕልኺ መድሕን ጥዕና ብግዜኡ ኣዳልዊ። ውዕል ክራይኪ ናይ ባዕሉ ሕግታት ኣለዎ፡ ነቲ ገዛ ቅድሚ ምግዳፍኪ ምኽሪ ሕተቲ። ገዛ ትቕይሪ ወይ ካብ ሆላንድ ትወጽኢ ኣለኺ? ንgemeente ንገርዮም። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቲ።' }, // nieuw, nog nalezen
+    'c.jobends.p': 'ናይ መወዳእታ ክፍሊተይ መዓስ ይበጽሓኒ?', // nieuw, nog nalezen
+    'c.jobends.s': { m: 'ስራሕካ ዓርቢ ይውዳእ። መድሕን ጥዕናኻ ብኤጀንሲ እዩ። እንታይ ትገብር?', f: 'ስራሕኪ ዓርቢ ይውዳእ። መድሕን ጥዕናኺ ብኤጀንሲ እዩ። እንታይ ትገብሪ?' }, // nieuw, nog nalezen
+    'c.jobends.o1': { m: 'እቲ መድሕን መዓስ ከም ዝቋረጽ ንኤጀንሲ ሕተት፡ ናትካ ድማ ብግዜኡ ኣዳሉ።', f: 'እቲ መድሕን መዓስ ከም ዝቋረጽ ንኤጀንሲ ሕተቲ፡ ናትኪ ድማ ብግዜኡ ኣዳልዊ።' }, // nieuw, nog nalezen
+    'c.jobends.o2': 'ገለ የለን፡ እቲ መድሕን ባዕሉ ይቕጽል።', // nieuw, nog nalezen
+    'c.jobends.o3': { m: 'ክሳብ ትሓምም ተጸበ፡ ሽዑ ኣዳልዎ።', f: 'ክሳብ ትሓምሚ ተጸበዪ፡ ሽዑ ኣዳልውዮ።' }, // nieuw, nog nalezen
+    'c.jobends.w': { m: 'ብኤጀንሲ ዝመጽእ መድሕን ብዙሕ ግዜ ስራሕካ ምስ ዝቋረጽ ይቋረጽ። ኣብ ሆላንድ እንተ ትነብር ወይ እንተ ትሰርሕ፡ ብዙሕ ግዜ መድሕን ጥዕና ክህልወካ ኣለዎ። ብግዜኡ ምስ እተዳሉ፡ ብዘይ መድሕን ኣይትተርፍን።', f: 'ብኤጀንሲ ዝመጽእ መድሕን ብዙሕ ግዜ ስራሕኪ ምስ ዝቋረጽ ይቋረጽ። ኣብ ሆላንድ እንተ ትነብሪ ወይ እንተ ትሰርሒ፡ ብዙሕ ግዜ መድሕን ጥዕና ክህልወኪ ኣለዎ። ብግዜኡ ምስ እተዳልዊ፡ ብዘይ መድሕን ኣይትተርፍን።' }, // nieuw, nog nalezen
   },
 };
 

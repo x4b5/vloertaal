@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'Hältst du ein Äuglein auf das Segel?',
     'zg.zeil.m': 'Passt du auf, dass alles gut und sicher läuft?',
     'zg.zeil.s': 'Deine Vorgesetzte muss kurz weg. Sie sagt: „Hou je een oogje in het zeil?“ Was meint sie?',
-    'zg.zeil.o1': 'Pass auf, dass alles gut läuft, solange sie weg ist.',
+    'zg.zeil.o1': "Pass auf, solange sie weg ist.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zeil.o2': 'Geh ein Boot anschauen.',
     'zg.zeil.o3': 'Mach kurz die Augen zu.',
     'zg.zeil.w': '„Een oogje in het zeil houden“ bedeutet: aufpassen, dass alles gut läuft. Nicht sicher, worauf du achten sollst? Frag sie, bevor sie geht.',
@@ -99,8 +99,8 @@ const t: CultureTranslation = {
     'zg.oefening.o2': 'Du musst zu einem Kunstkurs gehen.',
     'zg.oefening.o3': 'Hör auf, es ist zu schwer für dich.',
     'zg.oefening.w': 'Das ist ein Sprichwort: Mit Übung wirst du besser. Das gilt auch für Niederländisch lernen.',
-    'zg.zwartwit.lit': 'Frag es schwarz auf weiß.',
-    'zg.zwartwit.m': 'Lass es dir auf Papier geben, schriftlich.',
+    'zg.zwartwit.lit': "Sorg dafür, dass du es schwarz auf weiß hast.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zwartwit.m': "Sorg dafür, dass du es auf Papier hast, schriftlich.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zwartwit.s': 'Dein Chef verspricht dir mehr Lohn. Deine Kollegin sagt: „Zorg dat je het zwart op wit hebt.“ Was meint sie?',
     'zg.zwartwit.o1': 'Bitte um das Versprechen schriftlich.',
     'zg.zwartwit.o2': 'Bitte um schwarzes und weißes Papier.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'Zeit ist Geld.',
     'zg.tijdgeld.m': 'Zeit ist wertvoll: Verschwende sie nicht.',
     'zg.tijdgeld.s': 'Dein Chef will, dass der Lkw schnell beladen wird. Er sagt: „Tijd is geld.“ Was meint er?',
-    'zg.tijdgeld.o1': 'Arbeitszeit kostet Geld, also arbeite, ohne Zeit zu verschwenden.',
+    'zg.tijdgeld.o1': "Arbeite schnell, verschwende keine Zeit.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.tijdgeld.o2': 'Du bekommst Geld, wenn du zu spät kommst.',
     'zg.tijdgeld.o3': 'Die Uhr ist sehr teuer.',
     'zg.tijdgeld.w': 'Diese Redewendung bedeutet, dass Zeit wertvoll ist. Sie ist nie ein Grund für unsichere Arbeit oder Stunden ohne Lohn.',

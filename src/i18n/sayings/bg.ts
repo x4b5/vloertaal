@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'Ще държиш ли едно оченце на платното?',
     'zg.zeil.m': 'Ще внимаваш ли всичко да върви добре и безопасно?',
     'zg.zeil.s': 'Началничката ти трябва да излезе за малко. Тя казва: „Hou je een oogje in het zeil?“ Какво иска да каже?',
-    'zg.zeil.o1': 'Внимавай всичко да върви добре, докато я няма.',
+    'zg.zeil.o1': "Пази, докато я няма.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zeil.o2': 'Иди да видиш една лодка.',
     'zg.zeil.o3': 'Затвори очи за малко.',
     'zg.zeil.w': '„Een oogje in het zeil houden“ означава: да внимаваш всичко да върви добре. Не знаеш за какво да внимаваш? Попитай я, преди да тръгне.',
@@ -99,8 +99,8 @@ const t: CultureTranslation = {
     'zg.oefening.o2': 'Трябва да отидеш на урок по изкуство.',
     'zg.oefening.o3': 'Спри, много е трудно за теб.',
     'zg.oefening.w': 'Това е пословица: с упражнения всичко става по-добре. Това важи и за ученето на нидерландски.',
-    'zg.zwartwit.lit': 'Поискай го черно на бяло.',
-    'zg.zwartwit.m': 'Поискай го на хартия, писмено.',
+    'zg.zwartwit.lit': "Погрижи се да го имаш черно на бяло.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zwartwit.m': "Погрижи се да го имаш на хартия, писмено.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zwartwit.s': 'Шефът ти обещава по-висока заплата. Колежката ти казва: „Zorg dat je het zwart op wit hebt.“ Какво иска да каже?',
     'zg.zwartwit.o1': 'Поискай обещанието писмено.',
     'zg.zwartwit.o2': 'Поискай черна и бяла хартия.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'Времето е пари.',
     'zg.tijdgeld.m': 'Времето е ценно: не го губи.',
     'zg.tijdgeld.s': 'Шефът ти иска камионът да се натовари бързо. Той казва: „Tijd is geld.“ Какво иска да каже?',
-    'zg.tijdgeld.o1': 'Работното време струва пари, затова работи, без да губиш време.',
+    'zg.tijdgeld.o1': "Работи бързо, не губи време.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.tijdgeld.o2': 'Получаваш пари, когато закъсняваш.',
     'zg.tijdgeld.o3': 'Часовникът е много скъп.',
     'zg.tijdgeld.w': 'Тази поговорка означава, че времето е ценно. Но това никога не е причина за опасна работа или за часове без заплащане.',

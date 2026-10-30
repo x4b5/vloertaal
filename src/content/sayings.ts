@@ -144,7 +144,7 @@ export const lessonSayings: LessonSaying[] = [
     literal: 'Will you keep a little eye on the sail?',
     meaning: 'Will you watch that everything goes well and safely?',
     situation: 'Your supervisor has to leave for a moment. She says: "Hou je een oogje in het zeil?" What does she mean?',
-    options: ['Watch that everything goes well while she is away.', 'Go and look at a boat.', 'Close your eyes for a moment.'],
+    options: ['Keep watch while she is away.', 'Go and look at a boat.', 'Close your eyes for a moment.'],
     why: '"Een oogje in het zeil houden" means: paying attention that everything goes well. Not sure what to watch? Ask her before she goes.',
   },
   {
@@ -196,8 +196,8 @@ export const lessonSayings: LessonSaying[] = [
     lessonId: 'l.letters',
     emoji: '📄',
     nl: 'Zorg dat je het zwart op wit hebt.',
-    literal: 'Ask for it black on white.',
-    meaning: 'Ask for it on paper, in writing.',
+    literal: 'Make sure you have it black on white.',
+    meaning: 'Make sure you have it on paper, in writing.',
     situation: 'Your boss promises you more pay. Your colleague says: "Zorg dat je het zwart op wit hebt." What does she mean?',
     options: ['Ask for the promise in writing.', 'Ask for black and white paper.', 'Do not ask anything.'],
     why: 'Something in writing is proof. For pay, hours and your contract, ask for it "zwart op wit".',
@@ -254,7 +254,7 @@ export const lessonSayings: LessonSaying[] = [
     literal: 'Time is money.',
     meaning: 'Time is valuable: do not waste it.',
     situation: 'Your boss wants the truck loaded quickly. He says: "Tijd is geld." What does he mean?',
-    options: ['Working time costs money, so work without wasting time.', 'You get money for coming late.', 'The clock is very expensive.'],
+    options: ['Work quickly, do not waste time.', 'You get money for coming late.', 'The clock is very expensive.'],
     why: 'This saying means that time is valuable. It is never a reason for unsafe work or hours without pay.',
   },
   {

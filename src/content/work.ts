@@ -1093,7 +1093,7 @@ const laterUnits: Unit[] = [
         ['Is deze training verplicht?', 'Is this training required?'],
         ['Ik wil verder komen in mijn werk.', 'I want to get ahead in my work.'],
       ],
-      [['Wil je een opleiding volgen?', 'Do you want to do a training?'], ['Ja, graag! Wie betaalt dat?', 'Yes, please! Who pays for it?']],
+      [['Wil je een opleiding volgen?', 'Do you want to take a training course?'], ['Ja, graag! Wie betaalt dat?', 'Yes, please! Who pays for it?']],
     ),
   ]),
   unit('health', 'Health', 'Gezondheid', '🩺', '#c0392b', [
@@ -1210,7 +1210,7 @@ const laterUnits: Unit[] = [
         ['bel', 'de bel', 'the bell', '🛎️'],
       ],
       [
-        ['Ik fiets naar mijn werk.', 'I cycle to my work.'],
+        ['Ik fiets naar mijn werk.', 'I cycle to work.'],
         ['Doe je licht aan!', 'Turn on your light!'],
         ['Zet je fiets op slot.', 'Lock your bike.'],
       ],
@@ -2307,7 +2307,7 @@ export const toolsUnit = unit('tools', 'Smart tools', 'Slimme hulpmiddelen', '�
     'keeplearning',
     'Keep learning',
     [
-      ['bibliotheek', 'de bibliotheek', 'the (public) library', '🏫'],
+      ['bibliotheek', 'de bibliotheek', 'the (public) library', '📚'],
       ['taalhuis', 'het Taalhuis', 'the Taalhuis (free help with Dutch)', '🗨️', false],
       ['oefenen', 'oefenen', 'to practise', '🎯', false],
       ['luisteren', 'luisteren', 'to listen', '👂'],

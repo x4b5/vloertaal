@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "يُطلب وضع أسماء في روبوت دردشة: هذا الرد يقول «لا» ويذكر السبب.",
     'c.aifake.a.why': "رقم جديد يطلب مالاً: هذا الرد يتحقق أولاً.",
     'c.aiplan.a.why': "التطبيق وضع جدول العمل: هذا الرد يطلب إنساناً.",
-    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
-    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
-    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
-    // TODO vertalen: why the chat replies of the new lessons fit (30 October 2026). English for now; the translators replace it.
-    "c.details.a.why": "Asked for a last name: this reply gives it and offers to spell it.",
-    "c.dates.a.why": "Asked for the date: this reply gives the day and the date.",
-    "c.permit.a.why": "A no is fine with a reason. Offering another day helps.",
-    "c.kids.a.why": "Asked why: this reply gives the reason, the daycare called.",
-    "c.body.a.why": "Asked where it hurts: this reply names the place and the cause.",
-    "c.jobends.a.why": "The house goes with the job: this reply asks about the notice period.",
+    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
+    'c.harvest.a.why': "السؤال عن عدد الصفوف: هذا الرد يعطي رقماً، وما بقي.", // nieuw, nog nalezen
+    'c.greensafe.a.why': "رُشّت للتو: هذا الرد يقول ليس بعد، ولماذا.", // nieuw, nog nalezen
+    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    'c.details.a.why': "السؤال عن اسم العائلة: هذا الرد يعطيه ويعرض تهجئته.",
+    'c.dates.a.why': "السؤال عن التاريخ: هذا الرد يعطي اليوم والتاريخ.",
+    'c.permit.a.why': "الرفض مع سبب أمر مقبول. اقتراح يوم آخر يساعد.",
+    'c.kids.a.why': "السؤال لماذا: هذا الرد يعطي السبب، الحضانة اتصلت.",
+    'c.body.a.why': "السؤال أين الألم: هذا الرد يذكر المكان والسبب.",
+    'c.jobends.a.why': "السكن مرتبط بالعمل: هذا الرد يسأل عن مهلة الإشعار.",
   },
 };
 
