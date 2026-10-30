@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Te piden poner nombres en un chatbot: esta respuesta dice que no, y por qué.",
     'c.aifake.a.why': "Un número nuevo pide dinero: esta respuesta primero lo comprueba.",
     'c.aiplan.a.why': "Una app hizo el horario: esta respuesta pide hablar con una persona.",
-    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
-    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
-    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
-    // TODO vertalen: why the chat replies of the new lessons fit (30 October 2026). English for now; the translators replace it.
-    "c.details.a.why": "Asked for a last name: this reply gives it and offers to spell it.",
-    "c.dates.a.why": "Asked for the date: this reply gives the day and the date.",
-    "c.permit.a.why": "A no is fine with a reason. Offering another day helps.",
-    "c.kids.a.why": "Asked why: this reply gives the reason, the daycare called.",
-    "c.body.a.why": "Asked where it hurts: this reply names the place and the cause.",
-    "c.jobends.a.why": "The house goes with the job: this reply asks about the notice period.",
+    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
+    'c.harvest.a.why': "Preguntan cuántas filas: esta respuesta da un número, y lo que falta.", // nieuw, nog nalezen
+    'c.greensafe.a.why': "Lo acaban de fumigar: esta respuesta dice todavía no, y por qué.", // nieuw, nog nalezen
+    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    'c.details.a.why': "Preguntan el apellido: esta respuesta lo da y ofrece deletrearlo.",
+    'c.dates.a.why': "Preguntan la fecha: esta respuesta da el día y la fecha.",
+    'c.permit.a.why': "Un no está bien con una razón. Ofrecer otro día ayuda.",
+    'c.kids.a.why': "Preguntan por qué: esta respuesta da la razón, ha llamado la guardería.",
+    'c.body.a.why': "Preguntan dónde duele: esta respuesta dice el sitio y la causa.",
+    'c.jobends.a.why': "La casa va con el trabajo: esta respuesta pregunta por el plazo de preaviso.",
   },
 };
 

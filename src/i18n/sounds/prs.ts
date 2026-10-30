@@ -31,7 +31,7 @@ const t: CultureTranslation = {
     'c.roundsounds.q': 'دروازه باز است؟',
     'c.roundsounds.a': 'نی، بسته است.',
     'c.roundsounds.a.why': 'می‌پرسند دروازه باز است یا نی: این جواب می‌گوید باز نیست.',
-    'l.pbgk': 'p یا b، g یا k',
+    'l.pbgk': "p یا b، g، k یا h", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'w.kl.pak': 'دریشی',
     'w.kl.bak': 'صندوق، سطل کثافات',
     'w.kl.goud': 'طلا',

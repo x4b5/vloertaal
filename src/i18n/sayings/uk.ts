@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'Потримаєш оченятко на вітрилі?',
     'zg.zeil.m': 'Простежиш, щоб усе йшло добре й безпечно?',
     'zg.zeil.s': 'Твоя керівниця має ненадовго піти. Вона каже: «Hou je een oogje in het zeil?» Що вона має на увазі?',
-    'zg.zeil.o1': 'Стеж, щоб усе йшло добре, поки її немає.',
+    'zg.zeil.o1': "Пильнуй, поки її немає.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zeil.o2': 'Піди подивися на човен.',
     'zg.zeil.o3': 'Заплющ очі на хвилинку.',
     'zg.zeil.w': '«Een oogje in het zeil houden» означає: стежити, щоб усе йшло добре. Не знаєш, за чим стежити? Запитай її, поки вона не пішла.',
@@ -99,8 +99,8 @@ const t: CultureTranslation = {
     'zg.oefening.o2': 'Тобі треба піти на урок мистецтва.',
     'zg.oefening.o3': 'Зупинись, для тебе це надто важко.',
     'zg.oefening.w': 'Це прислівʼя: з практикою все виходить краще. Це правда й для вивчення нідерландської.',
-    'zg.zwartwit.lit': 'Попроси це чорним по білому.',
-    'zg.zwartwit.m': 'Попроси це на папері, письмово.',
+    'zg.zwartwit.lit': "Подбай, щоб це було в тебе чорним по білому.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zwartwit.m': "Подбай, щоб це було в тебе на папері, письмово.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zwartwit.s': 'Твій начальник обіцяє тобі більшу зарплату. Твоя колега каже: «Zorg dat je het zwart op wit hebt.» Що вона має на увазі?',
     'zg.zwartwit.o1': 'Попроси цю обіцянку письмово.',
     'zg.zwartwit.o2': 'Попроси чорно-білий папір.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'Час — це гроші.',
     'zg.tijdgeld.m': 'Час цінний: не витрачай його даремно.',
     'zg.tijdgeld.s': 'Твій начальник хоче, щоб вантажівку швидко завантажили. Він каже: «Tijd is geld.» Що він має на увазі?',
-    'zg.tijdgeld.o1': 'Робочий час коштує грошей, тож працюй, не гаючи часу.',
+    'zg.tijdgeld.o1': "Працюй швидко, не гай часу.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.tijdgeld.o2': 'Ти отримуєш гроші за запізнення.',
     'zg.tijdgeld.o3': 'Годинник дуже дорогий.',
     'zg.tijdgeld.w': 'Ця приказка означає, що час цінний. Але це ніколи не причина для небезпечної роботи чи годин без оплати.',
