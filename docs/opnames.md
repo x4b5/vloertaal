@@ -73,10 +73,10 @@ de opname er is leest de telefoon ze voor. Na een opname-run:
 npx vitest run tests/g4b3Clips.test.ts
 ```
 
-De test *"PENDING_RECORDING only holds lines that are still not recorded"* noemt de zinnen die nu
-een opname hebben. Haal die regels weg uit `PENDING_RECORDING` (en een kopje dat leeg wordt) en
-draai de test opnieuw tot hij groen is. Zo wordt de lijst kleiner. Doe dit op dezelfde branch,
-vóór de merge naar `main`: de publicatie draait alle testen.
+De test *"PENDING_RECORDING: names lines that are recorded now"* geeft een **waarschuwing** met de
+zinnen die nu een opname hebben. Hij faalt niet, dus een nieuwe opname houdt de publicatie nooit
+tegen. Haal die regels weg uit `PENDING_RECORDING` (en een kopje dat leeg wordt) wanneer het
+uitkomt. Zo wordt de lijst kleiner.
 
 `tests/offline.test.ts` en `tests/learnerVoice.test.ts` hebben een eigen, kleinere
 `PENDING_RECORDING`. Haal daar dezelfde zinnen weg.
