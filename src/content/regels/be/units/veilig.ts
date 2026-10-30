@@ -261,6 +261,7 @@ export const be: BeUnit = {
             ],
             why: 'Meld elk ongeval, ook als het klein lijkt. Schrijf op wat er gebeurde, wanneer, en wie het zag. Maak een foto van de plek. Dan heb je bewijs als je later klachten krijgt. Een ongeval op weg naar je werk telt meestal ook.',
           },
+          // ⚖️ check: 112 = het noodnummer voor ziekenwagen, brandweer en politie (112.be)
           // ⚖️ check: elke werkgever zorgt voor eerste hulp en wijst hulpverleners aan (EHBO) (codex boek I titel 5, eerste hulp)
           {
             kind: 'whatdo',
