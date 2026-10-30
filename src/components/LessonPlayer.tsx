@@ -23,6 +23,7 @@ import { learnerCharacter, voiceFor } from '../lib/voices';
 import { nonLatinHelp, pickInsteadOfTyping, writingInput } from '../lib/writing';
 import { castFor, colleaguesOf, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
+import { PlayName } from './SpeakButton';
 import { NlPair } from './NlPair';
 import { FlameIcon } from './StreakArt';
 import {
@@ -219,6 +220,36 @@ function answerPair(ex: Exercise, lang?: HelpLanguage): { nl?: string; meaning: 
   }
 }
 
+/** A piece of the status region's announcement, in its own language (a screen reader switches voice). */
+export interface LivePart { text: string; lang: string; dir?: 'ltr' | 'rtl' }
+
+/**
+ * What the status region says after Check: the outcome, then the right answer. Right: "Goed zo!
+ * Correct. <answer>". Wrong: "Het goede antwoord is: <answer>" (the title is the lead). Each piece
+ * keeps its language, so the Dutch is read with a Dutch voice and the help language with its own
+ * (one plain string in the page's lang="nl" read "kamizelka odblaskowa" with a Dutch voice).
+ */
+export function announcement(e: Exercise, correct: boolean, lang?: HelpLanguage, almost?: boolean, given?: string): LivePart[] {
+  const rv = isRuleExercise(e) ? ruleVerdict(e, correct, given) : null;
+  if (rv) return [{ text: ruleAnnouncement(rv), lang: 'nl' }];
+  const inOwn = (b: Bilingual): LivePart => ({ text: said(b), lang: saidLang(b), dir: b.help && b.lang ? b.lang.dir : undefined });
+  const parts: LivePart[] = [{ text: feedbackTitle(correct, e.kind), lang: 'nl' }];
+  if (correct) {
+    const outcome = inOwn(ui(feedbackMeaningKey(correct, almost, e.kind), lang));
+    parts.push({ ...outcome, text: /[.!?。።؟]$/.test(outcome.text) ? outcome.text : `${outcome.text}.` });
+  }
+  // Help-language users hear their language, not the English that is hidden on screen.
+  const p = answerPair(e, lang);
+  if (p?.nl) parts.push({ text: `${p.nl} =`, lang: 'nl', dir: 'ltr' });
+  if (p) parts.push(inOwn(p.meaning));
+  return parts.filter((x) => x.text);
+}
+
+/** The status region's content: each piece in its own language, a space between. */
+export function LiveParts({ parts }: { parts: readonly LivePart[] }) {
+  return <>{parts.map((x, i) => <span key={i} lang={x.lang} dir={x.dir}>{i ? ' ' : ''}{x.text}</span>)}</>;
+}
+
 /** Reduced motion: no smooth scrolling, no movement (see "Reduced motion" in styles.css). */
 function reducedMotion(): boolean {
   return typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -352,7 +383,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     return () => window.clearTimeout(t);
   }, [runLabel, sweep]);
   /** Screen-reader announcement, filled one tick after Check (the region itself is always there). */
-  const [live, setLive] = useState('');
+  const [live, setLive] = useState<LivePart[]>([]);
   /** The Check choreography's timers; cleared on Continue and when the lesson closes. */
   const timers = useRef<number[]>([]);
   const later = (ms: number, fn: () => void) => { timers.current.push(window.setTimeout(fn, ms)); };
@@ -588,7 +619,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // A new exercise: focus its question, so a screen reader starts there (typing keeps the input).
   useEffect(() => {
     if (queue[index]?.kind === 'type' && document.activeElement?.tagName === 'INPUT') return;
-    const h = slideRef.current?.querySelector<HTMLElement>('.prompt');
+    // A card without a question (a saying) marks its heading with data-prompt.
+    const h = slideRef.current?.querySelector<HTMLElement>('.prompt, [data-prompt]');
     if (!h) return;
     h.tabIndex = -1;
     h.focus({ preventScroll: true });
@@ -657,7 +689,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       if (index < initial.length) queueRetry();
     }
     const sol = solution(ex);
-    const said = announce(ex, answer.correct, answer.almost, answer.given?.[0]);
+    const said = announcement(ex, answer.correct, lang, answer.almost, answer.given?.[0]);
     later(30, () => setLive(said));
     // The answer is said by the character on screen, so a woman never speaks with a man's voice:
     // in a chat the right reply is "your" line (Amina); a built sentence belongs to its speaker.
@@ -665,20 +697,6 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     if (sol.nl) later(answer.correct ? 700 : 450, () => autoSpeak(sol.text, false, 'nl', voiceFor(who)));
   }
   checkRef.current = check;
-
-  /** What the status region says after Check: the outcome, then the right answer. */
-  function announce(e: Exercise, correct: boolean, almost?: boolean, given?: string): string {
-    const rv = isRuleExercise(e) ? ruleVerdict(e, correct, given) : null;
-    if (rv) return ruleAnnouncement(rv);
-    const title = feedbackTitle(correct, e.kind);
-    const p = answerPair(e, lang);
-    // Help-language users hear their language, not the English that is hidden on screen.
-    const answerText = p ? `${p.nl ? `${p.nl} = ` : ''}${said(p.meaning)}` : '';
-    // Right: "Goed zo! Correct. <answer>". Wrong: "Het goede antwoord is: <answer>" (the title is the lead).
-    if (!correct) return [title, answerText].filter(Boolean).join(' ');
-    const outcome = said(ui(feedbackMeaningKey(correct, almost, e.kind), lang));
-    return [title, /[.!?。።؟]$/.test(outcome) ? outcome : `${outcome}.`, answerText].filter(Boolean).join(' ');
-  }
 
   /** Copy the exercise on screen into the ghost layer, where it slides out while the next comes in. */
   function leave() {
@@ -714,7 +732,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     setChecked(false);
     setSwapped(false);
     setSpeakRating(false);
-    setLive('');
+    setLive([]);
   }
 
   /** A speaking exercise is passed over only without sound (not graded, so not counted as
@@ -825,10 +843,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       type="button"
       className="replay-btn"
       onClick={() => speak(pair.nl!, false, 'nl', voiceFor(answerVoice(ex, lang?.gender)))}
-      aria-label={`${said(ui('playAgain', lang))}: ${pair.nl}`}
       title={said(ui('playAgain', lang))}
-      lang={saidLang(ui('playAgain', lang))}
     >
+      <PlayName text={pair.nl} help={lang} say="playAgain" />
       <PlayGlyph />
     </button>
   ) : null;
@@ -906,6 +923,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
             className="lbar"
             role="progressbar"
             aria-label={said(ui('lessonProgress', lang))}
+            lang={saidLang(ui('lessonProgress', lang))}
             aria-valuemin={0}
             aria-valuemax={bar.slots}
             aria-valuenow={doneCount}
@@ -1018,7 +1036,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         )}
         <div className="foot-inner">
           {/* Always present, so screen readers hear what is put in it one tick after Check. */}
-          <div className="sr-only" role="status">{live}</div>
+          <div className="sr-only" role="status"><LiveParts parts={live} /></div>
           {feedback && outcome && (
             <div className={`feedback feedback-${outcome}`}>
               <span className="feedback-tape" aria-hidden />

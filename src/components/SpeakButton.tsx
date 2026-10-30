@@ -7,6 +7,22 @@ import type { VoiceRef } from '../lib/voices';
 import { SlowIcon, SpeakerIcon } from './Icons';
 
 /**
+ * A speaker's screen-reader name as its content: "Play:" in the help language, then the Dutch
+ * with lang="nl", so a screen reader reads the Dutch with a Dutch voice (one aria-label string
+ * would read it all in one language: "Odsłuchaj: de helm" with a Polish accent). The button
+ * itself gets no aria-label then. `say`: the verb (default "Play", or "Play again").
+ */
+export function PlayName({ text, help, say = 'playAudio', lang = 'nl' }: { text: string; help?: HelpLanguage; say?: 'playAudio' | 'playAgain'; lang?: 'nl' | 'en' }) {
+  const play = ui(say, help);
+  return (
+    <>
+      <span className="sr-only" lang={saidLang(play)}>{`${said(play)}: `}</span>
+      <span className="sr-only" lang={lang}>{text}</span>
+    </>
+  );
+}
+
+/**
  * One speaker per item. The first tap plays the Dutch at normal speed, the next tap slowly, and
  * so on, alternating. After a normal play a small turtle sits on the button: the next tap is
  * slow. (`slow` makes a button that always plays slowly.)
@@ -61,12 +77,7 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
       lang={label || !hideText ? undefined : saidLang(play)}
     >
       {/* "Listen: Vrouw of man?" in two languages: the Dutch is read with a Dutch voice, not the help language's. */}
-      {!label && !hideText && (
-        <>
-          <span className="sr-only" lang={saidLang(play)}>{`${said(play)}: `}</span>
-          <span className="sr-only" lang={lang}>{text}</span>
-        </>
-      )}
+      {!label && !hideText && <PlayName text={text} help={help} lang={lang} />}
       {glyph ? <SpeakerIcon size={30} /> : slow ? <SlowIcon size={size === 'lg' ? 40 : 28} /> : <SpeakerIcon size={size === 'lg' ? 44 : 28} />}
       {nextSlow && <span className="speak-turtle" aria-hidden><SlowIcon size={size === 'lg' ? 26 : 22} /></span>}
     </button>

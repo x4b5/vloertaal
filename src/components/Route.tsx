@@ -181,7 +181,9 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
               ) : (
                 <div className="bay-card bay-still">
                   {body}
-                  <span className="sr-only">{state === 'done' ? ` · ${said(ui('stampDone', lang))}` : ''}</span>
+                  {/* What a screen reader hears beside the title: done, or not yet to start (after
+                      the lesson before it, or only in the full version), as on the topic page. */}
+                  <span className="sr-only">{state === 'done' ? ` · ${said(ui('stampDone', lang))}` : ` · ${said(ui(unitAllowed(unit.id, access) && lessonAllowed(lesson.id, access) ? 'locked' : 'fullVersion', lang))}`}</span>
                 </div>
               )}
               {restart && <RestartButton lang={lang} onRestart={() => onRestart(lesson.id)} />}

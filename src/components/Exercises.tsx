@@ -16,7 +16,7 @@ import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type Ma
 import { learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
-import { SpeakButton } from './SpeakButton';
+import { PlayName, SpeakButton } from './SpeakButton';
 import { letterSteps } from '../lib/letters';
 import { createRng } from '../lib/random';
 import { pickInsteadOfTyping, writingInput } from '../lib/writing';
@@ -418,7 +418,8 @@ function DutchFromMeaning({ ex, lang, locked, onAnswer, verdict, run, misses }: 
         // any script, can hear the words instead of having to read them (speakers are not one of
         // the three things to tap).
         side={(w) => (
-          <button type="button" className="choice-say" aria-label={`${srText(ui('playAudio', lang))}: ${w.nl}`} lang={saidLang(ui('playAudio', lang))} onClick={() => speak(w.nl)}>
+          <button type="button" className="choice-say" onClick={() => speak(w.nl)}>
+            <PlayName text={w.nl} help={lang} />
             <SpeakerIcon size={24} />
           </button>
         )}
@@ -447,7 +448,8 @@ export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misse
         lang={lang}
         onAnswer={onAnswer}
         side={(w) => (
-          <button type="button" className="choice-say" aria-label={`${srText(ui('playAudio', lang))}: ${w.nl}`} lang={saidLang(ui('playAudio', lang))} onClick={() => speak(w.nl)}>
+          <button type="button" className="choice-say" onClick={() => speak(w.nl)}>
+            <PlayName text={w.nl} help={lang} />
             <SpeakerIcon size={24} />
           </button>
         )}
@@ -546,6 +548,8 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
       <p className="sr-only" aria-live="polite">
         {heard?.nl && <span lang="nl">{heard.nl}: </span>}
         {heard && <span lang={saidLang(ui(heard.ok ? 'correct' : 'incorrect', lang))}>{srText(ui(heard.ok ? 'correct' : 'incorrect', lang))}{heard.n % 2 ? '\u00a0' : ''}</span>}
+        {/* After a pair: the next word to match, so a screen reader hears it without going back up. */}
+        {heard?.ok && !finished && heard.nl !== current.nl && <span lang="nl"> {current.nl}</span>}
       </p>
       <div className="choices choices-rows match-cards" ref={cardBox}>
         {cards.map((w) => {
@@ -692,13 +696,12 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
               <button
                 type="button"
                 className="tile-say"
-                aria-label={`${srText(ui('playAudio', lang))}: ${tileLabel(t, at, ex.sentence.nl)}`}
-                lang={saidLang(ui('playAudio', lang))}
                 onClick={(e) => {
                   e.stopPropagation();
                   speak(t, false, 'nl', voiceFor(who));
                 }}
               >
+                <PlayName text={tileLabel(t, at, ex.sentence.nl)} help={lang} />
                 <SpeakerIcon size={22} />
               </button>
             </span>
@@ -742,7 +745,8 @@ function HearPickWritten({ ex, lang, locked, onAnswer, verdict, run, misses }: P
         lang={lang}
         onAnswer={onAnswer}
         side={(w) => (
-          <button type="button" className="choice-say" aria-label={`${srText(ui('playAudio', lang))}: ${w.nl}`} lang={saidLang(ui('playAudio', lang))} onClick={() => speak(w.nl)}>
+          <button type="button" className="choice-say" onClick={() => speak(w.nl)}>
+            <PlayName text={w.nl} help={lang} />
             <SpeakerIcon size={24} />
           </button>
         )}
@@ -987,10 +991,9 @@ function ChatChoices({ ex, lang, locked, onAnswer, correctId, voice, onPick }: P
         <button
           type="button"
           className="choice-say"
-          aria-label={`${srText(ui('playAudio', lang))}: ${o.nl}`}
-          lang={saidLang(ui('playAudio', lang))}
           onClick={() => speak(o.nl, false, 'nl', voice)}
         >
+          <PlayName text={o.nl} help={lang} />
           <SpeakerIcon size={24} />
         </button>
       )}
@@ -1056,7 +1059,9 @@ export function SayingCard({ ex, lang, onAnswer }: Props<'saying'>) {
     <div className="exercise tip saying">
       <div className="tip-badge">
         <span className="tip-badge-emoji" aria-hidden>💬</span>
-        <span className="tip-badge-text tip-badge-swap">
+        {/* The card's heading (it has no question): focus moves here on a new exercise, as to a
+            question's .prompt (LessonPlayer), so a screen reader starts here and not on <body>. */}
+        <span className="tip-badge-text tip-badge-swap" role="heading" aria-level={2} data-prompt tabIndex={-1} style={{ outline: 'none' }}>
           <NlPair nl="Zo zeggen ze het" nlClass="tip-badge-nl" className="tip-badge-main" text={ui('sayingBadge', lang)} />
         </span>
       </div>
