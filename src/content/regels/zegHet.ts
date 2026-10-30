@@ -306,6 +306,15 @@ export const zegHetWrong: Record<string, readonly [{ text: string; feedback: str
     { text: 'Ik heb wat problemen thuis. Weet u misschien iets voor mij?', feedback: 'Dan weet de gemeente niet waarmee. Zeg dat het over rekeningen gaat.' },
     { text: 'Ik heb rekeningen open. Ik wacht wel tot het beter gaat.', feedback: 'Wachten maakt het vaak erger. Vraag op tijd hulp.' },
   ],
+  // Sector Tuinbouw (PR #136).
+  'r.l.kas.1.mo1': [
+    { text: 'Er hangt een bordje op de deur. Dat lees ik straks wel.', feedback: 'Het bordje kan zeggen dat de kas net bespoten is. Vraag het eerst.' },
+    { text: 'Ik ga gewoon naar binnen. Het is maar een bordje.', feedback: 'Dan kun je ziek worden van de spuitmiddelen. Vraag of het al mag.' },
+  ],
+  'r.l.kas.2.mo1': [
+    { text: 'Mijn loon is vast wel goed. Ik kijk er niet naar.', feedback: 'Dan zie je een fout niet. Vergelijk je uren met je loonstrook.' },
+    { text: 'Mijn loon is te laag! Jullie betalen altijd te weinig.', feedback: 'Dat klinkt boos. Laat je lijst zien en vraag of het klopt.' },
+  ],
 };
 
 /** The model step as a question (same id: it is the card in the box), or none without wrong sentences. */
