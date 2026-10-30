@@ -16,6 +16,9 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-30',
     items: [
+      'Werkregels: 14 nieuwe lessen voor Entree. Twee nieuwe onderwerpen: Schrijven op je werk (een bericht of mail aan je werk, een korte sollicitatiemail) en Jouw weg (wat kan ik en wat wil ik, na Entree: niveau 2 of werk, terugkijken en je portfolio).',
+      'Werkregels: nieuwe lessen bij Veilig en gezond werken (fit voor je werk: slapen, eten, bewegen; alcohol, drugs en je werk), bij Uitkering, werk en geld (je geld per maand en sparen; kopen, abonnementen en ruilen) en bij Meedoen in Nederland (nieuws, nepnieuws en een mening).',
+      'Werkregels: twee nieuwe sectoronderwerpen, Werken in de techniek (gereedschap, vonken en lawaai; stroom) en Werken in de garage (veilig in de werkplaats; de werkorder en de klant). Je kiest ze nog niet bij "Waar werk je?": je vindt ze in het hele lespad, of onder "Andere sectoren".',
       'Nieuw onderwerp bij Starten: Getallen en gegevens. Twee lessen: je gegevens (je naam spellen, je telefoonnummer, het formulier) en dagen en datums (volgende week, tot en met). Het komt vóór Tijd en rooster.',
       'Nieuwe les bij Gezondheid: Lichaam en klachten. Met het hoofd, de rug, de hand en het oog, en de tip: zeg wat er gebeurde en waar het pijn doet.',
       'Nieuwe les bij Verlof en ziekte: Kinderen en werk. Een ziek kind ophalen, calamiteitenverlof, zwanger zijn en de kinderopvang.',
