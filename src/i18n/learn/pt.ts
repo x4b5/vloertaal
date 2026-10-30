@@ -95,6 +95,24 @@ const t: CultureTranslation = {
     'c.kids.a.why': "Perguntam porquê: esta resposta dá a razão, a creche ligou.",
     'c.body.a.why': "Perguntam onde dói: esta resposta diz o sítio e a causa.",
     'c.jobends.a.why': "A casa vai com o trabalho: esta resposta pergunta pelo prazo de aviso prévio.",
+    // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
+    'c.workorder.a.why': "Uma palavra não está clara: perguntar antes de começar é a resposta certa.", // nieuw, nalezen
+    'c.handover.a.why': "Perguntam se está tudo pronto: esta resposta diz o que não está, e porquê.", // nieuw, nalezen
+    'c.workshop.a.why': "Perguntam porquê: esta resposta dá a razão, os olhos têm de ser protegidos.", // nieuw, nalezen
+    'c.power.a.why': "Trabalho numa lâmpada: esta resposta pergunta primeiro se a corrente está desligada.", // nieuw, nalezen
+    'c.garage.a.why': "Pedem para trocar os pneus: um sim, e uma pergunta sobre onde estão.", // nieuw, nalezen
+    'c.carjob.a.why': "Trabalho extra: o cliente tem de concordar primeiro, por isso esta resposta liga-lhe.", // nieuw, nalezen
+    'c.placement.a.why': "Perguntam quando: esta resposta dá o dia, e o contrato vem primeiro.", // nieuw, nalezen
+    'c.review.a.why': "O feedback ainda não está claro: pedir para mostrar é uma boa resposta.", // nieuw, nalezen
+    'c.council.a.why': "Perguntam pelo voto: um sim, e as duas coisas a levar.", // nieuw, nalezen
+    'c.police.a.why': "A polícia pede o documento: mostrar e perguntar o que se passa.", // nieuw, nalezen
+    'c.login.a.why': "Perguntam se o acesso funciona: esta resposta diz que não, e porquê.", // nieuw, nalezen
+    'c.phish.a.why': "Perguntam pelo link: um sim sincero, e uma chamada à informática.", // nieuw, nalezen
+    'c.mychoice.a.why': "Perguntam pelos pontos fortes: esta resposta diz um, com um exemplo.", // nieuw, nalezen
+    'c.nextstep.a.why': "Perguntam pelo plano: esta resposta diz a bbl e o que significa.", // nieuw, nalezen
+    'c.email.a.why': "Perguntam se foi enviado: ainda não, primeiro é verificado.", // nieuw, nalezen
+    'c.budget.a.why': "Oferecem pagar depois: um não educado, com a razão.", // nieuw, nalezen
+    'c.healthy.a.why': "Oferecem um comprimido: um não educado, com a razão.", // nieuw, nalezen
   },
 };
 

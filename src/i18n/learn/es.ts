@@ -95,6 +95,24 @@ const t: CultureTranslation = {
     'c.kids.a.why': "Preguntan por qué: esta respuesta da la razón, ha llamado la guardería.",
     'c.body.a.why': "Preguntan dónde duele: esta respuesta dice el sitio y la causa.",
     'c.jobends.a.why': "La casa va con el trabajo: esta respuesta pregunta por el plazo de preaviso.",
+    // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
+    'c.workorder.a.why': "Una palabra no está clara: preguntar antes de empezar es la respuesta correcta.", // nieuw, nalezen
+    'c.handover.a.why': "Le preguntan si todo está hecho: esta respuesta dice qué no está hecho, y por qué.", // nieuw, nalezen
+    'c.workshop.a.why': "Le preguntan por qué: esta respuesta da la razón, hay que proteger los ojos.", // nieuw, nalezen
+    'c.power.a.why': "Trabajo con una lámpara: esta respuesta pregunta primero si la corriente está cortada.", // nieuw, nalezen
+    'c.garage.a.why': "Le piden cambiar los neumáticos: un sí, y una pregunta sobre dónde están.", // nieuw, nalezen
+    'c.carjob.a.why': "Trabajo extra: el cliente tiene que aceptar primero, así que esta respuesta lo llama.", // nieuw, nalezen
+    'c.placement.a.why': "Le preguntan cuándo: esta respuesta da el día, y el convenio va primero.", // nieuw, nalezen
+    'c.review.a.why': "El comentario no está claro todavía: pedir que te lo enseñen es una buena respuesta.", // nieuw, nalezen
+    'c.council.a.why': "Le preguntan por el voto: un sí, y las dos cosas que hay que llevar.", // nieuw, nalezen
+    'c.police.a.why': "La policía pide el documento: enseñarlo y preguntar qué pasa.", // nieuw, nalezen
+    'c.login.a.why': "Le preguntan si puede entrar: esta respuesta dice que no, y por qué.", // nieuw, nalezen
+    'c.phish.a.why': "Le preguntan por el enlace: un sí sincero, y una llamada a informática.", // nieuw, nalezen
+    'c.mychoice.a.why': "Le preguntan por sus puntos fuertes: esta respuesta nombra uno, con un ejemplo.", // nieuw, nalezen
+    'c.nextstep.a.why': "Le preguntan por su plan: esta respuesta nombra la bbl y lo que significa.", // nieuw, nalezen
+    'c.email.a.why': "Le preguntan si lo envió: todavía no, primero se revisa.", // nieuw, nalezen
+    'c.budget.a.why': "Le ofrecen pagar después: un no educado, con la razón.", // nieuw, nalezen
+    'c.healthy.a.why': "Le ofrecen una pastilla: un no educado, con la razón.", // nieuw, nalezen
   },
 };
 
