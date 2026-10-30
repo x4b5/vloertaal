@@ -1139,16 +1139,16 @@ const laterUnits: Unit[] = [
     // Lichaam en klachten (30 October 2026): the body words for calling in sick, an accident and
     // the GP. "de pijn" (w.pijn, l.sick), "tillen" (w.tillen, l.directions) and "de doos" (w.doos,
     // l.things) are already words of other lessons: here they come in the sentences and the chat.
-    // No picture for "het hoofd", "de rug" and "de buik": no emoji shows them well.
+    // "het hoofd", "de rug" and "de buik" have a drawn body chart (src/pictures/group26.tsx).
     lesson(
       'body',
       'Body and pain',
       [
-        ['hoofd', 'het hoofd', 'the head', '👤', false],
-        ['rug', 'de rug', 'the back (of your body)', '🧍', false],
+        ['hoofd', 'het hoofd', 'the head', '👤'],
+        ['rug', 'de rug', 'the back (of your body)', '🧍'],
         ['arm', 'de arm', 'the arm', '💪'],
         ['hand', 'de hand', 'the hand', '🖐️'],
-        ['buik', 'de buik', 'the belly, the stomach', '😖', false],
+        ['buik', 'de buik', 'the belly, the stomach', '😖'],
         ['oog', 'het oog', 'the eye', '👁️'],
       ],
       [
@@ -2577,7 +2577,7 @@ const finishUnit = unit('finish', 'Finishing your work', 'Je werk afronden', '�
       ['opruimen', 'opruimen', 'to tidy up, to put things away', '🧽'],
       ['nakijken', 'nakijken', 'to check (look at the work again)', '🔎', false],
       ['afmelden', 'afmelden', 'to sign off (say that you are done and leave)', '📣', false],
-      ['kapot', 'kapot', 'broken', '🪫', false],
+      ['kapot', 'kapot', 'broken', '🪫'],
       ['opslot', 'op slot', 'locked', '🔐', false],
       ['bijzonderheid', 'de bijzonderheid', 'the special point (something that went differently)', '❗', false],
     ],
@@ -2597,7 +2597,7 @@ const techUnit = unit('tech', 'In the workshop', 'In de werkplaats', '🔩', '#5
     [
       ['gereedschap', 'het gereedschap', 'the tools', '🪛'],
       ['zagen', 'zagen', 'to saw', '🪚'],
-      ['slijpen', 'slijpen', 'to grind (make metal smooth or cut it with a machine)', '⚙️', false],
+      ['slijpen', 'slijpen', 'to grind (make metal smooth or cut it with a machine)', '⚙️'],
       ['vonk', 'de vonk', 'the spark', '🎇'],
       ['gehoorbescherming', 'de gehoorbescherming', 'the hearing protection (for your ears)', '🎧'],
       ['lawaai', 'het lawaai', 'the noise (a lot of loud sound)', '🔊'],
@@ -2613,8 +2613,8 @@ const techUnit = unit('tech', 'In the workshop', 'In de werkplaats', '🔩', '#5
     'power',
     'Power off first',
     [
-      ['stroom', 'de stroom', 'the power, electricity', '⚡', false],
-      ['kabel', 'de kabel', 'the cable', '➰', false],
+      ['stroom', 'de stroom', 'the power, electricity', '⚡'],
+      ['kabel', 'de kabel', 'the cable', '➰'],
       ['stekker', 'de stekker', 'the plug', '🔌'],
       ['onderspanning', 'onder spanning', 'live (with power on it)', '⚡', false],
       ['spanningsloos', 'spanningsloos', 'dead, safe (with no power on it)', '🚫', false],
@@ -2638,8 +2638,8 @@ const garageUnit = unit('garage', 'In the garage', 'In de garage', '🚗', '#1f6
       ['olie', 'de olie', 'the oil', '🫗'],
       ['accu', 'de accu', 'the car battery', '🔋'],
       ['monteur', 'de monteur', 'the mechanic', '👨‍🔧'],
-      ['hefbrug', 'de hefbrug', 'the car lift (it lifts the car up)', '🏗️', false],
-      ['lek', 'lek', 'flat, leaking (air or water gets out)', '💧', false],
+      ['hefbrug', 'de hefbrug', 'the car lift (it lifts the car up)', '🏗️'],
+      ['lek', 'lek', 'flat, leaking (air or water gets out)', '💧'],
     ],
     [
       ['De band is lek.', 'The tyre is flat.'],
@@ -2733,7 +2733,7 @@ const societyUnit = unit('society', 'Taking part in the Netherlands', 'Meedoen i
       ['agent', 'de agent', 'the police officer', '👮'],
       ['boete', 'de boete', 'the fine (money you must pay as a punishment)', '💸', false],
       ['bezwaar', 'het bezwaar', 'the objection (you say in writing that you do not agree)', '✋', false],
-      ['rechter', 'de rechter', 'the judge', '👩‍⚖️', false],
+      ['rechter', 'de rechter', 'the judge', '👩‍⚖️'],
       ['advocaat', 'de advocaat', 'the lawyer', '💼', false],
       ['wet', 'de wet', 'the law', '📜', false],
     ],

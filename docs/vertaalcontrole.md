@@ -10,9 +10,10 @@ AI-lezer per taal nagelezen en verbeterd (es 32, pt 21, fr 34, de 30 verandering
 mens nagekeken: `reviewed: false`. Keuzes: Spaans neutraal (tú, geen vosotros), Portugees Europees
 (pt-PT, tu), Frans uit Frankrijk (tu), Duits uit Duitsland (du, geen genderobjecten).
 
-**Alle vier:** de themanaam "Leven in Nederland" mag hoogstens 3 woorden zijn, dus "Vida en Holanda",
-"Viver na Holanda", "Leben in Holland" (fr: "Vivre aux Pays-Bas"). Elders staat "Países Bajos/Baixos" en
-"Niederlande". Een betere korte naam? De letterlijke vertalingen van gezegden (`*.lit`) zijn bewust letterlijk.
+**Alle vier:** een themanaam mag sinds 30 oktober 4 woorden zijn (was 3), zodat "Leven in Nederland" het land
+voluit noemt: "Vivir en Países Bajos", "Viver nos Países Baixos", "Vivre aux Pays-Bas", "Leben in den Niederlanden".
+Spaans laat het lidwoord weg ("los Países Bajos" zou 5 woorden zijn): klopt dat zo? De letterlijke vertalingen
+van gezegden (`*.lit`) zijn bewust letterlijk.
 
 **Spaans (`es`)**
 - Woorden van Spanje of van Latijns-Amerika: "nómina", "fichar", "taquilla", "computadora" (naast "ordenador"), "enfadado/enojado".

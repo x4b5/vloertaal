@@ -39,13 +39,18 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     // of l.dates (days, weeks, "tot en met"), "het hoofd", "de rug" and "de buik" (l.body), "het
     // ouderschapsverlof" and "het zorgverlof" (l.kids), "de eindafrekening", "opzeggen" and
     // "uitschrijven" (l.jobends), "de werkvergunning", "de zzp’er" and "de inburgering" (l.permit).
-    for (const id of ['w.geboortedatum', 'w.maandag', 'w.totenmet', 'w.hoofd', 'w.rug', 'w.buik', 'w.zorgverlof', 'w.eindafrekening', 'w.zzper', 'w.inburgering']) expect(abstract).toContain(id);
+    // ("het hoofd", "de rug" and "de buik" have since been drawn: see 199 below.)
+    for (const id of ['w.geboortedatum', 'w.maandag', 'w.totenmet', 'w.zorgverlof', 'w.eindafrekening', 'w.zzper', 'w.inburgering']) expect(abstract).toContain(id);
     // 209 (30 October 2026, Entree in the Taal track): 66 new abstract words in 17 lessons, among
     // them "het aantal" and "klaarleggen" (l.workorder), "nakijken" and "op slot" (l.handover),
     // "onder spanning" (l.power), "de POK" (l.placement), all six of l.mychoice and l.nextstep, "de
     // bedenktijd" (l.budget), "somber" (l.healthy) and "de verkiezing" (l.council).
     for (const id of ['w.aantal', 'w.klaarleggen', 'w.nakijken', 'w.opslot', 'w.onderspanning', 'w.pok', 'w.goedin', 'w.startkwalificatie', 'w.bedenktijd', 'w.somber', 'w.verkiezing']) expect(abstract).toContain(id);
-    expect(abstract.length).toBe(209);
+    // 199 (30 October 2026, group26): ten of them were concrete after all and got a drawing: "het
+    // hoofd", "de rug", "de buik" (l.body), "slijpen", "de kabel", "de stroom", "de hefbrug", "lek",
+    // "kapot" and "de rechter".
+    for (const id of ['w.hoofd', 'w.rug', 'w.buik', 'w.slijpen', 'w.kabel', 'w.stroom', 'w.hefbrug', 'w.lek', 'w.kapot', 'w.rechter']) expect(abstract).not.toContain(id);
+    expect(abstract.length).toBe(199);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).
@@ -126,6 +131,37 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
         const quietWords = quiet.filter((e) => 'word' in e).map((e) => (e as { word: { id: string } }).word.id);
         for (const id of listened) expect(quietWords, `${lesson.id} ${id}`).toContain(id);
       }
+    }
+  });
+});
+
+describe('drawn pictures (group 24)', () => {
+  it('the 33 words that had only an emoji have a drawing', async () => {
+    const { default: words } = await import('../src/pictures/words');
+    const ids = [
+      'w.voornaam', 'w.achternaam', 'w.spellen', 'w.telefoonnummer', 'w.formulier', 'w.papieren', 'w.werknemer',
+      'w.taalles', 'w.zwanger', 'w.kinderopvang', 'w.ophalen', 'w.ziekkind', 'w.mail', 'w.arm', 'w.hand', 'w.oog',
+      'w.slapen', 'w.ontbijt', 'w.bewegen', 'w.moe', 'w.sparen', 'w.sleutel', 'w.verhuizen', 'w.busje', 'w.gewas',
+      'w.rij', 'w.oogsten', 'w.sorteren', 'w.krat', 'w.spuitmiddelen', 'w.bespoten', 'w.plukkar', 'w.bukken',
+    ];
+    expect(ids).toHaveLength(33);
+    for (const id of ids) expect(typeof words[id], id).toBe('function');
+  });
+});
+
+describe('drawn pictures', () => {
+  it('the Entree words of group 25 have a drawing (no longer only an emoji)', async () => {
+    const { default: words } = await import('../src/pictures/words');
+    const ids = [
+      'w.drinken', 'w.hitte', 'w.werkbon', 'w.lezen', 'w.handtekening', 'w.opruimen', 'w.gereedschap', 'w.zagen',
+      'w.vonk', 'w.gehoorbescherming', 'w.lawaai', 'w.stekker', 'w.elektricien', 'w.band', 'w.olie', 'w.accu',
+      'w.monteur', 'w.proefrit', 'w.rijbewijs', 'w.repareren', 'w.stage', 'w.school', 'w.leerdoel', 'w.portfolio',
+      'w.stemmen', 'w.agent', 'w.scherm', 'w.vergrendelen', 'w.afzender', 'w.klikken', 'w.bijlage', 'w.ictafdeling',
+    ];
+    expect(ids).toHaveLength(32);
+    for (const id of ids) {
+      expect(allWords.some((w) => w.id === id), id).toBe(true);
+      expect(typeof words[id], id).toBe('function');
     }
   });
 });
