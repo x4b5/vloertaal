@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { courseUnits, ruleCards } from '../content/courses';
 import { withRegion } from '../content/regio';
 import { RULES_BE_NOTE, RULES_COUNTRY, RULES_DISCLAIMER, RULES_NOTICE, RULES_PATH_NOTE, RULES_PATH_NOTE_BE, ruleAdviceLine } from '../content/regels/disclaimer';
 import { helpRowsFor, helpRowText, type HelpRow } from '../content/regels/help';
 import type { Unit } from '../content/types';
-import { ui } from '../i18n';
+import { said, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { speechAvailable } from '../lib/audio';
 import { breakable } from '../lib/dutch';
@@ -75,9 +75,12 @@ export function RulesHelp({ lang, country, onShelf, onBack, after }: {
  * of its own with one button. It stays readable in the Hulp tab and on Over Vloertaal.
  */
 export function RulesNoticeScreen({ country, onDone }: { country?: 'nl' | 'be'; onDone: () => void }) {
+  // It comes after a tap on another screen (the language): a screen reader starts at its heading.
+  const head = useRef<HTMLHeadingElement>(null);
+  useEffect(() => { head.current?.focus({ preventScroll: true }); }, []);
   return (
     <div className="screen onboarding rules-notice" lang="nl">
-      <h1 className="onboarding-title">Goed om te weten</h1>
+      <h1 className="onboarding-title" ref={head} tabIndex={-1}>Goed om te weten</h1>
       <section className="rules-disclaimer rules-notice-card" aria-label="Goed om te weten">
         <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={28} /></span>
         <p>{RULES_NOTICE.filter((line) => country !== 'be' || line !== RULES_COUNTRY).map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
@@ -133,7 +136,7 @@ function HelpRowItem({ row, lang }: { row: HelpRow; lang?: HelpLanguage }) {
           className="rh-card rh-link"
           href={row.href}
           {...(call ? {} : { target: '_blank', rel: 'noreferrer' })}
-          aria-label={`${row.name}: ${call ? 'bel' : 'open'} ${row.show}. ${row.when}`}
+          aria-label={`${row.name}: ${call ? 'bel' : 'open'} ${call ? digitsApart(row.show) : row.show}. ${row.when}`}
         >
           {body}
           <span className="rh-go" aria-hidden>{call ? <CallIcon size={24} /> : <GlobeIcon size={24} />}</span>
@@ -148,13 +151,30 @@ function HelpRowItem({ row, lang }: { row: HelpRow; lang?: HelpLanguage }) {
       <div className="rh-card rh-say">
         <span className="rh-emoji" aria-hidden>{row.emoji}</span>
         <span className="rh-text">
-          <span className="rh-name">{breakable(row.name)} <SpeakButton text={helpRowText(row)} long needsDevice glyph help={lang} /></span>
+          {/* The speaker is named after the row ("Afspelen: Vertrouwenspersoon"): its text is right beside it. */}
+          <span className="rh-name"><ReadDigits text={row.name}>{breakable(row.name)}</ReadDigits> <SpeakButton text={helpRowText(row)} long needsDevice glyph help={lang} label={`${said(ui('playAudio', lang))}: ${digitsApart(row.name)}`} /></span>
           <span className="rh-when">{breakable(row.when)}</span>
-          <span className="rh-show" dir="auto">{row.show}</span>
+          <span className="rh-show" dir="auto"><ReadDigits text={row.show}>{row.show}</ReadDigits></span>
         </span>
       </div>
     </li>
   );
+}
+
+/**
+ * A phone number as a screen reader should say it: digit by digit ("0800-8020" is "0 8 0 0, 8 0 2
+ * 0", "112" is "1 1 2"), never "achthonderd" or "honderdtwaalf". Only numbers of three or more
+ * digits (with dashes or spaces inside); the rest of the text stays as it is.
+ */
+export function digitsApart(text: string): string {
+  return text.replace(/\d+(?:[- ]\d+)*/g, (num) => (num.replace(/\D/g, '').length < 3 ? num : num.split(/[- ]/).map((g) => g.split('').join(' ')).join(', ')));
+}
+
+/** Shown as it is; a screen reader hears the number digit by digit (digitsApart). */
+function ReadDigits({ text, children }: { text: string; children: React.ReactNode }) {
+  const spoken = digitsApart(text);
+  if (spoken === text) return <>{children}</>;
+  return <><span aria-hidden>{children}</span><span className="sr-only">{spoken}</span></>;
 }
 
 /**

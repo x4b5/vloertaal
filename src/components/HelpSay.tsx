@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { said, ui } from '../i18n';
+import { said, saidLang, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { helpVoice, speakHelp } from '../lib/audio';
 import { GlobeIcon, HelpVoiceIcon } from './Icons';
@@ -31,6 +31,7 @@ export function HelpSay({ text, lang }: { text?: string; lang?: HelpLanguage }) 
       type="button"
       className="help-say"
       aria-label={said(label)}
+      lang={saidLang(label)}
       title={said(label)}
       onClick={() => speakHelp(text, lang.code)}
     >

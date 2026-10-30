@@ -178,7 +178,7 @@ describe('rule steps on screen', () => {
       const out = html(createElement(WhoAsk, { ex: { kind: 'whoask', step }, lang: nl(), locked: false, onAnswer: () => {} }));
       expect(out.match(/<button(?![^>]*speak)/g)?.length, step.id).toBe(step.options.length);
       for (const o of step.options) {
-        expect(out, `${step.id} ${o.who}`).toContain(`<span class="rule-who-name">${ASK_WHO[o.who].label}</span><span class="rule-who-what">${ASK_WHO[o.who].what}</span>`);
+        expect(out, `${step.id} ${o.who}`).toContain(`<span class="rule-who-name">${ASK_WHO[o.who].label}</span><span class="sr-only">, </span><span class="rule-who-what">${ASK_WHO[o.who].what}</span>`);
       }
     }
     // After another pick, the best answer in the feedback has its short line too.
