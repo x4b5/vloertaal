@@ -703,7 +703,7 @@ const t: CultureTranslation = {
     'c.leave.o1': 'İşverenden erkenden, yazılı olarak izin istersin.',
     'c.leave.o2': 'Öylece gider ve döndüğünde patronuna söylersin.',
     'c.leave.o3': 'Bir iş arkadaşından patrona bir gün önce söylemesini istersin.',
-    'c.leave.w': 'İşveren işi planlar ve tarihleri onaylaması gerekir. Erken sormak “evet” cevabı için en iyi şansı verir.',
+    'c.leave.w': 'İşveren genellikle evet demek zorundadır. Sadece çok önemli bir sebeple hayır diyebilir, o zaman da 2 hafta içinde yazılı olarak. Erken sormak “evet” cevabı için en iyi şansı verir.', // nalezen: werkgever moet meestal ja zeggen
     'c.illness': 'Hastayken hakların',
     'c.illness.b': 'Hasta olduğunda işveren 2 yıla kadar maaşının en az %70’ini ödemek zorundadır. Bir cao çoğu zaman daha fazlasını verir. Ücretsiz en fazla 2 bekleme günü (wachtdagen) olabilir, ama sadece sözleşmende veya cao’da yazıyorsa. Patronun hangi hastalığın olduğunu soramaz: sağlığını ve işini işyeri hekimiyle (bedrijfsarts) konuşursun. İyileşince işverenini ara (betermelden). İlk yıl en az asgari ücret alırsın. Bir ajans üzerinden mi çalışıyorsun? Hastalanınca sözleşmen bitebilir. O zaman UWV sana ödeme yapar (Ziektewet). UWV’ye veya sendikaya sor. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.illness.p': 'İyileştim. Yarın işe geliyorum.',

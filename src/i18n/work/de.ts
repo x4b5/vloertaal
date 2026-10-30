@@ -703,7 +703,7 @@ const t: CultureTranslation = {
     'c.leave.o1': 'Beantrage früh und schriftlich Urlaub bei deinem Arbeitgeber.',
     'c.leave.o2': 'Fahr einfach und sag es deinem Chef, wenn du zurück bist.',
     'c.leave.o3': 'Bitte einen Kollegen, es dem Chef am Tag vorher zu sagen.',
-    'c.leave.w': 'Dein Arbeitgeber plant die Arbeit und muss den Daten zustimmen. Wer früh fragt, hat die besten Chancen auf ein Ja.',
+    'c.leave.w': 'Dein Arbeitgeber muss meistens Ja sagen. Er darf nur aus einem sehr wichtigen Grund Nein sagen, und dann schriftlich innerhalb von 2 Wochen. Wer früh fragt, hat die besten Chancen auf ein Ja.', // nalezen: werkgever moet meestal ja zeggen
     'c.illness': 'Deine Rechte, wenn du krank bist',
     'c.illness.b': 'Wenn du krank bist, muss dein Arbeitgeber mindestens 70 % deines Lohns zahlen, bis zu 2 Jahre lang. Ein Tarifvertrag (cao) gibt oft mehr. Es kann bis zu 2 Karenztage (wachtdagen) ohne Lohn geben, aber nur, wenn das in deinem Vertrag oder im Tarifvertrag steht. Dein Chef darf nicht fragen, welche Krankheit du hast: Über deine Gesundheit und deine Arbeit sprichst du mit dem Betriebsarzt (bedrijfsarts). Ruf deinen Arbeitgeber an, wenn du wieder gesund bist (betermelden). Im ersten Jahr bekommst du mindestens den Mindestlohn. Arbeitest du über eine Zeitarbeitsfirma? Dein Vertrag kann enden, wenn du krank wirst. Dann zahlt dich das UWV (Ziektewet). Frag beim UWV oder bei einer Gewerkschaft. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.illness.p': 'Ich bin wieder gesund. Ich komme morgen zur Arbeit.',
