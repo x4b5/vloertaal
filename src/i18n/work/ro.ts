@@ -566,7 +566,7 @@ const t: CultureTranslation = {
     'c.interview.s': 'La finalul interviului, angajatorul întreabă: „Heb je nog vragen?” Ce faci?',
     'c.interview.o1': 'Pui o întrebare despre ore sau instruire.', // nalezen: korter goed antwoord
     'c.interview.o2': 'Spui nu, pentru că nu e politicos să pui întrebări.',
-    'c.interview.o3': 'Spui nu, ca interviul să se termine repede.',
+    'c.interview.o3': 'Vorbești mai mult despre tine, ca să arăți că lucrezi bine.', // nalezen: nieuwe foute optie
     'c.interview.w': 'Întrebările arată că te interesează postul. Angajatorii din Olanda se așteaptă des la ele.',
     'c.findwork': 'Cere contractul pe hârtie',
     'c.findwork.b': 'Cere mereu un contract scris și o copie pentru tine. Citește-l înainte să semnezi sau roagă o persoană de încredere să te ajute. O agenție de muncă temporară (uitzendbureau) nu are voie să-ți ceară bani ca să-ți găsească de lucru. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
@@ -574,7 +574,7 @@ const t: CultureTranslation = {
     'c.findwork.s': 'Un angajator nou spune: „Semnează aici acum. Îl poți citi mai târziu.” Ce faci?',
     'c.findwork.o1': 'Ceri timp să-l citești sau o copie.', // nalezen: korter goed antwoord
     'c.findwork.o2': 'Semnezi repede, ca să nu pierzi postul.',
-    'c.findwork.o3': 'Pleci fără să întrebi nimic.',
+    'c.findwork.o3': 'Semnezi și apoi ceri o copie.', // nalezen: nieuwe foute optie
     'c.findwork.w': 'Contractul spune cât câștigi și ce drepturi ai. Un angajator bun îți dă timp să-l citești. Poți întreba despre tot ce nu înțelegi.',
     'c.contract': 'Perioada de probă și munca la chemare',
     'c.contract.b': { m: 'Perioada de probă (proeftijd) trebuie să fie în scris. Nu e permisă într-un contract de 6 luni sau mai scurt. Într-un contract mai lung, dar mai scurt de 2 ani, e de cel mult 1 lună. Într-un contract de 2 ani sau mai lung, sau pe perioadă nedeterminată, e de cel mult 2 luni. Lucrezi la chemare (oproepkracht)? Angajatorul trebuie să te cheme cu cel puțin 4 zile înainte. Dacă te cheamă mai târziu, nu trebuie să vii. Un cao poate scurta aceste 4 zile, dar nu la mai puțin de 1 zi. Dacă îți anulează munca mai târziu de atât, tot primești plata. Dacă te cheamă pentru mai puțin de 3 ore de muncă, de obicei ești plătit pentru 3 ore. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.', f: 'Perioada de probă (proeftijd) trebuie să fie în scris. Nu e permisă într-un contract de 6 luni sau mai scurt. Într-un contract mai lung, dar mai scurt de 2 ani, e de cel mult 1 lună. Într-un contract de 2 ani sau mai lung, sau pe perioadă nedeterminată, e de cel mult 2 luni. Lucrezi la chemare (oproepkracht)? Angajatorul trebuie să te cheme cu cel puțin 4 zile înainte. Dacă te cheamă mai târziu, nu trebuie să vii. Un cao poate scurta aceste 4 zile, dar nu la mai puțin de 1 zi. Dacă îți anulează munca mai târziu de atât, tot primești plata. Dacă te cheamă pentru mai puțin de 3 ore de muncă, de obicei ești plătită pentru 3 ore. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.' },
@@ -598,7 +598,7 @@ const t: CultureTranslation = {
     'c.bsn.s': 'Cineva pe care nu-l cunoști îți oferă de lucru pe WhatsApp. Îți cere o poză cu pașaportul și datele de conectare DigiD. Ce faci?',
     'c.bsn.o1': 'Nu dai niciodată datele de conectare DigiD. Verifici întâi cine e.', // nalezen: korter goed antwoord
     'c.bsn.o2': 'Trimiți repede tot, ca să primești postul.',
-    'c.bsn.o3': 'Trimiți doar datele de conectare DigiD, pentru că nu sunt un document.',
+    'c.bsn.o3': 'Trimiți doar poza cu pașaportul, nu și datele de conectare DigiD.', // nalezen: nieuwe foute optie
     'c.bsn.w': 'Cu DigiD-ul tău sau cu o copie a actului tău, alții îți pot folosi numele, de exemplu pentru împrumuturi sau ajutoare sociale. Un angajator adevărat are nevoie de actul tău și de BSN, dar niciodată de datele tale de conectare DigiD.',
     'c.housing': 'Locuință de la angajator',
     'c.housing.b': 'Angajatorul sau agenția îți aranjează locuința? Atunci contractul de închiriere trebuie să fie separat de contractul de muncă. Cere un contract de închiriere scris și o dovadă pentru ce plătești. Chiria poate fi reținută din salariu doar dacă ai fost de acord în scris și în limitele legii: verifică pe fluturașul de salariu. Garanția (borg) e de cel mult 2 luni de chirie de bază. O primești înapoi când pleci, minus pagubele reale. Înregistrează-te cu adresa ta la gemeente. Locuință nesigură, amenințări sau costuri nedrepte? Raportează la gemeente (meldpunt) și cere sfat gratuit de la Juridisch Loket sau de la un serviciu de consiliere pentru locuințe. Pentru o problemă cu prețul chiriei sau cu costurile de servicii există Huurcommissie. Ți se termină munca? Cere sfat înainte să pleci din locuință. Informații generale. Pentru situația ta: întreabă sindicatul, Juridisch Loket sau FairWork.',
@@ -614,7 +614,7 @@ const t: CultureTranslation = {
     'c.payslip.s': 'Pe fluturașul tău sunt mai puține ore decât ai lucrat. Ce faci?',
     'c.payslip.o1': 'Îi arăți notițele tale și îi ceri șefului să verifice.', // nalezen: korter goed antwoord
     'c.payslip.o2': 'Nu spui nimic, pentru că nu vrei probleme.',
-    'c.payslip.o3': 'A doua zi stai acasă fără să spui nimănui.',
+    'c.payslip.o3': 'Aștepți o lună: pe următorul fluturaș o să fie corect.', // nalezen: nieuwe foute optie
     'c.payslip.w': 'Greșelile pe fluturaș se întâmplă. E normal să întrebi și e dreptul tău. Notițele tale cu zile și ore ajută mult.',
     'c.extra': 'Prima de vacanță și salariul minim',
     'c.extra.b': 'Primești prima de vacanță (vakantiegeld): cel puțin 8% din salariul brut. Majoritatea angajatorilor o plătesc o dată pe an, în mai sau iunie. Salariul tău nu poate fi niciodată mai mic decât salariul minim legal (minimumloon); pentru lucrătorii sub 21 de ani, salariul minim e mai mic. Suma se schimbă în fiecare an: verific-o pe rijksoverheid.nl. Un cao dă des plată în plus pentru ore suplimentare sau muncă de noapte. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
@@ -622,7 +622,7 @@ const t: CultureTranslation = {
     'c.extra.s': 'Un coleg spune: „În mai primești bani în plus de la șef.” Ce sunt banii ăștia?',
     'c.extra.o1': 'Prima de vacanță: cel puțin 8% din salariul brut.',
     'c.extra.o2': 'Un cadou, doar pentru cei mai buni lucrători.',
-    'c.extra.o3': 'Un împrumut pe care trebuie să-l dai înapoi mai târziu.',
+    'c.extra.o3': 'Al 13-lea salariu: încă un salariu pe o lună, pentru toți.', // nalezen: nieuwe foute optie
     'c.extra.w': 'Prima de vacanță e dreptul tău, nu un cadou. O strângi cu fiecare oră lucrată. Dacă pleci de la firmă înainte să fie plătită, o primești cu ultimul salariu.',
     'c.phone': 'Telefonul tău la muncă',
     'c.phone.b': 'Multe locuri de muncă nu permit telefonul în timpul lucrului, mai ales lângă utilaje și motostivuitoare sau în producția de alimente. Poate fi nesigur sau neigienic. Folosește telefonul în pauză. Aștepți un apel urgent de la familie? Spune-i întâi șefului. Nu face poze sau filmări la muncă fără permisiune: gândește-te la intimitatea colegilor și la secretele firmei. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.',
@@ -685,7 +685,7 @@ const t: CultureTranslation = {
     'c.health.p': 'Încă nu am avut pauză.',
     'c.health.s': 'Ai lucrat 6 ore fără pauză. Șeful îți cere să continui. Ce faci?',
     'c.health.o1': 'Spui că acum ai nevoie de pauză.', // nalezen: korter goed antwoord
-    'c.health.o2': 'Lucrezi mai departe și sari peste pauză în fiecare zi.',
+    'c.health.o2': 'Lucrezi mai departe și iei mai târziu o pauză mai lungă.', // nalezen: nieuwe foute optie
     'c.health.o3': 'Pleci de la muncă acasă fără un cuvânt.',
     'c.health.w': 'Când lucrezi mai mult de 5,5 ore, pauza e prevăzută de lege, nu e o favoare. Odihna te ajută și să lucrezi în siguranță.',
     'c.rights': 'Discriminare și concediere',
@@ -741,7 +741,7 @@ const t: CultureTranslation = {
     'c.texting.p': 'Salut Mark, întârzii 10 minute. Scuze! Salutări, Ali',
     'c.texting.s': 'Vei întârzia 10 minute. Ce mesaj către șef e cel mai bun?',
     'c.texting.o1': '„Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”',
-    'c.texting.o2': '„Laat” (un singur cuvânt, fără numele tău).',
+    'c.texting.o2': '„Sorry, ik ben er zo!” (fără numele tău, fără oră).', // nalezen: nieuwe foute optie
     'c.texting.o3': 'Un mesaj vocal de trei minute despre trafic.',
     'c.texting.w': 'Un mesaj bun spune în câteva cuvinte cine ești și ce se întâmplă. Așa șeful știe imediat.',
     'c.certs': 'Certificatele te ajută',
@@ -773,7 +773,7 @@ const t: CultureTranslation = {
     'c.insurance.p': 'Am nevoie de asigurare de sănătate. Mă puteți ajuta?',
     'c.insurance.s': 'Ai început să lucrezi aici acum două săptămâni și încă nu ai asigurare de sănătate. Ce faci?',
     'c.insurance.o1': 'Îți faci repede asigurare de sănătate.', // nalezen: korter goed antwoord
-    'c.insurance.o2': 'Aștepți până te îmbolnăvești.',
+    'c.insurance.o2': 'Aștepți: asigurarea din țara ta e suficientă.', // nalezen: nieuwe foute optie
     'c.insurance.o3': 'Folosești cardul de asigurare al unui prieten.',
     'c.insurance.w': 'Fără asigurare, un doctor sau un spital pot costa mult și poți primi o amendă. Dacă o rezolvi repede, te protejezi. Angajatorul sau agenția te poate ajuta.', // nalezen: korter goed antwoord
     'c.letters': 'Nu ignora scrisorile',
@@ -806,7 +806,7 @@ const t: CultureTranslation = {
     'c.transit.s': 'Mergi zilnic la muncă cu autobuzul. Un coleg primește bani de drum, tu nu. Ce faci?',
     'c.transit.o1': 'Îl întrebi pe șef care sunt regulile în firma ta sau în cao.',
     'c.transit.o2': 'Nu spui nimic, pentru că probabil nu e pentru tine.',
-    'c.transit.o3': 'Le spui tuturor colegilor că firma e nedreaptă.',
+    'c.transit.o3': 'Îi spui șefului: legea spune că trebuie să-i primești și tu.', // nalezen: nieuwe foute optie
     'c.transit.w': 'Decontarea drumului depinde de angajator sau de cao. E normal să întrebi și te ajută să-ți cunoști drepturile.',
     'c.ww': 'Ajutorul de șomaj (WW)',
     'c.ww.b': 'Ți-ai pierdut locul de muncă? Cere WW la UWV cât mai repede, în cel mult o săptămână după prima zi fără muncă. De obicei trebuie să fi lucrat cel puțin 26 din ultimele 36 de săptămâni. Dacă demisionezi tu, de obicei nu primești WW. Înregistrează-te ca persoană care caută de lucru pe werk.nl. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
@@ -963,7 +963,7 @@ const t: CultureTranslation = {
     'c.keeplearning.s': 'Colegii tăi trec mereu la engleză când vorbesc cu tine. Vrei să înveți olandeză. Ce faci?',
     'c.keeplearning.o1': 'Le mulțumești și îi rogi să vorbească olandeză cu tine.', // nalezen: korter goed antwoord
     'c.keeplearning.o2': 'Nu spui nimic. Olandeza o să vină de la sine.',
-    'c.keeplearning.o3': 'Nu mai vorbești cu colegii până când olandeza ta e perfectă.',
+    'c.keeplearning.o3': 'Răspunzi și tu în engleză, pentru că e mai politicos.', // nalezen: nieuwe foute optie
     'c.keeplearning.w': 'Colegii trec des la engleză ca să fie amabili. Când le ceri olandeză, cei mai mulți te ajută cu plăcere. Să vorbești puțin în fiecare zi la muncă e unul dintre cele mai rapide moduri de a învăța.',
     'l.gossip': "Bârfă și rețele sociale",
     'w.roddelen': "a bârfi",
@@ -995,7 +995,7 @@ const t: CultureTranslation = {
     'c.gossip.s': "Un coleg te filmează când aluneci pe podeaua udă. Vrea să pună video-ul pe TikTok. Ce faci?",
     'c.gossip.o1': 'Spui „Nee, dat wil ik niet” și îi ceri să-l șteargă.', // nalezen: korter goed antwoord
     'c.gossip.o2': { m: 'Râzi și îl lași să-l posteze, ca să nu fii dificil.', f: 'Râzi și îl lași să-l posteze, ca să nu fii dificilă.' },
-    'c.gossip.o3': "Îl filmezi și tu și postezi chiar tu acel video.",
+    'c.gossip.o3': 'Îi ceri să-l posteze fără numele tău.', // nalezen: nieuwe foute optie
     'c.gossip.w': 'Nimeni nu are voie să pună online un video cu tine fără permisiunea ta. E normal să spui nu, iar angajatorul trebuie să intervină când colegii își bat joc unii de alții online. Dacă îl postează totuși, spune-i șefului.', // nalezen: korter goed antwoord
     'c.boundaries': "Depășirea limitelor",
     'c.boundaries.b': { m: 'Grensoverschrijdend gedrag este un comportament care trece de limita cuiva: atingeri nedorite, remarci sau glume sexuale, priviri insistente, trimiterea de poze nedorite, amenințări sau țipete. Nu contează dacă celălalt „a vrut doar să glumească”: contează cum te simți tu. Dacă poți, spune clar că vrei să se oprească. Notează ce s-a întâmplat, când și cine a văzut. Spune-i șefului, persoanei de încredere (vertrouwenspersoon, dacă există) sau la HR. Angajatorul trebuie să te protejeze și nu poți fi pedepsit pentru că raportezi. Ai văzut că i s-a întâmplat unui coleg? Întreabă-l dacă e bine și oferă-te să fii martor.', f: 'Grensoverschrijdend gedrag este un comportament care trece de limita cuiva: atingeri nedorite, remarci sau glume sexuale, priviri insistente, trimiterea de poze nedorite, amenințări sau țipete. Nu contează dacă celălalt „a vrut doar să glumească”: contează cum te simți tu. Dacă poți, spune clar că vrei să se oprească. Notează ce s-a întâmplat, când și cine a văzut. Spune-i șefului, persoanei de încredere (vertrouwenspersoon, dacă există) sau la HR. Angajatorul trebuie să te protejeze și nu poți fi pedepsită pentru că raportezi. Ai văzut că i s-a întâmplat unui coleg? Întreabă-l dacă e bine și oferă-te să fii martor.' },
@@ -1166,7 +1166,7 @@ const t: CultureTranslation = {
     'c.aiplan.s': 'Aplicația de planificare îți dă luna viitoare mult mai puține ore. Nimeni nu-ți spune de ce. Ce faci?',
     'c.aiplan.o1': 'Ceri ca un om să-ți explice.', // nalezen: korter goed antwoord
     'c.aiplan.o2': 'Accepți: aplicația are mereu dreptate.',
-    'c.aiplan.o3': 'Nu mai vii la muncă.',
+    'c.aiplan.o3': 'Întrebi chatbotul din aplicație de ce.', // nalezen: nieuwe foute optie
     'c.aiplan.w': 'Aplicațiile greșesc și nu știu totul despre tine. Poți cere o explicație, iar un om se poate uita din nou.',
     // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
     'u.kas': "În seră", // nieuw, nog nalezen

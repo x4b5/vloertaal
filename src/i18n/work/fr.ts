@@ -566,7 +566,7 @@ const t: CultureTranslation = {
     'c.interview.s': 'À la fin de l’entretien, l’employeur demande : “Heb je nog vragen?” Que fais-tu ?',
     'c.interview.o1': 'Pose une question sur les horaires ou la formation.', // nalezen: korter goed antwoord
     'c.interview.o2': 'Dis non, parce que poser des questions n’est pas poli.',
-    'c.interview.o3': 'Dis non, pour que l’entretien finisse vite.',
+    'c.interview.o3': 'Parle plus de toi, pour montrer que tu travailles bien.', // nalezen: nieuwe foute optie
     'c.interview.w': 'Les questions montrent que le travail t’intéresse. Les employeurs néerlandais en attendent souvent.',
     'c.findwork': 'Ton contrat par écrit',
     'c.findwork.b': 'Demande toujours un contrat écrit et une copie pour toi. Lis-le avant de signer, ou demande de l’aide à une personne de confiance. Une agence d’intérim (uitzendbureau) n’a pas le droit de te demander de l’argent pour te trouver un emploi. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
@@ -574,7 +574,7 @@ const t: CultureTranslation = {
     'c.findwork.s': 'Un nouvel employeur dit : “Signe ici maintenant. Tu pourras le lire plus tard.” Que fais-tu ?',
     'c.findwork.o1': 'Demande du temps pour le lire, ou une copie.', // nalezen: korter goed antwoord
     'c.findwork.o2': 'Signe vite, pour ne pas perdre le travail.',
-    'c.findwork.o3': 'Pars sans rien demander.',
+    'c.findwork.o3': 'Signe, et demande une copie après.', // nalezen: nieuwe foute optie
     'c.findwork.w': 'Ton contrat dit ce que tu gagnes et quels sont tes droits. Un bon employeur te donne le temps de le lire. Tu peux poser des questions sur tout ce que tu ne comprends pas.',
     'c.contract': 'Période d’essai et travail sur appel',
     'c.contract.b': 'Une période d’essai (proeftijd) doit être écrite. Elle est interdite dans un contrat de 6 mois ou moins. Dans un contrat plus long, de moins de 2 ans, elle dure au maximum 1 mois. Dans un contrat de 2 ans ou plus, ou un contrat à durée indéterminée, elle dure au maximum 2 mois. Tu travailles sur appel (oproepkracht) ? Ton employeur doit t’appeler au moins 4 jours avant. S’il appelle plus tard, tu n’as pas besoin de venir. Une cao peut réduire ces 4 jours, mais pas à moins de 1 jour. Si on annule ton travail plus tard que ça, on te paie quand même. Si on t’appelle pour moins de 3 heures de travail, on te paie en général 3 heures. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
@@ -598,7 +598,7 @@ const t: CultureTranslation = {
     'c.bsn.s': 'Quelqu’un que tu ne connais pas te propose un travail sur WhatsApp. Il demande une photo de ton passeport et ton identifiant DigiD. Que fais-tu ?',
     'c.bsn.o1': 'Ne donne jamais ton identifiant DigiD. Vérifie d’abord qui il est.', // nalezen: korter goed antwoord
     'c.bsn.o2': 'Envoie tout vite, pour avoir le travail.',
-    'c.bsn.o3': 'Envoie seulement ton identifiant DigiD, parce que ce n’est pas un document.',
+    'c.bsn.o3': 'Envoie seulement la photo du passeport, pas ton identifiant DigiD.', // nalezen: nieuwe foute optie
     'c.bsn.w': 'Avec ton DigiD ou une copie de ta pièce d’identité, d’autres personnes peuvent utiliser ton nom, par exemple pour des prêts ou des allocations. Un vrai employeur a besoin de ta pièce d’identité et de ton BSN, mais jamais de ton identifiant DigiD.',
     'c.housing': 'Le logement par ton employeur',
     'c.housing.b': 'Ton employeur ou ton agence s’occupe de ton logement ? Alors le contrat de location doit être séparé de ton contrat de travail. Demande un contrat de location écrit et une preuve de ce que tu paies. Le loyer peut être retenu sur ton salaire seulement si tu es d’accord par écrit, et dans les limites de la loi : vérifie-le sur ta fiche de paie. Une caution (borg) est au maximum de 2 mois de loyer de base. Tu la récupères quand tu pars, moins les vrais dégâts. Inscris-toi à ton adresse auprès de la gemeente. Logement dangereux, menaces ou frais injustes ? Signale-le à la gemeente (meldpunt), et demande un conseil gratuit au Juridisch Loket ou à un service de conseil logement. Pour un problème de loyer ou de charges, il y a la Huurcommissie. Ton travail se termine ? Demande conseil avant de quitter ton logement. Informations générales. Pour ta situation : demande au syndicat, au Juridisch Loket ou à FairWork.',
@@ -614,7 +614,7 @@ const t: CultureTranslation = {
     'c.payslip.s': 'Ta fiche de paie indique moins d’heures que tu en as travaillé. Que fais-tu ?',
     'c.payslip.o1': 'Montre tes notes et demande à ton responsable de vérifier.', // nalezen: korter goed antwoord
     'c.payslip.o2': 'Ne dis rien, parce que tu ne veux pas de problèmes.',
-    'c.payslip.o3': 'Reste à la maison le lendemain sans prévenir personne.',
+    'c.payslip.o3': 'Attends un mois : ce sera juste sur la prochaine fiche de paie.', // nalezen: nieuwe foute optie
     'c.payslip.w': 'Les erreurs sur une fiche de paie arrivent. Poser la question est normal, et c’est ton droit. Tes propres notes de dates et d’heures aident beaucoup.',
     'c.extra': 'La prime de vacances et le salaire minimum',
     'c.extra.b': 'Tu reçois une prime de vacances (vakantiegeld) : au moins 8 % de ton salaire brut. La plupart des employeurs la paient une fois par an, en mai ou en juin. Ton salaire ne peut jamais être plus bas que le salaire minimum légal (minimumloon) ; pour les travailleurs de moins de 21 ans, il est plus bas. Le montant change chaque année : vérifie-le sur rijksoverheid.nl. Une cao donne souvent un supplément pour les heures sup ou le travail de nuit. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
@@ -622,7 +622,7 @@ const t: CultureTranslation = {
     'c.extra.s': 'Un collègue dit : “En mai, le patron te donne de l’argent en plus.” Qu’est-ce que c’est ?',
     'c.extra.o1': 'La prime de vacances : au moins 8 % de ton salaire brut.',
     'c.extra.o2': 'Un cadeau, seulement pour les meilleurs travailleurs.',
-    'c.extra.o3': 'Un prêt que tu dois rembourser plus tard.',
+    'c.extra.o3': 'Un 13e mois : un mois de salaire en plus, pour tout le monde.', // nalezen: nieuwe foute optie
     'c.extra.w': 'La prime de vacances est ton droit, pas un cadeau. Tu la constitues avec chaque heure de travail. Si tu quittes ton emploi plus tôt, tu la reçois avec ton dernier salaire.',
     'c.phone': 'Ton téléphone au travail',
     'c.phone.b': 'Beaucoup de lieux de travail interdisent le téléphone pendant le travail, surtout près des machines et des chariots élévateurs, ou dans la production alimentaire. Ça peut être dangereux ou pas hygiénique. Utilise ton téléphone pendant ta pause. Tu attends un appel urgent de ta famille ? Préviens d’abord ton responsable. Ne prends pas de photos ni de vidéos au travail sans autorisation : pense à la vie privée des collègues et aux secrets de l’entreprise. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.',
@@ -685,7 +685,7 @@ const t: CultureTranslation = {
     'c.health.p': 'Je n’ai pas encore eu de pause.',
     'c.health.s': 'Tu as travaillé 6 heures sans pause. Ton responsable te demande de continuer. Que fais-tu ?',
     'c.health.o1': 'Dis que tu as besoin de ta pause maintenant.', // nalezen: korter goed antwoord
-    'c.health.o2': 'Continue à travailler et saute ta pause tous les jours.',
+    'c.health.o2': 'Continue, et prends une pause plus longue plus tard.', // nalezen: nieuwe foute optie
     'c.health.o3': 'Quitte le travail et rentre chez toi sans rien dire.',
     'c.health.w': 'Quand tu travailles plus de 5 h 30, la pause, c’est la loi, pas une faveur. Le repos t’aide aussi à travailler en sécurité.',
     'c.rights': 'Discrimination et licenciement',
@@ -741,7 +741,7 @@ const t: CultureTranslation = {
     'c.texting.p': { m: 'Salut Mark, j’ai 10 minutes de retard. Désolé ! À plus, Ali', f: 'Salut Mark, j’ai 10 minutes de retard. Désolée ! À plus, Ali', x: 'Salut Mark, j’ai 10 minutes de retard. Désolé / désolée ! À plus, Ali' },
     'c.texting.s': 'Tu vas avoir 10 minutes de retard. Quel message à ton responsable est le meilleur ?',
     'c.texting.o1': '“Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”',
-    'c.texting.o2': '“Laat” (un seul mot, sans ton nom).',
+    'c.texting.o2': '“Sorry, ik ben er zo!” (sans ton nom, sans l’heure).', // nalezen: nieuwe foute optie
     'c.texting.o3': 'Un message vocal de trois minutes sur la circulation.',
     'c.texting.w': 'Un bon message dit qui tu es et ce qui se passe, en quelques mots. Comme ça, ton responsable le sait tout de suite.',
     'c.certs': 'Les certificats t’aident',
@@ -773,7 +773,7 @@ const t: CultureTranslation = {
     'c.insurance.p': 'J’ai besoin d’une assurance maladie. Vous pouvez m’aider ?',
     'c.insurance.s': 'Tu as commencé à travailler ici il y a deux semaines et tu n’as pas encore d’assurance maladie. Que fais-tu ?',
     'c.insurance.o1': 'Prends vite une assurance santé.', // nalezen: korter goed antwoord
-    'c.insurance.o2': 'Attends de tomber malade.',
+    'c.insurance.o2': 'Attends : l’assurance de ton pays suffit.', // nalezen: nieuwe foute optie
     'c.insurance.o3': 'Utilise la carte d’assurance d’un ami.',
     'c.insurance.w': 'Sans assurance, un médecin ou un hôpital peut coûter très cher, et tu peux avoir une amende. Le faire vite te protège. Ton employeur ou ton agence peut t’aider.', // nalezen: korter goed antwoord
     'c.letters': 'N’ignore pas les lettres',
@@ -806,7 +806,7 @@ const t: CultureTranslation = {
     'c.transit.s': 'Tu vas au travail en bus tous les jours. Un collègue reçoit de l’argent pour le trajet, toi non. Que fais-tu ?',
     'c.transit.o1': 'Demande à ton responsable quelles sont les règles dans ton entreprise ou ta cao.',
     'c.transit.o2': 'Ne dis rien, parce que ce n’est sûrement pas pour toi.',
-    'c.transit.o3': 'Dis à tous les collègues que l’entreprise est injuste.',
+    'c.transit.o3': 'Dis à ton responsable : la loi dit que tu dois l’avoir aussi.', // nalezen: nieuwe foute optie
     'c.transit.w': 'Le remboursement des frais de trajet dépend de l’employeur ou de la cao. Poser la question est normal et t’aide à connaître tes droits.',
     'c.ww': 'L’allocation chômage (WW)',
     'c.ww.b': 'Tu as perdu ton emploi ? Demande la WW à l’UWV le plus vite possible, dans la semaine après ton premier jour sans travail. En général, tu dois avoir travaillé au moins 26 des 36 dernières semaines. Si tu démissionnes toi-même, en général tu n’as pas la WW. Inscris-toi comme demandeur d’emploi sur werk.nl. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
@@ -963,7 +963,7 @@ const t: CultureTranslation = {
     'c.keeplearning.s': 'Tes collègues passent toujours à l’anglais quand ils te parlent. Tu veux apprendre le néerlandais. Que fais-tu ?',
     'c.keeplearning.o1': 'Remercie-les, et demande-leur de parler néerlandais avec toi.', // nalezen: korter goed antwoord
     'c.keeplearning.o2': 'Ne dis rien. Le néerlandais viendra tout seul.',
-    'c.keeplearning.o3': 'Arrête de parler avec les collègues jusqu’à ce que ton néerlandais soit parfait.',
+    'c.keeplearning.o3': 'Réponds aussi en anglais, parce que c’est plus poli.', // nalezen: nieuwe foute optie
     'c.keeplearning.w': 'Les collègues passent souvent à l’anglais pour être gentils. Quand tu demandes du néerlandais, la plupart sont contents d’aider. Parler un peu chaque jour au travail est une des façons les plus rapides d’apprendre.',
     'l.gossip': 'Les ragots et les réseaux sociaux',
     'w.roddelen': 'faire des ragots',
@@ -995,7 +995,7 @@ const t: CultureTranslation = {
     'c.gossip.s': 'Un collègue te filme quand tu glisses sur le sol mouillé. Il veut mettre la vidéo sur TikTok. Que fais-tu ?',
     'c.gossip.o1': 'Dis “Nee, dat wil ik niet” et demande-lui de l’effacer.', // nalezen: korter goed antwoord
     'c.gossip.o2': 'Ris et laisse-le la publier, pour ne pas faire d’histoires.',
-    'c.gossip.o3': 'Filme-le toi aussi et publie cette vidéo toi-même.',
+    'c.gossip.o3': 'Demande-lui de la publier sans ton nom.', // nalezen: nieuwe foute optie
     'c.gossip.w': 'Personne n’a le droit de mettre une vidéo de toi en ligne sans ton autorisation. Dire non est normal, et ton employeur doit agir quand des collègues se moquent les uns des autres en ligne. S’il la publie quand même, dis-le à ton responsable.', // nalezen: korter goed antwoord
     'c.boundaries': 'Dépasser les limites',
     'c.boundaries.b': 'Le grensoverschrijdend gedrag, c’est un comportement qui dépasse les limites de quelqu’un : toucher sans accord, remarques ou blagues sexuelles, regards insistants, envoyer des images non voulues, menaces ou cris. Peu importe si l’autre personne “voulait juste plaisanter” : ce qui compte, c’est ce que toi, tu ressens. Si tu peux, dis clairement que tu veux que ça s’arrête. Note ce qui s’est passé, quand, et qui l’a vu. Parle à ton responsable, à la personne de confiance (vertrouwenspersoon, s’il y en a une) ou aux RH. Ton employeur doit te protéger, et on n’a pas le droit de te punir parce que tu l’as signalé. Tu as vu ça arriver à un collègue ? Demande-lui si ça va, et propose d’être témoin.',
@@ -1166,7 +1166,7 @@ const t: CultureTranslation = {
     'c.aiplan.s': 'L’appli de planning te donne beaucoup moins d’heures le mois prochain. Personne ne te dit pourquoi. Que fais-tu ?',
     'c.aiplan.o1': 'Demande qu’une personne te l’explique.', // nalezen: korter goed antwoord
     'c.aiplan.o2': 'Accepte : l’appli a toujours raison.',
-    'c.aiplan.o3': 'Ne viens plus au travail.',
+    'c.aiplan.o3': 'Demande au chatbot de l’appli pourquoi.', // nalezen: nieuwe foute optie
     'c.aiplan.w': 'Les applis font des erreurs, et elles ne savent pas tout sur toi. Tu peux demander une explication, et une personne peut regarder de nouveau.',
     // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
     'u.kas': "Dans la serre", // nieuw, nog nalezen

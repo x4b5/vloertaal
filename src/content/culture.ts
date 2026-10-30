@@ -54,8 +54,8 @@ const baseTips: CultureTip[] = [
     situation: { id: 'c.je.s', en: 'Your new supervisor says: "Zeg maar je, hoor!" What does she mean?', nl: 'Zeg maar je, hoor!', ask: 'which' },
     options: [
       { id: 'c.je.o1', en: 'She wants you to say "je" to her.', best: true },
-      { id: 'c.je.o2', en: 'She is angry with you.', best: false },
-      { id: 'c.je.o3', en: 'You must speak more loudly.', best: false },
+      { id: 'c.je.o2', en: 'She asks you to say something.', best: false },
+      { id: 'c.je.o3', en: 'She wants you to speak more politely.', best: false },
     ],
     why: { id: 'c.je.w', en: '"Zeg maar je" is friendly: she wants less distance. It is normal to say "je" to a supervisor in many Dutch workplaces.' },
   }),
@@ -69,8 +69,8 @@ const baseTips: CultureTip[] = [
     situation: { id: 'c.names.s', en: 'A colleague walks up to you: "Hoi, ik ben Mark." What do you do?', nl: 'Hoi, ik ben Mark.' },
     options: [
       { id: 'c.names.o1', en: 'Shake hands, say your name.', best: true },
-      { id: 'c.names.o2', en: 'Look down and say nothing.', best: false },
-      { id: 'c.names.o3', en: 'Call him "Mister Mark".', best: false },
+      { id: 'c.names.o2', en: 'Nod and smile, and wait for questions.', best: false },
+      { id: 'c.names.o3', en: 'Shake hands and call him "meneer" (sir).', best: false },
     ],
     why: { id: 'c.names.w', en: 'A short introduction with your first name is the normal start. It helps colleagues remember you and ask you along.' },
   }),
@@ -100,7 +100,7 @@ const baseTips: CultureTip[] = [
     options: [
       { id: 'c.ask.o1', en: 'Ask for the explanation again.', best: true },
       { id: 'c.ask.o2', en: 'Nod and try to guess.', best: false },
-      { id: 'c.ask.o3', en: 'Wait and hope someone else does it.', best: false },
+      { id: 'c.ask.o3', en: 'Say sorry for your Dutch and start working.', best: false },
     ],
     why: { id: 'c.ask.w', en: 'Dutch supervisors expect questions. It is better to ask twice than to make a mistake.' },
   }),
@@ -180,7 +180,7 @@ const baseTips: CultureTip[] = [
     situation: { id: 'c.direct.s', en: 'A colleague says: "Nee, dat is fout. Die doos moet daar." What do you do?', nl: 'Nee, dat is fout. Die doos moet daar.' },
     options: [
       { id: 'c.direct.o1', en: 'Move the box and ask how to do it.', best: true },
-      { id: 'c.direct.o2', en: 'Feel insulted and walk away.', best: false },
+      { id: 'c.direct.o2', en: 'Say sorry many times: your colleague is angry.', best: false },
       { id: 'c.direct.o3', en: 'Say nothing and leave the box where it is.', best: false },
     ],
     why: { id: 'c.direct.w', en: 'Direct feedback is about the work, not about you. Asking "hoe moet het dan?" shows you want to learn.' },
@@ -256,7 +256,7 @@ const baseTips: CultureTip[] = [
     options: [
       { id: 'c.no.o1', en: 'Say no and offer another day.', best: true },
       { id: 'c.no.o2', en: 'Say yes and then do not come.', best: false },
-      { id: 'c.no.o3', en: 'Say "maybe" and never answer.', best: false },
+      { id: 'c.no.o3', en: 'Say yes: you cannot say no to a boss.', best: false },
     ],
     why: { id: 'c.no.w', en: 'A clear "nee" is respected. Saying "ja" and not coming breaks trust much more.' },
   }),
@@ -270,7 +270,7 @@ const baseTips: CultureTip[] = [
     situation: { id: 'c.task.s', en: 'Your supervisor explains a task very fast. You understood only half. What do you do?' },
     options: [
       { id: 'c.task.o1', en: 'Ask to see it one more time.', best: true },
-      { id: 'c.task.o2', en: 'Say "ja" and guess.', best: false },
+      { id: 'c.task.o2', en: 'Start with the half you understood.', best: false },
       { id: 'c.task.o3', en: 'Wait until a colleague does it.', best: false },
     ],
     why: { id: 'c.task.w', en: 'Asking again is normal and takes a minute. Fixing a mistake takes much longer. Most supervisors would rather show it twice.' },

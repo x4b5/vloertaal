@@ -18,16 +18,16 @@ const t: CultureTranslation = {
     'c.je.p': 'Darf ich „je“ zu dir sagen?',
     'c.je.s': 'Deine neue Vorgesetzte sagt: „Zeg maar je, hoor!“ Was meint sie?',
     'c.je.o1': 'Sie möchte, dass du „je“ zu ihr sagst.',
-    'c.je.o2': 'Sie ist wütend auf dich.',
-    'c.je.o3': 'Du musst lauter sprechen.',
+    'c.je.o2': 'Sie bittet dich, etwas zu sagen.', // nalezen: nieuwe foute optie
+    'c.je.o3': 'Sie möchte, dass du höflicher sprichst.', // nalezen: nieuwe foute optie
     'c.je.w': '„Zeg maar je“ ist freundlich: Sie möchte weniger Abstand. In vielen niederländischen Firmen ist es normal, „je“ zur Vorgesetzten oder zum Vorgesetzten zu sagen.',
     'c.names': 'Vornamen und Händeschütteln',
     'c.names.b': 'Gib am ersten Tag kurz die Hand, schau die Person an und sag deinen Vornamen. Kollegen und Chefs sprechen sich meistens mit dem Vornamen an.',
     'c.names.p': 'Hallo, ich bin Ali. Ich bin neu hier.',
     'c.names.s': 'Ein Kollege kommt zu dir: „Hoi, ik ben Mark.“ Was machst du?',
     'c.names.o1': 'Gib ihm die Hand und sag deinen Namen.', // nalezen: korter goed antwoord
-    'c.names.o2': 'Schau nach unten und sag nichts.',
-    'c.names.o3': 'Nenn ihn „Herr Mark“.',
+    'c.names.o2': 'Nick, lächle und warte auf Fragen.', // nalezen: nieuwe foute optie
+    'c.names.o3': 'Gib ihm die Hand und nenn ihn „meneer“ (Herr).', // nalezen: nieuwe foute optie
     'c.names.w': 'Eine kurze Vorstellung mit deinem Vornamen ist der normale Anfang. So merken sich die Kollegen dich leichter und fragen dich öfter, ob du mitkommst.',
     'c.arrive': 'Dein erster Tag: wohin gehen',
     'c.arrive.b': 'Geh am ersten Tag zuerst zum Empfang oder zum Haupteingang. Sag deinen Namen, deine Zeitarbeitsfirma (wenn du eine hast) und zu wem du sollst. Viele Firmen geben dir einen Buddy: Den darfst du alles fragen.',
@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     'c.ask.s': 'Dein Vorgesetzter erklärt eine Aufgabe sehr schnell. Du hast sie nicht verstanden. Was machst du?',
     'c.ask.o1': 'Bitte darum, es noch einmal zu erklären.', // nalezen: korter goed antwoord
     'c.ask.o2': 'Nick und versuch zu raten.',
-    'c.ask.o3': 'Warte und hoffe, dass es jemand anderes macht.',
+    'c.ask.o3': 'Entschuldige dich für dein Niederländisch und fang an zu arbeiten.', // nalezen: nieuwe foute optie
     'c.ask.w': 'Niederländische Vorgesetzte erwarten Fragen. Lieber zweimal fragen als einen Fehler machen.',
     'c.gear': 'Sicherheitsregeln gelten für alle',
     'c.gear.b': 'Regeln für Helm, Schuhe und Handschuhe sind kein Vorschlag: Alle halten sich daran, auch der Chef. Dein Arbeitgeber muss dir die Schutzausrüstung, die du brauchst, kostenlos geben. Ausrüstung, die nicht passt, schützt dich nicht gut. Frag also nach deiner Größe: „Heb je dit ook in mijn maat?“',
@@ -82,7 +82,7 @@ const t: CultureTranslation = {
     'c.direct.p': 'Okay, wie muss es dann gemacht werden?',
     'c.direct.s': 'Ein Kollege sagt: „Nee, dat is fout. Die doos moet daar.“ Was machst du?',
     'c.direct.o1': 'Frag, wie es gemacht werden muss, und stell den Karton um.',
-    'c.direct.o2': 'Fühl dich beleidigt und geh weg.',
+    'c.direct.o2': 'Entschuldige dich immer wieder: Dein Kollege ist wütend.', // nalezen: nieuwe foute optie
     'c.direct.o3': 'Sag nichts und lass den Karton, wo er ist.',
     'c.direct.w': 'Bei direktem Feedback geht es um die Arbeit, nicht um dich. Wenn du fragst „hoe moet het dan?“, zeigst du, dass du lernen willst.',
     'c.limits': 'Sag, wenn es zu schwer ist',
@@ -123,14 +123,14 @@ const t: CultureTranslation = {
     'c.no.s': 'Dein Vorgesetzter fragt, ob du am Samstag extra arbeiten kannst. Du kannst nicht. Was machst du?',
     'c.no.o1': 'Sag nein und biete einen anderen Tag an.', // nalezen: korter goed antwoord
     'c.no.o2': 'Sag ja und komm dann nicht.',
-    'c.no.o3': 'Sag „vielleicht“ und antworte nie.',
+    'c.no.o3': 'Sag ja: Zum Chef kann man nicht nein sagen.', // nalezen: nieuwe foute optie
     'c.no.w': 'Ein klares „nee“ wird respektiert. „Ja“ sagen und nicht kommen zerstört das Vertrauen viel mehr.',
     'c.task': 'Sag, wenn es fertig ist, frag, wenn es nicht klar ist',
     'c.task.b': 'In den Niederlanden gibt ein Vorgesetzter eine Aufgabe oft in wenigen Worten und erwartet, dass du sagst, wenn sie fertig ist. „Ja“ sagen, wenn du es nicht verstanden hast, führt oft zu Fehlern. Noch einmal fragen oder bitten, dass man es dir zeigt, ist hier normal und nicht unhöflich.',
     'c.task.p': 'Fertig! Was soll ich jetzt machen?',
     'c.task.s': 'Dein Vorgesetzter erklärt eine Aufgabe sehr schnell. Du hast nur die Hälfte verstanden. Was machst du?',
     'c.task.o1': 'Bitte darum, es noch einmal zu sehen.', // nalezen: korter goed antwoord
-    'c.task.o2': 'Sag „ja“ und rate.',
+    'c.task.o2': 'Fang mit der Hälfte an, die du verstanden hast.', // nalezen: nieuwe foute optie
     'c.task.o3': 'Warte, bis ein Kollege es macht.',
     'c.task.w': 'Noch einmal fragen ist normal und dauert eine Minute. Einen Fehler zu beheben dauert viel länger. Die meisten Vorgesetzten zeigen es lieber zweimal.',
     'u.teamwork': 'Zusammenarbeiten',

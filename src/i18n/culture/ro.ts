@@ -18,16 +18,16 @@ const t: CultureTranslation = {
     'c.je.p': 'Pot să-ți spun „je”?',
     'c.je.s': 'Noua ta șefă îți spune: „Zeg maar je, hoor!” Ce vrea să spună?',
     'c.je.o1': 'Vrea să-i spui „je”.',
-    'c.je.o2': 'E supărată pe tine.',
-    'c.je.o3': 'Trebuie să vorbești mai tare.',
+    'c.je.o2': 'Îți cere să spui ceva.', // nalezen: nieuwe foute optie
+    'c.je.o3': 'Vrea să vorbești mai politicos.', // nalezen: nieuwe foute optie
     'c.je.w': '„Zeg maar je” e prietenos: vrea mai puțină distanță. În multe locuri de muncă din Olanda e normal să-i spui „je” șefului.',
     'c.names': 'Prenumele și o strângere de mână',
     'c.names.b': 'În prima zi, dă scurt mâna, uită-te la persoană și spune-ți prenumele. Colegii și șefii își spun de obicei pe prenume.',
     'c.names.p': { m: 'Salut, sunt Ali. Sunt nou aici.', f: 'Salut, sunt Ali. Sunt nouă aici.' },
     'c.names.s': 'Un coleg vine la tine: „Hoi, ik ben Mark.” Ce faci?',
     'c.names.o1': 'Îi dai mâna și îți spui numele.', // nalezen: korter goed antwoord
-    'c.names.o2': 'Te uiți în jos și nu spui nimic.',
-    'c.names.o3': 'Îi spui „domnul Mark”.',
+    'c.names.o2': 'Dai din cap, zâmbești și aștepți întrebări.', // nalezen: nieuwe foute optie
+    'c.names.o3': 'Îi dai mâna și îi spui „meneer” (domnule).', // nalezen: nieuwe foute optie
     'c.names.w': 'O prezentare scurtă cu prenumele e începutul normal. Îi ajută pe colegi să te țină minte și să te cheme cu ei.',
     'c.arrive': 'Prima zi: unde mergi',
     'c.arrive.b': 'În prima zi, mergi întâi la recepție sau la intrarea principală. Spune-ți numele, agenția, dacă ai una, și la cine trebuie să mergi. Multe firme îți dau un coleg îndrumător (buddy): îl poți întreba orice.',
@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     'c.ask.s': 'Șeful tău explică o sarcină foarte repede. Nu ai înțeles. Ce faci?',
     'c.ask.o1': 'Ceri să ți se explice din nou.', // nalezen: korter goed antwoord
     'c.ask.o2': 'Dai din cap și încerci să ghicești.',
-    'c.ask.o3': 'Aștepți și speri că o face altcineva.',
+    'c.ask.o3': 'Îți ceri scuze pentru olandeza ta și te apuci de lucru.', // nalezen: nieuwe foute optie
     'c.ask.w': 'Șefii din Olanda se așteaptă la întrebări. E mai bine să întrebi de două ori decât să greșești.',
     'c.gear': 'Regulile de siguranță sunt pentru toți',
     'c.gear.b': 'Regulile despre cască, încălțăminte și mănuși nu sunt doar o sugestie: toți le respectă, și șeful. Angajatorul trebuie să-ți dea gratuit echipamentul de protecție de care ai nevoie. Echipamentul care nu ți se potrivește nu te protejează bine, așa că cere mărimea ta: „Heb je dit ook in mijn maat?”',
@@ -82,7 +82,7 @@ const t: CultureTranslation = {
     'c.direct.p': 'Bine, atunci cum trebuie făcut?',
     'c.direct.s': 'Un coleg spune: „Nee, dat is fout. Die doos moet daar.” Ce faci?',
     'c.direct.o1': 'Întrebi cum trebuie făcut și muți cutia.',
-    'c.direct.o2': { m: 'Te simți jignit și pleci.', f: 'Te simți jignită și pleci.' },
+    'c.direct.o2': 'Îți ceri scuze de multe ori: colegul e supărat.', // nalezen: nieuwe foute optie
     'c.direct.o3': 'Nu spui nimic și lași cutia unde e.',
     'c.direct.w': 'Feedbackul direct e despre muncă, nu despre tine. Când întrebi „hoe moet het dan?”, arăți că vrei să înveți.',
     'c.limits': 'Spune când e prea greu',
@@ -123,14 +123,14 @@ const t: CultureTranslation = {
     'c.no.s': 'Șeful te întreabă dacă poți lucra în plus sâmbătă. Nu poți. Ce faci?',
     'c.no.o1': 'Spui nu și propui altă zi.', // nalezen: korter goed antwoord
     'c.no.o2': 'Spui da și apoi nu vii.',
-    'c.no.o3': 'Spui „poate” și nu mai răspunzi niciodată.',
+    'c.no.o3': 'Spui da: șefului nu-i poți spune nu.', // nalezen: nieuwe foute optie
     'c.no.w': 'Un „nee” clar e respectat. Să spui „ja” și să nu vii strică mult mai mult încrederea.',
     'c.task': 'Spune când ai terminat, întreabă când nu e clar',
     'c.task.b': 'În Olanda, un șef dă adesea o sarcină în câteva cuvinte și se așteaptă să spui când ai terminat. Dacă spui „ja” când nu ai înțeles, apar des greșeli. Să întrebi din nou sau să ceri să ți se arate e normal aici și nu e nepoliticos.',
     'c.task.p': 'Gata! Ce să fac acum?',
     'c.task.s': 'Șeful îți explică o sarcină foarte repede. Ai înțeles doar jumătate. Ce faci?',
     'c.task.o1': 'Ceri să-ți arate încă o dată.', // nalezen: korter goed antwoord
-    'c.task.o2': 'Spui „ja” și ghicești.',
+    'c.task.o2': 'Începi cu jumătatea pe care ai înțeles-o.', // nalezen: nieuwe foute optie
     'c.task.o3': 'Aștepți până o face un coleg.',
     'c.task.w': 'E normal să întrebi din nou și durează un minut. Să repari o greșeală durează mult mai mult. Cei mai mulți șefi preferă să arate de două ori.',
     'u.teamwork': 'Lucrul împreună',

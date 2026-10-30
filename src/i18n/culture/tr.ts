@@ -18,16 +18,16 @@ const t: CultureTranslation = {
     'c.je.p': 'Sana “je” diyebilir miyim?',
     'c.je.s': 'Yeni amirin diyor ki: “Zeg maar je, hoor!” Ne demek istiyor?',
     'c.je.o1': 'Ona “je” demeni istiyor.',
-    'c.je.o2': 'Sana kızgın.',
-    'c.je.o3': 'Daha yüksek sesle konuşman gerekiyor.',
+    'c.je.o2': 'Bir şey söylemeni istiyor.', // nalezen: nieuwe foute optie
+    'c.je.o3': 'Daha kibar konuşmanı istiyor.', // nalezen: nieuwe foute optie
     'c.je.w': '“Zeg maar je” samimi bir sözdür: aradaki mesafeyi azaltmak istiyor. Birçok Hollanda iş yerinde amire “je” demek normaldir.',
     'c.names': 'İsimler ve tokalaşma',
     'c.names.b': 'İlk gününde kısaca tokalaş, kişinin yüzüne bak ve adını söyle. İş arkadaşları ve yöneticiler genelde birbirine adıyla hitap eder.',
     'c.names.p': 'Merhaba, ben Ali. Burada yeniyim.',
     'c.names.s': 'Bir iş arkadaşın yanına geliyor: “Hoi, ik ben Mark.” Ne yaparsın?',
     'c.names.o1': 'Tokalaşır ve adını söylersin.',
-    'c.names.o2': 'Yere bakar ve hiçbir şey söylemezsin.',
-    'c.names.o3': 'Ona “Mark Bey” dersin.',
+    'c.names.o2': 'Başını sallar, gülümser ve soru sorulmasını beklersin.', // nalezen: nieuwe foute optie
+    'c.names.o3': 'Tokalaşır ve ona “meneer” (beyefendi) dersin.', // nalezen: nieuwe foute optie
     'c.names.w': 'Adınla kısaca tanışmak normal bir başlangıçtır. Böylece iş arkadaşların seni daha kolay hatırlar ve seni de aralarına katar.',
     'c.arrive': 'İlk günün: nereye gitmeli',
     'c.arrive.b': 'İlk gününde önce resepsiyona ya da ana girişe git. Adını, varsa iş ajansının adını ve kiminle görüşmen gerektiğini söyle. Birçok şirket sana bir rehber iş arkadaşı (buddy) verir: ona her şeyi sorabilirsin.',
@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     'c.ask.s': 'Amirin bir işi çok hızlı anlatıyor. Anlamadın. Ne yaparsın?',
     'c.ask.o1': 'Tekrar açıklamasını istersin.', // nalezen: korter goed antwoord
     'c.ask.o2': 'Başını sallar ve tahmin etmeye çalışırsın.',
-    'c.ask.o3': 'Bekler ve başka birinin yapmasını umarsın.',
+    'c.ask.o3': 'Hollandacan için özür diler ve işe başlarsın.', // nalezen: nieuwe foute optie
     'c.ask.w': 'Hollandalı amirler soru bekler. Hata yapmaktansa iki kez sormak daha iyidir.',
     'c.gear': 'Güvenlik kuralları herkes için',
     'c.gear.b': 'Baret, ayakkabı ve eldiven kuralları bir öneri değildir: herkes uyar, patron da. İşverenin ihtiyacın olan koruyucu ekipmanı sana ücretsiz vermek zorundadır. Üstüne olmayan ekipman seni iyi korumaz, o yüzden kendi bedenini iste: “Heb je dit ook in mijn maat?”',
@@ -82,7 +82,7 @@ const t: CultureTranslation = {
     'c.direct.p': 'Tamam, o zaman nasıl yapmalı?',
     'c.direct.s': 'Bir iş arkadaşın diyor ki: “Nee, dat is fout. Die doos moet daar.” Ne yaparsın?',
     'c.direct.o1': 'Nasıl yapılması gerektiğini sorar ve kutuyu taşırsın.',
-    'c.direct.o2': 'Alınır ve çekip gidersin.',
+    'c.direct.o2': 'Defalarca özür dilersin: iş arkadaşın kızgın.', // nalezen: nieuwe foute optie
     'c.direct.o3': 'Hiçbir şey söylemezsin ve kutuyu olduğu yerde bırakırsın.',
     'c.direct.w': 'Açık geri bildirim işle ilgilidir, seninle değil. “hoe moet het dan?” diye sormak öğrenmek istediğini gösterir.',
     'c.limits': 'Çok ağırsa söyle',
@@ -123,14 +123,14 @@ const t: CultureTranslation = {
     'c.no.s': 'Amirin cumartesi fazladan çalışıp çalışamayacağını soruyor. Çalışamazsın. Ne yaparsın?',
     'c.no.o1': 'Hayır der ve başka bir gün önerirsin.', // nalezen: korter goed antwoord
     'c.no.o2': 'Evet der ve sonra gelmezsin.',
-    'c.no.o3': '“Belki” der ve hiç cevap vermezsin.',
+    'c.no.o3': 'Evet dersin: patrona hayır denmez.', // nalezen: nieuwe foute optie
     'c.no.w': 'Net bir “nee” saygı görür. “ja” deyip gelmemek güveni çok daha fazla bozar.',
     'c.task': 'Bitince söyle, anlamadığında sor',
     'c.task.b': 'Hollanda’da amir bir işi çoğu zaman birkaç kelimeyle verir ve iş bitince söylemeni bekler. Anlamadığın hâlde “ja” demek çoğu zaman hatalara yol açar. Tekrar sormak ya da göstermesini istemek burada normaldir, kabalık değildir.',
     'c.task.p': 'Bitti! Şimdi ne yapayım?',
     'c.task.s': 'Amirin bir işi çok hızlı anlatıyor. Sadece yarısını anladın. Ne yaparsın?',
     'c.task.o1': 'Bir kez daha göstermesini istersin.', // nalezen: korter goed antwoord
-    'c.task.o2': '“ja” der ve tahmin edersin.',
+    'c.task.o2': 'Anladığın yarıdan başlarsın.', // nalezen: nieuwe foute optie
     'c.task.o3': 'Bir iş arkadaşın yapana kadar beklersin.',
     'c.task.w': 'Tekrar sormak normaldir ve bir dakika sürer. Bir hatayı düzeltmek çok daha uzun sürer. Çoğu amir bir şeyi iki kez göstermeyi tercih eder.',
     'u.teamwork': 'Birlikte çalışmak',
