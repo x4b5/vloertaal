@@ -201,7 +201,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', who: 'gemeente', best: false, feedback: 'Bij werk kwijt is UWV meestal de eerste stap.' },
             { id: 'c', who: 'uwv', best: true, feedback: 'Goed. Bij UWV vraag je WW aan.' },
           ],
-          why: 'Stopt je werk? Dan vraag je WW aan bij UWV. Zie les 10.1.',
+          why: 'Stopt je werk? Dan vraag je WW aan bij UWV. Zie de les "Werk kwijt: WW".',
         },
         { kind: 'model', id: 'r.l.contract.2.mo1', context: 'Je baas stopt je contract in de proeftijd.', nl: 'Wilt u mij de reden op papier geven?' },
       ],

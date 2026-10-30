@@ -226,7 +226,8 @@ export function WhatDo({ ex, lang, locked, onAnswer, verdict }: RuleProps<'whatd
   );
 }
 
-/** "Wie vraag je het?": up to three places to go, each with its name and a picture. */
+/** "Wie vraag je het?": up to three places to go, each with its name, a picture and a short
+ *  second line that says what the place is (ASK_WHO `what`). Part of the card: no extra tap. */
 export function WhoAsk({ ex, lang, locked, onAnswer, verdict, run, misses }: RuleProps<'whoask'>) {
   const { step } = ex;
   const best = step.options.find((o) => o.best)!;
@@ -244,7 +245,10 @@ export function WhoAsk({ ex, lang, locked, onAnswer, verdict, run, misses }: Rul
         render={(o) => (
           <>
             <span className="rule-who-pic" aria-hidden>{ASK_WHO[o.who].emoji}</span>
-            <span className="choice-label" lang="nl">{ASK_WHO[o.who].label}</span>
+            <span className="choice-label rule-who-text" lang="nl">
+              <span className="rule-who-name">{ASK_WHO[o.who].label}</span>
+              <span className="rule-who-what">{ASK_WHO[o.who].what}</span>
+            </span>
           </>
         )}
       />
@@ -386,7 +390,7 @@ export interface RuleVerdict {
   /** The picked option's own feedback. */
   own?: string;
   /** After another choice: the best answer. Its lead ("Het beste antwoord") is the title then. */
-  best?: { lead: string; text: string };
+  best?: { lead: string; text: string; what?: string };
   /** A card's sum: its steps, in words and numbers ("20 × 15 = 300 euro."). */
   sum?: string[];
   why: string;
@@ -423,7 +427,7 @@ export function ruleVerdict(ex: RuleExercise, correct: boolean, given?: string):
       return {
         title: correct ? 'Goed zo!' : 'Het beste antwoord is:',
         own: picked?.feedback,
-        best: correct ? undefined : { lead: 'Het beste antwoord', text: ASK_WHO[best.who].label },
+        best: correct ? undefined : { lead: 'Het beste antwoord', text: ASK_WHO[best.who].label, what: ASK_WHO[best.who].what },
         why: ex.step.why,
       };
     }
@@ -449,7 +453,9 @@ export function RuleFeedbackBody({ v, lang }: { v: RuleVerdict; lang?: HelpLangu
       {v.best && (
         <p className="rule-fb-best feedback-answer" lang="nl">
           <span className="feedback-answer-check" aria-hidden><CheckIcon size={20} /></span>
-          <strong>{v.best.text}</strong>
+          {v.best.what
+            ? <span className="rule-fb-who"><strong>{v.best.text}</strong><span className="rule-who-what">{v.best.what}</span></span>
+            : <strong>{v.best.text}</strong>}
         </p>
       )}
       {v.own && <p className="rule-fb-own" lang="nl">{v.own}</p>}
