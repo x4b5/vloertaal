@@ -369,7 +369,7 @@ export const be: BeUnit = {
         //   dagen) staat erin; de rest verwijst naar het ziekenfonds, de RVA en de vakbond.
         id: 'r.be.l.tijd.5',
         title: 'Kinderen en zorg',
-        goal: 'Je kent je verlof bij een zwangerschap, een baby of een ziek kind.',
+        goal: 'Je kent je verlof bij zwangerschap, een baby of een ziek kind.',
         remember: 'Zwanger, een baby of een ziek kind? Vraag op tijd welk verlof je hebt.',
         // Wie kan je helpen: je leidinggevende of de personeelsdienst · je ziekenfonds (geld tijdens
         //   moederschapsrust en geboorteverlof) · de RVA (ouderschapsverlof, tijdskrediet) · een vakbond ·
