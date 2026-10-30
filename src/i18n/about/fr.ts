@@ -16,7 +16,7 @@ const t: CultureTranslation = {
     'a.how': 'Comment ça marche ?',
     'a.how.b': 'Tu apprends le néerlandais avec de l’aide dans ta langue, ou en anglais simple si tu n’as pas choisi de langue d’aide. Tu écoutes, tu touches l’écran, tu fais des phrases et tu pratiques de courtes conversations avec des collègues.',
     'a.culture': 'Comment ça marche ici',
-    'a.culture.b': 'La langue passe en premier. Mais Vloertaal parle aussi de la façon dont les choses se passent en général au travail aux Pays-Bas : dire “je” à ton chef, poser des questions, être à l’heure, et dire quand quelque chose te gêne. Tu trouves ces conseils dans les leçons et sous “Conseils pour le travail”.',
+    'a.culture.b': 'La langue passe en premier. Mais Vloertaal parle aussi de la façon dont les choses se passent en général au travail aux Pays-Bas : dire “je” à ton patron, poser des questions, être à l’heure, et dire quand quelque chose te gêne. Tu trouves ces conseils dans les leçons et sous “Conseils pour le travail”.',
     'a.who': 'C’est pour qui ?',
     'a.who.b': 'Pour tous ceux qui commencent à travailler aux Pays-Bas. Langues d’aide : arabe, tigrigna, persan, dari, ukrainien, turc, polonais, roumain, bulgare, espagnol, portugais, français et allemand.',
     'a.free': 'Ta vie privée',

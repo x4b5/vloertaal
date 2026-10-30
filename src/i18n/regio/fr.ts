@@ -63,7 +63,7 @@ const t: CultureTranslation = {
     'rg.cat.werk': 'Travail',
     'rg.cat.bijstand': 'Aide sociale (bijstand)',
     'rg.cat.uitzend': 'Agences d’intérim',
-    'rg.cat.buurt': 'Quartier et aide sociale',
+    'rg.cat.buurt': 'Quartier et bien-être',
     'rg.cat.schulden': 'Dettes',
     'rg.cat.taal': 'Apprendre la langue',
     'rg.cat.zorg': 'Santé',
