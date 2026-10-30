@@ -38,7 +38,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.2': "Я можу сказати, що в мене добре виходить.", // nieuw, nalezen
     'kjn.u.lost.1': "Я можу сказати, що мій контракт закінчується.", // nieuw, nalezen
     'kjn.u.lost.2': "Я можу запитати, чи виплатять мені відпускні.", // nieuw, nalezen
-    'kjn.u.stage.1': "Я можу запитати, хто мій наставник на практиці.", // nieuw, nalezen
+    'kjn.u.stage.1': "Я можу запитати, хто мій наставник на підприємстві.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "Я можу попросити відгук і приклад.", // nieuw, nalezen
     'kjn.u.time.1': "Я можу сказати, о котрій починається моя зміна.", // nieuw, nalezen
     'kjn.u.time.2': "Я можу сказати, що я хворію.", // nieuw, nalezen

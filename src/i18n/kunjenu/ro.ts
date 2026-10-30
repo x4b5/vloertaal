@@ -38,7 +38,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.2': "Pot să spun la ce mă pricep.", // nieuw, nalezen
     'kjn.u.lost.1': "Pot să spun că mi se termină contractul.", // nieuw, nalezen
     'kjn.u.lost.2': "Pot să întreb dacă primesc banii de concediu.", // nieuw, nalezen
-    'kjn.u.stage.1': "Pot să întreb cine este îndrumătorul meu de practică.", // nieuw, nalezen
+    'kjn.u.stage.1': "Pot să întreb cine este îndrumătorul meu de la firmă.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "Pot să cer feedback și un exemplu.", // nieuw, nalezen
     'kjn.u.time.1': "Pot să spun la ce oră începe tura mea.", // nieuw, nalezen
     'kjn.u.time.2': { m: "Pot să spun că sunt bolnav.", f: "Pot să spun că sunt bolnavă.", x: "Pot să spun că sunt bolnav / bolnavă." }, // nieuw, nalezen

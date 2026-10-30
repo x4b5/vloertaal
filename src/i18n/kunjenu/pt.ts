@@ -38,7 +38,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.2': "Consigo dizer o que faço bem.", // nieuw, nalezen
     'kjn.u.lost.1': "Consigo dizer que o meu contrato vai acabar.", // nieuw, nalezen
     'kjn.u.lost.2': "Consigo perguntar se me pagam o subsídio de férias.", // nieuw, nalezen
-    'kjn.u.stage.1': "Consigo perguntar quem é o meu orientador de estágio na empresa.", // nieuw, nalezen
+    'kjn.u.stage.1': "Consigo perguntar quem é o meu orientador na empresa.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "Consigo pedir feedback e um exemplo.", // nieuw, nalezen
     'kjn.u.time.1': "Consigo dizer a que horas começa o meu turno.", // nieuw, nalezen
     'kjn.u.time.2': "Consigo dizer que estou doente.", // nieuw, nalezen

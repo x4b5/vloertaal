@@ -38,7 +38,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.2': "Мога да кажа какво ми се удава.", // nieuw, nalezen
     'kjn.u.lost.1': "Мога да кажа, че договорът ми свършва.", // nieuw, nalezen
     'kjn.u.lost.2': "Мога да попитам дали ще ми платят парите за отпуск.", // nieuw, nalezen
-    'kjn.u.stage.1': "Мога да попитам кой е наставникът ми на практиката.", // nieuw, nalezen
+    'kjn.u.stage.1': "Мога да попитам кой е наставникът ми във фирмата.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "Мога да поискам обратна връзка и пример.", // nieuw, nalezen
     'kjn.u.time.1': "Мога да кажа в колко часа започва смяната ми.", // nieuw, nalezen
     'kjn.u.time.2': { m: "Мога да кажа, че съм болен.", f: "Мога да кажа, че съм болна.", x: "Мога да кажа, че съм болен / болна." }, // nieuw, nalezen

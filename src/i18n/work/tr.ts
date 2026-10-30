@@ -1458,7 +1458,7 @@ const t: CultureTranslation = {
     's.police.3': "Bir avukatla konuşmak istiyorum.", // nieuw, nalezen
     'c.police.q': "Kimlik belgenizi görebilir miyim?", // nieuw, nalezen
     'c.police.a': "Evet, buyurun. Ne oldu?", // nieuw, nalezen
-    'u.online': "İşte internet", // nieuw, nalezen
+    'u.online': "İş yerinde internet", // nieuw, nalezen // nagelezen AI 31 okt
     'l.login': "Giriş yapmak", // nieuw, nalezen
     'w.uitloggen': "çıkış yapmak (hesaptan)", // nieuw, nalezen
     'w.account': "hesap", // nieuw, nalezen

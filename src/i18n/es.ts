@@ -346,7 +346,7 @@ const lang: HelpLanguageSource = {
     coachLast: 'Última lección, con la fecha', // nieuw, nalezen
     coachNameAsk: '¿Tu nombre en la tarjeta?', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
-    listenTrial: 'Que el teléfono escuche (prueba)', // nieuw, nalezen
+    listenTrial: 'Que el teléfono escuche (experimental)', // nieuw, nalezen // nagelezen AI 31 okt
     listenHint: 'Después de hablar, el teléfono dice si te ha entendido. Esto pasa en el mismo teléfono. No va nada a nosotros ni a otros.', // nieuw, nalezen
     listenNeedsPack: 'Primero el teléfono necesita el neerlandés. Es una descarga grande: usa wifi.', // nieuw, nalezen
     listenDownload: 'Descargar neerlandés', // nieuw, nalezen

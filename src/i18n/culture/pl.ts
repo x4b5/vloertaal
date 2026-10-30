@@ -17,9 +17,9 @@ const t: CultureTranslation = {
     'c.je.b': 'W pracy większość ludzi mówi do siebie „je”, często także do szefa. Jeśli nie masz pewności, zacznij od „u” i posłuchaj, jak mówią inni. Mówienie „je” nie jest tu niegrzeczne.',
     'c.je.p': 'Czy mogę mówić do ciebie „je”?',
     'c.je.s': 'Twoja nowa kierowniczka mówi: „Zeg maar je, hoor!” Co ma na myśli?',
-    'c.je.o1': { m: 'Chce, żebyś mówił do niej „je”.', f: 'Chce, żebyś mówiła do niej „je”.', x: 'Chce, żeby mówić do niej „je”.' }, // x: nieuw, nalezen
+    'c.je.o1': { m: 'Chce, żebyś mówił do niej „je”.', f: 'Chce, żebyś mówiła do niej „je”.', x: 'Chce, żeby mówiono do niej „je”.' }, // x: nieuw, nalezen // nagelezen AI 31 okt
     'c.je.o2': { m: 'Prosi, żebyś coś powiedział.', f: 'Prosi, żebyś coś powiedziała.', x: 'Prosi cię o kilka słów.' }, // nagelezen (2e lezing) // x: nieuw, nalezen
-    'c.je.o3': { m: 'Chce, żebyś mówił grzeczniej.', f: 'Chce, żebyś mówiła grzeczniej.', x: 'Chce, żeby mówić grzeczniej.' }, // nagelezen (2e lezing) // x: nieuw, nalezen
+    'c.je.o3': { m: 'Chce, żebyś mówił grzeczniej.', f: 'Chce, żebyś mówiła grzeczniej.', x: 'Chce, żeby mówiono do niej grzeczniej.' }, // nagelezen (2e lezing) // x: nieuw, nalezen // nagelezen AI 31 okt
     'c.je.w': '„Zeg maar je” to coś miłego: chce mniejszego dystansu. W wielu holenderskich firmach mówienie „je” do przełożonego jest normalne.',
     'c.names': 'Imiona i uścisk dłoni',
     'c.names.b': 'Pierwszego dnia krótko uściśnij dłoń, spójrz na tę osobę i powiedz swoje imię. Koledzy i kierownicy zwykle mówią do siebie po imieniu.',

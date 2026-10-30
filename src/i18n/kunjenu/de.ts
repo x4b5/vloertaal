@@ -38,7 +38,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.2': "Ich kann sagen, was ich gut kann.", // nieuw, nalezen
     'kjn.u.lost.1': "Ich kann sagen, dass mein Vertrag endet.", // nieuw, nalezen
     'kjn.u.lost.2': "Ich kann fragen, ob mein Urlaubsgeld ausgezahlt wird.", // nieuw, nalezen
-    'kjn.u.stage.1': "Ich kann fragen, wer mein Praxisanleiter im Betrieb ist.", // nieuw, nalezen
+    'kjn.u.stage.1': "Ich kann fragen, wer mein Ausbilder im Betrieb ist.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "Ich kann um Feedback und ein Beispiel bitten.", // nieuw, nalezen
     'kjn.u.time.1': "Ich kann sagen, wann meine Schicht beginnt.", // nieuw, nalezen
     'kjn.u.time.2': "Ich kann sagen, dass ich krank bin.", // nieuw, nalezen

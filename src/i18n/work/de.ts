@@ -1530,7 +1530,7 @@ const t: CultureTranslation = {
     's.budget.2': "Ich spare jeden Monat ein bisschen.", // nieuw, nalezen
     's.budget.3': "Ich kündige dieses Abo.", // nieuw, nalezen
     'c.budget.q': "Kauf das Handy jetzt und zahl später!", // nieuw, nalezen
-    'c.budget.a': "Nein, danke. Später zahlen sind auch Schulden.", // nieuw, nalezen
+    'c.budget.a': "Nein, danke. Später zahlen heißt auch Schulden machen.", // nieuw, nalezen // nagelezen AI 31 okt
     'l.healthy': "Fit für die Arbeit", // nieuw, nalezen
     'w.slapen': "schlafen", // nieuw, nalezen
     'w.ontbijt': "das Frühstück", // nieuw, nalezen
@@ -1542,7 +1542,7 @@ const t: CultureTranslation = {
     's.healthy.2': "Ich frühstücke immer zuerst.", // nieuw, nalezen
     's.healthy.3': "In der Pause gehe ich kurz spazieren.", // nieuw, nalezen
     'c.healthy.q': "Willst du eine Pille? Dann bleibst du wach.", // nieuw, nalezen
-    'c.healthy.a': "Nein, danke. Ich arbeite nicht unter Einfluss.", // nieuw, nalezen
+    'c.healthy.a': "Nein, danke. Ich arbeite nicht unter Alkohol oder Drogen.", // nieuw, nalezen // nagelezen AI 31 okt
     'c.workorder': "Erst lesen, dann anfangen", // nieuw, nalezen
     'c.workorder.b': "Bevor du anfängst, lies den Arbeitsauftrag (werkbon) oder die Aufgabe in der App. Prüfe die Adresse, die Aufgabe und die Anzahl der Dinge. Ist etwas unklar? Frag, bevor du anfängst, nicht mittendrin. Dann leg dein Werkzeug und das Material bereit. Das spart Zeit, und du machst weniger Fehler. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
     'c.workorder.p': "Auf dem Arbeitsauftrag stehen zehn Kartons. Stimmt das?", // nieuw, nalezen
@@ -1664,7 +1664,7 @@ const t: CultureTranslation = {
     'c.email.o3': "Eine lange E-Mail über deine Woche, mit der Frage am Ende.", // nieuw, nalezen
     'c.email.w': "Eine gute E-Mail hat eine Anrede, eine klare Frage und deinen Namen. Dann kann dein Vorgesetzter schnell antworten.", // nieuw, nalezen
     'c.budget': "Zuerst die Fixkosten", // nieuw, nalezen
-    'c.budget.b': "Wenn du deinen Lohn bekommst, bezahl zuerst die Fixkosten: Miete, Versicherung und dein Handy. Versuch, jeden Monat einen kleinen Betrag zu sparen, auch nur 10 Euro. Jetzt kaufen, später zahlen sind auch Schulden. Hast du etwas online gekauft? Dann kannst du es dir meistens innerhalb von 14 Tagen anders überlegen. Heb den Kassenbon auf: Du brauchst ihn für die Garantie.", // nieuw, nalezen
+    'c.budget.b': "Wenn du deinen Lohn bekommst, bezahl zuerst die Fixkosten: Miete, Versicherung und dein Handy. Versuch, jeden Monat einen kleinen Betrag zu sparen, auch nur 10 Euro. Jetzt kaufen, später zahlen heißt auch Schulden machen. Hast du etwas online gekauft? Dann kannst du es dir meistens innerhalb von 14 Tagen anders überlegen. Heb den Kassenbon auf: Du brauchst ihn für die Garantie.", // nieuw, nalezen // nagelezen AI 31 okt
     'c.budget.p': "Ich zahle lieber jetzt. Dann habe ich keine Schulden.", // nieuw, nalezen
     'c.budget.s': "Heute bekommst du deinen Lohn. Du willst neue Schuhe, und deine Miete ist noch nicht bezahlt. Was machst du?", // nieuw, nalezen
     'c.budget.o1': "Du zahlst zuerst die Miete, dann schaust du, was übrig ist.", // nieuw, nalezen

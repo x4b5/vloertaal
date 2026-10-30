@@ -4,9 +4,9 @@ import type { CultureTranslation } from '../culture/types';
  *  the can-do sentences of the first four themes (TODO: the other four). */
 const t: CultureTranslation = {
   ui: {
-    kunJeNu: "حالا چه کار کرده می‌توانی؟", // nieuw, nalezen
+    kunJeNu: "حالا چه کار کرده می‌توانید؟", // nieuw, nalezen // nagelezen AI 31 okt
     kunNote: "سطح کنار هر جمله فقط رهنما است، نه یک سطح رسمی.", // nieuw, nalezen
-    coachCanDo: "تعداد جمله‌های «می‌توانم …» از موضوع‌هایی که تمام کرده‌ای", // nieuw, nalezen
+    coachCanDo: "تعداد جمله‌های «می‌توانم …» از موضوع‌هایی که تمام کرده‌اید", // nieuw, nalezen // nagelezen AI 31 okt
     kunLuisteren: "شنیدن", // nieuw, nalezen
     kunSpreken: "گپ زدن", // nieuw, nalezen
     kunLezen: "خواندن", // nieuw, nalezen
