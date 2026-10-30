@@ -1,8 +1,8 @@
 # Vloertaal naast de Entree-opleiding: wat dekt de app?
 
-*Voor docenten, coaches en loopbaanbegeleiders in het mbo. Stand: 15 oktober 2026.
-De dekking is een indicatie (zie het slot). Voor wat er nog ontbreekt, is er een lesplan:
-[`entree-aanvulling.md`](entree-aanvulling.md).*
+*Voor docenten, coaches en loopbaanbegeleiders in het mbo. Stand: 15 oktober 2026, met een
+aanvulling voor het spoor Taal van 30 oktober 2026 (§3.5). De dekking is een indicatie (zie het
+slot). Voor wat er nog ontbreekt, is er een lesplan: [`entree-aanvulling.md`](entree-aanvulling.md).*
 
 ---
 
@@ -12,8 +12,8 @@ Vloertaal is een gratis app voor de telefoon, zonder reclame. Er is geen account
 student leert, blijft alleen op zijn of haar eigen telefoon. De app heeft twee sporen:
 
 - **Taal**: Nederlands voor op het werk, voor studenten die nog weinig Nederlands spreken. Er is
-  uitleg in 9 talen: Arabisch, Bulgaars, Dari, Farsi, Pools, Roemeens, Tigrinya, Turks en
-  Oekraïens. Ook kan alles in het Engels. Elke les heeft 6 woorden, 3 zinnen en een kort
+  uitleg in 13 talen: Arabisch, Bulgaars, Dari, Duits, Farsi, Frans, Pools, Portugees, Roemeens,
+  Spaans, Tigrinya, Turks en Oekraïens. Ook kan alles in het Engels. Elke les heeft 6 woorden, 3 zinnen en een kort
   gesprekje. Bijna elke les heeft ook een tip "Zo werkt het hier" over werken in Nederland.
 - **Werkregels**: de geschreven en ongeschreven regels van werken in Nederland, voor studenten die
   al Nederlands spreken. In eenvoudig Nederlands, op niveau 1F (ongeveer A2). De telefoon leest
@@ -119,6 +119,40 @@ in de klas kunt bespreken.
 | **Assistent mobiliteitsbranche** | 🔴 | *Naar je werk › By bike* gaat over fietsen naar je werk, niet over de werkplaats | — | *Schets in de aanvulling.* |
 | **Assistent metaal-, elektro- en installatietechniek** | 🔴 | *Op de bouw › Tools and materials* (gereedschap) | Deels bruikbaar: WR P.1 (lock-out) · WR 7.1 | *Schets in de aanvulling.* |
 | **ICT** (geen Entree-profiel gevonden ⚖️) | 🔴 | — | — | Voor studenten die naar niveau 2 ICT willen. *Schets in de aanvulling.* |
+
+
+### 3.5 Nieuw in het spoor Taal (30 oktober 2026)
+
+De top 10 van de Entree-gaten heeft nu ook lessen in het spoor Taal: 17 lessen, elk met 6 woorden,
+3 zinnen, een gesprekje en een tip "Zo werkt het hier", met uitleg in alle 13 hulptalen. De zes
+nieuwe onderwerpen staan **aan het eind** van het lespad, zodat een student die al bezig is
+niets kwijtraakt. De andere vijf lessen staan aan het eind van een bestaand onderwerp. De tabellen
+hierboven zijn van 15 oktober. Deze tabel zegt wat er in Taal bij is gekomen. De opnames volgen:
+tot dan leest de stem van de telefoon de nieuwe zinnen voor.
+
+| Gat (Entree) | Was in Taal | Nu in Taal | Nieuwe lessen (titel in de app) |
+|---|---|---|---|
+| **W1 en W3**: werkbon lezen, afmelden | 🟡 / 🔴 | 🟢 | *Je werk afronden › The work order, Done, or not yet?* |
+| **Metaal, elektro en installatie** | 🔴 | 🟡 | *In de werkplaats › Workshop tools, Power off first* |
+| **Loopbaan**: wat kan en wil ik, na Entree | 🟡 | 🟢 | *Diploma's en verder komen › What I am good at, After Entree* |
+| **Mobiliteit** | 🔴 | 🟡 | *In de garage › Tyres, oil and the lift, The customer decides* |
+| **Bpv (stage)** | 🔴 | 🟢 | *Stage lopen › Your placement, Feedback on your placement* |
+| **Nederlands 1F: schrijven** | 🔴 | 🟡 | *Bellen en appen met je werk › Writing to work* (een korte mail: groet, wat, wanneer, je naam) |
+| **Economisch: consument, budget** | 🟡 | 🟢 | *Geld en post › Your money each month* (vaste lasten, sparen, achteraf betalen, bedenktijd) |
+| **Vitaal: gezond leven** | 🟡 | 🟢 | *Gezondheid › Fit for work* (slapen, ontbijt, bewegen, geen drugs, hulp bij de huisarts) |
+| **Politiek-juridisch: stemmen, rechtsstaat** | 🔴 | 🟡 | *Meedoen in Nederland › The municipality and voting, Police and your rights* |
+| **Digitaal**: inloggen, phishing | 🟡 | 🟢 | *Online op je werk › Logging in, Fake e-mails* |
+
+- **Mobiliteit en techniek** zijn nog geen eigen sector bij "Waar werk je?". Deze onderwerpen staan
+  daarom voor iedereen in het lespad, onder het thema *Je baan*, na de andere onderwerpen.
+- **Feiten met ⚖️** in deze lessen (een deskundige kijkt ze na): gehoorbescherming en heet werk,
+  werken aan elektriciteit (NEN 3140), gevaarlijk afval in de garage, meerwerk alleen met akkoord
+  van de klant, de proefrit met rijbewijs, de POK, doorstromen naar niveau 2 en de
+  startkwalificatie, de bbl, de bedenktijd van 14 dagen en de garantie, alcohol en drugs op het
+  werk, stemrecht voor de gemeenteraad, de identificatieplicht vanaf 14 jaar, bezwaar maken vóór de
+  datum in de brief, het recht op een advocaat, en dat je je DigiD aan niemand geeft.
+- **Tip voor de docent.** Doe *Je werk afronden* in de week vóór de bpv, en *Stage lopen* in de eerste
+  week ervan. Laat studenten na *Writing to work* hun eigen mail schrijven aan hun praktijkopleider.
 
 ---
 

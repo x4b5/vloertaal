@@ -36,17 +36,22 @@ Hulptalen in het spoor Taal:
 ## Wat zit erin
 
 **Spoor Taal**
-- **33 onderwerpen, 116 lessen** (498 woorden, 249 zinnen, 148 gesprekjes), in **8 thema's**:
+- **40 onderwerpen, 142 lessen** (612 woorden, 306 zinnen, 181 gesprekjes), in **8 thema's**:
   Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland en
-  Jouw sector (Logistiek, Bouw, Productie, Zorg, Horeca, Schoonmaak).
+  Jouw sector (Logistiek, Bouw, Productie, Zorg, Horeca, Schoonmaak, Tuinbouw).
 - Ook: **Klanken** (woordparen als man/maan, pak/bak), **Uitdrukkingen en gezegden** (daarna komt
   in latere lessen een passende uitdrukking terug), **In de winkel**, **Rekenen** en **Slimme apps en AI**
   (AI als hulp, wat je niet deelt, nep of echt, en als een app beslist), en **Getallen en gegevens**
   (je naam spellen, je telefoonnummer, dagen en datums).
+- Voor de **Entree-opleiding** (mbo niveau 1): **Je werk afronden** (de werkbon, afmelden),
+  **In de werkplaats** (gereedschap, stroom), **In de garage**, **Stage lopen** (de POK, feedback),
+  **Meedoen in Nederland** (stemmen, politie en bezwaar) en **Online op je werk** (inloggen,
+  nepmails), en lessen over wat je goed kunt, na Entree, een mail schrijven, je geld per maand en
+  fit voor je werk.
 - **Oefeningen**: nieuw woord met plaatje en uitspraak, betekenis kiezen, Nederlands woord kiezen,
   luisteren, paren verbinden, zin bouwen (later op het gehoor), typen, gesprekken en spreken
   (opnemen en vergelijken). Latere onderwerpen worden stap voor stap moeilijker.
-- **Werkvloer-tips** (80): hoe het hier gaat op het werk, en je rechten, met een verwijzing naar
+- **Werkvloer-tips** (99): hoe het hier gaat op het werk, en je rechten, met een verwijzing naar
   vakbond, Juridisch Loket of FairWork bij uitbuiting.
 
 **Spoor Werkregels** (bèta, alleen Nederlands)

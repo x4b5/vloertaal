@@ -16,6 +16,9 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-30',
     items: [
+      'Voor de Entree-opleiding, in het spoor Taal: zes nieuwe onderwerpen aan het eind van het lespad. Je werk afronden (de werkbon lezen, opruimen en afmelden), In de werkplaats (gereedschap, lawaai en stroom), In de garage (banden en olie, en de klant beslist), Stage lopen (de POK en feedback vragen), Meedoen in Nederland (stemmen, de politie en bezwaar maken) en Online op je werk (inloggen en nepmails).',
+      'Nieuwe lessen in bestaande onderwerpen: Waar ben ik goed in? en Na Entree (Diploma’s en verder komen), Een mail aan je werk (Bellen en appen met je werk), Je geld per maand (Geld en post) en Fit voor je werk (Gezondheid).',
+      'Alle nieuwe lessen hebben een tip "Zo werkt het hier" en een vertaling in de 13 hulptalen. Een moedertaalspreker kijkt de vertalingen nog na. De opnames volgen; tot dan leest de stem van je telefoon voor.',
       'Nieuw onderwerp bij Starten: Getallen en gegevens. Twee lessen: je gegevens (je naam spellen, je telefoonnummer, het formulier) en dagen en datums (volgende week, tot en met). Het komt vóór Tijd en rooster.',
       'Nieuwe les bij Gezondheid: Lichaam en klachten. Met het hoofd, de rug, de hand en het oog, en de tip: zeg wat er gebeurde en waar het pijn doet.',
       'Nieuwe les bij Verlof en ziekte: Kinderen en werk. Een ziek kind ophalen, calamiteitenverlof, zwanger zijn en de kinderopvang.',
