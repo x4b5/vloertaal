@@ -739,9 +739,9 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
     return () => window.removeEventListener('keydown', onKey);
   }, [onDone, onFaster]);
   const answerFaster = (yes: boolean) => { if (!ready.current || !onFaster) return; onFaster(yes); onDone(); };
-  // At most 3 things to tap: Ja + Nee + the "Oefen samen" row is fine, but not with the row to
-  // the emergency phrases as well.
-  const showSamen = Boolean(onSamen) && !(onFaster && onPhrases);
+  // While "Wil je sneller?" waits for Ja or Nee, no samen row: a tap there would leave the question
+  // unanswered (it counts as asked once shown). The row comes back after the next lesson.
+  const showSamen = Boolean(onSamen) && !onFaster;
   const perfect = total > 0 && right === total;
   const rtl = lang?.dir === 'rtl';
   // The next lesson's first word with a picture, as on its card on the path.
