@@ -59,7 +59,7 @@ export const proSections: ProSection[] = [
     id: 'p.beta', emoji: beta.emoji, title: 'Een testversie: wie test er?',
     body: [
       beta.nl.body,
-      'We testen in kleine groepen: leerlingen oefenen een week op hun eigen telefoon, met hun eigen begeleider erbij. Met een toegangscode gaan alle lessen open. Zonder code kan iedereen de eerste les van elk thema proberen.',
+      'We testen in kleine groepen: leerlingen oefenen een week op hun eigen telefoon, met hun eigen begeleider erbij. Alle lessen staan open voor iedereen. Je hebt geen code of account nodig.',
     ],
     lines: [
       { lead: 'Fout gezien in een les?', text: 'Tik bovenaan op het vlaggetje Melden. Dan opent een mail aan ons, met de plek in de app er al in: de les, de stap en de hulptaal. Schrijf erbij wat je zag. Een schermafbeelding helpt. Leerlingen kunnen dit ook zelf.' },
