@@ -230,7 +230,7 @@ export const digitaalUnit: RuleUnit = {
           quote: 'Ik heb snel je inlogcode nodig. Stuur hem nu, het is dringend.',
           options: [
             { id: 'a', text: 'Ze stuurt de code. Het is haar baas.', best: false, feedback: 'Begrijpelijk. Maar met AI kan iemand een stem nadoen.' },
-            { id: 'b', text: 'Ze stuurt niets. Ze belt haar leidinggevende zelf, op het nummer dat ze kent.', best: true, feedback: 'Goed. Zo weet ze zeker wie het is.' },
+            { id: 'b', text: 'Ze belt zelf terug, op het nummer dat ze kent.', best: true, feedback: 'Goed. Zo weet ze zeker wie het is.' },
             { id: 'c', text: 'Ze vraagt in een bericht: "Ben jij het echt?"', best: false, feedback: 'Een oplichter zegt gewoon ja.' },
           ],
           why: 'Met AI kunnen oplichters een stem of een filmpje nadoen. Haast, geld of een code, en een nieuw nummer? Dat is een alarm. Stuur niets. Bel zelf terug op het nummer dat je kent.',

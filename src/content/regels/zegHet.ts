@@ -244,7 +244,7 @@ export const zegHetWrong: Record<string, readonly [{ text: string; feedback: str
   ],
   'r.l.warehouse.2.mo1': [
     { text: 'Ik haal de norm niet. Ik sla de pauze wel over.', feedback: 'Je pauze heb je nodig. Vraag liever om tips.' },
-    { text: 'Die norm is veel te hoog. Dat haalt niemand.', feedback: 'Dan leer je niets. Vraag hoe het beter kan.' },
+    { text: 'Die norm is veel te hoog. Dat haalt niemand.', feedback: 'Misschien is dat zo. Maar vraag eerst hoe de norm werkt.' },
   ],
   'r.l.build.1.mo1': [
     { text: 'Ik werk vandaag wel even op mijn gewone schoenen.', feedback: 'Dan kun je je voeten pijn doen. Vraag om veiligheidsschoenen.' },

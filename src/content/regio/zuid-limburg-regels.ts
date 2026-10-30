@@ -426,7 +426,7 @@ export const zlRegelsUnit: RuleUnit = {
           options: [
             { id: 'a', who: 'gemeente', best: true, feedback: 'Goed. Die hulp is gratis.' },
             { id: 'b', who: 'bank', best: false, feedback: 'Pas op met een nieuwe lening. Dan krijgt ze vaak nog meer schulden.' },
-            { id: 'c', who: 'politie', best: false, feedback: 'De politie helpt niet bij schulden. Ze moet ook niet wachten: schulden worden meestal groter.' },
+            { id: 'c', who: 'politie', best: false, feedback: 'De politie helpt niet bij schulden. Daarvoor ga je naar de gemeente.' },
           ],
           why: 'Elke gemeente moet je helpen bij schulden. Dat is gratis. In veel gemeenten in Zuid-Limburg doet de Kredietbank Limburg dat voor de gemeente. Er zijn ook vrijwilligers die helpen met je post en je geld. Vraag vroeg hulp. Hoe eerder, hoe makkelijker. Kijk in de Sociale kaart bij "Schulden".',
         },
