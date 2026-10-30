@@ -13,6 +13,10 @@ import { addDays, dailyCard, dailyLesson, dailyWordIds, dueIds, type Cards } fro
  * Then, of equally weak lessons the otherwise strongest gives the chat (l.task): only the chat changed.
  * Then (18 October 2026) the sentences turn a whole turn a day again (l.arrive, l.notyet): on this
  * day it picks the same sentences, so nothing changed.
+ * Then (30 October 2026) the tip of a source lesson comes back as a situation question (after the
+ * words, before the match board): one item more, and with the random numbers it takes, the match
+ * board has other words and the chat's options another order. The words asked, the sentence and
+ * the chat are the same.
  */
 
 const TODAY = '2026-10-15';
@@ -58,6 +62,7 @@ describe("the language track's daily review is unchanged", () => {
         dialogues: (lesson.dialogues ?? []).map((d) => d.prompt.id),
         boxes: lesson.boxes,
         repeat: lesson.repeat,
+        tipFrom: lesson.tipFrom?.slice(0, 3),
       },
       exercises: run(false),
       quiet: run(true),
