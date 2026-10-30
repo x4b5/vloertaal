@@ -147,3 +147,4 @@ export const REGIONS_LIVE: boolean = true;   // was: false
 
 Vercel publiceert vanzelf. Lukt dat niet, kijk dan in Vercel bij *Deployments*.
 Nieuwe of gewijzigde Nederlandse zinnen: draai in GitHub **Actions → Record ElevenLabs voices**.
+De stappen (ook zonder GitHub, en wat er nog ontbreekt) staan in `opnames.md`.

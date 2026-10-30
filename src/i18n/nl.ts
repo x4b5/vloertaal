@@ -348,6 +348,26 @@ export const uiNl: Record<UiKey, UiText> = {
   resetKeeps: 'De app wist je lessen, je dagen op rij en je certificaten. Je taal, je code en je instellingen blijven.', // regels: no words
   loadFailed: 'Niet geladen. Is er internet?',
   retry: 'Opnieuw proberen',
+  // "Wat ken je al?" (alleen in het spoor Taal; hier voor de volledigheid)
+  toetsTitle: 'Wat ken je al?',
+  toetsOffer: 'Ongeveer 10 minuten. Je krijgt geen cijfer. Het is alleen voor jou.',
+  toetsEndOffer: 'Je hebt veel geleerd. Doe de toets nog een keer. Kijk wat je nu kent.',
+  toetsPartListen: 'Luisteren',
+  toetsPartWords: 'Woorden',
+  toetsPartSentences: 'Zinnen',
+  toetsListenAsk: 'Luister. Wat betekent het?',
+  toetsNotSure: 'Weet je het niet? Kies er gewoon één. Dat is goed.',
+  toetsMicKeep: 'Je opname blijft alleen op deze telefoon. Later hoor je jezelf terug.',
+  toetsStartDone: 'Goed begin! Dit ken je al.',
+  toetsEndDone: 'Goed gedaan! Kijk wat je nu kent.',
+  toetsYouThen: 'Jij toen',
+  toetsYouNow: 'Jij nu',
+  toetsKeepGoing: 'Oefen elke dag een beetje. Dan leer je steeds meer.',
+  toetsStart: 'Doe de toets',
+  tempo: 'Tempo',
+  tempoCalm: 'Rustig',
+  tempoNormal: 'Normaal',
+  tempoHint: 'Rustig is langzaam en duidelijk. Normaal is zoals collega’s praten. Kies Normaal als je al veel verstaat.',
 };
 
 const lang: HelpLanguageSource = {

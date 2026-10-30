@@ -11,128 +11,6 @@ import { BRAM_HELLO, BRAM_VOICE } from '../src/lib/voices';
 /** Lines whose recording is still to be made (the owner re-records them); the device voice says them meanwhile. */
 const PENDING_RECORDING = new Set<string>([
   // Add a changed or new line here until the next 'Record ElevenLabs voices' run.
-  // More natural Dutch (critic, 16 October 2026):
-  'Kunt u langzamer praten?',
-  'Ik ben het niet met je eens.',
-  'Mag ik jij zeggen?',
-  'Waar is dit middel voor?',
-  // The shift chat about the shift, not coffee (critic, 16 October 2026):
-  'Wanneer begint je dienst?',
-  'Morgen om zeven uur.',
-  // New lesson "Een ongeluk melden" (l.accident, 17 October 2026):
-  'gewond',
-  'bloeden',
-  'de EHBO-doos',
-  'de BHV’er',
-  'het ziekenhuis',
-  'gebeuren',
-  'Mijn collega is gevallen.',
-  'Ik heb me gesneden.',
-  'Ik wil een ongeluk melden.',
-  'Wat is er gebeurd?',
-  'Hij is gevallen. Hij bloedt.',
-  'Mijn collega is gewond. Waar is de BHV’er?',
-  // New lesson "Werken via een uitzendbureau" (l.agency, 17 October 2026):
-  'de uitzendkracht',
-  'de intercedent',
-  'het urenbriefje',
-  'de opdracht',
-  'verlengen',
-  'uitbetalen',
-  'Ik werk via een uitzendbureau.',
-  'Wordt mijn opdracht verlengd?',
-  'Wanneer stopt mijn opdracht?',
-  'Heb je je uren doorgegeven?',
-  'Ja, gisteren in de app.',
-  'Op mijn loonstrook staan te weinig uren.',
-  // New lesson "Opdrachten van je leidinggevende" (l.task, 17 October 2026):
-  'de taak',
-  'daarna',
-  'afmaken',
-  'snel',
-  'bijna',
-  'Wat moet ik eerst doen?',
-  'Ik ben klaar met deze taak.',
-  'Kunt u het nog een keer laten zien?',
-  'Ben je klaar?',
-  'Bijna. Nog vijf minuten.',
-  'Klaar! Wat moet ik nu doen?',
-  // New lesson "De eerste dag: je weg vinden" (l.arrive, 18 October 2026):
-  'de ingang',
-  'de receptie',
-  'de kantine',
-  'de kleedkamer',
-  'de buddy',
-  'vinden',
-  'Bij wie moet ik me melden?',
-  'Ik kan de kleedkamer niet vinden.',
-  'Wie is mijn buddy vandaag?',
-  'Goedemorgen, waar komt u voor?',
-  'Ik ben nieuw. Ik begin vandaag.',
-  'Goedemorgen, ik ben Ali. Ik begin vandaag. Bij wie moet ik zijn?',
-  // New lesson "Dit heb ik nog niet geleerd" (l.notyet, 18 October 2026), and the Dutch its
-  // situation quotes (a clip of its own, scripts/list-clips.ts):
-  'nog niet',
-  'mogen',
-  'proberen',
-  'voordoen',
-  'gevaarlijk',
-  'de uitleg',
-  'Dit heb ik nog niet geleerd.',
-  'Ik heb nog geen uitleg gehad.',
-  'Mag ik dit al alleen doen?',
-  'Probeer het maar, het is makkelijk.',
-  'Kun je het eerst voordoen?',
-  'Dit heb ik nog niet geleerd. Kun je het voordoen?',
-  'Pak jij even de heftruck? Het is makkelijk.',
-  // New unit "Slimme apps en AI" (u.ai, 19 October 2026):
-  'de AI',
-  'de chatbot',
-  'het antwoord',
-  'meekijken',
-  'kloppen',
-  'zeker',
-  'persoonlijk',
-  'de gegevens',
-  'het wachtwoord',
-  'typen',
-  'opslaan',
-  'inloggen',
-  'echt',
-  'de stem',
-  'het filmpje',
-  'ophangen',
-  'het nummer',
-  'de haast',
-  'de planning',
-  'de mens',
-  'de computer',
-  'het tempo',
-  'automatisch',
-  'het besluit',
-  'Kun je deze brief uitleggen?',
-  'Klopt dit antwoord?',
-  'Kunt u even meekijken?',
-  'Ik deel geen namen van klanten.',
-  'Mag ik AI gebruiken voor mijn werk?',
-  'Mijn wachtwoord is geheim.',
-  'Is dit echt of nep?',
-  'Ik hang op en bel zelf terug.',
-  'Ik stuur geen geld.',
-  'Wie heeft dit besluit genomen?',
-  'Ik wil met een mens praten.',
-  'Waarom heb ik minder uren in mijn rooster?',
-  'Heb je dit zelf geschreven?',
-  'Ja, met hulp van AI.',
-  'Zet dit even in de chatbot.',
-  'Liever niet, er staan namen van klanten in.',
-  'Hoi, dit is mijn nieuwe nummer. Kun je snel geld sturen?',
-  'Ik bel je eerst op je oude nummer.',
-  'De app heeft je rooster gemaakt.',
-  'Kan ik er met een mens over praten?',
-  'Klopt dit? Kunt u even meekijken?',
-  'Mag ik hier AI voor gebruiken?',
-  'Kan een mens hier even naar kijken?',
   // New sector unit "In de kas" (u.kas, l.harvest and l.greensafe, 30 October 2026). "de kas",
   // "de krat", "drinken", "Ik werk in de kas." and "De krat is vol." have a clip already.
   'het gewas',
@@ -475,6 +353,17 @@ describe('recorded clips (G4 b3)', () => {
     ]);
     const missing = [...texts].filter((t) => !said.has(t.trim()) && !said.has(plain(t)));
     expect(missing.filter((t) => !PENDING_RECORDING.has(t))).toEqual([]);
+  });
+
+  it('PENDING_RECORDING: names lines that are recorded now (a warning, not a failure)', () => {
+    // After a 'Record ElevenLabs voices' run (docs/opnames.md) the recorded lines can leave the
+    // list. A warning, so a new recording never blocks the publish that runs the tests.
+    const voices = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8')).voices as { said: Record<string, string> }[];
+    const plain = (t: string) => t.trim().toLowerCase().replace(/[.!?…,]+$/, '');
+    const said = new Set(voices.flatMap((v) => Object.values(v.said)).flatMap((t) => [t.trim(), plain(t)]));
+    const recorded = [...PENDING_RECORDING].filter((t) => said.has(t.trim()) || said.has(plain(t)));
+    if (recorded.length) console.warn(`Recorded now, can leave PENDING_RECORDING (${recorded.length}):\n${recorded.join('\n')}`);
+    expect(Array.isArray(recorded)).toBe(true);
   });
 
   it('Bram’s own line is a clip that only his voice records (x.bram, Thijmen)', { timeout: 60_000 }, () => {

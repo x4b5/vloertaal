@@ -18,7 +18,10 @@
 /** The owner's GoatCounter site; its root is also the dashboard. */
 export const COUNTER: string = (import.meta.env.VITE_COUNTER_URL as string | undefined) || 'https://vloertaal.goatcounter.com';
 
-export type CountEvent = 'lesson-start' | 'lesson-quit' | 'lesson-done' | 'review-done' | 'unit-done';
+export type CountEvent = 'lesson-start' | 'lesson-quit' | 'lesson-done' | 'review-done' | 'unit-done'
+  /** "Wat ken je al?" started and finished (src/components/Toets.tsx): with the version (a, b) as
+   *  its "lesson", never the score. */
+  | 'toets-start' | 'toets-done';
 
 /** What a count may say: only about the content, never about the learner. */
 export interface CountDims {

@@ -316,6 +316,26 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Não carregou. Tens internet?',
     retry: 'Tentar de novo',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: 'O que já sabes?', // nieuw, nalezen
+    toetsOffer: 'Cerca de 10 minutos. Não há notas. É só para ti.', // nieuw, nalezen
+    toetsEndOffer: 'Já aprendeste muito. Faz o teste outra vez e vê o que sabes agora.', // nieuw, nalezen
+    toetsPartListen: 'Ouvir', // nieuw, nalezen
+    toetsPartWords: 'Palavras', // nieuw, nalezen
+    toetsPartSentences: 'Frases', // nieuw, nalezen
+    toetsListenAsk: 'Ouve. O que quer dizer?', // nieuw, nalezen
+    toetsNotSure: 'Não sabes? Escolhe uma. Não faz mal.', // nieuw, nalezen
+    toetsMicKeep: 'A tua gravação fica só neste telemóvel. Mais tarde podes ouvir-te outra vez.', // nieuw, nalezen
+    toetsStartDone: 'Bom começo! Isto já sabes.', // nieuw, nalezen
+    toetsEndDone: 'Muito bem! Vê o que sabes agora.', // nieuw, nalezen
+    toetsYouThen: 'Tu antes', // nieuw, nalezen
+    toetsYouNow: 'Tu agora', // nieuw, nalezen
+    toetsKeepGoing: 'Pratica um pouco todos os dias. Assim aprendes cada vez mais.', // nieuw, nalezen
+    toetsStart: 'Fazer o teste', // nieuw, nalezen
+    tempo: 'Velocidade', // nieuw, nalezen
+    tempoCalm: 'Devagar', // nieuw, nalezen
+    tempoNormal: 'Normal', // nieuw, nalezen
+    tempoHint: 'Devagar é lento e claro. Normal é como falam os colegas. Escolhe «Normal» se já percebes muito.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

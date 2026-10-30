@@ -316,6 +316,26 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Pas chargé. Tu as internet ?',
     retry: 'Réessayer',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: 'Qu’est-ce que tu sais déjà ?', // nieuw, nalezen
+    toetsOffer: 'Environ 10 minutes. Il n’y a pas de note. C’est juste pour toi.', // nieuw, nalezen
+    toetsEndOffer: 'Tu as beaucoup appris. Refais le test et regarde ce que tu sais maintenant.', // nieuw, nalezen
+    toetsPartListen: 'Écouter', // nieuw, nalezen
+    toetsPartWords: 'Mots', // nieuw, nalezen
+    toetsPartSentences: 'Phrases', // nieuw, nalezen
+    toetsListenAsk: 'Écoute. Qu’est-ce que ça veut dire ?', // nieuw, nalezen
+    toetsNotSure: 'Tu ne sais pas ? Choisis-en une, c’est tout. Ce n’est pas grave.', // nieuw, nalezen
+    toetsMicKeep: 'Ton enregistrement reste seulement sur ce téléphone. Plus tard, tu pourras t’écouter à nouveau.', // nieuw, nalezen
+    toetsStartDone: 'Bon début ! Voilà ce que tu sais déjà.', // nieuw, nalezen
+    toetsEndDone: 'Bravo ! Regarde ce que tu sais maintenant.', // nieuw, nalezen
+    toetsYouThen: 'Toi avant', // nieuw, nalezen
+    toetsYouNow: 'Toi maintenant', // nieuw, nalezen
+    toetsKeepGoing: 'Entraîne-toi un peu chaque jour. Comme ça, tu apprends de plus en plus.', // nieuw, nalezen
+    toetsStart: 'Faire le test', // nieuw, nalezen
+    tempo: 'Vitesse', // nieuw, nalezen
+    tempoCalm: 'Calme', // nieuw, nalezen
+    tempoNormal: 'Normal', // nieuw, nalezen
+    tempoHint: 'Calme : lent et clair. Normal : comme parlent les collègues. Choisis « Normal » si tu comprends déjà beaucoup.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

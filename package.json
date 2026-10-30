@@ -11,6 +11,7 @@
     "test": "vitest run",
     "typecheck": "tsc -b",
     "clips": "tsx scripts/list-clips.ts",
+    "voices:missing": "tsx scripts/list-clips.ts && node scripts/voices/missing.mjs",
     "taal": "tsx scripts/taal-a2.ts",
     "splash": "tsx scripts/splash-html.ts"
   },

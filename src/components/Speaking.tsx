@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { gloss, said, saidLang, ui } from '../i18n';
+import { gloss, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { autoSpeak, speak, stopSpeech } from '../lib/audio';
 import { breakable } from '../lib/dutch';
@@ -75,12 +75,13 @@ const RING_C = 2 * Math.PI * RING_R;
  * yourself, compare with the speaker side by side, and rate it yourself. Never graded.
  *
  * Privacy: the recording is a Blob behind an object URL held in a ref of this component. It is
- * never uploaded, never written to storage, and it is revoked (with the microphone released)
+ * never uploaded and never written to storage here (only "Wat ken je al?" keeps its own copy, via
+ * onRecording, on this phone: src/lib/toetsVoice.ts), and it is revoked (with the microphone released)
  * when the learner records again or the exercise closes.
  *
  * `phaseForShot` fixes the phase for the screenshot harness (no microphone used).
  */
-export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForShot = shotPhase }: {
+export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecording, keepNote, phaseForShot = shotPhase }: {
   ex: Extract<Exercise, { kind: 'speak' }>;
   lang?: HelpLanguage;
   onAnswer: (a: { correct: boolean } | null) => void;
@@ -89,6 +90,10 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
   /** True while the learner compares and rates: "Sounds the same" is then the way forward, so
    *  the player hides its own Continue (one clear path). */
   onRating?: (rating: boolean) => void;
+  /** Each recording made ("Wat ken je al?" keeps it on the phone, src/lib/toetsVoice.ts). */
+  onRecording?: (blob: Blob) => void;
+  /** A line under the privacy line (where the recording is kept on the phone, it says so). */
+  keepNote?: Bilingual;
   phaseForShot?: Phase;
 }) {
   const { item } = ex;
@@ -255,6 +260,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
       setUsed(0);
       if (!blob.size) { setPhase('idle'); return; }
       urlRef.current = URL.createObjectURL(blob);
+      onRecording?.(blob);
       setPhase('review');
       setStatus(said(ui('speakMe', lang)));
       // Hear yourself right away (not in the background: stopped because the app was hidden).
@@ -345,6 +351,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
               <Bi text={ui('micPrivacy', lang)} />
             </p>
           )}
+          {!recording && keepNote && <p className="say-privacy say-keep"><Bi text={keepNote} /></p>}
           {/* A way on without the microphone (shy, noisy floor, no permission wanted): the
               same self-paced "say it out loud" step as without a microphone. */}
           {phase === 'idle' && (

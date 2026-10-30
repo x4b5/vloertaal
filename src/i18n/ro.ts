@@ -316,6 +316,26 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nu s-a încărcat. Este internet?',
     retry: 'Încearcă din nou',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: 'Ce știi deja?', // nieuw, nalezen
+    toetsOffer: 'Cam 10 minute. Nu primești note. Este doar pentru tine.', // nieuw, nalezen
+    toetsEndOffer: 'Ai învățat mult. Fă testul din nou și vezi ce știi acum.', // nieuw, nalezen
+    toetsPartListen: 'Ascultare', // nieuw, nalezen
+    toetsPartWords: 'Cuvinte', // nieuw, nalezen
+    toetsPartSentences: 'Propoziții', // nieuw, nalezen
+    toetsListenAsk: 'Ascultă. Ce înseamnă?', // nieuw, nalezen
+    toetsNotSure: 'Nu știi? Alege unul, pur și simplu. Nu e nicio problemă.', // nieuw, nalezen
+    toetsMicKeep: 'Înregistrarea ta rămâne doar pe acest telefon. Mai târziu te poți auzi din nou.', // nieuw, nalezen
+    toetsStartDone: 'Un început bun! Asta știi deja.', // nieuw, nalezen
+    toetsEndDone: 'Bravo! Uite ce știi acum.', // nieuw, nalezen
+    toetsYouThen: 'Tu atunci', // nieuw, nalezen
+    toetsYouNow: 'Tu acum', // nieuw, nalezen
+    toetsKeepGoing: 'Exersează puțin în fiecare zi. Așa înveți tot mai mult.', // nieuw, nalezen
+    toetsStart: 'Fă testul', // nieuw, nalezen
+    tempo: 'Viteză', // nieuw, nalezen
+    tempoCalm: 'Calm', // nieuw, nalezen
+    tempoNormal: 'Normal', // nieuw, nalezen
+    tempoHint: 'Calm înseamnă încet și clar. Normal e cum vorbesc colegii. Alege „Normal” dacă înțelegi deja mult.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

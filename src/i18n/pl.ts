@@ -316,6 +316,26 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nie załadowało się. Czy jest internet?',
     retry: 'Spróbuj ponownie',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: 'Co już znasz?', // nieuw, nalezen
+    toetsOffer: 'Około 10 minut. Nie ma ocen. To tylko dla ciebie.', // nieuw, nalezen
+    toetsEndOffer: { m: 'Dużo się nauczyłeś. Zrób test jeszcze raz i zobacz, co teraz wiesz.', f: 'Dużo się nauczyłaś. Zrób test jeszcze raz i zobacz, co teraz wiesz.', x: 'Masz za sobą dużo nauki. Zrób test jeszcze raz i zobacz, co teraz wiesz.' }, // nieuw, nalezen
+    toetsPartListen: 'Słuchanie', // nieuw, nalezen
+    toetsPartWords: 'Słowa', // nieuw, nalezen
+    toetsPartSentences: 'Zdania', // nieuw, nalezen
+    toetsListenAsk: 'Posłuchaj. Co to znaczy?', // nieuw, nalezen
+    toetsNotSure: 'Nie wiesz? Po prostu wybierz jedną odpowiedź. To nic.', // nieuw, nalezen
+    toetsMicKeep: 'Twoje nagranie zostaje tylko na tym telefonie. Później usłyszysz siebie jeszcze raz.', // nieuw, nalezen
+    toetsStartDone: 'Dobry początek! To już znasz.', // nieuw, nalezen
+    toetsEndDone: 'Dobra robota! Zobacz, co teraz wiesz.', // nieuw, nalezen
+    toetsYouThen: 'Ty wtedy', // nieuw, nalezen
+    toetsYouNow: 'Ty teraz', // nieuw, nalezen
+    toetsKeepGoing: 'Ćwicz trochę codziennie. Wtedy nauczysz się coraz więcej.', // nieuw, nalezen
+    toetsStart: 'Zrób test', // nieuw, nalezen
+    tempo: 'Tempo', // nieuw, nalezen
+    tempoCalm: 'Spokojnie', // nieuw, nalezen
+    tempoNormal: 'Normalnie', // nieuw, nalezen
+    tempoHint: 'Spokojnie to wolno i wyraźnie. Normalnie to tak, jak mówią koledzy. Wybierz „Normalnie”, jeśli już dużo rozumiesz.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -138,7 +138,7 @@ describe('Settings as a menu of three', () => {
   });
   it('lists the owner\'s settings per row', () => {
     expect(settingsRows('me', ctx)).toEqual(['language', 'gender', 'sector', 'country', 'english', 'certificates']);
-    expect(settingsRows('lessons', ctx)).toEqual(['sound', 'voice', 'speaking', 'writing', 'text', 'theme']);
+    expect(settingsRows('lessons', ctx)).toEqual(['sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'toets']);
     expect(settingsRows('phone', ctx)).toEqual(['offline', 'reminder', 'backup', 'counting', 'reset']);
   });
   it('leaves out what does not apply, and offers unlocking in the preview', () => {

@@ -5,11 +5,13 @@ import { isRegionChoice, isRegionId, regionOf, regionsOn, type RegionChoice } fr
 import { findCourseUnit, unitOfLesson } from '../content/courses';
 import { rulesCourseUnits } from '../content/rulesCourse';
 import type { Cards } from './spaced';
+import { mergeToets, readToets, type ToetsState } from './toetsState';
 
 /** The country the learner works in (Settings): the work rules are those of the Netherlands. */
 export type Country = 'nl' | 'be';
 export const isCountry = (x: unknown): x is Country => x === 'nl' || x === 'be';
 import type { TextSize } from './textSize';
+import { isTempo, type Tempo } from './tempo';
 
 export interface LessonRecord {
   /** Best accuracy so far, 0–1. */
@@ -34,6 +36,9 @@ export interface Progress {
   quiet?: boolean;
   /** "Text size" in Settings (src/lib/textSize.ts). Missing = normal. */
   textSize?: TextSize;
+  /** "Tempo" in Settings (src/lib/tempo.ts): 'calm' ("Rustig") or 'normal' ("Normaal"). Missing in
+   *  older saves = calm, the pace from before. */
+  tempo?: Tempo;
   /** The help language; 'nl' = the screens in Dutch, the work-rules track (src/lib/track.ts). */
   helpLang: UiCode | null;
   /**
@@ -103,6 +108,8 @@ export interface Progress {
    * switches track (switchTrack), so neither track overwrites the other's.
    */
   parked?: TrackPlace;
+  /** "Wat ken je al?" (src/lib/toets.ts): the start and the end, with a version of its own. Missing = not done. */
+  toets?: ToetsState;
 }
 
 /** What each track keeps for itself (Progress.parked). */
@@ -154,6 +161,8 @@ export function loadProgress(): Progress {
       if (saved.region !== undefined && !isRegionChoice(saved.region)) delete saved.region;
       if (saved.country !== undefined && !isCountry(saved.country)) delete saved.country;
       if (saved.rulesNotice !== undefined && typeof saved.rulesNotice !== 'boolean') delete saved.rulesNotice;
+      // "Tempo" came later: a missing one is calm (the old pace); anything unknown is dropped.
+      if (saved.tempo !== undefined && !isTempo(saved.tempo)) delete saved.tempo;
       // Regions while they are not offered (REGIONS_LIVE off): no region unit, no region map.
       if (saved.region !== undefined && !regionsOn()) delete saved.region;
       // The work-rules track while it is not offered (RULES_TRACK off): the language page again.
@@ -179,6 +188,12 @@ export function loadProgress(): Progress {
       if (saved.days !== undefined) {
         if (Array.isArray(saved.days)) saved.days = saved.days.filter(isDay).slice(-DAYS_KEEP);
         else delete saved.days;
+      }
+      // The test's results (added later): kept when they can be read, else left out.
+      if (saved.toets !== undefined) {
+        const toets = readToets(saved.toets);
+        if (toets) saved.toets = toets;
+        else delete saved.toets;
       }
       return { ...emptyProgress, ...saved };
     }
@@ -484,6 +499,8 @@ export function parseBackup(text: string): Backup | null {
   if (src.certs && typeof src.certs === 'object' && !Array.isArray(src.certs)) {
     out.certs = Object.fromEntries(Object.entries(src.certs as Record<string, unknown>).filter((e): e is [string, string] => isDay(e[1])));
   }
+  const toets = readToets(src.toets);
+  if (toets) out.toets = toets;
   return out;
 }
 
@@ -521,6 +538,7 @@ export function replaceWithBackup(p: Progress, file: Backup): Progress {
     currentUnit: undefined,
     pickedUnit: undefined,
     parked: b.parked?.reviewDay || b.parked?.currentUnit ? { reviewDay: b.parked.reviewDay, currentUnit: b.parked.currentUnit } : undefined,
+    toets: b.toets,
   };
 }
 
@@ -550,7 +568,7 @@ const canon = (v: unknown): string => JSON.stringify(v, (_, x) => (x && typeof x
 
 /** Did adding a backup change nothing that counts (lessons, words, certificates, streak, days)? Then "Niets nieuws". */
 export function mergeAddsNothing(before: Progress, after: Progress): boolean {
-  const learnt = (p: Progress) => canon([p.completed, p.cards ?? {}, p.certs ?? {}, p.xp, p.streak, bestStreak(p), p.lastDay, [...(p.days ?? [])].sort(), [...(p.rest ?? [])].sort(), p.reviewDay, p.parked?.reviewDay]);
+  const learnt = (p: Progress) => canon([p.completed, p.cards ?? {}, p.certs ?? {}, p.xp, p.streak, bestStreak(p), p.lastDay, [...(p.days ?? [])].sort(), [...(p.rest ?? [])].sort(), p.reviewDay, p.parked?.reviewDay, p.toets ?? null]);
   return learnt(before) === learnt(after);
 }
 
@@ -600,5 +618,6 @@ export function mergeBackup(p: Progress, file: Backup): Progress {
       [...new Set([...Object.keys(p.certs ?? {}), ...Object.keys(b.certs ?? {})])]
         .map((id) => [id, earlier(p.certs?.[id], b.certs?.[id])]),
     ),
+    toets: mergeToets(p.toets, b.toets),
   };
 }

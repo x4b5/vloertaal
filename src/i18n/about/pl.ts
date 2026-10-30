@@ -21,7 +21,7 @@ const t: CultureTranslation = {
     'a.who': 'Dla kogo to jest?',
     'a.who.b': 'Dla każdego, kto dopiero zaczyna pracę w Holandii. Języki pomocy: arabski, tigrinia, perski, dari, ukraiński, turecki, polski, rumuński, bułgarski, hiszpański, portugalski, francuski i niemiecki.',
     'a.free': 'Twoja prywatność',
-    'a.free.b': 'Nie potrzebujesz konta. Twoje postępy są zapisywane tylko na tym telefonie albo komputerze. Jeśli to jest włączone, aplikacja anonimowo liczy, jak często robi się lekcje: bez imienia, bez śledzenia. Możesz to wyłączyć w „Ustawieniach”.',
+    'a.free.b': 'Nie potrzebujesz konta. Twoje postępy są zapisywane tylko na tym telefonie albo komputerze. Jeśli to jest włączone, aplikacja anonimowo liczy, jak często robi się lekcje: bez imienia, bez śledzenia. Możesz to wyłączyć w „Ustawieniach”. Wynik testu i nagranie twojego głosu też zostają tylko na tym telefonie albo komputerze.', // toets-zin nieuw, nalezen
     'a.disclaimer': 'Dobrze wiedzieć',
     'a.disclaimer.b': 'Wskazówki w Vloertaal to ogólne informacje, a nie porada prawna. Przepisy mogą się zmieniać; teksty ostatnio zaktualizowano w październiku 2026 roku. Jeśli chodzi o twoją sytuację, zapytaj swojego pracodawcę, związek zawodowy albo Juridisch Loket.',
     'a.contact': 'Pytanie albo błąd?',

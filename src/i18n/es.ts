@@ -316,6 +316,26 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'No se ha cargado. ¿Tienes internet?',
     retry: 'Intentar de nuevo',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: '¿Qué sabes ya?', // nieuw, nalezen
+    toetsOffer: 'Unos 10 minutos. No hay notas. Es solo para ti.', // nieuw, nalezen
+    toetsEndOffer: 'Has aprendido mucho. Haz la prueba otra vez y mira lo que sabes ahora.', // nieuw, nalezen
+    toetsPartListen: 'Escuchar', // nieuw, nalezen
+    toetsPartWords: 'Palabras', // nieuw, nalezen
+    toetsPartSentences: 'Frases', // nieuw, nalezen
+    toetsListenAsk: 'Escucha. ¿Qué significa?', // nieuw, nalezen
+    toetsNotSure: '¿No lo sabes? Elige una. No pasa nada.', // nieuw, nalezen
+    toetsMicKeep: 'Tu grabación se queda solo en este teléfono. Después podrás escucharte otra vez.', // nieuw, nalezen
+    toetsStartDone: '¡Buen comienzo! Esto ya lo sabes.', // nieuw, nalezen
+    toetsEndDone: '¡Muy bien! Mira lo que sabes ahora.', // nieuw, nalezen
+    toetsYouThen: 'Tú antes', // nieuw, nalezen
+    toetsYouNow: 'Tú ahora', // nieuw, nalezen
+    toetsKeepGoing: 'Practica un poco cada día. Así aprendes cada vez más.', // nieuw, nalezen
+    toetsStart: 'Hacer la prueba', // nieuw, nalezen
+    tempo: 'Velocidad', // nieuw, nalezen
+    tempoCalm: 'Despacio', // nieuw, nalezen
+    tempoNormal: 'Normal', // nieuw, nalezen
+    tempoHint: 'Despacio es lento y claro. Normal es como hablan los compañeros. Elige «Normal» si ya entiendes mucho.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

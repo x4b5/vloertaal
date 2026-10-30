@@ -217,7 +217,13 @@ function defineStates(LANG) {
   // A learner from before the gender question: a one-time page instead of the home card (no back).
   if (gendered) add('flow:old-gender', '/', firstRun({ sector: 'none', completed: { 'l.hello': { best: 1, times: 1 } } }), { expect: '.gender-screen' });
   const realHome = async (p, extra = {}) => {
-    await p.evaluate(([x, lang]) => { localStorage.setItem('vloertaal.access', 'full'); localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: lang, gender: 'm', sector: 'none', completed: {}, ...x })); }, [extra, LANG]);
+    // "Wat ken je al?" passed over today (its card would take the block's place), unless a state
+    // asks for it (extra.toets: undefined, the flow:toets-* states).
+    await p.evaluate(([x, lang]) => {
+      const d = new Date(); const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+      localStorage.setItem('vloertaal.access', 'full');
+      localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: lang, gender: 'm', sector: 'none', completed: {}, toets: { v: 1, skipped: today, start: today, unitsAt: 0 }, ...x }));
+    }, [extra, LANG]);
     await p.reload(); await settle(p, 900);
   };
   add('flow:home-new', '/', (p) => realHome(p), { expect: '.home3' });
@@ -431,7 +437,7 @@ function defineStates(LANG) {
   // with the back arrow (the "look only" way out).
   for (const pg of ['me', 'lessons', 'phone', 'language', 'sector', 'certificates']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('settings:phone-preview', shot('settings&page=phone&access=preview'), null, { list: true });
-  for (const pg of ['gender', 'sector-build', 'sector-make', 'sector-care', 'english', 'sound', 'voice', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
+  for (const pg of ['gender', 'sector-build', 'sector-make', 'sector-care', 'english', 'sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
   add('settings:writing-ar', shot('settings&page=writing', 'ar'));
   add('settings:install', shot('settings&page=install&install=prompt'));
   add('settings:unlock', shot('settings&page=unlock&access=preview'));
@@ -472,6 +478,23 @@ function defineStates(LANG) {
   add('lesson:region-tip', shot('lesson&lesson=rg.zl.l.1&at=9'));
   add('lesson:region-situation', shot('lesson&lesson=rg.zl.l.1&at=10'));
   add('flow:help-map', '/', async (p) => { await realHome(p, { region: 'zl' }); await navTab(p, 1); await settle(p); await tap(p, '.social-map-link'); await settle(p); }, { list: true, expect: '.sm-rows' });
+  // "Wat ken je al?" (src/components/Toets.tsx): the card on the home, a question of each part (and
+  // one picked: no colour, no Continue), the speaking task, both results, its Settings page, and
+  // the real way from a new learner's home into the test.
+  add('toets:offer', shot('toets&state=offer'), null, { expect: '.toets-offer' });
+  add('toets:offer-eind', shot('toets&state=offer-eind'), null, { expect: '.toets-offer-eind' });
+  add('toets:listen', shot('toets&state=question&at=0'), null, { expect: '.toets-listen' });
+  add('toets:word', shot('toets&state=question&at=7'), null, { expect: '.toets-word' });
+  add('toets:word-picked', shot('toets&state=question&at=7'), async (p) => { await tap(p, '.choice', 0); }, { expect: '.toets-player' });
+  add('toets:chat', shot('toets&state=question&at=12'), null, { expect: '.chat' });
+  add('toets:speak', shot('toets&state=speak'), null, { expect: '.say-mic' });
+  add('toets:speak-review', shot('toets&state=speak&phase=review'), null, { expect: '.say-rate' });
+  add('toets:result-instap', shot('toets&state=result-instap'), null, { expect: '.toets-parts' });
+  add('toets:result-eind', shot('toets&state=result-eind'), null, { expect: '.toets-voices' });
+  add('toets:page', shot('toets&state=page'), null, { expect: '.toets-page .chrome-back' });
+  add('flow:toets-offer', '/', (p) => realHome(p, { toets: undefined }), { expect: '.toets-offer' });
+  add('flow:toets-start', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
+  add('flow:toets-later', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3 .bay-now' });
   return S;
 }
 

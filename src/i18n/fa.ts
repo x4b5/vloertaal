@@ -316,6 +316,26 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'بارگیری نشد. اینترنت وصل است؟',
     retry: 'دوباره امتحان کنید',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: 'از قبل چه می‌دانی؟', // nieuw, nalezen
+    toetsOffer: 'حدود 10 دقیقه. نمره‌ای در کار نیست. فقط برای خودت است.', // nieuw, nalezen
+    toetsEndOffer: 'خیلی چیزها یاد گرفته‌ای. آزمون را دوباره انجام بده و ببین حالا چه می‌دانی.', // nieuw, nalezen
+    toetsPartListen: 'شنیدن', // nieuw, nalezen
+    toetsPartWords: 'کلمه‌ها', // nieuw, nalezen
+    toetsPartSentences: 'جمله‌ها', // nieuw, nalezen
+    toetsListenAsk: 'گوش کن. یعنی چه؟', // nieuw, nalezen
+    toetsNotSure: 'نمی‌دانی؟ فقط یکی را انتخاب کن. اشکالی ندارد.', // nieuw, nalezen
+    toetsMicKeep: 'صدای ضبط‌شده‌ات فقط روی همین گوشی می‌ماند. بعداً می‌توانی دوباره صدای خودت را بشنوی.', // nieuw, nalezen
+    toetsStartDone: 'شروع خوبی بود! این‌ها را از قبل می‌دانی.', // nieuw, nalezen
+    toetsEndDone: 'آفرین! ببین حالا چه می‌دانی.', // nieuw, nalezen
+    toetsYouThen: 'تو قبلاً', // nieuw, nalezen
+    toetsYouNow: 'تو حالا', // nieuw, nalezen
+    toetsKeepGoing: 'هر روز کمی تمرین کن. این‌طوری بیشتر و بیشتر یاد می‌گیری.', // nieuw, nalezen
+    toetsStart: 'آزمون را شروع کن', // nieuw, nalezen
+    tempo: 'سرعت', // nieuw, nalezen
+    tempoCalm: 'آرام', // nieuw, nalezen
+    tempoNormal: 'عادی', // nieuw, nalezen
+    tempoHint: 'آرام یعنی آهسته و واضح. عادی مثل حرف زدن همکاران است. اگر خیلی چیزها را می‌فهمی، «عادی» را انتخاب کن.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

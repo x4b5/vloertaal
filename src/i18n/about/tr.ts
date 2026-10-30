@@ -21,7 +21,7 @@ const t: CultureTranslation = {
     'a.who': 'Kimin için?',
     'a.who.b': 'Hollanda’da çalışmaya yeni başlayan herkes için. Yardım dilleri: Arapça, Tigrinya dili, Farsça, Darice, Ukraynaca, Türkçe, Lehçe, Rumence, Bulgarca, İspanyolca, Portekizce, Fransızca ve Almanca.',
     'a.free': 'Gizliliğin',
-    'a.free.b': 'Hesaba ihtiyacın yok. İlerlemen sadece bu telefonda ya da bilgisayarda kaydedilir. Açıksa, uygulama derslerin kaç kez yapıldığını anonim olarak sayar: isim yok, takip yok. Bunu “Ayarlar” bölümünde kapatabilirsin.',
+    'a.free.b': 'Hesaba ihtiyacın yok. İlerlemen sadece bu telefonda ya da bilgisayarda kaydedilir. Açıksa, uygulama derslerin kaç kez yapıldığını anonim olarak sayar: isim yok, takip yok. Bunu “Ayarlar” bölümünde kapatabilirsin. Testin sonucu ve ses kaydın da sadece bu telefonda ya da bilgisayarda kalır.', // toets-zin nieuw, nalezen
     'a.disclaimer': 'Bilmekte fayda var',
     'a.disclaimer.b': 'Vloertaal’daki ipuçları genel bilgidir, hukuki tavsiye değildir. Kurallar değişebilir; metinler en son Ekim 2026’da güncellendi. Kendi durumun için işverenine, bir sendikaya veya Juridisch Loket’e sor.',
     'a.contact': 'Soru mu, hata mı?',

@@ -79,10 +79,10 @@ export const aboutSections: AboutSection[] = [
     // The privacy points in short: what is counted, exactly, is on the professionals page
     // (src/content/pro.ts, 'p.privacy'); that it is free is in 'a.mission' (siteSections).
     id: 'a.free', emoji: '🔒', title: 'Your privacy',
-    body: 'You do not need an account. Your progress is saved only on this phone or computer. If it is switched on, the app counts anonymously how often lessons are done: no name, no tracking. You can turn this off in Settings.',
+    body: 'You do not need an account. Your progress is saved only on this phone or computer. If it is switched on, the app counts anonymously how often lessons are done: no name, no tracking. You can turn this off in Settings. The result of the test and the recording of your voice also stay only on this phone or computer.',
     nl: {
       title: 'Jouw privacy',
-      body: 'Je hebt geen account nodig. Wat je hebt geleerd, staat alleen op deze telefoon of computer. Staat het aan? Dan telt de app zonder naam hoe vaak mensen lessen doen. Niemand volgt je. Je kunt dit uitzetten bij "Instellingen".',
+      body: 'Je hebt geen account nodig. Wat je hebt geleerd, staat alleen op deze telefoon of computer. Staat het aan? Dan telt de app zonder naam hoe vaak mensen lessen doen. Niemand volgt je. Je kunt dit uitzetten bij "Instellingen". Ook de uitslag van de toets en de opname van je stem blijven alleen op deze telefoon of computer.',
     },
   },
   {

@@ -6,7 +6,8 @@ import { loadPictures, usePicturesLoaded } from './pictures';
 import type { UiCode } from './i18n/types';
 import { isPlayable, learnedItems } from './content/courses';
 import { trackOf, trackOfId } from './lib/track';
-import { setDeviceRate, setPreferredVoice, setQuietAudio } from './lib/audio';
+import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
+import { tempoOf } from './lib/tempo';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
@@ -44,6 +45,9 @@ import { applyEnglish, englishLangFor } from './lib/english';
 import { SocialMap, SocialMapLink } from './components/SocialMap';
 import { regionOf, type RegionChoice } from './content/regio';
 import { ensureRegionFor, regionReady } from './lib/region';
+import { ToetsOffer, ToetsPage, ToetsPlayer, ToetsResult } from './components/Toets';
+import { recordToets, toetsLater, toetsOffer, versionOf, type ToetsMoment } from './lib/toets';
+import { forgetVoices, keepVoice } from './lib/toetsVoice';
 
 type View =
   | { name: 'home' }
@@ -80,7 +84,11 @@ type View =
   | { name: 'all' }
   /** A topic page (from All topics, or a coach link to a finished or locked topic). */
   | { name: 'topic'; unit: string; focus?: boolean }
-  | { name: 'admin' };
+  | { name: 'admin' }
+  /** "Wat ken je al?" (src/components/Toets.tsx): the test, its result, its page under Settings. */
+  | { name: 'toets'; moment: ToetsMoment }
+  | { name: 'toets-result'; moment: ToetsMoment }
+  | { name: 'toets-page' };
 
 const HOME: View = { name: 'home' };
 
@@ -97,7 +105,7 @@ const current = (): Entry | null => {
 };
 /** A screen a reload would not bring back: a lesson, its result and what follows it (the reminder
  *  offer too: its calendar file sends the learner away and back), the admin page. */
-const passing = (v: View) => v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'keep' || v.name === 'admin'
+const passing = (v: View) => v.name === 'lesson' || v.name === 'result' || v.name === 'toets' || v.name === 'toets-result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'keep' || v.name === 'admin'
   || (v.name === 'phrasebook' && Boolean(v.streakUp || v.cert));
 /** After a reload: back on the screen you were on, but a lesson or its result starts over at home. */
 const restored = (): View => {
@@ -212,7 +220,7 @@ export default function App() {
   const firstScreen = useRef(true);
   useEffect(() => {
     if (firstScreen.current) { firstScreen.current = false; return; }
-    if (view.name === 'lesson') return;
+    if (view.name === 'lesson' || view.name === 'toets') return;
     // A screen of a file of its own (src/lazyScreens.tsx) may draw its heading a moment later.
     let tries = 0;
     let t = 0;
@@ -501,6 +509,8 @@ export default function App() {
   setQuietAudio(Boolean(progress.quiet));
   // The phone's voice reads at an easier, normal pace in the work-rules track (lib/audio.ts).
   setDeviceRate(trackOf(progress));
+  // "Tempo" (Settings): also set during render, for the same reason as the sound.
+  setTempo(tempoOf(progress));
   const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);
@@ -587,6 +597,11 @@ export default function App() {
     const route = toRoute.current;
     toRoute.current = false;
     if (route) tab('route'); else back();
+  };
+  /** "Wat ken je al?" starts (counted without any result: only that it started, and which version). */
+  const startToets = (moment: ToetsMoment) => {
+    count('toets-start', { lesson: versionOf(moment).toLowerCase() });
+    go({ name: 'toets', moment });
   };
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
   /** "Waar woon je?" (Settings only): the region's lessons come in or go out of the path. */
@@ -877,7 +892,7 @@ export default function App() {
             progress={progress}
             lang={lang}
             page={view.page ?? (view.upgrade ? 'unlock' : undefined)}
-            onPage={(page) => go({ name: 'settings', page, up: up + 1 })}
+            onPage={(page) => (page === 'toets' ? go({ name: 'toets-page' }) : go({ name: 'settings', page, up: up + 1 }))}
             onReturn={(steps = 1) => (up >= steps ? history.go(-steps) : back())}
             onLang={setLang}
             onGender={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))}
@@ -888,15 +903,17 @@ export default function App() {
             onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
+            onTempo={(tempo) => setProgress((p) => ({ ...p, tempo }))}
             onReset={() => {
-              // Keep the help language, look, voice, sound, sector, region and gender (the code is
+              // Keep the help language, look, voice, sound, tempo, sector, region and gender (the code is
               // stored apart and stays too); only learning progress is wiped (and lessons in
               // progress). So the app goes on at the home, not at the language list again.
               clearSave();
               forgetCertName();
+              void forgetVoices();
               setProgress((p) => ({
                 ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
-                sector: p.sector, region: p.region, country: p.country, rulesNotice: p.rulesNotice, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked,
+                sector: p.sector, region: p.region, country: p.country, rulesNotice: p.rulesNotice, textSize: p.textSize, tempo: p.tempo, gender: p.gender, genderAsked: p.genderAsked,
               }));
               tab('route');
             }}
@@ -909,6 +926,36 @@ export default function App() {
         </>
       );
     }
+    case 'toets':
+      return (
+        <ToetsPlayer
+          key={view.moment}
+          moment={view.moment}
+          lang={lang}
+          onQuit={back}
+          onDone={({ right, of, voice }) => {
+            const moment = view.moment;
+            setProgress((p) => recordToets(p, moment, right, of, new Date()));
+            // The recording stays on this phone only (src/lib/toetsVoice.ts), for "Jij toen / Jij nu".
+            if (voice) void keepVoice(moment, voice);
+            count('toets-done', { lesson: versionOf(moment).toLowerCase() });
+            replace({ name: 'toets-result', moment });
+          }}
+        />
+      );
+    case 'toets-result': {
+      const t = progress.toets;
+      const now = view.moment === 'eind' ? t?.eind : t?.instap;
+      if (!now) return null;
+      return <ToetsResult moment={view.moment} now={now} before={view.moment === 'eind' ? t?.instap : undefined} lang={lang} onDone={back} />;
+    }
+    case 'toets-page':
+      return (
+        <>
+          <ToetsPage progress={progress} lang={lang} onBack={back} onStart={startToets} />
+          <BottomNav current="me" onTab={tab} lang={lang} />
+        </>
+      );
     case 'socialmap':
       // Back from a region switched off meanwhile (or its file not here): the Hulp tab.
       if (region) return (
@@ -924,6 +971,7 @@ export default function App() {
       if (stopped !== null) {
         return <StreakStopped streak={stopped} best={bestStreak(progress)} lang={lang} onDone={() => setStopped(null)} />;
       }
+      const offered = stopped === null ? toetsOffer(progress, new Date()) : null;
       const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track) : null;
       return (
         <>
@@ -953,6 +1001,14 @@ export default function App() {
             lockedLink={lockedLink}
             note={<><RulesPathNote lang={lang} country={progress.country} /><NoVoiceNote lang={lang} once /></>}
             unlocked={unlockedShown}
+            offer={offered ? (
+              <ToetsOffer
+                moment={offered}
+                lang={lang}
+                onDo={() => startToets(offered)}
+                onLater={() => setProgress((p) => toetsLater(p, offered, new Date()))}
+              />
+            ) : undefined}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
         </>
