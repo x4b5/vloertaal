@@ -56,8 +56,8 @@ export const veiligUnit: RuleUnit = {
           id: 'r.l.veilig.1.wd1',
           situation: 'Piotr moet zo zagen, zonder goede spullen. Wat kan Piotr het beste doen?',
           options: [
-            { id: 'a', text: 'Hij zaagt even zonder bril. Het duurt maar kort.', best: false, feedback: 'Een splinter in je oog gaat heel snel.' },
-            { id: 'b', text: 'Hij vraagt nieuwe spullen aan zijn uitvoerder.', best: true, feedback: 'Goed. De uitvoerder is de baas op de bouwplaats. Hij regelt dit.' },
+            { id: 'a', text: 'Hij zaagt even zonder bril. Het duurt maar kort.', best: false, feedback: 'Een splinter in zijn oog gaat heel snel.' },
+            { id: 'b', text: 'Hij vraagt nieuwe spullen aan zijn uitvoerder.', best: true, feedback: 'Goed. De uitvoerder is de baas op de bouwplaats. Die regelt dit.' },
             { id: 'c', text: 'Hij koopt na het werk zelf nieuwe spullen.', best: false, feedback: 'Goed bedoeld. Maar zijn werkgever moet ze geven.' },
           ],
           why: 'Je werkgever moet beschermende spullen gratis geven. Denk aan handschoenen, een bril of veiligheidsschoenen. Erom vragen is normaal. Zonder bescherming werken is gevaarlijk.',

@@ -96,7 +96,7 @@ export const rechtenUnit: RuleUnit = {
       // Les 9.2 · Grensoverschrijdend gedrag
       id: 'r.l.rechten.2',
       title: 'Grensoverschrijdend gedrag',
-      goal: 'Je herkent gedrag dat over je grens gaat, en je zegt stop. Je weet wie je kan helpen.',
+      goal: 'Je herkent gedrag dat over je grens gaat, en je zegt stop. Je weet wie jou kan helpen.',
       remember: 'Het gaat om hoe het voor jou voelt, niet om de grap.',
       // Wie kan je helpen: de vertrouwenspersoon, als je bedrijf die heeft · je leidinggevende of
       //   HR · de Nederlandse Arbeidsinspectie · bij aanranding of verkrachting: de politie of het

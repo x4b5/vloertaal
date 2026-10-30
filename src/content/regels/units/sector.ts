@@ -66,7 +66,7 @@ export const buildUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Hij werkt op zijn sneakers. Het is maar voor één dag.', best: false, feedback: 'Begrijpelijk. Maar een spijker gaat zo door een sneaker.' },
             { id: 'b', text: 'Hij koopt zelf schoenen, en betaalt ze van zijn loon.', best: false, feedback: 'Goed bedoeld. Maar zijn werkgever moet ze gratis geven.' },
-            { id: 'c', text: 'Hij vraagt de uitvoerder om veiligheidsschoenen.', best: true, feedback: 'Goed. De uitvoerder is de baas op de bouwplaats. Hij regelt dit.' },
+            { id: 'c', text: 'Hij vraagt de uitvoerder om veiligheidsschoenen.', best: true, feedback: 'Goed. De uitvoerder is de baas op de bouwplaats. Die regelt dit.' },
           ],
           why: 'Beschermende spullen heten ook PBM: persoonlijke beschermingsmiddelen. Denk aan een helm, schoenen, een bril en een hesje. Je werkgever geeft ze gratis. Werk je via een uitzendbureau? Vraag dan wie ze geeft.',
         },
@@ -222,7 +222,7 @@ export const careUnit: RuleUnit = {
           situation: 'Dewi heeft net een cliënt geholpen. Ze moet meteen naar de volgende. Wat kan Dewi het beste doen?',
           options: [
             { id: 'a', text: 'Ze loopt meteen door. Haar handen zien er schoon uit.', best: false, feedback: 'Begrijpelijk. Maar bacteriën zie je niet.' },
-            { id: 'b', text: 'Ze trekt alleen een paar nieuwe handschoenen aan.', best: false, feedback: 'Handschoenen helpen. Maar ook je handen moeten schoon.' },
+            { id: 'b', text: 'Ze trekt alleen een paar nieuwe handschoenen aan.', best: false, feedback: 'Handschoenen helpen. Maar ook haar handen moeten schoon zijn.' },
             { id: 'c', text: 'Ze maakt eerst haar handen schoon.', best: true, feedback: 'Goed. Zo neemt ze geen bacteriën mee.' },
           ],
           why: 'Maak je handen schoon voor en na elke cliënt. Met water en zeep, of met handalcohol. Doe dat ook als je handschoenen uittrekt. Zo bescherm je je cliënten en jezelf.',
@@ -236,7 +236,7 @@ export const careUnit: RuleUnit = {
             { id: 'b', text: 'Ze belt vóór haar dienst, en zegt dat het besmettelijk kan zijn.', best: true, feedback: 'Goed. Ze hoeft niet te zeggen wat ze heeft. Dit wel.' },
             { id: 'c', text: 'Ze gaat werken, en draagt de hele dag een mondkapje.', best: false, feedback: 'Goed bedoeld. Maar dat helpt niet genoeg.' },
           ],
-          why: 'Overgeven of diarree kan besmettelijk zijn. Cliënten worden vaak sneller ziek. Bel dus vóór je dienst. Volg het protocol van je werk. Daar staat in wat je moet doen.',
+          why: 'Overgeven of diarree kan besmettelijk zijn. Cliënten worden sneller en erger ziek dan gezonde mensen. Bel dus vóór je dienst. Volg het protocol van je werk. Daar staat in wat je moet doen.',
         },
         {
           kind: 'whoask',
@@ -448,7 +448,7 @@ export const horecaUnit: RuleUnit = {
             'Een restaurant moet weten welke allergenen in het eten zitten.',
             'Raad nooit. Vraag het na in de keuken.',
             'Fooi telt niet mee voor je minimumloon.',
-            'Vraag hoe jullie de fooi verdelen.',
+            'Vraag hoe de fooi wordt verdeeld.',
           ],
           rule: 'geschreven',
         },
@@ -472,14 +472,14 @@ export const horecaUnit: RuleUnit = {
           id: 'r.l.horeca.2.tf1',
           statement: 'Fooi telt mee voor je minimumloon.',
           answer: false,
-          why: 'Fooi is extra, van de gasten. Je werkgever betaalt je gewoon minstens het minimumloon. Fooi mag hij daar niet bij optellen. Vraag hoe jullie team de fooi verdeelt.',
+          why: 'Fooi is extra, van de gasten. Je werkgever betaalt je gewoon minstens het minimumloon. Fooi mag hij daar niet bij optellen. Vraag hoe de fooi in jullie team wordt verdeeld.',
         },
         {
           kind: 'whatdo',
           id: 'r.l.horeca.2.wd2',
           situation: 'Esra werkt er al 2 maanden. Ze hoort niets over de fooi. Wat kan Esra het beste doen?',
           options: [
-            { id: 'a', text: 'Ze vraagt haar leidinggevende hoe ze de fooi verdelen.', best: true, feedback: 'Goed. Elk team doet het anders. Vragen is normaal.' },
+            { id: 'a', text: 'Ze vraagt haar leidinggevende hoe het team de fooi verdeelt.', best: true, feedback: 'Goed. Elk team doet het anders. Vragen is normaal.' },
             { id: 'b', text: 'Ze pakt elke avond zelf wat geld uit de pot.', best: false, feedback: 'Niet doen. Dan lijkt het op stelen.' },
             { id: 'c', text: 'Ze zegt niets. Fooi is toch niet zo belangrijk.', best: false, feedback: 'Mag. Maar fooi kan best veel geld zijn.' },
           ],
@@ -573,7 +573,7 @@ export const cleanUnit: RuleUnit = {
           situation: "Fatima werkt alleen in het gebouw. Het is 10 uur 's avonds. Wat kan Fatima het beste doen?",
           options: [
             { id: 'a', text: 'Ze spreekt met haar leidinggevende af hoe ze hulp vraagt.', best: true, feedback: 'Goed. Dan weet iemand waar ze is.' },
-            { id: 'b', text: 'Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.', best: false, feedback: 'Begrijpelijk. Maar als ze alleen is, kan niemand haar helpen.' },
+            { id: 'b', text: 'Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.', best: false, feedback: 'Begrijpelijk. Maar alleen loopt ze meer gevaar.' },
             { id: 'c', text: 'Ze neemt haar zoon mee, voor de veiligheid.', best: false, feedback: 'Begrijpelijk. Maar haar werkgever moet dit regelen.' },
           ],
           why: 'Werk je alleen? Dan moet je werkgever zorgen dat je hulp kunt krijgen. Spreek af wie je belt als er iets is. Zorg dat je telefoon opgeladen is.',
@@ -835,7 +835,7 @@ export const factoryUnit: RuleUnit = {
           id: 'r.l.factory.2.wd2',
           situation: 'Op Mohammeds loonstrook staat "ploegentoeslag". Hij weet niet hoeveel het moet zijn. Wat kan Mohammed het beste doen?',
           options: [
-            { id: 'a', text: 'Hij zoekt het op in zijn cao.', best: true, feedback: 'Goed. Daar staat hoeveel toeslag je krijgt.' },
+            { id: 'a', text: 'Hij zoekt het op in zijn cao.', best: true, feedback: 'Goed. Daar staat hoeveel toeslag hij krijgt.' },
             { id: 'b', text: 'Hij vraagt het aan een vriend uit een andere fabriek.', best: false, feedback: 'Kan. Maar die heeft misschien een andere cao.' },
             { id: 'c', text: 'Hij denkt: de wet zegt vast hoeveel het is.', best: false, feedback: 'Nee. De toeslag staat niet in de wet.' },
           ],

@@ -158,7 +158,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.2.wd1',
           situation: 'De leidinggevende wil vandaag geen pauze. Wat kan Sanne het beste doen?',
           options: [
-            { id: 'a', text: 'Ze vraagt rustig wanneer ze vandaag wel pauze kan nemen.', best: true, feedback: 'Goed. Zo zoeken ze samen een moment.' },
+            { id: 'a', text: 'Ze vraagt rustig wanneer ze vandaag wel pauze kan nemen.', best: true, feedback: 'Goed. Zo zoekt ze samen met haar leidinggevende een moment.' },
             { id: 'b', text: 'Ze slaat haar pauze over. Het is nu eenmaal druk.', best: false, feedback: 'Begrijpelijk. Maar pauze is haar recht, ook als het druk is.' },
             { id: 'c', text: 'Ze neemt meteen pauze, ook al staat er een rij.', best: false, feedback: 'Ze heeft recht op pauze. Maar ze vraagt het beter eerst even.' },
           ],
@@ -230,7 +230,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', text: 'Hij zegt: "Vandaag niet. Morgen kan ik wel."', best: true, feedback: 'Goed. Duidelijk, en hij biedt iets anders aan.' },
             { id: 'c', text: 'Hij zegt "misschien", en hij belt zijn moeder.', best: false, feedback: 'Dan weet Henk niet of Kevin blijft.' },
           ],
-          why: 'Mensen hier vinden een duidelijk nee prettig. Ja zeggen en het niet doen, kost veel vertrouwen. Bied een andere keer aan als dat kan.',
+          why: 'Mensen hier vinden een duidelijk nee beter dan een vaag ja. Ja zeggen en het niet doen, kost veel vertrouwen. Bied een andere keer aan als dat kan.',
         },
         // ⚖️ check: Het hangt af van je contract en je cao ⚖️.
         // ⚖️ check: Bij een noodgeval moet je soms wel ⚖️.

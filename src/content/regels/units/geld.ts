@@ -238,7 +238,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.3.tf2',
           statement: 'De aangifte over vorig jaar doe je meestal vóór 1 mei.',
           answer: true,
-          why: 'Een aangifte is een formulier over je inkomen van vorig jaar. Krijg je een brief dat je aangifte moet doen? Doe het dan vóór 1 mei. Lukt dat niet? Vraag op tijd om meer tijd. Je doet aangifte online, met je DigiD.',
+          why: 'Een aangifte is een formulier over je inkomen van vorig jaar. Krijg je een brief dat je aangifte moet doen? Doe het dan vóór 1 mei. Lukt dat niet? Vraag dan op tijd om uitstel. Dan krijg je meer tijd. Je doet aangifte online, met je DigiD.',
         },
         { kind: 'model', id: 'r.l.geld.3.mo1', context: 'Je vraagt hulp bij een brief.', nl: 'Ik heb een brief van de Belastingdienst. Wil je mij helpen met lezen?' },
       ],

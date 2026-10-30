@@ -58,7 +58,7 @@ export const samenUnit: RuleUnit = {
         {
           kind: 'truefalse',
           id: 'r.l.samen.1.tf1',
-          statement: 'Een functioneringsgesprek betekent dat je baas je bijna ontslaat.',
+          statement: 'Een functioneringsgesprek betekent dat je baas je snel wil ontslaan.',
           answer: false,
           why: 'Een functioneringsgesprek is een gewoon gesprek over je werk. Wat gaat goed? Wat kan beter? Jij mag ook zeggen wat je nodig hebt. Bereid het voor met een paar vragen.',
         },
@@ -197,7 +197,7 @@ export const samenUnit: RuleUnit = {
             { id: 'b', text: 'Je zegt eerlijk: "3 uur lukt niet. 4 uur wel."', best: true, feedback: 'Goed. Nu kan Sanne plannen.' },
             { id: 'c', text: 'Je zegt niets, en je werkt extra snel door.', best: false, feedback: 'Dan weet Sanne niet wat ze kan verwachten.' },
           ],
-          why: 'Mensen hier vinden een eerlijk "nee" of "later" prettig. Ja zeggen en het niet halen, kost meer vertrouwen. Zo kan Sanne op tijd iets anders regelen.',
+          why: 'Mensen hier vinden een eerlijk "nee" of "later" beter dan een vaag ja. Ja zeggen en het niet halen, kost meer vertrouwen. Zo kan Sanne op tijd iets anders regelen.',
         },
         { kind: 'model', id: 'r.l.samen.3.mo1', context: 'Je kunt een afspraak niet nakomen.', nl: 'Het lukt vrijdag toch niet. Kan het maandag?' },
       ],
