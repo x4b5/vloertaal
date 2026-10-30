@@ -918,7 +918,7 @@ ______________________________________________________________
 
 *Unit „Verlof en ziekte”, les „Days off” (`l.leave`)*
 
-**Samenvatting (NL):** Wettelijk min. 4 × het aantal werkdagen per week aan betaalde vrije dagen (fulltime: 20 per jaar); cao kan meer geven; verlof op tijd en schriftelijk aanvragen; bij een plotselinge noodsituatie kort verlof met loon (calamiteitenverlof); de werkgever moet met de data instemmen.
+**Samenvatting (NL):** Wettelijk min. 4 × het aantal werkdagen per week aan betaalde vrije dagen (fulltime: 20 per jaar); cao kan meer geven; verlof op tijd en schriftelijk aanvragen; bij een plotselinge noodsituatie kort verlof met loon (calamiteitenverlof); de werkgever moet in principe ja zeggen; een nee alleen om een zwaarwegende reden, schriftelijk binnen 2 weken.
 
 **Tekst (Engels, wordt vertaald):**
 
@@ -930,7 +930,7 @@ ______________________________________________________________
 
 **Situatie in de les:** You want to visit your family abroad for three weeks in summer. What do you do?  
 **Goede antwoord:** Ask your employer for leave early, in writing.  
-**Uitleg na het antwoord (`c.leave.w`):** Your employer plans the work and must agree to the dates. Asking early gives the best chance of a yes.
+**Uitleg na het antwoord (`c.leave.w`):** Your employer must usually say yes. They may only say no for a very good reason, and then in writing within 2 weeks. Asking early gives the best chance of a yes.
 
 **⚠ Getallen en termijnen:**
 - By law you get paid days off: at least 4 times the days you work per week.
@@ -1569,7 +1569,7 @@ door de bocht is? De tekst staat letterlijk zoals in de app.
 | contract.3 ru1 | Werk je 12 maanden als oproepkracht? Dan moet je werkgever je vaste uren aanbieden. | art. 7:628a BW (Wab) | Klopt dit? We noemen niet hoeveel uur (het gemiddelde) en niet binnen welke termijn. |
 | contract.3 tf2 (waar) | Een uitzendkracht heeft recht op hetzelfde loon als de vaste mensen die hetzelfde werk doen. | art. 8 Waadi | Eerder stond hier "Sinds 2026 … minstens evenveel, loon, vrije dagen en pensioen samen". Die datum konden we niet checken, dus die is weg. Is de stelling "waar" te stellig, omdat een cao soms mag afwijken? |
 | ziek.2 ru1 | Heb je een tijdelijk contract? Dan stopt je loon op de einddatum. Vraag dan UWV naar de Ziektewet. | art. 7:629 BW; Ziektewet (vangnet, art. 29) | Klopt dit? |
-| tijd.4 ru1, wd1 | Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd. | art. 7:638 lid 3 BW | Klopt dit, ook als je de vraag niet op papier deed? |
+| tijd.4 ru1, wd1 | Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd. | art. 7:638 lid 3 BW | Sinds 30 okt 2026 staat de voorwaarde "op papier" erbij. Klopt het zo? |
 | veilig.3 tf1 | Bij een ernstig ongeluk meldt je werkgever het meteen bij de Arbeidsinspectie. Bijvoorbeeld als iemand in het ziekenhuis moet blijven, blijvend letsel heeft of overlijdt. | art. 9 Arbowet | Eerder stond hier "naar het ziekenhuis moet". Klopt "in het ziekenhuis moet blijven" als korte vorm van "opname"? |
 | rechten.4 ru1, wd1 | Staat er iets verkeerd in? Dan kun je je WW kwijtraken. | WW; art. 7:900 BW (vaststellingsovereenkomst) | Eerder: "Als je tekent, kun je rechten verliezen. Bijvoorbeeld je WW." Is de nieuwe zin juist? |
 | rechten.4 ru1, tf1 | Binnen 14 dagen na het tekenen mag je je nog bedenken. (tf1: Staat die termijn niet in het papier? Dan heb je 3 weken.) | art. 7:670b BW (bedenktermijn) | Klopt het samen zo? We zeggen er "op papier of per mail" bij. |

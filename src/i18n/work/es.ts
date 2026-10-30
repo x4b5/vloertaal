@@ -703,7 +703,7 @@ const t: CultureTranslation = {
     'c.leave.o1': 'Pides las vacaciones a tu empresa con tiempo, por escrito.',
     'c.leave.o2': 'Simplemente te vas, y se lo dices a tu jefe cuando vuelves.',
     'c.leave.o3': 'Pides a un compañero que se lo diga al jefe el día antes.',
-    'c.leave.w': 'Tu empresa organiza el trabajo y tiene que estar de acuerdo con las fechas. Pedirlo pronto te da más posibilidades de un sí.',
+    'c.leave.w': 'Normalmente tu empresa tiene que decir que sí. Solo puede decir que no por un motivo muy importante, y entonces por escrito en 2 semanas. Pedirlo pronto te da más posibilidades de un sí.', // nalezen: werkgever moet meestal ja zeggen
     'c.illness': 'Tus derechos durante una enfermedad',
     'c.illness.b': 'Durante una enfermedad, tu empresa te tiene que pagar como mínimo el 70 % de tu sueldo, hasta 2 años. Un cao muchas veces da más. Puede haber hasta 2 días de espera (wachtdagen) sin sueldo, pero solo si lo dice tu contrato o tu cao. Tu jefe no te puede preguntar qué enfermedad tienes: de tu salud y tu trabajo hablas con el médico de empresa (bedrijfsarts). Llama a tu empresa cuando ya estés bien (betermelden). El primer año recibes como mínimo el salario mínimo. ¿Trabajas a través de una agencia? Tu contrato puede terminar si tienes una enfermedad. Entonces te paga el UWV (Ziektewet). Pregunta al UWV o a un sindicato. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
     'c.illness.p': 'Ya estoy bien. Mañana vengo a trabajar.',

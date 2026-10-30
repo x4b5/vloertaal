@@ -251,8 +251,8 @@ export const meedoenUnit: RuleUnit = {
           id: 'r.l.meedoen.3.wd2',
           situation: 'Esra krijgt een brief van de gemeente met een boete. Ze vindt dat de boete niet klopt. Wat kan Esra het beste doen?',
           options: [
-            { id: 'a', text: 'Ze betaalt niet, en ze gooit de brief weg.', best: false, feedback: 'Niet doen. Dan wordt de boete vaak hoger.' },
-            { id: 'b', text: 'Ze belt 112 om te klagen.', best: false, feedback: '112 is alleen voor spoed. Dit is geen spoed.' },
+            { id: 'a', text: 'Ze betaalt. Een brief van de gemeente klopt altijd.', best: false, feedback: 'Ook de gemeente maakt fouten. Klopt het niet? Dan mag ze bezwaar maken.' },
+            { id: 'b', text: 'Ze belt de gemeente, en ze wacht op antwoord.', best: false, feedback: 'Bellen mag. Maar een telefoontje is meestal geen bezwaar. En de datum loopt door.' },
             { id: 'c', text: 'Ze maakt bezwaar, vóór de datum in de brief.', best: true, feedback: 'Goed. Zo kijkt iemand er opnieuw naar.' },
           ],
           why: 'Vind je een boete of besluit niet eerlijk? Dan mag je bezwaar maken. Hoe dat moet, staat in de brief. Let goed op de datum. Niet betalen maakt de boete vaak hoger. Het Juridisch Loket geeft gratis advies.',

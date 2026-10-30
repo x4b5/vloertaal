@@ -255,11 +255,11 @@ export const samenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.samen.4.wd2',
-          situation: 'Het team heeft een groepsapp. Om 23 uur appt de leidinggevende: "Wie kan morgen eerder komen?"',
+          situation: 'Het team heeft een groepsapp. Om 23 uur appt de leidinggevende: "Wie kan volgende week zaterdag werken?"',
           options: [
-            { id: 'a', text: 'Je stuurt een screenshot naar vrienden: "Kijk nou!"', best: false, feedback: 'Niet doen. Berichten van werk deel je niet.' },
-            { id: 'b', text: 'Je appt meteen terug: "Dit is veel te laat!"', best: false, feedback: 'Begrijpelijk. Maar dat kun je beter rustig zeggen.' },
-            { id: 'c', text: 'Je antwoordt de volgende ochtend, kort en vriendelijk.', best: true, feedback: 'Goed. Je antwoordt op tijd, en je rust uit.' },
+            { id: 'a', text: 'Je antwoordt niet, ook niet de volgende dag.', best: false, feedback: 'Dan weet je baas niet of je kunt. Antwoord wel, op een normale tijd.' },
+            { id: 'b', text: 'Je appt meteen terug: "Ja, ik kan!" Anders vindt de baas je lui.', best: false, feedback: "Goed bedoeld. Maar je hoeft 's nachts niet te antwoorden. Dat vindt niemand lui." },
+            { id: 'c', text: 'Je antwoordt de volgende ochtend, kort en vriendelijk.', best: true, feedback: 'Goed. Je antwoordt op een normale tijd, en je rust uit.' },
           ],
           why: "Een groepsapp is voor werk. Houd je berichten kort en vriendelijk. Je hoeft niet altijd meteen te antwoorden. Stuurt je baas vaak 's avonds laat? Bespreek het rustig. Deel geen berichten of foto's van collega's zonder toestemming.",
         },

@@ -70,7 +70,7 @@ export const tijdUnit: RuleUnit = {
         {
           kind: 'truefalse',
           id: 'r.l.tijd.1.tf2',
-          statement: 'Jayden is 17. Hij mag in het restaurant werken tot middernacht.',
+          statement: 'Malik is 17. Hij mag in het restaurant werken tot middernacht.',
           answer: false,
           why: 'Ben je 16 of 17? Dan mag je niet werken tussen 23.00 en 6.00 uur. Je werkt hooguit 9 uur per dienst. En hooguit 45 uur per week. Je schooltijd telt daarbij mee.',
         },
@@ -304,8 +304,8 @@ export const tijdUnit: RuleUnit = {
           ],
         },
         // ⚖️ check: Zegt hij nee? Dat moet hij binnen 2 weken ⚖️ op papier laten weten.
-        // ⚖️ check: Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️
-        //   (art. 7:638 lid 3 BW).
+        // ⚖️ check: Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️
+        //   (art. 7:638 lid 3 BW: alleen na een schriftelijke vraag; dat staat er nu bij, 30 okt 2026).
         {
           kind: 'rule',
           id: 'r.l.tijd.4.ru1',
@@ -315,7 +315,7 @@ export const tijdUnit: RuleUnit = {
             'Vraag vrij op tijd en op papier.',
             'Je werkgever moet in principe ja zeggen.',
             'Zegt hij nee? Dat moet hij binnen 2 weken op papier laten weten.',
-            'Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd.',
+            'Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd.',
             'Bij een noodgeval mag je meteen weg. Laat het wel meteen weten.',
           ],
           rule: 'geschreven',
@@ -331,7 +331,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', text: 'Ze boekt de reis alvast, en ze meldt het later.', best: false, feedback: 'Riskant. De baas moet het eerst goedvinden.' },
             { id: 'c', text: 'Ze vraagt het nu al, per mail of in de app.', best: true, feedback: 'Goed. Vroeg en op papier geeft de beste kans.' },
           ],
-          why: 'Vraag vrij op tijd en op papier. Je werkgever moet in principe ja zeggen. Alleen bij een heel goede reden van het bedrijf mag hij nee zeggen. Dat moet hij binnen 2 weken op papier laten weten. Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd.',
+          why: 'Vraag vrij op tijd en op papier. Je werkgever moet in principe ja zeggen. Alleen bij een heel goede reden van het bedrijf mag hij nee zeggen. Dat moet hij binnen 2 weken op papier laten weten. Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd.',
         },
         // ⚖️ check: Je krijgt minstens 4 keer ⚖️ zoveel vrije dagen als je dagen per week werkt.
         // ⚖️ check: Vrije dagen van de wet vervallen meestal op 1 juli van het jaar erna ⚖️ (6 maanden
@@ -449,7 +449,7 @@ export const tijdUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.tijd.5.wd1',
-          situation: 'De opvang belt Kevin. Zijn dochter heeft koorts en moet naar huis. Kevin is op zijn werk. Wat kan Kevin het beste doen?',
+          situation: 'De opvang belt Mohammed. Zijn dochter heeft koorts en moet naar huis. Mohammed is op zijn werk. Wat kan Mohammed het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt het meteen tegen zijn leidinggevende, en hij haalt haar op.', best: true, feedback: 'Goed. Bij een noodgeval mag hij meteen weg.' },
             { id: 'b', text: 'Hij meldt zich ziek. Dat is het makkelijkst.', best: false, feedback: 'Hij is zelf niet ziek. Voor zijn kind is er verlof.' },

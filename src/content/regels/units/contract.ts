@@ -90,7 +90,7 @@ export const contractUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.contract.1.wd3',
-          situation: 'Esra woont net in Nederland. Ze krijgt een baan aangeboden. Ze weet niet of ze hier al mag werken. Wat kan Esra het beste doen?',
+          situation: 'Ewa woont net in Nederland. Ze krijgt een baan aangeboden. Ze weet niet of ze hier al mag werken. Wat kan Ewa het beste doen?',
           options: [
             { id: 'a', text: 'Ze begint gewoon. De baas regelt het vast wel.', best: false, feedback: 'Riskant. Zonder de goede papieren kan ze problemen krijgen.' },
             { id: 'b', text: 'Ze vraagt het na vóór ze begint, bijvoorbeeld bij UWV.', best: true, feedback: 'Goed. Dan weet ze het zeker.' },
@@ -135,7 +135,6 @@ export const contractUnit: RuleUnit = {
         },
         // ⚖️ check: Je werkgever moet minstens 1 maand ⚖️ voor het einde laten weten of je contract
         //   doorgaat (aanzegplicht, art. 7:668 BW; alleen bij een contract van 6 maanden of langer).
-        // ⚖️ check: Dat geldt bij een contract van 6 maanden of langer ⚖️.
         // ⚖️ check: Doet hij dat niet, of te laat? Dan krijg je extra geld, tot 1 maandloon ⚖️
         //   (aanzegvergoeding, art. 7:668 lid 3 en 4 BW).
         {
@@ -146,7 +145,6 @@ export const contractUnit: RuleUnit = {
           body: [
             'Een tijdelijk contract stopt vanzelf op de einddatum.',
             'Duurt je contract 6 maanden of langer? Dan moet je werkgever 1 maand voor het einde laten weten of het doorgaat.',
-            'Dat geldt bij een contract van 6 maanden of langer.',
             'Doet hij dat niet, of te laat? Dan krijg je extra geld, tot 1 maandloon.',
             'In de proeftijd mogen jij en de baas meteen stoppen.',
           ],
@@ -198,10 +196,10 @@ export const contractUnit: RuleUnit = {
           question: 'Je tijdelijke contract stopt. Je hebt nog geen nieuw werk. Waar vraag je een uitkering aan?',
           options: [
             { id: 'a', who: 'juridischloket', best: false, feedback: 'Het Juridisch Loket geeft advies, maar geen uitkering.' },
-            { id: 'b', who: 'gemeente', best: false, feedback: 'Bij werk kwijt is UWV meestal de eerste stap.' },
+            { id: 'b', who: 'gemeente', best: false, feedback: 'Ben je je werk kwijt? Dan is UWV meestal de eerste stap.' },
             { id: 'c', who: 'uwv', best: true, feedback: 'Goed. Bij UWV vraag je WW aan.' },
           ],
-          why: 'Stopt je werk? Dan vraag je WW aan bij UWV. Zie les 10.1.',
+          why: 'Stopt je werk? Dan vraag je WW aan bij UWV. Zie de les "Werk kwijt: WW".',
         },
         { kind: 'model', id: 'r.l.contract.2.mo1', context: 'Je baas stopt je contract in de proeftijd.', nl: 'Wilt u mij de reden op papier geven?' },
       ],

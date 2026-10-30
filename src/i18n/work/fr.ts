@@ -703,7 +703,7 @@ const t: CultureTranslation = {
     'c.leave.o1': 'Demande ton congé tôt à ton employeur, par écrit.',
     'c.leave.o2': 'Pars, et préviens ton patron à ton retour.',
     'c.leave.o3': 'Demande à un collègue de prévenir le patron la veille.',
-    'c.leave.w': 'Ton employeur organise le travail et doit accepter les dates. Demander tôt donne le plus de chances d’avoir un oui.',
+    'c.leave.w': 'Ton employeur doit en général dire oui. Il peut dire non seulement pour une raison très importante, et alors par écrit dans les 2 semaines. Demander tôt donne le plus de chances d’avoir un oui.', // nalezen: werkgever moet meestal ja zeggen
     'c.illness': 'Tes droits quand tu es malade',
     'c.illness.b': 'Quand tu es malade, ton employeur doit payer au moins 70 % de ton salaire, pendant 2 ans au maximum. Une cao donne souvent plus. Il peut y avoir jusqu’à 2 jours de carence (wachtdagen) sans salaire, mais seulement si ton contrat ou ta cao le dit. Ton patron n’a pas le droit de demander quelle maladie tu as : tu parles de ta santé et de ton travail avec le médecin du travail (bedrijfsarts). Appelle ton employeur quand tu vas mieux (betermelden). La première année, tu reçois au moins le salaire minimum. Tu travailles par une agence ? Ton contrat peut s’arrêter quand tu tombes malade. Alors c’est l’UWV qui te paie (Ziektewet). Demande à l’UWV ou à un syndicat. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
     'c.illness.p': 'Je vais mieux. Je viens travailler demain.',
