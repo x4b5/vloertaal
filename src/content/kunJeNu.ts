@@ -1,3 +1,4 @@
+import type { UiKey } from '../i18n/types';
 import type { ThemeId } from './themes';
 import { THEME_UNITS } from './themes';
 
@@ -25,7 +26,7 @@ import { THEME_UNITS } from './themes';
 /** Het niveau waar een zin bij past: A1 of A2 (ERK), of 1F (Werkregels). */
 export type KunNiveau = 'A1' | 'A2' | '1F';
 /** De vaardigheid waar een zin bij past. */
-export type KunVaardigheid = 'luisteren' | 'spreken' | 'lezen' | 'gesprekken';
+export type KunVaardigheid = 'luisteren' | 'spreken' | 'lezen' | 'schrijven' | 'gesprekken';
 
 export interface KunZin {
   /** "kjn.u.time.1": ook de sleutel van de vertaling (Taal). */
@@ -122,7 +123,7 @@ export const KUN_TAAL: KunOnderwerp[] = [
   onderwerp('u.contact', 'Bellen en appen met je werk', [
     ['Ik kan bellen en zeggen wie ik ben.', 'A1', 'gesprekken', 'I can call and say who I am.'],
     ['Ik kan vragen of iemand mij terugbelt.', 'A2', 'spreken', 'I can ask someone to call me back.'],
-    ['Ik kan een kort bericht van mijn werk lezen.', 'A2', 'lezen', 'I can read a short message from work.'],
+    ['Ik kan een kort bericht aan mijn werk schrijven.', 'A2', 'schrijven', 'I can write a short message to work.'],
   ]),
   onderwerp('u.house', 'Huisregels', [
     ['Ik kan regels als "Roken verboden" lezen.', 'A1', 'lezen', 'I can read rules like "Roken verboden".'],
@@ -294,8 +295,8 @@ export const KUN_REGELS: KunOnderwerp[] = [
     ['Ik kan vragen om een ID bij alcohol.', '1F', 'gesprekken'],
   ]),
   onderwerp('r.schrijven', 'Schrijven op je werk', [
-    ['Ik kan een kort bericht aan mijn werk nalezen.', '1F', 'lezen'],
-    ['Ik kan zien wat in een sollicitatiemail hoort.', '1F', 'lezen'],
+    ['Ik kan een korte mail aan mijn werk schrijven.', '1F', 'schrijven'],
+    ['Ik kan kiezen wat in een sollicitatiemail hoort.', '1F', 'schrijven'],
   ]),
   // Samenwerken
   onderwerp('r.samen', 'Samenwerken: de ongeschreven regels', [
@@ -368,6 +369,15 @@ export function kunJeNu(unitId: string): KunZin[] {
 
 /** "past bij A2 · spreken" */
 export const pastBij = (z: Pick<KunZin, 'niveau' | 'vaardigheid'>): string => `past bij ${z.niveau} · ${z.vaardigheid}`;
+
+/** De vaardigheid in de hulptaal (een ui-sleutel): op het certificaat-scherm na het Nederlands, "(pisanie)". */
+export const KUN_VAARDIGHEID_UI: Record<KunVaardigheid, UiKey> = {
+  luisteren: 'kunLuisteren',
+  spreken: 'kunSpreken',
+  lezen: 'kunLezen',
+  schrijven: 'kunSchrijven',
+  gesprekken: 'kunGesprekken',
+};
 
 /** Hoeveel zinnen bij deze onderwerpen horen (de begeleiderskaart). */
 export function kunAantal(unitIds: string[]): number {

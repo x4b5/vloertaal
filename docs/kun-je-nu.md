@@ -15,7 +15,7 @@ Bij elke zin staat een niveau en een vaardigheid waar de zin bij **past**:
 
 - **Taal**: A1 of A2 van het ERK (Europees Referentiekader).
 - **Werkregels**: 1F (Referentiekader taal; ongeveer A2).
-- Vaardigheden: luisteren, spreken, lezen of gesprekken.
+- Vaardigheden: luisteren, spreken, lezen, schrijven of gesprekken.
 
 Dit is een richtlijn om de app in een les of traject in te passen. Het is **geen officieel
 niveau**, geen toets en geen bewijs van een niveau.
@@ -64,7 +64,7 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan me ziek melden en beter melden. | A2 · gesprekken |
 | Bellen en appen met je werk | Ik kan bellen en zeggen wie ik ben. | A1 · gesprekken |
 |  | Ik kan vragen of iemand mij terugbelt. | A2 · spreken |
-|  | Ik kan een kort bericht van mijn werk lezen. | A2 · lezen |
+|  | Ik kan een kort bericht aan mijn werk schrijven. | A2 · schrijven |
 | Huisregels | Ik kan regels als "Roken verboden" lezen. | A1 · lezen |
 |  | Ik kan vragen waar ik mag roken. | A1 · spreken |
 |  | Ik kan zeggen dat iets niet mag. | A2 · gesprekken |
@@ -151,8 +151,8 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan een lek of verspilling melden. | 1F · gesprekken |
 | Werken in de winkel | Ik kan eerlijk zeggen dat ik iets niet weet. | 1F · gesprekken |
 |  | Ik kan vragen om een ID bij alcohol. | 1F · gesprekken |
-| Schrijven op je werk | Ik kan een kort bericht aan mijn werk nalezen. | 1F · lezen |
-|  | Ik kan zien wat in een sollicitatiemail hoort. | 1F · lezen |
+| Schrijven op je werk | Ik kan een korte mail aan mijn werk schrijven. | 1F · schrijven |
+|  | Ik kan kiezen wat in een sollicitatiemail hoort. | 1F · schrijven |
 | Samenwerken: de ongeschreven regels | Ik kan rustig zeggen dat ik het oneens ben. | 1F · gesprekken |
 |  | Ik kan op tijd zeggen dat iets niet lukt. | 1F · gesprekken |
 | Problemen en je rechten | Ik kan discriminatie herkennen en melden. | 1F · lezen |

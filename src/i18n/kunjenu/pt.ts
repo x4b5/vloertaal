@@ -7,6 +7,11 @@ const t: CultureTranslation = {
     kunJeNu: "O que já consegues fazer?", // nieuw, nalezen
     kunNote: "O nível ao lado de cada frase é uma orientação, não um nível oficial.", // nieuw, nalezen
     coachCanDo: "Quantas frases «Consigo…» tens dos temas terminados", // nieuw, nalezen
+    kunLuisteren: "ouvir", // nieuw, nalezen
+    kunSpreken: "falar", // nieuw, nalezen
+    kunLezen: "ler", // nieuw, nalezen
+    kunSchrijven: "escrever", // nieuw, nalezen
+    kunGesprekken: "conversar", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "Consigo apresentar-me a um colega.", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "Consigo comunicar uma baixa por doença e o meu regresso.", // nieuw, nalezen
     'kjn.u.contact.1': "Consigo telefonar e dizer quem sou.", // nieuw, nalezen
     'kjn.u.contact.2': "Consigo pedir a alguém que me ligue de volta.", // nieuw, nalezen
-    'kjn.u.contact.3': "Consigo ler uma mensagem curta do trabalho.", // nieuw, nalezen
+    'kjn.u.contact.3': "Consigo escrever uma mensagem curta para o trabalho.", // nieuw, nalezen
     'kjn.u.house.1': "Consigo ler regras como «Roken verboden».", // nieuw, nalezen
     'kjn.u.house.2': "Consigo perguntar onde posso fumar.", // nieuw, nalezen
     'kjn.u.house.3': "Consigo dizer que uma coisa não é permitida.", // nieuw, nalezen

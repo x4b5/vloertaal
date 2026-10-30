@@ -7,6 +7,11 @@ const t: CultureTranslation = {
     kunJeNu: "ماذا أستطيع الآن؟", // nieuw, nalezen
     kunNote: "المستوى بجانب كل جملة إرشاد فقط، وليس مستوى رسميًا.", // nieuw, nalezen
     coachCanDo: "عدد جمل «أستطيع…» من المواضيع المنتهية", // nieuw, nalezen
+    kunLuisteren: "الاستماع", // nieuw, nalezen
+    kunSpreken: "التحدث", // nieuw, nalezen
+    kunLezen: "القراءة", // nieuw, nalezen
+    kunSchrijven: "الكتابة", // nieuw, nalezen
+    kunGesprekken: "المحادثة", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "أستطيع أن أعرّف بنفسي لزميل في العمل.", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "أستطيع أن أبلغ عن مرضي وعن عودتي إلى العمل.", // nieuw, nalezen
     'kjn.u.contact.1': "أستطيع أن أتصل وأقول من أنا.", // nieuw, nalezen
     'kjn.u.contact.2': "أستطيع أن أطلب من شخص أن يعاود الاتصال بي.", // nieuw, nalezen
-    'kjn.u.contact.3': "أستطيع أن أقرأ رسالة قصيرة من العمل.", // nieuw, nalezen
+    'kjn.u.contact.3': "أستطيع أن أكتب رسالة قصيرة إلى العمل.", // nieuw, nalezen
     'kjn.u.house.1': "أستطيع أن أقرأ قواعد مثل «Roken verboden».", // nieuw, nalezen
     'kjn.u.house.2': "أستطيع أن أسأل أين يُسمح بالتدخين.", // nieuw, nalezen
     'kjn.u.house.3': "أستطيع أن أقول إن شيئًا غير مسموح.", // nieuw, nalezen

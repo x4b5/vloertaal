@@ -7,6 +7,11 @@ const t: CultureTranslation = {
     kunJeNu: "Co teraz umiesz?", // nieuw, nalezen
     kunNote: "Poziom przy każdym zdaniu to wskazówka, a nie oficjalny poziom.", // nieuw, nalezen
     coachCanDo: "Ile masz zdań „Umiem …” z ukończonych tematów", // nieuw, nalezen
+    kunLuisteren: "słuchanie", // nieuw, nalezen
+    kunSpreken: "mówienie", // nieuw, nalezen
+    kunLezen: "czytanie", // nieuw, nalezen
+    kunSchrijven: "pisanie", // nieuw, nalezen
+    kunGesprekken: "rozmowy", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "Umiem przedstawić się komuś z pracy.", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "Umiem zgłosić chorobę i powrót do pracy.", // nieuw, nalezen
     'kjn.u.contact.1': "Umiem zadzwonić i powiedzieć, kim jestem.", // nieuw, nalezen
     'kjn.u.contact.2': "Umiem poprosić, żeby ktoś do mnie oddzwonił.", // nieuw, nalezen
-    'kjn.u.contact.3': "Umiem przeczytać krótką wiadomość z pracy.", // nieuw, nalezen
+    'kjn.u.contact.3': "Umiem napisać krótką wiadomość do pracy.", // nieuw, nalezen
     'kjn.u.house.1': "Umiem przeczytać zasady takie jak „Roken verboden”.", // nieuw, nalezen
     'kjn.u.house.2': "Umiem zapytać, gdzie wolno palić.", // nieuw, nalezen
     'kjn.u.house.3': "Umiem powiedzieć, że czegoś nie wolno.", // nieuw, nalezen

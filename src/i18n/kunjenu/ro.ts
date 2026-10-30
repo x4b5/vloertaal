@@ -7,6 +7,11 @@ const t: CultureTranslation = {
     kunJeNu: "Ce poți face acum?", // nieuw, nalezen
     kunNote: "Nivelul de lângă fiecare propoziție e un reper, nu un nivel oficial.", // nieuw, nalezen
     coachCanDo: "Câte propoziții „Pot …” ai din temele terminate", // nieuw, nalezen
+    kunLuisteren: "ascultare", // nieuw, nalezen
+    kunSpreken: "vorbire", // nieuw, nalezen
+    kunLezen: "citire", // nieuw, nalezen
+    kunSchrijven: "scriere", // nieuw, nalezen
+    kunGesprekken: "conversație", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "Pot să mă prezint unui coleg.", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "Pot să anunț boala și revenirea la muncă.", // nieuw, nalezen
     'kjn.u.contact.1': "Pot să sun și să spun cine sunt.", // nieuw, nalezen
     'kjn.u.contact.2': "Pot să rog pe cineva să mă sune înapoi.", // nieuw, nalezen
-    'kjn.u.contact.3': "Pot să citesc un mesaj scurt de la serviciu.", // nieuw, nalezen
+    'kjn.u.contact.3': "Pot să scriu un mesaj scurt către serviciu.", // nieuw, nalezen
     'kjn.u.house.1': "Pot să citesc reguli ca „Roken verboden”.", // nieuw, nalezen
     'kjn.u.house.2': "Pot să întreb unde am voie să fumez.", // nieuw, nalezen
     'kjn.u.house.3': "Pot să spun că ceva nu e voie.", // nieuw, nalezen

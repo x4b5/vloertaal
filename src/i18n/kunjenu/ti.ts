@@ -7,6 +7,11 @@ const t: CultureTranslation = {
     kunJeNu: "ሕጂ እንታይ ክገብር እኽእል?", // nieuw, nalezen
     kunNote: "እቲ ጥቓ ነፍሲ ወከፍ ሓረግ ዘሎ ደረጃ መምርሒ ጥራይ እዩ፣ ወግዓዊ ደረጃ ኣይኮነን።", // nieuw, nalezen
     coachCanDo: "ቁጽሪ ሓረጋት «… እኽእል እየ» ካብ ዝተወድኡ ኣርእስትታት", // nieuw, nalezen
+    kunLuisteren: "ምስማዕ", // nieuw, nalezen
+    kunSpreken: "ምዝራብ", // nieuw, nalezen
+    kunLezen: "ምንባብ", // nieuw, nalezen
+    kunSchrijven: "ምጽሓፍ", // nieuw, nalezen
+    kunGesprekken: "ዘተ", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "ንሓደ መሳርሕተይ ርእሰይ ከላልዮ እኽእል እየ።", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "ሕማመይን ናብ ስራሕ ምምላሰይን ክሕብር እኽእል እየ።", // nieuw, nalezen
     'kjn.u.contact.1': "ደዊለ መን ምዃነይ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.contact.2': "ሓደ ሰብ ተመሊሱ ክድውለለይ ክሓትት እኽእል እየ።", // nieuw, nalezen
-    'kjn.u.contact.3': "ካብ ስራሐይ ዝመጸ ሓጺር መልእኽቲ ከንብብ እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.contact.3': "ናብ ስራሐይ ሓጺር መልእኽቲ ክጽሕፍ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.house.1': "ከም «Roken verboden» ዝኣመሰሉ ሕግታት ከንብብ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.house.2': "ኣበይ ሽጋራ ምትካኽ ከም ዝፍቀድ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.house.3': "ሓደ ነገር ከም ዘይፍቀድ ክብል እኽእል እየ።", // nieuw, nalezen
