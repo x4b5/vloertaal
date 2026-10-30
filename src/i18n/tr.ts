@@ -336,6 +336,15 @@ const lang: HelpLanguageSource = {
     tempoCalm: 'Sakin', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
     tempoHint: 'Sakin: yavaş ve net. Normal: iş arkadaşlarının konuştuğu gibi. Çok şey anlıyorsan “Normal”i seç.', // nieuw, nalezen
+    /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
+    coachCard: 'Nasıl gittiğini göster', // nieuw, nalezen
+    coachCardIntro: 'Bu kart ilerlemeni gösterir. Öğretmenine, koçuna ya da amirine göster. Sen karar verirsin.', // nieuw, nalezen
+    coachCardKeep: 'Kartı telefonun yapar. Hiçbir şey gönderilmez. Vloertaal hiçbir şey saklamaz.', // nieuw, nalezen
+    coachCardWhat: 'Kartta, Felemenkçe:', // nieuw, nalezen
+    coachTopics: 'Biten konular', // nieuw, nalezen
+    coachDays: 'Son 4 haftada çalışılan günler', // nieuw, nalezen
+    coachLast: 'Son ders, tarihiyle', // nieuw, nalezen
+    coachNameAsk: 'Kartta adın?', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

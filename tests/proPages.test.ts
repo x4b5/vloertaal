@@ -73,7 +73,7 @@ describe('Voor begeleiders en werkgevers: in the app and on the site, from one s
   const site = coachPage();
 
   it('has the professionals’ sections, in this order', () => {
-    expect(proSections.map((s) => s.id)).toEqual(['p.mission', 'p.beta', 'p.who', 'p.voices', 'p.privacy', 'p.facts', 'p.group', 'p.entree', 'p.contact']);
+    expect(proSections.map((s) => s.id)).toEqual(['p.mission', 'p.beta', 'p.who', 'p.voices', 'p.privacy', 'p.facts', 'p.group', 'p.weekplan', 'p.entree', 'p.contact']);
     // What left Over is here, in its Dutch: the mission, the test version, for whom (both tracks).
     const body = (id: string) => proSections.find((s) => s.id === id)!.body.join(' ') + (proSections.find((s) => s.id === id)!.lines ?? []).map((l) => l.text).join(' ');
     expect(body('p.mission')).toContain(siteSections.find((s) => s.id === 'a.mission')!.nl.body);

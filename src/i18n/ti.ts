@@ -337,6 +337,15 @@ const lang: HelpLanguageSource = {
     tempoCalm: 'ህዱእ', // nieuw, nalezen
     tempoNormal: 'ንቡር', // nieuw, nalezen
     tempoHint: { m: 'ህዱእ ቀስ ዝበለን ንጹርን እዩ። ንቡር ከም ዘረባ ብጾት ስራሕ እዩ። ብዙሕ ትርዳእ እንተኾንካ ንቡር ምረጽ።', f: 'ህዱእ ቀስ ዝበለን ንጹርን እዩ። ንቡር ከም ዘረባ ብጾት ስራሕ እዩ። ብዙሕ ትርድኢ እንተኾንኪ ንቡር ምረጺ።', x: 'ህዱእ ቀስ ዝበለን ንጹርን እዩ። ንቡር ከም ዘረባ ብጾት ስራሕ እዩ። ብዙሕ ትርድኡ እንተኾንኩም ንቡር ምረጹ።' }, // nieuw, nalezen
+    /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
+    coachCard: { m: 'ከመይ ከም ዝኸይድ ኣርኢ', f: 'ከመይ ከም ዝኸይድ ኣርእዪ', x: 'ከመይ ከም ዝኸይድ ኣርእዩ' }, // nieuw, nalezen
+    coachCardIntro: { m: 'እዛ ካርድ ምዕባለኻ ተርኢ። ንመምህርካ፡ ንኣሰልጣኒኻ ወይ ንሓላፊኻ ኣርእዮ። ንስኻ ኢኻ ትውስን።', f: 'እዛ ካርድ ምዕባለኺ ተርኢ። ንመምህርኪ፡ ንኣሰልጣኒኺ ወይ ንሓላፊኺ ኣርእይዮ። ንስኺ ኢኺ ትውስኒ።', x: 'እዛ ካርድ ምዕባለኹም ተርኢ። ንመምህርኹም፡ ንኣሰልጣኒኹም ወይ ንሓላፊኹም ኣርእዩዎ። ንስኹም ኢኹም ትውስኑ።' }, // nieuw, nalezen
+    coachCardKeep: { m: 'ተሌፎንካ እያ ነታ ካርድ ትሰርሓ። ዝኾነ ነገር ኣይለኣኽን። Vloertaal ዝኾነ ነገር ኣይዕቅብን።', f: 'ተሌፎንኪ እያ ነታ ካርድ ትሰርሓ። ዝኾነ ነገር ኣይለኣኽን። Vloertaal ዝኾነ ነገር ኣይዕቅብን።', x: 'ተሌፎንኹም እያ ነታ ካርድ ትሰርሓ። ዝኾነ ነገር ኣይለኣኽን። Vloertaal ዝኾነ ነገር ኣይዕቅብን።' }, // nieuw, nalezen
+    coachCardWhat: 'ኣብታ ካርድ፡ ብሆላንድኛ፦', // nieuw, nalezen
+    coachTopics: 'ዝተወድኡ ኣርእስታት', // nieuw, nalezen
+    coachDays: 'መዓልትታት ልምምድ ኣብ ዝሓለፉ 4 ሰሙናት', // nieuw, nalezen
+    coachLast: 'ናይ መወዳእታ ትምህርቲ፡ ምስ ዕለቱ', // nieuw, nalezen
+    coachNameAsk: { m: 'ስምካ ኣብታ ካርድ?', f: 'ስምኪ ኣብታ ካርድ?', x: 'ስምኩም ኣብታ ካርድ?' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

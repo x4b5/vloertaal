@@ -29,7 +29,7 @@ import { WordPicture, pictures, unitPictures } from '../pictures';
 import * as kit from '../pictures/kit';
 import { hasPicture } from '../lib/wordPicture';
 import { lessonSayings } from '../content/sayings';
-import { CertEarned, CertificateScreen } from '../components/Certificate';
+import { CertEarned, CertificateScreen, CoachCardScreen } from '../components/Certificate';
 import { AllTopics, Route, TopicPage } from '../components/Route';
 import { findUnit } from '../lib/certificate';
 import { clearSave, makeSave, writeSave } from '../lib/resume';
@@ -120,6 +120,9 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'pictures') return <PicturesSheet />;
   // "Wat ken je al?": /?shot=toets&state=offer|offer-eind|question&at=N|speak|result-instap|result-eind|page (src/dev/ToetsShot.tsx).
   if (shot === 'toets') return <ToetsShot lang={lang} gender={gender} />;
+  // "Laat zien hoe het gaat" (the coach card): /?shot=kaart&state=full|start|new (see KaartShot);
+  // &name=Amina%20Yusuf (name=ask: asked first; name=none, the default: without a name). &lang=nl: Werkregels.
+  if (shot === 'kaart') return <KaartShot lang={lang} gender={gender} q={q} />;
   // The app icon in every variant (scripts/icons/make-icons.cjs reads these): /?shot=logo&px=512
   if (shot === 'logo') return <LogoSheet px={Number(q.get('px') ?? 120)} />;
   // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety
@@ -520,6 +523,50 @@ function QuietLesson({ quiet: start, ...props }: Omit<React.ComponentProps<typeo
   setQuietAudio(quiet);
   // &report=1: tester mode, the "Iets melden" flag in the header (src/lib/report.ts).
   return <LessonPlayer {...props} quiet={quiet} onQuiet={setQuiet} report={new URLSearchParams(location.search).get('report') === '1'} reportHint />;
+}
+
+/**
+ * The coach card in a fixed state, on 30 October 2026:
+ *  - full (default): four topics done (the last on the 28th), 9 days practised in the last 4 weeks
+ *    (and some before: not counted), the last lesson on the 29th, and the test's start and end;
+ *  - start: one topic, 3 days, only the start of the test; new: nothing done yet.
+ * In the work-rules track (&lang=nl) the same, without the test (it is not in that track).
+ */
+function KaartShot({ lang, gender, q }: { lang: string | null; gender?: Gender; q: URLSearchParams }) {
+  const name = q.get('name');
+  try {
+    if (name === 'ask') localStorage.removeItem('vloertaal:cert-name');
+    else localStorage.setItem('vloertaal:cert-name', name === 'none' || name === null ? '' : name);
+  } catch { /* ignore */ }
+  const state = q.get('state') ?? 'full';
+  const rules = lang === 'nl';
+  const course = rules ? courseUnits('regels') : units;
+  const n = state === 'new' ? 0 : state === 'start' ? 1 : 4;
+  const done = course.slice(0, n);
+  const completed = Object.fromEntries(done.flatMap((u) => u.lessons).map((l) => [l.id, { best: 1, times: 1 }]));
+  const certDays = ['2026-10-06', '2026-10-14', '2026-10-21', '2026-10-28'];
+  const days = state === 'new' ? [] : state === 'start' ? ['2026-10-26', '2026-10-28', '2026-10-29'] : ['2026-09-20', '2026-09-28', '2026-10-06', '2026-10-08', '2026-10-14', '2026-10-17', '2026-10-21', '2026-10-23', '2026-10-26', '2026-10-28', '2026-10-29'];
+  const next = course[n]?.lessons[0];
+  const run = (day: string, version: 'A' | 'B', r: [number, number, number]) => ({ day, version, right: { listen: r[0], words: r[1], sentences: r[2] }, of: { listen: 6, words: 6, sentences: 6 } });
+  const progress: Progress = {
+    ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, gender, sector: 'none', completed,
+    certs: Object.fromEntries(done.map((u, i) => [u.id, certDays[state === 'start' ? 3 : i]])),
+    days, lastDay: days.at(-1) ?? null, streak: days.length ? 2 : 0,
+    ...(state === 'new' ? {} : { lessonDay: '2026-10-29', lastLesson: next?.id ?? done.at(-1)?.lessons.at(-1)?.id }),
+    ...(state === 'new' ? {} : {
+      toets: state === 'start'
+        ? { v: 1 as const, instap: run('2026-10-26', 'A', [2, 3, 1]), start: '2026-10-26', unitsAt: 0 }
+        : { v: 1 as const, instap: run('2026-10-02', 'A', [2, 3, 1]), eind: run('2026-10-29', 'B', [4, 5, 4]), start: '2026-10-02', unitsAt: 0 },
+    }),
+  };
+  if (next && state !== 'new') progress.completed[next.id] = { best: 1, times: 1 };
+  const l = getHelpLanguage(lang as LangCode, gender);
+  return (
+    <>
+      <CoachCardScreen progress={progress} lang={l} onBack={() => {}} today={new Date(2026, 9, 30, 12)} />
+      <BottomNav current="me" onTab={() => {}} lang={l} />
+    </>
+  );
 }
 
 /**

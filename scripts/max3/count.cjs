@@ -492,6 +492,16 @@ function defineStates(LANG) {
   add('toets:result-instap', shot('toets&state=result-instap'), null, { expect: '.toets-parts' });
   add('toets:result-eind', shot('toets&state=result-eind'), null, { expect: '.toets-voices' });
   add('toets:page', shot('toets&state=page'), null, { expect: '.toets-page .chrome-back' });
+  // "Laat zien hoe het gaat" (the coach card, Settings › Taal en ik): the card with Bewaar of deel and
+  // Naam wijzigen; a new learner's; and the name asked first (as on the certificate).
+  add('kaart:full', shot('kaart&name=Ali%20Hassan'), null, { expect: '.kaart-img' });
+  add('kaart:start', shot('kaart&state=start'), null, { expect: '.kaart-img' });
+  add('kaart:new', shot('kaart&state=new'), null, { expect: '.kaart-img' });
+  add('kaart:ask-name', shot('kaart&name=ask'), null, { expect: '.cert-name-input' });
+  // The real way: Instellingen › Taal en ik › the last row; the name asked first, then the card.
+  const toKaart = async (p) => { await realHome(p); await navTab(p, 2); await settle(p); await tap(p, '.set-row', 0); await settle(p); const rows = p.locator('.set-row'); await rows.nth((await rows.count()) - 1).click(); await settle(p, 900); };
+  add('flow:kaart-name', '/', toKaart, { expect: '.cert-name-input' });
+  add('flow:kaart', '/', async (p) => { await toKaart(p); await tap(p, '.cert-no-name'); await settle(p, 1500); }, { expect: '.kaart-img' });
   add('flow:toets-offer', '/', (p) => realHome(p, { toets: undefined }), { expect: '.toets-offer' });
   add('flow:toets-start', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
   add('flow:toets-later', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3 .bay-now' });
@@ -578,6 +588,8 @@ function defineRuleStates() {
   add('rule:result-no-voice', shot('result'), null, { voices: false, expect: '.result-remember' });
   add('rule:certificate', shot('certificate&cu=r.loon&name=Fatima%20Amrani'), null, { expect: '.cert-words-rules' });
   add('rule:cert-earned', shot('cert-earned&cu=r.zoeken'), null, { expect: '.cert-words-rules' });
+  add('rule:kaart', shot('kaart&name=Fatima%20Amrani'), null, { expect: '.kaart-img' });
+  add('rule:kaart-new', shot('kaart&state=new'), null, { expect: '.kaart-img' });
   add('rule:pocket', shot('pocket&cu=r.loon'), null, { expect: '.pocket-list-rules' });
   add('rule:pocket-sector', shot('pocket&cu=r.build'), null, { expect: '.pocket-list-rules' });
   // M5: the Hulp tab ("Wie bel je?": one tap or one speaker per row, the list exception), "Alle

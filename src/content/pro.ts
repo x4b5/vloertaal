@@ -84,7 +84,7 @@ export const proSections: ProSection[] = [
   {
     id: 'p.privacy', emoji: '🔒', title: 'Privacy: geen account, weinig tellen',
     body: [
-      'Een leerling heeft geen account nodig: geen naam, geen e-mailadres, geen wachtwoord. Wat een leerling leert, staat alleen op de eigen telefoon of computer. Wij kunnen dat niet zien. Wil je weten hoe het gaat? Vraag de leerling om de certificaten te laten zien.',
+      'Een leerling heeft geen account nodig: geen naam, geen e-mailadres, geen wachtwoord. Wat een leerling leert, staat alleen op de eigen telefoon of computer. Wij kunnen dat niet zien, en jij als begeleider ook niet: je ziet alleen wat de leerling zelf laat zien. Wil je weten hoe het gaat? Vraag de leerling om de begeleiderskaart te laten zien (Instellingen › Taal en ik › “Laat zien hoe het gaat”). Die kaart maakt de telefoon zelf, als plaatje. De leerling kiest of hij die laat zien, bewaart of stuurt. De certificaten laten zien welke onderwerpen af zijn.',
       'De toets “Wat ken je al?” werkt net zo. De uitslag en de opname van de stem van de leerling (om later “Jij toen” en “Jij nu” te horen) blijven alleen op het toestel. Wij krijgen die niet. Kijk samen met de leerling naar het uitslagscherm. Met “Voortgang wissen” is alles weg, ook de opnames.',
       'Wat telt de app? Alleen hoe vaak een les begint, stopt of af is: welke les, in welk kwart iemand stopte, en ongeveer hoeveel minuten een les duurde. En hoe vaak de toets “Wat ken je al?” begint en af is (instap of eind), zonder de uitslag. Dat gaat zonder cookies, met GoatCounter. Er gaat niets mee over de leerling: geen hulptaal, geen sector, geen naam en geen nummer.',
       'De leerling kan het tellen uitzetten bij Instellingen (“Anoniem meetellen”). Vraagt de browser om niet gevolgd te worden (Do Not Track of Global Privacy Control)? Dan telt de app niets. Melden opent een gewone mail: er gaat pas iets naar ons als de leerling die zelf verstuurt.',
@@ -107,6 +107,19 @@ export const proSections: ProSection[] = [
     ],
     site: [{ text: 'vloertaal.nl/pl', href: '/pl/' }],
     extra: 'topics',
+  },
+  {
+    // A sober example for a group (docs/weekplan.md), after the topic links it points to.
+    id: 'p.weekplan', emoji: '🗓️', title: 'Een voorbeeld: vier weken met een groep',
+    body: ['Een voorbeeld, geen voorschrift: pas het aan je groep aan. Reken op ongeveer drie keer tien minuten oefenen per week, op de eigen telefoon. Vloertaal is daarbij een aanvulling op je les of begeleiding.'],
+    lines: [
+      { lead: 'Week 1.', text: 'Samen beginnen. Ieder kiest een taal en doet de toets “Wat ken je al?” (ongeveer 10 minuten, zonder cijfer). Daarna de eerste les van thema 1, Starten.' },
+      { lead: 'Week 2 en 3.', text: 'Zelf oefenen, ongeveer drie keer tien minuten per week. Past een onderwerp bij het werk? Stuur de link van dat onderwerp (de links staan hierboven, bij “Zo zet je het in”).' },
+      { lead: 'Elke week.', text: 'Kijk één keer samen naar de begeleiderskaart (Instellingen › Taal en ik › “Laat zien hoe het gaat”). De leerling laat de kaart zelf zien. Praat over wat lukte en wat lastig was. De kaart geeft geen cijfer en geen niveau.' },
+      { lead: 'Week 4.', text: 'De eindtoets. De app biedt die zelf aan na 4 weken of na 3 onderwerpen; hij staat ook bij Instellingen › Lessen › “Wat ken je al?”. Kijk daarna samen naar “Jij toen” en “Jij nu”.' },
+      { lead: 'Werkregels.', text: 'Voor wie al Nederlands spreekt: hetzelfde ritme, zonder toets. De begeleiderskaart werkt ook daar.' },
+    ],
+    site: [{ text: 'Werkregels.', href: '/werkregels/' }],
   },
   {
     id: 'p.entree', emoji: '🎓', title: 'Entree en mbo',

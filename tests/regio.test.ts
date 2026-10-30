@@ -71,8 +71,8 @@ describe('regions: the model', () => {
     expect(REGIONS_LIVE).toBe(false);
     const ctx = { helpLang: true, gender: true, preview: false, install: false, offline: false };
     expect(settingsRows('me', ctx)).not.toContain('region');
-    expect(settingsRows('me', { ...ctx, region: true })).toEqual(['language', 'gender', 'sector', 'region', 'country', 'english', 'certificates']);
-    expect(settingsRows('me', { ...ctx, rules: true, region: true })).toEqual(['language', 'sector', 'region', 'country', 'certificates']);
+    expect(settingsRows('me', { ...ctx, region: true })).toEqual(['language', 'gender', 'sector', 'region', 'country', 'english', 'certificates', 'kaart']);
+    expect(settingsRows('me', { ...ctx, rules: true, region: true })).toEqual(['language', 'sector', 'region', 'country', 'certificates', 'kaart']);
     expect(SETTINGS_PARENT.region).toBe('me');
   });
 

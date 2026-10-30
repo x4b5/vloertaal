@@ -79,6 +79,9 @@ export interface Progress {
   reviewDay?: string;
   /** The last day a lesson (not only today's review) was finished: Bram's "done for today". */
   lessonDay?: string;
+  /** The lesson finished last (its id), for the coach card ("Laat zien hoe het gaat",
+   *  src/lib/kaart.ts). Only on this phone, like the rest. Missing in older saves. */
+  lastLesson?: string;
   /** Free days ("vrije dag") in hand: one is earned per 7 practised days, at most FREEZE_MAX. */
   freezes?: number;
   /** Days a free day was used for (YYYY-MM-DD, most recent last). Shown grey on the week row. */
@@ -98,7 +101,8 @@ export interface Progress {
    * review was left: the home then shows that review and does not go on past it (src/lib/route.ts).
    */
   pickedUnit?: string;
-  /** The days practised (YYYY-MM-DD, most recent last, the last DAYS_KEEP), for the week row. */
+  /** The days practised (YYYY-MM-DD, most recent last, the last DAYS_KEEP), for the week row and
+   *  the coach card's "days practised in the last 4 weeks". */
   days?: string[];
   /** The one-time emergency-phrases row on the first lesson's result was shown. */
   phrasesShown?: boolean;
@@ -174,6 +178,7 @@ export function loadProgress(): Progress {
       if (saved.genderAsked !== undefined && typeof saved.genderAsked !== 'boolean') delete saved.genderAsked;
       if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;
       if (saved.pickedUnit !== undefined && typeof saved.pickedUnit !== 'string') delete saved.pickedUnit;
+      if (saved.lastLesson !== undefined && typeof saved.lastLesson !== 'string') delete saved.lastLesson;
       if (saved.parked !== undefined) {
         const k = saved.parked as Record<string, unknown> | null;
         if (!k || typeof k !== 'object') delete saved.parked;
@@ -242,8 +247,9 @@ export const FREEZE_EVERY = 7;
 export const FREEZE_MAX = 2;
 /** Rest days kept in the save (only the last weeks are ever shown). */
 const REST_KEEP = 30;
-/** Practised days kept in the save: two weeks cover the week row. */
-export const DAYS_KEEP = 14;
+/** Practised days kept in the save: the week row needs two weeks, the coach card four (only dates,
+ *  only on this phone). */
+export const DAYS_KEEP = 28;
 /** The first free day is earned on this day of the first streak, so it can protect week 1. */
 export const FIRST_FREEZE_AT = 3;
 
@@ -377,6 +383,7 @@ export function completeLesson(
   return {
     ...practise(p, today),
     lessonDay: dayKey(today),
+    lastLesson: lessonId,
     xp: p.xp + xpFor(accuracy, review),
     completed: {
       ...p.completed,
@@ -484,6 +491,7 @@ export function parseBackup(text: string): Backup | null {
   if (isDay(src.lastDay)) out.lastDay = src.lastDay;
   if (isDay(src.reviewDay)) out.reviewDay = src.reviewDay;
   if (isDay(src.lessonDay)) out.lessonDay = src.lessonDay;
+  if (typeof src.lastLesson === 'string' && knownLessonId(src.lastLesson)) out.lastLesson = src.lastLesson;
   if (isCount(src.freezes)) out.freezes = Math.min(FREEZE_MAX, Math.floor(src.freezes));
   if (isCount(src.bestStreak)) out.bestStreak = Math.floor(src.bestStreak);
   if (Array.isArray(src.rest)) out.rest = src.rest.filter(isDay).slice(-REST_KEEP);
@@ -528,6 +536,7 @@ export function replaceWithBackup(p: Progress, file: Backup): Progress {
     cards: b.cards ?? {},
     reviewDay: b.reviewDay,
     lessonDay: b.lessonDay,
+    lastLesson: b.lastLesson,
     freezes: b.freezes,
     rest: b.rest,
     days: b.days,
@@ -603,6 +612,8 @@ export function mergeBackup(p: Progress, file: Backup): Progress {
     lastDay: later.lastDay ?? null,
     reviewDay: max(p.reviewDay, b.reviewDay),
     lessonDay: max(p.lessonDay, b.lessonDay),
+    // The last lesson of the side that finished a lesson last (this phone's on the same day).
+    lastLesson: b.lastLesson && b.lessonDay && (!p.lessonDay || b.lessonDay > p.lessonDay) ? b.lastLesson : p.lastLesson ?? b.lastLesson,
     // The other track: its later review day; its block stays this phone's (the file's if none).
     parked: p.parked || b.parked ? {
       ...p.parked,

@@ -91,6 +91,10 @@ Hulptalen in het spoor Taal:
   **Over** staat welke versie je hebt.
 - **Voor begeleiders**: `#begeleiders` heeft links per onderwerp en feiten over waarom Nederlands
   leren helpt, met bronnen.
+- **Laat zien hoe het gaat** (Instellingen › Taal en ik): de telefoon maakt zelf een
+  begeleiderskaart als plaatje (onderwerpen af, dagen geoefend in de laatste 4 weken, laatste les,
+  de toets), die de leerling zelf laat zien of deelt. Er gaat niets naar een server. Een voorbeeld
+  van vier weken met een groep: [`docs/weekplan.md`](docs/weekplan.md).
 
 ## Toegang
 

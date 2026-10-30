@@ -336,6 +336,15 @@ const lang: HelpLanguageSource = {
     tempoCalm: 'Ruhig', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
     tempoHint: 'Ruhig ist langsam und deutlich. Normal ist so, wie Kollegen sprechen. Wähle „Normal“, wenn du schon viel verstehst.', // nieuw, nalezen
+    /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
+    coachCard: 'Zeig, wie es läuft', // nieuw, nalezen
+    coachCardIntro: 'Diese Karte zeigt deinen Fortschritt. Zeig sie deiner Lehrkraft, deinem Coach oder deinem Chef. Du entscheidest.', // nieuw, nalezen
+    coachCardKeep: 'Dein Handy macht die Karte. Nichts wird gesendet. Vloertaal speichert nichts.', // nieuw, nalezen
+    coachCardWhat: 'Auf der Karte, auf Niederländisch:', // nieuw, nalezen
+    coachTopics: 'Fertige Themen', // nieuw, nalezen
+    coachDays: 'Übungstage in den letzten 4 Wochen', // nieuw, nalezen
+    coachLast: 'Letzte Lektion, mit Datum', // nieuw, nalezen
+    coachNameAsk: 'Dein Name auf der Karte?', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

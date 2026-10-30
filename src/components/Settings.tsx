@@ -90,6 +90,13 @@ const TempoIcon = ({ size = 24, fast = false }: { size?: number; fast?: boolean 
     <circle cx="12" cy="17" r="1.8" fill="currentColor" />
   </svg>
 );
+/** A card with lines, for "Laat zien hoe het gaat" (the coach card). */
+const CardIcon = ({ size = 24 }: { size?: number }) => (
+  <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
+    <rect x="4" y="2.8" width="16" height="18.4" rx="2.4" fill="none" stroke="currentColor" strokeWidth="2.3" />
+    <path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+  </svg>
+);
 const TEMPO_KEYS = { calm: 'tempoCalm', normal: 'tempoNormal' } as const;
 const TEMPO_NL = { calm: 'Rustig', normal: 'Normaal' } as const;
 const TextA = ({ size }: { size: TextSize }) => <span className={`text-size-a text-size-${size}`} aria-hidden>A</span>;
@@ -130,6 +137,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   reset: { nl: 'Voortgang wissen', key: 'resetProgress', icon: <AlertIcon size={24} /> },
   unlock: { nl: 'Volledige versie', key: 'unlockFull', icon: <LockIcon size={24} /> },
   toets: { nl: 'Wat ken je al?', key: 'toetsTitle', icon: <BarsIcon size={24} /> },
+  kaart: { nl: 'Laat zien hoe het gaat', key: 'coachCard', icon: <CardIcon size={24} /> },
 };
 
 /** A short value in the help language only (English when there is none). */

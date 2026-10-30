@@ -11,7 +11,10 @@ export type SettingsPage =
   | 'sound' | 'voice' | 'tempo' | 'speaking' | 'writing' | 'text' | 'theme'
   | 'offline' | 'reminder' | 'reminder-time' | 'install' | 'backup' | 'counting' | 'reset' | 'unlock'
   /** "Wat ken je al?": a screen of its own (App, src/components/Toets.tsx ToetsPage), from Lessen. */
-  | 'toets';
+  | 'toets'
+  /** "Laat zien hoe het gaat": the coach card, a screen of its own (App, src/components/Certificate.tsx
+   *  CoachCardScreen), from Taal en ik, under "Mijn certificaten". */
+  | 'kaart';
 
 /** The page each page is opened from (null: the Settings menu itself). */
 export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
@@ -45,6 +48,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   reset: 'phone',
   unlock: 'phone',
   toets: 'lessons',
+  kaart: 'me',
 };
 
 /** How many steps below the Settings menu a page is (0 = the menu). */
@@ -81,7 +85,7 @@ export interface SettingsContext {
 /** The rows of a list, in order. */
 export function settingsRows(list: SettingsList, ctx: SettingsContext): SettingsPage[] {
   const rows: (SettingsPage | false)[] =
-    list === 'me' ? ['language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', 'country', !ctx.rules && ctx.helpLang && 'english', 'certificates']
+    list === 'me' ? ['language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', 'country', !ctx.rules && ctx.helpLang && 'english', 'certificates', 'kaart']
     : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'tempo', !ctx.rules && 'speaking', !ctx.rules && 'writing', 'text', 'theme', !ctx.rules && 'toets']
     : [ctx.preview && 'unlock', ctx.offline && 'offline', 'reminder', ctx.install && 'install', 'backup', 'counting', 'reset'];
   return rows.filter((r): r is SettingsPage => Boolean(r));
