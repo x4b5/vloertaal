@@ -384,4 +384,27 @@ export default {
       <Shine d="M18 70L30 58M42 70L54 58" width={3} opacity={0.8} />
     </g>
   ),
+
+  // The Garage sector card (no word of a lesson, so never a picture choice): a red car in front
+  // of a garage with its roller door open, as the greenhouse is the Tuinbouw card
+  'w.garage': () => (
+    <g>
+      <Ground cx={60} cy={106} rx={52} ry={5} />
+      {/* The garage: a roof and the roller door behind the car */}
+      <path d="M10 48L60 20L110 48V104H10Z" fill={PAL.paperShade} />
+      <path d="M10 48L60 20L110 48" fill="none" stroke={PAL.slate} strokeWidth="5" strokeLinejoin="round" strokeLinecap="round" />
+      <rect x="24" y="50" width="72" height="54" fill={PAL.mist} />
+      {[58, 66, 74].map((y) => <path key={y} d={`M24 ${y}H96`} stroke={PAL.line} strokeWidth="2.2" />)}
+      {/* The car, side on */}
+      <path d="M12 96V84c0-4 3-7 7-8l13-2 11-13h32l12 13 12 2c4 1 6 4 6 8v12Z" fill={PAL.red} />
+      <path d="M12 96V90H110V96Z" fill={PAL.redShade} />
+      <path d="M46 65h13v10H37Z" fill={PAL.ice} />
+      <path d="M63 65h10l9 10H63Z" fill={PAL.ice} />
+      <circle cx="34" cy="96" r="10" fill={PAL.slateDark} />
+      <circle cx="34" cy="96" r="4.2" fill={PAL.steel} />
+      <circle cx="88" cy="96" r="10" fill={PAL.slateDark} />
+      <circle cx="88" cy="96" r="4.2" fill={PAL.steel} />
+      <Shine d="M50 68L54 64" width={3} opacity={0.8} />
+    </g>
+  ),
 } as Record<string, () => JSX.Element>;

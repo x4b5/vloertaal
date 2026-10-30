@@ -281,6 +281,24 @@ export const SproutIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** A wrench over a lightning bolt: technical work (metaal, elektro, installatie). */
+export const WrenchIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M14.6 3.4a4.6 4.6 0 0 0-5.3 6.1L3.6 15.2a1.9 1.9 0 0 0 2.7 2.7L12 12.2a4.6 4.6 0 0 0 6.1-5.3l-2.7 2.7-2.4-.6-.6-2.4z" {...stroke} strokeWidth={2} />
+    <path d="M18.6 13.2l-2.4 4h3l-2.4 4" {...stroke} strokeWidth={1.9} />
+  </Svg>
+);
+
+/** A car, side on: the garage. */
+export const CarIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M3 16.5v-3.2c0-.9.6-1.6 1.5-1.8l2.6-.5 2.6-3.5h6.4l2.8 3.5 1.7.4c.9.2 1.4 1 1.4 1.9v3.2H3z" {...stroke} strokeWidth={2} />
+    <path d="M9.7 7.5v3.5M7.1 11h12.3" {...stroke} strokeWidth={1.8} />
+    <circle cx="7.4" cy="17" r="2" {...stroke} strokeWidth={2} />
+    <circle cx="16.8" cy="17" r="2" {...stroke} strokeWidth={2} />
+  </Svg>
+);
+
 /** A question mark in a circle: "not sure yet". */
 export const QuestionIcon = (p: IconProps) => (
   <Svg {...p}>

@@ -2359,8 +2359,8 @@ nakijken.*
 Tempo en stukloon). Die staat uitgewerkt in [`entree-aanvulling.md`](entree-aanvulling.md), deel 4.*
 
 *Ook later erbij (30 oktober 2026, tweede Entree-ronde): techniek (`r.techniek`, les TE.1 en TE.2) en
-de garage (`r.werkplaats`, les M.1 en M.2). Die staan in deel 7, net als de reden dat ze nog niet
-in de sectorkeuze staan.*
+de garage (`r.werkplaats`, les M.1 en M.2). Die staan in deel 7, net als hoe ze in de
+sectorkeuze kwamen.*
 
 ## Sector bouw · Veilig op de bouw
 
@@ -3015,19 +3015,20 @@ zinnen van "Wat zeg je?" (`src/content/regels/zegHet.ts`).*
 **Telling van deze 14 lessen.** "Wat is het beste?" en kaartjes: A 8, B 9, C 9. "Waar of niet
 waar?": 8 waar, 9 niet waar. "Wie vraag je het?": 4 (B 2, C 2).
 
-**Sectorkeuze.** Techniek en de garage staan **niet** in "Waar werk je?" (`src/content/sectors.ts`).
-Waarom niet:
+**Sectorkeuze.** Sinds 30 oktober 2026 staan techniek en de garage in "Waar werk je?"
+(`src/content/sectors.ts`), in een nieuwe indeling (besluit van de eigenaar):
 
-- De keuze heeft hooguit 3 kaarten per scherm. "Maken en verplaatsen" en "Zorg en service" zijn vol.
-  "Iets anders" heeft Tuinbouw en "Weet ik nog niet": er is nog **1** plek. Twee nieuwe sectoren
-  passen er niet in, en met één erbij is de groep vol voor groen, retail en facilitair (gat 11, 14, 17).
-  Daar is eerst een nieuwe indeling van de groepen voor nodig.
-- Een sectorkaart heeft een UI-tekst in 13 hulptalen en een Taal-unit. `u.tech` en `u.garage` zijn
-  er nog niet; die bouwt een andere agent later. De koppeling `units` blijft dus leeg tot dan.
+- Stap 1 is een lijst van één soort rij (de lijst-uitzondering van max 3): **Bouw en techniek**,
+  **Maken en verplaatsen**, **Zorg en service** en **Weet ik nog niet** (de keuze `none`). De groep
+  "Iets anders" is weg.
+- Stap 2 heeft de drie sectoren van de groep: Bouw, Techniek, Garage · Productie (fabriek),
+  Logistiek (magazijn), Tuinbouw · Zorg, Horeca, Schoonmaak.
+- Techniek (`technical`) heeft `r.techniek` en de Taal-unit `u.tech` ("In de werkplaats"); Garage
+  (`garage`) heeft `r.werkplaats` en `u.garage` ("In de garage"). Focus: Veilig werken en Je werk
+  afronden (`r.veilig`, `r.afronden`; Taal `u.safety`, `u.finish`).
 
-Tot die tijd staan ze in `SECTOR_UNITS_WITHOUT_CARD`: zonder sectorkeuze (of "Weet ik nog niet")
-staan ze in het hele lespad; wie een sector koos, vindt ze onder "Andere sectoren", nooit in het
-basispad.
+Wie een andere sector koos, vindt ze onder "Andere sectoren"; zonder sectorkeuze (of "Weet ik nog
+niet") staan ze in het hele lespad. Een opgeslagen keuze blijft geldig.
 
 ## Unit 7 · Veilig en gezond werken (erbij: 7.4 en 7.5)
 
@@ -3702,7 +3703,7 @@ DUO (een bewijs van je diploma ⚖️).
 
 ## Sector techniek · Werken in de techniek
 
-*Entree-profiel metaal-, elektro- en installatietechniek (`r.techniek`, in `src/content/regels/units/sector.ts`). Lesletters TE, want T is al van de kas. Nog **niet** in de sectorkeuze: zie hieronder, "Sectorkeuze".*
+*Entree-profiel metaal-, elektro- en installatietechniek (`r.techniek`, in `src/content/regels/units/sector.ts`). Lesletters TE, want T is al van de kas. In de sectorkeuze: Bouw en techniek › Techniek (zie hieronder, "Sectorkeuze").*
 
 ### Les TE.1 · Gereedschap, vonken en lawaai
 
@@ -3829,7 +3830,7 @@ collega · de Nederlandse Arbeidsinspectie.
 
 ## Sector garage · Werken in de garage
 
-*Entree-profiel mobiliteitsbranche (`r.werkplaats`, in `src/content/regels/units/sector.ts`). De werkorder is een kaartje van het type `werkbon`. Nog **niet** in de sectorkeuze, net als techniek.*
+*Entree-profiel mobiliteitsbranche (`r.werkplaats`, in `src/content/regels/units/sector.ts`). De werkorder is een kaartje van het type `werkbon`. In de sectorkeuze: Bouw en techniek › Garage.*
 
 ### Les M.1 · Veilig in de werkplaats
 
