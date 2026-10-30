@@ -88,6 +88,8 @@ export const ruleAdvice: Record<string, 'advice' | 'abuse' | 'civic'> = {
   'r.l.veilig.1.ru1': 'advice',
   'r.l.veilig.2.ru1': 'advice',
   'r.l.veilig.3.ru1': 'advice',
+  'r.l.veilig.4.ru1': 'advice',
+  'r.l.veilig.5.ru1': 'advice',
   'r.l.rechten.1.ru1': 'abuse',
   'r.l.rechten.2.ru1': 'abuse',
   'r.l.rechten.3.ru1': 'abuse',
@@ -97,6 +99,8 @@ export const ruleAdvice: Record<string, 'advice' | 'abuse' | 'civic'> = {
   'r.l.geld.3.ru1': 'advice',
   'r.l.geld.4.ru1': 'advice',
   'r.l.geld.5.ru1': 'advice',
+  'r.l.geld.6.ru1': 'advice',
+  'r.l.geld.7.ru1': 'advice',
   'r.l.build.1.ru1': 'advice',
   'r.l.build.2.ru1': 'advice',
   'r.l.care.1.ru1': 'advice',
@@ -111,6 +115,10 @@ export const ruleAdvice: Record<string, 'advice' | 'abuse' | 'civic'> = {
   'r.l.warehouse.2.ru1': 'advice',
   'r.l.kas.1.ru1': 'advice',
   'r.l.kas.2.ru1': 'advice',
+  'r.l.techniek.1.ru1': 'advice',
+  'r.l.techniek.2.ru1': 'advice',
+  'r.l.werkplaats.1.ru1': 'advice',
+  'r.l.werkplaats.2.ru1': 'advice',
   // The Entree additions (docs/entree-aanvulling.md, units 11–17).
   'r.l.winkel.3.ru1': 'advice',
   'r.l.rekenen.1.ru1': 'advice',
@@ -122,6 +130,9 @@ export const ruleAdvice: Record<string, 'advice' | 'abuse' | 'civic'> = {
   'r.l.meedoen.2.ru1': 'abuse',
   'r.l.meedoen.3.ru1': 'civic',
   'r.l.duurzaam.1.ru1': 'advice',
+  // The second Entree round (docs/werkregels-curriculum.md, deel 7). The rules of r.schrijven,
+  // r.l.loopbaan.1 and .3 and r.l.meedoen.4 are unwritten (how it usually goes): no line.
+  'r.l.loopbaan.2.ru1': 'advice',
 };
 
 /**

@@ -524,6 +524,11 @@ function defineRuleStates() {
   step('whoask-ai', 'rule&step=whoask&id=r.l.digitaal.3.wa1', true);
   // A written rule with the civic line (Meedoen in Nederland).
   step('rule-civic', 'rule&step=rule&lesson=r.l.meedoen.1', false);
+  // The second Entree round (curriculum, deel 7): the garage's werkorder, its whatdo with a quote,
+  // and a new lesson played from its start.
+  step('card-werkorder', 'rule&step=card&id=r.l.werkplaats.2.ca1', true);
+  step('whatdo-proefrit', 'rule&step=whatdo&id=r.l.werkplaats.2.wd1', true);
+  step('whoask-huisarts', 'rule&step=whoask&id=r.l.veilig.5.wa1', true);
   add('rule:retry', shot('rule&step=whatdo&retry=1'), null, { expect: '.tag-repeat' });
   add('rule:quiet', shot('rule&step=scene&quiet=1'), null, { expect: '.player-body .exercise' });
   add('rule:quit-dialog', shot('rule&step=whatdo'), async (p) => { await tap(p, '.player-top .lesson-close'); }, { expect: '.pause-sheet .sheet-sound' });
@@ -533,6 +538,7 @@ function defineRuleStates() {
   add('rule:lesson-stage', shot('lesson&lesson=r.l.stage.3'), null, { expect: '.player-body .exercise' });
   add('rule:lesson-meedoen', shot('lesson&lesson=r.l.meedoen.1'), null, { expect: '.player-body .exercise' });
   add('rule:lesson-ai', shot('lesson&lesson=r.l.digitaal.3'), null, { expect: '.player-body .exercise' });
+  add('rule:lesson-werkplaats', shot('lesson&lesson=r.l.werkplaats.2'), null, { expect: '.player-body .exercise' });
   // M4 around the lessons: "Herhaal vandaag" with rules questions, the home with the rules count
   // and the review due, the result (with the "Onthoud" line and its speaker), the certificate and
   // the pocket card of a rules unit.

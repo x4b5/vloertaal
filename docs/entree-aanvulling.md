@@ -1369,7 +1369,10 @@ nog een ElevenLabs-opname nodig.*
   Leerdoel: je wast je handen na contact met dieren. Je meldt een ziek of gewond dier meteen. Je
   weet waarom je rustig en voorzichtig met dieren omgaat.
 
-### Sector mobiliteit · In de werkplaats (`r.werkplaats`)
+### Sector mobiliteit · In de werkplaats (`r.werkplaats`) · gebouwd
+
+*Gebouwd op 30 oktober 2026 als "Werken in de garage", uitgewerkt in
+[`werkregels-curriculum.md`](werkregels-curriculum.md), deel 7. Nog niet in de sectorkeuze (zie daar).*
 
 - **Les M.1 · Veilig in de werkplaats.**
   Leerdoel: je gaat nooit onder een auto die niet goed vaststaat. Je ruimt gemorste olie meteen
@@ -1378,7 +1381,11 @@ nog een ElevenLabs-opname nodig.*
   Leerdoel: je leest een werkorder (link met unit 13). Je doet geen extra werk zonder akkoord van
   de klant ⚖️. Een proefrit maak je alleen met toestemming en een rijbewijs.
 
-### Sector techniek · Metaal, elektro en installatie (`r.techniek`)
+### Sector techniek · Metaal, elektro en installatie (`r.techniek`) · gebouwd
+
+*Gebouwd op 30 oktober 2026 als "Werken in de techniek", uitgewerkt in
+[`werkregels-curriculum.md`](werkregels-curriculum.md), deel 7. De lessen heten daar TE.1 en TE.2
+(T is al van de kas). Nog niet in de sectorkeuze.*
 
 - **Les T.1 · Gereedschap, vonken en lawaai.**
   Leerdoel: je draagt oog- en gehoorbescherming bij slijpen en boren. Je ruimt spanen en draadjes
