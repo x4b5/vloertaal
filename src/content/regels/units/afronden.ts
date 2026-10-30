@@ -88,7 +88,7 @@ export const afrondenUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Dus 3 kranen met een blauwe stip. Klopt dat?', best: true, feedback: 'Goed. Zo hoort Henk of Mohammed het goed begrepen heeft.', say: true },
             { id: 'b', text: 'Oké, dat snap ik. Ik ga meteen de kranen halen.', best: false, feedback: 'Vriendelijk. Maar Henk weet nu niet wat Mohammed begrepen heeft.', say: true },
-            { id: 'c', text: 'Ja, ja. Ik ga al.', best: false, feedback: 'Dan weet niemand of hij het echt snapt.', say: true },
+            { id: 'c', text: 'Ja, ja. Ik ga al. Ik weet het wel.', best: false, feedback: 'Dan weet niemand of hij het echt snapt.', say: true },
           ],
           why: 'Zeg in je eigen woorden terug wat je gaat doen. Zo hoor je allebei of het klopt. Dat kost een paar seconden. En het voorkomt fouten.',
         },

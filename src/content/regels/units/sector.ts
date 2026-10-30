@@ -330,7 +330,7 @@ export const careUnit: RuleUnit = {
           quote: 'Meneer De Vries krijgt om 12 uur 1 pil, met een glas water.',
           options: [
             { id: 'a', text: 'Prima. Ik kijk straks wel even op de lijst.', best: false, feedback: 'De lijst is goed. Maar nu weet de collega niet of ze het snapt.', say: true },
-            { id: 'b', text: 'Ja hoor, dat lukt me wel.', best: false, feedback: 'Fijn. Maar zo hoort de collega niet wat ze begrepen heeft.', say: true },
+            { id: 'b', text: 'Ja hoor, dat lukt me wel. Geen probleem.', best: false, feedback: 'Fijn. Maar zo hoort de collega niet wat ze begrepen heeft.', say: true },
             { id: 'c', text: 'Dus om 12 uur 1 pil, met water. Klopt dat?', best: true, feedback: 'Goed. Zo hoort de collega meteen of het klopt.', say: true },
           ],
           why: 'Zeg terug wat je gaat doen. Bij medicijnen is dat extra belangrijk. Zo hoort je collega meteen of je iets mist. Check daarna ook de lijst.',
