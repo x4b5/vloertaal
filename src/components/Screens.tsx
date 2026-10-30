@@ -581,7 +581,7 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
         </button>
       )}
       {recorded.length > 0 && (
-        <ul className="about-credits muted small">
+        <ul className="about-credits muted small" lang={dutchUi(lang) ? 'nl' : 'en'} dir="ltr">
           {recorded.map((v) => (
             <li key={v.key}>
               {/* The work-rules track: the voice and its maker only (the licence lines are English). */}

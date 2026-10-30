@@ -67,4 +67,25 @@ describe('mirrored arrows on old phones (styles.css)', () => {
   it(':dir() stands in a rule of its own (an unknown selector drops the whole selector list)', () => {
     for (const r of rules.filter((x) => x.sel.includes(':dir('))) expect(r.sel, r.sel).not.toContain(',');
   });
+
+  it('Dutch keeps its own direction in a mirrored lesson without :is() (iOS < 14, Chrome < 88)', () => {
+    const r = rules.find((x) => x.sel.startsWith(".player[dir='rtl'] [lang='nl']"));
+    expect(r?.body).toMatch(/direction:\s*ltr;\s*unicode-bidi:\s*isolate/);
+    for (const x of rules.filter((y) => /\[dir='rtl'\]/.test(y.sel) && /direction:\s*ltr/.test(y.body))) expect(x.sel, x.sel).not.toContain(':is(');
+  });
+});
+
+describe('the status line after Check speaks each part in its own language', () => {
+  it('LessonPlayer renders the parts with their lang (Dutch title and word, help-language verdict)', () => {
+    const src = fs.readFileSync('src/components/LessonPlayer.tsx', 'utf8');
+    expect(src).toContain('<div className="sr-only" role="status">{live.map((p, i) => <span key={i} lang={p.lang}>');
+    expect(src).toMatch(/title: LivePart = \{ text: feedbackTitle\(correct, e\.kind\), lang: 'nl' \}/);
+  });
+});
+
+describe('the voice credits on the About page', () => {
+  it('are marked English (or Dutch on the work-rules track), left to right', () => {
+    const src = fs.readFileSync('src/components/Screens.tsx', 'utf8');
+    expect(src).toContain(`<ul className="about-credits muted small" lang={dutchUi(lang) ? 'nl' : 'en'} dir="ltr">`);
+  });
 });

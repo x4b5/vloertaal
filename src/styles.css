@@ -2834,8 +2834,10 @@ html:has(.topbar) { scroll-padding-top: 72px; }
    close and help swap sides, the number badge and picture of a card sit on the right with the
    text right-aligned, the tag, the feedback icon and the speech-bubble tails follow. Dutch and
    English stay left to right inside it, each in its own isolate. */
-.player[dir='rtl'] :is([lang='nl'], [lang='en']) { direction: ltr; unicode-bidi: isolate; }
-.player[dir='rtl'] :is(.answer-line, .tile-bank, .pair-say, .pair-tiles) { direction: ltr; }
+/* Written out, not :is() (iOS 14 / Chrome 88): on older phones the whole rule fell away and a
+   Dutch line in a mirrored card showed its full stop at the wrong end (".uur"). */
+.player[dir='rtl'] [lang='nl'], .player[dir='rtl'] [lang='en'] { direction: ltr; unicode-bidi: isolate; }
+.player[dir='rtl'] .answer-line, .player[dir='rtl'] .tile-bank, .player[dir='rtl'] .pair-say, .player[dir='rtl'] .pair-tiles { direction: ltr; }
 .player[dir='rtl'] .speaker-bubble { padding-left: 18px; padding-right: 9px; }
 .player[dir='rtl'] .chat-bubble:not(.chat-bubble-me) { padding-left: 18px; padding-right: 8px; }
 .player[dir='rtl'] :is(.speaker-bubble, .chat-bubble:not(.chat-bubble-me))::before {
@@ -3607,8 +3609,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .cert-no-name .keep-link-gloss { order: 1; font-size: 1rem; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
 .cert-no-name .bi { align-items: center; }
 /* Right to left: a Dutch line keeps its own direction ("Vrouw of man?", not "?Vrouw of man"). */
-[dir='rtl'] :is(.set-row-nl, .max3-nl, .max3-title-nl, .sector-title-nl)[lang='nl'] { direction: ltr; unicode-bidi: isolate; }
-[dir='rtl'] :is(.set-row-nl, .max3-nl, .max3-title-nl)[lang='nl'] { text-align: right; }
+[dir='rtl'] .set-row-nl[lang='nl'], [dir='rtl'] .max3-nl[lang='nl'], [dir='rtl'] .max3-title-nl[lang='nl'], [dir='rtl'] .sector-title-nl[lang='nl'] { direction: ltr; unicode-bidi: isolate; }
+[dir='rtl'] .set-row-nl[lang='nl'], [dir='rtl'] .max3-nl[lang='nl'], [dir='rtl'] .max3-title-nl[lang='nl'] { text-align: right; }
 /* The waybill's stamp sits where its (hidden) head was: keep the hint clear of it. */
 .max3-settings > .waybill { padding-top: 48px; }
 .offline-status-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; }
