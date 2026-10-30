@@ -345,6 +345,13 @@ const lang: HelpLanguageSource = {
     coachDays: 'Zile de exercițiu în ultimele 4 săptămâni', // nieuw, nalezen
     coachLast: 'Ultima lecție, cu data', // nieuw, nalezen
     coachNameAsk: 'Numele tău pe card?', // nieuw, nalezen
+    fasterAsk: 'Vrei mai repede?', // nieuw, nalezen
+    fasterHint: 'Mai puține explicații în lecțiile noi. Neerlandeza în ritm normal.', // nieuw, nalezen
+    fasterYes: 'Da', // nieuw, nalezen
+    fasterNo: 'Nu', // nieuw, nalezen
+    easierNext: 'Lecția următoare e puțin mai scurtă.', // nieuw, nalezen
+    fasterSetting: 'Învață mai repede', // nieuw, nalezen
+    fasterSettingHint: 'Pornit: mai puține explicații în lecțiile noi și neerlandeza în ritm normal. Oprit: ca înainte.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

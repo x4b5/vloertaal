@@ -345,6 +345,13 @@ const lang: HelpLanguageSource = {
     coachDays: 'روزهای تمرین در 4 هفتهٔ گذشته', // nieuw, nalezen
     coachLast: 'آخرین درس، با تاریخ', // nieuw, nalezen
     coachNameAsk: 'نامت روی کارت؟', // nieuw, nalezen
+    fasterAsk: 'می‌خواهی تیزتر یاد بگیری؟', // nieuw, nalezen
+    fasterHint: 'توضیح کمتر در درس‌های نو. هالندی با سرعت عادی.', // nieuw, nalezen
+    fasterYes: 'بلی', // nieuw, nalezen
+    fasterNo: 'نخیر', // nieuw, nalezen
+    easierNext: 'درس بعدی کمی کوتاه‌تر است.', // nieuw, nalezen
+    fasterSetting: 'تیزتر یاد گرفتن', // nieuw, nalezen
+    fasterSettingHint: 'روشن: توضیح کمتر در درس‌های نو، و هالندی با سرعت عادی. خاموش: مثل پیش.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -345,6 +345,13 @@ const lang: HelpLanguageSource = {
     coachDays: 'Дні занять за останні 4 тижні', // nieuw, nalezen
     coachLast: 'Останній урок, з датою', // nieuw, nalezen
     coachNameAsk: 'Твоє ім’я на картці?', // nieuw, nalezen
+    fasterAsk: 'Хочеш швидше?', // nieuw, nalezen
+    fasterHint: 'Менше пояснень у нових уроках. Нідерландська у звичайному темпі.', // nieuw, nalezen
+    fasterYes: 'Так', // nieuw, nalezen
+    fasterNo: 'Ні', // nieuw, nalezen
+    easierNext: 'Наступний урок трохи коротший.', // nieuw, nalezen
+    fasterSetting: 'Вчитися швидше', // nieuw, nalezen
+    fasterSettingHint: 'Увімкнено: менше пояснень у нових уроках і нідерландська у звичайному темпі. Вимкнено: як раніше.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

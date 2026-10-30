@@ -139,6 +139,9 @@ export function dayNumber(day: string): number {
  */
 export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Lesson {
   const words = ids.map((id) => wordById().get(id)).filter((w): w is Word => Boolean(w));
+  // Sentence cards (2 at most) and a spoken sentence (1) that came along with today's words.
+  const boxSentences = ids.map((id) => sentenceById().get(id)).filter((s): s is Sentence => Boolean(s)).slice(0, SENTENCE_DAILY_MAX);
+  const say = ids.filter(isSpeakCard).map((id) => sentenceById().get(id.slice(SPEAK_PREFIX.length))).find((s): s is Sentence => Boolean(s));
   const boxes = Object.fromEntries(words.map((w) => [w.id, cards[w.id]?.box ?? 1]));
   const idSet = new Set(ids);
   const n = day ? dayNumber(day) : 0;
@@ -198,7 +201,14 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
   // the one after it, and so on.
   const tipFrom = from.map(({ l }) => l.id);
   const tipTurn = tipFrom.length ? n % tipFrom.length : 0;
-  return { id: DAILY_ID, title: 'Review today', words, sentences, dialogues, repeat: true, boxes, tipFrom: [...tipFrom.slice(tipTurn), ...tipFrom.slice(0, tipTurn)] };
+  // Sentence cards that are due go first (they are built); the sentences picked above stay
+  // behind them for a review without any (as before the sentence cards).
+  const all = [...boxSentences, ...sentences.filter((s) => !boxSentences.some((b) => b.nl === s.nl))];
+  return {
+    id: DAILY_ID, title: 'Review today', words, sentences: all, dialogues, repeat: true, boxes, tipFrom: [...tipFrom.slice(tipTurn), ...tipFrom.slice(0, tipTurn)],
+    ...(boxSentences.length ? { cardSentences: boxSentences.length } : {}),
+    ...(say ? { say } : {}),
+  };
 }
 
 /**
@@ -232,9 +242,9 @@ export function dailyCard(cards: Cards, today: string, reviewDay?: string, track
   return { state: reviewDay ? 'done' : 'first', due: 0, tomorrow, extra: 0 };
 }
 
-/** "N woorden sterker": how many words moved up a box in a review. */
+/** "N woorden sterker": how many words moved up a box in a review (sentence cards not counted). */
 export function strongerCount(before: Cards, after: Cards): number {
-  return Object.entries(after).filter(([id, c]) => c.box > (before[id]?.box ?? 0) && before[id] !== undefined).length;
+  return Object.entries(after).filter(([id, c]) => !isSentenceCard(id) && c.box > (before[id]?.box ?? 0) && before[id] !== undefined).length;
 }
 
 /* ---- The work-rules track: "Herhaal vandaag" asks questions of finished lessons again. ---- */
@@ -301,4 +311,103 @@ export function dailyRuleLesson(ids: readonly string[]): Lesson {
   const byId = ruleStepById();
   const steps = [...new Set(ids)].map((id) => byId.get(id)).filter((s): s is GradedRuleStep => Boolean(s)).slice(0, RULE_DAILY_MAX);
   return { id: DAILY_ID, title: 'Herhaal vandaag', words: [], sentences: [], steps, repeat: true };
+}
+
+/* ---- Sentence cards (Taal): the sentences a lesson built, and the sentence it said. ---- */
+
+/**
+ * Next to the words, the box holds the sentences of the lessons (by sentence id: built again in
+ * today's review) and the sentence said in a lesson's "Zeg het" (by SPEAK_PREFIX + sentence id:
+ * said again). The same boxes and days as a word (1, 2, 4, 7, 14, 30). They have a small limit
+ * of their own, so the review stays short: SENTENCE_DAILY_MAX sentences to build and
+ * SPEAK_DAILY_MAX to say. They come along with today's words (dailyIds): a day with no word due
+ * has no review, and the sentences wait for the next one. Saves from before have no sentence
+ * cards: their review is as it was (the sentences picked from the words' lessons) until
+ * seedSentenceCards (on opening) or a lesson adds some.
+ *
+ * Speaking is never graded: a spoken sentence moves up a box when it was said (the exercise was
+ * done, not skipped), and stays when it was left out.
+ */
+export const SENTENCE_DAILY_MAX = 2;
+export const SPEAK_DAILY_MAX = 1;
+export const SPEAK_PREFIX = 'zeg:';
+export const speakCardId = (sentenceId: string): string => SPEAK_PREFIX + sentenceId;
+export const isSpeakCard = (id: string): boolean => id.startsWith(SPEAK_PREFIX);
+
+// Every sentence of the language course (and of the regions' lessons) by id.
+let sentenceIndex: { regions: number; byId: Map<string, Sentence> } | null = null;
+function sentenceById(): Map<string, Sentence> {
+  const regionLessons = regionTaalLessons();
+  if (sentenceIndex?.regions !== regionLessons.length) {
+    sentenceIndex = { regions: regionLessons.length, byId: new Map([...teachingLessons, ...regionLessons].flatMap((l) => l.sentences).map((s) => [s.id, s])) };
+  }
+  return sentenceIndex.byId;
+}
+
+/** A sentence card to build (a sentence id of the course). */
+export const isBuildCard = (id: string): boolean => sentenceById().has(id);
+/** A sentence card of either kind (built or said): not a word, not a rules question. */
+export const isSentenceCard = (id: string): boolean => isSpeakCard(id) || isBuildCard(id);
+
+/** Due cards of one kind, oldest first, then the lowest box (as dueIds). */
+function dueOf(cards: Cards, today: string, keep: (id: string) => boolean): string[] {
+  return Object.entries(cards)
+    .filter(([id, c]) => c.due <= today && keep(id))
+    .sort(([, a], [, b]) => (a.due < b.due ? -1 : a.due > b.due ? 1 : a.box - b.box))
+    .map(([id]) => id);
+}
+
+/** The sentence cards to build today (at most SENTENCE_DAILY_MAX). */
+export function dailySentenceIds(cards: Cards, today: string): string[] {
+  return dueOf(cards, today, isBuildCard).slice(0, SENTENCE_DAILY_MAX);
+}
+
+/** The spoken-sentence cards for today (at most SPEAK_DAILY_MAX); only known sentences. */
+export function dailySpeakIds(cards: Cards, today: string): string[] {
+  return dueOf(cards, today, (id) => isSpeakCard(id) && sentenceById().has(id.slice(SPEAK_PREFIX.length))).slice(0, SPEAK_DAILY_MAX);
+}
+
+/**
+ * Everything in today's review of the language course: the words (dailyWordIds), and with them
+ * the sentence cards that are due. No words due: nothing (the sentences wait for the next review).
+ */
+export function dailyIds(cards: Cards, today: string): string[] {
+  const words = dailyWordIds(cards, today);
+  return words.length ? [...words, ...dailySentenceIds(cards, today), ...dailySpeakIds(cards, today)] : [];
+}
+
+/**
+ * After a lesson of the language course: its sentences get a card (the ones built), and so does
+ * the sentence that was said (results[speakCardId(id)]), as addLessonItems does for words.
+ */
+export function addLessonSentences(cards: Cards, sentences: readonly Sentence[], results: Record<string, boolean>, today: string): Cards {
+  const known = sentenceById();
+  const said = Object.keys(results).filter((id) => isSpeakCard(id) && results[id] && known.has(id.slice(SPEAK_PREFIX.length)));
+  // Only the sentences that were built (they have a result): one left out (a shorter lesson) waits.
+  return addLessonItems(cards, [...sentences.filter((s) => known.has(s.id) && s.id in results).map((s) => s.id), ...said], results, today);
+}
+
+/**
+ * Sentence cards for learners from before them: the sentences of their finished lessons, spread
+ * over the coming days (SENTENCE_DAILY_MAX a day, the most recent lessons last). Only when the box
+ * has no sentence card at all, so it runs once; the same object back when there is nothing to add.
+ */
+export function seedSentenceCards(cards: Cards, completed: Record<string, unknown>, today: string): Cards {
+  if (Object.keys(cards).some(isSentenceCard)) return cards;
+  const ids = teachingLessons.filter((l) => completed[l.id]).flatMap((l) => l.sentences.map((s) => s.id));
+  if (!ids.length) return cards;
+  const next = { ...cards };
+  ids.forEach((id, i) => { next[id] = { box: 1, due: addDays(today, 1 + Math.floor(i / SENTENCE_DAILY_MAX)) }; });
+  return next;
+}
+
+/** The results of today's review that belong to its cards (a picked sentence without a card stays out). */
+export function reviewResults(results: Record<string, boolean>, ids: readonly string[]): Record<string, boolean> {
+  const own = new Set(ids);
+  return Object.fromEntries(Object.entries(results).filter(([id]) => own.has(id)));
+}
+
+/** How many words a result is about (sentence cards left out): "N woorden geoefend". */
+export function wordResultCount(results: Record<string, boolean>): number {
+  return Object.keys(results).filter((id) => !isSentenceCard(id)).length;
 }

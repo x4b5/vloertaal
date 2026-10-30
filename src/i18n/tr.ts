@@ -345,6 +345,13 @@ const lang: HelpLanguageSource = {
     coachDays: 'Son 4 haftada çalışılan günler', // nieuw, nalezen
     coachLast: 'Son ders, tarihiyle', // nieuw, nalezen
     coachNameAsk: 'Kartta adın?', // nieuw, nalezen
+    fasterAsk: 'Daha hızlı ilerlemek ister misin?', // nieuw, nalezen
+    fasterHint: 'Yeni derslerde daha az açıklama. Hollandaca normal hızda.', // nieuw, nalezen
+    fasterYes: 'Evet', // nieuw, nalezen
+    fasterNo: 'Hayır', // nieuw, nalezen
+    easierNext: 'Sonraki ders biraz daha kısa.', // nieuw, nalezen
+    fasterSetting: 'Daha hızlı öğren', // nieuw, nalezen
+    fasterSettingHint: 'Açık: yeni derslerde daha az açıklama ve Hollandaca normal hızda. Kapalı: eskisi gibi.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

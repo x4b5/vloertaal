@@ -377,6 +377,14 @@ export const uiNl: Record<UiKey, UiText> = {
   coachDays: 'Dagen geoefend in de laatste 4 weken',
   coachLast: 'Laatste les, met de datum',
   coachNameAsk: 'Je naam op de kaart?',
+  // Lessons at the learner's level (src/lib/pace.ts)
+  fasterAsk: 'Wil je sneller?',
+  fasterHint: 'Minder uitleg in nieuwe lessen. Het Nederlands op normaal tempo.',
+  fasterYes: 'Ja',
+  fasterNo: 'Nee',
+  easierNext: 'De volgende les is wat korter.',
+  fasterSetting: 'Sneller leren',
+  fasterSettingHint: 'Aan: minder uitleg in nieuwe lessen, en het Nederlands op normaal tempo. Uit: zoals eerst.',
 };
 
 const lang: HelpLanguageSource = {

@@ -345,6 +345,13 @@ const lang: HelpLanguageSource = {
     coachDays: 'Дни с упражнения през последните 4 седмици', // nieuw, nalezen
     coachLast: 'Последен урок, с датата', // nieuw, nalezen
     coachNameAsk: 'Името ти на картата?', // nieuw, nalezen
+    fasterAsk: 'Искаш ли по-бързо?', // nieuw, nalezen
+    fasterHint: 'По-малко обяснения в новите уроци. Нидерландският с нормално темпо.', // nieuw, nalezen
+    fasterYes: 'Да', // nieuw, nalezen
+    fasterNo: 'Не', // nieuw, nalezen
+    easierNext: 'Следващият урок е малко по-кратък.', // nieuw, nalezen
+    fasterSetting: 'Учи по-бързо', // nieuw, nalezen
+    fasterSettingHint: 'Включено: по-малко обяснения в новите уроци и нидерландски с нормално темпо. Изключено: както преди.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

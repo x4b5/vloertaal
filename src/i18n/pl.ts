@@ -345,6 +345,13 @@ const lang: HelpLanguageSource = {
     coachDays: 'Dni ćwiczeń w ostatnich 4 tygodniach', // nieuw, nalezen
     coachLast: 'Ostatnia lekcja, z datą', // nieuw, nalezen
     coachNameAsk: 'Twoje imię na karcie?', // nieuw, nalezen
+    fasterAsk: 'Chcesz szybciej?', // nieuw, nalezen
+    fasterHint: 'Mniej wyjaśnień w nowych lekcjach. Niderlandzki w normalnym tempie.', // nieuw, nalezen
+    fasterYes: 'Tak', // nieuw, nalezen
+    fasterNo: 'Nie', // nieuw, nalezen
+    easierNext: 'Następna lekcja jest trochę krótsza.', // nieuw, nalezen
+    fasterSetting: 'Ucz się szybciej', // nieuw, nalezen
+    fasterSettingHint: 'Włączone: mniej wyjaśnień w nowych lekcjach i niderlandzki w normalnym tempie. Wyłączone: jak wcześniej.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

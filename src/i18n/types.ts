@@ -407,6 +407,14 @@ export const uiEn = {
   coachDays: 'Days of practice in the last 4 weeks',
   coachLast: 'Last lesson, with the date',
   coachNameAsk: 'Your name on the card?',
+  // Lessons at the learner's level (src/lib/pace.ts)
+  fasterAsk: 'Do you want to go faster?',
+  fasterHint: 'Less explanation in new lessons. The Dutch at normal speed.',
+  fasterYes: 'Yes',
+  fasterNo: 'No',
+  easierNext: 'The next lesson is a bit shorter.',
+  fasterSetting: 'Learn faster',
+  fasterSettingHint: 'On: less explanation in new lessons, and the Dutch at normal speed. Off: as before.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

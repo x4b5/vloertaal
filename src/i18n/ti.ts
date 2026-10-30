@@ -346,6 +346,13 @@ const lang: HelpLanguageSource = {
     coachDays: 'መዓልትታት ልምምድ ኣብ ዝሓለፉ 4 ሰሙናት', // nieuw, nalezen
     coachLast: 'ናይ መወዳእታ ትምህርቲ፡ ምስ ዕለቱ', // nieuw, nalezen
     coachNameAsk: { m: 'ስምካ ኣብታ ካርድ?', f: 'ስምኪ ኣብታ ካርድ?', x: 'ስምኩም ኣብታ ካርድ?' }, // nieuw, nalezen
+    fasterAsk: { m: 'ብቕልጡፍ ክትመሃር ትደሊ ዶ?', f: 'ብቕልጡፍ ክትመሃሪ ትደልዪ ዶ?', x: 'ብቕልጡፍ ክትመሃሩ ትደልዩ ዶ?' }, // nieuw, nalezen
+    fasterHint: 'ኣብ ሓደሽቲ ትምህርትታት ዝወሓደ መብርሂ። ሆላንድኛ ብንቡር ቅልጣፈ።', // nieuw, nalezen
+    fasterYes: 'እወ', // nieuw, nalezen
+    fasterNo: 'ኣይፋል', // nieuw, nalezen
+    easierNext: 'እቲ ዝቕጽል ትምህርቲ ቁሩብ ሓጺር እዩ።', // nieuw, nalezen
+    fasterSetting: 'ብቕልጡፍ ምምሃር', // nieuw, nalezen
+    fasterSettingHint: 'ክፉት: ኣብ ሓደሽቲ ትምህርትታት ዝወሓደ መብርሂ፣ ሆላንድኛ ድማ ብንቡር ቅልጣፈ። ዕጹው: ከም ቀደም።', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
