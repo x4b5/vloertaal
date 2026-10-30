@@ -3,7 +3,7 @@ import { units } from '../src/content/curriculum';
 import { allCourseUnits, courseUnits, findLessonIn, isPlayable, registerRulesCourse } from '../src/content/courses';
 import { findLesson } from '../src/content/curriculum';
 import { toCourseUnits } from '../src/content/regels/course';
-import { coursePlan, sectors, type SectorChoice } from '../src/content/sectors';
+import { coursePlan, SECTOR_UNITS_WITHOUT_CARD, sectors, type SectorChoice } from '../src/content/sectors';
 import { RULES_STUB } from '../src/dev/rulesStub';
 import { lessonAllowed, OPEN_TO_ALL, previewUnits, unitAllowed } from '../src/lib/access';
 import { earnCertificates, earnedCertificates, unitIndex } from '../src/lib/certificate';
@@ -266,7 +266,15 @@ describe("the work-rules track ('regels')", () => {
           expect(main.indexOf(own), `${s.id} ${own}`).toBe(at >= 0 ? at + 1 : main.length - 1);
         }
         expect(ids(coursePlan(s.id, 'regels').other).every((id) => !s.rules.units.includes(id))).toBe(true);
+        // Techniek and the garage have no sector card yet: never in the basis path, always under
+        // "Andere sectoren" once a sector is chosen.
+        for (const id of SECTOR_UNITS_WITHOUT_CARD) {
+          expect(main, `${s.id} ${id}`).not.toContain(id);
+          expect(ids(coursePlan(s.id, 'regels').other), `${s.id} ${id}`).toContain(id);
+        }
       }
+      // With no sector chosen (or "Weet ik nog niet") they are in the whole course.
+      for (const id of SECTOR_UNITS_WITHOUT_CARD) expect(ids(coursePlan('none', 'regels').main)).toContain(id);
       // The preview and the trial lesson follow the course's first unit.
       expect(previewUnits('regels')).toEqual([course[0].id]);
       expect(tryLessonId('regels')).toBe(course[0].lessons[0].id);

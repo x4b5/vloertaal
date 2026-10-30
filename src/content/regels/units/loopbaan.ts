@@ -70,13 +70,13 @@ export const loopbaanUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.loopbaan.1.wd2',
-          situation: 'Jayden weet niet of hij in de zorg of in de logistiek wil werken. Wat kan Jayden het beste doen?',
+          situation: 'Jayden weet niet wat hij wil: de zorg of de logistiek. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij kiest wat zijn vrienden kiezen. Dat is gezellig.', best: false, feedback: 'Dat snap ik. Maar het werk moet bij hem passen.' },
             { id: 'b', text: 'Hij gaat in allebei een dag meelopen.', best: true, feedback: 'Goed. Dan ziet hij hoe het werk echt is.' },
             { id: 'c', text: 'Hij kiest het werk met het meeste geld.', best: false, feedback: 'Geld is belangrijk. Maar hij moet het werk ook leuk vinden.' },
           ],
-          why: 'Weet je niet wat je wilt? Ga kijken. Loop een dag mee in een bedrijf, of ga naar een open dag. Vraag je begeleider op school om hulp. Kies wat bij jou past.',
+          why: 'Weet je niet wat je wilt? Ga kijken. Loop een dag mee in een bedrijf. Of ga naar een open dag. Vraag je begeleider op school om hulp. Kies wat bij jou past.',
         },
         { kind: 'model', id: 'r.l.loopbaan.1.mo1', context: 'Je begeleider vraagt wat je goed kunt.', nl: 'Ik ben altijd op tijd. En ik werk graag met mensen.' },
       ],
@@ -206,7 +206,7 @@ export const loopbaanUnit: RuleUnit = {
             "Bewaar je diploma's, certificaten en beoordelingen in één map.",
             'Maak er ook een foto of scan van.',
             "Zo'n map heet een portfolio. Je laat ermee zien wat je kunt.",
-            'Vraag aan het eind van je stage of je iemand als referentie mag noemen.',
+            'Is je stage bijna klaar? Vraag of je iemand als referentie mag noemen.',
           ],
           rule: 'ongeschreven',
         },
@@ -235,7 +235,7 @@ export const loopbaanUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.loopbaan.3.wd2',
-          situation: 'De begeleider vraagt: "Wat ging goed in je stage, en wat wil je nog leren?" Wat kan Fatima het beste doen?',
+          situation: 'De begeleider vraagt: "Wat ging goed, en wat wil je nog leren?" Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze zegt: "Alles ging goed." Dan is ze snel klaar.', best: false, feedback: 'Dan leert ze er weinig van. Kijk ook naar wat beter kan.' },
             { id: 'b', text: 'Ze noemt 1 ding dat goed ging, en 1 om te leren.', best: true, feedback: 'Goed. Zo weet ze wat ze straks verder kan leren.' },

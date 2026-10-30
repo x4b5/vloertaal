@@ -28,7 +28,7 @@ export const schrijvenUnit: RuleUnit = {
           picture: 'Fatima aan de keukentafel met haar telefoon. Op tafel ligt een brief van de school van haar zoon.',
           lines: [
             'Fatima loopt stage in een hotel.',
-            'Volgende week dinsdag heeft ze een gesprek op de school van haar zoon.',
+            'Volgende week dinsdag moet ze naar de school van haar zoon.',
             'Ze wil die ochtend vrij vragen.',
             'Haar praktijkopleider Mark wil dat per mail.',
           ],
@@ -70,7 +70,7 @@ export const schrijvenUnit: RuleUnit = {
           id: 'r.l.schrijven.1.wd2',
           situation: 'Fatima heeft haar mail geschreven. Wat kan Fatima het beste doen voor ze hem verstuurt?',
           options: [
-            { id: 'a', text: 'Ze leest de mail na: klopt de dag, en staat haar naam erin?', best: true, feedback: 'Goed. Zo ziet ze een fout voor Mark hem leest.' },
+            { id: 'a', text: 'Ze leest de mail na. Klopt de dag? Staat haar naam erin?', best: true, feedback: 'Goed. Zo ziet ze een fout voor Mark hem leest.' },
             { id: 'b', text: 'Ze stuurt hem meteen. Mark snapt het toch wel.', best: false, feedback: 'Een fout in de dag kan problemen geven. Lees het eerst na.' },
             { id: 'c', text: 'Ze stuurt hem ook naar de groepsapp van haar team.', best: false, feedback: 'Haar vrije ochtend gaat Mark aan. Stuur het niet naar iedereen.' },
           ],
@@ -84,7 +84,7 @@ export const schrijvenUnit: RuleUnit = {
       id: 'r.l.schrijven.2',
       title: 'Een korte sollicitatiemail',
       goal: 'Je schrijft een korte, nette mail bij je cv. Je zegt waarom je deze baan wilt.',
-      remember: 'Een sollicitatiemail: een onderwerp, een nette groet, waarom jij, en je cv erbij.',
+      remember: 'Een sollicitatiemail: onderwerp, nette groet, waarom jij, en je cv erbij.',
       // Wie kan je helpen: je begeleider van school · de bibliotheek (gratis hulp met de computer en
       //   een mailadres maken) · werk.nl van UWV (voorbeelden).
       help: ['school', 'bibliotheek', 'uwv'],
@@ -104,7 +104,7 @@ export const schrijvenUnit: RuleUnit = {
           kind: 'rule',
           id: 'r.l.schrijven.2.ru1',
           emoji: '📧',
-          title: 'Een sollicitatiemail: een onderwerp, een nette groet, waarom jij, en je cv erbij.',
+          title: 'Een sollicitatiemail: onderwerp, nette groet, waarom jij, en je cv erbij.',
           body: [
             'Zet de vacature in het onderwerp. Bijvoorbeeld: "Sollicitatie schoonmaker".',
             'Begin met "Beste" en de naam. Weet je geen naam? Schrijf "Geachte heer of mevrouw".',

@@ -240,8 +240,12 @@ describe('pocket card of a rules unit', () => {
     const rows = pocketPhrases(unit('r.veilig'));
     expect(new Set(rows.map((r) => r.id)).size).toBe(rows.length);
     for (const r of rows) expect(r.picture?.emoji.length, r.id).toBeGreaterThan(0);
-    // The two recorded model sentences of r.veilig are on its card.
-    expect(rows.map((r) => r.nl)).toContain('Stop! Dit is niet veilig.');
+    // Since 7.4 and 7.5 (second Entree round) r.veilig has 5 lessons: its 5 Onthoud lines fill the
+    // card, so its model sentence "Stop! Dit is niet veilig." is no longer on it (as with r.tijd).
+    expect(rows.map((r) => r.nl)).toContain('Te moe om veilig te werken? Zeg het, vóór je begint.');
+    expect(rows.every((r) => r.rule === 'rule')).toBe(true);
+    // A unit of 3 lessons still has room for a sentence to say.
+    expect(pocketPhrases(unit('r.stage')).some((r) => r.rule === 'say')).toBe(true);
     for (const u of units) for (const p of pocketPhrases(u)) expect(p.rule, `${u.id} ${p.id}`).toBeUndefined();
   });
 });

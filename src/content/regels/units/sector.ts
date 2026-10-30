@@ -1551,7 +1551,7 @@ export const werkplaatsUnit: RuleUnit = {
         {
           kind: 'truefalse',
           id: 'r.l.werkplaats.2.tf1',
-          statement: 'Een klant betaalt ook voor extra werk waar ze geen ja op zei.',
+          statement: 'Een klant betaalt ook voor extra werk als ze geen ja zei.',
           answer: false,
           why: 'Extra werk doe je pas als de klant ja zegt. Anders hoeft de klant er meestal niet voor te betalen. Daarom belt de garage de klant eerst. Schrijf op wat de klant zei, en wanneer.',
         },

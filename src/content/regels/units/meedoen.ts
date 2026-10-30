@@ -316,7 +316,7 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', text: 'Hij gelooft het. Het staat in de groepsapp van zijn werk.', best: false, feedback: 'Ook in een groepsapp staat soms nep. Check eerst waar het vandaan komt.' },
             { id: 'c', text: 'Hij zoekt op een site van de overheid of het klopt.', best: true, feedback: 'Goed. Daar staat wat echt geldt.' },
           ],
-          why: 'Check een bericht voor je het doorstuurt. Wie zegt het? Staat het op een site van de overheid, of op een bekende nieuwssite? Mensen uit de EU hebben geen vergunning nodig om hier te werken.',
+          why: 'Check een bericht voor je het doorstuurt. Wie zegt het? Staat het op een site van de overheid? Of op een bekende nieuwssite? Mensen uit de EU hebben geen vergunning nodig om hier te werken.',
         },
         {
           kind: 'truefalse',
@@ -336,7 +336,7 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt rustig wat zij denkt, en ze luistert ook.', best: true, feedback: 'Goed. Zo kan iedereen zijn mening geven.' },
             { id: 'c', text: 'Ze zegt dat hun mening dom is. Zij weet het beter.', best: false, feedback: 'Dat is niet respectvol. Dan komt er snel ruzie.' },
           ],
-          why: 'Je mag je mening geven, ook op je werk. Iemand anders mag iets anders vinden. Luister naar elkaar, en blijf rustig. Schelden en bedreigen mag niet. Op je werk kan je baas ook regels hebben over hoe je praat.',
+          why: 'Je mag je mening geven, ook op je werk. Iemand anders mag iets anders vinden. Luister naar elkaar, en blijf rustig. Schelden en bedreigen mag niet. Soms heeft je werk ook regels over hoe je praat.',
         },
         { kind: 'model', id: 'r.l.meedoen.4.mo1', context: 'Een collega stuurt een bericht dat je niet vertrouwt.', nl: 'Waar heb je dit gelezen? Ik wil eerst checken of het klopt.' },
       ],
