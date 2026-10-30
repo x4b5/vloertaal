@@ -407,6 +407,20 @@ export const uiEn = {
   coachDays: 'Days of practice in the last 4 weeks',
   coachLast: 'Last lesson, with the date',
   coachNameAsk: 'Your name on the card?',
+  /* "Oefen samen" (src/components/Samen.tsx): two people, one phone, the chats of a lesson. */
+  samenTitle: 'Practise together',
+  samenRowHint: 'Two people, one phone',
+  samenIntro: 'Practise with a colleague, friend or teacher. Take turns reading.',
+  samenHow: 'Person 1 is the colleague. Person 2 answers.',
+  samenNoScore: 'Nothing is recorded. There is no score.',
+  samenPerson: 'Person {n}',
+  samenAnswer: 'Answer',
+  samenHear: 'Hear it',
+  samenNext: 'Next',
+  samenTranslation: 'Translation',
+  samenEnd: 'Well done! Swap roles and do it again?',
+  samenSwap: 'Swap roles',
+  samenStop: 'Done',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

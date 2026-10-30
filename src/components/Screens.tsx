@@ -40,6 +40,7 @@ import {
   GlobeIcon,
   InfoIcon,
   SpeakerOffIcon,
+  BubblesIcon,
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { useVoices } from './useVoices';
@@ -670,7 +671,10 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
 /** From this many words still due after a review, the result says they come in the next days. */
 export const REVIEW_WAITING_MIN = 3;
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen }: {
+  /** After a lesson of the language track with chats: a calm row to "Oefen samen" (never
+   *  needed: Continue goes on as always). */
+  onSamen?: () => void;
   /** After a lesson of the work-rules track: its "Onthoud" line (lesson.rule.remember), in Dutch,
    *  with one speaker (hidden when nothing can say it). Not a button. */
   remember?: string;
@@ -829,6 +833,22 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             <span className="hub-icon" aria-hidden>{dutchUi(lang) ? <CallIcon size={26} /> : <AlertIcon size={26} />}</span>
             <span className="hub-text" aria-hidden>
               <NlPair nlFirst nl="Noodzinnen" nlClass="hub-nl" text={ui('phrasebook', lang)} />
+            </span>
+            <ChevronIcon size={24} />
+          </button>
+        )}
+        {/* After a lesson with chats: practise them with someone else, on this phone. */}
+        {onSamen && (
+          <button
+            type="button"
+            className="hub-card result-phrases result-samen"
+            dir={rtl ? 'rtl' : undefined}
+            onClick={() => { if (ready.current) onSamen(); }}
+          >
+            <span className="hub-icon" aria-hidden><BubblesIcon size={26} /></span>
+            <span className="hub-text">
+              <NlPair nlFirst nl="Oefen samen" nlClass="hub-nl" text={ui('samenTitle', lang)} />
+              <Bi className="result-samen-hint" text={ui('samenRowHint', lang)} />
             </span>
             <ChevronIcon size={24} />
           </button>
