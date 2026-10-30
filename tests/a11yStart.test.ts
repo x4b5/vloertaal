@@ -98,9 +98,9 @@ describe('the route on the home', () => {
   it('Start is a button named by the lesson; done and not-yet lessons say so', () => {
     const m = route(progress({ currentUnit: 'u.firstday', completed: { 'l.hello': { best: 1, times: 1 } } }));
     expect(m).toMatch(/<button type="button" class="bay-card" aria-label="1\.2 [^"]+ · Start"/);
-    expect(m).toContain(`<span class="sr-only"> · ${ui('stampDone', pl()).help}</span>`);
+    expect(m).toContain(`<span class="sr-only" lang="pl"> · ${ui('stampDone', pl()).help}</span>`);
     // A lesson after the next one: read as "finish the one before first", not as nothing.
-    expect(m).toContain(`<span class="sr-only"> · ${ui('locked', pl()).help}</span>`);
+    expect(m).toContain(`<span class="sr-only" lang="pl"> · ${ui('locked', pl()).help}</span>`);
   });
 
   it('the streak flame is a picture with its number and words', () => {
