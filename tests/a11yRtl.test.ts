@@ -78,8 +78,10 @@ describe('mirrored arrows on old phones (styles.css)', () => {
 describe('the status line after Check speaks each part in its own language', () => {
   it('LessonPlayer renders the parts with their lang (Dutch title and word, help-language verdict)', () => {
     const src = fs.readFileSync('src/components/LessonPlayer.tsx', 'utf8');
-    expect(src).toContain('<div className="sr-only" role="status">{live.map((p, i) => <span key={i} lang={p.lang}>');
-    expect(src).toMatch(/title: LivePart = \{ text: feedbackTitle\(correct, e\.kind\), lang: 'nl' \}/);
+    // The status region is built by announcement() and <LiveParts> (from a11y/taal-les): each part
+    // with its own lang (and dir for a right-to-left help language).
+    expect(src).toContain('<div className="sr-only" role="status"><LiveParts parts={live} /></div>');
+    expect(src).toMatch(/\[\{ text: feedbackTitle\(correct, e\.kind\), lang: 'nl' \}\]/);
   });
 });
 
