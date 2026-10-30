@@ -86,6 +86,7 @@ const lang: HelpLanguageSource = {
     countryHint: 'Regulile de muncă din Vloertaal sunt pentru Țările de Jos. În Belgia, multe reguli sunt diferite. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.',
     countryNl: 'Țările de Jos',
     countryBe: 'Belgia (Flandra)',
+    tipsNote: 'Aceste sfaturi sunt despre munca în Țările de Jos. Informații generale, nu consultanță juridică.',
     sectorHint: 'Lecțiile pentru munca ta vin devreme. Poți schimba asta mai târziu în Setări.',
     otherSectors: 'Alte domenii',
     reviewToday: 'Recapitularea de azi',

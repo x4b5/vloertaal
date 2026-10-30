@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { createElement, type ReactElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeAll, describe, expect, it } from 'vitest';
-import { RulesHelp, RulesShelf, shelfGroups } from '../src/components/RulesHelp';
+import { RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf, shelfGroups } from '../src/components/RulesHelp';
 import { About } from '../src/components/Screens';
 import { Settings } from '../src/components/Settings';
 import { aboutRules, aboutSections, CONTACT_EMAIL } from '../src/content/about';
@@ -320,5 +320,32 @@ describe('a learner who works in Belgium', () => {
     expect(isCountry('be')).toBe(true);
     expect(isCountry('nl')).toBe(true);
     expect(isCountry('fr')).toBe(false);
+  });
+});
+
+describe('a clear disclaimer: the rules are general information, about the Netherlands', () => {
+  it('"Goed om te weten" once: the lines, one button, the Belgian note only for Belgium', () => {
+    const m = html(createElement(RulesNoticeScreen, { onDone: () => {} }));
+    noEnglish(m, 'RulesNoticeScreen');
+    expect(m).toContain('Goed om te weten');
+    expect(m).toContain('geen juridisch advies');
+    expect(m).toContain('Deze regels gelden in Nederland.');
+    expect((m.match(/<button|<a /g) ?? [])).toHaveLength(1);
+    expect(m).not.toContain('Je werkt in België.');
+    expect(html(createElement(RulesNoticeScreen, { country: 'be', onDone: () => {} }))).toContain('Je werkt in België.');
+  });
+
+  it('one quiet line above the lessons of the work-rules path (not a button)', () => {
+    const m = html(createElement(RulesPathNote, { lang: nl() }));
+    expect(m).toContain('Regels van Nederland');
+    expect(m).not.toMatch(/<button|<a /);
+    expect(html(createElement(RulesPathNote, { lang: nl(), country: 'be' }))).toContain('niet van België');
+    // The language course has its own line at the tips.
+    expect(html(createElement(RulesPathNote, {}))).toBe('');
+  });
+
+  it('a learner who read it keeps it read on load', () => {
+    const saved = { ...emptyProgress, rulesNotice: true };
+    expect(JSON.parse(JSON.stringify(saved)).rulesNotice).toBe(true);
   });
 });

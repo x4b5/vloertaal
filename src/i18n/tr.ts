@@ -86,6 +86,7 @@ const lang: HelpLanguageSource = {
     countryHint: 'Vloertaal’daki iş kuralları Hollanda için. Belçika’da birçok kural farklı. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.',
     countryNl: 'Hollanda',
     countryBe: 'Belçika (Flandre)',
+    tipsNote: 'Bu ipuçları Hollanda’daki iş hakkında. Genel bilgidir, hukuki danışmanlık değildir.',
     sectorHint: 'Kendi işinin dersleri erkenden gelir. Bunu sonra Ayarlar’da değiştirebilirsin.',
     otherSectors: 'Diğer sektörler',
     reviewToday: 'Bugünün tekrarı',

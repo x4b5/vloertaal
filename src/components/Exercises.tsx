@@ -11,7 +11,7 @@ import { breakable, sentences, splitQuote, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
 import { NlPair } from './NlPair';
 import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
-import { CheckIcon, CloseIcon, SpeakerIcon } from './Icons';
+import { CheckIcon, CloseIcon, InfoIcon, SpeakerIcon } from './Icons';
 import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
@@ -1034,6 +1034,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
           </div>
         </div>
       </div>
+      <p className="tips-note"><InfoIcon size={16} /><Bi text={ui('tipsNote', lang)} /></p>
     </div>
   );
 }

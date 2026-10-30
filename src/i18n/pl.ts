@@ -86,6 +86,7 @@ const lang: HelpLanguageSource = {
     countryHint: 'Zasady pracy w Vloertaal dotyczą Holandii. W Belgii wiele zasad jest innych. To zostaje w twoim telefonie. Nigdzie tego nie wysyłamy.',
     countryNl: 'Holandia',
     countryBe: 'Belgia (Flandria)',
+    tipsNote: 'Te wskazówki dotyczą pracy w Holandii. To ogólne informacje, nie porada prawna.',
     sectorHint: 'Lekcje do twojej pracy są już na początku. Możesz to później zmienić w Ustawieniach.',
     otherSectors: 'Inne branże',
     reviewToday: 'Powtórka na dziś',
