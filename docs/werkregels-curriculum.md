@@ -3394,7 +3394,7 @@ onaardig. Vraag liever rustig waar het vandaan komt.*
 
 - **A.** Hoi Mark, ik ben dinsdagochtend niet op mijn werk. Ik moet naar school. Groetjes, Fatima
   → *Ze vraagt niets. Ze zegt alleen dat ze er niet is.*
-- **B.** Beste Mark, mag ik dinsdagochtend vrij? Ik heb een gesprek op school. Fatima
+- **B.** Beste Mark, mag ik dinsdagochtend vrij? Ik heb een gesprek op school. Groet, Fatima
   → *Goed. Kort, met wat, wanneer en waarom.*
 - **C.** Beste Mark, mag ik een keer vrij? Ik heb iets op school. Groet, Fatima
   → *Mark weet niet wanneer. Noem de dag en het dagdeel.*
@@ -3453,7 +3453,7 @@ bericht of een mail?) · een collega die je mail even naleest.
 - Schrijf in 2 of 3 zinnen waarom jij deze baan wilt.
 - Doe je cv erbij. Gebruik een mailadres met je eigen naam.
 
-**Vraag 1 · Wat is het beste?** Ewa heeft twee mailadressen. Welk adres kan Ewa het beste gebruiken?
+**Vraag 1 · Wat is het beste?** Ewa heeft al een oud mailadres. Welk adres kan Ewa het beste gebruiken?
 
 - **A.** Een nieuw adres, met haar eigen naam erin.
   → *Goed. Dan weet de werkgever meteen van wie de mail is.*
