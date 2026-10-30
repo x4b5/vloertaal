@@ -45,7 +45,7 @@ const rulesUnit = (id: string): RuleUnit => {
   return u;
 };
 
-const HELP_LANGS = 'Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens en Bulgaars';
+const HELP_LANGS = 'Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens, Bulgaars, Spaans, Portugees, Frans en Duits';
 
 /** The other sector pages and /werkregels: one tap to the neighbour pages. */
 export function sectorNav(current?: string, label = "Sectorpagina's"): string {

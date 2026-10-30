@@ -18,7 +18,7 @@ const t: CultureTranslation = {
     'a.culture': 'Burada nasıl yapılır',
     'a.culture.b': 'Önce dil gelir. Ama Vloertaal, bir Hollanda iş yerinde işlerin genelde nasıl yürüdüğünü de anlatır: patronuna “je” demek, soru sormak, zamanında gelmek ve bir şey seni rahatsız ettiğinde bunu söylemek. Bu ipuçlarını derslerde ve “İş yeri ipuçları” bölümünde bulursun.',
     'a.who': 'Kimin için?',
-    'a.who.b': 'Hollanda’da çalışmaya yeni başlayan herkes için. Yardım dilleri: Arapça, Tigrinya dili, Farsça, Darice, Ukraynaca, Türkçe, Lehçe, Rumence ve Bulgarca.',
+    'a.who.b': 'Hollanda’da çalışmaya yeni başlayan herkes için. Yardım dilleri: Arapça, Tigrinya dili, Farsça, Darice, Ukraynaca, Türkçe, Lehçe, Rumence, Bulgarca, İspanyolca, Portekizce, Fransızca ve Almanca.',
     'a.free': 'Gizliliğin',
     'a.free.b': 'Hesaba ihtiyacın yok. İlerlemen sadece bu telefonda ya da bilgisayarda kaydedilir. Açıksa, uygulama derslerin kaç kez yapıldığını anonim olarak sayar: isim yok, takip yok. Bunu “Ayarlar” bölümünde kapatabilirsin.',
     'a.disclaimer': 'Bilmekte fayda var',

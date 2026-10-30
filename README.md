@@ -30,6 +30,7 @@ Hulptalen in het spoor Taal:
 | Українська Oekraïens | ontheemden met tijdelijke bescherming |
 | Türkçe Turks | bestaande gemeenschap en nieuwe instroom |
 | Polski Pools, Română Roemeens, Български Bulgaars | arbeidsmigranten |
+| Español Spaans, Português Portugees (Europees), Français Frans, Deutsch Duits | arbeidsmigranten en nieuwkomers uit Zuid-Europa, Latijns-Amerika en Franstalig Afrika |
 | English only | iedereen met een andere taal |
 
 ## Wat zit erin

@@ -13,6 +13,7 @@ const tip = (id: string) => cultureTips.find((t) => t.id === id)!;
 /** "employer" in each help language (the old closing line named it). */
 const EMPLOYER: Record<string, RegExp> = {
   ar: /صاحب العمل/, ti: /ኣስራሒ/, fa: /کارفرما/, prs: /کارفرما/, uk: /роботодав/i, tr: /işveren/i, pl: /pracodaw/i, ro: /angajator/i, bg: /работодател/i,
+  es: /empleador|tu empresa/i, pt: /empregador|entidade patronal/i, fr: /employeur/i, de: /arbeitgeber/i,
 };
 /** The last two sentences of a body: the closing line. */
 const closing = (s: string) => s.split(/(?<=[.。።])\s+/).slice(-2).join(' ');

@@ -16,6 +16,10 @@ const CODES: Record<string, LangCode> = {
   ro: 'ro',
   mo: 'ro',
   bg: 'bg',
+  es: 'es',
+  pt: 'pt',
+  fr: 'fr',
+  de: 'de',
 };
 
 export function guessHelpLang(languages: readonly string[] | undefined): LangCode | null {

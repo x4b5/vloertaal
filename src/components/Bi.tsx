@@ -41,7 +41,7 @@ export function Bi({ text, className }: { text: Bilingual; className?: string })
 }
 
 /** Help languages written in the Latin script: a Dutch phrase in them needs no isolating. */
-const LATIN_SCRIPT = new Set(['pl', 'ro', 'tr', 'nl']);
+const LATIN_SCRIPT = new Set(['pl', 'ro', 'tr', 'nl', 'es', 'pt', 'fr', 'de']);
 
 /** A line in the help language, with its own language and direction. */
 export function HelpText({ text, lang, className = 'bi-help' }: { text: string; lang: HelpLanguage; className?: string }) {

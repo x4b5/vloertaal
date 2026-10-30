@@ -22,9 +22,15 @@ describe('the first-run language guess', () => {
     expect(guessHelpLang(['fa-IR'])).toBe('fa');
     expect(guessHelpLang(['fa'])).toBe('fa');
   });
+  it('guesses Spanish, Portuguese, French and German from any country (es-MX, pt-BR, fr-BE, de-CH)', () => {
+    expect(guessHelpLang(['es-MX'])).toBe('es');
+    expect(guessHelpLang(['pt-BR'])).toBe('pt');
+    expect(guessHelpLang(['fr-BE'])).toBe('fr');
+    expect(guessHelpLang(['de-CH'])).toBe('de');
+  });
   it('gives no guess for Dutch, English or anything else (the list shows at once)', () => {
     expect(guessHelpLang(['nl-NL'])).toBeNull();
-    expect(guessHelpLang(['en-GB', 'de'])).toBeNull();
+    expect(guessHelpLang(['en-GB', 'it'])).toBeNull();
     expect(guessHelpLang([])).toBeNull();
     expect(guessHelpLang(undefined)).toBeNull();
   });

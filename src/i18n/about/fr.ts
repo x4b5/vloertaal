@@ -1,0 +1,33 @@
+import type { CultureTranslation } from '../culture/types';
+
+const t: CultureTranslation = {
+  ui: {
+    about: 'À propos de Vloertaal',
+  },
+  gloss: {
+    'a.what': 'C’est quoi, Vloertaal ?',
+    'a.what.b': 'Vloertaal t’aide à apprendre le néerlandais dont tu as besoin au travail : dans l’entrepôt, la cuisine, l’usine ou sur le chantier. Pas seulement les mots du lieu de travail, mais toute la langue autour du travail : chercher un emploi, ton contrat et ta fiche de paie, tes droits, le logement et les papiers, te déclarer malade et bien t’entendre avec tes collègues. Les leçons sont courtes, alors tu peux pratiquer quelques minutes chaque jour. Vois Vloertaal comme un petit plus, entre deux choses. Il ne remplace pas un cours de langue ni un coach de langue.',
+    'a.beta': 'Une version de test',
+    'a.beta.b': 'Vloertaal est encore une version de test (bêta). Nous la testons avec un petit groupe d’apprenants et de coachs. Tout n’a pas encore été vérifié : des experts vérifient encore les traductions et les conseils sur les règles. Tu as trouvé une erreur ? Notre adresse est en bas de cette page.',
+    'a.mission': 'Notre mission',
+    'a.mission.b': 'Vloertaal veut aider un peu, pour qu’apprendre le néerlandais pour le travail devienne un peu plus facile : gratuit, simple à utiliser, et avec de l’aide dans ta langue. Personne ne gagne d’argent avec Vloertaal : pas de publicité, pas d’abonnement, et tes données ne sont jamais vendues.',
+    'a.bram': 'Qui est Bram ?',
+    'a.bram.b': 'Bram est ton collègue dans l’appli. Il travaille depuis de nombreuses années dans des entrepôts et sur des chantiers, et il aime aider les nouveaux collègues. Il parle calmement, et avec lui, tu as le droit de faire des erreurs.',
+    'a.how': 'Comment ça marche ?',
+    'a.how.b': 'Tu apprends le néerlandais avec de l’aide dans ta langue, ou en anglais simple si tu n’as pas choisi de langue d’aide. Tu écoutes, tu touches l’écran, tu fais des phrases et tu pratiques de courtes conversations avec des collègues.',
+    'a.culture': 'Comment ça marche ici',
+    'a.culture.b': 'La langue passe en premier. Mais Vloertaal parle aussi de la façon dont les choses se passent en général au travail aux Pays-Bas : dire “je” à ton chef, poser des questions, être à l’heure, et dire quand quelque chose te gêne. Tu trouves ces conseils dans les leçons et sous “Conseils pour le travail”.',
+    'a.who': 'C’est pour qui ?',
+    'a.who.b': 'Pour tous ceux qui commencent à travailler aux Pays-Bas. Langues d’aide : arabe, tigrigna, persan, dari, ukrainien, turc, polonais, roumain, bulgare, espagnol, portugais, français et allemand.',
+    'a.free': 'Ta vie privée',
+    'a.free.b': 'Tu n’as pas besoin de compte. Ta progression est enregistrée seulement sur ce téléphone ou cet ordinateur. Si c’est activé, l’appli compte de façon anonyme combien de fois on fait les leçons : pas de nom, pas de suivi. Tu peux désactiver ça dans les Réglages.',
+    'a.disclaimer': 'Bon à savoir',
+    'a.disclaimer.b': 'Les conseils de Vloertaal sont des informations générales, pas un conseil juridique. Les règles peuvent changer ; les textes ont été mis à jour pour la dernière fois en octobre 2026. Pour ta situation à toi, demande à ton employeur, à un syndicat ou au Juridisch Loket.',
+    'a.voices': 'Les voix',
+    'a.voices.b': 'Chaque personnage a sa propre voix néerlandaise : Bram parle avec la voix de Thijmen, Henk avec celle de Daniel, Amina avec celle d’Ariël et Jada avec celle de Noa. Ces voix ont été enregistrées avec ElevenLabs. Si une phrase n’a pas encore d’enregistrement, tu entends la voix de ton téléphone ou de ton ordinateur.',
+    'a.contact': 'Une question ou une erreur ?',
+    'a.contact.b': 'Tu as trouvé une erreur, par exemple dans une traduction ou dans un conseil ? Ou tu as une question ? Envoie un e-mail à hoi@vloertaal.nl. Une capture d’écran aide. Dans une leçon, tu peux aussi toucher le drapeau “Melden” en haut : l’e-mail dit alors déjà où tu es.',
+  },
+};
+
+export default t;

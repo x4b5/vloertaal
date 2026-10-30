@@ -23,6 +23,10 @@ const loaders: Record<UiCode, () => Promise<{ default: LanguagePack }>> = {
   pl: () => import('./packs/pl'),
   ro: () => import('./packs/ro'),
   bg: () => import('./packs/bg'),
+  es: () => import('./packs/es'),
+  pt: () => import('./packs/pt'),
+  fr: () => import('./packs/fr'),
+  de: () => import('./packs/de'),
   // The work-rules track: the screens in plain Dutch, plus the rules course (src/lib/track.ts).
   nl: () => import('./packs/nl'),
 };
@@ -43,6 +47,10 @@ const regionLoaders: Partial<Record<UiCode, () => Promise<{ default: RegionTextP
   pl: () => import('./packs/regio-pl'),
   ro: () => import('./packs/regio-ro'),
   bg: () => import('./packs/regio-bg'),
+  es: () => import('./packs/regio-es'),
+  pt: () => import('./packs/regio-pt'),
+  fr: () => import('./packs/regio-fr'),
+  de: () => import('./packs/regio-de'),
 };
 
 const packs = new Map<UiCode, LanguagePack>();

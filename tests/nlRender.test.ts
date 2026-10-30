@@ -97,13 +97,13 @@ describe('the language list', () => {
   it('offers "Nederlands – ik spreek al Nederlands" only while RULES_TRACK is on', () => {
     setRulesTrack(false);
     const off = html(createElement(LanguagePicker, { onPick: () => {} }));
-    expect(count(off)).toBe(10);
+    expect(count(off)).toBe(14);
     expect(off).not.toContain('ik spreek al Nederlands');
     setRulesTrack(true);
     const on = html(createElement(LanguagePicker, { onPick: () => {} }));
-    expect(count(on)).toBe(11);
+    expect(count(on)).toBe(15);
     expect(on).toMatch(/lang="nl"[^>]*>.*Nederlands.*ik spreek al Nederlands/);
-    // After the nine, before English.
+    // After the help languages, before English.
     expect(on.indexOf('Български')).toBeLessThan(on.indexOf('ik spreek al Nederlands'));
     expect(on.indexOf('ik spreek al Nederlands')).toBeLessThan(on.indexOf('>English<'));
   });
@@ -111,13 +111,14 @@ describe('the language list', () => {
   it('shows flags as decoration (hidden from screen readers), never as an extra button', () => {
     setRulesTrack(true);
     const m = html(createElement(LanguagePicker, { onPick: () => {} }));
-    expect(m.match(/<button/g)).toHaveLength(11);
+    expect(m.match(/<button/g)).toHaveLength(15);
     // Drawn flags, no flag emoji: the emoji font for flags alone was 709 KB on the first screen.
     expect(m).not.toMatch(/[\u{1F1E6}-\u{1F1FF}]/u);
     expect(m.match(/<svg class="lang-flag"[^>]*aria-hidden="true"/g)).toHaveLength(6);
-    expect(m.match(/class="lang-mark" aria-hidden="true"/g)).toHaveLength(11);
+    expect(m.match(/class="lang-mark" aria-hidden="true"/g)).toHaveLength(15);
     expect(m.match(/class="lang-flag"/g)).toHaveLength(6);
-    expect(m.match(/class="lang-sample"/g)).toHaveLength(5);
+    // A tile of letters for ar, ti, fa, prs, and for es, pt, fr and de (spoken in many countries).
+    expect(m.match(/class="lang-sample"/g)).toHaveLength(9);
   });
 
   it('in Settings of the Dutch track: no English names under the languages', () => {
