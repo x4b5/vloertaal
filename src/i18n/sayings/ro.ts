@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     'w.hart': 'vorbe bune care dau curaj',
     'w.hart.lit': 'o inimă sub curea',
     's.plain.1': 'Spune când nu e sigur.',
-    's.plain.2': { m: 'Sunt foarte, foarte obosit.', f: 'Sunt foarte, foarte obosită.' },
+    's.plain.2': { m: 'Sunt foarte, foarte obosit.', f: 'Sunt foarte, foarte obosită.', x: 'Sunt foarte, foarte obosit / obosită.' }, // x: nieuw, nalezen
     's.plain.3': 'Spun direct despre ce e vorba.',
     'c.plain.q': 'Plouă foarte tare!',
     'c.plain.a': 'Atunci azi iau autobuzul.',
@@ -70,14 +70,14 @@ const t: CultureTranslation = {
     'zg.zeil.o1': "Fii atent cât timp ea lipsește.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
     'zg.zeil.o2': 'Du-te și uită-te la o barcă.',
     'zg.zeil.o3': 'Închide ochii puțin.',
-    'zg.zeil.w': { m: '„Een oogje in het zeil houden” înseamnă: să ai grijă ca totul să meargă bine. Nu ești sigur la ce să fii atent? Întreab-o înainte să plece.', f: '„Een oogje in het zeil houden” înseamnă: să ai grijă ca totul să meargă bine. Nu ești sigură la ce să fii atentă? Întreab-o înainte să plece.' },
+    'zg.zeil.w': { m: '„Een oogje in het zeil houden” înseamnă: să ai grijă ca totul să meargă bine. Nu ești sigur la ce să fii atent? Întreab-o înainte să plece.', f: '„Een oogje in het zeil houden” înseamnă: să ai grijă ca totul să meargă bine. Nu ești sigură la ce să fii atentă? Întreab-o înainte să plece.', x: '„Een oogje in het zeil houden” înseamnă: să ai grijă ca totul să meargă bine. Nu știi sigur la ce trebuie să ai grijă? Întreab-o înainte să plece.' }, // x: nieuw, nalezen
     'zg.lekker.lit': 'Nu mă simt gustos.',
     'zg.lekker.m': 'Mă simt puțin rău.',
     'zg.lekker.s': 'Un coleg te sună dimineața: „Ik voel me niet lekker.” Ce vrea să spună?',
     'zg.lekker.o1': 'Se simte bolnav.',
     'zg.lekker.o2': 'Nu i-a plăcut micul dejun.',
     'zg.lekker.o3': 'E foarte fericit.',
-    'zg.lekker.w': { m: '„Lekker” se spune și despre mâncare, dar aici „niet lekker” înseamnă: puțin bolnav. Poți să spui și tu asta când suni să anunți că ești bolnav.', f: '„Lekker” se spune și despre mâncare, dar aici „niet lekker” înseamnă: puțin bolnav. Poți să spui și tu asta când suni să anunți că ești bolnavă.' },
+    'zg.lekker.w': { m: '„Lekker” se spune și despre mâncare, dar aici „niet lekker” înseamnă: puțin bolnav. Poți să spui și tu asta când suni să anunți că ești bolnav.', f: '„Lekker” se spune și despre mâncare, dar aici „niet lekker” înseamnă: puțin bolnav. Poți să spui și tu asta când suni să anunți că ești bolnavă.', x: '„Lekker” se spune și despre mâncare, dar aici „niet lekker” înseamnă: puțin bolnav. Poți să spui și tu asta când suni să anunți că te-ai îmbolnăvit.' }, // x: nieuw, nalezen
     'zg.batterij.lit': 'Mă duc să-mi încarc bateria.',
     'zg.batterij.m': 'Mă duc să mă odihnesc, ca să am din nou energie.',
     'zg.batterij.s': 'Înainte de zilele ei libere, colega ta spune: „Ik ga even mijn batterij opladen.” Ce vrea să spună?',
@@ -95,7 +95,7 @@ const t: CultureTranslation = {
     'zg.oefening.lit': 'Exercițiul naște artă.',
     'zg.oefening.m': 'Dacă exersezi mult, ajungi să o faci bine.',
     'zg.oefening.s': 'Cursul ți se pare greu. Profesoara ta spune: „Oefening baart kunst.” Ce vrea să spună?',
-    'zg.oefening.o1': { m: 'Exersează în continuare, așa o să devii bun la asta.', f: 'Exersează în continuare, așa o să devii bună la asta.' },
+    'zg.oefening.o1': { m: 'Exersează în continuare, așa o să devii bun la asta.', f: 'Exersează în continuare, așa o să devii bună la asta.', x: 'Exersează în continuare, așa o să-ți iasă tot mai bine.' }, // x: nieuw, nalezen
     'zg.oefening.o2': 'Trebuie să mergi la o lecție de artă.',
     'zg.oefening.o3': 'Oprește-te, e prea greu pentru tine.',
     'zg.oefening.w': 'Acesta e un proverb: cu exercițiu faci totul tot mai bine. E adevărat și când înveți olandeză.',
@@ -130,10 +130,10 @@ const t: CultureTranslation = {
     'zg.koning.lit': 'Clientul e rege.',
     'zg.koning.m': 'Clientul e foarte important: ajută-l bine și prietenos.',
     'zg.koning.s': 'Un client e puțin nepoliticos. Șeful tău spune: „De klant is koning.” Ce vrea să spună?',
-    'zg.koning.o1': { m: 'Rămâi prietenos și ajută-l bine pe client.', f: 'Rămâi prietenoasă și ajută-l bine pe client.' },
+    'zg.koning.o1': { m: 'Rămâi prietenos și ajută-l bine pe client.', f: 'Rămâi prietenoasă și ajută-l bine pe client.', x: 'Vorbește prietenos și ajută-l bine pe client.' }, // x: nieuw, nalezen
     'zg.koning.o2': 'Clientul e un rege adevărat.',
     'zg.koning.o3': 'Roagă-l pe client să plece.',
-    'zg.koning.w': { m: 'Într-un magazin clientul e pe primul loc, așa că rămâi politicos. Un client e nepoliticos sau amenință? Atunci cheamă-l pe șeful tău.', f: 'Într-un magazin clientul e pe primul loc, așa că rămâi politicoasă. Un client e nepoliticos sau amenință? Atunci cheamă-l pe șeful tău.' },
+    'zg.koning.w': { m: 'Într-un magazin clientul e pe primul loc, așa că rămâi politicos. Un client e nepoliticos sau amenință? Atunci cheamă-l pe șeful tău.', f: 'Într-un magazin clientul e pe primul loc, așa că rămâi politicoasă. Un client e nepoliticos sau amenință? Atunci cheamă-l pe șeful tău.', x: 'Într-un magazin clientul e pe primul loc, așa că vorbește politicos. Un client e nepoliticos sau amenință? Atunci cheamă-l pe șeful tău.' }, // x: nieuw, nalezen
     'zg.tijdgeld.lit': 'Timpul e bani.',
     'zg.tijdgeld.m': 'Timpul e prețios: nu-l pierde.',
     'zg.tijdgeld.s': 'Șeful tău vrea ca camionul să fie încărcat repede. El spune: „Tijd is geld.” Ce vrea să spună?',

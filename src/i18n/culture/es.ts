@@ -103,7 +103,7 @@ const t: CultureTranslation = {
     'c.time.w': 'Avisar pronto deja que el equipo se organice. Llegar tarde sin avisar se ve mucho peor que el retraso mismo.',
     'c.sick': 'Cómo avisar por enfermedad',
     'c.sick.b': 'Llama tú a tu encargado antes de que empiece tu turno, a no ser que tu empresa tenga otra norma. ¿Trabajas a través de una agencia? Avisa también a la agencia. No tienes que decir qué enfermedad tienes. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
-    'c.sick.p': { m: 'Estoy enfermo. Hoy no puedo ir a trabajar.', f: 'Estoy enferma. Hoy no puedo ir a trabajar.' },
+    'c.sick.p': { m: 'Estoy enfermo. Hoy no puedo ir a trabajar.', f: 'Estoy enferma. Hoy no puedo ir a trabajar.', x: 'Estoy enfermo/a. Hoy no puedo ir a trabajar.' }, // x: nieuw, nalezen
     'c.sick.s': 'Te despiertas con fiebre. Tu turno empieza a las 7:00. ¿Qué haces?',
     'c.sick.o1': 'Llamas a tu encargado antes de las 7:00.', // nagelezen (2e lezing)
     'c.sick.o2': 'Pides a un compañero que se lo diga al jefe más tarde.',

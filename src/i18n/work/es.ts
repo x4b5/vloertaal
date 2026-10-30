@@ -247,7 +247,7 @@ const t: CultureTranslation = {
     'w.ziekte': 'la enfermedad',
     'w.doorbetalen': 'seguir pagando (el sueldo)',
     'w.wachtdag': 'el día de espera (sin sueldo)',
-    's.illness.1': { m: 'Llamo para avisar de que estoy enfermo.', f: 'Llamo para avisar de que estoy enferma.' },
+    's.illness.1': { m: 'Llamo para avisar de que estoy enfermo.', f: 'Llamo para avisar de que estoy enferma.', x: 'Llamo para avisar de que estoy enfermo/a.' }, // x: nieuw, nalezen
     's.illness.2': 'Tengo una cita con el médico de empresa.',
     's.illness.3': 'Mañana vuelvo a trabajar.',
     'c.illness.q': '¿Qué tienes exactamente?',
@@ -707,10 +707,10 @@ const t: CultureTranslation = {
     'c.illness': 'Tus derechos durante una enfermedad',
     'c.illness.b': 'Durante una enfermedad, tu empresa te tiene que pagar como mínimo el 70 % de tu sueldo, hasta 2 años. Un cao muchas veces da más. Puede haber hasta 2 días de espera (wachtdagen) sin sueldo, pero solo si lo dice tu contrato o tu cao. Tu jefe no te puede preguntar qué enfermedad tienes: de tu salud y tu trabajo hablas con el médico de empresa (bedrijfsarts). Llama a tu empresa cuando ya estés bien (betermelden). El primer año recibes como mínimo el salario mínimo. Un contrato temporal termina en su fecha de fin, también durante una enfermedad. ¿Trabajas a través de una agencia? Si tu contrato tiene una cláusula de agencia (uitzendbeding), puede terminar si tienes una enfermedad. Entonces pregunta al UWV por la Ziektewet, o pregunta a un sindicato. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.', // nalezen: feit gelijk getrokken
     'c.illness.p': 'Ya estoy bien. Mañana vengo a trabajar.',
-    'c.illness.s': { m: 'Llevas una semana enfermo. Tu empresa te pide que vayas al médico de empresa. ¿Qué haces?', f: 'Llevas una semana enferma. Tu empresa te pide que vayas al médico de empresa. ¿Qué haces?' },
+    'c.illness.s': { m: 'Llevas una semana enfermo. Tu empresa te pide que vayas al médico de empresa. ¿Qué haces?', f: 'Llevas una semana enferma. Tu empresa te pide que vayas al médico de empresa. ¿Qué haces?', x: 'Llevas una semana de baja. Tu empresa te pide que vayas al médico de empresa. ¿Qué haces?' }, // x: nieuw, nalezen
     'c.illness.o1': 'Vas, y hablas con el médico sobre tu salud y tu trabajo.',
     'c.illness.o2': 'No vas, porque ya tienes tu propio médico.',
-    'c.illness.o3': { m: 'Vuelves a trabajar aunque todavía estás enfermo, para no tener que ir.', f: 'Vuelves a trabajar aunque todavía estás enferma, para no tener que ir.' },
+    'c.illness.o3': { m: 'Vuelves a trabajar aunque todavía estás enfermo, para no tener que ir.', f: 'Vuelves a trabajar aunque todavía estás enferma, para no tener que ir.', x: 'Vuelves a trabajar aunque todavía no te has recuperado, para no tener que ir.' }, // x: nieuw, nalezen
     'c.illness.w': 'El médico de empresa te ayuda a volver al trabajo de forma sana. El médico no le cuenta a tu jefe tus datos médicos, solo qué trabajo puedes hacer.',
     'c.warning': 'Señales de explotación',
     'c.warning.b': 'Presta atención a estas señales. Tu empresa se queda con tu pasaporte o tu documento de identidad: eso no está permitido, tu documento lo guardas tú y la empresa solo puede hacer una copia. Recibes mucho menos sueldo de lo acordado, o no recibes nómina. Tienes que pagar una deuda grande a la empresa o a la agencia. Tienes que trabajar muchísimas horas, sin poder elegir. Alguien te amenaza, o usa tu vivienda para presionarte. Esto no es normal y no está permitido. Es información general. Para tu situación: pregunta al sindicato, al Juridisch Loket o a FairWork.',
@@ -1000,7 +1000,7 @@ const t: CultureTranslation = {
     'c.boundaries': 'Pasarse de la raya',
     'c.boundaries.b': 'Grensoverschrijdend gedrag es un comportamiento que pasa el límite de alguien: tocar sin permiso, comentarios o bromas sexuales, mirar fijamente, mandar imágenes no deseadas, amenazas o gritos. No importa si la otra persona “lo dijo en broma”: lo que cuenta es cómo te sientes tú. Si puedes, di claramente que quieres que pare. Apunta lo que pasó, cuándo y quién lo vio. Cuéntalo a tu encargado, a la persona de confianza (vertrouwenspersoon, si hay una) o a Recursos Humanos. Tu empresa te tiene que proteger, y no te pueden castigar por contarlo. ¿Viste que le pasaba a un compañero? Pregúntale si está bien, y ofrécete como testigo.',
     'c.boundaries.p': 'Quiero que pares.',
-    'c.boundaries.s': { m: 'Tu jefe de equipo muchas veces te pone la mano en la espalda y te dice que estás “guapo”. Eso te hace sentir mal. Él decide tus turnos. ¿Qué haces?', f: 'Tu jefe de equipo muchas veces te pone la mano en la espalda y te dice que estás “guapa”. Eso te hace sentir mal. Él decide tus turnos. ¿Qué haces?' },
+    'c.boundaries.s': { m: 'Tu jefe de equipo muchas veces te pone la mano en la espalda y te dice que estás “guapo”. Eso te hace sentir mal. Él decide tus turnos. ¿Qué haces?', f: 'Tu jefe de equipo muchas veces te pone la mano en la espalda y te dice que estás “guapa”. Eso te hace sentir mal. Él decide tus turnos. ¿Qué haces?', x: 'Tu jefe de equipo muchas veces te pone la mano en la espalda y te dice que estás “guapo/a”. Eso te hace sentir mal. Él decide tus turnos. ¿Qué haces?' }, // x: nieuw, nalezen
     'c.boundaries.o1': 'Apuntas lo que pasa y hablas con la vertrouwenspersoon.', // nagelezen (2e lezing)
     'c.boundaries.o2': 'No dices nada, porque él decide tus turnos.',
     'c.boundaries.o3': 'Dejas tu trabajo sin decirle a nadie por qué.',
@@ -1244,7 +1244,7 @@ const t: CultureTranslation = {
     'w.inburgering': "la integración cívica (el curso y los exámenes para recién llegados)",
     'w.taalles': "la clase de idioma",
     's.permit.1': "¿Puedo trabajar aquí con mis papeles?",
-    's.permit.2': { m: "¿Soy empleado o autónomo?", f: "¿Soy empleada o autónoma?" },
+    's.permit.2': { m: "¿Soy empleado o autónomo?", f: "¿Soy empleada o autónoma?", x: '¿Trabajo por cuenta ajena o por cuenta propia?' }, // x: nieuw, nalezen
     's.permit.3': "Trabajo a llamada.",
     'c.permit.q': "¿Puedes trabajar el martes?",
     'c.permit.a': "No, ese día tengo clase de idioma. El miércoles sí puedo.",
@@ -1330,7 +1330,7 @@ const t: CultureTranslation = {
     'c.jobends.s': "Tu trabajo termina el viernes. Tu seguro médico va a través de la agencia. ¿Qué haces?",
     'c.jobends.o1': "Preguntas cuándo termina, y contratas el tuyo a tiempo.", // nagelezen (2e lezing)
     'c.jobends.o2': "Nada: el seguro sigue solo.",
-    'c.jobends.o3': { m: "Esperas hasta que te pongas enfermo, y entonces lo arreglas.", f: "Esperas hasta que te pongas enferma, y entonces lo arreglas." },
+    'c.jobends.o3': { m: "Esperas hasta que te pongas enfermo, y entonces lo arreglas.", f: "Esperas hasta que te pongas enferma, y entonces lo arreglas.", x: 'Esperas hasta que te enfermes, y entonces lo arreglas.' }, // x: nieuw, nalezen
     'c.jobends.w': "El seguro a través de la agencia muchas veces termina cuando termina tu trabajo. Si vives o trabajas en los Países Bajos, normalmente tienes que tener seguro médico. Si lo arreglas a tiempo, no te quedas sin seguro.",
   },
 };
