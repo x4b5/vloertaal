@@ -1140,7 +1140,8 @@ const laterUnits: Unit[] = [
     // Lichaam en klachten (30 October 2026): the body words for calling in sick, an accident and
     // the GP. "de pijn" (w.pijn, l.sick), "tillen" (w.tillen, l.directions) and "de doos" (w.doos,
     // l.things) are already words of other lessons: here they come in the sentences and the chat.
-    // "het hoofd", "de rug" and "de buik" have a drawn body chart (src/pictures/group26.tsx).
+    // "het hoofd", "de rug" and "de buik" are drawn as three cast members holding the sore part,
+    // each seen another way (src/pictures/group26.tsx).
     lesson(
       'body',
       'Body and pain',

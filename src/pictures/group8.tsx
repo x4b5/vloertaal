@@ -92,13 +92,13 @@ function Head({ who, x, y, s, expr = 'neutral', squint = false }: { who: 'bram' 
 }
 
 /** A wall time clock: a dark box with a clock face on top and a card slot; top-left at (x, y). */
-function TimeClock({ x, y, s = 1, card = true }: { x: number; y: number; s?: number; card?: boolean }) {
+function TimeClock({ x, y, s = 1, card = true, hour = 8 }: { x: number; y: number; s?: number; card?: boolean; hour?: number }) {
   return (
     <g transform={`translate(${x} ${y}) scale(${s})`}>
       <rect x="0" y="4" width="50" height="76" rx="9" fill={PAL.slateDark} />
       <rect x="0" y="0" width="50" height="76" rx="9" fill={PAL.slate} />
       <rect x="40" y="0" width="10" height="76" rx="5" fill={PAL.slateDark} opacity=".45" />
-      <Clock cx={25} cy={25} r={18} hour={8} minute={0} />
+      <Clock cx={25} cy={25} r={18} hour={hour} minute={0} />
       {/* Card reader: a green light and a slot */}
       <rect x="9" y="50" width="32" height="18" rx="4" fill={PAL.slateDark} />
       <rect x="13" y="57" width="24" height="4" rx="2" fill="#141b21" />
@@ -156,17 +156,33 @@ function DoorBadge({ x, y, r, out }: { x: number; y: number; r: number; out: boo
   );
 }
 
-/** A scene for in/out clocking: the time clock with a hand holding a card to it. */
+/**
+ * A scene for in/out clocking: the time clock with a hand holding a card to it, and a big badge
+ * with an arrow into (green) or out of (red) a door. The two are built the other way round so
+ * they differ at a glance: clocking in has the clock on the left at 8:00 and the green badge on
+ * the right; clocking out has the clock on the right at 5:00 and the red badge on the left.
+ */
 function ClockingScene({ out }: { out: boolean }) {
-  return (
+  const color = out ? PAL.red : PAL.ok;
+  return out ? (
     <g>
-      <TimeClock x={14} y={30} s={0.95} card={false} />
-      <Motion x={38} y={88} dir={0} spread={60} n={3} len={6} gap={18} color={out ? PAL.red : PAL.ok} width={3.2} />
-      <g transform="rotate(-8 64 84)">
-        <StaffCard x={30} y={72} w={34} h={22} who="amina" />
+      <TimeClock x={64} y={30} s={0.95} card={false} hour={5} />
+      <Motion x={88} y={88} dir={180} spread={60} n={3} len={6} gap={18} color={color} width={3.2} />
+      <g transform="rotate(8 56 84)">
+        <StaffCard x={56} y={72} w={34} h={22} who="bram" />
       </g>
-      <Hand pose="hold" x={68} y={106} rotate={-60} scale={0.72} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
-      <DoorBadge x={88} y={30} r={20} out={out} />
+      <Hand pose="hold" x={52} y={106} rotate={60} scale={0.72} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} mirror />
+      <DoorBadge x={34} y={34} r={26} out />
+    </g>
+  ) : (
+    <g>
+      <TimeClock x={8} y={30} s={0.95} card={false} hour={8} />
+      <Motion x={32} y={88} dir={0} spread={60} n={3} len={6} gap={18} color={color} width={3.2} />
+      <g transform="rotate(-8 64 84)">
+        <StaffCard x={24} y={72} w={34} h={22} who="amina" />
+      </g>
+      <Hand pose="hold" x={62} y={106} rotate={-60} scale={0.72} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <DoorBadge x={86} y={34} r={26} out={false} />
     </g>
   );
 }
@@ -538,10 +554,12 @@ const pictures: Record<string, () => JSX.Element> = {
     </g>
   ),
 
-  // "inklokken": to clock in — a hand holds the card to the time clock; green badge, arrow into a door
+  // "inklokken": to clock in — a hand holds the card to the time clock (8:00, on the left); a big
+  // green badge on the right, arrow into a door
   'w.inklokken': () => <ClockingScene out={false} />,
 
-  // "uitklokken": to clock out — the same, but a red badge with the arrow going out of the door
+  // "uitklokken": to clock out — the other way round: the clock (5:00) on the right, the card from
+  // the left, a big red badge with the arrow going out of the door
   'w.uitklokken': () => <ClockingScene out />,
 
   // "op tijd": on time — Bram arrives as the clock shows exactly the start time; green tick

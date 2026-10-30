@@ -1,61 +1,108 @@
 import type { JSX } from 'react';
 import { CastHead } from '../components/Characters';
-import { Arrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, Bust, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 
 /**
  * Word pictures, group 26 (keyed by id): words that were "abstract" (picture: false) but are
  * concrete enough for one clear drawing.
- *  - the body (l.body): one plain body chart seen from the side (no face, a nose and hair show
- *    which way it looks), with one part in orange and a sky arrow at it: the head, the belly
- *    (front), the back (rear). Side on, so belly and back can't be mixed up.
+ *  - the body (l.body, "Waar doet het pijn?"): three cast members, each seen another way and each
+ *    holding the sore part: the head (Henk, close up, a hand on his forehead), the back (Bram
+ *    from behind, both hands on the small of his back) and the belly (Jada from the front, both
+ *    hands on her belly). They are asked together, so each is a picture of its own.
  *  - the workshop and power (l.workshop, l.power): to grind (an angle grinder on a bar, sparks),
  *    the cable (a coil with bare copper ends, no plug), the power (a big yellow bolt).
  *  - the garage (l.garage): the car lift (a car up on two posts), flat (a flat tyre with a nail and
  *    air escaping).
  *  - broken (l.handover): a hammer snapped in two, splinters flying.
- *  - the judge (l.police): Amina in a black gown with the white bands, with a gavel.
+ *  - the judge (l.police): Amina in a black gown with the white bands, behind a table with a
+ *    case file (no gavel: Dutch judges don't use one).
  * Look-alikes kept apart in LOOKALIKES (src/lib/wordPicture.ts): slijpen/de vonk (sparks),
  * de kabel/de stekker, lek/de band. See docs/tekenstijl.md and ./kit.tsx.
  */
 
-const BODY = PAL.steel;
-const BODY_DARK = '#76828c';
-const MARK = PAL.orange;
-const MARK_SHADE = PAL.orangeShade;
 const GOWN = '#4f5e6b';
 
 /**
- * A plain body chart seen from the side, looking right. `mark` colours one part orange.
+ * "de rug": Bram seen from behind (no face: the back of his hard hat, the back of his head and
+ * his ears), in his hi-vis vest, both hands pressed on the small of his back, elbows out, the
+ * sore spot in red between them.
  */
-function BodyChart({ mark }: { mark: 'head' | 'belly' | 'back' }) {
-  const c = (part: 'head' | 'belly' | 'back') => (mark === part ? MARK : BODY);
+function BackView() {
+  const [skin, skinShade] = SKIN.bram;
+  /** An arm bent back: upper arm from the shoulder out to the elbow, forearm in to the hand,
+   *  which lies flat on the back beside the sore spot, fingers pointing in. */
+  const arm = (side: 1 | -1) => (
+    <g transform={side === 1 ? undefined : 'translate(120 0) scale(-1 1)'}>
+      <path d="M84 56L101 80L82 92" fill="none" stroke={side === 1 ? PAL.blueShade : PAL.blue} strokeWidth="13" strokeLinecap="round" strokeLinejoin="round" />
+      <g transform="rotate(-14 80 92)">
+        <rect x="64" y="86" width="20" height="12" rx="5" fill={side === 1 ? skinShade : skin} />
+        <path d="M66 89.6H74M66 94H74" stroke={side === 1 ? PAL.brown : skinShade} strokeWidth="1.4" strokeLinecap="round" opacity=".6" />
+      </g>
+    </g>
+  );
   return (
     <g>
-      <Ground cx={60} cy={106} rx={26} ry={4} />
-      {/* Legs and feet (the back leg a step darker) */}
-      <rect x="51" y="76" width="11" height="28" rx="5" fill={BODY_DARK} />
-      <rect x="51" y="98" width="20" height="8" rx="4" fill={BODY_DARK} />
-      <rect x="60" y="76" width="11" height="28" rx="5" fill={BODY} />
-      <rect x="60" y="98" width="21" height="8" rx="4" fill={BODY} />
-      {/* Neck */}
-      <rect x="57" y="30" width="10" height="10" rx="3" fill={BODY_DARK} />
-      {/* Torso: back on the left, belly on the right */}
-      <path d="M50 38H70Q78 38 78 47V56Q83 63 81 72Q79 82 70 82H52Q44 82 44 74V46Q44 38 50 38Z" fill={BODY} />
-      {mark === 'back' && (
-        <path d="M50 38H58V82H52Q44 82 44 74V46Q44 38 50 38Z" fill={MARK} />
-      )}
-      {mark === 'belly' && (
-        <path d="M68 56H78Q83 63 81 72Q79 82 70 82H66Q62 70 68 56Z" fill={MARK} />
-      )}
-      <path d="M78 56Q83 63 81 72Q79 82 70 82" fill="none" stroke={mark === 'belly' ? MARK_SHADE : BODY_DARK} strokeWidth="2" strokeLinecap="round" opacity=".5" />
-      {/* Arm hanging down in front */}
-      <rect x="57" y="40" width="10" height="38" rx="5" fill={BODY_DARK} />
-      <circle cx="62" cy="79" r="5.5" fill={BODY_DARK} />
-      {/* Head: hair at the back, a nose at the front */}
-      <circle cx="63" cy="20" r="13" fill={c('head')} />
-      <path d="M50.5 22A13 13 0 0 1 70 9Q62 12 60 22Z" fill={mark === 'head' ? MARK_SHADE : BODY_DARK} />
-      <path d="M75 18L78.5 22.5L75 24Z" fill={c('head')} stroke={c('head')} strokeWidth="2.5" strokeLinejoin="round" />
-      <circle cx="61" cy="21" r="2.6" fill={mark === 'head' ? MARK_SHADE : BODY_DARK} />
+      {/* Trousers, cut off at the bottom */}
+      <rect x="36" y="94" width="48" height="30" rx="4" fill={PAL.navy} />
+      <path d="M60 100V124" stroke={PAL.navyShade} strokeWidth="2" />
+      {/* Back: the orange vest with its reflective stripes, shade on the right */}
+      <Shade color={PAL.orangeShade} opacity={1} at={[96, 76, 12, 40]}>
+        <path d="M32 64Q32 50 46 48H74Q88 50 88 64L86 100H34Z" fill={PAL.orange} />
+      </Shade>
+      <path d="M46 50V70M74 50V70" stroke="#eef5f7" strokeWidth="4.4" />
+      <rect x="33" y="68" width="54" height="5" fill="#eef5f7" />
+      <rect x="34" y="94" width="52" height="6" rx="2" fill={PAL.slateDark} />
+      {/* The sore spot */}
+      <ellipse cx="60" cy="88" rx="12" ry="8" fill={PAL.redShade} opacity=".8" />
+      {arm(1)}
+      {arm(-1)}
+      {/* Neck with the blue collar, ears, the back of the head and of the hard hat */}
+      <rect x="52" y="36" width="16" height="15" rx="4" fill={skinShade} />
+      <path d="M46 49Q60 44 74 49L72 52Q60 48 48 52Z" fill={PAL.blue} />
+      <circle cx="41" cy="31" r="4.6" fill={skinShade} />
+      <circle cx="79" cy="31" r="4.6" fill={skinShade} />
+      <path d="M42 22H78V30Q78 44 60 44Q42 44 42 30Z" fill={PAL.brown} />
+      <path d="M48 32Q50 38 54 41M60 33V42M72 32Q70 38 66 41" fill="none" stroke={PAL.ink} strokeWidth="1.6" strokeLinecap="round" opacity=".45" />
+      <path d="M38 24C38 11 47 4 60 4C73 4 82 11 82 24Z" fill={PAL.yellow} />
+      <path d="M71 6.6C78 10 82 16 82 24H74C74 16 73.2 10.6 71 6.6Z" fill={PAL.yellowShade} />
+      <rect x="34" y="21" width="52" height="5.4" rx="2" fill={PAL.yellowShade} />
+      <Shine d="M44 17Q46 11 52 8" color={PAL.yellowShine} width={3} opacity={0.9} />
+    </g>
+  );
+}
+
+/**
+ * "de buik": Jada from the front, half length, both hands spread on her belly (on the bib of her
+ * blue overalls), her face tight with pain, red lines at both sides of the belly.
+ */
+function BellyView() {
+  const [skin, skinShade] = SKIN.jada;
+  return (
+    <g>
+      {/* Yellow shirt, the blue bib of the overalls over the belly, straps */}
+      <Shade color={PAL.yellowShade} opacity={0.9} at={[96, 84, 12, 44]}>
+        <path d="M32 68Q32 52 46 50H74Q88 52 88 68L90 124H30Z" fill="#ffc929" />
+      </Shade>
+      <path d="M38 72H82L84 124H36Z" fill={PAL.sky} />
+      <path d="M76 72H82L84 124H78Z" fill={PAL.skyShade} />
+      <path d="M43 52L41 74M77 52L79 74" stroke={PAL.sky} strokeWidth="5.5" />
+      <rect x="39" y="70" width="5" height="5" rx="1" fill={PAL.yellow} />
+      <rect x="76" y="70" width="5" height="5" rx="1" fill={PAL.yellow} />
+      {/* Arms: short sleeves, bare arms down the sides */}
+      <rect x="24" y="54" width="15" height="18" rx="7" fill="#ffc929" />
+      <rect x="81" y="54" width="15" height="18" rx="7" fill={PAL.yellowShade} />
+      <rect x="25" y="62" width="12" height="34" rx="6" fill={skin} transform="rotate(4 31 62)" />
+      <rect x="83" y="62" width="12" height="34" rx="6" fill={skinShade} transform="rotate(-4 89 62)" />
+      {/* Both hands spread on the belly, fingers pointing in */}
+      <Hand pose="open" x={29} y={98} rotate={70} scale={0.54} skin={SKIN.jada} />
+      <Hand pose="open" x={91} y={98} rotate={-70} scale={0.54} skin={SKIN.jada} mirror />
+      {/* Head */}
+      <g transform="translate(60 54) scale(.56) translate(-60 -96)">
+        <CastHead who="jada" emotion="pain" bold />
+      </g>
+      {/* Where it hurts */}
+      <Motion x={20} y={90} dir={180} spread={80} n={3} len={7} gap={6} color={PAL.red} width={3.6} />
+      <Motion x={100} y={90} dir={0} spread={80} n={3} len={7} gap={6} color={PAL.red} width={3.6} />
     </g>
   );
 }
@@ -104,27 +151,26 @@ function BrokenHammer() {
 }
 
 export default {
-  // "het hoofd": the head — the body chart with the head in orange, an arrow at it
+  // "het hoofd": the head — Henk, his hand pressed to his forehead, his face tight with pain,
+  // red lines above his head (front view, close up: unlike the back and the belly)
   'w.hoofd': () => (
     <g>
-      <BodyChart mark="head" />
-      <Arrow from={[108, 52]} to={[86, 28]} color={PAL.sky} width={7} head={12} />
+      <Bust who="henk" x={62} y={128} scale={0.98} emotion="pain" arms="forehead" bold />
+      <Motion x={64} y={16} dir={-90} spread={100} n={3} len={6} gap={4} color={PAL.red} width={3.8} />
     </g>
   ),
 
-  // "de buik": the belly — the body chart with the belly (front, below) in orange
+  // "de buik": the belly — Jada from the front, half length, both hands on her belly
   'w.buik': () => (
     <g>
-      <BodyChart mark="belly" />
-      <Arrow from={[112, 52]} to={[88, 66]} color={PAL.sky} width={7} head={12} />
+      <BellyView />
     </g>
   ),
 
-  // "de rug": the back — the body chart with the back (rear) in orange, the arrow from behind
+  // "de rug": the back — Bram seen from behind, a hand on the small of his back
   'w.rug': () => (
     <g>
-      <BodyChart mark="back" />
-      <Arrow from={[10, 40]} to={[38, 56]} color={PAL.sky} width={7} head={12} />
+      <BackView />
     </g>
   ),
 
@@ -244,10 +290,11 @@ export default {
     </g>
   ),
 
-  // "de rechter": the judge — Amina in the black gown with the white bands, a gavel beside her
+  // "de rechter": the judge — Amina in the black gown with the white bands (the Dutch judge's
+  // toga and bef), behind a table with a case file on it. No gavel: Dutch judges don't use one.
   'w.rechter': () => (
     <g>
-      <g transform="translate(48 114) scale(0.74) translate(-60 -134)">
+      <g transform="translate(60 104) scale(0.78) translate(-60 -134)">
         {/* Gown */}
         {/* A step lighter than slate, so the gown keeps its shape on the dark card */}
         <path d="M14 152C14 108 34 95 60 95C86 95 106 108 106 152Z" fill={GOWN} />
@@ -255,22 +302,21 @@ export default {
         <path d="M86 100C99 108 106 124 106 152H86C88 132 88 114 86 100Z" fill={PAL.slateDark} />
         {/* Velvet front edges */}
         <path d="M46 98L52 152M74 98L68 152" stroke={PAL.slateDark} strokeWidth="7" strokeLinecap="round" />
-        {/* Headscarf drape, then the white bands */}
+        {/* Headscarf drape, then the white bands (short, so they show above the table) */}
         <path d="M36 92L43 96H77L84 92L86 105H34Z" fill={PAL.purple} />
         <path d="M78 96L84 92L86 105H80Z" fill={PAL.purpleShade} />
-        <path d="M53 100H67L66 126Q60 129 54 126Z" fill={PAL.white} />
-        <path d="M60 101V127" stroke={PAL.paperShade} strokeWidth="2" />
+        <path d="M52 100H68L67 122Q60 125 53 122Z" fill={PAL.white} />
+        <path d="M60 101V123" stroke={PAL.paperShade} strokeWidth="2.2" />
         <CastHead who="amina" expr="neutral" bold />
       </g>
-      {/* Gavel on its block */}
-      <rect x="80" y="98" width="30" height="8" rx="3" fill={PAL.cardDark} />
-      <rect x="80" y="98" width="30" height="3.5" rx="1.8" fill={PAL.card} />
-      <g transform="rotate(-30 94 82)">
-        <rect x="92" y="70" width="5" height="34" rx="2.5" fill={PAL.wood} />
-        <rect x="82" y="62" width="26" height="14" rx="4" fill={PAL.brown} />
-        <rect x="82" y="62" width="5" height="14" rx="2" fill={PAL.cardDark} />
-        <rect x="103" y="62" width="5" height="14" rx="2" fill={PAL.cardDark} />
-      </g>
+      {/* The table in front, with the case file on it */}
+      <rect x="8" y="104" width="104" height="18" rx="2" fill={PAL.cardShade} />
+      <rect x="92" y="104" width="20" height="18" rx="2" fill={PAL.cardDark} />
+      <rect x="8" y="102" width="104" height="5" rx="2" fill={PAL.card} />
+      <rect x="72" y="91" width="38" height="11" rx="2" fill={PAL.paperShade} />
+      <path d="M75 94.5H107M75 98.5H107" stroke={PAL.white} strokeWidth="1.8" />
+      <rect x="70" y="88" width="40" height="5" rx="1.8" fill={PAL.sky} />
+      <rect x="70" y="99" width="40" height="4" rx="1.6" fill={PAL.skyShade} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;
