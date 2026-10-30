@@ -18,16 +18,16 @@ const t: CultureTranslation = {
     'c.je.p': 'Darf ich „je“ zu dir sagen?',
     'c.je.s': 'Deine neue Vorgesetzte sagt: „Zeg maar je, hoor!“ Was meint sie?',
     'c.je.o1': 'Sie möchte, dass du „je“ zu ihr sagst.',
-    'c.je.o2': 'Sie bittet dich, etwas zu sagen.', // nalezen: nieuwe foute optie
-    'c.je.o3': 'Sie möchte, dass du höflicher sprichst.', // nalezen: nieuwe foute optie
+    'c.je.o2': 'Sie bittet dich, etwas zu sagen.', // nagelezen (2e lezing)
+    'c.je.o3': 'Sie möchte, dass du höflicher sprichst.', // nagelezen (2e lezing)
     'c.je.w': '„Zeg maar je“ ist freundlich: Sie möchte weniger Abstand. In vielen niederländischen Firmen ist es normal, „je“ zur Vorgesetzten oder zum Vorgesetzten zu sagen.',
     'c.names': 'Vornamen und Händeschütteln',
     'c.names.b': 'Gib am ersten Tag kurz die Hand, schau die Person an und sag deinen Vornamen. Kollegen und Chefs sprechen sich meistens mit dem Vornamen an.',
     'c.names.p': 'Hallo, ich bin Ali. Ich bin neu hier.',
     'c.names.s': 'Ein Kollege kommt zu dir: „Hoi, ik ben Mark.“ Was machst du?',
-    'c.names.o1': 'Gib ihm die Hand und sag deinen Namen.', // nalezen: korter goed antwoord
-    'c.names.o2': 'Nick, lächle und warte auf Fragen.', // nalezen: nieuwe foute optie
-    'c.names.o3': 'Gib ihm die Hand und nenn ihn „meneer“ (Herr).', // nalezen: nieuwe foute optie
+    'c.names.o1': 'Gib ihm die Hand und sag deinen Namen.', // nagelezen (2e lezing)
+    'c.names.o2': 'Nick, lächle und warte auf Fragen.', // nagelezen (2e lezing)
+    'c.names.o3': 'Gib ihm die Hand und nenn ihn „meneer“ (Herr).', // nagelezen (2e lezing)
     'c.names.w': 'Eine kurze Vorstellung mit deinem Vornamen ist der normale Anfang. So merken sich die Kollegen dich leichter und fragen dich öfter, ob du mitkommst.',
     'c.arrive': 'Dein erster Tag: wohin gehen',
     'c.arrive.b': 'Geh am ersten Tag zuerst zum Empfang oder zum Haupteingang. Sag deinen Namen, deine Zeitarbeitsfirma (wenn du eine hast) und zu wem du sollst. Viele Firmen geben dir einen Buddy: Den darfst du alles fragen.',
@@ -41,9 +41,9 @@ const t: CultureTranslation = {
     'c.ask.b': 'Eine Frage zeigt, dass du die Arbeit gut machen willst. Wenn du nickst, obwohl du es nicht verstehst, kann das zu Fehlern oder Unfällen führen. Noch einmal fragen ist ganz normal.',
     'c.ask.p': 'Entschuldigung, das verstehe ich nicht. Erklärst du es noch einmal?',
     'c.ask.s': 'Dein Vorgesetzter erklärt eine Aufgabe sehr schnell. Du hast sie nicht verstanden. Was machst du?',
-    'c.ask.o1': 'Bitte darum, es noch einmal zu erklären.', // nalezen: korter goed antwoord
+    'c.ask.o1': 'Bitte darum, es noch einmal zu erklären.', // nagelezen (2e lezing)
     'c.ask.o2': 'Nick und versuch zu raten.',
-    'c.ask.o3': 'Entschuldige dich für dein Niederländisch und fang an zu arbeiten.', // nalezen: nieuwe foute optie
+    'c.ask.o3': 'Entschuldige dich für dein Niederländisch und fang an zu arbeiten.', // nagelezen (2e lezing)
     'c.ask.w': 'Niederländische Vorgesetzte erwarten Fragen. Lieber zweimal fragen als einen Fehler machen.',
     'c.gear': 'Sicherheitsregeln gelten für alle',
     'c.gear.b': 'Regeln für Helm, Schuhe und Handschuhe sind kein Vorschlag: Alle halten sich daran, auch der Chef. Dein Arbeitgeber muss dir die Schutzausrüstung, die du brauchst, kostenlos geben. Ausrüstung, die nicht passt, schützt dich nicht gut. Frag also nach deiner Größe: „Heb je dit ook in mijn maat?“',
@@ -65,10 +65,10 @@ const t: CultureTranslation = {
     'c.accident.b': 'Sag deinem Vorgesetzten oder dem BHV’er (dem betrieblichen Ersthelfer) Bescheid, bei jedem Unfall, auch bei einem kleinen. Arbeitest du über eine Zeitarbeitsfirma? Sag es auch dort. Im Notfall ruf zuerst 112 an. Die Firma, in der der Unfall passiert ist, muss einen schweren Unfall der Nederlandse Arbeidsinspectie melden (auch wenn du über eine Zeitarbeitsfirma arbeitest): wenn jemand stirbt, für immer verletzt ist oder im Krankenhaus bleiben muss. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.accident.p': 'Mein Kollege ist verletzt. Wo ist der Ersthelfer?',
     'c.accident.s': 'Du hast dir beim Heben den Rücken verletzt. Du hast Angst, deine Arbeit zu verlieren. Was machst du?',
-    'c.accident.o1': 'Melde es deinem Vorgesetzten am selben Tag.', // nalezen: korter goed antwoord
+    'c.accident.o1': 'Melde es deinem Vorgesetzten am selben Tag.', // nagelezen (2e lezing)
     'c.accident.o2': 'Sag nichts, damit du deine Arbeit nicht verlierst.',
     'c.accident.o3': 'Warte ab, ob der Schmerz von selbst weggeht.',
-    'c.accident.w': 'Melde es am selben Tag, auch wenn es klein scheint: Der Schmerz kann später schlimmer werden. Dein Arbeitgeber darf dich nicht bestrafen, weil du es meldest. Du arbeitest über eine Zeitarbeitsfirma? Sag es auch dort.', // nalezen: korter goed antwoord
+    'c.accident.w': 'Melde es am selben Tag, auch wenn es klein scheint: Der Schmerz kann später schlimmer werden. Dein Arbeitgeber darf dich nicht bestrafen, weil du es meldest. Du arbeitest über eine Zeitarbeitsfirma? Sag es auch dort.', // nagelezen (2e lezing)
     'c.notyet': 'Noch nicht gelernt? Sag es',
     'c.notyet.b': 'Die Firma, in der du arbeitest, muss dir erklären, wie du sicher arbeitest. Benutze keine Maschine und keinen Gabelstapler, wenn es dir niemand beigebracht hat. „Dit heb ik nog niet geleerd“ zu sagen ist hier normal: Es zeigt, dass du sicher arbeitest.',
     'c.notyet.p': 'Das habe ich noch nicht gelernt. Kannst du es mir vormachen?',
@@ -82,7 +82,7 @@ const t: CultureTranslation = {
     'c.direct.p': 'Okay, wie muss es dann gemacht werden?',
     'c.direct.s': 'Ein Kollege sagt: „Nee, dat is fout. Die doos moet daar.“ Was machst du?',
     'c.direct.o1': 'Frag, wie es gemacht werden muss, und stell den Karton um.',
-    'c.direct.o2': 'Entschuldige dich immer wieder: Dein Kollege ist wütend.', // nalezen: nieuwe foute optie
+    'c.direct.o2': 'Entschuldige dich immer wieder: Dein Kollege ist wütend.', // nagelezen (2e lezing)
     'c.direct.o3': 'Sag nichts und lass den Karton, wo er ist.',
     'c.direct.w': 'Bei direktem Feedback geht es um die Arbeit, nicht um dich. Wenn du fragst „hoe moet het dan?“, zeigst du, dass du lernen willst.',
     'c.limits': 'Sag, wenn es zu schwer ist',
@@ -97,7 +97,7 @@ const t: CultureTranslation = {
     'c.time.b': 'Pünktlich sein ist sehr wichtig. Viele kommen fünf oder zehn Minuten vor Schichtbeginn. Wenn du zu spät kommst, schick eine Nachricht oder ruf an, bevor deine Schicht anfängt, nicht danach.',
     'c.time.p': 'Entschuldigung, der Bus hat Verspätung. Ich bin um acht Uhr da.',
     'c.time.s': 'Dein Bus hat Verspätung, und du kommst 15 Minuten zu spät. Was machst du?',
-    'c.time.o1': 'Sag es sofort deinem Vorgesetzten.', // nalezen: korter goed antwoord
+    'c.time.o1': 'Sag es sofort deinem Vorgesetzten.', // nagelezen (2e lezing)
     'c.time.o2': 'Erklär es, wenn du ankommst.',
     'c.time.o3': 'Geh heute gar nicht zur Arbeit.',
     'c.time.w': 'Wenn du es früh sagst, kann das Team planen. Zu spät kommen ohne Nachricht gilt als viel schlimmer als die Verspätung selbst.',
@@ -105,7 +105,7 @@ const t: CultureTranslation = {
     'c.sick.b': 'Ruf selbst deinen Vorgesetzten an, bevor deine Schicht anfängt, außer deine Firma hat eine andere Regel. Arbeitest du über eine Zeitarbeitsfirma? Sag es auch dort. Du musst nicht sagen, welche Krankheit du hast. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.sick.p': 'Ich bin krank. Ich kann heute nicht zur Arbeit kommen.',
     'c.sick.s': 'Du wachst mit Fieber auf. Deine Schicht fängt um 7:00 Uhr an. Was machst du?',
-    'c.sick.o1': 'Ruf vor 7:00 Uhr deinen Vorgesetzten an.', // nalezen: korter goed antwoord
+    'c.sick.o1': 'Ruf vor 7:00 Uhr deinen Vorgesetzten an.', // nagelezen (2e lezing)
     'c.sick.o2': 'Bitte einen Kollegen, es später dem Chef zu sagen.',
     'c.sick.o3': 'Bleib zu Hause und ruf morgen an.',
     'c.sick.w': 'Sich selbst und rechtzeitig krankmelden ist an den meisten niederländischen Arbeitsplätzen die Regel. Dein Arbeitgeber darf fragen, wie lange es dauert, aber nicht, welche Krankheit es ist.',
@@ -113,7 +113,7 @@ const t: CultureTranslation = {
     'c.speakup.b': 'Hier ist es normal und wird respektiert, ruhig zu sagen, wenn dich etwas stört. Sprich zuerst mit der Person selbst, in einem ruhigen Moment. Benutze Sätze mit „ik“: „Ik vind het niet fijn dat ...“. Wenn das nicht hilft, sprich mit deinem Vorgesetzten.',
     'c.speakup.p': 'Mich beschäftigt etwas. Können wir kurz reden?',
     'c.speakup.s': 'Ein Kollege überlässt dir immer die schwere Arbeit. Das stört dich. Was machst du?',
-    'c.speakup.o1': 'Sag dem Kollegen, was dich stört.', // nalezen: korter goed antwoord
+    'c.speakup.o1': 'Sag dem Kollegen, was dich stört.', // nagelezen (2e lezing)
     'c.speakup.o2': 'Schweig und werde immer wütender.',
     'c.speakup.o3': 'Beschwer dich bei allen anderen Kollegen über ihn.',
     'c.speakup.w': 'Niederländische Kollegen hören es meistens lieber direkt. Wenn du es früh und ruhig sagst, bleibt das Verhältnis gut.',
@@ -121,16 +121,16 @@ const t: CultureTranslation = {
     'c.no.b': 'Wenn du „ja“ sagst, verlassen sich die Leute darauf: Abgemacht ist abgemacht. Darum ist es in Ordnung, „nee“ oder „dat lukt niet“ zu sagen, wenn du etwas nicht kannst. Sag es rechtzeitig und biete, wenn du kannst, etwas anderes an.',
     'c.no.p': 'Nein, das geht heute nicht. Morgen kann ich.',
     'c.no.s': 'Dein Vorgesetzter fragt, ob du am Samstag extra arbeiten kannst. Du kannst nicht. Was machst du?',
-    'c.no.o1': 'Sag nein und biete einen anderen Tag an.', // nalezen: korter goed antwoord
+    'c.no.o1': 'Sag nein und biete einen anderen Tag an.', // nagelezen (2e lezing)
     'c.no.o2': 'Sag ja und komm dann nicht.',
-    'c.no.o3': 'Sag ja: Zum Chef kann man nicht nein sagen.', // nalezen: nieuwe foute optie
+    'c.no.o3': 'Sag ja: Zum Chef kann man nicht nein sagen.', // nagelezen (2e lezing)
     'c.no.w': 'Ein klares „nee“ wird respektiert. „Ja“ sagen und nicht kommen zerstört das Vertrauen viel mehr.',
     'c.task': 'Sag, wenn es fertig ist, frag, wenn es nicht klar ist',
     'c.task.b': 'In den Niederlanden gibt ein Vorgesetzter eine Aufgabe oft in wenigen Worten und erwartet, dass du sagst, wenn sie fertig ist. „Ja“ sagen, wenn du es nicht verstanden hast, führt oft zu Fehlern. Noch einmal fragen oder bitten, dass man es dir zeigt, ist hier normal und nicht unhöflich.',
     'c.task.p': 'Fertig! Was soll ich jetzt machen?',
     'c.task.s': 'Dein Vorgesetzter erklärt eine Aufgabe sehr schnell. Du hast nur die Hälfte verstanden. Was machst du?',
-    'c.task.o1': 'Bitte darum, es noch einmal zu sehen.', // nalezen: korter goed antwoord
-    'c.task.o2': 'Fang mit der Hälfte an, die du verstanden hast.', // nalezen: nieuwe foute optie
+    'c.task.o1': 'Bitte darum, es noch einmal zu sehen.', // nagelezen (2e lezing)
+    'c.task.o2': 'Fang mit der Hälfte an, die du verstanden hast.', // nagelezen (2e lezing)
     'c.task.o3': 'Warte, bis ein Kollege es macht.',
     'c.task.w': 'Noch einmal fragen ist normal und dauert eine Minute. Einen Fehler zu beheben dauert viel länger. Die meisten Vorgesetzten zeigen es lieber zweimal.',
     'u.teamwork': 'Zusammenarbeiten',

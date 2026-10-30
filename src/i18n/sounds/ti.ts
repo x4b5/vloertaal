@@ -31,7 +31,7 @@ const t: CultureTranslation = {
     'c.roundsounds.q': 'እቲ ማዕጾ ክፉት ድዩ?',
     'c.roundsounds.a': 'ኣይፋል፡ ዕጹው እዩ።',
     'c.roundsounds.a.why': 'ማዕጾ ክፉት ድዩ ተሓቲቱ፡ እዚ መልሲ ክፉት ከም ዘይኮነ ይብል።',
-    'l.pbgk': 'p ወይ b፡ g፡ k ወይ h', // nieuw, nog nalezen
+    'l.pbgk': 'p ወይ b፡ g፡ k ወይ h', // nagelezen (2e lezing)
     'w.kl.pak': 'ሱፍ (ምሉእ ክዳን)',
     'w.kl.bak': 'ሳጹን፡ መጕሓፊ ጓሓፍ',
     'w.kl.goud': 'ወርቂ',

@@ -81,12 +81,12 @@ const lang: HelpLanguageSource = {
     unlock: 'Deblochează',
     sector: 'Munca ta',
     chooseSector: 'Unde lucrezi?',
-    // nieuw, nog nalezen (land: Nederland of België)
+    // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'În ce țară lucrezi?',
-    countryHint: 'Regulile de muncă din Vloertaal sunt pentru Țările de Jos. În Belgia, multe reguli sunt diferite. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.',
-    countryNl: 'Țările de Jos',
+    countryHint: 'Regulile de muncă din Vloertaal sunt pentru Olanda. În Belgia, multe reguli sunt diferite. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.',
+    countryNl: 'Olanda',
     countryBe: 'Belgia (Flandra)',
-    tipsNote: 'Aceste sfaturi sunt despre munca în Țările de Jos. Informații generale, nu consultanță juridică.',
+    tipsNote: 'Aceste sfaturi sunt despre munca în Olanda. Informații generale, nu consultanță juridică.',
     sectorHint: 'Lecțiile pentru munca ta vin devreme. Poți schimba asta mai târziu în Setări.',
     otherSectors: 'Alte domenii',
     reviewToday: 'Recapitularea de azi',
@@ -98,7 +98,7 @@ const lang: HelpLanguageSource = {
     sectorCare: 'Îngrijire',
     sectorHospitality: 'Hoteluri și restaurante',
     sectorCleaning: 'Curățenie',
-    sectorHorticulture: 'Horticultură', // nieuw (30 okt 2026), nog nalezen
+    sectorHorticulture: 'Horticultură', // nieuw (30 okt 2026), nagelezen (2e lezing)
     sound: 'Sunet',
     soundOn: 'Cu sunet',
     withoutSound: 'Fără sunet',
@@ -245,7 +245,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Oprit',
     sectorGroupMake: 'Producție și transport',
     sectorGroupCare: 'Îngrijire și servicii',
-    sectorGroupOther: 'Altceva', // nieuw (30 okt 2026), nog nalezen
+    sectorGroupOther: 'Altceva', // nieuw (30 okt 2026), nagelezen (2e lezing)
     voiceWoman: 'Voce de femeie',
     voiceMan: 'Voce de bărbat',
     writingPick: 'Alegerea cuvântului',

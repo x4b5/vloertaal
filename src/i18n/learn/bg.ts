@@ -85,10 +85,10 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Молят те да сложиш имена в чатбот: този отговор казва „не“ и защо.",
     'c.aifake.a.why': "Нов номер иска пари: този отговор първо проверява.",
     'c.aiplan.a.why': "Графикът е от приложение: този отговор иска човек.",
-    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
-    'c.harvest.a.why': "Питат колко реда: този отговор дава число и колко остават.", // nieuw, nog nalezen
-    'c.greensafe.a.why': "Току-що напръскана: този отговор казва „още не“ и защо.", // nieuw, nog nalezen
-    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
+    'c.harvest.a.why': "Питат колко реда: този отговор дава число и колко остават.", // nagelezen (2e lezing)
+    'c.greensafe.a.why': "Току-що напръскана: този отговор казва „още не“ и защо.", // nagelezen (2e lezing)
+    // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
     'c.details.a.why': "Питат за фамилията: този отговор я казва и предлага да я каже буква по буква.",
     'c.dates.a.why': "Питат за датата: този отговор дава деня и датата.",
     'c.permit.a.why': "Отказът е наред, когато има причина. Да предложиш друг ден помага.",

@@ -81,7 +81,7 @@ const lang: HelpLanguageSource = {
     unlock: 'Aç',
     sector: 'İşin',
     chooseSector: 'Nerede çalışıyorsun?',
-    // nieuw, nog nalezen (land: Nederland of België)
+    // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Hangi ülkede çalışıyorsun?',
     countryHint: 'Vloertaal’daki iş kuralları Hollanda için. Belçika’da birçok kural farklı. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.',
     countryNl: 'Hollanda',
@@ -98,7 +98,7 @@ const lang: HelpLanguageSource = {
     sectorCare: 'Sağlık ve bakım',
     sectorHospitality: 'Otel ve restoran',
     sectorCleaning: 'Temizlik',
-    sectorHorticulture: 'Bahçecilik', // nieuw (30 okt 2026), nog nalezen
+    sectorHorticulture: 'Bahçecilik', // nagelezen (2e lezing)
     sound: 'Ses',
     soundOn: 'Ses açık',
     withoutSound: 'Sessiz',
@@ -245,7 +245,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Kapalı',
     sectorGroupMake: 'Üretim ve taşıma',
     sectorGroupCare: 'Bakım ve hizmet',
-    sectorGroupOther: 'Başka bir şey', // nieuw (30 okt 2026), nog nalezen
+    sectorGroupOther: 'Başka bir şey', // nagelezen (2e lezing)
     voiceWoman: 'Kadın sesi',
     voiceMan: 'Erkek sesi',
     writingPick: 'Kelimeyi seç',
