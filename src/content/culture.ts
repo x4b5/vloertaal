@@ -68,7 +68,7 @@ const baseTips: CultureTip[] = [
     phrase: { id: 'c.names.p', nl: 'Hoi, ik ben Ali. Ik ben nieuw hier.', en: 'Hi, I am Ali. I am new here.' },
     situation: { id: 'c.names.s', en: 'A colleague walks up to you: "Hoi, ik ben Mark." What do you do?', nl: 'Hoi, ik ben Mark.' },
     options: [
-      { id: 'c.names.o1', en: 'Shake hands and say your first name.', best: true },
+      { id: 'c.names.o1', en: 'Shake hands, say your name.', best: true },
       { id: 'c.names.o2', en: 'Look down and say nothing.', best: false },
       { id: 'c.names.o3', en: 'Call him "Mister Mark".', best: false },
     ],
@@ -98,7 +98,7 @@ const baseTips: CultureTip[] = [
     phrase: { id: 'c.ask.p', nl: 'Sorry, dat begrijp ik niet. Wil je het nog een keer uitleggen?', en: 'Sorry, I do not understand. Will you explain it once more?' },
     situation: { id: 'c.ask.s', en: 'Your supervisor explains a task very fast. You did not understand it. What do you do?' },
     options: [
-      { id: 'c.ask.o1', en: 'Say that you did not understand and ask again.', best: true },
+      { id: 'c.ask.o1', en: 'Ask for the explanation again.', best: true },
       { id: 'c.ask.o2', en: 'Nod and try to guess.', best: false },
       { id: 'c.ask.o3', en: 'Wait and hope someone else does it.', best: false },
     ],
@@ -143,11 +143,11 @@ const baseTips: CultureTip[] = [
     phrase: { id: 'c.accident.p', nl: 'Mijn collega is gewond. Waar is de BHV’er?', en: 'My colleague is hurt. Where is the first-aider?' },
     situation: { id: 'c.accident.s', en: 'You hurt your back while lifting. You are afraid to lose your job. What do you do?' },
     options: [
-      { id: 'c.accident.o1', en: 'Tell your supervisor today, and your agency too if you work through one.', best: true },
+      { id: 'c.accident.o1', en: 'Report it to your supervisor the same day.', best: true },
       { id: 'c.accident.o2', en: 'Say nothing, so you do not lose your job.', best: false },
       { id: 'c.accident.o3', en: 'Wait and see if the pain goes away by itself.', best: false },
     ],
-    why: { id: 'c.accident.w', en: 'Report it the same day, also if it seems small: the pain can get worse later. Your employer is not allowed to punish you for reporting it.' },
+    why: { id: 'c.accident.w', en: 'Report it the same day, also if it seems small: the pain can get worse later. Your employer is not allowed to punish you for reporting it. Work through an agency? Tell the agency too.' },
   }),
   tip({
     id: 'c.notyet',
@@ -164,7 +164,7 @@ const baseTips: CultureTip[] = [
     // The help languages say "he says" (a supervisor, masculine in most of them): a man speaks.
     speaker: 'm',
     options: [
-      { id: 'c.notyet.o1', en: 'Say you have not learned it. Ask for instruction.', best: true },
+      { id: 'c.notyet.o1', en: 'Say you never learned it. Ask for instruction.', best: true },
       { id: 'c.notyet.o2', en: 'Drive slowly and carefully, just this once.', best: false },
       { id: 'c.notyet.o3', en: 'Say "ja" and hope that it goes well.', best: false },
     ],
@@ -179,7 +179,7 @@ const baseTips: CultureTip[] = [
     phrase: { id: 'c.direct.p', nl: 'Oké, hoe moet het dan?', en: 'Okay, how should it be done then?' },
     situation: { id: 'c.direct.s', en: 'A colleague says: "Nee, dat is fout. Die doos moet daar." What do you do?', nl: 'Nee, dat is fout. Die doos moet daar.' },
     options: [
-      { id: 'c.direct.o1', en: 'Ask how it should be done and move the box.', best: true },
+      { id: 'c.direct.o1', en: 'Move the box and ask how to do it.', best: true },
       { id: 'c.direct.o2', en: 'Feel insulted and walk away.', best: false },
       { id: 'c.direct.o3', en: 'Say nothing and leave the box where it is.', best: false },
     ],
@@ -209,7 +209,7 @@ const baseTips: CultureTip[] = [
     phrase: { id: 'c.time.p', nl: 'Sorry, de bus is te laat. Ik ben er om acht uur.', en: 'Sorry, the bus is late. I will be there at eight.' },
     situation: { id: 'c.time.s', en: 'Your bus is late and you will be 15 minutes late. What do you do?' },
     options: [
-      { id: 'c.time.o1', en: 'Message or call your supervisor right away.', best: true },
+      { id: 'c.time.o1', en: 'Tell your supervisor right away.', best: true },
       { id: 'c.time.o2', en: 'Explain it when you arrive.', best: false },
       { id: 'c.time.o3', en: 'Do not go to work at all today.', best: false },
     ],
@@ -224,7 +224,7 @@ const baseTips: CultureTip[] = [
     phrase: { id: 'c.sick.p', nl: 'Ik ben ziek. Ik kan vandaag niet komen werken.', en: 'I am sick. I cannot come to work today.' },
     situation: { id: 'c.sick.s', en: 'You wake up with a fever. Your shift starts at 7:00. What do you do?' },
     options: [
-      { id: 'c.sick.o1', en: 'Call your supervisor before 7:00 and say you are sick.', best: true },
+      { id: 'c.sick.o1', en: 'Call your supervisor before 7:00.', best: true },
       { id: 'c.sick.o2', en: 'Ask a colleague to tell the boss later.', best: false },
       { id: 'c.sick.o3', en: 'Stay home and call tomorrow.', best: false },
     ],
@@ -239,7 +239,7 @@ const baseTips: CultureTip[] = [
     phrase: { id: 'c.speakup.p', nl: 'Ik zit ergens mee. Kunnen we even praten?', en: 'Something is bothering me. Can we talk for a moment?' },
     situation: { id: 'c.speakup.s', en: 'A colleague always leaves the heavy work for you. It bothers you. What do you do?' },
     options: [
-      { id: 'c.speakup.o1', en: 'Calmly tell the colleague what bothers you.', best: true },
+      { id: 'c.speakup.o1', en: 'Tell the colleague what bothers you.', best: true },
       { id: 'c.speakup.o2', en: 'Keep quiet and get more and more angry.', best: false },
       { id: 'c.speakup.o3', en: 'Complain about him to all other colleagues.', best: false },
     ],
@@ -254,7 +254,7 @@ const baseTips: CultureTip[] = [
     phrase: { id: 'c.no.p', nl: 'Nee, dat lukt vandaag niet. Morgen kan ik wel.', en: 'No, that does not work today. Tomorrow I can.' },
     situation: { id: 'c.no.s', en: 'Your supervisor asks if you can work extra on Saturday. You cannot. What do you do?' },
     options: [
-      { id: 'c.no.o1', en: 'Say no politely and offer another day.', best: true },
+      { id: 'c.no.o1', en: 'Say no and offer another day.', best: true },
       { id: 'c.no.o2', en: 'Say yes and then do not come.', best: false },
       { id: 'c.no.o3', en: 'Say "maybe" and never answer.', best: false },
     ],
@@ -269,7 +269,7 @@ const baseTips: CultureTip[] = [
     phrase: { id: 'c.task.p', nl: 'Klaar! Wat moet ik nu doen?', en: 'Done! What must I do now?' },
     situation: { id: 'c.task.s', en: 'Your supervisor explains a task very fast. You understood only half. What do you do?' },
     options: [
-      { id: 'c.task.o1', en: 'Ask: "Kunt u het nog een keer laten zien?"', best: true },
+      { id: 'c.task.o1', en: 'Ask to see it one more time.', best: true },
       { id: 'c.task.o2', en: 'Say "ja" and guess.', best: false },
       { id: 'c.task.o3', en: 'Wait until a colleague does it.', best: false },
     ],

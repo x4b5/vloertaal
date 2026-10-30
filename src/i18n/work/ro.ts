@@ -564,7 +564,7 @@ const t: CultureTranslation = {
     'c.interview.b': 'Vino la timp: cu 5–10 minute mai devreme. Salută politicos și uită-te la persoană. Spune pe scurt ce știi să faci. E normal și bine să pui și tu întrebări, de exemplu despre ore, despre muncă sau despre instruire. La final poți întreba când vei primi un răspuns. E în regulă să spui că încă înveți olandeză. Un angajator nu are voie să te întrebe despre religie, o sarcină (dacă aștepți un copil) sau sănătatea ta. Nu trebuie să răspunzi: poți spune politicos că preferi să nu răspunzi.',
     'c.interview.p': 'Pot să întreb și eu ceva? Câte ore pe săptămână e munca?',
     'c.interview.s': 'La finalul interviului, angajatorul întreabă: „Heb je nog vragen?” Ce faci?',
-    'c.interview.o1': 'Pui una sau două întrebări, de exemplu despre ore sau instruire.',
+    'c.interview.o1': 'Pui o întrebare despre ore sau instruire.', // nalezen: korter goed antwoord
     'c.interview.o2': 'Spui nu, pentru că nu e politicos să pui întrebări.',
     'c.interview.o3': 'Spui nu, ca interviul să se termine repede.',
     'c.interview.w': 'Întrebările arată că te interesează postul. Angajatorii din Olanda se așteaptă des la ele.',
@@ -572,7 +572,7 @@ const t: CultureTranslation = {
     'c.findwork.b': 'Cere mereu un contract scris și o copie pentru tine. Citește-l înainte să semnezi sau roagă o persoană de încredere să te ajute. O agenție de muncă temporară (uitzendbureau) nu are voie să-ți ceară bani ca să-ți găsească de lucru. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.findwork.p': 'Pot să citesc întâi contractul?',
     'c.findwork.s': 'Un angajator nou spune: „Semnează aici acum. Îl poți citi mai târziu.” Ce faci?',
-    'c.findwork.o1': 'Ceri timp să-l citești sau o copie pe care s-o citești acasă.',
+    'c.findwork.o1': 'Ceri timp să-l citești sau o copie.', // nalezen: korter goed antwoord
     'c.findwork.o2': 'Semnezi repede, ca să nu pierzi postul.',
     'c.findwork.o3': 'Pleci fără să întrebi nimic.',
     'c.findwork.w': 'Contractul spune cât câștigi și ce drepturi ai. Un angajator bun îți dă timp să-l citești. Poți întreba despre tot ce nu înțelegi.',
@@ -580,7 +580,7 @@ const t: CultureTranslation = {
     'c.contract.b': { m: 'Perioada de probă (proeftijd) trebuie să fie în scris. Nu e permisă într-un contract de 6 luni sau mai scurt. Într-un contract mai lung, dar mai scurt de 2 ani, e de cel mult 1 lună. Într-un contract de 2 ani sau mai lung, sau pe perioadă nedeterminată, e de cel mult 2 luni. Lucrezi la chemare (oproepkracht)? Angajatorul trebuie să te cheme cu cel puțin 4 zile înainte. Dacă te cheamă mai târziu, nu trebuie să vii. Un cao poate scurta aceste 4 zile, dar nu la mai puțin de 1 zi. Dacă îți anulează munca mai târziu de atât, tot primești plata. Dacă te cheamă pentru mai puțin de 3 ore de muncă, de obicei ești plătit pentru 3 ore. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.', f: 'Perioada de probă (proeftijd) trebuie să fie în scris. Nu e permisă într-un contract de 6 luni sau mai scurt. Într-un contract mai lung, dar mai scurt de 2 ani, e de cel mult 1 lună. Într-un contract de 2 ani sau mai lung, sau pe perioadă nedeterminată, e de cel mult 2 luni. Lucrezi la chemare (oproepkracht)? Angajatorul trebuie să te cheme cu cel puțin 4 zile înainte. Dacă te cheamă mai târziu, nu trebuie să vii. Un cao poate scurta aceste 4 zile, dar nu la mai puțin de 1 zi. Dacă îți anulează munca mai târziu de atât, tot primești plata. Dacă te cheamă pentru mai puțin de 3 ore de muncă, de obicei ești plătită pentru 3 ore. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.' },
     'c.contract.p': 'Perioada de probă e în contractul meu?',
     'c.contract.s': 'Contractul tău e pe 3 luni. Scrie în el: „Proeftijd: 1 maand”. Ce faci?',
-    'c.contract.o1': 'Întrebi calm despre asta: într-un contract atât de scurt nu e permisă perioada de probă.',
+    'c.contract.o1': 'Întrebi despre asta: această perioadă de probă nu contează.', // nalezen: korter goed antwoord
     'c.contract.o2': 'Nu faci nimic. Orice contract are perioadă de probă.',
     'c.contract.o3': 'Semnezi și nu întrebi niciodată, pentru că șeful știe cel mai bine.',
     'c.contract.w': 'O perioadă de probă într-un contract de 6 luni sau mai scurt nu e valabilă. E normal să întrebi calm. Dacă răspunsul nu e clar, cere sfatul sindicatului sau al Juridisch Loket.',
@@ -588,7 +588,7 @@ const t: CultureTranslation = {
     'c.agency.b': 'Dacă lucrezi printr-o agenție de muncă temporară (uitzendbureau), angajatorul tău e agenția, nu firma unde lucrezi. Contractul și salariul le primești de la agenție, iar pentru lucrătorii temporari există un cao (uitzend-cao). Ai dreptul la același salariu ca angajații firmei care fac aceeași muncă. Primești și prima de vacanță (vakantiegeld) și strângi zile de concediu. Ține-ți propria listă cu orele lucrate și verifică-le pe fluturașul de salariu. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.agency.p': 'Pe fluturașul meu sunt prea puține ore.',
     'c.agency.s': 'Pe fluturașul de salariu scrie 32 de ore, dar tu ai lucrat 38. Ce faci?',
-    'c.agency.o1': 'Îi arăți persoanei de contact de la agenție (intercedent) lista ta cu ore și îi ceri să corecteze.',
+    'c.agency.o1': 'Îi arăți agenției lista ta cu ore și ceri să corecteze.', // nalezen: korter goed antwoord
     'c.agency.o2': 'Nu spui nimic, pentru că sunt doar 6 ore.',
     'c.agency.o3': 'Îi ceri șefului de la firma unde lucrezi să-ți plătească cele 6 ore.',
     'c.agency.w': 'Agenția te plătește, deci agenția trebuie să corecteze greșeala. Lista ta cu zile și ore ajută. E dreptul tău să întrebi.',
@@ -596,7 +596,7 @@ const t: CultureTranslation = {
     'c.bsn.b': 'Primești un BSN (burgerservicenummer) când te înregistrezi la primărie (gemeente). Ești aici doar pentru scurt timp? Atunci te înregistrezi la un ghișeu RNI. Ai nevoie de BSN ca să lucrezi, pentru impozite, pentru asigurarea de sănătate și pentru un cont bancar. Angajatorul are nevoie de actul tău de identitate și de BSN. Nu da BSN-ul sau o copie a actului de identitate oamenilor care nu au nevoie de ele: întreabă de ce au nevoie. Te muți? Înregistrează noua adresă la gemeente în 5 zile. DigiD e contul tău pentru site-urile statului: nu-l da niciodată altcuiva. Locuiești sau lucrezi aici? Atunci de obicei trebuie să ai asigurare de sănătate olandeză (zorgverzekering). Rezolv-o repede. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.bsn.p': 'De ce aveți nevoie de BSN-ul meu?',
     'c.bsn.s': 'Cineva pe care nu-l cunoști îți oferă de lucru pe WhatsApp. Îți cere o poză cu pașaportul și datele de conectare DigiD. Ce faci?',
-    'c.bsn.o1': 'Nu dai niciodată datele de conectare DigiD. Întrebi cine e și de ce are nevoie de actul tău și verifici întâi firma.',
+    'c.bsn.o1': 'Nu dai niciodată datele de conectare DigiD. Verifici întâi cine e.', // nalezen: korter goed antwoord
     'c.bsn.o2': 'Trimiți repede tot, ca să primești postul.',
     'c.bsn.o3': 'Trimiți doar datele de conectare DigiD, pentru că nu sunt un document.',
     'c.bsn.w': 'Cu DigiD-ul tău sau cu o copie a actului tău, alții îți pot folosi numele, de exemplu pentru împrumuturi sau ajutoare sociale. Un angajator adevărat are nevoie de actul tău și de BSN, dar niciodată de datele tale de conectare DigiD.',
@@ -604,7 +604,7 @@ const t: CultureTranslation = {
     'c.housing.b': 'Angajatorul sau agenția îți aranjează locuința? Atunci contractul de închiriere trebuie să fie separat de contractul de muncă. Cere un contract de închiriere scris și o dovadă pentru ce plătești. Chiria poate fi reținută din salariu doar dacă ai fost de acord în scris și în limitele legii: verifică pe fluturașul de salariu. Garanția (borg) e de cel mult 2 luni de chirie de bază. O primești înapoi când pleci, minus pagubele reale. Înregistrează-te cu adresa ta la gemeente. Locuință nesigură, amenințări sau costuri nedrepte? Raportează la gemeente (meldpunt) și cere sfat gratuit de la Juridisch Loket sau de la un serviciu de consiliere pentru locuințe. Pentru o problemă cu prețul chiriei sau cu costurile de servicii există Huurcommissie. Ți se termină munca? Cere sfat înainte să pleci din locuință. Informații generale. Pentru situația ta: întreabă sindicatul, Juridisch Loket sau FairWork.',
     'c.housing.p': 'Pot primi o dovadă că am plătit?',
     'c.housing.s': 'Ți se termină munca. Agenția spune: „Trebuie să pleci din casă mâine.” Ce faci?',
-    'c.housing.o1': 'Ceri repede sfat, de exemplu la Juridisch Loket, înainte să pleci.',
+    'c.housing.o1': 'Ceri întâi sfat la Juridisch Loket.', // nalezen: korter goed antwoord
     'c.housing.o2': 'Pleci imediat și uiți de garanție.',
     'c.housing.o3': 'Rămâi și nu mai răspunzi agenției.',
     'c.housing.w': 'Contractul de închiriere are regulile lui, separat de muncă. Un sfat gratuit te ajută să-ți cunoști drepturile, de exemplu când trebuie să pleci și ce se întâmplă cu garanția.',
@@ -612,7 +612,7 @@ const t: CultureTranslation = {
     'c.payslip.b': 'Bruto e salariul tău înainte de impozit. Netto e ce primești în contul bancar: bruto minus impozitul și contribuțiile (loonheffing). Angajatorul trebuie să-ți dea un fluturaș de salariu (loonstrook). Verifică orele și plata pe fiecare fluturaș și notează-ți orele lucrate. Ai două locuri de muncă? Folosește reducerea de impozit (loonheffingskorting) doar la un singur angajator. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.payslip.p': 'Am lucrat mai multe ore. Poți verifica?',
     'c.payslip.s': 'Pe fluturașul tău sunt mai puține ore decât ai lucrat. Ce faci?',
-    'c.payslip.o1': 'Îi ceri calm șefului să verifice și îi arăți notițele tale.',
+    'c.payslip.o1': 'Îi arăți notițele tale și îi ceri șefului să verifice.', // nalezen: korter goed antwoord
     'c.payslip.o2': 'Nu spui nimic, pentru că nu vrei probleme.',
     'c.payslip.o3': 'A doua zi stai acasă fără să spui nimănui.',
     'c.payslip.w': 'Greșelile pe fluturaș se întâmplă. E normal să întrebi și e dreptul tău. Notițele tale cu zile și ore ajută mult.',
@@ -644,7 +644,7 @@ const t: CultureTranslation = {
     'c.clock.b': { m: 'Pontează-te singur la intrare și la ieșire, în momentul în care chiar începi și termini lucrul. Nu ponta niciodată un coleg și nu lăsa pe nimeni să-ți folosească cardul. Asta se consideră fraudă și poate duce la concediere. Vei întârzia? Sună înainte să înceapă tura. Verifică dacă orele pontate se potrivesc cu fluturașul de salariu. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.', f: 'Pontează-te singură la intrare și la ieșire, în momentul în care chiar începi și termini lucrul. Nu ponta niciodată un coleg și nu lăsa pe nimeni să-ți folosească cardul. Asta se consideră fraudă și poate duce la concediere. Vei întârzia? Sună înainte să înceapă tura. Verifică dacă orele pontate se potrivesc cu fluturașul de salariu. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.' },
     'c.clock.p': 'Am uitat să mă pontez la ieșire. Poți corecta?',
     'c.clock.s': 'Un coleg îți dă cardul lui: „Pontează-mă, întârzii 20 de minute.” Ce faci?',
-    'c.clock.o1': 'Spui frumos nu și îi spui să-l sune el pe șef.',
+    'c.clock.o1': 'Spui nu și îi spui să-l sune pe șef.', // nalezen: korter goed antwoord
     'c.clock.o2': 'O faci doar o dată, pentru că e prietenul tău.',
     'c.clock.o3': 'Îl pontezi și îi spui șefului mai târziu.',
     'c.clock.w': 'Să pontezi pe altcineva se consideră fraudă, pentru amândoi. Când spui nu, îți protejezi colegul și propriul loc de muncă.',
@@ -668,7 +668,7 @@ const t: CultureTranslation = {
     'c.mistakes.b': 'Toată lumea greșește la muncă. Spune repede, ca greșeala să poată fi reparată: „Sorry, ik heb een fout gemaakt.” Să ascunzi o greșeală e văzut ca mult mai rău decât greșeala în sine. Feedbackul e despre muncă, nu despre tine ca persoană. Ai primit un compliment? Spune simplu mulțumesc. Nu e clar ce să faci mai bine? Întreabă: „Kun je het uitleggen?”',
     'c.mistakes.p': 'Scuze, am greșit. Cum pot repara?',
     'c.mistakes.s': 'Ai pus 20 de cutii pe paletul greșit. Încă nu a văzut nimeni. Ce faci?',
-    'c.mistakes.o1': 'Îi spui imediat șefului și ajuți la reparare.',
+    'c.mistakes.o1': 'Îi spui șefului și ajuți la reparare.', // nalezen: korter goed antwoord
     'c.mistakes.o2': 'Nu spui nimic și speri că nu observă nimeni.',
     'c.mistakes.o3': 'Spui că a făcut-o un coleg.',
     'c.mistakes.w': 'O greșeală spusă devreme e ușor de reparat. Sinceritatea construiește încredere, iar asta contează mai mult decât să nu greșești niciodată.',
@@ -684,7 +684,7 @@ const t: CultureTranslation = {
     'c.health.b': 'Legea îți protejează sănătatea. Lucrezi mai mult de 5,5 ore? Atunci ai cel puțin 30 de minute de pauză (poate fi de 2 ori câte 15 minute). Mai mult de 10 ore? Atunci cel puțin 45 de minute. Un cao poate avea reguli de pauză puțin diferite. Poți lucra cel mult 12 ore într-o tură și 60 de ore într-o săptămână. Angajatorul trebuie să-ți dea gratuit echipament de protecție, cum ar fi încălțăminte de protecție sau mănuși. Muncă nesigură sau plată prea mică? Poți raporta la Nederlandse Arbeidsinspectie, și fără să-ți dai numele. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.health.p': 'Încă nu am avut pauză.',
     'c.health.s': 'Ai lucrat 6 ore fără pauză. Șeful îți cere să continui. Ce faci?',
-    'c.health.o1': 'Spui politicos că acum ai nevoie de pauză.',
+    'c.health.o1': 'Spui că acum ai nevoie de pauză.', // nalezen: korter goed antwoord
     'c.health.o2': 'Lucrezi mai departe și sari peste pauză în fiecare zi.',
     'c.health.o3': 'Pleci de la muncă acasă fără un cuvânt.',
     'c.health.w': 'Când lucrezi mai mult de 5,5 ore, pauza e prevăzută de lege, nu e o favoare. Odihna te ajută și să lucrezi în siguranță.',
@@ -716,7 +716,7 @@ const t: CultureTranslation = {
     'c.warning.b': { m: 'Fii atent la aceste semne. Angajatorul îți păstrează pașaportul sau actul de identitate: nu e voie, tu îți păstrezi actul, iar angajatorul poate face doar o copie. Primești mult mai puțini bani decât s-a stabilit sau nu primești fluturaș de salariu. Trebuie să plătești o datorie mare angajatorului sau agenției. Trebuie să lucrezi extrem de multe ore, fără să ai de ales. Cineva te amenință sau folosește locuința ca să facă presiune pe tine. Asta nu e normal și nu e permis. Informații generale. Pentru situația ta: întreabă sindicatul, Juridisch Loket sau FairWork.', f: 'Fii atentă la aceste semne. Angajatorul îți păstrează pașaportul sau actul de identitate: nu e voie, tu îți păstrezi actul, iar angajatorul poate face doar o copie. Primești mult mai puțini bani decât s-a stabilit sau nu primești fluturaș de salariu. Trebuie să plătești o datorie mare angajatorului sau agenției. Trebuie să lucrezi extrem de multe ore, fără să ai de ales. Cineva te amenință sau folosește locuința ca să facă presiune pe tine. Asta nu e normal și nu e permis. Informații generale. Pentru situația ta: întreabă sindicatul, Juridisch Loket sau FairWork.' },
     'c.warning.p': 'Vreau pașaportul înapoi.',
     'c.warning.s': 'În prima zi, agenția spune: „Îți păstrăm noi pașaportul, pentru siguranță.” Ce faci?',
-    'c.warning.o1': 'Spui politicos că îl păstrezi tu. Ei pot face o copie.',
+    'c.warning.o1': 'Îl păstrezi tu. Ei pot face o copie.', // nalezen: korter goed antwoord
     'c.warning.o2': 'Îl dai, pentru că agenția știe regulile.',
     'c.warning.o3': 'Îl dai, dar întâi îi faci o poză.',
     'c.warning.w': 'Pașaportul e al tău. Păstrarea lui e un mod de a controla lucrătorii. Un angajator are nevoie doar de o copie pentru dosar.',
@@ -732,10 +732,10 @@ const t: CultureTranslation = {
     'c.callin.b': { m: 'Când îl suni pe șef, spune-ți numele, motivul și când crezi că te întorci. Ești bolnav? Trebuie să spui doar că ești bolnav, nu ce boală ai. Sună: nu trimite doar un mesaj, decât dacă firma ta spune că un mesaj e suficient. Nu răspunde nimeni? Lasă un mesaj vocal și încearcă din nou. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.', f: 'Când îl suni pe șef, spune-ți numele, motivul și când crezi că te întorci. Ești bolnavă? Trebuie să spui doar că ești bolnavă, nu ce boală ai. Sună: nu trimite doar un mesaj, decât dacă firma ta spune că un mesaj e suficient. Nu răspunde nimeni? Lasă un mesaj vocal și încearcă din nou. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.' },
     'c.callin.p': 'Bună, sunt Ali. Azi nu pot veni.',
     'c.callin.s': 'Copilul tău e bolnav și nu poți veni la muncă. Firma vrea să suni. Ce faci?',
-    'c.callin.o1': 'Îl suni pe șef înainte de tură: îți spui numele, motivul și când crezi că te întorci.',
+    'c.callin.o1': 'Îl suni pe șef înainte de tură.', // nalezen: korter goed antwoord
     'c.callin.o2': 'Trimiți un mesaj scurt la începutul turei.',
     'c.callin.o3': 'Îl rogi pe vecin să sune în locul tău.',
-    'c.callin.w': 'Un apel e clar și rapid, iar șeful poate pune întrebări. Dacă spui când crezi că te întorci, îl ajuți să planifice.',
+    'c.callin.w': 'Un apel e clar și rapid, iar șeful poate pune întrebări. Dacă spui când crezi că te întorci, îl ajuți să planifice. Spune și numele tău și motivul.', // nalezen: korter goed antwoord
     'c.texting': 'Mesaje la muncă: scurte și politicoase',
     'c.texting.b': 'Scrie mesaje scurte și politicoase la muncă. Spune cine ești și ce se întâmplă și încheie cu un salut. De exemplu: „Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”. Verifică des programul (rooster) în aplicație. Răspunde la timp la cererile pentru ture. Ca să schimbi o tură, trebuie mai întâi să fie de acord șeful sau planificatorul, așa că întreabă: „Mag ik mijn dienst ruilen?” Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.',
     'c.texting.p': 'Salut Mark, întârzii 10 minute. Scuze! Salutări, Ali',
@@ -748,7 +748,7 @@ const t: CultureTranslation = {
     'c.certs.b': 'În construcții, industrie și munca prin agenție ai nevoie des de un certificat VCA (siguranță). Ca să conduci un motostivuitor, de obicei ai nevoie de un certificat de motostivuitorist (heftruckcertificaat). Întreabă-ți angajatorul dacă plătește cursul și examenul.',
     'c.certs.p': 'Pot face aici un curs VCA?',
     'c.certs.s': 'Un post cere certificat VCA. Încă nu îl ai. Ce faci?',
-    'c.certs.o1': 'Întrebi dacă angajatorul sau agenția poate organiza cursul sau cum îl poți obține.',
+    'c.certs.o1': 'Îi rogi pe angajator sau pe agenție să te ajute să-l obții.', // nalezen: korter goed antwoord
     'c.certs.o2': 'Nu aplici, pentru că oricum nu vei primi postul.',
     'c.certs.o3': 'Spui că îl ai și speri că nu verifică nimeni.',
     'c.certs.w': 'Mulți angajatori și multe agenții ajută cu VCA. Când întrebi, arăți că vrei să înveți.',
@@ -756,7 +756,7 @@ const t: CultureTranslation = {
     'c.diploma.b': 'Ai o diplomă din altă țară? O poți evalua la IDW (Internationale Diplomawaardering). Așa angajatorii pot vedea ce valoare are aici. E obligatorie o instruire pentru munca ta? Atunci angajatorul trebuie s-o plătească și se socotește timp de lucru. Întreabă-l pe șef despre cursuri. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.diploma.p': 'Sunt cursuri pentru mine?',
     'c.diploma.s': 'Angajatorul spune că trebuie să faci sâmbătă o instruire de siguranță obligatorie, fără plată. Ce e adevărat?',
-    'c.diploma.o1': 'Instruirea obligatorie e plătită de angajator și se socotește timp de lucru. Întrebi calm despre asta.',
+    'c.diploma.o1': 'Angajatorul o plătește și e timp de lucru.', // nalezen: korter goed antwoord
     'c.diploma.o2': 'Instruirea e mereu în timpul tău liber.',
     'c.diploma.o3': { m: 'Trebuie să plătești singur instruirea.', f: 'Trebuie să plătești singură instruirea.' },
     'c.diploma.w': 'Dacă o instruire e obligatorie pentru munca ta, angajatorul plătește și se socotește timp de lucru. Dacă nu e clar, cere un sfat.',
@@ -772,15 +772,15 @@ const t: CultureTranslation = {
     'c.insurance.b': 'Când locuiești sau lucrezi în Olanda, asigurarea de sănătate de bază e de obicei obligatorie. Plătești o primă în fiecare lună. În fiecare an există o franșiză (eigen risico): primele costuri le plătești tu. Suma se schimbă: verific-o la asigurătorul tău. Vizitele la medicul de familie (huisarts) nu intră în franșiză. Cu un venit mic poți primi un ajutor pentru asigurarea de sănătate (zorgtoeslag). Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.insurance.p': 'Am nevoie de asigurare de sănătate. Mă puteți ajuta?',
     'c.insurance.s': 'Ai început să lucrezi aici acum două săptămâni și încă nu ai asigurare de sănătate. Ce faci?',
-    'c.insurance.o1': 'O rezolvi repede: întrebi angajatorul sau agenția sau iei legătura cu un asigurător.',
+    'c.insurance.o1': 'Îți faci repede asigurare de sănătate.', // nalezen: korter goed antwoord
     'c.insurance.o2': 'Aștepți până te îmbolnăvești.',
     'c.insurance.o3': 'Folosești cardul de asigurare al unui prieten.',
-    'c.insurance.w': 'Fără asigurare, un doctor sau un spital pot costa mult și poți primi o amendă. Dacă o rezolvi repede, te protejezi.',
+    'c.insurance.w': 'Fără asigurare, un doctor sau un spital pot costa mult și poți primi o amendă. Dacă o rezolvi repede, te protejezi. Angajatorul sau agenția te poate ajuta.', // nalezen: korter goed antwoord
     'c.letters': 'Nu ignora scrisorile',
     'c.letters.b': 'Nu ignora scrisorile de la Belastingdienst, gemeente sau UWV. Roagă o persoană de încredere să te ajute să le citești. Declarația de impozit (aangifte) pentru anul trecut trebuie făcută de obicei înainte de 1 mai. Poți cere mai mult timp. Ajutoarele (toeslagen), ca zorgtoeslag și huurtoeslag, depind de venitul tău. Dacă primești prea mult, trebuie să dai banii înapoi, așa că ține-ți datele despre venit la zi. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.letters.p': 'Am primit o scrisoare. Mă poți ajuta?',
     'c.letters.s': 'Primești o scrisoare de la Belastingdienst. Nu o înțelegi. Ce faci?',
-    'c.letters.o1': 'Rogi repede o persoană de încredere să te ajute s-o citești.',
+    'c.letters.o1': 'Rogi o persoană de încredere să te ajute s-o citești.', // nalezen: korter goed antwoord
     'c.letters.o2': 'O pui într-un sertar și aștepți.',
     'c.letters.o3': 'O arunci, pentru că probabil e reclamă.',
     'c.letters.w': 'Scrisorile oficiale au des un termen limită. Dacă răspunzi la timp, problemele se rezolvă de obicei mai ușor.',
@@ -812,7 +812,7 @@ const t: CultureTranslation = {
     'c.ww.b': 'Ți-ai pierdut locul de muncă? Cere WW la UWV cât mai repede, în cel mult o săptămână după prima zi fără muncă. De obicei trebuie să fi lucrat cel puțin 26 din ultimele 36 de săptămâni. Dacă demisionezi tu, de obicei nu primești WW. Înregistrează-te ca persoană care caută de lucru pe werk.nl. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.ww.p': 'Vreau să cer ajutor de șomaj. Ce trebuie să fac?',
     'c.ww.s': { m: 'Ești supărat pe munca ta și vrei să demisionezi azi. Ce e înțelept?', f: 'Ești supărată pe munca ta și vrei să demisionezi azi. Ce e înțelept?' },
-    'c.ww.o1': 'Ceri întâi un sfat: dacă demisionezi tu, de obicei nu primești WW.',
+    'c.ww.o1': 'Ceri întâi un sfat, înainte să demisionezi.', // nalezen: korter goed antwoord
     'c.ww.o2': 'Demisionezi azi: oricum primești WW.',
     'c.ww.o3': 'Nu mai vii la muncă și nu spui nimic.',
     'c.ww.w': 'Demisia te poate costa ajutorul de șomaj. Dacă vorbești întâi cu șeful, cu sindicatul sau cu Juridisch Loket, poți găsi o cale mai bună.',
@@ -820,15 +820,15 @@ const t: CultureTranslation = {
     'c.newjob.b': 'Înainte să pleci, cere o referință (referentie). Păstrează fluturașii de salariu și contractul. Actualizează-ți CV-ul. Caută de lucru la agențiile de muncă temporară (uitzendbureaus) și pe werk.nl. Nu plăti niciodată bani ca să primești un loc de muncă. Informații generale. Pentru situația ta: întreabă sindicatul, Juridisch Loket sau FairWork.',
     'c.newjob.p': 'Pot să dau numele dumneavoastră ca referință?',
     'c.newjob.s': 'Cineva îți oferă un loc de muncă, dar întâi trebuie să plătești 300 de euro „pentru post”. Ce faci?',
-    'c.newjob.o1': 'Nu plătești. Cauți de lucru printr-o agenție adevărată sau pe werk.nl.',
+    'c.newjob.o1': 'Nu plătești. Cauți o agenție adevărată.', // nalezen: korter goed antwoord
     'c.newjob.o2': 'Plătești, pentru că un loc de muncă bun merită.',
     'c.newjob.o3': 'Plătești jumătate acum și restul mai târziu.',
-    'c.newjob.w': 'Când cineva cere bani pentru un loc de muncă, e un semn de avertizare. O agenție de muncă temporară nu are voie să-ți ceară bani ca să-ți găsească de lucru.',
+    'c.newjob.w': 'Când cineva cere bani pentru un loc de muncă, e un semn de avertizare. O agenție de muncă temporară nu are voie să-ți ceară bani ca să-ți găsească de lucru. Poți căuta de lucru și pe werk.nl.', // nalezen: korter goed antwoord
     'c.tools': 'Ședința toolbox',
     'c.tools.b': 'Pe multe șantiere are loc regulat o scurtă ședință de siguranță: ședința toolbox. Afli despre riscuri și reguli noi. Mergi, ascultă și pune întrebări dacă nu înțelegi. Verifică-ți uneltele înainte să le folosești. O unealtă e stricată? Spune-i șefului.',
     'c.tools.p': 'Bormașina asta e stricată. Mai e alta?',
     'c.tools.s': 'E o ședință toolbox, dar olandeza ta nu e încă bună. Ce faci?',
-    'c.tools.o1': 'Mergi, folosești o aplicație de traducere dacă e voie și după aceea îl întrebi pe un coleg ce nu ai înțeles.',
+    'c.tools.o1': 'Mergi și după aceea îl întrebi pe un coleg ce ți-a scăpat.', // nalezen: korter goed antwoord
     'c.tools.o2': 'Nu mergi, pentru că oricum nu vei înțelege.',
     'c.tools.o3': 'Semnezi lista de prezență fără să mergi.',
     'c.tools.w': 'Informațiile despre siguranță sunt pentru toți. O aplicație de traducere te poate ajuta să urmărești ședința, dacă telefoanele sunt permise acolo. E normal să întrebi un coleg după aceea, și așa verifici dacă ai înțeles bine.',
@@ -860,7 +860,7 @@ const t: CultureTranslation = {
     'c.client.b': 'Bate la ușă înainte să intri în camera unui client. Spune cine ești, explică ce urmează să faci și cere permisiunea. Spune-le clienților „u”, dacă nu îți cer ei să le spui „je”. Lasă clienții să facă singuri ce pot face.',
     'c.client.p': 'Pot să intru? Am venit să vă ajut să vă spălați.',
     'c.client.s': 'Trebuie să ajuți o clientă să se spele. Ușa camerei ei e închisă. Ce faci?',
-    'c.client.o1': 'Bați la ușă, aștepți, spui cine ești și explici ce vei face.',
+    'c.client.o1': 'Bați la ușă, aștepți și spui cine ești și de ce vii.', // nalezen: korter goed antwoord
     'c.client.o2': { m: 'Intri repede, pentru că ești ocupat.', f: 'Intri repede, pentru că ești ocupată.' },
     'c.client.o3': 'Sari peste spălat, ca să n-o deranjezi.',
     'c.client.w': 'Camera e casa clientului. Când bați la ușă și explici, arăți respect și îngrijirea e mai liniștită.',
@@ -892,7 +892,7 @@ const t: CultureTranslation = {
     'c.cleaning.b': 'Fiecare produs de curățenie are o etichetă. Pictogramele (desene mici într-un romb roșu) arată pericolul, de exemplu pentru piele, ochi sau plămâni. Citește eticheta sau întreabă la ce folosește produsul și cum se folosește. Poartă mănușile pe care ți le dă angajatorul. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.',
     'c.cleaning.p': 'La ce folosește acest produs?',
     'c.cleaning.s': 'Primești un produs de curățenie nou. Nu poți citi bine eticheta. Ce faci?',
-    'c.cleaning.o1': 'Îl întrebi pe șef la ce folosește și cum îl folosești în siguranță.',
+    'c.cleaning.o1': 'Întrebi cum îl folosești în siguranță.', // nalezen: korter goed antwoord
     'c.cleaning.o2': 'Folosești mult, ca să meargă mai bine.',
     'c.cleaning.o3': 'Îl încerci pur și simplu fără mănuși.',
     'c.cleaning.w': 'Produsul greșit, sau prea mult din el, îți poate răni pielea, ochii sau plămânii. Să întrebi durează un minut.',
@@ -900,7 +900,7 @@ const t: CultureTranslation = {
     'c.cleansafe.b': 'Nu amesteca niciodată produse de curățenie, de exemplu înălbitor și un produs pentru toaletă. Pot apărea gaze periculoase. Aerisește. Speli podeaua cu mopul? Pune semnul pentru podea udă (Pas op, glad!), ca să nu alunece nimeni. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.',
     'c.cleansafe.p': 'Pun semnul. Podeaua e udă.',
     'c.cleansafe.s': 'Toaleta e foarte murdară. Un coleg spune: „Amestecă două produse, așa merge mai bine.” Ce faci?',
-    'c.cleansafe.o1': 'Nu amesteci. Folosești un singur produs, cum scrie pe etichetă.',
+    'c.cleansafe.o1': 'Nu le amesteci. Folosești un singur produs.', // nalezen: korter goed antwoord
     'c.cleansafe.o2': 'Le amesteci, dar deschizi o fereastră.',
     'c.cleansafe.o3': 'Le amesteci repede și ieși din cameră.',
     'c.cleansafe.w': 'Amestecul de produse poate face gaz otrăvitor, chiar și cu fereastra deschisă. Un singur produs, folosit bine, e de ajuns.',
@@ -945,7 +945,7 @@ const t: CultureTranslation = {
     'c.translate.b': 'O aplicație de traducere, ca Google Translate, ajută mult. Poți să scrii, să vorbești sau să folosești modul conversație ca să vorbești cu un coleg. Cu camera poți traduce panouri, bilețele și instrucțiuni. Pe multe telefoane, și WhatsApp poate traduce mesaje. Folosește telefonul doar unde e sigur și permis: nu lângă utilaje sau motostivuitoare, și întreabă mai întâi (mai multe în lecția „Telefonul tău la muncă”). Aplicațiile fac greșeli. Pentru lucruri importante, ca contractul tău, o scrisoare sau o instrucțiune de siguranță, roagă și o persoană să ți le explice. Nu face poze la documente de serviciu confidențiale fără permisiune.',
     'c.translate.p': 'Pot să folosesc telefonul ca să traduc?',
     'c.translate.s': 'Șeful îți dă o hârtie cu instrucțiuni de siguranță în olandeză. Înțelegi doar câteva cuvinte. Ce faci?',
-    'c.translate.o1': 'Întrebi dacă ai voie să o traduci cu telefonul și îl rogi pe șef să-ți explice părțile importante.',
+    'c.translate.o1': 'Întrebi dacă ai voie să folosești o aplicație de traducere și ceri o explicație.', // nalezen: korter goed antwoord
     'c.translate.o2': 'Spui „ja, ja” și te apuci de lucru. O să înțelegi mai târziu.',
     'c.translate.o3': 'Faci o poză și o trimiți într-un grup de chat cu prietenii, ca să o traducă ei.',
     'c.translate.w': 'O aplicație de traducere te ajută să înțelegi repede, dar poate greși. Pentru siguranță, cea mai bună verificare e explicația unei persoane. Documentele de serviciu pot fi confidențiale, așa că nu le trimite altora fără permisiune.',
@@ -953,7 +953,7 @@ const t: CultureTranslation = {
     'c.understood.b': 'Telefonul tău poate transforma vorbirea în text (subtitrare live): Live Transcribe pe Android, Live Captions pe iPhone. Verifică ce limbi acceptă telefonul tău. Poți să rogi pe cineva să scrie, să-ți arate sau să vorbească rar. Întreabă dacă există o instrucțiune cu imagini sau în limba ta. Apoi spune cu cuvintele tale ce ai înțeles: „Dus ik moet eerst …?” Aici asta e normal și previne greșelile.',
     'c.understood.p': 'Deci trebuie să număr întâi cutiile?',
     'c.understood.s': 'O colegă îți explică cum funcționează un utilaj nou. Vorbește repede și pierzi câteva cuvinte. Ce faci?',
-    'c.understood.o1': 'O rogi să-ți arate sau să scrie pașii, apoi spui cu cuvintele tale ce ai înțeles.',
+    'c.understood.o1': 'O rogi să-ți arate sau să scrie, apoi repeți.', // nalezen: korter goed antwoord
     'c.understood.o2': 'Dai din cap și spui „ja, ja”, ca să nu piardă timp.',
     'c.understood.o3': { m: 'Încerci mai târziu utilajul singur și vezi ce se întâmplă.', f: 'Încerci mai târziu utilajul singură și vezi ce se întâmplă.' },
     'c.understood.w': 'Să arăți, să scrii și să repeți sunt verificări rapide. Colega te poate corecta înainte să meargă ceva prost. Aici asta e văzut ca atenție, nu ca încetineală.',
@@ -961,7 +961,7 @@ const t: CultureTranslation = {
     'c.keeplearning.b': 'Câteva minute în fiecare zi ajută mai mult decât o oră lungă pe săptămână. Salvează cuvintele noi de la muncă într-o aplicație de notițe pe telefon. Ascultă olandeză ușoară, de exemplu NOS Jeugdjournaal (știri pentru copii) sau un podcast în olandeză vorbită rar. Multe biblioteci publice au un Taalhuis: ajutor gratuit cu olandeza, des cu un taalcafé (un loc unde exersezi vorbirea) sau un partener de limbă (taalmaatje). Colegii trec des la engleză ca să te ajute. Roagă-i frumos să vorbească olandeză cu tine: majoritatea oamenilor ajută cu plăcere.',
     'c.keeplearning.p': 'Vorbește pur și simplu olandeză cu mine, așa învăț mai repede.',
     'c.keeplearning.s': 'Colegii tăi trec mereu la engleză când vorbesc cu tine. Vrei să înveți olandeză. Ce faci?',
-    'c.keeplearning.o1': 'Le mulțumești și îi rogi frumos să vorbească olandeză cu tine, rar.',
+    'c.keeplearning.o1': 'Le mulțumești și îi rogi să vorbească olandeză cu tine.', // nalezen: korter goed antwoord
     'c.keeplearning.o2': 'Nu spui nimic. Olandeza o să vină de la sine.',
     'c.keeplearning.o3': 'Nu mai vorbești cu colegii până când olandeza ta e perfectă.',
     'c.keeplearning.w': 'Colegii trec des la engleză ca să fie amabili. Când le ceri olandeză, cei mai mulți te ajută cu plăcere. Să vorbești puțin în fiecare zi la muncă e unul dintre cele mai rapide moduri de a învăța.',
@@ -993,18 +993,18 @@ const t: CultureTranslation = {
     'c.gossip.b': "Să vorbești despre un coleg pe la spate (roddelen) strică încrederea în echipă. Ai o problemă cu cineva? Vorbește cu acea persoană sau cu șeful tău. Online sunt aceleași reguli ca la muncă: nu posta poze, video sau mesaje despre colegi, clienți sau firmă fără permisiune. Șeful tău poate vedea ce postezi, iar asta poate rămâne online ani de zile. Multe echipe au un grup de chat (groepsapp) pentru muncă: scrie acolo doar despre muncă și nu trimite altora capturi de ecran din el. Să distribui lucruri private ale unui coleg sau să râzi de cineva online este tot hărțuire.",
     'c.gossip.p': "Nu vreau asta online.",
     'c.gossip.s': "Un coleg te filmează când aluneci pe podeaua udă. Vrea să pună video-ul pe TikTok. Ce faci?",
-    'c.gossip.o1': "Spui „Nee, dat wil ik niet” și îi ceri să-l șteargă. Dacă îl postează totuși, îi spui șefului.",
+    'c.gossip.o1': 'Spui „Nee, dat wil ik niet” și îi ceri să-l șteargă.', // nalezen: korter goed antwoord
     'c.gossip.o2': { m: 'Râzi și îl lași să-l posteze, ca să nu fii dificil.', f: 'Râzi și îl lași să-l posteze, ca să nu fii dificilă.' },
     'c.gossip.o3': "Îl filmezi și tu și postezi chiar tu acel video.",
-    'c.gossip.w': "Nimeni nu are voie să pună online un video cu tine fără permisiunea ta. E normal să spui nu, iar angajatorul trebuie să intervină când colegii își bat joc unii de alții online.",
+    'c.gossip.w': 'Nimeni nu are voie să pună online un video cu tine fără permisiunea ta. E normal să spui nu, iar angajatorul trebuie să intervină când colegii își bat joc unii de alții online. Dacă îl postează totuși, spune-i șefului.', // nalezen: korter goed antwoord
     'c.boundaries': "Depășirea limitelor",
     'c.boundaries.b': { m: 'Grensoverschrijdend gedrag este un comportament care trece de limita cuiva: atingeri nedorite, remarci sau glume sexuale, priviri insistente, trimiterea de poze nedorite, amenințări sau țipete. Nu contează dacă celălalt „a vrut doar să glumească”: contează cum te simți tu. Dacă poți, spune clar că vrei să se oprească. Notează ce s-a întâmplat, când și cine a văzut. Spune-i șefului, persoanei de încredere (vertrouwenspersoon, dacă există) sau la HR. Angajatorul trebuie să te protejeze și nu poți fi pedepsit pentru că raportezi. Ai văzut că i s-a întâmplat unui coleg? Întreabă-l dacă e bine și oferă-te să fii martor.', f: 'Grensoverschrijdend gedrag este un comportament care trece de limita cuiva: atingeri nedorite, remarci sau glume sexuale, priviri insistente, trimiterea de poze nedorite, amenințări sau țipete. Nu contează dacă celălalt „a vrut doar să glumească”: contează cum te simți tu. Dacă poți, spune clar că vrei să se oprească. Notează ce s-a întâmplat, când și cine a văzut. Spune-i șefului, persoanei de încredere (vertrouwenspersoon, dacă există) sau la HR. Angajatorul trebuie să te protejeze și nu poți fi pedepsită pentru că raportezi. Ai văzut că i s-a întâmplat unui coleg? Întreabă-l dacă e bine și oferă-te să fii martor.' },
     'c.boundaries.p': "Vreau să te oprești.",
     'c.boundaries.s': { m: 'Șeful tău de echipă îți pune des mâna pe spate și spune că arăți „drăguț”. Te simți inconfortabil. El decide turele tale. Ce faci?', f: 'Șeful tău de echipă îți pune des mâna pe spate și spune că arăți „drăguță”. Te simți inconfortabil. El decide turele tale. Ce faci?' },
-    'c.boundaries.o1': "Notezi ce se întâmplă și vorbești cu persoana de încredere (vertrouwenspersoon) sau cu HR.",
+    'c.boundaries.o1': 'Notezi ce se întâmplă și îi spui persoanei de încredere (vertrouwenspersoon).', // nalezen: korter goed antwoord
     'c.boundaries.o2': "Nu spui nimic, pentru că el decide turele tale.",
     'c.boundaries.o3': "Demisionezi fără să spui nimănui de ce.",
-    'c.boundaries.w': { m: 'Acesta este un comportament nedorit și nu e vina ta. Persoana de încredere te ascultă confidențial și te ajută să alegi următorul pas. Ești protejat când raportezi.', f: 'Acesta este un comportament nedorit și nu e vina ta. Persoana de încredere te ascultă confidențial și te ajută să alegi următorul pas. Ești protejată când raportezi.' },
+    'c.boundaries.w': { m: 'Acesta este un comportament nedorit și nu e vina ta. Persoana de încredere te ascultă confidențial și te ajută să alegi următorul pas. Ești protejat când raportezi. Poți vorbi și cu HR.', f: 'Acesta este un comportament nedorit și nu e vina ta. Persoana de încredere te ascultă confidențial și te ajută să alegi următorul pas. Ești protejată când raportezi. Poți vorbi și cu HR.' }, // nalezen: korter goed antwoord
     'u.shop': 'În magazin',
     'l.shelves': 'Rafturi și stoc',
     'w.schap': 'raftul (în magazin)',
@@ -1067,7 +1067,7 @@ const t: CultureTranslation = {
     'c.checkout.b': 'Nu ai voie să vinzi alcool sau tutun cuiva sub 18 ani: așa e legea. Nu știi sigur câți ani are clientul? Cere-i actul de identitate. Multe magazine cer act de identitate oricui pare mai tânăr de 25 de ani. Nu are act, sau are sub 18 ani? Atunci nu îi vinzi și vorbești politicos. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.',
     'c.checkout.p': 'Fără act de identitate nu am voie să vând asta.',
     'c.checkout.s': 'Un tânăr vrea să cumpere bere. Pare să aibă vreo 17 ani. Spune că are 19, dar nu are act de identitate la el. Ce faci?',
-    'c.checkout.o1': 'Îi spui politicos că fără act nu poți să-i vinzi.',
+    'c.checkout.o1': 'Îi spui că fără act nu poți să-i vinzi.', // nalezen: korter goed antwoord
     'c.checkout.o2': 'Îi vinzi, pentru că spune că are 19 ani.',
     'c.checkout.o3': 'Îi vinzi, dar doar o doză.',
     'c.checkout.w': 'Fără act nu poți ști câți ani are. Vânzarea de alcool cuiva sub 18 ani e interzisă prin lege, iar magazinul poate primi amendă.',
@@ -1140,7 +1140,7 @@ const t: CultureTranslation = {
     'c.aihelp.b': 'Aplicațiile cu AI și chatboturile, ca ChatGPT, pot traduce, pot explica o scrisoare sau te pot ajuta să scrii un mesaj. Asta e util. Dar AI-ul greșește uneori și totuși pare foarte sigur pe el. Pentru lucruri importante, ca un contract, salariul, medicamentele sau siguranța, verifică mereu răspunsul cu un om: șeful, departamentul de resurse umane (HR) sau Juridisch Loket.',
     'c.aihelp.p': 'E corect? Vă puteți uita puțin împreună cu mine?',
     'c.aihelp.s': 'Întrebi un chatbot despre contractul tău. Îți spune că nu primești bani de concediu (vakantiegeld). Ce faci?',
-    'c.aihelp.o1': 'Îl rogi pe șef sau pe cei de la HR să se uite cu tine pe contract, sau întrebi la Juridisch Loket.',
+    'c.aihelp.o1': 'Îi rogi pe cei de la HR sau de la Juridisch Loket să verifice.', // nalezen: korter goed antwoord
     'c.aihelp.o2': 'Îl crezi: chatbotul pare foarte sigur.',
     'c.aihelp.o3': 'Nu spui nimic și uiți de asta.',
     'c.aihelp.w': 'Un chatbot poate greși când e vorba de reguli și contracte. În Țările de Jos, aproape orice angajat primește bani de concediu. Un om care cunoaște regulile poate verifica.',
@@ -1148,7 +1148,7 @@ const t: CultureTranslation = {
     'c.aiprivate.b': 'Ce scrii într-un chatbot poate fi salvat și folosit de firma care l-a făcut. Așa că nu scrie niciodată BSN-ul tău, o parolă sau datele tale bancare. Nu pune nume sau poze ale clienților, pacienților sau colegilor, nici documente de la muncă. Mulți angajatori au reguli despre AI. Întreabă întâi dacă ai voie să-l folosești pentru muncă. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.',
     'c.aiprivate.p': 'Am voie să folosesc AI pentru asta?',
     'c.aiprivate.s': 'Vrei ca un chatbot să scrie un raport despre un client. În raport sunt numele și adresa clientului. Ce faci?',
-    'c.aiprivate.o1': 'Îl întrebi întâi pe șef și scoți numele și adresa.',
+    'c.aiprivate.o1': 'Întrebi întâi și scoți numele și adresa.', // nalezen: korter goed antwoord
     'c.aiprivate.o2': 'Pui totul în chatbot: e mai repede.',
     'c.aiprivate.o3': 'Trimiți raportul unui prieten să-l verifice.',
     'c.aiprivate.w': 'Numele și adresele sunt date personale. Nu pot ajunge pur și simplu la o altă firmă. Angajatorul tău știe ce aplicații sunt permise.',
@@ -1156,7 +1156,7 @@ const t: CultureTranslation = {
     'c.aifake.b': { m: 'Cu AI, infractorii pot copia o voce și pot face poze și clipuri false. Un apel sau un mesaj care sună ca șeful tău, banca ta sau cineva din familie poate fi fals. Fii atent când e grabă, sunt bani la mijloc și un număr nou. Închide și sună tu înapoi la numărul pe care îl știi. O bancă adevărată, un angajator sau poliția nu îți cer niciodată codurile.', f: 'Cu AI, infractorii pot copia o voce și pot face poze și clipuri false. Un apel sau un mesaj care sună ca șeful tău, banca ta sau cineva din familie poate fi fals. Fii atentă când e grabă, sunt bani la mijloc și un număr nou. Închide și sună tu înapoi la numărul pe care îl știi. O bancă adevărată, un angajator sau poliția nu îți cer niciodată codurile.' },
     'c.aifake.p': 'Închid și sun eu înapoi.',
     'c.aifake.s': 'Îți sună telefonul. O voce care sună exact ca a șefului tău spune: „Plătește factura asta acum, e urgent.” Ce faci?',
-    'c.aifake.o1': 'Închizi și îl suni tu pe șef la numărul pe care îl știi.',
+    'c.aifake.o1': 'Închizi și îl suni tu pe șef.', // nalezen: korter goed antwoord
     'c.aifake.o2': 'Plătești repede: e șeful tău.',
     'c.aifake.o3': 'Îi dai codul tău bancar, ca să poată plăti șeful.',
     'c.aifake.w': 'O voce poate fi copiată cu AI. Graba și banii împreună sunt un semnal de alarmă. Să suni înapoi la un număr cunoscut e o verificare rapidă și sigură.',
@@ -1164,7 +1164,7 @@ const t: CultureTranslation = {
     'c.aiplan.b': 'Tot mai multe firme lasă o aplicație sau un calculator să facă programul, să-ți măsoare ritmul cu scanerul sau să decidă lucruri. Poți să întrebi ce informații se strâng despre tine. E o decizie importantă despre tine, ca mai puține ore, un avertisment sau concedierea? Întreabă cine a decis. Când un calculator a luat singur o astfel de decizie, poți cere ca un om să se uite din nou la ea și să ți-o explice. Notează-ți orele. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.aiplan.p': 'Se poate uita un om la asta?',
     'c.aiplan.s': 'Aplicația de planificare îți dă luna viitoare mult mai puține ore. Nimeni nu-ți spune de ce. Ce faci?',
-    'c.aiplan.o1': 'Îl întrebi pe șef cine a decis și ceri ca un om să-ți explice.',
+    'c.aiplan.o1': 'Ceri ca un om să-ți explice.', // nalezen: korter goed antwoord
     'c.aiplan.o2': 'Accepți: aplicația are mereu dreptate.',
     'c.aiplan.o3': 'Nu mai vii la muncă.',
     'c.aiplan.w': 'Aplicațiile greșesc și nu știu totul despre tine. Poți cere o explicație, iar un om se poate uita din nou.',
@@ -1198,15 +1198,15 @@ const t: CultureTranslation = {
     'c.harvest.b': 'In a greenhouse you often work at a set pace (tempo). Some employers pay per crate, per row or per kilo: piece rate (stukloon). Even with piece rate, you must earn at least the minimum wage for every hour you work. Check the amount on rijksoverheid.nl. Write down your hours and your crates every day, and compare them with your payslip. Working fast is good, but working safely comes first. General information. For your situation: ask the union, the Juridisch Loket or FairWork.', // TODO vertalen
     'c.harvest.p': 'How many crates did I do today?', // TODO vertalen
     'c.harvest.s': 'You are paid per crate. At the end of the week, your pay is much lower than the minimum wage for the hours you worked. What do you do?', // TODO vertalen
-    'c.harvest.o1': 'Show your own list of hours and crates to your employer, and ask for help if it is not fixed.', // TODO vertalen
+    'c.harvest.o1': 'Show your employer your own list of hours and crates.', // TODO vertalen
     'c.harvest.o2': 'Say nothing and work faster next week, so you earn more.', // TODO vertalen
     'c.harvest.o3': 'Accept it: with piece rate, a low pay is normal.', // TODO vertalen
-    'c.harvest.w': 'With piece rate you must still get at least the minimum wage for every hour you worked. Your own list of hours and crates helps you show what you did.', // TODO vertalen
+    'c.harvest.w': 'With piece rate you must still get at least the minimum wage for every hour you worked. Your own list of hours and crates helps you show what you did. If it is not fixed, ask for help.', // TODO vertalen
     'c.greensafe': 'Heat and sprays', // TODO vertalen
     'c.greensafe.b': 'In a greenhouse it can get very hot, also in spring. Drink water often, also before you feel thirsty, and take your breaks in a cool place. Do you feel dizzy or sick, or do you get a headache? Stop and tell someone. Plants are sometimes sprayed with chemicals (spuitmiddelen). A greenhouse that was just sprayed often has a sign at the door. Do not go in until your supervisor says it is safe again. General information. For your situation: ask your employer, the union or the Juridisch Loket.', // TODO vertalen
     'c.greensafe.p': 'May I already work in this greenhouse?', // TODO vertalen
     'c.greensafe.s': 'A greenhouse was sprayed this morning. There is a sign on the door. A colleague says: "Come on, it is only for a moment." What do you do?', // TODO vertalen
-    'c.greensafe.o1': 'Stay outside, and ask your supervisor when it is safe again.', // TODO vertalen
+    'c.greensafe.o1': 'Stay outside and ask when it is safe.', // TODO vertalen
     'c.greensafe.o2': 'Go in quickly and hold your breath.', // TODO vertalen
     'c.greensafe.o3': 'Go in, and wash your hands well afterwards.', // TODO vertalen
     'c.greensafe.w': 'Crop sprays can hurt your skin, eyes and lungs, also when you smell nothing. After spraying there is a waiting time before people may go in again. Your supervisor knows when it is over.', // TODO vertalen
@@ -1288,7 +1288,7 @@ const t: CultureTranslation = {
     "c.details.b": "At the start of a job, you give your details: your name, address, phone number, date of birth and BSN. Spell your name slowly, letter by letter. Then check your name on your contract and your payslip. A mistake in your name or BSN can give problems with your pay or tax. New address or phone number? Tell your employer.",
     "c.details.p": "Let me spell it: A, L, I.",
     "c.details.s": "On the phone, the agency writes down your last name. You hear that they write it wrong. What do you do?",
-    "c.details.o1": "Spell your name slowly, letter by letter, and ask them to read it back.",
+    "c.details.o1": "Spell your name slowly and ask them to read it back.",
     "c.details.o2": "Say nothing: a small mistake in your name does not matter.",
     "c.details.o3": "Hang up, and hope they find the mistake later.",
     "c.details.w": "Your name must be the same on your contract, your payslip and your ID. Then your pay and your tax go right. Spelling and reading back is a quick check.",
@@ -1304,7 +1304,7 @@ const t: CultureTranslation = {
     "c.permit.b": "Do you have to do the civic integration (inburgering)? Tell your employer, and tell the gemeente that you work. Ask early if your language classes can fit around your roster. Not sure if you may work here? Check it before you start, for example at the IND, UWV or VluchtelingenWerk. Do they ask you to register as self-employed (zzp’er) for this job? Ask for advice first. General information. For your situation: ask your employer, the union or the Juridisch Loket.",
     "c.permit.p": "I have a language class on Tuesday. Can my roster take that into account?",
     "c.permit.s": "You start a new job. Your language class is on Tuesday mornings, but your roster has you working on Tuesdays. What do you do?",
-    "c.permit.o1": "Tell your supervisor about the class, and ask if the roster can change.",
+    "c.permit.o1": "Tell your supervisor and ask to change the roster.",
     "c.permit.o2": "Skip the language class, because work comes first.",
     "c.permit.o3": "Stay home on Tuesdays without saying anything.",
     "c.permit.w": "Your integration is a duty too. Many employers help when they know it early. The gemeente can also help you fit your plan around your work.",
@@ -1312,7 +1312,7 @@ const t: CultureTranslation = {
     "c.kids.b": "Is your child suddenly sick? Tell your employer right away. For the first hours or days you can take emergency leave (calamiteitenverlof), and your employer keeps paying you. Does your child need care for longer? Then you can ask for care leave (zorgverlof). Pregnant? Your employer may not fire you because of that. Ask in time about pregnancy leave and parental leave (ouderschapsverlof). General information. For your situation: ask your employer, the union or the Juridisch Loket.",
     "c.kids.p": "My child is sick. Can I leave early today?",
     "c.kids.s": "The daycare (kinderopvang) calls you at work. Your child has a fever and must go home. What do you do?",
-    "c.kids.o1": "Tell your supervisor right away, and ask for emergency leave to pick up your child.",
+    "c.kids.o1": "Tell your supervisor, and ask for emergency leave.",
     "c.kids.o2": "Leave without a word, and explain it tomorrow.",
     "c.kids.o3": "Stay at work, and let your child wait until your shift ends.",
     "c.kids.w": "A sick child is an emergency at home. When you tell your supervisor first, they can plan the work. Emergency leave is for moments like this.",
@@ -1328,7 +1328,7 @@ const t: CultureTranslation = {
     "c.jobends.b": "When your job ends, check your final pay (eindafrekening). Days off you did not use and your holiday pay are usually paid out with it. Housing, health insurance or a van through the agency can stop at the same time. Arrange your own health insurance in time. Your rental contract has its own rules: ask for advice before you leave the house. Moving, or leaving the Netherlands? Tell the gemeente. General information. For your situation: ask your employer, the union or the Juridisch Loket.",
     "c.jobends.p": "When do I get my final pay?",
     "c.jobends.s": "Your job ends on Friday. Your health insurance goes through the agency. What do you do?",
-    "c.jobends.o1": "Ask the agency when the insurance stops, and arrange your own in time.",
+    "c.jobends.o1": "Ask when it stops and arrange your own in time.",
     "c.jobends.o2": "Nothing: the insurance goes on by itself.",
     "c.jobends.o3": "Wait until you get sick, and arrange it then.",
     "c.jobends.w": "Insurance through the agency often stops when your job stops. When you live or work in the Netherlands, you usually must have health insurance. Arranging it in time keeps you covered.",
