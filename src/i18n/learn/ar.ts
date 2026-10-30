@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "يُطلب وضع أسماء في روبوت دردشة: هذا الرد يقول «لا» ويذكر السبب.",
     'c.aifake.a.why': "رقم جديد يطلب مالاً: هذا الرد يتحقق أولاً.",
     'c.aiplan.a.why': "التطبيق وضع جدول العمل: هذا الرد يطلب إنساناً.",
-    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
-    'c.harvest.a.why': "السؤال عن عدد الصفوف: هذا الرد يعطي رقماً، وما بقي.", // nieuw, nog nalezen
-    'c.greensafe.a.why': "رُشّت للتو: هذا الرد يقول ليس بعد، ولماذا.", // nieuw, nog nalezen
-    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
+    'c.harvest.a.why': "السؤال عن عدد الصفوف: هذا الرد يعطي رقماً، وما بقي.", // nagelezen (2e lezing)
+    'c.greensafe.a.why': "رُشّت للتو: هذا الرد يقول ليس بعد، ولماذا.", // nagelezen (2e lezing)
+    // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
     'c.details.a.why': "السؤال عن اسم العائلة: هذا الرد يعطيه ويعرض تهجئته.",
     'c.dates.a.why': "السؤال عن التاريخ: هذا الرد يعطي اليوم والتاريخ.",
     'c.permit.a.why': "الرفض مع سبب أمر مقبول. اقتراح يوم آخر يساعد.",
     'c.kids.a.why': "السؤال لماذا: هذا الرد يعطي السبب، الحضانة اتصلت.",
     'c.body.a.why': "السؤال أين الألم: هذا الرد يذكر المكان والسبب.",
-    'c.jobends.a.why': "السكن مرتبط بالعمل: هذا الرد يسأل عن مهلة الإشعار.",
+    'c.jobends.a.why': "السكن مرتبط بالعمل: هذا الرد يسأل عن مدة الإشعار.",
   },
 };
 
