@@ -345,6 +345,19 @@ const lang: HelpLanguageSource = {
     coachDays: 'أيام التمرين في آخر 4 أسابيع', // nieuw, nalezen
     coachLast: 'آخر درس، مع التاريخ', // nieuw, nalezen
     coachNameAsk: { m: 'اسمك على البطاقة؟', f: 'اسمكِ على البطاقة؟', x: 'الاسم على البطاقة؟' }, // nieuw, nalezen
+    samenTitle: 'التمرين معاً', // nieuw, nalezen
+    samenRowHint: 'شخصان، هاتف واحد', // nieuw, nalezen
+    samenIntro: { m: 'تدرّب مع زميل أو صديق أو معلّم. اقرآ بالتناوب.', f: 'تدرّبي مع زميل أو صديق أو معلّم. اقرآ بالتناوب.', x: 'التمرين مع زميل أو صديق أو معلّم. القراءة بالتناوب.' }, // nieuw, nalezen
+    samenHow: 'الشخص 1 هو الزميل. الشخص 2 يجيب.', // nieuw, nalezen
+    samenNoScore: 'لا يُسجَّل شيء. لا توجد نتيجة.', // nieuw, nalezen
+    samenPerson: 'الشخص {n}', // nieuw, nalezen
+    samenAnswer: 'الجواب', // nieuw, nalezen
+    samenHear: { m: 'استمع', f: 'استمعي', x: 'الاستماع' }, // nieuw, nalezen
+    samenNext: 'التالي', // nieuw, nalezen
+    samenTranslation: 'الترجمة', // nieuw, nalezen
+    samenEnd: 'أحسنتما! بدّلا الأدوار وأعيدا مرة أخرى؟', // nieuw, nalezen
+    samenSwap: 'بدّلا الأدوار', // nieuw, nalezen
+    samenStop: 'إنهاء', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

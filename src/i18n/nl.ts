@@ -381,6 +381,19 @@ export const uiNl: Record<UiKey, UiText> = {
   kunJeNu: 'Wat kun je nu?',
   kunNote: 'Het niveau bij elke zin is een richtlijn, geen officieel niveau.',
   coachCanDo: 'Hoeveel zinnen “Ik kan …” je hebt, van je onderwerpen die af zijn',
+  samenTitle: 'Oefen samen',
+  samenRowHint: 'Met twee mensen, op één telefoon',
+  samenIntro: 'Oefen met een collega, vriend of docent. Lees om de beurt.',
+  samenHow: 'Persoon 1 is de collega. Persoon 2 geeft antwoord.',
+  samenNoScore: 'Er wordt niets opgenomen. Er is geen score.',
+  samenPerson: 'Persoon {n}',
+  samenAnswer: 'Antwoord',
+  samenHear: 'Hoor het',
+  samenNext: 'Volgende',
+  samenTranslation: 'Vertaling',
+  samenEnd: 'Goed gedaan! Wissel de rollen en doe het nog een keer?',
+  samenSwap: 'Wissel de rollen',
+  samenStop: 'Klaar',
 };
 
 const lang: HelpLanguageSource = {

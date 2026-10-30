@@ -39,6 +39,7 @@ export const UPDATES: Update[] = [
       'Nieuw bij Instellingen: in welk land werk je? Kies je België (Vlaanderen)? Dan staat in Werkregels dat de regels over Nederland gaan, en bij Hulp staat waar je in België hulp vindt.',
       'Werkregels: de eerste keer zie je eerst "Goed om te weten": de regels zijn algemene informatie over werk in Nederland, geen juridisch advies. Boven de lessen staat dat ook in één korte regel.',
       'Nieuw bij elk certificaat: "Wat kun je nu?". Twee of drie korte zinnen over wat je na het onderwerp kunt, zoals "Ik kan zeggen dat ik ziek ben." Met het niveau waar de zin bij past (A1, A2 of 1F). Dat is een richtlijn, geen officieel niveau. Op de kaart voor je begeleider staat hoeveel zinnen het zijn.',
+      'Nieuw in het spoor Taal: "Oefen samen". Na een les met een gesprekje kun je op het eindscherm samen oefenen, met twee mensen op één telefoon. De een leest de collega, de ander antwoordt, en daarna wissel je van rol. Met "Hoor het" en de vertaling (die kan uit). Geen internet nodig, er wordt niets opgenomen en er is geen score.',
     ],
   },
   {

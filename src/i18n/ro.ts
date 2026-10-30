@@ -345,6 +345,19 @@ const lang: HelpLanguageSource = {
     coachDays: 'Zile de exercițiu în ultimele 4 săptămâni', // nieuw, nalezen
     coachLast: 'Ultima lecție, cu data', // nieuw, nalezen
     coachNameAsk: 'Numele tău pe card?', // nieuw, nalezen
+    samenTitle: 'Exersați împreună', // nieuw, nalezen
+    samenRowHint: 'Două persoane, un telefon', // nieuw, nalezen
+    samenIntro: 'Exersează cu un coleg, un prieten sau un profesor. Citiți pe rând.', // nieuw, nalezen
+    samenHow: 'Persoana 1 este colegul. Persoana 2 răspunde.', // nieuw, nalezen
+    samenNoScore: 'Nu se înregistrează nimic. Nu există punctaj.', // nieuw, nalezen
+    samenPerson: 'Persoana {n}', // nieuw, nalezen
+    samenAnswer: 'Răspuns', // nieuw, nalezen
+    samenHear: 'Ascultă', // nieuw, nalezen
+    samenNext: 'Următorul', // nieuw, nalezen
+    samenTranslation: 'Traducere', // nieuw, nalezen
+    samenEnd: 'Bravo! Schimbați rolurile și mai faceți o dată?', // nieuw, nalezen
+    samenSwap: 'Schimbați rolurile', // nieuw, nalezen
+    samenStop: 'Gata', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

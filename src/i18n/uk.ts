@@ -345,6 +345,19 @@ const lang: HelpLanguageSource = {
     coachDays: 'Дні занять за останні 4 тижні', // nieuw, nalezen
     coachLast: 'Останній урок, з датою', // nieuw, nalezen
     coachNameAsk: 'Твоє ім’я на картці?', // nieuw, nalezen
+    samenTitle: 'Вправляйтеся разом', // nieuw, nalezen
+    samenRowHint: 'Двоє людей, один телефон', // nieuw, nalezen
+    samenIntro: 'Вправляйся з колегою, другом або вчителем. Читайте по черзі.', // nieuw, nalezen
+    samenHow: 'Людина 1 — колега. Людина 2 відповідає.', // nieuw, nalezen
+    samenNoScore: 'Нічого не записується. Оцінки немає.', // nieuw, nalezen
+    samenPerson: 'Людина {n}', // nieuw, nalezen
+    samenAnswer: 'Відповідь', // nieuw, nalezen
+    samenHear: 'Послухати', // nieuw, nalezen
+    samenNext: 'Далі', // nieuw, nalezen
+    samenTranslation: 'Переклад', // nieuw, nalezen
+    samenEnd: 'Молодці! Поміняйтеся ролями і зробіть ще раз?', // nieuw, nalezen
+    samenSwap: 'Поміняйтеся ролями', // nieuw, nalezen
+    samenStop: 'Готово', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

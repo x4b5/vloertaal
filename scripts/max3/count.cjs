@@ -511,6 +511,21 @@ function defineStates(LANG) {
   add('kunjenu:certificate-sector', shot('certificate&cu=u.garage&name=Ali%20Hassan'), null, { expect: '.kun-list' });
   add('kunjenu:kaart', shot('kaart&name=Ali%20Hassan'), null, { expect: '.kaart-img' });
   add('kunjenu:coaches', shot('coaches'), null, { list: true, expect: '.kun-details' });
+  // "Oefen samen" (src/components/Samen.tsx): the row on a lesson's result (with Continue), the
+  // explanation (Start), a turn (Hoor het, a speaker; Vertaling; Volgende), a turn with the roles
+  // swapped, the end (Wissel de rollen, Klaar), and the way through: Start, Volgende to the end, swap.
+  add('samen:result', shot('samen&step=result'), null, { expect: '.result-samen' });
+  add('samen:intro', shot('samen'), null, { expect: '.samen-go' });
+  add('samen:turn', shot('samen&step=turn&at=0'), null, { expect: '.samen-next' });
+  add('samen:turn-answer', shot('samen&step=turn&at=1'), null, { expect: '.samen-turn-me' });
+  add('samen:turn-swapped', shot('samen&step=turn&at=0&swap=1'), null, { expect: '.samen-badge-2' });
+  add('samen:end', shot('samen&step=end'), null, { expect: '.samen-swap' });
+  add('samen:through', shot('samen'), async (p) => {
+    await tap(p, '.samen-go');
+    for (let i = 0; i < 4; i++) await tap(p, '.samen-next');
+    await tap(p, '.samen-swap');
+  }, { expect: '.samen-turn-them .samen-badge-2' });
+  add('samen:no-help', shot('samen&step=turn&at=0'), async (p) => { await tap(p, '.samen-help-toggle'); }, { expect: '.samen-help-toggle[aria-pressed="false"]' });
   return S;
 }
 

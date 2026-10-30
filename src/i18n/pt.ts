@@ -345,6 +345,19 @@ const lang: HelpLanguageSource = {
     coachDays: 'Dias de prática nas últimas 4 semanas', // nieuw, nalezen
     coachLast: 'Última lição, com a data', // nieuw, nalezen
     coachNameAsk: 'O teu nome no cartão?', // nieuw, nalezen
+    samenTitle: 'Praticar a dois', // nieuw, nalezen
+    samenRowHint: 'Duas pessoas, um telemóvel', // nieuw, nalezen
+    samenIntro: 'Pratica com um colega, um amigo ou um professor. Leiam à vez.', // nieuw, nalezen
+    samenHow: 'A pessoa 1 é o colega. A pessoa 2 responde.', // nieuw, nalezen
+    samenNoScore: 'Nada é gravado. Não há pontuação.', // nieuw, nalezen
+    samenPerson: 'Pessoa {n}', // nieuw, nalezen
+    samenAnswer: 'Resposta', // nieuw, nalezen
+    samenHear: 'Ouvir', // nieuw, nalezen
+    samenNext: 'Seguinte', // nieuw, nalezen
+    samenTranslation: 'Tradução', // nieuw, nalezen
+    samenEnd: 'Muito bem! Trocar de papéis e fazer outra vez?', // nieuw, nalezen
+    samenSwap: 'Trocar de papéis', // nieuw, nalezen
+    samenStop: 'Terminar', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
