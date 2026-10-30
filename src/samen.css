@@ -1,0 +1,73 @@
+/* "Oefen samen" (src/components/Samen.tsx): two people, one phone, one turn big on the screen. */
+.samen-head { padding: calc(12px + env(safe-area-inset-top)) 16px 0; width: 100%; max-width: 640px; margin: 0 auto; }
+.samen-title { margin: 0.1em 0; font-size: 1.35rem; font-weight: 650; display: flex; flex-direction: column; }
+.samen-title-nl { font-weight: 650; }
+.samen-title .bi { font-weight: 400; color: var(--ink-2); font-size: 0.85em; }
+.samen-title > .bi:only-child { font-weight: 650; color: var(--ink); font-size: 1em; }
+.samen-body { padding-top: 8px; gap: 14px; }
+.samen-body [tabindex="-1"]:focus, .samen-body [tabindex="-1"]:focus-visible { outline: none; }
+.samen-line[dir="ltr"] { text-align: start; }
+.samen[dir="rtl"] .samen-line { text-align: right; }
+
+.samen-intro { margin: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.4; }
+.samen-how { margin: 0; color: var(--ink-2); }
+.samen-roles { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.samen-role {
+  display: flex; align-items: center; gap: 14px; padding: 10px 14px;
+  background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
+}
+.samen-face { flex: none; display: grid; place-items: center; width: 64px; height: 64px; }
+.samen-face .ch { display: block; height: 64px; width: auto; }
+.samen-role-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.samen-person { font-size: 0.95rem; color: var(--ink-2); }
+.samen-name { font-size: 1.2rem; font-weight: 700; color: var(--ink-strong); }
+.samen-note { margin: 0; font-size: 0.95rem; }
+
+/* One turn: who talks (face, person 1 or 2, the name), the Dutch line big, the translation small. */
+.samen-count { margin: 0; font-size: 0.95rem; font-weight: 600; color: var(--ink-2); text-align: end; }
+.samen-turn {
+  display: flex; flex-direction: column; gap: 14px; padding: 16px;
+  background: var(--card); border: 2.5px solid var(--edge); border-radius: var(--radius);
+}
+.samen-turn-me { background: var(--tag-bg); }
+.samen-who { display: flex; align-items: center; gap: 14px; }
+.samen-who .samen-face { width: 96px; height: 96px; }
+.samen-who .samen-face .ch { height: 96px; }
+.samen-badge {
+  align-self: flex-start; padding: 3px 10px; border-radius: 999px;
+  font-weight: 700; font-size: 0.95rem; background: var(--ink); color: var(--paper);
+}
+.samen-badge-2 { background: var(--yellow); color: var(--on-yellow); }
+.samen-badge .bi-help { color: inherit; opacity: 0.85; }
+.samen-line { margin: 0; font-size: 1.75rem; font-weight: 700; line-height: 1.3; color: var(--ink-strong); overflow-wrap: anywhere; }
+.samen-help { margin: 0; font-size: 1rem; color: var(--ink-2); }
+.samen-tools { display: flex; flex-wrap: wrap; gap: 10px; }
+.samen-tools .btn { flex: 1 1 140px; min-height: 52px; }
+.samen-hear { background: var(--card); color: var(--blue); border-color: var(--blue); }
+.samen-hear .btn-label { color: var(--ink); }
+.samen-check {
+  display: inline-grid; place-items: center; width: 22px; height: 22px; flex: none;
+  border: 2px solid var(--ink-3); border-radius: 4px; font-size: 0.95rem; color: var(--ink);
+}
+.samen-help-toggle[aria-pressed='true'] { border-color: var(--ink-3); color: var(--ink); }
+
+/* The end: Bram says it went well, and asks to swap. */
+.samen-end { display: flex; flex-direction: column; align-items: center; gap: 12px; padding-top: 12px; text-align: center; }
+.samen-end-cast .ch { display: block; height: 120px; width: auto; }
+.samen .foot-actions .btn-ghost { min-height: 52px; }
+
+@media (max-width: 380px) {
+  .samen-line { font-size: 1.5rem; }
+  .samen-who .samen-face, .samen-who .samen-face .ch { width: auto; height: 72px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .samen-turn { animation: samen-in 0.18s ease-out both; }
+  @keyframes samen-in { from { opacity: 0.4; } }
+}
+
+/* The row on a lesson's result (src/components/Screens.tsx Result), under the numbers. Loaded with
+   App (which imports Samen); the row has the look of the emergency-phrases row (.result-phrases). */
+.result-samen.result-phrases .hub-icon { background: var(--tag-bg); color: var(--tag-ink); }
+.result-samen.result-phrases .hub-nl { font-size: 1.1rem; color: var(--ink); font-weight: 650; }
+.result-samen.result-phrases .hub-text .bi { font-size: 1rem; font-weight: 600; }
+.result-samen.result-phrases .hub-text .bi.result-samen-hint { font-size: 0.9rem; font-weight: 400; color: var(--ink-2); }
