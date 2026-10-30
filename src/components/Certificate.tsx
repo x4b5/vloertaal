@@ -58,11 +58,19 @@ function Signature() {
   );
 }
 
+/** What a screen reader hears for the certificate (one picture): all it says, in its own order,
+ *  with the key words or rules too (the picture hides its text). */
+export function certAlt(data: CertData): string {
+  const end = (t: string) => (/[.!?]$/.test(t) ? t : `${t}.`);
+  const list = data.phrases.length ? `${certListLabel(data)}: ${data.phrases.map(end).join(' ')} ` : '';
+  return `Certificaat Vloertaal: ${data.titleNl}. ${data.name ? `Uitgereikt aan ${data.name}. ` : ''}${list}${certMeta(data).replace(/ · /g, ', ')}. Behaald op ${data.date}. ${CERT_NOTE}.`;
+}
+
 /** The certificate: A4 landscape, paper on a kraft border. Sizes follow its width (cqw). */
 export function CertificateSheet({ data, className }: { data: CertData; className?: string }) {
   const helpRtl = data.helpDir === 'rtl';
   return (
-    <div className={`cert-frame ${className ?? ''}`} lang="nl" role="img" aria-label={`Certificaat Vloertaal: ${data.titleNl}. ${data.name ? `${data.name}. ` : ''}Behaald op ${data.date}. ${CERT_NOTE}.`}>
+    <div className={`cert-frame ${className ?? ''}`} lang="nl" role="img" aria-label={certAlt(data)}>
       <div className="cert" aria-hidden>
         <div className="cert-head">
           <span className="cert-logo"><LogoMark size={120} /></span>
