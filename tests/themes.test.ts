@@ -98,11 +98,12 @@ describe('grouping keeps the course order inside a theme, and changes no route',
 
 describe('theme names in every help language', () => {
   for (const src of helpLanguageSources) {
-    it(`${src.code}: every theme named, short (at most 3 words)`, () => {
+    // At most 4 words: short, but room for a country's name in full ("Leben in den Niederlanden").
+    it(`${src.code}: every theme named, short (at most 4 words)`, () => {
       for (const t of THEMES) {
         const forms = allForms(src.gloss[t.id]);
         expect(forms.length, `${src.code} ${t.id}`).toBeGreaterThan(0);
-        for (const f of forms) expect(f.trim().split(/\s+/).length, `${src.code} ${t.id}: ${f}`).toBeLessThanOrEqual(3);
+        for (const f of forms) expect(f.trim().split(/\s+/).length, `${src.code} ${t.id}: ${f}`).toBeLessThanOrEqual(4);
       }
     });
   }
