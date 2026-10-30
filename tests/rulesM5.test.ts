@@ -187,7 +187,7 @@ describe('Instellingen in the work-rules track', () => {
     // The language list names each language in itself ("English" in English): checked apart.
     const list = settings('language').replace(/<span class="lang-sample" lang="en">Aa<\/span>|<span class="lang-native" lang="en" dir="ltr">English<\/span>/g, '');
     noEnglish(list, 'language');
-    const pages: (SettingsPage | undefined)[] = [undefined, 'me', 'lessons', 'phone', 'sector', 'sector-make', 'sector-care', 'certificates',
+    const pages: (SettingsPage | undefined)[] = [undefined, 'me', 'lessons', 'phone', 'sector', 'sector-build', 'sector-make', 'sector-care', 'certificates',
       'sound', 'voice', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset'];
     for (const page of pages) noEnglish(settings(page), String(page));
     expect(settings('lessons')).toContain('Tekstgrootte');

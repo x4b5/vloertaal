@@ -99,6 +99,8 @@ const lang: HelpLanguageSource = {
     sectorHospitality: 'Hôtellerie et restauration',
     sectorCleaning: 'Nettoyage',
     sectorHorticulture: 'Horticulture', // nieuw (30 okt 2026), nagelezen (2e lezing)
+    sectorTechnical: 'Technique', // nieuw (30 okt 2026), nalezen
+    sectorGarage: 'Garage', // nieuw (30 okt 2026), nalezen
     sound: 'Son',
     soundOn: 'Avec le son',
     withoutSound: 'Sans le son',
@@ -245,7 +247,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Désactivé',
     sectorGroupMake: 'Fabriquer et transporter',
     sectorGroupCare: 'Soins et services',
-    sectorGroupOther: 'Autre chose', // nieuw (30 okt 2026), nagelezen (2e lezing)
+    sectorGroupBuild: 'Bâtiment et technique', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Voix de femme',
     voiceMan: 'Voix d’homme',
     writingPick: 'Choisis le mot',

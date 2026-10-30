@@ -61,9 +61,8 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     regels: ['r.zoeken', 'r.contract', 'r.stage', 'r.loopbaan'],
   },
   'theme.job': {
-    // "In de werkplaats" and "In de garage" are basis units for now (no sector of their own yet,
-    // like "In de winkel"), so they sit here and not under "Jouw sector".
-    taal: ['u.time', 'u.pay', 'u.leave', 'u.contact', 'u.house', 'u.numbers', 'u.shop', 'u.ai', 'u.finish', 'u.tech', 'u.garage', 'u.online'],
+    // "In de winkel" is a basis unit (no sector of its own), so it sits here and not under "Jouw sector".
+    taal: ['u.time', 'u.pay', 'u.leave', 'u.contact', 'u.house', 'u.numbers', 'u.shop', 'u.ai', 'u.finish', 'u.online'],
     regels: ['r.loon', 'r.tijd', 'r.ziek', 'r.rekenen', 'r.afronden', 'r.duurzaam', 'r.winkel', 'r.schrijven'],
   },
   'theme.together': {
@@ -80,7 +79,8 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     regels: ['r.geld', 'r.digitaal', 'r.meedoen', 'rg.zl.r'],
   },
   'theme.sector': {
-    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.kas'],
+    // "In de werkplaats" and "In de garage": the own units of Techniek and Garage (30 October 2026).
+    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.kas', 'u.tech', 'u.garage'],
     regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean', 'r.kas', 'r.techniek', 'r.werkplaats'],
   },
 };

@@ -2538,8 +2538,9 @@ const moreTips = [
 
 // ---- Entree in the Taal track (30 October 2026): the top 10 gaps of the Entree report ----
 // Six new units, appended after "In de kas" at the very end of the course, so every existing
-// course keeps its order: they are basis units (no sector of their own yet), so they come after
-// everything a learner already had. Five more lessons go at the end of an existing unit, as
+// course keeps its order. Four are basis units, so they come after everything a learner already
+// had; "In de werkplaats" (u.tech) and "In de garage" (u.garage) are the own units of the sectors
+// Techniek and Garage (src/content/sectors.ts), so they go to "Andere sectoren" for other sectors. Five more lessons go at the end of an existing unit, as
 // l.permit, l.kids and l.body did: l.mychoice and l.nextstep (u.grow), l.email (u.contact),
 // l.budget (u.money) and l.healthy (u.health).
 // Already words of other lessons, used here in a sentence, a chat or a tip only: "de werkbon"
