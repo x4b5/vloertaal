@@ -295,7 +295,9 @@ describe('the course per country', () => {
     expect(main[main.indexOf('r.veilig') + 1]).toBe('r.clean');
     expect(unitSector(beId('r.clean'))).toBe('cleaning');
     expect(rulesTwinHere('r.loon')).toBe('r.be.loon');
-    expect(rulesTwinHere('r.zoeken')).toBe('r.zoeken');
+    // A unit with no Belgian version yet keeps its Dutch id (any unit still in BE_TODO).
+    for (const todo of BE_TODO.slice(0, 1)) expect(rulesTwinHere(todo)).toBe(todo);
+    expect(rulesTwinHere('r.zoeken')).toBe('r.be.zoeken');
     setRulesCountry('nl');
     expect(rulesTwinHere('r.be.loon')).toBe('r.loon');
   });
