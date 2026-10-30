@@ -12,7 +12,7 @@ export const STYLE = `
   :root { color-scheme: light dark; --bg: #e7e3dc; --card: #fffdf8; --ink: #1e2226; --ink2: #4a4f55; --yellow: #ffc414; --line: #d6cfc3; }
   @media (prefers-color-scheme: dark) { :root { --bg: #16191c; --card: #1f2327; --ink: #eceae6; --ink2: #b6b2ab; --line: #343a40; } }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 19px/1.55 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Noto Sans Ethiopic', 'Noto Naskh Arabic', sans-serif; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 19px/1.55 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Noto Sans Ethiopic', 'Noto Naskh Arabic', sans-serif; overflow-wrap: anywhere; }
   main { max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; }
   header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
   header img { width: 48px; height: 48px; border-radius: 22%; }

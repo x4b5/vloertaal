@@ -3,6 +3,7 @@ import { units } from '../content/curriculum';
 import { THEME_UNITS, THEMES } from '../content/themes';
 import { APP_DATA, esc, plainPage, SITE } from './plainPage';
 import { languageMeta } from '../i18n/meta';
+import { uiNl } from '../i18n/nl';
 import { type LangCode, uiEn } from '../i18n/types';
 import { packText } from './pageTexts';
 
@@ -90,15 +91,21 @@ export function describe(body: string, max = 160): string {
   return out || `${body.slice(0, max - 1).trimEnd()}…`;
 }
 
+/** The language list's name for a screen reader, in the page's language ("Kies je taal" on the Dutch pages). */
+function navLabel(current?: PageCode): string {
+  if (current === undefined) return uiNl.chooseLanguage as string;
+  return current === 'en' ? uiEn.chooseLanguage : packText(current).ui('chooseLanguage');
+}
+
 /** The list of all language pages (and the Dutch start page), on every page: one tap to your own. */
 export function languageNav(current?: PageCode): string {
   const items = [
-    `<li><a href="/" lang="nl" hreflang="nl">Nederlands</a></li>`,
+    `<li><a href="/" lang="nl" hreflang="nl" dir="ltr">Nederlands</a></li>`,
     ...LANG_PAGES.map(
       (p) => `<li><a href="${p.path}" lang="${p.tag}" hreflang="${p.tag}" dir="${p.dir}"${p.code === current ? ' aria-current="page"' : ''}>${esc(p.nativeName)}</a></li>`,
     ),
   ];
-  return `<nav aria-label="Vloertaal"><ul>${items.join('')}</ul></nav>`;
+  return `<nav aria-label="${esc(navLabel(current))}"><ul>${items.join('')}</ul></nav>`;
 }
 
 /**
