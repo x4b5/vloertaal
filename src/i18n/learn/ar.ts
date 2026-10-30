@@ -101,7 +101,7 @@ const t: CultureTranslation = {
     'c.workshop.a.why': "السؤال لماذا: هذا الرد يذكر السبب، العين تحتاج إلى حماية.", // nieuw, nalezen
     'c.power.a.why': "عمل على مصباح: هذا الرد يسأل أولاً هل فُصلت الكهرباء.", // nieuw, nalezen
     'c.garage.a.why': "طلب تغيير الإطارات: نعم، وسؤال عن مكانها.", // nieuw, nalezen
-    'c.carjob.a.why': "عمل إضافي: يجب أن يوافق الزبون أولاً، لذلك هذا الرد يتصل به.", // nieuw, nalezen
+    'c.carjob.a.why': "عمل إضافي: يجب أن يوافق الزبون أولاً، لذلك هذا الرد يسأل المسؤول.", // nieuw, nalezen
     'c.placement.a.why': "السؤال متى: هذا الرد يذكر اليوم، والعقد يأتي أولاً.", // nieuw, nalezen
     'c.review.a.why': "الملاحظة غير واضحة بعد: طلب الشرح بالعرض رد جيد.", // nieuw, nalezen
     'c.council.a.why': "السؤال عن التصويت: نعم، والشيئان اللازم أخذهما.", // nieuw, nalezen

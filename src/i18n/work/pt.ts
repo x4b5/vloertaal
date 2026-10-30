@@ -1352,7 +1352,7 @@ const t: CultureTranslation = {
     'w.afmelden': "avisar que terminas (dizer que o trabalho está feito e sair)", // nieuw, nalezen
     'w.kapot': "avariado, partido", // nieuw, nalezen
     'w.opslot': "fechado à chave", // nieuw, nalezen
-    'w.bijzonderheid': "a ocorrência (algo que correu de outra forma)", // nieuw, nalezen
+    'w.bijzonderheid': "a porta", // nieuw, nalezen
     's.handover.1': "Estou a arrumar o meu sítio.", // nieuw, nalezen
     's.handover.2': "Pode verificar o meu trabalho?", // nieuw, nalezen
     's.handover.3': "Aviso o chefe de que terminei.", // nieuw, nalezen
@@ -1407,7 +1407,7 @@ const t: CultureTranslation = {
     's.carjob.2': "Esta peça está avariada.", // nieuw, nalezen
     's.carjob.3': "Posso fazer um test drive?", // nieuw, nalezen
     'c.carjob.q': "Os travões também estão maus. Fazes isso já?", // nieuw, nalezen
-    'c.carjob.a': "Primeiro ligo ao cliente. Ele tem de concordar.", // nieuw, nalezen
+    'c.carjob.a': "Primeiro pergunto ao chefe. O cliente tem de concordar.", // nieuw, nalezen
     'u.stage': "Fazer estágio", // nieuw, nalezen
     'l.placement': "O teu estágio", // nieuw, nalezen
     'w.stage': "o estágio (aprendes numa empresa)", // nieuw, nalezen
@@ -1455,7 +1455,7 @@ const t: CultureTranslation = {
     'w.wet': "a lei", // nieuw, nalezen
     's.police.1': "Levei uma multa.", // nieuw, nalezen
     's.police.2': "Quero fazer uma reclamação.", // nieuw, nalezen
-    's.police.3': "Posso ter um advogado?", // nieuw, nalezen
+    's.police.3': "Quero falar com um advogado.", // nieuw, nalezen
     'c.police.q': "Pode mostrar-me o seu documento de identificação?", // nieuw, nalezen
     'c.police.a': "Sim, aqui está. O que se passa?", // nieuw, nalezen
     'u.online': "Online no trabalho", // nieuw, nalezen
@@ -1490,11 +1490,11 @@ const t: CultureTranslation = {
     'w.bijbaan': "o part-time (um trabalho pequeno ao lado da escola)", // nieuw, nalezen
     'w.nauwkeurig': "cuidadoso e rigoroso", // nieuw, nalezen
     'w.meeloopdag': "o dia de observação (um dia em que acompanhas alguém no trabalho)", // nieuw, nalezen
-    's.mychoice.1': "Tenho jeito para trabalhar com as mãos.", // nieuw, nalezen
+    's.mychoice.1': "Sei trabalhar bem com as mãos.", // nieuw, nalezen
     's.mychoice.2': "Gosto de trabalhar com pessoas.", // nieuw, nalezen
     's.mychoice.3': "Posso acompanhar-vos um dia, para ver o trabalho?", // nieuw, nalezen
     'c.mychoice.q': "Em que é que tens jeito?", // nieuw, nalezen
-    'c.mychoice.a': { m: "Sou cuidadoso. Em casa cuido da minha mãe.", f: "Sou cuidadosa. Em casa cuido da minha mãe.", x: "Sou cuidadoso / cuidadosa. Em casa cuido da minha mãe." }, // nieuw, nalezen
+    'c.mychoice.a': "Tenho jeito para cuidar de pessoas. Em casa cuido da minha mãe.", // nieuw, nalezen
     'l.nextstep': "Depois do Entree", // nieuw, nalezen
     'w.niveau2': "o nível 2 (o nível seguinte do mbo)", // nieuw, nalezen
     'w.startkwalificatie': "a qualificação básica (um diploma mbo de nível 2 ou superior)", // nieuw, nalezen
@@ -1548,7 +1548,7 @@ const t: CultureTranslation = {
     'c.workorder.p': "A ordem de trabalho diz dez caixas. Está certo?", // nieuw, nalezen
     'c.workorder.s': "A tua ordem de trabalho diz: pintar o quarto 3. O teu colega diz que é o quarto 5. O que fazes?", // nieuw, nalezen
     'c.workorder.o1': "Perguntas ao teu chefe qual é o quarto certo.", // nieuw, nalezen
-    'c.workorder.o2': "Pintas o quarto 3, porque é o que diz o papel.", // nieuw, nalezen
+    'c.workorder.o2': "Pintas o quarto 3, porque é o que diz a ordem de trabalho.", // nieuw, nalezen
     'c.workorder.o3': "Pintas os dois quartos, assim não há erro.", // nieuw, nalezen
     'c.workorder.w': "Quando duas coisas não batem certo, verificas antes de começar. Uma pergunta curta leva menos tempo do que fazer o trabalho outra vez.", // nieuw, nalezen
     'c.handover': "Diz o que está feito e o que não está", // nieuw, nalezen
@@ -1572,8 +1572,8 @@ const t: CultureTranslation = {
     'c.power.p': "Vejo um cabo avariado. Quem pode ver isto?", // nieuw, nalezen
     'c.power.s': "Tens de pendurar uma lâmpada. Um colega diz: \"A corrente está desligada, acho eu.\" O que fazes?", // nieuw, nalezen
     'c.power.o1': "Pedes a um colega com formação que veja se não há corrente.", // nieuw, nalezen
-    'c.power.o2': "Começas, mas só tocas nos fios com luvas.", // nieuw, nalezen
-    'c.power.o3': "Tocas depressa no fio para sentir se há corrente.", // nieuw, nalezen
+    'c.power.o2': "Começas, mas pões luvas grossas para tocar nos fios.", // nieuw, nalezen
+    'c.power.o3': "Acendes e apagas a luz para ver se não há corrente.", // nieuw, nalezen
     'c.power.w': "\"Acho eu\" não chega com eletricidade. Um choque pode matar-te. Um colega com formação verifica que não há corrente, e depois podes começar.", // nieuw, nalezen
     'c.garage': "Seguro debaixo de um carro", // nieuw, nalezen
     'c.garage.b': "Nunca te ponhas debaixo de um carro que só está num macaco. O carro tem de estar bem firme no elevador ou em cavaletes. O óleo entornado deixa o chão escorregadio: limpa logo. O óleo usado, as baterias e os produtos de limpeza são resíduos perigosos. Vão para um sítio especial, nunca para o lixo normal nem para o esgoto. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
@@ -1587,8 +1587,8 @@ const t: CultureTranslation = {
     'c.carjob.b': "Encontras mais problemas do que diz a ordem de trabalho? Não os arranjes assim sem mais. O cliente tem de concordar primeiro com o trabalho extra e com os custos. O teu chefe ou a receção liga ao cliente. Um test drive só com autorização, e só com uma carta de condução válida. Escreve o que fizeste e que peças usaste. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
     'c.carjob.p': "Vejo mais um problema. Quem liga ao cliente?", // nieuw, nalezen
     'c.carjob.s': "Estás a mudar o óleo de um carro. Vês que os travões também estão maus. O carro tem de estar pronto daqui a uma hora. O que fazes?", // nieuw, nalezen
-    'c.carjob.o1': "Dizes ao teu chefe, para que liguem ao cliente.", // nieuw, nalezen
-    'c.carjob.o2': "Arranjas também os travões, o cliente vai ficar contente.", // nieuw, nalezen
+    'c.carjob.o1': "Dizes ao teu chefe, para ele ligar ao cliente.", // nieuw, nalezen
+    'c.carjob.o2': "Arranjas também os travões: de certeza que o cliente quer um carro seguro.", // nieuw, nalezen
     'c.carjob.o3': "Não dizes nada: os travões não estão na ordem de trabalho.", // nieuw, nalezen
     'c.carjob.w': "O cliente paga, por isso o cliente decide. Sem o acordo dele, a garagem não pode fazer trabalho extra assim sem mais. Travões maus são perigosos, por isso é importante avisar.", // nieuw, nalezen
     'c.placement': "Primeiro assina, depois começa", // nieuw, nalezen
@@ -1596,7 +1596,7 @@ const t: CultureTranslation = {
     'c.placement.p': "Só começo quando o contrato de estágio estiver assinado.", // nieuw, nalezen
     'c.placement.s': "A empresa pede-te para começares amanhã. O POK ainda não está assinado. O que fazes?", // nieuw, nalezen
     'c.placement.o1': "Pedes ao orientador de estágio que trate primeiro do POK.", // nieuw, nalezen
-    'c.placement.o2': "Começas amanhã e assinas o POK daqui a umas semanas.", // nieuw, nalezen
+    'c.placement.o2': "Começas amanhã e assinas o POK quando tiveres tempo.", // nieuw, nalezen
     'c.placement.o3': "Começas, mas por agora não dizes nada à escola.", // nieuw, nalezen
     'c.placement.w': "O POK diz o que aprendes e quem te ajuda. Sem um POK assinado, o teu estágio pode não contar para o diploma. Por isso assinas antes de começar.", // nieuw, nalezen
     'c.review': "Pede feedback, e um exemplo", // nieuw, nalezen
@@ -1605,7 +1605,7 @@ const t: CultureTranslation = {
     'c.review.s': "O teu orientador diz: \"Tens de trabalhar com mais cuidado.\" Não sabes o que ele quer dizer. O que fazes?", // nieuw, nalezen
     'c.review.o1': "Pedes um exemplo do que tens de fazer de outra forma.", // nieuw, nalezen
     'c.review.o2': { m: "Dizes que sim e esperas perceber sozinho.", f: "Dizes que sim e esperas perceber sozinha.", x: "Dizes que sim e esperas perceber sozinho / sozinha." }, // nieuw, nalezen
-    'c.review.o3': "Trabalhas muito mais devagar, para nada correr mal.", // nieuw, nalezen
+    'c.review.o3': "A partir de agora trabalhas muito mais devagar, para nada correr mal.", // nieuw, nalezen
     'c.review.w': "Com um exemplo, sabes o que mudar. Perguntar mostra que queres aprender. Os orientadores gostam disso.", // nieuw, nalezen
     'c.council': "Quem pode votar?", // nieuw, nalezen
     'c.council.b': "Nos Países Baixos escolhes, pelo voto, quem decide. A assembleia municipal (gemeenteraad) decide sobre a tua cidade. A Tweede Kamer faz as leis para todo o país. Com a nacionalidade neerlandesa, podes votar em todas as eleições, a partir dos 18 anos. Para a assembleia municipal, podem votar mais pessoas: pessoas de outro país da UE que vivem cá, e pessoas de fora da UE depois de 5 anos de residência legal. O município (gemeente) envia-te um cartão de voto (stempas). Leva-o com o teu documento de identificação. Não sabes se podes votar? Pergunta ao município.", // nieuw, nalezen
@@ -1620,11 +1620,11 @@ const t: CultureTranslation = {
     'c.police.p': "Não concordo com esta decisão. Vou fazer uma reclamação.", // nieuw, nalezen
     'c.police.s': "Recebes uma carta do município. Não concordas com a decisão deles. A carta diz que tens seis semanas. O que fazes?", // nieuw, nalezen
     'c.police.o1': "Escreves uma carta de reclamação, antes da data.", // nieuw, nalezen
-    'c.police.o2': "Ligas uma vez e esperas que te liguem de volta.", // nieuw, nalezen
+    'c.police.o2': "Ligas-lhes uma vez e esperas que te liguem de volta.", // nieuw, nalezen
     'c.police.o3': "Esperas: depois de seis semanas, passa sozinho.", // nieuw, nalezen
     'c.police.w': "A reclamação faz-se por escrito, antes da data da carta. Depois dessa data, muitas vezes é tarde demais. O Juridisch Loket pode ajudar-te a escrevê-la.", // nieuw, nalezen
     'c.login': "O teu acesso é só teu", // nieuw, nalezen
-    'c.login.b': "A tua palavra-passe e o teu DigiD são só para ti. Não os dês a ninguém, nem ao teu empregador nem a um colega. Num computador partilhado, termina sempre a sessão quando acabares. Vais sair um momento? Bloqueia o ecrã. Esqueceste-te da palavra-passe? Pede uma nova ao departamento de informática (ICT-afdeling). As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.login.b': "A tua palavra-passe e o teu DigiD são só para ti. Não os dês a ninguém, nem ao teu empregador nem a um colega. Num computador partilhado, termina sempre a sessão quando acabares. Vais sair um momento? Bloqueia o ecrã. Esqueceste-te da palavra-passe? Pede uma nova ao departamento de informática (ICT-afdeling). As regras dos computadores são diferentes em cada empresa: pergunta ao departamento de informática quais são as regras onde trabalhas.", // nieuw, nalezen
     'c.login.p': "Vou sair um momento. Vou bloquear o ecrã.", // nieuw, nalezen
     'c.login.s': "O teu chefe pede o teu DigiD e a tua palavra-passe para tratar depressa dos teus papéis. O que fazes?", // nieuw, nalezen
     'c.login.o1': "Dizes que não, e entras tu enquanto ele ajuda.", // nieuw, nalezen
@@ -1636,15 +1636,15 @@ const t: CultureTranslation = {
     'c.phish.p': "Cliquei num link suspeito.", // nieuw, nalezen
     'c.phish.s': "Clicaste num link de um e-mail e escreveste a tua palavra-passe. Depois vês que o e-mail era falso. O que fazes?", // nieuw, nalezen
     'c.phish.o1': "Mudas a palavra-passe e ligas à informática.", // nieuw, nalezen
-    'c.phish.o2': "Apagas o e-mail e esperas que nada aconteça.", // nieuw, nalezen
+    'c.phish.o2': "Apagas o e-mail, para mais ninguém clicar nele.", // nieuw, nalezen
     'c.phish.o3': "Esperas um dia para ver se corre alguma coisa mal.", // nieuw, nalezen
     'c.phish.w': "Com a tua palavra-passe, outra pessoa pode entrar nos sistemas do teu trabalho. Se a mudares depressa e avisares a informática, eles podem parar isso a tempo.", // nieuw, nalezen
     'c.mychoice': "Os teus pontos fortes contam", // nieuw, nalezen
     'c.mychoice.b': "Em que é que tens jeito? Pensa no trabalho, na escola e em casa. Cuidar da família, um part-time ou voluntariado também contam. Do que é que gostas, e do que é que não gostas? Não sabes que trabalho é para ti? Pede para acompanhar alguém no trabalho durante um dia (meeloopdag). O teu orientador na escola pode ajudar-te a escolher.", // nieuw, nalezen
-    'c.mychoice.p': "Tenho jeito para pessoas. Em casa ajudo muito.", // nieuw, nalezen
+    'c.mychoice.p': "Sei lidar bem com as pessoas. Em casa ajudo muito.", // nieuw, nalezen
     'c.mychoice.s': "Na escola perguntam-te: \"Em que é que tens jeito?\" Nunca tiveste um trabalho pago. O que dizes?", // nieuw, nalezen
     'c.mychoice.o1': "O que fazes bem em casa, como cuidar dos outros.", // nieuw, nalezen
-    'c.mychoice.o2': "Que não sabes dizer, porque nunca tiveste emprego.", // nieuw, nalezen
+    'c.mychoice.o2': "Que ainda não sabes, porque nunca tiveste emprego.", // nieuw, nalezen
     'c.mychoice.o3': "Que consegues fazer qualquer trabalho, mesmo tudo.", // nieuw, nalezen
     'c.mychoice.w': "O que fazes em casa também conta. Cuidar, planear e ajudar são competências de que os empregadores precisam. Diz o que fizeste, com um exemplo.", // nieuw, nalezen
     'c.nextstep': "Depois do Entree: nível 2 ou trabalho", // nieuw, nalezen

@@ -1352,7 +1352,7 @@ const t: CultureTranslation = {
     'w.afmelden': "zgłosić koniec pracy (powiedzieć, że praca jest skończona, i wyjść)", // nieuw, nalezen
     'w.kapot': "zepsuty", // nieuw, nalezen
     'w.opslot': "zamknięty na klucz", // nieuw, nalezen
-    'w.bijzonderheid': "uwaga, szczegół (coś, co poszło inaczej)", // nieuw, nalezen
+    'w.bijzonderheid': "drzwi", // nieuw, nalezen
     's.handover.1': "Sprzątam swoje miejsce.", // nieuw, nalezen
     's.handover.2': "Czy może Pan / Pani sprawdzić moją pracę?", // nieuw, nalezen
     's.handover.3': "Zgłaszam przełożonemu koniec pracy.", // nieuw, nalezen
@@ -1407,7 +1407,7 @@ const t: CultureTranslation = {
     's.carjob.2': "Ta część jest zepsuta.", // nieuw, nalezen
     's.carjob.3': "Czy mogę zrobić jazdę próbną?", // nieuw, nalezen
     'c.carjob.q': "Hamulce też są złe. Zrobisz je od razu?", // nieuw, nalezen
-    'c.carjob.a': "Najpierw dzwonię do klienta. On musi się zgodzić.", // nieuw, nalezen
+    'c.carjob.a': "Najpierw zapytam szefa. Klient musi się zgodzić.", // nieuw, nalezen
     'u.stage': "Praktyka zawodowa", // nieuw, nalezen
     'l.placement': "Twoja praktyka", // nieuw, nalezen
     'w.stage': "praktyka zawodowa (uczysz się w firmie)", // nieuw, nalezen
@@ -1455,7 +1455,7 @@ const t: CultureTranslation = {
     'w.wet': "prawo, ustawa", // nieuw, nalezen
     's.police.1': { m: "Dostałem mandat.", f: "dostałam mandat.", x: "Dostałem / dostałam mandat." }, // nieuw, nalezen
     's.police.2': "Chcę złożyć sprzeciw.", // nieuw, nalezen
-    's.police.3': "Czy mogę mieć adwokata?", // nieuw, nalezen
+    's.police.3': "Chcę porozmawiać z adwokatem.", // nieuw, nalezen
     'c.police.q': "Czy mogę zobaczyć Pana / Pani dokument tożsamości?", // nieuw, nalezen
     'c.police.a': "Tak, proszę. Co się dzieje?", // nieuw, nalezen
     'u.online': "Online w pracy", // nieuw, nalezen
@@ -1490,11 +1490,11 @@ const t: CultureTranslation = {
     'w.bijbaan': "praca dorywcza (mała praca obok szkoły)", // nieuw, nalezen
     'w.nauwkeurig': "dokładny i staranny", // nieuw, nalezen
     'w.meeloopdag': "dzień obserwacji (dzień, w którym towarzyszysz komuś w pracy)", // nieuw, nalezen
-    's.mychoice.1': { m: "Jestem dobry w pracy rękami.", f: "Jestem dobra w pracy rękami.", x: "Dobrze pracuję rękami." }, // nieuw, nalezen
+    's.mychoice.1': "Umiem dobrze pracować rękami.", // nieuw, nalezen
     's.mychoice.2': "Lubię pracować z ludźmi.", // nieuw, nalezen
     's.mychoice.3': "Czy mogę przez jeden dzień towarzyszyć, żeby zobaczyć pracę?", // nieuw, nalezen
     'c.mychoice.q': { m: "W czym jesteś dobry?", f: "W czym jesteś dobra?", x: "Co ci dobrze wychodzi?" }, // nieuw, nalezen
-    'c.mychoice.a': { m: "Jestem dokładny. W domu opiekuję się mamą.", f: "Jestem dokładna. W domu opiekuję się mamą.", x: "Pracuję dokładnie. W domu opiekuję się mamą." }, // nieuw, nalezen
+    'c.mychoice.a': "Umiem dobrze opiekować się ludźmi. W domu opiekuję się mamą.", // nieuw, nalezen
     'l.nextstep': "Po Entree", // nieuw, nalezen
     'w.niveau2': "poziom 2 (następny poziom mbo)", // nieuw, nalezen
     'w.startkwalificatie': "kwalifikacja podstawowa (dyplom mbo na poziomie 2 albo wyższym)", // nieuw, nalezen
@@ -1548,7 +1548,7 @@ const t: CultureTranslation = {
     'c.workorder.p': "W zleceniu jest dziesięć kartonów. Czy to się zgadza?", // nieuw, nalezen
     'c.workorder.s': "W zleceniu jest napisane: pomaluj pokój 3. Kolega mówi, że to pokój 5. Co robisz?", // nieuw, nalezen
     'c.workorder.o1': "Pytasz przełożonego, który pokój jest dobry.", // nieuw, nalezen
-    'c.workorder.o2': "Malujesz pokój 3, bo tak jest na kartce.", // nieuw, nalezen
+    'c.workorder.o2': "Malujesz pokój 3, bo tak jest w zleceniu pracy.", // nieuw, nalezen
     'c.workorder.o3': "Malujesz oba pokoje, wtedy masz pewność.", // nieuw, nalezen
     'c.workorder.w': "Kiedy dwie rzeczy się nie zgadzają, sprawdzasz to przed rozpoczęciem. Krótkie pytanie zajmuje mniej czasu niż robienie pracy od nowa.", // nieuw, nalezen
     'c.handover': "Powiedz, co jest gotowe, a co nie", // nieuw, nalezen
@@ -1572,8 +1572,8 @@ const t: CultureTranslation = {
     'c.power.p': "Widzę zepsuty kabel. Kto może na to spojrzeć?", // nieuw, nalezen
     'c.power.s': "Musisz powiesić lampę. Kolega mówi: „Prąd jest wyłączony, chyba”. Co robisz?", // nieuw, nalezen
     'c.power.o1': "Prosisz przeszkolonego kolegę, żeby sprawdził, czy prąd jest wyłączony.", // nieuw, nalezen
-    'c.power.o2': "Zaczynasz, ale dotykasz przewodów tylko w rękawicach.", // nieuw, nalezen
-    'c.power.o3': "Szybko dotykasz przewodu, żeby poczuć, czy jest prąd.", // nieuw, nalezen
+    'c.power.o2': "Zaczynasz, ale zakładasz grube rękawice, kiedy dotykasz przewodów.", // nieuw, nalezen
+    'c.power.o3': "Włączasz i wyłączasz światło, żeby sprawdzić, czy prąd jest wyłączony.", // nieuw, nalezen
     'c.power.w': "„Chyba” to za mało przy prądzie. Porażenie może zabić. Przeszkolony kolega sprawdza, że nie ma prądu, i wtedy możesz zacząć.", // nieuw, nalezen
     'c.garage': "Bezpiecznie pod samochodem", // nieuw, nalezen
     'c.garage.b': "Nigdy nie wchodź pod samochód, który stoi tylko na lewarku. Samochód musi stać stabilnie na podnośniku albo na podporach. Rozlany olej robi śliską podłogę: od razu go sprzątnij. Stary olej, akumulatory i środki czyszczące to niebezpieczne odpady. Idą w specjalne miejsce, nigdy do zwykłego kosza ani do kanalizacji. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
@@ -1587,8 +1587,8 @@ const t: CultureTranslation = {
     'c.carjob.b': { m: "Znajdujesz więcej problemów, niż jest w zleceniu? Nie naprawiaj ich tak po prostu. Klient musi najpierw zgodzić się na dodatkową pracę i koszty. Przełożony albo biuro obsługi dzwoni do klienta. Jazda próbna tylko za zgodą i tylko z ważnym prawem jazdy. Zapisz, co zrobiłeś i jakich części użyłeś. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", f: "Znajdujesz więcej problemów, niż jest w zleceniu? Nie naprawiaj ich tak po prostu. Klient musi najpierw zgodzić się na dodatkową pracę i koszty. Przełożony albo biuro obsługi dzwoni do klienta. Jazda próbna tylko za zgodą i tylko z ważnym prawem jazdy. Zapisz, co zrobiłaś i jakich części użyłaś. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", x: "Znajdujesz więcej problemów, niż jest w zleceniu? Nie naprawiaj ich tak po prostu. Klient musi najpierw zgodzić się na dodatkową pracę i koszty. Przełożony albo biuro obsługi dzwoni do klienta. Jazda próbna tylko za zgodą i tylko z ważnym prawem jazdy. Zapisz, co zrobiłeś / zrobiłaś i jakich części użyłeś / użyłaś. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket." }, // nieuw, nalezen
     'c.carjob.p': "Widzę jeszcze jeden problem. Kto dzwoni do klienta?", // nieuw, nalezen
     'c.carjob.s': "Wymieniasz olej w samochodzie. Widzisz, że hamulce też są złe. Samochód ma być gotowy za godzinę. Co robisz?", // nieuw, nalezen
-    'c.carjob.o1': "Mówisz przełożonemu, żeby ktoś zadzwonił do klienta.", // nieuw, nalezen
-    'c.carjob.o2': "Naprawiasz też hamulce, klient będzie zadowolony.", // nieuw, nalezen
+    'c.carjob.o1': "Mówisz przełożonemu, żeby mógł zadzwonić do klienta.", // nieuw, nalezen
+    'c.carjob.o2': "Naprawiasz też hamulce: klient na pewno chce bezpieczny samochód.", // nieuw, nalezen
     'c.carjob.o3': "Nic nie mówisz: hamulców nie ma w zleceniu.", // nieuw, nalezen
     'c.carjob.w': "Klient płaci, więc klient decyduje. Bez jego zgody warsztat nie może tak po prostu robić dodatkowej pracy. Złe hamulce są niebezpieczne, więc trzeba o nich powiedzieć.", // nieuw, nalezen
     'c.placement': "Najpierw podpisz, potem zacznij", // nieuw, nalezen
@@ -1596,7 +1596,7 @@ const t: CultureTranslation = {
     'c.placement.p': "Zaczynam dopiero, kiedy umowa o praktykę jest podpisana.", // nieuw, nalezen
     'c.placement.s': { m: "Firma prosi, żebyś zaczął jutro. Umowa o praktykę (POK) nie jest jeszcze podpisana. Co robisz?", f: "Firma prosi, żebyś zaczęła jutro. Umowa o praktykę (POK) nie jest jeszcze podpisana. Co robisz?", x: "Firma prosi, żebyś zaczął / zaczęła jutro. Umowa o praktykę (POK) nie jest jeszcze podpisana. Co robisz?" }, // nieuw, nalezen
     'c.placement.o1': "Prosisz opiekuna ze szkoły, żeby najpierw załatwił POK.", // nieuw, nalezen
-    'c.placement.o2': "Zaczynasz jutro, a POK podpisujesz za kilka tygodni.", // nieuw, nalezen
+    'c.placement.o2': "Zaczynasz jutro, a POK podpisujesz, kiedy będziesz mieć czas.", // nieuw, nalezen
     'c.placement.o3': "Zaczynasz, ale na razie nic nie mówisz szkole.", // nieuw, nalezen
     'c.placement.w': "W POK jest napisane, czego się uczysz i kto ci pomaga. Bez podpisanej POK twoja praktyka może się nie liczyć do dyplomu. Dlatego podpisujesz ją, zanim zaczniesz.", // nieuw, nalezen
     'c.review': "Proś o informację zwrotną i o przykład", // nieuw, nalezen
@@ -1605,7 +1605,7 @@ const t: CultureTranslation = {
     'c.review.s': "Opiekun praktyki mówi: „Musisz pracować staranniej”. Nie wiesz, o co mu chodzi. Co robisz?", // nieuw, nalezen
     'c.review.o1': "Prosisz o przykład, co masz robić inaczej.", // nieuw, nalezen
     'c.review.o2': { m: "Mówisz „tak” i masz nadzieję, że sam zrozumiesz.", f: "Mówisz „tak” i masz nadzieję, że sama zrozumiesz.", x: "Mówisz „tak” i masz nadzieję, że sam / sama zrozumiesz." }, // nieuw, nalezen
-    'c.review.o3': "Pracujesz dużo wolniej, żeby nic nie poszło źle.", // nieuw, nalezen
+    'c.review.o3': "Od teraz pracujesz dużo wolniej, żeby nic nie poszło źle.", // nieuw, nalezen
     'c.review.w': "Z przykładem wiesz, co zmienić. Pytanie pokazuje, że chcesz się uczyć. Opiekunowie to lubią.", // nieuw, nalezen
     'c.council': "Kto może głosować?", // nieuw, nalezen
     'c.council.b': "W Holandii przez głosowanie wybierasz, kto decyduje. Rada gminy (gemeenteraad) decyduje o twojej miejscowości. Tweede Kamer tworzy prawo dla całego kraju. Z obywatelstwem holenderskim możesz głosować we wszystkich wyborach, od 18 lat. Na radę gminy może głosować więcej osób: ludzie z innego kraju UE, którzy tu mieszkają, i ludzie spoza UE po 5 latach legalnego pobytu. Gmina wysyła ci kartę do głosowania (stempas). Zabierz ją z dokumentem tożsamości. Nie wiesz, czy możesz głosować? Zapytaj w gminie.", // nieuw, nalezen
@@ -1620,11 +1620,11 @@ const t: CultureTranslation = {
     'c.police.p': "Nie zgadzam się z tą decyzją. Składam sprzeciw.", // nieuw, nalezen
     'c.police.s': "Dostajesz list z gminy. Nie zgadzasz się z ich decyzją. W liście jest napisane, że masz sześć tygodni. Co robisz?", // nieuw, nalezen
     'c.police.o1': "Piszesz list ze sprzeciwem, przed tą datą.", // nieuw, nalezen
-    'c.police.o2': "Dzwonisz raz i czekasz, aż oddzwonią.", // nieuw, nalezen
+    'c.police.o2': "Dzwonisz do nich raz i czekasz, aż do ciebie oddzwonią.", // nieuw, nalezen
     'c.police.o3': "Czekasz: po sześciu tygodniach samo się skończy.", // nieuw, nalezen
     'c.police.w': "Sprzeciw składasz na piśmie, przed datą z listu. Po tej dacie często jest za późno. Juridisch Loket może pomóc ci go napisać.", // nieuw, nalezen
     'c.login': "Twoje logowanie jest tylko twoje", // nieuw, nalezen
-    'c.login.b': "Twoje hasło i twoje DigiD są tylko dla ciebie. Nie dawaj ich nikomu, także pracodawcy ani koledze. Na wspólnym komputerze zawsze się wyloguj, kiedy skończysz. Odchodzisz na chwilę? Zablokuj ekran. Nie pamiętasz hasła? Poproś dział IT (ICT-afdeling) o nowe. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.login.b': "Twoje hasło i twoje DigiD są tylko dla ciebie. Nie dawaj ich nikomu, także pracodawcy ani koledze. Na wspólnym komputerze zawsze się wyloguj, kiedy skończysz. Odchodzisz na chwilę? Zablokuj ekran. Nie pamiętasz hasła? Poproś dział IT (ICT-afdeling) o nowe. Zasady korzystania z komputerów są różne w każdej firmie: zapytaj dział IT, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
     'c.login.p': "Odchodzę na chwilę. Blokuję ekran.", // nieuw, nalezen
     'c.login.s': "Przełożony prosi o twoje DigiD i hasło, żeby szybko załatwić twoje papiery. Co robisz?", // nieuw, nalezen
     'c.login.o1': { m: "Odmawiasz i logujesz się sam, a on pomaga.", f: "Odmawiasz i logujesz się sama, a on pomaga.", x: "Odmawiasz i logujesz się sam / sama, a on pomaga." }, // nieuw, nalezen
@@ -1636,15 +1636,15 @@ const t: CultureTranslation = {
     'c.phish.p': { m: "Kliknąłem w podejrzany link.", f: "kliknęłam w podejrzany link.", x: "Kliknąłem / kliknęłam w podejrzany link." }, // nieuw, nalezen
     'c.phish.s': { m: "Kliknąłeś w link w mailu i wpisałeś hasło. Potem widzisz, że mail był fałszywy. Co robisz?", f: "kliknęłaś w link w mailu i wpisałaś hasło. Potem widzisz, że mail był fałszywy. Co robisz?", x: "Kliknąłeś / kliknęłaś w link w mailu i wpisałeś / wpisałaś hasło. Potem widzisz, że mail był fałszywy. Co robisz?" }, // nieuw, nalezen
     'c.phish.o1': "Zmieniasz hasło i dzwonisz do działu IT.", // nieuw, nalezen
-    'c.phish.o2': "Usuwasz maila i masz nadzieję, że nic się nie stanie.", // nieuw, nalezen
+    'c.phish.o2': "Usuwasz maila, żeby nikt inny w niego nie kliknął.", // nieuw, nalezen
     'c.phish.o3': "Czekasz dzień, żeby zobaczyć, czy coś pójdzie źle.", // nieuw, nalezen
     'c.phish.w': "Z twoim hasłem ktoś inny może wejść do systemów twojej pracy. Kiedy szybko je zmienisz i powiesz działowi IT, mogą to w porę zatrzymać.", // nieuw, nalezen
     'c.mychoice': "Twoje mocne strony się liczą", // nieuw, nalezen
     'c.mychoice.b': { m: "W czym jesteś dobry? Pomyśl o pracy, szkole i domu. Opieka nad rodziną, praca dorywcza albo wolontariat też się liczą. Co lubisz, a czego nie lubisz? Nie wiesz, jaka praca do ciebie pasuje? Poproś, żeby przez jeden dzień towarzyszyć komuś w pracy (meeloopdag). Opiekun w szkole może ci pomóc wybrać.", f: "W czym jesteś dobra? Pomyśl o pracy, szkole i domu. Opieka nad rodziną, praca dorywcza albo wolontariat też się liczą. Co lubisz, a czego nie lubisz? Nie wiesz, jaka praca do ciebie pasuje? Poproś, żeby przez jeden dzień towarzyszyć komuś w pracy (meeloopdag). Opiekun w szkole może ci pomóc wybrać.", x: "W czym jesteś dobry / dobra? Pomyśl o pracy, szkole i domu. Opieka nad rodziną, praca dorywcza albo wolontariat też się liczą. Co lubisz, a czego nie lubisz? Nie wiesz, jaka praca do ciebie pasuje? Poproś, żeby przez jeden dzień towarzyszyć komuś w pracy (meeloopdag). Opiekun w szkole może ci pomóc wybrać." }, // nieuw, nalezen
-    'c.mychoice.p': "Dobrze pracuję z ludźmi. W domu dużo pomagam.", // nieuw, nalezen
+    'c.mychoice.p': "Umiem dobrze dogadywać się z ludźmi. W domu dużo pomagam.", // nieuw, nalezen
     'c.mychoice.s': { m: "W szkole pytają: „W czym jesteś dobry?”. Nigdy nie miałeś płatnej pracy. Co mówisz?", f: "W szkole pytają: „W czym jesteś dobra?”. Nigdy nie miałaś płatnej pracy. Co mówisz?", x: "W szkole pytają: „W czym jesteś dobry / dobra?”. Nigdy nie miałeś / miałaś płatnej pracy. Co mówisz?" }, // nieuw, nalezen
     'c.mychoice.o1': "Co dobrze robisz w domu, na przykład opiekę nad innymi.", // nieuw, nalezen
-    'c.mychoice.o2': { m: "Że nie umiesz powiedzieć, bo nigdy nie miałeś pracy.", f: "Że nie umiesz powiedzieć, bo nigdy nie miałaś pracy.", x: "Że nie umiesz powiedzieć, bo nigdy nie miałeś / miałaś pracy." }, // nieuw, nalezen
+    'c.mychoice.o2': { m: "Że jeszcze nie wiesz, bo nigdy nie miałeś pracy.", f: "Że jeszcze nie wiesz, bo nigdy nie miałaś pracy.", x: "Że jeszcze nie wiesz, bo nigdy nie miałeś / miałaś pracy." }, // nieuw, nalezen
     'c.mychoice.o3': "Że umiesz robić każdą pracę, wszystko.", // nieuw, nalezen
     'c.mychoice.w': "Umiejętności z domu też się liczą. Opieka, planowanie i pomaganie to umiejętności, których potrzebują pracodawcy. Powiedz, co robisz, z przykładem.", // nieuw, nalezen
     'c.nextstep': "Po Entree: poziom 2 albo praca", // nieuw, nalezen

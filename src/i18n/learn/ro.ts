@@ -101,7 +101,7 @@ const t: CultureTranslation = {
     'c.workshop.a.why': "Întrebat de ce: răspunsul acesta dă motivul, ochii trebuie protejați.", // nieuw, nalezen
     'c.power.a.why': "Lucru la o lampă: răspunsul acesta întreabă întâi dacă e oprit curentul.", // nieuw, nalezen
     'c.garage.a.why': "Rugat să schimbe anvelopele: un da, și o întrebare despre unde sunt.", // nieuw, nalezen
-    'c.carjob.a.why': "Lucru în plus: clientul trebuie să fie de acord întâi, deci răspunsul acesta îl sună.", // nieuw, nalezen
+    'c.carjob.a.why': "Lucru în plus: clientul trebuie să fie de acord întâi, deci răspunsul acesta îl întreabă pe șef.", // nieuw, nalezen
     'c.placement.a.why': "Întrebat când: răspunsul acesta dă ziua, iar contractul vine primul.", // nieuw, nalezen
     'c.review.a.why': "Feedbackul nu e clar încă: să ceri să ți se arate e un răspuns bun.", // nieuw, nalezen
     'c.council.a.why': "Întrebat de vot: un da, și cele două lucruri de luat.", // nieuw, nalezen

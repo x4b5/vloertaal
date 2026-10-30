@@ -101,7 +101,7 @@ const t: CultureTranslation = {
     'c.workshop.a.why': "On demande pourquoi : cette réponse donne la raison, les yeux doivent être protégés.", // nieuw, nalezen
     'c.power.a.why': "Un travail sur une lampe : cette réponse demande d’abord si le courant est coupé.", // nieuw, nalezen
     'c.garage.a.why': "On demande de changer les pneus : un oui, et une question sur où ils sont.", // nieuw, nalezen
-    'c.carjob.a.why': "Du travail en plus : le client doit d’abord être d’accord, donc cette réponse l’appelle.", // nieuw, nalezen
+    'c.carjob.a.why': "Du travail en plus : le client doit d’abord être d’accord, donc cette réponse demande au chef.", // nieuw, nalezen
     'c.placement.a.why': "On demande quand : cette réponse donne le jour, et la convention passe d’abord.", // nieuw, nalezen
     'c.review.a.why': "Le retour n’est pas encore clair : demander qu’on montre, c’est une bonne réponse.", // nieuw, nalezen
     'c.council.a.why': "On parle du vote : un oui, et les deux choses à prendre.", // nieuw, nalezen
