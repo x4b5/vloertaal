@@ -33,7 +33,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.2': "Je peux dire ce que je fais bien.", // nieuw, nalezen
     'kjn.u.lost.1': "Je peux dire que mon contrat se termine.", // nieuw, nalezen
     'kjn.u.lost.2': "Je peux demander si ma prime de vacances sera payée.", // nieuw, nalezen
-    'kjn.u.stage.1': "Je peux demander qui est mon tuteur de stage dans l’entreprise.", // nieuw, nalezen
+    'kjn.u.stage.1': "Je peux demander qui est mon tuteur en entreprise.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "Je peux demander un retour et un exemple.", // nieuw, nalezen
     'kjn.u.time.1': "Je peux dire à quelle heure commence mon service.", // nieuw, nalezen
     'kjn.u.time.2': "Je peux dire que je suis malade.", // nieuw, nalezen

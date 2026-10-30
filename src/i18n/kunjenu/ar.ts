@@ -33,7 +33,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.2': "أستطيع أن أقول ما أجيده.", // nieuw, nalezen
     'kjn.u.lost.1': "أستطيع أن أقول إن عقدي سينتهي.", // nieuw, nalezen
     'kjn.u.lost.2': "أستطيع أن أسأل هل سيُدفع لي بدل العطلة.", // nieuw, nalezen
-    'kjn.u.stage.1': "أستطيع أن أسأل من هو مشرف تدريبي في الشركة.", // nieuw, nalezen
+    'kjn.u.stage.1': "أستطيع أن أسأل من هو مدرّبي في الشركة.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "أستطيع أن أطلب ملاحظات ومثالًا.", // nieuw, nalezen
     'kjn.u.time.1': "أستطيع أن أقول متى تبدأ نوبتي.", // nieuw, nalezen
     'kjn.u.time.2': "أستطيع أن أبلغ عن مرضي.", // nieuw, nalezen

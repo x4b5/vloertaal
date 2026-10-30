@@ -33,7 +33,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.2': "Neyi iyi yaptığımı söyleyebilirim.", // nieuw, nalezen
     'kjn.u.lost.1': "Sözleşmemin bittiğini söyleyebilirim.", // nieuw, nalezen
     'kjn.u.lost.2': "Tatil paramın ödenip ödenmeyeceğini sorabilirim.", // nieuw, nalezen
-    'kjn.u.stage.1': "İşyerindeki staj eğitmenimin kim olduğunu sorabilirim.", // nieuw, nalezen
+    'kjn.u.stage.1': "İşyeri eğitmenimin kim olduğunu sorabilirim.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "Geri bildirim ve bir örnek isteyebilirim.", // nieuw, nalezen
     'kjn.u.time.1': "Vardiyamın saat kaçta başladığını söyleyebilirim.", // nieuw, nalezen
     'kjn.u.time.2': "Hasta olduğumu söyleyebilirim.", // nieuw, nalezen
