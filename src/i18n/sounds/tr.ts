@@ -31,7 +31,7 @@ const t: CultureTranslation = {
     'c.roundsounds.q': 'Kapı açık mı?',
     'c.roundsounds.a': 'Hayır, kapalı.',
     'c.roundsounds.a.why': 'Kapının açık olup olmadığı soruluyor: bu cevap açık olmadığını söylüyor.',
-    'l.pbgk': 'p mi b mi, g mi k mi',
+    'l.pbgk': "p mi b mi, g, k mı h mı", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'w.kl.pak': 'takım elbise',
     'w.kl.bak': 'kasa, çöp kutusu',
     'w.kl.goud': 'altın',

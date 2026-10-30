@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'Yelkenin üstünde küçük bir göz tutar mısın?',
     'zg.zeil.m': 'Her şeyin iyi ve güvenli gitmesine dikkat eder misin?',
     'zg.zeil.s': 'Amirin kısa bir süre gitmek zorunda. Diyor ki: “Hou je een oogje in het zeil?” Ne demek istiyor?',
-    'zg.zeil.o1': 'O yokken her şeyin iyi gitmesine dikkat et.',
+    'zg.zeil.o1': "O yokken göz kulak ol.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zeil.o2': 'Git bir tekneye bak.',
     'zg.zeil.o3': 'Bir an gözlerini kapat.',
     'zg.zeil.w': '“Een oogje in het zeil houden” şu demek: her şeyin iyi gitmesine dikkat etmek. Neye dikkat edeceğinden emin değil misin? O gitmeden önce ona sor.',
@@ -99,8 +99,8 @@ const t: CultureTranslation = {
     'zg.oefening.o2': 'Bir sanat dersine gitmen gerekiyor.',
     'zg.oefening.o3': 'Bırak, bu senin için çok zor.',
     'zg.oefening.w': 'Bu bir atasözüdür: alıştırma yaptıkça daha iyi olursun. Hollandaca öğrenmek için de bu doğrudur.',
-    'zg.zwartwit.lit': 'Onu beyaz üstünde siyah iste.',
-    'zg.zwartwit.m': 'Onu kâğıt üzerinde, yazılı olarak iste.',
+    'zg.zwartwit.lit': "Onun beyaz üstünde siyah elinde olmasını sağla.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zwartwit.m': "Onun kâğıt üzerinde, yazılı olarak elinde olmasını sağla.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zwartwit.s': 'Patronun sana daha fazla maaş sözü veriyor. İş arkadaşın diyor ki: “Zorg dat je het zwart op wit hebt.” Ne demek istiyor?',
     'zg.zwartwit.o1': 'Bu sözü yazılı olarak iste.',
     'zg.zwartwit.o2': 'Siyah ve beyaz kâğıt iste.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'Zaman paradır.',
     'zg.tijdgeld.m': 'Zaman değerlidir: onu boşa harcama.',
     'zg.tijdgeld.s': 'Patronun kamyonun çabuk yüklenmesini istiyor. Diyor ki: “Tijd is geld.” Ne demek istiyor?',
-    'zg.tijdgeld.o1': 'Çalışma zamanı para tutar, bu yüzden zaman kaybetmeden çalış.',
+    'zg.tijdgeld.o1': "Hızlı çalış, zaman kaybetme.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.tijdgeld.o2': 'Geç geldiğin için para alırsın.',
     'zg.tijdgeld.o3': 'Saat çok pahalı.',
     'zg.tijdgeld.w': 'Bu söz zamanın değerli olduğunu anlatır. Bu, güvensiz çalışma ya da ücretsiz saatler için asla bir sebep değildir.',

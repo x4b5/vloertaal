@@ -31,7 +31,7 @@ const t: CultureTranslation = {
     'c.roundsounds.q': 'Ușa e deschisă?',
     'c.roundsounds.a': 'Nu, e închisă.',
     'c.roundsounds.a.why': 'Întrebarea e dacă ușa e deschisă: răspunsul spune că nu.',
-    'l.pbgk': 'p sau b, g sau k',
+    'l.pbgk': "p sau b, g, k sau h", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'w.kl.pak': 'costumul',
     'w.kl.bak': 'lada, coșul de gunoi',
     'w.kl.goud': 'aurul',
