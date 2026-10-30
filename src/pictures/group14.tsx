@@ -278,7 +278,9 @@ export default {
       <Motion x={52} y={48} dir={200} spread={50} n={3} len={8} gap={38} color={PAL.line} width={3.4} />
       {/* Handle */}
       <path d="M73 69L98 96" stroke={PAL.slate} strokeWidth="9" strokeLinecap="round" />
-      <path d="M80 77L100 98" stroke={PAL.ink} strokeWidth="13" strokeLinecap="round" />
+      {/* A red grip (an ink-black grip was lost on the dark card) */}
+      <path d="M80 77L100 98" stroke={PAL.red} strokeWidth="13" strokeLinecap="round" />
+      <path d="M84 77L102 96" stroke={PAL.redShade} strokeWidth="4" strokeLinecap="round" />
       {/* Lens and rim */}
       <circle cx="54" cy="50" r="28" fill="#e3f5ff" />
       <circle cx="54" cy="50" r="28" fill="none" stroke={PAL.slate} strokeWidth="8" />

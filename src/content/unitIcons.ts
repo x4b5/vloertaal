@@ -41,6 +41,7 @@ export const unitIcons: Record<string, string> = {
   'u.tech': 'w.boor',
   'u.garage': 'w.garage',
   'u.stage': 'w.opleiding',
-  'u.society': 'w.post',
+  // Taking part in the Netherlands (the council and voting, the police): the ballot box, not a postbox.
+  'u.society': 'w.stemmen',
   'u.online': 'w.computer',
 };
