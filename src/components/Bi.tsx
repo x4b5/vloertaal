@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { langTag, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
+import { allMatches } from '../lib/matches';
 
 /**
  * Bilingual text. With a help language, that language comes first in the large type and the
@@ -76,7 +77,7 @@ const LATIN_RUN = new RegExp(`${TOKEN}(?:[.,:;!?…]?\\s+${TOKEN})*(?:\\s?(?:…
 export function isolateLatin(text: string): ReactNode {
   const parts: ReactNode[] = [];
   let last = 0;
-  for (const m of text.matchAll(LATIN_RUN)) {
+  for (const m of allMatches(text, LATIN_RUN)) {
     let at = m.index ?? 0;
     let end = at + m[0].length;
     // A quoted phrase takes its quote marks along, so they stay with it (and the right way

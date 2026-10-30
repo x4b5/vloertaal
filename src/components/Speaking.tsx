@@ -266,7 +266,9 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
     let analyser: AnalyserNode | null = null;
     let buf: Float32Array<ArrayBuffer> | null = null;
     try {
-      const ctx = new AudioContext();
+      // iOS before 14.5 has only the prefixed webkitAudioContext.
+      const Ctx = window.AudioContext ?? (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      const ctx = new Ctx();
       ctxRef.current = ctx;
       analyser = ctx.createAnalyser();
       analyser.fftSize = 1024;
