@@ -424,7 +424,7 @@ h2 { font-size: 1.25rem; }
 /* Now: the focal point of the screen. Safety yellow, Bram and a dark Start button. */
 .bay-now .bay-card {
   background: var(--yellow); color: #1e2226; border-color: #1e2226; min-height: 160px;
-  padding: 20px 128px 18px 18px; overflow: hidden;
+  padding: 20px 18px 18px; overflow: hidden;
 }
 .bay-now .bay-card:hover { background: #ffcd3a; }
 .bay-now .bay-title { font-size: 1.45rem; font-weight: 650; line-height: 1.15; }
@@ -454,7 +454,7 @@ h2 { font-size: 1.25rem; }
 .bay-card:active:not(:disabled) { transform: translateY(1px); filter: brightness(0.97); }
 .bay-card:active:not(:disabled) .bay-start { transform: translateY(1px); }
 @media (max-width: 380px) {
-  .bay-now .bay-card { padding-inline-end: 96px; }
+  .bay-with-char .bay-card { padding-inline-end: 96px; }
   .bay-char .ch { height: 96px; width: auto; }
   .bay-now .bay-title { font-size: 1.3rem; }
 }
@@ -2649,11 +2649,14 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* Path: the done card keeps one line ("Practise again" in the help language only). */
 .bay-again-label.bi-swap > .bi-help { display: none; }
 .cert-later > span[lang='nl']:only-child { font-size: 1.05rem; font-weight: 650; }
-/* Right to left: Bram stands at the card's end like the picture (both on the left). */
+/* Right to left: Bram stands at the card's end like the picture (both on the left). Room for him
+   only where he stands (the home's path); a topic page's card has no colleague, so its text uses
+   the whole width. */
 .bay-char { right: auto; inset-inline-end: 4px; }
-.bay-now .bay-card { padding-inline: 18px 128px; }
-@media (max-width: 380px) { .bay-now .bay-card { padding-inline: 12px 104px; } }
-@media (max-width: 300px) { .bay-now .bay-card { padding-inline: 12px; } }
+.bay-now .bay-card { padding-inline: 18px; }
+.bay-with-char .bay-card { padding-inline: 18px 128px; }
+@media (max-width: 380px) { .bay-now .bay-card { padding-inline: 12px; } .bay-with-char .bay-card { padding-inline: 12px 104px; } }
+@media (max-width: 300px) { .bay-with-char .bay-card { padding-inline: 12px; } }
 
 /* Chat: the colleague's line in the help language sits inside the bubble, under the Dutch
    (shown from the start), never as a popover over "your" bubble. */
@@ -3107,7 +3110,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   :root[data-text='xl'] .cert-earned-actions .btn-go { order: -1; padding-inline: 10px 58px; }
   /* The topic card on the path: no colleague over the Start button, the title its full width. */
   :root[data-text='xl'] .bay-char { display: none; }
-  :root[data-text='xl'] .bay-now .bay-card { padding-inline: 12px; }
+  :root[data-text='xl'] .bay-with-char .bay-card { padding-inline: 12px; }
   /* Speaking: the word gets the card's width (the picture is on the card before it too). */
   :root[data-text='xl'] .say-card .say-pic { display: none; }
   /* "The same" and "Say it again" one above the other: side by side a word would break. */
@@ -4382,13 +4385,13 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
      came in the same versions as inset). Right to left: mirrored. */
   .bay-char { right: 4px; }
   [dir='rtl'] .bay-char { right: auto; left: 4px; }
-  .bay-now .bay-card { padding-left: 18px; padding-right: 128px; }
-  [dir='rtl'] .bay-now .bay-card { padding-left: 128px; padding-right: 18px; }
+  .bay-with-char .bay-card { padding-left: 18px; padding-right: 128px; }
+  [dir='rtl'] .bay-with-char .bay-card { padding-left: 128px; padding-right: 18px; }
   @media (max-width: 380px) {
-    .bay-now .bay-card { padding-left: 12px; padding-right: 104px; }
-    [dir='rtl'] .bay-now .bay-card { padding-left: 104px; padding-right: 12px; }
+    .bay-with-char .bay-card { padding-left: 12px; padding-right: 104px; }
+    [dir='rtl'] .bay-with-char .bay-card { padding-left: 104px; padding-right: 12px; }
   }
-  @media (max-width: 300px) { .bay-now .bay-card, [dir='rtl'] .bay-now .bay-card { padding-left: 12px; padding-right: 12px; } }
+  @media (max-width: 300px) { .bay-with-char .bay-card, [dir='rtl'] .bay-with-char .bay-card { padding-left: 12px; padding-right: 12px; } }
   @media (max-width: 380px) {
     :root[data-text='xl'] .bay-now .bay-card, :root[data-text='xl'] [dir='rtl'] .bay-now .bay-card { padding-left: 12px; padding-right: 12px; }
   }
