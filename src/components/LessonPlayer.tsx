@@ -257,6 +257,9 @@ type PlayerProps = Parameters<typeof LessonRun>[0];
  * The lesson. "Start again" for a lesson stopped halfway is on the home (it clears the saved
  * place before the lesson opens); the pause sheet is always Keep going / sound / Stop.
  */
+/** A piece of the status line after Check, in its own language. */
+type LivePart = { text: string; lang: string };
+
 export function LessonPlayer(props: PlayerProps) {
   return <LessonRun {...props} />;
 }
@@ -352,7 +355,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     return () => window.clearTimeout(t);
   }, [runLabel, sweep]);
   /** Screen-reader announcement, filled one tick after Check (the region itself is always there). */
-  const [live, setLive] = useState('');
+  /** What the status region says after Check: parts with their own language (Dutch title and
+   *  word, the help-language verdict and meaning), so a screen reader picks the right voice. */
+  const [live, setLive] = useState<LivePart[]>([]);
   /** The Check choreography's timers; cleared on Continue and when the lesson closes. */
   const timers = useRef<number[]>([]);
   const later = (ms: number, fn: () => void) => { timers.current.push(window.setTimeout(fn, ms)); };
@@ -667,17 +672,18 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   checkRef.current = check;
 
   /** What the status region says after Check: the outcome, then the right answer. */
-  function announce(e: Exercise, correct: boolean, almost?: boolean, given?: string): string {
+  function announce(e: Exercise, correct: boolean, almost?: boolean, given?: string): LivePart[] {
     const rv = isRuleExercise(e) ? ruleVerdict(e, correct, given) : null;
-    if (rv) return ruleAnnouncement(rv);
-    const title = feedbackTitle(correct, e.kind);
+    if (rv) return [{ text: ruleAnnouncement(rv), lang: 'nl' }];
+    const title: LivePart = { text: feedbackTitle(correct, e.kind), lang: 'nl' };
     const p = answerPair(e, lang);
     // Help-language users hear their language, not the English that is hidden on screen.
-    const answerText = p ? `${p.nl ? `${p.nl} = ` : ''}${said(p.meaning)}` : '';
+    const answer: LivePart[] = p ? [...(p.nl ? [{ text: `${p.nl} =`, lang: 'nl' }] : []), { text: said(p.meaning), lang: saidLang(p.meaning) }] : [];
     // Right: "Goed zo! Correct. <answer>". Wrong: "Het goede antwoord is: <answer>" (the title is the lead).
-    if (!correct) return [title, answerText].filter(Boolean).join(' ');
-    const outcome = said(ui(feedbackMeaningKey(correct, almost, e.kind), lang));
-    return [title, /[.!?。።؟]$/.test(outcome) ? outcome : `${outcome}.`, answerText].filter(Boolean).join(' ');
+    if (!correct) return [title, ...answer];
+    const verdict = ui(feedbackMeaningKey(correct, almost, e.kind), lang);
+    const outcome = said(verdict);
+    return [title, { text: /[.!?。።؟]$/.test(outcome) ? outcome : `${outcome}.`, lang: saidLang(verdict) }, ...answer];
   }
 
   /** Copy the exercise on screen into the ghost layer, where it slides out while the next comes in. */
@@ -714,7 +720,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     setChecked(false);
     setSwapped(false);
     setSpeakRating(false);
-    setLive('');
+    setLive([]);
   }
 
   /** A speaking exercise is passed over only without sound (not graded, so not counted as
@@ -1018,7 +1024,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         )}
         <div className="foot-inner">
           {/* Always present, so screen readers hear what is put in it one tick after Check. */}
-          <div className="sr-only" role="status">{live}</div>
+          <div className="sr-only" role="status">{live.map((p, i) => <span key={i} lang={p.lang}>{i ? ' ' : ''}{p.text}</span>)}</div>
           {feedback && outcome && (
             <div className={`feedback feedback-${outcome}`}>
               <span className="feedback-tape" aria-hidden />
