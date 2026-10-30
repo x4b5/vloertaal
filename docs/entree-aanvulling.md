@@ -1208,7 +1208,7 @@ dezelfde vorm als de sectorlessen in deel 6 van het lespad. Ze passen bij Entree
 
 *Gebouwd op 30 oktober 2026, uitgewerkt uit de schets "groen" (G.1). Een van de grootste sectoren
 voor arbeidsmigranten (Westland, oogsten, sorteren en inpakken). In de app: de sector "Tuinbouw",
-bij "Waar werk je?" onder "Iets anders" (met "Weet ik nog niet") (`src/content/sectors.ts`). De Werkregels staan in
+bij "Waar werk je?" onder "Maken en verplaatsen" (`src/content/sectors.ts`). De Werkregels staan in
 `src/content/regels/units/sector.ts`, het Taal-onderwerp "In de kas" (`u.kas`) in
 `src/content/work.ts`. Focus: Veilig werken en Loon (Werkregels), Veiligheid en Loon (Taal).*
 
@@ -1372,7 +1372,7 @@ nog een ElevenLabs-opname nodig.*
 ### Sector mobiliteit · In de werkplaats (`r.werkplaats`) · gebouwd
 
 *Gebouwd op 30 oktober 2026 als "Werken in de garage", uitgewerkt in
-[`werkregels-curriculum.md`](werkregels-curriculum.md), deel 7. Nog niet in de sectorkeuze (zie daar).*
+[`werkregels-curriculum.md`](werkregels-curriculum.md), deel 7. In de sectorkeuze: Bouw en techniek › Garage.*
 
 - **Les M.1 · Veilig in de werkplaats.**
   Leerdoel: je gaat nooit onder een auto die niet goed vaststaat. Je ruimt gemorste olie meteen
@@ -1385,7 +1385,7 @@ nog een ElevenLabs-opname nodig.*
 
 *Gebouwd op 30 oktober 2026 als "Werken in de techniek", uitgewerkt in
 [`werkregels-curriculum.md`](werkregels-curriculum.md), deel 7. De lessen heten daar TE.1 en TE.2
-(T is al van de kas). Nog niet in de sectorkeuze.*
+(T is al van de kas). In de sectorkeuze: Bouw en techniek › Techniek.*
 
 - **Les T.1 · Gereedschap, vonken en lawaai.**
   Leerdoel: je draagt oog- en gehoorbescherming bij slijpen en boren. Je ruimt spanen en draadjes

@@ -38,7 +38,7 @@ import { DownloadIcon, OfflineSettingCard } from './Offline';
 import { LogoMark } from './Logo';
 import { LanguagePicker } from './Screens';
 import { NoVoiceNote } from './RulesHelp';
-import { SectorCards, SectorGroupCards, SectorIcon } from './Sector';
+import { SectorCards, SectorGroupHead, SectorGroupList, SectorIcon } from './Sector';
 import { MicIcon } from './Speaking';
 import { useVoices } from './useVoices';
 
@@ -94,9 +94,9 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   language: { nl: 'Hulptaal', key: 'helpLanguage', icon: <GlobeIcon size={24} /> },
   gender: { nl: 'Vrouw of man?', key: 'genderTitle', icon: <NeutralIcon size={24} /> },
   sector: { nl: 'Waar werk je?', key: 'chooseSector', icon: <SectorIcon id="logistics" size={24} /> },
+  'sector-build': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   'sector-make': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   'sector-care': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
-  'sector-other': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   region: { nl: 'Waar woon je?', key: 'regionTitle', icon: <PinIcon size={24} /> },
   country: { nl: 'In welk land werk je?', key: 'countryTitle', icon: <FlagIcon size={24} /> },
   english: { nl: 'Ook Engels tonen', key: 'showEnglish', icon: <span className="set-en" lang="en">EN</span> },
@@ -342,20 +342,22 @@ export function Settings({
       case 'gender':
         return <GenderPicker current={progress.gender} lang={lang} onPick={(g) => { onGender(g); answered(); }} />;
       case 'sector':
+        // A list (one kind of row): the three kinds of work, then "Weet ik nog niet" ('none').
         return (
-          <SectorGroupCards
+          <SectorGroupList
             current={progress.sector}
             lang={lang}
-            onPick={(g) => onPage(`sector-${g}`)}
+            onGroup={(g) => onPage(`sector-${g}`)}
+            onNotSure={() => { onSector('none'); answered(); }}
           />
         );
+      case 'sector-build':
       case 'sector-make':
-      case 'sector-care':
-      case 'sector-other': {
+      case 'sector-care': {
         const g = sectorGroups.find((x) => `sector-${x.id}` === page)!;
         return (
           <>
-            <p className="max3-crumb"><Bi text={say(g.key)} /></p>
+            <SectorGroupHead group={g.id} lang={lang} level={2} />
             <SectorCards group={g.id} current={progress.sector} lang={lang} onPick={(s) => { onSector(s); answered(2); }} />
           </>
         );

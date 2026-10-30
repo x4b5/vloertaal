@@ -121,8 +121,8 @@ in de klas kunt bespreken.
 | **Assistent dienstverlening (en zorg)** | 🟡 | *In de zorg* (2 lessen) · *Schoonmaken* (2 lessen) | WR Z.1 Hygiëne: schone handen, geen sieraden · WR Z.2 Privacy en medicijnen · WR S.1 Schoonmaakmiddelen: nooit mengen · WR S.2 Je lichaam sparen | Na WR Z.2: wat mag je wel en niet vertellen over een cliënt, thuis of in de groepsapp? *Receptie en facilitair werk ontbreken. Zie de schets in de aanvulling.* |
 | **Assistent verkoop/retail** | 🔴 | Alleen zijdelings (*In de horeca › Serving guests*) | Alleen genoemd: WR 1.2 (vakken vullen, kassa) · WR 4.1 (een baan in een winkel) | *Zie unit 11 (Werkregels) en "In de winkel" (Taal) in de aanvulling.* |
 | **Assistent plant, dier of groene omgeving** | 🟡 (tuinbouw en kas) · 🔴 (dieren, groen onderhoud) | *In de kas › Harvesting and sorting, Safe in the greenhouse* | WR T.1 Veilig in kas en veld · WR T.2 Tempo en stukloon | Laat studenten na WR T.2 een week lang hun uren en kratten opschrijven, en vergelijk dat met een voorbeeld-loonstrook. *Dieren en groen onderhoud: schets in de aanvulling.* |
-| **Assistent mobiliteitsbranche** | 🟡 (Werkregels en Taal, §3.5) | *Naar je werk › By bike* gaat over fietsen naar je werk, niet over de werkplaats | WR M.1 Veilig in de werkplaats · WR M.2 De werkorder en de klant | Na WR M.2: laat studenten een werkorder uit de praktijkles lezen. Wat staat erop, en wat doe je als je nog iets ziet? *Nog niet te kiezen als sector bij "Waar werk je?": open de unit met de link `?unit=r.werkplaats`.* |
-| **Assistent metaal-, elektro- en installatietechniek** | 🟡 (Werkregels en Taal, §3.5) | *Op de bouw › Tools and materials* (gereedschap) | WR TE.1 Gereedschap, vonken en lawaai · WR TE.2 Stroom: nooit zomaar · ook bruikbaar: WR P.1 (lock-out) · WR 7.1 | Na WR TE.2: wie mag er op jullie school of bpv-plek aan elektra werken, en hoe zie je dat de stroom eraf is? *Nog niet te kiezen als sector: open de unit met `?unit=r.techniek`.* |
+| **Assistent mobiliteitsbranche** | 🟡 (Werkregels en Taal, §3.5) | *Naar je werk › By bike* gaat over fietsen naar je werk, niet over de werkplaats | WR M.1 Veilig in de werkplaats · WR M.2 De werkorder en de klant | Na WR M.2: laat studenten een werkorder uit de praktijkles lezen. Wat staat erop, en wat doe je als je nog iets ziet? *Te kiezen als sector bij "Waar werk je?": Bouw en techniek › Garage. Of open de unit met de link `?unit=r.werkplaats`.* |
+| **Assistent metaal-, elektro- en installatietechniek** | 🟡 (Werkregels en Taal, §3.5) | *Op de bouw › Tools and materials* (gereedschap) | WR TE.1 Gereedschap, vonken en lawaai · WR TE.2 Stroom: nooit zomaar · ook bruikbaar: WR P.1 (lock-out) · WR 7.1 | Na WR TE.2: wie mag er op jullie school of bpv-plek aan elektra werken, en hoe zie je dat de stroom eraf is? *Te kiezen als sector: Bouw en techniek › Techniek. Of open de unit met `?unit=r.techniek`.* |
 | **ICT** (geen Entree-profiel gevonden ⚖️) | 🔴 | — | — | Voor studenten die naar niveau 2 ICT willen. *Schets in de aanvulling.* |
 
 
@@ -148,8 +148,10 @@ tot dan leest de stem van de telefoon de nieuwe zinnen voor.
 | **Politiek-juridisch: stemmen, rechtsstaat** | 🔴 | 🟡 | *Meedoen in Nederland › The municipality and voting, Police and your rights* |
 | **Digitaal**: inloggen, phishing | 🟡 | 🟢 | *Online op je werk › Logging in, Fake e-mails* |
 
-- **Mobiliteit en techniek** zijn nog geen eigen sector bij "Waar werk je?". Deze onderwerpen staan
-  daarom voor iedereen in het lespad, onder het thema *Je baan*, na de andere onderwerpen.
+- **Mobiliteit en techniek** zijn sinds 30 oktober een eigen sector bij "Waar werk je?" (Bouw en
+  techniek › Garage of Techniek). Wie die sector kiest, krijgt *In de garage* of *In de werkplaats*
+  vroeg in het lespad, onder *Jouw sector*. Voor de andere sectoren staan ze onder *Andere
+  sectoren*; met "Weet ik nog niet" staan ze in het hele lespad.
 - **Feiten met ⚖️** in deze lessen (een deskundige kijkt ze na): gehoorbescherming en heet werk,
   werken aan elektriciteit (NEN 3140), gevaarlijk afval in de garage, meerwerk alleen met akkoord
   van de klant, de proefrit met rijbewijs, de POK, doorstromen naar niveau 2 en de
