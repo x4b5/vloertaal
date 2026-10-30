@@ -34,12 +34,23 @@ export const RULES_CIVIC = 'Algemene informatie. Vraag voor jouw situatie de gem
  */
 export const RULES_BORDER = 'Algemene informatie. Vraag voor jouw situatie het GrensInfoPunt of het Juridisch Loket.';
 
+/** The work rules are those of the Netherlands (docs/belgie-vlaanderen-plan.md). */
+export const RULES_COUNTRY = 'Deze regels gelden in Nederland. In België zijn veel regels anders.';
+
+/** Shown in the Hulp tab to a learner who works in Belgium (Settings: "In welk land werk je?"). */
+export const RULES_BE_NOTE = [
+  'Je werkt in België.',
+  'De werkregels in Vloertaal gaan over Nederland. In België zijn veel regels anders.',
+  'Vraag voor jouw situatie een vakbond in België.',
+];
+
 /** The disclaimer of the track (about screen, first rules lesson, certificate). */
 export const RULES_DISCLAIMER = [
   RULES_BETA,
   'Vloertaal geeft algemene informatie. Het is geen juridisch advies.',
   'Regels kunnen veranderen. Bijgewerkt: ' + RULES_CHECKED + '.',
   'Gaat het om jouw situatie? Vraag je werkgever, een vakbond of het Juridisch Loket.',
+  RULES_COUNTRY,
 ];
 
 /** Which line goes under which written rule, keyed by rule step id. Every 'geschreven' rule has one. */
@@ -58,6 +69,7 @@ export const ruleAdvice: Record<string, 'advice' | 'abuse' | 'civic'> = {
   'r.l.tijd.2.ru1': 'advice',
   'r.l.tijd.3.ru1': 'advice',
   'r.l.tijd.4.ru1': 'advice',
+  'r.l.tijd.5.ru1': 'advice',
   'r.l.ziek.1.ru1': 'advice',
   'r.l.ziek.2.ru1': 'advice',
   'r.l.ziek.3.ru1': 'advice',
@@ -72,6 +84,7 @@ export const ruleAdvice: Record<string, 'advice' | 'abuse' | 'civic'> = {
   'r.l.geld.2.ru1': 'advice',
   'r.l.geld.3.ru1': 'advice',
   'r.l.geld.4.ru1': 'advice',
+  'r.l.geld.5.ru1': 'advice',
   'r.l.build.1.ru1': 'advice',
   'r.l.build.2.ru1': 'advice',
   'r.l.care.1.ru1': 'advice',

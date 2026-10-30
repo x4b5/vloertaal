@@ -70,10 +70,10 @@ describe('the work-rules track renders in Dutch only', () => {
     expect(settings('me')).not.toContain('Vrouw of man?');
     expect(settings('me')).toContain('>Nederlands<');
     const rules = { helpLang: true, gender: false, preview: false, install: false, offline: true, rules: true };
-    expect(settingsRows('me', rules)).toEqual(['language', 'sector', 'certificates']);
+    expect(settingsRows('me', rules)).toEqual(['language', 'sector', 'country', 'certificates']);
     expect(settingsRows('lessons', rules)).toEqual(['sound', 'voice', 'text', 'theme']);
     // The Dutch course keeps its rows.
-    expect(settingsRows('me', { ...rules, rules: false, gender: true })).toEqual(['language', 'gender', 'sector', 'english', 'certificates']);
+    expect(settingsRows('me', { ...rules, rules: false, gender: true })).toEqual(['language', 'gender', 'sector', 'country', 'english', 'certificates']);
     expect(settingsRows('lessons', { ...rules, rules: false })).toEqual(['sound', 'voice', 'speaking', 'writing', 'text', 'theme']);
   });
 

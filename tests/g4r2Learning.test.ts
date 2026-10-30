@@ -62,14 +62,17 @@ describe('review cards a non-Latin reader can answer', () => {
 });
 
 describe("today's review stays short", () => {
-  it('ten words make 12–14 items: one build, no extra listening or writing at the end', () => {
+  it('ten words make 12–15 items: one build, one tip situation, no extra listening or writing at the end', () => {
     const { lesson, words } = daily();
     for (const seed of [1, 2, 3, 4]) {
       for (const speak of [false, true]) {
         const list = buildLesson(lesson, { review: true, seed, speak });
         expect(list.length, `seed ${seed} speak ${speak}`).toBeGreaterThanOrEqual(12);
-        expect(list.length, `seed ${seed} speak ${speak}`).toBeLessThanOrEqual(14);
+        expect(list.length, `seed ${seed} speak ${speak}`).toBeLessThanOrEqual(15);
         expect(list.filter((e) => e.kind === 'build')).toHaveLength(1);
+        // The tip of a lesson it reviews comes back as one situation question (no tip card).
+        expect(list.filter((e) => e.kind === 'situation')).toHaveLength(1);
+        expect(list.some((e) => e.kind === 'tip')).toBe(false);
         // Every word is asked once, first, in a rotating kind of question.
         const first = list.slice(0, words.length) as Choice[];
         expect(new Set(first.map((e) => e.word.id))).toEqual(new Set(words.map((w) => w.id)));
@@ -136,7 +139,8 @@ describe('near-synonyms are never wrong options for each other', () => {
     expect(nearSynonyms('de baas', 'de collega')).toBe(false);
   });
 
-  it('no lesson offers a near-synonym as a wrong option', () => {
+  // Builds every lesson 12 times: room for a busy machine.
+  it('no lesson offers a near-synonym as a wrong option', { timeout: 20000 }, () => {
     const daily1 = daily().lesson;
     for (const lesson of [...allLessons, daily1]) {
       for (const seed of [1, 2, 3]) {

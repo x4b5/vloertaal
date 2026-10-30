@@ -81,6 +81,11 @@ const lang: HelpLanguageSource = {
     unlock: 'Aç',
     sector: 'İşin',
     chooseSector: 'Nerede çalışıyorsun?',
+    // nieuw, nog nalezen (land: Nederland of België)
+    countryTitle: 'Hangi ülkede çalışıyorsun?',
+    countryHint: 'Vloertaal’daki iş kuralları Hollanda için. Belçika’da birçok kural farklı. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.',
+    countryNl: 'Hollanda',
+    countryBe: 'Belçika (Flandre)',
     sectorHint: 'Kendi işinin dersleri erkenden gelir. Bunu sonra Ayarlar’da değiştirebilirsin.',
     otherSectors: 'Diğer sektörler',
     reviewToday: 'Bugünün tekrarı',

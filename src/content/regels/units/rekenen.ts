@@ -101,6 +101,34 @@ export const rekenenUnit: RuleUnit = {
           sum: ['8 + 6 + 6 + 6 = 26 uur.', 'Dat is 2 uur meer dan 24.'],
           why: 'Tel de uren van alle dagen op. Klopt het niet met je contract? Vraag het na. Werk je toch meer? Schrijf die uren op, met de datum.',
         },
+        // Pauze na 5,5 uur (rapport hiaten, voorstel 3): de tweede vraag naast r.l.tijd.2.tf1.
+        // ⚖️ check: Werk je meer dan 5,5 uur ⚖️? Dan krijg je minstens 30 minuten ⚖️ pauze. Dat mag
+        //   ook 2 keer 15 minuten ⚖️ (art. 5:4 Arbeidstijdenwet).
+        {
+          kind: 'card',
+          id: 'r.l.rekenen.1.ca3',
+          card: {
+            type: 'rooster',
+            title: 'Rooster',
+            sub: 'Zaterdag',
+            rows: [
+              { label: 'Begin', value: '8.00 uur' },
+              { label: 'Einde', value: '14.00 uur' },
+              { label: 'Pauze', value: '0 minuten', hit: true },
+            ],
+          },
+          question: 'Dewi werkt zaterdag 6 uur. Er staat geen pauze op haar rooster. Klopt dat?',
+          options: [
+            { id: 'a', text: 'Ja. 6 uur is kort genoeg zonder pauze.', best: false, feedback: 'Toch niet. De grens is 5,5 uur.' },
+            { id: 'b', text: 'Nee. Bij meer dan 5,5 uur werk hoort pauze.', best: true, feedback: 'Goed. Dat klopt.' },
+            { id: 'c', text: 'Ja. Pauze hoort pas bij 8 uur werk.', best: false, feedback: 'Nee. De grens is lager: 5,5 uur.' },
+          ],
+          sum: [
+            'Van 8.00 tot 14.00 uur is 6 uur.',
+            '6 uur is meer dan 5,5 uur. Dan hoort er minstens 30 minuten pauze bij.',
+          ],
+          why: 'Werk je meer dan 5,5 uur? Dan krijg je minstens 30 minuten pauze. Dat mag ook 2 keer 15 minuten. Staat er geen pauze op je rooster? Vraag het na bij je leidinggevende of de planner.',
+        },
         {
           kind: 'truefalse',
           id: 'r.l.rekenen.1.tf1',
@@ -206,6 +234,36 @@ export const rekenenUnit: RuleUnit = {
             '10 × 8 = 80 euro.',
           ],
           why: 'Procent betekent: van elke 100. Vakantiegeld is minstens 8 procent van je bruto loon. Zo kun je checken of het klopt.',
+        },
+        // 70 procent bij ziekte (rapport hiaten, voorstel 3): de tweede vraag naast r.l.ziek.2.
+        //   Een rekenvoorbeeld zonder wachtdag; 100 euro per dag is verzonnen.
+        // ⚖️ check: Je werkgever betaalt minstens 70 procent ⚖️ van je loon door. In het eerste jaar
+        //   krijg je minstens het minimumloon ⚖️ (art. 7:629 BW). Soms zijn er wachtdagen ⚖️.
+        {
+          kind: 'card',
+          id: 'r.l.rekenen.2.ca3',
+          card: {
+            type: 'loonstrook',
+            title: 'Loonstrook',
+            sub: 'Ziek, in dit voorbeeld',
+            rows: [
+              { label: 'Loon per dag', value: '100 euro bruto', hit: true },
+              { label: 'Ziek', value: '3 dagen', hit: true },
+              { label: 'Doorbetaald', value: '70 procent', hit: true },
+              { label: 'Loon voor die dagen', value: '?', answer: '210 euro' },
+            ],
+          },
+          question: 'In dit voorbeeld is Mohammed 3 dagen ziek. Hij krijgt 70 procent van zijn loon. Hoeveel krijgt hij voor die dagen?',
+          options: [
+            { id: 'a', text: '300 euro', best: false, feedback: 'Dat is zijn hele loon. Hij krijgt hier 70 procent.' },
+            { id: 'b', text: '70 euro', best: false, feedback: 'Dat is voor 1 dag. Hij was 3 dagen ziek.' },
+            { id: 'c', text: '210 euro', best: true, feedback: 'Goed. Dat klopt.' },
+          ],
+          sum: [
+            '3 × 100 = 300 euro.',
+            'Van elke 100 euro krijgt hij 70 euro. 3 × 70 = 210 euro.',
+          ],
+          why: 'Ben je ziek? Dan betaalt je werkgever minstens 70 procent van je loon door. In het eerste jaar krijg je minstens het minimumloon. Een cao geeft vaak meer. Soms zijn de eerste dagen wachtdagen, zonder loon. Kijk in je contract of cao.',
         },
         // The why says "euro" after each amount, so the voice reads it as money (sayNumbers).
         {

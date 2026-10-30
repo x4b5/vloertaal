@@ -78,6 +78,18 @@ export const loonUnit: RuleUnit = {
           ],
           why: 'Loonheffingskorting is korting op je belasting. Je krijgt die maar bij één werkgever. Kies meestal de baan waar je het meest verdient.',
         },
+        // Pensioen (rapport hiaten, hoofdstuk 3).
+        // ⚖️ check: Bij veel banen gaat er elke maand iets van je loon af voor je pensioen ⚖️ (geen
+        //   wettelijke plicht; vaak via de cao of een pensioenfonds).
+        // ⚖️ check: Je werkgever betaalt meestal ook mee ⚖️.
+        // ⚖️ check: Hoeveel je al hebt, zie je op mijnpensioenoverzicht.nl, met je DigiD ⚖️.
+        {
+          kind: 'truefalse',
+          id: 'r.l.loon.1.tf2',
+          statement: 'Bij veel banen is een deel van je loon voor later, voor je pensioen.',
+          answer: true,
+          why: 'Pensioen is geld voor later, als je oud bent en stopt met werken. Bij veel banen gaat er elke maand iets van je loon af voor je pensioen. Je werkgever betaalt meestal ook mee. Hoeveel je al hebt, zie je op mijnpensioenoverzicht.nl. Je logt in met je DigiD.',
+        },
         {
           kind: 'whoask',
           id: 'r.l.loon.1.wa1',
@@ -161,6 +173,22 @@ export const loonUnit: RuleUnit = {
             { id: 'c', text: 'Hij vraagt een voorschot om het verschil te betalen.', best: false, feedback: 'Dan leent hij geld dat misschien van hem is.' },
           ],
           why: 'Een inhouding is geld dat je baas van je loon afhaalt. Je werkgever mag niet zomaar geld van je loon afhalen. Daar moet je eerst schriftelijk mee instemmen. Ook dan zijn er grenzen. Klopt het niet? Vraag hulp.',
+        },
+        // Loon niet (op tijd) betaald (rapport hiaten, hoofdstuk 3).
+        // ⚖️ check: Je loon moet op tijd op je rekening staan, op de dag uit je contract of cao ⚖️
+        //   (art. 7:623 BW).
+        // ⚖️ check: Betaalt je werkgever te laat? Dan moet hij soms extra betalen ⚖️ (wettelijke
+        //   verhoging, art. 7:625 BW).
+        {
+          kind: 'whatdo',
+          id: 'r.l.loon.2.wd3',
+          situation: 'Het is de 5e van de maand. Piotr heeft zijn loon nog niet. Vorige maand was het ook te laat. Wat kan Piotr het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij wacht nog een maand. Het komt vast vanzelf.', best: false, feedback: 'Begrijpelijk. Maar het is zijn geld, en hij heeft het nodig.' },
+            { id: 'b', text: 'Hij stopt meteen met werken tot het geld er is.', best: false, feedback: 'Riskant. Vraag eerst advies voordat je stopt.' },
+            { id: 'c', text: 'Hij vraagt het na, eerst zelf en dan per mail.', best: true, feedback: 'Goed. Helpt dat niet? Dan vraagt hij advies.' },
+          ],
+          why: 'Je loon moet op tijd op je rekening staan. Op welke dag, staat in je contract of cao. Is het te laat? Vraag het eerst zelf. Dan per mail, met de datum. Helpt dat niet? Ga naar een vakbond of het Juridisch Loket. Betaalt je werkgever te laat? Dan moet hij soms extra betalen.',
         },
         // Fictieve loonstrook: ronde bedragen, geen echt minimumloon.
         {

@@ -35,7 +35,12 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     // 125: kloppen, zeker, persoonlijk, de gegevens, echt, de haast, automatisch and het besluit (u.ai,
     // "Slimme apps en AI") have no picture.
     for (const id of ['w.kloppen', 'w.zeker', 'w.persoonlijk', 'w.gegevens', 'w.echt', 'w.haast', 'w.automatisch', 'w.besluit']) expect(abstract).toContain(id);
-    expect(abstract.length).toBe(125);
+    // 143 (30 October 2026): 18 new abstract words. "de geboortedatum" (l.details), the six words
+    // of l.dates (days, weeks, "tot en met"), "het hoofd", "de rug" and "de buik" (l.body), "het
+    // ouderschapsverlof" and "het zorgverlof" (l.kids), "de eindafrekening", "opzeggen" and
+    // "uitschrijven" (l.jobends), "de werkvergunning", "de zzp’er" and "de inburgering" (l.permit).
+    for (const id of ['w.geboortedatum', 'w.maandag', 'w.totenmet', 'w.hoofd', 'w.rug', 'w.buik', 'w.zorgverlof', 'w.eindafrekening', 'w.zzper', 'w.inburgering']) expect(abstract).toContain(id);
+    expect(abstract.length).toBe(143);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).

@@ -81,6 +81,11 @@ const lang: HelpLanguageSource = {
     unlock: 'باز کنید',
     sector: 'کار شما',
     chooseSector: 'کجا کار می‌کنید؟',
+    // nieuw, nog nalezen (land: Nederland of België)
+    countryTitle: 'در کدام کشور کار می‌کنید؟',
+    countryHint: 'قوانین کار در Vloertaal برای هلند است. در بلژیک خیلی از قوانین فرق دارد. این روی گوشی شما می‌ماند. آن را جایی نمی‌فرستیم.',
+    countryNl: 'هلند',
+    countryBe: 'بلژیک (فلاندر)',
     sectorHint: 'درس‌های کار شما زود می‌آیند. بعداً می‌توانید این را در تنظیمات عوض کنید.',
     otherSectors: 'کارهای دیگر',
     reviewToday: 'مرور امروز',

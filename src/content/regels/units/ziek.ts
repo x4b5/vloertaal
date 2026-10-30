@@ -56,7 +56,7 @@ export const ziekUnit: RuleUnit = {
             { id: 'b', text: 'Hij appt een collega: "Zeg jij het even tegen de chef?"', best: false, feedback: 'Begrijpelijk. Maar je meldt je meestal zelf ziek.' },
             { id: 'c', text: 'Hij stuurt om 10 uur een bericht: "Ziek."', best: false, feedback: 'Dat is laat, en vaak is een bericht niet genoeg.' },
           ],
-          why: 'Bel zelf, en bel vóór je dienst begint. Dat is in de meeste bedrijven de regel. Kijk in je contract of het verzuimprotocol. Dat zijn de regels voor ziekmelden bij jouw bedrijf.',
+          why: 'Bel zelf, en bel vóór je dienst begint. Dat is in de meeste bedrijven de regel. Kijk in je contract of het verzuimprotocol. Dat zijn de regels voor ziekmelden bij jouw bedrijf. Afspraak is afspraak: kun je niet komen? Zeg het op tijd.',
         },
         {
           kind: 'truefalse',
@@ -163,6 +163,18 @@ export const ziekUnit: RuleUnit = {
           statement: 'Word je ziek op vakantie? Dan kun je je ziekmelden.',
           answer: true,
           why: 'Meld je meteen ziek bij je werkgever, ook vanuit het buitenland. Dan tellen die dagen meestal niet als vakantie. Vraag een briefje van een dokter daar.',
+        },
+        // Zzp en ziek (rapport hiaten, hoofdstuk 4): de brug tussen r.l.contract.4 en deze les.
+        // ⚖️ check: Een zzp'er heeft geen werkgever die loon doorbetaalt bij ziekte ⚖️ (art. 7:629
+        //   BW geldt alleen voor werknemers).
+        // Redactie: er komt mogelijk een verplichte verzekering tegen arbeidsongeschiktheid voor
+        //   zzp'ers ⚖️. Pas deze vraag dan aan.
+        {
+          kind: 'truefalse',
+          id: 'r.l.ziek.2.tf3',
+          statement: "Kevin is zzp'er. Is hij ziek? Dan moet hij zelf zorgen voor geld.",
+          answer: true,
+          why: "Een zzp'er werkt voor zichzelf, zonder werkgever. Niemand betaalt dan je loon door als je ziek bent. Regel daarom zelf iets, zoals sparen of een verzekering. Werk je als zzp'er, maar voelt het als een gewone baan? Vraag advies.",
         },
         {
           kind: 'whoask',

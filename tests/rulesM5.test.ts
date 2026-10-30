@@ -175,7 +175,7 @@ describe('Instellingen in the work-rules track', () => {
   }));
 
   it('has the rows that fit: no English, gender, speaking or writing; voice only with recorded voices', () => {
-    expect(settingsRows('me', ctx)).toEqual(['language', 'sector', 'certificates']);
+    expect(settingsRows('me', ctx)).toEqual(['language', 'sector', 'country', 'certificates']);
     expect(settingsRows('lessons', { ...ctx, recorded: true })).toEqual(['sound', 'voice', 'text', 'theme']);
     expect(settingsRows('lessons', { ...ctx, recorded: false })).toEqual(['sound', 'text', 'theme']);
     expect(settingsRows('phone', ctx)).toEqual(['offline', 'reminder', 'backup', 'counting', 'reset']);
@@ -285,5 +285,40 @@ describe('the first run in Dutch: language → (no gender) → code → sector �
   it('has a code page text that fits the track', () => {
     expect(ui('gateWho', nl()).help).toBe('Je krijgt de code van je werkgever, je coach of je begeleider.');
     expect(ui('appTagline', nl()).help).toBe('Werken in Nederland: zo gaat het');
+  });
+});
+
+describe('a learner who works in Belgium', () => {
+  it('gets the Belgian rows in "Wie bel je?" and keeps 112', async () => {
+    const { HELP_ROWS, HELP_ROWS_BE, helpRowsFor } = await import('../src/content/regels/help');
+    expect(helpRowsFor()).toBe(HELP_ROWS);
+    expect(helpRowsFor('nl')).toBe(HELP_ROWS);
+    expect(helpRowsFor('be')).toBe(HELP_ROWS_BE);
+    expect(HELP_ROWS_BE[0].id).toBe('h.112');
+    // No Dutch-only place among them.
+    const text = HELP_ROWS_BE.map((r) => `${r.name} ${r.show}`).join(' ');
+    expect(text).not.toMatch(/UWV|Juridisch Loket|FNV|Arbeidsinspectie|Huisartsenpost/);
+    expect(new Set(HELP_ROWS_BE.map((r) => r.id)).size).toBe(HELP_ROWS_BE.length);
+  });
+
+  it('the Hulp tab says so, in Dutch, above the disclaimer, with the Belgian rows', () => {
+    const be = html(createElement(RulesHelp, { lang: nl(), country: 'be', onShelf: () => {} }));
+    noEnglish(be, 'RulesHelp be');
+    expect(be).toContain('Je werkt in België.');
+    expect(be.indexOf('Je werkt in België.')).toBeLessThan(be.indexOf(RULES_DISCLAIMER[0]));
+    expect(be).toContain('VDAB');
+    expect(be).not.toContain('Juridisch Loket</');
+    const nlHelp = html(createElement(RulesHelp, { lang: nl(), onShelf: () => {} }));
+    expect(nlHelp).not.toContain('Je werkt in België.');
+    // Outside the list still only "Alle regels" (the note is text).
+    const outside = be.replace(/<ul class="rh-rows">[\s\S]*<\/ul>/, '');
+    expect((outside.match(/<button|<a /g) ?? [])).toHaveLength(1);
+  });
+
+  it('keeps a valid country and drops anything else on load', async () => {
+    const { isCountry } = await import('../src/lib/progress');
+    expect(isCountry('be')).toBe(true);
+    expect(isCountry('nl')).toBe(true);
+    expect(isCountry('fr')).toBe(false);
   });
 });

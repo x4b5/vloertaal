@@ -35,8 +35,8 @@ describe('route: one block at a time', () => {
     expect(nextChoices('none', done('u.firstday')).map((u) => u.id)).toEqual(['u.help', 'u.tools', 'u.safety']);
     // Finished units are skipped, wherever they are.
     expect(nextChoices('none', done('u.firstday', 'u.tools')).map((u) => u.id)).toEqual(['u.help', 'u.safety', 'u.warehouse']);
-    // The own sector unit comes in its slot (right after Safety).
-    expect(nextChoices('construction', done('u.firstday', 'u.help', 'u.tools')).map((u) => u.id)).toEqual(['u.safety', 'u.build', 'u.time']);
+    // The own sector unit comes in its slot (right after Safety), then "Getallen en gegevens".
+    expect(nextChoices('construction', done('u.firstday', 'u.help', 'u.tools')).map((u) => u.id)).toEqual(['u.safety', 'u.build', 'u.data']);
   });
 
   it('includes the unfinished current block when the learner chooses another topic', () => {

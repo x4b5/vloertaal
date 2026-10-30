@@ -78,6 +78,20 @@ export const afrondenUnit: RuleUnit = {
           ],
           why: 'Vraag het vóór je begint. Een vraag aan het begin is normaal. Een fout achteraf kost veel meer tijd. Voor jou, en voor de klant.',
         },
+        // Terugzeggen (rapport hiaten, voorstel 3): de tweede vraag naast r.l.start.3.wd2.
+        {
+          kind: 'whatdo',
+          id: 'r.l.afronden.1.wd2',
+          situation: 'Henk legt uit wat type B is. Wat zegt Mohammed terug?',
+          quote: 'Type B is de kraan met de blauwe stip. Neem er 3 mee.',
+          who: 'henk',
+          options: [
+            { id: 'a', text: 'Dus 3 kranen met een blauwe stip. Klopt dat?', best: true, feedback: 'Goed. Zo hoort Henk of Mohammed het goed begrepen heeft.', say: true },
+            { id: 'b', text: 'Oké, dat snap ik. Ik ga meteen de kranen halen.', best: false, feedback: 'Vriendelijk. Maar Henk weet nu niet wat Mohammed begrepen heeft.', say: true },
+            { id: 'c', text: 'Ja, ja. Ik ga al. Ik weet het wel.', best: false, feedback: 'Dan weet niemand of hij het echt snapt.', say: true },
+          ],
+          why: 'Zeg in je eigen woorden terug wat je gaat doen. Zo hoor je allebei of het klopt. Dat kost een paar seconden. En het voorkomt fouten.',
+        },
         {
           kind: 'truefalse',
           id: 'r.l.afronden.1.tf1',

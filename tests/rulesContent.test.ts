@@ -93,8 +93,9 @@ describe('rules content: ids', () => {
     ]);
     // Only additions: the first ten keep their order among themselves.
     expect(rulesUnits.map((u) => u.id).filter((id) => FIRST_TEN.includes(id))).toEqual(FIRST_TEN);
-    // 36 lessons of the path and the 19 of the Entree additions (15.3 "AI op je werk" came later).
-    expect(rulesUnits.filter((u) => FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(36);
+    // 38 lessons of the path (5.5 "Kinderen en zorg" and 10.5 "Je werk stopt" came later) and the
+    // 19 of the Entree additions (15.3 "AI op je werk" came later).
+    expect(rulesUnits.filter((u) => FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(38);
     expect(rulesUnits.filter((u) => !FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(19);
     expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual(['r.build', 'r.care', 'r.clean', 'r.factory', 'r.horeca', 'r.kas', 'r.warehouse']);
     for (const u of sectorRulesUnits) expect(u.lessons, u.id).toHaveLength(2);
@@ -218,7 +219,9 @@ describe('rules content: key rules and advice', () => {
   it('dates the disclaimer', () => {
     expect(RULES_CHECKED).toBe('oktober 2026');
     // A beta first: experts still check the facts, so it never says "checked" (only "updated").
-    expect(RULES_DISCLAIMER).toHaveLength(4);
+    // Its last line: the rules are those of the Netherlands (also for a learner in Belgium).
+    expect(RULES_DISCLAIMER).toHaveLength(5);
+    expect(RULES_DISCLAIMER[4]).toContain('Nederland');
     expect(RULES_DISCLAIMER[0]).toBe(RULES_BETA);
     expect(RULES_BETA).toContain('bètaversie');
     expect(RULES_BETA).toContain('hoi@vloertaal.nl');
@@ -335,7 +338,7 @@ describe('rules content: the Entree additions and their drawn cards', () => {
   };
   const time = (t: string) => { const [h, m] = t.match(/(\d{1,2})[.:](\d{2})/)!.slice(1).map(Number); return h + m / 60; };
 
-  it('has 7 units with 19 lessons, all in the path, with the doc\'s tally (A 13, B 13, C 13; 10 true, 10 false)', () => {
+  it('has 7 units with 19 lessons, all in the path, with the doc\'s tally (A 14, B 14, C 14; 10 true, 10 false)', () => {
     expect(entree.map((u) => u.id).sort()).toEqual([...ENTREE].sort());
     expect(entree.flatMap((u) => u.lessons)).toHaveLength(19);
     const pos: Record<string, number> = {};
@@ -343,7 +346,7 @@ describe('rules content: the Entree additions and their drawn cards', () => {
       const id = s.options.find((o) => o.best)!.id;
       pos[id] = (pos[id] ?? 0) + 1;
     }
-    expect(pos).toEqual({ a: 13, b: 13, c: 13 });
+    expect(pos).toEqual({ a: 14, b: 14, c: 14 });
     const tf = entreeSteps.filter((s): s is Extract<RuleStep, { kind: 'truefalse' }> => s.kind === 'truefalse');
     expect(tf.filter((s) => s.answer)).toHaveLength(10);
     expect(tf.filter((s) => !s.answer)).toHaveLength(10);
@@ -351,8 +354,8 @@ describe('rules content: the Entree additions and their drawn cards', () => {
 
   it('has the cards of units 11, 12 and 13, of every kind', () => {
     expect(cards.map((s) => s.id)).toEqual([
-      'r.l.afronden.1.ca1', 'r.l.rekenen.1.ca1', 'r.l.rekenen.1.ca2', 'r.l.rekenen.2.ca1', 'r.l.rekenen.2.ca2',
-      'r.l.rekenen.3.ca1', 'r.l.rekenen.3.ca2', 'r.l.winkel.3.ca1',
+      'r.l.afronden.1.ca1', 'r.l.rekenen.1.ca1', 'r.l.rekenen.1.ca2', 'r.l.rekenen.1.ca3', 'r.l.rekenen.2.ca1',
+      'r.l.rekenen.2.ca2', 'r.l.rekenen.2.ca3', 'r.l.rekenen.3.ca1', 'r.l.rekenen.3.ca2', 'r.l.winkel.3.ca1',
     ]);
     expect(new Set(cards.map((s) => s.card.type))).toEqual(new Set(['rooster', 'kassabon', 'pakbon', 'etiket', 'werkbon', 'loonstrook']));
   });
@@ -388,6 +391,16 @@ describe('rules content: the Entree additions and their drawn cards', () => {
         expect(bestOf(s)).toBe(total === contract ? 'Ja, dat is precies 24 uur.' : `Nee, het is ${Math.abs(total - contract)} uur te ${total > contract ? 'veel' : 'weinig'}.`);
         expect(s.sum!.join(' ')).toContain(`= ${total} uur`);
       },
+      // Rooster zonder pauze: eindtijd − begintijd is meer dan 5,5 uur, dus "Nee" (pauze hoort erbij).
+      'r.l.rekenen.1.ca3': (s) => {
+        const r = (l: string) => s.card.rows.find((x) => x.label === l)!.value;
+        expect(time(r('Einde')) - time(r('Begin'))).toBeGreaterThan(5.5);
+        expect(row(s, 'Pauze')[0]).toBe(0);
+        expect(bestOf(s)).toMatch(/^Nee\b/);
+        expect(nums(bestOf(s))[0]).toBe(5.5);
+      },
+      // Ziek: dagen keer loon per dag, en daarvan het percentage.
+      'r.l.rekenen.2.ca3': (s) => expect(nums(bestOf(s))[0]).toBe((row(s, 'Ziek')[0] * row(s, 'Loon per dag')[0] * row(s, 'Doorbetaald')[0]) / 100),
       // Uren keer uurloon.
       'r.l.rekenen.2.ca1': (s) => expect(nums(bestOf(s))[0]).toBe(row(s, 'Gewerkte uren')[0] * row(s, 'Bruto per uur')[0]),
       // Procent: van elke 100.

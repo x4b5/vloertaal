@@ -15,6 +15,7 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.sounds': ['u.firstday', 'u.help'],
   'u.safety': ['u.build', 'u.factory'],
   'u.warehouse': ['u.safety', 'u.time'],
+  'u.data': ['u.firstday', 'u.time'],
   'u.time': ['u.leave', 'u.contact'],
   'u.teamwork': ['u.social', 'u.firstday'],
   'u.apply': ['u.contract', 'u.grow'],
@@ -76,9 +77,13 @@ export const isMixLesson = (lesson: Pick<Lesson, 'id'>) => lesson.id.endsWith('.
 /** Words with a picture first (more exercise kinds), then the rest; in course order. */
 const byPicture = (words: Word[]) => [...words.filter((w) => w.picture !== false), ...words.filter((w) => w.picture === false)];
 
-/** Takes `n` words round-robin over the lessons (one per lesson in turn), skipping repeats. */
-function pickWords(lessons: Lesson[], n: number, taken: Set<string>, takenNl: Set<string>): Word[] {
-  const queues = lessons.map((l) => byPicture(l.words));
+/** `xs` turned `k` places on (the first `k` go to the end). */
+const turned = <T>(xs: readonly T[], k: number): T[] => (xs.length ? [...xs.slice(k % xs.length), ...xs.slice(0, k % xs.length)] : []);
+
+/** Takes `n` words round-robin over the lessons (one per lesson in turn), skipping repeats.
+ *  `turn`: each lesson starts that many words on, so another day brings other words. */
+function pickWords(lessons: Lesson[], n: number, taken: Set<string>, takenNl: Set<string>, turn = 0): Word[] {
+  const queues = lessons.map((l) => turned(byPicture(l.words), turn));
   const out: Word[] = [];
   for (let round = 0; out.length < n && queues.some((q) => q.length); round++) {
     for (const q of queues) {
@@ -101,9 +106,11 @@ function pickWords(lessons: Lesson[], n: number, taken: Set<string>, takenNl: Se
  * Builds the mixed-review lesson for one unit. `met` says whether the learner finished a lesson:
  * items of a related unit only come in from its lessons the learner has finished, so the review
  * never brings something the learner has not been taught yet. With no related lesson met (and
- * by default) the review uses this unit's own items only. Deterministic for the same `met`.
+ * by default) the review uses this unit's own items only. `turn` (the day, see mixLessonFor):
+ * this unit's own words and the tip that comes back move on by one each day. Deterministic for
+ * the same `met` and `turn`.
  */
-export function mixLesson(unit: Unit, all: Unit[], met: (lessonId: string) => boolean = () => false): Lesson {
+export function mixLesson(unit: Unit, all: Unit[], met: (lessonId: string) => boolean = () => false, turn = 0): Lesson {
   const teaching = (u: Unit) => u.lessons.filter((l) => !isMixLesson(l));
   const metLessons = (u: Unit) => teaching(u).filter((l) => met(l.id));
   const byId = new Map(all.map((u) => [u.id, u]));
@@ -115,7 +122,7 @@ export function mixLesson(unit: Unit, all: Unit[], met: (lessonId: string) => bo
   const takenText = new Set<string>();
   // 4 words of this unit and 1 of each related unit (or the hand-picked ones): 6 words. Words of
   // related units the learner has not met are left out, and this unit's own words fill up.
-  const ownWords = pickWords(own, 4, taken, takenText);
+  const ownWords = pickWords(own, 4, taken, takenText, turn);
   const picked = relatedWords[unit.id];
   const metWord = (id: string) => all.some((u) => u.id !== unit.id && metLessons(u).some((l) => l.words.some((w) => w.id === id)));
   const relWords = picked
@@ -126,7 +133,7 @@ export function mixLesson(unit: Unit, all: Unit[], met: (lessonId: string) => bo
       }).filter((w) => metWord(w.id) && !taken.has(w.id))
     : related.flatMap((u) => pickWords([...metLessons(u)].reverse(), 1, taken, takenText));
   const words = [...ownWords, ...relWords];
-  if (words.length < 6) words.push(...pickWords(own, 6 - words.length, taken, takenText));
+  if (words.length < 6) words.push(...pickWords(own, 6 - words.length, taken, takenText, turn));
   const first = own[0];
   const last = own[own.length - 1];
   // Sentences: the last one of the first lesson and of the last lesson, plus one of a related
@@ -152,25 +159,27 @@ export function mixLesson(unit: Unit, all: Unit[], met: (lessonId: string) => bo
   const otherChat = other ? metLessons(other).find((l) => l.dialogues?.length) : undefined;
   if (otherChat) addDialogue(otherChat.dialogues![0]);
   else for (const l of own) if (dialogues.length < 2) for (const d of l.dialogues ?? []) if (dialogues.length < 2) addDialogue(d);
-  return { id: mixLessonId(unit.id), title: MIX_TITLE, words, sentences, dialogues };
+  // The tip of one of this unit's lessons comes back (another one each day).
+  const tipFrom = turned(own.map((l) => l.id), turn);
+  return { id: mixLessonId(unit.id), title: MIX_TITLE, words, sentences, dialogues, tipFrom };
 }
 
 const played = new Map<string, Lesson>();
 
 /**
- * The mixed review as the learner plays it, from the lessons they finished (`completed`).
- * Cached per unit and per set of related lessons met, so the same object comes back while
- * nothing changes (the player builds its exercises from it).
+ * The mixed review as the learner plays it, from the lessons they finished (`completed`), on
+ * day `turn` (dayNumber of today; 0 without it). Cached per unit, day and set of related lessons
+ * met, so the same object comes back while nothing changes (the player builds its exercises from it).
  */
-export function mixLessonFor(unit: Unit, all: Unit[], completed: Record<string, unknown>): Lesson {
+export function mixLessonFor(unit: Unit, all: Unit[], completed: Record<string, unknown>, turn = 0): Lesson {
   const metIds = all
     .filter((u) => u.id !== unit.id)
     .flatMap((u) => u.lessons.filter((l) => !isMixLesson(l) && completed[l.id]).map((l) => l.id));
-  const key = `${unit.id}|${metIds.join(',')}`;
+  const key = `${unit.id}|${turn}|${metIds.join(',')}`;
   let lesson = played.get(key);
   if (!lesson) {
     const done = new Set(metIds);
-    lesson = mixLesson(unit, all, (id) => done.has(id));
+    lesson = mixLesson(unit, all, (id) => done.has(id), turn);
     played.set(key, lesson);
   }
   return lesson;

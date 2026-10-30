@@ -84,6 +84,12 @@ const reasons: Record<string, string> = {
   'c.shortlong.a': 'An egg is offered: a polite no, with a reason.',
   'c.roundsounds.a': 'Asked if the door is open: this reply says it is not.',
   'c.pbgk.a': 'Asked how you are: an answer, and how you feel.',
+  'c.details.a': 'Asked for a last name: this reply gives it and offers to spell it.',
+  'c.dates.a': 'Asked for the date: this reply gives the day and the date.',
+  'c.permit.a': 'A no is fine with a reason. Offering another day helps.',
+  'c.body.a': 'Asked where it hurts: this reply names the place and the cause.',
+  'c.kids.a': 'Asked why: this reply gives the reason, the daycare called.',
+  'c.jobends.a': 'The house goes with the job: this reply asks about the notice period.',
 };
 
 /** Why the right reply of a chat fits, with its translation id; undefined when there is none. */

@@ -81,6 +81,11 @@ const lang: HelpLanguageSource = {
     unlock: { m: 'افتح', f: 'افتحي' },
     sector: 'عملك',
     chooseSector: { m: 'أين تعمل؟', f: 'أين تعملين؟' },
+    // nieuw, nog nalezen (land: Nederland of België)
+    countryTitle: { m: 'في أي بلد تعمل؟', f: 'في أي بلد تعملين؟' },
+    countryHint: 'قواعد العمل في Vloertaal خاصة بهولندا. في بلجيكا كثير من القواعد مختلفة. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.',
+    countryNl: 'هولندا',
+    countryBe: 'بلجيكا (فلاندرز)',
     sectorHint: 'دروس عملك تأتي مبكراً. يمكنك تغيير هذا لاحقاً في الإعدادات.',
     otherSectors: 'قطاعات أخرى',
     reviewToday: 'مراجعة اليوم',

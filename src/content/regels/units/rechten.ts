@@ -241,6 +241,20 @@ export const rechtenUnit: RuleUnit = {
           ],
           why: 'Dit heet een geldezel zijn. Criminelen gebruiken jouw rekening voor hun geld. Dat is strafbaar, ook voor jou. Je kunt er grote schulden aan overhouden. Geef je pas en codes nooit aan een ander.',
         },
+        // Voor werk betaal je nooit (rapport hiaten, voorstel 3).
+        // ⚖️ check: Een bureau mag je geen geld vragen voor werk, ook niet later van je loon ⚖️
+        //   (art. 9 Waadi).
+        {
+          kind: 'whatdo',
+          id: 'r.l.rechten.3.wd3',
+          situation: 'Mohammed zoekt werk via een bureau. Het bureau zegt: "Een plek kost 200 euro." Wat kan Mohammed het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij betaalt. Dan heeft hij tenminste snel werk.', best: false, feedback: 'Niet doen. Voor echt werk betaalt hij zelf niets.' },
+            { id: 'b', text: 'Hij vraagt of het later van zijn loon af mag.', best: false, feedback: 'Dan betaalt hij nog steeds. Dat mag ook niet.' },
+            { id: 'c', text: 'Hij betaalt niet, en hij meldt het bureau.', best: true, feedback: 'Goed. Een bureau mag hiervoor geen geld vragen.' },
+          ],
+          why: 'Voor echt werk hoef jij zelf niet te betalen. Een bureau mag je geen geld vragen voor werk. Ook niet later, van je loon. Vraagt een bureau het toch? Meld het bij de Arbeidsinspectie.',
+        },
         {
           kind: 'whoask',
           id: 'r.l.rechten.3.wa1',
@@ -323,6 +337,16 @@ export const rechtenUnit: RuleUnit = {
           statement: 'Je baas mag je zomaar ontslaan, als hij dat wil.',
           answer: false,
           why: 'Je baas heeft meestal toestemming nodig van UWV of de rechter. Of jouw instemming. Bij ontslag krijg je vaak geld mee: de transitievergoeding. In de proeftijd en bij een tijdelijk contract gelden andere regels. Op staande voet ontslagen? Vraag meteen advies.',
+        },
+        // De vakbond (rapport hiaten, hoofdstuk 3): word lid vóór je een probleem hebt.
+        // ⚖️ check: Ben je net lid? Dan is er soms een wachttijd ⚖️. Dan helpt de vakbond nog niet bij
+        //   een probleem dat er al was ⚖️ (per vakbond anders: zie de voorwaarden van FNV, CNV).
+        {
+          kind: 'truefalse',
+          id: 'r.l.rechten.4.tf3',
+          statement: 'Het is slim om lid te worden van een vakbond vóór je een probleem hebt.',
+          answer: true,
+          why: 'Een vakbond helpt leden met vragen en problemen over hun werk. Ben je net lid? Dan is er soms een wachttijd. Dan helpt de vakbond nog niet bij een probleem dat er al was. Lid zijn kost geld per maand. Kijk op de site van de vakbond.',
         },
         {
           kind: 'whoask',

@@ -12,7 +12,7 @@ import { countingOn, setCounting } from '../lib/count';
 import { applyEnglish, setWantsEnglish, wantsEnglish } from '../lib/english';
 import { installWay } from '../lib/install';
 import { offlineAuto, offlineSupported } from '../lib/offline';
-import type { Progress, ThemeChoice } from '../lib/progress';
+import type { Country, Progress, ThemeChoice } from '../lib/progress';
 import { REMINDER_TIMES, reminderTapAdds, reminderTime } from '../lib/reminder';
 import {
   settingsDepth, settingsRows, SETTINGS_LIST_PAGES, voiceChoiceOf, voiceRefs,
@@ -58,6 +58,22 @@ const PinIcon = ({ size = 24 }: { size?: number }) => (
     <circle cx="12" cy="10" r="2.4" fill="currentColor" />
   </svg>
 );
+/** A flag on a pole, for "In welk land werk je?". */
+const FlagIcon = ({ size = 24 }: { size?: number }) => (
+  <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
+    <path d="M5.5 21.5V3.5" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round" />
+    <path d="M5.5 4.5h12.5l-2.6 4 2.6 4H5.5" fill="none" stroke="currentColor" strokeWidth="2.3" strokeLinejoin="round" />
+  </svg>
+);
+/** The flag of the Netherlands or Belgium, drawn (a flag emoji is two letters on some phones). */
+const CountryFlag = ({ country }: { country: Country }) => (
+  <svg className="country-flag" viewBox="0 0 30 20" width={42} height={28} aria-hidden focusable="false">
+    {country === 'nl'
+      ? <><rect width="30" height="6.67" fill="#AE1C28" /><rect y="6.67" width="30" height="6.67" fill="#fff" /><rect y="13.33" width="30" height="6.67" fill="#21468B" /></>
+      : <><rect width="10" height="20" fill="#000" /><rect x="10" width="10" height="20" fill="#FAE042" /><rect x="20" width="10" height="20" fill="#ED2939" /></>}
+    <rect width="30" height="20" fill="none" stroke="currentColor" strokeOpacity="0.35" />
+  </svg>
+);
 /** Three bars, for "Count anonymously". */
 const BarsIcon = ({ size = 24 }: { size?: number }) => (
   <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
@@ -82,6 +98,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   'sector-care': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   'sector-other': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   region: { nl: 'Waar woon je?', key: 'regionTitle', icon: <PinIcon size={24} /> },
+  country: { nl: 'In welk land werk je?', key: 'countryTitle', icon: <FlagIcon size={24} /> },
   english: { nl: 'Ook Engels tonen', key: 'showEnglish', icon: <span className="set-en" lang="en">EN</span> },
   certificates: { nl: 'Mijn certificaten', key: 'myCertificates', icon: <CertIcon size={24} /> },
   sound: { nl: 'Geluid', key: 'sound', icon: <SpeakerIcon size={24} /> },
@@ -123,7 +140,7 @@ function Head({ page, lang, onBack }: { page: SettingsPage | null; lang?: HelpLa
 }
 
 export function Settings({
-  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onTheme, onTextSize, onVoice, onQuiet, onReset,
+  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onCountry, onTheme, onTextSize, onVoice, onQuiet, onReset,
   onRestore, access = 'full', onAccess, onCertificate,
 }: {
   progress: Progress;
@@ -139,6 +156,8 @@ export function Settings({
   onSector: (sector: SectorChoice) => void;
   /** "Waar woon je?": a region, or 'none' ("Andere plek / zeg ik liever niet"). */
   onRegion?: (region: RegionChoice) => void;
+  /** "In welk land werk je?": the Netherlands or Belgium (Vlaanderen). */
+  onCountry?: (country: Country) => void;
   onTheme: (theme: ThemeChoice) => void;
   onTextSize: (size: TextSize) => void;
   onVoice: (voice: string | null) => void;
@@ -252,6 +271,7 @@ export function Settings({
         const r = regionMetaOf(progress.region);
         return r ? <span className="set-row-value" lang="nl">{r.nl}</span> : <Value text={say('regionNone')} />;
       }
+      case 'country': return <Value text={say(progress.country === 'be' ? 'countryBe' : 'countryNl')} />;
       case 'english': return <Value text={say(wantsEnglish() ? 'settingOn' : 'settingOff')} />;
       case 'certificates': return <span className="set-row-value">{earnedCertificates(progress).length}</span>;
       case 'sound': return <Value text={say(progress.quiet ? 'withoutSound' : 'soundOn')} />;
@@ -359,6 +379,22 @@ export function Settings({
           </>
         );
       }
+      case 'country':
+        // Two cards: the Netherlands (also when nothing is chosen) and Belgium (Vlaanderen).
+        return (
+          <>
+            <p className="max3-hint max3-hint-top"><Bi text={say('countryHint')} /></p>
+            <ChoiceCards
+              label={said(ui('countryTitle', lang))}
+              current={progress.country ?? 'nl'}
+              onPick={(id) => { onCountry?.(id); answered(); }}
+              options={[
+                { id: 'nl', nl: 'Nederland', text: say('countryNl'), picture: <CountryFlag country="nl" /> },
+                { id: 'be', nl: 'België (Vlaanderen)', text: say('countryBe'), picture: <CountryFlag country="be" /> },
+              ]}
+            />
+          </>
+        );
       case 'english':
         return onOff(wantsEnglish(), (on) => { setWantsEnglish(on); applyEnglish(lang?.code, on); });
       case 'certificates':

@@ -622,7 +622,7 @@ const unit = (slug: string, title: string, titleNl: string, emoji: string, color
 /** Dutch said aloud in a situation (a speaker plays it in the character's voice). */
 const SAID: Record<string, string> = { interview: 'Heb je nog vragen?', hours: 'Morgen begin je om half negen.' };
 /** The heading of a situation that does not ask "What do you do?" (see SituationAsk). */
-const ASK: Record<string, SituationAsk> = { texting: 'which', diploma: 'which', hours: 'which', measures: 'whatsay' };
+const ASK: Record<string, SituationAsk> = { texting: 'which', diploma: 'which', hours: 'which', measures: 'whatsay', dates: 'which', body: 'whatsay' };
 
 const tipFor = (
   slug: string,
@@ -1136,6 +1136,28 @@ const laterUnits: Unit[] = [
       ],
       [['Bij welke verzekeraar zit je?', 'Which insurer are you with?'], ['Dat staat op mijn zorgpas.', 'That is on my health insurance card.']],
     ),
+    // Lichaam en klachten (30 October 2026): the body words for calling in sick, an accident and
+    // the GP. "de pijn" (w.pijn, l.sick), "tillen" (w.tillen, l.directions) and "de doos" (w.doos,
+    // l.things) are already words of other lessons: here they come in the sentences and the chat.
+    // No picture for "het hoofd", "de rug" and "de buik": no emoji shows them well.
+    lesson(
+      'body',
+      'Body and pain',
+      [
+        ['hoofd', 'het hoofd', 'the head', '👤', false],
+        ['rug', 'de rug', 'the back (of your body)', '🧍', false],
+        ['arm', 'de arm', 'the arm', '💪'],
+        ['hand', 'de hand', 'the hand', '🖐️'],
+        ['buik', 'de buik', 'the belly, the stomach', '😖', false],
+        ['oog', 'het oog', 'the eye', '👁️'],
+      ],
+      [
+        ['Ik heb pijn in mijn hand.', 'I have pain in my hand.'],
+        ['Ik voel me niet goed.', 'I do not feel well.'],
+        ['Ik ben op mijn arm gevallen.', 'I fell on my arm.'],
+      ],
+      [['Waar doet het pijn?', 'Where does it hurt?'], ['In mijn rug. Ik heb een zware doos getild.', 'In my back. I lifted a heavy box.']],
+    ),
   ]),
   unit('money', 'Money and letters', 'Geld en post', '✉️', '#7a6a1e', [
     lesson(
@@ -1233,6 +1255,33 @@ const laterUnits: Unit[] = [
       [
         ['Wat ga je doen nu je contract stopt?', 'What will you do now that your contract ends?'],
         ['Ik vraag meteen WW aan.', 'I will apply for unemployment benefit right away.'],
+      ],
+    ),
+    // Je werk stopt (30 October 2026): what else stops with the job when work, house, insurance
+    // and transport come from one agency. "het vakantiegeld" (w.vakantiegeld, l.extra),
+    // "uitbetalen" (w.uitbetalen, l.agency), "het Juridisch Loket" (w.juridischloket, l.rights),
+    // "de zorgverzekering" (w.zorgverzekering, l.bsn), "de opzegtermijn" (w.opzegtermijn,
+    // l.contract) and "het huurcontract" (w.huurcontract, l.housing) are words of other lessons:
+    // here they come in the sentences and the chat.
+    lesson(
+      'jobends',
+      'When your job ends',
+      [
+        ['eindafrekening', 'de eindafrekening', 'the final pay (your last pay when a job ends)', '🧾', false],
+        ['opzeggen', 'opzeggen', 'to end (a contract), to cancel', '✂️', false],
+        ['uitschrijven', 'uitschrijven', 'to deregister (take your name off a list)', '🗂️', false],
+        ['sleutel', 'de sleutel', 'the key', '🗝️'],
+        ['verhuizen', 'verhuizen', 'to move (to another home)', '🚚'],
+        ['busje', 'het busje', 'the van (a small bus)', '🚐'],
+      ],
+      [
+        ['Krijg ik mijn vakantiegeld en mijn vrije dagen uitbetaald?', 'Do I get my holiday pay and my days off paid out?'],
+        ['Ik vraag advies bij het Juridisch Loket.', 'I ask for advice at the Juridisch Loket.'],
+        ['Ik regel zelf een nieuwe zorgverzekering.', 'I arrange new health insurance myself.'],
+      ],
+      [
+        ['Je werk stopt vrijdag. Dan moet je ook uit het huis.', 'Your work ends on Friday. Then you must leave the house too.'],
+        ['Wat is de opzegtermijn van mijn huurcontract?', 'What is the notice period of my rental contract?'],
       ],
     ),
     lesson(
@@ -1374,6 +1423,21 @@ const laterTips = [
     ADVICE_LINE,
   ),
   tipFor(
+    'body',
+    '🤕',
+    'Say what happened and where it hurts',
+    'At the doctor, say what happened and where it hurts. For example: "Ik ben gevallen. Mijn arm doet pijn." Also say how long you have had the pain. You do not have to guess what you have: the doctor checks that. Did it happen at work? Tell your supervisor the same day.',
+    ['Ik ben gevallen. Mijn arm doet pijn.', 'I fell. My arm hurts.'],
+    'You lifted a heavy box at work. Now your back hurts a lot. You are at the family doctor (huisarts). What do you say?',
+    [
+      'Where it hurts, and what happened: you lifted a heavy box.',
+      'Only that you feel bad, nothing more.',
+      'The name of an illness you found on the internet.',
+    ],
+    'When you say where it hurts and what happened, the doctor understands you faster. The doctor checks what it is. Did it happen at work? Tell your supervisor too.',
+    NONE,
+  ),
+  tipFor(
     'letters',
     '📨',
     'Do not ignore letters',
@@ -1446,6 +1510,25 @@ const laterTips = [
       'Stop coming to work without saying anything.',
     ],
     'Quitting can cost you your benefit. Talking first with your supervisor, the union or the Juridisch Loket can help you find a better way.',
+    ADVICE_LINE,
+  ),
+  // ⚖️ check: Days off you did not use and your holiday pay are usually paid out with it ⚖️ (BW 7:641 lid 1 uitbetaling niet-genoten vakantiedagen bij einde dienstverband; WML art. 15-17 vakantiebijslag).
+  // ⚖️ check: Housing, health insurance or a van through the agency can stop at the same time ⚖️ (collectieve zorgverzekering via werkgever/bureau eindigt; huurovereenkomst is los van de arbeidsovereenkomst, ABU/NBBU-cao, SNF).
+  // ⚖️ check: Living or working in the Netherlands, you usually must have health insurance ⚖️ (Zorgverzekeringswet art. 2).
+  // ⚖️ check: Moving, or leaving the Netherlands? Tell the gemeente ⚖️ (Wet BRP art. 2.39 en 2.43: verhuizing en vertrek uit Nederland melden).
+  tipFor(
+    'jobends',
+    '🧳',
+    'Your job ends: what else stops?',
+    'When your job ends, check your final pay (eindafrekening). Days off you did not use and your holiday pay are usually paid out with it. Housing, health insurance or a van through the agency can stop at the same time. Arrange your own health insurance in time. Your rental contract has its own rules: ask for advice before you leave the house. Moving, or leaving the Netherlands? Tell the gemeente.',
+    ['Wanneer krijg ik mijn eindafrekening?', 'When do I get my final pay?'],
+    'Your job ends on Friday. Your health insurance goes through the agency. What do you do?',
+    [
+      'Ask the agency when the insurance stops, and arrange your own in time.',
+      'Nothing: the insurance goes on by itself.',
+      'Wait until you get sick, and arrange it then.',
+    ],
+    'Insurance through the agency often stops when your job stops. When you live or work in the Netherlands, you usually must have health insurance. Arranging it in time keeps you covered.',
     ADVICE_LINE,
   ),
   tipFor(
@@ -2288,13 +2371,178 @@ const toolsTips = [
   ),
 ];
 
+// ---- Numbers and details (30 October 2026): a basis unit right before "Time and schedule",
+// spliced in by curriculum.ts (A1 core of the Taalprofiel werk: give your details, spell your
+// name, days and dates). "het adres" is taught in l.bsn (w.adres). "doorgeven" (w.doorgeven,
+// l.privacy), "de Belastingdienst" (w.belastingdienst, l.letters) and "de datum" (w.datum,
+// l.kitchen) are already words of other lessons: here they come in a sentence or a chat. ----
+
+export const dataUnit = unit('data', 'Numbers and details', 'Getallen en gegevens', '📇', '#3d7f8c', [
+  lesson(
+    'details',
+    'Your details',
+    [
+      ['voornaam', 'de voornaam', 'the first name', '🧑'],
+      ['achternaam', 'de achternaam', 'the last name, the family name', '👨‍👩‍👧'],
+      ['spellen', 'spellen', 'to spell (say the letters one by one)', '🔠'],
+      ['telefoonnummer', 'het telefoonnummer', 'the phone number', '📞'],
+      ['geboortedatum', 'de geboortedatum', 'the date of birth', '🎂', false],
+      ['formulier', 'het formulier', 'the form (a paper or page to fill in)', '📋'],
+    ],
+    [
+      ['Kunt u dat spellen?', 'Can you spell that?'],
+      ['Ik geef mijn nieuwe telefoonnummer door.', 'I am passing on my new phone number.'],
+      ['Dit formulier is voor de Belastingdienst.', 'This form is for the Tax Office.'],
+    ],
+    [['Wat is je achternaam?', 'What is your last name?'], ['Haddad. Zal ik het spellen?', 'Haddad. Shall I spell it?']],
+  ),
+  lesson(
+    'dates',
+    'Days and dates',
+    [
+      ['maandag', 'maandag', 'Monday', '📅', false],
+      ['week', 'de week', 'the week', '🗓️', false],
+      ['maand', 'de maand', 'the month', '🌙', false],
+      ['volgendeweek', 'volgende week', 'next week', '⏭️', false],
+      ['vorigeweek', 'vorige week', 'last week', '⏮️', false],
+      ['totenmet', 'tot en met', 'up to and including (the last day counts too)', '↔️', false],
+    ],
+    [
+      ['Ik kan maandag tot en met donderdag.', 'I can work Monday to Thursday (Thursday too).'],
+      ['Volgende week werk ik vier dagen.', 'Next week I work four days.', ['Ik werk volgende week vier dagen.']],
+      ['Vorige week werkte ik veertig uur.', 'Last week I worked forty hours.', ['Ik werkte vorige week veertig uur.']],
+    ],
+    [['Welke datum is het vandaag?', 'What is the date today?'], ['Het is maandag drie juni.', 'It is Monday, 3 June.']],
+  ),
+]);
+
+const dataTips = [
+  tipFor(
+    'details',
+    '🔠',
+    'Your details: give them right',
+    'At the start of a job, you give your details: your name, address, phone number, date of birth and BSN. Spell your name slowly, letter by letter. Then check your name on your contract and your payslip. A mistake in your name or BSN can give problems with your pay or tax. New address or phone number? Tell your employer.',
+    ['Ik spel het even: A, L, I.', 'Let me spell it: A, L, I.'],
+    'On the phone, the agency writes down your last name. You hear that they write it wrong. What do you do?',
+    [
+      'Spell your name slowly, letter by letter, and ask them to read it back.',
+      'Say nothing: a small mistake in your name does not matter.',
+      'Hang up, and hope they find the mistake later.',
+    ],
+    'Your name must be the same on your contract, your payslip and your ID. Then your pay and your tax go right. Spelling and reading back is a quick check.',
+    NONE,
+  ),
+  tipFor(
+    'dates',
+    '📅',
+    'Dates: the day comes first',
+    'In Dutch, the day comes before the month: 3-6 is 3 June, not 6 March. "Tot en met" means that the last day counts too. Days and months start with a small letter: maandag, juni. Not sure about a date? Ask, and say it back.',
+    ['Bedoel je drie juni?', 'Do you mean 3 June?'],
+    'Your roster says: "Vrij: 3-6 tot en met 5-6". When are you free?',
+    ['On 3, 4 and 5 June.', 'On 3 and 4 June only.', 'From 6 March to 6 May.'],
+    'The day comes first, then the month: 3-6 is 3 June. "Tot en met" means that 5 June counts too, so you are free for three days.',
+    NONE,
+  ),
+];
+
+// ---- Work and contracts: lesson 4 (30 October 2026) ----
+// Papers, integration and self-employment. "de oproepkracht" (w.oproepkracht, l.contract) and
+// "het rooster" (w.rooster, l.clock) are already words of other lessons: here they come in a
+// sentence and the tip.
+
+const contractMore: Lesson[] = [
+  lesson(
+    'permit',
+    'Papers, integration and your job',
+    [
+      ['papieren', 'de papieren', 'the papers (documents)', '📂'],
+      ['werkvergunning', 'de werkvergunning', 'the work permit', '📃', false],
+      ['werknemer', 'de werknemer', 'the employee (you work for an employer)', '🧑‍🏭'],
+      ['zzper', 'de zzp’er', 'the self-employed worker (you work for yourself)', '🧰', false],
+      ['inburgering', 'de inburgering', 'the civic integration (the course and exams for newcomers)', '🧭', false],
+      ['taalles', 'de taalles', 'the language class', '🧑‍🏫'],
+    ],
+    [
+      ['Mag ik hier werken met mijn papieren?', 'May I work here with my papers?'],
+      ['Ben ik werknemer of zzp’er?', 'Am I an employee or self-employed?'],
+      ['Ik werk als oproepkracht.', 'I work as an on-call worker.'],
+    ],
+    [['Kun je dinsdag werken?', 'Can you work on Tuesday?'], ['Nee, dan heb ik taalles. Woensdag kan ik wel.', 'No, then I have a language class. Wednesday is fine.']],
+  ),
+];
+
+// ---- Leave and sickness: lesson 3 (30 October 2026) ----
+// Children and work. "het calamiteitenverlof" (w.calamiteitenverlof, l.leave) and "doorbetalen"
+// (w.doorbetalen, l.illness) are words of the other lessons of this unit: here they come in the
+// sentences and the tip.
+
+const leaveMore: Lesson[] = [
+  lesson(
+    'kids',
+    'Children and work',
+    [
+      ['zwanger', 'zwanger', 'pregnant', '🤰'],
+      ['kinderopvang', 'de kinderopvang', 'the childcare, the daycare', '🧸'],
+      ['ophalen', 'ophalen', 'to pick up (go and get someone)', '🚸'],
+      ['ziekkind', 'een ziek kind', 'a sick child', '🧒'],
+      ['ouderschapsverlof', 'het ouderschapsverlof', 'the parental leave', '👨‍👧', false],
+      ['zorgverlof', 'het zorgverlof', 'the care leave (time off to care for a sick family member)', '🫶', false],
+    ],
+    [
+      ['Mijn kind is ziek. Ik moet het ophalen.', 'My child is sick. I have to pick my child up.'],
+      ['Mag ik calamiteitenverlof opnemen?', 'May I take emergency leave?'],
+      ['Betaalt mijn werkgever mijn loon door?', 'Does my employer keep paying my wage?'],
+    ],
+    [['Waarom moet je nu weg?', 'Why do you have to leave now?'], ['De kinderopvang belde. Mijn zoon heeft koorts.', 'The daycare called. My son has a fever.']],
+  ),
+];
+
+const moreTips = [
+  // ⚖️ check: Do you have to do the civic integration (inburgering)? ⚖️ (Wet inburgering 2021 art. 3: inburgeringsplicht; de gemeente maakt een persoonlijk plan, art. 14).
+  // ⚖️ check: Not sure if you may work here? Check it before you start, for example at the IND, UWV or VluchtelingenWerk ⚖️ (Wet arbeid vreemdelingen art. 2: tewerkstellingsvergunning; EU-burgers vrij).
+  tipFor(
+    'permit',
+    '🧭',
+    'Work and integration',
+    'Do you have to do the civic integration (inburgering)? Tell your employer, and tell the gemeente that you work. Ask early if your language classes can fit around your roster. Not sure if you may work here? Check it before you start, for example at the IND, UWV or VluchtelingenWerk. Do they ask you to register as self-employed (zzp’er) for this job? Ask for advice first.',
+    ['Ik heb op dinsdag taalles. Kan mijn rooster daar rekening mee houden?', 'I have a language class on Tuesday. Can my roster take that into account?'],
+    'You start a new job. Your language class is on Tuesday mornings, but your roster has you working on Tuesdays. What do you do?',
+    [
+      'Tell your supervisor about the class, and ask if the roster can change.',
+      'Skip the language class, because work comes first.',
+      'Stay home on Tuesdays without saying anything.',
+    ],
+    'Your integration is a duty too. Many employers help when they know it early. The gemeente can also help you fit your plan around your work.',
+    ADVICE_LINE,
+  ),
+  // ⚖️ check: For the first hours or days you can take emergency leave (calamiteitenverlof), and your employer keeps paying you ⚖️ (Wazo art. 4:1 en 4:5: calamiteiten- en ander kort verzuimverlof, met behoud van loon).
+  // ⚖️ check: Does your child need care for longer? Then you can ask for care leave (zorgverlof) ⚖️ (Wazo art. 5:1: kortdurend zorgverlof).
+  // ⚖️ check: Pregnant? Your employer may not fire you because of that ⚖️ (BW 7:670 lid 2: opzegverbod tijdens zwangerschap; AWGB/WGB).
+  // ⚖️ check: Ask in time about pregnancy leave and parental leave (ouderschapsverlof) ⚖️ (Wazo art. 3:1 zwangerschaps- en bevallingsverlof; art. 6:1 ouderschapsverlof).
+  tipFor(
+    'kids',
+    '🧒',
+    'Your child is sick',
+    'Is your child suddenly sick? Tell your employer right away. For the first hours or days you can take emergency leave (calamiteitenverlof), and your employer keeps paying you. Does your child need care for longer? Then you can ask for care leave (zorgverlof). Pregnant? Your employer may not fire you because of that. Ask in time about pregnancy leave and parental leave (ouderschapsverlof).',
+    ['Mijn kind is ziek. Kan ik vandaag eerder weg?', 'My child is sick. Can I leave early today?'],
+    'The daycare (kinderopvang) calls you at work. Your child has a fever and must go home. What do you do?',
+    [
+      'Tell your supervisor right away, and ask for emergency leave to pick up your child.',
+      'Leave without a word, and explain it tomorrow.',
+      'Stay at work, and let your child wait until your shift ends.',
+    ],
+    'A sick child is an emergency at home. When you tell your supervisor first, they can plan the work. Emergency leave is for moments like this.',
+    ADVICE_LINE,
+  ),
+];
+
 // ---- Course order of everything in this file ----
 
 const byId = (id: string) => coreUnits.find((u) => u.id === id)!;
 
 export const workUnits: Unit[] = [
   applyUnit,
-  byId('u.contract'),
+  { ...byId('u.contract'), lessons: [...byId('u.contract').lessons, ...contractMore] },
   byId('u.papers'),
   byId('u.pay'),
   { ...byId('u.house'), lessons: [...byId('u.house').lessons, ...houseMore] },
@@ -2303,7 +2551,7 @@ export const workUnits: Unit[] = [
   // (src/content/sayings.ts lessonSayings), so it comes before them.
   sayingsUnit,
   byId('u.rights'),
-  byId('u.leave'),
+  { ...byId('u.leave'), lessons: [...byId('u.leave').lessons, ...leaveMore] },
   ...laterUnits,
   ...sectorUnits,
   // After the sector units, so no existing course changes (see "In the shop" above).
@@ -2315,10 +2563,10 @@ export const workUnits: Unit[] = [
   kasUnit,
 ];
 
-const lessonOrder = [toolsUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
+const lessonOrder = [toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
-/** One "Zo werkt het hier" tip per lesson of toolsUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips].sort(
+/** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

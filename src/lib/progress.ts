@@ -5,6 +5,10 @@ import { isRegionChoice, isRegionId, regionOf, regionsOn, type RegionChoice } fr
 import { findCourseUnit, unitOfLesson } from '../content/courses';
 import { rulesCourseUnits } from '../content/rulesCourse';
 import type { Cards } from './spaced';
+
+/** The country the learner works in (Settings): the work rules are those of the Netherlands. */
+export type Country = 'nl' | 'be';
+export const isCountry = (x: unknown): x is Country => x === 'nl' || x === 'be';
 import type { TextSize } from './textSize';
 
 export interface LessonRecord {
@@ -50,6 +54,12 @@ export interface Progress {
    * Only on this phone: never sent anywhere, never counted.
    */
   region?: RegionChoice;
+  /**
+   * "In welk land werk je?" in Settings: 'be' (Vlaanderen) shows that the work rules are about
+   * the Netherlands and gives the Belgian help in the Hulp tab (docs/belgie-vlaanderen-plan.md).
+   * Undefined = not chosen (the same as 'nl'). Only on this phone: never sent anywhere.
+   */
+  country?: Country;
   xp: number;
   streak: number;
   /** Local date (YYYY-MM-DD) of the last finished lesson. */
@@ -139,6 +149,7 @@ export function loadProgress(): Progress {
       // Older saves have no sector (asked once after the password); drop anything unknown.
       if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
       if (saved.region !== undefined && !isRegionChoice(saved.region)) delete saved.region;
+      if (saved.country !== undefined && !isCountry(saved.country)) delete saved.country;
       // Regions while they are not offered (REGIONS_LIVE off): no region unit, no region map.
       if (saved.region !== undefined && !regionsOn()) delete saved.region;
       // The work-rules track while it is not offered (RULES_TRACK off): the language page again.

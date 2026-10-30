@@ -1,5 +1,5 @@
 import { teamworkUnit } from './culture';
-import { toolsUnit, workUnits } from './work';
+import { dataUnit, toolsUnit, workUnits } from './work';
 import { soundsUnit } from './sounds';
 import { addMixLessons, isMixLesson, mixLessonFor } from './review';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
@@ -290,6 +290,9 @@ export const units: Unit[] = [
       },
     ],
   },
+  // Numbers and details (your name spelled, phone number, days and dates): right before "Time and
+  // schedule", which needs them. On All topics it sits under Starten (src/content/themes.ts).
+  dataUnit,
   {
     id: 'u.time',
     title: 'Time and schedule',
@@ -409,12 +412,13 @@ export function findLesson(id: string, track?: Track): { unit: Unit; lesson: Les
 
 /**
  * A lesson as the learner plays it: a mixed review only brings items of lessons they finished
- * (see mixLessonFor); every other lesson is as written.
+ * (see mixLessonFor), and on another day other words of the unit; every other lesson is as
+ * written. `turn`: the day (dayNumber in lib/spaced.ts), 0 without it.
  */
-export function playLesson(id: string, completed: Record<string, unknown>): { unit: Unit; lesson: Lesson } | undefined {
+export function playLesson(id: string, completed: Record<string, unknown>, turn = 0): { unit: Unit; lesson: Lesson } | undefined {
   const found = findLesson(id);
   if (!found || !isMixLesson(found.lesson)) return found;
-  return { unit: found.unit, lesson: mixLessonFor(found.unit, units, completed) };
+  return { unit: found.unit, lesson: mixLessonFor(found.unit, units, completed, turn) };
 }
 
 /** Look up any word or sentence by id (used by the phrasebook). */

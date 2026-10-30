@@ -81,6 +81,11 @@ const lang: HelpLanguageSource = {
     unlock: 'Débloquer',
     sector: 'Ton travail',
     chooseSector: 'Où travailles-tu ?',
+    // nieuw, nog nalezen (land: Nederland of België)
+    countryTitle: 'Dans quel pays travailles-tu ?',
+    countryHint: 'Les règles du travail dans Vloertaal sont celles des Pays-Bas. En Belgique, beaucoup de règles sont différentes. Cela reste sur ton téléphone. Nous ne l’envoyons nulle part.',
+    countryNl: 'Pays-Bas',
+    countryBe: 'Belgique (Flandre)',
     sectorHint: 'Les leçons pour ton travail viennent tôt. Tu peux changer ça plus tard dans les Réglages.',
     otherSectors: 'Autres secteurs',
     reviewToday: 'Révision du jour',

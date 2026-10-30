@@ -1,7 +1,7 @@
 import type { RuleUnit } from '../types';
 
 /**
- * Unit 5 · Werktijden, pauze en vrij (les 5.1–5.4).
+ * Unit 5 · Werktijden, pauze en vrij (les 5.1–5.5).
  * Converted from docs/werkregels-curriculum.md; edit the curriculum first, then this file.
  * `// ⚖️ check:` marks a fact the expert must check (docs/werkregels-bronnen.md). The marker is
  * never shown or read aloud. `// Redactie:` notes are for the makers only.
@@ -255,6 +255,20 @@ export const tijdUnit: RuleUnit = {
           ],
           why: 'Je eigen lijst helpt als er iets misgaat. Check daarna je loonstrook. Krijg je loon contant, buiten je loonstrook om? Dan is het zwart werk. Dan bouw je bijvoorbeeld geen WW en pensioen op.',
         },
+        // Oproep 4 dagen (rapport hiaten, voorstel 3): de tweede vraag naast r.l.contract.3.tf1.
+        // ⚖️ check: Je werkgever moet je meestal minstens 4 dagen ⚖️ van tevoren oproepen.
+        // ⚖️ check: Een cao kan die 4 dagen korter maken ⚖️ (art. 7:628a lid 2 en 3 BW).
+        {
+          kind: 'whatdo',
+          id: 'r.l.tijd.3.wd3',
+          situation: 'Jayden is oproepkracht. Donderdagavond belt Mark: "Kun je zaterdag komen?" Jayden heeft al andere plannen. Wat kan Jayden het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij zegt ja. Anders krijgt hij misschien geen werk meer.', best: false, feedback: 'Begrijpelijk. Maar hier mag hij nee zeggen.' },
+            { id: 'b', text: 'Hij zegt rustig nee. Het is te kort van tevoren.', best: true, feedback: 'Goed. Bij minder dan 4 dagen mag hij nee zeggen.' },
+            { id: 'c', text: 'Hij zegt niets, en hij komt zaterdag gewoon niet.', best: false, feedback: 'Dan rekent Mark op hem. Zeg het duidelijk.' },
+          ],
+          why: 'Een oproepkracht werkt als het bedrijf belt. Je werkgever moet je meestal minstens 4 dagen van tevoren oproepen. Is het later? Dan mag je nee zeggen. Een cao kan die 4 dagen korter maken. Kijk in je cao.',
+        },
         {
           kind: 'whoask',
           id: 'r.l.tijd.3.wa1',
@@ -355,6 +369,104 @@ export const tijdUnit: RuleUnit = {
           why: 'Vrij vraag je aan je leidinggevende, per mail of in de app.',
         },
         { kind: 'model', id: 'r.l.tijd.4.mo1', context: 'Je vraagt vakantie aan.', nl: 'Ik wil graag vrij van 1 tot en met 21 juli. Kan dat?' },
+      ],
+    },
+    {
+      // Les 5.5 · Kinderen en zorg (30 oktober 2026; rapport hiaten, voorstel 9)
+      // Redactie: geen weken, bedragen of percentages. Die veranderen vaak (betaald
+      //   ouderschapsverlof, aanvullend geboorteverlof). Verwijs naar rijksoverheid.nl en de cao.
+      // Redactie: het kabinet wil de kinderopvangtoeslag veranderen (minder koppeling met gewerkte
+      //   uren) ⚖️. Daarom zegt de les alleen: "onder meer je inkomen".
+      id: 'r.l.tijd.5',
+      title: 'Kinderen en zorg',
+      goal: 'Je weet dat er verlof is voor een zwangerschap, een baby en een ziek kind. Je vraagt het op tijd.',
+      remember: 'Zwanger, een baby of een ziek kind? Vraag op tijd welk verlof je hebt.',
+      // Wie kan je helpen: je leidinggevende of HR · de bedrijfsarts (zwanger en zwaar werk) · een
+      //   vakbond · het Juridisch Loket · UWV (uitkering bij verlof) · Dienst Toeslagen
+      //   (kinderopvangtoeslag) · rijksoverheid.nl (verlof).
+      help: ['leidinggevende', 'hr', 'bedrijfsarts', 'vakbond', 'juridischloket'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.tijd.5.sc1',
+          picture: 'Dewi in de kantine van een winkel. Ze houdt een echo-foto vast en kijkt naar haar telefoon.',
+          lines: [
+            'Dewi werkt in een winkel.',
+            'Ze is zwanger van haar eerste kind.',
+            'Ze heeft het nog aan niemand op haar werk verteld.',
+            'Ze is bang dat ze haar baan kwijtraakt.',
+          ],
+        },
+        // ⚖️ check: Je werkgever mag je niet ontslaan omdat je zwanger bent ⚖️ (art. 7:646 BW,
+        //   opzegverbod art. 7:670 lid 2 BW).
+        // ⚖️ check: Je krijgt verlof voor en na de bevalling ⚖️ (Wazo, hoofdstuk 3).
+        // ⚖️ check: Je partner krijgt ook verlof bij de geboorte ⚖️ (Wazo, hoofdstuk 4).
+        // ⚖️ check: Is je kind ziek? Dan kun je vaak zorgverlof krijgen ⚖️ (Wazo, hoofdstuk 5).
+        {
+          kind: 'rule',
+          id: 'r.l.tijd.5.ru1',
+          emoji: '👶',
+          title: 'Zwanger, een baby of een ziek kind? Vraag op tijd welk verlof je hebt.',
+          body: [
+            'Ben je zwanger? Je werkgever mag je daarom niet ontslaan.',
+            'Je krijgt verlof voor en na de bevalling.',
+            'Je partner krijgt ook verlof bij de geboorte.',
+            'Is je kind ziek? Dan kun je vaak zorgverlof krijgen.',
+            'Hoeveel en hoe lang? Kijk op rijksoverheid.nl of in je cao.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: Je werkgever mag je niet ontslaan omdat je zwanger bent ⚖️ (art. 7:670 lid 2 BW).
+        // ⚖️ check: Een tijdelijk contract niet verlengen omdat je zwanger bent, mag ook niet ⚖️
+        //   (art. 7:646 BW, Algemene wet gelijke behandeling).
+        // ⚖️ check: Vertel het in elk geval op tijd voor je verlof ⚖️ (uiterlijk 3 weken vooraf,
+        //   art. 3:6 Wazo).
+        {
+          kind: 'truefalse',
+          id: 'r.l.tijd.5.tf1',
+          statement: 'Dewi is zwanger. Haar baas mag haar daarom ontslaan.',
+          answer: false,
+          why: 'Je werkgever mag je niet ontslaan omdat je zwanger bent. Een tijdelijk contract niet verlengen om die reden, mag ook niet. Je vertelt het op je werk als je er klaar voor bent. Maar wel op tijd voor je verlof.',
+        },
+        // ⚖️ check: Krijgt je partner een baby? Dan heb je recht op geboorteverlof ⚖️ (Wazo 4:1).
+        // ⚖️ check: Ouderschapsverlof: tot je kind 8 jaar is ⚖️ (Wazo 6:1).
+        // ⚖️ check: Voor een deel ervan kun je geld krijgen van UWV ⚖️ (betaald ouderschapsverlof,
+        //   Wazo 4:2b en 6:1a; aanvraag via de werkgever).
+        {
+          kind: 'whoask',
+          id: 'r.l.tijd.5.wa1',
+          question: 'De vrouw van Mohammed krijgt een baby. Mohammed wil verlof. Bij wie vraagt hij het aan?',
+          options: [
+            { id: 'a', who: 'leidinggevende', best: true, feedback: 'Goed. Verlof vraag je aan op je werk.' },
+            { id: 'b', who: 'uwv', best: false, feedback: 'UWV betaalt soms een deel. Maar je vraagt het verlof aan op je werk.' },
+            { id: 'c', who: 'gemeente', best: false, feedback: 'De gemeente gaat niet over verlof van je werk.' },
+          ],
+          why: 'Krijgt je partner een baby? Dan heb je recht op geboorteverlof. Vraag het op tijd aan bij je werkgever. Later kun je ook ouderschapsverlof vragen. Dat is verlof om voor je kind te zorgen, tot je kind 8 jaar is. Voor een deel ervan kun je geld krijgen van UWV.',
+        },
+        // ⚖️ check: Bij een noodgeval mag je meteen weg. Dat heet calamiteitenverlof ⚖️ (Wazo 4:1).
+        // ⚖️ check: Moet je een paar dagen voor je kind zorgen? Dan kun je kortdurend zorgverlof
+        //   vragen ⚖️ (Wazo 5:1). Je krijgt dan meestal een deel van je loon ⚖️ (Wazo 5:6).
+        {
+          kind: 'whatdo',
+          id: 'r.l.tijd.5.wd1',
+          situation: 'De opvang belt Kevin. Zijn dochter heeft koorts en moet naar huis. Kevin is op zijn werk. Wat kan Kevin het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij zegt het meteen tegen zijn leidinggevende, en hij haalt haar op.', best: true, feedback: 'Goed. Bij een noodgeval mag hij meteen weg.' },
+            { id: 'b', text: 'Hij meldt zich ziek. Dat is het makkelijkst.', best: false, feedback: 'Hij is zelf niet ziek. Voor zijn kind is er verlof.' },
+            { id: 'c', text: 'Hij werkt eerst zijn dienst af. Dan haalt hij haar op.', best: false, feedback: 'Dat hoeft niet. Zijn dochter heeft hem nu nodig.' },
+          ],
+          why: 'Is je kind ineens ziek? Bij een noodgeval mag je meteen weg. Dat heet calamiteitenverlof. Moet je een paar dagen voor je kind zorgen? Dan kun je kortdurend zorgverlof vragen. Je krijgt dan meestal een deel van je loon. Kijk in je cao.',
+        },
+        // ⚖️ check: Hoeveel je krijgt, hangt onder meer af van je inkomen ⚖️ (Wet kinderopvang).
+        // ⚖️ check: Geef het meteen door via Mijn toeslagen ⚖️.
+        {
+          kind: 'truefalse',
+          id: 'r.l.tijd.5.tf2',
+          statement: 'Verandert je inkomen of je opvang? Geef het door voor je kinderopvangtoeslag.',
+          answer: true,
+          why: 'Kinderopvangtoeslag is geld van de overheid voor de opvang van je kind. Hoeveel je krijgt, hangt onder meer af van je inkomen. Verandert er iets? Geef het meteen door via Mijn toeslagen. Anders moet je later misschien veel terugbetalen.',
+        },
+        { kind: 'model', id: 'r.l.tijd.5.mo1', context: 'De opvang belt: je kind is ziek.', nl: 'Mijn kind is ziek. Ik moet het ophalen. Mag ik nu weg?' },
       ],
     },
   ],

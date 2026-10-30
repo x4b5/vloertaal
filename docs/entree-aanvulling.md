@@ -39,8 +39,9 @@ Alles uit deel 1 van `werkregels-curriculum.md` geldt ook hier:
 - bedragen die vaak veranderen noemen we niet. Rekenvoorbeelden gebruiken ronde, verzonnen bedragen.
   Die heten in de tekst altijd "in dit voorbeeld".
 
-**Telling in deze aanvulling.** Goed antwoord bij "wat doe je?" en sommen: A 12, B 12, C 12. Bij
-"waar of niet waar": 9 waar, 9 niet waar.
+**Telling in deze aanvulling.** Goed antwoord bij "wat doe je?" en sommen: A 14, B 14, C 14. Bij
+"waar of niet waar": 10 waar, 10 niet waar. (Met les 15.3 en de drie vragen van 30 oktober 2026 erbij:
+de pauze in les 12.1, ziek en 70 procent in les 12.2, en terugzeggen in les 13.1.)
 
 **Unit 16 (Meedoen in Nederland)** is feitelijk en neutraal. Geen partijen, geen politici, geen
 meningen over beleid. Bij stemrecht zeggen we altijd: het hangt af van de verkiezing en je
@@ -330,6 +331,21 @@ meer? Schrijf die uren op, met de datum.
 **Waarom:** Een half uur is 30 minuten. Dus 0,5 uur is 30 minuten. Een kwartier is 15 minuten: dat is
 0,25 uur. Op een loonstrook staan uren vaak zo, met een komma.
 
+**Vraag 4 · Reken het uit.** *Kaartje (rooster):* Zaterdag · 8.00 tot 14.00 uur · pauze 0 minuten. Dewi werkt zaterdag 6 uur. Er staat geen pauze op haar rooster. Klopt dat?
+
+- **A.** Ja. 6 uur is kort genoeg zonder pauze.
+  → *Toch niet. De grens is 5,5 uur.*
+- **B.** Nee. Bij meer dan 5,5 uur werk hoort pauze.
+  → *Goed. Dat klopt.*
+- **C.** Ja. Pauze hoort pas bij 8 uur werk.
+  → *Nee. De grens is lager: 5,5 uur.*
+
+**Goed antwoord: B.**
+**Som:** Van 8.00 tot 14.00 uur is 6 uur. 6 uur is meer dan 5,5 uur. Dan hoort er minstens 30 minuten pauze bij.
+**Waarom:** Werk je meer dan 5,5 uur ⚖️? Dan krijg je minstens 30 minuten ⚖️ pauze. Dat mag ook 2 keer
+15 minuten ⚖️. Staat er geen pauze op je rooster? Vraag het na bij je leidinggevende of de planner.
+(Toegevoegd 30 oktober 2026: de regel van les 5.2, als som.)
+
 **Zo zeg je het:** "Op mijn rooster staan 26 uur. Mijn contract is 24 uur. Klopt dat?"
 
 **Onthoud:** Je werktijd is: eindtijd min begintijd, min je pauze.
@@ -382,6 +398,24 @@ Zo kun je checken of het klopt.
 **Antwoord: waar.**
 **Waarom:** Van 3,20 naar 4 euro is 80 cent. Van 4 naar 5 euro is 1 euro. Samen is dat 1,80 euro. Zo
 tel je terug vanaf het bedrag. Dat is makkelijker dan aftrekken.
+
+**Vraag 4 · Reken het uit.** *Kaartje (loonstrook, in dit voorbeeld):* Loon per dag: 100 euro bruto · Ziek: 3 dagen · Doorbetaald: 70 procent. In dit voorbeeld is Mohammed 3 dagen ziek. Hij krijgt 70 procent van zijn loon. Hoeveel krijgt hij voor die dagen?
+
+- **A.** 300 euro
+  → *Dat is zijn hele loon. Hij krijgt hier 70 procent.*
+- **B.** 70 euro
+  → *Dat is voor 1 dag. Hij was 3 dagen ziek.*
+- **C.** 210 euro
+  → *Goed. Dat klopt.*
+
+**Goed antwoord: C.**
+**Som:** 3 × 100 = 300 euro. Van elke 100 euro krijgt hij 70 euro. 3 × 70 = 210 euro.
+**Waarom:** Ben je ziek? Dan betaalt je werkgever minstens 70 procent ⚖️ van je loon door. In het eerste
+jaar krijg je minstens het minimumloon ⚖️. Een cao geeft vaak meer. Soms zijn de eerste dagen
+wachtdagen, zonder loon ⚖️. Kijk in je contract of cao. (Toegevoegd 30 oktober 2026: de regel van les
+6.2, als som.)
+
+*Redactie: een rekenvoorbeeld zonder wachtdag; 100 euro per dag is verzonnen.*
 
 **Zo zeg je het:** "Ik heb 20 uur gewerkt. Dan krijg ik 300 euro bruto, toch?"
 
@@ -487,6 +521,19 @@ meer tijd. Voor jou, en voor de klant.
 **Antwoord: waar.**
 **Waarom:** Bedenk eerst: wat doe ik eerst, en wat daarna? Leg je spullen klaar. Check ook je
 beschermende spullen. Weet je hoeveel tijd je hebt? Dan kun je beginnen.
+
+**Vraag 4 · Wat zeg je terug?** Henk legt uit wat type B is: "Type B is de kraan met de blauwe stip. Neem er 3 mee." Wat zegt Mohammed terug?
+
+- **A.** "Dus 3 kranen met een blauwe stip. Klopt dat?"
+  → *Goed. Zo hoort Henk of Mohammed het goed begrepen heeft.*
+- **B.** "Oké, dat snap ik. Ik ga meteen de kranen halen."
+  → *Vriendelijk. Maar Henk weet nu niet wat Mohammed begrepen heeft.*
+- **C.** "Ja, ja. Ik ga al."
+  → *Dan weet niemand of hij het echt snapt.*
+
+**Goed antwoord: A.**
+**Waarom:** Zeg in je eigen woorden terug wat je gaat doen. Zo hoor je allebei of het klopt. Dat kost
+een paar seconden. En het voorkomt fouten. (Toegevoegd 30 oktober 2026: terugzeggen, zoals in les 2.3.)
 
 **Zo zeg je het:** "Ik heb de werkbon gelezen. Wat bedoel je met type B?"
 
