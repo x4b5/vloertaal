@@ -566,7 +566,7 @@ const t: CultureTranslation = {
     'c.interview.s': 'No fim da entrevista, o empregador pergunta: "Heb je nog vragen?" O que fazes?',
     'c.interview.o1': 'Fazes uma pergunta sobre o horário ou a formação.', // nalezen: korter goed antwoord
     'c.interview.o2': 'Dizes que não, porque fazer perguntas não é educado.',
-    'c.interview.o3': 'Dizes que não, para a entrevista acabar depressa.',
+    'c.interview.o3': 'Falas mais de ti, para mostrar que trabalhas bem.', // nalezen: nieuwe foute optie
     'c.interview.w': 'As perguntas mostram que tens interesse no emprego. Os empregadores nos Países Baixos costumam esperar perguntas.',
     'c.findwork': 'Pede o teu contrato em papel',
     'c.findwork.b': 'Pede sempre um contrato escrito e uma cópia para ti. Lê-o antes de assinar, ou pede ajuda a alguém em quem confias. Uma agência de trabalho temporário (uitzendbureau) não te pode pedir dinheiro para te arranjar trabalho. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
@@ -574,7 +574,7 @@ const t: CultureTranslation = {
     'c.findwork.s': 'Um empregador novo diz: "Assina já aqui. Podes ler mais tarde." O que fazes?',
     'c.findwork.o1': 'Pedes tempo para o ler, ou uma cópia.', // nalezen: korter goed antwoord
     'c.findwork.o2': 'Assinas depressa, para não perderes o emprego.',
-    'c.findwork.o3': 'Vais-te embora sem perguntar nada.',
+    'c.findwork.o3': 'Assinas, e depois pedes uma cópia.', // nalezen: nieuwe foute optie
     'c.findwork.w': 'O teu contrato diz quanto ganhas e quais são os teus direitos. Um bom empregador dá-te tempo para o ler. Podes perguntar tudo o que não percebes.',
     'c.contract': 'Período experimental e trabalho à chamada',
     'c.contract.b': 'Um período experimental (proeftijd) tem de estar por escrito. Não é permitido num contrato de 6 meses ou menos. Num contrato mais longo, mas de menos de 2 anos, é no máximo 1 mês. Num contrato de 2 anos ou mais, ou num contrato efetivo, é no máximo 2 meses. És trabalhador à chamada (oproepkracht)? O teu empregador tem de te chamar pelo menos 4 dias antes. Se for mais tarde, não tens de ir. Uma cao pode encurtar estes 4 dias, mas nunca para menos de 1 dia. Se cancelarem o teu trabalho depois disso, recebes na mesma. Se te chamarem para menos de 3 horas de trabalho, normalmente recebes 3 horas. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
@@ -598,7 +598,7 @@ const t: CultureTranslation = {
     'c.bsn.s': 'Uma pessoa que não conheces oferece-te um trabalho no WhatsApp. Pede uma foto do teu passaporte e os teus dados de acesso ao DigiD. O que fazes?',
     'c.bsn.o1': 'Nunca dás o acesso ao DigiD. Primeiro verificas quem ele é.', // nalezen: korter goed antwoord
     'c.bsn.o2': 'Envias tudo depressa, para ficares com o trabalho.',
-    'c.bsn.o3': 'Envias só o acesso ao DigiD, porque isso não é um documento.',
+    'c.bsn.o3': 'Envias só a foto do passaporte, não o acesso ao DigiD.', // nalezen: nieuwe foute optie
     'c.bsn.w': 'Com o teu DigiD ou uma cópia do teu documento, outras pessoas podem usar o teu nome, por exemplo para empréstimos ou subsídios. Um empregador a sério precisa do teu documento e do BSN, mas nunca do teu acesso ao DigiD.',
     'c.housing': 'Casa através do empregador',
     'c.housing.b': 'O teu empregador ou a tua agência arranja-te casa? Então o contrato de arrendamento tem de estar separado do contrato de trabalho. Pede um contrato de arrendamento por escrito e um comprovativo do que pagas. A renda só pode ser descontada do teu salário se concordaste por escrito, e dentro dos limites da lei: confirma no recibo de vencimento. Uma caução (borg) é no máximo 2 meses de renda base. Recebes a caução de volta quando sais, menos os danos reais. Regista a tua morada na gemeente. Casa sem segurança, ameaças ou custos injustos? Comunica à gemeente (meldpunt) e pede conselho grátis ao Juridisch Loket ou a um serviço de apoio à habitação. Para um problema com o valor da renda ou os custos de serviços, existe a Huurcommissie. O teu trabalho acaba? Pede conselho antes de saíres de casa. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.',
@@ -614,7 +614,7 @@ const t: CultureTranslation = {
     'c.payslip.s': 'O teu recibo de vencimento tem menos horas do que as que trabalhaste. O que fazes?',
     'c.payslip.o1': 'Mostras as tuas notas e pedes ao teu chefe que verifique.', // nalezen: korter goed antwoord
     'c.payslip.o2': 'Não dizes nada, porque não queres problemas.',
-    'c.payslip.o3': 'No dia seguinte ficas em casa sem avisar ninguém.',
+    'c.payslip.o3': 'Esperas um mês: no próximo recibo de vencimento já vai estar certo.', // nalezen: nieuwe foute optie
     'c.payslip.w': 'Há erros nos recibos de vencimento. Perguntar é normal e é um direito teu. As tuas notas de datas e horas ajudam muito.',
     'c.extra': 'Subsídio de férias e salário mínimo',
     'c.extra.b': 'Recebes subsídio de férias (vakantiegeld): pelo menos 8% do teu salário bruto. A maioria dos empregadores paga-o uma vez por ano, em maio ou junho. O teu salário nunca pode ser mais baixo do que o salário mínimo legal (minimumloon); para trabalhadores com menos de 21 anos é mais baixo. O valor muda todos os anos: vê em rijksoverheid.nl. Uma cao muitas vezes dá um pagamento extra por horas extra ou trabalho noturno. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
@@ -622,7 +622,7 @@ const t: CultureTranslation = {
     'c.extra.s': 'Um colega diz: "Em maio recebes dinheiro extra do patrão." O que é?',
     'c.extra.o1': 'O subsídio de férias: pelo menos 8% do teu salário bruto.',
     'c.extra.o2': 'Um presente, só para os melhores trabalhadores.',
-    'c.extra.o3': 'Um empréstimo que tens de devolver mais tarde.',
+    'c.extra.o3': 'O 13.º mês: um salário de um mês a mais, para todos.', // nalezen: nieuwe foute optie
     'c.extra.w': 'O subsídio de férias é um direito teu, não é um presente. Acumulas com cada hora que trabalhas. Se saíres do emprego mais cedo, recebes com o último salário.',
     'c.phone': 'O teu telemóvel no trabalho',
     'c.phone.b': 'Muitos locais de trabalho não permitem telemóveis durante o trabalho, sobretudo perto de máquinas e empilhadores, ou na produção de alimentos. Pode ser perigoso ou pouco higiénico. Usa o telemóvel na pausa. Estás à espera de uma chamada urgente da família? Avisa primeiro o teu chefe. Não tires fotografias nem faças vídeos no trabalho sem autorização: pensa na privacidade dos colegas e nos segredos da empresa. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
@@ -685,7 +685,7 @@ const t: CultureTranslation = {
     'c.health.p': 'Ainda não fiz pausa.',
     'c.health.s': 'Trabalhaste 6 horas sem pausa. O teu chefe pede-te para continuares. O que fazes?',
     'c.health.o1': 'Dizes que agora precisas da tua pausa.', // nalezen: korter goed antwoord
-    'c.health.o2': 'Continuas a trabalhar e saltas a pausa todos os dias.',
+    'c.health.o2': 'Continuas, e mais tarde fazes uma pausa mais longa.', // nalezen: nieuwe foute optie
     'c.health.o3': 'Sais do trabalho e vais para casa sem dizer nada.',
     'c.health.w': 'Quando trabalhas mais de 5,5 horas, a pausa é lei, não é um favor. O descanso também te ajuda a trabalhar em segurança.',
     'c.rights': 'Discriminação e despedimento',
@@ -741,7 +741,7 @@ const t: CultureTranslation = {
     'c.texting.p': 'Olá Mark, chego 10 minutos tarde. Desculpa! Cumprimentos, Ali',
     'c.texting.s': 'Vais chegar 10 minutos tarde. Que mensagem para o teu chefe é a melhor?',
     'c.texting.o1': '"Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali"',
-    'c.texting.o2': '"Laat" (uma palavra, sem o teu nome).',
+    'c.texting.o2': '"Sorry, ik ben er zo!" (sem o teu nome, sem a hora).', // nalezen: nieuwe foute optie
     'c.texting.o3': 'Uma mensagem de voz de três minutos sobre o trânsito.',
     'c.texting.w': 'Uma boa mensagem diz quem és e o que se passa, em poucas palavras. Assim o teu chefe fica logo a saber.',
     'c.certs': 'Os certificados ajudam-te',
@@ -773,7 +773,7 @@ const t: CultureTranslation = {
     'c.insurance.p': 'Preciso de um seguro de saúde. Pode ajudar-me?',
     'c.insurance.s': 'Começaste a trabalhar aqui há duas semanas e ainda não tens seguro de saúde. O que fazes?',
     'c.insurance.o1': 'Tratas depressa do seguro de saúde.', // nalezen: korter goed antwoord
-    'c.insurance.o2': 'Esperas até ficares doente.',
+    'c.insurance.o2': 'Esperas: o seguro do teu país chega.', // nalezen: nieuwe foute optie
     'c.insurance.o3': 'Usas o cartão do seguro de um amigo.',
     'c.insurance.w': 'Sem seguro, um médico ou um hospital pode custar muito dinheiro, e podes levar uma multa. Tratar disso depressa protege-te. O teu empregador ou a agência pode ajudar-te.', // nalezen: korter goed antwoord
     'c.letters': 'Não ignores as cartas',
@@ -806,7 +806,7 @@ const t: CultureTranslation = {
     'c.transit.s': 'Vais de autocarro para o trabalho todos os dias. Um colega recebe dinheiro para a viagem, tu não. O que fazes?',
     'c.transit.o1': 'Perguntas ao teu chefe quais são as regras na tua empresa ou na cao.',
     'c.transit.o2': 'Não dizes nada, porque provavelmente não é para ti.',
-    'c.transit.o3': 'Dizes a todos os colegas que a empresa é injusta.',
+    'c.transit.o3': 'Dizes ao teu chefe: a lei diz que também tens de o receber.', // nalezen: nieuwe foute optie
     'c.transit.w': 'O subsídio de transporte depende do empregador ou da cao. Perguntar é normal e ajuda-te a conhecer os teus direitos.',
     'c.ww': 'Subsídio de desemprego (WW)',
     'c.ww.b': 'Perdeste o emprego? Pede o WW no UWV o mais depressa possível, no prazo de uma semana a contar do teu primeiro dia sem trabalho. Normalmente tens de ter trabalhado pelo menos 26 das últimas 36 semanas. Se te despedires tu, normalmente não recebes WW. Inscreve-te como pessoa à procura de emprego em werk.nl. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
@@ -963,7 +963,7 @@ const t: CultureTranslation = {
     'c.keeplearning.s': 'Os teus colegas mudam sempre para inglês quando falam contigo. Queres aprender neerlandês. O que fazes?',
     'c.keeplearning.o1': 'Agradeces e pedes-lhes para falarem neerlandês contigo.', // nalezen: korter goed antwoord
     'c.keeplearning.o2': 'Não dizes nada. O neerlandês vem sozinho.',
-    'c.keeplearning.o3': 'Deixas de falar com os colegas até o teu neerlandês ser perfeito.',
+    'c.keeplearning.o3': 'Também respondes em inglês, porque é mais educado.', // nalezen: nieuwe foute optie
     'c.keeplearning.w': 'Os colegas muitas vezes mudam para inglês por simpatia. Quando pedes neerlandês, a maioria fica contente por ajudar. Falar um pouco todos os dias no trabalho é uma das formas mais rápidas de aprender.',
     'l.gossip': 'Mexericos e redes sociais',
     'w.roddelen': 'falar mal dos outros, fazer mexericos',
@@ -995,7 +995,7 @@ const t: CultureTranslation = {
     'c.gossip.s': 'Um colega filma-te quando escorregas no chão molhado. Ele quer pôr o vídeo no TikTok. O que fazes?',
     'c.gossip.o1': 'Dizes "Nee, dat wil ik niet" e pedes-lhe para apagar.', // nalezen: korter goed antwoord
     'c.gossip.o2': 'Ris-te e deixas que ele publique, para não criares problemas.',
-    'c.gossip.o3': 'Também o filmas e publicas tu esse vídeo.',
+    'c.gossip.o3': 'Pedes-lhe para o publicar sem o teu nome.', // nalezen: nieuwe foute optie
     'c.gossip.w': 'Ninguém pode pôr um vídeo teu na internet sem a tua autorização. Dizer que não é normal, e o teu empregador tem de agir quando os colegas gozam uns com os outros na internet. Se ele publicar na mesma, diz ao teu chefe.', // nalezen: korter goed antwoord
     'c.boundaries': 'Passar dos limites',
     'c.boundaries.b': 'Grensoverschrijdend gedrag é um comportamento que passa os limites de alguém: toques indesejados, comentários ou piadas sexuais, olhares insistentes, enviar imagens indesejadas, ameaças ou gritos. Não importa se a outra pessoa "estava a brincar": o que conta é como tu te sentes. Se puderes, diz com clareza que queres que pare. Escreve o que aconteceu, quando e quem viu. Diz ao teu chefe, à pessoa de confiança (vertrouwenspersoon, se houver) ou aos recursos humanos. O teu empregador tem de te proteger, e ninguém te pode castigar por comunicares. Viste isto acontecer a um colega? Pergunta se está bem, e oferece-te para ser testemunha.',
@@ -1166,7 +1166,7 @@ const t: CultureTranslation = {
     'c.aiplan.s': 'A app do horário dá-te muito menos horas no próximo mês. Ninguém te diz porquê. O que fazes?',
     'c.aiplan.o1': 'Pedes que uma pessoa te explique.', // nalezen: korter goed antwoord
     'c.aiplan.o2': 'Aceitas: a app tem sempre razão.',
-    'c.aiplan.o3': 'Deixas de ir trabalhar.',
+    'c.aiplan.o3': 'Perguntas ao chatbot da app porquê.', // nalezen: nieuwe foute optie
     'c.aiplan.w': 'As apps erram, e não sabem tudo sobre ti. Podes pedir uma explicação, e uma pessoa pode ver outra vez.',
     // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
     'u.kas': "Na estufa", // nieuw, nog nalezen

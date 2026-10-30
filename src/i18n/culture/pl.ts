@@ -18,16 +18,16 @@ const t: CultureTranslation = {
     'c.je.p': 'Czy mogę mówić do ciebie „je”?',
     'c.je.s': 'Twoja nowa kierowniczka mówi: „Zeg maar je, hoor!” Co ma na myśli?',
     'c.je.o1': { m: 'Chce, żebyś mówił do niej „je”.', f: 'Chce, żebyś mówiła do niej „je”.' },
-    'c.je.o2': 'Jest na ciebie zła.',
-    'c.je.o3': 'Musisz mówić głośniej.',
+    'c.je.o2': { m: 'Prosi, żebyś coś powiedział.', f: 'Prosi, żebyś coś powiedziała.' }, // nalezen: nieuwe foute optie
+    'c.je.o3': { m: 'Chce, żebyś mówił grzeczniej.', f: 'Chce, żebyś mówiła grzeczniej.' }, // nalezen: nieuwe foute optie
     'c.je.w': '„Zeg maar je” to coś miłego: chce mniejszego dystansu. W wielu holenderskich firmach mówienie „je” do przełożonego jest normalne.',
     'c.names': 'Imiona i uścisk dłoni',
     'c.names.b': 'Pierwszego dnia krótko uściśnij dłoń, spójrz na tę osobę i powiedz swoje imię. Koledzy i kierownicy zwykle mówią do siebie po imieniu.',
     'c.names.p': 'Cześć, jestem Ali. Jestem tu nowy.',
     'c.names.s': 'Podchodzi do ciebie kolega: „Hoi, ik ben Mark.” Co robisz?',
     'c.names.o1': 'Podajesz rękę i mówisz swoje imię.',
-    'c.names.o2': 'Patrzysz w dół i nic nie mówisz.',
-    'c.names.o3': 'Mówisz do niego „panie Marku”.',
+    'c.names.o2': 'Kiwasz głową, uśmiechasz się i czekasz na pytania.', // nalezen: nieuwe foute optie
+    'c.names.o3': 'Podajesz rękę i mówisz do niego „meneer” (proszę pana).', // nalezen: nieuwe foute optie
     'c.names.w': 'Krótkie przedstawienie się imieniem to normalny początek. Dzięki temu koledzy łatwiej cię zapamiętają i będą cię zapraszać.',
     'c.arrive': 'Pierwszy dzień: dokąd iść',
     'c.arrive.b': 'Pierwszego dnia najpierw idź do recepcji albo do głównego wejścia. Powiedz, jak się nazywasz, z jakiej jesteś agencji (jeśli pracujesz przez agencję) i do kogo masz przyjść. Wiele firm daje ci opiekuna (buddy): możesz go pytać o wszystko.',
@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     'c.ask.s': { m: 'Twój przełożony bardzo szybko tłumaczy zadanie. Nie zrozumiałeś. Co robisz?', f: 'Twój przełożony bardzo szybko tłumaczy zadanie. Nie zrozumiałaś. Co robisz?' },
     'c.ask.o1': 'Prosisz o ponowne wyjaśnienie.', // nalezen: korter goed antwoord
     'c.ask.o2': 'Kiwasz głową i próbujesz zgadnąć.',
-    'c.ask.o3': 'Czekasz i masz nadzieję, że zrobi to ktoś inny.',
+    'c.ask.o3': 'Przepraszasz za swój niderlandzki i zaczynasz pracę.', // nalezen: nieuwe foute optie
     'c.ask.w': 'Holenderscy przełożeni oczekują pytań. Lepiej zapytać dwa razy, niż popełnić błąd.',
     'c.gear': 'Zasady BHP są dla wszystkich',
     'c.gear.b': 'Zasady dotyczące kasków, butów i rękawic to nie sugestia: przestrzegają ich wszyscy, także szef. Pracodawca musi dać ci potrzebny sprzęt ochronny za darmo. Niedopasowany sprzęt słabo chroni, więc poproś o swój rozmiar: „Heb je dit ook in mijn maat?”',
@@ -82,7 +82,7 @@ const t: CultureTranslation = {
     'c.direct.p': 'Dobrze, to jak trzeba to zrobić?',
     'c.direct.s': 'Kolega mówi: „Nee, dat is fout. Die doos moet daar.” Co robisz?',
     'c.direct.o1': 'Pytasz, jak trzeba to zrobić, i przestawiasz karton.',
-    'c.direct.o2': 'Obrażasz się i odchodzisz.',
+    'c.direct.o2': 'Wiele razy przepraszasz: kolega jest zły.', // nalezen: nieuwe foute optie
     'c.direct.o3': 'Nic nie mówisz i zostawiasz karton tam, gdzie jest.',
     'c.direct.w': 'Bezpośrednia uwaga dotyczy pracy, nie ciebie. Pytanie „hoe moet het dan?” pokazuje, że chcesz się nauczyć.',
     'c.limits': 'Powiedz, gdy coś jest za ciężkie',
@@ -123,14 +123,14 @@ const t: CultureTranslation = {
     'c.no.s': 'Przełożony pyta, czy możesz dodatkowo popracować w sobotę. Nie możesz. Co robisz?',
     'c.no.o1': 'Odmawiasz i proponujesz inny dzień.', // nalezen: korter goed antwoord
     'c.no.o2': 'Mówisz „tak”, a potem nie przychodzisz.',
-    'c.no.o3': 'Mówisz „może” i nigdy nie odpowiadasz.',
+    'c.no.o3': 'Mówisz „tak”: szefowi nie można odmówić.', // nalezen: nieuwe foute optie
     'c.no.w': 'Jasne „nee” jest szanowane. Powiedzieć „ja” i nie przyjść niszczy zaufanie o wiele bardziej.',
     'c.task': 'Powiedz, gdy skończysz, i pytaj, gdy coś jest niejasne',
     'c.task.b': 'W Holandii przełożony często daje zadanie w kilku słowach i oczekuje, że powiesz, gdy skończysz. Gdy mówisz „ja”, choć nie wszystko rozumiesz, często dochodzi do błędów. Zapytać jeszcze raz albo poprosić, żeby ktoś to pokazał, to tutaj normalne, a nie niegrzeczne.',
     'c.task.p': 'Gotowe! Co mam teraz robić?',
     'c.task.s': { m: 'Przełożony bardzo szybko tłumaczy zadanie. Zrozumiałeś tylko połowę. Co robisz?', f: 'Przełożony bardzo szybko tłumaczy zadanie. Zrozumiałaś tylko połowę. Co robisz?' },
     'c.task.o1': 'Prosisz, żeby ci to jeszcze raz pokazano.', // nalezen: korter goed antwoord
-    'c.task.o2': 'Mówisz „ja” i zgadujesz.',
+    'c.task.o2': 'Zaczynasz od tej połowy, którą rozumiesz.', // nalezen: nieuwe foute optie
     'c.task.o3': 'Czekasz, aż zrobi to kolega.',
     'c.task.w': 'Zapytać jeszcze raz to normalne i zajmuje minutę. Poprawienie błędu trwa o wiele dłużej. Większość przełożonych woli pokazać coś dwa razy.',
     'u.teamwork': 'Praca razem',

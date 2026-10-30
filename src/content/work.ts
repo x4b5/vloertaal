@@ -404,7 +404,7 @@ const coreTips: CultureTip[] = [
     options: [
       { id: 'c.findwork.o1', en: 'Ask for time to read it, or for a copy.', best: true },
       { id: 'c.findwork.o2', en: 'Sign quickly, so you do not lose the job.', best: false },
-      { id: 'c.findwork.o3', en: 'Walk away without asking anything.', best: false },
+      { id: 'c.findwork.o3', en: 'Sign, and ask for a copy afterwards.', best: false },
     ],
     why: { id: 'c.findwork.w', en: 'Your contract says what you earn and what your rights are. A good employer gives you time to read it. You may ask about everything you do not understand.' },
   }),
@@ -449,7 +449,7 @@ const coreTips: CultureTip[] = [
     options: [
       { id: 'c.bsn.o1', en: 'Never give your DigiD login. Check who he is first.', best: true },
       { id: 'c.bsn.o2', en: 'Send everything quickly, so you get the job.', best: false },
-      { id: 'c.bsn.o3', en: 'Send only your DigiD login, because that is not a document.', best: false },
+      { id: 'c.bsn.o3', en: 'Send only the passport photo, not your DigiD login.', best: false },
     ],
     why: { id: 'c.bsn.w', en: 'With your DigiD or a copy of your ID, other people can use your name, for example for loans or benefits. A real employer needs your ID and BSN, but never your DigiD login.' },
   }),
@@ -479,7 +479,7 @@ const coreTips: CultureTip[] = [
     options: [
       { id: 'c.payslip.o1', en: 'Show your notes and ask your supervisor to check it.', best: true },
       { id: 'c.payslip.o2', en: 'Say nothing, because you do not want problems.', best: false },
-      { id: 'c.payslip.o3', en: 'Stay home the next day without telling anyone.', best: false },
+      { id: 'c.payslip.o3', en: 'Wait one month: it will be right on the next payslip.', best: false },
     ],
     why: { id: 'c.payslip.w', en: 'Mistakes on a payslip happen. Asking about it is normal and it is your right. Your own notes of dates and hours help a lot.' },
   }),
@@ -494,7 +494,7 @@ const coreTips: CultureTip[] = [
     options: [
       { id: 'c.extra.o1', en: 'Holiday pay: at least 8% of your gross wage.', best: true },
       { id: 'c.extra.o2', en: 'A present, only for the best workers.', best: false },
-      { id: 'c.extra.o3', en: 'A loan that you must pay back later.', best: false },
+      { id: 'c.extra.o3', en: 'A 13th month: one extra month of pay, for everyone.', best: false },
     ],
     why: { id: 'c.extra.w', en: 'Holiday pay is your right, not a gift. You build it up with every hour you work. If you leave your job earlier, you get it with your last pay.' },
   }),
@@ -538,7 +538,7 @@ const coreTips: CultureTip[] = [
     situation: { id: 'c.health.s', en: 'You have worked 6 hours without a break. Your supervisor asks you to keep going. What do you do?' },
     options: [
       { id: 'c.health.o1', en: 'Say that you need your break now.', best: true },
-      { id: 'c.health.o2', en: 'Keep working and skip your break every day.', best: false },
+      { id: 'c.health.o2', en: 'Keep going, and take a longer break later.', best: false },
       { id: 'c.health.o3', en: 'Leave work and go home without a word.', best: false },
     ],
     why: { id: 'c.health.w', en: 'When you work more than 5.5 hours, a break is the law, not a favour. Rest also helps you work safely.' },
@@ -722,7 +722,7 @@ const applyTips = [
     [
       'Ask a question about the hours or training.',
       'Say no, because asking questions is not polite.',
-      'Say no, so the interview ends quickly.',
+      'Talk more about yourself, to show you are a good worker.',
     ],
     'Questions show that you are interested in the job. Dutch employers often expect them.',
     NONE,
@@ -954,7 +954,7 @@ const socialTips = [
     [
       'Say "Nee, dat wil ik niet" and ask him to delete it.',
       'Laugh and let him post it, so you are not difficult.',
-      'Film him too and post that video yourself.',
+      'Ask him to post it without your name.',
     ],
     'Nobody may put a video of you online without your permission. Saying no is normal, and your employer must act when colleagues mock each other online. If he posts it anyway, tell your supervisor.',
     NONE,
@@ -1360,7 +1360,7 @@ const laterTips = [
     'You will be 10 minutes late. Which message to your supervisor is best?',
     [
       '"Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali"',
-      '"Laat" (one word, without your name).',
+      '"Sorry, ik ben er zo!" (without your name, without the time).',
       'A voice message of three minutes about the traffic.',
     ],
     'A good message says who you are and what is happening, in a few words. Then your supervisor knows it right away.',
@@ -1416,7 +1416,7 @@ const laterTips = [
     'You started working here two weeks ago and you have no health insurance yet. What do you do?',
     [
       'Arrange health insurance quickly.',
-      'Wait until you get sick.',
+      'Wait: your insurance from home is enough.',
       'Use the insurance card of a friend.',
     ],
     'Without insurance, a doctor or hospital can cost a lot, and you can get a fine. Arranging it quickly protects you. Your employer or agency can help you.',
@@ -1492,7 +1492,7 @@ const laterTips = [
     [
       'Ask your supervisor about the company or cao rules.',
       'Say nothing, because it is probably not for you.',
-      'Tell all colleagues that the company is unfair.',
+      'Tell your supervisor: the law says you must get it too.',
     ],
     'Travel allowance depends on the employer or the cao. Asking about it is normal and helps you know your rights.',
     ADVICE_LINE,
@@ -2174,7 +2174,7 @@ const aiTips = [
     [
       'Ask a person to explain it.',
       'Accept it: the app is always right.',
-      'Stop coming to work.',
+      'Ask the chatbot in the app why.',
     ],
     'Apps make mistakes, and they do not know everything about you. You may ask for an explanation, and a person can look at it again.',
     ADVICE_LINE,
@@ -2364,7 +2364,7 @@ const toolsTips = [
     [
       'Thank them, and ask them to speak Dutch with you.',
       'Say nothing. Dutch will come by itself.',
-      'Stop talking with colleagues until your Dutch is perfect.',
+      'Answer in English too, because that is more polite.',
     ],
     'Colleagues often switch to English to be kind. When you ask for Dutch, most of them are happy to help. Speaking a little every day at work is one of the fastest ways to learn.',
     NONE,

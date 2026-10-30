@@ -566,7 +566,7 @@ const t: CultureTranslation = {
     'c.interview.s': 'Görüşmenin sonunda işveren soruyor: “Heb je nog vragen?” Ne yaparsın?',
     'c.interview.o1': 'Çalışma saatleri veya eğitim hakkında bir soru sorarsın.', // nalezen: korter goed antwoord
     'c.interview.o2': 'Soru sormak kibar olmadığı için hayır dersin.',
-    'c.interview.o3': 'Görüşme çabuk bitsin diye hayır dersin.',
+    'c.interview.o3': 'İyi çalıştığını göstermek için kendinden daha çok bahsedersin.', // nalezen: nieuwe foute optie
     'c.interview.w': 'Sorular işle ilgilendiğini gösterir. Hollandalı işverenler genelde soru bekler.',
     'c.findwork': 'Sözleşmeni yazılı al',
     'c.findwork.b': 'Her zaman yazılı bir sözleşme ve kendin için bir kopya iste. İmzalamadan önce oku veya güvendiğin birinden yardım iste. Geçici iş ajansı (uitzendbureau) sana iş bulmak için senden para isteyemez. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
@@ -574,7 +574,7 @@ const t: CultureTranslation = {
     'c.findwork.s': 'Yeni bir işveren diyor ki: “Hemen buraya imza at. Sonra okursun.” Ne yaparsın?',
     'c.findwork.o1': 'Okumak için zaman veya bir kopya istersin.', // nalezen: korter goed antwoord
     'c.findwork.o2': 'İşi kaybetmemek için hemen imzalarsın.',
-    'c.findwork.o3': 'Hiçbir şey sormadan çekip gidersin.',
+    'c.findwork.o3': 'İmzalar, sonra bir kopya istersin.', // nalezen: nieuwe foute optie
     'c.findwork.w': 'Sözleşmen ne kazandığını ve hakların neler olduğunu söyler. İyi bir işveren sana okuman için zaman verir. Anlamadığın her şeyi sorabilirsin.',
     'c.contract': 'Deneme süresi ve çağrı üzerine çalışma',
     'c.contract.b': 'Deneme süresi (proeftijd) yazılı olmalıdır. 6 ay veya daha kısa bir sözleşmede deneme süresine izin yoktur. Daha uzun ama 2 yıldan kısa bir sözleşmede en fazla 1 aydır. 2 yıl veya daha uzun ya da süresiz bir sözleşmede en fazla 2 aydır. Çağrı üzerine mi çalışıyorsun (oproepkracht)? İşveren seni en az 4 gün önceden çağırmalı. Daha geç çağırırsa gelmek zorunda değilsin. Bir cao bu 4 günü kısaltabilir, ama 1 günden kısa olamaz. İşini bundan daha geç iptal ederlerse yine de ücretini alırsın. Seni 3 saatten az bir iş için çağırırlarsa genelde 3 saatlik ücret alırsın. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
@@ -598,7 +598,7 @@ const t: CultureTranslation = {
     'c.bsn.s': 'Tanımadığın biri sana WhatsApp’tan iş teklif ediyor. Pasaportunun fotoğrafını ve DigiD giriş bilgilerini istiyor. Ne yaparsın?',
     'c.bsn.o1': 'DigiD giriş bilgilerini asla vermezsin. Önce kim olduğunu kontrol edersin.', // nalezen: korter goed antwoord
     'c.bsn.o2': 'İşi almak için her şeyi hemen gönderirsin.',
-    'c.bsn.o3': 'Belge olmadığı için sadece DigiD giriş bilgilerini gönderirsin.',
+    'c.bsn.o3': 'Sadece pasaport fotoğrafını gönderirsin, DigiD giriş bilgilerini değil.', // nalezen: nieuwe foute optie
     'c.bsn.w': 'DigiD’in veya kimliğinin kopyasıyla başkaları senin adını kullanabilir, örneğin kredi veya sosyal yardım almak için. Gerçek bir işverenin kimliğine ve BSN’ine ihtiyacı vardır, ama DigiD giriş bilgilerine asla.',
     'c.housing': 'İşverenden konut',
     'c.housing.b': 'Konutunu işverenin veya ajansın mı ayarlıyor? O zaman kira sözleşmesi iş sözleşmenden ayrı olmalıdır. Yazılı bir kira sözleşmesi ve ne ödediğine dair bir belge iste. Kira maaşından ancak yazılı olarak kabul ettiysen ve yasal sınırlar içinde kesilebilir: bunu maaş bordronda kontrol et. Depozito (borg) en fazla 2 aylık temel kiradır. Ayrıldığında, gerçek hasar düşüldükten sonra geri alırsın. Adresine gemeente’de kaydol. Güvensiz konut, tehdit veya haksız masraflar mı var? Bunu gemeente’ye (meldpunt) bildir ve Juridisch Loket’ten veya bir konut danışma hizmetinden ücretsiz tavsiye al. Kira fiyatı veya hizmet giderleriyle ilgili bir sorun için Huurcommissie vardır. İşin mi bitiyor? Evden ayrılmadan önce tavsiye al. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.',
@@ -614,7 +614,7 @@ const t: CultureTranslation = {
     'c.payslip.s': 'Maaş bordronda çalıştığından daha az saat görünüyor. Ne yaparsın?',
     'c.payslip.o1': 'Notlarını gösterir ve amirinden kontrol etmesini istersin.', // nalezen: korter goed antwoord
     'c.payslip.o2': 'Sorun istemediğin için hiçbir şey söylemezsin.',
-    'c.payslip.o3': 'Ertesi gün kimseye söylemeden evde kalırsın.',
+    'c.payslip.o3': 'Bir ay beklersin: bir sonraki bordroda düzelir.', // nalezen: nieuwe foute optie
     'c.payslip.w': 'Maaş bordrosunda hatalar olur. Bunu sormak normaldir ve senin hakkındır. Tarih ve saatlerle ilgili kendi notların çok yardımcı olur.',
     'c.extra': 'Tatil parası ve asgari ücret',
     'c.extra.b': 'Tatil parası (vakantiegeld) alırsın: brüt maaşının en az %8’i. Çoğu işveren bunu yılda bir kez, mayıs veya haziranda öder. Maaşın asla yasal asgari ücretten (minimumloon) düşük olamaz; 21 yaşından küçükler için asgari ücret daha düşüktür. Miktar her yıl değişir: rijksoverheid.nl sitesinden kontrol et. Bir cao çoğu zaman fazla mesai veya gece çalışması için ek ücret verir. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
@@ -622,7 +622,7 @@ const t: CultureTranslation = {
     'c.extra.s': 'Bir iş arkadaşın diyor ki: “Mayısta patrondan ekstra para alırsın.” Bu nedir?',
     'c.extra.o1': 'Tatil parası: brüt maaşının en az %8’i.',
     'c.extra.o2': 'Sadece en iyi çalışanlara verilen bir hediye.',
-    'c.extra.o3': 'Sonra geri ödemen gereken bir borç.',
+    'c.extra.o3': '13. maaş: herkese bir aylık ek maaş.', // nalezen: nieuwe foute optie
     'c.extra.w': 'Tatil parası senin hakkındır, hediye değil. Çalıştığın her saatle birikir. İşinden daha erken ayrılırsan son maaşınla birlikte alırsın.',
     'c.phone': 'İş yerinde telefonun',
     'c.phone.b': 'Birçok iş yerinde çalışırken telefona izin verilmez, özellikle makinelerin ve forkliftlerin yanında veya gıda üretiminde. Bu güvensiz veya hijyene aykırı olabilir. Telefonunu molada kullan. Ailenden acil bir arama mı bekliyorsun? Önce amirine söyle. İzin almadan iş yerinde fotoğraf veya video çekme: iş arkadaşlarının gizliliğini ve şirket sırlarını düşün. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
@@ -685,7 +685,7 @@ const t: CultureTranslation = {
     'c.health.p': 'Henüz mola vermedim.',
     'c.health.s': '6 saattir molasız çalışıyorsun. Amirin devam etmeni istiyor. Ne yaparsın?',
     'c.health.o1': 'Şimdi molaya ihtiyacın olduğunu söylersin.', // nalezen: korter goed antwoord
-    'c.health.o2': 'Çalışmaya devam eder ve her gün molanı atlarsın.',
+    'c.health.o2': 'Devam eder, sonra daha uzun bir mola verirsin.', // nalezen: nieuwe foute optie
     'c.health.o3': 'Tek kelime etmeden işi bırakıp eve gidersin.',
     'c.health.w': '5,5 saatten fazla çalıştığında mola yasal bir haktır, bir iyilik değil. Dinlenmek güvenli çalışmana da yardım eder.',
     'c.rights': 'Ayrımcılık ve işten çıkarılma',
@@ -741,7 +741,7 @@ const t: CultureTranslation = {
     'c.texting.p': 'Merhaba Mark, 10 dakika geç kalacağım. Pardon! Selamlar, Ali',
     'c.texting.s': '10 dakika geç kalacaksın. Amirine hangi mesaj en iyisi?',
     'c.texting.o1': '“Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”',
-    'c.texting.o2': '“Laat” (tek kelime, adın olmadan).',
+    'c.texting.o2': '“Sorry, ik ben er zo!” (adın olmadan, saat olmadan).', // nalezen: nieuwe foute optie
     'c.texting.o3': 'Trafik hakkında üç dakikalık bir sesli mesaj.',
     'c.texting.w': 'İyi bir mesaj birkaç kelimeyle kim olduğunu ve ne olduğunu söyler. Böylece amirin durumu hemen anlar.',
     'c.certs': 'Sertifikalar sana yardım eder',
@@ -773,7 +773,7 @@ const t: CultureTranslation = {
     'c.insurance.p': 'Sağlık sigortasına ihtiyacım var. Bana yardım edebilir misiniz?',
     'c.insurance.s': 'İki hafta önce burada çalışmaya başladın ve henüz sağlık sigortan yok. Ne yaparsın?',
     'c.insurance.o1': 'Hemen sağlık sigortası yaptırırsın.', // nalezen: korter goed antwoord
-    'c.insurance.o2': 'Hastalanana kadar beklersin.',
+    'c.insurance.o2': 'Beklersin: kendi ülkendeki sigortan yeterli.', // nalezen: nieuwe foute optie
     'c.insurance.o3': 'Bir arkadaşının sigorta kartını kullanırsın.',
     'c.insurance.w': 'Sigortasız bir doktor veya hastane çok pahalıya mal olabilir ve ceza alabilirsin. Bunu hemen halletmek seni korur. İşverenin veya ajansın sana yardım edebilir.', // nalezen: korter goed antwoord
     'c.letters': 'Mektupları görmezden gelme',
@@ -806,7 +806,7 @@ const t: CultureTranslation = {
     'c.transit.s': 'Her gün otobüsle işe gidiyorsun. Bir iş arkadaşın yol parası alıyor, sen almıyorsun. Ne yaparsın?',
     'c.transit.o1': 'Amirine şirketinde veya cao’nda kuralların ne olduğunu sorarsın.',
     'c.transit.o2': 'Muhtemelen senin için olmadığından hiçbir şey söylemezsin.',
-    'c.transit.o3': 'Bütün iş arkadaşlarına şirketin haksız olduğunu söylersin.',
+    'c.transit.o3': 'Amirine şunu söylersin: kanuna göre sana da verilmesi gerekir.', // nalezen: nieuwe foute optie
     'c.transit.w': 'Yol parası işverene veya cao’ya bağlıdır. Bunu sormak normaldir ve haklarını bilmene yardım eder.',
     'c.ww': 'İşsizlik maaşı (WW)',
     'c.ww.b': 'İşini mi kaybettin? WW için mümkün olan en kısa sürede, işsiz kaldığın ilk günden sonraki bir hafta içinde UWV’ye başvur. Genelde son 36 haftanın en az 26’sında çalışmış olman gerekir. İşinden kendin ayrılırsan genelde WW alamazsın. werk.nl sitesinde iş arayan olarak kaydol. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
@@ -963,7 +963,7 @@ const t: CultureTranslation = {
     'c.keeplearning.s': 'İş arkadaşların seninle konuşurken hep İngilizceye geçiyor. Hollandaca öğrenmek istiyorsun. Ne yaparsın?',
     'c.keeplearning.o1': 'Onlara teşekkür eder ve seninle Hollandaca konuşmalarını istersin.', // nalezen: korter goed antwoord
     'c.keeplearning.o2': 'Hiçbir şey söylemezsin. Hollandaca kendiliğinden gelir.',
-    'c.keeplearning.o3': 'Hollandacan mükemmel olana kadar iş arkadaşlarınla konuşmayı bırakırsın.',
+    'c.keeplearning.o3': 'Daha kibar olduğu için sen de İngilizce cevap verirsin.', // nalezen: nieuwe foute optie
     'c.keeplearning.w': 'İş arkadaşları kibar olmak için çoğu zaman İngilizceye geçer. Hollandaca istediğinde çoğu yardım etmekten mutlu olur. İş yerinde her gün biraz konuşmak, öğrenmenin en hızlı yollarından biridir.',
     'l.gossip': "Dedikodu ve sosyal medya",
     'w.roddelen': "dedikodu yapmak",
@@ -995,7 +995,7 @@ const t: CultureTranslation = {
     'c.gossip.s': "Islak zeminde kaydığında bir iş arkadaşın seni videoya çekiyor. Videoyu TikTok’a koymak istiyor. Ne yaparsın?",
     'c.gossip.o1': '“Nee, dat wil ik niet” der ve videoyu silmesini istersin.', // nalezen: korter goed antwoord
     'c.gossip.o2': "Zorluk çıkarmamak için güler ve paylaşmasına izin verirsin.",
-    'c.gossip.o3': "Sen de onu videoya çeker ve o videoyu kendin paylaşırsın.",
+    'c.gossip.o3': 'Videoyu adın olmadan paylaşmasını istersin.', // nalezen: nieuwe foute optie
     'c.gossip.w': 'Kimse senin iznin olmadan videonu internete koyamaz. Hayır demek normaldir ve iş arkadaşları internette birbirleriyle alay ettiğinde işverenin harekete geçmek zorundadır. Yine de paylaşırsa amirine söyle.', // nalezen: korter goed antwoord
     'c.boundaries': "Sınırı aşmak",
     'c.boundaries.b': "Grensoverschrijdend gedrag, birinin sınırını aşan davranıştır: istenmeyen dokunma, cinsel sözler veya şakalar, dik dik bakmak, istenmeyen resimler göndermek, tehdit veya bağırmak. Diğer kişinin bunu “şaka olarak” söylemiş olması önemli değildir: önemli olan senin nasıl hissettiğindir. Yapabiliyorsan, durmasını istediğini açıkça söyle. Ne olduğunu, ne zaman olduğunu ve kimin gördüğünü yaz. Amirine, güven danışmanına (vertrouwenspersoon, varsa) veya HR’a söyle. İşverenin seni korumak zorundadır ve bildirdiğin için cezalandırılamazsın. Bunun bir iş arkadaşının başına geldiğini mi gördün? İyi olup olmadığını sor ve tanık olmayı teklif et.",
@@ -1166,7 +1166,7 @@ const t: CultureTranslation = {
     'c.aiplan.s': 'Planlama uygulaması gelecek ay sana çok daha az saat veriyor. Kimse nedenini söylemiyor. Ne yaparsın?',
     'c.aiplan.o1': 'Bir insanın bunu açıklamasını istersin.', // nalezen: korter goed antwoord
     'c.aiplan.o2': 'Kabul edersin: uygulama hep haklıdır.',
-    'c.aiplan.o3': 'İşe gitmeyi bırakırsın.',
+    'c.aiplan.o3': 'Uygulamadaki sohbet robotuna nedenini sorarsın.', // nalezen: nieuwe foute optie
     'c.aiplan.w': 'Uygulamalar hata yapar ve senin hakkında her şeyi bilmez. Açıklama isteyebilirsin, bir insan da buna tekrar bakabilir.',
     // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
     'u.kas': "Serada", // nieuw, nog nalezen

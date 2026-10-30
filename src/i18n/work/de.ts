@@ -566,7 +566,7 @@ const t: CultureTranslation = {
     'c.interview.s': 'Am Ende des Gesprächs fragt der Arbeitgeber: „Heb je nog vragen?“ Was machst du?',
     'c.interview.o1': 'Stell eine Frage zu den Stunden oder zu Schulungen.', // nalezen: korter goed antwoord
     'c.interview.o2': 'Sag nein, weil Fragen stellen nicht höflich ist.',
-    'c.interview.o3': 'Sag nein, damit das Gespräch schnell vorbei ist.',
+    'c.interview.o3': 'Erzähl mehr über dich, um zu zeigen, dass du gut arbeitest.', // nalezen: nieuwe foute optie
     'c.interview.w': 'Fragen zeigen, dass du dich für die Stelle interessierst. Niederländische Arbeitgeber erwarten sie oft.',
     'c.findwork': 'Hol dir deinen Vertrag auf Papier',
     'c.findwork.b': 'Frag immer nach einem schriftlichen Vertrag und einer Kopie für dich. Lies ihn, bevor du unterschreibst, oder bitte jemanden, dem du vertraust, um Hilfe. Eine Zeitarbeitsfirma (uitzendbureau) darf kein Geld von dir verlangen, um dir Arbeit zu vermitteln. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
@@ -574,7 +574,7 @@ const t: CultureTranslation = {
     'c.findwork.s': 'Ein neuer Arbeitgeber sagt: „Unterschreib jetzt hier. Lesen kannst du später.“ Was machst du?',
     'c.findwork.o1': 'Bitte um Zeit zum Lesen oder um eine Kopie.', // nalezen: korter goed antwoord
     'c.findwork.o2': 'Unterschreib schnell, damit du die Stelle nicht verlierst.',
-    'c.findwork.o3': 'Geh weg, ohne etwas zu fragen.',
+    'c.findwork.o3': 'Unterschreib und bitte danach um eine Kopie.', // nalezen: nieuwe foute optie
     'c.findwork.w': 'In deinem Vertrag steht, was du verdienst und welche Rechte du hast. Ein guter Arbeitgeber gibt dir Zeit, ihn zu lesen. Du darfst nach allem fragen, was du nicht verstehst.',
     'c.contract': 'Probezeit und Arbeit auf Abruf',
     'c.contract.b': 'Eine Probezeit (proeftijd) muss schriftlich vereinbart sein. In einem Vertrag von 6 Monaten oder kürzer ist sie nicht erlaubt. In einem längeren Vertrag unter 2 Jahren ist sie höchstens 1 Monat. In einem Vertrag von 2 Jahren oder länger, oder in einem unbefristeten, ist sie höchstens 2 Monate. Arbeitest du auf Abruf (oproepkracht)? Dein Arbeitgeber muss dich mindestens 4 Tage vorher rufen. Wenn es später ist, musst du nicht kommen. Ein Tarifvertrag (cao) kann diese 4 Tage kürzer machen, aber nicht kürzer als 1 Tag. Wenn sie deine Arbeit später absagen, bekommst du trotzdem deinen Lohn. Wenn sie dich für weniger als 3 Stunden Arbeit rufen, bekommst du meistens 3 Stunden bezahlt. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
@@ -598,7 +598,7 @@ const t: CultureTranslation = {
     'c.bsn.s': 'Jemand, den du nicht kennst, bietet dir über WhatsApp eine Arbeit an. Er will ein Foto von deinem Pass und deine DigiD-Zugangsdaten. Was machst du?',
     'c.bsn.o1': 'Gib nie deine DigiD-Zugangsdaten. Prüfe zuerst, wer er ist.', // nalezen: korter goed antwoord
     'c.bsn.o2': 'Schick schnell alles, damit du die Arbeit bekommst.',
-    'c.bsn.o3': 'Schick nur deine DigiD-Zugangsdaten, das ist ja kein Dokument.',
+    'c.bsn.o3': 'Schick nur das Foto vom Pass, nicht deine DigiD-Zugangsdaten.', // nalezen: nieuwe foute optie
     'c.bsn.w': 'Mit deinem DigiD oder einer Kopie deines Ausweises können andere Leute deinen Namen benutzen, zum Beispiel für Kredite oder Sozialleistungen. Ein echter Arbeitgeber braucht deinen Ausweis und deine BSN, aber nie deine DigiD-Zugangsdaten.',
     'c.housing': 'Wohnen über deinen Arbeitgeber',
     'c.housing.b': 'Kümmert sich dein Arbeitgeber oder deine Zeitarbeitsfirma um deine Wohnung? Dann muss der Mietvertrag getrennt von deinem Arbeitsvertrag sein. Frag nach einem schriftlichen Mietvertrag und einem Nachweis, was du bezahlst. Miete darf nur von deinem Lohn abgezogen werden, wenn du schriftlich zugestimmt hast, und nur innerhalb der gesetzlichen Grenzen: Prüfe es auf deiner Lohnabrechnung. Eine Kaution (borg) ist höchstens 2 Monate Kaltmiete. Du bekommst sie zurück, wenn du ausziehst, minus echte Schäden. Melde dich mit deiner Adresse bei der Gemeinde an. Unsichere Wohnung, Drohungen oder unfaire Kosten? Melde es der Gemeinde (meldpunt) und hol dir kostenlose Beratung beim Juridisch Loket oder bei einer Wohnberatung. Bei Problemen mit der Miethöhe oder den Nebenkosten gibt es die Huurcommissie. Deine Arbeit endet? Hol dir Rat, bevor du aus deiner Wohnung ausziehst. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
@@ -614,7 +614,7 @@ const t: CultureTranslation = {
     'c.payslip.s': 'Auf deiner Lohnabrechnung stehen weniger Stunden, als du gearbeitet hast. Was machst du?',
     'c.payslip.o1': 'Zeig deine Notizen und bitte deinen Vorgesetzten, es zu prüfen.', // nalezen: korter goed antwoord
     'c.payslip.o2': 'Sag nichts, weil du keine Probleme willst.',
-    'c.payslip.o3': 'Bleib am nächsten Tag zu Hause, ohne jemandem etwas zu sagen.',
+    'c.payslip.o3': 'Warte einen Monat: Auf der nächsten Lohnabrechnung stimmt es dann.', // nalezen: nieuwe foute optie
     'c.payslip.w': 'Fehler auf einer Lohnabrechnung passieren. Danach zu fragen ist normal und dein Recht. Deine eigenen Notizen mit Daten und Stunden helfen sehr.',
     'c.extra': 'Urlaubsgeld und Mindestlohn',
     'c.extra.b': 'Du bekommst Urlaubsgeld (vakantiegeld): mindestens 8 % von deinem Bruttolohn. Die meisten Arbeitgeber zahlen es einmal im Jahr, im Mai oder Juni. Dein Lohn darf nie niedriger sein als der gesetzliche Mindestlohn (minimumloon); für Arbeitnehmer unter 21 ist er niedriger. Der Betrag ändert sich jedes Jahr: Schau auf rijksoverheid.nl nach. Ein Tarifvertrag (cao) gibt oft extra Geld für Überstunden oder Nachtarbeit. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
@@ -622,7 +622,7 @@ const t: CultureTranslation = {
     'c.extra.s': 'Ein Kollege sagt: „Im Mai bekommst du extra Geld vom Chef.“ Was ist das?',
     'c.extra.o1': 'Urlaubsgeld: mindestens 8 % von deinem Bruttolohn.',
     'c.extra.o2': 'Ein Geschenk, nur für die besten Mitarbeiter.',
-    'c.extra.o3': 'Ein Kredit, den du später zurückzahlen musst.',
+    'c.extra.o3': 'Ein 13. Monatsgehalt: ein zusätzlicher Monatslohn für alle.', // nalezen: nieuwe foute optie
     'c.extra.w': 'Urlaubsgeld ist dein Recht, kein Geschenk. Du sammelst es mit jeder Stunde an, die du arbeitest. Wenn du früher aufhörst, bekommst du es mit deinem letzten Lohn.',
     'c.phone': 'Dein Handy bei der Arbeit',
     'c.phone.b': 'An vielen Arbeitsplätzen sind Handys während der Arbeit nicht erlaubt, vor allem an Maschinen und Gabelstaplern oder in der Lebensmittelproduktion. Es kann unsicher oder unhygienisch sein. Benutz dein Handy in der Pause. Wartest du auf einen dringenden Anruf von deiner Familie? Sag es zuerst deinem Vorgesetzten. Mach bei der Arbeit keine Fotos oder Videos ohne Erlaubnis: Denk an die Privatsphäre der Kollegen und an Firmengeheimnisse. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
@@ -685,7 +685,7 @@ const t: CultureTranslation = {
     'c.health.p': 'Ich hatte noch keine Pause.',
     'c.health.s': 'Du hast 6 Stunden ohne Pause gearbeitet. Dein Vorgesetzter bittet dich weiterzumachen. Was machst du?',
     'c.health.o1': 'Sag, dass du jetzt deine Pause brauchst.', // nalezen: korter goed antwoord
-    'c.health.o2': 'Arbeite weiter und lass jeden Tag deine Pause aus.',
+    'c.health.o2': 'Mach weiter und mach später eine längere Pause.', // nalezen: nieuwe foute optie
     'c.health.o3': 'Hör auf zu arbeiten und geh ohne ein Wort nach Hause.',
     'c.health.w': 'Wenn du mehr als 5,5 Stunden arbeitest, ist eine Pause Gesetz, kein Gefallen. Erholung hilft dir auch, sicher zu arbeiten.',
     'c.rights': 'Diskriminierung und Kündigung',
@@ -741,7 +741,7 @@ const t: CultureTranslation = {
     'c.texting.p': 'Hallo Mark, ich komme 10 Minuten zu spät. Entschuldigung! Gruß, Ali',
     'c.texting.s': 'Du kommst 10 Minuten zu spät. Welche Nachricht an deinen Vorgesetzten ist am besten?',
     'c.texting.o1': '„Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali“',
-    'c.texting.o2': '„Laat“ (ein Wort, ohne deinen Namen).',
+    'c.texting.o2': '„Sorry, ik ben er zo!“ (ohne deinen Namen, ohne Uhrzeit).', // nalezen: nieuwe foute optie
     'c.texting.o3': 'Eine Sprachnachricht von drei Minuten über den Verkehr.',
     'c.texting.w': 'Eine gute Nachricht sagt in wenigen Worten, wer du bist und was los ist. Dann weiß dein Vorgesetzter es sofort.',
     'c.certs': 'Zertifikate helfen dir',
@@ -773,7 +773,7 @@ const t: CultureTranslation = {
     'c.insurance.p': 'Ich brauche eine Krankenversicherung. Können Sie mir helfen?',
     'c.insurance.s': 'Du arbeitest seit zwei Wochen hier und hast noch keine Krankenversicherung. Was machst du?',
     'c.insurance.o1': 'Kümmere dich schnell um eine Krankenversicherung.', // nalezen: korter goed antwoord
-    'c.insurance.o2': 'Warte, bis du krank wirst.',
+    'c.insurance.o2': 'Warte: Deine Versicherung von zu Hause reicht.', // nalezen: nieuwe foute optie
     'c.insurance.o3': 'Benutz die Versichertenkarte von einem Freund.',
     'c.insurance.w': 'Ohne Versicherung kann ein Arzt oder ein Krankenhaus viel kosten, und du kannst eine Strafe bekommen. Wenn du dich schnell darum kümmerst, schützt du dich. Dein Arbeitgeber oder deine Zeitarbeitsfirma kann dir helfen.', // nalezen: korter goed antwoord
     'c.letters': 'Ignorier keine Briefe',
@@ -806,7 +806,7 @@ const t: CultureTranslation = {
     'c.transit.s': 'Du fährst jeden Tag mit dem Bus zur Arbeit. Ein Kollege bekommt Fahrgeld, du nicht. Was machst du?',
     'c.transit.o1': 'Frag deinen Vorgesetzten, welche Regeln in deiner Firma oder im Tarifvertrag gelten.',
     'c.transit.o2': 'Sag nichts, das ist wahrscheinlich nicht für dich.',
-    'c.transit.o3': 'Sag allen Kollegen, dass die Firma unfair ist.',
+    'c.transit.o3': 'Sag deinem Vorgesetzten: Laut Gesetz musst du es auch bekommen.', // nalezen: nieuwe foute optie
     'c.transit.w': 'Fahrtkostenerstattung hängt vom Arbeitgeber oder vom Tarifvertrag ab. Danach zu fragen ist normal und hilft dir, deine Rechte zu kennen.',
     'c.ww': 'Arbeitslosengeld (WW)',
     'c.ww.b': 'Arbeit verloren? Beantrage so schnell wie möglich WW beim UWV, innerhalb einer Woche nach deinem ersten Tag ohne Arbeit. Meistens musst du mindestens 26 der letzten 36 Wochen gearbeitet haben. Wenn du selbst kündigst, bekommst du meistens kein WW. Melde dich auf werk.nl als arbeitssuchend. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
@@ -963,7 +963,7 @@ const t: CultureTranslation = {
     'c.keeplearning.s': 'Deine Kollegen wechseln immer ins Englische, wenn sie mit dir reden. Du willst Niederländisch lernen. Was machst du?',
     'c.keeplearning.o1': 'Bedank dich und bitte sie, Niederländisch mit dir zu sprechen.', // nalezen: korter goed antwoord
     'c.keeplearning.o2': 'Sag nichts. Das Niederländisch kommt von selbst.',
-    'c.keeplearning.o3': 'Sprich nicht mehr mit Kollegen, bis dein Niederländisch perfekt ist.',
+    'c.keeplearning.o3': 'Antworte auch auf Englisch, weil das höflicher ist.', // nalezen: nieuwe foute optie
     'c.keeplearning.w': 'Kollegen wechseln oft ins Englische, um nett zu sein. Wenn du um Niederländisch bittest, helfen die meisten gern. Jeden Tag ein bisschen bei der Arbeit sprechen ist einer der schnellsten Wege zu lernen.',
     'l.gossip': 'Lästern und soziale Medien',
     'w.roddelen': 'lästern, tratschen',
@@ -995,7 +995,7 @@ const t: CultureTranslation = {
     'c.gossip.s': 'Ein Kollege filmt dich, als du auf dem nassen Boden ausrutschst. Er will das Video auf TikTok stellen. Was machst du?',
     'c.gossip.o1': 'Sag „Nee, dat wil ik niet“ und bitte ihn, es zu löschen.', // nalezen: korter goed antwoord
     'c.gossip.o2': 'Lach und lass ihn posten, damit du nicht schwierig bist.',
-    'c.gossip.o3': 'Film ihn auch und poste das Video selbst.',
+    'c.gossip.o3': 'Bitte ihn, es ohne deinen Namen zu posten.', // nalezen: nieuwe foute optie
     'c.gossip.w': 'Niemand darf ohne deine Erlaubnis ein Video von dir online stellen. Nein sagen ist normal, und dein Arbeitgeber muss handeln, wenn Kollegen sich online lächerlich machen. Wenn er es trotzdem postet, sag es deinem Vorgesetzten.', // nalezen: korter goed antwoord
     'c.boundaries': 'Grenzen überschreiten',
     'c.boundaries.b': 'Grensoverschrijdend gedrag ist Verhalten, das die Grenze von jemandem überschreitet: unerwünschtes Anfassen, sexuelle Bemerkungen oder Witze, Anstarren, unerwünschte Bilder schicken, Drohungen oder Anschreien. Es ist egal, ob die andere Person es „als Witz gemeint“ hat: Es zählt, wie es sich für dich anfühlt. Wenn du kannst, sag klar, dass es aufhören soll. Schreib auf, was passiert ist, wann und wer es gesehen hat. Sag es deinem Vorgesetzten, der Vertrauensperson (vertrouwenspersoon, wenn es eine gibt) oder der Personalabteilung (HR). Dein Arbeitgeber muss dich schützen, und du darfst nicht bestraft werden, weil du es meldest. Hast du gesehen, dass es einem Kollegen passiert? Frag, ob alles okay ist, und biete an, Zeuge zu sein.',
@@ -1166,7 +1166,7 @@ const t: CultureTranslation = {
     'c.aiplan.s': 'Die Planungs-App gibt dir nächsten Monat viel weniger Stunden. Niemand sagt dir, warum. Was machst du?',
     'c.aiplan.o1': 'Bitte einen Menschen, es zu erklären.', // nalezen: korter goed antwoord
     'c.aiplan.o2': 'Akzeptier es: Die App hat immer recht.',
-    'c.aiplan.o3': 'Komm nicht mehr zur Arbeit.',
+    'c.aiplan.o3': 'Frag den Chatbot in der App, warum.', // nalezen: nieuwe foute optie
     'c.aiplan.w': 'Apps machen Fehler, und sie wissen nicht alles über dich. Du darfst um eine Erklärung bitten, und ein Mensch kann es sich noch einmal ansehen.',
     // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
     'u.kas': "Im Gewächshaus", // nieuw, nog nalezen

@@ -18,16 +18,16 @@ const t: CultureTranslation = {
     'c.je.p': 'Je peux te dire “je” ?',
     'c.je.s': 'Ta nouvelle responsable dit : “Zeg maar je, hoor!” Qu’est-ce qu’elle veut dire ?',
     'c.je.o1': 'Elle veut que tu lui dises “je”.',
-    'c.je.o2': 'Elle est fâchée contre toi.',
-    'c.je.o3': 'Tu dois parler plus fort.',
+    'c.je.o2': 'Elle te demande de dire quelque chose.', // nalezen: nieuwe foute optie
+    'c.je.o3': 'Elle veut que tu parles plus poliment.', // nalezen: nieuwe foute optie
     'c.je.w': '“Zeg maar je”, c’est gentil : elle veut moins de distance. Dans beaucoup d’entreprises néerlandaises, c’est normal de dire “je” à un responsable.',
     'c.names': 'Le prénom et une poignée de main',
     'c.names.b': 'Le premier jour, serre la main rapidement, regarde la personne et dis ton prénom. Les collègues et les responsables utilisent en général les prénoms.',
     'c.names.p': { m: 'Salut, je suis Ali. Je suis nouveau ici.', f: 'Salut, je suis Ali. Je suis nouvelle ici.', x: 'Salut, je suis Ali. Je suis nouveau / nouvelle ici.' },
     'c.names.s': 'Un collègue vient vers toi : “Hoi, ik ben Mark.” Que fais-tu ?',
     'c.names.o1': 'Serre-lui la main et dis ton nom.', // nalezen: korter goed antwoord
-    'c.names.o2': 'Baisse les yeux et ne dis rien.',
-    'c.names.o3': 'Appelle-le “Monsieur Mark”.',
+    'c.names.o2': 'Fais oui de la tête, souris et attends les questions.', // nalezen: nieuwe foute optie
+    'c.names.o3': 'Serre-lui la main et appelle-le “meneer” (monsieur).', // nalezen: nieuwe foute optie
     'c.names.w': 'Se présenter rapidement avec son prénom, c’est le début normal. Ça aide les collègues à se souvenir de toi et à t’inviter.',
     'c.arrive': 'Ton premier jour : où aller',
     'c.arrive.b': 'Le premier jour, va d’abord à l’accueil ou à l’entrée principale. Dis ton nom, ton agence si tu en as une, et qui tu dois voir. Beaucoup d’entreprises te donnent un parrain ou une marraine : tu peux tout lui demander.',
@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     'c.ask.s': 'Ton responsable explique une tâche très vite. Tu n’as pas compris. Que fais-tu ?',
     'c.ask.o1': 'Demande qu’on t’explique encore une fois.', // nalezen: korter goed antwoord
     'c.ask.o2': 'Fais oui de la tête et essaie de deviner.',
-    'c.ask.o3': 'Attends en espérant que quelqu’un d’autre le fasse.',
+    'c.ask.o3': 'Excuse-toi pour ton néerlandais et commence à travailler.', // nalezen: nieuwe foute optie
     'c.ask.w': 'Aux Pays-Bas, les responsables s’attendent à des questions. Mieux vaut demander deux fois que faire une erreur.',
     'c.gear': 'Les règles de sécurité sont pour tout le monde',
     'c.gear.b': 'Les règles sur les casques, les chaussures et les gants ne sont pas des conseils : tout le monde les suit, aussi le patron. Ton employeur doit te donner gratuitement l’équipement de protection dont tu as besoin. Un équipement qui ne te va pas te protège mal, alors demande ta taille : “Heb je dit ook in mijn maat?”',
@@ -82,7 +82,7 @@ const t: CultureTranslation = {
     'c.direct.p': 'D’accord, alors comment il faut faire ?',
     'c.direct.s': 'Un collègue dit : “Nee, dat is fout. Die doos moet daar.” Que fais-tu ?',
     'c.direct.o1': 'Demande comment il faut faire et déplace le carton.',
-    'c.direct.o2': 'Prends-le mal et pars.',
+    'c.direct.o2': 'Excuse-toi plusieurs fois : ton collègue est en colère.', // nalezen: nieuwe foute optie
     'c.direct.o3': 'Ne dis rien et laisse le carton où il est.',
     'c.direct.w': 'Une remarque directe parle du travail, pas de toi. Demander “hoe moet het dan?” montre que tu veux apprendre.',
     'c.limits': 'Dis-le quand c’est trop lourd',
@@ -123,14 +123,14 @@ const t: CultureTranslation = {
     'c.no.s': 'Ton responsable demande si tu peux faire des heures en plus samedi. Tu ne peux pas. Que fais-tu ?',
     'c.no.o1': 'Dis non et propose un autre jour.', // nalezen: korter goed antwoord
     'c.no.o2': 'Dis oui et puis ne viens pas.',
-    'c.no.o3': 'Dis “peut-être” et ne réponds jamais.',
+    'c.no.o3': 'Dis oui : on ne peut pas dire non à un chef.', // nalezen: nieuwe foute optie
     'c.no.w': 'Un “nee” clair est respecté. Dire “ja” et ne pas venir casse beaucoup plus la confiance.',
     'c.task': 'Dis quand c’est fini, demande quand ce n’est pas clair',
     'c.task.b': 'Aux Pays-Bas, un responsable donne souvent une tâche en quelques mots, et il attend que tu dises quand c’est fini. Dire “ja” quand tu n’as pas compris cause souvent des erreurs. Redemander, ou demander qu’on te montre, est normal ici et pas impoli.',
     'c.task.p': 'Fini ! Qu’est-ce que je dois faire maintenant ?',
     'c.task.s': 'Ton responsable explique une tâche très vite. Tu n’as compris que la moitié. Que fais-tu ?',
     'c.task.o1': 'Demande à le voir encore une fois.', // nalezen: korter goed antwoord
-    'c.task.o2': 'Dis “ja” et devine.',
+    'c.task.o2': 'Commence par la moitié que tu as comprise.', // nalezen: nieuwe foute optie
     'c.task.o3': 'Attends qu’un collègue le fasse.',
     'c.task.w': 'Redemander est normal et prend une minute. Réparer une erreur prend bien plus de temps. La plupart des responsables préfèrent montrer deux fois.',
     'u.teamwork': 'Travailler ensemble',
