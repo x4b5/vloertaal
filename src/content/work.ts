@@ -622,7 +622,7 @@ const unit = (slug: string, title: string, titleNl: string, emoji: string, color
 /** Dutch said aloud in a situation (a speaker plays it in the character's voice). */
 const SAID: Record<string, string> = { interview: 'Heb je nog vragen?', hours: 'Morgen begin je om half negen.' };
 /** The heading of a situation that does not ask "What do you do?" (see SituationAsk). */
-const ASK: Record<string, SituationAsk> = { texting: 'which', diploma: 'which', hours: 'which', measures: 'whatsay', dates: 'which', body: 'whatsay' };
+const ASK: Record<string, SituationAsk> = { texting: 'which', diploma: 'which', hours: 'which', measures: 'whatsay', dates: 'which', body: 'whatsay', mychoice: 'whatsay', email: 'which', council: 'which' };
 
 const tipFor = (
   slug: string,
@@ -2536,6 +2536,680 @@ const moreTips = [
   ),
 ];
 
+// ---- Entree in the Taal track (30 October 2026): the top 10 gaps of the Entree report ----
+// Six new units, appended after "In de kas" at the very end of the course, so every existing
+// course keeps its order: they are basis units (no sector of their own yet), so they come after
+// everything a learner already had. Five more lessons go at the end of an existing unit, as
+// l.permit, l.kids and l.body did: l.mychoice and l.nextstep (u.grow), l.email (u.contact),
+// l.budget (u.money) and l.healthy (u.health).
+// Already words of other lessons, used here in a sentence, a chat or a tip only: "de werkbon"
+// is new, but "de opdracht" (l.agency), "de taak" (l.task), "tekenen" (l.contract), "melden"
+// (l.gethelp), "het wachtwoord" and "inloggen" (l.aiprivate), "de link" (l.scams), "de schuld"
+// (l.warning), "opzeggen" (l.jobends), "het identiteitsbewijs" (l.bsn), "het besluit" (l.aiplan)
+// and "de veiligheidsbril" (l.gear). "de Tweede Kamer" is only in the tip: as a word or in a
+// sentence its "Kamer" would count as a name (lib/exercises.ts courseNames) and give "de kamer"
+// (l.housing) a capital, so l.council teaches "het parlement".
+
+const finishUnit = unit('finish', 'Finishing your work', 'Je werk afronden', '🏁', '#8a5a44', [
+  lesson(
+    'workorder',
+    'The work order',
+    [
+      ['werkbon', 'de werkbon', 'the work order (a paper or app with your task)', '📝'],
+      ['lezen', 'lezen', 'to read', '👓'],
+      ['aantal', 'het aantal', 'the number (how many)', '#️⃣', false],
+      ['materiaal', 'het materiaal', 'the materials (what you need for the work)', '🧱', false],
+      ['klaarleggen', 'klaarleggen', 'to put ready (put out what you need)', '🗂️', false],
+      ['handtekening', 'de handtekening', 'the signature', '🖋️'],
+    ],
+    [
+      ['Ik lees eerst de werkbon.', 'I read the work order first.'],
+      ['Klopt dit aantal?', 'Is this number right?'],
+      ['Ik leg het materiaal klaar.', 'I am putting the materials ready.'],
+    ],
+    [['Weet je wat je moet doen?', 'Do you know what you have to do?'], ['Bijna. Wat betekent dit woord op de werkbon?', 'Almost. What does this word on the work order mean?']],
+  ),
+  lesson(
+    'handover',
+    'Done, or not yet?',
+    [
+      ['opruimen', 'opruimen', 'to tidy up, to put things away', '🧽'],
+      ['nakijken', 'nakijken', 'to check (look at the work again)', '🔎', false],
+      ['afmelden', 'afmelden', 'to sign off (say that you are done and leave)', '📣', false],
+      ['kapot', 'kapot', 'broken', '🪫', false],
+      ['opslot', 'op slot', 'locked', '🔐', false],
+      ['bijzonderheid', 'de bijzonderheid', 'the special point (something that went differently)', '❗', false],
+    ],
+    [
+      ['Ik ruim mijn plek op.', 'I am tidying up my place.'],
+      ['Kunt u mijn werk even nakijken?', 'Could you check my work?'],
+      ['Ik meld me af bij de leidinggevende.', 'I am signing off with the supervisor.'],
+    ],
+    [['Is alles klaar?', 'Is everything done?'], ['Bijna. Kamer vier zat op slot.', 'Almost. Room four was locked.']],
+  ),
+]);
+
+const techUnit = unit('tech', 'In the workshop', 'In de werkplaats', '🔩', '#52606d', [
+  lesson(
+    'workshop',
+    'Workshop tools',
+    [
+      ['gereedschap', 'het gereedschap', 'the tools', '🪛'],
+      ['zagen', 'zagen', 'to saw', '🪚'],
+      ['slijpen', 'slijpen', 'to grind (make metal smooth or cut it with a machine)', '⚙️', false],
+      ['vonk', 'de vonk', 'the spark', '🎇'],
+      ['gehoorbescherming', 'de gehoorbescherming', 'the hearing protection (for your ears)', '🎧'],
+      ['lawaai', 'het lawaai', 'the noise (a lot of loud sound)', '🔊'],
+    ],
+    [
+      ['Waar ligt het gereedschap?', 'Where are the tools?'],
+      ['Ik draag gehoorbescherming bij het slijpen.', 'I wear hearing protection when I grind.'],
+      ['Pas op voor de vonken!', 'Watch out for the sparks!'],
+    ],
+    [['Waarom draag je een bril?', 'Why are you wearing glasses?'], ['Bij het zagen kunnen er stukjes in mijn oog komen.', 'When I saw, small bits can get in my eye.']],
+  ),
+  lesson(
+    'power',
+    'Power off first',
+    [
+      ['stroom', 'de stroom', 'the power, electricity', '⚡', false],
+      ['kabel', 'de kabel', 'the cable', '➰', false],
+      ['stekker', 'de stekker', 'the plug', '🔌'],
+      ['onderspanning', 'onder spanning', 'live (with power on it)', '⚡', false],
+      ['spanningsloos', 'spanningsloos', 'dead, safe (with no power on it)', '🚫', false],
+      ['elektricien', 'de elektricien', 'the electrician', '🧑‍🔧'],
+    ],
+    [
+      ['Staat hier nog stroom op?', 'Is there still power on this?'],
+      ['Deze kabel is kapot.', 'This cable is broken.'],
+      ['Ik wacht tot het spanningsloos is.', 'I wait until there is no power on it.'],
+    ],
+    [['Kun je die lamp even vervangen?', 'Can you replace that lamp?'], ['Is de stroom eraf? Anders wacht ik op de elektricien.', 'Is the power off? If not, I will wait for the electrician.']],
+  ),
+]);
+
+const garageUnit = unit('garage', 'In the garage', 'In de garage', '🚗', '#1f6f8b', [
+  lesson(
+    'garage',
+    'Tyres, oil and the lift',
+    [
+      ['band', 'de band', 'the tyre', '🛞'],
+      ['olie', 'de olie', 'the oil', '🫗'],
+      ['accu', 'de accu', 'the car battery', '🔋'],
+      ['monteur', 'de monteur', 'the mechanic', '👨‍🔧'],
+      ['hefbrug', 'de hefbrug', 'the car lift (it lifts the car up)', '🏗️', false],
+      ['lek', 'lek', 'flat, leaking (air or water gets out)', '💧', false],
+    ],
+    [
+      ['De band is lek.', 'The tyre is flat.'],
+      ['Waar staat de nieuwe olie?', 'Where is the new oil?'],
+      ['De auto staat op de hefbrug.', 'The car is on the lift.'],
+    ],
+    [['Kun je de banden van deze auto wisselen?', 'Can you change the tyres of this car?'], ['Ja. Waar liggen de winterbanden?', 'Yes. Where are the winter tyres?']],
+  ),
+  lesson(
+    'carjob',
+    'The customer decides',
+    [
+      ['proefrit', 'de proefrit', 'the test drive', '🚗'],
+      ['rijbewijs', 'het rijbewijs', 'the driving licence', '🪪'],
+      ['akkoord', 'akkoord', 'agreed, OK (you say yes to it)', '👌', false],
+      ['kosten', 'de kosten', 'the costs (what you must pay)', '💰', false],
+      ['repareren', 'repareren', 'to repair, to fix', '🔧'],
+      ['onderdeel', 'het onderdeel', 'the part (of a car or machine)', '⚙️', false],
+    ],
+    [
+      ['Is de klant akkoord met de kosten?', 'Does the customer agree to the costs?'],
+      ['Dit onderdeel is kapot.', 'This part is broken.'],
+      ['Mag ik een proefrit maken?', 'May I take a test drive?'],
+    ],
+    [['De remmen zijn ook slecht. Doe je die meteen?', 'The brakes are bad too. Will you do them right away?'], ['Eerst bel ik de klant. Hij moet akkoord zijn.', 'First I call the customer. He must agree.']],
+  ),
+]);
+
+const stageUnit = unit('stage', 'Your work placement', 'Stage lopen', '🎒', '#7b4fa0', [
+  lesson(
+    'placement',
+    'Your placement',
+    [
+      ['stage', 'de stage', 'the work placement (you learn at a company)', '🎒'],
+      ['praktijkopleider', 'de praktijkopleider', 'the workplace trainer (your guide at the company)', '🧭', false],
+      ['stagebegeleider', 'de stagebegeleider', 'the placement coach (your guide from school)', '🧑‍🎓', false],
+      ['pok', 'de POK', 'the placement agreement (you, the school and the company sign it)', '📑', false],
+      ['school', 'de school', 'the school', '🏫'],
+      ['leerbedrijf', 'het leerbedrijf', 'the training company (a company where students may learn)', '🏭', false],
+    ],
+    [
+      ['Ik loop stage in een magazijn.', 'I do my placement in a warehouse.'],
+      ['Wie is mijn praktijkopleider?', 'Who is my workplace trainer?'],
+      ['Ik heb de POK nog niet getekend.', 'I have not signed the placement agreement yet.'],
+    ],
+    [['Wanneer begin je met je stage?', 'When do you start your placement?'], ['Maandag. Eerst tekenen we de POK.', 'On Monday. First we sign the placement agreement.']],
+  ),
+  lesson(
+    'review',
+    'Feedback on your placement',
+    [
+      ['beoordeling', 'de beoordeling', 'the assessment (how well you do it)', '📊', false],
+      ['leerdoel', 'het leerdoel', 'the learning goal (what you want to learn)', '🎯'],
+      ['voorbeeld', 'het voorbeeld', 'the example', '🔍', false],
+      ['portfolio', 'het portfolio', 'the portfolio (a folder with your work and proof)', '📁'],
+      ['cijfer', 'het cijfer', 'the mark, the grade', '🔟', false],
+      ['verslag', 'het verslag', 'the report (a text about your work)', '🗞️', false],
+    ],
+    [
+      ['Wat kan ik beter doen?', 'What can I do better?'],
+      ['Kunt u een voorbeeld geven?', 'Could you give an example?'],
+      ['Mijn beoordeling is volgende week.', 'My assessment is next week.'],
+    ],
+    [['Je moet sneller werken.', 'You have to work faster.'], ['Oké. Kunt u laten zien hoe het sneller kan?', 'OK. Could you show me how to do it faster?']],
+  ),
+]);
+
+const societyUnit = unit('society', 'Taking part in the Netherlands', 'Meedoen in Nederland', '🏛️', '#2b5c8a', [
+  lesson(
+    'council',
+    'The municipality and voting',
+    [
+      ['stemmen', 'stemmen', 'to vote', '🗳️'],
+      ['verkiezing', 'de verkiezing', 'the election', '📆', false],
+      ['gemeenteraad', 'de gemeenteraad', 'the municipal council (it decides about your town)', '🏘️', false],
+      ['parlement', 'het parlement', 'the parliament (it makes the laws)', '🏛️', false],
+      ['stempas', 'de stempas', 'the voting pass (the card you need to vote)', '🎫', false],
+      ['burgemeester', 'de burgemeester', 'the mayor', '🎖️', false],
+    ],
+    [
+      ['Mag ik stemmen?', 'Am I allowed to vote?'],
+      ['Mijn stempas kwam met de post.', 'My voting pass came in the post.'],
+      ['De gemeenteraad beslist over mijn buurt.', 'The municipal council decides about my neighbourhood.'],
+    ],
+    [['Ga je woensdag stemmen?', 'Are you going to vote on Wednesday?'], ['Ja. Ik heb mijn stempas en mijn ID.', 'Yes. I have my voting pass and my ID.']],
+  ),
+  lesson(
+    'police',
+    'Police and your rights',
+    [
+      ['agent', 'de agent', 'the police officer', '👮'],
+      ['boete', 'de boete', 'the fine (money you must pay as a punishment)', '💸', false],
+      ['bezwaar', 'het bezwaar', 'the objection (you say in writing that you do not agree)', '✋', false],
+      ['rechter', 'de rechter', 'the judge', '👩‍⚖️', false],
+      ['advocaat', 'de advocaat', 'the lawyer', '💼', false],
+      ['wet', 'de wet', 'the law', '📜', false],
+    ],
+    [
+      ['Ik heb een boete gekregen.', 'I got a fine.'],
+      ['Ik wil bezwaar maken.', 'I want to object.'],
+      ['Mag ik een advocaat?', 'May I have a lawyer?'],
+    ],
+    [['Mag ik uw identiteitsbewijs zien?', 'May I see your ID?'], ['Ja, hier is het. Wat is er aan de hand?', 'Yes, here it is. What is going on?']],
+  ),
+]);
+
+// Unit Taal-C of docs/entree-aanvulling.md (part 5), with two words changed: "inloggen" and "het
+// wachtwoord" are already words of l.aiprivate (they stay in the sentences and the chat), so
+// "de gebruikersnaam" and "de inlogcode" take their place.
+const onlineUnit = unit('online', 'Online at work', 'Online op je werk', '💻', '#3d5a80', [
+  lesson(
+    'login',
+    'Logging in',
+    [
+      ['uitloggen', 'uitloggen', 'to log out', '🚪', false],
+      ['account', 'het account', 'the account', '👤', false],
+      ['scherm', 'het scherm', 'the screen', '🖥️'],
+      ['vergrendelen', 'vergrendelen', 'to lock (a screen or a phone)', '🔒'],
+      ['gebruikersnaam', 'de gebruikersnaam', 'the username', '🔤', false],
+      ['inlogcode', 'de inlogcode', 'the login code (a code you get by text or in an app)', '🔢', false],
+    ],
+    [
+      ['Ik ben mijn wachtwoord vergeten.', 'I forgot my password.'],
+      ['Ik log altijd uit.', 'I always log out.'],
+      ['Mijn DigiD geef ik aan niemand.', 'I give my DigiD to no one.'],
+    ],
+    [['Kun je inloggen?', 'Can you log in?'], ['Nee, mijn wachtwoord werkt niet.', 'No, my password does not work.']],
+  ),
+  lesson(
+    'phish',
+    'Fake e-mails',
+    [
+      ['afzender', 'de afzender', 'the sender', '👤'],
+      ['klikken', 'klikken', 'to click', '🖱️'],
+      ['bijlage', 'de bijlage', 'the attachment', '📎'],
+      ['verdacht', 'verdacht', 'suspicious', '🤨', false],
+      ['ictafdeling', 'de ICT-afdeling', 'the IT department', '🧑‍💻'],
+      ['wijzigen', 'wijzigen', 'to change', '✏️', false],
+    ],
+    [
+      ['Deze mail is verdacht.', 'This e-mail is suspicious.'],
+      ['Ik open de bijlage niet.', 'I do not open the attachment.'],
+      ['Ik wijzig mijn wachtwoord meteen.', 'I am changing my password right away.'],
+    ],
+    [['Heb je op de link geklikt?', 'Did you click on the link?'], ['Ja. Ik bel de ICT-afdeling.', 'Yes. I am calling the IT department.']],
+  ),
+]);
+
+/** Lessons added at the end of an existing unit (Entree, 30 October 2026). */
+const entreeMore: Record<string, Lesson[]> = {
+  'u.grow': [
+    lesson(
+      'mychoice',
+      'What I am good at',
+      [
+        ['goedin', 'goed in', 'good at', '🌟', false],
+        ['kiezen', 'kiezen', 'to choose', '🤔', false],
+        ['beroep', 'het beroep', 'the profession, the kind of work', '🧑‍🍳', false],
+        ['bijbaan', 'de bijbaan', 'the side job (a small job next to school)', '🛵', false],
+        ['nauwkeurig', 'nauwkeurig', 'careful and exact', '🎯', false],
+        ['meeloopdag', 'de meeloopdag', 'the job shadow day (a day you join someone at work)', '👣', false],
+      ],
+      [
+        ['Ik ben goed met mijn handen.', 'I am good with my hands.'],
+        ['Ik werk graag met mensen.', 'I like working with people.'],
+        ['Mag ik een dag meelopen?', 'May I join you for a day, to see the work?'],
+      ],
+      [['Waar ben je goed in?', 'What are you good at?'], ['Ik ben nauwkeurig. Thuis zorg ik voor mijn moeder.', 'I am careful and exact. At home I care for my mother.']],
+    ),
+    lesson(
+      'nextstep',
+      'After Entree',
+      [
+        ['niveau2', 'niveau 2', 'level 2 (the next level of the mbo)', '2️⃣', false],
+        ['startkwalificatie', 'de startkwalificatie', 'the basic qualification (a diploma at mbo level 2 or higher)', '🎓', false],
+        ['bbl', 'de bbl', 'the bbl (you work at a company and go to school about one day a week)', '🔁', false],
+        ['doorstromen', 'doorstromen', 'to go on (to a higher level)', '⏩', false],
+        ['aanmelden', 'aanmelden', 'to sign up (for a school or a course)', '🖊️', false],
+        ['opendag', 'de open dag', 'the open day (you can visit a school)', '🎈', false],
+      ],
+      [
+        ['Na Entree wil ik naar niveau 2.', 'After Entree I want to go to level 2.'],
+        ['Ik wil werken en leren tegelijk.', 'I want to work and learn at the same time.'],
+        ['Wanneer is de open dag?', 'When is the open day?'],
+      ],
+      [['Wat ga je doen na Entree?', 'What are you going to do after Entree?'], ['Ik wil de bbl doen. Dan werk ik en leer ik.', 'I want to do the bbl. Then I work and I learn.']],
+    ),
+  ],
+  'u.contact': [
+    lesson(
+      'email',
+      'Writing to work',
+      [
+        ['mail', 'de mail', 'the e-mail', '📧'],
+        ['onderwerp', 'het onderwerp', 'the subject (of an e-mail)', '🏷️', false],
+        ['beste', 'beste', 'dear (at the start of a letter or e-mail)', '👋', false],
+        ['beleefd', 'beleefd', 'polite', '🎩', false],
+        ['nalezen', 'nalezen', 'to read again (to check before you send it)', '🔍', false],
+        ['versturen', 'versturen', 'to send', '📤', false],
+      ],
+      [
+        ['Wat zet ik bij het onderwerp?', 'What do I put as the subject?'],
+        ['Ik lees mijn mail nog een keer na.', 'I read my e-mail once more.'],
+        ['Ik verstuur de mail morgen.', 'I will send the e-mail tomorrow.'],
+      ],
+      [['Heb je de mail over je vrije dag gestuurd?', 'Did you send the e-mail about your day off?'], ['Nog niet. Ik lees hem eerst na.', 'Not yet. I am reading it again first.']],
+    ),
+  ],
+  'u.money': [
+    lesson(
+      'budget',
+      'Your money each month',
+      [
+        ['vastelasten', 'de vaste lasten', 'the fixed costs (rent, insurance, phone: every month)', '🧾', false],
+        ['sparen', 'sparen', 'to save (money)', '🐷'],
+        ['abonnement', 'het abonnement', 'the subscription (you pay for it every month)', '🔁', false],
+        ['achterafbetalen', 'achteraf betalen', 'to pay later (buy now, pay later)', '⏳', false],
+        ['bedenktijd', 'de bedenktijd', 'the cooling-off period (time to change your mind)', '🤔', false],
+        ['garantie', 'de garantie', 'the guarantee (it must work, or you get it fixed)', '🛡️', false],
+      ],
+      [
+        ['Eerst betaal ik de vaste lasten.', 'First I pay the fixed costs.'],
+        ['Ik spaar elke maand een beetje.', 'I save a little every month.'],
+        ['Ik zeg dit abonnement op.', 'I am cancelling this subscription.'],
+      ],
+      [['Koop die telefoon nu en betaal later!', 'Buy that phone now and pay later!'], ['Nee, dank je. Achteraf betalen is ook een schuld.', 'No, thank you. Paying later is also a debt.']],
+    ),
+  ],
+  'u.health': [
+    lesson(
+      'healthy',
+      'Fit for work',
+      [
+        ['slapen', 'slapen', 'to sleep', '😴'],
+        ['ontbijt', 'het ontbijt', 'the breakfast', '🍞'],
+        ['bewegen', 'bewegen', 'to move, to be active', '🚶'],
+        ['moe', 'moe', 'tired', '🥱'],
+        ['drugs', 'de drugs', 'the drugs', '🚷', false],
+        ['somber', 'somber', 'low, down (sad for a long time)', '🌫️', false],
+      ],
+      [
+        ['Ik ben erg moe vandaag.', 'I am very tired today.'],
+        ['Ik eet altijd eerst een ontbijt.', 'I always eat breakfast first.'],
+        ['In de pauze ga ik even wandelen.', 'In the break I go for a short walk.'],
+      ],
+      [['Wil je een pilletje? Dan blijf je wakker.', 'Do you want a pill? Then you stay awake.'], ['Nee, dank je. Ik werk niet onder invloed.', 'No, thank you. I do not work under the influence.']],
+    ),
+  ],
+};
+
+const entreeTips = [
+  tipFor(
+    'workorder',
+    '📝',
+    'Read first, then start',
+    'Before you start, read the work order (werkbon) or the task in the app. Check the address, the task and the number of things. Something is not clear? Ask before you start, not halfway. Then put your tools and materials ready. That saves time, and you make fewer mistakes.',
+    ['Er staan tien dozen op de werkbon. Klopt dat?', 'The work order says ten boxes. Is that right?'],
+    'Your work order says: paint room 3. Your colleague says it is room 5. What do you do?',
+    [
+      'Ask your supervisor which room is right.',
+      'Paint room 3, because the paper says so.',
+      'Paint both rooms, then you are sure.',
+    ],
+    'When two things do not match, you check before you start. A short question costs less time than doing the work again.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'handover',
+    '✅',
+    'Say what is done, and what is not',
+    'Your work is not done when you stop. First tidy up your place and your tools. Then ask someone to check your work. Tell your supervisor what is done and what is not done. Did something go wrong, or is something broken? Say it now, not tomorrow. Signing off is part of your work.',
+    ['Kamer vier is nog niet klaar. De deur zat op slot.', 'Room four is not done yet. The door was locked.'],
+    'You cleaned five rooms. Room 4 was locked, so you could not clean it. Your shift ends. What do you do?',
+    [
+      'Tell your supervisor that room 4 is not done, and why.',
+      'Go home: room 4 was locked, so it is not your fault.',
+      'Write "all done" on the list, because you did your best.',
+    ],
+    'Your supervisor plans the work. When they know that room 4 is not done, they can send someone else. Then no customer finds a dirty room.',
+    HOUSE_LINE,
+  ),
+  // ⚖️ check: When it is very loud, your employer must give you hearing protection ⚖️ (Arbobesluit,
+  // hoofdstuk 6 afdeling 4 "Geluid", art. 6.8: gehoorbescherming vanaf 80 dB(A) beschikbaar, vanaf
+  // 85 dB(A) dragen; no numbers in the text).
+  // ⚖️ check: For welding or grinding near things that can burn there are extra rules ("heet werk")
+  // ⚖️ (Arbowet art. 3 and 5: RI&E; in practice a heetwerkvergunning, Verbond van Verzekeraars
+  // "Vereisten Heet Werk"; company rules differ).
+  tipFor(
+    'workshop',
+    '🥽',
+    'Eyes, ears and fire',
+    'Grinding, sawing and drilling make sparks, small bits and a lot of noise. Wear safety glasses and hearing protection, also for a short job. When it is very loud, your employer must give you hearing protection. Sparks can start a fire. For welding, or grinding near things that can burn, there are extra rules (heet werk): ask before you start. After your work, clean up the bits of metal.',
+    ['Ik ga slijpen. Waar is de gehoorbescherming?', 'I am going to grind. Where is the hearing protection?'],
+    'You must grind one small piece of metal. It takes one minute. Your safety glasses are in the other room. What do you do?',
+    [
+      'Get your glasses first, also for one minute.',
+      'Grind with your eyes half closed, it is quick.',
+      'Hold your other hand in front of your eyes.',
+    ],
+    'A spark or a bit of metal in your eye can hurt your eye for good. That can happen in one second. Safety glasses help, also for a short job.',
+    ADVICE_LINE,
+  ),
+  // ⚖️ check: Only people with the right training may work on electrical installations, and a
+  // trained person makes it safe (spanningsloos) first ⚖️ (Arbobesluit art. 3.4; NEN 3140 and
+  // NEN-EN 50110: werken door een vakbekwaam of voldoende onderricht persoon, aangewezen door de
+  // werkgever).
+  tipFor(
+    'power',
+    '🔌',
+    'Electricity: never just like that',
+    'Never work on something that has power on it (onder spanning). First a trained colleague makes it safe: they switch off the power and check it. Only people with the right training may do this. Do you see a broken cable or plug? Do not use it, and tell your supervisor right away. Not sure if the power is off? Then it is on.',
+    ['Ik zie een kapotte kabel. Wie kan ernaar kijken?', 'I see a broken cable. Who can look at it?'],
+    'You must hang a lamp. A colleague says: "The power is off, I think." What do you do?',
+    [
+      'Ask a trained colleague to check that the power is off.',
+      'Start, but touch the wires only with gloves on.',
+      'Touch the wire quickly to feel if there is power.',
+    ],
+    '"I think" is not enough with electricity. A shock can kill you. A trained colleague checks that there is no power, and then you can start.',
+    ADVICE_LINE,
+  ),
+  // ⚖️ check: Old oil, batteries and cleaning products are dangerous waste: collected apart, never
+  // in the normal bin or the drain ⚖️ (Wet milieubeheer, hoofdstuk 10: gevaarlijke afvalstoffen;
+  // Omgevingswet / Besluit activiteiten leefomgeving for garages; Regeling beheer batterijen en
+  // accu's).
+  // ⚖️ check: Never under a car that only stands on a jack ⚖️ (a work instruction, not a law:
+  // Arbobesluit art. 7.2 on safe work equipment, the RI&E and the branch's work instructions).
+  tipFor(
+    'garage',
+    '🛢️',
+    'Safe under a car',
+    'Never go under a car that only stands on a jack. The car must stand firmly on the lift or on stands. Spilled oil makes the floor slippery: clean it up right away. Old oil, batteries and cleaning products are dangerous waste. They go to a special place, never in the normal bin or down the drain.',
+    ['Er ligt olie op de vloer. Ik ruim het op.', 'There is oil on the floor. I am cleaning it up.'],
+    'You need to look under a car. The car stands on a jack only. Your colleague says: "It is fine, just be quick." What do you do?',
+    [
+      'Wait until the car stands on the lift or on stands.',
+      'Go under it quickly, and keep your legs outside.',
+      'Go under it, and ask your colleague to hold the car.',
+    ],
+    'A jack can slip. A car is very heavy, and under it you cannot get away fast. Stands or a lift keep the car in its place.',
+    HOUSE_LINE,
+  ),
+  // ⚖️ check: The customer must agree to extra work and its costs first ⚖️ (BW 7:755: meerwerk;
+  // in garages also the BOVAG/Consumentenbond conditions: no extra work without the customer's OK).
+  // ⚖️ check: A test drive only with permission and a valid driving licence ⚖️ (Wegenverkeerswet
+  // 1994 art. 107: driving without a valid licence is not allowed).
+  tipFor(
+    'carjob',
+    '🧾',
+    'Extra work? Ask the customer first',
+    'Do you find more problems than the work order says? Do not just fix them. The customer must agree to the extra work and the costs first. Your supervisor or the service desk calls the customer. A test drive is only with permission, and only with a valid driving licence. Write down what you did and which parts you used.',
+    ['Ik zie nog een probleem. Wie belt de klant?', 'I see another problem. Who calls the customer?'],
+    'You change the oil of a car. You see that the brakes are bad too. The car must be ready in one hour. What do you do?',
+    [
+      'Tell your supervisor, so that the customer can be called.',
+      'Fix the brakes too, the customer will be happy.',
+      'Say nothing: the brakes are not on the work order.',
+    ],
+    'The customer pays, so the customer decides. Without their OK, the garage may not just do extra work. Bad brakes are dangerous, so telling someone matters.',
+    ADVICE_LINE,
+  ),
+  // ⚖️ check: Before the placement starts, the student, the school and the company sign the POK
+  // (praktijkovereenkomst) ⚖️ (WEB art. 7.2.8: praktijkovereenkomst between deelnemer, instelling
+  // and leerbedrijf; the leerbedrijf is recognised by SBB, WEB art. 7.2.10).
+  // ⚖️ check: Without a signed POK, the placement may not count for your diploma ⚖️ (WEB art. 7.2.8).
+  // ⚖️ check: Sick: call the company and tell the school too ⚖️ (school rules: the OER and the
+  // stagereglement, not a law; they differ per school).
+  tipFor(
+    'placement',
+    '🎒',
+    'Sign first, then start',
+    'In Entree you learn a lot at a company: your work placement (stage, or bpv). Before you start, you, the school and the company sign an agreement: the POK. At the company, your workplace trainer (praktijkopleider) helps you. At school, your placement coach (stagebegeleider) helps you. Sick? Call the company before your start time, and tell the school too. Rules differ per school: ask your placement coach.',
+    ['Ik begin pas als de POK getekend is.', 'I only start when the placement agreement is signed.'],
+    'The company asks you to start tomorrow. The POK is not signed yet. What do you do?',
+    [
+      'Ask your placement coach to arrange the POK first.',
+      'Start tomorrow, and sign the POK in a few weeks.',
+      'Start, but do not tell the school about it yet.',
+    ],
+    'The POK says what you learn and who helps you. Without a signed POK, your placement may not count for your diploma. So you sign it before you start.',
+    NONE,
+  ),
+  // ⚖️ check: Is something really wrong: first the workplace trainer, then the placement coach
+  // ⚖️ (the school's complaints procedure, WEB art. 7.4.11? to check; SBB can take away a
+  // leerbedrijf's recognition).
+  tipFor(
+    'review',
+    '🗣️',
+    'Ask for feedback, and for an example',
+    'At your placement, people tell you what goes well and what can be better: feedback. That is normal, and it helps you learn. You do not understand it? Ask for an example. Ask for feedback yourself too, for example once a week. Is something really wrong at your placement? First talk to your workplace trainer. Does that not help? Then go to your placement coach at school.',
+    ['Wat ging goed, en wat kan beter?', 'What went well, and what can be better?'],
+    'Your workplace trainer says: "You must work more carefully." You do not know what they mean. What do you do?',
+    [
+      'Ask for an example of what you must do differently.',
+      'Say yes, and hope that you find out yourself.',
+      'Work much slower, so nothing can go wrong.',
+    ],
+    'With an example, you know what to change. Asking shows that you want to learn. Trainers like that.',
+    NONE,
+  ),
+  tipFor(
+    'mychoice',
+    '🌟',
+    'Your strong points count',
+    'What are you good at? Think of work, school and home. Caring for family, a side job or volunteer work count too. What do you like, and what do you not like? Not sure what work fits you? Ask to join someone at work for a day (meeloopdag). Your coach at school can help you choose.',
+    ['Ik ben goed met mensen. Ik help thuis veel.', 'I am good with people. I help a lot at home.'],
+    'At school they ask: "What are you good at?" You never had a paid job. What do you say?',
+    [
+      'What you do well at home, like caring for others.',
+      'That you cannot say, because you never had a job.',
+      'That you can do every kind of work, all of it.',
+    ],
+    'Skills from home count too. Caring, planning and helping are skills that employers need. Say what you did, with an example.',
+    NONE,
+  ),
+  // ⚖️ check: With an Entree diploma you may go on to level 2 of the mbo ⚖️ (toelatingsrecht na
+  // een entreediploma: WEB art. 8.1.1, Wet aanmelddatum en toelatingsrecht mbo, 2017; ask the
+  // school about the conditions).
+  // ⚖️ check: A diploma at mbo level 2 or higher is a startkwalificatie ⚖️ (Leerplichtwet 1969
+  // art. 1: havo, vwo or mbo level 2).
+  // ⚖️ check: In the bbl you work at a recognised company and go to school about one day a week;
+  // you need a job or a work-and-learn place ⚖️ (WEB art. 7.2.2: bbl with a praktijkovereenkomst
+  // and an arbeidsovereenkomst; "one day a week" is usual, not a rule).
+  tipFor(
+    'nextstep',
+    '🎓',
+    'After Entree: level 2 or work',
+    'With an Entree diploma, you may go on to level 2 of the mbo. A diploma at level 2 or higher is a basic qualification (startkwalificatie). It helps you to find work and to keep it. In the bbl you work at a company and go to school about one day a week. For that you need a job or a work-and-learn place (leerwerkbaan). Go to an open day, and talk to your coach at school.',
+    ['Kan ik na Entree naar niveau 2?', 'Can I go to level 2 after Entree?'],
+    'You have your Entree diploma. A company offers you a job without training. You also want to keep learning. What do you do?',
+    [
+      'Ask the company if a bbl place is possible.',
+      'Take the job, and stop learning for good.',
+      'Stay at home until a school calls you.',
+    ],
+    'With the bbl, you work and learn at the same time. You earn money, and you get a level 2 diploma. Many companies like this.',
+    NONE,
+  ),
+  tipFor(
+    'email',
+    '📧',
+    'A short e-mail: who, what, when',
+    'An e-mail to work is short and polite. Start with a greeting, like "Beste Karin,". Then say what you want, and when. End with a greeting and your full name. Write a short subject, like "Vrij op vrijdag". Read your e-mail again before you send it.',
+    ['Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad', 'Dear Karin, may I have Friday off? Regards, Ali Haddad'],
+    'You want a day off next Friday. Which e-mail to your supervisor is best?',
+    [
+      '"Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad"',
+      '"Vrijdag ben ik er niet." (without a greeting or your name).',
+      'A long e-mail about your week, with the question at the end.',
+    ],
+    'A good e-mail has a greeting, one clear question and your name. Then your supervisor can answer quickly.',
+    NONE,
+  ),
+  // ⚖️ check: Bought something online? You can usually change your mind within 14 days ⚖️ (BW
+  // 6:230o: herroepingsrecht bij koop op afstand, with exceptions, for example food or made to order).
+  // ⚖️ check: Keep the receipt for the guarantee ⚖️ (BW 7:17: a product must work as you may expect;
+  // BW 7:18 lid 2: in the first year the shop must prove that it was not broken).
+  // ⚖️ check: Buy now, pay later is also a debt ⚖️ (achteraf betalen: a form of credit; new EU rules,
+  // Richtlijn (EU) 2023/2225 consumentenkrediet, from November 2026).
+  tipFor(
+    'budget',
+    '🐷',
+    'Fixed costs first',
+    'When you get your pay, first pay the fixed costs: rent, insurance and your phone. Try to save a small amount every month, also 10 euros. Buy now, pay later is also a debt. Did you buy something online? Then you can usually change your mind within 14 days. Keep the receipt: you need it for the guarantee.',
+    ['Ik betaal liever nu. Dan heb ik geen schuld.', 'I prefer to pay now. Then I have no debt.'],
+    'You get your pay today. You want new shoes, and your rent must still be paid. What do you do?',
+    [
+      'Pay the rent first, then see what is left.',
+      'Buy the shoes, and pay the rent later.',
+      'Buy the shoes with buy now, pay later.',
+    ],
+    'Rent, insurance and your phone come back every month. When you pay those first, you know what money is left. Then you do not get debts.',
+    NONE,
+  ),
+  // ⚖️ check: Working under the influence of alcohol or drugs is dangerous, and most employers
+  // forbid it ⚖️ (Arbowet art. 3 and 11: the employer's policy and the worker's duty to work safely;
+  // for drivers Wegenverkeerswet art. 8; company rules differ).
+  // ⚖️ check: The huisarts keeps it secret ⚖️ (medisch beroepsgeheim, BW 7:457, WGBO).
+  tipFor(
+    'healthy',
+    '😴',
+    'Sleep, food and no drugs',
+    'You work better and more safely when you sleep enough, also after a late shift. Eat breakfast, and drink water during the day. Move in your break, for example a short walk. Working under the influence of alcohol or drugs is dangerous, and most employers forbid it. Do you feel low for a long time, or can you not stop drinking or using? Talk to your huisarts. They can help, and they keep it secret.',
+    ['Ik voel me al lang somber. Kan ik een afspraak maken?', 'I have felt low for a long time. Can I make an appointment?'],
+    'You have a night shift tonight. A colleague offers you a pill to stay awake. What do you do?',
+    [
+      'Say no, and sleep a few hours before your shift.',
+      'Take half a pill, that is not dangerous.',
+      'Take it, but tell nobody at work about it.',
+    ],
+    'Pills from a colleague can be drugs. They can make you sick, or make you make mistakes at work. Sleep is the safe way to stay awake.',
+    NONE,
+  ),
+  // ⚖️ check: With Dutch nationality you may vote in every election, from 18 ⚖️ (Grondwet art. 4;
+  // Kieswet art. B 1).
+  // ⚖️ check: For the gemeenteraad, people from another EU country who live here may vote too, and
+  // people from outside the EU after 5 years of legal stay ⚖️ (Kieswet art. B 3; as in r.l.meedoen.1).
+  // ⚖️ check: The gemeente sends the stempas by post; bring it with your ID ⚖️ (Kieswet art. J 7 and
+  // J 25: stempas and identity document).
+  tipFor(
+    'council',
+    '🗳️',
+    'Who may vote?',
+    'In the Netherlands you choose who decides, by voting. The gemeenteraad decides about your town. The Tweede Kamer makes the laws for the whole country. With Dutch nationality, you may vote in every election, from 18. For the gemeenteraad, more people may vote: people from another EU country who live here, and people from outside the EU after 5 years of legal stay. The gemeente sends you a voting pass (stempas). Bring it with your ID. Not sure if you may vote? Ask the gemeente.',
+    ['Mag ik stemmen voor de gemeenteraad?', 'May I vote for the gemeenteraad?'],
+    'You come from Morocco and have lived here legally for six years. You do not have Dutch nationality. There is an election for the gemeenteraad. What is true?',
+    [
+      'You may vote for the gemeenteraad.',
+      'You may vote for the Tweede Kamer too.',
+      'You may not vote at all without a Dutch passport.',
+    ],
+    'After 5 years of legal stay, you may vote for the gemeenteraad. For the Tweede Kamer, you need Dutch nationality.',
+    NONE,
+  ),
+  // ⚖️ check: From 14, you must show your ID when the police ask for it ⚖️ (Wet op de
+  // identificatieplicht; Wetboek van Strafrecht art. 447e).
+  // ⚖️ check: You can object in writing, before the date in the letter (usually 6 weeks) ⚖️ (Awb
+  // art. 6:7). Not for a traffic fine: that has its own route (WAHV, beroep bij de officier van
+  // justitie), so the tip speaks of a letter from the gemeente or the UWV.
+  // ⚖️ check: The police and the judge must treat everyone equally ⚖️ (Grondwet art. 1).
+  // ⚖️ check: Arrested? You may ask for a lawyer ⚖️ (Wetboek van Strafvordering art. 28 and 28a-28e).
+  // ⚖️ check: The Juridisch Loket gives free advice ⚖️ (juridischloket.nl).
+  tipFor(
+    'police',
+    '👮',
+    'Your ID and your rights',
+    'From 14, you must show your ID when the police ask for it. So always carry it with you. Do you get a letter with a decision you do not agree with, for example from the gemeente or the UWV? Then you can object (bezwaar maken) in writing. Do it before the date in the letter. The police and the judge must treat everyone equally. Arrested? You may ask for a lawyer. The Juridisch Loket gives free advice.',
+    ['Ik ben het niet eens met dit besluit. Ik maak bezwaar.', 'I do not agree with this decision. I am objecting.'],
+    'You get a letter from the gemeente. You do not agree with their decision. The letter says you have six weeks. What do you do?',
+    [
+      'Write a letter to object, before the date.',
+      'Call once, and wait until they call back.',
+      'Wait: after six weeks, it stops by itself.',
+    ],
+    'You object in writing, before the date in the letter. After that date, it is often too late. The Juridisch Loket can help you write it.',
+    NONE,
+  ),
+  // ⚖️ check: Your DigiD is only for you: do not give it to anyone, also not to your employer ⚖️
+  // (DigiD-gebruiksvoorwaarden, Logius; someone may help you with a DigiD machtiging instead).
+  tipFor(
+    'login',
+    '🔐',
+    'Your login is yours',
+    'Your password and your DigiD are only for you. Do not give them to anyone, also not to your employer or a colleague. On a shared computer, always log out when you are done. Going away for a moment? Lock your screen. Forgot your password? Ask the IT department (ICT-afdeling) for a new one.',
+    ['Ik ga even weg. Ik vergrendel mijn scherm.', 'I am going away for a moment. I am locking my screen.'],
+    'Your supervisor asks for your DigiD and password, to arrange your papers quickly. What do you do?',
+    [
+      'Say no, and log in yourself while they help.',
+      'Give it this one time, because it is your boss.',
+      'Write it on a paper, so they can use it later.',
+    ],
+    'With your DigiD, someone can see and change your tax, benefits and health papers. It is only for you. You can log in yourself and let someone help you.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'phish',
+    '🎣',
+    'In a hurry, with a button? Do not click',
+    'A fake e-mail (phishing) often looks real. It wants you to act fast: "Your account will be closed today!" Check the sender. Do not click on a link or open an attachment you did not expect. Go to the real website or app yourself. Did you click anyway? Change your password right away, and call the IT department. That is not a shame: the sooner they know, the better.',
+    ['Ik heb op een verdachte link geklikt.', 'I clicked on a suspicious link.'],
+    'You clicked on a link in an e-mail and typed your password. Then you see that the e-mail was fake. What do you do?',
+    [
+      'Change your password, and call the IT department.',
+      'Delete the e-mail, and hope nothing happens.',
+      'Wait a day to see if something goes wrong.',
+    ],
+    'With your password, someone else can get into the systems of your work. When you change it fast and tell the IT department, they can stop it in time.',
+    HOUSE_LINE,
+  ),
+];
+
 // ---- Course order of everything in this file ----
 
 const byId = (id: string) => coreUnits.find((u) => u.id === id)!;
@@ -2552,7 +3226,9 @@ export const workUnits: Unit[] = [
   sayingsUnit,
   byId('u.rights'),
   { ...byId('u.leave'), lessons: [...byId('u.leave').lessons, ...leaveMore] },
-  ...laterUnits,
+  // The Entree lessons in existing units (l.mychoice, l.nextstep, l.email, l.budget, l.healthy)
+  // come at the end of their unit.
+  ...laterUnits.map((u) => (entreeMore[u.id] ? { ...u, lessons: [...u.lessons, ...entreeMore[u.id]] } : u)),
   ...sectorUnits,
   // After the sector units, so no existing course changes (see "In the shop" above).
   shopUnit,
@@ -2561,12 +3237,20 @@ export const workUnits: Unit[] = [
   aiUnit,
   // The newest sector unit, at the very end (see "In the greenhouse" above).
   kasUnit,
+  // Entree in the Taal track (30 October 2026): basis units appended after everything else, so
+  // every existing course keeps its order (see "Entree in the Taal track" above).
+  finishUnit,
+  techUnit,
+  garageUnit,
+  stageUnit,
+  societyUnit,
+  onlineUnit,
 ];
 
 const lessonOrder = [toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips].sort(
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

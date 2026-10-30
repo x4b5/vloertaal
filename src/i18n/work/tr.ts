@@ -1332,6 +1332,353 @@ const t: CultureTranslation = {
     'c.jobends.o2': "Hiçbir şey: sigorta kendiliğinden devam eder.",
     'c.jobends.o3': "Hastalanana kadar bekler, o zaman ayarlarsın.",
     'c.jobends.w': "Ajans üzerinden olan sigorta çoğu zaman işin bittiğinde biter. Hollanda’da yaşıyor veya çalışıyorsan genelde sağlık sigortası yaptırman zorunludur. Zamanında ayarlarsan sigortasız kalmazsın.",
+    // Entree in the Taal track (30 October 2026): nieuw, nalezen.
+    'u.finish': "İşini bitirmek", // nieuw, nalezen
+    'l.workorder': "İş emri", // nieuw, nalezen
+    'w.werkbon': "iş emri (görevinin yazdığı kâğıt ya da uygulama)", // nieuw, nalezen
+    'w.lezen': "okumak", // nieuw, nalezen
+    'w.aantal': "sayı, adet (kaç tane)", // nieuw, nalezen
+    'w.materiaal': "malzeme (iş için gereken şeyler)", // nieuw, nalezen
+    'w.klaarleggen': "hazırlamak (gereken şeyleri hazır koymak)", // nieuw, nalezen
+    'w.handtekening': "imza", // nieuw, nalezen
+    's.workorder.1': "Önce iş emrini okuyorum.", // nieuw, nalezen
+    's.workorder.2': "Bu sayı doğru mu?", // nieuw, nalezen
+    's.workorder.3': "Malzemeyi hazırlıyorum.", // nieuw, nalezen
+    'c.workorder.q': "Ne yapman gerektiğini biliyor musun?", // nieuw, nalezen
+    'c.workorder.a': "Neredeyse. İş emrindeki bu kelime ne demek?", // nieuw, nalezen
+    'l.handover': "Bitti mi, daha bitmedi mi?", // nieuw, nalezen
+    'w.opruimen': "toplamak, ortalığı düzeltmek", // nieuw, nalezen
+    'w.nakijken': "kontrol etmek (işe bir kez daha bakmak)", // nieuw, nalezen
+    'w.afmelden': "işi bitirdiğini bildirmek (işin bittiğini söyleyip çıkmak)", // nieuw, nalezen
+    'w.kapot': "bozuk, kırık", // nieuw, nalezen
+    'w.opslot': "kilitli", // nieuw, nalezen
+    'w.bijzonderheid': "özel durum (farklı giden bir şey)", // nieuw, nalezen
+    's.handover.1': "Yerimi topluyorum.", // nieuw, nalezen
+    's.handover.2': "İşimi kontrol edebilir misiniz?", // nieuw, nalezen
+    's.handover.3': "Amirime işi bitirdiğimi bildiriyorum.", // nieuw, nalezen
+    'c.handover.q': "Her şey bitti mi?", // nieuw, nalezen
+    'c.handover.a': "Neredeyse. Dört numaralı oda kilitliydi.", // nieuw, nalezen
+    'u.tech': "Atölyede", // nieuw, nalezen
+    'l.workshop': "Atölye aletleri", // nieuw, nalezen
+    'w.gereedschap': "aletler", // nieuw, nalezen
+    'w.zagen': "testereyle kesmek", // nieuw, nalezen
+    'w.slijpen': "taşlamak (metali makineyle düzeltmek ya da kesmek)", // nieuw, nalezen
+    'w.vonk': "kıvılcım", // nieuw, nalezen
+    'w.gehoorbescherming': "kulak koruyucu", // nieuw, nalezen
+    'w.lawaai': "gürültü (çok yüksek ses)", // nieuw, nalezen
+    's.workshop.1': "Aletler nerede?", // nieuw, nalezen
+    's.workshop.2': "Taşlama yaparken kulak koruyucu takıyorum.", // nieuw, nalezen
+    's.workshop.3': "Kıvılcımlara dikkat et!", // nieuw, nalezen
+    'c.workshop.q': "Neden gözlük takıyorsun?", // nieuw, nalezen
+    'c.workshop.a': "Testereyle keserken gözüme parçacıklar kaçabilir.", // nieuw, nalezen
+    'l.power': "Önce elektriği kes", // nieuw, nalezen
+    'w.stroom': "elektrik, akım", // nieuw, nalezen
+    'w.kabel': "kablo", // nieuw, nalezen
+    'w.stekker': "fiş", // nieuw, nalezen
+    'w.onderspanning': "gerilim altında (elektrik var)", // nieuw, nalezen
+    'w.spanningsloos': "gerilimsiz, güvenli (elektrik yok)", // nieuw, nalezen
+    'w.elektricien': "elektrikçi", // nieuw, nalezen
+    's.power.1': "Burada hâlâ elektrik var mı?", // nieuw, nalezen
+    's.power.2': "Bu kablo bozuk.", // nieuw, nalezen
+    's.power.3': "Elektrik kesilene kadar bekliyorum.", // nieuw, nalezen
+    'c.power.q': "Şu lambayı değiştirebilir misin?", // nieuw, nalezen
+    'c.power.a': "Elektrik kesik mi? Değilse elektrikçiyi beklerim.", // nieuw, nalezen
+    'u.garage': "Oto serviste", // nieuw, nalezen
+    'l.garage': "Lastik, yağ ve lift", // nieuw, nalezen
+    'w.band': "lastik", // nieuw, nalezen
+    'w.olie': "yağ", // nieuw, nalezen
+    'w.accu': "akü", // nieuw, nalezen
+    'w.monteur': "tamirci, oto teknisyeni", // nieuw, nalezen
+    'w.hefbrug': "araç lifti (arabayı yukarı kaldırır)", // nieuw, nalezen
+    'w.lek': "patlak, sızdıran (hava ya da su kaçıyor)", // nieuw, nalezen
+    's.garage.1': "Lastik patlak.", // nieuw, nalezen
+    's.garage.2': "Yeni yağ nerede duruyor?", // nieuw, nalezen
+    's.garage.3': "Araba liftte.", // nieuw, nalezen
+    'c.garage.q': "Bu arabanın lastiklerini değiştirebilir misin?", // nieuw, nalezen
+    'c.garage.a': "Evet. Kış lastikleri nerede?", // nieuw, nalezen
+    'l.carjob': "Karar müşterinin", // nieuw, nalezen
+    'w.proefrit': "test sürüşü", // nieuw, nalezen
+    'w.rijbewijs': "ehliyet", // nieuw, nalezen
+    'w.akkoord': "onaylı, tamam (bir şeye evet diyorsun)", // nieuw, nalezen
+    'w.kosten': "masraflar (ödenmesi gereken para)", // nieuw, nalezen
+    'w.repareren': "tamir etmek", // nieuw, nalezen
+    'w.onderdeel': "parça (araba ya da makine parçası)", // nieuw, nalezen
+    's.carjob.1': "Müşteri masrafları onaylıyor mu?", // nieuw, nalezen
+    's.carjob.2': "Bu parça bozuk.", // nieuw, nalezen
+    's.carjob.3': "Test sürüşü yapabilir miyim?", // nieuw, nalezen
+    'c.carjob.q': "Frenler de kötü. Onları hemen yapar mısın?", // nieuw, nalezen
+    'c.carjob.a': "Önce müşteriyi ararım. Onun onay vermesi lazım.", // nieuw, nalezen
+    'u.stage': "Staj yapmak", // nieuw, nalezen
+    'l.placement': "Stajın", // nieuw, nalezen
+    'w.stage': "staj (bir şirkette öğreniyorsun)", // nieuw, nalezen
+    'w.praktijkopleider': "işyeri eğitmeni (şirkette sana yol gösterir)", // nieuw, nalezen
+    'w.stagebegeleider': "okulun staj danışmanı (okul adına sana yol gösterir)", // nieuw, nalezen
+    'w.pok': "staj sözleşmesi (sen, okul ve şirket imzalar)", // nieuw, nalezen
+    'w.school': "okul", // nieuw, nalezen
+    'w.leerbedrijf': "eğitim veren işyeri (öğrencilerin öğrenebildiği şirket)", // nieuw, nalezen
+    's.placement.1': "Stajımı bir depoda yapıyorum.", // nieuw, nalezen
+    's.placement.2': "İşyeri eğitmenim kim?", // nieuw, nalezen
+    's.placement.3': "Staj sözleşmesini daha imzalamadım.", // nieuw, nalezen
+    'c.placement.q': "Stajına ne zaman başlıyorsun?", // nieuw, nalezen
+    'c.placement.a': "Pazartesi. Önce staj sözleşmesini imzalıyoruz.", // nieuw, nalezen
+    'l.review': "Stajın hakkında geri bildirim", // nieuw, nalezen
+    'w.beoordeling': "değerlendirme (ne kadar iyi yaptığın)", // nieuw, nalezen
+    'w.leerdoel': "öğrenme hedefi (öğrenmek istediğin şey)", // nieuw, nalezen
+    'w.voorbeeld': "örnek", // nieuw, nalezen
+    'w.portfolio': "portfolyo (işlerini ve kanıtlarını koyduğun dosya)", // nieuw, nalezen
+    'w.cijfer': "not", // nieuw, nalezen
+    'w.verslag': "rapor (işin hakkında bir yazı)", // nieuw, nalezen
+    's.review.1': "Neyi daha iyi yapabilirim?", // nieuw, nalezen
+    's.review.2': "Bir örnek verebilir misiniz?", // nieuw, nalezen
+    's.review.3': "Değerlendirmem gelecek hafta.", // nieuw, nalezen
+    'c.review.q': "Daha hızlı çalışman lazım.", // nieuw, nalezen
+    'c.review.a': "Tamam. Nasıl daha hızlı olacağını gösterebilir misiniz?", // nieuw, nalezen
+    'u.society': "Hollanda’da hayata katılmak", // nieuw, nalezen
+    'l.council': "Belediye ve oy vermek", // nieuw, nalezen
+    'w.stemmen': "oy vermek", // nieuw, nalezen
+    'w.verkiezing': "seçim", // nieuw, nalezen
+    'w.gemeenteraad': "belediye meclisi (şehrin hakkında karar verir)", // nieuw, nalezen
+    'w.parlement': "parlamento (yasaları yapar)", // nieuw, nalezen
+    'w.stempas': "oy pusulası kartı (oy vermek için gereken kart)", // nieuw, nalezen
+    'w.burgemeester': "belediye başkanı", // nieuw, nalezen
+    's.council.1': "Oy verebilir miyim?", // nieuw, nalezen
+    's.council.2': "Oy kartım postayla geldi.", // nieuw, nalezen
+    's.council.3': "Belediye meclisi mahallem hakkında karar veriyor.", // nieuw, nalezen
+    'c.council.q': "Çarşamba günü oy vermeye gidiyor musun?", // nieuw, nalezen
+    'c.council.a': "Evet. Oy kartım ve kimliğim yanımda.", // nieuw, nalezen
+    'l.police': "Polis ve hakların", // nieuw, nalezen
+    'w.agent': "polis memuru", // nieuw, nalezen
+    'w.boete': "para cezası (ceza olarak ödemen gereken para)", // nieuw, nalezen
+    'w.bezwaar': "itiraz (katılmadığını yazılı olarak söylüyorsun)", // nieuw, nalezen
+    'w.rechter': "hâkim", // nieuw, nalezen
+    'w.advocaat': "avukat", // nieuw, nalezen
+    'w.wet': "yasa, kanun", // nieuw, nalezen
+    's.police.1': "Para cezası aldım.", // nieuw, nalezen
+    's.police.2': "İtiraz etmek istiyorum.", // nieuw, nalezen
+    's.police.3': "Avukat isteyebilir miyim?", // nieuw, nalezen
+    'c.police.q': "Kimlik belgenizi görebilir miyim?", // nieuw, nalezen
+    'c.police.a': "Evet, buyurun. Ne oldu?", // nieuw, nalezen
+    'u.online': "İşte internet", // nieuw, nalezen
+    'l.login': "Giriş yapmak", // nieuw, nalezen
+    'w.uitloggen': "çıkış yapmak (hesaptan)", // nieuw, nalezen
+    'w.account': "hesap", // nieuw, nalezen
+    'w.scherm': "ekran", // nieuw, nalezen
+    'w.vergrendelen': "kilitlemek (ekranı ya da telefonu)", // nieuw, nalezen
+    'w.gebruikersnaam': "kullanıcı adı", // nieuw, nalezen
+    'w.inlogcode': "giriş kodu (SMS ya da uygulamayla gelen kod)", // nieuw, nalezen
+    's.login.1': "Şifremi unuttum.", // nieuw, nalezen
+    's.login.2': "Her zaman çıkış yapıyorum.", // nieuw, nalezen
+    's.login.3': "DigiD’mi kimseye vermem.", // nieuw, nalezen
+    'c.login.q': "Giriş yapabiliyor musun?", // nieuw, nalezen
+    'c.login.a': "Hayır, şifrem çalışmıyor.", // nieuw, nalezen
+    'l.phish': "Sahte e-postalar", // nieuw, nalezen
+    'w.afzender': "gönderen", // nieuw, nalezen
+    'w.klikken': "tıklamak", // nieuw, nalezen
+    'w.bijlage': "ek dosya", // nieuw, nalezen
+    'w.verdacht': "şüpheli", // nieuw, nalezen
+    'w.ictafdeling': "bilgi işlem bölümü", // nieuw, nalezen
+    'w.wijzigen': "değiştirmek", // nieuw, nalezen
+    's.phish.1': "Bu e-posta şüpheli.", // nieuw, nalezen
+    's.phish.2': "Ek dosyayı açmıyorum.", // nieuw, nalezen
+    's.phish.3': "Şifremi hemen değiştiriyorum.", // nieuw, nalezen
+    'c.phish.q': "Bağlantıya tıkladın mı?", // nieuw, nalezen
+    'c.phish.a': "Evet. Bilgi işlemi arıyorum.", // nieuw, nalezen
+    'l.mychoice': "Neyde iyiyim?", // nieuw, nalezen
+    'w.goedin': "bir şeyde iyi olmak", // nieuw, nalezen
+    'w.kiezen': "seçmek", // nieuw, nalezen
+    'w.beroep': "meslek, iş türü", // nieuw, nalezen
+    'w.bijbaan': "yan iş (okulun yanında küçük bir iş)", // nieuw, nalezen
+    'w.nauwkeurig': "dikkatli ve titiz", // nieuw, nalezen
+    'w.meeloopdag': "gözlem günü (birinin yanında bir gün işe gittiğin gün)", // nieuw, nalezen
+    's.mychoice.1': "Elimden iş gelir.", // nieuw, nalezen
+    's.mychoice.2': "İnsanlarla çalışmayı severim.", // nieuw, nalezen
+    's.mychoice.3': "İşi görmek için bir gün yanınızda durabilir miyim?", // nieuw, nalezen
+    'c.mychoice.q': "Neyde iyisin?", // nieuw, nalezen
+    'c.mychoice.a': "Titizim. Evde annemle ilgileniyorum.", // nieuw, nalezen
+    'l.nextstep': "Entree’den sonra", // nieuw, nalezen
+    'w.niveau2': "seviye 2 (mbo’nun bir sonraki seviyesi)", // nieuw, nalezen
+    'w.startkwalificatie': "temel yeterlilik (mbo seviye 2 ya da daha yüksek diploma)", // nieuw, nalezen
+    'w.bbl': "bbl (bir şirkette çalışıp haftada yaklaşık bir gün okula gidiyorsun)", // nieuw, nalezen
+    'w.doorstromen': "devam etmek (daha yüksek bir seviyeye)", // nieuw, nalezen
+    'w.aanmelden': "kaydolmak (bir okula ya da kursa)", // nieuw, nalezen
+    'w.opendag': "açık gün (bir okulu ziyaret edebilirsin)", // nieuw, nalezen
+    's.nextstep.1': "Entree’den sonra seviye 2’ye geçmek istiyorum.", // nieuw, nalezen
+    's.nextstep.2': "Hem çalışmak hem okumak istiyorum.", // nieuw, nalezen
+    's.nextstep.3': "Açık gün ne zaman?", // nieuw, nalezen
+    'c.nextstep.q': "Entree’den sonra ne yapacaksın?", // nieuw, nalezen
+    'c.nextstep.a': "bbl yapmak istiyorum. Böylece hem çalışırım hem öğrenirim.", // nieuw, nalezen
+    'l.email': "İşe yazmak", // nieuw, nalezen
+    'w.mail': "e-posta", // nieuw, nalezen
+    'w.onderwerp': "konu (e-postanın)", // nieuw, nalezen
+    'w.beste': "sevgili, sayın (mektubun ya da e-postanın başında)", // nieuw, nalezen
+    'w.beleefd': "kibar", // nieuw, nalezen
+    'w.nalezen': "tekrar okumak (göndermeden önce kontrol etmek)", // nieuw, nalezen
+    'w.versturen': "göndermek", // nieuw, nalezen
+    's.email.1': "Konu kısmına ne yazayım?", // nieuw, nalezen
+    's.email.2': "E-postamı bir kez daha okuyorum.", // nieuw, nalezen
+    's.email.3': "E-postayı yarın gönderiyorum.", // nieuw, nalezen
+    'c.email.q': "İzin günün hakkındaki e-postayı gönderdin mi?", // nieuw, nalezen
+    'c.email.a': "Daha değil. Önce bir daha okuyacağım.", // nieuw, nalezen
+    'l.budget': "Her ay paran", // nieuw, nalezen
+    'w.vastelasten': "sabit giderler (kira, sigorta, telefon: her ay)", // nieuw, nalezen
+    'w.sparen': "para biriktirmek", // nieuw, nalezen
+    'w.abonnement': "abonelik (her ay ödüyorsun)", // nieuw, nalezen
+    'w.achterafbetalen': "sonra ödemek (şimdi al, sonra öde)", // nieuw, nalezen
+    'w.bedenktijd': "cayma süresi (fikrini değiştirme süresi)", // nieuw, nalezen
+    'w.garantie': "garanti (çalışmalı, yoksa tamir edilir)", // nieuw, nalezen
+    's.budget.1': "Önce sabit giderleri ödüyorum.", // nieuw, nalezen
+    's.budget.2': "Her ay biraz para biriktiriyorum.", // nieuw, nalezen
+    's.budget.3': "Bu aboneliği iptal ediyorum.", // nieuw, nalezen
+    'c.budget.q': "Bu telefonu şimdi al, sonra öde!", // nieuw, nalezen
+    'c.budget.a': "Hayır, teşekkürler. Sonra ödemek de borçtur.", // nieuw, nalezen
+    'l.healthy': "İşe hazır ve formda", // nieuw, nalezen
+    'w.slapen': "uyumak", // nieuw, nalezen
+    'w.ontbijt': "kahvaltı", // nieuw, nalezen
+    'w.bewegen': "hareket etmek, aktif olmak", // nieuw, nalezen
+    'w.moe': "yorgun", // nieuw, nalezen
+    'w.drugs': "uyuşturucu", // nieuw, nalezen
+    'w.somber': "moralsiz, çökkün (uzun süre üzgün)", // nieuw, nalezen
+    's.healthy.1': "Bugün çok yorgunum.", // nieuw, nalezen
+    's.healthy.2': "Her zaman önce kahvaltı yaparım.", // nieuw, nalezen
+    's.healthy.3': "Molada biraz yürüyüş yapıyorum.", // nieuw, nalezen
+    'c.healthy.q': "Hap ister misin? Uyanık kalırsın.", // nieuw, nalezen
+    'c.healthy.a': "Hayır, teşekkürler. Bir şeyin etkisi altında çalışmam.", // nieuw, nalezen
+    'c.workorder': "Önce oku, sonra başla", // nieuw, nalezen
+    'c.workorder.b': "Başlamadan önce iş emrini (werkbon) ya da uygulamadaki görevi oku. Adresi, görevi ve şeylerin sayısını kontrol et. Bir şey net değil mi? Başlamadan önce sor, yarıda değil. Sonra aletlerini ve malzemeyi hazırla. Bu zaman kazandırır ve daha az hata yaparsın. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.workorder.p': "İş emrinde on koli yazıyor. Doğru mu?", // nieuw, nalezen
+    'c.workorder.s': "İş emrinde şöyle yazıyor: 3 numaralı odayı boya. İş arkadaşın 5 numaralı oda olduğunu söylüyor. Ne yaparsın?", // nieuw, nalezen
+    'c.workorder.o1': "Amirine hangi odanın doğru olduğunu sorarsın.", // nieuw, nalezen
+    'c.workorder.o2': "3 numaralı odayı boyarsın, çünkü kâğıtta öyle yazıyor.", // nieuw, nalezen
+    'c.workorder.o3': "İki odayı da boyarsın, böylece emin olursun.", // nieuw, nalezen
+    'c.workorder.w': "İki şey birbirini tutmuyorsa, başlamadan önce kontrol edersin. Kısa bir soru, işi baştan yapmaktan daha az zaman alır.", // nieuw, nalezen
+    'c.handover': "Neyin bittiğini, neyin bitmediğini söyle", // nieuw, nalezen
+    'c.handover.b': "Durduğunda işin bitmiş olmaz. Önce yerini ve aletlerini topla. Sonra birinden işini kontrol etmesini iste. Amirine neyin bittiğini, neyin bitmediğini söyle. Bir şey ters mi gitti ya da bir şey mi bozuk? Bunu şimdi söyle, yarın değil. İşi bitirdiğini bildirmek de işinin bir parçası. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.handover.p': "Dört numaralı oda daha bitmedi. Kapı kilitliydi.", // nieuw, nalezen
+    'c.handover.s': "Beş oda temizledin. 4 numaralı oda kilitliydi, bu yüzden orayı temizleyemedin. Vardiyan bitiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.handover.o1': "Amirine 4 numaralı odanın bitmediğini ve nedenini söylersin.", // nieuw, nalezen
+    'c.handover.o2': "Eve gidersin: oda kilitliydi, bu senin suçun değil.", // nieuw, nalezen
+    'c.handover.o3': "Listeye “hepsi bitti” yazarsın, çünkü elinden geleni yaptın.", // nieuw, nalezen
+    'c.handover.w': "Amirin işi planlar. 4 numaralı odanın bitmediğini bilirse, başka birini gönderebilir. Böylece hiçbir müşteri kirli bir oda bulmaz.", // nieuw, nalezen
+    'c.workshop': "Gözler, kulaklar ve yangın", // nieuw, nalezen
+    'c.workshop.b': "Taşlama, kesme ve delme kıvılcım, küçük parçalar ve çok gürültü yapar. Kısa bir iş için bile koruyucu gözlük ve kulak koruyucu tak. Çok gürültü olduğunda, işverenin sana kulak koruyucu vermek zorundadır. Kıvılcımlar yangın çıkarabilir. Kaynak için ya da yanabilen şeylerin yakınında taşlama için ek kurallar var (heet werk): başlamadan önce sor. İşten sonra metal parçalarını topla. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.workshop.p': "Taşlama yapacağım. Kulak koruyucu nerede?", // nieuw, nalezen
+    'c.workshop.s': "Küçük bir metal parçasını taşlaman gerekiyor. Bir dakika sürüyor. Koruyucu gözlüğün diğer odada. Ne yaparsın?", // nieuw, nalezen
+    'c.workshop.o1': "Bir dakika da olsa önce gözlüğünü alırsın.", // nieuw, nalezen
+    'c.workshop.o2': "Gözlerin yarı kapalı taşlarsın, nasılsa çabuk biter.", // nieuw, nalezen
+    'c.workshop.o3': "Öbür elini gözlerinin önüne tutarsın.", // nieuw, nalezen
+    'c.workshop.w': "Gözüne giren bir kıvılcım ya da metal parçası gözüne kalıcı zarar verebilir. Bu bir saniyede olabilir. Koruyucu gözlük kısa bir işte bile yardımcı olur.", // nieuw, nalezen
+    'c.power': "Elektrik: asla öylece değil", // nieuw, nalezen
+    'c.power.b': "Gerilim altındaki (onder spanning) bir şeyde asla çalışma. Önce eğitimli bir iş arkadaşı orayı güvenli hâle getirir: elektriği keser ve kontrol eder. Bunu sadece doğru eğitimi alan kişiler yapabilir. Bozuk bir kablo ya da fiş mi görüyorsun? Onu kullanma ve hemen amirine söyle. Elektriğin kesik olduğundan emin değil misin? O zaman elektrik vardır. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.power.p': "Bozuk bir kablo görüyorum. Kim bakabilir?", // nieuw, nalezen
+    'c.power.s': "Bir lamba asman gerekiyor. Bir iş arkadaşın diyor ki: “Elektrik kesik, sanırım.” Ne yaparsın?", // nieuw, nalezen
+    'c.power.o1': "Eğitimli bir iş arkadaşından elektriğin kesik olduğunu kontrol etmesini istersin.", // nieuw, nalezen
+    'c.power.o2': "Başlarsın, ama kablolara sadece eldivenle dokunursun.", // nieuw, nalezen
+    'c.power.o3': "Elektrik var mı diye hissetmek için kabloya hızlıca dokunursun.", // nieuw, nalezen
+    'c.power.w': "Elektrikte “sanırım” yeterli değildir. Elektrik çarpması seni öldürebilir. Eğitimli bir iş arkadaşı elektrik olmadığını kontrol eder, sonra başlayabilirsin.", // nieuw, nalezen
+    'c.garage': "Arabanın altında güvenlik", // nieuw, nalezen
+    'c.garage.b': "Sadece kriko üzerinde duran bir arabanın altına asla girme. Araba liftte ya da sehpalar üzerinde sağlam durmalı. Dökülen yağ zemini kaygan yapar: hemen temizle. Eski yağ, aküler ve temizlik ürünleri tehlikeli atıktır. Bunlar özel bir yere gider, asla normal çöpe ya da gidere değil. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.garage.p': "Yerde yağ var. Temizliyorum.", // nieuw, nalezen
+    'c.garage.s': "Bir arabanın altına bakman gerekiyor. Araba sadece kriko üzerinde duruyor. İş arkadaşın diyor ki: “Sorun yok, sadece çabuk ol.” Ne yaparsın?", // nieuw, nalezen
+    'c.garage.o1': "Araba liftte ya da sehpalarda durana kadar beklersin.", // nieuw, nalezen
+    'c.garage.o2': "Altına hızlıca girersin, bacaklarını dışarıda tutarsın.", // nieuw, nalezen
+    'c.garage.o3': "Altına girersin, iş arkadaşından arabayı tutmasını istersin.", // nieuw, nalezen
+    'c.garage.w': "Kriko kayabilir. Araba çok ağırdır ve altından hızlı çıkamazsın. Sehpalar ya da lift arabayı yerinde tutar.", // nieuw, nalezen
+    'c.carjob': "Ek iş mi? Önce müşteriye sor", // nieuw, nalezen
+    'c.carjob.b': "İş emrinde yazandan fazla sorun mu buluyorsun? Onları öylece tamir etme. Müşteri önce ek işi ve masrafları onaylamalı. Amirin ya da servis danışmanı müşteriyi arar. Test sürüşü sadece izinle ve sadece geçerli bir ehliyetle yapılır. Ne yaptığını ve hangi parçaları kullandığını yaz. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.carjob.p': "Bir sorun daha görüyorum. Müşteriyi kim arayacak?", // nieuw, nalezen
+    'c.carjob.s': "Bir arabanın yağını değiştiriyorsun. Frenlerin de kötü olduğunu görüyorsun. Araba bir saat içinde hazır olmalı. Ne yaparsın?", // nieuw, nalezen
+    'c.carjob.o1': "Müşterinin aranması için amirine söylersin.", // nieuw, nalezen
+    'c.carjob.o2': "Frenleri de tamir edersin, müşteri memnun olur.", // nieuw, nalezen
+    'c.carjob.o3': "Hiçbir şey söylemezsin: frenler iş emrinde yok.", // nieuw, nalezen
+    'c.carjob.w': "Müşteri öder, bu yüzden müşteri karar verir. Onun onayı olmadan servis öylece ek iş yapamaz. Kötü frenler tehlikelidir, bu yüzden söylemek önemlidir.", // nieuw, nalezen
+    'c.placement': "Önce imzala, sonra başla", // nieuw, nalezen
+    'c.placement.b': "Entree’de bir şirkette çok şey öğrenirsin: bu senin stajındır (stage ya da bpv). Başlamadan önce sen, okul ve şirket bir sözleşme imzalarsınız: POK. Şirkette işyeri eğitmenin (praktijkopleider) sana yardım eder. Okulda staj danışmanın (stagebegeleider) sana yardım eder. Hasta mısın? Başlama saatinden önce şirketi ara ve okula da haber ver. Kurallar okuldan okula değişir: staj danışmanına sor.", // nieuw, nalezen
+    'c.placement.p': "Staj sözleşmesi imzalanınca başlarım.", // nieuw, nalezen
+    'c.placement.s': "Şirket yarın başlamanı istiyor. POK daha imzalanmadı. Ne yaparsın?", // nieuw, nalezen
+    'c.placement.o1': "Staj danışmanından önce POK’u halletmesini istersin.", // nieuw, nalezen
+    'c.placement.o2': "Yarın başlarsın, POK’u birkaç hafta sonra imzalarsın.", // nieuw, nalezen
+    'c.placement.o3': "Başlarsın, ama şimdilik okula bir şey söylemezsin.", // nieuw, nalezen
+    'c.placement.w': "POK’ta ne öğrendiğin ve sana kimin yardım ettiği yazar. İmzalı bir POK olmadan stajın diploman için sayılmayabilir. Bu yüzden başlamadan önce imzalarsın.", // nieuw, nalezen
+    'c.review': "Geri bildirim iste, bir de örnek", // nieuw, nalezen
+    'c.review.b': "Stajda insanlar sana neyin iyi gittiğini ve neyin daha iyi olabileceğini söyler: geri bildirim (feedback). Bu normaldir ve öğrenmene yardım eder. Anlamadın mı? Bir örnek iste. Sen de geri bildirim iste, örneğin haftada bir. Stajında gerçekten bir sorun mu var? Önce işyeri eğitmeninle konuş. İşe yaramıyor mu? O zaman okuldaki staj danışmanına git.", // nieuw, nalezen
+    'c.review.p': "Ne iyi gitti, ne daha iyi olabilir?", // nieuw, nalezen
+    'c.review.s': "İşyeri eğitmenin diyor ki: “Daha dikkatli çalışman lazım.” Ne demek istediğini bilmiyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.review.o1': "Neyi farklı yapman gerektiğine dair bir örnek istersin.", // nieuw, nalezen
+    'c.review.o2': "Evet dersin ve kendin anlayacağını umarsın.", // nieuw, nalezen
+    'c.review.o3': "Hiçbir şey ters gitmesin diye çok daha yavaş çalışırsın.", // nieuw, nalezen
+    'c.review.w': "Bir örnekle neyi değiştireceğini bilirsin. Sormak, öğrenmek istediğini gösterir. Eğitmenler bunu sever.", // nieuw, nalezen
+    'c.council': "Kim oy verebilir?", // nieuw, nalezen
+    'c.council.b': "Hollanda’da kimin karar vereceğini oy vererek seçersin. Belediye meclisi (gemeenteraad) senin şehrin hakkında karar verir. Tweede Kamer bütün ülke için yasaları yapar. Hollanda vatandaşlığın varsa 18 yaşından itibaren bütün seçimlerde oy verebilirsin. Belediye meclisi için daha çok kişi oy verebilir: burada yaşayan başka bir AB ülkesinden insanlar ve 5 yıl yasal oturumdan sonra AB dışından insanlar. Belediye (gemeente) sana bir oy kartı (stempas) gönderir. Onu kimliğinle birlikte götür. Oy verip veremeyeceğinden emin değil misin? Belediyeye sor.", // nieuw, nalezen
+    'c.council.p': "Belediye meclisi için oy verebilir miyim?", // nieuw, nalezen
+    'c.council.s': "Faslısın ve altı yıldır burada yasal olarak yaşıyorsun. Hollanda vatandaşlığın yok. Belediye meclisi seçimi var. Hangisi doğru?", // nieuw, nalezen
+    'c.council.o1': "Belediye meclisi için oy verebilirsin.", // nieuw, nalezen
+    'c.council.o2': "Tweede Kamer için de oy verebilirsin.", // nieuw, nalezen
+    'c.council.o3': "Hollanda pasaportu olmadan hiç oy veremezsin.", // nieuw, nalezen
+    'c.council.w': "5 yıl yasal oturumdan sonra belediye meclisi için oy verebilirsin. Tweede Kamer için Hollanda vatandaşlığı gerekir.", // nieuw, nalezen
+    'c.police': "Kimliğin ve hakların", // nieuw, nalezen
+    'c.police.b': "14 yaşından itibaren polis isterse kimliğini göstermek zorundasın. Bu yüzden onu hep yanında taşı. Katılmadığın bir karar içeren bir mektup mu aldın, örneğin belediyeden ya da UWV’den? O zaman yazılı olarak itiraz edebilirsin (bezwaar maken). Bunu mektuptaki tarihten önce yap. Polis ve hâkim herkese eşit davranmak zorundadır. Gözaltına mı alındın? Avukat isteyebilirsin. Juridisch Loket ücretsiz danışmanlık verir.", // nieuw, nalezen
+    'c.police.p': "Bu karara katılmıyorum. İtiraz ediyorum.", // nieuw, nalezen
+    'c.police.s': "Belediyeden bir mektup alıyorsun. Onların kararına katılmıyorsun. Mektupta altı haftan olduğu yazıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.police.o1': "Tarihten önce bir itiraz mektubu yazarsın.", // nieuw, nalezen
+    'c.police.o2': "Bir kez ararsın ve geri aramalarını beklersin.", // nieuw, nalezen
+    'c.police.o3': "Beklersin: altı hafta sonra kendiliğinden biter.", // nieuw, nalezen
+    'c.police.w': "İtiraz yazılı olarak, mektuptaki tarihten önce yapılır. O tarihten sonra çoğu zaman çok geçtir. Juridisch Loket onu yazmana yardım edebilir.", // nieuw, nalezen
+    'c.login': "Girişin sadece senin", // nieuw, nalezen
+    'c.login.b': "Şifren ve DigiD’n sadece senin için. Onları kimseye verme, işverenine ya da bir iş arkadaşına bile. Ortak bir bilgisayarda işin bitince her zaman çıkış yap. Kısa bir süre mi uzaklaşıyorsun? Ekranını kilitle. Şifreni mi unuttun? Bilgi işlem bölümünden (ICT-afdeling) yenisini iste. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.login.p': "Biraz uzaklaşıyorum. Ekranımı kilitliyorum.", // nieuw, nalezen
+    'c.login.s': "Amirin, evraklarını hızlıca halletmek için DigiD’ni ve şifreni istiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.login.o1': "Hayır dersin, o yardım ederken girişi kendin yaparsın.", // nieuw, nalezen
+    'c.login.o2': "Bu seferlik verirsin, çünkü o senin şefin.", // nieuw, nalezen
+    'c.login.o3': "Sonra kullanabilsin diye bir kâğıda yazarsın.", // nieuw, nalezen
+    'c.login.w': "DigiD’nle biri vergilerini, yardımlarını ve sağlık belgelerini görüp değiştirebilir. O sadece senin için. Girişi kendin yapıp birinin sana yardım etmesine izin verebilirsin.", // nieuw, nalezen
+    'c.phish': "Acele ve bir düğme mi? Tıklama", // nieuw, nalezen
+    'c.phish.b': "Sahte bir e-posta (phishing) çoğu zaman gerçek gibi görünür. Hızlı davranmanı ister: “Hesabınız bugün kapatılacak!” Göndereni kontrol et. Beklemediğin bir bağlantıya tıklama ve beklemediğin bir eki açma. Gerçek siteye ya da uygulamaya kendin git. Yine de tıkladın mı? Şifreni hemen değiştir ve bilgi işlem bölümünü ara. Bu utanılacak bir şey değil: ne kadar erken bilirlerse o kadar iyi. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.phish.p': "Şüpheli bir bağlantıya tıkladım.", // nieuw, nalezen
+    'c.phish.s': "Bir e-postadaki bağlantıya tıkladın ve şifreni yazdın. Sonra e-postanın sahte olduğunu görüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.phish.o1': "Şifreni değiştirir ve bilgi işlem bölümünü ararsın.", // nieuw, nalezen
+    'c.phish.o2': "E-postayı silersin ve bir şey olmamasını umarsın.", // nieuw, nalezen
+    'c.phish.o3': "Bir şey ters gidecek mi diye bir gün beklersin.", // nieuw, nalezen
+    'c.phish.w': "Şifrenle başka biri işinin sistemlerine girebilir. Şifreni hızlıca değiştirip bilgi işlem bölümüne haber verirsen, bunu zamanında durdurabilirler.", // nieuw, nalezen
+    'c.mychoice': "Güçlü yönlerin önemli", // nieuw, nalezen
+    'c.mychoice.b': "Neyde iyisin? İşi, okulu ve evi düşün. Ailene bakmak, bir yan iş ya da gönüllü çalışma da sayılır. Neyi seversin, neyi sevmezsin? Hangi işin sana uyduğunu bilmiyor musun? Bir gün birinin yanında işe gitmek iste (meeloopdag). Okuldaki danışmanın seçmene yardım edebilir.", // nieuw, nalezen
+    'c.mychoice.p': "İnsanlarla aram iyidir. Evde çok yardım ederim.", // nieuw, nalezen
+    'c.mychoice.s': "Okulda sana soruyorlar: “Neyde iyisin?” Hiç maaşlı bir işin olmadı. Ne dersin?", // nieuw, nalezen
+    'c.mychoice.o1': "Evde iyi yaptığın şeyleri, örneğin başkalarına bakmayı.", // nieuw, nalezen
+    'c.mychoice.o2': "Söyleyemeyeceğini, çünkü hiç işin olmadığını.", // nieuw, nalezen
+    'c.mychoice.o3': "Her işi yapabileceğini, gerçekten her şeyi.", // nieuw, nalezen
+    'c.mychoice.w': "Evde kazandığın beceriler de sayılır. Bakım, planlama ve yardım, işverenlerin ihtiyaç duyduğu becerilerdir. Ne yaptığını bir örnekle anlat.", // nieuw, nalezen
+    'c.nextstep': "Entree’den sonra: seviye 2 ya da iş", // nieuw, nalezen
+    'c.nextstep.b': "Entree diplomasıyla mbo’nun seviye 2’sine geçebilirsin. Seviye 2 ya da daha yüksek bir diploma, temel yeterliliktir (startkwalificatie). İş bulmana ve işini korumana yardım eder. bbl’de bir şirkette çalışır ve haftada yaklaşık bir gün okula gidersin. Bunun için bir işe ya da bir çalış-öğren yerine (leerwerkbaan) ihtiyacın var. Bir açık güne git ve okuldaki danışmanınla konuş.", // nieuw, nalezen
+    'c.nextstep.p': "Entree’den sonra seviye 2’ye geçebilir miyim?", // nieuw, nalezen
+    'c.nextstep.s': "Entree diploman var. Bir şirket sana eğitimsiz bir iş teklif ediyor. Sen de öğrenmeye devam etmek istiyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.nextstep.o1': "Şirkete bbl yeri olup olmadığını sorarsın.", // nieuw, nalezen
+    'c.nextstep.o2': "İşi alırsın ve öğrenmeyi tamamen bırakırsın.", // nieuw, nalezen
+    'c.nextstep.o3': "Bir okul seni arayana kadar evde beklersin.", // nieuw, nalezen
+    'c.nextstep.w': "bbl ile hem çalışır hem öğrenirsin. Para kazanırsın ve seviye 2 diploması alırsın. Birçok şirket bunu sever.", // nieuw, nalezen
+    'c.email': "Kısa bir e-posta: kim, ne, ne zaman", // nieuw, nalezen
+    'c.email.b': "İşe yazılan e-posta kısa ve kibardır. Bir selamla başla, örneğin “Beste Karin,”. Sonra ne istediğini ve ne zaman istediğini yaz. Bir selam ve tam adınla bitir. Kısa bir konu yaz, örneğin “Vrij op vrijdag”. Göndermeden önce e-postanı tekrar oku.", // nieuw, nalezen
+    'c.email.p': "Sevgili Karin, cuma günü izin alabilir miyim? Selamlar, Ali Haddad", // nieuw, nalezen
+    'c.email.s': "Gelecek cuma izin istiyorsun. Amirine hangi e-posta en iyisi?", // nieuw, nalezen
+    'c.email.o1': "“Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad”", // nieuw, nalezen
+    'c.email.o2': "“Vrijdag ben ik er niet.” (selamsız ve adın olmadan).", // nieuw, nalezen
+    'c.email.o3': "Haftan hakkında uzun bir e-posta, soru en sonda.", // nieuw, nalezen
+    'c.email.w': "İyi bir e-postada bir selam, net bir soru ve adın olur. Böylece amirin hızlıca cevap verebilir.", // nieuw, nalezen
+    'c.budget': "Önce sabit giderler", // nieuw, nalezen
+    'c.budget.b': "Maaşını aldığında önce sabit giderleri öde: kira, sigorta ve telefon. Her ay küçük bir miktar biriktirmeye çalış, 10 euro bile olsa. Şimdi al, sonra öde de bir borçtur. İnternetten bir şey mi aldın? O zaman genelde 14 gün içinde vazgeçebilirsin. Fişi sakla: garanti için ona ihtiyacın var.", // nieuw, nalezen
+    'c.budget.p': "Şimdi ödemeyi tercih ederim. Böylece borcum olmaz.", // nieuw, nalezen
+    'c.budget.s': "Bugün maaşını alıyorsun. Yeni ayakkabı istiyorsun, kiran da daha ödenmedi. Ne yaparsın?", // nieuw, nalezen
+    'c.budget.o1': "Önce kirayı ödersin, sonra ne kaldığına bakarsın.", // nieuw, nalezen
+    'c.budget.o2': "Ayakkabıları alırsın, kirayı sonra ödersin.", // nieuw, nalezen
+    'c.budget.o3': "Ayakkabıları “şimdi al, sonra öde” ile alırsın.", // nieuw, nalezen
+    'c.budget.w': "Kira, sigorta ve telefon her ay tekrar gelir. Önce bunları ödersen, ne kadar paran kaldığını bilirsin. Böylece borca girmezsin.", // nieuw, nalezen
+    'c.healthy': "Uyku, yemek ve uyuşturucu yok", // nieuw, nalezen
+    'c.healthy.b': "Yeterince uyuduğunda daha iyi ve daha güvenli çalışırsın, geç bir vardiyadan sonra da. Kahvaltı yap ve gün içinde su iç. Molada hareket et, örneğin kısa bir yürüyüş yap. Alkol ya da uyuşturucunun etkisi altında çalışmak tehlikelidir ve çoğu işveren bunu yasaklar. Uzun süredir moralin mi bozuk, ya da içmeyi veya kullanmayı bırakamıyor musun? Aile hekiminle (huisarts) konuş. Sana yardım edebilir ve bunu gizli tutar.", // nieuw, nalezen
+    'c.healthy.p': "Uzun süredir moralim bozuk. Randevu alabilir miyim?", // nieuw, nalezen
+    'c.healthy.s': "Bu gece gece vardiyan var. Bir iş arkadaşın uyanık kalman için sana bir hap veriyor. Ne yaparsın?", // nieuw, nalezen
+    'c.healthy.o1': "Hayır dersin ve vardiyadan önce birkaç saat uyursun.", // nieuw, nalezen
+    'c.healthy.o2': "Yarım hap alırsın, bu tehlikeli değil.", // nieuw, nalezen
+    'c.healthy.o3': "Alırsın, ama işte kimseye söylemezsin.", // nieuw, nalezen
+    'c.healthy.w': "Bir iş arkadaşından gelen haplar uyuşturucu olabilir. Seni hasta edebilir ya da işte hata yaptırabilir. Uyku, uyanık kalmanın güvenli yoludur.", // nieuw, nalezen
   },
 };
 

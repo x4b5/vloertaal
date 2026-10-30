@@ -37,11 +37,17 @@ const SECTOR_UNITS = ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca
 const APPENDED = ['u.shop', 'u.numbers', 'u.ai'];
 /** A sector unit added after those ("In de kas", 30 October 2026): at the very end of the course. */
 const LATE_SECTOR_UNITS = ['u.kas'];
+/**
+ * Basis units appended after "In de kas" (Entree in the Taal track, 30 October 2026): with a
+ * sector they end the learner's own course, after the other appended units (before the other
+ * sectors' units); with none, they come at the very end.
+ */
+const LATE_BASIS = ['u.finish', 'u.tech', 'u.garage', 'u.stage', 'u.society', 'u.online'];
 const expectedOrder = (own: string | null) => {
   const main = BASIS.map((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
   const late = LATE_SECTOR_UNITS.filter((id) => !main.includes(id));
-  return own ? [...main, ...APPENDED, ...rest, ...late] : [...main, ...rest, ...APPENDED, ...late];
+  return own ? [...main, ...APPENDED, ...LATE_BASIS, ...rest, ...late] : [...main, ...rest, ...APPENDED, ...late, ...LATE_BASIS];
 };
 
 /** routeOrder for every sector, written out from the course as it was before the work-rules track. */

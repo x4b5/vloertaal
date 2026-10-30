@@ -95,6 +95,24 @@ const t: CultureTranslation = {
     'c.kids.a.why': "Întrebarea e de ce: răspunsul ăsta dă motivul, a sunat creșa.",
     'c.body.a.why': "Întrebarea e unde doare: răspunsul ăsta spune locul și cauza.",
     'c.jobends.a.why': "Casa e legată de muncă: răspunsul ăsta întreabă de perioada de preaviz.",
+    // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
+    'c.workorder.a.why': "Nu ești sigur de un cuvânt: să întrebi înainte să începi e răspunsul bun.", // nieuw, nalezen
+    'c.handover.a.why': "Întrebat dacă totul e gata: răspunsul acesta spune ce nu e gata, și de ce.", // nieuw, nalezen
+    'c.workshop.a.why': "Întrebat de ce: răspunsul acesta dă motivul, ochii trebuie protejați.", // nieuw, nalezen
+    'c.power.a.why': "Lucru la o lampă: răspunsul acesta întreabă întâi dacă e oprit curentul.", // nieuw, nalezen
+    'c.garage.a.why': "Rugat să schimbe anvelopele: un da, și o întrebare despre unde sunt.", // nieuw, nalezen
+    'c.carjob.a.why': "Lucru în plus: clientul trebuie să fie de acord întâi, deci răspunsul acesta îl sună.", // nieuw, nalezen
+    'c.placement.a.why': "Întrebat când: răspunsul acesta dă ziua, iar contractul vine primul.", // nieuw, nalezen
+    'c.review.a.why': "Feedbackul nu e clar încă: să ceri să ți se arate e un răspuns bun.", // nieuw, nalezen
+    'c.council.a.why': "Întrebat de vot: un da, și cele două lucruri de luat.", // nieuw, nalezen
+    'c.police.a.why': "Poliția cere actul: îl arăți și întrebi ce s-a întâmplat.", // nieuw, nalezen
+    'c.login.a.why': "Întrebat dacă merge autentificarea: răspunsul acesta spune nu, și de ce.", // nieuw, nalezen
+    'c.phish.a.why': "Întrebat de link: un da sincer, și un telefon la departamentul IT.", // nieuw, nalezen
+    'c.mychoice.a.why': "Întrebat despre punctele tari: răspunsul acesta numește unul, cu un exemplu.", // nieuw, nalezen
+    'c.nextstep.a.why': "Întrebat de plan: răspunsul acesta numește bbl și ce înseamnă.", // nieuw, nalezen
+    'c.email.a.why': "Întrebat dacă l-a trimis: încă nu, întâi e verificat.", // nieuw, nalezen
+    'c.budget.a.why': "I se oferă „plătești mai târziu”: un nu politicos, cu motivul.", // nieuw, nalezen
+    'c.healthy.a.why': "I se oferă o pastilă: un nu politicos, cu motivul.", // nieuw, nalezen
   },
 };
 

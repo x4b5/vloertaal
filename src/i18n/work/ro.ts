@@ -1332,6 +1332,353 @@ const t: CultureTranslation = {
     'c.jobends.o2': "Nimic: asigurarea continuă de la sine.",
     'c.jobends.o3': "Aștepți până te îmbolnăvești și abia atunci te ocupi.",
     'c.jobends.w': "Asigurarea prin agenție se termină des când se termină munca. Când locuiești sau lucrezi în Olanda, de obicei trebuie să ai asigurare de sănătate. Dacă te ocupi la timp, nu rămâi fără asigurare.",
+    // Entree in the Taal track (30 October 2026): nieuw, nalezen.
+    'u.finish': "Să termini lucrul", // nieuw, nalezen
+    'l.workorder': "Fișa de lucru", // nieuw, nalezen
+    'w.werkbon': "fișa de lucru (o hârtie sau o aplicație cu sarcina ta)", // nieuw, nalezen
+    'w.lezen': "a citi", // nieuw, nalezen
+    'w.aantal': "numărul (câte sunt)", // nieuw, nalezen
+    'w.materiaal': "materialele (ce îți trebuie pentru lucru)", // nieuw, nalezen
+    'w.klaarleggen': "a pregăti (a pune la îndemână ce îți trebuie)", // nieuw, nalezen
+    'w.handtekening': "semnătura", // nieuw, nalezen
+    's.workorder.1': "Mai întâi citesc fișa de lucru.", // nieuw, nalezen
+    's.workorder.2': "Numărul acesta e corect?", // nieuw, nalezen
+    's.workorder.3': "Pregătesc materialele.", // nieuw, nalezen
+    'c.workorder.q': "Știi ce ai de făcut?", // nieuw, nalezen
+    'c.workorder.a': "Aproape. Ce înseamnă cuvântul acesta din fișa de lucru?", // nieuw, nalezen
+    'l.handover': "Gata sau nu încă?", // nieuw, nalezen
+    'w.opruimen': "a face ordine, a pune lucrurile la loc", // nieuw, nalezen
+    'w.nakijken': "a verifica (a te uita încă o dată la lucru)", // nieuw, nalezen
+    'w.afmelden': "a anunța că ai terminat (spui că lucrul e gata și pleci)", // nieuw, nalezen
+    'w.kapot': "stricat", // nieuw, nalezen
+    'w.opslot': "încuiat", // nieuw, nalezen
+    'w.bijzonderheid': "detaliul important (ceva ce a mers altfel)", // nieuw, nalezen
+    's.handover.1': "Fac ordine la locul meu.", // nieuw, nalezen
+    's.handover.2': "Puteți să-mi verificați lucrul?", // nieuw, nalezen
+    's.handover.3': "Îl anunț pe șef că am terminat.", // nieuw, nalezen
+    'c.handover.q': "E totul gata?", // nieuw, nalezen
+    'c.handover.a': "Aproape. Camera patru era încuiată.", // nieuw, nalezen
+    'u.tech': "În atelier", // nieuw, nalezen
+    'l.workshop': "Unelte în atelier", // nieuw, nalezen
+    'w.gereedschap': "uneltele, sculele", // nieuw, nalezen
+    'w.zagen': "a tăia cu fierăstrăul", // nieuw, nalezen
+    'w.slijpen': "a șlefui (a netezi sau a tăia metal cu o mașină)", // nieuw, nalezen
+    'w.vonk': "scânteia", // nieuw, nalezen
+    'w.gehoorbescherming': "protecția auditivă (pentru urechi)", // nieuw, nalezen
+    'w.lawaai': "zgomotul (mult sunet puternic)", // nieuw, nalezen
+    's.workshop.1': "Unde sunt uneltele?", // nieuw, nalezen
+    's.workshop.2': "Port protecție auditivă când șlefuiesc.", // nieuw, nalezen
+    's.workshop.3': "Atenție la scântei!", // nieuw, nalezen
+    'c.workshop.q': "De ce porți ochelari?", // nieuw, nalezen
+    'c.workshop.a': "Când tai cu fierăstrăul, pot să-mi intre bucățele în ochi.", // nieuw, nalezen
+    'l.power': "Mai întâi oprește curentul", // nieuw, nalezen
+    'w.stroom': "curentul, electricitatea", // nieuw, nalezen
+    'w.kabel': "cablul", // nieuw, nalezen
+    'w.stekker': "ștecherul", // nieuw, nalezen
+    'w.onderspanning': "sub tensiune (e curent pe el)", // nieuw, nalezen
+    'w.spanningsloos': "fără tensiune, sigur (nu e curent pe el)", // nieuw, nalezen
+    'w.elektricien': "electricianul", // nieuw, nalezen
+    's.power.1': "Mai e curent aici?", // nieuw, nalezen
+    's.power.2': "Cablul acesta e stricat.", // nieuw, nalezen
+    's.power.3': "Aștept până e fără tensiune.", // nieuw, nalezen
+    'c.power.q': "Poți să schimbi lampa aceea?", // nieuw, nalezen
+    'c.power.a': "Curentul e oprit? Dacă nu, îl aștept pe electrician.", // nieuw, nalezen
+    'u.garage': "În service-ul auto", // nieuw, nalezen
+    'l.garage': "Anvelope, ulei și elevatorul", // nieuw, nalezen
+    'w.band': "anvelopa", // nieuw, nalezen
+    'w.olie': "uleiul", // nieuw, nalezen
+    'w.accu': "bateria mașinii", // nieuw, nalezen
+    'w.monteur': "mecanicul", // nieuw, nalezen
+    'w.hefbrug': "elevatorul auto (ridică mașina)", // nieuw, nalezen
+    'w.lek': "spart, care curge (iese aer sau apă)", // nieuw, nalezen
+    's.garage.1': "Anvelopa e spartă.", // nieuw, nalezen
+    's.garage.2': "Unde e uleiul nou?", // nieuw, nalezen
+    's.garage.3': "Mașina e pe elevator.", // nieuw, nalezen
+    'c.garage.q': "Poți să schimbi anvelopele la mașina asta?", // nieuw, nalezen
+    'c.garage.a': "Da. Unde sunt anvelopele de iarnă?", // nieuw, nalezen
+    'l.carjob': "Clientul decide", // nieuw, nalezen
+    'w.proefrit': "proba de drum (un drum de test cu mașina)", // nieuw, nalezen
+    'w.rijbewijs': "permisul de conducere", // nieuw, nalezen
+    'w.akkoord': "de acord, în regulă (spui „da” la ceva)", // nieuw, nalezen
+    'w.kosten': "costurile (ce trebuie plătit)", // nieuw, nalezen
+    'w.repareren': "a repara", // nieuw, nalezen
+    'w.onderdeel': "piesa (a unei mașini sau a unui aparat)", // nieuw, nalezen
+    's.carjob.1': "Clientul e de acord cu costurile?", // nieuw, nalezen
+    's.carjob.2': "Piesa aceasta e stricată.", // nieuw, nalezen
+    's.carjob.3': "Pot să fac o probă de drum?", // nieuw, nalezen
+    'c.carjob.q': "Și frânele sunt proaste. Le faci imediat?", // nieuw, nalezen
+    'c.carjob.a': "Mai întâi îl sun pe client. Trebuie să fie de acord.", // nieuw, nalezen
+    'u.stage': "Stagiul de practică", // nieuw, nalezen
+    'l.placement': "Stagiul tău", // nieuw, nalezen
+    'w.stage': "stagiul de practică (înveți la o firmă)", // nieuw, nalezen
+    'w.praktijkopleider': "îndrumătorul de la firmă (te ghidează la firmă)", // nieuw, nalezen
+    'w.stagebegeleider': "coordonatorul de stagiu de la școală (te ghidează din partea școlii)", // nieuw, nalezen
+    'w.pok': "contractul de stagiu (îl semnezi tu, școala și firma)", // nieuw, nalezen
+    'w.school': "școala", // nieuw, nalezen
+    'w.leerbedrijf': "firma de formare (o firmă unde elevii pot învăța)", // nieuw, nalezen
+    's.placement.1': "Fac stagiul într-un depozit.", // nieuw, nalezen
+    's.placement.2': "Cine e îndrumătorul meu de la firmă?", // nieuw, nalezen
+    's.placement.3': "Încă nu am semnat contractul de stagiu.", // nieuw, nalezen
+    'c.placement.q': "Când începi stagiul?", // nieuw, nalezen
+    'c.placement.a': "Luni. Mai întâi semnăm contractul de stagiu.", // nieuw, nalezen
+    'l.review': "Feedback la stagiu", // nieuw, nalezen
+    'w.beoordeling': "evaluarea (cât de bine faci)", // nieuw, nalezen
+    'w.leerdoel': "obiectivul de învățare (ce vrei să înveți)", // nieuw, nalezen
+    'w.voorbeeld': "exemplul", // nieuw, nalezen
+    'w.portfolio': "portofoliul (un dosar cu lucrările tale și dovezi)", // nieuw, nalezen
+    'w.cijfer': "nota", // nieuw, nalezen
+    'w.verslag': "raportul (un text despre lucrul tău)", // nieuw, nalezen
+    's.review.1': "Ce pot să fac mai bine?", // nieuw, nalezen
+    's.review.2': "Puteți să-mi dați un exemplu?", // nieuw, nalezen
+    's.review.3': "Evaluarea mea e săptămâna viitoare.", // nieuw, nalezen
+    'c.review.q': "Trebuie să lucrezi mai repede.", // nieuw, nalezen
+    'c.review.a': "Bine. Puteți să-mi arătați cum se face mai repede?", // nieuw, nalezen
+    'u.society': "Să participi în Țările de Jos", // nieuw, nalezen
+    'l.council': "Primăria și votul", // nieuw, nalezen
+    'w.stemmen': "a vota", // nieuw, nalezen
+    'w.verkiezing': "alegerile", // nieuw, nalezen
+    'w.gemeenteraad': "consiliul local (decide despre orașul tău)", // nieuw, nalezen
+    'w.parlement': "parlamentul (face legile)", // nieuw, nalezen
+    'w.stempas': "cartea de vot (cardul de care ai nevoie ca să votezi)", // nieuw, nalezen
+    'w.burgemeester': "primarul", // nieuw, nalezen
+    's.council.1': "Am voie să votez?", // nieuw, nalezen
+    's.council.2': "Cartea mea de vot a venit prin poștă.", // nieuw, nalezen
+    's.council.3': "Consiliul local decide despre cartierul meu.", // nieuw, nalezen
+    'c.council.q': "Mergi miercuri la vot?", // nieuw, nalezen
+    'c.council.a': "Da. Am cartea de vot și actul de identitate.", // nieuw, nalezen
+    'l.police': "Poliția și drepturile tale", // nieuw, nalezen
+    'w.agent': "polițistul", // nieuw, nalezen
+    'w.boete': "amenda (bani pe care trebuie să-i plătești ca pedeapsă)", // nieuw, nalezen
+    'w.bezwaar': "contestația (spui în scris că nu ești de acord)", // nieuw, nalezen
+    'w.rechter': "judecătorul", // nieuw, nalezen
+    'w.advocaat': "avocatul", // nieuw, nalezen
+    'w.wet': "legea", // nieuw, nalezen
+    's.police.1': "Am primit o amendă.", // nieuw, nalezen
+    's.police.2': "Vreau să fac contestație.", // nieuw, nalezen
+    's.police.3': "Pot să am un avocat?", // nieuw, nalezen
+    'c.police.q': "Îmi arătați actul de identitate?", // nieuw, nalezen
+    'c.police.a': "Da, poftim. Ce s-a întâmplat?", // nieuw, nalezen
+    'u.online': "Online la lucru", // nieuw, nalezen
+    'l.login': "Autentificarea", // nieuw, nalezen
+    'w.uitloggen': "a ieși din cont", // nieuw, nalezen
+    'w.account': "contul", // nieuw, nalezen
+    'w.scherm': "ecranul", // nieuw, nalezen
+    'w.vergrendelen': "a bloca (ecranul sau telefonul)", // nieuw, nalezen
+    'w.gebruikersnaam': "numele de utilizator", // nieuw, nalezen
+    'w.inlogcode': "codul de autentificare (un cod primit prin SMS sau în aplicație)", // nieuw, nalezen
+    's.login.1': "Mi-am uitat parola.", // nieuw, nalezen
+    's.login.2': "Ies mereu din cont.", // nieuw, nalezen
+    's.login.3': "Nu dau nimănui DigiD-ul meu.", // nieuw, nalezen
+    'c.login.q': "Poți să intri în cont?", // nieuw, nalezen
+    'c.login.a': "Nu, parola mea nu merge.", // nieuw, nalezen
+    'l.phish': "E-mailuri false", // nieuw, nalezen
+    'w.afzender': "expeditorul", // nieuw, nalezen
+    'w.klikken': "a da clic", // nieuw, nalezen
+    'w.bijlage': "atașamentul", // nieuw, nalezen
+    'w.verdacht': "suspect", // nieuw, nalezen
+    'w.ictafdeling': "departamentul IT", // nieuw, nalezen
+    'w.wijzigen': "a schimba", // nieuw, nalezen
+    's.phish.1': "E-mailul acesta e suspect.", // nieuw, nalezen
+    's.phish.2': "Nu deschid atașamentul.", // nieuw, nalezen
+    's.phish.3': "Îmi schimb parola imediat.", // nieuw, nalezen
+    'c.phish.q': "Ai dat clic pe link?", // nieuw, nalezen
+    'c.phish.a': "Da. Sun la departamentul IT.", // nieuw, nalezen
+    'l.mychoice': "La ce mă pricep", // nieuw, nalezen
+    'w.goedin': "priceput la (ceva), bun la", // nieuw, nalezen
+    'w.kiezen': "a alege", // nieuw, nalezen
+    'w.beroep': "meseria, felul de muncă", // nieuw, nalezen
+    'w.bijbaan': "jobul pe lângă școală (o muncă mică)", // nieuw, nalezen
+    'w.nauwkeurig': "atent și exact", // nieuw, nalezen
+    'w.meeloopdag': "ziua de observare (o zi în care însoțești pe cineva la lucru)", // nieuw, nalezen
+    's.mychoice.1': "Mă pricep să lucrez cu mâinile.", // nieuw, nalezen
+    's.mychoice.2': "Îmi place să lucrez cu oamenii.", // nieuw, nalezen
+    's.mychoice.3': "Pot să vă însoțesc o zi, ca să văd munca?", // nieuw, nalezen
+    'c.mychoice.q': "La ce te pricepi?", // nieuw, nalezen
+    'c.mychoice.a': { m: "Sunt atent și exact. Acasă am grijă de mama.", f: "Sunt atentă și exactă. Acasă am grijă de mama.", x: "Sunt atent / atentă și exact / exactă. Acasă am grijă de mama." }, // nieuw, nalezen
+    'l.nextstep': "După Entree", // nieuw, nalezen
+    'w.niveau2': "nivelul 2 (următorul nivel din mbo)", // nieuw, nalezen
+    'w.startkwalificatie': "calificarea de bază (o diplomă mbo de nivel 2 sau mai mare)", // nieuw, nalezen
+    'w.bbl': "bbl (lucrezi la o firmă și mergi la școală cam o zi pe săptămână)", // nieuw, nalezen
+    'w.doorstromen': "a merge mai departe (la un nivel mai mare)", // nieuw, nalezen
+    'w.aanmelden': "a te înscrie (la o școală sau la un curs)", // nieuw, nalezen
+    'w.opendag': "ziua porților deschise (poți vizita o școală)", // nieuw, nalezen
+    's.nextstep.1': "După Entree vreau să merg la nivelul 2.", // nieuw, nalezen
+    's.nextstep.2': "Vreau să lucrez și să învăț în același timp.", // nieuw, nalezen
+    's.nextstep.3': "Când e ziua porților deschise?", // nieuw, nalezen
+    'c.nextstep.q': "Ce faci după Entree?", // nieuw, nalezen
+    'c.nextstep.a': "Vreau să fac bbl. Atunci lucrez și învăț.", // nieuw, nalezen
+    'l.email': "Să scrii la lucru", // nieuw, nalezen
+    'w.mail': "e-mailul", // nieuw, nalezen
+    'w.onderwerp': "subiectul (unui e-mail)", // nieuw, nalezen
+    'w.beste': "dragă, stimate (la începutul unei scrisori sau al unui e-mail)", // nieuw, nalezen
+    'w.beleefd': "politicos", // nieuw, nalezen
+    'w.nalezen': "a reciti (a verifica înainte să trimiți)", // nieuw, nalezen
+    'w.versturen': "a trimite", // nieuw, nalezen
+    's.email.1': "Ce scriu la subiect?", // nieuw, nalezen
+    's.email.2': "Îmi mai citesc o dată e-mailul.", // nieuw, nalezen
+    's.email.3': "Trimit e-mailul mâine.", // nieuw, nalezen
+    'c.email.q': "Ai trimis e-mailul despre ziua ta liberă?", // nieuw, nalezen
+    'c.email.a': "Încă nu. Mai întâi îl recitesc.", // nieuw, nalezen
+    'l.budget': "Banii tăi în fiecare lună", // nieuw, nalezen
+    'w.vastelasten': "cheltuielile fixe (chirie, asigurare, telefon: în fiecare lună)", // nieuw, nalezen
+    'w.sparen': "a economisi (bani)", // nieuw, nalezen
+    'w.abonnement': "abonamentul (plătești pentru el în fiecare lună)", // nieuw, nalezen
+    'w.achterafbetalen': "a plăti mai târziu (cumperi acum, plătești mai târziu)", // nieuw, nalezen
+    'w.bedenktijd': "perioada de gândire (timp să te răzgândești)", // nieuw, nalezen
+    'w.garantie': "garanția (trebuie să meargă, altfel ți-l repară)", // nieuw, nalezen
+    's.budget.1': "Mai întâi plătesc cheltuielile fixe.", // nieuw, nalezen
+    's.budget.2': "În fiecare lună economisesc puțin.", // nieuw, nalezen
+    's.budget.3': "Reziliez abonamentul acesta.", // nieuw, nalezen
+    'c.budget.q': "Cumpără telefonul acum și plătește mai târziu!", // nieuw, nalezen
+    'c.budget.a': "Nu, mulțumesc. Să plătești mai târziu e tot o datorie.", // nieuw, nalezen
+    'l.healthy': "În formă pentru lucru", // nieuw, nalezen
+    'w.slapen': "a dormi", // nieuw, nalezen
+    'w.ontbijt': "micul dejun", // nieuw, nalezen
+    'w.bewegen': "a face mișcare, a fi activ", // nieuw, nalezen
+    'w.moe': "obosit", // nieuw, nalezen
+    'w.drugs': "drogurile", // nieuw, nalezen
+    'w.somber': "deprimat (trist de mult timp)", // nieuw, nalezen
+    's.healthy.1': { m: "Azi sunt foarte obosit.", f: "Azi sunt foarte obosită.", x: "Azi sunt foarte obosit / obosită." }, // nieuw, nalezen
+    's.healthy.2': "Mereu mănânc mai întâi micul dejun.", // nieuw, nalezen
+    's.healthy.3': "În pauză merg puțin pe jos.", // nieuw, nalezen
+    'c.healthy.q': { m: "Vrei o pastilă? Așa rămâi treaz.", f: "Vrei o pastilă? Așa rămâi trează.", x: "Vrei o pastilă? Așa rămâi treaz / trează." }, // nieuw, nalezen
+    'c.healthy.a': "Nu, mulțumesc. Nu lucrez sub influență.", // nieuw, nalezen
+    'c.workorder': "Mai întâi citește, apoi începe", // nieuw, nalezen
+    'c.workorder.b': "Înainte să începi, citește fișa de lucru (werkbon) sau sarcina din aplicație. Verifică adresa, sarcina și numărul de lucruri. Ceva nu e clar? Întreabă înainte să începi, nu la jumătate. Apoi pregătește uneltele și materialele. Așa câștigi timp și faci mai puține greșeli. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.workorder.p': "Pe fișa de lucru scrie zece cutii. E corect?", // nieuw, nalezen
+    'c.workorder.s': "Pe fișa de lucru scrie: vopsește camera 3. Colegul tău zice că e camera 5. Ce faci?", // nieuw, nalezen
+    'c.workorder.o1': "Îl întrebi pe șef care cameră e cea bună.", // nieuw, nalezen
+    'c.workorder.o2': "Vopsești camera 3, pentru că așa scrie pe hârtie.", // nieuw, nalezen
+    'c.workorder.o3': { m: "Vopsești ambele camere, ca să fii sigur.", f: "Vopsești ambele camere, ca să fii sigură.", x: "Vopsești ambele camere, ca să fii sigur / sigură." }, // nieuw, nalezen
+    'c.workorder.w': "Când două lucruri nu se potrivesc, verifici înainte să începi. O întrebare scurtă durează mai puțin decât să refaci lucrul.", // nieuw, nalezen
+    'c.handover': "Spune ce e gata și ce nu", // nieuw, nalezen
+    'c.handover.b': "Lucrul nu e gata când te oprești. Mai întâi fă ordine la locul tău și la unelte. Apoi roagă pe cineva să-ți verifice lucrul. Spune-i șefului ce e gata și ce nu. Ceva a mers prost sau ceva e stricat? Spune acum, nu mâine. Să anunți că ai terminat face parte din munca ta. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.handover.p': "Camera patru nu e gata încă. Ușa era încuiată.", // nieuw, nalezen
+    'c.handover.s': "Ai făcut curat în cinci camere. Camera 4 era încuiată, așa că n-ai putut face curat acolo. Tura ta se termină. Ce faci?", // nieuw, nalezen
+    'c.handover.o1': "Îi spui șefului că camera 4 nu e gata, și de ce.", // nieuw, nalezen
+    'c.handover.o2': "Pleci acasă: camera 4 era încuiată, nu e vina ta.", // nieuw, nalezen
+    'c.handover.o3': "Scrii pe listă „totul gata”, pentru că ai dat tot ce ai putut.", // nieuw, nalezen
+    'c.handover.w': "Șeful planifică lucrul. Când știe că camera 4 nu e gata, poate trimite pe altcineva. Așa niciun client nu găsește o cameră murdară.", // nieuw, nalezen
+    'c.workshop': "Ochi, urechi și foc", // nieuw, nalezen
+    'c.workshop.b': "Șlefuitul, tăiatul și găuritul fac scântei, bucățele mici și mult zgomot. Poartă ochelari de protecție și protecție auditivă, chiar și pentru o treabă scurtă. Când e foarte zgomot, angajatorul trebuie să-ți dea protecție auditivă. Scânteile pot porni un incendiu. Pentru sudură, sau șlefuit lângă lucruri care pot arde, sunt reguli în plus (heet werk): întreabă înainte să începi. După lucru, strânge bucățelele de metal. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.workshop.p': "Încep să șlefuiesc. Unde e protecția auditivă?", // nieuw, nalezen
+    'c.workshop.s': "Trebuie să șlefuiești o bucată mică de metal. Durează un minut. Ochelarii de protecție sunt în altă cameră. Ce faci?", // nieuw, nalezen
+    'c.workshop.o1': "Mai întâi îți iei ochelarii, chiar și pentru un minut.", // nieuw, nalezen
+    'c.workshop.o2': "Șlefuiești cu ochii pe jumătate închiși, că e repede.", // nieuw, nalezen
+    'c.workshop.o3': "Ții cealaltă mână în fața ochilor.", // nieuw, nalezen
+    'c.workshop.w': "O scânteie sau o bucățică de metal în ochi îți poate strica ochiul pentru totdeauna. Asta se poate întâmpla într-o secundă. Ochelarii de protecție ajută, chiar și pentru o treabă scurtă.", // nieuw, nalezen
+    'c.power': "Curentul: niciodată așa, pur și simplu", // nieuw, nalezen
+    'c.power.b': "Nu lucra niciodată la ceva care e sub tensiune (onder spanning). Mai întâi un coleg instruit face totul sigur: oprește curentul și verifică. Doar oamenii cu instruirea potrivită au voie să facă asta. Vezi un cablu sau un ștecher stricat? Nu-l folosi și spune-i imediat șefului. Nu știi sigur dacă e oprit curentul? Atunci e pornit. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.power.p': "Văd un cablu stricat. Cine se poate uita la el?", // nieuw, nalezen
+    'c.power.s': "Trebuie să agăți o lampă. Un coleg zice: „Curentul e oprit, cred.” Ce faci?", // nieuw, nalezen
+    'c.power.o1': "Rogi un coleg instruit să verifice dacă e oprit curentul.", // nieuw, nalezen
+    'c.power.o2': "Începi, dar atingi firele doar cu mănuși.", // nieuw, nalezen
+    'c.power.o3': "Atingi repede firul, ca să simți dacă e curent.", // nieuw, nalezen
+    'c.power.w': "„Cred” nu e destul când e vorba de curent. Un șoc electric te poate omorî. Un coleg instruit verifică dacă nu mai e curent, și apoi poți începe.", // nieuw, nalezen
+    'c.garage': "În siguranță sub mașină", // nieuw, nalezen
+    'c.garage.b': "Nu intra niciodată sub o mașină care stă doar pe cric. Mașina trebuie să stea bine pe elevator sau pe capre. Uleiul vărsat face podeaua alunecoasă: curăță-l imediat. Uleiul vechi, bateriile și produsele de curățenie sunt deșeuri periculoase. Merg într-un loc special, niciodată la gunoiul obișnuit sau în canalizare. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.garage.p': "E ulei pe jos. Îl curăț.", // nieuw, nalezen
+    'c.garage.s': "Trebuie să te uiți sub o mașină. Mașina stă doar pe cric. Colegul tău zice: „E în regulă, doar fă repede.” Ce faci?", // nieuw, nalezen
+    'c.garage.o1': "Aștepți până mașina stă pe elevator sau pe capre.", // nieuw, nalezen
+    'c.garage.o2': "Intri repede sub ea și ții picioarele afară.", // nieuw, nalezen
+    'c.garage.o3': "Intri sub ea și îl rogi pe coleg să țină mașina.", // nieuw, nalezen
+    'c.garage.w': "Cricul poate aluneca. O mașină e foarte grea și de sub ea nu poți ieși repede. Caprele sau elevatorul țin mașina pe loc.", // nieuw, nalezen
+    'c.carjob': "Lucru în plus? Întreabă întâi clientul", // nieuw, nalezen
+    'c.carjob.b': "Găsești mai multe probleme decât scrie pe fișa de lucru? Nu le repara pur și simplu. Clientul trebuie mai întâi să fie de acord cu lucrul în plus și cu costurile. Șeful sau recepția îl sună pe client. Proba de drum se face doar cu permisiune și doar cu un permis de conducere valabil. Notează ce ai făcut și ce piese ai folosit. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.carjob.p': "Mai văd o problemă. Cine îl sună pe client?", // nieuw, nalezen
+    'c.carjob.s': "Schimbi uleiul la o mașină. Vezi că și frânele sunt proaste. Mașina trebuie să fie gata într-o oră. Ce faci?", // nieuw, nalezen
+    'c.carjob.o1': "Îi spui șefului, ca să fie sunat clientul.", // nieuw, nalezen
+    'c.carjob.o2': "Repari și frânele, clientul o să fie mulțumit.", // nieuw, nalezen
+    'c.carjob.o3': "Nu spui nimic: frânele nu sunt pe fișa de lucru.", // nieuw, nalezen
+    'c.carjob.w': "Clientul plătește, deci clientul decide. Fără acordul lui, service-ul nu are voie să facă pur și simplu lucru în plus. Frânele proaste sunt periculoase, deci e important să spui.", // nieuw, nalezen
+    'c.placement': "Mai întâi semnezi, apoi începi", // nieuw, nalezen
+    'c.placement.b': { m: "În Entree înveți mult la o firmă: e stagiul tău de practică (stage sau bpv). Înainte să începi, tu, școala și firma semnați un contract: POK. La firmă te ajută îndrumătorul (praktijkopleider). La școală te ajută coordonatorul de stagiu (stagebegeleider). Ești bolnav? Sună la firmă înainte de ora de începere și anunță și școala. Regulile diferă de la o școală la alta: întreabă-l pe coordonatorul de stagiu.", f: "În Entree înveți mult la o firmă: e stagiul tău de practică (stage sau bpv). Înainte să începi, tu, școala și firma semnați un contract: POK. La firmă te ajută îndrumătorul (praktijkopleider). La școală te ajută coordonatorul de stagiu (stagebegeleider). Ești bolnavă? Sună la firmă înainte de ora de începere și anunță și școala. Regulile diferă de la o școală la alta: întreabă-l pe coordonatorul de stagiu.", x: "În Entree înveți mult la o firmă: e stagiul tău de practică (stage sau bpv). Înainte să începi, tu, școala și firma semnați un contract: POK. La firmă te ajută îndrumătorul (praktijkopleider). La școală te ajută coordonatorul de stagiu (stagebegeleider). Ești bolnav / bolnavă? Sună la firmă înainte de ora de începere și anunță și școala. Regulile diferă de la o școală la alta: întreabă-l pe coordonatorul de stagiu." }, // nieuw, nalezen
+    'c.placement.p': "Încep doar după ce e semnat contractul de stagiu.", // nieuw, nalezen
+    'c.placement.s': "Firma îți cere să începi mâine. Contractul de stagiu (POK) nu e semnat încă. Ce faci?", // nieuw, nalezen
+    'c.placement.o1': "Îl rogi pe coordonator să rezolve întâi POK-ul.", // nieuw, nalezen
+    'c.placement.o2': "Începi mâine și semnezi POK-ul peste câteva săptămâni.", // nieuw, nalezen
+    'c.placement.o3': "Începi, dar deocamdată nu spui nimic școlii.", // nieuw, nalezen
+    'c.placement.w': "În POK scrie ce înveți și cine te ajută. Fără un POK semnat, stagiul tău s-ar putea să nu conteze pentru diplomă. De aceea îl semnezi înainte să începi.", // nieuw, nalezen
+    'c.review': "Cere feedback, și un exemplu", // nieuw, nalezen
+    'c.review.b': "La stagiu, oamenii îți spun ce merge bine și ce poate fi mai bine: feedback. E normal și te ajută să înveți. Nu înțelegi? Cere un exemplu. Cere și tu feedback, de exemplu o dată pe săptămână. Ceva chiar nu e în regulă la stagiu? Mai întâi vorbește cu îndrumătorul de la firmă. Nu ajută? Atunci du-te la coordonatorul de stagiu de la școală.", // nieuw, nalezen
+    'c.review.p': "Ce a mers bine și ce poate fi mai bine?", // nieuw, nalezen
+    'c.review.s': "Îndrumătorul îți spune: „Trebuie să lucrezi mai atent.” Nu știi ce vrea să spună. Ce faci?", // nieuw, nalezen
+    'c.review.o1': "Ceri un exemplu de ce trebuie să faci altfel.", // nieuw, nalezen
+    'c.review.o2': { m: "Zici da și speri că o să-ți dai seama singur.", f: "Zici da și speri că o să-ți dai seama singură.", x: "Zici da și speri că o să-ți dai seama singur / singură." }, // nieuw, nalezen
+    'c.review.o3': "Lucrezi mult mai încet, ca să nu greșești nimic.", // nieuw, nalezen
+    'c.review.w': "Cu un exemplu știi ce să schimbi. Când întrebi, arăți că vrei să înveți. Îndrumătorilor le place asta.", // nieuw, nalezen
+    'c.council': "Cine are voie să voteze?", // nieuw, nalezen
+    'c.council.b': "În Țările de Jos alegi, prin vot, cine decide. Consiliul local (gemeenteraad) decide despre orașul tău. Tweede Kamer face legile pentru toată țara. Cu cetățenie olandeză poți vota la toate alegerile, de la 18 ani. Pentru consiliul local pot vota mai mulți oameni: oamenii din altă țară UE care locuiesc aici, și oamenii din afara UE după 5 ani de ședere legală. Primăria (gemeente) îți trimite cartea de vot (stempas). Ia-o cu tine, împreună cu actul de identitate. Nu știi sigur dacă ai voie să votezi? Întreabă la primărie.", // nieuw, nalezen
+    'c.council.p': "Am voie să votez pentru consiliul local?", // nieuw, nalezen
+    'c.council.s': "Vii din Maroc și locuiești legal aici de șase ani. Nu ai cetățenie olandeză. Sunt alegeri pentru consiliul local. Ce e adevărat?", // nieuw, nalezen
+    'c.council.o1': "Ai voie să votezi pentru consiliul local.", // nieuw, nalezen
+    'c.council.o2': "Ai voie să votezi și pentru Tweede Kamer.", // nieuw, nalezen
+    'c.council.o3': "Fără pașaport olandez nu ai voie deloc să votezi.", // nieuw, nalezen
+    'c.council.w': "După 5 ani de ședere legală ai voie să votezi pentru consiliul local. Pentru Tweede Kamer îți trebuie cetățenie olandeză.", // nieuw, nalezen
+    'c.police': "Actul tău și drepturile tale", // nieuw, nalezen
+    'c.police.b': { m: "De la 14 ani trebuie să-ți arăți actul de identitate când ți-l cere poliția. Așa că ține-l mereu la tine. Primești o scrisoare cu o decizie cu care nu ești de acord, de exemplu de la primărie sau de la UWV? Atunci poți face contestație în scris (bezwaar maken). Fă-o înainte de data din scrisoare. Poliția și judecătorul trebuie să-i trateze pe toți la fel. Ești reținut? Poți cere un avocat. Juridisch Loket dă sfaturi gratuite.", f: "De la 14 ani trebuie să-ți arăți actul de identitate când ți-l cere poliția. Așa că ține-l mereu la tine. Primești o scrisoare cu o decizie cu care nu ești de acord, de exemplu de la primărie sau de la UWV? Atunci poți face contestație în scris (bezwaar maken). Fă-o înainte de data din scrisoare. Poliția și judecătorul trebuie să-i trateze pe toți la fel. Ești reținută? Poți cere un avocat. Juridisch Loket dă sfaturi gratuite.", x: "De la 14 ani trebuie să-ți arăți actul de identitate când ți-l cere poliția. Așa că ține-l mereu la tine. Primești o scrisoare cu o decizie cu care nu ești de acord, de exemplu de la primărie sau de la UWV? Atunci poți face contestație în scris (bezwaar maken). Fă-o înainte de data din scrisoare. Poliția și judecătorul trebuie să-i trateze pe toți la fel. Ești reținut / reținută? Poți cere un avocat. Juridisch Loket dă sfaturi gratuite." }, // nieuw, nalezen
+    'c.police.p': "Nu sunt de acord cu decizia asta. Fac contestație.", // nieuw, nalezen
+    'c.police.s': "Primești o scrisoare de la primărie. Nu ești de acord cu decizia lor. În scrisoare scrie că ai șase săptămâni. Ce faci?", // nieuw, nalezen
+    'c.police.o1': "Scrii o contestație, înainte de data aceea.", // nieuw, nalezen
+    'c.police.o2': "Suni o dată și aștepți să te sune ei înapoi.", // nieuw, nalezen
+    'c.police.o3': "Aștepți: după șase săptămâni se oprește singur.", // nieuw, nalezen
+    'c.police.w': "Contestația o faci în scris, înainte de data din scrisoare. După data aceea, de multe ori e prea târziu. Juridisch Loket te poate ajuta s-o scrii.", // nieuw, nalezen
+    'c.login': "Contul tău e doar al tău", // nieuw, nalezen
+    'c.login.b': "Parola ta și DigiD-ul tău sunt doar pentru tine. Nu le da nimănui, nici angajatorului, nici unui coleg. Pe un calculator comun, ieși mereu din cont când ai terminat. Pleci o clipă? Blochează-ți ecranul. Ți-ai uitat parola? Cere una nouă de la departamentul IT (ICT-afdeling). Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.login.p': "Plec o clipă. Îmi blochez ecranul.", // nieuw, nalezen
+    'c.login.s': "Șeful îți cere DigiD-ul și parola, ca să-ți rezolve repede actele. Ce faci?", // nieuw, nalezen
+    'c.login.o1': { m: "Spui nu și intri singur în cont, iar el te ajută.", f: "Spui nu și intri singură în cont, iar el te ajută.", x: "Spui nu și intri singur / singură în cont, iar el te ajută." }, // nieuw, nalezen
+    'c.login.o2': "I le dai de data asta, pentru că e șeful tău.", // nieuw, nalezen
+    'c.login.o3': "Le scrii pe o hârtie, ca să le poată folosi mai târziu.", // nieuw, nalezen
+    'c.login.w': { m: "Cu DigiD-ul tău, cineva îți poate vedea și schimba impozitele, alocațiile și actele de sănătate. E doar pentru tine. Poți intra singur în cont și să lași pe cineva să te ajute.", f: "Cu DigiD-ul tău, cineva îți poate vedea și schimba impozitele, alocațiile și actele de sănătate. E doar pentru tine. Poți intra singură în cont și să lași pe cineva să te ajute.", x: "Cu DigiD-ul tău, cineva îți poate vedea și schimba impozitele, alocațiile și actele de sănătate. E doar pentru tine. Poți intra singur / singură în cont și să lași pe cineva să te ajute." }, // nieuw, nalezen
+    'c.phish': "Grabă și un buton? Nu da clic", // nieuw, nalezen
+    'c.phish.b': { m: "Un e-mail fals (phishing) arată adesea ca unul adevărat. Vrea să acționezi repede: „Contul tău se închide azi!” Verifică expeditorul. Nu da clic pe un link și nu deschide un atașament la care nu te așteptai. Intră singur pe site-ul sau în aplicația adevărată. Ai dat totuși clic? Schimbă-ți imediat parola și sună la departamentul IT. Nu e o rușine: cu cât află mai repede, cu atât mai bine. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", f: "Un e-mail fals (phishing) arată adesea ca unul adevărat. Vrea să acționezi repede: „Contul tău se închide azi!” Verifică expeditorul. Nu da clic pe un link și nu deschide un atașament la care nu te așteptai. Intră singură pe site-ul sau în aplicația adevărată. Ai dat totuși clic? Schimbă-ți imediat parola și sună la departamentul IT. Nu e o rușine: cu cât află mai repede, cu atât mai bine. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", x: "Un e-mail fals (phishing) arată adesea ca unul adevărat. Vrea să acționezi repede: „Contul tău se închide azi!” Verifică expeditorul. Nu da clic pe un link și nu deschide un atașament la care nu te așteptai. Intră singur / singură pe site-ul sau în aplicația adevărată. Ai dat totuși clic? Schimbă-ți imediat parola și sună la departamentul IT. Nu e o rușine: cu cât află mai repede, cu atât mai bine. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi." }, // nieuw, nalezen
+    'c.phish.p': "Am dat clic pe un link suspect.", // nieuw, nalezen
+    'c.phish.s': "Ai dat clic pe un link dintr-un e-mail și ți-ai scris parola. Apoi vezi că e-mailul era fals. Ce faci?", // nieuw, nalezen
+    'c.phish.o1': "Îți schimbi parola și suni la departamentul IT.", // nieuw, nalezen
+    'c.phish.o2': "Ștergi e-mailul și speri că nu se întâmplă nimic.", // nieuw, nalezen
+    'c.phish.o3': "Aștepți o zi, să vezi dacă merge ceva prost.", // nieuw, nalezen
+    'c.phish.w': "Cu parola ta, altcineva poate intra în sistemele firmei. Când o schimbi repede și anunți departamentul IT, ei pot opri asta la timp.", // nieuw, nalezen
+    'c.mychoice': "Punctele tale tari contează", // nieuw, nalezen
+    'c.mychoice.b': "La ce te pricepi? Gândește-te la muncă, la școală și la casă. Grija pentru familie, un job pe lângă școală sau voluntariatul contează și ele. Ce îți place și ce nu-ți place? Nu știi ce muncă ți se potrivește? Cere să însoțești pe cineva la lucru o zi (meeloopdag). Îndrumătorul de la școală te poate ajuta să alegi.", // nieuw, nalezen
+    'c.mychoice.p': "Mă pricep la oameni. Acasă ajut mult.", // nieuw, nalezen
+    'c.mychoice.s': "La școală te întreabă: „La ce te pricepi?” N-ai avut niciodată un loc de muncă plătit. Ce spui?", // nieuw, nalezen
+    'c.mychoice.o1': "Ce faci bine acasă, de exemplu grija pentru alții.", // nieuw, nalezen
+    'c.mychoice.o2': "Că nu poți spune, fiindcă n-ai avut niciodată un job.", // nieuw, nalezen
+    'c.mychoice.o3': "Că poți face orice fel de muncă, absolut tot.", // nieuw, nalezen
+    'c.mychoice.w': "Și abilitățile de acasă contează. Grija pentru alții, planificarea și ajutorul sunt abilități de care au nevoie angajatorii. Spune ce ai făcut, cu un exemplu.", // nieuw, nalezen
+    'c.nextstep': "După Entree: nivelul 2 sau muncă", // nieuw, nalezen
+    'c.nextstep.b': "Cu o diplomă Entree poți merge mai departe la nivelul 2 din mbo. O diplomă de nivel 2 sau mai mare e o calificare de bază (startkwalificatie). Te ajută să găsești de lucru și să-l păstrezi. În bbl lucrezi la o firmă și mergi la școală cam o zi pe săptămână. Pentru asta îți trebuie un loc de muncă sau un loc de învățare la lucru (leerwerkbaan). Du-te la o zi a porților deschise și vorbește cu îndrumătorul de la școală.", // nieuw, nalezen
+    'c.nextstep.p': "Pot să merg la nivelul 2 după Entree?", // nieuw, nalezen
+    'c.nextstep.s': "Ai diploma Entree. O firmă îți oferă un loc de muncă fără formare. Tu vrei să înveți mai departe. Ce faci?", // nieuw, nalezen
+    'c.nextstep.o1': "Întrebi firma dacă e posibil un loc bbl.", // nieuw, nalezen
+    'c.nextstep.o2': "Iei jobul și te oprești din învățat pentru totdeauna.", // nieuw, nalezen
+    'c.nextstep.o3': "Stai acasă până te sună o școală.", // nieuw, nalezen
+    'c.nextstep.w': "Cu bbl lucrezi și înveți în același timp. Câștigi bani și primești o diplomă de nivel 2. Multor firme le place asta.", // nieuw, nalezen
+    'c.email': "Un e-mail scurt: cine, ce, când", // nieuw, nalezen
+    'c.email.b': "Un e-mail către lucru e scurt și politicos. Începe cu un salut, de exemplu „Beste Karin,”. Apoi spune ce vrei și când. Încheie cu un salut și numele tău complet. Scrie un subiect scurt, de exemplu „Vrij op vrijdag”. Recitește e-mailul înainte să-l trimiți.", // nieuw, nalezen
+    'c.email.p': "Dragă Karin, pot să am liber vineri? Cu salut, Ali Haddad", // nieuw, nalezen
+    'c.email.s': "Vrei o zi liberă vinerea viitoare. Ce e-mail către șef e cel mai bun?", // nieuw, nalezen
+    'c.email.o1': "„Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad”", // nieuw, nalezen
+    'c.email.o2': "„Vrijdag ben ik er niet.” (fără salut și fără numele tău).", // nieuw, nalezen
+    'c.email.o3': "Un e-mail lung despre săptămâna ta, cu întrebarea la final.", // nieuw, nalezen
+    'c.email.w': "Un e-mail bun are un salut, o întrebare clară și numele tău. Așa șeful poate răspunde repede.", // nieuw, nalezen
+    'c.budget': "Întâi cheltuielile fixe", // nieuw, nalezen
+    'c.budget.b': "Când primești salariul, plătește întâi cheltuielile fixe: chiria, asigurarea și telefonul. Încearcă să pui deoparte o sumă mică în fiecare lună, chiar și 10 euro. Cumperi acum, plătești mai târziu e tot o datorie. Ai cumpărat ceva online? Atunci de obicei te poți răzgândi în 14 zile. Păstrează bonul: îți trebuie pentru garanție.", // nieuw, nalezen
+    'c.budget.p': "Prefer să plătesc acum. Așa nu am datorii.", // nieuw, nalezen
+    'c.budget.s': "Azi primești salariul. Vrei pantofi noi, iar chiria nu e plătită încă. Ce faci?", // nieuw, nalezen
+    'c.budget.o1': "Plătești întâi chiria, apoi vezi ce a rămas.", // nieuw, nalezen
+    'c.budget.o2': "Cumperi pantofii și plătești chiria mai târziu.", // nieuw, nalezen
+    'c.budget.o3': "Cumperi pantofii cu „plătești mai târziu”.", // nieuw, nalezen
+    'c.budget.w': "Chiria, asigurarea și telefonul revin în fiecare lună. Când le plătești întâi pe ele, știi câți bani au rămas. Așa nu faci datorii.", // nieuw, nalezen
+    'c.healthy': "Somn, mâncare și fără droguri", // nieuw, nalezen
+    'c.healthy.b': { m: "Lucrezi mai bine și mai sigur când dormi destul, chiar și după o tură târzie. Mănâncă micul dejun și bea apă în timpul zilei. Fă mișcare în pauză, de exemplu o plimbare scurtă. Să lucrezi sub influența alcoolului sau a drogurilor e periculos, și majoritatea angajatorilor interzic asta. Te simți deprimat de mult timp sau nu te poți opri din băut sau din consum? Vorbește cu medicul de familie (huisarts). Te poate ajuta și păstrează secretul.", f: "Lucrezi mai bine și mai sigur când dormi destul, chiar și după o tură târzie. Mănâncă micul dejun și bea apă în timpul zilei. Fă mișcare în pauză, de exemplu o plimbare scurtă. Să lucrezi sub influența alcoolului sau a drogurilor e periculos, și majoritatea angajatorilor interzic asta. Te simți deprimată de mult timp sau nu te poți opri din băut sau din consum? Vorbește cu medicul de familie (huisarts). Te poate ajuta și păstrează secretul.", x: "Lucrezi mai bine și mai sigur când dormi destul, chiar și după o tură târzie. Mănâncă micul dejun și bea apă în timpul zilei. Fă mișcare în pauză, de exemplu o plimbare scurtă. Să lucrezi sub influența alcoolului sau a drogurilor e periculos, și majoritatea angajatorilor interzic asta. Te simți deprimat / deprimată de mult timp sau nu te poți opri din băut sau din consum? Vorbește cu medicul de familie (huisarts). Te poate ajuta și păstrează secretul." }, // nieuw, nalezen
+    'c.healthy.p': { m: "Mă simt deprimat de mult timp. Pot să fac o programare?", f: "Mă simt deprimată de mult timp. Pot să fac o programare?", x: "Mă simt deprimat / deprimată de mult timp. Pot să fac o programare?" }, // nieuw, nalezen
+    'c.healthy.s': { m: "Diseară ai tură de noapte. Un coleg îți oferă o pastilă, ca să rămâi treaz. Ce faci?", f: "Diseară ai tură de noapte. Un coleg îți oferă o pastilă, ca să rămâi trează. Ce faci?", x: "Diseară ai tură de noapte. Un coleg îți oferă o pastilă, ca să rămâi treaz / trează. Ce faci?" }, // nieuw, nalezen
+    'c.healthy.o1': "Spui nu și dormi câteva ore înainte de tură.", // nieuw, nalezen
+    'c.healthy.o2': "Iei o jumătate de pastilă, nu e periculos.", // nieuw, nalezen
+    'c.healthy.o3': "O iei, dar nu spui nimănui de la lucru.", // nieuw, nalezen
+    'c.healthy.w': { m: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Somnul e calea sigură ca să rămâi treaz.", f: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Somnul e calea sigură ca să rămâi trează.", x: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Somnul e calea sigură ca să rămâi treaz / trează." }, // nieuw, nalezen
   },
 };
 

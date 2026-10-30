@@ -95,6 +95,24 @@ const t: CultureTranslation = {
     'c.kids.a.why': "Pytanie „dlaczego”: ta odpowiedź podaje powód, dzwonili ze żłobka.",
     'c.body.a.why': "Pytanie, gdzie boli: ta odpowiedź mówi, gdzie i dlaczego.",
     'c.jobends.a.why': "Mieszkanie jest związane z pracą: ta odpowiedź pyta o okres wypowiedzenia.",
+    // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
+    'c.workorder.a.why': "Niepewne słowo: zapytać przed rozpoczęciem to dobra odpowiedź.", // nieuw, nalezen
+    'c.handover.a.why': "Pytanie, czy wszystko gotowe: ta odpowiedź mówi, co nie jest gotowe i dlaczego.", // nieuw, nalezen
+    'c.workshop.a.why': "Pytanie „dlaczego”: ta odpowiedź podaje powód, oczy trzeba chronić.", // nieuw, nalezen
+    'c.power.a.why': "Praca przy lampie: ta odpowiedź najpierw pyta, czy prąd jest wyłączony.", // nieuw, nalezen
+    'c.garage.a.why': "Prośba o zmianę opon: „tak” i pytanie, gdzie one są.", // nieuw, nalezen
+    'c.carjob.a.why': "Dodatkowa praca: klient musi się najpierw zgodzić, więc ta odpowiedź do niego dzwoni.", // nieuw, nalezen
+    'c.placement.a.why': "Pytanie „kiedy”: ta odpowiedź podaje dzień, a umowa jest najpierw.", // nieuw, nalezen
+    'c.review.a.why': "Uwaga nie jest jeszcze jasna: prośba o pokazanie to dobra odpowiedź.", // nieuw, nalezen
+    'c.council.a.why': "Pytanie o głosowanie: „tak” i dwie rzeczy, które trzeba zabrać.", // nieuw, nalezen
+    'c.police.a.why': "Policja prosi o dokument: pokazać go i zapytać, co się dzieje.", // nieuw, nalezen
+    'c.login.a.why': "Pytanie, czy logowanie działa: ta odpowiedź mówi „nie” i dlaczego.", // nieuw, nalezen
+    'c.phish.a.why': "Pytanie o link: szczere „tak” i telefon do działu IT.", // nieuw, nalezen
+    'c.mychoice.a.why': "Pytanie o mocne strony: ta odpowiedź podaje jedną, z przykładem.", // nieuw, nalezen
+    'c.nextstep.a.why': "Pytanie o plan: ta odpowiedź nazywa bbl i mówi, co to znaczy.", // nieuw, nalezen
+    'c.email.a.why': "Pytanie, czy mail poszedł: jeszcze nie, najpierw jest sprawdzany.", // nieuw, nalezen
+    'c.budget.a.why': "Propozycja „kup teraz, zapłać później”: grzeczne „nie”, z powodem.", // nieuw, nalezen
+    'c.healthy.a.why': "Propozycja tabletki: grzeczne „nie”, z powodem.", // nieuw, nalezen
   },
 };
 

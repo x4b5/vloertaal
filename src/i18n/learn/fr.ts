@@ -95,6 +95,24 @@ const t: CultureTranslation = {
     'c.kids.a.why': "On demande pourquoi : cette réponse donne la raison, la crèche a appelé.",
     'c.body.a.why': "On demande où tu as mal : cette réponse dit l’endroit et la cause.",
     'c.jobends.a.why': "Le logement va avec le travail : cette réponse demande quel est le préavis.",
+    // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
+    'c.workorder.a.why': "Un mot n’est pas clair : demander avant de commencer, c’est la bonne réponse.", // nieuw, nalezen
+    'c.handover.a.why': "On demande si tout est fini : cette réponse dit ce qui ne l’est pas, et pourquoi.", // nieuw, nalezen
+    'c.workshop.a.why': "On demande pourquoi : cette réponse donne la raison, les yeux doivent être protégés.", // nieuw, nalezen
+    'c.power.a.why': "Un travail sur une lampe : cette réponse demande d’abord si le courant est coupé.", // nieuw, nalezen
+    'c.garage.a.why': "On demande de changer les pneus : un oui, et une question sur où ils sont.", // nieuw, nalezen
+    'c.carjob.a.why': "Du travail en plus : le client doit d’abord être d’accord, donc cette réponse l’appelle.", // nieuw, nalezen
+    'c.placement.a.why': "On demande quand : cette réponse donne le jour, et la convention passe d’abord.", // nieuw, nalezen
+    'c.review.a.why': "Le retour n’est pas encore clair : demander qu’on montre, c’est une bonne réponse.", // nieuw, nalezen
+    'c.council.a.why': "On parle du vote : un oui, et les deux choses à prendre.", // nieuw, nalezen
+    'c.police.a.why': "La police demande la pièce d’identité : la montrer et demander ce qui se passe.", // nieuw, nalezen
+    'c.login.a.why': "On demande si la connexion marche : cette réponse dit non, et pourquoi.", // nieuw, nalezen
+    'c.phish.a.why': "On demande pour le lien : un oui honnête, et un appel à l’informatique.", // nieuw, nalezen
+    'c.mychoice.a.why': "On demande les points forts : cette réponse en nomme un, avec un exemple.", // nieuw, nalezen
+    'c.nextstep.a.why': "On demande le projet : cette réponse nomme la bbl et ce que ça veut dire.", // nieuw, nalezen
+    'c.email.a.why': "On demande s’il est envoyé : pas encore, il est d’abord vérifié.", // nieuw, nalezen
+    'c.budget.a.why': "On propose de payer plus tard : un non poli, avec la raison.", // nieuw, nalezen
+    'c.healthy.a.why': "On propose un cachet : un non poli, avec la raison.", // nieuw, nalezen
   },
 };
 

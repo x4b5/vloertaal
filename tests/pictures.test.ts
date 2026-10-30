@@ -40,7 +40,12 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     // ouderschapsverlof" and "het zorgverlof" (l.kids), "de eindafrekening", "opzeggen" and
     // "uitschrijven" (l.jobends), "de werkvergunning", "de zzp’er" and "de inburgering" (l.permit).
     for (const id of ['w.geboortedatum', 'w.maandag', 'w.totenmet', 'w.hoofd', 'w.rug', 'w.buik', 'w.zorgverlof', 'w.eindafrekening', 'w.zzper', 'w.inburgering']) expect(abstract).toContain(id);
-    expect(abstract.length).toBe(143);
+    // 209 (30 October 2026, Entree in the Taal track): 66 new abstract words in 17 lessons, among
+    // them "het aantal" and "klaarleggen" (l.workorder), "nakijken" and "op slot" (l.handover),
+    // "onder spanning" (l.power), "de POK" (l.placement), all six of l.mychoice and l.nextstep, "de
+    // bedenktijd" (l.budget), "somber" (l.healthy) and "de verkiezing" (l.council).
+    for (const id of ['w.aantal', 'w.klaarleggen', 'w.nakijken', 'w.opslot', 'w.onderspanning', 'w.pok', 'w.goedin', 'w.startkwalificatie', 'w.bedenktijd', 'w.somber', 'w.verkiezing']) expect(abstract).toContain(id);
+    expect(abstract.length).toBe(209);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).

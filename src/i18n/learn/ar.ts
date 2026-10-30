@@ -95,6 +95,24 @@ const t: CultureTranslation = {
     'c.kids.a.why': "السؤال لماذا: هذا الرد يعطي السبب، الحضانة اتصلت.",
     'c.body.a.why': "السؤال أين الألم: هذا الرد يذكر المكان والسبب.",
     'c.jobends.a.why': "السكن مرتبط بالعمل: هذا الرد يسأل عن مدة الإشعار.",
+    // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
+    'c.workorder.a.why': "كلمة غير واضحة: السؤال قبل البدء هو الرد الصحيح.", // nieuw, nalezen
+    'c.handover.a.why': "السؤال هل انتهى كل شيء: هذا الرد يقول ما لم ينتهِ، ولماذا.", // nieuw, nalezen
+    'c.workshop.a.why': "السؤال لماذا: هذا الرد يذكر السبب، العين تحتاج إلى حماية.", // nieuw, nalezen
+    'c.power.a.why': "عمل على مصباح: هذا الرد يسأل أولاً هل فُصلت الكهرباء.", // nieuw, nalezen
+    'c.garage.a.why': "طلب تغيير الإطارات: نعم، وسؤال عن مكانها.", // nieuw, nalezen
+    'c.carjob.a.why': "عمل إضافي: يجب أن يوافق الزبون أولاً، لذلك هذا الرد يتصل به.", // nieuw, nalezen
+    'c.placement.a.why': "السؤال متى: هذا الرد يذكر اليوم، والعقد يأتي أولاً.", // nieuw, nalezen
+    'c.review.a.why': "الملاحظة غير واضحة بعد: طلب الشرح بالعرض رد جيد.", // nieuw, nalezen
+    'c.council.a.why': "السؤال عن التصويت: نعم، والشيئان اللازم أخذهما.", // nieuw, nalezen
+    'c.police.a.why': "الشرطة تطلب الهوية: إظهارها والسؤال عمّا يحدث.", // nieuw, nalezen
+    'c.login.a.why': "السؤال هل ينجح الدخول: هذا الرد يقول لا، ولماذا.", // nieuw, nalezen
+    'c.phish.a.why': "السؤال عن الرابط: نعم صادقة، واتصال بقسم تقنية المعلومات.", // nieuw, nalezen
+    'c.mychoice.a.why': "السؤال عن نقاط القوة: هذا الرد يذكر واحدة، مع مثال.", // nieuw, nalezen
+    'c.nextstep.a.why': "السؤال عن الخطة: هذا الرد يذكر bbl ومعناها.", // nieuw, nalezen
+    'c.email.a.why': "السؤال هل أُرسل: ليس بعد، يُراجَع أولاً.", // nieuw, nalezen
+    'c.budget.a.why': "عرض «ادفع لاحقاً»: رفض مهذّب، مع السبب.", // nieuw, nalezen
+    'c.healthy.a.why': "عرض حبة: رفض مهذّب، مع السبب.", // nieuw, nalezen
   },
 };
 

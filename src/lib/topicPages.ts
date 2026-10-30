@@ -61,6 +61,12 @@ export const HEADINGS: Readonly<Record<string, string>> = {
   'u.shop': 'Werken in de winkel: vakken vullen en kassa',
   'u.numbers': 'Rekenen op je werk: tijd, geld en maten',
   'u.ai': 'Slimme apps en AI: wat kan wel en wat niet?',
+  'u.finish': 'De werkbon lezen en je werk afmelden',
+  'u.tech': 'Werkplaats: gereedschap, lawaai en stroom',
+  'u.garage': 'In de garage: banden, olie en de klant',
+  'u.stage': 'Stage lopen: de POK en feedback vragen',
+  'u.society': 'Stemmen, de gemeente en je rechten',
+  'u.online': 'Inloggen, wachtwoord en nepmail op je werk',
 };
 
 const COUNT = ['geen', 'één', 'twee', 'drie', 'vier', 'vijf', 'zes', 'zeven', 'acht'];

@@ -412,6 +412,15 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.aiplan': [0, 2, 3, 4], // a big decision: ask who decided it, and ask a person to look again
   'c.harvest': [1, 2, 4], // piece rate: still the minimum wage per hour; write down hours and crates
   'c.greensafe': [0, 4, 5, 6], // a sprayed greenhouse: the sign at the door, wait for your supervisor
+  'c.workorder': [0, 2, 3], // something not clear? ask before you start
+  'c.handover': [0, 3, 4, 5], // tell what is done and what is not; say it now
+  'c.review': [0, 2, 3], // not clear? ask for an example
+  'c.nextstep': [0, 1, 3, 4], // level 2; the bbl: work and school, you need a job or a place
+  'c.email': [0, 1, 2, 3], // a greeting, what and when, your name
+  'c.healthy': [0, 3, 5], // under the influence: dangerous and forbidden; talk to your huisarts
+  'c.council': [0, 3, 4], // who may vote for the gemeenteraad: EU, and outside the EU after 5 years
+  'c.police': [0, 2, 3, 4], // a decision you do not agree with: object in writing, before the date
+  'c.phish': [0, 5, 6, 7], // clicked anyway: change your password and call the IT department
 };
 
 /** All tips in course order: the ones above (with the Smart tools tips after "Asking for help" and the Numbers and details tips before "Time and schedule"), then those of the work-and-rights units (src/content/work.ts). */

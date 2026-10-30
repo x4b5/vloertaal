@@ -90,6 +90,24 @@ const reasons: Record<string, string> = {
   'c.body.a': 'Asked where it hurts: this reply names the place and the cause.',
   'c.kids.a': 'Asked why: this reply gives the reason, the daycare called.',
   'c.jobends.a': 'The house goes with the job: this reply asks about the notice period.',
+  // Entree in the Taal track (30 October 2026).
+  'c.workorder.a': 'Not sure about a word: asking before you start is the right reply.',
+  'c.handover.a': 'Asked if all is done: this reply says what is not done, and why.',
+  'c.workshop.a': 'Asked why: this reply gives the reason, the eyes need protection.',
+  'c.power.a': 'Work on a lamp: this reply first asks if the power is off.',
+  'c.garage.a': 'Asked to change the tyres: a yes, and a question about where they are.',
+  'c.carjob.a': 'Extra work: the customer must agree first, so this reply calls them.',
+  'c.placement.a': 'Asked when: this reply gives the day, and the agreement comes first.',
+  'c.review.a': 'Feedback is not clear yet: asking to be shown is a good reply.',
+  'c.mychoice.a': 'Asked about strong points: this reply names one, with an example.',
+  'c.nextstep.a': 'Asked about the plan: this reply names the bbl and what it means.',
+  'c.email.a': 'Asked if it was sent: not yet, it gets checked first.',
+  'c.budget.a': 'Buy now, pay later is offered: a polite no, with the reason.',
+  'c.healthy.a': 'A pill is offered: a polite no, with the reason.',
+  'c.council.a': 'Asked about voting: a yes, and the two things to bring.',
+  'c.police.a': 'The police ask for ID: show it, and ask what is going on.',
+  'c.login.a': 'Asked if logging in works: this reply says no, and why.',
+  'c.phish.a': 'Asked about the link: an honest yes, and a call to the IT department.',
 };
 
 /** Why the right reply of a chat fits, with its translation id; undefined when there is none. */

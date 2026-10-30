@@ -37,4 +37,10 @@ export const unitIcons: Record<string, string> = {
   'u.numbers': 'w.uurloon',
   'u.ai': 'w.ai',
   'u.kas': 'w.kas',
+  'u.finish': 'w.klaar',
+  'u.tech': 'w.boor',
+  'u.garage': 'w.fiets',
+  'u.stage': 'w.opleiding',
+  'u.society': 'w.post',
+  'u.online': 'w.computer',
 };

@@ -3,9 +3,9 @@
 *Voor docenten, coaches en loopbaanbegeleiders in het mbo. Stand: 15 oktober 2026, bijgewerkt op
 30 oktober 2026 voor de 14 nieuwe Werkregels-lessen van de tweede Entree-ronde (schrijven, loopbaan,
 geld, gezond leven, mediawijsheid, techniek en de garage; zie
-[`werkregels-curriculum.md`](werkregels-curriculum.md), deel 7). De andere rijen zijn niet opnieuw nagekeken.
-De dekking is een indicatie (zie het slot). Voor wat er nog ontbreekt, is er een lesplan:
-[`entree-aanvulling.md`](entree-aanvulling.md).*
+[`werkregels-curriculum.md`](werkregels-curriculum.md), deel 7) en voor het spoor Taal (§3.5). De andere
+rijen zijn niet opnieuw nagekeken. De dekking is een indicatie (zie het slot). Voor wat er nog ontbreekt,
+is er een lesplan: [`entree-aanvulling.md`](entree-aanvulling.md).*
 
 ---
 
@@ -15,8 +15,8 @@ Vloertaal is een gratis app voor de telefoon, zonder reclame. Er is geen account
 student leert, blijft alleen op zijn of haar eigen telefoon. De app heeft twee sporen:
 
 - **Taal**: Nederlands voor op het werk, voor studenten die nog weinig Nederlands spreken. Er is
-  uitleg in 9 talen: Arabisch, Bulgaars, Dari, Farsi, Pools, Roemeens, Tigrinya, Turks en
-  Oekraïens. Ook kan alles in het Engels. Elke les heeft 6 woorden, 3 zinnen en een kort
+  uitleg in 13 talen: Arabisch, Bulgaars, Dari, Duits, Farsi, Frans, Pools, Portugees, Roemeens,
+  Spaans, Tigrinya, Turks en Oekraïens. Ook kan alles in het Engels. Elke les heeft 6 woorden, 3 zinnen en een kort
   gesprekje. Bijna elke les heeft ook een tip "Zo werkt het hier" over werken in Nederland.
 - **Werkregels**: de geschreven en ongeschreven regels van werken in Nederland, voor studenten die
   al Nederlands spreken. In eenvoudig Nederlands, op niveau 1F (ongeveer A2). De telefoon leest
@@ -121,9 +121,43 @@ in de klas kunt bespreken.
 | **Assistent dienstverlening (en zorg)** | 🟡 | *In de zorg* (2 lessen) · *Schoonmaken* (2 lessen) | WR Z.1 Hygiëne: schone handen, geen sieraden · WR Z.2 Privacy en medicijnen · WR S.1 Schoonmaakmiddelen: nooit mengen · WR S.2 Je lichaam sparen | Na WR Z.2: wat mag je wel en niet vertellen over een cliënt, thuis of in de groepsapp? *Receptie en facilitair werk ontbreken. Zie de schets in de aanvulling.* |
 | **Assistent verkoop/retail** | 🔴 | Alleen zijdelings (*In de horeca › Serving guests*) | Alleen genoemd: WR 1.2 (vakken vullen, kassa) · WR 4.1 (een baan in een winkel) | *Zie unit 11 (Werkregels) en "In de winkel" (Taal) in de aanvulling.* |
 | **Assistent plant, dier of groene omgeving** | 🟡 (tuinbouw en kas) · 🔴 (dieren, groen onderhoud) | *In de kas › Harvesting and sorting, Safe in the greenhouse* | WR T.1 Veilig in kas en veld · WR T.2 Tempo en stukloon | Laat studenten na WR T.2 een week lang hun uren en kratten opschrijven, en vergelijk dat met een voorbeeld-loonstrook. *Dieren en groen onderhoud: schets in de aanvulling.* |
-| **Assistent mobiliteitsbranche** | 🟡 (Werkregels) · 🔴 (Taal) | *Naar je werk › By bike* gaat over fietsen naar je werk, niet over de werkplaats | WR M.1 Veilig in de werkplaats · WR M.2 De werkorder en de klant | Na WR M.2: laat studenten een werkorder uit de praktijkles lezen. Wat staat erop, en wat doe je als je nog iets ziet? *Nog niet te kiezen als sector bij "Waar werk je?": open de unit met de link `?unit=r.werkplaats`.* |
-| **Assistent metaal-, elektro- en installatietechniek** | 🟡 (Werkregels) · 🔴 (Taal) | *Op de bouw › Tools and materials* (gereedschap) | WR TE.1 Gereedschap, vonken en lawaai · WR TE.2 Stroom: nooit zomaar · ook bruikbaar: WR P.1 (lock-out) · WR 7.1 | Na WR TE.2: wie mag er op jullie school of bpv-plek aan elektra werken, en hoe zie je dat de stroom eraf is? *Nog niet te kiezen als sector: open de unit met `?unit=r.techniek`.* |
+| **Assistent mobiliteitsbranche** | 🟡 (Werkregels en Taal, §3.5) | *Naar je werk › By bike* gaat over fietsen naar je werk, niet over de werkplaats | WR M.1 Veilig in de werkplaats · WR M.2 De werkorder en de klant | Na WR M.2: laat studenten een werkorder uit de praktijkles lezen. Wat staat erop, en wat doe je als je nog iets ziet? *Nog niet te kiezen als sector bij "Waar werk je?": open de unit met de link `?unit=r.werkplaats`.* |
+| **Assistent metaal-, elektro- en installatietechniek** | 🟡 (Werkregels en Taal, §3.5) | *Op de bouw › Tools and materials* (gereedschap) | WR TE.1 Gereedschap, vonken en lawaai · WR TE.2 Stroom: nooit zomaar · ook bruikbaar: WR P.1 (lock-out) · WR 7.1 | Na WR TE.2: wie mag er op jullie school of bpv-plek aan elektra werken, en hoe zie je dat de stroom eraf is? *Nog niet te kiezen als sector: open de unit met `?unit=r.techniek`.* |
 | **ICT** (geen Entree-profiel gevonden ⚖️) | 🔴 | — | — | Voor studenten die naar niveau 2 ICT willen. *Schets in de aanvulling.* |
+
+
+### 3.5 Nieuw in het spoor Taal (30 oktober 2026)
+
+De top 10 van de Entree-gaten heeft nu ook lessen in het spoor Taal: 17 lessen, elk met 6 woorden,
+3 zinnen, een gesprekje en een tip "Zo werkt het hier", met uitleg in alle 13 hulptalen. De zes
+nieuwe onderwerpen staan **aan het eind** van het lespad, zodat een student die al bezig is
+niets kwijtraakt. De andere vijf lessen staan aan het eind van een bestaand onderwerp. De tabellen
+hierboven zijn van 15 oktober. Deze tabel zegt wat er in Taal bij is gekomen. De opnames volgen:
+tot dan leest de stem van de telefoon de nieuwe zinnen voor.
+
+| Gat (Entree) | Was in Taal | Nu in Taal | Nieuwe lessen (titel in de app) |
+|---|---|---|---|
+| **W1 en W3**: werkbon lezen, afmelden | 🟡 / 🔴 | 🟢 | *Je werk afronden › The work order, Done, or not yet?* |
+| **Metaal, elektro en installatie** | 🔴 | 🟡 | *In de werkplaats › Workshop tools, Power off first* |
+| **Loopbaan**: wat kan en wil ik, na Entree | 🟡 | 🟢 | *Diploma's en verder komen › What I am good at, After Entree* |
+| **Mobiliteit** | 🔴 | 🟡 | *In de garage › Tyres, oil and the lift, The customer decides* |
+| **Bpv (stage)** | 🔴 | 🟢 | *Stage lopen › Your placement, Feedback on your placement* |
+| **Nederlands 1F: schrijven** | 🔴 | 🟡 | *Bellen en appen met je werk › Writing to work* (een korte mail: groet, wat, wanneer, je naam) |
+| **Economisch: consument, budget** | 🟡 | 🟢 | *Geld en post › Your money each month* (vaste lasten, sparen, achteraf betalen, bedenktijd) |
+| **Vitaal: gezond leven** | 🟡 | 🟢 | *Gezondheid › Fit for work* (slapen, ontbijt, bewegen, geen drugs, hulp bij de huisarts) |
+| **Politiek-juridisch: stemmen, rechtsstaat** | 🔴 | 🟡 | *Meedoen in Nederland › The municipality and voting, Police and your rights* |
+| **Digitaal**: inloggen, phishing | 🟡 | 🟢 | *Online op je werk › Logging in, Fake e-mails* |
+
+- **Mobiliteit en techniek** zijn nog geen eigen sector bij "Waar werk je?". Deze onderwerpen staan
+  daarom voor iedereen in het lespad, onder het thema *Je baan*, na de andere onderwerpen.
+- **Feiten met ⚖️** in deze lessen (een deskundige kijkt ze na): gehoorbescherming en heet werk,
+  werken aan elektriciteit (NEN 3140), gevaarlijk afval in de garage, meerwerk alleen met akkoord
+  van de klant, de proefrit met rijbewijs, de POK, doorstromen naar niveau 2 en de
+  startkwalificatie, de bbl, de bedenktijd van 14 dagen en de garantie, alcohol en drugs op het
+  werk, stemrecht voor de gemeenteraad, de identificatieplicht vanaf 14 jaar, bezwaar maken vóór de
+  datum in de brief, het recht op een advocaat, en dat je je DigiD aan niemand geeft.
+- **Tip voor de docent.** Doe *Je werk afronden* in de week vóór de bpv, en *Stage lopen* in de eerste
+  week ervan. Laat studenten na *Writing to work* hun eigen mail schrijven aan hun praktijkopleider.
 
 ---
 

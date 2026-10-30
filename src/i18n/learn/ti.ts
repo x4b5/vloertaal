@@ -95,6 +95,24 @@ const t: CultureTranslation = {
     'c.kids.a.why': 'ስለምንታይ ተሓቲቱ፡ እዚ መልሲ ምኽንያቱ ይህብ፡ መውዓሊ ህጻናት ደዊሎም።', // nagelezen (2e lezing)
     'c.body.a.why': 'ኣበይ ከም ዘቐንዝው ተሓቲቱ፡ እዚ መልሲ ቦታን ምኽንያትን ይጠቅስ።', // nagelezen (2e lezing)
     'c.jobends.a.why': 'እቲ ገዛ ምስቲ ስራሕ ዝተኣሳሰረ እዩ፡ እዚ መልሲ ብዛዕባ ግዜ ቅድመ-ምሕባር ይሓትት።', // nagelezen (2e lezing)
+    // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
+    'c.workorder.a.why': "ዘይንጹር ቃል: ቅድሚ ምጅማር ምሕታት ቅኑዕ መልሲ እዩ።", // nieuw, nalezen
+    'c.handover.a.why': "ኩሉ ተወዲኡ ዶ ተባሂሉ: እዚ መልሲ እንታይ ከምዘይተወድአን ስለምንታይን ይነግር።", // nieuw, nalezen
+    'c.workshop.a.why': "ስለምንታይ ተባሂሉ: እዚ መልሲ ምኽንያት ይህብ፡ ዓይኒ ሓለዋ የድልዮ።", // nieuw, nalezen
+    'c.power.a.why': "ስራሕ ኣብ መብራህቲ: እዚ መልሲ ቅድም ኤሌክትሪክ ተቋሪጹ ዶ ይሓትት።", // nieuw, nalezen
+    'c.garage.a.why': "ጎማ ክቕየር ተሓቲቱ: እወ፡ ጎማታት ኣበይ ከም ዘለዉ ሕቶ እውን።", // nieuw, nalezen
+    'c.carjob.a.why': "ተወሳኺ ስራሕ: ዓሚል ቅድም ክሰማማዕ ኣለዎ፡ ስለዚ እዚ መልሲ ይድውለሉ።", // nieuw, nalezen
+    'c.placement.a.why': "መዓስ ተባሂሉ: እዚ መልሲ መዓልቲ ይህብ፡ ውዕል ድማ ቅድም ይመጽእ።", // nieuw, nalezen
+    'c.review.a.why': "ርእይቶ ገና ንጹር ኣይኮነን: ከርእዩ ምሕታት ጽቡቕ መልሲ እዩ።", // nieuw, nalezen
+    'c.council.a.why': "ብዛዕባ ድምጺ ምሃብ: እወ፡ ክውሰዱ ዘለዎም ክልተ ነገራት እውን።", // nieuw, nalezen
+    'c.police.a.why': "ፖሊስ መንነት ወረቐት ይሓትት: ምርኣይን እንታይ ከም ዘጋጠመ ምሕታትን።", // nieuw, nalezen
+    'c.login.a.why': "ምእታው ይሰርሕ ዶ ተባሂሉ: እዚ መልሲ ኣይፋል ይብል፡ ስለምንታይ እውን።", // nieuw, nalezen
+    'c.phish.a.why': "ብዛዕባ ሊንክ: ቅኑዕ እወ፡ ናብ ክፍሊ IT ምድዋል እውን።", // nieuw, nalezen
+    'c.mychoice.a.why': "ብዛዕባ ጥንካረ ተሓቲቱ: እዚ መልሲ ሓደ ብኣብነት ይጠቕስ።", // nieuw, nalezen
+    'c.nextstep.a.why': "ብዛዕባ መደብ ተሓቲቱ: እዚ መልሲ bblን ትርጉሙን ይጠቕስ።", // nieuw, nalezen
+    'c.email.a.why': "ተላኢኹ ዶ ተባሂሉ: ገና፡ ቅድም ይፍተሽ።", // nieuw, nalezen
+    'c.budget.a.why': "«ጸኒሕካ ክፈል» ቀሪቡ: ትሑት ኣይፋል፡ ምስ ምኽንያት።", // nieuw, nalezen
+    'c.healthy.a.why': "ከኒና ቀሪቡ: ትሑት ኣይፋል፡ ምስ ምኽንያት።", // nieuw, nalezen
   },
 };
 

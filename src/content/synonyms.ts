@@ -38,6 +38,16 @@ export const NEAR_SYNONYMS: readonly (readonly string[])[] = [
   ['de uitkering', 'de WW'],
   ['werkloos', 'de werkzoekende'],
   ['wassen', 'handen wassen'],
+  // Entree in the Taal track (30 October 2026).
+  ['kapot', 'beschadigd', 'de storing'],
+  ['nakijken', 'controleren', 'kijken'],
+  ['de werkbon', 'de opdracht', 'de taak'],
+  ['het gereedschap', 'de boor', 'de hamer'],
+  ['de stroom', 'onder spanning'],
+  ['de agent', 'de politie'],
+  ['het rijbewijs', 'het identiteitsbewijs'],
+  ['de school', 'de opleiding'],
+  ['moe', 'somber'],
 ];
 
 const ARTICLES = /^(de|het|een)\s+/i;

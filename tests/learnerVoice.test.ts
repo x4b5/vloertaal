@@ -44,6 +44,24 @@ const PENDING_RECORDING = new Set<string>([
   'De kinderopvang belde. Mijn zoon heeft koorts.',
   'In mijn rug. Ik heb een zware doos getild.',
   'Wat is de opzegtermijn van mijn huurcontract?',
+  // Entree in the Taal track (30 October 2026): the replies of the 17 new lessons.
+  'Bijna. Wat betekent dit woord op de werkbon?',
+  'Bijna. Kamer vier zat op slot.',
+  'Bij het zagen kunnen er stukjes in mijn oog komen.',
+  'Is de stroom eraf? Anders wacht ik op de elektricien.',
+  'Ja. Waar liggen de winterbanden?',
+  'Eerst bel ik de klant. Hij moet akkoord zijn.',
+  'Maandag. Eerst tekenen we de POK.',
+  'Oké. Kunt u laten zien hoe het sneller kan?',
+  'Ja. Ik heb mijn stempas en mijn ID.',
+  'Ja, hier is het. Wat is er aan de hand?',
+  'Nee, mijn wachtwoord werkt niet.',
+  'Ja. Ik bel de ICT-afdeling.',
+  'Ik ben nauwkeurig. Thuis zorg ik voor mijn moeder.',
+  'Ik wil de bbl doen. Dan werk ik en leer ik.',
+  'Nog niet. Ik lees hem eerst na.',
+  'Nee, dank je. Achteraf betalen is ook een schuld.',
+  'Nee, dank je. Ik werk niet onder invloed.',
 ]);
 
 
