@@ -41,6 +41,7 @@ import { NoVoiceNote } from './RulesHelp';
 import { SectorCards, SectorGroupCards, SectorIcon } from './Sector';
 import { MicIcon } from './Speaking';
 import { useVoices } from './useVoices';
+import { ToetsLine } from './Toets';
 
 export type { SettingsPage } from '../lib/settingsMenu';
 
@@ -116,6 +117,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   counting: { nl: 'Anoniem meetellen', key: 'countTitle', icon: <BarsIcon size={24} /> },
   reset: { nl: 'Voortgang wissen', key: 'resetProgress', icon: <AlertIcon size={24} /> },
   unlock: { nl: 'Volledige versie', key: 'unlockFull', icon: <LockIcon size={24} /> },
+  toets: { nl: 'Wat ken je al?', key: 'toetsTitle', icon: <BarsIcon size={24} /> },
 };
 
 /** A short value in the help language only (English when there is none). */
@@ -399,7 +401,7 @@ export function Settings({
       case 'english':
         return onOff(wantsEnglish(), (on) => { setWantsEnglish(on); applyEnglish(lang?.code, on); });
       case 'certificates':
-        return <CertificatesCard progress={progress} lang={lang} onOpen={onCertificate} />;
+        return <><CertificatesCard progress={progress} lang={lang} onOpen={onCertificate} /><ToetsLine progress={progress} lang={lang} /></>;
       case 'sound':
         return (
           <>

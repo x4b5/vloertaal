@@ -314,6 +314,22 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'لم يتم التحميل. هل الإنترنت متصل؟',
     retry: 'إعادة المحاولة',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: { m: 'ماذا تعرف بالفعل؟', f: 'ماذا تعرفين بالفعل؟', x: 'ما الذي أعرفه بالفعل؟' }, // nieuw, nalezen
+    toetsOffer: 'حوالي 10 دقائق. لا توجد علامات. إنه لك فقط.', // nieuw, nalezen
+    toetsEndOffer: { m: 'لقد تعلمت الكثير. أعد الاختبار وانظر ماذا تعرف الآن.', f: 'لقد تعلمتِ الكثير. أعيدي الاختبار وانظري ماذا تعرفين الآن.', x: 'حان وقت إعادة الاختبار، لرؤية التقدّم في التعلّم.' }, // nieuw, nalezen
+    toetsPartListen: 'الاستماع', // nieuw, nalezen
+    toetsPartWords: 'الكلمات', // nieuw, nalezen
+    toetsPartSentences: 'الجمل', // nieuw, nalezen
+    toetsListenAsk: { m: 'استمع. ماذا يعني؟', f: 'استمعي. ماذا يعني؟', x: 'استماع: ماذا يعني؟' }, // nieuw, nalezen
+    toetsNotSure: { m: 'لا تعرف؟ اختر واحدة فقط. لا بأس.', f: 'لا تعرفين؟ اختاري واحدة فقط. لا بأس.', x: 'غير معروف؟ يكفي اختيار واحدة. لا بأس.' }, // nieuw, nalezen
+    toetsMicKeep: { m: 'يبقى تسجيلك على هذا الهاتف فقط. لاحقاً يمكنك أن تسمع نفسك مرة أخرى.', f: 'يبقى تسجيلكِ على هذا الهاتف فقط. لاحقاً يمكنكِ أن تسمعي نفسكِ مرة أخرى.', x: 'يبقى التسجيل على هذا الهاتف فقط. ويمكن سماعه مرة أخرى لاحقاً.' }, // nieuw, nalezen
+    toetsStartDone: { m: 'بداية جيدة! هذا ما تعرفه بالفعل.', f: 'بداية جيدة! هذا ما تعرفينه بالفعل.', x: 'بداية جيدة! هذه هي النتيجة الآن.' }, // nieuw, nalezen
+    toetsEndDone: { m: 'أحسنت! انظر ماذا تعرف الآن.', f: 'أحسنتِ! انظري ماذا تعرفين الآن.', x: 'عمل جيد! هذه هي النتيجة الآن.' }, // nieuw, nalezen
+    toetsYouThen: 'أنت سابقاً', // nieuw, nalezen
+    toetsYouNow: 'أنت الآن', // nieuw, nalezen
+    toetsKeepGoing: { m: 'تمرّن قليلاً كل يوم. هكذا تتعلم أكثر فأكثر.', f: 'تمرّني قليلاً كل يوم. هكذا تتعلمين أكثر فأكثر.', x: 'القليل من التمرين كل يوم يعني تعلّماً أكثر فأكثر.' }, // nieuw, nalezen
+    toetsStart: { m: 'ابدأ الاختبار', f: 'ابدئي الاختبار', x: 'بدء الاختبار' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

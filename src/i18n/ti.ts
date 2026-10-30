@@ -315,6 +315,22 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'ኣይተጻዕነን። ኢንተርነት ኣሎ ድዩ?',
     retry: 'ዳግማይ ምፍታን',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: { m: 'ድሮ እንታይ ትፈልጥ?', f: 'ድሮ እንታይ ትፈልጢ?', x: 'ድሮ እንታይ ትፈልጡ?' }, // nieuw, nalezen
+    toetsOffer: { m: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኻ ጥራይ እዩ።', f: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኺ ጥራይ እዩ።', x: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኹም ጥራይ እዩ።' }, // nieuw, nalezen
+    toetsEndOffer: { m: 'ብዙሕ ተማሂርካ ኢኻ። ፈተና ደጊምካ ግበር፣ ሕጂ እንታይ ከም እትፈልጥ ርአ።', f: 'ብዙሕ ተማሂርኪ ኢኺ። ፈተና ደጊምኪ ግበሪ፣ ሕጂ እንታይ ከም እትፈልጢ ርአዪ።', x: 'ብዙሕ ተማሂርኩም ኢኹም። ፈተና ደጊምኩም ግበሩ፣ ሕጂ እንታይ ከም እትፈልጡ ርአዩ።' }, // nieuw, nalezen
+    toetsPartListen: 'ምስማዕ', // nieuw, nalezen
+    toetsPartWords: 'ቃላት', // nieuw, nalezen
+    toetsPartSentences: 'ሓረጋት', // nieuw, nalezen
+    toetsListenAsk: { m: 'ስማዕ። እንታይ ማለት እዩ?', f: 'ስምዒ። እንታይ ማለት እዩ?', x: 'ስምዑ። እንታይ ማለት እዩ?' }, // nieuw, nalezen
+    toetsNotSure: { m: 'ኣይትፈልጥን ዲኻ? ሓደ ጥራይ ምረጽ። ጸገም የብሉን።', f: 'ኣይትፈልጥን ዲኺ? ሓደ ጥራይ ምረጺ። ጸገም የብሉን።', x: 'ኣይትፈልጡን ዲኹም? ሓደ ጥራይ ምረጹ። ጸገም የብሉን።' }, // nieuw, nalezen
+    toetsMicKeep: { m: 'ቅጂኻ ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኻ ደጊምካ ክትሰምዕ ትኽእል ኢኻ።', f: 'ቅጂኺ ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኺ ደጊምኪ ክትሰምዒ ትኽእሊ ኢኺ።', x: 'ቅጂኹም ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኹም ደጊምኩም ክትሰምዑ ትኽእሉ ኢኹም።' }, // nieuw, nalezen
+    toetsStartDone: { m: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጥ ኢኻ።', f: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጢ ኢኺ።', x: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጡ ኢኹም።' }, // nieuw, nalezen
+    toetsEndDone: { m: 'ጽቡቕ ገይርካ! ሕጂ እንታይ ከም እትፈልጥ ርአ።', f: 'ጽቡቕ ገይርኪ! ሕጂ እንታይ ከም እትፈልጢ ርአዪ።', x: 'ጽቡቕ ገይርኩም! ሕጂ እንታይ ከም እትፈልጡ ርአዩ።' }, // nieuw, nalezen
+    toetsYouThen: { m: 'ንስኻ ቅድም', f: 'ንስኺ ቅድም', x: 'ንስኹም ቅድም' }, // nieuw, nalezen
+    toetsYouNow: { m: 'ንስኻ ሕጂ', f: 'ንስኺ ሕጂ', x: 'ንስኹም ሕጂ' }, // nieuw, nalezen
+    toetsKeepGoing: { m: 'መዓልታዊ ቁሩብ ተለማመድ። ከምኡ ብዝያዳ ትማሃር።', f: 'መዓልታዊ ቁሩብ ተለማመዲ። ከምኡ ብዝያዳ ትማሃሪ።', x: 'መዓልታዊ ቁሩብ ተለማመዱ። ከምኡ ብዝያዳ ትማሃሩ።' }, // nieuw, nalezen
+    toetsStart: { m: 'ፈተና ጀምር', f: 'ፈተና ጀምሪ', x: 'ፈተና ጀምሩ' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

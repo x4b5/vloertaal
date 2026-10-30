@@ -46,6 +46,7 @@ import { RULES_STUB } from './rulesStub';
 import { forceNoVoiceNoteForShot, NoVoiceNote, RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf } from '../components/RulesHelp';
 import { SocialMap, SocialMapLink } from '../components/SocialMap';
 import { allRegionUnits, isRegionChoice, regionOf, type RegionChoice } from '../content/regio';
+import { ToetsShot } from './ToetsShot';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -118,6 +119,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The streak stopped at 12 (record 21), shown once on the next open.
   if (shot === 'stopped') return <StreakStopped streak={12} best={21} lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
+  // "Wat ken je al?": /?shot=toets&state=offer|offer-eind|question&at=N|speak|result-instap|result-eind|page (src/dev/ToetsShot.tsx).
+  if (shot === 'toets') return <ToetsShot lang={lang} gender={gender} />;
   // The app icon in every variant (scripts/icons/make-icons.cjs reads these): /?shot=logo&px=512
   if (shot === 'logo') return <LogoSheet px={Number(q.get('px') ?? 120)} />;
   // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety

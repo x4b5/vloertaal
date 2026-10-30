@@ -314,6 +314,22 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Yüklenmedi. İnternet var mı?',
     retry: 'Tekrar dene',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: 'Neleri zaten biliyorsun?', // nieuw, nalezen
+    toetsOffer: 'Yaklaşık 10 dakika. Not yok. Sadece senin için.', // nieuw, nalezen
+    toetsEndOffer: 'Çok şey öğrendin. Testi tekrar yap ve şimdi neler bildiğini gör.', // nieuw, nalezen
+    toetsPartListen: 'Dinleme', // nieuw, nalezen
+    toetsPartWords: 'Kelimeler', // nieuw, nalezen
+    toetsPartSentences: 'Cümleler', // nieuw, nalezen
+    toetsListenAsk: 'Dinle. Ne anlama geliyor?', // nieuw, nalezen
+    toetsNotSure: 'Bilmiyor musun? Birini seç, yeter. Sorun değil.', // nieuw, nalezen
+    toetsMicKeep: 'Kaydın sadece bu telefonda kalır. Sonra kendini tekrar dinleyebilirsin.', // nieuw, nalezen
+    toetsStartDone: 'İyi bir başlangıç! Bunları zaten biliyorsun.', // nieuw, nalezen
+    toetsEndDone: 'Aferin! Şimdi neler bildiğine bak.', // nieuw, nalezen
+    toetsYouThen: 'Sen o zaman', // nieuw, nalezen
+    toetsYouNow: 'Sen şimdi', // nieuw, nalezen
+    toetsKeepGoing: 'Her gün biraz çalış. Böylece gittikçe daha çok öğrenirsin.', // nieuw, nalezen
+    toetsStart: 'Testi yap', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -314,6 +314,22 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'بارگیری نشد. انترنت وصل است؟',
     retry: 'دوباره کوشش کنید',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: 'از پیش چه می‌دانی؟', // nieuw, nalezen
+    toetsOffer: 'تقریباً 10 دقیقه. نمره‌ای در کار نیست. فقط برای خودت است.', // nieuw, nalezen
+    toetsEndOffer: 'تو چیزهای زیادی یاد گرفته‌ای. آزمون را دوباره انجام بده و ببین اکنون چه می‌دانی.', // nieuw, nalezen
+    toetsPartListen: 'شنیدن', // nieuw, nalezen
+    toetsPartWords: 'کلمات', // nieuw, nalezen
+    toetsPartSentences: 'جملات', // nieuw, nalezen
+    toetsListenAsk: 'گوش کن. معنایش چیست؟', // nieuw, nalezen
+    toetsNotSure: 'نمی‌دانی؟ فقط یکی را انتخاب کن. مشکلی نیست.', // nieuw, nalezen
+    toetsMicKeep: 'ثبت صدایت فقط در همین تیلفون می‌ماند. بعداً می‌توانی دوباره صدای خود را بشنوی.', // nieuw, nalezen
+    toetsStartDone: 'آغاز خوب! این‌ها را از پیش می‌دانی.', // nieuw, nalezen
+    toetsEndDone: 'آفرین! ببین اکنون چه می‌دانی.', // nieuw, nalezen
+    toetsYouThen: 'تو پیشتر', // nieuw, nalezen
+    toetsYouNow: 'تو اکنون', // nieuw, nalezen
+    toetsKeepGoing: 'هر روز کمی تمرین کن. این‌گونه بیشتر و بیشتر یاد می‌گیری.', // nieuw, nalezen
+    toetsStart: 'آزمون را آغاز کن', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

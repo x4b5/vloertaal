@@ -52,6 +52,28 @@ nummer, geen naam.
 6. Na les 1: vraag of de leerling de app op het beginscherm wil zetten, en of hij of zij de
    dagelijkse herinnering wil. Dat is een eigen keuze, geen verplichting.
 
+## De toets "Wat ken je al?"
+
+Om te zien wat een leerling erbij leert, heeft het spoor Taal een korte toets van ongeveer
+10 minuten: 18 vragen (6 luisteren, 6 woorden, 6 zinnen) en aan het eind één zin hardop zeggen.
+Er is geen cijfer en geen "geslaagd" of "gezakt". De uitslag is drie balken.
+
+- **Instap, in week 1.** Na de start staat op het lespad een kaart "Wat ken je al? · 10 min" met
+  **Doen** en **Later**. Op dag 1 doet de leerling de toets vóór les 1 (reken er 10 minuten bij).
+  Wie op **Later** tikt, slaat de instap over; de toets kan dan nog via **Instellingen → Lessen →
+  Wat ken je al?**.
+- **Eind, na 4 weken.** De app biedt de toets opnieuw aan na 28 dagen of na 3 afgeronde
+  onderwerpen, wat het eerst komt. Dit is een andere versie (B) met andere vragen van dezelfde
+  moeilijkheid, dus de leerling herkent niets. De eindtoets kan ook altijd via Instellingen.
+- **Samen kijken.** De begeleider kijkt na de eindtoets samen met de leerling naar het
+  uitslagscherm: per onderdeel "Jij toen" en "Jij nu" naast elkaar, en de eigen stem van toen en nu
+  om te beluisteren. Dezelfde uitslag staat later onder **Instellingen → Lessen → Wat ken je al?**
+  en als regel bij **Mijn certificaten**. Noteer de getallen op het waarneemformulier (nummer, geen
+  naam).
+- **Niets naar een server.** De uitslag en de twee opnames blijven op de telefoon. GoatCounter
+  telt alleen dat een toets begon en klaar is (met A of B), nooit de score. "Voortgang wissen"
+  wist ook de opnames.
+
 ## Waarneemformulier dag 1
 
 Eén regel per leerling. Vul in met **ja / met hulp / nee**, en schrijf in de laatste kolom kort
@@ -112,6 +134,8 @@ iets over de leerling: geen hulptaal, geen sector, geen versie, geen toestel-id.
 | Les afgerond | `/e/lesson-done/l-cv/t2-5`: met hoe lang ongeveer (`t0-2`, `t2-5`, `t5-10`, `t10plus` minuten; de tijd dat de app weg was telt niet) |
 | Herhaling afgerond | `/e/review-done/t5-10` |
 | Onderwerp afgerond | `/e/unit-done` |
+| Toets "Wat ken je al?" gestart | `/e/toets-start/a` (instap, versie A) of `/e/toets-start/b` (eind, versie B) |
+| Toets klaar | `/e/toets-done/a` of `/e/toets-done/b`: nooit de score |
 
 Sinds 29 oktober 2026 telt de app **niet meer**: het openen van de app, het invullen van een code,
 en per hulptaal, sector of versie. Eén gebeurtenis ging toen als tot 8 losse verzoeken tegelijk,

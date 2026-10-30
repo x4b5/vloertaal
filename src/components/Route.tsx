@@ -41,8 +41,11 @@ import { loadTopicsOrder, saveTopicsOrder, type TopicsOrder } from '../lib/topic
  * learner first sees what the topic is before a lesson begins. "Other topic" opens All topics: a
  * list of every topic, each leading to its topic page (lessons, pocket card, certificate).
  */
-export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink, note, unlocked = false }: {
+export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink, note, unlocked = false, offer }: {
   progress: Progress;
+  /** "Wat ken je al?" offered (src/components/Toets.tsx ToetsOffer, with Doen and Later): it takes
+   *  the place of the block and today's review for now, so the home keeps three things to tap. */
+  offer?: React.ReactNode;
   /** A calm line above "Other topic", not a button (the work-rules track: no Dutch voice on this phone). */
   note?: React.ReactNode;
   /** The full version was unlocked a moment ago: a short line says the code was right. */
@@ -197,6 +200,23 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
     );
   };
 
+  const otherTopic = (
+    <button type="button" className="rb-all rb-other" onClick={onAll}>
+      {!dutch && <span className="sr-only" lang="nl">Ander onderwerp. </span>}
+      <Bi text={ui('otherTopicLink', lang)} />
+      <ChevronIcon size={18} />
+    </button>
+  );
+  if (offer) {
+    return (
+      <div className="path route home3 home-offer" ref={ref} dir={rtl ? 'rtl' : undefined}>
+        {offer}
+        {note}
+        {otherTopic}
+      </div>
+    );
+  }
+
   return (
     <div className="path route home3" ref={ref} dir={rtl ? 'rtl' : undefined}>
       {unlocked && <UnlockedNote lang={lang} />}
@@ -269,11 +289,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
       {note}
 
       {/* One link for every other topic: All topics (it replaces "choose another topic"). */}
-      <button type="button" className="rb-all rb-other" onClick={onAll}>
-        {!dutch && <span className="sr-only" lang="nl">Ander onderwerp. </span>}
-        <Bi text={ui('otherTopicLink', lang)} />
-        <ChevronIcon size={18} />
-      </button>
+      {otherTopic}
     </div>
   );
 }

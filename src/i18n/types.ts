@@ -375,6 +375,22 @@ export const uiEn = {
   loadFailed: 'Not loaded. Is the internet on?',
   /** The error screen's "Try again" button, for screen readers (also in src/i18n/meta.ts: the screen comes before the pack). */
   retry: 'Try again',
+  /* "Wat ken je al?": a short test at the start and after 4 weeks (src/components/Toets.tsx). */
+  toetsTitle: 'What do you know already?',
+  toetsOffer: 'About 10 minutes. There are no marks. It is just for you.',
+  toetsEndOffer: 'You have learned a lot. Do the test again and see what you know now.',
+  toetsPartListen: 'Listening',
+  toetsPartWords: 'Words',
+  toetsPartSentences: 'Sentences',
+  toetsListenAsk: 'Listen. What does it mean?',
+  toetsNotSure: 'Don’t know? Just pick one. That is fine.',
+  toetsMicKeep: 'Your recording stays on this phone only. Later you can hear yourself again.',
+  toetsStartDone: 'Good start! This is what you know already.',
+  toetsEndDone: 'Well done! Look what you know now.',
+  toetsYouThen: 'You then',
+  toetsYouNow: 'You now',
+  toetsKeepGoing: 'Practise a little every day. Then you learn more and more.',
+  toetsStart: 'Do the test',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

@@ -16,6 +16,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-30',
     items: [
+      'Nieuw in het spoor Taal: de toets "Wat ken je al?" (ongeveer 10 minuten, luisteren, woorden en zinnen). Na de start en na 4 weken (of 3 onderwerpen), met een andere versie. De uitslag toont wat je erbij hebt geleerd, en je eigen stem van toen en nu. Geen cijfer, en alles blijft op je telefoon.',
       'Werkregels: 14 nieuwe lessen voor Entree. Twee nieuwe onderwerpen: Schrijven op je werk (een bericht of mail aan je werk, een korte sollicitatiemail) en Jouw weg (wat kan ik en wat wil ik, na Entree: niveau 2 of werk, terugkijken en je portfolio).',
       'Werkregels: nieuwe lessen bij Veilig en gezond werken (fit voor je werk: slapen, eten, bewegen; alcohol, drugs en je werk), bij Uitkering, werk en geld (je geld per maand en sparen; kopen, abonnementen en ruilen) en bij Meedoen in Nederland (nieuws, nepnieuws en een mening).',
       'Werkregels: twee nieuwe sectoronderwerpen, Werken in de techniek (gereedschap, vonken en lawaai; stroom) en Werken in de garage (veilig in de werkplaats; de werkorder en de klant). Je kiest ze nog niet bij "Waar werk je?": je vindt ze in het hele lespad, of onder "Andere sectoren".',

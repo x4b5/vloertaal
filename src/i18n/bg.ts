@@ -314,6 +314,22 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Не се зареди. Има ли интернет?',
     retry: 'Опитай отново',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: 'Какво вече знаеш?', // nieuw, nalezen
+    toetsOffer: 'Около 10 минути. Няма оценки. Това е само за теб.', // nieuw, nalezen
+    toetsEndOffer: { m: 'Научил си много. Направи теста отново и виж какво знаеш сега.', f: 'Научила си много. Направи теста отново и виж какво знаеш сега.', x: 'Вече знаеш много повече. Направи теста отново и виж какво знаеш сега.' }, // nieuw, nalezen
+    toetsPartListen: 'Слушане', // nieuw, nalezen
+    toetsPartWords: 'Думи', // nieuw, nalezen
+    toetsPartSentences: 'Изречения', // nieuw, nalezen
+    toetsListenAsk: 'Слушай. Какво означава?', // nieuw, nalezen
+    toetsNotSure: 'Не знаеш ли? Просто избери едно. Няма проблем.', // nieuw, nalezen
+    toetsMicKeep: 'Записът ти остава само на този телефон. По-късно можеш да се чуеш отново.', // nieuw, nalezen
+    toetsStartDone: 'Добро начало! Това вече го знаеш.', // nieuw, nalezen
+    toetsEndDone: 'Браво! Виж какво знаеш сега.', // nieuw, nalezen
+    toetsYouThen: 'Ти тогава', // nieuw, nalezen
+    toetsYouNow: 'Ти сега', // nieuw, nalezen
+    toetsKeepGoing: 'Упражнявай се малко всеки ден. Така ще научаваш все повече.', // nieuw, nalezen
+    toetsStart: 'Направи теста', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

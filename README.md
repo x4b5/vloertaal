@@ -81,7 +81,11 @@ Hulptalen in het spoor Taal:
     hoe lang ongeveer: 0–2, 2–5, 5–10 of meer dan 10 minuten), en een code ingevuld. Per hulptaal,
     per sector, per versie (sneak preview of volledig) en per les, elk apart. Respecteert Do Not
     Track, uit te zetten;
-  - de microfoon slaat niets op.
+  - de microfoon slaat niets op, behalve bij de toets "Wat ken je al?": die bewaart je zin van
+    toen en nu alleen op het toestel (IndexedDB), zodat je ze naast elkaar hoort.
+- **Wat ken je al?** (spoor Taal): een toets van ongeveer 10 minuten na de start en na 4 weken (of
+  3 onderwerpen), met twee gelijke versies; de uitslag is drie balken, voor en na
+  (`src/content/toets.ts`, [`docs/pilot.md`](docs/pilot.md)).
 - **Offline**: met "Lessen op deze telefoon" staat het huidige onderwerp op de telefoon (PWA).
   Een app op het beginscherm haalt zelf een nieuwe versie op als hij weer in beeld komt. Bij
   **Over** staat welke versie je hebt.

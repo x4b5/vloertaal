@@ -314,6 +314,22 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Не завантажилося. Чи є інтернет?',
     retry: 'Спробувати ще раз',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: 'Що ти вже знаєш?', // nieuw, nalezen
+    toetsOffer: 'Приблизно 10 хвилин. Оцінок немає. Це тільки для тебе.', // nieuw, nalezen
+    toetsEndOffer: { m: 'Ти багато навчився. Пройди тест ще раз і подивися, що ти знаєш тепер.', f: 'Ти багато навчилася. Пройди тест ще раз і подивися, що ти знаєш тепер.', x: 'Позаду багато навчання. Пройди тест ще раз і подивися, що ти знаєш тепер.' }, // nieuw, nalezen
+    toetsPartListen: 'Слухання', // nieuw, nalezen
+    toetsPartWords: 'Слова', // nieuw, nalezen
+    toetsPartSentences: 'Речення', // nieuw, nalezen
+    toetsListenAsk: 'Послухай. Що це означає?', // nieuw, nalezen
+    toetsNotSure: 'Не знаєш? Просто вибери одну відповідь. Це нормально.', // nieuw, nalezen
+    toetsMicKeep: 'Твій запис залишається тільки на цьому телефоні. Пізніше ти зможеш почути себе знову.', // nieuw, nalezen
+    toetsStartDone: 'Гарний початок! Ось що ти вже знаєш.', // nieuw, nalezen
+    toetsEndDone: 'Молодець! Подивися, що ти знаєш тепер.', // nieuw, nalezen
+    toetsYouThen: 'Ти тоді', // nieuw, nalezen
+    toetsYouNow: 'Ти зараз', // nieuw, nalezen
+    toetsKeepGoing: 'Займайся трохи щодня. Тоді ти знатимеш усе більше.', // nieuw, nalezen
+    toetsStart: 'Пройти тест', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

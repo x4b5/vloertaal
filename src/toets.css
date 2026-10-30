@@ -1,0 +1,77 @@
+/* ---- "Wat ken je al?" (src/components/Toets.tsx) ----
+   The card on the home in the block's place, the calm test (a picked option keeps the lessons'
+   neutral "picked" look of before Check, never green or red), and the result's bars. Targets are
+   44 px or more; nothing here moves, so reduced motion needs nothing extra. Built on styles.css
+   (its tokens, .btn, .choice, .say-play), so it is the same in light and dark. */
+.toets-offer {
+  margin: 4px 0 8px; padding: 16px; background: var(--card); color: var(--ink);
+  border: 2px solid var(--edge); border-radius: var(--radius);
+}
+.toets-offer-head { display: flex; align-items: center; gap: 12px; }
+.toets-offer-icon {
+  flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
+  background: var(--yellow); color: #1e2226;
+}
+.toets-offer-title { flex: 1; min-width: 0; margin: 0; display: flex; flex-direction: column; font-size: 1.3rem; line-height: 1.2; }
+.toets-offer-nl, .toets-offer-text-nl, .toets-btn-nl, .toets-keep-nl, .toets-result-nl {
+  font-size: 0.9375rem; font-weight: 600; color: var(--muted);
+}
+.toets-offer-title .bi-help { --help-size: 0.7em; font-weight: 400; }
+.toets-time {
+  flex: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px;
+  border-radius: 999px; background: var(--tag-bg); color: var(--tag-ink); font-weight: 650; font-size: 0.9rem;
+}
+.toets-offer-text { display: flex; flex-direction: column; gap: 4px; margin: 12px 0 14px; line-height: 1.4; }
+.toets-offer-text .help-say { align-self: flex-start; }
+.toets-offer-actions { display: grid; gap: 10px; }
+.toets-btn-label { display: flex; flex-direction: column; align-items: center; line-height: 1.2; }
+.btn-primary .toets-btn-nl { color: #3f3a2c; }
+.toets-later { min-height: 52px; background: var(--card); color: var(--ink); flex-direction: column; gap: 0; line-height: 1.2; }
+.toets-later:hover { background: var(--concrete-2); }
+.toets-later .bi-help { --help-size: 0.8em; font-weight: 400; }
+.toets-do, .toets-later { width: 100%; }
+.home-offer .rb-other { margin-top: 18px; }
+
+/* The test. */
+.toets-count { margin-left: auto; color: var(--muted); font-weight: 650; font-variant-numeric: tabular-nums; }
+[dir='rtl'] .toets-count { margin-left: 0; margin-right: auto; }
+.toets-calm { margin: 4px 0 8px; color: var(--muted); font-size: 0.95rem; }
+.toets-calm .bi-help { --help-size: 0.85em; }
+.toets-pic { display: block; margin: 4px auto 12px; }
+.toets-listen .listen-buttons { margin: 8px 0 16px; }
+.say-keep { margin-top: 6px; }
+
+/* The result. */
+.toets-result-title { display: flex; flex-direction: column; gap: 4px; }
+.toets-parts { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 14px; }
+.toets-part { padding: 12px 14px; background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); }
+.toets-part-name { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-weight: 650; }
+.toets-part-icon { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--tag-bg); color: var(--tag-ink); }
+.toets-part-nl { font-size: 1.05rem; margin-right: 8px; }
+[dir='rtl'] .toets-part-nl { margin-right: 0; margin-left: 8px; }
+.toets-part-help .bi-help, .toets-who-help .bi-help { --help-size: 0.8em; font-weight: 400; }
+.toets-bar-row { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 4px 10px; margin-top: 6px; }
+.toets-bar-who { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; font-size: 0.95rem; color: var(--muted); }
+.toets-who-nl { font-weight: 650; color: var(--ink); }
+.toets-bar { position: relative; height: 16px; border-radius: 8px; background: var(--track); box-shadow: inset 0 0 0 1.5px var(--ink-3); overflow: hidden; }
+.toets-bar-fill { position: absolute; top: 0; bottom: 0; left: 0; background: var(--ink); border-radius: 8px; }
+[dir='rtl'] .toets-bar-fill { left: auto; right: 0; }
+.toets-bar-now .toets-bar-fill { background: var(--green); }
+.toets-bar-n { min-width: 3.5ch; font-weight: 750; font-variant-numeric: tabular-nums; text-align: end; }
+.toets-voices { margin-top: 18px; }
+.toets-voices-line { margin: 0; font-weight: 650; text-align: center; }
+.toets-voices .say-play { grid-template-areas: 'icon' 'who'; grid-template-columns: auto; min-height: 76px; }
+.toets-voices .say-who { display: flex; flex-direction: column; align-items: center; }
+.toets-keep { display: flex; flex-direction: column; gap: 4px; margin-top: 18px; line-height: 1.4; }
+.toets-page .toets-do { width: 100%; margin-top: 22px; }
+.toets-date { margin: 0; color: var(--muted); font-weight: 600; }
+
+/* The line on "Mijn certificaten" (not a button). */
+.toets-line { display: flex; align-items: flex-start; gap: 12px; margin: 18px 0 0; padding: 12px 14px; background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); }
+.toets-line-icon { flex: none; color: var(--tag-ink); }
+.toets-line-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.toets-line-nl { font-weight: 650; }
+.toets-line-help .bi-help { --help-size: 0.8em; }
+.toets-line-n { color: var(--muted); font-size: 0.95rem; }
+.toets-result .toets-parts, .toets-result .toets-voices { width: 100%; max-width: 520px; margin-left: auto; margin-right: auto; }
+.toets-result-go { width: 100%; max-width: 520px; margin: 24px auto 0; }

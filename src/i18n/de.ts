@@ -314,6 +314,22 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nicht geladen. Hast du Internet?',
     retry: 'Erneut versuchen',
+    /* "Wat ken je al?" (src/components/Toets.tsx) */
+    toetsTitle: 'Was kannst du schon?', // nieuw, nalezen
+    toetsOffer: 'Etwa 10 Minuten. Es gibt keine Noten. Es ist nur für dich.', // nieuw, nalezen
+    toetsEndOffer: 'Du hast viel gelernt. Mach den Test noch einmal und sieh, was du jetzt kannst.', // nieuw, nalezen
+    toetsPartListen: 'Hören', // nieuw, nalezen
+    toetsPartWords: 'Wörter', // nieuw, nalezen
+    toetsPartSentences: 'Sätze', // nieuw, nalezen
+    toetsListenAsk: 'Hör zu. Was bedeutet das?', // nieuw, nalezen
+    toetsNotSure: 'Du weißt es nicht? Wähl einfach eine Antwort. Das ist in Ordnung.', // nieuw, nalezen
+    toetsMicKeep: 'Deine Aufnahme bleibt nur auf diesem Handy. Später kannst du dich noch einmal hören.', // nieuw, nalezen
+    toetsStartDone: 'Guter Anfang! Das kannst du schon.', // nieuw, nalezen
+    toetsEndDone: 'Gut gemacht! Sieh, was du jetzt kannst.', // nieuw, nalezen
+    toetsYouThen: 'Du damals', // nieuw, nalezen
+    toetsYouNow: 'Du jetzt', // nieuw, nalezen
+    toetsKeepGoing: 'Übe jeden Tag ein bisschen. Dann lernst du immer mehr.', // nieuw, nalezen
+    toetsStart: 'Test machen', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
