@@ -29,6 +29,7 @@ import { Bi } from './Bi';
 import { CertIcon } from './CertBadge';
 import { CertificatesCard } from './Certificate';
 import { ChoiceCards, type ChoiceOption } from './Choice';
+import { countryOptions } from './Country';
 import { ChromeBack } from './ChromeBack';
 import { UpgradeCard } from './Gate';
 import { GenderPicker, NeutralIcon } from './Gender';
@@ -67,15 +68,6 @@ const FlagIcon = ({ size = 24 }: { size?: number }) => (
   <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
     <path d="M5.5 21.5V3.5" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round" />
     <path d="M5.5 4.5h12.5l-2.6 4 2.6 4H5.5" fill="none" stroke="currentColor" strokeWidth="2.3" strokeLinejoin="round" />
-  </svg>
-);
-/** The flag of the Netherlands or Belgium, drawn (a flag emoji is two letters on some phones). */
-const CountryFlag = ({ country }: { country: Country }) => (
-  <svg className="country-flag" viewBox="0 0 30 20" width={42} height={28} aria-hidden focusable="false">
-    {country === 'nl'
-      ? <><rect width="30" height="6.67" fill="#AE1C28" /><rect y="6.67" width="30" height="6.67" fill="#fff" /><rect y="13.33" width="30" height="6.67" fill="#21468B" /></>
-      : <><rect width="10" height="20" fill="#000" /><rect x="10" width="10" height="20" fill="#FAE042" /><rect x="20" width="10" height="20" fill="#ED2939" /></>}
-    <rect width="30" height="20" fill="none" stroke="currentColor" strokeOpacity="0.35" />
   </svg>
 );
 /** Three bars, for "Count anonymously". */
@@ -432,10 +424,7 @@ export function Settings({
               label={said(ui('countryTitle', lang))}
               current={progress.country ?? 'nl'}
               onPick={(id) => { onCountry?.(id); answered(); }}
-              options={[
-                { id: 'nl', nl: 'Nederland', text: say('countryNl'), picture: <CountryFlag country="nl" /> },
-                { id: 'be', nl: 'België (Vlaanderen)', text: say('countryBe'), picture: <CountryFlag country="be" /> },
-              ]}
+              options={countryOptions(lang)}
             />
           </>
         );

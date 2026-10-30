@@ -272,7 +272,8 @@ describe('the first run in Dutch: language → (no gender) → code → sector �
     expect(previousStep('gate', p)).toBe('language');
     expect(onboardingStep(p, 'full')).toBe('sector');
     expect(previousStep('sector', p)).toBe(OPEN_TO_ALL ? 'language' : 'gate');
-    expect(onboardingStep({ ...p, sector: 'none' }, 'full')).toBe('done');
+    expect(onboardingStep({ ...p, sector: 'none' }, 'full')).toBe('country');
+    expect(onboardingStep({ ...p, sector: 'none', country: 'be' }, 'full')).toBe('done');
     expect(previousStep('gate', { ...p, sector: 'none' })).toBe('language');
   });
 

@@ -9,6 +9,7 @@ import { Coaches } from '../components/Coaches';
 import { SETTINGS_PARENT, type SettingsPage } from '../lib/settingsMenu';
 import { Admin } from '../components/Admin';
 import { Gate } from '../components/Gate';
+import { CountryScreen } from '../components/Country';
 import { SectorScreen } from '../components/Sector';
 import { isSectorGroupId, isSectorId, type SectorChoice } from '../content/sectors';
 import type { Access } from '../lib/access';
@@ -197,6 +198,11 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'sector') {
     const g = q.get('group');
     return <SectorScreen lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} initialGroup={isSectorGroupId(g) ? g : undefined} />;
+  }
+  // "In welk land werk je?": /?shot=country (the first run, with its back arrow), &old=1 (a learner
+  // from before the question, on opening the home: no back arrow).
+  if (shot === 'country') {
+    return <CountryScreen lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} onBack={q.get('old') === '1' ? undefined : () => {}} />;
   }
   // The password page: &try=1 with "No code? Start with the first lessons", &again=1 back from the
   // sector with the code kept, &greet=1 with Bram's "Hallo, ik ben Bram." (the first page after the language).
