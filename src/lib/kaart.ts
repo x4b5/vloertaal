@@ -2,6 +2,7 @@ import { findLesson } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
 import { TOETS_PARTS, type ToetsPart } from '../content/toets';
 import { certDate, earnedCertificates } from './certificate';
+import { kunAantal, kunJeNu } from '../content/kunJeNu';
 import { dayKey, type Progress } from './progress';
 import { trackOf, trackOfId, type Track } from './track';
 import type { ToetsRun } from './toetsState';
@@ -38,6 +39,13 @@ export interface KaartData {
   unitsDone: number;
   /** The last (at most) three finished topics, by their Dutch title, the latest first. */
   lastUnits: string[];
+  /**
+   * "Wat kun je nu?" (src/content/kunJeNu.ts): how many can-do sentences the finished topics have,
+   * and the first of the latest topic's, as an example. Only the number on the card, not every
+   * sentence: those are on each topic's certificate.
+   */
+  kunZinnen: number;
+  kunVoorbeeld?: string;
   /** Days practised in the last KAART_DAYS days (today included). */
   days: number;
   /** The lesson finished last: what it was (Dutch) and when ("28 oktober 2026"). */
@@ -103,6 +111,7 @@ export function kaartData(p: Progress, name: string, today: Date): KaartData {
   const lastLesson = p.lessonDay && (last || !p.lastLesson)
     ? { text: last ? lessonText(last) : undefined, date: certDate(p.lessonDay) }
     : undefined;
+  const voorbeeld = latest.length ? kunJeNu(latest[0].unit.id)[0]?.nl : undefined;
   const t = track === 'taal' ? p.toets : undefined;
   const toets = t?.instap || t?.eind
     ? { ...(t.instap ? { instap: toetsOf(t.instap) } : {}), ...(t.eind ? { eind: toetsOf(t.eind) } : {}) }
@@ -112,6 +121,8 @@ export function kaartData(p: Progress, name: string, today: Date): KaartData {
     track,
     unitsDone: earned.length,
     lastUnits: latest.slice(0, 3).map((e) => e.unit.titleNl),
+    kunZinnen: kunAantal(earned.map((e) => e.unit.id)),
+    ...(voorbeeld ? { kunVoorbeeld: voorbeeld } : {}),
     days: practisedDays(p, today),
     ...(lastLesson ? { lastLesson } : {}),
     ...(toets ? { toets } : {}),
@@ -144,6 +155,11 @@ export function kaartRows(d: KaartData): KaartRow[] {
       value: String(d.unitsDone),
       more: d.lastUnits.length ? [d.unitsDone > d.lastUnits.length ? `De laatste ${d.lastUnits.length}: ${d.lastUnits.join(', ')}` : d.lastUnits.join(', ')] : undefined,
     },
+    ...(d.kunZinnen > 0 ? [{
+      label: 'Wat kun je nu?',
+      value: `${d.kunZinnen} ${d.kunZinnen === 1 ? 'zin' : 'zinnen'} “Ik kan …”`,
+      more: [d.kunVoorbeeld ? `Per onderwerp op het certificaat, zoals: ${d.kunVoorbeeld}` : 'Per onderwerp op het certificaat.'],
+    }] : []),
     { label: 'Dagen geoefend', value: `${d.days} ${d.days === 1 ? 'dag' : 'dagen'} in de laatste 4 weken` },
     {
       label: 'Laatste les',

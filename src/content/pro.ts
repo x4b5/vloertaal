@@ -30,9 +30,10 @@ export interface ProSection {
   site?: { text: string; href: string }[];
   /**
    * What the page itself adds after the texts: the facts with their sources (src/content/facts.ts
-   * COACH_FACTS), or a link per topic (the app: share it; the site: open it).
+   * COACH_FACTS), a link per topic (the app: share it; the site: open it), or the table of "Wat kun
+   * je nu?" (src/content/kunJeNu.ts: topic, sentences, what they fit).
    */
-  extra?: 'facts' | 'topics';
+  extra?: 'facts' | 'topics' | 'kunjenu';
 }
 
 export { PRO_TITLE };
@@ -121,6 +122,15 @@ export const proSections: ProSection[] = [
       { lead: 'Werkregels.', text: 'Voor wie al Nederlands spreekt: hetzelfde ritme, zonder toets. De begeleiderskaart werkt ook daar.' },
     ],
     site: [{ text: 'Werkregels.', href: '/werkregels/' }],
+  },
+  {
+    // "Wat kun je nu?" (src/content/kunJeNu.ts, werkplan stap 2.6): the table follows (extra).
+    id: 'p.kunjenu', emoji: '✅', title: 'Wat kun je nu? Zinnen per onderwerp',
+    body: [
+      'Bij elk onderwerp staan 2 of 3 korte zinnen over wat de leerling na de lessen kan, zoals “Ik kan zeggen dat ik ziek ben.” Ze staan op het certificaat-scherm, en als ze passen ook op het certificaat zelf. De begeleiderskaart laat zien hoeveel zinnen het zijn.',
+      'Bij elke zin staat waar hij bij past: een niveau en een vaardigheid. Bij Taal is dat A1 of A2 van het ERK, bij Werkregels 1F. Dat helpt om de app in je les in te passen. Het is geen officieel niveau en geen toets. Een NT2-docent kijkt de zinnen nog na.',
+    ],
+    extra: 'kunjenu',
   },
   {
     id: 'p.entree', emoji: '🎓', title: 'Entree en mbo',
