@@ -252,9 +252,9 @@ export const digitaalUnit: RuleUnit = {
           id: 'r.l.digitaal.3.wd3',
           situation: 'Op je werk komt een nieuwe camera met AI. Die "leest" aan je gezicht of je moe of boos bent.',
           options: [
-            { id: 'a', text: 'Prima. Dan weet de baas hoe ik me voel.', best: false, feedback: 'Dit mag juist niet op het werk.' },
-            { id: 'b', text: 'Ik kijk de hele dag vrolijk. Dan is er niets aan de hand.', best: false, feedback: 'Het probleem blijft. En dat is vermoeiend.' },
-            { id: 'c', text: 'Ik vraag het de ondernemingsraad of de vakbond. Dit mag niet zomaar.', best: true, feedback: 'Goed. Zij kunnen er iets aan doen.' },
+            { id: 'a', text: 'Ik zeg niets. Op het werk mag de baas alles filmen.', best: false, feedback: 'Nee. De baas mag niet alles. En een computer mag op het werk niet je gevoel lezen.' },
+            { id: 'b', text: 'Prima. De baas heeft het vooraf in een mail gezegd.', best: false, feedback: 'Vooraf zeggen is niet genoeg. Dit mag op het werk niet.' },
+            { id: 'c', text: 'Ik vraag het de ondernemingsraad of de vakbond.', best: true, feedback: 'Goed. Dit mag niet zomaar. Zij kunnen er iets aan doen.' },
           ],
           why: 'Een computer mag op het werk niet je gevoelens lezen. Dat staat in de Europese AI-wet. Alleen voor je gezondheid of je veiligheid mag het wel. Heeft je bedrijf een ondernemingsraad? Dan moet die instemmen met systemen die personeel volgen.',
         },
