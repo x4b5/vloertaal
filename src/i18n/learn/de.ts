@@ -95,6 +95,24 @@ const t: CultureTranslation = {
     'c.kids.a.why': "Gefragt ist warum: Diese Antwort nennt den Grund, die Kita hat angerufen.",
     'c.body.a.why': "Gefragt ist, wo es wehtut: Diese Antwort nennt die Stelle und die Ursache.",
     'c.jobends.a.why': "Die Wohnung hängt am Job: Diese Antwort fragt nach der Kündigungsfrist.",
+    // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
+    'c.workorder.a.why': "Ein Wort ist unklar: Vor dem Anfangen zu fragen ist die richtige Antwort.", // nieuw, nalezen
+    'c.handover.a.why': "Gefragt, ob alles fertig ist: Diese Antwort sagt, was nicht fertig ist, und warum.", // nieuw, nalezen
+    'c.workshop.a.why': "Gefragt warum: Diese Antwort nennt den Grund, die Augen brauchen Schutz.", // nieuw, nalezen
+    'c.power.a.why': "Arbeit an einer Lampe: Diese Antwort fragt zuerst, ob der Strom aus ist.", // nieuw, nalezen
+    'c.garage.a.why': "Bitte um einen Reifenwechsel: ein Ja, und eine Frage, wo die Reifen sind.", // nieuw, nalezen
+    'c.carjob.a.why': "Extraarbeit: Der Kunde muss zuerst zustimmen, darum ruft diese Antwort ihn an.", // nieuw, nalezen
+    'c.placement.a.why': "Gefragt wann: Diese Antwort nennt den Tag, und der Vertrag kommt zuerst.", // nieuw, nalezen
+    'c.review.a.why': "Das Feedback ist noch unklar: Um Vorzeigen zu bitten ist eine gute Antwort.", // nieuw, nalezen
+    'c.council.a.why': "Gefragt nach dem Wählen: ein Ja, und die zwei Dinge zum Mitbringen.", // nieuw, nalezen
+    'c.police.a.why': "Die Polizei will den Ausweis: zeigen und fragen, was los ist.", // nieuw, nalezen
+    'c.login.a.why': "Gefragt, ob das Einloggen klappt: Diese Antwort sagt Nein, und warum.", // nieuw, nalezen
+    'c.phish.a.why': "Gefragt nach dem Link: ein ehrliches Ja, und ein Anruf bei der IT-Abteilung.", // nieuw, nalezen
+    'c.mychoice.a.why': "Gefragt nach Stärken: Diese Antwort nennt eine, mit einem Beispiel.", // nieuw, nalezen
+    'c.nextstep.a.why': "Gefragt nach dem Plan: Diese Antwort nennt die bbl und was sie bedeutet.", // nieuw, nalezen
+    'c.email.a.why': "Gefragt, ob sie verschickt ist: noch nicht, sie wird erst geprüft.", // nieuw, nalezen
+    'c.budget.a.why': "Später zahlen wird angeboten: ein höfliches Nein, mit dem Grund.", // nieuw, nalezen
+    'c.healthy.a.why': "Eine Pille wird angeboten: ein höfliches Nein, mit dem Grund.", // nieuw, nalezen
   },
 };
 

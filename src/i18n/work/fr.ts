@@ -1332,6 +1332,353 @@ const t: CultureTranslation = {
     'c.jobends.o2': "Rien : l’assurance continue toute seule.",
     'c.jobends.o3': "Attends de tomber malade, et règle ça à ce moment-là.",
     'c.jobends.w': "L’assurance par l’agence s’arrête souvent quand ton travail s’arrête. Quand tu vis ou travailles aux Pays-Bas, tu dois en général avoir une assurance maladie. En t’en occupant à temps, tu as toujours une assurance.",
+    // Entree in the Taal track (30 October 2026): nieuw, nalezen.
+    'u.finish': "Finir ton travail", // nieuw, nalezen
+    'l.workorder': "Le bon de travail", // nieuw, nalezen
+    'w.werkbon': "le bon de travail (un papier ou une appli avec ta tâche)", // nieuw, nalezen
+    'w.lezen': "lire", // nieuw, nalezen
+    'w.aantal': "le nombre (combien)", // nieuw, nalezen
+    'w.materiaal': "le matériel (ce qu’il te faut pour le travail)", // nieuw, nalezen
+    'w.klaarleggen': "préparer (mettre prêt ce qu’il te faut)", // nieuw, nalezen
+    'w.handtekening': "la signature", // nieuw, nalezen
+    's.workorder.1': "Je lis d’abord le bon de travail.", // nieuw, nalezen
+    's.workorder.2': "Ce nombre est juste ?", // nieuw, nalezen
+    's.workorder.3': "Je prépare le matériel.", // nieuw, nalezen
+    'c.workorder.q': "Tu sais ce que tu dois faire ?", // nieuw, nalezen
+    'c.workorder.a': "Presque. Que veut dire ce mot sur le bon de travail ?", // nieuw, nalezen
+    'l.handover': "Fini, ou pas encore ?", // nieuw, nalezen
+    'w.opruimen': "ranger (remettre les choses en place)", // nieuw, nalezen
+    'w.nakijken': "vérifier (regarder le travail encore une fois)", // nieuw, nalezen
+    'w.afmelden': "signaler la fin (dire que le travail est fait et partir)", // nieuw, nalezen
+    'w.kapot': "cassé, en panne", // nieuw, nalezen
+    'w.opslot': "fermé à clé", // nieuw, nalezen
+    'w.bijzonderheid': "le point particulier (quelque chose qui s’est passé autrement)", // nieuw, nalezen
+    's.handover.1': "Je range ma place.", // nieuw, nalezen
+    's.handover.2': "Vous pouvez vérifier mon travail ?", // nieuw, nalezen
+    's.handover.3': "Je signale au responsable que j’ai fini.", // nieuw, nalezen
+    'c.handover.q': "Tout est fini ?", // nieuw, nalezen
+    'c.handover.a': "Presque. La chambre quatre était fermée à clé.", // nieuw, nalezen
+    'u.tech': "À l’atelier", // nieuw, nalezen
+    'l.workshop': "Les outils de l’atelier", // nieuw, nalezen
+    'w.gereedschap': "les outils", // nieuw, nalezen
+    'w.zagen': "scier", // nieuw, nalezen
+    'w.slijpen': "meuler (lisser ou couper du métal avec une machine)", // nieuw, nalezen
+    'w.vonk': "l’étincelle", // nieuw, nalezen
+    'w.gehoorbescherming': "la protection auditive (pour tes oreilles)", // nieuw, nalezen
+    'w.lawaai': "le bruit (beaucoup de son fort)", // nieuw, nalezen
+    's.workshop.1': "Où sont les outils ?", // nieuw, nalezen
+    's.workshop.2': "Je porte une protection auditive quand je meule.", // nieuw, nalezen
+    's.workshop.3': "Attention aux étincelles !", // nieuw, nalezen
+    'c.workshop.q': "Pourquoi tu portes des lunettes ?", // nieuw, nalezen
+    'c.workshop.a': "Quand je scie, des petits bouts peuvent m’entrer dans l’œil.", // nieuw, nalezen
+    'l.power': "D’abord couper le courant", // nieuw, nalezen
+    'w.stroom': "le courant, l’électricité", // nieuw, nalezen
+    'w.kabel': "le câble", // nieuw, nalezen
+    'w.stekker': "la prise (la fiche)", // nieuw, nalezen
+    'w.onderspanning': "sous tension (il y a du courant dedans)", // nieuw, nalezen
+    'w.spanningsloos': "hors tension, sûr (il n’y a pas de courant)", // nieuw, nalezen
+    'w.elektricien': "l’électricien", // nieuw, nalezen
+    's.power.1': "Il y a encore du courant ici ?", // nieuw, nalezen
+    's.power.2': "Ce câble est abîmé.", // nieuw, nalezen
+    's.power.3': "J’attends qu’il soit hors tension.", // nieuw, nalezen
+    'c.power.q': "Tu peux changer cette lampe ?", // nieuw, nalezen
+    'c.power.a': "Le courant est coupé ? Sinon, j’attends l’électricien.", // nieuw, nalezen
+    'u.garage': "Au garage", // nieuw, nalezen
+    'l.garage': "Pneus, huile et le pont élévateur", // nieuw, nalezen
+    'w.band': "le pneu", // nieuw, nalezen
+    'w.olie': "l’huile", // nieuw, nalezen
+    'w.accu': "la batterie de voiture", // nieuw, nalezen
+    'w.monteur': "le mécanicien", // nieuw, nalezen
+    'w.hefbrug': "le pont élévateur (il soulève la voiture)", // nieuw, nalezen
+    'w.lek': "crevé, qui fuit (l’air ou l’eau sort)", // nieuw, nalezen
+    's.garage.1': "Le pneu est crevé.", // nieuw, nalezen
+    's.garage.2': "Où est la nouvelle huile ?", // nieuw, nalezen
+    's.garage.3': "La voiture est sur le pont élévateur.", // nieuw, nalezen
+    'c.garage.q': "Tu peux changer les pneus de cette voiture ?", // nieuw, nalezen
+    'c.garage.a': "Oui. Où sont les pneus d’hiver ?", // nieuw, nalezen
+    'l.carjob': "C’est le client qui décide", // nieuw, nalezen
+    'w.proefrit': "l’essai sur route (un tour pour tester la voiture)", // nieuw, nalezen
+    'w.rijbewijs': "le permis de conduire", // nieuw, nalezen
+    'w.akkoord': "d’accord, OK (tu dis oui)", // nieuw, nalezen
+    'w.kosten': "les frais (ce qu’il faut payer)", // nieuw, nalezen
+    'w.repareren': "réparer", // nieuw, nalezen
+    'w.onderdeel': "la pièce (d’une voiture ou d’une machine)", // nieuw, nalezen
+    's.carjob.1': "Le client est d’accord avec les frais ?", // nieuw, nalezen
+    's.carjob.2': "Cette pièce est cassée.", // nieuw, nalezen
+    's.carjob.3': "Je peux faire un essai sur route ?", // nieuw, nalezen
+    'c.carjob.q': "Les freins sont mauvais aussi. Tu les fais tout de suite ?", // nieuw, nalezen
+    'c.carjob.a': "D’abord j’appelle le client. Il doit être d’accord.", // nieuw, nalezen
+    'u.stage': "Faire un stage", // nieuw, nalezen
+    'l.placement': "Ton stage", // nieuw, nalezen
+    'w.stage': "le stage (tu apprends dans une entreprise)", // nieuw, nalezen
+    'w.praktijkopleider': "le tuteur en entreprise (il te guide dans l’entreprise)", // nieuw, nalezen
+    'w.stagebegeleider': "le référent de stage de l’école (il te guide pour l’école)", // nieuw, nalezen
+    'w.pok': "la convention de stage (toi, l’école et l’entreprise la signez)", // nieuw, nalezen
+    'w.school': "l’école", // nieuw, nalezen
+    'w.leerbedrijf': "l’entreprise formatrice (une entreprise où des élèves peuvent apprendre)", // nieuw, nalezen
+    's.placement.1': "Je fais mon stage dans un entrepôt.", // nieuw, nalezen
+    's.placement.2': "Qui est mon tuteur en entreprise ?", // nieuw, nalezen
+    's.placement.3': "Je n’ai pas encore signé la convention de stage.", // nieuw, nalezen
+    'c.placement.q': "Quand est-ce que tu commences ton stage ?", // nieuw, nalezen
+    'c.placement.a': "Lundi. D’abord on signe la convention de stage.", // nieuw, nalezen
+    'l.review': "Des retours sur ton stage", // nieuw, nalezen
+    'w.beoordeling': "l’évaluation (si tu fais bien)", // nieuw, nalezen
+    'w.leerdoel': "l’objectif d’apprentissage (ce que tu veux apprendre)", // nieuw, nalezen
+    'w.voorbeeld': "l’exemple", // nieuw, nalezen
+    'w.portfolio': "le portfolio (un dossier avec ton travail et des preuves)", // nieuw, nalezen
+    'w.cijfer': "la note", // nieuw, nalezen
+    'w.verslag': "le rapport (un texte sur ton travail)", // nieuw, nalezen
+    's.review.1': "Qu’est-ce que je peux faire mieux ?", // nieuw, nalezen
+    's.review.2': "Vous pouvez me donner un exemple ?", // nieuw, nalezen
+    's.review.3': "Mon évaluation est la semaine prochaine.", // nieuw, nalezen
+    'c.review.q': "Tu dois travailler plus vite.", // nieuw, nalezen
+    'c.review.a': "D’accord. Vous pouvez me montrer comment faire plus vite ?", // nieuw, nalezen
+    'u.society': "Participer aux Pays-Bas", // nieuw, nalezen
+    'l.council': "La commune et le vote", // nieuw, nalezen
+    'w.stemmen': "voter", // nieuw, nalezen
+    'w.verkiezing': "l’élection", // nieuw, nalezen
+    'w.gemeenteraad': "le conseil municipal (il décide pour ta ville)", // nieuw, nalezen
+    'w.parlement': "le parlement (il fait les lois)", // nieuw, nalezen
+    'w.stempas': "la carte de vote (la carte qu’il te faut pour voter)", // nieuw, nalezen
+    'w.burgemeester': "le maire", // nieuw, nalezen
+    's.council.1': "J’ai le droit de voter ?", // nieuw, nalezen
+    's.council.2': "Ma carte de vote est arrivée par la poste.", // nieuw, nalezen
+    's.council.3': "Le conseil municipal décide pour mon quartier.", // nieuw, nalezen
+    'c.council.q': "Tu vas voter mercredi ?", // nieuw, nalezen
+    'c.council.a': "Oui. J’ai ma carte de vote et ma pièce d’identité.", // nieuw, nalezen
+    'l.police': "La police et tes droits", // nieuw, nalezen
+    'w.agent': "l’agent de police", // nieuw, nalezen
+    'w.boete': "l’amende (de l’argent à payer comme sanction)", // nieuw, nalezen
+    'w.bezwaar': "la réclamation (tu dis par écrit que tu n’es pas d’accord)", // nieuw, nalezen
+    'w.rechter': "le juge", // nieuw, nalezen
+    'w.advocaat': "l’avocat", // nieuw, nalezen
+    'w.wet': "la loi", // nieuw, nalezen
+    's.police.1': "J’ai eu une amende.", // nieuw, nalezen
+    's.police.2': "Je veux faire une réclamation.", // nieuw, nalezen
+    's.police.3': "Je peux avoir un avocat ?", // nieuw, nalezen
+    'c.police.q': "Je peux voir votre pièce d’identité ?", // nieuw, nalezen
+    'c.police.a': "Oui, la voici. Qu’est-ce qui se passe ?", // nieuw, nalezen
+    'u.online': "En ligne au travail", // nieuw, nalezen
+    'l.login': "Se connecter", // nieuw, nalezen
+    'w.uitloggen': "se déconnecter", // nieuw, nalezen
+    'w.account': "le compte", // nieuw, nalezen
+    'w.scherm': "l’écran", // nieuw, nalezen
+    'w.vergrendelen': "verrouiller (un écran ou un téléphone)", // nieuw, nalezen
+    'w.gebruikersnaam': "le nom d’utilisateur", // nieuw, nalezen
+    'w.inlogcode': "le code de connexion (un code par SMS ou dans une appli)", // nieuw, nalezen
+    's.login.1': "J’ai oublié mon mot de passe.", // nieuw, nalezen
+    's.login.2': "Je me déconnecte toujours.", // nieuw, nalezen
+    's.login.3': "Je ne donne mon DigiD à personne.", // nieuw, nalezen
+    'c.login.q': "Tu arrives à te connecter ?", // nieuw, nalezen
+    'c.login.a': "Non, mon mot de passe ne marche pas.", // nieuw, nalezen
+    'l.phish': "Les faux e-mails", // nieuw, nalezen
+    'w.afzender': "l’expéditeur", // nieuw, nalezen
+    'w.klikken': "cliquer", // nieuw, nalezen
+    'w.bijlage': "la pièce jointe", // nieuw, nalezen
+    'w.verdacht': "suspect", // nieuw, nalezen
+    'w.ictafdeling': "le service informatique", // nieuw, nalezen
+    'w.wijzigen': "changer, modifier", // nieuw, nalezen
+    's.phish.1': "Cet e-mail est suspect.", // nieuw, nalezen
+    's.phish.2': "Je n’ouvre pas la pièce jointe.", // nieuw, nalezen
+    's.phish.3': "Je change mon mot de passe tout de suite.", // nieuw, nalezen
+    'c.phish.q': "Tu as cliqué sur le lien ?", // nieuw, nalezen
+    'c.phish.a': "Oui. J’appelle le service informatique.", // nieuw, nalezen
+    'l.mychoice': "Ce que je fais bien", // nieuw, nalezen
+    'w.goedin': "doué pour (quelque chose)", // nieuw, nalezen
+    'w.kiezen': "choisir", // nieuw, nalezen
+    'w.beroep': "le métier, le type de travail", // nieuw, nalezen
+    'w.bijbaan': "le petit boulot (un petit travail à côté de l’école)", // nieuw, nalezen
+    'w.nauwkeurig': "soigneux et précis", // nieuw, nalezen
+    'w.meeloopdag': "la journée d’observation (un jour où tu suis quelqu’un au travail)", // nieuw, nalezen
+    's.mychoice.1': { m: "Je suis doué de mes mains.", f: "Je suis douée de mes mains.", x: "Je suis doué / douée de mes mains." }, // nieuw, nalezen
+    's.mychoice.2': "J’aime travailler avec des gens.", // nieuw, nalezen
+    's.mychoice.3': "Je peux vous suivre une journée, pour voir le travail ?", // nieuw, nalezen
+    'c.mychoice.q': "Qu’est-ce que tu fais bien ?", // nieuw, nalezen
+    'c.mychoice.a': { m: "Je suis précis et soigneux. À la maison, je m’occupe de ma mère.", f: "Je suis précise et soigneuse. À la maison, je m’occupe de ma mère.", x: "Je suis précis / précise et soigneux / soigneuse. À la maison, je m’occupe de ma mère." }, // nieuw, nalezen
+    'l.nextstep': "Après Entree", // nieuw, nalezen
+    'w.niveau2': "le niveau 2 (le niveau suivant du mbo)", // nieuw, nalezen
+    'w.startkwalificatie': "la qualification de base (un diplôme mbo de niveau 2 ou plus)", // nieuw, nalezen
+    'w.bbl': "la bbl (tu travailles dans une entreprise et tu vas à l’école environ un jour par semaine)", // nieuw, nalezen
+    'w.doorstromen': "continuer (vers un niveau plus haut)", // nieuw, nalezen
+    'w.aanmelden': "s’inscrire (dans une école ou à une formation)", // nieuw, nalezen
+    'w.opendag': "la journée portes ouvertes (tu peux visiter une école)", // nieuw, nalezen
+    's.nextstep.1': "Après Entree, je veux aller au niveau 2.", // nieuw, nalezen
+    's.nextstep.2': "Je veux travailler et apprendre en même temps.", // nieuw, nalezen
+    's.nextstep.3': "Quand est la journée portes ouvertes ?", // nieuw, nalezen
+    'c.nextstep.q': "Qu’est-ce que tu vas faire après Entree ?", // nieuw, nalezen
+    'c.nextstep.a': "Je veux faire la bbl. Comme ça, je travaille et j’apprends.", // nieuw, nalezen
+    'l.email': "Écrire au travail", // nieuw, nalezen
+    'w.mail': "l’e-mail", // nieuw, nalezen
+    'w.onderwerp': "l’objet (d’un e-mail)", // nieuw, nalezen
+    'w.beste': "cher, chère (au début d’une lettre ou d’un e-mail)", // nieuw, nalezen
+    'w.beleefd': "poli", // nieuw, nalezen
+    'w.nalezen': "relire (vérifier avant d’envoyer)", // nieuw, nalezen
+    'w.versturen': "envoyer", // nieuw, nalezen
+    's.email.1': "Qu’est-ce que je mets dans l’objet ?", // nieuw, nalezen
+    's.email.2': "Je relis mon e-mail encore une fois.", // nieuw, nalezen
+    's.email.3': "J’envoie l’e-mail demain.", // nieuw, nalezen
+    'c.email.q': "Tu as envoyé l’e-mail pour ton jour de congé ?", // nieuw, nalezen
+    'c.email.a': "Pas encore. Je le relis d’abord.", // nieuw, nalezen
+    'l.budget': "Ton argent chaque mois", // nieuw, nalezen
+    'w.vastelasten': "les charges fixes (loyer, assurance, téléphone : chaque mois)", // nieuw, nalezen
+    'w.sparen': "épargner (de l’argent)", // nieuw, nalezen
+    'w.abonnement': "l’abonnement (tu le paies chaque mois)", // nieuw, nalezen
+    'w.achterafbetalen': "payer plus tard (acheter maintenant, payer plus tard)", // nieuw, nalezen
+    'w.bedenktijd': "le délai de rétractation (le temps de changer d’avis)", // nieuw, nalezen
+    'w.garantie': "la garantie (ça doit marcher, sinon on te le répare)", // nieuw, nalezen
+    's.budget.1': "D’abord, je paie les charges fixes.", // nieuw, nalezen
+    's.budget.2': "J’épargne un peu chaque mois.", // nieuw, nalezen
+    's.budget.3': "Je résilie cet abonnement.", // nieuw, nalezen
+    'c.budget.q': "Achète ce téléphone maintenant et paie plus tard !", // nieuw, nalezen
+    'c.budget.a': "Non, merci. Payer plus tard, c’est aussi une dette.", // nieuw, nalezen
+    'l.healthy': "En forme pour le travail", // nieuw, nalezen
+    'w.slapen': "dormir", // nieuw, nalezen
+    'w.ontbijt': "le petit-déjeuner", // nieuw, nalezen
+    'w.bewegen': "bouger, être actif", // nieuw, nalezen
+    'w.moe': "fatigué", // nieuw, nalezen
+    'w.drugs': "la drogue", // nieuw, nalezen
+    'w.somber': "déprimé (triste depuis longtemps)", // nieuw, nalezen
+    's.healthy.1': { m: "Je suis très fatigué aujourd’hui.", f: "Je suis très fatiguée aujourd’hui.", x: "Je suis très fatigué / fatiguée aujourd’hui." }, // nieuw, nalezen
+    's.healthy.2': "Je prends toujours d’abord un petit-déjeuner.", // nieuw, nalezen
+    's.healthy.3': "À la pause, je vais faire un petit tour à pied.", // nieuw, nalezen
+    'c.healthy.q': { m: "Tu veux un cachet ? Comme ça, tu restes éveillé.", f: "Tu veux un cachet ? Comme ça, tu restes éveillée.", x: "Tu veux un cachet ? Comme ça, tu restes éveillé / éveillée." }, // nieuw, nalezen
+    'c.healthy.a': "Non, merci. Je ne travaille pas sous l’effet de quoi que ce soit.", // nieuw, nalezen
+    'c.workorder': "D’abord lire, puis commencer", // nieuw, nalezen
+    'c.workorder.b': "Avant de commencer, lis le bon de travail (werkbon) ou la tâche dans l’appli. Vérifie l’adresse, la tâche et le nombre de choses. Quelque chose n’est pas clair ? Demande avant de commencer, pas au milieu. Ensuite, prépare tes outils et ton matériel. Ça fait gagner du temps, et tu fais moins d’erreurs. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.workorder.p': "Il y a dix cartons sur le bon de travail. C’est juste ?", // nieuw, nalezen
+    'c.workorder.s': "Ton bon de travail dit : peindre la chambre 3. Ton collègue dit que c’est la chambre 5. Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.workorder.o1': "Tu demandes à ton responsable quelle chambre est la bonne.", // nieuw, nalezen
+    'c.workorder.o2': "Tu peins la chambre 3, parce que c’est écrit sur le papier.", // nieuw, nalezen
+    'c.workorder.o3': "Tu peins les deux chambres, comme ça pas d’erreur.", // nieuw, nalezen
+    'c.workorder.w': "Quand deux choses ne collent pas, tu vérifies avant de commencer. Une petite question prend moins de temps que refaire le travail.", // nieuw, nalezen
+    'c.handover': "Dis ce qui est fait, et ce qui ne l’est pas", // nieuw, nalezen
+    'c.handover.b': "Ton travail n’est pas fini quand tu t’arrêtes. D’abord, range ta place et tes outils. Ensuite, demande à quelqu’un de vérifier ton travail. Dis à ton responsable ce qui est fait et ce qui ne l’est pas. Quelque chose s’est mal passé, ou est cassé ? Dis-le maintenant, pas demain. Signaler la fin du travail fait partie de ton travail. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.handover.p': "La chambre quatre n’est pas encore finie. La porte était fermée à clé.", // nieuw, nalezen
+    'c.handover.s': "Tu as nettoyé cinq chambres. La chambre 4 était fermée à clé, donc tu n’as pas pu la nettoyer. Ton service se termine. Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.handover.o1': "Tu dis à ton responsable que la 4 n’est pas faite, et pourquoi.", // nieuw, nalezen
+    'c.handover.o2': "Tu rentres chez toi : la 4 était fermée, ce n’est pas ta faute.", // nieuw, nalezen
+    'c.handover.o3': "Tu écris “tout est fait” sur la liste, car tu as fait de ton mieux.", // nieuw, nalezen
+    'c.handover.w': "Ton responsable organise le travail. S’il sait que la chambre 4 n’est pas faite, il peut envoyer quelqu’un d’autre. Comme ça, aucun client ne trouve une chambre sale.", // nieuw, nalezen
+    'c.workshop': "Les yeux, les oreilles et le feu", // nieuw, nalezen
+    'c.workshop.b': "Meuler, scier et percer font des étincelles, des petits bouts et beaucoup de bruit. Porte des lunettes de sécurité et une protection auditive, même pour un travail court. Quand il y a beaucoup de bruit, ton employeur doit te donner une protection auditive. Les étincelles peuvent provoquer un incendie. Pour souder, ou meuler près de choses qui peuvent brûler, il y a des règles en plus (heet werk) : demande avant de commencer. Après le travail, ramasse les petits bouts de métal. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nieuw, nalezen
+    'c.workshop.p': "Je vais meuler. Où est la protection auditive ?", // nieuw, nalezen
+    'c.workshop.s': "Tu dois meuler une petite pièce de métal. Ça prend une minute. Tes lunettes de sécurité sont dans l’autre pièce. Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.workshop.o1': "Tu vas d’abord chercher tes lunettes, même pour une minute.", // nieuw, nalezen
+    'c.workshop.o2': "Tu meules les yeux à moitié fermés, c’est rapide.", // nieuw, nalezen
+    'c.workshop.o3': "Tu mets ton autre main devant tes yeux.", // nieuw, nalezen
+    'c.workshop.w': "Une étincelle ou un bout de métal dans l’œil peut abîmer ton œil pour toujours. Ça peut arriver en une seconde. Les lunettes de sécurité aident, même pour un travail court.", // nieuw, nalezen
+    'c.power': "L’électricité : jamais comme ça", // nieuw, nalezen
+    'c.power.b': { m: "Ne travaille jamais sur quelque chose qui est sous tension (onder spanning). D’abord, un collègue formé le met en sécurité : il coupe le courant et il vérifie. Seules les personnes qui ont la bonne formation peuvent faire ça. Tu vois un câble ou une prise abîmé ? Ne l’utilise pas, et dis-le tout de suite à ton responsable. Pas sûr que le courant soit coupé ? Alors il ne l’est pas. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", f: "Ne travaille jamais sur quelque chose qui est sous tension (onder spanning). D’abord, un collègue formé le met en sécurité : il coupe le courant et il vérifie. Seules les personnes qui ont la bonne formation peuvent faire ça. Tu vois un câble ou une prise abîmé ? Ne l’utilise pas, et dis-le tout de suite à ton responsable. Pas sûre que le courant soit coupé ? Alors il ne l’est pas. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", x: "Ne travaille jamais sur quelque chose qui est sous tension (onder spanning). D’abord, un collègue formé le met en sécurité : il coupe le courant et il vérifie. Seules les personnes qui ont la bonne formation peuvent faire ça. Tu vois un câble ou une prise abîmé ? Ne l’utilise pas, et dis-le tout de suite à ton responsable. Pas sûr / Pas sûre que le courant soit coupé ? Alors il ne l’est pas. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket." }, // nieuw, nalezen
+    'c.power.p': "Je vois un câble abîmé. Qui peut le regarder ?", // nieuw, nalezen
+    'c.power.s': "Tu dois accrocher une lampe. Un collègue dit : “Le courant est coupé, je crois.” Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.power.o1': "Tu demandes à un collègue formé de vérifier qu’il n’y a plus de courant.", // nieuw, nalezen
+    'c.power.o2': "Tu commences, mais tu touches les fils seulement avec des gants.", // nieuw, nalezen
+    'c.power.o3': "Tu touches vite le fil pour sentir s’il y a du courant.", // nieuw, nalezen
+    'c.power.w': "“Je crois”, ce n’est pas assez avec l’électricité. Une décharge peut te tuer. Un collègue formé vérifie qu’il n’y a pas de courant, et après tu peux commencer.", // nieuw, nalezen
+    'c.garage': "En sécurité sous une voiture", // nieuw, nalezen
+    'c.garage.b': "Ne va jamais sous une voiture qui est seulement sur un cric. La voiture doit être bien stable sur le pont élévateur ou sur des chandelles. L’huile renversée rend le sol glissant : nettoie-la tout de suite. La vieille huile, les batteries et les produits de nettoyage sont des déchets dangereux. Ils vont dans un endroit spécial, jamais dans la poubelle normale ni dans l’égout. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.garage.p': "Il y a de l’huile par terre. Je la nettoie.", // nieuw, nalezen
+    'c.garage.s': "Tu dois regarder sous une voiture. La voiture est seulement sur un cric. Ton collègue dit : “Ça va, fais juste vite.” Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.garage.o1': "Tu attends que la voiture soit sur le pont ou sur des chandelles.", // nieuw, nalezen
+    'c.garage.o2': "Tu vas dessous vite, et tu gardes tes jambes dehors.", // nieuw, nalezen
+    'c.garage.o3': "Tu vas dessous, et tu demandes au collègue de tenir la voiture.", // nieuw, nalezen
+    'c.garage.w': "Un cric peut glisser. Une voiture est très lourde, et dessous tu ne peux pas sortir vite. Les chandelles ou un pont élévateur gardent la voiture en place.", // nieuw, nalezen
+    'c.carjob': "Du travail en plus ? Demande d’abord au client", // nieuw, nalezen
+    'c.carjob.b': "Tu trouves plus de problèmes que ce qui est sur le bon de travail ? Ne les répare pas comme ça. Le client doit d’abord être d’accord avec le travail en plus et les frais. Ton responsable ou l’accueil appelle le client. Un essai sur route, c’est seulement avec une autorisation, et seulement avec un permis de conduire valable. Note ce que tu as fait et quelles pièces tu as utilisées. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nieuw, nalezen
+    'c.carjob.p': "Je vois encore un problème. Qui appelle le client ?", // nieuw, nalezen
+    'c.carjob.s': "Tu fais la vidange d’une voiture. Tu vois que les freins sont mauvais aussi. La voiture doit être prête dans une heure. Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.carjob.o1': "Tu le dis à ton responsable, pour qu’on appelle le client.", // nieuw, nalezen
+    'c.carjob.o2': "Tu répares aussi les freins, le client sera content.", // nieuw, nalezen
+    'c.carjob.o3': "Tu ne dis rien : les freins ne sont pas sur le bon.", // nieuw, nalezen
+    'c.carjob.w': "Le client paie, donc c’est le client qui décide. Sans son accord, le garage ne peut pas faire du travail en plus comme ça. Des mauvais freins sont dangereux, donc il est important d’en parler.", // nieuw, nalezen
+    'c.placement': "D’abord signer, puis commencer", // nieuw, nalezen
+    'c.placement.b': "En Entree, tu apprends beaucoup dans une entreprise : c’est ton stage (stage, ou bpv). Avant de commencer, toi, l’école et l’entreprise, vous signez une convention : la POK. Dans l’entreprise, ton tuteur (praktijkopleider) t’aide. À l’école, ton référent de stage (stagebegeleider) t’aide. Malade ? Appelle l’entreprise avant ton heure de début, et préviens aussi l’école. Les règles changent d’une école à l’autre : demande à ton référent de stage.", // nieuw, nalezen
+    'c.placement.p': "Je commence seulement quand la convention de stage est signée.", // nieuw, nalezen
+    'c.placement.s': "L’entreprise te demande de commencer demain. La POK n’est pas encore signée. Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.placement.o1': "Tu demandes à ton référent de régler d’abord la POK.", // nieuw, nalezen
+    'c.placement.o2': "Tu commences demain, et tu signes la POK dans quelques semaines.", // nieuw, nalezen
+    'c.placement.o3': "Tu commences, mais tu ne dis rien à l’école pour l’instant.", // nieuw, nalezen
+    'c.placement.w': "La POK dit ce que tu apprends et qui t’aide. Sans POK signée, ton stage peut ne pas compter pour ton diplôme. C’est pour ça que tu la signes avant de commencer.", // nieuw, nalezen
+    'c.review': "Demande des retours, et un exemple", // nieuw, nalezen
+    'c.review.b': "En stage, on te dit ce qui va bien et ce qui peut être mieux : ce sont des retours (feedback). C’est normal, et ça t’aide à apprendre. Tu ne comprends pas ? Demande un exemple. Demande toi aussi des retours, par exemple une fois par semaine. Quelque chose va vraiment mal dans ton stage ? D’abord, parle à ton tuteur en entreprise. Ça n’aide pas ? Alors va voir ton référent de stage à l’école.", // nieuw, nalezen
+    'c.review.p': "Qu’est-ce qui s’est bien passé, et qu’est-ce qui peut être mieux ?", // nieuw, nalezen
+    'c.review.s': "Ton tuteur te dit : “Tu dois travailler plus soigneusement.” Tu ne sais pas ce qu’il veut dire. Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.review.o1': "Tu demandes un exemple de ce que tu dois faire autrement.", // nieuw, nalezen
+    'c.review.o2': { m: "Tu dis oui, et tu espères comprendre seul.", f: "Tu dis oui, et tu espères comprendre seule.", x: "Tu dis oui, et tu espères comprendre seul / seule." }, // nieuw, nalezen
+    'c.review.o3': "Tu travailles beaucoup plus lentement, pour ne rien rater.", // nieuw, nalezen
+    'c.review.w': "Avec un exemple, tu sais quoi changer. Demander montre que tu veux apprendre. Les tuteurs aiment ça.", // nieuw, nalezen
+    'c.council': "Qui a le droit de voter ?", // nieuw, nalezen
+    'c.council.b': "Aux Pays-Bas, tu choisis qui décide, en votant. Le conseil municipal (gemeenteraad) décide pour ta ville. La Tweede Kamer fait les lois pour tout le pays. Avec la nationalité néerlandaise, tu peux voter à toutes les élections, à partir de 18 ans. Pour le conseil municipal, plus de personnes peuvent voter : les gens d’un autre pays de l’UE qui habitent ici, et les gens hors UE après 5 ans de séjour légal. La commune (gemeente) t’envoie une carte de vote (stempas). Prends-la avec ta pièce d’identité. Tu ne sais pas si tu peux voter ? Demande à la commune.", // nieuw, nalezen
+    'c.council.p': "J’ai le droit de voter pour le conseil municipal ?", // nieuw, nalezen
+    'c.council.s': "Tu viens du Maroc et tu vis ici légalement depuis six ans. Tu n’as pas la nationalité néerlandaise. Il y a une élection pour le conseil municipal. Qu’est-ce qui est vrai ?", // nieuw, nalezen
+    'c.council.o1': "Tu peux voter pour le conseil municipal.", // nieuw, nalezen
+    'c.council.o2': "Tu peux aussi voter pour la Tweede Kamer.", // nieuw, nalezen
+    'c.council.o3': "Sans passeport néerlandais, tu ne peux pas voter du tout.", // nieuw, nalezen
+    'c.council.w': "Après 5 ans de séjour légal, tu peux voter pour le conseil municipal. Pour la Tweede Kamer, il faut la nationalité néerlandaise.", // nieuw, nalezen
+    'c.police': "Ta pièce d’identité et tes droits", // nieuw, nalezen
+    'c.police.b': { m: "À partir de 14 ans, tu dois montrer ta pièce d’identité quand la police la demande. Alors garde-la toujours sur toi. Tu reçois une lettre avec une décision que tu n’acceptes pas, par exemple de la commune ou de l’UWV ? Alors tu peux faire une réclamation par écrit (bezwaar maken). Fais-le avant la date de la lettre. La police et le juge doivent traiter tout le monde de la même façon. Tu es arrêté ? Tu peux demander un avocat. Le Juridisch Loket donne des conseils gratuits.", f: "À partir de 14 ans, tu dois montrer ta pièce d’identité quand la police la demande. Alors garde-la toujours sur toi. Tu reçois une lettre avec une décision que tu n’acceptes pas, par exemple de la commune ou de l’UWV ? Alors tu peux faire une réclamation par écrit (bezwaar maken). Fais-le avant la date de la lettre. La police et le juge doivent traiter tout le monde de la même façon. Tu es arrêtée ? Tu peux demander un avocat. Le Juridisch Loket donne des conseils gratuits.", x: "À partir de 14 ans, tu dois montrer ta pièce d’identité quand la police la demande. Alors garde-la toujours sur toi. Tu reçois une lettre avec une décision que tu n’acceptes pas, par exemple de la commune ou de l’UWV ? Alors tu peux faire une réclamation par écrit (bezwaar maken). Fais-le avant la date de la lettre. La police et le juge doivent traiter tout le monde de la même façon. Tu es arrêté / arrêtée ? Tu peux demander un avocat. Le Juridisch Loket donne des conseils gratuits." }, // nieuw, nalezen
+    'c.police.p': "Je ne suis pas d’accord avec cette décision. Je fais une réclamation.", // nieuw, nalezen
+    'c.police.s': "Tu reçois une lettre de la commune. Tu n’es pas d’accord avec leur décision. La lettre dit que tu as six semaines. Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.police.o1': "Tu écris une lettre de réclamation, avant la date.", // nieuw, nalezen
+    'c.police.o2': "Tu appelles une fois, et tu attends qu’on te rappelle.", // nieuw, nalezen
+    'c.police.o3': "Tu attends : après six semaines, ça s’arrête tout seul.", // nieuw, nalezen
+    'c.police.w': "La réclamation se fait par écrit, avant la date de la lettre. Après cette date, c’est souvent trop tard. Le Juridisch Loket peut t’aider à l’écrire.", // nieuw, nalezen
+    'c.login': "Ton accès, c’est le tien", // nieuw, nalezen
+    'c.login.b': "Ton mot de passe et ton DigiD sont seulement pour toi. Ne les donne à personne, même pas à ton employeur ou à un collègue. Sur un ordinateur partagé, déconnecte-toi toujours quand tu as fini. Tu t’en vas un moment ? Verrouille ton écran. Tu as oublié ton mot de passe ? Demande-en un nouveau au service informatique (ICT-afdeling). Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.login.p': "Je m’en vais un moment. Je verrouille mon écran.", // nieuw, nalezen
+    'c.login.s': "Ton responsable te demande ton DigiD et ton mot de passe, pour régler vite tes papiers. Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.login.o1': "Tu dis non, et tu te connectes toi-même pendant qu’il aide.", // nieuw, nalezen
+    'c.login.o2': "Tu les donnes cette fois, parce que c’est ton chef.", // nieuw, nalezen
+    'c.login.o3': "Tu les écris sur un papier, pour qu’il les utilise plus tard.", // nieuw, nalezen
+    'c.login.w': "Avec ton DigiD, quelqu’un peut voir et changer tes impôts, tes allocations et tes papiers de santé. Il est seulement pour toi. Tu peux te connecter toi-même et laisser quelqu’un t’aider.", // nieuw, nalezen
+    'c.phish': "Vite, un bouton ? Ne clique pas", // nieuw, nalezen
+    'c.phish.b': "Un faux e-mail (phishing) a souvent l’air vrai. Il veut que tu agisses vite : “Votre compte sera fermé aujourd’hui !” Vérifie l’expéditeur. Ne clique pas sur un lien et n’ouvre pas une pièce jointe que tu n’attendais pas. Va toi-même sur le vrai site ou dans la vraie appli. Tu as quand même cliqué ? Change tout de suite ton mot de passe, et appelle le service informatique. Ce n’est pas une honte : plus tôt ils savent, mieux c’est. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.phish.p': "J’ai cliqué sur un lien suspect.", // nieuw, nalezen
+    'c.phish.s': "Tu as cliqué sur un lien dans un e-mail et tu as tapé ton mot de passe. Ensuite, tu vois que l’e-mail était faux. Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.phish.o1': "Tu changes ton mot de passe, et tu appelles l’informatique.", // nieuw, nalezen
+    'c.phish.o2': "Tu supprimes l’e-mail, et tu espères qu’il n’arrive rien.", // nieuw, nalezen
+    'c.phish.o3': "Tu attends un jour pour voir si quelque chose se passe mal.", // nieuw, nalezen
+    'c.phish.w': "Avec ton mot de passe, quelqu’un d’autre peut entrer dans les systèmes de ton travail. Si tu le changes vite et que tu préviens l’informatique, ils peuvent arrêter ça à temps.", // nieuw, nalezen
+    'c.mychoice': "Tes points forts comptent", // nieuw, nalezen
+    'c.mychoice.b': "Qu’est-ce que tu fais bien ? Pense au travail, à l’école et à la maison. S’occuper de sa famille, un petit boulot ou du bénévolat, ça compte aussi. Qu’est-ce que tu aimes, et qu’est-ce que tu n’aimes pas ? Tu ne sais pas quel travail te va ? Demande à suivre quelqu’un au travail pendant une journée (meeloopdag). Ton référent à l’école peut t’aider à choisir.", // nieuw, nalezen
+    'c.mychoice.p': "Je suis à l’aise avec les gens. À la maison, j’aide beaucoup.", // nieuw, nalezen
+    'c.mychoice.s': "À l’école, on te demande : “Qu’est-ce que tu fais bien ?” Tu n’as jamais eu de travail payé. Qu’est-ce que tu dis ?", // nieuw, nalezen
+    'c.mychoice.o1': "Ce que tu fais bien à la maison, comme t’occuper des autres.", // nieuw, nalezen
+    'c.mychoice.o2': "Que tu ne peux pas le dire, car tu n’as jamais travaillé.", // nieuw, nalezen
+    'c.mychoice.o3': "Que tu peux faire n’importe quel travail, vraiment tout.", // nieuw, nalezen
+    'c.mychoice.w': "Ce que tu sais faire à la maison compte aussi. S’occuper des autres, organiser et aider, ce sont des compétences dont les employeurs ont besoin. Dis ce que tu as fait, avec un exemple.", // nieuw, nalezen
+    'c.nextstep': "Après Entree : niveau 2 ou travail", // nieuw, nalezen
+    'c.nextstep.b': "Avec un diplôme Entree, tu peux continuer au niveau 2 du mbo. Un diplôme de niveau 2 ou plus, c’est une qualification de base (startkwalificatie). Ça t’aide à trouver du travail et à le garder. En bbl, tu travailles dans une entreprise et tu vas à l’école environ un jour par semaine. Pour ça, il te faut un travail ou une place en alternance (leerwerkbaan). Va à une journée portes ouvertes, et parle avec ton référent à l’école.", // nieuw, nalezen
+    'c.nextstep.p': "Je peux aller au niveau 2 après Entree ?", // nieuw, nalezen
+    'c.nextstep.s': "Tu as ton diplôme Entree. Une entreprise te propose un travail sans formation. Toi, tu veux aussi continuer à apprendre. Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.nextstep.o1': "Tu demandes à l’entreprise si une place en bbl est possible.", // nieuw, nalezen
+    'c.nextstep.o2': "Tu prends le travail, et tu arrêtes d’apprendre pour toujours.", // nieuw, nalezen
+    'c.nextstep.o3': "Tu restes chez toi jusqu’à ce qu’une école t’appelle.", // nieuw, nalezen
+    'c.nextstep.w': "En bbl, tu travailles et tu apprends en même temps. Tu gagnes de l’argent, et tu obtiens un diplôme de niveau 2. Beaucoup d’entreprises aiment ça.", // nieuw, nalezen
+    'c.email': "Un e-mail court : qui, quoi, quand", // nieuw, nalezen
+    'c.email.b': "Un e-mail au travail est court et poli. Commence par une salutation, comme “Beste Karin,”. Ensuite, dis ce que tu veux, et quand. Termine par une formule de politesse et ton nom complet. Écris un objet court, comme “Vrij op vrijdag”. Relis ton e-mail avant de l’envoyer.", // nieuw, nalezen
+    'c.email.p': "Chère Karin, est-ce que je peux avoir vendredi en congé ? Cordialement, Ali Haddad", // nieuw, nalezen
+    'c.email.s': "Tu veux un jour de congé vendredi prochain. Quel e-mail à ton responsable est le meilleur ?", // nieuw, nalezen
+    'c.email.o1': "“Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad”", // nieuw, nalezen
+    'c.email.o2': "“Vrijdag ben ik er niet.” (sans salutation et sans ton nom).", // nieuw, nalezen
+    'c.email.o3': "Un long e-mail sur ta semaine, avec la question à la fin.", // nieuw, nalezen
+    'c.email.w': "Un bon e-mail a une salutation, une question claire et ton nom. Comme ça, ton responsable peut répondre vite.", // nieuw, nalezen
+    'c.budget': "D’abord les charges fixes", // nieuw, nalezen
+    'c.budget.b': "Quand tu reçois ta paie, paie d’abord les charges fixes : le loyer, l’assurance et ton téléphone. Essaie de mettre de côté une petite somme chaque mois, même 10 euros. Acheter maintenant et payer plus tard, c’est aussi une dette. Tu as acheté quelque chose en ligne ? Alors en général, tu peux changer d’avis dans les 14 jours. Garde le ticket de caisse : il te faut pour la garantie.", // nieuw, nalezen
+    'c.budget.p': "Je préfère payer maintenant. Comme ça, je n’ai pas de dette.", // nieuw, nalezen
+    'c.budget.s': "Tu reçois ta paie aujourd’hui. Tu veux des chaussures neuves, et ton loyer n’est pas encore payé. Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'c.budget.o1': "Tu paies d’abord le loyer, puis tu vois ce qui reste.", // nieuw, nalezen
+    'c.budget.o2': "Tu achètes les chaussures, et tu paies le loyer plus tard.", // nieuw, nalezen
+    'c.budget.o3': "Tu achètes les chaussures en “payer plus tard”.", // nieuw, nalezen
+    'c.budget.w': "Le loyer, l’assurance et ton téléphone reviennent chaque mois. Si tu les paies d’abord, tu sais combien d’argent il reste. Comme ça, tu n’as pas de dettes.", // nieuw, nalezen
+    'c.healthy': "Sommeil, repas et pas de drogue", // nieuw, nalezen
+    'c.healthy.b': { m: "Tu travailles mieux et plus en sécurité quand tu dors assez, même après un service du soir. Prends un petit-déjeuner, et bois de l’eau pendant la journée. Bouge pendant ta pause, par exemple un petit tour à pied. Travailler sous l’effet de l’alcool ou de la drogue est dangereux, et la plupart des employeurs l’interdisent. Tu te sens déprimé depuis longtemps, ou tu n’arrives pas à arrêter de boire ou de consommer ? Parle à ton médecin généraliste (huisarts). Il peut t’aider, et il garde le secret.", f: "Tu travailles mieux et plus en sécurité quand tu dors assez, même après un service du soir. Prends un petit-déjeuner, et bois de l’eau pendant la journée. Bouge pendant ta pause, par exemple un petit tour à pied. Travailler sous l’effet de l’alcool ou de la drogue est dangereux, et la plupart des employeurs l’interdisent. Tu te sens déprimée depuis longtemps, ou tu n’arrives pas à arrêter de boire ou de consommer ? Parle à ton médecin généraliste (huisarts). Il peut t’aider, et il garde le secret.", x: "Tu travailles mieux et plus en sécurité quand tu dors assez, même après un service du soir. Prends un petit-déjeuner, et bois de l’eau pendant la journée. Bouge pendant ta pause, par exemple un petit tour à pied. Travailler sous l’effet de l’alcool ou de la drogue est dangereux, et la plupart des employeurs l’interdisent. Tu te sens déprimé / déprimée depuis longtemps, ou tu n’arrives pas à arrêter de boire ou de consommer ? Parle à ton médecin généraliste (huisarts). Il peut t’aider, et il garde le secret." }, // nieuw, nalezen
+    'c.healthy.p': { m: "Je me sens déprimé depuis longtemps. Je peux prendre rendez-vous ?", f: "Je me sens déprimée depuis longtemps. Je peux prendre rendez-vous ?", x: "Je me sens déprimé / déprimée depuis longtemps. Je peux prendre rendez-vous ?" }, // nieuw, nalezen
+    'c.healthy.s': { m: "Ce soir, tu as un service de nuit. Un collègue te propose un cachet pour rester éveillé. Qu’est-ce que tu fais ?", f: "Ce soir, tu as un service de nuit. Un collègue te propose un cachet pour rester éveillée. Qu’est-ce que tu fais ?", x: "Ce soir, tu as un service de nuit. Un collègue te propose un cachet pour rester éveillé / éveillée. Qu’est-ce que tu fais ?" }, // nieuw, nalezen
+    'c.healthy.o1': "Tu dis non, et tu dors quelques heures avant ton service.", // nieuw, nalezen
+    'c.healthy.o2': "Tu prends un demi-cachet, ce n’est pas dangereux.", // nieuw, nalezen
+    'c.healthy.o3': "Tu le prends, mais tu ne le dis à personne au travail.", // nieuw, nalezen
+    'c.healthy.w': "Les cachets d’un collègue peuvent être de la drogue. Ils peuvent te rendre malade ou te faire faire des erreurs au travail. Dormir, c’est la façon sûre de rester alerte.", // nieuw, nalezen
   },
 };
 

@@ -95,6 +95,24 @@ const t: CultureTranslation = {
     'c.kids.a.why': "Neden diye soruluyor: bu cevap nedeni veriyor, kreş aradı.",
     'c.body.a.why': "Neresinin ağrıdığı soruluyor: bu cevap yeri ve nedeni söylüyor.",
     'c.jobends.a.why': "Ev işe bağlı: bu cevap ihbar süresini soruyor.",
+    // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
+    'c.workorder.a.why': "Bir kelime net değil: başlamadan önce sormak doğru cevap.", // nieuw, nalezen
+    'c.handover.a.why': "Her şey bitti mi diye soruluyor: bu cevap neyin bitmediğini ve nedenini söylüyor.", // nieuw, nalezen
+    'c.workshop.a.why': "Neden diye soruluyor: bu cevap nedeni veriyor, gözler korunmalı.", // nieuw, nalezen
+    'c.power.a.why': "Lambada iş: bu cevap önce elektriğin kesik olup olmadığını soruyor.", // nieuw, nalezen
+    'c.garage.a.why': "Lastik değiştirmesi isteniyor: bir evet ve lastiklerin nerede olduğuna dair bir soru.", // nieuw, nalezen
+    'c.carjob.a.why': "Ek iş: müşteri önce onay vermeli, bu yüzden bu cevap müşteriyi arıyor.", // nieuw, nalezen
+    'c.placement.a.why': "Ne zaman diye soruluyor: bu cevap günü veriyor, önce de sözleşme geliyor.", // nieuw, nalezen
+    'c.review.a.why': "Geri bildirim henüz net değil: göstermelerini istemek iyi bir cevap.", // nieuw, nalezen
+    'c.council.a.why': "Oy vermek soruluyor: bir evet ve götürülecek iki şey.", // nieuw, nalezen
+    'c.police.a.why': "Polis kimlik istiyor: göster ve ne olduğunu sor.", // nieuw, nalezen
+    'c.login.a.why': "Giriş yapılabiliyor mu diye soruluyor: bu cevap hayır diyor ve nedenini söylüyor.", // nieuw, nalezen
+    'c.phish.a.why': "Bağlantı soruluyor: dürüst bir evet ve bilgi işleme bir telefon.", // nieuw, nalezen
+    'c.mychoice.a.why': "Güçlü yönler soruluyor: bu cevap bir tanesini örnekle söylüyor.", // nieuw, nalezen
+    'c.nextstep.a.why': "Plan soruluyor: bu cevap bbl’yi ve ne anlama geldiğini söylüyor.", // nieuw, nalezen
+    'c.email.a.why': "Gönderildi mi diye soruluyor: daha değil, önce kontrol ediliyor.", // nieuw, nalezen
+    'c.budget.a.why': "Sonra ödeme teklif ediliyor: kibar bir hayır, nedeniyle birlikte.", // nieuw, nalezen
+    'c.healthy.a.why': "Hap teklif ediliyor: kibar bir hayır, nedeniyle birlikte.", // nieuw, nalezen
   },
 };
 
