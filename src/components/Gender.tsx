@@ -43,7 +43,22 @@ export function GenderPicker({ current, lang, onPick, compact = false, mini = fa
   const small = compact || mini;
   const fresh = useFreshCards('gender');
   return (
-    <div className={`lang-grid sector-grid gender-grid ${small ? 'lang-grid-compact' : ''} ${mini ? 'gender-grid-mini' : ''}`} role="radiogroup" aria-label={said(ui('genderTitle', lang))}>
+    <div className={`lang-grid sector-grid gender-grid ${small ? 'lang-grid-compact' : ''} ${mini ? 'gender-grid-mini' : ''}`} role="radiogroup"
+      aria-label={said(ui('genderTitle', lang))}
+      // As in the other radio groups (ChoiceCards): the arrow keys go from card to card (a pick
+      // still needs Enter or a tap). Left and right follow the language's direction.
+      onKeyDown={(e) => {
+        const rtl = lang?.dir === 'rtl';
+        const back = e.key === 'ArrowUp' || e.key === (rtl ? 'ArrowRight' : 'ArrowLeft');
+        const on = e.key === 'ArrowDown' || e.key === (rtl ? 'ArrowLeft' : 'ArrowRight');
+        if (!back && !on) return;
+        const cards = [...e.currentTarget.querySelectorAll<HTMLButtonElement>('.gender-btn')];
+        const at = cards.indexOf(document.activeElement as HTMLButtonElement);
+        if (at < 0) return;
+        e.preventDefault();
+        cards[(at + (on ? 1 : cards.length - 1)) % cards.length].focus();
+      }}
+    >
       {(mini ? OPTIONS.filter((o) => o.who) : OPTIONS).map((o) => {
         const picked = current === o.id;
         return (
@@ -90,6 +105,7 @@ export function GenderScreen({ lang, onDone, current, onBack, greet = false }: {
   greet?: boolean;
 }) {
   const title = ui('genderTitle', lang);
+  const Title = greet ? 'h1' : 'h2';
   return (
     <div className="screen onboarding sector-screen gender-screen" dir={lang?.dir}>
       {onBack && <ChromeHead lang={lang} onBack={onBack} />}
@@ -100,10 +116,12 @@ export function GenderScreen({ lang, onDone, current, onBack, greet = false }: {
           <h1 className="hero-logo sector-logo"><LogoMark size={40} /><Wordmark /></h1>
         </div>
       )}
-      <h2 className="onboarding-title sector-title">
+      {/* Bram's greeting takes the logo's place (the logo is the page's h1 otherwise): then the
+          question is the page's one h1, so the page still has a main heading. */}
+      <Title className="onboarding-title sector-title">
         <span className="sector-title-nl" lang="nl"><bdi dir="ltr">Vrouw of man?</bdi></span>
         <Bi text={title} />
-      </h2>
+      </Title>
       <QuestionSay nl="Vrouw of man?" help={title.help} lang={lang} />
       <p className="sector-hint"><Bi text={ui('genderHint', lang)} /></p>
       <GenderPicker current={current} lang={lang} onPick={onDone} />
