@@ -992,7 +992,7 @@ export const warehouseUnit: RuleUnit = {
             { id: 'b', text: 'Ze slaat haar pauze over om meer orders te halen.', best: false, feedback: 'Begrijpelijk. Maar pauze is haar recht.' },
             { id: 'c', text: 'Ze tilt twee dozen tegelijk, om sneller te gaan.', best: false, feedback: 'Dat is zwaar voor haar rug. Zo kan ze zich bezeren.' },
           ],
-          why: 'Vraag hoe de norm werkt. Wat telt de scanner mee? Is de norm voor iedereen even hoog? Vraag ook wat beter kan. Je pauze sla je niet over.',
+          why: 'De norm is hoeveel je per uur moet doen. Vraag hoe de norm werkt. Wat telt de scanner mee? Is de norm voor iedereen even hoog? Vraag ook wat beter kan. Je pauze sla je niet over.',
         },
         // ⚖️ check: Je werkgever moet dat voorkomen ⚖️.
         // ⚖️ check: Of ga zelf naar de bedrijfsarts ⚖️.
