@@ -39,6 +39,11 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['telefoonnummer', 7],
   ['werkvergunning', 4],
   ['eindafrekening', 4],
+  ['gehoorbescherming', 6],
+  ['praktijkopleider', 8],
+  ['stagebegeleider', 5],
+  ['startkwalificatie', 5],
+  ['gebruikersnaam', 10],
 ];
 
 export const SHY = '\u00ad';

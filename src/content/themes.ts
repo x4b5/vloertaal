@@ -57,11 +57,13 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     regels: ['r.veilig'],
   },
   'theme.find': {
-    taal: ['u.apply', 'u.contract', 'u.grow', 'u.lost'],
+    taal: ['u.apply', 'u.contract', 'u.grow', 'u.lost', 'u.stage'],
     regels: ['r.zoeken', 'r.contract', 'r.stage'],
   },
   'theme.job': {
-    taal: ['u.time', 'u.pay', 'u.leave', 'u.contact', 'u.house', 'u.numbers', 'u.shop', 'u.ai'],
+    // "In de werkplaats" and "In de garage" are basis units for now (no sector of their own yet,
+    // like "In de winkel"), so they sit here and not under "Jouw sector".
+    taal: ['u.time', 'u.pay', 'u.leave', 'u.contact', 'u.house', 'u.numbers', 'u.shop', 'u.ai', 'u.finish', 'u.tech', 'u.garage', 'u.online'],
     regels: ['r.loon', 'r.tijd', 'r.ziek', 'r.rekenen', 'r.afronden', 'r.duurzaam', 'r.winkel'],
   },
   'theme.together': {
@@ -74,7 +76,7 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
   },
   'theme.life': {
     // With the regions' units (src/content/regio): only in the path of a learner of that region.
-    taal: ['u.papers', 'u.health', 'u.money', 'u.travel', 'rg.zl.u'],
+    taal: ['u.papers', 'u.health', 'u.money', 'u.travel', 'u.society', 'rg.zl.u'],
     regels: ['r.geld', 'r.digitaal', 'r.meedoen', 'rg.zl.r'],
   },
   'theme.sector': {

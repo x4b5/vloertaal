@@ -44,6 +44,13 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.ai': ['u.tools', 'u.contact'],
   // Tuinbouw: safety (heat, sprays) and pay (piece rate, hours).
   'u.kas': ['u.safety', 'u.pay'],
+  // Entree in the Taal track (30 October 2026).
+  'u.finish': ['u.teamwork', 'u.clean'],
+  'u.tech': ['u.safety', 'u.build'],
+  'u.garage': ['u.safety', 'u.tech'],
+  'u.stage': ['u.apply', 'u.grow'],
+  'u.society': ['u.papers', 'u.rights'],
+  'u.online': ['u.ai', 'u.money'],
 };
 
 /**

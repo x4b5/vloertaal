@@ -32,6 +32,7 @@ const LOOKALIKES: readonly string[][] = [
   ['☕', '🍵'],
   // Drawn: "het schap" (a shop shelf) and "vakken vullen" (someone at that shelf).
   ['🗃️', '🥫'],
+  ['🧑‍🔧', '👨‍🔧', '👩‍🔧'],
 ];
 
 /** Emoji without the invisible variation selector, so "⚠" and "⚠️" compare equal. */
