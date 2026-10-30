@@ -437,7 +437,7 @@ Na `u.horeca`. Geluid (midden, -18 dB): Restaurantkeuken: pannen, de afzuiging z
 
 - **Waar heeft de gast een allergie voor?** Voor vlees. · **Voor noten.** ✔ · Voor melk.  
   Uitleg: De gast aan tafel zes heeft een allergie voor noten. *(The guest at table six is allergic to nuts.)*
-- **Wie weet of er noten in zitten?** De gast. · De baas. · **De chef.** ✔  
+- **Aan wie vraag je het?** De gast. · De baas. · **De chef.** ✔  
   Uitleg: Bij een allergie vraag je het altijd aan de chef. *(With an allergy you always ask the chef.)*
 
 #### 23. In de koelcel ⚖️ · `g.horeca.koelcel`
