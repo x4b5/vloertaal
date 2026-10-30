@@ -181,7 +181,7 @@ dialect, en waar je hulp vindt. Voor iedereen die in Zuid-Limburg woont of werkt
 > Heerlen. Haar post komt nog op haar oude adres. Haar collega Lotte zegt: "Heb je je al
 > ingeschreven bij de gemeente?"
 
-**Vraag 1 · Wat doe je?** Oksana verhuist binnen Nederland. Hoe geeft ze haar nieuwe adres door?
+**Vraag 1 · Wat is het beste?** Oksana verhuist binnen Nederland. Hoe geeft ze haar nieuwe adres door?
 
 - **A.** Ze belt haar oude gemeente in Den Haag.
   → *Dat hoeft niet. Je oude gemeente krijgt het vanzelf door.*
@@ -201,7 +201,7 @@ Dan ga je zelf naar de gemeente, met een afspraak ⚖️.
 **Waarom:** Je geeft een verhuizing door vanaf 4 weken vóór je verhuist, tot 5 dagen erna ⚖️.
 Doe het op tijd. Je adres is belangrijk voor je post, je loon, je zorgverzekering en toeslagen.
 
-**Vraag 3 · Wat doe je?** Joep komt uit België en gaat in Maastricht wonen. Hij moet zich voor het
+**Vraag 3 · Wat is het beste?** Joep komt uit België en gaat in Maastricht wonen. Hij moet zich voor het
 eerst inschrijven. Wat doet hij?
 
 - **A.** Hij loopt op maandagochtend naar het gemeentehuis.
@@ -241,7 +241,7 @@ rijksoverheid.nl ⚖️ · in de app: de Sociale kaart, bij "Gemeente".
 > van een woningcorporatie is vaak goedkoper. Mehmet werkt vanaf maandag in Geleen, met vroege
 > diensten. Hij heeft nog geen auto.
 
-**Vraag 1 · Wat doe je?** Mehmet en Nadia willen een huurhuis van een woningcorporatie. Hoe beginnen ze?
+**Vraag 1 · Wat is het beste?** Mehmet en Nadia willen een huurhuis van een woningcorporatie. Hoe beginnen ze?
 
 - **A.** Ze schrijven zich in op de site van Thuis in Limburg.
   → *Goed. Daar staan de huizen van veel corporaties in Limburg.*
@@ -266,7 +266,7 @@ corporatie. De lijst staat in de Sociale kaart.*
 OVpay ⚖️. Check in en uit met **dezelfde** pas of telefoon ⚖️. Een OV-chipkaart kan ook ⚖️. Reis
 je in Duitsland of België verder? Kijk dan eerst welk kaartje je nodig hebt ⚖️.
 
-**Vraag 3 · Wat doe je?** Mehmet begint om 6 uur in Geleen. Zo vroeg rijdt er bijna geen bus. Wat doet hij?
+**Vraag 3 · Wat is het beste?** Mehmet begint om 6 uur in Geleen. Zo vroeg rijdt er bijna geen bus. Wat doet hij?
 
 - **A.** Hij komt elke dag een uur te laat. De bus is niet zijn schuld.
   → *Begrijpelijk, maar dat geeft snel problemen. Op tijd komen is belangrijk.*
@@ -301,7 +301,7 @@ bij "Wonen".
 > Het loon is goed. Zijn buurman zegt: "Pas op met belasting en je zorgverzekering." Bogdan weet
 > niet wat hij moet doen.
 
-**Vraag 1 · Wat doe je?** Bogdan wil het werk wel. Wat doet hij eerst?
+**Vraag 1 · Wat is het beste?** Bogdan wil het werk wel. Wat doet hij eerst?
 
 - **A.** Hij tekent snel. Hij regelt de rest later wel.
   → *Begrijpelijk. Maar dan krijgt hij later misschien problemen.*
@@ -364,10 +364,10 @@ Grensarbeid ⚖️ · UWV · in de app: de Sociale kaart, bij "Grens".
 > heet dat ook vastelaovend. Iedereen wil die week vrij. Haar collega Joep praat Limburgs. Dewi
 > verstaat hem bijna niet.
 
-**Vraag 1 · Wat doe je?** Dewi wil met carnaval graag vrij. Wat doet ze?
+**Vraag 1 · Wat is het beste?** Dewi wil met carnaval graag vrij. Wat doet ze?
 
 - **A.** Ze meldt zich die maandag ziek. Dat doen anderen ook.
-  → *Niet doen. Zich ziek melden als ze niet ziek is, kan haar baan kosten.*
+  → *Niet doen. Meldt ze zich ziek terwijl ze niet ziek is? Dan kan ze haar baan kwijtraken.*
 - **B.** Ze vraagt het een week van tevoren. Dan is het nog vroeg genoeg.
   → *Dat is vaak te laat. Dan zijn de vrije dagen al weg.*
 - **C.** Ze vraagt het nu al aan haar leidinggevende, en ze krijgt het antwoord op papier.
@@ -390,7 +390,7 @@ neemt vakantiedagen op, of je bedrijf is dicht. Gaat je bedrijf dicht? Dan kan j
 vragen dat je daar vakantiedagen voor gebruikt. Dat moet wel kloppen met je contract of cao ⚖️.
 Vier je geen carnaval? Dan hoef je niet mee te doen. Je kunt ook gewoon werken.
 
-**Vraag 3 · Wat doe je?** Joep legt iets uit in het Limburgs. Dewi verstaat het niet. Wat doet ze?
+**Vraag 3 · Wat is het beste?** Joep legt iets uit in het Limburgs. Dewi verstaat het niet. Wat doet ze?
 
 - **A.** Ze vraagt vriendelijk: "Wil je het in het Nederlands zeggen?"
   → *Goed. De meeste collega's doen dat graag.*
@@ -432,7 +432,7 @@ nakijken door Veldeke (Maastricht) en iemand uit Heerlen of Kerkrade.*
 
 ### Les ZL.5 · Hulp in de buurt: zorg, taal, geld
 
-**Leerdoel:** je weet waar je heen gaat als je huisarts dicht is. Ook als je Nederlands wilt oefenen, of als je geldzorgen hebt.
+**Leerdoel:** je weet waar je heen gaat als je huisarts dicht is. Je weet ook waar je Nederlands oefent en hulp krijgt bij geldzorgen.
 
 **Scène** · *Beeld: Hatice (38) op zaterdagavond op de bank in Heerlen. Haar zoontje heeft hoge koorts. Op tafel ligt een stapel brieven.*
 
@@ -440,10 +440,10 @@ nakijken door Veldeke (Maastricht) en iemand uit Heerlen of Kerkrade.*
 > dicht tot maandag. Hatice maakt zich zorgen. Op tafel liggen ook drie rekeningen die ze nog niet
 > heeft betaald.
 
-**Vraag 1 · Wat doe je?** De huisarts is dicht. Wat doet Hatice?
+**Vraag 1 · Wat is het beste?** De huisarts is dicht. Wat doet Hatice?
 
 - **A.** Ze rijdt meteen naar de spoedeisende hulp van het ziekenhuis.
-  → *Daar heeft ze meestal eerst een verwijzing nodig. Bel eerst.*
+  → *Daar heeft ze meestal eerst een verwijzing nodig. Ze kan beter eerst bellen.*
 - **B.** Ze belt de huisartsenpost.
   → *Goed. Die helpt 's avonds, 's nachts en in het weekend.*
 - **C.** Ze wacht tot maandag en kijkt op internet.
