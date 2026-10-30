@@ -1270,6 +1270,15 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus { outline: none;
 .wordmark { font-family: 'Lexend Variable', 'Lexend', system-ui, sans-serif; font-weight: 700; color: var(--ink-strong); letter-spacing: -0.02em; }
 .wordmark-dot { color: #ffc414; }
 /* "Nederlands" in the language list: what the work-rules track teaches (src/i18n/meta.ts NL_MORE). */
+/* Nederlands is the work-rules track, not a help language: last, under a thin line, on the whole
+   width, in the kraft colour of the labels, with the word "Werkregels" as a small tag. */
+.lang-sep { grid-column: 1 / -1; height: 0; margin: 6px 0 2px; border-top: 2px dashed var(--line); }
+.lang-btn.lang-btn-nl { grid-column: 1 / -1; background: color-mix(in srgb, var(--kraft-light) 55%, var(--card)); border-color: var(--kraft); }
+.lang-btn.lang-btn-nl.picked { border-color: var(--edge); background: color-mix(in srgb, var(--kraft-light) 80%, var(--card)); }
+.lang-nl-tag {
+  display: inline-block; align-self: flex-start; margin-bottom: 4px; padding: 2px 8px; border-radius: 4px;
+  background: var(--tag-bg); color: var(--tag-ink); font-size: 0.75rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase;
+}
 .lang-nl-more { display: block; margin-top: 4px; font-size: 0.85rem; line-height: 1.3; color: var(--muted); }
 /* The whole app is a test version (Logo.tsx APP_BETA): a small tag after the name, in the body font. */
 .wordmark-beta {
