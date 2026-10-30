@@ -207,7 +207,8 @@ export default function App() {
   // button that led here, it goes to the screen's heading, so a screen reader says where you are
   // and Tab goes on from there, not from the top of the page. A screen that put the focus on a
   // button itself keeps it.
-  const screenKey = `${view.name}|${'page' in view ? view.page ?? '' : ''}|${'unit' in view ? view.unit : ''}|${step}`;
+  // The work-rules notice is drawn in the place of the home (same view): a screen of its own here.
+  const screenKey = `${view.name}|${'page' in view ? view.page ?? '' : ''}|${'unit' in view ? view.unit : ''}|${step}|${progress.rulesNotice ? 1 : 0}`;
   const firstScreen = useRef(true);
   useEffect(() => {
     if (firstScreen.current) { firstScreen.current = false; return; }

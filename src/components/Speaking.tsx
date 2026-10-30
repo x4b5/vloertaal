@@ -16,6 +16,7 @@ import { NlPair } from './NlPair';
 import { castFor, Character, type CharacterId } from './Characters';
 import { LockIcon, SpeakerIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
+import { focusIsLost } from './useFocusLost';
 
 /* Icons of this feature only (same stroke as Icons.tsx). */
 const stroke = { fill: 'none', stroke: 'currentColor', strokeWidth: 2.6, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
@@ -195,11 +196,15 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, phaseForSh
   // The button that had the focus is gone (the microphone after recording, "Say it again"): the
   // first button of the new phase gets it, so a keyboard or screen-reader user keeps their place.
   const box = useRef<HTMLDivElement>(null);
+  // A moment later: "Say it out loud instead" opens Continue in the footer one render after this
+  // one (onAnswer above), and the microphone is disabled (not gone) while the phone asks for it.
   useEffect(() => {
-    const active = document.activeElement;
-    if (active && active !== document.body) return;
-    const to = box.current?.querySelector<HTMLButtonElement>('.say-compare button, button.say-mic') ?? document.querySelector<HTMLButtonElement>('.player-foot .btn-go:not([disabled])');
-    to?.focus({ preventScroll: true });
+    const t = window.setTimeout(() => {
+      if (!focusIsLost()) return;
+      const to = box.current?.querySelector<HTMLButtonElement>('.say-compare button, button.say-mic:not([disabled]), .say-retry') ?? document.querySelector<HTMLButtonElement>('.player-foot .btn-go:not([disabled])');
+      to?.focus({ preventScroll: true });
+    }, 30);
+    return () => window.clearTimeout(t);
   }, [phase]);
 
   // The app goes to the background mid-recording: stop, so the microphone is not left on.

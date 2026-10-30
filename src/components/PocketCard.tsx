@@ -43,6 +43,8 @@ export function PocketCardScreen({ unit, lang, onBack, sector, region }: { unit:
   }, [unit.titleNl]);
 
   const save = async () => {
+    // aria-disabled, not disabled, while busy: a disabled button drops the keyboard focus.
+    if (busy) return;
     setBusy(true);
     try {
       const pics = card.current?.querySelectorAll<HTMLElement>('.pocket-pic') ?? [];
@@ -126,7 +128,7 @@ export function PocketCardScreen({ unit, lang, onBack, sector, region }: { unit:
       </article>
 
       <div className="cert-actions pocket-actions">
-        <button type="button" className="btn btn-primary cert-btn" onClick={save} disabled={busy}>
+        <button type="button" className="btn btn-primary cert-btn" onClick={save} aria-disabled={busy || undefined}>
           <PocketIcon size={26} />
           <span className="cert-btn-text">
             <NlPair nlFirst nl="Bewaar als plaatje" className="cert-btn-gloss" text={ui('pocketSave', lang)} />
