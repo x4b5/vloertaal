@@ -1071,7 +1071,7 @@ Kijk in je cao. (Dezelfde regel als in les 3.3, in een andere situatie.)
 - Vraag vrij op tijd en op papier.
 - Je werkgever moet in principe ja zeggen.
 - Zegt hij nee? Dat moet hij binnen 2 weken ⚖️ op papier laten weten.
-- Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️.
+- Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️.
 - Bij een noodgeval mag je meteen weg. Laat het wel meteen weten.
 
 **Vraag 1 · Wat is het beste?** Wanneer vraagt Esra haar vakantie aan?
@@ -1086,7 +1086,7 @@ Kijk in je cao. (Dezelfde regel als in les 3.3, in een andere situatie.)
 **Goed antwoord: C.**
 **Waarom:** Vraag vrij op tijd en op papier. Je werkgever moet in principe ja zeggen. Alleen bij een
 heel goede reden van het bedrijf mag hij nee zeggen ⚖️. Dat moet hij binnen 2 weken ⚖️ op papier
-laten weten. Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️.
+laten weten. Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️.
 
 **Vraag 2 · Waar of niet waar?** "Werk je 5 dagen per week? Dan heb je minstens 20 vrije dagen per jaar."
 

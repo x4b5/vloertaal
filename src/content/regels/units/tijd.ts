@@ -304,8 +304,8 @@ export const tijdUnit: RuleUnit = {
           ],
         },
         // ⚖️ check: Zegt hij nee? Dat moet hij binnen 2 weken ⚖️ op papier laten weten.
-        // ⚖️ check: Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️
-        //   (art. 7:638 lid 3 BW).
+        // ⚖️ check: Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️
+        //   (art. 7:638 lid 3 BW: alleen na een schriftelijke vraag; dat staat er nu bij, 30 okt 2026).
         {
           kind: 'rule',
           id: 'r.l.tijd.4.ru1',
@@ -315,7 +315,7 @@ export const tijdUnit: RuleUnit = {
             'Vraag vrij op tijd en op papier.',
             'Je werkgever moet in principe ja zeggen.',
             'Zegt hij nee? Dat moet hij binnen 2 weken op papier laten weten.',
-            'Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd.',
+            'Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd.',
             'Bij een noodgeval mag je meteen weg. Laat het wel meteen weten.',
           ],
           rule: 'geschreven',
@@ -331,7 +331,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', text: 'Ze boekt de reis alvast, en ze meldt het later.', best: false, feedback: 'Riskant. De baas moet het eerst goedvinden.' },
             { id: 'c', text: 'Ze vraagt het nu al, per mail of in de app.', best: true, feedback: 'Goed. Vroeg en op papier geeft de beste kans.' },
           ],
-          why: 'Vraag vrij op tijd en op papier. Je werkgever moet in principe ja zeggen. Alleen bij een heel goede reden van het bedrijf mag hij nee zeggen. Dat moet hij binnen 2 weken op papier laten weten. Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd.',
+          why: 'Vraag vrij op tijd en op papier. Je werkgever moet in principe ja zeggen. Alleen bij een heel goede reden van het bedrijf mag hij nee zeggen. Dat moet hij binnen 2 weken op papier laten weten. Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd.',
         },
         // ⚖️ check: Je krijgt minstens 4 keer ⚖️ zoveel vrije dagen als je dagen per week werkt.
         // ⚖️ check: Vrije dagen van de wet vervallen meestal op 1 juli van het jaar erna ⚖️ (6 maanden
