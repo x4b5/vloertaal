@@ -330,6 +330,10 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Tu acum', // nieuw, nalezen
     toetsKeepGoing: 'Exersează puțin în fiecare zi. Așa înveți tot mai mult.', // nieuw, nalezen
     toetsStart: 'Fă testul', // nieuw, nalezen
+    tempo: 'Viteză', // nieuw, nalezen
+    tempoCalm: 'Calm', // nieuw, nalezen
+    tempoNormal: 'Normal', // nieuw, nalezen
+    tempoHint: 'Calm înseamnă încet și clar. Normal e cum vorbesc colegii. Alege „Normal” dacă înțelegi deja mult.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

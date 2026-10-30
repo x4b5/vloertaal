@@ -6,7 +6,8 @@ import { loadPictures, usePicturesLoaded } from './pictures';
 import type { UiCode } from './i18n/types';
 import { isPlayable, learnedItems } from './content/courses';
 import { trackOf, trackOfId } from './lib/track';
-import { setDeviceRate, setPreferredVoice, setQuietAudio } from './lib/audio';
+import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
+import { tempoOf } from './lib/tempo';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
@@ -508,6 +509,8 @@ export default function App() {
   setQuietAudio(Boolean(progress.quiet));
   // The phone's voice reads at an easier, normal pace in the work-rules track (lib/audio.ts).
   setDeviceRate(trackOf(progress));
+  // "Tempo" (Settings): also set during render, for the same reason as the sound.
+  setTempo(tempoOf(progress));
   const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);
@@ -900,8 +903,9 @@ export default function App() {
             onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
+            onTempo={(tempo) => setProgress((p) => ({ ...p, tempo }))}
             onReset={() => {
-              // Keep the help language, look, voice, sound, sector, region and gender (the code is
+              // Keep the help language, look, voice, sound, tempo, sector, region and gender (the code is
               // stored apart and stays too); only learning progress is wiped (and lessons in
               // progress). So the app goes on at the home, not at the language list again.
               clearSave();
@@ -909,7 +913,7 @@ export default function App() {
               void forgetVoices();
               setProgress((p) => ({
                 ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
-                sector: p.sector, region: p.region, country: p.country, rulesNotice: p.rulesNotice, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked,
+                sector: p.sector, region: p.region, country: p.country, rulesNotice: p.rulesNotice, textSize: p.textSize, tempo: p.tempo, gender: p.gender, genderAsked: p.genderAsked,
               }));
               tab('route');
             }}

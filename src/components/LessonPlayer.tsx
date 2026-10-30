@@ -3,7 +3,9 @@ import type { Lesson } from '../content/types';
 import type { SectorChoice } from '../content/sectors';
 import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
-import { autoSpeak, sounds, speak, stopSpeech, surelySilent } from '../lib/audio';
+import { autoSpeak, endLessonPace, sounds, speak, startLessonPace, stopSpeech, surelySilent } from '../lib/audio';
+import { realPaceReplay } from '../lib/tempo';
+import { unitOfLesson } from '../content/courses';
 
 /** Can the phone say this line, as far as is known (see surelySilent: no index yet counts as yes). */
 const mayBeHeard = (text: string) => !surelySilent(text);
@@ -341,6 +343,19 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   });
   // The lesson is built from a seed, so a saved run rebuilds the same exercises.
   const [seed] = useState(() => saved?.seed ?? (Date.now() >>> 0));
+  // The tempo of this lesson (src/lib/tempo.ts): in the later themes a line played a second time
+  // plays at the real pace. Started during the first render, before the first exercise says its
+  // line (a child's effect runs before this component's); ended when the lesson is left.
+  const paceKey = `${lesson.id}:${seed}`;
+  const [realReplay] = useState(() => {
+    const on = realPaceReplay(unitOfLesson(lesson.id)?.id);
+    startLessonPace(paceKey, on);
+    return on;
+  });
+  useEffect(() => {
+    startLessonPace(paceKey, realReplay);
+    return () => endLessonPace(paceKey);
+  }, [paceKey, realReplay]);
   // The lesson is planned once, with the setting it started with; switching sound off midway
   // skips the listening exercises that are left instead (see audioOff).
   const [quietAtStart] = useState(() => saved?.quiet ?? quiet);

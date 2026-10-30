@@ -330,6 +330,10 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'أنت الآن', // nieuw, nalezen
     toetsKeepGoing: { m: 'تمرّن قليلاً كل يوم. هكذا تتعلم أكثر فأكثر.', f: 'تمرّني قليلاً كل يوم. هكذا تتعلمين أكثر فأكثر.', x: 'القليل من التمرين كل يوم يعني تعلّماً أكثر فأكثر.' }, // nieuw, nalezen
     toetsStart: { m: 'ابدأ الاختبار', f: 'ابدئي الاختبار', x: 'بدء الاختبار' }, // nieuw, nalezen
+    tempo: 'السرعة', // nieuw, nalezen
+    tempoCalm: 'هادئ', // nieuw, nalezen
+    tempoNormal: 'عادي', // nieuw, nalezen
+    tempoHint: { m: 'الهادئ بطيء وواضح. العادي مثل كلام الزملاء. اختر «عادي» إذا كنت تفهم الكثير.', f: 'الهادئ بطيء وواضح. العادي مثل كلام الزملاء. اختاري «عادي» إذا كنتِ تفهمين الكثير.', x: 'الهادئ بطيء وواضح. العادي مثل كلام الزملاء. «عادي» مناسب لمن يفهم الكثير.' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

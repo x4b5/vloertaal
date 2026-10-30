@@ -8,7 +8,7 @@ export type SettingsList = 'me' | 'lessons' | 'phone';
 export type SettingsPage =
   | SettingsList
   | 'language' | 'gender' | 'sector' | 'sector-make' | 'sector-care' | 'sector-other' | 'region' | 'country' | 'english' | 'certificates'
-  | 'sound' | 'voice' | 'speaking' | 'writing' | 'text' | 'theme'
+  | 'sound' | 'voice' | 'tempo' | 'speaking' | 'writing' | 'text' | 'theme'
   | 'offline' | 'reminder' | 'reminder-time' | 'install' | 'backup' | 'counting' | 'reset' | 'unlock'
   /** "Wat ken je al?": a screen of its own (App, src/components/Toets.tsx ToetsPage), from Lessen. */
   | 'toets';
@@ -30,6 +30,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   certificates: 'me',
   sound: 'lessons',
   voice: 'lessons',
+  tempo: 'lessons',
   speaking: 'lessons',
   writing: 'lessons',
   text: 'lessons',
@@ -81,7 +82,7 @@ export interface SettingsContext {
 export function settingsRows(list: SettingsList, ctx: SettingsContext): SettingsPage[] {
   const rows: (SettingsPage | false)[] =
     list === 'me' ? ['language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', 'country', !ctx.rules && ctx.helpLang && 'english', 'certificates']
-    : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'speaking', !ctx.rules && 'writing', 'text', 'theme', !ctx.rules && 'toets']
+    : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'tempo', !ctx.rules && 'speaking', !ctx.rules && 'writing', 'text', 'theme', !ctx.rules && 'toets']
     : [ctx.preview && 'unlock', ctx.offline && 'offline', 'reminder', ctx.install && 'install', 'backup', 'counting', 'reset'];
   return rows.filter((r): r is SettingsPage => Boolean(r));
 }

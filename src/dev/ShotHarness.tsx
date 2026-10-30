@@ -557,6 +557,7 @@ function SettingsShot({ progress: start, access }: { progress: Progress; access:
       onTextSize={pickSize}
       onVoice={(voice) => set({ voice })}
       onQuiet={(quiet) => set({ quiet })}
+      onTempo={(tempo) => set({ tempo })}
       onReset={() => up()}
       onRestore={() => {}}
       access={access}

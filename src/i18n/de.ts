@@ -330,6 +330,10 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Du jetzt', // nieuw, nalezen
     toetsKeepGoing: 'Übe jeden Tag ein bisschen. Dann lernst du immer mehr.', // nieuw, nalezen
     toetsStart: 'Test machen', // nieuw, nalezen
+    tempo: 'Tempo', // nieuw, nalezen
+    tempoCalm: 'Ruhig', // nieuw, nalezen
+    tempoNormal: 'Normal', // nieuw, nalezen
+    tempoHint: 'Ruhig ist langsam und deutlich. Normal ist so, wie Kollegen sprechen. Wähle „Normal“, wenn du schon viel verstehst.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

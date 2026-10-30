@@ -434,7 +434,7 @@ function defineStates(LANG) {
   // with the back arrow (the "look only" way out).
   for (const pg of ['me', 'lessons', 'phone', 'language', 'certificates']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('settings:phone-preview', shot('settings&page=phone&access=preview'), null, { list: true });
-  for (const pg of ['gender', 'sector', 'sector-make', 'sector-care', 'sector-other', 'english', 'sound', 'voice', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
+  for (const pg of ['gender', 'sector', 'sector-make', 'sector-care', 'sector-other', 'english', 'sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
   add('settings:writing-ar', shot('settings&page=writing', 'ar'));
   add('settings:install', shot('settings&page=install&install=prompt'));
   add('settings:unlock', shot('settings&page=unlock&access=preview'));

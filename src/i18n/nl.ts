@@ -362,6 +362,10 @@ export const uiNl: Record<UiKey, UiText> = {
   toetsYouNow: 'Jij nu',
   toetsKeepGoing: 'Oefen elke dag een beetje. Dan leer je steeds meer.',
   toetsStart: 'Doe de toets',
+  tempo: 'Tempo',
+  tempoCalm: 'Rustig',
+  tempoNormal: 'Normaal',
+  tempoHint: 'Rustig is langzaam en duidelijk. Normaal is zoals collega’s praten. Kies Normaal als je al veel verstaat.',
 };
 
 const lang: HelpLanguageSource = {

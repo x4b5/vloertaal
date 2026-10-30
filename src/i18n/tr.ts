@@ -330,6 +330,10 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Sen şimdi', // nieuw, nalezen
     toetsKeepGoing: 'Her gün biraz çalış. Böylece gittikçe daha çok öğrenirsin.', // nieuw, nalezen
     toetsStart: 'Testi yap', // nieuw, nalezen
+    tempo: 'Hız', // nieuw, nalezen
+    tempoCalm: 'Sakin', // nieuw, nalezen
+    tempoNormal: 'Normal', // nieuw, nalezen
+    tempoHint: 'Sakin: yavaş ve net. Normal: iş arkadaşlarının konuştuğu gibi. Çok şey anlıyorsan “Normal”i seç.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -1,6 +1,7 @@
 import { BRAM_HELLO, BRAM_VOICE, DEVICE, type VoiceRef } from './voices';
 import { sayAs } from './sayAs';
 import { sentences } from './dutch';
+import { deviceRateFor, paceOf, recordedRateFor, type Pace, type Tempo } from './tempo';
 
 /** Dutch text-to-speech through the browser, plus small feedback sounds. */
 
@@ -244,27 +245,63 @@ function emitSpeech(text: string, speaking: boolean, slow: boolean): void {
   speechListeners.forEach((fn) => fn(text, speaking, slow));
 }
 
-/** Learners need calm Dutch: recordings play a bit slower than recorded (same pitch),
- *  and the turtle button slower still. */
-const RECORDED_RATE = { normal: 0.75, slow: 0.5 };
+/**
+ * Learners need calm Dutch: recordings play a bit slower than recorded (0.75x, same pitch), and
+ * the turtle button slower still. "Tempo" in Settings (src/lib/tempo.ts) can set the real pace
+ * (1.0x, the phone's voice about 0.95); in the later themes a line played a second time in a
+ * lesson plays at the real pace too. The rates live in src/lib/tempo.ts.
+ */
 /** Some recorded voices speak slower by nature; this evens them out (Noa reads noticeably
  *  slower than the others, so she plays a bit faster). */
 const VOICE_PACE: Record<string, number> = { noa: 1.2 };
-/** The phone's own voice already speaks a little faster than the recordings. */
-const DEVICE_RATE = { normal: 0.75, slow: 0.45 };
-/** The work-rules track is for people who speak Dutch already: the phone's voice at an easy
- *  but normal pace there. The turtle tap stays slow in both tracks. */
-const DEVICE_RATE_RULES = 0.9;
-let deviceNormal = DEVICE_RATE.normal;
+/** The work-rules track: the phone's voice at an easy but normal pace there (about 0.9), and
+ *  no tempo setting or faster replay. The turtle tap stays slow in both tracks. */
+let rulesTrack = false;
 
 /** The phone voice's pace for a track ('regels': about 0.9; 'taal': 0.75, as before). */
 export function setDeviceRate(track: 'taal' | 'regels'): void {
-  deviceNormal = track === 'regels' ? DEVICE_RATE_RULES : DEVICE_RATE.normal;
+  rulesTrack = track === 'regels';
 }
 
-/** The phone voice's rate now (normal or slow). */
+/** The learner's "Tempo" (Settings): 'calm' (default) or 'normal'. */
+let tempo: Tempo = 'calm';
+export function setTempo(t: Tempo): void {
+  tempo = t;
+}
+
+/**
+ * The lesson on screen (src/components/LessonPlayer.tsx): whether a line played a second time
+ * plays at the real pace (src/lib/tempo.ts realPaceReplay), and the lines played in it so far.
+ * Null outside a lesson.
+ */
+let lessonPace: { key: string; replay: boolean; heard: Set<string> } | null = null;
+
+/** A lesson opens (idempotent for the same key: React may run it twice). */
+export function startLessonPace(key: string, replay: boolean): void {
+  if (lessonPace?.key === key) return;
+  lessonPace = { key, replay, heard: new Set() };
+}
+
+/** The lesson is left: nothing counts as heard any more. */
+export function endLessonPace(key: string): void {
+  if (lessonPace?.key === key) lessonPace = null;
+}
+
+/** What the next play of `text` would be: its pace (the turtle, calm or the real pace). */
+export function nextPace(text: string, slow = false): Pace {
+  return paceOf({ slow, tempo, rules: rulesTrack, replay: Boolean(lessonPace?.replay), heardBefore: Boolean(lessonPace?.heard.has(plainText(text))) });
+}
+
+/** The pace of this play of `text`; marks it as heard in the lesson. */
+function paceFor(text: string, slow: boolean): Pace {
+  const pace = nextPace(text, slow);
+  lessonPace?.heard.add(plainText(text));
+  return pace;
+}
+
+/** The phone voice's rate now (normal or slow), at the learner's tempo. */
 export function deviceRate(slow = false): number {
-  return slow ? DEVICE_RATE.slow : deviceNormal;
+  return deviceRateFor(slow ? 'slow' : tempo === 'normal' && !rulesTrack ? 'real' : 'calm', rulesTrack);
 }
 
 let playing: HTMLAudioElement | null = null;
@@ -302,12 +339,13 @@ export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voic
   const ref = voice === undefined ? preferredVoice : voice;
   const chosen = lang === 'nl' ? recordedFor(ref) : undefined;
   const found = chosen && clipFor(chosen, text);
+  const pace: Pace = lang === 'nl' ? paceFor(text, slow) : slow ? 'slow' : 'calm';
   if (found) {
     const { rec, id } = found;
-    playClip(clipPath(rec, id), text, slow, lang, VOICE_PACE[rec.voice.key] ?? 1);
+    playClip(clipPath(rec, id), text, slow, lang, VOICE_PACE[rec.voice.key] ?? 1, undefined, pace);
     return;
   }
-  speakDevice(text, slow, lang, deviceUriFor(ref));
+  speakDevice(text, slow, lang, deviceUriFor(ref), pace);
 }
 
 /** The phone voice a reference asks for: a device voiceURI, or for "device" (female characters)
@@ -354,17 +392,18 @@ export function speakLong(text: string, opts: LongSpeech = {}): boolean {
   const slow = Boolean(opts.slow);
   const chosen = recordedFor(ref);
   const found = chosen && clipFor(chosen, text);
+  const pace = paceFor(text, slow);
   if (found) {
     const { rec, id } = found;
     // A broken file: the phone reads the whole block instead (still one voice for the block).
-    playClip(clipPath(rec, id), text, slow, 'nl', VOICE_PACE[rec.voice.key] ?? 1, () => speakSentences(text, slow, deviceUriFor(ref)));
+    playClip(clipPath(rec, id), text, slow, 'nl', VOICE_PACE[rec.voice.key] ?? 1, () => speakSentences(text, slow, deviceUriFor(ref), pace), pace);
     return true;
   }
-  return speakSentences(text, slow, deviceUriFor(ref));
+  return speakSentences(text, slow, deviceUriFor(ref), pace);
 }
 
 /** The phone's Dutch voice, one queued utterance per sentence (see speakLong). */
-function speakSentences(text: string, slow: boolean, voiceURI: string | undefined): boolean {
+function speakSentences(text: string, slow: boolean, voiceURI: string | undefined, pace: Pace = slow ? 'slow' : 'calm'): boolean {
   stopAll();
   if (!speechAvailable() || !hasDutchVoice()) return false;
   const synth = window.speechSynthesis;
@@ -377,7 +416,7 @@ function speakSentences(text: string, slow: boolean, voiceURI: string | undefine
     const u = new SpeechSynthesisUtterance(sayAs(part));
     u.lang = 'nl-NL';
     if (voice) u.voice = voice;
-    u.rate = deviceRate(slow);
+    u.rate = deviceRateFor(pace, rulesTrack);
     // The first sentence is reported right away (some phones never fire onstart).
     if (i > 0) u.onstart = () => { if (mine()) emitSpeech(part, true, slow); };
     u.onend = u.onerror = () => {
@@ -393,10 +432,10 @@ function speakSentences(text: string, slow: boolean, voiceURI: string | undefine
 }
 
 /** Plays one recorded clip; a missing or broken file lets the phone say the text instead. */
-function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', pace = 1, onFail?: () => void): void {
+function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', voicePace = 1, onFail?: () => void, pace: Pace = slow ? 'slow' : 'calm'): void {
   stopAll();
   const audio = new Audio(url);
-  const rate = (slow ? RECORDED_RATE.slow : RECORDED_RATE.normal) * pace;
+  const rate = recordedRateFor(pace) * voicePace;
   // Both: some WebKit versions reset playbackRate to the default while the clip loads.
   audio.defaultPlaybackRate = audio.playbackRate = rate;
   audio.preservesPitch = true;
@@ -411,7 +450,7 @@ function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', p
   audio.onerror = () => {
     if (turn !== speechTurn) return;
     if (onFail) onFail();
-    else speakDevice(text, slow, lang, undefined);
+    else speakDevice(text, slow, lang, undefined, pace);
   };
   audio.play().catch(end);
   emitSpeech(text, true, slow);
@@ -447,7 +486,7 @@ export function sayFirstWord(): void {
   else playClip(FIRST_WORD.url, FIRST_WORD.text, false, 'nl');
 }
 
-function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: string | undefined): void {
+function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: string | undefined, pace: Pace = slow ? 'slow' : 'calm'): void {
   if (!speechAvailable()) return;
   const synth = window.speechSynthesis;
   stopAll();
@@ -455,7 +494,7 @@ function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: s
   u.lang = lang === 'en' ? 'en-GB' : 'nl-NL';
   const voice = lang === 'en' ? undefined : dutchVoice(voiceURI);
   if (voice) u.voice = voice;
-  u.rate = deviceRate(slow);
+  u.rate = deviceRateFor(pace, rulesTrack);
   // cancel() ends the previous utterance asynchronously; only the latest one reports its end.
   const turn = ++speechTurn;
   u.onend = u.onerror = () => {

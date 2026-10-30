@@ -6,7 +6,7 @@ import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
 import { dutchUi } from '../lib/track';
 import { NlPair } from './NlPair';
 import type { Access } from '../lib/access';
-import { recordedIndexSettled, setPreferredVoice, speak } from '../lib/audio';
+import { autoSpeak, recordedIndexSettled, setPreferredVoice, setTempo, speak } from '../lib/audio';
 import { earnedCertificates } from '../lib/certificate';
 import { countingOn, setCounting } from '../lib/count';
 import { applyEnglish, setWantsEnglish, wantsEnglish } from '../lib/english';
@@ -19,6 +19,7 @@ import {
   type SettingsList, type SettingsPage, type VoiceChoice,
 } from '../lib/settingsMenu';
 import { setSpeakingOn, speakingOn } from '../lib/speaking';
+import { tempoOf, TEMPOS, type Tempo } from '../lib/tempo';
 import { TEXT_SIZES, type TextSize } from '../lib/textSize';
 import { VOICE_SAMPLE } from '../lib/voices';
 import { nonLatinHelp, setWantsWriting, setWritingInput, wantsWriting, writingInput } from '../lib/writing';
@@ -81,6 +82,16 @@ const BarsIcon = ({ size = 24 }: { size?: number }) => (
     <path d="M5 20v-6M12 20V5M19 20v-9" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" />
   </svg>
 );
+/** A speedometer, for "Tempo": the needle low (calm) or up (the real pace). */
+const TempoIcon = ({ size = 24, fast = false }: { size?: number; fast?: boolean }) => (
+  <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
+    <path d="M3.5 17a8.5 8.5 0 1 1 17 0" fill="none" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round" />
+    <path d={fast ? 'M12 17l4.2-5.6' : 'M12 17l-4.6-3.4'} stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" />
+    <circle cx="12" cy="17" r="1.8" fill="currentColor" />
+  </svg>
+);
+const TEMPO_KEYS = { calm: 'tempoCalm', normal: 'tempoNormal' } as const;
+const TEMPO_NL = { calm: 'Rustig', normal: 'Normaal' } as const;
 const TextA = ({ size }: { size: TextSize }) => <span className={`text-size-a text-size-${size}`} aria-hidden>A</span>;
 
 const TEXT_KEYS = { normal: 'textNormal', large: 'textLarge', xl: 'textXl' } as const;
@@ -104,6 +115,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   certificates: { nl: 'Mijn certificaten', key: 'myCertificates', icon: <CertIcon size={24} /> },
   sound: { nl: 'Geluid', key: 'sound', icon: <SpeakerIcon size={24} /> },
   voice: { nl: 'Stem', key: 'voice', icon: <MicIcon size={24} /> },
+  tempo: { nl: 'Tempo', key: 'tempo', icon: <TempoIcon size={24} /> },
   speaking: { nl: 'Spreken oefenen', key: 'speakingPractice', icon: <MicIcon size={24} /> },
   writing: { nl: 'Schrijven', key: 'settingWriting', icon: <PencilIcon size={24} /> },
   text: { nl: 'Tekstgrootte', key: 'textSize', icon: <TextA size="normal" /> },
@@ -142,7 +154,7 @@ function Head({ page, lang, onBack }: { page: SettingsPage | null; lang?: HelpLa
 }
 
 export function Settings({
-  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onCountry, onTheme, onTextSize, onVoice, onQuiet, onReset,
+  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onCountry, onTheme, onTextSize, onVoice, onQuiet, onTempo, onReset,
   onRestore, access = 'full', onAccess, onCertificate,
 }: {
   progress: Progress;
@@ -165,6 +177,8 @@ export function Settings({
   onVoice: (voice: string | null) => void;
   /** "Without sound" on (true) or off. */
   onQuiet: (quiet: boolean) => void;
+  /** "Tempo": calm ("Rustig") or the real pace ("Normaal"). */
+  onTempo?: (tempo: Tempo) => void;
   onReset: () => void;
   /** "Bewaar je voortgang": a backup was put back (merged or replaced). */
   onRestore: (next: Progress) => void;
@@ -278,6 +292,7 @@ export function Settings({
       case 'english': return <Value text={say(wantsEnglish() ? 'settingOn' : 'settingOff')} />;
       case 'certificates': return <span className="set-row-value">{earnedCertificates(progress).length}</span>;
       case 'sound': return <Value text={say(progress.quiet ? 'withoutSound' : 'soundOn')} />;
+      case 'tempo': return <Value text={say(TEMPO_KEYS[tempoOf(progress)])} />;
       case 'voice': return voice ? <Value text={say(voice === 'f' ? 'voiceWoman' : voice === 'm' ? 'voiceMan' : 'voiceAuto')} /> : null;
       case 'speaking': return <Value text={say(speakingOn() ? 'settingOn' : 'settingOff')} />;
       case 'writing': return <Value text={say(writing === 'pick' ? 'writingPick' : writing === 'tiles' ? 'letterTiles' : 'useKeyboard')} />;
@@ -453,6 +468,24 @@ export function Settings({
           </>
         );
       }
+      case 'tempo':
+        // Two cards; a tap plays the sample line at that pace (unless sound is off), then leads back.
+        return (
+          <>
+            <ChoiceCards
+              label={said(ui('tempo', lang))}
+              current={tempoOf(progress)}
+              onPick={(t) => {
+                setTempo(t);
+                onTempo?.(t);
+                autoSpeak(VOICE_SAMPLE);
+                answered(1, 900);
+              }}
+              options={TEMPOS.map((t) => ({ id: t, nl: TEMPO_NL[t], text: say(TEMPO_KEYS[t]), picture: <TempoIcon size={28} fast={t === 'normal'} /> }))}
+            />
+            <p className="max3-hint"><Bi text={say('tempoHint')} /></p>
+          </>
+        );
       case 'speaking':
         return (
           <>

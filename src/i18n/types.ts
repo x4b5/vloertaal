@@ -391,6 +391,11 @@ export const uiEn = {
   toetsYouNow: 'You now',
   toetsKeepGoing: 'Practise a little every day. Then you learn more and more.',
   toetsStart: 'Do the test',
+  /* "Tempo" in Settings (src/lib/tempo.ts): how fast the Dutch is played. */
+  tempo: 'Speed',
+  tempoCalm: 'Calm',
+  tempoNormal: 'Normal',
+  tempoHint: 'Calm is slow and clear. Normal is how colleagues talk. Choose Normal when you already understand a lot.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

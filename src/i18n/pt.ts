@@ -330,6 +330,10 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Tu agora', // nieuw, nalezen
     toetsKeepGoing: 'Pratica um pouco todos os dias. Assim aprendes cada vez mais.', // nieuw, nalezen
     toetsStart: 'Fazer o teste', // nieuw, nalezen
+    tempo: 'Velocidade', // nieuw, nalezen
+    tempoCalm: 'Devagar', // nieuw, nalezen
+    tempoNormal: 'Normal', // nieuw, nalezen
+    tempoHint: 'Devagar é lento e claro. Normal é como falam os colegas. Escolhe «Normal» se já percebes muito.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -331,6 +331,10 @@ const lang: HelpLanguageSource = {
     toetsYouNow: { m: 'ንስኻ ሕጂ', f: 'ንስኺ ሕጂ', x: 'ንስኹም ሕጂ' }, // nieuw, nalezen
     toetsKeepGoing: { m: 'መዓልታዊ ቁሩብ ተለማመድ። ከምኡ ብዝያዳ ትማሃር።', f: 'መዓልታዊ ቁሩብ ተለማመዲ። ከምኡ ብዝያዳ ትማሃሪ።', x: 'መዓልታዊ ቁሩብ ተለማመዱ። ከምኡ ብዝያዳ ትማሃሩ።' }, // nieuw, nalezen
     toetsStart: { m: 'ፈተና ጀምር', f: 'ፈተና ጀምሪ', x: 'ፈተና ጀምሩ' }, // nieuw, nalezen
+    tempo: 'ቅልጣፈ', // nieuw, nalezen
+    tempoCalm: 'ህዱእ', // nieuw, nalezen
+    tempoNormal: 'ንቡር', // nieuw, nalezen
+    tempoHint: { m: 'ህዱእ ቀስ ዝበለን ንጹርን እዩ። ንቡር ከም ዘረባ ብጾት ስራሕ እዩ። ብዙሕ ትርዳእ እንተኾንካ ንቡር ምረጽ።', f: 'ህዱእ ቀስ ዝበለን ንጹርን እዩ። ንቡር ከም ዘረባ ብጾት ስራሕ እዩ። ብዙሕ ትርድኢ እንተኾንኪ ንቡር ምረጺ።', x: 'ህዱእ ቀስ ዝበለን ንጹርን እዩ። ንቡር ከም ዘረባ ብጾት ስራሕ እዩ። ብዙሕ ትርድኡ እንተኾንኩም ንቡር ምረጹ።' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

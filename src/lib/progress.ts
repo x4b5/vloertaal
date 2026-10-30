@@ -11,6 +11,7 @@ import { mergeToets, readToets, type ToetsState } from './toetsState';
 export type Country = 'nl' | 'be';
 export const isCountry = (x: unknown): x is Country => x === 'nl' || x === 'be';
 import type { TextSize } from './textSize';
+import { isTempo, type Tempo } from './tempo';
 
 export interface LessonRecord {
   /** Best accuracy so far, 0–1. */
@@ -35,6 +36,9 @@ export interface Progress {
   quiet?: boolean;
   /** "Text size" in Settings (src/lib/textSize.ts). Missing = normal. */
   textSize?: TextSize;
+  /** "Tempo" in Settings (src/lib/tempo.ts): 'calm' ("Rustig") or 'normal' ("Normaal"). Missing in
+   *  older saves = calm, the pace from before. */
+  tempo?: Tempo;
   /** The help language; 'nl' = the screens in Dutch, the work-rules track (src/lib/track.ts). */
   helpLang: UiCode | null;
   /**
@@ -157,6 +161,8 @@ export function loadProgress(): Progress {
       if (saved.region !== undefined && !isRegionChoice(saved.region)) delete saved.region;
       if (saved.country !== undefined && !isCountry(saved.country)) delete saved.country;
       if (saved.rulesNotice !== undefined && typeof saved.rulesNotice !== 'boolean') delete saved.rulesNotice;
+      // "Tempo" came later: a missing one is calm (the old pace); anything unknown is dropped.
+      if (saved.tempo !== undefined && !isTempo(saved.tempo)) delete saved.tempo;
       // Regions while they are not offered (REGIONS_LIVE off): no region unit, no region map.
       if (saved.region !== undefined && !regionsOn()) delete saved.region;
       // The work-rules track while it is not offered (RULES_TRACK off): the language page again.

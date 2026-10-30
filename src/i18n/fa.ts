@@ -330,6 +330,10 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'تو حالا', // nieuw, nalezen
     toetsKeepGoing: 'هر روز کمی تمرین کن. این‌طوری بیشتر و بیشتر یاد می‌گیری.', // nieuw, nalezen
     toetsStart: 'آزمون را شروع کن', // nieuw, nalezen
+    tempo: 'سرعت', // nieuw, nalezen
+    tempoCalm: 'آرام', // nieuw, nalezen
+    tempoNormal: 'عادی', // nieuw, nalezen
+    tempoHint: 'آرام یعنی آهسته و واضح. عادی مثل حرف زدن همکاران است. اگر خیلی چیزها را می‌فهمی، «عادی» را انتخاب کن.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
