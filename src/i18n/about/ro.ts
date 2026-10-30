@@ -21,7 +21,7 @@ const t: CultureTranslation = {
     'a.who': 'Pentru cine este?',
     'a.who.b': 'Pentru toți cei care sunt noi la muncă în Olanda. Limbi de ajutor: arabă, tigrină, persană, dari, ucraineană, turcă, poloneză, română, bulgară, spaniolă, portugheză, franceză și germană.',
     'a.free': 'Confidențialitatea ta',
-    'a.free.b': 'Nu ai nevoie de cont. Progresul tău se salvează doar pe acest telefon sau calculator. Dacă este pornită, aplicația numără anonim cât de des se fac lecțiile: fără nume, fără urmărire. O poți opri în „Setări”.',
+    'a.free.b': 'Nu ai nevoie de cont. Progresul tău se salvează doar pe acest telefon sau calculator. Dacă este pornită, aplicația numără anonim cât de des se fac lecțiile: fără nume, fără urmărire. O poți opri în „Setări”. Rezultatul testului și înregistrarea vocii tale rămân și ele doar pe acest telefon sau calculator.', // toets-zin nieuw, nalezen
     'a.disclaimer': 'Bine de știut',
     'a.disclaimer.b': 'Sfaturile din Vloertaal sunt informații generale, nu consultanță juridică. Regulile se pot schimba; textele au fost actualizate ultima dată în octombrie 2026. Pentru situația ta, întreabă-ți angajatorul, un sindicat sau Juridisch Loket.',
     'a.contact': 'Întrebări sau o greșeală?',

@@ -85,7 +85,8 @@ export const proSections: ProSection[] = [
     id: 'p.privacy', emoji: '🔒', title: 'Privacy: geen account, weinig tellen',
     body: [
       'Een leerling heeft geen account nodig: geen naam, geen e-mailadres, geen wachtwoord. Wat een leerling leert, staat alleen op de eigen telefoon of computer. Wij kunnen dat niet zien. Wil je weten hoe het gaat? Vraag de leerling om de certificaten te laten zien.',
-      'Wat telt de app? Alleen hoe vaak een les begint, stopt of af is: welke les, in welk kwart iemand stopte, en ongeveer hoeveel minuten een les duurde. Dat gaat zonder cookies, met GoatCounter. Er gaat niets mee over de leerling: geen hulptaal, geen sector, geen naam en geen nummer.',
+      'De toets “Wat ken je al?” werkt net zo. De uitslag en de opname van de stem van de leerling (om later “Jij toen” en “Jij nu” te horen) blijven alleen op het toestel. Wij krijgen die niet. Kijk samen met de leerling naar het uitslagscherm. Met “Voortgang wissen” is alles weg, ook de opnames.',
+      'Wat telt de app? Alleen hoe vaak een les begint, stopt of af is: welke les, in welk kwart iemand stopte, en ongeveer hoeveel minuten een les duurde. En hoe vaak de toets “Wat ken je al?” begint en af is (instap of eind), zonder de uitslag. Dat gaat zonder cookies, met GoatCounter. Er gaat niets mee over de leerling: geen hulptaal, geen sector, geen naam en geen nummer.',
       'De leerling kan het tellen uitzetten bij Instellingen (“Anoniem meetellen”). Vraagt de browser om niet gevolgd te worden (Do Not Track of Global Privacy Control)? Dan telt de app niets. Melden opent een gewone mail: er gaat pas iets naar ons als de leerling die zelf verstuurt.',
     ],
   },
