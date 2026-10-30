@@ -10,8 +10,8 @@ import { esc, plainPage } from './plainPage';
  */
 export function siteLinks(): string {
   const about = (id: string) => esc(aboutSections.find((s) => s.id === id)!.nl.body);
-  return `<section id="site-links" class="site-links" lang="nl">
-<h1>Vloertaal: gratis Nederlands leren voor je werk</h1>
+  return `<section id="site-links" class="site-links" lang="nl" aria-labelledby="site-links-title">
+<h1 id="site-links-title">Vloertaal: gratis Nederlands leren voor je werk</h1>
 <p>${about('a.what')}</p>
 <p>${about('a.who')} Spreek je al Nederlands? Dan leer je met Werkregels de regels op het werk: loon, contract, ziek zijn en je rechten.</p>
 <p>${about('a.mission')}</p>
