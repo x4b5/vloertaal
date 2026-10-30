@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Sohbet robotuna isim yazman isteniyor: bu cevap “hayır” diyor ve nedenini söylüyor.",
     'c.aifake.a.why': "Yeni bir numara para istiyor: bu cevap önce kontrol ediyor.",
     'c.aiplan.a.why': "Çalışma planını uygulama yaptı: bu cevap bir insan istiyor.",
-    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
-    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
-    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
-    // TODO vertalen: why the chat replies of the new lessons fit (30 October 2026). English for now; the translators replace it.
-    "c.details.a.why": "Asked for a last name: this reply gives it and offers to spell it.",
-    "c.dates.a.why": "Asked for the date: this reply gives the day and the date.",
-    "c.permit.a.why": "A no is fine with a reason. Offering another day helps.",
-    "c.kids.a.why": "Asked why: this reply gives the reason, the daycare called.",
-    "c.body.a.why": "Asked where it hurts: this reply names the place and the cause.",
-    "c.jobends.a.why": "The house goes with the job: this reply asks about the notice period.",
+    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
+    'c.harvest.a.why': "Kaç sıra diye soruluyor: bu cevap bir sayı ve kalanı veriyor.", // nieuw, nog nalezen
+    'c.greensafe.a.why': "Az önce ilaçlandı: bu cevap henüz değil diyor ve nedenini söylüyor.", // nieuw, nog nalezen
+    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    'c.details.a.why': "Soyadı soruluyor: bu cevap onu veriyor ve harf harf söylemeyi öneriyor.",
+    'c.dates.a.why': "Tarih soruluyor: bu cevap günü ve tarihi veriyor.",
+    'c.permit.a.why': "Bir nedenle hayır demek sorun değil. Başka bir gün önermek yardımcı olur.",
+    'c.kids.a.why': "Neden diye soruluyor: bu cevap nedeni veriyor, kreş aradı.",
+    'c.body.a.why': "Neresinin ağrıdığı soruluyor: bu cevap yeri ve nedeni söylüyor.",
+    'c.jobends.a.why': "Ev işe bağlı: bu cevap fesih bildirim süresini soruyor.",
   },
 };
 

@@ -402,7 +402,7 @@ const coreTips: CultureTip[] = [
     phrase: { id: 'c.findwork.p', nl: 'Mag ik het contract eerst lezen?', en: 'May I read the contract first?' },
     situation: { id: 'c.findwork.s', en: 'A new employer says: "Sign here now. You can read it later." What do you do?' },
     options: [
-      { id: 'c.findwork.o1', en: 'Ask for time to read it, or for a copy to read at home.', best: true },
+      { id: 'c.findwork.o1', en: 'Ask for time to read it, or for a copy.', best: true },
       { id: 'c.findwork.o2', en: 'Sign quickly, so you do not lose the job.', best: false },
       { id: 'c.findwork.o3', en: 'Walk away without asking anything.', best: false },
     ],
@@ -417,7 +417,7 @@ const coreTips: CultureTip[] = [
     phrase: { id: 'c.contract.p', nl: 'Staat de proeftijd in mijn contract?', en: 'Is the trial period in my contract?' },
     situation: { id: 'c.contract.s', en: 'Your contract is for 3 months. It says: "Proeftijd: 1 maand". What do you do?', nl: 'Proeftijd: 1 maand' },
     options: [
-      { id: 'c.contract.o1', en: 'Ask about it calmly: a trial period is not allowed in a contract this short.', best: true },
+      { id: 'c.contract.o1', en: 'Ask about it: this trial period does not count.', best: true },
       { id: 'c.contract.o2', en: 'Nothing. Every contract has a trial period.', best: false },
       { id: 'c.contract.o3', en: 'Sign and never ask, because the boss knows best.', best: false },
     ],
@@ -432,7 +432,7 @@ const coreTips: CultureTip[] = [
     phrase: { id: 'c.agency.p', nl: 'Op mijn loonstrook staan te weinig uren.', en: 'My payslip shows too few hours.' },
     situation: { id: 'c.agency.s', en: 'Your payslip shows 32 hours, but you worked 38. What do you do?' },
     options: [
-      { id: 'c.agency.o1', en: 'Show your own list of hours to your contact at the agency (intercedent) and ask to correct it.', best: true },
+      { id: 'c.agency.o1', en: 'Show your own list of hours to the agency and ask to fix it.', best: true },
       { id: 'c.agency.o2', en: 'Say nothing, because it is only 6 hours.', best: false },
       { id: 'c.agency.o3', en: 'Ask the boss at the company where you work to pay the 6 hours.', best: false },
     ],
@@ -447,7 +447,7 @@ const coreTips: CultureTip[] = [
     phrase: { id: 'c.bsn.p', nl: 'Waarom heeft u mijn BSN nodig?', en: 'Why do you need my BSN?' },
     situation: { id: 'c.bsn.s', en: 'Someone you do not know offers you a job on WhatsApp. He asks for a photo of your passport and your DigiD login. What do you do?' },
     options: [
-      { id: 'c.bsn.o1', en: 'Never give your DigiD login. Ask who he is and why he needs your ID, and check the company first.', best: true },
+      { id: 'c.bsn.o1', en: 'Never give your DigiD login. Check who he is first.', best: true },
       { id: 'c.bsn.o2', en: 'Send everything quickly, so you get the job.', best: false },
       { id: 'c.bsn.o3', en: 'Send only your DigiD login, because that is not a document.', best: false },
     ],
@@ -462,7 +462,7 @@ const coreTips: CultureTip[] = [
     phrase: { id: 'c.housing.p', nl: 'Mag ik een bewijs dat ik betaald heb?', en: 'May I have proof that I paid?' },
     situation: { id: 'c.housing.s', en: 'Your job ends. The agency says: "You must leave the house tomorrow." What do you do?' },
     options: [
-      { id: 'c.housing.o1', en: 'Ask for advice quickly, for example at the Juridisch Loket, before you leave.', best: true },
+      { id: 'c.housing.o1', en: 'Ask the Juridisch Loket for advice first.', best: true },
       { id: 'c.housing.o2', en: 'Leave right away and forget about your deposit.', best: false },
       { id: 'c.housing.o3', en: 'Stay, and stop answering the agency.', best: false },
     ],
@@ -477,7 +477,7 @@ const coreTips: CultureTip[] = [
     phrase: { id: 'c.payslip.p', nl: 'Ik heb meer uren gewerkt. Kun je het controleren?', en: 'I worked more hours. Can you check it?' },
     situation: { id: 'c.payslip.s', en: 'Your payslip shows fewer hours than you worked. What do you do?' },
     options: [
-      { id: 'c.payslip.o1', en: 'Ask your supervisor calmly to check it and show your own notes.', best: true },
+      { id: 'c.payslip.o1', en: 'Show your notes and ask your supervisor to check it.', best: true },
       { id: 'c.payslip.o2', en: 'Say nothing, because you do not want problems.', best: false },
       { id: 'c.payslip.o3', en: 'Stay home the next day without telling anyone.', best: false },
     ],
@@ -537,7 +537,7 @@ const coreTips: CultureTip[] = [
     phrase: { id: 'c.health.p', nl: 'Ik heb nog geen pauze gehad.', en: 'I have not had a break yet.' },
     situation: { id: 'c.health.s', en: 'You have worked 6 hours without a break. Your supervisor asks you to keep going. What do you do?' },
     options: [
-      { id: 'c.health.o1', en: 'Say politely that you need your break now.', best: true },
+      { id: 'c.health.o1', en: 'Say that you need your break now.', best: true },
       { id: 'c.health.o2', en: 'Keep working and skip your break every day.', best: false },
       { id: 'c.health.o3', en: 'Leave work and go home without a word.', best: false },
     ],
@@ -720,7 +720,7 @@ const applyTips = [
     ['Mag ik ook iets vragen? Hoeveel uur per week is het werk?', 'May I ask something too? How many hours per week is the work?'],
     'At the end of the interview, the employer asks: "Heb je nog vragen?" What do you do?',
     [
-      'Ask one or two questions, for example about the hours or training.',
+      'Ask a question about the hours or training.',
       'Say no, because asking questions is not polite.',
       'Say no, so the interview ends quickly.',
     ],
@@ -779,7 +779,7 @@ const houseTips = [
     ['Ik ben vergeten uit te klokken. Kun je het aanpassen?', 'I forgot to clock out. Can you correct it?'],
     'A colleague gives you his card: "Clock me in, I will be 20 minutes late." What do you do?',
     [
-      'Say no kindly, and tell him to call the supervisor himself.',
+      'Say no, and tell him to call the supervisor.',
       'Do it just once, because he is your friend.',
       'Clock him in and tell the supervisor later.',
     ],
@@ -922,7 +922,7 @@ const socialTips = [
     ['Sorry, ik heb een fout gemaakt. Hoe kan ik het oplossen?', 'Sorry, I made a mistake. How can I fix it?'],
     'You put 20 boxes on the wrong pallet. Nobody has seen it yet. What do you do?',
     [
-      'Tell your supervisor right away and help to fix it.',
+      'Tell your supervisor and help fix it.',
       'Say nothing and hope nobody notices.',
       'Say that a colleague did it.',
     ],
@@ -952,11 +952,11 @@ const socialTips = [
     ['Dat wil ik niet online hebben.', 'I do not want that online.'],
     'A colleague films you when you slip on the wet floor. He wants to put the video on TikTok. What do you do?',
     [
-      'Say "Nee, dat wil ik niet" and ask him to delete it. If he posts it anyway, tell your supervisor.',
+      'Say "Nee, dat wil ik niet" and ask him to delete it.',
       'Laugh and let him post it, so you are not difficult.',
       'Film him too and post that video yourself.',
     ],
-    'Nobody may put a video of you online without your permission. Saying no is normal, and your employer must act when colleagues mock each other online.',
+    'Nobody may put a video of you online without your permission. Saying no is normal, and your employer must act when colleagues mock each other online. If he posts it anyway, tell your supervisor.',
     NONE,
   ),
   tipFor(
@@ -967,11 +967,11 @@ const socialTips = [
     ['Ik wil dat je stopt.', 'I want you to stop.'],
     'Your team leader often puts his hand on your back and says you look "pretty". It makes you feel uncomfortable. He decides your shifts. What do you do?',
     [
-      'Write down what happens and talk to the vertrouwenspersoon or HR.',
+      'Write it down and tell the vertrouwenspersoon.',
       'Say nothing, because he decides your shifts.',
       'Quit your job without telling anyone why.',
     ],
-    'This is unwanted behaviour, and it is not your fault. A confidential adviser listens in confidence and helps you choose the next step. You are protected when you report it.',
+    'This is unwanted behaviour, and it is not your fault. A confidential adviser listens in confidence and helps you choose the next step. You are protected when you report it. You can also talk to HR.',
     NONE,
   ),
 ];
@@ -1314,7 +1314,7 @@ const laterTips = [
     ['Ik wil mijn paspoort terug.', 'I want my passport back.'],
     'On your first day, the agency says: "We keep your passport, for safety." What do you do?',
     [
-      'Say politely that you keep it yourself. They may make a copy.',
+      'Keep it yourself. They may make a copy.',
       'Give it, because the agency knows the rules.',
       'Give it, but take a photo of it first.',
     ],
@@ -1344,11 +1344,11 @@ const laterTips = [
     ['Hallo, met Ali. Ik kan vandaag niet komen.', 'Hello, this is Ali. I cannot come today.'],
     'Your child is sick and you cannot come to work. Your company wants you to call. What do you do?',
     [
-      'Call your supervisor before your shift: say your name, the reason and when you expect to be back.',
+      'Call your supervisor before your shift.',
       'Send a short text at the start of your shift.',
       'Ask your neighbour to call for you.',
     ],
-    'A call is clear and quick, and your supervisor can ask questions. Saying when you expect to be back helps them plan.',
+    'A call is clear and quick, and your supervisor can ask questions. Saying when you expect to be back helps them plan. Also say your name and the reason.',
     HOUSE_LINE,
   ),
   tipFor(
@@ -1374,7 +1374,7 @@ const laterTips = [
     ['Kan ik hier een VCA-cursus doen?', 'Can I do a VCA course here?'],
     'A job asks for a VCA certificate. You do not have it yet. What do you do?',
     [
-      'Ask if the employer or agency can arrange the course, or how you can get it.',
+      'Ask the employer or agency to help you get it.',
       'Do not apply, because you will never get the job.',
       'Say you have it, and hope nobody checks.',
     ],
@@ -1389,7 +1389,7 @@ const laterTips = [
     ['Zijn er cursussen voor mij?', 'Are there courses for me?'],
     'Your employer says you must do a required safety training on Saturday, without pay. What is true?',
     [
-      'Required training is paid by the employer and counts as working time. Ask about it calmly.',
+      'The employer pays it, and it is working time.',
       'Training is always in your own free time.',
       'You must pay for the training yourself.',
     ],
@@ -1415,11 +1415,11 @@ const laterTips = [
     ['Ik heb een zorgverzekering nodig. Kunt u mij helpen?', 'I need health insurance. Can you help me?'],
     'You started working here two weeks ago and you have no health insurance yet. What do you do?',
     [
-      'Arrange it quickly: ask your employer or agency, or contact an insurer.',
+      'Arrange health insurance quickly.',
       'Wait until you get sick.',
       'Use the insurance card of a friend.',
     ],
-    'Without insurance, a doctor or hospital can cost a lot, and you can get a fine. Arranging it quickly protects you.',
+    'Without insurance, a doctor or hospital can cost a lot, and you can get a fine. Arranging it quickly protects you. Your employer or agency can help you.',
     ADVICE_LINE,
   ),
   tipFor(
@@ -1445,7 +1445,7 @@ const laterTips = [
     ['Ik heb een brief gekregen. Kun je me helpen?', 'I got a letter. Can you help me?'],
     'You get a letter from the Belastingdienst. You do not understand it. What do you do?',
     [
-      'Ask someone you trust to help you read it, quickly.',
+      'Ask someone you trust to help you read it.',
       'Put it in a drawer and wait.',
       'Throw it away, because it is probably advertising.',
     ],
@@ -1490,7 +1490,7 @@ const laterTips = [
     ['Krijg ik een vergoeding voor mijn reiskosten?', 'Do I get money for my travel costs?'],
     'You travel to work by bus every day. A colleague gets travel money, you do not. What do you do?',
     [
-      'Ask your supervisor what the rules are in your company or cao.',
+      'Ask your supervisor about the company or cao rules.',
       'Say nothing, because it is probably not for you.',
       'Tell all colleagues that the company is unfair.',
     ],
@@ -1505,7 +1505,7 @@ const laterTips = [
     ['Ik wil WW aanvragen. Wat moet ik doen?', 'I want to apply for unemployment benefit. What must I do?'],
     'You are angry about your work and want to quit today. What is wise?',
     [
-      'Get advice first: if you quit yourself, you usually do not get WW.',
+      'Get advice first, before you quit.',
       'Quit today: you will get WW anyway.',
       'Stop coming to work without saying anything.',
     ],
@@ -1524,7 +1524,7 @@ const laterTips = [
     ['Wanneer krijg ik mijn eindafrekening?', 'When do I get my final pay?'],
     'Your job ends on Friday. Your health insurance goes through the agency. What do you do?',
     [
-      'Ask the agency when the insurance stops, and arrange your own in time.',
+      'Ask when it stops and arrange your own in time.',
       'Nothing: the insurance goes on by itself.',
       'Wait until you get sick, and arrange it then.',
     ],
@@ -1539,11 +1539,11 @@ const laterTips = [
     ['Mag ik u als referentie opgeven?', 'May I give your name as a reference?'],
     'Someone offers you a job, but first you must pay 300 euros "for the job". What do you do?',
     [
-      'Do not pay. Look for work through a real agency or werk.nl.',
+      'Do not pay. Look for a real agency.',
       'Pay, because a good job is worth it.',
       'Pay half now and the rest later.',
     ],
-    'Asking money for a job is a warning sign. A temp agency may not charge you for finding work.',
+    'Asking money for a job is a warning sign. A temp agency may not charge you for finding work. You can also look for work on werk.nl.',
     ABUSE_LINE,
   ),
 ];
@@ -1755,7 +1755,7 @@ const sectorTips = [
     ['Deze boor is kapot. Is er een andere?', 'This drill is broken. Is there another one?'],
     'There is a toolbox meeting, but your Dutch is not good yet. What do you do?',
     [
-      'Go, use a translation app if that is allowed, and ask a colleague afterwards what you did not understand.',
+      'Go, and ask a colleague afterwards what you missed.',
       'Skip it, because you will not understand it anyway.',
       'Sign the attendance list without going.',
     ],
@@ -1815,7 +1815,7 @@ const sectorTips = [
     ['Mag ik binnenkomen? Ik kom u helpen met wassen.', 'May I come in? I am here to help you wash.'],
     'You must help a client to wash. The door of her room is closed. What do you do?',
     [
-      'Knock, wait, say who you are and explain what you will do.',
+      'Knock, wait, and say who you are and why.',
       'Walk in quickly, because you are busy.',
       'Skip the washing, so you do not disturb her.',
     ],
@@ -1875,7 +1875,7 @@ const sectorTips = [
     ['Waar is dit middel voor?', 'What is this product for?'],
     'You get a new cleaning product. You cannot read the label well. What do you do?',
     [
-      'Ask your supervisor what it is for and how to use it safely.',
+      'Ask how you can use it safely.',
       'Use a lot of it, then it works better.',
       'Just try it without gloves.',
     ],
@@ -1890,7 +1890,7 @@ const sectorTips = [
     ['Ik zet het bordje neer. De vloer is nat.', 'I am putting the sign down. The floor is wet.'],
     'The toilet is very dirty. A colleague says: "Mix two products, then it works better." What do you do?',
     [
-      'Do not mix. Use one product, as the label says.',
+      'Do not mix them. Use one product.',
       'Mix them, but open a window.',
       'Mix them quickly and leave the room.',
     ],
@@ -2005,7 +2005,7 @@ const shopNumbersTips = [
     ['Zonder ID mag ik dit niet verkopen.', 'Without ID I may not sell this.'],
     'A young man wants to buy beer. He looks about 17. He says he is 19, but he has no ID with him. What do you do?',
     [
-      'Say politely that you cannot sell it without ID.',
+      'Say you cannot sell it without ID.',
       'Sell it, because he says he is 19.',
       'Sell it, but only one can.',
     ],
@@ -2127,7 +2127,7 @@ const aiTips = [
     ['Klopt dit? Kunt u even meekijken?', 'Is this right? Could you have a look with me?'],
     'You ask a chatbot about your contract. It says you get no holiday pay. What do you do?',
     [
-      'Ask your supervisor or HR to look at your contract with you, or ask the Juridisch Loket.',
+      'Ask HR or the Juridisch Loket to check it.',
       'Believe it: the chatbot sounds very sure.',
       'Say nothing and forget about it.',
     ],
@@ -2142,7 +2142,7 @@ const aiTips = [
     ['Mag ik hier AI voor gebruiken?', 'May I use AI for this?'],
     'You want a chatbot to write a report about a customer. The report has the name and address of the customer. What do you do?',
     [
-      'Ask your supervisor first, and leave the name and address out.',
+      'Ask first, and leave the name and address out.',
       'Put everything in the chatbot: it is faster.',
       'Send the report to a friend to check it.',
     ],
@@ -2157,7 +2157,7 @@ const aiTips = [
     ['Ik hang op en bel zelf terug.', 'I hang up and call back myself.'],
     'Your phone rings. A voice that sounds just like your boss says: "Pay this bill now, it is urgent." What do you do?',
     [
-      'Hang up and call your boss yourself, on the number you know.',
+      'Hang up and call your boss back yourself.',
       'Pay quickly: it is your boss.',
       'Give your bank code, so your boss can pay it.',
     ],
@@ -2172,7 +2172,7 @@ const aiTips = [
     ['Kan een mens hier even naar kijken?', 'Can a person have a look at this?'],
     'The planning app gives you far fewer hours next month. Nobody tells you why. What do you do?',
     [
-      'Ask your supervisor who decided it, and ask a person to explain it.',
+      'Ask a person to explain it.',
       'Accept it: the app is always right.',
       'Stop coming to work.',
     ],
@@ -2236,11 +2236,11 @@ const kasTips = [
     ['Hoeveel kratten heb ik vandaag gedaan?', 'How many crates did I do today?'],
     'You are paid per crate. At the end of the week, your pay is much lower than the minimum wage for the hours you worked. What do you do?',
     [
-      'Show your own list of hours and crates to your employer, and ask for help if it is not fixed.',
+      'Show your employer your own list of hours and crates.',
       'Say nothing and work faster next week, so you earn more.',
       'Accept it: with piece rate, a low pay is normal.',
     ],
-    'With piece rate you must still get at least the minimum wage for every hour you worked. Your own list of hours and crates helps you show what you did.',
+    'With piece rate you must still get at least the minimum wage for every hour you worked. Your own list of hours and crates helps you show what you did. If it is not fixed, ask for help.',
     ABUSE_LINE,
   ),
   // ⚖️ check: After spraying, nobody may go into the greenhouse until the waiting time is over ⚖️
@@ -2255,7 +2255,7 @@ const kasTips = [
     ['Mag ik al in deze kas werken?', 'May I already work in this greenhouse?'],
     'A greenhouse was sprayed this morning. There is a sign on the door. A colleague says: "Come on, it is only for a moment." What do you do?',
     [
-      'Stay outside, and ask your supervisor when it is safe again.',
+      'Stay outside and ask when it is safe.',
       'Go in quickly and hold your breath.',
       'Go in, and wash your hands well afterwards.',
     ],
@@ -2332,7 +2332,7 @@ const toolsTips = [
     ['Mag ik mijn telefoon gebruiken om te vertalen?', 'May I use my phone to translate?'],
     'Your supervisor gives you a paper with safety instructions in Dutch. You understand only a few words. What do you do?',
     [
-      'Ask if you may translate it with your phone, and ask your supervisor to explain the important parts.',
+      'Ask if you may use a translation app, and ask for an explanation.',
       'Say "ja, ja" and start working. You will understand it later.',
       'Take a photo and send it to a group chat of friends, so they can translate it.',
     ],
@@ -2347,7 +2347,7 @@ const toolsTips = [
     ['Dus ik moet eerst de dozen tellen?', 'So I must count the boxes first?'],
     'A colleague explains how a new machine works. She speaks fast and you miss some words. What do you do?',
     [
-      'Ask her to show it or write the steps down, then say back what you understood.',
+      'Ask her to show it or write it down, and say it back.',
       'Nod and say "ja, ja", so she does not lose time.',
       'Try the machine alone later and see what happens.',
     ],
@@ -2362,7 +2362,7 @@ const toolsTips = [
     ['Praat maar Nederlands met mij, dan leer ik het sneller.', 'Just speak Dutch with me, then I learn it faster.'],
     'Your colleagues always switch to English when they talk to you. You want to learn Dutch. What do you do?',
     [
-      'Thank them, and ask them kindly to speak Dutch with you, slowly.',
+      'Thank them, and ask them to speak Dutch with you.',
       'Say nothing. Dutch will come by itself.',
       'Stop talking with colleagues until your Dutch is perfect.',
     ],
@@ -2425,7 +2425,7 @@ const dataTips = [
     ['Ik spel het even: A, L, I.', 'Let me spell it: A, L, I.'],
     'On the phone, the agency writes down your last name. You hear that they write it wrong. What do you do?',
     [
-      'Spell your name slowly, letter by letter, and ask them to read it back.',
+      'Spell your name slowly and ask them to read it back.',
       'Say nothing: a small mistake in your name does not matter.',
       'Hang up, and hope they find the mistake later.',
     ],
@@ -2508,7 +2508,7 @@ const moreTips = [
     ['Ik heb op dinsdag taalles. Kan mijn rooster daar rekening mee houden?', 'I have a language class on Tuesday. Can my roster take that into account?'],
     'You start a new job. Your language class is on Tuesday mornings, but your roster has you working on Tuesdays. What do you do?',
     [
-      'Tell your supervisor about the class, and ask if the roster can change.',
+      'Tell your supervisor and ask to change the roster.',
       'Skip the language class, because work comes first.',
       'Stay home on Tuesdays without saying anything.',
     ],
@@ -2527,7 +2527,7 @@ const moreTips = [
     ['Mijn kind is ziek. Kan ik vandaag eerder weg?', 'My child is sick. Can I leave early today?'],
     'The daycare (kinderopvang) calls you at work. Your child has a fever and must go home. What do you do?',
     [
-      'Tell your supervisor right away, and ask for emergency leave to pick up your child.',
+      'Tell your supervisor, and ask for emergency leave.',
       'Leave without a word, and explain it tomorrow.',
       'Stay at work, and let your child wait until your shift ends.',
     ],

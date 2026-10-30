@@ -25,7 +25,7 @@ const t: CultureTranslation = {
     'c.names.b': 'În prima zi, dă scurt mâna, uită-te la persoană și spune-ți prenumele. Colegii și șefii își spun de obicei pe prenume.',
     'c.names.p': { m: 'Salut, sunt Ali. Sunt nou aici.', f: 'Salut, sunt Ali. Sunt nouă aici.' },
     'c.names.s': 'Un coleg vine la tine: „Hoi, ik ben Mark.” Ce faci?',
-    'c.names.o1': 'Îi dai mâna și îți spui prenumele.',
+    'c.names.o1': 'Îi dai mâna și îți spui numele.', // nalezen: korter goed antwoord
     'c.names.o2': 'Te uiți în jos și nu spui nimic.',
     'c.names.o3': 'Îi spui „domnul Mark”.',
     'c.names.w': 'O prezentare scurtă cu prenumele e începutul normal. Îi ajută pe colegi să te țină minte și să te cheme cu ei.',
@@ -41,7 +41,7 @@ const t: CultureTranslation = {
     'c.ask.b': 'Când pui o întrebare, arăți că vrei să faci treaba bine. Dacă dai din cap fără să înțelegi, pot apărea greșeli sau accidente. E complet normal să întrebi din nou.',
     'c.ask.p': 'Scuze, nu înțeleg. Poți să-mi explici încă o dată?',
     'c.ask.s': 'Șeful tău explică o sarcină foarte repede. Nu ai înțeles. Ce faci?',
-    'c.ask.o1': 'Spui că nu ai înțeles și întrebi din nou.',
+    'c.ask.o1': 'Ceri să ți se explice din nou.', // nalezen: korter goed antwoord
     'c.ask.o2': 'Dai din cap și încerci să ghicești.',
     'c.ask.o3': 'Aștepți și speri că o face altcineva.',
     'c.ask.w': 'Șefii din Olanda se așteaptă la întrebări. E mai bine să întrebi de două ori decât să greșești.',
@@ -65,10 +65,10 @@ const t: CultureTranslation = {
     'c.accident.b': 'Spune-i șefului sau BHV’er-ului (persoanei de prim ajutor din firmă) despre orice accident, chiar și unul mic. Lucrezi printr-o agenție? Anunță și agenția. În caz de urgență, sună întâi la 112. Firma unde s-a petrecut accidentul trebuie să raporteze un accident grav la Nederlandse Arbeidsinspectie (și dacă lucrezi printr-o agenție): când cineva moare, rămâne cu o vătămare permanentă sau trebuie să stea în spital. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.accident.p': 'Colegul meu e rănit. Unde e persoana de prim ajutor?',
     'c.accident.s': 'Îți accidentezi spatele când ridici ceva. Ți-e frică să nu-ți pierzi locul de muncă. Ce faci?',
-    'c.accident.o1': 'Îi spui șefului chiar azi, iar dacă lucrezi printr-o agenție, spui și agenției.',
+    'c.accident.o1': 'Îi raportezi șefului în aceeași zi.', // nalezen: korter goed antwoord
     'c.accident.o2': 'Nu spui nimic, ca să nu-ți pierzi locul de muncă.',
     'c.accident.o3': 'Aștepți să vezi dacă durerea trece de la sine.',
-    'c.accident.w': 'Raportează în aceeași zi, chiar dacă pare ceva mic: durerea se poate agrava mai târziu. Angajatorul nu are voie să te pedepsească pentru că ai raportat.',
+    'c.accident.w': 'Raportează în aceeași zi, chiar dacă pare ceva mic: durerea se poate agrava mai târziu. Angajatorul nu are voie să te pedepsească pentru că ai raportat. Lucrezi printr-o agenție? Spune și agenției.', // nalezen: korter goed antwoord
     'c.notyet': 'N-ai învățat încă? Spune asta',
     'c.notyet.b': 'Firma la care lucrezi trebuie să-ți explice cum să-ți faci munca în siguranță. Nu folosi o mașină sau un motostivuitor dacă nu te-a învățat nimeni. E normal aici să spui „Dit heb ik nog niet geleerd”: arată că lucrezi în siguranță.',
     'c.notyet.p': 'Asta n-am învățat-o încă. Poți să-mi arăți cum se face?',
@@ -97,7 +97,7 @@ const t: CultureTranslation = {
     'c.time.b': 'Punctualitatea e foarte importantă. Mulți ajung cu cinci sau zece minute înainte să înceapă tura. Dacă vei întârzia, trimite un mesaj sau sună înainte să înceapă tura, nu după.',
     'c.time.p': 'Scuze, autobuzul întârzie. Ajung la opt.',
     'c.time.s': 'Autobuzul tău întârzie și vei ajunge cu 15 minute mai târziu. Ce faci?',
-    'c.time.o1': 'Îi scrii sau îl suni imediat pe șef.',
+    'c.time.o1': 'Îi spui imediat șefului.', // nalezen: korter goed antwoord
     'c.time.o2': 'Explici abia când ajungi la muncă.',
     'c.time.o3': 'Azi nu mai mergi deloc la muncă.',
     'c.time.w': 'Dacă anunți din timp, echipa se poate organiza. Să întârzii fără să anunți e văzut ca mult mai rău decât întârzierea în sine.',
@@ -105,7 +105,7 @@ const t: CultureTranslation = {
     'c.sick.b': 'Sună-l tu pe șef, înainte să înceapă tura, dacă firma nu are altă regulă. Lucrezi printr-o agenție? Anunță și agenția. Nu trebuie să spui ce boală ai. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.sick.p': { m: 'Sunt bolnav. Azi nu pot veni la muncă.', f: 'Sunt bolnavă. Azi nu pot veni la muncă.' },
     'c.sick.s': 'Te trezești cu febră. Tura ta începe la 7:00. Ce faci?',
-    'c.sick.o1': { m: 'Îl suni pe șef înainte de 7:00 și spui că ești bolnav.', f: 'Îl suni pe șef înainte de 7:00 și spui că ești bolnavă.' },
+    'c.sick.o1': 'Îl suni pe șef înainte de 7:00.', // nalezen: korter goed antwoord
     'c.sick.o2': 'Îi ceri unui coleg să-i spună mai târziu șefului.',
     'c.sick.o3': 'Stai acasă și suni mâine.',
     'c.sick.w': { m: 'În majoritatea locurilor de muncă din Olanda, regula e să anunți tu și la timp că ești bolnav. Angajatorul poate întreba cât va dura, dar nu ce boală ai.', f: 'În majoritatea locurilor de muncă din Olanda, regula e să anunți tu și la timp că ești bolnavă. Angajatorul poate întreba cât va dura, dar nu ce boală ai.' },
@@ -113,7 +113,7 @@ const t: CultureTranslation = {
     'c.speakup.b': 'Aici e normal și respectat să spui calm când ceva te deranjează. Vorbește întâi cu persoana, într-un moment liniștit. Folosește propoziții cu „ik”: „Ik vind het niet fijn dat ...”. Dacă nu ajută, vorbește cu șeful.',
     'c.speakup.p': 'Ceva mă deranjează. Putem vorbi puțin?',
     'c.speakup.s': 'Un coleg îți lasă mereu ție munca grea. Asta te deranjează. Ce faci?',
-    'c.speakup.o1': 'Îi spui calm colegului ce te deranjează.',
+    'c.speakup.o1': 'Îi spui colegului ce te deranjează.', // nalezen: korter goed antwoord
     'c.speakup.o2': 'Taci și te enervezi tot mai tare.',
     'c.speakup.o3': 'Te plângi de el la toți ceilalți colegi.',
     'c.speakup.w': 'Colegii din Olanda preferă de obicei să audă direct. Dacă spui devreme și calm, relația rămâne bună.',
@@ -121,7 +121,7 @@ const t: CultureTranslation = {
     'c.no.b': 'Când spui „ja”, oamenii se bazează pe asta: o înțelegere e o înțelegere. Așa că e în regulă să spui „nee” sau „dat lukt niet” când nu poți face ceva. Spune la timp și, dacă poți, propune altă variantă.',
     'c.no.p': 'Nu, azi nu se poate. Mâine pot.',
     'c.no.s': 'Șeful te întreabă dacă poți lucra în plus sâmbătă. Nu poți. Ce faci?',
-    'c.no.o1': 'Spui politicos nu și propui altă zi.',
+    'c.no.o1': 'Spui nu și propui altă zi.', // nalezen: korter goed antwoord
     'c.no.o2': 'Spui da și apoi nu vii.',
     'c.no.o3': 'Spui „poate” și nu mai răspunzi niciodată.',
     'c.no.w': 'Un „nee” clar e respectat. Să spui „ja” și să nu vii strică mult mai mult încrederea.',
@@ -129,7 +129,7 @@ const t: CultureTranslation = {
     'c.task.b': 'În Olanda, un șef dă adesea o sarcină în câteva cuvinte și se așteaptă să spui când ai terminat. Dacă spui „ja” când nu ai înțeles, apar des greșeli. Să întrebi din nou sau să ceri să ți se arate e normal aici și nu e nepoliticos.',
     'c.task.p': 'Gata! Ce să fac acum?',
     'c.task.s': 'Șeful îți explică o sarcină foarte repede. Ai înțeles doar jumătate. Ce faci?',
-    'c.task.o1': 'Întrebi: „Kunt u het nog een keer laten zien?”',
+    'c.task.o1': 'Ceri să-ți arate încă o dată.', // nalezen: korter goed antwoord
     'c.task.o2': 'Spui „ja” și ghicești.',
     'c.task.o3': 'Aștepți până o face un coleg.',
     'c.task.w': 'E normal să întrebi din nou și durează un minut. Să repari o greșeală durează mult mai mult. Cei mai mulți șefi preferă să arate de două ori.',

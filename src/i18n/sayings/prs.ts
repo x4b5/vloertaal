@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'یک چشم کوچک را بالای بادبان نگه می‌دارید؟',
     'zg.zeil.m': 'متوجه هستید که همه چیز خوب و ایمن پیش برود؟',
     'zg.zeil.s': 'سرپرست شما باید یک لحظه برود. او می‌گوید: «Hou je een oogje in het zeil?» منظورش چیست؟',
-    'zg.zeil.o1': 'تا وقتی او نیست، متوجه باشید که همه چیز خوب پیش برود.',
+    'zg.zeil.o1': "تا وقتی او نیست، متوجه باشید.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zeil.o2': 'بروید و یک کشتی را ببینید.',
     'zg.zeil.o3': 'یک لحظه چشم‌های خود را ببندید.',
     'zg.zeil.w': '«Een oogje in het zeil houden» یعنی: متوجه بودن که همه چیز خوب پیش برود. مطمئن نیستید که به چه چیز متوجه باشید؟ پیش از رفتنش از او بپرسید.',
@@ -99,8 +99,8 @@ const t: CultureTranslation = {
     'zg.oefening.o2': 'باید به درس هنر بروید.',
     'zg.oefening.o3': 'بس کنید، برای شما خیلی مشکل است.',
     'zg.oefening.w': 'این یک متل است: با تمرین بهتر می‌شوید. برای یاد گرفتن هالندی هم درست است.',
-    'zg.zwartwit.lit': 'آن را سیاه بالای سفید بخواهید.',
-    'zg.zwartwit.m': 'آن را روی کاغذ، به شکل نوشته‌شده بخواهید.',
+    'zg.zwartwit.lit': "مطمئن شوید که آن را سیاه بالای سفید دارید.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zwartwit.m': "مطمئن شوید که آن را روی کاغذ، به شکل نوشته‌شده دارید.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zwartwit.s': 'آمر شما به شما وعدهٔ معاش بیشتر می‌دهد. همکار شما می‌گوید: «Zorg dat je het zwart op wit hebt.» منظورش چیست؟',
     'zg.zwartwit.o1': 'وعده را به شکل نوشته‌شده بخواهید.',
     'zg.zwartwit.o2': 'کاغذ سیاه و سفید بخواهید.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'وقت پول است.',
     'zg.tijdgeld.m': 'وقت قیمتی است: آن را ضایع نکنید.',
     'zg.tijdgeld.s': 'آمر شما می‌خواهد که لاری زود بار شود. او می‌گوید: «Tijd is geld.» منظورش چیست؟',
-    'zg.tijdgeld.o1': 'وقت کار پول خرچ دارد، پس بدون ضایع کردن وقت کار کنید.',
+    'zg.tijdgeld.o1': "تیز کار کنید، وقت را ضایع نکنید.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.tijdgeld.o2': 'برای ناوقت آمدن پول می‌گیرید.',
     'zg.tijdgeld.o3': 'ساعت خیلی قیمت است.',
     'zg.tijdgeld.w': 'این اصطلاح یعنی وقت قیمتی است. اما هیچ وقت دلیلی برای کار ناایمن یا ساعت‌های بدون معاش نیست.',

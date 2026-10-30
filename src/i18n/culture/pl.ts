@@ -41,7 +41,7 @@ const t: CultureTranslation = {
     'c.ask.b': 'Pytanie pokazuje, że chcesz dobrze wykonać pracę. Kiwanie głową, gdy nie rozumiesz, może prowadzić do błędów albo wypadków. Zapytać jeszcze raz to coś całkiem normalnego.',
     'c.ask.p': 'Przepraszam, nie rozumiem. Wyjaśnisz to jeszcze raz?',
     'c.ask.s': { m: 'Twój przełożony bardzo szybko tłumaczy zadanie. Nie zrozumiałeś. Co robisz?', f: 'Twój przełożony bardzo szybko tłumaczy zadanie. Nie zrozumiałaś. Co robisz?' },
-    'c.ask.o1': { m: 'Mówisz, że nie zrozumiałeś, i pytasz jeszcze raz.', f: 'Mówisz, że nie zrozumiałaś, i pytasz jeszcze raz.' },
+    'c.ask.o1': 'Prosisz o ponowne wyjaśnienie.', // nalezen: korter goed antwoord
     'c.ask.o2': 'Kiwasz głową i próbujesz zgadnąć.',
     'c.ask.o3': 'Czekasz i masz nadzieję, że zrobi to ktoś inny.',
     'c.ask.w': 'Holenderscy przełożeni oczekują pytań. Lepiej zapytać dwa razy, niż popełnić błąd.',
@@ -65,10 +65,10 @@ const t: CultureTranslation = {
     'c.accident.b': 'O każdym wypadku, nawet drobnym, powiedz przełożonemu albo BHV’er (osobie, która w firmie udziela pierwszej pomocy). Pracujesz przez agencję? Powiadom też agencję. W nagłym przypadku najpierw dzwoń pod 112. Poważny wypadek musi zgłosić do Nederlandse Arbeidsinspectie firma, w której do niego doszło (także jeśli pracujesz przez agencję): gdy ktoś ginie, zostaje trwale ranny albo musi zostać w szpitalu. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
     'c.accident.p': 'Mój kolega jest ranny. Gdzie jest osoba od pierwszej pomocy?',
     'c.accident.s': 'Przy podnoszeniu nadwyrężasz sobie plecy. Boisz się, że stracisz pracę. Co robisz?',
-    'c.accident.o1': 'Jeszcze dziś mówisz przełożonemu, a jeśli pracujesz przez agencję, także agencji.',
+    'c.accident.o1': 'Zgłaszasz to przełożonemu tego samego dnia.', // nalezen: korter goed antwoord
     'c.accident.o2': 'Nic nie mówisz, żeby nie stracić pracy.',
     'c.accident.o3': 'Czekasz, czy ból sam przejdzie.',
-    'c.accident.w': 'Zgłoś to tego samego dnia, nawet jeśli wydaje się drobne: ból może się później nasilić. Pracodawcy nie wolno cię ukarać za to zgłoszenie.',
+    'c.accident.w': 'Zgłoś to tego samego dnia, nawet jeśli wydaje się drobne: ból może się później nasilić. Pracodawcy nie wolno cię ukarać za to zgłoszenie. Pracujesz przez agencję? Powiedz też agencji.', // nalezen: korter goed antwoord
     'c.notyet': 'Nikt cię jeszcze tego nie nauczył? Powiedz to',
     'c.notyet.b': 'Firma, w której pracujesz, musi ci wyjaśnić, jak bezpiecznie wykonywać pracę. Nie używaj maszyny ani wózka widłowego, jeśli nikt cię tego nie nauczył. Powiedzenie „Dit heb ik nog niet geleerd” jest tu normalne: pokazuje, że pracujesz bezpiecznie.',
     'c.notyet.p': { m: 'Jeszcze się tego nie nauczyłem. Możesz mi pokazać, jak to się robi?', f: 'Jeszcze się tego nie nauczyłam. Możesz mi pokazać, jak to się robi?', x: 'Jeszcze się tego nie nauczyłem / nauczyłam. Możesz mi pokazać, jak to się robi?' },
@@ -97,7 +97,7 @@ const t: CultureTranslation = {
     'c.time.b': 'Punktualność jest bardzo ważna. Wiele osób przychodzi pięć albo dziesięć minut przed początkiem zmiany. Jeśli się spóźnisz, napisz albo zadzwoń przed początkiem zmiany, a nie potem.',
     'c.time.p': 'Przepraszam, autobus się spóźnia. Będę o ósmej.',
     'c.time.s': 'Twój autobus się spóźnia i spóźnisz się 15 minut. Co robisz?',
-    'c.time.o1': 'Od razu piszesz albo dzwonisz do przełożonego.',
+    'c.time.o1': 'Od razu mówisz przełożonemu.', // nalezen: korter goed antwoord
     'c.time.o2': 'Wyjaśniasz to, gdy przyjdziesz.',
     'c.time.o3': 'Dziś w ogóle nie idziesz do pracy.',
     'c.time.w': 'Wczesna wiadomość pozwala zespołowi wszystko zaplanować. Spóźnienie bez uprzedzenia jest odbierane dużo gorzej niż samo spóźnienie.',
@@ -105,7 +105,7 @@ const t: CultureTranslation = {
     'c.sick.b': { m: 'Zadzwoń sam do przełożonego przed początkiem zmiany, chyba że w twojej firmie jest inna zasada. Pracujesz przez agencję? Powiadom też agencję. Nie musisz mówić, na co chorujesz. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', f: 'Zadzwoń sama do przełożonego przed początkiem zmiany, chyba że w twojej firmie jest inna zasada. Pracujesz przez agencję? Powiadom też agencję. Nie musisz mówić, na co chorujesz. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.' },
     'c.sick.p': { m: 'Jestem chory. Nie mogę dziś przyjść do pracy.', f: 'Jestem chora. Nie mogę dziś przyjść do pracy.' },
     'c.sick.s': 'Budzisz się z gorączką. Twoja zmiana zaczyna się o 7:00. Co robisz?',
-    'c.sick.o1': { m: 'Dzwonisz do przełożonego przed 7:00 i mówisz, że jesteś chory.', f: 'Dzwonisz do przełożonego przed 7:00 i mówisz, że jesteś chora.' },
+    'c.sick.o1': 'Dzwonisz do przełożonego przed 7:00.', // nalezen: korter goed antwoord
     'c.sick.o2': 'Prosisz kolegę, żeby później powiedział szefowi.',
     'c.sick.o3': 'Zostajesz w domu i dzwonisz jutro.',
     'c.sick.w': { m: 'W większości holenderskich firm zasada jest taka: chorobę zgłaszasz sam i na czas. Pracodawca może zapytać, jak długo to potrwa, ale nie, na co chorujesz.', f: 'W większości holenderskich firm zasada jest taka: chorobę zgłaszasz sama i na czas. Pracodawca może zapytać, jak długo to potrwa, ale nie, na co chorujesz.' },
@@ -113,7 +113,7 @@ const t: CultureTranslation = {
     'c.speakup.b': 'Tutaj spokojne powiedzenie, że coś ci przeszkadza, jest normalne i szanowane. Najpierw porozmawiaj z tą osobą, w spokojnej chwili. Mów zdaniami z „ik”: „Ik vind het niet fijn dat ...”. Jeśli to nie pomoże, porozmawiaj z przełożonym.',
     'c.speakup.p': 'Coś mi przeszkadza. Możemy chwilę porozmawiać?',
     'c.speakup.s': 'Kolega zawsze zostawia ciężką pracę tobie. Przeszkadza ci to. Co robisz?',
-    'c.speakup.o1': 'Spokojnie mówisz koledze, co ci przeszkadza.',
+    'c.speakup.o1': 'Mówisz koledze, co ci przeszkadza.', // nalezen: korter goed antwoord
     'c.speakup.o2': { m: 'Milczysz i jesteś coraz bardziej zły.', f: 'Milczysz i jesteś coraz bardziej zła.' },
     'c.speakup.o3': 'Skarżysz się na niego wszystkim innym kolegom.',
     'c.speakup.w': 'Holenderscy koledzy zwykle wolą usłyszeć to wprost. Powiedzenie tego wcześnie i spokojnie pomaga utrzymać dobre relacje.',
@@ -121,7 +121,7 @@ const t: CultureTranslation = {
     'c.no.b': 'Gdy mówisz „ja”, ludzie na to liczą: umowa to umowa. Dlatego można powiedzieć „nee” albo „dat lukt niet”, gdy czegoś nie możesz zrobić. Powiedz to na czas i, jeśli możesz, zaproponuj coś innego.',
     'c.no.p': 'Nie, dziś się nie da. Jutro mogę.',
     'c.no.s': 'Przełożony pyta, czy możesz dodatkowo popracować w sobotę. Nie możesz. Co robisz?',
-    'c.no.o1': 'Grzecznie odmawiasz i proponujesz inny dzień.',
+    'c.no.o1': 'Odmawiasz i proponujesz inny dzień.', // nalezen: korter goed antwoord
     'c.no.o2': 'Mówisz „tak”, a potem nie przychodzisz.',
     'c.no.o3': 'Mówisz „może” i nigdy nie odpowiadasz.',
     'c.no.w': 'Jasne „nee” jest szanowane. Powiedzieć „ja” i nie przyjść niszczy zaufanie o wiele bardziej.',
@@ -129,7 +129,7 @@ const t: CultureTranslation = {
     'c.task.b': 'W Holandii przełożony często daje zadanie w kilku słowach i oczekuje, że powiesz, gdy skończysz. Gdy mówisz „ja”, choć nie wszystko rozumiesz, często dochodzi do błędów. Zapytać jeszcze raz albo poprosić, żeby ktoś to pokazał, to tutaj normalne, a nie niegrzeczne.',
     'c.task.p': 'Gotowe! Co mam teraz robić?',
     'c.task.s': { m: 'Przełożony bardzo szybko tłumaczy zadanie. Zrozumiałeś tylko połowę. Co robisz?', f: 'Przełożony bardzo szybko tłumaczy zadanie. Zrozumiałaś tylko połowę. Co robisz?' },
-    'c.task.o1': 'Pytasz: „Kunt u het nog een keer laten zien?”',
+    'c.task.o1': 'Prosisz, żeby ci to jeszcze raz pokazano.', // nalezen: korter goed antwoord
     'c.task.o2': 'Mówisz „ja” i zgadujesz.',
     'c.task.o3': 'Czekasz, aż zrobi to kolega.',
     'c.task.w': 'Zapytać jeszcze raz to normalne i zajmuje minutę. Poprawienie błędu trwa o wiele dłużej. Większość przełożonych woli pokazać coś dwa razy.',

@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "ኣስማት ኣብ ቻትቦት ከተእቱ ተሓቲቱ፡ እዚ መልሲ «ኣይፋል» ይብል፡ ምኽንያቱ ድማ ይገልጽ።",
     'c.aifake.a.why': "ሓድሽ ቁጽሪ ገንዘብ ይሓትት፡ እዚ መልሲ ቅድም የረጋግጽ።",
     'c.aiplan.a.why': "መደብ ስራሕ ብኣፕ ተዳልዩ፡ እዚ መልሲ ሰብ ይሓትት።",
-    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
-    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
-    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
-    // TODO vertalen: why the chat replies of the new lessons fit (30 October 2026). English for now; the translators replace it.
-    "c.details.a.why": "Asked for a last name: this reply gives it and offers to spell it.",
-    "c.dates.a.why": "Asked for the date: this reply gives the day and the date.",
-    "c.permit.a.why": "A no is fine with a reason. Offering another day helps.",
-    "c.kids.a.why": "Asked why: this reply gives the reason, the daycare called.",
-    "c.body.a.why": "Asked where it hurts: this reply names the place and the cause.",
-    "c.jobends.a.why": "The house goes with the job: this reply asks about the notice period.",
+    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
+    'c.harvest.a.why': 'ክንደይ መስርዕ ተሓቲቱ፡ እዚ መልሲ ቁጽሪ ይህብ፡ ዝተረፈ እውን ይነግር።', // nieuw, nog nalezen
+    'c.greensafe.a.why': 'ሕጂ ተነስኒሱ፡ እዚ መልሲ «ገና» ይብል፡ ምኽንያቱ ድማ ይገልጽ።', // nieuw, nog nalezen
+    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    'c.details.a.why': 'ስም ስድራ ተሓቲቱ፡ እዚ መልሲ ነቲ ስም ይህብ፡ ብፊደል ክብሎ ድማ ይሓትት።', // nieuw, nog nalezen
+    'c.dates.a.why': 'ዕለት ተሓቲቱ፡ እዚ መልሲ መዓልትን ዕለትን ይህብ።', // nieuw, nog nalezen
+    'c.permit.a.why': '«ኣይፋል» ምስ ምኽንያት ጸገም የብሉን። ካልእ መዓልቲ ምቕራብ ይሕግዝ።', // nieuw, nog nalezen
+    'c.kids.a.why': 'ስለምንታይ ተሓቲቱ፡ እዚ መልሲ ምኽንያቱ ይህብ፡ መውዓሊ ህጻናት ደዊሎም።', // nieuw, nog nalezen
+    'c.body.a.why': 'ኣበይ ከም ዘቐንዝው ተሓቲቱ፡ እዚ መልሲ ቦታን ምኽንያትን ይጠቅስ።', // nieuw, nog nalezen
+    'c.jobends.a.why': 'እቲ ገዛ ምስቲ ስራሕ ዝተኣሳሰረ እዩ፡ እዚ መልሲ ብዛዕባ ግዜ ቅድመ-ምሕባር ይሓትት።', // nieuw, nog nalezen
   },
 };
 

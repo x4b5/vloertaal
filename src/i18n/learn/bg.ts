@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Молят те да сложиш имена в чатбот: този отговор казва „не“ и защо.",
     'c.aifake.a.why': "Нов номер иска пари: този отговор първо проверява.",
     'c.aiplan.a.why': "Графикът е от приложение: този отговор иска човек.",
-    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
-    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
-    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
-    // TODO vertalen: why the chat replies of the new lessons fit (30 October 2026). English for now; the translators replace it.
-    "c.details.a.why": "Asked for a last name: this reply gives it and offers to spell it.",
-    "c.dates.a.why": "Asked for the date: this reply gives the day and the date.",
-    "c.permit.a.why": "A no is fine with a reason. Offering another day helps.",
-    "c.kids.a.why": "Asked why: this reply gives the reason, the daycare called.",
-    "c.body.a.why": "Asked where it hurts: this reply names the place and the cause.",
-    "c.jobends.a.why": "The house goes with the job: this reply asks about the notice period.",
+    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
+    'c.harvest.a.why': "Питат колко реда: този отговор дава число и колко остават.", // nieuw, nog nalezen
+    'c.greensafe.a.why': "Току-що напръскана: този отговор казва „още не“ и защо.", // nieuw, nog nalezen
+    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    'c.details.a.why': "Питат за фамилията: този отговор я казва и предлага да я каже буква по буква.",
+    'c.dates.a.why': "Питат за датата: този отговор дава деня и датата.",
+    'c.permit.a.why': "Отказът е наред, когато има причина. Да предложиш друг ден помага.",
+    'c.kids.a.why': "Питат защо: този отговор дава причината — обадиха се от детската градина.",
+    'c.body.a.why': "Питат къде боли: този отговор казва мястото и причината.",
+    'c.jobends.a.why': "Жилището е свързано с работата: този отговор пита за срока на предизвестие.",
   },
 };
 

@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Pedem para pôr nomes num chatbot: esta resposta diz que não, e porquê.",
     'c.aifake.a.why': "Um número novo pede dinheiro: esta resposta verifica primeiro.",
     'c.aiplan.a.why': "Uma app fez o horário: esta resposta pede uma pessoa.",
-    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
-    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
-    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
-    // TODO vertalen: why the chat replies of the new lessons fit (30 October 2026). English for now; the translators replace it.
-    "c.details.a.why": "Asked for a last name: this reply gives it and offers to spell it.",
-    "c.dates.a.why": "Asked for the date: this reply gives the day and the date.",
-    "c.permit.a.why": "A no is fine with a reason. Offering another day helps.",
-    "c.kids.a.why": "Asked why: this reply gives the reason, the daycare called.",
-    "c.body.a.why": "Asked where it hurts: this reply names the place and the cause.",
-    "c.jobends.a.why": "The house goes with the job: this reply asks about the notice period.",
+    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
+    'c.harvest.a.why': "Perguntam quantas filas: esta resposta dá um número, e o que falta.", // nieuw, nog nalezen
+    'c.greensafe.a.why': "Acabou de ser pulverizada: esta resposta diz ainda não, e porquê.", // nieuw, nog nalezen
+    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    'c.details.a.why': "Perguntam o apelido: esta resposta dá-o e oferece-se para o soletrar.",
+    'c.dates.a.why': "Perguntam a data: esta resposta dá o dia e a data.",
+    'c.permit.a.why': "Um não está bem com uma razão. Propor outro dia ajuda.",
+    'c.kids.a.why': "Perguntam porquê: esta resposta dá a razão, a creche ligou.",
+    'c.body.a.why': "Perguntam onde dói: esta resposta diz o sítio e a causa.",
+    'c.jobends.a.why': "A casa vai com o trabalho: esta resposta pergunta pelo prazo de pré-aviso.",
   },
 };
 

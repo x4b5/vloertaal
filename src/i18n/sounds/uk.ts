@@ -31,7 +31,7 @@ const t: CultureTranslation = {
     'c.roundsounds.q': 'Двері відчинені?',
     'c.roundsounds.a': 'Ні, вони зачинені.',
     'c.roundsounds.a.why': 'Питають, чи відчинені двері: ця відповідь каже, що ні.',
-    'l.pbgk': 'p чи b, g чи k',
+    'l.pbgk': "p чи b, g, k чи h", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'w.kl.pak': 'костюм',
     'w.kl.bak': 'ящик, смітник',
     'w.kl.goud': 'золото',
