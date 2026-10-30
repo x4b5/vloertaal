@@ -335,7 +335,7 @@ const lang: HelpLanguageSource = {
     tempo: 'Vitesse', // nieuw, nalezen
     tempoCalm: 'Calme', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
-    tempoHint: 'Calme : lent et clair. Normal : comme parlent les collègues. Choisis « Normal » si tu comprends déjà beaucoup.', // nieuw, nalezen
+    tempoHint: 'Calme : lent et clair. Normal : comme parlent les collègues. Choisis “Normal” si tu comprends déjà beaucoup.', // nieuw, nalezen // nagelezen AI 31 okt
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Montre où tu en es', // nieuw, nalezen
     coachCardIntro: 'Cette carte montre tes progrès. Montre-la à ton professeur, ton coach ou ton chef. C’est toi qui décides.', // nieuw, nalezen
