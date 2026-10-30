@@ -18,16 +18,16 @@ const t: CultureTranslation = {
     'c.je.p': '¿Puedo decirte “je”?',
     'c.je.s': 'Tu nueva encargada dice: “Zeg maar je, hoor!” ¿Qué quiere decir?',
     'c.je.o1': 'Quiere que le digas “je”.',
-    'c.je.o2': 'Te pide que digas algo.', // nalezen: nieuwe foute optie
-    'c.je.o3': 'Quiere que hables con más educación.', // nalezen: nieuwe foute optie
+    'c.je.o2': 'Te pide que digas algo.', // nagelezen (2e lezing)
+    'c.je.o3': 'Quiere que hables con más educación.', // nagelezen (2e lezing)
     'c.je.w': '“Zeg maar je” es algo amable: quiere menos distancia. En muchos trabajos en los Países Bajos es normal decir “je” al encargado.',
     'c.names': 'El nombre de pila y un apretón de manos',
     'c.names.b': 'El primer día, da un apretón de manos corto, mira a la persona y di tu nombre. Los compañeros y los jefes normalmente se llaman por el nombre de pila.',
     'c.names.p': 'Hola, soy Ali. Soy nuevo aquí.',
     'c.names.s': 'Un compañero se acerca a ti: “Hoi, ik ben Mark.” ¿Qué haces?',
     'c.names.o1': 'Le das la mano y dices tu nombre.',
-    'c.names.o2': 'Asientes, sonríes y esperas a que te pregunten.', // nalezen: nieuwe foute optie
-    'c.names.o3': 'Le das la mano y le llamas “meneer” (señor).', // nalezen: nieuwe foute optie
+    'c.names.o2': 'Asientes, sonríes y esperas a que te pregunten.', // nagelezen (2e lezing)
+    'c.names.o3': 'Le das la mano y lo llamas “meneer” (señor).', // nagelezen (2e lezing)
     'c.names.w': 'Presentarte en pocas palabras con tu nombre es el comienzo normal. Así los compañeros te recuerdan y te invitan a ir con ellos.',
     'c.arrive': 'Tu primer día: adónde ir',
     'c.arrive.b': 'El primer día, ve primero a la recepción o a la entrada principal. Di tu nombre, tu agencia si tienes una, y a quién tienes que ver. Muchas empresas te dan un buddy: a esa persona le puedes preguntar todo.',
@@ -41,9 +41,9 @@ const t: CultureTranslation = {
     'c.ask.b': 'Hacer una pregunta muestra que quieres hacer bien el trabajo. Decir que sí con la cabeza cuando no entiendes puede llevar a errores o accidentes. Volver a preguntar es totalmente normal.',
     'c.ask.p': 'Perdón, no lo entiendo. ¿Me lo explicas otra vez?',
     'c.ask.s': 'Tu encargado te explica una tarea muy rápido. No lo has entendido. ¿Qué haces?',
-    'c.ask.o1': 'Pides que te lo expliquen otra vez.', // nalezen: korter goed antwoord
+    'c.ask.o1': 'Pides que te lo expliquen otra vez.', // nagelezen (2e lezing)
     'c.ask.o2': 'Dices que sí con la cabeza e intentas adivinar.',
-    'c.ask.o3': 'Pides perdón por tu neerlandés y empiezas a trabajar.', // nalezen: nieuwe foute optie
+    'c.ask.o3': 'Pides perdón por tu neerlandés y empiezas a trabajar.', // nagelezen (2e lezing)
     'c.ask.w': 'Los encargados en los Países Bajos esperan preguntas. Es mejor preguntar dos veces que cometer un error.',
     'c.gear': 'Las normas de seguridad son para todos',
     'c.gear.b': 'Las normas sobre cascos, zapatos y guantes no son una sugerencia: todos las cumplen, también el jefe. Tu empresa te tiene que dar gratis el equipo de protección que necesitas. Un equipo que no te queda bien no te protege bien, así que pide tu talla: “Heb je dit ook in mijn maat?”',
@@ -65,10 +65,10 @@ const t: CultureTranslation = {
     'c.accident.b': 'Cuéntale cada accidente, también uno pequeño, a tu encargado o al BHV’er (la persona de primeros auxilios de la empresa). ¿Trabajas a través de una agencia? Avisa también a la agencia. En una emergencia, llama primero al 112. La empresa donde pasó el accidente tiene que avisar de un accidente grave a la Nederlandse Arbeidsinspectie (también si trabajas a través de una agencia): cuando alguien muere, queda con lesiones para toda la vida o tiene que quedarse en el hospital. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
     'c.accident.p': 'Mi compañero está herido. ¿Dónde está la persona de primeros auxilios?',
     'c.accident.s': 'Te haces daño en la espalda al levantar algo. Tienes miedo de perder tu trabajo. ¿Qué haces?',
-    'c.accident.o1': 'Se lo dices a tu encargado el mismo día.', // nalezen: korter goed antwoord
+    'c.accident.o1': 'Se lo dices a tu encargado el mismo día.', // nagelezen (2e lezing)
     'c.accident.o2': 'No dices nada, para no perder tu trabajo.',
     'c.accident.o3': 'Esperas a ver si el dolor se va solo.',
-    'c.accident.w': 'Avisa el mismo día, también si parece poca cosa: el dolor puede empeorar más tarde. Tu empresa no te puede castigar por avisar. ¿Trabajas a través de una agencia? Díselo también a la agencia.', // nalezen: korter goed antwoord
+    'c.accident.w': 'Avisa el mismo día, también si parece poca cosa: el dolor puede empeorar más tarde. Tu empresa no te puede castigar por avisar. ¿Trabajas a través de una agencia? Díselo también a la agencia.', // nagelezen (2e lezing)
     'c.notyet': '¿Todavía no lo has aprendido? Dilo',
     'c.notyet.b': 'La empresa donde trabajas te tiene que explicar cómo hacer tu trabajo de forma segura. No uses una máquina o una carretilla elevadora si nadie te ha enseñado. Decir “Dit heb ik nog niet geleerd” aquí es normal: muestra que trabajas de forma segura.',
     'c.notyet.p': 'Esto todavía no lo he aprendido. ¿Me enseñas cómo se hace?',
@@ -82,7 +82,7 @@ const t: CultureTranslation = {
     'c.direct.p': 'De acuerdo, ¿entonces cómo se hace?',
     'c.direct.s': 'Un compañero dice: “Nee, dat is fout. Die doos moet daar.” ¿Qué haces?',
     'c.direct.o1': 'Preguntas cómo se hace y mueves la caja.',
-    'c.direct.o2': 'Pides perdón muchas veces: tu compañero está enfadado.', // nalezen: nieuwe foute optie
+    'c.direct.o2': 'Pides perdón muchas veces: tu compañero está enfadado.', // nagelezen (2e lezing)
     'c.direct.o3': 'No dices nada y dejas la caja donde está.',
     'c.direct.w': 'Un comentario directo es sobre el trabajo, no sobre ti. Preguntar “hoe moet het dan?” muestra que quieres aprender.',
     'c.limits': 'Dilo cuando pesa demasiado',
@@ -97,7 +97,7 @@ const t: CultureTranslation = {
     'c.time.b': 'Llegar a tiempo es muy importante. Mucha gente llega cinco o diez minutos antes de que empiece el turno. Si vas a llegar tarde, manda un mensaje o llama antes de que empiece tu turno, no después.',
     'c.time.p': 'Perdón, el autobús llega tarde. Llego a las ocho.',
     'c.time.s': 'Tu autobús va con retraso y vas a llegar 15 minutos tarde. ¿Qué haces?',
-    'c.time.o1': 'Se lo dices enseguida a tu encargado.', // nalezen: korter goed antwoord
+    'c.time.o1': 'Avisas enseguida a tu encargado.', // nagelezen (2e lezing)
     'c.time.o2': 'Lo explicas cuando llegas.',
     'c.time.o3': 'Hoy no vas a trabajar.',
     'c.time.w': 'Avisar pronto deja que el equipo se organice. Llegar tarde sin avisar se ve mucho peor que el retraso mismo.',
@@ -105,7 +105,7 @@ const t: CultureTranslation = {
     'c.sick.b': 'Llama tú a tu encargado antes de que empiece tu turno, a no ser que tu empresa tenga otra norma. ¿Trabajas a través de una agencia? Avisa también a la agencia. No tienes que decir qué enfermedad tienes. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
     'c.sick.p': { m: 'Estoy enfermo. Hoy no puedo ir a trabajar.', f: 'Estoy enferma. Hoy no puedo ir a trabajar.' },
     'c.sick.s': 'Te despiertas con fiebre. Tu turno empieza a las 7:00. ¿Qué haces?',
-    'c.sick.o1': 'Llamas a tu encargado antes de las 7:00.', // nalezen: korter goed antwoord
+    'c.sick.o1': 'Llamas a tu encargado antes de las 7:00.', // nagelezen (2e lezing)
     'c.sick.o2': 'Pides a un compañero que se lo diga al jefe más tarde.',
     'c.sick.o3': 'Te quedas en casa y llamas mañana.',
     'c.sick.w': 'En la mayoría de los trabajos en los Países Bajos, la norma es avisar tú personalmente y a tiempo. Tu empresa puede preguntar cuánto tiempo va a durar, pero no qué enfermedad es.',
@@ -113,7 +113,7 @@ const t: CultureTranslation = {
     'c.speakup.b': 'Aquí es normal y se respeta decir con calma cuando algo te molesta. Habla primero con esa persona, en un momento tranquilo. Usa frases con “ik”: “Ik vind het niet fijn dat ...”. Si no ayuda, habla con tu encargado.',
     'c.speakup.p': 'Hay algo que me molesta. ¿Podemos hablar un momento?',
     'c.speakup.s': 'Un compañero siempre te deja a ti el trabajo pesado. Te molesta. ¿Qué haces?',
-    'c.speakup.o1': 'Le dices al compañero lo que te molesta.', // nalezen: korter goed antwoord
+    'c.speakup.o1': 'Le dices al compañero lo que te molesta.', // nagelezen (2e lezing)
     'c.speakup.o2': 'Te callas y te enfadas cada vez más.',
     'c.speakup.o3': 'Te quejas de él a todos los demás compañeros.',
     'c.speakup.w': 'Los compañeros en los Países Bajos normalmente prefieren oírlo directamente. Decirlo pronto y con calma mantiene una buena relación.',
@@ -121,16 +121,16 @@ const t: CultureTranslation = {
     'c.no.b': 'Cuando dices “ja”, la gente cuenta con ello: lo acordado es lo acordado. Por eso está bien decir “nee” o “dat lukt niet” cuando no puedes hacer algo. Dilo a tiempo y, si puedes, ofrece otra opción.',
     'c.no.p': 'No, hoy no puedo. Mañana sí.',
     'c.no.s': 'Tu encargado te pregunta si puedes trabajar más horas el sábado. No puedes. ¿Qué haces?',
-    'c.no.o1': 'Dices que no y ofreces otro día.', // nalezen: korter goed antwoord
+    'c.no.o1': 'Dices que no y ofreces otro día.', // nagelezen (2e lezing)
     'c.no.o2': 'Dices que sí y luego no vas.',
-    'c.no.o3': 'Dices que sí: a un jefe no se le puede decir que no.', // nalezen: nieuwe foute optie
+    'c.no.o3': 'Dices que sí: a un jefe no se le puede decir que no.', // nagelezen (2e lezing)
     'c.no.w': 'Un “nee” claro se respeta. Decir “ja” y no ir rompe mucho más la confianza.',
     'c.task': 'Di cuándo has terminado, pregunta cuando no está claro',
     'c.task.b': 'En los Países Bajos, un encargado muchas veces da una tarea con pocas palabras y espera que digas cuándo has terminado. Decir “ja” cuando no lo has entendido muchas veces lleva a errores. Volver a preguntar, o pedir que te lo enseñen, aquí es normal y no es de mala educación.',
     'c.task.p': '¡Listo! ¿Qué tengo que hacer ahora?',
     'c.task.s': 'Tu encargado te explica una tarea muy rápido. Solo has entendido la mitad. ¿Qué haces?',
-    'c.task.o1': 'Pides que te lo enseñen una vez más.', // nalezen: korter goed antwoord
-    'c.task.o2': 'Empiezas por la mitad que has entendido.', // nalezen: nieuwe foute optie
+    'c.task.o1': 'Pides que te lo enseñen una vez más.', // nagelezen (2e lezing)
+    'c.task.o2': 'Empiezas por la mitad que has entendido.', // nagelezen (2e lezing)
     'c.task.o3': 'Esperas a que lo haga un compañero.',
     'c.task.w': 'Volver a preguntar es normal y lleva un minuto. Arreglar un error lleva mucho más. La mayoría de los encargados prefiere enseñarlo dos veces.',
     'u.teamwork': 'Trabajar juntos',

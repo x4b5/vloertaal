@@ -18,16 +18,16 @@ const t: CultureTranslation = {
     'c.je.p': 'Je peux te dire “je” ?',
     'c.je.s': 'Ta nouvelle responsable dit : “Zeg maar je, hoor!” Qu’est-ce qu’elle veut dire ?',
     'c.je.o1': 'Elle veut que tu lui dises “je”.',
-    'c.je.o2': 'Elle te demande de dire quelque chose.', // nalezen: nieuwe foute optie
-    'c.je.o3': 'Elle veut que tu parles plus poliment.', // nalezen: nieuwe foute optie
+    'c.je.o2': 'Elle te demande de dire quelque chose.', // nagelezen (2e lezing)
+    'c.je.o3': 'Elle veut que tu parles plus poliment.', // nagelezen (2e lezing)
     'c.je.w': '“Zeg maar je”, c’est gentil : elle veut moins de distance. Dans beaucoup d’entreprises néerlandaises, c’est normal de dire “je” à un responsable.',
     'c.names': 'Le prénom et une poignée de main',
     'c.names.b': 'Le premier jour, serre la main rapidement, regarde la personne et dis ton prénom. Les collègues et les responsables utilisent en général les prénoms.',
     'c.names.p': { m: 'Salut, je suis Ali. Je suis nouveau ici.', f: 'Salut, je suis Ali. Je suis nouvelle ici.', x: 'Salut, je suis Ali. Je suis nouveau / nouvelle ici.' },
     'c.names.s': 'Un collègue vient vers toi : “Hoi, ik ben Mark.” Que fais-tu ?',
-    'c.names.o1': 'Serre-lui la main et dis ton nom.', // nalezen: korter goed antwoord
-    'c.names.o2': 'Fais oui de la tête, souris et attends les questions.', // nalezen: nieuwe foute optie
-    'c.names.o3': 'Serre-lui la main et appelle-le “meneer” (monsieur).', // nalezen: nieuwe foute optie
+    'c.names.o1': 'Serre-lui la main et dis ton nom.', // nagelezen (2e lezing)
+    'c.names.o2': 'Fais oui de la tête, souris et attends les questions.', // nagelezen (2e lezing)
+    'c.names.o3': 'Serre-lui la main et appelle-le “meneer” (monsieur).', // nagelezen (2e lezing)
     'c.names.w': 'Se présenter rapidement avec son prénom, c’est le début normal. Ça aide les collègues à se souvenir de toi et à t’inviter.',
     'c.arrive': 'Ton premier jour : où aller',
     'c.arrive.b': 'Le premier jour, va d’abord à l’accueil ou à l’entrée principale. Dis ton nom, ton agence si tu en as une, et qui tu dois voir. Beaucoup d’entreprises te donnent un parrain ou une marraine : tu peux tout lui demander.',
@@ -41,9 +41,9 @@ const t: CultureTranslation = {
     'c.ask.b': 'Poser une question montre que tu veux bien faire ton travail. Faire oui de la tête quand tu ne comprends pas peut causer des erreurs ou des accidents. Redemander, c’est tout à fait normal.',
     'c.ask.p': 'Pardon, je ne comprends pas. Tu peux me l’expliquer encore une fois ?',
     'c.ask.s': 'Ton responsable explique une tâche très vite. Tu n’as pas compris. Que fais-tu ?',
-    'c.ask.o1': 'Demande qu’on t’explique encore une fois.', // nalezen: korter goed antwoord
+    'c.ask.o1': 'Demande qu’on t’explique encore une fois.', // nagelezen (2e lezing)
     'c.ask.o2': 'Fais oui de la tête et essaie de deviner.',
-    'c.ask.o3': 'Excuse-toi pour ton néerlandais et commence à travailler.', // nalezen: nieuwe foute optie
+    'c.ask.o3': 'Excuse-toi pour ton néerlandais et commence à travailler.', // nagelezen (2e lezing)
     'c.ask.w': 'Aux Pays-Bas, les responsables s’attendent à des questions. Mieux vaut demander deux fois que faire une erreur.',
     'c.gear': 'Les règles de sécurité sont pour tout le monde',
     'c.gear.b': 'Les règles sur les casques, les chaussures et les gants ne sont pas des conseils : tout le monde les suit, aussi le patron. Ton employeur doit te donner gratuitement l’équipement de protection dont tu as besoin. Un équipement qui ne te va pas te protège mal, alors demande ta taille : “Heb je dit ook in mijn maat?”',
@@ -65,10 +65,10 @@ const t: CultureTranslation = {
     'c.accident.b': 'Parle de chaque accident à ton responsable ou au BHV’er (le secouriste de l’entreprise), même d’un petit. Tu travailles par une agence ? Préviens aussi l’agence. En cas d’urgence, appelle d’abord le 112. L’entreprise où l’accident a eu lieu doit déclarer un accident grave à la Nederlandse Arbeidsinspectie (aussi si tu travailles par une agence) : quand quelqu’un meurt, est blessé pour toute sa vie ou doit rester à l’hôpital. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
     'c.accident.p': 'Mon collègue est blessé. Où est le secouriste ?',
     'c.accident.s': 'Tu t’es fait mal au dos en soulevant quelque chose. Tu as peur de perdre ton travail. Que fais-tu ?',
-    'c.accident.o1': 'Signale-le à ton responsable le jour même.', // nalezen: korter goed antwoord
+    'c.accident.o1': 'Signale-le à ton responsable le jour même.', // nagelezen (2e lezing)
     'c.accident.o2': 'Ne dis rien, pour ne pas perdre ton travail.',
     'c.accident.o3': 'Attends de voir si la douleur part toute seule.',
-    'c.accident.w': 'Signale-le le jour même, même si ça semble petit : la douleur peut empirer plus tard. Ton employeur n’a pas le droit de te punir parce que tu l’as signalé. Tu travailles par une agence ? Dis-le aussi à l’agence.', // nalezen: korter goed antwoord
+    'c.accident.w': 'Signale-le le jour même, même si ça semble petit : la douleur peut empirer plus tard. Ton employeur n’a pas le droit de te punir parce que tu l’as signalé. Tu travailles par une agence ? Dis-le aussi à l’agence.', // nagelezen (2e lezing)
     'c.notyet': 'Pas encore appris ? Dis-le',
     'c.notyet.b': 'L’entreprise où tu travailles doit t’expliquer comment faire ton travail en sécurité. N’utilise pas une machine ou un chariot élévateur que personne ne t’a appris. Dire “Dit heb ik nog niet geleerd” est normal ici : ça montre que tu travailles en sécurité.',
     'c.notyet.p': 'Je n’ai pas encore appris ça. Tu peux me montrer comment faire ?',
@@ -82,7 +82,7 @@ const t: CultureTranslation = {
     'c.direct.p': 'D’accord, alors comment il faut faire ?',
     'c.direct.s': 'Un collègue dit : “Nee, dat is fout. Die doos moet daar.” Que fais-tu ?',
     'c.direct.o1': 'Demande comment il faut faire et déplace le carton.',
-    'c.direct.o2': 'Excuse-toi plusieurs fois : ton collègue est en colère.', // nalezen: nieuwe foute optie
+    'c.direct.o2': 'Excuse-toi plusieurs fois : ton collègue est en colère.', // nagelezen (2e lezing)
     'c.direct.o3': 'Ne dis rien et laisse le carton où il est.',
     'c.direct.w': 'Une remarque directe parle du travail, pas de toi. Demander “hoe moet het dan?” montre que tu veux apprendre.',
     'c.limits': 'Dis-le quand c’est trop lourd',
@@ -97,7 +97,7 @@ const t: CultureTranslation = {
     'c.time.b': 'Être à l’heure est très important. Beaucoup de gens arrivent cinq ou dix minutes avant le début du service. Si tu vas être en retard, envoie un message ou appelle avant le début de ton service, pas après.',
     'c.time.p': { m: 'Désolé, le bus a du retard. Je serai là à huit heures.', f: 'Désolée, le bus a du retard. Je serai là à huit heures.', x: 'Désolé / désolée, le bus a du retard. Je serai là à huit heures.' },
     'c.time.s': 'Ton bus a du retard et tu vas arriver 15 minutes en retard. Que fais-tu ?',
-    'c.time.o1': 'Préviens tout de suite ton responsable.', // nalezen: korter goed antwoord
+    'c.time.o1': 'Préviens tout de suite ton responsable.', // nagelezen (2e lezing)
     'c.time.o2': 'Explique-le quand tu arrives.',
     'c.time.o3': 'Ne va pas du tout au travail aujourd’hui.',
     'c.time.w': 'Prévenir tôt permet à l’équipe de s’organiser. Être en retard sans message est vu comme bien pire que le retard lui-même.',
@@ -105,7 +105,7 @@ const t: CultureTranslation = {
     'c.sick.b': 'Appelle toi-même ton responsable, avant le début de ton service, sauf si ton entreprise a une autre règle. Tu travailles par une agence ? Préviens aussi l’agence. Tu n’as pas besoin de dire quelle maladie tu as. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
     'c.sick.p': 'Je suis malade. Je ne peux pas venir travailler aujourd’hui.',
     'c.sick.s': 'Tu te réveilles avec de la fièvre. Ton service commence à 7 h 00. Que fais-tu ?',
-    'c.sick.o1': 'Appelle ton responsable avant 7 h 00.', // nalezen: korter goed antwoord
+    'c.sick.o1': 'Appelle ton responsable avant 7 h 00.', // nagelezen (2e lezing)
     'c.sick.o2': 'Demande à un collègue de le dire au patron plus tard.',
     'c.sick.o3': 'Reste à la maison et appelle demain.',
     'c.sick.w': 'Dans la plupart des entreprises aux Pays-Bas, la règle est de te déclarer malade toi-même et à temps. Ton employeur peut demander combien de temps ça va durer, mais pas quelle maladie tu as.',
@@ -113,7 +113,7 @@ const t: CultureTranslation = {
     'c.speakup.b': 'Ici, c’est normal et respecté de dire calmement quand quelque chose te gêne. Parle d’abord à la personne, à un moment calme. Utilise des phrases avec “ik” : “Ik vind het niet fijn dat ...”. Si ça n’aide pas, parle à ton responsable.',
     'c.speakup.p': 'Quelque chose me tracasse. On peut parler un moment ?',
     'c.speakup.s': 'Un collègue te laisse toujours le travail lourd. Ça te gêne. Que fais-tu ?',
-    'c.speakup.o1': 'Dis au collègue ce qui te gêne.', // nalezen: korter goed antwoord
+    'c.speakup.o1': 'Dis au collègue ce qui te gêne.', // nagelezen (2e lezing)
     'c.speakup.o2': 'Tais-toi et énerve-toi de plus en plus.',
     'c.speakup.o3': 'Plains-toi de lui à tous les autres collègues.',
     'c.speakup.w': 'Les collègues néerlandais préfèrent en général l’entendre directement. Le dire tôt et calmement garde une bonne relation.',
@@ -121,16 +121,16 @@ const t: CultureTranslation = {
     'c.no.b': 'Quand tu dis “ja”, les gens comptent dessus : un accord, c’est un accord. Alors c’est bien de dire “nee” ou “dat lukt niet” quand tu ne peux pas faire quelque chose. Dis-le à temps et, si tu peux, propose une autre solution.',
     'c.no.p': 'Non, aujourd’hui ce n’est pas possible. Demain, je peux.',
     'c.no.s': 'Ton responsable demande si tu peux faire des heures en plus samedi. Tu ne peux pas. Que fais-tu ?',
-    'c.no.o1': 'Dis non et propose un autre jour.', // nalezen: korter goed antwoord
+    'c.no.o1': 'Dis non et propose un autre jour.', // nagelezen (2e lezing)
     'c.no.o2': 'Dis oui et puis ne viens pas.',
-    'c.no.o3': 'Dis oui : on ne peut pas dire non à un chef.', // nalezen: nieuwe foute optie
+    'c.no.o3': 'Dis oui : on ne peut pas dire non à un chef.', // nagelezen (2e lezing)
     'c.no.w': 'Un “nee” clair est respecté. Dire “ja” et ne pas venir casse beaucoup plus la confiance.',
     'c.task': 'Dis quand c’est fini, demande quand ce n’est pas clair',
     'c.task.b': 'Aux Pays-Bas, un responsable donne souvent une tâche en quelques mots, et il attend que tu dises quand c’est fini. Dire “ja” quand tu n’as pas compris cause souvent des erreurs. Redemander, ou demander qu’on te montre, est normal ici et pas impoli.',
     'c.task.p': 'Fini ! Qu’est-ce que je dois faire maintenant ?',
     'c.task.s': 'Ton responsable explique une tâche très vite. Tu n’as compris que la moitié. Que fais-tu ?',
-    'c.task.o1': 'Demande à le voir encore une fois.', // nalezen: korter goed antwoord
-    'c.task.o2': 'Commence par la moitié que tu as comprise.', // nalezen: nieuwe foute optie
+    'c.task.o1': 'Demande à le voir encore une fois.', // nagelezen (2e lezing)
+    'c.task.o2': 'Commence par la moitié que tu as comprise.', // nagelezen (2e lezing)
     'c.task.o3': 'Attends qu’un collègue le fasse.',
     'c.task.w': 'Redemander est normal et prend une minute. Réparer une erreur prend bien plus de temps. La plupart des responsables préfèrent montrer deux fois.',
     'u.teamwork': 'Travailler ensemble',

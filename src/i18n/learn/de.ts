@@ -85,13 +85,13 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Gebeten, Namen in einen Chatbot zu geben: Diese Antwort sagt nein und warum.",
     'c.aifake.a.why': "Eine neue Nummer bittet um Geld: Diese Antwort prüft das zuerst.",
     'c.aiplan.a.why': "Eine App hat den Dienstplan gemacht: Diese Antwort bittet um einen Menschen.",
-    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
-    'c.harvest.a.why': "Gefragt ist, wie viele Reihen: Diese Antwort nennt eine Zahl und was noch fehlt.", // nieuw, nog nalezen
-    'c.greensafe.a.why': "Gerade gespritzt: Diese Antwort sagt noch nicht, und warum.", // nieuw, nog nalezen
-    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
+    'c.harvest.a.why': "Gefragt ist, wie viele Reihen: Diese Antwort nennt eine Zahl und was noch fehlt.", // nagelezen (2e lezing)
+    'c.greensafe.a.why': "Gerade gespritzt: Diese Antwort sagt „noch nicht“ und warum.", // nagelezen (2e lezing)
+    // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
     'c.details.a.why': "Gefragt ist der Nachname: Diese Antwort nennt ihn und bietet an, ihn zu buchstabieren.",
     'c.dates.a.why': "Gefragt ist das Datum: Diese Antwort nennt den Tag und das Datum.",
-    'c.permit.a.why': "Ein Nein ist in Ordnung, mit einem Grund. Einen anderen Tag anzubieten hilft.",
+    'c.permit.a.why': "Ein Nein ist in Ordnung, wenn du einen Grund nennst. Einen anderen Tag anzubieten, hilft.",
     'c.kids.a.why': "Gefragt ist warum: Diese Antwort nennt den Grund, die Kita hat angerufen.",
     'c.body.a.why': "Gefragt ist, wo es wehtut: Diese Antwort nennt die Stelle und die Ursache.",
     'c.jobends.a.why': "Die Wohnung hängt am Job: Diese Antwort fragt nach der Kündigungsfrist.",

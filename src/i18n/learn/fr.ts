@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "On demande de mettre des noms dans un chatbot : cette réponse dit non, et pourquoi.",
     'c.aifake.a.why': "Un nouveau numéro demande de l’argent : cette réponse vérifie d’abord.",
     'c.aiplan.a.why': "Une appli a fait le planning : cette réponse demande à parler à une personne.",
-    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
-    'c.harvest.a.why': "On demande combien de rangées : cette réponse donne un nombre, et ce qui reste.", // nieuw, nog nalezen
-    'c.greensafe.a.why': "Elle vient d’être traitée : cette réponse dit pas encore, et pourquoi.", // nieuw, nog nalezen
-    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
+    'c.harvest.a.why': "On demande combien de rangées : cette réponse donne un nombre, et ce qui reste.", // nagelezen (2e lezing)
+    'c.greensafe.a.why': "Elle vient d’être traitée : cette réponse dit « pas encore » et pourquoi.", // nagelezen (2e lezing)
+    // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
     'c.details.a.why': "On demande le nom de famille : cette réponse le donne et propose de l’épeler.",
     'c.dates.a.why': "On demande la date : cette réponse donne le jour et la date.",
-    'c.permit.a.why': "Dire non, c’est bien avec une raison. Proposer un autre jour, ça aide.",
+    'c.permit.a.why': "Dire non, ça va si tu donnes une raison. Proposer un autre jour, ça aide.",
     'c.kids.a.why': "On demande pourquoi : cette réponse donne la raison, la crèche a appelé.",
     'c.body.a.why': "On demande où tu as mal : cette réponse dit l’endroit et la cause.",
-    'c.jobends.a.why': "Le logement va avec le travail : cette réponse demande le préavis.",
+    'c.jobends.a.why': "Le logement va avec le travail : cette réponse demande quel est le préavis.",
   },
 };
 

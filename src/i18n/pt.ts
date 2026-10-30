@@ -81,7 +81,7 @@ const lang: HelpLanguageSource = {
     unlock: 'Desbloquear',
     sector: 'O teu trabalho',
     chooseSector: 'Onde trabalhas?',
-    // nieuw, nog nalezen (land: Nederland of België)
+    // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Em que país trabalhas?',
     countryHint: 'As regras de trabalho do Vloertaal são dos Países Baixos. Na Bélgica, muitas regras são diferentes. Isto fica no teu telemóvel. Não o enviamos para lado nenhum.',
     countryNl: 'Países Baixos',
@@ -98,7 +98,7 @@ const lang: HelpLanguageSource = {
     sectorCare: 'Cuidados',
     sectorHospitality: 'Hotelaria e restauração',
     sectorCleaning: 'Limpeza',
-    sectorHorticulture: 'Horticultura', // nieuw (30 okt 2026), nog nalezen
+    sectorHorticulture: 'Horticultura', // nieuw (30 okt 2026), nagelezen (2e lezing)
     sound: 'Som',
     soundOn: 'Com som',
     withoutSound: 'Sem som',
@@ -245,7 +245,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Desligado',
     sectorGroupMake: 'Produção e transporte',
     sectorGroupCare: 'Cuidados e serviços',
-    sectorGroupOther: 'Outra coisa', // nieuw (30 okt 2026), nog nalezen
+    sectorGroupOther: 'Outra coisa', // nieuw (30 okt 2026), nagelezen (2e lezing)
     voiceWoman: 'Voz de mulher',
     voiceMan: 'Voz de homem',
     writingPick: 'Escolher a palavra',

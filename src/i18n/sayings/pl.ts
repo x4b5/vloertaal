@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'Będziesz trzymać oczko na żaglu?',
     'zg.zeil.m': 'Popilnujesz, żeby wszystko szło dobrze i bezpiecznie?',
     'zg.zeil.s': 'Twoja przełożona musi na chwilę wyjść. Mówi: „Hou je een oogje in het zeil?” Co ma na myśli?',
-    'zg.zeil.o1': "Pilnuj, kiedy jej nie ma.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zeil.o1': "Pilnuj, kiedy jej nie ma.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
     'zg.zeil.o2': 'Idź popatrzeć na łódź.',
     'zg.zeil.o3': 'Zamknij na chwilę oczy.',
     'zg.zeil.w': '„Een oogje in het zeil houden” znaczy: uważać, żeby wszystko szło dobrze. Nie wiesz, czego pilnować? Zapytaj ją, zanim wyjdzie.',
@@ -99,8 +99,8 @@ const t: CultureTranslation = {
     'zg.oefening.o2': 'Musisz iść na lekcję sztuki.',
     'zg.oefening.o3': 'Przestań, to dla ciebie za trudne.',
     'zg.oefening.w': 'To przysłowie: dzięki ćwiczeniu robisz coś coraz lepiej. To dotyczy też nauki niderlandzkiego.',
-    'zg.zwartwit.lit': "Postaraj się mieć to czarno na białym.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
-    'zg.zwartwit.m': "Postaraj się mieć to na papierze, na piśmie.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zwartwit.lit': "Postaraj się mieć to czarno na białym.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
+    'zg.zwartwit.m': "Postaraj się mieć to na papierze, na piśmie.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
     'zg.zwartwit.s': 'Szef obiecuje ci wyższą pensję. Koleżanka mówi: „Zorg dat je het zwart op wit hebt.” Co ma na myśli?',
     'zg.zwartwit.o1': 'Poproś o tę obietnicę na piśmie.',
     'zg.zwartwit.o2': 'Poproś o czarny i biały papier.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'Czas to pieniądz.',
     'zg.tijdgeld.m': 'Czas jest cenny: nie marnuj go.',
     'zg.tijdgeld.s': 'Szef chce, żeby ciężarówkę szybko załadować. Mówi: „Tijd is geld.” Co ma na myśli?',
-    'zg.tijdgeld.o1': "Pracuj szybko, nie trać czasu.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.tijdgeld.o1': "Pracuj szybko, nie trać czasu.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
     'zg.tijdgeld.o2': 'Dostajesz pieniądze za spóźnienie.',
     'zg.tijdgeld.o3': 'Zegar jest bardzo drogi.',
     'zg.tijdgeld.w': 'To powiedzenie znaczy, że czas jest cenny. To nigdy nie jest powód do niebezpiecznej pracy ani do godzin bez zapłaty.',
