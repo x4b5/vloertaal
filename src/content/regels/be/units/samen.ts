@@ -126,7 +126,7 @@ export const be: BeUnit = {
             id: 'r.be.l.samen.2.wd1',
             situation: 'Fatima kan niet vroeger beginnen. Wat kan Fatima het beste doen?',
             options: [
-              { id: 'a', text: 'Ze zegt niets. Ze komt voortaan een half uur te laat.', best: false, feedback: 'Dan breekt ze de nieuwe afspraak. Dat geeft problemen.' },
+              { id: 'a', text: 'Ze zegt niets. Ze komt elke dag een half uur te laat.', best: false, feedback: 'Dan breekt ze de nieuwe afspraak. Dat geeft problemen.' },
               { id: 'b', text: "Ze klaagt na de vergadering bij haar collega's.", best: false, feedback: 'Dan weet de leidinggevende het niet.' },
               { id: 'c', text: 'Ze legt in de vergadering rustig uit waarom het niet lukt.', best: true, feedback: 'Goed. Dan kan er samen een oplossing komen.' },
             ],
