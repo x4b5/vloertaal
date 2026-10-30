@@ -289,9 +289,9 @@ werkgever geeft je die tijd.
 
 **Vraag 3 · Wat is het beste?** Welke vraag stelt Piotr vóór hij tekent?
 
-- **A.** "Hoe heet de directeur van het hele bedrijf?"
+- **A.** "Hoe heet de directeur van het bedrijf?"
   → *Dat mag hij vragen. Maar het zegt niets over zijn rechten.*
-- **B.** "Mag ik in de pauze mijn eigen muziek luisteren?"
+- **B.** "Mag ik in de pauze muziek luisteren?"
   → *Kan later ook. Eerst de belangrijke dingen.*
 - **C.** "Welke cao hoort bij dit werk?"
   → *Goed. In de cao staan veel regels over zijn loon.*
@@ -551,7 +551,6 @@ statushouder). Alleen: vraag het na vóór je begint.*
 
 - Een tijdelijk contract stopt vanzelf op de einddatum.
 - Duurt je contract 6 maanden of langer? Dan moet je werkgever 1 maand ⚖️ voor het einde laten weten of het doorgaat.
-- Dat geldt bij een contract van 6 maanden of langer ⚖️.
 - Doet hij dat niet, of te laat? Dan krijg je extra geld, tot 1 maandloon ⚖️.
 - In de proeftijd mogen jij en de baas meteen stoppen.
 
@@ -877,7 +876,7 @@ het bij je laatste loon.
 - **B.** Extra loon voor werk in de avond, nacht of weekend.
   → *Goed. Zo heet die toeslag in de zorg.*
 - **C.** Een aftrek omdat ze een keer te laat was.
-  → *Nee. Voor te laat komen krijg je geen aftrek op je strook.*
+  → *Nee. ORT is geen aftrek. Het is extra geld.*
 
 **Goed antwoord: B.**
 **Waarom:** ORT betekent onregelmatigheidstoeslag. Dat is extra geld voor werk op onregelmatige
@@ -1438,7 +1437,7 @@ leidinggevende. Je werkgever mag je daar niet voor straffen ⚖️.
 
 **Vraag 3 · Wat is het beste?** Kevin heeft het gemeld. Weken later is het nog steeds onveilig. Wat kan Kevin het beste doen?
 
-- **A.** Hij meldt het bij de Arbeidsinspectie, als het moet zonder naam.
+- **A.** Hij meldt het bij de Arbeidsinspectie.
   → *Goed. Daar is de Arbeidsinspectie voor.*
 - **B.** Hij zet een filmpje van het magazijn online.
   → *Begrijpelijk, maar dat kan hem problemen geven.*
