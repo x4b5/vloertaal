@@ -81,7 +81,7 @@ const lang: HelpLanguageSource = {
     unlock: 'Отключи',
     sector: 'Твоята работа',
     chooseSector: 'Къде работиш?',
-    // nieuw, nog nalezen (land: Nederland of België)
+    // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'В коя държава работиш?',
     countryHint: 'Правилата за работа във Vloertaal са за Нидерландия. В Белгия много правила са различни. Това остава на телефона ти. Не го изпращаме никъде.',
     countryNl: 'Нидерландия',
@@ -98,7 +98,7 @@ const lang: HelpLanguageSource = {
     sectorCare: 'Грижа за хора',
     sectorHospitality: 'Хотели и ресторанти',
     sectorCleaning: 'Почистване',
-    sectorHorticulture: 'Градинарство', // nieuw (30 okt 2026), nog nalezen
+    sectorHorticulture: 'Градинарство', // nieuw (30 okt 2026), nagelezen (2e lezing)
     sound: 'Звук',
     soundOn: 'Със звук',
     withoutSound: 'Без звук',
@@ -245,7 +245,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Изключено',
     sectorGroupMake: 'Производство и превоз',
     sectorGroupCare: 'Грижа и обслужване',
-    sectorGroupOther: 'Нещо друго', // nieuw (30 okt 2026), nog nalezen
+    sectorGroupOther: 'Нещо друго', // nieuw (30 okt 2026), nagelezen (2e lezing)
     voiceWoman: 'Женски глас',
     voiceMan: 'Мъжки глас',
     writingPick: 'Избор на дума',

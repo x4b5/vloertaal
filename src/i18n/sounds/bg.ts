@@ -31,7 +31,7 @@ const t: CultureTranslation = {
     'c.roundsounds.q': 'Вратата отворена ли е?',
     'c.roundsounds.a': 'Не, затворена е.',
     'c.roundsounds.a.why': 'Питат дали вратата е отворена: този отговор казва, че не е.',
-    'l.pbgk': "p или b, g, k или h", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'l.pbgk': "p или b, g, k или h", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
     'w.kl.pak': 'костюмът',
     'w.kl.bak': 'касетката, кошчето',
     'w.kl.goud': 'златото',

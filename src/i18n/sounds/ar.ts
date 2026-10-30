@@ -31,7 +31,7 @@ const t: CultureTranslation = {
     'c.roundsounds.q': 'هل الباب مفتوح؟',
     'c.roundsounds.a': 'لا، إنه مغلق.',
     'c.roundsounds.a.why': 'السؤال: هل الباب مفتوح؟ هذا الرد يقول: لا.',
-    'l.pbgk': "p أو b، g، k أو h", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'l.pbgk': "p أو b، g، k أو h", // nagelezen (2e lezing)
     'w.kl.pak': 'البدلة',
     'w.kl.bak': 'الصندوق، السلة',
     'w.kl.goud': 'الذهب',

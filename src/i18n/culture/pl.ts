@@ -18,16 +18,16 @@ const t: CultureTranslation = {
     'c.je.p': 'Czy mogę mówić do ciebie „je”?',
     'c.je.s': 'Twoja nowa kierowniczka mówi: „Zeg maar je, hoor!” Co ma na myśli?',
     'c.je.o1': { m: 'Chce, żebyś mówił do niej „je”.', f: 'Chce, żebyś mówiła do niej „je”.' },
-    'c.je.o2': { m: 'Prosi, żebyś coś powiedział.', f: 'Prosi, żebyś coś powiedziała.' }, // nalezen: nieuwe foute optie
-    'c.je.o3': { m: 'Chce, żebyś mówił grzeczniej.', f: 'Chce, żebyś mówiła grzeczniej.' }, // nalezen: nieuwe foute optie
+    'c.je.o2': { m: 'Prosi, żebyś coś powiedział.', f: 'Prosi, żebyś coś powiedziała.' }, // nagelezen (2e lezing)
+    'c.je.o3': { m: 'Chce, żebyś mówił grzeczniej.', f: 'Chce, żebyś mówiła grzeczniej.' }, // nagelezen (2e lezing)
     'c.je.w': '„Zeg maar je” to coś miłego: chce mniejszego dystansu. W wielu holenderskich firmach mówienie „je” do przełożonego jest normalne.',
     'c.names': 'Imiona i uścisk dłoni',
     'c.names.b': 'Pierwszego dnia krótko uściśnij dłoń, spójrz na tę osobę i powiedz swoje imię. Koledzy i kierownicy zwykle mówią do siebie po imieniu.',
     'c.names.p': 'Cześć, jestem Ali. Jestem tu nowy.',
     'c.names.s': 'Podchodzi do ciebie kolega: „Hoi, ik ben Mark.” Co robisz?',
     'c.names.o1': 'Podajesz rękę i mówisz swoje imię.',
-    'c.names.o2': 'Kiwasz głową, uśmiechasz się i czekasz na pytania.', // nalezen: nieuwe foute optie
-    'c.names.o3': 'Podajesz rękę i mówisz do niego „meneer” (proszę pana).', // nalezen: nieuwe foute optie
+    'c.names.o2': 'Kiwasz głową, uśmiechasz się i czekasz na pytania.', // nagelezen (2e lezing)
+    'c.names.o3': 'Podajesz rękę i mówisz do niego „meneer” (proszę pana).', // nagelezen (2e lezing)
     'c.names.w': 'Krótkie przedstawienie się imieniem to normalny początek. Dzięki temu koledzy łatwiej cię zapamiętają i będą cię zapraszać.',
     'c.arrive': 'Pierwszy dzień: dokąd iść',
     'c.arrive.b': 'Pierwszego dnia najpierw idź do recepcji albo do głównego wejścia. Powiedz, jak się nazywasz, z jakiej jesteś agencji (jeśli pracujesz przez agencję) i do kogo masz przyjść. Wiele firm daje ci opiekuna (buddy): możesz go pytać o wszystko.',
@@ -41,9 +41,9 @@ const t: CultureTranslation = {
     'c.ask.b': 'Pytanie pokazuje, że chcesz dobrze wykonać pracę. Kiwanie głową, gdy nie rozumiesz, może prowadzić do błędów albo wypadków. Zapytać jeszcze raz to coś całkiem normalnego.',
     'c.ask.p': 'Przepraszam, nie rozumiem. Wyjaśnisz to jeszcze raz?',
     'c.ask.s': { m: 'Twój przełożony bardzo szybko tłumaczy zadanie. Nie zrozumiałeś. Co robisz?', f: 'Twój przełożony bardzo szybko tłumaczy zadanie. Nie zrozumiałaś. Co robisz?' },
-    'c.ask.o1': 'Prosisz o ponowne wyjaśnienie.', // nalezen: korter goed antwoord
+    'c.ask.o1': 'Prosisz o ponowne wyjaśnienie.', // nagelezen (2e lezing)
     'c.ask.o2': 'Kiwasz głową i próbujesz zgadnąć.',
-    'c.ask.o3': 'Przepraszasz za swój niderlandzki i zaczynasz pracę.', // nalezen: nieuwe foute optie
+    'c.ask.o3': 'Przepraszasz za swój niderlandzki i zaczynasz pracę.', // nagelezen (2e lezing)
     'c.ask.w': 'Holenderscy przełożeni oczekują pytań. Lepiej zapytać dwa razy, niż popełnić błąd.',
     'c.gear': 'Zasady BHP są dla wszystkich',
     'c.gear.b': 'Zasady dotyczące kasków, butów i rękawic to nie sugestia: przestrzegają ich wszyscy, także szef. Pracodawca musi dać ci potrzebny sprzęt ochronny za darmo. Niedopasowany sprzęt słabo chroni, więc poproś o swój rozmiar: „Heb je dit ook in mijn maat?”',
@@ -65,10 +65,10 @@ const t: CultureTranslation = {
     'c.accident.b': 'O każdym wypadku, nawet drobnym, powiedz przełożonemu albo BHV’er (osobie, która w firmie udziela pierwszej pomocy). Pracujesz przez agencję? Powiadom też agencję. W nagłym przypadku najpierw dzwoń pod 112. Poważny wypadek musi zgłosić do Nederlandse Arbeidsinspectie firma, w której do niego doszło (także jeśli pracujesz przez agencję): gdy ktoś ginie, zostaje trwale ranny albo musi zostać w szpitalu. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
     'c.accident.p': 'Mój kolega jest ranny. Gdzie jest osoba od pierwszej pomocy?',
     'c.accident.s': 'Przy podnoszeniu nadwyrężasz sobie plecy. Boisz się, że stracisz pracę. Co robisz?',
-    'c.accident.o1': 'Zgłaszasz to przełożonemu tego samego dnia.', // nalezen: korter goed antwoord
+    'c.accident.o1': 'Zgłaszasz to przełożonemu tego samego dnia.', // nagelezen (2e lezing)
     'c.accident.o2': 'Nic nie mówisz, żeby nie stracić pracy.',
     'c.accident.o3': 'Czekasz, czy ból sam przejdzie.',
-    'c.accident.w': 'Zgłoś to tego samego dnia, nawet jeśli wydaje się drobne: ból może się później nasilić. Pracodawcy nie wolno cię ukarać za to zgłoszenie. Pracujesz przez agencję? Powiedz też agencji.', // nalezen: korter goed antwoord
+    'c.accident.w': 'Zgłoś to tego samego dnia, nawet jeśli wydaje się drobne: ból może się później nasilić. Pracodawcy nie wolno cię ukarać za to zgłoszenie. Pracujesz przez agencję? Powiedz też agencji.', // nagelezen (2e lezing)
     'c.notyet': 'Nikt cię jeszcze tego nie nauczył? Powiedz to',
     'c.notyet.b': 'Firma, w której pracujesz, musi ci wyjaśnić, jak bezpiecznie wykonywać pracę. Nie używaj maszyny ani wózka widłowego, jeśli nikt cię tego nie nauczył. Powiedzenie „Dit heb ik nog niet geleerd” jest tu normalne: pokazuje, że pracujesz bezpiecznie.',
     'c.notyet.p': { m: 'Jeszcze się tego nie nauczyłem. Możesz mi pokazać, jak to się robi?', f: 'Jeszcze się tego nie nauczyłam. Możesz mi pokazać, jak to się robi?', x: 'Jeszcze się tego nie nauczyłem / nauczyłam. Możesz mi pokazać, jak to się robi?' },
@@ -82,7 +82,7 @@ const t: CultureTranslation = {
     'c.direct.p': 'Dobrze, to jak trzeba to zrobić?',
     'c.direct.s': 'Kolega mówi: „Nee, dat is fout. Die doos moet daar.” Co robisz?',
     'c.direct.o1': 'Pytasz, jak trzeba to zrobić, i przestawiasz karton.',
-    'c.direct.o2': 'Wiele razy przepraszasz: kolega jest zły.', // nalezen: nieuwe foute optie
+    'c.direct.o2': 'Wiele razy przepraszasz: kolega jest zły.', // nagelezen (2e lezing)
     'c.direct.o3': 'Nic nie mówisz i zostawiasz karton tam, gdzie jest.',
     'c.direct.w': 'Bezpośrednia uwaga dotyczy pracy, nie ciebie. Pytanie „hoe moet het dan?” pokazuje, że chcesz się nauczyć.',
     'c.limits': 'Powiedz, gdy coś jest za ciężkie',
@@ -97,7 +97,7 @@ const t: CultureTranslation = {
     'c.time.b': 'Punktualność jest bardzo ważna. Wiele osób przychodzi pięć albo dziesięć minut przed początkiem zmiany. Jeśli się spóźnisz, napisz albo zadzwoń przed początkiem zmiany, a nie potem.',
     'c.time.p': 'Przepraszam, autobus się spóźnia. Będę o ósmej.',
     'c.time.s': 'Twój autobus się spóźnia i spóźnisz się 15 minut. Co robisz?',
-    'c.time.o1': 'Od razu mówisz przełożonemu.', // nalezen: korter goed antwoord
+    'c.time.o1': 'Od razu mówisz przełożonemu.', // nagelezen (2e lezing)
     'c.time.o2': 'Wyjaśniasz to, gdy przyjdziesz.',
     'c.time.o3': 'Dziś w ogóle nie idziesz do pracy.',
     'c.time.w': 'Wczesna wiadomość pozwala zespołowi wszystko zaplanować. Spóźnienie bez uprzedzenia jest odbierane dużo gorzej niż samo spóźnienie.',
@@ -105,7 +105,7 @@ const t: CultureTranslation = {
     'c.sick.b': { m: 'Zadzwoń sam do przełożonego przed początkiem zmiany, chyba że w twojej firmie jest inna zasada. Pracujesz przez agencję? Powiadom też agencję. Nie musisz mówić, na co chorujesz. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', f: 'Zadzwoń sama do przełożonego przed początkiem zmiany, chyba że w twojej firmie jest inna zasada. Pracujesz przez agencję? Powiadom też agencję. Nie musisz mówić, na co chorujesz. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.' },
     'c.sick.p': { m: 'Jestem chory. Nie mogę dziś przyjść do pracy.', f: 'Jestem chora. Nie mogę dziś przyjść do pracy.' },
     'c.sick.s': 'Budzisz się z gorączką. Twoja zmiana zaczyna się o 7:00. Co robisz?',
-    'c.sick.o1': 'Dzwonisz do przełożonego przed 7:00.', // nalezen: korter goed antwoord
+    'c.sick.o1': 'Dzwonisz do przełożonego przed 7:00.', // nagelezen (2e lezing)
     'c.sick.o2': 'Prosisz kolegę, żeby później powiedział szefowi.',
     'c.sick.o3': 'Zostajesz w domu i dzwonisz jutro.',
     'c.sick.w': { m: 'W większości holenderskich firm zasada jest taka: chorobę zgłaszasz sam i na czas. Pracodawca może zapytać, jak długo to potrwa, ale nie, na co chorujesz.', f: 'W większości holenderskich firm zasada jest taka: chorobę zgłaszasz sama i na czas. Pracodawca może zapytać, jak długo to potrwa, ale nie, na co chorujesz.' },
@@ -113,7 +113,7 @@ const t: CultureTranslation = {
     'c.speakup.b': 'Tutaj spokojne powiedzenie, że coś ci przeszkadza, jest normalne i szanowane. Najpierw porozmawiaj z tą osobą, w spokojnej chwili. Mów zdaniami z „ik”: „Ik vind het niet fijn dat ...”. Jeśli to nie pomoże, porozmawiaj z przełożonym.',
     'c.speakup.p': 'Coś mi przeszkadza. Możemy chwilę porozmawiać?',
     'c.speakup.s': 'Kolega zawsze zostawia ciężką pracę tobie. Przeszkadza ci to. Co robisz?',
-    'c.speakup.o1': 'Mówisz koledze, co ci przeszkadza.', // nalezen: korter goed antwoord
+    'c.speakup.o1': 'Mówisz koledze, co ci przeszkadza.', // nagelezen (2e lezing)
     'c.speakup.o2': { m: 'Milczysz i jesteś coraz bardziej zły.', f: 'Milczysz i jesteś coraz bardziej zła.' },
     'c.speakup.o3': 'Skarżysz się na niego wszystkim innym kolegom.',
     'c.speakup.w': 'Holenderscy koledzy zwykle wolą usłyszeć to wprost. Powiedzenie tego wcześnie i spokojnie pomaga utrzymać dobre relacje.',
@@ -121,16 +121,16 @@ const t: CultureTranslation = {
     'c.no.b': 'Gdy mówisz „ja”, ludzie na to liczą: umowa to umowa. Dlatego można powiedzieć „nee” albo „dat lukt niet”, gdy czegoś nie możesz zrobić. Powiedz to na czas i, jeśli możesz, zaproponuj coś innego.',
     'c.no.p': 'Nie, dziś się nie da. Jutro mogę.',
     'c.no.s': 'Przełożony pyta, czy możesz dodatkowo popracować w sobotę. Nie możesz. Co robisz?',
-    'c.no.o1': 'Odmawiasz i proponujesz inny dzień.', // nalezen: korter goed antwoord
+    'c.no.o1': 'Odmawiasz i proponujesz inny dzień.', // nagelezen (2e lezing)
     'c.no.o2': 'Mówisz „tak”, a potem nie przychodzisz.',
-    'c.no.o3': 'Mówisz „tak”: szefowi nie można odmówić.', // nalezen: nieuwe foute optie
+    'c.no.o3': 'Mówisz „tak”: szefowi nie można odmówić.', // nagelezen (2e lezing)
     'c.no.w': 'Jasne „nee” jest szanowane. Powiedzieć „ja” i nie przyjść niszczy zaufanie o wiele bardziej.',
     'c.task': 'Powiedz, gdy skończysz, i pytaj, gdy coś jest niejasne',
     'c.task.b': 'W Holandii przełożony często daje zadanie w kilku słowach i oczekuje, że powiesz, gdy skończysz. Gdy mówisz „ja”, choć nie wszystko rozumiesz, często dochodzi do błędów. Zapytać jeszcze raz albo poprosić, żeby ktoś to pokazał, to tutaj normalne, a nie niegrzeczne.',
     'c.task.p': 'Gotowe! Co mam teraz robić?',
     'c.task.s': { m: 'Przełożony bardzo szybko tłumaczy zadanie. Zrozumiałeś tylko połowę. Co robisz?', f: 'Przełożony bardzo szybko tłumaczy zadanie. Zrozumiałaś tylko połowę. Co robisz?' },
-    'c.task.o1': 'Prosisz, żeby ci to jeszcze raz pokazano.', // nalezen: korter goed antwoord
-    'c.task.o2': 'Zaczynasz od tej połowy, którą rozumiesz.', // nalezen: nieuwe foute optie
+    'c.task.o1': 'Prosisz, żeby ci to jeszcze raz pokazano.', // nagelezen (2e lezing)
+    'c.task.o2': 'Zaczynasz od tej połowy, którą rozumiesz.', // nagelezen (2e lezing)
     'c.task.o3': 'Czekasz, aż zrobi to kolega.',
     'c.task.w': 'Zapytać jeszcze raz to normalne i zajmuje minutę. Poprawienie błędu trwa o wiele dłużej. Większość przełożonych woli pokazać coś dwa razy.',
     'u.teamwork': 'Praca razem',

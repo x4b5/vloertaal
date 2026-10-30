@@ -31,7 +31,7 @@ const t: CultureTranslation = {
     'c.roundsounds.q': 'Ist die Tür offen?',
     'c.roundsounds.a': 'Nein, sie ist zu.',
     'c.roundsounds.a.why': 'Gefragt, ob die Tür offen ist: Diese Antwort sagt, dass sie es nicht ist.',
-    'l.pbgk': "p oder b, g, k oder h", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'l.pbgk': "p oder b, g, k oder h", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
     'w.kl.pak': 'der Anzug',
     'w.kl.bak': 'die Kiste, der Behälter',
     'w.kl.goud': 'das Gold',

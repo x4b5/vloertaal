@@ -81,9 +81,9 @@ const lang: HelpLanguageSource = {
     unlock: { m: 'ክፈት', f: 'ክፈቲ' },
     sector: { m: 'ስራሕካ', f: 'ስራሕኪ' },
     chooseSector: { m: 'ኣበይ ኢኻ ትሰርሕ?', f: 'ኣበይ ኢኺ ትሰርሒ?' },
-    // nieuw, nog nalezen (land: Nederland of België)
+    // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: { m: 'ኣብ ኣየናይ ሃገር ኢኻ ትሰርሕ?', f: 'ኣብ ኣየናይ ሃገር ኢኺ ትሰርሒ?' },
-    // nieuw, nog nalezen
+    // nagelezen (2e lezing)
     countryHint: { m: "ሕግታት ስራሕ ኣብ Vloertaal ብዛዕባ ኔዘርላንድ እዮም። ኣብ ቤልጅዩም ብዙሓት ሕግታት ይፈላለዩ እዮም። እዚ ኣብ ተሌፎንካ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።", f: "ሕግታት ስራሕ ኣብ Vloertaal ብዛዕባ ኔዘርላንድ እዮም። ኣብ ቤልጅዩም ብዙሓት ሕግታት ይፈላለዩ እዮም። እዚ ኣብ ተሌፎንኪ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።" },
     countryNl: 'ኔዘርላንድ',
     countryBe: 'ቤልጅዩም (ፍላንደርስ)',
@@ -99,7 +99,7 @@ const lang: HelpLanguageSource = {
     sectorCare: 'ክንክን',
     sectorHospitality: 'ቤት ብልዕን ሆቴልን',
     sectorCleaning: 'ጽሬት',
-    sectorHorticulture: "ሕርሻ ኣታኽልትን ገዛ መስታወትን", // nieuw, nog nalezen
+    sectorHorticulture: "ሕርሻ ኣትክልትን ገዛ ኣትክልትን", // nagelezen (2e lezing)
     sound: 'ድምጺ',
     soundOn: 'ድምጺ ክፉት',
     withoutSound: 'ብዘይ ድምጺ',
@@ -246,7 +246,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'ዕጹው',
     sectorGroupMake: 'ምስራሕን ምጽዓንን',
     sectorGroupCare: 'ክንክንን ኣገልግሎትን',
-    sectorGroupOther: "ካልእ ነገር", // nieuw, nog nalezen
+    sectorGroupOther: "ካልእ ነገር", // nagelezen (2e lezing)
     voiceWoman: 'ድምጺ ሰበይቲ',
     voiceMan: 'ድምጺ ሰብኣይ',
     writingPick: 'ቃል ምምራጽ',

@@ -85,10 +85,10 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Prośba o wpisanie nazwisk do chatbota: ta odpowiedź mówi „nie” i dlaczego.",
     'c.aifake.a.why': "Nowy numer prosi o pieniądze: ta odpowiedź najpierw to sprawdza.",
     'c.aiplan.a.why': "Grafik zrobiła aplikacja: ta odpowiedź prosi o człowieka.",
-    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
-    'c.harvest.a.why': "Pytanie, ile rzędów: ta odpowiedź podaje liczbę i to, co zostało.", // nieuw, nog nalezen
-    'c.greensafe.a.why': "Dopiero co opryskana: ta odpowiedź mówi „jeszcze nie” i dlaczego.", // nieuw, nog nalezen
-    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
+    'c.harvest.a.why': "Pytanie, ile rzędów: ta odpowiedź podaje liczbę i to, co zostało.", // nagelezen (2e lezing)
+    'c.greensafe.a.why': "Dopiero co opryskana: ta odpowiedź mówi „jeszcze nie” i dlaczego.", // nagelezen (2e lezing)
+    // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
     'c.details.a.why': "Pytanie o nazwisko: ta odpowiedź je podaje i proponuje przeliterowanie.",
     'c.dates.a.why': "Pytanie o datę: ta odpowiedź podaje dzień i datę.",
     'c.permit.a.why': "Odmowa jest w porządku, jeśli podasz powód. Zaproponowanie innego dnia pomaga.",

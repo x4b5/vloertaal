@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Ți se cere să pui nume într-un chatbot: răspunsul spune „nu” și de ce.",
     'c.aifake.a.why': "Un număr nou cere bani: răspunsul verifică întâi.",
     'c.aiplan.a.why': "Programul l-a făcut o aplicație: răspunsul cere un om.",
-    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
-    'c.harvest.a.why': "Întrebarea e câte rânduri: răspunsul ăsta dă un număr și ce a mai rămas.", // nieuw, nog nalezen
-    'c.greensafe.a.why': "Tocmai stropită: răspunsul ăsta spune încă nu, și de ce.", // nieuw, nog nalezen
-    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
+    'c.harvest.a.why': "Întrebarea e câte rânduri: răspunsul ăsta dă un număr și ce a mai rămas.", // nagelezen (2e lezing)
+    'c.greensafe.a.why': "Tocmai stropită: răspunsul ăsta spune „încă nu” și de ce.", // nagelezen (2e lezing)
+    // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
     'c.details.a.why': "Întrebarea e numele de familie: răspunsul ăsta îl dă și se oferă să-l spună pe litere.",
     'c.dates.a.why': "Întrebarea e data: răspunsul ăsta dă ziua și data.",
-    'c.permit.a.why': "Un nu e în regulă cu un motiv. Ajută să propui altă zi.",
+    'c.permit.a.why': "Un „nu” e în regulă dacă dai un motiv. Ajută să propui altă zi.",
     'c.kids.a.why': "Întrebarea e de ce: răspunsul ăsta dă motivul, a sunat creșa.",
     'c.body.a.why': "Întrebarea e unde doare: răspunsul ăsta spune locul și cauza.",
-    'c.jobends.a.why': "Casa e legată de muncă: răspunsul ăsta întreabă de termenul de preaviz.",
+    'c.jobends.a.why': "Casa e legată de muncă: răspunsul ăsta întreabă de perioada de preaviz.",
   },
 };
 

@@ -95,7 +95,11 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   return (
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`}>
       {languageMeta.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed && !dutch))}
-      {/* "Nederlands – ik spreek al Nederlands": the work-rules track, always said in Dutch. */}
+      {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
+      {/* "Nederlands – ik spreek al Nederlands": the work-rules track, always said in Dutch. Last,
+          under a line and in its own colour, with the word "Werkregels": it is another part of
+          the app, not one more help language. */}
+      {rulesTrackOn() && <span className="lang-sep" aria-hidden />}
       {rulesTrackOn() && (
         <button
           key="nl"
@@ -107,6 +111,7 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
         >
           <LangMark code="nl" />
           <span className="lang-names">
+            <span className="lang-nl-tag">Werkregels</span>
             <span className="lang-native">{NL_META.nativeName}</span>
             <span className="lang-en lang-nl-sub">{NL_META.name}</span>
             {/* Its own direction: in a right-to-left list the full stop stays at its end. */}
@@ -115,7 +120,6 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
           {current === 'nl' && <CheckIcon size={20} className="lang-check" />}
         </button>
       )}
-      {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
     </div>
   );
 }

@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "می‌خواهند اسم‌ها را در چت‌بات بگذاری: این جواب «نه» می‌گوید و دلیلش را.",
     'c.aifake.a.why': "یک شمارهٔ جدید پول می‌خواهد: این جواب اول بررسی می‌کند.",
     'c.aiplan.a.why': "برنامهٔ کاری را اپ ساخته: این جواب یک آدم می‌خواهد.",
-    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
-    'c.harvest.a.why': "می‌پرسند چند ردیف: این جواب یک عدد می‌گوید، و اینکه چقدر مانده.", // nieuw, nog nalezen
-    'c.greensafe.a.why': "تازه سم‌پاشی شده: این جواب می‌گوید هنوز نه، و چرا.", // nieuw, nog nalezen
-    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
+    'c.harvest.a.why': "می‌پرسند چند ردیف: این جواب یک عدد می‌گوید، و اینکه چقدر مانده.", // nagelezen (2e lezing)
+    'c.greensafe.a.why': "تازه سم‌پاشی شده: این جواب می‌گوید هنوز نه، و چرا.", // nagelezen (2e lezing)
+    // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
     'c.details.a.why': "نام خانوادگی را می‌پرسند: این جواب آن را می‌گوید و پیشنهاد می‌کند هجی‌اش کند.",
     'c.dates.a.why': "تاریخ را می‌پرسند: این جواب روز و تاریخ را می‌گوید.",
     'c.permit.a.why': "«نه» گفتن با یک دلیل اشکالی ندارد. پیشنهاد یک روز دیگر کمک می‌کند.",
     'c.kids.a.why': "می‌پرسند چرا: این جواب دلیل را می‌گوید، مهدکودک زنگ زده.",
     'c.body.a.why': "می‌پرسند کجا درد می‌کند: این جواب جا و علت را می‌گوید.",
-    'c.jobends.a.why': "خانه به کار بسته است: این جواب مهلت فسخ را می‌پرسد.",
+    'c.jobends.a.why': "خانه به کار بسته است: این جواب مهلت اطلاع قبلی را می‌پرسد.",
   },
 };
 

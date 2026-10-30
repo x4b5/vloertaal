@@ -31,7 +31,7 @@ const t: CultureTranslation = {
     'c.roundsounds.q': 'Czy drzwi są otwarte?',
     'c.roundsounds.a': 'Nie, są zamknięte.',
     'c.roundsounds.a.why': 'Pytanie, czy drzwi są otwarte: ta odpowiedź mówi, że nie.',
-    'l.pbgk': "p czy b, g, k czy h", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'l.pbgk': "p czy b, g, k czy h", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
     'w.kl.pak': 'garnitur',
     'w.kl.bak': 'skrzynka, kosz',
     'w.kl.goud': 'złoto',

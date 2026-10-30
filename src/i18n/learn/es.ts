@@ -85,13 +85,13 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Te piden poner nombres en un chatbot: esta respuesta dice que no, y por qué.",
     'c.aifake.a.why': "Un número nuevo pide dinero: esta respuesta primero lo comprueba.",
     'c.aiplan.a.why': "Una app hizo el horario: esta respuesta pide hablar con una persona.",
-    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
-    'c.harvest.a.why': "Preguntan cuántas filas: esta respuesta da un número, y lo que falta.", // nieuw, nog nalezen
-    'c.greensafe.a.why': "Lo acaban de fumigar: esta respuesta dice todavía no, y por qué.", // nieuw, nog nalezen
-    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
+    'c.harvest.a.why': "Preguntan cuántas filas: esta respuesta da un número, y lo que falta.", // nagelezen (2e lezing)
+    'c.greensafe.a.why': "Lo acaban de fumigar: esta respuesta dice “todavía no” y por qué.", // nagelezen (2e lezing)
+    // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
     'c.details.a.why': "Preguntan el apellido: esta respuesta lo da y ofrece deletrearlo.",
     'c.dates.a.why': "Preguntan la fecha: esta respuesta da el día y la fecha.",
-    'c.permit.a.why': "Un no está bien con una razón. Ofrecer otro día ayuda.",
+    'c.permit.a.why': "Decir que no está bien si das una razón. Ofrecer otro día ayuda.",
     'c.kids.a.why': "Preguntan por qué: esta respuesta da la razón, ha llamado la guardería.",
     'c.body.a.why': "Preguntan dónde duele: esta respuesta dice el sitio y la causa.",
     'c.jobends.a.why': "La casa va con el trabajo: esta respuesta pregunta por el plazo de preaviso.",

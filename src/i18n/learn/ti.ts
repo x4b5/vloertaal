@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "ኣስማት ኣብ ቻትቦት ከተእቱ ተሓቲቱ፡ እዚ መልሲ «ኣይፋል» ይብል፡ ምኽንያቱ ድማ ይገልጽ።",
     'c.aifake.a.why': "ሓድሽ ቁጽሪ ገንዘብ ይሓትት፡ እዚ መልሲ ቅድም የረጋግጽ።",
     'c.aiplan.a.why': "መደብ ስራሕ ብኣፕ ተዳልዩ፡ እዚ መልሲ ሰብ ይሓትት።",
-    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
-    'c.harvest.a.why': 'ክንደይ መስርዕ ተሓቲቱ፡ እዚ መልሲ ቁጽሪ ይህብ፡ ዝተረፈ እውን ይነግር።', // nieuw, nog nalezen
-    'c.greensafe.a.why': 'ሕጂ ተነስኒሱ፡ እዚ መልሲ «ገና» ይብል፡ ምኽንያቱ ድማ ይገልጽ።', // nieuw, nog nalezen
-    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
-    'c.details.a.why': 'ስም ስድራ ተሓቲቱ፡ እዚ መልሲ ነቲ ስም ይህብ፡ ብፊደል ክብሎ ድማ ይሓትት።', // nieuw, nog nalezen
-    'c.dates.a.why': 'ዕለት ተሓቲቱ፡ እዚ መልሲ መዓልትን ዕለትን ይህብ።', // nieuw, nog nalezen
-    'c.permit.a.why': '«ኣይፋል» ምስ ምኽንያት ጸገም የብሉን። ካልእ መዓልቲ ምቕራብ ይሕግዝ።', // nieuw, nog nalezen
-    'c.kids.a.why': 'ስለምንታይ ተሓቲቱ፡ እዚ መልሲ ምኽንያቱ ይህብ፡ መውዓሊ ህጻናት ደዊሎም።', // nieuw, nog nalezen
-    'c.body.a.why': 'ኣበይ ከም ዘቐንዝው ተሓቲቱ፡ እዚ መልሲ ቦታን ምኽንያትን ይጠቅስ።', // nieuw, nog nalezen
-    'c.jobends.a.why': 'እቲ ገዛ ምስቲ ስራሕ ዝተኣሳሰረ እዩ፡ እዚ መልሲ ብዛዕባ ግዜ ቅድመ-ምሕባር ይሓትት።', // nieuw, nog nalezen
+    // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
+    'c.harvest.a.why': 'ክንደይ መስርዕ ተሓቲቱ፡ እዚ መልሲ ቁጽሪ ይህብ፡ ዝተረፈ እውን ይነግር።', // nagelezen (2e lezing)
+    'c.greensafe.a.why': 'ሕጂ ተነስኒሱ፡ እዚ መልሲ «ገና» ይብል፡ ምኽንያቱ ድማ ይገልጽ።', // nagelezen (2e lezing)
+    // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
+    'c.details.a.why': 'ስም ስድራ ተሓቲቱ፡ እዚ መልሲ ነቲ ስም ይህብ፡ ብፊደል ክብሎ ድማ ይሓትት።', // nagelezen (2e lezing)
+    'c.dates.a.why': 'ዕለት ተሓቲቱ፡ እዚ መልሲ መዓልትን ዕለትን ይህብ።', // nagelezen (2e lezing)
+    'c.permit.a.why': '«ኣይፋል» ምስ ምኽንያት ጸገም የብሉን። ካልእ መዓልቲ ምቕራብ ይሕግዝ።', // nagelezen (2e lezing)
+    'c.kids.a.why': 'ስለምንታይ ተሓቲቱ፡ እዚ መልሲ ምኽንያቱ ይህብ፡ መውዓሊ ህጻናት ደዊሎም።', // nagelezen (2e lezing)
+    'c.body.a.why': 'ኣበይ ከም ዘቐንዝው ተሓቲቱ፡ እዚ መልሲ ቦታን ምኽንያትን ይጠቅስ።', // nagelezen (2e lezing)
+    'c.jobends.a.why': 'እቲ ገዛ ምስቲ ስራሕ ዝተኣሳሰረ እዩ፡ እዚ መልሲ ብዛዕባ ግዜ ቅድመ-ምሕባር ይሓትት።', // nagelezen (2e lezing)
   },
 };
 
