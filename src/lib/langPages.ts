@@ -1,4 +1,4 @@
-import { aboutSections } from '../content/about';
+import { aboutSection } from '../content/about';
 import { units } from '../content/curriculum';
 import { THEME_UNITS, THEMES } from '../content/themes';
 import { APP_DATA, esc, plainPage, SITE } from './plainPage';
@@ -65,7 +65,7 @@ export function hreflangLinks(): string {
 /** A page's texts: the help language's, or the app's own English. */
 function texts(code: PageCode): { tagline: string; start: string; topics: string; title: (id: string) => string; body: (id: string) => string; gloss: (id: string) => string | undefined } {
   if (code === 'en') {
-    const find = (id: string) => aboutSections.find((s) => s.id === id)!;
+    const find = aboutSection;
     const words = new Map(units.flatMap((u) => u.lessons.flatMap((l) => l.words)).map((w) => [w.id, w.en]));
     const theme = (id: string) => THEMES.find((t) => t.id === id)?.title;
     return { tagline: uiEn.appTagline, start: uiEn.start, topics: uiEn.allTopics, title: (id) => find(id).title, body: (id) => find(id).body, gloss: (id) => theme(id) ?? words.get(id) };

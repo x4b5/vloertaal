@@ -3,6 +3,7 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {
     about: 'À propos de Vloertaal',
+    forCoaches: 'Pour les coachs et les employeurs', // nieuw, nalezen
   },
   gloss: {
     'a.what': 'C’est quoi, Vloertaal ?',
@@ -23,8 +24,6 @@ const t: CultureTranslation = {
     'a.free.b': 'Tu n’as pas besoin de compte. Ta progression est enregistrée seulement sur ce téléphone ou cet ordinateur. Si c’est activé, l’appli compte de façon anonyme combien de fois on fait les leçons : pas de nom, pas de suivi. Tu peux désactiver ça dans les Réglages.',
     'a.disclaimer': 'Bon à savoir',
     'a.disclaimer.b': 'Les conseils de Vloertaal sont des informations générales, pas un conseil juridique. Les règles peuvent changer ; les textes ont été mis à jour pour la dernière fois en octobre 2026. Pour ta situation à toi, demande à ton employeur, à un syndicat ou au Juridisch Loket.',
-    'a.voices': 'Les voix',
-    'a.voices.b': 'Chaque personnage a sa propre voix néerlandaise : Bram parle avec la voix de Thijmen, Henk avec celle de Daniel, Amina avec celle d’Ariël et Jada avec celle de Noa. Ces voix ont été enregistrées avec ElevenLabs. Si une phrase n’a pas encore d’enregistrement, tu entends la voix de ton téléphone ou de ton ordinateur.',
     'a.contact': 'Une question ou une erreur ?',
     'a.contact.b': 'Tu as trouvé une erreur, par exemple dans une traduction ou dans un conseil ? Ou tu as une question ? Envoie un e-mail à hoi@vloertaal.nl. Une capture d’écran aide. Dans une leçon, tu peux aussi toucher le drapeau “Melden” en haut : l’e-mail dit alors déjà où tu es.',
   },

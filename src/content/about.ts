@@ -24,6 +24,15 @@ export interface AboutSection {
   rules?: false;
 }
 
+/**
+ * The learner's About (the "Over" tab): only what a learner needs, in their own language (and in
+ * plain Dutch with the "NL" toggle). What it is, how it works, Bram, how work goes here (the Dutch
+ * course only), their privacy in short, good to know, and where to send a question or a mistake.
+ * What is for coaches and employers (the mission, the test version, for whom, the voices, privacy
+ * in detail, the facts …) is on their own page, in Dutch: src/content/pro.ts, in the app
+ * ("Voor begeleiders en werkgevers", from a button at the bottom of Over) and on
+ * vloertaal.nl/voor-begeleiders.
+ */
 export const aboutSections: AboutSection[] = [
   {
     id: 'a.what', emoji: '🦺', title: 'What is Vloertaal?',
@@ -35,40 +44,6 @@ export const aboutSections: AboutSection[] = [
     nlRules: {
       title: 'Wat is Vloertaal?',
       body: 'Vloertaal legt uit hoe werken in Nederland gaat. Voor mensen die al Nederlands spreken. Je leert de regels van de wet en je contract. En de regels die nergens staan, maar die iedereen kent. Bijvoorbeeld over werk zoeken, je loonstrook, ziek zijn, veiligheid en collega’s. De lessen zijn kort. Zo leer je elke dag een paar minuten. Zie Vloertaal als een tussendoortje. Het is een extra. Advies van je werkgever, een vakbond of het Juridisch Loket blijft nodig.',
-    },
-  },
-  {
-    id: 'a.mission', emoji: '🎯', title: 'Our mission',
-    body: 'Vloertaal wants to help a little, so that learning Dutch for work becomes a bit easier: free, easy to use, and with help in your own language. Nobody earns money from Vloertaal: no ads, no subscription, and your data is never sold.',
-    nl: {
-      title: 'Onze missie',
-      body: 'Vloertaal wil helpen, zodat Nederlands leren voor je werk iets makkelijker wordt. Gratis, makkelijk en met hulp in je eigen taal. Niemand verdient geld aan Vloertaal: geen reclame, geen abonnement, en we verkopen je gegevens nooit.',
-    },
-    nlRules: {
-      title: 'Onze missie',
-      body: 'Iedereen die in Nederland werkt, moet weten wat mag en wat moet. En waar je hulp vindt als het misgaat. Vloertaal is gratis en makkelijk. Niemand verdient geld aan Vloertaal: geen reclame, geen abonnement, en we verkopen je gegevens nooit.',
-    },
-  },
-  {
-    id: 'a.bram', emoji: '👷', who: 'bram', title: 'Who is Bram?',
-    body: 'Bram is your colleague in the app. He has worked in warehouses and on building sites for many years, and he likes to help new colleagues. He speaks calmly, and it is okay to make mistakes with him.',
-    nl: {
-      title: 'Wie is Bram?',
-      body: 'Bram is je collega in de app. Hij werkt al veel jaren in magazijnen en op de bouw. Hij helpt graag nieuwe collega’s. Hij praat rustig, en bij hem mag je fouten maken.',
-    },
-  },
-  {
-    // The whole app is a beta (the pilot): said once, calmly, high on the page. No e-mail address
-    // here (it would be one more thing to tap): the contact section at the end has it.
-    id: 'a.beta', emoji: '🧪', title: 'A test version',
-    body: 'Vloertaal is still a test version (beta). We are testing it with a small group of learners and coaches. Not everything has been checked yet: experts are still checking the translations and the tips about rules. Did you find a mistake? You find our address at the bottom of this page.',
-    nl: {
-      title: 'Een testversie',
-      body: 'Vloertaal is nog een testversie (bèta). We testen de app met een kleine groep leerlingen en begeleiders. Nog niet alles is nagekeken: experts kijken de vertalingen en de tips over regels nog na. Zie je een fout? Ons adres staat onderaan deze pagina.',
-    },
-    nlRules: {
-      title: 'Een testversie',
-      body: 'Vloertaal is nog een testversie (bèta). We testen de app met een kleine groep. Nog niet alles is nagekeken: experts kijken de regels nog na. Zie je een fout? Ons adres staat onderaan deze pagina.',
     },
   },
   {
@@ -84,6 +59,14 @@ export const aboutSections: AboutSection[] = [
     },
   },
   {
+    id: 'a.bram', emoji: '👷', who: 'bram', title: 'Who is Bram?',
+    body: 'Bram is your colleague in the app. He has worked in warehouses and on building sites for many years, and he likes to help new colleagues. He speaks calmly, and it is okay to make mistakes with him.',
+    nl: {
+      title: 'Wie is Bram?',
+      body: 'Bram is je collega in de app. Hij werkt al veel jaren in magazijnen en op de bouw. Hij helpt graag nieuwe collega’s. Hij praat rustig, en bij hem mag je fouten maken.',
+    },
+  },
+  {
     // The rules track is this, all through: left out there.
     id: 'a.culture', emoji: '🤝', title: 'How it works here', rules: false,
     body: 'Language comes first. But Vloertaal also talks about how things usually go at a Dutch workplace: saying "je" to your boss, asking questions, being on time, and saying it when something bothers you. You find these tips in the lessons and under "Workplace tips".',
@@ -93,19 +76,8 @@ export const aboutSections: AboutSection[] = [
     },
   },
   {
-    id: 'a.who', emoji: '🌍', title: 'Who is it for?',
-    body: 'For everyone who is new to working in the Netherlands. Help languages: Arabic, Tigrinya, Persian, Dari, Ukrainian, Turkish, Polish, Romanian, Bulgarian, Spanish, Portuguese, French and German.',
-    nl: {
-      title: 'Voor wie is het?',
-      body: 'Voor iedereen die nieuw is op het werk in Nederland. Hulptalen: Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens, Bulgaars, Spaans, Portugees, Frans en Duits.',
-    },
-    nlRules: {
-      title: 'Voor wie is het?',
-      body: 'Voor iedereen die al Nederlands spreekt en in Nederland werkt of werk zoekt. Ben je nieuw op je werk? Of wil je weten wat je rechten zijn? Dan is dit voor jou.',
-    },
-  },
-  {
-    // The privacy points only: that it is free (and why) is in 'a.mission'.
+    // The privacy points in short: what is counted, exactly, is on the professionals page
+    // (src/content/pro.ts, 'p.privacy'); that it is free is in 'a.mission' (siteSections).
     id: 'a.free', emoji: '🔒', title: 'Your privacy',
     body: 'You do not need an account. Your progress is saved only on this phone or computer. If it is switched on, the app counts anonymously how often lessons are done: no name, no tracking. You can turn this off in Settings.',
     nl: {
@@ -126,14 +98,6 @@ export const aboutSections: AboutSection[] = [
     nlRules: { title: 'Goed om te weten', body: RULES_DISCLAIMER.join(' ') },
   },
   {
-    id: 'a.voices', emoji: '🔊', title: 'The voices',
-    body: 'Every character has their own Dutch voice: Bram speaks with the voice of Thijmen, Henk with Daniel, Amina with Ariël and Jada with Noa. These voices were recorded with ElevenLabs. If a sentence has no recording yet, you hear the voice of your own phone or computer.',
-    nl: {
-      title: 'De stemmen',
-      body: 'Elk personage heeft een eigen Nederlandse stem: Bram praat met de stem van Thijmen, Henk met Daniel, Amina met Ariël en Jada met Noa. Deze stemmen zijn opgenomen met ElevenLabs. Heeft een zin nog geen opname? Dan hoor je de stem van je eigen telefoon of computer.',
-    },
-  },
-  {
     // Last: where to send a mistake or a question. The address is a tappable mail link in the
     // body (the About page renders CONTACT_EMAIL as one, in every language and in Dutch).
     id: 'a.contact', emoji: '✉️', title: 'Questions or a mistake?',
@@ -149,16 +113,71 @@ export const aboutSections: AboutSection[] = [
   },
 ];
 
+/**
+ * Translated sections that are not on the learner's About, but on the site: the language pages
+ * (vloertaal.nl/pl, /ar …, src/lib/langPages.ts) and the lines below the start page's splash
+ * (src/lib/siteLinks.ts). Someone who searches in their own language wants to know that it is
+ * free, for whom it is and that it is a test version. The professionals page (src/content/pro.ts)
+ * shows their Dutch (and for whom also in the work-rules track: `nlRules`). Translations in
+ * src/i18n/about/<lang>.ts, like the About sections.
+ */
+export const siteSections: AboutSection[] = [
+  {
+    id: 'a.mission', emoji: '🎯', title: 'Our mission',
+    body: 'Vloertaal wants to help a little, so that learning Dutch for work becomes a bit easier: free, easy to use, and with help in your own language. Nobody earns money from Vloertaal: no ads, no subscription, and your data is never sold.',
+    nl: {
+      title: 'Onze missie',
+      body: 'Vloertaal wil helpen, zodat Nederlands leren voor je werk iets makkelijker wordt. Gratis, makkelijk en met hulp in je eigen taal. Niemand verdient geld aan Vloertaal: geen reclame, geen abonnement, en we verkopen je gegevens nooit.',
+    },
+  },
+  {
+    // The whole app is a beta (the pilot). "Our address is at the bottom of this page": on every
+    // page that shows it (a language page, the professionals page) the contact comes last.
+    id: 'a.beta', emoji: '🧪', title: 'A test version',
+    body: 'Vloertaal is still a test version (beta). We are testing it with a small group of learners and coaches. Not everything has been checked yet: experts are still checking the translations and the tips about rules. Did you find a mistake? You find our address at the bottom of this page.',
+    nl: {
+      title: 'Een testversie',
+      body: 'Vloertaal is nog een testversie (bèta). We testen de app met een kleine groep leerlingen en begeleiders. Nog niet alles is nagekeken: experts kijken de vertalingen en de tips over regels nog na. Zie je een fout? Ons adres staat onderaan deze pagina.',
+    },
+  },
+  {
+    id: 'a.who', emoji: '🌍', title: 'Who is it for?',
+    body: 'For everyone who is new to working in the Netherlands. Help languages: Arabic, Tigrinya, Persian, Dari, Ukrainian, Turkish, Polish, Romanian, Bulgarian, Spanish, Portuguese, French and German.',
+    nl: {
+      title: 'Voor wie is het?',
+      body: 'Voor iedereen die nieuw is op het werk in Nederland. Hulptalen: Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens, Bulgaars, Spaans, Portugees, Frans en Duits.',
+    },
+    nlRules: {
+      title: 'Voor wie is het?',
+      body: 'Voor iedereen die al Nederlands spreekt en in Nederland werkt of werk zoekt. Ben je nieuw op je werk? Of wil je weten wat je rechten zijn? Dan is dit voor jou.',
+    },
+  },
+];
+
+/** A translated section by id: About's or the site's. */
+export function aboutSection(id: string): AboutSection {
+  const s = aboutSections.find((x) => x.id === id) ?? siteSections.find((x) => x.id === id);
+  if (!s) throw new Error(`about: no section ${id}`);
+  return s;
+}
+
 /** The owner's address: in the 'a.contact' body, written exactly so in every language. */
 export const CONTACT_EMAIL = 'hoi@vloertaal.nl';
 
 /**
- * The About page of the work-rules track, in Dutch only: every section that fits the track, with
- * its rules text where the Dutch course's text is about learning Dutch (what, mission, how, who,
- * disclaimer, contact), the others as they are (Bram, privacy, the voices).
+ * The professionals' page (src/content/pro.ts): its title, also the Dutch name of the button to it
+ * at the bottom of About (here, so the About page does not load that page's texts).
+ */
+export const PRO_TITLE = 'Voor begeleiders en werkgevers';
+
+/**
+ * The About page of the work-rules track, in Dutch only: every section of the learner's About that
+ * fits the track, with its rules text where the Dutch course's text is about learning Dutch (what,
+ * how, disclaimer, contact), the others as they are (Bram, privacy).
  */
 export const aboutRules: { id: string; emoji: string; who?: 'bram'; title: string; body: string }[] = aboutSections
   .filter((s) => s.rules !== false)
   .map((s) => ({ id: s.id, emoji: s.emoji, ...(s.who ? { who: s.who } : {}), ...(s.nlRules ?? s.nl) }));
 
-export const aboutIds: string[] = aboutSections.flatMap((s) => [s.id, `${s.id}.b`]);
+/** The translated ids (title, and body + '.b'): the About sections and the site's. */
+export const aboutIds: string[] = [...aboutSections, ...siteSections].flatMap((s) => [s.id, `${s.id}.b`]);
