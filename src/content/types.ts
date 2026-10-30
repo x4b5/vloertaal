@@ -66,6 +66,12 @@ export interface Lesson {
   /** Today's review: the card box of each word (lib/spaced.ts); box 2 and up get harder questions. */
   boxes?: Record<string, number>;
   /**
+   * A review (today's review, a unit's mixed review): the lessons whose "Zo werkt het hier" tip
+   * can come back, in order of preference; the first one with a tip gives the situation question
+   * (lib/exercises.ts). The order turns from day to day, so another tip comes back each time.
+   */
+  tipFrom?: string[];
+  /**
    * The work-rules track (src/content/regels): the lesson's steps. Such a lesson has no words and
    * no sentences (`words: []`, `sentences: []`); see isPlayable in src/content/courses.ts.
    */

@@ -193,7 +193,11 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
   const chatFrom = rare.length ? rare[(n + Math.floor(n / 2)) % rare.length] : undefined;
   const chat = chatFrom ? pick(chatFrom.l.dialogues!, chatFrom.at) : undefined;
   const dialogues: Dialogue[] = chat ? [chat] : [];
-  return { id: DAILY_ID, title: 'Review today', words, sentences, dialogues, repeat: true, boxes };
+  // The tip of a source lesson comes back too: of the weakest lesson first, on the next day of
+  // the one after it, and so on.
+  const tipFrom = from.map(({ l }) => l.id);
+  const tipTurn = tipFrom.length ? n % tipFrom.length : 0;
+  return { id: DAILY_ID, title: 'Review today', words, sentences, dialogues, repeat: true, boxes, tipFrom: [...tipFrom.slice(tipTurn), ...tipFrom.slice(0, tipTurn)] };
 }
 
 /**

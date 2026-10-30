@@ -545,6 +545,11 @@ export const REVIEW_KIND_SHARE = 0.3;
 /** Sentences to build in a mixed review (its chats stay, today's review has one of each). */
 export const MIX_MAX_BUILDS = 2;
 
+/** A "Zeg het zo" phrase short enough to build from tiles in a review: one sentence, at most 8 words. */
+export function isShortPhrase(nl: string): boolean {
+  return !/[.!?]\s+\S/.test(nl.trim()) && nl.trim().split(/\s+/).length <= 8;
+}
+
 /**
  * The kinds of question for the words of a review (mixed review, today's review), as even as can
  * be: each word gets the least used of its own directions (reviewKind: box 2 and up only the
@@ -771,10 +776,21 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
 
   const mix = isMixLesson(lesson) || Boolean(lesson.repeat);
   const daily = lesson.id === DAILY_ID;
-  const tip = tipForLesson(lesson.id);
+  // A lesson's own tip, or in a review the tip of a lesson it reviews (lesson.tipFrom): that one
+  // comes back as its situation question only (the tip card was read in its lesson).
+  const ownTip = tipForLesson(lesson.id);
+  const tip = ownTip ?? lesson.tipFrom?.map((id) => tipForLesson(id)).find(Boolean);
   // Sentences to build: one in today's review, two in a mixed review (else 3 builds and 2 chats
-  // made a third of it), all of them in a lesson.
-  const sentences = daily ? lesson.sentences.slice(0, 1) : mix ? lesson.sentences.slice(0, MIX_MAX_BUILDS) : lesson.sentences;
+  // made a third of it), all of them in a lesson. In a mixed review the "Zeg het zo" phrase of
+  // the tip that comes back is the second one, when it is one short sentence.
+  const phrase = mix && !daily && tip && !ownTip && isShortPhrase(tip.phrase.nl) ? tip.phrase : undefined;
+  const sentences = daily
+    ? lesson.sentences.slice(0, 1)
+    : mix
+      ? phrase && !lesson.sentences.some((s) => s.nl === phrase.nl)
+        ? [...lesson.sentences.slice(0, MIX_MAX_BUILDS - 1), { id: phrase.id, nl: phrase.nl, en: phrase.en }]
+        : lesson.sentences.slice(0, MIX_MAX_BUILDS)
+      : lesson.sentences;
   const dialogues = daily ? (lesson.dialogues ?? []).slice(0, 1) : lesson.dialogues ?? [];
   // Progression (PROGRESSION): only in the course's own lessons (and a reversed chat in a unit's
   // mixed review), not in today's review.
@@ -836,7 +852,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
 
   // Language first, then one workplace custom, right after the new words.
   if (tip) {
-    if (!opts.review) out.push({ kind: 'tip', tip });
+    if (!opts.review && ownTip) out.push({ kind: 'tip', tip });
     out.push({ kind: 'situation', tip, options: shuffle(tip.options, rng) });
   }
 
@@ -844,7 +860,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   out.push({ kind: 'match', words: matchWords(words, Math.min(MATCH_PAIRS, words.length), rng) });
 
   // Today's review stays short (about a dozen items): every word once in a rotating kind of
-  // question (above), the match board, one sentence to build and one chat. Its words already
+  // question (above), one tip situation, the match board, one sentence to build and one chat. Its words already
   // rotate through listening, picture and writing questions, so the extra ones are left out.
   if (daily) {
     for (const sentence of sentences) out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });
