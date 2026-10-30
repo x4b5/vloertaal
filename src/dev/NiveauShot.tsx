@@ -12,7 +12,7 @@ import { dailyLesson, speakCardId } from '../lib/spaced';
  * Lessons at the learner's level (src/lib/pace.ts, lib/spaced.ts sentence cards), for screenshots:
  *  - /?shot=niveau&state=faster: the result after the third lesson in a row without a mistake,
  *    with "Wil je sneller?" (Ja / Nee in place of Continue);
- *    (&samen=1: with the "Oefen samen" row as well, Ja + Nee + the row = 3 things to tap);
+ *    (&samen=1: the "Oefen samen" row is hidden while the question waits);
  *  - &state=easier: the result after many mistakes, with "De volgende les is wat korter.";
  *  - &state=daily&at=N: today's review with two sentence cards to build and a spoken sentence
  *    (&at= the step; the first build is at the number of words + 2).

@@ -509,7 +509,6 @@ function defineStates(LANG) {
   // Continue), the line after many mistakes, Settings › Lessen › Sneller leren, and today's review
   // with its sentence cards (a sentence to build, the spoken sentence).
   add('niveau:faster', shot('niveau&state=faster'), null, { expect: '.result-faster' });
-  add('niveau:faster-samen', shot('niveau&state=faster&samen=1'), null, { expect: '.result-faster-yes' });
   add('niveau:easier', shot('niveau&state=easier'), null, { expect: '.result-easier' });
   add('niveau:setting', shot('settings&page=faster'), null, { expect: '.max3-hint' });
   add('niveau:daily-build', shot('niveau&state=daily&at=8'), null, { expect: '.player' });
