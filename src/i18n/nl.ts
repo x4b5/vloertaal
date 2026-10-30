@@ -114,6 +114,7 @@ export const uiNl: Record<UiKey, UiText> = {
   countryHint: 'De werkregels in Vloertaal gaan over Nederland. In België zijn veel regels anders. Dit blijft op je telefoon. We sturen het nergens heen.',
   countryNl: 'Nederland',
   countryBe: 'België (Vlaanderen)',
+  tipsNote: 'Deze tips gaan over werk in Nederland. Algemene informatie, geen juridisch advies.',
   sectorHint: 'De lessen voor jouw werk komen al vroeg. Je kunt dit later veranderen bij Instellingen.',
   otherSectors: 'Andere sectoren',
   reviewToday: 'Herhaal vandaag',

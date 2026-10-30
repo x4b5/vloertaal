@@ -103,6 +103,7 @@ export const uiEn = {
   countryHint: 'The work rules in Vloertaal are about the Netherlands. In Belgium many rules are different. This stays on your phone. We send it nowhere.',
   countryNl: 'The Netherlands',
   countryBe: 'Belgium (Flanders)',
+  tipsNote: 'These tips are about work in the Netherlands. General information, not legal advice.',
   sectorHint: 'The lessons for your work come early. You can change this later in Settings.',
   otherSectors: 'Other sectors',
   /** "Herhaal vandaag": the daily review of words met before (spaced repetition). */

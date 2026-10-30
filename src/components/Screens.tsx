@@ -843,6 +843,7 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
         <h1><Bi text={ui('cultureTips', lang)} /></h1>
       </div>
       <p className="muted"><Bi text={ui('cultureTipsHint', lang)} /></p>
+      <p className="tips-note"><InfoIcon size={18} /><Bi text={ui('tipsNote', lang)} /></p>
       <ul className="tips-list">
         {visible.map((t) => (
           <li key={t.id} className={`tips-item ${open === t.id ? 'open' : ''}`}>

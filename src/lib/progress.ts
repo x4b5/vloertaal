@@ -60,6 +60,9 @@ export interface Progress {
    * Undefined = not chosen (the same as 'nl'). Only on this phone: never sent anywhere.
    */
   country?: Country;
+  /** "Goed om te weten" (the work rules are general information, about the Netherlands) was
+   *  read, on its own page the first time the work-rules track opened. Missing = not yet. */
+  rulesNotice?: boolean;
   xp: number;
   streak: number;
   /** Local date (YYYY-MM-DD) of the last finished lesson. */
@@ -150,6 +153,7 @@ export function loadProgress(): Progress {
       if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
       if (saved.region !== undefined && !isRegionChoice(saved.region)) delete saved.region;
       if (saved.country !== undefined && !isCountry(saved.country)) delete saved.country;
+      if (saved.rulesNotice !== undefined && typeof saved.rulesNotice !== 'boolean') delete saved.rulesNotice;
       // Regions while they are not offered (REGIONS_LIVE off): no region unit, no region map.
       if (saved.region !== undefined && !regionsOn()) delete saved.region;
       // The work-rules track while it is not offered (RULES_TRACK off): the language page again.

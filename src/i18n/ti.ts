@@ -87,6 +87,7 @@ const lang: HelpLanguageSource = {
     countryHint: 'The work rules in Vloertaal are about the Netherlands. In Belgium many rules are different. This stays on your phone. We send it nowhere.',
     countryNl: 'ኔዘርላንድ',
     countryBe: 'ቤልጅዩም (ፍላንደርስ)',
+    tipsNote: 'እዞም ምኽርታት ብዛዕባ ስራሕ ኣብ ኔዘርላንድ እዮም። ሓፈሻዊ ሓበሬታ እዩ፡ ሕጋዊ ምኽሪ ኣይኮነን።',
     sectorHint: { m: 'ትምህርትታት ናይ ስራሕካ ኣቐዲሞም ይመጹ። ደሓር ኣብ ምድላዋት ክትቅይሮ ትኽእል ኢኻ።', f: 'ትምህርትታት ናይ ስራሕኪ ኣቐዲሞም ይመጹ። ደሓር ኣብ ምድላዋት ክትቅይርዮ ትኽእሊ ኢኺ።' },
     otherSectors: 'ካልኦት ዓውድታት ስራሕ',
     reviewToday: 'ናይ ሎሚ ድግግም',

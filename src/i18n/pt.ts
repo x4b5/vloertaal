@@ -86,6 +86,7 @@ const lang: HelpLanguageSource = {
     countryHint: 'As regras de trabalho do Vloertaal são dos Países Baixos. Na Bélgica, muitas regras são diferentes. Isto fica no teu telemóvel. Não o enviamos para lado nenhum.',
     countryNl: 'Países Baixos',
     countryBe: 'Bélgica (Flandres)',
+    tipsNote: 'Estas dicas são sobre o trabalho nos Países Baixos. Informação geral, não é aconselhamento jurídico.',
     sectorHint: 'As lições para o teu trabalho aparecem primeiro. Podes mudar isto mais tarde nas Definições.',
     otherSectors: 'Outros setores',
     reviewToday: 'Revisão de hoje',

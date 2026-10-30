@@ -43,7 +43,7 @@ import { HomeGreeting } from '../components/BramSays';
 import { courseUnits, learnedItems, registerRulesCourse } from '../content/courses';
 import { toCourseUnits } from '../content/regels/course';
 import { RULES_STUB } from './rulesStub';
-import { forceNoVoiceNoteForShot, NoVoiceNote, RulesHelp, RulesShelf } from '../components/RulesHelp';
+import { forceNoVoiceNoteForShot, NoVoiceNote, RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf } from '../components/RulesHelp';
 import { SocialMap, SocialMapLink } from '../components/SocialMap';
 import { allRegionUnits, isRegionChoice, regionOf, type RegionChoice } from '../content/regio';
 
@@ -210,6 +210,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The gender question right after a help language with gender: /?shot=gender&lang=pl
   // (&gender=f shows it picked; Settings has the same cards: /?shot=settings&lang=pl&gender=f).
   if (shot === 'gender') return <GenderShot lang={(lang as LangCode) ?? 'pl'} gender={gender} greet={q.get('greet') === '1'} />;
+  if (shot === 'rulesnotice') return <RulesNoticeScreen country={q.get('country') === 'be' ? 'be' : undefined} onDone={() => {}} />;
   if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} />;
   if (shot === 'admin') return <Admin onBack={() => {}} />;
   // &novoice=1 (the work-rules track): the line that this phone has no Dutch voice, on the home
@@ -504,7 +505,7 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, region, daily,
         onStart={() => {}} onRestart={() => {}} onAll={() => {}} onUpgrade={() => {}}
         onPick={(id) => setProgress((p) => ({ ...p, currentUnit: id }))}
         focusUnit={state === 'coach' ? 'u.pay' : null}
-        note={<NoVoiceNote lang={lang} />}
+        note={<><RulesPathNote lang={lang} country={new URLSearchParams(location.search).get('country') === 'be' ? 'be' : undefined} /><NoVoiceNote lang={lang} /></>}
       />
       <BottomNav current="route" onTab={() => {}} lang={lang} />
     </>

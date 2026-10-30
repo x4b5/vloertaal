@@ -4171,6 +4171,16 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 .rules-disclaimer-icon { flex: none; margin-top: 1px; color: var(--ink-2); }
 .rules-disclaimer p { margin: 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; font-size: 1rem; line-height: 1.45; }
 .rules-disclaimer-line:first-child { font-weight: 650; }
+/* "Goed om te weten" once, the first time the work-rules track opens; the line above its lessons. */
+.rules-notice { gap: 16px; }
+.rules-notice-card { font-size: 1.05rem; }
+.rules-notice-ok { width: 100%; margin-top: 8px; }
+.rules-path-note { display: flex; align-items: flex-start; gap: 8px; margin: 14px 0 6px; color: var(--muted); font-size: 0.9rem; line-height: 1.4; }
+.rules-path-note .icon { flex: none; margin-top: 1px; }
+/* The tips ("Zo werkt het hier"): about the Netherlands, general information. */
+.tips-note { display: flex; align-items: flex-start; gap: 8px; color: var(--muted); font-size: 0.88rem; line-height: 1.4; }
+.tips-note .icon { flex: none; margin-top: 1px; }
+.tip .tips-note { margin: 10px 0 0; }
 .rh-title { margin: 0; font-size: 1.3rem; font-weight: 650; }
 .rh-hint { margin: 4px 0 12px; }
 .rh-rows { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-direction: column; gap: 10px; }

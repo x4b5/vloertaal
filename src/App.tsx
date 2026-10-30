@@ -11,7 +11,7 @@ import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
 import { HomeGreeting } from './components/BramSays';
-import { NoVoiceNote, RulesHelp, RulesShelf } from './components/RulesHelp';
+import { NoVoiceNote, RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf } from './components/RulesHelp';
 import { GenderScreen } from './components/Gender';
 import { shouldAskGender } from './lib/askGender';
 import { onboardingStep, previousStep, stepIndex, trialLessonAllowed, type OnbStep } from './lib/onboarding';
@@ -659,6 +659,10 @@ export default function App() {
   if (view.name === 'home' && shouldAskGender(progress)) {
     return <GenderScreen lang={lang} onDone={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))} />;
   }
+  // The work-rules track, the first time it opens: "Goed om te weten" on its own page, once.
+  if (view.name === 'home' && track === 'regels' && !progress.rulesNotice) {
+    return <RulesNoticeScreen country={progress.country} onDone={() => setProgress((p) => ({ ...p, rulesNotice: true }))} />;
+  }
   // From here on there is access (a code, or the sneak preview without one).
   const acc: Access = access ?? 'preview';
 
@@ -891,7 +895,7 @@ export default function App() {
               forgetCertName();
               setProgress((p) => ({
                 ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
-                sector: p.sector, region: p.region, country: p.country, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked,
+                sector: p.sector, region: p.region, country: p.country, rulesNotice: p.rulesNotice, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked,
               }));
               tab('route');
             }}
@@ -946,7 +950,7 @@ export default function App() {
             focusUnit={focusUnit}
             onFocused={() => { setFocusUnit(null); forgetLinkedUnit(); }}
             lockedLink={lockedLink}
-            note={<NoVoiceNote lang={lang} once />}
+            note={<><RulesPathNote lang={lang} country={progress.country} /><NoVoiceNote lang={lang} once /></>}
             unlocked={unlockedShown}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
