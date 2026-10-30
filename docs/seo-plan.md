@@ -1,7 +1,8 @@
 # SEO-plan Vloertaal
 
 *Opgesteld 28 oktober 2026. Doel: dat leerlingen, begeleiders, werkgevers en organisaties Vloertaal
-vinden via Google, in het Nederlands én in de negen hulptalen.*
+vinden via Google, in het Nederlands én in de hulptalen (eerst negen; sinds 30 oktober 2026 dertien, met Spaans,
+Portugees, Frans en Duits).*
 
 ## Waar we staan
 

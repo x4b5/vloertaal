@@ -315,7 +315,7 @@ const lang: HelpLanguageSource = {
     'theme.job': 'Tu trabajo',
     'theme.together': 'Trabajar juntos',
     'theme.rights': 'Tus derechos',
-    'theme.life': 'Vida en los Países Bajos',
+    'theme.life': 'Vida en Holanda',
     'theme.sector': 'Tu sector',
     // Unit: First day at work
     'u.firstday': 'Primer día de trabajo',
