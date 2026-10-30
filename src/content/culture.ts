@@ -315,7 +315,7 @@ export const teamworkUnit: Unit = {
         { id: 'w.afspraak', nl: 'de afspraak', en: 'the agreement', emoji: '🤝' },
         { id: 'w.lukken', nl: 'lukken', en: 'to work out, to manage', emoji: '👍', picture: false },
         { id: 'w.oneens', nl: 'het oneens zijn', en: 'to disagree', emoji: '🙅' },
-        { id: 'w.zaterdag', nl: 'zaterdag', en: 'Saturday', emoji: '🗓️', picture: false },
+        { id: 'w.zaterdag', nl: 'zaterdag', en: 'Saturday', emoji: '🗓️', look: 'kalender/zaterdag' },
         { id: 'w.overwerken', nl: 'overwerken', en: 'to work overtime', emoji: '🌙' },
         { id: 'w.misschien', nl: 'misschien', en: 'maybe', emoji: '🤔', picture: false },
       ],

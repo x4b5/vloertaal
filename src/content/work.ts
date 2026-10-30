@@ -596,7 +596,8 @@ const coreTips: CultureTip[] = [
  * ---------------------------------------------------------------------------------------- */
 
 /** A word row; a fifth `false` marks an abstract word (no picture, see Word.picture). */
-type WordRow = [id: string, nl: string, en: string, emoji: string, picture?: false];
+/** The fifth field: `false` for an abstract word, or the picture's own look (Word.look). */
+type WordRow = [id: string, nl: string, en: string, emoji: string, picture?: false | { look: string }];
 type Pair = [nl: string, en: string];
 /** A sentence; `alt`: other word orders that are also right when building it (Sentence.alt). */
 type SentenceRow = [nl: string, en: string, alt?: string[]];
@@ -604,7 +605,7 @@ type SentenceRow = [nl: string, en: string, alt?: string[]];
 const lesson = (slug: string, title: string, words: WordRow[], sentences: SentenceRow[], [q, a]: [Pair, Pair]): Lesson => ({
   id: `l.${slug}`,
   title,
-  words: words.map(([id, nl, en, emoji, picture]) => ({ id: `w.${id}`, nl, en, emoji, ...(picture === false ? { picture } : {}) })),
+  words: words.map(([id, nl, en, emoji, picture]) => ({ id: `w.${id}`, nl, en, emoji, ...(picture === false ? { picture } : picture ?? {}) })),
   sentences: sentences.map(([nl, en, alt], i) => ({ id: `s.${slug}.${i + 1}`, nl, en, ...(alt ? { alt } : {}) })),
   dialogues: [chat(line(`c.${slug}.q`, ...q), line(`c.${slug}.a`, ...a))],
 });
@@ -810,7 +811,7 @@ const socialUnit = unit('social', 'Getting along', 'Omgang met collega’s', '�
     'smalltalk',
     'Small talk and breaks',
     [
-      ['weekend', 'het weekend', 'the weekend', '🛋️', false],
+      ['weekend', 'het weekend', 'the weekend', '🛋️', { look: 'kalender/weekend' }],
       ['koffie', 'de koffie', 'the coffee', '☕'],
       ['gezellig', 'gezellig', 'cosy, nice together', '🥰', false],
       ['weer', 'het weer', 'the weather', '🌦️'],
@@ -1026,7 +1027,7 @@ const laterUnits: Unit[] = [
         ['terugbellen', 'terugbellen', 'to call back', '↩️'],
         ['bereikbaar', 'bereikbaar', 'can be reached (by phone)', '📶', false],
         ['reden', 'de reden', 'the reason', '❔', false],
-        ['overmorgen', 'overmorgen', 'the day after tomorrow', '⏩', false],
+        ['overmorgen', 'overmorgen', 'the day after tomorrow', '⏩', { look: 'kalender/overmorgen' }],
         ['inspreken', 'inspreken', 'to leave a voice message', '🎙️'],
       ],
       [
@@ -2311,7 +2312,7 @@ export const toolsUnit = unit('tools', 'Smart tools', 'Slimme hulpmiddelen', '�
       ['taalhuis', 'het Taalhuis', 'the Taalhuis (free help with Dutch)', '🗨️', false],
       ['oefenen', 'oefenen', 'to practise', '🎯', false],
       ['luisteren', 'luisteren', 'to listen', '👂'],
-      ['elkedag', 'elke dag', 'every day', '📆', false],
+      ['elkedag', 'elke dag', 'every day', '📆', { look: 'kalender/elkedag' }],
       ['woord', 'het woord', 'the word', '🔡', false],
     ],
     [
@@ -2400,12 +2401,12 @@ export const dataUnit = unit('data', 'Numbers and details', 'Getallen en gegeven
     'dates',
     'Days and dates',
     [
-      ['maandag', 'maandag', 'Monday', '📅', false],
-      ['week', 'de week', 'the week', '🗓️', false],
-      ['maand', 'de maand', 'the month', '🌙', false],
-      ['volgendeweek', 'volgende week', 'next week', '⏭️', false],
-      ['vorigeweek', 'vorige week', 'last week', '⏮️', false],
-      ['totenmet', 'tot en met', 'up to and including (the last day counts too)', '↔️', false],
+      ['maandag', 'maandag', 'Monday', '📅', { look: 'kalender/maandag' }],
+      ['week', 'de week', 'the week', '🗓️', { look: 'kalender/week' }],
+      ['maand', 'de maand', 'the month', '🌙', { look: 'kalender/maand' }],
+      ['volgendeweek', 'volgende week', 'next week', '⏭️', { look: 'kalender/volgendeweek' }],
+      ['vorigeweek', 'vorige week', 'last week', '⏮️', { look: 'kalender/vorigeweek' }],
+      ['totenmet', 'tot en met', 'up to and including (the last day counts too)', '↔️', { look: 'kalender/totenmet' }],
     ],
     [
       ['Ik kan maandag tot en met donderdag.', 'I can work Monday to Thursday (Thursday too).'],

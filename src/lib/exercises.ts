@@ -10,7 +10,7 @@ import type { RuleStep } from '../content/regels/types';
 import { tokenize } from './answers';
 import { type Access, lessonAllowed } from './access';
 import { createRng, sample, shuffle } from './random';
-import { hasPicture, lookKey } from './wordPicture';
+import { hasPicture, looksAlike, samePicture } from './wordPicture';
 import { type SpeakItem, withSpeaking } from './speaking';
 import { nearSynonyms } from '../content/synonyms';
 import { DAILY_ID } from './spaced';
@@ -112,7 +112,7 @@ export function isGraded(ex: Exercise): boolean {
 /** Same answer, near-synonyms (content/synonyms.ts), or the same (or a near-identical) picture:
  *  never two of these in one choice. */
 function clashes(a: Word, b: Word, pictured: boolean): boolean {
-  return a.id === b.id || a.nl === b.nl || a.en === b.en || a.emoji === b.emoji || nearSynonyms(a.nl, b.nl) || (pictured && lookKey(a) === lookKey(b));
+  return a.id === b.id || a.nl === b.nl || a.en === b.en || samePicture(a, b) || nearSynonyms(a.nl, b.nl) || (pictured && looksAlike(a, b));
 }
 
 /** Words for one match board: no two that clash (near-synonyms, same meaning or picture), so
