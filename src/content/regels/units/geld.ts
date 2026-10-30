@@ -155,7 +155,7 @@ export const geldUnit: RuleUnit = {
           situation: 'Fatima begint over 2 weken. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze vertelt het pas als ze een maand gewerkt heeft.', best: false, feedback: 'Te laat. Dan krijgt ze te veel, en moet ze terugbetalen.' },
-            { id: 'b', text: 'Ze zegt de baan af. Ze is bang om geld te verliezen.', best: false, feedback: 'Begrijpelijk. Maar laat het eerst uitrekenen.' },
+            { id: 'b', text: 'Ze zegt de baan af. Ze is bang om geld te verliezen.', best: false, feedback: 'Dat snap ik. Maar laat het eerst uitrekenen.' },
             { id: 'c', text: 'Ze geeft de nieuwe baan meteen door aan de gemeente.', best: true, feedback: 'Goed. Dan klopt haar uitkering meteen.' },
           ],
           why: 'Geef werk en loon altijd meteen door aan de gemeente. Dat moet. De gemeente rekent uit hoeveel bijstand je nog krijgt. Soms mag je een deel van je loon houden. Niet doorgeven geeft later schulden.',
@@ -188,7 +188,7 @@ export const geldUnit: RuleUnit = {
           situation: 'Fatima moet nog inburgeren. Ze heeft op dinsdag taalles. Haar nieuwe rooster heeft ook diensten op dinsdag. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze vertelt het aan haar werkgever en aan de gemeente.', best: true, feedback: 'Goed. Dan kunnen ze samen een rooster zoeken.' },
-            { id: 'b', text: 'Ze stopt met de taalles. Werk gaat nu voor.', best: false, feedback: 'Begrijpelijk. Maar de gemeente moet het weten, want inburgeren moet.' },
+            { id: 'b', text: 'Ze stopt met de taalles. Werk gaat nu voor.', best: false, feedback: 'Dat is logisch. Maar de gemeente moet het weten, want inburgeren moet.' },
             { id: 'c', text: 'Ze werkt op dinsdag, en ze zegt niets tegen de gemeente.', best: false, feedback: 'Dan mist ze lessen. Dat kan problemen geven.' },
           ],
           why: 'Inburgeren betekent: je leert Nederlands en hoe Nederland werkt. Voor veel nieuwkomers is dat verplicht. Werk en inburgering kunnen vaak samen. Vertel het je werkgever en de gemeente op tijd. De gemeente maakt met je een plan voor inburgering en werk.',
@@ -313,7 +313,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.4.wd1',
           situation: 'Esra weet niet meer hoe ze moet betalen. Wat kan Esra het beste doen?',
           options: [
-            { id: 'a', text: 'Ze wacht tot ze meer verdient. Dan betaalt ze alles.', best: false, feedback: 'Begrijpelijk. Maar schulden worden snel groter door extra kosten.' },
+            { id: 'a', text: 'Ze wacht tot ze meer verdient. Dan betaalt ze alles.', best: false, feedback: 'Dat snap ik. Maar schulden worden snel groter door extra kosten.' },
             { id: 'b', text: 'Ze vraagt nu hulp, bij de gemeente of bij Geldfit.', best: true, feedback: 'Goed. Hoe eerder, hoe makkelijker.' },
             { id: 'c', text: 'Ze sluit snel een lening af om alles te betalen.', best: false, feedback: 'Dan heeft ze één schuld meer, vaak met hoge rente.' },
           ],
@@ -333,7 +333,7 @@ export const geldUnit: RuleUnit = {
           situation: 'Esra heeft nieuw werk. Ze wil haar schulden aanpakken. Wat kan Esra het beste doen?',
           options: [
             { id: 'a', text: 'Ze maakt een lijst: wat moet ze aan wie betalen?', best: true, feedback: 'Goed. Met een overzicht kan iemand haar helpen.' },
-            { id: 'b', text: 'Ze betaalt eerst wie het vaakst belt of mailt.', best: false, feedback: 'Begrijpelijk. Maar dat is niet altijd de belangrijkste.' },
+            { id: 'b', text: 'Ze betaalt eerst wie het vaakst belt of mailt.', best: false, feedback: 'Dat is logisch. Maar dat is niet altijd de belangrijkste.' },
             { id: 'c', text: 'Ze betaalt elke schuld een klein beetje tegelijk.', best: false, feedback: 'Goed bedoeld. Maar sommige rekeningen gaan voor.' },
           ],
           why: 'Begin met een overzicht: wat moet je aan wie? Betaal eerst je huur, energie en zorgverzekering. Een nieuwe lening maakt het vaak erger.',

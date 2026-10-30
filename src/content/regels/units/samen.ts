@@ -50,7 +50,7 @@ export const samenUnit: RuleUnit = {
           situation: 'Sanne zei het heel direct. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt: "Oké, zo dan?" En hij doet het opnieuw.', best: true, feedback: 'Goed. Hij laat zien dat hij wil leren.' },
-            { id: 'b', text: 'Hij zegt niets meer tegen haar, de rest van de dag.', best: false, feedback: 'Begrijpelijk. Maar ze bedoelde het niet persoonlijk.' },
+            { id: 'b', text: 'Hij zegt niets meer tegen haar, de rest van de dag.', best: false, feedback: 'Dat snap ik. Maar ze bedoelde het niet persoonlijk.' },
             { id: 'c', text: 'Hij zegt: "Zo deed ik het bij mijn vorige werk."', best: false, feedback: 'Dat mag hij zeggen. Maar hier wil ze het anders.' },
           ],
           why: 'Nederlanders zeggen het vaak heel direct. Ze bedoelen het meestal niet onaardig. Het gaat over het werk, niet over jou. Jij mag ook direct zijn, als je vriendelijk blijft.',
@@ -131,7 +131,7 @@ export const samenUnit: RuleUnit = {
           situation: 'Een collega laat het zware werk steeds aan Fatima over. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze zegt het rustig tegen die collega zelf.', best: true, feedback: 'Goed. Zo krijgt hij de kans om het te veranderen.' },
-            { id: 'b', text: 'Ze zegt niets, maar ze wordt steeds bozer.', best: false, feedback: 'Begrijpelijk. Maar zo verandert er niets.' },
+            { id: 'b', text: 'Ze zegt niets, maar ze wordt steeds bozer.', best: false, feedback: 'Ik snap het. Maar zo verandert er niets.' },
             { id: 'c', text: 'Ze vraagt de leidinggevende om het meteen op te lossen.', best: false, feedback: 'Kan later. Eerst zelf praten werkt meestal beter.' },
           ],
           why: 'Praat eerst met de persoon zelf, op een rustig moment. Gebruik een ik-zin: "Ik vind het niet fijn dat ...". Helpt dat niet? Ga dan naar je leidinggevende.',
@@ -193,7 +193,7 @@ export const samenUnit: RuleUnit = {
           id: 'r.l.samen.3.wd2',
           situation: 'Sanne vraagt: "Kun je dit vóór 3 uur af hebben?" Jij weet: dat haal je niet.',
           options: [
-            { id: 'a', text: 'Je zegt ja. Je doet je best en ziet wel.', best: false, feedback: 'Begrijpelijk. Maar dan rekent Sanne op 3 uur.' },
+            { id: 'a', text: 'Je zegt ja. Je doet je best en ziet wel.', best: false, feedback: 'Dat is logisch. Maar dan rekent Sanne op 3 uur.' },
             { id: 'b', text: 'Je zegt eerlijk: "3 uur lukt niet. 4 uur wel."', best: true, feedback: 'Goed. Nu kan Sanne plannen.' },
             { id: 'c', text: 'Je zegt niets, en je werkt extra snel door.', best: false, feedback: 'Dan weet Sanne niet wat ze kan verwachten.' },
           ],

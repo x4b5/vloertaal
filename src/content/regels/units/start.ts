@@ -13,9 +13,9 @@ export const startUnit: RuleUnit = {
   color: '#ff7a00',
   lessons: [
     {
-      // Les 2.1 · Op tijd en goed voorbereid
+      // Les 2.1 · Op tijd, en alles bij je
       id: 'r.l.start.1',
-      title: 'Op tijd en goed voorbereid',
+      title: 'Op tijd, en alles bij je',
       goal: 'Je weet wat je meeneemt en wat "op tijd" hier betekent. Je weet wat je doet als je te laat bent.',
       remember: 'Te laat? Bel of app vóór je dienst begint.',
       steps: [
@@ -39,7 +39,7 @@ export const startUnit: RuleUnit = {
           body: [
             'Laat het weten vóór je dienst begint.',
             'Dan kan het team plannen.',
-            'Te laat, zonder bericht? Dat vinden mensen hier erger dan de vertraging zelf.',
+            'Te laat, zonder bericht? Dat vinden mensen hier erger dan te laat komen.',
           ],
           rule: 'ongeschreven',
           key: true,
@@ -53,18 +53,18 @@ export const startUnit: RuleUnit = {
             { id: 'b', text: 'Haar paspoort, om bij de baas achter te laten.', best: false, feedback: 'Niet doen. Haar paspoort houdt ze altijd zelf.' },
             { id: 'c', text: 'Alleen haar telefoon. De rest staat online.', best: false, feedback: 'Haar werkgever moet haar ID echt zien.' },
           ],
-          why: 'Je werkgever moet je ID-kaart of paspoort zien en een kopie maken. Hij heeft ook je BSN nodig. Je BSN is je burgerservicenummer. Het staat op je ID-kaart. Je ID geef je nooit af.',
+          why: 'Je werkgever moet je ID-kaart of paspoort zien en een kopie maken. Hij heeft ook je BSN nodig. Je BSN is je burgerservicenummer: je persoonlijke nummer bij de overheid. Het staat op je ID-kaart. Je ID geef je nooit af.',
         },
         {
           kind: 'whatdo',
           id: 'r.l.start.1.wd2',
-          situation: 'De bus heeft vertraging. Dewi is 15 minuten te laat. Wat kan Dewi het beste doen?',
+          situation: 'De bus is te laat. Dewi is 15 minuten te laat. Wat kan Dewi het beste doen?',
           options: [
             { id: 'a', text: 'Ze legt het uit als ze binnen is.', best: false, feedback: 'Dan weet het team te laat dat ze later komt.' },
-            { id: 'b', text: 'Ze rent extra hard en zegt er niets over.', best: false, feedback: 'Haasten is niet nodig. Even laten weten wel.' },
+            { id: 'b', text: 'Ze rent extra hard en zegt er niets over.', best: false, feedback: 'Rennen is niet nodig. Even laten weten wel.' },
             { id: 'c', text: 'Ze belt of appt haar leidinggevende meteen.', best: true, feedback: 'Goed. Dan kan het team plannen.' },
           ],
-          why: 'Laat het weten vóór je dienst begint. Dan kan het team plannen. Te laat, zonder bericht? Dat vinden mensen hier erger dan de vertraging zelf. Afspraak is afspraak: lukt het niet? Zeg het op tijd.',
+          why: 'Laat het weten vóór je dienst begint. Dan kan het team plannen. Te laat, zonder bericht? Dat vinden mensen hier erger dan te laat komen. Afspraak is afspraak: lukt het niet? Zeg het op tijd.',
         },
         // ⚖️ check: Een regel moet wel een goede reden hebben ⚖️.
         {
@@ -133,9 +133,9 @@ export const startUnit: RuleUnit = {
         {
           kind: 'truefalse',
           id: 'r.l.start.2.tf1',
-          statement: 'Je mag gerust nog een keer naar iemands naam vragen.',
+          statement: 'Je mag best nog een keer naar iemands naam vragen.',
           answer: true,
-          why: 'Niemand verwacht dat je na een week alle namen kent. Vraag gerust nog een keer: "Hoe heet je ook alweer?" Dat is heel normaal.',
+          why: 'Niemand verwacht dat je na een week alle namen kent. Vraag gewoon nog een keer: "Hoe heet je ook alweer?" Dat is heel normaal.',
         },
         { kind: 'model', id: 'r.l.start.2.mo1', context: 'Je stelt je voor aan een nieuwe collega.', nl: 'Hoi, ik ben Jayden. Ik ben nieuw. Hoe heet jij?' },
       ],
@@ -177,7 +177,7 @@ export const startUnit: RuleUnit = {
           id: 'r.l.start.3.wd1',
           situation: 'Piotr snapt het niet goed. Wat kan Piotr het beste doen?',
           options: [
-            { id: 'a', text: 'Hij knikt, en hij kijkt straks hoe de anderen het doen.', best: false, feedback: 'Begrijpelijk. Maar zo kan hij een fout maken.' },
+            { id: 'a', text: 'Hij knikt, en hij kijkt straks hoe de anderen het doen.', best: false, feedback: 'Dat is logisch. Maar zo kan hij een fout maken.' },
             { id: 'b', text: 'Hij zegt "ja", en hij vraagt het later aan iemand anders.', best: false, feedback: 'Dan denkt Mark dat het goed gaat.' },
             { id: 'c', text: 'Hij zegt: "Nog een keer graag, iets langzamer."', best: true, feedback: 'Goed. Zo leert hij het meteen goed.' },
           ],

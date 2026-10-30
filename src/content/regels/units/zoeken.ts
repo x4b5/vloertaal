@@ -27,8 +27,8 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.1.sc1',
           picture: "Kevin (19) op de bank met zijn telefoon. Op het scherm een appje vol geld-emoji's.",
           lines: [
-            'Kevin zoekt zijn eerste baan.',
-            'Hij kijkt op werk.nl en bij een uitzendbureau.',
+            'Kevin zoekt zijn eerste baan op werk.nl.',
+            'Een uitzendbureau zoekt ook werk voor hem.',
             'Dan krijgt hij een bericht van een onbekend nummer.',
             '"Verdien 250 euro per dag. Je werkt vanuit huis."',
             'Kevin weet niet wat hij moet doen.',
@@ -53,11 +53,11 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.1.wd1',
           situation: 'Kevin weet niet of het bericht echt is. Wat kan Kevin het beste doen?',
           options: [
-            { id: 'a', text: "Hij antwoordt meteen. Zo'n kans krijgt hij niet vaak.", best: false, feedback: 'Begrijpelijk, maar pas op. Dit lijkt op oplichting.' },
+            { id: 'a', text: "Hij antwoordt meteen. Zo'n kans krijgt hij niet vaak.", best: false, feedback: 'Dat snap ik, maar pas op. Misschien wil iemand je geld stelen.' },
             { id: 'b', text: 'Hij zoekt het bedrijf zelf op en belt het.', best: true, feedback: 'Goed. Zo checkt hij of het bedrijf echt bestaat.' },
-            { id: 'c', text: 'Hij stuurt zijn gegevens, dan kunnen ze hem betalen.', best: false, feedback: 'Niet doen. Met zijn gegevens kunnen ze hem oplichten.' },
+            { id: 'c', text: 'Hij stuurt zijn adres en bankrekening, dan betalen ze hem.', best: false, feedback: 'Niet doen. Dan kunnen ze zijn geld stelen.' },
           ],
-          why: 'Veel geld voor makkelijk werk is vaak nep. Oplichters zoeken mensen via WhatsApp, TikTok of Telegram. Een echt bedrijf kun je opzoeken en bellen.',
+          why: 'Veel geld voor makkelijk werk is vaak nep. Oplichters zoeken mensen via WhatsApp, TikTok of Telegram. Ze willen je geld stelen. Een echt bedrijf kun je opzoeken en bellen.',
         },
         {
           kind: 'truefalse',
@@ -71,7 +71,7 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.1.wd2',
           situation: 'Fatima wil weer werken. Ze zorgde 6 jaar voor haar kinderen. Hoe begint ze?',
           options: [
-            { id: 'a', text: 'Ze wacht tot de gemeente haar een baan aanbiedt.', best: false, feedback: 'Dat kan lang duren. Zelf zoeken werkt sneller.' },
+            { id: 'a', text: 'Ze wacht tot de gemeente haar een baan geeft.', best: false, feedback: 'Dat kan lang duren. Zelf zoeken werkt sneller.' },
             { id: 'b', text: 'Ze zoekt alleen precies hetzelfde werk als vroeger.', best: false, feedback: 'Dat mag, maar dan mist ze veel banen.' },
             { id: 'c', text: 'Ze vertelt vrienden en buren dat ze werk zoekt.', best: true, feedback: 'Goed. Veel banen vind je via mensen die je kent.' },
           ],
@@ -80,13 +80,13 @@ export const zoekenUnit: RuleUnit = {
         {
           kind: 'whoask',
           id: 'r.l.zoeken.1.wa1',
-          question: 'Je hebt een uitkering van de gemeente. Je wilt hulp bij werk zoeken. Waar ga je heen?',
+          question: 'Je krijgt geld van de gemeente, want je hebt geen werk. Je wilt hulp bij werk zoeken. Waar ga je heen?',
           options: [
             { id: 'a', who: 'vakbond', best: false, feedback: 'Een vakbond helpt vooral als je al werk hebt.' },
             { id: 'b', who: 'gemeente', best: true, feedback: 'Goed. Vraag naar het Werkplein of het Jongerenloket.' },
             { id: 'c', who: 'bedrijfsarts', best: false, feedback: 'De bedrijfsarts gaat over ziek zijn en werk.' },
           ],
-          why: 'De gemeente helpt bij werk zoeken. Kijk ook op werk.nl van UWV. Daar staan veel vacatures. Een vacature is een baan die nog vrij is.',
+          why: 'De gemeente helpt bij werk zoeken. Kijk ook op werk.nl van UWV (helpt bij werk zoeken). Daar staan veel vacatures. Een vacature is een baan die nog vrij is.',
         },
         { kind: 'model', id: 'r.l.zoeken.1.mo1', context: 'Je belt een bedrijf over een vacature.', nl: 'Hallo, ik zag uw vacature. Is die nog open?' },
       ],
@@ -131,8 +131,8 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.2.wd1',
           situation: 'Wat schrijft Esra bij die 8 jaar?',
           options: [
-            { id: 'a', text: 'Niets. Ze laat die jaren gewoon weg.', best: false, feedback: 'Een gat in je cv valt op. Werkgevers vragen er dan toch naar.' },
-            { id: 'b', text: 'Ze schrijft dat ze toen in een winkel werkte.', best: false, feedback: 'Niet doen. Een werkgever kan dat nagaan.' },
+            { id: 'a', text: 'Niets. Ze laat die jaren gewoon weg.', best: false, feedback: 'Werkgevers zien een gat in je cv meteen. Ze vragen er dan toch naar.' },
+            { id: 'b', text: 'Ze schrijft dat ze toen in een winkel werkte.', best: false, feedback: 'Niet doen. Een werkgever kan dat checken.' },
             { id: 'c', text: 'Ze schrijft: "Mantelzorg voor mijn moeder."', best: true, feedback: 'Goed. Zorg is ook ervaring.' },
           ],
           why: 'Zorgen voor iemand uit je familie heet mantelzorg. Je leert er veel van. Bijvoorbeeld plannen, regelen en rustig blijven. Schrijf dat er gewoon bij.',
@@ -151,7 +151,7 @@ export const zoekenUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Hij schrijft de supermarkt op, en wat hij daar deed.', best: true, feedback: 'Goed. Werkervaring telt, ook zonder diploma.' },
             { id: 'b', text: 'Hij schrijft op dat hij bijna een diploma heeft.', best: false, feedback: 'Dat klopt niet. Eerlijk zijn werkt beter.' },
-            { id: 'c', text: 'Hij solliciteert niet, want hij heeft geen diploma.', best: false, feedback: 'Jammer. Voor veel banen is ervaring genoeg.' },
+            { id: 'c', text: 'Hij vraagt nergens om werk, want hij heeft geen diploma.', best: false, feedback: 'Jammer. Voor veel banen is ervaring genoeg.' },
           ],
           why: 'Schrijf op wat je deed. Bijvoorbeeld vakken vullen, de kassa en klanten helpen. Dat laat zien wat je kunt.',
         },
@@ -185,7 +185,7 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.3.sc1',
           picture: 'Mohammed in een klein kantoor van een bakkerij. Tegenover hem zit Linda met een map.',
           lines: [
-            'Mohammed heeft een sollicitatiegesprek bij een bakkerij.',
+            'Mohammed heeft een sollicitatiegesprek bij een bakkerij: een gesprek over een baan.',
             'Hij is er 10 minuten te vroeg.',
             'De eigenaar, Linda, stelt veel vragen.',
             'Dan vraagt ze: "Ben je getrouwd? Wil je kinderen?"',
@@ -200,7 +200,7 @@ export const zoekenUnit: RuleUnit = {
             'Een werkgever mag niet vragen of je zwanger bent of kinderen wilt. Vragen over je geloof of gezondheid mogen ook niet.',
             'Je hoeft daar geen antwoord op te geven.',
             'Blijf rustig en beleefd.',
-            'Je kunt het later melden als discriminatie.',
+            'Je kunt het later melden als discriminatie (iemand oneerlijk behandelen).',
           ],
           rule: 'geschreven',
         },
@@ -210,8 +210,8 @@ export const zoekenUnit: RuleUnit = {
           situation: 'Mohammed wil daar niets over zeggen. Wat kan Mohammed het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt: "Daar praat ik liever niet over."', best: true, feedback: 'Goed. Hij blijft beleefd en hij hoeft niets te vertellen.' },
-            { id: 'b', text: 'Hij geeft toch antwoord, anders krijgt hij de baan niet.', best: false, feedback: 'Begrijpelijk. Maar hij hoeft dit niet te vertellen.' },
-            { id: 'c', text: 'Hij zegt snel "nee", ook als dat niet waar is.', best: false, feedback: 'Begrijpelijk. Maar dat hoeft niet. Hij mag gewoon niets zeggen.' },
+            { id: 'b', text: 'Hij geeft toch antwoord, anders krijgt hij de baan niet.', best: false, feedback: 'Dat snap ik. Maar hij hoeft dit niet te vertellen.' },
+            { id: 'c', text: 'Hij zegt snel "nee", ook als dat niet waar is.', best: false, feedback: 'Ik snap het. Maar dat hoeft niet. Hij mag gewoon niets zeggen.' },
           ],
           why: 'Een werkgever mag niet vragen of je zwanger bent of kinderen wilt. Vragen over je geloof of gezondheid mogen ook niet. Je hoeft daar geen antwoord op te geven. Je kunt het later melden als discriminatie.',
         },
@@ -220,7 +220,7 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.3.wd2',
           situation: 'Aan het eind vraagt Linda: "Heb jij nog vragen?" Wat zegt Mohammed het beste?',
           options: [
-            { id: 'a', text: 'Nee, dank u. Ik wil u niet lastigvallen.', best: false, feedback: 'Beleefd bedoeld. Maar hier kan het lijken alsof hij niet wil.', say: true },
+            { id: 'a', text: 'Nee, dank u. Ik wil u niet storen.', best: false, feedback: 'Beleefd bedoeld. Maar hier kan het lijken alsof hij niet wil.', say: true },
             { id: 'b', text: 'Ja. Wat zijn de werktijden, en wat verdien ik?', best: true, feedback: 'Goed. Zo laat hij zien dat hij de baan wil.', say: true },
             { id: 'c', text: 'Nee, dat hoor ik wel als ik begin.', best: false, feedback: 'Dan weet hij te weinig als hij moet tekenen.', say: true },
           ],
@@ -287,7 +287,7 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.4.wd1',
           situation: 'De baas wil dat Piotr meteen tekent. Wat kan Piotr het beste doen?',
           options: [
-            { id: 'a', text: 'Hij tekent meteen. Anders krijgt een ander de baan.', best: false, feedback: 'Begrijpelijk. Maar dan weet hij niet wat hij tekent.' },
+            { id: 'a', text: 'Hij tekent meteen. Anders krijgt een ander de baan.', best: false, feedback: 'Dat snap ik. Maar dan weet hij niet wat hij tekent.' },
             { id: 'b', text: 'Hij vraagt of hij het contract mee naar huis mag nemen.', best: true, feedback: 'Goed. Thuis kan hij rustig lezen en vragen stellen.' },
             { id: 'c', text: 'Hij leest alleen het loon en tekent dan.', best: false, feedback: 'Het loon is belangrijk. Maar er staat nog veel meer in.' },
           ],

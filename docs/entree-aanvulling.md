@@ -132,7 +132,7 @@ vragen en een klacht.*
 **Vraag 1 · Wat is het beste?** Waar zet Kevin de nieuwe melk?
 
 - **A.** Vooraan. Dan ziet het schap er vers uit.
-  → *Begrijpelijk. Maar dan blijft de oude melk staan.*
+  → *Dat is logisch. Maar dan blijft de oude melk staan.*
 - **B.** Achteraan. De oude melk blijft vooraan staan.
   → *Goed. Zo gaat de oude melk het eerst weg.*
 - **C.** Ergens waar plek is. Klanten kiezen zelf wel.
@@ -157,7 +157,7 @@ Voor sommige gekoelde producten gelden andere regels ⚖️ (NVWA). Daarom: "vra
 - **A.** Hij zegt sorry en schuift de containers aan de kant.
   → *Goed. Het pad moet vrij zijn voor klanten.*
 - **B.** Hij vraagt de klant om even om te lopen.
-  → *Begrijpelijk. Maar het pad is er voor de klant.*
+  → *Dat is logisch. Maar het pad is er voor de klant.*
 - **C.** Hij werkt snel door. Over 5 minuten is hij klaar.
   → *Dan moet de klant wachten. En iemand kan vallen.*
 
@@ -200,7 +200,7 @@ Breng de klant naar iemand die het wel weet. Dat heet doorverwijzen.
 - **A.** Ze stopt even, kijkt de klant aan en luistert.
   → *Goed. In een winkel gaat de klant voor.*
 - **B.** Ze zegt "moment" en maakt eerst haar doos leeg.
-  → *Begrijpelijk. Maar dan moet de klant lang wachten.*
+  → *Dat is logisch. Maar dan moet de klant lang wachten.*
 - **C.** Ze wijst naar de servicebalie, zonder iets te zeggen.
   → *Dat kan onvriendelijk lijken.*
 
@@ -234,7 +234,7 @@ etiket. Allergenen staan daar extra duidelijk, bijvoorbeeld vet gedrukt ⚖️. 
 - **A.** Hij vraagt rustig: "Mag ik je ID zien?"
   → *Goed. Zonder bewijs van 18 jaar geen alcohol.*
 - **B.** Hij gelooft de jongen. De rij is al lang.
-  → *Begrijpelijk. Maar hij moet de leeftijd echt zien.*
+  → *Dat snap ik. Maar hij moet de leeftijd echt zien.*
 - **C.** Hij zegt dat hij geen bier verkoopt aan jongeren.
   → *Misschien is hij wel 18. Jayden kan beter eerst zijn ID vragen.*
 
@@ -513,7 +513,7 @@ je weggaat. Kijk ook naar de tijd: de klant is maar tot 12.00 uur thuis.
   → *Dan gaat hij misschien twee keer heen en weer.*
 
 **Goed antwoord: B.**
-**Waarom:** Vraag het vóór je begint. Een vraag aan het begin is normaal. Een fout achteraf kost veel
+**Waarom:** Vraag het vóór je begint. Een vraag aan het begin is normaal. Een fout aan het eind kost veel
 meer tijd. Voor jou, en voor de klant.
 
 **Vraag 3 · Waar of niet waar?** "Een goede voorbereiding is: je werk in stappen verdelen, en dan pas beginnen."
@@ -561,25 +561,25 @@ een paar seconden. En het voorkomt fouten. (Toegevoegd 30 oktober 2026: terugzeg
 
 **Goed antwoord: C.**
 **Waarom:** Afmelden is: zeggen wat klaar is, en wat niet. Ook als het niet jouw schuld is. Zeg ook
-wat je opviel. Een vinkje bij iets wat niet klaar is, geeft later problemen.
+wat je zag. Een vinkje bij iets wat niet klaar is, geeft later problemen.
 
 **Vraag 2 · Wat is het beste?** Sanne is klaar. Haar kar staat nog in de gang. Wat kan Sanne het beste doen?
 
 - **A.** Ze laat de kar staan. Morgen komt ze toch weer.
   → *Dan staat hij in de weg. Iemand kan erover vallen.*
-- **B.** Ze ruimt de kar op en zet de middelen weg.
+- **B.** Ze ruimt de kar op en zet de schoonmaakspullen weg.
   → *Goed. Zo kan de volgende meteen beginnen.*
 - **C.** Ze vraagt een collega om de kar op te ruimen.
   → *Dat is haar werk. Haar collega heeft eigen werk.*
 
 **Goed antwoord: B.**
-**Waarom:** Ruim je werkplek op vóór je weggaat. Zet middelen en gereedschap terug op hun plek. Dan kan
-de volgende meteen beginnen. En niemand struikelt.
+**Waarom:** Ruim je werkplek op vóór je weggaat. Zet je spullen en gereedschap terug op hun plek. Dan kan
+de volgende meteen beginnen. En niemand valt erover.
 
 **Vraag 3 · Waar of niet waar?** "Kijkt je leidinggevende je werk na? Dan vertrouwt ze je niet."
 
 **Antwoord: niet waar.**
-**Waarom:** Controleren hoort bij goed werk. Ook ervaren collega's laten hun werk nakijken. Zo vind je
+**Waarom:** Controleren hoort bij goed werk. Ook collega's die het werk al lang doen, laten hun werk nakijken. Zo vind je
 fouten vóór de klant ze ziet. Je mag het ook zelf vragen: "Wil je even kijken?"
 
 **Zo zeg je het:** "Ik ben klaar. Kamer 4 zat op slot. Wil je even kijken?"
@@ -624,7 +624,7 @@ school heb je ook iemand: de stagebegeleider of bpv-begeleider. Die komt vaak ee
 **Vraag 3 · Wat is het beste?** Het bedrijf zegt: "Dat papiertje van school komt later wel. Begin maandag maar." Wat kan Jayden het beste doen?
 
 - **A.** Hij begint maandag. Het papier komt later wel.
-  → *Begrijpelijk. Maar dan telt zijn stage misschien niet mee.*
+  → *Dat is logisch. Maar dan telt zijn stage misschien niet mee.*
 - **B.** Hij vraagt eerst aan school of de POK klaar is.
   → *Goed. Dan weet hij zeker dat alles klopt.*
 - **C.** Hij zoekt meteen een ander stagebedrijf.
@@ -655,7 +655,7 @@ stagemarkt.nl (van SBB).
 **Vraag 1 · Wat is het beste?** Fatima vindt dat niet leuk om te horen. Wat kan Fatima het beste doen?
 
 - **A.** Ze zegt: "Dat klopt niet. Ik weet alles al."
-  → *Begrijpelijk. Maar zo leert ze er niets van.*
+  → *Dat snap ik. Maar zo leert ze er niets van.*
 - **B.** Ze knikt, en ze zegt verder niets.
   → *Dan weet ze nog niet wat ze anders kan doen.*
 - **C.** Ze vraagt: "Wanneer had ik iets moeten vragen?"
@@ -676,7 +676,7 @@ kan beter?" Schrijf het op, bijvoorbeeld in je logboek of portfolio.
 - **A.** Ze bespreekt het met Mark, en met haar begeleider van school.
   → *Goed. Zo kan ze uitleggen waarom.*
 - **B.** Ze tekent het formulier niet, en ze stopt met haar stage.
-  → *Begrijpelijk. Maar dan mist ze misschien haar diploma.*
+  → *Dat snap ik. Maar dan mist ze misschien haar diploma.*
 - **C.** Ze zet een bericht over het hotel op social media.
   → *Dat maakt het vaak erger. Praat er eerst over.*
 
@@ -704,7 +704,7 @@ De school beslist over je examen. Het bedrijf geeft zijn oordeel ⚖️.
 **Vraag 1 · Wat is het beste?** Wat doet Kevin?
 
 - **A.** Hij blijft gewoon gaan. Over 2 maanden is het klaar.
-  → *Begrijpelijk. Maar dan leert hij weinig.*
+  → *Dat is logisch. Maar dan leert hij weinig.*
 - **B.** Hij stopt met de stage, zonder iets te zeggen.
   → *Niet doen. Dan heeft hij misschien een probleem met school.*
 - **C.** Hij praat met zijn praktijkopleider, en ook met school.
@@ -726,7 +726,7 @@ staat vaak in je POK of de stagegids. Weer beter? Meld dat ook bij allebei.
 - **A.** Hij meldt het bij school. Daar is een meldpunt.
   → *Goed. School moet hem dan helpen.*
 - **B.** Hij lacht mee. Hij wil geen gedoe op zijn stage.
-  → *Begrijpelijk. Maar het mag niet, en hij hoeft het niet te accepteren.*
+  → *Dat snap ik. Maar het mag niet, en hij hoeft het niet te accepteren.*
 - **C.** Hij zoekt zelf een nieuwe stage, zonder iets te zeggen.
   → *Dan gaat het bij de volgende stagiair misschien ook zo.*
 
@@ -761,7 +761,7 @@ bij te lange werktijden: de Nederlandse Arbeidsinspectie.
 **Vraag 1 · Wat is het beste?** Wat doet Piotr?
 
 - **A.** Hij geeft zijn DigiD. Het bureau bedoelt het goed.
-  → *Begrijpelijk. Maar dan kunnen zij alles met zijn gegevens.*
+  → *Dat snap ik. Maar dan kunnen zij alles met zijn gegevens.*
 - **B.** Hij zegt nee, en hij vraagt hulp in de bibliotheek.
   → *Goed. Daar helpen ze gratis, en veilig.*
 - **C.** Hij geeft alleen zijn wachtwoord, niet zijn naam.
@@ -812,7 +812,7 @@ de gemeente.
 **Vraag 1 · Wat is het beste?** Esra schrikt van de mail. Wat kan Esra het beste doen?
 
 - **A.** Ze klikt snel op de knop. Ze wil haar loon niet kwijt.
-  → *Begrijpelijk. Maar zo stelen oplichters haar wachtwoord.*
+  → *Dat snap ik. Maar zo stelen oplichters haar wachtwoord.*
 - **B.** Ze stuurt de mail door naar haar collega's.
   → *Dan klikken zij er misschien op.*
 - **C.** Ze klikt niet. Ze opent zelf de app van haar werk.
@@ -832,7 +832,7 @@ hetzelfde wachtwoord.
 **Vraag 3 · Wat is het beste?** Kevin heeft toch op een nep-link geklikt. Hij vulde zijn wachtwoord in. Wat kan Kevin het beste doen?
 
 - **A.** Hij zegt niets. Misschien gebeurt er niets.
-  → *Begrijpelijk. Maar dan kan een oplichter verder.*
+  → *Ik snap het. Maar dan kan een oplichter verder.*
 - **B.** Hij verandert meteen zijn wachtwoord, en meldt het op zijn werk.
   → *Goed. Hoe sneller, hoe beter.*
 - **C.** Hij gooit de mail weg. Dan is het probleem weg.
@@ -869,7 +869,7 @@ geen BSN, wachtwoord of namen van klanten in een chatbot.
 - **A.** Hij gaat met de brief naar HR, en vraagt hoe het zit.
   → *Goed. Een mens van zijn werk weet hoe het echt zit.*
 - **B.** Hij gelooft de chatbot. Die weet het vast.
-  → *Begrijpelijk. Maar AI kan het mis hebben, ook als het zeker klinkt.*
+  → *Dat is logisch. Maar AI kan het mis hebben, ook als het zeker klinkt.*
 - **C.** Hij belt boos naar zijn werk. Hij wil zijn geld.
   → *Eerst checken. Het antwoord van de chatbot kan fout zijn.*
 
@@ -887,7 +887,7 @@ je sneller."
 leidinggevende: "Ik heb snel je inlogcode nodig. Stuur hem nu, het is dringend."
 
 - **A.** Ze stuurt de code. Het is haar baas.
-  → *Begrijpelijk. Maar met AI kan iemand een stem nadoen.*
+  → *Dat snap ik. Maar met AI kan iemand een stem nadoen.*
 - **B.** Ze belt zelf terug, op het nummer dat ze kent.
   → *Goed. Zo weet ze zeker wie het is.*
 - **C.** Ze vraagt in een bericht: "Ben jij het echt?"
@@ -1026,9 +1026,9 @@ geloof is een grondrecht ⚖️.
 **Vraag 3 · Wat is het beste?** Fatima belt over een kamer. De verhuurder hoort haar naam. "Hij is al weg." Een dag later staat de kamer weer online. Wat kan Fatima het beste doen?
 
 - **A.** Ze laat het gaan. Zo gaat het nou eenmaal.
-  → *Begrijpelijk. Maar het mag niet.*
+  → *Ik snap het, maar het mag niet.*
 - **B.** Ze stuurt de verhuurder een boos bericht.
-  → *Begrijpelijk. Maar zo verandert er niets.*
+  → *Dat snap ik. Maar zo verandert er niets.*
 - **C.** Ze schrijft op wat er gebeurde, en meldt het.
   → *Goed. Bij een meldpunt helpen ze haar gratis.*
 
@@ -1059,7 +1059,7 @@ Loket · bij bedreiging: de politie.
 - **A.** Hij laat rustig zijn ID zien.
   → *Goed. Dat moet als de politie erom vraagt.*
 - **B.** Hij zegt: "Ik heb niets gedaan," en loopt weg.
-  → *Begrijpelijk. Maar dan kan hij een boete krijgen.*
+  → *Dat is logisch. Maar dan kan hij een boete krijgen.*
 - **C.** Hij zegt dat zijn ID thuis ligt. Dat is niet waar.
   → *Niet doen. Dan maakt hij het moeilijker voor zichzelf.*
 
@@ -1117,7 +1117,7 @@ energie.*
 - **A.** Plat gemaakt in de bak voor papier en karton.
   → *Goed. Plat past er veel meer in.*
 - **B.** In de bak voor restafval. Dat is het snelst.
-  → *Begrijpelijk. Maar karton hoort apart.*
+  → *Dat is snel, ja. Maar karton hoort apart.*
 - **C.** Naast de bakken. Iemand anders ruimt het wel op.
   → *Dan ligt het in de weg. En het is zijn afval.*
 
@@ -1135,7 +1135,7 @@ afval heen moet.
 **Vraag 3 · Wat is het beste?** Een collega zegt: "Scheiden heeft geen zin. Het gaat toch allemaal op één hoop." Wat kan Mohammed het beste doen?
 
 - **A.** Hij gooit vanaf nu ook alles in één bak.
-  → *Begrijpelijk. Maar op je werk volg je de regels.*
+  → *Ik snap het. Maar op je werk volg je de regels.*
 - **B.** Hij praat er lang met de collega over.
   → *Dat mag. Maar het lost de vraag niet op.*
 - **C.** Hij blijft scheiden, en hij vraagt het aan Henk.
@@ -1166,7 +1166,7 @@ anders doet.
 - **A.** Ze doet uit wat uit mag, en ze meldt de kraan.
   → *Goed. Zo bespaart ze energie en water.*
 - **B.** Ze laat alles zo. Het is niet haar gebouw.
-  → *Begrijpelijk. Maar een lek kost veel water.*
+  → *Dat is logisch. Maar een lek kost veel water.*
 - **C.** Ze probeert de kraan zelf te maken.
   → *Goed bedoeld. Maar dat is niet haar werk.*
 
@@ -1183,7 +1183,7 @@ hebt, en doe de deur dicht. Sluit een deur niet goed? Meld het.
 **Vraag 3 · Wat is het beste?** Piotr werkt in de bouw. Er liggen veel stukken hout over. Hij heeft een stuk van 60 centimeter nodig. Wat kan Piotr het beste doen?
 
 - **A.** Hij zaagt een stuk van een nieuwe plank. Dat gaat sneller.
-  → *Begrijpelijk. Maar dan blijven de restjes liggen.*
+  → *Dat gaat sneller, ja. Maar dan blijven de restjes liggen.*
 - **B.** Hij kijkt eerst of er een restje is dat past.
   → *Goed. Dat scheelt geld en afval.*
 - **C.** Hij neemt de restjes mee naar huis.
@@ -1234,7 +1234,7 @@ ga je pas in als het mag ⚖️. Spuiten mag je alleen met een opleiding en een 
 **Vraag 1 · Wat is het beste?** Piotr wordt duizelig. Zijn rij is nog niet af. Wat kan Piotr het beste doen?
 
 - **A.** Hij maakt eerst zijn rij helemaal af. Daarna gaat hij drinken.
-  → *Begrijpelijk. Maar duizelig zijn is een waarschuwing.*
+  → *Dat is logisch. Maar duizelig zijn is een waarschuwing.*
 - **B.** Hij stopt, drinkt water en zegt het tegen zijn leidinggevende.
   → *Goed. Zo wordt het niet erger.*
 - **C.** Hij gaat even op de grond zitten, tussen de planten.
@@ -1299,9 +1299,9 @@ minimumloon voor 38 uur. Wat kan Esra het beste doen?
 - **A.** Ze laat haar eigen lijst met uren zien, en vraagt om uitleg.
   → *Goed. Met haar lijst laat ze zien wat ze heeft gedaan.*
 - **B.** Ze zegt niets. Bij stukloon is weinig loon in het begin normaal.
-  → *Begrijpelijk. Maar ook bij stukloon geldt het minimumloon per uur.*
+  → *Dat snap ik. Maar ook bij stukloon geldt het minimumloon per uur.*
 - **C.** Ze gaat sneller werken en slaat haar pauzes over.
-  → *Begrijpelijk. Maar pauzes heeft ze nodig, en haar loon moet nu al kloppen.*
+  → *Ik snap het. Maar pauzes heeft ze nodig, en haar loon moet nu al kloppen.*
 
 **Goed antwoord: A.**
 **Waarom:** Ook bij stukloon moet je minstens het minimumloon per uur krijgen ⚖️. Hoeveel dat is,
@@ -1318,7 +1318,7 @@ Schrijf ook je kratten of rijen op. Dan kun je je loonstrook controleren.
 geld van haar loon af. Ze weet niet waarvoor. Wat kan Esra het beste doen?
 
 - **A.** Ze zegt niets. Anders raakt ze misschien haar kamer kwijt.
-  → *Begrijpelijk. Maar ze mag altijd vragen waar het geld voor is.*
+  → *Dat snap ik. Maar ze mag altijd vragen waar het geld voor is.*
 - **B.** Ze vraagt het uitzendbureau wat er van haar loon af gaat.
   → *Goed. Zo weet ze waar ze voor betaalt.*
 - **C.** Ze stopt meteen met werken en zoekt een ander huis.
