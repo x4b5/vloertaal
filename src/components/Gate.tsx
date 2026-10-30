@@ -1,4 +1,4 @@
-import { useId, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { CONTACT_EMAIL } from '../content/about';
@@ -35,6 +35,10 @@ function PasswordForm({ onAccess, accept, lang, labelHidden = false, accepted = 
   /** Bumped on every wrong try, so the shake plays again. */
   const [tries, setTries] = useState(0);
   const id = useId();
+  // The field is drawn anew on a wrong try (the shake, keyed on `tries`): the focus goes back into
+  // it, so Enter, the error read with it (aria-describedby) and typing again need no Tab from the top.
+  const field = useRef<HTMLInputElement>(null);
+  useEffect(() => { if (tries) field.current?.focus({ preventScroll: true }); }, [tries]);
   // Untouched since the code was accepted: the button goes on without typing it again.
   const kept = Boolean(accepted) && value === initial;
 
@@ -69,6 +73,7 @@ function PasswordForm({ onAccess, accept, lang, labelHidden = false, accepted = 
       </label>
       <div key={tries} className={`pw-field ${error ? 'pw-wrong' : ''}`}>
         <input
+          ref={field}
           id={id}
           className="pw-input"
           type="text"

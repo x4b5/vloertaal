@@ -228,7 +228,7 @@ h2 { font-size: 1.25rem; }
 .btn-primary { background: var(--yellow); color: var(--on-yellow); border-color: #1e2226; }
 .btn-primary:hover:not(:disabled) { background: #ffcd3a; }
 .btn-dark { background: var(--solid); color: var(--on-solid); border-color: var(--solid); }
-.btn:disabled { background: var(--disabled-bg); color: var(--disabled-ink); border-color: var(--line); }
+.btn:disabled, .btn[aria-disabled='true'] { background: var(--disabled-bg); color: var(--disabled-ink); border-color: var(--line); }
 /* The square end block ("Check ✓", "Continue ›"); the label stays centred in the button. */
 .btn-go { padding-inline: 72px; }
 .btn-block {
@@ -237,7 +237,7 @@ h2 { font-size: 1.25rem; }
 }
 .btn-primary .btn-block { background: #1e2226; color: var(--yellow); }
 .btn-dark .btn-block { background: var(--yellow); color: #1e2226; }
-.btn:disabled .btn-block { background: var(--line); color: var(--disabled-ink); }
+.btn:disabled .btn-block, .btn[aria-disabled='true'] .btn-block { background: var(--line); color: var(--disabled-ink); }
 /* After Check, Continue takes the outcome's colour: green, brick red, or ink for a situation.
    No colour transition here (yellow → green would pass through olive): the class swaps at
    120 ms and the button gives one small press (.98 → 1). */
@@ -572,7 +572,7 @@ h2 { font-size: 1.25rem; }
 /* The question takes focus on a new exercise (for screen readers); it is not a control, so no ring. */
 .prompt:focus { outline: none; }
 /* A screen's heading gets the focus after a screen change (App.tsx): no ring around a heading. */
-h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus { outline: none; }
+h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head[tabindex="-1"]:focus { outline: none; }
 
 /* Kraft tag above the question: what kind of exercise, and where you are in the lesson. */
 .ex-tag { display: flex; align-items: center; gap: 12px; margin: 0 0 6px; }
@@ -946,7 +946,8 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus { outline: none;
   width: 100%; padding: 16px; font-size: 1.3rem; font-weight: 600;
   border: 2px solid var(--ink-3); border-radius: var(--radius); background: var(--input-bg); color: var(--ink);
 }
-.type-input:focus { outline: none; border-color: var(--edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 55%, transparent); }
+/* The yellow glow alone is too faint on concrete (3:1, WCAG 1.4.11 / 2.4.7): the focus ring as everywhere else. */
+.type-input:focus { outline: 3px solid var(--focus); outline-offset: 2px; border-color: var(--edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 55%, transparent); }
 
 /* Phrasebook */
 .phrases { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }

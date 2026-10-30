@@ -16,6 +16,7 @@ import { ChromeBack } from './ChromeBack';
 import { LogoMark } from './Logo';
 import { PocketIcon } from './Offline';
 import { groupByTheme } from '../content/themes';
+import { useFocusWhenLost } from './useFocusLost';
 import { ThemeHeadRow } from './Themes';
 
 /**
@@ -143,8 +144,12 @@ function NamePage({ name, lang, onDone }: { name: string; lang?: HelpLanguage; o
   const id = useId();
   const [value, setValue] = useState(name);
   const rtl = lang?.dir === 'rtl';
+  // Comes in the place of the button tapped ("Change name", or the certificate row): the focus goes
+  // to the question (not to the field, so no phone keyboard pops up by itself), then Tab to the field.
+  const page = useRef<HTMLDivElement>(null);
+  useFocusWhenLost(page, 'name', '.cert-name-head');
   return (
-    <div className="screen cert-name-page">
+    <div className="screen cert-name-page" ref={page}>
       <form className="cert-name-form" onSubmit={(e) => { e.preventDefault(); if (value.trim()) onDone(value); }}>
         <span className="cert-name-icon" aria-hidden><CertIcon size={40} /></span>
         <label className="keep-head cert-name-head" htmlFor={id} dir={rtl ? 'rtl' : undefined}>
@@ -226,6 +231,7 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
   // Shared where the phone can share files, else (or when sharing fails) saved as a PNG, like the
   // pocket card. Only a picture that could not be drawn at all opens the print dialog.
   const share = async () => {
+    if (busy) return;
     setBusy(true);
     setSaved(false);
     try {
@@ -239,9 +245,12 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
     }
   };
 
+  // Back from the name page (same screen, other page): the focus to the certificate's title.
+  const view = useRef<HTMLDivElement>(null);
+  useFocusWhenLost(view, asking, 'h1');
   if (asking) return <NamePage name={name} lang={lang} onDone={done} />;
   return (
-    <div className="screen cert-screen">
+    <div className="screen cert-screen" ref={view}>
       <div className="screen-head" dir={rtl ? 'rtl' : undefined}>
         <ChromeBack lang={lang} onBack={onBack} />
         <h1>
@@ -253,7 +262,7 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
         <NlPair nlFirst nl={CERT_NOTE} text={ui('certPractice', lang)} />
       </p>
       <div className="cert-actions cert-actions-one">
-        <button type="button" className="btn btn-primary cert-btn cert-share" onClick={share} disabled={busy} dir={rtl ? 'rtl' : undefined}>
+        <button type="button" className="btn btn-primary cert-btn cert-share" onClick={share} aria-disabled={busy || undefined} dir={rtl ? 'rtl' : undefined}>
           <ShareGlyph />
           <span className="cert-btn-text">
             <NlPair nlFirst nl="Bewaar of deel" className="cert-btn-gloss" text={ui('certSaveShare', lang)} />

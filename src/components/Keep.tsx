@@ -14,6 +14,7 @@ import { Character } from './Characters';
 import { AlertIcon, CheckIcon, ChevronIcon, CloseIcon } from './Icons';
 import { ChromeHead } from './ChromeBack';
 import { LogoMark } from './Logo';
+import { useFocusWhenLost } from './useFocusLost';
 
 /** The reminder's line in the help language (none in the work-rules track: its screens are Dutch). */
 export function reminderHelp(lang?: HelpLanguage): string | undefined {
@@ -496,6 +497,9 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
   };
   const remind = (time: string, action: KeepAction) => { addReminder(time, lang); setAdded(time); go(action); };
   const [short] = useState(() => typeof window !== 'undefined' && window.innerHeight < 720);
+  // Each page comes in the place of the button that was tapped: the focus goes to its title.
+  const root = useRef<HTMLDivElement>(null);
+  useFocusWhenLost(root, step, 'h1');
   const hero = (mood: 'wave' | 'cheer') => <div className="keep-hero" aria-hidden><Character who="bram" mood={mood} size={short ? 72 : 112} /></div>;
 
   let body;
@@ -607,7 +611,7 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
     );
   }
   return (
-    <div className="player milestone-screen keep-screen keep3">
+    <div className="player milestone-screen keep-screen keep3" ref={root}>
       <div className={`player-body milestone keep3-page keep3-step-${step}`}>{body}</div>
     </div>
   );
