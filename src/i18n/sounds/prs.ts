@@ -13,9 +13,9 @@ const t: CultureTranslation = {
     'w.kl.ui': 'پیاز',
     'w.kl.ei': 'تخم مرغ',
     's.shortlong.1': 'مرد به مهتاب نگاه می‌کند.',
-    's.shortlong.2': 'پیازها را در خریطه بگذار.',
+    's.shortlong.2': 'پیازها را در خریطه بگذارید.', // nagelezen AI 31 okt
     's.shortlong.3': 'دکان ساعت نه باز می‌شود.',
-    'c.shortlong.q': 'تخم مرغ می‌خواهی؟',
+    'c.shortlong.q': 'تخم مرغ می‌خواهید؟', // nagelezen AI 31 okt
     'c.shortlong.a': 'نی، تشکر. نان خورده‌ام.',
     'c.shortlong.a.why': 'تخم مرغ تعارف می‌شود: یک «نی» مؤدبانه، با دلیل.',
     'l.roundsounds': 'uu، oe و eu',
@@ -25,8 +25,8 @@ const t: CultureTranslation = {
     'w.kl.boer': 'دهقان',
     'w.kl.deur': 'دروازه (در)',
     'w.kl.duur': 'قیمت',
-    's.roundsounds.1': 'مهره را محکم ببند.',
-    's.roundsounds.2': 'لطفاً دروازه را ببند.',
+    's.roundsounds.1': 'مهره را محکم ببندید.', // nagelezen AI 31 okt
+    's.roundsounds.2': 'لطفاً دروازه را ببندید.', // nagelezen AI 31 okt
     's.roundsounds.3': 'آن کرتی بسیار قیمت است.',
     'c.roundsounds.q': 'دروازه باز است؟',
     'c.roundsounds.a': 'نی، بسته است.',
@@ -38,12 +38,12 @@ const t: CultureTranslation = {
     'w.kl.koud': 'سرد',
     'w.kl.hoed': 'کلاه',
     'w.kl.goed': 'خوب',
-    's.pbgk.1': 'کثافات را در سطل بینداز.',
+    's.pbgk.1': 'کثافات را در سطل بیندازید.', // nagelezen AI 31 okt
     's.pbgk.2': 'در دهلیز سرد است.',
-    's.pbgk.3': 'خوب انجامش می‌دهی!',
-    'c.pbgk.q': 'چطور هستی؟',
+    's.pbgk.3': 'خوب انجامش می‌دهید!', // nagelezen AI 31 okt
+    'c.pbgk.q': 'چطور هستید؟', // nagelezen AI 31 okt
     'c.pbgk.a': 'خوب هستم، ولی سردم است.',
-    'c.pbgk.a.why': 'حال را می‌پرسند: یک جواب، و این‌که چه احساس داری.',
+    'c.pbgk.a.why': 'حال را می‌پرسند: یک جواب، و این‌که چه احساس دارید.', // nagelezen AI 31 okt
   },
 };
 export default t;
