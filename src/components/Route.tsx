@@ -166,7 +166,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
           return (
             <li
               key={lesson.id}
-              className={`bay bay-${css} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''}`}
+              className={`bay bay-${css} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''} ${state === 'now' ? 'bay-with-char' : ''}`}
             >
               <span className="bay-marker" aria-hidden>{state === 'done' ? <CheckIcon size={18} /> : i + 1}</span>
               {state === 'now' ? (
