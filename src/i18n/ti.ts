@@ -83,8 +83,8 @@ const lang: HelpLanguageSource = {
     chooseSector: { m: 'ኣበይ ኢኻ ትሰርሕ?', f: 'ኣበይ ኢኺ ትሰርሒ?' },
     // nieuw, nog nalezen (land: Nederland of België)
     countryTitle: { m: 'ኣብ ኣየናይ ሃገር ኢኻ ትሰርሕ?', f: 'ኣብ ኣየናይ ሃገር ኢኺ ትሰርሒ?' },
-    // TODO vertalen
-    countryHint: 'The work rules in Vloertaal are about the Netherlands. In Belgium many rules are different. This stays on your phone. We send it nowhere.',
+    // nieuw, nog nalezen
+    countryHint: { m: "ሕግታት ስራሕ ኣብ Vloertaal ብዛዕባ ኔዘርላንድ እዮም። ኣብ ቤልጅዩም ብዙሓት ሕግታት ይፈላለዩ እዮም። እዚ ኣብ ተሌፎንካ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።", f: "ሕግታት ስራሕ ኣብ Vloertaal ብዛዕባ ኔዘርላንድ እዮም። ኣብ ቤልጅዩም ብዙሓት ሕግታት ይፈላለዩ እዮም። እዚ ኣብ ተሌፎንኪ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።" },
     countryNl: 'ኔዘርላንድ',
     countryBe: 'ቤልጅዩም (ፍላንደርስ)',
     tipsNote: 'እዞም ምኽርታት ብዛዕባ ስራሕ ኣብ ኔዘርላንድ እዮም። ሓፈሻዊ ሓበሬታ እዩ፡ ሕጋዊ ምኽሪ ኣይኮነን።',
@@ -99,7 +99,7 @@ const lang: HelpLanguageSource = {
     sectorCare: 'ክንክን',
     sectorHospitality: 'ቤት ብልዕን ሆቴልን',
     sectorCleaning: 'ጽሬት',
-    sectorHorticulture: 'Horticulture', // TODO vertalen
+    sectorHorticulture: "ሕርሻ ኣታኽልትን ገዛ መስታወትን", // nieuw, nog nalezen
     sound: 'ድምጺ',
     soundOn: 'ድምጺ ክፉት',
     withoutSound: 'ብዘይ ድምጺ',
@@ -246,7 +246,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'ዕጹው',
     sectorGroupMake: 'ምስራሕን ምጽዓንን',
     sectorGroupCare: 'ክንክንን ኣገልግሎትን',
-    sectorGroupOther: 'Something else', // TODO vertalen
+    sectorGroupOther: "ካልእ ነገር", // nieuw, nog nalezen
     voiceWoman: 'ድምጺ ሰበይቲ',
     voiceMan: 'ድምጺ ሰብኣይ',
     writingPick: 'ቃል ምምራጽ',

@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'Ții un ochișor pe velă?',
     'zg.zeil.m': 'Ai grijă ca totul să meargă bine și în siguranță?',
     'zg.zeil.s': 'Șefa ta trebuie să plece puțin. Ea spune: „Hou je een oogje in het zeil?” Ce vrea să spună?',
-    'zg.zeil.o1': 'Ai grijă ca totul să meargă bine cât timp ea lipsește.',
+    'zg.zeil.o1': "Fii atent cât timp ea lipsește.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zeil.o2': 'Du-te și uită-te la o barcă.',
     'zg.zeil.o3': 'Închide ochii puțin.',
     'zg.zeil.w': { m: '„Een oogje in het zeil houden” înseamnă: să ai grijă ca totul să meargă bine. Nu ești sigur la ce să fii atent? Întreab-o înainte să plece.', f: '„Een oogje in het zeil houden” înseamnă: să ai grijă ca totul să meargă bine. Nu ești sigură la ce să fii atentă? Întreab-o înainte să plece.' },
@@ -99,8 +99,8 @@ const t: CultureTranslation = {
     'zg.oefening.o2': 'Trebuie să mergi la o lecție de artă.',
     'zg.oefening.o3': 'Oprește-te, e prea greu pentru tine.',
     'zg.oefening.w': 'Acesta e un proverb: cu exercițiu faci totul tot mai bine. E adevărat și când înveți olandeză.',
-    'zg.zwartwit.lit': 'Cere-o negru pe alb.',
-    'zg.zwartwit.m': 'Cere-o pe hârtie, în scris.',
+    'zg.zwartwit.lit': "Ai grijă s-o ai negru pe alb.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zwartwit.m': "Ai grijă s-o ai pe hârtie, în scris.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.zwartwit.s': 'Șeful tău îți promite un salariu mai mare. Colega ta spune: „Zorg dat je het zwart op wit hebt.” Ce vrea să spună?',
     'zg.zwartwit.o1': 'Cere promisiunea în scris.',
     'zg.zwartwit.o2': 'Cere hârtie neagră și albă.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'Timpul e bani.',
     'zg.tijdgeld.m': 'Timpul e prețios: nu-l pierde.',
     'zg.tijdgeld.s': 'Șeful tău vrea ca camionul să fie încărcat repede. El spune: „Tijd is geld.” Ce vrea să spună?',
-    'zg.tijdgeld.o1': 'Timpul de lucru costă bani, așa că lucrează fără să pierzi timpul.',
+    'zg.tijdgeld.o1': "Lucrează repede, nu pierde timpul.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
     'zg.tijdgeld.o2': 'Primești bani pentru că vii târziu.',
     'zg.tijdgeld.o3': 'Ceasul e foarte scump.',
     'zg.tijdgeld.w': 'Expresia asta înseamnă că timpul e prețios. Nu e niciodată un motiv pentru muncă nesigură sau ore neplătite.',
