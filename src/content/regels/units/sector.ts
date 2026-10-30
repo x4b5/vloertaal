@@ -1232,3 +1232,344 @@ export const kasUnit: RuleUnit = {
     },
   ],
 };
+
+// Sector techniek · Werken in de techniek (les TE.1, TE.2; Entree-profiel metaal-, elektro- en
+// installatietechniek, docs/werkregels-curriculum.md deel 7, 30 oktober 2026). Not in the sector
+// choice yet (src/content/sectors.ts, SECTOR_UNITS_WITHOUT_CARD): its card comes with the Taal unit.
+export const techniekUnit: RuleUnit = {
+  id: 'r.techniek',
+  title: 'Werken in de techniek',
+  emoji: '🔧',
+  color: '#5c6f82',
+  lessons: [
+    {
+      // Les TE.1 · Gereedschap, vonken en lawaai
+      id: 'r.l.techniek.1',
+      title: 'Gereedschap, vonken en lawaai',
+      goal: 'Je beschermt je ogen en oren bij slijpen en boren. Je houdt je werkplek netjes.',
+      remember: 'Slijpen, boren of zagen? Eerst je bril en gehoorbescherming op.',
+      // Wie kan je helpen: je leidinggevende of chef in de werkplaats · je praktijkopleider · de
+      //   preventiemedewerker · de Nederlandse Arbeidsinspectie.
+      help: ['leidinggevende', 'praktijkopleider', 'arbeidsinspectie'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.techniek.1.sc1',
+          picture: 'Sanne in een metaalwerkplaats, bij een slijpmachine. Op de werkbank liggen kleine metalen spanen.',
+          lines: [
+            'Sanne loopt stage in een metaalwerkplaats.',
+            'Ze moet een stuk ijzer kort slijpen.',
+            'Het is maar 1 minuut werk.',
+            'Haar veiligheidsbril ligt in haar kluisje.',
+          ],
+        },
+        // ⚖️ check: Je werkgever geeft deze spullen gratis ⚖️ (persoonlijke beschermingsmiddelen,
+        //   Arbobesluit art. 8.2 en 8.3: kosteloos).
+        // ⚖️ check: Bij hard lawaai ook gehoorbescherming ⚖️ (Arbobesluit art. 6.8 en 6.9: vanaf
+        //   80 dB(A) aanbieden, vanaf 85 dB(A) dragen).
+        {
+          kind: 'rule',
+          id: 'r.l.techniek.1.ru1',
+          emoji: '🥽',
+          title: 'Slijpen, boren of zagen? Eerst je bril en gehoorbescherming op.',
+          body: [
+            'Bij slijpen, boren en zagen vliegen er vonken en spanen.',
+            'Draag dan een veiligheidsbril. Bij hard lawaai ook gehoorbescherming.',
+            'Je werkgever geeft deze spullen gratis.',
+            'Spanen zijn scherp. Ruim ze op met een borstel, niet met je hand.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: Je werkgever geeft hem gratis ⚖️ (Arbobesluit art. 8.3).
+        {
+          kind: 'whatdo',
+          id: 'r.l.techniek.1.wd1',
+          situation: 'Sanne wil snel beginnen. Wat kan Sanne het beste doen?',
+          options: [
+            { id: 'a', text: 'Ze slijpt even zonder bril. Het is maar 1 minuut.', best: false, feedback: 'Dat snap ik. Maar een vonk in je oog gaat heel snel.' },
+            { id: 'b', text: 'Ze houdt haar hoofd ver weg van de slijpschijf.', best: false, feedback: 'Goed bedoeld. Maar vonken en spanen vliegen ver.' },
+            { id: 'c', text: 'Ze haalt eerst haar bril uit haar kluisje.', best: true, feedback: 'Goed. Die minuut is het waard.' },
+          ],
+          why: 'Bij slijpen, boren en zagen vliegen er vonken en spanen. Die kunnen je oog beschadigen, in 1 seconde. Draag altijd je veiligheidsbril. Je werkgever geeft hem gratis.',
+        },
+        // ⚖️ check: Is het lawaai hard? Dan moet je gehoorbescherming dragen ⚖️ (Arbobesluit art. 6.9:
+        //   vanaf 85 dB(A)).
+        // ⚖️ check: Je werkgever geeft die gratis ⚖️ (Arbobesluit art. 6.8).
+        {
+          kind: 'truefalse',
+          id: 'r.l.techniek.1.tf1',
+          statement: 'Bij hard lawaai mag je zelf kiezen of je gehoorbescherming draagt.',
+          answer: false,
+          why: 'Is het lawaai hard? Dan moet je gehoorbescherming dragen. Je werkgever geeft die gratis. Gehoorschade gaat niet meer over. Je merkt het vaak pas na jaren.',
+        },
+        {
+          kind: 'whatdo',
+          id: 'r.l.techniek.1.wd2',
+          situation: 'Op de werkbank liggen veel spanen. Sanne wil ze weghalen. Wat kan Sanne het beste doen?',
+          options: [
+            { id: 'a', text: 'Ze veegt ze weg met een borstel of een kwast.', best: true, feedback: 'Goed. Zo snijdt ze haar handen niet.' },
+            { id: 'b', text: 'Ze blaast ze weg met de luchtslang.', best: false, feedback: 'Dat is logisch. Maar dan vliegen de spanen alle kanten op.' },
+            { id: 'c', text: 'Ze veegt ze met haar hand in de bak.', best: false, feedback: 'Spanen zijn scherp. Zo snijdt ze in haar hand.' },
+          ],
+          why: 'Metalen spanen zijn scherp en soms heet. Pak ze niet met je blote hand. Gebruik een borstel of een kwast. Blaas ze niet weg met de luchtslang. Dan vliegen ze in iemands oog.',
+        },
+        // ⚖️ check: Dat heet heet werk ⚖️ (vonken kunnen ver vliegen en brand geven;
+        //   Verbond van Verzekeraars, "Brandgevaarlijke werkzaamheden"; vaak een werkvergunning en een
+        //   brandwacht of nacontrole).
+        {
+          kind: 'truefalse',
+          id: 'r.l.techniek.1.tf2',
+          statement: 'Vonken van slijpen of lassen kunnen een brand geven.',
+          answer: true,
+          why: 'Vonken vliegen ver. Ze kunnen karton, hout of verf laten branden. Dat heet heet werk. Haal eerst weg wat kan branden. Vraag of er een blusser klaarstaat. Soms blijft iemand na het werk nog kijken.',
+        },
+        { kind: 'model', id: 'r.l.techniek.1.mo1', context: 'Je kunt je veiligheidsbril niet vinden.', nl: 'Ik heb geen veiligheidsbril. Waar kan ik er een halen?' },
+      ],
+    },
+    {
+      // Les TE.2 · Stroom: nooit zomaar
+      id: 'r.l.techniek.2',
+      title: 'Stroom: nooit zomaar',
+      goal: 'Je werkt niet aan iets dat onder stroom staat. Je meldt een kapotte kabel.',
+      remember: 'Werk nooit aan iets onder stroom. Eerst moet de stroom eraf, door iemand die dat mag.',
+      // Wie kan je helpen: je leidinggevende (die zegt wie aan elektra mag werken) · een bevoegde
+      //   collega · de Nederlandse Arbeidsinspectie.
+      help: ['leidinggevende', 'collega', 'arbeidsinspectie'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.techniek.2.sc1',
+          picture: 'Mohammed in een gang bij een open meterkast. Uit een stopcontact hangen losse draden.',
+          lines: [
+            'Mohammed werkt bij een onderhoudsbedrijf.',
+            'Hij moet een stopcontact vervangen bij een klant.',
+            'De klant zegt: "De stroom is er al af, hoor."',
+            'Henk is vandaag bij een andere klus.',
+          ],
+        },
+        // ⚖️ check: Werk alleen aan stroom als je het geleerd hebt, en als het mag ⚖️ (Arbobesluit
+        //   art. 3.5 en NEN 3140: alleen voldoende onderricht of vakbekwaam, en aangewezen door de
+        //   werkgever).
+        // ⚖️ check: Eerst gaat de stroom eraf. Iemand meet of het echt uit is ⚖️ (NEN 3140, de vijf
+        //   stappen: vrijschakelen, beveiligen tegen inschakelen, spanningsloosheid vaststellen,
+        //   aarden, afschermen).
+        // ⚖️ check: Er komt een slot of bordje bij de meterkast ⚖️ (NEN 3140: beveiligen tegen
+        //   herinschakelen).
+        {
+          kind: 'rule',
+          id: 'r.l.techniek.2.ru1',
+          emoji: '⚡',
+          title: 'Werk nooit aan iets onder stroom. Eerst moet de stroom eraf, door iemand die dat mag.',
+          body: [
+            'Werk alleen aan stroom als je het geleerd hebt, en als het mag.',
+            'Eerst gaat de stroom eraf. Iemand meet of het echt uit is.',
+            'Er komt een slot of bordje bij de meterkast. Zo zet niemand de stroom weer aan.',
+            'Een kapotte kabel of stekker? Niet gebruiken, en melden.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: Werk alleen aan stroom als je het geleerd hebt, en als het mag ⚖️ (NEN 3140).
+        {
+          kind: 'whatdo',
+          id: 'r.l.techniek.2.wd1',
+          situation: 'De klant zegt dat de stroom eraf is. Wat kan Mohammed het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij begint meteen. De klant weet het vast wel.', best: false, feedback: 'Dat snap ik. Maar misschien zette de klant de verkeerde knop uit.' },
+            { id: 'b', text: 'Hij belt Henk, en vraagt wie meet of het uit is.', best: true, feedback: 'Goed. Eerst zeker weten, dan pas werken.' },
+            { id: 'c', text: 'Hij pakt de draden alleen vast met handschoenen aan.', best: false, feedback: 'Gewone werkhandschoenen beschermen niet tegen stroom.' },
+          ],
+          why: 'Een klant zet soms de verkeerde knop uit. Werk alleen aan stroom als je het geleerd hebt, en als het mag. Eerst gaat de stroom eraf. Dan meet iemand of het echt uit is.',
+        },
+        {
+          kind: 'truefalse',
+          id: 'r.l.techniek.2.tf1',
+          statement: 'Een kabel met een klein scheurtje mag je nog even gebruiken.',
+          answer: false,
+          why: 'Een kapotte kabel of stekker is gevaarlijk. Je kunt een schok krijgen, of er komt brand. Gebruik hem niet. Leg hem apart, en meld het. Dan kan iemand hem maken of weggooien.',
+        },
+        // ⚖️ check: Je leidinggevende zegt wie aan stroom mag werken ⚖️ (NEN 3140: de werkgever wijst
+        //   aan; daar hoort een opleiding bij).
+        {
+          kind: 'whoask',
+          id: 'r.l.techniek.2.wa1',
+          question: 'Je moet aan een machine werken. Je weet niet of je aan de stroom mag komen. Wie vraag je het?',
+          options: [
+            { id: 'a', who: 'collega', best: false, feedback: 'Een collega weet het misschien niet zeker. Vraag het je leidinggevende.' },
+            { id: 'b', who: 'arbeidsinspectie', best: false, feedback: 'De Arbeidsinspectie controleert bedrijven. Vraag het eerst op je werk.' },
+            { id: 'c', who: 'leidinggevende', best: true, feedback: 'Goed. Je leidinggevende weet wie dat mag.' },
+          ],
+          why: 'Je leidinggevende zegt wie aan stroom mag werken. Daar is een opleiding voor nodig. Weet je het niet zeker? Vraag het altijd eerst.',
+        },
+        { kind: 'model', id: 'r.l.techniek.2.mo1', context: 'Je moet een stopcontact vervangen bij een klant.', nl: 'Is de stroom er echt af? Wie kan dat even meten?' },
+      ],
+    },
+  ],
+};
+
+// Sector garage · Werken in de garage (les M.1, M.2; Entree-profiel mobiliteitsbranche,
+// docs/werkregels-curriculum.md deel 7, 30 oktober 2026). Not in the sector choice yet, like
+// techniek (src/content/sectors.ts, SECTOR_UNITS_WITHOUT_CARD).
+export const werkplaatsUnit: RuleUnit = {
+  id: 'r.werkplaats',
+  title: 'Werken in de garage',
+  emoji: '🚗',
+  color: '#9c4a2f',
+  lessons: [
+    {
+      // Les M.1 · Veilig in de werkplaats
+      id: 'r.l.werkplaats.1',
+      title: 'Veilig in de werkplaats',
+      goal: 'Je gaat alleen onder een auto die goed vaststaat. Je ruimt olie meteen op.',
+      remember: 'Onder een auto? Alleen als hij goed vaststaat, op de brug of op bokken.',
+      // Wie kan je helpen: je chef in de werkplaats · je praktijkopleider · de Nederlandse
+      //   Arbeidsinspectie.
+      help: ['leidinggevende', 'praktijkopleider', 'arbeidsinspectie'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.werkplaats.1.sc1',
+          picture: 'Malik in een garage. Een auto staat omhoog op een krik. Naast de auto ligt een plas olie.',
+          lines: [
+            'Malik is 17. Hij loopt stage in een garage.',
+            'Een auto staat omhoog op een krik.',
+            'Malik moet eronder kijken of er iets lekt.',
+            'Naast de auto ligt een plas olie.',
+          ],
+        },
+        // ⚖️ check: Ga pas onder een auto als hij op de brug of op bokken staat ⚖️ (Arbobesluit
+        //   art. 7.2 en 7.4 arbeidsmiddelen; Arbocatalogus motorvoertuigenbranche: een krik alleen
+        //   om te heffen, daarna ondersteunen).
+        // ⚖️ check: Oude olie, accu's en vuile doeken zijn gevaarlijk afval ⚖️ (Wet milieubeheer
+        //   art. 10.37; Activiteitenbesluit: apart houden en afgeven aan een erkende inzamelaar).
+        {
+          kind: 'rule',
+          id: 'r.l.werkplaats.1.ru1',
+          emoji: '🛠️',
+          title: 'Onder een auto? Alleen als hij goed vaststaat, op de brug of op bokken.',
+          body: [
+            'Een krik is alleen om de auto op te tillen.',
+            'Ga pas onder een auto als hij op de brug of op bokken staat.',
+            'Gemorste olie ruim je meteen op. Dan glijdt niemand uit.',
+            "Oude olie, accu's en vuile doeken zijn gevaarlijk afval. Die gaan apart.",
+          ],
+          rule: 'geschreven',
+        },
+        {
+          kind: 'whatdo',
+          id: 'r.l.werkplaats.1.wd1',
+          situation: 'Malik wil snel onder de auto kijken. Wat kan Malik het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij kruipt er snel onder. Het duurt maar even.', best: false, feedback: 'Dat is logisch. Maar een krik kan wegzakken.' },
+            { id: 'b', text: 'Hij zet een tweede krik naast de eerste.', best: false, feedback: 'Goed bedoeld. Maar ook twee krikken staan niet vast.' },
+            { id: 'c', text: 'Hij vraagt of de auto eerst op bokken kan.', best: true, feedback: 'Goed. Op bokken staat de auto vast.' },
+          ],
+          why: 'Een krik is alleen om de auto op te tillen. Een krik kan wegzakken of wegglijden. Ga pas onder een auto als hij op de brug of op bokken staat. Weet je niet hoe dat moet? Vraag het eerst.',
+        },
+        {
+          kind: 'truefalse',
+          id: 'r.l.werkplaats.1.tf1',
+          statement: 'Gemorste olie op de vloer ruim je meteen op.',
+          answer: true,
+          why: 'Olie op de vloer is erg glad. Iemand kan uitglijden en vallen. Ruim het meteen op, met korrels of een doek. De vuile doeken gaan in de bak voor gevaarlijk afval.',
+        },
+        // ⚖️ check: Oude olie, remvloeistof en accu's zijn gevaarlijk afval ⚖️ (Wet milieubeheer;
+        //   lozen in het riool mag niet, Activiteitenbesluit).
+        {
+          kind: 'whatdo',
+          id: 'r.l.werkplaats.1.wd2',
+          situation: 'Malik heeft oude olie uit een auto gehaald. Wat kan Malik het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij giet de olie in de put buiten.', best: false, feedback: 'Dan komt de olie in het water. Dat mag niet.' },
+            { id: 'b', text: 'Hij doet de olie in een fles, bij het gewone afval.', best: false, feedback: 'Olie is gevaarlijk afval. Dat hoort niet bij het gewone afval.' },
+            { id: 'c', text: 'Hij giet de olie in het vat voor oude olie.', best: true, feedback: 'Goed. Een bedrijf haalt de olie dan veilig op.' },
+          ],
+          why: "Oude olie, remvloeistof en accu's zijn gevaarlijk afval. Ze gaan niet in de put, en niet bij het gewone afval. In de garage staan aparte vaten en bakken. Vraag waar ze staan.",
+        },
+        { kind: 'model', id: 'r.l.werkplaats.1.mo1', context: 'De auto staat alleen op een krik.', nl: 'De auto staat nog op de krik. Kunnen we hem eerst op bokken zetten?' },
+      ],
+    },
+    {
+      // Les M.2 · De werkorder en de klant
+      id: 'r.l.werkplaats.2',
+      title: 'De werkorder en de klant',
+      goal: 'Je leest wat er op de werkorder staat. Extra werk doe je alleen als de klant ja zegt.',
+      remember: 'Extra werk? Eerst moet de klant ja zeggen.',
+      // Wie kan je helpen: je chef of de receptie van de garage (die belt de klant) · je
+      //   praktijkopleider.
+      help: ['leidinggevende', 'praktijkopleider'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.werkplaats.2.sc1',
+          picture: 'Kevin in een garage bij een auto op de brug. In zijn hand een werkorder.',
+          lines: [
+            'Kevin werkt in een garage.',
+            'Een klant brengt haar auto voor nieuwe banden.',
+            'Kevin ziet ook dat de remmen bijna op zijn.',
+            'De klant is al naar haar werk.',
+          ],
+        },
+        // ⚖️ check: Doe extra werk pas als de klant ja zegt ⚖️ (BOVAG-voorwaarden: meer werk dan
+        //   afgesproken alleen na overleg met de klant; art. 7:405 BW, de opdracht).
+        // ⚖️ check: Een proefrit maak je alleen met een rijbewijs ⚖️ (Wegenverkeerswet 1994 art. 107:
+        //   op de weg alleen met een geldig rijbewijs).
+        {
+          kind: 'rule',
+          id: 'r.l.werkplaats.2.ru1',
+          emoji: '📋',
+          title: 'Extra werk? Eerst moet de klant ja zeggen.',
+          body: [
+            'Op de werkorder staat wat de klant wil.',
+            'Zie je nog iets wat kapot is? Schrijf het op, en zeg het.',
+            'Doe extra werk pas als de klant ja zegt. De garage belt de klant eerst.',
+            'Een proefrit maak je alleen als het mag, en met een rijbewijs.',
+          ],
+          rule: 'geschreven',
+        },
+        {
+          kind: 'card',
+          id: 'r.l.werkplaats.2.ca1',
+          card: {
+            type: 'werkbon',
+            title: 'Werkorder',
+            rows: [
+              { label: 'Klant', value: 'mevrouw Bakker, haalt de auto op om 17.00 uur' },
+              { label: 'Opdracht', value: '4 nieuwe winterbanden', hit: true },
+              { label: 'Opmerking', value: 'Extra werk? Eerst de klant bellen.' },
+            ],
+          },
+          question: 'Wat doet Kevin vandaag aan de auto?',
+          options: [
+            { id: 'a', text: '4 nieuwe banden, en ook de remmen.', best: false, feedback: 'De remmen staan niet op de werkorder. Eerst moet de klant ja zeggen.' },
+            { id: 'b', text: '4 winterbanden. De remmen meldt hij.', best: true, feedback: 'Goed. Dat staat op de werkorder.' },
+            { id: 'c', text: 'Alleen de remmen. Dat is belangrijker.', best: false, feedback: 'De klant vroeg om banden. Over de remmen beslist de klant.' },
+          ],
+          why: 'Op de werkorder staat wat de klant wil. Zie je nog iets wat kapot is? Schrijf het op, en zeg het. De garage belt de klant. Pas als de klant ja zegt, doe je het extra werk.',
+        },
+        // ⚖️ check: Anders hoeft de klant er meestal niet voor te betalen ⚖️ (meerwerk zonder
+        //   opdracht; BOVAG-voorwaarden; art. 7:405 BW).
+        {
+          kind: 'truefalse',
+          id: 'r.l.werkplaats.2.tf1',
+          statement: 'Een klant betaalt ook voor extra werk als ze geen ja zei.',
+          answer: false,
+          why: 'Extra werk doe je pas als de klant ja zegt. Anders hoeft de klant er meestal niet voor te betalen. Daarom belt de garage de klant eerst. Schrijf op wat de klant zei, en wanneer.',
+        },
+        // ⚖️ check: Op de openbare weg mag je alleen rijden met een rijbewijs ⚖️ (Wegenverkeerswet
+        //   1994 art. 107).
+        {
+          kind: 'whatdo',
+          id: 'r.l.werkplaats.2.wd1',
+          situation: 'De chef zegt: "Maak even een proefrit." Kevin heeft nog geen rijbewijs. Wat kan Kevin het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij rijdt alleen een klein rondje om het blok.', best: false, feedback: 'Ook dat rondje is op de openbare weg. Zonder rijbewijs mag dat niet.' },
+            { id: 'b', text: 'Hij rijdt, en vraagt een collega om naast hem te zitten.', best: false, feedback: 'Ook met een collega naast hem mag hij niet rijden.' },
+            { id: 'c', text: 'Hij zegt eerlijk dat hij geen rijbewijs heeft.', best: true, feedback: 'Goed. Dan maakt een collega de proefrit.' },
+          ],
+          why: 'Op de openbare weg mag je alleen rijden met een rijbewijs. Ook voor een kort rondje. Zeg het eerlijk als je geen rijbewijs hebt. Een proefrit maak je ook alleen als je chef het vraagt.',
+        },
+        { kind: 'model', id: 'r.l.werkplaats.2.mo1', context: 'Je ziet extra werk aan een auto.', nl: 'De remmen zijn bijna op. Wil je de klant even bellen?' },
+      ],
+    },
+  ],
+};

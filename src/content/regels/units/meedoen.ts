@@ -1,7 +1,7 @@
 import type { RuleUnit } from '../types';
 
 /**
- * Unit 16 · Meedoen in Nederland (les 16.1–16.3).
+ * Unit 16 · Meedoen in Nederland (les 16.1–16.4; 16.4 uit deel 7 van docs/werkregels-curriculum.md).
  * Converted from docs/entree-aanvulling.md; edit that document first, then this file.
  * `// ⚖️ check:` marks a fact the expert must check (docs/entree-aanvulling.md, deel 6 and 7). The
  * marker is never shown or read aloud. `// Redactie:` notes are for the makers only.
@@ -271,6 +271,74 @@ export const meedoenUnit: RuleUnit = {
           why: 'Het Juridisch Loket geeft gratis advies over bezwaar maken. Soms heb je een advocaat nodig. Dan betaalt de overheid soms mee.',
         },
         { kind: 'model', id: 'r.l.meedoen.3.mo1', context: 'Je belt over een boete die niet klopt.', nl: 'Ik ben het niet eens met deze boete. Hoe maak ik bezwaar?' },
+      ],
+    },
+    {
+      // Les 16.4 · Nieuws, nepnieuws en een mening (Entree, mediawijsheid; 30 oktober 2026,
+      //   docs/werkregels-curriculum.md deel 7). Neutraal: geen partijen, geen meningen over beleid.
+      id: 'r.l.meedoen.4',
+      title: 'Nieuws, nepnieuws en een mening',
+      goal: 'Je checkt een bericht voor je het doorstuurt. Je geeft je mening met respect.',
+      remember: 'Eerst checken, dan pas doorsturen. Wie zegt het, en waar staat het nog meer?',
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.meedoen.4.sc1',
+          picture: 'Piotr in de kantine met zijn telefoon. In de groepsapp een bericht met veel uitroeptekens.',
+          lines: [
+            'Piotr zit in de groepsapp van zijn werk.',
+            'Een collega stuurt een bericht door.',
+            '"Vanaf maandag hebben alle Polen een vergunning nodig om te werken!!"',
+            'Er staat geen naam of website bij.',
+          ],
+        },
+        {
+          kind: 'rule',
+          id: 'r.l.meedoen.4.ru1',
+          emoji: '📰',
+          title: 'Eerst checken, dan pas doorsturen. Wie zegt het, en waar staat het nog meer?',
+          body: [
+            'Check een bericht voor je het doorstuurt.',
+            'Wie zegt het? Staat het ook op een bekende nieuwssite?',
+            'Een nepbericht wil vaak dat je schrikt of boos wordt.',
+            'Je mag je mening geven. Doe het met respect, ook online.',
+          ],
+          rule: 'ongeschreven',
+        },
+        // ⚖️ check: Mensen uit de EU hebben geen vergunning nodig om hier te werken ⚖️ (vrij verkeer
+        //   van werknemers, art. 45 VWEU; Wet arbeid vreemdelingen).
+        {
+          kind: 'whatdo',
+          id: 'r.l.meedoen.4.wd1',
+          situation: 'Piotr schrikt van het bericht. Wat kan Piotr het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij stuurt het snel door. Dan weten zijn vrienden het ook.', best: false, feedback: 'Dat snap ik. Maar als het nep is, maakt hij iedereen bang.' },
+            { id: 'b', text: 'Hij gelooft het. Het staat in de groepsapp van zijn werk.', best: false, feedback: 'Ook in een groepsapp staat soms nep. Check eerst waar het vandaan komt.' },
+            { id: 'c', text: 'Hij zoekt op een site van de overheid of het klopt.', best: true, feedback: 'Goed. Daar staat wat echt geldt.' },
+          ],
+          why: 'Check een bericht voor je het doorstuurt. Wie zegt het? Staat het op een site van de overheid? Of op een bekende nieuwssite? Mensen uit de EU hebben geen vergunning nodig om hier te werken.',
+        },
+        {
+          kind: 'truefalse',
+          id: 'r.l.meedoen.4.tf1',
+          statement: 'Een nepbericht wil vaak dat je bang of boos wordt.',
+          answer: true,
+          why: 'Wie bang of boos is, deelt sneller. Daarom maakt nepnieuws je vaak bang of boos. Let op veel uitroeptekens, haast en geen naam. Kijk wie het zegt. En zoek of een bekende nieuwssite het ook heeft.',
+        },
+        // ⚖️ check: Schelden en bedreigen mag niet ⚖️ (bedreiging is strafbaar, art. 285 Sr; zie
+        //   r.l.meedoen.2).
+        {
+          kind: 'whatdo',
+          id: 'r.l.meedoen.4.wd2',
+          situation: "In de pauze praten de collega's van Esra over de verkiezingen. Esra denkt er anders over. Wat kan Esra het beste doen?",
+          options: [
+            { id: 'a', text: 'Ze zegt niets. Een mening geven is op je werk niet netjes.', best: false, feedback: 'Dat mag wel. Ze mag haar mening zeggen, met respect.' },
+            { id: 'b', text: 'Ze zegt rustig wat zij denkt, en ze luistert ook.', best: true, feedback: 'Goed. Zo kan iedereen zijn mening geven.' },
+            { id: 'c', text: 'Ze zegt dat hun mening dom is. Zij weet het beter.', best: false, feedback: 'Dat is niet respectvol. Dan komt er snel ruzie.' },
+          ],
+          why: 'Je mag je mening geven, ook op je werk. Iemand anders mag iets anders vinden. Luister naar elkaar, en blijf rustig. Schelden en bedreigen mag niet. Soms heeft je werk ook regels over hoe je praat.',
+        },
+        { kind: 'model', id: 'r.l.meedoen.4.mo1', context: 'Een collega stuurt een bericht dat je niet vertrouwt.', nl: 'Waar heb je dit gelezen? Ik wil eerst checken of het klopt.' },
       ],
     },
   ],

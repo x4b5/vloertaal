@@ -70,11 +70,22 @@ export function unitSector(unitId: string): SectorId | undefined {
 
 export const isSectorId = (v: unknown): v is SectorId => sectors.some((s) => s.id === v);
 
+/**
+ * Sector units of the work-rules track whose sector is not in the choice yet: techniek (metaal,
+ * elektro, installatie) and the garage (mobiliteit), from the second Entree round (30 October 2026,
+ * docs/werkregels-curriculum.md deel 7). Their sector card comes with their Taal units (u.tech,
+ * u.garage), which are not written yet; "Iets anders" has room for one more sector only. Until then
+ * no learner can choose them as their own sector, so a learner who chose a sector finds them under
+ * "Andere sectoren" (never in the basis path); with no sector chosen they are in the whole course.
+ */
+export const SECTOR_UNITS_WITHOUT_CARD: ReadonlySet<string> = new Set(['r.techniek', 'r.werkplaats']);
+
 /** Is this unit another sector's (so it goes to "Andere sectoren")? Never with no sector chosen. */
 export function isOtherSector(unitId: string, sector: SectorChoice | undefined): boolean {
   if (!sector || sector === 'none') return false;
   const own = unitSector(unitId);
-  return own !== undefined && own !== sector;
+  if (own === undefined) return SECTOR_UNITS_WITHOUT_CARD.has(unitId);
+  return own !== sector;
 }
 
 /** The slot for the learner's own sector unit(s): where the warehouse unit sits in the course (05, right after Safety). */
@@ -111,7 +122,7 @@ function rulesPlan(sector: SectorChoice | undefined): { main: Unit[]; other: Uni
   const all = courseUnits('regels');
   if (!sector || sector === 'none') return { main: all, other: [] };
   const own = all.filter((u) => unitSector(u.id) === sector);
-  const basis = all.filter((u) => unitSector(u.id) === undefined);
+  const basis = all.filter((u) => unitSector(u.id) === undefined && !SECTOR_UNITS_WITHOUT_CARD.has(u.id));
   const slot = basis.findIndex((u) => u.id === RULES_SLOT_AFTER);
   const at = slot >= 0 ? slot + 1 : basis.length;
   return {

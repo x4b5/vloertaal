@@ -82,22 +82,28 @@ const KEY_RULES = [
   'Je DigiD is alleen van jou. Geef hem aan niemand.',
   'Iedereen heeft dezelfde rechten. Discriminatie mag niet, ook niet buiten je werk.',
   'Scheid je afval. Gevaarlijk afval nooit bij het gewone afval.',
+  // The second Entree round (curriculum, deel 7): one per new unit of the path.
+  'Groet, wat je wilt, wanneer, en je naam. Lees het na voor je verstuurt.',
+  'Na Entree: ga door naar niveau 2, of werk en leer tegelijk.',
 ];
 
 describe('rules content: ids', () => {
-  it('has the 10 units in path order, the 7 Entree units beside them, and the 7 sector units', () => {
+  it('has the 10 units in path order, the 7 Entree units beside them, 2 more at the end, and the 9 sector units', () => {
     const FIRST_TEN = ['r.zoeken', 'r.start', 'r.contract', 'r.loon', 'r.tijd', 'r.ziek', 'r.veilig', 'r.samen', 'r.rechten', 'r.geld'];
     expect(rulesUnits.map((u) => u.id)).toEqual([
       'r.zoeken', 'r.start', 'r.afronden', 'r.contract', 'r.stage', 'r.loon', 'r.rekenen', 'r.tijd', 'r.winkel',
       'r.ziek', 'r.veilig', 'r.samen', 'r.rechten', 'r.geld', 'r.digitaal', 'r.meedoen', 'r.duurzaam',
+      // The second Entree round (curriculum, deel 7): writing, and "Jouw weg" after Entree.
+      'r.schrijven', 'r.loopbaan',
     ]);
     // Only additions: the first ten keep their order among themselves.
     expect(rulesUnits.map((u) => u.id).filter((id) => FIRST_TEN.includes(id))).toEqual(FIRST_TEN);
-    // 38 lessons of the path (5.5 "Kinderen en zorg" and 10.5 "Je werk stopt" came later) and the
-    // 19 of the Entree additions (15.3 "AI op je werk" came later).
-    expect(rulesUnits.filter((u) => FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(38);
-    expect(rulesUnits.filter((u) => !FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(19);
-    expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual(['r.build', 'r.care', 'r.clean', 'r.factory', 'r.horeca', 'r.kas', 'r.warehouse']);
+    // 42 lessons of the path (5.5 "Kinderen en zorg" and 10.5 "Je werk stopt" came later, and 7.4,
+    // 7.5, 10.6 and 10.7 in the second Entree round) and the 25 of the Entree additions (15.3 "AI op
+    // je werk" came later; 16.4 and the 5 lessons of units 18 and 19 in the second round).
+    expect(rulesUnits.filter((u) => FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(42);
+    expect(rulesUnits.filter((u) => !FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(25);
+    expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual(['r.build', 'r.care', 'r.clean', 'r.factory', 'r.horeca', 'r.kas', 'r.techniek', 'r.warehouse', 'r.werkplaats']);
     for (const u of sectorRulesUnits) expect(u.lessons, u.id).toHaveLength(2);
   });
 
@@ -338,24 +344,27 @@ describe('rules content: the Entree additions and their drawn cards', () => {
   };
   const time = (t: string) => { const [h, m] = t.match(/(\d{1,2})[.:](\d{2})/)!.slice(1).map(Number); return h + m / 60; };
 
-  it('has 7 units with 19 lessons, all in the path, with the doc\'s tally (A 14, B 14, C 14; 10 true, 10 false)', () => {
+  // With 16.4 "Nieuws, nepnieuws en een mening" (second Entree round): 20 lessons, B and C one more,
+  // one more true.
+  it('has 7 units with 20 lessons, all in the path, with the doc\'s tally (A 14, B 15, C 15; 11 true, 10 false)', () => {
     expect(entree.map((u) => u.id).sort()).toEqual([...ENTREE].sort());
-    expect(entree.flatMap((u) => u.lessons)).toHaveLength(19);
+    expect(entree.flatMap((u) => u.lessons)).toHaveLength(20);
     const pos: Record<string, number> = {};
     for (const s of entreeSteps) if (s.kind === 'whatdo' || s.kind === 'card') {
       const id = s.options.find((o) => o.best)!.id;
       pos[id] = (pos[id] ?? 0) + 1;
     }
-    expect(pos).toEqual({ a: 14, b: 14, c: 14 });
+    expect(pos).toEqual({ a: 14, b: 15, c: 15 });
     const tf = entreeSteps.filter((s): s is Extract<RuleStep, { kind: 'truefalse' }> => s.kind === 'truefalse');
-    expect(tf.filter((s) => s.answer)).toHaveLength(10);
+    expect(tf.filter((s) => s.answer)).toHaveLength(11);
     expect(tf.filter((s) => !s.answer)).toHaveLength(10);
   });
 
-  it('has the cards of units 11, 12 and 13, of every kind', () => {
+  it('has the cards of units 11, 12 and 13, of every kind, and the garage\'s work order', () => {
     expect(cards.map((s) => s.id)).toEqual([
       'r.l.afronden.1.ca1', 'r.l.rekenen.1.ca1', 'r.l.rekenen.1.ca2', 'r.l.rekenen.1.ca3', 'r.l.rekenen.2.ca1',
       'r.l.rekenen.2.ca2', 'r.l.rekenen.2.ca3', 'r.l.rekenen.3.ca1', 'r.l.rekenen.3.ca2', 'r.l.winkel.3.ca1',
+      'r.l.werkplaats.2.ca1',
     ]);
     expect(new Set(cards.map((s) => s.card.type))).toEqual(new Set(['rooster', 'kassabon', 'pakbon', 'etiket', 'werkbon', 'loonstrook']));
   });

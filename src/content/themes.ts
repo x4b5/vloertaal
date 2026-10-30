@@ -58,13 +58,13 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
   },
   'theme.find': {
     taal: ['u.apply', 'u.contract', 'u.grow', 'u.lost', 'u.stage'],
-    regels: ['r.zoeken', 'r.contract', 'r.stage'],
+    regels: ['r.zoeken', 'r.contract', 'r.stage', 'r.loopbaan'],
   },
   'theme.job': {
     // "In de werkplaats" and "In de garage" are basis units for now (no sector of their own yet,
     // like "In de winkel"), so they sit here and not under "Jouw sector".
     taal: ['u.time', 'u.pay', 'u.leave', 'u.contact', 'u.house', 'u.numbers', 'u.shop', 'u.ai', 'u.finish', 'u.tech', 'u.garage', 'u.online'],
-    regels: ['r.loon', 'r.tijd', 'r.ziek', 'r.rekenen', 'r.afronden', 'r.duurzaam', 'r.winkel'],
+    regels: ['r.loon', 'r.tijd', 'r.ziek', 'r.rekenen', 'r.afronden', 'r.duurzaam', 'r.winkel', 'r.schrijven'],
   },
   'theme.together': {
     taal: ['u.teamwork', 'u.social', 'u.sayings'],
@@ -81,7 +81,7 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
   },
   'theme.sector': {
     taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.kas'],
-    regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean', 'r.kas'],
+    regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean', 'r.kas', 'r.techniek', 'r.werkplaats'],
   },
 };
 
