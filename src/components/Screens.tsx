@@ -815,7 +815,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           </p>
         )}
         {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}
-        {next && (
+        {/* (Not while "Wil je sneller?" asks: the question needs the room.) */}
+        {next && !onFaster && (
           <p className="result-line result-next" dir={rtl ? 'rtl' : undefined}>
             {/* Said, not shown (no aria-label on a <p>): "Next:" before the title. */}
             <span className="sr-only" lang={saidLang(ui('nextUp', lang))}>{`${said(ui('nextUp', lang))}: `}</span>
@@ -829,13 +830,6 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           <p className="result-line result-easier" dir={rtl ? 'rtl' : undefined}>
             <NlPair nlFirst nlClass="result-pair-nl" nl="De volgende les is wat korter." text={ui('easierNext', lang)} />
           </p>
-        )}
-        {/* Once, after 3 lessons in a row without a mistake: the question (Ja / Nee are below). */}
-        {onFaster && (
-          <div className="result-faster" dir={rtl ? 'rtl' : undefined}>
-            <h2 className="result-faster-ask"><NlPair nlFirst nlClass="result-pair-nl" nl="Wil je sneller?" text={ui('fasterAsk', lang)} /></h2>
-            <p className="result-faster-hint"><Bi text={ui('fasterHint', lang)} /></p>
-          </div>
         )}
         {/* Once, after the first lesson: where the emergency phrases are (the Hulp tab). */}
         {onPhrases && (
@@ -856,6 +850,14 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
       </div>
       <footer className="player-foot">
         <div className="foot-inner">
+          {/* Once, after 3 lessons in a row without a mistake: the question, in the footer right
+              above Ja and Nee, so it is always in view with them (also on a small phone). */}
+          {onFaster && (
+            <div className="result-faster" dir={rtl ? 'rtl' : undefined}>
+              <h2 className="result-faster-ask"><NlPair nlFirst nlClass="result-pair-nl" nl="Wil je sneller?" text={ui('fasterAsk', lang)} /></h2>
+              <p className="result-faster-hint"><Bi text={ui('fasterHint', lang)} /></p>
+            </div>
+          )}
           {onFaster ? (
             <div className="foot-actions result-faster-actions">
               <button type="button" className="btn btn-ghost result-faster-no" onClick={() => answerFaster(false)} dir={rtl ? 'rtl' : undefined}>

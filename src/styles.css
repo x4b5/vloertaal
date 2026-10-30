@@ -4486,12 +4486,13 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .result-easier, .result-faster { flex-direction: column; gap: 2px; }
 .result-pair-nl { display: block; font-weight: 700; }
 .result-faster {
-  display: flex; align-items: center; text-align: center; margin: 16px 0 0; max-width: 420px; padding: 12px 16px;
-  border: 2px solid var(--line, currentColor); border-radius: 14px; animation: result-go 0.4s 1.2s var(--ease-out) both;
+  display: flex; align-items: center; text-align: center; margin: 0 auto 10px; max-width: 460px;
+  animation: result-go 0.4s 1.2s var(--ease-out) both;
 }
-.result-faster-ask { margin: 0; font-size: 1.3rem; display: flex; flex-direction: column; gap: 2px; }
+.result-faster-ask { margin: 0; font-size: 1.25rem; display: flex; flex-direction: column; gap: 2px; }
 .result-faster-ask .bi-help { --help-size: 0.8em; font-weight: 500; }
-.result-faster-hint { margin: 6px 0 0; color: var(--muted); }
-.result-faster-actions .btn { min-height: 52px; flex: 1 1 0; flex-direction: column; gap: 0; }
+.result-faster-hint { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
+.result-faster-actions { flex-wrap: nowrap; }
+.result-faster-actions .btn { min-height: 56px; flex: 1 1 0; flex-direction: column; gap: 0; }
 .result-faster-actions .btn > span[lang='nl'] { font-weight: 700; font-size: 1.1rem; }
 @media (prefers-reduced-motion: reduce) { .result-faster { animation: none; } }
