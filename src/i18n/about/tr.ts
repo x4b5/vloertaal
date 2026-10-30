@@ -3,6 +3,7 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {
     about: 'Vloertaal hakkında',
+    forCoaches: 'Koçlar ve işverenler için', // nieuw, nalezen
   },
   gloss: {
     'a.what': 'Vloertaal nedir?',
@@ -23,8 +24,6 @@ const t: CultureTranslation = {
     'a.free.b': 'Hesaba ihtiyacın yok. İlerlemen sadece bu telefonda ya da bilgisayarda kaydedilir. Açıksa, uygulama derslerin kaç kez yapıldığını anonim olarak sayar: isim yok, takip yok. Bunu “Ayarlar” bölümünde kapatabilirsin.',
     'a.disclaimer': 'Bilmekte fayda var',
     'a.disclaimer.b': 'Vloertaal’daki ipuçları genel bilgidir, hukuki tavsiye değildir. Kurallar değişebilir; metinler en son Ekim 2026’da güncellendi. Kendi durumun için işverenine, bir sendikaya veya Juridisch Loket’e sor.',
-    'a.voices': 'Sesler',
-    'a.voices.b': 'Her karakterin kendi Hollandaca sesi var: Bram, Thijmen’in sesiyle konuşur; Henk, Daniel’in; Amina, Ariël’in ve Jada, Noa’nın sesiyle. Bu sesler ElevenLabs ile kaydedildi. Bir cümlenin henüz kaydı yoksa, kendi telefonunun veya bilgisayarının sesini duyarsın.',
     'a.contact': 'Soru mu, hata mı?',
     'a.contact.b': 'Bir hata mı buldun, örneğin bir çeviride ya da bir ipucunda? Ya da bir soru sormak mı istiyorsun? hoi@vloertaal.nl adresine e-posta gönder. Ekran görüntüsü yardımcı olur. Derste üstteki "Melden" bayrağına da dokunabilirsin: o zaman e-postada nerede olduğun zaten yazar.',
   },
