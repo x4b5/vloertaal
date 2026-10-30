@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { said, saidLang, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { canSay, speak, speakLong, stopSaying } from '../lib/audio';
+import { canSay, isSaying, onSpeech, speak, speakLong, stopSaying } from '../lib/audio';
 import { useVoices } from './useVoices';
 import type { VoiceRef } from '../lib/voices';
-import { SlowIcon, SpeakerIcon } from './Icons';
+import { SlowIcon, SpeakerIcon, StopIcon } from './Icons';
 
 /**
  * A speaker's screen-reader name as its content: "Play:" in the help language, then the Dutch
@@ -63,12 +63,24 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
   useEffect(() => {
     if (long) return () => stopSaying(text);
   }, [long, text]);
+  // A long text (a story read out by itself, a rule) can be stopped: while it is being said its
+  // speaker is a stop button (WCAG 1.4.2). Short words end by themselves within a few seconds.
+  const [saying, setSaying] = useState(() => long && isSaying(text));
+  useEffect(() => {
+    if (!long) return;
+    setSaying(isSaying(text));
+    return onSpeech((t, on) => { if (t === text) setSaying(on); });
+  }, [long, text]);
+  const stoppable = long && saying;
   if (needsDevice && lang === 'nl' && !canSay(text, voice)) return null;
   return (
     <button
       type="button"
-      className={`${glyph ? 'speak-glyph' : `speak speak-${size} ${slow ? 'speak-slow' : ''}`} ${nextSlow ? 'speak-next-slow' : ''} ${className ?? ''}`}
+      className={`${glyph ? 'speak-glyph' : `speak speak-${size} ${slow ? 'speak-slow' : ''}`} ${nextSlow && !stoppable ? 'speak-next-slow' : ''} ${stoppable ? 'speak-stop' : ''} ${className ?? ''}`}
+      // Long speakers are a toggle: pressed while the text is being said (a tap then stops it).
+      aria-pressed={long ? stoppable : undefined}
       onClick={() => {
+        if (stoppable) { stopSaying(text); return; }
         if (long && lang === 'nl') speakLong(text, { slow: slow || nextSlow, voice });
         else speak(text, slow || nextSlow, lang, voice);
         setPlays({ text, n: n + 1 });
@@ -78,8 +90,9 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
     >
       {/* "Listen: Vrouw of man?" in two languages: the Dutch is read with a Dutch voice, not the help language's. */}
       {!label && !hideText && <PlayName text={text} help={help} lang={lang} />}
-      {glyph ? <SpeakerIcon size={30} /> : slow ? <SlowIcon size={size === 'lg' ? 40 : 28} /> : <SpeakerIcon size={size === 'lg' ? 44 : 28} />}
-      {nextSlow && <span className="speak-turtle" aria-hidden><SlowIcon size={size === 'lg' ? 26 : 22} /></span>}
+      {stoppable ? <StopIcon size={glyph ? 30 : size === 'lg' ? 44 : 28} />
+        : glyph ? <SpeakerIcon size={30} /> : slow ? <SlowIcon size={size === 'lg' ? 40 : 28} /> : <SpeakerIcon size={size === 'lg' ? 44 : 28} />}
+      {nextSlow && !stoppable && <span className="speak-turtle" aria-hidden><SlowIcon size={size === 'lg' ? 26 : 22} /></span>}
     </button>
   );
 }

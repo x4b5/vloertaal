@@ -251,6 +251,9 @@ export function LiveParts({ parts }: { parts: readonly LivePart[] }) {
 }
 
 /** Reduced motion: no smooth scrolling, no movement (see "Reduced motion" in styles.css). */
+/** How long the note after a sound change stays (two languages, read slowly). */
+export const SOUND_NOTE_MS = 9000;
+
 function reducedMotion(): boolean {
   return typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 }
@@ -417,11 +420,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const audioOff = soundOff;
   /** Listening exercises left out, counted out loud on the result. */
   const skipped = useRef(0);
-  /** Short line after the sound changed: 'off' = without sound, 'on' = sound on. */
+  /** Short line after the sound changed: 'off' = without sound, 'on' = sound on. It stays long
+   *  enough to read slowly in two languages (WCAG 2.2.1); the pause sheet keeps saying it after. */
   const [soundNote, setSoundNote] = useState<'off' | 'on' | null>(null);
   useEffect(() => {
     if (!soundNote) return;
-    const t = setTimeout(() => setSoundNote(null), 4500);
+    const t = setTimeout(() => setSoundNote(null), SOUND_NOTE_MS);
     return () => clearTimeout(t);
   }, [soundNote]);
 
@@ -979,12 +983,16 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         )}
         {/* The sound note hangs just under the header, never over the close button, the sound
             toggle or the progress bar. */}
-        {soundNote && (
-          <div className="sound-note" role="status" key={soundNote}>
-            {soundNote === 'on' ? <SpeakerIcon size={20} /> : <SpeakerOffIcon size={20} />}
-            <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : 'soundOn', lang)} />
-          </div>
-        )}
+        {/* The status region is always there (one added together with its text is often not
+            read out); only the note inside it comes and goes. */}
+        <div className="sound-note-live" role="status">
+          {soundNote && (
+            <div className="sound-note" key={soundNote}>
+              {soundNote === 'on' ? <SpeakerIcon size={20} /> : <SpeakerOffIcon size={20} />}
+              <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : 'soundOn', lang)} />
+            </div>
+          )}
+        </div>
       </header>
 
       {/* A wrong answer in the first round comes back at the end; in the retry round it does not (the stamp says which). */}

@@ -274,6 +274,11 @@ export function stopSpeech(): void {
   stopAll();
 }
 
+/** True while `text` is being said (started and not ended or stopped yet). */
+export function isSaying(text: string): boolean {
+  return sounding.has(text);
+}
+
 /** Stops `text` if it is still being said (a long text's speaker that leaves the screen). */
 export function stopSaying(text: string): void {
   if (sounding.has(text)) stopAll();

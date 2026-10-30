@@ -2678,7 +2678,10 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* The run label hangs just under the progress bar at its end, clear of the bar itself (it
    never covers the steps done) and of the exercise's tag at the start of the row below. */
 .bar-wrap > .run-label { top: calc(100% + 12px); left: auto; inset-inline-end: 0; translate: none; }
-.player-top > .sound-note {
+/* The note's status region (always there, so a screen reader hears the note): it lies over the
+   header without taking room or taps; the note hangs under it as before. */
+.sound-note-live { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 30; pointer-events: none; }
+.player-top > .sound-note, .sound-note-live > .sound-note {
   position: absolute; top: calc(100% + 6px); inset-inline: 16px; z-index: 30;
   margin: 0 auto; width: auto; max-width: 420px;
 }
@@ -4354,7 +4357,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   .player-rtl .bar-wrap > .run-label { right: auto; left: 0; }
   .foot-more-btn { right: 8px; }
   .player-rtl .foot-more-btn { right: auto; left: 8px; }
-  .sound-note, .player-top > .sound-note { left: 16px; right: 16px; }
+  .sound-note, .player-top > .sound-note, .sound-note-live > .sound-note { left: 16px; right: 16px; }
   .keep-icon, .cert-list-icon { right: 14px; }
   .waybill-tag { right: 12px; }
   .ios-num { left: 8px; }
