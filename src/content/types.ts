@@ -15,6 +15,12 @@ export interface Word {
    */
   picture?: false;
   /**
+   * What the picture looks like, when the emoji can't tell (src/lib/wordPicture.ts lookKey): a
+   * family and a variant, "kalender/maandag". Words with different variants may stand side by side
+   * in a picture choice; a variant never stands next to the plain family ("kalender": 📆 📅 🗓️).
+   */
+  look?: string;
+  /**
    * A saying (src/content/sayings.ts): what its words say, word for word, in plain English
    * ("een eitje": "a little egg"); `en` is what it means ("very easy"). The word card shows it
    * under the picture, which also shows what the words say. Its help-language text: `${id}.lit`.

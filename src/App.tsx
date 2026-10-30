@@ -140,6 +140,8 @@ function startProgress() {
 
 /** How long the start waits for a file that neither comes nor fails before it offers "Try again". */
 const STALLED_MS = 15_000;
+/** The first visit: how long (from the page's start) the start screen shows before the language page. */
+const INTRO_MS = 1800;
 
 export default function App() {
   const [start] = useState(startProgress);
@@ -471,6 +473,15 @@ export default function App() {
     const t = window.setTimeout(() => setStalled(true), STALLED_MS);
     return () => window.clearTimeout(t);
   }, [waiting, langFailed]);
+  // The very first visit: the start screen (the four colleagues above the name) stays a moment, so a
+  // new learner sees which app this is before the first question. Counted from the page's start, so
+  // a slow phone that already showed it while loading waits no longer. Not in tests.
+  const [introDone, setIntroDone] = useState(() => progress.onboarded || import.meta.env.MODE === 'test');
+  useEffect(() => {
+    if (introDone) return;
+    const t = window.setTimeout(() => setIntroDone(true), Math.max(0, INTRO_MS - performance.now()));
+    return () => window.clearTimeout(t);
+  }, [introDone]);
   const lang = getHelpLanguage(progress.helpLang, progress.gender);
   // The page's language is the help language (Dutch without one). The direction is set where the
   // layout is mirrored (the lesson player and the path), so Dutch never inherits right-to-left.
@@ -657,7 +668,7 @@ export default function App() {
     const leave = () => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname + location.search); setCoachDirect(false); setView(HOME); };
     return <Coaches onBack={leave} lang={langReady && progress.onboarded ? lang : undefined} />;
   }
-  if ((!langReady || (progress.onboarded && !picsReady)) && view.name !== 'admin') return <Splash failed={langFailed || stalled} onRetry={() => location.reload()} lang={progress.helpLang} />;
+  if ((!langReady || (progress.onboarded && !picsReady) || !introDone) && view.name !== 'admin') return <Splash failed={langFailed || stalled} onRetry={() => location.reload()} lang={progress.helpLang} />;
   if (view.name === 'admin') {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
