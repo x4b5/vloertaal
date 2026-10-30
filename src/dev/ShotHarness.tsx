@@ -339,9 +339,16 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // &word=w.veiligheidsschoenen puts any course word in the spotlight (long-word checks).
   const allWords = units.flatMap((u) => u.lessons.flatMap((l) => l.words));
   const focus = allWords.find((w) => w.id === word);
+  // &options=w.maandag,w.zaterdag,w.week: the picture choice with these words (the first is asked).
+  const picked = (q.get('options') ?? '').split(',').map((id) => allWords.find((w) => w.id === id)).filter((w) => w !== undefined);
   const exercises: Record<string, Exercise> = {
     // &text=1: text cards (a review's help language → Dutch; a non-Latin reader gets a speaker per card).
-    dutch: { kind: 'dutch', word: helm, options: [hesje, handschoenen, helm], ...(q.get('text') === '1' ? { textOnly: true } : {}) },
+    dutch: {
+      kind: 'dutch',
+      word: picked[0] ?? helm,
+      options: picked.length > 1 ? picked : [hesje, handschoenen, helm],
+      ...(q.get('text') === '1' ? { textOnly: true } : {}),
+    },
     meaning: { kind: 'meaning', word: focus ?? hesje, options: [handschoenen, schoenen, focus ?? hesje] },
     intro: { kind: 'intro', word: focus ?? hesje },
     listen: { kind: 'listen', word: focus ?? schoenen, options: [helm, focus ?? schoenen, hesje] },

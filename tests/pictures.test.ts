@@ -1,8 +1,11 @@
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 import { allLessons, allWords, findLesson } from '../src/content/curriculum';
+import type { JSX } from 'react';
 import { buildLesson, dutchExercise, type Exercise } from '../src/lib/exercises';
 import { createRng } from '../src/lib/random';
-import { hasPicture, lookKey } from '../src/lib/wordPicture';
+import { hasPicture, lookKey, looksAlike, samePicture } from '../src/lib/wordPicture';
 
 const SEEDS = [1, 2, 3, 7, 42, 99, 2026, 31337];
 const runs = (fn: (exercises: Exercise[], label: string) => void) => {
@@ -40,7 +43,8 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     // ouderschapsverlof" and "het zorgverlof" (l.kids), "de eindafrekening", "opzeggen" and
     // "uitschrijven" (l.jobends), "de werkvergunning", "de zzp’er" and "de inburgering" (l.permit).
     // ("het hoofd", "de rug" and "de buik" have since been drawn: see 199 below.)
-    for (const id of ['w.geboortedatum', 'w.maandag', 'w.totenmet', 'w.zorgverlof', 'w.eindafrekening', 'w.zzper', 'w.inburgering']) expect(abstract).toContain(id);
+    // (The six of l.dates have since been drawn as a week strip: see 189 below.)
+    for (const id of ['w.geboortedatum', 'w.zorgverlof', 'w.eindafrekening', 'w.zzper', 'w.inburgering']) expect(abstract).toContain(id);
     // 209 (30 October 2026, Entree in the Taal track): 66 new abstract words in 17 lessons, among
     // them "het aantal" and "klaarleggen" (l.workorder), "nakijken" and "op slot" (l.handover),
     // "onder spanning" (l.power), "de POK" (l.placement), all six of l.mychoice and l.nextstep, "de
@@ -50,7 +54,11 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     // hoofd", "de rug", "de buik" (l.body), "slijpen", "de kabel", "de stroom", "de hefbrug", "lek",
     // "kapot" and "de rechter".
     for (const id of ['w.hoofd', 'w.rug', 'w.buik', 'w.slijpen', 'w.kabel', 'w.stroom', 'w.hefbrug', 'w.lek', 'w.kapot', 'w.rechter']) expect(abstract).not.toContain(id);
-    expect(abstract.length).toBe(199);
+    // 189 (30 October 2026, group27): ten time words got a week strip (Monday first, the weekend
+    // in a warm tint): the six of l.dates, "het weekend", "zaterdag", "overmorgen" and "elke dag".
+    const weekWords = ['w.week', 'w.weekend', 'w.maandag', 'w.zaterdag', 'w.elkedag', 'w.totenmet', 'w.volgendeweek', 'w.vorigeweek', 'w.overmorgen', 'w.maand'];
+    for (const id of weekWords) expect(abstract).not.toContain(id);
+    expect(abstract.length).toBe(189);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).
@@ -71,8 +79,12 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     runs((exercises, label) => {
       for (const ex of exercises) {
         if (ex.kind !== 'dutch' || ex.textOnly) continue;
-        expect(new Set(ex.options.map((o) => o.emoji)).size, label).toBe(ex.options.length);
-        expect(new Set(ex.options.map(lookKey)).size, label).toBe(ex.options.length);
+        for (const [i, a] of ex.options.entries()) {
+          for (const b of ex.options.slice(i + 1)) {
+            expect(samePicture(a, b), `${label}: ${a.id} ${b.id}`).toBe(false);
+            expect(looksAlike(a, b), `${label}: ${a.id} ${b.id}`).toBe(false);
+          }
+        }
         expect(new Set(ex.options.map((o) => o.id)).size, label).toBe(ex.options.length);
       }
     });
@@ -132,6 +144,59 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
         for (const id of listened) expect(quietWords, `${lesson.id} ${id}`).toContain(id);
       }
     }
+  });
+});
+
+describe('time words (group 27, the week strip)', { timeout: 20000 }, () => {
+  const byId = (id: string) => allWords.find((w) => w.id === id)!;
+  const calendars = ['w.vandaag', 'w.morgen', 'w.datum', 'w.rooster', 'w.dienst'].map(byId);
+  const timeWords = allWords.filter((w) => w.look?.startsWith('kalender/'));
+  const svg = (draw: () => JSX.Element) => renderToStaticMarkup(createElement(draw));
+
+  it('each have their own look and a drawing of their own', async () => {
+    const { default: words } = await import('../src/pictures/words');
+    expect(timeWords).toHaveLength(10);
+    expect(new Set(timeWords.map(lookKey)).size).toBe(timeWords.length);
+    const drawn = timeWords.map((w) => svg(words[w.id]));
+    expect(new Set(drawn).size).toBe(timeWords.length);
+  });
+
+  it('can stand side by side, but never next to another calendar picture', () => {
+    for (const a of timeWords) {
+      for (const b of timeWords) if (a !== b) expect(looksAlike(a, b), `${a.id} ${b.id}`).toBe(false);
+      for (const c of calendars) expect(looksAlike(a, c), `${a.id} ${c.id}`).toBe(true);
+    }
+  });
+
+  it('a real picture choice offers two time words side by side (l.dates)', () => {
+    let seen = 0;
+    for (const lesson of allLessons.filter((l) => l.words.some((w) => w.look))) {
+      for (const seed of SEEDS) {
+        for (const ex of buildLesson(lesson, { review: false, seed })) {
+          if (ex.kind !== 'dutch' || ex.textOnly) continue;
+          // Never a time word next to another calendar page.
+          if (ex.options.some((o) => o.look)) for (const c of calendars) expect(ex.options.map((o) => o.id)).not.toContain(c.id);
+          if (ex.options.filter((o) => o.look?.startsWith('kalender/')).length >= 2) seen++;
+        }
+      }
+    }
+    expect(seen).toBeGreaterThan(0);
+  });
+
+  it('two different days can be offered together, with different drawings', async () => {
+    const { default: words } = await import('../src/pictures/words');
+    const { lesson: dates } = findLesson('l.dates')!;
+    // maandag (l.dates) and zaterdag (l.agree) are in different units; put them in one lesson.
+    const days = ['w.maandag', 'w.zaterdag', 'w.weekend'].map(byId);
+    for (const seed of SEEDS) {
+      const ex = dutchExercise(days[0], { ...dates, words: days }, createRng(seed));
+      expect(ex.textOnly, `seed ${seed}`).toBeFalsy();
+      expect(ex.options.map((o) => o.id).sort()).toEqual(['w.maandag', 'w.weekend', 'w.zaterdag']);
+    }
+    const drawn = days.map((d) => svg(words[d.id]));
+    expect(new Set(drawn).size).toBe(days.length);
+    // Their emoji differ from a plain calendar's look only by `look`: without it they would clash.
+    expect(looksAlike({ emoji: days[0].emoji }, { emoji: days[1].emoji })).toBe(true);
   });
 });
 

@@ -44,6 +44,7 @@ export const UPDATES: Update[] = [
       '33 woorden hadden nog een emoji. Ze hebben nu een eigen tekening, zoals de voornaam, zwanger, de sleutel, de plukkar en bukken.',
       '32 woorden uit de nieuwe Entree-onderwerpen hadden nog een emoji. Ze hebben nu een eigen tekening, zoals de werkbon, de gehoorbescherming, de accu, het rijbewijs, de agent en de bijlage.',
       'Tien woorden die nog geen plaatje hadden, hebben nu een eigen tekening: het hoofd, de rug en de buik, slijpen, de kabel, de stroom, de hefbrug, lek, kapot en de rechter.',
+      'Tien tijdwoorden hebben nu een plaatje, allemaal met dezelfde weekstrip (maandag eerst, het weekend in een andere kleur): de week, het weekend, maandag, zaterdag, elke dag, tot en met, volgende week, vorige week, overmorgen en de maand. Bij "Welk plaatje is het?" kunnen twee dagen nu naast elkaar staan.',
     ],
   },
   {
