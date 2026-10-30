@@ -352,6 +352,19 @@ const lang: HelpLanguageSource = {
     easierNext: 'La próxima lección es un poco más corta.', // nieuw, nalezen
     fasterSetting: 'Aprender más rápido', // nieuw, nalezen
     fasterSettingHint: 'Activado: menos explicación en las lecciones nuevas y el neerlandés a velocidad normal. Desactivado: como antes.', // nieuw, nalezen
+    samenTitle: 'Practicar en pareja', // nieuw, nalezen
+    samenRowHint: 'Dos personas, un teléfono', // nieuw, nalezen
+    samenIntro: 'Practica con un compañero, un amigo o un profesor. Leen por turnos.', // nieuw, nalezen
+    samenHow: 'La persona 1 es el compañero. La persona 2 responde.', // nieuw, nalezen
+    samenNoScore: 'No se graba nada. No hay puntuación.', // nieuw, nalezen
+    samenPerson: 'Persona {n}', // nieuw, nalezen
+    samenAnswer: 'Respuesta', // nieuw, nalezen
+    samenHear: 'Escuchar', // nieuw, nalezen
+    samenNext: 'Siguiente', // nieuw, nalezen
+    samenTranslation: 'Traducción', // nieuw, nalezen
+    samenEnd: '¡Muy bien! ¿Cambiar los papeles y otra vez?', // nieuw, nalezen
+    samenSwap: 'Cambiar los papeles', // nieuw, nalezen
+    samenStop: 'Terminar', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

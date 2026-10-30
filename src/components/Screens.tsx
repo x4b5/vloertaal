@@ -40,6 +40,7 @@ import {
   GlobeIcon,
   InfoIcon,
   SpeakerOffIcon,
+  BubblesIcon,
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { useVoices } from './useVoices';
@@ -670,9 +671,14 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
 /** From this many words still due after a review, the result says they come in the next days. */
 export const REVIEW_WAITING_MIN = 3;
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onFaster, easier = false }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, easier = false }: {
+  /** After a lesson of the language track with chats: a calm row to "Oefen samen" (never
+   *  needed: Continue goes on as always). Hidden while "Wil je sneller?" asks and the row to the
+   *  emergency phrases is there too (Ja, Nee and two rows would be four things to tap). */
+  onSamen?: () => void;
   /** "Wil je sneller?" (src/lib/pace.ts), once after 3 lessons in a row without a mistake: Ja and
-   *  Nee take the place of Continue (each goes on), so the screen keeps two things to tap. */
+   *  Nee take the place of Continue (each goes on), so the screen keeps two things to tap (three
+   *  with the "Oefen samen" row). */
   onFaster?: (yes: boolean) => void;
   /** After many mistakes: one plain line, the next lesson is a bit shorter (no word about mistakes). */
   easier?: boolean;
@@ -733,6 +739,9 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
     return () => window.removeEventListener('keydown', onKey);
   }, [onDone, onFaster]);
   const answerFaster = (yes: boolean) => { if (!ready.current || !onFaster) return; onFaster(yes); onDone(); };
+  // At most 3 things to tap: Ja + Nee + the "Oefen samen" row is fine, but not with the row to
+  // the emergency phrases as well.
+  const showSamen = Boolean(onSamen) && !(onFaster && onPhrases);
   const perfect = total > 0 && right === total;
   const rtl = lang?.dir === 'rtl';
   // The next lesson's first word with a picture, as on its card on the path.
@@ -843,6 +852,22 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             <span className="hub-icon" aria-hidden>{dutchUi(lang) ? <CallIcon size={26} /> : <AlertIcon size={26} />}</span>
             <span className="hub-text" aria-hidden>
               <NlPair nlFirst nl="Noodzinnen" nlClass="hub-nl" text={ui('phrasebook', lang)} />
+            </span>
+            <ChevronIcon size={24} />
+          </button>
+        )}
+        {/* After a lesson with chats: practise them with someone else, on this phone. */}
+        {showSamen && (
+          <button
+            type="button"
+            className="hub-card result-phrases result-samen"
+            dir={rtl ? 'rtl' : undefined}
+            onClick={() => { if (ready.current) onSamen?.(); }}
+          >
+            <span className="hub-icon" aria-hidden><BubblesIcon size={26} /></span>
+            <span className="hub-text">
+              <NlPair nlFirst nl="Oefen samen" nlClass="hub-nl" text={ui('samenTitle', lang)} />
+              <Bi className="result-samen-hint" text={ui('samenRowHint', lang)} />
             </span>
             <ChevronIcon size={24} />
           </button>

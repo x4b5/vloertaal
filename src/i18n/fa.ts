@@ -352,6 +352,19 @@ const lang: HelpLanguageSource = {
     easierNext: 'درس بعدی کمی کوتاه‌تر است.', // nieuw, nalezen
     fasterSetting: 'سریع‌تر یاد گرفتن', // nieuw, nalezen
     fasterSettingHint: 'روشن: توضیح کمتر در درس‌های تازه، و هلندی با سرعت عادی. خاموش: مثل قبل.', // nieuw, nalezen
+    samenTitle: 'با هم تمرین کنید', // nieuw, nalezen
+    samenRowHint: 'دو نفر، یک گوشی', // nieuw, nalezen
+    samenIntro: 'با یک همکار، دوست یا معلم تمرین کن. به نوبت بخوانید.', // nieuw, nalezen
+    samenHow: 'نفر 1 همکار است. نفر 2 جواب می‌دهد.', // nieuw, nalezen
+    samenNoScore: 'چیزی ضبط نمی‌شود. نمره‌ای در کار نیست.', // nieuw, nalezen
+    samenPerson: 'نفر {n}', // nieuw, nalezen
+    samenAnswer: 'جواب', // nieuw, nalezen
+    samenHear: 'گوش بده', // nieuw, nalezen
+    samenNext: 'بعدی', // nieuw, nalezen
+    samenTranslation: 'ترجمه', // nieuw, nalezen
+    samenEnd: 'آفرین! نقش‌ها را عوض کنید و دوباره انجام دهید؟', // nieuw, nalezen
+    samenSwap: 'نقش‌ها را عوض کنید', // nieuw, nalezen
+    samenStop: 'تمام', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

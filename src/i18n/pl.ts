@@ -352,6 +352,19 @@ const lang: HelpLanguageSource = {
     easierNext: 'Następna lekcja jest trochę krótsza.', // nieuw, nalezen
     fasterSetting: 'Ucz się szybciej', // nieuw, nalezen
     fasterSettingHint: 'Włączone: mniej wyjaśnień w nowych lekcjach i niderlandzki w normalnym tempie. Wyłączone: jak wcześniej.', // nieuw, nalezen
+    samenTitle: 'Ćwiczcie razem', // nieuw, nalezen
+    samenRowHint: 'Dwie osoby, jeden telefon', // nieuw, nalezen
+    samenIntro: 'Ćwicz z kolegą z pracy, przyjacielem albo nauczycielem. Czytajcie na zmianę.', // nieuw, nalezen
+    samenHow: 'Osoba 1 to kolega z pracy. Osoba 2 odpowiada.', // nieuw, nalezen
+    samenNoScore: 'Nic nie jest nagrywane. Nie ma punktów.', // nieuw, nalezen
+    samenPerson: 'Osoba {n}', // nieuw, nalezen
+    samenAnswer: 'Odpowiedź', // nieuw, nalezen
+    samenHear: 'Posłuchaj', // nieuw, nalezen
+    samenNext: 'Dalej', // nieuw, nalezen
+    samenTranslation: 'Tłumaczenie', // nieuw, nalezen
+    samenEnd: 'Brawo! Zamieńcie się rolami i zróbcie to jeszcze raz?', // nieuw, nalezen
+    samenSwap: 'Zamieńcie się rolami', // nieuw, nalezen
+    samenStop: 'Gotowe', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

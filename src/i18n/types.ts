@@ -415,6 +415,24 @@ export const uiEn = {
   easierNext: 'The next lesson is a bit shorter.',
   fasterSetting: 'Learn faster',
   fasterSettingHint: 'On: less explanation in new lessons, and the Dutch at normal speed. Off: as before.',
+  /* "Wat kun je nu?": can-do sentences per topic (src/content/kunJeNu.ts), on the certificate screen and the coach card. */
+  kunJeNu: 'What can you do now?',
+  kunNote: 'The level next to each sentence is a guide, not an official level.',
+  coachCanDo: 'How many “I can …” sentences you have, from your finished topics',
+  /* "Oefen samen" (src/components/Samen.tsx): two people, one phone, the chats of a lesson. */
+  samenTitle: 'Practise together',
+  samenRowHint: 'Two people, one phone',
+  samenIntro: 'Practise with a colleague, friend or teacher. Take turns reading.',
+  samenHow: 'Person 1 is the colleague. Person 2 answers.',
+  samenNoScore: 'Nothing is recorded. There is no score.',
+  samenPerson: 'Person {n}',
+  samenAnswer: 'Answer',
+  samenHear: 'Hear it',
+  samenNext: 'Next',
+  samenTranslation: 'Translation',
+  samenEnd: 'Well done! Swap roles and do it again?',
+  samenSwap: 'Swap roles',
+  samenStop: 'Done',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

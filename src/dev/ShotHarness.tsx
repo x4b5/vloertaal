@@ -47,6 +47,7 @@ import { SocialMap, SocialMapLink } from '../components/SocialMap';
 import { allRegionUnits, isRegionChoice, regionOf, type RegionChoice } from '../content/regio';
 import { ToetsShot } from './ToetsShot';
 import { NiveauShot } from './NiveauShot';
+import { SamenShot } from './SamenShot';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -126,6 +127,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'kaart') return <KaartShot lang={lang} gender={gender} q={q} />;
   // Lessons at the learner's level: /?shot=niveau&state=faster|easier|daily (src/dev/NiveauShot.tsx).
   if (shot === 'niveau') return <NiveauShot lang={lang} gender={gender} q={q} />;
+  // "Oefen samen": /?shot=samen&step=intro|turn|end|result&at=N&swap=1&cu=<lesson> (src/dev/SamenShot.tsx).
+  if (shot === 'samen') return <SamenShot lang={lang} gender={gender} q={q} />;
   // The app icon in every variant (scripts/icons/make-icons.cjs reads these): /?shot=logo&px=512
   if (shot === 'logo') return <LogoSheet px={Number(q.get('px') ?? 120)} />;
   // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety

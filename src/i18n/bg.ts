@@ -352,6 +352,19 @@ const lang: HelpLanguageSource = {
     easierNext: 'Следващият урок е малко по-кратък.', // nieuw, nalezen
     fasterSetting: 'Учи по-бързо', // nieuw, nalezen
     fasterSettingHint: 'Включено: по-малко обяснения в новите уроци и нидерландски с нормално темпо. Изключено: както преди.', // nieuw, nalezen
+    samenTitle: 'Упражнявайте се заедно', // nieuw, nalezen
+    samenRowHint: 'Двама души, един телефон', // nieuw, nalezen
+    samenIntro: 'Упражнявай се с колега, приятел или учител. Четете поред.', // nieuw, nalezen
+    samenHow: 'Човек 1 е колегата. Човек 2 отговаря.', // nieuw, nalezen
+    samenNoScore: 'Нищо не се записва. Няма оценка.', // nieuw, nalezen
+    samenPerson: 'Човек {n}', // nieuw, nalezen
+    samenAnswer: 'Отговор', // nieuw, nalezen
+    samenHear: 'Чуй', // nieuw, nalezen
+    samenNext: 'Напред', // nieuw, nalezen
+    samenTranslation: 'Превод', // nieuw, nalezen
+    samenEnd: 'Браво! Сменете ролите и направете го още веднъж?', // nieuw, nalezen
+    samenSwap: 'Сменете ролите', // nieuw, nalezen
+    samenStop: 'Готово', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -352,6 +352,19 @@ const lang: HelpLanguageSource = {
     easierNext: 'Die nächste Lektion ist etwas kürzer.', // nieuw, nalezen
     fasterSetting: 'Schneller lernen', // nieuw, nalezen
     fasterSettingHint: 'An: weniger Erklärung in neuen Lektionen und Niederländisch im normalen Tempo. Aus: wie vorher.', // nieuw, nalezen
+    samenTitle: 'Zusammen üben', // nieuw, nalezen
+    samenRowHint: 'Zwei Personen, ein Handy', // nieuw, nalezen
+    samenIntro: 'Übe mit einer Kollegin, einem Freund oder einer Lehrkraft. Lest abwechselnd.', // nieuw, nalezen
+    samenHow: 'Person 1 ist die Kollegin oder der Kollege. Person 2 antwortet.', // nieuw, nalezen
+    samenNoScore: 'Nichts wird aufgenommen. Es gibt keine Punkte.', // nieuw, nalezen
+    samenPerson: 'Person {n}', // nieuw, nalezen
+    samenAnswer: 'Antwort', // nieuw, nalezen
+    samenHear: 'Anhören', // nieuw, nalezen
+    samenNext: 'Weiter', // nieuw, nalezen
+    samenTranslation: 'Übersetzung', // nieuw, nalezen
+    samenEnd: 'Gut gemacht! Rollen tauschen und noch einmal?', // nieuw, nalezen
+    samenSwap: 'Rollen tauschen', // nieuw, nalezen
+    samenStop: 'Fertig', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

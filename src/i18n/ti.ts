@@ -353,6 +353,19 @@ const lang: HelpLanguageSource = {
     easierNext: 'እቲ ዝቕጽል ትምህርቲ ቁሩብ ሓጺር እዩ።', // nieuw, nalezen
     fasterSetting: 'ብቕልጡፍ ምምሃር', // nieuw, nalezen
     fasterSettingHint: 'ክፉት: ኣብ ሓደሽቲ ትምህርትታት ዝወሓደ መብርሂ፣ ሆላንድኛ ድማ ብንቡር ቅልጣፈ። ዕጹው: ከም ቀደም።', // nieuw, nalezen
+    samenTitle: 'ብሓባር ምልምማድ', // nieuw, nalezen
+    samenRowHint: 'ክልተ ሰባት፡ ሓደ ተሌፎን', // nieuw, nalezen
+    samenIntro: { m: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመድ። ብተራ ኣንብቡ።', f: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመዲ። ብተራ ኣንብቡ።', x: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመዱ። ብተራ ኣንብቡ።' }, // nieuw, nalezen
+    samenHow: 'ሰብ 1 እቲ መሳርሕቲ እዩ። ሰብ 2 ይምልስ።', // nieuw, nalezen
+    samenNoScore: 'ዝኾነ ነገር ኣይቅዳሕን። ነጥቢ የለን።', // nieuw, nalezen
+    samenPerson: 'ሰብ {n}', // nieuw, nalezen
+    samenAnswer: 'መልሲ', // nieuw, nalezen
+    samenHear: { m: 'ስማዕ', f: 'ስምዒ', x: 'ስምዑ' }, // nieuw, nalezen
+    samenNext: 'ዝቕጽል', // nieuw, nalezen
+    samenTranslation: 'ትርጉም', // nieuw, nalezen
+    samenEnd: 'ጽቡቕ ገይርኩም! ተራ ቀያይሩ እሞ ደጊምኩም ግበሩዎ?', // nieuw, nalezen
+    samenSwap: 'ተራ ቀያይሩ', // nieuw, nalezen
+    samenStop: 'ወዲእና', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
