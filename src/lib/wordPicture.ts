@@ -33,6 +33,13 @@ const LOOKALIKES: readonly string[][] = [
   // Drawn: "het schap" (a shop shelf) and "vakken vullen" (someone at that shelf).
   ['🗃️', '🥫'],
   ['🧑‍🔧', '👨‍🔧', '👩‍🔧'],
+  // Drawn (group26): "slijpen" (a grinder throwing sparks) next to "de vonk"; also keeps the
+  // sparks away from "de machine" (⚙️).
+  ['⚙️', '🎇'],
+  // Drawn (group26): "de kabel" (a coiled cable) and "de stekker" (a plug on its cable).
+  ['➰', '🔌'],
+  // Drawn (group26): "lek" (a flat tyre) and "de band" (the tyre).
+  ['💧', '🛞'],
 ];
 
 /** Emoji without the invisible variation selector, so "⚠" and "⚠️" compare equal. */

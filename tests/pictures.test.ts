@@ -39,13 +39,18 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     // of l.dates (days, weeks, "tot en met"), "het hoofd", "de rug" and "de buik" (l.body), "het
     // ouderschapsverlof" and "het zorgverlof" (l.kids), "de eindafrekening", "opzeggen" and
     // "uitschrijven" (l.jobends), "de werkvergunning", "de zzp’er" and "de inburgering" (l.permit).
-    for (const id of ['w.geboortedatum', 'w.maandag', 'w.totenmet', 'w.hoofd', 'w.rug', 'w.buik', 'w.zorgverlof', 'w.eindafrekening', 'w.zzper', 'w.inburgering']) expect(abstract).toContain(id);
+    // ("het hoofd", "de rug" and "de buik" have since been drawn: see 199 below.)
+    for (const id of ['w.geboortedatum', 'w.maandag', 'w.totenmet', 'w.zorgverlof', 'w.eindafrekening', 'w.zzper', 'w.inburgering']) expect(abstract).toContain(id);
     // 209 (30 October 2026, Entree in the Taal track): 66 new abstract words in 17 lessons, among
     // them "het aantal" and "klaarleggen" (l.workorder), "nakijken" and "op slot" (l.handover),
     // "onder spanning" (l.power), "de POK" (l.placement), all six of l.mychoice and l.nextstep, "de
     // bedenktijd" (l.budget), "somber" (l.healthy) and "de verkiezing" (l.council).
     for (const id of ['w.aantal', 'w.klaarleggen', 'w.nakijken', 'w.opslot', 'w.onderspanning', 'w.pok', 'w.goedin', 'w.startkwalificatie', 'w.bedenktijd', 'w.somber', 'w.verkiezing']) expect(abstract).toContain(id);
-    expect(abstract.length).toBe(209);
+    // 199 (30 October 2026, group26): ten of them were concrete after all and got a drawing: "het
+    // hoofd", "de rug", "de buik" (l.body), "slijpen", "de kabel", "de stroom", "de hefbrug", "lek",
+    // "kapot" and "de rechter".
+    for (const id of ['w.hoofd', 'w.rug', 'w.buik', 'w.slijpen', 'w.kabel', 'w.stroom', 'w.hefbrug', 'w.lek', 'w.kapot', 'w.rechter']) expect(abstract).not.toContain(id);
+    expect(abstract.length).toBe(199);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).
