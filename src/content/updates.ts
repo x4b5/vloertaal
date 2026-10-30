@@ -16,6 +16,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-30',
     items: [
+      'Nieuw bij Instellingen › Taal en ik: "Laat zien hoe het gaat". De telefoon maakt een kaart voor je begeleider: welke onderwerpen af zijn, op hoeveel dagen je oefende in de laatste 4 weken, je laatste les en (in het spoor Taal) de toets "Wat ken je al?". Jij laat de kaart zelf zien, of je bewaart of deelt hem als plaatje. Er gaat niets naar ons.',
       'Nieuw bij Instellingen › Lessen: Tempo. "Rustig" (zoals tot nu toe) of "Normaal": dan hoor je het Nederlands op het tempo van collega’s. In de latere thema’s van het spoor Taal (Samenwerken, Je rechten, Leven in Nederland, Jouw sector) hoor je een zin de tweede keer in een les op normaal tempo. De knop "Langzaam" blijft. Werkregels blijft zoals het was.',
       'Nieuw in het spoor Taal: de toets "Wat ken je al?" (ongeveer 10 minuten, luisteren, woorden en zinnen). Na de start en na 4 weken (of 3 onderwerpen), met een andere versie. De uitslag toont wat je erbij hebt geleerd, en je eigen stem van toen en nu. Geen cijfer, en alles blijft op je telefoon.',
       'Werkregels: 14 nieuwe lessen voor Entree. Twee nieuwe onderwerpen: Schrijven op je werk (een bericht of mail aan je werk, een korte sollicitatiemail) en Jouw weg (wat kan ik en wat wil ik, na Entree: niveau 2 of werk, terugkijken en je portfolio).',

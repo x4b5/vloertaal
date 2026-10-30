@@ -21,7 +21,7 @@ const t: CultureTranslation = {
     'a.who': '¿Para quién es?',
     'a.who.b': 'Para todas las personas que empiezan a trabajar en los Países Bajos. Idiomas de ayuda: árabe, tigriña, persa, darí, ucraniano, turco, polaco, rumano, búlgaro, español, portugués, francés y alemán.',
     'a.free': 'Tu privacidad',
-    'a.free.b': 'No necesitas una cuenta. Tu progreso solo se guarda en este teléfono o en esta computadora. Si está activado, la app cuenta de forma anónima cuántas veces se hacen las lecciones: sin nombre, sin seguimiento. Puedes desactivarlo en "Ajustes". El resultado de la prueba y la grabación de tu voz también se quedan solo en este teléfono o computadora.', // toets-zin nieuw, nalezen
+    'a.free.b': 'No necesitas una cuenta. Tu progreso solo se guarda en este teléfono o en esta computadora. Si está activado, la app cuenta de forma anónima cuántas veces se hacen las lecciones: sin nombre, sin seguimiento. Puedes desactivarlo en "Ajustes". El resultado de la prueba y la grabación de tu voz también se quedan solo en este teléfono o computadora. Un profesor o coach solo ve lo que tú le enseñas, por ejemplo la tarjeta de «Muestra cómo te va».', // toets-zin en begeleider-zin nieuw, nalezen
     'a.disclaimer': 'Es bueno saberlo',
     'a.disclaimer.b': 'Los consejos de Vloertaal son información general, no asesoría legal. Las normas pueden cambiar; los textos se actualizaron por última vez en octubre de 2026. Para tu propia situación, pregunta a tu empresa, a un sindicato o al Juridisch Loket.',
     'a.contact': '¿Una pregunta o un error?',
