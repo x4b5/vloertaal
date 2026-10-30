@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { courseUnits, ruleCards } from '../content/courses';
 import { withRegion } from '../content/regio';
-import { RULES_BE_NOTE, RULES_DISCLAIMER, ruleAdviceLine } from '../content/regels/disclaimer';
+import { RULES_BE_NOTE, RULES_COUNTRY, RULES_DISCLAIMER, RULES_NOTICE, RULES_PATH_NOTE, RULES_PATH_NOTE_BE, ruleAdviceLine } from '../content/regels/disclaimer';
 import { helpRowsFor, helpRowText, type HelpRow } from '../content/regels/help';
 import type { Unit } from '../content/types';
 import { ui } from '../i18n';
@@ -67,6 +67,40 @@ export function RulesHelp({ lang, country, onShelf, onBack, after }: {
       </button>
       {after}
     </div>
+  );
+}
+
+/**
+ * "Goed om te weten", once: the first time the work-rules track opens (before its path), on a page
+ * of its own with one button. It stays readable in the Hulp tab and on Over Vloertaal.
+ */
+export function RulesNoticeScreen({ country, onDone }: { country?: 'nl' | 'be'; onDone: () => void }) {
+  return (
+    <div className="screen onboarding rules-notice" lang="nl">
+      <h1 className="onboarding-title">Goed om te weten</h1>
+      <section className="rules-disclaimer rules-notice-card" aria-label="Goed om te weten">
+        <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={28} /></span>
+        <p>{RULES_NOTICE.filter((line) => country !== 'be' || line !== RULES_COUNTRY).map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
+      </section>
+      {country === 'be' && (
+        <section className="rules-disclaimer rules-be-note" aria-label="Je werkt in België">
+          <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={24} /></span>
+          <p>{RULES_BE_NOTE.map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
+        </section>
+      )}
+      <button type="button" className="btn btn-primary rules-notice-ok" onClick={onDone}>Ik snap het</button>
+    </div>
+  );
+}
+
+/** One quiet line above the work-rules lessons, always there (not a button): whose rules these are. */
+export function RulesPathNote({ lang, country }: { lang?: HelpLanguage; country?: 'nl' | 'be' }) {
+  if (!dutchUi(lang)) return null;
+  return (
+    <p className="rules-path-note" lang="nl">
+      <InfoIcon size={18} />
+      <span>{country === 'be' ? RULES_PATH_NOTE_BE : RULES_PATH_NOTE}</span>
+    </p>
   );
 }
 

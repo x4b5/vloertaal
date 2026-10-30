@@ -37,6 +37,18 @@ export const RULES_BORDER = 'Algemene informatie. Vraag voor jouw situatie het G
 /** The work rules are those of the Netherlands (docs/belgie-vlaanderen-plan.md). */
 export const RULES_COUNTRY = 'Deze regels gelden in Nederland. In België zijn veel regels anders.';
 
+/** The one line that stays above the lessons of the work-rules path (RulesPathNote). */
+export const RULES_PATH_NOTE = 'Regels van Nederland · Algemene informatie, geen juridisch advies.';
+export const RULES_PATH_NOTE_BE = 'Regels van Nederland, niet van België · Algemene informatie, geen juridisch advies.';
+
+/** "Goed om te weten": the page shown once, the first time the work-rules track opens. */
+export const RULES_NOTICE = [
+  'Vloertaal geeft algemene informatie over werk in Nederland. Het is geen juridisch advies.',
+  RULES_COUNTRY,
+  'Regels kunnen veranderen. Bijgewerkt: ' + RULES_CHECKED + '.',
+  'Gaat het om jouw situatie? Vraag je werkgever, een vakbond of het Juridisch Loket.',
+];
+
 /** Shown in the Hulp tab to a learner who works in Belgium (Settings: "In welk land werk je?"). */
 export const RULES_BE_NOTE = [
   'Je werkt in België.',
