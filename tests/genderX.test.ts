@@ -16,6 +16,7 @@ const files = import.meta.glob(
     '../src/i18n/sayings/*.ts',
     '../src/i18n/sounds/*.ts',
     '../src/i18n/regio/*.ts',
+    '../src/i18n/kunjenu/*.ts',
   ],
   { eager: true, import: 'default' },
 );

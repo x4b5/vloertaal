@@ -34,8 +34,9 @@ import {
 } from './Icons';
 import { CardStep, cardTag, ModelLine, PayslipStep, RuleCard, RuleFeedbackBody, ruleAnnouncement, ruleVerdict, SceneCard, TrueFalse, WhatDo, WhoAsk } from './RuleSteps';
 import { MicIcon, SpeakExercise } from './Speaking';
-import { resetMicForLesson, speakingOn, speakSkipped } from '../lib/speaking';
+import { isWord, resetMicForLesson, speakingOn, speakSkipped } from '../lib/speaking';
 import { listenOn } from '../lib/listen';
+import { speakCardId } from '../lib/spaced';
 import {
   type Answer,
   BuildExercise,
@@ -298,7 +299,7 @@ export function LessonPlayer(props: PlayerProps) {
   return <LessonRun {...props} />;
 }
 
-function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, fresh = false, sector, sayings, report = false, reportHint: explain = false }: {
+function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, fresh = false, sector, sayings, report = false, reportHint: explain = false, fast = false, easy = false }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -335,6 +336,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   report?: boolean;
   /** The first time, a short note says what the flag is for (src/lib/report.ts explainReport). */
   reportHint?: boolean;
+  /** "Sneller" (src/lib/pace.ts): less introduction in a new lesson. */
+  fast?: boolean;
+  /** After many mistakes (src/lib/pace.ts): a shorter lesson. */
+  easy?: boolean;
 }) {
   const persist = resumable && !exercises;
   // An interrupted run of this lesson (same review mode), less than two days old.
@@ -367,11 +372,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   useState(resetMicForLesson);
   const [nonLatinAtStart] = useState(() => nonLatinHelp(lang));
   const [sayingsAtStart] = useState(() => Boolean(sayings));
+  const [paceAtStart] = useState(() => ({ fast, easy }));
   const initial = useMemo(
     // A learner who reads only another script gets picture cards (or cards with speakers) where
     // a review would show Latin-only text cards (lib/exercises.ts readableDutch).
-    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart, sector, sayings: sayingsAtStart }),
-    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart, sector, sayingsAtStart],
+    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart, sector, sayings: sayingsAtStart, ...paceAtStart }),
+    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart, sector, sayingsAtStart, paceAtStart],
   );
   // The saved place in that list, with the mistakes queued then (null: start from the top).
   // A mistake comes back in a new form made from its place in the queue (forRetry, as check() does).
@@ -665,6 +671,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       }
       // A rules question: per step (its id), for the daily review of the track (M4).
       if (isRuleExercise(ex)) wordResults.current[ex.step.id] = (wordResults.current[ex.step.id] ?? true) && answer.correct;
+      // A built sentence: its sentence card in "Herhaal vandaag" (lib/spaced.ts addLessonSentences).
+      if (ex.kind === 'build') wordResults.current[ex.sentence.id] = (wordResults.current[ex.sentence.id] ?? true) && answer.correct;
       // A match or a sentence that counts as a mistake: the words the wrong taps were on go back
       // to the first box of the review cards too (one stray tap is forgiven, as in the grading).
       if (!answer.correct && answer.missed?.length) {
@@ -762,6 +770,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   /** On to the next exercise; `queued`: retries just added this moment (not in `queue` yet). */
   function next(queued?: number) {
     const coming = typeof queued === 'number' ? queued : 0;
+    // A sentence said ("Zeg het", never graded): it gets a spoken-sentence card (lib/spaced.ts).
+    if (ex?.kind === 'speak' && index < initial.length && !isWord(ex.item)) wordResults.current[speakCardId(ex.item.id)] = true;
     reset();
     let i = index + 1;
     // Skip audio-only exercises when the learner can't listen right now, or when nothing on this

@@ -391,6 +391,31 @@ export const uiNl: Record<UiKey, UiText> = {
   heardAlmost: 'Bijna: {word} nog eens',
   heardNotYet: 'Nog niet verstaan',
   goOnAnyway: 'Toch verder',
+  // Lessons at the learner's level (src/lib/pace.ts)
+  fasterAsk: 'Wil je sneller?',
+  fasterHint: 'Minder uitleg in nieuwe lessen. Het Nederlands op normaal tempo.',
+  fasterYes: 'Ja',
+  fasterNo: 'Nee',
+  easierNext: 'De volgende les is wat korter.',
+  fasterSetting: 'Sneller leren',
+  fasterSettingHint: 'Aan: minder uitleg in nieuwe lessen, en het Nederlands op normaal tempo. Uit: zoals eerst.',
+  // "Wat kun je nu?": zinnen per onderwerp (src/content/kunJeNu.ts)
+  kunJeNu: 'Wat kun je nu?',
+  kunNote: 'Het niveau bij elke zin is een richtlijn, geen officieel niveau.',
+  coachCanDo: 'Hoeveel zinnen “Ik kan …” je hebt, van je onderwerpen die af zijn',
+  samenTitle: 'Oefen samen',
+  samenRowHint: 'Met twee mensen, op één telefoon',
+  samenIntro: 'Oefen met een collega, vriend of docent. Lees om de beurt.',
+  samenHow: 'Persoon 1 is de collega. Persoon 2 geeft antwoord.',
+  samenNoScore: 'Er wordt niets opgenomen. Er is geen score.',
+  samenPerson: 'Persoon {n}',
+  samenAnswer: 'Antwoord',
+  samenHear: 'Hoor het',
+  samenNext: 'Volgende',
+  samenTranslation: 'Vertaling',
+  samenEnd: 'Goed gedaan! Wissel de rollen en doe het nog een keer?',
+  samenSwap: 'Wissel de rollen',
+  samenStop: 'Klaar',
 };
 
 const lang: HelpLanguageSource = {

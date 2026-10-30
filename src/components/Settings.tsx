@@ -21,6 +21,7 @@ import {
 import { setSpeakingOn, speakingOn } from '../lib/speaking';
 import { installLocal, listenOn, localStatus, setListenOn, type LocalStatus } from '../lib/listen';
 import { tempoOf, TEMPOS, type Tempo } from '../lib/tempo';
+import { fasterOn } from '../lib/pace';
 import { TEXT_SIZES, type TextSize } from '../lib/textSize';
 import { VOICE_SAMPLE } from '../lib/voices';
 import { nonLatinHelp, setWantsWriting, setWritingInput, wantsWriting, writingInput } from '../lib/writing';
@@ -140,6 +141,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   toets: { nl: 'Wat ken je al?', key: 'toetsTitle', icon: <BarsIcon size={24} /> },
   kaart: { nl: 'Laat zien hoe het gaat', key: 'coachCard', icon: <CardIcon size={24} /> },
   listen: { nl: 'Laat de telefoon luisteren (proef)', key: 'listenTrial', icon: <MicIcon size={24} /> },
+  faster: { nl: 'Sneller leren', key: 'fasterSetting', icon: <TempoIcon size={24} fast /> },
 };
 
 /** A short value in the help language only (English when there is none). */
@@ -165,7 +167,7 @@ function Head({ page, lang, onBack }: { page: SettingsPage | null; lang?: HelpLa
 
 export function Settings({
   progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onCountry, onTheme, onTextSize, onVoice, onQuiet, onTempo, onReset,
-  onRestore, access = 'full', onAccess, onCertificate,
+  onRestore, access = 'full', onAccess, onCertificate, onFaster,
 }: {
   progress: Progress;
   lang?: HelpLanguage;
@@ -197,6 +199,8 @@ export function Settings({
   onAccess?: (a: Access) => void;
   /** Opens a certificate from "Mijn certificaten". */
   onCertificate: (unitId: string) => void;
+  /** "Sneller leren" (src/lib/pace.ts) on or off. */
+  onFaster?: (on: boolean) => void;
 }) {
   const { device, recorded } = useVoices();
   /** Bumped when a stored-on-this-device switch changes, so the page shows it at once. */
@@ -323,6 +327,7 @@ export function Settings({
         return t ? <span className="set-row-value" dir="ltr">{t}</span> : null;
       }
       case 'counting': return <Value text={say(countingOn() ? 'settingOn' : 'settingOff')} />;
+      case 'faster': return <Value text={say(fasterOn(progress) ? 'settingOn' : 'settingOff')} />;
       default: return null;
     }
   };
@@ -505,6 +510,13 @@ export function Settings({
               options={TEMPOS.map((t) => ({ id: t, nl: TEMPO_NL[t], text: say(TEMPO_KEYS[t]), picture: <TempoIcon size={28} fast={t === 'normal'} /> }))}
             />
             <p className="max3-hint"><Bi text={say('tempoHint')} /></p>
+          </>
+        );
+      case 'faster':
+        return (
+          <>
+            {onOff(fasterOn(progress), (on) => onFaster?.(on))}
+            <p className="max3-hint"><Bi text={say('fasterSettingHint')} /></p>
           </>
         );
       case 'speaking':

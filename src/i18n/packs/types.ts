@@ -13,6 +13,8 @@ export interface LanguagePack {
   sayings: CultureTranslation;
   /** Dutch sounds (src/content/sounds.ts). */
   sounds: CultureTranslation;
+  /** "Wat kun je nu?" (src/content/kunJeNu.ts): the can-do sentences and their screen texts. */
+  kunJeNu: CultureTranslation;
   /** Where the pack's file was loaded from (saved with the app for offline use). */
   url: string;
 }

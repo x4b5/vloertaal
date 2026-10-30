@@ -359,6 +359,26 @@ const lang: HelpLanguageSource = {
     heardAlmost: 'Aproape: spune {word} încă o dată', // nieuw, nalezen
     heardNotYet: 'Încă neînțeles', // nieuw, nalezen
     goOnAnyway: 'Mergi mai departe oricum', // nieuw, nalezen
+    fasterAsk: 'Vrei mai repede?', // nieuw, nalezen
+    fasterHint: 'Mai puține explicații în lecțiile noi. Neerlandeza în ritm normal.', // nieuw, nalezen
+    fasterYes: 'Da', // nieuw, nalezen
+    fasterNo: 'Nu', // nieuw, nalezen
+    easierNext: 'Lecția următoare e puțin mai scurtă.', // nieuw, nalezen
+    fasterSetting: 'Învață mai repede', // nieuw, nalezen
+    fasterSettingHint: 'Pornit: mai puține explicații în lecțiile noi și neerlandeza în ritm normal. Oprit: ca înainte.', // nieuw, nalezen
+    samenTitle: 'Exersați împreună', // nieuw, nalezen
+    samenRowHint: 'Două persoane, un telefon', // nieuw, nalezen
+    samenIntro: 'Exersează cu un coleg, un prieten sau un profesor. Citiți pe rând.', // nieuw, nalezen
+    samenHow: 'Persoana 1 este colegul. Persoana 2 răspunde.', // nieuw, nalezen
+    samenNoScore: 'Nu se înregistrează nimic. Nu există punctaj.', // nieuw, nalezen
+    samenPerson: 'Persoana {n}', // nieuw, nalezen
+    samenAnswer: 'Răspuns', // nieuw, nalezen
+    samenHear: 'Ascultă', // nieuw, nalezen
+    samenNext: 'Următorul', // nieuw, nalezen
+    samenTranslation: 'Traducere', // nieuw, nalezen
+    samenEnd: 'Bravo! Schimbați rolurile și mai faceți o dată?', // nieuw, nalezen
+    samenSwap: 'Schimbați rolurile', // nieuw, nalezen
+    samenStop: 'Gata', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

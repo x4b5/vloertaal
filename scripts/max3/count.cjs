@@ -516,6 +516,35 @@ function defineStates(LANG) {
   add('verstaan:almost', shot('speak-compare&item=sentence&heard=almost'), null, { expect: '.say-heard-almost' });
   add('verstaan:notyet', shot('speak-compare&item=sentence&heard=de%20bus%20komt'), null, { expect: '.say-heard-notyet' });
   add('verstaan:wait', shot('speak-compare&item=sentence&heard=wait'), null, { expect: '.say-heard-wait' });
+  // Lessons at the learner's level (src/lib/pace.ts): "Wil je sneller?" (Ja / Nee in place of
+  // Continue), the line after many mistakes, Settings › Lessen › Sneller leren, and today's review
+  // with its sentence cards (a sentence to build, the spoken sentence).
+  add('niveau:faster', shot('niveau&state=faster'), null, { expect: '.result-faster' });
+  add('niveau:faster-samen', shot('niveau&state=faster&samen=1'), null, { expect: '.result-faster-yes' });
+  add('niveau:easier', shot('niveau&state=easier'), null, { expect: '.result-easier' });
+  add('niveau:setting', shot('settings&page=faster'), null, { expect: '.max3-hint' });
+  add('niveau:daily-build', shot('niveau&state=daily&at=8'), null, { expect: '.player' });
+  // "Wat kun je nu?" (src/content/kunJeNu.ts): under the certificate (text only), and the table on
+  // the coaches' page (two folds, the list exception).
+  add('kunjenu:certificate', shot('certificate&cu=u.time&name=Ali%20Hassan'), null, { expect: '.kun-list' });
+  add('kunjenu:certificate-sector', shot('certificate&cu=u.garage&name=Ali%20Hassan'), null, { expect: '.kun-list' });
+  add('kunjenu:kaart', shot('kaart&name=Ali%20Hassan'), null, { expect: '.kaart-img' });
+  add('kunjenu:coaches', shot('coaches'), null, { list: true, expect: '.kun-details' });
+  // "Oefen samen" (src/components/Samen.tsx): the row on a lesson's result (with Continue), the
+  // explanation (Start), a turn (Hoor het, a speaker; Vertaling; Volgende), a turn with the roles
+  // swapped, the end (Wissel de rollen, Klaar), and the way through: Start, Volgende to the end, swap.
+  add('samen:result', shot('samen&step=result'), null, { expect: '.result-samen' });
+  add('samen:intro', shot('samen'), null, { expect: '.samen-go' });
+  add('samen:turn', shot('samen&step=turn&at=0'), null, { expect: '.samen-next' });
+  add('samen:turn-answer', shot('samen&step=turn&at=1'), null, { expect: '.samen-turn-me' });
+  add('samen:turn-swapped', shot('samen&step=turn&at=0&swap=1'), null, { expect: '.samen-badge-2' });
+  add('samen:end', shot('samen&step=end'), null, { expect: '.samen-swap' });
+  add('samen:through', shot('samen'), async (p) => {
+    await tap(p, '.samen-go');
+    for (let i = 0; i < 4; i++) await tap(p, '.samen-next');
+    await tap(p, '.samen-swap');
+  }, { expect: '.samen-turn-them .samen-badge-2' });
+  add('samen:no-help', shot('samen&step=turn&at=0'), async (p) => { await tap(p, '.samen-help-toggle'); }, { expect: '.samen-help-toggle[aria-pressed="false"]' });
   return S;
 }
 
@@ -657,6 +686,8 @@ function defineRuleStates() {
   add('flow:nl-shelf', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); await tap(p, '.rules-shelf-link'); await settle(p); }, { list: true, expect: '.shelf-list' });
   add('flow:nl-settings-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
   add('flow:nl-about-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 3); await settle(p); }, { expect: '.about-section' });
+  // "Wat kun je nu?" under a Werkregels certificate (Dutch only).
+  add('kunjenu:rule-certificate', shot('certificate&cu=r.loon&name=Fatima%20Amrani'), null, { expect: '.kun-list' });
   return S;
 }
 

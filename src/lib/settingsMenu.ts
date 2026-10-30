@@ -17,7 +17,9 @@ export type SettingsPage =
   | 'kaart'
   /** "Laat de telefoon luisteren (proef)", under "Spreken oefenen": only on a phone that can
    *  recognise Dutch on the device (src/lib/listen.ts). */
-  | 'listen';
+  | 'listen'
+  /** "Sneller leren" (src/lib/pace.ts): on or off, from Lessen, right under Tempo. */
+  | 'faster';
 
 /** The page each page is opened from (null: the Settings menu itself). */
 export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
@@ -53,6 +55,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   toets: 'lessons',
   kaart: 'me',
   listen: 'lessons',
+  faster: 'lessons',
 };
 
 /** How many steps below the Settings menu a page is (0 = the menu). */
@@ -93,7 +96,7 @@ export interface SettingsContext {
 export function settingsRows(list: SettingsList, ctx: SettingsContext): SettingsPage[] {
   const rows: (SettingsPage | false)[] =
     list === 'me' ? ['language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', 'country', !ctx.rules && ctx.helpLang && 'english', 'certificates', 'kaart']
-    : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'tempo', !ctx.rules && 'speaking', !ctx.rules && ctx.listen === true && 'listen', !ctx.rules && 'writing', 'text', 'theme', !ctx.rules && 'toets']
+    : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'tempo', !ctx.rules && 'faster', !ctx.rules && 'speaking', !ctx.rules && ctx.listen === true && 'listen', !ctx.rules && 'writing', 'text', 'theme', !ctx.rules && 'toets']
     : [ctx.preview && 'unlock', ctx.offline && 'offline', 'reminder', ctx.install && 'install', 'backup', 'counting', 'reset'];
   return rows.filter((r): r is SettingsPage => Boolean(r));
 }

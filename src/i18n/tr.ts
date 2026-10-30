@@ -359,6 +359,26 @@ const lang: HelpLanguageSource = {
     heardAlmost: 'Neredeyse: {word} kelimesini tekrar söyle', // nieuw, nalezen
     heardNotYet: 'Henüz anlaşılmadı', // nieuw, nalezen
     goOnAnyway: 'Yine de devam', // nieuw, nalezen
+    fasterAsk: 'Daha hızlı ilerlemek ister misin?', // nieuw, nalezen
+    fasterHint: 'Yeni derslerde daha az açıklama. Hollandaca normal hızda.', // nieuw, nalezen
+    fasterYes: 'Evet', // nieuw, nalezen
+    fasterNo: 'Hayır', // nieuw, nalezen
+    easierNext: 'Sonraki ders biraz daha kısa.', // nieuw, nalezen
+    fasterSetting: 'Daha hızlı öğren', // nieuw, nalezen
+    fasterSettingHint: 'Açık: yeni derslerde daha az açıklama ve Hollandaca normal hızda. Kapalı: eskisi gibi.', // nieuw, nalezen
+    samenTitle: 'Birlikte pratik yapın', // nieuw, nalezen
+    samenRowHint: 'İki kişi, tek telefon', // nieuw, nalezen
+    samenIntro: 'Bir iş arkadaşı, arkadaş ya da öğretmenle pratik yap. Sırayla okuyun.', // nieuw, nalezen
+    samenHow: '1. kişi iş arkadaşıdır. 2. kişi cevap verir.', // nieuw, nalezen
+    samenNoScore: 'Hiçbir şey kaydedilmez. Puan yok.', // nieuw, nalezen
+    samenPerson: '{n}. kişi', // nieuw, nalezen
+    samenAnswer: 'Cevap', // nieuw, nalezen
+    samenHear: 'Dinle', // nieuw, nalezen
+    samenNext: 'Sonraki', // nieuw, nalezen
+    samenTranslation: 'Çeviri', // nieuw, nalezen
+    samenEnd: 'Aferin! Rolleri değiştirip bir kez daha yapın?', // nieuw, nalezen
+    samenSwap: 'Rolleri değiştirin', // nieuw, nalezen
+    samenStop: 'Bitti', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

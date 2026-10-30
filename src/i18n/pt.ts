@@ -359,6 +359,26 @@ const lang: HelpLanguageSource = {
     heardAlmost: 'Quase: diz {word} outra vez', // nieuw, nalezen
     heardNotYet: 'Ainda não percebido', // nieuw, nalezen
     goOnAnyway: 'Continuar mesmo assim', // nieuw, nalezen
+    fasterAsk: 'Queres ir mais rápido?', // nieuw, nalezen
+    fasterHint: 'Menos explicação nas lições novas. O neerlandês a velocidade normal.', // nieuw, nalezen
+    fasterYes: 'Sim', // nieuw, nalezen
+    fasterNo: 'Não', // nieuw, nalezen
+    easierNext: 'A próxima lição é um pouco mais curta.', // nieuw, nalezen
+    fasterSetting: 'Aprender mais rápido', // nieuw, nalezen
+    fasterSettingHint: 'Ligado: menos explicação nas lições novas e o neerlandês a velocidade normal. Desligado: como antes.', // nieuw, nalezen
+    samenTitle: 'Praticar a dois', // nieuw, nalezen
+    samenRowHint: 'Duas pessoas, um telemóvel', // nieuw, nalezen
+    samenIntro: 'Pratica com um colega, um amigo ou um professor. Leiam à vez.', // nieuw, nalezen
+    samenHow: 'A pessoa 1 é o colega. A pessoa 2 responde.', // nieuw, nalezen
+    samenNoScore: 'Nada é gravado. Não há pontuação.', // nieuw, nalezen
+    samenPerson: 'Pessoa {n}', // nieuw, nalezen
+    samenAnswer: 'Resposta', // nieuw, nalezen
+    samenHear: 'Ouvir', // nieuw, nalezen
+    samenNext: 'Seguinte', // nieuw, nalezen
+    samenTranslation: 'Tradução', // nieuw, nalezen
+    samenEnd: 'Muito bem! Trocar de papéis e fazer outra vez?', // nieuw, nalezen
+    samenSwap: 'Trocar de papéis', // nieuw, nalezen
+    samenStop: 'Terminar', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

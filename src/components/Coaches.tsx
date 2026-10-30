@@ -12,6 +12,7 @@ import { ThemeHeadRow } from './Themes';
 import { COACH_FACTS } from '../content/facts';
 import { CONTACT_EMAIL } from '../content/about';
 import { PRO_LEAD, PRO_TITLE, proSections, type ProSection } from '../content/pro';
+import { KUN_REGELS, KUN_TAAL, type KunOnderwerp } from '../content/kunJeNu';
 
 /**
  * "Voor begeleiders en werkgevers" (Dutch only), its own page from the button at the bottom of
@@ -71,7 +72,7 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
         <h1 tabIndex={-1}>{PRO_TITLE}</h1>
       </div>
       <p className="muted small">{PRO_LEAD}</p>
-      {proSections.map((s) => <Section key={s.id} s={s}>{s.extra === 'topics' ? topics : s.extra === 'facts' ? <Facts /> : null}</Section>)}
+      {proSections.map((s) => <Section key={s.id} s={s}>{s.extra === 'topics' ? topics : s.extra === 'facts' ? <Facts /> : s.extra === 'kunjenu' ? <KunTabel /> : null}</Section>)}
     </div>
   );
 }
@@ -95,6 +96,37 @@ function Section({ s, children }: { s: ProSection; children?: ReactNode }) {
       )}
       {children}
     </section>
+  );
+}
+
+/**
+ * "Wat kun je nu?" as a table per track (topic | sentences | fits), each folded in its own
+ * <details> (two things to tap: with the mail address, three on this page; the list is the exception).
+ */
+function KunTabel() {
+  const sporen: [string, KunOnderwerp[]][] = [['Taal', KUN_TAAL], ['Werkregels', KUN_REGELS]];
+  return (
+    <>
+      {sporen.map(([naam, lijst]) => (
+        <details key={naam} className="kun-details">
+          <summary>{naam}: {lijst.length} onderwerpen</summary>
+          <table className="kun-table">
+            <thead>
+              <tr><th scope="col">Onderwerp</th><th scope="col">Zinnen</th><th scope="col">Past bij</th></tr>
+            </thead>
+            <tbody>
+              {lijst.flatMap((o) => o.zinnen.map((z, i) => (
+                <tr key={z.id} className={i === 0 ? 'kun-first' : undefined}>
+                  {i === 0 && <th scope="row" rowSpan={o.zinnen.length}>{o.titel}</th>}
+                  <td>{z.nl}</td>
+                  <td>{z.niveau} · {z.vaardigheid}</td>
+                </tr>
+              )))}
+            </tbody>
+          </table>
+        </details>
+      ))}
+    </>
   );
 }
 

@@ -10,6 +10,7 @@ import { allForms, forGender, GENDERED_LANGS, isPlural, PLURAL_CATEGORIES, uiEn,
 import { mixLessonFor } from '../src/content/review';
 import { THEMES } from '../src/content/themes';
 import { regionIds } from '../src/content/regio';
+import { kunGlossIds } from '../src/content/kunJeNu';
 // The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
 import './regionLoaded';
 
@@ -38,6 +39,8 @@ const contentIds = [
   ...THEMES.map((t) => t.id),
   // The regions (src/content/regio): their lessons and tips, and the Sociale kaart's categories.
   ...regionIds(),
+  // "Wat kun je nu?" (src/content/kunJeNu.ts): the can-do sentences of the themes translated so far.
+  ...kunGlossIds(),
 ];
 
 describe('content and translations', () => {

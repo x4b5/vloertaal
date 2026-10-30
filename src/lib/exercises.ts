@@ -787,7 +787,15 @@ function reverseDialogue(lesson: Lesson): Dialogue | undefined {
  * `sayings`: the learner has done the first lesson of "Uitdrukkingen en gezegden" (SAYINGS_FROM),
  * so a lesson with a saying of its own (src/content/sayings.ts) shows it near the end.
  */
-export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice; sayings?: boolean }): Exercise[] {
+/**
+ * `fast` ("Wil je sneller?" Ja, src/lib/pace.ts): less introduction. Every new word keeps its card
+ * (no word of a lesson was met before: word ids and their Dutch never repeat over the course),
+ * but there is one check after all of them instead of one after every two.
+ * `easy` (after many mistakes, src/lib/pace.ts): a shorter lesson, with all its introduction: one
+ * sentence fewer to build (none by ear), and no extra question at the end (no saying, no second
+ * listening question or reversed chat). Neither changes a review.
+ */
+export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice; sayings?: boolean; fast?: boolean; easy?: boolean }): Exercise[] {
   // The work-rules track: a lesson of steps (nothing in it needs to be heard, so "Without
   // sound" and speaking practice change nothing).
   if (lesson.steps?.length) return buildRuleLesson(lesson, { seed: opts.seed, review: opts.review });
@@ -805,13 +813,16 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // made a third of it), all of them in a lesson. In a mixed review the "Zeg het zo" phrase of
   // the tip that comes back is the second one, when it is one short sentence.
   const phrase = mix && !daily && tip && !ownTip && isShortPhrase(tip.phrase.nl) ? tip.phrase : undefined;
+  // Today's review builds its sentence cards (lib/spaced.ts, at most 2), or else one sentence.
   const sentences = daily
-    ? lesson.sentences.slice(0, 1)
+    ? lesson.sentences.slice(0, Math.max(1, lesson.cardSentences ?? 0))
     : mix
       ? phrase && !lesson.sentences.some((s) => s.nl === phrase.nl)
         ? [...lesson.sentences.slice(0, MIX_MAX_BUILDS - 1), { id: phrase.id, nl: phrase.nl, en: phrase.en }]
         : lesson.sentences.slice(0, MIX_MAX_BUILDS)
-      : lesson.sentences;
+      : opts.easy && !opts.review && lesson.sentences.length > 1 ? lesson.sentences.slice(0, -1) : lesson.sentences;
+  const easy = Boolean(opts.easy) && !opts.review && !mix;
+  const fast = Boolean(opts.fast) && !easy;
   const dialogues = daily ? (lesson.dialogues ?? []).slice(0, 1) : lesson.dialogues ?? [];
   // Progression (PROGRESSION): only in the course's own lessons (and a reversed chat in a unit's
   // mixed review), not in today's review.
@@ -826,8 +837,8 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     let putOff = false;
     words.forEach((word, i) => {
       out.push({ kind: 'intro', word });
-      // After every second new word, quiz one of the two just learned.
-      if (i % 2 === 1 || putOff) {
+      // After every second new word, quiz one of the two just learned ("sneller": once, at the end).
+      if (fast ? i === words.length - 1 : i % 2 === 1 || putOff) {
         const target = words[i - Math.floor(rng() * 2)];
         const known = words.slice(0, i + 1);
         // No word met so far can be a wrong option (the only other one is a near-synonym, as
@@ -888,7 +899,8 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     for (const dialogue of dialogues) {
       out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
     }
-    if (opts.speak && !opts.quiet) return withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);
+    // A spoken-sentence card (lesson.say) is said again; else a sentence or word as usual.
+    if (opts.speak && !opts.quiet) return withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0, lesson.say);
     return out;
   }
 
@@ -911,7 +923,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   sentences.forEach((sentence, k) => {
     const build: Exercise = { kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) };
     // Later units: the last sentence is built by ear (never without sound).
-    if (later(PROGRESSION.audioBuild) && !opts.quiet && k === sentences.length - 1 && sentences.length > 1) build.audio = true;
+    if (later(PROGRESSION.audioBuild) && !opts.quiet && !easy && k === sentences.length - 1 && sentences.length > 1) build.audio = true;
     out.push(build);
   });
 
@@ -925,7 +937,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // A saying that fits this lesson's topic, after the sayings unit: its card, then "What does she
   // mean?". Only in the lesson itself (not when it is repeated as a review), and from its own
   // generator, so every other exercise stays the same with or without it.
-  const saying = opts.sayings && !opts.review ? sayingForLesson(lesson.id) : undefined;
+  const saying = opts.sayings && !opts.review && !easy ? sayingForLesson(lesson.id) : undefined;
   if (saying) {
     const question = sayingQuestion(saying);
     const sayRng = createRng(((opts.seed ?? 0) ^ 0x5a1d) >>> 0);
@@ -936,7 +948,8 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // question; the sentence built by ear is listening practice too): the reply is given, pick
   // the question.
   const turned = later(PROGRESSION.reverseChat) ? reverseDialogue(lesson) : undefined;
-  if (turned) out.push({ kind: 'chat', dialogue: turned, options: chatPromptOptions(turned, rng, 3, lesson), reverse: true });
+  if (easy) { /* a shorter lesson: no second listening question here */ }
+  else if (turned) out.push({ kind: 'chat', dialogue: turned, options: chatPromptOptions(turned, rng, 3, lesson), reverse: true });
   else out.push(opts.quiet ? readableDutch(l2, lesson, rng, Boolean(opts.nonLatin), true, false) : { kind: 'listen', word: l2, options: options(l2, lesson, rng) });
   // Typing what you hear has no reading twin; read the word and pick its meaning instead.
   // The written-word options for "hear and pick" come from their own generator, so the rest of

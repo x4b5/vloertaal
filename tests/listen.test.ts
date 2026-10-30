@@ -261,7 +261,7 @@ describe('only in the Dutch course, and only on a phone that can', () => {
   it('the Settings row is there only with on-device Dutch (or its download), never in Werkregels', () => {
     const ctx = { helpLang: true, gender: false, preview: false, install: false, offline: true };
     expect(settingsRows('lessons', ctx)).not.toContain('listen');
-    expect(settingsRows('lessons', { ...ctx, listen: true })).toEqual(['sound', 'voice', 'tempo', 'speaking', 'listen', 'writing', 'text', 'theme', 'toets']);
+    expect(settingsRows('lessons', { ...ctx, listen: true })).toEqual(['sound', 'voice', 'tempo', 'faster', 'speaking', 'listen', 'writing', 'text', 'theme', 'toets']);
     expect(settingsRows('lessons', { ...ctx, listen: true, rules: true })).not.toContain('listen');
   });
 

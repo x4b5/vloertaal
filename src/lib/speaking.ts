@@ -134,8 +134,10 @@ export function withSpeaking<E extends { kind: string }>(
   lesson: Lesson,
   make: (item: SpeakItem) => E,
   seed = 0,
+  /** What to say, chosen beforehand (today's review: a spoken-sentence card); same place. */
+  fixed?: SpeakItem,
 ): E[] {
-  const place = speakPlacement(list, lesson, seed);
+  const place = fixed && list.length >= 3 ? { at: Math.max(1, list.length - 2), item: fixed } : speakPlacement(list, lesson, seed);
   if (!place) return list;
   return [...list.slice(0, place.at), make(place.item), ...list.slice(place.at)];
 }

@@ -359,6 +359,26 @@ const lang: HelpLanguageSource = {
     heardAlmost: 'Майже: скажи {word} ще раз', // nieuw, nalezen
     heardNotYet: 'Ще не зрозуміло', // nieuw, nalezen
     goOnAnyway: 'Все одно далі', // nieuw, nalezen
+    fasterAsk: 'Хочеш швидше?', // nieuw, nalezen
+    fasterHint: 'Менше пояснень у нових уроках. Нідерландська у звичайному темпі.', // nieuw, nalezen
+    fasterYes: 'Так', // nieuw, nalezen
+    fasterNo: 'Ні', // nieuw, nalezen
+    easierNext: 'Наступний урок трохи коротший.', // nieuw, nalezen
+    fasterSetting: 'Вчитися швидше', // nieuw, nalezen
+    fasterSettingHint: 'Увімкнено: менше пояснень у нових уроках і нідерландська у звичайному темпі. Вимкнено: як раніше.', // nieuw, nalezen
+    samenTitle: 'Вправляйтеся разом', // nieuw, nalezen
+    samenRowHint: 'Двоє людей, один телефон', // nieuw, nalezen
+    samenIntro: 'Вправляйся з колегою, другом або вчителем. Читайте по черзі.', // nieuw, nalezen
+    samenHow: 'Людина 1 — колега. Людина 2 відповідає.', // nieuw, nalezen
+    samenNoScore: 'Нічого не записується. Оцінки немає.', // nieuw, nalezen
+    samenPerson: 'Людина {n}', // nieuw, nalezen
+    samenAnswer: 'Відповідь', // nieuw, nalezen
+    samenHear: 'Послухати', // nieuw, nalezen
+    samenNext: 'Далі', // nieuw, nalezen
+    samenTranslation: 'Переклад', // nieuw, nalezen
+    samenEnd: 'Молодці! Поміняйтеся ролями і зробіть ще раз?', // nieuw, nalezen
+    samenSwap: 'Поміняйтеся ролями', // nieuw, nalezen
+    samenStop: 'Готово', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
