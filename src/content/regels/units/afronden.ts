@@ -76,7 +76,7 @@ export const afrondenUnit: RuleUnit = {
             { id: 'b', text: 'Hij vraagt het aan Henk, vóór hij vertrekt.', best: true, feedback: 'Goed. Dan weet hij het zeker.' },
             { id: 'c', text: 'Hij gaat eerst naar de klant, en kijkt daar.', best: false, feedback: 'Dan gaat hij misschien twee keer heen en weer.' },
           ],
-          why: 'Vraag het vóór je begint. Een vraag aan het begin is normaal. Een fout achteraf kost veel meer tijd. Voor jou, en voor de klant.',
+          why: 'Vraag het vóór je begint. Een vraag aan het begin is normaal. Een fout aan het eind kost veel meer tijd. Voor jou, en voor de klant.',
         },
         // Terugzeggen (rapport hiaten, voorstel 3): de tweede vraag naast r.l.start.3.wd2.
         {
@@ -142,7 +142,7 @@ export const afrondenUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt niets. Het was niet haar schuld.', best: false, feedback: 'Klopt. Maar Linda moet het wel weten.' },
             { id: 'c', text: 'Ze zegt tegen Linda: "Kamer 4 zat op slot."', best: true, feedback: 'Goed. Dan kan Linda het regelen.' },
           ],
-          why: 'Afmelden is: zeggen wat klaar is, en wat niet. Ook als het niet jouw schuld is. Zeg ook wat je opviel. Een vinkje bij iets wat niet klaar is, geeft later problemen.',
+          why: 'Afmelden is: zeggen wat klaar is, en wat niet. Ook als het niet jouw schuld is. Zeg ook wat je zag. Een vinkje bij iets wat niet klaar is, geeft later problemen.',
         },
         {
           kind: 'whatdo',
@@ -150,17 +150,17 @@ export const afrondenUnit: RuleUnit = {
           situation: 'Sanne is klaar. Haar kar staat nog in de gang. Wat kan Sanne het beste doen?',
           options: [
             { id: 'a', text: 'Ze laat de kar staan. Morgen komt ze toch weer.', best: false, feedback: 'Dan staat hij in de weg. Iemand kan erover vallen.' },
-            { id: 'b', text: 'Ze ruimt de kar op en zet de middelen weg.', best: true, feedback: 'Goed. Zo kan de volgende meteen beginnen.' },
+            { id: 'b', text: 'Ze ruimt de kar op en zet de schoonmaakspullen weg.', best: true, feedback: 'Goed. Zo kan de volgende meteen beginnen.' },
             { id: 'c', text: 'Ze vraagt een collega om de kar op te ruimen.', best: false, feedback: 'Dat is haar werk. Haar collega heeft eigen werk.' },
           ],
-          why: 'Ruim je werkplek op vóór je weggaat. Zet middelen en gereedschap terug op hun plek. Dan kan de volgende meteen beginnen. En niemand struikelt.',
+          why: 'Ruim je werkplek op vóór je weggaat. Zet je spullen en gereedschap terug op hun plek. Dan kan de volgende meteen beginnen. En niemand valt erover.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.afronden.2.tf1',
           statement: 'Kijkt je leidinggevende je werk na? Dan vertrouwt ze je niet.',
           answer: false,
-          why: 'Controleren hoort bij goed werk. Ook ervaren collega\'s laten hun werk nakijken. Zo vind je fouten vóór de klant ze ziet. Je mag het ook zelf vragen: "Wil je even kijken?"',
+          why: 'Controleren hoort bij goed werk. Ook collega\'s die het werk al lang doen, laten hun werk nakijken. Zo vind je fouten vóór de klant ze ziet. Je mag het ook zelf vragen: "Wil je even kijken?"',
         },
         { kind: 'model', id: 'r.l.afronden.2.mo1', context: 'Je dienst is klaar. Je meldt je af bij je leidinggevende.', nl: 'Ik ben klaar. Kamer 4 zat op slot. Wil je even kijken?' },
       ],

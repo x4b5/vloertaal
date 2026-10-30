@@ -54,7 +54,8 @@ export const meedoenUnit: RuleUnit = {
         },
         // ⚖️ check: Voor de gemeenteraad mogen meer mensen stemmen dan alleen Nederlanders ⚖️.
         // ⚖️ check: Mensen uit een ander EU-land mogen stemmen als ze hier wonen ⚖️.
-        // ⚖️ check: Mensen van buiten de EU mogen na 5 jaar wonen met een verblijfsvergunning ⚖️.
+        // ⚖️ check: Mensen van buiten de EU mogen stemmen na 5 jaar in Nederland. Ze moeten al die
+        //   tijd een verblijfsvergunning hebben ⚖️.
         // ⚖️ check: Je moet wel 18 jaar of ouder zijn ⚖️.
         // Redactie: voorwaarden voor niet-EU-burgers: 5 jaar onafgebroken legaal verblijf, op de
         //   peildatum van de verkiezing ⚖️ (Kieswet; rijksoverheid.nl, "Wie mag stemmen bij de
@@ -64,7 +65,7 @@ export const meedoenUnit: RuleUnit = {
           id: 'r.l.meedoen.1.tf1',
           statement: 'Piotr mag ook stemmen voor de gemeenteraad.',
           answer: true,
-          why: 'Voor de gemeenteraad mogen meer mensen stemmen dan alleen Nederlanders. Mensen uit een ander EU-land mogen stemmen als ze hier wonen. Polen hoort bij de EU. Mensen van buiten de EU mogen na 5 jaar wonen met een verblijfsvergunning. Je moet wel 18 jaar of ouder zijn.',
+          why: 'Voor de gemeenteraad mogen meer mensen stemmen dan alleen Nederlanders. Mensen uit een ander EU-land mogen stemmen als ze hier wonen. Polen hoort bij de EU. Mensen van buiten de EU mogen stemmen na 5 jaar in Nederland. Ze moeten al die tijd een verblijfsvergunning hebben. Je moet wel 18 jaar of ouder zijn.',
         },
         // ⚖️ check: De Tweede Kamer heeft 150 leden ⚖️ (twijfel 15).
         {
@@ -167,8 +168,8 @@ export const meedoenUnit: RuleUnit = {
           id: 'r.l.meedoen.2.wd2',
           situation: 'Fatima belt over een kamer. De verhuurder hoort haar naam. "Hij is al weg." Een dag later staat de kamer weer online. Wat kan Fatima het beste doen?',
           options: [
-            { id: 'a', text: 'Ze laat het gaan. Zo gaat het nou eenmaal.', best: false, feedback: 'Begrijpelijk. Maar het mag niet.' },
-            { id: 'b', text: 'Ze stuurt de verhuurder een boos bericht.', best: false, feedback: 'Begrijpelijk. Maar zo verandert er niets.' },
+            { id: 'a', text: 'Ze laat het gaan. Zo gaat het nou eenmaal.', best: false, feedback: 'Ik snap het, maar het mag niet.' },
+            { id: 'b', text: 'Ze stuurt de verhuurder een boos bericht.', best: false, feedback: 'Dat snap ik. Maar zo verandert er niets.' },
             { id: 'c', text: 'Ze schrijft op wat er gebeurde, en meldt het.', best: true, feedback: 'Goed. Bij een meldpunt helpen ze haar gratis.' },
           ],
           why: 'Discriminatie is ook verboden bij wonen. Schrijf op wat er gebeurde, met de datum. Maak een screenshot van de advertentie. Meld het bij discriminatie.nl. Daar helpen ze je gratis.',
@@ -231,7 +232,7 @@ export const meedoenUnit: RuleUnit = {
           situation: 'Wat doet Jayden?',
           options: [
             { id: 'a', text: 'Hij laat rustig zijn ID zien.', best: true, feedback: 'Goed. Dat moet als de politie erom vraagt.' },
-            { id: 'b', text: 'Hij zegt: "Ik heb niets gedaan," en loopt weg.', best: false, feedback: 'Begrijpelijk. Maar dan kan hij een boete krijgen.' },
+            { id: 'b', text: 'Hij zegt: "Ik heb niets gedaan," en loopt weg.', best: false, feedback: 'Dat is logisch. Maar dan kan hij een boete krijgen.' },
             { id: 'c', text: 'Hij zegt dat zijn ID thuis ligt. Dat is niet waar.', best: false, feedback: 'Niet doen. Dan maakt hij het moeilijker voor zichzelf.' },
           ],
           why: 'Vraagt de politie om je ID? Vanaf 14 jaar moet je het laten zien. Dat heet de identificatieplicht. Geen ID bij je? Dan kun je een boete krijgen. Vond je het niet eerlijk? Je kunt later een klacht indienen bij de politie.',

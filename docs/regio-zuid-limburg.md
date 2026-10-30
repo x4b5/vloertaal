@@ -269,7 +269,7 @@ je in Duitsland of België verder? Kijk dan eerst welk kaartje je nodig hebt ⚖
 **Vraag 3 · Wat is het beste?** Mehmet begint om 6 uur in Geleen. Zo vroeg rijdt er bijna geen bus. Wat doet hij?
 
 - **A.** Hij komt elke dag een uur te laat. De bus is niet zijn schuld.
-  → *Begrijpelijk, maar dat geeft snel problemen. Op tijd komen is belangrijk.*
+  → *Ik snap het, maar dat geeft snel problemen. Op tijd komen is belangrijk.*
 - **B.** Hij zegt de baan af. Zonder auto lukt het niet.
   → *Jammer. Vaak is er een andere oplossing.*
 - **C.** Hij vraagt zijn werkgever of collega's of ze samen rijden, of hij gaat fietsen.
@@ -304,7 +304,7 @@ bij "Wonen".
 **Vraag 1 · Wat is het beste?** Bogdan wil het werk wel. Wat doet hij eerst?
 
 - **A.** Hij tekent snel. Hij regelt de rest later wel.
-  → *Begrijpelijk. Maar dan krijgt hij later misschien problemen.*
+  → *Dat snap ik. Maar dan krijgt hij later misschien problemen.*
 - **B.** Hij vraagt eerst gratis advies bij het GrensInfoPunt.
   → *Goed. Die kennen de regels van alle drie de landen.*
 - **C.** Hij vraagt het aan zijn buurman. Die werkte vroeger ook in Duitsland.
@@ -395,7 +395,7 @@ Vier je geen carnaval? Dan hoef je niet mee te doen. Je kunt ook gewoon werken.
 - **A.** Ze vraagt vriendelijk: "Wil je het in het Nederlands zeggen?"
   → *Goed. De meeste collega's doen dat graag.*
 - **B.** Ze knikt, en doet maar wat.
-  → *Begrijpelijk, maar dan kan ze fouten maken.*
+  → *Dat snap ik, maar dan kan ze fouten maken.*
 - **C.** Ze zegt boos dat dialect onbeleefd is.
   → *Dat kan pijn doen. Voor veel mensen is dialect hun eigen taal.*
 
@@ -462,7 +462,7 @@ Het nummer staat op de site van je huisarts. Bij levensgevaar bel je 112.
 - **B.** Naar een bedrijf dat snel geld leent via internet.
   → *Pas op. Dan krijgt ze vaak nog meer schulden.*
 - **C.** Nergens. Ze wacht tot de schulden vanzelf weggaan.
-  → *Begrijpelijk, maar schulden worden meestal groter als je wacht.*
+  → *Dat snap ik, maar schulden worden meestal groter als je wacht.*
 
 **Goed antwoord: A.**
 **Waarom:** Elke gemeente moet je helpen bij schulden ⚖️. Dat is gratis ⚖️. In veel gemeenten in

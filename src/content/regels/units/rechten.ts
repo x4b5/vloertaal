@@ -60,7 +60,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.1.wd1',
           situation: 'Mohammed denkt dat het om zijn naam gaat. Wat kan Mohammed het beste doen?',
           options: [
-            { id: 'a', text: 'Hij laat het gaan. Bewijzen kan hij het toch niet.', best: false, feedback: 'Begrijpelijk. Maar melden kan ook zonder hard bewijs.' },
+            { id: 'a', text: 'Hij laat het gaan. Bewijzen kan hij het toch niet.', best: false, feedback: 'Dat snap ik. Maar melden kan ook zonder hard bewijs.' },
             { id: 'b', text: 'Hij schrijft op wat er gebeurde, en hij meldt het.', best: true, feedback: 'Goed. Zo kan iemand hem helpen.' },
             { id: 'c', text: 'Hij zet de naam van het bedrijf boos online.', best: false, feedback: 'Dat kan hem zelf problemen geven.' },
           ],
@@ -73,7 +73,7 @@ export const rechtenUnit: RuleUnit = {
           situation: 'Esra draagt een hoofddoek. Haar teamleider zegt: "Hier geen hoofddoek." Er is geen reden van veiligheid of hygiëne. Wat kan Esra het beste doen?',
           options: [
             { id: 'a', text: 'Ze vraagt waarom, en ze vraagt advies.', best: true, feedback: 'Goed. Dan weet ze wat haar rechten zijn.' },
-            { id: 'b', text: 'Ze doet hem af, en ze zegt er niets van.', best: false, feedback: 'Begrijpelijk. Maar het kan discriminatie zijn.' },
+            { id: 'b', text: 'Ze doet hem af, en ze zegt er niets van.', best: false, feedback: 'Ik snap het. Maar het kan discriminatie zijn.' },
             { id: 'c', text: 'Ze neemt meteen ontslag.', best: false, feedback: 'Dan verliest ze misschien rechten. Ze kan beter eerst advies vragen.' },
           ],
           why: 'Een regel over kleding moet een goede reden hebben. Bijvoorbeeld veiligheid of hygiëne. Zonder goede reden kan het discriminatie zijn. Het College voor de Rechten van de Mens kan daar gratis een oordeel over geven.',
@@ -143,7 +143,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.2.wd1',
           situation: 'Dewi wil dat het stopt. Wat kan Dewi het beste doen?',
           options: [
-            { id: 'a', text: 'Ze lacht mee. Dan houdt het vanzelf wel op.', best: false, feedback: 'Begrijpelijk. Maar vaak gaat het dan juist door.' },
+            { id: 'a', text: 'Ze lacht mee. Dan houdt het vanzelf wel op.', best: false, feedback: 'Dat is logisch. Maar vaak gaat het dan juist door.' },
             { id: 'b', text: 'Ze zegt duidelijk: "Stop. Ik wil dit niet."', best: true, feedback: 'Goed. Dan weet hij het, en anderen horen het ook.' },
             { id: 'c', text: 'Ze gaat hem uit de weg, en ze zegt niets.', best: false, feedback: 'Dat lost het niet op. Hulp vragen mag.' },
           ],
@@ -154,7 +154,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.2.wd2',
           situation: 'Kevin ziet dat anderen een collega steeds uitlachen en pesten. Wat kan Kevin het beste doen?',
           options: [
-            { id: 'a', text: 'Hij lacht mee. Anders is hij straks zelf de volgende.', best: false, feedback: 'Begrijpelijk. Maar zo gaat het pesten door.' },
+            { id: 'a', text: 'Hij lacht mee. Anders is hij straks zelf de volgende.', best: false, feedback: 'Dat snap ik. Maar zo gaat het pesten door.' },
             { id: 'b', text: 'Hij doet alsof hij niets heeft gezien.', best: false, feedback: 'Dan voelt de collega zich alleen.' },
             { id: 'c', text: 'Hij vraagt de collega of het goed met hem gaat.', best: true, feedback: 'Goed. Dat helpt meer dan hij denkt.' },
           ],
@@ -225,7 +225,7 @@ export const rechtenUnit: RuleUnit = {
           situation: 'Piotr is bang dat hij zijn werk en zijn kamer kwijtraakt. Wat kan Piotr het beste doen?',
           options: [
             { id: 'a', text: 'Hij zoekt hulp, ook al is hij bang.', best: true, feedback: 'Goed. Er zijn mensen die hem kunnen helpen.' },
-            { id: 'b', text: 'Hij wacht af. Het wordt vast beter als hij hard werkt.', best: false, feedback: 'Begrijpelijk. Maar dit gaat meestal niet vanzelf over.' },
+            { id: 'b', text: 'Hij wacht af. Het wordt vast beter als hij hard werkt.', best: false, feedback: 'Dat is logisch. Maar dit gaat meestal niet vanzelf over.' },
             { id: 'c', text: 'Hij vraagt de baas beleefd om iets meer loon.', best: false, feedback: 'Mag. Maar het paspoort en de uren blijven een probleem.' },
           ],
           why: 'Uitbuiting is niet normaal, en het mag niet. Iedereen die in Nederland werkt, kan hulp krijgen. Je kunt het melden bij de Arbeidsinspectie, ook zonder je naam. Ben je in gevaar? Bel 112.',
@@ -314,7 +314,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.4.wd1',
           situation: 'De baas legt een pen neer. Wat kan Sanne het beste doen?',
           options: [
-            { id: 'a', text: 'Ze tekent meteen. Dan krijgt ze vast een goede referentie.', best: false, feedback: 'Begrijpelijk. Maar ze weet nog niet wat ze opgeeft.' },
+            { id: 'a', text: 'Ze tekent meteen. Dan krijgt ze vast een goede referentie.', best: false, feedback: 'Dat snap ik. Maar ze weet nog niet wat ze opgeeft.' },
             { id: 'b', text: 'Ze vraagt tijd, en ze laat het papier eerst nakijken.', best: true, feedback: 'Goed. Daar heeft ze recht op.' },
             { id: 'c', text: 'Ze tekent, en ze schrijft erbij dat ze het niet zeker weet.', best: false, feedback: 'Dan heeft ze toch getekend. Dat erbij schrijven helpt niet.' },
           ],

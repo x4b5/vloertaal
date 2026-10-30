@@ -73,7 +73,7 @@ Deze beweringen veranderen het snelst, of zijn het makkelijkst verkeerd te begri
 | c.contract | It is not allowed in a contract of 6 months or shorter. | proeftijd |
 | c.contract | In a longer contract of less than 2 years, it is at most 1 month. | proeftijd |
 | c.contract | In a contract of 2 years or longer, or a permanent one, it is at most 2 months. | proeftijd |
-| c.contract | Your employer must call you at least 4 days before. | oproepkracht |
+| c.contract | Your employer must usually call you at least 4 days before. | oproepkracht |
 | c.contract | A cao can make these 4 days shorter, but not shorter than 1 day. | oproepkracht, cao |
 | c.contract | If they call you for less than 3 hours of work, you usually get paid for 3 hours. | oproepkracht, minimumloon per oproep |
 | c.bsn | Register your new address at the gemeente within 5 days. | verhuizing doorgeven (BRP) |
@@ -91,9 +91,10 @@ Deze beweringen veranderen het snelst, of zijn het makkelijkst verkeerd te begri
 | c.leave | Full-time, 5 days a week? Then at least 20 days a year. | vakantiedagen |
 | c.illness | When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. | loondoorbetaling bij ziekte |
 | c.illness | There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. | wachtdagen |
+| c.illness | In the first year you get at least the minimum wage. | loondoorbetaling eerste ziektejaar |
 | c.insurance | Every year there is an own risk (eigen risico) … The amount changes: check it with your insurer. | eigen risico |
 | c.letters | The tax return (aangifte) for last year must usually be done before 1 May. | belastingaangifte |
-| c.ww | Apply for WW at UWV as soon as possible, within a week after your last working day. | WW-aanvraag |
+| c.ww | Apply for WW at UWV as soon as possible, within a week after your first day without work. | WW-aanvraag |
 | c.ww | You usually need to have worked at least 26 of the last 36 weeks. | wekeneis WW |
 | c.newjob | (situatie) first you must pay 300 euros "for the job" | betalen voor werk |
 | c.gethelp | Meld Misdaad Anoniem: 0800-7000. … In danger? Call 112. | telefoonnummers |
@@ -183,7 +184,7 @@ ______________________________________________________________
 
 **Situatie in de les:** A pallet is stacked too high and almost falls. Nobody was hurt. What do you do?  
 **Goede antwoord:** Warn colleagues and tell your supervisor.  
-**Uitleg na het antwoord (`c.unsafe.w`):** A near-accident is a warning. Reporting it helps prevent a real accident; you will not get in trouble for speaking up.
+**Uitleg na het antwoord (`c.unsafe.w`):** A near-accident is a warning. Reporting it helps prevent a real accident. Your employer may not punish you for reporting it.
 
 **Uitleg bij het gesprekje (`c.danger.a.why`):** „Is er een ongeluk?” → „Ja, bel 112!”: In an accident, 112 is called first.
 
@@ -220,8 +221,8 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Mijn collega is gewond. Waar is de BHV’er?” — *My colleague is hurt. Where is the first-aider?*
 
 **Situatie in de les:** You hurt your back while lifting. You are afraid to lose your job. What do you do?  
-**Goede antwoord:** Tell your supervisor today, and your agency too if you work through one.  
-**Uitleg na het antwoord (`c.accident.w`):** Report it the same day, also if it seems small: the pain can get worse later. Your employer is not allowed to punish you for reporting it.
+**Goede antwoord:** Report it to your supervisor the same day.  
+**Uitleg na het antwoord (`c.accident.w`):** Report it the same day, also if it seems small: the pain can get worse later. Your employer is not allowed to punish you for reporting it. Work through an agency? Tell the agency too.
 
 **Uitleg bij het gesprekje (`c.accident.a.why`):** „Wat is er gebeurd?” → „Hij is gevallen. Hij bloedt.”: Asked what happened: this reply says what happened and how he is.
 
@@ -266,7 +267,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Dit heb ik nog niet geleerd. Kun je het voordoen?” — *I have not learned this yet. Can you show me how?*
 
 **Situatie in de les:** A busy morning. Your supervisor says: "Pak jij even de heftruck? Het is makkelijk." You have never driven a forklift. What do you do?  
-**Goede antwoord:** Say you have not learned it. Ask for instruction.  
+**Goede antwoord:** Say you never learned it. Ask for instruction.  
 **Uitleg na het antwoord (`c.notyet.w`):** A forklift without instruction is dangerous, for you and for others. Asking for instruction or other work is normal, also when it is busy.
 
 **Uitleg bij het gesprekje (`c.notyet.a.why`):** „Probeer het maar, het is makkelijk.” → „Kun je het eerst voordoen?”: Told to just try: asking to be shown first is the safe reply.
@@ -305,7 +306,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Ik ben ziek. Ik kan vandaag niet komen werken.” — *I am sick. I cannot come to work today.*
 
 **Situatie in de les:** You wake up with a fever. Your shift starts at 7:00. What do you do?  
-**Goede antwoord:** Call your supervisor before 7:00 and say you are sick.  
+**Goede antwoord:** Call your supervisor before 7:00.  
 **Uitleg na het antwoord (`c.sick.w`):** Calling in sick yourself and on time is the rule in most Dutch workplaces. Your employer may ask how long it will take, but not what illness it is.
 
 **✅ Inmiddels aangepast: deze tip eindigt nu met "General information. For your situation: ask your employer, the union or the Juridisch Loket."**
@@ -340,7 +341,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Mag ik ook iets vragen? Hoeveel uur per week is het werk?” — *May I ask something too? How many hours per week is the work?*
 
 **Situatie in de les:** At the end of the interview, the employer asks: "Heb je nog vragen?" What do you do? (*„Heb je nog vragen?”*)  
-**Goede antwoord:** Ask one or two questions, for example about the hours or training.  
+**Goede antwoord:** Ask a question about the hours or training.  
 **Uitleg na het antwoord (`c.interview.w`):** Questions show that you are interested in the job. Dutch employers often expect them.
 
 **Oordeel deskundige:**
@@ -371,7 +372,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Mag ik het contract eerst lezen?” — *May I read the contract first?*
 
 **Situatie in de les:** A new employer says: "Sign here now. You can read it later." What do you do?  
-**Goede antwoord:** Ask for time to read it, or for a copy to read at home.  
+**Goede antwoord:** Ask for time to read it, or for a copy.  
 **Uitleg na het antwoord (`c.findwork.w`):** Your contract says what you earn and what your rights are. A good employer gives you time to read it. You may ask about everything you do not understand.
 
 **Onze eigen vraag hierbij:** Moeten we leerlingen leren nagaan of een uitzendbureau officieel is toegelaten of geregistreerd? Zo ja: waar kunnen zij dat eenvoudig checken?
@@ -393,25 +394,25 @@ ______________________________________________________________
 
 *Unit „Werk en contract”, les „Your contract” (`l.contract`)*
 
-**Samenvatting (NL):** Proeftijd: schriftelijk; niet toegestaan bij een contract van 6 maanden of korter; max. 1 maand bij een contract korter dan 2 jaar; max. 2 maanden bij 2 jaar of langer of vast. Oproepkracht: oproep minstens 4 dagen vooraf (cao: niet korter dan 1 dag), anders hoef je niet te komen; later afzeggen betekent toch loon; opgeroepen voor minder dan 3 uur betekent meestal 3 uur loon.
+**Samenvatting (NL):** Proeftijd: schriftelijk; niet toegestaan bij een contract van 6 maanden of korter; max. 1 maand bij een contract korter dan 2 jaar; max. 2 maanden bij 2 jaar of langer of vast. Oproepkracht: oproep meestal minstens 4 dagen vooraf (cao: niet korter dan 1 dag), anders hoef je niet te komen; later afzeggen betekent toch loon; opgeroepen voor minder dan 3 uur betekent meestal 3 uur loon.
 
 **Tekst (Engels, wordt vertaald):**
 
-> A trial period (proeftijd) must be in writing. It is not allowed in a contract of 6 months or shorter. In a longer contract of less than 2 years, it is at most 1 month. In a contract of 2 years or longer, or a permanent one, it is at most 2 months. On-call worker (oproepkracht)? Your employer must call you at least 4 days before. If it is later, you do not have to come. A cao can make these 4 days shorter, but not shorter than 1 day. If they cancel your work later than that, you still get paid. If they call you for less than 3 hours of work, you usually get paid for 3 hours.
+> A trial period (proeftijd) must be in writing. It is not allowed in a contract of 6 months or shorter. In a longer contract of less than 2 years, it is at most 1 month. In a contract of 2 years or longer, or a permanent one, it is at most 2 months. On-call worker (oproepkracht)? Your employer must usually call you at least 4 days before. If it is later, you do not have to come. A cao can make these 4 days shorter, but not shorter than 1 day. If they cancel your work later than that, you still get paid. If they call you for less than 3 hours of work, you usually get paid for 3 hours.
 >
 > *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
 
 **Zeg het zo (Nederlands):** „Staat de proeftijd in mijn contract?” — *Is the trial period in my contract?*
 
 **Situatie in de les:** Your contract is for 3 months. It says: "Proeftijd: 1 maand". What do you do? (*„Proeftijd: 1 maand”*)  
-**Goede antwoord:** Ask about it calmly: a trial period is not allowed in a contract this short.  
+**Goede antwoord:** Ask about it: this trial period does not count.  
 **Uitleg na het antwoord (`c.contract.w`):** A trial period in a contract of 6 months or shorter does not count. Asking calmly is normal. If the answer is not clear, get advice from the union or the Juridisch Loket.
 
 **⚠ Getallen en termijnen:**
 - It is not allowed in a contract of 6 months or shorter.
 - In a longer contract of less than 2 years, it is at most 1 month.
 - In a contract of 2 years or longer, or a permanent one, it is at most 2 months.
-- Your employer must call you at least 4 days before.
+- Your employer must usually call you at least 4 days before.
 - A cao can make these 4 days shorter, but not shorter than 1 day.
 - If they call you for less than 3 hours of work, you usually get paid for 3 hours.
 - A trial period in a contract of 6 months or shorter does not count.
@@ -448,7 +449,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Op mijn loonstrook staan te weinig uren.” — *My payslip shows too few hours.*
 
 **Situatie in de les:** Your payslip shows 32 hours, but you worked 38. What do you do?  
-**Goede antwoord:** Show your own list of hours to your contact at the agency (intercedent) and ask to correct it.  
+**Goede antwoord:** Show your own list of hours to the agency and ask to fix it.  
 **Uitleg na het antwoord (`c.agency.w`):** The agency pays you, so the agency must correct the mistake. Your own list of dates and hours helps. Asking about it is your right.
 
 **Fout antwoord (`c.agency.o3`):** Ask the boss at the company where you work to pay the 6 hours. (Toetst dat het uitzendbureau betaalt.)
@@ -498,7 +499,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Waarom heeft u mijn BSN nodig?” — *Why do you need my BSN?*
 
 **Situatie in de les:** Someone you do not know offers you a job on WhatsApp. He asks for a photo of your passport and your DigiD login. What do you do?  
-**Goede antwoord:** Never give your DigiD login. Ask who he is and why he needs your ID, and check the company first.  
+**Goede antwoord:** Never give your DigiD login. Check who he is first.  
 **Uitleg na het antwoord (`c.bsn.w`):** With your DigiD or a copy of your ID, other people can use your name, for example for loans or benefits. A real employer needs your ID and BSN, but never your DigiD login.
 
 **Uitleg bij het gesprekje (`c.bsn.a.why`):** „Mag ik je identiteitsbewijs zien?” → „Ja, hier is mijn paspoort.”: An employer may ask to see an ID, such as a passport.
@@ -534,7 +535,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Mag ik een bewijs dat ik betaald heb?” — *May I have proof that I paid?*
 
 **Situatie in de les:** Your job ends. The agency says: "You must leave the house tomorrow." What do you do?  
-**Goede antwoord:** Ask for advice quickly, for example at the Juridisch Loket, before you leave.  
+**Goede antwoord:** Ask the Juridisch Loket for advice first.  
 **Uitleg na het antwoord (`c.housing.w`):** Your rental contract has its own rules, separate from your job. Free advice helps you know your rights, for example about when you must leave and about your deposit.
 
 **Uitleg bij het gesprekje (`c.housing.a.why`):** „De huur houden we in op je loon.” → „Dan wil ik dat op papier.”: Money taken off the pay must be agreed on paper.
@@ -573,7 +574,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Ik heb meer uren gewerkt. Kun je het controleren?” — *I worked more hours. Can you check it?*
 
 **Situatie in de les:** Your payslip shows fewer hours than you worked. What do you do?  
-**Goede antwoord:** Ask your supervisor calmly to check it and show your own notes.  
+**Goede antwoord:** Show your notes and ask your supervisor to check it.  
 **Uitleg na het antwoord (`c.payslip.w`):** Mistakes on a payslip happen. Asking about it is normal and it is your right. Your own notes of dates and hours help a lot.
 
 **Uitleg bij het gesprekje (`c.payslip.a.why`):** „Heb je je loonstrook gekregen?” → „Ja, maar er missen uren.”: Missing hours on a payslip must be reported.
@@ -686,7 +687,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Ik ben vergeten uit te klokken. Kun je het aanpassen?” — *I forgot to clock out. Can you correct it?*
 
 **Situatie in de les:** A colleague gives you his card: "Clock me in, I will be 20 minutes late." What do you do?  
-**Goede antwoord:** Say no kindly, and tell him to call the supervisor himself.  
+**Goede antwoord:** Say no, and tell him to call the supervisor.  
 **Uitleg na het antwoord (`c.clock.w`):** Clocking in for someone else counts as fraud, for both of you. Saying no protects your colleague and your own job.
 
 **Uitleg bij het gesprekje (`c.clock.a.why`):** „Wil je even voor mij inklokken?” → „Nee, dat mag niet.”: Clocking in for someone else is not allowed.
@@ -743,7 +744,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> At work, everyone is equal and everyone is treated with respect, whatever their gender, origin, religion or sexual orientation. Your supervisor can be a man or a woman. You decide about physical contact. A handshake is common, but you may also greet in another polite way, like a nod and a smile, and explain it briefly. Jokes about someone’s origin or religion, threats, bullying (pesten) and unwanted sexual behaviour are not accepted. You can report it to your supervisor, or to a confidential adviser (vertrouwenspersoon) if your company has one.
+> At work, everyone is equal and everyone is treated with respect, whatever their gender, origin, religion or sexual orientation. You decide about physical contact. A handshake is common, but you may also greet in another polite way, like a nod and a smile, and explain it briefly. Jokes about someone’s origin or religion, threats, bullying (pesten) and unwanted sexual behaviour are not accepted. You can report it to your supervisor, or to a confidential adviser (vertrouwenspersoon) if your company has one.
 >
 > *(geen slotregel)*
 
@@ -781,8 +782,8 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Dat wil ik niet online hebben.” — *I do not want that online.*
 
 **Situatie in de les:** A colleague films you when you slip on the wet floor. He wants to put the video on TikTok. What do you do?  
-**Goede antwoord:** Say "Nee, dat wil ik niet" and ask him to delete it. If he posts it anyway, tell your supervisor.  
-**Uitleg na het antwoord (`c.gossip.w`):** Nobody may put a video of you online without your permission. Saying no is normal, and your employer must act when colleagues mock each other online.
+**Goede antwoord:** Say "Nee, dat wil ik niet" and ask him to delete it.  
+**Uitleg na het antwoord (`c.gossip.w`):** Nobody may put a video of you online without your permission. Saying no is normal, and your employer must act when colleagues mock each other online. If he posts it anyway, tell your supervisor.
 
 **Onze eigen vraag hierbij:** "Nobody may put a video of you online without your permission" is stellig. Is dat juridisch houdbaar als algemene regel?
 
@@ -814,8 +815,8 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Ik wil dat je stopt.” — *I want you to stop.*
 
 **Situatie in de les:** Your team leader often puts his hand on your back and says you look "pretty". It makes you feel uncomfortable. He decides your shifts. What do you do?  
-**Goede antwoord:** Write down what happens and talk to the vertrouwenspersoon or HR.  
-**Uitleg na het antwoord (`c.boundaries.w`):** This is unwanted behaviour, and it is not your fault. A confidential adviser listens in confidence and helps you choose the next step. You are protected when you report it.
+**Goede antwoord:** Write it down and tell the vertrouwenspersoon.  
+**Uitleg na het antwoord (`c.boundaries.w`):** This is unwanted behaviour, and it is not your fault. A confidential adviser listens in confidence and helps you choose the next step. You are protected when you report it. You can also talk to HR.
 
 **✅ Inmiddels aangepast: "(vertrouwenspersoon, if there is one)". Klopt dit zo?**
 
@@ -849,7 +850,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Ik heb nog geen pauze gehad.” — *I have not had a break yet.*
 
 **Situatie in de les:** You have worked 6 hours without a break. Your supervisor asks you to keep going. What do you do?  
-**Goede antwoord:** Say politely that you need your break now.  
+**Goede antwoord:** Say that you need your break now.  
 **Uitleg na het antwoord (`c.health.w`):** When you work more than 5.5 hours, a break is the law, not a favour. Rest also helps you work safely.
 
 **⚠ Getallen en termijnen:**
@@ -956,11 +957,11 @@ ______________________________________________________________
 
 *Unit „Verlof en ziekte”, les „Sick at home” (`l.illness`)*
 
-**Samenvatting (NL):** Bij ziekte min. 70% van het loon, tot 2 jaar; cao vaak meer; max. 2 wachtdagen zonder loon, alleen als contract of cao dat zegt; de baas mag niet vragen welke ziekte; gezondheid bespreek je met de bedrijfsarts; beter melden; via een uitzendbureau kunnen de regels anders zijn. Uitleg: de bedrijfsarts geeft geen medische details door, alleen wat je kunt.
+**Samenvatting (NL):** Bij ziekte min. 70% van het loon, tot 2 jaar; cao vaak meer; max. 2 wachtdagen zonder loon, alleen als contract of cao dat zegt; de baas mag niet vragen welke ziekte; gezondheid bespreek je met de bedrijfsarts; beter melden; in het eerste jaar minstens het minimumloon; een tijdelijk contract stopt op de einddatum, ook bij ziekte; via een uitzendbureau met een uitzendbeding kan het contract stoppen als je ziek wordt, vraag dan UWV naar de Ziektewet. Uitleg: de bedrijfsarts geeft geen medische details door, alleen wat je kunt.
 
 **Tekst (Engels, wordt vertaald):**
 
-> When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. Your boss may not ask what illness you have: you talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (beter melden). Working through an agency? The rules can be different: ask your agency.
+> When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. Your boss may not ask what illness you have: you talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (betermelden). In the first year you get at least the minimum wage. A temporary contract stops on its end date, also when you are sick. Working through an agency? If your contract has an agency clause (uitzendbeding), it can end when you get sick. Then ask UWV about the Ziektewet, or ask a union.
 >
 > *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
 
@@ -975,8 +976,9 @@ ______________________________________________________________
 **⚠ Getallen en termijnen:**
 - When you are sick, your employer must pay at least 70% of your wage, for up to 2 years.
 - There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so.
+- In the first year you get at least the minimum wage.
 
-**Onze eigen vraag hierbij:** Moet erbij dat het loon in het eerste ziektejaar niet onder het minimumloon mag komen? En is "ask your agency" voldoende voor uitzendkrachten met een uitzendbeding, of moeten we naar UWV (Ziektewet) verwijzen?
+**Onze eigen vraag hierbij:** Klopt de zin over het uitzendbeding (art. 7:691 lid 2 BW)? Werkregels (les 6.2) zegt nu hetzelfde: tijdelijk contract stopt op de einddatum, via een uitzendbureau kan het contract soms al stoppen bij ziekte, en dan Ziektewet via UWV.
 
 **Oordeel deskundige:**
 
@@ -1006,7 +1008,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Ik wil mijn paspoort terug.” — *I want my passport back.*
 
 **Situatie in de les:** On your first day, the agency says: "We keep your passport, for safety." What do you do?  
-**Goede antwoord:** Say politely that you keep it yourself. They may make a copy.  
+**Goede antwoord:** Keep it yourself. They may make a copy.  
 **Uitleg na het antwoord (`c.warning.w`):** Your passport is yours. Keeping it is a way to control workers. An employer only needs a copy for the files.
 
 **Uitleg bij het gesprekje (`c.warning.a.why`):** „Geef je paspoort maar aan mij.” → „Nee, u mag alleen een kopie maken.”: An employer may copy a passport, not keep it.
@@ -1075,8 +1077,8 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Hallo, met Ali. Ik kan vandaag niet komen.” — *Hello, this is Ali. I cannot come today.*
 
 **Situatie in de les:** Your child is sick and you cannot come to work. Your company wants you to call. What do you do?  
-**Goede antwoord:** Call your supervisor before your shift: say your name, the reason and when you expect to be back.  
-**Uitleg na het antwoord (`c.callin.w`):** A call is clear and quick, and your supervisor can ask questions. Saying when you expect to be back helps them plan.
+**Goede antwoord:** Call your supervisor before your shift.  
+**Uitleg na het antwoord (`c.callin.w`):** A call is clear and quick, and your supervisor can ask questions. Saying when you expect to be back helps them plan. Also say your name and the reason.
 
 **Oordeel deskundige:**
 
@@ -1106,7 +1108,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Kan ik hier een VCA-cursus doen?” — *Can I do a VCA course here?*
 
 **Situatie in de les:** A job asks for a VCA certificate. You do not have it yet. What do you do?  
-**Goede antwoord:** Ask if the employer or agency can arrange the course, or how you can get it.  
+**Goede antwoord:** Ask the employer or agency to help you get it.  
 **Uitleg na het antwoord (`c.certs.w`):** Many employers and agencies help with VCA. Asking shows that you want to learn.
 
 **Oordeel deskundige:**
@@ -1137,7 +1139,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Zijn er cursussen voor mij?” — *Are there courses for me?*
 
 **Situatie in de les:** Your employer says you must do a required safety training on Saturday, without pay. What is true?  
-**Goede antwoord:** Required training is paid by the employer and counts as working time. Ask about it calmly.  
+**Goede antwoord:** The employer pays it, and it is working time.  
 **Uitleg na het antwoord (`c.diploma.w`):** If a training is required for your work, the employer pays and it counts as working time. If it is not clear, ask for advice.
 
 **Onze eigen vraag hierbij:** Klopt "required for your job" als samenvatting? Wij begrijpen dat het gaat om scholing die wet of cao verplicht stelt, en dat die zoveel mogelijk binnen werktijd valt.
@@ -1209,8 +1211,8 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Ik heb een zorgverzekering nodig. Kunt u mij helpen?” — *I need health insurance. Can you help me?*
 
 **Situatie in de les:** You started working here two weeks ago and you have no health insurance yet. What do you do?  
-**Goede antwoord:** Arrange it quickly: ask your employer or agency, or contact an insurer.  
-**Uitleg na het antwoord (`c.insurance.w`):** Without insurance, a doctor or hospital can cost a lot, and you can get a fine. Arranging it quickly protects you.
+**Goede antwoord:** Arrange health insurance quickly.  
+**Uitleg na het antwoord (`c.insurance.w`):** Without insurance, a doctor or hospital can cost a lot, and you can get a fine. Arranging it quickly protects you. Your employer or agency can help you.
 
 **⚠ Getallen en termijnen:**
 - Every year there is an own risk (eigen risico): the first costs you pay yourself.
@@ -1248,7 +1250,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Ik heb een brief gekregen. Kun je me helpen?” — *I got a letter. Can you help me?*
 
 **Situatie in de les:** You get a letter from the Belastingdienst. You do not understand it. What do you do?  
-**Goede antwoord:** Ask someone you trust to help you read it, quickly.  
+**Goede antwoord:** Ask someone you trust to help you read it.  
 **Uitleg na het antwoord (`c.letters.w`):** Official letters often have a deadline. If you react in time, problems are usually easier to solve.
 
 **Uitleg bij het gesprekje (`c.letters.a.why`):** „Heb je je aangifte al gedaan?” → „Nee, ik doe het voor 1 mei.”: The tax return is due by 1 May.
@@ -1316,7 +1318,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Krijg ik een vergoeding voor mijn reiskosten?” — *Do I get money for my travel costs?*
 
 **Situatie in de les:** You travel to work by bus every day. A colleague gets travel money, you do not. What do you do?  
-**Goede antwoord:** Ask your supervisor what the rules are in your company or cao.  
+**Goede antwoord:** Ask your supervisor about the company or cao rules.  
 **Uitleg na het antwoord (`c.transit.w`):** Travel allowance depends on the employer or the cao. Asking about it is normal and helps you know your rights.
 
 **Oordeel deskundige:**
@@ -1336,24 +1338,24 @@ ______________________________________________________________
 
 *Unit „Werk kwijt”, les „Unemployment benefit” (`l.ww`)*
 
-**Samenvatting (NL):** WW zo snel mogelijk aanvragen bij UWV, binnen een week na de laatste werkdag; meestal moet je 26 van de laatste 36 weken gewerkt hebben; wie zelf ontslag neemt, krijgt meestal geen WW; inschrijven als werkzoekende op werk.nl.
+**Samenvatting (NL):** WW zo snel mogelijk aanvragen bij UWV, binnen een week na de eerste dag zonder werk; meestal moet je 26 van de laatste 36 weken gewerkt hebben; wie zelf ontslag neemt, krijgt meestal geen WW; inschrijven als werkzoekende op werk.nl.
 
 **Tekst (Engels, wordt vertaald):**
 
-> Lost your job? Apply for WW at UWV as soon as possible, within a week after your last working day. You usually need to have worked at least 26 of the last 36 weeks. If you quit your job yourself, you usually do not get WW. Register as a job seeker on werk.nl.
+> Lost your job? Apply for WW at UWV as soon as possible, within a week after your first day without work. You usually need to have worked at least 26 of the last 36 weeks. If you quit your job yourself, you usually do not get WW. Register as a job seeker on werk.nl.
 >
 > *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
 
 **Zeg het zo (Nederlands):** „Ik wil WW aanvragen. Wat moet ik doen?” — *I want to apply for unemployment benefit. What must I do?*
 
 **Situatie in de les:** You are angry about your work and want to quit today. What is wise?  
-**Goede antwoord:** Get advice first: if you quit yourself, you usually do not get WW.  
+**Goede antwoord:** Get advice first, before you quit.  
 **Uitleg na het antwoord (`c.ww.w`):** Quitting can cost you your benefit. Talking first with your supervisor, the union or the Juridisch Loket can help you find a better way.
 
 **Uitleg bij het gesprekje (`c.ww.a.why`):** „Wat ga je doen nu je contract stopt?” → „Ik vraag meteen WW aan.”: Unemployment benefit (WW) must be asked for at once.
 
 **⚠ Getallen en termijnen:**
-- Apply for WW at UWV as soon as possible, within a week after your last working day.
+- Apply for WW at UWV as soon as possible, within a week after your first day without work.
 - You usually need to have worked at least 26 of the last 36 weeks.
 
 **Oordeel deskundige:**
@@ -1384,8 +1386,8 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Mag ik u als referentie opgeven?” — *May I give your name as a reference?*
 
 **Situatie in de les:** Someone offers you a job, but first you must pay 300 euros "for the job". What do you do?  
-**Goede antwoord:** Do not pay. Look for work through a real agency or werk.nl.  
-**Uitleg na het antwoord (`c.newjob.w`):** Asking money for a job is a warning sign. A temp agency may not charge you for finding work.
+**Goede antwoord:** Do not pay. Look for a real agency.  
+**Uitleg na het antwoord (`c.newjob.w`):** Asking money for a job is a warning sign. A temp agency may not charge you for finding work. You can also look for work on werk.nl.
 
 **⚠ Getallen en termijnen:**
 - Someone offers you a job, but first you must pay 300 euros "for the job".
@@ -1522,7 +1524,7 @@ ______________________________________________________________
 **Zeg het zo (Nederlands):** „Kan een mens hier even naar kijken?” — *Can a person have a look at this?*
 
 **Situatie in de les:** The planning app gives you far fewer hours next month. Nobody tells you why. What do you do?  
-**Goede antwoord:** Ask your supervisor who decided it, and ask a person to explain it.  
+**Goede antwoord:** Ask a person to explain it.  
 **Uitleg na het antwoord (`c.aiplan.w`):** Apps make mistakes, and they do not know everything about you. You may ask for an explanation, and a person can look at it again.
 
 **Onze vraag aan u:** Is „you may ask a person to look at it again and explain it” juist en niet te stellig, ook voor een rooster dat een planner met een app maakt (geen besluit „alleen” door een computer)?
@@ -1568,7 +1570,7 @@ door de bocht is? De tekst staat letterlijk zoals in de app.
 | contract.3 ru1 | Zegt je werkgever een oproep minder dan 4 dagen van tevoren af? Dan krijg je toch loon. | art. 7:628a BW (Wab) | Klopt dit, ook bij een kortere termijn uit de cao (minstens 1 dag)? |
 | contract.3 ru1 | Werk je 12 maanden als oproepkracht? Dan moet je werkgever je vaste uren aanbieden. | art. 7:628a BW (Wab) | Klopt dit? We noemen niet hoeveel uur (het gemiddelde) en niet binnen welke termijn. |
 | contract.3 tf2 (waar) | Een uitzendkracht heeft recht op hetzelfde loon als de vaste mensen die hetzelfde werk doen. | art. 8 Waadi | Eerder stond hier "Sinds 2026 … minstens evenveel, loon, vrije dagen en pensioen samen". Die datum konden we niet checken, dus die is weg. Is de stelling "waar" te stellig, omdat een cao soms mag afwijken? |
-| ziek.2 ru1 | Heb je een tijdelijk contract? Dan stopt je loon op de einddatum. Vraag dan UWV naar de Ziektewet. | art. 7:629 BW; Ziektewet (vangnet, art. 29) | Klopt dit? |
+| ziek.2 ru1 | Heb je een tijdelijk contract? Dan stopt je loon op de einddatum. Werk je via een uitzendbureau? Soms stopt je contract dan al als je ziek wordt. Kijk in je contract. Vraag dan UWV naar de Ziektewet. | art. 7:629 BW; art. 7:691 lid 2 BW (uitzendbeding); Ziektewet (vangnet, art. 29) | Klopt dit? Sinds 30 okt 2026 staat de zin over het uitzendbureau erbij, zodat les en tip `c.illness` hetzelfde zeggen. |
 | tijd.4 ru1, wd1 | Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd. | art. 7:638 lid 3 BW | Sinds 30 okt 2026 staat de voorwaarde "op papier" erbij. Klopt het zo? |
 | veilig.3 tf1 | Bij een ernstig ongeluk meldt je werkgever het meteen bij de Arbeidsinspectie. Bijvoorbeeld als iemand in het ziekenhuis moet blijven, blijvend letsel heeft of overlijdt. | art. 9 Arbowet | Eerder stond hier "naar het ziekenhuis moet". Klopt "in het ziekenhuis moet blijven" als korte vorm van "opname"? |
 | rechten.4 ru1, wd1 | Staat er iets verkeerd in? Dan kun je je WW kwijtraken. | WW; art. 7:900 BW (vaststellingsovereenkomst) | Eerder: "Als je tekent, kun je rechten verliezen. Bijvoorbeeld je WW." Is de nieuwe zin juist? |
@@ -1606,8 +1608,11 @@ ______________________________________________________________
 
 ## Ontbreekt er iets?
 
-Wij hebben deze onderwerpen (nog) niet in de app. Zou het een werknemer uit deze doelgroep schade
-kunnen besparen als we er een korte zin over opnemen? Kruis aan wat u belangrijk vindt.
+Wij hebben deze onderwerpen (nog) niet in de tips van het Taal-spoor. De eerste vier staan wel al in
+Werkregels: ketenregeling en aanzegplicht in `contract.2`, transitievergoeding in `rechten.4`,
+gelijke beloning van uitzendkrachten in `contract.3` (tf2). Zou het een werknemer uit deze
+doelgroep schade kunnen besparen als we er ook in een tip een korte zin over opnemen? Kruis aan wat u
+belangrijk vindt.
 
 - [ ] Ketenregeling: wanneer een reeks tijdelijke contracten een vast contract wordt
 - [ ] Aanzegplicht: bericht van de werkgever vóór het einde van een tijdelijk contract

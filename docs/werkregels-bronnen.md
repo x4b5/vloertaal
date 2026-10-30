@@ -77,10 +77,10 @@ Belastingdienst (beoordeling arbeidsrelaties, Wet DBA) · FNV Zelfstandigen.
 | 3.2 | Proeftijd: niet bij ≤ 6 maanden; > 6 maanden en < 2 jaar max. 1 maand; ≥ 2 jaar of vast max. 2 maanden ⚖️. | BW 7:652 |
 | 3.2 | Op verzoek moet de opzeggende partij de reden van opzegging in de proeftijd schriftelijk geven ⚖️. | BW 7:676 lid 2 |
 | 3.2 | Aanzegplicht 1 maand ⚖️ bij contract van 6 maanden of langer ⚖️; anders vergoeding. | BW 7:668 |
-| 3.2 | Ketenregeling: na 3 contracten of 3 jaar vast ⚖️ (tussenpoos 6 maanden). | BW 7:668a — **verandert waarschijnlijk per 1-1-2028** |
+| 3.2 | Ketenregeling: bij een 4e tijdelijk contract, of na meer dan 3 jaar, meestal vanzelf vast ⚖️ (tussenpoos 6 maanden). Uitzendwerk: vaak andere regels (uitzend-cao). | BW 7:668a — **verandert waarschijnlijk per 1-1-2028** |
 | 3.3 | Oproepen minstens 4 dagen ⚖️ van tevoren; cao kan verkorten tot minimaal 1 dag ⚖️; later afzeggen = loon. | BW 7:628a; ondernemersplein.overheid.nl "Regels voor oproepkrachten" |
 | 3.3 | Minimaal 3 uur ⚖️ loon per oproep bij contract < 15 uur zonder vaste tijden, nul-uren of min-max ⚖️. | BW 7:628a lid 1 |
-| 3.3 | Sinds 2026 ⚖️: uitzendkracht krijgt minstens een gelijkwaardig totaalpakket als een vaste werknemer ⚖️. | Cao voor Uitzendkrachten 2026–2028; WAADI art. 8 |
+| 3.3 | Uitzendkracht heeft recht op hetzelfde loon als vaste mensen die hetzelfde werk doen ⚖️; een cao mag soms afwijken. (Eerder stond hier een nieuwe uitzend-cao "sinds 2026": die datum is niet gecheckt en staat niet meer in het lespad.) | WAADI art. 8; Cao voor Uitzendkrachten |
 | 3.4 | Zzp'er: geen loon bij ziekte, geen WW. | UWV; Rijksoverheid (zzp) |
 | 3.4 | Bepaalt het bedrijf hoe, wanneer en waar je werkt, dan ben je vaak werknemer ⚖️. | BW 7:610; Hoge Raad Deliveroo (2023); Belastingdienst handhaving Wet DBA |
 | 3.4 | Stagevergoeding is (nog) geen wettelijk recht ⚖️; bbl = arbeidsovereenkomst met loon. | Rijksoverheid (Kabinet wil stagevergoeding verplichten, 3 juli 2026); Stagepact mbo; Wet educatie en beroepsonderwijs |
@@ -131,7 +131,7 @@ spreekuur) · Autoriteit Persoonsgegevens (wat de werkgever mag vragen) · UWV (
 | 6.1 | Je hoeft je ziekte niet te noemen; werkgever mag vragen naar duur en bereikbaarheid. | Autoriteit Persoonsgegevens; AVG; Rijksoverheid |
 | 6.2 | 70 procent ⚖️, max. 104 weken (2 jaar) ⚖️; 1e jaar minstens minimumloon ⚖️; max. 2 wachtdagen ⚖️ als contract/cao dat zegt. | BW 7:629 |
 | 6.2 | Ziek op vakantie → dagen tellen meestal niet als vakantie ⚖️. | BW 7:637 |
-| 6.2 | Uitzendkracht of geen werkgever meer: Ziektewet via UWV. | UWV |
+| 6.2 | Tijdelijk contract: loon stopt op de einddatum ⚖️. Uitzendkracht (met uitzendbeding: contract kan stoppen bij ziekte ⚖️) of geen werkgever meer: Ziektewet via UWV. | BW 7:629, 7:691 lid 2; UWV |
 | 6.3 | Bedrijfsarts heeft beroepsgeheim; werknemer kan zelf naar de bedrijfsarts ⚖️. | Arbowet art. 14 (open spreekuur); KNMG |
 | 6.3 | Meewerken aan re-integratie verplicht ⚖️; anders kan loon stoppen ⚖️; deskundigenoordeel UWV ⚖️. | BW 7:629 lid 3, 7:660a, 7:629a |
 
@@ -215,7 +215,7 @@ Informatiepunt Digitale Overheid.
 |---|---|---|---|
 | **Wet meer zekerheid flexwerkers** (aangenomen door de Eerste Kamer op 7 juli 2026; Stb. 2026, 205) | Nulurencontract en min-max verdwijnen; er komt een bandbreedtecontract (vaste minimum- en maximumuren). Ketenregeling: langere tussenpoos (3 jaar volgens het aangenomen amendement). Uitzendwerk: kortere fases. Gelijkwaardige beloning uitzendkrachten in de WAADI. | Grotendeels **1 januari 2028**; het deel over gelijkwaardige beloning van uitzendkrachten mogelijk eerder (rond 31 december 2026) — bronnen verschillen | 3.2, 3.3, 5.1 |
 | **Wtta** (toelatingsstelsel uitleners) | Uitzendbureaus en andere uitleners hebben toelating nodig. Inleners moeten checken in een openbaar register. | Wet in werking **1 januari 2027**; register naar verwachting vanaf **juli 2027**; verbod op werken zonder toelating vanaf **1 januari 2028** | 1.1, 3.3 |
-| **Cao voor Uitzendkrachten** (ABU/NBBU) | Gelijkwaardig totaalpakket in plaats van inlenersbeloning. | Sinds **1 januari 2026**, looptijd t/m 2028 | 3.3 |
+| **Cao voor Uitzendkrachten** (ABU/NBBU) | Gelijkwaardig totaalpakket in plaats van inlenersbeloning (volgens secundaire bronnen). | Volgens secundaire bronnen sinds **1 januari 2026**, looptijd t/m 2028. **Niet gecheckt**; staat daarom niet in het lespad (zie §5 punt 4) | 3.3 |
 | **WW-duur** | Maximale duur van 24 naar 18 maanden. | Volgens berichten rond Prinsjesdag 2026 uitgesteld naar **1 januari 2029** | 10.1 (noemt bewust geen duur) |
 | **Participatiewet in balans** | Eén bijverdienregeling in de bijstand. | Naar verwachting **1 januari 2027** | 10.2 (noemt bewust geen percentage) |
 | **Stagevergoeding** | Kabinet wil recht op stagevergoeding in de wet, zonder vast bedrag. | Wetsvoorstel; internetconsultatie verwacht begin 2027 | 3.4 |
@@ -232,7 +232,7 @@ Tussen haakjes: waar de bevestiging vandaan komt. "Officieel" = overheidspagina 
 2. **Oproepkracht: 4 dagen** van tevoren oproepen; cao mag verkorten tot **1 dag**; later afzeggen = loon voor de opgeroepen uren; **minimaal 3 uur** loon bij contract < 15 uur zonder vaste tijden, nul-uren of min-max. (officieel: ondernemersplein.overheid.nl)
 3. **Wet meer zekerheid flexwerkers**: aangenomen 7 juli 2026, grotendeels in werking **1 januari 2028**. (officieel: rijksoverheid.nl nieuws 8 juli 2026; eerstekamer.nl dossier 36 746)
 4. **Wtta**: in werking 1 januari 2027; verbod vanaf 1 januari 2028; register vanaf ongeveer juli 2027. (Randstad, Rendement, ABU-gids, Dirkzwager — niet rechtstreeks een overheidspagina)
-5. **Uitzend-cao 2026**: gelijkwaardig totaalpakket sinds 1 januari 2026, looptijd tot en met 2028. (KHN, Randstad, Salaris Vanmorgen)
+5. **Uitzend-cao 2026**: *niet meer als geverifieerd geteld.* Secundaire bronnen (KHN, Randstad, Salaris Vanmorgen) noemen een gelijkwaardig totaalpakket sinds 1 januari 2026, looptijd tot en met 2028. Dat is niet in een officiële bron gecheckt. De datum is daarom uit het lespad gehaald (`contract.ts`, les 3.3 tf2; zie ook `juridische-check.md`).
 6. **WW aanvragen**: vanaf 1 week vóór tot **uiterlijk 1 week ná** de eerste werkloze dag; later kan minder of geen WW geven. (officieel: uwv.nl, Nederlands en Engels)
 7. **WW-duur**: verkorting naar 18 maanden uitgesteld, nu naar 1 januari 2029. (ondernemenmetpersoneel.nl, SRA over Prinsjesdag 2026 — geen overheidspagina gezien)
 8. **Jongeren 16–17 jaar**: max. 9 uur per dienst, 45 uur per week, 160 uur per 4 weken; schooltijd telt mee; niet werken tussen 23.00 en 6.00 uur; pauze 30 minuten bij meer dan 4,5 uur. (officieel: rijksoverheid.nl)
@@ -255,7 +255,7 @@ Deze punten zijn opgeschreven uit kennis van de wet, maar niet in deze ronde nag
 
 1. **Proeftijd 7:652** (6 maanden / 1 maand / 2 maanden) en **reden op verzoek in de proeftijd** (7:676 lid 2). Waarschijnlijk ongewijzigd in 2026; niet opnieuw gecheckt.
 2. **Aanzegplicht** 1 maand bij contracten van 6 maanden of langer, en de vergoeding bij te laat aanzeggen.
-3. **Ketenregeling** nu: 3 contracten / 3 jaar / tussenpoos 6 maanden. De nieuwe tussenpoos na 2028: bronnen noemen 5 jaar (wetsvoorstel) en 3 jaar (amendement Tweede Kamer). Niet zeker welke in de wet staat.
+3. **Ketenregeling** nu: hooguit 3 tijdelijke contracten in hooguit 3 jaar; het 4e contract, of langer dan 3 jaar, is vast; tussenpoos 6 maanden. De nieuwe tussenpoos na 2028: bronnen noemen 5 jaar (wetsvoorstel) en 3 jaar (amendement Tweede Kamer). Niet zeker welke in de wet staat.
 4. **Datum gelijkwaardige beloning uitzendkrachten in de WAADI**: bronnen noemen "op zijn vroegst 31 december 2026". Niet bevestigd.
 5. **Loonstrook-plicht** (7:626): bij eerste betaling en bij wijziging van het bedrag. Niet opnieuw gecheckt.
 6. **Inhouding huisvesting op het minimumloon** en de maximale grens. Bewust zonder getal in het lespad.

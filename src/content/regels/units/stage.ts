@@ -76,7 +76,7 @@ export const stageUnit: RuleUnit = {
           id: 'r.l.stage.1.wd2',
           situation: 'Het bedrijf zegt: "Dat papiertje van school komt later wel. Begin maandag maar." Wat kan Jayden het beste doen?',
           options: [
-            { id: 'a', text: 'Hij begint maandag. Het papier komt later wel.', best: false, feedback: 'Begrijpelijk. Maar dan telt zijn stage misschien niet mee.' },
+            { id: 'a', text: 'Hij begint maandag. Het papier komt later wel.', best: false, feedback: 'Dat is logisch. Maar dan telt zijn stage misschien niet mee.' },
             { id: 'b', text: 'Hij vraagt eerst aan school of de POK klaar is.', best: true, feedback: 'Goed. Dan weet hij zeker dat alles klopt.' },
             { id: 'c', text: 'Hij zoekt meteen een ander stagebedrijf.', best: false, feedback: 'Dat hoeft niet. Eerst even vragen.' },
           ],
@@ -133,7 +133,7 @@ export const stageUnit: RuleUnit = {
           id: 'r.l.stage.2.wd1',
           situation: 'Fatima vindt dat niet leuk om te horen. Wat kan Fatima het beste doen?',
           options: [
-            { id: 'a', text: 'Ze zegt: "Dat klopt niet. Ik weet alles al."', best: false, feedback: 'Begrijpelijk. Maar zo leert ze er niets van.' },
+            { id: 'a', text: 'Ze zegt: "Dat klopt niet. Ik weet alles al."', best: false, feedback: 'Dat snap ik. Maar zo leert ze er niets van.' },
             { id: 'b', text: 'Ze knikt, en ze zegt verder niets.', best: false, feedback: 'Dan weet ze nog niet wat ze anders kan doen.' },
             { id: 'c', text: 'Ze vraagt: "Wanneer had ik iets moeten vragen?"', best: true, feedback: 'Goed. Met een voorbeeld weet ze wat beter kan.' },
           ],
@@ -153,7 +153,7 @@ export const stageUnit: RuleUnit = {
           situation: 'Aan het eind krijgt Fatima een beoordeling. Ze is het er niet mee eens. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze bespreekt het met Mark, en met haar begeleider van school.', best: true, feedback: 'Goed. Zo kan ze uitleggen waarom.' },
-            { id: 'b', text: 'Ze tekent, en ze zegt er niets van. Mark is de baas.', best: false, feedback: 'Begrijpelijk. Maar het oneens zijn mag. Dan moet ze het wel zeggen.' },
+            { id: 'b', text: 'Ze tekent, en ze zegt er niets van. Mark is de baas.', best: false, feedback: 'Dat snap ik. Maar het oneens zijn mag. Dan moet ze het wel zeggen.' },
             { id: 'c', text: 'Ze praat er alleen met haar klasgenoten over.', best: false, feedback: 'Steun is fijn. Maar zo verandert er niets aan de beoordeling.' },
           ],
           why: 'Het oneens zijn mag. Zeg rustig waarom, met voorbeelden. Bespreek het ook met je school. De school beslist over je examen. Het bedrijf geeft zijn oordeel.',
@@ -217,7 +217,7 @@ export const stageUnit: RuleUnit = {
           id: 'r.l.stage.3.wd1',
           situation: 'Wat doet Kevin?',
           options: [
-            { id: 'a', text: 'Hij blijft gewoon gaan. Over 2 maanden is het klaar.', best: false, feedback: 'Begrijpelijk. Maar dan leert hij weinig.' },
+            { id: 'a', text: 'Hij blijft gewoon gaan. Over 2 maanden is het klaar.', best: false, feedback: 'Dat is logisch. Maar dan leert hij weinig.' },
             { id: 'b', text: 'Hij stopt met de stage, zonder iets te zeggen.', best: false, feedback: 'Niet doen. Dan heeft hij misschien een probleem met school.' },
             { id: 'c', text: 'Hij praat met zijn praktijkopleider, en ook met school.', best: true, feedback: 'Goed. Zo kan er iets veranderen.' },
           ],
@@ -240,7 +240,7 @@ export const stageUnit: RuleUnit = {
           situation: 'Een collega maakt grappen over Kevins afkomst. Andere stagiairs krijgen beter werk. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij meldt het bij school. Daar is een meldpunt.', best: true, feedback: 'Goed. School moet hem dan helpen.' },
-            { id: 'b', text: 'Hij lacht mee. Hij wil geen gedoe op zijn stage.', best: false, feedback: 'Begrijpelijk. Maar het mag niet, en hij hoeft het niet te accepteren.' },
+            { id: 'b', text: 'Hij lacht mee. Hij wil geen gedoe op zijn stage.', best: false, feedback: 'Dat snap ik. Maar het mag niet, en hij hoeft het niet te accepteren.' },
             { id: 'c', text: 'Hij zoekt zelf een nieuwe stage, zonder iets te zeggen.', best: false, feedback: 'Dan gaat het bij de volgende stagiair misschien ook zo.' },
           ],
           why: 'Discriminatie op stage is verboden. Elke mbo-school moet een meldpunt hebben. Je kunt ook naar de vertrouwenspersoon van school. Of naar discriminatie.nl. SBB kan het bedrijf erop aanspreken.',

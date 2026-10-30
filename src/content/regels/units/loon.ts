@@ -169,7 +169,7 @@ export const loonUnit: RuleUnit = {
           situation: 'Op de loonstrook staat "inhouding huisvesting". Piotr heeft daar nooit iets over getekend. Wat kan Piotr het beste doen?',
           options: [
             { id: 'a', text: 'Hij vraagt waar hij daarvoor getekend heeft.', best: true, feedback: 'Goed. Zonder zijn handtekening mag het meestal niet.' },
-            { id: 'b', text: 'Hij denkt: dat hoort er vast bij, iedereen heeft het.', best: false, feedback: 'Begrijpelijk. Maar het mag niet zomaar.' },
+            { id: 'b', text: 'Hij denkt: dat hoort er vast bij, iedereen heeft het.', best: false, feedback: 'Dat is logisch. Maar het mag niet zomaar.' },
             { id: 'c', text: 'Hij vraagt een voorschot om het verschil te betalen.', best: false, feedback: 'Dan leent hij geld dat misschien van hem is.' },
           ],
           why: 'Een inhouding is geld dat je baas van je loon afhaalt. Je werkgever mag niet zomaar geld van je loon afhalen. Daar moet je eerst schriftelijk mee instemmen. Ook dan zijn er grenzen. Klopt het niet? Vraag hulp.',
@@ -184,7 +184,7 @@ export const loonUnit: RuleUnit = {
           id: 'r.l.loon.2.wd3',
           situation: 'Het is de 5e van de maand. Piotr heeft zijn loon nog niet. Vorige maand was het ook te laat. Wat kan Piotr het beste doen?',
           options: [
-            { id: 'a', text: 'Hij wacht nog een maand. Het komt vast vanzelf.', best: false, feedback: 'Begrijpelijk. Maar het is zijn geld, en hij heeft het nodig.' },
+            { id: 'a', text: 'Hij wacht nog een maand. Het komt vast vanzelf.', best: false, feedback: 'Dat snap ik. Maar het is zijn geld, en hij heeft het nodig.' },
             { id: 'b', text: 'Hij stopt meteen met werken tot het geld er is.', best: false, feedback: 'Riskant. Vraag eerst advies voordat je stopt.' },
             { id: 'c', text: 'Hij vraagt het na, eerst zelf en dan per mail.', best: true, feedback: 'Goed. Helpt dat niet? Dan vraagt hij advies.' },
           ],

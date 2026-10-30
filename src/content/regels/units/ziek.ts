@@ -53,7 +53,7 @@ export const ziekUnit: RuleUnit = {
           situation: 'Hoe meldt Jayden zich ziek?',
           options: [
             { id: 'a', text: 'Hij belt zelf de chef, ruim vóór 10 uur.', best: true, feedback: 'Goed. Zo weet de chef het op tijd.' },
-            { id: 'b', text: 'Hij appt een collega: "Zeg jij het even tegen de chef?"', best: false, feedback: 'Begrijpelijk. Maar je meldt je meestal zelf ziek.' },
+            { id: 'b', text: 'Hij appt een collega: "Zeg jij het even tegen de chef?"', best: false, feedback: 'Ik snap het. Maar je meldt je meestal zelf ziek.' },
             { id: 'c', text: 'Hij stuurt om 10 uur een bericht: "Ziek."', best: false, feedback: 'Dat is laat, en vaak is een bericht niet genoeg.' },
           ],
           why: 'Bel zelf, en bel vóór je dienst begint. Dat is in de meeste bedrijven de regel. Kijk in je contract of het verzuimprotocol. Dat zijn de regels voor ziekmelden bij jouw bedrijf. Afspraak is afspraak: kun je niet komen? Zeg het op tijd.',
@@ -119,6 +119,9 @@ export const ziekUnit: RuleUnit = {
         // ⚖️ check: In het eerste jaar krijg je minstens het minimumloon ⚖️.
         // ⚖️ check: Heb je een tijdelijk contract? Dan stopt je loon op de einddatum ⚖️. Vraag dan
         //   UWV naar de Ziektewet (art. 7:629 BW, Ziektewet art. 29).
+        // ⚖️ check: Werk je via een uitzendbureau? Soms stopt je contract dan al als je ziek wordt ⚖️
+        //   (uitzendbeding, art. 7:691 lid 2 BW). Ook dan: Ziektewet via UWV. Zo zegt de tip c.illness
+        //   het ook.
         {
           kind: 'rule',
           id: 'r.l.ziek.2.ru1',
@@ -129,6 +132,7 @@ export const ziekUnit: RuleUnit = {
             'Dat kan tot 2 jaar duren.',
             'In het eerste jaar krijg je minstens het minimumloon. Een cao geeft vaak meer.',
             'Heb je een tijdelijk contract? Dan stopt je loon op de einddatum.',
+            'Werk je via een uitzendbureau? Soms stopt je contract dan al als je ziek wordt. Kijk in je contract.',
             'Vraag dan UWV naar de Ziektewet.',
           ],
           rule: 'geschreven',
@@ -241,7 +245,7 @@ export const ziekUnit: RuleUnit = {
           situation: 'De bedrijfsarts zegt: "Begin met 2 uur per dag licht werk." Wat kan Mohammed het beste doen?',
           options: [
             { id: 'a', text: 'Hij doet mee, en hij zegt wat wel en niet lukt.', best: true, feedback: 'Goed. Zo bouwt hij het samen rustig op.' },
-            { id: 'b', text: 'Hij zegt nee. Hij is nog niet helemaal beter.', best: false, feedback: 'Begrijpelijk. Maar meewerken aan herstel hoort erbij.' },
+            { id: 'b', text: 'Hij zegt nee. Hij is nog niet helemaal beter.', best: false, feedback: 'Dat snap ik. Maar meewerken aan herstel hoort erbij.' },
             { id: 'c', text: 'Hij werkt meteen weer hele dagen, om te laten zien dat hij wil.', best: false, feedback: 'Te snel. Dan kan hij weer ziek worden.' },
           ],
           why: 'Ben je lang ziek? Dan moet je meewerken aan je herstel. Jij, je baas en de bedrijfsarts maken samen een plan. Werk je niet mee? Dan kan je loon stoppen. Ben je het oneens? Vraag dan een deskundigenoordeel bij UWV.',
