@@ -66,7 +66,7 @@ export const uiNl: Record<UiKey, UiText> = {
   readAloud: 'Voorlezen',
   lessonComplete: 'Les klaar!',
   phrasebook: 'Wie bel je?', // regels: the Hulp tab's list of who to call (RulesHelp)
-  phrasebookHint: 'Tik op een nummer om te bellen, of op een site om hem te openen.', // regels
+  phrasebookHint: 'Tik op een nummer om te bellen. Tik op een site om hem te openen.', // regels
   whoToCall: 'Problemen op je werk? Wie kan helpen',
   who112: 'Bij nood: levensgevaar, brand of een misdrijf dat nu gebeurt.',
   whoLegal: 'Gratis advies over je contract, je loon of ontslag.',
@@ -184,7 +184,7 @@ export const uiNl: Record<UiKey, UiText> = {
   daysUnit: 'dagen',
   wordsUnit: 'regels', // regels
   countTitle: 'Anoniem meetellen',
-  countHint: 'De app telt hoe vaak mensen lessen doen, en ongeveer hoe lang dat duurt. Geen naam, geen account. Niemand volgt je.',
+  countHint: 'De app telt hoe vaak mensen lessen doen. En ongeveer hoe lang dat duurt. Geen naam, geen account. Niemand volgt je.',
   certificate: 'Certificaat',
   myCertificates: 'Mijn certificaten',
   certsEmpty: 'Maak alle lessen van een onderwerp af. Dan krijg je een certificaat.',

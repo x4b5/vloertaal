@@ -282,7 +282,7 @@ export const contractUnit: RuleUnit = {
           ],
           why: 'Bij te weinig loon kun je naar de Nederlandse Arbeidsinspectie. Dat kan zonder je naam.',
         },
-        { kind: 'model', id: 'r.l.contract.3.mo1', context: 'Je wordt te kort van tevoren opgeroepen.', nl: 'Zaterdag lukt niet, dat is te kort van tevoren. Volgende week kan ik wel.' },
+        { kind: 'model', id: 'r.l.contract.3.mo1', context: 'Je baas roept je te kort van tevoren op.', nl: 'Zaterdag lukt niet, dat is te kort van tevoren. Volgende week kan ik wel.' },
       ],
     },
     {

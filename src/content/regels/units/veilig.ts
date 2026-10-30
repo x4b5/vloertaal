@@ -76,7 +76,7 @@ export const veiligUnit: RuleUnit = {
           situation: 'Op de bouw is vaak een korte vergadering over veiligheid: de toolboxmeeting. Piotr vindt het saai. Wat kan Piotr het beste doen?',
           options: [
             { id: 'a', text: 'Hij blijft weg. Hij weet het meeste toch al.', best: false, feedback: 'Er kan nieuws zijn. En het hoort bij zijn werk.' },
-            { id: 'b', text: 'Hij gaat, maar hij zit op zijn telefoon.', best: false, feedback: 'Dan mist hij wat er gezegd wordt.' },
+            { id: 'b', text: 'Hij gaat, maar hij zit op zijn telefoon.', best: false, feedback: 'Dan hoort hij niet wat er nieuw is.' },
             { id: 'c', text: 'Hij gaat erheen, luistert en stelt een vraag.', best: true, feedback: 'Goed. Zo hoort hij wat er nieuw is.' },
           ],
           why: 'In de toolboxmeeting hoor je over gevaren en nieuwe regels. Je kunt ook zelf iets melden. Het is werktijd.',

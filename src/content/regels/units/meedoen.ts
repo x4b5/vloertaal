@@ -149,7 +149,7 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', text: 'Mohammed. Je mag veel zeggen, maar er zijn grenzen.', best: true, feedback: 'Goed. Bedreigen en discrimineren mag niet.' },
             { id: 'c', text: 'Niemand. Over het nieuws praat je niet op je werk.', best: false, feedback: 'Dat mag wel. Doe het met respect.' },
           ],
-          why: 'In Nederland heb je vrijheid van meningsuiting. Je mag zeggen wat je denkt, ook over de regering. Maar bedreigen en discrimineren mag niet. Dat is strafbaar. Op je werk kan je baas ook regels hebben voor hoe je met elkaar praat.',
+          why: 'In Nederland heb je vrijheid van meningsuiting. Je mag zeggen wat je denkt, ook over de regering. Maar bedreigen en discrimineren mag niet. Dat is strafbaar. Op je werk kan je baas ook regels hebben. Bijvoorbeeld over hoe je met elkaar praat.',
         },
         // ⚖️ check: Dat staat in artikel 1 van de Grondwet ⚖️.
         // ⚖️ check: Discriminatie om je geloof, afkomst, geslacht of iets anders mag niet ⚖️.
