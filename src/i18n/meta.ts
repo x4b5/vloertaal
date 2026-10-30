@@ -25,6 +25,9 @@ export interface LangMeta<C extends UiCode = LangCode> {
    *  - ti: an Eritrean (regime) flag is painful for refugees, and Tigray's is sensitive too;
    *  - fa: the Iranian flag stands for the regime many fled;
    *  - prs: the Afghan flag is contested (the Taliban flag or the old tricolour);
+   *  - es, pt, fr: spoken in many countries (Spain and Latin America; Portugal, Brazil and
+   *    Cape Verde; France, Belgium and much of Africa); no one flag is the language;
+   *  - de: the same reason in a smaller way (Germany, Austria, Switzerland);
    *  - English (no meta here) is a bridge language, not a country.
    * Without a flag the list shows `sample` instead: a small tile with a few letters of the script.
    */
@@ -43,6 +46,10 @@ export const languageMeta: readonly LangMeta[] = [
   { code: 'pl', name: 'Polish', nativeName: 'Polski', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Wybierz język pomocy', langGuessYes: 'Tak', langGuessOther: 'Inny język', appTagline: 'Niderlandzki do pracy', loadFailed: 'Nie załadowało się. Czy jest internet?', retry: 'Spróbuj ponownie' }, flag: '🇵🇱' },
   { code: 'ro', name: 'Romanian', nativeName: 'Română', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Alege limba de ajutor', langGuessYes: 'Da', langGuessOther: 'Altă limbă', appTagline: 'Olandeză pentru locul de muncă', loadFailed: 'Nu s-a încărcat. Este internet?', retry: 'Încearcă din nou' }, flag: '🇷🇴' },
   { code: 'bg', name: 'Bulgarian', nativeName: 'Български', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Избери език за помощ', langGuessYes: 'Да', langGuessOther: 'Друг език', appTagline: 'Нидерландски за работното място', loadFailed: 'Не се зареди. Има ли интернет?', retry: 'Опитай отново' }, flag: '🇧🇬' },
+  { code: 'es', name: 'Spanish', nativeName: 'Español', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Elige tu idioma de ayuda', langGuessYes: 'Sí', langGuessOther: 'Otro idioma', appTagline: 'Neerlandés para el trabajo', loadFailed: 'No se ha cargado. ¿Tienes internet?', retry: 'Intentar de nuevo' }, sample: 'Ñ' },
+  { code: 'pt', name: 'Portuguese', nativeName: 'Português', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Escolhe a tua língua de ajuda', langGuessYes: 'Sim', langGuessOther: 'Outra língua', appTagline: 'Neerlandês para o trabalho', loadFailed: 'Não carregou. Tens internet?', retry: 'Tentar de novo' }, sample: 'Ã' },
+  { code: 'fr', name: 'French', nativeName: 'Français', dir: 'ltr', gendered: true, reviewed: false, ui: { chooseLanguage: 'Choisis ta langue d’aide', langGuessYes: 'Oui', langGuessOther: 'Autre langue', appTagline: 'Le néerlandais pour le travail', loadFailed: 'Pas chargé. Tu as internet ?', retry: 'Réessayer' }, sample: 'Ç' },
+  { code: 'de', name: 'German', nativeName: 'Deutsch', dir: 'ltr', gendered: false, reviewed: false, ui: { chooseLanguage: 'Wähle deine Hilfssprache', langGuessYes: 'Ja', langGuessOther: 'Andere Sprache', appTagline: 'Niederländisch für die Arbeit', loadFailed: 'Nicht geladen. Hast du Internet?', retry: 'Erneut versuchen' }, sample: 'ß' },
 ];
 
 export const LANG_CODES: readonly LangCode[] = languageMeta.map((l) => l.code);

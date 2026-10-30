@@ -370,7 +370,7 @@ export const uiEn = {
 
 export type UiKey = keyof typeof uiEn;
 
-export type LangCode = 'ar' | 'ti' | 'fa' | 'prs' | 'uk' | 'tr' | 'pl' | 'ro' | 'bg';
+export type LangCode = 'ar' | 'ti' | 'fa' | 'prs' | 'uk' | 'tr' | 'pl' | 'ro' | 'bg' | 'es' | 'pt' | 'fr' | 'de';
 
 /**
  * A language the app's screens can be read in: the nine help languages, plus 'nl' for the
@@ -450,7 +450,7 @@ export function isPlural(text: UiText | undefined): text is PluralText {
 export type PluralForms = { other: string } & Partial<Record<Exclude<PluralCategory, 'other'>, string>>;
 
 /** Help languages with grammatical gender in the learner's own sentences ("I am sick"). */
-export const GENDERED_LANGS: readonly LangCode[] = ['ar', 'ti', 'uk', 'pl', 'ro', 'bg'];
+export const GENDERED_LANGS: readonly LangCode[] = ['ar', 'ti', 'uk', 'pl', 'ro', 'bg', 'es', 'pt', 'fr'];
 
 /** A help language as written in its translation file: texts may differ by gender. */
 export interface HelpLanguageSource {

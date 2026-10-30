@@ -40,6 +40,10 @@ const TAGS: Record<PageCode, { tag: string; og: string }> = {
   pl: { tag: 'pl', og: 'pl_PL' },
   ro: { tag: 'ro', og: 'ro_RO' },
   bg: { tag: 'bg', og: 'bg_BG' },
+  es: { tag: 'es', og: 'es_ES' },
+  pt: { tag: 'pt', og: 'pt_PT' },
+  fr: { tag: 'fr', og: 'fr_FR' },
+  de: { tag: 'de', og: 'de_DE' },
   en: { tag: 'en', og: 'en_GB' },
 };
 

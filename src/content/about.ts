@@ -94,10 +94,10 @@ export const aboutSections: AboutSection[] = [
   },
   {
     id: 'a.who', emoji: '🌍', title: 'Who is it for?',
-    body: 'For everyone who is new to working in the Netherlands. Help languages: Arabic, Tigrinya, Persian, Dari, Ukrainian, Turkish, Polish, Romanian and Bulgarian.',
+    body: 'For everyone who is new to working in the Netherlands. Help languages: Arabic, Tigrinya, Persian, Dari, Ukrainian, Turkish, Polish, Romanian, Bulgarian, Spanish, Portuguese, French and German.',
     nl: {
       title: 'Voor wie is het?',
-      body: 'Voor iedereen die nieuw is op het werk in Nederland. Hulptalen: Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens en Bulgaars.',
+      body: 'Voor iedereen die nieuw is op het werk in Nederland. Hulptalen: Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens, Bulgaars, Spaans, Portugees, Frans en Duits.',
     },
     nlRules: {
       title: 'Voor wie is het?',

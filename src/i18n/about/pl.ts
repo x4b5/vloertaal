@@ -18,7 +18,7 @@ const t: CultureTranslation = {
     'a.culture': 'Jak to tu działa',
     'a.culture.b': 'Język jest najważniejszy. Ale Vloertaal mówi też o tym, jak zwykle wygląda praca w Holandii: mówić „je” do szefa, zadawać pytania, przychodzić na czas i mówić, kiedy coś ci przeszkadza. Te wskazówki znajdziesz w lekcjach i w części „Wskazówki do pracy”.',
     'a.who': 'Dla kogo to jest?',
-    'a.who.b': 'Dla każdego, kto dopiero zaczyna pracę w Holandii. Języki pomocy: arabski, tigrinia, perski, dari, ukraiński, turecki, polski, rumuński i bułgarski.',
+    'a.who.b': 'Dla każdego, kto dopiero zaczyna pracę w Holandii. Języki pomocy: arabski, tigrinia, perski, dari, ukraiński, turecki, polski, rumuński, bułgarski, hiszpański, portugalski, francuski i niemiecki.',
     'a.free': 'Twoja prywatność',
     'a.free.b': 'Nie potrzebujesz konta. Twoje postępy są zapisywane tylko na tym telefonie albo komputerze. Jeśli to jest włączone, aplikacja anonimowo liczy, jak często robi się lekcje: bez imienia, bez śledzenia. Możesz to wyłączyć w „Ustawieniach”.',
     'a.disclaimer': 'Dobrze wiedzieć',

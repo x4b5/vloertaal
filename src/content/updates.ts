@@ -14,6 +14,13 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-10-30',
+    items: [
+      'Vier nieuwe hulptalen: Spaans, Portugees, Frans en Duits. Alle uitleg, woorden, zinnen en tips staan nu ook in die talen.',
+      'Een telefoon in het Spaans, Portugees, Frans of Duits kiest die taal bij de eerste start zelf voor (je kunt altijd een andere kiezen).',
+    ],
+  },
+  {
     date: '2026-10-19',
     items: [
       'Nieuw onderwerp bij Je baan: Slimme apps en AI. Vier lessen: AI als hulp, wat je niet deelt, nep of echt, en als een app beslist. Met woorden als de chatbot, het wachtwoord, de stem en het besluit.',
