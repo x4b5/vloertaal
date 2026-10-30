@@ -1,13 +1,16 @@
 import { dutchUi } from '../lib/track';
-import { Fragment, useEffect, useId, useRef, useState } from 'react';
+import { Fragment, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { langTag, ui, said } from '../i18n';
-import type { HelpLanguage } from '../i18n/types';
+import type { HelpLanguage, UiKey } from '../i18n/types';
 import type { SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { CERT_NOTE, certData, certDate, certListLabel, certMeta, certSub, earnedCertificates, loadCertName, saveCertName, sealRing, type CertData } from '../lib/certificate';
 import { certificatePng, shareCertificate } from '../lib/certCanvas';
 import type { Progress } from '../lib/progress';
+import { KAART_NOTE, kaartAlt, kaartData } from '../lib/kaart';
+import { kaartPng, shareKaart } from '../lib/kaartCanvas';
 import { Bi } from './Bi';
+import { HelpSay } from './HelpSay';
 import { NlPair } from './NlPair';
 import { Character } from './Characters';
 import { CertIcon } from './CertBadge';
@@ -27,6 +30,7 @@ import { ThemeHeadRow } from './Themes';
  * - CertEarned: the one-time "Certificaat behaald" moment after a unit's last lesson;
  * - CertBadge, CertIcon: in src/components/CertBadge.tsx (on the path, in the main file);
  * - CertificatesCard: "Mijn certificaten" in Settings.
+ * - CoachCardScreen: "Laat zien hoe het gaat", the coach card (src/lib/kaart.ts), next to them.
  * This file loads when a certificate is first shown (src/lazyScreens.tsx).
  * The certificate is a Dutch document; around it, the app explains in the help language.
  */
@@ -140,7 +144,13 @@ function ShareGlyph() {
  * "Je naam op het certificaat?": a page of its own, asked the first time and after "Change name".
  * Three things: the field, [Done] and [Without name]. Kept on this device only.
  */
-function NamePage({ name, lang, onDone }: { name: string; lang?: HelpLanguage; onDone: (name: string) => void }) {
+function NamePage({ name, lang, onDone, ask = { nl: 'Je naam op het certificaat?', key: 'certNameAsk' } }: {
+  name: string;
+  lang?: HelpLanguage;
+  onDone: (name: string) => void;
+  /** The question (the coach card asks for "Je naam op de kaart?"; the name is the same one). */
+  ask?: { nl: string; key: UiKey };
+}) {
   const id = useId();
   const [value, setValue] = useState(name);
   const rtl = lang?.dir === 'rtl';
@@ -153,7 +163,7 @@ function NamePage({ name, lang, onDone }: { name: string; lang?: HelpLanguage; o
       <form className="cert-name-form" onSubmit={(e) => { e.preventDefault(); if (value.trim()) onDone(value); }}>
         <span className="cert-name-icon" aria-hidden><CertIcon size={40} /></span>
         <label className="keep-head cert-name-head" htmlFor={id} dir={rtl ? 'rtl' : undefined}>
-          <NlPair nlFirst nl="Je naam op het certificaat?" nlClass="keep-nl" dir="ltr" className="keep-gloss" text={ui('certNameAsk', lang)} />
+          <NlPair nlFirst nl={ask.nl} nlClass="keep-nl" dir="ltr" className="keep-gloss" text={ui(ask.key, lang)} />
         </label>
         <input
           id={id}
@@ -388,5 +398,138 @@ export function CertificatesCard({ progress, lang, onOpen }: {
         <p className="keep-hint"><Bi text={ui('certsEmpty', lang)} /></p>
       )}
     </section>
+  );
+}
+
+/* ---- "Laat zien hoe het gaat": the coach card ---- */
+
+/** What each line of the coach card means, in the help language (the card itself is Dutch). */
+const KAART_LEGEND: { nl: string; key: UiKey; toets?: boolean }[] = [
+  { nl: 'Onderwerpen af', key: 'coachTopics' },
+  { nl: 'Dagen geoefend', key: 'coachDays' },
+  { nl: 'Laatste les', key: 'coachLast' },
+  { nl: 'Toets “Wat ken je al?”', key: 'toetsTitle', toets: true },
+];
+
+/**
+ * "Laat zien hoe het gaat" (Settings › Taal en ik): the coach card ("begeleiderskaart",
+ * src/lib/kaart.ts), a picture this phone makes from its own progress, for the learner to show a
+ * coach, teacher or employer. Nothing is sent: the learner shows it, or saves or shares the
+ * picture themselves. On screen: the picture (large, with all it says as its text alternative),
+ * [Bewaar of deel], what each line means in the help language, and [Naam wijzigen] (the same
+ * name as on the certificates, asked first when it never was). Two things to tap, and Back.
+ */
+export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
+  progress: Progress;
+  lang?: HelpLanguage;
+  onBack: () => void;
+  /** Today (the screenshot harness fixes it). */
+  today?: Date;
+}) {
+  const [stored] = useState(loadCertName);
+  const [name, setName] = useState(stored ?? '');
+  const [asking, setAsking] = useState(stored === null);
+  const [today] = useState(() => fixedToday ?? new Date());
+  const data = useMemo(() => kaartData(progress, name, today), [progress, name, today]);
+  const key = JSON.stringify(data);
+  const [png, setPng] = useState<{ key: string; blob: Blob; url: string } | null>(null);
+  const [failed, setFailed] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const rtl = lang?.dir === 'rtl';
+
+  // The picture is drawn when the screen opens: it is what the screen shows, and a tap on
+  // [Bewaar of deel] then shares it at once (a phone refuses the share sheet when the tap was long ago).
+  useEffect(() => {
+    if (asking) return;
+    let alive = true;
+    let url: string | null = null;
+    setFailed(false);
+    kaartPng(data).then((blob) => {
+      if (!alive) return;
+      url = typeof URL.createObjectURL === 'function' ? URL.createObjectURL(blob) : null;
+      if (url) setPng({ key, blob, url });
+      else setFailed(true);
+    }, () => { if (alive) setFailed(true); });
+    return () => {
+      alive = false;
+      if (url) URL.revokeObjectURL(url);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key, asking]);
+  useEffect(() => { window.scrollTo(0, 0); }, [asking]);
+
+  const done = (n: string) => { saveCertName(n); setName(n.trim()); setAsking(false); };
+  const shown = png?.key === key ? png : null;
+  const share = async () => {
+    if (busy || !shown) return;
+    setBusy(true);
+    setSaved(false);
+    try {
+      if ((await shareKaart(shown.blob)) === 'saved') setSaved(true);
+    } catch {
+      // Nothing more to do: the card stays on screen, to show.
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const view = useRef<HTMLDivElement>(null);
+  useFocusWhenLost(view, asking, 'h1');
+  if (asking) return <NamePage name={name} lang={lang} onDone={done} ask={{ nl: 'Je naam op de kaart?', key: 'coachNameAsk' }} />;
+  const intro = ui('coachCardIntro', lang);
+  const alt = kaartAlt(data);
+  return (
+    <div className="screen cert-screen kaart-screen" ref={view}>
+      <div className="screen-head" dir={rtl ? 'rtl' : undefined}>
+        <ChromeBack lang={lang} onBack={onBack} />
+        <h1>
+          <NlPair nlFirst nl="Laat zien hoe het gaat" nlClass="cert-screen-nl" text={ui('coachCard', lang)} />
+        </h1>
+      </div>
+      <p className="kaart-intro" dir={rtl ? 'rtl' : undefined}>
+        <NlPair nlFirst nl="Deze kaart laat zien hoe het gaat. Laat hem zien aan je docent, coach of baas. Jij kiest." nlClass="kaart-intro-nl" text={intro} />
+        <HelpSay text={intro.help} lang={lang} />
+      </p>
+      <figure className="kaart-figure">
+        {shown ? (
+          <img className="kaart-img" src={shown.url} alt={alt} lang="nl" width={1200} />
+        ) : failed ? (
+          // No picture on this phone (an old browser): the same lines as text.
+          <p className="kaart-text" lang="nl" dir="ltr">{alt}</p>
+        ) : (
+          <div className="kaart-wait" role="img" aria-label={alt} lang="nl" />
+        )}
+      </figure>
+      <div className="cert-actions cert-actions-one">
+        <button type="button" className="btn btn-primary cert-btn cert-share kaart-share" onClick={share} aria-disabled={busy || !shown || undefined} dir={rtl ? 'rtl' : undefined}>
+          <ShareGlyph />
+          <span className="cert-btn-text">
+            <NlPair nlFirst nl="Bewaar of deel" className="cert-btn-gloss" text={ui('certSaveShare', lang)} />
+          </span>
+        </button>
+      </div>
+      {saved && (
+        <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
+      )}
+      <section className="kaart-legend" dir={rtl ? 'rtl' : undefined} aria-label={said(ui('coachCardWhat', lang))}>
+        <p className="kaart-legend-head"><NlPair nlFirst nl="Op de kaart, in het Nederlands:" nlClass="kaart-legend-nl" text={ui('coachCardWhat', lang)} /></p>
+        <ul className="kaart-legend-rows">
+          {KAART_LEGEND.filter((r) => !r.toets || data.toets).map((r) => (
+            <li key={r.key}>
+              {/* The work-rules track: the screen is Dutch, so the line's own explanation only. */}
+              {!dutchUi(lang) && <span className="kaart-legend-label" lang="nl" dir="ltr">{r.nl}</span>}
+              <Bi className="kaart-legend-help" text={ui(r.key, lang)} />
+            </li>
+          ))}
+        </ul>
+        <p className="kaart-keep">
+          <NlPair nlFirst nl={KAART_NOTE} nlClass="kaart-keep-nl" text={ui('coachCardKeep', lang)} />
+        </p>
+      </section>
+      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
+        <NlPair nlFirst nl="Naam wijzigen" className="keep-link-gloss" text={ui('certChangeName', lang)} />
+      </button>
+    </div>
   );
 }

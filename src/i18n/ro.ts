@@ -334,6 +334,15 @@ const lang: HelpLanguageSource = {
     tempoCalm: 'Calm', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
     tempoHint: 'Calm înseamnă încet și clar. Normal e cum vorbesc colegii. Alege „Normal” dacă înțelegi deja mult.', // nieuw, nalezen
+    /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
+    coachCard: 'Arată cum îți merge', // nieuw, nalezen
+    coachCardIntro: 'Acest card arată progresul tău. Arată-l profesorului, coach-ului sau șefului tău. Tu decizi.', // nieuw, nalezen
+    coachCardKeep: 'Telefonul tău face cardul. Nu se trimite nimic. Vloertaal nu păstrează nimic.', // nieuw, nalezen
+    coachCardWhat: 'Pe card, în neerlandeză:', // nieuw, nalezen
+    coachTopics: 'Teme terminate', // nieuw, nalezen
+    coachDays: 'Zile de exercițiu în ultimele 4 săptămâni', // nieuw, nalezen
+    coachLast: 'Ultima lecție, cu data', // nieuw, nalezen
+    coachNameAsk: 'Numele tău pe card?', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

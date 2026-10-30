@@ -396,6 +396,15 @@ export const uiEn = {
   tempoCalm: 'Calm',
   tempoNormal: 'Normal',
   tempoHint: 'Calm is slow and clear. Normal is how colleagues talk. Choose Normal when you already understand a lot.',
+  /* "Laat zien hoe het gaat": the coach card, made on this phone (src/lib/kaart.ts, Settings › Taal en ik). */
+  coachCard: 'Show how it is going',
+  coachCardIntro: 'This card shows your progress. Show it to your teacher, coach or boss. You decide.',
+  coachCardKeep: 'Your phone makes the card. Nothing is sent. Vloertaal keeps nothing.',
+  coachCardWhat: 'On the card, in Dutch:',
+  coachTopics: 'Topics finished',
+  coachDays: 'Days of practice in the last 4 weeks',
+  coachLast: 'Last lesson, with the date',
+  coachNameAsk: 'Your name on the card?',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

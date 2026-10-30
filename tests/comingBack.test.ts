@@ -106,10 +106,11 @@ describe('streak: today, free days and the record', () => {
     expect(workWeek(s.progress, day(10)).map((d) => d.state)).toEqual(['done', 'done', 'done', 'open', 'open', 'open', 'open']);
   });
 
-  it('keeps only the last 14 practised days', () => {
-    const p = practise(Array.from({ length: 20 }, (_, i) => i + 1));
-    expect(p.days).toHaveLength(14);
-    expect(p.days?.[13]).toBe('2026-10-20');
+  it('keeps only the last 28 practised days (the coach card counts 4 weeks)', () => {
+    const p = practise(Array.from({ length: 31 }, (_, i) => i + 1));
+    expect(p.days).toHaveLength(28);
+    expect(p.days?.[0]).toBe('2026-10-04');
+    expect(p.days?.[27]).toBe('2026-10-31');
   });
 
   it('marks the daily review as done today', () => {

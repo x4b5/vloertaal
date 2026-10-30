@@ -334,6 +334,15 @@ const lang: HelpLanguageSource = {
     tempoCalm: 'Спокойно', // nieuw, nalezen
     tempoNormal: 'Нормално', // nieuw, nalezen
     tempoHint: 'Спокойно е бавно и ясно. Нормално е както говорят колегите. Избери „Нормално“, ако вече разбираш много.', // nieuw, nalezen
+    /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
+    coachCard: 'Покажи как върви', // nieuw, nalezen
+    coachCardIntro: 'Тази карта показва напредъка ти. Покажи я на учителя, на коуча или на шефа си. Ти решаваш.', // nieuw, nalezen
+    coachCardKeep: 'Телефонът ти прави картата. Нищо не се изпраща. Vloertaal не пази нищо.', // nieuw, nalezen
+    coachCardWhat: 'На картата, на нидерландски:', // nieuw, nalezen
+    coachTopics: 'Завършени теми', // nieuw, nalezen
+    coachDays: 'Дни с упражнения през последните 4 седмици', // nieuw, nalezen
+    coachLast: 'Последен урок, с датата', // nieuw, nalezen
+    coachNameAsk: 'Името ти на картата?', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

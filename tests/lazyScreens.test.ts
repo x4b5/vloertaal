@@ -57,7 +57,7 @@ describe('screens in files of their own', () => {
     expect(main.has('src/lazyScreens.tsx')).toBe(true);
     for (const name of LAZY) expect(main.has(`src/components/${name}.tsx`), name).toBe(false);
     // Nor what only they use.
-    for (const lib of ['src/lib/pocketCanvas.ts', 'src/lib/pocket.ts', 'src/lib/keep.ts', 'src/lib/reminder.ts', 'src/lib/certCanvas.ts']) expect(main.has(lib), lib).toBe(false);
+    for (const lib of ['src/lib/pocketCanvas.ts', 'src/lib/pocket.ts', 'src/lib/keep.ts', 'src/lib/reminder.ts', 'src/lib/certCanvas.ts', 'src/lib/kaartCanvas.ts']) expect(main.has(lib), lib).toBe(false);
   });
 
   it('are loaded with import() of a src/components/ file (how the build finds them for offline use)', () => {

@@ -334,6 +334,15 @@ const lang: HelpLanguageSource = {
     tempoCalm: 'هادئ', // nieuw, nalezen
     tempoNormal: 'عادي', // nieuw, nalezen
     tempoHint: { m: 'الهادئ بطيء وواضح. العادي مثل كلام الزملاء. اختر «عادي» إذا كنت تفهم الكثير.', f: 'الهادئ بطيء وواضح. العادي مثل كلام الزملاء. اختاري «عادي» إذا كنتِ تفهمين الكثير.', x: 'الهادئ بطيء وواضح. العادي مثل كلام الزملاء. «عادي» مناسب لمن يفهم الكثير.' }, // nieuw, nalezen
+    /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
+    coachCard: { m: 'أظهر كيف تسير الأمور', f: 'أظهري كيف تسير الأمور', x: 'عرض سير التعلّم' }, // nieuw, nalezen
+    coachCardIntro: { m: 'هذه البطاقة تُظهر تقدّمك. أرِها لمعلّمك أو مدرّبك أو مديرك. أنت تقرّر.', f: 'هذه البطاقة تُظهر تقدّمكِ. أريها لمعلّمكِ أو مدرّبكِ أو مديركِ. أنتِ تقرّرين.', x: 'هذه البطاقة تُظهر التقدّم في التعلّم. يمكن عرضها على المعلّم أو المدرّب أو المدير. القرار لصاحب البطاقة.' }, // nieuw, nalezen
+    coachCardKeep: { m: 'هاتفك يصنع البطاقة. لا يُرسَل شيء. Vloertaal لا يحفظ شيئاً.', f: 'هاتفكِ يصنع البطاقة. لا يُرسَل شيء. Vloertaal لا يحفظ شيئاً.', x: 'الهاتف يصنع البطاقة. لا يُرسَل شيء. Vloertaal لا يحفظ شيئاً.' }, // nieuw, nalezen
+    coachCardWhat: 'على البطاقة، بالهولندية:', // nieuw, nalezen
+    coachTopics: 'المواضيع المنتهية', // nieuw, nalezen
+    coachDays: 'أيام التمرين في آخر 4 أسابيع', // nieuw, nalezen
+    coachLast: 'آخر درس، مع التاريخ', // nieuw, nalezen
+    coachNameAsk: { m: 'اسمك على البطاقة؟', f: 'اسمكِ على البطاقة؟', x: 'الاسم على البطاقة؟' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

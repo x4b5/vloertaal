@@ -20,7 +20,7 @@ import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
 // Screens in files of their own (loaded when needed, and in the background after the start).
-import { Admin, CertEarned, CertificateScreen, Coaches, KeepScreen, Milestone, PocketCardScreen, Settings, StreakStopped, needAtStart, warmScreensLater } from './lazyScreens';
+import { Admin, CertEarned, CertificateScreen, CoachCardScreen, Coaches, KeepScreen, Milestone, PocketCardScreen, Settings, StreakStopped, needAtStart, warmScreensLater } from './lazyScreens';
 import { keepOffered } from './lib/keepOffered';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
@@ -88,7 +88,9 @@ type View =
   /** "Wat ken je al?" (src/components/Toets.tsx): the test, its result, its page under Settings. */
   | { name: 'toets'; moment: ToetsMoment }
   | { name: 'toets-result'; moment: ToetsMoment }
-  | { name: 'toets-page' };
+  | { name: 'toets-page' }
+  /** "Laat zien hoe het gaat": the coach card (src/components/Certificate.tsx CoachCardScreen), from Settings › Taal en ik. */
+  | { name: 'kaart' };
 
 const HOME: View = { name: 'home' };
 
@@ -892,7 +894,7 @@ export default function App() {
             progress={progress}
             lang={lang}
             page={view.page ?? (view.upgrade ? 'unlock' : undefined)}
-            onPage={(page) => (page === 'toets' ? go({ name: 'toets-page' }) : go({ name: 'settings', page, up: up + 1 }))}
+            onPage={(page) => (page === 'toets' ? go({ name: 'toets-page' }) : page === 'kaart' ? go({ name: 'kaart' }) : go({ name: 'settings', page, up: up + 1 }))}
             onReturn={(steps = 1) => (up >= steps ? history.go(-steps) : back())}
             onLang={setLang}
             onGender={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))}
@@ -949,6 +951,13 @@ export default function App() {
       if (!now) return null;
       return <ToetsResult moment={view.moment} now={now} before={view.moment === 'eind' ? t?.instap : undefined} lang={lang} onDone={back} />;
     }
+    case 'kaart':
+      return (
+        <>
+          <CoachCardScreen progress={progress} lang={lang} onBack={back} />
+          <BottomNav current="me" onTab={tab} lang={lang} />
+        </>
+      );
     case 'toets-page':
       return (
         <>

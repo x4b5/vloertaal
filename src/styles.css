@@ -2623,6 +2623,35 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .cert-later > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; }
 .cert-later > .cert-btn-gloss { order: 1; font-size: 1.05rem; font-weight: 650; opacity: 1; }
 .cert-rename { flex-direction: column; gap: 0; text-decoration: none; }
+
+/* "Laat zien hoe het gaat": the coach card (src/components/Certificate.tsx CoachCardScreen). The
+   card is a picture made on the phone (src/lib/kaartCanvas.ts), in portrait: as wide as the screen
+   so a coach can read it, at most as tall as a phone screen and a bit. Its colours stay in dark mode. */
+#root:has(.kaart-screen) { max-width: 620px; }
+.kaart-intro { display: flex; flex-direction: column; gap: 4px; margin: 6px 0 0; line-height: 1.4; }
+.kaart-intro > .bi { order: 1; font-size: 1.05rem; font-weight: 600; }
+.kaart-intro > .kaart-intro-nl { order: 2; font-size: 0.9rem; color: var(--muted); }
+.kaart-intro > .help-say { order: 3; align-self: flex-start; }
+.kaart-figure { margin: 14px 0 0; }
+.kaart-img, .kaart-wait {
+  display: block; width: 100%; height: auto; border-radius: 4px;
+  box-shadow: 5px 5px 0 var(--label-shadow); background: #ebd6b5;
+}
+.kaart-wait { aspect-ratio: 1200 / 1500; }
+.kaart-text { margin: 0; padding: 16px; background: #fffdf8; color: #1e2226; border: 2px solid #1e2226; border-radius: 4px; line-height: 1.5; text-align: left; }
+.kaart-legend { margin-top: 20px; }
+.kaart-legend-head { display: flex; flex-direction: column; gap: 2px; margin: 0 0 8px; font-weight: 650; }
+.kaart-legend-head > .kaart-legend-nl { order: 2; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
+.kaart-legend-rows { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.kaart-legend-rows > li { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+.kaart-legend-label { font-weight: 700; }
+.kaart-legend-help { color: var(--ink-2); }
+.kaart-keep { display: flex; flex-direction: column; gap: 2px; margin: 14px 0 0; font-size: 0.9rem; line-height: 1.4; color: var(--muted); }
+.kaart-keep > .kaart-keep-nl { order: 2; font-size: 0.85rem; }
+.kaart-screen .cert-rename { margin-top: 16px; min-height: 44px; }
+@media print {
+  .cert-screen.kaart-screen > .kaart-figure { display: block !important; }
+}
 .cert-rename > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; color: var(--muted); }
 .cert-rename .keep-link-gloss { order: 1; font-size: 1.02rem; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
 .cert-earned-line { display: flex; flex-direction: column; align-items: center; }

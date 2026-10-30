@@ -175,7 +175,7 @@ describe('Instellingen in the work-rules track', () => {
   }));
 
   it('has the rows that fit: no English, gender, speaking or writing; voice only with recorded voices', () => {
-    expect(settingsRows('me', ctx)).toEqual(['language', 'sector', 'country', 'certificates']);
+    expect(settingsRows('me', ctx)).toEqual(['language', 'sector', 'country', 'certificates', 'kaart']);
     expect(settingsRows('lessons', { ...ctx, recorded: true })).toEqual(['sound', 'voice', 'text', 'theme']);
     expect(settingsRows('lessons', { ...ctx, recorded: false })).toEqual(['sound', 'text', 'theme']);
     expect(settingsRows('phone', ctx)).toEqual(['offline', 'reminder', 'backup', 'counting', 'reset']);

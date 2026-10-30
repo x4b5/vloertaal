@@ -334,6 +334,15 @@ const lang: HelpLanguageSource = {
     tempoCalm: 'Devagar', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
     tempoHint: 'Devagar é lento e claro. Normal é como falam os colegas. Escolhe «Normal» se já percebes muito.', // nieuw, nalezen
+    /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
+    coachCard: 'Mostra como te está a correr', // nieuw, nalezen
+    coachCardIntro: 'Este cartão mostra o teu progresso. Mostra-o ao teu professor, coach ou chefe. Tu decides.', // nieuw, nalezen
+    coachCardKeep: 'O teu telemóvel faz o cartão. Nada é enviado. O Vloertaal não guarda nada.', // nieuw, nalezen
+    coachCardWhat: 'No cartão, em neerlandês:', // nieuw, nalezen
+    coachTopics: 'Temas terminados', // nieuw, nalezen
+    coachDays: 'Dias de prática nas últimas 4 semanas', // nieuw, nalezen
+    coachLast: 'Última lição, com a data', // nieuw, nalezen
+    coachNameAsk: 'O teu nome no cartão?', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

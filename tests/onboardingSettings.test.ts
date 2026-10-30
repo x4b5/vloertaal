@@ -109,13 +109,13 @@ describe('Settings as a menu of three', () => {
     expect(roots.sort()).toEqual(['lessons', 'me', 'phone']);
   });
   it('lists the owner\'s settings per row', () => {
-    expect(settingsRows('me', ctx)).toEqual(['language', 'gender', 'sector', 'country', 'english', 'certificates']);
+    expect(settingsRows('me', ctx)).toEqual(['language', 'gender', 'sector', 'country', 'english', 'certificates', 'kaart']);
     expect(settingsRows('lessons', ctx)).toEqual(['sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'toets']);
     expect(settingsRows('phone', ctx)).toEqual(['offline', 'reminder', 'backup', 'counting', 'reset']);
   });
   it('leaves out what does not apply, and offers unlocking in the preview', () => {
     const none = { helpLang: false, gender: false, preview: true, install: true, offline: false };
-    expect(settingsRows('me', none)).toEqual(['language', 'sector', 'country', 'certificates']);
+    expect(settingsRows('me', none)).toEqual(['language', 'sector', 'country', 'certificates', 'kaart']);
     expect(settingsRows('phone', none)).toEqual(['unlock', 'reminder', 'install', 'backup', 'counting', 'reset']);
   });
   it('offers the voice as Automatic, a woman or a man', () => {

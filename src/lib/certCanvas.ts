@@ -12,7 +12,7 @@ const W = 2000;
 const H = Math.round((W * 210) / 297);
 const u = W / 100;
 
-const C = {
+export const C = {
   kraft: '#ebd6b5',
   kraftLine: '#c8955b',
   kraftDark: '#7e5428',
@@ -26,14 +26,14 @@ const C = {
   pen: '#1f4f9c',
   seal: '#137a55',
 };
-const LEXEND = "'Lexend Variable', Lexend, system-ui, sans-serif";
-const STENCIL = "'Big Shoulders Stencil Display', 'Lexend Variable', sans-serif";
+export const LEXEND = "'Lexend Variable', Lexend, system-ui, sans-serif";
+export const STENCIL = "'Big Shoulders Stencil Display', 'Lexend Variable', sans-serif";
 /** Help-language scripts fall back to the phone's own fonts. */
-const HELP = `${LEXEND}, 'Noto Sans Arabic', 'Noto Sans Ethiopic', 'Abyssinica SIL', sans-serif`;
+export const HELP = `${LEXEND}, 'Noto Sans Arabic', 'Noto Sans Ethiopic', 'Abyssinica SIL', sans-serif`;
 
-const font = (weight: number, size: number, family = LEXEND) => `${weight} ${size}px ${family}`;
+export const font = (weight: number, size: number, family = LEXEND) => `${weight} ${size}px ${family}`;
 
-async function fontsReady(): Promise<void> {
+export async function fontsReady(): Promise<void> {
   if (typeof document === 'undefined' || !document.fonts) return;
   await Promise.all([
     document.fonts.load(font(800, 40, STENCIL)),
@@ -45,7 +45,7 @@ async function fontsReady(): Promise<void> {
 }
 
 /** Text with letter spacing (canvas letterSpacing where supported, else drawn as is). */
-function spaced(ctx: CanvasRenderingContext2D, text: string, x: number, y: number, spacing: number) {
+export function spaced(ctx: CanvasRenderingContext2D, text: string, x: number, y: number, spacing: number) {
   const c = ctx as CanvasRenderingContext2D & { letterSpacing?: string };
   if ('letterSpacing' in c) {
     c.letterSpacing = `${spacing}px`;
@@ -57,7 +57,7 @@ function spaced(ctx: CanvasRenderingContext2D, text: string, x: number, y: numbe
 }
 
 /** Splits text into lines that fit `max` (by words). */
-function wrap(ctx: CanvasRenderingContext2D, text: string, max: number): string[] {
+export function wrap(ctx: CanvasRenderingContext2D, text: string, max: number): string[] {
   const words = text.split(/\s+/);
   const lines: string[] = [];
   let line = '';
@@ -73,7 +73,7 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, max: number): string[
 }
 
 /** Letters of a right-to-left script (Arabic, Persian, Dari; Hebrew). */
-const RTL_LETTERS = /[\u0590-\u08ff\ufb1d-\ufdff\ufe70-\ufeff]/;
+export const RTL_LETTERS = /[\u0590-\u08ff\ufb1d-\ufdff\ufe70-\ufeff]/;
 
 /**
  * The learner's name on one line at `size`, or smaller down to `min`; still too long at `min`: on
@@ -135,7 +135,7 @@ function ringText(ctx: CanvasRenderingContext2D, text: string, cx: number, cy: n
 /** The text around the logo's ring (src/components/Logo.tsx). */
 const LOGO_RING = 'VLOERTAAL · NEDERLANDS VOOR HET WERK ·';
 /** The black rubber-stamp logo on yellow (src/components/Logo.tsx), drawn at size s. */
-function drawLogo(ctx: CanvasRenderingContext2D, x: number, y: number, s: number, ring = LOGO_RING) {
+export function drawLogo(ctx: CanvasRenderingContext2D, x: number, y: number, s: number, ring = LOGO_RING) {
   const k = s / 120;
   ctx.save();
   ctx.translate(x, y);
@@ -430,7 +430,7 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   return canvas;
 }
 
-const toBlob = (canvas: HTMLCanvasElement) =>
+export const toBlob = (canvas: HTMLCanvasElement) =>
   new Promise<Blob>((resolve, reject) => canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('no image'))), 'image/png'));
 
 /** The certificate as a PNG (drawn ahead on the certificate screen, so a tap shares at once). */

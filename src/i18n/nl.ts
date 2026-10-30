@@ -366,6 +366,15 @@ export const uiNl: Record<UiKey, UiText> = {
   tempoCalm: 'Rustig',
   tempoNormal: 'Normaal',
   tempoHint: 'Rustig is langzaam en duidelijk. Normaal is zoals collega’s praten. Kies Normaal als je al veel verstaat.',
+  // "Laat zien hoe het gaat": de begeleiderskaart (src/lib/kaart.ts)
+  coachCard: 'Laat zien hoe het gaat',
+  coachCardIntro: 'Deze kaart laat zien hoe het gaat. Laat hem zien aan je docent, coach of baas. Jij kiest.',
+  coachCardKeep: 'Je telefoon maakt de kaart. Er gaat niets weg. Vloertaal bewaart niets.',
+  coachCardWhat: 'Op de kaart:',
+  coachTopics: 'Onderwerpen af',
+  coachDays: 'Dagen geoefend in de laatste 4 weken',
+  coachLast: 'Laatste les, met de datum',
+  coachNameAsk: 'Je naam op de kaart?',
 };
 
 const lang: HelpLanguageSource = {

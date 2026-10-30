@@ -334,6 +334,15 @@ const lang: HelpLanguageSource = {
     tempoCalm: 'آرام', // nieuw, nalezen
     tempoNormal: 'عادی', // nieuw, nalezen
     tempoHint: 'آرام یعنی آهسته و واضح. عادی مثل حرف زدن همکاران است. اگر خیلی چیزها را می‌فهمی، «عادی» را انتخاب کن.', // nieuw, nalezen
+    /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
+    coachCard: 'نشان بده چطور پیش می‌رود', // nieuw, nalezen
+    coachCardIntro: 'این کارت پیشرفت تو را نشان می‌دهد. آن را به معلم، مربی یا رئیست نشان بده. خودت تصمیم می‌گیری.', // nieuw, nalezen
+    coachCardKeep: 'گوشی‌ات خودش کارت را می‌سازد. چیزی فرستاده نمی‌شود. Vloertaal چیزی نگه نمی‌دارد.', // nieuw, nalezen
+    coachCardWhat: 'روی کارت، به هلندی:', // nieuw, nalezen
+    coachTopics: 'موضوع‌های تمام‌شده', // nieuw, nalezen
+    coachDays: 'روزهای تمرین در 4 هفتهٔ گذشته', // nieuw, nalezen
+    coachLast: 'آخرین درس، با تاریخ', // nieuw, nalezen
+    coachNameAsk: 'اسمت روی کارت؟', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
