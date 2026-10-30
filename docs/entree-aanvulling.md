@@ -888,7 +888,7 @@ leidinggevende: "Ik heb snel je inlogcode nodig. Stuur hem nu, het is dringend."
 
 - **A.** Ze stuurt de code. Het is haar baas.
   → *Begrijpelijk. Maar met AI kan iemand een stem nadoen.*
-- **B.** Ze stuurt niets. Ze belt haar leidinggevende zelf, op het nummer dat ze kent.
+- **B.** Ze belt zelf terug, op het nummer dat ze kent.
   → *Goed. Zo weet ze zeker wie het is.*
 - **C.** Ze vraagt in een bericht: "Ben jij het echt?"
   → *Een oplichter zegt gewoon ja.*
