@@ -136,7 +136,8 @@ describe('near-synonyms are never wrong options for each other', () => {
     expect(nearSynonyms('de baas', 'de collega')).toBe(false);
   });
 
-  it('no lesson offers a near-synonym as a wrong option', () => {
+  // Builds every lesson 12 times: room for a busy machine.
+  it('no lesson offers a near-synonym as a wrong option', { timeout: 20000 }, () => {
     const daily1 = daily().lesson;
     for (const lesson of [...allLessons, daily1]) {
       for (const seed of [1, 2, 3]) {

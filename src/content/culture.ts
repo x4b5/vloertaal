@@ -1,5 +1,5 @@
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
-import { ADVICE_LINE, toolsUnit, workTips } from './work';
+import { ADVICE_LINE, dataUnit, toolsUnit, workTips } from './work';
 import { allRegionTips } from './regio';
 
 /**
@@ -360,6 +360,9 @@ export const teamworkUnit: Unit = {
 /** The "Smart tools" unit sits right after "Asking for help" (l.understand), so its tips do too. */
 const isToolsTip = (t: CultureTip) => toolsUnit.lessons.some((l) => l.id === t.lessonId);
 const afterHelp = baseTips.findIndex((t) => t.lessonId === 'l.understand') + 1;
+/** "Numbers and details" sits right before "Time and schedule" (l.shift), so its tips do too. */
+const isDataTip = (t: CultureTip) => dataUnit.lessons.some((l) => l.id === t.lessonId);
+const beforeTime = baseTips.findIndex((t) => t.lessonId === 'l.shift');
 
 /**
  * The lesson's short tip (`lead`): the sentences that the situation after it, or the phrase, needs
@@ -404,12 +407,14 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.cleansafe': [0, 1, 3, 4], // the wet-floor sign
 };
 
-/** All tips in course order: the ones above (with the Smart tools tips after "Asking for help"), then those of the work-and-rights units (src/content/work.ts). */
+/** All tips in course order: the ones above (with the Smart tools tips after "Asking for help" and the Numbers and details tips before "Time and schedule"), then those of the work-and-rights units (src/content/work.ts). */
 export const cultureTips: CultureTip[] = [
   ...baseTips.slice(0, afterHelp),
   ...workTips.filter(isToolsTip),
-  ...baseTips.slice(afterHelp),
-  ...workTips.filter((t) => !isToolsTip(t)),
+  ...baseTips.slice(afterHelp, beforeTime),
+  ...workTips.filter(isDataTip),
+  ...baseTips.slice(beforeTime),
+  ...workTips.filter((t) => !isToolsTip(t) && !isDataTip(t)),
 ].map((t) => (TIP_LEADS[t.id] ? { ...t, lead: TIP_LEADS[t.id] } : t));
 
 /**

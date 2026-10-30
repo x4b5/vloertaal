@@ -1,5 +1,5 @@
 import { teamworkUnit } from './culture';
-import { toolsUnit, workUnits } from './work';
+import { dataUnit, toolsUnit, workUnits } from './work';
 import { soundsUnit } from './sounds';
 import { addMixLessons, isMixLesson, mixLessonFor } from './review';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
@@ -290,6 +290,9 @@ export const units: Unit[] = [
       },
     ],
   },
+  // Numbers and details (your name spelled, phone number, days and dates): right before "Time and
+  // schedule", which needs them. On All topics it sits under Starten (src/content/themes.ts).
+  dataUnit,
   {
     id: 'u.time',
     title: 'Time and schedule',

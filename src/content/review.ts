@@ -15,6 +15,7 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.sounds': ['u.firstday', 'u.help'],
   'u.safety': ['u.build', 'u.factory'],
   'u.warehouse': ['u.safety', 'u.time'],
+  'u.data': ['u.firstday', 'u.time'],
   'u.time': ['u.leave', 'u.contact'],
   'u.teamwork': ['u.social', 'u.firstday'],
   'u.apply': ['u.contract', 'u.grow'],

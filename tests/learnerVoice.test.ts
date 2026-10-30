@@ -33,6 +33,14 @@ const PENDING_RECORDING = new Set<string>([
   'Liever niet, er staan namen van klanten in.',
   'Ik bel je eerst op je oude nummer.',
   'Kan ik er met een mens over praten?',
+  // New unit "Getallen en gegevens" (u.data) and the lessons l.permit, l.kids, l.body and
+  // l.jobends (30 October 2026):
+  'Haddad. Zal ik het spellen?',
+  'Het is maandag drie juni.',
+  'Nee, dan heb ik taalles. Woensdag kan ik wel.',
+  'De kinderopvang belde. Mijn zoon heeft koorts.',
+  'In mijn rug. Ik heb een zware doos getild.',
+  'Wat is de opzegtermijn van mijn huurcontract?',
 ]);
 
 
