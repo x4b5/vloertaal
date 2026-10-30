@@ -69,7 +69,8 @@ export const soundLessons: Lesson[] = [
   ),
   lesson(
     'pbgk',
-    'p or b, g or k',
+    // hoed/goed is h or g, not g or k: the title names all four sounds.
+    'p or b, g, k or h',
     [
       [['pak', 'het pak', 'the suit', '🤵'], ['bak', 'de bak', 'the crate, the bin', '🧺']],
       [['goud', 'het goud', 'the gold', '🥇'], ['koud', 'koud', 'cold', '🥶']],
