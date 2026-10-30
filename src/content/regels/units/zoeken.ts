@@ -298,8 +298,8 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.4.wd2',
           situation: 'Welke vraag stelt Piotr vóór hij tekent?',
           options: [
-            { id: 'a', text: 'Hoe heet de directeur van het hele bedrijf?', best: false, feedback: 'Dat mag hij vragen. Maar het zegt niets over zijn rechten.', say: true },
-            { id: 'b', text: 'Mag ik in de pauze mijn eigen muziek luisteren?', best: false, feedback: 'Kan later ook. Eerst de belangrijke dingen.', say: true },
+            { id: 'a', text: 'Hoe heet de directeur van het bedrijf?', best: false, feedback: 'Dat mag hij vragen. Maar het zegt niets over zijn rechten.', say: true },
+            { id: 'b', text: 'Mag ik in de pauze muziek luisteren?', best: false, feedback: 'Kan later ook. Eerst de belangrijke dingen.', say: true },
             { id: 'c', text: 'Welke cao hoort bij dit werk?', best: true, feedback: 'Goed. In de cao staan veel regels over zijn loon.', say: true },
           ],
           why: 'Een cao is een afspraak over loon en regels voor jouw soort werk. Vakbonden en werkgevers maken die samen. Er staan bijvoorbeeld toeslagen en vrije dagen in.',

@@ -284,7 +284,7 @@ export const loonUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Een bedrag dat ze eind van het jaar terugbetaalt.', best: false, feedback: 'Nee. Dit geld is van haar.' },
             { id: 'b', text: 'Extra loon voor werk in de avond, nacht of weekend.', best: true, feedback: 'Goed. Zo heet die toeslag in de zorg.' },
-            { id: 'c', text: 'Een aftrek omdat ze een keer te laat was.', best: false, feedback: 'Nee. Voor te laat komen krijg je geen aftrek op je strook.' },
+            { id: 'c', text: 'Een aftrek omdat ze een keer te laat was.', best: false, feedback: 'Nee. ORT is geen aftrek. Het is extra geld.' },
           ],
           why: 'ORT betekent onregelmatigheidstoeslag. Dat is extra geld voor werk op onregelmatige tijden. Het staat in de cao, niet in de wet. Elke cao heeft eigen regels.',
         },

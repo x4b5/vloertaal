@@ -158,7 +158,7 @@ export const veiligUnit: RuleUnit = {
           id: 'r.l.veilig.2.wd2',
           situation: 'Kevin heeft het gemeld. Weken later is het nog steeds onveilig. Wat kan Kevin het beste doen?',
           options: [
-            { id: 'a', text: 'Hij meldt het bij de Arbeidsinspectie, als het moet zonder naam.', best: true, feedback: 'Goed. Daar is de Arbeidsinspectie voor.' },
+            { id: 'a', text: 'Hij meldt het bij de Arbeidsinspectie.', best: true, feedback: 'Goed. Daar is de Arbeidsinspectie voor.' },
             { id: 'b', text: 'Hij zet een filmpje van het magazijn online.', best: false, feedback: 'Begrijpelijk, maar dat kan hem problemen geven.' },
             { id: 'c', text: 'Hij stopt met melden. Het helpt toch niet.', best: false, feedback: 'Jammer. Er is nog een plek waar hij heen kan.' },
           ],

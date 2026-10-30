@@ -115,7 +115,7 @@ export const zegHetWrong: Record<string, readonly [{ text: string; feedback: str
     { text: 'Ik ben van 1 tot en met 21 juli weg. Dat zeg ik nu.', feedback: 'Je vraagt vrij aan. De baas moet eerst ja zeggen.' },
   ],
   'r.l.tijd.5.mo1': [
-    { text: 'Mijn kind is ziek. Ik ben nu weg, ik bel later wel.', feedback: 'Zeg het eerst tegen je baas. Ga dan pas weg.' },
+    { text: 'Mijn kind is ziek. Ik ben nu weg, ik bel later wel.', feedback: 'Wacht even op antwoord. Dan weet je baas wat er gebeurt.' },
     { text: 'Er is iets thuis. Ik moet misschien even weg, denk ik.', feedback: 'Dan weet je baas niet wat er is. Zeg dat je kind ziek is.' },
   ],
   'r.l.winkel.1.mo1': [
