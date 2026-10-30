@@ -193,7 +193,8 @@ describe('Instellingen in the work-rules track', () => {
     expect(settings('lessons')).toContain('Tekstgrootte');
     expect(settings('me')).toContain('>Taal<');
     expect(settings('phone')).toContain('Herinner mij elke dag');
-    expect(settings('counting')).toContain('aria-label="Aan of uit"');
+    // The on/off cards are named by the page's question (a11y/start-instellingen), in Dutch here.
+    expect(settings('counting')).toContain('role="radiogroup" aria-label="Anoniem meetellen"');
   });
 });
 
