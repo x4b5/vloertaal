@@ -50,13 +50,15 @@ describe('counts: rules learned', () => {
 });
 
 describe('daily review of the rules track', () => {
-  it('gives the questions of a finished lesson a card, keyed by step id (only graded steps)', () => {
+  it('gives the questions of a finished lesson a card, keyed by step id (only graded steps and the model sentence)', () => {
     const l = lesson('r.l.loon.2');
     const ids = gradedStepIds(l);
     expect(ids.length).toBeGreaterThanOrEqual(2);
-    for (const id of ids) expect(GRADED_RULE_KINDS).toContain(stepsOf(l).find((s) => s.id === id)!.kind);
-    // No story, rule card or model sentence in the box.
-    expect(ids.some((id) => /\.(sc|ru|mo)\d+$/.test(id))).toBe(false);
+    for (const id of ids) expect([...GRADED_RULE_KINDS, 'model']).toContain(stepsOf(l).find((s) => s.id === id)!.kind);
+    // No story or rule card in the box. The model sentence is: it comes back as "Wat zeg je?"
+    // (src/content/regels/zegHet.ts).
+    expect(ids.some((id) => /\.(sc|ru)\d+$/.test(id))).toBe(false);
+    expect(ids.some((id) => /\.mo\d+$/.test(id))).toBe(true);
     const cards = addLessonItems({}, ids, {}, TODAY);
     for (const id of ids) expect(cards[id]).toEqual({ box: 1, due: addDays(TODAY, 1) });
     // Wrong in a later run: back to box 1; right (or not asked): it keeps its place.

@@ -2,6 +2,7 @@ import { allWords, teachingLessons } from '../content/curriculum';
 import { courseUnits } from '../content/courses';
 import { allRegionUnits, regionTaalLessons } from '../content/regio';
 import type { RuleStep } from '../content/regels/types';
+import { modelQuestion } from '../content/regels/zegHet';
 import type { Dialogue, Lesson, Sentence, Unit, Word } from '../content/types';
 import { dayKey } from './progress';
 import type { Track } from './track';
@@ -246,9 +247,16 @@ export type GradedRuleStep = Extract<RuleStep, { kind: 'truefalse' | 'whatdo' | 
 const GRADED = new Set<RuleStep['kind']>(['truefalse', 'whatdo', 'whoask', 'payslip', 'card']);
 export const isGradedStep = (s: RuleStep): s is GradedRuleStep => GRADED.has(s.kind);
 
-/** The questions of a rules lesson: the cards it adds to the box (a language lesson has none). */
+/** A rules step as a question in today's review: a question as it is, a model sentence as
+ *  "Wat zeg je?" (content/regels/zegHet.ts), anything else none. */
+function asQuestion(s: RuleStep): GradedRuleStep | undefined {
+  return isGradedStep(s) ? s : s.kind === 'model' ? modelQuestion(s) : undefined;
+}
+
+/** The questions of a rules lesson: the cards it adds to the box (a language lesson has none).
+ *  Its model sentence too: that one comes back as "Wat zeg je?". */
 export function gradedStepIds(lesson: Lesson): string[] {
-  return (lesson.steps ?? []).filter(isGradedStep).map((s) => s.id);
+  return (lesson.steps ?? []).filter((s) => asQuestion(s)).map((s) => s.id);
 }
 
 /** Every question of the rules course by id (the course registers late: rebuilt when it changes). */
@@ -259,7 +267,7 @@ function ruleStepById(): Map<string, GradedRuleStep> {
   const regions = allRegionUnits('regels');
   if (stepIndex?.from !== from || stepIndex.regions !== regions.length) {
     const byId = new Map<string, GradedRuleStep>();
-    for (const u of [...from, ...regions]) for (const l of u.lessons) for (const s of l.steps ?? []) if (isGradedStep(s)) byId.set(s.id, s);
+    for (const u of [...from, ...regions]) for (const l of u.lessons) for (const s of l.steps ?? []) { const q = asQuestion(s); if (q) byId.set(s.id, q); }
     stepIndex = { from, regions: regions.length, byId };
   }
   return stepIndex.byId;
@@ -286,8 +294,8 @@ export function dailyRuleIds(cards: Cards, today: string): string[] {
 }
 
 /**
- * Today's review in the work-rules track, as a lesson: only questions (no story, no rule card,
- * no model sentence), at most RULE_DAILY_MAX, in the order given. Unknown ids are left out.
+ * Today's review in the work-rules track, as a lesson: only questions (no story, no rule card; a
+ * model sentence as "Wat zeg je?"), at most RULE_DAILY_MAX, in the order given. Unknown ids are left out.
  */
 export function dailyRuleLesson(ids: readonly string[]): Lesson {
   const byId = ruleStepById();
