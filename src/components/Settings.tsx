@@ -19,6 +19,7 @@ import {
   type SettingsList, type SettingsPage, type VoiceChoice,
 } from '../lib/settingsMenu';
 import { setSpeakingOn, speakingOn } from '../lib/speaking';
+import { installLocal, listenOn, localStatus, setListenOn, type LocalStatus } from '../lib/listen';
 import { tempoOf, TEMPOS, type Tempo } from '../lib/tempo';
 import { TEXT_SIZES, type TextSize } from '../lib/textSize';
 import { VOICE_SAMPLE } from '../lib/voices';
@@ -138,6 +139,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   unlock: { nl: 'Volledige versie', key: 'unlockFull', icon: <LockIcon size={24} /> },
   toets: { nl: 'Wat ken je al?', key: 'toetsTitle', icon: <BarsIcon size={24} /> },
   kaart: { nl: 'Laat zien hoe het gaat', key: 'coachCard', icon: <CardIcon size={24} /> },
+  listen: { nl: 'Laat de telefoon luisteren (proef)', key: 'listenTrial', icon: <MicIcon size={24} /> },
 };
 
 /** A short value in the help language only (English when there is none). */
@@ -199,6 +201,13 @@ export function Settings({
   const { device, recorded } = useVoices();
   /** Bumped when a stored-on-this-device switch changes, so the page shows it at once. */
   const [, setTick] = useState(0);
+  /** Can this phone recognise Dutch on the device? ("Laat de telefoon luisteren (proef)"). */
+  const [listenStatus, setListenStatus] = useState<LocalStatus>('unavailable');
+  useEffect(() => {
+    let on = true;
+    localStatus().then((st) => { if (on) setListenStatus(st); }, () => {});
+    return () => { on = false; };
+  }, []);
   const timer = useRef<number | null>(null);
   // An answer's way back (answered) is for the page it was given on: another page (Back, the
   // arrow) or leaving Settings cancels it, so it never takes the learner a page too far.
@@ -269,6 +278,7 @@ export function Settings({
   );
 
   const ctx = {
+    listen: listenStatus !== 'unavailable',
     helpLang: Boolean(lang),
     gender: hasGender(lang?.code),
     preview: access !== 'full' && Boolean(onAccess),
@@ -303,6 +313,7 @@ export function Settings({
       case 'tempo': return <Value text={say(TEMPO_KEYS[tempoOf(progress)])} />;
       case 'voice': return voice ? <Value text={say(voice === 'f' ? 'voiceWoman' : voice === 'm' ? 'voiceMan' : 'voiceAuto')} /> : null;
       case 'speaking': return <Value text={say(speakingOn() ? 'settingOn' : 'settingOff')} />;
+      case 'listen': return <Value text={say(listenOn() && listenStatus === 'available' ? 'settingOn' : 'settingOff')} />;
       case 'writing': return <Value text={say(writing === 'pick' ? 'writingPick' : writing === 'tiles' ? 'letterTiles' : 'useKeyboard')} />;
       case 'text': return <Value text={say(TEXT_KEYS[progress.textSize ?? 'normal'])} />;
       case 'theme': return <Value text={say(THEME_KEYS[progress.theme])} />;
@@ -589,6 +600,8 @@ export function Settings({
         );
       case 'unlock':
         return onAccess ? <UpgradeCard lang={lang} onAccess={(a) => { onAccess(a); answered(); }} /> : null;
+      case 'listen':
+        return <ListenPage lang={lang} status={listenStatus} onStatus={setListenStatus} onOff={onOff} onDone={() => answered()} />;
     }
   };
 
@@ -682,6 +695,80 @@ function ReminderNow({ time, lang, onOther, onStopped }: {
         ]}
       />
       <p className="max3-hint" role="status"><Bi text={ui(stopped ? remindStoppedKey() : 'remindHint', lang)} /></p>
+    </>
+  );
+}
+
+/**
+ * "Laat de telefoon luisteren (proef)" (src/lib/listen.ts): off unless turned on here. With Dutch
+ * on the phone: On / Off. Without it yet (the browser can download it): "On" first says it is a big
+ * download over wifi, and only "Download Dutch" (a tap of the learner's own) downloads it.
+ */
+function ListenPage({ lang, status, onStatus, onOff, onDone }: {
+  lang?: HelpLanguage;
+  status: LocalStatus;
+  onStatus: (s: LocalStatus) => void;
+  onOff: (on: boolean, set: (on: boolean) => void) => ReactNode;
+  onDone: () => void;
+}) {
+  const [step, setStep] = useState<'pick' | 'pack' | 'busy' | 'failed'>('pick');
+  const shown = useRef(true);
+  useEffect(() => {
+    shown.current = true;
+    return () => { shown.current = false; };
+  }, []);
+  // The cards are gone after "On": the focus goes to "Download Dutch" (keyboard, screen reader).
+  const first = useRef<HTMLButtonElement>(null);
+  useEffect(() => { if (step === 'pack' || step === 'failed') first.current?.focus({ preventScroll: true }); }, [step]);
+  const say = (key: Parameters<typeof ui>[0]) => ui(key, lang);
+  const download = () => {
+    setStep('busy');
+    installLocal().then((ok) => {
+      if (!shown.current) return;
+      if (ok) { setListenOn(true); onStatus('available'); onDone(); }
+      else setStep('failed');
+    }, () => { if (shown.current) setStep('failed'); });
+  };
+  if (status === 'available') {
+    return (
+      <>
+        {onOff(listenOn(), setListenOn)}
+        <p className="max3-hint"><Bi text={say('listenHint')} /></p>
+      </>
+    );
+  }
+  if (status === 'downloading') return <p className="max3-hint max3-hint-top" role="status"><Bi text={say('listenDownloading')} /></p>;
+  if (step === 'pick') {
+    // Not on yet: "On" leads to the download question first.
+    return (
+      <>
+        <ChoiceCards
+          label={said(say('listenTrial'))}
+          current="off"
+          onPick={(id) => { if (id === 'on') setStep('pack'); else { setListenOn(false); onDone(); } }}
+          options={[
+            { id: 'on', nl: 'Aan', text: say('settingOn'), picture: <CheckIcon size={28} /> },
+            { id: 'off', nl: 'Uit', text: say('settingOff'), picture: <CloseIcon size={26} /> },
+          ]}
+        />
+        <p className="max3-hint"><Bi text={say('listenHint')} /></p>
+      </>
+    );
+  }
+  return (
+    <>
+      <p className="max3-hint max3-hint-top" role="status">
+        <Bi text={say(step === 'busy' ? 'listenDownloading' : step === 'failed' ? 'listenFailed' : 'listenNeedsPack')} />
+      </p>
+      <div className="reset-actions listen-actions">
+        <button type="button" ref={first} className="btn btn-primary keep-btn listen-download" onClick={download} disabled={step === 'busy'}>
+          <DownloadIcon size={22} />
+          <NlPair nlFirst nl="Nederlands downloaden" className="keep-btn-gloss" text={say('listenDownload')} />
+        </button>
+        <button type="button" className="btn btn-ghost keep-btn listen-not-now" onClick={onDone}>
+          <NlPair nlFirst nl="Nu niet" className="keep-btn-gloss" text={say('listenNotNow')} />
+        </button>
+      </div>
     </>
   );
 }

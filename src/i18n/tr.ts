@@ -345,6 +345,20 @@ const lang: HelpLanguageSource = {
     coachDays: 'Son 4 haftada çalışılan günler', // nieuw, nalezen
     coachLast: 'Son ders, tarihiyle', // nieuw, nalezen
     coachNameAsk: 'Kartta adın?', // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'Telefon dinlesin (deneme)', // nieuw, nalezen
+    listenHint: 'Konuştuktan sonra telefon seni anlayıp anlamadığını söyler. Bu, telefonun kendisinde olur. Bize veya başkalarına hiçbir şey gitmez.', // nieuw, nalezen
+    listenNeedsPack: 'Telefonun önce Hollandacaya ihtiyacı var. Büyük bir indirme: Wi-Fi kullan.', // nieuw, nalezen
+    listenDownload: 'Hollandaca indir', // nieuw, nalezen
+    listenNotNow: 'Şimdi değil', // nieuw, nalezen
+    listenDownloading: 'Hollandaca iniyor. Sonra tekrar dene.', // nieuw, nalezen
+    listenFailed: 'Olmadı. Sonra Wi-Fi ile tekrar dene.', // nieuw, nalezen
+    listenPrivacy: 'Sadece telefon dinler. Hiçbir şey gönderilmez.', // nieuw, nalezen
+    heardWait: 'Telefon dinliyor…', // nieuw, nalezen
+    heardOk: 'Anlaşıldı', // nieuw, nalezen
+    heardAlmost: 'Neredeyse: {word} kelimesini tekrar söyle', // nieuw, nalezen
+    heardNotYet: 'Henüz anlaşılmadı', // nieuw, nalezen
+    goOnAnyway: 'Yine de devam', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

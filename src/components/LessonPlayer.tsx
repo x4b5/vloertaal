@@ -35,6 +35,7 @@ import {
 import { CardStep, cardTag, ModelLine, PayslipStep, RuleCard, RuleFeedbackBody, ruleAnnouncement, ruleVerdict, SceneCard, TrueFalse, WhatDo, WhoAsk } from './RuleSteps';
 import { MicIcon, SpeakExercise } from './Speaking';
 import { resetMicForLesson, speakingOn, speakSkipped } from '../lib/speaking';
+import { listenOn } from '../lib/listen';
 import {
   type Answer,
   BuildExercise,
@@ -828,7 +829,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'tip': body = <TipCard key={key} ex={ex} {...props} />; break;
     case 'saying': body = <SayingCard key={key} ex={ex} {...props} />; break;
     case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
-    case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onNext={next} onRating={setSpeakRating} />; break;
+    // "Laat de telefoon luisteren (proef)": the Dutch course only (never Werkregels); src/lib/listen.ts.
+    case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onNext={next} onRating={setSpeakRating} listen={!dutchUi(lang) && listenOn()} />; break;
     case 'scene': body = <SceneCard key={key} ex={ex} {...props} />; break;
     case 'rule': body = <RuleCard key={key} ex={ex} {...props} />; break;
     case 'truefalse': body = <TrueFalse key={key} ex={ex} {...props} />; break;

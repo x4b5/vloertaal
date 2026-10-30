@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { gloss, said, saidLang, ui, type Bilingual } from '../i18n';
+import { gloss, langTag, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { autoSpeak, speak, stopSpeech } from '../lib/audio';
 import { breakable } from '../lib/dutch';
@@ -8,6 +8,7 @@ import { sentencePicture } from '../lib/exercises';
 import {
   canRecord, isWord, MAX_RECORD_MS, MIC_RETRIES, micBlocked, recordMime, setMicBlocked, SILENCE_MS, speakMode,
 } from '../lib/speaking';
+import { judge, localStatus, startListening, verdictOf, type Heard, type Listening, type Verdict } from '../lib/listen';
 import { voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
 import { pictureCast, WordPicture } from '../pictures';
@@ -65,6 +66,11 @@ let shotPhase: Phase | undefined;
 export function setSpeakShotPhase(phase: Phase | undefined): void {
   shotPhase = phase;
 }
+/** Screenshot harness only: what the phone "heard" with "Laat de telefoon luisteren" (or 'wait'). */
+let shotHeard: string | undefined;
+export function setSpeakShotHeard(heard: string | undefined): void {
+  shotHeard = heard;
+}
 
 const RING_R = 52;
 const RING_C = 2 * Math.PI * RING_R;
@@ -81,7 +87,7 @@ const RING_C = 2 * Math.PI * RING_R;
  *
  * `phaseForShot` fixes the phase for the screenshot harness (no microphone used).
  */
-export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecording, keepNote, phaseForShot = shotPhase }: {
+export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecording, keepNote, phaseForShot = shotPhase, listen = false, heardForShot = shotHeard }: {
   ex: Extract<Exercise, { kind: 'speak' }>;
   lang?: HelpLanguage;
   onAnswer: (a: { correct: boolean } | null) => void;
@@ -95,6 +101,12 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
   /** A line under the privacy line (where the recording is kept on the phone, it says so). */
   keepNote?: Bilingual;
   phaseForShot?: Phase;
+  /** "Laat de telefoon luisteren (proef)" is on (the Dutch course's lessons only; src/lib/listen.ts).
+   *  It only adds a line after recording ("Verstaan" / "Bijna: … nog eens" / "Nog niet verstaan")
+   *  when the phone confirms Dutch on the device; otherwise this is plain record and compare. */
+  listen?: boolean;
+  /** Screenshot harness only: what the phone "heard" (judged as usual), or 'wait'. */
+  heardForShot?: string;
 }) {
   const { item } = ex;
   const picture = isWord(item) ? (hasPicture(item) ? item : undefined) : sentencePicture(item);
@@ -113,6 +125,21 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
   const [used, setUsed] = useState(phaseForShot === 'recording' ? 0.35 : 0);
   const [status, setStatus] = useState('');
   const [playing, setPlaying] = useState<'them' | 'me' | null>(null);
+  /** The phone may listen here: the switch is on and Dutch is confirmed on this device. */
+  const [canListen, setCanListen] = useState(heardForShot !== undefined);
+  /** What the phone made of the last try: 'wait' while it decides; null = no listening (compare). */
+  const [verdict, setVerdict] = useState<Verdict | 'wait' | null>(
+    heardForShot === undefined ? null : heardForShot === 'wait' ? 'wait' : judge(item.nl, [heardForShot]),
+  );
+  const listenRef = useRef<Listening | null>(null);
+  /** Bumped by each try, so a late answer of the phone is for the try on screen only. */
+  const tryRef = useRef(0);
+  useEffect(() => {
+    if (!listen || phaseForShot) return;
+    let on = true;
+    localStatus().then((s) => { if (on) setCanListen(s === 'available'); }, () => {});
+    return () => { on = false; };
+  }, [listen, phaseForShot]);
 
   // Everything that holds the voice or the microphone, so it can all be let go at once.
   const alive = useRef(true);
@@ -180,6 +207,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
       const rec = recRef.current;
       if (rec && rec.state !== 'inactive') { rec.ondataavailable = null; rec.onstop = null; rec.stop(); }
       recRef.current = null;
+      listenRef.current?.abort();
+      listenRef.current = null;
       release();
       discard();
     };
@@ -249,6 +278,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
       return;
     }
     recRef.current = rec;
+    const attempt = ++tryRef.current;
+    setVerdict(null);
     const chunks: Blob[] = [];
     rec.ondataavailable = (e) => { if (e.data.size) chunks.push(e.data); };
     rec.onstop = () => {
@@ -256,9 +287,21 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
       recRef.current = null;
       const blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' });
       chunks.length = 0;
-      if (!alive.current) return;
+      const heard = listenRef.current;
+      listenRef.current = null;
+      if (!alive.current) { heard?.abort(); return; }
       setUsed(0);
-      if (!blob.size) { setPhase('idle'); return; }
+      if (!blob.size) { heard?.abort(); setPhase('idle'); return; }
+      // The phone listened along: its answer comes a moment later (at most 3 s, else none).
+      if (heard) {
+        setVerdict('wait');
+        heard.stop();
+        const late = new Promise<Heard>((r) => window.setTimeout(() => r({ alternatives: [], error: 'timeout' }), 3000));
+        Promise.race([heard.result, late]).then((h) => {
+          if (h.error === 'timeout') heard.abort();
+          if (alive.current && tryRef.current === attempt) setVerdict(verdictOf(item.nl, h));
+        }, () => { if (alive.current && tryRef.current === attempt) setVerdict(null); });
+      }
       urlRef.current = URL.createObjectURL(blob);
       onRecording?.(blob);
       setPhase('review');
@@ -269,6 +312,14 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
     rec.start();
     setPhase('recording');
     setStatus(said(ui('stopRecording', lang)));
+    // On the device only: startListening confirms Dutch on this phone first, or starts nothing.
+    if (listen && canListen) {
+      startListening(stream.getAudioTracks?.()[0]).then((l) => {
+        if (!l) return;
+        if (!alive.current || tryRef.current !== attempt || recRef.current !== rec) { l.abort(); return; }
+        listenRef.current = l;
+      }, () => {});
+    }
 
     // Stop after 6 s, or after a short silence once the learner has said something.
     const began = Date.now();
@@ -303,6 +354,10 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
   }
 
   function again() {
+    tryRef.current++;
+    listenRef.current?.abort();
+    listenRef.current = null;
+    setVerdict(null);
     discard();
     setPhase('idle');
     setStatus('');
@@ -348,7 +403,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
           {!recording && (
             <p className="say-privacy">
               <LockIcon size={18} />
-              <Bi text={ui('micPrivacy', lang)} />
+              <Bi text={ui(listen && canListen ? 'listenPrivacy' : 'micPrivacy', lang)} />
             </p>
           )}
           {!recording && keepNote && <p className="say-privacy say-keep"><Bi text={keepNote} /></p>}
@@ -376,10 +431,13 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
               <Bi className="say-who" text={ui('speakMe', lang)} />
             </button>
           </div>
+          {verdict && <Heard verdict={verdict} lang={lang} />}
           <div className="say-rate">
+            {/* With the phone listening: "Continue" when understood, else "Continue anyway"
+                (always there: the phone can be wrong). Without: "Sounds the same". */}
             <button type="button" className="say-rate-btn say-same" onClick={() => onNext?.()}>
               <SameIcon size={30} />
-              <Bi text={ui('soundsSame', lang)} />
+              <Bi text={ui(!verdict ? 'soundsSame' : verdict !== 'wait' && verdict.kind === 'ok' ? 'continue' : 'goOnAnyway', lang)} />
             </button>
             <button type="button" className="say-rate-btn say-again" onClick={again}>
               <AgainIcon size={30} />
@@ -414,3 +472,48 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
     </div>
   );
 }
+
+/** Three dots: the phone is still listening. */
+const DotsIcon = ({ size }: { size?: number }) => (
+  <Svg size={size}><circle cx="5.5" cy="12" r="2.2" fill="currentColor" /><circle cx="12" cy="12" r="2.2" fill="currentColor" /><circle cx="18.5" cy="12" r="2.2" fill="currentColor" /></Svg>
+);
+
+/**
+ * What the phone made of it ("Laat de telefoon luisteren (proef)"): understood, almost (with the
+ * Dutch word to say again, in Dutch) or not understood yet. Only about being understood: never
+ * "wrong", never a number. Read out when it comes (aria-live).
+ */
+function Heard({ verdict, lang }: { verdict: Verdict | 'wait'; lang?: HelpLanguage }) {
+  const kind = verdict === 'wait' ? 'wait' : verdict.kind;
+  const icon = kind === 'ok' ? <SameIcon size={26} /> : kind === 'wait' ? <DotsIcon size={26} /> : <AgainIcon size={26} />;
+  return (
+    <p className={`say-heard say-heard-${kind}`} aria-live="polite">
+      <span className="say-heard-icon" aria-hidden>{icon}</span>
+      {verdict === 'wait' ? <Bi text={ui('heardWait', lang)} />
+        : verdict.kind === 'ok' ? <Bi text={ui('heardOk', lang)} />
+        : verdict.kind === 'almost' ? <WithWord text={ui('heardAlmost', lang)} word={verdict.word} />
+        : <Bi text={ui('heardNotYet', lang)} />}
+    </p>
+  );
+}
+
+/** A text with {word} in it, the Dutch word marked as Dutch (and kept left-to-right), like Bi. */
+function WithWord({ text, word }: { text: Bilingual; word: string }) {
+  const fill = (s: string): React.ReactNode => {
+    const [before, after = ''] = s.split('{word}');
+    return <>{before}<bdi className="say-heard-word" lang="nl" dir="ltr">{word}</bdi>{after}</>;
+  };
+  if (text.lang?.code === 'nl') return <span className="bi"><span className="bi-en" lang="nl">{fill(text.help ?? text.en)}</span></span>;
+  if (text.help && text.lang) {
+    const rtl = text.lang.dir === 'rtl';
+    return (
+      <span className="bi bi-swap" dir={rtl ? 'rtl' : undefined}>
+        <span className="bi-en" lang={langTag(text.lang.code)} dir={text.lang.dir}>{fill(text.help)}</span>
+        <span className="bi-sep" aria-hidden>·</span>
+        <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{fill(text.en)}</span>
+      </span>
+    );
+  }
+  return <span className="bi"><span className="bi-en" lang="en">{fill(text.en)}</span></span>;
+}
+

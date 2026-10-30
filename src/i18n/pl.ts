@@ -345,6 +345,20 @@ const lang: HelpLanguageSource = {
     coachDays: 'Dni ćwiczeń w ostatnich 4 tygodniach', // nieuw, nalezen
     coachLast: 'Ostatnia lekcja, z datą', // nieuw, nalezen
     coachNameAsk: 'Twoje imię na karcie?', // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'Telefon słucha (test)', // nieuw, nalezen
+    listenHint: 'Gdy coś powiesz, telefon pokaże, czy cię zrozumiał. To dzieje się w samym telefonie. Nic nie trafia do nas ani do innych.', // nieuw, nalezen
+    listenNeedsPack: 'Telefon najpierw potrzebuje niderlandzkiego. To duże pobieranie: użyj Wi-Fi.', // nieuw, nalezen
+    listenDownload: 'Pobierz niderlandzki', // nieuw, nalezen
+    listenNotNow: 'Nie teraz', // nieuw, nalezen
+    listenDownloading: 'Niderlandzki się pobiera. Spróbuj później.', // nieuw, nalezen
+    listenFailed: 'Nie udało się. Spróbuj później, przez Wi-Fi.', // nieuw, nalezen
+    listenPrivacy: 'Słucha tylko telefon. Nic nie jest wysyłane.', // nieuw, nalezen
+    heardWait: 'Telefon słucha…', // nieuw, nalezen
+    heardOk: 'Zrozumiano', // nieuw, nalezen
+    heardAlmost: 'Prawie: powiedz {word} jeszcze raz', // nieuw, nalezen
+    heardNotYet: 'Jeszcze nie zrozumiano', // nieuw, nalezen
+    goOnAnyway: 'Mimo to dalej', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

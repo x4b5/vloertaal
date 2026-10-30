@@ -345,6 +345,20 @@ const lang: HelpLanguageSource = {
     coachDays: 'Дни с упражнения през последните 4 седмици', // nieuw, nalezen
     coachLast: 'Последен урок, с датата', // nieuw, nalezen
     coachNameAsk: 'Името ти на картата?', // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'Телефонът слуша (проба)', // nieuw, nalezen
+    listenHint: 'След като кажеш нещо, телефонът показва дали те е разбрал. Това става в самия телефон. Нищо не отива при нас или при други.', // nieuw, nalezen
+    listenNeedsPack: 'Първо телефонът има нужда от нидерландски. Това е голямо изтегляне: ползвай Wi-Fi.', // nieuw, nalezen
+    listenDownload: 'Изтегли нидерландски', // nieuw, nalezen
+    listenNotNow: 'Не сега', // nieuw, nalezen
+    listenDownloading: 'Нидерландският се тегли. Опитай пак по-късно.', // nieuw, nalezen
+    listenFailed: 'Не стана. Опитай пак по-късно, с Wi-Fi.', // nieuw, nalezen
+    listenPrivacy: 'Слуша само телефонът. Нищо не се изпраща.', // nieuw, nalezen
+    heardWait: 'Телефонът слуша…', // nieuw, nalezen
+    heardOk: 'Разбрано', // nieuw, nalezen
+    heardAlmost: 'Почти: кажи {word} още веднъж', // nieuw, nalezen
+    heardNotYet: 'Още не е разбрано', // nieuw, nalezen
+    goOnAnyway: 'Все пак напред', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
