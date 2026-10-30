@@ -353,13 +353,17 @@ export function WordsHub({ lang, onTips, after }: {
   );
 }
 
-/** "Problems at work? Who can help": the four numbers for this audience (from the work-rules track's list). */
-const WORK_CONTACTS: { id: string; when: UiKey }[] = [
+/** "Problems at work? Who can help": the four numbers for this audience (from the work-rules track's
+ *  list), in the same order as there: 112 first, then by name. */
+const WORK_CONTACT_KEYS: { id: string; when: UiKey }[] = [
   { id: 'h.112', when: 'who112' },
   { id: 'h.juridischloket', when: 'whoLegal' },
   { id: 'h.arbeidsinspectie', when: 'whoInspection' },
   { id: 'h.fairwork', when: 'whoFairwork' },
 ];
+const WORK_CONTACTS = [...WORK_CONTACT_KEYS].sort(
+  (a, b) => HELP_ROWS.findIndex((r) => r.id === a.id) - HELP_ROWS.findIndex((r) => r.id === b.id),
+);
 
 /**
  * The Hulp tab of the language course: who to call about trouble at work (the Werkregels track has

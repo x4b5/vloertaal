@@ -109,7 +109,7 @@ describe('Hulp in the work-rules track: "Wie bel je?"', () => {
     const outside = m.replace(/<ul class="rh-rows">[\s\S]*<\/ul>/, '');
     expect((outside.match(/<button|<a /g) ?? [])).toHaveLength(1);
     expect(outside).toContain('Alle regels');
-    expect(helpRowText(HELP_ROWS[1])).toContain('Huisartsenpost');
+    expect(helpRowText(HELP_ROWS.find((r) => r.id === 'h.huisartsenpost')!)).toContain('Huisartsenpost');
   });
 
   it('opens with the disclaimer, in Dutch only', () => {
@@ -348,5 +348,16 @@ describe('a clear disclaimer: the rules are general information, about the Nethe
   it('a learner who read it keeps it read on load', () => {
     const saved = { ...emptyProgress, rulesNotice: true };
     expect(JSON.parse(JSON.stringify(saved)).rulesNotice).toBe(true);
+  });
+});
+
+describe('"Wie bel je?" in alphabetical order', () => {
+  it('112 first, then by name (without "de" or "het"), for both countries', async () => {
+    const { HELP_ROWS: nl, HELP_ROWS_BE: be } = await import('../src/content/regels/help');
+    for (const rows of [nl, be]) {
+      expect(rows[0].id).toBe('h.112');
+      const names = rows.slice(1).map((r) => r.name.replace(/^(de|het)\s+/i, ''));
+      expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b, 'nl', { sensitivity: 'base' })));
+    }
   });
 });
