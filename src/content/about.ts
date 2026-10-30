@@ -30,11 +30,11 @@ export const aboutSections: AboutSection[] = [
     body: 'Vloertaal helps you learn the Dutch you need at work: in the warehouse, the kitchen, the factory or on the building site. Not only the words on the work floor, but all the language around work: applying for a job, your contract and pay slip, your rights, housing and papers, calling in sick and getting along with colleagues. The lessons are short, so you can practise a few minutes every day. Think of Vloertaal as a small extra for in between. It does not replace a language course or a language coach.',
     nl: {
       title: 'Wat is Vloertaal?',
-      body: 'Met Vloertaal leer je het Nederlands dat je nodig hebt op je werk: in het magazijn, in de keuken, in de fabriek of op de bouw. Niet alleen de woorden op de werkvloer. Ook de taal rond je werk: solliciteren, je contract en je loonstrook, je rechten, wonen en papieren, je ziekmelden en omgaan met collega’s. De lessen zijn kort. Zo kun je elke dag een paar minuten oefenen. Zie Vloertaal als een tussendoortje. Het is een aanvulling op een taalcursus of een taalcoach, geen vervanging.',
+      body: 'Met Vloertaal leer je het Nederlands dat je nodig hebt op je werk: in het magazijn, in de keuken, in de fabriek of op de bouw. Niet alleen de woorden op de werkvloer. Ook de taal rond je werk: solliciteren, je contract en je loonstrook, je rechten, wonen en papieren, je ziekmelden en omgaan met collega’s. De lessen zijn kort. Zo kun je elke dag een paar minuten oefenen. Zie Vloertaal als een tussendoortje. Het is een extra. Een taalcursus of een taalcoach blijft nodig.',
     },
     nlRules: {
       title: 'Wat is Vloertaal?',
-      body: 'Vloertaal legt uit hoe werken in Nederland gaat. Voor mensen die al Nederlands spreken. Je leert de regels van de wet en je contract. En de regels die nergens staan, maar die iedereen kent. Bijvoorbeeld over werk zoeken, je loonstrook, ziek zijn, veiligheid en collega’s. De lessen zijn kort. Zo leer je elke dag een paar minuten. Zie Vloertaal als een tussendoortje. Het is een aanvulling, geen vervanging van advies van je werkgever, een vakbond of het Juridisch Loket.',
+      body: 'Vloertaal legt uit hoe werken in Nederland gaat. Voor mensen die al Nederlands spreken. Je leert de regels van de wet en je contract. En de regels die nergens staan, maar die iedereen kent. Bijvoorbeeld over werk zoeken, je loonstrook, ziek zijn, veiligheid en collega’s. De lessen zijn kort. Zo leer je elke dag een paar minuten. Zie Vloertaal als een tussendoortje. Het is een extra. Advies van je werkgever, een vakbond of het Juridisch Loket blijft nodig.',
     },
   },
   {
@@ -42,11 +42,11 @@ export const aboutSections: AboutSection[] = [
     body: 'Vloertaal wants to help a little, so that learning Dutch for work becomes a bit easier: free, easy to use, and with help in your own language. Nobody earns money from Vloertaal: no ads, no subscription, and your data is never sold.',
     nl: {
       title: 'Onze missie',
-      body: 'Vloertaal wil een klein steentje bijdragen, zodat Nederlands leren voor je werk iets makkelijker wordt. Gratis, makkelijk en met hulp in je eigen taal. Niemand verdient geld aan Vloertaal: geen reclame, geen abonnement, en je gegevens worden nooit verkocht.',
+      body: 'Vloertaal wil helpen, zodat Nederlands leren voor je werk iets makkelijker wordt. Gratis, makkelijk en met hulp in je eigen taal. Niemand verdient geld aan Vloertaal: geen reclame, geen abonnement, en we verkopen je gegevens nooit.',
     },
     nlRules: {
       title: 'Onze missie',
-      body: 'Iedereen die in Nederland werkt, moet weten wat mag en wat moet. En waar je hulp vindt als het misgaat. Vloertaal is gratis en makkelijk. Niemand verdient geld aan Vloertaal: geen reclame, geen abonnement, en je gegevens worden nooit verkocht.',
+      body: 'Iedereen die in Nederland werkt, moet weten wat mag en wat moet. En waar je hulp vindt als het misgaat. Vloertaal is gratis en makkelijk. Niemand verdient geld aan Vloertaal: geen reclame, geen abonnement, en we verkopen je gegevens nooit.',
     },
   },
   {
@@ -76,7 +76,7 @@ export const aboutSections: AboutSection[] = [
     body: 'You learn Dutch with help in your own language, or in simple English if you chose no help language. You listen, tap, build sentences and practise short conversations with colleagues.',
     nl: {
       title: 'Hoe werkt het?',
-      body: 'Je leert Nederlands met hulp in je eigen taal, of in eenvoudig Engels als je geen hulptaal koos. Je luistert, je tikt, je maakt zinnen en je oefent korte gesprekken met collega’s.',
+      body: 'Je leert Nederlands met hulp in je eigen taal. Koos je geen hulptaal? Dan krijg je hulp in eenvoudig Engels. Je luistert, je tikt, je maakt zinnen en je oefent korte gesprekken met collega’s.',
     },
     nlRules: {
       title: 'Hoe werkt het?',
@@ -89,7 +89,7 @@ export const aboutSections: AboutSection[] = [
     body: 'Language comes first. But Vloertaal also talks about how things usually go at a Dutch workplace: saying "je" to your boss, asking questions, being on time, and saying it when something bothers you. You find these tips in the lessons and under "Workplace tips".',
     nl: {
       title: 'Zo werkt het hier',
-      body: 'Taal komt eerst. Maar Vloertaal vertelt ook hoe het meestal gaat op een Nederlands werk: je zegt "je" tegen je baas, je stelt vragen, je bent op tijd, en je zegt het als iets je dwarszit. Deze tips vind je in de lessen en bij "Zo werkt het hier".',
+      body: 'Taal komt eerst. Maar Vloertaal vertelt ook hoe het meestal gaat op een Nederlands werk. Bijvoorbeeld: je zegt "je" tegen je baas, je stelt vragen en je bent op tijd. En je zegt het als je iets niet fijn vindt. Deze tips vind je in de lessen en bij "Zo werkt het hier".',
     },
   },
   {
@@ -110,7 +110,7 @@ export const aboutSections: AboutSection[] = [
     body: 'You do not need an account. Your progress is saved only on this phone or computer. If it is switched on, the app counts anonymously how often lessons are done: no name, no tracking. You can turn this off in Settings.',
     nl: {
       title: 'Jouw privacy',
-      body: 'Je hebt geen account nodig. Wat je hebt geleerd, staat alleen op deze telefoon of computer. Staat het aan? Dan telt de app zonder naam hoe vaak lessen worden gedaan. Niemand volgt je. Je kunt dit uitzetten bij "Instellingen".',
+      body: 'Je hebt geen account nodig. Wat je hebt geleerd, staat alleen op deze telefoon of computer. Staat het aan? Dan telt de app zonder naam hoe vaak mensen lessen doen. Niemand volgt je. Je kunt dit uitzetten bij "Instellingen".',
     },
   },
   {
