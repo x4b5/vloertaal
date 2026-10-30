@@ -17,6 +17,10 @@ import { addDays, dailyCard, dailyLesson, dailyWordIds, dueIds, type Cards } fro
  * words, before the match board): one item more, and with the random numbers it takes, the match
  * board has other words and the chat's options another order. The words asked, the sentence and
  * the chat are the same.
+ * Then (30 October 2026) a wrong chat reply comes from the lessons seen first, and one that
+ * answers almost any line ("Wacht even, ik vertaal het.") is never a wrong reply
+ * (src/lib/exercises.ts chatOptions): the chat "Hoe heet je?" offers "Nee, nog een keer graag."
+ * (the nearest lesson still to come) instead, in another order. Everything else is the same.
  */
 
 const TODAY = '2026-10-15';

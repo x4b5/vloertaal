@@ -155,10 +155,21 @@ export function wordsBefore(lesson: Lesson): Word[] {
 }
 
 /**
+ * The words still to come after this lesson, one pool per lesson, the nearest lesson first: the
+ * fill-in when the words met run out (at the start of the course). Outside the course (a mixed
+ * review, today's review): every word of the course, as one pool.
+ */
+function laterWords(lesson: Lesson): Word[][] {
+  const at = teachingLessons.findIndex((l) => l.id === lesson.id);
+  return at >= 0 ? teachingLessons.slice(at + 1).map((l) => l.words) : [allWords];
+}
+
+/**
  * The target and n − 1 wrong options. Wrong options come from words the learner has already
  * met: the lesson's own words (`known`, by default all of them), then earlier lessons. Only
- * when those run out does a word from elsewhere in the course fill in, so an option is never a
- * word that is still to come when a known one can take its place.
+ * when those run out does a word from elsewhere in the course fill in: the lesson's other words,
+ * then the words of the next lessons, the nearest first. So an option is never a word that is
+ * still to come when a known one can take its place, and never one from far ahead.
  */
 export function options(word: Word, lesson: Lesson, rng: () => number, n = 3, known: readonly Word[] = lesson.words, avoid?: ReadonlySet<string>): Word[] {
   // A word of a sound pair ("maan"): its partner ("man") is always one of the options.
@@ -171,7 +182,7 @@ export function options(word: Word, lesson: Lesson, rng: () => number, n = 3, kn
   const met = distractors(word, [known, before], n - 1, rng, false, avoid);
   // The very first quiz of the course knows only two words: a choice of two is fair.
   if (met.length === n - 1 || (met.length >= 1 && !before.length)) return shuffle([word, ...met], rng);
-  const rest = [lesson.words, allWords].map((pool) => pool.filter((w) => !met.some((m) => clashes(w, m, false))));
+  const rest = [lesson.words, ...laterWords(lesson)].map((pool) => pool.filter((w) => !met.some((m) => clashes(w, m, false))));
   return shuffle([word, ...met, ...distractors(word, rest, n - 1 - met.length, rng, false, avoid)], rng);
 }
 
@@ -196,20 +207,26 @@ function unitWords(lesson: Lesson): Word[] {
 }
 
 /**
- * "Which one is …?": pick the Dutch word. With picture cards when the word has a picture and the
- * lesson and its unit have enough other picture words (no abstract word, no look-alikes); else
- * as text cards (Dutch words only), with the same prompt.
+ * "Which one is …?": pick the Dutch word. With picture cards when the word has a picture and
+ * there are enough other picture words (no abstract word, no look-alikes); else as text cards
+ * (Dutch words only), with the same prompt. The other pictures are words the learner has met:
+ * the lesson's, its unit's earlier lessons' (related words), then any earlier lesson's. Only at
+ * the start of the course, where those run out, a word of the unit's next lessons fills in, the
+ * nearest lesson first.
  */
 export function dutchExercise(word: Word, lesson: Lesson, rng: () => number, n = 3, textOnly = false, avoid?: ReadonlySet<string>): Extract<Exercise, { kind: 'dutch' }> {
   if (hasPicture(word) && !textOnly) {
-    // Known words first: the lesson's, then the unit's earlier lessons', then the rest of the unit.
+    // Known words first: the lesson's, the unit's earlier lessons', then the earlier lessons' of
+    // the course; then the unit's later lessons, the nearest first (l.payslip showed "het
+    // vakantiegeld" of the next lesson while earlier picture words were there).
     // A word of a sound pair shows its partner's picture too (the moon beside the man).
-    const unit = unitWords(lesson);
-    const before = new Set(wordsBefore(lesson).map((w) => w.id));
+    const unit = new Set(unitWords(lesson).map((w) => w.id));
+    const before = wordsBefore(lesson);
     const partner = pairPartner(word, lesson, avoid);
     const paired = partner && hasPicture(partner) ? [partner] : [];
     const skip = paired.length ? new Set([...(avoid ?? []), partner!.id]) : avoid;
-    const others = distractors(word, [lesson.words, unit.filter((w) => before.has(w.id)), unit], n - 1 - paired.length, rng, true, skip);
+    const later = laterWords(lesson).map((pool) => pool.filter((w) => unit.has(w.id)));
+    const others = distractors(word, [lesson.words, before.filter((w) => unit.has(w.id)), before, ...later], n - 1 - paired.length, rng, true, skip);
     if (others.length === n - 1 - paired.length) return { kind: 'dutch', word, options: shuffle([word, ...paired, ...others], rng) };
   }
   return { kind: 'dutch', word, options: options(word, lesson, rng, n, lesson.words, avoid), textOnly: true };
@@ -241,12 +258,6 @@ function taughtReplies(dialogue: Dialogue, lesson?: Lesson): ChatLine[] {
 function chatLessonAt(dialogue: Dialogue, lesson?: Lesson): number {
   const at = lesson ? allLessons.findIndex((l) => l.id === lesson.id) : -1;
   return at >= 0 ? at : allLessons.findIndex((l) => l.dialogues?.some((d) => d.reply.id === dialogue.reply.id));
-}
-
-/** The replies of the chat's unit (its later lessons too): the same level and topic. */
-function unitReplies(at: number): ChatLine[] {
-  const unit = at >= 0 ? units.find((u) => u.lessons.some((l) => l.id === allLessons[at].id)) : undefined;
-  return (unit?.lessons ?? []).filter((l) => !isMixLesson(l)).flatMap((l) => (l.dialogues ?? []).map((d) => d.reply));
 }
 
 /**
@@ -281,14 +292,23 @@ export function similarLength(a: string, b: string): boolean {
 }
 
 /**
+ * Replies that answer almost any line a newcomer does not understand yet: asking to translate it,
+ * to be shown first, or to ask someone else. Offered as a wrong reply they could be right too
+ * ("Goedemorgen, waar komt u voor?" – "Wacht even, ik vertaal het."), so they are only ever the
+ * right reply of their own chat (chatOptions).
+ */
+export const ANY_LINE_REPLIES: ReadonlySet<string> = new Set(['c.translate.a', 'c.notyet.a', 'c.kitchen.a']);
+
+/**
  * Reply options for a chat: the right reply plus wrong ones that are taught and not confusable.
- * Wrong replies come from the learner's level: the same or earlier lessons first, then the rest of
- * the chat's unit, and only when those run out the nearest lessons of the course. Within each of
- * these, a reply about as long as the right one comes first (similarLength). None starts with the
- * same word as the right reply ("Tot morgen!" next to "Tot straks!"), means the same (same
- * meaning, or near-synonyms), or answers a question that opens the same way, and no two wrong
- * replies start with the same word either. `avoid`: replies to leave out where others can take
- * their place (a retry).
+ * Wrong replies come from what the learner has seen: the same or earlier lessons (a reply about
+ * as long as the right one first, similarLength). Only when those run out (the first lessons of
+ * the course) a reply still to come fills in: the nearest lessons first, a much longer or shorter
+ * line counting as a few lessons further away (nearReplies). None starts with the same word as
+ * the right reply ("Tot morgen!" next to "Tot straks!"), means the same (same meaning, or
+ * near-synonyms), answers a question that opens the same way, or would answer any line
+ * (ANY_LINE_REPLIES); and no two wrong replies start with the same word either. `avoid`: replies
+ * to leave out where others can take their place (a retry).
  */
 export function chatOptions(dialogue: Dialogue, rng: () => number, n = 3, lesson?: Lesson, avoid?: ReadonlySet<string>): ChatLine[] {
   const { reply } = dialogue;
@@ -298,23 +318,20 @@ export function chatOptions(dialogue: Dialogue, rng: () => number, n = 3, lesson
   const asked = opening(dialogue.prompt.nl);
   const promptOf = (r: ChatLine) => allDialogues.find((d) => d.reply.id === r.id)?.prompt.nl ?? '';
   const other = (r: ChatLine) => r.id !== reply.id && r.nl !== reply.nl;
+  const fair = (r: ChatLine) => other(r) && !ANY_LINE_REPLIES.has(r.id);
   const clear = (r: ChatLine) =>
-    other(r) && firstWord(r.nl) !== first && opening(promptOf(r)) !== asked && plain(r.en) !== plain(reply.en) && !nearSynonyms(r.nl, reply.nl) && !avoid?.has(r.id);
+    fair(r) && firstWord(r.nl) !== first && opening(promptOf(r)) !== asked && plain(r.en) !== plain(reply.en) && !nearSynonyms(r.nl, reply.nl) && !avoid?.has(r.id);
   const short = (r: ChatLine) => similarLength(r.nl, reply.nl);
   const at = chatLessonAt(dialogue, lesson);
   const taught = taughtReplies(dialogue, lesson).filter(clear);
-  const unit = unitReplies(at).filter(clear);
-  const near = nearReplies(at, reply).filter(clear);
+  const seen = new Set(taught.map((r) => r.id));
   const picked: ChatLine[] = [];
   const pools: ChatLine[][] = [
     shuffle(taught.filter(short), rng),
-    shuffle(unit.filter(short), rng),
     shuffle(taught, rng),
-    shuffle(unit, rng),
-    // The best fill-ins first (nearReplies is in that order): a few of them, shuffled.
-    shuffle(near.slice(0, 3), rng),
-    near,
-    allReplies.filter((r) => other(r) && !avoid?.has(r.id)),
+    // Still to come, the best fill-in first (nearReplies is in that order).
+    nearReplies(at, reply).filter((r) => !seen.has(r.id) && clear(r)),
+    allReplies.filter((r) => fair(r) && !avoid?.has(r.id)),
     allReplies.filter(other),
   ];
   for (const pool of pools) {
