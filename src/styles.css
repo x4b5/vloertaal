@@ -4163,6 +4163,12 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
   font-size: 1.0625rem; font-weight: 400; line-height: 1.4; color: var(--muted);
 }
 .rule-advice-icon { flex: none; margin-top: 2px; color: var(--ink-3); }
+/* At the top of a Dutch lesson in the Belgian course ("Deze les gaat nog over Nederland."). */
+.rule-country-note {
+  margin: 0 0 12px; padding: 8px 12px; border-radius: 10px; border: 2px solid var(--line, #d8d2c2);
+  font-size: 1rem; line-height: 1.4; font-weight: 700; color: var(--ink, inherit);
+}
+.bay-note { font-weight: 700; }
 
 /* True or false: two cards side by side. */
 .choices-tf { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }

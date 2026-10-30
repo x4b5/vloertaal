@@ -19,7 +19,10 @@ export type AskWho =
   | 'school' | 'praktijkopleider' | 'bibliotheek' | 'meldpunt' | 'ict' | 'bank'
   // The regional modules (docs/regio-zuid-limburg.md): advice about living or working across the
   // border, and a home with social rent. Regional organisations get no AskWho: they are on the map.
-  | 'grensinfopunt' | 'woningcorporatie';
+  | 'grensinfopunt' | 'woningcorporatie'
+  // Belgium (Vlaanderen, docs/werkregels-belgie.md): the places of the Belgian units only
+  // (src/content/regels/be). The Dutch-only places (UWV, Juridisch Loket …) are not used there.
+  | 'rva' | 'hvw' | 'ziekenfonds' | 'vdab' | 'interimkantoor' | 'socsec' | 'ocmw' | 'justitiehuis' | 'arbeidsarts' | 'tsw';
 
 export interface RuleOption {
   /** Stable id within the step ("a", "b", "c"). */
@@ -34,7 +37,9 @@ export interface RuleOption {
 }
 
 /** Fields of the drawn payslip that a question can point at. */
-export type PayslipField = 'periode' | 'uren' | 'uurloon' | 'bruto' | 'loonheffing' | 'inhouding' | 'netto' | 'vakantiegeld';
+export type PayslipField = 'periode' | 'uren' | 'uurloon' | 'bruto' | 'loonheffing' | 'inhouding' | 'netto' | 'vakantiegeld'
+  // The Belgian loonbrief (src/content/regels/be/units/loon.ts): RSZ, bedrijfsvoorheffing, maaltijdcheques.
+  | 'rsz' | 'voorheffing' | 'maaltijdcheques';
 
 export interface Payslip {
   periode: string;

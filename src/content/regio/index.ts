@@ -1,3 +1,4 @@
+import { nlId } from '../regels/be/ids';
 import type { Track } from '../../lib/track';
 import type { CultureTip } from '../culture';
 import type { Lesson, Unit } from '../types';
@@ -134,7 +135,7 @@ export const regionTaalLessons = (): Lesson[] => allRegionUnits('taal').flatMap(
 export function withRegion(main: Unit[], choice: string | null | undefined, track: Track): Unit[] {
   const extra = regionUnits(choice, track).filter((u) => !main.some((m) => m.id === u.id));
   if (!extra.length) return main;
-  const at = main.findIndex((u) => u.id === REGION_SLOT[track]);
+  const at = main.findIndex((u) => nlId(u.id) === REGION_SLOT[track]);
   const cut = at >= 0 ? at + 1 : main.length;
   return [...main.slice(0, cut), ...extra, ...main.slice(cut)];
 }

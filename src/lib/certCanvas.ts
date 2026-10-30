@@ -328,7 +328,7 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   const top = py + 3.4 * u;
   const logo = 8.5 * u;
   // The stamp's ring says what the app is about (the work-rules track: work in the Netherlands).
-  drawLogo(ctx, left, top, logo, d.rules ? 'VLOERTAAL · WERKEN IN NEDERLAND · ' : undefined);
+  drawLogo(ctx, left, top, logo, d.rules ? (d.be ? 'VLOERTAAL · WERKEN IN BELGIË · ' : 'VLOERTAAL · WERKEN IN NEDERLAND · ') : undefined);
   ctx.fillStyle = C.ink;
   ctx.textAlign = 'left';
   ctx.font = font(800, 4.2 * u, STENCIL);

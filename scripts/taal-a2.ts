@@ -1,5 +1,6 @@
 // Checks the Dutch-only texts against the A2 yardstick (docs/taal-a2.md) and prints a report:
-// the work-rules units, the regional work-rules unit, the places to go for help (askWho.ts) and
+// the work-rules units, the Belgian ones (src/content/regels/be, docs/werkregels-belgie.md), the
+// regional work-rules unit, the places to go for help (askWho.ts) and
 // the Dutch screens (src/i18n/nl.ts).
 // A hit is a question for an editor, not an error: the script cannot tell a real passive from
 // "ziek worden", or a needed technical word from a hard one. Sentences that belong to a
@@ -8,12 +9,16 @@
 //
 // Usage: npm run taal                  (every file)
 //        npm run taal -- ziek tijd      (only files whose path contains one of these words)
+//        npm run taal -- be/            (only the Belgian units)
 import { readFileSync } from 'node:fs';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import type { RuleOption, RuleUnit } from '../src/content/regels/types';
 import { zlRegelsUnit } from '../src/content/regio/zuid-limburg-regels';
 import { modelQuestion } from '../src/content/regels/zegHet';
-import { ASK_WHO } from '../src/content/regels/askWho';
+import { ASK_WHO, ASK_WHO_BE } from '../src/content/regels/askWho';
+// The Belgian units (and, on import, their zegHet tables: modelQuestion finds them).
+import { beUnits } from '../src/content/regels/be';
+import { isBeId, nlId } from '../src/content/regels/be/ids';
 import { uiNl } from '../src/i18n/nl';
 
 type Text = { file: string; where: string; field: string; text: string };
@@ -21,13 +26,14 @@ type Choice = { file: string; where: string; situation: string; options: RuleOpt
 
 const SECTOR = new Set(['r.build', 'r.care', 'r.horeca', 'r.clean', 'r.factory', 'r.warehouse', 'r.kas', 'r.techniek', 'r.werkplaats']);
 const fileOf = (unitId: string) =>
-  unitId === zlRegelsUnit.id ? 'src/content/regio/zuid-limburg-regels.ts'
+  isBeId(unitId) ? `src/content/regels/be/units/${SECTOR.has(nlId(unitId)) ? 'sector-' : ''}${nlId(unitId).slice(2)}.ts`
+  : unitId === zlRegelsUnit.id ? 'src/content/regio/zuid-limburg-regels.ts'
   : SECTOR.has(unitId) ? 'src/content/regels/units/sector.ts'
   : `src/content/regels/units/${unitId.slice(2)}.ts`;
 
 const texts: Text[] = [];
 const choices: Choice[] = [];
-const units: RuleUnit[] = [...rulesUnits, ...sectorRulesUnits, zlRegelsUnit];
+const units: RuleUnit[] = [...rulesUnits, ...sectorRulesUnits, zlRegelsUnit, ...beUnits.map((b) => b.unit)];
 for (const u of units) {
   const file = fileOf(u.id);
   for (const l of u.lessons) {
@@ -68,7 +74,7 @@ for (const u of units) {
 }
 // The places to go for help: the name and the short line under it on a "Wie vraag je het?" card.
 const ASK_WHO_FILE = 'src/content/regels/askWho.ts';
-for (const [who, a] of Object.entries(ASK_WHO)) {
+for (const [who, a] of [...Object.entries(ASK_WHO), ...Object.entries(ASK_WHO_BE).map(([w, x]) => [`${w} (BE)`, x!] as const)]) {
   texts.push({ file: ASK_WHO_FILE, where: who, field: 'label', text: a.label });
   texts.push({ file: ASK_WHO_FILE, where: who, field: 'what', text: a.what });
 }
@@ -131,7 +137,7 @@ const PARTICIPLE = /^(\p{L}*ge\p{L}{2,}(d|t|en)|(be|ver|ont|her|er)\p{L}{3,}(d|t
 const isPassive = (s: string) => WORDEN.test(s) && norm(s).split(' ').some((w) => PARTICIPLE.test(w) && !/^(geen|gewoon|gezond|genoeg|gelijk|gebeurt|geldt|gelden|gemeente|gesprek)$/.test(w));
 /** Rule 4: "nooit" or "geen" with an abstract word ("geen gunst", "nooit zekerheid"). */
 const NEGATIVE = /\b(nooit|geen)\s+(\p{L}+\s+){0,2}\p{L}*(heid|schap|isme|luxe|gunst)\b/iu;
-const NAMED = /\b(Kevin|Fatima|Esra|Jayden|Mohammed|Piotr|Dewi|Sanne|Malik|Ewa|Oksana|Joep|Mehmet|Nadia|Bogdan|Yonas|Hatice|Linda|Mark|Henk)\b/;
+const NAMED = /\b(Nadia|Malik|Kevin|Fatima|Esra|Jayden|Mohammed|Piotr|Dewi|Sanne|Malik|Ewa|Oksana|Joep|Mehmet|Nadia|Bogdan|Yonas|Hatice|Linda|Mark|Henk)\b/;
 
 type Hit = Text & { rule: string; legal: boolean };
 const hits: Hit[] = [];

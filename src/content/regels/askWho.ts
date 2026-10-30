@@ -1,3 +1,4 @@
+import { isBeId } from './be/ids';
 import type { AskWho } from './types';
 
 /**
@@ -52,4 +53,51 @@ export const ASK_WHO: Record<AskWho, { label: string; emoji: string; what: strin
   grensinfopunt: { label: 'Het GrensInfoPunt', emoji: '🌍', what: 'advies bij werk over de grens' },
   // ⚖️ check: woningcorporatie = verhuurt sociale huurwoningen (lagere huur)
   woningcorporatie: { label: 'De woningcorporatie', emoji: '🏘️', what: 'verhuurt huizen met een lage huur' },
+  // Belgium (Vlaanderen, docs/werkregels-belgie.md): only in the Belgian units (src/content/regels/be).
+  // ⚖️ check: RVA (Rijksdienst voor Arbeidsvoorziening) beslist over de werkloosheidsuitkering en het tijdskrediet (rva.be, opgezocht 30 okt 2026)
+  rva: { label: 'De RVA', emoji: '📄', what: 'werkloosheid en tijdskrediet' },
+  // ⚖️ check: HVW (Hulpkas voor Werkloosheidsuitkeringen) = openbare uitbetalingsinstelling, voor wie geen lid is van een vakbond (hvw.fgov.be)
+  hvw: { label: 'De Hulpkas (HVW)', emoji: '💶', what: 'betaalt je uitkering, zonder vakbond' },
+  // ⚖️ check: ziekenfonds (mutualiteit) betaalt de uitkering bij ziekte na het gewaarborgd loon, en een deel van de dokter terug (riziv.fgov.be)
+  ziekenfonds: { label: 'Je ziekenfonds', emoji: '🏥', what: 'geld bij ziekte, kosten van dokter' },
+  // ⚖️ check: VDAB = de Vlaamse dienst voor arbeidsbemiddeling: inschrijven als werkzoekende, vacatures, opleiding (vdab.be)
+  vdab: { label: 'De VDAB', emoji: '🔎', what: 'werk zoeken en opleiding' },
+  // ⚖️ check: bij uitzendarbeid is het interimkantoor de werkgever (wet van 24 juli 1987; federgon.be)
+  interimkantoor: { label: 'Het interimkantoor', emoji: '🏢', what: 'je werkgever bij interimwerk' },
+  // ⚖️ check: sociaal secretariaat = maakt voor de werkgever de loonbrief en betaalt de RSZ en de bedrijfsvoorheffing door
+  socsec: { label: 'Het sociaal secretariaat', emoji: '🗂️', what: 'maakt de loonbrief voor je baas' },
+  // ⚖️ check: OCMW = leefloon (recht op maatschappelijke integratie) en hulp bij schulden (schuldbemiddeling) (mi-is.be)
+  ocmw: { label: 'Het OCMW', emoji: '🏛️', what: 'leefloon en hulp bij geldzorgen' },
+  // ⚖️ check: juridische eerstelijnsbijstand = gratis eerste juridisch advies, o.a. in het justitiehuis (justitie.belgium.be, vlaanderen.be/justitiehuizen)
+  justitiehuis: { label: 'Het justitiehuis', emoji: '⚖️', what: 'gratis eerste advies over je rechten' },
+  // ⚖️ check: arbeidsarts = preventieadviseur-arbeidsarts van de (externe) dienst voor preventie en bescherming op het werk (codex welzijn op het werk)
+  arbeidsarts: { label: 'De arbeidsarts', emoji: '🩺', what: 'dokter voor ziek zijn en werk' },
+  // ⚖️ check: Toezicht op de Sociale Wetten (FOD WASO) controleert loon, arbeidsduur en contracten (werk.belgie.be)
+  tsw: { label: 'Toezicht op de Sociale Wetten', emoji: '🔍', what: 'controleert loon, uren en contracten' },
 };
+
+/** The places a Belgian unit may not use: they exist only in the Netherlands (tests/rulesBe.test.ts). */
+export const ASK_WHO_NL_ONLY: readonly AskWho[] = ['uwv', 'juridischloket', 'uitzendbureau', 'arbeidsinspectie', 'bedrijfsarts', 'woningcorporatie'];
+/** The places only the Belgian units use. */
+export const ASK_WHO_BE_ONLY: readonly AskWho[] = ['rva', 'hvw', 'ziekenfonds', 'vdab', 'interimkantoor', 'socsec', 'ocmw', 'justitiehuis', 'arbeidsarts', 'tsw'];
+
+/**
+ * A shared place as a Belgian step shows it (an "r.be." step): another name or another second
+ * line where the Dutch one does not fit Belgium. The rest is as in ASK_WHO.
+ */
+export const ASK_WHO_BE: Partial<Record<AskWho, { label: string; emoji: string; what: string }>> = {
+  // ⚖️ check: in België heet het vaak de personeelsdienst; het sociaal secretariaat maakt de loonbrief
+  hr: { label: 'HR of de personeelsdienst', emoji: '🗂️', what: 'contract, loon en vrije dagen' },
+  // ⚖️ check: in België geeft het OCMW het leefloon, niet de gemeente; de gemeente doet je adres en je papieren
+  gemeente: { label: 'De gemeente', emoji: '🏛️', what: 'je adres en je papieren' },
+  // ⚖️ check: Unia = onafhankelijke openbare instelling tegen discriminatie, gratis melden (unia.be)
+  meldpunt: { label: 'Unia', emoji: '📣', what: 'gratis hulp bij discriminatie' },
+  // ⚖️ check: in veel Vlaamse bibliotheken helpt een digipunt met computer, itsme en de eID (vlaanderen.be)
+  bibliotheek: { label: 'De bibliotheek', emoji: '📚', what: 'hulp met computer en itsme' },
+  // ⚖️ check: bij stage of duaal leren heet de begeleider op het werk meestal mentor
+  praktijkopleider: { label: 'Je mentor', emoji: '🧑‍🏫', what: 'helpt je op je stageplek' },
+};
+
+/** The card of a place for a step: the Belgian name and line for an "r.be." step. */
+export const askWhoCard = (who: AskWho, stepId?: string): { label: string; emoji: string; what: string } =>
+  (stepId && isBeId(stepId) ? ASK_WHO_BE[who] : undefined) ?? ASK_WHO[who];

@@ -81,7 +81,12 @@ export interface Lesson {
    */
   steps?: RuleStep[];
   /** The work-rules track: what the lesson is for, its "Onthoud" line and who can help. */
-  rule?: { goal: string; remember: string; help?: AskWho[]; icon?: string };
+  rule?: {
+    goal: string; remember: string; help?: AskWho[]; icon?: string;
+    /** A line at the top of the lesson: a Dutch lesson in the Belgian course, where the Belgian
+     *  one is not written yet ("Deze les gaat nog over Nederland.", src/content/regels/be). */
+    note?: string;
+  };
 }
 
 export interface Unit {
