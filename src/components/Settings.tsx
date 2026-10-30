@@ -325,7 +325,7 @@ export function Settings({
           <SectorGroupCards
             current={progress.sector}
             lang={lang}
-            onPick={(g) => { if (g === 'none') { onSector('none'); answered(); } else onPage(`sector-${g}`); }}
+            onPick={(g) => onPage(`sector-${g}`)}
           />
         );
       case 'sector-make':

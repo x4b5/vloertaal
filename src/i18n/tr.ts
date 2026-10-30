@@ -239,7 +239,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Kapalı',
     sectorGroupMake: 'Üretim ve taşıma',
     sectorGroupCare: 'Bakım ve hizmet',
-    sectorGroupOther: 'Sera ve diğer işler', // nieuw (30 okt 2026), nog nalezen
+    sectorGroupOther: 'Başka bir şey', // nieuw (30 okt 2026), nog nalezen
     voiceWoman: 'Kadın sesi',
     voiceMan: 'Erkek sesi',
     writingPick: 'Kelimeyi seç',

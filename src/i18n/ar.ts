@@ -239,7 +239,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'إيقاف',
     sectorGroupMake: 'الصنع والنقل',
     sectorGroupCare: 'الرعاية والخدمة',
-    sectorGroupOther: 'البيوت الزجاجية وأعمال أخرى', // nieuw (30 okt 2026), nog nalezen
+    sectorGroupOther: 'شيء آخر', // nieuw (30 okt 2026), nog nalezen
     voiceWoman: 'صوت امرأة',
     voiceMan: 'صوت رجل',
     writingPick: 'اختيار الكلمة',

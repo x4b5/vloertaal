@@ -269,7 +269,7 @@ export const uiNl: Record<UiKey, UiText> = {
   settingOff: 'Uit',
   sectorGroupMake: 'Maken en verplaatsen',
   sectorGroupCare: 'Zorg en service',
-  sectorGroupOther: 'Kas en ander werk',
+  sectorGroupOther: 'Iets anders',
   regionTitle: 'Waar woon je?',
   regionHint: 'Woon of werk je in Zuid-Limburg? Dan krijg je extra lessen over je regio. Dit blijft op je telefoon. We sturen het nergens heen.',
   regionOther: 'Andere plek / zeg ik liever niet',

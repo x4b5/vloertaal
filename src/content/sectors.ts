@@ -146,9 +146,8 @@ export function sectorFirstFocus(sector: SectorChoice | undefined, track: Track 
 
 /**
  * The sector choice in two small steps (never more than three cards on a page): first the kind
- * of work (three groups), then the sectors in it (at most three). "Weet ik nog niet" is a plain
- * text button under the three group cards, not a fourth card (src/components/Sector.tsx).
- * The third group has room for one more sector.
+ * of work (three group cards), then the sectors in it. The third group, "Iets anders", holds
+ * Tuinbouw and "Weet ik nog niet" (`notSure`): a stored 'none' belongs to that group.
  */
 export type SectorGroupId = 'make' | 'care' | 'other';
 
@@ -157,15 +156,22 @@ export interface SectorGroup {
   nl: string;
   key: UiKey;
   sectors: SectorId[];
+  /** Its second step ends with "Weet ik nog niet" (the choice 'none'). */
+  notSure?: true;
 }
 
 export const sectorGroups: SectorGroup[] = [
   { id: 'make', nl: 'Maken en verplaatsen', key: 'sectorGroupMake', sectors: ['logistics', 'construction', 'production'] },
   { id: 'care', nl: 'Zorg en service', key: 'sectorGroupCare', sectors: ['care', 'hospitality', 'cleaning'] },
-  { id: 'other', nl: 'Kas en ander werk', key: 'sectorGroupOther', sectors: ['horticulture'] },
+  { id: 'other', nl: 'Iets anders', key: 'sectorGroupOther', sectors: ['horticulture'], notSure: true },
 ];
 
 /** The group a sector is in (undefined for "not sure yet" or nothing chosen). */
 export function sectorGroupOf(sector: SectorChoice | undefined): SectorGroupId | undefined {
   return sectorGroups.find((g) => g.sectors.includes(sector as SectorId))?.id;
+}
+
+/** The group whose card shows a choice as picked: 'none' is in the group with "Weet ik nog niet". */
+export function sectorChoiceGroup(choice: SectorChoice | undefined): SectorGroupId | undefined {
+  return choice === 'none' ? sectorGroups.find((g) => g.notSure)?.id : sectorGroupOf(choice);
 }

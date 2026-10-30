@@ -1161,7 +1161,7 @@ dezelfde vorm als de sectorlessen in deel 6 van het lespad. Ze passen bij Entree
 
 *Gebouwd op 30 oktober 2026, uitgewerkt uit de schets "groen" (G.1). Een van de grootste sectoren
 voor arbeidsmigranten (Westland, oogsten, sorteren en inpakken). In de app: de sector "Tuinbouw",
-bij "Waar werk je?" onder "Kas en ander werk" (`src/content/sectors.ts`). De Werkregels staan in
+bij "Waar werk je?" onder "Iets anders" (met "Weet ik nog niet") (`src/content/sectors.ts`). De Werkregels staan in
 `src/content/regels/units/sector.ts`, het Taal-onderwerp "In de kas" (`u.kas`) in
 `src/content/work.ts`. Focus: Veilig werken en Loon (Werkregels), Veiligheid en Loon (Taal).*
 

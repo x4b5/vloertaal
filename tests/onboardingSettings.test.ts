@@ -1,6 +1,9 @@
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
+import { SectorCards, SectorGroupCards } from '../src/components/Sector';
 import { guessHelpLang } from '../src/lib/langGuess';
-import { sectorGroupOf, sectorGroups, sectors } from '../src/content/sectors';
+import { sectorChoiceGroup, sectorGroupOf, sectorGroups, sectors } from '../src/content/sectors';
 import { SETTINGS_PARENT, settingsDepth, settingsRows, voiceChoiceOf, voiceRefs, type SettingsContext } from '../src/lib/settingsMenu';
 import { helpLanguages, languageMeta } from '../src/i18n/all';
 import { GENDERED_LANGS } from '../src/i18n/types';
@@ -52,8 +55,8 @@ describe('the first-run language guess', () => {
 });
 
 describe('the sector in two steps', () => {
-  // Three groups since the seventh sector (Tuinbouw, 30 October 2026): three cards on step 1, with
-  // "not sure yet" as a text button under them, and at most three sectors per group.
+  // Three groups since the seventh sector (Tuinbouw, 30 October 2026): three cards on step 1
+  // ("Iets anders" holds Tuinbouw and "Weet ik nog niet"), at most three cards on step 2.
   it('puts every sector in exactly one of three groups, at most three per group', () => {
     const all = sectorGroups.flatMap((g) => g.sectors);
     expect(sectorGroups).toHaveLength(3);
@@ -63,6 +66,28 @@ describe('the sector in two steps', () => {
     expect(sectorGroups.find((g) => g.id === 'care')!.sectors).toEqual(['care', 'hospitality', 'cleaning']);
     expect(sectorGroups.find((g) => g.id === 'other')!.sectors).toEqual(['horticulture']);
     for (const g of sectorGroups) expect(uiEn[g.key]).toBeTruthy();
+    for (const g of sectorGroups) expect(g.sectors.length + (g.notSure ? 1 : 0), g.id).toBeLessThanOrEqual(3);
+  });
+  const cards = (html: string) => html.match(/class="max3-card /g)?.length ?? 0;
+  it('shows exactly three cards on step 1, and nothing else to tap', () => {
+    const html = renderToStaticMarkup(createElement(SectorGroupCards, { onPick: () => {} }));
+    expect(cards(html)).toBe(3);
+    expect(html.match(/<button/g)).toHaveLength(3);
+    expect(html).not.toContain('sector-notsure');
+  });
+  it('offers Tuinbouw and "Weet ik nog niet" in "Iets anders", and shows "none" picked there', () => {
+    const html = renderToStaticMarkup(createElement(SectorCards, { group: 'other', current: 'none', onPick: () => {} }));
+    expect(cards(html)).toBe(2);
+    expect(html).toContain('Weet ik nog niet');
+    expect(html).toContain('Tuinbouw');
+    expect(html.match(/aria-checked="true"/g)).toHaveLength(1);
+    expect(sectorChoiceGroup('none')).toBe('other');
+    expect(sectorChoiceGroup('horticulture')).toBe('other');
+    expect(sectorChoiceGroup('cleaning')).toBe('care');
+    expect(sectorChoiceGroup(undefined)).toBeUndefined();
+    const step1 = renderToStaticMarkup(createElement(SectorGroupCards, { current: 'none', onPick: () => {} }));
+    expect(step1.match(/max3-card picked/g)).toHaveLength(1);
+    expect(step1.indexOf('max3-card picked')).toBeGreaterThan(step1.lastIndexOf('Zorg en service'));
   });
   it('finds the group of a sector, none for "not sure yet"', () => {
     expect(sectorGroupOf('construction')).toBe('make');

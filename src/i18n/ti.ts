@@ -239,7 +239,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'ዕጹው',
     sectorGroupMake: 'ምስራሕን ምጽዓንን',
     sectorGroupCare: 'ክንክንን ኣገልግሎትን',
-    sectorGroupOther: 'Greenhouse & other work', // TODO vertalen
+    sectorGroupOther: 'Something else', // TODO vertalen
     voiceWoman: 'ድምጺ ሰበይቲ',
     voiceMan: 'ድምጺ ሰብኣይ',
     writingPick: 'ቃል ምምራጽ',

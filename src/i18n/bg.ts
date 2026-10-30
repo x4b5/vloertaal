@@ -239,7 +239,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Изключено',
     sectorGroupMake: 'Производство и превоз',
     sectorGroupCare: 'Грижа и обслужване',
-    sectorGroupOther: 'Оранжерия и друга работа', // nieuw (30 okt 2026), nog nalezen
+    sectorGroupOther: 'Нещо друго', // nieuw (30 okt 2026), nog nalezen
     voiceWoman: 'Женски глас',
     voiceMan: 'Мъжки глас',
     writingPick: 'Избор на дума',

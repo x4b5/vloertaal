@@ -239,7 +239,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Oprit',
     sectorGroupMake: 'Producție și transport',
     sectorGroupCare: 'Îngrijire și servicii',
-    sectorGroupOther: 'Seră și altă muncă', // nieuw (30 okt 2026), nog nalezen
+    sectorGroupOther: 'Altceva', // nieuw (30 okt 2026), nog nalezen
     voiceWoman: 'Voce de femeie',
     voiceMan: 'Voce de bărbat',
     writingPick: 'Alegerea cuvântului',

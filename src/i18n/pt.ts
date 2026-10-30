@@ -239,7 +239,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Desligado',
     sectorGroupMake: 'Produção e transporte',
     sectorGroupCare: 'Cuidados e serviços',
-    sectorGroupOther: 'Estufa e outros trabalhos', // nieuw (30 okt 2026), nog nalezen
+    sectorGroupOther: 'Outra coisa', // nieuw (30 okt 2026), nog nalezen
     voiceWoman: 'Voz de mulher',
     voiceMan: 'Voz de homem',
     writingPick: 'Escolher a palavra',
