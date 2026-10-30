@@ -1,3 +1,5 @@
+import { allMatches } from './matches';
+
 /**
  * Display helpers for Dutch words. Dutch glues words together (veiligheids|schoenen), and on a
  * 320–360 px phone such a compound in a big font is wider than its bubble. Browsers only
@@ -105,13 +107,44 @@ export function wordSize(nl: string): string {
  * …?" This …"): a quoted Dutch phrase inside a sentence ("Say «Gefeliciteerd!» to …") does not
  * end it.
  */
-const SENTENCE_SPLIT = new RegExp([
-  // The Ethiopic and Arabic stops always end a sentence ("… rijksoverheid.nl። cao …").
-  '(?<=[؟።፧፨])\\s+',
-  '(?<=[.!?…])(?<!(?:^|[^\\p{L}])(?:np|bv|vb|vs|ca|bijv|örn|напр|т\\.е|e\\.g|i\\.e|z\\.B|d\\.h)\\.)\\s+(?=\\P{Ll})',
-  '(?<=[.؟።]\\))\\s+(?=\\P{Ll})',
-  '(?<=[.!?…]["”’»“])\\s+(?=\\p{Lu})',
-].join('|'), 'gu');
+/*
+ * The places between sentences: a run of white space, by what comes just before it and just after.
+ * Written without lookbehind, which iOS before 16.4 cannot make: the text before
+ * the run is tested with patterns that end in $ instead (tests/oldPhones.test.ts has the old
+ * single regex, and checks this gives the same).
+ */
+const SPACE_RUN = /\s+/gu;
+/** The Ethiopic and Arabic stops always end a sentence ("… rijksoverheid.nl። cao …"). */
+const AFTER_STOP_ALWAYS = /[؟።፧፨]$/u;
+/** . ! ? … end one when the next does not start with a small letter, */
+const AFTER_STOP = /[.!?…]$/u;
+/** unless the dot is an abbreviation's. */
+const AFTER_ABBREVIATION = /(?:^|[^\p{L}])(?:np|bv|vb|vs|ca|bijv|örn|напр|т\.е|e\.g|i\.e|z\.B|d\.h)\.$/u;
+/** A stop and a closing bracket, before no small letter. */
+const AFTER_BRACKET = /[.؟።]\)$/u;
+/** A stop and a closing quote, before a capital. */
+const AFTER_QUOTE = /[.!?…]["”’»“]$/u;
+const SMALL_LETTER = /^\p{Ll}/u;
+const CAPITAL = /^\p{Lu}/u;
+
+/**
+ * How much of the white space at t[at, end) is a sentence break (0: none). Mostly all of it; but
+ * before a small letter, a break that only needs "no small letter next" leaves the last white
+ * space character out (the next character is then white space), as the one regex this was did.
+ */
+function breakLength(t: string, at: number, end: number): number {
+  // The few characters before are enough (the longest pattern: a character and "bijv."), and a
+  // window that starts later than the text cannot make the abbreviation's ^ match.
+  const before = t.slice(Math.max(0, at - 12), at);
+  const all = end - at;
+  if (AFTER_STOP_ALWAYS.test(before)) return all;
+  const next = t.slice(end, end + 2);
+  const noSmallNext = end < t.length && !SMALL_LETTER.test(next) ? all : all > 1 ? all - 1 : 0;
+  if (AFTER_STOP.test(before) && !AFTER_ABBREVIATION.test(before)) return noSmallNext;
+  if (AFTER_BRACKET.test(before)) return noSmallNext;
+  if (AFTER_QUOTE.test(before) && CAPITAL.test(next)) return all;
+  return 0;
+}
 
 /**
  * How deep in quotation marks each place of a text is: “…”, "…", «…», „…“ and „…” (a “ after
@@ -140,11 +173,12 @@ export function sentences(text: string): string[] {
   const depth = quoteDepths(t);
   const out: string[] = [];
   let from = 0;
-  for (const m of t.matchAll(SENTENCE_SPLIT)) {
+  for (const m of allMatches(t, SPACE_RUN)) {
     const at = m.index ?? 0;
-    if (depth && depth[at]) continue;
+    const length = breakLength(t, at, at + m[0].length);
+    if (!length || (depth && depth[at])) continue;
     out.push(t.slice(from, at));
-    from = at + m[0].length;
+    from = at + length;
   }
   out.push(t.slice(from));
   return out;

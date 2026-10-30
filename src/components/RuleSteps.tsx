@@ -4,6 +4,7 @@ import type { CardRow, CardType, DrawnCard, RuleCharacter } from '../content/reg
 import { cardSpeech, payslipCard } from '../content/regels/course';
 import { ASK_WHO } from '../content/regels/askWho';
 import { ruleAdviceLine } from '../content/regels/disclaimer';
+import { said, ui } from '../i18n';
 import { autoSpeakLong } from '../lib/audio';
 import { sentences } from '../lib/dutch';
 import type { Exercise, RuleExercise, RuleKind } from '../lib/exercises';
@@ -43,10 +44,15 @@ interface RuleProps<K extends RuleKind> {
 
 const NAMES: Record<RuleCharacter, string> = { bram: 'Bram', amina: 'Amina', henk: 'Henk', jada: 'Jada' };
 
-/** One Dutch speaker for a text block (hidden when nothing can say it). */
-function Say({ text, lang, voice, glyph = true }: { text: string; lang?: HelpLanguage; voice?: VoiceRef; glyph?: boolean }) {
-  return <SpeakButton text={text} long needsDevice glyph={glyph} help={lang} voice={voice} />;
+/** One Dutch speaker for a text block (hidden when nothing can say it). `name`: what a screen
+ *  reader calls it ("Afspelen: Rooster") when the whole text is right beside it anyway (a drawn
+ *  card: its rows are read as a list, not twice); default "Afspelen: <the text>". */
+function Say({ text, lang, voice, glyph = true, name }: { text: string; lang?: HelpLanguage; voice?: VoiceRef; glyph?: boolean; name?: string }) {
+  return <SpeakButton text={text} long needsDevice glyph={glyph} help={lang} voice={voice} label={name ? speakerName(name, lang) : undefined} />;
 }
+
+/** The screen-reader name of a speaker that reads a whole drawn card: "Afspelen: Loonstrook, Maart". */
+export const speakerName = (what: string, lang?: HelpLanguage) => `${said(ui('playAudio', lang))}: ${what}`;
 
 /** A question with its speaker: the text a learner answers (focus lands here on a new step). */
 function Question({ text, lang, who, verdict, run, misses }: {
@@ -247,6 +253,8 @@ export function WhoAsk({ ex, lang, locked, onAnswer, verdict, run, misses }: Rul
             <span className="rule-who-pic" aria-hidden>{ASK_WHO[o.who].emoji}</span>
             <span className="choice-label rule-who-text" lang="nl">
               <span className="rule-who-name">{ASK_WHO[o.who].label}</span>
+              {/* A pause between the name and what it is, in the button's name (one tap, read as one). */}
+              <span className="sr-only">, </span>
               <span className="rule-who-what">{ASK_WHO[o.who].what}</span>
             </span>
           </>
@@ -311,7 +319,7 @@ export function DrawnCardView({ card, locked, lang, say, rowClass }: {
         {pic && <span className="card-pic" aria-hidden>{pic}</span>}
         <span className="slip-title">{card.title}</span>
         {card.sub && <span className="slip-period">{card.sub}</span>}
-        {say && <span className="card-say"><Say text={cardSpeech(card)} lang={lang} /></span>}
+        {say && <span className="card-say"><Say text={cardSpeech(card)} lang={lang} name={label} /></span>}
       </div>
       <dl className="slip-rows">
         {card.rows.map((r, i) => {
@@ -454,7 +462,7 @@ export function RuleFeedbackBody({ v, lang }: { v: RuleVerdict; lang?: HelpLangu
         <p className="rule-fb-best feedback-answer" lang="nl">
           <span className="feedback-answer-check" aria-hidden><CheckIcon size={20} /></span>
           {v.best.what
-            ? <span className="rule-fb-who"><strong>{v.best.text}</strong><span className="rule-who-what">{v.best.what}</span></span>
+            ? <span className="rule-fb-who"><strong>{v.best.text}</strong><span className="sr-only">, </span><span className="rule-who-what">{v.best.what}</span></span>
             : <strong>{v.best.text}</strong>}
         </p>
       )}

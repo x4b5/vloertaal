@@ -14,7 +14,7 @@ function questionSection(q: IntroQuestion, i: number, total: number): string {
 <p class="step">Vraag ${i + 1} van ${total}</p>
 <h2 id="q${i}" tabindex="-1">${esc(q.ask)}</h2>
 <div class="opts">${options}</div>
-<div class="answer" aria-live="polite"><p>${esc(q.answer)}</p>${source}<button type="button" class="next">Volgende</button></div>
+<div class="answer" tabindex="-1"><p>${esc(q.answer)}</p>${source}<button type="button" class="next">Volgende</button></div>
 </section>`;
 }
 
@@ -22,7 +22,7 @@ const STYLE = `
   :root { color-scheme: light dark; --bg: #e7e3dc; --card: #fffdf8; --ink: #1e2226; --ink2: #4a4f55; --yellow: #ffc414; --line: #d6cfc3; --right: #e3efe7; --right-ink: #0f6a4a; --wrong: #f6e3dc; --wrong-ink: #a8361f; }
   @media (prefers-color-scheme: dark) { :root { --bg: #16191c; --card: #1f2327; --ink: #eceae6; --ink2: #b6b2ab; --line: #343a40; --right: #17352a; --right-ink: #7fd1ad; --wrong: #3a211b; --wrong-ink: #f0a58f; } }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 19px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 19px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; overflow-wrap: anywhere; }
   main { max-width: 600px; margin: 0 auto; padding: 24px 16px 48px; }
   header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
   header img { width: 44px; height: 44px; border-radius: 22%; }
@@ -40,6 +40,9 @@ const STYLE = `
   .opt.right { background: var(--right); color: var(--right-ink); border-color: var(--right-ink); opacity: 1; }
   .opt.wrong { background: var(--wrong); color: var(--wrong-ink); border-color: var(--wrong-ink); opacity: 1; }
   .opt.chosen { opacity: 1; }
+  .opt.right::after { content: ' ✓'; }
+  .opt.wrong::after { content: ' ✗'; }
+  .answer:focus { outline: none; }
   .answer { margin-top: 16px; }
   .next, .begin, .cta { display: block; width: 100%; margin-top: 12px; background: var(--yellow); color: #1e2226; border: 2px solid #1e2226; text-decoration: none; }
   .src { color: var(--ink2); font-size: 0.85rem; }
@@ -78,7 +81,9 @@ const SCRIPT = `
           if (x.hasAttribute('data-right')) x.classList.add('right');
         });
         o.classList.add(o.hasAttribute('data-right') || !s.querySelector('[data-right]') ? 'chosen' : 'wrong');
-        s.querySelector('.answer').classList.add('shown');
+        var ans = s.querySelector('.answer');
+        ans.classList.add('shown');
+        ans.focus();
       });
     });
   });

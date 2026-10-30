@@ -3,7 +3,7 @@ import { Character } from './Characters';
 import { unitIcons } from '../content/unitIcons';
 import { coursePlan } from '../content/sectors';
 import type { Unit } from '../content/types';
-import { gloss, said, ui, uiCount, type Bilingual } from '../i18n';
+import { gloss, said, saidLang, ui, uiCount, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { type Access, lessonAllowed, unitAllowed } from '../lib/access';
 import { hasCertificate, unitDone } from '../lib/certificate';
@@ -181,7 +181,12 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
               ) : (
                 <div className="bay-card bay-still">
                   {body}
-                  <span className="sr-only">{state === 'done' ? ` · ${said(ui('stampDone', lang))}` : ''}</span>
+                  {/* What a screen reader hears beside the title: done, or not yet to start (after
+                      the lesson before it, or only in the full version), as on the topic page. */}
+                  {(() => {
+                    const note = ui(state === 'done' ? 'stampDone' : unitAllowed(unit.id, access) && lessonAllowed(lesson.id, access) ? 'locked' : 'fullVersion', lang);
+                    return <span className="sr-only" lang={saidLang(note)}>{` · ${said(note)}`}</span>;
+                  })()}
                 </div>
               )}
               {restart && <RestartButton lang={lang} onRestart={() => onRestart(lesson.id)} />}
@@ -376,7 +381,7 @@ function BlockProgress({ unit, completed, lang, count = true }: { unit: Unit; co
   const of = unit.lessons.length;
   return (
     <div className="rb-progress">
-      <span className="sr-only">{n} / {of} {said(uiCount('lessonsUnit', of, lang))}</span>
+      <span className="sr-only" lang={saidLang(uiCount('lessonsUnit', of, lang))}>{n} / {of} {said(uiCount('lessonsUnit', of, lang))}</span>
       <span className="rb-bar" aria-hidden><span className="rb-bar-fill" style={{ width: `${(n / of) * 100}%` }} /></span>
       {count && <LessonCount unit={unit} completed={completed} lang={lang} showDone />}
     </div>

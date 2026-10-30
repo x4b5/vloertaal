@@ -53,7 +53,7 @@ ${sectorNav(undefined, 'Woorden per sector')}
 <p>Zo kun je een instructie of een eerste werkdag voorbereiden. Vloertaal vervangt geen veiligheidsinstructie of VCA-cursus: het helpt om die beter te begrijpen.</p></section>
 <section aria-labelledby="topics"><h2 id="topics">Een link naar elk onderwerp</h2>
 ${themes
-  .map(({ t, list }) => `<h3>${esc(t.titleNl)}</h3><ul class="lines">${list.map((p) => `<li><a href="${p.path}">${esc(p.unit.titleNl)}</a> · <a href="${appLink(p.unit.id)}" rel="nofollow">open</a></li>`).join('')}</ul>`)
+  .map(({ t, list }) => `<h3>${esc(t.titleNl)}</h3><ul class="lines">${list.map((p) => `<li><a href="${p.path}">${esc(p.unit.titleNl)}</a> · <a href="${appLink(p.unit.id)}" rel="nofollow" aria-label="Open ${esc(p.unit.titleNl)} in Vloertaal">open</a></li>`).join('')}</ul>`)
   .join('\n')}</section>
 <section aria-labelledby="facts"><h2 id="facts">Waarom Nederlands leren helpt</h2>
 ${COACH_FACTS.map((f) => `<p>${esc(f.text)}</p><p><small>Bron: ${esc(f.source)}</small></p>`).join('\n')}</section>

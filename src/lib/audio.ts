@@ -477,14 +477,19 @@ function note(c: AudioContext, freq: number, at: number, dur: number, peak: numb
   gain.gain.setValueAtTime(0.0001, at);
   gain.gain.exponentialRampToValueAtTime(peak, at + Math.min(0.012, dur / 3));
   gain.gain.exponentialRampToValueAtTime(0.0001, at + dur);
-  osc.connect(gain).connect(c.destination);
+  // Two calls: the old prefixed Web Audio of iOS (before 14.5) returns nothing from connect().
+  osc.connect(gain);
+  gain.connect(c.destination);
   osc.start(at);
   osc.stop(at + dur + 0.02);
 }
 
 function audioCtx(): AudioContext | undefined {
   try {
-    ctx ??= new AudioContext();
+    // iOS before 14.5 has only the prefixed webkitAudioContext.
+    const Ctx = window.AudioContext ?? (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+    if (!Ctx) return undefined;
+    ctx ??= new Ctx();
     return ctx;
   } catch {
     return undefined; // No Web Audio: silently skip the effect.
@@ -530,7 +535,9 @@ export const sounds = {
       gain.gain.exponentialRampToValueAtTime(0.08, t + 0.03);
       gain.gain.setValueAtTime(0.08, t + 0.16);
       gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.26);
-      osc.connect(filter).connect(gain).connect(c.destination);
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(c.destination);
       osc.start(t);
       osc.stop(t + 0.28);
     } catch {
