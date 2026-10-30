@@ -92,8 +92,10 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
       {current === code && <CheckIcon size={20} className="lang-check" />}
     </button>
   );
+  // One named group (the question), so a screen reader says what the list of languages is for.
+  const ask = ui('chooseLanguage', lang);
   return (
-    <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`}>
+    <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`} role="group" aria-label={said(ask)}>
       {languageMeta.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed && !dutch))}
       {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
       {/* "Nederlands – ik spreek al Nederlands": the work-rules track, always said in Dutch. Last,

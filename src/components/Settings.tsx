@@ -233,7 +233,8 @@ export function Settings({
   const say = (key: Parameters<typeof ui>[0]) => ui(key, lang);
   const onOff = (on: boolean, set: (on: boolean) => void): ReactNode => (
     <ChoiceCards
-      label={dutchUi(lang) ? 'Aan of uit' : 'On or off'}
+      // The group is named by the page's question (its heading), in the help language.
+      label={page ? said(say(ROWS[page].key)) : dutchUi(lang) ? 'Aan of uit' : 'On or off'}
       current={on ? 'on' : 'off'}
       onPick={(id) => { set(id === 'on'); answered(); }}
       options={[
