@@ -16,6 +16,12 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-30',
     items: [
+      'Nieuw onderwerp bij Starten: Getallen en gegevens. Twee lessen: je gegevens (je naam spellen, je telefoonnummer, het formulier) en dagen en datums (volgende week, tot en met). Het komt vóór Tijd en rooster.',
+      'Nieuwe les bij Gezondheid: Lichaam en klachten. Met het hoofd, de rug, de hand en het oog, en de tip: zeg wat er gebeurde en waar het pijn doet.',
+      'Nieuwe les bij Verlof en ziekte: Kinderen en werk. Een ziek kind ophalen, calamiteitenverlof, zwanger zijn en de kinderopvang.',
+      'Nieuwe les bij Werk kwijt: Je werk stopt. Je eindafrekening, je vakantiegeld en vrije dagen, en wat er nog meer stopt: het huis en de zorgverzekering via het bureau.',
+      'Nieuwe les bij Werk en contract: Papieren, inburgering en je werk. Mag ik hier werken, werknemer of zzp’er, en taalles naast je rooster.',
+      'In deze nieuwe lessen komen woorden als de opzegtermijn, het calamiteitenverlof, het Juridisch Loket en de Belastingdienst terug in zinnen. De vertalingen en opnames volgen.',
       'Vier nieuwe hulptalen: Spaans, Portugees, Frans en Duits. Alle uitleg, woorden, zinnen en tips staan nu ook in die talen.',
       'Een telefoon in het Spaans, Portugees, Frans of Duits kiest die taal bij de eerste start zelf voor (je kunt altijd een andere kiezen).',
       'Werkregels: twee nieuwe lessen, Kinderen en zorg (zwanger, verlof, een ziek kind, kinderopvangtoeslag) en Je werk stopt: regel dit (laatste loon, huis, zorgverzekering, adres). En 15 nieuwe vragen in andere lessen, onder meer over bezwaar maken, de BHV\'er, pensioen, inburgering, de vakbond en of je hier mag werken.',

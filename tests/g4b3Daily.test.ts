@@ -79,7 +79,9 @@ describe('Herhaal vandaag rotates sentences and chats', () => {
     // After 6 weeks more than half of the chats came back (a weak lesson keeps the chat to itself:
     // with "Klanken" in the first 16 units 58%), after 12 weeks nearly all.
     expect(chatsBy42.size / allChats).toBeGreaterThan(0.55);
-    expect(chats.size / allChats).toBeGreaterThan(0.9);
+    // One chat a day: more lessons in the first 16 units means more chats to share the 84 days
+    // (30 October 2026: with "Getallen en gegevens" and l.permit, 44 chats, 39 of them back).
+    expect(chats.size / allChats).toBeGreaterThan(0.85);
     // Second and third sentences of lessons come back too.
     const later = done.flatMap((l) => l.sentences.slice(1)).filter((s) => sentencesBy42.has(s.id));
     expect(later.length).toBeGreaterThan(30);

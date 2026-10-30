@@ -85,6 +85,13 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "از شما می‌خواهند نام‌ها را در چت‌بات بگذارید: این جواب «نی» می‌گوید و دلیل آن را.",
     'c.aifake.a.why': "یک شمارهٔ نو پول می‌خواهد: این جواب اول کنترول می‌کند.",
     'c.aiplan.a.why': "تقسیم اوقات را اپ ساخته: این جواب یک انسان می‌خواهد.",
+    // TODO vertalen: why the chat replies of the new lessons fit (30 October 2026). English for now; the translators replace it.
+    "c.details.a.why": "Asked for a last name: this reply gives it and offers to spell it.",
+    "c.dates.a.why": "Asked for the date: this reply gives the day and the date.",
+    "c.permit.a.why": "A no is fine with a reason. Offering another day helps.",
+    "c.kids.a.why": "Asked why: this reply gives the reason, the daycare called.",
+    "c.body.a.why": "Asked where it hurts: this reply names the place and the cause.",
+    "c.jobends.a.why": "The house goes with the job: this reply asks about the notice period.",
   },
 };
 
