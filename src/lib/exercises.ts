@@ -4,6 +4,7 @@ import { coursePlan, mainLessons, type SectorChoice } from '../content/sectors';
 import { courseUnits, unitOfLesson } from '../content/courses';
 import { trackOfId, type Track } from './track';
 import { type CultureTip, tipForLesson } from '../content/culture';
+import { modelQuestion } from '../content/regels/zegHet';
 import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
 import type { RuleStep } from '../content/regels/types';
 import { tokenize } from './answers';
@@ -712,6 +713,9 @@ export function buildRuleLesson(lesson: Lesson, opts: { seed?: number; review?: 
   const out: Exercise[] = [];
   for (const step of lesson.steps ?? []) {
     if (opts.review && (step.kind === 'scene' || step.kind === 'rule')) continue;
+    // A lesson played again asks its model sentence: "Wat zeg je?" (content/regels/zegHet.ts).
+    const asked = opts.review && step.kind === 'model' ? modelQuestion(step) : undefined;
+    if (asked) { out.push({ kind: 'whatdo', step: { ...asked, options: shuffle(asked.options, rng) } }); continue; }
     switch (step.kind) {
       case 'whatdo': out.push({ kind: 'whatdo', step: { ...step, options: shuffle(step.options, rng) } }); break;
       case 'whoask': out.push({ kind: 'whoask', step: { ...step, options: shuffle(step.options, rng) } }); break;

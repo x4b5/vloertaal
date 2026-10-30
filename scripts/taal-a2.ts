@@ -11,6 +11,7 @@ import { readFileSync } from 'node:fs';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import type { RuleOption, RuleUnit } from '../src/content/regels/types';
 import { zlRegelsUnit } from '../src/content/regio/zuid-limburg-regels';
+import { modelQuestion } from '../src/content/regels/zegHet';
 import { uiNl } from '../src/i18n/nl';
 
 type Text = { file: string; where: string; field: string; text: string };
@@ -49,7 +50,16 @@ for (const u of units) {
           break;
         }
         case 'whoask': add(at, 'question', s.question); s.options.forEach((o) => add(at, `feedback ${o.id}`, o.feedback)); add(at, 'why', s.why); break;
-        case 'model': add(at, 'context', s.context); add(at, 'nl', s.nl); break;
+        case 'model': {
+          add(at, 'context', s.context); add(at, 'nl', s.nl);
+          // Its "Wat zeg je?" in a review (src/content/regels/zegHet.ts): the wrong sentences.
+          const q = modelQuestion(s);
+          if (q) {
+            for (const o of q.options.filter((x) => !x.best)) { add(at, `zeg-het ${o.id}`, o.text); add(at, `zeg-het feedback ${o.id}`, o.feedback); }
+            choices.push({ file, where: `${at} (zeg-het)`, situation: q.situation, options: q.options });
+          }
+          break;
+        }
       }
     }
   }
