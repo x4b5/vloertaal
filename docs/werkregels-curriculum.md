@@ -1967,7 +1967,7 @@ bij schulden, en wat je regelt als je werk stopt.*
 - **B.** Hij wacht een maand. Misschien vindt hij snel werk.
   → *Dan is hij te laat, en krijgt hij misschien minder.*
 - **C.** Hij gaat eerst naar de gemeente voor bijstand.
-  → *Bij werk kwijt is UWV meestal de eerste stap.*
+  → *Ben je je werk kwijt? Dan is UWV meestal de eerste stap.*
 
 **Goed antwoord: A.**
 **Waarom:** Vraag WW aan zo snel als je kunt. Uiterlijk 1 week ⚖️ na je eerste dag zonder werk. Ben je

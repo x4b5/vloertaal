@@ -59,7 +59,7 @@ export const geldUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Hij vraagt meteen WW aan bij UWV.', best: true, feedback: 'Goed. Dan krijgt hij op tijd geld.' },
             { id: 'b', text: 'Hij wacht een maand. Misschien vindt hij snel werk.', best: false, feedback: 'Dan is hij te laat, en krijgt hij misschien minder.' },
-            { id: 'c', text: 'Hij gaat eerst naar de gemeente voor bijstand.', best: false, feedback: 'Bij werk kwijt is UWV meestal de eerste stap.' },
+            { id: 'c', text: 'Hij gaat eerst naar de gemeente voor bijstand.', best: false, feedback: 'Ben je je werk kwijt? Dan is UWV meestal de eerste stap.' },
           ],
           why: 'Vraag WW aan zo snel als je kunt. Uiterlijk 1 week na je eerste dag zonder werk. Ben je later? Dan krijg je misschien minder, of niets. Je doet het via Mijn UWV, met je DigiD.',
         },
