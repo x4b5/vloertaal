@@ -642,7 +642,7 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   // "12 / 13": the total smaller, like a fraction, so two two-digit numbers fit a card on any phone.
   const ofTotal = /^(\S+) \/ (\S+)$/.exec(value);
   return (
-    <div className={`stat-card stat-${tone} ${done ? 'stat-done' : ''}`} role="group" aria-label={`${said(label)} ${final}`}>
+    <div className={`stat-card stat-${tone} ${done ? 'stat-done' : ''}`} role="group" aria-label={`${said(label)} ${final}`} lang={saidLang(label)}>
       <div className="stat-card-head"><Bi text={label} /></div>
       <div className="stat-card-body" aria-hidden>
         {icon}
@@ -709,6 +709,10 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
     return () => window.clearTimeout(t);
   }, [still]);
   const done = () => { if (ready.current) onDone(); };
+  // The lesson's Continue is gone with the lesson: the focus goes to the title, so a screen
+  // reader starts at "Lesson complete!" and the keyboard is not left on <body>.
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  useEffect(() => { titleRef.current?.focus({ preventScroll: true }); }, []);
   // Enter continues, as after every exercise (the screen has no other input).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -737,7 +741,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             {dutchUi(lang) ? null : lang?.ui.stampDone ? <HelpText className="stamp-sub" text={lang.ui.stampDone} lang={lang} /> : <span className="stamp-sub" lang="en">{ui('stampDone').en}</span>}
           </span>
         </div>
-        <h1 className="result-title"><Bi text={title} /></h1>
+        <h1 className="result-title" tabIndex={-1} ref={titleRef}><Bi text={title} /></h1>
         <div className="result-stats" dir={rtl ? 'rtl' : undefined}>
           <StatCard
             tone="green"
@@ -776,8 +780,10 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
         {/* After the review: how many words got stronger, the number big, the help language
             large and English small (no Dutch sentence). */}
         {stronger !== undefined && stronger > 0 && (
-          <p className="result-line result-stronger" aria-label={said(fillCount('wordsStrongerN', stronger, lang))}>
-            <span className="stronger-n" aria-hidden><span className="stronger-arrow">▲</span>{stronger}</span>
+          // No aria-label on a <p> (not allowed there, and often not read): the number itself is
+          // read, in the help language (in the page's Dutch it would be "vijf").
+          <p className="result-line result-stronger">
+            <span className="stronger-n" lang={saidLang(fillCount('wordsStrongerN', stronger, lang))}><span className="stronger-arrow" aria-hidden>▲</span>{stronger}</span>
             <Bi text={withoutN(uiCount('wordsStrongerN', stronger, lang))} />
           </p>
         )}
@@ -798,7 +804,9 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
         )}
         {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}
         {next && (
-          <p className="result-line result-next" dir={rtl ? 'rtl' : undefined} aria-label={`${said(ui('nextUp', lang))}: ${said(next)}`}>
+          <p className="result-line result-next" dir={rtl ? 'rtl' : undefined}>
+            {/* Said, not shown (no aria-label on a <p>): "Next:" before the title. */}
+            <span className="sr-only" lang={saidLang(ui('nextUp', lang))}>{`${said(ui('nextUp', lang))}: `}</span>
             <span className="result-next-arrow" aria-hidden><ArrowIcon size={22} /></span>
             {nextPic && <WordPicture className="result-next-pic" id={nextPic.id} emoji={nextPic.emoji} size={44} />}
             <Bi className="result-next-title" text={next} />
