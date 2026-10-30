@@ -3907,12 +3907,12 @@ Arbeidsinspectie.
 
 - Op de werkorder staat wat de klant wil.
 - Zie je nog iets wat kapot is? Schrijf het op, en zeg het.
-- Doe extra werk pas als de klant ja zegt ⚖️. De garage belt de klant eerst.
+- Doe extra werk pas als de klant ja zegt ⚖️. Je chef of de receptie belt de klant.
 - Een proefrit maak je alleen als het mag, en met een rijbewijs.
 
 **Vraag 1 · Lees het kaartje.** *Kaartje (werkbon):* Werkorder · Klant: mevrouw Bakker, haalt de
-auto op om 17.00 uur · Opdracht: 4 nieuwe winterbanden · Opmerking: Extra werk? Eerst de klant
-bellen.. Wat doet Kevin vandaag aan de auto?
+auto op om 17.00 uur · Opdracht: 4 nieuwe winterbanden · Opmerking: Extra werk? Eerst melden
+bij de chef.. Wat doet Kevin vandaag aan de auto?
 
 - **A.** 4 nieuwe banden, en ook de remmen.
   → *De remmen staan niet op de werkorder. Eerst moet de klant ja zeggen.*
@@ -3923,13 +3923,13 @@ bellen.. Wat doet Kevin vandaag aan de auto?
 
 **Goed antwoord: B.**
 **Waarom:** Op de werkorder staat wat de klant wil. Zie je nog iets wat kapot is? Schrijf het op, en
-zeg het. De garage belt de klant. Pas als de klant ja zegt, doe je het extra werk.
+zeg het tegen je chef. Die belt de klant. Pas als de klant ja zegt, doe je het extra werk.
 
 **Vraag 2 · Waar of niet waar?** "Een klant betaalt ook voor extra werk als ze geen ja zei."
 
 **Antwoord: niet waar.**
 **Waarom:** Extra werk doe je pas als de klant ja zegt. Anders hoeft de klant er meestal niet voor
-te betalen ⚖️. Daarom belt de garage de klant eerst. Schrijf op wat de klant zei, en wanneer.
+te betalen ⚖️. Daarom belt je chef of de receptie de klant eerst. Schrijf op wat de klant zei, en wanneer.
 
 **Vraag 3 · Wat is het beste?** De chef zegt: "Maak even een proefrit." Kevin heeft nog geen
 rijbewijs. Wat kan Kevin het beste doen?
@@ -3945,11 +3945,11 @@ rijbewijs. Wat kan Kevin het beste doen?
 **Waarom:** Op de openbare weg mag je alleen rijden met een rijbewijs ⚖️. Ook voor een kort rondje.
 Zeg het eerlijk als je geen rijbewijs hebt. Een proefrit maak je ook alleen als je chef het vraagt.
 
-**Zo zeg je het:** "De remmen zijn bijna op. Wil je de klant even bellen?" *(Je ziet extra werk aan een auto.)*
+**Zo zeg je het:** "De remmen zijn bijna op. Wil je de klant even bellen?" *(Je ziet extra werk aan een auto. Je zegt het tegen je chef.)*
 
 *Fout in "Wat zeg je?":* "De remmen zijn bijna op. Ik doe ze er meteen bij." → *Eerst moet de klant
 ja zeggen. Meld het eerst.* · "Ik zag iets aan de remmen. Maar goed, niet mijn werk." → *Dan hoort
-de klant het niet. Vraag of iemand haar belt.*
+de klant het niet. Zeg het tegen je chef. Die belt haar.*
 
 **Onthoud:** Extra werk? Eerst moet de klant ja zeggen.
 

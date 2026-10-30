@@ -1521,7 +1521,7 @@ export const werkplaatsUnit: RuleUnit = {
           body: [
             'Op de werkorder staat wat de klant wil.',
             'Zie je nog iets wat kapot is? Schrijf het op, en zeg het.',
-            'Doe extra werk pas als de klant ja zegt. De garage belt de klant eerst.',
+            'Doe extra werk pas als de klant ja zegt. Je chef of de receptie belt de klant.',
             'Een proefrit maak je alleen als het mag, en met een rijbewijs.',
           ],
           rule: 'geschreven',
@@ -1535,7 +1535,7 @@ export const werkplaatsUnit: RuleUnit = {
             rows: [
               { label: 'Klant', value: 'mevrouw Bakker, haalt de auto op om 17.00 uur' },
               { label: 'Opdracht', value: '4 nieuwe winterbanden', hit: true },
-              { label: 'Opmerking', value: 'Extra werk? Eerst de klant bellen.' },
+              { label: 'Opmerking', value: 'Extra werk? Eerst melden bij de chef.' },
             ],
           },
           question: 'Wat doet Kevin vandaag aan de auto?',
@@ -1544,7 +1544,7 @@ export const werkplaatsUnit: RuleUnit = {
             { id: 'b', text: '4 winterbanden. De remmen meldt hij.', best: true, feedback: 'Goed. Dat staat op de werkorder.' },
             { id: 'c', text: 'Alleen de remmen. Dat is belangrijker.', best: false, feedback: 'De klant vroeg om banden. Over de remmen beslist de klant.' },
           ],
-          why: 'Op de werkorder staat wat de klant wil. Zie je nog iets wat kapot is? Schrijf het op, en zeg het. De garage belt de klant. Pas als de klant ja zegt, doe je het extra werk.',
+          why: 'Op de werkorder staat wat de klant wil. Zie je nog iets wat kapot is? Schrijf het op, en zeg het tegen je chef. Die belt de klant. Pas als de klant ja zegt, doe je het extra werk.',
         },
         // ⚖️ check: Anders hoeft de klant er meestal niet voor te betalen ⚖️ (meerwerk zonder
         //   opdracht; BOVAG-voorwaarden; art. 7:405 BW).
@@ -1553,7 +1553,7 @@ export const werkplaatsUnit: RuleUnit = {
           id: 'r.l.werkplaats.2.tf1',
           statement: 'Een klant betaalt ook voor extra werk als ze geen ja zei.',
           answer: false,
-          why: 'Extra werk doe je pas als de klant ja zegt. Anders hoeft de klant er meestal niet voor te betalen. Daarom belt de garage de klant eerst. Schrijf op wat de klant zei, en wanneer.',
+          why: 'Extra werk doe je pas als de klant ja zegt. Anders hoeft de klant er meestal niet voor te betalen. Daarom belt je chef of de receptie de klant eerst. Schrijf op wat de klant zei, en wanneer.',
         },
         // ⚖️ check: Op de openbare weg mag je alleen rijden met een rijbewijs ⚖️ (Wegenverkeerswet
         //   1994 art. 107).
@@ -1568,7 +1568,7 @@ export const werkplaatsUnit: RuleUnit = {
           ],
           why: 'Op de openbare weg mag je alleen rijden met een rijbewijs. Ook voor een kort rondje. Zeg het eerlijk als je geen rijbewijs hebt. Een proefrit maak je ook alleen als je chef het vraagt.',
         },
-        { kind: 'model', id: 'r.l.werkplaats.2.mo1', context: 'Je ziet extra werk aan een auto.', nl: 'De remmen zijn bijna op. Wil je de klant even bellen?' },
+        { kind: 'model', id: 'r.l.werkplaats.2.mo1', context: 'Je ziet extra werk aan een auto. Je zegt het tegen je chef.', nl: 'De remmen zijn bijna op. Wil je de klant even bellen?' },
       ],
     },
   ],

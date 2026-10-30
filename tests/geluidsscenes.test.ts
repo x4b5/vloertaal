@@ -61,6 +61,14 @@ describe('geluidsscènes (src/content/geluidsscenes.ts)', () => {
     }
   });
 
+  it('says "hè" in at most a third of the scenes (natural, but not a tic)', () => {
+    const he = /(?<!\p{L})hè(?!\p{L})/iu;
+    expect(he.test('Wacht even, hè.')).toBe(true);
+    expect(he.test('Hè? Wat zeg je?')).toBe(true);
+    const met = geluidsscenes.filter((s) => s.beurten.some((b) => he.test(b.nl)));
+    expect(met.length, met.map((s) => s.id).join(', ')).toBeLessThanOrEqual(Math.floor(geluidsscenes.length / 3));
+  });
+
   it('describes the background sound for the sound maker, never louder than the voice', () => {
     for (const s of geluidsscenes) {
       expect(s.geluid.nl.length, s.id).toBeGreaterThan(20);
