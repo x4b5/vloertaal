@@ -16,7 +16,9 @@
   /* Palette */
   --ink: #1e2226;
   --ink-2: #4a5058;
-  --ink-3: #6e737a;
+  /* Faint text (--faint) and icons: 4.5:1 or more on the floor, paper and the yellow tint
+     (was #6e737a: 3.7:1 on the floor). */
+  --ink-3: #60646b;
   --concrete: #e7e3dc;
   --concrete-2: #dad5cc;
   --paper: #fffdf8;
@@ -27,7 +29,9 @@
   --kraft-dark: #7e5428;
   --green: #137a55;
   --red: #c2412d;
-  --blue: #1592db;
+  /* Speaker buttons and icons: the icon 3:1 on its own blue tint, white on blue 4.5:1
+     (was #1592db: 2.3:1 on the tint, white on it 3.4:1). Dark keeps #1592db. */
+  --blue: #1179b6;
   --orange: #ff7a00;
 
   /* Semantic */
@@ -38,6 +42,9 @@
   --edge: var(--ink);       /* strong (ink) border of interactive cards */
   --solid: var(--ink);      /* dark button */
   --on-solid: var(--paper);
+  /* A mark (check, mic) on the solid disc: yellow on ink in light; in dark the disc is light
+     ink, so the mark is dark (yellow on it was 1.3:1). */
+  --on-solid-mark: var(--yellow);
   --on-yellow: #1e2226;
   --on-green: #ffffff;
   --on-blue: #ffffff;
@@ -101,7 +108,7 @@
   :root:not([data-theme='light']) {
     --ink: #edeae4;
     --ink-2: #b9b4ab;
-    --ink-3: #9aa0a6;
+    --ink-3: #adb2b6; /* was #9aa0a6: 3.7:1 on the yellow mark (.rb-marked) */
     --concrete: #16191c;
     --concrete-2: #2c3035;
     --paper: #23272b;
@@ -113,6 +120,8 @@
     --line: #3a3f45;
     --edge: #c9c4bb;
     --on-solid: #16191c;
+    --on-solid-mark: #16191c;
+    --blue: #1592db;
     --on-green: #16191c;
     --tape: rgba(200, 149, 91, 0.6);
     --focus: var(--yellow);
@@ -134,7 +143,7 @@
 :root[data-theme='dark'] {
   --ink: #edeae4;
   --ink-2: #b9b4ab;
-  --ink-3: #9aa0a6;
+  --ink-3: #adb2b6; /* was #9aa0a6: 3.7:1 on the yellow mark (.rb-marked) */
   --concrete: #16191c;
   --concrete-2: #2c3035;
   --paper: #23272b;
@@ -146,6 +155,8 @@
   --line: #3a3f45;
   --edge: #c9c4bb;
   --on-solid: #16191c;
+  --on-solid-mark: #16191c;
+  --blue: #1592db;
   --on-green: #16191c;
   --tape: rgba(200, 149, 91, 0.6);
   --focus: var(--yellow);
@@ -401,7 +412,7 @@ h2 { font-size: 1.25rem; }
   width: 36px; height: 36px; border-radius: 50%;
   font-family: var(--stencil); font-weight: 800; font-size: 1.25rem; line-height: 1; padding-top: 2px;
 }
-.bay-done .bay-marker { background: var(--solid); color: var(--yellow); padding: 0; }
+.bay-done .bay-marker { background: var(--solid); color: var(--on-solid-mark); padding: 0; }
 .bay-now .bay-marker { width: 44px; height: 44px; font-size: 1.5rem; background: var(--yellow); color: #1e2226; border: 2px solid #1e2226; }
 .bay-locked .bay-marker { background: var(--bg); color: var(--ink-3); border: 2px solid var(--line); }
 .bay-open .bay-marker { background: var(--card); color: var(--ink); border: 2px solid var(--ink-3); }
@@ -424,7 +435,7 @@ h2 { font-size: 1.25rem; }
 /* Now: the focal point of the screen. Safety yellow, Bram and a dark Start button. */
 .bay-now .bay-card {
   background: var(--yellow); color: #1e2226; border-color: #1e2226; min-height: 160px;
-  padding: 20px 128px 18px 18px; overflow: hidden;
+  padding: 20px 18px 18px; overflow: hidden;
 }
 .bay-now .bay-card:hover { background: #ffcd3a; }
 .bay-now .bay-title { font-size: 1.45rem; font-weight: 650; line-height: 1.15; }
@@ -454,7 +465,7 @@ h2 { font-size: 1.25rem; }
 .bay-card:active:not(:disabled) { transform: translateY(1px); filter: brightness(0.97); }
 .bay-card:active:not(:disabled) .bay-start { transform: translateY(1px); }
 @media (max-width: 380px) {
-  .bay-now .bay-card { padding-inline-end: 96px; }
+  .bay-with-char .bay-card { padding-inline-end: 96px; }
   .bay-char .ch { height: 96px; width: auto; }
   .bay-now .bay-title { font-size: 1.3rem; }
 }
@@ -2017,9 +2028,10 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .tag-nl { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }
 .tag-help {
   min-width: 0; padding-left: 7px; border-left: 2px solid color-mix(in srgb, var(--tag-ink) 35%, transparent);
-  font-size: 15px; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere;
+  font-size: var(--help-min); font-weight: 600; line-height: 1.25; overflow-wrap: anywhere;
 }
-.tag-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 16.5px; }
+/* 15px (16.5px for these scripts) as designed; grows with Tekstgrootte like every help line. */
+.tag-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: calc(var(--help-min) * 1.1); }
 .ex-tag { min-width: 0; }
 
 /* "What does this mean?": a small picture of each option. */
@@ -2177,7 +2189,11 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .bay-again-label.bi-swap > .bi-help { --help-size: 0.9em; }
 /* Right-to-left: every forward chevron (Start, Continue, the review card, open lessons) points
    the way the line reads, to the left. */
-.icon-fwd:dir(rtl), .icon-fwd.icon-flip, .player-rtl .feedback-icon .icon-fwd { scale: -1 1; }
+/* transform, not the `scale` property (iOS 14.5 / Chrome 104), and :dir() in a rule of its own
+   (iOS 16.4 / Chrome 120): an unknown selector drops the whole list, so on older phones none
+   of these arrows turned round. */
+.icon-fwd.icon-flip, .player-rtl .feedback-icon .icon-fwd { transform: scaleX(-1); }
+.icon-fwd:dir(rtl) { transform: scaleX(-1); }
 
 /* Situation on a phone: a smaller colleague and a wider bubble, so the options start higher. */
 @media (max-width: 759px) {
@@ -2646,11 +2662,14 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* Path: the done card keeps one line ("Practise again" in the help language only). */
 .bay-again-label.bi-swap > .bi-help { display: none; }
 .cert-later > span[lang='nl']:only-child { font-size: 1.05rem; font-weight: 650; }
-/* Right to left: Bram stands at the card's end like the picture (both on the left). */
+/* Right to left: Bram stands at the card's end like the picture (both on the left). Room for him
+   only where he stands (the home's path); a topic page's card has no colleague, so its text uses
+   the whole width. */
 .bay-char { right: auto; inset-inline-end: 4px; }
-.bay-now .bay-card { padding-inline: 18px 128px; }
-@media (max-width: 380px) { .bay-now .bay-card { padding-inline: 12px 104px; } }
-@media (max-width: 300px) { .bay-now .bay-card { padding-inline: 12px; } }
+.bay-now .bay-card { padding-inline: 18px; }
+.bay-with-char .bay-card { padding-inline: 18px 128px; }
+@media (max-width: 380px) { .bay-now .bay-card { padding-inline: 12px; } .bay-with-char .bay-card { padding-inline: 12px 104px; } }
+@media (max-width: 300px) { .bay-with-char .bay-card { padding-inline: 12px; } }
 
 /* Chat: the colleague's line in the help language sits inside the bubble, under the Dutch
    (shown from the start), never as a popover over "your" bubble. */
@@ -2679,7 +2698,10 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* The run label hangs just under the progress bar at its end, clear of the bar itself (it
    never covers the steps done) and of the exercise's tag at the start of the row below. */
 .bar-wrap > .run-label { top: calc(100% + 12px); left: auto; inset-inline-end: 0; translate: none; }
-.player-top > .sound-note {
+/* The note's status region (always there, so a screen reader hears the note): it lies over the
+   header without taking room or taps; the note hangs under it as before. */
+.sound-note-live { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 30; pointer-events: none; }
+.player-top > .sound-note, .sound-note-live > .sound-note {
   position: absolute; top: calc(100% + 6px); inset-inline: 16px; z-index: 30;
   margin: 0 auto; width: auto; max-width: 420px;
 }
@@ -2831,8 +2853,10 @@ html:has(.topbar) { scroll-padding-top: 72px; }
    close and help swap sides, the number badge and picture of a card sit on the right with the
    text right-aligned, the tag, the feedback icon and the speech-bubble tails follow. Dutch and
    English stay left to right inside it, each in its own isolate. */
-.player[dir='rtl'] :is([lang='nl'], [lang='en']) { direction: ltr; unicode-bidi: isolate; }
-.player[dir='rtl'] :is(.answer-line, .tile-bank, .pair-say, .pair-tiles) { direction: ltr; }
+/* Written out, not :is() (iOS 14 / Chrome 88): on older phones the whole rule fell away and a
+   Dutch line in a mirrored card showed its full stop at the wrong end (".uur"). */
+.player[dir='rtl'] [lang='nl'], .player[dir='rtl'] [lang='en'] { direction: ltr; unicode-bidi: isolate; }
+.player[dir='rtl'] .answer-line, .player[dir='rtl'] .tile-bank, .player[dir='rtl'] .pair-say, .player[dir='rtl'] .pair-tiles { direction: ltr; }
 .player[dir='rtl'] .speaker-bubble { padding-left: 18px; padding-right: 9px; }
 .player[dir='rtl'] .chat-bubble:not(.chat-bubble-me) { padding-left: 18px; padding-right: 8px; }
 .player[dir='rtl'] :is(.speaker-bubble, .chat-bubble:not(.chat-bubble-me))::before {
@@ -2847,7 +2871,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .player[dir='rtl'] .chat-bubble-me.right::before { border-color: var(--green); }
 .player[dir='rtl'] .chat-bubble-me.wrong::before { border-color: var(--red); }
 /* The colleagues turn to face the bubble, now on their left. */
-.player[dir='rtl'] :is(.speaker-char, .chat-char, .tip-char) { scale: -1 1; }
+.player[dir='rtl'] .speaker-char, .player[dir='rtl'] .chat-char, .player[dir='rtl'] .tip-char { transform: scaleX(-1); }
 .player[dir='rtl'] .feedback { padding: 12px 12px 10px 16px; rotate: 0.6deg; }
 .player[dir='rtl'] .match-x { right: auto; left: -6px; }
 .player[dir='rtl'] .type-display, .player[dir='rtl'] .type-input { text-align: center; }
@@ -2856,8 +2880,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .player[dir='rtl'] [lang='nl']:not(.type-input, .type-display, .tile, .letter-tile, .tag-nl) { text-align: right; }
 /* Forward chevrons follow the dir attribute too (:dir() is not always re-evaluated for cards
    that change state, e.g. the next lesson's Start right after a lesson). */
-[dir='rtl'] .icon-fwd { scale: -1 1; }
-[dir='rtl'] [dir='ltr'] .icon-fwd { scale: 1 1; }
+[dir='rtl'] .icon-fwd { transform: scaleX(-1); }
+[dir='rtl'] [dir='ltr'] .icon-fwd { transform: none; }
 /* Short phones (360×640): the letter tiles sit higher, so most of them clear the footer. */
 @media (max-height: 700px) {
   .exercise:has(.letter-bank) .listen-buttons { margin: 0 0 12px; }
@@ -2968,7 +2992,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .rb-all-head h1 { display: flex; flex-direction: column; font-size: 1.35rem; line-height: 1.2; }
 .rb-all-nl { font-size: 0.9375rem; font-weight: 600; color: var(--muted); letter-spacing: 0.02em; }
 .rb-all-head h1 .bi-help { --help-size: 0.62em; }
-[dir='rtl'] .rb-all-head .icon-btn .icon { scale: -1 1; }
+[dir='rtl'] .rb-all-head .icon-btn .icon { transform: scaleX(-1); }
 
 /* ---- Speaking practice ---- */
 /* "Say it" (src/components/Speaking.tsx): the word card, one big mic button with a calm pulsing
@@ -2995,7 +3019,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .say-mic:focus-visible { outline: 3px solid var(--focus); outline-offset: 16px; }
 .say-mic-core { display: grid; place-items: center; }
 /* Recording: the button turns ink with a yellow stop square; a soft ring breathes around it. */
-.say-mic.is-rec { background: var(--solid); color: var(--yellow); border-color: var(--solid); }
+.say-mic.is-rec { background: var(--solid); color: var(--on-solid-mark); border-color: var(--solid); }
 .say-mic.is-rec::before {
   content: ''; position: absolute; inset: -16px; border-radius: 50%;
   border: 3px solid var(--yellow); opacity: 0.45;
@@ -3077,6 +3101,9 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 :root[data-text='xl'] { font-size: 125%; --help-min: 19px; }
 :root[data-text='large'] body { font-size: 20.25px; }
 :root[data-text='xl'] body { font-size: 22.5px; }
+/* Long words may break rather than run off a narrow screen (320 px, the phone's own larger text):
+   only a word that fits no line breaks, so the normal layout stays as it is. */
+:is(h1, h2, h3, p, li, button, label) { overflow-wrap: break-word; }
 /* Long words may break rather than run off a narrow screen at the larger sizes. */
 :root:is([data-text='large'], [data-text='xl']) :is(h1, h2, h3, p, li, button, label) { overflow-wrap: break-word; }
 /* Larger text in a narrow column: a long word is split with a hyphen where the language allows it
@@ -3102,13 +3129,14 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   :root[data-text='xl'] .cert-earned-actions .btn-go { order: -1; padding-inline: 10px 58px; }
   /* The topic card on the path: no colleague over the Start button, the title its full width. */
   :root[data-text='xl'] .bay-char { display: none; }
-  :root[data-text='xl'] .bay-now .bay-card { padding-inline: 12px; }
+  :root[data-text='xl'] .bay-with-char .bay-card { padding-inline: 12px; }
   /* Speaking: the word gets the card's width (the picture is on the card before it too). */
   :root[data-text='xl'] .say-card .say-pic { display: none; }
   /* "The same" and "Say it again" one above the other: side by side a word would break. */
   :root[data-text='xl'] .say-rate { grid-template-columns: minmax(0, 1fr); }
 }
-.text-size-a { font-weight: 700; line-height: 1; color: var(--ink); }
+/* The colour of its tile (ink; dark ink on the yellow picked tile, also in dark mode). */
+.text-size-a { font-weight: 700; line-height: 1; color: inherit; }
 /* Fixed px, so the three A's keep their steps whatever the size now is. */
 .text-size-normal { font-size: 18px; }
 .text-size-large { font-size: 24px; }
@@ -3145,7 +3173,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .pocket-screen .screen-head h1 { display: flex; flex-direction: column; line-height: 1.15; }
 .pocket-screen-nl { font-size: 0.8rem; font-weight: 600; color: var(--ink-2); letter-spacing: 0.02em; }
 .pocket-screen .screen-head h1 .bi { font-size: 1em; }
-.pocket-screen > .screen-head[dir='rtl'] > .icon-btn .icon { scale: -1 1; }
+.pocket-screen > .screen-head[dir='rtl'] > .icon-btn .icon { transform: scaleX(-1); }
 .pocket-card {
   padding: 14px 14px 6px; background: var(--card); color: var(--ink);
   border: 2px solid var(--kraft); border-radius: 16px; box-shadow: 0 0 0 6px var(--kraft-light);
@@ -3371,7 +3399,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* The back arrow: fixed chrome, the same button in the same top-start corner on every page. */
 .chrome-back { flex: none; width: 44px; height: 44px; margin-inline-start: -8px; color: var(--ink); cursor: pointer; }
 .chrome-back:hover { background: var(--concrete-2); }
-[dir='rtl'] .chrome-back .icon { scale: -1 1; }
+[dir='rtl'] .chrome-back .icon { transform: scaleX(-1); }
 /* A head with only the arrow (first-run pages, the reminder times): it sits over the page's
    top margin, so the centred title below does not move. */
 .chrome-head { position: relative; z-index: 1; margin: -8px 0 -36px; }
@@ -3391,7 +3419,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .max3-title { display: flex; flex-direction: column; gap: 0; }
 .max3-title .bi-help { --help-size: 0.62em; font-weight: 400; }
 .max3-title-nl { font-size: 0.85rem; font-weight: 500; color: var(--muted); }
-.set-rows { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+/* One column never wider than the screen (320 px, text spacing): the rows shrink and their words wrap. */
+.set-rows { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
 .set-row {
   width: 100%; display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 10px 12px;
   text-align: start; color: var(--ink); background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
@@ -3488,7 +3517,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .topic-end { flex: none; display: grid; place-items: center; color: var(--ink-3); }
 .topic-check {
   display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
-  background: var(--solid); color: var(--yellow);
+  background: var(--solid); color: var(--on-solid-mark);
 }
 .topic-locked { background: transparent; color: var(--muted); }
 .topic-locked .topic-pic { opacity: 0.6; }
@@ -3505,7 +3534,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* Every topic of the theme finished: a calm check, no count (the rows show their own). */
 .theme-check {
   flex: none; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%;
-  background: var(--solid); color: var(--yellow);
+  background: var(--solid); color: var(--on-solid-mark);
 }
 .coach-links .theme-head { display: block; min-height: 0; margin-top: 14px; }
 .coach-links .theme-head:first-child { margin-top: 0; }
@@ -3604,8 +3633,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .cert-no-name .keep-link-gloss { order: 1; font-size: 1rem; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
 .cert-no-name .bi { align-items: center; }
 /* Right to left: a Dutch line keeps its own direction ("Vrouw of man?", not "?Vrouw of man"). */
-[dir='rtl'] :is(.set-row-nl, .max3-nl, .max3-title-nl, .sector-title-nl)[lang='nl'] { direction: ltr; unicode-bidi: isolate; }
-[dir='rtl'] :is(.set-row-nl, .max3-nl, .max3-title-nl)[lang='nl'] { text-align: right; }
+[dir='rtl'] .set-row-nl[lang='nl'], [dir='rtl'] .max3-nl[lang='nl'], [dir='rtl'] .max3-title-nl[lang='nl'], [dir='rtl'] .sector-title-nl[lang='nl'] { direction: ltr; unicode-bidi: isolate; }
+[dir='rtl'] .set-row-nl[lang='nl'], [dir='rtl'] .max3-nl[lang='nl'], [dir='rtl'] .max3-title-nl[lang='nl'] { text-align: right; }
 /* The waybill's stamp sits where its (hidden) head was: keep the hint clear of it. */
 .max3-settings > .waybill { padding-top: 48px; }
 .offline-status-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; }
@@ -3630,6 +3659,18 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   white-space: normal; overflow: visible; text-overflow: clip;
 }
 :root[data-text='xl'] .set-row-chev { grid-column: 3; grid-row: 1 / span 2; }
+/* The same on a narrow screen (320 px, a phone zoomed in): no room beside the name, so the value
+   goes under it rather than "Automatyczn…". */
+@media (max-width: 359px) {
+  .set-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 12px; row-gap: 4px; align-items: center; }
+  .set-row-icon { grid-column: 1; grid-row: 1 / span 2; }
+  .set-row-names { grid-column: 2; grid-row: 1; }
+  .set-row-value {
+    grid-column: 2; grid-row: 2; justify-self: start; max-width: none; text-align: start;
+    white-space: normal; overflow: visible; text-overflow: clip;
+  }
+  .set-row-chev { grid-column: 3; grid-row: 1 / span 2; }
+}
 /* Settings and onboarding cards at extra large text: room for a whole word ("Automatycznie")
    beside the picture and the speaker; the check of a picked card sits in its corner. */
 .max3-help { overflow-wrap: break-word; hyphens: auto; }
@@ -3815,7 +3856,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .gate-who { padding: 10px 12px; border-radius: 12px; background: var(--concrete-2, var(--bg)); color: var(--ink); }
 .gate-who > .icon { color: var(--ink-2); }
 .gate-trust { margin: 14px 0 0; font-size: 0.9rem; color: var(--muted); }
-.pw-ok { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--go-right, var(--ink-2)); font-weight: 600; }
+.pw-ok { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--right-ink); font-weight: 600; }
 .pw-ok .bi { flex-direction: row; flex-wrap: wrap; gap: 0 8px; align-items: baseline; }
 .pw-ok .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }
 .gate-try {
@@ -3996,17 +4037,18 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 
 /* Language list: a flag where it is not sensitive, else a calm tile with letters of the script
    (src/i18n/meta.ts LangMeta.flag). Same box either way, so the names stay aligned. */
-.lang-mark { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 26px; flex: none; }
+.lang-mark { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 26px; flex: none; }
 .lang-flag { width: 30px; height: 20px; display: block; }
 .lang-sample {
-  display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 24px;
+  /* At least the flag's box; it grows with larger text instead of cutting the letters. */
+  display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 24px;
   border-radius: 6px; background: var(--track); color: var(--muted);
-  font-size: 0.82rem; font-weight: 650; line-height: 1; white-space: nowrap; overflow: hidden;
+  font-size: 0.82rem; font-weight: 650; line-height: 1; white-space: nowrap;
 }
 .lang-sample:is([lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.95rem; }
-.lang-grid-compact .lang-mark { width: 30px; height: 22px; }
+.lang-grid-compact .lang-mark { min-width: 30px; min-height: 22px; }
 .lang-grid-compact .lang-flag { width: 27px; height: 18px; }
-.lang-grid-compact .lang-sample { width: 30px; height: 21px; font-size: 0.75rem; }
+.lang-grid-compact .lang-sample { min-width: 30px; min-height: 21px; font-size: 0.75rem; }
 
 /* ------------------------------------------------------------------------------------------
    Werkregels (the work-rules track, src/components/RuleSteps.tsx). Plain Dutch, the lesson's
@@ -4355,7 +4397,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   .player-rtl .bar-wrap > .run-label { right: auto; left: 0; }
   .foot-more-btn { right: 8px; }
   .player-rtl .foot-more-btn { right: auto; left: 8px; }
-  .sound-note, .player-top > .sound-note { left: 16px; right: 16px; }
+  .sound-note, .player-top > .sound-note, .sound-note-live > .sound-note { left: 16px; right: 16px; }
   .keep-icon, .cert-list-icon { right: 14px; }
   .waybill-tag { right: 12px; }
   .ios-num { left: 8px; }
@@ -4377,13 +4419,13 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
      came in the same versions as inset). Right to left: mirrored. */
   .bay-char { right: 4px; }
   [dir='rtl'] .bay-char { right: auto; left: 4px; }
-  .bay-now .bay-card { padding-left: 18px; padding-right: 128px; }
-  [dir='rtl'] .bay-now .bay-card { padding-left: 128px; padding-right: 18px; }
+  .bay-with-char .bay-card { padding-left: 18px; padding-right: 128px; }
+  [dir='rtl'] .bay-with-char .bay-card { padding-left: 128px; padding-right: 18px; }
   @media (max-width: 380px) {
-    .bay-now .bay-card { padding-left: 12px; padding-right: 104px; }
-    [dir='rtl'] .bay-now .bay-card { padding-left: 104px; padding-right: 12px; }
+    .bay-with-char .bay-card { padding-left: 12px; padding-right: 104px; }
+    [dir='rtl'] .bay-with-char .bay-card { padding-left: 104px; padding-right: 12px; }
   }
-  @media (max-width: 300px) { .bay-now .bay-card, [dir='rtl'] .bay-now .bay-card { padding-left: 12px; padding-right: 12px; } }
+  @media (max-width: 300px) { .bay-with-char .bay-card, [dir='rtl'] .bay-with-char .bay-card { padding-left: 12px; padding-right: 12px; } }
   @media (max-width: 380px) {
     :root[data-text='xl'] .bay-now .bay-card, :root[data-text='xl'] [dir='rtl'] .bay-now .bay-card { padding-left: 12px; padding-right: 12px; }
   }

@@ -88,7 +88,11 @@ export function isolateLatin(text: string): ReactNode {
     const phrase = text.slice(at, end);
     // A short quote is never broken over two lines (a long one still wraps where it must).
     const keep = quoted && m[0].length <= SHORT_QUOTE;
-    parts.push(<bdi key={at} dir="ltr" className={keep ? 'nl-quote' : undefined}>{phrase}</bdi>);
+    // A phrase with letters is Dutch (a quote, a word, a name like Bram or Vloertaal): lang="nl", so
+    // a screen reader says it with a Dutch voice, not the help language's. A time or an amount
+    // alone keeps the sentence's language (it is read as part of it).
+    const words = /[A-Za-z\u00C0-\u024F]/.test(m[0]);
+    parts.push(<bdi key={at} dir="ltr" lang={words ? 'nl' : undefined} className={keep ? 'nl-quote' : undefined}>{phrase}</bdi>);
     last = end;
   }
   if (!parts.length) return text;
