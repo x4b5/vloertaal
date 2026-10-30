@@ -960,7 +960,7 @@ hangt af van de verkiezing en de nationaliteit. Laat deze unit extra nakijken. �
 **Antwoord: waar.**
 **Waarom:** Voor de gemeenteraad mogen meer mensen stemmen dan alleen Nederlanders ⚖️. Mensen uit een
 ander EU-land mogen stemmen als ze hier wonen ⚖️. Polen hoort bij de EU. Mensen van buiten de EU mogen
-na 5 jaar wonen met een verblijfsvergunning ⚖️. Je moet wel 18 jaar of ouder zijn ⚖️.
+stemmen na 5 jaar in Nederland. Ze moeten al die tijd een verblijfsvergunning hebben ⚖️. Je moet wel 18 jaar of ouder zijn ⚖️.
 
 *Redactie: voorwaarden voor niet-EU-burgers: 5 jaar onafgebroken legaal verblijf, op de peildatum
 van de verkiezing ⚖️ (Kieswet; rijksoverheid.nl, "Wie mag stemmen bij de gemeenteraadsverkiezingen").*

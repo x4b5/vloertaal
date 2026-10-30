@@ -1257,6 +1257,7 @@ waar je werkt. Vraag aan het begin hoe het moet.
 - Dat kan tot 2 jaar ⚖️ duren.
 - In het eerste jaar krijg je minstens het minimumloon ⚖️. Een cao geeft vaak meer.
 - Heb je een tijdelijk contract? Dan stopt je loon op de einddatum ⚖️.
+- Werk je via een uitzendbureau? Soms stopt je contract dan al als je ziek wordt ⚖️. Kijk in je contract.
 - Vraag dan UWV naar de Ziektewet.
 
 **Vraag 1 · Waar of niet waar?** "Als je ziek bent, krijg je geen loon."

@@ -119,6 +119,9 @@ export const ziekUnit: RuleUnit = {
         // ⚖️ check: In het eerste jaar krijg je minstens het minimumloon ⚖️.
         // ⚖️ check: Heb je een tijdelijk contract? Dan stopt je loon op de einddatum ⚖️. Vraag dan
         //   UWV naar de Ziektewet (art. 7:629 BW, Ziektewet art. 29).
+        // ⚖️ check: Werk je via een uitzendbureau? Soms stopt je contract dan al als je ziek wordt ⚖️
+        //   (uitzendbeding, art. 7:691 lid 2 BW). Ook dan: Ziektewet via UWV. Zo zegt de tip c.illness
+        //   het ook.
         {
           kind: 'rule',
           id: 'r.l.ziek.2.ru1',
@@ -129,6 +132,7 @@ export const ziekUnit: RuleUnit = {
             'Dat kan tot 2 jaar duren.',
             'In het eerste jaar krijg je minstens het minimumloon. Een cao geeft vaak meer.',
             'Heb je een tijdelijk contract? Dan stopt je loon op de einddatum.',
+            'Werk je via een uitzendbureau? Soms stopt je contract dan al als je ziek wordt. Kijk in je contract.',
             'Vraag dan UWV naar de Ziektewet.',
           ],
           rule: 'geschreven',
