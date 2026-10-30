@@ -123,7 +123,9 @@ const RULE_TAG: Record<RuleKind, { nl: string; Icon: TagIcon }> = {
   scene: { nl: 'Verhaal', Icon: PictureIcon },
   rule: { nl: 'Regel', Icon: BulbIcon },
   truefalse: { nl: 'Waar of niet waar?', Icon: QuestionIcon },
-  whatdo: { nl: 'Wat doe je?', Icon: SignpostIcon },
+  // Not "Wat doe je?": many situations are about someone else ("Wat kan Kevin het beste doen?"),
+  // and a "je" above them switches person (docs/taal-a2.md, regel 5).
+  whatdo: { nl: 'Wat is het beste?', Icon: SignpostIcon },
   whoask: { nl: 'Wie vraag je het?', Icon: AskIcon },
   model: { nl: 'Zo zeg je het', Icon: BubblesIcon },
   payslip: { nl: 'Je loonstrook', Icon: ListIcon },
