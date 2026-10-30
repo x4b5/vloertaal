@@ -1,7 +1,7 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
-import { aboutSections } from '../src/content/about';
+import { aboutSection, aboutSections } from '../src/content/about';
 import { About } from '../src/components/Screens';
 import { getHelpLanguage } from '../src/i18n/all';
 import { aboutDutchRemembered, rememberAboutDutch } from '../src/lib/aboutDutch';
@@ -17,13 +17,13 @@ describe('About in Dutch (the "NL" toggle)', () => {
       expect(s.nl.body.trim(), s.id).not.toBe('');
       expect(s.nl.body, s.id).not.toBe(s.body);
     }
-    // The mission comes right after "What is Vloertaal?", then Bram.
-    expect(aboutSections.slice(0, 3).map((s) => s.id)).toEqual(['a.what', 'a.mission', 'a.bram']);
+    // "What is Vloertaal?", then how it works, then Bram (the mission is on the professionals page).
+    expect(aboutSections.slice(0, 3).map((s) => s.id)).toEqual(['a.what', 'a.how', 'a.bram']);
   });
 
   it('the privacy section keeps the privacy points and leaves "free" to the mission', () => {
     const free = aboutSections.find((s) => s.id === 'a.free')!;
-    const mission = aboutSections.find((s) => s.id === 'a.mission')!;
+    const mission = aboutSection('a.mission');
     expect(free.body).toMatch(/account/);
     expect(free.body).toMatch(/only on this phone/);
     expect(free.body).toMatch(/Settings/);
@@ -32,9 +32,9 @@ describe('About in Dutch (the "NL" toggle)', () => {
     expect(mission.body).toMatch(/no ads, no subscription/);
   });
 
-  it('ends with the disclaimer (general information, checked date, where to ask), then the voices and the contact', () => {
+  it('ends with the disclaimer (general information, checked date, where to ask), then the contact', () => {
     const ids = aboutSections.map((s) => s.id);
-    expect(ids.slice(-3)).toEqual(['a.disclaimer', 'a.voices', 'a.contact']);
+    expect(ids.slice(-2)).toEqual(['a.disclaimer', 'a.contact']);
     const d = aboutSections.find((s) => s.id === 'a.disclaimer')!;
     expect(d.emoji).toBe('⚖️');
     expect(d.body).toMatch(/general information, not legal advice/);
@@ -64,8 +64,8 @@ describe('About in Dutch (the "NL" toggle)', () => {
       expect(textOf(on), s.id).toContain(s.nl.body);
       expect(textOf(off), s.id).not.toContain(s.nl.body);
     }
-    expect(off).toContain('مهمتنا');
-    expect(on).not.toContain('مهمتنا');
+    expect(off).toContain('خصوصيتك');
+    expect(on).not.toContain('خصوصيتك');
     expect(on.match(/<section class="about-section about-nl-on" lang="nl" dir="ltr">/g)).toHaveLength(aboutSections.length);
     expect(off).not.toContain('about-nl-on');
   });

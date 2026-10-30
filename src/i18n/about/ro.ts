@@ -3,6 +3,7 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {
     about: 'Despre Vloertaal',
+    forCoaches: 'Pentru îndrumători și angajatori', // nieuw, nalezen
   },
   gloss: {
     'a.what': 'Ce este Vloertaal?',
@@ -23,8 +24,6 @@ const t: CultureTranslation = {
     'a.free.b': 'Nu ai nevoie de cont. Progresul tău se salvează doar pe acest telefon sau calculator. Dacă este pornită, aplicația numără anonim cât de des se fac lecțiile: fără nume, fără urmărire. O poți opri în „Setări”.',
     'a.disclaimer': 'Bine de știut',
     'a.disclaimer.b': 'Sfaturile din Vloertaal sunt informații generale, nu consultanță juridică. Regulile se pot schimba; textele au fost actualizate ultima dată în octombrie 2026. Pentru situația ta, întreabă-ți angajatorul, un sindicat sau Juridisch Loket.',
-    'a.voices': 'Vocile',
-    'a.voices.b': 'Fiecare personaj are propria voce olandeză: Bram vorbește cu vocea lui Thijmen, Henk cu a lui Daniel, Amina cu a lui Ariël, iar Jada cu a lui Noa. Aceste voci au fost înregistrate cu ElevenLabs. Dacă o propoziție nu are încă o înregistrare, auzi vocea telefonului ori calculatorului tău.',
     'a.contact': 'Întrebări sau o greșeală?',
     'a.contact.b': 'Ai găsit o greșeală, de exemplu într-o traducere sau într-un sfat? Sau ai o întrebare? Trimite un e-mail la hoi@vloertaal.nl. O captură de ecran ajută. Într-o lecție poți apăsa și pe stegulețul „Melden” de sus: atunci e-mailul spune deja unde ești.',
   },

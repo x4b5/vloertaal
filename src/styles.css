@@ -4307,6 +4307,15 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 
 /* Voor begeleiders: the intro is body text (at least 17px), not a footnote. */
 .coaches > p.small { font-size: 1.0625rem; line-height: 1.5; }
+/* Voor begeleiders en werkgevers (src/content/pro.ts): lines with a bold start, the one mail link,
+   and the topic list inside its section. */
+.pro-lines { margin: 0 0 10px; padding-inline-start: 1.2em; display: flex; flex-direction: column; gap: 8px; line-height: 1.55; }
+.pro-mail { color: inherit; font-weight: 700; text-underline-offset: 0.15em; white-space: nowrap; }
+.pro-section .coach-links { border-top: 0; padding-top: 4px; }
+/* Over: the button to that page, its Dutch name over the help language's. */
+.coach-link-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.coach-link-text .coach-link-nl { font-size: 0.95rem; line-height: 1.25; }
+.coach-link-text .bi { font-weight: 500; }
 
 /* "Ik kan nu niet luisteren" under a listening exercise (LessonPlayer, src/lib/skipSound.ts): quiet,
    not a second main button, but a real tap target. */

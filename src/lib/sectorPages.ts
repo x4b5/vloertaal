@@ -100,7 +100,7 @@ export function sectorPage(id: SectorId): string {
 ${unitSections(own)}
 <section aria-labelledby="path"><h2 id="path">Wat komt er eerst?</h2>
 <p>Kies je in de app bij de vraag waar je werkt voor ‘${esc(group.nl)}’ en dan ‘${esc(page.name)}’? Dan staat ${names} al vroeg in je lespad, meteen na de eerste basisonderwerpen. Ook ${esc(focus.map((f) => `‘${f}’`).join(' en '))} komen eerder aan de beurt. Alle andere onderwerpen blijven open: je kiest zelf.</p>
-<p>Leidinggevende of werkgever in ${esc(page.short)}? Stuur je nieuwe collega’s de link naar deze pagina, of naar de pagina in hun eigen taal (hieronder). Meer tips staan bij <a href="${COACH_PATH}">Voor begeleiders</a>.</p></section>
+<p>Leidinggevende of werkgever in ${esc(page.short)}? Stuur je nieuwe collega’s de link naar deze pagina, of naar de pagina in hun eigen taal (hieronder). Meer tips staan bij <a href="${COACH_PATH}">Voor begeleiders en werkgevers</a>.</p></section>
 ${rules.length ? `<section aria-labelledby="rules"><h2 id="rules">Werkregels voor ${esc(page.phrase)}</h2>
 <p>Spreek je al Nederlands? Kies dan in de app “Nederlands”. Dan leer je de regels op het werk, ook voor ${esc(page.phrase)}:</p>
 ${rules.map((l) => `<h3>${esc(l.title)}</h3><p>${esc(l.goal)}</p><p class="remember">Onthoud: ${esc(l.remember)}</p>`).join('\n')}
