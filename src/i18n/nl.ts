@@ -377,6 +377,10 @@ export const uiNl: Record<UiKey, UiText> = {
   coachDays: 'Dagen geoefend in de laatste 4 weken',
   coachLast: 'Laatste les, met de datum',
   coachNameAsk: 'Je naam op de kaart?',
+  // "Wat kun je nu?": zinnen per onderwerp (src/content/kunJeNu.ts)
+  kunJeNu: 'Wat kun je nu?',
+  kunNote: 'Het niveau bij elke zin is een richtlijn, geen officieel niveau.',
+  coachCanDo: 'Hoeveel zinnen “Ik kan …” je hebt, van je onderwerpen die af zijn',
 };
 
 const lang: HelpLanguageSource = {

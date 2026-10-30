@@ -1,11 +1,12 @@
 import { dutchUi } from '../lib/track';
 import { Fragment, useEffect, useId, useMemo, useRef, useState } from 'react';
-import { langTag, ui, said } from '../i18n';
+import { gloss, langTag, ui, said } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import type { SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { CERT_NOTE, certData, certDate, certListLabel, certMeta, certSub, earnedCertificates, loadCertName, saveCertName, sealRing, type CertData } from '../lib/certificate';
-import { certificatePng, shareCertificate } from '../lib/certCanvas';
+import { certKunFits, certificatePng, fontsReady, shareCertificate } from '../lib/certCanvas';
+import { kunJeNu, pastBij, type KunZin } from '../content/kunJeNu';
 import type { Progress } from '../lib/progress';
 import { KAART_NOTE, kaartAlt, kaartData } from '../lib/kaart';
 import { kaartPng, shareKaart } from '../lib/kaartCanvas';
@@ -68,7 +69,8 @@ function Signature() {
 export function certAlt(data: CertData): string {
   const end = (t: string) => (/[.!?]$/.test(t) ? t : `${t}.`);
   const list = data.phrases.length ? `${certListLabel(data)}: ${data.phrases.map(end).join(' ')} ` : '';
-  return `Certificaat Vloertaal: ${data.titleNl}. ${data.name ? `Uitgereikt aan ${data.name}. ` : ''}${list}${certMeta(data).replace(/ · /g, ', ')}. Behaald op ${data.date}. ${CERT_NOTE}.`;
+  const kun = data.kun?.length ? `Wat kun je nu? ${data.kun.map(end).join(' ')} ` : '';
+  return `Certificaat Vloertaal: ${data.titleNl}. ${data.name ? `Uitgereikt aan ${data.name}. ` : ''}${list}${kun}${certMeta(data).replace(/ · /g, ', ')}. Behaald op ${data.date}. ${CERT_NOTE}.`;
 }
 
 /** The certificate: A4 landscape, paper on a kraft border. Sizes follow its width (cqw). */
@@ -109,6 +111,13 @@ export function CertificateSheet({ data, className }: { data: CertData; classNam
             <span className="cert-label">{certListLabel(data)}</span>
             <ul>{data.phrases.map((p) => <li key={p}>{p}</li>)}</ul>
           </div>
+          {/* "Wat kun je nu?": only when it fits (data.kun, src/lib/certCanvas.ts certKunFits), as in the picture. */}
+          {data.kun?.length ? (
+            <div className="cert-kun">
+              <span className="cert-label">Wat kun je nu?</span>
+              <ul>{data.kun.map((k) => <li key={k}>{k}</li>)}</ul>
+            </div>
+          ) : null}
           <p className="cert-meta">{certMeta(data)}</p>
         </div>
         <div className="cert-foot">
@@ -211,7 +220,20 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
   const [asking, setAsking] = useState(stored === null);
   const [busy, setBusy] = useState(false);
   const [saved, setSaved] = useState(false);
-  const data = certData(unit, day, name, lang, sector, region, completed);
+  const base = certData(unit, day, name, lang, sector, region, completed);
+  // "Wat kun je nu?": all on the screen, under the sheet; on the sheet (and the picture) too when
+  // the lines fit, measured once the fonts are in (certKunFits).
+  const zinnen = kunJeNu(unit.id);
+  const [kunFit, setKunFit] = useState(false);
+  const baseKey = JSON.stringify(base);
+  useEffect(() => {
+    let alive = true;
+    const lines = zinnen.map((z) => z.nl);
+    fontsReady().then(() => { if (alive) setKunFit(certKunFits(base, lines)); }, () => {});
+    return () => { alive = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [baseKey]);
+  const data: CertData = kunFit ? { ...base, kun: zinnen.map((z) => z.nl) } : base;
   const rtl = lang?.dir === 'rtl';
 
   // The tab title becomes the PDF's file name when it is saved from the print dialog.
@@ -282,10 +304,43 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
       {saved && (
         <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
       )}
+      <KunJeNuSection zinnen={zinnen} lang={lang} />
       <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
         <NlPair nlFirst nl="Naam wijzigen" className="keep-link-gloss" text={ui('certChangeName', lang)} />
       </button>
     </div>
+  );
+}
+
+/**
+ * "Wat kun je nu?" under a certificate: the topic's can-do sentences (src/content/kunJeNu.ts), each
+ * in Dutch with its meaning in the help language (the work-rules track: Dutch only) and, small,
+ * the level and skill it fits ("past bij A2 · spreken"). Text only, nothing to tap.
+ */
+function KunJeNuSection({ zinnen, lang }: { zinnen: KunZin[]; lang?: HelpLanguage }) {
+  const id = useId();
+  if (!zinnen.length) return null;
+  const rtl = lang?.dir === 'rtl';
+  return (
+    <section className="kun-card" dir={rtl ? 'rtl' : undefined} aria-labelledby={id}>
+      <h2 id={id} className="kun-head">
+        <NlPair nlFirst nl="Wat kun je nu?" nlClass="kun-head-nl" className="kun-head-help" text={ui('kunJeNu', lang)} />
+      </h2>
+      <ul className="kun-list">
+        {zinnen.map((z) => (
+          <li key={z.id} className="kun-row">
+            <CheckIcon size={20} />
+            <span className="kun-text">
+              <NlPair nlFirst content nl={z.nl} nlClass="kun-nl" className="kun-help" text={gloss(z.id, z.en ?? z.nl, lang)} />
+              <span className="kun-tag" lang="nl" dir="ltr">{pastBij(z)}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p className="kun-note">
+        <NlPair nlFirst nl="Het niveau bij elke zin is een richtlijn, geen officieel niveau." nlClass="kun-note-nl" text={ui('kunNote', lang)} />
+      </p>
+    </section>
   );
 }
 
@@ -404,8 +459,9 @@ export function CertificatesCard({ progress, lang, onOpen }: {
 /* ---- "Laat zien hoe het gaat": the coach card ---- */
 
 /** What each line of the coach card means, in the help language (the card itself is Dutch). */
-const KAART_LEGEND: { nl: string; key: UiKey; toets?: boolean }[] = [
+const KAART_LEGEND: { nl: string; key: UiKey; toets?: boolean; kun?: boolean }[] = [
   { nl: 'Onderwerpen af', key: 'coachTopics' },
+  { nl: 'Wat kun je nu?', key: 'coachCanDo', kun: true },
   { nl: 'Dagen geoefend', key: 'coachDays' },
   { nl: 'Laatste les', key: 'coachLast' },
   { nl: 'Toets “Wat ken je al?”', key: 'toetsTitle', toets: true },
@@ -515,7 +571,7 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
       <section className="kaart-legend" dir={rtl ? 'rtl' : undefined} aria-label={said(ui('coachCardWhat', lang))}>
         <p className="kaart-legend-head"><NlPair nlFirst nl="Op de kaart, in het Nederlands:" nlClass="kaart-legend-nl" text={ui('coachCardWhat', lang)} /></p>
         <ul className="kaart-legend-rows">
-          {KAART_LEGEND.filter((r) => !r.toets || data.toets).map((r) => (
+          {KAART_LEGEND.filter((r) => (!r.toets || data.toets) && (!r.kun || data.kunZinnen > 0)).map((r) => (
             <li key={r.key}>
               {/* The work-rules track: the screen is Dutch, so the line's own explanation only. */}
               {!dutchUi(lang) && <span className="kaart-legend-label" lang="nl" dir="ltr">{r.nl}</span>}

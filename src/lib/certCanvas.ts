@@ -212,6 +212,88 @@ function drawSignature(ctx: CanvasRenderingContext2D, x: number, y: number, w: n
   ctx.restore();
 }
 
+/** The page's fixed frame (the same in measureBody and drawCertificate). */
+function frame() {
+  const pad = 2.4 * u;
+  const px = pad, py = pad, pw = W - 2 * pad, ph = H - 2 * pad;
+  const left = px + 4.4 * u;
+  const right = px + pw - 4.4 * u;
+  const top = py + 3.4 * u;
+  const logo = 8.5 * u;
+  return { px, py, pw, ph, left, right, width: right - left, top, logo };
+}
+
+/** "Wat kun je nu?" on the sheet: the label, then one line per sentence (sizes in u, as the sheet's cqw). */
+const KUN = { gap: 1.9 * u, label: 1.15 * u, size: 1.55 * u, line: 1.55 * u * 1.4, indent: 2.3 * u };
+const kunHeight = (n: number) => (n ? KUN.gap + KUN.label * 1.3 + 0.5 * u + n * KUN.line : 0);
+
+/**
+ * Measures the body (name, title, titles, key words, "Wat kun je nu?", meta), so it is centred
+ * between head and foot (as the flex column on screen).
+ */
+function measureBody(ctx: CanvasRenderingContext2D, d: CertData) {
+  const { py, ph, width, top, logo } = frame();
+  const titleSize = 6.4 * u;
+  ctx.font = font(800, titleSize);
+  // Balanced, like text-wrap: balance on screen: the narrowest width that keeps the line count.
+  let titleLines = wrap(ctx, d.titleNl, width);
+  for (let w = width; titleLines.length > 1 && w > width * 0.4; w -= u) {
+    const tryLines = wrap(ctx, d.titleNl, w);
+    if (tryLines.length > titleLines.length) break;
+    titleLines = tryLines;
+  }
+  ctx.font = font(600, 1.65 * u);
+  const chipH = 1.65 * u * 1.25 + 0.9 * u;
+  const chipRows: { text: string; w: number }[][] = [[]];
+  let rowW = 0;
+  for (const p of d.phrases) {
+    const w = ctx.measureText(p).width + 2.2 * u;
+    if (rowW && rowW + w > width) { chipRows.push([]); rowW = 0; }
+    chipRows[chipRows.length - 1].push({ text: p, w });
+    rowW += w + 0.8 * u;
+  }
+  // The name after "UITGEREIKT AAN": smaller to fit, or on two lines (fitName).
+  ctx.font = font(700, 1.15 * u);
+  const toLeft = ctx.measureText('UITGEREIKT AAN').width + 0.14 * 1.15 * u * 14 + 1 * u;
+  const name = d.name ? fitName(d.name, width - toLeft, 3 * u, 2 * u, (text, size) => {
+    ctx.font = font(700, size, HELP);
+    return ctx.measureText(text).width;
+  }) : null;
+  const nameH = name ? name.lines.length * name.size * 1.2 + 0.6 * u : 0;
+  const titleH = titleLines.length * titleSize * 1.02;
+  // No second title in the work-rules track (the unit's title is Dutch already).
+  const subH = d.rules ? 0 : 0.9 * u + 2 * u * 1.3;
+  const wordsH = 2.4 * u + 1.15 * u * 1.3 + 0.8 * u + chipRows.length * chipH + (chipRows.length - 1) * 0.8 * u;
+  const metaH = 1.8 * u + 1.45 * u * 1.3;
+  const kunLines = d.kun ?? [];
+  const bodyH = nameH + titleH + subH + wordsH + kunHeight(kunLines.length) + metaH;
+  const bodyTop = top + logo + 1.6 * u;
+  const footTop = py + ph - 2.4 * u - 1.1 * u * 1.3 - 1.4 * u - 9 * u;
+  return { titleSize, titleLines, chipH, chipRows, toLeft, name, nameH, kunLines, bodyH, bodyTop, footTop };
+}
+
+/**
+ * Does "Wat kun je nu?" fit on the certificate (at most 3 lines, each on one line, and the body
+ * still between head and foot)? Measured as the picture draws it; the sheet on screen has the same
+ * sizes (cqw), so both show the lines, or neither. No canvas (an old browser, a test): no.
+ */
+export function certKunFits(d: CertData, kun: string[]): boolean {
+  if (!kun.length || kun.length > 3 || typeof document === 'undefined') return false;
+  let ctx: CanvasRenderingContext2D | null = null;
+  try {
+    ctx = document.createElement('canvas').getContext('2d');
+  } catch {
+    return false;
+  }
+  if (!ctx || typeof ctx.measureText !== 'function') return false;
+  const { width } = frame();
+  ctx.font = font(600, KUN.size);
+  if (kun.some((line) => ctx!.measureText(line).width > width - KUN.indent)) return false;
+  const { bodyH, bodyTop, footTop } = measureBody(ctx, { ...d, kun });
+  // A little room to spare: the sheet on screen wraps text as the browser does, not as here.
+  return bodyH <= footTop - bodyTop - 1.2 * u;
+}
+
 /** Draws the certificate on a new canvas. */
 export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   await fontsReady();
@@ -241,7 +323,6 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
 
   const left = px + 4.4 * u;
   const right = px + pw - 4.4 * u;
-  const width = right - left;
 
   // Head: logo, "CERTIFICAAT · VLOERTAAL", the unit tag.
   const top = py + 3.4 * u;
@@ -276,42 +357,7 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   ctx.textBaseline = 'alphabetic';
   ctx.textAlign = 'left';
 
-  // Measure the body first, so it is centred between head and foot (as the flex column on screen).
-  const titleSize = 6.4 * u;
-  ctx.font = font(800, titleSize);
-  // Balanced, like text-wrap: balance on screen: the narrowest width that keeps the line count.
-  let titleLines = wrap(ctx, d.titleNl, width);
-  for (let w = width; titleLines.length > 1 && w > width * 0.4; w -= u) {
-    const tryLines = wrap(ctx, d.titleNl, w);
-    if (tryLines.length > titleLines.length) break;
-    titleLines = tryLines;
-  }
-  ctx.font = font(600, 1.65 * u);
-  const chipH = 1.65 * u * 1.25 + 0.9 * u;
-  const chipRows: { text: string; w: number }[][] = [[]];
-  let rowW = 0;
-  for (const p of d.phrases) {
-    const w = ctx.measureText(p).width + 2.2 * u;
-    if (rowW && rowW + w > width) { chipRows.push([]); rowW = 0; }
-    chipRows[chipRows.length - 1].push({ text: p, w });
-    rowW += w + 0.8 * u;
-  }
-  // The name after "UITGEREIKT AAN": smaller to fit, or on two lines (fitName).
-  ctx.font = font(700, 1.15 * u);
-  const toLeft = ctx.measureText('UITGEREIKT AAN').width + 0.14 * 1.15 * u * 14 + 1 * u;
-  const name = d.name ? fitName(d.name, width - toLeft, 3 * u, 2 * u, (text, size) => {
-    ctx.font = font(700, size, HELP);
-    return ctx.measureText(text).width;
-  }) : null;
-  const nameH = name ? name.lines.length * name.size * 1.2 + 0.6 * u : 0;
-  const titleH = titleLines.length * titleSize * 1.02;
-  // No second title in the work-rules track (the unit's title is Dutch already).
-  const subH = d.rules ? 0 : 0.9 * u + 2 * u * 1.3;
-  const wordsH = 2.4 * u + 1.15 * u * 1.3 + 0.8 * u + chipRows.length * chipH + (chipRows.length - 1) * 0.8 * u;
-  const metaH = 1.8 * u + 1.45 * u * 1.3;
-  const bodyH = nameH + titleH + subH + wordsH + metaH;
-  const bodyTop = top + logo + 1.6 * u;
-  const footTop = py + ph - 2.4 * u - 1.1 * u * 1.3 - 1.4 * u - 9 * u;
+  const { titleSize, titleLines, chipH, chipRows, toLeft, name, nameH, kunLines, bodyH, bodyTop, footTop } = measureBody(ctx, d);
   let y = bodyTop + Math.max(0, (footTop - bodyTop - bodyH) / 2);
 
   const label = (text: string, x: number, yy: number) => {
@@ -397,6 +443,31 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
     y += chipH + 0.8 * u;
   }
   y -= 0.8 * u;
+
+  // "Wat kun je nu?": a small label, then each sentence after a green tick (only when it fits: certKunFits).
+  if (kunLines.length) {
+    y += KUN.gap;
+    label('Wat kun je nu?', left, y + KUN.label);
+    y += KUN.label * 1.3 + 0.5 * u;
+    for (const line of kunLines) {
+      const base = y + KUN.line * 0.72;
+      ctx.save();
+      ctx.strokeStyle = C.seal;
+      ctx.lineWidth = 0.28 * u;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.beginPath();
+      ctx.moveTo(left + 0.1 * u, base - 0.55 * u);
+      ctx.lineTo(left + 0.55 * u, base - 0.1 * u);
+      ctx.lineTo(left + 1.35 * u, base - 1.05 * u);
+      ctx.stroke();
+      ctx.restore();
+      ctx.fillStyle = C.ink;
+      ctx.font = font(600, KUN.size);
+      ctx.fillText(line, left + KUN.indent, base);
+      y += KUN.line;
+    }
+  }
 
   y += 1.8 * u;
   ctx.fillStyle = C.ink2;

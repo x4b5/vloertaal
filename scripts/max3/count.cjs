@@ -505,6 +505,12 @@ function defineStates(LANG) {
   add('flow:toets-offer', '/', (p) => realHome(p, { toets: undefined }), { expect: '.toets-offer' });
   add('flow:toets-start', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
   add('flow:toets-later', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3 .bay-now' });
+  // "Wat kun je nu?" (src/content/kunJeNu.ts): under the certificate (text only), and the table on
+  // the coaches' page (two folds, the list exception).
+  add('kunjenu:certificate', shot('certificate&cu=u.time&name=Ali%20Hassan'), null, { expect: '.kun-list' });
+  add('kunjenu:certificate-sector', shot('certificate&cu=u.garage&name=Ali%20Hassan'), null, { expect: '.kun-list' });
+  add('kunjenu:kaart', shot('kaart&name=Ali%20Hassan'), null, { expect: '.kaart-img' });
+  add('kunjenu:coaches', shot('coaches'), null, { list: true, expect: '.kun-details' });
   return S;
 }
 
@@ -646,6 +652,8 @@ function defineRuleStates() {
   add('flow:nl-shelf', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); await tap(p, '.rules-shelf-link'); await settle(p); }, { list: true, expect: '.shelf-list' });
   add('flow:nl-settings-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
   add('flow:nl-about-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 3); await settle(p); }, { expect: '.about-section' });
+  // "Wat kun je nu?" under a Werkregels certificate (Dutch only).
+  add('kunjenu:rule-certificate', shot('certificate&cu=r.loon&name=Fatima%20Amrani'), null, { expect: '.kun-list' });
   return S;
 }
 

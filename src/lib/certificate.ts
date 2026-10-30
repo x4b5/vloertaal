@@ -198,6 +198,11 @@ export interface CertData {
    * it has no second title (the unit's title is Dutch already).
    */
   rules?: boolean;
+  /**
+   * "Wat kun je nu?" (src/content/kunJeNu.ts), in Dutch, only when the lines fit on the sheet
+   * (src/lib/certCanvas.ts certKunFits; the screen under the sheet always shows them all).
+   */
+  kun?: string[];
 }
 
 /**

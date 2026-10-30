@@ -2,6 +2,7 @@ import { CONTACT_EMAIL } from '../content/about';
 import { COACH_FACTS } from '../content/facts';
 import { PRO_LEAD, proSections, type ProSection } from '../content/pro';
 import { THEMES } from '../content/themes';
+import { KUN_REGELS, KUN_TAAL, type KunOnderwerp } from '../content/kunJeNu';
 import { languageNav } from './langPages';
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
 import { appLink, COACH_PATH } from './paths';
@@ -28,6 +29,15 @@ function topicLinks(): string {
     .join('\n');
 }
 
+/** "Wat kun je nu?": a table per track (topic | sentences | fits). */
+function kunTables(): string {
+  const table = (naam: string, lijst: KunOnderwerp[]) => `<h3>${esc(naam)}</h3>
+<table><thead><tr><th scope="col">Onderwerp</th><th scope="col">Zinnen</th><th scope="col">Past bij</th></tr></thead><tbody>${lijst
+    .flatMap((o) => o.zinnen.map((z, i) => `<tr>${i === 0 ? `<th scope="row" rowspan="${o.zinnen.length}">${esc(o.titel)}</th>` : ''}<td>${esc(z.nl)}</td><td>${esc(`${z.niveau} · ${z.vaardigheid}`)}</td></tr>`))
+    .join('')}</tbody></table>`;
+  return [table('Taal', KUN_TAAL), table('Werkregels', KUN_REGELS)].join('\n');
+}
+
 function section(s: ProSection): string {
   const id = s.id.slice(2);
   let inner = [
@@ -44,7 +54,9 @@ function section(s: ProSection): string {
     ? COACH_FACTS.map((f) => `<p>${esc(f.text)}</p><p><small>Bron: ${esc(f.source)}</small></p>`).join('\n')
     : s.extra === 'topics'
       ? `${sectorNav(undefined, 'Woorden per sector')}\n${topicLinks()}`
-      : '';
+      : s.extra === 'kunjenu'
+        ? kunTables()
+        : '';
   return `<section aria-labelledby="${id}"><h2 id="${id}">${esc(s.title)}</h2>
 ${[inner, extra].filter(Boolean).join('\n')}</section>`;
 }

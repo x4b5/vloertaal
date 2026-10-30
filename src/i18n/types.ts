@@ -407,6 +407,10 @@ export const uiEn = {
   coachDays: 'Days of practice in the last 4 weeks',
   coachLast: 'Last lesson, with the date',
   coachNameAsk: 'Your name on the card?',
+  /* "Wat kun je nu?": can-do sentences per topic (src/content/kunJeNu.ts), on the certificate screen and the coach card. */
+  kunJeNu: 'What can you do now?',
+  kunNote: 'The level next to each sentence is a guide, not an official level.',
+  coachCanDo: 'How many “I can …” sentences you have, from your finished topics',
 } as const;
 
 export type UiKey = keyof typeof uiEn;
