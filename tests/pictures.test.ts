@@ -144,6 +144,23 @@ describe('drawn pictures (group 24)', () => {
   });
 });
 
+describe('drawn pictures', () => {
+  it('the Entree words of group 25 have a drawing (no longer only an emoji)', async () => {
+    const { default: words } = await import('../src/pictures/words');
+    const ids = [
+      'w.drinken', 'w.hitte', 'w.werkbon', 'w.lezen', 'w.handtekening', 'w.opruimen', 'w.gereedschap', 'w.zagen',
+      'w.vonk', 'w.gehoorbescherming', 'w.lawaai', 'w.stekker', 'w.elektricien', 'w.band', 'w.olie', 'w.accu',
+      'w.monteur', 'w.proefrit', 'w.rijbewijs', 'w.repareren', 'w.stage', 'w.school', 'w.leerdoel', 'w.portfolio',
+      'w.stemmen', 'w.agent', 'w.scherm', 'w.vergrendelen', 'w.afzender', 'w.klikken', 'w.bijlage', 'w.ictafdeling',
+    ];
+    expect(ids).toHaveLength(32);
+    for (const id of ids) {
+      expect(allWords.some((w) => w.id === id), id).toBe(true);
+      expect(typeof words[id], id).toBe('function');
+    }
+  });
+});
+
 describe('unit icons', () => {
   it('every unit has a drawn icon next to its title', async () => {
     const { units } = await import('../src/content/curriculum');

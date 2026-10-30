@@ -42,6 +42,7 @@ export const UPDATES: Update[] = [
       'Nieuw bij elk certificaat: "Wat kun je nu?". Twee of drie korte zinnen over wat je na het onderwerp kunt, zoals "Ik kan zeggen dat ik ziek ben." Met het niveau waar de zin bij past (A1, A2 of 1F). Dat is een richtlijn, geen officieel niveau. Op de kaart voor je begeleider staat hoeveel zinnen het zijn.',
       'Nieuw in het spoor Taal: "Oefen samen". Na een les met een gesprekje kun je op het eindscherm samen oefenen, met twee mensen op één telefoon. De een leest de collega, de ander antwoordt, en daarna wissel je van rol. Met "Hoor het" en de vertaling (die kan uit). Geen internet nodig, er wordt niets opgenomen en er is geen score.',
       '33 woorden hadden nog een emoji. Ze hebben nu een eigen tekening, zoals de voornaam, zwanger, de sleutel, de plukkar en bukken.',
+      '32 woorden uit de nieuwe Entree-onderwerpen hadden nog een emoji. Ze hebben nu een eigen tekening, zoals de werkbon, de gehoorbescherming, de accu, het rijbewijs, de agent en de bijlage.',
     ],
   },
   {
