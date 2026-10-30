@@ -65,7 +65,7 @@ Zie ook de meetlat voor A2-niveau: [`taal-a2.md`](taal-a2.md).
 - Altijd "je", behalve als het verhaal over een ander gaat: dan gaan de vraag en de antwoorden over die persoon ("Wat kan Kevin het beste doen?"). Zie [`taal-a2.md`](taal-a2.md), regel 5. Zo min mogelijk lijdende vorm.
 - Namen wisselen: Sanne, Mohammed, Kevin, Fatima, Dewi, Piotr, Esra, Jayden. Leidinggevenden: Linda, Mark, Henk. De leerling is "je", nooit standaard één naam.
 - Rustig en volwassen. Niet kinderachtig, niet belerend, geen schuld.
-- Per vraag precies één goed antwoord. De foute antwoorden zijn geloofwaardig en ongeveer even lang. Het goede antwoord staat wisselend op plek A, B of C (telling: A 21, B 21, C 23). Bij "waar of niet waar" is het ongeveer half om half (22 waar, 22 niet waar).
+- Per vraag precies één goed antwoord. De foute antwoorden zijn geloofwaardig en ongeveer even lang. Het goede antwoord staat wisselend op plek A, B of C (telling: A 25, B 24, C 27, met de vragen van 30 oktober 2026 erbij). Bij "waar of niet waar" is het ongeveer half om half (26 waar, 25 niet waar).
 - **⚖️ is een markering voor de redactie.** Niet tonen en niet voorlezen in de app.
 - Bedragen die vaak veranderen (minimumloon, beslagvrije voet, eigen risico) noemen we niet. We zeggen: "kijk op rijksoverheid.nl".
 - Getallen als cijfers ("30 minuten"). Procent voluit ("8 procent"): dat leest de stem beter voor.
@@ -89,14 +89,14 @@ Zie ook de meetlat voor A2-niveau: [`taal-a2.md`](taal-a2.md).
 | 2 | Je eerste dag | 2.1 Op tijd en goed voorbereid · 2.2 Kennismaken · 2.3 Vragen stellen en terugzeggen |
 | 3 | Contract en soorten werk | 3.1 Je contract: wat staat erin? · 3.2 Proeftijd, tijdelijk en vast · 3.3 Oproepwerk en uitzendwerk · 3.4 Stage, leerwerkbaan en zzp |
 | 4 | Loon en loonstrook | 4.1 Bruto en netto · 4.2 Je loonstrook checken · 4.3 Vakantiegeld, toeslag en overwerk |
-| 5 | Werktijden, pauze en vrij | 5.1 Je rooster en je werktijden · 5.2 Pauze · 5.3 Overwerk en nee zeggen · 5.4 Vrij vragen en verlof |
+| 5 | Werktijden, pauze en vrij | 5.1 Je rooster en je werktijden · 5.2 Pauze · 5.3 Overwerk en nee zeggen · 5.4 Vrij vragen en verlof · 5.5 Kinderen en zorg |
 | 6 | Ziek zijn | 6.1 Je ziekmelden · 6.2 Je rechten als je ziek bent · 6.3 Langer ziek en weer beter |
 | 7 | Veilig en gezond werken | 7.1 Beschermende spullen en uitleg · 7.2 Onveilig? Zeg het en stop · 7.3 Een ongeluk, of te veel stress |
 | 8 | Samenwerken: de ongeschreven regels | 8.1 Direct zeggen en feedback · 8.2 Het oneens zijn · 8.3 Afspraak is afspraak · 8.4 Koffie, verjaardagen en je telefoon |
 | 9 | Problemen en je rechten | 9.1 Discriminatie · 9.2 Grensoverschrijdend gedrag · 9.3 Uitbuiting en oplichting · 9.4 Ontslag en het einde van je baan |
-| 10 | Uitkering, werk en geld | 10.1 Werk kwijt: WW · 10.2 Van uitkering naar werk · 10.3 Belasting terug en je post · 10.4 Schulden: vroeg hulp vragen |
+| 10 | Uitkering, werk en geld | 10.1 Werk kwijt: WW · 10.2 Van uitkering naar werk · 10.3 Belasting terug en je post · 10.4 Schulden: vroeg hulp vragen · 10.5 Je werk stopt: regel dit |
 
-**10 units, 36 lessen.** Unit 3 is ook de unit voor herintreders en starters: stage, proeftijd,
+**10 units, 38 lessen.** Les 5.5 en 10.5 kwamen erbij op 30 oktober 2026. Unit 3 is ook de unit voor herintreders en starters: stage, proeftijd,
 uitzendwerk en zzp. Volgorde: zoeken → beginnen → afspraken → geld → tijd → ziekte → veiligheid →
 samenwerken → problemen → uitkering. Units 8 en 9 kunnen ook eerder; ze bouwen niet op elkaar.
 
@@ -352,7 +352,7 @@ nodig. Je BSN is je burgerservicenummer. Het staat op je ID-kaart. Je ID geef je
 
 **Goed antwoord: C.**
 **Waarom:** Laat het weten vóór je dienst begint. Dan kan het team plannen. Te laat, zonder bericht?
-Dat vinden mensen hier erger dan de vertraging zelf.
+Dat vinden mensen hier erger dan de vertraging zelf. Afspraak is afspraak: lukt het niet? Zeg het op tijd.
 
 **Vraag 3 · Waar of niet waar?** "Op je werk mag je altijd dragen wat je wilt."
 
@@ -512,6 +512,23 @@ online. Zoek op "cao" en de naam van je sector.
 **Waarom:** Bij ziekte, WW of ontslag kijken ze naar je contract. Werk je lange tijd meer uren? Dan
 kun je vragen om die uren in je contract ⚖️.
 
+**Vraag 4 · Wat is het beste?** Esra woont net in Nederland. Ze krijgt een baan aangeboden. Ze weet niet of ze hier al mag werken. Wat kan Esra het beste doen?
+
+- **A.** Ze begint gewoon. De baas regelt het vast wel.
+  → *Riskant. Zonder de goede papieren kan ze problemen krijgen.*
+- **B.** Ze vraagt het na vóór ze begint, bijvoorbeeld bij UWV.
+  → *Goed. Dan weet ze het zeker.*
+- **C.** Ze vraagt het aan een vriendin die hier ook werkt.
+  → *Aardig. Maar het hangt af van haar eigen papieren.*
+
+**Goed antwoord: B.**
+**Waarom:** Mag je in Nederland werken? Dat hangt af van je papieren ⚖️. Weet je het niet zeker? Vraag
+het na vóór je begint. Dat kan bij UWV, de IND of VluchtelingenWerk. Je werkgever moet je ID zien en
+een kopie bewaren ⚖️.
+
+*Redactie: leg hier niet per groep uit wie wel en niet mag werken (EU, asiel, Oekraïne,
+statushouder). Alleen: vraag het na vóór je begint.*
+
 **Zo zeg je het:** "Kunt u de afspraak over mijn uren in het contract zetten?"
 
 **Onthoud:** Wat op papier staat, telt. Bewaar je contract goed.
@@ -624,6 +641,12 @@ staat het in de wet. Weet je het niet zeker? Vraag het na bij het bureau.
 *Redactie: vanaf 1 januari 2028 verdwijnt het nulurencontract voor de meeste mensen (Wet meer
 zekerheid flexwerkers). Vanaf 2028 mogen bedrijven alleen werken met toegelaten uitzendbureaus
 (Wtta). Deze les moet dan worden aangepast. ⚖️*
+
+**Vraag 4 · Waar of niet waar?** "Een uitzendbureau mag je laten betalen om je in te schrijven."
+
+**Antwoord: niet waar.**
+**Waarom:** Inschrijven bij een uitzendbureau is gratis ⚖️. Het bureau krijgt geld van het bedrijf waar
+je werkt. Voor echt werk hoef jij zelf niet te betalen. Vraagt een bureau toch geld? Dan klopt er iets niet.
 
 **Zo zeg je het:** "Zaterdag lukt niet, dat is te kort van tevoren. Volgende week kan ik wel."
 
@@ -738,6 +761,13 @@ rijksoverheid.nl. Je cao kan meer geven.
 **Waarom:** Loonheffingskorting is korting op je belasting. Je krijgt die maar bij één werkgever.
 Kies meestal de baan waar je het meest verdient.
 
+**Vraag 4 · Waar of niet waar?** "Bij veel banen is een deel van je loon voor later, voor je pensioen."
+
+**Antwoord: waar.**
+**Waarom:** Pensioen is geld voor later, als je oud bent en stopt met werken. Bij veel banen gaat er
+elke maand iets van je loon af voor je pensioen ⚖️. Je werkgever betaalt meestal ook mee ⚖️. Hoeveel je
+al hebt, zie je op mijnpensioenoverzicht.nl. Je logt in met je DigiD.
+
 **Zo zeg je het:** "Kunt u mij uitleggen waarom mijn netto loon zo laag is?"
 
 **Onthoud:** Bruto is vóór belasting. Netto krijg je op je rekening.
@@ -801,6 +831,20 @@ mee instemmen ⚖️. Ook dan zijn er grenzen ⚖️. Klopt het niet? Vraag hulp
 **Waarom:** Op de loonstrook staat 140 uur. Piotr werkte 152 uur. Hij mist dus 12 uur. 12 keer 20 euro
 is 240 euro bruto. Vergelijk je loonstrook altijd met je eigen lijstje.
 
+**Vraag 5 · Wat is het beste?** Het is de 5e van de maand. Piotr heeft zijn loon nog niet. Vorige maand was het ook te laat. Wat kan Piotr het beste doen?
+
+- **A.** Hij wacht nog een maand. Het komt vast vanzelf.
+  → *Begrijpelijk. Maar het is zijn geld, en hij heeft het nodig.*
+- **B.** Hij stopt meteen met werken tot het geld er is.
+  → *Riskant. Vraag eerst advies voordat je stopt.*
+- **C.** Hij vraagt het na, eerst zelf en dan per mail.
+  → *Goed. Helpt dat niet? Dan vraagt hij advies.*
+
+**Goed antwoord: C.**
+**Waarom:** Je loon moet op tijd op je rekening staan ⚖️. Op welke dag, staat in je contract of cao.
+Is het te laat? Vraag het eerst zelf. Dan per mail, met de datum. Helpt dat niet? Ga naar een vakbond
+of het Juridisch Loket. Betaalt je werkgever te laat? Dan moet hij soms extra betalen ⚖️.
+
 **Zo zeg je het:** "Op mijn loonstrook staan 140 uur. Ik heb 152 uur gewerkt. Kunt u dat nakijken?"
 
 **Onthoud:** Schrijf je uren op. Check elke loonstrook.
@@ -862,7 +906,7 @@ van geld. Of je extra toeslag krijgt, staat in je cao of contract ⚖️. Schrij
 
 ## Unit 5 · Werktijden, pauze, overwerk en vrij vragen
 
-*In deze unit: hoe lang je mag werken, pauze, extra uren, en vrije dagen en verlof.*
+*In deze unit: hoe lang je mag werken, pauze, extra uren, vrije dagen en verlof, en verlof voor kinderen en zorg.*
 
 ### Les 5.1 · Je rooster en je werktijden
 
@@ -991,6 +1035,20 @@ jouw situatie telt ook mee. Bijvoorbeeld zorg voor een kind.
 **Waarom:** Je eigen lijst helpt als er iets misgaat. Check daarna je loonstrook. Loon zonder
 loonstrook is zwart werk. Dan bouw je bijvoorbeeld geen WW en pensioen op ⚖️.
 
+**Vraag 4 · Wat is het beste?** Jayden is oproepkracht. Donderdagavond belt Mark: "Kun je zaterdag komen?" Jayden heeft al andere plannen. Wat kan Jayden het beste doen?
+
+- **A.** Hij zegt ja. Anders krijgt hij misschien geen werk meer.
+  → *Begrijpelijk. Maar hier mag hij nee zeggen.*
+- **B.** Hij zegt rustig nee. Het is te kort van tevoren.
+  → *Goed. Bij minder dan 4 dagen mag hij nee zeggen.*
+- **C.** Hij zegt niets, en hij komt zaterdag gewoon niet.
+  → *Dan rekent Mark op hem. Zeg het duidelijk.*
+
+**Goed antwoord: B.**
+**Waarom:** Een oproepkracht werkt als het bedrijf belt. Je werkgever moet je meestal minstens 4 dagen ⚖️
+van tevoren oproepen. Is het later? Dan mag je nee zeggen. Een cao kan die 4 dagen korter maken ⚖️.
+Kijk in je cao. (Dezelfde regel als in les 3.3, in een andere situatie.)
+
 **Zo zeg je het:** "Vandaag lukt het niet. Morgen kan ik wel een uur langer."
 
 **Onthoud:** Overwerk? Schrijf de uren op, met datum en tijd.
@@ -1058,6 +1116,78 @@ meestal gewoon loon ⚖️. Moet je langer voor iemand zorgen? Vraag naar zorgve
 
 ---
 
+### Les 5.5 · Kinderen en zorg
+
+*Toegevoegd 30 oktober 2026 (rapport hiaten, voorstel 9). Voor herintreders en ouders.*
+
+**Leerdoel:** je weet dat er verlof is voor een zwangerschap, een baby en een ziek kind. Je vraagt het op tijd.
+
+**Scène** · *Beeld: Dewi in de kantine van een winkel. Ze houdt een echo-foto vast en kijkt naar haar telefoon.*
+
+> Dewi werkt in een winkel. Ze is zwanger van haar eerste kind. Ze heeft het nog aan niemand op haar
+> werk verteld. Ze is bang dat ze haar baan kwijtraakt.
+
+**Regelkaart** · 👶 *Zwanger, een baby of een ziek kind? Vraag op tijd welk verlof je hebt.*
+
+- Ben je zwanger? Je werkgever mag je daarom niet ontslaan ⚖️.
+- Je krijgt verlof voor en na de bevalling ⚖️.
+- Je partner krijgt ook verlof bij de geboorte ⚖️.
+- Is je kind ziek? Dan kun je vaak zorgverlof krijgen ⚖️.
+- Hoeveel en hoe lang? Kijk op rijksoverheid.nl of in je cao.
+
+**Vraag 1 · Waar of niet waar?** "Dewi is zwanger. Haar baas mag haar daarom ontslaan."
+
+**Antwoord: niet waar.**
+**Waarom:** Je werkgever mag je niet ontslaan omdat je zwanger bent ⚖️. Een tijdelijk contract niet
+verlengen om die reden, mag ook niet ⚖️. Je vertelt het op je werk als je er klaar voor bent. Maar wel
+op tijd voor je verlof ⚖️.
+
+**Vraag 2 · Wie vraag je het?** De vrouw van Mohammed krijgt een baby. Mohammed wil verlof. Bij wie vraagt hij het aan?
+
+- **A.** Zijn leidinggevende. → *Goed. Verlof vraag je aan op je werk.*
+- **B.** UWV. → *UWV betaalt soms een deel. Maar je vraagt het verlof aan op je werk.*
+- **C.** De gemeente. → *De gemeente gaat niet over verlof van je werk.*
+
+**Goed antwoord: A.**
+**Waarom:** Krijgt je partner een baby? Dan heb je recht op geboorteverlof ⚖️. Vraag het op tijd aan bij
+je werkgever. Later kun je ook ouderschapsverlof vragen. Dat is verlof om voor je kind te zorgen, tot je
+kind 8 jaar is ⚖️. Voor een deel ervan kun je geld krijgen van UWV ⚖️.
+
+**Vraag 3 · Wat is het beste?** De opvang belt Kevin. Zijn dochter heeft koorts en moet naar huis. Kevin is op zijn werk. Wat kan Kevin het beste doen?
+
+- **A.** Hij zegt het meteen tegen zijn leidinggevende, en hij haalt haar op.
+  → *Goed. Bij een noodgeval mag hij meteen weg.*
+- **B.** Hij meldt zich ziek. Dat is het makkelijkst.
+  → *Hij is zelf niet ziek. Voor zijn kind is er verlof.*
+- **C.** Hij werkt eerst zijn dienst af. Dan haalt hij haar op.
+  → *Dat hoeft niet. Zijn dochter heeft hem nu nodig.*
+
+**Goed antwoord: A.**
+**Waarom:** Is je kind ineens ziek? Bij een noodgeval mag je meteen weg. Dat heet calamiteitenverlof ⚖️.
+Moet je een paar dagen voor je kind zorgen? Dan kun je kortdurend zorgverlof vragen ⚖️. Je krijgt dan
+meestal een deel van je loon ⚖️. Kijk in je cao.
+
+**Vraag 4 · Waar of niet waar?** "Verandert je inkomen of je opvang? Geef het door voor je kinderopvangtoeslag."
+
+**Antwoord: waar.**
+**Waarom:** Kinderopvangtoeslag is geld van de overheid voor de opvang van je kind. Hoeveel je krijgt,
+hangt onder meer af van je inkomen ⚖️. Verandert er iets? Geef het meteen door via Mijn toeslagen.
+Anders moet je later misschien veel terugbetalen.
+
+**Zo zeg je het:** "Mijn kind is ziek. Ik moet het ophalen. Mag ik nu weg?"
+
+**Onthoud:** Zwanger, een baby of een ziek kind? Vraag op tijd welk verlof je hebt.
+
+**Wie kan je helpen:** je leidinggevende of HR · de bedrijfsarts (zwanger en zwaar werk) · een vakbond ·
+het Juridisch Loket · UWV (uitkering bij verlof) · Dienst Toeslagen (kinderopvangtoeslag) ·
+rijksoverheid.nl (verlof).
+
+*Redactie: geen weken, bedragen of percentages. Die veranderen vaak (betaald ouderschapsverlof,
+aanvullend geboorteverlof). Het kabinet wil ook de kinderopvangtoeslag veranderen ⚖️. Daarom zegt de les
+alleen: "onder meer je inkomen".*
+
+---
+
 ## Unit 6 · Ziek zijn
 
 *In deze unit: hoe je je ziekmeldt, je loon bij ziekte, de bedrijfsarts, en weer betermelden.*
@@ -1082,7 +1212,8 @@ meestal gewoon loon ⚖️. Moet je langer voor iemand zorgen? Vraag naar zorgve
 
 **Goed antwoord: A.**
 **Waarom:** Bel zelf, en bel vóór je dienst begint. Dat is in de meeste bedrijven de regel. Kijk in
-je contract of het verzuimprotocol. Dat zijn de regels voor ziekmelden bij jouw bedrijf.
+je contract of het verzuimprotocol. Dat zijn de regels voor ziekmelden bij jouw bedrijf. Afspraak is
+afspraak: kun je niet komen? Zeg het op tijd.
 
 **Vraag 2 · Waar of niet waar?** "Je hoeft je baas niet te vertellen welke ziekte je hebt."
 
@@ -1153,6 +1284,16 @@ lang het duurt. En of je misschien ander werk kunt doen.
 **Antwoord: waar.**
 **Waarom:** Meld je meteen ziek bij je werkgever, ook vanuit het buitenland. Dan tellen die dagen
 meestal niet als vakantie ⚖️. Vraag een briefje van een dokter daar.
+
+**Vraag 4 · Waar of niet waar?** "Kevin is zzp'er. Is hij ziek? Dan moet hij zelf zorgen voor geld."
+
+**Antwoord: waar.**
+**Waarom:** Een zzp'er werkt voor zichzelf, zonder werkgever. Niemand betaalt dan je loon door als je
+ziek bent ⚖️. Regel daarom zelf iets, zoals sparen of een verzekering. Werk je als zzp'er, maar voelt het
+als een gewone baan? Vraag advies (zie les 3.4).
+
+*Redactie: er komt mogelijk een verplichte verzekering tegen arbeidsongeschiktheid voor zzp'ers ⚖️.
+Pas deze vraag dan aan.*
 
 **Zo zeg je het:** "Ik denk dat ik 6 weken niet kan werken. Ik houd u op de hoogte."
 
@@ -1357,6 +1498,19 @@ Bijvoorbeeld als iemand in het ziekenhuis moet blijven, blijvend letsel heeft of
 **Goed antwoord: A.**
 **Waarom:** Meld elk ongeluk, ook als het klein lijkt. Schrijf op wat er gebeurde, wanneer, en wie het
 zag. Maak een foto van de plek. Dan heb je bewijs als je later klachten krijgt.
+
+**Vraag 4 · Wat is het beste?** Piotr ziet een collega van een trap vallen. De collega ligt op de grond. Wat kan Piotr het beste doen?
+
+- **A.** Hij roept de BHV'er. Is het ernstig? Dan belt hij 112.
+  → *Goed. Zo komt er snel hulp.*
+- **B.** Hij helpt de collega meteen overeind.
+  → *Liever niet meteen. Bewegen kan letsel erger maken.*
+- **C.** Hij zoekt eerst zijn leidinggevende, op een andere afdeling.
+  → *Dat kost tijd. Eerst hulp, daarna melden.*
+
+**Goed antwoord: A.**
+**Waarom:** Een BHV'er is een collega die eerste hulp geeft bij een ongeluk of brand. Elk bedrijf moet
+daarvoor zorgen ⚖️. Vraag op je eerste dag wie de BHV'er is. Is het ernstig? Bel dan meteen 112.
 
 **Zo zeg je het:** "Ik ben gevallen. Ik wil dat graag melden."
 
@@ -1712,6 +1866,19 @@ is een duidelijk teken van uitbuiting.
 strafbaar, ook voor jou. Je kunt er grote schulden aan overhouden. Geef je pas en codes nooit aan een
 ander.
 
+**Vraag 4 · Wat is het beste?** Mohammed zoekt werk via een bureau. Het bureau zegt: "Een plek kost 200 euro." Wat kan Mohammed het beste doen?
+
+- **A.** Hij betaalt. Dan heeft hij tenminste snel werk.
+  → *Niet doen. Voor echt werk betaalt hij zelf niets.*
+- **B.** Hij vraagt of het later van zijn loon af mag.
+  → *Dan betaalt hij nog steeds. Dat mag ook niet.*
+- **C.** Hij betaalt niet, en hij meldt het bureau.
+  → *Goed. Een bureau mag hiervoor geen geld vragen.*
+
+**Goed antwoord: C.**
+**Waarom:** Voor echt werk hoef jij zelf niet te betalen. Een bureau mag je geen geld vragen voor werk
+⚖️. Ook niet later, van je loon. Vraagt een bureau het toch? Meld het bij de Arbeidsinspectie.
+
 **Zo zeg je het:** "Ik wil mijn paspoort terug. Het is van mij."
 
 **Onthoud:** Je paspoort en je bankpas geef je nooit af.
@@ -1763,6 +1930,13 @@ mail. Staat die termijn niet in het papier? Dan heb je 3 weken ⚖️.
 ontslag krijg je vaak geld mee: de transitievergoeding ⚖️. In de proeftijd en bij een tijdelijk
 contract gelden andere regels. Op staande voet ontslagen? Vraag meteen advies.
 
+**Vraag 4 · Waar of niet waar?** "Het is slim om lid te worden van een vakbond vóór je een probleem hebt."
+
+**Antwoord: waar.**
+**Waarom:** Een vakbond helpt leden met vragen en problemen over hun werk. Ben je net lid? Dan is er
+soms een wachttijd ⚖️. Dan helpt de vakbond nog niet bij een probleem dat er al was. Lid zijn kost geld
+per maand. Kijk op de site van de vakbond.
+
 **Zo zeg je het:** "Ik teken nu niet. Ik wil het eerst laten nakijken."
 
 **Onthoud:** Teken nooit iets over ontslag zonder advies.
@@ -1774,8 +1948,8 @@ er een wachttijd ⚖️) · een rechtsbijstandverzekering, als je die hebt · UW
 
 ## Unit 10 · Uitkering, werk en geld
 
-*In deze unit: WW aanvragen, van uitkering naar werk, toeslagen, belasting terug, je post, en hulp
-bij schulden.*
+*In deze unit: WW aanvragen, van uitkering naar werk, toeslagen, belasting terug, je post, hulp
+bij schulden, en wat je regelt als je werk stopt.*
 
 ### Les 10.1 · Werk kwijt: WW
 
@@ -1817,6 +1991,20 @@ ontslag? Dan krijg je meestal geen WW. Vraag eerst advies voordat je zelf stopt.
 **Goed antwoord: C.**
 **Waarom:** Werk je naast je WW? Geef het altijd door aan UWV. UWV haalt dan een deel van je loon van
 je WW af ⚖️. Niet doorgeven is fraude. Dan moet je terugbetalen, vaak met een boete.
+
+**Vraag 4 · Wat is het beste?** Kevin krijgt een brief van UWV. UWV zegt nee tegen zijn WW. Kevin denkt dat het niet klopt. Wat kan Kevin het beste doen?
+
+- **A.** Hij legt de brief weg. Tegen UWV kan hij toch niets doen.
+  → *Dat kan wel. Hij mag bezwaar maken.*
+- **B.** Hij maakt op tijd bezwaar, en hij vraagt hulp bij de brief.
+  → *Goed. Zo kijkt UWV er nog een keer naar.*
+- **C.** Hij vraagt de WW nog een keer aan, met hetzelfde formulier.
+  → *Dan verandert er meestal niets. Bezwaar is de goede weg.*
+
+**Goed antwoord: B.**
+**Waarom:** Bezwaar maken betekent: je vraagt UWV om het besluit opnieuw te bekijken. Dat doe je binnen
+6 weken ⚖️ na de datum van de brief. Schrijf op waarom het niet klopt. Het Juridisch Loket of een vakbond
+kan je helpen.
 
 **Zo zeg je het:** "Mijn contract stopt op 31 maart. Hoe vraag ik WW aan?"
 
@@ -1871,6 +2059,20 @@ toeslagen. Anders moet je later terugbetalen.
 **Goed antwoord: A.**
 **Waarom:** Laat de gemeente of een geldcoach het samen met je uitrekenen. Denk ook aan reiskosten en
 kinderopvang. Dan kies je met de juiste cijfers.
+
+**Vraag 4 · Wat is het beste?** Fatima moet nog inburgeren. Ze heeft op dinsdag taalles. Haar nieuwe rooster heeft ook diensten op dinsdag. Wat kan Fatima het beste doen?
+
+- **A.** Ze vertelt het aan haar werkgever en aan de gemeente.
+  → *Goed. Dan kunnen ze samen een rooster zoeken.*
+- **B.** Ze stopt met de taalles. Werk gaat nu voor.
+  → *Begrijpelijk. Maar de gemeente moet het weten, want inburgeren moet.*
+- **C.** Ze werkt op dinsdag, en ze zegt niets tegen de gemeente.
+  → *Dan mist ze lessen. Dat kan problemen geven.*
+
+**Goed antwoord: A.**
+**Waarom:** Inburgeren betekent: je leert Nederlands en hoe Nederland werkt. Voor veel nieuwkomers is
+dat verplicht ⚖️. Werk en inburgering kunnen vaak samen. Vertel het je werkgever en de gemeente op tijd.
+De gemeente maakt met je een plan voor inburgering en werk ⚖️.
 
 **Zo zeg je het:** "Ik heb werk gevonden. Wat betekent dat voor mijn uitkering?"
 
@@ -1977,9 +2179,83 @@ SchuldHulpMaatje · het Juridisch Loket.
 
 ---
 
+### Les 10.5 · Je werk stopt: regel dit
+
+*Toegevoegd 30 oktober 2026 (rapport hiaten, voorstel 8). Bij arbeidsmigranten hangen werk, huis en
+zorgverzekering vaak aan één bureau. Stopt het werk, dan stopt het vaak allemaal tegelijk.*
+
+**Leerdoel:** je checkt je laatste loon. Je regelt je huis, je zorgverzekering en je adres.
+
+**Scène** · *Beeld: Piotr met een koffer in een kleine kamer. Op tafel ligt een brief van het uitzendbureau.*
+
+> Piotr werkt via een uitzendbureau in een magazijn. Het bureau regelt ook zijn kamer en zijn
+> zorgverzekering. Zijn contract stopt over 2 weken. Hij wil weten wat er dan nog meer stopt.
+
+**Regelkaart** · 📦 *Je werk stopt? Check je laatste loon. Regel je huis en je zorgverzekering.*
+
+- Check je laatste loon. Krijg je je vakantiegeld en je vrije dagen ⚖️?
+- Huur je via het bureau? In je huurcontract staat hoe lang je mag blijven ⚖️.
+- Een zorgverzekering via het bureau stopt vaak ⚖️. Regel op tijd een nieuwe.
+- Verhuis je? Geef je nieuwe adres door aan de gemeente.
+- Werk kwijt? Vraag binnen 1 week ⚖️ WW aan (les 10.1).
+
+**Vraag 1 · Wat is het beste?** Piotr krijgt zijn laatste loonstrook. Er staat geen vakantiegeld op. Hij had nog 5 vrije dagen. Wat kan Piotr het beste doen?
+
+- **A.** Hij vraagt het bureau waar het vakantiegeld en de 5 dagen zijn.
+  → *Goed. Dat geld hoort bij zijn laatste loon.*
+- **B.** Hij laat het zo. Vrije dagen vervallen als je stopt.
+  → *Nee. Vrije dagen die hij niet opnam, krijgt hij uitbetaald.*
+- **C.** Hij vraagt of hij de dagen bij een nieuwe baan mag houden.
+  → *Dat gaat meestal niet. De dagen horen bij deze baan.*
+
+**Goed antwoord: A.**
+**Waarom:** Bij je laatste loon hoort een eindafrekening. Dat is de laatste betaling als je baan stopt.
+Daarin staat je vakantiegeld. En geld voor vrije dagen die je niet opnam ⚖️. Klopt het niet? Vraag het
+na, het liefst per mail.
+
+**Vraag 2 · Waar of niet waar?** "Woon je via het bureau? Dan moet je altijd weg op je laatste werkdag."
+
+**Antwoord: niet waar.**
+**Waarom:** Huur je een kamer of huis via het bureau? Dan heb je vaak een eigen huurcontract ⚖️. Daarin
+staat hoe lang je nog mag blijven. Dat heet de opzegtermijn. Vraag het op tijd na. Klopt het niet? Vraag
+hulp, bijvoorbeeld bij het Juridisch Loket.
+
+**Vraag 3 · Wat is het beste?** Piotrs zorgverzekering loopt via het bureau. Na zijn laatste werkdag blijft hij in Nederland. Wat kan Piotr het beste doen?
+
+- **A.** Hij doet niets. De verzekering loopt vast vanzelf door.
+  → *Vaak niet. Dan is hij misschien niet verzekerd.*
+- **B.** Hij wacht tot hij naar de dokter moet. Dan regelt hij het.
+  → *Te laat. Een dokter of ziekenhuis kan dan veel geld kosten.*
+- **C.** Hij vraagt of de verzekering stopt. Dan regelt hij een nieuwe.
+  → *Goed. Zo is hij altijd verzekerd.*
+
+**Goed antwoord: C.**
+**Waarom:** Een zorgverzekering via het bureau stopt vaak als je werk stopt ⚖️. Woon of werk je nog in
+Nederland? Dan moet je verzekerd zijn ⚖️. Regel op tijd een nieuwe. Ga je terug naar je eigen land? Zeg
+de verzekering dan op ⚖️.
+
+**Vraag 4 · Wie vraag je het?** Piotr verhuist nu zijn werk stopt. Waar geeft hij zijn nieuwe adres door?
+
+- **A.** Het uitzendbureau. → *Het bureau moet het ook weten. Maar inschrijven doe je bij de gemeente.*
+- **B.** De gemeente. → *Goed. Je nieuwe adres geef je door aan de gemeente.*
+- **C.** UWV. → *Krijg je WW? Dan wil UWV het ook weten. Maar eerst de gemeente.*
+
+**Goed antwoord: B.**
+**Waarom:** Verhuis je? Geef je nieuwe adres binnen 5 dagen ⚖️ door aan de gemeente. Ga je voor lange
+tijd weg uit Nederland? Meld je dan af ⚖️. Geef je adres ook aan je bureau, je bank en UWV.
+
+**Zo zeg je het:** "Mijn contract stopt. Krijg ik mijn vakantiegeld en mijn vrije dagen uitbetaald?"
+
+**Onthoud:** Je werk stopt? Check je laatste loon. Regel je huis en je zorgverzekering.
+
+**Wie kan je helpen:** het uitzendbureau of de loonadministratie · de gemeente (adres) · UWV (WW) · het
+Juridisch Loket · FairWork (bij problemen met huis en werk via een bureau).
+
+---
+
 ## 4. De zakkaart: de 10 belangrijkste "onthoud"-regels
 
-Deze tien komen vooraan op de zakkaart. De andere 26 regels komen eronder, per unit.
+Deze tien komen vooraan op de zakkaart. De andere 28 regels komen eronder, per unit.
 
 1. **Voor echt werk hoef jij zelf niet te betalen.** (les 1.1)
 2. **Eerst lezen, dan tekenen.** (les 1.4)
@@ -2066,7 +2342,7 @@ loon ⚖️. Schoonmaak: te veel werk in te weinig uren (onderbetaling); schrijf
 **Unit 10 · Uitkering en geld.**
 Seizoenswerk (horeca, land- en tuinbouw): let op de wekeneis voor de WW ⚖️. Bouw: WW bij onwerkbaar
 weer ⚖️. Zorg en schoonmaak: veel parttime werk, dus vaak toeslagen of een aanvulling van de gemeente;
-geef elke verandering in uren door. Uitzendwerk: werk stopt soms opeens; vraag dan meteen WW aan.
+geef elke verandering in uren door. Uitzendwerk: werk stopt soms opeens; vraag dan meteen WW aan, en regel je huis en je zorgverzekering (les 10.5).
 
 ---
 
@@ -2267,6 +2543,19 @@ altijd de lijst: de juiste persoon, het juiste medicijn, de juiste tijd. Weet je
 **Goed antwoord: C.**
 **Waarom:** Een fout met medicijnen meld je altijd ⚖️. Dat heet een incident melden. Het gaat niet om
 straf. Het gaat erom dat de cliënt veilig is. En dat het team ervan leert.
+
+**Vraag 4 · Wat zeg je terug?** Een ervaren collega legt Fatima uit wat ze moet doen: "Meneer De Vries krijgt om 12 uur 1 pil, met een glas water." Wat zegt Fatima terug?
+
+- **A.** "Prima. Ik kijk straks wel even op de lijst."
+  → *De lijst is goed. Maar nu weet de collega niet of ze het snapt.*
+- **B.** "Ja hoor, dat lukt me wel."
+  → *Fijn. Maar zo hoort de collega niet wat ze begrepen heeft.*
+- **C.** "Dus om 12 uur 1 pil, met water. Klopt dat?"
+  → *Goed. Zo hoort de collega meteen of het klopt.*
+
+**Goed antwoord: C.**
+**Waarom:** Zeg terug wat je gaat doen. Bij medicijnen is dat extra belangrijk. Zo hoort je collega
+meteen of je iets mist. Check daarna ook de lijst. (Terugzeggen, zoals in les 2.3.)
 
 **Zo zeg je het:** "Ik heb dit nog niet geleerd. Wil je het mij uitleggen?"
 

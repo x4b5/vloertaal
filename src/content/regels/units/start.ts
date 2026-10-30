@@ -64,7 +64,7 @@ export const startUnit: RuleUnit = {
             { id: 'b', text: 'Ze rent extra hard en zegt er niets over.', best: false, feedback: 'Haasten is niet nodig. Even laten weten wel.' },
             { id: 'c', text: 'Ze belt of appt haar leidinggevende meteen.', best: true, feedback: 'Goed. Dan kan het team plannen.' },
           ],
-          why: 'Laat het weten vóór je dienst begint. Dan kan het team plannen. Te laat, zonder bericht? Dat vinden mensen hier erger dan de vertraging zelf.',
+          why: 'Laat het weten vóór je dienst begint. Dan kan het team plannen. Te laat, zonder bericht? Dat vinden mensen hier erger dan de vertraging zelf. Afspraak is afspraak: lukt het niet? Zeg het op tijd.',
         },
         // ⚖️ check: Een regel moet wel een goede reden hebben ⚖️.
         {

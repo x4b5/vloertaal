@@ -81,6 +81,23 @@ export const contractUnit: RuleUnit = {
           ],
           why: 'Bij ziekte, WW of ontslag kijken ze naar je contract. Werk je lange tijd meer uren? Dan kun je vragen om die uren in je contract.',
         },
+        // Mag ik hier werken? (rapport hiaten, hoofdstuk 3). Bewust geen regels per groep (EU,
+        //   asiel, Oekraïne, statushouder): alleen "vraag het na vóór je begint".
+        // ⚖️ check: Mag je in Nederland werken? Dat hangt af van je papieren ⚖️ (Wet arbeid
+        //   vreemdelingen).
+        // ⚖️ check: Je werkgever moet je ID zien en een kopie bewaren ⚖️ (art. 15 Wav, art. 28 Wet
+        //   op de loonbelasting).
+        {
+          kind: 'whatdo',
+          id: 'r.l.contract.1.wd3',
+          situation: 'Esra woont net in Nederland. Ze krijgt een baan aangeboden. Ze weet niet of ze hier al mag werken. Wat kan Esra het beste doen?',
+          options: [
+            { id: 'a', text: 'Ze begint gewoon. De baas regelt het vast wel.', best: false, feedback: 'Riskant. Zonder de goede papieren kan ze problemen krijgen.' },
+            { id: 'b', text: 'Ze vraagt het na vóór ze begint, bijvoorbeeld bij UWV.', best: true, feedback: 'Goed. Dan weet ze het zeker.' },
+            { id: 'c', text: 'Ze vraagt het aan een vriendin die hier ook werkt.', best: false, feedback: 'Aardig. Maar het hangt af van haar eigen papieren.' },
+          ],
+          why: 'Mag je in Nederland werken? Dat hangt af van je papieren. Weet je het niet zeker? Vraag het na vóór je begint. Dat kan bij UWV, de IND of VluchtelingenWerk. Je werkgever moet je ID zien en een kopie bewaren.',
+        },
         {
           kind: 'whoask',
           id: 'r.l.contract.1.wa1',
@@ -270,6 +287,16 @@ export const contractUnit: RuleUnit = {
           statement: 'Een uitzendkracht heeft recht op hetzelfde loon als de vaste mensen die hetzelfde werk doen.',
           answer: true,
           why: "Dat klopt. Doe je hetzelfde werk als vaste collega's? Dan krijg je hetzelfde loon. Zo staat het in de wet. Weet je het niet zeker? Vraag het na bij het bureau.",
+        },
+        // Voor werk betaal je nooit (rapport hiaten, voorstel 3): de tweede vraag naast r.l.zoeken.1.
+        // ⚖️ check: Inschrijven bij een uitzendbureau is gratis. Een bureau mag je geen geld vragen
+        //   om werk voor je te zoeken ⚖️ (art. 9 Waadi).
+        {
+          kind: 'truefalse',
+          id: 'r.l.contract.3.tf3',
+          statement: 'Een uitzendbureau mag je laten betalen om je in te schrijven.',
+          answer: false,
+          why: 'Inschrijven bij een uitzendbureau is gratis. Het bureau krijgt geld van het bedrijf waar je werkt. Voor echt werk hoef jij zelf niet te betalen. Vraagt een bureau toch geld? Dan klopt er iets niet.',
         },
         {
           kind: 'whoask',
