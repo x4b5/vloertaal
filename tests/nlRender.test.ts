@@ -103,9 +103,12 @@ describe('the language list', () => {
     const on = html(createElement(LanguagePicker, { onPick: () => {} }));
     expect(count(on)).toBe(15);
     expect(on).toMatch(/lang="nl"[^>]*>.*Nederlands.*ik spreek al Nederlands/);
-    // After the help languages, before English.
-    expect(on.indexOf('Български')).toBeLessThan(on.indexOf('ik spreek al Nederlands'));
-    expect(on.indexOf('ik spreek al Nederlands')).toBeLessThan(on.indexOf('>English<'));
+    // The very last, after English and under a line, with the word "Werkregels": another part of
+    // the app, not one more help language.
+    expect(on.indexOf('>English<')).toBeLessThan(on.indexOf('lang-sep'));
+    expect(on.indexOf('lang-sep')).toBeLessThan(on.indexOf('ik spreek al Nederlands'));
+    expect(on).toMatch(/lang-btn-nl[\s\S]*Werkregels[\s\S]*Nederlands/);
+    expect(off).not.toContain('lang-sep');
   });
 
   it('shows flags as decoration (hidden from screen readers), never as an extra button', () => {
