@@ -90,7 +90,7 @@ export const contractUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.contract.1.wd3',
-          situation: 'Esra woont net in Nederland. Ze krijgt een baan aangeboden. Ze weet niet of ze hier al mag werken. Wat kan Esra het beste doen?',
+          situation: 'Ewa woont net in Nederland. Ze krijgt een baan aangeboden. Ze weet niet of ze hier al mag werken. Wat kan Ewa het beste doen?',
           options: [
             { id: 'a', text: 'Ze begint gewoon. De baas regelt het vast wel.', best: false, feedback: 'Riskant. Zonder de goede papieren kan ze problemen krijgen.' },
             { id: 'b', text: 'Ze vraagt het na vóór ze begint, bijvoorbeeld bij UWV.', best: true, feedback: 'Goed. Dan weet ze het zeker.' },

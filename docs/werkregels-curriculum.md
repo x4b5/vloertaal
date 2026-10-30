@@ -63,7 +63,8 @@ Zie ook de meetlat voor A2-niveau: [`taal-a2.md`](taal-a2.md).
 - Taalniveau 1F (ongeveer A2). Zinnen van hooguit ongeveer 12 woorden. Eén idee per zin.
 - Gewone woorden. Eén vakwoord per keer, met één korte uitlegzin erbij ("Een cao is een afspraak over loon en regels voor jouw soort werk.").
 - Altijd "je", behalve als het verhaal over een ander gaat: dan gaan de vraag en de antwoorden over die persoon ("Wat kan Kevin het beste doen?"). Zie [`taal-a2.md`](taal-a2.md), regel 5. Zo min mogelijk lijdende vorm.
-- Namen wisselen: Sanne, Mohammed, Kevin, Fatima, Dewi, Piotr, Esra, Jayden. Leidinggevenden: Linda, Mark, Henk. De leerling is "je", nooit standaard één naam.
+- Namen wisselen: Sanne, Mohammed, Kevin, Fatima, Dewi, Piotr, Esra, Jayden (soms Malik of Ewa). Leidinggevenden: Linda, Mark, Henk. De leerling is "je", nooit standaard één naam.
+- Wat we over een naam zeggen, blijft overal waar: Kevin is 19 en heeft geen kinderen. Jayden is 18. Esra is 38 en heeft de Nederlandse nationaliteit. Fatima heeft kinderen op school. Dewi is zwanger van haar eerste kind. Mohammeds vrouw krijgt een baby. Piotr komt uit Polen en heeft een zoon. Malik is 17, Ewa is 20 en woont net in Nederland.
 - Rustig en volwassen. Niet kinderachtig, niet belerend, geen schuld.
 - Per vraag precies één goed antwoord. De foute antwoorden zijn geloofwaardig en ongeveer even lang. Het goede antwoord staat wisselend op plek A, B of C (telling: A 25, B 24, C 27, met de vragen van 30 oktober 2026 erbij). Bij "waar of niet waar" is het ongeveer half om half (26 waar, 25 niet waar).
 - **⚖️ is een markering voor de redactie.** Niet tonen en niet voorlezen in de app.
@@ -512,7 +513,7 @@ online. Zoek op "cao" en de naam van je sector.
 **Waarom:** Bij ziekte, WW of ontslag kijken ze naar je contract. Werk je lange tijd meer uren? Dan
 kun je vragen om die uren in je contract ⚖️.
 
-**Vraag 4 · Wat is het beste?** Esra woont net in Nederland. Ze krijgt een baan aangeboden. Ze weet niet of ze hier al mag werken. Wat kan Esra het beste doen?
+**Vraag 4 · Wat is het beste?** Ewa woont net in Nederland. Ze krijgt een baan aangeboden. Ze weet niet of ze hier al mag werken. Wat kan Ewa het beste doen?
 
 - **A.** Ze begint gewoon. De baas regelt het vast wel.
   → *Riskant. Zonder de goede papieren kan ze problemen krijgen.*
@@ -734,7 +735,7 @@ vakantiegeld, toeslagen en overwerk.*
 verschil is vooral loonheffing. Loonheffing is belasting en premie voor verzekeringen. Je werkgever
 betaalt die voor jou aan de Belastingdienst. Vaak gaat er ook geld af voor je pensioen.
 
-**Vraag 2 · Wat is het beste?** Fatima is 20. Een collega van 25 verdient meer. Ze doen hetzelfde werk. Wat kan Fatima het beste doen?
+**Vraag 2 · Wat is het beste?** Ewa is 20. Een collega van 25 verdient meer. Ze doen hetzelfde werk. Wat kan Ewa het beste doen?
 
 - **A.** Ze zoekt het minimumloon voor haar leeftijd op.
   → *Goed. Dan weet ze of haar loon klopt.*
@@ -924,7 +925,7 @@ van geld. Of je extra toeslag krijgt, staat in je cao of contract ⚖️. Schrij
 langere tijd moet het gemiddeld minder zijn ⚖️. Voor nachtdiensten en jongeren zijn de regels
 strenger.
 
-**Vraag 2 · Waar of niet waar?** "Jayden is 17. Hij mag in het restaurant werken tot middernacht."
+**Vraag 2 · Waar of niet waar?** "Malik is 17. Hij mag in het restaurant werken tot middernacht."
 
 **Antwoord: niet waar.**
 **Waarom:** Ben je 16 of 17 ⚖️? Dan mag je niet werken tussen 23.00 en 6.00 uur ⚖️. Je werkt hooguit
@@ -1153,7 +1154,7 @@ op tijd voor je verlof ⚖️.
 je werkgever. Later kun je ook ouderschapsverlof vragen. Dat is verlof om voor je kind te zorgen, tot je
 kind 8 jaar is ⚖️. Voor een deel ervan kun je geld krijgen van UWV ⚖️.
 
-**Vraag 3 · Wat is het beste?** De opvang belt Kevin. Zijn dochter heeft koorts en moet naar huis. Kevin is op zijn werk. Wat kan Kevin het beste doen?
+**Vraag 3 · Wat is het beste?** De opvang belt Mohammed. Zijn dochter heeft koorts en moet naar huis. Mohammed is op zijn werk. Wat kan Mohammed het beste doen?
 
 - **A.** Hij zegt het meteen tegen zijn leidinggevende, en hij haalt haar op.
   → *Goed. Bij een noodgeval mag hij meteen weg.*
@@ -2578,7 +2579,7 @@ meteen of je iets mist. Check daarna ook de lijst. (Terugzeggen, zoals in les 2.
 
 **Scène** · *Beeld: Jayden in een restaurantkeuken. Hij zet een bak kip in een koelkast. Op de bak een sticker.*
 
-> Jayden werkt in de keuken van een restaurant. Chef Kevin wijst naar de koelkast. "Op elke bak een
+> Jayden werkt in de keuken van een restaurant. Chef Sanne wijst naar de koelkast. "Op elke bak een
 > sticker met de datum. Dat is HACCP." Jayden knikt, maar hij snapt het niet helemaal.
 
 **Vraag 1 · Waar of niet waar?** "HACCP is een manier van werken om eten veilig te houden."

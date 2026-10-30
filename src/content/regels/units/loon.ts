@@ -59,7 +59,7 @@ export const loonUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.loon.1.wd1',
-          situation: 'Fatima is 20. Een collega van 25 verdient meer. Ze doen hetzelfde werk. Wat kan Fatima het beste doen?',
+          situation: 'Ewa is 20. Een collega van 25 verdient meer. Ze doen hetzelfde werk. Wat kan Ewa het beste doen?',
           options: [
             { id: 'a', text: 'Ze zoekt het minimumloon voor haar leeftijd op.', best: true, feedback: 'Goed. Dan weet ze of haar loon klopt.' },
             { id: 'b', text: 'Ze vraagt meteen hetzelfde loon als haar collega.', best: false, feedback: 'Vragen mag. Maar er is een regel voor leeftijd.' },

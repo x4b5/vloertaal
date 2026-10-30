@@ -571,7 +571,7 @@ const coreTips: CultureTip[] = [
       { id: 'c.leave.o2', en: 'Just go, and tell your boss when you are back.', best: false },
       { id: 'c.leave.o3', en: 'Ask a colleague to tell the boss the day before.', best: false },
     ],
-    why: { id: 'c.leave.w', en: 'Your employer plans the work and must agree to the dates. Asking early gives the best chance of a yes.' },
+    why: { id: 'c.leave.w', en: 'Your employer must usually say yes. They may only say no for a very good reason, and then in writing within 2 weeks. Asking early gives the best chance of a yes.' },
   }),
   tip({
     id: 'c.illness',
