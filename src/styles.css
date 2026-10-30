@@ -2027,9 +2027,10 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .tag-nl { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }
 .tag-help {
   min-width: 0; padding-left: 7px; border-left: 2px solid color-mix(in srgb, var(--tag-ink) 35%, transparent);
-  font-size: 15px; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere;
+  font-size: var(--help-min); font-weight: 600; line-height: 1.25; overflow-wrap: anywhere;
 }
-.tag-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 16.5px; }
+/* 15px (16.5px for these scripts) as designed; grows with Tekstgrootte like every help line. */
+.tag-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: calc(var(--help-min) * 1.1); }
 .ex-tag { min-width: 0; }
 
 /* "What does this mean?": a small picture of each option. */
@@ -3099,6 +3100,9 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 :root[data-text='xl'] { font-size: 125%; --help-min: 19px; }
 :root[data-text='large'] body { font-size: 20.25px; }
 :root[data-text='xl'] body { font-size: 22.5px; }
+/* Long words may break rather than run off a narrow screen (320 px, the phone's own larger text):
+   only a word that fits no line breaks, so the normal layout stays as it is. */
+:is(h1, h2, h3, p, li, button, label) { overflow-wrap: break-word; }
 /* Long words may break rather than run off a narrow screen at the larger sizes. */
 :root:is([data-text='large'], [data-text='xl']) :is(h1, h2, h3, p, li, button, label) { overflow-wrap: break-word; }
 /* Larger text in a narrow column: a long word is split with a hyphen where the language allows it
@@ -3414,7 +3418,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .max3-title { display: flex; flex-direction: column; gap: 0; }
 .max3-title .bi-help { --help-size: 0.62em; font-weight: 400; }
 .max3-title-nl { font-size: 0.85rem; font-weight: 500; color: var(--muted); }
-.set-rows { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+/* One column never wider than the screen (320 px, text spacing): the rows shrink and their words wrap. */
+.set-rows { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
 .set-row {
   width: 100%; display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 10px 12px;
   text-align: start; color: var(--ink); background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
@@ -3653,6 +3658,18 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   white-space: normal; overflow: visible; text-overflow: clip;
 }
 :root[data-text='xl'] .set-row-chev { grid-column: 3; grid-row: 1 / span 2; }
+/* The same on a narrow screen (320 px, a phone zoomed in): no room beside the name, so the value
+   goes under it rather than "Automatyczn…". */
+@media (max-width: 359px) {
+  .set-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 12px; row-gap: 4px; align-items: center; }
+  .set-row-icon { grid-column: 1; grid-row: 1 / span 2; }
+  .set-row-names { grid-column: 2; grid-row: 1; }
+  .set-row-value {
+    grid-column: 2; grid-row: 2; justify-self: start; max-width: none; text-align: start;
+    white-space: normal; overflow: visible; text-overflow: clip;
+  }
+  .set-row-chev { grid-column: 3; grid-row: 1 / span 2; }
+}
 /* Settings and onboarding cards at extra large text: room for a whole word ("Automatycznie")
    beside the picture and the speaker; the check of a picked card sits in its corner. */
 .max3-help { overflow-wrap: break-word; hyphens: auto; }
@@ -4019,17 +4036,18 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 
 /* Language list: a flag where it is not sensitive, else a calm tile with letters of the script
    (src/i18n/meta.ts LangMeta.flag). Same box either way, so the names stay aligned. */
-.lang-mark { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 26px; flex: none; }
+.lang-mark { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 26px; flex: none; }
 .lang-flag { width: 30px; height: 20px; display: block; }
 .lang-sample {
-  display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 24px;
+  /* At least the flag's box; it grows with larger text instead of cutting the letters. */
+  display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 24px;
   border-radius: 6px; background: var(--track); color: var(--muted);
-  font-size: 0.82rem; font-weight: 650; line-height: 1; white-space: nowrap; overflow: hidden;
+  font-size: 0.82rem; font-weight: 650; line-height: 1; white-space: nowrap;
 }
 .lang-sample:is([lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.95rem; }
-.lang-grid-compact .lang-mark { width: 30px; height: 22px; }
+.lang-grid-compact .lang-mark { min-width: 30px; min-height: 22px; }
 .lang-grid-compact .lang-flag { width: 27px; height: 18px; }
-.lang-grid-compact .lang-sample { width: 30px; height: 21px; font-size: 0.75rem; }
+.lang-grid-compact .lang-sample { min-width: 30px; min-height: 21px; font-size: 0.75rem; }
 
 /* ------------------------------------------------------------------------------------------
    Werkregels (the work-rules track, src/components/RuleSteps.tsx). Plain Dutch, the lesson's
