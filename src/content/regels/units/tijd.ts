@@ -70,7 +70,7 @@ export const tijdUnit: RuleUnit = {
         {
           kind: 'truefalse',
           id: 'r.l.tijd.1.tf2',
-          statement: 'Jayden is 17. Hij mag in het restaurant werken tot middernacht.',
+          statement: 'Malik is 17. Hij mag in het restaurant werken tot middernacht.',
           answer: false,
           why: 'Ben je 16 of 17? Dan mag je niet werken tussen 23.00 en 6.00 uur. Je werkt hooguit 9 uur per dienst. En hooguit 45 uur per week. Je schooltijd telt daarbij mee.',
         },
@@ -449,7 +449,7 @@ export const tijdUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.tijd.5.wd1',
-          situation: 'De opvang belt Kevin. Zijn dochter heeft koorts en moet naar huis. Kevin is op zijn werk. Wat kan Kevin het beste doen?',
+          situation: 'De opvang belt Mohammed. Zijn dochter heeft koorts en moet naar huis. Mohammed is op zijn werk. Wat kan Mohammed het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt het meteen tegen zijn leidinggevende, en hij haalt haar op.', best: true, feedback: 'Goed. Bij een noodgeval mag hij meteen weg.' },
             { id: 'b', text: 'Hij meldt zich ziek. Dat is het makkelijkst.', best: false, feedback: 'Hij is zelf niet ziek. Voor zijn kind is er verlof.' },

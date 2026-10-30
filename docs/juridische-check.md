@@ -918,7 +918,7 @@ ______________________________________________________________
 
 *Unit „Verlof en ziekte”, les „Days off” (`l.leave`)*
 
-**Samenvatting (NL):** Wettelijk min. 4 × het aantal werkdagen per week aan betaalde vrije dagen (fulltime: 20 per jaar); cao kan meer geven; verlof op tijd en schriftelijk aanvragen; bij een plotselinge noodsituatie kort verlof met loon (calamiteitenverlof); de werkgever moet met de data instemmen.
+**Samenvatting (NL):** Wettelijk min. 4 × het aantal werkdagen per week aan betaalde vrije dagen (fulltime: 20 per jaar); cao kan meer geven; verlof op tijd en schriftelijk aanvragen; bij een plotselinge noodsituatie kort verlof met loon (calamiteitenverlof); de werkgever moet in principe ja zeggen; een nee alleen om een zwaarwegende reden, schriftelijk binnen 2 weken.
 
 **Tekst (Engels, wordt vertaald):**
 
@@ -930,7 +930,7 @@ ______________________________________________________________
 
 **Situatie in de les:** You want to visit your family abroad for three weeks in summer. What do you do?  
 **Goede antwoord:** Ask your employer for leave early, in writing.  
-**Uitleg na het antwoord (`c.leave.w`):** Your employer plans the work and must agree to the dates. Asking early gives the best chance of a yes.
+**Uitleg na het antwoord (`c.leave.w`):** Your employer must usually say yes. They may only say no for a very good reason, and then in writing within 2 weeks. Asking early gives the best chance of a yes.
 
 **⚠ Getallen en termijnen:**
 - By law you get paid days off: at least 4 times the days you work per week.
