@@ -345,6 +345,27 @@ const lang: HelpLanguageSource = {
     coachDays: 'Días de práctica en las últimas 4 semanas', // nieuw, nalezen
     coachLast: 'Última lección, con la fecha', // nieuw, nalezen
     coachNameAsk: '¿Tu nombre en la tarjeta?', // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'Que el teléfono escuche (prueba)', // nieuw, nalezen
+    listenHint: 'Después de hablar, el teléfono dice si te ha entendido. Esto pasa en el mismo teléfono. No va nada a nosotros ni a otros.', // nieuw, nalezen
+    listenNeedsPack: 'Primero el teléfono necesita el neerlandés. Es una descarga grande: usa wifi.', // nieuw, nalezen
+    listenDownload: 'Descargar neerlandés', // nieuw, nalezen
+    listenNotNow: 'Ahora no', // nieuw, nalezen
+    listenDownloading: 'El neerlandés se está descargando. Prueba más tarde.', // nieuw, nalezen
+    listenFailed: 'No ha funcionado. Prueba más tarde, con wifi.', // nieuw, nalezen
+    listenPrivacy: 'Solo escucha el teléfono. No se envía nada.', // nieuw, nalezen
+    heardWait: 'El teléfono escucha…', // nieuw, nalezen
+    heardOk: 'Entendido', // nieuw, nalezen
+    heardAlmost: 'Casi: di {word} otra vez', // nieuw, nalezen
+    heardNotYet: 'Todavía no se entiende', // nieuw, nalezen
+    goOnAnyway: 'Seguir igualmente', // nieuw, nalezen
+    fasterAsk: '¿Quieres ir más rápido?', // nieuw, nalezen
+    fasterHint: 'Menos explicación en las lecciones nuevas. El neerlandés a velocidad normal.', // nieuw, nalezen
+    fasterYes: 'Sí', // nieuw, nalezen
+    fasterNo: 'No', // nieuw, nalezen
+    easierNext: 'La próxima lección es un poco más corta.', // nieuw, nalezen
+    fasterSetting: 'Aprender más rápido', // nieuw, nalezen
+    fasterSettingHint: 'Activado: menos explicación en las lecciones nuevas y el neerlandés a velocidad normal. Desactivado: como antes.', // nieuw, nalezen
     samenTitle: 'Practicar en pareja', // nieuw, nalezen
     samenRowHint: 'Dos personas, un teléfono', // nieuw, nalezen
     samenIntro: 'Practica con un compañero, un amigo o un profesor. Leen por turnos.', // nieuw, nalezen

@@ -345,6 +345,27 @@ const lang: HelpLanguageSource = {
     coachDays: 'أيام التمرين في آخر 4 أسابيع', // nieuw, nalezen
     coachLast: 'آخر درس، مع التاريخ', // nieuw, nalezen
     coachNameAsk: { m: 'اسمك على البطاقة؟', f: 'اسمكِ على البطاقة؟', x: 'الاسم على البطاقة؟' }, // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'استماع الهاتف (تجربة)', // nieuw, nalezen
+    listenHint: { m: 'بعد أن تتكلم، يقول الهاتف هل فهمك. يحدث هذا على الهاتف نفسه. لا يُرسَل شيء إلينا أو إلى غيرنا.', f: 'بعد أن تتكلمي، يقول الهاتف هل فهمكِ. يحدث هذا على الهاتف نفسه. لا يُرسَل شيء إلينا أو إلى غيرنا.', x: 'بعد الكلام، يقول الهاتف هل فهم الكلام. يحدث هذا على الهاتف نفسه. لا يُرسَل شيء إلينا أو إلى غيرنا.' }, // nieuw, nalezen
+    listenNeedsPack: { m: 'يحتاج الهاتف أولاً إلى اللغة الهولندية. التنزيل كبير: استخدم الواي فاي.', f: 'يحتاج الهاتف أولاً إلى اللغة الهولندية. التنزيل كبير: استخدمي الواي فاي.', x: 'يحتاج الهاتف أولاً إلى اللغة الهولندية. التنزيل كبير: الأفضل استخدام الواي فاي.' }, // nieuw, nalezen
+    listenDownload: 'تنزيل الهولندية', // nieuw, nalezen
+    listenNotNow: 'ليس الآن', // nieuw, nalezen
+    listenDownloading: { m: 'الهولندية في الطريق. حاول مرة أخرى لاحقاً.', f: 'الهولندية في الطريق. حاولي مرة أخرى لاحقاً.', x: 'الهولندية في الطريق. يمكن المحاولة مرة أخرى لاحقاً.' }, // nieuw, nalezen
+    listenFailed: { m: 'لم ينجح ذلك. حاول مرة أخرى لاحقاً، مع الواي فاي.', f: 'لم ينجح ذلك. حاولي مرة أخرى لاحقاً، مع الواي فاي.', x: 'لم ينجح ذلك. يمكن المحاولة مرة أخرى لاحقاً، مع الواي فاي.' }, // nieuw, nalezen
+    listenPrivacy: 'الهاتف يستمع وحده. لا يُرسَل أي شيء.', // nieuw, nalezen
+    heardWait: 'الهاتف يستمع…', // nieuw, nalezen
+    heardOk: 'فُهِم الكلام', // nieuw, nalezen
+    heardAlmost: { m: 'تقريباً: قل {word} مرة أخرى', f: 'تقريباً: قولي {word} مرة أخرى', x: 'تقريباً: {word} مرة أخرى' }, // nieuw, nalezen
+    heardNotYet: 'لم يُفهَم بعد', // nieuw, nalezen
+    goOnAnyway: 'المتابعة على أي حال', // nieuw, nalezen
+    fasterAsk: { m: 'هل تريد أن تتعلم أسرع؟', f: 'هل تريدين أن تتعلمي أسرع؟', x: 'التعلّم بسرعة أكبر؟' }, // nieuw, nalezen
+    fasterHint: 'شرح أقل في الدروس الجديدة. الهولندية بسرعة عادية.', // nieuw, nalezen
+    fasterYes: 'نعم', // nieuw, nalezen
+    fasterNo: 'لا', // nieuw, nalezen
+    easierNext: 'الدرس التالي أقصر قليلاً.', // nieuw, nalezen
+    fasterSetting: 'التعلّم بسرعة أكبر', // nieuw, nalezen
+    fasterSettingHint: 'تشغيل: شرح أقل في الدروس الجديدة، والهولندية بسرعة عادية. إيقاف: كما كان من قبل.', // nieuw, nalezen
     samenTitle: 'التمرين معاً', // nieuw, nalezen
     samenRowHint: 'شخصان، هاتف واحد', // nieuw, nalezen
     samenIntro: { m: 'تدرّب مع زميل أو صديق أو معلّم. اقرآ بالتناوب.', f: 'تدرّبي مع زميل أو صديق أو معلّم. اقرآ بالتناوب.', x: 'التمرين مع زميل أو صديق أو معلّم. القراءة بالتناوب.' }, // nieuw, nalezen

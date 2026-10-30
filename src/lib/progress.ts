@@ -12,6 +12,7 @@ export type Country = 'nl' | 'be';
 export const isCountry = (x: unknown): x is Country => x === 'nl' || x === 'be';
 import type { TextSize } from './textSize';
 import { isTempo, type Tempo } from './tempo';
+import { readPace, type PaceState } from './pace';
 
 export interface LessonRecord {
   /** Best accuracy so far, 0–1. */
@@ -114,6 +115,9 @@ export interface Progress {
   parked?: TrackPlace;
   /** "Wat ken je al?" (src/lib/toets.ts): the start and the end, with a version of its own. Missing = not done. */
   toets?: ToetsState;
+  /** Lessons at the learner's level (src/lib/pace.ts): "Wil je sneller?" and a shorter lesson
+   *  after many mistakes. A setting of this phone: not in the backup. Missing = as before. */
+  pace?: PaceState;
 }
 
 /** What each track keeps for itself (Progress.parked). */
@@ -199,6 +203,12 @@ export function loadProgress(): Progress {
         const toets = readToets(saved.toets);
         if (toets) saved.toets = toets;
         else delete saved.toets;
+      }
+      // The pace (added later): kept when it can be read, else left out.
+      if (saved.pace !== undefined) {
+        const pace = readPace(saved.pace);
+        if (pace) saved.pace = pace;
+        else delete saved.pace;
       }
       return { ...emptyProgress, ...saved };
     }

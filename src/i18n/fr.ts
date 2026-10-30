@@ -345,6 +345,27 @@ const lang: HelpLanguageSource = {
     coachDays: 'Jours d’exercice ces 4 dernières semaines', // nieuw, nalezen
     coachLast: 'Dernière leçon, avec la date', // nieuw, nalezen
     coachNameAsk: 'Ton nom sur la carte ?', // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'Le téléphone écoute (essai)', // nieuw, nalezen
+    listenHint: 'Quand tu as parlé, le téléphone dit s’il t’a compris. Ça se passe dans le téléphone lui-même. Rien ne va chez nous ni chez d’autres.', // nieuw, nalezen
+    listenNeedsPack: 'D’abord, le téléphone a besoin du néerlandais. C’est un gros téléchargement : utilise le wifi.', // nieuw, nalezen
+    listenDownload: 'Télécharger le néerlandais', // nieuw, nalezen
+    listenNotNow: 'Pas maintenant', // nieuw, nalezen
+    listenDownloading: 'Le néerlandais arrive. Réessaie plus tard.', // nieuw, nalezen
+    listenFailed: 'Ça n’a pas marché. Réessaie plus tard, avec le wifi.', // nieuw, nalezen
+    listenPrivacy: 'Seul le téléphone écoute. Rien n’est envoyé.', // nieuw, nalezen
+    heardWait: 'Le téléphone écoute…', // nieuw, nalezen
+    heardOk: 'Compris', // nieuw, nalezen
+    heardAlmost: 'Presque : redis {word}', // nieuw, nalezen
+    heardNotYet: 'Pas encore compris', // nieuw, nalezen
+    goOnAnyway: 'Continuer quand même', // nieuw, nalezen
+    fasterAsk: 'Tu veux aller plus vite ?', // nieuw, nalezen
+    fasterHint: 'Moins d’explications dans les nouvelles leçons. Le néerlandais à vitesse normale.', // nieuw, nalezen
+    fasterYes: 'Oui', // nieuw, nalezen
+    fasterNo: 'Non', // nieuw, nalezen
+    easierNext: 'La prochaine leçon est un peu plus courte.', // nieuw, nalezen
+    fasterSetting: 'Apprendre plus vite', // nieuw, nalezen
+    fasterSettingHint: 'Activé : moins d’explications dans les nouvelles leçons et le néerlandais à vitesse normale. Désactivé : comme avant.', // nieuw, nalezen
     samenTitle: 'S’entraîner à deux', // nieuw, nalezen
     samenRowHint: 'Deux personnes, un téléphone', // nieuw, nalezen
     samenIntro: 'Entraîne-toi avec un collègue, un ami ou un professeur. Lisez chacun votre tour.', // nieuw, nalezen

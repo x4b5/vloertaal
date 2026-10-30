@@ -505,6 +505,30 @@ function defineStates(LANG) {
   add('flow:toets-offer', '/', (p) => realHome(p, { toets: undefined }), { expect: '.toets-offer' });
   add('flow:toets-start', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
   add('flow:toets-later', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3 .bay-now' });
+  // "Laat de telefoon luisteren (proef)" (src/lib/listen.ts), with a mocked on-device API
+  // (&listen=, src/dev/ShotHarness.tsx fakeListenApi): its row in Lessen, its page (Dutch on the
+  // phone, or still to download, and the wifi question), and the three outcomes after speaking.
+  add('verstaan:lessons', shot('settings&page=lessons&listen=available'), null, { list: true, expect: '.chrome-back' });
+  add('verstaan:settings', shot('settings&page=listen&listen=available'), null, { expect: '.chrome-back' });
+  add('verstaan:settings-download', shot('settings&page=listen&listen=downloadable'), null, { expect: '.chrome-back' });
+  add('verstaan:settings-wifi', shot('settings&page=listen&listen=downloadable'), async (p) => { await tap(p, '.max3-card', 0); await settle(p); }, { expect: '.listen-download' });
+  add('verstaan:ok', shot('speak-compare&item=sentence&heard=same'), null, { expect: '.say-heard-ok' });
+  add('verstaan:almost', shot('speak-compare&item=sentence&heard=almost'), null, { expect: '.say-heard-almost' });
+  add('verstaan:notyet', shot('speak-compare&item=sentence&heard=de%20bus%20komt'), null, { expect: '.say-heard-notyet' });
+  add('verstaan:wait', shot('speak-compare&item=sentence&heard=wait'), null, { expect: '.say-heard-wait' });
+  // Lessons at the learner's level (src/lib/pace.ts): "Wil je sneller?" (Ja / Nee in place of
+  // Continue), the line after many mistakes, Settings › Lessen › Sneller leren, and today's review
+  // with its sentence cards (a sentence to build, the spoken sentence).
+  add('niveau:faster', shot('niveau&state=faster'), null, { expect: '.result-faster' });
+  add('niveau:easier', shot('niveau&state=easier'), null, { expect: '.result-easier' });
+  add('niveau:setting', shot('settings&page=faster'), null, { expect: '.max3-hint' });
+  add('niveau:daily-build', shot('niveau&state=daily&at=8'), null, { expect: '.player' });
+  // "Wat kun je nu?" (src/content/kunJeNu.ts): under the certificate (text only), and the table on
+  // the coaches' page (two folds, the list exception).
+  add('kunjenu:certificate', shot('certificate&cu=u.time&name=Ali%20Hassan'), null, { expect: '.kun-list' });
+  add('kunjenu:certificate-sector', shot('certificate&cu=u.garage&name=Ali%20Hassan'), null, { expect: '.kun-list' });
+  add('kunjenu:kaart', shot('kaart&name=Ali%20Hassan'), null, { expect: '.kaart-img' });
+  add('kunjenu:coaches', shot('coaches'), null, { list: true, expect: '.kun-details' });
   // "Oefen samen" (src/components/Samen.tsx): the row on a lesson's result (with Continue), the
   // explanation (Start), a turn (Hoor het, a speaker; Vertaling; Volgende), a turn with the roles
   // swapped, the end (Wissel de rollen, Klaar), and the way through: Start, Volgende to the end, swap.
@@ -661,6 +685,8 @@ function defineRuleStates() {
   add('flow:nl-shelf', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); await tap(p, '.rules-shelf-link'); await settle(p); }, { list: true, expect: '.shelf-list' });
   add('flow:nl-settings-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
   add('flow:nl-about-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 3); await settle(p); }, { expect: '.about-section' });
+  // "Wat kun je nu?" under a Werkregels certificate (Dutch only).
+  add('kunjenu:rule-certificate', shot('certificate&cu=r.loon&name=Fatima%20Amrani'), null, { expect: '.kun-list' });
   return S;
 }
 

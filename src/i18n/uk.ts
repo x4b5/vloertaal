@@ -345,6 +345,27 @@ const lang: HelpLanguageSource = {
     coachDays: 'Дні занять за останні 4 тижні', // nieuw, nalezen
     coachLast: 'Останній урок, з датою', // nieuw, nalezen
     coachNameAsk: 'Твоє ім’я на картці?', // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'Телефон слухає (тест)', // nieuw, nalezen
+    listenHint: 'Коли ти скажеш, телефон покаже, чи він тебе зрозумів. Це відбувається на самому телефоні. Нічого не йде ні нам, ні іншим.', // nieuw, nalezen
+    listenNeedsPack: 'Спершу телефону потрібна нідерландська. Це велике завантаження: користуйся Wi-Fi.', // nieuw, nalezen
+    listenDownload: 'Завантажити нідерландську', // nieuw, nalezen
+    listenNotNow: 'Не зараз', // nieuw, nalezen
+    listenDownloading: 'Нідерландська завантажується. Спробуй пізніше.', // nieuw, nalezen
+    listenFailed: 'Не вдалося. Спробуй пізніше, через Wi-Fi.', // nieuw, nalezen
+    listenPrivacy: 'Слухає тільки телефон. Нічого не надсилається.', // nieuw, nalezen
+    heardWait: 'Телефон слухає…', // nieuw, nalezen
+    heardOk: 'Зрозуміло', // nieuw, nalezen
+    heardAlmost: 'Майже: скажи {word} ще раз', // nieuw, nalezen
+    heardNotYet: 'Ще не зрозуміло', // nieuw, nalezen
+    goOnAnyway: 'Все одно далі', // nieuw, nalezen
+    fasterAsk: 'Хочеш швидше?', // nieuw, nalezen
+    fasterHint: 'Менше пояснень у нових уроках. Нідерландська у звичайному темпі.', // nieuw, nalezen
+    fasterYes: 'Так', // nieuw, nalezen
+    fasterNo: 'Ні', // nieuw, nalezen
+    easierNext: 'Наступний урок трохи коротший.', // nieuw, nalezen
+    fasterSetting: 'Вчитися швидше', // nieuw, nalezen
+    fasterSettingHint: 'Увімкнено: менше пояснень у нових уроках і нідерландська у звичайному темпі. Вимкнено: як раніше.', // nieuw, nalezen
     samenTitle: 'Вправляйтеся разом', // nieuw, nalezen
     samenRowHint: 'Двоє людей, один телефон', // nieuw, nalezen
     samenIntro: 'Вправляйся з колегою, другом або вчителем. Читайте по черзі.', // nieuw, nalezen

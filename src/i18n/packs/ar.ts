@@ -5,8 +5,9 @@ import about from '../about/ar';
 import learn from '../learn/ar';
 import sayings from '../sayings/ar';
 import sounds from '../sounds/ar';
+import kunJeNu from '../kunjenu/ar';
 import type { LanguagePack } from './types';
 
 /** Everything in one help language, loaded on demand as its own file (src/i18n/index.ts ensureLanguage). */
-const pack: LanguagePack = { base, culture, work, about, learn, sayings, sounds, url: import.meta.url };
+const pack: LanguagePack = { base, culture, work, about, learn, sayings, sounds, kunJeNu, url: import.meta.url };
 export default pack;

@@ -8,6 +8,7 @@ import { isPlayable, learnedItems } from './content/courses';
 import { trackOf, trackOfId } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
 import { tempoOf } from './lib/tempo';
+import { lessonPace, paceAfterLesson, reviewSoon, setFaster } from './lib/pace';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
@@ -31,7 +32,7 @@ import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, 
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
 import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, workWeek } from './lib/progress';
-import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dailyWordIds, dueIds, gradedStepIds, seedCards, strongerCount } from './lib/spaced';
+import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dueIds, gradedStepIds, seedCards, strongerCount, addLessonSentences, dailyIds, reviewResults, seedSentenceCards, wordResultCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
 import { SAYINGS_FROM } from './content/sayings';
@@ -58,7 +59,7 @@ type View =
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; samen?: string }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string }
   /** "Oefen samen" (src/components/Samen.tsx): a lesson's chats, two people on one phone, from its
    *  result; streakUp / cert: the certificate or the streak milestone still follows. */
   | { name: 'samen'; lessonId: string; streakUp?: number; cert?: string }
@@ -509,6 +510,11 @@ export default function App() {
   // Learners from before "Herhaal vandaag" get cards for the words they already learned.
   useEffect(() => {
     if (!progress.cards) setProgress((p) => (p.cards ? p : { ...p, cards: seedCards(p.completed, dayKey(new Date())) }));
+    // ... and, once, cards for the sentences of those lessons (they came later, lib/spaced.ts).
+    else setProgress((p) => {
+      const cards = p.cards && seedSentenceCards(p.cards, p.completed, dayKey(new Date()));
+      return cards && cards !== p.cards ? { ...p, cards } : p;
+    });
   }, [progress.cards]);
   useEffect(() => { setPreferredVoice(progress.voice); }, [progress.voice]);
   // Set during render, not in an effect: a child's effect (an exercise that would say its word)
@@ -705,11 +711,11 @@ export default function App() {
         const next = earnCertificates(daily
           // (Its review day is the day it was started for, with that day's words: one begun at
           // 23:58 and finished after midnight leaves today's own review to do.)
-          ? { ...completeDaily(progress, accuracy, now), reviewDay: dayKey(lessonStarted.current), cards: applyReview(cards, results, today) }
+          ? { ...completeDaily(progress, accuracy, now), reviewDay: dayKey(lessonStarted.current), cards: applyReview(cards, track === 'regels' ? results : reviewResults(results, view.ids ?? []), today) }
           : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: found.lesson.steps?.length
             // A rules lesson: its questions get a card (by step id), for "Herhaal vandaag" of that track.
             ? addLessonItems(cards, gradedStepIds(found.lesson), results, today)
-            : addLessonWords(cards, found.lesson.words, results, today) }, now);
+            : addLessonSentences(addLessonWords(cards, found.lesson.words, results, today), found.lesson.sentences, results, today) }, now);
         // The lesson's unit is the current block while it is unfinished (see src/lib/route.ts).
         // (A lesson done before, practised again, leaves the block where it is.)
         if (!daily && !progress.completed[view.lessonId]) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
@@ -717,6 +723,16 @@ export default function App() {
         // (A phone that did the old trial lesson before a code shows it after its next lesson.)
         const phrases = !daily && !progress.phrasesShown && Object.keys(progress.completed).every((id) => trialLessonAllowed(id, track));
         if (phrases) next.phrasesShown = true;
+        // The pace (src/lib/pace.ts): a lesson of the language track, not today's review.
+        const paced = !daily && track === 'taal' && !found.lesson.steps?.length ? paceAfterLesson(progress.pace, right, total, today) : undefined;
+        if (paced) {
+          next.pace = paced.pace;
+          // Many mistakes: what went wrong comes back in today's review already.
+          if (paced.easier) next.cards = reviewSoon(next.cards ?? {}, results, today);
+        }
+        // "Wil je sneller?" is not asked on the result that shows the emergency phrases (one more thing to tap).
+        const askFaster = Boolean(paced?.ask) && !phrases;
+        if (paced?.ask && !askFaster) next.pace = { ...next.pace, asked: undefined };
         setProgress(next);
         keepDue.current = Boolean(access) && !keepOffered();
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
@@ -748,7 +764,7 @@ export default function App() {
         replace({
           name: 'result', right, total, newWords: words - before, words, streakUp,
           kind: daily ? 'daily' : reviewing ? 'review' : 'lesson',
-          repeated: daily ? Object.keys(results).length || (found.lesson.steps?.length ?? found.lesson.words.length) : reviewing ? Object.keys(results).length || found.lesson.words.length : undefined,
+          repeated: daily ? wordResultCount(results) || (found.lesson.steps?.length ?? found.lesson.words.length) : reviewing ? wordResultCount(results) || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
           // Still due after today's review, only for who was away 2 days or more ("they come in the
           // next days"): a learner who practises every day and learns many words a day would read
@@ -758,6 +774,8 @@ export default function App() {
           cert: unitDone?.id,
           skipped: skipped || undefined,
           phrases: phrases || undefined,
+          askFaster: askFaster || undefined,
+          easier: paced?.easier || undefined,
           // "Oefen samen": after a lesson of the language track with chats (not after the first
           // lesson: its row to the emergency phrases is enough for one screen).
           samen: !daily && !phrases && track === 'taal' && hasSamen(found.lesson) ? view.lessonId : undefined,
@@ -786,6 +804,7 @@ export default function App() {
           sayings={Boolean(progress.completed[SAYINGS_FROM])}
           report={testerMode(access)}
           reportHint={explainReport(access, track === 'regels')}
+          {...(daily || track !== 'taal' ? {} : lessonPace(progress))}
         />
       );
     }
@@ -806,6 +825,8 @@ export default function App() {
           lang={lang}
           onDone={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())}
           onPhrases={view.phrases ? () => replace({ name: 'phrasebook', streakUp: view.streakUp, cert: view.cert }) : undefined}
+          easier={view.easier}
+          onFaster={view.askFaster ? (yes) => setProgress((p) => setFaster(p, yes, dayKey(new Date()))) : undefined}
           onSamen={view.samen ? () => replace({ name: 'samen', lessonId: view.samen!, streakUp: view.streakUp, cert: view.cert }) : undefined}
         />
       );
@@ -922,6 +943,7 @@ export default function App() {
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
             onTempo={(tempo) => setProgress((p) => ({ ...p, tempo }))}
+            onFaster={(on) => setProgress((p) => setFaster(p, on))}
             onReset={() => {
               // Keep the help language, look, voice, sound, tempo, sector, region and gender (the code is
               // stored apart and stays too); only learning progress is wiped (and lessons in
@@ -932,6 +954,8 @@ export default function App() {
               setProgress((p) => ({
                 ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
                 sector: p.sector, region: p.region, country: p.country, rulesNotice: p.rulesNotice, textSize: p.textSize, tempo: p.tempo, gender: p.gender, genderAsked: p.genderAsked,
+                // "Sneller leren" is a setting: it stays (the count of lessons starts again).
+                pace: p.pace?.faster ? { faster: true, tempoBefore: p.pace.tempoBefore, asked: p.pace.asked } : undefined,
               }));
               tab('route');
             }}
@@ -1018,7 +1042,7 @@ export default function App() {
             daily={daily}
             arrived={arrived}
             onArrived={() => setArrived(null)}
-            onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: track === 'regels' ? dailyRuleIds(progress.cards ?? {}, dayKey(new Date())) : dailyWordIds(progress.cards ?? {}, dayKey(new Date())) })}
+            onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: track === 'regels' ? dailyRuleIds(progress.cards ?? {}, dayKey(new Date())) : dailyIds(progress.cards ?? {}, dayKey(new Date())) })}
             access={acc}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
             focusUnit={focusUnit}

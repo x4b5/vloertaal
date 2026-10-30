@@ -346,6 +346,27 @@ const lang: HelpLanguageSource = {
     coachDays: 'መዓልትታት ልምምድ ኣብ ዝሓለፉ 4 ሰሙናት', // nieuw, nalezen
     coachLast: 'ናይ መወዳእታ ትምህርቲ፡ ምስ ዕለቱ', // nieuw, nalezen
     coachNameAsk: { m: 'ስምካ ኣብታ ካርድ?', f: 'ስምኪ ኣብታ ካርድ?', x: 'ስምኩም ኣብታ ካርድ?' }, // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'ተሌፎን ይስማዕ (ፈተነ)', // nieuw, nalezen
+    listenHint: { m: 'ምስ ተዛረብካ፡ እቲ ተሌፎን እንተ ተረዲኡካ ይነግረካ። እዚ ኣብቲ ተሌፎን ባዕሉ እዩ ዝኸውን። ናባና ወይ ናብ ካልኦት ዋላ ሓንቲ ኣይለኣኽን።', f: 'ምስ ተዛረብኪ፡ እቲ ተሌፎን እንተ ተረዲኡኪ ይነግረኪ። እዚ ኣብቲ ተሌፎን ባዕሉ እዩ ዝኸውን። ናባና ወይ ናብ ካልኦት ዋላ ሓንቲ ኣይለኣኽን።', x: 'ምስ ተዛረብኩም፡ እቲ ተሌፎን እንተ ተረዲኡኩም ይነግረኩም። እዚ ኣብቲ ተሌፎን ባዕሉ እዩ ዝኸውን። ናባና ወይ ናብ ካልኦት ዋላ ሓንቲ ኣይለኣኽን።' }, // nieuw, nalezen
+    listenNeedsPack: { m: 'እቲ ተሌፎን መጀመርታ ሆላንድኛ የድልዮ። ዓቢ ምውራድ እዩ፡ ዋይፋይ ተጠቐም።', f: 'እቲ ተሌፎን መጀመርታ ሆላንድኛ የድልዮ። ዓቢ ምውራድ እዩ፡ ዋይፋይ ተጠቐሚ።', x: 'እቲ ተሌፎን መጀመርታ ሆላንድኛ የድልዮ። ዓቢ ምውራድ እዩ፡ ዋይፋይ ተጠቐሙ።' }, // nieuw, nalezen
+    listenDownload: 'ሆላንድኛ ምውራድ', // nieuw, nalezen
+    listenNotNow: 'ሕጂ ኣይኮነን', // nieuw, nalezen
+    listenDownloading: { m: 'ሆላንድኛ ይመጽእ ኣሎ። ደሓር ደጊምካ ፈትን።', f: 'ሆላንድኛ ይመጽእ ኣሎ። ደሓር ደጊምኪ ፈትኒ።', x: 'ሆላንድኛ ይመጽእ ኣሎ። ደሓር ደጊምኩም ፈትኑ።' }, // nieuw, nalezen
+    listenFailed: { m: 'ኣይሰለጠን። ደሓር ብዋይፋይ ደጊምካ ፈትን።', f: 'ኣይሰለጠን። ደሓር ብዋይፋይ ደጊምኪ ፈትኒ።', x: 'ኣይሰለጠን። ደሓር ብዋይፋይ ደጊምኩም ፈትኑ።' }, // nieuw, nalezen
+    listenPrivacy: 'ተሌፎን ባዕሉ ይሰምዕ። ዋላ ሓንቲ ኣይለኣኽን።', // nieuw, nalezen
+    heardWait: 'ተሌፎን ይሰምዕ ኣሎ…', // nieuw, nalezen
+    heardOk: 'ተረዲኡ', // nieuw, nalezen
+    heardAlmost: { m: 'ቀሪቡ፡ {word} ደጊምካ በሎ', f: 'ቀሪቡ፡ {word} ደጊምኪ በልዮ', x: 'ቀሪቡ፡ {word} ደጊምኩም በልዎ' }, // nieuw, nalezen
+    heardNotYet: 'ገና ኣይተረድአን', // nieuw, nalezen
+    goOnAnyway: { m: 'ብዘየገድስ ቀጽል', f: 'ብዘየገድስ ቀጽሊ', x: 'ብዘየገድስ ቀጽሉ' }, // nieuw, nalezen
+    fasterAsk: { m: 'ብቕልጡፍ ክትመሃር ትደሊ ዶ?', f: 'ብቕልጡፍ ክትመሃሪ ትደልዪ ዶ?', x: 'ብቕልጡፍ ክትመሃሩ ትደልዩ ዶ?' }, // nieuw, nalezen
+    fasterHint: 'ኣብ ሓደሽቲ ትምህርትታት ዝወሓደ መብርሂ። ሆላንድኛ ብንቡር ቅልጣፈ።', // nieuw, nalezen
+    fasterYes: 'እወ', // nieuw, nalezen
+    fasterNo: 'ኣይፋል', // nieuw, nalezen
+    easierNext: 'እቲ ዝቕጽል ትምህርቲ ቁሩብ ሓጺር እዩ።', // nieuw, nalezen
+    fasterSetting: 'ብቕልጡፍ ምምሃር', // nieuw, nalezen
+    fasterSettingHint: 'ክፉት: ኣብ ሓደሽቲ ትምህርትታት ዝወሓደ መብርሂ፣ ሆላንድኛ ድማ ብንቡር ቅልጣፈ። ዕጹው: ከም ቀደም።', // nieuw, nalezen
     samenTitle: 'ብሓባር ምልምማድ', // nieuw, nalezen
     samenRowHint: 'ክልተ ሰባት፡ ሓደ ተሌፎን', // nieuw, nalezen
     samenIntro: { m: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመድ። ብተራ ኣንብቡ።', f: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመዲ። ብተራ ኣንብቡ።', x: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመዱ። ብተራ ኣንብቡ።' }, // nieuw, nalezen

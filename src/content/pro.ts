@@ -30,9 +30,10 @@ export interface ProSection {
   site?: { text: string; href: string }[];
   /**
    * What the page itself adds after the texts: the facts with their sources (src/content/facts.ts
-   * COACH_FACTS), or a link per topic (the app: share it; the site: open it).
+   * COACH_FACTS), a link per topic (the app: share it; the site: open it), or the table of "Wat kun
+   * je nu?" (src/content/kunJeNu.ts: topic, sentences, what they fit).
    */
-  extra?: 'facts' | 'topics';
+  extra?: 'facts' | 'topics' | 'kunjenu';
 }
 
 export { PRO_TITLE };
@@ -86,6 +87,7 @@ export const proSections: ProSection[] = [
     body: [
       'Een leerling heeft geen account nodig: geen naam, geen e-mailadres, geen wachtwoord. Wat een leerling leert, staat alleen op de eigen telefoon of computer. Wij kunnen dat niet zien, en jij als begeleider ook niet: je ziet alleen wat de leerling zelf laat zien. Wil je weten hoe het gaat? Vraag de leerling om de begeleiderskaart te laten zien (Instellingen › Taal en ik › “Laat zien hoe het gaat”). Die kaart maakt de telefoon zelf, als plaatje. De leerling kiest of hij die laat zien, bewaart of stuurt. De certificaten laten zien welke onderwerpen af zijn.',
       'De toets “Wat ken je al?” werkt net zo. De uitslag en de opname van de stem van de leerling (om later “Jij toen” en “Jij nu” te horen) blijven alleen op het toestel. Wij krijgen die niet. Kijk samen met de leerling naar het uitslagscherm. Met “Voortgang wissen” is alles weg, ook de opnames.',
+      'Spreken met “Laat de telefoon luisteren (proef)”: dit staat standaard uit, en de leerling kan het alleen aanzetten op een telefoon die Nederlands zelf kan herkennen, zonder internet. De app gebruikt de herkenning alleen als de browser bevestigt dat die op het toestel gebeurt (processLocally). Kan dat niet, dan is de proef er niet. Er gaat geen geluid en geen tekst naar ons of naar anderen. De telefoon zegt alleen of hij de zin verstond, nooit een cijfer of “fout”.',
       'Wat telt de app? Alleen hoe vaak een les begint, stopt of af is: welke les, in welk kwart iemand stopte, en ongeveer hoeveel minuten een les duurde. En hoe vaak de toets “Wat ken je al?” begint en af is (instap of eind), zonder de uitslag. Dat gaat zonder cookies, met GoatCounter. Er gaat niets mee over de leerling: geen hulptaal, geen sector, geen naam en geen nummer.',
       'De leerling kan het tellen uitzetten bij Instellingen (“Anoniem meetellen”). Vraagt de browser om niet gevolgd te worden (Do Not Track of Global Privacy Control)? Dan telt de app niets. Melden opent een gewone mail: er gaat pas iets naar ons als de leerling die zelf verstuurt.',
     ],
@@ -121,6 +123,15 @@ export const proSections: ProSection[] = [
       { lead: 'Werkregels.', text: 'Voor wie al Nederlands spreekt: hetzelfde ritme, zonder toets. De begeleiderskaart werkt ook daar.' },
     ],
     site: [{ text: 'Werkregels.', href: '/werkregels/' }],
+  },
+  {
+    // "Wat kun je nu?" (src/content/kunJeNu.ts, werkplan stap 2.6): the table follows (extra).
+    id: 'p.kunjenu', emoji: '✅', title: 'Wat kun je nu? Zinnen per onderwerp',
+    body: [
+      'Bij elk onderwerp staan 2 of 3 korte zinnen over wat de leerling na de lessen kan, zoals “Ik kan zeggen dat ik ziek ben.” Ze staan op het certificaat-scherm, en als ze passen ook op het certificaat zelf. De begeleiderskaart laat zien hoeveel zinnen het zijn.',
+      'Bij elke zin staat waar hij bij past: een niveau en een vaardigheid. Bij Taal is dat A1 of A2 van het ERK, bij Werkregels 1F. Dat helpt om de app in je les in te passen. Het is geen officieel niveau en geen toets. Een NT2-docent kijkt de zinnen nog na.',
+    ],
+    extra: 'kunjenu',
   },
   {
     id: 'p.entree', emoji: '🎓', title: 'Entree en mbo',

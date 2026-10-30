@@ -345,6 +345,27 @@ const lang: HelpLanguageSource = {
     coachDays: 'Zile de exercițiu în ultimele 4 săptămâni', // nieuw, nalezen
     coachLast: 'Ultima lecție, cu data', // nieuw, nalezen
     coachNameAsk: 'Numele tău pe card?', // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'Telefonul ascultă (probă)', // nieuw, nalezen
+    listenHint: 'După ce vorbești, telefonul spune dacă te-a înțeles. Asta se întâmplă pe telefon. Nimic nu ajunge la noi sau la alții.', // nieuw, nalezen
+    listenNeedsPack: 'Telefonul are nevoie mai întâi de olandeză. E o descărcare mare: folosește Wi-Fi.', // nieuw, nalezen
+    listenDownload: 'Descarcă olandeza', // nieuw, nalezen
+    listenNotNow: 'Nu acum', // nieuw, nalezen
+    listenDownloading: 'Olandeza se descarcă. Încearcă mai târziu.', // nieuw, nalezen
+    listenFailed: 'N-a mers. Încearcă mai târziu, pe Wi-Fi.', // nieuw, nalezen
+    listenPrivacy: 'Doar telefonul ascultă. Nimic nu este trimis.', // nieuw, nalezen
+    heardWait: 'Telefonul ascultă…', // nieuw, nalezen
+    heardOk: 'Înțeles', // nieuw, nalezen
+    heardAlmost: 'Aproape: spune {word} încă o dată', // nieuw, nalezen
+    heardNotYet: 'Încă neînțeles', // nieuw, nalezen
+    goOnAnyway: 'Mergi mai departe oricum', // nieuw, nalezen
+    fasterAsk: 'Vrei mai repede?', // nieuw, nalezen
+    fasterHint: 'Mai puține explicații în lecțiile noi. Neerlandeza în ritm normal.', // nieuw, nalezen
+    fasterYes: 'Da', // nieuw, nalezen
+    fasterNo: 'Nu', // nieuw, nalezen
+    easierNext: 'Lecția următoare e puțin mai scurtă.', // nieuw, nalezen
+    fasterSetting: 'Învață mai repede', // nieuw, nalezen
+    fasterSettingHint: 'Pornit: mai puține explicații în lecțiile noi și neerlandeza în ritm normal. Oprit: ca înainte.', // nieuw, nalezen
     samenTitle: 'Exersați împreună', // nieuw, nalezen
     samenRowHint: 'Două persoane, un telefon', // nieuw, nalezen
     samenIntro: 'Exersează cu un coleg, un prieten sau un profesor. Citiți pe rând.', // nieuw, nalezen

@@ -345,6 +345,27 @@ const lang: HelpLanguageSource = {
     coachDays: 'Übungstage in den letzten 4 Wochen', // nieuw, nalezen
     coachLast: 'Letzte Lektion, mit Datum', // nieuw, nalezen
     coachNameAsk: 'Dein Name auf der Karte?', // nieuw, nalezen
+    // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
+    listenTrial: 'Das Handy hört zu (Test)', // nieuw, nalezen
+    listenHint: 'Nach dem Sprechen sagt das Handy, ob es dich verstanden hat. Das passiert auf dem Handy selbst. Nichts geht an uns oder an andere.', // nieuw, nalezen
+    listenNeedsPack: 'Das Handy braucht zuerst Niederländisch. Das ist ein großer Download: nimm WLAN.', // nieuw, nalezen
+    listenDownload: 'Niederländisch laden', // nieuw, nalezen
+    listenNotNow: 'Jetzt nicht', // nieuw, nalezen
+    listenDownloading: 'Niederländisch kommt. Versuch es später noch mal.', // nieuw, nalezen
+    listenFailed: 'Das hat nicht geklappt. Versuch es später noch mal, mit WLAN.', // nieuw, nalezen
+    listenPrivacy: 'Nur das Handy hört zu. Nichts wird geschickt.', // nieuw, nalezen
+    heardWait: 'Das Handy hört zu…', // nieuw, nalezen
+    heardOk: 'Verstanden', // nieuw, nalezen
+    heardAlmost: 'Fast: sag {word} noch mal', // nieuw, nalezen
+    heardNotYet: 'Noch nicht verstanden', // nieuw, nalezen
+    goOnAnyway: 'Trotzdem weiter', // nieuw, nalezen
+    fasterAsk: 'Willst du schneller lernen?', // nieuw, nalezen
+    fasterHint: 'Weniger Erklärung in neuen Lektionen. Niederländisch im normalen Tempo.', // nieuw, nalezen
+    fasterYes: 'Ja', // nieuw, nalezen
+    fasterNo: 'Nein', // nieuw, nalezen
+    easierNext: 'Die nächste Lektion ist etwas kürzer.', // nieuw, nalezen
+    fasterSetting: 'Schneller lernen', // nieuw, nalezen
+    fasterSettingHint: 'An: weniger Erklärung in neuen Lektionen und Niederländisch im normalen Tempo. Aus: wie vorher.', // nieuw, nalezen
     samenTitle: 'Zusammen üben', // nieuw, nalezen
     samenRowHint: 'Zwei Personen, ein Handy', // nieuw, nalezen
     samenIntro: 'Übe mit einer Kollegin, einem Freund oder einer Lehrkraft. Lest abwechselnd.', // nieuw, nalezen

@@ -38,6 +38,8 @@ export const UPDATES: Update[] = [
       'Werkregels: twee nieuwe lessen, Kinderen en zorg (zwanger, verlof, een ziek kind, kinderopvangtoeslag) en Je werk stopt: regel dit (laatste loon, huis, zorgverzekering, adres). En 15 nieuwe vragen in andere lessen, onder meer over bezwaar maken, de BHV\'er, pensioen, inburgering, de vakbond en of je hier mag werken.',
       'Nieuw bij Instellingen: in welk land werk je? Kies je België (Vlaanderen)? Dan staat in Werkregels dat de regels over Nederland gaan, en bij Hulp staat waar je in België hulp vindt.',
       'Werkregels: de eerste keer zie je eerst "Goed om te weten": de regels zijn algemene informatie over werk in Nederland, geen juridisch advies. Boven de lessen staat dat ook in één korte regel.',
+      'Een proef bij Instellingen › Lessen: "Laat de telefoon luisteren (proef)". Alleen op een telefoon die Nederlands zelf kan herkennen, zonder internet. Na het spreken zegt de telefoon: Verstaan, Bijna (welk woord nog eens) of Nog niet verstaan. Geen cijfer, en "Toch verder" kan altijd. Het staat uit tot je het aanzet. Er gaat niets naar ons.',
+      'Nieuw bij elk certificaat: "Wat kun je nu?". Twee of drie korte zinnen over wat je na het onderwerp kunt, zoals "Ik kan zeggen dat ik ziek ben." Met het niveau waar de zin bij past (A1, A2 of 1F). Dat is een richtlijn, geen officieel niveau. Op de kaart voor je begeleider staat hoeveel zinnen het zijn.',
       'Nieuw in het spoor Taal: "Oefen samen". Na een les met een gesprekje kun je op het eindscherm samen oefenen, met twee mensen op één telefoon. De een leest de collega, de ander antwoordt, en daarna wissel je van rol. Met "Hoor het" en de vertaling (die kan uit). Geen internet nodig, er wordt niets opgenomen en er is geen score.',
     ],
   },
@@ -156,6 +158,7 @@ export const UPDATES: Update[] = [
       'Nieuw logo: Bram met de V op zijn helm. Bram zegt rustig één zin op het beginscherm en na een les.',
       'Echte meervouden in het Pools, Oekraïens, Roemeens, Arabisch en Bulgaars.',
       'Latere lessen worden stap voor stap moeilijker. "Herhaal vandaag" wisselt meer af.',
+      'Spoor Taal: "Herhaal vandaag" brengt nu ook zinnen terug die je in een les bouwde, en de zin die je zei, op dezelfde dagen als woorden (hoogstens 2 zinnen en 1 zin om te zeggen per dag). Na 3 lessen zonder fout vraagt Vloertaal één keer: "Wil je sneller?" Ja geeft minder uitleg in nieuwe lessen en het Nederlands op normaal tempo; terugzetten kan bij Instellingen › Lessen › Sneller leren. Na een les met veel fouten is de volgende les wat korter, en komen die woorden dezelfde dag terug.',
     ],
   },
 ];

@@ -65,6 +65,10 @@ export interface Lesson {
   repeat?: true;
   /** Today's review: the card box of each word (lib/spaced.ts); box 2 and up get harder questions. */
   boxes?: Record<string, number>;
+  /** Today's review: the first this many sentences are sentence cards (lib/spaced.ts), all built. */
+  cardSentences?: number;
+  /** Today's review: a spoken-sentence card, said again in its "Zeg het" (lib/spaced.ts). */
+  say?: Sentence;
   /**
    * A review (today's review, a unit's mixed review): the lessons whose "Zo werkt het hier" tip
    * can come back, in order of preference; the first one with a tip gives the situation question
