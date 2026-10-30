@@ -66,7 +66,7 @@ Zie ook de meetlat voor A2-niveau: [`taal-a2.md`](taal-a2.md).
 - Namen wisselen: Sanne, Mohammed, Kevin, Fatima, Dewi, Piotr, Esra, Jayden (soms Malik of Ewa). Leidinggevenden: Linda, Mark, Henk. De leerling is "je", nooit standaard één naam.
 - Wat we over een naam zeggen, blijft overal waar: Kevin is 19 en heeft geen kinderen. Jayden is 18. Esra is 38 en heeft de Nederlandse nationaliteit. Fatima heeft kinderen op school. Dewi is zwanger van haar eerste kind. Mohammeds vrouw krijgt een baby. Piotr komt uit Polen en heeft een zoon. Malik is 17, Ewa is 20 en woont net in Nederland.
 - Rustig en volwassen. Niet kinderachtig, niet belerend, geen schuld.
-- Per vraag precies één goed antwoord. De foute antwoorden zijn geloofwaardig en ongeveer even lang. Het goede antwoord staat wisselend op plek A, B of C (telling: A 25, B 24, C 27, met de vragen van 30 oktober 2026 erbij). Bij "waar of niet waar" is het ongeveer half om half (26 waar, 25 niet waar).
+- Per vraag precies één goed antwoord. De foute antwoorden zijn geloofwaardig en ongeveer even lang. Het goede antwoord staat wisselend op plek A, B of C (telling: A 25, B 24, C 27, met de vragen van 30 oktober 2026 erbij; in de code van units 1–10, met 7.4, 7.5, 10.6 en 10.7 uit deel 7 erbij: A 28, B 26, C 27). Bij "waar of niet waar" is het ongeveer half om half (26 waar, 25 niet waar; met deel 7 erbij 29 waar, 28 niet waar).
 - **⚖️ is een markering voor de redactie.** Niet tonen en niet voorlezen in de app.
 - Bedragen die vaak veranderen (minimumloon, beslagvrije voet, eigen risico) noemen we niet. We zeggen: "kijk op rijksoverheid.nl".
 - Getallen als cijfers ("30 minuten"). Procent voluit ("8 procent"): dat leest de stem beter voor.
@@ -79,6 +79,7 @@ Zie ook de meetlat voor A2-niveau: [`taal-a2.md`](taal-a2.md).
 - De lessen in `curriculum.ts` zijn taallessen (woorden, zinnen, gesprekjes). Dit lespad heeft een andere vorm. Er is een nieuw lestype nodig met de stappen `scene`, `choice`, `truefalse`, `phrase`, `remember` en `help`. Voorstel voor ids: `wr.u1`, `wr.l1.1`, `wr.l1.1.q1`, enzovoort.
 - De wetten veranderen in 2027 en 2028 (oproepcontracten, uitzendwerk, WW). Zie het blok "Wat gaat er veranderen" in het bronnenbestand. Lessen met zo'n regel hebben een *Redactie:*-regel.
 - De units 11–17 (de Entree-aanvulling) staan in `docs/entree-aanvulling.md`, niet hier. Daar staat ook les 15.3 "AI op je werk" (19 oktober 2026): AI maakt fouten, geen persoonsgegevens in een chatbot, neppe stemmen, een besluit door een computer (AVG art. 22) en emotieherkenning op het werk (AI-verordening art. 5).
+- Deel 7 (30 oktober 2026) is de tweede Entree-ronde: 14 lessen voor de top 10 Entree-gaten. Les 7.4, 7.5, 10.6 en 10.7 horen bij units 7 en 10 hierboven; les 16.4 bij unit 16 (in `entree-aanvulling.md`); de nieuwe units 18 (Schrijven) en 19 (Jouw weg); en de sectorunits techniek (`r.techniek`) en garage (`r.werkplaats`).
 
 ---
 
@@ -92,12 +93,12 @@ Zie ook de meetlat voor A2-niveau: [`taal-a2.md`](taal-a2.md).
 | 4 | Loon en loonstrook | 4.1 Bruto en netto · 4.2 Je loonstrook checken · 4.3 Vakantiegeld, toeslag en overwerk |
 | 5 | Werktijden, pauze en vrij | 5.1 Je rooster en je werktijden · 5.2 Pauze · 5.3 Overwerk en nee zeggen · 5.4 Vrij vragen en verlof · 5.5 Kinderen en zorg |
 | 6 | Ziek zijn | 6.1 Je ziekmelden · 6.2 Je rechten als je ziek bent · 6.3 Langer ziek en weer beter |
-| 7 | Veilig en gezond werken | 7.1 Beschermende spullen en uitleg · 7.2 Onveilig? Zeg het en stop · 7.3 Een ongeluk, of te veel stress |
+| 7 | Veilig en gezond werken | 7.1 Beschermende spullen en uitleg · 7.2 Onveilig? Zeg het en stop · 7.3 Een ongeluk, of te veel stress · 7.4 Fit voor je werk: slapen, eten, bewegen · 7.5 Alcohol, drugs en je werk |
 | 8 | Samenwerken: de ongeschreven regels | 8.1 Direct zeggen en feedback · 8.2 Het oneens zijn · 8.3 Afspraak is afspraak · 8.4 Koffie, verjaardagen en je telefoon |
 | 9 | Problemen en je rechten | 9.1 Discriminatie · 9.2 Grensoverschrijdend gedrag · 9.3 Uitbuiting en oplichting · 9.4 Ontslag en het einde van je baan |
-| 10 | Uitkering, werk en geld | 10.1 Werk kwijt: WW · 10.2 Van uitkering naar werk · 10.3 Belasting terug en je post · 10.4 Schulden: vroeg hulp vragen · 10.5 Je werk stopt: regel dit |
+| 10 | Uitkering, werk en geld | 10.1 Werk kwijt: WW · 10.2 Van uitkering naar werk · 10.3 Belasting terug en je post · 10.4 Schulden: vroeg hulp vragen · 10.5 Je werk stopt: regel dit · 10.6 Je geld per maand: vaste lasten en sparen · 10.7 Kopen, abonnementen en ruilen |
 
-**10 units, 38 lessen.** Les 5.5 en 10.5 kwamen erbij op 30 oktober 2026. Unit 3 is ook de unit voor herintreders en starters: stage, proeftijd,
+**10 units, 42 lessen.** Les 5.5 en 10.5 kwamen erbij op 30 oktober 2026, en les 7.4, 7.5, 10.6 en 10.7 in de tweede Entree-ronde (deel 7). Na de Entree-units 11–17 komen nog unit 18 (Schrijven op je werk) en unit 19 (Jouw weg: kiezen en verder leren), ook in deel 7. Unit 3 is ook de unit voor herintreders en starters: stage, proeftijd,
 uitzendwerk en zzp. Volgorde: zoeken → beginnen → afspraken → geld → tijd → ziekte → veiligheid →
 samenwerken → problemen → uitkering. Units 8 en 9 kunnen ook eerder; ze bouwen niet op elkaar.
 
@@ -2256,7 +2257,7 @@ Juridisch Loket · FairWork (bij problemen met huis en werk via een bureau).
 
 ## 4. De zakkaart: de 10 belangrijkste "onthoud"-regels
 
-Deze tien komen vooraan op de zakkaart. De andere 28 regels komen eronder, per unit.
+Deze tien komen vooraan op de zakkaart. De andere 32 regels komen eronder, per unit.
 
 1. **Voor echt werk hoef jij zelf niet te betalen.** (les 1.1)
 2. **Eerst lezen, dan tekenen.** (les 1.4)
@@ -2356,6 +2357,10 @@ nakijken.*
 
 *Later erbij (30 oktober 2026): de sector tuinbouw (`r.kas`, les T.1 Veilig in kas en veld en T.2
 Tempo en stukloon). Die staat uitgewerkt in [`entree-aanvulling.md`](entree-aanvulling.md), deel 4.*
+
+*Ook later erbij (30 oktober 2026, tweede Entree-ronde): techniek (`r.techniek`, les TE.1 en TE.2) en
+de garage (`r.werkplaats`, les M.1 en M.2). Die staan in deel 7, net als de reden dat ze nog niet
+in de sectorkeuze staan.*
 
 ## Sector bouw · Veilig op de bouw
 
@@ -2986,3 +2991,966 @@ tillen. Te zwaar? Gebruik een hulpmiddel, of vraag een collega.
 
 **Wie kan je helpen:** je leidinggevende · de bedrijfsarts · de ondernemingsraad · een vakbond · de
 Nederlandse Arbeidsinspectie.
+
+---
+
+## 7. Tweede Entree-ronde (30 oktober 2026)
+
+*14 lessen voor de top 10 Entree-gaten (verslag van 30 oktober 2026; zie
+[`entree-dekking.md`](entree-dekking.md)). Alleen Werkregels: Nederlands op A2, zonder vertalingen
+en zonder opnames. Zelfde vorm als deel 3 en 6. Elk feit met ⚖️ staat in de code met een
+`// ⚖️ check:` en de bron erbij; een deskundige moet ze nakijken. Bij elke les staan ook de 2 foute
+zinnen van "Wat zeg je?" (`src/content/regels/zegHet.ts`).*
+
+| Gat | Les | Waar in de app |
+|---|---|---|
+| Gezond leven (vitaal) | 7.4 Fit voor je werk: slapen, eten, bewegen · 7.5 Alcohol, drugs en je werk | unit 7 `r.veilig` |
+| Geld: budget, sparen, consument | 10.6 Je geld per maand: vaste lasten en sparen · 10.7 Kopen, abonnementen en ruilen | unit 10 `r.geld` |
+| Mediawijsheid | 16.4 Nieuws, nepnieuws en een mening | unit 16 `r.meedoen` |
+| Schrijven (1F) | 18.1 Een bericht of mail aan je werk · 18.2 Een korte sollicitatiemail | unit 18 `r.schrijven` (nieuw) |
+| Loopbaan | 19.1 Wat kan ik, wat wil ik? · 19.2 Na Entree: niveau 2 of werk? · 19.3 Terugkijken en je portfolio | unit 19 `r.loopbaan` (nieuw) |
+| Metaal, elektro, installatie | TE.1 Gereedschap, vonken en lawaai · TE.2 Stroom: nooit zomaar | sector `r.techniek` (nieuw) |
+| Mobiliteit | M.1 Veilig in de werkplaats · M.2 De werkorder en de klant | sector `r.werkplaats` (nieuw) |
+
+**Telling van deze 14 lessen.** "Wat is het beste?" en kaartjes: A 8, B 9, C 9. "Waar of niet
+waar?": 8 waar, 9 niet waar. "Wie vraag je het?": 4 (B 2, C 2).
+
+**Sectorkeuze.** Techniek en de garage staan **niet** in "Waar werk je?" (`src/content/sectors.ts`).
+Waarom niet:
+
+- De keuze heeft hooguit 3 kaarten per scherm. "Maken en verplaatsen" en "Zorg en service" zijn vol.
+  "Iets anders" heeft Tuinbouw en "Weet ik nog niet": er is nog **1** plek. Twee nieuwe sectoren
+  passen er niet in, en met één erbij is de groep vol voor groen, retail en facilitair (gat 11, 14, 17).
+  Daar is eerst een nieuwe indeling van de groepen voor nodig.
+- Een sectorkaart heeft een UI-tekst in 13 hulptalen en een Taal-unit. `u.tech` en `u.garage` zijn
+  er nog niet; die bouwt een andere agent later. De koppeling `units` blijft dus leeg tot dan.
+
+Tot die tijd staan ze in `SECTOR_UNITS_WITHOUT_CARD`: zonder sectorkeuze (of "Weet ik nog niet")
+staan ze in het hele lespad; wie een sector koos, vindt ze onder "Andere sectoren", nooit in het
+basispad.
+
+## Unit 7 · Veilig en gezond werken (erbij: 7.4 en 7.5)
+
+*Entree, burgerschap (vitaal). Slapen, eten, bewegen, en werken onder invloed. In de app achter les 7.3 (`src/content/regels/units/veilig.ts`).*
+
+### Les 7.4 · Fit voor je werk: slapen, eten, bewegen
+
+**Leerdoel:** je weet waarom slaap, eten en pauzes belangrijk zijn. Je zegt het als je te moe bent.
+
+**Scène** · *Beeld: Kevin om 7 uur in de ochtend bij de ingang van een distributiecentrum. In zijn hand een blikje energiedrank.*
+
+> Kevin begint om 7 uur in een distributiecentrum. Hij zat gisteren tot 2 uur 's nachts op zijn
+> telefoon. Ontbijt slaat hij over. Hij drinkt een blikje energiedrank. Om 10 uur kan hij bijna niet
+> meer opletten.
+
+**Regelkaart** · 😴 *Te moe om veilig te werken? Zeg het ⚖️, vóór je begint.* (geschreven)
+
+- Slaap genoeg. Tussen 2 diensten zit meestal minstens 11 uur ⚖️.
+- Eet iets voor je begint, en drink genoeg water.
+- Neem je pauzes. Beweeg even als je lang stilstaat of zit.
+- Te moe om veilig te werken? Zeg het tegen je leidinggevende.
+
+**Vraag 1 · Wat is het beste?** Kevin kan bijna niet meer opletten. Hij moet zo een zware kar
+rijden. Wat kan Kevin het beste doen?
+
+- **A.** Hij drinkt nog een blikje energiedrank. Dan gaat het wel.
+  → *Dat helpt maar kort. Daarna is hij vaak nog moeier.*
+- **B.** Hij zegt tegen zijn leidinggevende dat hij te moe is.
+  → *Goed. Dan kan zijn leidinggevende hem ander werk geven.*
+- **C.** Hij zegt niets, en hij werkt gewoon wat langzamer.
+  → *Dat snap ik. Maar moe zijn geeft snel fouten en ongelukken.*
+
+**Goed antwoord: B.**
+**Waarom:** Moe zijn is gevaarlijk op je werk. Je let minder goed op. Dan gebeurt er sneller een
+ongeluk. Zeg het als je te moe bent om veilig te werken. Energiedrank helpt maar kort.
+
+**Vraag 2 · Waar of niet waar?** "Tussen 2 diensten zit meestal minstens 11 uur ⚖️."
+
+**Antwoord: waar.**
+**Waarom:** Dat staat in de wet. Soms mag het korter, maar niet vaak. Kijk ook in je cao. Gebruik
+die tijd ook echt om te slapen. Volwassenen hebben meestal 7 tot 9 uur slaap nodig ⚖️.
+
+**Vraag 3 · Wat is het beste?** Mohammed staat de hele dag aan een lopende band. Aan het eind van de
+dag heeft hij pijn in zijn rug. Wat kan Mohammed het beste doen?
+
+- **A.** Hij beweegt in zijn pauze, en hij meldt de pijn.
+  → *Goed. Bewegen helpt. En melden kan erger voorkomen.*
+- **B.** Hij neemt elke dag een pijnstiller, en werkt door.
+  → *Dat snap ik. Maar dan blijft het probleem.*
+- **C.** Hij blijft in de pauze zitten. Dan rust zijn rug.
+  → *Rust helpt even. Maar bewegen is vaak beter voor je rug.*
+
+**Goed antwoord: A.**
+**Waarom:** Lang stilstaan of zitten is zwaar voor je lichaam. Beweeg even in je pauze. Loop een
+rondje, of rek je uit. Blijft de pijn? Meld het bij je leidinggevende. Je mag ook zelf naar de
+bedrijfsarts ⚖️.
+
+**Zo zeg je het:** "Ik ben vandaag erg moe. Kan ik ander werk doen?" *(Je bent te moe om veilig te werken.)*
+
+*Fout in "Wat zeg je?":* "Ik ben moe, maar dat maakt niet uit. Ik werk gewoon." → *Moe werken is
+gevaarlijk. Zeg het, en vraag ander werk.* · "Ik ben moe. Ik ga maar even op de wc zitten." → *Dan
+weet niemand het. Zeg het eerlijk.*
+
+**Onthoud:** Te moe om veilig te werken? Zeg het ⚖️, vóór je begint.
+
+**Wie kan je helpen:** je leidinggevende · de bedrijfsarts (open spreekuur) · je huisarts (bij
+slecht slapen of somberheid).
+
+---
+
+### Les 7.5 · Alcohol, drugs en je werk
+
+**Leerdoel:** je werkt nooit onder invloed. Je weet waar je hulp krijgt.
+
+**Scène** · *Beeld: Piotr in een fabriekshal bij een heftruck. Naast hem een collega met een rood hoofd.*
+
+> Piotr werkt in een fabriek. Zijn collega komt binnen voor de vroege dienst. Hij ruikt naar
+> alcohol. Hij zegt: "Gisteren was het feest." Over 10 minuten moet hij op de heftruck.
+
+**Regelkaart** · 🚫 *Gedronken of drugs gebruikt? Dan werk je niet.* (geschreven)
+
+- Werk nooit onder invloed van alcohol of drugs.
+- Op het werk heeft je baas vaak strenge regels over alcohol en drugs ⚖️.
+- Ook sommige medicijnen maken je suf. Kijk of er een gele sticker op de doos zit ⚖️.
+- Lukt stoppen niet? Praat met je huisarts. Dat blijft geheim ⚖️.
+
+**Vraag 1 · Wat is het beste?** Piotr ruikt de alcohol. Wat kan Piotr het beste doen?
+
+- **A.** Hij zegt het tegen hun leidinggevende, vóór de dienst begint.
+  → *Goed. Zo voorkomt hij een ongeluk.*
+- **B.** Hij zegt niets. Het is niet zijn probleem.
+  → *Dat snap ik. Maar op de heftruck kan zijn collega iemand raken.*
+- **C.** Hij geeft zijn collega sterke koffie. Dan gaat het wel weer.
+  → *Koffie helpt niet. Alleen tijd haalt alcohol uit je bloed.*
+
+**Goed antwoord: A.**
+**Waarom:** Alcohol maakt je trager en minder voorzichtig. Op een heftruck of bij een machine is dat
+heel gevaarlijk. Zeg het tegen je leidinggevende. Zo voorkom je een ongeluk. Koffie of een douche
+helpt niet.
+
+**Vraag 2 · Waar of niet waar?** "Na een nacht slapen is alle alcohol weer uit je bloed."
+
+**Antwoord: niet waar.**
+**Waarom:** Je lichaam haalt alcohol maar langzaam uit je bloed. Ongeveer 1 glas in 1 tot 1,5 uur
+⚖️. Heb je veel gedronken? Dan heb je de volgende ochtend vaak nog alcohol in je bloed.
+
+**Vraag 3 · Waar of niet waar?** "Ook een medicijn kan je suf maken op je werk."
+
+**Antwoord: waar.**
+**Waarom:** Sommige medicijnen maken je slaperig. Op de doos zit dan vaak een gele sticker ⚖️. Vraag
+de apotheek of je ermee kunt werken. Moet je rijden of met machines werken? Zeg dan dat je dat werk
+even niet kunt.
+
+**Vraag 4 · Wie vraag je het?** Je drinkt veel, of je gebruikt vaak drugs. Je wilt stoppen, maar het
+lukt niet. Wie vraag je om hulp? *Je leidinggevende · **De huisarts** · De bedrijfsarts.*
+**Waarom:** Je huisarts helpt je, of stuurt je door naar hulp bij verslaving. Wat je zegt, blijft
+geheim ⚖️. Ook de bedrijfsarts vertelt je baas niets over je gezondheid ⚖️.
+
+**Zo zeg je het:** "Ik maak me zorgen. Mijn collega ruikt naar alcohol." *(Een collega ruikt naar alcohol en moet zo op de heftruck.)*
+
+*Fout in "Wat zeg je?":* "Mijn collega is weer dronken. Die is echt niet normaal!" → *Dat klinkt
+boos. Zeg rustig wat je ziet.* · "Er is iets met een collega, maar ik zeg niet wie." → *Dan kan je
+leidinggevende niets doen. Zeg wat er is.*
+
+**Onthoud:** Gedronken of drugs gebruikt? Dan werk je niet.
+
+**Wie kan je helpen:** je huisarts (verwijst door naar hulp bij verslaving) · de bedrijfsarts · je
+leidinggevende (als een collega onder invloed is) · de apotheek (over medicijnen).
+
+---
+
+## Unit 10 · Uitkering, werk en geld (erbij: 10.6 en 10.7)
+
+*Entree, burgerschap (economisch: de consument). Budget, sparen, abonnementen, kopen op afbetaling en ruilen. Geen bedragen: geen premie, geen toeslag, geen spaarbedrag. In de app achter les 10.5 (`src/content/regels/units/geld.ts`).*
+
+### Les 10.6 · Je geld per maand: vaste lasten en sparen
+
+**Leerdoel:** je betaalt eerst je vaste lasten. Je spaart elke maand een klein beetje.
+
+**Scène** · *Beeld: Jayden op zijn bed met zijn telefoon. Op het scherm zijn bankapp: het loon staat erop.*
+
+> Jayden is net 18. Hij werkt in een supermarkt. Zijn loon staat op zijn rekening. Nu moet hij zelf
+> zijn zorgverzekering betalen. Zijn vrienden willen dit weekend uit eten.
+
+**Regelkaart** · 🐷 *Eerst je vaste lasten. Dan een beetje sparen. Dan pas de rest.* (geschreven)
+
+- Vaste lasten zijn kosten die elke maand terugkomen.
+- Denk aan huur, je zorgverzekering en je telefoon. Die betaal je eerst.
+- Zet daarna elke maand een klein bedrag apart. Dat is je buffer.
+- Vanaf 18 jaar moet je zelf een zorgverzekering hebben ⚖️.
+
+**Vraag 1 · Waar of niet waar?** "Vanaf je 18e moet je zelf een zorgverzekering hebben."
+
+**Antwoord: waar.**
+**Waarom:** In Nederland moet iedereen vanaf 18 jaar een zorgverzekering hebben ⚖️. Tot je 18e ben
+je gratis verzekerd, via je ouders ⚖️. Heb je een laag inkomen? Dan krijg je misschien zorgtoeslag
+⚖️. Kijk bij Mijn toeslagen.
+
+**Vraag 2 · Wat is het beste?** Jayden heeft zijn loon. Wat kan Jayden het beste doen?
+
+- **A.** Hij gaat eerst uit eten. Wat over is, gaat naar de rekeningen.
+  → *Dan is er misschien te weinig over voor de rekeningen.*
+- **B.** Hij betaalt de rekeningen pas als er een herinnering komt.
+  → *Dan kost het vaak extra geld. Betaal op tijd.*
+- **C.** Hij betaalt eerst de rekeningen. Dan spaart hij een beetje.
+  → *Goed. Wat dan over is, mag hij uitgeven.*
+
+**Goed antwoord: C.**
+**Waarom:** Betaal eerst je vaste lasten: huur, zorgverzekering, telefoon. Zet daarna een klein
+bedrag apart. Wat dan over is, kun je uitgeven. Laat de vaste lasten automatisch betalen. Dan
+vergeet je niets.
+
+**Vraag 3 · Wat is het beste?** Jayden weet niet waar zijn geld blijft. Wat kan Jayden het beste
+doen?
+
+- **A.** Hij vraagt een lening, voor het geval dat.
+  → *Een lening moet hij terugbetalen, met rente. Dat maakt het erger.*
+- **B.** Hij schrijft een maand op wat hij uitgeeft.
+  → *Goed. Dan ziet hij waar zijn geld heen gaat.*
+- **C.** Hij kijkt maar niet meer in zijn bankapp.
+  → *Dat snap ik. Maar dan ziet hij een probleem te laat.*
+
+**Goed antwoord: B.**
+**Waarom:** Schrijf een maand op wat je uitgeeft. Of kijk in je bankapp. Dan zie je waar je geld
+heen gaat. Op nibud.nl staan gratis tips en voorbeelden ⚖️.
+
+**Vraag 4 · Waar of niet waar?** "Sparen heeft pas zin als je veel verdient."
+
+**Antwoord: niet waar.**
+**Waarom:** Ook een klein bedrag per maand helpt. Zo maak je een buffer. Dat is geld voor als er
+iets kapotgaat. Of als je werk stopt. Dan hoef je niet te lenen.
+
+**Zo zeg je het:** "Kan ik elke maand automatisch geld naar mijn spaarrekening zetten?" *(Je wilt elke maand een beetje sparen.)*
+
+*Fout in "Wat zeg je?":* "Ik spaar wel. Maar alleen als er geld over is." → *Vaak is er dan niets
+meer over. Spaar meteen na je loon.* · "Kan ik alvast geld lenen? Dan heb ik altijd genoeg." →
+*Lenen is geen sparen. Je moet het terugbetalen, met rente.*
+
+**Onthoud:** Eerst je vaste lasten. Dan een beetje sparen. Dan pas de rest.
+
+**Wie kan je helpen:** nibud.nl (gratis tips en een budgetplanner ⚖️) · je bank · de gemeente (als
+het niet lukt, gratis schuldhulp) · Geldfit.
+
+---
+
+### Les 10.7 · Kopen, abonnementen en ruilen
+
+**Leerdoel:** je weet dat achteraf betalen ook lenen is. Je kent je rechten bij online kopen.
+
+**Scène** · *Beeld: Fatima op de bank met haar telefoon. Op het scherm een knop: "Nu kopen, later betalen".*
+
+> Fatima koopt online een jas voor haar dochter. Bij het betalen staat: "Nu kopen, over 30 dagen
+> betalen." Dat is makkelijk, denkt ze. Een week later komt de jas. Hij is te klein.
+
+**Regelkaart** · 🛍️ *Online gekocht? Dan heb je meestal 14 dagen bedenktijd ⚖️. Bewaar je bonnetje.* (geschreven)
+
+- Online gekocht? Dan mag je het meestal binnen 14 dagen terugsturen ⚖️.
+- Achteraf betalen is ook lenen. Betaal je te laat? Dan komen er kosten bij ⚖️.
+- Een abonnement kun je online opzeggen ⚖️. Kijk wanneer het stopt.
+- In een winkel ruilen mag alleen als de winkel het wil. Vraag het bij het kopen.
+
+**Vraag 1 · Waar of niet waar?** "Een jas uit een gewone winkel mag je altijd ruilen."
+
+**Antwoord: niet waar.**
+**Waarom:** In een winkel ruilen is geen recht ⚖️. Veel winkels doen het wel, met het bonnetje.
+Vraag het bij het kopen. Online is het anders. Dan heb je meestal 14 dagen bedenktijd ⚖️.
+
+**Vraag 2 · Wat is het beste?** De jas is te klein. Fatima kreeg hem 1 week geleden. Wat kan Fatima
+het beste doen?
+
+- **A.** Ze houdt de jas. Terugsturen kan toch niet meer.
+  → *Dat kan wel. Ze heeft meestal 14 dagen bedenktijd.*
+- **B.** Ze meldt het, en stuurt de jas terug.
+  → *Goed. Dan hoeft ze de jas niet te betalen.*
+- **C.** Ze betaalt de jas gewoon niet. Dan is het ook goed.
+  → *Dan komen er kosten bij. Stuur hem eerst netjes terug.*
+
+**Goed antwoord: B.**
+**Waarom:** Koop je iets online? Dan heb je meestal 14 dagen bedenktijd ⚖️. Je mag het dan
+terugsturen. Meld het eerst bij de webwinkel. Betaal je achteraf? Zeg dan ook dat je het
+terugstuurt. Zo krijg je geen rekening.
+
+**Vraag 3 · Wat is het beste?** Fatima betaalt elke maand voor een sportschool. Ze gaat er nooit
+heen. Wat kan Fatima het beste doen?
+
+- **A.** Ze zegt het abonnement op. Ze kijkt wanneer het stopt.
+  → *Goed. Dan betaalt ze straks niet meer voor niets.*
+- **B.** Ze laat het lopen. Misschien gaat ze nog een keer.
+  → *Dat snap ik. Maar zo betaalt ze elke maand voor niets.*
+- **C.** Ze stopt de betaling bij de bank. Dan is het klaar.
+  → *Dan loopt het abonnement nog door. Dan krijgt ze een schuld.*
+
+**Goed antwoord: A.**
+**Waarom:** Kijk elke maand welke abonnementen je hebt. Gebruik je iets niet? Zeg het op. Dat kan
+online, net zo makkelijk als afsluiten ⚖️. Na het eerste jaar kun je meestal elke maand opzeggen ⚖️.
+Stop niet alleen de betaling. Dan krijg je een schuld.
+
+**Vraag 4 · Wie vraag je het?** Je stuurde iets terug. De webwinkel geeft je geld niet terug. Waar
+vraag je advies? *De gemeente · De politie · **Het Juridisch Loket**.*
+**Waarom:** Het Juridisch Loket geeft gratis informatie over je rechten. Op ConsuWijzer staat ook
+uitleg voor klanten. Is de webwinkel nep? Doe dan aangifte bij de politie.
+
+**Zo zeg je het:** "Ik wil deze jas terugsturen. Hoe krijg ik mijn geld terug?" *(Je wilt iets terugsturen naar een webwinkel.)*
+
+*Fout in "Wat zeg je?":* "Die jas is te klein. Ik betaal hem dus ook niet." → *Dan komen er kosten
+bij. Meld eerst dat je hem terugstuurt.* · "Jullie jassen zijn waardeloos! Ik wil nu mijn geld!" →
+*Dat klinkt boos. Vraag het rustig, dan helpen ze je sneller.*
+
+**Onthoud:** Online gekocht? Dan heb je meestal 14 dagen bedenktijd ⚖️. Bewaar je bonnetje.
+
+**Wie kan je helpen:** ConsuWijzer (van de ACM, uitleg over je rechten als klant ⚖️) · het Juridisch
+Loket · bij een nep-webwinkel: de politie (aangifte) · bij betaalproblemen: de gemeente.
+
+---
+
+## Unit 16 · Meedoen in Nederland (erbij: 16.4)
+
+*Entree, burgerschap (mediawijsheid). Unit 16 staat in [`entree-aanvulling.md`](entree-aanvulling.md); les 16.4 staat hier. Neutraal: geen partijen, geen meningen over beleid (`src/content/regels/units/meedoen.ts`).*
+
+### Les 16.4 · Nieuws, nepnieuws en een mening
+
+**Leerdoel:** je checkt een bericht voor je het doorstuurt. Je geeft je mening met respect.
+
+**Scène** · *Beeld: Piotr in de kantine met zijn telefoon. In de groepsapp een bericht met veel uitroeptekens.*
+
+> Piotr zit in de groepsapp van zijn werk. Een collega stuurt een bericht door. "Vanaf maandag
+> hebben alle Polen een vergunning nodig om te werken!!" Er staat geen naam of website bij.
+
+**Regelkaart** · 📰 *Eerst checken, dan pas doorsturen. Wie zegt het, en waar staat het nog meer?* (ongeschreven)
+
+- Check een bericht voor je het doorstuurt.
+- Wie zegt het? Staat het ook op een bekende nieuwssite?
+- Een nepbericht wil vaak dat je schrikt of boos wordt.
+- Je mag je mening geven. Doe het met respect, ook online.
+
+**Vraag 1 · Wat is het beste?** Piotr schrikt van het bericht. Wat kan Piotr het beste doen?
+
+- **A.** Hij stuurt het snel door. Dan weten zijn vrienden het ook.
+  → *Dat snap ik. Maar als het nep is, maakt hij iedereen bang.*
+- **B.** Hij gelooft het. Het staat in de groepsapp van zijn werk.
+  → *Ook in een groepsapp staat soms nep. Check eerst waar het vandaan komt.*
+- **C.** Hij zoekt op een site van de overheid of het klopt.
+  → *Goed. Daar staat wat echt geldt.*
+
+**Goed antwoord: C.**
+**Waarom:** Check een bericht voor je het doorstuurt. Wie zegt het? Staat het op een site van de
+overheid? Of op een bekende nieuwssite? Mensen uit de EU hebben geen vergunning nodig om hier te
+werken ⚖️.
+
+**Vraag 2 · Waar of niet waar?** "Een nepbericht wil vaak dat je bang of boos wordt."
+
+**Antwoord: waar.**
+**Waarom:** Wie bang of boos is, deelt sneller. Daarom maakt nepnieuws je vaak bang of boos. Let op
+veel uitroeptekens, haast en geen naam. Kijk wie het zegt. En zoek of een bekende nieuwssite het ook
+heeft.
+
+**Vraag 3 · Wat is het beste?** In de pauze praten de collega's van Esra over de verkiezingen. Esra
+denkt er anders over. Wat kan Esra het beste doen?
+
+- **A.** Ze zegt niets. Een mening geven is op je werk niet netjes.
+  → *Dat mag wel. Ze mag haar mening zeggen, met respect.*
+- **B.** Ze zegt rustig wat zij denkt, en ze luistert ook.
+  → *Goed. Zo kan iedereen zijn mening geven.*
+- **C.** Ze zegt dat hun mening dom is. Zij weet het beter.
+  → *Dat is niet respectvol. Dan komt er snel ruzie.*
+
+**Goed antwoord: B.**
+**Waarom:** Je mag je mening geven, ook op je werk. Iemand anders mag iets anders vinden. Luister
+naar elkaar, en blijf rustig. Schelden en bedreigen mag niet ⚖️. Soms heeft je werk ook regels over
+hoe je praat.
+
+**Zo zeg je het:** "Waar heb je dit gelezen? Ik wil eerst checken of het klopt." *(Een collega stuurt een bericht dat je niet vertrouwt.)*
+
+*Fout in "Wat zeg je?":* "Wauw, wat erg! Ik stuur het meteen naar iedereen." → *Dan deel je
+misschien nepnieuws. Check het eerst.* · "Dit is nep. Jij gelooft ook echt alles, hè?" → *Dat klinkt
+onaardig. Vraag liever rustig waar het vandaan komt.*
+
+**Onthoud:** Eerst checken, dan pas doorsturen. Wie zegt het, en waar staat het nog meer?
+
+---
+
+## Unit 18 · Schrijven op je werk
+
+*Entree, Nederlands 1F schrijven. Nieuwe unit (`r.schrijven`, `src/content/regels/units/schrijven.ts`), na unit 17 in het lespad. Alleen ongeschreven regels (hoe een bericht aan je werk er meestal uitziet), dus geen adviesregel onder de regelkaart. De voorleesstem leest "appje" slecht ([`taal-a2.md`](taal-a2.md), regel 7): deze lessen zeggen "bericht".*
+
+### Les 18.1 · Een bericht of mail aan je werk
+
+**Leerdoel:** je schrijft een kort bericht of een mail aan je werk. Je leest het na voor je het verstuurt.
+
+**Scène** · *Beeld: Fatima aan de keukentafel met haar telefoon. Op tafel ligt een brief van de school van haar zoon.*
+
+> Fatima loopt stage in een hotel. Volgende week dinsdag moet ze naar de school van haar zoon. Ze
+> wil die ochtend vrij vragen. Haar praktijkopleider Mark wil dat per mail.
+
+**Regelkaart** · ✉️ *Groet, wat je wilt, wanneer, en je naam. Lees het na voor je verstuurt.* (ongeschreven, zakkaart)
+
+- Begin met een groet: "Beste Mark," of "Hoi Mark,".
+- Schrijf kort wat je wilt, en wanneer.
+- Sluit af met een groet en je naam.
+- Een mail krijgt een onderwerp. Lees alles na voor je het verstuurt.
+
+**Vraag 1 · Wat is het beste?** Welke mail kan Fatima het beste sturen?
+
+- **A.** Hoi Mark, ik ben dinsdagochtend niet op mijn werk. Ik moet naar school. Groetjes, Fatima
+  → *Ze vraagt niets. Ze zegt alleen dat ze er niet is.*
+- **B.** Beste Mark, mag ik dinsdagochtend vrij? Ik heb een gesprek op school. Fatima
+  → *Goed. Kort, met wat, wanneer en waarom.*
+- **C.** Beste Mark, mag ik een keer vrij? Ik heb iets op school. Groet, Fatima
+  → *Mark weet niet wanneer. Noem de dag en het dagdeel.*
+
+**Goed antwoord: B.**
+**Waarom:** Een goede mail is kort. Er staat in: een groet, wat je wilt, wanneer, en je naam. Vraag
+het, zeg het niet alleen. Zet ook een onderwerp boven je mail. Bijvoorbeeld: "Vrij op
+dinsdagochtend".
+
+**Vraag 2 · Waar of niet waar?** "Aan je leidinggevende schrijf je "ff" en "idd", net als aan vrienden."
+
+**Antwoord: niet waar.**
+**Waarom:** Aan vrienden schrijf je zoals je wilt. Aan je werk schrijf je gewone woorden, zonder
+afkortingen. Dan begrijpt iedereen je goed. Een emoji is soms oké, maar niet te veel.
+
+**Vraag 3 · Wat is het beste?** Fatima heeft haar mail geschreven. Wat kan Fatima het beste doen
+voor ze hem verstuurt?
+
+- **A.** Ze leest de mail na. Klopt de dag? Staat haar naam erin?
+  → *Goed. Zo ziet ze een fout voor Mark hem leest.*
+- **B.** Ze stuurt hem meteen. Mark snapt het toch wel.
+  → *Een fout in de dag kan problemen geven. Lees het eerst na.*
+- **C.** Ze stuurt hem ook naar de groepsapp van haar team.
+  → *Haar vrije ochtend gaat Mark aan. Stuur het niet naar iedereen.*
+
+**Goed antwoord: A.**
+**Waarom:** Lees je bericht na voor je het verstuurt. Klopt de dag? Staat er wat je bedoelt? Stuur
+het alleen naar wie het nodig heeft. Vrij vragen doe je bij je leidinggevende, niet in de groepsapp.
+
+**Zo zeg je het:** "Mag ik dinsdagochtend vrij? Ik heb een gesprek op school." *(Je vraagt per mail een ochtend vrij.)*
+
+*Fout in "Wat zeg je?":* "Ik ben dinsdag niet op mijn werk. Ik moet naar school." → *Je zegt het,
+maar je vraagt het niet.* · "Mag ik een keer vrij? Ik moet ergens heen." → *Dan weet je
+leidinggevende niet wanneer, en niet waarom.*
+
+**Onthoud:** Groet, wat je wilt, wanneer, en je naam. Lees het na voor je verstuurt.
+
+**Wie kan je helpen:** je leidinggevende of praktijkopleider (hoe wil die het hebben: bellen, een
+bericht of een mail?) · een collega die je mail even naleest.
+
+---
+
+### Les 18.2 · Een korte sollicitatiemail
+
+**Leerdoel:** je schrijft een korte, nette mail bij je cv. Je zegt waarom je deze baan wilt.
+
+**Scène** · *Beeld: Ewa in de bibliotheek achter een computer. Op het scherm een vacature van een hotel.*
+
+> Ewa woont net in Nederland. Ze ziet een vacature voor schoonmaker in een hotel. Ze moet een mail
+> sturen, met haar cv. Ze heeft nog nooit een sollicitatiemail geschreven.
+
+**Regelkaart** · 📧 *Een sollicitatiemail: onderwerp, nette groet, waarom jij, en je cv erbij.* (ongeschreven)
+
+- Zet de vacature in het onderwerp. Bijvoorbeeld: "Sollicitatie schoonmaker".
+- Begin met "Beste" en de naam. Weet je geen naam? Schrijf "Geachte heer of mevrouw".
+- Schrijf in 2 of 3 zinnen waarom jij deze baan wilt.
+- Doe je cv erbij. Gebruik een mailadres met je eigen naam.
+
+**Vraag 1 · Wat is het beste?** Ewa heeft twee mailadressen. Welk adres kan Ewa het beste gebruiken?
+
+- **A.** Een nieuw adres, met haar eigen naam erin.
+  → *Goed. Dan weet de werkgever meteen van wie de mail is.*
+- **B.** Haar oude adres, prinsesje99@mail.nl.
+  → *Dat adres klinkt niet serieus. Een werkgever kiest dan snel iemand anders.*
+- **C.** Het adres van haar vriendin. Dat ziet er netter uit.
+  → *Dan komt het antwoord bij haar vriendin. En de werkgever weet niet wie Ewa is.*
+
+**Goed antwoord: A.**
+**Waarom:** Een werkgever ziet je mailadres als eerste. Gebruik een adres met je eigen naam. Zo'n
+adres maak je gratis. Kijk ook of je naam goed gespeld is.
+
+**Vraag 2 · Waar of niet waar?** "Wat je kunt en gedaan hebt, staat vooral in je cv."
+
+**Antwoord: waar.**
+**Waarom:** Je mail is kort: een paar zinnen. Je schrijft welke baan je wilt, en waarom. Wat je kunt
+en gedaan hebt, staat in je cv. Doe je cv erbij als bijlage.
+
+**Vraag 3 · Wat is het beste?** Ewa schrijft waarom ze de baan wil. Welke zin kan Ewa het beste
+schrijven?
+
+- **A.** "Ik wil graag geld verdienen, en dit was de eerste vacature."
+  → *Dat is eerlijk. Maar de werkgever wil weten waarom juist deze baan.*
+- **B.** "Ik kan alles, en ik ben de beste schoonmaker van Nederland."
+  → *Dat klinkt te groot. Zeg liever wat ze echt kan.*
+- **C.** "Ik werk netjes en snel. Ik wil graag in een hotel werken."
+  → *Goed. Ze zegt wat ze kan, en waarom deze baan.*
+
+**Goed antwoord: C.**
+**Waarom:** Schrijf in 2 of 3 zinnen waarom jij deze baan wilt. Wat kun je goed? Waarom past het
+werk bij jou? Wees eerlijk, en houd het kort. Lees alles na voor je verstuurt.
+
+**Zo zeg je het:** "Ik heb maandag een mail gestuurd. Heeft u mijn cv ontvangen?" *(Je belt een bedrijf na je sollicitatiemail.)*
+
+*Fout in "Wat zeg je?":* "Ik heb gemaild, maar jullie zeggen niks. Waarom niet?" → *Dat klinkt
+ongeduldig. Vraag rustig of je mail er is.* · "Hallo, ik zoek werk. Heeft u nog iets voor mij?" →
+*Dan weet het bedrijf niet dat je al gemaild hebt.*
+
+**Onthoud:** Een sollicitatiemail: onderwerp, nette groet, waarom jij, en je cv erbij.
+
+**Wie kan je helpen:** je begeleider van school · de bibliotheek (gratis hulp met de computer en een
+mailadres maken) · werk.nl van UWV (voorbeelden).
+
+---
+
+## Unit 19 · Jouw weg: kiezen en verder leren
+
+*Entree, loopbaan. Nieuwe unit (`r.loopbaan`, `src/content/regels/units/loopbaan.ts`), de laatste in het lespad. Redactie: les 19.2 (kwalificatieplicht, toelatingsrecht, bbl) extra laten nakijken ⚖️: de aanmelddatum en de bbl-regels kunnen per opleiding verschillen.*
+
+### Les 19.1 · Wat kan ik, wat wil ik?
+
+**Leerdoel:** je noemt wat je goed kunt. Je zegt wat je wel en niet wilt in je werk.
+
+**Scène** · *Beeld: Jayden bij zijn begeleider op school. Op tafel een formulier: "Wat kan ik goed?"*
+
+> Jayden zit op het mbo, in Entree. Zijn begeleider vraagt: "Wat kun je goed?" Jayden zegt: "Niks
+> eigenlijk." Maar hij werkt al 2 jaar in een supermarkt.
+
+**Regelkaart** · 🧭 *Weet wat je kunt en wat je wilt. Ga kijken voor je kiest.* (ongeschreven)
+
+- Iedereen kan iets goed. Ook wat je in een bijbaan of thuis doet, telt.
+- Bijvoorbeeld: op tijd komen, klanten helpen, voor je familie zorgen.
+- Denk ook na over wat je wilt. Binnen of buiten? Met mensen of met spullen?
+- Weet je het nog niet? Loop een dag mee, of ga naar een open dag.
+
+**Vraag 1 · Wat is het beste?** Wat kan Jayden het beste zeggen?
+
+- **A.** "Ik weet het echt niet. Kies jij maar iets voor mij."
+  → *Dan kiest een ander voor hem. Hij weet zelf meer dan hij denkt.*
+- **B.** "Ik ben niet goed in school. Dus ik kan niks."
+  → *School is niet alles. In zijn werk doet hij veel goed.*
+- **C.** "Ik ben altijd op tijd. En ik help graag klanten."
+  → *Goed. Dat kan hij echt goed.*
+
+**Goed antwoord: C.**
+**Waarom:** Iedereen kan iets goed. Ook wat je in een bijbaan of thuis doet, telt. Op tijd komen,
+netjes werken, klanten helpen. Dat zijn kwaliteiten: dingen die je goed kunt.
+
+**Vraag 2 · Waar of niet waar?** "Zorgen voor je broertje of je oma telt niet als ervaring."
+
+**Antwoord: niet waar.**
+**Waarom:** Dat telt wel. Wie zorgt, is vaak geduldig en kan goed plannen. Dat zoekt een werkgever
+ook. Je mag het noemen in een gesprek of op je cv.
+
+**Vraag 3 · Wat is het beste?** Jayden weet niet wat hij wil: de zorg of de logistiek. Wat kan
+Jayden het beste doen?
+
+- **A.** Hij kiest wat zijn vrienden kiezen. Dat is gezellig.
+  → *Dat snap ik. Maar het werk moet bij hem passen.*
+- **B.** Hij gaat in allebei een dag meelopen.
+  → *Goed. Dan ziet hij hoe het werk echt is.*
+- **C.** Hij kiest het werk met het meeste geld.
+  → *Geld is belangrijk. Maar hij moet het werk ook leuk vinden.*
+
+**Goed antwoord: B.**
+**Waarom:** Weet je niet wat je wilt? Ga kijken. Loop een dag mee in een bedrijf. Of ga naar een
+open dag. Vraag je begeleider op school om hulp. Kies wat bij jou past.
+
+**Zo zeg je het:** "Ik ben altijd op tijd. En ik werk graag met mensen." *(Je begeleider vraagt wat je goed kunt.)*
+
+*Fout in "Wat zeg je?":* "Niks eigenlijk. Ik ben gewoon niet zo slim." → *Je kunt meer dan je denkt.
+Noem iets wat je goed doet.* · "Ik kan alles. Ik ben overal de beste in." → *Dat klinkt te groot.
+Noem één ding dat je echt kunt.*
+
+**Onthoud:** Weet wat je kunt en wat je wilt. Ga kijken voor je kiest.
+
+**Wie kan je helpen:** je loopbaanbegeleider of decaan op school · je praktijkopleider · open dagen
+en meeloopdagen.
+
+---
+
+### Les 19.2 · Na Entree: niveau 2 of werk?
+
+**Leerdoel:** je weet wat je na Entree kunt doen. Je weet wat een startkwalificatie is.
+
+**Scène** · *Beeld: Malik in de kantine van school. Op zijn telefoon een vacature: "Magazijnmedewerker, direct beginnen".*
+
+> Malik is 17. Hij haalt bijna zijn Entree-diploma. Hij wil daarna meteen geld verdienen. Een
+> magazijn zoekt mensen. Hij kan direct beginnen. Zijn moeder zegt: "Je moet eerst een diploma
+> halen."
+
+**Regelkaart** · 🎓 *Na Entree: ga door naar niveau 2, of werk en leer tegelijk.* (geschreven, zakkaart)
+
+- Met een Entree-diploma mag je door naar een opleiding op niveau 2 ⚖️.
+- Een startkwalificatie is een diploma op niveau 2 of hoger ⚖️.
+- Ben je jonger dan 18 en heb je die nog niet? Dan moet je naar school ⚖️.
+- Werk en leer je tegelijk? Dat heet bbl. Dat telt ook ⚖️.
+
+**Vraag 1 · Waar of niet waar?** "Malik is 17. Hij mag na Entree stoppen met school, en alleen werken."
+
+**Antwoord: niet waar.**
+**Waarom:** Ben je jonger dan 18 zonder startkwalificatie? Dan moet je naar school ⚖️. Dat heet de
+kwalificatieplicht. Een startkwalificatie is een diploma op niveau 2 of hoger ⚖️. Werken en leren
+tegelijk mag wel. Dat heet bbl.
+
+**Vraag 2 · Wat is het beste?** Malik wil geld verdienen. Hij wil ook een diploma. Wat kan Malik het
+beste doen?
+
+- **A.** Hij zoekt een bbl-plek: werken en leren tegelijk.
+  → *Goed. Dan verdient hij geld en haalt hij een diploma.*
+- **B.** Hij gaat in het magazijn werken, en stopt met school.
+  → *Hij is 17. Zonder startkwalificatie moet hij nog naar school.*
+- **C.** Hij wacht een jaar. Dan kiest hij een opleiding.
+  → *Zo verliest hij een jaar. En onder 18 moet hij naar school.*
+
+**Goed antwoord: A.**
+**Waarom:** Bij bbl werk je bij een bedrijf. Je gaat meestal 1 dag per week naar school ⚖️. Je
+krijgt loon, en je haalt een diploma ⚖️. Je hebt wel een leerbedrijf nodig. Je school helpt je
+zoeken.
+
+**Vraag 3 · Wat is het beste?** Jayden is 18. Hij haalt zijn Entree-diploma. Hij wil naar niveau 2
+logistiek. Wat kan Jayden het beste doen?
+
+- **A.** Hij wacht tot de school hem een brief stuurt.
+  → *Een brief komt niet vanzelf. Hij moet zich zelf aanmelden.*
+- **B.** Hij denkt dat hij niet mag, zonder vmbo-diploma.
+  → *Met zijn Entree-diploma mag hij door naar niveau 2.*
+- **C.** Hij meldt zich op tijd aan bij de opleiding.
+  → *Goed. Hij vraagt op school wanneer dat moet.*
+
+**Goed antwoord: C.**
+**Waarom:** Met een Entree-diploma mag je door naar een opleiding op niveau 2 ⚖️. Je moet je wel
+zelf aanmelden, en op tijd. Vaak is dat vóór 1 april ⚖️. Vraag je begeleider op school wat je moet
+doen.
+
+**Vraag 4 · Wie vraag je het?** Je weet niet welke opleiding na Entree bij je past. Wie vraag je
+het? *Het UWV · **Je begeleider van school** · Je praktijkopleider.*
+**Waarom:** Je begeleider van school, of je decaan, kent de opleidingen. Ga ook naar open dagen. Op
+kiesmbo.nl staan alle mbo-opleidingen ⚖️.
+
+**Zo zeg je het:** "Ik wil naar niveau 2. Hoe en wanneer meld ik me aan?" *(Je wilt na Entree verder leren.)*
+
+*Fout in "Wat zeg je?":* "Ik wil verder leren, maar dat zie ik later wel." → *Wacht niet te lang. Je
+moet je op tijd aanmelden.* · "Ik ben klaar met school. Ik ga gewoon werken." → *Ben je nog geen 18?
+Dan moet je vaak nog naar school.*
+
+**Onthoud:** Na Entree: ga door naar niveau 2, of werk en leer tegelijk.
+
+**Wie kan je helpen:** je begeleider of decaan op school · kiesmbo.nl ⚖️ · het Regionaal Meld- en
+Coördinatiepunt (RMC) van de gemeente, als je zonder diploma stopt ⚖️ · UWV.
+
+---
+
+### Les 19.3 · Terugkijken en je portfolio
+
+**Leerdoel:** je bewaart je diploma's, certificaten en beoordelingen. Je vraagt iemand als referentie.
+
+**Scène** · *Beeld: Fatima aan tafel met een map. Een certificaat ligt half onder een stapel post.*
+
+> Fatima is bijna klaar met haar stage in het hotel. Ze heeft een certificaat voor veilig werken
+> gehaald. Haar papieren liggen overal in huis. Straks wil ze solliciteren bij een ander hotel.
+
+**Regelkaart** · 🗂️ *Bewaar je diploma's en certificaten goed. Maak er ook een foto van.* (ongeschreven)
+
+- Bewaar je diploma's, certificaten en beoordelingen in één map.
+- Maak er ook een foto of scan van.
+- Zo'n map heet een portfolio. Je laat ermee zien wat je kunt.
+- Is je stage bijna klaar? Vraag of je iemand als referentie mag noemen.
+
+**Vraag 1 · Wat is het beste?** Fatima is bijna klaar met haar stage. Wat kan Fatima het beste doen?
+
+- **A.** Ze vraagt Mark of ze hem als referentie mag noemen.
+  → *Goed. Dan weet Mark dat er iemand kan bellen.*
+- **B.** Ze zegt gedag, en neemt verder niets mee.
+  → *Dan mist ze een kans. Een referentie helpt bij solliciteren.*
+- **C.** Ze zet Mark op haar cv als referentie, zonder het te vragen.
+  → *Vraag het eerst. Anders weet Mark niet dat er iemand belt.*
+
+**Goed antwoord: A.**
+**Waarom:** Een referentie is iemand die een nieuwe werkgever over jou kan vertellen. Bijvoorbeeld
+je praktijkopleider. Vraag het altijd eerst. Vraag ook om je beoordeling op papier. Die stop je in
+je map.
+
+**Vraag 2 · Waar of niet waar?** "Ben je je diploma kwijt? Dan kun je soms een bewijs krijgen bij DUO."
+
+**Antwoord: waar.**
+**Waarom:** DUO bewaart veel diploma's in een register ⚖️. Daar kun je een bewijs van je diploma
+krijgen. Dat heet een uittreksel ⚖️. Een certificaat van een cursus heeft DUO meestal niet. Bewaar
+dat dus zelf goed.
+
+**Vraag 3 · Wat is het beste?** De begeleider vraagt: "Wat ging goed, en wat wil je nog leren?" Wat
+kan Fatima het beste doen?
+
+- **A.** Ze zegt: "Alles ging goed." Dan is ze snel klaar.
+  → *Dan leert ze er weinig van. Kijk ook naar wat beter kan.*
+- **B.** Ze noemt 1 ding dat goed ging, en 1 om te leren.
+  → *Goed. Zo weet ze wat ze straks verder kan leren.*
+- **C.** Ze noemt alleen wat er misging. Ze wil eerlijk zijn.
+  → *Eerlijk is goed. Maar ze mag ook noemen wat ze goed deed.*
+
+**Goed antwoord: B.**
+**Waarom:** Terugkijken helpt je kiezen. Wat ging goed? Wat wil je nog leren? Kijk in je
+beoordeling, of vraag je praktijkopleider. Schrijf het op, en bewaar het in je map.
+
+**Zo zeg je het:** "Mag ik u als referentie noemen als ik ga solliciteren?" *(Je stage is bijna klaar.)*
+
+*Fout in "Wat zeg je?":* "Ik zet u gewoon op mijn cv. Dat vindt u vast goed." → *Vraag het eerst.
+Dan weet de ander dat er iemand belt.* · "Doei! Bedankt voor alles. Misschien zien we elkaar nog." →
+*Vriendelijk. Maar zo vraag je niet om een referentie.*
+
+**Onthoud:** Bewaar je diploma's en certificaten goed. Maak er ook een foto van.
+
+**Wie kan je helpen:** je begeleider van school · je praktijkopleider (beoordeling, referentie) ·
+DUO (een bewijs van je diploma ⚖️).
+
+---
+
+## Sector techniek · Werken in de techniek
+
+*Entree-profiel metaal-, elektro- en installatietechniek (`r.techniek`, in `src/content/regels/units/sector.ts`). Lesletters TE, want T is al van de kas. Nog **niet** in de sectorkeuze: zie hieronder, "Sectorkeuze".*
+
+### Les TE.1 · Gereedschap, vonken en lawaai
+
+**Leerdoel:** je beschermt je ogen en oren bij slijpen en boren. Je houdt je werkplek netjes.
+
+**Scène** · *Beeld: Sanne in een metaalwerkplaats, bij een slijpmachine. Op de werkbank liggen kleine metalen spanen.*
+
+> Sanne loopt stage in een metaalwerkplaats. Ze moet een stuk ijzer kort slijpen. Het is maar 1
+> minuut werk. Haar veiligheidsbril ligt in haar kluisje.
+
+**Regelkaart** · 🥽 *Slijpen, boren of zagen? Eerst je bril en gehoorbescherming op.* (geschreven)
+
+- Bij slijpen, boren en zagen vliegen er vonken en spanen.
+- Draag dan een veiligheidsbril. Bij hard lawaai ook gehoorbescherming ⚖️.
+- Je werkgever geeft deze spullen gratis ⚖️.
+- Spanen zijn scherp. Ruim ze op met een borstel, niet met je hand.
+
+**Vraag 1 · Wat is het beste?** Sanne wil snel beginnen. Wat kan Sanne het beste doen?
+
+- **A.** Ze slijpt even zonder bril. Het is maar 1 minuut.
+  → *Dat snap ik. Maar een vonk in je oog gaat heel snel.*
+- **B.** Ze houdt haar hoofd ver weg van de slijpschijf.
+  → *Goed bedoeld. Maar vonken en spanen vliegen ver.*
+- **C.** Ze haalt eerst haar bril uit haar kluisje.
+  → *Goed. Die minuut is het waard.*
+
+**Goed antwoord: C.**
+**Waarom:** Bij slijpen, boren en zagen vliegen er vonken en spanen. Die kunnen je oog beschadigen,
+in 1 seconde. Draag altijd je veiligheidsbril. Je werkgever geeft hem gratis ⚖️.
+
+**Vraag 2 · Waar of niet waar?** "Bij hard lawaai mag je zelf kiezen of je gehoorbescherming draagt."
+
+**Antwoord: niet waar.**
+**Waarom:** Is het lawaai hard? Dan moet je gehoorbescherming dragen ⚖️. Je werkgever geeft die
+gratis ⚖️. Gehoorschade gaat niet meer over. Je merkt het vaak pas na jaren.
+
+**Vraag 3 · Wat is het beste?** Op de werkbank liggen veel spanen. Sanne wil ze weghalen. Wat kan
+Sanne het beste doen?
+
+- **A.** Ze veegt ze weg met een borstel of een kwast.
+  → *Goed. Zo snijdt ze haar handen niet.*
+- **B.** Ze blaast ze weg met de luchtslang.
+  → *Dat is logisch. Maar dan vliegen de spanen alle kanten op.*
+- **C.** Ze veegt ze met haar hand in de bak.
+  → *Spanen zijn scherp. Zo snijdt ze in haar hand.*
+
+**Goed antwoord: A.**
+**Waarom:** Metalen spanen zijn scherp en soms heet. Pak ze niet met je blote hand. Gebruik een
+borstel of een kwast. Blaas ze niet weg met de luchtslang. Dan vliegen ze in iemands oog.
+
+**Vraag 4 · Waar of niet waar?** "Vonken van slijpen of lassen kunnen een brand geven."
+
+**Antwoord: waar.**
+**Waarom:** Vonken vliegen ver. Ze kunnen karton, hout of verf laten branden. Dat heet heet werk ⚖️.
+Haal eerst weg wat kan branden. Vraag of er een blusser klaarstaat. Soms blijft iemand na het werk
+nog kijken.
+
+**Zo zeg je het:** "Ik heb geen veiligheidsbril. Waar kan ik er een halen?" *(Je kunt je veiligheidsbril niet vinden.)*
+
+*Fout in "Wat zeg je?":* "Ik heb geen bril, maar het gaat wel. Ik ben zo klaar." → *Dan werk je
+zonder bescherming. Vraag eerst een bril.* · "Wie heeft mijn bril gepakt? Dit is echt niet normaal!"
+→ *Dat klinkt boos. Vraag liever rustig waar je er een krijgt.*
+
+**Onthoud:** Slijpen, boren of zagen? Eerst je bril en gehoorbescherming op.
+
+**Wie kan je helpen:** je leidinggevende of chef in de werkplaats · je praktijkopleider · de
+preventiemedewerker · de Nederlandse Arbeidsinspectie.
+
+---
+
+### Les TE.2 · Stroom: nooit zomaar
+
+**Leerdoel:** je werkt niet aan iets dat onder stroom staat. Je meldt een kapotte kabel.
+
+**Scène** · *Beeld: Mohammed in een gang bij een open meterkast. Uit een stopcontact hangen losse draden.*
+
+> Mohammed werkt bij een onderhoudsbedrijf. Hij moet een stopcontact vervangen bij een klant. De
+> klant zegt: "De stroom is er al af, hoor." Henk is vandaag bij een andere klus.
+
+**Regelkaart** · ⚡ *Werk nooit aan iets onder stroom. Eerst moet de stroom eraf, door iemand die dat mag.* (geschreven)
+
+- Werk alleen aan stroom als je het geleerd hebt, en als het mag ⚖️.
+- Eerst gaat de stroom eraf. Iemand meet of het echt uit is ⚖️.
+- Er komt een slot of bordje bij de meterkast ⚖️. Zo zet niemand de stroom weer aan.
+- Een kapotte kabel of stekker? Niet gebruiken, en melden.
+
+**Vraag 1 · Wat is het beste?** De klant zegt dat de stroom eraf is. Wat kan Mohammed het beste
+doen?
+
+- **A.** Hij begint meteen. De klant weet het vast wel.
+  → *Dat snap ik. Maar misschien zette de klant de verkeerde knop uit.*
+- **B.** Hij belt Henk, en vraagt wie meet of het uit is.
+  → *Goed. Eerst zeker weten, dan pas werken.*
+- **C.** Hij pakt de draden alleen vast met handschoenen aan.
+  → *Gewone werkhandschoenen beschermen niet tegen stroom.*
+
+**Goed antwoord: B.**
+**Waarom:** Een klant zet soms de verkeerde knop uit. Werk alleen aan stroom als je het geleerd
+hebt, en als het mag ⚖️. Eerst gaat de stroom eraf. Dan meet iemand of het echt uit is.
+
+**Vraag 2 · Waar of niet waar?** "Een kabel met een klein scheurtje mag je nog even gebruiken."
+
+**Antwoord: niet waar.**
+**Waarom:** Een kapotte kabel of stekker is gevaarlijk. Je kunt een schok krijgen, of er komt brand.
+Gebruik hem niet. Leg hem apart, en meld het. Dan kan iemand hem maken of weggooien.
+
+**Vraag 3 · Wie vraag je het?** Je moet aan een machine werken. Je weet niet of je aan de stroom mag
+komen. Wie vraag je het? *Een collega · De Arbeidsinspectie · **Je leidinggevende**.*
+**Waarom:** Je leidinggevende zegt wie aan stroom mag werken ⚖️. Daar is een opleiding voor nodig.
+Weet je het niet zeker? Vraag het altijd eerst.
+
+**Zo zeg je het:** "Is de stroom er echt af? Wie kan dat even meten?" *(Je moet een stopcontact vervangen bij een klant.)*
+
+*Fout in "Wat zeg je?":* "De klant zegt dat het uit is. Dan begin ik maar." → *Dan weet je het niet
+zeker. Laat het eerst meten.* · "Ik doe het gewoon met stroom erop. Ik ben voorzichtig." →
+*Voorzichtig is niet genoeg. Eerst moet de stroom eraf.*
+
+**Onthoud:** Werk nooit aan iets onder stroom. Eerst moet de stroom eraf, door iemand die dat mag.
+
+**Wie kan je helpen:** je leidinggevende (die zegt wie aan elektra mag werken) · een bevoegde
+collega · de Nederlandse Arbeidsinspectie.
+
+---
+
+## Sector garage · Werken in de garage
+
+*Entree-profiel mobiliteitsbranche (`r.werkplaats`, in `src/content/regels/units/sector.ts`). De werkorder is een kaartje van het type `werkbon`. Nog **niet** in de sectorkeuze, net als techniek.*
+
+### Les M.1 · Veilig in de werkplaats
+
+**Leerdoel:** je gaat alleen onder een auto die goed vaststaat. Je ruimt olie meteen op.
+
+**Scène** · *Beeld: Malik in een garage. Een auto staat omhoog op een krik. Naast de auto ligt een plas olie.*
+
+> Malik is 17. Hij loopt stage in een garage. Een auto staat omhoog op een krik. Malik moet eronder
+> kijken of er iets lekt. Naast de auto ligt een plas olie.
+
+**Regelkaart** · 🛠️ *Onder een auto? Alleen als hij goed vaststaat, op de brug of op bokken.* (geschreven)
+
+- Een krik is alleen om de auto op te tillen.
+- Ga pas onder een auto als hij op de brug of op bokken staat ⚖️.
+- Gemorste olie ruim je meteen op. Dan glijdt niemand uit.
+- Oude olie, accu's en vuile doeken zijn gevaarlijk afval ⚖️. Die gaan apart.
+
+**Vraag 1 · Wat is het beste?** Malik wil snel onder de auto kijken. Wat kan Malik het beste doen?
+
+- **A.** Hij kruipt er snel onder. Het duurt maar even.
+  → *Dat is logisch. Maar een krik kan wegzakken.*
+- **B.** Hij zet een tweede krik naast de eerste.
+  → *Goed bedoeld. Maar ook twee krikken staan niet vast.*
+- **C.** Hij vraagt of de auto eerst op bokken kan.
+  → *Goed. Op bokken staat de auto vast.*
+
+**Goed antwoord: C.**
+**Waarom:** Een krik is alleen om de auto op te tillen. Een krik kan wegzakken of wegglijden. Ga pas
+onder een auto als hij op de brug of op bokken staat ⚖️. Weet je niet hoe dat moet? Vraag het eerst.
+
+**Vraag 2 · Waar of niet waar?** "Gemorste olie op de vloer ruim je meteen op."
+
+**Antwoord: waar.**
+**Waarom:** Olie op de vloer is erg glad. Iemand kan uitglijden en vallen. Ruim het meteen op, met
+korrels of een doek. De vuile doeken gaan in de bak voor gevaarlijk afval.
+
+**Vraag 3 · Wat is het beste?** Malik heeft oude olie uit een auto gehaald. Wat kan Malik het beste
+doen?
+
+- **A.** Hij giet de olie in de put buiten.
+  → *Dan komt de olie in het water. Dat mag niet.*
+- **B.** Hij doet de olie in een fles, bij het gewone afval.
+  → *Olie is gevaarlijk afval. Dat hoort niet bij het gewone afval.*
+- **C.** Hij giet de olie in het vat voor oude olie.
+  → *Goed. Een bedrijf haalt de olie dan veilig op.*
+
+**Goed antwoord: C.**
+**Waarom:** Oude olie, remvloeistof en accu's zijn gevaarlijk afval ⚖️. Ze gaan niet in de put, en
+niet bij het gewone afval. In de garage staan aparte vaten en bakken. Vraag waar ze staan.
+
+**Zo zeg je het:** "De auto staat nog op de krik. Kunnen we hem eerst op bokken zetten?" *(De auto staat alleen op een krik.)*
+
+*Fout in "Wat zeg je?":* "Het is maar even. Ik kruip er gewoon snel onder." → *Een krik kan
+wegzakken. Vraag eerst om bokken.* · "Ik ga niet onder die auto. Doe het zelf maar!" → *Dat klinkt
+boos. Zeg liever wat er nodig is.*
+
+**Onthoud:** Onder een auto? Alleen als hij goed vaststaat, op de brug of op bokken.
+
+**Wie kan je helpen:** je chef in de werkplaats · je praktijkopleider · de Nederlandse
+Arbeidsinspectie.
+
+---
+
+### Les M.2 · De werkorder en de klant
+
+**Leerdoel:** je leest wat er op de werkorder staat. Extra werk doe je alleen als de klant ja zegt.
+
+**Scène** · *Beeld: Kevin in een garage bij een auto op de brug. In zijn hand een werkorder.*
+
+> Kevin werkt in een garage. Een klant brengt haar auto voor nieuwe banden. Kevin ziet ook dat de
+> remmen bijna op zijn. De klant is al naar haar werk.
+
+**Regelkaart** · 📋 *Extra werk? Eerst moet de klant ja zeggen.* (geschreven)
+
+- Op de werkorder staat wat de klant wil.
+- Zie je nog iets wat kapot is? Schrijf het op, en zeg het.
+- Doe extra werk pas als de klant ja zegt ⚖️. De garage belt de klant eerst.
+- Een proefrit maak je alleen als het mag, en met een rijbewijs.
+
+**Vraag 1 · Lees het kaartje.** *Kaartje (werkbon):* Werkorder · Klant: mevrouw Bakker, haalt de
+auto op om 17.00 uur · Opdracht: 4 nieuwe winterbanden · Opmerking: Extra werk? Eerst de klant
+bellen.. Wat doet Kevin vandaag aan de auto?
+
+- **A.** 4 nieuwe banden, en ook de remmen.
+  → *De remmen staan niet op de werkorder. Eerst moet de klant ja zeggen.*
+- **B.** 4 winterbanden. De remmen meldt hij.
+  → *Goed. Dat staat op de werkorder.*
+- **C.** Alleen de remmen. Dat is belangrijker.
+  → *De klant vroeg om banden. Over de remmen beslist de klant.*
+
+**Goed antwoord: B.**
+**Waarom:** Op de werkorder staat wat de klant wil. Zie je nog iets wat kapot is? Schrijf het op, en
+zeg het. De garage belt de klant. Pas als de klant ja zegt, doe je het extra werk.
+
+**Vraag 2 · Waar of niet waar?** "Een klant betaalt ook voor extra werk als ze geen ja zei."
+
+**Antwoord: niet waar.**
+**Waarom:** Extra werk doe je pas als de klant ja zegt. Anders hoeft de klant er meestal niet voor
+te betalen ⚖️. Daarom belt de garage de klant eerst. Schrijf op wat de klant zei, en wanneer.
+
+**Vraag 3 · Wat is het beste?** De chef zegt: "Maak even een proefrit." Kevin heeft nog geen
+rijbewijs. Wat kan Kevin het beste doen?
+
+- **A.** Hij rijdt alleen een klein rondje om het blok.
+  → *Ook dat rondje is op de openbare weg. Zonder rijbewijs mag dat niet.*
+- **B.** Hij rijdt, en vraagt een collega om naast hem te zitten.
+  → *Ook met een collega naast hem mag hij niet rijden.*
+- **C.** Hij zegt eerlijk dat hij geen rijbewijs heeft.
+  → *Goed. Dan maakt een collega de proefrit.*
+
+**Goed antwoord: C.**
+**Waarom:** Op de openbare weg mag je alleen rijden met een rijbewijs ⚖️. Ook voor een kort rondje.
+Zeg het eerlijk als je geen rijbewijs hebt. Een proefrit maak je ook alleen als je chef het vraagt.
+
+**Zo zeg je het:** "De remmen zijn bijna op. Wil je de klant even bellen?" *(Je ziet extra werk aan een auto.)*
+
+*Fout in "Wat zeg je?":* "De remmen zijn bijna op. Ik doe ze er meteen bij." → *Eerst moet de klant
+ja zeggen. Meld het eerst.* · "Ik zag iets aan de remmen. Maar goed, niet mijn werk." → *Dan hoort
+de klant het niet. Vraag of iemand haar belt.*
+
+**Onthoud:** Extra werk? Eerst moet de klant ja zeggen.
+
+**Wie kan je helpen:** je chef of de receptie van de garage (die belt de klant) · je
+praktijkopleider.

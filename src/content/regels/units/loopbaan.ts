@@ -133,7 +133,9 @@ export const loopbaanUnit: RuleUnit = {
           answer: false,
           why: 'Ben je jonger dan 18 zonder startkwalificatie? Dan moet je naar school. Dat heet de kwalificatieplicht. Een startkwalificatie is een diploma op niveau 2 of hoger. Werken en leren tegelijk mag wel. Dat heet bbl.',
         },
-        // ⚖️ check: Bij bbl werk je bij een bedrijf. Je gaat meestal 1 dag per week naar school ⚖️.
+        // ⚖️ check: Bij bbl werk je bij een bedrijf. Je gaat meestal 1 dag per week naar school ⚖️ (bbl:
+        //   minstens 60 procent van de opleiding is praktijk, WEB art. 7.2.2; de schooldag verschilt per
+        //   opleiding).
         // ⚖️ check: Je krijgt loon, en je haalt een diploma ⚖️ (bbl: een arbeidsovereenkomst en een
         //   praktijkovereenkomst; het leerbedrijf is erkend door SBB, WEB art. 7.2.10).
         {
@@ -161,7 +163,8 @@ export const loopbaanUnit: RuleUnit = {
           ],
           why: 'Met een Entree-diploma mag je door naar een opleiding op niveau 2. Je moet je wel zelf aanmelden, en op tijd. Vaak is dat vóór 1 april. Vraag je begeleider op school wat je moet doen.',
         },
-        // ⚖️ check: Op kiesmbo.nl staan alle mbo-opleidingen ⚖️.
+        // ⚖️ check: Op kiesmbo.nl staan alle mbo-opleidingen ⚖️ (kiesmbo.nl, van de mbo-scholen en SBB;
+        //   nakijken of echt alle opleidingen erop staan).
         {
           kind: 'whoask',
           id: 'r.l.loopbaan.2.wa1',

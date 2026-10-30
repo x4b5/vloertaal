@@ -1313,8 +1313,8 @@ export const techniekUnit: RuleUnit = {
           ],
           why: 'Metalen spanen zijn scherp en soms heet. Pak ze niet met je blote hand. Gebruik een borstel of een kwast. Blaas ze niet weg met de luchtslang. Dan vliegen ze in iemands oog.',
         },
-        // ⚖️ check: Vonken kunnen ver vliegen en brand geven; dat heet heet werk ⚖️ (Verbond van
-        //   Verzekeraars, "Brandgevaarlijke werkzaamheden"; vaak een werkvergunning en een
+        // ⚖️ check: Dat heet heet werk ⚖️ (vonken kunnen ver vliegen en brand geven;
+        //   Verbond van Verzekeraars, "Brandgevaarlijke werkzaamheden"; vaak een werkvergunning en een
         //   brandwacht of nacontrole).
         {
           kind: 'truefalse',
