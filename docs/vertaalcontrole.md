@@ -3,6 +3,43 @@
 Alle bestanden in `src/i18n/` zijn met AI gemaakt. Zet `reviewed: true` pas als een moedertaalspreker
 het hele bestand heeft gecontroleerd. Hieronder de punten waar de vertaler zelf twijfelde.
 
+## Spaans, Portugees, Frans en Duits (nieuw, 30 oktober 2026)
+
+Vier nieuwe hulptalen (x4b5/vloertaal#129): met AI vertaald vanuit het Engels, daarna door een tweede
+AI-lezer per taal nagelezen en verbeterd (es 32, pt 21, fr 34, de 30 veranderingen). Nog door geen
+mens nagekeken: `reviewed: false`. Keuzes: Spaans neutraal (tú, geen vosotros), Portugees Europees
+(pt-PT, tu), Frans uit Frankrijk (tu), Duits uit Duitsland (du, geen genderobjecten).
+
+**Alle vier:** de themanaam "Leven in Nederland" mag hoogstens 3 woorden zijn, dus "Vida en Holanda",
+"Viver na Holanda", "Leben in Holland" (fr: "Vivre aux Pays-Bas"). Elders staat "Países Bajos/Baixos" en
+"Niederlande". Een betere korte naam? De letterlijke vertalingen van gezegden (`*.lit`) zijn bewust letterlijk.
+
+**Spaans (`es`)**
+- Woorden van Spanje of van Latijns-Amerika: "nómina", "fichar", "taquilla", "computadora" (naast "ordenador"), "enfadado/enojado".
+- "encargado/encargada" voor de leidinggevende; "encargo" voor een opdracht van het uitzendbureau (in Spanje "misión").
+- "el cliente" in de zorg ("el usuario" of "el paciente" is gewoner).
+- `c.names.p` "Soy nuevo aquí" blijft mannelijk (de spreker is Ali).
+
+**Portugees (`pt`)**
+- "o patrão / a patroa" voor de baas, "chefe" voor de leidinggevende, "missão" voor een opdracht.
+- "cliente" in de zorg ("utente" is gewoner in Portugal).
+- `c.names.p` "Olá, sou Ali." ("sou o Ali" is natuurlijker).
+- `s.client.2`, `c.client.p` ("Eu ajudo a vestir-se") zonder voornaamwoord: het geslacht van de cliënt is niet bekend.
+- `ui.byTheme` "Por capítulo".
+
+**Frans (`fr`)**
+- Aanhalingstekens “…” in plaats van « » (de code die citaten splitst kent « » met spaties niet).
+- "parrain/marraine" voor buddy; "responsable" voor de leidinggevende, "patron" voor de baas.
+- "Tu travailles par une agence" ("via une agence" is natuurlijker).
+- `ui.wrongTapsN` "Mauvaises touches"; `c.easy.q` "Tu peux aider un moment ?" ("me donner un coup de main").
+- "service de garde des médecins" voor huisartsenpost; "À plus, Ali" onder een bericht.
+
+**Duits (`de`)**
+- In zinnen alleen de mannelijke vorm ("dein Vorgesetzter", "Kollegen"); woorden voor personen met beide vormen.
+- `s.people.3` "Ich bin neu im Team." (zonder genderobject kan "ein neuer Kollege / eine neue Kollegin" niet).
+- Vaste termen: Zeitarbeitsfirma, Einsatz, Abrufkraft, Karenztag, Staplerschein, Notaus, Pflegefachkraft, Hausarzt-Notdienst.
+- Smaak: "Dein Vertrag geht 3 Monate" ("läuft"), "Ist etwas?", "Wusstest du?", "Die Frau / Der Herr".
+
 ## Algemeen (alle talen met grammaticaal geslacht)
 Zinnen als "Ik ben nieuw", "Ik ben een nieuwe collega", "Ik ben ziek" en "Ik ben te laat" staan in de
 mannelijke vorm (Arabisch, Pools, Oekraïens, Roemeens, Bulgaars, Tigrinya). Op termijn: varianten per geslacht.

@@ -18,8 +18,8 @@ gaat over werk en rechten: contracten, loon, huisvesting, ziekte, verlof, ontsla
 veiligheid en waar je hulp kunt krijgen.
 
 **Hoe de leerling deze tekst leest.** De teksten zijn geschreven in eenvoudig Engels (niveau A2).
-De leerling ziet ze in een van negen hulptalen: Arabisch, Tigrinya, Perzisch, Dari, Oekraïens,
-Turks, Pools, Roemeens of Bulgaars (of alleen in het Engels). Die vertalingen zijn gemaakt vanuit
+De leerling ziet ze in een van dertien hulptalen: Arabisch, Tigrinya, Perzisch, Dari, Oekraïens,
+Turks, Pools, Roemeens, Bulgaars, Spaans, Portugees, Frans of Duits (of alleen in het Engels). Die vertalingen zijn gemaakt vanuit
 de Engelse tekst hieronder. Wat in het Engels niet klopt, klopt dus in geen enkele taal. Daarom
 staat de Engelse tekst in dit document **letterlijk** zoals hij in de app staat. De Nederlandse
 samenvatting bij elke tip is alleen voor u bedoeld en komt niet in de app.

@@ -147,7 +147,7 @@ const t: CultureTranslation = {
     'zg.eindjes.o1': 'Tiene muy poco dinero para todo.',
     'zg.eindjes.o2': 'No sabe atarse los zapatos.',
     'zg.eindjes.o3': 'Está aprendiendo a coser.',
-    'zg.eindjes.w': 'Mucha gente conoce esto. ¿Problemas de dinero? Pide ayuda pronto, por ejemplo en tu municipio (gemeente).',
+    'zg.eindjes.w': 'Mucha gente conoce esto. ¿Problemas de dinero? Pide ayuda pronto, por ejemplo en tu ayuntamiento (gemeente).',
   },
 };
 export default t;

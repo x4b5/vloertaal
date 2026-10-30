@@ -113,7 +113,7 @@ nieuwe woordkaart. Zie hoofdstuk 4.
 
 ### Hoe het in de twee tracks past
 
-| | Taal (9 hulptalen) | Werkregels (Nederlands 1F) |
+| | Taal (13 hulptalen) | Werkregels (Nederlands 1F) |
 |---|---|---|
 | **Wat** | 1 unit "Your region: South Limburg" / "Jouw regio: Zuid-Limburg", 2 lessen | 1 unit "Leven in Zuid-Limburg", 5 lessen |
 | **Waar in het lespad** | Na "Getting to work" (`u.travel`), want daar staan bus, trein en inchecken al | Na unit 10, in een eigen blok "Jouw regio" |

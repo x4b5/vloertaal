@@ -20,7 +20,7 @@ const t: CultureTranslation = {
     'a.who': 'Para quem é?',
     'a.who.b': 'Para todas as pessoas que estão a começar a trabalhar nos Países Baixos. Línguas de ajuda: árabe, tigrínia, persa, dari, ucraniano, turco, polaco, romeno, búlgaro, espanhol, português, francês e alemão.',
     'a.free': 'A tua privacidade',
-    'a.free.b': 'Não precisas de conta. O teu progresso fica guardado só neste telemóvel ou computador. Se estiver ligado, a app conta de forma anónima quantas vezes as lições são feitas: sem nome, sem seguimento. Podes desligar isto nas Definições.',
+    'a.free.b': 'Não precisas de conta. O teu progresso fica guardado só neste telemóvel ou computador. Se estiver ligado, a app conta de forma anónima quantas vezes as lições são feitas: sem nome, sem rastreio. Podes desligar isto nas Definições.',
     'a.disclaimer': 'É bom saber',
     'a.disclaimer.b': 'As dicas do Vloertaal são informação geral, não são aconselhamento jurídico. As regras podem mudar; os textos foram atualizados pela última vez em outubro de 2026. Para a tua situação, pergunta ao teu empregador, a um sindicato ou ao Juridisch Loket.',
     'a.voices': 'As vozes',
