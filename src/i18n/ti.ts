@@ -81,6 +81,12 @@ const lang: HelpLanguageSource = {
     unlock: { m: 'ክፈት', f: 'ክፈቲ' },
     sector: { m: 'ስራሕካ', f: 'ስራሕኪ' },
     chooseSector: { m: 'ኣበይ ኢኻ ትሰርሕ?', f: 'ኣበይ ኢኺ ትሰርሒ?' },
+    // nieuw, nog nalezen (land: Nederland of België)
+    countryTitle: { m: 'ኣብ ኣየናይ ሃገር ኢኻ ትሰርሕ?', f: 'ኣብ ኣየናይ ሃገር ኢኺ ትሰርሒ?' },
+    // TODO vertalen
+    countryHint: 'The work rules in Vloertaal are about the Netherlands. In Belgium many rules are different. This stays on your phone. We send it nowhere.',
+    countryNl: 'ኔዘርላንድ',
+    countryBe: 'ቤልጅዩም (ፍላንደርስ)',
     sectorHint: { m: 'ትምህርትታት ናይ ስራሕካ ኣቐዲሞም ይመጹ። ደሓር ኣብ ምድላዋት ክትቅይሮ ትኽእል ኢኻ።', f: 'ትምህርትታት ናይ ስራሕኪ ኣቐዲሞም ይመጹ። ደሓር ኣብ ምድላዋት ክትቅይርዮ ትኽእሊ ኢኺ።' },
     otherSectors: 'ካልኦት ዓውድታት ስራሕ',
     reviewToday: 'ናይ ሎሚ ድግግም',

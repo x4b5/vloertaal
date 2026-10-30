@@ -94,5 +94,48 @@ export const HELP_ROWS: HelpRow[] = [
   },
 ];
 
+/**
+ * "Wie bel je?" for a learner who works in Belgium (Settings: "In welk land werk je?", Vlaanderen).
+ * The work rules stay those of the Netherlands; these rows say where to ask in Flanders instead of
+ * the Dutch places. First version (30 okt 2026): every name, number and site has a ⚖️ check,
+ * see docs/belgie-vlaanderen-plan.md.
+ */
+export const HELP_ROWS_BE: HelpRow[] = [
+  HELP_ROWS[0],
+  {
+    // ⚖️ check: 1733 is the number for the huisarts van wacht in Belgium (evenings, nights, weekends)
+    id: 'h.be.wacht', emoji: '🏥', name: 'Huisarts van wacht',
+    when: 'Je bent ziek, het kan niet wachten en je eigen huisarts is dicht.',
+    show: '1733', href: 'tel:1733',
+  },
+  {
+    // ⚖️ check: the three big unions of Belgium and their sites
+    id: 'h.be.vakbond', emoji: '✊', name: 'Vakbond (ACV, ABVV of ACLVB)',
+    when: 'Hulp bij je loon, je contract of als je werk stopt. Leden krijgen ook hulp.',
+    show: 'acv-csc.be · abvv.be · aclvb.be',
+  },
+  {
+    // ⚖️ check: Toezicht op de Sociale Wetten (FOD WASO) takes complaints about pay and contracts
+    id: 'h.be.tsw', emoji: '🔍', name: 'Toezicht op de Sociale Wetten',
+    when: 'Je krijgt te weinig loon, of je werkt zonder contract.',
+    show: 'werk.belgie.be', href: 'https://werk.belgie.be',
+  },
+  {
+    // ⚖️ check: VDAB, the public employment service of Flanders
+    id: 'h.be.vdab', emoji: '📄', name: 'VDAB',
+    when: 'Je zoekt werk of een opleiding. Of je wilt Nederlands leren.',
+    show: 'vdab.be', href: 'https://www.vdab.be',
+  },
+  {
+    // ⚖️ check: Agentschap Integratie en Inburgering (Vlaanderen)
+    id: 'h.be.inburgering', emoji: '🏛️', name: 'Agentschap Integratie en Inburgering',
+    when: 'Vragen over inburgering, je papieren of Nederlandse les.',
+    show: 'integratie-inburgering.be', href: 'https://www.integratie-inburgering.be',
+  },
+];
+
+/** The rows of "Wie bel je?" for the country the learner works in. */
+export const helpRowsFor = (country?: 'nl' | 'be'): HelpRow[] => (country === 'be' ? HELP_ROWS_BE : HELP_ROWS);
+
 /** The text the speaker of a row reads (a row without a link). */
 export const helpRowText = (row: HelpRow): string => `${row.name}. ${row.when} ${row.show}`;

@@ -457,6 +457,7 @@ function defineStates(LANG) {
   // page (no certificate), a step of its lesson, and the real way from the home to the map.
   add('settings:region', shot('settings&page=region&region=zl'), null, { expect: '.chrome-back' });
   add('settings:region-none', shot('settings&page=region'), null, { expect: '.chrome-back' });
+  add('settings:country', shot('settings&page=country'), null, { expect: '.chrome-back' });
   add('settings:me-region', shot('settings&page=me&region=zl'), null, { list: true, expect: '.chrome-back' });
   add('tab:help-region', shot('words&region=zl'), null, { list: true, expect: '.social-map-link' });
   add('screen:social-map', shot('socialmap&region=zl'), null, { list: true, expect: '.sm-rows' });

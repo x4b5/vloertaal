@@ -29,7 +29,7 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
-import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, workWeek } from './lib/progress';
+import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dailyWordIds, dueIds, gradedStepIds, seedCards, strongerCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
@@ -590,6 +590,7 @@ export default function App() {
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
   /** "Waar woon je?" (Settings only): the region's lessons come in or go out of the path. */
   const setRegion = (region: RegionChoice) => setProgress((p) => ({ ...p, region }));
+  const setCountry = (country: Country) => setProgress((p) => ({ ...p, country }));
   /** The learner's region (src/content/regio), for its Sociale kaart on the Hulp tab (once its file is here). */
   const region = regionOf(progress.region);
   const mapLink = region ? <SocialMapLink region={region} lang={lang} onOpen={() => go({ name: 'socialmap' })} /> : undefined;
@@ -597,7 +598,7 @@ export default function App() {
   const hulpTab = () => (
     <>
       {track === 'regels'
-        ? <RulesHelp lang={lang} onShelf={() => go({ name: 'tips' })} after={mapLink} />
+        ? <RulesHelp lang={lang} country={progress.country} onShelf={() => go({ name: 'tips' })} after={mapLink} />
         : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} after={mapLink} />}
       <BottomNav current="words" onTab={tab} lang={lang} />
     </>
@@ -860,7 +861,7 @@ export default function App() {
       const onward = () => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
       // The work-rules track: its Hulp page ("Wie bel je?") instead of the emergency phrases.
       return track === 'regels'
-        ? <RulesHelp lang={lang} onBack={onward} onShelf={() => go({ name: 'tips' })} />
+        ? <RulesHelp lang={lang} country={progress.country} onBack={onward} onShelf={() => go({ name: 'tips' })} />
         : <Phrasebook lang={lang} onBack={onward} />;
     }
     case 'settings': {
@@ -877,6 +878,7 @@ export default function App() {
             onGender={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))}
             onSector={setSector}
             onRegion={setRegion}
+            onCountry={setCountry}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
             onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
@@ -889,7 +891,7 @@ export default function App() {
               forgetCertName();
               setProgress((p) => ({
                 ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
-                sector: p.sector, region: p.region, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked,
+                sector: p.sector, region: p.region, country: p.country, textSize: p.textSize, gender: p.gender, genderAsked: p.genderAsked,
               }));
               tab('route');
             }}
