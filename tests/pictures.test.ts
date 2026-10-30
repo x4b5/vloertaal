@@ -130,6 +130,20 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
   });
 });
 
+describe('drawn pictures (group 24)', () => {
+  it('the 33 words that had only an emoji have a drawing', async () => {
+    const { default: words } = await import('../src/pictures/words');
+    const ids = [
+      'w.voornaam', 'w.achternaam', 'w.spellen', 'w.telefoonnummer', 'w.formulier', 'w.papieren', 'w.werknemer',
+      'w.taalles', 'w.zwanger', 'w.kinderopvang', 'w.ophalen', 'w.ziekkind', 'w.mail', 'w.arm', 'w.hand', 'w.oog',
+      'w.slapen', 'w.ontbijt', 'w.bewegen', 'w.moe', 'w.sparen', 'w.sleutel', 'w.verhuizen', 'w.busje', 'w.gewas',
+      'w.rij', 'w.oogsten', 'w.sorteren', 'w.krat', 'w.spuitmiddelen', 'w.bespoten', 'w.plukkar', 'w.bukken',
+    ];
+    expect(ids).toHaveLength(33);
+    for (const id of ids) expect(typeof words[id], id).toBe('function');
+  });
+});
+
 describe('unit icons', () => {
   it('every unit has a drawn icon next to its title', async () => {
     const { units } = await import('../src/content/curriculum');
