@@ -671,10 +671,17 @@ function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
 /** From this many words still due after a review, the result says they come in the next days. */
 export const REVIEW_WAITING_MIN = 3;
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, easier = false }: {
   /** After a lesson of the language track with chats: a calm row to "Oefen samen" (never
-   *  needed: Continue goes on as always). */
+   *  needed: Continue goes on as always). Hidden while "Wil je sneller?" asks and the row to the
+   *  emergency phrases is there too (Ja, Nee and two rows would be four things to tap). */
   onSamen?: () => void;
+  /** "Wil je sneller?" (src/lib/pace.ts), once after 3 lessons in a row without a mistake: Ja and
+   *  Nee take the place of Continue (each goes on), so the screen keeps two things to tap (three
+   *  with the "Oefen samen" row). */
+  onFaster?: (yes: boolean) => void;
+  /** After many mistakes: one plain line, the next lesson is a bit shorter (no word about mistakes). */
+  easier?: boolean;
   /** After a lesson of the work-rules track: its "Onthoud" line (lesson.rule.remember), in Dutch,
    *  with one speaker (hidden when nothing can say it). Not a button. */
   remember?: string;
@@ -725,11 +732,16 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   // Enter continues, as after every exercise (the screen has no other input).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Enter' && !(e.target instanceof HTMLButtonElement) && ready.current) onDone();
+      // While "Wil je sneller?" waits for Ja or Nee, Enter does not answer it.
+      if (e.key === 'Enter' && !(e.target instanceof HTMLButtonElement) && ready.current && !onFaster) onDone();
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [onDone]);
+  }, [onDone, onFaster]);
+  const answerFaster = (yes: boolean) => { if (!ready.current || !onFaster) return; onFaster(yes); onDone(); };
+  // While "Wil je sneller?" waits for Ja or Nee, no samen row: a tap there would leave the question
+  // unanswered (it counts as asked once shown). The row comes back after the next lesson.
+  const showSamen = Boolean(onSamen) && !onFaster;
   const perfect = total > 0 && right === total;
   const rtl = lang?.dir === 'rtl';
   // The next lesson's first word with a picture, as on its card on the path.
@@ -812,13 +824,20 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           </p>
         )}
         {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}
-        {next && (
+        {/* (Not while "Wil je sneller?" asks: the question needs the room.) */}
+        {next && !onFaster && (
           <p className="result-line result-next" dir={rtl ? 'rtl' : undefined}>
             {/* Said, not shown (no aria-label on a <p>): "Next:" before the title. */}
             <span className="sr-only" lang={saidLang(ui('nextUp', lang))}>{`${said(ui('nextUp', lang))}: `}</span>
             <span className="result-next-arrow" aria-hidden><ArrowIcon size={22} /></span>
             {nextPic && <WordPicture className="result-next-pic" id={nextPic.id} emoji={nextPic.emoji} size={44} />}
             <Bi className="result-next-title" text={next} />
+          </p>
+        )}
+        {/* After many mistakes: the next lesson is shorter. Plain, no judgement. */}
+        {easier && (
+          <p className="result-line result-easier" dir={rtl ? 'rtl' : undefined}>
+            <NlPair nlFirst nlClass="result-pair-nl" nl="De volgende les is wat korter." text={ui('easierNext', lang)} />
           </p>
         )}
         {/* Once, after the first lesson: where the emergency phrases are (the Hulp tab). */}
@@ -838,12 +857,12 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           </button>
         )}
         {/* After a lesson with chats: practise them with someone else, on this phone. */}
-        {onSamen && (
+        {showSamen && (
           <button
             type="button"
             className="hub-card result-phrases result-samen"
             dir={rtl ? 'rtl' : undefined}
-            onClick={() => { if (ready.current) onSamen(); }}
+            onClick={() => { if (ready.current) onSamen?.(); }}
           >
             <span className="hub-icon" aria-hidden><BubblesIcon size={26} /></span>
             <span className="hub-text">
@@ -856,12 +875,31 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
       </div>
       <footer className="player-foot">
         <div className="foot-inner">
+          {/* Once, after 3 lessons in a row without a mistake: the question, in the footer right
+              above Ja and Nee, so it is always in view with them (also on a small phone). */}
+          {onFaster && (
+            <div className="result-faster" dir={rtl ? 'rtl' : undefined}>
+              <h2 className="result-faster-ask"><NlPair nlFirst nlClass="result-pair-nl" nl="Wil je sneller?" text={ui('fasterAsk', lang)} /></h2>
+              <p className="result-faster-hint"><Bi text={ui('fasterHint', lang)} /></p>
+            </div>
+          )}
+          {onFaster ? (
+            <div className="foot-actions result-faster-actions">
+              <button type="button" className="btn btn-ghost result-faster-no" onClick={() => answerFaster(false)} dir={rtl ? 'rtl' : undefined}>
+                <NlPair nlFirst nl="Nee" text={ui('fasterNo', lang)} />
+              </button>
+              <button type="button" className="btn btn-go btn-primary result-faster-yes" onClick={() => answerFaster(true)} dir={rtl ? 'rtl' : undefined}>
+                <NlPair nlFirst nl="Ja" text={ui('fasterYes', lang)} />
+              </button>
+            </div>
+          ) : (
           <div className="foot-actions">
             <button type="button" className="btn btn-go btn-primary result-go" onClick={done} dir={rtl ? 'rtl' : undefined}>
               <Bi className="btn-label" text={ui('continue', lang)} />
               <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
             </button>
           </div>
+          )}
         </div>
       </footer>
     </div>

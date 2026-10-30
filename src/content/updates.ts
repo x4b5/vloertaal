@@ -157,6 +157,7 @@ export const UPDATES: Update[] = [
       'Nieuw logo: Bram met de V op zijn helm. Bram zegt rustig één zin op het beginscherm en na een les.',
       'Echte meervouden in het Pools, Oekraïens, Roemeens, Arabisch en Bulgaars.',
       'Latere lessen worden stap voor stap moeilijker. "Herhaal vandaag" wisselt meer af.',
+      'Spoor Taal: "Herhaal vandaag" brengt nu ook zinnen terug die je in een les bouwde, en de zin die je zei, op dezelfde dagen als woorden (hoogstens 2 zinnen en 1 zin om te zeggen per dag). Na 3 lessen zonder fout vraagt Vloertaal één keer: "Wil je sneller?" Ja geeft minder uitleg in nieuwe lessen en het Nederlands op normaal tempo; terugzetten kan bij Instellingen › Lessen › Sneller leren. Na een les met veel fouten is de volgende les wat korter, en komen die woorden dezelfde dag terug.',
     ],
   },
 ];

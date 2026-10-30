@@ -345,6 +345,13 @@ const lang: HelpLanguageSource = {
     coachDays: 'روزهای تمرین در 4 هفتهٔ گذشته', // nieuw, nalezen
     coachLast: 'آخرین درس، با تاریخ', // nieuw, nalezen
     coachNameAsk: 'اسمت روی کارت؟', // nieuw, nalezen
+    fasterAsk: 'می‌خواهی سریع‌تر یاد بگیری؟', // nieuw, nalezen
+    fasterHint: 'توضیح کمتر در درس‌های تازه. هلندی با سرعت عادی.', // nieuw, nalezen
+    fasterYes: 'بله', // nieuw, nalezen
+    fasterNo: 'نه', // nieuw, nalezen
+    easierNext: 'درس بعدی کمی کوتاه‌تر است.', // nieuw, nalezen
+    fasterSetting: 'سریع‌تر یاد گرفتن', // nieuw, nalezen
+    fasterSettingHint: 'روشن: توضیح کمتر در درس‌های تازه، و هلندی با سرعت عادی. خاموش: مثل قبل.', // nieuw, nalezen
     samenTitle: 'با هم تمرین کنید', // nieuw, nalezen
     samenRowHint: 'دو نفر، یک گوشی', // nieuw, nalezen
     samenIntro: 'با یک همکار، دوست یا معلم تمرین کن. به نوبت بخوانید.', // nieuw, nalezen

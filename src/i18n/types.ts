@@ -407,6 +407,14 @@ export const uiEn = {
   coachDays: 'Days of practice in the last 4 weeks',
   coachLast: 'Last lesson, with the date',
   coachNameAsk: 'Your name on the card?',
+  // Lessons at the learner's level (src/lib/pace.ts)
+  fasterAsk: 'Do you want to go faster?',
+  fasterHint: 'Less explanation in new lessons. The Dutch at normal speed.',
+  fasterYes: 'Yes',
+  fasterNo: 'No',
+  easierNext: 'The next lesson is a bit shorter.',
+  fasterSetting: 'Learn faster',
+  fasterSettingHint: 'On: less explanation in new lessons, and the Dutch at normal speed. Off: as before.',
   /* "Wat kun je nu?": can-do sentences per topic (src/content/kunJeNu.ts), on the certificate screen and the coach card. */
   kunJeNu: 'What can you do now?',
   kunNote: 'The level next to each sentence is a guide, not an official level.',

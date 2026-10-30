@@ -345,6 +345,13 @@ const lang: HelpLanguageSource = {
     coachDays: 'Dias de prática nas últimas 4 semanas', // nieuw, nalezen
     coachLast: 'Última lição, com a data', // nieuw, nalezen
     coachNameAsk: 'O teu nome no cartão?', // nieuw, nalezen
+    fasterAsk: 'Queres ir mais rápido?', // nieuw, nalezen
+    fasterHint: 'Menos explicação nas lições novas. O neerlandês a velocidade normal.', // nieuw, nalezen
+    fasterYes: 'Sim', // nieuw, nalezen
+    fasterNo: 'Não', // nieuw, nalezen
+    easierNext: 'A próxima lição é um pouco mais curta.', // nieuw, nalezen
+    fasterSetting: 'Aprender mais rápido', // nieuw, nalezen
+    fasterSettingHint: 'Ligado: menos explicação nas lições novas e o neerlandês a velocidade normal. Desligado: como antes.', // nieuw, nalezen
     samenTitle: 'Praticar a dois', // nieuw, nalezen
     samenRowHint: 'Duas pessoas, um telemóvel', // nieuw, nalezen
     samenIntro: 'Pratica com um colega, um amigo ou um professor. Leiam à vez.', // nieuw, nalezen
