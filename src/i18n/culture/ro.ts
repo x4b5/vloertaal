@@ -14,7 +14,7 @@ const t: CultureTranslation = {
   },
   gloss: {
     'c.je': '„Je” sau „u”?',
-    'c.je.b': { m: 'La muncă, cei mai mulți își spun „je” unul altuia, des și șefului. Dacă nu ești sigur, începe cu „u” și ascultă ce fac ceilalți. Aici nu e nepoliticos să spui „je”.', f: 'La muncă, cei mai mulți își spun „je” unul altuia, des și șefului. Dacă nu ești sigură, începe cu „u” și ascultă ce fac ceilalți. Aici nu e nepoliticos să spui „je”.' },
+    'c.je.b': { m: 'La muncă, cei mai mulți își spun „je” unul altuia, des și șefului. Dacă nu ești sigur, începe cu „u” și ascultă ce fac ceilalți. Aici nu e nepoliticos să spui „je”.', f: 'La muncă, cei mai mulți își spun „je” unul altuia, des și șefului. Dacă nu ești sigură, începe cu „u” și ascultă ce fac ceilalți. Aici nu e nepoliticos să spui „je”.', x: 'La muncă, cei mai mulți își spun „je” unul altuia, des și șefului. Dacă nu știi sigur, începe cu „u” și ascultă ce fac ceilalți. Aici nu e nepoliticos să spui „je”.' }, // x: nieuw, nalezen
     'c.je.p': 'Pot să-ți spun „je”?',
     'c.je.s': 'Noua ta șefă îți spune: „Zeg maar je, hoor!” Ce vrea să spună?',
     'c.je.o1': 'Vrea să-i spui „je”.',
@@ -23,7 +23,7 @@ const t: CultureTranslation = {
     'c.je.w': '„Zeg maar je” e prietenos: vrea mai puțină distanță. În multe locuri de muncă din Olanda e normal să-i spui „je” șefului.',
     'c.names': 'Prenumele și o strângere de mână',
     'c.names.b': 'În prima zi, dă scurt mâna, uită-te la persoană și spune-ți prenumele. Colegii și șefii își spun de obicei pe prenume.',
-    'c.names.p': { m: 'Salut, sunt Ali. Sunt nou aici.', f: 'Salut, sunt Ali. Sunt nouă aici.' },
+    'c.names.p': { m: 'Salut, sunt Ali. Sunt nou aici.', f: 'Salut, sunt Ali. Sunt nouă aici.', x: 'Salut, sunt Ali. Sunt nou / nouă aici.' }, // x: nieuw, nalezen
     'c.names.s': 'Un coleg vine la tine: „Hoi, ik ben Mark.” Ce faci?',
     'c.names.o1': 'Îi dai mâna și îți spui numele.', // nagelezen (2e lezing)
     'c.names.o2': 'Dai din cap, zâmbești și aștepți întrebări.', // nagelezen (2e lezing)
@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.unsafe.s': 'Un palet e stivuit prea sus și aproape cade. Nimeni nu s-a rănit. Ce faci?',
     'c.unsafe.o1': 'Îi avertizezi pe colegi și îi spui șefului.',
     'c.unsafe.o2': 'Nu spui nimic, pentru că nu s-a întâmplat nimic.',
-    'c.unsafe.o3': { m: 'Repari singur și nu spui nimănui.', f: 'Repari singură și nu spui nimănui.' },
+    'c.unsafe.o3': { m: 'Repari singur și nu spui nimănui.', f: 'Repari singură și nu spui nimănui.', x: 'Repari pe cont propriu și nu spui nimănui.' }, // x: nieuw, nalezen
     'c.unsafe.w': 'Un aproape-accident e un avertisment. Dacă îl raportezi, ajuți la prevenirea unui accident adevărat. Angajatorul nu are voie să te pedepsească pentru asta.',
     'c.accident': 'Raportează orice accident',
     'c.accident.b': 'Spune-i șefului sau BHV’er-ului (persoanei de prim ajutor din firmă) despre orice accident, chiar și unul mic. Lucrezi printr-o agenție? Anunță și agenția. În caz de urgență, sună întâi la 112. Firma unde s-a petrecut accidentul trebuie să raporteze un accident grav la Nederlandse Arbeidsinspectie (și dacă lucrezi printr-o agenție): când cineva moare, rămâne cu o vătămare permanentă sau trebuie să stea în spital. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
@@ -78,7 +78,7 @@ const t: CultureTranslation = {
     'c.notyet.o3': 'Spui „ja” și speri că o să meargă bine.',
     'c.notyet.w': 'Un motostivuitor fără instruire e periculos, pentru tine și pentru alții. E normal să ceri instruire sau altă muncă, chiar și când e aglomerat.',
     'c.direct': 'Direct nu înseamnă nepoliticos',
-    'c.direct.b': { m: 'Colegii din Olanda spun des lucrurile foarte direct, de exemplu „Dat is fout” sau „Doe het zo”. De obicei nu vor să fie nepoliticoși. Și tu poți fi direct, atâta timp cât rămâi prietenos.', f: 'Colegii din Olanda spun des lucrurile foarte direct, de exemplu „Dat is fout” sau „Doe het zo”. De obicei nu vor să fie nepoliticoși. Și tu poți fi directă, atâta timp cât rămâi prietenoasă.' },
+    'c.direct.b': { m: 'Colegii din Olanda spun des lucrurile foarte direct, de exemplu „Dat is fout” sau „Doe het zo”. De obicei nu vor să fie nepoliticoși. Și tu poți fi direct, atâta timp cât rămâi prietenos.', f: 'Colegii din Olanda spun des lucrurile foarte direct, de exemplu „Dat is fout” sau „Doe het zo”. De obicei nu vor să fie nepoliticoși. Și tu poți fi directă, atâta timp cât rămâi prietenoasă.', x: 'Colegii din Olanda spun des lucrurile foarte direct, de exemplu „Dat is fout” sau „Doe het zo”. De obicei nu vor să fie nepoliticoși. Și tu poți vorbi direct, atâta timp cât vorbești prietenos.' }, // x: nieuw, nalezen
     'c.direct.p': 'Bine, atunci cum trebuie făcut?',
     'c.direct.s': 'Un coleg spune: „Nee, dat is fout. Die doos moet daar.” Ce faci?',
     'c.direct.o1': 'Întrebi cum trebuie făcut și muți cutia.',
@@ -86,11 +86,11 @@ const t: CultureTranslation = {
     'c.direct.o3': 'Nu spui nimic și lași cutia unde e.',
     'c.direct.w': 'Feedbackul direct e despre muncă, nu despre tine. Când întrebi „hoe moet het dan?”, arăți că vrei să înveți.',
     'c.limits': 'Spune când e prea greu',
-    'c.limits.b': { m: 'Nimeni nu se așteaptă să ridici totul singur. Să spui „dit is te zwaar” și să ceri ajutor sau o unealtă e inteligent, nu un semn de slăbiciune. Așa îți protejezi spatele.', f: 'Nimeni nu se așteaptă să ridici totul singură. Să spui „dit is te zwaar” și să ceri ajutor sau o unealtă e inteligent, nu un semn de slăbiciune. Așa îți protejezi spatele.' },
+    'c.limits.b': { m: 'Nimeni nu se așteaptă să ridici totul singur. Să spui „dit is te zwaar” și să ceri ajutor sau o unealtă e inteligent, nu un semn de slăbiciune. Așa îți protejezi spatele.', f: 'Nimeni nu se așteaptă să ridici totul singură. Să spui „dit is te zwaar” și să ceri ajutor sau o unealtă e inteligent, nu un semn de slăbiciune. Așa îți protejezi spatele.', x: 'Nimeni nu se așteaptă să ridici totul fără ajutor. Să spui „dit is te zwaar” și să ceri ajutor sau o unealtă e inteligent, nu un semn de slăbiciune. Așa îți protejezi spatele.' }, // x: nieuw, nalezen
     'c.limits.p': 'Cutia asta e prea grea. Mă ajuți puțin?',
     'c.limits.s': 'Trebuie să ridici o cutie mult prea grea pentru tine. Ce faci?',
     'c.limits.o1': 'Ceri ajutor unui coleg sau folosești un cărucior.',
-    'c.limits.o2': { m: 'O ridici oricum, ca să nu creadă nimeni că ești slab.', f: 'O ridici oricum, ca să nu creadă nimeni că ești slabă.' },
+    'c.limits.o2': { m: 'O ridici oricum, ca să nu creadă nimeni că ești slab.', f: 'O ridici oricum, ca să nu creadă nimeni că ești slabă.', x: 'O ridici oricum, ca să nu creadă nimeni că nu ai putere.' }, // x: nieuw, nalezen
     'c.limits.o3': 'O lași acolo și nu spui nimic.',
     'c.limits.w': 'Să ceri ajutor e muncă normală în echipă. Un spate rănit costă mult mai mult decât un minut de ajutor.',
     'c.time': 'La timp înseamnă puțin mai devreme',
@@ -101,14 +101,14 @@ const t: CultureTranslation = {
     'c.time.o2': 'Explici abia când ajungi la muncă.',
     'c.time.o3': 'Azi nu mai mergi deloc la muncă.',
     'c.time.w': 'Dacă anunți din timp, echipa se poate organiza. Să întârzii fără să anunți e văzut ca mult mai rău decât întârzierea în sine.',
-    'c.sick': { m: 'Cum anunți că ești bolnav', f: 'Cum anunți că ești bolnavă' },
+    'c.sick': { m: 'Cum anunți că ești bolnav', f: 'Cum anunți că ești bolnavă', x: 'Cum anunți că te-ai îmbolnăvit' }, // x: nieuw, nalezen
     'c.sick.b': 'Sună-l tu pe șef, înainte să înceapă tura, dacă firma nu are altă regulă. Lucrezi printr-o agenție? Anunță și agenția. Nu trebuie să spui ce boală ai. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
-    'c.sick.p': { m: 'Sunt bolnav. Azi nu pot veni la muncă.', f: 'Sunt bolnavă. Azi nu pot veni la muncă.' },
+    'c.sick.p': { m: 'Sunt bolnav. Azi nu pot veni la muncă.', f: 'Sunt bolnavă. Azi nu pot veni la muncă.', x: 'Sunt bolnav / bolnavă. Azi nu pot veni la muncă.' }, // x: nieuw, nalezen
     'c.sick.s': 'Te trezești cu febră. Tura ta începe la 7:00. Ce faci?',
     'c.sick.o1': 'Îl suni pe șef înainte de 7:00.', // nagelezen (2e lezing)
     'c.sick.o2': 'Îi ceri unui coleg să-i spună mai târziu șefului.',
     'c.sick.o3': 'Stai acasă și suni mâine.',
-    'c.sick.w': { m: 'În majoritatea locurilor de muncă din Olanda, regula e să anunți tu și la timp că ești bolnav. Angajatorul poate întreba cât va dura, dar nu ce boală ai.', f: 'În majoritatea locurilor de muncă din Olanda, regula e să anunți tu și la timp că ești bolnavă. Angajatorul poate întreba cât va dura, dar nu ce boală ai.' },
+    'c.sick.w': { m: 'În majoritatea locurilor de muncă din Olanda, regula e să anunți tu și la timp că ești bolnav. Angajatorul poate întreba cât va dura, dar nu ce boală ai.', f: 'În majoritatea locurilor de muncă din Olanda, regula e să anunți tu și la timp că ești bolnavă. Angajatorul poate întreba cât va dura, dar nu ce boală ai.', x: 'În majoritatea locurilor de muncă din Olanda, regula e să anunți tu și la timp că te-ai îmbolnăvit. Angajatorul poate întreba cât va dura, dar nu ce boală ai.' }, // x: nieuw, nalezen
     'c.speakup': 'Spune ce te deranjează',
     'c.speakup.b': 'Aici e normal și respectat să spui calm când ceva te deranjează. Vorbește întâi cu persoana, într-un moment liniștit. Folosește propoziții cu „ik”: „Ik vind het niet fijn dat ...”. Dacă nu ajută, vorbește cu șeful.',
     'c.speakup.p': 'Ceva mă deranjează. Putem vorbi puțin?',

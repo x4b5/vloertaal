@@ -16,7 +16,7 @@ const t: CultureTranslation = {
     's.shortlong.2': 'Włóż cebulę do torby.',
     's.shortlong.3': 'Sklep otwiera się o dziewiątej.',
     'c.shortlong.q': 'Chcesz jajko?',
-    'c.shortlong.a': { m: 'Nie, dziękuję. Już jadłem.', f: 'Nie, dziękuję. Już jadłam.' },
+    'c.shortlong.a': { m: 'Nie, dziękuję. Już jadłem.', f: 'Nie, dziękuję. Już jadłam.', x: 'Nie, dziękuję. Jestem już po jedzeniu.' }, // x: nieuw, nalezen
     'c.shortlong.a.why': 'Ktoś proponuje jajko: grzeczne „nie” z powodem.',
     'l.roundsounds': 'uu, oe i eu',
     'w.kl.muur': 'ściana',

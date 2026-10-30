@@ -1244,7 +1244,7 @@ const t: CultureTranslation = {
     'w.inburgering': "l’intégration civique (les cours et les examens pour les nouveaux arrivants)",
     'w.taalles': "le cours de langue",
     's.permit.1': "Je peux travailler ici avec mes papiers ?",
-    's.permit.2': { m: "Je suis salarié ou indépendant ?", f: "Je suis salariée ou indépendante ?" },
+    's.permit.2': { m: "Je suis salarié ou indépendant ?", f: "Je suis salariée ou indépendante ?", x: 'Je travaille avec un contrat ou à mon compte ?' }, // x: nieuw, nalezen
     's.permit.3': "Je travaille sur appel.",
     'c.permit.q': "Tu peux travailler mardi ?",
     'c.permit.a': "Non, j’ai un cours de langue ce jour-là. Mercredi, je peux.",
@@ -1269,7 +1269,7 @@ const t: CultureTranslation = {
     'w.oog': "l’œil",
     's.body.1': "J’ai mal à la main.",
     's.body.2': "Je ne me sens pas bien.",
-    's.body.3': { m: "Je suis tombé sur le bras.", f: "Je suis tombée sur le bras." },
+    's.body.3': { m: "Je suis tombé sur le bras.", f: "Je suis tombée sur le bras.", x: 'Je me suis fait mal au bras en tombant.' }, // x: nieuw, nalezen
     'c.body.q': "Où est-ce que tu as mal ?",
     'c.body.a': "Au dos. J’ai soulevé une caisse lourde.",
     'l.jobends': "Quand ton travail s’arrête",
@@ -1318,7 +1318,7 @@ const t: CultureTranslation = {
     'c.kids.w': "Un enfant malade, c’est une urgence à la maison. Quand tu préviens d’abord ton responsable, il peut organiser le travail. Le congé d’urgence est fait pour ces moments-là.",
     'c.body': "Dis ce qui s’est passé et où tu as mal",
     'c.body.b': "Chez le médecin, dis ce qui s’est passé et où tu as mal. Par exemple : « Ik ben gevallen. Mijn arm doet pijn. » Dis aussi depuis combien de temps tu as mal. Tu n’as pas besoin de deviner ce que tu as : c’est le médecin qui vérifie. C’est arrivé au travail ? Dis-le à ton responsable le jour même.",
-    'c.body.p': { m: "Je suis tombé. J’ai mal au bras.", f: "Je suis tombée. J’ai mal au bras." },
+    'c.body.p': { m: "Je suis tombé. J’ai mal au bras.", f: "Je suis tombée. J’ai mal au bras.", x: 'J’ai fait une chute. J’ai mal au bras.' }, // x: nieuw, nalezen
     'c.body.s': "Au travail, tu as soulevé une caisse lourde. Maintenant, tu as très mal au dos. Tu es chez le médecin de famille (huisarts). Que dis-tu ?",
     'c.body.o1': "Où tu as mal, et ce qui s’est passé : tu as soulevé une caisse lourde.",
     'c.body.o2': "Seulement que tu te sens mal, rien de plus.",

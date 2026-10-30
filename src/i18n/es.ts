@@ -346,7 +346,7 @@ const lang: HelpLanguageSource = {
     'w.nieuw': 'nuevo',
     's.people.1': 'Me llamo Sara.',
     's.people.2': '¿Quién es el jefe?',
-    's.people.3': { m: 'Soy un compañero nuevo.', f: 'Soy una compañera nueva.' },
+    's.people.3': { m: 'Soy un compañero nuevo.', f: 'Soy una compañera nueva.', x: 'Acabo de empezar en el equipo.' }, // x: nieuw, nalezen
 
     // Unit: Asking for help
     'u.help': 'Pedir ayuda',
@@ -436,7 +436,7 @@ const lang: HelpLanguageSource = {
     'w.pijn': 'el dolor',
     'w.vandaag': 'hoy',
     'w.beter': 'mejor',
-    's.sick.1': { m: 'Hoy estoy enfermo.', f: 'Hoy estoy enferma.' },
+    's.sick.1': { m: 'Hoy estoy enfermo.', f: 'Hoy estoy enferma.', x: 'Hoy estoy enfermo/a.' }, // x: nieuw, nalezen
     's.sick.2': 'Me duele la espalda.',
     's.sick.3': 'Llamo al médico.',
 
@@ -455,7 +455,7 @@ const lang: HelpLanguageSource = {
     's.arrive.2': 'No encuentro el vestuario.',
     's.arrive.3': '¿Quién es mi buddy hoy?',
     'c.arrive.q': 'Buenos días, ¿a qué viene?',
-    'c.arrive.a': { m: 'Soy nuevo. Empiezo hoy.', f: 'Soy nueva. Empiezo hoy.' },
+    'c.arrive.a': { m: 'Soy nuevo. Empiezo hoy.', f: 'Soy nueva. Empiezo hoy.', x: 'Soy nuevo/a. Empiezo hoy.' }, // x: nieuw, nalezen
     'c.understand.q': '¿Lo entiendes?',
     'c.understand.a': 'No, otra vez, por favor.',
     'c.gear.q': '¿Tienes tu casco?',
@@ -482,7 +482,7 @@ const lang: HelpLanguageSource = {
     'c.directions.a': 'A la derecha, junto a la estantería.',
     'c.shift.q': '¿Cuándo empieza tu turno?',
     'c.shift.a': 'Mañana a las siete.',
-    'c.sick.q': { m: '¿Estás enfermo?', f: '¿Estás enferma?' },
+    'c.sick.q': { m: '¿Estás enfermo?', f: '¿Estás enferma?', x: '¿Te encuentras mal?' }, // x: nieuw, nalezen
     'c.sick.a': 'Sí, hoy me quedo en casa.',
     // Emergency phrases (phrasebook only)
     'p.call112': '¡Llama al 112!',

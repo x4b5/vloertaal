@@ -16,7 +16,7 @@ const t: CultureTranslation = {
     's.shortlong.2': 'Поклади цибулю в пакет.',
     's.shortlong.3': 'Магазин відкривається о девʼятій.',
     'c.shortlong.q': 'Хочеш яйце?',
-    'c.shortlong.a': { m: 'Ні, дякую. Я вже поїв.', f: 'Ні, дякую. Я вже поїла.' },
+    'c.shortlong.a': { m: 'Ні, дякую. Я вже поїв.', f: 'Ні, дякую. Я вже поїла.', x: 'Ні, дякую. Я вже поїв / поїла.' }, // x: nieuw, nalezen
     'c.shortlong.a.why': 'Пропонують яйце: ввічливе «ні» з причиною.',
     'l.roundsounds': 'uu, oe та eu',
     'w.kl.muur': 'стіна',

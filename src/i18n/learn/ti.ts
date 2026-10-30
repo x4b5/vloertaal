@@ -4,7 +4,7 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {
     sayAloud: { m: "ማይክሮፎን ኣየድልን። ብዓው ኢልካ በሎ፡ ድሕሪኡ ቀጽል።", f: "ማይክሮፎን ኣየድልን። ብዓው ኢልኪ በልዮ፡ ድሕሪኡ ቀጽሊ።" },
-    micRetry: { m: "ማይክሮፎን ደጊምካ ፈትን", f: "ማይክሮፎን ደጊምኪ ፈትኒ" },
+    micRetry: { m: "ማይክሮፎን ደጊምካ ፈትን", f: "ማይክሮፎን ደጊምኪ ፈትኒ", x: 'ማይክሮፎን ደጊምኩም ፈትኑ' }, // x: nieuw, nalezen
     micFailed: { m: "ማይክሮፎን ኣይሰርሐን። ብዓው ኢልካ በሎ፡ ድሕሪኡ ቀጽል።", f: "ማይክሮፎን ኣይሰርሐን። ብዓው ኢልኪ በልዮ፡ ድሕሪኡ ቀጽሊ።" },
     whichPicture: "ኣየናይ ስእሊ እዩ?",
     wrongTapsN: "ጌጋ ጠውቕታት: {n}",

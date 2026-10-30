@@ -269,7 +269,7 @@ const lang: HelpLanguageSource = {
     spaceKey: 'Spacja',
     langNotOnPhone: 'Tego języka nie ma jeszcze w twoim telefonie. Połącz się z internetem, aby zmienić język.',
     /* G4 r4b: the reminder's own time ("Kies zelf"). */
-    remindChooseOwn: { m: 'Wybierz godzinę sam', f: 'Wybierz godzinę sama' },
+    remindChooseOwn: { m: 'Wybierz godzinę sam', f: 'Wybierz godzinę sama', x: 'Wybierz własną godzinę' }, // x: nieuw, nalezen
     gateWho: 'Kod dostajesz od nauczyciela, opiekuna lub pracodawcy.',
     gateTrust: 'Bez konta. Bez imienia. Wszystko zostaje na tym telefonie.',
     codeAccepted: 'Kod przyjęty',
@@ -280,10 +280,10 @@ const lang: HelpLanguageSource = {
     bramDueN: { one: '{n} słowo do powtórki dziś.', few: '{n} słowa do powtórki dziś.', many: '{n} słów do powtórki dziś.', other: '{n} słów do powtórki dziś.' },
     bramDueOne: 'Słowa do powtórki dziś: {n}',
     bramDayN: 'Dzień {n} z rzędu.',
-    bramDone: { m: 'Na dziś zrobiłeś wszystko. Do jutra.', f: 'Na dziś zrobiłaś wszystko. Do jutra.' },
+    bramDone: { m: 'Na dziś zrobiłeś wszystko. Do jutra.', f: 'Na dziś zrobiłaś wszystko. Do jutra.', x: 'Na dziś wszystko zrobione. Do jutra.' }, // x: nieuw, nalezen
     bramPerfect: 'Bardzo dobrze. Znasz te słowa.',
     bramGood: 'Dobra robota. Krok po kroku.',
-    bramHard: { m: 'Dobrze, że ćwiczyłeś. Trudne słowa wrócą.', f: 'Dobrze, że ćwiczyłaś. Trudne słowa wrócą.' },
+    bramHard: { m: 'Dobrze, że ćwiczyłeś. Trudne słowa wrócą.', f: 'Dobrze, że ćwiczyłaś. Trudne słowa wrócą.', x: 'Dobrze, że ćwiczysz. Trudne słowa wrócą.' }, // x: nieuw, nalezen
     bramReview: 'Dobrze. Powtarzanie pomaga zapamiętać.',
     bramIntro: 'Jestem Bram, twój kolega z pracy.',
     bramIntroHello: 'Cześć, jestem Bram.',
@@ -294,10 +294,10 @@ const lang: HelpLanguageSource = {
     chatWhichQuestion: 'Które pytanie pasuje do tej odpowiedzi?',
     reviewWaiting: 'Czekają jeszcze słowa: {n}. Wrócą w najbliższych dniach.',
     factTitle: 'Czy wiesz?',
-    fact3: { m: 'Nie jesteś sam: ponad 3 miliony dorosłych w Holandii mają trudności z czytaniem, liczeniem lub komputerem. Ćwiczenie pomaga.', f: 'Nie jesteś sama: ponad 3 miliony dorosłych w Holandii mają trudności z czytaniem, liczeniem lub komputerem. Ćwiczenie pomaga.' },
+    fact3: { m: 'Nie jesteś sam: ponad 3 miliony dorosłych w Holandii mają trudności z czytaniem, liczeniem lub komputerem. Ćwiczenie pomaga.', f: 'Nie jesteś sama: ponad 3 miliony dorosłych w Holandii mają trudności z czytaniem, liczeniem lub komputerem. Ćwiczenie pomaga.', x: 'Nie tylko ty: ponad 3 miliony dorosłych w Holandii mają trudności z czytaniem, liczeniem lub komputerem. Ćwiczenie pomaga.' }, // x: nieuw, nalezen
     fact7: 'Spośród migrantów, którzy bardzo dobrze mówią po niderlandzku, 69 na 100 ma płatną pracę.',
     fact14: 'W wielu bibliotekach jest Taalhuis („dom języka”): darmowa pomoc w dalszej nauce niderlandzkiego.',
-    fact30: { m: 'Lepiej ćwiczyć trochę codziennie niż dużo od czasu do czasu. Ćwiczyłeś już 30 dni z rzędu!', f: 'Lepiej ćwiczyć trochę codziennie niż dużo od czasu do czasu. Ćwiczyłaś już 30 dni z rzędu!' },
+    fact30: { m: 'Lepiej ćwiczyć trochę codziennie niż dużo od czasu do czasu. Ćwiczyłeś już 30 dni z rzędu!', f: 'Lepiej ćwiczyć trochę codziennie niż dużo od czasu do czasu. Ćwiczyłaś już 30 dni z rzędu!', x: 'Lepiej ćwiczyć trochę codziennie niż dużo od czasu do czasu. Masz już 30 dni ćwiczeń z rzędu!' }, // x: nieuw, nalezen
     /* Backup, reminder and reset, a second look */
     backupFileN: { one: 'Ten plik ma {n} lekcję.', few: 'Ten plik ma {n} lekcje.', many: 'Ten plik ma {n} lekcji.', other: 'Ten plik ma {n} lekcji.' },
     backupFileOne: 'Ten plik ma {n} lekcję.',
@@ -334,7 +334,7 @@ const lang: HelpLanguageSource = {
     'w.ja': 'tak',
     'w.nee': 'nie',
     'w.totmorgen': 'do jutra',
-    's.hello.1': { m: 'Cześć, jestem nowy.', f: 'Cześć, jestem nowa.' },
+    's.hello.1': { m: 'Cześć, jestem nowy.', f: 'Cześć, jestem nowa.', x: 'Cześć, jestem nowy / nowa.' }, // x: nieuw, nalezen
     's.hello.2': 'Dzień dobry, jestem Ali.',
     's.hello.3': 'Dziękuję, do jutra!',
     'l.people': 'Ludzie w pracy',
@@ -346,7 +346,7 @@ const lang: HelpLanguageSource = {
     'w.nieuw': 'nowy',
     's.people.1': 'Mam na imię Sara.',
     's.people.2': 'Kto jest szefem?',
-    's.people.3': { m: 'Jestem nowym kolegą z pracy.', f: 'Jestem nową koleżanką z pracy.' },
+    's.people.3': { m: 'Jestem nowym kolegą z pracy.', f: 'Jestem nową koleżanką z pracy.', x: 'Jestem nową osobą w zespole.' }, // x: nieuw, nalezen
 
     // Unit: Asking for help
     'u.help': 'Prośba o pomoc',
@@ -428,7 +428,7 @@ const lang: HelpLanguageSource = {
     'w.morgen': 'jutro',
     's.shift.1': 'Moja zmiana zaczyna się o siódmej.',
     's.shift.2': 'Kiedy jest przerwa?',
-    's.shift.3': { m: 'Przepraszam, spóźniłem się.', f: 'Przepraszam, spóźniłam się.' },
+    's.shift.3': { m: 'Przepraszam, spóźniłem się.', f: 'Przepraszam, spóźniłam się.', x: 'Przepraszam za spóźnienie.' }, // x: nieuw, nalezen
     'l.sick': 'Zgłaszanie choroby',
     'w.ziek': 'chory',
     'w.bellen': 'dzwonić (telefonem)',
@@ -436,7 +436,7 @@ const lang: HelpLanguageSource = {
     'w.pijn': 'ból',
     'w.vandaag': 'dzisiaj',
     'w.beter': 'lepiej',
-    's.sick.1': { m: 'Jestem dzisiaj chory.', f: 'Jestem dzisiaj chora.' },
+    's.sick.1': { m: 'Jestem dzisiaj chory.', f: 'Jestem dzisiaj chora.', x: 'Jestem dzisiaj chory / chora.' }, // x: nieuw, nalezen
     's.sick.2': 'Bolą mnie plecy.',
     's.sick.3': 'Dzwonię do lekarza.',
 
@@ -455,7 +455,7 @@ const lang: HelpLanguageSource = {
     's.arrive.2': 'Nie mogę znaleźć szatni.',
     's.arrive.3': 'Kto jest dzisiaj moim opiekunem?',
     'c.arrive.q': 'Dzień dobry, w jakiej sprawie?',
-    'c.arrive.a': { m: 'Jestem nowy. Zaczynam dzisiaj.', f: 'Jestem nowa. Zaczynam dzisiaj.' },
+    'c.arrive.a': { m: 'Jestem nowy. Zaczynam dzisiaj.', f: 'Jestem nowa. Zaczynam dzisiaj.', x: 'Jestem nowy / nowa. Zaczynam dzisiaj.' }, // x: nieuw, nalezen
     'c.understand.q': 'Rozumiesz?',
     'c.understand.a': 'Nie, jeszcze raz, proszę.',
     'c.gear.q': 'Masz swój kask?',
@@ -473,7 +473,7 @@ const lang: HelpLanguageSource = {
     'w.uitleg': 'wyjaśnienie',
     's.notyet.1': { m: 'Jeszcze się tego nie nauczyłem.', f: 'Jeszcze się tego nie nauczyłam.', x: 'Jeszcze się tego nie nauczyłem / nauczyłam.' },
     's.notyet.2': 'Nikt mi jeszcze tego nie wyjaśnił.',
-    's.notyet.3': { m: 'Czy mogę już robić to sam?', f: 'Czy mogę już robić to sama?' },
+    's.notyet.3': { m: 'Czy mogę już robić to sam?', f: 'Czy mogę już robić to sama?', x: 'Czy mogę już robić to samodzielnie?' }, // x: nieuw, nalezen
     'c.notyet.q': 'Po prostu spróbuj, to łatwe.',
     'c.notyet.a': 'Możesz mi najpierw pokazać, jak to się robi?',
     'c.things.q': 'Gdzie ma iść ten karton?',
@@ -482,7 +482,7 @@ const lang: HelpLanguageSource = {
     'c.directions.a': 'W prawo, przy regale.',
     'c.shift.q': 'Kiedy zaczyna się twoja zmiana?',
     'c.shift.a': 'Jutro o siódmej.',
-    'c.sick.q': { m: 'Jesteś chory?', f: 'Jesteś chora?' },
+    'c.sick.q': { m: 'Jesteś chory?', f: 'Jesteś chora?', x: 'Źle się czujesz?' }, // x: nieuw, nalezen
     'c.sick.a': 'Tak, dziś zostaję w domu.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Dzwoń pod 112!',

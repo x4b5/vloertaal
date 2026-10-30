@@ -255,7 +255,7 @@ const lang: HelpLanguageSource = {
     otherTopicLink: 'Outro tema',
     remindAsk: 'Queres que te lembremos todos os dias?',
     remindYes: 'Sim, depois do trabalho',
-    remindNo: { m: 'Não, obrigado', f: 'Não, obrigada' },
+    remindNo: { m: 'Não, obrigado', f: 'Não, obrigada', x: 'Não, obrigado / obrigada' }, // x: nieuw, nalezen
     remindPickTime: 'Quando te devemos lembrar?',
     certSaveShare: 'Guardar ou partilhar',
     certNameDone: 'Pronto',

@@ -987,7 +987,7 @@ const t: CultureTranslation = {
     's.boundaries.1': 'Não me toque, por favor.',
     's.boundaries.2': 'Não acho piada a esse comentário.',
     's.boundaries.3': 'Quero comunicar uma coisa à pessoa de confiança.',
-    'c.boundaries.q': { m: 'Não sejas tão complicado, era só uma piada.', f: 'Não sejas tão complicada, era só uma piada.' },
+    'c.boundaries.q': { m: 'Não sejas tão complicado, era só uma piada.', f: 'Não sejas tão complicada, era só uma piada.', x: 'Não compliques tanto, era só uma piada.' }, // x: nieuw, nalezen
     'c.boundaries.a': 'Para mim não. Quero que pares.',
     'c.gossip': 'Mexericos e redes sociais',
     'c.gossip.b': 'Falar de um colega pelas costas (roddelen) estraga a confiança numa equipa. Tens um problema com alguém? Fala com essa pessoa, ou com o teu chefe. Na internet valem as mesmas regras que no trabalho: não publiques fotografias, vídeos ou mensagens sobre colegas, clientes ou a empresa sem autorização. O teu patrão pode ver o que publicas, e isso pode ficar online durante anos. Muitas equipas têm um grupo de mensagens (groepsapp) para o trabalho: fala só de trabalho, e não partilhes capturas de ecrã do grupo com outras pessoas. Partilhar coisas privadas de um colega ou gozar com alguém na internet também é bullying.',
@@ -1000,7 +1000,7 @@ const t: CultureTranslation = {
     'c.boundaries': 'Passar dos limites',
     'c.boundaries.b': 'Grensoverschrijdend gedrag é um comportamento que passa os limites de alguém: toques indesejados, comentários ou piadas sexuais, olhares insistentes, enviar imagens indesejadas, ameaças ou gritos. Não importa se a outra pessoa "estava a brincar": o que conta é como tu te sentes. Se puderes, diz com clareza que queres que pare. Escreve o que aconteceu, quando e quem viu. Diz ao teu chefe, à pessoa de confiança (vertrouwenspersoon, se houver) ou aos recursos humanos. O teu empregador tem de te proteger, e ninguém te pode castigar por comunicares. Viste isto acontecer a um colega? Pergunta se está bem, e oferece-te para ser testemunha.',
     'c.boundaries.p': 'Quero que pares.',
-    'c.boundaries.s': { m: 'O teu chefe de equipa põe muitas vezes a mão nas tuas costas e diz que estás "bonito". Isso deixa-te desconfortável. É ele que decide os teus turnos. O que fazes?', f: 'O teu chefe de equipa põe muitas vezes a mão nas tuas costas e diz que estás "bonita". Isso deixa-te desconfortável. É ele que decide os teus turnos. O que fazes?' },
+    'c.boundaries.s': { m: 'O teu chefe de equipa põe muitas vezes a mão nas tuas costas e diz que estás "bonito". Isso deixa-te desconfortável. É ele que decide os teus turnos. O que fazes?', f: 'O teu chefe de equipa põe muitas vezes a mão nas tuas costas e diz que estás "bonita". Isso deixa-te desconfortável. É ele que decide os teus turnos. O que fazes?', x: 'O teu chefe de equipa põe muitas vezes a mão nas tuas costas e diz que estás com "bom aspeto". Isso deixa-te desconfortável. É ele que decide os teus turnos. O que fazes?' }, // x: nieuw, nalezen
     'c.boundaries.o1': 'Escreves o que acontece e contas à vertrouwenspersoon.', // nagelezen (2e lezing)
     'c.boundaries.o2': 'Não dizes nada, porque é ele que decide os teus turnos.',
     'c.boundaries.o3': 'Despedes-te sem dizer a ninguém porquê.',

@@ -29,7 +29,7 @@ const t: CultureTranslation = {
     'rg.zl.s.1.2': 'Mam umówioną wizytę na dziesiątą.',
     'rg.zl.s.1.3': 'Jestem na liście oczekujących na mieszkanie.',
     'rg.zl.c.1.q': 'Gdzie mieszkasz?',
-    'rg.zl.c.1.a': { m: 'W Heerlen. Właśnie się przeprowadziłem.', f: 'W Heerlen. Właśnie się przeprowadziłam.' },
+    'rg.zl.c.1.a': { m: 'W Heerlen. Właśnie się przeprowadziłem.', f: 'W Heerlen. Właśnie się przeprowadziłam.', x: 'W Heerlen. Mieszkam tu od niedawna.' }, // x: nieuw, nalezen
     'rg.zl.l.2': 'Granica, karnawał i dialekt',
     'rg.zl.w.grens': 'granica (między dwoma krajami)',
     'rg.zl.w.buitenland': 'zagranica, inny kraj',
