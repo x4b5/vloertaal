@@ -283,7 +283,7 @@ const lang: HelpLanguageSource = {
     bramDone: 'Gata pentru azi. Ne vedem mâine.',
     bramPerfect: 'Foarte bine. Știi aceste cuvinte.',
     bramGood: 'Treabă bună. Pas cu pas.',
-    bramHard: { m: 'E bine că ai fost harnic. Cuvintele grele revin.', f: 'E bine că ai fost harnică. Cuvintele grele revin.' },
+    bramHard: { m: 'E bine că ai fost harnic. Cuvintele grele revin.', f: 'E bine că ai fost harnică. Cuvintele grele revin.', x: 'E bine că ai exersat. Cuvintele grele revin.' }, // x: nieuw, nalezen
     bramReview: 'Bine. Repetiția te ajută să ții minte.',
     bramIntro: 'Sunt Bram, colegul tău de muncă.',
     bramIntroHello: 'Bună, sunt Bram.',
@@ -294,7 +294,7 @@ const lang: HelpLanguageSource = {
     chatWhichQuestion: 'Ce întrebare se potrivește cu acest răspuns?',
     reviewWaiting: 'Mai așteaptă cuvinte: {n}. Revin în zilele următoare.',
     factTitle: 'Știai că?',
-    fact3: { m: 'Nu ești singur: peste 3 milioane de adulți din Olanda se descurcă greu cu cititul, socotitul sau calculatorul. Exercițiul ajută.', f: 'Nu ești singură: peste 3 milioane de adulți din Olanda se descurcă greu cu cititul, socotitul sau calculatorul. Exercițiul ajută.' },
+    fact3: { m: 'Nu ești singur: peste 3 milioane de adulți din Olanda se descurcă greu cu cititul, socotitul sau calculatorul. Exercițiul ajută.', f: 'Nu ești singură: peste 3 milioane de adulți din Olanda se descurcă greu cu cititul, socotitul sau calculatorul. Exercițiul ajută.', x: 'Nu e doar cazul tău: peste 3 milioane de adulți din Olanda se descurcă greu cu cititul, socotitul sau calculatorul. Exercițiul ajută.' }, // x: nieuw, nalezen
     fact7: 'Dintre migranții care vorbesc foarte bine olandeza, 69 din 100 au un loc de muncă plătit.',
     fact14: 'Multe biblioteci au un Taalhuis („casa limbii”): ajutor gratuit ca să înveți olandeza mai departe.',
     fact30: 'Puțin exercițiu în fiecare zi e mai bun decât mult din când în când. Exersezi deja de 30 de zile!',
@@ -342,7 +342,7 @@ const lang: HelpLanguageSource = {
     'l.things': 'Lucruri din depozit',
     'l.directions': 'Direcții și acțiuni',
     'l.shift': 'Tura mea',
-    'l.sick': { m: 'Anunți că ești bolnav', f: 'Anunți că ești bolnavă' },
+    'l.sick': { m: 'Anunți că ești bolnav', f: 'Anunți că ești bolnavă', x: 'Anunți că te-ai îmbolnăvit' }, // x: nieuw, nalezen
 
     // Words
     'w.hallo': 'salut',
@@ -407,12 +407,12 @@ const lang: HelpLanguageSource = {
     'w.beter': 'mai bine',
 
     // Sentences
-    's.hello.1': { m: 'Salut, sunt nou.', f: 'Salut, sunt nouă.' },
+    's.hello.1': { m: 'Salut, sunt nou.', f: 'Salut, sunt nouă.', x: 'Salut, sunt nou / nouă.' }, // x: nieuw, nalezen
     's.hello.2': 'Bună dimineața, sunt Ali.',
     's.hello.3': 'Mulțumesc, pe mâine!',
     's.people.1': 'Numele meu este Sara.',
     's.people.2': 'Cine este șeful?',
-    's.people.3': { m: 'Sunt un coleg nou.', f: 'Sunt o colegă nouă.' },
+    's.people.3': { m: 'Sunt un coleg nou.', f: 'Sunt o colegă nouă.', x: 'Sunt o persoană nouă în echipă.' }, // x: nieuw, nalezen
     's.understand.1': 'Puteți repeta?',
     's.understand.2': 'Puteți vorbi mai încet?',
     's.understand.3': 'Unde este toaleta?',
@@ -434,7 +434,7 @@ const lang: HelpLanguageSource = {
     's.shift.1': 'Tura mea începe la ora șapte.',
     's.shift.2': 'Când este pauza?',
     's.shift.3': 'Scuze, am întârziat.',
-    's.sick.1': { m: 'Sunt bolnav azi.', f: 'Sunt bolnavă azi.' },
+    's.sick.1': { m: 'Sunt bolnav azi.', f: 'Sunt bolnavă azi.', x: 'Sunt bolnav / bolnavă azi.' }, // x: nieuw, nalezen
     's.sick.2': 'Mă doare spatele.',
     's.sick.3': 'Îl sun pe doctor.',
     'c.hello.q': 'Seară bună!',
@@ -452,7 +452,7 @@ const lang: HelpLanguageSource = {
     's.arrive.2': 'Nu găsesc vestiarul.',
     's.arrive.3': 'Cine e colegul meu îndrumător azi?',
     'c.arrive.q': 'Bună dimineața, în ce problemă veniți?',
-    'c.arrive.a': { m: 'Sunt nou. Încep azi.', f: 'Sunt nouă. Încep azi.' },
+    'c.arrive.a': { m: 'Sunt nou. Încep azi.', f: 'Sunt nouă. Încep azi.', x: 'Sunt nou / nouă. Încep azi.' }, // x: nieuw, nalezen
     'c.understand.q': 'Înțelegi?',
     'c.understand.a': 'Nu, încă o dată, te rog.',
     'c.gear.q': 'Ai casca?',
@@ -470,7 +470,7 @@ const lang: HelpLanguageSource = {
     'w.uitleg': 'explicația',
     's.notyet.1': 'Asta n-am învățat-o încă.',
     's.notyet.2': 'Încă nu mi s-a explicat.',
-    's.notyet.3': { m: 'Am voie să fac asta deja singur?', f: 'Am voie să fac asta deja singură?' },
+    's.notyet.3': { m: 'Am voie să fac asta deja singur?', f: 'Am voie să fac asta deja singură?', x: 'Am voie să fac asta deja fără ajutor?' }, // x: nieuw, nalezen
     'c.notyet.q': 'Încearcă, e ușor.',
     'c.notyet.a': 'Poți să-mi arăți întâi cum se face?',
     'c.things.q': 'Unde trebuie pusă cutia?',
@@ -479,7 +479,7 @@ const lang: HelpLanguageSource = {
     'c.directions.a': 'Dreapta, lângă raft.',
     'c.shift.q': 'Când începe tura ta?',
     'c.shift.a': 'Mâine la ora șapte.',
-    'c.sick.q': { m: 'Ești bolnav?', f: 'Ești bolnavă?' },
+    'c.sick.q': { m: 'Ești bolnav?', f: 'Ești bolnavă?', x: 'Nu te simți bine?' }, // x: nieuw, nalezen
     'c.sick.a': 'Da, azi rămân acasă.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Sună la 112!',

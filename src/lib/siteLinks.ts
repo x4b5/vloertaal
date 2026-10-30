@@ -1,4 +1,4 @@
-import { aboutSections } from '../content/about';
+import { aboutSection } from '../content/about';
 import { linkRows } from './linkRows';
 import { esc, plainPage } from './plainPage';
 
@@ -9,7 +9,7 @@ import { esc, plainPage } from './plainPage';
  * the screen); the app removes it when it draws (src/main.tsx).
  */
 export function siteLinks(): string {
-  const about = (id: string) => esc(aboutSections.find((s) => s.id === id)!.nl.body);
+  const about = (id: string) => esc(aboutSection(id).nl.body);
   return `<section id="site-links" class="site-links" lang="nl" aria-labelledby="site-links-title">
 <h1 id="site-links-title">Vloertaal: gratis Nederlands leren voor je werk</h1>
 <p>${about('a.what')}</p>

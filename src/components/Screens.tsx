@@ -3,7 +3,7 @@ import { LessonCelebration } from './Celebrate';
 import { BramSays } from './BramSays';
 import { Character } from './Characters';
 import { resultLineFor } from '../lib/greeting';
-import { aboutRules, aboutSections, CONTACT_EMAIL } from '../content/about';
+import { aboutRules, aboutSections, CONTACT_EMAIL, PRO_TITLE } from '../content/about';
 import { LAST_UPDATE, updateDate } from '../content/updates';
 import { cultureTips } from '../content/culture';
 import { regionTips } from '../content/regio';
@@ -512,10 +512,11 @@ function TesterSwitch() {
   );
 }
 
-/** "About Vloertaal" (the "Over" tab): what the app is, who it is for, privacy and voice credits,
- *  and one link to the page for coaches. */
 /**
- * About Vloertaal. The "NL" toggle at the top end shows every section in plain Dutch (lang nl,
+ * "About Vloertaal" (the "Over" tab), for the learner, short and in their language: what the app
+ * is, how it works, Bram, how work goes here, privacy in short, good to know and where to send a
+ * question (src/content/about.ts), the voice credits, and one button to the page for coaches and
+ * employers (src/components/Coaches.tsx). The "NL" toggle at the top end shows every section in plain Dutch (lang nl,
  * left to right also in Arabic, Persian and Dari); pressed again, the help language (or English)
  * comes back. The toggle is one tap target (the contact address in the last section is a mail
  * link: one more); the Dutch choice is remembered on this phone.
@@ -573,10 +574,14 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
           <p>{dutch ? withMailLink(s.nl.body) : <AboutBody text={gloss(`${s.id}.b`, s.body, lang)} />}</p>
         </section>
       ))}
+      {/* The one way on to the professionals' page (src/content/pro.ts): its Dutch name, as on
+          that page, over the help language's (for the learner who shows it to a coach). */}
       {onCoaches && (
         <button type="button" className="phrase-banner about-banner coach-link" onClick={onCoaches}>
-          <span className="coach-link-icon" aria-hidden>🔗</span>
-          <span className="bi" lang="nl">Voor begeleiders: stuur een link naar een onderwerp</span>
+          <span className="coach-link-icon" aria-hidden>🤝</span>
+          <span className="coach-link-text">
+            <NlPair nlFirst nl={PRO_TITLE} nlClass="coach-link-nl" text={ui('forCoaches', lang)} />
+          </span>
           <ChevronIcon />
         </button>
       )}
