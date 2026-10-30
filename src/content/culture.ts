@@ -406,6 +406,12 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.kitchen': [0, 4, 5], // allergies: always ask the chef
   'c.service': [0, 1, 2, 3], // not sure? say that you will check
   'c.cleansafe': [0, 1, 3, 4], // the wet-floor sign
+  'c.aihelp': [0, 2, 3], // AI makes mistakes; check important things (your contract) with a person
+  'c.aiprivate': [0, 2, 4], // no names of customers; ask first if you may use AI
+  'c.aifake': [0, 1, 3], // a voice can be fake; hang up and call back yourself
+  'c.aiplan': [0, 2, 3, 4], // a big decision: ask who decided it, and ask a person to look again
+  'c.harvest': [1, 2, 4], // piece rate: still the minimum wage per hour; write down hours and crates
+  'c.greensafe': [0, 4, 5, 6], // a sprayed greenhouse: the sign at the door, wait for your supervisor
 };
 
 /** All tips in course order: the ones above (with the Smart tools tips after "Asking for help" and the Numbers and details tips before "Time and schedule"), then those of the work-and-rights units (src/content/work.ts). */
