@@ -1198,15 +1198,15 @@ const t: CultureTranslation = {
     'c.harvest.b': "Im Gewächshaus arbeitest du oft in einem festen Tempo. Manche Arbeitgeber zahlen pro Kiste, pro Reihe oder pro Kilo: Stücklohn (stukloon). Auch mit Stücklohn musst du für jede Stunde, die du arbeitest, mindestens den Mindestlohn verdienen. Schau den Betrag auf rijksoverheid.nl nach. Schreib jeden Tag deine Stunden und deine Kisten auf und vergleiche sie mit deiner Lohnabrechnung. Schnell arbeiten ist gut, aber sicher arbeiten geht vor. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nieuw, nog nalezen
     'c.harvest.p': "Wie viele Kisten habe ich heute geschafft?", // nieuw, nog nalezen
     'c.harvest.s': "Du wirst pro Kiste bezahlt. Am Ende der Woche ist dein Lohn viel niedriger als der Mindestlohn für die Stunden, die du gearbeitet hast. Was machst du?", // nieuw, nog nalezen
-    'c.harvest.o1': "Zeig deinem Arbeitgeber deine eigene Liste mit Stunden und Kisten, und hol dir Hilfe, wenn es nicht korrigiert wird.", // nieuw, nog nalezen
+    'c.harvest.o1': "Zeig deinem Arbeitgeber deine eigene Liste mit Stunden und Kisten.", // nalezen: korter goed antwoord
     'c.harvest.o2': "Sag nichts und arbeite nächste Woche schneller, damit du mehr verdienst.", // nieuw, nog nalezen
     'c.harvest.o3': "Akzeptiere es: Mit Stücklohn ist ein niedriger Lohn normal.", // nieuw, nog nalezen
-    'c.harvest.w': "Auch mit Stücklohn musst du für jede gearbeitete Stunde mindestens den Mindestlohn bekommen. Deine eigene Liste mit Stunden und Kisten hilft dir zu zeigen, was du gemacht hast.", // nieuw, nog nalezen
+    'c.harvest.w': "Auch mit Stücklohn musst du für jede gearbeitete Stunde mindestens den Mindestlohn bekommen. Deine eigene Liste mit Stunden und Kisten hilft dir zu zeigen, was du gemacht hast. Wird es nicht korrigiert, hol dir Hilfe.", // nalezen: korter goed antwoord
     'c.greensafe': "Hitze und Spritzmittel", // nieuw, nog nalezen
     'c.greensafe.b': "Im Gewächshaus kann es sehr heiß werden, auch im Frühling. Trink oft Wasser, auch bevor du Durst hast, und mach deine Pausen an einem kühlen Ort. Ist dir schwindelig oder übel, oder hast du Kopfschmerzen? Hör auf und sag es jemandem. Pflanzen werden manchmal mit Chemikalien gespritzt (spuitmiddelen). An einem Gewächshaus, das gerade gespritzt wurde, hängt oft ein Schild an der Tür. Geh nicht hinein, bis dein Vorgesetzter sagt, dass es wieder sicher ist. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nog nalezen
     'c.greensafe.p': "Darf ich schon in diesem Gewächshaus arbeiten?", // nieuw, nog nalezen
     'c.greensafe.s': "Ein Gewächshaus wurde heute Morgen gespritzt. An der Tür hängt ein Schild. Ein Kollege sagt: „Komm schon, es ist nur kurz.“ Was machst du?", // nieuw, nog nalezen
-    'c.greensafe.o1': "Bleib draußen und frag deinen Vorgesetzten, wann es wieder sicher ist.", // nieuw, nog nalezen
+    'c.greensafe.o1': "Bleib draußen und frag, wann es sicher ist.", // nalezen: korter goed antwoord
     'c.greensafe.o2': "Geh schnell hinein und halte die Luft an.", // nieuw, nog nalezen
     'c.greensafe.o3': "Geh hinein und wasch dir danach gut die Hände.", // nieuw, nog nalezen
     'c.greensafe.w': "Spritzmittel können deiner Haut, deinen Augen und deiner Lunge schaden, auch wenn du nichts riechst. Nach dem Spritzen gibt es eine Wartezeit, bevor man wieder hineindarf. Dein Vorgesetzter weiß, wann sie vorbei ist.", // nieuw, nog nalezen
@@ -1288,7 +1288,7 @@ const t: CultureTranslation = {
     'c.details.b': "Am Anfang eines Jobs gibst du deine Angaben: deinen Namen, deine Adresse, deine Telefonnummer, dein Geburtsdatum und deine BSN. Buchstabiere deinen Namen langsam, Buchstabe für Buchstabe. Prüfe danach deinen Namen auf deinem Vertrag und auf deiner Lohnabrechnung. Ein Fehler in deinem Namen oder deiner BSN kann Probleme mit deinem Lohn oder deinen Steuern machen. Neue Adresse oder Telefonnummer? Sag es deinem Arbeitgeber.",
     'c.details.p': "Ich buchstabiere es kurz: A, L, I.",
     'c.details.s': "Am Telefon schreibt die Zeitarbeitsfirma deinen Nachnamen auf. Du hörst, dass sie ihn falsch schreiben. Was machst du?",
-    'c.details.o1': "Buchstabiere deinen Namen langsam, Buchstabe für Buchstabe, und bitte sie, ihn vorzulesen.",
+    'c.details.o1': "Buchstabiere deinen Namen langsam und bitte sie, ihn vorzulesen.", // nalezen: korter goed antwoord
     'c.details.o2': "Sag nichts: Ein kleiner Fehler im Namen ist egal.",
     'c.details.o3': "Leg auf und hoffe, dass sie den Fehler später finden.",
     'c.details.w': "Dein Name muss auf deinem Vertrag, deiner Lohnabrechnung und deinem Ausweis gleich sein. Dann stimmen dein Lohn und deine Steuern. Buchstabieren und vorlesen lassen ist eine schnelle Kontrolle.",
@@ -1304,7 +1304,7 @@ const t: CultureTranslation = {
     'c.permit.b': "Musst du die Integration (inburgering) machen? Sag es deinem Arbeitgeber, und sag der gemeente (der Gemeinde), dass du arbeitest. Frag früh, ob deine Sprachkurse zu deinem Dienstplan passen können. Nicht sicher, ob du hier arbeiten darfst? Prüfe es, bevor du anfängst, zum Beispiel beim IND, beim UWV oder bei VluchtelingenWerk. Sollst du dich für diesen Job als Selbstständiger (zzp’er) anmelden? Hol dir zuerst Rat. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.",
     'c.permit.p': "Ich habe dienstags Sprachkurs. Kann mein Dienstplan darauf Rücksicht nehmen?",
     'c.permit.s': "Du fängst einen neuen Job an. Dein Sprachkurs ist dienstagmorgens, aber laut Dienstplan arbeitest du dienstags. Was machst du?",
-    'c.permit.o1': "Erzähl deinem Vorgesetzten von dem Kurs und frag, ob der Dienstplan sich ändern kann.",
+    'c.permit.o1': "Sag es deinem Vorgesetzten und bitte darum, den Dienstplan zu ändern.", // nalezen: korter goed antwoord
     'c.permit.o2': "Lass den Sprachkurs ausfallen, denn die Arbeit geht vor.",
     'c.permit.o3': "Bleib dienstags zu Hause, ohne etwas zu sagen.",
     'c.permit.w': "Deine Integration ist auch eine Pflicht. Viele Arbeitgeber helfen, wenn sie es früh wissen. Die gemeente kann dir auch helfen, deinen Plan mit deiner Arbeit zu verbinden.",
@@ -1312,7 +1312,7 @@ const t: CultureTranslation = {
     'c.kids.b': "Ist dein Kind plötzlich krank? Sag es sofort deinem Arbeitgeber. Für die ersten Stunden oder Tage kannst du Sonderurlaub für Notfälle nehmen (calamiteitenverlof), und dein Arbeitgeber zahlt dich weiter. Braucht dein Kind länger Pflege? Dann kannst du Pflegeurlaub (zorgverlof) beantragen. Schwanger? Deshalb darf dein Arbeitgeber dir nicht kündigen. Frag rechtzeitig nach dem Mutterschutz und der Elternzeit (ouderschapsverlof). Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.",
     'c.kids.p': "Mein Kind ist krank. Kann ich heute früher gehen?",
     'c.kids.s': "Die Kita (kinderopvang) ruft dich bei der Arbeit an. Dein Kind hat Fieber und muss nach Hause. Was machst du?",
-    'c.kids.o1': "Sag es sofort deinem Vorgesetzten und bitte um Sonderurlaub, um dein Kind abzuholen.",
+    'c.kids.o1': "Sag es deinem Vorgesetzten und bitte um Sonderurlaub.", // nalezen: korter goed antwoord
     'c.kids.o2': "Geh ohne ein Wort und erklär es morgen.",
     'c.kids.o3': "Bleib bei der Arbeit und lass dein Kind warten, bis deine Schicht vorbei ist.",
     'c.kids.w': "Ein krankes Kind ist ein Notfall zu Hause. Wenn du es zuerst deinem Vorgesetzten sagst, kann er die Arbeit planen. Sonderurlaub für Notfälle ist für solche Momente da.",
@@ -1328,7 +1328,7 @@ const t: CultureTranslation = {
     'c.jobends.b': "Wenn dein Job endet, prüfe deine Schlussabrechnung (eindafrekening). Freie Tage, die du nicht genommen hast, und dein Urlaubsgeld werden meistens damit ausgezahlt. Wohnung, Krankenversicherung oder ein Kleinbus über die Zeitarbeitsfirma können gleichzeitig enden. Schließ rechtzeitig selbst eine Krankenversicherung ab. Dein Mietvertrag hat eigene Regeln: Hol dir Rat, bevor du aus der Wohnung ausziehst. Ziehst du um oder verlässt du die Niederlande? Sag es der gemeente. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.",
     'c.jobends.p': "Wann bekomme ich meine Schlussabrechnung?",
     'c.jobends.s': "Dein Job endet am Freitag. Deine Krankenversicherung läuft über die Zeitarbeitsfirma. Was machst du?",
-    'c.jobends.o1': "Frag die Zeitarbeitsfirma, wann die Versicherung endet, und schließ rechtzeitig selbst eine ab.",
+    'c.jobends.o1': "Frag, wann die Versicherung endet, und schließ rechtzeitig selbst eine ab.", // nalezen: korter goed antwoord
     'c.jobends.o2': "Nichts: Die Versicherung läuft von selbst weiter.",
     'c.jobends.o3': "Warte, bis du krank wirst, und kümmere dich dann darum.",
     'c.jobends.w': "Eine Versicherung über die Zeitarbeitsfirma endet oft, wenn dein Job endet. Wenn du in den Niederlanden wohnst oder arbeitest, musst du meistens eine Krankenversicherung haben. Wenn du dich rechtzeitig kümmerst, bleibst du versichert.",

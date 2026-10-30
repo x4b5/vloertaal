@@ -1198,15 +1198,15 @@ const t: CultureTranslation = {
     'c.harvest.b': "Numa estufa trabalhas muitas vezes a um ritmo fixo (tempo). Alguns empregadores pagam por caixa, por fila ou por quilo: é o pagamento à peça (stukloon). Mesmo com pagamento à peça, tens de ganhar pelo menos o salário mínimo por cada hora que trabalhas. Vê o valor em rijksoverheid.nl. Aponta todos os dias as tuas horas e as tuas caixas, e compara-as com o teu recibo de vencimento. Trabalhar depressa é bom, mas trabalhar em segurança vem primeiro. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.", // nieuw, nog nalezen
     'c.harvest.p': "Quantas caixas fiz hoje?", // nieuw, nog nalezen
     'c.harvest.s': "Pagam-te por caixa. No fim da semana, o teu salário é muito mais baixo do que o salário mínimo pelas horas que trabalhaste. O que fazes?", // nieuw, nog nalezen
-    'c.harvest.o1': "Mostras ao teu empregador a tua lista de horas e caixas, e pedes ajuda se não for corrigido.", // nieuw, nog nalezen
+    'c.harvest.o1': "Mostras ao teu empregador a tua lista de horas e caixas.", // nalezen: korter goed antwoord
     'c.harvest.o2': "Não dizes nada e na próxima semana trabalhas mais depressa, para ganhares mais.", // nieuw, nog nalezen
     'c.harvest.o3': "Aceitas: com pagamento à peça, um salário baixo é normal.", // nieuw, nog nalezen
-    'c.harvest.w': "Com pagamento à peça, tens na mesma de receber pelo menos o salário mínimo por cada hora que trabalhaste. A tua lista de horas e caixas ajuda-te a mostrar o que fizeste.", // nieuw, nog nalezen
+    'c.harvest.w': "Com pagamento à peça, tens na mesma de receber pelo menos o salário mínimo por cada hora que trabalhaste. A tua lista de horas e caixas ajuda-te a mostrar o que fizeste. Se não for corrigido, pede ajuda.", // nalezen: korter goed antwoord
     'c.greensafe': "Calor e produtos fitofarmacêuticos", // nieuw, nog nalezen
     'c.greensafe.b': "Numa estufa pode ficar muito calor, também na primavera. Bebe água muitas vezes, também antes de teres sede, e faz as tuas pausas num sítio fresco. Tens tonturas, náuseas ou dores de cabeça? Para e diz a alguém. Às vezes as plantas são pulverizadas com químicos (spuitmiddelen). Uma estufa que acabou de ser pulverizada tem muitas vezes um aviso na porta. Não entres até o teu chefe dizer que já é seguro outra vez. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nog nalezen
     'c.greensafe.p': "Já posso trabalhar nesta estufa?", // nieuw, nog nalezen
     'c.greensafe.s': "Uma estufa foi pulverizada hoje de manhã. Há um aviso na porta. Um colega diz: \"Anda, é só um bocadinho.\" O que fazes?", // nieuw, nog nalezen
-    'c.greensafe.o1': "Ficas cá fora e perguntas ao teu chefe quando é seguro outra vez.", // nieuw, nog nalezen
+    'c.greensafe.o1': "Ficas cá fora e perguntas quando é seguro.", // nalezen: korter goed antwoord
     'c.greensafe.o2': "Entras depressa e susténs a respiração.", // nieuw, nog nalezen
     'c.greensafe.o3': "Entras, e depois lavas bem as mãos.", // nieuw, nog nalezen
     'c.greensafe.w': "Os produtos fitofarmacêuticos podem fazer mal à tua pele, aos teus olhos e aos teus pulmões, mesmo quando não cheiras nada. Depois da pulverização há um tempo de espera antes de se poder entrar outra vez. O teu chefe sabe quando acaba.", // nieuw, nog nalezen
@@ -1288,7 +1288,7 @@ const t: CultureTranslation = {
     'c.details.b': "No início de um trabalho, dás os teus dados: o teu nome, a tua morada, o teu número de telefone, a tua data de nascimento e o teu BSN. Soletra o teu nome devagar, letra a letra. Depois, verifica o teu nome no contrato e no recibo de vencimento. Um erro no teu nome ou no BSN pode dar problemas com o salário ou com os impostos. Tens uma morada ou um número de telefone novo? Diz ao teu empregador.",
     'c.details.p': "Eu soletro: A, L, I.",
     'c.details.s': "Ao telefone, a agência escreve o teu apelido. Ouves que o estão a escrever mal. O que fazes?",
-    'c.details.o1': "Soletras o teu nome devagar, letra a letra, e pedes que o leiam em voz alta.",
+    'c.details.o1': "Soletras o teu nome devagar e pedes que o leiam em voz alta.", // nalezen: korter goed antwoord
     'c.details.o2': "Não dizes nada: um pequeno erro no nome não faz mal.",
     'c.details.o3': "Desligas, e esperas que encontrem o erro mais tarde.",
     'c.details.w': "O teu nome tem de ser igual no contrato, no recibo de vencimento e no documento de identificação. Assim o salário e os impostos ficam certos. Soletrar e pedir que leiam em voz alta é uma verificação rápida.",
@@ -1304,7 +1304,7 @@ const t: CultureTranslation = {
     'c.permit.b': "Tens de fazer a integração cívica (inburgering)? Diz ao teu empregador, e diz à gemeente (a câmara municipal) que trabalhas. Pergunta cedo se as tuas aulas de língua podem encaixar no teu horário. Não tens a certeza se podes trabalhar aqui? Confirma antes de começar, por exemplo no IND, no UWV ou na VluchtelingenWerk. Pedem-te para te registares como independente (zzp’er) para este trabalho? Pede conselho primeiro. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.",
     'c.permit.p': "Tenho aula de língua à terça-feira. O meu horário pode ter isso em conta?",
     'c.permit.s': "Começas um trabalho novo. A tua aula de língua é à terça de manhã, mas no teu horário trabalhas às terças. O que fazes?",
-    'c.permit.o1': "Falas da aula ao teu chefe e perguntas se o horário pode mudar.",
+    'c.permit.o1': "Dizes ao teu chefe e pedes para mudar o horário.", // nalezen: korter goed antwoord
     'c.permit.o2': "Faltas à aula de língua, porque o trabalho vem primeiro.",
     'c.permit.o3': "Ficas em casa às terças sem dizer nada.",
     'c.permit.w': "A tua integração também é uma obrigação. Muitos empregadores ajudam quando sabem cedo. A gemeente também te pode ajudar a encaixar o teu plano no teu trabalho.",
@@ -1312,7 +1312,7 @@ const t: CultureTranslation = {
     'c.kids.b': "O teu filho fica doente de repente? Diz logo ao teu empregador. Nas primeiras horas ou dias podes tirar uma licença de emergência (calamiteitenverlof), e o teu empregador continua a pagar-te. O teu filho precisa de cuidados durante mais tempo? Então podes pedir uma licença para cuidar (zorgverlof). Estás grávida? O teu empregador não te pode despedir por isso. Informa-te a tempo sobre a licença de gravidez e a licença parental (ouderschapsverlof). Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.",
     'c.kids.p': "O meu filho está doente. Posso sair mais cedo hoje?",
     'c.kids.s': "A creche (kinderopvang) liga-te para o trabalho. O teu filho tem febre e tem de ir para casa. O que fazes?",
-    'c.kids.o1': "Dizes logo ao teu chefe, e pedes uma licença de emergência para ir buscar o teu filho.",
+    'c.kids.o1': "Dizes ao teu chefe, e pedes uma licença de emergência.", // nalezen: korter goed antwoord
     'c.kids.o2': "Sais sem dizer nada, e explicas amanhã.",
     'c.kids.o3': "Ficas no trabalho, e deixas o teu filho à espera até ao fim do teu turno.",
     'c.kids.w': "Um filho doente é uma emergência em casa. Se disseres primeiro ao teu chefe, ele pode organizar o trabalho. A licença de emergência é para momentos como este.",
@@ -1328,7 +1328,7 @@ const t: CultureTranslation = {
     'c.jobends.b': "Quando o teu trabalho acaba, verifica o acerto final de contas (eindafrekening). Os dias de férias que não gozaste e o subsídio de férias costumam ser pagos com ele. A casa, o seguro de saúde ou uma carrinha da agência podem acabar ao mesmo tempo. Trata a tempo do teu próprio seguro de saúde. O teu contrato de arrendamento tem regras próprias: pede conselho antes de saíres da casa. Vais mudar de casa, ou sair dos Países Baixos? Diz à gemeente. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.",
     'c.jobends.p': "Quando recebo o acerto final de contas?",
     'c.jobends.s': "O teu trabalho acaba na sexta-feira. O teu seguro de saúde é através da agência. O que fazes?",
-    'c.jobends.o1': "Perguntas à agência quando acaba o seguro, e tratas do teu a tempo.",
+    'c.jobends.o1': "Perguntas quando acaba o seguro, e tratas do teu a tempo.", // nalezen: korter goed antwoord
     'c.jobends.o2': "Nada: o seguro continua sozinho.",
     'c.jobends.o3': "Esperas até ficares doente, e tratas disso nessa altura.",
     'c.jobends.w': "O seguro através da agência acaba muitas vezes quando o trabalho acaba. Se vives ou trabalhas nos Países Baixos, normalmente tens de ter seguro de saúde. Se tratares disso a tempo, não ficas sem seguro.",

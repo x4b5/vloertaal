@@ -1198,15 +1198,15 @@ const t: CultureTranslation = {
     'c.harvest.b': "Într-o seră lucrezi des într-un ritm fix (tempo). Unii angajatori plătesc pe ladă, pe rând sau pe kilogram: asta e plata la bucată (stukloon). Și cu plata la bucată trebuie să câștigi cel puțin salariul minim pentru fiecare oră lucrată. Verifică suma pe rijksoverheid.nl. Notează-ți în fiecare zi orele și lăzile și compară-le cu fluturașul de salariu. E bine să lucrezi repede, dar siguranța e pe primul loc. Informații generale. Pentru situația ta: întreabă sindicatul, Juridisch Loket sau FairWork.", // nieuw, nog nalezen
     'c.harvest.p': "Câte lăzi am făcut azi?", // nieuw, nog nalezen
     'c.harvest.s': "Te plătesc pe ladă. La sfârșitul săptămânii, plata ta e mult mai mică decât salariul minim pentru orele pe care le-ai lucrat. Ce faci?", // nieuw, nog nalezen
-    'c.harvest.o1': "Îi arăți angajatorului lista ta cu ore și lăzi și ceri ajutor dacă nu se corectează.", // nieuw, nog nalezen
+    'c.harvest.o1': "Îi arăți angajatorului lista ta cu ore și lăzi.", // nalezen: korter goed antwoord
     'c.harvest.o2': "Nu spui nimic și săptămâna viitoare lucrezi mai repede, ca să câștigi mai mult.", // nieuw, nog nalezen
     'c.harvest.o3': "Accepți: la plata la bucată, o plată mică e normală.", // nieuw, nog nalezen
-    'c.harvest.w': "Și la plata la bucată trebuie să primești cel puțin salariul minim pentru fiecare oră lucrată. Lista ta cu ore și lăzi te ajută să arăți ce ai făcut.", // nieuw, nog nalezen
+    'c.harvest.w': "Și la plata la bucată trebuie să primești cel puțin salariul minim pentru fiecare oră lucrată. Lista ta cu ore și lăzi te ajută să arăți ce ai făcut. Dacă nu se corectează, cere ajutor.", // nalezen: korter goed antwoord
     'c.greensafe': "Căldura și pesticidele", // nieuw, nog nalezen
     'c.greensafe.b': "Într-o seră poate fi foarte cald, și primăvara. Bea des apă, și înainte să-ți fie sete, și ia-ți pauzele într-un loc răcoros. Ai amețeli, greață sau dureri de cap? Oprește-te și spune cuiva. Plantele sunt uneori stropite cu substanțe chimice (spuitmiddelen). O seră care tocmai a fost stropită are des un semn pe ușă. Nu intra până nu-ți spune șeful că e din nou sigur. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nog nalezen
     'c.greensafe.p': "Pot să lucrez deja în sera asta?", // nieuw, nog nalezen
     'c.greensafe.s': "O seră a fost stropită azi-dimineață. Pe ușă e un semn. Un coleg spune: „Hai, e doar pentru un moment.” Ce faci?", // nieuw, nog nalezen
-    'c.greensafe.o1': "Rămâi afară și îl întrebi pe șef când e din nou sigur.", // nieuw, nog nalezen
+    'c.greensafe.o1': "Rămâi afară și întrebi când e sigur.", // nalezen: korter goed antwoord
     'c.greensafe.o2': "Intri repede și îți ții respirația.", // nieuw, nog nalezen
     'c.greensafe.o3': "Intri, iar după aceea te speli bine pe mâini.", // nieuw, nog nalezen
     'c.greensafe.w': "Pesticidele îți pot face rău la piele, la ochi și la plămâni, și când nu simți niciun miros. După stropire există un timp de așteptare înainte să se poată intra din nou. Șeful știe când se termină.", // nieuw, nog nalezen
@@ -1288,7 +1288,7 @@ const t: CultureTranslation = {
     'c.details.b': "La începutul unei slujbe îți dai datele: numele, adresa, numărul de telefon, data nașterii și BSN-ul. Spune-ți numele pe litere, încet, literă cu literă. Apoi verifică-ți numele în contract și pe fluturașul de salariu. O greșeală în nume sau în BSN poate face probleme cu salariul sau cu impozitul. Adresă sau număr de telefon nou? Spune-i angajatorului.",
     'c.details.p': "Îl spun pe litere: A, L, I.",
     'c.details.s': "La telefon, agenția îți notează numele de familie. Auzi că îl scriu greșit. Ce faci?",
-    'c.details.o1': "Îți spui numele încet, literă cu literă, și le ceri să ți-l citească înapoi.",
+    'c.details.o1': "Îți spui numele încet, pe litere, și le ceri să ți-l citească înapoi.", // nalezen: korter goed antwoord
     'c.details.o2': "Nu spui nimic: o mică greșeală în nume nu contează.",
     'c.details.o3': "Închizi și speri că vor găsi greșeala mai târziu.",
     'c.details.w': "Numele tău trebuie să fie la fel în contract, pe fluturașul de salariu și în actul de identitate. Așa salariul și impozitul ies corect. Să-l spui pe litere și să-l asculți citit înapoi e o verificare rapidă.",
@@ -1304,7 +1304,7 @@ const t: CultureTranslation = {
     'c.permit.b': "Trebuie să faci integrarea civică (inburgering)? Spune-i angajatorului și spune-i primăriei (gemeente) că lucrezi. Întreabă din timp dacă orele de limbă se pot potrivi cu programul tău. Nu știi dacă ai voie să lucrezi aici? Verifică înainte să începi, de exemplu la IND, la UWV sau la VluchtelingenWerk. Ți se cere să te înregistrezi ca independent (zzp’er) pentru slujba asta? Cere întâi un sfat. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.",
     'c.permit.p': "Marți am oră de limbă. Se poate ține cont de asta în programul meu?",
     'c.permit.s': "Începi o slujbă nouă. Ora ta de limbă e marți dimineața, dar în program lucrezi marțea. Ce faci?",
-    'c.permit.o1': "Îi spui șefului despre curs și întrebi dacă se poate schimba programul.",
+    'c.permit.o1': "Îi spui șefului și ceri să se schimbe programul.", // nalezen: korter goed antwoord
     'c.permit.o2': "Lipsești de la ora de limbă, pentru că munca e pe primul loc.",
     'c.permit.o3': "Stai acasă marțea fără să spui nimic.",
     'c.permit.w': "Integrarea e și o obligație. Mulți angajatori ajută când află din timp. Și primăria (gemeente) te poate ajuta să-ți potrivești planul cu munca.",
@@ -1312,7 +1312,7 @@ const t: CultureTranslation = {
     'c.kids.b': "Copilul tău s-a îmbolnăvit brusc? Spune-i imediat angajatorului. Pentru primele ore sau zile poți lua concediu pentru urgențe (calamiteitenverlof), iar angajatorul te plătește în continuare. Copilul are nevoie de îngrijire mai mult timp? Atunci poți cere concediu de îngrijire (zorgverlof). Ești însărcinată? Angajatorul nu are voie să te concedieze pentru asta. Întreabă la timp despre concediul de maternitate și concediul pentru creșterea copilului (ouderschapsverlof). Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.",
     'c.kids.p': "Copilul meu e bolnav. Pot să plec mai devreme azi?",
     'c.kids.s': "Creșa (kinderopvang) te sună la muncă. Copilul tău are febră și trebuie să meargă acasă. Ce faci?",
-    'c.kids.o1': "Îi spui imediat șefului și ceri concediu pentru urgențe ca să-ți iei copilul.",
+    'c.kids.o1': "Îi spui șefului și ceri concediu pentru urgențe.", // nalezen: korter goed antwoord
     'c.kids.o2': "Pleci fără un cuvânt și explici mâine.",
     'c.kids.o3': "Rămâi la muncă și îți lași copilul să aștepte până se termină tura.",
     'c.kids.w': "Un copil bolnav e o urgență acasă. Dacă îi spui întâi șefului, el poate organiza munca. Concediul pentru urgențe e pentru astfel de momente.",
@@ -1328,7 +1328,7 @@ const t: CultureTranslation = {
     'c.jobends.b': "Când se termină munca, verifică lichidarea finală (eindafrekening). Zilele libere pe care nu le-ai folosit și prima de vacanță se plătesc de obicei odată cu ea. Locuința, asigurarea de sănătate sau microbuzul prin agenție se pot termina în același timp. Fă-ți la timp propria asigurare de sănătate. Contractul de închiriere are regulile lui: cere un sfat înainte să pleci din casă. Te muți sau pleci din Olanda? Spune-i primăriei (gemeente). Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.",
     'c.jobends.p': "Când primesc lichidarea finală?",
     'c.jobends.s': "Munca ta se termină vineri. Asigurarea ta de sănătate e prin agenție. Ce faci?",
-    'c.jobends.o1': "Întrebi agenția când se termină asigurarea și îți faci la timp una proprie.",
+    'c.jobends.o1': "Întrebi când se termină asigurarea și îți faci la timp una proprie.", // nalezen: korter goed antwoord
     'c.jobends.o2': "Nimic: asigurarea continuă de la sine.",
     'c.jobends.o3': "Aștepți până te îmbolnăvești și abia atunci te ocupi.",
     'c.jobends.w': "Asigurarea prin agenție se termină des când se termină munca. Când locuiești sau lucrezi în Olanda, de obicei trebuie să ai asigurare de sănătate. Dacă te ocupi la timp, nu rămâi fără asigurare.",

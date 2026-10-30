@@ -1198,15 +1198,15 @@ const t: CultureTranslation = {
     'c.harvest.b': "En un invernadero muchas veces trabajas a un ritmo fijo (tempo). Algunas empresas pagan por caja, por fila o por kilo: es el pago por pieza (stukloon). Aunque cobres por pieza, tienes que ganar como mínimo el salario mínimo por cada hora que trabajas. Mira la cantidad en rijksoverheid.nl. Apunta cada día tus horas y tus cajas, y compáralas con tu nómina. Trabajar rápido está bien, pero trabajar de forma segura es lo primero. Es información general. Para tu situación: pregunta al sindicato, al Juridisch Loket o a FairWork.", // nieuw, nog nalezen
     'c.harvest.p': "¿Cuántas cajas he hecho hoy?", // nieuw, nog nalezen
     'c.harvest.s': "Te pagan por caja. Al final de la semana, tu sueldo es mucho más bajo que el salario mínimo por las horas que trabajaste. ¿Qué haces?", // nieuw, nog nalezen
-    'c.harvest.o1': "Enseñas a tu empresa tu propia lista de horas y cajas, y pides ayuda si no lo corrigen.", // nieuw, nog nalezen
+    'c.harvest.o1': "Enseñas a tu empresa tu propia lista de horas y cajas.", // nalezen: korter goed antwoord
     'c.harvest.o2': "No dices nada y la semana que viene trabajas más rápido, para ganar más.", // nieuw, nog nalezen
     'c.harvest.o3': "Lo aceptas: con el pago por pieza, un sueldo bajo es normal.", // nieuw, nog nalezen
-    'c.harvest.w': "Con el pago por pieza también tienes que recibir como mínimo el salario mínimo por cada hora que trabajaste. Tu propia lista de horas y cajas te ayuda a mostrar lo que hiciste.", // nieuw, nog nalezen
+    'c.harvest.w': "Con el pago por pieza también tienes que recibir como mínimo el salario mínimo por cada hora que trabajaste. Tu propia lista de horas y cajas te ayuda a mostrar lo que hiciste. Si no lo corrigen, pide ayuda.", // nalezen: korter goed antwoord
     'c.greensafe': "El calor y los productos fitosanitarios", // nieuw, nog nalezen
     'c.greensafe.b': "En un invernadero puede hacer mucho calor, también en primavera. Bebe agua a menudo, también antes de tener sed, y toma tus pausas en un sitio fresco. ¿Tienes mareos, náuseas o dolor de cabeza? Para y díselo a alguien. A veces fumigan las plantas con productos químicos (spuitmiddelen). Un invernadero que acaban de fumigar muchas veces tiene un cartel en la puerta. No entres hasta que tu encargado diga que vuelve a ser seguro. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.", // nieuw, nog nalezen
     'c.greensafe.p': "¿Ya puedo trabajar en este invernadero?", // nieuw, nog nalezen
     'c.greensafe.s': "Esta mañana fumigaron un invernadero. Hay un cartel en la puerta. Un compañero dice: “Venga, es solo un momento.” ¿Qué haces?", // nieuw, nog nalezen
-    'c.greensafe.o1': "Te quedas fuera y preguntas a tu encargado cuándo vuelve a ser seguro.", // nieuw, nog nalezen
+    'c.greensafe.o1': "Te quedas fuera y preguntas cuándo es seguro.", // nalezen: korter goed antwoord
     'c.greensafe.o2': "Entras rápido y aguantas la respiración.", // nieuw, nog nalezen
     'c.greensafe.o3': "Entras, y después te lavas bien las manos.", // nieuw, nog nalezen
     'c.greensafe.w': "Los productos fitosanitarios pueden dañar tu piel, tus ojos y tus pulmones, también cuando no hueles nada. Después de fumigar hay un tiempo de espera antes de poder entrar otra vez. Tu encargado sabe cuándo termina.", // nieuw, nog nalezen
@@ -1288,7 +1288,7 @@ const t: CultureTranslation = {
     'c.details.b': "Al empezar un trabajo, das tus datos: tu nombre, tu dirección, tu número de teléfono, tu fecha de nacimiento y tu BSN. Deletrea tu nombre despacio, letra por letra. Después, revisa tu nombre en tu contrato y en tu nómina. Un error en tu nombre o en tu BSN puede dar problemas con tu sueldo o tus impuestos. ¿Tienes una dirección o un teléfono nuevo? Díselo a tu empresa.",
     'c.details.p': "Te lo deletreo: A, L, I.",
     'c.details.s': "Por teléfono, la agencia apunta tu apellido. Oyes que lo escriben mal. ¿Qué haces?",
-    'c.details.o1': "Deletreas tu nombre despacio, letra por letra, y pides que te lo lean.",
+    'c.details.o1': "Deletreas tu nombre despacio y pides que te lo lean.", // nalezen: korter goed antwoord
     'c.details.o2': "No dices nada: un error pequeño en tu nombre no importa.",
     'c.details.o3': "Cuelgas, y esperas que encuentren el error más tarde.",
     'c.details.w': "Tu nombre tiene que ser igual en tu contrato, tu nómina y tu documento de identidad. Así tu sueldo y tus impuestos salen bien. Deletrear y pedir que lo lean es una comprobación rápida.",
@@ -1304,7 +1304,7 @@ const t: CultureTranslation = {
     'c.permit.b': "¿Tienes que hacer la integración cívica (inburgering)? Díselo a tu empresa, y dile a la gemeente (el ayuntamiento) que trabajas. Pregunta pronto si tus clases de idioma pueden encajar con tu horario. ¿Tienes dudas de si puedes trabajar aquí? Compruébalo antes de empezar, por ejemplo en el IND, el UWV o VluchtelingenWerk. ¿Te piden que te registres como autónomo (zzp’er) para este trabajo? Pide consejo primero. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.",
     'c.permit.p': "Los martes tengo clase de idioma. ¿Se puede tener en cuenta en mi horario?",
     'c.permit.s': "Empiezas un trabajo nuevo. Tu clase de idioma es los martes por la mañana, pero en tu horario trabajas los martes. ¿Qué haces?",
-    'c.permit.o1': "Le cuentas la clase a tu encargado y preguntas si se puede cambiar el horario.",
+    'c.permit.o1': "Se lo dices a tu encargado y pides cambiar el horario.", // nalezen: korter goed antwoord
     'c.permit.o2': "Dejas de ir a la clase de idioma, porque el trabajo es lo primero.",
     'c.permit.o3': "Te quedas en casa los martes sin decir nada.",
     'c.permit.w': "Tu integración también es una obligación. Muchas empresas ayudan cuando lo saben pronto. La gemeente también te puede ayudar a encajar tu plan con tu trabajo.",
@@ -1312,7 +1312,7 @@ const t: CultureTranslation = {
     'c.kids.b': "¿Tu hijo se pone enfermo de repente? Díselo enseguida a tu empresa. Para las primeras horas o días puedes tomar un permiso por emergencia (calamiteitenverlof), y tu empresa te sigue pagando. ¿Tu hijo necesita cuidados durante más tiempo? Entonces puedes pedir un permiso para cuidar (zorgverlof). ¿Estás embarazada? Tu empresa no te puede despedir por eso. Pregunta a tiempo por el permiso de maternidad y el permiso parental (ouderschapsverlof). Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.",
     'c.kids.p': "Mi hijo está enfermo. ¿Puedo irme antes hoy?",
     'c.kids.s': "La guardería (kinderopvang) te llama al trabajo. Tu hijo tiene fiebre y tiene que irse a casa. ¿Qué haces?",
-    'c.kids.o1': "Se lo dices enseguida a tu encargado, y pides un permiso por emergencia para recoger a tu hijo.",
+    'c.kids.o1': "Se lo dices a tu encargado, y pides un permiso por emergencia.", // nalezen: korter goed antwoord
     'c.kids.o2': "Te vas sin decir nada, y lo explicas mañana.",
     'c.kids.o3': "Te quedas en el trabajo, y dejas que tu hijo espere hasta el final de tu turno.",
     'c.kids.w': "Un hijo enfermo es una emergencia en casa. Si se lo dices primero a tu encargado, puede organizar el trabajo. El permiso por emergencia es para momentos así.",
@@ -1328,7 +1328,7 @@ const t: CultureTranslation = {
     'c.jobends.b': "Cuando termina tu trabajo, revisa tu finiquito (eindafrekening). Los días libres que no usaste y tu paga de vacaciones normalmente se pagan con él. La vivienda, el seguro médico o una furgoneta de la agencia pueden terminar al mismo tiempo. Contrata a tiempo tu propio seguro médico. Tu contrato de alquiler tiene sus propias normas: pide consejo antes de dejar la casa. ¿Te mudas, o te vas de los Países Bajos? Díselo a la gemeente. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.",
     'c.jobends.p': "¿Cuándo recibo mi finiquito?",
     'c.jobends.s': "Tu trabajo termina el viernes. Tu seguro médico va a través de la agencia. ¿Qué haces?",
-    'c.jobends.o1': "Preguntas a la agencia cuándo termina el seguro, y contratas el tuyo a tiempo.",
+    'c.jobends.o1': "Preguntas cuándo termina el seguro, y contratas el tuyo a tiempo.", // nalezen: korter goed antwoord
     'c.jobends.o2': "Nada: el seguro sigue solo.",
     'c.jobends.o3': { m: "Esperas hasta que te pongas enfermo, y entonces lo arreglas.", f: "Esperas hasta que te pongas enferma, y entonces lo arreglas." },
     'c.jobends.w': "El seguro a través de la agencia muchas veces termina cuando termina tu trabajo. Si vives o trabajas en los Países Bajos, normalmente tienes que tener seguro médico. Si lo arreglas a tiempo, no te quedas sin seguro.",

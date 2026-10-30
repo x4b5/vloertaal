@@ -1198,15 +1198,15 @@ const t: CultureTranslation = {
     'c.harvest.b': "Dans une serre, tu travailles souvent à un rythme fixe (tempo). Certains employeurs paient par caisse, par rangée ou par kilo : c’est le salaire à la pièce (stukloon). Même avec un salaire à la pièce, tu dois gagner au moins le salaire minimum pour chaque heure de travail. Vérifie le montant sur rijksoverheid.nl. Note chaque jour tes heures et tes caisses, et compare-les avec ta fiche de paie. Travailler vite, c’est bien, mais travailler en sécurité passe avant. Informations générales. Pour ta situation : demande au syndicat, au Juridisch Loket ou à FairWork.", // nieuw, nog nalezen
     'c.harvest.p': "J’ai fait combien de caisses aujourd’hui ?", // nieuw, nog nalezen
     'c.harvest.s': "On te paie par caisse. À la fin de la semaine, ta paie est beaucoup plus basse que le salaire minimum pour les heures que tu as travaillées. Que fais-tu ?", // nieuw, nog nalezen
-    'c.harvest.o1': "Montre ta propre liste d’heures et de caisses à ton employeur, et demande de l’aide si ce n’est pas corrigé.", // nieuw, nog nalezen
+    'c.harvest.o1': "Montre ta propre liste d’heures et de caisses à ton employeur.", // nalezen: korter goed antwoord
     'c.harvest.o2': "Ne dis rien et travaille plus vite la semaine prochaine, pour gagner plus.", // nieuw, nog nalezen
     'c.harvest.o3': "Accepte : avec un salaire à la pièce, une paie basse, c’est normal.", // nieuw, nog nalezen
-    'c.harvest.w': "Avec un salaire à la pièce, tu dois quand même recevoir au moins le salaire minimum pour chaque heure de travail. Ta propre liste d’heures et de caisses t’aide à montrer ce que tu as fait.", // nieuw, nog nalezen
+    'c.harvest.w': "Avec un salaire à la pièce, tu dois quand même recevoir au moins le salaire minimum pour chaque heure de travail. Ta propre liste d’heures et de caisses t’aide à montrer ce que tu as fait. Si ce n’est pas corrigé, demande de l’aide.", // nalezen: korter goed antwoord
     'c.greensafe': "La chaleur et les produits de traitement", // nieuw, nog nalezen
     'c.greensafe.b': "Dans une serre, il peut faire très chaud, aussi au printemps. Bois souvent de l’eau, aussi avant d’avoir soif, et prends tes pauses dans un endroit frais. Tu as la tête qui tourne, tu te sens mal ou tu as mal à la tête ? Arrête-toi et dis-le à quelqu’un. Les plantes sont parfois traitées avec des produits chimiques (spuitmiddelen). Une serre qui vient d’être traitée a souvent un panneau sur la porte. N’entre pas avant que ton responsable dise que c’est de nouveau sans danger. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nieuw, nog nalezen
     'c.greensafe.p': "Je peux déjà travailler dans cette serre ?", // nieuw, nog nalezen
     'c.greensafe.s': "Une serre a été traitée ce matin. Il y a un panneau sur la porte. Un collègue dit : « Allez, c’est juste un moment. » Que fais-tu ?", // nieuw, nog nalezen
-    'c.greensafe.o1': "Reste dehors, et demande à ton responsable quand c’est de nouveau sans danger.", // nieuw, nog nalezen
+    'c.greensafe.o1': "Reste dehors et demande quand c’est sans danger.", // nalezen: korter goed antwoord
     'c.greensafe.o2': "Entre vite et retiens ta respiration.", // nieuw, nog nalezen
     'c.greensafe.o3': "Entre, et lave-toi bien les mains après.", // nieuw, nog nalezen
     'c.greensafe.w': "Les produits de traitement peuvent abîmer ta peau, tes yeux et tes poumons, même quand tu ne sens rien. Après le traitement, il y a un temps d’attente avant de pouvoir entrer de nouveau. Ton responsable sait quand il est fini.", // nieuw, nog nalezen
@@ -1288,7 +1288,7 @@ const t: CultureTranslation = {
     'c.details.b': "Au début d’un travail, tu donnes tes informations : ton nom, ton adresse, ton numéro de téléphone, ta date de naissance et ton BSN. Épelle ton nom lentement, lettre par lettre. Ensuite, vérifie ton nom sur ton contrat et sur ta fiche de paie. Une erreur dans ton nom ou ton BSN peut poser des problèmes pour ta paie ou tes impôts. Nouvelle adresse ou nouveau numéro de téléphone ? Dis-le à ton employeur.",
     'c.details.p': "Je l’épelle : A, L, I.",
     'c.details.s': "Au téléphone, l’agence note ton nom de famille. Tu entends qu’ils l’écrivent mal. Que fais-tu ?",
-    'c.details.o1': "Épelle ton nom lentement, lettre par lettre, et demande-leur de le relire.",
+    'c.details.o1': "Épelle ton nom lentement et demande-leur de le relire.", // nalezen: korter goed antwoord
     'c.details.o2': "Ne dis rien : une petite erreur dans ton nom, ce n’est pas grave.",
     'c.details.o3': "Raccroche, et espère qu’ils trouveront l’erreur plus tard.",
     'c.details.w': "Ton nom doit être le même sur ton contrat, ta fiche de paie et ta pièce d’identité. Comme ça, ta paie et tes impôts sont corrects. Épeler et faire relire, c’est une vérification rapide.",
@@ -1304,7 +1304,7 @@ const t: CultureTranslation = {
     'c.permit.b': "Tu dois faire l’intégration civique (inburgering) ? Dis-le à ton employeur, et dis à la gemeente (la mairie) que tu travailles. Demande tôt si tes cours de langue peuvent s’organiser autour de ton planning. Tu ne sais pas si tu as le droit de travailler ici ? Vérifie-le avant de commencer, par exemple auprès de l’IND, de l’UWV ou de VluchtelingenWerk. On te demande de t’inscrire comme indépendant (zzp’er) pour ce travail ? Demande d’abord conseil. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.",
     'c.permit.p': "J’ai un cours de langue le mardi. Est-ce que mon planning peut en tenir compte ?",
     'c.permit.s': "Tu commences un nouveau travail. Ton cours de langue est le mardi matin, mais ton planning te fait travailler le mardi. Que fais-tu ?",
-    'c.permit.o1': "Parle du cours à ton responsable, et demande si le planning peut changer.",
+    'c.permit.o1': "Préviens ton responsable et demande à changer le planning.", // nalezen: korter goed antwoord
     'c.permit.o2': "Ne va pas au cours de langue, parce que le travail passe avant.",
     'c.permit.o3': "Reste à la maison le mardi sans rien dire.",
     'c.permit.w': "Ton intégration est aussi une obligation. Beaucoup d’employeurs aident quand ils le savent tôt. La gemeente peut aussi t’aider à organiser ton plan autour de ton travail.",
@@ -1312,7 +1312,7 @@ const t: CultureTranslation = {
     'c.kids.b': "Ton enfant tombe malade tout à coup ? Dis-le tout de suite à ton employeur. Pour les premières heures ou les premiers jours, tu peux prendre un congé d’urgence (calamiteitenverlof), et ton employeur continue à te payer. Ton enfant a besoin de soins plus longtemps ? Alors tu peux demander un congé pour soins (zorgverlof). Enceinte ? Ton employeur n’a pas le droit de te licencier pour ça. Renseigne-toi à temps sur le congé de grossesse et le congé parental (ouderschapsverlof). Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.",
     'c.kids.p': "Mon enfant est malade. Je peux partir plus tôt aujourd’hui ?",
     'c.kids.s': "La crèche (kinderopvang) t’appelle au travail. Ton enfant a de la fièvre et doit rentrer à la maison. Que fais-tu ?",
-    'c.kids.o1': "Préviens tout de suite ton responsable, et demande un congé d’urgence pour aller chercher ton enfant.",
+    'c.kids.o1': "Préviens ton responsable, et demande un congé d’urgence.", // nalezen: korter goed antwoord
     'c.kids.o2': "Pars sans rien dire, et explique-le demain.",
     'c.kids.o3': "Reste au travail, et laisse ton enfant attendre la fin de ton service.",
     'c.kids.w': "Un enfant malade, c’est une urgence à la maison. Quand tu préviens d’abord ton responsable, il peut organiser le travail. Le congé d’urgence est fait pour ces moments-là.",
@@ -1328,7 +1328,7 @@ const t: CultureTranslation = {
     'c.jobends.b': "Quand ton travail s’arrête, vérifie ton solde de tout compte (eindafrekening). Les jours de congé que tu n’as pas pris et ta prime de vacances sont en général payés avec. Le logement, l’assurance santé ou le minibus de l’agence peuvent s’arrêter en même temps. Prends toi-même une assurance santé à temps. Ton contrat de location a ses propres règles : demande conseil avant de quitter le logement. Tu déménages, ou tu quittes les Pays-Bas ? Dis-le à la gemeente. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.",
     'c.jobends.p': "Quand est-ce que je reçois mon solde de tout compte ?",
     'c.jobends.s': "Ton travail s’arrête vendredi. Ton assurance santé passe par l’agence. Que fais-tu ?",
-    'c.jobends.o1': "Demande à l’agence quand l’assurance s’arrête, et prends ta propre assurance à temps.",
+    'c.jobends.o1': "Demande quand l’assurance s’arrête, et prends la tienne à temps.", // nalezen: korter goed antwoord
     'c.jobends.o2': "Rien : l’assurance continue toute seule.",
     'c.jobends.o3': "Attends de tomber malade, et règle ça à ce moment-là.",
     'c.jobends.w': "L’assurance par l’agence s’arrête souvent quand ton travail s’arrête. Quand tu vis ou travailles aux Pays-Bas, tu dois en général avoir une assurance santé. En t’en occupant à temps, tu as toujours une assurance.",

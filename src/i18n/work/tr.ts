@@ -1198,15 +1198,15 @@ const t: CultureTranslation = {
     'c.harvest.b': "Serada çoğu zaman sabit bir tempoda (tempo) çalışırsın. Bazı işverenler kasa, sıra veya kilo başına öder: buna parça başı ücret (stukloon) denir. Parça başı ücrette bile çalıştığın her saat için en az asgari ücreti kazanmalısın. Tutarı rijksoverheid.nl sitesinden kontrol et. Her gün saatlerini ve kasalarını not et ve maaş bordronla karşılaştır. Hızlı çalışmak iyidir, ama güvenli çalışmak önce gelir. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.", // nieuw, nog nalezen
     'c.harvest.p': "Bugün kaç kasa yaptım?", // nieuw, nog nalezen
     'c.harvest.s': "Sana kasa başına ödeme yapılıyor. Hafta sonunda ücretin, çalıştığın saatler için asgari ücretten çok daha düşük. Ne yaparsın?", // nieuw, nog nalezen
-    'c.harvest.o1': "Kendi saat ve kasa listeni işverenine gösterir, düzeltilmezse yardım istersin.", // nieuw, nog nalezen
+    'c.harvest.o1': "Kendi saat ve kasa listeni işverenine gösterirsin.", // nalezen: korter goed antwoord
     'c.harvest.o2': "Hiçbir şey söylemez, daha çok kazanmak için gelecek hafta daha hızlı çalışırsın.", // nieuw, nog nalezen
     'c.harvest.o3': "Kabul edersin: parça başı ücrette düşük ücret normaldir.", // nieuw, nog nalezen
-    'c.harvest.w': "Parça başı ücrette de çalıştığın her saat için en az asgari ücreti almalısın. Kendi saat ve kasa listen, ne yaptığını göstermene yardım eder.", // nieuw, nog nalezen
+    'c.harvest.w': "Parça başı ücrette de çalıştığın her saat için en az asgari ücreti almalısın. Kendi saat ve kasa listen, ne yaptığını göstermene yardım eder. Düzeltilmezse yardım iste.", // nalezen: korter goed antwoord
     'c.greensafe': "Sıcak ve tarım ilaçları", // nieuw, nog nalezen
     'c.greensafe.b': "Serada hava çok sıcak olabilir, ilkbaharda da. Sık sık su iç, susamadan önce de, ve molalarını serin bir yerde ver. Başın mı dönüyor, midin mi bulanıyor ya da başın mı ağrıyor? Dur ve birine söyle. Bitkiler bazen kimyasallarla ilaçlanır (spuitmiddelen). Az önce ilaçlanmış bir seranın kapısında çoğu zaman bir uyarı levhası olur. Amirin tekrar güvenli olduğunu söyleyene kadar içeri girme. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nog nalezen
     'c.greensafe.p': "Bu serada artık çalışabilir miyim?", // nieuw, nog nalezen
     'c.greensafe.s': "Bu sabah bir sera ilaçlandı. Kapıda bir uyarı levhası var. Bir iş arkadaşın diyor ki: “Hadi, sadece bir dakika.” Ne yaparsın?", // nieuw, nog nalezen
-    'c.greensafe.o1': "Dışarıda kalır, amirine tekrar ne zaman güvenli olacağını sorarsın.", // nieuw, nog nalezen
+    'c.greensafe.o1': "Dışarıda kalır, ne zaman güvenli olacağını sorarsın.", // nalezen: korter goed antwoord
     'c.greensafe.o2': "Hızlıca girer ve nefesini tutarsın.", // nieuw, nog nalezen
     'c.greensafe.o3': "Girersin, sonra ellerini iyice yıkarsın.", // nieuw, nog nalezen
     'c.greensafe.w': "Tarım ilaçları hiçbir koku almasan da cildine, gözlerine ve akciğerlerine zarar verebilir. İlaçlamadan sonra tekrar içeri girmeden önce bir bekleme süresi vardır. Bu sürenin ne zaman bittiğini amirin bilir.", // nieuw, nog nalezen
@@ -1288,7 +1288,7 @@ const t: CultureTranslation = {
     'c.details.b': "Bir işe başlarken bilgilerini verirsin: adını, adresini, telefon numaranı, doğum tarihini ve BSN’ni. Adını yavaşça, harf harf söyle. Sonra adını sözleşmende ve maaş bordronda kontrol et. Adında veya BSN’nde bir hata, maaşında veya vergide sorun çıkarabilir. Yeni adres ya da telefon numarası mı? İşverenine söyle.",
     'c.details.p': "Harf harf söyleyeyim: A, L, I.",
     'c.details.s': "Ajans telefonda soyadını yazıyor. Yanlış yazdıklarını duyuyorsun. Ne yaparsın?",
-    'c.details.o1': "Adını yavaşça, harf harf söyler ve geri okumalarını istersin.",
+    'c.details.o1': "Adını yavaşça harf harf söyler ve geri okumalarını istersin.", // nalezen: korter goed antwoord
     'c.details.o2': "Hiçbir şey söylemezsin: adındaki küçük bir hata önemli değil.",
     'c.details.o3': "Telefonu kapatır ve hatayı sonra bulmalarını umarsın.",
     'c.details.w': "Adın sözleşmende, maaş bordronda ve kimliğinde aynı olmalı. O zaman maaşın ve vergin doğru olur. Harf harf söylemek ve geri okutmak hızlı bir kontroldür.",
@@ -1304,7 +1304,7 @@ const t: CultureTranslation = {
     'c.permit.b': "Uyum sürecini (inburgering) yapman mı gerekiyor? İşverenine söyle ve belediyeye (gemeente) çalıştığını bildir. Dil derslerinin çalışma programına uyup uymayacağını erkenden sor. Burada çalışıp çalışamayacağından emin değil misin? Başlamadan önce kontrol et, örneğin IND’de, UWV’de veya VluchtelingenWerk’te. Bu iş için serbest çalışan (zzp’er) olarak kayıt olmanı mı istiyorlar? Önce tavsiye al. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.",
     'c.permit.p': "Salı günleri dil dersim var. Çalışma programım bunu dikkate alabilir mi?",
     'c.permit.s': "Yeni bir işe başlıyorsun. Dil dersin salı sabahları, ama programa göre salı günleri çalışıyorsun. Ne yaparsın?",
-    'c.permit.o1': "Amirine dersten bahseder, programın değişip değişemeyeceğini sorarsın.",
+    'c.permit.o1': "Amirine söyler, programı değiştirmelerini istersin.", // nalezen: korter goed antwoord
     'c.permit.o2': "İş önce geldiği için dil dersine gitmezsin.",
     'c.permit.o3': "Hiçbir şey söylemeden salı günleri evde kalırsın.",
     'c.permit.w': "Uyum süreci de bir yükümlülüktür. Birçok işveren erkenden öğrenirse yardım eder. Belediye (gemeente) de planını işine göre ayarlamana yardım edebilir.",
@@ -1312,7 +1312,7 @@ const t: CultureTranslation = {
     'c.kids.b': "Çocuğun aniden mi hastalandı? Hemen işverenine söyle. İlk saatler veya günler için acil durum izni (calamiteitenverlof) alabilirsin ve işverenin sana ödemeye devam eder. Çocuğunun daha uzun süre bakıma mı ihtiyacı var? O zaman bakım izni (zorgverlof) isteyebilirsin. Hamile misin? İşverenin seni bu yüzden işten çıkaramaz. Doğum izni ve ebeveyn izni (ouderschapsverlof) hakkında zamanında bilgi al. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.",
     'c.kids.p': "Çocuğum hasta. Bugün erken çıkabilir miyim?",
     'c.kids.s': "Kreş (kinderopvang) seni işte arıyor. Çocuğunun ateşi var ve eve gitmesi gerekiyor. Ne yaparsın?",
-    'c.kids.o1': "Hemen amirine söyler, çocuğunu almak için acil durum izni istersin.",
+    'c.kids.o1': "Amirine söyler, acil durum izni istersin.", // nalezen: korter goed antwoord
     'c.kids.o2': "Tek kelime etmeden çıkar, yarın açıklarsın.",
     'c.kids.o3': "İşte kalır, çocuğunu vardiyan bitene kadar bekletirsin.",
     'c.kids.w': "Hasta bir çocuk evde acil bir durumdur. Önce amirine söylersen işi planlayabilir. Acil durum izni böyle anlar içindir.",
@@ -1328,7 +1328,7 @@ const t: CultureTranslation = {
     'c.jobends.b': "İşin bittiğinde son hesabını (eindafrekening) kontrol et. Kullanmadığın izin günleri ve tatil paran genelde bununla birlikte ödenir. Ajans üzerinden olan konut, sağlık sigortası veya minibüs aynı anda bitebilir. Kendi sağlık sigortanı zamanında ayarla. Kira sözleşmenin kendi kuralları var: evden çıkmadan önce tavsiye al. Taşınıyor musun ya da Hollanda’dan mı ayrılıyorsun? Belediyeye (gemeente) bildir. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.",
     'c.jobends.p': "Son hesabımı ne zaman alırım?",
     'c.jobends.s': "İşin cuma günü bitiyor. Sağlık sigortan ajans üzerinden. Ne yaparsın?",
-    'c.jobends.o1': "Ajansa sigortanın ne zaman bittiğini sorar, kendi sigortanı zamanında ayarlarsın.",
+    'c.jobends.o1': "Sigortanın ne zaman bittiğini sorar, kendi sigortanı zamanında ayarlarsın.", // nalezen: korter goed antwoord
     'c.jobends.o2': "Hiçbir şey: sigorta kendiliğinden devam eder.",
     'c.jobends.o3': "Hastalanana kadar bekler, o zaman ayarlarsın.",
     'c.jobends.w': "Ajans üzerinden olan sigorta çoğu zaman işin bittiğinde biter. Hollanda’da yaşıyor veya çalışıyorsan genelde sağlık sigortan olmak zorunda. Zamanında ayarlarsan sigortasız kalmazsın.",

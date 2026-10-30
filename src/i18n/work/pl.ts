@@ -1198,15 +1198,15 @@ const t: CultureTranslation = {
     'c.harvest.b': "W szklarni często pracujesz w stałym tempie (tempo). Niektórzy pracodawcy płacą za skrzynkę, za rząd albo za kilogram: to praca na akord (stukloon). Nawet przy akordzie musisz zarobić co najmniej płacę minimalną za każdą przepracowaną godzinę. Sprawdź kwotę na rijksoverheid.nl. Codziennie zapisuj swoje godziny i skrzynki i porównuj je z paskiem wypłaty. Szybka praca jest dobra, ale bezpieczeństwo jest najważniejsze. To ogólne informacje. W twojej sytuacji zapytaj związek zawodowy, Juridisch Loket albo FairWork.", // nieuw, nog nalezen
     'c.harvest.p': { m: "Ile skrzynek dzisiaj zrobiłem?", f: "Ile skrzynek dzisiaj zrobiłam?" }, // nieuw, nog nalezen
     'c.harvest.s': { m: "Płacą ci za skrzynkę. Na koniec tygodnia twoja wypłata jest dużo niższa niż płaca minimalna za godziny, które przepracowałeś. Co robisz?", f: "Płacą ci za skrzynkę. Na koniec tygodnia twoja wypłata jest dużo niższa niż płaca minimalna za godziny, które przepracowałaś. Co robisz?" }, // nieuw, nog nalezen
-    'c.harvest.o1': "Pokazujesz pracodawcy swoją listę godzin i skrzynek i prosisz o pomoc, jeśli tego nie poprawi.", // nieuw, nog nalezen
+    'c.harvest.o1': "Pokazujesz pracodawcy swoją listę godzin i skrzynek.", // nalezen: korter goed antwoord
     'c.harvest.o2': "Nic nie mówisz i w przyszłym tygodniu pracujesz szybciej, żeby więcej zarobić.", // nieuw, nog nalezen
     'c.harvest.o3': "Akceptujesz to: przy akordzie niska wypłata jest normalna.", // nieuw, nog nalezen
-    'c.harvest.w': { m: "Przy akordzie i tak musisz dostać co najmniej płacę minimalną za każdą przepracowaną godzinę. Twoja lista godzin i skrzynek pomaga pokazać, co zrobiłeś.", f: "Przy akordzie i tak musisz dostać co najmniej płacę minimalną za każdą przepracowaną godzinę. Twoja lista godzin i skrzynek pomaga pokazać, co zrobiłaś." }, // nieuw, nog nalezen
+    'c.harvest.w': { m: "Przy akordzie i tak musisz dostać co najmniej płacę minimalną za każdą przepracowaną godzinę. Twoja lista godzin i skrzynek pomaga pokazać, co zrobiłeś. Jeśli tego nie poprawią, poproś o pomoc.", f: "Przy akordzie i tak musisz dostać co najmniej płacę minimalną za każdą przepracowaną godzinę. Twoja lista godzin i skrzynek pomaga pokazać, co zrobiłaś. Jeśli tego nie poprawią, poproś o pomoc." }, // nalezen: korter goed antwoord
     'c.greensafe': "Upał i opryski", // nieuw, nog nalezen
     'c.greensafe.b': "W szklarni może być bardzo gorąco, także wiosną. Często pij wodę, także zanim poczujesz pragnienie, i rób przerwy w chłodnym miejscu. Kręci ci się w głowie, jest ci niedobrze albo boli cię głowa? Przerwij pracę i powiedz komuś. Rośliny są czasem opryskiwane chemikaliami (spuitmiddelen). Na drzwiach szklarni, która dopiero co była opryskana, często wisi tabliczka. Nie wchodź, dopóki przełożony nie powie, że znowu jest bezpiecznie. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nog nalezen
     'c.greensafe.p': "Czy mogę już pracować w tej szklarni?", // nieuw, nog nalezen
     'c.greensafe.s': "Dziś rano opryskano szklarnię. Na drzwiach wisi tabliczka. Kolega mówi: „No chodź, to tylko na chwilę.” Co robisz?", // nieuw, nog nalezen
-    'c.greensafe.o1': "Zostajesz na zewnątrz i pytasz przełożonego, kiedy znowu będzie bezpiecznie.", // nieuw, nog nalezen
+    'c.greensafe.o1': "Zostajesz na zewnątrz i pytasz, kiedy będzie bezpiecznie.", // nalezen: korter goed antwoord
     'c.greensafe.o2': "Szybko wchodzisz i wstrzymujesz oddech.", // nieuw, nog nalezen
     'c.greensafe.o3': "Wchodzisz, a potem dobrze myjesz ręce.", // nieuw, nog nalezen
     'c.greensafe.w': "Środki ochrony roślin mogą szkodzić skórze, oczom i płucom, także kiedy nic nie czujesz. Po oprysku jest czas oczekiwania, zanim można znowu wejść. Przełożony wie, kiedy się kończy.", // nieuw, nog nalezen
@@ -1288,7 +1288,7 @@ const t: CultureTranslation = {
     'c.details.b': "Na początku pracy podajesz swoje dane: imię i nazwisko, adres, numer telefonu, datę urodzenia i BSN. Przeliteruj swoje nazwisko powoli, litera po literze. Potem sprawdź swoje nazwisko w umowie i na pasku wypłaty. Błąd w nazwisku albo w BSN może sprawić problemy z wypłatą albo z podatkiem. Nowy adres albo numer telefonu? Powiedz pracodawcy.",
     'c.details.p': "Przeliteruję: A, L, I.",
     'c.details.s': "Przez telefon agencja zapisuje twoje nazwisko. Słyszysz, że zapisują je źle. Co robisz?",
-    'c.details.o1': "Literujesz swoje nazwisko powoli, litera po literze, i prosisz, żeby je przeczytali.",
+    'c.details.o1': "Literujesz swoje nazwisko powoli i prosisz, żeby je przeczytali.", // nalezen: korter goed antwoord
     'c.details.o2': "Nic nie mówisz: mały błąd w nazwisku nie ma znaczenia.",
     'c.details.o3': "Rozłączasz się i masz nadzieję, że później znajdą błąd.",
     'c.details.w': "Twoje nazwisko musi być takie samo w umowie, na pasku wypłaty i w dowodzie tożsamości. Wtedy wypłata i podatek są dobrze rozliczone. Przeliterowanie i przeczytanie na głos to szybka kontrola.",
@@ -1304,7 +1304,7 @@ const t: CultureTranslation = {
     'c.permit.b': "Musisz przejść integrację obywatelską (inburgering)? Powiedz o tym pracodawcy i powiedz gminie (gemeente), że pracujesz. Wcześnie zapytaj, czy lekcje języka da się dopasować do twojego grafiku. Nie wiesz, czy możesz tu pracować? Sprawdź to, zanim zaczniesz, na przykład w IND, UWV albo VluchtelingenWerk. Każą ci zarejestrować się jako samozatrudniony (zzp’er) do tej pracy? Najpierw poproś o radę. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.",
     'c.permit.p': "We wtorek mam lekcję języka. Czy grafik może to uwzględnić?",
     'c.permit.s': "Zaczynasz nową pracę. Twoja lekcja języka jest we wtorki rano, ale według grafiku pracujesz we wtorki. Co robisz?",
-    'c.permit.o1': "Mówisz przełożonemu o lekcji i pytasz, czy grafik można zmienić.",
+    'c.permit.o1': "Mówisz przełożonemu i prosisz o zmianę grafiku.", // nalezen: korter goed antwoord
     'c.permit.o2': "Opuszczasz lekcję języka, bo praca jest najważniejsza.",
     'c.permit.o3': "We wtorki zostajesz w domu i nic nie mówisz.",
     'c.permit.w': "Integracja to też twój obowiązek. Wielu pracodawców pomaga, kiedy wcześnie o tym wiedzą. Gmina (gemeente) też może pomóc dopasować twój plan do pracy.",
@@ -1312,7 +1312,7 @@ const t: CultureTranslation = {
     'c.kids.b': "Twoje dziecko nagle zachorowało? Od razu powiedz pracodawcy. Na pierwsze godziny albo dni możesz wziąć urlop w nagłej sytuacji (calamiteitenverlof), a pracodawca dalej ci płaci. Dziecko potrzebuje opieki dłużej? Wtedy możesz poprosić o urlop opiekuńczy (zorgverlof). Jesteś w ciąży? Pracodawca nie może cię z tego powodu zwolnić. Zapytaj na czas o urlop macierzyński i urlop rodzicielski (ouderschapsverlof). To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.",
     'c.kids.p': "Moje dziecko jest chore. Czy mogę dziś wyjść wcześniej?",
     'c.kids.s': "Żłobek (kinderopvang) dzwoni do ciebie do pracy. Twoje dziecko ma gorączkę i musi wrócić do domu. Co robisz?",
-    'c.kids.o1': "Od razu mówisz przełożonemu i prosisz o urlop w nagłej sytuacji, żeby odebrać dziecko.",
+    'c.kids.o1': "Mówisz przełożonemu i prosisz o urlop w nagłej sytuacji.", // nalezen: korter goed antwoord
     'c.kids.o2': "Wychodzisz bez słowa i wyjaśniasz to jutro.",
     'c.kids.o3': "Zostajesz w pracy, a dziecko czeka do końca twojej zmiany.",
     'c.kids.w': "Chore dziecko to nagła sytuacja w domu. Kiedy najpierw powiesz przełożonemu, może on zaplanować pracę. Urlop w nagłej sytuacji jest właśnie na takie chwile.",
@@ -1328,7 +1328,7 @@ const t: CultureTranslation = {
     'c.jobends.b': "Kiedy kończy się twoja praca, sprawdź rozliczenie końcowe (eindafrekening). Niewykorzystane dni wolne i dodatek urlopowy są zwykle wypłacane razem z nim. Mieszkanie, ubezpieczenie zdrowotne albo bus z agencji mogą skończyć się w tym samym czasie. Na czas załatw sobie własne ubezpieczenie zdrowotne. Umowa najmu ma swoje zasady: poproś o radę, zanim wyprowadzisz się z mieszkania. Przeprowadzasz się albo wyjeżdżasz z Holandii? Powiedz gminie (gemeente). To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.",
     'c.jobends.p': "Kiedy dostanę rozliczenie końcowe?",
     'c.jobends.s': "Twoja praca kończy się w piątek. Twoje ubezpieczenie zdrowotne jest przez agencję. Co robisz?",
-    'c.jobends.o1': "Pytasz agencję, kiedy kończy się ubezpieczenie, i na czas załatwiasz własne.",
+    'c.jobends.o1': "Pytasz, kiedy kończy się ubezpieczenie, i na czas załatwiasz własne.", // nalezen: korter goed antwoord
     'c.jobends.o2': "Nic: ubezpieczenie trwa samo dalej.",
     'c.jobends.o3': "Czekasz, aż zachorujesz, i wtedy to załatwiasz.",
     'c.jobends.w': "Ubezpieczenie przez agencję często kończy się razem z pracą. Kiedy mieszkasz albo pracujesz w Holandii, zwykle musisz mieć ubezpieczenie zdrowotne. Jeśli załatwisz to na czas, nie zostaniesz bez ubezpieczenia.",
