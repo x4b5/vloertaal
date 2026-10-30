@@ -55,7 +55,7 @@ export const rulesUnits: RuleUnit[] = [
 
 /**
  * Short sector units (curriculum, deel 6): 2 lessons each, in the order of src/content/sectors.ts.
- * Techniek and the garage (curriculum, deel 7) come last: they have no sector card yet
- * (src/content/sectors.ts, SECTOR_UNITS_WITHOUT_CARD).
+ * Techniek and the garage (curriculum, deel 7) come last: their sector cards came later (in the
+ * group "Bouw en techniek", src/content/sectors.ts).
  */
 export const sectorRulesUnits: RuleUnit[] = [warehouseUnit, buildUnit, factoryUnit, careUnit, horecaUnit, cleanUnit, kasUnit, techniekUnit, werkplaatsUnit];

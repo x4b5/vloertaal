@@ -39,7 +39,7 @@ export const unitIcons: Record<string, string> = {
   'u.kas': 'w.kas',
   'u.finish': 'w.klaar',
   'u.tech': 'w.boor',
-  'u.garage': 'w.fiets',
+  'u.garage': 'w.garage',
   'u.stage': 'w.opleiding',
   'u.society': 'w.post',
   'u.online': 'w.computer',

@@ -10,7 +10,9 @@ import { withRegion } from './regio';
  * path: the basis units plus the learner's own sector unit(s) come first, the other sectors'
  * units wait in a collapsed section at the bottom (still playable, never locked by sector).
  */
-export type SectorId = 'logistics' | 'construction' | 'production' | 'care' | 'hospitality' | 'cleaning' | 'horticulture';
+export type SectorId =
+  | 'logistics' | 'construction' | 'production' | 'care' | 'hospitality' | 'cleaning' | 'horticulture'
+  | 'technical' | 'garage';
 
 /** What is stored: a sector, or 'none' for "not sure yet" (= the whole course as one path). */
 export type SectorChoice = SectorId | 'none';
@@ -52,6 +54,13 @@ export const sectors: Sector[] = [
   // Tuinbouw en kas (30 October 2026): heat, sprays and lifting (Safety), and piece rate (Pay).
   { id: 'horticulture', nl: 'Tuinbouw', key: 'sectorHorticulture', units: ['u.kas'], focus: ['u.safety', 'u.pay'],
     rules: { units: ['r.kas'], focus: ['r.veilig', 'r.loon'] } },
+  // Techniek (metaal, elektro, installatie) and the garage (mobiliteit), from the Entree rounds
+  // (30 October 2026, docs/werkregels-curriculum.md deel 7): sparks, noise and power (Safety), and
+  // the work order (Je werk afronden). Appended, so every existing sector keeps its path.
+  { id: 'technical', nl: 'Techniek', key: 'sectorTechnical', units: ['u.tech'], focus: ['u.safety', 'u.finish'],
+    rules: { units: ['r.techniek'], focus: ['r.veilig', 'r.afronden'] } },
+  { id: 'garage', nl: 'Garage', key: 'sectorGarage', units: ['u.garage'], focus: ['u.safety', 'u.finish'],
+    rules: { units: ['r.werkplaats'], focus: ['r.veilig', 'r.afronden'] } },
 ];
 
 /** A sector's own units and focus units in one track. */
@@ -70,22 +79,11 @@ export function unitSector(unitId: string): SectorId | undefined {
 
 export const isSectorId = (v: unknown): v is SectorId => sectors.some((s) => s.id === v);
 
-/**
- * Sector units of the work-rules track whose sector is not in the choice yet: techniek (metaal,
- * elektro, installatie) and the garage (mobiliteit), from the second Entree round (30 October 2026,
- * docs/werkregels-curriculum.md deel 7). Their sector card comes with their Taal units (u.tech,
- * u.garage), which are not written yet; "Iets anders" has room for one more sector only. Until then
- * no learner can choose them as their own sector, so a learner who chose a sector finds them under
- * "Andere sectoren" (never in the basis path); with no sector chosen they are in the whole course.
- */
-export const SECTOR_UNITS_WITHOUT_CARD: ReadonlySet<string> = new Set(['r.techniek', 'r.werkplaats']);
-
 /** Is this unit another sector's (so it goes to "Andere sectoren")? Never with no sector chosen. */
 export function isOtherSector(unitId: string, sector: SectorChoice | undefined): boolean {
   if (!sector || sector === 'none') return false;
   const own = unitSector(unitId);
-  if (own === undefined) return SECTOR_UNITS_WITHOUT_CARD.has(unitId);
-  return own !== sector;
+  return own !== undefined && own !== sector;
 }
 
 /** The slot for the learner's own sector unit(s): where the warehouse unit sits in the course (05, right after Safety). */
@@ -122,7 +120,7 @@ function rulesPlan(sector: SectorChoice | undefined): { main: Unit[]; other: Uni
   const all = courseUnits('regels');
   if (!sector || sector === 'none') return { main: all, other: [] };
   const own = all.filter((u) => unitSector(u.id) === sector);
-  const basis = all.filter((u) => unitSector(u.id) === undefined && !SECTOR_UNITS_WITHOUT_CARD.has(u.id));
+  const basis = all.filter((u) => unitSector(u.id) === undefined);
   const slot = basis.findIndex((u) => u.id === RULES_SLOT_AFTER);
   const at = slot >= 0 ? slot + 1 : basis.length;
   return {
@@ -156,33 +154,28 @@ export function sectorFirstFocus(sector: SectorChoice | undefined, track: Track 
 }
 
 /**
- * The sector choice in two small steps (never more than three cards on a page): first the kind
- * of work (three group cards), then the sectors in it. The third group, "Iets anders", holds
- * Tuinbouw and "Weet ik nog niet" (`notSure`): a stored 'none' belongs to that group.
+ * The sector choice in two small steps: first a list of one kind of row (the three kinds of work
+ * and "Weet ik nog niet", the list exception of max 3), then the three sectors of the group picked.
+ * "Weet ik nog niet" is a row of its own on the first step: it gives the choice 'none'.
  */
-export type SectorGroupId = 'make' | 'care' | 'other';
+export type SectorGroupId = 'build' | 'make' | 'care';
 
 export interface SectorGroup {
   id: SectorGroupId;
   nl: string;
   key: UiKey;
   sectors: SectorId[];
-  /** Its second step ends with "Weet ik nog niet" (the choice 'none'). */
-  notSure?: true;
 }
 
 export const sectorGroups: SectorGroup[] = [
-  { id: 'make', nl: 'Maken en verplaatsen', key: 'sectorGroupMake', sectors: ['logistics', 'construction', 'production'] },
+  { id: 'build', nl: 'Bouw en techniek', key: 'sectorGroupBuild', sectors: ['construction', 'technical', 'garage'] },
+  { id: 'make', nl: 'Maken en verplaatsen', key: 'sectorGroupMake', sectors: ['production', 'logistics', 'horticulture'] },
   { id: 'care', nl: 'Zorg en service', key: 'sectorGroupCare', sectors: ['care', 'hospitality', 'cleaning'] },
-  { id: 'other', nl: 'Iets anders', key: 'sectorGroupOther', sectors: ['horticulture'], notSure: true },
 ];
+
+export const isSectorGroupId = (v: unknown): v is SectorGroupId => sectorGroups.some((g) => g.id === v);
 
 /** The group a sector is in (undefined for "not sure yet" or nothing chosen). */
 export function sectorGroupOf(sector: SectorChoice | undefined): SectorGroupId | undefined {
   return sectorGroups.find((g) => g.sectors.includes(sector as SectorId))?.id;
-}
-
-/** The group whose card shows a choice as picked: 'none' is in the group with "Weet ik nog niet". */
-export function sectorChoiceGroup(choice: SectorChoice | undefined): SectorGroupId | undefined {
-  return choice === 'none' ? sectorGroups.find((g) => g.notSure)?.id : sectorGroupOf(choice);
 }

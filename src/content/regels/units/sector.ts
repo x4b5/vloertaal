@@ -1234,8 +1234,8 @@ export const kasUnit: RuleUnit = {
 };
 
 // Sector techniek · Werken in de techniek (les TE.1, TE.2; Entree-profiel metaal-, elektro- en
-// installatietechniek, docs/werkregels-curriculum.md deel 7, 30 oktober 2026). Not in the sector
-// choice yet (src/content/sectors.ts, SECTOR_UNITS_WITHOUT_CARD): its card comes with the Taal unit.
+// installatietechniek, docs/werkregels-curriculum.md deel 7, 30 oktober 2026). The own unit of the
+// sector Techniek (src/content/sectors.ts, group "Bouw en techniek"), with the Taal unit u.tech.
 export const techniekUnit: RuleUnit = {
   id: 'r.techniek',
   title: 'Werken in de techniek',
@@ -1407,8 +1407,8 @@ export const techniekUnit: RuleUnit = {
 };
 
 // Sector garage · Werken in de garage (les M.1, M.2; Entree-profiel mobiliteitsbranche,
-// docs/werkregels-curriculum.md deel 7, 30 oktober 2026). Not in the sector choice yet, like
-// techniek (src/content/sectors.ts, SECTOR_UNITS_WITHOUT_CARD).
+// docs/werkregels-curriculum.md deel 7, 30 oktober 2026). The own unit of the sector Garage
+// (src/content/sectors.ts, group "Bouw en techniek"), with the Taal unit u.garage.
 export const werkplaatsUnit: RuleUnit = {
   id: 'r.werkplaats',
   title: 'Werken in de garage',

@@ -3,7 +3,7 @@ import { units } from '../src/content/curriculum';
 import { allCourseUnits, courseUnits, findLessonIn, isPlayable, registerRulesCourse } from '../src/content/courses';
 import { findLesson } from '../src/content/curriculum';
 import { toCourseUnits } from '../src/content/regels/course';
-import { coursePlan, SECTOR_UNITS_WITHOUT_CARD, sectors, type SectorChoice } from '../src/content/sectors';
+import { coursePlan, sectors, type SectorChoice } from '../src/content/sectors';
 import { RULES_STUB } from '../src/dev/rulesStub';
 import { lessonAllowed, OPEN_TO_ALL, previewUnits, unitAllowed } from '../src/lib/access';
 import { earnCertificates, earnedCertificates, unitIndex } from '../src/lib/certificate';
@@ -38,16 +38,24 @@ const APPENDED = ['u.shop', 'u.numbers', 'u.ai'];
 /** A sector unit added after those ("In de kas", 30 October 2026): at the very end of the course. */
 const LATE_SECTOR_UNITS = ['u.kas'];
 /**
- * Basis units appended after "In de kas" (Entree in the Taal track, 30 October 2026): with a
- * sector they end the learner's own course, after the other appended units (before the other
- * sectors' units); with none, they come at the very end.
+ * Units appended after "In de kas" (Entree in the Taal track, 30 October 2026), in course order.
+ * The basis units among them end the learner's own course with a sector, after the other
+ * appended units (before the other sectors' units); with none, they all come at the very end.
  */
 const LATE_BASIS = ['u.finish', 'u.tech', 'u.garage', 'u.stage', 'u.society', 'u.online'];
+/**
+ * Of those, "In de werkplaats" and "In de garage" are the own units of Techniek and Garage (the
+ * sector choice in groups, 30 October 2026): in the own sector's slot, else with the other
+ * sectors' units after "In de kas". With no sector their place in the course is unchanged.
+ */
+const LATE_OWN = ['u.tech', 'u.garage'];
 const expectedOrder = (own: string | null) => {
   const main = BASIS.map((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
-  const late = LATE_SECTOR_UNITS.filter((id) => !main.includes(id));
-  return own ? [...main, ...APPENDED, ...LATE_BASIS, ...rest, ...late] : [...main, ...rest, ...APPENDED, ...late, ...LATE_BASIS];
+  const late = [...LATE_SECTOR_UNITS, ...LATE_OWN].filter((id) => !main.includes(id));
+  return own
+    ? [...main, ...APPENDED, ...LATE_BASIS.filter((id) => !LATE_OWN.includes(id)), ...rest, ...late]
+    : [...main, ...rest, ...APPENDED, ...LATE_SECTOR_UNITS, ...LATE_BASIS];
 };
 
 /** routeOrder for every sector, written out from the course as it was before the work-rules track. */
@@ -61,6 +69,8 @@ const TAAL_ORDER: Record<string, string[]> = {
   hospitality: expectedOrder('u.horeca'),
   cleaning: expectedOrder('u.clean'),
   horticulture: expectedOrder('u.kas'),
+  technical: expectedOrder('u.tech'),
+  garage: expectedOrder('u.garage'),
 };
 
 /** The 3 choices after lesson 1.1, as before the tracks. */
@@ -74,6 +84,8 @@ const TAAL_CHOICES: Record<string, string[]> = {
   hospitality: ['u.teamwork', 'u.firstday', 'u.horeca'],
   cleaning: ['u.time', 'u.firstday', 'u.clean'],
   horticulture: ['u.safety', 'u.firstday', 'u.kas'],
+  technical: ['u.safety', 'u.firstday', 'u.tech'],
+  garage: ['u.safety', 'u.firstday', 'u.garage'],
 };
 
 describe("the Dutch course ('taal') is exactly as before", () => {
@@ -272,15 +284,20 @@ describe("the work-rules track ('regels')", () => {
           expect(main.indexOf(own), `${s.id} ${own}`).toBe(at >= 0 ? at + 1 : main.length - 1);
         }
         expect(ids(coursePlan(s.id, 'regels').other).every((id) => !s.rules.units.includes(id))).toBe(true);
-        // Techniek and the garage have no sector card yet: never in the basis path, always under
-        // "Andere sectoren" once a sector is chosen.
-        for (const id of SECTOR_UNITS_WITHOUT_CARD) {
-          expect(main, `${s.id} ${id}`).not.toContain(id);
-          expect(ids(coursePlan(s.id, 'regels').other), `${s.id} ${id}`).toContain(id);
+        // Techniek and the garage are sectors of their own since 30 October 2026: in the own
+        // path for that sector, under "Andere sectoren" for every other one.
+        for (const id of ['r.techniek', 'r.werkplaats']) {
+          if (s.rules.units.includes(id)) expect(main, `${s.id} ${id}`).toContain(id);
+          else {
+            expect(main, `${s.id} ${id}`).not.toContain(id);
+            expect(ids(coursePlan(s.id, 'regels').other), `${s.id} ${id}`).toContain(id);
+          }
         }
       }
+      expect(ids(coursePlan('technical', 'regels').main)).toContain('r.techniek');
+      expect(ids(coursePlan('garage', 'regels').main)).toContain('r.werkplaats');
       // With no sector chosen (or "Weet ik nog niet") they are in the whole course.
-      for (const id of SECTOR_UNITS_WITHOUT_CARD) expect(ids(coursePlan('none', 'regels').main)).toContain(id);
+      for (const id of ['r.techniek', 'r.werkplaats']) expect(ids(coursePlan('none', 'regels').main)).toContain(id);
       // The preview and the trial lesson follow the course's first unit.
       expect(previewUnits('regels')).toEqual([course[0].id]);
       expect(tryLessonId('regels')).toBe(course[0].lessons[0].id);

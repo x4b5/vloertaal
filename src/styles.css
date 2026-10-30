@@ -3883,7 +3883,19 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .sector-step .max3-pic:has(.max3-trio) { width: 124px; }
 .max3-trio > span { width: 38px; height: 46px; }
 .max3-trio .word-pic { width: 44px; height: 44px; }
+/* Sector step 1 as a list (one kind of row): the three kinds of work, each with its three
+   sector pictures, and "Weet ik nog niet". Rows at least 64 px high (a tap target well over 44). */
+.sector-groups { margin-top: 18px; gap: 10px; }
+.sector-group-row { min-height: 72px; }
+.sector-group-row.picked { border-color: var(--edge); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
+.sector-group-row.picked .set-row-chev { color: var(--ink); }
+.set-row-icon.sector-group-pic { width: 112px; height: 52px; border-radius: 14px; }
+.sector-group-row.picked .sector-group-pic { background: var(--yellow); color: #1e2226; }
+.sector-group-head { margin: 14px 0 0; font-size: inherit; }
+.sector-group-head:focus { outline: none; }
+.sector-group-head:focus-visible .bi { outline: 3px solid var(--edge); outline-offset: 2px; }
 @media (max-width: 370px) {
+  .set-row-icon.sector-group-pic { width: 100px; }
   .sector-step .max3-pic:has(.max3-trio) { width: 108px; }
   .max3-trio > span { width: 33px; }
   .max3-trio .word-pic { width: 40px; height: 40px; }
