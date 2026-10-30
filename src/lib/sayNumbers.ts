@@ -46,36 +46,75 @@ export function sayEuro(whole: string, cents?: string): string {
   return `${euros} euro ${c}`;
 }
 
-/** A time: H.MM or HH:MM (hours 0–23), not part of a longer number, with an optional "uur". */
-const TIME = /(?<![\d.,:])([01]?\d|2[0-3])[.:]([0-5]\d)(?!\d)(?![.,:]\d)(\s+uur\b)?/g;
+/*
+ * No lookbehind in these patterns: iOS before 16.4 cannot make such a regex, and
+ * as the voice's rules are made when the app's main file loads, the whole app would not start
+ * there (tests/oldPhones.test.ts). "Not right after a digit" is checked in code instead
+ * (replaceNotAfter), and "right after a digit" is a captured digit put back.
+ */
+
+/**
+ * text.replace(re, fn) for the matches whose character before is not one of `notAfter` (what a
+ * negative lookbehind in front of `re` did): a match that is refused is tried again one place further on,
+ * as the regex itself would. `re` has the g flag.
+ */
+function replaceNotAfter(text: string, re: RegExp, notAfter: RegExp, fn: (m: RegExpExecArray) => string): string {
+  let out = '';
+  let last = 0;
+  re.lastIndex = 0;
+  for (let m = re.exec(text); m; m = re.exec(text)) {
+    if (m.index > 0 && notAfter.test(text[m.index - 1])) {
+      re.lastIndex = m.index + 1;
+      continue;
+    }
+    out += text.slice(last, m.index) + fn(m);
+    last = m.index + m[0].length;
+    if (!m[0].length) re.lastIndex++;
+  }
+  return out + text.slice(last);
+}
+
+/** A time: H.MM or HH:MM (hours 0–23), not part of a longer number (not after [\d.,:]), with an optional "uur". */
+const TIME = /([01]?\d|2[0-3])[.:]([0-5]\d)(?!\d)(?![.,:]\d)(\s+uur\b)?/g;
+const NOT_AFTER_TIME = /[\d.,:]/;
 /** A whole number with thousand dots ("1.000") or without, and an optional ",50". */
 const NUM = String.raw`(\d{1,3}(?:\.\d{3})+|\d+)(?:,(\d{1,2}))?`;
 const EURO_BEFORE = new RegExp(String.raw`€\s?${NUM}(?![\d,])`, 'g');
-const EURO_AFTER = new RegExp(String.raw`(?<![\d.,])${NUM}\s?euro\b`, 'g');
+/** An amount before "euro" (not after [\d.,]). */
+const EURO_AFTER = new RegExp(String.raw`${NUM}\s?euro\b`, 'g');
+const NOT_AFTER_NUMBER = /[\d.,]/;
+/** After a digit, kept as $1. */
 const SIGNS: [RegExp, string][] = [
   [/\s*×\s*/g, ' keer '],
   [/\s*−\s*(?=\d)/g, ' min '],
-  [/(?<=\d)\s*\+\s*(?=\d)/g, ' plus '],
-  [/(?<=\d)\s*=\s*(?=\d)/g, ' is '],
+  [/(\d)\s*\+\s*(?=\d)/g, '$1 plus '],
+  [/(\d)\s*=\s*(?=\d)/g, '$1 is '],
 ];
 const UNITS: [RegExp, string][] = [
-  [/(?<=\d)\s?ml\b/g, ' milliliter'],
-  [/(?<=\d)\s?kg\b/g, ' kilo'],
-  [/(?<=\d)\s?cm\b/g, ' centimeter'],
+  [/(\d)\s?ml\b/g, '$1 milliliter'],
+  [/(\d)\s?kg\b/g, '$1 kilo'],
+  [/(\d)\s?cm\b/g, '$1 centimeter'],
 ];
 
 /** Numbers said digit by digit: the emergency number 112 ("één één twee"), not an amount of 112
- *  euro (the euro rules have run by then: "€ 112" is "112 euro"). Also used by scripts/list-clips.ts
- *  to re-record the clips made before this rule. */
-export const DIGIT_NUMBERS = /(?<![\d.,-])112(?![\d,]|\.\d|\s?euro\b)/g;
+ *  euro (the euro rules have run by then: "€ 112" is "112 euro"), and not after [\d.,-]. */
+const DIGIT_NUMBERS = /112(?![\d,]|\.\d|\s?euro\b)/g;
+const NOT_AFTER_DIGITS = /[\d.,-]/;
+
+/** Does the text have a number said digit by digit (112)? Also used by scripts/list-clips.ts to
+ *  re-record the clips made before this rule. */
+export function hasDigitNumber(text: string): boolean {
+  let found = false;
+  replaceNotAfter(text, DIGIT_NUMBERS, NOT_AFTER_DIGITS, (m) => { found = true; return m[0]; });
+  return found;
+}
 
 /** The spoken form of a Dutch text: times, amounts, signs and units as words (see above). */
 export function sayNumbers(text: string): string {
-  let out = text
-    .replace(TIME, (_m, h: string, m: string) => sayTime(Number(h), Number(m)))
-    .replace(EURO_BEFORE, (_m, whole: string, cents?: string) => sayEuro(whole, cents))
-    .replace(EURO_AFTER, (_m, whole: string, cents?: string) => sayEuro(whole, cents));
+  let out = replaceNotAfter(text, TIME, NOT_AFTER_TIME, (m) => sayTime(Number(m[1]), Number(m[2])));
+  out = out.replace(EURO_BEFORE, (_m, whole: string, cents?: string) => sayEuro(whole, cents));
+  out = replaceNotAfter(out, EURO_AFTER, NOT_AFTER_NUMBER, (m) => sayEuro(m[1], m[2]));
   for (const [re, word] of [...SIGNS, ...UNITS]) out = out.replace(re, word);
-  out = out.replace(DIGIT_NUMBERS, 'één één twee');
+  out = replaceNotAfter(out, DIGIT_NUMBERS, NOT_AFTER_DIGITS, () => 'één één twee');
   return out.replace(/ {2,}/g, ' ');
 }
