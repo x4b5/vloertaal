@@ -9,7 +9,7 @@ import zlPack from '../src/content/regio/zuid-limburg-pack';
 import { lessonSayings } from '../src/content/sayings';
 import { tokenize } from '../src/lib/answers';
 import { sayAs } from '../src/lib/sayAs';
-import { DIGIT_NUMBERS } from '../src/lib/sayNumbers';
+import { hasDigitNumber } from '../src/lib/sayNumbers';
 import { BRAM_HELLO, BRAM_VOICE, VOICE_SAMPLE } from '../src/lib/voices';
 
 // The app loads a region's file only when a learner chose it (src/content/regio ensureRegion);
@@ -74,7 +74,7 @@ for (const u of units)
 // were made before their `say` existed; take 3: the clips with 112, recorded as "honderdtwaalf" before
 // it was said digit by digit ("één één twee").
 const SAY_TAKE = 2;
-const takeFor = (text: string) => (new RegExp(DIGIT_NUMBERS.source).test(text) ? 3 : SAY_TAKE);
+const takeFor = (text: string) => (hasDigitNumber(text) ? 3 : SAY_TAKE);
 
 mkdirSync('public/audio', { recursive: true });
 writeFileSync(

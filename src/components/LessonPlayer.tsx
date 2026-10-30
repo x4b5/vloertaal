@@ -531,9 +531,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     };
     measureRef.current = measure;
     measure();
-    const ro = new ResizeObserver(measure);
-    ro.observe(foot);
-    ro.observe(body);
+    // No ResizeObserver before iOS 13.4: the scroll, resize and animation events below still measure.
+    const ro = typeof ResizeObserver === 'function' ? new ResizeObserver(measure) : null;
+    ro?.observe(foot);
+    ro?.observe(body);
     // The page shrinks when the content does, or when an entering exercise's slide-in ends.
     body.addEventListener('animationend', measure);
     body.addEventListener('transitionend', measure);
@@ -541,7 +542,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     window.addEventListener('resize', measure);
     return () => {
       cancelAnimationFrame(raf);
-      ro.disconnect();
+      ro?.disconnect();
       measureRef.current = null;
       body.removeEventListener('animationend', measure);
       body.removeEventListener('transitionend', measure);
@@ -554,7 +555,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   useEffect(() => {
     const slide = slideRef.current;
     measureRef.current?.();
-    if (!slide) return;
+    if (!slide || typeof ResizeObserver !== 'function') return;
     const ro = new ResizeObserver(() => measureRef.current?.());
     ro.observe(slide);
     return () => ro.disconnect();
@@ -707,7 +708,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     copy.classList.add('ex-leave');
     copy.setAttribute('aria-hidden', 'true');
     copy.setAttribute('inert', '');
-    layer.replaceChildren(copy);
+    // Not replaceChildren (missing before Chrome 86 and iOS 14): the next exercise would not come.
+    layer.textContent = '';
+    layer.appendChild(copy);
     setEntering(true);
     const t = window.setTimeout(() => copy.remove(), 200);
     timers.current.push(t);
