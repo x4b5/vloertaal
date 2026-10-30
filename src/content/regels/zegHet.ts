@@ -315,6 +315,64 @@ export const zegHetWrong: Record<string, readonly [{ text: string; feedback: str
     { text: 'Mijn loon is vast wel goed. Ik kijk er niet naar.', feedback: 'Dan zie je een fout niet. Vergelijk je uren met je loonstrook.' },
     { text: 'Mijn loon is te laag! Jullie betalen altijd te weinig.', feedback: 'Dat klinkt boos. Laat je lijst zien en vraag of het klopt.' },
   ],
+  // The second Entree round (docs/werkregels-curriculum.md, deel 7).
+  'r.l.veilig.4.mo1': [
+    { text: 'Ik ben moe, maar dat maakt niet uit. Ik werk gewoon.', feedback: 'Moe werken is gevaarlijk. Zeg het, en vraag ander werk.' },
+    { text: 'Ik ben moe. Ik ga maar even op de wc zitten.', feedback: 'Dan weet niemand het. Zeg het eerlijk.' },
+  ],
+  'r.l.veilig.5.mo1': [
+    { text: 'Mijn collega is weer dronken. Die is echt niet normaal!', feedback: 'Dat klinkt boos. Zeg rustig wat je ziet.' },
+    { text: 'Er is iets met een collega, maar ik zeg niet wie.', feedback: 'Dan kan je leidinggevende niets doen. Zeg wat er is.' },
+  ],
+  'r.l.geld.6.mo1': [
+    { text: 'Ik spaar wel. Maar alleen als er geld over is.', feedback: 'Vaak is er dan niets meer over. Spaar meteen na je loon.' },
+    { text: 'Kan ik alvast geld lenen? Dan heb ik altijd genoeg.', feedback: 'Lenen is geen sparen. Je moet het terugbetalen, met rente.' },
+  ],
+  'r.l.geld.7.mo1': [
+    { text: 'Die jas is te klein. Ik betaal hem dus ook niet.', feedback: 'Dan komen er kosten bij. Meld eerst dat je hem terugstuurt.' },
+    { text: 'Jullie jassen zijn waardeloos! Ik wil nu mijn geld!', feedback: 'Dat klinkt boos. Vraag het rustig, dan helpen ze je sneller.' },
+  ],
+  'r.l.meedoen.4.mo1': [
+    { text: 'Wauw, wat erg! Ik stuur het meteen naar iedereen.', feedback: 'Dan deel je misschien nepnieuws. Check het eerst.' },
+    { text: 'Dit is nep. Jij gelooft ook echt alles, hè?', feedback: 'Dat klinkt onaardig. Vraag liever rustig waar het vandaan komt.' },
+  ],
+  'r.l.schrijven.1.mo1': [
+    { text: 'Ik ben dinsdag niet op mijn werk. Ik moet naar school.', feedback: 'Je zegt het, maar je vraagt het niet.' },
+    { text: 'Mag ik een keer vrij? Ik moet ergens heen.', feedback: 'Dan weet je leidinggevende niet wanneer, en niet waarom.' },
+  ],
+  'r.l.schrijven.2.mo1': [
+    { text: 'Ik heb gemaild, maar jullie zeggen niks. Waarom niet?', feedback: 'Dat klinkt ongeduldig. Vraag rustig of je mail er is.' },
+    { text: 'Hallo, ik zoek werk. Heeft u nog iets voor mij?', feedback: 'Dan weet het bedrijf niet dat je al gemaild hebt.' },
+  ],
+  'r.l.loopbaan.1.mo1': [
+    { text: 'Niks eigenlijk. Ik ben gewoon niet zo slim.', feedback: 'Je kunt meer dan je denkt. Noem iets wat je goed doet.' },
+    { text: 'Ik kan alles. Ik ben overal de beste in.', feedback: 'Dat klinkt te groot. Noem één ding dat je echt kunt.' },
+  ],
+  'r.l.loopbaan.2.mo1': [
+    { text: 'Ik wil verder leren, maar dat zie ik later wel.', feedback: 'Wacht niet te lang. Je moet je op tijd aanmelden.' },
+    { text: 'Ik ben klaar met school. Ik ga gewoon werken.', feedback: 'Ben je nog geen 18? Dan moet je vaak nog naar school.' },
+  ],
+  'r.l.loopbaan.3.mo1': [
+    { text: 'Ik zet u gewoon op mijn cv. Dat vindt u vast goed.', feedback: 'Vraag het eerst. Dan weet de ander dat er iemand belt.' },
+    { text: 'Doei! Bedankt voor alles. Misschien zien we elkaar nog.', feedback: 'Vriendelijk. Maar zo vraag je niet om een referentie.' },
+  ],
+  // Sector techniek en garage (deel 7).
+  'r.l.techniek.1.mo1': [
+    { text: 'Ik heb geen bril, maar het gaat wel. Ik ben zo klaar.', feedback: 'Dan werk je zonder bescherming. Vraag eerst een bril.' },
+    { text: 'Wie heeft mijn bril gepakt? Dit is echt niet normaal!', feedback: 'Dat klinkt boos. Vraag liever rustig waar je er een krijgt.' },
+  ],
+  'r.l.techniek.2.mo1': [
+    { text: 'De klant zegt dat het uit is. Dan begin ik maar.', feedback: 'Dan weet je het niet zeker. Laat het eerst meten.' },
+    { text: 'Ik doe het gewoon met stroom erop. Ik ben voorzichtig.', feedback: 'Voorzichtig is niet genoeg. Eerst moet de stroom eraf.' },
+  ],
+  'r.l.werkplaats.1.mo1': [
+    { text: 'Het is maar even. Ik kruip er gewoon snel onder.', feedback: 'Een krik kan wegzakken. Vraag eerst om bokken.' },
+    { text: 'Ik ga niet onder die auto. Doe het zelf maar!', feedback: 'Dat klinkt boos. Zeg liever wat er nodig is.' },
+  ],
+  'r.l.werkplaats.2.mo1': [
+    { text: 'De remmen zijn bijna op. Ik doe ze er meteen bij.', feedback: 'Eerst moet de klant ja zeggen. Meld het eerst.' },
+    { text: 'Ik zag iets aan de remmen. Maar goed, niet mijn werk.', feedback: 'Dan hoort de klant het niet. Vraag of iemand haar belt.' },
+  ],
 };
 
 /** The model step as a question (same id: it is the card in the box), or none without wrong sentences. */

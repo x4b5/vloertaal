@@ -1,7 +1,7 @@
 import type { RuleUnit } from '../types';
 
 /**
- * Unit 10 · Uitkering, werk en geld (les 10.1–10.5).
+ * Unit 10 · Uitkering, werk en geld (les 10.1–10.7; 10.6 en 10.7 uit deel 7 van het curriculum).
  * Converted from docs/werkregels-curriculum.md; edit the curriculum first, then this file.
  * `// ⚖️ check:` marks a fact the expert must check (docs/werkregels-bronnen.md). The marker is
  * never shown or read aloud. `// Redactie:` notes are for the makers only.
@@ -447,6 +447,185 @@ export const geldUnit: RuleUnit = {
           why: 'Verhuis je? Geef je nieuwe adres binnen 5 dagen door aan de gemeente. Ga je voor lange tijd weg uit Nederland? Meld je dan af. Geef je adres ook aan je bureau, je bank en UWV.',
         },
         { kind: 'model', id: 'r.l.geld.5.mo1', context: 'Je contract stopt, en je wilt weten wat je nog krijgt.', nl: 'Mijn contract stopt. Krijg ik mijn vakantiegeld en mijn vrije dagen uitbetaald?' },
+      ],
+    },
+    {
+      // Les 10.6 · Je geld per maand: vaste lasten en sparen (Entree, economisch burgerschap;
+      //   30 oktober 2026, docs/werkregels-curriculum.md deel 7). Geen bedragen: geen premie, geen
+      //   toeslag, geen spaarbedrag.
+      id: 'r.l.geld.6',
+      title: 'Je geld per maand: vaste lasten en sparen',
+      goal: 'Je betaalt eerst je vaste lasten. Je spaart elke maand een klein beetje.',
+      remember: 'Eerst je vaste lasten. Dan een beetje sparen. Dan pas de rest.',
+      // Wie kan je helpen: nibud.nl (gratis tips en een budgetplanner ⚖️) · je bank · de gemeente
+      //   (als het niet lukt, gratis schuldhulp) · Geldfit.
+      help: ['gemeente', 'bank'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.geld.6.sc1',
+          picture: 'Jayden op zijn bed met zijn telefoon. Op het scherm zijn bankapp: het loon staat erop.',
+          lines: [
+            'Jayden is net 18. Hij werkt in een supermarkt.',
+            'Zijn loon staat op zijn rekening.',
+            'Nu moet hij zelf zijn zorgverzekering betalen.',
+            'Zijn vrienden willen dit weekend uit eten.',
+          ],
+        },
+        // ⚖️ check: Vanaf 18 jaar moet je zelf een zorgverzekering hebben ⚖️ (Zorgverzekeringswet
+        //   art. 2; tot 18 jaar ben je gratis verzekerd, op de polis van een ouder).
+        {
+          kind: 'rule',
+          id: 'r.l.geld.6.ru1',
+          emoji: '🐷',
+          title: 'Eerst je vaste lasten. Dan een beetje sparen. Dan pas de rest.',
+          body: [
+            'Vaste lasten zijn kosten die elke maand terugkomen.',
+            'Denk aan huur, je zorgverzekering en je telefoon. Die betaal je eerst.',
+            'Zet daarna elke maand een klein bedrag apart. Dat is je buffer.',
+            'Vanaf 18 jaar moet je zelf een zorgverzekering hebben.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: In Nederland moet iedereen vanaf 18 jaar een zorgverzekering hebben ⚖️ (Zvw art. 2).
+        // ⚖️ check: Tot je 18e ben je gratis verzekerd, via je ouders ⚖️ (Zvw: geen premie onder 18).
+        // ⚖️ check: Heb je een laag inkomen? Dan krijg je misschien zorgtoeslag ⚖️ (Wet op de
+        //   zorgtoeslag; aanvragen bij Dienst Toeslagen, "Mijn toeslagen").
+        {
+          kind: 'truefalse',
+          id: 'r.l.geld.6.tf1',
+          statement: 'Vanaf je 18e moet je zelf een zorgverzekering hebben.',
+          answer: true,
+          why: 'In Nederland moet iedereen vanaf 18 jaar een zorgverzekering hebben. Tot je 18e ben je gratis verzekerd, via je ouders. Heb je een laag inkomen? Dan krijg je misschien zorgtoeslag. Kijk bij Mijn toeslagen.',
+        },
+        {
+          kind: 'whatdo',
+          id: 'r.l.geld.6.wd1',
+          situation: 'Jayden heeft zijn loon. Wat kan Jayden het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij gaat eerst uit eten. Wat over is, gaat naar de rekeningen.', best: false, feedback: 'Dan is er misschien te weinig over voor de rekeningen.' },
+            { id: 'b', text: 'Hij betaalt de rekeningen pas als er een herinnering komt.', best: false, feedback: 'Dan kost het vaak extra geld. Betaal op tijd.' },
+            { id: 'c', text: 'Hij betaalt eerst de rekeningen. Dan spaart hij een beetje.', best: true, feedback: 'Goed. Wat dan over is, mag hij uitgeven.' },
+          ],
+          why: 'Betaal eerst je vaste lasten: huur, zorgverzekering, telefoon. Zet daarna een klein bedrag apart. Wat dan over is, kun je uitgeven. Laat de vaste lasten automatisch betalen. Dan vergeet je niets.',
+        },
+        // ⚖️ check: Op nibud.nl staan gratis tips en voorbeelden ⚖️ (Nibud, budgetplanner).
+        {
+          kind: 'whatdo',
+          id: 'r.l.geld.6.wd2',
+          situation: 'Jayden weet niet waar zijn geld blijft. Wat kan Jayden het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij schrijft een maand op wat hij uitgeeft.', best: true, feedback: 'Goed. Dan ziet hij waar zijn geld heen gaat.' },
+            { id: 'b', text: 'Hij vraagt een lening, voor het geval dat.', best: false, feedback: 'Een lening moet hij terugbetalen, met rente. Dat maakt het erger.' },
+            { id: 'c', text: 'Hij kijkt maar niet meer in zijn bankapp.', best: false, feedback: 'Dat snap ik. Maar dan ziet hij een probleem te laat.' },
+          ],
+          why: 'Schrijf een maand op wat je uitgeeft. Of kijk in je bankapp. Dan zie je waar je geld heen gaat. Op nibud.nl staan gratis tips en voorbeelden.',
+        },
+        {
+          kind: 'truefalse',
+          id: 'r.l.geld.6.tf2',
+          statement: 'Sparen heeft pas zin als je veel verdient.',
+          answer: false,
+          why: 'Ook een klein bedrag per maand helpt. Zo maak je een buffer. Dat is geld voor als er iets kapotgaat, of als je werk stopt. Dan hoef je niet te lenen.',
+        },
+        { kind: 'model', id: 'r.l.geld.6.mo1', context: 'Je wilt elke maand een beetje sparen.', nl: 'Kan ik elke maand automatisch geld naar mijn spaarrekening zetten?' },
+      ],
+    },
+    {
+      // Les 10.7 · Kopen, abonnementen en ruilen (Entree, economisch burgerschap: de consument;
+      //   30 oktober 2026)
+      id: 'r.l.geld.7',
+      title: 'Kopen, abonnementen en ruilen',
+      goal: 'Je weet dat achteraf betalen ook lenen is. Je kent je rechten bij online kopen.',
+      // ⚖️ check: Dan heb je meestal 14 dagen bedenktijd ⚖️ (art. 6:230o BW).
+      remember: 'Online gekocht? Dan heb je meestal 14 dagen bedenktijd. Bewaar je bonnetje.',
+      // Wie kan je helpen: ConsuWijzer (van de ACM, uitleg over je rechten als klant ⚖️) · het
+      //   Juridisch Loket · bij een nep-webwinkel: de politie (aangifte) · bij betaalproblemen: de
+      //   gemeente.
+      help: ['juridischloket', 'politie', 'gemeente'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.geld.7.sc1',
+          picture: 'Fatima op de bank met haar telefoon. Op het scherm een knop: "Nu kopen, later betalen".',
+          lines: [
+            'Fatima koopt online een jas voor haar dochter.',
+            'Bij het betalen staat: "Nu kopen, over 30 dagen betalen."',
+            'Dat is makkelijk, denkt ze.',
+            'Een week later komt de jas. Hij is te klein.',
+          ],
+        },
+        // ⚖️ check: Online gekocht? Dan mag je het meestal binnen 14 dagen terugsturen ⚖️ (art. 6:230o
+        //   BW; de 14 dagen gaan in als je het hebt ontvangen; uitzonderingen, zoals iets op maat).
+        // ⚖️ check: Betaal je te laat? Dan komen er kosten bij ⚖️ (Wet normering buitengerechtelijke
+        //   incassokosten; na een herinnering met 14 dagen).
+        // ⚖️ check: Een abonnement kun je online opzeggen ⚖️ (art. 6:236 en 6:237 BW, de "opzegknop":
+        //   opzeggen kan op dezelfde manier als afsluiten).
+        // ⚖️ check: In een winkel ruilen is geen recht ⚖️ (ConsuWijzer: ruilen of geld terug in de
+        //   winkel is service van de winkel, behalve als het product kapot is).
+        {
+          kind: 'rule',
+          id: 'r.l.geld.7.ru1',
+          emoji: '🛍️',
+          title: 'Online gekocht? Dan heb je meestal 14 dagen bedenktijd. Bewaar je bonnetje.',
+          body: [
+            'Online gekocht? Dan mag je het meestal binnen 14 dagen terugsturen.',
+            'Achteraf betalen is ook lenen. Betaal je te laat? Dan komen er kosten bij.',
+            'Een abonnement kun je online opzeggen. Kijk wanneer het stopt.',
+            'In een winkel ruilen mag alleen als de winkel het wil. Vraag het bij het kopen.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: In een winkel ruilen is geen recht ⚖️ (ConsuWijzer).
+        // ⚖️ check: Online heb je meestal 14 dagen bedenktijd ⚖️ (art. 6:230o BW).
+        {
+          kind: 'truefalse',
+          id: 'r.l.geld.7.tf1',
+          statement: 'Een jas uit een gewone winkel mag je altijd ruilen.',
+          answer: false,
+          why: 'In een winkel ruilen is geen recht. Veel winkels doen het wel, met het bonnetje. Vraag het bij het kopen. Online is het anders. Dan heb je meestal 14 dagen bedenktijd.',
+        },
+        // ⚖️ check: Dan heb je meestal 14 dagen bedenktijd ⚖️ (art. 6:230o BW; meld het binnen 14
+        //   dagen, stuur het daarna binnen 14 dagen terug, art. 6:230s BW).
+        {
+          kind: 'whatdo',
+          id: 'r.l.geld.7.wd1',
+          situation: 'De jas is te klein. Fatima kreeg hem 1 week geleden. Wat kan Fatima het beste doen?',
+          options: [
+            { id: 'a', text: 'Ze houdt de jas. Terugsturen kan toch niet meer.', best: false, feedback: 'Dat kan wel. Ze heeft meestal 14 dagen bedenktijd.' },
+            { id: 'b', text: 'Ze meldt het, en stuurt de jas terug.', best: true, feedback: 'Goed. Dan hoeft ze de jas niet te betalen.' },
+            { id: 'c', text: 'Ze betaalt de jas gewoon niet. Dan is het ook goed.', best: false, feedback: 'Dan komen er kosten bij. Stuur hem eerst netjes terug.' },
+          ],
+          why: 'Koop je iets online? Dan heb je meestal 14 dagen bedenktijd. Je mag het dan terugsturen. Meld het eerst bij de webwinkel. Betaal je achteraf? Zeg dan ook dat je het terugstuurt. Zo krijg je geen rekening.',
+        },
+        // ⚖️ check: Dat kan online, net zo makkelijk als afsluiten ⚖️ (art. 6:236 en 6:237 BW).
+        // ⚖️ check: Na het eerste jaar kun je meestal elke maand opzeggen ⚖️ (art. 6:236 onder j en
+        //   6:237 onder l BW, voor veel abonnementen).
+        {
+          kind: 'whatdo',
+          id: 'r.l.geld.7.wd2',
+          situation: 'Fatima betaalt elke maand voor een sportschool. Ze gaat er nooit heen. Wat kan Fatima het beste doen?',
+          options: [
+            { id: 'a', text: 'Ze zegt het abonnement op. Ze kijkt wanneer het stopt.', best: true, feedback: 'Goed. Dan betaalt ze straks niet meer voor niets.' },
+            { id: 'b', text: 'Ze laat het lopen. Misschien gaat ze nog een keer.', best: false, feedback: 'Dat snap ik. Maar zo betaalt ze elke maand voor niets.' },
+            { id: 'c', text: 'Ze stopt de betaling bij de bank. Dan is het klaar.', best: false, feedback: 'Dan loopt het abonnement nog door. Dan krijgt ze een schuld.' },
+          ],
+          why: 'Kijk elke maand welke abonnementen je hebt. Gebruik je iets niet? Zeg het op. Dat kan online, net zo makkelijk als afsluiten. Na het eerste jaar kun je meestal elke maand opzeggen. Stop niet alleen de betaling. Dan krijg je een schuld.',
+        },
+        // ⚖️ check: Op ConsuWijzer staat uitleg over je rechten als klant ⚖️ (ConsuWijzer, van de
+        //   Autoriteit Consument & Markt).
+        {
+          kind: 'whoask',
+          id: 'r.l.geld.7.wa1',
+          question: 'Je stuurde iets terug. De webwinkel geeft je geld niet terug. Waar vraag je advies?',
+          options: [
+            { id: 'a', who: 'gemeente', best: false, feedback: 'De gemeente helpt bij schulden. Niet bij een ruzie met een winkel.' },
+            { id: 'b', who: 'politie', best: false, feedback: 'De politie helpt bij oplichting. Bij een ruzie met een winkel vraag je eerst advies.' },
+            { id: 'c', who: 'juridischloket', best: true, feedback: 'Goed. Daar krijg je gratis informatie over je rechten.' },
+          ],
+          why: 'Het Juridisch Loket geeft gratis informatie over je rechten. Op ConsuWijzer staat ook uitleg voor klanten. Is de webwinkel nep? Doe dan aangifte bij de politie.',
+        },
+        { kind: 'model', id: 'r.l.geld.7.mo1', context: 'Je wilt iets terugsturen naar een webwinkel.', nl: 'Ik wil deze jas terugsturen. Hoe krijg ik mijn geld terug?' },
       ],
     },
   ],

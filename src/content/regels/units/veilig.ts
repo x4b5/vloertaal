@@ -1,7 +1,7 @@
 import type { RuleUnit } from '../types';
 
 /**
- * Unit 7 · Veilig en gezond werken (les 7.1–7.3).
+ * Unit 7 · Veilig en gezond werken (les 7.1–7.5; 7.4 en 7.5 uit deel 7 van het curriculum).
  * Converted from docs/werkregels-curriculum.md; edit the curriculum first, then this file.
  * `// ⚖️ check:` marks a fact the expert must check (docs/werkregels-bronnen.md). The marker is
  * never shown or read aloud. `// Redactie:` notes are for the makers only.
@@ -276,6 +276,165 @@ export const veiligUnit: RuleUnit = {
           why: 'Je mag zelf naar de bedrijfsarts. Je kunt ook met je leidinggevende praten.',
         },
         { kind: 'model', id: 'r.l.veilig.3.mo1', context: 'Je hebt een ongeluk gehad op je werk.', nl: 'Ik ben gevallen. Ik wil dat graag melden.' },
+      ],
+    },
+    {
+      // Les 7.4 · Fit voor je werk: slapen, eten, bewegen (Entree, vitaal burgerschap; 30 oktober
+      //   2026, docs/werkregels-curriculum.md deel 7)
+      id: 'r.l.veilig.4',
+      title: 'Fit voor je werk: slapen, eten, bewegen',
+      goal: 'Je weet waarom slaap, eten en pauzes belangrijk zijn. Je zegt het als je te moe bent.',
+      remember: 'Te moe om veilig te werken? Zeg het, vóór je begint.',
+      // Wie kan je helpen: je leidinggevende · de bedrijfsarts (open spreekuur) · je huisarts (bij
+      //   slecht slapen of somberheid).
+      help: ['leidinggevende', 'bedrijfsarts', 'huisarts'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.veilig.4.sc1',
+          picture: 'Kevin om 7 uur in de ochtend bij de ingang van een distributiecentrum. In zijn hand een blikje energiedrank.',
+          lines: [
+            'Kevin begint om 7 uur in een distributiecentrum.',
+            "Hij zat gisteren tot 2 uur 's nachts op zijn telefoon.",
+            'Ontbijt slaat hij over. Hij drinkt een blikje energiedrank.',
+            'Om 10 uur kan hij bijna niet meer opletten.',
+          ],
+        },
+        // ⚖️ check: Tussen 2 diensten zit meestal minstens 11 uur ⚖️ (Arbeidstijdenwet art. 5:3: 11
+        //   uur, 1 keer per 7 dagen in te korten tot 8 uur; zie ook r.l.factory.2).
+        // ⚖️ check: Te moe om veilig te werken? Zeg het ⚖️ (Arbowet art. 11: de werknemer brengt
+        //   zichzelf en anderen niet in gevaar).
+        {
+          kind: 'rule',
+          id: 'r.l.veilig.4.ru1',
+          emoji: '😴',
+          title: 'Te moe om veilig te werken? Zeg het, vóór je begint.',
+          body: [
+            'Slaap genoeg. Tussen 2 diensten zit meestal minstens 11 uur.',
+            'Eet iets voor je begint, en drink genoeg water.',
+            'Neem je pauzes. Beweeg even als je lang stilstaat of zit.',
+            'Te moe om veilig te werken? Zeg het tegen je leidinggevende.',
+          ],
+          rule: 'geschreven',
+        },
+        {
+          kind: 'whatdo',
+          id: 'r.l.veilig.4.wd1',
+          situation: 'Kevin kan bijna niet meer opletten. Hij moet zo een zware kar rijden. Wat kan Kevin het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij drinkt nog een blikje energiedrank. Dan gaat het wel.', best: false, feedback: 'Dat helpt maar kort. Daarna is hij vaak nog moeier.' },
+            { id: 'b', text: 'Hij zegt tegen zijn leidinggevende dat hij te moe is.', best: true, feedback: 'Goed. Dan kan zijn leidinggevende hem ander werk geven.' },
+            { id: 'c', text: 'Hij zegt niets, en hij werkt gewoon wat langzamer.', best: false, feedback: 'Dat snap ik. Maar moe zijn geeft snel fouten en ongelukken.' },
+          ],
+          why: 'Moe zijn is gevaarlijk op je werk. Je let minder goed op. Dan gebeurt er sneller een ongeluk. Zeg het als je te moe bent om veilig te werken. Energiedrank helpt maar kort.',
+        },
+        // ⚖️ check: Tussen 2 diensten zit meestal minstens 11 uur ⚖️ (Arbeidstijdenwet art. 5:3).
+        // ⚖️ check: Volwassenen hebben meestal 7 tot 9 uur slaap nodig ⚖️ (Gezondheidsraad /
+        //   Hersenstichting; geen wet).
+        {
+          kind: 'truefalse',
+          id: 'r.l.veilig.4.tf1',
+          statement: 'Tussen 2 diensten zit meestal minstens 11 uur.',
+          answer: true,
+          why: 'Dat staat in de wet. Soms mag het korter, maar niet vaak. Kijk ook in je cao. Gebruik die tijd ook echt om te slapen. Volwassenen hebben meestal 7 tot 9 uur slaap nodig.',
+        },
+        // ⚖️ check: Je mag ook zelf naar de bedrijfsarts ⚖️ (Arbowet art. 14 lid 1 onder c: het open
+        //   spreekuur).
+        {
+          kind: 'whatdo',
+          id: 'r.l.veilig.4.wd2',
+          situation: 'Mohammed staat de hele dag aan een lopende band. Aan het eind van de dag heeft hij pijn in zijn rug. Wat kan Mohammed het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij beweegt in zijn pauze, en hij meldt de pijn.', best: true, feedback: 'Goed. Bewegen helpt. En melden kan erger voorkomen.' },
+            { id: 'b', text: 'Hij neemt elke dag een pijnstiller, en werkt door.', best: false, feedback: 'Dat snap ik. Maar dan blijft het probleem.' },
+            { id: 'c', text: 'Hij blijft in de pauze zitten. Dan rust zijn rug.', best: false, feedback: 'Rust helpt even. Maar bewegen is vaak beter voor je rug.' },
+          ],
+          why: 'Lang stilstaan of zitten is zwaar voor je lichaam. Beweeg even in je pauze. Loop een rondje, of rek je uit. Blijft de pijn? Meld het bij je leidinggevende. Je mag ook zelf naar de bedrijfsarts.',
+        },
+        { kind: 'model', id: 'r.l.veilig.4.mo1', context: 'Je bent te moe om veilig te werken.', nl: 'Ik ben vandaag erg moe. Kan ik ander werk doen?' },
+      ],
+    },
+    {
+      // Les 7.5 · Alcohol, drugs en je werk (Entree, vitaal burgerschap; 30 oktober 2026)
+      id: 'r.l.veilig.5',
+      title: 'Alcohol, drugs en je werk',
+      goal: 'Je werkt nooit onder invloed. Je weet waar je hulp krijgt.',
+      remember: 'Gedronken of drugs gebruikt? Dan werk je niet.',
+      // Wie kan je helpen: je huisarts (verwijst door naar hulp bij verslaving) · de bedrijfsarts ·
+      //   je leidinggevende (als een collega onder invloed is) · de apotheek (over medicijnen).
+      help: ['huisarts', 'bedrijfsarts', 'leidinggevende'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.veilig.5.sc1',
+          picture: 'Piotr in een fabriekshal bij een heftruck. Naast hem een collega met een rood hoofd.',
+          lines: [
+            'Piotr werkt in een fabriek.',
+            'Zijn collega komt binnen voor de vroege dienst.',
+            'Hij ruikt naar alcohol. Hij zegt: "Gisteren was het feest."',
+            'Over 10 minuten moet hij op de heftruck.',
+          ],
+        },
+        // ⚖️ check: Op het werk heeft je baas vaak strenge regels over alcohol en drugs ⚖️ (een
+        //   alcohol- en drugsbeleid in het bedrijfsreglement of de cao; Arbowet art. 3 en 11).
+        // ⚖️ check: Kijk of er een gele sticker op de doos zit ⚖️ (de apotheek plakt een gele sticker
+        //   "Kan de rijvaardigheid beïnvloeden" op zulke medicijnen; KNMP).
+        // ⚖️ check: Praat met je huisarts. Dat blijft geheim ⚖️ (beroepsgeheim, art. 7:457 BW).
+        {
+          kind: 'rule',
+          id: 'r.l.veilig.5.ru1',
+          emoji: '🚫',
+          title: 'Gedronken of drugs gebruikt? Dan werk je niet.',
+          body: [
+            'Werk nooit onder invloed van alcohol of drugs.',
+            'Op het werk heeft je baas vaak strenge regels over alcohol en drugs.',
+            'Ook sommige medicijnen maken je suf. Kijk of er een gele sticker op de doos zit.',
+            'Lukt stoppen niet? Praat met je huisarts. Dat blijft geheim.',
+          ],
+          rule: 'geschreven',
+        },
+        {
+          kind: 'whatdo',
+          id: 'r.l.veilig.5.wd1',
+          situation: 'Piotr ruikt de alcohol. Wat kan Piotr het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij zegt het tegen hun leidinggevende, vóór de dienst begint.', best: true, feedback: 'Goed. Zo voorkomt hij een ongeluk.' },
+            { id: 'b', text: 'Hij zegt niets. Het is niet zijn probleem.', best: false, feedback: 'Dat snap ik. Maar op de heftruck kan zijn collega iemand raken.' },
+            { id: 'c', text: 'Hij geeft zijn collega sterke koffie. Dan gaat het wel weer.', best: false, feedback: 'Koffie helpt niet. Alleen tijd haalt alcohol uit je bloed.' },
+          ],
+          why: 'Alcohol maakt je trager en minder voorzichtig. Op een heftruck of bij een machine is dat heel gevaarlijk. Zeg het tegen je leidinggevende. Zo voorkom je een ongeluk. Koffie of een douche helpt niet.',
+        },
+        // ⚖️ check: Ongeveer 1 glas in 1 tot 1,5 uur ⚖️ (Trimbos-instituut, afbraak van alcohol).
+        {
+          kind: 'truefalse',
+          id: 'r.l.veilig.5.tf1',
+          statement: 'Na een nacht slapen is alle alcohol weer uit je bloed.',
+          answer: false,
+          why: 'Je lichaam haalt alcohol maar langzaam uit je bloed. Ongeveer 1 glas in 1 tot 1,5 uur. Heb je veel gedronken? Dan heb je de volgende ochtend vaak nog alcohol in je bloed.',
+        },
+        // ⚖️ check: Op de doos zit dan vaak een gele sticker ⚖️ (KNMP).
+        {
+          kind: 'truefalse',
+          id: 'r.l.veilig.5.tf2',
+          statement: 'Ook een medicijn kan je suf maken op je werk.',
+          answer: true,
+          why: 'Sommige medicijnen maken je slaperig. Op de doos zit dan vaak een gele sticker. Vraag de apotheek of je ermee kunt werken. Moet je rijden of met machines werken? Zeg dan dat je dat werk even niet kunt.',
+        },
+        // ⚖️ check: Wat je zegt, blijft geheim ⚖️ (beroepsgeheim huisarts, art. 7:457 BW).
+        // ⚖️ check: Ook de bedrijfsarts vertelt je baas niets over je gezondheid ⚖️ (beroepsgeheim;
+        //   AVG art. 9: de werkgever hoort alleen wat je wel en niet kunt).
+        {
+          kind: 'whoask',
+          id: 'r.l.veilig.5.wa1',
+          question: 'Je drinkt veel, of je gebruikt vaak drugs. Je wilt stoppen, maar het lukt niet. Wie vraag je om hulp?',
+          options: [
+            { id: 'a', who: 'leidinggevende', best: false, feedback: 'Dat mag, maar het hoeft niet. Je huisarts helpt je verder.' },
+            { id: 'b', who: 'huisarts', best: true, feedback: 'Goed. De huisarts helpt je, en vertelt het aan niemand.' },
+            { id: 'c', who: 'bedrijfsarts', best: false, feedback: 'De bedrijfsarts kan meedenken. Maar voor hulp bij stoppen is je huisarts de eerste.' },
+          ],
+          why: 'Je huisarts helpt je, of stuurt je door naar hulp bij verslaving. Wat je zegt, blijft geheim. Ook de bedrijfsarts vertelt je baas niets over je gezondheid.',
+        },
+        { kind: 'model', id: 'r.l.veilig.5.mo1', context: 'Een collega ruikt naar alcohol en moet zo op de heftruck.', nl: 'Ik maak me zorgen. Mijn collega ruikt naar alcohol.' },
       ],
     },
   ],
