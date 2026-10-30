@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Sohbet robotuna isim yazman isteniyor: bu cevap “hayır” diyor ve nedenini söylüyor.",
     'c.aifake.a.why': "Yeni bir numara para istiyor: bu cevap önce kontrol ediyor.",
     'c.aiplan.a.why': "Çalışma planını uygulama yaptı: bu cevap bir insan istiyor.",
-    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
-    'c.harvest.a.why': "Kaç sıra diye soruluyor: bu cevap bir sayı ve kalanı veriyor.", // nieuw, nog nalezen
-    'c.greensafe.a.why': "Az önce ilaçlandı: bu cevap henüz değil diyor ve nedenini söylüyor.", // nieuw, nog nalezen
-    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
+    'c.harvest.a.why': "Kaç sıra diye soruluyor: bu cevap bir sayı ve kalanı veriyor.", // nagelezen (2e lezing)
+    'c.greensafe.a.why': "Az önce ilaçlandı: bu cevap henüz değil diyor ve nedenini söylüyor.", // nagelezen (2e lezing)
+    // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
     'c.details.a.why': "Soyadı soruluyor: bu cevap onu veriyor ve harf harf söylemeyi öneriyor.",
     'c.dates.a.why': "Tarih soruluyor: bu cevap günü ve tarihi veriyor.",
     'c.permit.a.why': "Bir nedenle hayır demek sorun değil. Başka bir gün önermek yardımcı olur.",
     'c.kids.a.why': "Neden diye soruluyor: bu cevap nedeni veriyor, kreş aradı.",
     'c.body.a.why': "Neresinin ağrıdığı soruluyor: bu cevap yeri ve nedeni söylüyor.",
-    'c.jobends.a.why': "Ev işe bağlı: bu cevap fesih bildirim süresini soruyor.",
+    'c.jobends.a.why': "Ev işe bağlı: bu cevap ihbar süresini soruyor.",
   },
 };
 

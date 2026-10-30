@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'یک چشم کوچک روی بادبان نگه می‌دارید؟',
     'zg.zeil.m': 'حواستان هست که همه چیز خوب و ایمن پیش برود؟',
     'zg.zeil.s': 'سرپرستتان باید یک لحظه برود. می‌گوید: «Hou je een oogje in het zeil?» منظورش چیست؟',
-    'zg.zeil.o1': "تا وقتی او نیست، مراقب باشید.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zeil.o1': "تا وقتی او نیست، مراقب باشید.", // nagelezen (2e lezing)
     'zg.zeil.o2': 'بروید و یک قایق را نگاه کنید.',
     'zg.zeil.o3': 'یک لحظه چشم‌هایتان را ببندید.',
     'zg.zeil.w': '«Een oogje in het zeil houden» یعنی: حواس‌جمع بودن که همه چیز خوب پیش برود. مطمئن نیستید باید حواستان به چه باشد؟ قبل از رفتنش از او بپرسید.',
@@ -99,8 +99,8 @@ const t: CultureTranslation = {
     'zg.oefening.o2': 'باید به کلاس هنر بروید.',
     'zg.oefening.o3': 'دست نگه دارید، برایتان خیلی سخت است.',
     'zg.oefening.w': 'این یک ضرب‌المثل است: با تمرین بهتر می‌شوید. برای یاد گرفتن هلندی هم درست است.',
-    'zg.zwartwit.lit': "مطمئن شوید که آن را سیاه روی سفید دارید.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
-    'zg.zwartwit.m': "مطمئن شوید که آن را روی کاغذ، به صورت نوشته دارید.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.zwartwit.lit': "مطمئن شوید که آن را سیاه روی سفید دارید.", // nagelezen (2e lezing)
+    'zg.zwartwit.m': "مطمئن شوید که آن را روی کاغذ، به صورت نوشته دارید.", // nagelezen (2e lezing)
     'zg.zwartwit.s': 'رئیستان به شما قول حقوق بیشتر می‌دهد. همکارتان می‌گوید: «Zorg dat je het zwart op wit hebt.» منظورش چیست؟',
     'zg.zwartwit.o1': 'قول را به صورت نوشته بخواهید.',
     'zg.zwartwit.o2': 'کاغذ سیاه و سفید بخواهید.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'وقت پول است.',
     'zg.tijdgeld.m': 'وقت باارزش است: آن را هدر ندهید.',
     'zg.tijdgeld.s': 'رئیستان می‌خواهد کامیون زود بار زده شود. می‌گوید: «Tijd is geld.» منظورش چیست؟',
-    'zg.tijdgeld.o1': "تند کار کنید، وقت را هدر ندهید.", // nieuw, nog nalezen (controle/uitdrukkingen-klanken)
+    'zg.tijdgeld.o1': "تند کار کنید، وقت را هدر ندهید.", // nagelezen (2e lezing)
     'zg.tijdgeld.o2': 'برای دیر آمدن پول می‌گیرید.',
     'zg.tijdgeld.o3': 'ساعت خیلی گران است.',
     'zg.tijdgeld.w': 'این اصطلاح یعنی وقت باارزش است. ولی هیچ‌وقت دلیلی برای کار ناایمن یا ساعت‌های بدون مزد نیست.',
