@@ -22,9 +22,8 @@ niveau**, geen toets en geen bewijs van een niveau.
 
 ## Vertalingen
 
-De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Starten, Veilig werken, Werk vinden, Je baan
-(`src/i18n/kunjenu/`, gemarkeerd met "nieuw, nalezen"). De andere thema's staan nog open
-(TODO): daar staat de Engelse zin onder het Nederlands. Werkregels is alleen Nederlands.
+De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland, Jouw sector
+(`src/i18n/kunjenu/`, gemarkeerd met "nieuw, nalezen"). Werkregels is alleen Nederlands.
 
 ## Taal (40 onderwerpen, 88 zinnen)
 

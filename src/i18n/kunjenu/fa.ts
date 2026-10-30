@@ -1,7 +1,7 @@
 import type { CultureTranslation } from '../culture/types';
 
 /** "Wat kun je nu?" in Persian (src/content/kunJeNu.ts): the heading, the note, the coach card's line and
- *  the can-do sentences of the first four themes (TODO: the other four). */
+ *  the can-do sentences of all eight themes. */
 const t: CultureTranslation = {
   ui: {
     kunJeNu: "حالا چه کارهایی می‌توانید بکنید؟", // nieuw, nalezen // nagelezen AI 31 okt
@@ -62,6 +62,46 @@ const t: CultureTranslation = {
     'kjn.u.finish.2': "می‌توانم بگویم چه چیزی تمام شده و چه چیزی نه.", // nieuw, nalezen
     'kjn.u.online.1': "می‌توانم بگویم رمزم کار نمی‌کند.", // nieuw, nalezen
     'kjn.u.online.2': "می‌توانم یک ایمیل مشکوک را تشخیص بدهم.", // nieuw, nalezen
+    'kjn.u.teamwork.1': "می‌توانم بگویم که چیزی اذیتم می‌کند.", // nieuw, nalezen
+    'kjn.u.teamwork.2': "می‌توانم با آرامش به کار اضافه نه بگویم.", // nieuw, nalezen
+    'kjn.u.teamwork.3': "می‌توانم بپرسم اول چه کار باید بکنم.", // nieuw, nalezen
+    'kjn.u.social.1': "می‌توانم در وقت استراحت کمی گپ بزنم.", // nieuw, nalezen
+    'kjn.u.social.2': "می‌توانم بگویم که اشتباه کردم.", // nieuw, nalezen
+    'kjn.u.social.3': "می‌توانم بگویم که چیزی از حد من می‌گذرد.", // nieuw, nalezen
+    'kjn.u.sayings.1': "می‌توانم چند اصطلاح رایج را بفهمم.", // nieuw, nalezen
+    'kjn.u.sayings.2': "می‌توانم بگویم که چیزی خیلی آسان است (een eitje).", // nieuw, nalezen
+    'kjn.u.rights.1': "می‌توانم بگویم که حق استراحت دارم.", // nieuw, nalezen
+    'kjn.u.rights.2': "می‌توانم بگویم که می‌خواهم شکایت کنم.", // nieuw, nalezen
+    'kjn.u.exploit.1': "می‌توانم بگویم که پاسپورتم پیش خودم می‌ماند.", // nieuw, nalezen
+    'kjn.u.exploit.2': "می‌توانم بپرسم که آیا می‌شود چیزی را بدون اسمم گزارش بدهم.", // nieuw, nalezen
+    'kjn.u.papers.1': "می‌توانم بگویم که آدرسم عوض شده است.", // nieuw, nalezen
+    'kjn.u.papers.2': "می‌توانم بپرسم اجاره چقدر است.", // nieuw, nalezen
+    'kjn.u.health.1': "می‌توانم بگویم کجایم درد می‌کند.", // nieuw, nalezen
+    'kjn.u.health.2': "می‌توانم از پزشک خانواده وقت بگیرم.", // nieuw, nalezen
+    'kjn.u.money.1': "می‌توانم بگویم که یک نامه را نمی‌فهمم.", // nieuw, nalezen
+    'kjn.u.money.2': "می‌توانم پشت تلفن به یک کلاهبردار نه بگویم.", // nieuw, nalezen
+    'kjn.u.travel.1': "می‌توانم بگویم چطور سر کار می‌روم.", // nieuw, nalezen
+    'kjn.u.travel.2': "می‌توانم بپرسم ایستگاه اتوبوس کجاست.", // nieuw, nalezen
+    'kjn.u.society.1': "می‌توانم بپرسم اجازه دارم رأی بدهم یا نه.", // nieuw, nalezen
+    'kjn.u.society.2': "می‌توانم بگویم که می‌خواهم اعتراض کنم.", // nieuw, nalezen
+    'kjn.u.warehouse.1': "می‌توانم دستورهای کوتاه در انبار را بفهمم.", // nieuw, nalezen
+    'kjn.u.warehouse.2': "می‌توانم بگویم چیزی کجاست: سمت چپ یا سمت راست.", // nieuw, nalezen
+    'kjn.u.build.1': "می‌توانم یک هشدار در کارگاه ساختمانی را بفهمم.", // nieuw, nalezen
+    'kjn.u.build.2': "می‌توانم ابزار بخواهم.", // nieuw, nalezen
+    'kjn.u.factory.1': "می‌توانم بگویم که یک خرابی پیش آمده.", // nieuw, nalezen
+    'kjn.u.factory.2': "می‌توانم بگویم یک محصول چه ایرادی دارد.", // nieuw, nalezen
+    'kjn.u.care.1': "می‌توانم از یک مراجع بپرسم که اجازه می‌دهد کمکش کنم یا نه.", // nieuw, nalezen
+    'kjn.u.care.2': "می‌توانم چیزی را به پرستار خبر بدهم.", // nieuw, nalezen
+    'kjn.u.horeca.1': "می‌توانم از مهمان‌ها بپرسم چه میل دارند بنوشند.", // nieuw, nalezen
+    'kjn.u.horeca.2': "می‌توانم بگویم که از سرآشپز می‌پرسم.", // nieuw, nalezen
+    'kjn.u.clean.1': "می‌توانم بپرسم وسایل نظافت کجاست.", // nieuw, nalezen
+    'kjn.u.clean.2': "می‌توانم به کسی هشدار بدهم که زمین لیز است.", // nieuw, nalezen
+    'kjn.u.kas.1': "می‌توانم بپرسم از کدام ردیف شروع کنم.", // nieuw, nalezen
+    'kjn.u.kas.2': "می‌توانم بپرسم یک گلخانه سم‌پاشی شده یا نه.", // nieuw, nalezen
+    'kjn.u.tech.1': "می‌توانم بپرسم هنوز برق هست یا نه.", // nieuw, nalezen
+    'kjn.u.tech.2': "می‌توانم بگویم که یک کابل خراب است.", // nieuw, nalezen
+    'kjn.u.garage.1': "می‌توانم بگویم که یک لاستیک پنچر است.", // nieuw, nalezen
+    'kjn.u.garage.2': "می‌توانم بگویم که مشتری اول باید موافقت کند.", // nieuw, nalezen
   },
 };
 

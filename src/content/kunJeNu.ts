@@ -18,9 +18,8 @@ import { THEME_UNITS } from './themes';
  *
  * Vertalingen (alleen het spoor Taal; Werkregels is alleen Nederlands): de `id` van een zin is
  * zijn sleutel in src/i18n/kunjenu/<taal>.ts, zoals een unit-id in src/i18n/<taal>.ts. Verplicht
- * voor de onderwerpen van de thema's in KUN_VERTAALD (tests/kunJeNu.test.ts, tests/i18n.test.ts).
- * TODO: de thema's Samenwerken, Je rechten, Leven in Nederland en Jouw sector vertalen; tot dan
- * staat daar de Engelse zin (`en`) onder het Nederlands.
+ * voor de onderwerpen van de thema's in KUN_VERTAALD (tests/kunJeNu.test.ts, tests/i18n.test.ts):
+ * sinds 31 oktober 2026 alle acht thema's. De Engelse zin (`en`) is de hulptaal Engels.
  */
 
 /** Het niveau waar een zin bij past: A1 of A2 (ERK), of 1F (Werkregels). */
@@ -32,7 +31,7 @@ export interface KunZin {
   /** "kjn.u.time.1": ook de sleutel van de vertaling (Taal). */
   id: string;
   nl: string;
-  /** Engels (alleen Taal): de hulptaal Engels, en de terugval zolang een vertaling ontbreekt. */
+  /** Engels (alleen Taal): de hulptaal Engels, en de terugval als een vertaling ontbreekt. */
   en?: string;
   niveau: KunNiveau;
   vaardigheid: KunVaardigheid;
@@ -385,10 +384,18 @@ export function kunAantal(unitIds: string[]): number {
 }
 
 /**
- * De thema's waarvan de zinnen (spoor Taal) in alle 13 hulptalen vertaald moeten zijn: de eerste
- * vier. TODO: de andere vier thema's.
+ * De thema's waarvan de zinnen (spoor Taal) in alle 13 hulptalen vertaald moeten zijn: alle acht.
  */
-export const KUN_VERTAALD: ThemeId[] = ['theme.start', 'theme.safe', 'theme.find', 'theme.job'];
+export const KUN_VERTAALD: ThemeId[] = [
+  'theme.start',
+  'theme.safe',
+  'theme.find',
+  'theme.job',
+  'theme.together',
+  'theme.rights',
+  'theme.life',
+  'theme.sector',
+];
 
 /** De ids van de zinnen die vertaald moeten zijn (src/i18n/kunjenu/<taal>.ts). */
 export function kunGlossIds(): string[] {

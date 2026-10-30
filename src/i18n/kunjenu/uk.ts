@@ -1,7 +1,7 @@
 import type { CultureTranslation } from '../culture/types';
 
 /** "Wat kun je nu?" in Ukrainian (src/content/kunJeNu.ts): the heading, the note, the coach card's line and
- *  the can-do sentences of the first four themes (TODO: the other four). */
+ *  the can-do sentences of all eight themes. */
 const t: CultureTranslation = {
   ui: {
     kunJeNu: "Що ти вмієш тепер?", // nieuw, nalezen
@@ -62,6 +62,46 @@ const t: CultureTranslation = {
     'kjn.u.finish.2': "Я можу сказати, що готово, а що ні.", // nieuw, nalezen
     'kjn.u.online.1': "Я можу сказати, що мій пароль не працює.", // nieuw, nalezen
     'kjn.u.online.2': "Я можу розпізнати підозрілий лист.", // nieuw, nalezen
+    'kjn.u.teamwork.1': "Я можу сказати, що мене дещо турбує.", // nieuw, nalezen
+    'kjn.u.teamwork.2': "Я можу спокійно відмовитися від додаткової роботи.", // nieuw, nalezen
+    'kjn.u.teamwork.3': "Я можу запитати, що мені зробити спочатку.", // nieuw, nalezen
+    'kjn.u.social.1': "Я можу трохи поговорити з колегами на перерві.", // nieuw, nalezen
+    'kjn.u.social.2': { m: "Я можу сказати, що зробив помилку.", f: "Я можу сказати, що зробила помилку.", x: "Я можу сказати, що це моя помилка." }, // nieuw, nalezen
+    'kjn.u.social.3': "Я можу сказати, що щось переходить мою межу.", // nieuw, nalezen
+    'kjn.u.sayings.1': "Я можу зрозуміти кілька поширених висловів.", // nieuw, nalezen
+    'kjn.u.sayings.2': "Я можу сказати, що щось дуже легко (een eitje).", // nieuw, nalezen
+    'kjn.u.rights.1': "Я можу сказати, що маю право на перерву.", // nieuw, nalezen
+    'kjn.u.rights.2': "Я можу сказати, що хочу подати скаргу.", // nieuw, nalezen
+    'kjn.u.exploit.1': "Я можу сказати, що мій паспорт залишається в мене.", // nieuw, nalezen
+    'kjn.u.exploit.2': "Я можу запитати, чи можна про щось повідомити без мого імені.", // nieuw, nalezen
+    'kjn.u.papers.1': "Я можу сказати, що моя адреса змінилася.", // nieuw, nalezen
+    'kjn.u.papers.2': "Я можу запитати, скільки коштує оренда.", // nieuw, nalezen
+    'kjn.u.health.1': "Я можу сказати, де в мене болить.", // nieuw, nalezen
+    'kjn.u.health.2': "Я можу попросити записати мене до сімейного лікаря.", // nieuw, nalezen
+    'kjn.u.money.1': "Я можу сказати, що не розумію листа.", // nieuw, nalezen
+    'kjn.u.money.2': "Я можу сказати «ні» шахраю по телефону.", // nieuw, nalezen
+    'kjn.u.travel.1': "Я можу розповісти, як я добираюся на роботу.", // nieuw, nalezen
+    'kjn.u.travel.2': "Я можу запитати, де автобусна зупинка.", // nieuw, nalezen
+    'kjn.u.society.1': "Я можу запитати, чи можу я голосувати.", // nieuw, nalezen
+    'kjn.u.society.2': "Я можу сказати, що хочу подати заперечення.", // nieuw, nalezen
+    'kjn.u.warehouse.1': "Я можу зрозуміти короткі вказівки на складі.", // nieuw, nalezen
+    'kjn.u.warehouse.2': "Я можу сказати, де щось стоїть: ліворуч чи праворуч.", // nieuw, nalezen
+    'kjn.u.build.1': "Я можу зрозуміти попередження на будові.", // nieuw, nalezen
+    'kjn.u.build.2': "Я можу попросити інструменти.", // nieuw, nalezen
+    'kjn.u.factory.1': "Я можу сказати, що є несправність.", // nieuw, nalezen
+    'kjn.u.factory.2': "Я можу сказати, що не так із виробом.", // nieuw, nalezen
+    'kjn.u.care.1': "Я можу запитати клієнта, чи можу я допомогти.", // nieuw, nalezen
+    'kjn.u.care.2': "Я можу щось передати медсестрі.", // nieuw, nalezen
+    'kjn.u.horeca.1': "Я можу запитати гостей, що вони бажають випити.", // nieuw, nalezen
+    'kjn.u.horeca.2': "Я можу сказати, що запитаю шеф-кухаря.", // nieuw, nalezen
+    'kjn.u.clean.1': "Я можу запитати, де речі для прибирання.", // nieuw, nalezen
+    'kjn.u.clean.2': "Я можу попередити когось, що підлога слизька.", // nieuw, nalezen
+    'kjn.u.kas.1': "Я можу запитати, з якого ряду мені починати.", // nieuw, nalezen
+    'kjn.u.kas.2': "Я можу запитати, чи теплицю обприскували.", // nieuw, nalezen
+    'kjn.u.tech.1': "Я можу запитати, чи тут ще є струм.", // nieuw, nalezen
+    'kjn.u.tech.2': "Я можу сказати, що кабель зламаний.", // nieuw, nalezen
+    'kjn.u.garage.1': "Я можу сказати, що шина пробита.", // nieuw, nalezen
+    'kjn.u.garage.2': "Я можу сказати, що клієнт спершу має погодитися.", // nieuw, nalezen
   },
 };
 

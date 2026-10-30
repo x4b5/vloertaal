@@ -8,7 +8,7 @@ import { courseUnits } from '../src/content/courses';
 import { units } from '../src/content/curriculum';
 import { KUN_REGELS, KUN_TAAL, KUN_VAARDIGHEID_UI, KUN_VERTAALD, kunAantal, kunGlossIds, kunJeNu, pastBij } from '../src/content/kunJeNu';
 import { proSections } from '../src/content/pro';
-import { THEME_UNITS } from '../src/content/themes';
+import { THEME_UNITS, THEMES } from '../src/content/themes';
 import { getHelpLanguage, helpLanguageSources, registerPack } from '../src/i18n/all';
 import nlPack from '../src/i18n/packs/nl';
 import { allForms, GENDERED_LANGS, uiEn } from '../src/i18n/types';
@@ -94,11 +94,12 @@ describe('the sentences: first person, short', () => {
 describe('translations where required', () => {
   const required = kunGlossIds();
 
-  it('the first four themes are required: all their topics', () => {
-    expect(KUN_VERTAALD).toEqual(['theme.start', 'theme.safe', 'theme.find', 'theme.job']);
+  it('all eight themes are required: every sentence of Taal', () => {
+    expect(KUN_VERTAALD).toEqual(THEMES.map((t) => t.id));
     const ids = new Set(KUN_VERTAALD.flatMap((t) => THEME_UNITS[t].taal));
-    expect(required).toEqual(KUN_TAAL.filter((o) => ids.has(o.unit)).flatMap((o) => o.zinnen.map((z) => z.id)));
-    expect(required.length).toBeGreaterThan(40);
+    expect(KUN_TAAL.every((o) => ids.has(o.unit)), 'every topic of Taal is in a theme').toBe(true);
+    expect(required).toEqual(KUN_TAAL.flatMap((o) => o.zinnen.map((z) => z.id)));
+    expect(required.length).toBeGreaterThan(80);
   });
 
   it('13 help languages: every required sentence and the screen texts (with the five skills), nothing else', () => {
