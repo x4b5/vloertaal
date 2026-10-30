@@ -322,6 +322,19 @@ export const careUnit: RuleUnit = {
           ],
           why: 'Een fout met medicijnen meld je altijd. Dat heet een incident melden. Het gaat niet om straf. Het gaat erom dat de cliënt veilig is. En dat het team ervan leert.',
         },
+        // Terugzeggen (rapport hiaten, voorstel 3): terugzeggen in een sectorles.
+        {
+          kind: 'whatdo',
+          id: 'r.l.care.2.wd3',
+          situation: 'Een ervaren collega legt Fatima uit wat ze moet doen. Wat zegt Fatima terug?',
+          quote: 'Meneer De Vries krijgt om 12 uur 1 pil, met een glas water.',
+          options: [
+            { id: 'a', text: 'Prima. Ik kijk straks wel even op de lijst.', best: false, feedback: 'De lijst is goed. Maar nu weet de collega niet of ze het snapt.', say: true },
+            { id: 'b', text: 'Ja hoor, dat lukt me wel.', best: false, feedback: 'Fijn. Maar zo hoort de collega niet wat ze begrepen heeft.', say: true },
+            { id: 'c', text: 'Dus om 12 uur 1 pil, met water. Klopt dat?', best: true, feedback: 'Goed. Zo hoort de collega meteen of het klopt.', say: true },
+          ],
+          why: 'Zeg terug wat je gaat doen. Bij medicijnen is dat extra belangrijk. Zo hoort je collega meteen of je iets mist. Check daarna ook de lijst.',
+        },
         {
           kind: 'whoask',
           id: 'r.l.care.2.wa1',

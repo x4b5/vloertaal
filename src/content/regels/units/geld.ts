@@ -1,7 +1,7 @@
 import type { RuleUnit } from '../types';
 
 /**
- * Unit 10 · Uitkering, werk en geld (les 10.1–10.4).
+ * Unit 10 · Uitkering, werk en geld (les 10.1–10.5).
  * Converted from docs/werkregels-curriculum.md; edit the curriculum first, then this file.
  * `// ⚖️ check:` marks a fact the expert must check (docs/werkregels-bronnen.md). The marker is
  * never shown or read aloud. `// Redactie:` notes are for the makers only.
@@ -82,6 +82,19 @@ export const geldUnit: RuleUnit = {
             { id: 'c', text: 'Hij geeft zijn uren en zijn loon door aan UWV.', best: true, feedback: 'Goed. Dan klopt zijn WW, en is hij veilig.' },
           ],
           why: 'Werk je naast je WW? Geef het altijd door aan UWV. UWV haalt dan een deel van je loon van je WW af. Niet doorgeven is fraude. Dan moet je terugbetalen, vaak met een boete.',
+        },
+        // Bezwaar maken (rapport hiaten, hoofdstuk 4): kwam alleen in r.l.meedoen.3 voor.
+        // ⚖️ check: Dat doe je binnen 6 weken ⚖️ na de datum van de brief (art. 6:7 Awb).
+        {
+          kind: 'whatdo',
+          id: 'r.l.geld.1.wd3',
+          situation: 'Kevin krijgt een brief van UWV. UWV zegt nee tegen zijn WW. Kevin denkt dat het niet klopt. Wat kan Kevin het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij legt de brief weg. Tegen UWV kan hij toch niets doen.', best: false, feedback: 'Dat kan wel. Hij mag bezwaar maken.' },
+            { id: 'b', text: 'Hij maakt op tijd bezwaar, en hij vraagt hulp bij de brief.', best: true, feedback: 'Goed. Zo kijkt UWV er nog een keer naar.' },
+            { id: 'c', text: 'Hij vraagt de WW nog een keer aan, met hetzelfde formulier.', best: false, feedback: 'Dan verandert er meestal niets. Bezwaar is de goede weg.' },
+          ],
+          why: 'Bezwaar maken betekent: je vraagt UWV om het besluit opnieuw te bekijken. Dat doe je binnen 6 weken na de datum van de brief. Schrijf op waarom het niet klopt. Het Juridisch Loket of een vakbond kan je helpen.',
         },
         {
           kind: 'whoask',
@@ -164,6 +177,21 @@ export const geldUnit: RuleUnit = {
             { id: 'c', text: 'Ze rekent het zelf uit met haar oude bijstand.', best: false, feedback: 'Dan mist ze misschien toeslagen of kosten.' },
           ],
           why: 'Laat de gemeente of een geldcoach het samen met je uitrekenen. Denk ook aan reiskosten en kinderopvang. Dan kies je met de juiste cijfers.',
+        },
+        // Inburgering naast werk (rapport hiaten, hoofdstuk 3). Geen regels per groep uitleggen.
+        // ⚖️ check: Voor veel nieuwkomers is dat verplicht ⚖️ (Wet inburgering 2021).
+        // ⚖️ check: De gemeente maakt met je een plan voor inburgering en werk ⚖️ (het persoonlijk
+        //   plan inburgering en participatie, PIP).
+        {
+          kind: 'whatdo',
+          id: 'r.l.geld.2.wd3',
+          situation: 'Fatima moet nog inburgeren. Ze heeft op dinsdag taalles. Haar nieuwe rooster heeft ook diensten op dinsdag. Wat kan Fatima het beste doen?',
+          options: [
+            { id: 'a', text: 'Ze vertelt het aan haar werkgever en aan de gemeente.', best: true, feedback: 'Goed. Dan kunnen ze samen een rooster zoeken.' },
+            { id: 'b', text: 'Ze stopt met de taalles. Werk gaat nu voor.', best: false, feedback: 'Begrijpelijk. Maar de gemeente moet het weten, want inburgeren moet.' },
+            { id: 'c', text: 'Ze werkt op dinsdag, en ze zegt niets tegen de gemeente.', best: false, feedback: 'Dan mist ze lessen. Dat kan problemen geven.' },
+          ],
+          why: 'Inburgeren betekent: je leert Nederlands en hoe Nederland werkt. Voor veel nieuwkomers is dat verplicht. Werk en inburgering kunnen vaak samen. Vertel het je werkgever en de gemeente op tijd. De gemeente maakt met je een plan voor inburgering en werk.',
         },
         {
           kind: 'whoask',
@@ -322,6 +350,103 @@ export const geldUnit: RuleUnit = {
           why: 'De gemeente helpt gratis bij schulden. Geldfit helpt ook, gratis en anoniem.',
         },
         { kind: 'model', id: 'r.l.geld.4.mo1', context: 'Je vraagt hulp bij schulden.', nl: 'Ik heb schulden. Ik wil graag hulp.' },
+      ],
+    },
+    {
+      // Les 10.5 · Je werk stopt: regel dit (30 oktober 2026; rapport hiaten, voorstel 8)
+      // Redactie: bij arbeidsmigranten hangen werk, huis en zorgverzekering vaak aan één bureau.
+      //   Stopt het werk, dan stopt het vaak allemaal tegelijk. Daarom deze les.
+      id: 'r.l.geld.5',
+      title: 'Je werk stopt: regel dit',
+      goal: 'Je checkt je laatste loon. Je regelt je huis, je zorgverzekering en je adres.',
+      remember: 'Je werk stopt? Check je laatste loon. Regel je huis en je zorgverzekering.',
+      // Wie kan je helpen: het uitzendbureau of de loonadministratie · de gemeente (adres) · UWV
+      //   (WW) · het Juridisch Loket · FairWork (bij problemen met huis en werk via een bureau).
+      help: ['uitzendbureau', 'hr', 'gemeente', 'uwv', 'juridischloket'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.geld.5.sc1',
+          picture: 'Piotr met een koffer in een kleine kamer. Op tafel ligt een brief van het uitzendbureau.',
+          lines: [
+            'Piotr werkt via een uitzendbureau in een magazijn.',
+            'Het bureau regelt ook zijn kamer en zijn zorgverzekering.',
+            'Zijn contract stopt over 2 weken.',
+            'Hij wil weten wat er dan nog meer stopt.',
+          ],
+        },
+        // ⚖️ check: Vrije dagen die je niet opnam, krijg je uitbetaald als je baan stopt ⚖️
+        //   (art. 7:641 lid 1 BW). Vakantiegeld krijg je bij je laatste loon ⚖️ (art. 15 WML).
+        // ⚖️ check: Een huurcontract via het bureau staat los van je arbeidscontract ⚖️ (Wet goed
+        //   verhuurderschap: aparte overeenkomsten voor huis en werk).
+        // ⚖️ check: Een zorgverzekering via het bureau stopt vaak met je werk ⚖️ (collectieve
+        //   polis); wie hier woont of werkt, moet verzekerd zijn ⚖️ (art. 2 Zvw).
+        // ⚖️ check: Vraag binnen 1 week ⚖️ WW aan.
+        {
+          kind: 'rule',
+          id: 'r.l.geld.5.ru1',
+          emoji: '📦',
+          title: 'Je werk stopt? Check je laatste loon. Regel je huis en je zorgverzekering.',
+          body: [
+            'Check je laatste loon. Krijg je je vakantiegeld en je vrije dagen?',
+            'Huur je via het bureau? In je huurcontract staat hoe lang je mag blijven.',
+            'Een zorgverzekering via het bureau stopt vaak. Regel op tijd een nieuwe.',
+            'Verhuis je? Geef je nieuwe adres door aan de gemeente.',
+            'Werk kwijt? Vraag binnen 1 week WW aan.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: Daarin staat je vakantiegeld. En geld voor vrije dagen die je niet opnam ⚖️
+        //   (art. 7:641 lid 1 BW).
+        {
+          kind: 'whatdo',
+          id: 'r.l.geld.5.wd1',
+          situation: 'Piotr krijgt zijn laatste loonstrook. Er staat geen vakantiegeld op. Hij had nog 5 vrije dagen. Wat kan Piotr het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij vraagt het bureau waar het vakantiegeld en de 5 dagen zijn.', best: true, feedback: 'Goed. Dat geld hoort bij zijn laatste loon.' },
+            { id: 'b', text: 'Hij laat het zo. Vrije dagen vervallen als je stopt.', best: false, feedback: 'Nee. Vrije dagen die hij niet opnam, krijgt hij uitbetaald.' },
+            { id: 'c', text: 'Hij vraagt of hij de dagen bij een nieuwe baan mag houden.', best: false, feedback: 'Dat gaat meestal niet. De dagen horen bij deze baan.' },
+          ],
+          why: 'Bij je laatste loon hoort een eindafrekening. Dat is de laatste betaling als je baan stopt. Daarin staat je vakantiegeld. En geld voor vrije dagen die je niet opnam. Klopt het niet? Vraag het na, het liefst per mail.',
+        },
+        // ⚖️ check: Dan heb je vaak een eigen huurcontract ⚖️. Daarin staat hoe lang je nog mag
+        //   blijven ⚖️ (Wet goed verhuurderschap; huur en werk in aparte contracten).
+        {
+          kind: 'truefalse',
+          id: 'r.l.geld.5.tf1',
+          statement: 'Woon je via het bureau? Dan moet je altijd weg op je laatste werkdag.',
+          answer: false,
+          why: 'Huur je een kamer of huis via het bureau? Dan heb je vaak een eigen huurcontract. Daarin staat hoe lang je nog mag blijven. Dat heet de opzegtermijn. Vraag het op tijd na. Klopt het niet? Vraag hulp, bijvoorbeeld bij het Juridisch Loket.',
+        },
+        // ⚖️ check: Een zorgverzekering via het bureau stopt vaak als je werk stopt ⚖️.
+        // ⚖️ check: Woon of werk je nog in Nederland? Dan moet je verzekerd zijn ⚖️ (art. 2 Zvw).
+        // ⚖️ check: Ga je terug naar je eigen land? Zeg de verzekering dan op ⚖️ (opzeggen kan bij
+        //   vertrek uit Nederland; vraag ook naar zorg in je eigen land).
+        {
+          kind: 'whatdo',
+          id: 'r.l.geld.5.wd2',
+          situation: 'Piotrs zorgverzekering loopt via het bureau. Na zijn laatste werkdag blijft hij in Nederland. Wat kan Piotr het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij doet niets. De verzekering loopt vast vanzelf door.', best: false, feedback: 'Vaak niet. Dan is hij misschien niet verzekerd.' },
+            { id: 'b', text: 'Hij wacht tot hij naar de dokter moet. Dan regelt hij het.', best: false, feedback: 'Te laat. Een dokter of ziekenhuis kan dan veel geld kosten.' },
+            { id: 'c', text: 'Hij vraagt of de verzekering stopt. Dan regelt hij een nieuwe.', best: true, feedback: 'Goed. Zo is hij altijd verzekerd.' },
+          ],
+          why: 'Een zorgverzekering via het bureau stopt vaak als je werk stopt. Woon of werk je nog in Nederland? Dan moet je verzekerd zijn. Regel op tijd een nieuwe. Ga je terug naar je eigen land? Zeg de verzekering dan op.',
+        },
+        // ⚖️ check: Geef je nieuwe adres binnen 5 dagen ⚖️ door aan de gemeente (Wet BRP).
+        // ⚖️ check: Ga je voor lange tijd weg uit Nederland? Meld je dan af bij de gemeente ⚖️.
+        {
+          kind: 'whoask',
+          id: 'r.l.geld.5.wa1',
+          question: 'Piotr verhuist nu zijn werk stopt. Waar geeft hij zijn nieuwe adres door?',
+          options: [
+            { id: 'a', who: 'uitzendbureau', best: false, feedback: 'Het bureau moet het ook weten. Maar inschrijven doe je bij de gemeente.' },
+            { id: 'b', who: 'gemeente', best: true, feedback: 'Goed. Je nieuwe adres geef je door aan de gemeente.' },
+            { id: 'c', who: 'uwv', best: false, feedback: 'Krijg je WW? Dan wil UWV het ook weten. Maar eerst de gemeente.' },
+          ],
+          why: 'Verhuis je? Geef je nieuwe adres binnen 5 dagen door aan de gemeente. Ga je voor lange tijd weg uit Nederland? Meld je dan af. Geef je adres ook aan je bureau, je bank en UWV.',
+        },
+        { kind: 'model', id: 'r.l.geld.5.mo1', context: 'Je contract stopt, en je wilt weten wat je nog krijgt.', nl: 'Mijn contract stopt. Krijg ik mijn vakantiegeld en mijn vrije dagen uitbetaald?' },
       ],
     },
   ],

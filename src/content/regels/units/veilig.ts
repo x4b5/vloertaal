@@ -250,6 +250,20 @@ export const veiligUnit: RuleUnit = {
           ],
           why: 'Meld elk ongeluk, ook als het klein lijkt. Schrijf op wat er gebeurde, wanneer, en wie het zag. Maak een foto van de plek. Dan heb je bewijs als je later klachten krijgt.',
         },
+        // De BHV in Werkregels (rapport hiaten, hoofdstuk 4): in Taal staat de BHV'er al (l.accident).
+        // ⚖️ check: Elk bedrijf moet daarvoor zorgen ⚖️ (bedrijfshulpverlening, art. 3 lid 1 onder e
+        //   en art. 15 Arbowet).
+        {
+          kind: 'whatdo',
+          id: 'r.l.veilig.3.wd3',
+          situation: 'Piotr ziet een collega van een trap vallen. De collega ligt op de grond. Wat kan Piotr het beste doen?',
+          options: [
+            { id: 'a', text: "Hij roept de BHV'er. Is het ernstig? Dan belt hij 112.", best: true, feedback: 'Goed. Zo komt er snel hulp.' },
+            { id: 'b', text: 'Hij helpt de collega meteen overeind.', best: false, feedback: 'Liever niet meteen. Bewegen kan letsel erger maken.' },
+            { id: 'c', text: 'Hij zoekt eerst zijn leidinggevende, op een andere afdeling.', best: false, feedback: 'Dat kost tijd. Eerst hulp, daarna melden.' },
+          ],
+          why: "Een BHV'er is een collega die eerste hulp geeft bij een ongeluk of brand. Elk bedrijf moet daarvoor zorgen. Vraag op je eerste dag wie de BHV'er is. Is het ernstig? Bel dan meteen 112.",
+        },
         {
           kind: 'whoask',
           id: 'r.l.veilig.3.wa1',
