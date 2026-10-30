@@ -39,7 +39,7 @@ const t: CultureTranslation = {
     'rg.zl.w.langzaam': 'despacio',
     'rg.zl.s.2.1': 'Vivo en los Países Bajos y trabajo en Alemania.',
     'rg.zl.s.2.2': '¿Puede hablar en neerlandés? No entiendo el dialecto.',
-    'rg.zl.s.2.3': '¿Puedo tener libre en carnaval?',
+    'rg.zl.s.2.3': '¿Puedo tener días libres en carnaval?',
     'rg.zl.c.2.q': 'Perdón, hablo demasiado rápido.',
     'rg.zl.c.2.a': 'Sí, un poco más despacio, por favor.',
     'rg.zl.c.1': 'Registra tu dirección y busca una casa',
