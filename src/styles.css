@@ -2887,8 +2887,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .rb-title .rb-main:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.08em; }
 .rb-sub { color: var(--muted); font-size: 0.92rem; line-height: 1.3; }
 .rb-nl { color: var(--faint); font-size: 0.85rem; }
-/* On the coach link's yellow light the faint grey is under 4.5:1 (light and dark): the muted ink. */
-.rb-marked .rb-nl { color: var(--muted); }
+/* On the coach link’s yellow light the faint grey (and in dark the muted ink) is under 4.5:1: the ink. */
+.rb-marked .rb-nl { color: var(--ink); }
 .rb-progress { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; }
 .rb-bar { flex: 1; height: 6px; border-radius: 3px; background: var(--track); overflow: hidden; }
 .rb-bar-fill { display: block; height: 100%; border-radius: 3px; background: var(--right-ink); }

@@ -114,7 +114,7 @@ describe('fields: a label and a visible focus', () => {
     const css = fs.readFileSync('src/styles.css', 'utf8');
     expect(css).toMatch(/\.pw-input:focus \{ outline: 3px solid var\(--focus\)/);
     expect(css).toMatch(/\.remind-own input:focus \{ outline: 3px solid var\(--focus\)/);
-    // The Dutch name on a coach link's yellow light: the muted ink (4.5:1), not the faint grey.
-    expect(css).toContain('.rb-marked .rb-nl { color: var(--muted); }');
+    // The Dutch name on a coach link's yellow light: the ink (4.5:1 in light and dark), not the faint grey.
+    expect(css).toContain('.rb-marked .rb-nl { color: var(--ink); }');
   });
 });
