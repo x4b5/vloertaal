@@ -409,12 +409,13 @@ export function findLesson(id: string, track?: Track): { unit: Unit; lesson: Les
 
 /**
  * A lesson as the learner plays it: a mixed review only brings items of lessons they finished
- * (see mixLessonFor); every other lesson is as written.
+ * (see mixLessonFor), and on another day other words of the unit; every other lesson is as
+ * written. `turn`: the day (dayNumber in lib/spaced.ts), 0 without it.
  */
-export function playLesson(id: string, completed: Record<string, unknown>): { unit: Unit; lesson: Lesson } | undefined {
+export function playLesson(id: string, completed: Record<string, unknown>, turn = 0): { unit: Unit; lesson: Lesson } | undefined {
   const found = findLesson(id);
   if (!found || !isMixLesson(found.lesson)) return found;
-  return { unit: found.unit, lesson: mixLessonFor(found.unit, units, completed) };
+  return { unit: found.unit, lesson: mixLessonFor(found.unit, units, completed, turn) };
 }
 
 /** Look up any word or sentence by id (used by the phrasebook). */

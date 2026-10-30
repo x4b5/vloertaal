@@ -30,7 +30,7 @@ import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, 
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
 import { bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, workWeek } from './lib/progress';
-import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dailyRuleIds, dailyRuleLesson, dailyWordIds, dueIds, gradedStepIds, seedCards, strongerCount } from './lib/spaced';
+import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dailyWordIds, dueIds, gradedStepIds, seedCards, strongerCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
 import { SAYINGS_FROM } from './content/sayings';
@@ -667,7 +667,7 @@ export default function App() {
       // Today's review of the learner's track: words (the language course) or questions (the rules course).
       const found = daily
         ? { lesson: track === 'regels' ? dailyRuleLesson(view.ids ?? []) : dailyLesson(view.ids ?? [], progress.cards, dayKey(new Date())) }
-        : playLesson(view.lessonId, progress.completed);
+        : playLesson(view.lessonId, progress.completed, dayNumber(dayKey(new Date())));
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
