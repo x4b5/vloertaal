@@ -31,8 +31,6 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.numbers",
   "u.ai",
   "u.finish",
-  "u.tech",
-  "u.garage",
   "u.stage",
   "u.society",
   "u.online",
@@ -42,6 +40,8 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.horeca",
   "u.clean",
   "u.kas",
+  "u.tech",
+  "u.garage",
 ]
 `;
 
@@ -76,8 +76,6 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.numbers",
   "u.ai",
   "u.finish",
-  "u.tech",
-  "u.garage",
   "u.stage",
   "u.society",
   "u.online",
@@ -87,6 +85,8 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.care",
   "u.horeca",
   "u.kas",
+  "u.tech",
+  "u.garage",
 ]
 `;
 
@@ -121,8 +121,6 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.numbers",
   "u.ai",
   "u.finish",
-  "u.tech",
-  "u.garage",
   "u.stage",
   "u.society",
   "u.online",
@@ -132,6 +130,53 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.horeca",
   "u.clean",
   "u.kas",
+  "u.tech",
+  "u.garage",
+]
+`;
+
+exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder for every sector, with and without the track argument > routeOrder garage 1`] = `
+[
+  "u.firstday",
+  "u.help",
+  "u.tools",
+  "u.safety",
+  "u.garage",
+  "u.data",
+  "u.time",
+  "u.sounds",
+  "u.teamwork",
+  "u.apply",
+  "u.contract",
+  "u.papers",
+  "u.pay",
+  "u.house",
+  "u.social",
+  "u.sayings",
+  "u.rights",
+  "u.leave",
+  "u.exploit",
+  "u.contact",
+  "u.grow",
+  "u.health",
+  "u.money",
+  "u.travel",
+  "u.lost",
+  "u.shop",
+  "u.numbers",
+  "u.ai",
+  "u.finish",
+  "u.stage",
+  "u.society",
+  "u.online",
+  "u.warehouse",
+  "u.build",
+  "u.factory",
+  "u.care",
+  "u.horeca",
+  "u.clean",
+  "u.kas",
+  "u.tech",
 ]
 `;
 
@@ -166,8 +211,6 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.numbers",
   "u.ai",
   "u.finish",
-  "u.tech",
-  "u.garage",
   "u.stage",
   "u.society",
   "u.online",
@@ -177,6 +220,8 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.care",
   "u.horeca",
   "u.clean",
+  "u.tech",
+  "u.garage",
 ]
 `;
 
@@ -211,8 +256,6 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.numbers",
   "u.ai",
   "u.finish",
-  "u.tech",
-  "u.garage",
   "u.stage",
   "u.society",
   "u.online",
@@ -222,6 +265,8 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.care",
   "u.clean",
   "u.kas",
+  "u.tech",
+  "u.garage",
 ]
 `;
 
@@ -256,8 +301,6 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.numbers",
   "u.ai",
   "u.finish",
-  "u.tech",
-  "u.garage",
   "u.stage",
   "u.society",
   "u.online",
@@ -267,6 +310,8 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.horeca",
   "u.clean",
   "u.kas",
+  "u.tech",
+  "u.garage",
 ]
 `;
 
@@ -346,8 +391,6 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.numbers",
   "u.ai",
   "u.finish",
-  "u.tech",
-  "u.garage",
   "u.stage",
   "u.society",
   "u.online",
@@ -357,6 +400,53 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.horeca",
   "u.clean",
   "u.kas",
+  "u.tech",
+  "u.garage",
+]
+`;
+
+exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder for every sector, with and without the track argument > routeOrder technical 1`] = `
+[
+  "u.firstday",
+  "u.help",
+  "u.tools",
+  "u.safety",
+  "u.tech",
+  "u.data",
+  "u.time",
+  "u.sounds",
+  "u.teamwork",
+  "u.apply",
+  "u.contract",
+  "u.papers",
+  "u.pay",
+  "u.house",
+  "u.social",
+  "u.sayings",
+  "u.rights",
+  "u.leave",
+  "u.exploit",
+  "u.contact",
+  "u.grow",
+  "u.health",
+  "u.money",
+  "u.travel",
+  "u.lost",
+  "u.shop",
+  "u.numbers",
+  "u.ai",
+  "u.finish",
+  "u.stage",
+  "u.society",
+  "u.online",
+  "u.warehouse",
+  "u.build",
+  "u.factory",
+  "u.care",
+  "u.horeca",
+  "u.clean",
+  "u.kas",
+  "u.garage",
 ]
 `;
 

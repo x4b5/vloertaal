@@ -7,7 +7,7 @@ export type SettingsList = 'me' | 'lessons' | 'phone';
 
 export type SettingsPage =
   | SettingsList
-  | 'language' | 'gender' | 'sector' | 'sector-make' | 'sector-care' | 'sector-other' | 'region' | 'country' | 'english' | 'certificates'
+  | 'language' | 'gender' | 'sector' | 'sector-build' | 'sector-make' | 'sector-care' | 'region' | 'country' | 'english' | 'certificates'
   | 'sound' | 'voice' | 'tempo' | 'speaking' | 'writing' | 'text' | 'theme'
   | 'offline' | 'reminder' | 'reminder-time' | 'install' | 'backup' | 'counting' | 'reset' | 'unlock'
   /** "Wat ken je al?": a screen of its own (App, src/components/Toets.tsx ToetsPage), from Lessen. */
@@ -24,9 +24,9 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   language: 'me',
   gender: 'me',
   sector: 'me',
+  'sector-build': 'sector',
   'sector-make': 'sector',
   'sector-care': 'sector',
-  'sector-other': 'sector',
   region: 'me',
   country: 'me',
   english: 'me',
@@ -59,7 +59,7 @@ export function settingsDepth(page?: SettingsPage | null): number {
 }
 
 /** Pages that are lists (one kind of row, one tap per row): they keep a Back button. */
-export const SETTINGS_LIST_PAGES: SettingsPage[] = ['me', 'lessons', 'phone', 'language', 'certificates'];
+export const SETTINGS_LIST_PAGES: SettingsPage[] = ['me', 'lessons', 'phone', 'language', 'sector', 'certificates'];
 
 export interface SettingsContext {
   /** A help language is chosen (else "Show English too" has nothing to do). */

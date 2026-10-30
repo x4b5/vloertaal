@@ -38,7 +38,7 @@ Hulptalen in het spoor Taal:
 **Spoor Taal**
 - **40 onderwerpen, 142 lessen** (612 woorden, 306 zinnen, 181 gesprekjes), in **8 thema's**:
   Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland en
-  Jouw sector (Logistiek, Bouw, Productie, Zorg, Horeca, Schoonmaak, Tuinbouw).
+  Jouw sector (Logistiek, Bouw, Productie, Zorg, Horeca, Schoonmaak, Tuinbouw, Techniek, Garage).
 - Ook: **Klanken** (woordparen als man/maan, pak/bak), **Uitdrukkingen en gezegden** (daarna komt
   in latere lessen een passende uitdrukking terug), **In de winkel**, **Rekenen** en **Slimme apps en AI**
   (AI als hulp, wat je niet deelt, nep of echt, en als een app beslist), en **Getallen en gegevens**

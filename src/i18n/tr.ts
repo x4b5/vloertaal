@@ -99,6 +99,8 @@ const lang: HelpLanguageSource = {
     sectorHospitality: 'Otel ve restoran',
     sectorCleaning: 'Temizlik',
     sectorHorticulture: 'Bahçecilik', // nagelezen (2e lezing)
+    sectorTechnical: 'Teknik işler', // nieuw (30 okt 2026), nalezen
+    sectorGarage: 'Oto servis', // nieuw (30 okt 2026), nalezen
     sound: 'Ses',
     soundOn: 'Ses açık',
     withoutSound: 'Sessiz',
@@ -245,7 +247,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Kapalı',
     sectorGroupMake: 'Üretim ve taşıma',
     sectorGroupCare: 'Bakım ve hizmet',
-    sectorGroupOther: 'Başka bir şey', // nagelezen (2e lezing)
+    sectorGroupBuild: 'İnşaat ve teknik', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Kadın sesi',
     voiceMan: 'Erkek sesi',
     writingPick: 'Kelimeyi seç',

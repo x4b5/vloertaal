@@ -1,9 +1,9 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
-import { SectorCards, SectorGroupCards } from '../src/components/Sector';
+import { SectorCards, SectorGroupHead, SectorGroupList } from '../src/components/Sector';
 import { guessHelpLang } from '../src/lib/langGuess';
-import { sectorChoiceGroup, sectorGroupOf, sectorGroups, sectors } from '../src/content/sectors';
+import { sectorGroupOf, sectorGroups, sectors, type SectorChoice } from '../src/content/sectors';
 import { SETTINGS_PARENT, settingsDepth, settingsRows, voiceChoiceOf, voiceRefs, type SettingsContext } from '../src/lib/settingsMenu';
 import { helpLanguages, languageMeta } from '../src/i18n/all';
 import { GENDERED_LANGS } from '../src/i18n/types';
@@ -55,44 +55,71 @@ describe('the first-run language guess', () => {
 });
 
 describe('the sector in two steps', () => {
-  // Three groups since the seventh sector (Tuinbouw, 30 October 2026): three cards on step 1
-  // ("Iets anders" holds Tuinbouw and "Weet ik nog niet"), at most three cards on step 2.
-  it('puts every sector in exactly one of three groups, at most three per group', () => {
+  // Since 30 October 2026 (owner's decision): step 1 is a list of one kind of row, the three
+  // kinds of work and "Weet ik nog niet" (the list exception of max 3); step 2 the three sectors
+  // of a group. "Iets anders" is gone.
+  it('puts every sector in exactly one of three groups, three per group', () => {
     const all = sectorGroups.flatMap((g) => g.sectors);
-    expect(sectorGroups).toHaveLength(3);
-    for (const g of sectorGroups) expect(g.sectors.length).toBeLessThanOrEqual(3);
+    expect(sectorGroups.map((g) => g.id)).toEqual(['build', 'make', 'care']);
+    expect(all).toHaveLength(new Set(all).size);
     expect([...all].sort()).toEqual(sectors.map((s) => s.id).sort());
-    expect(sectorGroups.find((g) => g.id === 'make')!.sectors).toEqual(['logistics', 'construction', 'production']);
+    for (const g of sectorGroups) expect(g.sectors, g.id).toHaveLength(3);
+    expect(sectorGroups.find((g) => g.id === 'build')!.sectors).toEqual(['construction', 'technical', 'garage']);
+    expect(sectorGroups.find((g) => g.id === 'make')!.sectors).toEqual(['production', 'logistics', 'horticulture']);
     expect(sectorGroups.find((g) => g.id === 'care')!.sectors).toEqual(['care', 'hospitality', 'cleaning']);
-    expect(sectorGroups.find((g) => g.id === 'other')!.sectors).toEqual(['horticulture']);
+    expect(sectorGroups.map((g) => g.nl)).toEqual(['Bouw en techniek', 'Maken en verplaatsen', 'Zorg en service']);
     for (const g of sectorGroups) expect(uiEn[g.key]).toBeTruthy();
-    for (const g of sectorGroups) expect(g.sectors.length + (g.notSure ? 1 : 0), g.id).toBeLessThanOrEqual(3);
+    expect(Object.keys(uiEn)).not.toContain('sectorGroupOther');
   });
-  const cards = (html: string) => html.match(/class="max3-card /g)?.length ?? 0;
-  it('shows exactly three cards on step 1, and nothing else to tap', () => {
-    const html = renderToStaticMarkup(createElement(SectorGroupCards, { onPick: () => {} }));
-    expect(cards(html)).toBe(3);
-    expect(html.match(/<button/g)).toHaveLength(3);
-    expect(html).not.toContain('sector-notsure');
+  const rows = (html: string) => html.match(/class="set-row sector-group-row/g)?.length ?? 0;
+  it('shows step 1 as one list of four rows of one kind, "Weet ik nog niet" last', () => {
+    const html = renderToStaticMarkup(createElement(SectorGroupList, { onGroup: () => {}, onNotSure: () => {} }));
+    expect(html.match(/<ul /g)).toHaveLength(1);
+    expect(rows(html)).toBe(4);
+    expect(html.match(/<button/g)).toHaveLength(4);
+    expect(html).not.toContain('max3-card');
+    for (const nl of ['Bouw en techniek', 'Maken en verplaatsen', 'Zorg en service']) expect(html).toContain(nl);
+    expect([...html.matchAll(/data-group="(\w+)"/g)].map((m) => m[1])).toEqual(['build', 'make', 'care', 'none']);
+    // The three groups lead on (a chevron), "Weet ik nog niet" does not.
+    expect(html.match(/set-row-chev/g)).toHaveLength(3);
+    // The Dutch labels carry their language.
+    expect(html).toContain('<span class="set-row-nl" lang="nl">Weet ik nog niet</span>');
   });
-  it('offers Tuinbouw and "Weet ik nog niet" in "Iets anders", and shows "none" picked there', () => {
-    const html = renderToStaticMarkup(createElement(SectorCards, { group: 'other', current: 'none', onPick: () => {} }));
-    expect(cards(html)).toBe(2);
-    expect(html).toContain('Weet ik nog niet');
-    expect(html).toContain('Tuinbouw');
+  it('marks the current choice on step 1: its group, or "Weet ik nog niet" for none', () => {
+    const marked = (current?: SectorChoice) => {
+      const html = renderToStaticMarkup(createElement(SectorGroupList, { current, onGroup: () => {}, onNotSure: () => {} }));
+      return [...html.matchAll(/data-group="(\w+)" aria-current="true"/g)].map((m) => m[1]);
+    };
+    expect(marked('none')).toEqual(['none']);
+    expect(marked('construction')).toEqual(['build']);
+    expect(marked('technical')).toEqual(['build']);
+    expect(marked('garage')).toEqual(['build']);
+    expect(marked('production')).toEqual(['make']);
+    expect(marked('logistics')).toEqual(['make']);
+    expect(marked('horticulture')).toEqual(['make']);
+    expect(marked('cleaning')).toEqual(['care']);
+    expect(marked(undefined)).toEqual([]);
+  });
+  it('offers the three sectors of a group on step 2, with the current one picked', () => {
+    const html = renderToStaticMarkup(createElement(SectorCards, { group: 'build', current: 'garage', onPick: () => {} }));
+    expect(html.match(/class="max3-card /g)).toHaveLength(3);
+    for (const nl of ['Bouw', 'Techniek', 'Garage']) expect(html).toContain(`lang="nl">${nl}<`);
     expect(html.match(/aria-checked="true"/g)).toHaveLength(1);
-    expect(sectorChoiceGroup('none')).toBe('other');
-    expect(sectorChoiceGroup('horticulture')).toBe('other');
-    expect(sectorChoiceGroup('cleaning')).toBe('care');
-    expect(sectorChoiceGroup(undefined)).toBeUndefined();
-    const step1 = renderToStaticMarkup(createElement(SectorGroupCards, { current: 'none', onPick: () => {} }));
-    expect(step1.match(/max3-card picked/g)).toHaveLength(1);
-    expect(step1.indexOf('max3-card picked')).toBeGreaterThan(step1.lastIndexOf('Zorg en service'));
+    expect(html).not.toContain('Weet ik nog niet');
+  });
+  it('gives step 2 a heading that can take the focus', () => {
+    const html = renderToStaticMarkup(createElement(SectorGroupHead, { group: 'make' }));
+    expect(html).toMatch(/^<h3 tabindex="-1" class="max3-crumb sector-group-head">/);
+    expect(html).toContain('Making &amp; moving');
+    expect(renderToStaticMarkup(createElement(SectorGroupHead, { group: 'build', level: 2 }))).toMatch(/^<h2 /);
   });
   it('finds the group of a sector, none for "not sure yet"', () => {
-    expect(sectorGroupOf('construction')).toBe('make');
+    expect(sectorGroupOf('construction')).toBe('build');
+    expect(sectorGroupOf('technical')).toBe('build');
+    expect(sectorGroupOf('garage')).toBe('build');
+    expect(sectorGroupOf('production')).toBe('make');
+    expect(sectorGroupOf('horticulture')).toBe('make');
     expect(sectorGroupOf('cleaning')).toBe('care');
-    expect(sectorGroupOf('horticulture')).toBe('other');
     expect(sectorGroupOf('none')).toBeUndefined();
     expect(sectorGroupOf(undefined)).toBeUndefined();
   });
@@ -105,6 +132,7 @@ describe('Settings as a menu of three', () => {
     expect(settingsDepth('me')).toBe(1);
     expect(settingsDepth('voice')).toBe(2);
     expect(settingsDepth('sector-make')).toBe(3);
+    expect(settingsDepth('sector-build')).toBe(3);
     const roots = Object.entries(SETTINGS_PARENT).filter(([, p]) => p === null).map(([k]) => k);
     expect(roots.sort()).toEqual(['lessons', 'me', 'phone']);
   });

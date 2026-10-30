@@ -99,6 +99,8 @@ const lang: HelpLanguageSource = {
     sectorHospitality: 'Hoteluri și restaurante',
     sectorCleaning: 'Curățenie',
     sectorHorticulture: 'Horticultură', // nieuw (30 okt 2026), nagelezen (2e lezing)
+    sectorTechnical: 'Tehnică', // nieuw (30 okt 2026), nalezen
+    sectorGarage: 'Service auto', // nieuw (30 okt 2026), nalezen
     sound: 'Sunet',
     soundOn: 'Cu sunet',
     withoutSound: 'Fără sunet',
@@ -245,7 +247,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Oprit',
     sectorGroupMake: 'Producție și transport',
     sectorGroupCare: 'Îngrijire și servicii',
-    sectorGroupOther: 'Altceva', // nieuw (30 okt 2026), nagelezen (2e lezing)
+    sectorGroupBuild: 'Construcții și tehnică', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Voce de femeie',
     voiceMan: 'Voce de bărbat',
     writingPick: 'Alegerea cuvântului',
