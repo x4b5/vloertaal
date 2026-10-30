@@ -75,3 +75,11 @@
 .toets-line-n { color: var(--muted); font-size: 0.95rem; }
 .toets-result .toets-parts, .toets-result .toets-voices { width: 100%; max-width: 520px; margin-left: auto; margin-right: auto; }
 .toets-result-go { width: 100%; max-width: 520px; margin: 24px auto 0; }
+
+/* A small phone (640 px high): the start's result keeps Continue in view without scrolling. */
+@media (max-height: 700px) {
+  .toets-result .toets-parts { gap: 10px; }
+  .toets-result .toets-part { padding-top: 10px; padding-bottom: 10px; }
+  .toets-result .toets-keep { margin-top: 12px; }
+  .toets-result .toets-result-go { margin-top: 14px; }
+}
