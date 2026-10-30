@@ -218,12 +218,12 @@ loopbaanbegeleider · de gemeente.
 
 **Vraag 1 · Wat is het beste?** Mohammed wil daar niets over zeggen. Wat kan Mohammed het beste doen?
 
-- **A.** Hij zegt rustig: "Daar praat ik liever niet over."
+- **A.** Hij zegt: "Daar praat ik liever niet over."
   → *Goed. Hij blijft beleefd en hij hoeft niets te vertellen.*
 - **B.** Hij geeft toch antwoord, anders krijgt hij de baan niet.
   → *Begrijpelijk. Maar hij hoeft dit niet te vertellen.*
-- **C.** Hij zegt dat ze dit niet mag vragen, en hij gaat weg.
-  → *Hij heeft gelijk, maar weggaan sluit de deur.*
+- **C.** Hij zegt snel "nee", ook als dat niet waar is.
+  → *Begrijpelijk. Maar dat hoeft niet. Hij mag gewoon niets zeggen.*
 
 **Goed antwoord: A.**
 **Waarom:** Een werkgever mag niet vragen of je zwanger bent of kinderen wilt. Vragen over je geloof of gezondheid mogen ook niet. Je
@@ -289,10 +289,10 @@ werkgever geeft je die tijd.
 
 **Vraag 3 · Wat is het beste?** Welke vraag stelt Piotr vóór hij tekent?
 
-- **A.** "Hoe heet de directeur van het bedrijf?"
-  → *Dat mag hij vragen. Maar het zegt niets over zijn rechten.*
-- **B.** "Mag ik in de pauze muziek luisteren?"
-  → *Kan later ook. Eerst de belangrijke dingen.*
+- **A.** "Kan ik het contract later nog veranderen?"
+  → *Alleen als de baas het ook wil. Vraag het belangrijke dus vóór je tekent.*
+- **B.** "Hoeveel verdienen de anderen hier?"
+  → *Dat zegt de baas meestal niet. En het gaat om zijn eigen loon.*
 - **C.** "Welke cao hoort bij dit werk?"
   → *Goed. In de cao staan veel regels over zijn loon.*
 
@@ -377,10 +377,10 @@ moet wel een goede reden hebben ⚖️. Vraag op je eerste dag naar de regels.
 
 **Vraag 1 · Wat is het beste?** Wat bedoelt Sanne met "Zeg maar je"?
 
-- **A.** Ze vindt dat Jayden te zacht praat.
-  → *Nee. Het gaat niet over hard of zacht praten.*
-- **B.** Ze wil dat hij haar "chef" noemt.
-  → *Nee. Ze noemt juist haar voornaam.*
+- **A.** Ze vraagt of hij iets wil zeggen.
+  → *Nee. "Zeg maar je" betekent: noem mij "je".*
+- **B.** Ze wil dat hij beleefder praat.
+  → *Nee. "Hoor" klinkt hier juist vriendelijk.*
 - **C.** Ze wil dat hij "je" zegt, en niet "u".
   → *Goed. Ze wil minder afstand.*
 
@@ -1693,14 +1693,14 @@ te zijn. Samen koffie drinken hoort ook bij het werk. Je bent welkom aan tafel, 
 of met eten. Gebruik je telefoon in je pauze. Wacht je op een belangrijk telefoontje? Zeg het vooraf
 tegen je leidinggevende.
 
-**Vraag 3 · Wat is het beste?** Het team heeft een groepsapp. Om 23 uur appt de leidinggevende: "Wie kan morgen eerder komen?"
+**Vraag 3 · Wat is het beste?** Het team heeft een groepsapp. Om 23 uur appt de leidinggevende: "Wie kan volgende week zaterdag werken?"
 
-- **A.** Je stuurt een screenshot naar vrienden: "Kijk nou!"
-  → *Niet doen. Berichten van werk deel je niet.*
-- **B.** Je appt meteen terug: "Dit is veel te laat!"
-  → *Begrijpelijk. Maar dat kun je beter rustig zeggen.*
+- **A.** Je antwoordt niet, ook niet de volgende dag.
+  → *Dan weet je baas niet of je kunt. Antwoord wel, op een normale tijd.*
+- **B.** Je appt meteen terug: "Ja, ik kan!" Anders vindt de baas je lui.
+  → *Goed bedoeld. Maar je hoeft 's nachts niet te antwoorden. Dat vindt niemand lui.*
 - **C.** Je antwoordt de volgende ochtend, kort en vriendelijk.
-  → *Goed. Je antwoordt op tijd, en je rust uit.*
+  → *Goed. Je antwoordt op een normale tijd, en je rust uit.*
 
 **Goed antwoord: C.**
 **Waarom:** Een groepsapp is voor werk. Houd je berichten kort en vriendelijk. Je hoeft niet altijd

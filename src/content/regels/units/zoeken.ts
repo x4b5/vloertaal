@@ -209,9 +209,9 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.3.wd1',
           situation: 'Mohammed wil daar niets over zeggen. Wat kan Mohammed het beste doen?',
           options: [
-            { id: 'a', text: 'Hij zegt rustig: "Daar praat ik liever niet over."', best: true, feedback: 'Goed. Hij blijft beleefd en hij hoeft niets te vertellen.' },
+            { id: 'a', text: 'Hij zegt: "Daar praat ik liever niet over."', best: true, feedback: 'Goed. Hij blijft beleefd en hij hoeft niets te vertellen.' },
             { id: 'b', text: 'Hij geeft toch antwoord, anders krijgt hij de baan niet.', best: false, feedback: 'Begrijpelijk. Maar hij hoeft dit niet te vertellen.' },
-            { id: 'c', text: 'Hij zegt dat ze dit niet mag vragen, en hij gaat weg.', best: false, feedback: 'Hij heeft gelijk, maar weggaan sluit de deur.' },
+            { id: 'c', text: 'Hij zegt snel "nee", ook als dat niet waar is.', best: false, feedback: 'Begrijpelijk. Maar dat hoeft niet. Hij mag gewoon niets zeggen.' },
           ],
           why: 'Een werkgever mag niet vragen of je zwanger bent of kinderen wilt. Vragen over je geloof of gezondheid mogen ook niet. Je hoeft daar geen antwoord op te geven. Je kunt het later melden als discriminatie.',
         },
@@ -298,8 +298,8 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.4.wd2',
           situation: 'Welke vraag stelt Piotr vóór hij tekent?',
           options: [
-            { id: 'a', text: 'Hoe heet de directeur van het bedrijf?', best: false, feedback: 'Dat mag hij vragen. Maar het zegt niets over zijn rechten.', say: true },
-            { id: 'b', text: 'Mag ik in de pauze muziek luisteren?', best: false, feedback: 'Kan later ook. Eerst de belangrijke dingen.', say: true },
+            { id: 'a', text: 'Kan ik het contract later nog veranderen?', best: false, feedback: 'Alleen als de baas het ook wil. Vraag het belangrijke dus vóór je tekent.', say: true },
+            { id: 'b', text: 'Hoeveel verdienen de anderen hier?', best: false, feedback: 'Dat zegt de baas meestal niet. En het gaat om zijn eigen loon.', say: true },
             { id: 'c', text: 'Welke cao hoort bij dit werk?', best: true, feedback: 'Goed. In de cao staan veel regels over zijn loon.', say: true },
           ],
           why: 'Een cao is een afspraak over loon en regels voor jouw soort werk. Vakbonden en werkgevers maken die samen. Er staan bijvoorbeeld toeslagen en vrije dagen in.',
