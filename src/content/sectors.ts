@@ -10,7 +10,7 @@ import { withRegion } from './regio';
  * path: the basis units plus the learner's own sector unit(s) come first, the other sectors'
  * units wait in a collapsed section at the bottom (still playable, never locked by sector).
  */
-export type SectorId = 'logistics' | 'construction' | 'production' | 'care' | 'hospitality' | 'cleaning';
+export type SectorId = 'logistics' | 'construction' | 'production' | 'care' | 'hospitality' | 'cleaning' | 'horticulture';
 
 /** What is stored: a sector, or 'none' for "not sure yet" (= the whole course as one path). */
 export type SectorChoice = SectorId | 'none';
@@ -49,6 +49,9 @@ export const sectors: Sector[] = [
     rules: { units: ['r.horeca'], focus: ['r.tijd', 'r.loon'] } },
   { id: 'cleaning', nl: 'Schoonmaak', key: 'sectorCleaning', units: ['u.clean'], focus: ['u.time', 'u.safety'],
     rules: { units: ['r.clean'], focus: ['r.veilig', 'r.tijd'] } },
+  // Tuinbouw en kas (30 October 2026): heat, sprays and lifting (Safety), and piece rate (Pay).
+  { id: 'horticulture', nl: 'Tuinbouw', key: 'sectorHorticulture', units: ['u.kas'], focus: ['u.safety', 'u.pay'],
+    rules: { units: ['r.kas'], focus: ['r.veilig', 'r.loon'] } },
 ];
 
 /** A sector's own units and focus units in one track. */
@@ -143,23 +146,32 @@ export function sectorFirstFocus(sector: SectorChoice | undefined, track: Track 
 
 /**
  * The sector choice in two small steps (never more than three cards on a page): first the kind
- * of work, then the three sectors in it. "Weet ik nog niet" sits next to the two groups.
+ * of work (three group cards), then the sectors in it. The third group, "Iets anders", holds
+ * Tuinbouw and "Weet ik nog niet" (`notSure`): a stored 'none' belongs to that group.
  */
-export type SectorGroupId = 'make' | 'care';
+export type SectorGroupId = 'make' | 'care' | 'other';
 
 export interface SectorGroup {
   id: SectorGroupId;
   nl: string;
   key: UiKey;
   sectors: SectorId[];
+  /** Its second step ends with "Weet ik nog niet" (the choice 'none'). */
+  notSure?: true;
 }
 
 export const sectorGroups: SectorGroup[] = [
   { id: 'make', nl: 'Maken en verplaatsen', key: 'sectorGroupMake', sectors: ['logistics', 'construction', 'production'] },
   { id: 'care', nl: 'Zorg en service', key: 'sectorGroupCare', sectors: ['care', 'hospitality', 'cleaning'] },
+  { id: 'other', nl: 'Iets anders', key: 'sectorGroupOther', sectors: ['horticulture'], notSure: true },
 ];
 
 /** The group a sector is in (undefined for "not sure yet" or nothing chosen). */
 export function sectorGroupOf(sector: SectorChoice | undefined): SectorGroupId | undefined {
   return sectorGroups.find((g) => g.sectors.includes(sector as SectorId))?.id;
+}
+
+/** The group whose card shows a choice as picked: 'none' is in the group with "Weet ik nog niet". */
+export function sectorChoiceGroup(choice: SectorChoice | undefined): SectorGroupId | undefined {
+  return choice === 'none' ? sectorGroups.find((g) => g.notSure)?.id : sectorGroupOf(choice);
 }

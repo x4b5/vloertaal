@@ -1043,3 +1043,192 @@ export const warehouseUnit: RuleUnit = {
     },
   ],
 };
+
+// Sector tuinbouw · Werken in de tuinbouw (les T.1, T.2; docs/entree-aanvulling.md, deel 4,
+// uitgewerkt uit de schets "groen" G.1, 30 oktober 2026)
+export const kasUnit: RuleUnit = {
+  id: 'r.kas',
+  title: 'Werken in de tuinbouw',
+  emoji: '🌱',
+  color: '#5a8f29',
+  lessons: [
+    {
+      // Les T.1 · Veilig in kas en veld
+      id: 'r.l.kas.1',
+      title: 'Veilig in kas en veld',
+      goal: 'Je beschermt je tegen hitte en spuitmiddelen. Je tilt en bukt zo dat je lichaam gezond blijft.',
+      remember: 'Drink op tijd. Een bespoten kas ga je pas in als het mag.',
+      // Wie kan je helpen: je leidinggevende of voorman · de bedrijfsarts · de Nederlandse
+      //   Arbeidsinspectie.
+      help: ['leidinggevende', 'bedrijfsarts', 'arbeidsinspectie'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.kas.1.sc1',
+          picture: 'Piotr in een warme kas tussen hoge tomatenplanten. Hij veegt het zweet van zijn gezicht.',
+          lines: [
+            'Piotr werkt in een kas in het Westland.',
+            'Hij plukt tomaten.',
+            'Buiten is het 30 graden. In de kas is het nog warmer.',
+            'Hij wil zijn rij snel afmaken.',
+            'Zijn fles water is al leeg.',
+          ],
+        },
+        // ⚖️ check: Je werkgever moet je beschermen tegen hitte ⚖️ (Arbobesluit, art. 6.1).
+        // ⚖️ check: Een kas die net bespoten is, ga je pas in als het mag ⚖️ (wachttijd na het spuiten:
+        //   het etiket van het middel, Wet gewasbeschermingsmiddelen en biociden; Arbobesluit, hoofdstuk 4).
+        // ⚖️ check: Spuiten mag je alleen met een opleiding en een bewijs daarvan ⚖️ (bewijs van
+        //   vakbekwaamheid, de spuitlicentie; Besluit gewasbeschermingsmiddelen en biociden).
+        {
+          kind: 'rule',
+          id: 'r.l.kas.1.ru1',
+          emoji: '🌡️',
+          title: 'Drink op tijd. Een bespoten kas ga je pas in als het mag.',
+          body: [
+            'Je werkgever moet je beschermen tegen hitte.',
+            'Drink vaak water, ook als je nog geen dorst hebt.',
+            'Spuitmiddelen zijn middelen tegen beestjes en ziektes op de planten.',
+            'Een kas die net bespoten is, ga je pas in als het mag.',
+            'Spuiten mag je alleen met een opleiding en een bewijs daarvan.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: Je werkgever moet zorgen voor water, pauzes en een koele plek ⚖️ (Arbobesluit,
+        //   art. 6.1 en 6.2; kijk ook in de cao).
+        {
+          kind: 'whatdo',
+          id: 'r.l.kas.1.wd1',
+          situation: 'Piotr wordt duizelig. Zijn rij is nog niet af. Wat kan Piotr het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij maakt eerst zijn rij helemaal af. Daarna gaat hij drinken.', best: false, feedback: 'Begrijpelijk. Maar duizelig zijn is een waarschuwing.' },
+            { id: 'b', text: 'Hij stopt, drinkt water en zegt het tegen zijn leidinggevende.', best: true, feedback: 'Goed. Zo wordt het niet erger.' },
+            { id: 'c', text: 'Hij gaat even op de grond zitten, tussen de planten.', best: false, feedback: 'Even zitten helpt. Maar in de kas blijft het heet.' },
+          ],
+          why: 'Hitte kan je snel ziek maken. Duizelig, misselijk of hoofdpijn? Stop, drink water en ga naar een koele plek. Zeg het meteen tegen iemand. Je werkgever moet zorgen voor water, pauzes en een koele plek.',
+        },
+        // ⚖️ check: Na het spuiten geldt een wachttijd. Pas daarna mag je weer naar binnen ⚖️ (het
+        //   etiket van het middel; Arbobesluit, hoofdstuk 4).
+        {
+          kind: 'truefalse',
+          id: 'r.l.kas.1.tf1',
+          statement: 'Ruik je niets? Dan kun je een bespoten kas veilig in.',
+          answer: false,
+          why: 'Veel spuitmiddelen ruik je niet. Na het spuiten geldt een wachttijd. Pas daarna mag je weer naar binnen. Vaak hangt er een bordje op de deur. Je leidinggevende weet wanneer het weer mag.',
+        },
+        // ⚖️ check: Je werkgever moet zorgen dat het werk niet te zwaar is ⚖️ (Arbobesluit, art. 5.2
+        //   en 5.3: tillen en lichamelijke belasting).
+        {
+          kind: 'whatdo',
+          id: 'r.l.kas.1.wd2',
+          situation: 'Piotr tilt de hele dag kratten. Ze staan op de grond. Wat kan Piotr het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij tilt ze snel met een ruk. Dan is hij eerder klaar.', best: false, feedback: 'Een ruk is zwaar voor zijn rug. Zo kan hij zich bezeren.' },
+            { id: 'b', text: 'Hij stapelt de kratten zo hoog als hij kan.', best: false, feedback: 'Een hoge stapel is zwaar en kan omvallen.' },
+            { id: 'c', text: 'Hij buigt zijn knieën en houdt de krat dicht bij zich.', best: true, feedback: 'Goed. Zo spaart hij zijn rug.' },
+          ],
+          why: 'Til met gebogen knieën en een rechte rug. Houd de krat dicht bij je lichaam. Draai niet met je rug terwijl je tilt. Veel bukken of tillen? Vraag om een kar, of wissel af met ander werk. Je werkgever moet zorgen dat het werk niet te zwaar is.',
+        },
+        {
+          kind: 'whoask',
+          id: 'r.l.kas.1.wa1',
+          question: 'Je moet werken in een kas die vanochtend bespoten is. Er hangt een bordje op de deur. Wie vraag je het eerst?',
+          options: [
+            { id: 'a', who: 'collega', best: false, feedback: 'Een collega weet het misschien. Maar je leidinggevende weet het zeker.' },
+            { id: 'b', who: 'leidinggevende', best: true, feedback: 'Goed. Je leidinggevende weet wanneer je weer naar binnen mag.' },
+            { id: 'c', who: 'huisarts', best: false, feedback: 'De huisarts helpt als je klachten hebt. Voorkom het liever.' },
+          ],
+          why: 'Je leidinggevende weet wanneer de wachttijd voorbij is. Krijg je geen duidelijk antwoord? Dan kun je de Nederlandse Arbeidsinspectie bellen.',
+        },
+        { kind: 'model', id: 'r.l.kas.1.mo1', context: 'Je ziet een bordje op de deur van de kas.', nl: 'Er hangt een bordje op de deur. Mag ik al naar binnen?' },
+      ],
+    },
+    {
+      // Les T.2 · Tempo en stukloon
+      id: 'r.l.kas.2',
+      title: 'Tempo en stukloon',
+      goal: 'Je weet dat het minimumloon per uur ook geldt bij stukloon. Je schrijft je uren op.',
+      remember: 'Ook bij stukloon krijg je minstens het minimumloon per uur.',
+      // Wie kan je helpen: je uitzendbureau of werkgever · de vakbond · het Juridisch Loket · de
+      //   Nederlandse Arbeidsinspectie (minimumloon, huisvesting via de werkgever).
+      help: ['uitzendbureau', 'vakbond', 'juridischloket', 'arbeidsinspectie'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.kas.2.sc1',
+          picture: 'Esra bij een sorteerband met paprika’s. Naast haar staan volle kratten.',
+          lines: [
+            'Esra werkt via een uitzendbureau in een kas.',
+            'Ze krijgt geld per krat. Dat heet stukloon.',
+            'De eerste weken werkt ze nog niet zo snel.',
+            'Op haar loonstrook staat weinig loon.',
+            'Ze woont in een huis van het uitzendbureau.',
+          ],
+        },
+        // ⚖️ check: Ook bij stukloon krijg je minstens het minimumloon voor elk uur dat je werkt ⚖️
+        //   (Wet minimumloon en minimumvakantiebijslag, art. 12 en de regels over stukloon).
+        // ⚖️ check: Je werkgever mag niet zomaar geld van je loon afhalen ⚖️ (BW 7:626 loonstrook;
+        //   Wet minimumloon, art. 13 inhoudingen, onder meer voor huisvesting).
+        {
+          kind: 'rule',
+          id: 'r.l.kas.2.ru1',
+          emoji: '⏱️',
+          title: 'Ook bij stukloon krijg je minstens het minimumloon per uur.',
+          body: [
+            'Stukloon betekent: je krijgt geld per krat, per rij of per kilo.',
+            'Ook dan krijg je minstens het minimumloon voor elk uur dat je werkt.',
+            'Schrijf elke dag je uren en je kratten op.',
+            'Je werkgever mag niet zomaar geld van je loon afhalen.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: Ook bij stukloon moet je minstens het minimumloon per uur krijgen ⚖️ (Wet
+        //   minimumloon en minimumvakantiebijslag). Geen bedrag: dat staat op rijksoverheid.nl.
+        {
+          kind: 'whatdo',
+          id: 'r.l.kas.2.wd1',
+          situation: 'Esra werkt 38 uur per week. Haar loon is veel lager dan het minimumloon voor 38 uur. Wat kan Esra het beste doen?',
+          options: [
+            { id: 'a', text: 'Ze laat haar eigen lijst met uren zien, en vraagt om uitleg.', best: true, feedback: 'Goed. Met haar lijst laat ze zien wat ze heeft gedaan.' },
+            { id: 'b', text: 'Ze zegt niets. Bij stukloon is weinig loon in het begin normaal.', best: false, feedback: 'Begrijpelijk. Maar ook bij stukloon geldt het minimumloon per uur.' },
+            { id: 'c', text: 'Ze gaat sneller werken en slaat haar pauzes over.', best: false, feedback: 'Begrijpelijk. Maar pauzes heeft ze nodig, en haar loon moet nu al kloppen.' },
+          ],
+          why: 'Ook bij stukloon moet je minstens het minimumloon per uur krijgen. Hoeveel dat is, staat op rijksoverheid.nl. Klopt je loon niet? Vraag om uitleg. Krijg je geen goed antwoord? Vraag hulp bij de vakbond of het Juridisch Loket.',
+        },
+        {
+          kind: 'truefalse',
+          id: 'r.l.kas.2.tf1',
+          statement: 'Bij stukloon is het niet nodig om je uren op te schrijven.',
+          answer: false,
+          why: 'Schrijf altijd je uren op. Wanneer begin je, hoe lang is je pauze, wanneer stop je? Schrijf ook je kratten of rijen op. Dan kun je je loonstrook controleren.',
+        },
+        // ⚖️ check: Op je loonstrook staat wat er van je loon af gaat, en waarvoor ⚖️ (BW 7:626).
+        // ⚖️ check: Voor een huis via je werk mag maar een deel van je loon eraf ⚖️ (Wet minimumloon,
+        //   art. 13: inhouding voor huisvesting op het minimumloon is begrensd en vraagt een
+        //   schriftelijke volmacht; kijk ook in de cao, bijvoorbeeld de ABU- of NBBU-cao).
+        {
+          kind: 'whatdo',
+          id: 'r.l.kas.2.wd2',
+          situation: 'Esra woont in een huis van het uitzendbureau. Elke week gaat er veel geld van haar loon af. Ze weet niet waarvoor. Wat kan Esra het beste doen?',
+          options: [
+            { id: 'a', text: 'Ze zegt niets. Anders raakt ze misschien haar kamer kwijt.', best: false, feedback: 'Begrijpelijk. Maar ze mag altijd vragen waar het geld voor is.' },
+            { id: 'b', text: 'Ze vraagt het uitzendbureau wat er van haar loon af gaat.', best: true, feedback: 'Goed. Zo weet ze waar ze voor betaalt.' },
+            { id: 'c', text: 'Ze stopt meteen met werken en zoekt een ander huis.', best: false, feedback: 'Dat is een grote stap. Eerst vragen is beter.' },
+          ],
+          why: 'Op je loonstrook staat wat er van je loon af gaat, en waarvoor. Voor een huis via je werk mag maar een deel van je loon eraf. Begrijp je het niet? Vraag het na. Kijk ook in je cao.',
+        },
+        {
+          kind: 'whoask',
+          id: 'r.l.kas.2.wa1',
+          question: 'Je loon is lager dan het minimumloon. Je uitzendbureau doet er niets aan. Wie kan dit controleren?',
+          options: [
+            { id: 'a', who: 'huisarts', best: false, feedback: 'De huisarts helpt bij je gezondheid, niet bij je loon.' },
+            { id: 'b', who: 'gemeente', best: false, feedback: 'De gemeente helpt bij veel dingen. Maar je loon controleert iemand anders.' },
+            { id: 'c', who: 'arbeidsinspectie', best: true, feedback: 'Goed. De Arbeidsinspectie controleert of je het minimumloon krijgt.' },
+          ],
+          why: 'De Nederlandse Arbeidsinspectie controleert het minimumloon. Je kunt daar een melding doen. Ook de vakbond en het Juridisch Loket helpen je.',
+        },
+        { kind: 'model', id: 'r.l.kas.2.mo1', context: 'Je wilt je uren vergelijken met je loonstrook.', nl: 'Ik heb mijn uren en kratten opgeschreven. Klopt mijn loon?' },
+      ],
+    },
+  ],
+};

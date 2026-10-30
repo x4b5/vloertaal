@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { NOT_SURE, sectorGroupOf, sectorGroups, sectors, type SectorChoice, type SectorGroupId, type SectorId } from '../content/sectors';
+import { NOT_SURE, sectorChoiceGroup, sectorGroups, sectors, type SectorChoice, type SectorGroupId, type SectorId } from '../content/sectors';
 import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
-import { CareIcon, ConveyorIcon, CupIcon, ForkliftIcon, HelmetIcon, QuestionIcon, SprayIcon } from './Icons';
+import { CareIcon, ConveyorIcon, CupIcon, ForkliftIcon, HelmetIcon, QuestionIcon, SproutIcon, SprayIcon } from './Icons';
 import { WordPicture } from '../pictures';
 import { ChoiceCards, QuestionHead, type ChoiceOption } from './Choice';
 import { ChromeHead } from './ChromeBack';
@@ -16,6 +16,7 @@ const ICONS: Record<SectorId | 'none', typeof ForkliftIcon> = {
   care: CareIcon,
   hospitality: CupIcon,
   cleaning: SprayIcon,
+  horticulture: SproutIcon,
   none: QuestionIcon,
 };
 
@@ -33,43 +34,49 @@ export const SECTOR_PICTURES: Record<SectorId, string> = {
   care: 'w.verpleegkundige',
   hospitality: 'w.pan',
   cleaning: 'w.dweil',
+  horticulture: 'w.kas',
 };
 
 const sectorPicture = (id: SectorId, size: number) => <WordPicture id={SECTOR_PICTURES[id]} emoji="" size={size} />;
 
-/** Step 1: the kind of work (two groups, each shown by its three pictures) or "not sure yet". */
+/**
+ * Step 1: the kind of work, three cards (each shown by its sectors' pictures; "Iets anders" by
+ * the greenhouse and a question mark, as it holds "Weet ik nog niet").
+ */
 export function SectorGroupCards({ current, lang, onPick }: {
   current?: SectorChoice;
   lang?: HelpLanguage;
-  onPick: (g: SectorGroupId | 'none') => void;
+  onPick: (g: SectorGroupId) => void;
 }) {
-  const group = current === 'none' ? 'none' : sectorGroupOf(current);
-  const options: ChoiceOption<SectorGroupId | 'none'>[] = [
-    ...sectorGroups.map((g) => ({
-      id: g.id,
-      nl: g.nl,
-      text: ui(g.key, lang),
-      picture: <span className="max3-trio">{g.sectors.map((s) => <span key={s}>{sectorPicture(s, 44)}</span>)}</span>,
-      next: true,
-    })),
-    { id: 'none' as const, nl: NOT_SURE.nl, text: ui(NOT_SURE.key, lang), picture: <QuestionIcon size={30} /> },
-  ];
-  return <ChoiceCards options={options} current={group} onPick={onPick} label={said(ui('chooseSector', lang))} className="sector-step" />;
+  const options: ChoiceOption<SectorGroupId>[] = sectorGroups.map((g) => ({
+    id: g.id,
+    nl: g.nl,
+    text: ui(g.key, lang),
+    picture: (
+      <span className="max3-trio">
+        {g.sectors.map((s) => <span key={s}>{sectorPicture(s, 44)}</span>)}
+        {g.notSure && <span key="none"><QuestionIcon size={30} /></span>}
+      </span>
+    ),
+    next: true,
+  }));
+  return <ChoiceCards options={options} current={sectorChoiceGroup(current)} onPick={onPick} label={said(ui('chooseSector', lang))} className="sector-step" />;
 }
 
-/** Step 2: the three sectors of a group, each with its picture. */
+/** Step 2: the sectors of a group, each with its picture; in "Iets anders" also "Weet ik nog niet". */
 export function SectorCards({ group, current, lang, onPick }: {
   group: SectorGroupId;
   current?: SectorChoice;
   lang?: HelpLanguage;
-  onPick: (s: SectorId) => void;
+  onPick: (s: SectorChoice) => void;
 }) {
   const g = sectorGroups.find((x) => x.id === group)!;
-  const options: ChoiceOption<SectorId>[] = g.sectors.map((id) => {
+  const options: ChoiceOption<SectorChoice>[] = g.sectors.map((id) => {
     const s = sectors.find((x) => x.id === id)!;
     return { id, nl: s.nl, text: ui(s.key, lang), picture: sectorPicture(id, 52) };
   });
-  return <ChoiceCards options={options} current={current === 'none' ? null : current} onPick={onPick} label={said(ui(g.key, lang))} className="sector-step sector-step-2" />;
+  if (g.notSure) options.push({ id: 'none', nl: NOT_SURE.nl, text: ui(NOT_SURE.key, lang), picture: <QuestionIcon size={34} /> });
+  return <ChoiceCards options={options} current={current ?? null} onPick={onPick} label={said(ui(g.key, lang))} className="sector-step sector-step-2" />;
 }
 
 /** The group whose second step this history entry is (a reload on the second step stays there). */
@@ -99,8 +106,7 @@ export function SectorScreen({ lang, onDone, onBack, initialGroup }: {
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, [group]);
-  const open = (g: SectorGroupId | 'none') => {
-    if (g === 'none') return onDone('none');
+  const open = (g: SectorGroupId) => {
     pushSubStep({ sectorStep: g });
     setGroup(g);
     window.scrollTo(0, 0);

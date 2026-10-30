@@ -24,6 +24,7 @@ export const UPDATES: Update[] = [
       'In deze nieuwe lessen komen woorden als de opzegtermijn, het calamiteitenverlof, het Juridisch Loket en de Belastingdienst terug in zinnen. De vertalingen en opnames volgen.',
       'Vier nieuwe hulptalen: Spaans, Portugees, Frans en Duits. Alle uitleg, woorden, zinnen en tips staan nu ook in die talen.',
       'Een telefoon in het Spaans, Portugees, Frans of Duits kiest die taal bij de eerste start zelf voor (je kunt altijd een andere kiezen).',
+      'Nieuwe sector: Tuinbouw. Bij "Waar werk je?" kies je "Iets anders" en dan "Tuinbouw". Nieuw onderwerp In de kas, met twee lessen: oogsten en sorteren, en veilig in de kas. Met woorden als de krat, het gewas, de plukkar en de spuitmiddelen. Werkregels: Veilig in kas en veld, en Tempo en stukloon.',
       'Werkregels: twee nieuwe lessen, Kinderen en zorg (zwanger, verlof, een ziek kind, kinderopvangtoeslag) en Je werk stopt: regel dit (laatste loon, huis, zorgverzekering, adres). En 15 nieuwe vragen in andere lessen, onder meer over bezwaar maken, de BHV\'er, pensioen, inburgering, de vakbond en of je hier mag werken.',
     ],
   },

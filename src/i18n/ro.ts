@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorCare: 'Îngrijire',
     sectorHospitality: 'Hoteluri și restaurante',
     sectorCleaning: 'Curățenie',
+    sectorHorticulture: 'Horticultură', // nieuw (30 okt 2026), nog nalezen
     sound: 'Sunet',
     soundOn: 'Cu sunet',
     withoutSound: 'Fără sunet',
@@ -243,6 +244,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Oprit',
     sectorGroupMake: 'Producție și transport',
     sectorGroupCare: 'Îngrijire și servicii',
+    sectorGroupOther: 'Altceva', // nieuw (30 okt 2026), nog nalezen
     voiceWoman: 'Voce de femeie',
     voiceMan: 'Voce de bărbat',
     writingPick: 'Alegerea cuvântului',

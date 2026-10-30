@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { NOT_SURE, sectors, type SectorChoice } from '../content/sectors';
+import { NOT_SURE, sectorGroups, sectors, type SectorChoice } from '../content/sectors';
 import { REGIONS, regionMetaOf, regionsOn, type RegionChoice } from '../content/regio';
 import { ensureLanguage, hasGender, isLanguageLoaded, langTag, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
@@ -96,6 +96,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   sector: { nl: 'Waar werk je?', key: 'chooseSector', icon: <SectorIcon id="logistics" size={24} /> },
   'sector-make': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   'sector-care': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
+  'sector-other': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   region: { nl: 'Waar woon je?', key: 'regionTitle', icon: <PinIcon size={24} /> },
   country: { nl: 'In welk land werk je?', key: 'countryTitle', icon: <FlagIcon size={24} /> },
   english: { nl: 'Ook Engels tonen', key: 'showEnglish', icon: <span className="set-en" lang="en">EN</span> },
@@ -344,17 +345,20 @@ export function Settings({
           <SectorGroupCards
             current={progress.sector}
             lang={lang}
-            onPick={(g) => { if (g === 'none') { onSector('none'); answered(); } else onPage(g === 'make' ? 'sector-make' : 'sector-care'); }}
+            onPick={(g) => onPage(`sector-${g}`)}
           />
         );
       case 'sector-make':
       case 'sector-care':
+      case 'sector-other': {
+        const g = sectorGroups.find((x) => `sector-${x.id}` === page)!;
         return (
           <>
-            <p className="max3-crumb"><Bi text={say(page === 'sector-make' ? 'sectorGroupMake' : 'sectorGroupCare')} /></p>
-            <SectorCards group={page === 'sector-make' ? 'make' : 'care'} current={progress.sector} lang={lang} onPick={(s) => { onSector(s); answered(2); }} />
+            <p className="max3-crumb"><Bi text={say(g.key)} /></p>
+            <SectorCards group={g.id} current={progress.sector} lang={lang} onPick={(s) => { onSector(s); answered(2); }} />
           </>
         );
+      }
       case 'region': {
         // Two cards (at most three): the region by its name (a name, never translated) and
         // "Andere plek / zeg ik liever niet". Asked here only, never in the first run.

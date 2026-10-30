@@ -7,7 +7,7 @@ export type SettingsList = 'me' | 'lessons' | 'phone';
 
 export type SettingsPage =
   | SettingsList
-  | 'language' | 'gender' | 'sector' | 'sector-make' | 'sector-care' | 'region' | 'country' | 'english' | 'certificates'
+  | 'language' | 'gender' | 'sector' | 'sector-make' | 'sector-care' | 'sector-other' | 'region' | 'country' | 'english' | 'certificates'
   | 'sound' | 'voice' | 'speaking' | 'writing' | 'text' | 'theme'
   | 'offline' | 'reminder' | 'reminder-time' | 'install' | 'backup' | 'counting' | 'reset' | 'unlock';
 
@@ -21,6 +21,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   sector: 'me',
   'sector-make': 'sector',
   'sector-care': 'sector',
+  'sector-other': 'sector',
   region: 'me',
   country: 'me',
   english: 'me',

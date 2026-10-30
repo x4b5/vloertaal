@@ -2181,6 +2181,89 @@ const aiTips = [
   ),
 ];
 
+// ---- In the greenhouse (sector tuinbouw, 30 October 2026) ----
+// A sector unit appended at the very end, so every existing course keeps its order. In the path
+// of a learner who chose "Tuinbouw" it sits in the sector slot (src/content/sectors.ts).
+
+const kasUnit = unit('kas', 'In the greenhouse', 'In de kas', '🌱', '#4d7c0f', [
+  lesson(
+    'harvest',
+    'Harvesting and sorting',
+    [
+      ['kas', 'de kas', 'the greenhouse', '🌿'],
+      ['gewas', 'het gewas', 'the crop (the plants that grow)', '🌱'],
+      ['rij', 'de rij', 'the row (of plants)', '🌾'],
+      ['oogsten', 'oogsten', 'to harvest', '🍅'],
+      ['sorteren', 'sorteren', 'to sort', '🔀'],
+      ['krat', 'de krat', 'the crate', '🧺'],
+    ],
+    [
+      ['Ik werk in de kas.', 'I work in the greenhouse.'],
+      ['In welke rij begin ik?', 'Which row do I start in?'],
+      ['De krat is vol.', 'The crate is full.'],
+    ],
+    [['Hoeveel rijen heb je gedaan?', 'How many rows have you done?'], ['Vier. Nog twee te gaan.', 'Four. Two more to go.']],
+  ),
+  lesson(
+    'greensafe',
+    'Safe in the greenhouse',
+    [
+      ['spuitmiddelen', 'de spuitmiddelen', 'the crop sprays (chemicals for plants)', '🧪'],
+      ['bespoten', 'bespoten', 'sprayed (with crop sprays)', '💨'],
+      ['plukkar', 'de plukkar', 'the picking trolley', '🛒'],
+      ['bukken', 'bukken', 'to bend down', '🙇'],
+      ['drinken', 'drinken', 'to drink', '🚰'],
+      ['hitte', 'de hitte', 'the heat (when it is very hot)', '🥵'],
+    ],
+    [
+      ['Is deze kas bespoten?', 'Has this greenhouse been sprayed?'],
+      ['Ik ga even water drinken.', 'I am going to drink some water.'],
+      ['Waar staat de plukkar?', 'Where is the picking trolley?'],
+    ],
+    [['Mag ik in kas drie werken?', 'May I work in greenhouse three?'], ['Nee, nog niet. Die is net bespoten.', 'No, not yet. It was just sprayed.']],
+  ),
+]);
+
+const kasTips = [
+  // ⚖️ check: With piece rate you must still earn at least the minimum wage for every hour you
+  // work ⚖️ (Wet minimumloon en minimumvakantiebijslag, art. 12 and the rules on piece rate;
+  // amounts: rijksoverheid.nl, never in the text).
+  tipFor(
+    'harvest',
+    '⏱️',
+    'Tempo and piece rate',
+    'In a greenhouse you often work at a set pace (tempo). Some employers pay per crate, per row or per kilo: piece rate (stukloon). Even with piece rate, you must earn at least the minimum wage for every hour you work. Check the amount on rijksoverheid.nl. Write down your hours and your crates every day, and compare them with your payslip. Working fast is good, but working safely comes first.',
+    ['Hoeveel kratten heb ik vandaag gedaan?', 'How many crates did I do today?'],
+    'You are paid per crate. At the end of the week, your pay is much lower than the minimum wage for the hours you worked. What do you do?',
+    [
+      'Show your own list of hours and crates to your employer, and ask for help if it is not fixed.',
+      'Say nothing and work faster next week, so you earn more.',
+      'Accept it: with piece rate, a low pay is normal.',
+    ],
+    'With piece rate you must still get at least the minimum wage for every hour you worked. Your own list of hours and crates helps you show what you did.',
+    ABUSE_LINE,
+  ),
+  // ⚖️ check: After spraying, nobody may go into the greenhouse until the waiting time is over ⚖️
+  // (re-entry period on the label, Wet gewasbeschermingsmiddelen en biociden; Arbobesluit,
+  // hoofdstuk 4).
+  // ⚖️ check: The employer must take measures against heat ⚖️ (Arbobesluit, art. 6.1).
+  tipFor(
+    'greensafe',
+    '🌡️',
+    'Heat and sprays',
+    'In a greenhouse it can get very hot, also in spring. Drink water often, also before you feel thirsty, and take your breaks in a cool place. Do you feel dizzy or sick, or do you get a headache? Stop and tell someone. Plants are sometimes sprayed with chemicals (spuitmiddelen). A greenhouse that was just sprayed often has a sign at the door. Do not go in until your supervisor says it is safe again.',
+    ['Mag ik al in deze kas werken?', 'May I already work in this greenhouse?'],
+    'A greenhouse was sprayed this morning. There is a sign on the door. A colleague says: "Come on, it is only for a moment." What do you do?',
+    [
+      'Stay outside, and ask your supervisor when it is safe again.',
+      'Go in quickly and hold your breath.',
+      'Go in, and wash your hands well afterwards.',
+    ],
+    'Crop sprays can hurt your skin, eyes and lungs, also when you smell nothing. After spraying there is a waiting time before people may go in again. Your supervisor knows when it is over.',
+    ADVICE_LINE,
+  ),
+];
+
 // ---- Smart tools (a basis unit right after "Asking for help", spliced in by curriculum.ts) ----
 
 export const toolsUnit = unit('tools', 'Smart tools', 'Slimme hulpmiddelen', '📱', '#d1495b', [
@@ -2476,12 +2559,14 @@ export const workUnits: Unit[] = [
   numbersUnit,
   // After "Rekenen", appended the same way (see "AI and smart apps" above).
   aiUnit,
+  // The newest sector unit, at the very end (see "In the greenhouse" above).
+  kasUnit,
 ];
 
 const lessonOrder = [toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...sayingsTips, ...dataTips, ...moreTips].sort(
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

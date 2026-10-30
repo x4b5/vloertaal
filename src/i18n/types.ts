@@ -115,6 +115,7 @@ export const uiEn = {
   sectorCare: 'Care',
   sectorHospitality: 'Hospitality',
   sectorCleaning: 'Cleaning',
+  sectorHorticulture: 'Horticulture',
   sound: 'Sound',
   soundOn: 'Sound on',
   withoutSound: 'Without sound',
@@ -280,6 +281,7 @@ export const uiEn = {
   settingOff: 'Off',
   sectorGroupMake: 'Making & moving',
   sectorGroupCare: 'Care & service',
+  sectorGroupOther: 'Something else',
   /* The regions (src/content/regio): Settings › "Waar woon je?" and the Sociale kaart on the Hulp tab. */
   regionTitle: 'Where do you live?',
   regionHint: 'Do you live or work in South Limburg? Then you get extra lessons about your region. This stays on your phone. We send it nowhere.',

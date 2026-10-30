@@ -42,6 +42,8 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.shop': ['u.horeca', 'u.warehouse'],
   'u.numbers': ['u.time', 'u.pay'],
   'u.ai': ['u.tools', 'u.contact'],
+  // Tuinbouw: safety (heat, sprays) and pay (piece rate, hours).
+  'u.kas': ['u.safety', 'u.pay'],
 };
 
 /**

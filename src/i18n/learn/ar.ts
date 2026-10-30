@@ -85,6 +85,9 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "يُطلب وضع أسماء في روبوت دردشة: هذا الرد يقول «لا» ويذكر السبب.",
     'c.aifake.a.why': "رقم جديد يطلب مالاً: هذا الرد يتحقق أولاً.",
     'c.aiplan.a.why': "التطبيق وضع جدول العمل: هذا الرد يطلب إنساناً.",
+    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
+    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
+    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
     // TODO vertalen: why the chat replies of the new lessons fit (30 October 2026). English for now; the translators replace it.
     "c.details.a.why": "Asked for a last name: this reply gives it and offers to spell it.",
     "c.dates.a.why": "Asked for the date: this reply gives the day and the date.",

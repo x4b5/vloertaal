@@ -16,7 +16,7 @@ import { stageUnit } from './units/stage';
 import { digitaalUnit } from './units/digitaal';
 import { meedoenUnit } from './units/meedoen';
 import { duurzaamUnit } from './units/duurzaam';
-import { buildUnit, careUnit, cleanUnit, factoryUnit, horecaUnit, warehouseUnit } from './units/sector';
+import { buildUnit, careUnit, cleanUnit, factoryUnit, horecaUnit, kasUnit, warehouseUnit } from './units/sector';
 
 /**
  * The Werkregels track (docs/werkregels-curriculum.md), in path order: zoeken → beginnen →
@@ -48,4 +48,4 @@ export const rulesUnits: RuleUnit[] = [
 ];
 
 /** Short sector units (curriculum, deel 6): 2 lessons each, in the order of src/content/sectors.ts. */
-export const sectorRulesUnits: RuleUnit[] = [warehouseUnit, buildUnit, factoryUnit, careUnit, horecaUnit, cleanUnit];
+export const sectorRulesUnits: RuleUnit[] = [warehouseUnit, buildUnit, factoryUnit, careUnit, horecaUnit, cleanUnit, kasUnit];

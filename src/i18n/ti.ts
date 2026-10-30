@@ -98,6 +98,7 @@ const lang: HelpLanguageSource = {
     sectorCare: 'ክንክን',
     sectorHospitality: 'ቤት ብልዕን ሆቴልን',
     sectorCleaning: 'ጽሬት',
+    sectorHorticulture: 'Horticulture', // TODO vertalen
     sound: 'ድምጺ',
     soundOn: 'ድምጺ ክፉት',
     withoutSound: 'ብዘይ ድምጺ',
@@ -244,6 +245,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'ዕጹው',
     sectorGroupMake: 'ምስራሕን ምጽዓንን',
     sectorGroupCare: 'ክንክንን ኣገልግሎትን',
+    sectorGroupOther: 'Something else', // TODO vertalen
     voiceWoman: 'ድምጺ ሰበይቲ',
     voiceMan: 'ድምጺ ሰብኣይ',
     writingPick: 'ቃል ምምራጽ',

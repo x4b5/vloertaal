@@ -85,7 +85,7 @@ const KEY_RULES = [
 ];
 
 describe('rules content: ids', () => {
-  it('has the 10 units in path order, the 7 Entree units beside them, and the 6 sector units', () => {
+  it('has the 10 units in path order, the 7 Entree units beside them, and the 7 sector units', () => {
     const FIRST_TEN = ['r.zoeken', 'r.start', 'r.contract', 'r.loon', 'r.tijd', 'r.ziek', 'r.veilig', 'r.samen', 'r.rechten', 'r.geld'];
     expect(rulesUnits.map((u) => u.id)).toEqual([
       'r.zoeken', 'r.start', 'r.afronden', 'r.contract', 'r.stage', 'r.loon', 'r.rekenen', 'r.tijd', 'r.winkel',
@@ -97,7 +97,7 @@ describe('rules content: ids', () => {
     // 19 of the Entree additions (15.3 "AI op je werk" came later).
     expect(rulesUnits.filter((u) => FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(38);
     expect(rulesUnits.filter((u) => !FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(19);
-    expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual(['r.build', 'r.care', 'r.clean', 'r.factory', 'r.horeca', 'r.warehouse']);
+    expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual(['r.build', 'r.care', 'r.clean', 'r.factory', 'r.horeca', 'r.kas', 'r.warehouse']);
     for (const u of sectorRulesUnits) expect(u.lessons, u.id).toHaveLength(2);
   });
 

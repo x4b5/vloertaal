@@ -8,7 +8,8 @@ import { allForms } from '../src/i18n/types';
  * Where the employer or agency may be the problem (exploitation, paying for a job, housing pressure, dismissal),
  * the closing line never says "ask your employer": it names the union, the Juridisch Loket and FairWork.
  */
-const ABUSE_TIPS = ['c.warning', 'c.gethelp', 'c.housing', 'c.rights', 'c.newjob'];
+// c.harvest: piece rate below the minimum wage (u.kas, 30 October 2026).
+const ABUSE_TIPS = ['c.warning', 'c.gethelp', 'c.housing', 'c.rights', 'c.newjob', 'c.harvest'];
 const tip = (id: string) => cultureTips.find((t) => t.id === id)!;
 /** "employer" in each help language (the old closing line named it). */
 const EMPLOYER: Record<string, RegExp> = {

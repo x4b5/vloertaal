@@ -1201,15 +1201,170 @@ Iets mee naar huis nemen? Vraag het altijd eerst. Het materiaal is van het bedri
 
 ## 4. Schetsen voor extra sectorunits (2 lessen elk)
 
-*Alleen titels en leerdoelen. Uitwerken in dezelfde vorm als de sectorlessen in deel 6 van het
-lespad. Ze passen bij Entree-profielen die nu niet gedekt zijn ⚖️. Lesletters zijn een voorstel.*
+*Alleen titels en leerdoelen, behalve tuinbouw en kas (gebouwd, hieronder uitgewerkt). Uitwerken in
+dezelfde vorm als de sectorlessen in deel 6 van het lespad. Ze passen bij Entree-profielen die nu niet gedekt zijn ⚖️. Lesletters zijn een voorstel.*
 
-### Sector groen · Werken met planten en dieren (`r.groen`)
+### Sector tuinbouw en kas · Werken in de tuinbouw (`r.kas`) · gebouwd
 
-- **Les G.1 · Veilig buiten werken.**
-  Leerdoel: je beschermt je tegen zon, kou en teken. Je gebruikt een machine (zoals een bosmaaier
-  of heggenschaar) alleen met uitleg. Je draagt bescherming voor ogen en oren. Met
-  bestrijdingsmiddelen werk je alleen als je dat mag ⚖️.
+*Gebouwd op 30 oktober 2026, uitgewerkt uit de schets "groen" (G.1). Een van de grootste sectoren
+voor arbeidsmigranten (Westland, oogsten, sorteren en inpakken). In de app: de sector "Tuinbouw",
+bij "Waar werk je?" onder "Iets anders" (met "Weet ik nog niet") (`src/content/sectors.ts`). De Werkregels staan in
+`src/content/regels/units/sector.ts`, het Taal-onderwerp "In de kas" (`u.kas`) in
+`src/content/work.ts`. Focus: Veilig werken en Loon (Werkregels), Veiligheid en Loon (Taal).*
+
+*De rest van de schets "groen" (werken met dieren, machines zoals een bosmaaier, teken) is nog
+niet gebouwd. Zie onderaan.*
+
+---
+
+### Les T.1 · Veilig in kas en veld
+
+**Leerdoel:** je beschermt je tegen hitte en spuitmiddelen. Je tilt en bukt zo dat je lichaam gezond blijft.
+
+**Scène** · *Beeld: Piotr in een warme kas tussen hoge tomatenplanten. Hij veegt het zweet van zijn gezicht.*
+
+> Piotr werkt in een kas in het Westland. Hij plukt tomaten. Buiten is het 30 graden. In de kas is
+> het nog warmer. Hij wil zijn rij snel afmaken. Zijn fles water is al leeg.
+
+**De regel (geschreven):** Drink op tijd. Een bespoten kas ga je pas in als het mag.
+Je werkgever moet je beschermen tegen hitte ⚖️. Drink vaak water, ook als je nog geen dorst hebt.
+Spuitmiddelen zijn middelen tegen beestjes en ziektes op de planten. Een kas die net bespoten is,
+ga je pas in als het mag ⚖️. Spuiten mag je alleen met een opleiding en een bewijs daarvan ⚖️.
+
+**Vraag 1 · Wat is het beste?** Piotr wordt duizelig. Zijn rij is nog niet af. Wat kan Piotr het beste doen?
+
+- **A.** Hij maakt eerst zijn rij helemaal af. Daarna gaat hij drinken.
+  → *Begrijpelijk. Maar duizelig zijn is een waarschuwing.*
+- **B.** Hij stopt, drinkt water en zegt het tegen zijn leidinggevende.
+  → *Goed. Zo wordt het niet erger.*
+- **C.** Hij gaat even op de grond zitten, tussen de planten.
+  → *Even zitten helpt. Maar in de kas blijft het heet.*
+
+**Goed antwoord: B.**
+**Waarom:** Hitte kan je snel ziek maken. Duizelig, misselijk of hoofdpijn? Stop, drink water en ga
+naar een koele plek. Zeg het meteen tegen iemand. Je werkgever moet zorgen voor water, pauzes en een
+koele plek ⚖️.
+
+**Vraag 2 · Waar of niet waar?** "Ruik je niets? Dan kun je een bespoten kas veilig in."
+
+**Antwoord: niet waar.**
+**Waarom:** Veel spuitmiddelen ruik je niet. Na het spuiten geldt een wachttijd ⚖️. Pas daarna mag
+je weer naar binnen. Vaak hangt er een bordje op de deur. Je leidinggevende weet wanneer het weer mag.
+
+**Vraag 3 · Wat is het beste?** Piotr tilt de hele dag kratten. Ze staan op de grond. Wat kan Piotr het beste doen?
+
+- **A.** Hij tilt ze snel met een ruk. Dan is hij eerder klaar.
+  → *Een ruk is zwaar voor zijn rug. Zo kan hij zich bezeren.*
+- **B.** Hij stapelt de kratten zo hoog als hij kan.
+  → *Een hoge stapel is zwaar en kan omvallen.*
+- **C.** Hij buigt zijn knieën en houdt de krat dicht bij zich.
+  → *Goed. Zo spaart hij zijn rug.*
+
+**Goed antwoord: C.**
+**Waarom:** Til met gebogen knieën en een rechte rug. Houd de krat dicht bij je lichaam. Draai niet
+met je rug terwijl je tilt. Veel bukken of tillen? Vraag om een kar, of wissel af met ander werk. Je
+werkgever moet zorgen dat het werk niet te zwaar is ⚖️.
+
+**Vraag 4 · Wie vraag je het?** Je moet werken in een kas die vanochtend bespoten is. Er hangt een
+bordje op de deur. Wie vraag je het eerst? *Collega · **leidinggevende** · huisarts.*
+**Waarom:** Je leidinggevende weet wanneer de wachttijd voorbij is. Krijg je geen duidelijk antwoord?
+Dan kun je de Nederlandse Arbeidsinspectie bellen.
+
+**Zo zeg je het:** "Er hangt een bordje op de deur. Mag ik al naar binnen?"
+
+**Onthoud:** Drink op tijd. Een bespoten kas ga je pas in als het mag.
+
+**Wie kan je helpen:** je leidinggevende of voorman · de bedrijfsarts · de Nederlandse Arbeidsinspectie.
+
+---
+
+### Les T.2 · Tempo en stukloon
+
+**Leerdoel:** je weet dat het minimumloon per uur ook geldt bij stukloon. Je schrijft je uren op.
+
+**Scène** · *Beeld: Esra bij een sorteerband met paprika's. Naast haar staan volle kratten.*
+
+> Esra werkt via een uitzendbureau in een kas. Ze krijgt geld per krat. Dat heet stukloon. De eerste
+> weken werkt ze nog niet zo snel. Op haar loonstrook staat weinig loon. Ze woont in een huis van het
+> uitzendbureau.
+
+**De regel (geschreven):** Ook bij stukloon krijg je minstens het minimumloon per uur.
+Stukloon betekent: je krijgt geld per krat, per rij of per kilo. Ook dan krijg je minstens het
+minimumloon voor elk uur dat je werkt ⚖️. Schrijf elke dag je uren en je kratten op. Je werkgever mag
+niet zomaar geld van je loon afhalen ⚖️.
+
+**Vraag 1 · Wat is het beste?** Esra werkt 38 uur per week. Haar loon is veel lager dan het
+minimumloon voor 38 uur. Wat kan Esra het beste doen?
+
+- **A.** Ze laat haar eigen lijst met uren zien, en vraagt om uitleg.
+  → *Goed. Met haar lijst laat ze zien wat ze heeft gedaan.*
+- **B.** Ze zegt niets. Bij stukloon is weinig loon in het begin normaal.
+  → *Begrijpelijk. Maar ook bij stukloon geldt het minimumloon per uur.*
+- **C.** Ze gaat sneller werken en slaat haar pauzes over.
+  → *Begrijpelijk. Maar pauzes heeft ze nodig, en haar loon moet nu al kloppen.*
+
+**Goed antwoord: A.**
+**Waarom:** Ook bij stukloon moet je minstens het minimumloon per uur krijgen ⚖️. Hoeveel dat is,
+staat op rijksoverheid.nl. Klopt je loon niet? Vraag om uitleg. Krijg je geen goed antwoord? Vraag
+hulp bij de vakbond of het Juridisch Loket.
+
+**Vraag 2 · Waar of niet waar?** "Bij stukloon is het niet nodig om je uren op te schrijven."
+
+**Antwoord: niet waar.**
+**Waarom:** Schrijf altijd je uren op. Wanneer begin je, hoe lang is je pauze, wanneer stop je?
+Schrijf ook je kratten of rijen op. Dan kun je je loonstrook controleren.
+
+**Vraag 3 · Wat is het beste?** Esra woont in een huis van het uitzendbureau. Elke week gaat er veel
+geld van haar loon af. Ze weet niet waarvoor. Wat kan Esra het beste doen?
+
+- **A.** Ze zegt niets. Anders raakt ze misschien haar kamer kwijt.
+  → *Begrijpelijk. Maar ze mag altijd vragen waar het geld voor is.*
+- **B.** Ze vraagt het uitzendbureau wat er van haar loon af gaat.
+  → *Goed. Zo weet ze waar ze voor betaalt.*
+- **C.** Ze stopt meteen met werken en zoekt een ander huis.
+  → *Dat is een grote stap. Eerst vragen is beter.*
+
+**Goed antwoord: B.**
+**Waarom:** Op je loonstrook staat wat er van je loon af gaat, en waarvoor ⚖️. Voor een huis via je
+werk mag maar een deel van je loon eraf ⚖️. Begrijp je het niet? Vraag het na. Kijk ook in je cao.
+
+**Vraag 4 · Wie vraag je het?** Je loon is lager dan het minimumloon. Je uitzendbureau doet er niets
+aan. Wie kan dit controleren? *Huisarts · gemeente · **Nederlandse Arbeidsinspectie**.*
+**Waarom:** De Nederlandse Arbeidsinspectie controleert het minimumloon. Je kunt daar een melding
+doen. Ook de vakbond en het Juridisch Loket helpen je.
+
+**Zo zeg je het:** "Ik heb mijn uren en kratten opgeschreven. Klopt mijn loon?"
+
+**Onthoud:** Ook bij stukloon krijg je minstens het minimumloon per uur.
+
+**Wie kan je helpen:** je uitzendbureau of werkgever · de vakbond · het Juridisch Loket · de
+Nederlandse Arbeidsinspectie.
+
+---
+
+### Taal · In de kas (`u.kas`)
+
+*Twee lessen, net als de andere sectoronderwerpen. Elke les: 6 woorden, 3 zinnen, 1 gesprekje en 1
+tip. De vertalingen staan voorlopig in het Engels (TODO vertalen). Nieuwe woorden en zinnen hebben
+nog een ElevenLabs-opname nodig.*
+
+- **Oogsten en sorteren** (`l.harvest`) · *de kas, het gewas, de rij, oogsten, sorteren, de krat* ·
+  "Ik werk in de kas." "In welke rij begin ik?" "De krat is vol." · Gesprekje: "Hoeveel rijen heb je
+  gedaan?" "Vier. Nog twee te gaan." · Tip **Tempo en stukloon**: ook bij stukloon minstens het
+  minimumloon per uur ⚖️, schrijf je uren en kratten op, en vergelijk ze met je loonstrook.
+- **Veilig in de kas** (`l.greensafe`) · *de spuitmiddelen, bespoten, de plukkar, bukken, drinken,
+  de hitte* · "Is deze kas bespoten?" "Ik ga even water drinken." "Waar staat de plukkar?" ·
+  Gesprekje: "Mag ik in kas drie werken?" "Nee, nog niet. Die is net bespoten." · Tip **Hitte en
+  spuitmiddelen**: drink vaak, ook zonder dorst; een net bespoten kas ga je pas in als je
+  leidinggevende zegt dat het weer veilig is ⚖️.
+
+---
+
+### Nog een schets: werken met planten en dieren (`r.groen`)
+
+- **Les G.1 · Veilig buiten werken** (rest van de schets). Leerdoel: je beschermt je tegen zon, kou
+  en teken. Je gebruikt een machine (zoals een bosmaaier of heggenschaar) alleen met uitleg. Je draagt
+  bescherming voor ogen en oren. *Hitte en spuitmiddelen staan nu in les T.1.*
 - **Les G.2 · Werken met dieren.**
   Leerdoel: je wast je handen na contact met dieren. Je meldt een ziek of gewond dier meteen. Je
   weet waarom je rustig en voorzichtig met dieren omgaat.

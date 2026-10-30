@@ -35,10 +35,13 @@ const SECTOR_UNITS = ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca
  * sectors' units); with none, they come after the sector units.
  */
 const APPENDED = ['u.shop', 'u.numbers', 'u.ai'];
+/** A sector unit added after those ("In de kas", 30 October 2026): at the very end of the course. */
+const LATE_SECTOR_UNITS = ['u.kas'];
 const expectedOrder = (own: string | null) => {
   const main = BASIS.map((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
-  return own ? [...main, ...APPENDED, ...rest] : [...main, ...rest, ...APPENDED];
+  const late = LATE_SECTOR_UNITS.filter((id) => !main.includes(id));
+  return own ? [...main, ...APPENDED, ...rest, ...late] : [...main, ...rest, ...APPENDED, ...late];
 };
 
 /** routeOrder for every sector, written out from the course as it was before the work-rules track. */
@@ -51,6 +54,7 @@ const TAAL_ORDER: Record<string, string[]> = {
   care: expectedOrder('u.care'),
   hospitality: expectedOrder('u.horeca'),
   cleaning: expectedOrder('u.clean'),
+  horticulture: expectedOrder('u.kas'),
 };
 
 /** The 3 choices after lesson 1.1, as before the tracks. */
@@ -63,6 +67,7 @@ const TAAL_CHOICES: Record<string, string[]> = {
   care: ['u.teamwork', 'u.firstday', 'u.care'],
   hospitality: ['u.teamwork', 'u.firstday', 'u.horeca'],
   cleaning: ['u.time', 'u.firstday', 'u.clean'],
+  horticulture: ['u.safety', 'u.firstday', 'u.kas'],
 };
 
 describe("the Dutch course ('taal') is exactly as before", () => {

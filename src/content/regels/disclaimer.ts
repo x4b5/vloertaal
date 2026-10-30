@@ -97,6 +97,8 @@ export const ruleAdvice: Record<string, 'advice' | 'abuse' | 'civic'> = {
   'r.l.factory.2.ru1': 'advice',
   'r.l.warehouse.1.ru1': 'advice',
   'r.l.warehouse.2.ru1': 'advice',
+  'r.l.kas.1.ru1': 'advice',
+  'r.l.kas.2.ru1': 'advice',
   // The Entree additions (docs/entree-aanvulling.md, units 11–17).
   'r.l.winkel.3.ru1': 'advice',
   'r.l.rekenen.1.ru1': 'advice',

@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorCare: 'مراقبت و پرستاری',
     sectorHospitality: 'رستوران و هتل',
     sectorCleaning: 'نظافت',
+    sectorHorticulture: 'باغبانی و گلخانه', // nieuw (30 okt 2026), nog nalezen
     sound: 'صدا',
     soundOn: 'صدا روشن',
     withoutSound: 'بدون صدا',
@@ -243,6 +244,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'خاموش',
     sectorGroupMake: 'ساخت و جابه‌جایی',
     sectorGroupCare: 'مراقبت و خدمات',
+    sectorGroupOther: 'چیز دیگری', // nieuw (30 okt 2026), nog nalezen
     voiceWoman: 'صدای زن',
     voiceMan: 'صدای مرد',
     writingPick: 'انتخاب کلمه',

@@ -33,6 +33,9 @@ const PENDING_RECORDING = new Set<string>([
   'Liever niet, er staan namen van klanten in.',
   'Ik bel je eerst op je oude nummer.',
   'Kan ik er met een mens over praten?',
+  // New sector unit "In de kas" (u.kas, 30 October 2026):
+  'Vier. Nog twee te gaan.',
+  'Nee, nog niet. Die is net bespoten.',
   // New unit "Getallen en gegevens" (u.data) and the lessons l.permit, l.kids, l.body and
   // l.jobends (30 October 2026):
   'Haddad. Zal ik het spellen?',
