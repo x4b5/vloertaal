@@ -116,7 +116,7 @@ samenwerken → problemen → uitkering. Units 8 en 9 kunnen ook eerder; ze bouw
 
 > Kevin zoekt zijn eerste baan. Hij kijkt op werk.nl en bij een uitzendbureau. Dan krijgt hij een bericht van een onbekend nummer. "Verdien 250 euro per dag. Je werkt vanuit huis." Kevin weet niet wat hij moet doen.
 
-**Vraag 1 · Wat doe je?** Kevin weet niet of het bericht echt is. Wat kan Kevin het beste doen?
+**Vraag 1 · Wat is het beste?** Kevin weet niet of het bericht echt is. Wat kan Kevin het beste doen?
 
 - **A.** Hij antwoordt meteen. Zo'n kans krijgt hij niet vaak.
   → *Begrijpelijk, maar pas op. Dit lijkt op oplichting.*
@@ -135,7 +135,7 @@ TikTok of Telegram. Een echt bedrijf kun je opzoeken en bellen.
 **Waarom:** Een uitzendbureau mag jou geen geld vragen voor werk. Het bedrijf waar je werkt, betaalt
 het bureau. Moet je toch betalen? Dat is een slecht teken.
 
-**Vraag 3 · Wat doe je?** Fatima wil weer werken. Ze zorgde 6 jaar voor haar kinderen. Hoe begint ze?
+**Vraag 3 · Wat is het beste?** Fatima wil weer werken. Ze zorgde 6 jaar voor haar kinderen. Hoe begint ze?
 
 - **A.** Ze wacht tot de gemeente haar een baan aanbiedt.
   → *Dat kan lang duren. Zelf zoeken werkt sneller.*
@@ -166,7 +166,7 @@ Jongerenloket · uitzendbureaus · twijfel je over een vacature? Kijk op fraudeh
 > Esra zorgde 8 jaar voor haar zieke moeder. Nu wil ze weer werken. Ze schrijft haar cv. Een cv is
 > een lijstje van je werk, je school en wat je kunt. Esra denkt: "Wat zet ik bij die 8 jaar?"
 
-**Vraag 1 · Wat doe je?** Wat schrijft Esra bij die 8 jaar?
+**Vraag 1 · Wat is het beste?** Wat schrijft Esra bij die 8 jaar?
 
 - **A.** Niets. Ze laat die jaren gewoon weg.
   → *Een gat in je cv valt op. Werkgevers vragen er dan toch naar.*
@@ -185,7 +185,7 @@ plannen, regelen en rustig blijven. Schrijf dat er gewoon bij.
 **Waarom:** Een foto mag, maar hoeft niet. Je hoeft ook je geloof niet te noemen. Een cv is kort:
 1 of 2 bladzijden.
 
-**Vraag 3 · Wat doe je?** Jayden heeft geen diploma. Hij werkte wel 2 jaar in een supermarkt. Wat kan Jayden het beste doen?
+**Vraag 3 · Wat is het beste?** Jayden heeft geen diploma. Hij werkte wel 2 jaar in een supermarkt. Wat kan Jayden het beste doen?
 
 - **A.** Hij schrijft de supermarkt op, en wat hij daar deed.
   → *Goed. Werkervaring telt, ook zonder diploma.*
@@ -216,7 +216,7 @@ loopbaanbegeleider · de gemeente.
 > Mohammed heeft een sollicitatiegesprek bij een bakkerij. Hij is er 10 minuten te vroeg. De
 > eigenaar, Linda, stelt veel vragen. Dan vraagt ze: "Ben je getrouwd? Wil je kinderen?"
 
-**Vraag 1 · Wat doe je?** Mohammed wil daar niets over zeggen. Wat kan Mohammed het beste doen?
+**Vraag 1 · Wat is het beste?** Mohammed wil daar niets over zeggen. Wat kan Mohammed het beste doen?
 
 - **A.** Hij zegt rustig: "Daar praat ik liever niet over."
   → *Goed. Hij blijft beleefd en hij hoeft niets te vertellen.*
@@ -229,12 +229,12 @@ loopbaanbegeleider · de gemeente.
 **Waarom:** Een werkgever mag niet vragen of je zwanger bent of kinderen wilt. Vragen over je geloof of gezondheid mogen ook niet. Je
 hoeft daar geen antwoord op te geven. Je kunt het later melden als discriminatie.
 
-**Vraag 2 · Wat doe je?** Aan het eind vraagt Linda: "Heb jij nog vragen?" Wat zegt Mohammed het beste?
+**Vraag 2 · Wat is het beste?** Aan het eind vraagt Linda: "Heb jij nog vragen?" Wat zegt Mohammed het beste?
 
 - **A.** "Nee, dank u. Ik wil u niet lastigvallen."
   → *Beleefd bedoeld. Maar hier kan het lijken alsof hij niet wil.*
 - **B.** "Ja. Wat zijn de werktijden, en wat verdien ik?"
-  → *Goed. Vragen stellen laat zien dat je de baan wilt.*
+  → *Goed. Zo laat hij zien dat hij de baan wil.*
 - **C.** "Nee, dat hoor ik wel als ik begin."
   → *Dan weet hij te weinig als hij moet tekenen.*
 
@@ -274,7 +274,7 @@ anderen? Dan heb je vaak wel recht op loon ⚖️. Vraag dit vóór de proefdag.
 
 *Redactie: er is geen wettelijke regel voor proefdagen. Het hangt af van arbeid, gezag en loon. ⚖️*
 
-**Vraag 2 · Wat doe je?** De baas wil dat Piotr meteen tekent. Wat kan Piotr het beste doen?
+**Vraag 2 · Wat is het beste?** De baas wil dat Piotr meteen tekent. Wat kan Piotr het beste doen?
 
 - **A.** Hij tekent meteen. Anders krijgt een ander de baan.
   → *Begrijpelijk. Maar dan weet hij niet wat hij tekent.*
@@ -287,7 +287,7 @@ anderen? Dan heb je vaak wel recht op loon ⚖️. Vraag dit vóór de proefdag.
 **Waarom:** Je mag een contract eerst lezen. Je mag iemand vragen om mee te lezen. Een goede
 werkgever geeft je die tijd.
 
-**Vraag 3 · Wat doe je?** Welke vraag stelt Piotr vóór hij tekent?
+**Vraag 3 · Wat is het beste?** Welke vraag stelt Piotr vóór hij tekent?
 
 - **A.** "Hoe heet de directeur van het hele bedrijf?"
   → *Dat mag hij vragen. Maar het zegt niets over zijn rechten.*
@@ -328,7 +328,7 @@ iemand die je vertrouwt.
 - Dan kan het team plannen.
 - Te laat, zonder bericht? Dat vinden mensen hier erger dan de vertraging zelf.
 
-**Vraag 1 · Wat doe je?** Wat neemt Dewi mee op haar eerste dag?
+**Vraag 1 · Wat is het beste?** Wat neemt Dewi mee op haar eerste dag?
 
 - **A.** Haar ID-kaart en haar bankrekeningnummer.
   → *Goed. Die heeft haar werkgever nodig.*
@@ -341,7 +341,7 @@ iemand die je vertrouwt.
 **Waarom:** Je werkgever moet je ID-kaart of paspoort zien en een kopie maken. Hij heeft ook je BSN
 nodig. Je BSN is je burgerservicenummer. Het staat op je ID-kaart. Je ID geef je nooit af.
 
-**Vraag 2 · Wat doe je?** De bus heeft vertraging. Dewi is 15 minuten te laat. Wat kan Dewi het beste doen?
+**Vraag 2 · Wat is het beste?** De bus heeft vertraging. Dewi is 15 minuten te laat. Wat kan Dewi het beste doen?
 
 - **A.** Ze legt het uit als ze binnen is.
   → *Dan weet het team te laat dat ze later komt.*
@@ -375,7 +375,7 @@ moet wel een goede reden hebben ⚖️. Vraag op je eerste dag naar de regels.
 > Jayden begint in de keuken van een restaurant. De chef heet Sanne. Ze zegt: "Hoi, ik ben Sanne.
 > Zeg maar je, hoor." Jayden weet niet goed wat hij moet doen.
 
-**Vraag 1 · Wat doe je?** Wat bedoelt Sanne met "Zeg maar je"?
+**Vraag 1 · Wat is het beste?** Wat bedoelt Sanne met "Zeg maar je"?
 
 - **A.** Ze vindt dat Jayden te zacht praat.
   → *Nee. Het gaat niet over hard of zacht praten.*
@@ -388,7 +388,7 @@ moet wel een goede reden hebben ⚖️. Vraag op je eerste dag naar de regels.
 **Waarom:** Op het werk zeggen de meeste mensen "je". Ook tegen de baas. Weet je het niet zeker? Begin met "u".
 Luister wat anderen doen. Tegen klanten en cliënten zeg je vaak wel "u".
 
-**Vraag 2 · Wat doe je?** Een collega wil je een hand geven. Jij geeft liever geen hand.
+**Vraag 2 · Wat is het beste?** Een collega wil je een hand geven. Jij geeft liever geen hand.
 
 - **A.** Je geeft toch een hand, ook al wil je het niet.
   → *Dat hoeft niet. Je mag zelf kiezen.*
@@ -422,7 +422,7 @@ normaal.
 > Piotr werkt in een fabriek. Zijn collega Mark legt een machine uit. Mark praat snel. Piotr
 > begrijpt maar de helft. Mark vraagt: "Duidelijk?"
 
-**Vraag 1 · Wat doe je?** Piotr snapt het niet goed. Wat kan Piotr het beste doen?
+**Vraag 1 · Wat is het beste?** Piotr snapt het niet goed. Wat kan Piotr het beste doen?
 
 - **A.** Hij knikt, en hij kijkt straks hoe de anderen het doen.
   → *Begrijpelijk. Maar zo kan hij een fout maken.*
@@ -435,7 +435,7 @@ normaal.
 **Waarom:** Vragen stellen is hier normaal. Het laat zien dat je het goed wilt doen. Knikken zonder
 te snappen geeft fouten. Bij machines kan dat gevaarlijk zijn.
 
-**Vraag 2 · Wat doe je?** Mark legt het opnieuw uit. Hoe checkt Piotr dat hij het snapt?
+**Vraag 2 · Wat is het beste?** Mark legt het opnieuw uit. Hoe checkt Piotr dat hij het snapt?
 
 - **A.** Hij zegt in zijn eigen woorden wat hij gaat doen.
   → *Goed. Zo hoort Mark of hij het goed begrijpt.*
@@ -486,7 +486,7 @@ stage, leerwerkbaan en zzp. Ook voor herintreders.*
 **Waarom:** Je werkgever moet laten weten wat je verdient. En hoeveel uur je werkt. Dat moet binnen
 1 week na je eerste werkdag ⚖️, op papier of digitaal. Andere afspraken volgen binnen 1 maand ⚖️. Bijvoorbeeld over vakantie en opzeggen.
 
-**Vraag 2 · Wat doe je?** Sanne snapt het woord "cao" niet. Wat kan Sanne het beste doen?
+**Vraag 2 · Wat is het beste?** Sanne snapt het woord "cao" niet. Wat kan Sanne het beste doen?
 
 - **A.** Ze slaat het woord over. Het is vast een detail.
   → *Jammer. In de cao staan juist veel van haar rechten.*
@@ -499,7 +499,7 @@ stage, leerwerkbaan en zzp. Ook voor herintreders.*
 **Waarom:** Een cao is een afspraak over loon en regels voor jouw soort werk. Je cao staat vaak
 online. Zoek op "cao" en de naam van je sector.
 
-**Vraag 3 · Wat doe je?** In het contract staat 12 uur. De baas zegt: "Je werkt echt 30 uur."
+**Vraag 3 · Wat is het beste?** In het contract staat 12 uur. De baas zegt: "Je werkt echt 30 uur."
 
 - **A.** Je vindt het goed. 30 uur is toch meer geld.
   → *Nu wel. Maar bij ziekte of ontslag telt het contract.*
@@ -551,7 +551,7 @@ baas de reden op papier geven ⚖️. De reden mag geen discriminatie zijn.
 6 maanden, maar korter dan 2 jaar? Dan hooguit 1 maand ⚖️. Contract van 2 jaar of langer, of vast?
 Dan hooguit 2 maanden ⚖️.
 
-**Vraag 3 · Wat doe je?** Fatima heeft een tijdelijk contract tot 1 juni. Het is half mei. Ze hoort niets. Wat kan Fatima het beste doen?
+**Vraag 3 · Wat is het beste?** Fatima heeft een tijdelijk contract tot 1 juni. Het is half mei. Ze hoort niets. Wat kan Fatima het beste doen?
 
 - **A.** Ze wacht af. Geen bericht betekent: ze mag blijven.
   → *Dat klopt niet. Een tijdelijk contract stopt vanzelf.*
@@ -602,7 +602,7 @@ flexwerkers). Tot die tijd geldt de regel hierboven. ⚖️*
 **Waarom:** Je werkgever moet je meestal minstens 4 dagen ⚖️ van tevoren oproepen. Is het later?
 Dan mag je nee zeggen. Een cao kan die 4 dagen korter maken. Maar niet korter dan 1 dag ⚖️.
 
-**Vraag 2 · Wat doe je?** Esra werkt maar 1 uur. Dan stuurt de baas haar naar huis.
+**Vraag 2 · Wat is het beste?** Esra werkt maar 1 uur. Dan stuurt de baas haar naar huis.
 
 - **A.** Ze krijgt loon voor 1 uur. Zo werkt oproepwerk.
   → *Vaak niet. Er is een regel voor korte oproepen.*
@@ -650,7 +650,7 @@ de uitzend-cao) · bij te weinig loon: de Nederlandse Arbeidsinspectie, ook zond
 **Waarom:** Als zzp'er krijg je geen loon als je ziek bent. Je krijgt geen WW als het werk stopt. Je
 regelt zelf je belasting, je verzekering en je pensioen. Meer per uur is dus niet altijd meer geld.
 
-**Vraag 2 · Wat doe je?** Het bedrijf bepaalt Jaydens tijden, zijn kleding en zijn route. Toch noemen ze hem zzp'er. Wat kan Jayden het beste doen?
+**Vraag 2 · Wat is het beste?** Het bedrijf bepaalt Jaydens tijden, zijn kleding en zijn route. Toch noemen ze hem zzp'er. Wat kan Jayden het beste doen?
 
 - **A.** Hij vraagt advies. Misschien is hij gewoon werknemer.
   → *Goed. Dan weet hij welke rechten hij heeft.*
@@ -711,7 +711,7 @@ vakantiegeld, toeslagen en overwerk.*
 verschil is vooral loonheffing. Loonheffing is belasting en premie voor verzekeringen. Je werkgever
 betaalt die voor jou aan de Belastingdienst. Vaak gaat er ook geld af voor je pensioen.
 
-**Vraag 2 · Wat doe je?** Fatima is 20. Een collega van 25 verdient meer. Ze doen hetzelfde werk. Wat kan Fatima het beste doen?
+**Vraag 2 · Wat is het beste?** Fatima is 20. Een collega van 25 verdient meer. Ze doen hetzelfde werk. Wat kan Fatima het beste doen?
 
 - **A.** Ze zoekt het minimumloon voor haar leeftijd op.
   → *Goed. Dan weet ze of haar loon klopt.*
@@ -725,12 +725,12 @@ betaalt die voor jou aan de Belastingdienst. Vaak gaat er ook geld af voor je pe
 krijg je het volle minimumloon. Je loon mag nooit lager zijn. Het bedrag per uur staat op
 rijksoverheid.nl. Je cao kan meer geven.
 
-**Vraag 3 · Wat doe je?** Fatima krijgt er een baan bij, in een winkel. Bij allebei vragen ze: "Wil je loonheffingskorting?" Wat kan Fatima het beste doen?
+**Vraag 3 · Wat is het beste?** Fatima krijgt er een baan bij, in een winkel. Bij allebei vragen ze: "Wil je loonheffingskorting?" Wat kan Fatima het beste doen?
 
 - **A.** Ze zegt bij allebei ja. Dan houdt ze meer over.
   → *Nu wel. Maar later moet ze dan geld terugbetalen.*
 - **B.** Ze zegt ja bij één baan, en nee bij de andere.
-  → *Goed. De korting krijg je maar één keer.*
+  → *Goed. De korting krijgt ze maar één keer.*
 - **C.** Ze zegt bij allebei nee. Dat lijkt haar het veiligst.
   → *Dan betaalt ze eerst te veel belasting.*
 
@@ -756,7 +756,7 @@ rijksoverheid.nl (minimumloon) · een vakbond.
 > Piotr schrijft elke dag zijn uren op: begintijd, eindtijd en pauze. Aan het eind van de maand
 > krijgt hij zijn loonstrook. Hij telt 152 uur. Op de loonstrook staat 140 uur.
 
-**Vraag 1 · Wat doe je?** Piotr ziet het verschil. Wat kan Piotr het beste doen?
+**Vraag 1 · Wat is het beste?** Piotr ziet het verschil. Wat kan Piotr het beste doen?
 
 - **A.** Hij zegt niets. Het verschil is niet zo groot.
   → *12 uur is veel loon. Het is zijn geld.*
@@ -775,7 +775,7 @@ uren helpt heel goed. Vraag het snel, en het liefst per mail.
 **Waarom:** Je krijgt een loonstrook bij je eerste loon ⚖️. En elke keer als het bedrag verandert ⚖️.
 De meeste werkgevers geven elke maand een loonstrook, vaak in een app. Bewaar ze goed.
 
-**Vraag 3 · Wat doe je?** Op de loonstrook staat "inhouding huisvesting". Piotr heeft daar nooit iets over getekend. Wat kan Piotr het beste doen?
+**Vraag 3 · Wat is het beste?** Op de loonstrook staat "inhouding huisvesting". Piotr heeft daar nooit iets over getekend. Wat kan Piotr het beste doen?
 
 - **A.** Hij vraagt waar hij daarvoor getekend heeft.
   → *Goed. Zonder zijn handtekening mag het meestal niet.*
@@ -785,7 +785,7 @@ De meeste werkgevers geven elke maand een loonstrook, vaak in een app. Bewaar ze
   → *Dan leent hij geld dat misschien van hem is.*
 
 **Goed antwoord: A.**
-**Waarom:** Je werkgever mag niet zomaar geld van je loon afhalen. Daar moet je eerst schriftelijk
+**Waarom:** Een inhouding is geld dat je baas van je loon afhaalt. Je werkgever mag niet zomaar geld van je loon afhalen. Daar moet je eerst schriftelijk
 mee instemmen ⚖️. Ook dan zijn er grenzen ⚖️. Klopt het niet? Vraag hulp.
 
 **Vraag 4 · Reken het uit.** *Loonstrook (fictief, ronde bedragen):* Maart · Gewerkte uren: 140 · Uurloon: 20 euro · Bruto loon: 2.800 euro · Loonheffing: - 400 euro · Inhouding huisvesting: - 300 euro · Netto loon: 2.100 euro · Vakantiegeld (opgebouwd): 224 euro. Piotr telde zelf 152 uur. Hoeveel bruto loon mist Piotr?
@@ -826,7 +826,7 @@ Arbeidsinspectie (bij te weinig loon, ook zonder je naam) · bij uitzendwerk: de
 op met elk uur dat je werkt. Meestal krijg je het in mei of juni ⚖️. Stop je eerder? Dan krijg je
 het bij je laatste loon.
 
-**Vraag 2 · Wat doe je?** Wat betekent "ORT" op Dewi's loonstrook?
+**Vraag 2 · Wat is het beste?** Wat betekent "ORT" op Dewi's loonstrook?
 
 - **A.** Een bedrag dat ze eind van het jaar terugbetaalt.
   → *Nee. Dit geld is van haar.*
@@ -839,7 +839,7 @@ het bij je laatste loon.
 **Waarom:** ORT betekent onregelmatigheidstoeslag. Dat is extra geld voor werk op onregelmatige
 tijden. Het staat in de cao, niet in de wet ⚖️. Elke cao heeft eigen regels.
 
-**Vraag 3 · Wat doe je?** Dewi werkt deze maand 10 uur over. Ze ziet die uren niet op haar loonstrook. Wat kan Dewi het beste doen?
+**Vraag 3 · Wat is het beste?** Dewi werkt deze maand 10 uur over. Ze ziet die uren niet op haar loonstrook. Wat kan Dewi het beste doen?
 
 - **A.** Ze denkt: in de zorg betalen ze overwerk nooit.
   → *Dat klopt niet. Gewerkte uren tellen.*
@@ -886,7 +886,7 @@ strenger.
 **Waarom:** Ben je 16 of 17 ⚖️? Dan mag je niet werken tussen 23.00 en 6.00 uur ⚖️. Je werkt hooguit
 9 uur per dienst ⚖️. En hooguit 45 uur per week ⚖️. Je schooltijd telt daarbij mee ⚖️.
 
-**Vraag 3 · Wat doe je?** Het rooster verandert steeds een dag van tevoren. Mohammed kan zo niets plannen. Wat kan Mohammed het beste doen?
+**Vraag 3 · Wat is het beste?** Het rooster verandert steeds een dag van tevoren. Mohammed kan zo niets plannen. Wat kan Mohammed het beste doen?
 
 - **A.** Hij past zich aan. Zo gaat het nu eenmaal.
   → *Begrijpelijk. Maar er zijn regels voor het rooster.*
@@ -924,10 +924,10 @@ Arbeidsinspectie (melden kan zonder je naam).
 2 keer 15 minuten ⚖️. Werk je meer dan 10 uur ⚖️? Dan minstens 45 minuten ⚖️. Ben je 16 of 17?
 Dan krijg je al pauze na 4,5 uur ⚖️.
 
-**Vraag 2 · Wat doe je?** De leidinggevende wil vandaag geen pauze. Wat kan Sanne het beste doen?
+**Vraag 2 · Wat is het beste?** De leidinggevende wil vandaag geen pauze. Wat kan Sanne het beste doen?
 
 - **A.** Ze vraagt rustig wanneer ze vandaag wel pauze kan nemen.
-  → *Goed. Zo zoeken ze samen een moment.*
+  → *Goed. Zo zoekt ze samen met haar leidinggevende een moment.*
 - **B.** Ze slaat haar pauze over. Het is nu eenmaal druk.
   → *Begrijpelijk. Maar pauze is haar recht, ook als het druk is.*
 - **C.** Ze neemt meteen pauze, ook al staat er een rij.
@@ -960,7 +960,7 @@ niet te werken. Je mag dan echt stoppen.
 > Kevin werkt in een fabriek. Het is 5 uur en zijn dienst is klaar. Zijn leidinggevende Henk vraagt:
 > "Kun je 2 uur langer blijven?" Kevin moet vanavond op zijn broertje passen.
 
-**Vraag 1 · Wat doe je?** Kevin kan vandaag niet langer blijven. Wat kan Kevin het beste doen?
+**Vraag 1 · Wat is het beste?** Kevin kan vandaag niet langer blijven. Wat kan Kevin het beste doen?
 
 - **A.** Hij zegt ja, en hij gaat toch om 5 uur weg.
   → *Dan rekent Henk op iemand die er niet is.*
@@ -970,7 +970,7 @@ niet te werken. Je mag dan echt stoppen.
   → *Dan weet Henk niet of Kevin blijft.*
 
 **Goed antwoord: B.**
-**Waarom:** Mensen hier vinden een duidelijk nee prettig. Ja zeggen en het niet doen, kost veel vertrouwen. Bied een andere keer aan als dat kan.
+**Waarom:** Mensen hier vinden een duidelijk nee beter dan een vaag ja. Ja zeggen en het niet doen, kost veel vertrouwen. Bied een andere keer aan als dat kan.
 
 **Vraag 2 · Waar of niet waar?** "Je moet altijd overwerken als je baas het vraagt."
 
@@ -978,7 +978,7 @@ niet te werken. Je mag dan echt stoppen.
 **Waarom:** Het hangt af van je contract en je cao ⚖️. Bij een noodgeval moet je soms wel ⚖️. Maar
 jouw situatie telt ook mee. Bijvoorbeeld zorg voor een kind.
 
-**Vraag 3 · Wat doe je?** Kevin werkt deze week voor de derde keer over. Wat kan Kevin het beste doen?
+**Vraag 3 · Wat is het beste?** Kevin werkt deze week voor de derde keer over. Wat kan Kevin het beste doen?
 
 - **A.** Hij vertrouwt erop dat Henk het zelf bijhoudt.
   → *Henk vergeet misschien iets. Zijn eigen lijst is zekerder.*
@@ -1016,7 +1016,7 @@ loonstrook is zwart werk. Dan bouw je bijvoorbeeld geen WW en pensioen op ⚖️
 - Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️.
 - Bij een noodgeval mag je meteen weg. Laat het wel meteen weten.
 
-**Vraag 1 · Wat doe je?** Wanneer vraagt Esra haar vakantie aan?
+**Vraag 1 · Wat is het beste?** Wanneer vraagt Esra haar vakantie aan?
 
 - **A.** Ze wacht tot juni, zoals haar collega zegt.
   → *Dan hebben anderen de weken misschien al.*
@@ -1037,7 +1037,7 @@ laten weten. Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgeke
 vaak meer. Vrije dagen van de wet vervallen meestal op 1 juli van het jaar erna ⚖️. Wil je vrij voor een
 feestdag, zoals het Suikerfeest of Kerst? Vraag die dag op tijd aan.
 
-**Vraag 3 · Wat doe je?** Piotr krijgt een telefoontje. Zijn zoon is gevallen op school en moet naar het ziekenhuis. Wat kan Piotr het beste doen?
+**Vraag 3 · Wat is het beste?** Piotr krijgt een telefoontje. Zijn zoon is gevallen op school en moet naar het ziekenhuis. Wat kan Piotr het beste doen?
 
 - **A.** Hij zegt het meteen tegen zijn leidinggevende, en gaat.
   → *Goed. Zo weet het werk wat er aan de hand is.*
@@ -1071,7 +1071,7 @@ meestal gewoon loon ⚖️. Moet je langer voor iemand zorgen? Vraag naar zorgve
 > Jayden wordt wakker met koorts. Zijn dienst in de keuken begint om 10 uur. Hij voelt zich echt
 > slecht. Hij pakt zijn telefoon.
 
-**Vraag 1 · Wat doe je?** Hoe meldt Jayden zich ziek?
+**Vraag 1 · Wat is het beste?** Hoe meldt Jayden zich ziek?
 
 - **A.** Hij belt zelf de chef, ruim vóór 10 uur.
   → *Goed. Zo weet de chef het op tijd.*
@@ -1090,7 +1090,7 @@ je contract of het verzuimprotocol. Dat zijn de regels voor ziekmelden bij jouw 
 **Waarom:** Je hoeft niet te zeggen wat je hebt. Je baas mag wel vragen hoe lang het ongeveer duurt.
 En waar je te bereiken bent. Over je ziekte praat je met de bedrijfsarts.
 
-**Vraag 3 · Wat doe je?** Kevin werkt via een uitzendbureau. Hij is ziek. Wat kan Kevin het beste doen?
+**Vraag 3 · Wat is het beste?** Kevin werkt via een uitzendbureau. Hij is ziek. Wat kan Kevin het beste doen?
 
 - **A.** Hij meldt het alleen aan de collega's op zijn werk.
   → *Dan weet het bureau het niet. Dat geeft problemen.*
@@ -1135,12 +1135,12 @@ waar je werkt. Vraag aan het begin hoe het moet.
 duren. In het eerste jaar krijg je minstens het minimumloon ⚖️. Een cao geeft vaak meer. Soms zijn
 er 2 wachtdagen ⚖️ zonder loon, als je contract of cao dat zegt.
 
-**Vraag 2 · Wat doe je?** De leidinggevende vraagt: "Wat is er precies met je been?" Wat kan Esra het beste doen?
+**Vraag 2 · Wat is het beste?** De leidinggevende vraagt: "Wat is er precies met je been?" Wat kan Esra het beste doen?
 
 - **A.** Ze vertelt alles, ook wat de dokter precies zei.
   → *Dat mag, als ze wil. Maar het hoeft niet.*
 - **B.** Ze zegt niets, en ze hangt snel weer op.
-  → *Contact met je werk is wel normaal en goed.*
+  → *Contact met haar werk is wel normaal en goed.*
 - **C.** Ze zegt hoe lang het ongeveer gaat duren.
   → *Goed. Dat wil de leidinggevende vooral weten.*
 
@@ -1178,7 +1178,7 @@ uitzendbureau? Vraag naar de Ziektewet) · een vakbond · het Juridisch Loket.
 **Waarom:** De bedrijfsarts heeft een beroepsgeheim. Hij vertelt je baas alleen wat je wel en niet
 kunt. Niet wat je ziekte is. Je mag ook zelf naar de bedrijfsarts gaan ⚖️, zonder je baas.
 
-**Vraag 2 · Wat doe je?** De bedrijfsarts zegt: "Begin met 2 uur per dag licht werk." Wat kan Mohammed het beste doen?
+**Vraag 2 · Wat is het beste?** De bedrijfsarts zegt: "Begin met 2 uur per dag licht werk." Wat kan Mohammed het beste doen?
 
 - **A.** Hij doet mee, en hij zegt wat wel en niet lukt.
   → *Goed. Zo bouwt hij het samen rustig op.*
@@ -1192,7 +1192,7 @@ kunt. Niet wat je ziekte is. Je mag ook zelf naar de bedrijfsarts gaan ⚖️, z
 bedrijfsarts maken samen een plan. Werk je niet mee? Dan kan je loon stoppen ⚖️. Ben je het oneens?
 Vraag dan een deskundigenoordeel bij UWV ⚖️.
 
-**Vraag 3 · Wat doe je?** Mohammed is weer beter. Wat kan Mohammed het beste doen?
+**Vraag 3 · Wat is het beste?** Mohammed is weer beter. Wat kan Mohammed het beste doen?
 
 - **A.** Hij komt morgen gewoon weer, zonder iets te zeggen.
   → *Dan klopt het rooster misschien niet.*
@@ -1226,12 +1226,12 @@ dan klopt je loon weer.
 > Piotr werkt op een bouwplaats. Zijn handschoenen zijn kapot. Zijn veiligheidsbril is zoek. Hij moet
 > zo gaan zagen.
 
-**Vraag 1 · Wat doe je?** Piotr moet zo zagen, zonder goede spullen. Wat kan Piotr het beste doen?
+**Vraag 1 · Wat is het beste?** Piotr moet zo zagen, zonder goede spullen. Wat kan Piotr het beste doen?
 
 - **A.** Hij zaagt even zonder bril. Het duurt maar kort.
-  → *Een splinter in je oog gaat heel snel.*
+  → *Een splinter in zijn oog gaat heel snel.*
 - **B.** Hij vraagt nieuwe spullen aan zijn uitvoerder.
-  → *Goed. De uitvoerder is de baas op de bouwplaats. Hij regelt dit.*
+  → *Goed. De uitvoerder is de baas op de bouwplaats. Die regelt dit.*
 - **C.** Hij koopt na het werk zelf nieuwe spullen.
   → *Goed bedoeld. Maar zijn werkgever moet ze geven.*
 
@@ -1245,12 +1245,12 @@ of veiligheidsschoenen. Erom vragen is normaal. Zonder bescherming werken is gev
 **Waarom:** Je hebt recht op uitleg over de gevaren ⚖️. En over hoe je veilig werkt. Ook als je nieuw
 bent of uitzendkracht. Snap je het niet? Vraag het nog een keer.
 
-**Vraag 3 · Wat doe je?** Op de bouw is vaak een korte vergadering over veiligheid: de toolboxmeeting. Piotr vindt het saai. Wat kan Piotr het beste doen?
+**Vraag 3 · Wat is het beste?** Op de bouw is vaak een korte vergadering over veiligheid: de toolboxmeeting. Piotr vindt het saai. Wat kan Piotr het beste doen?
 
 - **A.** Hij blijft weg. Hij weet het meeste toch al.
   → *Er kan nieuws zijn. En het hoort bij zijn werk.*
 - **B.** Hij gaat, maar hij zit op zijn telefoon.
-  → *Dan mist hij wat er gezegd wordt.*
+  → *Dan hoort hij niet wat er nieuw is.*
 - **C.** Hij gaat erheen, luistert en stelt een vraag.
   → *Goed. Zo hoort hij wat er nieuw is.*
 
@@ -1276,7 +1276,7 @@ veiligheid let) · de Nederlandse Arbeidsinspectie.
 > Kevin werkt in een distributiecentrum. Een stapel pallets staat scheef. Er valt bijna een doos op
 > een collega. Er gebeurt niets. Iedereen werkt gewoon door.
 
-**Vraag 1 · Wat doe je?** Er is niemand gewond. Wat kan Kevin het beste doen?
+**Vraag 1 · Wat is het beste?** Er is niemand gewond. Wat kan Kevin het beste doen?
 
 - **A.** Niets. Er is toch niemand gewond geraakt.
   → *Gelukkig niet. Maar de volgende keer misschien wel.*
@@ -1295,7 +1295,7 @@ kleine dingen mag je melden.
 **Waarom:** Is er ernstig en direct gevaar? Dan mag je het werk stoppen ⚖️. Zeg het meteen tegen je
 leidinggevende. Je werkgever mag je daar niet voor straffen ⚖️.
 
-**Vraag 3 · Wat doe je?** Kevin heeft het gemeld. Weken later is het nog steeds onveilig. Wat kan Kevin het beste doen?
+**Vraag 3 · Wat is het beste?** Kevin heeft het gemeld. Weken later is het nog steeds onveilig. Wat kan Kevin het beste doen?
 
 - **A.** Hij meldt het bij de Arbeidsinspectie, als het moet zonder naam.
   → *Goed. Daar is de Arbeidsinspectie voor.*
@@ -1326,7 +1326,7 @@ Nederlandse Arbeidsinspectie (nlarbeidsinspectie.nl) · bij direct gevaar: 112.
 > Dewi werkt in de thuiszorg. Ze heeft elke dag te weinig tijd voor haar cliënten. Ze slaapt slecht.
 > Ze is vaak gespannen. Ze denkt: "Dat hoort er nu eenmaal bij."
 
-**Vraag 1 · Wat doe je?** Dewi merkt dat het te veel wordt. Wat kan Dewi het beste doen?
+**Vraag 1 · Wat is het beste?** Dewi merkt dat het te veel wordt. Wat kan Dewi het beste doen?
 
 - **A.** Ze zegt niets. In de zorg heeft iedereen het druk.
   → *Begrijpelijk. Maar zo kan ze ziek worden.*
@@ -1345,7 +1345,7 @@ voordat je ziek wordt. Je mag ook zelf naar de bedrijfsarts ⚖️.
 **Waarom:** Bij een ernstig ongeluk meldt je werkgever het meteen bij de Arbeidsinspectie ⚖️.
 Bijvoorbeeld als iemand in het ziekenhuis moet blijven, blijvend letsel heeft of overlijdt ⚖️.
 
-**Vraag 3 · Wat doe je?** Fatima glijdt uit op een natte vloer. Ze bezeert haar pols. Het lijkt niet erg. Wat kan Fatima het beste doen?
+**Vraag 3 · Wat is het beste?** Fatima glijdt uit op een natte vloer. Ze bezeert haar pols. Het lijkt niet erg. Wat kan Fatima het beste doen?
 
 - **A.** Ze meldt het toch, en schrijft op wat er gebeurde.
   → *Goed. Soms krijg je later pas klachten.*
@@ -1381,7 +1381,7 @@ en de groepsapp. Deze regels staan nergens op papier. Ze verschillen ook per tea
 > Jayden maakt een salade. Chef Sanne kijkt even. Ze zegt: "Nee, dat is fout. Te veel saus. Doe het
 > zo." Ze laat het snel zien en loopt door. Jayden voelt zich dom.
 
-**Vraag 1 · Wat doe je?** Sanne zei het heel direct. Wat kan Jayden het beste doen?
+**Vraag 1 · Wat is het beste?** Sanne zei het heel direct. Wat kan Jayden het beste doen?
 
 - **A.** Hij zegt: "Oké, zo dan?" En hij doet het opnieuw.
   → *Goed. Hij laat zien dat hij wil leren.*
@@ -1394,13 +1394,13 @@ en de groepsapp. Deze regels staan nergens op papier. Ze verschillen ook per tea
 **Waarom:** Nederlanders zeggen het vaak heel direct. Ze bedoelen het meestal niet onaardig. Het gaat
 over het werk, niet over jou. Jij mag ook direct zijn, als je vriendelijk blijft.
 
-**Vraag 2 · Waar of niet waar?** "Een functioneringsgesprek betekent dat je baas je bijna ontslaat."
+**Vraag 2 · Waar of niet waar?** "Een functioneringsgesprek betekent dat je baas je snel wil ontslaan."
 
 **Antwoord: niet waar.**
 **Waarom:** Een functioneringsgesprek is een gewoon gesprek over je werk. Wat gaat goed? Wat kan
 beter? Jij mag ook zeggen wat je nodig hebt. Bereid het voor met een paar vragen.
 
-**Vraag 3 · Wat doe je?** Jayden laat een bak saus vallen. Niemand zag het. Wat kan Jayden het beste doen?
+**Vraag 3 · Wat is het beste?** Jayden laat een bak saus vallen. Niemand zag het. Wat kan Jayden het beste doen?
 
 - **A.** Hij ruimt het snel op, en hij zegt er niets over.
   → *Opruimen is goed. Maar de saus is nu op.*
@@ -1427,7 +1427,7 @@ beter? Jij mag ook zeggen wat je nodig hebt. Bereid het voor met een paar vragen
 > Fatima werkt in een schoonmaakteam. Er is werkoverleg. De leidinggevende zegt: "Vanaf nu begint iedereen een half uur eerder." Fatima brengt eerst haar kinderen naar school. Ze is het er niet
 > mee eens.
 
-**Vraag 1 · Wat doe je?** Fatima kan niet eerder beginnen. Wat kan Fatima het beste doen?
+**Vraag 1 · Wat is het beste?** Fatima kan niet eerder beginnen. Wat kan Fatima het beste doen?
 
 - **A.** Ze zegt niets, en ze komt vanaf nu een half uur te laat.
   → *Dan breekt ze de nieuwe afspraak. Dat geeft problemen.*
@@ -1446,7 +1446,7 @@ met een reden. Een eigen idee helpt: "Kan ik dan een half uur later stoppen?"
 **Waarom:** Hier praten mensen vaak lang samen. Dat heet overleggen. Maar na een besluit doet iedereen
 mee. Werkt het echt niet? Zeg het later nog een keer. Gaat het om je rechten? Vraag dan advies.
 
-**Vraag 3 · Wat doe je?** Een collega laat het zware werk steeds aan Fatima over. Wat kan Fatima het beste doen?
+**Vraag 3 · Wat is het beste?** Een collega laat het zware werk steeds aan Fatima over. Wat kan Fatima het beste doen?
 
 - **A.** Ze zegt het rustig tegen die collega zelf.
   → *Goed. Zo krijgt hij de kans om het te veranderen.*
@@ -1474,7 +1474,7 @@ niet fijn dat ...". Helpt dat niet? Ga dan naar je leidinggevende.
 > Mohammed zegt tegen collega Esra: "Ik help je vrijdag met tellen." Ze zetten het in de agenda.
 > Donderdag krijgt Mohammed voor vrijdag een andere klus.
 
-**Vraag 1 · Wat doe je?** Mohammed kan vrijdag niet helpen. Wat kan Mohammed het beste doen?
+**Vraag 1 · Wat is het beste?** Mohammed kan vrijdag niet helpen. Wat kan Mohammed het beste doen?
 
 - **A.** Hij zegt het donderdag al tegen Esra.
   → *Goed. Dan kan zij nog iets anders regelen.*
@@ -1493,7 +1493,7 @@ mogelijk. Bied een andere tijd aan.
 **Waarom:** Nederlanders plannen veel. Ook een gesprek of een kop koffie staat vaak in de agenda. Een
 agenda in je telefoon helpt om niets te vergeten.
 
-**Vraag 3 · Wat doe je?** Sanne vraagt: "Kun je dit vóór 3 uur af hebben?" Jij weet: dat haal je niet.
+**Vraag 3 · Wat is het beste?** Sanne vraagt: "Kun je dit vóór 3 uur af hebben?" Jij weet: dat haal je niet.
 
 - **A.** Je zegt ja. Je doet je best en ziet wel.
   → *Begrijpelijk. Maar dan rekent Sanne op 3 uur.*
@@ -1503,7 +1503,7 @@ agenda in je telefoon helpt om niets te vergeten.
   → *Dan weet Sanne niet wat ze kan verwachten.*
 
 **Goed antwoord: B.**
-**Waarom:** Mensen hier vinden een eerlijk "nee" of "later" prettig. Ja zeggen en het niet halen, kost meer vertrouwen. Zo kan Sanne op tijd iets anders regelen.
+**Waarom:** Mensen hier vinden een eerlijk "nee" of "later" beter dan een vaag ja. Ja zeggen en het niet halen, kost meer vertrouwen. Zo kan Sanne op tijd iets anders regelen.
 
 **Zo zeg je het:** "Het lukt vrijdag toch niet. Kan het maandag?"
 
@@ -1520,7 +1520,7 @@ agenda in je telefoon helpt om niets te vergeten.
 > Om 10 uur drinkt het team samen koffie. Collega Linda deelt taart uit: ze is jarig. Iedereen zegt:
 > "Gefeliciteerd!" Piotr zit er voor het eerst bij. Volgende maand is hij zelf jarig.
 
-**Vraag 1 · Wat doe je?** Wat is hier gewoon op je eigen verjaardag?
+**Vraag 1 · Wat is het beste?** Wat is hier gewoon op je eigen verjaardag?
 
 - **A.** Je zegt niets. Het is werk, geen feestje.
   → *Mag. Maar hier is het een leuke gewoonte.*
@@ -1540,7 +1540,7 @@ te zijn. Samen koffie drinken hoort ook bij het werk. Je bent welkom aan tafel, 
 of met eten. Gebruik je telefoon in je pauze. Wacht je op een belangrijk telefoontje? Zeg het vooraf
 tegen je leidinggevende.
 
-**Vraag 3 · Wat doe je?** Het team heeft een groepsapp. Om 23 uur appt de leidinggevende: "Wie kan morgen eerder komen?"
+**Vraag 3 · Wat is het beste?** Het team heeft een groepsapp. Om 23 uur appt de leidinggevende: "Wie kan morgen eerder komen?"
 
 - **A.** Je stuurt een screenshot naar vrienden: "Kijk nou!"
   → *Niet doen. Berichten van werk deel je niet.*
@@ -1581,7 +1581,7 @@ altijd ook hulp van buiten het bedrijf.*
 **Waarom:** Discriminatie bij werk is verboden. Bijvoorbeeld om je afkomst, geloof, geslacht,
 leeftijd of handicap. Dat geldt bij solliciteren en bij stages. En ook bij loon en promotie.
 
-**Vraag 2 · Wat doe je?** Mohammed denkt dat het om zijn naam gaat. Wat kan Mohammed het beste doen?
+**Vraag 2 · Wat is het beste?** Mohammed denkt dat het om zijn naam gaat. Wat kan Mohammed het beste doen?
 
 - **A.** Hij laat het gaan. Bewijzen kan hij het toch niet.
   → *Begrijpelijk. Maar melden kan ook zonder hard bewijs.*
@@ -1594,7 +1594,7 @@ leeftijd of handicap. Dat geldt bij solliciteren en bij stages. En ook bij loon 
 **Waarom:** Schrijf op wat er gebeurde, met datum. Bewaar berichten en de vacature. Meld het via
 discriminatie.nl. Melden helpt, ook voor anderen.
 
-**Vraag 3 · Wat doe je?** Esra draagt een hoofddoek. Haar teamleider zegt: "Hier geen hoofddoek." Er is geen reden van veiligheid of hygiëne. Wat kan Esra het beste doen?
+**Vraag 3 · Wat is het beste?** Esra draagt een hoofddoek. Haar teamleider zegt: "Hier geen hoofddoek." Er is geen reden van veiligheid of hygiëne. Wat kan Esra het beste doen?
 
 - **A.** Ze vraagt waarom, en ze vraagt advies.
   → *Goed. Dan weet ze wat haar rechten zijn.*
@@ -1620,7 +1620,7 @@ politie, bij bedreiging.
 
 ### Les 9.2 · Grensoverschrijdend gedrag
 
-**Leerdoel:** je herkent gedrag dat over je grens gaat, en je zegt stop. Je weet wie je kan helpen.
+**Leerdoel:** je herkent gedrag dat over je grens gaat, en je zegt stop. Je weet wie jou kan helpen.
 
 **Scène** · *Beeld: Dewi in een hotelgang. Een collega staat veel te dicht bij haar.*
 
@@ -1634,7 +1634,7 @@ politie, bij bedreiging.
 seksuele grappen of staren. Het maakt niet uit hoe de ander het bedoelt. Het gaat om hoe het voor jou
 voelt.
 
-**Vraag 2 · Wat doe je?** Dewi wil dat het stopt. Wat kan Dewi het beste doen?
+**Vraag 2 · Wat is het beste?** Dewi wil dat het stopt. Wat kan Dewi het beste doen?
 
 - **A.** Ze lacht mee. Dan houdt het vanzelf wel op.
   → *Begrijpelijk. Maar vaak gaat het dan juist door.*
@@ -1648,7 +1648,7 @@ voelt.
 en wie het zag. Vertel het aan je leidinggevende of de vertrouwenspersoon. Je werkgever moet je
 beschermen ⚖️.
 
-**Vraag 3 · Wat doe je?** Kevin ziet dat anderen een collega steeds uitlachen en pesten. Wat kan Kevin het beste doen?
+**Vraag 3 · Wat is het beste?** Kevin ziet dat anderen een collega steeds uitlachen en pesten. Wat kan Kevin het beste doen?
 
 - **A.** Hij lacht mee. Anders is hij straks zelf de volgende.
   → *Begrijpelijk. Maar zo gaat het pesten door.*
@@ -1686,7 +1686,7 @@ Geweld (0800-0188 ⚖️).
 **Waarom:** Je ID houd je altijd zelf. Een werkgever mag alleen een kopie maken. Je paspoort afpakken
 is een duidelijk teken van uitbuiting.
 
-**Vraag 2 · Wat doe je?** Piotr is bang dat hij zijn werk en zijn kamer kwijtraakt. Wat kan Piotr het beste doen?
+**Vraag 2 · Wat is het beste?** Piotr is bang dat hij zijn werk en zijn kamer kwijtraakt. Wat kan Piotr het beste doen?
 
 - **A.** Hij zoekt hulp, ook al is hij bang.
   → *Goed. Er zijn mensen die hem kunnen helpen.*
@@ -1698,7 +1698,7 @@ is een duidelijk teken van uitbuiting.
 **Goed antwoord: A.**
 **Waarom:** Uitbuiting is niet normaal, en het mag niet. Iedereen die in Nederland werkt, kan hulp krijgen. Je kunt het melden bij de Arbeidsinspectie, ook zonder je naam. Ben je in gevaar? Bel 112.
 
-**Vraag 3 · Wat doe je?** Jayden krijgt een bericht: "Mogen we je bankpas een week lenen? Je krijgt 500 euro." Wat kan Jayden het beste doen?
+**Vraag 3 · Wat is het beste?** Jayden krijgt een bericht: "Mogen we je bankpas een week lenen? Je krijgt 500 euro." Wat kan Jayden het beste doen?
 
 - **A.** Hij doet het één keer. Het is snel verdiend.
   → *Niet doen. Dit is een bekend trucje van criminelen.*
@@ -1737,7 +1737,7 @@ Anoniem: 0800-7000 ⚖️ · de politie · bij gevaar: 112 · FairWork · een va
 - Binnen 14 dagen ⚖️ na het tekenen mag je je nog bedenken.
 - Je baas heeft meestal toestemming nodig van UWV of de rechter ⚖️.
 
-**Vraag 1 · Wat doe je?** De baas legt een pen neer. Wat kan Sanne het beste doen?
+**Vraag 1 · Wat is het beste?** De baas legt een pen neer. Wat kan Sanne het beste doen?
 
 - **A.** Ze tekent meteen. Dan krijgt ze vast een goede referentie.
   → *Begrijpelijk. Maar ze weet nog niet wat ze opgeeft.*
@@ -1786,7 +1786,7 @@ bij schulden.*
 > Kevin werkte 1 jaar bij een fabriek. Zijn tijdelijke contract stopt. Hij krijgt geen nieuw contract.
 > Hij weet niet wat hij nu moet doen. WW is een uitkering van UWV als je je werk kwijtraakt.
 
-**Vraag 1 · Wat doe je?** Kevins laatste werkdag is vrijdag. Wat kan Kevin het beste doen?
+**Vraag 1 · Wat is het beste?** Kevins laatste werkdag is vrijdag. Wat kan Kevin het beste doen?
 
 - **A.** Hij vraagt meteen WW aan bij UWV.
   → *Goed. Dan krijgt hij op tijd geld.*
@@ -1805,7 +1805,7 @@ later? Dan krijg je misschien minder, of niets. Je doet het via Mijn UWV, met je
 **Waarom:** Je moet meestal minstens 26 van de laatste 36 weken ⚖️ gewerkt hebben. Neem je zelf
 ontslag? Dan krijg je meestal geen WW. Vraag eerst advies voordat je zelf stopt.
 
-**Vraag 3 · Wat doe je?** Kevin krijgt WW. Dan vindt hij een baantje van 10 uur per week. Wat kan Kevin het beste doen?
+**Vraag 3 · Wat is het beste?** Kevin krijgt WW. Dan vindt hij een baantje van 10 uur per week. Wat kan Kevin het beste doen?
 
 - **A.** Hij zegt niets. Het is maar een klein baantje.
   → *Niet doen. Dan moet hij later veel terugbetalen.*
@@ -1838,7 +1838,7 @@ noemt deze les geen duur.*
 > Fatima heeft een bijstandsuitkering. Bijstand is geld van de gemeente als je te weinig inkomen hebt.
 > Ze krijgt een baan van 20 uur per week. Ze is blij. Maar ze is ook bang: "Houd ik wel genoeg over?"
 
-**Vraag 1 · Wat doe je?** Fatima begint over 2 weken. Wat kan Fatima het beste doen?
+**Vraag 1 · Wat is het beste?** Fatima begint over 2 weken. Wat kan Fatima het beste doen?
 
 - **A.** Ze vertelt het pas als ze een maand gewerkt heeft.
   → *Te laat. Dan krijgt ze te veel, en moet ze terugbetalen.*
@@ -1859,7 +1859,7 @@ schulden.
 kinderopvang. Hoeveel je krijgt, hangt af van je inkomen. Verdien je meer? Geef het door via Mijn
 toeslagen. Anders moet je later terugbetalen.
 
-**Vraag 3 · Wat doe je?** Fatima wil weten wat ze straks overhoudt. Wat kan Fatima het beste doen?
+**Vraag 3 · Wat is het beste?** Fatima wil weten wat ze straks overhoudt. Wat kan Fatima het beste doen?
 
 - **A.** Ze vraagt de gemeente om het samen uit te rekenen.
   → *Goed. Dan weet ze hoeveel geld ze overhoudt.*
@@ -1893,7 +1893,7 @@ kinderopvang. Dan kies je met de juiste cijfers.
 > Jayden werkte vorig jaar 4 maanden in de zomer. Daarna ging hij weer naar school. In maart krijgt hij
 > een blauwe brief van de Belastingdienst. Hij maakt hem niet open, en legt hem in een la.
 
-**Vraag 1 · Wat doe je?** Wat doet Jayden met de brief?
+**Vraag 1 · Wat is het beste?** Wat doet Jayden met de brief?
 
 - **A.** Hij laat hem liggen. Zo'n brief is meestal niks.
   → *Soms wel. Er kan een datum in staan.*
@@ -1916,8 +1916,7 @@ met je aangifte. Dat kan tot 5 jaar ⚖️ terug.
 
 **Antwoord: waar.**
 **Waarom:** Een aangifte is een formulier over je inkomen van vorig jaar. Krijg je een brief dat je
-aangifte moet doen? Doe het dan vóór 1 mei ⚖️. Lukt dat niet? Vraag op tijd om meer tijd. Je doet
-aangifte online, met je DigiD.
+aangifte moet doen? Doe het dan vóór 1 mei ⚖️. Lukt dat niet? Vraag dan op tijd om uitstel. Dan krijg je meer tijd. Je doet aangifte online, met je DigiD.
 
 **Zo zeg je het:** "Ik heb een brief van de Belastingdienst. Wil je mij helpen met lezen?"
 
@@ -1937,7 +1936,7 @@ de sociaal raadslieden of de formulierenhulp van je gemeente.
 > Esra heeft een schuld bij haar telefoonbedrijf. Daarna komt er nog een rekening bij. En nog een. Ze
 > opent de brieven niet meer. Ze schaamt zich.
 
-**Vraag 1 · Wat doe je?** Esra weet niet meer hoe ze moet betalen. Wat kan Esra het beste doen?
+**Vraag 1 · Wat is het beste?** Esra weet niet meer hoe ze moet betalen. Wat kan Esra het beste doen?
 
 - **A.** Ze wacht tot ze meer verdient. Dan betaalt ze alles.
   → *Begrijpelijk. Maar schulden worden snel groter door extra kosten.*
@@ -1956,7 +1955,7 @@ bent niet de enige. Hulp van de gemeente bij schulden is gratis.
 **Waarom:** Bij beslag gaat een deel van je loon naar de schuld. Maar een deel blijft
 altijd voor jou. Dat heet de beslagvrije voet ⚖️. Check of dat bedrag klopt.
 
-**Vraag 3 · Wat doe je?** Esra heeft nieuw werk. Ze wil haar schulden aanpakken. Wat kan Esra het beste doen?
+**Vraag 3 · Wat is het beste?** Esra heeft nieuw werk. Ze wil haar schulden aanpakken. Wat kan Esra het beste doen?
 
 - **A.** Ze maakt een lijst: wat moet ze aan wie betalen?
   → *Goed. Met een overzicht kan iemand haar helpen.*
@@ -2097,14 +2096,14 @@ nakijken.*
 **Waarom:** VCA is een cursus met een examen. Je leert de gevaren op de bouw kennen. VCA is geen
 wet ⚖️. Maar veel bedrijven laten je zonder VCA niet op de bouwplaats. Vraag wie de cursus betaalt.
 
-**Vraag 2 · Wat doe je?** Mohammed krijgt geen veiligheidsschoenen. Hij heeft alleen gewone sneakers. Wat kan Mohammed het beste doen?
+**Vraag 2 · Wat is het beste?** Mohammed krijgt geen veiligheidsschoenen. Hij heeft alleen gewone sneakers. Wat kan Mohammed het beste doen?
 
 - **A.** Hij werkt op zijn sneakers. Het is maar voor één dag.
   → *Begrijpelijk. Maar een spijker gaat zo door een sneaker.*
 - **B.** Hij koopt zelf schoenen, en betaalt ze van zijn loon.
   → *Goed bedoeld. Maar zijn werkgever moet ze gratis geven.*
 - **C.** Hij vraagt de uitvoerder om veiligheidsschoenen.
-  → *Goed. De uitvoerder is de baas op de bouwplaats. Hij regelt dit.*
+  → *Goed. De uitvoerder is de baas op de bouwplaats. Die regelt dit.*
 
 **Goed antwoord: C.**
 **Waarom:** Beschermende spullen heten ook PBM: persoonlijke beschermingsmiddelen. Denk aan een helm,
@@ -2135,7 +2134,7 @@ Arbeidsinspectie.
 > Elke maandag is er een toolboxmeeting over veiligheid. Daarna moet Kevin snel een plaat halen. De
 > kortste weg is onder de kraan door. Aan de kraan hangt een zwaar blok.
 
-**Vraag 1 · Wat doe je?** Kevin wil de plaat halen. Wat kan Kevin het beste doen?
+**Vraag 1 · Wat is het beste?** Kevin wil de plaat halen. Wat kan Kevin het beste doen?
 
 - **A.** Hij loopt snel onder het blok door. Het hangt toch vast.
   → *Begrijpelijk. Maar een last kan altijd vallen.*
@@ -2154,7 +2153,7 @@ is altijd beter.
 **Waarom:** Boven 2,5 meter ⚖️ is er valgevaar. Dan moet je werkgever zorgen voor bescherming ⚖️.
 Bijvoorbeeld een leuning of een harnas. Is die er niet? Ga dan niet verder, en zeg het meteen.
 
-**Vraag 3 · Wat doe je?** In de toolboxmeeting zegt de uitvoerder: "Doe altijd eerst een LMRA." Wat betekent dat?
+**Vraag 3 · Wat is het beste?** In de toolboxmeeting zegt de uitvoerder: "Doe altijd eerst een LMRA." Wat betekent dat?
 
 - **A.** Je kijkt vlak voor je begint wat er mis kan gaan.
   → *Goed. Zo zie je gevaar op tijd.*
@@ -2195,12 +2194,12 @@ kan er misgaan? Wat heb je nodig? Zie je gevaar? Begin dan niet, en meld het.
 Daarom draag je geen sieraden aan je handen en polsen ⚖️. Je nagels zijn kort en zonder nagellak ⚖️.
 Lang haar draag je vast.
 
-**Vraag 2 · Wat doe je?** Dewi heeft net een cliënt geholpen. Ze moet meteen naar de volgende. Wat kan Dewi het beste doen?
+**Vraag 2 · Wat is het beste?** Dewi heeft net een cliënt geholpen. Ze moet meteen naar de volgende. Wat kan Dewi het beste doen?
 
 - **A.** Ze loopt meteen door. Haar handen zien er schoon uit.
   → *Begrijpelijk. Maar bacteriën zie je niet.*
 - **B.** Ze trekt alleen een paar nieuwe handschoenen aan.
-  → *Handschoenen helpen. Maar ook je handen moeten schoon.*
+  → *Handschoenen helpen. Maar ook haar handen moeten schoon zijn.*
 - **C.** Ze maakt eerst haar handen schoon.
   → *Goed. Zo neemt ze geen bacteriën mee.*
 
@@ -2208,7 +2207,7 @@ Lang haar draag je vast.
 **Waarom:** Maak je handen schoon voor en na elke cliënt. Met water en zeep, of met handalcohol. Doe
 dat ook als je handschoenen uittrekt ⚖️. Zo bescherm je je cliënten en jezelf.
 
-**Vraag 3 · Wat doe je?** Dewi heeft vannacht overgegeven. Nu voelt ze zich weer goed. Wat kan Dewi het beste doen?
+**Vraag 3 · Wat is het beste?** Dewi heeft vannacht overgegeven. Nu voelt ze zich weer goed. Wat kan Dewi het beste doen?
 
 - **A.** Ze gaat werken. Ze voelt zich nu toch goed.
   → *Begrijpelijk. Maar ze kan cliënten nog besmetten.*
@@ -2218,7 +2217,7 @@ dat ook als je handschoenen uittrekt ⚖️. Zo bescherm je je cliënten en jeze
   → *Goed bedoeld. Maar dat helpt niet genoeg.*
 
 **Goed antwoord: B.**
-**Waarom:** Overgeven of diarree kan besmettelijk zijn. Cliënten worden vaak sneller ziek. Bel dus vóór je dienst. Volg het protocol van je werk. Daar staat in wat je moet doen.
+**Waarom:** Overgeven of diarree kan besmettelijk zijn. Cliënten worden sneller en erger ziek dan gezonde mensen. Bel dus vóór je dienst. Volg het protocol van je werk. Daar staat in wat je moet doen.
 
 **Zo zeg je het:** "Mijn ring en horloge gaan af. Waar kan ik ze veilig leggen?"
 
@@ -2243,7 +2242,7 @@ dat ook als je handschoenen uittrekt ⚖️. Zo bescherm je je cliënten en jeze
 **Waarom:** Wat je over cliënten weet, is privé. Dat geldt ook voor foto's ⚖️. Je deelt niets zonder
 toestemming. Ook niet thuis of online. Volg de regels van je werk.
 
-**Vraag 2 · Wat doe je?** Fatima moet medicijnen geven. Ze heeft dat nog nooit geleerd. Wat kan Fatima het beste doen?
+**Vraag 2 · Wat is het beste?** Fatima moet medicijnen geven. Ze heeft dat nog nooit geleerd. Wat kan Fatima het beste doen?
 
 - **A.** Ze vraagt eerst uitleg aan een ervaren collega.
   → *Goed. Je geeft alleen medicijnen als je het geleerd hebt.*
@@ -2256,7 +2255,7 @@ toestemming. Ook niet thuis of online. Volg de regels van je werk.
 **Waarom:** Geef alleen medicijnen als je het geleerd hebt ⚖️. En als het mag van je werk. Check
 altijd de lijst: de juiste persoon, het juiste medicijn, de juiste tijd. Weet je het niet zeker? Vraag het eerst.
 
-**Vraag 3 · Wat doe je?** Fatima geeft een pil een uur te laat. Niemand heeft het gezien. Wat kan Fatima het beste doen?
+**Vraag 3 · Wat is het beste?** Fatima geeft een pil een uur te laat. Niemand heeft het gezien. Wat kan Fatima het beste doen?
 
 - **A.** Ze zegt niets. Het was maar een uurtje.
   → *Begrijpelijk. Maar soms is een uur belangrijk.*
@@ -2297,7 +2296,7 @@ straf. Het gaat erom dat de cliënt veilig is. En dat het team ervan leert.
 horeca staat het in de hygiënecode ⚖️. Bijvoorbeeld: stickers met de datum, goed koelen en schoon
 werken. Een inspecteur van de NVWA komt soms kijken.
 
-**Vraag 2 · Wat doe je?** Een bak saus staat al 2 uur op het aanrecht. Het is warm in de keuken. Wat kan Jayden het beste doen?
+**Vraag 2 · Wat is het beste?** Een bak saus staat al 2 uur op het aanrecht. Het is warm in de keuken. Wat kan Jayden het beste doen?
 
 - **A.** Hij zet de bak snel terug in de koelkast.
   → *Begrijpelijk. Maar misschien is de saus al niet meer goed.*
@@ -2310,7 +2309,7 @@ werken. Een inspecteur van de NVWA komt soms kijken.
 **Waarom:** Koud eten bewaar je in de koelkast, op 7 graden of kouder ⚖️. Stond het te lang warm? Dan
 kunnen er bacteriën in groeien. Weet je het niet zeker? Vraag het, of gooi het weg.
 
-**Vraag 3 · Wat doe je?** Jayden heeft net rauwe kip gesneden. Nu moet hij sla snijden. Wat kan Jayden het beste doen?
+**Vraag 3 · Wat is het beste?** Jayden heeft net rauwe kip gesneden. Nu moet hij sla snijden. Wat kan Jayden het beste doen?
 
 - **A.** Hij wast zijn handen, en pakt een schone plank.
   → *Goed. Zo komen er geen bacteriën van de kip op de sla.*
@@ -2340,7 +2339,7 @@ planken en messen. Was je handen na rauw vlees.
 > Esra werkt in de bediening van een café. Een gast vraagt: "Zitten er noten in de taart? Ik ben
 > allergisch." Esra weet het niet zeker. Het is druk.
 
-**Vraag 1 · Wat doe je?** De gast is allergisch voor noten. Wat kan Esra het beste doen?
+**Vraag 1 · Wat is het beste?** De gast is allergisch voor noten. Wat kan Esra het beste doen?
 
 - **A.** Ze zegt: "Nee hoor, dat denk ik niet."
   → *Begrijpelijk. Maar raden kan iemand heel ziek maken.*
@@ -2358,11 +2357,11 @@ nooit. Vraag het na.
 
 **Antwoord: niet waar.**
 **Waarom:** Fooi is extra, van de gasten. Je werkgever betaalt je gewoon minstens het minimumloon ⚖️.
-Fooi mag hij daar niet bij optellen ⚖️. Vraag hoe jullie team de fooi verdeelt.
+Fooi mag hij daar niet bij optellen ⚖️. Vraag hoe de fooi in jullie team wordt verdeeld.
 
-**Vraag 3 · Wat doe je?** Esra werkt er al 2 maanden. Ze hoort niets over de fooi. Wat kan Esra het beste doen?
+**Vraag 3 · Wat is het beste?** Esra werkt er al 2 maanden. Ze hoort niets over de fooi. Wat kan Esra het beste doen?
 
-- **A.** Ze vraagt haar leidinggevende hoe ze de fooi verdelen.
+- **A.** Ze vraagt haar leidinggevende hoe het team de fooi verdeelt.
   → *Goed. Elk team doet het anders. Vragen is normaal.*
 - **B.** Ze pakt elke avond zelf wat geld uit de pot.
   → *Niet doen. Dan lijkt het op stelen.*
@@ -2395,7 +2394,7 @@ Arbeidsinspectie.
 > Fatima maakt 's avonds een kantoor schoon. Ze werkt alleen. Een wc is heel vies. Ze denkt: "Met
 > twee middelen samen gaat het sneller." Ze pakt de chloor en een ontkalker.
 
-**Vraag 1 · Wat doe je?** Fatima wil de wc snel schoon krijgen. Wat kan Fatima het beste doen?
+**Vraag 1 · Wat is het beste?** Fatima wil de wc snel schoon krijgen. Wat kan Fatima het beste doen?
 
 - **A.** Ze giet de twee middelen samen. Dan werkt het sterker.
   → *Niet doen. Dan kan er giftig gas ontstaan.*
@@ -2415,12 +2414,12 @@ slecht voor je longen. Gebruik één middel tegelijk. Spoel goed na voor je een 
 handschoenen of een bril nodig hebt. Je werkgever moet uitleg geven ⚖️. En beschermende spullen,
 gratis ⚖️.
 
-**Vraag 3 · Wat doe je?** Fatima werkt alleen in het gebouw. Het is 10 uur 's avonds. Wat kan Fatima het beste doen?
+**Vraag 3 · Wat is het beste?** Fatima werkt alleen in het gebouw. Het is 10 uur 's avonds. Wat kan Fatima het beste doen?
 
 - **A.** Ze spreekt met haar leidinggevende af hoe ze hulp vraagt.
   → *Goed. Dan weet iemand waar ze is.*
 - **B.** Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.
-  → *Begrijpelijk. Maar als ze alleen is, kan niemand haar helpen.*
+  → *Begrijpelijk. Maar alleen loopt ze meer gevaar.*
 - **C.** Ze neemt haar zoon mee, voor de veiligheid.
   → *Begrijpelijk. Maar haar werkgever moet dit regelen.*
 
@@ -2446,7 +2445,7 @@ Arbeidsinspectie · bij een ongeluk: 112.
 > Piotr maakt elke dag een school schoon. Hij dweilt veel gangen. Zijn steel is kort, dus hij werkt
 > gebukt. 's Avonds doet zijn rug pijn.
 
-**Vraag 1 · Wat doe je?** Piotr heeft steeds last van zijn rug. Wat kan Piotr het beste doen?
+**Vraag 1 · Wat is het beste?** Piotr heeft steeds last van zijn rug. Wat kan Piotr het beste doen?
 
 - **A.** Hij neemt elke dag een pijnstiller, en werkt door.
   → *Begrijpelijk. Maar zo lost hij het probleem niet op.*
@@ -2465,7 +2464,7 @@ helpen daarbij. Bijvoorbeeld een steel die je langer kunt maken. Of een kar, zod
 **Waarom:** Pijn is een waarschuwing. Wacht niet tot het erger wordt. Praat erover met je leidinggevende.
 Je mag ook zelf naar de bedrijfsarts ⚖️.
 
-**Vraag 3 · Wat doe je?** Piotr moet een zware vuilniszak in een hoge container gooien. Wat kan Piotr het beste doen?
+**Vraag 3 · Wat is het beste?** Piotr moet een zware vuilniszak in een hoge container gooien. Wat kan Piotr het beste doen?
 
 - **A.** Hij tilt de zak in één keer met een ruk omhoog.
   → *Dat is zwaar voor zijn rug. Zo kan hij zich bezeren.*
@@ -2499,7 +2498,7 @@ zwaar? Maak het lichter, of vraag hulp. Gebruik een kar als dat kan.
 > Sanne werkt in een fabriek bij een verpakkingsmachine. Er zit een doos vast. De machine draait nog.
 > Ze wil de doos er snel uit trekken. Dan roept Henk: "Wacht!"
 
-**Vraag 1 · Wat doe je?** De doos zit vast, en de band draait nog. Wat kan Sanne het beste doen?
+**Vraag 1 · Wat is het beste?** De doos zit vast, en de band draait nog. Wat kan Sanne het beste doen?
 
 - **A.** Ze trekt de doos er snel uit. Het duurt maar een seconde.
   → *Een seconde is genoeg voor een zwaar ongeluk.*
@@ -2519,7 +2518,7 @@ Weet waar de noodstop zit, vóór je begint.
 Met een kaartje: wie eraan werkt. Zo kan niemand hem per ongeluk aanzetten. Haal nooit het slot van
 een ander eraf.
 
-**Vraag 3 · Wat doe je?** Een kap van de machine is kapot. Zonder kap gaat het werk sneller. Wat kan Sanne het beste doen?
+**Vraag 3 · Wat is het beste?** Een kap van de machine is kapot. Zonder kap gaat het werk sneller. Wat kan Sanne het beste doen?
 
 - **A.** Ze werkt door zonder kap. Ze let extra goed op.
   → *Begrijpelijk. Maar de kap is er voor haar handen.*
@@ -2557,7 +2556,7 @@ Nederlandse Arbeidsinspectie.
 heb je minstens 14 uur rust ⚖️. Tussen 2 gewone diensten zit meestal minstens 11 uur ⚖️. Kijk ook in
 je cao ⚖️.
 
-**Vraag 2 · Wat doe je?** Henk vraagt Mohammed om vanmiddag terug te komen. Wat kan Mohammed het beste doen?
+**Vraag 2 · Wat is het beste?** Henk vraagt Mohammed om vanmiddag terug te komen. Wat kan Mohammed het beste doen?
 
 - **A.** Hij zegt ja. Hij slaapt straks wel een paar uur.
   → *Begrijpelijk. Maar moe werken bij machines is gevaarlijk.*
@@ -2569,10 +2568,10 @@ je cao ⚖️.
 **Goed antwoord: B.**
 **Waarom:** Rust heb je echt nodig. Moe werken geeft fouten en ongelukken. Zeg rustig nee, en bied een ander moment aan. Slaap overdag in een donkere, stille kamer.
 
-**Vraag 3 · Wat doe je?** Op Mohammeds loonstrook staat "ploegentoeslag". Hij weet niet hoeveel het moet zijn. Wat kan Mohammed het beste doen?
+**Vraag 3 · Wat is het beste?** Op Mohammeds loonstrook staat "ploegentoeslag". Hij weet niet hoeveel het moet zijn. Wat kan Mohammed het beste doen?
 
 - **A.** Hij zoekt het op in zijn cao.
-  → *Goed. Daar staat hoeveel toeslag je krijgt.*
+  → *Goed. Daar staat hoeveel toeslag hij krijgt.*
 - **B.** Hij vraagt het aan een vriend uit een andere fabriek.
   → *Kan. Maar die heeft misschien een andere cao.*
 - **C.** Hij denkt: de wet zegt vast hoeveel het is.
@@ -2605,7 +2604,7 @@ Arbeidsinspectie.
 > zegt: "Pak jij de heftruck even? De sleutel zit erin." Jayden heeft nog nooit op een heftruck
 > gereden.
 
-**Vraag 1 · Wat doe je?** Jayden heeft geen opleiding voor de heftruck. Wat kan Jayden het beste doen?
+**Vraag 1 · Wat is het beste?** Jayden heeft geen opleiding voor de heftruck. Wat kan Jayden het beste doen?
 
 - **A.** Hij rijdt heel langzaam. Dan kan er niets gebeuren.
   → *Begrijpelijk. Maar ook langzaam kan het misgaan.*
@@ -2625,7 +2624,7 @@ mag. Een heftruck is zwaar en kan omvallen. Ongelukken met heftrucks komen vaak 
 je goed bent opgeleid ⚖️. Daarom vragen veel bedrijven een heftruckcertificaat. Dat haal je met een
 cursus.
 
-**Vraag 3 · Wat doe je?** Jayden moet naar de andere kant van het magazijn. Over de rijbaan van de heftrucks is het korter. Wat kan Jayden het beste doen?
+**Vraag 3 · Wat is het beste?** Jayden moet naar de andere kant van het magazijn. Over de rijbaan van de heftrucks is het korter. Wat kan Jayden het beste doen?
 
 - **A.** Hij loopt over de looppaden, ook al is het verder.
   → *Goed. Daar zijn voetgangers veilig.*
@@ -2657,7 +2656,7 @@ Arbeidsinspectie.
 > orders ze per uur doet. Haar teamleider zegt: "Je haalt de norm niet." Esra werkt al zo snel als
 > ze kan.
 
-**Vraag 1 · Wat doe je?** Esra haalt de norm niet. Wat kan Esra het beste doen?
+**Vraag 1 · Wat is het beste?** Esra haalt de norm niet. Wat kan Esra het beste doen?
 
 - **A.** Ze vraagt hoe de norm werkt, en wat beter kan.
   → *Goed. Zo weet ze wat haar baas van haar wil.*
@@ -2667,8 +2666,7 @@ Arbeidsinspectie.
   → *Dat is zwaar voor haar rug. Zo kan ze zich bezeren.*
 
 **Goed antwoord: A.**
-**Waarom:** Vraag hoe de norm werkt. Wat telt de scanner mee? Is de norm voor iedereen even hoog? Vraag
-ook wat beter kan. Je pauze sla je niet over.
+**Waarom:** De norm is hoeveel je per uur moet doen. Vraag hoe de norm werkt. Wat telt de scanner mee? Is de norm voor iedereen even hoog? Vraag ook wat beter kan. Je pauze sla je niet over.
 
 **Vraag 2 · Waar of niet waar?** "Je werkgever moet zorgen dat het tempo niet ongezond is."
 
@@ -2676,7 +2674,7 @@ ook wat beter kan. Je pauze sla je niet over.
 **Waarom:** Te hoge werkdruk en te veel tillen maken mensen ziek. Je werkgever moet dat voorkomen ⚖️.
 Krijg je klachten van het tempo? Meld het bij je leidinggevende. Of ga zelf naar de bedrijfsarts ⚖️.
 
-**Vraag 3 · Wat doe je?** Esra moet een zware doos van de onderste plank pakken. Wat kan Esra het beste doen?
+**Vraag 3 · Wat is het beste?** Esra moet een zware doos van de onderste plank pakken. Wat kan Esra het beste doen?
 
 - **A.** Ze buigt voorover, en tilt de doos met haar rug.
   → *Dan komt alle kracht op haar rug. Dat geeft klachten.*

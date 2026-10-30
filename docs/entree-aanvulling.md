@@ -128,7 +128,7 @@ vragen en een klacht.*
 > Kevin werkt sinds kort in een supermarkt. Hij vult het schap met melk. Vooraan staat nog oude
 > melk. De nieuwe melk heeft een latere datum. Kevin wil snel klaar zijn.
 
-**Vraag 1 · Wat doe je?** Waar zet Kevin de nieuwe melk?
+**Vraag 1 · Wat is het beste?** Waar zet Kevin de nieuwe melk?
 
 - **A.** Vooraan. Dan ziet het schap er vers uit.
   → *Begrijpelijk. Maar dan blijft de oude melk staan.*
@@ -151,7 +151,7 @@ eigen regels voor THT. Vraag hoe het bij jou gaat.
 *Redactie: THT-producten mogen na de datum verkocht worden, op verantwoordelijkheid van de verkoper.
 Voor sommige gekoelde producten gelden andere regels ⚖️ (NVWA). Daarom: "vraag hoe het bij jou gaat".*
 
-**Vraag 3 · Wat doe je?** Kevin zet drie rolcontainers in het pad. Een klant met een rollator wil erlangs. Wat kan Kevin het beste doen?
+**Vraag 3 · Wat is het beste?** Kevin zet drie rolcontainers in het pad. Een klant met een rollator wil erlangs. Wat kan Kevin het beste doen?
 
 - **A.** Hij zegt sorry en schuift de containers aan de kant.
   → *Goed. Het pad moet vrij zijn voor klanten.*
@@ -181,7 +181,7 @@ vrij zijn ⚖️. Zet lege dozen en folie meteen weg.
 > Fatima werkt in een bouwmarkt. Ze vult een schap met lampen. Een klant komt naar haar toe. "Welke
 > lamp past in mijn keuken?" Fatima weet het niet.
 
-**Vraag 1 · Wat doe je?** Fatima weet het antwoord niet. Wat kan Fatima het beste doen?
+**Vraag 1 · Wat is het beste?** Fatima weet het antwoord niet. Wat kan Fatima het beste doen?
 
 - **A.** Ze kiest een lamp die er goed uitziet.
   → *Dan krijgt de klant misschien de verkeerde lamp.*
@@ -194,7 +194,7 @@ vrij zijn ⚖️. Zet lege dozen en folie meteen weg.
 **Waarom:** Niet alles weten is normaal. Raden is niet slim: de klant komt dan terug. Zeg het eerlijk.
 Breng de klant naar iemand die het wel weet. Dat heet doorverwijzen.
 
-**Vraag 2 · Wat doe je?** Fatima is druk bezig. Een klant zegt: "Mag ik u iets vragen?" Wat kan Fatima het beste doen?
+**Vraag 2 · Wat is het beste?** Fatima is druk bezig. Een klant zegt: "Mag ik u iets vragen?" Wat kan Fatima het beste doen?
 
 - **A.** Ze stopt even, kijkt de klant aan en luistert.
   → *Goed. In een winkel gaat de klant voor.*
@@ -228,7 +228,7 @@ etiket. Allergenen staan daar extra duidelijk, bijvoorbeeld vet gedrukt ⚖️. 
 > Jayden zit voor het eerst alleen achter de kassa. Een jongen legt een krat bier op de band. Hij
 > ziet er jong uit. Achter hem staat een lange rij. De jongen zegt: "Ik ben 18, hoor."
 
-**Vraag 1 · Wat doe je?** Jayden weet niet zeker hoe oud de jongen is. Wat kan Jayden het beste doen?
+**Vraag 1 · Wat is het beste?** Jayden weet niet zeker hoe oud de jongen is. Wat kan Jayden het beste doen?
 
 - **A.** Hij vraagt rustig: "Mag ik je ID zien?"
   → *Goed. Zonder bewijs van 18 jaar geen alcohol.*
@@ -260,7 +260,7 @@ is een afspraak van winkels, geen wet ⚖️.*
 terug, dan ziet de klant het ook. Kom je aan het eind geld tekort? Zeg het meteen tegen je
 leidinggevende. Je baas mag het niet zomaar van je loon afhalen ⚖️.
 
-**Vraag 3 · Wat doe je?** Een klant is boos. "Dit brood is gisteren gekocht. Nu zit er al schimmel op!" Hij praat hard.
+**Vraag 3 · Wat is het beste?** Een klant is boos. "Dit brood is gisteren gekocht. Nu zit er al schimmel op!" Hij praat hard.
 
 - **A.** Je zegt dat jij het brood niet gebakken hebt.
   → *Dat klopt. Maar de klant wordt er niet rustiger van.*
@@ -469,7 +469,7 @@ liter is 1000 milliliter (ml). En 1 meter is 100 centimeter.
 **Waarom:** Op een werkbon staat wat je moet doen, waar, en met welk materiaal. Lees hem helemaal, vóór
 je weggaat. Kijk ook naar de tijd: de klant is maar tot 12.00 uur thuis.
 
-**Vraag 2 · Wat doe je?** Mohammed weet niet wat "type B" is. Wat kan Mohammed het beste doen?
+**Vraag 2 · Wat is het beste?** Mohammed weet niet wat "type B" is. Wat kan Mohammed het beste doen?
 
 - **A.** Hij neemt de kraan die er het meest op lijkt.
   → *Dan klopt het misschien niet. Dan moet hij terug.*
@@ -503,7 +503,7 @@ beschermende spullen. Weet je hoeveel tijd je hebt? Dan kun je beginnen.
 > Sanne werkt in een schoonmaakploeg op een kantoor. Haar dienst is bijna klaar. Ze heeft alle
 > kamers gedaan, behalve kamer 4. Die zat op slot. Linda is haar leidinggevende.
 
-**Vraag 1 · Wat doe je?** Wat doet Sanne met kamer 4?
+**Vraag 1 · Wat is het beste?** Wat doet Sanne met kamer 4?
 
 - **A.** Ze zet een vinkje. Morgen doet ze hem wel.
   → *Dan klopt de lijst niet. Niemand weet het dan.*
@@ -516,7 +516,7 @@ beschermende spullen. Weet je hoeveel tijd je hebt? Dan kun je beginnen.
 **Waarom:** Afmelden is: zeggen wat klaar is, en wat niet. Ook als het niet jouw schuld is. Zeg ook
 wat je opviel. Een vinkje bij iets wat niet klaar is, geeft later problemen.
 
-**Vraag 2 · Wat doe je?** Sanne is klaar. Haar kar staat nog in de gang. Wat kan Sanne het beste doen?
+**Vraag 2 · Wat is het beste?** Sanne is klaar. Haar kar staat nog in de gang. Wat kan Sanne het beste doen?
 
 - **A.** Ze laat de kar staan. Morgen komt ze toch weer.
   → *Dan staat hij in de weg. Iemand kan erover vallen.*
@@ -561,7 +561,7 @@ doet als het niet goed gaat. In het mbo heet stage ook bpv: beroepspraktijkvormi
 **Waarom:** De POK is een afspraak tussen 3 partijen ⚖️. Dat zijn jij, je school en het bedrijf. Alle
 drie tekenen vóór de stage begint ⚖️. Er staat in wanneer je stage loopt, en wie je begeleidt.
 
-**Vraag 2 · Wat doe je?** Op de eerste dag ontmoet Jayden Linda. Zij is zijn praktijkopleider. Wat doet een praktijkopleider?
+**Vraag 2 · Wat is het beste?** Op de eerste dag ontmoet Jayden Linda. Zij is zijn praktijkopleider. Wat doet een praktijkopleider?
 
 - **A.** Ze begeleidt je op het werk, en leert je het vak.
   → *Goed. Met vragen ga je in het bedrijf eerst naar haar.*
@@ -574,7 +574,7 @@ drie tekenen vóór de stage begint ⚖️. Er staat in wanneer je stage loopt, 
 **Waarom:** De praktijkopleider werkt in het bedrijf. Zij leert je het werk en geeft je feedback. Op
 school heb je ook iemand: de stagebegeleider of bpv-begeleider. Die komt vaak een keer langs ⚖️.
 
-**Vraag 3 · Wat doe je?** Het bedrijf zegt: "Dat papiertje van school komt later wel. Begin maandag maar." Wat kan Jayden het beste doen?
+**Vraag 3 · Wat is het beste?** Het bedrijf zegt: "Dat papiertje van school komt later wel. Begin maandag maar." Wat kan Jayden het beste doen?
 
 - **A.** Hij begint maandag. Het papier komt later wel.
   → *Begrijpelijk. Maar dan telt zijn stage misschien niet mee.*
@@ -605,7 +605,7 @@ stagemarkt.nl (van SBB).
 > Fatima loopt stage in een hotel. Ze werkt bij de schoonmaak en het linnen. Na 6 weken heeft ze een
 > gesprek met Mark, haar praktijkopleider. Hij zegt: "Je werkt netjes. Maar je vraagt te weinig."
 
-**Vraag 1 · Wat doe je?** Fatima vindt dat niet leuk om te horen. Wat kan Fatima het beste doen?
+**Vraag 1 · Wat is het beste?** Fatima vindt dat niet leuk om te horen. Wat kan Fatima het beste doen?
 
 - **A.** Ze zegt: "Dat klopt niet. Ik weet alles al."
   → *Begrijpelijk. Maar zo leert ze er niets van.*
@@ -624,7 +624,7 @@ anders kunt doen. Zo leer je het meest op je stage.
 **Waarom:** Vragen om feedback laat zien dat je wilt leren. Vraag het na een klus: "Wat ging goed? Wat
 kan beter?" Schrijf het op, bijvoorbeeld in je logboek of portfolio.
 
-**Vraag 3 · Wat doe je?** Aan het eind krijgt Fatima een beoordeling. Ze is het er niet mee eens. Wat kan Fatima het beste doen?
+**Vraag 3 · Wat is het beste?** Aan het eind krijgt Fatima een beoordeling. Ze is het er niet mee eens. Wat kan Fatima het beste doen?
 
 - **A.** Ze bespreekt het met Mark, en met haar begeleider van school.
   → *Goed. Zo kan ze uitleggen waarom.*
@@ -654,7 +654,7 @@ De school beslist over je examen. Het bedrijf geeft zijn oordeel ⚖️.
 > Kevin loopt stage in een magazijn. Hij zou het vak leren. Maar hij maakt elke dag alleen dozen
 > plat. Niemand legt iets uit. Hij werkt ook vaak langer dan afgesproken.
 
-**Vraag 1 · Wat doe je?** Wat doet Kevin?
+**Vraag 1 · Wat is het beste?** Wat doet Kevin?
 
 - **A.** Hij blijft gewoon gaan. Over 2 maanden is het klaar.
   → *Begrijpelijk. Maar dan leert hij weinig.*
@@ -674,12 +674,12 @@ Ga naar je begeleider van school. Stop nooit zomaar.
 **Waarom:** Meld je ziek bij het bedrijf, vóór je begint. Meld het ook bij school ⚖️. Hoe het moet,
 staat vaak in je POK of de stagegids. Weer beter? Meld dat ook bij allebei.
 
-**Vraag 3 · Wat doe je?** Een collega maakt grappen over Kevins afkomst. Andere stagiairs krijgen beter werk. Wat kan Kevin het beste doen?
+**Vraag 3 · Wat is het beste?** Een collega maakt grappen over Kevins afkomst. Andere stagiairs krijgen beter werk. Wat kan Kevin het beste doen?
 
 - **A.** Hij meldt het bij school. Daar is een meldpunt.
   → *Goed. School moet hem dan helpen.*
 - **B.** Hij lacht mee. Hij wil geen gedoe op zijn stage.
-  → *Begrijpelijk. Maar het mag niet, en hij hoeft dat niet goed te vinden.*
+  → *Begrijpelijk. Maar het mag niet, en hij hoeft het niet te accepteren.*
 - **C.** Hij zoekt zelf een nieuwe stage, zonder iets te zeggen.
   → *Dan gaat het bij de volgende stagiair misschien ook zo.*
 
@@ -711,7 +711,7 @@ bij te lange werktijden: de Nederlandse Arbeidsinspectie.
 > Piotr moet zijn belastingaangifte doen. Daarvoor heeft hij DigiD nodig. DigiD is je digitale
 > sleutel voor de overheid. Zijn uitzendbureau zegt: "Geef ons je DigiD. Dan doen wij het."
 
-**Vraag 1 · Wat doe je?** Wat doet Piotr?
+**Vraag 1 · Wat is het beste?** Wat doet Piotr?
 
 - **A.** Hij geeft zijn DigiD. Het bureau bedoelt het goed.
   → *Begrijpelijk. Maar dan kunnen zij alles met zijn gegevens.*
@@ -731,7 +731,7 @@ werkgever of uitzendbureau. Wil iemand je helpen? Dat kan veilig met DigiD Macht
 krijgt een brief met een code ⚖️. Daarmee zet je DigiD aan. Doe dat snel: de code werkt maar kort ⚖️.
 Met de DigiD app log je daarna makkelijk in.
 
-**Vraag 3 · Wat doe je?** Op het werk staat één computer voor iedereen. Sanne heeft haar uren ingevuld. Wat kan Sanne het beste doen?
+**Vraag 3 · Wat is het beste?** Op het werk staat één computer voor iedereen. Sanne heeft haar uren ingevuld. Wat kan Sanne het beste doen?
 
 - **A.** Ze laat het scherm aan. Haar collega begint zo.
   → *Dan kan een ander in haar account.*
@@ -762,7 +762,7 @@ de gemeente.
 > Esra krijgt een mail. Die lijkt van haar werk te komen. "Je loonstrook staat klaar. Log binnen 1
 > uur in. Anders krijg je geen loon." Onder de mail staat een knop.
 
-**Vraag 1 · Wat doe je?** Esra schrikt van de mail. Wat kan Esra het beste doen?
+**Vraag 1 · Wat is het beste?** Esra schrikt van de mail. Wat kan Esra het beste doen?
 
 - **A.** Ze klikt snel op de knop. Ze wil haar loon niet kwijt.
   → *Begrijpelijk. Maar zo stelen oplichters haar wachtwoord.*
@@ -782,7 +782,7 @@ te stelen. Klik niet. Ga zelf naar de echte app of website. Meld de mail bij je 
 Bijvoorbeeld vier gewone woorden achter elkaar. Dat onthoud je ook makkelijk. Gebruik niet overal
 hetzelfde wachtwoord.
 
-**Vraag 3 · Wat doe je?** Kevin heeft toch op een nep-link geklikt. Hij vulde zijn wachtwoord in. Wat kan Kevin het beste doen?
+**Vraag 3 · Wat is het beste?** Kevin heeft toch op een nep-link geklikt. Hij vulde zijn wachtwoord in. Wat kan Kevin het beste doen?
 
 - **A.** Hij zegt niets. Misschien gebeurt er niets.
   → *Begrijpelijk. Maar dan kan een oplichter verder.*
@@ -817,7 +817,7 @@ AI kan vertalen, een brief uitleggen of een bericht schrijven. Maar AI maakt fou
 toch heel zeker. Gaat het om je contract, loon, veiligheid of medicijnen? Vraag het een mens. Zet
 geen BSN, wachtwoord of namen van klanten in een chatbot.
 
-**Vraag 1 · Wat doe je?** Wat doet Malik?
+**Vraag 1 · Wat is het beste?** Wat doet Malik?
 
 - **A.** Hij gaat met de brief naar HR, en vraagt hoe het zit.
   → *Goed. Een mens van zijn werk weet hoe het echt zit.*
@@ -836,7 +836,7 @@ je sneller."
 **Antwoord: niet waar.**
 **Waarom:** Het bedrijf achter de chatbot kan bewaren wat je erin zet. Zet er dus geen persoonsgegevens in. Geen BSN, wachtwoord of bankgegevens. En geen namen of foto's van klanten, patiënten of collega's. Ook geen papieren van je werk. Vraag eerst naar de regels voor AI op je werk.
 
-**Vraag 3 · Wat doe je?** Ewa krijgt een spraakbericht van een nieuw nummer. Het klinkt als haar
+**Vraag 3 · Wat is het beste?** Ewa krijgt een spraakbericht van een nieuw nummer. Het klinkt als haar
 leidinggevende: "Ik heb snel je inlogcode nodig. Stuur hem nu, het is dringend."
 
 - **A.** Ze stuurt de code. Het is haar baas.
@@ -858,7 +858,7 @@ mens ernaar kijkt."
 ontslag? Dan mag je om uitleg vragen ⚖️. En je mag vragen dat een mens ernaar kijkt ⚖️. Dat staat in de
 privacywet (AVG).
 
-**Vraag 5 · Wat doe je?** Op je werk komt een nieuwe camera met AI. Die "leest" aan je gezicht of je
+**Vraag 5 · Wat is het beste?** Op je werk komt een nieuwe camera met AI. Die "leest" aan je gezicht of je
 moe of boos bent.
 
 - **A.** Prima. Dan weet de baas hoe ik me voel.
@@ -918,7 +918,7 @@ na 5 jaar wonen met een verblijfsvergunning ⚖️. Je moet wel 18 jaar of ouder
 *Redactie: voorwaarden voor niet-EU-burgers: 5 jaar onafgebroken legaal verblijf, op de peildatum
 van de verkiezing ⚖️ (Kieswet; rijksoverheid.nl, "Wie mag stemmen bij de gemeenteraadsverkiezingen").*
 
-**Vraag 2 · Wat doe je?** Piotr wil weten waarvoor hij stemt. Wat doet de gemeenteraad?
+**Vraag 2 · Wat is het beste?** Piotr wil weten waarvoor hij stemt. Wat doet de gemeenteraad?
 
 - **A.** De gemeenteraad maakt de wetten voor heel Nederland.
   → *Nee. Dat doen de Tweede Kamer en de regering samen.*
@@ -956,7 +956,7 @@ uitleg over politiek ⚖️.
 > In de pauze praten de collega's van Dewi over het nieuws. Kevin zegt: "In Nederland mag je alles
 > zeggen." Mohammed zegt: "Niet alles. Je mag niemand bedreigen." Dewi weet niet wie gelijk heeft.
 
-**Vraag 1 · Wat doe je?** Wie heeft gelijk?
+**Vraag 1 · Wat is het beste?** Wie heeft gelijk?
 
 - **A.** Kevin. Je mag hier echt alles zeggen.
   → *Bijna. Je mag veel zeggen, maar niet alles.*
@@ -967,8 +967,7 @@ uitleg over politiek ⚖️.
 
 **Goed antwoord: B.**
 **Waarom:** In Nederland heb je vrijheid van meningsuiting ⚖️. Je mag zeggen wat je denkt, ook over de
-regering. Maar bedreigen en discrimineren mag niet. Dat is strafbaar ⚖️. Op je werk kan je baas ook
-regels hebben voor hoe je met elkaar praat.
+regering. Maar bedreigen en discrimineren mag niet. Dat is strafbaar ⚖️. Op je werk kan je baas ook regels hebben. Bijvoorbeeld over hoe je met elkaar praat.
 
 **Vraag 2 · Waar of niet waar?** "In de Grondwet staat dat iedereen gelijk behandeld moet worden."
 
@@ -977,7 +976,7 @@ regels hebben voor hoe je met elkaar praat.
 Nederland. Discriminatie om je geloof, afkomst, geslacht of iets anders mag niet ⚖️. Ook vrijheid van
 geloof is een grondrecht ⚖️.
 
-**Vraag 3 · Wat doe je?** Fatima belt over een kamer. De verhuurder hoort haar naam. "Hij is al weg." Een dag later staat de kamer weer online. Wat kan Fatima het beste doen?
+**Vraag 3 · Wat is het beste?** Fatima belt over een kamer. De verhuurder hoort haar naam. "Hij is al weg." Een dag later staat de kamer weer online. Wat kan Fatima het beste doen?
 
 - **A.** Ze laat het gaan. Zo gaat het nou eenmaal.
   → *Begrijpelijk. Maar het mag niet.*
@@ -1008,7 +1007,7 @@ Loket · bij bedreiging: de politie.
 > Jayden wacht op de trein. Twee agenten spreken hem aan. "Mogen we je ID zien?" Jayden heeft niets
 > fout gedaan. Hij vindt het vervelend.
 
-**Vraag 1 · Wat doe je?** Wat doet Jayden?
+**Vraag 1 · Wat is het beste?** Wat doet Jayden?
 
 - **A.** Hij laat rustig zijn ID zien.
   → *Goed. Dat moet als de politie erom vraagt.*
@@ -1029,7 +1028,7 @@ kunt later een klacht indienen bij de politie ⚖️.
 voor de regering. De politie zorgt voor veiligheid. Een rechter beslist bij een ruzie of een misdrijf.
 De rechter is onafhankelijk. De regering mag de rechter niet vertellen wat hij beslist.
 
-**Vraag 3 · Wat doe je?** Esra krijgt een brief van de gemeente met een boete. Ze vindt dat de boete niet klopt. Wat kan Esra het beste doen?
+**Vraag 3 · Wat is het beste?** Esra krijgt een brief van de gemeente met een boete. Ze vindt dat de boete niet klopt. Wat kan Esra het beste doen?
 
 - **A.** Ze betaalt niet, en ze gooit de brief weg.
   → *Niet doen. Dan wordt de boete vaak hoger.*
@@ -1066,7 +1065,7 @@ energie.*
 > Mohammed werkt in een bakkerij. Na het werk heeft hij veel afval. Karton, oud brood en lege
 > flessen van schoonmaakmiddel. Er staan vier bakken. Hij heeft haast.
 
-**Vraag 1 · Wat doe je?** Waar laat Mohammed het karton?
+**Vraag 1 · Wat is het beste?** Waar laat Mohammed het karton?
 
 - **A.** Plat gemaakt in de bak voor papier en karton.
   → *Goed. Plat past er veel meer in.*
@@ -1086,7 +1085,7 @@ het niet? Kijk op de sticker van de bak, of vraag het.
 altijd apart ⚖️. Giet ook nooit resten van middelen door de gootsteen. Vraag waar het gevaarlijke
 afval heen moet.
 
-**Vraag 3 · Wat doe je?** Een collega zegt: "Scheiden heeft geen zin. Het gaat toch allemaal op één hoop." Wat kan Mohammed het beste doen?
+**Vraag 3 · Wat is het beste?** Een collega zegt: "Scheiden heeft geen zin. Het gaat toch allemaal op één hoop." Wat kan Mohammed het beste doen?
 
 - **A.** Hij gooit vanaf nu ook alles in één bak.
   → *Begrijpelijk. Maar op je werk volg je de regels.*
@@ -1115,7 +1114,7 @@ anders doet.
 > Dewi maakt 's avonds schoon in een sportschool. Iedereen is weg. Alle lampen zijn nog aan. In de
 > kleedkamer druppelt een kraan.
 
-**Vraag 1 · Wat doe je?** Wat doet Dewi?
+**Vraag 1 · Wat is het beste?** Wat doet Dewi?
 
 - **A.** Ze doet uit wat uit mag, en ze meldt de kraan.
   → *Goed. Zo bespaart ze energie en water.*
@@ -1134,7 +1133,7 @@ noodverlichting. Meld een lek meteen. Zelf repareren doe je alleen als dat jouw 
 **Waarom:** Een open deur kost veel energie. Het eten wordt ook minder goed koud. Pak wat je nodig
 hebt, en doe de deur dicht. Sluit een deur niet goed? Meld het.
 
-**Vraag 3 · Wat doe je?** Piotr werkt in de bouw. Er liggen veel stukken hout over. Hij heeft een stuk van 60 centimeter nodig. Wat kan Piotr het beste doen?
+**Vraag 3 · Wat is het beste?** Piotr werkt in de bouw. Er liggen veel stukken hout over. Hij heeft een stuk van 60 centimeter nodig. Wat kan Piotr het beste doen?
 
 - **A.** Hij zaagt een stuk van een nieuwe plank. Dat gaat sneller.
   → *Begrijpelijk. Maar dan blijven de restjes liggen.*
