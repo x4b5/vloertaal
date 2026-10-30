@@ -46,7 +46,7 @@ exports[`the language track's daily review is unchanged > picks the same words, 
     "situation [c.ask.o3,c.ask.o2,c.ask.o1]",
     "match w.waar+w.instructie+w.woord",
     "build s.understood.2",
-    "chat c.people.q [c.hello.a,c.translate.a,c.people.a]",
+    "chat c.people.q [c.people.a,c.understand.a,c.hello.a]",
   ],
   "ids": [
     "w.hallo",
@@ -115,7 +115,7 @@ exports[`the language track's daily review is unchanged > picks the same words, 
     "situation [c.ask.o3,c.ask.o2,c.ask.o1]",
     "match w.waar+w.instructie+w.woord",
     "build s.understood.2",
-    "chat c.people.q [c.hello.a,c.translate.a,c.people.a]",
+    "chat c.people.q [c.people.a,c.understand.a,c.hello.a]",
   ],
 }
 `;

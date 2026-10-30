@@ -1,5 +1,6 @@
 // Checks the Dutch-only texts against the A2 yardstick (docs/taal-a2.md) and prints a report:
-// the work-rules units, the regional work-rules unit and the Dutch screens (src/i18n/nl.ts).
+// the work-rules units, the regional work-rules unit, the places to go for help (askWho.ts) and
+// the Dutch screens (src/i18n/nl.ts).
 // A hit is a question for an editor, not an error: the script cannot tell a real passive from
 // "ziek worden", or a needed technical word from a hard one. Sentences that belong to a
 // `// ⚖️ check:` note are listed apart: those stay as they are (docs/taal-a2.md, "Wat niet verandert").
@@ -12,6 +13,7 @@ import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import type { RuleOption, RuleUnit } from '../src/content/regels/types';
 import { zlRegelsUnit } from '../src/content/regio/zuid-limburg-regels';
 import { modelQuestion } from '../src/content/regels/zegHet';
+import { ASK_WHO } from '../src/content/regels/askWho';
 import { uiNl } from '../src/i18n/nl';
 
 type Text = { file: string; where: string; field: string; text: string };
@@ -63,6 +65,12 @@ for (const u of units) {
       }
     }
   }
+}
+// The places to go for help: the name and the short line under it on a "Wie vraag je het?" card.
+const ASK_WHO_FILE = 'src/content/regels/askWho.ts';
+for (const [who, a] of Object.entries(ASK_WHO)) {
+  texts.push({ file: ASK_WHO_FILE, where: who, field: 'label', text: a.label });
+  texts.push({ file: ASK_WHO_FILE, where: who, field: 'what', text: a.what });
 }
 for (const [key, value] of Object.entries(uiNl)) {
   for (const t of typeof value === 'string' ? [value] : Object.values(value)) texts.push({ file: 'src/i18n/nl.ts', where: key, field: 'ui', text: t });
@@ -131,6 +139,8 @@ for (const t of texts) for (const s of sentencesOf(t.text)) {
   const hit = (rule: string) => hits.push({ ...t, text: s, rule, legal: isLegal(t.file, s) });
   const n = wordCount(s);
   if (n > 12) hit(`1 · ${n} woorden`);
+  // The line under a name on an answer card is short: at most 6 words.
+  if (t.field === 'what' && n > 6) hit(`kaart · ${n} woorden (hoogstens 6)`);
   if (isPassive(s)) hit('6 · lijdende vorm?');
   if (NEGATIVE.test(s)) hit('4 · nooit/geen met een abstract woord?');
   for (const [re, why] of HARD) if (re.test(s)) hit(`2 · ${why}`);

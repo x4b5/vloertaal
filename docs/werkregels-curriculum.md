@@ -63,7 +63,8 @@ Zie ook de meetlat voor A2-niveau: [`taal-a2.md`](taal-a2.md).
 - Taalniveau 1F (ongeveer A2). Zinnen van hooguit ongeveer 12 woorden. Eén idee per zin.
 - Gewone woorden. Eén vakwoord per keer, met één korte uitlegzin erbij ("Een cao is een afspraak over loon en regels voor jouw soort werk.").
 - Altijd "je", behalve als het verhaal over een ander gaat: dan gaan de vraag en de antwoorden over die persoon ("Wat kan Kevin het beste doen?"). Zie [`taal-a2.md`](taal-a2.md), regel 5. Zo min mogelijk lijdende vorm.
-- Namen wisselen: Sanne, Mohammed, Kevin, Fatima, Dewi, Piotr, Esra, Jayden. Leidinggevenden: Linda, Mark, Henk. De leerling is "je", nooit standaard één naam.
+- Namen wisselen: Sanne, Mohammed, Kevin, Fatima, Dewi, Piotr, Esra, Jayden (soms Malik of Ewa). Leidinggevenden: Linda, Mark, Henk. De leerling is "je", nooit standaard één naam.
+- Wat we over een naam zeggen, blijft overal waar: Kevin is 19 en heeft geen kinderen. Jayden is 18. Esra is 38 en heeft de Nederlandse nationaliteit. Fatima heeft kinderen op school. Dewi is zwanger van haar eerste kind. Mohammeds vrouw krijgt een baby. Piotr komt uit Polen en heeft een zoon. Malik is 17, Ewa is 20 en woont net in Nederland.
 - Rustig en volwassen. Niet kinderachtig, niet belerend, geen schuld.
 - Per vraag precies één goed antwoord. De foute antwoorden zijn geloofwaardig en ongeveer even lang. Het goede antwoord staat wisselend op plek A, B of C (telling: A 25, B 24, C 27, met de vragen van 30 oktober 2026 erbij). Bij "waar of niet waar" is het ongeveer half om half (26 waar, 25 niet waar).
 - **⚖️ is een markering voor de redactie.** Niet tonen en niet voorlezen in de app.
@@ -218,12 +219,12 @@ loopbaanbegeleider · de gemeente.
 
 **Vraag 1 · Wat is het beste?** Mohammed wil daar niets over zeggen. Wat kan Mohammed het beste doen?
 
-- **A.** Hij zegt rustig: "Daar praat ik liever niet over."
+- **A.** Hij zegt: "Daar praat ik liever niet over."
   → *Goed. Hij blijft beleefd en hij hoeft niets te vertellen.*
 - **B.** Hij geeft toch antwoord, anders krijgt hij de baan niet.
   → *Begrijpelijk. Maar hij hoeft dit niet te vertellen.*
-- **C.** Hij zegt dat ze dit niet mag vragen, en hij gaat weg.
-  → *Hij heeft gelijk, maar weggaan sluit de deur.*
+- **C.** Hij zegt snel "nee", ook als dat niet waar is.
+  → *Begrijpelijk. Maar dat hoeft niet. Hij mag gewoon niets zeggen.*
 
 **Goed antwoord: A.**
 **Waarom:** Een werkgever mag niet vragen of je zwanger bent of kinderen wilt. Vragen over je geloof of gezondheid mogen ook niet. Je
@@ -289,10 +290,10 @@ werkgever geeft je die tijd.
 
 **Vraag 3 · Wat is het beste?** Welke vraag stelt Piotr vóór hij tekent?
 
-- **A.** "Hoe heet de directeur van het hele bedrijf?"
-  → *Dat mag hij vragen. Maar het zegt niets over zijn rechten.*
-- **B.** "Mag ik in de pauze mijn eigen muziek luisteren?"
-  → *Kan later ook. Eerst de belangrijke dingen.*
+- **A.** "Kan ik het contract later nog veranderen?"
+  → *Alleen als de baas het ook wil. Vraag het belangrijke dus vóór je tekent.*
+- **B.** "Hoeveel verdienen de anderen hier?"
+  → *Dat zegt de baas meestal niet. En het gaat om zijn eigen loon.*
 - **C.** "Welke cao hoort bij dit werk?"
   → *Goed. In de cao staan veel regels over zijn loon.*
 
@@ -377,10 +378,10 @@ moet wel een goede reden hebben ⚖️. Vraag op je eerste dag naar de regels.
 
 **Vraag 1 · Wat is het beste?** Wat bedoelt Sanne met "Zeg maar je"?
 
-- **A.** Ze vindt dat Jayden te zacht praat.
-  → *Nee. Het gaat niet over hard of zacht praten.*
-- **B.** Ze wil dat hij haar "chef" noemt.
-  → *Nee. Ze noemt juist haar voornaam.*
+- **A.** Ze vraagt of hij iets wil zeggen.
+  → *Nee. "Zeg maar je" betekent: noem mij "je".*
+- **B.** Ze wil dat hij beleefder praat.
+  → *Nee. "Hoor" klinkt hier juist vriendelijk.*
 - **C.** Ze wil dat hij "je" zegt, en niet "u".
   → *Goed. Ze wil minder afstand.*
 
@@ -512,7 +513,7 @@ online. Zoek op "cao" en de naam van je sector.
 **Waarom:** Bij ziekte, WW of ontslag kijken ze naar je contract. Werk je lange tijd meer uren? Dan
 kun je vragen om die uren in je contract ⚖️.
 
-**Vraag 4 · Wat is het beste?** Esra woont net in Nederland. Ze krijgt een baan aangeboden. Ze weet niet of ze hier al mag werken. Wat kan Esra het beste doen?
+**Vraag 4 · Wat is het beste?** Ewa woont net in Nederland. Ze krijgt een baan aangeboden. Ze weet niet of ze hier al mag werken. Wat kan Ewa het beste doen?
 
 - **A.** Ze begint gewoon. De baas regelt het vast wel.
   → *Riskant. Zonder de goede papieren kan ze problemen krijgen.*
@@ -551,7 +552,6 @@ statushouder). Alleen: vraag het na vóór je begint.*
 
 - Een tijdelijk contract stopt vanzelf op de einddatum.
 - Duurt je contract 6 maanden of langer? Dan moet je werkgever 1 maand ⚖️ voor het einde laten weten of het doorgaat.
-- Dat geldt bij een contract van 6 maanden of langer ⚖️.
 - Doet hij dat niet, of te laat? Dan krijg je extra geld, tot 1 maandloon ⚖️.
 - In de proeftijd mogen jij en de baas meteen stoppen.
 
@@ -734,7 +734,7 @@ vakantiegeld, toeslagen en overwerk.*
 verschil is vooral loonheffing. Loonheffing is belasting en premie voor verzekeringen. Je werkgever
 betaalt die voor jou aan de Belastingdienst. Vaak gaat er ook geld af voor je pensioen.
 
-**Vraag 2 · Wat is het beste?** Fatima is 20. Een collega van 25 verdient meer. Ze doen hetzelfde werk. Wat kan Fatima het beste doen?
+**Vraag 2 · Wat is het beste?** Ewa is 20. Een collega van 25 verdient meer. Ze doen hetzelfde werk. Wat kan Ewa het beste doen?
 
 - **A.** Ze zoekt het minimumloon voor haar leeftijd op.
   → *Goed. Dan weet ze of haar loon klopt.*
@@ -877,7 +877,7 @@ het bij je laatste loon.
 - **B.** Extra loon voor werk in de avond, nacht of weekend.
   → *Goed. Zo heet die toeslag in de zorg.*
 - **C.** Een aftrek omdat ze een keer te laat was.
-  → *Nee. Voor te laat komen krijg je geen aftrek op je strook.*
+  → *Nee. ORT is geen aftrek. Het is extra geld.*
 
 **Goed antwoord: B.**
 **Waarom:** ORT betekent onregelmatigheidstoeslag. Dat is extra geld voor werk op onregelmatige
@@ -924,7 +924,7 @@ van geld. Of je extra toeslag krijgt, staat in je cao of contract ⚖️. Schrij
 langere tijd moet het gemiddeld minder zijn ⚖️. Voor nachtdiensten en jongeren zijn de regels
 strenger.
 
-**Vraag 2 · Waar of niet waar?** "Jayden is 17. Hij mag in het restaurant werken tot middernacht."
+**Vraag 2 · Waar of niet waar?** "Malik is 17. Hij mag in het restaurant werken tot middernacht."
 
 **Antwoord: niet waar.**
 **Waarom:** Ben je 16 of 17 ⚖️? Dan mag je niet werken tussen 23.00 en 6.00 uur ⚖️. Je werkt hooguit
@@ -1071,7 +1071,7 @@ Kijk in je cao. (Dezelfde regel als in les 3.3, in een andere situatie.)
 - Vraag vrij op tijd en op papier.
 - Je werkgever moet in principe ja zeggen.
 - Zegt hij nee? Dat moet hij binnen 2 weken ⚖️ op papier laten weten.
-- Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️.
+- Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️.
 - Bij een noodgeval mag je meteen weg. Laat het wel meteen weten.
 
 **Vraag 1 · Wat is het beste?** Wanneer vraagt Esra haar vakantie aan?
@@ -1086,7 +1086,7 @@ Kijk in je cao. (Dezelfde regel als in les 3.3, in een andere situatie.)
 **Goed antwoord: C.**
 **Waarom:** Vraag vrij op tijd en op papier. Je werkgever moet in principe ja zeggen. Alleen bij een
 heel goede reden van het bedrijf mag hij nee zeggen ⚖️. Dat moet hij binnen 2 weken ⚖️ op papier
-laten weten. Zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️.
+laten weten. Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd ⚖️.
 
 **Vraag 2 · Waar of niet waar?** "Werk je 5 dagen per week? Dan heb je minstens 20 vrije dagen per jaar."
 
@@ -1153,7 +1153,7 @@ op tijd voor je verlof ⚖️.
 je werkgever. Later kun je ook ouderschapsverlof vragen. Dat is verlof om voor je kind te zorgen, tot je
 kind 8 jaar is ⚖️. Voor een deel ervan kun je geld krijgen van UWV ⚖️.
 
-**Vraag 3 · Wat is het beste?** De opvang belt Kevin. Zijn dochter heeft koorts en moet naar huis. Kevin is op zijn werk. Wat kan Kevin het beste doen?
+**Vraag 3 · Wat is het beste?** De opvang belt Mohammed. Zijn dochter heeft koorts en moet naar huis. Mohammed is op zijn werk. Wat kan Mohammed het beste doen?
 
 - **A.** Hij zegt het meteen tegen zijn leidinggevende, en hij haalt haar op.
   → *Goed. Bij een noodgeval mag hij meteen weg.*
@@ -1438,7 +1438,7 @@ leidinggevende. Je werkgever mag je daar niet voor straffen ⚖️.
 
 **Vraag 3 · Wat is het beste?** Kevin heeft het gemeld. Weken later is het nog steeds onveilig. Wat kan Kevin het beste doen?
 
-- **A.** Hij meldt het bij de Arbeidsinspectie, als het moet zonder naam.
+- **A.** Hij meldt het bij de Arbeidsinspectie.
   → *Goed. Daar is de Arbeidsinspectie voor.*
 - **B.** Hij zet een filmpje van het magazijn online.
   → *Begrijpelijk, maar dat kan hem problemen geven.*
@@ -1694,14 +1694,14 @@ te zijn. Samen koffie drinken hoort ook bij het werk. Je bent welkom aan tafel, 
 of met eten. Gebruik je telefoon in je pauze. Wacht je op een belangrijk telefoontje? Zeg het vooraf
 tegen je leidinggevende.
 
-**Vraag 3 · Wat is het beste?** Het team heeft een groepsapp. Om 23 uur appt de leidinggevende: "Wie kan morgen eerder komen?"
+**Vraag 3 · Wat is het beste?** Het team heeft een groepsapp. Om 23 uur appt de leidinggevende: "Wie kan volgende week zaterdag werken?"
 
-- **A.** Je stuurt een screenshot naar vrienden: "Kijk nou!"
-  → *Niet doen. Berichten van werk deel je niet.*
-- **B.** Je appt meteen terug: "Dit is veel te laat!"
-  → *Begrijpelijk. Maar dat kun je beter rustig zeggen.*
+- **A.** Je antwoordt niet, ook niet de volgende dag.
+  → *Dan weet je baas niet of je kunt. Antwoord wel, op een normale tijd.*
+- **B.** Je appt meteen terug: "Ja, ik kan!" Anders vindt de baas je lui.
+  → *Goed bedoeld. Maar je hoeft 's nachts niet te antwoorden. Dat vindt niemand lui.*
 - **C.** Je antwoordt de volgende ochtend, kort en vriendelijk.
-  → *Goed. Je antwoordt op tijd, en je rust uit.*
+  → *Goed. Je antwoordt op een normale tijd, en je rust uit.*
 
 **Goed antwoord: C.**
 **Waarom:** Een groepsapp is voor werk. Houd je berichten kort en vriendelijk. Je hoeft niet altijd
@@ -1967,7 +1967,7 @@ bij schulden, en wat je regelt als je werk stopt.*
 - **B.** Hij wacht een maand. Misschien vindt hij snel werk.
   → *Dan is hij te laat, en krijgt hij misschien minder.*
 - **C.** Hij gaat eerst naar de gemeente voor bijstand.
-  → *Bij werk kwijt is UWV meestal de eerste stap.*
+  → *Ben je je werk kwijt? Dan is UWV meestal de eerste stap.*
 
 **Goed antwoord: A.**
 **Waarom:** Vraag WW aan zo snel als je kunt. Uiterlijk 1 week ⚖️ na je eerste dag zonder werk. Ben je
@@ -2578,7 +2578,7 @@ meteen of je iets mist. Check daarna ook de lijst. (Terugzeggen, zoals in les 2.
 
 **Scène** · *Beeld: Jayden in een restaurantkeuken. Hij zet een bak kip in een koelkast. Op de bak een sticker.*
 
-> Jayden werkt in de keuken van een restaurant. Chef Kevin wijst naar de koelkast. "Op elke bak een
+> Jayden werkt in de keuken van een restaurant. Chef Sanne wijst naar de koelkast. "Op elke bak een
 > sticker met de datum. Dat is HACCP." Jayden knikt, maar hij snapt het niet helemaal.
 
 **Vraag 1 · Waar of niet waar?** "HACCP is een manier van werken om eten veilig te houden."

@@ -113,8 +113,8 @@ export const startUnit: RuleUnit = {
           id: 'r.l.start.2.wd1',
           situation: 'Wat bedoelt Sanne met "Zeg maar je"?',
           options: [
-            { id: 'a', text: 'Ze vindt dat Jayden te zacht praat.', best: false, feedback: 'Nee. Het gaat niet over hard of zacht praten.' },
-            { id: 'b', text: 'Ze wil dat hij haar "chef" noemt.', best: false, feedback: 'Nee. Ze noemt juist haar voornaam.' },
+            { id: 'a', text: 'Ze vraagt of hij iets wil zeggen.', best: false, feedback: 'Nee. "Zeg maar je" betekent: noem mij "je".' },
+            { id: 'b', text: 'Ze wil dat hij beleefder praat.', best: false, feedback: 'Nee. "Hoor" klinkt hier juist vriendelijk.' },
             { id: 'c', text: 'Ze wil dat hij "je" zegt, en niet "u".', best: true, feedback: 'Goed. Ze wil minder afstand.' },
           ],
           why: 'Op het werk zeggen de meeste mensen "je". Ook tegen de baas. Weet je het niet zeker? Begin met "u". Luister wat anderen doen. Tegen klanten en cliënten zeg je vaak wel "u".',

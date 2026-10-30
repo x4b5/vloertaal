@@ -8,7 +8,7 @@ import { RULES_ABUSE, RULES_ADVICE, RULES_CIVIC } from '../src/content/regels/di
 import type { AskWho } from '../src/content/regels/types';
 import { registerRulesCourse } from '../src/content/courses';
 import { LessonPlayer } from '../src/components/LessonPlayer';
-import { CardStep, cardTag, PayslipStep, RULE_KIND_TAG, RuleCard, RuleFeedbackBody, ruleAnnouncement, ruleVerdict, TF_OPTIONS } from '../src/components/RuleSteps';
+import { CardStep, cardTag, PayslipStep, RULE_KIND_TAG, RuleCard, RuleFeedbackBody, ruleAnnouncement, ruleVerdict, TF_OPTIONS, WhoAsk } from '../src/components/RuleSteps';
 import { getHelpLanguage, registerPack } from '../src/i18n';
 import nlPack from '../src/i18n/packs/nl';
 import { buildLesson, buildRuleLesson, forRetry, GRADED_RULE_KINDS, isGraded, isRuleExercise, RULE_KINDS, type Exercise, type RuleExercise } from '../src/lib/exercises';
@@ -160,6 +160,38 @@ describe('rule steps on screen', () => {
     }
     expect(ASK_WHO.juridischloket.label).toBe('Het Juridisch Loket');
     expect(ASK_WHO.leidinggevende.label).toBe('Je leidinggevende');
+  });
+
+  it('every place to go for help says in at most 6 words what it is, under its name on the card', () => {
+    const words = (s: string) => s.split(/\s+/).filter((w) => /[\p{L}\d]/u.test(w)).length;
+    for (const [who, a] of Object.entries(ASK_WHO)) {
+      expect(a.what.trim().length, who).toBeGreaterThan(0);
+      expect(words(a.what), `${who}: ${a.what}`).toBeLessThanOrEqual(6);
+      // A short line, not a sentence: small letter, no full stop, no abbreviation in brackets.
+      expect(a.what, who).not.toMatch(/[.!?()]$/);
+    }
+    // On every "Wie vraag je het?" card: the name, then the short line, inside the one card;
+    // no extra button (the cards are the only taps, max 3).
+    const steps = lessons.flatMap((l) => l.steps ?? []).filter((s): s is Extract<typeof s, { kind: 'whoask' }> => s.kind === 'whoask');
+    expect(steps.length).toBeGreaterThan(10);
+    for (const step of steps) {
+      const out = html(createElement(WhoAsk, { ex: { kind: 'whoask', step }, lang: nl(), locked: false, onAnswer: () => {} }));
+      expect(out.match(/<button(?![^>]*speak)/g)?.length, step.id).toBe(step.options.length);
+      for (const o of step.options) {
+        expect(out, `${step.id} ${o.who}`).toContain(`<span class="rule-who-name">${ASK_WHO[o.who].label}</span><span class="rule-who-what">${ASK_WHO[o.who].what}</span>`);
+      }
+    }
+    // After another pick, the best answer in the feedback has its short line too.
+    const wa = buildRuleLesson(lessons.find((l) => l.id === 'r.l.loon.2')!, { seed: 1 }).find((e) => e.kind === 'whoask') as Extract<Exercise, { kind: 'whoask' }>;
+    const bestWho = wa.step.options.find((o) => o.best)!.who;
+    const wrong = ruleVerdict(wa, false, wa.step.options.find((o) => !o.best)!.id)!;
+    expect(wrong.best).toMatchObject({ text: ASK_WHO[bestWho].label, what: ASK_WHO[bestWho].what });
+    expect(html(createElement(RuleFeedbackBody, { v: wrong, lang: nl() }))).toContain(`<span class="rule-who-what">${ASK_WHO[bestWho].what}</span>`);
+  });
+
+  it('a learner text never names a lesson by its curriculum number ("les 10.1"): the app shows no numbers', () => {
+    const texts = lessons.flatMap((l) => [l.title, l.rule?.goal, l.rule?.remember, JSON.stringify(l.steps ?? [])]);
+    for (const t of texts) expect(t ?? '').not.toMatch(/\bles \d+\.\d/i);
   });
 
   it('a written rule carries its advice line and its tag; a key rule its pocket-card mark', () => {

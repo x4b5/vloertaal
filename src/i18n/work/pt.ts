@@ -703,7 +703,7 @@ const t: CultureTranslation = {
     'c.leave.o1': 'Pedes as férias ao teu empregador com antecedência, por escrito.',
     'c.leave.o2': 'Vais simplesmente, e dizes ao patrão quando voltares.',
     'c.leave.o3': 'Pedes a um colega que diga ao patrão na véspera.',
-    'c.leave.w': 'O teu empregador organiza o trabalho e tem de concordar com as datas. Pedir cedo dá a melhor hipótese de um sim.',
+    'c.leave.w': 'Normalmente, o teu empregador tem de dizer que sim. Só pode dizer que não por um motivo muito importante, e então por escrito dentro de 2 semanas. Pedir cedo dá a melhor hipótese de um sim.', // nalezen: werkgever moet meestal ja zeggen
     'c.illness': 'Os teus direitos quando estás doente',
     'c.illness.b': 'Quando estás doente, o teu empregador tem de pagar pelo menos 70% do teu salário, até 2 anos. Uma cao muitas vezes dá mais. Pode haver até 2 dias de espera (wachtdagen) sem pagamento, mas só se o teu contrato ou a cao o disserem. O teu patrão não pode perguntar que doença tens: falas da tua saúde e do teu trabalho com o médico da empresa (bedrijfsarts). Liga ao teu empregador quando estiveres melhor (betermelden). No primeiro ano recebes pelo menos o salário mínimo. Trabalhas através de uma agência? O teu contrato pode acabar quando ficas doente. Então é o UWV que te paga (Ziektewet). Pergunta ao UWV ou a um sindicato. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.illness.p': 'Já estou melhor. Amanhã venho trabalhar.',

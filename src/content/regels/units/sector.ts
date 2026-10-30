@@ -374,7 +374,7 @@ export const horecaUnit: RuleUnit = {
           picture: 'Jayden in een restaurantkeuken. Hij zet een bak kip in een koelkast. Op de bak een sticker.',
           lines: [
             'Jayden werkt in de keuken van een restaurant.',
-            'Chef Kevin wijst naar de koelkast.',
+            'Chef Sanne wijst naar de koelkast.',
             '"Op elke bak een sticker met de datum. Dat is HACCP."',
             'Jayden knikt, maar hij snapt het niet helemaal.',
           ],
