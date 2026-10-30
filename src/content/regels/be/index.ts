@@ -64,8 +64,7 @@ export const BE_TODO: readonly string[] = [
   // Agent A: werk vinden, beginnen, contract
   'r.zoeken', 'r.start', 'r.afronden', 'r.contract', 'r.stage', 'r.loopbaan',
 
-  // Agent B: tijd, rekenen, geld
-  'r.geld',
+  // Agent B: tijd, rekenen, geld (klaar)
 
   // Agent C: ziek, veilig, rechten, samen, sectoren magazijn, fabriek en zorg
   'r.ziek', 'r.veilig', 'r.rechten', 'r.samen', 'r.warehouse', 'r.factory', 'r.care',
