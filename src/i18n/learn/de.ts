@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Gebeten, Namen in einen Chatbot zu geben: Diese Antwort sagt nein und warum.",
     'c.aifake.a.why': "Eine neue Nummer bittet um Geld: Diese Antwort prüft das zuerst.",
     'c.aiplan.a.why': "Eine App hat den Dienstplan gemacht: Diese Antwort bittet um einen Menschen.",
-    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
-    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
-    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
-    // TODO vertalen: why the chat replies of the new lessons fit (30 October 2026). English for now; the translators replace it.
-    "c.details.a.why": "Asked for a last name: this reply gives it and offers to spell it.",
-    "c.dates.a.why": "Asked for the date: this reply gives the day and the date.",
-    "c.permit.a.why": "A no is fine with a reason. Offering another day helps.",
-    "c.kids.a.why": "Asked why: this reply gives the reason, the daycare called.",
-    "c.body.a.why": "Asked where it hurts: this reply names the place and the cause.",
-    "c.jobends.a.why": "The house goes with the job: this reply asks about the notice period.",
+    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
+    'c.harvest.a.why': "Gefragt ist, wie viele Reihen: Diese Antwort nennt eine Zahl und was noch fehlt.", // nieuw, nog nalezen
+    'c.greensafe.a.why': "Gerade gespritzt: Diese Antwort sagt noch nicht, und warum.", // nieuw, nog nalezen
+    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    'c.details.a.why': "Gefragt ist der Nachname: Diese Antwort nennt ihn und bietet an, ihn zu buchstabieren.",
+    'c.dates.a.why': "Gefragt ist das Datum: Diese Antwort nennt den Tag und das Datum.",
+    'c.permit.a.why': "Ein Nein ist in Ordnung, mit einem Grund. Einen anderen Tag anzubieten hilft.",
+    'c.kids.a.why': "Gefragt ist warum: Diese Antwort nennt den Grund, die Kita hat angerufen.",
+    'c.body.a.why': "Gefragt ist, wo es wehtut: Diese Antwort nennt die Stelle und die Ursache.",
+    'c.jobends.a.why': "Die Wohnung hängt am Job: Diese Antwort fragt nach der Kündigungsfrist.",
   },
 };
 

@@ -1168,170 +1168,170 @@ const t: CultureTranslation = {
     'c.aiplan.o2': 'Akzeptier es: Die App hat immer recht.',
     'c.aiplan.o3': 'Komm nicht mehr zur Arbeit.',
     'c.aiplan.w': 'Apps machen Fehler, und sie wissen nicht alles über dich. Du darfst um eine Erklärung bitten, und ein Mensch kann es sich noch einmal ansehen.',
-    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
-    'u.kas': 'In the greenhouse', // TODO vertalen
-    'l.harvest': 'Harvesting and sorting', // TODO vertalen
-    'w.kas': 'the greenhouse', // TODO vertalen
-    'w.gewas': 'the crop (the plants that grow)', // TODO vertalen
-    'w.rij': 'the row (of plants)', // TODO vertalen
-    'w.oogsten': 'to harvest', // TODO vertalen
-    'w.sorteren': 'to sort', // TODO vertalen
-    'w.krat': 'the crate', // TODO vertalen
-    's.harvest.1': 'I work in the greenhouse.', // TODO vertalen
-    's.harvest.2': 'Which row do I start in?', // TODO vertalen
-    's.harvest.3': 'The crate is full.', // TODO vertalen
-    'c.harvest.q': 'How many rows have you done?', // TODO vertalen
-    'c.harvest.a': 'Four. Two more to go.', // TODO vertalen
-    'l.greensafe': 'Safe in the greenhouse', // TODO vertalen
-    'w.spuitmiddelen': 'the crop sprays (chemicals for plants)', // TODO vertalen
-    'w.bespoten': 'sprayed (with crop sprays)', // TODO vertalen
-    'w.plukkar': 'the picking trolley', // TODO vertalen
-    'w.bukken': 'to bend down', // TODO vertalen
-    'w.drinken': 'to drink', // TODO vertalen
-    'w.hitte': 'the heat (when it is very hot)', // TODO vertalen
-    's.greensafe.1': 'Has this greenhouse been sprayed?', // TODO vertalen
-    's.greensafe.2': 'I am going to drink some water.', // TODO vertalen
-    's.greensafe.3': 'Where is the picking trolley?', // TODO vertalen
-    'c.greensafe.q': 'May I work in greenhouse three?', // TODO vertalen
-    'c.greensafe.a': 'No, not yet. It was just sprayed.', // TODO vertalen
-    'c.harvest': 'Tempo and piece rate', // TODO vertalen
-    'c.harvest.b': 'In a greenhouse you often work at a set pace (tempo). Some employers pay per crate, per row or per kilo: piece rate (stukloon). Even with piece rate, you must earn at least the minimum wage for every hour you work. Check the amount on rijksoverheid.nl. Write down your hours and your crates every day, and compare them with your payslip. Working fast is good, but working safely comes first. General information. For your situation: ask the union, the Juridisch Loket or FairWork.', // TODO vertalen
-    'c.harvest.p': 'How many crates did I do today?', // TODO vertalen
-    'c.harvest.s': 'You are paid per crate. At the end of the week, your pay is much lower than the minimum wage for the hours you worked. What do you do?', // TODO vertalen
-    'c.harvest.o1': 'Show your own list of hours and crates to your employer, and ask for help if it is not fixed.', // TODO vertalen
-    'c.harvest.o2': 'Say nothing and work faster next week, so you earn more.', // TODO vertalen
-    'c.harvest.o3': 'Accept it: with piece rate, a low pay is normal.', // TODO vertalen
-    'c.harvest.w': 'With piece rate you must still get at least the minimum wage for every hour you worked. Your own list of hours and crates helps you show what you did.', // TODO vertalen
-    'c.greensafe': 'Heat and sprays', // TODO vertalen
-    'c.greensafe.b': 'In a greenhouse it can get very hot, also in spring. Drink water often, also before you feel thirsty, and take your breaks in a cool place. Do you feel dizzy or sick, or do you get a headache? Stop and tell someone. Plants are sometimes sprayed with chemicals (spuitmiddelen). A greenhouse that was just sprayed often has a sign at the door. Do not go in until your supervisor says it is safe again. General information. For your situation: ask your employer, the union or the Juridisch Loket.', // TODO vertalen
-    'c.greensafe.p': 'May I already work in this greenhouse?', // TODO vertalen
-    'c.greensafe.s': 'A greenhouse was sprayed this morning. There is a sign on the door. A colleague says: "Come on, it is only for a moment." What do you do?', // TODO vertalen
-    'c.greensafe.o1': 'Stay outside, and ask your supervisor when it is safe again.', // TODO vertalen
-    'c.greensafe.o2': 'Go in quickly and hold your breath.', // TODO vertalen
-    'c.greensafe.o3': 'Go in, and wash your hands well afterwards.', // TODO vertalen
-    'c.greensafe.w': 'Crop sprays can hurt your skin, eyes and lungs, also when you smell nothing. After spraying there is a waiting time before people may go in again. Your supervisor knows when it is over.', // TODO vertalen
-    // TODO vertalen: Getallen en gegevens (u.data), l.permit, l.kids, l.body, l.jobends and their tips (30 October 2026). English for now; the translators replace it.
-    "u.data": "Numbers and details",
-    "l.details": "Your details",
-    "w.voornaam": "the first name",
-    "w.achternaam": "the last name, the family name",
-    "w.spellen": "to spell (say the letters one by one)",
-    "w.telefoonnummer": "the phone number",
-    "w.geboortedatum": "the date of birth",
-    "w.formulier": "the form (a paper or page to fill in)",
-    "s.details.1": "Can you spell that?",
-    "s.details.2": "I am passing on my new phone number.",
-    "s.details.3": "This form is for the Tax Office.",
-    "c.details.q": "What is your last name?",
-    "c.details.a": "Haddad. Shall I spell it?",
-    "l.dates": "Days and dates",
-    "w.maandag": "Monday",
-    "w.week": "the week",
-    "w.maand": "the month",
-    "w.volgendeweek": "next week",
-    "w.vorigeweek": "last week",
-    "w.totenmet": "up to and including (the last day counts too)",
-    "s.dates.1": "I can work Monday to Thursday (Thursday too).",
-    "s.dates.2": "Next week I work four days.",
-    "s.dates.3": "Last week I worked forty hours.",
-    "c.dates.q": "What is the date today?",
-    "c.dates.a": "It is Monday, 3 June.",
-    "l.permit": "Papers, integration and your job",
-    "w.papieren": "the papers (documents)",
-    "w.werkvergunning": "the work permit",
-    "w.werknemer": "the employee (you work for an employer)",
-    "w.zzper": "the self-employed worker (you work for yourself)",
-    "w.inburgering": "the civic integration (the course and exams for newcomers)",
-    "w.taalles": "the language class",
-    "s.permit.1": "May I work here with my papers?",
-    "s.permit.2": "Am I an employee or self-employed?",
-    "s.permit.3": "I work as an on-call worker.",
-    "c.permit.q": "Can you work on Tuesday?",
-    "c.permit.a": "No, then I have a language class. Wednesday is fine.",
-    "l.kids": "Children and work",
-    "w.zwanger": "pregnant",
-    "w.kinderopvang": "the childcare, the daycare",
-    "w.ophalen": "to pick up (go and get someone)",
-    "w.ziekkind": "a sick child",
-    "w.ouderschapsverlof": "the parental leave",
-    "w.zorgverlof": "the care leave (time off to care for a sick family member)",
-    "s.kids.1": "My child is sick. I have to pick my child up.",
-    "s.kids.2": "May I take emergency leave?",
-    "s.kids.3": "Does my employer keep paying my wage?",
-    "c.kids.q": "Why do you have to leave now?",
-    "c.kids.a": "The daycare called. My son has a fever.",
-    "l.body": "Body and pain",
-    "w.hoofd": "the head",
-    "w.rug": "the back (of your body)",
-    "w.arm": "the arm",
-    "w.hand": "the hand",
-    "w.buik": "the belly, the stomach",
-    "w.oog": "the eye",
-    "s.body.1": "I have pain in my hand.",
-    "s.body.2": "I do not feel well.",
-    "s.body.3": "I fell on my arm.",
-    "c.body.q": "Where does it hurt?",
-    "c.body.a": "In my back. I lifted a heavy box.",
-    "l.jobends": "When your job ends",
-    "w.eindafrekening": "the final pay (your last pay when a job ends)",
-    "w.opzeggen": "to end (a contract), to cancel",
-    "w.uitschrijven": "to deregister (take your name off a list)",
-    "w.sleutel": "the key",
-    "w.verhuizen": "to move (to another home)",
-    "w.busje": "the van (a small bus)",
-    "s.jobends.1": "Do I get my holiday pay and my days off paid out?",
-    "s.jobends.2": "I ask for advice at the Juridisch Loket.",
-    "s.jobends.3": "I arrange new health insurance myself.",
-    "c.jobends.q": "Your work ends on Friday. Then you must leave the house too.",
-    "c.jobends.a": "What is the notice period of my rental contract?",
-    "c.details": "Your details: give them right",
-    "c.details.b": "At the start of a job, you give your details: your name, address, phone number, date of birth and BSN. Spell your name slowly, letter by letter. Then check your name on your contract and your payslip. A mistake in your name or BSN can give problems with your pay or tax. New address or phone number? Tell your employer.",
-    "c.details.p": "Let me spell it: A, L, I.",
-    "c.details.s": "On the phone, the agency writes down your last name. You hear that they write it wrong. What do you do?",
-    "c.details.o1": "Spell your name slowly, letter by letter, and ask them to read it back.",
-    "c.details.o2": "Say nothing: a small mistake in your name does not matter.",
-    "c.details.o3": "Hang up, and hope they find the mistake later.",
-    "c.details.w": "Your name must be the same on your contract, your payslip and your ID. Then your pay and your tax go right. Spelling and reading back is a quick check.",
-    "c.dates": "Dates: the day comes first",
-    "c.dates.b": "In Dutch, the day comes before the month: 3-6 is 3 June, not 6 March. \"Tot en met\" means that the last day counts too. Days and months start with a small letter: maandag, juni. Not sure about a date? Ask, and say it back.",
-    "c.dates.p": "Do you mean 3 June?",
-    "c.dates.s": "Your roster says: \"Vrij: 3-6 tot en met 5-6\". When are you free?",
-    "c.dates.o1": "On 3, 4 and 5 June.",
-    "c.dates.o2": "On 3 and 4 June only.",
-    "c.dates.o3": "From 6 March to 6 May.",
-    "c.dates.w": "The day comes first, then the month: 3-6 is 3 June. \"Tot en met\" means that 5 June counts too, so you are free for three days.",
-    "c.permit": "Work and integration",
-    "c.permit.b": "Do you have to do the civic integration (inburgering)? Tell your employer, and tell the gemeente that you work. Ask early if your language classes can fit around your roster. Not sure if you may work here? Check it before you start, for example at the IND, UWV or VluchtelingenWerk. Do they ask you to register as self-employed (zzp’er) for this job? Ask for advice first. General information. For your situation: ask your employer, the union or the Juridisch Loket.",
-    "c.permit.p": "I have a language class on Tuesday. Can my roster take that into account?",
-    "c.permit.s": "You start a new job. Your language class is on Tuesday mornings, but your roster has you working on Tuesdays. What do you do?",
-    "c.permit.o1": "Tell your supervisor about the class, and ask if the roster can change.",
-    "c.permit.o2": "Skip the language class, because work comes first.",
-    "c.permit.o3": "Stay home on Tuesdays without saying anything.",
-    "c.permit.w": "Your integration is a duty too. Many employers help when they know it early. The gemeente can also help you fit your plan around your work.",
-    "c.kids": "Your child is sick",
-    "c.kids.b": "Is your child suddenly sick? Tell your employer right away. For the first hours or days you can take emergency leave (calamiteitenverlof), and your employer keeps paying you. Does your child need care for longer? Then you can ask for care leave (zorgverlof). Pregnant? Your employer may not fire you because of that. Ask in time about pregnancy leave and parental leave (ouderschapsverlof). General information. For your situation: ask your employer, the union or the Juridisch Loket.",
-    "c.kids.p": "My child is sick. Can I leave early today?",
-    "c.kids.s": "The daycare (kinderopvang) calls you at work. Your child has a fever and must go home. What do you do?",
-    "c.kids.o1": "Tell your supervisor right away, and ask for emergency leave to pick up your child.",
-    "c.kids.o2": "Leave without a word, and explain it tomorrow.",
-    "c.kids.o3": "Stay at work, and let your child wait until your shift ends.",
-    "c.kids.w": "A sick child is an emergency at home. When you tell your supervisor first, they can plan the work. Emergency leave is for moments like this.",
-    "c.body": "Say what happened and where it hurts",
-    "c.body.b": "At the doctor, say what happened and where it hurts. For example: \"Ik ben gevallen. Mijn arm doet pijn.\" Also say how long you have had the pain. You do not have to guess what you have: the doctor checks that. Did it happen at work? Tell your supervisor the same day.",
-    "c.body.p": "I fell. My arm hurts.",
-    "c.body.s": "You lifted a heavy box at work. Now your back hurts a lot. You are at the family doctor (huisarts). What do you say?",
-    "c.body.o1": "Where it hurts, and what happened: you lifted a heavy box.",
-    "c.body.o2": "Only that you feel bad, nothing more.",
-    "c.body.o3": "The name of an illness you found on the internet.",
-    "c.body.w": "When you say where it hurts and what happened, the doctor understands you faster. The doctor checks what it is. Did it happen at work? Tell your supervisor too.",
-    "c.jobends": "Your job ends: what else stops?",
-    "c.jobends.b": "When your job ends, check your final pay (eindafrekening). Days off you did not use and your holiday pay are usually paid out with it. Housing, health insurance or a van through the agency can stop at the same time. Arrange your own health insurance in time. Your rental contract has its own rules: ask for advice before you leave the house. Moving, or leaving the Netherlands? Tell the gemeente. General information. For your situation: ask your employer, the union or the Juridisch Loket.",
-    "c.jobends.p": "When do I get my final pay?",
-    "c.jobends.s": "Your job ends on Friday. Your health insurance goes through the agency. What do you do?",
-    "c.jobends.o1": "Ask the agency when the insurance stops, and arrange your own in time.",
-    "c.jobends.o2": "Nothing: the insurance goes on by itself.",
-    "c.jobends.o3": "Wait until you get sick, and arrange it then.",
-    "c.jobends.w": "Insurance through the agency often stops when your job stops. When you live or work in the Netherlands, you usually must have health insurance. Arranging it in time keeps you covered.",
+    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
+    'u.kas': "Im Gewächshaus", // nieuw, nog nalezen
+    'l.harvest': "Ernten und sortieren", // nieuw, nog nalezen
+    'w.kas': "das Gewächshaus", // nieuw, nog nalezen
+    'w.gewas': "die Kultur (die Pflanzen, die wachsen)", // nieuw, nog nalezen
+    'w.rij': "die Reihe (von Pflanzen)", // nieuw, nog nalezen
+    'w.oogsten': "ernten", // nieuw, nog nalezen
+    'w.sorteren': "sortieren", // nieuw, nog nalezen
+    'w.krat': "die Kiste", // nieuw, nog nalezen
+    's.harvest.1': "Ich arbeite im Gewächshaus.", // nieuw, nog nalezen
+    's.harvest.2': "In welcher Reihe fange ich an?", // nieuw, nog nalezen
+    's.harvest.3': "Die Kiste ist voll.", // nieuw, nog nalezen
+    'c.harvest.q': "Wie viele Reihen hast du geschafft?", // nieuw, nog nalezen
+    'c.harvest.a': "Vier. Noch zwei.", // nieuw, nog nalezen
+    'l.greensafe': "Sicher im Gewächshaus", // nieuw, nog nalezen
+    'w.spuitmiddelen': "die Spritzmittel (Chemikalien für Pflanzen)", // nieuw, nog nalezen
+    'w.bespoten': "gespritzt (mit Spritzmitteln)", // nieuw, nog nalezen
+    'w.plukkar': "der Erntewagen", // nieuw, nog nalezen
+    'w.bukken': "sich bücken", // nieuw, nog nalezen
+    'w.drinken': "trinken", // nieuw, nog nalezen
+    'w.hitte': "die Hitze (wenn es sehr heiß ist)", // nieuw, nog nalezen
+    's.greensafe.1': "Ist dieses Gewächshaus gespritzt worden?", // nieuw, nog nalezen
+    's.greensafe.2': "Ich trinke kurz etwas Wasser.", // nieuw, nog nalezen
+    's.greensafe.3': "Wo steht der Erntewagen?", // nieuw, nog nalezen
+    'c.greensafe.q': "Darf ich in Gewächshaus drei arbeiten?", // nieuw, nog nalezen
+    'c.greensafe.a': "Nein, noch nicht. Es wurde gerade gespritzt.", // nieuw, nog nalezen
+    'c.harvest': "Tempo und Stücklohn", // nieuw, nog nalezen
+    'c.harvest.b': "Im Gewächshaus arbeitest du oft in einem festen Tempo. Manche Arbeitgeber zahlen pro Kiste, pro Reihe oder pro Kilo: Stücklohn (stukloon). Auch mit Stücklohn musst du für jede Stunde, die du arbeitest, mindestens den Mindestlohn verdienen. Schau den Betrag auf rijksoverheid.nl nach. Schreib jeden Tag deine Stunden und deine Kisten auf und vergleiche sie mit deiner Lohnabrechnung. Schnell arbeiten ist gut, aber sicher arbeiten geht vor. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nieuw, nog nalezen
+    'c.harvest.p': "Wie viele Kisten habe ich heute geschafft?", // nieuw, nog nalezen
+    'c.harvest.s': "Du wirst pro Kiste bezahlt. Am Ende der Woche ist dein Lohn viel niedriger als der Mindestlohn für die Stunden, die du gearbeitet hast. Was machst du?", // nieuw, nog nalezen
+    'c.harvest.o1': "Zeig deinem Arbeitgeber deine eigene Liste mit Stunden und Kisten, und hol dir Hilfe, wenn es nicht korrigiert wird.", // nieuw, nog nalezen
+    'c.harvest.o2': "Sag nichts und arbeite nächste Woche schneller, damit du mehr verdienst.", // nieuw, nog nalezen
+    'c.harvest.o3': "Akzeptiere es: Mit Stücklohn ist ein niedriger Lohn normal.", // nieuw, nog nalezen
+    'c.harvest.w': "Auch mit Stücklohn musst du für jede gearbeitete Stunde mindestens den Mindestlohn bekommen. Deine eigene Liste mit Stunden und Kisten hilft dir zu zeigen, was du gemacht hast.", // nieuw, nog nalezen
+    'c.greensafe': "Hitze und Spritzmittel", // nieuw, nog nalezen
+    'c.greensafe.b': "Im Gewächshaus kann es sehr heiß werden, auch im Frühling. Trink oft Wasser, auch bevor du Durst hast, und mach deine Pausen an einem kühlen Ort. Ist dir schwindelig oder übel, oder hast du Kopfschmerzen? Hör auf und sag es jemandem. Pflanzen werden manchmal mit Chemikalien gespritzt (spuitmiddelen). An einem Gewächshaus, das gerade gespritzt wurde, hängt oft ein Schild an der Tür. Geh nicht hinein, bis dein Vorgesetzter sagt, dass es wieder sicher ist. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nog nalezen
+    'c.greensafe.p': "Darf ich schon in diesem Gewächshaus arbeiten?", // nieuw, nog nalezen
+    'c.greensafe.s': "Ein Gewächshaus wurde heute Morgen gespritzt. An der Tür hängt ein Schild. Ein Kollege sagt: „Komm schon, es ist nur kurz.“ Was machst du?", // nieuw, nog nalezen
+    'c.greensafe.o1': "Bleib draußen und frag deinen Vorgesetzten, wann es wieder sicher ist.", // nieuw, nog nalezen
+    'c.greensafe.o2': "Geh schnell hinein und halte die Luft an.", // nieuw, nog nalezen
+    'c.greensafe.o3': "Geh hinein und wasch dir danach gut die Hände.", // nieuw, nog nalezen
+    'c.greensafe.w': "Spritzmittel können deiner Haut, deinen Augen und deiner Lunge schaden, auch wenn du nichts riechst. Nach dem Spritzen gibt es eine Wartezeit, bevor man wieder hineindarf. Dein Vorgesetzter weiß, wann sie vorbei ist.", // nieuw, nog nalezen
+    // nieuw, nog nalezen: Getallen en gegevens (u.data), l.permit, l.kids, l.body, l.jobends and their tips (30 October 2026).
+    'u.data': "Zahlen und Angaben",
+    'l.details': "Deine Angaben",
+    'w.voornaam': "der Vorname",
+    'w.achternaam': "der Nachname, der Familienname",
+    'w.spellen': "buchstabieren (die Buchstaben einzeln sagen)",
+    'w.telefoonnummer': "die Telefonnummer",
+    'w.geboortedatum': "das Geburtsdatum",
+    'w.formulier': "das Formular (ein Papier oder eine Seite zum Ausfüllen)",
+    's.details.1': "Können Sie das buchstabieren?",
+    's.details.2': "Ich gebe meine neue Telefonnummer weiter.",
+    's.details.3': "Dieses Formular ist für das Finanzamt (Belastingdienst).",
+    'c.details.q': "Wie ist dein Nachname?",
+    'c.details.a': "Haddad. Soll ich ihn buchstabieren?",
+    'l.dates': "Tage und Daten",
+    'w.maandag': "Montag",
+    'w.week': "die Woche",
+    'w.maand': "der Monat",
+    'w.volgendeweek': "nächste Woche",
+    'w.vorigeweek': "letzte Woche",
+    'w.totenmet': "bis einschließlich (der letzte Tag zählt mit)",
+    's.dates.1': "Ich kann Montag bis einschließlich Donnerstag.",
+    's.dates.2': "Nächste Woche arbeite ich vier Tage.",
+    's.dates.3': "Letzte Woche habe ich vierzig Stunden gearbeitet.",
+    'c.dates.q': "Welches Datum ist heute?",
+    'c.dates.a': "Heute ist Montag, der 3. Juni.",
+    'l.permit': "Papiere, Integration und dein Job",
+    'w.papieren': "die Papiere (Dokumente)",
+    'w.werkvergunning': "die Arbeitserlaubnis",
+    'w.werknemer': "der Arbeitnehmer (du arbeitest für einen Arbeitgeber)",
+    'w.zzper': "der Selbstständige (du arbeitest für dich selbst)",
+    'w.inburgering': "die Integration (der Kurs und die Prüfungen für Neuankömmlinge)",
+    'w.taalles': "der Sprachkurs, die Sprachstunde",
+    's.permit.1': "Darf ich mit meinen Papieren hier arbeiten?",
+    's.permit.2': "Bin ich Arbeitnehmer oder selbstständig?",
+    's.permit.3': "Ich arbeite auf Abruf.",
+    'c.permit.q': "Kannst du am Dienstag arbeiten?",
+    'c.permit.a': "Nein, da habe ich Sprachkurs. Mittwoch geht.",
+    'l.kids': "Kinder und Arbeit",
+    'w.zwanger': "schwanger",
+    'w.kinderopvang': "die Kinderbetreuung, die Kita",
+    'w.ophalen': "abholen (jemanden holen)",
+    'w.ziekkind': "ein krankes Kind",
+    'w.ouderschapsverlof': "die Elternzeit",
+    'w.zorgverlof': "die Pflegezeit (freie Zeit, um ein krankes Familienmitglied zu pflegen)",
+    's.kids.1': "Mein Kind ist krank. Ich muss es abholen.",
+    's.kids.2': "Darf ich Sonderurlaub für einen Notfall nehmen?",
+    's.kids.3': "Zahlt mein Arbeitgeber meinen Lohn weiter?",
+    'c.kids.q': "Warum musst du jetzt weg?",
+    'c.kids.a': "Die Kita hat angerufen. Mein Sohn hat Fieber.",
+    'l.body': "Körper und Schmerzen",
+    'w.hoofd': "der Kopf",
+    'w.rug': "der Rücken",
+    'w.arm': "der Arm",
+    'w.hand': "die Hand",
+    'w.buik': "der Bauch",
+    'w.oog': "das Auge",
+    's.body.1': "Ich habe Schmerzen in der Hand.",
+    's.body.2': "Ich fühle mich nicht gut.",
+    's.body.3': "Ich bin auf den Arm gefallen.",
+    'c.body.q': "Wo tut es weh?",
+    'c.body.a': "Im Rücken. Ich habe eine schwere Kiste gehoben.",
+    'l.jobends': "Wenn dein Job endet",
+    'w.eindafrekening': "die Schlussabrechnung (dein letzter Lohn, wenn ein Job endet)",
+    'w.opzeggen': "kündigen (einen Vertrag), absagen",
+    'w.uitschrijven': "abmelden (deinen Namen von einer Liste nehmen)",
+    'w.sleutel': "der Schlüssel",
+    'w.verhuizen': "umziehen (in eine andere Wohnung)",
+    'w.busje': "der Kleinbus",
+    's.jobends.1': "Bekomme ich mein Urlaubsgeld und meine freien Tage ausgezahlt?",
+    's.jobends.2': "Ich hole mir Rat beim Juridisch Loket.",
+    's.jobends.3': "Ich schließe selbst eine neue Krankenversicherung ab.",
+    'c.jobends.q': "Deine Arbeit endet am Freitag. Dann musst du auch aus der Wohnung raus.",
+    'c.jobends.a': "Wie lang ist die Kündigungsfrist von meinem Mietvertrag?",
+    'c.details': "Deine Angaben: Gib sie richtig an",
+    'c.details.b': "Am Anfang eines Jobs gibst du deine Angaben: deinen Namen, deine Adresse, deine Telefonnummer, dein Geburtsdatum und deine BSN. Buchstabiere deinen Namen langsam, Buchstabe für Buchstabe. Prüfe danach deinen Namen auf deinem Vertrag und auf deiner Lohnabrechnung. Ein Fehler in deinem Namen oder deiner BSN kann Probleme mit deinem Lohn oder deinen Steuern machen. Neue Adresse oder Telefonnummer? Sag es deinem Arbeitgeber.",
+    'c.details.p': "Ich buchstabiere es kurz: A, L, I.",
+    'c.details.s': "Am Telefon schreibt die Zeitarbeitsfirma deinen Nachnamen auf. Du hörst, dass sie ihn falsch schreiben. Was machst du?",
+    'c.details.o1': "Buchstabiere deinen Namen langsam, Buchstabe für Buchstabe, und bitte sie, ihn vorzulesen.",
+    'c.details.o2': "Sag nichts: Ein kleiner Fehler im Namen ist egal.",
+    'c.details.o3': "Leg auf und hoffe, dass sie den Fehler später finden.",
+    'c.details.w': "Dein Name muss auf deinem Vertrag, deiner Lohnabrechnung und deinem Ausweis gleich sein. Dann stimmen dein Lohn und deine Steuern. Buchstabieren und vorlesen lassen ist eine schnelle Kontrolle.",
+    'c.dates': "Daten: Der Tag kommt zuerst",
+    'c.dates.b': "Im Niederländischen kommt der Tag vor dem Monat: 3-6 ist der 3. Juni, nicht der 6. März. „Tot en met“ heißt, dass der letzte Tag mitzählt. Tage und Monate schreibt man klein: maandag, juni. Bei einem Datum nicht sicher? Frag nach und sag es noch einmal.",
+    'c.dates.p': "Meinst du den 3. Juni?",
+    'c.dates.s': "In deinem Dienstplan steht: „Vrij: 3-6 tot en met 5-6“. Wann hast du frei?",
+    'c.dates.o1': "Am 3., 4. und 5. Juni.",
+    'c.dates.o2': "Nur am 3. und 4. Juni.",
+    'c.dates.o3': "Vom 6. März bis zum 6. Mai.",
+    'c.dates.w': "Zuerst kommt der Tag, dann der Monat: 3-6 ist der 3. Juni. „Tot en met“ heißt, dass der 5. Juni mitzählt. Du hast also drei Tage frei.",
+    'c.permit': "Arbeit und Integration",
+    'c.permit.b': "Musst du die Integration (inburgering) machen? Sag es deinem Arbeitgeber, und sag der gemeente (der Gemeinde), dass du arbeitest. Frag früh, ob deine Sprachkurse zu deinem Dienstplan passen können. Nicht sicher, ob du hier arbeiten darfst? Prüfe es, bevor du anfängst, zum Beispiel beim IND, beim UWV oder bei VluchtelingenWerk. Sollst du dich für diesen Job als Selbstständiger (zzp’er) anmelden? Hol dir zuerst Rat. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.",
+    'c.permit.p': "Ich habe dienstags Sprachkurs. Kann mein Dienstplan darauf Rücksicht nehmen?",
+    'c.permit.s': "Du fängst einen neuen Job an. Dein Sprachkurs ist dienstagmorgens, aber laut Dienstplan arbeitest du dienstags. Was machst du?",
+    'c.permit.o1': "Erzähl deinem Vorgesetzten von dem Kurs und frag, ob der Dienstplan sich ändern kann.",
+    'c.permit.o2': "Lass den Sprachkurs ausfallen, denn die Arbeit geht vor.",
+    'c.permit.o3': "Bleib dienstags zu Hause, ohne etwas zu sagen.",
+    'c.permit.w': "Deine Integration ist auch eine Pflicht. Viele Arbeitgeber helfen, wenn sie es früh wissen. Die gemeente kann dir auch helfen, deinen Plan mit deiner Arbeit zu verbinden.",
+    'c.kids': "Dein Kind ist krank",
+    'c.kids.b': "Ist dein Kind plötzlich krank? Sag es sofort deinem Arbeitgeber. Für die ersten Stunden oder Tage kannst du Sonderurlaub für Notfälle nehmen (calamiteitenverlof), und dein Arbeitgeber zahlt dich weiter. Braucht dein Kind länger Pflege? Dann kannst du Pflegeurlaub (zorgverlof) beantragen. Schwanger? Deshalb darf dein Arbeitgeber dir nicht kündigen. Frag rechtzeitig nach dem Mutterschutz und der Elternzeit (ouderschapsverlof). Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.",
+    'c.kids.p': "Mein Kind ist krank. Kann ich heute früher gehen?",
+    'c.kids.s': "Die Kita (kinderopvang) ruft dich bei der Arbeit an. Dein Kind hat Fieber und muss nach Hause. Was machst du?",
+    'c.kids.o1': "Sag es sofort deinem Vorgesetzten und bitte um Sonderurlaub, um dein Kind abzuholen.",
+    'c.kids.o2': "Geh ohne ein Wort und erklär es morgen.",
+    'c.kids.o3': "Bleib bei der Arbeit und lass dein Kind warten, bis deine Schicht vorbei ist.",
+    'c.kids.w': "Ein krankes Kind ist ein Notfall zu Hause. Wenn du es zuerst deinem Vorgesetzten sagst, kann er die Arbeit planen. Sonderurlaub für Notfälle ist für solche Momente da.",
+    'c.body': "Sag, was passiert ist und wo es wehtut",
+    'c.body.b': "Sag beim Arzt, was passiert ist und wo es wehtut. Zum Beispiel: „Ik ben gevallen. Mijn arm doet pijn.“ Sag auch, wie lange du die Schmerzen schon hast. Du musst nicht raten, was du hast: Das prüft der Arzt. Ist es bei der Arbeit passiert? Sag es deinem Vorgesetzten noch am selben Tag.",
+    'c.body.p': "Ich bin gefallen. Mein Arm tut weh.",
+    'c.body.s': "Du hast bei der Arbeit eine schwere Kiste gehoben. Jetzt tut dein Rücken sehr weh. Du bist beim Hausarzt (huisarts). Was sagst du?",
+    'c.body.o1': "Wo es wehtut und was passiert ist: Du hast eine schwere Kiste gehoben.",
+    'c.body.o2': "Nur, dass es dir schlecht geht, mehr nicht.",
+    'c.body.o3': "Den Namen einer Krankheit, die du im Internet gefunden hast.",
+    'c.body.w': "Wenn du sagst, wo es wehtut und was passiert ist, versteht dich der Arzt schneller. Der Arzt prüft, was es ist. Ist es bei der Arbeit passiert? Sag es auch deinem Vorgesetzten.",
+    'c.jobends': "Dein Job endet: Was hört noch auf?",
+    'c.jobends.b': "Wenn dein Job endet, prüfe deine Schlussabrechnung (eindafrekening). Freie Tage, die du nicht genommen hast, und dein Urlaubsgeld werden meistens damit ausgezahlt. Wohnung, Krankenversicherung oder ein Kleinbus über die Zeitarbeitsfirma können gleichzeitig enden. Schließ rechtzeitig selbst eine Krankenversicherung ab. Dein Mietvertrag hat eigene Regeln: Hol dir Rat, bevor du aus der Wohnung ausziehst. Ziehst du um oder verlässt du die Niederlande? Sag es der gemeente. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.",
+    'c.jobends.p': "Wann bekomme ich meine Schlussabrechnung?",
+    'c.jobends.s': "Dein Job endet am Freitag. Deine Krankenversicherung läuft über die Zeitarbeitsfirma. Was machst du?",
+    'c.jobends.o1': "Frag die Zeitarbeitsfirma, wann die Versicherung endet, und schließ rechtzeitig selbst eine ab.",
+    'c.jobends.o2': "Nichts: Die Versicherung läuft von selbst weiter.",
+    'c.jobends.o3': "Warte, bis du krank wirst, und kümmere dich dann darum.",
+    'c.jobends.w': "Eine Versicherung über die Zeitarbeitsfirma endet oft, wenn dein Job endet. Wenn du in den Niederlanden wohnst oder arbeitest, musst du meistens eine Krankenversicherung haben. Wenn du dich rechtzeitig kümmerst, bleibst du versichert.",
   },
 };
 

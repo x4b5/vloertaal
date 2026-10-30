@@ -85,16 +85,16 @@ const t: CultureTranslation = {
     'c.aiprivate.a.why': "Ți se cere să pui nume într-un chatbot: răspunsul spune „nu” și de ce.",
     'c.aifake.a.why': "Un număr nou cere bani: răspunsul verifică întâi.",
     'c.aiplan.a.why': "Programul l-a făcut o aplicație: răspunsul cere un om.",
-    // In de kas (u.kas, 30 okt 2026): voorlopig de Engelse tekst.
-    'c.harvest.a.why': "Asked how many rows: this reply gives a number, and what is left.", // TODO vertalen
-    'c.greensafe.a.why': "Just sprayed: this reply says not yet, and why.", // TODO vertalen
-    // TODO vertalen: why the chat replies of the new lessons fit (30 October 2026). English for now; the translators replace it.
-    "c.details.a.why": "Asked for a last name: this reply gives it and offers to spell it.",
-    "c.dates.a.why": "Asked for the date: this reply gives the day and the date.",
-    "c.permit.a.why": "A no is fine with a reason. Offering another day helps.",
-    "c.kids.a.why": "Asked why: this reply gives the reason, the daycare called.",
-    "c.body.a.why": "Asked where it hurts: this reply names the place and the cause.",
-    "c.jobends.a.why": "The house goes with the job: this reply asks about the notice period.",
+    // In de kas (u.kas, 30 okt 2026): nieuw, nog nalezen.
+    'c.harvest.a.why': "Întrebarea e câte rânduri: răspunsul ăsta dă un număr și ce a mai rămas.", // nieuw, nog nalezen
+    'c.greensafe.a.why': "Tocmai stropită: răspunsul ăsta spune încă nu, și de ce.", // nieuw, nog nalezen
+    // nieuw, nog nalezen: why the chat replies of the new lessons fit (30 October 2026).
+    'c.details.a.why': "Întrebarea e numele de familie: răspunsul ăsta îl dă și se oferă să-l spună pe litere.",
+    'c.dates.a.why': "Întrebarea e data: răspunsul ăsta dă ziua și data.",
+    'c.permit.a.why': "Un nu e în regulă cu un motiv. Ajută să propui altă zi.",
+    'c.kids.a.why': "Întrebarea e de ce: răspunsul ăsta dă motivul, a sunat creșa.",
+    'c.body.a.why': "Întrebarea e unde doare: răspunsul ăsta spune locul și cauza.",
+    'c.jobends.a.why': "Casa e legată de muncă: răspunsul ăsta întreabă de termenul de preaviz.",
   },
 };
 
