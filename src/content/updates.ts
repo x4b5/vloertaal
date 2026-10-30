@@ -43,6 +43,7 @@ export const UPDATES: Update[] = [
       'Nieuw in het spoor Taal: "Oefen samen". Na een les met een gesprekje kun je op het eindscherm samen oefenen, met twee mensen op één telefoon. De een leest de collega, de ander antwoordt, en daarna wissel je van rol. Met "Hoor het" en de vertaling (die kan uit). Geen internet nodig, er wordt niets opgenomen en er is geen score.',
       '33 woorden hadden nog een emoji. Ze hebben nu een eigen tekening, zoals de voornaam, zwanger, de sleutel, de plukkar en bukken.',
       '32 woorden uit de nieuwe Entree-onderwerpen hadden nog een emoji. Ze hebben nu een eigen tekening, zoals de werkbon, de gehoorbescherming, de accu, het rijbewijs, de agent en de bijlage.',
+      'Tien woorden die nog geen plaatje hadden, hebben nu een eigen tekening: het hoofd, de rug en de buik, slijpen, de kabel, de stroom, de hefbrug, lek, kapot en de rechter.',
     ],
   },
   {
