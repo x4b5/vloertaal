@@ -71,7 +71,7 @@ export const BE_TODO: readonly string[] = [
   'r.ziek', 'r.veilig', 'r.rechten', 'r.samen', 'r.warehouse', 'r.factory', 'r.care',
 
   // Agent D: digitaal, meedoen, duurzaam, schrijven, de andere sectoren
-  'r.duurzaam', 'r.schrijven', 'r.build', 'r.horeca', 'r.clean', 'r.kas', 'r.techniek', 'r.werkplaats',
+  'r.build', 'r.horeca', 'r.clean', 'r.kas', 'r.techniek', 'r.werkplaats',
 ];
 
 /** Every Belgian unit written so far. */
