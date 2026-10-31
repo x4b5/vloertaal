@@ -99,6 +99,8 @@ export const uiNl: Record<UiKey, UiText> = {
   topicsOrder: 'Toon de onderwerpen',
   byTheme: 'Op thema',
   inOrder: 'Op volgorde',
+  searchTopics: 'Zoek een onderwerp',
+  searchNone: 'Geen onderwerp met dit woord.',
   tagSaying: 'Gezegde',
   literally: 'Letterlijk:',
   itMeans: 'Het betekent:',

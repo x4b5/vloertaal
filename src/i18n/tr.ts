@@ -204,6 +204,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Konuları göster',
     byTheme: 'Temaya göre',
     inOrder: 'Sırayla',
+    searchTopics: 'Konu ara', // nieuw, nalezen
+    searchNone: 'Bu kelimeyle konu yok.', // nieuw, nalezen
     lessonsUnit: 'ders',
     lessonsUnitOne: 'ders',
     topicsUnit: 'konu',

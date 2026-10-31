@@ -204,6 +204,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'عرض المواضيع',
     byTheme: 'حسب الأقسام',
     inOrder: 'بالترتيب',
+    searchTopics: 'البحث عن موضوع', // nieuw, nalezen
+    searchNone: 'لا يوجد موضوع بهذه الكلمة.', // nieuw, nalezen
     lessonsUnit: { zero: 'درس', one: 'درس', two: 'درسان', few: 'دروس', many: 'درساً', other: 'درس' },
     lessonsUnitOne: 'درس',
     topicsUnit: { zero: 'موضوع', one: 'موضوع', two: 'موضوعان', few: 'مواضيع', many: 'موضوعاً', other: 'موضوع' },

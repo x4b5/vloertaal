@@ -204,6 +204,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Показати теми',
     byTheme: 'За розділами',
     inOrder: 'По порядку',
+    searchTopics: 'Пошук теми', // nieuw, nalezen
+    searchNone: 'Немає теми з цим словом.', // nieuw, nalezen
     lessonsUnit: { one: 'урок', few: 'уроки', many: 'уроків', other: 'уроків' },
     lessonsUnitOne: 'урок',
     topicsUnit: { one: 'тема', few: 'теми', many: 'тем', other: 'теми' },

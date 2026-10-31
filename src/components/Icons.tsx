@@ -484,3 +484,7 @@ export const CallIcon = (p: IconProps) => (
     />
   </Svg>
 );
+
+export const SearchIcon = (p: IconProps) => (
+  <Svg {...p}><circle cx="10.5" cy="10.5" r="6" {...stroke} /><path d="M15 15l5 5" {...stroke} /></Svg>
+);

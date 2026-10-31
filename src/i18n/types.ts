@@ -88,6 +88,9 @@ export const uiEn = {
   topicsOrder: "Show the topics",
   byTheme: "By theme",
   inOrder: "In order",
+  /* The search bar on "Alle onderwerpen" (src/lib/topicSearch.ts). */
+  searchTopics: "Search a topic",
+  searchNone: "No topic with this word.",
   tagSaying: "Saying",
   literally: "Literally:",
   itMeans: "It means:",

@@ -204,6 +204,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Arată subiectele',
     byTheme: 'Pe teme',
     inOrder: 'În ordine',
+    searchTopics: 'Caută un subiect', // nieuw, nalezen
+    searchNone: 'Niciun subiect cu acest cuvânt.', // nieuw, nalezen
     lessonsUnit: { one: 'lecție', few: 'lecții', other: 'de lecții' },
     lessonsUnitOne: 'lecție',
     topicsUnit: { one: 'subiect', few: 'subiecte', other: 'de subiecte' },
