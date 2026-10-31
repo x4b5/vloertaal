@@ -1487,7 +1487,7 @@ const t: CultureTranslation = {
     'w.goedin': "doué pour (quelque chose)", // nieuw, nalezen
     'w.kiezen': "choisir", // nieuw, nalezen
     'w.beroep': "le métier, le type de travail", // nieuw, nalezen
-    'w.bijbaan': "le petit boulot (un petit travail à côté de l’école)", // nieuw, nalezen
+    'w.bijbaan': "le petit boulot (un petit travail pendant tes études)", // nieuw, nalezen // nagelezen AI ronde 3
     'w.nauwkeurig': "soigneux et précis", // nieuw, nalezen
     'w.meeloopdag': "la journée d’observation (un jour où tu suis quelqu’un au travail)", // nieuw, nalezen
     's.mychoice.1': "Je sais bien travailler de mes mains.", // nieuw, nalezen
