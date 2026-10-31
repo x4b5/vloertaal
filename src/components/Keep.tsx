@@ -8,6 +8,8 @@ import { BACKUP_MAX_BYTES, backupFile, bestStreak, knownLessons, mergeAddsNothin
 import { OPEN_TO_ALL } from '../lib/access';
 import { REMINDER_TIMES, forgetReminder, googleCalendarUrl, isAndroid, rememberReminder, reminderCancelIcs, reminderEvent, reminderIcs, saveFile } from '../lib/reminder';
 import { REMIND_DEFAULT, REMIND_OTHER_TIMES, REMIND_OWN, keepNext, ownTime, type KeepAction, type KeepStep } from '../lib/keep';
+import { canShareBackup, sendBackup } from '../lib/backupShare';
+import { nudgeClosed } from '../lib/backupNudge';
 import { Bi } from './Bi';
 import { NlPair } from './NlPair';
 import { Character } from './Characters';
@@ -280,17 +282,24 @@ export function BackupCard({ progress, lang, onRestore }: {
   const [found, setFound] = useState<Partial<Progress> | null>(null);
   /** The second question: the file has fewer lessons than this phone, and Replace was tapped. */
   const [fewer, setFewer] = useState(false);
-  const [note, setNote] = useState<'bad' | 'big' | 'back' | 'same' | null>(null);
+  const [note, setNote] = useState<'bad' | 'big' | 'back' | 'same' | 'made' | null>(null);
+  // A phone that can share files: the button sends the file to the learner themself (WhatsApp, e-mail, Files).
+  const [share] = useState(canShareBackup);
   // Only lessons the app knows count, here and in the file (src/lib/progress.ts knownLessonId).
   const lessons = knownLessons(progress.completed);
   const theirs = found ? knownLessons(found.completed ?? {}) : 0;
   // Words learned, or in the work-rules track rules learned.
   const rules = trackOf(progress) === 'regels';
   const words = learnedItems(trackOf(progress), progress.completed);
-  const today = new Date();
-  const stamp = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-
-  const download = () => saveFile(`vloertaal-voortgang-${stamp}.json`, 'application/json', backupFile(progress, new Date()));
+  const download = () => {
+    const now = new Date();
+    void sendBackup(backupFile(progress, now), now).then((out) => {
+      if (out === 'cancelled') return;
+      // A backup was made: the home's reminder (src/lib/backupNudge.ts) waits a long while.
+      nudgeClosed(lessons);
+      setNote('made');
+    });
+  };
   const pick = async (f: File | undefined) => {
     if (!f) return;
     const big = f.size >= BACKUP_MAX_BYTES;
@@ -392,9 +401,13 @@ export function BackupCard({ progress, lang, onRestore }: {
           </button>
         </div>
       ) : (
+        <>
+        {share && <p className="keep-hint keep-hint-share"><Bi text={ui('backupShareHint', lang)} /></p>}
         <div className="keep-row">
-          <button type="button" className="btn btn-dark keep-btn" onClick={download}>
-            <NlPair nlFirst nl="Download" className="keep-btn-gloss" text={ui('backupSave', lang)} />
+          <button type="button" className="btn btn-dark keep-btn keep-save" onClick={download}>
+            {share
+              ? <NlPair nlFirst nl="Stuur naar jezelf" className="keep-btn-gloss" text={ui('backupShare', lang)} />
+              : <NlPair nlFirst nl="Download" className="keep-btn-gloss" text={ui('backupSave', lang)} />}
           </button>
           <button type="button" className="btn btn-ghost keep-btn" onClick={() => file.current?.click()} ref={loadBtn}>
             <NlPair nlFirst nl="Zet terug" className="keep-btn-gloss" text={ui('backupLoad', lang)} />
@@ -407,13 +420,14 @@ export function BackupCard({ progress, lang, onRestore }: {
             onChange={(e) => pick(e.target.files?.[0])}
           />
         </div>
+        </>
       )}
       {/* Always on the page (a live region that appears with its text is often not read). */}
       <div role="status">
         {note && (
-          <p className={note === 'back' || note === 'same' ? 'keep-ok' : 'warn keep-note'}>
-            {(note === 'back' || note === 'same') && <CheckIcon size={20} />}
-            <Bi text={ui(note === 'big' ? 'backupTooBig' : note === 'bad' ? 'backupBad' : note === 'same' ? 'backupNothingNew' : 'backupBack', lang)} />
+          <p className={note === 'back' || note === 'same' || note === 'made' ? 'keep-ok' : 'warn keep-note'}>
+            {(note === 'back' || note === 'same' || note === 'made') && <CheckIcon size={20} />}
+            <Bi text={ui(note === 'big' ? 'backupTooBig' : note === 'bad' ? 'backupBad' : note === 'same' ? 'backupNothingNew' : note === 'made' ? 'backupMade' : 'backupBack', lang)} />
           </p>
         )}
       </div>

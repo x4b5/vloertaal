@@ -401,6 +401,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Я вчу нідерландську для роботи з Vloertaal. Безкоштовно: {link}', // nieuw, nalezen
     workTry: 'Спробуй сьогодні на роботі', // nieuw, nalezen
     saveFailed: 'Твій прогрес не збережено. Телефон заповнений? Звільни трохи місця. Або відкрий Налаштування: «Збережи свій прогрес».', // nieuw, nalezen
+    bewaarNudge: 'Телефон іноді може стерти твій прогрес. Тому збережи копію.', // nieuw, nalezen
+    bewaarGo: 'Зберегти зараз', // nieuw, nalezen
+    backupShare: 'Надіслати собі', // nieuw, nalezen
+    backupShareHint: 'Надішли файл собі, наприклад у WhatsApp або електронною поштою.', // nieuw, nalezen
+    backupMade: 'Готово. Добре збережи цей файл. З ним ти пізніше повернеш свій прогрес.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

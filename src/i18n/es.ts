@@ -401,6 +401,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Aprendo neerlandés para mi trabajo con Vloertaal. Gratis: {link}', // nieuw, nalezen
     workTry: 'Pruébalo hoy en el trabajo', // nieuw, nalezen
     saveFailed: 'Tu progreso no se ha guardado. ¿Tu teléfono está lleno? Libera un poco de espacio. O ve a Ajustes: «Guarda tu progreso».', // nieuw, nalezen
+    bewaarNudge: 'Tu teléfono a veces puede borrar tu progreso. Por eso, guarda una copia.', // nieuw, nalezen
+    bewaarGo: 'Guardar ahora', // nieuw, nalezen
+    backupShare: 'Envíatelo', // nieuw, nalezen
+    backupShareHint: 'Envíate el archivo, por ejemplo por WhatsApp o por correo electrónico.', // nieuw, nalezen
+    backupMade: 'Listo. Guarda bien este archivo. Con él recuperas tu progreso más tarde.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

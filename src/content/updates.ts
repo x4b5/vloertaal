@@ -32,6 +32,7 @@ export const UPDATES: Update[] = [
       'Rustiger begin: je start meteen met les 1. De toets "Wat ken je al?" komt pas na de eerste les. De knop Melden staat in de les niet meer aan. Wil je hem toch? Zet hem aan onderaan bij Over.',
       'Taal: bij "Maak het gesprek af" zie je de vertaling pas na je antwoord. In de eerste onderwerpen hoef je niet te typen: je hoort een woord en kiest het. En na een les staat soms een zin om vandaag op je werk te proberen.',
       'De app start sneller, en een woord dat je al hoorde speelt meteen. Kan je telefoon je voortgang niet bewaren? Dan zie je dat nu, met een tip.',
+      'Bewaar je voortgang: kan je telefoon je voortgang wissen? Dan vraagt de app na 3 lessen één keer of je een kopie wilt maken. Bij Instellingen › Bewaar je voortgang stuur je het bestand nu ook naar jezelf, bijvoorbeeld in WhatsApp of een e-mail.',
     ],
   },
   {

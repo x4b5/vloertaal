@@ -401,6 +401,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Învăț olandeză pentru munca mea cu Vloertaal. Gratuit: {link}', // nieuw, nalezen
     workTry: 'Încearcă azi la muncă', // nieuw, nalezen
     saveFailed: 'Progresul tău nu a fost salvat. Telefonul e plin? Fă puțin loc. Sau mergi la Setări: „Păstrează-ți progresul”.', // nieuw, nalezen
+    bewaarNudge: 'Telefonul îți poate șterge uneori progresul. De aceea, păstrează o copie.', // nieuw, nalezen
+    bewaarGo: 'Salvează acum', // nieuw, nalezen
+    backupShare: 'Trimite-ți ție', // nieuw, nalezen
+    backupShareHint: 'Trimite-ți fișierul ție, de exemplu pe WhatsApp sau pe e-mail.', // nieuw, nalezen
+    backupMade: 'Gata. Păstrează bine acest fișier. Cu el îți recuperezi progresul mai târziu.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

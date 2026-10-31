@@ -243,6 +243,20 @@ function defineStates(LANG) {
   };
   add('flow:home-new', '/', (p) => realHome(p), { expect: '.home3' });
   add('flow:home-quiet', '/', (p) => realHome(p, { quiet: true }), { expect: '.sound-off-mark' });
+  // "Bewaar je voortgang" (src/components/BackupNudge.tsx): 3 lessons done on a phone whose browser
+  // said no to keeping the storage: the card in the block's place ([Bewaar nu] [Later], "Ander
+  // onderwerp"); Later closes it; Bewaar nu opens Settings › Bewaar je voortgang (with a share sheet).
+  const atRisk = async (p) => {
+    await p.evaluate(() => localStorage.setItem('vloertaal:persist', 'denied'));
+    await realHome(p, { completed: { 'l.hello': { best: 1, times: 1 }, 'l.people': { best: 1, times: 1 }, 'l.understand': { best: 1, times: 1 } } });
+  };
+  add('flow:bewaar-home', '/', atRisk, { expect: '.home-offer .bewaar-card .bewaar-go' });
+  add('flow:bewaar-later', '/', async (p) => { await atRisk(p); await tap(p, '.bewaar-later'); await settle(p); }, { expect: '.home3 .bay-now' });
+  add('flow:bewaar-go', '/', async (p) => {
+    await atRisk(p);
+    await p.evaluate(() => { navigator.share = () => Promise.resolve(); navigator.canShare = () => true; });
+    await tap(p, '.bewaar-go'); await settle(p);
+  }, { expect: '.waybill .keep-hint-share' });
   const startFirstLesson = async (p) => { await realHome(p); await tap(p, '.bay-start, .route-start, .start-btn, button.btn-primary', 0); await settle(p, 900); };
   const stopHalfway = async (p) => {
     await startFirstLesson(p);

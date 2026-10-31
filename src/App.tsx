@@ -36,10 +36,12 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
-import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
+import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, knownLessons, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dueIds, gradedStepIds, seedCards, strongerCount, addLessonSentences, dailyIds, reviewResults, seedSentenceCards, wordResultCount } from './lib/spaced';
 import { gloss } from './i18n';
-import { keepStorageAgain, persistStorage } from './lib/install';
+import { isInstalled, keepStorageAgain, persistStorage } from './lib/install';
+import { BackupNudge } from './components/BackupNudge';
+import { nudgeClosed, nudgeDue, nudgeEnv, nudgeRecord, progressAtRisk } from './lib/backupNudge';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
 import { clockMinutes, count, countDayMilestones, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
@@ -196,6 +198,10 @@ export default function App() {
   const typedCode = useRef('');
   /** A coach link to a topic outside the preview: the home offers its unlock (this visit). */
   const [lockedLink, setLockedLink] = useState<string | null>(null);
+  /** "Bewaar je voortgang" on the home (src/lib/backupNudge.ts) was tapped: draw the home again. */
+  const [, setNudgeTick] = useState(0);
+  // Opened from the home screen: quietly ask the browser to keep the storage (and remember its answer).
+  useEffect(() => { if (isInstalled()) void keepStorageAgain(); }, []);
   const grant = (given: Access, typed?: string) => {
     // Back on the password page, a smaller code typed after a bigger one keeps the bigger one.
     const a = higherAccess(access, given);
@@ -783,9 +789,10 @@ export default function App() {
         // Do learners come back: the 1st, 2nd, 7th, 14th and 28th day with a lesson, once per device.
         countDayMilestones(next.days?.length ?? 0);
         // The first finished lesson: ask the browser to keep this site's storage (the progress).
-        if (!daily && !Object.keys(progress.completed).length) persistStorage();
+        // (Its answer is remembered: src/lib/backupNudge.ts reminds of a backup where it was no.)
+        if (!daily && !Object.keys(progress.completed).length) void persistStorage();
         // Not granted (yet): ask again now and then, so the progress is not cleared with the cache.
-        else keepStorageAgain();
+        else void keepStorageAgain();
         const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
         // Words learned, or in the rules track rules learned (the rule cards of finished lessons).
         const before = learnedItems(track, progress.completed);
@@ -1117,6 +1124,10 @@ export default function App() {
       const offered = stopped === null ? toetsOffer(progress, new Date()) : null;
       // "Er is iets veranderd" (src/lib/notice.ts): once, before the test's card (one card at a time).
       const notice = noticeFor(progress, new Date());
+      // "Bewaar je voortgang" (src/lib/backupNudge.ts): only where the phone may lose the
+      // progress, after 3 lessons, once; after the notice and the test (one card at a time).
+      const lessonsDone = knownLessons(progress.completed);
+      const nudge = !notice && !offered && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
       const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track) : null;
       return (
         <>
@@ -1158,6 +1169,13 @@ export default function App() {
                 lang={lang}
                 onDo={() => startToets(offered)}
                 onLater={() => setProgress((p) => toetsLater(p, offered, new Date()))}
+              />
+            ) : nudge ? (
+              <BackupNudge
+                lang={lang}
+                lessons={lessonsDone}
+                onKeep={() => { nudgeClosed(lessonsDone); go({ name: 'settings', page: 'backup' }); }}
+                onLater={() => { nudgeClosed(lessonsDone); setNudgeTick((n) => n + 1); }}
               />
             ) : undefined}
           />

@@ -500,6 +500,14 @@ export const uiEn = {
   workTry: 'Try it at work today',
   /** Saving the progress on this phone failed (src/lib/progress.ts saveProgress; src/components/SaveFailedNote.tsx): once. */
   saveFailed: 'Your progress was not saved. Is your phone full? Make some room. Or go to Settings: Keep your progress.',
+  /** "Bewaar je voortgang" on the home, once, where the phone may lose the progress (src/components/BackupNudge.tsx). */
+  bewaarNudge: 'Your phone can sometimes delete your progress. So keep a copy.',
+  bewaarGo: 'Keep it now',
+  /** Settings › "Bewaar je voortgang": the file through the phone's share sheet (src/lib/backupShare.ts). */
+  backupShare: 'Send to yourself',
+  backupShareHint: 'Send the file to yourself, for example in WhatsApp or by e-mail.',
+  /** The backup file was saved or sent. */
+  backupMade: 'Done. Keep this file safe. With it you can put your progress back later.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;
