@@ -262,7 +262,8 @@ describe('review package: the facts in three lists, by harm (A, B, C)', { timeou
       // By the file: a fact (not a report point) is in A when its file is one of list A.
       for (const r of all.filter((x) => !x.prioriteit)) {
         const f = firstFile(r);
-        const want = A_FILE.test(f) ? 'A' : r.spoor === 'Werkregels' || r.spoor === 'disclaimer' ? 'B' : 'C';
+        // A_LESSONS: the U2 lesson ("geld.8") is in A too, though its unit is in B.
+        const want = A_FILE.test(f) || /\(r\.(?:be\.)?l\.geld\.8/.test(r.onderwerp) ? 'A' : r.spoor === 'Werkregels' || r.spoor === 'disclaimer' ? 'B' : 'C';
         expect(r.lijst, `${r['bestand:regel']}`).toBe(want);
       }
       expect(lijsten.C.filter((r) => !r.prioriteit).every((r) => r.spoor === 'Taal' || r.spoor === 'overig')).toBe(true);
@@ -284,7 +285,7 @@ describe('review package: the facts in three lists, by harm (A, B, C)', { timeou
     expect(lijsten.B.some((r) => r.prioriteit && /r\.be\.l\.tijd\.3/.test(r.onderwerp))).toBe(false);
   });
 
-  it('starts list A with rechten and the help rows, and has the new lessons for labour migrants in A (and U2 in B)', () => {
+  it('starts list A with rechten and the help rows, and has the new lessons for labour migrants in A (the U2 lesson too)', () => {
     for (const land of ['NL', 'BE'] as const) {
       const { lijsten } = feitenLijsten(facts, land, points, content);
       const plain = lijsten.A.filter((r) => !r.prioriteit).map(firstFile);
@@ -293,7 +294,8 @@ describe('review package: the facts in three lists, by harm (A, B, C)', { timeou
       expect(ranks).toEqual([...ranks].sort((a, b) => a - b));
       const p = land === 'BE' ? 'r.be.l.' : 'r.l.';
       for (const id of ['ziek.4', 'contract.5', 'loon.4']) expect(lijsten.A.some((r) => r.onderwerp.includes(`(${p}${id}`)), `${land} ${id}`).toBe(true);
-      expect(lijsten.B.some((r) => r.onderwerp.includes(`(${p}geld.8`)), `${land} geld.8`).toBe(true);
+      expect(lijsten.A.some((r) => r.onderwerp.includes(`(${p}geld.8`)), `${land} geld.8`).toBe(true);
+      expect(lijsten.B.some((r) => r.onderwerp.includes(`(${p}geld.8`)), `${land} geld.8`).toBe(false);
     }
   });
 

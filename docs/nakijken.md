@@ -96,7 +96,8 @@ lijsten, op wat een fout kan kosten (`lijstOf` in `scripts/review/feiten.ts`):
 - Een punt met prioriteit staat in de lijst van de plek met de meeste schade die het noemt
   (`lijstOfId`): "r.be.l.tijd.3 / loon.3" staat in A, door loon.
 - Een nieuwe unit hoort niet vanzelf in A: zet hem zo nodig in `A_UNITS` (`scripts/review/feiten.ts`).
-  Les 10.8 (WW of werkloosheidsuitkering meenemen, formulier U2) staat in `geld.ts` en dus in B.
+  Losse lessen kunnen ook naar A, met `A_LESSONS`. Les 10.8 (WW of werkloosheidsuitkering meenemen,
+  formulier U2) staat in `geld.ts`, maar staat zo toch in A: een fout kost daar een hele uitkering.
 
 Kolommen: `nr`, `lijst`, `uur`, `prioriteit`, `land`, `spoor` (Taal, Werkregels, help, disclaimer), `onderwerp`,
 `bewering` (de noot), `tekst in de app` (de zin die het best bij de noot past, als die er is),

@@ -30,11 +30,19 @@ export const LIJSTEN: readonly Lijst[] = ['A', 'B', 'C'];
 /** The Werkregels units of list A. */
 export const A_UNITS = ['rechten', 'ziek', 'loon', 'contract', 'veilig'] as const;
 
+/**
+ * Single lessons of a list-B unit that belong in list A: a mistake there does the same harm
+ * ("Werkloos en terug naar je land", the U2: wrong advice can cost a whole benefit).
+ */
+export const A_LESSONS = ['geld.8'] as const;
+const aLesson = (id: string) => (A_LESSONS as readonly string[]).some((l) => new RegExp(`^r\\.(?:be\\.)?l\\.${l.replace('.', '\\.')}(?:\\.|$)`).test(id));
+
 const unitOfFile = (file: string): string | undefined => /content\/regels\/(?:be\/)?units\/([\w-]+)\.ts$/.exec(file)?.[1];
 
 /** The list of a fact, by its file. */
-export function lijstOf(f: Pick<Fact, 'file' | 'spoor'>): Lijst {
+export function lijstOf(f: Pick<Fact, 'file' | 'spoor'> & Partial<Pick<Fact, 'anker'>>): Lijst {
   if (f.spoor === 'help') return 'A';
+  if (f.anker && aLesson(f.anker)) return 'A';
   if (f.spoor === 'Werkregels') return (A_UNITS as readonly string[]).includes(unitOfFile(f.file) ?? '') ? 'A' : 'B';
   if (f.spoor === 'disclaimer') return 'B';
   return 'C';
@@ -43,6 +51,7 @@ export function lijstOf(f: Pick<Fact, 'file' | 'spoor'>): Lijst {
 /** The list of an id in the app: "r.be.l.ziek.2.ru1" → A, "r.l.tijd.3" → B, "h.112" → A, "c.illness" → C. */
 export function lijstOfId(id: string): Lijst {
   if (/^h\./.test(id)) return 'A';
+  if (aLesson(id)) return 'A';
   const unit = /^r\.(?:be\.)?l\.([a-z]+)\./.exec(id)?.[1];
   if (unit) return (A_UNITS as readonly string[]).includes(unit) ? 'A' : 'B';
   if (/^(r|rg\.\w+\.r)\./.test(id)) return 'B';
