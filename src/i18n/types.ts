@@ -490,6 +490,8 @@ export const uiEn = {
   noticeTitle: 'Something has changed',
   noticeMore: 'Read more',
   noticeOk: 'OK',
+  /* The text with a shared certificate, pocket card or coach card (src/lib/shareLink.ts): {link} is vloertaal.nl/<help language>. */
+  shareInvite: 'I am learning Dutch for my work with Vloertaal. It is free: {link}',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

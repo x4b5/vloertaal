@@ -40,6 +40,7 @@ export const PRIVACY: readonly PrivacySection[] = [
     paras: [
       'Staat “Anoniem meetellen” aan? Dan stuurt de app een korte telling naar GoatCounter, een teller zonder cookies. Zo zien we welke lessen goed gaan en waar mensen stoppen.',
       'Per telling gaat alleen dit mee: wat er gebeurt (een les begint, stopt of is af; de toets begint of is af), welke les, in welk kwart je stopte, en ongeveer hoeveel minuten een les duurde. Niet de uitslag van de toets.',
+      'De app telt ook of mensen terugkomen. Dat gebeurt één keer per telefoon: op je 1e, 2e, 7e, 14e en 28e dag met een les. Alleen dat getal gaat mee, geen datum. Je telefoon onthoudt welke dagen al geteld zijn.',
       'Geeft de app een fout? Dan telt hij ook dat: de soort fout, een korte code en een korte, opgeschoonde foutmelding uit de code. Geen tekst die jij hebt getypt, niet waar je was in de app. Hooguit drie fouten per bezoek.',
       'Er gaat nooit iets mee over jou: geen naam, geen hulptaal, geen land, geen sector, geen nummer en geen antwoorden. GoatCounter ziet bij elke telling je IP-adres en je browser, zoals elke website. Wij zien alleen de aantallen.',
       'Uitzetten kan bij Instellingen › “Anoniem meetellen”. Vraagt je browser om niet gevolgd te worden (Do Not Track of Global Privacy Control)? Dan telt de app niets.',

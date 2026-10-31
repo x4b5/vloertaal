@@ -25,6 +25,7 @@ export const UPDATES: Update[] = [
       'Nieuw bij Alle onderwerpen: een zoekbalk. Typ een woord, in het Nederlands of in je eigen taal, en je ziet de onderwerpen waar het in staat. Bijvoorbeeld "ziek" of "helm".',
       'Nieuw bij Over: Waarom Vloertaal? En "Wat is er nieuw?": hier zie je wat er in de app veranderd is.',
       'Werk je in België (Vlaanderen)? Kies dan bij de start, of later bij Instellingen, "België". In het spoor Werkregels krijg je dan de regels van België: alle onderwerpen, met Vlaamse woorden (loonbrief, interimkantoor, ziekenfonds, RVA). Dit is nieuw: de Belgische lessen zijn nog niet nagekeken door een expert. Zie je een fout? Mail naar hoi@vloertaal.nl.',
+      'Deel je een certificaat, spiekkaartje of je kaart? Dan staat onderaan het adres van de app, bijvoorbeeld vloertaal.nl/pl. Er gaat ook een korte tekst mee met de link, in je eigen taal. En de app telt nu ook of mensen terugkomen: één keer op je 1e, 2e, 7e, 14e en 28e dag met een les. Zonder naam, en uit te zetten bij "Anoniem meetellen".',
     ],
   },
   {

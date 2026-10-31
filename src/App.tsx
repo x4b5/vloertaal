@@ -41,7 +41,7 @@ import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
-import { clockMinutes, count, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
+import { clockMinutes, count, countDayMilestones, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
 import { explainReport, testerMode } from './lib/report';
 import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpdate';
 import { clearSave } from './lib/resume';
@@ -779,6 +779,8 @@ export default function App() {
         const minutes = clockMinutes(lessonClock.current);
         count(daily ? 'review-done' : 'lesson-done', daily ? { minutes } : { lesson: view.lessonId, minutes });
         if (unitDone) count('unit-done');
+        // Do learners come back: the 1st, 2nd, 7th, 14th and 28th day with a lesson, once per device.
+        countDayMilestones(next.days?.length ?? 0);
         // The first finished lesson: ask the browser to keep this site's storage (the progress).
         if (!daily && !Object.keys(progress.completed).length) persistStorage();
         // Not granted (yet): ask again now and then, so the progress is not cleared with the cache.

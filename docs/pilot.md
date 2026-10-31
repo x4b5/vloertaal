@@ -41,10 +41,11 @@ nummer, geen naam.
 
 ### Dag 1: zo verloopt de eerste sessie
 
-1. Geef iedere leerling **het briefje met de link en de toegangscode** (zie „Praktisch”).
+1. Geef iedere leerling **het briefje met de link** (zie „Praktisch”). Een code is niet nodig: de
+   app staat open voor iedereen.
 2. Zeg alleen: *„Open deze link en begin. Ik kijk mee. Ik help als je echt niet verder kunt.”*
-3. De leerling doorloopt zelf de start: **taal kiezen → vrouw of man → toegangscode → waar werk je →
-   les 1** („Say hello”, unit „Eerste werkdag”).
+3. De leerling doorloopt zelf de start: **taal kiezen (en wat wil je leren) → vrouw of man → waar
+   werk je → Nederland of België → les 1** („Say hello”, unit „Eerste werkdag”).
 4. De coach vult het waarneemformulier in.
 5. **Helpen pas als iemand vastzit:** ongeveer een minuut niets doen, of zelf om hulp vragen. Help
    dan met één kleine aanwijzing („kijk onderaan”), niet door het over te nemen. Noteer altijd
@@ -79,7 +80,7 @@ Er is geen cijfer en geen "geslaagd" of "gezakt". De uitslag is drie balken.
 Eén regel per leerling. Vul in met **ja / met hulp / nee**, en schrijf in de laatste kolom kort
 wat er gebeurde.
 
-| Nr | Hulptaal | Telefoon (merk, type) | Kiest zelf een taal | Begrijpt de codepagina | Vindt de luidspreker | Maakt les 1 af | Waar liep het vast? (scherm, wat gebeurde er) |
+| Nr | Hulptaal | Telefoon (merk, type) | Kiest zelf een taal | Kiest land en sector | Vindt de luidspreker | Maakt les 1 af | Waar liep het vast? (scherm, wat gebeurde er) |
 |---|---|---|---|---|---|---|---|
 | 1 | | | | | | | |
 | 2 | | | | | | | |
@@ -124,7 +125,7 @@ De app telt een paar gebeurtenissen anoniem via **GoatCounter** (dashboard:
 vloertaal.goatcounter.com). Er zijn geen cookies, geen account en geen namen.
 
 Er wordt alleen geteld wat de privacytekst in de app zegt: **hoe vaak lessen worden gedaan, en
-ongeveer hoe lang ze duren**. Eén verzoek per gebeurtenis, en dat verzoek noemt alleen de les, nooit
+ongeveer hoe lang ze duren**, en op hoeveel dagen een toestel lessen deed. Eén verzoek per gebeurtenis, en dat verzoek noemt alleen de les, nooit
 iets over de leerling: geen hulptaal, geen sector, geen versie, geen toestel-id.
 
 | Wat wordt geteld | Pad in GoatCounter |
@@ -136,6 +137,7 @@ iets over de leerling: geen hulptaal, geen sector, geen versie, geen toestel-id.
 | Onderwerp afgerond | `/e/unit-done` |
 | Toets "Wat ken je al?" gestart | `/e/toets-start/a` (instap, versie A) of `/e/toets-start/b` (eind, versie B) |
 | Toets klaar | `/e/toets-done/a` of `/e/toets-done/b`: nooit de score |
+| Oefendag 1, 2, 7, 14 en 28 | `/e/dag/1`, `/e/dag/2`, `/e/dag/7`, `/e/dag/14`, `/e/dag/28`: één keer per toestel, op de 1e, 2e, 7e, 14e en 28e verschillende dag met een les (sinds 31 oktober 2026) |
 
 Sinds 29 oktober 2026 telt de app **niet meer**: het openen van de app, het invullen van een code,
 en per hulptaal, sector of versie. Eén gebeurtenis ging toen als tot 8 losse verzoeken tegelijk,
@@ -149,13 +151,20 @@ vaak maar wordt hij weinig afgerond, dan is die les te lang of te moeilijk. Bij 
 waar: `q1` is in het eerste kwart, `q4` vlak voor het eind. Wie de app gewoon wegklikt, telt niet
 als gestopt; dat zie je alleen aan het verschil tussen gestart en afgerond.
 
+**Komen mensen terug?** Zet `/e/dag/1` (nieuwe leerlingen) naast `/e/dag/2`, `/e/dag/7`,
+`/e/dag/14` en `/e/dag/28`. Bijvoorbeeld 100 nieuw, 45 op dag 2, 18 op dag 7. Het telt dagen met
+een les, geen kalenderdagen: wie op maandag en vrijdag oefent, zit op dag 2. Een toestel dat al
+lessen had vóór 31 oktober, stuurt bij de eerstvolgende les in één keer de mijlpalen die het al
+had. Een andere telefoon of gewiste gegevens tellen als nieuw.
+
 **Welke les duurt te lang?** Kijk per les bij afgerond naar de minuten
 (`/e/lesson-done/l-cv/t10plus`). Duurt een les vaak meer dan 10 minuten, dan is hij te lang.
 
 **Wat dit betekent voor de pilot:**
 
 - U ziet bijvoorbeeld: „dinsdag 9 lessen af, les `l-cv` 3 keer gestopt in het tweede kwart”. U
-  ziet **niet** wie dat was, in welke taal, of wie is afgehaakt.
+  ziet **niet** wie dat was of in welke taal. Hoeveel toestellen afhaken, zie je alleen als totaal
+  (de oefendagen hierboven), niet wie.
 - Andere gebruikers van de app tellen mee. De cijfers zeggen alleen iets over de pilot als er
   verder weinig gebruik is. Noteer de pilotdagen en vergelijk met de week ervoor.
 - **De meeste inzichten komen dus uit de waarneming op dag 1 en de gesprekken op dag 7.** De
@@ -163,10 +172,10 @@ als gestopt; dat zie je alleen aan het verschil tussen gestart en afgerond.
 
 ## Praktisch
 
-- **Toegangscode op papier.** Geef ieder een briefje met de link en de code in grote letters. Voor
-  een pilot van een week is de code van de **volledige versie** nodig: zonder code (of met de proefcode)
-  is alleen de eerste les van ieder thema open. De code werkt ook met spaties, streepjes of Arabische cijfers. Neem het briefje na
-  afloop niet terug: de leerling heeft het nodig als hij of zij een andere telefoon gebruikt.
+- **De link op papier.** Geef ieder een briefje met de link in grote letters, het liefst in de
+  eigen taal (`vloertaal.nl/pl`, `vloertaal.nl/ar` …) en met een QR-code. Een toegangscode is niet
+  meer nodig: alle lessen zijn open voor iedereen. Neem het briefje na afloop niet terug: de
+  leerling heeft het nodig op een andere telefoon.
 - **Lessen bewaren voor zonder internet.** Zet bij wie weinig data of slecht bereik heeft (in de
   kas, op de bouw, in de bus) de instelling aan: **Instellingen → Deze telefoon → „Lessen op deze
   telefoon”**. Doe dat op dag 1 via wifi. Het onderwerp waar de leerling mee bezig is, wordt dan
@@ -207,8 +216,8 @@ We gaan naar een grotere groep als de pilot dit laat zien:
 | Criterium | Doel (bij 10 leerlingen) | Bron |
 |---|---|---|
 | Les 1 afgemaakt zonder hulp | **8 van de 10** | waarneemformulier dag 1 |
-| Taal kiezen en code invullen zonder hulp | **8 van de 10** | waarneemformulier dag 1 |
-| Teruggekomen | de meesten op **minstens 4 van de 7 dagen** | gesprek dag 7 (eigen schatting), grof gecontroleerd met GoatCounter |
+| Taal, sector en land kiezen zonder hulp | **8 van de 10** | waarneemformulier dag 1 |
+| Teruggekomen | de meesten op **minstens 4 van de 7 dagen** | gesprek dag 7 (eigen schatting) en de begeleiderskaart (oefendagen); grof gecontroleerd met `/e/dag/2` en `/e/dag/7` in GoatCounter (alleen totalen, ook van niet-pilotgebruikers) |
 | Vertaling | **geen ernstige vertaalproblemen** gemeld: niets beledigends, niets wat de betekenis omdraait, geen onbegrijpelijke tip over rechten of veiligheid | gesprek dag 7, opmerkingen dag 1 |
 | Techniek | geen telefoon waarop de app niet werkt of geen geluid geeft (of: een oplossing gevonden) | waarneemformulier |
 

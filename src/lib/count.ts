@@ -7,7 +7,8 @@
  * (GoatCounter itself sees the request's IP address and browser, as every web server does; with
  * only content in the path, a count cannot say who it was.)
  *
- * Started, stopped and finished per lesson show where learners give up (docs/pilot.md).
+ * Started, stopped and finished per lesson show where learners give up (docs/pilot.md); the day
+ * milestones (countDayMilestones: "/e/dag/1", "/e/dag/7" …) show whether they come back.
  * Under the same switch, src/lib/errors.ts counts where the app goes wrong ("/e/fout/…"): only
  * the kind of error and a short code, never what the learner typed or where they were.
  *
@@ -155,6 +156,41 @@ export function countRaw(path: string, title: string): boolean {
   const base = COUNTER.replace(/\/+$/, '');
   send(`${base}/count?p=${encodeURIComponent(path)}&e=true&t=${encodeURIComponent(title)}`);
   return true;
+}
+
+/**
+ * Do learners come back? Each device counts, once, the 1st, 2nd, 7th, 14th and 28th different day
+ * with a lesson ("/e/dag/7"): a funnel (how many new, how many on day 2, …), not a person. Only the
+ * number goes along: no date, no lesson, no id.
+ */
+export const DAY_MILESTONES = [1, 2, 7, 14, 28] as const;
+/** The milestones already handled on this device ("1,2,7"), so each is counted at most once. */
+const DAYS_KEY = 'vloertaal:count-dagen';
+
+/**
+ * After a finished lesson: counts the milestones `practisedDays` (the different days with a lesson,
+ * from the progress: Progress.days) has reached and this device has not handled yet. A milestone
+ * reached while counting may not happen (switched off, Do Not Track, not vloertaal.nl) is marked
+ * as handled without a count, so switching counting on later never sends the past. Nothing is sent
+ * when the device cannot remember what it counted (blocked storage): that could count it twice.
+ * Returns the milestones sent.
+ */
+export function countDayMilestones(practisedDays: number): number[] {
+  const due = DAY_MILESTONES.filter((m) => m <= practisedDays);
+  if (!due.length) return [];
+  const s = storage();
+  if (!s) return [];
+  try {
+    const done = new Set((s.getItem(DAYS_KEY) ?? '').split(',').map(Number));
+    const fresh = due.filter((m) => !done.has(m));
+    if (!fresh.length) return [];
+    s.setItem(DAYS_KEY, DAY_MILESTONES.filter((m) => done.has(m) || fresh.includes(m)).join(','));
+    if (!mayCount()) return [];
+    for (const m of fresh) countRaw(`/e/dag/${m}`, 'dag');
+    return fresh;
+  } catch {
+    return [];
+  }
 }
 
 /** Counts one event (one request). A no-op unless mayCount(). */

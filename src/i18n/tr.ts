@@ -395,6 +395,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'İşaretle', // nieuw, nalezen
     checkVia: 'kontrolle', // nieuw, nalezen
     checkUndo: 'Yine de dersleri yap', // nieuw, nalezen
+    shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
