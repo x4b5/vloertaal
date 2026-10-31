@@ -2,7 +2,7 @@ import { Fragment, useState, type ReactNode } from 'react';
 import { taalCourseUnits } from '../content/curriculum';
 import { rulesCourseUnits } from '../content/rulesCourse';
 import { taalNlId } from '../content/taalBe/ids';
-import { unitIcons } from '../content/unitIcons';
+import { unitIcon } from '../content/unitIcons';
 import type { Unit } from '../content/types';
 import { unitLink } from '../lib/unitLink';
 import { WordPicture } from '../pictures';
@@ -57,7 +57,7 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
           <ThemeHeadRow group={group} dutchOnly />
           {group.units.map((unit) => (
             <li key={unit.id}>
-              <WordPicture className="coach-icon" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={32} />
+              <WordPicture className="coach-icon" id={unitIcon(unit.id)} emoji={unit.emoji} size={32} />
               <span className="coach-title">{unit.titleNl}</span>
               <button type="button" className="coach-share" onClick={() => share(unit)}>
                 {copied === unit.id ? <><CheckIcon size={16} /> Gekopieerd</> : 'Deel link'}

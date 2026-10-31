@@ -246,4 +246,20 @@ describe('unit icons', () => {
     // One picture per unit, so the path never shows the same icon twice.
     expect(new Set(Object.values(unitIcons)).size).toBe(Object.keys(unitIcons).length);
   });
+
+  it('every work-rules unit has a drawn icon too, Dutch and Belgian, one per unit within the track', async () => {
+    const { rulesUnits, sectorRulesUnits } = await import('../src/content/regels');
+    const { beRulesUnits, beSectorRulesUnits } = await import('../src/content/regels/be');
+    const { rulesUnitIcons, unitIcon } = await import('../src/content/unitIcons');
+    const { loadPictures, iconPictures } = await import('../src/pictures');
+    await loadPictures();
+    const { pictures } = await import('../src/pictures');
+    for (const u of [...rulesUnits, ...sectorRulesUnits, ...beRulesUnits, ...beSectorRulesUnits]) {
+      const id = unitIcon(u.id);
+      expect(id, u.id).toBeTruthy();
+      expect(Boolean(pictures[id] ?? iconPictures[id]), `${u.id}: ${id}`).toBe(true);
+    }
+    expect(Object.keys(rulesUnitIcons).sort()).toEqual([...rulesUnits, ...sectorRulesUnits].map((u) => u.id).sort());
+    expect(new Set(Object.values(rulesUnitIcons)).size).toBe(Object.keys(rulesUnitIcons).length);
+  });
 });

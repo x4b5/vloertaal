@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Unit } from '../content/types';
 import type { SectorChoice } from '../content/sectors';
-import { unitIcons } from '../content/unitIcons';
+import { unitIcon } from '../content/unitIcons';
 import { said, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { unitIndex } from '../lib/certificate';
@@ -85,7 +85,7 @@ export function PocketCardScreen({ unit, lang, onBack, sector, region }: { unit:
 
       <article className="pocket-card" ref={card} dir={rtl ? 'rtl' : undefined} aria-label={`${[...new Set(['Spiekkaartje', said(ui('pocketCard', lang))])].join(' · ')}: ${unit.titleNl}`}>
         <header className="pocket-head">
-          <WordPicture className="pocket-unit-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={52} />
+          <WordPicture className="pocket-unit-pic" id={unitIcon(unit.id)} emoji={unit.emoji} size={52} />
           <div className="pocket-titles">
             <span className="pocket-tab" lang="nl" aria-hidden>
               <span className="pocket-tab-no">{String(unitIndex(unit, sector, undefined, region) + 1).padStart(2, '0')}</span> Spiekkaartje
