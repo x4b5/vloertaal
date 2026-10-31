@@ -152,7 +152,7 @@ export const digitaalUnit: RuleUnit = {
           situation: 'Kevin heeft toch op een nep-link geklikt. Hij vulde zijn wachtwoord in. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt niets. Misschien gebeurt er niets.', best: false, feedback: 'Ik snap het. Maar dan kan een oplichter verder.' },
-            { id: 'b', text: 'Hij verandert meteen zijn wachtwoord, en meldt het op zijn werk.', best: true, feedback: 'Goed. Hoe sneller, hoe beter.' },
+            { id: 'b', text: 'Hij verandert meteen zijn wachtwoord en meldt het.', best: true, feedback: 'Goed. Hoe sneller, hoe beter.' },
             { id: 'c', text: 'Hij gooit de mail weg. Dan is het probleem weg.', best: false, feedback: 'De mail is weg. Maar oplichters hebben zijn wachtwoord nu.' },
           ],
           why: 'Snel zijn helpt. Verander je wachtwoord meteen. Meld het bij je leidinggevende of de ICT-afdeling. Gaat het om je bank? Bel dan meteen je bank. Dit gebeurt bij veel mensen. Schaam je niet.',

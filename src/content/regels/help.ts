@@ -107,11 +107,14 @@ export const HELP_ROWS: HelpRow[] = alphabetical([
 
 /**
  * "Wie bel je?" for a learner who works in Belgium (Settings: "In welk land werk je?", Vlaanderen).
- * The work rules stay those of the Netherlands; these rows say where to ask in Flanders instead of
- * the Dutch places. First version (30 okt 2026): every name, number and site has a ⚖️ check,
- * see docs/belgie-vlaanderen-plan.md.
+ * These rows say where to ask in Flanders instead of the Dutch places, and match the places the
+ * Belgian lessons (src/content/regels/be/units) send you to. First version (30 okt 2026): every
+ * name, number and site has a ⚖️ check, see docs/belgie-vlaanderen-plan.md. Inhoudsronde 2 (31 okt
+ * 2026): Unia and 1712 added, because the lessons send learners there (rechten.1 and rechten.2) and
+ * the tab did not have them.
  */
 export const HELP_ROWS_BE: HelpRow[] = alphabetical([
+  // ⚖️ check: the row says misuse of 112 is punishable; the note above (art. 142 Sr) is Dutch law. The Belgian article is not checked yet (probably the wet elektronische communicatie of 13 juni 2005; 112.be)
   HELP_ROWS[0],
   {
     // ⚖️ check: 1733 is the number for the huisarts van wacht in Belgium (evenings, nights, weekends)
@@ -120,10 +123,11 @@ export const HELP_ROWS_BE: HelpRow[] = alphabetical([
     show: '1733', href: 'tel:1733',
   },
   {
-    // ⚖️ check: the three big unions of Belgium and their sites
+    // ⚖️ check: the three big unions of Belgium and their sites. Inhoudsronde 2: hetacv.be instead of
+    // acv-csc.be, the address the lessons cite (be/units/*: "hetacv.be"); acv-csc.be is the bilingual one.
     id: 'h.be.vakbond', emoji: '✊', name: 'Vakbond (ACV, ABVV of ACLVB)',
     when: 'Hulp bij je loon, je contract of als je werk stopt. Leden krijgen ook hulp.',
-    show: 'acv-csc.be · abvv.be · aclvb.be',
+    show: 'hetacv.be · abvv.be · aclvb.be',
   },
   {
     // ⚖️ check: Toezicht op de Sociale Wetten (FOD WASO) takes complaints about pay and contracts
@@ -147,6 +151,22 @@ export const HELP_ROWS_BE: HelpRow[] = alphabetical([
     id: 'h.be.payoke', emoji: '🤝', name: 'Payoke, PAG-ASA of Sürya',
     when: 'Iemand buit je uit op je werk, of je denkt dat het zo is.',
     show: 'payoke.be · pag-asa.be', href: 'https://www.payoke.be',
+  },
+  {
+    // ⚖️ check: Unia takes reports of discrimination for free, online or on 0800 12 800 (vlaanderen.be
+    // "Unia" and "discriminatie melden"; search results of 31 okt 2026; the opening hours differ per
+    // source, so they are not in the row). Be/units/rechten.ts sends you here (r.be.l.rechten.1).
+    id: 'h.be.unia', emoji: '📣', name: 'Unia',
+    when: 'Iemand discrimineert je, op je werk of ergens anders. Melden is gratis.',
+    show: '0800 12 800 (gratis)', href: 'tel:080012800',
+  },
+  {
+    // ⚖️ check: 1712 is the free, anonymous helpline of Flanders for violence, abuse and child abuse
+    // (vlaanderen.be "Hulplijn geweld, misbruik en kindermishandeling 1712"; 1712.be; search results of
+    // 31 okt 2026). Be/units/rechten.ts sends you here (r.be.l.rechten.2).
+    id: 'h.be.1712', emoji: '💬', name: '1712',
+    when: 'Geweld, misbruik of seksueel geweld, ook op je werk. Gratis en anoniem.',
+    show: '1712', href: 'tel:1712',
   },
   {
     // ⚖️ check: VDAB, the public employment service of Flanders

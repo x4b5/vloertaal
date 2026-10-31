@@ -214,7 +214,7 @@ export const be: BeUnit = {
             id: 'r.be.l.winkel.3.wd1',
             situation: 'Jayden weet niet zeker hoe oud de jongen is. Wat kan Jayden het beste doen?',
             options: [
-              { id: 'a', text: 'Hij vraagt rustig: "Mag ik je identiteitskaart zien?"', best: true, feedback: 'Goed. Zonder bewijs van 18 jaar geen wodka of sigaretten.' },
+              { id: 'a', text: 'Hij vraagt: "Mag ik je identiteitskaart zien?"', best: true, feedback: 'Goed. Zonder bewijs van 18 jaar geen wodka of sigaretten.' },
               { id: 'b', text: 'Hij gelooft de jongen. De rij is al lang.', best: false, feedback: 'Dat snap ik. Maar hij moet de leeftijd echt zien.' },
               { id: 'c', text: 'Hij zegt dat hij niets verkoopt aan jongeren.', best: false, feedback: 'Misschien is hij wel 18. Jayden kan beter eerst zijn ID vragen.' },
             ],

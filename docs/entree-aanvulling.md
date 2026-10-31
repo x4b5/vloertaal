@@ -673,7 +673,7 @@ kan beter?" Schrijf het op, bijvoorbeeld in je logboek of portfolio.
 
 **Vraag 3 · Wat is het beste?** Aan het eind krijgt Fatima een beoordeling. Ze is het er niet mee eens. Wat kan Fatima het beste doen?
 
-- **A.** Ze bespreekt het met Mark, en met haar begeleider van school.
+- **A.** Ze bespreekt het met Mark en met haar school.
   → *Goed. Zo kan ze uitleggen waarom.*
 - **B.** Ze tekent het formulier niet, en ze stopt met haar stage.
   → *Dat snap ik. Maar dan mist ze misschien haar diploma.*
@@ -833,7 +833,7 @@ hetzelfde wachtwoord.
 
 - **A.** Hij zegt niets. Misschien gebeurt er niets.
   → *Ik snap het. Maar dan kan een oplichter verder.*
-- **B.** Hij verandert meteen zijn wachtwoord, en meldt het op zijn werk.
+- **B.** Hij verandert meteen zijn wachtwoord en meldt het.
   → *Goed. Hoe sneller, hoe beter.*
 - **C.** Hij gooit de mail weg. Dan is het probleem weg.
   → *De mail is weg. Maar oplichters hebben zijn wachtwoord nu.*
@@ -1138,7 +1138,7 @@ afval heen moet.
   → *Ik snap het. Maar op je werk volg je de regels.*
 - **B.** Hij praat er lang met de collega over.
   → *Dat mag. Maar het lost de vraag niet op.*
-- **C.** Hij blijft scheiden, en hij vraagt het aan Henk.
+- **C.** Hij blijft scheiden en vraagt het aan Henk.
   → *Goed. Henk weet hoe ze het afval ophalen.*
 
 **Goed antwoord: C.**

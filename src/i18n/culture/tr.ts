@@ -44,7 +44,7 @@ const t: CultureTranslation = {
     'c.ask.o1': 'Tekrar açıklamasını istersin.', // nagelezen (2e lezing)
     'c.ask.o2': 'Başını sallar ve tahmin etmeye çalışırsın.',
     'c.ask.o3': 'Hollandacan için özür diler ve işe başlarsın.', // nagelezen (2e lezing)
-    'c.ask.w': 'Hollandalı amirler soru bekler. Hata yapmaktansa iki kez sormak daha iyidir.',
+    'c.ask.w': 'Burada amirler soru bekler. Hata yapmaktansa iki kez sormak daha iyidir.', // nieuw, nalezen
     'c.gear': 'Güvenlik kuralları herkes için',
     'c.gear.b': 'Baret, ayakkabı ve eldiven kuralları bir öneri değildir: herkes uyar, patron da. İşverenin ihtiyacın olan koruyucu ekipmanı sana ücretsiz vermek zorundadır. Üstüne olmayan ekipman seni iyi korumaz, o yüzden kendi bedenini iste: “Heb je dit ook in mijn maat?”',
     'c.gear.p': 'Eldivenlerim yırtıldı. Yenilerini nereden alabilirim?',
@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.unsafe.s': 'Bir palet çok yüksek istiflenmiş ve neredeyse düşüyor. Kimse yaralanmadı. Ne yaparsın?',
     'c.unsafe.o1': 'İş arkadaşlarını uyarır ve amirine söylersin.',
     'c.unsafe.o2': 'Bir şey olmadığı için hiçbir şey söylemezsin.',
-    'c.unsafe.o3': 'Tek başına düzeltir ve kimseye söylemezsin.',
+    'c.unsafe.o3': 'Paleti kendin düzeltir ve kimseye söylemezsin.', // nieuw, nalezen
     'c.unsafe.w': 'Ucuz atlatılan bir kaza bir uyarıdır. Bildirmek gerçek bir kazayı önlemeye yardım eder. İşveren seni bunun için cezalandıramaz.',
     'c.accident': 'Her kazayı bildir',
     'c.accident.b': 'Her kazayı, küçük olsa bile, amirine veya BHV’er’e (iş yerindeki ilk yardım görevlisine) söyle. Bir ajans üzerinden mi çalışıyorsun? Ajansa da haber ver. Acil durumda önce 112’yi ara. Kazanın olduğu şirket, ciddi bir kazayı Nederlandse Arbeidsinspectie’ye bildirmek zorundadır (ajans üzerinden çalışıyorsan da): biri öldüğünde, kalıcı olarak yaralandığında veya hastanede yatması gerektiğinde. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',

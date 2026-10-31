@@ -122,7 +122,7 @@ export const be: BeUnit = {
             situation: 'Ewa woont net in België. Ze krijgt een job aangeboden. Ze weet niet of ze hier al mag werken. Wat kan Ewa het beste doen?',
             options: [
               { id: 'a', text: 'Ze begint gewoon. De baas regelt het vast wel.', best: false, feedback: 'Riskant. Zonder de goede papieren kan ze problemen krijgen.' },
-              { id: 'b', text: 'Ze vraagt het na vóór ze begint, bijvoorbeeld bij een vakbond.', best: true, feedback: 'Goed. Dan weet ze het zeker.' },
+              { id: 'b', text: 'Ze vraagt het eerst na bij een vakbond.', best: true, feedback: 'Goed. Dan weet ze het zeker.' },
               { id: 'c', text: 'Ze vraagt het aan een vriendin die hier ook werkt.', best: false, feedback: 'Vriendelijk. Maar het hangt af van haar eigen papieren.' },
             ],
             why: 'Mag je in België werken? Dat hangt af van je papieren. Weet je het niet zeker? Vraag het na vóór je begint. Dat kan bij een vakbond of het Agentschap Integratie en Inburgering. Je werkgever moet je melden vóór je begint.',
@@ -314,7 +314,7 @@ export const be: BeUnit = {
             situation: 'Esra werkt maar 1 uur. Dan stuurt de baas haar naar huis.',
             options: [
               { id: 'a', text: 'Ze krijgt loon voor 1 uur. Zo werkt deeltijds werk.', best: false, feedback: 'Niet zeker. Er is een regel voor korte werkperiodes.' },
-              { id: 'b', text: 'Ze vraagt het na: een werkperiode is meestal minstens 3 uur.', best: true, feedback: 'Goed. Een vakbond weet wat er in haar sector geldt.' },
+              { id: 'b', text: 'Ze vraagt na of ze loon voor 3 uur krijgt.', best: true, feedback: 'Goed. Een vakbond weet wat er in haar sector geldt.' },
               { id: 'c', text: 'Ze krijgt niets, want ze was er maar kort.', best: false, feedback: 'Nee. De baas betaalt gewerkte tijd altijd.' },
             ],
             why: 'Een werkperiode duurt in België meestal minstens 3 uur. Er zijn uitzonderingen per sector. Wordt je werk veel korter? Vraag het na bij je vakbond.',
@@ -350,7 +350,7 @@ export const be: BeUnit = {
             situation: 'Piotr werkt via een interimkantoor. Al maanden krijgt hij elke dag een nieuw contract voor één dag. Wat kan Piotr het beste doen?',
             options: [
               { id: 'a', text: 'Hij zegt niets. Zo werkt interim nu eenmaal altijd.', best: false, feedback: 'Niet altijd. Voor veel dagcontracten gelden regels.' },
-              { id: 'b', text: 'Hij vraagt een langer contract, en hij vraagt de vakbond om advies.', best: true, feedback: 'Goed. Zo weet hij of het mag.' },
+              { id: 'b', text: 'Hij vraagt de vakbond of dit zo mag.', best: true, feedback: 'Goed. Zo weet hij of het mag.' },
               { id: 'c', text: 'Hij komt een paar dagen niet, om te protesteren.', best: false, feedback: 'Dat snap ik. Maar dan verliest hij misschien zijn werk.' },
             ],
             why: 'Een dagcontract is een contract voor één dag. Bij interim mag dat. Maar veel dagcontracten na elkaar mogen niet zomaar. Het bedrijf moet dan echt flexibel werk hebben. Weet je het niet zeker? Vraag een vakbond om advies.',

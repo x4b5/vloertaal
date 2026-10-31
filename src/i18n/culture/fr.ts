@@ -44,7 +44,7 @@ const t: CultureTranslation = {
     'c.ask.o1': 'Demande qu’on t’explique encore une fois.', // nagelezen (2e lezing)
     'c.ask.o2': 'Fais oui de la tête et essaie de deviner.',
     'c.ask.o3': 'Excuse-toi pour ton néerlandais et commence à travailler.', // nagelezen (2e lezing)
-    'c.ask.w': 'Aux Pays-Bas, les responsables s’attendent à des questions. Mieux vaut demander deux fois que faire une erreur.',
+    'c.ask.w': 'Ici, les responsables s’attendent à des questions. Mieux vaut demander deux fois que faire une erreur.', // nieuw, nalezen
     'c.gear': 'Les règles de sécurité sont pour tout le monde',
     'c.gear.b': 'Les règles sur les casques, les chaussures et les gants ne sont pas des conseils : tout le monde les suit, aussi le patron. Ton employeur doit te donner gratuitement l’équipement de protection dont tu as besoin. Un équipement qui ne te va pas te protège mal, alors demande ta taille : “Heb je dit ook in mijn maat?”',
     'c.gear.p': 'Mes gants sont abîmés. Où est-ce que j’en trouve de nouveaux ?',
@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.unsafe.s': 'Une palette est empilée trop haut et tombe presque. Personne n’est blessé. Que fais-tu ?',
     'c.unsafe.o1': 'Préviens les collègues et dis-le à ton responsable.',
     'c.unsafe.o2': 'Ne dis rien, car il ne s’est rien passé.',
-    'c.unsafe.o3': 'Répare-le sans aide et ne le dis à personne.',
+    'c.unsafe.o3': 'Répare toi-même la palette et ne le dis à personne.', // nieuw, nalezen
     'c.unsafe.w': 'Un presque-accident est un avertissement. Le signaler aide à éviter un vrai accident. Ton employeur n’a pas le droit de te punir parce que tu l’as signalé.',
     'c.accident': 'Signale chaque accident',
     'c.accident.b': 'Parle de chaque accident à ton responsable ou au BHV’er (le secouriste de l’entreprise), même d’un petit. Tu travailles par une agence ? Préviens aussi l’agence. En cas d’urgence, appelle d’abord le 112. L’entreprise où l’accident a eu lieu doit déclarer un accident grave à la Nederlandse Arbeidsinspectie (aussi si tu travailles par une agence) : quand quelqu’un meurt, est blessé pour toute sa vie ou doit rester à l’hôpital. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',

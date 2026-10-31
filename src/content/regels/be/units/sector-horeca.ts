@@ -154,7 +154,7 @@ export const be: BeUnit = {
             id: 'r.be.l.horeca.2.wd2',
             situation: 'Esra werkt er al 2 maanden. Ze hoort niets over de fooi. Wat kan Esra het beste doen?',
             options: [
-              { id: 'a', text: 'Ze vraagt haar leidinggevende hoe het team de fooi verdeelt.', best: true, feedback: 'Goed. Elk team doet het anders. Vragen is normaal.' },
+              { id: 'a', text: 'Ze vraagt hoe het team de fooi verdeelt.', best: true, feedback: 'Goed. Elk team doet het anders. Vragen is normaal.' },
               { id: 'b', text: 'Ze pakt elke avond zelf wat geld uit de pot.', best: false, feedback: 'Niet doen. Dan lijkt het op stelen.' },
               { id: 'c', text: 'Ze zegt niets. Fooi is toch niet zo belangrijk.', best: false, feedback: 'Mag. Maar fooi kan best veel geld zijn.' },
             ],

@@ -299,6 +299,7 @@ export const be: BeUnit = {
           },
           // ⚖️ check: overuren geven recht op een toeslag van minstens 50%, en 100% op zondag en feestdagen (Arbeidswet 16 maart 1971, art. 29)
           // ⚖️ check: voor overuren krijg je meestal ook inhaalrust: de uren later vrij (Arbeidswet 16 maart 1971, art. 26bis)
+          // ⚖️ check: uitzondering: voor de eerste 240 vrijwillige overuren per jaar (horeca 360) is er geen toeslag en geen inhaalrust, wel geen RSZ en bedrijfsvoorheffing (wet 18 mei 2026, terugwerkend vanaf 1 april 2026; partena-professional.be; zoekresultaten 31 okt 2026); daarom "meestal" en "vaak" in de why
           {
             kind: 'whatdo',
             id: 'r.be.l.loon.3.wd2',

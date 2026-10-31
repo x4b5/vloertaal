@@ -233,7 +233,7 @@ export const careUnit: RuleUnit = {
           situation: 'Dewi heeft vannacht overgegeven. Nu voelt ze zich weer goed. Wat kan Dewi het beste doen?',
           options: [
             { id: 'a', text: 'Ze gaat werken. Ze voelt zich nu toch goed.', best: false, feedback: 'Dat snap ik. Maar ze kan cliënten nog besmetten.' },
-            { id: 'b', text: 'Ze belt vóór haar dienst, en zegt dat het besmettelijk kan zijn.', best: true, feedback: 'Goed. Ze hoeft niet te zeggen wat ze heeft. Dit wel.' },
+            { id: 'b', text: 'Ze belt af, en zegt: het kan besmettelijk zijn.', best: true, feedback: 'Goed. Ze hoeft niet te zeggen wat ze heeft. Dit wel.' },
             { id: 'c', text: 'Ze gaat werken, en draagt de hele dag een mondkapje.', best: false, feedback: 'Goed bedoeld. Maar dat helpt niet genoeg.' },
           ],
           why: 'Overgeven of diarree kan besmettelijk zijn. Cliënten worden sneller en erger ziek dan gezonde mensen. Bel dus vóór je dienst. Volg het protocol van je werk. Daar staat in wat je moet doen.',
@@ -492,7 +492,7 @@ export const horecaUnit: RuleUnit = {
           id: 'r.l.horeca.2.wd2',
           situation: 'Esra werkt er al 2 maanden. Ze hoort niets over de fooi. Wat kan Esra het beste doen?',
           options: [
-            { id: 'a', text: 'Ze vraagt haar leidinggevende hoe het team de fooi verdeelt.', best: true, feedback: 'Goed. Elk team doet het anders. Vragen is normaal.' },
+            { id: 'a', text: 'Ze vraagt hoe het team de fooi verdeelt.', best: true, feedback: 'Goed. Elk team doet het anders. Vragen is normaal.' },
             { id: 'b', text: 'Ze pakt elke avond zelf wat geld uit de pot.', best: false, feedback: 'Niet doen. Dan lijkt het op stelen.' },
             { id: 'c', text: 'Ze zegt niets. Fooi is toch niet zo belangrijk.', best: false, feedback: 'Mag. Maar fooi kan best veel geld zijn.' },
           ],
@@ -1307,7 +1307,7 @@ export const techniekUnit: RuleUnit = {
           id: 'r.l.techniek.1.wd2',
           situation: 'Op de werkbank liggen veel spanen. Sanne wil ze weghalen. Wat kan Sanne het beste doen?',
           options: [
-            { id: 'a', text: 'Ze veegt ze weg met een borstel of een kwast.', best: true, feedback: 'Goed. Zo snijdt ze haar handen niet.' },
+            { id: 'a', text: 'Ze veegt ze weg met een borstel.', best: true, feedback: 'Goed. Zo snijdt ze haar handen niet.' },
             { id: 'b', text: 'Ze blaast ze weg met de luchtslang.', best: false, feedback: 'Dat is logisch. Maar dan vliegen de spanen alle kanten op.' },
             { id: 'c', text: 'Ze veegt ze met haar hand in de bak.', best: false, feedback: 'Spanen zijn scherp. Zo snijdt ze in haar hand.' },
           ],

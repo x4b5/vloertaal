@@ -209,3 +209,100 @@ export function updateDate(day: string, locale = 'nl-NL'): string {
     return new Date(y, m - 1, d).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
   }
 }
+
+/* ------------------------------------------------------------------ a notice for the learner */
+
+/**
+ * Een melding ("Er is iets veranderd"): een update die de leerling direct raakt, krijgt één korte
+ * zin. Die zin ziet de leerling ÉÉN KEER, als rustige kaart bovenaan het lespad
+ * (src/components/NoticeCard.tsx; wie hem ziet: src/lib/notice.ts). Alleen wie in dat land werkt
+ * en in dat spoor zit, en alleen wie de app al gebruikte vóór de dag van de update.
+ *
+ * WANNEER WEL (de maandelijkse check volgt dit): een verandering die de leerling direct raakt in
+ *  - rechten (contract, ontslag, verlof, proeftijd, uitzendwerk, discriminatie);
+ *  - loon (minimumloon, vakantiegeld, toeslagen, wat er op de loonstrook staat);
+ *  - ziekte (ziek melden, loon bij ziekte, wachtdag, ziekenfonds);
+ *  - uitkering (WW, bijstand, werkloosheid, RVA);
+ *  - veiligheid (een regel of een nummer bij gevaar, beschermende kleding).
+ * WANNEER NIET: al het andere. Nieuwe lessen, woorden, plaatjes, vertalingen, knoppen, een fout
+ * die is verbeterd, een nieuwe sector: dat staat alleen in de items, zonder melding.
+ * Twijfel je? Dan geen melding. Hoogstens één melding per update: elke melding onderbreekt.
+ *
+ * EEN MELDING TOEVOEGEN (docs/logboek.md zegt hetzelfde, met een voorbeeld):
+ *  1. Zet een update bovenaan UPDATES: de dag waarop het in de app staat, en de items.
+ *  2. Geef die update een `notice`:
+ *     - `id`: kort, uniek, nooit opnieuw gebruikt (bijv. 'minimumloon-2027-01'). De telefoon
+ *       onthoudt welke ids de leerling zag (Progress.noticesSeen).
+ *     - `country`: 'nl', 'be' of 'both' (Progress.country; geen keuze telt als 'nl').
+ *     - `track`: 'taal', 'regels' of 'both'.
+ *     - `nl`: Nederlands op A2, hoogstens 2 zinnen en 25 woorden: wat verandert er, en wat kan de
+ *       leerling doen? Geen "vanaf vandaag": de kaart kan ook later in beeld komen.
+ *     - `en`: hetzelfde in eenvoudig Engels (de basis voor de vertalingen).
+ *  3. Vertaal `en` in de 13 hulptalen: src/i18n/notices/<taal>.ts, onder `gloss`, met de sleutel
+ *     `notice.<id>` (noticeGlossId in src/lib/notice.ts), met `// nieuw, nalezen` erachter. Bij
+ *     `track: 'regels'` hoeft dat niet (Werkregels is alleen Nederlands).
+ *  4. Draai `npx vitest run tests/notice.test.ts`: die controleert de velden, de lengte en de
+ *     vertalingen.
+ * Een melding weghalen hoeft niet: de kaart komt alleen bij wie hem nog niet zag.
+ */
+export type NoticeCountry = 'nl' | 'be' | 'both';
+export type NoticeTrack = 'taal' | 'regels' | 'both';
+
+export interface Notice {
+  /** Unique, never reused; translated as `notice.<id>` (src/i18n/notices/<lang>.ts). */
+  id: string;
+  /** Where the learner works (Progress.country; not chosen = 'nl'). */
+  country: NoticeCountry;
+  /** The learner's track (src/lib/track.ts). */
+  track: NoticeTrack;
+  /** Plain Dutch (A2), at most 2 sentences. */
+  nl: string;
+  /** The same in plain English: the base for the translations. */
+  en: string;
+}
+
+// An update's `notice` (interface merging: the Update at the top of this file gets the field,
+// so the list keeps its place at the top).
+export interface Update {
+  /** Optional: one short line the learner sees once (see Notice above). */
+  notice?: Notice;
+}
+
+/* ------------------------------------------------------------------ laws that take effect later */
+
+/**
+ * "Komt eraan": wetten (en grote regels) die zijn aangenomen maar later ingaan. NIET voor
+ * leerlingen en nergens in de app: een lijst voor de maandelijkse check en de eigenaar. Is een
+ * datum voorbij, pas dan de teksten aan (en maak een update, met een melding als het de leerling
+ * direct raakt), en haal daarna die datum of het hele item weg. tests/upcomingLaw.test.ts
+ * waarschuwt (console.warn, de test faalt niet) zolang een voorbije datum hier nog staat.
+ */
+export interface UpcomingLaw {
+  /** The law's name. */
+  law: string;
+  country: 'nl' | 'be';
+  /** When (parts of) it take effect (YYYY-MM-DD), and what changes that day. */
+  dates: { date: string; what: string }[];
+  /** What must change in the app (plain Dutch, for the editor). */
+  change: string;
+  /** The ids it touches (tips, lessons), each in one of `files`. */
+  ids: string[];
+  files: string[];
+  /** Where it comes from. */
+  source: string;
+}
+
+export const UPCOMING_LAW: UpcomingLaw[] = [
+  {
+    law: 'Wet meer zekerheid flexwerkers',
+    country: 'nl',
+    dates: [
+      { date: '2027-01-01', what: 'Gelijkwaardige beloning voor uitzendkrachten (WAADI): dezelfde arbeidsvoorwaarden als de vaste mensen.' },
+      { date: '2028-01-01', what: 'Geen nulurencontract en min-max meer, maar een bandbreedtecontract (vaste minimum- en maximumuren). Ketenregeling: langere tussenpoos. Uitzendwerk: kortere fase A.' },
+    ],
+    change: 'Taal: de tips over proeftijd en oproepwerk (c.contract), uitzendwerk (c.agency) en ziek zijn als uitzendkracht (c.illness) herschrijven, met hun situaties en de vertalingen; de ⚖️-comments met "flexwerkers" daarboven bijwerken. Werkregels (contract.ts): de ketenregeling (r.l.contract.2) en oproepwerk en uitzendloon (r.l.contract.3); de comments "Redactie" daar weghalen. Daarna een update met een melding (loon en rechten, NL, beide sporen).',
+    ids: ['c.contract', 'c.agency', 'c.illness', 'r.l.contract.2', 'r.l.contract.3'],
+    files: ['src/content/work.ts', 'src/content/regels/units/contract.ts'],
+    source: 'Stb. 2026, 205; inwerkingtredingsbesluit Stb. 2026, 206 (docs/werkregels-bronnen.md). De datums komen uit secundaire bronnen: check het Staatsblad.',
+  },
+];

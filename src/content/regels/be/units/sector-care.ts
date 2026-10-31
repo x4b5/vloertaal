@@ -78,7 +78,7 @@ export const be: BeUnit = {
             situation: 'Dewi heeft vannacht overgegeven. Nu voelt ze zich weer goed. Wat kan Dewi het beste doen?',
             options: [
               { id: 'a', text: 'Ze gaat werken. Ze voelt zich nu toch goed.', best: false, feedback: 'Dat snap ik. Maar ze kan bewoners nog besmetten.' },
-              { id: 'b', text: 'Ze belt vóór haar dienst, en zegt dat het besmettelijk kan zijn.', best: true, feedback: 'Goed. Ze hoeft niet te zeggen wat ze heeft. Dit wel.' },
+              { id: 'b', text: 'Ze belt af, en zegt: het kan besmettelijk zijn.', best: true, feedback: 'Goed. Ze hoeft niet te zeggen wat ze heeft. Dit wel.' },
               { id: 'c', text: 'Ze gaat werken, en draagt de hele dag een mondmasker.', best: false, feedback: 'Goed bedoeld. Maar dat helpt niet genoeg.' },
             ],
             why: 'Overgeven of diarree kan besmettelijk zijn. Bewoners worden sneller en erger ziek dan gezonde mensen. Bel dus vóór je dienst. Volg de richtlijnen van je werk. Daar staat in wat je moet doen.',

@@ -66,7 +66,7 @@ export const be: BeUnit = {
             ],
             rule: 'geschreven',
           },
-          // ⚖️ check: inschrijven bij de VDAB binnen 8 dagen na je laatste werkdag (vdab.be "stappenplan na ontslag"; zoekresultaat, nakijken)
+          // ⚖️ check: inschrijven bij de VDAB binnen 8 dagen na je laatste werkdag (vdab.be "stappenplan na ontslag"; zoekresultaat, nakijken). Precieser volgens vdab.be (zoekresultaat 31 okt 2026): na ontslag binnen 8 dagen na het einde van de opzegtermijn, na tijdelijk of interimwerk binnen 8 dagen na de laatste werkdag; het mag al tot 4 weken vóór het einde. ACLVB zegt "na de eerste werkloosheidsdag". Voor Malik (laatste werkdag vrijdag) klopt de les.
           // ⚖️ check: de werkgever geeft de C4 uiterlijk op de laatste werkdag (securex.be "het werkloosheidsbewijs C4")
           {
             kind: 'whatdo',

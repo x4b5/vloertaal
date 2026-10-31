@@ -146,7 +146,7 @@ export const be: BeUnit = {
             id: 'r.be.l.loopbaan.2.wd1',
             situation: 'Malik wil geld verdienen. Hij wil ook een diploma. Wat kan Malik het beste doen?',
             options: [
-              { id: 'a', text: 'Hij zoekt een plek in het duaal leren: werken en leren tegelijk.', best: true, feedback: 'Goed. Dan verdient hij wat en haalt hij een diploma.' },
+              { id: 'a', text: 'Hij kiest duaal leren: werken en leren tegelijk.', best: true, feedback: 'Goed. Dan verdient hij wat en haalt hij een diploma.' },
               { id: 'b', text: 'Hij gaat in het magazijn werken, en stopt met school.', best: false, feedback: 'Hij is 17. Hij is nog leerplichtig.' },
               { id: 'c', text: 'Hij wacht een jaar. Dan kiest hij een opleiding.', best: false, feedback: 'Zo verliest hij een jaar. En onder 18 moet hij leren.' },
             ],
@@ -164,7 +164,7 @@ export const be: BeUnit = {
             situation: 'Jayden is 20. Hij heeft geen diploma secundair onderwijs. Hij wil toch nog een diploma halen. Wat kan Jayden het beste doen?',
             options: [
               { id: 'a', text: 'Hij denkt dat het te laat is. Na 18 kan het niet meer.', best: false, feedback: 'Dat klopt niet. Ook volwassenen kunnen nog een diploma halen.' },
-              { id: 'b', text: 'Hij vraagt naar het volwassenenonderwijs of een VDAB-opleiding.', best: true, feedback: 'Goed. Daar kan hij als volwassene verder leren.' },
+              { id: 'b', text: 'Hij vraagt naar het volwassenenonderwijs.', best: true, feedback: 'Goed. Daar kan hij als volwassene verder leren.' },
               { id: 'c', text: 'Hij wacht tot een school hem een brief stuurt.', best: false, feedback: 'Een brief komt niet vanzelf. Hij moet zich zelf inschrijven.' },
             ],
             why: 'Ook als volwassene kan je nog leren. In een centrum voor volwassenenonderwijs haal je ook je diploma secundair onderwijs. Dat heet een CVO. Heb je geen werk? Dan zijn veel opleidingen van de VDAB gratis.',

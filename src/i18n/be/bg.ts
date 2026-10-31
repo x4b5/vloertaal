@@ -12,6 +12,7 @@ import { bg as papers } from './units/papers';
 import { bg as pay } from './units/pay';
 import { bg as house } from './units/house';
 import { bg as sayings } from './units/sayings';
+import { bg as social } from './units/social';
 import { bg as rights } from './units/rights';
 import { bg as leave } from './units/leave';
 import { bg as exploit } from './units/exploit';
@@ -32,5 +33,5 @@ import { bg as online } from './units/online';
  * (./base.ts) and every unit's own file (./units). Loaded with the language's pack. A content
  * agent changes only its own unit files, never this one.
  */
-const texts: CultureTranslation = { ui: base.ui, gloss: { ...base.gloss, ...firstday, ...tools, ...safety, ...warehouse, ...data, ...time, ...teamwork, ...contract, ...papers, ...pay, ...house, ...sayings, ...rights, ...leave, ...exploit, ...grow, ...health, ...money, ...travel, ...lost, ...shop, ...ai, ...kas, ...stage, ...society, ...online } };
+const texts: CultureTranslation = { ui: base.ui, gloss: { ...base.gloss, ...firstday, ...tools, ...safety, ...warehouse, ...data, ...time, ...teamwork, ...contract, ...papers, ...pay, ...house, ...social, ...sayings, ...rights, ...leave, ...exploit, ...grow, ...health, ...money, ...travel, ...lost, ...shop, ...ai, ...kas, ...stage, ...society, ...online } };
 export default texts;

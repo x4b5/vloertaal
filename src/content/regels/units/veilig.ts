@@ -140,7 +140,7 @@ export const veiligUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Niets. Er is toch niemand gewond geraakt.', best: false, feedback: 'Gelukkig niet. Maar de volgende keer misschien wel.' },
             { id: 'b', text: 'Hij zet de doos zelf recht, en zegt het niemand.', best: false, feedback: 'Goed dat hij helpt. Maar zo leert niemand ervan.' },
-            { id: 'c', text: "Hij waarschuwt de collega's en meldt het bij de leiding.", best: true, feedback: 'Goed. Zo voorkomt hij een echt ongeluk.' },
+            { id: 'c', text: "Hij waarschuwt de collega's en meldt het.", best: true, feedback: 'Goed. Zo voorkomt hij een echt ongeluk.' },
           ],
           why: 'Een bijna-ongeluk is een waarschuwing. Melden helpt om een echt ongeluk te voorkomen. Ook kleine dingen mag je melden.',
         },
@@ -222,7 +222,7 @@ export const veiligUnit: RuleUnit = {
           situation: 'Dewi merkt dat het te veel wordt. Wat kan Dewi het beste doen?',
           options: [
             { id: 'a', text: 'Ze zegt niets. In de zorg heeft iedereen het druk.', best: false, feedback: 'Dat snap ik. Maar zo kan ze ziek worden.' },
-            { id: 'b', text: 'Ze praat erover met haar leidinggevende of de bedrijfsarts.', best: true, feedback: 'Goed. Dan kan er samen iets veranderen.' },
+            { id: 'b', text: 'Ze praat erover met haar leidinggevende.', best: true, feedback: 'Goed. Dan kan er samen iets veranderen.' },
             { id: 'c', text: 'Ze werkt sneller, dan is ze eerder klaar.', best: false, feedback: 'Haast geeft fouten en meer stress.' },
           ],
           why: 'Te veel werkdruk maakt mensen ziek. Je werkgever moet daar iets aan doen. Praat erover voordat je ziek wordt. Je mag ook zelf naar de bedrijfsarts.',

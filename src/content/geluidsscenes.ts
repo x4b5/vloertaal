@@ -70,15 +70,17 @@ export const geluidsscenes: Geluidsscene[] = [
     geluid: { nl: 'Bouwplaats buiten: wind, in de verte een boor en een hamer, af en toe een kraan die piept.', niveau: 'midden' },
     vragen: [
       {
-        vraag: 'Wat doe je eerst?',
+        // Not "Wat doe je eerst?": first you get the gear from the bus (controle-inhoud G3).
+        vraag: 'Wat moet je doen voor je naar boven gaat?',
         opties: [
           { nl: 'De ladder bij de steiger zetten.' },
           { nl: 'Je valbeveiliging dragen.', goed: true },
           { nl: 'Je hamer uit de bus pakken.' },
         ],
         uitleg: {
-          nl: 'Op de steiger draag je altijd valbeveiliging.',
-          en: 'On the scaffolding you always wear fall protection.',
+          // Not "altijd": with a full railing (collective protection) a harness is not always needed (Arbobesluit art. 3.16).
+          nl: 'Henk zegt: zonder valbeveiliging ga je niet naar boven.',
+          en: 'Henk says: without fall protection you do not go up.',
         },
       },
       {

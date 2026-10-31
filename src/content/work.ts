@@ -408,6 +408,12 @@ const coreTips: CultureTip[] = [
     ],
     why: { id: 'c.findwork.w', en: 'Your contract says what you earn and what your rights are. A good employer gives you time to read it. You may ask about everything you do not understand.' },
   }),
+  // ⚖️ check (31 October 2026): the Wet meer zekerheid flexwerkers (Stb. 2026, 205) changes on-call
+  // and agency work: equal terms for agency workers from 1 January 2027, the bandbreedtecontract in
+  // place of the oproepovereenkomst and a shorter agency phase A from 1 January 2028 (secondary sources;
+  // check the Staatsblad). The text below is right until then; rewrite it before those dates.
+  // ⚖️ check: proeftijd ⚖️ (BW 7:652); oproeptermijn 4 dagen, cao at least 1 dag, 3 uur loon ⚖️ (BW 7:628a).
+  // More in docs/juridische-check.md.
   tip({
     id: 'c.contract',
     lessonId: 'l.contract',
@@ -423,6 +429,11 @@ const coreTips: CultureTip[] = [
     ],
     why: { id: 'c.contract.w', en: 'A trial period in a contract of 6 months or shorter does not count. Asking calmly is normal. If the answer is not clear, get advice from the union or the Juridisch Loket.' },
   }),
+  // ⚖️ check (31 October 2026): the Wet meer zekerheid flexwerkers (Stb. 2026, 205) changes on-call
+  // and agency work: equal terms for agency workers from 1 January 2027, the bandbreedtecontract in
+  // place of the oproepovereenkomst and a shorter agency phase A from 1 January 2028 (secondary sources;
+  // check the Staatsblad). The text below is right until then; rewrite it before those dates.
+  // ⚖️ check: the same pay as the company's workers ⚖️ (Waadi art. 8, uitzend-cao). More in docs/juridische-check.md.
   tip({
     id: 'c.agency',
     lessonId: 'l.agency',
@@ -522,18 +533,23 @@ const coreTips: CultureTip[] = [
     phrase: { id: 'c.smoking.p', nl: 'Mag ik in mijn pauze buiten roken?', en: 'May I smoke outside in my break?' },
     situation: { id: 'c.smoking.s', en: 'It is cold and raining. A colleague says: "Just smoke in the storage room, nobody sees it." What do you do?' },
     options: [
-      { id: 'c.smoking.o1', en: 'Say no, and smoke outside at the smoking area in your break.', best: true },
+      { id: 'c.smoking.o1', en: 'Say no, and smoke outside in your break.', best: true },
       { id: 'c.smoking.o2', en: 'Smoke quickly in the storage room, just this once.', best: false },
       { id: 'c.smoking.o3', en: 'Use your vape inside instead, because that is allowed.', best: false },
     ],
     why: { id: 'c.smoking.w', en: 'Smoking inside is against the law and can start a fire. A vape inside is not allowed either. Following the rule keeps everyone safe.' },
   }, HOUSE_LINE),
+  // ⚖️ check: breaks 30 min after 5.5 h, 45 min after 10 h, at most 12 h a shift and 60 h a week ⚖️
+  // (Arbeidstijdenwet art. 5:4 and 5:7). Under 18 ⚖️: at most 9 h a shift and 45 h a week, a break of
+  // 30 min after 4.5 h (Arbeidstijdenwet, rules for jeugdigen; rijksoverheid.nl "Hoeveel uur mag ik
+  // werken als ik 16 of 17 ben?"). Werkregels says the same (r.l.tijd: "Ben je jonger dan 18? Dan
+  // minder."). Many Entree students are 16 or 17. No numbers in the text for under 18.
   tip({
     id: 'c.health',
     lessonId: 'l.health',
     emoji: '⏸️',
     title: 'Breaks and working hours',
-    body: 'The law protects your health. Do you work more than 5.5 hours? Then you get at least 30 minutes of break (it may be 2 times 15 minutes). More than 10 hours? Then at least 45 minutes. A cao can have slightly different break rules. You may work at most 12 hours in one shift and 60 hours in one week. Your employer must give you protective equipment, like safety shoes or gloves, for free. Unsafe work or too little pay? You can report it to the Nederlandse Arbeidsinspectie, also without giving your name.',
+    body: 'The law protects your health. Do you work more than 5.5 hours? Then you get at least 30 minutes of break (it may be 2 times 15 minutes). More than 10 hours? Then at least 45 minutes. A cao can have slightly different break rules. You may work at most 12 hours in one shift and 60 hours in one week. Under 18? Then you may work fewer hours. Your employer must give you protective equipment, like safety shoes or gloves, for free. Unsafe work or too little pay? You can report it to the Nederlandse Arbeidsinspectie, also without giving your name.',
     phrase: { id: 'c.health.p', nl: 'Ik heb nog geen pauze gehad.', en: 'I have not had a break yet.' },
     situation: { id: 'c.health.s', en: 'You have worked 6 hours without a break. Your supervisor asks you to keep going. What do you do?' },
     options: [
@@ -552,11 +568,11 @@ const coreTips: CultureTip[] = [
     phrase: { id: 'c.rights.p', nl: 'Ik wil eerst advies vragen.', en: 'I want to ask for advice first.' },
     situation: { id: 'c.rights.s', en: 'Your boss gives you a paper: "Sign today, then you leave by agreement." You do not understand it well. What do you do?' },
     options: [
-      { id: 'c.rights.o1', en: 'Do not sign yet. Ask for time and get advice first.', best: true },
+      { id: 'c.rights.o1', en: 'Do not sign yet. Get advice first.', best: true },
       { id: 'c.rights.o2', en: 'Sign it, because the boss says it is fine.', best: false },
       { id: 'c.rights.o3', en: 'Put the paper away and never talk about it.', best: false },
     ],
-    why: { id: 'c.rights.w', en: 'If you sign, you can lose rights, for example to unemployment benefit (WW). Asking for time to get advice is normal and allowed.' },
+    why: { id: 'c.rights.w', en: 'Is something wrong in it? Then you can lose rights, for example to unemployment benefit (WW). Asking for time to get advice is normal and allowed.' },
   }, ABUSE_LINE),
   tip({
     id: 'c.leave',
@@ -573,6 +589,12 @@ const coreTips: CultureTip[] = [
     ],
     why: { id: 'c.leave.w', en: 'Your employer must usually say yes. They may only say no for a very good reason, and then in writing within 2 weeks. Asking early gives the best chance of a yes.' },
   }),
+  // ⚖️ check (31 October 2026): the Wet meer zekerheid flexwerkers (Stb. 2026, 205) changes on-call
+  // and agency work: equal terms for agency workers from 1 January 2027, the bandbreedtecontract in
+  // place of the oproepovereenkomst and a shorter agency phase A from 1 January 2028 (secondary sources;
+  // check the Staatsblad). The text below is right until then; rewrite it before those dates.
+  // ⚖️ check: 70%, up to 2 years, first year at least the minimum wage, at most 2 wachtdagen ⚖️ (BW 7:629);
+  // uitzendbeding ⚖️ (BW 7:691 lid 2). More in docs/juridische-check.md.
   tip({
     id: 'c.illness',
     lessonId: 'l.illness',
@@ -701,8 +723,8 @@ const applyTips = [
   tipFor(
     'cv',
     '🗂️',
-    'A short Dutch CV',
-    'A Dutch CV is short: 1 or 2 pages. Write your contact details, work experience, education, languages and skills. A photo is not needed. You do not have to write your religion, age or marital status. Be honest about what you can do. Ask someone to check your Dutch.',
+    'A short CV',
+    'A CV here is short: 1 or 2 pages. Write your contact details, work experience, education, languages and skills. A photo is not needed. You do not have to write your religion, age or marital status. Be honest about what you can do. Ask someone to check your Dutch.',
     ['Wil je mijn cv lezen? Klopt mijn Nederlands?', 'Will you read my CV? Is my Dutch correct?'],
     'You worked 3 years in a factory in your home country, but you have no diploma. What do you put on your CV?',
     [
@@ -725,7 +747,7 @@ const applyTips = [
       'Say no, because asking questions is not polite.',
       'Talk more about yourself, to show you are a good worker.',
     ],
-    'Questions show that you are interested in the job. Dutch employers often expect them.',
+    'Questions show that you are interested in the job. Employers here often expect them.',
     NONE,
   ),
 ];
@@ -795,7 +817,7 @@ const houseTips = [
     ['Ik neem een medicijn. Ik word er slaperig van.', 'I take a medicine. It makes me sleepy.'],
     'Your doctor gives you a medicine that makes you sleepy. Tomorrow you must drive a forklift. What do you do?',
     [
-      'Tell your supervisor before you start, so you can do safe work.',
+      'Tell your supervisor before you start.',
       'Say nothing and drive very slowly.',
       'Stop taking the medicine without asking your doctor.',
     ],
@@ -939,7 +961,7 @@ const socialTips = [
     'A colleague often makes jokes about your religion. You asked him to stop, but he goes on. What do you do?',
     [
       'Tell your supervisor or the vertrouwenspersoon.',
-      'Laugh along, so there is no trouble.',
+      'Laugh along with him, so there is no trouble.',
       'Make jokes about his background back.',
     ],
     'Such jokes are not accepted at work. Reporting it is normal: the company must keep the workplace safe for everyone.',
@@ -957,7 +979,7 @@ const socialTips = [
       'Laugh and let him post it, so you are not difficult.',
       'Ask him to post it without your name.',
     ],
-    'Nobody may put a video of you online without your permission. Saying no is normal, and your employer must act when colleagues mock each other online. If he posts it anyway, tell your supervisor.',
+    'Usually, nobody may put a video of you online without your permission. Saying no is normal, and your employer must act when colleagues mock each other online. If he posts it anyway, tell your supervisor.',
     NONE,
   ),
   tipFor(
@@ -1331,7 +1353,7 @@ const laterTips = [
     ['Ik heb hulp nodig. Ik word uitgebuit.', 'I need help. I am being exploited.'],
     'A friend works 14 hours a day, gets almost no pay and is afraid of the boss. What can you do?',
     [
-      'Help him contact the Arbeidsinspectie or the Juridisch Loket, anonymously if he wants.',
+      'Help him contact the Arbeidsinspectie or the Juridisch Loket.',
       'Tell him that this is normal for new workers.',
       'Tell him to wait until his contract ends, then look for other work.',
     ],
@@ -1772,7 +1794,7 @@ const sectorTips = [
     ['Ik begin nog niet. Dit is niet veilig.', 'I am not starting yet. This is not safe.'],
     'You must work on a scaffold, but a railing is missing. A colleague says: "Just be careful." What do you do?',
     [
-      'Do not start. Report it to your supervisor first.',
+      'Do not start, and tell your supervisor.',
       'Start, but be very careful.',
       'Fix the railing yourself with some rope.',
     ],
@@ -1788,7 +1810,7 @@ const sectorTips = [
     'A product is stuck in the machine. The machine is still running. What do you do?',
     [
       'Press the emergency stop and call your supervisor.',
-      'Quickly pull it out with your hand.',
+      'Quickly pull it out with your hand, before it breaks.',
       'Leave it and hope the machine fixes it.',
     ],
     'Running machines can cause serious accidents in a second. Stopping the machine is always allowed and always better.',
@@ -1832,7 +1854,7 @@ const sectorTips = [
     ['Meneer heeft meer pijn dan gisteren.', 'The man has more pain than yesterday.'],
     'A client asks you for her pills. You are not trained to give medicines. What do you do?',
     [
-      'Say kindly that you will get the nurse, and do it right away.',
+      'Say kindly that you will get the nurse.',
       'Give the pills, because she knows what she needs.',
       'Say no and walk away.',
     ],
@@ -2946,7 +2968,8 @@ const entreeTips = [
     ADVICE_LINE,
   ),
   // ⚖️ check: Only people with the right training may work on electrical installations, and a
-  // trained person makes it safe (spanningsloos) first ⚖️ (Arbobesluit art. 3.4; NEN 3140 and
+  // trained person makes it safe (spanningsloos) first ⚖️ (Arbobesluit art. 3.4 (the installation)
+  // and art. 3.5 (work on or near it, as in r.l.techniek.2); NEN 3140 and
   // NEN-EN 50110: werken door een vakbekwaam of voldoende onderricht persoon, aangewezen door de
   // werkgever).
   tipFor(
@@ -3026,7 +3049,8 @@ const entreeTips = [
     NONE,
   ),
   // ⚖️ check: Is something really wrong: first the workplace trainer, then the placement coach
-  // ⚖️ (the school's complaints procedure, WEB art. 7.4.11? to check; SBB can take away a
+  // ⚖️ (the school's complaints procedure (klachtenregeling) and the stagereglement: no article
+  // of the WEB says this order, schools differ; SBB can take away a
   // leerbedrijf's recognition).
   tipFor(
     'review',
@@ -3058,8 +3082,9 @@ const entreeTips = [
     'Skills from home count too. Caring, planning and helping are skills that employers need. Say what you did, with an example.',
     NONE,
   ),
-  // ⚖️ check: With an Entree diploma you may go on to level 2 of the mbo ⚖️ (toelatingsrecht na
-  // een entreediploma: WEB art. 8.1.1, Wet aanmelddatum en toelatingsrecht mbo, 2017; ask the
+  // ⚖️ check: With an Entree diploma you may go on to level 2 of the mbo ⚖️ (vooropleidingseis:
+  // WEB art. 8.1.1, the Entree diploma gives access to level 2; the toelatingsrecht itself is in the WEB as well,
+  // r.l.loopbaan.2 names art. 8.1.7a, an expert should settle which article; Wet aanmelddatum en toelatingsrecht mbo, 2017; ask the
   // school about the conditions).
   // ⚖️ check: A diploma at mbo level 2 or higher is a startkwalificatie ⚖️ (Leerplichtwet 1969
   // art. 1: havo, vwo or mbo level 2).

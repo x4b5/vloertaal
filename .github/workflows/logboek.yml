@@ -1,0 +1,55 @@
+name: Logboek
+
+# A reminder, never a block: a pull request that changes texts (src/content/** or src/i18n/**)
+# without a line in the log (src/content/updates.ts, "Wat is er nieuw?") gets a WARNING on the
+# pull request. The check never fails. Not needed (a typo, a test, a comment)? Add the label
+# `geen-logboek`, or put `[geen logboek]` in the title. See docs/logboek.md.
+# Standard parts only: actions/checkout and git diff. No secrets.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited, labeled, unlabeled]
+
+permissions:
+  contents: read
+
+jobs:
+  logboek:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Is het logboek bijgewerkt?
+        # The title and labels come in as environment variables, never pasted into the script.
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          SKIP_LABEL: ${{ contains(github.event.pull_request.labels.*.name, 'geen-logboek') }}
+        run: |
+          if [ "$SKIP_LABEL" = "true" ]; then
+            echo "Label geen-logboek: niet gecontroleerd."
+            exit 0
+          fi
+          case "$(printf '%s' "$PR_TITLE" | tr '[:upper:]' '[:lower:]')" in
+            *"[geen logboek]"*) echo "[geen logboek] in de titel: niet gecontroleerd."; exit 0 ;;
+          esac
+          # The changes of this pull request only (from where it left the base branch).
+          if ! changed="$(git diff --name-only "$BASE_SHA...$HEAD_SHA" 2>/dev/null)"; then
+            echo "::warning title=Logboek::Kon de wijzigingen niet lezen; niet gecontroleerd."
+            exit 0
+          fi
+          texts="$(printf '%s\n' "$changed" | grep -E '^src/(content|i18n)/' | grep -vx 'src/content/updates.ts' || true)"
+          if [ -z "$texts" ]; then
+            echo "Geen teksten veranderd."
+            exit 0
+          fi
+          if printf '%s\n' "$changed" | grep -qx 'src/content/updates.ts'; then
+            echo "Teksten veranderd en het logboek is bijgewerkt."
+            exit 0
+          fi
+          n="$(printf '%s\n' "$texts" | wc -l | tr -d ' ')"
+          echo "::warning file=src/content/updates.ts,title=Logboek vergeten?::Deze PR verandert $n bestand(en) in src/content of src/i18n, maar niet src/content/updates.ts. Zet een regel in UPDATES (zie docs/logboek.md), of geef de PR het label geen-logboek of [geen logboek] in de titel."
+          printf 'Veranderd zonder logboek:\n%s\n' "$texts"
+          exit 0

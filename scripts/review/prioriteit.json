@@ -1,0 +1,389 @@
+[
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.illness"
+    ],
+    "bewering": "Gewaarborgd loon de eerste 30 dagen, als je minstens 1 maand in dienst bent.",
+    "bron": "Arbeidsovereenkomstenwet art. 52/70; securex.be",
+    "twijfel": "Voor bedienden geldt de voorwaarde van een maand anciënniteit volgens Securex niet. Een wetsvoorstel wil ze ook voor arbeiders afschaffen. Is \"1 maand\" nog juist voor iedereen?",
+    "rapport": "inhoud2-taal-be.md: be.c.illness"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.sick"
+    ],
+    "bewering": "Een ziektebriefje is vaak nodig, soms vanaf de eerste dag.",
+    "bron": "art. 31 §2; Werkregels ziek.ts (2 keer per jaar 1 dag zonder attest sinds 2026)",
+    "twijfel": "Is de 2026-wijziging correct?",
+    "rapport": "inhoud2-taal-be.md: be.c.sick"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.checkout"
+    ],
+    "bewering": "Bier en wijn vanaf 16, sterke drank en tabak vanaf 18, ID vragen onder 25 bij tabak.",
+    "bron": "wet 24 jan 1977; tabakswet 2024",
+    "twijfel": "Er lopen voorstellen voor 18 jaar voor alle alcohol. Ik vond nog geen nieuwe wet (zoekresultaat 31-10-2026).",
+    "rapport": "inhoud2-taal-be.md: be.c.checkout"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.contract"
+    ],
+    "bewering": "Variabel deeltijds uurrooster 7 werkdagen vooraf, de sector kan naar minimum 3.",
+    "bron": "wet 3 okt 2022 (Arbeidsdeal)",
+    "twijfel": "Klopt dat voor elke sector?",
+    "rapport": "inhoud2-taal-be.md: be.c.contract"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.agency"
+    ],
+    "bewering": "Interimcontract schriftelijk binnen 2 werkdagen; opeenvolgende dagcontracten alleen met een reden.",
+    "bron": "Uitzendarbeidswet art. 8",
+    "twijfel": "De termijn van 2 werkdagen nakijken.",
+    "rapport": "inhoud2-taal-be.md: be.c.agency"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.housing"
+    ],
+    "bewering": "Huurwaarborg in Vlaanderen hooguit 3 maanden huur, op een geblokkeerde rekening op jouw naam.",
+    "bron": "Vlaams Woninghuurdecreet art. 37",
+    "twijfel": "Er zijn ook andere vormen (bankwaarborg, OCMW). Is het \"op een geblokkeerde rekening\" te stellig?",
+    "rapport": "inhoud2-taal-be.md: be.c.housing"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.payslip"
+    ],
+    "bewering": "RSZ werknemer 13,07 % van het brutoloon.",
+    "bron": "securex.be",
+    "twijfel": "Voor arbeiders op 108 %. Mag de vereenvoudiging blijven?",
+    "rapport": "inhoud2-taal-be.md: be.c.payslip"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.extra"
+    ],
+    "bewering": "Overuren minstens 50 % extra; arbeiders krijgen vakantiegeld van de vakantiekas vanaf mei.",
+    "bron": "Arbeidswet art. 29; RJV",
+    "twijfel": "Zondag en feestdag 100 %: is het weglaten daarvan in orde?",
+    "rapport": "inhoud2-taal-be.md: be.c.extra"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.ww"
+    ],
+    "bewering": "Uitkering aanvragen via vakbond of HVW, de RVA beslist, de duur is beperkt.",
+    "bron": "onem.be hervorming 2026",
+    "twijfel": "De duur na de hervorming nakijken.",
+    "rapport": "inhoud2-taal-be.md: be.c.ww"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.transit"
+    ],
+    "bewering": "De Lijn: geen cash op de bus, wel betalen met de bankkaart. De werkgever betaalt mee aan het treinabonnement.",
+    "bron": "delijn.be; cao 19/9",
+    "twijfel": "Kan je overal op de bus contactloos betalen?",
+    "rapport": "inhoud2-taal-be.md: be.c.transit"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.council"
+    ],
+    "bewering": "Niet-EU-burgers mogen voor de gemeenteraad stemmen na 5 jaar wettig verblijf, als ze zich inschrijven.",
+    "bron": "Kieswetboek; vlaanderen.be",
+    "twijfel": "5 jaar ononderbroken nakijken.",
+    "rapport": "inhoud2-taal-be.md: be.c.council"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.kids",
+      "be.c.leave"
+    ],
+    "bewering": "Verlof om dwingende redenen 10 dagen per jaar, meestal onbetaald. Geboorteverlof 20 dagen.",
+    "bron": "cao 45; riziv",
+    "twijfel": "Geen grote twijfel, wel nakijken.",
+    "rapport": "inhoud2-taal-be.md: be.c.kids, be.c.leave"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.police"
+    ],
+    "bewering": "Vanaf 15 jaar je identiteitskaart altijd bij je, eerste advies van een advocaat gratis in het justitiehuis.",
+    "bron": "wet 19 juli 1991; justitiehuizen.be",
+    "twijfel": "Wordt de eerstelijnsbijstand in het justitiehuis gegeven, of elders (commissie voor juridische bijstand)?",
+    "rapport": "inhoud2-taal-be.md: be.c.police"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "be.c.respect",
+      "be.c.boundaries"
+    ],
+    "bewering": "Vertrouwenspersoon \"if there is one\".",
+    "bron": "Welzijnswet art. 32sexies",
+    "twijfel": "Moet de preventieadviseur er voor België bij?",
+    "rapport": "inhoud2-taal-be.md: be.c.respect, be.c.boundaries (A)"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "c.contract",
+      "c.agency",
+      "c.illness"
+    ],
+    "bewering": "Wet meer zekerheid flexwerkers: gelijke arbeidsvoorwaarden vanaf 1-1-2027, bandbreedtecontract en kortere fase A vanaf 1-1-2028.",
+    "bron": "Stb. 2026, 205 en inwerkingtredingsbesluit Stb. 2026, 206 (via njb.nl); hrcommunity.nl, jurato.nl",
+    "twijfel": "Alleen secundaire bronnen; de bronnen spreken elkaar tegen over 2027 of 2028. Welke tipzinnen (4 dagen, 3 uur, uitzendbeding) vervallen wanneer?",
+    "rapport": "inhoud2-taal-nl.md: X1"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "c.health"
+    ],
+    "bewering": "Jongeren van 16–17: max. 9 uur per dienst, 45 uur per week, pauze na 4,5 uur.",
+    "bron": "Arbeidstijdenwet (jeugdigen), rijksoverheid.nl",
+    "twijfel": "Het artikelnummer staat niet in de noot. De tip noemt geen getal (\"fewer hours\"): is dat genoeg?",
+    "rapport": "inhoud2-taal-nl.md: X2"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "c.power",
+      "r.l.techniek.2"
+    ],
+    "bewering": "Werken aan of bij elektrische installaties: Arbobesluit art. 3.5 (3.4 is de installatie zelf).",
+    "bron": "arboportaal.nl, NEN 3140",
+    "twijfel": "Bevestigen dat 3.5 de juiste bron is voor zowel c.power als r.l.techniek.2.",
+    "rapport": "inhoud2-taal-nl.md: X3"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "c.nextstep"
+    ],
+    "bewering": "Met een Entree-diploma mag je naar niveau 2.",
+    "bron": "WEB art. 8.1.1 (vooropleidingseis); toelatingsrecht 8.1.1c of 8.1.7a",
+    "twijfel": "Welk artikel hoort bij het toelatingsrecht? Taal en Werkregels noemen verschillende artikelen.",
+    "rapport": "inhoud2-taal-nl.md: X4"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "c.placement"
+    ],
+    "bewering": "Problemen op de stage: eerst de praktijkopleider, dan de stagebegeleider.",
+    "bron": "klachtenregeling en stagereglement van de school",
+    "twijfel": "Er is geen WEB-artikel voor deze volgorde. Klopt \"Rules differ per school\"?",
+    "rapport": "inhoud2-taal-nl.md: X5"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "g.bouw.steiger"
+    ],
+    "bewering": "Valbeveiliging op een steiger: niet \"altijd\", collectieve maatregelen gaan voor.",
+    "bron": "Arbobesluit art. 3.16",
+    "twijfel": "Bevestigen dat de nieuwe uitleg veilig genoeg is voor Entree.",
+    "rapport": "inhoud2-taal-nl.md: X6"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "c.gossip"
+    ],
+    "bewering": "\"Nobody may put a video of you online without your permission.\"",
+    "bron": "portretrecht (Auteurswet art. 21), AVG",
+    "twijfel": "Is \"nobody may\" te absoluut?",
+    "rapport": "inhoud2-taal-nl.md: X7"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "c.rights"
+    ],
+    "bewering": "\"If you sign [a vso], you can lose rights, for example to WW.\"",
+    "bron": "BW 7:670b; UWV-beleid bij beëindiging met wederzijds goedvinden",
+    "twijfel": "Is \"can\" genoeg, of beter \"if something in it is wrong\" zoals in Werkregels?",
+    "rapport": "inhoud2-taal-nl.md: X8"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "c.carjob"
+    ],
+    "bewering": "Meerwerk in de garage: BW 7:755 (Taal) tegenover 7:405 (Werkregels).",
+    "bron": "BW 7:750 e.v. (aanneming van werk)",
+    "twijfel": "Een autoreparatie is aanneming van werk, dus 7:755 lijkt de goede bron. Werkregels aanpassen?",
+    "rapport": "inhoud2-taal-nl.md: X9"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "r.be.l.ziek.2"
+    ],
+    "bewering": "Een arbeider of een bediende met een contract van minder dan 3 maanden heeft pas na 1 maand dienst recht op gewaarborgd loon; een andere bediende meteen.",
+    "bron": "securex.be (jan 2025 en 21 jan 2026), zoekresultaat",
+    "twijfel": "Een wetsvoorstel (55K3351) wilde dit gelijktrekken; niet gevonden of het is aangenomen.",
+    "rapport": "inhoud2-werkregels.md: r.be.l.ziek.2"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "r.be.l.ziek.2"
+    ],
+    "bewering": "Arbeider: week 1 100%, dag 8–14 85,88%, daarna vooral het ziekenfonds.",
+    "bron": "abvvmetaal.be, ucm.be",
+    "twijfel": "Percentages niet in een officiële bron gezien.",
+    "rapport": "inhoud2-werkregels.md: r.be.l.ziek.2"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "r.be.l.tijd.3",
+      "r.be.l.loon.3"
+    ],
+    "bewering": "De eerste 240 vrijwillige overuren per jaar (horeca 360) geven geen overloon en geen inhaalrust.",
+    "bron": "wet 18 mei 2026; partena-professional.be; lexgo.be",
+    "twijfel": "Bronnen verschillen over 240 of 360 \"netto\" in de horeca.",
+    "rapport": "inhoud2-werkregels.md: r.be.l.tijd.3 / loon.3"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "r.be.l.contract.2",
+      "r.be.l.rechten.4"
+    ],
+    "bewering": "Contract vanaf 1 augustus 2026: in de eerste 6 maanden 1 week opzeg, voor beide kanten.",
+    "bron": "wet 3 juni 2026 (BS 15 juni 2026); securex.be; VRT 28 juli 2026",
+    "twijfel": "Eén bron noemt de wet van 18 mei 2026. Kan de zin \"de oude proeftijd bestaat niet meer\" blijven?",
+    "rapport": "inhoud2-werkregels.md: r.be.l.contract.2 / rechten.5"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "r.be.l.rechten.4"
+    ],
+    "bewering": "Opzeg hoogstens 52 weken voor contracten vanaf 1 juni 2026.",
+    "bron": "securex.be, partena",
+    "twijfel": "Eén bron noemt 1 april 2026.",
+    "rapport": "inhoud2-werkregels.md: r.be.l.rechten.5"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "r.be.l.geld.1"
+    ],
+    "bewering": "Inschrijven bij de VDAB binnen 8 dagen na je laatste werkdag.",
+    "bron": "vdab.be",
+    "twijfel": "Bij ontslag: na het einde van de opzegtermijn; ACLVB: na de eerste werkloosheidsdag.",
+    "rapport": "inhoud2-werkregels.md: r.be.l.geld.1"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "r.be.l.geld.1"
+    ],
+    "bewering": "De werkloosheidsuitkering duurt meestal hooguit 2 jaar.",
+    "bron": "onem.be; VRT",
+    "twijfel": "De uitzonderingen (55+, inschakelingsuitkering 1 jaar) staan niet in de les. Is \"meestal\" genoeg?",
+    "rapport": "inhoud2-werkregels.md: r.be.l.geld.1"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "r.be.l.ziek.1"
+    ],
+    "bewering": "2 keer per jaar 1 dag zonder attest; minder dan 50 werknemers: toch een attest mogelijk.",
+    "bron": "securex.be; UNIZO",
+    "twijfel": "UNIZO wil het veranderen.",
+    "rapport": "inhoud2-werkregels.md: r.be.l.ziek.1"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "h.be.unia"
+    ],
+    "bewering": "Unia: gratis melden op 0800 12 800.",
+    "bron": "vlaanderen.be (zoekresultaat)",
+    "twijfel": "De openingsuren verschillen per bron (9–12, 9.30–13, 9–17).",
+    "rapport": "inhoud2-werkregels.md: h.be.unia"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "h.be.1712"
+    ],
+    "bewering": "1712 is gratis en anoniem, voor geweld en misbruik, ook seksueel geweld.",
+    "bron": "vlaanderen.be; 1712.be",
+    "twijfel": "Is \"ook op je werk\" de goede plek voor 1712, naast de preventieadviseur?",
+    "rapport": "inhoud2-werkregels.md: h.be.1712"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "h.112"
+    ],
+    "bewering": "Misbruik van 112 is ook in België strafbaar.",
+    "bron": "—",
+    "twijfel": "Het Belgische artikel is niet gevonden.",
+    "rapport": "inhoud2-werkregels.md: h.112 (BE)"
+  },
+  {
+    "land": "BE",
+    "ids": [
+      "h.be.justitiehuis"
+    ],
+    "bewering": "vlaanderen.be/justitiehuizen is de goede link.",
+    "bron": "zoekresultaat",
+    "twijfel": "Niet geopend.",
+    "rapport": "inhoud2-werkregels.md: h.be.justitiehuis"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "r.l.contract.3"
+    ],
+    "bewering": "Uitzendkrachten hebben recht op hetzelfde loon; een cao mag soms afwijken.",
+    "bron": "art. 8 Waadi; Stb. 2026, 206",
+    "twijfel": "Gelijke beloning wordt strenger vanaf 31 dec 2026 of 1 jan 2027: geldt \"mag soms afwijken\" dan nog?",
+    "rapport": "inhoud2-werkregels.md: r.l.contract.3"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "rg.zl.r.l.5"
+    ],
+    "bewering": "Er zijn drie posten: MUMC+ Maastricht, Zuyderland Heerlen en Geleen.",
+    "bron": "zuyderland.nl (16-10-2026, eerder)",
+    "twijfel": "Is Geleen nog open? Ik vond geen actuele bron.",
+    "rapport": "inhoud2-werkregels.md: rg.zl (huisartsenpost)"
+  },
+  {
+    "land": "NL",
+    "ids": [
+      "h.fairwork"
+    ],
+    "bewering": "fairwork.nu is nog de goede plek bij uitbuiting.",
+    "bron": "voortgangsbrief mensenhandel, juli 2025",
+    "twijfel": "Ik vond geen bron uit 2026.",
+    "rapport": "inhoud2-werkregels.md: h.fairwork"
+  }
+]

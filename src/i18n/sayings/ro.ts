@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'Atunci azi iau autobuzul.',
     'c.plain.a.why': 'Plouă foarte tare: în autobuz nu te uzi.',
     'c.easy': 'Expresii: cuvintele înseamnă altceva',
-    'c.easy.b': 'Olandezii folosesc des expresii, și la muncă. Cuvintele spun un lucru, dar înseamnă altceva. „Een eitje” e un ou mic, dar înseamnă: foarte ușor. Tu nu trebuie să folosești expresii. Nu înțelegi o expresie? Atunci întreabă pur și simplu ce înseamnă.',
+    'c.easy.b': 'Aici, oamenii folosesc des expresii, și la muncă. Cuvintele spun un lucru, dar înseamnă altceva. „Een eitje” e un ou mic, dar înseamnă: foarte ușor. Tu nu trebuie să folosești expresii. Nu înțelegi o expresie? Atunci întreabă pur și simplu ce înseamnă.', // nieuw, nalezen
     'c.easy.p': 'Ce vrei să spui cu asta?',
     'c.easy.s': 'Colegul tău se uită la sarcina nouă și spune: „Dat is een eitje!” Ce vrea să spună?',
     'c.easy.o1': 'Sarcina e foarte ușoară.',

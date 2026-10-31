@@ -235,7 +235,7 @@ hoeft daar geen antwoord op te geven. Je kunt het later melden als discriminatie
 
 - **A.** "Nee, dank u. Ik wil u niet storen."
   → *Beleefd bedoeld. Maar hier kan het lijken alsof hij niet wil.*
-- **B.** "Ja. Wat zijn de werktijden, en wat verdien ik?"
+- **B.** "Ja. Wat zijn de werktijden precies?"
   → *Goed. Zo laat hij zien dat hij de baan wil.*
 - **C.** "Nee, dat hoor ik wel als ik begin."
   → *Dan weet hij te weinig als hij moet tekenen.*
@@ -1156,7 +1156,7 @@ kind 8 jaar is ⚖️. Voor een deel ervan kun je geld krijgen van UWV ⚖️.
 
 **Vraag 3 · Wat is het beste?** De opvang belt Mohammed. Zijn dochter heeft koorts en moet naar huis. Mohammed is op zijn werk. Wat kan Mohammed het beste doen?
 
-- **A.** Hij zegt het meteen tegen zijn leidinggevende, en hij haalt haar op.
+- **A.** Hij zegt het zijn leidinggevende, en haalt haar op.
   → *Goed. Bij een noodgeval mag hij meteen weg.*
 - **B.** Hij meldt zich ziek. Dat is het makkelijkst.
   → *Hij is zelf niet ziek. Voor zijn kind is er verlof.*
@@ -1425,7 +1425,7 @@ veiligheid let) · de Nederlandse Arbeidsinspectie.
   → *Gelukkig niet. Maar de volgende keer misschien wel.*
 - **B.** Hij zet de doos zelf recht, en zegt het niemand.
   → *Goed dat hij helpt. Maar zo leert niemand ervan.*
-- **C.** Hij waarschuwt de collega's en meldt het bij de leiding.
+- **C.** Hij waarschuwt de collega's en meldt het.
   → *Goed. Zo voorkomt hij een echt ongeluk.*
 
 **Goed antwoord: C.**
@@ -1473,7 +1473,7 @@ Nederlandse Arbeidsinspectie (nlarbeidsinspectie.nl) · bij direct gevaar: 112.
 
 - **A.** Ze zegt niets. In de zorg heeft iedereen het druk.
   → *Dat snap ik. Maar zo kan ze ziek worden.*
-- **B.** Ze praat erover met haar leidinggevende of de bedrijfsarts.
+- **B.** Ze praat erover met haar leidinggevende.
   → *Goed. Dan kan er samen iets veranderen.*
 - **C.** Ze werkt sneller, dan is ze eerder klaar.
   → *Haast geeft fouten en meer stress.*
@@ -2496,7 +2496,7 @@ dat ook als je handschoenen uittrekt ⚖️. Zo bescherm je je cliënten en jeze
 
 - **A.** Ze gaat werken. Ze voelt zich nu toch goed.
   → *Dat snap ik. Maar ze kan cliënten nog besmetten.*
-- **B.** Ze belt vóór haar dienst, en zegt dat het besmettelijk kan zijn.
+- **B.** Ze belt af, en zegt: het kan besmettelijk zijn.
   → *Goed. Ze hoeft niet te zeggen wat ze heeft. Dit wel.*
 - **C.** Ze gaat werken, en draagt de hele dag een mondkapje.
   → *Goed bedoeld. Maar dat helpt niet genoeg.*
@@ -2659,7 +2659,7 @@ Fooi mag hij daar niet bij optellen ⚖️. Vraag hoe de fooi in jullie team wor
 
 **Vraag 3 · Wat is het beste?** Esra werkt er al 2 maanden. Ze hoort niets over de fooi. Wat kan Esra het beste doen?
 
-- **A.** Ze vraagt haar leidinggevende hoe het team de fooi verdeelt.
+- **A.** Ze vraagt hoe het team de fooi verdeelt.
   → *Goed. Elk team doet het anders. Vragen is normaal.*
 - **B.** Ze pakt elke avond zelf wat geld uit de pot.
   → *Niet doen. Dan lijkt het op stelen.*
@@ -3743,7 +3743,7 @@ gratis ⚖️. Gehoorschade gaat niet meer over. Je merkt het vaak pas na jaren.
 **Vraag 3 · Wat is het beste?** Op de werkbank liggen veel spanen. Sanne wil ze weghalen. Wat kan
 Sanne het beste doen?
 
-- **A.** Ze veegt ze weg met een borstel of een kwast.
+- **A.** Ze veegt ze weg met een borstel.
   → *Goed. Zo snijdt ze haar handen niet.*
 - **B.** Ze blaast ze weg met de luchtslang.
   → *Dat is logisch. Maar dan vliegen de spanen alle kanten op.*

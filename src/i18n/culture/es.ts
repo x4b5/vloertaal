@@ -44,7 +44,7 @@ const t: CultureTranslation = {
     'c.ask.o1': 'Pides que te lo expliquen otra vez.', // nagelezen (2e lezing)
     'c.ask.o2': 'Dices que sí con la cabeza e intentas adivinar.',
     'c.ask.o3': 'Pides perdón por tu neerlandés y empiezas a trabajar.', // nagelezen (2e lezing)
-    'c.ask.w': 'Los encargados en los Países Bajos esperan preguntas. Es mejor preguntar dos veces que cometer un error.',
+    'c.ask.w': 'Aquí los encargados esperan preguntas. Es mejor preguntar dos veces que cometer un error.', // nieuw, nalezen
     'c.gear': 'Las normas de seguridad son para todos',
     'c.gear.b': 'Las normas sobre cascos, zapatos y guantes no son una sugerencia: todos las cumplen, también el jefe. Tu empresa te tiene que dar gratis el equipo de protección que necesitas. Un equipo que no te queda bien no te protege bien, así que pide tu talla: “Heb je dit ook in mijn maat?”',
     'c.gear.p': 'Mis guantes están rotos. ¿Dónde consigo unos nuevos?',
@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.unsafe.s': 'Un palé está apilado demasiado alto y casi se cae. Nadie se ha hecho daño. ¿Qué haces?',
     'c.unsafe.o1': 'Avisas a tus compañeros y se lo dices a tu encargado.',
     'c.unsafe.o2': 'No dices nada, porque no ha pasado nada.',
-    'c.unsafe.o3': 'Lo arreglas sin ayuda y no se lo dices a nadie.',
+    'c.unsafe.o3': 'Arreglas tú el palé y no se lo dices a nadie.', // nieuw, nalezen
     'c.unsafe.w': 'Un casi accidente es un aviso. Contarlo ayuda a evitar un accidente de verdad. Tu empresa no te puede castigar por avisar.',
     'c.accident': 'Avisa de cada accidente',
     'c.accident.b': 'Cuéntale cada accidente, también uno pequeño, a tu encargado o al BHV’er (la persona de primeros auxilios de la empresa). ¿Trabajas a través de una agencia? Avisa también a la agencia. En una emergencia, llama primero al 112. La empresa donde pasó el accidente tiene que avisar de un accidente grave a la Nederlandse Arbeidsinspectie (también si trabajas a través de una agencia): cuando alguien muere, queda con lesiones para toda la vida o tiene que quedarse en el hospital. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',

@@ -14,6 +14,8 @@ import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
 import { News } from './components/News';
+import { NoticeCard } from './components/NoticeCard';
+import { noticeFor, seeNotice } from './lib/notice';
 import { NoVoiceNote, RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf } from './components/RulesHelp';
 import { GenderScreen } from './components/Gender';
 import { shouldAskGender } from './lib/askGender';
@@ -33,7 +35,7 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
-import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, workWeek } from './lib/progress';
+import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dueIds, gradedStepIds, seedCards, strongerCount, addLessonSentences, dailyIds, reviewResults, seedSentenceCards, wordResultCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { keepStorageAgain, persistStorage } from './lib/install';
@@ -143,7 +145,8 @@ needAtStart(adminRequested() ? 'admin' : coachesRequested() ? 'coaches' : linked
  */
 function startProgress() {
   const { progress, broken } = settleStreak(loadProgress(), new Date());
-  return { progress, stopped: broken ?? null };
+  // The first day on this phone (a notice only shows when it is newer: src/lib/notice.ts).
+  return { progress: withFirstDay(progress, new Date()), stopped: broken ?? null };
 }
 
 /** How long the start waits for a file that neither comes nor fails before it offers "Try again". */
@@ -994,6 +997,8 @@ export default function App() {
               setProgress((p) => ({
                 ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
                 sector: p.sector, region: p.region, country: p.country, rulesNotice: p.rulesNotice, textSize: p.textSize, tempo: p.tempo, gender: p.gender, genderAsked: p.genderAsked,
+                // The first day and the notices seen stay: wiping the lessons does not make old notices new.
+                firstDay: p.firstDay, noticesSeen: p.noticesSeen,
                 // "Sneller leren" is a setting: it stays (the count of lessons starts again).
                 pace: p.pace?.faster ? { faster: true, tempoBefore: p.pace.tempoBefore, asked: p.pace.asked } : undefined,
               }));
@@ -1103,6 +1108,8 @@ export default function App() {
         return <StreakStopped streak={stopped} best={bestStreak(progress)} lang={lang} onDone={() => setStopped(null)} />;
       }
       const offered = stopped === null ? toetsOffer(progress, new Date()) : null;
+      // "Er is iets veranderd" (src/lib/notice.ts): once, before the test's card (one card at a time).
+      const notice = noticeFor(progress, new Date());
       const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track) : null;
       return (
         <>
@@ -1131,7 +1138,14 @@ export default function App() {
             lockedLink={lockedLink}
             note={<><RulesPathNote lang={lang} country={progress.country} /><NoVoiceNote lang={lang} once /></>}
             unlocked={unlockedShown}
-            offer={offered ? (
+            offer={notice ? (
+              <NoticeCard
+                notice={notice}
+                lang={lang}
+                onMore={() => { setProgress((p) => seeNotice(p, notice.id, new Date())); go({ name: 'news' }); }}
+                onOk={() => setProgress((p) => seeNotice(p, notice.id, new Date()))}
+              />
+            ) : offered ? (
               <ToetsOffer
                 moment={offered}
                 lang={lang}

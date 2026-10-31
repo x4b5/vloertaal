@@ -44,7 +44,7 @@ const t: CultureTranslation = {
     'c.ask.o1': 'Bitte darum, es noch einmal zu erklären.', // nagelezen (2e lezing)
     'c.ask.o2': 'Nick und versuch zu raten.',
     'c.ask.o3': 'Entschuldige dich für dein Niederländisch und fang an zu arbeiten.', // nagelezen (2e lezing)
-    'c.ask.w': 'Niederländische Vorgesetzte erwarten Fragen. Lieber zweimal fragen als einen Fehler machen.',
+    'c.ask.w': 'Vorgesetzte erwarten hier Fragen. Lieber zweimal fragen als einen Fehler machen.', // nieuw, nalezen
     'c.gear': 'Sicherheitsregeln gelten für alle',
     'c.gear.b': 'Regeln für Helm, Schuhe und Handschuhe sind kein Vorschlag: Alle halten sich daran, auch der Chef. Dein Arbeitgeber muss dir die Schutzausrüstung, die du brauchst, kostenlos geben. Ausrüstung, die nicht passt, schützt dich nicht gut. Frag also nach deiner Größe: „Heb je dit ook in mijn maat?“',
     'c.gear.p': 'Meine Handschuhe sind kaputt. Wo bekomme ich neue?',
@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.unsafe.s': 'Eine Palette ist zu hoch gestapelt und fällt fast um. Niemand wurde verletzt. Was machst du?',
     'c.unsafe.o1': 'Warne die Kollegen und sag es deinem Vorgesetzten.',
     'c.unsafe.o2': 'Sag nichts, es ist ja nichts passiert.',
-    'c.unsafe.o3': 'Bring es allein in Ordnung und sag es niemandem.',
+    'c.unsafe.o3': 'Bring die Palette selbst in Ordnung und sag es niemandem.', // nieuw, nalezen
     'c.unsafe.w': 'Ein Beinahe-Unfall ist eine Warnung. Wenn du ihn meldest, hilft das, einen echten Unfall zu verhindern. Dein Arbeitgeber darf dich dafür nicht bestrafen.',
     'c.accident': 'Melde jeden Unfall',
     'c.accident.b': 'Sag deinem Vorgesetzten oder dem BHV’er (dem betrieblichen Ersthelfer) Bescheid, bei jedem Unfall, auch bei einem kleinen. Arbeitest du über eine Zeitarbeitsfirma? Sag es auch dort. Im Notfall ruf zuerst 112 an. Die Firma, in der der Unfall passiert ist, muss einen schweren Unfall der Nederlandse Arbeidsinspectie melden (auch wenn du über eine Zeitarbeitsfirma arbeitest): wenn jemand stirbt, für immer verletzt ist oder im Krankenhaus bleiben muss. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',

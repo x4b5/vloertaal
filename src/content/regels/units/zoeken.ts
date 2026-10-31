@@ -221,7 +221,7 @@ export const zoekenUnit: RuleUnit = {
           situation: 'Aan het eind vraagt Linda: "Heb jij nog vragen?" Wat zegt Mohammed het beste?',
           options: [
             { id: 'a', text: 'Nee, dank u. Ik wil u niet storen.', best: false, feedback: 'Beleefd bedoeld. Maar hier kan het lijken alsof hij niet wil.', say: true },
-            { id: 'b', text: 'Ja. Wat zijn de werktijden, en wat verdien ik?', best: true, feedback: 'Goed. Zo laat hij zien dat hij de baan wil.', say: true },
+            { id: 'b', text: 'Ja. Wat zijn de werktijden precies?', best: true, feedback: 'Goed. Zo laat hij zien dat hij de baan wil.', say: true },
             { id: 'c', text: 'Nee, dat hoor ik wel als ik begin.', best: false, feedback: 'Dan weet hij te weinig als hij moet tekenen.', say: true },
           ],
           why: 'Hier is het normaal om zelf vragen te stellen. Vraag naar de uren, het loon en het werk. Je mag ook vragen wanneer je iets hoort.',

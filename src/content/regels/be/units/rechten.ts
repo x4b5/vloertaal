@@ -351,6 +351,7 @@ export const be: BeUnit = {
           },
           // ⚖️ check: de opzegtermijn groeit met de anciënniteit (jaren in dienst); voor contracten vanaf 1 juni 2026 hoogstens 52 weken (Arbeidsovereenkomstenwet art. 37/2; werk.belgie.be "opzeggingstermijnen vanaf 01/01/2014"; securex.be; zoekresultaten; geen getal in de les, bijgewerkt oktober 2026)
           // ⚖️ check: wie de opzegtermijn niet moet uitwerken, krijgt een opzegvergoeding: het loon voor de duur van de opzegtermijn (art. 39)
+          // ⚖️ check: voor contracten die beginnen vanaf 1 augustus 2026 is de opzegtermijn in de eerste 6 maanden 1 week, voor werkgever en werknemer (wet 3 juni 2026, BS 15 juni 2026, art. 37/2; securex.be "kortere opzegtermijnen in de eerste 6 maanden"; VRT NWS 28 juli 2026; zoekresultaten 31 okt 2026). Klopt met r.be.l.contract.2; "hoe langer je er werkt, hoe langer de termijn" blijft waar.
           // ⚖️ check: ontslag om dringende reden kan zonder opzegtermijn en zonder vergoeding, binnen 3 werkdagen na het feit (art. 35)
           {
             kind: 'truefalse',

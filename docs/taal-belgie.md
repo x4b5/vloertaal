@@ -166,17 +166,25 @@ met plaatje of opname en de opnames die nodig zijn: `be-taal-inventaris.md` uit 
 
 | | A | B | C |
 |---|---|---|---|
-| Units (40) | 14 | 25 | 1 |
-| Lessen, items (102) | 70 | 21 | 11 |
-| Tips (99) | 58 | 22 | 19 |
+| Units (40) | 13 | 26 | 1 |
+| Lessen, items (102) | 69 | 22 | 11 |
+| Tips (99) | 54 | 26 | 19 |
 
-- A-units: Hulp vragen, Klanken, Solliciteren, Omgang met collega's, Bellen en appen, Op de bouw,
+*Bijgewerkt 31 oktober 2026 (inhoudsronde 2), geteld uit `inventory.ts`: de tips van l.review (de mentor),
+l.respect en l.boundaries (de preventieadviseur psychosociale aspecten) zijn nu B, en u.social is een
+B-unit. Vier A-tips zeggen nu "here" in plaats van "Dutch" (c.ask, c.cv, c.interview, c.easy), zodat
+ze in beide landen kloppen.*
+
+- A-units: Hulp vragen, Klanken, Solliciteren, Bellen en appen, Op de bouw,
   In de productie, In de zorg, In de horeca, Schoonmaken, Rekenen, Je werk afronden, In de
   werkplaats, In de garage.
 - C-unit: Meedoen in Nederland → **Meedoen in België** (af).
 - **Rechten**: van de 33 rechten-tips verschillen er 24 per land (9 B, 15 C); 18 lessen hebben
   rechten-woorden of -zinnen die in België anders zijn (5 C, 13 B).
-- **Toets**: 3 items (loonstrook, bedrijfsarts, kantine). **Wat kun je nu?**: 1 zin (loonstrook).
+- **Toets**: 3 items (loonstrook, bedrijfsarts, kantine). **Wat kun je nu?**: 3 zinnen (loonstrook → loonbrief, pinnen → met de kaart betalen, beter
+  melden → zeggen dat ik weer kan werken).
+- **Begeleiders**: de pagina "Voor begeleiders en werkgevers" en de begeleiderskaart tonen in België de
+  Belgische titels ("Meedoen in België") en zinnen (`kunOnderwerpenNu`, tests/coachesBe.test.ts).
 
 ---
 

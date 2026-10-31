@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'Entonces hoy tomo el autobús.',
     'c.plain.a.why': 'Lluvia muy fuerte: en el autobús no te mojas.',
     'c.easy': 'Dichos: las palabras quieren decir otra cosa',
-    'c.easy.b': 'La gente en los Países Bajos usa mucho los dichos, también en el trabajo. Las palabras dicen una cosa, pero quieren decir otra. “Een eitje” es un huevito, pero quiere decir: muy fácil. Tú no tienes que usar dichos. ¿No entiendes un dicho? Entonces pregunta qué quiere decir.',
+    'c.easy.b': 'Aquí la gente usa mucho los dichos, también en el trabajo. Las palabras dicen una cosa, pero quieren decir otra. “Een eitje” es un huevito, pero quiere decir: muy fácil. Tú no tienes que usar dichos. ¿No entiendes un dicho? Entonces pregunta qué quiere decir.', // nieuw, nalezen
     'c.easy.p': '¿Qué quieres decir con eso?',
     'c.easy.s': 'Tu compañero mira la tarea nueva y dice: “Dat is een eitje!” ¿Qué quiere decir?',
     'c.easy.o1': 'La tarea es muy fácil.',

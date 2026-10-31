@@ -124,6 +124,14 @@ export interface Progress {
   /** Lessons at the learner's level (src/lib/pace.ts): "Wil je sneller?" and a shorter lesson
    *  after many mistakes. A setting of this phone: not in the backup. Missing = as before. */
   pace?: PaceState;
+  /**
+   * The first day this phone used the app (YYYY-MM-DD): a notice (src/lib/notice.ts) only shows
+   * when its update is newer, so a new learner never sees old notices. Set on the first open; a
+   * save from before it gets the earliest day it knows (firstDayOf), else that day. On this phone only.
+   */
+  firstDay?: string;
+  /** The notices seen ("Er is iets veranderd", their ids). On this phone only: not in the backup. */
+  noticesSeen?: string[];
 }
 
 /** What each track keeps for itself (Progress.parked). */
@@ -215,6 +223,13 @@ export function loadProgress(): Progress {
         const pace = readPace(saved.pace);
         if (pace) saved.pace = pace;
         else delete saved.pace;
+      }
+      // The first day and the notices seen (added later): kept when they can be read, else left out
+      // (withFirstDay then fills the first day in).
+      if (saved.firstDay !== undefined && !isDay(saved.firstDay)) delete saved.firstDay;
+      if (saved.noticesSeen !== undefined) {
+        if (Array.isArray(saved.noticesSeen)) saved.noticesSeen = saved.noticesSeen.filter((x: unknown) => typeof x === 'string');
+        else delete saved.noticesSeen;
       }
       return { ...emptyProgress, ...saved };
     }
@@ -660,4 +675,22 @@ export function mergeBackup(p: Progress, file: Backup): Progress {
     ),
     toets: mergeToets(p.toets, b.toets),
   };
+}
+
+/**
+ * The earliest day this progress knows of (practised days, rest days, the last lesson or review,
+ * certificates, the test): for a save from before `firstDay` was kept. Undefined: nothing yet.
+ */
+export function firstDayOf(p: Progress): string | undefined {
+  const days = [
+    ...(p.days ?? []), ...(p.rest ?? []), p.lastDay, p.lessonDay, p.reviewDay, p.parked?.reviewDay,
+    ...Object.values(p.certs ?? {}), ...Object.values(p.completed).map((r) => r.check), p.toets?.start,
+  ].filter(isDay);
+  return days.length ? days.sort()[0] : undefined;
+}
+
+/** The progress with its first day: kept; else the earliest day it knows; else today. */
+export function withFirstDay(p: Progress, today: Date): Progress {
+  if (p.firstDay) return p;
+  return { ...p, firstDay: firstDayOf(p) ?? dayKey(today) };
 }

@@ -111,4 +111,5 @@ const tips = [
   }),
 ];
 
-export const be: BeTaal = { nl: 'u.papers', lines, tips };
+// The lesson title says "BSN" in the Netherlands: in Belgium it is the rijksregisternummer.
+export const be: BeTaal = { nl: 'u.papers', lines, tips, titles: { 'l.bsn': 'Your national register number and papers' } };

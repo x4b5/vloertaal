@@ -552,8 +552,8 @@ const t: CultureTranslation = {
     's.cleansafe.3': 'Temizlik ürünlerini asla karıştırma.',
     'c.cleansafe.q': 'Buradan geçebilir miyim?',
     'c.cleansafe.a': 'Dikkat, zemin hâlâ kaygan.',
-    'c.cv': 'Kısa bir Hollanda CV’si',
-    'c.cv.b': 'Hollanda’da CV kısadır: 1 veya 2 sayfa. İletişim bilgilerini, iş deneyimini, eğitimini, dillerini ve becerilerini yaz. Fotoğraf gerekmez. Dinini, yaşını veya medeni durumunu yazmak zorunda değilsin. Neler yapabildiğin konusunda dürüst ol. Hollandacanı birine kontrol ettir.',
+    'c.cv': 'Kısa bir CV', // nieuw, nalezen
+    'c.cv.b': 'Burada CV kısadır: 1 veya 2 sayfa. İletişim bilgilerini, iş deneyimini, eğitimini, dillerini ve becerilerini yaz. Fotoğraf gerekmez. Dinini, yaşını veya medeni durumunu yazmak zorunda değilsin. Neler yapabildiğin konusunda dürüst ol. Hollandacanı birine kontrol ettir.', // nieuw, nalezen
     'c.cv.p': 'CV’mi okur musun? Hollandacam doğru mu?',
     'c.cv.s': 'Kendi ülkende 3 yıl bir fabrikada çalıştın ama diploman yok. CV’ne ne yazarsın?',
     'c.cv.o1': 'İşi ve orada ne yaptığını dürüstçe yazarsın.',
@@ -567,7 +567,7 @@ const t: CultureTranslation = {
     'c.interview.o1': 'Çalışma saatleri veya eğitim hakkında bir soru sorarsın.', // nagelezen (2e lezing)
     'c.interview.o2': 'Soru sormak kibar olmadığı için hayır dersin.',
     'c.interview.o3': 'İyi çalıştığını göstermek için kendinden daha çok bahsedersin.', // nagelezen (2e lezing)
-    'c.interview.w': 'Sorular işle ilgilendiğini gösterir. Hollandalı işverenler genelde soru bekler.',
+    'c.interview.w': 'Sorular işle ilgilendiğini gösterir. Burada işverenler genelde soru bekler.', // nieuw, nalezen
     'c.findwork': 'Sözleşmeni yazılı al',
     'c.findwork.b': 'Her zaman yazılı bir sözleşme ve kendin için bir kopya iste. İmzalamadan önce oku veya güvendiğin birinden yardım iste. Geçici iş ajansı (uitzendbureau) sana iş bulmak için senden para isteyemez. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.findwork.p': 'Sözleşmeyi önce okuyabilir miyim?',
@@ -636,7 +636,7 @@ const t: CultureTranslation = {
     'c.smoking.b': 'Hollanda’da iş yerinin içinde sigara içmek yasayla yasaktır. Bu elektronik sigaralar (vape) için de geçerlidir. 2022’den beri şirketlerin içinde sigara odalarına da izin yoktur. Sadece dışarıda, işverenin izin verdiği yerde ve genelde sadece molanda sigara iç. Ekstra sigara molaları bir hak değildir: bunları amirinle konuşup kararlaştır. Yakıt veya depodaki kutular gibi kolay yanan şeylerin yanında asla sigara içme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.smoking.p': 'Molamda dışarıda sigara içebilir miyim?',
     'c.smoking.s': 'Hava soğuk ve yağmurlu. Bir iş arkadaşın diyor ki: “Depo odasında iç gitsin, kimse görmez.” Ne yaparsın?',
-    'c.smoking.o1': 'Hayır der ve molanda dışarıda, sigara içme yerinde içersin.',
+    'c.smoking.o1': 'Hayır der ve molanda dışarıda içersin.', // nieuw, nalezen
     'c.smoking.o2': 'Bu seferlik depo odasında hızlıca içersin.',
     'c.smoking.o3': 'Onun yerine içeride vape kullanırsın, çünkü buna izin var.',
     'c.smoking.w': 'İçeride sigara içmek yasaya aykırıdır ve yangın çıkarabilir. İçeride vape de yasaktır. Kurala uymak herkesi güvende tutar.',
@@ -652,7 +652,7 @@ const t: CultureTranslation = {
     'c.hygiene.b': 'İş yerinde alkol ve uyuşturucu kullanmak veya bunları kullandıktan sonra işe gelmek neredeyse tüm şirketlerde yasaktır. Makinelerin ve forkliftlerin yanında çok tehlikelidir ve işten çıkarılmana yol açabilir. Bir ilaç uykunu getiriyor veya başını döndürüyor mu? Amirine söyle, böylece güvenli bir iş yapabilirsin. Hangi ilaç olduğunu söylemek zorunda değilsin. Gıda üretiminde hijyen kuralları sıkıdır: ellerini yıka, temiz iş kıyafeti giy, gerekirse bone tak ve takı takma. Kusma veya ishal mi var? Başlamadan önce bildir. Çalışma yerini düzenli tut. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.hygiene.p': 'Bir ilaç kullanıyorum. Uykumu getiriyor.',
     'c.hygiene.s': 'Doktorun sana uyku yapan bir ilaç veriyor. Yarın forklift kullanman gerekiyor. Ne yaparsın?',
-    'c.hygiene.o1': 'Güvenli bir iş yapabilmek için başlamadan önce amirine söylersin.',
+    'c.hygiene.o1': 'Başlamadan önce amirine söylersin.', // nieuw, nalezen
     'c.hygiene.o2': 'Hiçbir şey söylemez ve çok yavaş sürersin.',
     'c.hygiene.o3': 'Doktoruna sormadan ilacı bırakırsın.',
     'c.hygiene.w': 'Amirinin hangi ilaç olduğunu bilmesi gerekmez, sadece şu an araç süremeyeceğini veya makinelerle çalışamayacağını bilmesi yeter. Bu seni ve iş arkadaşlarını güvende tutar.',
@@ -677,11 +677,11 @@ const t: CultureTranslation = {
     'c.respect.p': 'Tokalaşmamayı tercih ederim, ama seni selamlamaktan memnuniyet duyarım.',
     'c.respect.s': 'Bir iş arkadaşın sık sık dininle ilgili şakalar yapıyor. Durmasını istedin ama devam ediyor. Ne yaparsın?',
     'c.respect.o1': 'Amirine veya vertrouwenspersoon’a söylersin.',
-    'c.respect.o2': 'Sorun çıkmasın diye sen de gülersin.',
+    'c.respect.o2': 'Sorun çıkmasın diye onunla birlikte gülersin.', // nieuw, nalezen
     'c.respect.o3': 'Sen de onun kökeniyle ilgili şakalar yaparsın.',
     'c.respect.w': 'Böyle şakalar iş yerinde kabul edilmez. Bildirmek normaldir: şirket iş yerini herkes için güvenli tutmak zorundadır.',
     'c.health': 'Molalar ve çalışma saatleri',
-    'c.health.b': 'Yasa sağlığını korur. 5,5 saatten fazla mı çalışıyorsun? O zaman en az 30 dakika mola hakkın var (2 kez 15 dakika olabilir). 10 saatten fazla mı? O zaman en az 45 dakika. Bir cao’da biraz farklı mola kuralları olabilir. Bir vardiyada en fazla 12 saat, bir haftada en fazla 60 saat çalışabilirsin. İşveren sana iş ayakkabısı veya eldiven gibi koruyucu ekipmanı ücretsiz vermek zorundadır. Güvensiz iş veya çok düşük ücret mi var? Bunu Nederlandse Arbeidsinspectie’ye bildirebilirsin, adını vermeden de. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
+    'c.health.b': 'Yasa sağlığını korur. 5,5 saatten fazla mı çalışıyorsun? O zaman en az 30 dakika mola hakkın var (2 kez 15 dakika olabilir). 10 saatten fazla mı? O zaman en az 45 dakika. Bir cao’da biraz farklı mola kuralları olabilir. Bir vardiyada en fazla 12 saat, bir haftada en fazla 60 saat çalışabilirsin. 18 yaşından küçük müsün? O zaman daha az saat çalışabilirsin. İşveren sana iş ayakkabısı veya eldiven gibi koruyucu ekipmanı ücretsiz vermek zorundadır. Güvensiz iş veya çok düşük ücret mi var? Bunu Nederlandse Arbeidsinspectie’ye bildirebilirsin, adını vermeden de. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.', // nieuw, nalezen
     'c.health.p': 'Henüz mola vermedim.',
     'c.health.s': '6 saattir molasız çalışıyorsun. Amirin devam etmeni istiyor. Ne yaparsın?',
     'c.health.o1': 'Şimdi molaya ihtiyacın olduğunu söylersin.', // nagelezen (2e lezing)
@@ -692,10 +692,10 @@ const t: CultureTranslation = {
     'c.rights.b': 'İş yerinde ayrımcılık yasaktır, örneğin kökenin, dinin veya cinsiyetin yüzünden. İşveren seni öylece işten çıkaramaz: normalde UWV’den veya bir hâkimden izin ya da senin onayın gerekir. (Deneme süresinde veya geçici bir sözleşmenin sonunda başka kurallar geçerlidir.) İşten çıkarılmanla ilgili anlamadığın bir kâğıdı imzalama. İşini bitirmek için bir anlaşma (vaststellingsovereenkomst) mı imzaladın? O zaman genelde 14 gün içinde yazılı olarak iptal edebilirsin. Önce sendikadan (örneğin FNV), bir ayrımcılık danışma merkezinden veya Juridisch Loket’ten (ücretsiz hukuki tavsiye) yardım al. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.',
     'c.rights.p': 'Önce tavsiye almak istiyorum.',
     'c.rights.s': 'Patronun sana bir kâğıt veriyor: “Bugün imzala, anlaşmayla ayrılırsın.” Tam anlamıyorsun. Ne yaparsın?',
-    'c.rights.o1': 'Henüz imzalamazsın. Zaman ister ve önce tavsiye alırsın.',
+    'c.rights.o1': 'Henüz imzalamazsın. Önce tavsiye alırsın.', // nieuw, nalezen
     'c.rights.o2': 'Patron sorun olmadığını söylediği için imzalarsın.',
     'c.rights.o3': 'Kâğıdı kaldırır ve bu konuda bir daha hiç konuşmazsın.',
-    'c.rights.w': 'İmzalarsan haklarını kaybedebilirsin, örneğin işsizlik maaşı (WW) hakkını. Tavsiye almak için zaman istemek normaldir ve buna izin vardır.',
+    'c.rights.w': 'İçinde yanlış bir şey var mı? O zaman haklarını kaybedebilirsin, örneğin işsizlik maaşı (WW) hakkını. Tavsiye almak için zaman istemek normaldir ve buna izin vardır.', // nieuw, nalezen
     'c.leave': 'Tatil ve acil durum izni',
     'c.leave.b': 'Yasaya göre ücretli izin günlerin vardır: haftada çalıştığın gün sayısının en az 4 katı. Tam zamanlı, haftada 5 gün mü çalışıyorsun? O zaman yılda en az 20 gün. Bir cao daha fazlasını verebilir. İzni zamanında ve yazılı olarak iste. Ailende kaza veya hastalık gibi ani bir acil durum mu var? O zaman ücretli kısa izin alabilirsin (calamiteitenverlof). İşverenine hemen haber ver. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.leave.p': 'Temmuz için izin istiyorum.',
@@ -724,7 +724,7 @@ const t: CultureTranslation = {
     'c.gethelp.b': 'Kendinde veya başkasında sömürü işaretleri mi görüyorsun? Yardım al. Bunu Nederlandse Arbeidsinspectie’ye, istersen adını vermeden, veya polise bildirebilirsin. Meld Misdaad Anoniem: 0800-7000. Ücretsiz hukuki tavsiye: Juridisch Loket. Tehlikede misin? 112’yi ara. Hollanda’da çalışan herkes yardım alabilir, göçmenler de. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.',
     'c.gethelp.p': 'Yardıma ihtiyacım var. Sömürülüyorum.',
     'c.gethelp.s': 'Bir arkadaşın günde 14 saat çalışıyor, neredeyse hiç ücret almıyor ve patrondan korkuyor. Ne yapabilirsin?',
-    'c.gethelp.o1': 'İsterse adını vermeden Arbeidsinspectie veya Juridisch Loket ile iletişime geçmesine yardım edersin.',
+    'c.gethelp.o1': 'Arbeidsinspectie veya Juridisch Loket ile iletişime geçmesine yardım edersin.', // nieuw, nalezen
     'c.gethelp.o2': 'Ona bunun yeni çalışanlar için normal olduğunu söylersin.',
     'c.gethelp.o3': 'Sözleşmesi bitene kadar beklemesini, sonra başka iş aramasını söylersin.',
     'c.gethelp.w': 'Hollanda’da çalışan herkes için yardım vardır. Bildirim isim vermeden de yapılabilir.',
@@ -836,7 +836,7 @@ const t: CultureTranslation = {
     'c.site.b': 'Bir işe başlamadan önce bir an dur ve kontrol et: burada ne ters gidebilir? Buna LMRA (işe başlamadan hemen önce yapılan risk analizi) denir. Her zaman baretini tak, yüksekte çalışırken düşme korumanı da. Asla asılı bir yükün altında durma. İş gerçekten tehlikeli mi? O zaman durabilirsin ve hemen amirine söylemelisin. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.site.p': 'Henüz başlamıyorum. Bu güvenli değil.',
     'c.site.s': 'Bir iskelede çalışman gerekiyor ama bir korkuluk eksik. Bir iş arkadaşın diyor ki: “Dikkatli ol, yeter.” Ne yaparsın?',
-    'c.site.o1': 'Başlamazsın. Önce amirine bildirirsin.',
+    'c.site.o1': 'Başlamazsın ve amirine söylersin.', // nieuw, nalezen
     'c.site.o2': 'Başlarsın ama çok dikkatli olursun.',
     'c.site.o3': 'Korkuluğu biraz iple kendin tamir edersin.',
     'c.site.w': 'Yüksekten düşmek çok ağır yaralanmalara yol açabilir. Tehlikeli işi durdurabilirsin ve bildirmek bütün ekibi korur.',
@@ -845,7 +845,7 @@ const t: CultureTranslation = {
     'c.line.p': 'Bir arıza var. Acil durdurma düğmesine bastım.',
     'c.line.s': 'Bir ürün makineye sıkıştı. Makine hâlâ çalışıyor. Ne yaparsın?',
     'c.line.o1': 'Acil durdurma düğmesine basar ve amirini çağırırsın.',
-    'c.line.o2': 'Hızlıca elinle çekip çıkarırsın.',
+    'c.line.o2': 'Bozulmadan önce hızlıca elinle çekip çıkarırsın.', // nieuw, nalezen
     'c.line.o3': 'Bırakır ve makinenin kendiliğinden düzelmesini umarsın.',
     'c.line.w': 'Çalışan makineler bir saniyede ağır kazalara yol açabilir. Makineyi durdurmana her zaman izin vardır ve bu her zaman daha iyidir.',
     'c.quality': 'Kalite: gördüğünü söyle',
@@ -868,7 +868,7 @@ const t: CultureTranslation = {
     'c.privacy.b': 'Danışanlar hakkında gördüğün ve duyduğun şeyler iş yerinde kalır. İş dışında danışanlardan bahsetme ve asla onların fotoğraflarını paylaşma. Bakımdan önce ve sonra ellerini temizle. Bir danışanda ağrı veya düşme gibi bir değişiklik mi fark ediyorsun? Hemen hemşireye söyle. Eğitimin ve iznin yoksa asla ilaç verme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.privacy.p': 'Beyefendinin dünden daha fazla ağrısı var.',
     'c.privacy.s': 'Bir danışan senden haplarını istiyor. İlaç vermek için eğitimin yok. Ne yaparsın?',
-    'c.privacy.o1': 'Kibarca hemşireyi çağıracağını söyler ve bunu hemen yaparsın.',
+    'c.privacy.o1': 'Kibarca hemşireyi çağıracağını söylersin.', // nieuw, nalezen
     'c.privacy.o2': 'Neye ihtiyacı olduğunu bildiği için hapları verirsin.',
     'c.privacy.o3': 'Hayır der ve gidersin.',
     'c.privacy.w': 'Yanlış ilaç tehlikeli olabilir. Doğru kişiyi hemen çağırmak danışana yardım eder ve herkesi güvende tutar.',
@@ -996,7 +996,7 @@ const t: CultureTranslation = {
     'c.gossip.o1': '“Nee, dat wil ik niet” der ve videoyu silmesini istersin.', // nagelezen (2e lezing)
     'c.gossip.o2': "Zorluk çıkarmamak için güler ve paylaşmasına izin verirsin.",
     'c.gossip.o3': 'Videoyu adın olmadan paylaşmasını istersin.', // nagelezen (2e lezing)
-    'c.gossip.w': 'Kimse senin iznin olmadan videonu internete koyamaz. Hayır demek normaldir ve iş arkadaşları internette birbirleriyle alay ettiğinde işverenin harekete geçmek zorundadır. Yine de paylaşırsa amirine söyle.', // nagelezen (2e lezing)
+    'c.gossip.w': 'Genelde kimse senin iznin olmadan videonu internete koyamaz. Hayır demek normaldir ve iş arkadaşları internette birbirleriyle alay ettiğinde işverenin harekete geçmek zorundadır. Yine de paylaşırsa amirine söyle.', // nieuw, nalezen
     'c.boundaries': "Sınırı aşmak",
     'c.boundaries.b': "Grensoverschrijdend gedrag, birinin sınırını aşan davranıştır: istenmeyen dokunma, cinsel sözler veya şakalar, dik dik bakmak, istenmeyen resimler göndermek, tehdit veya bağırmak. Diğer kişinin bunu “şaka olarak” söylemiş olması önemli değildir: önemli olan senin nasıl hissettiğindir. Yapabiliyorsan, durmasını istediğini açıkça söyle. Ne olduğunu, ne zaman olduğunu ve kimin gördüğünü yaz. Amirine, güven danışmanına (vertrouwenspersoon, varsa) veya HR’a söyle. İşverenin seni korumak zorundadır ve bildirdiğin için cezalandırılamazsın. Bunun bir iş arkadaşının başına geldiğini mi gördün? İyi olup olmadığını sor ve tanık olmayı teklif et.",
     'c.boundaries.p': "Durmanı istiyorum.",

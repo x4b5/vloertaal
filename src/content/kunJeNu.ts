@@ -1,6 +1,7 @@
 import type { UiKey } from '../i18n/types';
 import type { ThemeId } from './themes';
 import { THEME_UNITS } from './themes';
+import { nlId } from './regels/be/ids';
 import { beTaalOf, taalBeActive } from './taalBe';
 
 /**
@@ -380,6 +381,24 @@ export function kunJeNu(unitId: string): KunZin[] {
   // A Belgian unit of the language track ("be.u.society", src/content/taalBe) has its Dutch twin's lines.
   const be = unitId.startsWith('r.be.') ? byUnitBe.get(unitId) ?? byUnit.get(`r.${unitId.slice(5)}`) : unitId.startsWith('be.u.') ? byUnit.get(unitId.slice(3)) : undefined;
   return beKun(unitId, (be ?? byUnit.get(unitId))?.zinnen ?? []);
+}
+
+/**
+ * The topics of a track as the learner's country plays them (the coaches' page, src/components/
+ * Coaches.tsx): `lijst` is KUN_TAAL or KUN_REGELS, `cursus` the course that plays now
+ * (taalCourseUnits(), rulesCourseUnits()). A Belgian unit in it ("be.u.society", "r.be.meedoen")
+ * gives its own id and title ("Meedoen in België") and its own sentences; every topic gets the
+ * sentences of its country (a B unit's Flemish line, `kun` in src/content/taalBe). In the
+ * Netherlands this is the list itself.
+ */
+export function kunOnderwerpenNu(lijst: KunOnderwerp[], cursus: { id: string; titleNl: string }[]): KunOnderwerp[] {
+  const byNl = new Map(cursus.filter((u) => nlId(u.id) !== u.id).map((u) => [nlId(u.id), u] as const));
+  return lijst.map((o) => {
+    const be = byNl.get(o.unit);
+    if (be) return { unit: be.id, titel: be.titleNl, zinnen: kunJeNu(be.id) };
+    const zinnen = kunJeNu(o.unit);
+    return zinnen.some((z, i) => z !== o.zinnen[i]) ? { ...o, zinnen } : o;
+  });
 }
 
 /** "past bij A2 · spreken" */

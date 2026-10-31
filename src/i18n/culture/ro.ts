@@ -44,7 +44,7 @@ const t: CultureTranslation = {
     'c.ask.o1': 'Ceri să ți se explice din nou.', // nagelezen (2e lezing)
     'c.ask.o2': 'Dai din cap și încerci să ghicești.',
     'c.ask.o3': 'Îți ceri scuze pentru olandeza ta și te apuci de lucru.', // nagelezen (2e lezing)
-    'c.ask.w': 'Șefii din Olanda se așteaptă la întrebări. E mai bine să întrebi de două ori decât să greșești.',
+    'c.ask.w': 'Aici, șefii se așteaptă la întrebări. E mai bine să întrebi de două ori decât să greșești.', // nieuw, nalezen
     'c.gear': 'Regulile de siguranță sunt pentru toți',
     'c.gear.b': 'Regulile despre cască, încălțăminte și mănuși nu sunt doar o sugestie: toți le respectă, și șeful. Angajatorul trebuie să-ți dea gratuit echipamentul de protecție de care ai nevoie. Echipamentul care nu ți se potrivește nu te protejează bine, așa că cere mărimea ta: „Heb je dit ook in mijn maat?”',
     'c.gear.p': 'Mi s-au stricat mănușile. De unde iau altele noi?',
@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.unsafe.s': 'Un palet e stivuit prea sus și aproape cade. Nimeni nu s-a rănit. Ce faci?',
     'c.unsafe.o1': 'Îi avertizezi pe colegi și îi spui șefului.',
     'c.unsafe.o2': 'Nu spui nimic, pentru că nu s-a întâmplat nimic.',
-    'c.unsafe.o3': { m: 'Repari singur și nu spui nimănui.', f: 'Repari singură și nu spui nimănui.', x: 'Repari pe cont propriu și nu spui nimănui.' }, // x: nieuw, nalezen
+    'c.unsafe.o3': { m: 'Repari singur paletul și nu spui nimănui.', f: 'Repari singură paletul și nu spui nimănui.', x: 'Repari pe cont propriu paletul și nu spui nimănui.' }, // nieuw, nalezen
     'c.unsafe.w': 'Un aproape-accident e un avertisment. Dacă îl raportezi, ajuți la prevenirea unui accident adevărat. Angajatorul nu are voie să te pedepsească pentru asta.',
     'c.accident': 'Raportează orice accident',
     'c.accident.b': 'Spune-i șefului sau BHV’er-ului (persoanei de prim ajutor din firmă) despre orice accident, chiar și unul mic. Lucrezi printr-o agenție? Anunță și agenția. În caz de urgență, sună întâi la 112. Firma unde s-a petrecut accidentul trebuie să raporteze un accident grav la Nederlandse Arbeidsinspectie (și dacă lucrezi printr-o agenție): când cineva moare, rămâne cu o vătămare permanentă sau trebuie să stea în spital. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',

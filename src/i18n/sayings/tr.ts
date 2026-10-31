@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'O zaman bugün otobüse binerim.',
     'c.plain.a.why': 'Çok şiddetli yağmur var: otobüste ıslanmazsın.',
     'c.easy': 'Deyimler: kelimeler başka bir şey anlatır',
-    'c.easy.b': 'Hollandalılar sık sık deyim kullanır, iş yerinde de. Kelimeler bir şey söyler, ama başka bir şey anlatır. “Een eitje” küçük bir yumurtadır, ama anlamı: çok kolay. Senin deyim kullanman gerekmez. Bir deyimi anlamadın mı? O zaman ne demek olduğunu sor.',
+    'c.easy.b': 'Burada insanlar sık sık deyim kullanır, iş yerinde de. Kelimeler bir şey söyler, ama başka bir şey anlatır. “Een eitje” küçük bir yumurtadır, ama anlamı: çok kolay. Senin deyim kullanman gerekmez. Bir deyimi anlamadın mı? O zaman ne demek olduğunu sor.', // nieuw, nalezen
     'c.easy.p': 'Bununla ne demek istiyorsun?',
     'c.easy.s': 'İş arkadaşın yeni işe bakıyor ve diyor ki: “Dat is een eitje!” Ne demek istiyor?',
     'c.easy.o1': 'İş çok kolay.',

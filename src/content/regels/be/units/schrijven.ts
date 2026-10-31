@@ -57,9 +57,9 @@ export const be: BeUnit = {
             id: 'r.be.l.schrijven.1.wd1',
             situation: 'Welke mail kan Fatima het beste sturen?',
             options: [
-              { id: 'a', text: 'Dag Mark, ik ben dinsdagvoormiddag niet op mijn werk. Ik moet naar school. Fatima', best: false, feedback: 'Ze vraagt niets. Ze zegt alleen dat ze er niet is.' },
+              { id: 'a', text: 'Dag Mark, ik ben dinsdagvoormiddag niet op mijn werk. Ik moet naar school. Met vriendelijke groeten, Fatima', best: false, feedback: 'Ze vraagt niets. Ze zegt alleen dat ze er niet is.' },
               { id: 'b', text: 'Beste Mark, mag ik dinsdagvoormiddag vrij? Ik heb een gesprek op school. Met vriendelijke groeten, Fatima', best: true, feedback: 'Goed. Kort, met wat, wanneer en waarom.' },
-              { id: 'c', text: 'Beste Mark, mag ik een keer vrij? Ik heb iets op school. Groetjes, Fatima', best: false, feedback: 'Mark weet niet wanneer. Noem de dag en het dagdeel.' },
+              { id: 'c', text: 'Beste Mark, mag ik een keer vrij? Ik heb iets op school. Met vriendelijke groeten, Fatima', best: false, feedback: 'Mark weet niet wanneer. Noem de dag en het dagdeel.' },
             ],
             why: 'Een goede mail is kort. Er staat in: een aanspreking, wat je wilt, wanneer, en een groet. Vraag het, zeg het niet alleen. Zet ook een onderwerp boven je mail. Bijvoorbeeld: "Vrij op dinsdagvoormiddag".',
           },

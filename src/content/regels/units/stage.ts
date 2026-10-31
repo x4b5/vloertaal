@@ -152,7 +152,7 @@ export const stageUnit: RuleUnit = {
           id: 'r.l.stage.2.wd2',
           situation: 'Aan het eind krijgt Fatima een beoordeling. Ze is het er niet mee eens. Wat kan Fatima het beste doen?',
           options: [
-            { id: 'a', text: 'Ze bespreekt het met Mark, en met haar begeleider van school.', best: true, feedback: 'Goed. Zo kan ze uitleggen waarom.' },
+            { id: 'a', text: 'Ze bespreekt het met Mark en met haar school.', best: true, feedback: 'Goed. Zo kan ze uitleggen waarom.' },
             { id: 'b', text: 'Ze tekent, en ze zegt er niets van. Mark is de baas.', best: false, feedback: 'Dat snap ik. Maar het oneens zijn mag. Dan moet ze het wel zeggen.' },
             { id: 'c', text: 'Ze praat er alleen met haar klasgenoten over.', best: false, feedback: 'Steun is fijn. Maar zo verandert er niets aan de beoordeling.' },
           ],

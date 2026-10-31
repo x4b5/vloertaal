@@ -48,4 +48,9 @@ const tips = [
   },
 ];
 
-export const be: BeTaal = { nl: 'u.shop', lines, tips };
+/** "Wat kun je nu?" in Belgium: the line that says "pinnen" in the Netherlands (same id, same translation). */
+const kun: BeTaal['kun'] = {
+  'kjn.u.shop.1': 'Ik kan vragen of een klant met de kaart wil betalen.',
+};
+
+export const be: BeTaal = { nl: 'u.shop', lines, tips, kun };

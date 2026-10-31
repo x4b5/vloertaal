@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'Então hoje vou de autocarro.',
     'c.plain.a.why': 'Chuva muito forte: no autocarro não te molhas.',
     'c.easy': 'Expressões: as palavras querem dizer outra coisa',
-    'c.easy.b': 'Os neerlandeses usam muitas vezes expressões, também no trabalho. As palavras dizem uma coisa, mas querem dizer outra. "Een eitje" é um ovinho, mas quer dizer: muito fácil. Não precisas de usar expressões. Não percebes uma expressão? Então pergunta simplesmente o que quer dizer.',
+    'c.easy.b': 'Aqui, as pessoas usam muitas vezes expressões, também no trabalho. As palavras dizem uma coisa, mas querem dizer outra. "Een eitje" é um ovinho, mas quer dizer: muito fácil. Não precisas de usar expressões. Não percebes uma expressão? Então pergunta simplesmente o que quer dizer.', // nieuw, nalezen
     'c.easy.p': 'O que queres dizer com isso?',
     'c.easy.s': 'O teu colega olha para a tarefa nova e diz: "Dat is een eitje!" O que quer ele dizer?',
     'c.easy.o1': 'A tarefa é muito fácil.',

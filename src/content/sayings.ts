@@ -107,7 +107,7 @@ export const sayingsTips: CultureTip[] = [
     lessonId: 'l.easy',
     emoji: '💬',
     title: 'Sayings: the words mean something else',
-    body: 'Dutch people often use sayings, also at work. The words say one thing, but they mean something else. "Een eitje" is a little egg, but it means: very easy. You do not need to use sayings yourself. You do not understand a saying? Then just ask what it means.',
+    body: 'Here, people often use sayings, also at work. The words say one thing, but they mean something else. "Een eitje" is a little egg, but it means: very easy. You do not need to use sayings yourself. You do not understand a saying? Then just ask what it means.',
     phrase: { id: 'c.easy.p', nl: 'Wat bedoel je daarmee?', en: 'What do you mean by that?' },
     situation: { id: 'c.easy.s', en: 'Your colleague looks at the new task and says: "Dat is een eitje!" What does he mean?', nl: 'Dat is een eitje!', ask: 'which' },
     options: [

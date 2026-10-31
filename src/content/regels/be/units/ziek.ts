@@ -146,7 +146,7 @@ export const be: BeUnit = {
               'Dan belt haar leidinggevende om te vragen hoe het gaat.',
             ],
           },
-          // ⚖️ check: de eerste 30 dagen betaalt de werkgever gewaarborgd loon, als je minstens 1 maand in dienst bent (Arbeidsovereenkomstenwet art. 52 en 70; securex.be "heeft de werknemer recht op gewaarborgd loon"; zoekresultaat)
+          // ⚖️ check: de eerste 30 dagen betaalt de werkgever gewaarborgd loon; een arbeider (en een bediende met een contract van minder dan 3 maanden) moet daarvoor minstens 1 maand in dienst zijn (zie de noot bij tf1; Arbeidsovereenkomstenwet art. 52 en 70; securex.be "heeft de werknemer recht op gewaarborgd loon"; zoekresultaat)
           // ⚖️ check: bediende (contract van onbepaalde duur of minstens 3 maanden): 30 dagen 100% van het loon (art. 70; nakijken of de regel van 3 maanden nog geldt)
           // ⚖️ check: arbeider: dag 1 tot 7 100%, dag 8 tot 14 85,88%, dag 15 tot 30 25,88% van het loon tot het plafond (plus 85,88% boven het plafond), aangevuld met een uitkering van het ziekenfonds (60% van het begrensde loon) (art. 52; cao nr. 12bis; abvvmetaal.be; ucm.be; zoekresultaten, bijgewerkt oktober 2026)
           // ⚖️ check: na het gewaarborgd loon betaalt het ziekenfonds een uitkering; daarvoor gaat een getuigschrift naar de adviserend arts van het ziekenfonds (inami.fgov.be "aangifte en erkenning", werknemers)
@@ -166,14 +166,14 @@ export const be: BeUnit = {
             rule: 'geschreven',
           },
           // ⚖️ check: de eerste 30 dagen gewaarborgd loon van de werkgever (Arbeidsovereenkomstenwet art. 52 en 70)
-          // ⚖️ check: wie nog geen maand in dienst is, heeft geen recht op gewaarborgd loon en krijgt meteen een uitkering van het ziekenfonds (securex.be "heeft een arbeider recht op gewaarborgd loon"; zoekresultaat)
+          // ⚖️ check: een arbeider, en een bediende met een contract van minder dan 3 maanden, die nog geen maand in dienst is, heeft geen recht op gewaarborgd loon en krijgt meteen een uitkering van het ziekenfonds; een bediende met een langer of vast contract krijgt het gewaarborgd loon wel, ongeacht de anciënniteit (securex.be "heeft een arbeider recht op gewaarborgd loon", bijgewerkt januari 2025, en "heeft een bediende recht op gewaarborgd loon", bijgewerkt 21 januari 2026; zoekresultaten 31 okt 2026). Inhoudsronde 2: "Werk je nog geen maand bij je baas? Dan betaalt het ziekenfonds." was te algemeen; daarom nu "pas kort" en "soms".
           // ⚖️ check: de carensdag (wachtdag zonder loon) voor arbeiders is afgeschaft sinds 1 januari 2014 (Wet eenheidsstatuut 26 december 2013)
           {
             kind: 'truefalse',
             id: 'r.be.l.ziek.2.tf1',
             statement: 'Als je ziek bent, krijg je geen loon.',
             answer: false,
-            why: 'De eerste 30 dagen betaalt je baas meestal je loon door. Dat heet gewaarborgd loon. Werk je nog geen maand bij je baas? Dan betaalt het ziekenfonds. Na 30 dagen krijg je een uitkering van je ziekenfonds.',
+            why: 'De eerste 30 dagen betaalt je baas meestal je loon door. Dat heet gewaarborgd loon. Werk je pas kort bij je baas? Dan betaalt soms meteen het ziekenfonds. Na 30 dagen krijg je een uitkering van je ziekenfonds.',
           },
           // ⚖️ check: bediende: 30 dagen 100%; arbeider: week 1 100%, week 2 85,88%, dag 15 tot 30 vooral het ziekenfonds plus een aanvulling van de werkgever (Arbeidsovereenkomstenwet art. 52 en 70; abvvmetaal.be; zoekresultaat, bijgewerkt oktober 2026)
           // ⚖️ check: veel paritaire comités geven een extra aanvulling bij ziekte (sectorbrochures ACV/ABVV, bv. accg.be pc 116)
@@ -332,7 +332,7 @@ export const be: BeUnit = {
             ],
             why: 'De arbeidsarts kijkt welk werk je kunt doen. De adviserend arts van je ziekenfonds praat soms mee.',
           },
-          { kind: 'model', id: 'r.be.l.ziek.3.mo1', context: 'Je meldt je beter bij je leidinggevende.', nl: 'Ik ben weer beter. Ik kan morgen weer komen werken.' },
+          { kind: 'model', id: 'r.be.l.ziek.3.mo1', context: 'Je zegt je leidinggevende dat je weer kunt werken.', nl: 'Ik ben weer beter. Ik kan morgen weer komen werken.' },
         ],
       },
     ],

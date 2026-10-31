@@ -44,7 +44,7 @@ const t: CultureTranslation = {
     'c.ask.o1': 'Prosisz o ponowne wyjaśnienie.', // nagelezen (2e lezing)
     'c.ask.o2': 'Kiwasz głową i próbujesz zgadnąć.',
     'c.ask.o3': 'Przepraszasz za swój niderlandzki i zaczynasz pracę.', // nagelezen (2e lezing)
-    'c.ask.w': 'Holenderscy przełożeni oczekują pytań. Lepiej zapytać dwa razy, niż popełnić błąd.',
+    'c.ask.w': 'Tutaj przełożeni oczekują pytań. Lepiej zapytać dwa razy, niż popełnić błąd.', // nieuw, nalezen
     'c.gear': 'Zasady BHP są dla wszystkich',
     'c.gear.b': 'Zasady dotyczące kasków, butów i rękawic to nie sugestia: przestrzegają ich wszyscy, także szef. Pracodawca musi dać ci potrzebny sprzęt ochronny za darmo. Niedopasowany sprzęt słabo chroni, więc poproś o swój rozmiar: „Heb je dit ook in mijn maat?”',
     'c.gear.p': 'Moje rękawice są zniszczone. Gdzie dostanę nowe?',
@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.unsafe.s': 'Paleta jest ułożona za wysoko i prawie się przewraca. Nikomu nic się nie stało. Co robisz?',
     'c.unsafe.o1': 'Ostrzegasz kolegów i mówisz przełożonemu.',
     'c.unsafe.o2': 'Nic nie mówisz, bo nic się nie stało.',
-    'c.unsafe.o3': { m: 'Naprawiasz to sam i nikomu nie mówisz.', f: 'Naprawiasz to sama i nikomu nie mówisz.', x: 'Naprawiasz to samodzielnie i nikomu nie mówisz.' }, // x: nieuw, nalezen
+    'c.unsafe.o3': { m: 'Sam poprawiasz paletę i nikomu nie mówisz.', f: 'Sama poprawiasz paletę i nikomu nie mówisz.', x: 'Samodzielnie poprawiasz paletę i nikomu nie mówisz.' }, // nieuw, nalezen
     'c.unsafe.w': 'Sytuacja, w której prawie doszło do wypadku, to ostrzeżenie. Zgłoszenie go pomaga zapobiec prawdziwemu wypadkowi. Pracodawca nie może cię za to ukarać.',
     'c.accident': 'Zgłaszaj każdy wypadek',
     'c.accident.b': 'O każdym wypadku, nawet drobnym, powiedz przełożonemu albo BHV’er (osobie, która w firmie udziela pierwszej pomocy). Pracujesz przez agencję? Powiadom też agencję. W nagłym przypadku najpierw dzwoń pod 112. Poważny wypadek musi zgłosić do Nederlandse Arbeidsinspectie firma, w której do niego doszło (także jeśli pracujesz przez agencję): gdy ktoś ginie, zostaje trwale ranny albo musi zostać w szpitalu. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
