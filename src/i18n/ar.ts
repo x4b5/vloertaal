@@ -150,6 +150,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'وقت آخر',
     remindAdd: { m: 'أضف إلى تقويمي', f: 'أضيفي إلى تقويمي', x: 'إضافة إلى تقويمي' }, // x: nieuw, nalezen
     remindAdded: { m: 'افتح الملف لإضافته إلى تقويمك.', f: 'افتحي الملف لإضافته إلى تقويمك.', x: 'يُرجى فتح الملف لإضافته إلى تقويمك.' }, // x: nieuw, nalezen
+    remindAddedAsk: 'هل أُضيف التذكير؟ عندها يظهر في التقويم.', // nieuw, nalezen
     navAbout: 'حول',
     tagMeaning: 'المعنى',
     tagPick: { m: 'اختر', f: 'اختاري', x: 'اختيار' }, // x: nieuw, nalezen
@@ -204,7 +205,7 @@ const lang: HelpLanguageSource = {
     allTopics: 'كل المواضيع',
     topicsOrder: 'عرض المواضيع',
     privacyLink: 'اقرأ بيان الخصوصية (بالهولندية)', // nieuw, nalezen
-    routeTitle: 'مسار التعلّم', // nieuw, nalezen
+    routeTitle: 'ماذا نتعلّم؟', // nieuw, nalezen (een vraag, zonder m/f)
     routeLearn: 'تعلّم الهولندية للعمل، مع مساعدة بلغتك', // nieuw, nalezen
     routeRules: 'أتكلّم الهولندية: كيف يسير العمل في هولندا وبلجيكا', // nieuw, nalezen
     routeLearnShort: 'تعلّم الهولندية', // nieuw, nalezen

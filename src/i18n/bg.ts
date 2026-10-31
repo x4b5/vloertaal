@@ -150,6 +150,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Друг час',
     remindAdd: 'Добави в календара ми',
     remindAdded: 'Отвори файла, за да го добавиш в календара.',
+    remindAddedAsk: 'Добавено? Тогава ще го видиш в календара.', // nieuw, nalezen
     navAbout: 'Инфо',
     tagMeaning: 'Значение',
     tagPick: 'Избери',

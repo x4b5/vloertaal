@@ -151,6 +151,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'ካልእ ሰዓት',
     remindAdd: { m: 'ኣብ ካሌንደረይ ወስኽ', f: 'ኣብ ካሌንደረይ ወስኺ', x: 'ኣብ ካሌንደረይ ወስኹ' }, // x: nieuw, nalezen
     remindAdded: { m: 'ናብ ካሌንደርካ ንምውሳኽ ነቲ ፋይል ክፈቶ።', f: 'ናብ ካሌንደርኪ ንምውሳኽ ነቲ ፋይል ክፈትዮ።' },
+    remindAddedAsk: 'ተወሲኹ ድዩ? ሽዑ ኣብ ካሌንደር ይርአ።', // nieuw, nalezen
     navAbout: 'ሓበሬታ',
     tagMeaning: 'ትርጉም',
     tagPick: { m: 'ምረጽ', f: 'ምረጺ', x: 'ምረጹ' }, // x: nieuw, nalezen
@@ -205,7 +206,7 @@ const lang: HelpLanguageSource = {
     allTopics: 'ኩሎም ኣርእስትታት',
     topicsOrder: 'ኣርእስትታት ምርኣይ',
     privacyLink: 'መግለጺ ብሕትውና ኣንብብ (ብሆላንድኛ)', // nieuw, nalezen
-    routeTitle: 'መንገዲ ትምህርቲ', // nieuw, nalezen
+    routeTitle: 'እንታይ ክትመሃሩ ትደልዩ?', // nieuw, nalezen (een vraag, de x-vorm)
     routeLearn: 'ንስራሕ ሆላንድኛ ምምሃር፡ ምስ ቋንቋ ሓገዝ', // nieuw, nalezen
     routeRules: 'ሆላንድኛ እዛረብ እየ፡ ስራሕ ኣብ ሆላንድን ቤልጅዩምን ከመይ ይኸይድ', // nieuw, nalezen
     routeLearnShort: 'ሆላንድኛ ምምሃር', // nieuw, nalezen

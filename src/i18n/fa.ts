@@ -150,6 +150,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'زمان دیگر',
     remindAdd: 'افزودن به تقویم من',
     remindAdded: 'فایل را باز کنید تا به تقویم شما اضافه شود.',
+    remindAddedAsk: 'اضافه شد؟ پس آن را در تقویم خود می‌بینید.', // nieuw, nalezen
     navAbout: 'درباره',
     tagMeaning: 'معنی',
     tagPick: 'انتخاب کنید',

@@ -7,11 +7,13 @@ import { type Exercise, isRuleExercise } from './exercises';
  * hoi@vloertaal.nl with the place already filled in (lesson, step, the word or sentence, help
  * language, phone, deploy). The tester only writes what they saw (and adds a screenshot).
  *
- * On by default, for everyone, while the app is a beta: every user can say what they saw. Off:
- *  - with the switch at the bottom of Over ("Tik om uit te zetten"), remembered on this phone. In
+ * Off by default (since 31 October 2026): for a learner it was a fourth button in every lesson, in
+ * Dutch only, that jumps to the mail app. A tester or coach switches it on:
+ *  - by opening vloertaal.nl/?test (or ?test=1; ?test=0 switches it off again);
+ *  - or with the switch at the bottom of Over ("Tik om aan te zetten"), remembered on this phone. In
  *    the app itself, because an app on an iPhone's home screen keeps its own storage, apart from
- *    Safari: a link opened in Safari does not reach it;
- *  - or by opening vloertaal.nl/?test=0 (?test switches it on again).
+ *    Safari: a link opened in Safari does not reach it.
+ * Questions and mistakes still reach us through Over › "Vraag of fout?" (the mail address).
  * It is a tool, not a step of the lesson: like the ✕ it is not one of the three things to tap.
  */
 
@@ -24,12 +26,12 @@ export function readTesterParam(search: string): void {
   setTesterSwitch(v !== '0');
 }
 
-/** Is the flag on on this phone? On unless switched off ('0'); also on when storage is blocked. */
+/** Is the flag on on this phone? Only when switched on ('1'); off by default and when storage is blocked. */
 export function testerSwitch(): boolean {
   try {
-    return localStorage.getItem(KEY) !== '0';
+    return localStorage.getItem(KEY) === '1';
   } catch {
-    return true;
+    return false;
   }
 }
 
@@ -44,7 +46,7 @@ export function setTesterSwitch(on: boolean): boolean {
 }
 
 /**
- * Does this phone show "Iets melden"? The switch decides (on by default), for every version: the
+ * Does this phone show "Iets melden"? The switch decides (off by default), for every version: the
  * sneak preview needs no code, so 'sample' says nothing about who is testing. `access` stays for
  * the callers.
  */

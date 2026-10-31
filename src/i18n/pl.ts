@@ -150,6 +150,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Inna godzina',
     remindAdd: 'Dodaj do mojego kalendarza',
     remindAdded: 'Otwórz plik, aby dodać go do kalendarza.',
+    remindAddedAsk: 'Dodane? Wtedy zobaczysz je w kalendarzu.', // nieuw, nalezen
     navAbout: 'O aplikacji',
     tagMeaning: 'Znaczenie',
     tagPick: 'Wybierz',

@@ -30,7 +30,7 @@ const t: CultureTranslation = {
     'a.disclaimer': 'Es bueno saberlo',
     'a.disclaimer.b': 'Los consejos de Vloertaal son información general, no asesoría legal. Las normas pueden cambiar; los textos se actualizaron por última vez en octubre de 2026. Para tu propia situación, pregunta a tu empresa, a un sindicato o al Juridisch Loket.',
     'a.contact': '¿Una pregunta o un error?',
-    'a.contact.b': '¿Has encontrado un error, por ejemplo en una traducción o en un consejo? ¿O tienes una pregunta? Envía un correo a hoi@vloertaal.nl. Una captura de pantalla ayuda. En una lección también puedes tocar arriba la banderita "Melden": así el correo ya dice dónde estás.',
+    'a.contact.b': '¿Has encontrado un error, por ejemplo en una traducción o en un consejo? ¿O tienes una pregunta? Envía un correo a hoi@vloertaal.nl. Una captura de pantalla ayuda.',
   },
 };
 

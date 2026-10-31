@@ -30,7 +30,7 @@ const t: CultureTranslation = {
     'a.disclaimer': 'Bilmekte fayda var',
     'a.disclaimer.b': 'Vloertaal’daki ipuçları genel bilgidir, hukuki tavsiye değildir. Kurallar değişebilir; metinler en son Ekim 2026’da güncellendi. Kendi durumun için işverenine, bir sendikaya veya Juridisch Loket’e sor.',
     'a.contact': 'Soru mu, hata mı?',
-    'a.contact.b': 'Bir hata mı buldun, örneğin bir çeviride ya da bir ipucunda? Ya da bir soru sormak mı istiyorsun? hoi@vloertaal.nl adresine e-posta gönder. Ekran görüntüsü yardımcı olur. Derste üstteki "Melden" bayrağına da dokunabilirsin: o zaman e-postada nerede olduğun zaten yazar.',
+    'a.contact.b': 'Bir hata mı buldun, örneğin bir çeviride ya da bir ipucunda? Ya da bir soru sormak mı istiyorsun? hoi@vloertaal.nl adresine e-posta gönder. Ekran görüntüsü yardımcı olur.',
   },
 };
 
