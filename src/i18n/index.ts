@@ -68,9 +68,9 @@ function merge(p: LanguagePack, r: CultureTranslation = NO_TEXTS): HelpLanguageS
   const mix = l.ui.mixLesson ?? uiEn.mixLesson;
   return {
     ...l,
-    ui: { ...l.ui, ...p.culture.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui, ...p.sayings.ui, ...p.sounds.ui, ...p.kunJeNu.ui, ...p.be.ui, ...r.ui },
+    ui: { ...l.ui, ...p.culture.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui, ...p.sayings.ui, ...p.sounds.ui, ...p.kunJeNu.ui, ...p.be.ui, ...p.notices.ui, ...r.ui },
     gloss: {
-      ...l.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.about.gloss, ...p.learn.gloss, ...p.sayings.gloss, ...p.sounds.gloss, ...p.kunJeNu.gloss, ...p.be.gloss, ...r.gloss,
+      ...l.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.about.gloss, ...p.learn.gloss, ...p.sayings.gloss, ...p.sounds.gloss, ...p.kunJeNu.gloss, ...p.be.gloss, ...p.notices.gloss, ...r.gloss,
       // Every unit's "Mixed review" lesson shares one title.
       ...Object.fromEntries([...Object.keys(relatedUnits), ...beTaalUnitIds].map((id) => [mixLessonId(id), isPlural(mix) ? mix.other : mix])),
     },

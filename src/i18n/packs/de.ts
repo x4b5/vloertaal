@@ -7,8 +7,9 @@ import sayings from '../sayings/de';
 import sounds from '../sounds/de';
 import kunJeNu from '../kunjenu/de';
 import be from '../be/de';
+import notices from '../notices/de';
 import type { LanguagePack } from './types';
 
 /** Everything in one help language, loaded on demand as its own file (src/i18n/index.ts ensureLanguage). */
-const pack: LanguagePack = { base, culture, work, about, learn, sayings, sounds, kunJeNu, be, url: import.meta.url };
+const pack: LanguagePack = { base, culture, work, about, learn, sayings, sounds, kunJeNu, be, notices, url: import.meta.url };
 export default pack;

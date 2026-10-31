@@ -474,6 +474,10 @@ export const uiEn = {
   whoInspectionBe: 'Report too little pay, or work without a contract.',
   whoExploitBe: 'You are exploited at work, or you think you are.',
   whoUnionBe: 'Help with your pay, your contract or when your job ends. Members get more help.',
+  /* "Er is iets veranderd": a notice on the home, once (src/components/NoticeCard.tsx; translations in src/i18n/notices). */
+  noticeTitle: 'Something has changed',
+  noticeMore: 'Read more',
+  noticeOk: 'OK',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

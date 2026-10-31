@@ -17,6 +17,8 @@ export interface LanguagePack {
   kunJeNu: CultureTranslation;
   /** The language track in Belgium (src/i18n/be: docs/taal-belgie.md): its shared texts and units. */
   be: CultureTranslation;
+  /** "Er is iets veranderd" (src/content/updates.ts notices): the card's texts and each notice (src/i18n/notices). */
+  notices: CultureTranslation;
   /** Where the pack's file was loaded from (saved with the app for offline use). */
   url: string;
 }
