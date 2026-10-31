@@ -191,7 +191,7 @@ describe('Instellingen in the work-rules track', () => {
       'sound', 'voice', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset'];
     for (const page of pages) noEnglish(settings(page), String(page));
     expect(settings('lessons')).toContain('Tekstgrootte');
-    expect(settings('me')).toContain('>Taal<');
+    expect(settings('me')).toContain('>Wat wil je leren?<');
     expect(settings('phone')).toContain('Herinner mij elke dag');
     // The on/off cards are named by the page's question (a11y/start-instellingen), in Dutch here.
     expect(settings('counting')).toContain('role="radiogroup" aria-label="Anoniem meetellen"');

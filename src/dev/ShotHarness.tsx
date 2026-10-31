@@ -229,7 +229,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The language: /?shot=language is the list (no guess); &guess=pl asks "Polski?" first;
   // &guess=pl&list=1 is the list opened from "Other language" (with Back).
   if (shot === 'onboarding' || shot === 'language') {
-    return <Onboarding onDone={() => {}} guess={(q.get('guess') as LangCode | null) ?? null} startWithList={q.get('list') === '1'} />;
+    return <Onboarding onDone={() => {}} guess={(q.get('guess') as LangCode | null) ?? null} startWithList={q.get('list') === '1'} startAtRoute={q.get('route') === '1'} />;
   }
   // "Voor begeleiders" (from About): a link per topic.
   if (shot === 'coaches') return <Coaches onBack={() => {}} />;
