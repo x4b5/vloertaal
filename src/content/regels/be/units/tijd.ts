@@ -202,6 +202,7 @@ export const be: BeUnit = {
           },
           // ⚖️ check: overuren mogen alleen in de gevallen van de Arbeidswet (bijvoorbeeld buitengewone vermeerdering van werk, dringend werk, ongeval) of als vrijwillige overuren (Arbeidswet 16 maart 1971, art. 25-26bis; securex.be "wat zijn vrijwillige overuren")
           // ⚖️ check: overloon: minstens de helft extra (50%), op zon- en feestdagen 100% (Arbeidswet art. 29); voor sommige overuren krijg je inhaalrust (art. 26bis)
+          // ⚖️ check: voor de eerste 240 vrijwillige overuren per jaar (horeca 360) is er geen overloon en geen inhaalrust; daarom zegt de regel "meestal" (wet 18 mei 2026, BS 1 juni 2026, terugwerkend vanaf 1 april 2026; partena-professional.be; lexgo.be 14863; zoekresultaten 31 okt 2026)
           // ⚖️ check: loon cash, zonder aangifte en zonder loonbrief, is zwartwerk: dan betaalt niemand RSZ en bouw je geen rechten op (socialsecurity.be; RSZ, Dimona-aangifte)
           {
             kind: 'rule',
@@ -262,7 +263,7 @@ export const be: BeUnit = {
               { id: 'b', text: 'Hij vraagt eerst hoeveel uur het is, en wat hij krijgt.', best: true, feedback: 'Goed. Dan weet hij waar hij ja tegen zegt.' },
               { id: 'c', text: 'Hij zegt niets, en hij blijft gewoon wat langer.', best: false, feedback: 'Dan is er niets afgesproken. Dat geeft later gedoe.' },
             ],
-            why: 'Vrijwillige overuren kies je zelf. Je baas mag je niet verplichten. Je mag hooguit 360 uur per jaar doen. Voor een deel betaal je geen RSZ en belasting. Vraag uitleg bij de personeelsdienst of een vakbond.',
+            why: 'Vrijwillige overuren kies je zelf. Je baas mag je niet verplichten. Je mag hooguit 360 uur per jaar doen. Voor een deel betaal je geen RSZ en belasting. Overloon krijg je daar vaak niet voor. Vraag uitleg bij de personeelsdienst of een vakbond.',
           },
           {
             kind: 'whoask',
@@ -435,7 +436,7 @@ export const be: BeUnit = {
             id: 'r.be.l.tijd.5.wd1',
             situation: 'De kinderopvang belt Mohammed. Zijn dochter heeft koorts en moet naar huis. Mohammed is op zijn werk. Wat kan Mohammed het beste doen?',
             options: [
-              { id: 'a', text: 'Hij zegt het meteen tegen zijn leidinggevende, en hij haalt haar op.', best: true, feedback: 'Goed. Bij een noodgeval mag hij meteen weg.' },
+              { id: 'a', text: 'Hij zegt het zijn leidinggevende, en haalt haar op.', best: true, feedback: 'Goed. Bij een noodgeval mag hij meteen weg.' },
               { id: 'b', text: 'Hij meldt zich zelf ziek. Dat is voor hem het makkelijkst.', best: false, feedback: 'Hij is zelf niet ziek. Voor zijn kind is er verlof.' },
               { id: 'c', text: 'Hij werkt eerst zijn dienst af. Dan haalt hij haar op.', best: false, feedback: 'Dat hoeft niet. Zijn dochter heeft hem nu nodig.' },
             ],

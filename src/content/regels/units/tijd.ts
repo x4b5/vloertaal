@@ -451,7 +451,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.5.wd1',
           situation: 'De opvang belt Mohammed. Zijn dochter heeft koorts en moet naar huis. Mohammed is op zijn werk. Wat kan Mohammed het beste doen?',
           options: [
-            { id: 'a', text: 'Hij zegt het meteen tegen zijn leidinggevende, en hij haalt haar op.', best: true, feedback: 'Goed. Bij een noodgeval mag hij meteen weg.' },
+            { id: 'a', text: 'Hij zegt het zijn leidinggevende, en haalt haar op.', best: true, feedback: 'Goed. Bij een noodgeval mag hij meteen weg.' },
             { id: 'b', text: 'Hij meldt zich ziek. Dat is het makkelijkst.', best: false, feedback: 'Hij is zelf niet ziek. Voor zijn kind is er verlof.' },
             { id: 'c', text: 'Hij werkt eerst zijn dienst af. Dan haalt hij haar op.', best: false, feedback: 'Dat hoeft niet. Zijn dochter heeft hem nu nodig.' },
           ],
