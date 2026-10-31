@@ -450,6 +450,7 @@ export const uiNl: Record<UiKey, UiText> = {
   noticeTitle: 'Er is iets veranderd',
   noticeMore: 'Lees meer',
   noticeOk: 'Oké',
+  saveFailed: 'Je voortgang is niet bewaard. Is je telefoon vol? Maak wat ruimte. Of ga naar Instellingen: Bewaar je voortgang.',
 };
 
 const lang: HelpLanguageSource = {

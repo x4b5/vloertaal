@@ -395,6 +395,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'Abhaken', // nieuw, nalezen
     checkVia: 'per Check', // nieuw, nalezen
     checkUndo: 'Doch die Lektionen machen', // nieuw, nalezen
+    saveFailed: 'Dein Fortschritt wurde nicht gespeichert. Ist dein Handy voll? Mach etwas Platz frei. Oder geh zu Einstellungen: „Deinen Fortschritt sichern“.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

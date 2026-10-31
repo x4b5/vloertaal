@@ -65,7 +65,7 @@ export interface RecordedIndex {
 
 /** ElevenLabs recordings, committed to public/audio-el (see scripts/voices/elevenlabs.mjs). */
 export interface ElevenIndex {
-  voices: (RecordedVoice & { said: Record<string, string> })[];
+  voices: (RecordedVoice & { said: Record<string, string>; takes?: Record<string, number> })[];
 }
 
 /** One recorded voice with where its files live and which texts it has. */
@@ -85,6 +85,28 @@ const withPlain = (r: Omit<Recorded, 'plain'>): Recorded => ({
 });
 
 let recorded: Recorded[] = [];
+
+/**
+ * A recording keeps its file name when it is made again (a new take, or a changed text:
+ * scripts/voices/elevenlabs.mjs writes the same <voice>/<id>.mp3), so the address a clip is played
+ * from carries its version: ?v=<take>.<text>. A new recording then has a new address, and the
+ * service worker (public/sw.js) and the browser may keep a played clip as it is (vercel.json).
+ * File path (as clipPath writes it) → version.
+ */
+const versions = new Map<string, string>();
+
+/** A short, stable code for a text (FNV-1a, base 36). */
+function textCode(text: string): string {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < text.length; i++) h = Math.imul(h ^ text.charCodeAt(i), 0x01000193);
+  return (h >>> 0).toString(36);
+}
+
+/** The address a clip plays from: its file with its version (src/lib/audio.ts versions). */
+export function clipSrc(path: string): string {
+  const v = versions.get(path);
+  return v ? `${path}?v=${v}` : path;
+}
 const recordedListeners = new Set<() => void>();
 
 /** Voices recorded ahead of time: ElevenLabs first, then Piper (built in CI). Empty when none. */
@@ -108,6 +130,9 @@ async function loadJson<T>(url: string): Promise<T | null> {
 
 /** Puts the recorded voices in place (ElevenLabs first, then Piper). Also used by tests. */
 export function setRecordedIndex(eleven: ElevenIndex | null, piper: RecordedIndex | null): void {
+  for (const v of eleven?.voices ?? []) {
+    for (const [id, text] of Object.entries(v.said)) versions.set(`./audio-el/${v.key}/${id}.mp3`, `${v.takes?.[id] ?? 1}.${textCode(text)}`);
+  }
   const list: Recorded[] = [
     ...(eleven?.voices ?? []).map(({ said, ...voice }) =>
       withPlain({
@@ -324,6 +349,7 @@ export function stopSaying(text: string): void {
 function stopAll(): void {
   playing?.pause();
   playing = null;
+  clearTimeout(clipGuard);
   // The cut-off line's own end events no longer count (cancel fires them late, or not at all).
   speechTurn++;
   if (speechAvailable()) window.speechSynthesis.cancel();
@@ -431,10 +457,25 @@ function speakSentences(text: string, slow: boolean, voiceURI: string | undefine
   return true;
 }
 
-/** Plays one recorded clip; a missing or broken file lets the phone say the text instead. */
+/**
+ * How long a clip may take to start (a bad connection, a file that hangs): then the phone says the
+ * line instead, so a speaker button and a talking mouth never keep "talking" without sound.
+ */
+export const CLIP_START_MS = 6000;
+/** Once it plays: its length, plus this much, at most; then it counts as ended. */
+const CLIP_END_SLACK_MS = 3000;
+/** The longest a clip without a known length may count as playing. */
+const CLIP_LONGEST_MS = 30000;
+let clipGuard: ReturnType<typeof setTimeout> | undefined;
+
+/**
+ * Plays one recorded clip; a missing or broken file lets the phone say the text instead, and so
+ * does a clip that does not start within CLIP_START_MS. One that stalls while it plays ends after
+ * its length (plus a little), so the line never stays "speaking".
+ */
 function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', voicePace = 1, onFail?: () => void, pace: Pace = slow ? 'slow' : 'calm'): void {
   stopAll();
-  const audio = new Audio(url);
+  const audio = new Audio(clipSrc(url));
   const rate = recordedRateFor(pace) * voicePace;
   // Both: some WebKit versions reset playbackRate to the default while the clip loads.
   audio.defaultPlaybackRate = audio.playbackRate = rate;
@@ -445,14 +486,34 @@ function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', v
   const end = () => {
     if (turn === speechTurn) emitSpeech(text, false, slow);
   };
-  audio.onended = end;
+  audio.onended = () => {
+    if (turn === speechTurn) clearTimeout(clipGuard);
+    end();
+  };
   // A missing or broken clip: let the phone say it instead.
-  audio.onerror = () => {
+  const fail = () => {
     if (turn !== speechTurn) return;
+    clearTimeout(clipGuard);
     if (onFail) onFail();
     else speakDevice(text, slow, lang, undefined, pace);
   };
-  audio.play().catch(end);
+  audio.onerror = fail;
+  // Not started in time: this clip stops, the phone says it.
+  clipGuard = setTimeout(() => {
+    if (turn !== speechTurn) return;
+    audio.pause();
+    fail();
+  }, CLIP_START_MS);
+  audio.play().then(() => {
+    // It plays (play() settles when the sound starts): it ends by itself, or after its length at most.
+    if (turn !== speechTurn) return;
+    clearTimeout(clipGuard);
+    const length = Number.isFinite(audio.duration) && audio.duration > 0 ? (audio.duration / (rate || 1)) * 1000 + CLIP_END_SLACK_MS : CLIP_LONGEST_MS;
+    clipGuard = setTimeout(end, length);
+  }, () => {
+    if (turn === speechTurn) clearTimeout(clipGuard);
+    end();
+  });
   emitSpeech(text, true, slow);
 }
 

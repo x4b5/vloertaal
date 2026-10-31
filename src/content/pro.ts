@@ -1,5 +1,5 @@
 import { aboutSection, CONTACT_EMAIL, PRO_TITLE, STORY_DATE } from './about';
-import { updateDate } from './updates';
+import { updateDate } from './updateDate';
 
 /**
  * "Voor begeleiders en werkgevers": the page for professionals (language coaches, NT2 teachers,

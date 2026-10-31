@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { dateLocale, UPCOMING, UPDATES, updateDate, type Update } from '../content/updates';
+import type { Update } from '../content/updates';
+import { dateLocale, updateDate } from '../content/updateDate';
+import { useUpdates } from '../content/updatesLive';
 import { langTag, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { dutchUi } from '../lib/track';
@@ -18,7 +20,7 @@ export const NEWS_FIRST = 3;
  * NEWS_FIRST dates, then one button "Meer" for the rest (one thing to tap; the back arrow is
  * chrome). Works in both tracks: the work-rules track reads it all in Dutch, without that line.
  */
-export function News({ lang, onBack, all: allStart = false, updates = UPDATES, upcoming = UPCOMING }: {
+export function News({ lang, onBack, all: allStart = false, updates: givenUpdates, upcoming: givenUpcoming }: {
   lang?: HelpLanguage;
   onBack: () => void;
   /** Start with every date shown (screenshots, tests). */
@@ -28,6 +30,10 @@ export function News({ lang, onBack, all: allStart = false, updates = UPDATES, u
   upcoming?: string[];
 }) {
   const [all, setAll] = useState(allStart);
+  // The logbook (src/content/updates.ts) loads when it is not here yet (src/content/updatesLive.ts).
+  const loaded = useUpdates();
+  const updates = givenUpdates ?? loaded?.updates ?? [];
+  const upcoming = givenUpcoming ?? loaded?.upcoming ?? [];
   const shown = all ? updates : updates.slice(0, NEWS_FIRST);
   const more = !all && updates.length > NEWS_FIRST;
   const code = lang?.code ?? 'en';

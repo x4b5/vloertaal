@@ -1,3 +1,5 @@
+import { registerUpdates } from './updatesLive';
+
 /**
  * What changed in Vloertaal, newest first, in plain Dutch for coaches, teachers and partners.
  * Shown in two places from this one list: in the app, "Wat is er nieuw?" at the bottom of "Over"
@@ -25,6 +27,7 @@ export const UPDATES: Update[] = [
       'Nieuw bij Alle onderwerpen: een zoekbalk. Typ een woord, in het Nederlands of in je eigen taal, en je ziet de onderwerpen waar het in staat. Bijvoorbeeld "ziek" of "helm".',
       'Nieuw bij Over: Waarom Vloertaal? En "Wat is er nieuw?": hier zie je wat er in de app veranderd is.',
       'Werk je in België (Vlaanderen)? Kies dan bij de start, of later bij Instellingen, "België". In het spoor Werkregels krijg je dan de regels van België: alle onderwerpen, met Vlaamse woorden (loonbrief, interimkantoor, ziekenfonds, RVA). Dit is nieuw: de Belgische lessen zijn nog niet nagekeken door een expert. Zie je een fout? Mail naar hoi@vloertaal.nl.',
+      'De app start sneller, en een woord dat je al hoorde speelt meteen. Kan je telefoon je voortgang niet bewaren? Dan zie je dat nu, met een tip.',
     ],
   },
   {
@@ -200,21 +203,11 @@ export const UPCOMING: string[] = [
 /** The date of the newest update. */
 export const LAST_UPDATE = UPDATES[0].date;
 
-/** The locale for a date in a page's language: a help language's own code (Dari: Afghan Persian), Dutch, or English (no help language). */
-export function dateLocale(code?: string): string {
-  if (!code || code === 'en') return 'en-GB';
-  return ({ prs: 'fa-AF', nl: 'nl-NL' } as Record<string, string>)[code] ?? code;
-}
+// The dates (also used without the logbook: src/content/updateDate.ts).
+export { dateLocale, updateDate } from './updateDate';
 
-/** "15 oktober 2026" in a language (Dutch by default). */
-export function updateDate(day: string, locale = 'nl-NL'): string {
-  const [y, m, d] = day.split('-').map(Number);
-  try {
-    return new Date(y, m - 1, d).toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
-  } catch {
-    return new Date(y, m - 1, d).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
-  }
-}
+// The app loads this file when it needs it (src/content/updatesLive.ts): here it puts itself in place.
+registerUpdates({ updates: UPDATES, upcoming: UPCOMING });
 
 /* ------------------------------------------------------------------ a notice for the learner */
 

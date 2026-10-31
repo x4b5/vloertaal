@@ -4,7 +4,8 @@ import { BramSays } from './BramSays';
 import { Character } from './Characters';
 import { resultLineFor } from '../lib/greeting';
 import { aboutRules, aboutSections, CONTACT_EMAIL, PRO_TITLE, STORY_DATE } from '../content/about';
-import { dateLocale, LAST_UPDATE, updateDate } from '../content/updates';
+import { dateLocale, updateDate } from '../content/updateDate';
+import { useUpdates } from '../content/updatesLive';
 import { taalTips } from '../content/culture';
 import { taalBeActive, tipNlOnly } from '../content/taalBe';
 import { tipBody } from '../lib/tipText';
@@ -633,6 +634,8 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
   dutch?: boolean;
 }) {
   const { recorded } = useVoices();
+  // The newest update's date (the logbook loads when it is not here yet: src/content/updatesLive.ts).
+  const lastUpdate = useUpdates()?.updates[0]?.date;
   const [dutchOn, setDutch] = useState(() => dutchStart ?? aboutDutchRemembered());
   // The work-rules track: its own sections, in Dutch only (no toggle).
   const dutch = dutchUi(lang) || dutchOn;
@@ -706,7 +709,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
                 <span className="news-link-icon" aria-hidden><WordPicture id="" emoji="📝" size={30} /></span>
                 <span className="news-link-text">
                   <Bi text={ui('whatsNew', lang)} />
-                  <span className="news-link-date muted small" lang={langTag(dateCode(lang))} dir={lang?.dir}>{updateDate(LAST_UPDATE, dateLocale(dateCode(lang)))}</span>
+                  {lastUpdate && <span className="news-link-date muted small" lang={langTag(dateCode(lang))} dir={lang?.dir}>{updateDate(lastUpdate, dateLocale(dateCode(lang)))}</span>}
                 </span>
                 <ChevronIcon />
               </button>
@@ -727,7 +730,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
       )}
       <TesterSwitch />
       {/* Without "Wat is er nieuw?" (a test, a screenshot): the newest update's date as plain text. */}
-      {!onNews && <p className="about-updated muted small"><Bi text={lastUpdatedText(lang)} /></p>}
+      {!onNews && lastUpdate && <p className="about-updated muted small"><Bi text={lastUpdatedText(lastUpdate, lang)} /></p>}
       {/* Which deploy runs on this phone (the commit; src/lib/appUpdate.ts loads a newer one). */}
       <p className="about-version muted small" dir="ltr" lang="nl">Versie {(import.meta.env.VITE_BUILD as string | undefined) ?? 'dev'}</p>
     </div>
@@ -749,12 +752,12 @@ function Signed({ name, code = 'en', dir }: { name: string; code?: string; dir?:
 }
 
 /** "Last updated: 15 October 2026", each line with the date in its own language. */
-function lastUpdatedText(lang?: HelpLanguage): Bilingual {
+function lastUpdatedText(day: string, lang?: HelpLanguage): Bilingual {
   const t = ui('lastUpdated', lang);
   return {
     ...t,
-    en: t.en.replace('{date}', updateDate(LAST_UPDATE, 'en-GB')),
-    help: t.help?.replace('{date}', updateDate(LAST_UPDATE, dateLocale(lang?.code ?? 'nl'))),
+    en: t.en.replace('{date}', updateDate(day, 'en-GB')),
+    help: t.help?.replace('{date}', updateDate(day, dateLocale(lang?.code ?? 'nl'))),
   };
 }
 

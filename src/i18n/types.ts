@@ -490,6 +490,8 @@ export const uiEn = {
   noticeTitle: 'Something has changed',
   noticeMore: 'Read more',
   noticeOk: 'OK',
+  /** Saving the progress on this phone failed (src/lib/progress.ts saveProgress; src/components/SaveFailedNote.tsx): once. */
+  saveFailed: 'Your progress was not saved. Is your phone full? Make some room. Or go to Settings: Keep your progress.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

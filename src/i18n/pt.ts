@@ -395,6 +395,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'Marcar', // nieuw, nalezen
     checkVia: 'com teste', // nieuw, nalezen
     checkUndo: 'Fazer as lições mesmo assim', // nieuw, nalezen
+    saveFailed: 'O teu progresso não foi guardado. O telemóvel está cheio? Liberta algum espaço. Ou vai a Definições: «Guarda o teu progresso».', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

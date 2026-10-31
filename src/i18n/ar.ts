@@ -395,6 +395,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'تعليم كمنتهٍ', // nieuw, nalezen
     checkVia: 'عبر الاختبار', // nieuw, nalezen
     checkUndo: { m: 'اعمل الدروس رغم ذلك', f: 'اعملي الدروس رغم ذلك', x: 'القيام بالدروس رغم ذلك' }, // nieuw, nalezen
+    saveFailed: 'لم يُحفظ تقدّمك. هل الهاتف ممتلئ؟ الحل: إفراغ بعض المساحة. أو في الإعدادات: «حفظ تقدمك».', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

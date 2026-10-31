@@ -1,5 +1,5 @@
 import { aboutSection, STORY_DATE } from '../content/about';
-import { dateLocale, updateDate } from '../content/updates';
+import { dateLocale, updateDate } from '../content/updateDate';
 import { units } from '../content/curriculum';
 import { THEME_UNITS, THEMES } from '../content/themes';
 import { APP_DATA, esc, plainPage, SITE } from './plainPage';

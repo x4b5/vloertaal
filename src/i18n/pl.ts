@@ -395,6 +395,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'Odhacz', // nieuw, nalezen
     checkVia: 'przez test', // nieuw, nalezen
     checkUndo: 'Jednak zrób lekcje', // nieuw, nalezen
+    saveFailed: 'Twoje postępy nie zostały zapisane. Czy telefon jest pełny? Zrób trochę miejsca. Albo wejdź w Ustawienia: „Zachowaj swoje postępy”.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
