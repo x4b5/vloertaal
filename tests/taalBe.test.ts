@@ -430,6 +430,22 @@ describe('the closing line of the tips', () => {
     }
   });
 
+  it('swaps it for every gender too (a woman and "Zeg ik liever niet" also get the Belgian line)', () => {
+    for (const [nl] of [[ADVICE_LINE], [ABUSE_LINE]]) {
+      const tips = cultureTips.filter((t) => t.body.endsWith(nl));
+      for (const code of helpLanguages.map((l) => l.code)) {
+        for (const g of ['m', 'f', 'x'] as const) {
+          const lang = getHelpLanguage(code, g)!;
+          for (const t of tips) {
+            const help = lang.gloss[`${t.id}.b`];
+            const swapped = beClosing(t.body, help, lang);
+            expect(swapped.help, `${code}/${g} ${t.id}: closing line not swapped`).not.toBe(help);
+          }
+        }
+      }
+    }
+  });
+
   it('swaps only in the Belgian course', () => {
     const t = tipForLesson('l.site')!;
     inCountryBe(true);
