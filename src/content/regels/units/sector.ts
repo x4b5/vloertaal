@@ -1307,7 +1307,7 @@ export const techniekUnit: RuleUnit = {
           id: 'r.l.techniek.1.wd2',
           situation: 'Op de werkbank liggen veel spanen. Sanne wil ze weghalen. Wat kan Sanne het beste doen?',
           options: [
-            { id: 'a', text: 'Ze veegt ze weg met een borstel of een kwast.', best: true, feedback: 'Goed. Zo snijdt ze haar handen niet.' },
+            { id: 'a', text: 'Ze veegt ze weg met een borstel.', best: true, feedback: 'Goed. Zo snijdt ze haar handen niet.' },
             { id: 'b', text: 'Ze blaast ze weg met de luchtslang.', best: false, feedback: 'Dat is logisch. Maar dan vliegen de spanen alle kanten op.' },
             { id: 'c', text: 'Ze veegt ze met haar hand in de bak.', best: false, feedback: 'Spanen zijn scherp. Zo snijdt ze in haar hand.' },
           ],

@@ -86,7 +86,7 @@ export const be: BeUnit = {
             options: [
               { id: 'a', text: 'Hij gooit vanaf nu ook alles in één bak.', best: false, feedback: 'Ik snap het. Maar op je werk volg je de regels.' },
               { id: 'b', text: 'Hij praat er lang met de collega over.', best: false, feedback: 'Dat mag. Maar het lost de vraag niet op.' },
-              { id: 'c', text: 'Hij blijft sorteren, en hij vraagt het aan Henk.', best: true, feedback: 'Goed. Henk weet hoe ze het afval ophalen.' },
+              { id: 'c', text: 'Hij blijft sorteren en vraagt het aan Henk.', best: true, feedback: 'Goed. Henk weet hoe ze het afval ophalen.' },
             ],
             why: 'Gesorteerd afval halen ze apart op. Van oud papier maken ze weer nieuw papier. Weet je het niet zeker? Vraag het je leidinggevende. Volg de regels op je werk. Ook als een collega het anders doet.',
           },

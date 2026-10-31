@@ -91,7 +91,7 @@ export const be: BeUnit = {
             situation: 'Het bedrijf zegt: "Dat papier van school komt later wel. Begin maandag maar." Wat kan Jayden het beste doen?',
             options: [
               { id: 'a', text: 'Hij begint maandag. Het papier komt later wel.', best: false, feedback: 'Dat is logisch. Maar dan telt zijn stage misschien niet mee.' },
-              { id: 'b', text: 'Hij vraagt eerst op school of de overeenkomst klaar is.', best: true, feedback: 'Goed. Dan weet hij zeker dat alles klopt.' },
+              { id: 'b', text: 'Hij vraagt eerst op school of alles klaar is.', best: true, feedback: 'Goed. Dan weet hij zeker dat alles klopt.' },
               { id: 'c', text: 'Hij zoekt meteen een ander stagebedrijf.', best: false, feedback: 'Dat hoeft niet. Eerst even vragen.' },
             ],
             why: 'Zonder getekende overeenkomst begin je beter niet. Bij duaal leren moet het bedrijf ook erkend zijn. Je school helpt je daarbij.',
@@ -168,7 +168,7 @@ export const be: BeUnit = {
             id: 'r.be.l.stage.2.wd2',
             situation: 'Aan het eind krijgt Fatima een beoordeling. Ze is het er niet mee eens. Wat kan Fatima het beste doen?',
             options: [
-              { id: 'a', text: 'Ze bespreekt het met Mark, en met haar begeleider van school.', best: true, feedback: 'Goed. Zo kan ze uitleggen waarom.' },
+              { id: 'a', text: 'Ze bespreekt het met Mark en met haar school.', best: true, feedback: 'Goed. Zo kan ze uitleggen waarom.' },
               { id: 'b', text: 'Ze tekent, en ze zegt er niets van. Mark is de baas.', best: false, feedback: 'Dat snap ik. Maar het oneens zijn mag. Dan moet ze het wel zeggen.' },
               { id: 'c', text: 'Ze praat er alleen met haar klasgenoten over.', best: false, feedback: 'Steun is fijn. Maar zo verandert er niets aan de beoordeling.' },
             ],

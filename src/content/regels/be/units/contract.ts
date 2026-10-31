@@ -314,7 +314,7 @@ export const be: BeUnit = {
             situation: 'Esra werkt maar 1 uur. Dan stuurt de baas haar naar huis.',
             options: [
               { id: 'a', text: 'Ze krijgt loon voor 1 uur. Zo werkt deeltijds werk.', best: false, feedback: 'Niet zeker. Er is een regel voor korte werkperiodes.' },
-              { id: 'b', text: 'Ze vraagt het na: een werkperiode is meestal minstens 3 uur.', best: true, feedback: 'Goed. Een vakbond weet wat er in haar sector geldt.' },
+              { id: 'b', text: 'Ze vraagt na of ze loon voor 3 uur krijgt.', best: true, feedback: 'Goed. Een vakbond weet wat er in haar sector geldt.' },
               { id: 'c', text: 'Ze krijgt niets, want ze was er maar kort.', best: false, feedback: 'Nee. De baas betaalt gewerkte tijd altijd.' },
             ],
             why: 'Een werkperiode duurt in België meestal minstens 3 uur. Er zijn uitzonderingen per sector. Wordt je werk veel korter? Vraag het na bij je vakbond.',

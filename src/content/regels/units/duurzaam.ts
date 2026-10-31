@@ -75,7 +75,7 @@ export const duurzaamUnit: RuleUnit = {
           options: [
             { id: 'a', text: 'Hij gooit vanaf nu ook alles in één bak.', best: false, feedback: 'Ik snap het. Maar op je werk volg je de regels.' },
             { id: 'b', text: 'Hij praat er lang met de collega over.', best: false, feedback: 'Dat mag. Maar het lost de vraag niet op.' },
-            { id: 'c', text: 'Hij blijft scheiden, en hij vraagt het aan Henk.', best: true, feedback: 'Goed. Henk weet hoe ze het afval ophalen.' },
+            { id: 'c', text: 'Hij blijft scheiden en vraagt het aan Henk.', best: true, feedback: 'Goed. Henk weet hoe ze het afval ophalen.' },
           ],
           why: 'Gescheiden afval wordt meestal ook apart opgehaald. Van oud papier maken ze weer nieuw papier. Weet je het niet zeker? Vraag het je leidinggevende. De regels op je werk volg je, ook als een collega het anders doet.',
         },

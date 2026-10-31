@@ -149,7 +149,7 @@ export const be: BeUnit = {
             options: [
               { id: 'a', text: 'Niets. Er is toch niemand gewond geraakt.', best: false, feedback: 'Gelukkig niet. Maar de volgende keer misschien wel.' },
               { id: 'b', text: 'Hij zet de doos zelf recht, en zegt het niemand.', best: false, feedback: 'Goed dat hij helpt. Maar zo leert niemand ervan.' },
-              { id: 'c', text: "Hij waarschuwt de collega's en meldt het bij de leiding.", best: true, feedback: 'Goed. Zo voorkomt hij een echt ongeval.' },
+              { id: 'c', text: "Hij waarschuwt de collega's en meldt het.", best: true, feedback: 'Goed. Zo voorkomt hij een echt ongeval.' },
             ],
             why: 'Een bijna-ongeval is een waarschuwing. Melden helpt om een echt ongeval te voorkomen. Ook kleine dingen mag je melden.',
           },
@@ -168,9 +168,9 @@ export const be: BeUnit = {
             id: 'r.be.l.veilig.2.wd2',
             situation: 'Kevin heeft het gemeld. Weken later is het nog steeds onveilig. Wat kan Kevin het beste doen?',
             options: [
-              { id: 'a', text: 'Hij meldt het bij de preventieadviseur of de vakbond.', best: true, feedback: 'Goed. Zij kunnen helpen. Er is ook een inspectie.' },
+              { id: 'a', text: 'Hij gaat naar de preventieadviseur of de vakbond.', best: true, feedback: 'Goed. Zij kunnen helpen. Er is ook een inspectie.' },
               { id: 'b', text: 'Hij zet een filmpje van het magazijn online.', best: false, feedback: 'Dat snap ik, maar dat kan hem problemen geven.' },
-              { id: 'c', text: 'Hij stopt met melden. Het helpt toch niet.', best: false, feedback: 'Jammer. Er zijn nog plekken waar hij heen kan.' },
+              { id: 'c', text: 'Hij stopt met melden. Het helpt toch niets meer.', best: false, feedback: 'Jammer. Er zijn nog plekken waar hij heen kan.' },
             ],
             why: 'De preventieadviseur helpt je baas met veiligheid. Een vakbond kan ook helpen. Helpt dat niet? Dan kun je naar Toezicht op het Welzijn op het Werk. Dat is de inspectie voor veilig werken. Een filmpje online kan juist problemen geven, ook voor jou.',
           },
@@ -235,7 +235,7 @@ export const be: BeUnit = {
             situation: 'Dewi merkt dat het te veel wordt. Wat kan Dewi het beste doen?',
             options: [
               { id: 'a', text: 'Ze zegt niets. In de zorg heeft iedereen het druk.', best: false, feedback: 'Dat snap ik. Maar zo kan ze ziek worden.' },
-              { id: 'b', text: 'Ze praat met haar leidinggevende of de vertrouwenspersoon.', best: true, feedback: 'Goed. Dan kan er samen iets veranderen.' },
+              { id: 'b', text: 'Ze praat erover met haar leidinggevende.', best: true, feedback: 'Goed. Dan kan er samen iets veranderen.' },
               { id: 'c', text: 'Ze werkt sneller, dan is ze eerder klaar.', best: false, feedback: 'Haast geeft fouten en meer stress.' },
             ],
             why: 'Te veel werkdruk maakt mensen ziek. Je werkgever moet daar iets aan doen. Praat erover voordat je ziek wordt. Je kunt naar de vertrouwenspersoon. Of naar de preventieadviseur psychosociale aspecten. Dat is een deskundige voor stress en pesten op het werk. Wat je zegt, blijft geheim.',
