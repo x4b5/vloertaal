@@ -401,6 +401,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
     workTry: 'Bugün işte dene', // nieuw, nalezen
     saveFailed: 'İlerlemen kaydedilmedi. Telefonun dolu mu? Biraz yer aç. Ya da Ayarlar’a git: “İlerlemeni sakla”.', // nieuw, nalezen
+    bewaarNudge: 'Telefonun bazen ilerlemeni silebilir. Bu yüzden bir kopya sakla.', // nieuw, nalezen
+    bewaarGo: 'Şimdi kaydet', // nieuw, nalezen
+    backupShare: 'Kendine gönder', // nieuw, nalezen
+    backupShareHint: 'Dosyayı kendine gönder, örneğin WhatsApp’ta veya e-postayla.', // nieuw, nalezen
+    backupMade: 'Tamam. Bu dosyayı iyi sakla. Onunla ilerlemeni sonra geri yüklersin.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

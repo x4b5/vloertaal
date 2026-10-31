@@ -401,6 +401,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Уча нидерландски за работата си с Vloertaal. Безплатно е: {link}', // nieuw, nalezen
     workTry: 'Опитай днес на работа', // nieuw, nalezen
     saveFailed: 'Напредъкът ти не е запазен. Телефонът пълен ли е? Освободи малко място. Или отвори Настройки: „Запази напредъка си“.', // nieuw, nalezen
+    bewaarNudge: 'Телефонът понякога може да изтрие напредъка ти. Затова запази копие.', // nieuw, nalezen
+    bewaarGo: 'Запази сега', // nieuw, nalezen
+    backupShare: 'Изпрати на себе си', // nieuw, nalezen
+    backupShareHint: 'Изпрати файла на себе си, например в WhatsApp или по имейл.', // nieuw, nalezen
+    backupMade: 'Готово. Пази добре този файл. С него по-късно ще върнеш напредъка си.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

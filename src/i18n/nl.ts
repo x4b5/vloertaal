@@ -457,6 +457,11 @@ export const uiNl: Record<UiKey, UiText> = {
   shareInvite: 'Ik leer Nederlands voor mijn werk met Vloertaal. Gratis: {link}', // nieuw, nalezen
   workTry: 'Probeer het vandaag op je werk',
   saveFailed: 'Je voortgang is niet bewaard. Is je telefoon vol? Maak wat ruimte. Of ga naar Instellingen: Bewaar je voortgang.',
+  bewaarNudge: 'Je telefoon kan je voortgang soms wissen. Bewaar daarom een kopie.', // nieuw, nalezen
+  bewaarGo: 'Bewaar nu', // nieuw, nalezen
+  backupShare: 'Stuur naar jezelf', // nieuw, nalezen
+  backupShareHint: 'Stuur het bestand naar jezelf, bijvoorbeeld in WhatsApp of in een e-mail.', // nieuw, nalezen
+  backupMade: 'Klaar. Bewaar dit bestand goed. Daarmee zet je je voortgang later terug.', // nieuw, nalezen
 };
 
 const lang: HelpLanguageSource = {

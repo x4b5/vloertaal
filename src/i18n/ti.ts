@@ -402,6 +402,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'ን ስራሐይ ሆላንድኛ ብ Vloertaal እመሃር ኣለኹ። ብነጻ እዩ: {link}', // nieuw, nalezen
     workTry: { m: 'ሎሚ ኣብ ስራሕካ ፈትኖ', f: 'ሎሚ ኣብ ስራሕኪ ፈትንዮ', x: 'ሎሚ ኣብ ስራሕ ፈትንዎ' }, // nieuw, nalezen
     saveFailed: 'ምዕባለኹም ኣይተዓቀበን። ተሌፎንኩም መሊኡ ድዩ? ቁሩብ ቦታ ግበሩ። ወይ ኣብ ምድላዋት: «ምዕባለኹም ዓቅቡ»።', // nieuw, nalezen
+    bewaarNudge: { m: 'ተሌፎንካ ገለ ግዜ ምዕባለኻ ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅብ።', f: 'ተሌፎንኪ ገለ ግዜ ምዕባለኺ ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅቢ።', x: 'ተሌፎንኩም ገለ ግዜ ምዕባለኹም ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅቡ።' }, // nieuw, nalezen
+    bewaarGo: { m: 'ሕጂ ዓቅብ', f: 'ሕጂ ዓቅቢ', x: 'ሕጂ ዓቅቡ' }, // nieuw, nalezen
+    backupShare: { m: 'ናባኻ ስደድ', f: 'ናባኺ ስደዲ', x: 'ናባኹም ስደዱ' }, // nieuw, nalezen
+    backupShareHint: { m: 'ነቲ ፋይል ናባኻ ስደዶ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።', f: 'ነቲ ፋይል ናባኺ ስደድዮ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።', x: 'ነቲ ፋይል ናባኹም ስደድዎ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።' }, // nieuw, nalezen
+    backupMade: { m: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርካ ዓቅቦ። ደሓር ብእኡ ምዕባለኻ ክትመልሶ ትኽእል።', f: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርኪ ዓቅብዮ። ደሓር ብእኡ ምዕባለኺ ክትመልስዮ ትኽእሊ።', x: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርኩም ዓቅብዎ። ደሓር ብእኡ ምዕባለኹም ክትመልስዎ ትኽእሉ።' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

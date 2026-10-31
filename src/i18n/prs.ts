@@ -401,6 +401,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'من با Vloertaal هالندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
     workTry: 'امروز در کار امتحانش کن', // nieuw, nalezen
     saveFailed: 'پیشرفت شما ذخیره نشد. آیا تیلفون پر است؟ کمی جا خالی کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen
+    bewaarNudge: 'تیلفون شما ممکن است گاهی پیشرفت شما را پاک کند. پس یک کاپی نگه دارید.', // nieuw, nalezen
+    bewaarGo: 'همین حالا ذخیره کنید', // nieuw, nalezen
+    backupShare: 'برای خود تان بفرستید', // nieuw, nalezen
+    backupShareHint: 'فایل را برای خود تان بفرستید، مثلاً در واتس‌اپ یا با ایمیل.', // nieuw, nalezen
+    backupMade: 'تمام شد. این فایل را خوب نگه دارید. بعداً با آن پیشرفت خود را دوباره می‌آورید.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
