@@ -83,8 +83,8 @@ Na `u.build`. Geluid (midden, -18 dB): Bouwplaats buiten: wind, in de verte een 
 | `g.bouw.steiger.3` | Leerling (Thijmen én Ariël) | Oké. Waar ligt die? |
 | `g.bouw.steiger.4` | Henk (Daniel) | In de bus, achterin. Om half acht beginnen we. |
 
-- **Wat doe je eerst?** De ladder bij de steiger zetten. · **Je valbeveiliging dragen.** ✔ · Je hamer uit de bus pakken.  
-  Uitleg: Op de steiger draag je altijd valbeveiliging. *(On the scaffolding you always wear fall protection.)*
+- **Wat moet je doen voor je naar boven gaat?** De ladder bij de steiger zetten. · **Je valbeveiliging dragen.** ✔ · Je hamer uit de bus pakken.  
+  Uitleg: Henk zegt: zonder valbeveiliging ga je niet naar boven. *(Henk says: without fall protection you do not go up.)*
 - **Hoe laat beginnen jullie?** **Om half acht.** ✔ · Om zeven uur. · Om half negen.  
   Uitleg: Henk zegt: om half acht beginnen we. *(Henk says: we start at half past seven.)*
 

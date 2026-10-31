@@ -652,7 +652,7 @@ const t: CultureTranslation = {
     'c.hygiene.b': 'El alcohol y las drogas en el trabajo, o ir a trabajar después de tomarlos, están prohibidos en casi todas las empresas. Es muy peligroso cerca de máquinas y carretillas elevadoras, y puede llevar al despido. ¿Un medicamento te da sueño o mareos? Díselo a tu encargado, así puedes hacer un trabajo seguro. No tienes que decir qué medicamento es. En la producción de alimentos, las normas de higiene son estrictas: lávate las manos, lleva ropa de trabajo limpia, redecilla si hace falta y nada de joyas. ¿Vómitos o diarrea? Avisa antes de empezar. Mantén ordenado tu lugar de trabajo. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.',
     'c.hygiene.p': 'Tomo un medicamento. Me da sueño.',
     'c.hygiene.s': 'Tu médico te da un medicamento que te da sueño. Mañana tienes que conducir una carretilla elevadora. ¿Qué haces?',
-    'c.hygiene.o1': 'Se lo dices a tu encargado antes de empezar, así puedes hacer un trabajo seguro.',
+    'c.hygiene.o1': 'Se lo dices a tu encargado antes de empezar.', // nieuw, nalezen
     'c.hygiene.o2': 'No dices nada y conduces muy despacio.',
     'c.hygiene.o3': 'Dejas de tomar el medicamento sin preguntar a tu médico.',
     'c.hygiene.w': 'Tu encargado no necesita saber qué medicamento es, solo que ahora no puedes conducir ni trabajar con máquinas. Así se protege tu seguridad y la de tus compañeros.',
@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.respect.o3': 'Tú también haces bromas sobre su origen.',
     'c.respect.w': 'Esas bromas no se aceptan en el trabajo. Contarlo es normal: la empresa tiene que mantener el lugar de trabajo seguro para todos.',
     'c.health': 'Pausas y horas de trabajo',
-    'c.health.b': 'La ley protege tu salud. ¿Trabajas más de 5,5 horas? Entonces tienes como mínimo 30 minutos de pausa (pueden ser 2 veces 15 minutos). ¿Más de 10 horas? Entonces como mínimo 45 minutos. Un cao puede tener normas de pausas un poco diferentes. Puedes trabajar como máximo 12 horas en un turno y 60 horas en una semana. Tu empresa te tiene que dar gratis el equipo de protección, como zapatos de seguridad o guantes. ¿Trabajo peligroso o un sueldo demasiado bajo? Puedes denunciarlo ante la Nederlandse Arbeidsinspectie, también sin dar tu nombre. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
+    'c.health.b': 'La ley protege tu salud. ¿Trabajas más de 5,5 horas? Entonces tienes como mínimo 30 minutos de pausa (pueden ser 2 veces 15 minutos). ¿Más de 10 horas? Entonces como mínimo 45 minutos. Un cao puede tener normas de pausas un poco diferentes. Puedes trabajar como máximo 12 horas en un turno y 60 horas en una semana. ¿Tienes menos de 18 años? Entonces puedes trabajar menos horas como máximo. Tu empresa te tiene que dar gratis el equipo de protección, como zapatos de seguridad o guantes. ¿Trabajo peligroso o un sueldo demasiado bajo? Puedes denunciarlo ante la Nederlandse Arbeidsinspectie, también sin dar tu nombre. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.', // nieuw, nalezen
     'c.health.p': 'Todavía no he tenido pausa.',
     'c.health.s': 'Has trabajado 6 horas sin pausa. Tu encargado te pide que sigas. ¿Qué haces?',
     'c.health.o1': 'Dices que ahora necesitas tu pausa.', // nagelezen (2e lezing)
@@ -724,7 +724,7 @@ const t: CultureTranslation = {
     'c.gethelp.b': '¿Ves señales de explotación, en ti o en otra persona? Busca ayuda. Puedes denunciarlo ante la Nederlandse Arbeidsinspectie, también de forma anónima, o ante la policía. Meld Misdaad Anoniem: 0800-7000. Consejo legal gratis: el Juridisch Loket. ¿En peligro? Llama al 112. Todas las personas que trabajan en los Países Bajos pueden recibir ayuda, también los migrantes. Es información general. Para tu situación: pregunta al sindicato, al Juridisch Loket o a FairWork.',
     'c.gethelp.p': 'Necesito ayuda. Me están explotando.',
     'c.gethelp.s': 'Un amigo trabaja 14 horas al día, casi no le pagan y tiene miedo de su jefe. ¿Qué puedes hacer?',
-    'c.gethelp.o1': 'Le ayudas a contactar con la Arbeidsinspectie o el Juridisch Loket, de forma anónima si él quiere.',
+    'c.gethelp.o1': 'Le ayudas a contactar con la Arbeidsinspectie o el Juridisch Loket.', // nieuw, nalezen
     'c.gethelp.o2': 'Le dices que eso es normal para los trabajadores nuevos.',
     'c.gethelp.o3': 'Le dices que espere hasta que termine su contrato y luego busque otro trabajo.',
     'c.gethelp.w': 'Hay ayuda para todas las personas que trabajan en los Países Bajos. También se puede denunciar sin dar nombres.',
@@ -868,7 +868,7 @@ const t: CultureTranslation = {
     'c.privacy.b': 'Lo que ves y oyes sobre los clientes se queda en el trabajo. No hables de los clientes fuera del trabajo, y nunca publiques fotos de ellos. Lávate las manos antes y después de cuidar. ¿Notas un cambio en un cliente, como dolor o una caída? Díselo enseguida a la enfermera. Nunca des medicamentos, a no ser que tengas la formación y el permiso para hacerlo. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.',
     'c.privacy.p': 'El señor tiene más dolor que ayer.',
     'c.privacy.s': 'Una clienta te pide sus pastillas. No tienes formación para dar medicamentos. ¿Qué haces?',
-    'c.privacy.o1': 'Le dices con amabilidad que vas a buscar a la enfermera, y lo haces enseguida.',
+    'c.privacy.o1': 'Le dices con amabilidad que vas a buscar a la enfermera.', // nieuw, nalezen
     'c.privacy.o2': 'Le das las pastillas, porque ella sabe lo que necesita.',
     'c.privacy.o3': 'Dices que no y te vas.',
     'c.privacy.w': 'Un medicamento equivocado puede ser peligroso. Buscar rápido a la persona correcta ayuda a la clienta y protege a todos.',

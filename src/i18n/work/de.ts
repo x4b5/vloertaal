@@ -652,7 +652,7 @@ const t: CultureTranslation = {
     'c.hygiene.b': 'Alkohol und Drogen bei der Arbeit, oder zur Arbeit kommen, nachdem man sie genommen hat, sind in fast allen Firmen verboten. An Maschinen und Gabelstaplern ist das sehr gefährlich, und es kann zur Kündigung führen. Macht dich ein Medikament müde oder schwindlig? Sag es deinem Vorgesetzten, damit du sicher arbeiten kannst. Welches Medikament, musst du nicht sagen. In der Lebensmittelproduktion sind die Hygieneregeln streng: Wasch dir die Hände, trag saubere Arbeitskleidung, wenn nötig ein Haarnetz, und keinen Schmuck. Erbrechen oder Durchfall? Melde es, bevor du anfängst. Halte deinen Arbeitsplatz ordentlich. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.hygiene.p': 'Ich nehme ein Medikament. Davon werde ich müde.',
     'c.hygiene.s': 'Dein Arzt gibt dir ein Medikament, das müde macht. Morgen musst du Gabelstapler fahren. Was machst du?',
-    'c.hygiene.o1': 'Sag es deinem Vorgesetzten, bevor du anfängst, damit du sicher arbeiten kannst.',
+    'c.hygiene.o1': 'Sag es deinem Vorgesetzten, bevor du anfängst.', // nieuw, nalezen
     'c.hygiene.o2': 'Sag nichts und fahr sehr langsam.',
     'c.hygiene.o3': 'Hör auf, das Medikament zu nehmen, ohne deinen Arzt zu fragen.',
     'c.hygiene.w': 'Dein Vorgesetzter muss nicht wissen, welches Medikament, nur dass du jetzt nicht fahren oder an Maschinen arbeiten kannst. So bleiben du und deine Kollegen sicher.',
@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.respect.o3': 'Mach zur Antwort Witze über seine Herkunft.',
     'c.respect.w': 'Solche Witze werden bei der Arbeit nicht akzeptiert. Es zu melden ist normal: Die Firma muss den Arbeitsplatz für alle sicher halten.',
     'c.health': 'Pausen und Arbeitszeiten',
-    'c.health.b': 'Das Gesetz schützt deine Gesundheit. Arbeitest du mehr als 5,5 Stunden? Dann bekommst du mindestens 30 Minuten Pause (das dürfen 2-mal 15 Minuten sein). Mehr als 10 Stunden? Dann mindestens 45 Minuten. Ein Tarifvertrag (cao) kann etwas andere Pausenregeln haben. Du darfst höchstens 12 Stunden in einer Schicht und 60 Stunden in einer Woche arbeiten. Dein Arbeitgeber muss dir Schutzausrüstung, zum Beispiel Sicherheitsschuhe oder Handschuhe, kostenlos geben. Unsichere Arbeit oder zu wenig Lohn? Du kannst es der Nederlandse Arbeidsinspectie melden, auch ohne deinen Namen zu nennen. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
+    'c.health.b': 'Das Gesetz schützt deine Gesundheit. Arbeitest du mehr als 5,5 Stunden? Dann bekommst du mindestens 30 Minuten Pause (das dürfen 2-mal 15 Minuten sein). Mehr als 10 Stunden? Dann mindestens 45 Minuten. Ein Tarifvertrag (cao) kann etwas andere Pausenregeln haben. Du darfst höchstens 12 Stunden in einer Schicht und 60 Stunden in einer Woche arbeiten. Unter 18? Dann darfst du weniger Stunden arbeiten. Dein Arbeitgeber muss dir Schutzausrüstung, zum Beispiel Sicherheitsschuhe oder Handschuhe, kostenlos geben. Unsichere Arbeit oder zu wenig Lohn? Du kannst es der Nederlandse Arbeidsinspectie melden, auch ohne deinen Namen zu nennen. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.', // nieuw, nalezen
     'c.health.p': 'Ich hatte noch keine Pause.',
     'c.health.s': 'Du hast 6 Stunden ohne Pause gearbeitet. Dein Vorgesetzter bittet dich weiterzumachen. Was machst du?',
     'c.health.o1': 'Sag, dass du jetzt deine Pause brauchst.', // nagelezen (2e lezing)
@@ -724,7 +724,7 @@ const t: CultureTranslation = {
     'c.gethelp.b': 'Siehst du Zeichen von Ausbeutung, bei dir oder bei jemand anderem? Hol dir Hilfe. Du kannst es der Nederlandse Arbeidsinspectie melden, auch anonym, oder der Polizei. Meld Misdaad Anoniem: 0800-7000. Kostenlose Rechtsberatung: das Juridisch Loket. In Gefahr? Ruf 112 an. Jeder, der in den Niederlanden arbeitet, kann Hilfe bekommen, auch Migranten. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
     'c.gethelp.p': 'Ich brauche Hilfe. Ich werde ausgebeutet.',
     'c.gethelp.s': 'Ein Freund arbeitet 14 Stunden am Tag, bekommt fast keinen Lohn und hat Angst vor dem Chef. Was kannst du tun?',
-    'c.gethelp.o1': 'Hilf ihm, Kontakt mit der Arbeidsinspectie oder dem Juridisch Loket aufzunehmen, anonym, wenn er will.',
+    'c.gethelp.o1': 'Hilf ihm, Kontakt mit der Arbeidsinspectie oder dem Juridisch Loket aufzunehmen.', // nieuw, nalezen
     'c.gethelp.o2': 'Sag ihm, dass das für neue Arbeiter normal ist.',
     'c.gethelp.o3': 'Sag ihm, er soll warten, bis sein Vertrag endet, und dann andere Arbeit suchen.',
     'c.gethelp.w': 'Hilfe gibt es für alle, die in den Niederlanden arbeiten. Eine Meldung geht auch ohne Namen.',
@@ -868,7 +868,7 @@ const t: CultureTranslation = {
     'c.privacy.b': 'Was du über Klienten siehst und hörst, bleibt bei der Arbeit. Sprich außerhalb der Arbeit nicht über Klienten und poste nie Fotos von ihnen. Reinige deine Hände vor und nach der Pflege. Merkst du eine Veränderung bei einem Klienten, zum Beispiel Schmerzen oder einen Sturz? Sag es sofort der Pflegefachkraft. Gib nie Medikamente, außer du bist dafür geschult und darfst es. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.privacy.p': 'Der Herr hat mehr Schmerzen als gestern.',
     'c.privacy.s': 'Eine Klientin bittet dich um ihre Tabletten. Du bist nicht geschult, Medikamente zu geben. Was machst du?',
-    'c.privacy.o1': 'Sag freundlich, dass du die Pflegefachkraft holst, und tu es sofort.',
+    'c.privacy.o1': 'Sag freundlich, dass du die Pflegefachkraft holst.', // nieuw, nalezen
     'c.privacy.o2': 'Gib ihr die Tabletten, sie weiß ja, was sie braucht.',
     'c.privacy.o3': 'Sag nein und geh weg.',
     'c.privacy.w': 'Falsche Medikamente können gefährlich sein. Schnell die richtige Person zu holen hilft der Klientin und schützt alle.',
