@@ -3,6 +3,7 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "git": { "deploymentEnabled": { "main": true, "*": false } },
   "trailingSlash": true,
   "redirects": [
     { "source": "/onderwerpen/in-de-winkel/", "destination": "/winkel/", "permanent": true },
