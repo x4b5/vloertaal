@@ -134,10 +134,10 @@ export const siteSections: AboutSection[] = [
     // The whole app is a beta (the pilot). "Our address is at the bottom of this page": on every
     // page that shows it (a language page, the professionals page) the contact comes last.
     id: 'a.beta', emoji: '🧪', title: 'A test version',
-    body: 'Vloertaal is still a test version (beta). We are testing it with a small group of learners and coaches. Not everything has been checked yet. We are still looking for experts to check the translations and the tips about rules. Did you find a mistake? You find our address at the bottom of this page.',
+    body: 'Vloertaal is still a test version (beta). We are testing it with a small group of learners and coaches. Not everything has been checked yet. We are still looking for experts to check the translations and the tips about rules. Are you an expert, or a native speaker of one of our languages, and do you want to help? Let us know. Did you find a mistake? You find our address at the bottom of this page.',
     nl: {
       title: 'Een testversie',
-      body: 'Vloertaal is nog een testversie (bèta). We testen de app met een kleine groep leerlingen en begeleiders. Nog niet alles is nagekeken. We zoeken nog experts die de vertalingen en de tips over regels nakijken. Zie je een fout? Ons adres staat onderaan deze pagina.',
+      body: 'Vloertaal is nog een testversie (bèta). We testen de app met een kleine groep leerlingen en begeleiders. Nog niet alles is nagekeken. We zoeken nog experts die de vertalingen en de tips over regels nakijken. Ben je expert, of is een van onze talen je moedertaal, en wil je helpen? Laat het ons weten. Zie je een fout? Ons adres staat onderaan deze pagina.',
     },
   },
   {
