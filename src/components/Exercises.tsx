@@ -1019,36 +1019,55 @@ function ChatChoices({ ex, lang, locked, onAnswer, correctId, voice, onPick }: P
 
 /** "How it works here": one Dutch workplace custom, with the sentence to use. Not graded. */
 export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
-  const { tip } = ex;
+  const { tip, part } = ex;
   const talking = useTalking([tip.phrase.nl]);
-  useEffect(() => { onAnswer({ correct: true }); }, [tip, onAnswer]);
+  useEffect(() => { onAnswer({ correct: true }); }, [tip, part, onAnswer]);
+  const read = part !== 'say';
+  const say = part !== 'read';
+  const badge = (
+    <div className="tip-badge">
+      <span className="tip-badge-emoji" aria-hidden><WordPicture id="" emoji={tip.emoji} size={28} /></span>
+      {/* The help language large; the Dutch name is a small label under it. */}
+      <span className="tip-badge-text tip-badge-swap">
+        <NlPair nl="Zo werkt het hier" nlClass="tip-badge-nl" className="tip-badge-main" text={ui('cultureBadge', lang)} />
+      </span>
+    </div>
+  );
+  const phrase = (
+    <div className={`tip-say ${part === 'say' ? 'tip-say-page' : ''}`}>
+      <span className="tip-say-label"><Bi text={ui('sayThis', lang)} /></span>
+      <div className="tip-say-row">
+        <span className="tip-char"><Character who={tipCast(tip, lang?.gender)} talking={talking} size={part === 'say' ? 120 : 96} /></span>
+        <div className="speaker-bubble tip-bubble">
+          <SpeakButton glyph text={tip.phrase.nl} help={lang} voice={voiceFor(tipCast(tip, lang?.gender))} />
+          <span className="tip-phrase">
+            <NlPair content nlFirst nl={breakable(tip.phrase.nl)} nlClass="tip-phrase-nl" text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+  // Page 2 of the tip: only the phrase to say, big, under the tip's title (what it is about).
+  if (!read) {
+    return (
+      <div className="exercise tip tip-page-say">
+        {badge}
+        <h2 className="prompt tip-title tip-title-small"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
+        {phrase}
+      </div>
+    );
+  }
   return (
     <div className="exercise tip">
-      <div className="tip-badge">
-        <span className="tip-badge-emoji" aria-hidden><WordPicture id="" emoji={tip.emoji} size={28} /></span>
-        {/* The help language large; the Dutch name is a small label under it. */}
-        <span className="tip-badge-text tip-badge-swap">
-          <NlPair nl="Zo werkt het hier" nlClass="tip-badge-nl" className="tip-badge-main" text={ui('cultureBadge', lang)} />
-        </span>
-      </div>
+      {badge}
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
       {/* In Belgium (docs/taal-belgie.md): a Dutch tip that differs there says so; a Belgian tip says it is new. */}
       {tipNlOnly(tip) && <BeNote lang={lang} />}
       {isTaalBeId(tip.id) && <BeNote lang={lang} kind="beta" />}
-      {/* In the lesson only the first sentences; the whole text is on "Zo werkt het hier". */}
-      <TipBody text={shortTip(tipBody(tip, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl)} lang={lang} />
-      <div className="tip-say">
-        <span className="tip-say-label"><Bi text={ui('sayThis', lang)} /></span>
-        <div className="tip-say-row">
-          <span className="tip-char"><Character who={tipCast(tip, lang?.gender)} talking={talking} size={96} /></span>
-          <div className="speaker-bubble tip-bubble">
-            <SpeakButton glyph text={tip.phrase.nl} help={lang} voice={voiceFor(tipCast(tip, lang?.gender))} />
-            <span className="tip-phrase">
-              <NlPair content nlFirst nl={breakable(tip.phrase.nl)} nlClass="tip-phrase-nl" text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
-            </span>
-          </div>
-        </div>
-      </div>
+      {/* The first sentences (the lead); the whole tip is in Hulp › Zo werkt het hier. On a page of
+          its own (part 'read') without the "…": that only made the learner look for more here. */}
+      <TipBody text={say ? shortTip(tipBody(tip, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(tipBody(tip, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} />
+      {say && phrase}
       <p className="tips-note"><InfoIcon size={16} /><Bi text={ui('tipsNote', lang)} /></p>
     </div>
   );
@@ -1101,6 +1120,9 @@ function helpLines(text: string): string[] {
   if (lines.length > 1 && lines[lines.length - 1] === '…') lines.splice(-2, 2, `${lines[lines.length - 2]} …`);
   return lines;
 }
+
+/** A shortened tip without its closing "…". */
+const noEllipsis = (t: Bilingual): Bilingual => ({ ...t, en: t.en.replace(/\s*…$/u, ''), help: t.help?.replace(/\s*…$/u, '') });
 
 /** Sentences of a tip shown in a lesson. */
 export const TIP_SENTENCES = 3;

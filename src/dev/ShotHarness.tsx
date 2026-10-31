@@ -384,7 +384,9 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // Workplace culture: the speak-up tip and its situation (best option listed first);
   // &tip=l.hello another lesson's tip (that one quotes Dutch: "Zeg maar je, hoor!").
   const speakTip = tipForLesson(q.get('tip') ?? 'l.speakup') ?? tipForLesson('l.speakup')!;
-  exercises.tip = { kind: 'tip', tip: speakTip };
+  // The tip in two pages: &part=read (default) or &part=say; &part=both as before the split.
+  const tipPart = q.get('part');
+  exercises.tip = { kind: 'tip', tip: speakTip, ...(tipPart === 'both' ? {} : { part: tipPart === 'say' ? 'say' as const : 'read' as const }) };
   exercises.situation = { kind: 'situation', tip: speakTip, options: speakTip.options };
   // A saying in a later lesson (src/content/sayings.ts): /?shot=saying, and its question
   // /?shot=saying-ask; &saying=l.health another lesson's saying (default De klant is koning).

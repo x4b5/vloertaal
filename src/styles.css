@@ -4687,3 +4687,8 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
    always there but taking no room or taps; the note looks like the sound note, above every screen. */
 .save-note-live { position: fixed; top: 0; left: 0; width: 0; height: 0; z-index: 40; pointer-events: none; }
 .save-note { z-index: 40; }
+
+/* "Zeg het zo" on a page of its own (the tip's second page): the phrase big, the title small above it. */
+.tip-page-say .tip-title-small { font-size: 1.05rem; color: var(--muted); }
+.tip-say-page { margin-top: 12px; }
+.tip-say-page .tip-phrase-nl { font-size: 1.35rem; }
