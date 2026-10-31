@@ -98,7 +98,8 @@ describe('"Wat zeg je?" before the chat', () => {
             expect(list).toHaveLength(without.length + 1);
             expect(rest).toEqual(without);
           }
-          expect(list.length).toBeLessThanOrEqual(21);
+          // 21 exercises, plus the tip's second page ("Zeg het zo", only a phrase to hear) since the tip has two pages.
+          expect(list.length - list.filter((e) => e.kind === 'tip' && e.part === 'say').length).toBeLessThanOrEqual(21);
           // Never two speaking exercises in a row.
           list.forEach((e, i) => { if (e.kind === 'speak') expect(list[i + 1]?.kind).not.toBe('speak'); });
         }
