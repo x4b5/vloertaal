@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Box, Bubble, Bust, Clock, Cross, CurveArrow, Dots, ExclaimMark, Ground, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Bubble, Bust, Clock, Cross, Dots, ExclaimMark, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 
 /** Word pictures, group 6 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
@@ -67,22 +67,6 @@ export default {
     <g>
       <Bust who="amina" x={54} y={120} scale={0.74} emotion="sad" tilt={7} bold />
       <RainCloud x={92} y={22} s={0.95} />
-    </g>
-  ),
-
-  // "eerlijk": fair — two co-workers get exactly the same: two equal stacks of boxes, a big
-  // equals sign between them and a green tick: an equal share
-  'w.eerlijk': () => (
-    <g>
-      <Ground cx={30} cy={104} rx={20} ry={4} />
-      <Ground cx={90} cy={104} rx={20} ry={4} />
-      <Box x={14} y={74} w={26} h={28} depth={8} />
-      <Box x={14} y={46} w={26} h={28} depth={8} />
-      <Box x={74} y={74} w={26} h={28} depth={8} />
-      <Box x={74} y={46} w={26} h={28} depth={8} />
-      <path d="M53 64H67M53 78H67" stroke={PAL.skyShade} strokeWidth="7" strokeLinecap="round" transform="translate(0 2)" />
-      <path d="M53 64H67M53 78H67" stroke={PAL.sky} strokeWidth="7" strokeLinecap="round" />
-      <Tick x={60} y={24} r={14} />
     </g>
   ),
 
@@ -163,43 +147,6 @@ export default {
     </g>
   ),
 
-  // "lukken": it works out — the last piece goes into the puzzle; Jada's hand holds it,
-  // an arrow shows it fits, sparkles where it clicks in
-  'w.lukken': () => (
-    <g>
-      <g transform="translate(8 18) scale(0.88)">
-        {/* Board: depth edge, three pieces in place, one empty spot */}
-        <rect x="10" y="22" width="68" height="68" rx="7" fill={PAL.paperShade} transform="translate(0 4)" />
-        <rect x="10" y="22" width="68" height="68" rx="7" fill={PAL.mist} />
-        <rect x="44" y="56" width="32" height="32" rx="3" fill={PAL.steel} opacity=".55" />
-        <rect x="12" y="24" width="32" height="32" rx="4" fill={PAL.yellow} />
-        <circle cx="44" cy="40" r="6" fill={PAL.yellow} />
-        <rect x="44" y="24" width="32" height="32" rx="4" fill={PAL.sky} />
-        <circle cx="60" cy="56" r="6" fill={PAL.sky} />
-        <rect x="12" y="56" width="32" height="32" rx="4" fill={PAL.green} />
-        <circle cx="28" cy="56" r="6" fill={PAL.green} />
-        <circle cx="44" cy="72" r="6" fill={PAL.green} />
-        <Shine d="M17 36V29H24" width={3} color={PAL.yellowShine} opacity={0.9} />
-        {/* The last piece, on its way into the empty spot */}
-        <g transform="rotate(14 96 10)">
-          <mask id="g6-lukken-piece">
-            <rect x="80" y="-6" width="32" height="36" rx="4" fill="#fff" />
-            <circle cx="96" cy="-6" r="6.6" fill="#000" />
-            <circle cx="80" cy="10" r="6.6" fill="#000" />
-          </mask>
-          <g mask="url(#g6-lukken-piece)">
-            <rect x="80" y="-2" width="32" height="32" rx="4" fill={PAL.orangeShade} />
-            <rect x="80" y="-6" width="32" height="32" rx="4" fill={PAL.orange} />
-            <path d="M105 0V20" stroke={PAL.orangeShade} strokeWidth="5" strokeLinecap="round" opacity=".5" />
-          </g>
-        </g>
-        <CurveArrow from={[100, 38]} to={[72, 62]} bend={-12} color={PAL.sky} width={6} head={11} />
-      </g>
-      <Sparkle x={104} y={70} r={8} />
-      <Sparkle x={18} y={22} r={5.5} color={PAL.ok} />
-    </g>
-  ),
-
   // "het oneens zijn": to disagree — one says yes (tick), the other says no (cross)
   'w.oneens': () => (
     <g>
@@ -250,20 +197,6 @@ export default {
       <Moon x={92} y={30} r={17} />
       <Sparkle x={70} y={16} r={5} color={PAL.yellowLight} />
       <Clock cx={92} cy={84} r={17} hour={10} minute={0} rim={PAL.navy} rimShade={PAL.navyShade} />
-    </g>
-  ),
-
-  // "misschien": maybe — Henk weighs it up: yes or no? Both a tick and a cross in his
-  // thought bubble, nothing decided yet
-  'w.misschien': () => (
-    <g>
-      <Bust who="henk" x={36} y={122} scale={0.62} expr="thinking" />
-      <circle cx="58" cy="60" r="3.4" fill={PAL.ice} />
-      <circle cx="64" cy="52" r="4.6" fill={PAL.ice} />
-      <Bubble x={56} y={10} w={56} h={36} tail="none">
-        <Tick x={72} y={28} r={11} />
-        <Cross x={96} y={28} r={11} />
-      </Bubble>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

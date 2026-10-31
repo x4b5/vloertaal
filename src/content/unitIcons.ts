@@ -11,7 +11,8 @@ export const unitIcons: Record<string, string> = {
   'u.warehouse': 'w.doos',
   'u.data': 'w.naam',
   'u.time': 'w.uren',
-  'u.teamwork': 'w.samen',
+  // A calmer own icon (three stacked hands): the word picture "samen" was busy at 32-44 px.
+  'u.teamwork': 'i.teamwork',
   'u.apply': 'w.cv',
   'u.contract': 'w.contract',
   'u.papers': 'w.gemeente',
@@ -40,7 +41,8 @@ export const unitIcons: Record<string, string> = {
   'u.finish': 'w.klaar',
   'u.tech': 'w.boor',
   'u.garage': 'w.garage',
-  'u.stage': 'w.opleiding',
+  // Doing a work placement: the school backpack with a hard hat ("de stage"), not the mortarboard.
+  'u.stage': 'w.stage',
   // Taking part in the Netherlands (the council and voting, the police): the ballot box, not a postbox.
   'u.society': 'w.stemmen',
   'u.online': 'w.computer',
