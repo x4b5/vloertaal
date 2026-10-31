@@ -85,13 +85,13 @@ export const uk: Gloss = {
     "be.s.transit.2": "У мене є проїзний на поїзд.", // nieuw, nalezen
     "be.c.transit.a": "Ні, автобусом De Lijn. Він зупиняється біля дверей.", // nieuw, nalezen
     "be.c.transit": "Автобус, поїзд і витрати на дорогу", // = c.transit
-    "be.c.transit.b": "У Фландрії ти їздиш автобусом або трамваєм De Lijn і поїздом NMBS. В автобусі не можна платити готівкою: купи квиток у застосунку або заплати банківською карткою в автобусі. Їздиш на роботу щодня? Тоді проїзний (abonnement) часто дешевший. Їздиш на роботу поїздом? Тоді роботодавець оплачує частину твого проїзного на поїзд. Щодо автобуса, трамвая чи велосипеда — це залежить від твого сектора: запитай про це. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+    "be.c.transit.b": "У Фландрії ти їздиш автобусом або трамваєм De Lijn і поїздом NMBS. В автобусі не можна платити готівкою: купи квиток у застосунку або заплати банківською карткою в автобусі. Їздиш на роботу щодня? Тоді проїзний (abonnement) часто дешевший. Їздиш на роботу поїздом? Тоді роботодавець оплачує частину твого проїзного на поїзд. Щодо автобуса, трамвая чи велосипеда — це залежить від твоєї галузі: запитай про це. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.p": "Я отримую гроші за дорогу?", // = c.transit.p
     "be.c.transit.s": "Ти щодня їздиш на роботу поїздом. Колега отримує гроші за проїзний на поїзд, а ти ні. Що ти зробиш?", // nieuw, nalezen
-    "be.c.transit.o1": "Запитати роботодавця про гроші за поїзд.", // nieuw, nalezen
+    "be.c.transit.o1": "Запитаєш роботодавця про гроші за поїзд.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.o2": "Нічого не скажеш, бо це, мабуть, не для тебе.", // = c.transit.o2
-    "be.c.transit.o3": "Чекати: це отримують тільки працівники з довгим контрактом.", // nieuw, nalezen
-    "be.c.transit.w": "За поїзд роботодавець мусить оплатити частину твого проїзного. Щодо інших способів доїзду — це залежить від сектора. Запитати про це — нормально.", // nieuw, nalezen
+    "be.c.transit.o3": "Чекатимеш: це отримують тільки працівники з довгим договором.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.transit.w": "За поїзд роботодавець мусить оплатити частину твого проїзного. Щодо інших способів доїзду — це залежить від галузі. Запитати про це — нормально.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const tr: Gloss = {
@@ -106,9 +106,9 @@ export const tr: Gloss = {
     "be.c.transit.b": "Flandra’da De Lijn’in otobüsüne veya tramvayına ve NMBS’nin trenine binersin. Otobüste nakit ödeyemezsin: bileti uygulamadan al ya da otobüste banka kartınla öde. Her gün işe mi gidiyorsun? O zaman abonman (abonnement) çoğu zaman daha ucuzdur. İşe trenle mi gidiyorsun? O zaman işveren tren abonmanının bir kısmını öder. Otobüs, tramvay veya bisiklet için bu sektörüne bağlıdır: bunu sor. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
     "be.c.transit.p": "Yol masraflarım için para alıyor muyum?", // = c.transit.p
     "be.c.transit.s": "Her gün işe trenle gidiyorsun. Bir iş arkadaşın tren abonmanı için para alıyor, sen almıyorsun. Ne yaparsın?", // nieuw, nalezen
-    "be.c.transit.o1": "İşverene tren parasını sormak.", // nieuw, nalezen
+    "be.c.transit.o1": "İşverene tren parasını sorarsın.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.o2": "Muhtemelen senin için olmadığından hiçbir şey söylemezsin.", // = c.transit.o2
-    "be.c.transit.o3": "Beklemek: bunu sadece uzun sözleşmesi olanlar alır.", // nieuw, nalezen
+    "be.c.transit.o3": "Beklersin: bunu sadece uzun sözleşmesi olanlar alır.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.w": "Tren için işveren abonmanının bir kısmını ödemek zorundadır. Diğer yolculuk şekilleri için bu sektörüne bağlıdır. Bunu sormak normaldir.", // nieuw, nalezen
 };
 
@@ -142,9 +142,9 @@ export const ro: Gloss = {
     "be.c.transit.b": "În Flandra iei autobuzul sau tramvaiul De Lijn și trenul NMBS. În autobuz nu poți plăti cash: cumpără biletul din aplicație sau plătește cu cardul bancar în autobuz. Mergi la muncă în fiecare zi? Atunci un abonament (abonnement) e des mai ieftin. Mergi la muncă cu trenul? Atunci angajatorul plătește o parte din abonamentul tău de tren. Pentru autobuz, tramvai sau bicicletă, depinde de sectorul tău: întreabă. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
     "be.c.transit.p": "Primesc bani pentru drum?", // = c.transit.p
     "be.c.transit.s": "Mergi la muncă în fiecare zi cu trenul. Un coleg primește bani pentru abonamentul de tren, tu nu. Ce faci?", // nieuw, nalezen
-    "be.c.transit.o1": "Să-l întrebi pe angajator de banii pentru tren.", // nieuw, nalezen
+    "be.c.transit.o1": "Îl întrebi pe angajator de banii pentru tren.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.o2": "Nu spui nimic, pentru că probabil nu e pentru tine.", // = c.transit.o2
-    "be.c.transit.o3": "Să aștepți: doar cei cu contract lung primesc banii.", // nieuw, nalezen
+    "be.c.transit.o3": "Aștepți: doar cei cu contract lung primesc banii.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.w": "Pentru tren, angajatorul trebuie să plătească o parte din abonament. Pentru alte feluri de a călători, depinde de sector. E normal să întrebi.", // nieuw, nalezen
 };
 
@@ -160,9 +160,9 @@ export const bg: Gloss = {
     "be.c.transit.b": "Във Фландрия се возиш на автобус или трамвай на De Lijn и на влак на NMBS. В автобуса не може да платиш в брой: купи билет в приложението или плати с банкова карта в автобуса. Пътуваш до работа всеки ден? Тогава абонаментът (abonnement) често е по-евтин. Пътуваш до работа с влак? Тогава работодателят плаща част от абонамента ти за влака. За автобус, трамвай или колело зависи от сектора ти: попитай. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
     "be.c.transit.p": "Получавам ли пари за пътните разходи?", // = c.transit.p
     "be.c.transit.s": "Всеки ден пътуваш до работа с влак. Колега получава пари за абонамента си за влака, а ти не. Какво правиш?", // nieuw, nalezen
-    "be.c.transit.o1": "Да попиташ работодателя за парите за влака.", // nieuw, nalezen
+    "be.c.transit.o1": "Питаш работодателя за парите за влака.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.o2": "Не казваш нищо, защото сигурно не е за теб.", // = c.transit.o2
-    "be.c.transit.o3": "Да чакаш: получават го само работниците с дълъг договор.", // nieuw, nalezen
+    "be.c.transit.o3": "Чакаш: получават го само работниците с дълъг договор.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.w": "За влака работодателят трябва да плати част от абонамента ти. За другите начини на пътуване зависи от сектора. Нормално е да попиташ.", // nieuw, nalezen
 };
 

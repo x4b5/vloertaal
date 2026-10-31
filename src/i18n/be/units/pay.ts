@@ -112,9 +112,9 @@ export const uk: Gloss = {
     'be.c.payslip.q': "Ти отримав / отримала розрахунковий лист?", // nieuw, nalezen
     'be.w.toeslag': "премія, доплата (наприклад, за нічну роботу)", // nieuw, nalezen
     'be.w.minimumloon': "шкала мінімальної оплати (твоєї галузі)", // nieuw, nalezen
-    'be.s.extra.1': "Чи я отримую премію за нічну роботу?", // nieuw, nalezen
+    'be.s.extra.1': "Чи отримую я премію за нічну роботу?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.payslip': "Перевіряй свій loonbrief", // nieuw, nalezen
-    'be.c.payslip.b': "Brutoloon — це твоя зарплата до будь-яких відрахувань. Nettoloon — це те, що приходить на твій банківський рахунок. Між ними відраховують дві речі: RSZ (соціальне страхування, 13.07% від зарплати брутто) і bedrijfsvoorheffing (аванс податку). Роботодавець мусить давати тобі розрахунковий лист (loonbrief). Там часто є номер твого paritair comité: домовленості твоєї галузі, також про мінімальну оплату. Отримуєш талони на харчування (maaltijdcheques)? Невелику частину ти платиш сам / сама. Перевіряй години й оплату в кожному loonbrief і записуй свої робочі години. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+    'be.c.payslip.b': "Brutoloon — це твоя зарплата до будь-яких відрахувань. Nettoloon — це те, що приходить на твій банківський рахунок. Між ними відраховують дві речі: RSZ (соціальне страхування, 13,07% від зарплати брутто) і bedrijfsvoorheffing (аванс податку). Роботодавець мусить давати тобі розрахунковий лист (loonbrief). Там часто є номер твого paritair comité: домовленості твоєї галузі, також про мінімальну оплату. Отримуєш талони на харчування (maaltijdcheques)? Невелику частину ти платиш сам / сама. Перевіряй години й оплату в кожному loonbrief і записуй свої робочі години. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.payslip.p': "Я працював / працювала більше годин. Можете перевірити?", // nieuw, nalezen
     'be.c.payslip.s': "У твоєму loonbrief менше годин, ніж ти працював / працювала. Що ти зробиш?", // nieuw, nalezen
     'be.c.payslip.o1': "Покажеш свої записи й попросиш роботодавця перевірити.", // nieuw, nalezen
@@ -122,9 +122,9 @@ export const uk: Gloss = {
     'be.c.payslip.o3': "Почекаєш місяць: у наступному loonbrief усе буде правильно.", // nieuw, nalezen
     'be.c.payslip.w': "Помилки в розрахунковому листі бувають. Питати про це нормально, це твоє право. Твої записи дат і годин дуже допомагають. Досі неправильно? Профспілка може допомогти.", // nieuw, nalezen
     'be.c.extra': "Відпускні й премія наприкінці року", // nieuw, nalezen
-    'be.c.extra.b': "Ти отримуєш відпускні (vakantiegeld). Вони залежать від роботи в попередньому році. Ти bediende (часто робота в офісі чи магазині)? Тоді платить роботодавець: звичайна зарплата під час відпустки, а раз на рік ще додаткові гроші (dubbel vakantiegeld). Ти arbeider (часто робота руками)? Тоді платить відпускна каса (vakantiekas або RJV), з травня. Багато галузей також дають премію наприкінці року (eindejaarspremie). Твоя зарплата ніколи не може бути нижчою за мінімум твого paritair comité (barema). Понаднормові дають щонайменше 50% доплати, а часто й вихідні пізніше. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+    'be.c.extra.b': "Ти отримуєш відпускні (vakantiegeld). Вони залежать від роботи в попередньому році. Ти bediende (часто робота в офісі чи магазині)? Тоді платить роботодавець: звичайна зарплата під час відпустки, а раз на рік ще додаткові гроші (dubbel vakantiegeld). Ти arbeider (часто робота руками)? Тоді платить відпускна каса (vakantiekas або RJV), з травня. Багато галузей також дають премію наприкінці року (eindejaarspremie). Твоя зарплата ніколи не може бути нижчою за мінімум твого paritair comité (barema). Понаднормова робота дає щонайменше 50% доплати, а часто й вихідні пізніше. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.extra.p': "Коли я отримаю відпускні?", // nieuw, nalezen
-    'be.c.extra.s': "Ти arbeider на фабриці. Колега каже: „У травні ти отримаєш додаткові гроші, але не від шефа.“ Що це?", // nieuw, nalezen
+    'be.c.extra.s': "Ти arbeider на фабриці. Колега каже: «У травні ти отримаєш додаткові гроші, але не від шефа.» Що це?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.extra.o1': "Відпускні, від відпускної каси (vakantiekas).", // nieuw, nalezen
     'be.c.extra.o2': "Подарунок від профспілки, для її членів.", // nieuw, nalezen
     'be.c.extra.o3': "Тринадцята зарплата від шефа, для всіх.", // nieuw, nalezen
@@ -139,7 +139,7 @@ export const tr: Gloss = {
     'be.w.minimumloon': "asgari ücret skalası (sektörünün)", // nieuw, nalezen
     'be.s.extra.1': "Gece işi için prim alıyor muyum?", // nieuw, nalezen
     'be.c.payslip': "Loonbrief’ini kontrol et", // nieuw, nalezen
-    'be.c.payslip.b': "Brutoloon, hiçbir kesinti yapılmadan önceki maaşındır. Nettoloon, banka hesabına gelen paradır. Arada iki şey kesilir: RSZ (sosyal güvenlik, brüt maaşın %13.07’si) ve bedrijfsvoorheffing (vergi avansı). İşverenin sana bir maaş bordrosu (loonbrief) vermek zorunda. Üzerinde çoğu zaman paritair comité’nin numarası vardır: sektörünün anlaşmaları, asgari ücret dahil. Yemek çeki (maaltijdcheques) alıyor musun? Küçük bir kısmını kendin ödersin. Her loonbrief’te saatleri ve ücreti kontrol et, çalıştığın saatleri not et. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
+    'be.c.payslip.b': "Brutoloon, hiçbir kesinti yapılmadan önceki maaşındır. Nettoloon, banka hesabına gelen paradır. Arada iki şey kesilir: RSZ (sosyal güvenlik, brüt maaşın %13,07’si) ve bedrijfsvoorheffing (vergi avansı). İşverenin sana bir maaş bordrosu (loonbrief) vermek zorunda. Üzerinde çoğu zaman paritair comité’nin numarası vardır: sektörünün anlaşmaları, asgari ücret dahil. Yemek çeki (maaltijdcheques) alıyor musun? Küçük bir kısmını kendin ödersin. Her loonbrief’te saatleri ve ücreti kontrol et, çalıştığın saatleri not et. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.payslip.p': "Daha fazla saat çalıştım. Kontrol edebilir misiniz?", // nieuw, nalezen
     'be.c.payslip.s': "Loonbrief’inde çalıştığından daha az saat görünüyor. Ne yaparsın?", // nieuw, nalezen
     'be.c.payslip.o1': "Notlarını gösterip işverenden kontrol etmesini istersin.", // nieuw, nalezen
@@ -189,7 +189,7 @@ export const ro: Gloss = {
     'be.w.minimumloon': "grila de salarii minime (a sectorului tău)", // nieuw, nalezen
     'be.s.extra.1': "Primesc o primă pentru munca de noapte?", // nieuw, nalezen
     'be.c.payslip': "Verifică-ți loonbrief-ul", // nieuw, nalezen
-    'be.c.payslip.b': "Brutoloon e salariul tău înainte de orice reținere. Nettoloon e ce primești în contul bancar. Între ele se rețin două lucruri: RSZ (asigurările sociale, 13.07% din salariul brut) și bedrijfsvoorheffing (un avans din impozit). Angajatorul trebuie să-ți dea un fluturaș de salariu (loonbrief). Pe el vezi des numărul paritair comité-ului tău: înțelegerile sectorului tău, și despre salariul minim. Primești tichete de masă (maaltijdcheques)? O mică parte o plătești tu. Verifică orele și plata pe fiecare loonbrief și notează-ți orele lucrate. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
+    'be.c.payslip.b': "Brutoloon e salariul tău înainte de orice reținere. Nettoloon e ce primești în contul bancar. Între ele se rețin două lucruri: RSZ (asigurările sociale, 13,07% din salariul brut) și bedrijfsvoorheffing (un avans din impozit). Angajatorul trebuie să-ți dea un fluturaș de salariu (loonbrief). Pe el vezi des numărul paritair comité-ului tău: înțelegerile sectorului tău, și despre salariul minim. Primești tichete de masă (maaltijdcheques)? O mică parte o plătești tu. Verifică orele și plata pe fiecare loonbrief și notează-ți orele lucrate. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.payslip.p': "Am lucrat mai multe ore. Puteți verifica?", // nieuw, nalezen
     'be.c.payslip.s': "Pe loonbrief-ul tău sunt mai puține ore decât ai lucrat. Ce faci?", // nieuw, nalezen
     'be.c.payslip.o1': "Îți arăți notițele și îi ceri angajatorului să verifice.", // nieuw, nalezen
@@ -214,7 +214,7 @@ export const bg: Gloss = {
     'be.w.minimumloon': "скалата на минималните заплати (на твоя сектор)", // nieuw, nalezen
     'be.s.extra.1': "Получавам ли премия за нощен труд?", // nieuw, nalezen
     'be.c.payslip': "Проверявай своя loonbrief", // nieuw, nalezen
-    'be.c.payslip.b': "Brutoloon е заплатата ти преди всякакви удръжки. Nettoloon е това, което идва по банковата ти сметка. Между тях се удържат две неща: RSZ (социалното осигуряване, 13.07% от брутната заплата) и bedrijfsvoorheffing (аванс за данъка). Работодателят трябва да ти дава фиш за заплата (loonbrief). На него често има номера на твоя paritair comité: споразуменията на твоя сектор, също за минималната заплата. Получаваш ли ваучери за храна (maaltijdcheques)? Малка част от тях плащаш ти. Проверявай часовете и заплатата на всеки loonbrief и записвай часовете си. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
+    'be.c.payslip.b': "Brutoloon е заплатата ти преди всякакви удръжки. Nettoloon е това, което идва по банковата ти сметка. Между тях се удържат две неща: RSZ (социалното осигуряване, 13,07% от брутната заплата) и bedrijfsvoorheffing (аванс за данъка). Работодателят трябва да ти дава фиш за заплата (loonbrief). На него често има номера на твоя paritair comité: споразуменията на твоя сектор, също за минималната заплата. Получаваш ли ваучери за храна (maaltijdcheques)? Малка част от тях плащаш ти. Проверявай часовете и заплатата на всеки loonbrief и записвай часовете си. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.payslip.p': "Работих повече часове. Можете ли да проверите?", // nieuw, nalezen
     'be.c.payslip.s': "На твоя loonbrief има по-малко часове, отколкото си работил / работила. Какво правиш?", // nieuw, nalezen
     'be.c.payslip.o1': "Показваш бележките си и молиш работодателя да провери.", // nieuw, nalezen
@@ -227,7 +227,7 @@ export const bg: Gloss = {
     'be.c.extra.s': "Работиш като arbeider във фабрика. Колега казва: „През май получаваш допълнителни пари, но не от шефа.“ Какво е това?", // nieuw, nalezen
     'be.c.extra.o1': "Отпускарски пари, от касата за отпуски (vakantiekas).", // nieuw, nalezen
     'be.c.extra.o2': "Подарък от синдиката, за членовете му.", // nieuw, nalezen
-    'be.c.extra.o3': "Тринайсета заплата от шефа, за всички.", // nieuw, nalezen
+    'be.c.extra.o3': "Тринадесета заплата от шефа, за всички.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.extra.w': "За arbeider отпускарските пари плаща касата за отпуски, не шефът. Това е твое право, не подарък: трупаш ги с работата си. Премията в края на годината зависи от сектора ти.", // nieuw, nalezen
 };
 

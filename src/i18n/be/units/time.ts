@@ -50,18 +50,18 @@ export const prs: Gloss = {
 
 export const uk: Gloss = {
     "be.c.sick": { m: "Як повідомити, що ти хворий", f: "Як повідомити, що ти хвора", x: "Як повідомити про хворобу" }, // = c.sick
-    "be.c.sick.b": "Подзвони керівнику особисто, до початку зміни, якщо у фірмі немає іншого правила. Працюєш через кадрове агентство (interimkantoor)? Повідом і агентство. Ти не мусиш казати, яка в тебе хвороба. Часто потрібна довідка від лікаря (ziektebriefje), іноді з першого дня: коли саме, сказано в правилах роботи (arbeidsreglement). Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+    "be.c.sick.b": "Подзвони керівнику особисто, до початку зміни, якщо у фірмі немає іншого правила. Працюєш через агентство тимчасової роботи (interimkantoor)? Повідом і агентство. Ти не мусиш казати, яка в тебе хвороба. Часто потрібна довідка від лікаря (ziektebriefje), іноді з першого дня: коли саме, сказано в правилах внутрішнього розпорядку (arbeidsreglement). Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "Я хворий. Сьогодні не можу прийти на роботу.", f: "Я хвора. Сьогодні не можу прийти на роботу.", x: "Я хворий / хвора. Сьогодні не можу прийти на роботу." }, // = c.sick.p
     "be.c.sick.s": "Ти прокидаєшся з температурою. Твоя зміна починається о 7:00. Що ти зробиш?", // = c.sick.s
     "be.c.sick.o1": "Подзвониш керівнику до 7:00.", // = c.sick.o1
     "be.c.sick.o2": "Попросиш колегу пізніше сказати начальнику.", // = c.sick.o2
     "be.c.sick.o3": "Залишишся вдома і подзвониш завтра.", // = c.sick.o3
-    "be.c.sick.w": "Повідомити про хворобу самому і вчасно — правило на більшості робочих місць. Роботодавець може запитати, скільки це триватиме, але не яка це хвороба. Запитай, чи потрібна тобі довідка від лікаря.", // nieuw, nalezen
+    "be.c.sick.w": "Особисто і вчасно повідомити про хворобу — правило на більшості робочих місць. Роботодавець може запитати, скільки це триватиме, але не яка це хвороба. Запитай, чи потрібна тобі довідка від лікаря.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const tr: Gloss = {
     "be.c.sick": "Hastalık bildirimi nasıl yapılır", // = c.sick
-    "be.c.sick.b": "Vardiyan başlamadan önce amirini kendin ara, şirketinin başka bir kuralı yoksa. Bir geçici iş bürosu (interimkantoor) üzerinden mi çalışıyorsun? Büroya da haber ver. Hangi hastalığın olduğunu söylemek zorunda değilsin. Çoğu zaman doktor raporu (ziektebriefje) gerekir, bazen ilk günden: ne zaman gerektiğini iş yönetmeliği (arbeidsreglement) söyler. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
+    "be.c.sick.b": "Vardiyan başlamadan önce amirini kendin ara, şirketinin başka bir kuralı yoksa. Bir geçici iş ajansı (interimkantoor) üzerinden mi çalışıyorsun? Ajansa da haber ver. Hangi hastalığın olduğunu söylemek zorunda değilsin. Çoğu zaman doktor raporu (ziektebriefje) gerekir, bazen ilk günden: ne zaman gerektiğini çalışma yönetmeliği (arbeidsreglement) söyler. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": "Hastayım. Bugün işe gelemiyorum.", // = c.sick.p
     "be.c.sick.s": "Ateşle uyanıyorsun. Vardiyan 7:00'de başlıyor. Ne yaparsın?", // = c.sick.s
     "be.c.sick.o1": "Saat 7:00'den önce amirini ararsın.", // = c.sick.o1
@@ -83,24 +83,24 @@ export const pl: Gloss = {
 
 export const ro: Gloss = {
     "be.c.sick": { m: "Cum anunți că ești bolnav", f: "Cum anunți că ești bolnavă", x: "Cum anunți că te-ai îmbolnăvit" }, // = c.sick
-    "be.c.sick.b": "Sună-ți personal șeful, înainte să înceapă tura, dacă firma nu are altă regulă. Lucrezi printr-un birou de muncă temporară (interimkantoor)? Anunță și biroul. Nu trebuie să spui ce boală ai. Deseori ai nevoie de un certificat medical (ziektebriefje), uneori din prima zi: regulamentul de muncă (arbeidsreglement) spune când. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
+    "be.c.sick.b": "Sună-ți personal șeful, înainte să înceapă tura, dacă firma nu are altă regulă. Lucrezi printr-o agenție de muncă temporară (interimkantoor)? Anunță și agenția. Nu trebuie să spui ce boală ai. Deseori ai nevoie de o adeverință medicală (ziektebriefje), uneori din prima zi: regulamentul de muncă (arbeidsreglement) spune când. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "Sunt bolnav. Azi nu pot veni la muncă.", f: "Sunt bolnavă. Azi nu pot veni la muncă.", x: "Sunt bolnav / bolnavă. Azi nu pot veni la muncă." }, // = c.sick.p
     "be.c.sick.s": "Te trezești cu febră. Tura ta începe la 7:00. Ce faci?", // = c.sick.s
     "be.c.sick.o1": "Îl suni pe șef înainte de 7:00.", // = c.sick.o1
     "be.c.sick.o2": "Îi ceri unui coleg să-i spună mai târziu șefului.", // = c.sick.o2
     "be.c.sick.o3": "Stai acasă și suni mâine.", // = c.sick.o3
-    "be.c.sick.w": "Să anunți boala personal și la timp e regula în majoritatea locurilor de muncă. Angajatorul poate întreba cât va dura, dar nu ce boală e. Întreabă dacă ai nevoie de un certificat medical.", // nieuw, nalezen
+    "be.c.sick.w": "Să anunți boala personal și la timp e regula în majoritatea locurilor de muncă. Angajatorul poate întreba cât va dura, dar nu ce boală e. Întreabă dacă ai nevoie de o adeverință medicală.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const bg: Gloss = {
     "be.c.sick": { m: "Как да съобщиш, че си болен", f: "Как да съобщиш, че си болна", x: "Как да съобщиш за болест" }, // = c.sick
-    "be.c.sick.b": "Обади се лично на началника си, преди да започне смяната, освен ако фирмата няма друго правило. Работиш чрез агенция за временна работа (interimkantoor)? Кажи и на агенцията. Не е нужно да казваш каква болест имаш. Често трябва медицинска бележка (ziektebriefje), понякога от първия ден: правилникът за работа (arbeidsreglement) казва кога. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
+    "be.c.sick.b": "Обади се лично на началника си, преди да започне смяната, освен ако фирмата няма друго правило. Работиш чрез агенция за временна работа (interimkantoor)? Кажи и на агенцията. Не е нужно да казваш каква болест имаш. Често трябва болнична бележка (ziektebriefje), понякога от първия ден: правилникът за работа (arbeidsreglement) казва кога. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "Болен съм. Днес не мога да дойда на работа.", f: "Болна съм. Днес не мога да дойда на работа.", x: "Болен / болна съм. Днес не мога да дойда на работа." }, // = c.sick.p
     "be.c.sick.s": "Събуждаш се с температура. Смяната ти започва в 7:00. Какво правиш?", // = c.sick.s
     "be.c.sick.o1": "Обаждаш се на началника преди 7:00.", // = c.sick.o1
     "be.c.sick.o2": "Молиш колега да каже на шефа по-късно.", // = c.sick.o2
     "be.c.sick.o3": "Оставаш вкъщи и се обаждаш утре.", // = c.sick.o3
-    "be.c.sick.w": "Да съобщиш лично и навреме, че си болен, е правилото на повечето работни места. Работодателят може да пита колко ще продължи, но не каква е болестта. Попитай дали ти трябва медицинска бележка.", // nieuw, nalezen
+    "be.c.sick.w": "Да съобщиш лично и навреме за болестта си е правилото на повечето работни места. Работодателят може да пита колко ще продължи, но не каква е болестта. Попитай дали ти трябва болнична бележка.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const es: Gloss = {

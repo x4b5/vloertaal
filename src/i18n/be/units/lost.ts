@@ -155,14 +155,14 @@ export const uk: Gloss = {
   'be.s.ww.1': "Я реєструюся у VDAB.", // nieuw, nalezen
   'be.c.ww.a': "Я попрошу свій C4 і піду до профспілки.", // nieuw, nalezen
   'be.s.jobends.2': "Я питаю поради в justitiehuis.", // nieuw, nalezen
-  'be.s.jobends.3': "Я питаю свій ziekenfonds, чи моє страхування триває.", // nieuw, nalezen
+  'be.s.jobends.3': "Я питаю свій ziekenfonds, чи діє далі моє страхування.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.newjob.2': 'Я зберігаю свої розрахункові листи.',
   'be.c.ww': "Допомога з безробіття", // nieuw, nalezen
   'be.c.ww.b': end("Втратив / втратила роботу? Роботодавець дає тобі C4, найпізніше в останній робочий день. Одразу зареєструйся як шукач роботи у VDAB. Потім подай заяву на допомогу через профспілку (ABVV, ACV чи ACLVB) або через HVW, якщо ти не член профспілки. Заяву подають не в саму RVA: RVA вирішує. Спершу ти маєш пропрацювати достатньо довго. Допомога обмежена в часі: як довго, залежить від того, скільки ти працював / працювала. Ти звільнився / звільнилася сам / сама без поважної причини? Тоді зазвичай якийсь час не отримуєш допомоги.", ukBase, 'advice'), // nieuw, nalezen
   'be.c.ww.p': "Я хочу подати заяву на допомогу. Що мені робити?", // nieuw, nalezen
   'be.c.ww.s': 'Ти сердишся через роботу й хочеш сьогодні звільнитися. Що розумно?',
   'be.c.ww.o1': 'Спершу порадитися, перш ніж звільнятися.',
-  'be.c.ww.o2': "Звільнитися сьогодні: допомогу однаково дадуть.", // nieuw, nalezen
+  'be.c.ww.o2': "Звільнишся сьогодні: допомогу однаково дадуть.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.ww.o3': 'Перестати ходити на роботу й нічого не казати.',
   'be.c.ww.w': "Звільнення може коштувати тобі допомоги на якийсь час. Розмова спершу з керівником, профспілкою чи justitiehuis може допомогти знайти кращий шлях.", // nieuw, nalezen
   'be.c.jobends': "Робота закінчується: що ще припиняється?",
@@ -174,7 +174,7 @@ export const uk: Gloss = {
   'be.c.jobends.o3': "Залишишся й ні з ким про це не говоритимеш.", // nieuw, nalezen
   'be.c.jobends.w': "Твій договір оренди окремий від трудового договору. У ньому написано, як довго ти можеш жити там. Justitiehuis може дати тобі першу безкоштовну пораду.", // nieuw, nalezen
   'be.c.newjob': 'Пошук нової роботи',
-  'be.c.newjob.b': end("Перш ніж піти, попроси рекомендацію (referentie). Зберігай свої розрахункові листи (loonbrieven), контракт і C4. Онови резюме. Шукай роботу у VDAB (vdab.be) і в агентствах тимчасової роботи (interimkantoren). Ніколи не плати гроші, щоб отримати роботу.", ukBase, 'abuse'), // nieuw, nalezen
+  'be.c.newjob.b': end("Перш ніж піти, попроси рекомендацію (referentie). Зберігай свої розрахункові листи (loonbrieven), договір і C4. Онови резюме. Шукай роботу у VDAB (vdab.be) і в агентствах тимчасової роботи (interimkantoren). Ніколи не плати гроші, щоб отримати роботу.", ukBase, 'abuse'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.p': 'Можна вказати вас як рекомендацію?',
   'be.c.newjob.s': 'Тобі пропонують роботу, але спершу треба заплатити 300 євро «за роботу». Що ти зробиш?',
   'be.c.newjob.o1': "Не платитимеш. Шукатимеш справжнє агентство.", // nieuw, nalezen
@@ -268,7 +268,7 @@ export const ro: Gloss = {
   'be.c.ww.o3': 'Nu mai vii la muncă și nu spui nimic.',
   'be.c.ww.w': "Demisia te poate costa ajutorul pentru o vreme. Dacă vorbești întâi cu șeful, cu sindicatul sau cu justitiehuis, poți găsi o cale mai bună.", // nieuw, nalezen
   'be.c.jobends': "Se termină munca: ce se mai termină?",
-  'be.c.jobends.b': end("Când munca ta se termină, verifică lichidarea finală (eindafrekening) și cere-ți C4-ul. Ești funcționar (bediende)? Atunci primești banii de concediu odată cu ultimul salariu. Muncitor (arbeider)? Atunci îi primești anul următor, de la casa de concedii (vakantiekas). Locuința sau un microbuz prin agenție se pot termina în același timp. Contractul tău de închiriere are regulile lui: cere sfat înainte să pleci din casă. Pentru îngrijiri medicale ești asigurat prin ziekenfonds. Cu ajutor de șomaj, de obicei rămâi asigurat. Te muți? Anunță gemeente (primăria) în 8 zile lucrătoare. Te întorci în țara ta? Întreabă la ziekenfonds.", roBase, 'advice'), // nieuw, nalezen
+  'be.c.jobends.b': end("Când munca ta se termină, verifică lichidarea finală (eindafrekening) și cere-ți C4-ul. Ești funcționar (bediende)? Atunci primești banii de concediu odată cu ultimul salariu. Muncitor (arbeider)? Atunci îi primești anul următor, de la casa de concedii (vakantiekas). Locuința sau un microbuz prin agenție se pot termina în același timp. Contractul tău de închiriere are regulile lui: cere sfat înainte să pleci din casă. Pentru îngrijiri medicale ai asigurare prin ziekenfonds. Cu ajutor de șomaj, de obicei asigurarea continuă. Te muți? Anunță gemeente (primăria) în 8 zile lucrătoare. Te întorci în țara ta? Întreabă la ziekenfonds.", roBase, 'advice'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.jobends.p': "Când primesc lichidarea finală?",
   'be.c.jobends.s': "Munca ta se termină vineri. Agenția îți dă și camera. Ce faci?", // nieuw, nalezen
   'be.c.jobends.o1': "Întrebi ce scrie în contractul de închiriere și ceri sfat.", // nieuw, nalezen
@@ -289,16 +289,16 @@ export const bg: Gloss = {
   'be.w.ww': "C4 (документът от работодателя, когато работата ти свърши)", // nieuw, nalezen
   'be.w.uwv': "RVA (националната служба, която решава за обезщетението за безработица)", // nieuw, nalezen
   'be.s.ww.1': "Записвам се във VDAB.", // nieuw, nalezen
-  'be.c.ww.a': "Ще поискам моя C4 и ще отида в синдиката.", // nieuw, nalezen
+  'be.c.ww.a': "Ще поискам своя C4 и ще отида в синдиката.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.jobends.2': "Питам за съвет в justitiehuis.", // nieuw, nalezen
-  'be.s.jobends.3': "Питам моя ziekenfonds дали осигуровката ми продължава.", // nieuw, nalezen
+  'be.s.jobends.3': "Питам своя ziekenfonds дали осигуровката ми продължава.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.newjob.2': 'Пазя фишовете си за заплата.',
   'be.c.ww': "Обезщетение за безработица", // nieuw, nalezen
   'be.c.ww.b': end("Загуби работата си? Работодателят ти дава C4, най-късно в последния ти работен ден. Веднага се запиши като търсещ работа във VDAB. След това подай молба за обезщетение чрез синдикат (ABVV, ACV или ACLVB) или чрез HVW, ако не си член. Не подаваш молбата в самата RVA: RVA решава. Първо трябва да си работил / работила достатъчно дълго. Обезщетението е ограничено във времето: колко дълго зависи от това колко дълго си работил / работила. Напусна сам / сама, без основателна причина? Тогава обикновено известно време не получаваш обезщетение.", bgBase, 'advice'), // nieuw, nalezen
   'be.c.ww.p': "Искам да подам молба за обезщетение. Какво трябва да направя?", // nieuw, nalezen
   'be.c.ww.s': { m: 'Ядосан си на работата си и искаш да напуснеш днес. Кое е разумно?', f: 'Ядосана си на работата си и искаш да напуснеш днес. Кое е разумно?', x: 'Работата те ядосва и искаш да напуснеш днес. Кое е разумно?' },
   'be.c.ww.o1': 'Първо да потърсиш съвет, преди да напуснеш.',
-  'be.c.ww.o2': "Да напуснеш днес: и без това ще получиш обезщетение.", // nieuw, nalezen
+  'be.c.ww.o2': "Напускаш днес: и без това ще получиш обезщетение.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.ww.o3': 'Да спреш да ходиш на работа, без да кажеш нищо.',
   'be.c.ww.w': "Напускането може да ти струва обезщетението за известно време. Ако първо говориш с началника, синдиката или justitiehuis, може да намериш по-добър път.", // nieuw, nalezen
   'be.c.jobends': "Работата свършва: какво друго спира?",
