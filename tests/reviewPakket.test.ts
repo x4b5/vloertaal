@@ -1,12 +1,14 @@
 import { describe, expect, it } from 'vitest';
 import { mkdtempSync, mkdirSync, readFileSync, writeFileSync, existsSync, cpSync } from 'node:fs';
 import { tmpdir } from 'node:os';
+import { execFileSync } from 'node:child_process';
 import { join } from 'node:path';
 import { parseCsv, toCsv } from '../scripts/review/csv';
 import { formStatus, scanSource } from '../scripts/review/i18nSource';
 import { allEntries, fileLang } from '../scripts/review/files';
 import { importTaal, taalRows, TAAL_COLUMNS } from '../scripts/review/taal';
-import { allFacts, feitenRows, FEITEN_COLUMNS, importFeiten, type ExpertPoint } from '../scripts/review/feiten';
+import { allFacts, feitenLijsten, feitenRows, FEITEN_COLUMNS, importFeiten, lijstOfId, LIJSTEN, type ExpertPoint } from '../scripts/review/feiten';
+import { duur, leesmijFeiten, overzichtFeiten, rijenIn, SECONDS_PER_FACT, SECONDS_PER_PRIORITY, tijdVan } from '../scripts/review/leesmij';
 import { contentSources, i18nSources } from '../scripts/review/sources';
 import { runImport } from '../scripts/review/import';
 
@@ -230,5 +232,126 @@ describe('review package: the ⚖️ facts', { timeout: 60_000 }, () => {
     expect(after.get(changed[0])).toContain(`${row.vertaling} ok`);
     expect(after.get(changed[0])).toContain('// nagekeken: pl 2026-11-03');
     expect(existsSync(join(dir, 'review/vertaling-terug-pl.md'))).toBe(true);
+  });
+});
+
+describe('review package: the facts in three lists, by harm (A, B, C)', { timeout: 120_000 }, () => {
+  const content = contentSources(root);
+  const facts = allFacts(content);
+  const points: ExpertPoint[] = JSON.parse(readFileSync(join(root, 'scripts/review/prioriteit.json'), 'utf8'));
+  const A_FILE = /content\/regels\/(help|askWho)\.ts$|content\/regels\/(be\/)?units\/(ziek|rechten|loon|contract|veilig)\.ts$/;
+  const firstFile = (r: Record<string, string>) => r['bestand:regel'].split(';')[0].replace(/:\d+$/, '').trim();
+
+  it('puts every fact in exactly one list: A = ziek, rechten, loon, contract, veilig and help; B = the rest of Werkregels; C = tips and Taal', () => {
+    for (const land of ['NL', 'BE'] as const) {
+      const { rows } = feitenRows(facts, land, points, content);
+      const { lijsten, nietGekoppeld } = feitenLijsten(facts, land, points, content);
+      expect(nietGekoppeld).toEqual([]);
+      // Together exactly the rows of the country, each once.
+      const all = LIJSTEN.flatMap((l) => lijsten[l]);
+      expect(all).toHaveLength(rows.length);
+      expect(new Set(all.map((r) => `${r['bestand:regel']}|${r.bewering}`)).size).toBe(new Set(rows.map((r) => `${r['bestand:regel']}|${r.bewering}`)).size);
+      for (const l of LIJSTEN) {
+        expect(lijsten[l].length, `${land} ${l}`).toBeGreaterThan(30);
+        expect(lijsten[l].every((r) => r.lijst === l && r.land === land)).toBe(true);
+        // Numbered from 1 in each list, the points of the reports on top.
+        expect(lijsten[l].map((r) => r.nr)).toEqual(lijsten[l].map((_, i) => String(i + 1)));
+        const prio = lijsten[l].filter((r) => r.prioriteit).length;
+        expect(lijsten[l].slice(0, prio).every((r) => r.prioriteit === 'prioriteit'), `${land} ${l}`).toBe(true);
+      }
+      // By the file: a fact (not a report point) is in A when its file is one of list A.
+      for (const r of all.filter((x) => !x.prioriteit)) {
+        const f = firstFile(r);
+        const want = A_FILE.test(f) ? 'A' : r.spoor === 'Werkregels' || r.spoor === 'disclaimer' ? 'B' : 'C';
+        expect(r.lijst, `${r['bestand:regel']}`).toBe(want);
+      }
+      expect(lijsten.C.filter((r) => !r.prioriteit).every((r) => r.spoor === 'Taal' || r.spoor === 'overig')).toBe(true);
+    }
+  });
+
+  it('a report point goes to the list of the most harmful place it names', () => {
+    expect(lijstOfId('r.be.l.ziek.2')).toBe('A');
+    expect(lijstOfId('r.l.contract.3')).toBe('A');
+    expect(lijstOfId('h.be.unia')).toBe('A');
+    expect(lijstOfId('r.l.tijd.3')).toBe('B');
+    expect(lijstOfId('rg.zl.r.l.5')).toBe('B');
+    expect(lijstOfId('c.illness')).toBe('C');
+    expect(lijstOfId('g.bouw.steiger')).toBe('C');
+    // "r.be.l.tijd.3 / loon.3": tijd is B, loon is A, so the point is in A.
+    const { lijsten } = feitenLijsten(facts, 'BE', points, content);
+    const p = lijsten.A.find((r) => r.prioriteit && /r\.be\.l\.tijd\.3/.test(r.onderwerp));
+    expect(p).toBeDefined();
+    expect(lijsten.B.some((r) => r.prioriteit && /r\.be\.l\.tijd\.3/.test(r.onderwerp))).toBe(false);
+  });
+
+  it('starts list A with rechten and the help rows, and has the new lessons for labour migrants in A (and U2 in B)', () => {
+    for (const land of ['NL', 'BE'] as const) {
+      const { lijsten } = feitenLijsten(facts, land, points, content);
+      const plain = lijsten.A.filter((r) => !r.prioriteit).map(firstFile);
+      const rank = (f: string) => (/rechten\.ts$/.test(f) ? 0 : /(help|askWho)\.ts$/.test(f) ? 1 : /ziek\.ts$/.test(f) ? 2 : /loon\.ts$/.test(f) ? 3 : /contract\.ts$/.test(f) ? 4 : 5);
+      const ranks = plain.map(rank);
+      expect(ranks).toEqual([...ranks].sort((a, b) => a - b));
+      const p = land === 'BE' ? 'r.be.l.' : 'r.l.';
+      for (const id of ['ziek.4', 'contract.5', 'loon.4']) expect(lijsten.A.some((r) => r.onderwerp.includes(`(${p}${id}`)), `${land} ${id}`).toBe(true);
+      expect(lijsten.B.some((r) => r.onderwerp.includes(`(${p}geld.8`)), `${land} geld.8`).toBe(true);
+    }
+  });
+
+  it('says per list how many facts and how long, and what fits in 1 hour (the column "uur")', () => {
+    for (const land of ['NL', 'BE'] as const) {
+      const { lijsten } = feitenLijsten(facts, land, points, content);
+      const A = lijsten.A;
+      const first = rijenIn(A, 3600);
+      expect(first).toBeGreaterThan(20);
+      expect(A.filter((r) => r.uur === '1')).toHaveLength(first);
+      expect(A.slice(0, first).every((r) => r.uur === '1')).toBe(true);
+      // The hours go up from the top, and the last one is about the time of the whole list.
+      expect(A.map((r) => Number(r.uur))).toEqual(A.map((r) => Number(r.uur)).sort((a, b) => a - b));
+      expect(Number(A.at(-1)!.uur)).toBe(Math.ceil(tijdVan(A) / 3600));
+      expect(tijdVan(A)).toBe(A.reduce((t, r) => t + (r.prioriteit ? SECONDS_PER_PRIORITY : SECONDS_PER_FACT), 0));
+      const text = leesmijFeiten(land, 'A', `feiten-${land}-A.csv`, lijsten);
+      expect(text).toContain(`feiten-${land}-A.csv`);
+      expect(text).toContain(`Heb je maar 1 uur?`);
+      expect(text).toContain(`de eerste ${first} rijen`);
+      for (const l of overzichtFeiten(lijsten)) expect(text).toContain(l);
+      expect(overzichtFeiten(lijsten)[0]).toBe(`lijst A: ${A.length} feiten, ${duur(tijdVan(A))}`);
+      // List B and C send the expert to A first.
+      expect(leesmijFeiten(land, 'B', `feiten-${land}-B.csv`, lijsten)).toContain('Lijst A is belangrijker');
+    }
+  });
+
+  it('the command writes three lists per country where --uit says, and nothing in review/', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'vloertaal-export-'));
+    const tsx = join(root, 'node_modules/.bin/tsx');
+    const out = execFileSync(tsx, ['scripts/review/export.ts', '--uit', dir, '--taal', 'pl'], { cwd: root, encoding: 'utf8' });
+    for (const land of ['NL', 'BE']) {
+      for (const l of LIJSTEN) {
+        const csv = join(dir, `feiten-${land}-${l}`, `feiten-${land}-${l}.csv`);
+        expect(existsSync(csv), csv).toBe(true);
+        expect(existsSync(join(dir, `feiten-${land}-${l}`, 'LEESMIJ.txt'))).toBe(true);
+        const { columns, rows } = parseCsv(readFileSync(csv, 'utf8'));
+        expect(columns).toEqual([...FEITEN_COLUMNS]);
+        expect(rows.every((r) => r.lijst === l)).toBe(true);
+        expect(out).toMatch(new RegExp(`${land} ${l}\\s+${rows.length} feiten, ongeveer`));
+      }
+      expect(existsSync(join(dir, `feiten-${land}`))).toBe(false);
+    }
+    expect(out).toMatch(/NL A .* in 1 uur de eerste \d+/);
+  });
+
+  it('a filled-in list A comes back as its own summary, with the list in it', () => {
+    const { lijsten } = feitenLijsten(facts, 'NL', points, content);
+    const rows = lijsten.A.map((r) => ({ ...r }));
+    rows[0]['klopt?'] = 'nee';
+    rows[0].correctie = 'Dit is anders.';
+    const r = importFeiten(toCsv(FEITEN_COLUMNS, rows), 'feiten-NL-A.csv');
+    expect(r.land).toBe('NL');
+    expect(r.lijst).toBe('A');
+    expect(r.md).toContain('# Feiten terug: NL, lijst A');
+    expect(r.md).toContain('### A1.');
+    const dir = mkdtempSync(join(tmpdir(), 'vloertaal-review-'));
+    writeFileSync(join(dir, 'feiten-NL-A.csv'), toCsv(FEITEN_COLUMNS, rows));
+    expect(runImport([join(dir, 'feiten-NL-A.csv')], dir, () => {})).toBe(0);
+    expect(existsSync(join(dir, 'review/feiten-terug-NL-A.md'))).toBe(true);
   });
 });

@@ -13,8 +13,51 @@ import { allRegionUnits } from '../../src/content/regio';
 import type { RuleUnit } from '../../src/content/regels/types';
 import type { Unit } from '../../src/content/types';
 import { answer } from './taal';
+import { SECONDS_PER_FACT, SECONDS_PER_PRIORITY } from './leesmij';
 
-export const FEITEN_COLUMNS = ['nr', 'prioriteit', 'land', 'spoor', 'onderwerp', 'bewering', 'tekst in de app', 'bron', 'twijfel van de maker', 'bestand:regel', 'klopt?', 'correctie', 'bron expert'] as const;
+export const FEITEN_COLUMNS = ['nr', 'lijst', 'uur', 'prioriteit', 'land', 'spoor', 'onderwerp', 'bewering', 'tekst in de app', 'bron', 'twijfel van de maker', 'bestand:regel', 'klopt?', 'correctie', 'bron expert'] as const;
+
+/**
+ * The three lists of a country, by the harm a wrong fact can do (docs/nakijken.md):
+ *  A  Werkregels ziek, rechten, loon, contract and veilig, and the help rows ("Wie kan je helpen?",
+ *     help.ts and askWho.ts): a mistake there costs money, a benefit or safety;
+ *  B  the rest of Werkregels (also the sector and region units, and the closing lines);
+ *  C  the tips and the Taal track (and anything else).
+ */
+export type Lijst = 'A' | 'B' | 'C';
+export const LIJSTEN: readonly Lijst[] = ['A', 'B', 'C'];
+
+/** The Werkregels units of list A. */
+export const A_UNITS = ['rechten', 'ziek', 'loon', 'contract', 'veilig'] as const;
+
+const unitOfFile = (file: string): string | undefined => /content\/regels\/(?:be\/)?units\/([\w-]+)\.ts$/.exec(file)?.[1];
+
+/** The list of a fact, by its file. */
+export function lijstOf(f: Pick<Fact, 'file' | 'spoor'>): Lijst {
+  if (f.spoor === 'help') return 'A';
+  if (f.spoor === 'Werkregels') return (A_UNITS as readonly string[]).includes(unitOfFile(f.file) ?? '') ? 'A' : 'B';
+  if (f.spoor === 'disclaimer') return 'B';
+  return 'C';
+}
+
+/** The list of an id in the app: "r.be.l.ziek.2.ru1" → A, "r.l.tijd.3" → B, "h.112" → A, "c.illness" → C. */
+export function lijstOfId(id: string): Lijst {
+  if (/^h\./.test(id)) return 'A';
+  const unit = /^r\.(?:be\.)?l\.([a-z]+)\./.exec(id)?.[1];
+  if (unit) return (A_UNITS as readonly string[]).includes(unit) ? 'A' : 'B';
+  if (/^(r|rg\.\w+\.r)\./.test(id)) return 'B';
+  return 'C';
+}
+
+/**
+ * Where a row of list A stands: rechten (ontslag, uitbuiting) first, then the help rows (a wrong
+ * phone number does harm and is quick to check), then ziek, loon, contract and veilig.
+ */
+const A_ORDER = ['rechten', 'help', 'ziek', 'loon', 'contract', 'veilig'];
+const aRank = (file: string): number => {
+  const i = A_ORDER.indexOf(/content\/regels\/(help|askWho)\.ts$/.test(file) ? 'help' : (unitOfFile(file) ?? ''));
+  return i >= 0 ? i : A_ORDER.length;
+};
 
 /** A point of a "Voor de expert" list in a content report (scripts/review/prioriteit.json). */
 export interface ExpertPoint {
@@ -134,6 +177,8 @@ export function feitenRows(facts: Fact[], land: Land, points: ExpertPoint[], sou
       if (i >= 0) linked[i].place = `${best.x.file}:${best.x.line}`;
     }
     rows.push({
+      // The list of the most harmful place it is about (A before B before C).
+      lijst: linked.map((l) => (l.f ? lijstOf(l.f) : lijstOfId(l.id))).sort()[0],
       prioriteit: 'prioriteit',
       land,
       spoor: first.f?.spoor ?? (first.id.startsWith('r.') ? 'Werkregels' : first.id.startsWith('h.') ? 'help' : 'Taal'),
@@ -147,6 +192,7 @@ export function feitenRows(facts: Fact[], land: Land, points: ExpertPoint[], sou
   }
   for (const f of mine) {
     rows.push({
+      lijst: lijstOf(f),
       prioriteit: '',
       land,
       spoor: f.spoor,
@@ -165,10 +211,38 @@ export function feitenRows(facts: Fact[], land: Land, points: ExpertPoint[], sou
 
 export const feitenCsv = (rows: Row[]): string => toCsv(FEITEN_COLUMNS, rows);
 
+/**
+ * The rows of a country in the three lists A, B and C (see Lijst). In each list the report points
+ * ("prioriteit") come first; in list A then rechten, the help rows, ziek, loon, contract and veilig
+ * (A_ORDER); in B and C the order of feitenRows. Every list is
+ * numbered from 1, so an expert can start with list A alone; the column "uur" says in which hour
+ * of work a row comes (uur 1 = what fits in the first hour).
+ */
+export function feitenLijsten(facts: Fact[], land: Land, points: ExpertPoint[], sources: Map<string, string>): { lijsten: Record<Lijst, Row[]>; nietGekoppeld: ExpertPoint[] } {
+  const { rows, nietGekoppeld } = feitenRows(facts, land, points, sources);
+  const file = (r: Row) => (r['bestand:regel'] ?? '').split(';')[0].replace(/:\d+$/, '').trim();
+  const lijsten = {} as Record<Lijst, Row[]>;
+  for (const l of LIJSTEN) {
+    const mine = rows.map((r, i) => ({ r: { ...r }, i })).filter((x) => x.r.lijst === l);
+    if (l === 'A') mine.sort((x, y) => Number(!x.r.prioriteit) - Number(!y.r.prioriteit) || (x.r.prioriteit ? 0 : aRank(file(x.r)) - aRank(file(y.r))) || x.i - y.i);
+    // "uur": in which hour of work the row comes, from the top (a fact about a minute, with priority 3).
+    let t = 0;
+    mine.forEach((x, k) => {
+      x.r.nr = String(k + 1);
+      t += x.r.prioriteit ? SECONDS_PER_PRIORITY : SECONDS_PER_FACT;
+      x.r.uur = String(Math.ceil(t / 3600));
+    });
+    lijsten[l] = mine.map((x) => x.r);
+  }
+  return { lijsten, nietGekoppeld };
+}
+
 /* ---- Back in: only a summary ---- */
 
 export interface FeitenImport {
   land: string;
+  /** The list or lists of the file ("A", or "A+B"); empty for a file from before the lists. */
+  lijst: string;
   klopt: Row[];
   kloptNiet: Row[];
   /** A correction or a source, but no ja or nee. */
@@ -184,7 +258,8 @@ export function importFeiten(csvText: string, bestand: string): FeitenImport {
   const missing = ['nr', 'bewering', 'klopt?', 'correctie'].filter((c) => !columns.includes(c));
   if (missing.length) throw new Error(`Dit is geen feitenlijst: de kolom${missing.length > 1 ? 'men' : ''} ${missing.map((c) => `"${c}"`).join(', ')} ontbreek${missing.length > 1 ? 'en' : 't'}.`);
   const lands = [...new Set(rows.map((r) => (r.land ?? '').trim()).filter(Boolean))];
-  const out: FeitenImport = { land: lands.join('+') || 'onbekend', klopt: [], kloptNiet: [], zonderAntwoord: [], leeg: 0, fouten: [], md: '' };
+  const lijsten = [...new Set(rows.map((r) => (r.lijst ?? '').trim()).filter(Boolean))].sort();
+  const out: FeitenImport = { land: lands.join('+') || 'onbekend', lijst: lijsten.join('+'), klopt: [], kloptNiet: [], zonderAntwoord: [], leeg: 0, fouten: [], md: '' };
   for (const r of rows) {
     const a = answer(r['klopt?']);
     const extra = (r.correctie ?? '').trim() || (r['bron expert'] ?? '').trim();
@@ -195,7 +270,7 @@ export function importFeiten(csvText: string, bestand: string): FeitenImport {
     else out.leeg++;
   }
   const item = (r: Row) => {
-    const lines = [`### ${r.nr}. ${r.onderwerp ?? ''}${r.prioriteit ? ' (prioriteit)' : ''}`, '', `- bewering: ${r.bewering}`];
+    const lines = [`### ${r.lijst ? `${r.lijst}${r.nr}` : r.nr}. ${r.onderwerp ?? ''}${r.prioriteit ? ' (prioriteit)' : ''}`, '', `- bewering: ${r.bewering}`];
     if (r['tekst in de app']) lines.push(`- tekst in de app: ${r['tekst in de app']}`);
     if (r.bron) lines.push(`- bron in de noot: ${r.bron}`);
     if (r['bestand:regel']) lines.push(`- waar: \`${r['bestand:regel']}\``);
@@ -204,7 +279,7 @@ export function importFeiten(csvText: string, bestand: string): FeitenImport {
     return [...lines, ''].join('\n');
   };
   const md = [
-    `# Feiten terug: ${out.land}`,
+    `# Feiten terug: ${out.land}${out.lijst ? `, lijst ${out.lijst}` : ''}`,
     '',
     `Bestand: ${bestand}. Er is niets in de app veranderd: verwerk de correcties zelf (of met Claude), en werk dan de ⚖️-noot bij.`,
     '',
@@ -219,7 +294,7 @@ export function importFeiten(csvText: string, bestand: string): FeitenImport {
   if (out.zonderAntwoord.length) md.push('## Zonder ja of nee', '', ...out.zonderAntwoord.map(item));
   if (out.klopt.length) {
     md.push('## Klopt', '');
-    for (const r of out.klopt) md.push(`- ${r.nr}. ${r.onderwerp ?? ''} \`${r['bestand:regel'] ?? ''}\`${(r.correctie ?? '').trim() ? `: ${r.correctie.trim()}` : ''}${(r['bron expert'] ?? '').trim() ? ` (bron: ${r['bron expert'].trim()})` : ''}`);
+    for (const r of out.klopt) md.push(`- ${r.lijst ?? ''}${r.nr}. ${r.onderwerp ?? ''} \`${r['bestand:regel'] ?? ''}\`${(r.correctie ?? '').trim() ? `: ${r.correctie.trim()}` : ''}${(r['bron expert'] ?? '').trim() ? ` (bron: ${r['bron expert'].trim()})` : ''}`);
     md.push('');
   }
   out.md = md.join('\n');
