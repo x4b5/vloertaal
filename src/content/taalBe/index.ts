@@ -58,8 +58,7 @@ const BY_NL: Record<string, BeTaal | undefined> = {
  * between the blocks, so that two agents never change the same lines.
  */
 export const BE_TAAL_TODO: readonly string[] = [
-  // Agent A: werk zoeken, contract, stage en verder leren
-  'u.grow',
+  // Agent A: werk zoeken, contract, stage en verder leren (af)
 
   // Agent B: loon, papieren, geld en online
   'u.pay', 'u.papers', 'u.money', 'u.data', 'u.ai',

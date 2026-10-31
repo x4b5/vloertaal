@@ -128,7 +128,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.grow': { kind: 'B', lessons: {
     'l.certs': L('A', 'A', 'VCA bestaat ook in België'),
     'l.diploma': L('B', 'B', 'laten waarderen → laten erkennen; IDW → NARIC-Vlaanderen'),
-    'l.mychoice': L('A', 'A'),
+    'l.mychoice': L('B', 'B', 'de bijbaan → de studentenjob, de meeloopdag → de snuffelstage; de coach op school → het CLB, de VDAB'),
     'l.nextstep': L('C', 'C', 'Entree, niveau 2, startkwalificatie, bbl → duaal leren, volwassenenonderwijs, VDAB-opleiding'),
   } },
   'u.health': { kind: 'B', lessons: {
