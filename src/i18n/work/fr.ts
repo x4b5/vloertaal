@@ -552,8 +552,8 @@ const t: CultureTranslation = {
     's.cleansafe.3': 'Ne mélange jamais les produits de nettoyage.',
     'c.cleansafe.q': 'Je peux marcher ici ?',
     'c.cleansafe.a': 'Attention, le sol est encore glissant.',
-    'c.cv': 'Un CV néerlandais court',
-    'c.cv.b': 'Un CV néerlandais est court : 1 ou 2 pages. Écris tes coordonnées, ton expérience de travail, ta formation, tes langues et tes compétences. Une photo n’est pas nécessaire. Tu n’as pas besoin d’écrire ta religion, ton âge ou ta situation familiale. Sois honnête sur ce que tu sais faire. Demande à quelqu’un de vérifier ton néerlandais.',
+    'c.cv': 'Un CV court', // nieuw, nalezen
+    'c.cv.b': 'Ici, un CV est court : 1 ou 2 pages. Écris tes coordonnées, ton expérience de travail, ta formation, tes langues et tes compétences. Une photo n’est pas nécessaire. Tu n’as pas besoin d’écrire ta religion, ton âge ou ta situation familiale. Sois honnête sur ce que tu sais faire. Demande à quelqu’un de vérifier ton néerlandais.', // nieuw, nalezen
     'c.cv.p': 'Tu peux lire mon CV ? Mon néerlandais est correct ?',
     'c.cv.s': 'Tu as travaillé 3 ans dans une usine dans ton pays, mais tu n’as pas de diplôme. Qu’est-ce que tu mets sur ton CV ?',
     'c.cv.o1': 'Écris honnêtement le travail et ce que tu y faisais.',
@@ -567,7 +567,7 @@ const t: CultureTranslation = {
     'c.interview.o1': 'Pose une question sur les horaires ou la formation.', // nagelezen (2e lezing)
     'c.interview.o2': 'Dis non, parce que poser des questions n’est pas poli.',
     'c.interview.o3': 'Parle plus de toi, pour montrer que tu travailles bien.', // nagelezen (2e lezing)
-    'c.interview.w': 'Les questions montrent que le travail t’intéresse. Les employeurs néerlandais en attendent souvent.',
+    'c.interview.w': 'Les questions montrent que le travail t’intéresse. Ici, les employeurs en attendent souvent.', // nieuw, nalezen
     'c.findwork': 'Ton contrat par écrit',
     'c.findwork.b': 'Demande toujours un contrat écrit et une copie pour toi. Lis-le avant de signer, ou demande de l’aide à une personne de confiance. Une agence d’intérim (uitzendbureau) n’a pas le droit de te demander de l’argent pour te trouver un emploi. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
     'c.findwork.p': 'Je peux d’abord lire le contrat ?',
@@ -636,7 +636,7 @@ const t: CultureTranslation = {
     'c.smoking.b': 'Aux Pays-Bas, la loi interdit de fumer à l’intérieur d’un lieu de travail. C’est vrai aussi pour la cigarette électronique (vape). Depuis 2022, les fumoirs à l’intérieur des entreprises ne sont plus autorisés. Fume seulement dehors, à l’endroit que ton employeur permet, et en général seulement pendant ta pause. Des pauses cigarette en plus ne sont pas un droit : mets-toi d’accord avec ton responsable. Ne fume jamais près de choses qui brûlent facilement, comme du carburant ou des cartons dans un entrepôt. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.',
     'c.smoking.p': 'Je peux fumer dehors pendant ma pause ?',
     'c.smoking.s': 'Il fait froid et il pleut. Un collègue dit : “Fume dans la réserve, personne ne le voit.” Que fais-tu ?',
-    'c.smoking.o1': 'Dis non, et fume dehors au coin fumeurs pendant ta pause.',
+    'c.smoking.o1': 'Dis non, et fume dehors pendant ta pause.', // nieuw, nalezen
     'c.smoking.o2': 'Fume vite dans la réserve, juste cette fois.',
     'c.smoking.o3': 'Utilise plutôt ta vape à l’intérieur, parce que c’est permis.',
     'c.smoking.w': 'Fumer à l’intérieur est contre la loi et peut provoquer un incendie. Une vape à l’intérieur est interdite aussi. Respecter la règle protège tout le monde.',
@@ -677,7 +677,7 @@ const t: CultureTranslation = {
     'c.respect.p': 'Je préfère ne pas serrer la main, mais je te salue avec plaisir.',
     'c.respect.s': 'Un collègue fait souvent des blagues sur ta religion. Tu lui as demandé d’arrêter, mais il continue. Que fais-tu ?',
     'c.respect.o1': 'Dis-le à ton responsable ou au vertrouwenspersoon.',
-    'c.respect.o2': 'Ris avec lui, pour éviter les problèmes.',
+    'c.respect.o2': 'Ris avec lui, pour éviter les problèmes.', // nieuw, nalezen
     'c.respect.o3': 'Fais toi aussi des blagues sur ses origines.',
     'c.respect.w': 'Ce genre de blagues n’est pas accepté au travail. Le signaler est normal : l’entreprise doit garder le lieu de travail sûr pour tout le monde.',
     'c.health': 'Les pauses et les horaires de travail',
@@ -692,10 +692,10 @@ const t: CultureTranslation = {
     'c.rights.b': 'La discrimination au travail est interdite, par exemple à cause de ton origine, de ta religion ou de ton genre. Ton employeur ne peut pas simplement te licencier : normalement, il a besoin de l’autorisation de l’UWV ou d’un juge, ou de ton accord. (Pendant une période d’essai ou à la fin d’un contrat temporaire, d’autres règles s’appliquent.) Ne signe pas un papier sur ton licenciement que tu ne comprends pas. Tu as signé un accord pour mettre fin à ton emploi (vaststellingsovereenkomst) ? Alors en général, tu peux encore l’annuler par écrit dans les 14 jours. Demande d’abord de l’aide au syndicat (par exemple la FNV), à un service contre la discrimination ou au Juridisch Loket (conseil juridique gratuit). Informations générales. Pour ta situation : demande au syndicat, au Juridisch Loket ou à FairWork.',
     'c.rights.p': 'Je veux d’abord demander conseil.',
     'c.rights.s': 'Ton patron te donne un papier : “Signe aujourd’hui, et tu pars d’un commun accord.” Tu ne le comprends pas bien. Que fais-tu ?',
-    'c.rights.o1': 'Ne signe pas encore. Demande du temps et demande d’abord conseil.',
+    'c.rights.o1': 'Ne signe pas encore. Demande d’abord conseil.', // nieuw, nalezen
     'c.rights.o2': 'Signe, parce que le patron dit que c’est bon.',
     'c.rights.o3': 'Range le papier et n’en parle jamais.',
-    'c.rights.w': 'Si tu signes, tu peux perdre des droits, par exemple à l’allocation chômage (WW). Demander du temps pour avoir un conseil est normal et permis.',
+    'c.rights.w': 'Il y a une erreur dedans ? Alors tu peux perdre des droits, par exemple à l’allocation chômage (WW). Demander du temps pour avoir un conseil est normal et permis.', // nieuw, nalezen
     'c.leave': 'Les vacances et le congé d’urgence',
     'c.leave.b': 'La loi te donne des jours de congé payés : au moins 4 fois le nombre de jours que tu travailles par semaine. À temps plein, 5 jours par semaine ? Alors au moins 20 jours par an. Une cao peut donner plus. Demande ton congé à temps, et par écrit. Une urgence soudaine, comme un accident ou une maladie dans ta famille ? Alors tu peux avoir un court congé payé (calamiteitenverlof). Préviens tout de suite ton employeur. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
     'c.leave.p': 'Je voudrais demander un congé pour juillet.',
@@ -836,7 +836,7 @@ const t: CultureTranslation = {
     'c.site.b': 'Avant de commencer un travail, arrête-toi un moment et vérifie : qu’est-ce qui peut mal tourner ici ? C’est la LMRA (analyse des risques de dernière minute). Porte toujours ton casque, et une protection antichute quand tu travailles en hauteur. Ne te mets jamais sous une charge suspendue. Le travail est vraiment dangereux ? Alors tu peux arrêter, et tu dois le dire tout de suite à ton responsable. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
     'c.site.p': 'Je ne commence pas encore. Ce n’est pas sûr.',
     'c.site.s': 'Tu dois travailler sur un échafaudage, mais il manque un garde-corps. Un collègue dit : “Fais juste attention.” Que fais-tu ?',
-    'c.site.o1': 'Ne commence pas. Signale-le d’abord à ton responsable.',
+    'c.site.o1': 'Ne commence pas, et dis-le à ton responsable.', // nieuw, nalezen
     'c.site.o2': 'Commence, mais fais très attention.',
     'c.site.o3': 'Répare toi-même le garde-corps avec une corde.',
     'c.site.w': 'Une chute de hauteur peut causer des blessures très graves. Tu as le droit d’arrêter un travail dangereux, et le signaler protège toute l’équipe.',
@@ -845,7 +845,7 @@ const t: CultureTranslation = {
     'c.line.p': 'Il y a une panne. J’ai appuyé sur l’arrêt d’urgence.',
     'c.line.s': 'Un produit est coincé dans la machine. La machine tourne encore. Que fais-tu ?',
     'c.line.o1': 'Appuie sur l’arrêt d’urgence et appelle ton responsable.',
-    'c.line.o2': 'Retire-le vite avec la main.',
+    'c.line.o2': 'Retire-le vite avec la main, avant qu’il se casse.', // nieuw, nalezen
     'c.line.o3': 'Laisse-le et espère que la machine règle le problème.',
     'c.line.w': 'Les machines en marche peuvent causer des accidents graves en une seconde. Arrêter la machine est toujours permis et toujours mieux.',
     'c.quality': 'La qualité : dis ce que tu vois',
@@ -996,7 +996,7 @@ const t: CultureTranslation = {
     'c.gossip.o1': 'Dis “Nee, dat wil ik niet” et demande-lui de l’effacer.', // nagelezen (2e lezing)
     'c.gossip.o2': 'Ris et laisse-le la publier, pour ne pas faire d’histoires.',
     'c.gossip.o3': 'Demande-lui de la publier sans ton nom.', // nagelezen (2e lezing)
-    'c.gossip.w': 'Personne n’a le droit de mettre une vidéo de toi en ligne sans ton autorisation. Dire non est normal, et ton employeur doit agir quand des collègues se moquent les uns des autres en ligne. S’il la publie quand même, dis-le à ton responsable.', // nagelezen (2e lezing)
+    'c.gossip.w': 'En général, personne n’a le droit de mettre une vidéo de toi en ligne sans ton autorisation. Dire non est normal, et ton employeur doit agir quand des collègues se moquent les uns des autres en ligne. S’il la publie quand même, dis-le à ton responsable.', // nieuw, nalezen
     'c.boundaries': 'Dépasser les limites',
     'c.boundaries.b': 'Le grensoverschrijdend gedrag, c’est un comportement qui dépasse les limites de quelqu’un : toucher sans accord, remarques ou blagues sexuelles, regards insistants, envoyer des images non voulues, menaces ou cris. Peu importe si l’autre personne “voulait juste plaisanter” : ce qui compte, c’est ce que toi, tu ressens. Si tu peux, dis clairement que tu veux que ça s’arrête. Note ce qui s’est passé, quand, et qui l’a vu. Parle à ton responsable, à la personne de confiance (vertrouwenspersoon, s’il y en a une) ou aux RH. Ton employeur doit te protéger, et on n’a pas le droit de te punir parce que tu l’as signalé. Tu as vu ça arriver à un collègue ? Demande-lui si ça va, et propose d’être témoin.',
     'c.boundaries.p': 'Je veux que tu arrêtes.',

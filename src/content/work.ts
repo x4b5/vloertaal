@@ -533,7 +533,7 @@ const coreTips: CultureTip[] = [
     phrase: { id: 'c.smoking.p', nl: 'Mag ik in mijn pauze buiten roken?', en: 'May I smoke outside in my break?' },
     situation: { id: 'c.smoking.s', en: 'It is cold and raining. A colleague says: "Just smoke in the storage room, nobody sees it." What do you do?' },
     options: [
-      { id: 'c.smoking.o1', en: 'Say no, and smoke outside at the smoking area in your break.', best: true },
+      { id: 'c.smoking.o1', en: 'Say no, and smoke outside in your break.', best: true },
       { id: 'c.smoking.o2', en: 'Smoke quickly in the storage room, just this once.', best: false },
       { id: 'c.smoking.o3', en: 'Use your vape inside instead, because that is allowed.', best: false },
     ],
@@ -568,11 +568,11 @@ const coreTips: CultureTip[] = [
     phrase: { id: 'c.rights.p', nl: 'Ik wil eerst advies vragen.', en: 'I want to ask for advice first.' },
     situation: { id: 'c.rights.s', en: 'Your boss gives you a paper: "Sign today, then you leave by agreement." You do not understand it well. What do you do?' },
     options: [
-      { id: 'c.rights.o1', en: 'Do not sign yet. Ask for time and get advice first.', best: true },
+      { id: 'c.rights.o1', en: 'Do not sign yet. Get advice first.', best: true },
       { id: 'c.rights.o2', en: 'Sign it, because the boss says it is fine.', best: false },
       { id: 'c.rights.o3', en: 'Put the paper away and never talk about it.', best: false },
     ],
-    why: { id: 'c.rights.w', en: 'If you sign, you can lose rights, for example to unemployment benefit (WW). Asking for time to get advice is normal and allowed.' },
+    why: { id: 'c.rights.w', en: 'Is something wrong in it? Then you can lose rights, for example to unemployment benefit (WW). Asking for time to get advice is normal and allowed.' },
   }, ABUSE_LINE),
   tip({
     id: 'c.leave',
@@ -723,8 +723,8 @@ const applyTips = [
   tipFor(
     'cv',
     '🗂️',
-    'A short Dutch CV',
-    'A Dutch CV is short: 1 or 2 pages. Write your contact details, work experience, education, languages and skills. A photo is not needed. You do not have to write your religion, age or marital status. Be honest about what you can do. Ask someone to check your Dutch.',
+    'A short CV',
+    'A CV here is short: 1 or 2 pages. Write your contact details, work experience, education, languages and skills. A photo is not needed. You do not have to write your religion, age or marital status. Be honest about what you can do. Ask someone to check your Dutch.',
     ['Wil je mijn cv lezen? Klopt mijn Nederlands?', 'Will you read my CV? Is my Dutch correct?'],
     'You worked 3 years in a factory in your home country, but you have no diploma. What do you put on your CV?',
     [
@@ -747,7 +747,7 @@ const applyTips = [
       'Say no, because asking questions is not polite.',
       'Talk more about yourself, to show you are a good worker.',
     ],
-    'Questions show that you are interested in the job. Dutch employers often expect them.',
+    'Questions show that you are interested in the job. Employers here often expect them.',
     NONE,
   ),
 ];
@@ -961,7 +961,7 @@ const socialTips = [
     'A colleague often makes jokes about your religion. You asked him to stop, but he goes on. What do you do?',
     [
       'Tell your supervisor or the vertrouwenspersoon.',
-      'Laugh along, so there is no trouble.',
+      'Laugh along with him, so there is no trouble.',
       'Make jokes about his background back.',
     ],
     'Such jokes are not accepted at work. Reporting it is normal: the company must keep the workplace safe for everyone.',
@@ -979,7 +979,7 @@ const socialTips = [
       'Laugh and let him post it, so you are not difficult.',
       'Ask him to post it without your name.',
     ],
-    'Nobody may put a video of you online without your permission. Saying no is normal, and your employer must act when colleagues mock each other online. If he posts it anyway, tell your supervisor.',
+    'Usually, nobody may put a video of you online without your permission. Saying no is normal, and your employer must act when colleagues mock each other online. If he posts it anyway, tell your supervisor.',
     NONE,
   ),
   tipFor(
@@ -1794,7 +1794,7 @@ const sectorTips = [
     ['Ik begin nog niet. Dit is niet veilig.', 'I am not starting yet. This is not safe.'],
     'You must work on a scaffold, but a railing is missing. A colleague says: "Just be careful." What do you do?',
     [
-      'Do not start. Report it to your supervisor first.',
+      'Do not start, and tell your supervisor.',
       'Start, but be very careful.',
       'Fix the railing yourself with some rope.',
     ],
@@ -1810,7 +1810,7 @@ const sectorTips = [
     'A product is stuck in the machine. The machine is still running. What do you do?',
     [
       'Press the emergency stop and call your supervisor.',
-      'Quickly pull it out with your hand.',
+      'Quickly pull it out with your hand, before it breaks.',
       'Leave it and hope the machine fixes it.',
     ],
     'Running machines can cause serious accidents in a second. Stopping the machine is always allowed and always better.',

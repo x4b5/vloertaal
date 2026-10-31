@@ -552,8 +552,8 @@ const t: CultureTranslation = {
     's.cleansafe.3': 'Nunca mistures produtos de limpeza.',
     'c.cleansafe.q': 'Posso passar por aqui?',
     'c.cleansafe.a': 'Cuidado, o chão ainda está escorregadio.',
-    'c.cv': 'Um CV curto ao estilo neerlandês',
-    'c.cv.b': 'Um CV nos Países Baixos é curto: 1 ou 2 páginas. Escreve os teus contactos, a experiência de trabalho, a formação, as línguas e as competências. Não é preciso fotografia. Não tens de escrever a tua religião, a idade ou o estado civil. Diz a verdade sobre o que sabes fazer. Pede a alguém para verificar o teu neerlandês.',
+    'c.cv': 'Um CV curto', // nieuw, nalezen
+    'c.cv.b': 'Aqui, um CV é curto: 1 ou 2 páginas. Escreve os teus contactos, a experiência de trabalho, a formação, as línguas e as competências. Não é preciso fotografia. Não tens de escrever a tua religião, a idade ou o estado civil. Diz a verdade sobre o que sabes fazer. Pede a alguém para verificar o teu neerlandês.', // nieuw, nalezen
     'c.cv.p': 'Podes ler o meu CV? O meu neerlandês está certo?',
     'c.cv.s': 'Trabalhaste 3 anos numa fábrica no teu país, mas não tens diploma. O que pões no teu CV?',
     'c.cv.o1': 'Escreves o trabalho e o que fazias lá, com honestidade.',
@@ -567,7 +567,7 @@ const t: CultureTranslation = {
     'c.interview.o1': 'Fazes uma pergunta sobre o horário ou a formação.', // nagelezen (2e lezing)
     'c.interview.o2': 'Dizes que não, porque fazer perguntas não é educado.',
     'c.interview.o3': 'Falas mais de ti, para mostrar que trabalhas bem.', // nagelezen (2e lezing)
-    'c.interview.w': 'As perguntas mostram que tens interesse no emprego. Os empregadores nos Países Baixos costumam esperar perguntas.',
+    'c.interview.w': 'As perguntas mostram que tens interesse no emprego. Aqui, os empregadores costumam esperar perguntas.', // nieuw, nalezen
     'c.findwork': 'Pede o teu contrato em papel',
     'c.findwork.b': 'Pede sempre um contrato escrito e uma cópia para ti. Lê-o antes de assinar, ou pede ajuda a alguém em quem confias. Uma agência de trabalho temporário (uitzendbureau) não te pode pedir dinheiro para te arranjar trabalho. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.findwork.p': 'Posso ler primeiro o contrato?',
@@ -636,7 +636,7 @@ const t: CultureTranslation = {
     'c.smoking.b': 'Nos Países Baixos, fumar dentro de um local de trabalho é proibido por lei. Também vale para os cigarros eletrónicos. Desde 2022, as salas de fumo dentro das empresas já não são permitidas. Fuma só lá fora, no sítio que o teu empregador permite, e normalmente só na pausa. Pausas extra para fumar não são um direito: combina-as com o teu chefe. Nunca fumes perto de coisas que ardem facilmente, como combustível ou caixas num armazém. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.smoking.p': 'Posso fumar lá fora na minha pausa?',
     'c.smoking.s': 'Está frio e a chover. Um colega diz: "Fuma no armazém, ninguém vê." O que fazes?',
-    'c.smoking.o1': 'Dizes que não, e fumas lá fora na zona de fumadores, na tua pausa.',
+    'c.smoking.o1': 'Dizes que não, e fumas lá fora, na tua pausa.', // nieuw, nalezen
     'c.smoking.o2': 'Fumas depressa no armazém, só desta vez.',
     'c.smoking.o3': 'Usas o cigarro eletrónico lá dentro, porque isso é permitido.',
     'c.smoking.w': 'Fumar lá dentro é contra a lei e pode causar um incêndio. O cigarro eletrónico lá dentro também não é permitido. Cumprir a regra mantém toda a gente em segurança.',
@@ -677,7 +677,7 @@ const t: CultureTranslation = {
     'c.respect.p': 'Prefiro não dar a mão, mas cumprimento-te com gosto.',
     'c.respect.s': 'Um colega faz muitas vezes piadas sobre a tua religião. Pediste-lhe para parar, mas ele continua. O que fazes?',
     'c.respect.o1': 'Dizes ao teu chefe ou à vertrouwenspersoon.',
-    'c.respect.o2': 'Ris-te também, para não haver problemas.',
+    'c.respect.o2': 'Ris-te com ele, para não haver problemas.', // nieuw, nalezen
     'c.respect.o3': 'Fazes também piadas sobre a origem dele.',
     'c.respect.w': 'Piadas assim não são aceites no trabalho. Comunicar é normal: a empresa tem de manter o local de trabalho seguro para todos.',
     'c.health': 'Pausas e horário de trabalho',
@@ -692,10 +692,10 @@ const t: CultureTranslation = {
     'c.rights.b': 'A discriminação no trabalho é proibida, por exemplo por causa da tua origem, religião ou género. O teu empregador não te pode simplesmente despedir: normalmente precisa de autorização do UWV ou de um juiz, ou do teu acordo. (No período experimental ou no fim de um contrato temporário, há outras regras.) Não assines um papel sobre o teu despedimento que não percebas. Assinaste um acordo para acabar o teu trabalho (vaststellingsovereenkomst)? Então normalmente ainda o podes anular por escrito no prazo de 14 dias. Pede primeiro ajuda ao sindicato (por exemplo a FNV), a um serviço contra a discriminação ou ao Juridisch Loket (aconselhamento jurídico grátis). Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.',
     'c.rights.p': 'Primeiro quero pedir conselho.',
     'c.rights.s': 'O teu patrão dá-te um papel: "Assina hoje, assim sais por acordo." Não percebes bem. O que fazes?',
-    'c.rights.o1': 'Ainda não assinas. Pedes tempo e primeiro pedes conselho.',
+    'c.rights.o1': 'Ainda não assinas. Primeiro pedes conselho.', // nieuw, nalezen
     'c.rights.o2': 'Assinas, porque o patrão diz que está tudo bem.',
     'c.rights.o3': 'Guardas o papel e nunca falas disso.',
-    'c.rights.w': 'Se assinares, podes perder direitos, por exemplo ao subsídio de desemprego (WW). Pedir tempo para pedir conselho é normal e permitido.',
+    'c.rights.w': 'Há algo errado no papel? Então podes perder direitos, por exemplo ao subsídio de desemprego (WW). Pedir tempo para pedir conselho é normal e permitido.', // nieuw, nalezen
     'c.leave': 'Férias e licença de emergência',
     'c.leave.b': 'Por lei tens dias de férias pagos: pelo menos 4 vezes os dias que trabalhas por semana. A tempo inteiro, 5 dias por semana? Então pelo menos 20 dias por ano. Uma cao pode dar mais. Pede as férias a tempo, e por escrito. Uma emergência repentina, como um acidente ou uma doença na tua família? Então podes ter uma licença curta paga (calamiteitenverlof). Avisa logo o teu empregador. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.leave.p': 'Gostava de pedir férias para julho.',
@@ -836,7 +836,7 @@ const t: CultureTranslation = {
     'c.site.b': 'Antes de começares uma tarefa, para um momento e verifica: o que pode correr mal aqui? Isto é a LMRA (análise de riscos de última hora). Usa sempre o capacete, e proteção contra quedas quando trabalhas em altura. Nunca fiques debaixo de uma carga suspensa. O trabalho é mesmo perigoso? Então podes parar, e tens de avisar logo o teu chefe. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.site.p': 'Ainda não começo. Isto não é seguro.',
     'c.site.s': 'Tens de trabalhar num andaime, mas falta um corrimão de proteção. Um colega diz: "Tem só cuidado." O que fazes?',
-    'c.site.o1': 'Não começas. Primeiro comunicas ao teu chefe.',
+    'c.site.o1': 'Não começas, e dizes ao teu chefe.', // nieuw, nalezen
     'c.site.o2': 'Começas, mas com muito cuidado.',
     'c.site.o3': 'Arranjas tu o corrimão com uma corda.',
     'c.site.w': 'Uma queda de uma altura pode causar ferimentos muito graves. Podes parar um trabalho perigoso, e comunicá-lo protege toda a equipa.',
@@ -845,7 +845,7 @@ const t: CultureTranslation = {
     'c.line.p': 'Há uma avaria. Carreguei na paragem de emergência.',
     'c.line.s': 'Um produto ficou preso na máquina. A máquina ainda está a trabalhar. O que fazes?',
     'c.line.o1': 'Carregas na paragem de emergência e chamas o teu chefe.',
-    'c.line.o2': 'Tiras o produto depressa com a mão.',
+    'c.line.o2': 'Tiras o produto depressa com a mão, antes que se parta.', // nieuw, nalezen
     'c.line.o3': 'Deixas estar e esperas que a máquina resolva.',
     'c.line.w': 'As máquinas a trabalhar podem causar acidentes graves num segundo. Parar a máquina é sempre permitido e é sempre melhor.',
     'c.quality': 'Qualidade: diz o que vês',
@@ -996,7 +996,7 @@ const t: CultureTranslation = {
     'c.gossip.o1': 'Dizes "Nee, dat wil ik niet" e pedes-lhe para apagar.', // nagelezen (2e lezing)
     'c.gossip.o2': 'Ris-te e deixas que ele publique, para não criares problemas.',
     'c.gossip.o3': 'Pedes-lhe para o publicar sem o teu nome.', // nagelezen (2e lezing)
-    'c.gossip.w': 'Ninguém pode pôr um vídeo teu na internet sem a tua autorização. Dizer que não é normal, e o teu empregador tem de agir quando os colegas gozam uns com os outros na internet. Se ele publicar na mesma, diz ao teu chefe.', // nagelezen (2e lezing)
+    'c.gossip.w': 'Normalmente, ninguém pode pôr um vídeo teu na internet sem a tua autorização. Dizer que não é normal, e o teu empregador tem de agir quando os colegas gozam uns com os outros na internet. Se ele publicar na mesma, diz ao teu chefe.', // nieuw, nalezen
     'c.boundaries': 'Passar dos limites',
     'c.boundaries.b': 'Grensoverschrijdend gedrag é um comportamento que passa os limites de alguém: toques indesejados, comentários ou piadas sexuais, olhares insistentes, enviar imagens indesejadas, ameaças ou gritos. Não importa se a outra pessoa "estava a brincar": o que conta é como tu te sentes. Se puderes, diz com clareza que queres que pare. Escreve o que aconteceu, quando e quem viu. Diz ao teu chefe, à pessoa de confiança (vertrouwenspersoon, se houver) ou aos recursos humanos. O teu empregador tem de te proteger, e ninguém te pode castigar por comunicares. Viste isto acontecer a um colega? Pergunta se está bem, e oferece-te para ser testemunha.',
     'c.boundaries.p': 'Quero que pares.',

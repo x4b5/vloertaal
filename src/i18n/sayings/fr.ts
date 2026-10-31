@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'Alors aujourd’hui, je prends le bus.',
     'c.plain.a.why': 'Une très forte pluie : dans le bus, tu restes au sec.',
     'c.easy': 'Les expressions : les mots veulent dire autre chose',
-    'c.easy.b': 'Les Néerlandais utilisent souvent des expressions, aussi au travail. Les mots disent une chose, mais ils veulent dire autre chose. “Een eitje”, c’est un petit œuf, mais ça veut dire : très facile. Tu n’as pas besoin d’utiliser des expressions toi-même. Tu ne comprends pas une expression ? Alors demande simplement ce qu’elle veut dire.',
+    'c.easy.b': 'Ici, les gens utilisent souvent des expressions, aussi au travail. Les mots disent une chose, mais ils veulent dire autre chose. “Een eitje”, c’est un petit œuf, mais ça veut dire : très facile. Tu n’as pas besoin d’utiliser des expressions toi-même. Tu ne comprends pas une expression ? Alors demande simplement ce qu’elle veut dire.', // nieuw, nalezen
     'c.easy.p': 'Tu veux dire quoi par là ?',
     'c.easy.s': 'Ton collègue regarde la nouvelle tâche et dit : “Dat is een eitje!” Qu’est-ce qu’il veut dire ?',
     'c.easy.o1': 'La tâche est très facile.',

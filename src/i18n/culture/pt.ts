@@ -44,7 +44,7 @@ const t: CultureTranslation = {
     'c.ask.o1': 'Pedes para te explicarem outra vez.', // nagelezen (2e lezing)
     'c.ask.o2': 'Acenas com a cabeça e tentas adivinhar.',
     'c.ask.o3': 'Pedes desculpa pelo teu neerlandês e começas a trabalhar.', // nagelezen (2e lezing)
-    'c.ask.w': 'Os chefes nos Países Baixos esperam perguntas. É melhor perguntar duas vezes do que cometer um erro.',
+    'c.ask.w': 'Aqui, os chefes esperam perguntas. É melhor perguntar duas vezes do que cometer um erro.', // nieuw, nalezen
     'c.gear': 'As regras de segurança são para todos',
     'c.gear.b': 'As regras sobre capacetes, sapatos e luvas não são uma sugestão: toda a gente as cumpre, também o chefe. O teu empregador tem de te dar o equipamento de proteção de que precisas, de graça. Equipamento que não serve não te protege bem, por isso pede o teu tamanho: "Heb je dit ook in mijn maat?"',
     'c.gear.p': 'As minhas luvas estão estragadas. Onde arranjo umas novas?',
@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.unsafe.s': 'Uma palete está empilhada alta demais e quase cai. Ninguém se magoou. O que fazes?',
     'c.unsafe.o1': 'Avisas os colegas e dizes ao teu chefe.',
     'c.unsafe.o2': 'Não dizes nada, porque não aconteceu nada.',
-    'c.unsafe.o3': { m: 'Resolves sozinho e não dizes a ninguém.', f: 'Resolves sozinha e não dizes a ninguém.', x: 'Resolves sozinho/a e não dizes a ninguém.' },
+    'c.unsafe.o3': { m: 'Arrumas a palete sozinho e não dizes a ninguém.', f: 'Arrumas a palete sozinha e não dizes a ninguém.', x: 'Arrumas a palete sozinho/a e não dizes a ninguém.' }, // nieuw, nalezen
     'c.unsafe.w': 'Um quase-acidente é um aviso. Comunicá-lo ajuda a evitar um acidente a sério. O teu empregador não te pode castigar por o comunicares.',
     'c.accident': 'Comunica todos os acidentes',
     'c.accident.b': 'Conta ao teu chefe ou ao BHV’er (o socorrista da empresa) todos os acidentes, também os pequenos. Trabalhas através de uma agência? Avisa também a agência. Numa emergência, liga primeiro para o 112. A empresa onde o acidente aconteceu tem de comunicar um acidente grave à Nederlandse Arbeidsinspectie (também se trabalhas através de uma agência): quando alguém morre, fica com lesões para a vida ou tem de ficar no hospital. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',

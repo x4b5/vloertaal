@@ -552,8 +552,8 @@ const t: CultureTranslation = {
     's.cleansafe.3': 'Nigdy nie mieszaj środków czyszczących.',
     'c.cleansafe.q': 'Mogę tu przejść?',
     'c.cleansafe.a': 'Uważaj, podłoga jest jeszcze śliska.',
-    'c.cv': 'Krótkie holenderskie CV',
-    'c.cv.b': 'Holenderskie CV jest krótkie: 1 albo 2 strony. Napisz dane kontaktowe, doświadczenie zawodowe, wykształcenie, języki i umiejętności. Zdjęcie nie jest potrzebne. Nie musisz pisać o religii, wieku ani stanie cywilnym. Pisz uczciwie o tym, co umiesz. Poproś kogoś, żeby sprawdził twój niderlandzki.',
+    'c.cv': 'Krótkie CV', // nieuw, nalezen
+    'c.cv.b': 'Tutaj CV jest krótkie: 1 albo 2 strony. Napisz dane kontaktowe, doświadczenie zawodowe, wykształcenie, języki i umiejętności. Zdjęcie nie jest potrzebne. Nie musisz pisać o religii, wieku ani stanie cywilnym. Pisz uczciwie o tym, co umiesz. Poproś kogoś, żeby sprawdził twój niderlandzki.', // nieuw, nalezen
     'c.cv.p': 'Przeczytasz moje CV? Czy mój niderlandzki jest poprawny?',
     'c.cv.s': { m: 'Przez 3 lata pracowałeś w fabryce w swoim kraju, ale nie masz dyplomu. Co wpisujesz do CV?', f: 'Przez 3 lata pracowałaś w fabryce w swoim kraju, ale nie masz dyplomu. Co wpisujesz do CV?', x: 'Masz za sobą 3 lata pracy w fabryce w swoim kraju, ale nie masz dyplomu. Co wpisujesz do CV?' }, // x: nieuw, nalezen
     'c.cv.o1': { m: 'Uczciwie wpisujesz tę pracę i to, co tam robiłeś.', f: 'Uczciwie wpisujesz tę pracę i to, co tam robiłaś.', x: 'Uczciwie wpisujesz tę pracę i swoje zadania.' }, // x: nieuw, nalezen
@@ -567,7 +567,7 @@ const t: CultureTranslation = {
     'c.interview.o1': 'Zadajesz pytanie o godziny albo szkolenia.', // nagelezen (2e lezing)
     'c.interview.o2': 'Mówisz „nie”, bo zadawanie pytań jest niegrzeczne.',
     'c.interview.o3': 'Mówisz więcej o sobie, żeby pokazać, że dobrze pracujesz.', // nagelezen (2e lezing)
-    'c.interview.w': 'Pytania pokazują, że interesuje cię ta praca. Holenderscy pracodawcy często ich oczekują.',
+    'c.interview.w': 'Pytania pokazują, że interesuje cię ta praca. Tutaj pracodawcy często ich oczekują.', // nieuw, nalezen
     'c.findwork': 'Weź umowę na piśmie',
     'c.findwork.b': 'Zawsze proś o umowę na piśmie i kopię dla siebie. Przeczytaj ją, zanim podpiszesz, albo poproś o pomoc kogoś, komu ufasz. Agencja pracy (uitzendbureau) nie może brać od ciebie pieniędzy za znalezienie pracy. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
     'c.findwork.p': 'Mogę najpierw przeczytać umowę?',
@@ -636,7 +636,7 @@ const t: CultureTranslation = {
     'c.smoking.b': 'W Holandii palenie wewnątrz miejsca pracy jest zabronione przez prawo. Dotyczy to też e-papierosów. Od 2022 roku palarnie w firmach nie są już dozwolone. Pal tylko na zewnątrz, w miejscu, na które pozwala pracodawca, i zwykle tylko w przerwie. Dodatkowe przerwy na papierosa to nie twoje prawo: ustal je z przełożonym. Nigdy nie pal przy rzeczach, które łatwo się palą, np. przy paliwie albo kartonach w magazynie. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.',
     'c.smoking.p': 'Mogę zapalić na zewnątrz w przerwie?',
     'c.smoking.s': 'Jest zimno i pada deszcz. Kolega mówi: „Zapal w magazynku, nikt nie zobaczy.” Co robisz?',
-    'c.smoking.o1': 'Odmawiasz i palisz na zewnątrz, w miejscu dla palących, w przerwie.',
+    'c.smoking.o1': 'Odmawiasz i palisz na zewnątrz, w przerwie.', // nieuw, nalezen
     'c.smoking.o2': 'Szybko palisz w magazynku, tylko ten jeden raz.',
     'c.smoking.o3': 'Zamiast tego używasz e-papierosa w środku, bo to wolno.',
     'c.smoking.w': 'Palenie w środku jest niezgodne z prawem i może wywołać pożar. E-papierosa w środku też nie wolno używać. Przestrzeganie zasad chroni wszystkich.',
@@ -677,7 +677,7 @@ const t: CultureTranslation = {
     'c.respect.p': 'Wolę nie podawać ręki, ale chętnie się z tobą przywitam.',
     'c.respect.s': { m: 'Kolega często żartuje z twojej religii. Prosiłeś, żeby przestał, ale on robi to dalej. Co robisz?', f: 'Kolega często żartuje z twojej religii. Prosiłaś, żeby przestał, ale on robi to dalej. Co robisz?', x: 'Kolega często żartuje z twojej religii. Prosisz, żeby przestał, ale on robi to dalej. Co robisz?' }, // x: nieuw, nalezen
     'c.respect.o1': 'Mówisz o tym przełożonemu albo vertrouwenspersoon.',
-    'c.respect.o2': 'Śmiejesz się razem z nim, żeby nie było kłopotów.',
+    'c.respect.o2': 'Śmiejesz się razem z nim, żeby nie było kłopotów.', // nieuw, nalezen
     'c.respect.o3': 'W odpowiedzi żartujesz z jego pochodzenia.',
     'c.respect.w': 'Takie żarty są w pracy nie do przyjęcia. Zgłoszenie tego jest normalne: firma musi dbać, żeby miejsce pracy było bezpieczne dla wszystkich.',
     'c.health': 'Przerwy i godziny pracy',
@@ -692,10 +692,10 @@ const t: CultureTranslation = {
     'c.rights.b': { m: 'Dyskryminacja w pracy jest zabroniona, np. z powodu pochodzenia, religii albo płci. Pracodawca nie może tak po prostu cię zwolnić: zwykle potrzebuje zgody UWV albo sądu, albo twojej zgody. (W okresie próbnym albo na koniec umowy na czas określony obowiązują inne zasady.) Nie podpisuj papieru o zwolnieniu, którego nie rozumiesz. Podpisałeś porozumienie o zakończeniu pracy (vaststellingsovereenkomst)? Wtedy zwykle możesz je jeszcze odwołać na piśmie w ciągu 14 dni. Najpierw poproś o pomoc związek zawodowy (np. FNV), punkt pomocy w sprawie dyskryminacji albo Juridisch Loket (darmowa porada prawna). To ogólne informacje. W twojej sytuacji zapytaj związek zawodowy, Juridisch Loket albo FairWork.', f: 'Dyskryminacja w pracy jest zabroniona, np. z powodu pochodzenia, religii albo płci. Pracodawca nie może tak po prostu cię zwolnić: zwykle potrzebuje zgody UWV albo sądu, albo twojej zgody. (W okresie próbnym albo na koniec umowy na czas określony obowiązują inne zasady.) Nie podpisuj papieru o zwolnieniu, którego nie rozumiesz. Podpisałaś porozumienie o zakończeniu pracy (vaststellingsovereenkomst)? Wtedy zwykle możesz je jeszcze odwołać na piśmie w ciągu 14 dni. Najpierw poproś o pomoc związek zawodowy (np. FNV), punkt pomocy w sprawie dyskryminacji albo Juridisch Loket (darmowa porada prawna). To ogólne informacje. W twojej sytuacji zapytaj związek zawodowy, Juridisch Loket albo FairWork.', x: 'Dyskryminacja w pracy jest zabroniona, np. z powodu pochodzenia, religii albo płci. Pracodawca nie może tak po prostu cię zwolnić: zwykle potrzebuje zgody UWV albo sądu, albo twojej zgody. (W okresie próbnym albo na koniec umowy na czas określony obowiązują inne zasady.) Nie podpisuj papieru o zwolnieniu, którego nie rozumiesz. Porozumienie o zakończeniu pracy (vaststellingsovereenkomst) jest już podpisane? Wtedy zwykle możesz je jeszcze odwołać na piśmie w ciągu 14 dni. Najpierw poproś o pomoc związek zawodowy (np. FNV), punkt pomocy w sprawie dyskryminacji albo Juridisch Loket (darmowa porada prawna). To ogólne informacje. W twojej sytuacji zapytaj związek zawodowy, Juridisch Loket albo FairWork.' }, // x: nieuw, nalezen
     'c.rights.p': 'Najpierw chcę poprosić o radę.',
     'c.rights.s': 'Szef daje ci papier: „Podpisz dzisiaj, wtedy odejdziesz za porozumieniem.” Nie rozumiesz go dobrze. Co robisz?',
-    'c.rights.o1': 'Jeszcze nie podpisujesz. Prosisz o czas i najpierw szukasz porady.',
+    'c.rights.o1': 'Jeszcze nie podpisujesz. Najpierw szukasz porady.', // nieuw, nalezen
     'c.rights.o2': 'Podpisujesz, bo szef mówi, że wszystko w porządku.',
     'c.rights.o3': 'Odkładasz papier i nigdy o nim nie rozmawiasz.',
-    'c.rights.w': 'Jeśli podpiszesz, możesz stracić prawa, np. do zasiłku dla bezrobotnych (WW). Prośba o czas na poradę jest normalna i dozwolona.',
+    'c.rights.w': 'Jest w nim coś źle? Wtedy możesz stracić prawa, np. do zasiłku dla bezrobotnych (WW). Prośba o czas na poradę jest normalna i dozwolona.', // nieuw, nalezen
     'c.leave': 'Urlop i urlop w nagłej sytuacji',
     'c.leave.b': 'Z mocy prawa masz płatne dni wolne: co najmniej 4 razy tyle dni, ile pracujesz w tygodniu. Pełny etat, 5 dni w tygodniu? Wtedy co najmniej 20 dni w roku. Cao może dawać więcej. Proś o urlop na czas i na piśmie. Nagła sytuacja, np. wypadek albo choroba w rodzinie? Wtedy możesz dostać krótki płatny urlop (calamiteitenverlof). Od razu powiedz pracodawcy. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
     'c.leave.p': { m: 'Chciałbym poprosić o urlop w lipcu.', f: 'Chciałabym poprosić o urlop w lipcu.', x: 'Czy mogę prosić o urlop w lipcu?' }, // x: nieuw, nalezen
@@ -836,7 +836,7 @@ const t: CultureTranslation = {
     'c.site.b': 'Zanim zaczniesz zadanie, zatrzymaj się na chwilę i sprawdź: co może tu pójść źle? To jest LMRA (ocena ryzyka w ostatniej minucie). Zawsze noś kask, a przy pracy na wysokości zabezpieczenie przed upadkiem. Nigdy nie stój pod wiszącym ładunkiem. Praca jest naprawdę niebezpieczna? Wtedy możesz przerwać, a przełożonemu musisz od razu o tym powiedzieć. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
     'c.site.p': 'Jeszcze nie zaczynam. To nie jest bezpieczne.',
     'c.site.s': 'Masz pracować na rusztowaniu, ale brakuje barierki. Kolega mówi: „Po prostu uważaj.” Co robisz?',
-    'c.site.o1': 'Nie zaczynasz. Najpierw zgłaszasz to przełożonemu.',
+    'c.site.o1': 'Nie zaczynasz i mówisz o tym przełożonemu.', // nieuw, nalezen
     'c.site.o2': 'Zaczynasz, ale bardzo uważasz.',
     'c.site.o3': { m: 'Sam naprawiasz barierkę kawałkiem liny.', f: 'Sama naprawiasz barierkę kawałkiem liny.', x: 'Samodzielnie naprawiasz barierkę kawałkiem liny.' }, // x: nieuw, nalezen
     'c.site.w': 'Upadek z wysokości może spowodować bardzo ciężkie obrażenia. Możesz przerwać niebezpieczną pracę, a zgłoszenie tego chroni cały zespół.',
@@ -845,7 +845,7 @@ const t: CultureTranslation = {
     'c.line.p': { m: 'Jest awaria. Nacisnąłem wyłącznik awaryjny.', f: 'Jest awaria. Nacisnęłam wyłącznik awaryjny.', x: 'Jest awaria. Wyłącznik awaryjny jest wciśnięty.' }, // x: nieuw, nalezen
     'c.line.s': 'Produkt utknął w maszynie. Maszyna wciąż pracuje. Co robisz?',
     'c.line.o1': 'Naciskasz wyłącznik awaryjny i wołasz przełożonego.',
-    'c.line.o2': 'Szybko wyciągasz go ręką.',
+    'c.line.o2': 'Szybko wyciągasz go ręką, zanim się zepsuje.', // nieuw, nalezen
     'c.line.o3': 'Zostawiasz to i liczysz, że maszyna sama to naprawi.',
     'c.line.w': 'Pracujące maszyny mogą w sekundę spowodować ciężki wypadek. Zatrzymanie maszyny jest zawsze dozwolone i zawsze lepsze.',
     'c.quality': 'Jakość: mów, co widzisz',
@@ -996,7 +996,7 @@ const t: CultureTranslation = {
     'c.gossip.o1': 'Mówisz „Nee, dat wil ik niet” i prosisz, żeby to usunął.', // nagelezen (2e lezing)
     'c.gossip.o2': "Śmiejesz się i pozwalasz mu to opublikować, żeby nie robić problemów.",
     'c.gossip.o3': 'Prosisz go, żeby to opublikował bez twojego imienia.', // nagelezen (2e lezing)
-    'c.gossip.w': 'Nikt nie może wrzucić filmu z tobą do internetu bez twojej zgody. Odmowa jest normalna, a pracodawca musi zareagować, gdy koledzy wyśmiewają się z siebie nawzajem w internecie. Jeśli i tak to opublikuje, powiedz o tym przełożonemu.', // nagelezen (2e lezing)
+    'c.gossip.w': 'Zwykle nikt nie może wrzucić filmu z tobą do internetu bez twojej zgody. Odmowa jest normalna, a pracodawca musi zareagować, gdy koledzy wyśmiewają się z siebie nawzajem w internecie. Jeśli i tak to opublikuje, powiedz o tym przełożonemu.', // nieuw, nalezen
     'c.boundaries': "Przekraczanie granic",
     'c.boundaries.b': { m: 'Grensoverschrijdend gedrag to zachowanie, które przekracza czyjeś granice: niechciany dotyk, seksualne uwagi lub żarty, gapienie się, wysyłanie niechcianych zdjęć, groźby albo krzyk. Nie ma znaczenia, czy druga osoba „chciała tylko zażartować”: liczy się to, jak ty to odczuwasz. Jeśli możesz, powiedz wyraźnie, że chcesz, żeby to się skończyło. Zapisz, co się stało, kiedy i kto to widział. Powiedz o tym przełożonemu, osobie zaufania (vertrouwenspersoon, jeśli jest) albo w HR. Pracodawca musi cię chronić i nie możesz zostać ukarany za zgłoszenie. Widziałeś, że spotkało to kolegę? Zapytaj, czy wszystko w porządku, i zaproponuj, że będziesz świadkiem.', f: 'Grensoverschrijdend gedrag to zachowanie, które przekracza czyjeś granice: niechciany dotyk, seksualne uwagi lub żarty, gapienie się, wysyłanie niechcianych zdjęć, groźby albo krzyk. Nie ma znaczenia, czy druga osoba „chciała tylko zażartować”: liczy się to, jak ty to odczuwasz. Jeśli możesz, powiedz wyraźnie, że chcesz, żeby to się skończyło. Zapisz, co się stało, kiedy i kto to widział. Powiedz o tym przełożonemu, osobie zaufania (vertrouwenspersoon, jeśli jest) albo w HR. Pracodawca musi cię chronić i nie możesz zostać ukarana za zgłoszenie. Widziałaś, że spotkało to kolegę? Zapytaj, czy wszystko w porządku, i zaproponuj, że będziesz świadkiem.', x: 'Grensoverschrijdend gedrag to zachowanie, które przekracza czyjeś granice: niechciany dotyk, seksualne uwagi lub żarty, gapienie się, wysyłanie niechcianych zdjęć, groźby albo krzyk. Nie ma znaczenia, czy druga osoba „chciała tylko zażartować”: liczy się to, jak ty to odczuwasz. Jeśli możesz, powiedz wyraźnie, że chcesz, żeby to się skończyło. Zapisz, co się stało, kiedy i kto to widział. Powiedz o tym przełożonemu, osobie zaufania (vertrouwenspersoon, jeśli jest) albo w HR. Pracodawca musi cię chronić i nie wolno cię karać za zgłoszenie. Spotkało to kolegę na twoich oczach? Zapytaj, czy wszystko w porządku, i zaproponuj, że będziesz świadkiem.' }, // x: nieuw, nalezen
     'c.boundaries.p': "Chcę, żebyś przestał.",

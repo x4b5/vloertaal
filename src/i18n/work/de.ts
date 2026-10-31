@@ -552,8 +552,8 @@ const t: CultureTranslation = {
     's.cleansafe.3': 'Misch nie Reinigungsmittel.',
     'c.cleansafe.q': 'Darf ich hier gehen?',
     'c.cleansafe.a': 'Vorsicht, der Boden ist noch rutschig.',
-    'c.cv': 'Ein kurzer niederländischer Lebenslauf',
-    'c.cv.b': 'Ein niederländischer Lebenslauf ist kurz: 1 oder 2 Seiten. Schreib deine Kontaktdaten, Berufserfahrung, Ausbildung, Sprachen und Fähigkeiten auf. Ein Foto ist nicht nötig. Religion, Alter oder Familienstand musst du nicht angeben. Sei ehrlich darüber, was du kannst. Bitte jemanden, dein Niederländisch zu prüfen.',
+    'c.cv': 'Ein kurzer Lebenslauf', // nieuw, nalezen
+    'c.cv.b': 'Ein Lebenslauf ist hier kurz: 1 oder 2 Seiten. Schreib deine Kontaktdaten, Berufserfahrung, Ausbildung, Sprachen und Fähigkeiten auf. Ein Foto ist nicht nötig. Religion, Alter oder Familienstand musst du nicht angeben. Sei ehrlich darüber, was du kannst. Bitte jemanden, dein Niederländisch zu prüfen.', // nieuw, nalezen
     'c.cv.p': 'Liest du meinen Lebenslauf? Ist mein Niederländisch richtig?',
     'c.cv.s': 'Du hast 3 Jahre in einer Fabrik in deinem Heimatland gearbeitet, aber du hast keinen Abschluss. Was schreibst du in deinen Lebenslauf?',
     'c.cv.o1': 'Schreib die Arbeit auf und was du dort gemacht hast, ehrlich.',
@@ -567,7 +567,7 @@ const t: CultureTranslation = {
     'c.interview.o1': 'Stell eine Frage zu den Stunden oder zu Schulungen.', // nagelezen (2e lezing)
     'c.interview.o2': 'Sag nein, weil Fragen stellen nicht höflich ist.',
     'c.interview.o3': 'Erzähl mehr über dich, um zu zeigen, dass du gut arbeitest.', // nagelezen (2e lezing)
-    'c.interview.w': 'Fragen zeigen, dass du dich für die Stelle interessierst. Niederländische Arbeitgeber erwarten sie oft.',
+    'c.interview.w': 'Fragen zeigen, dass du dich für die Stelle interessierst. Arbeitgeber hier erwarten sie oft.', // nieuw, nalezen
     'c.findwork': 'Hol dir deinen Vertrag auf Papier',
     'c.findwork.b': 'Frag immer nach einem schriftlichen Vertrag und einer Kopie für dich. Lies ihn, bevor du unterschreibst, oder bitte jemanden, dem du vertraust, um Hilfe. Eine Zeitarbeitsfirma (uitzendbureau) darf kein Geld von dir verlangen, um dir Arbeit zu vermitteln. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.findwork.p': 'Darf ich den Vertrag zuerst lesen?',
@@ -636,7 +636,7 @@ const t: CultureTranslation = {
     'c.smoking.b': 'In den Niederlanden ist Rauchen in Innenräumen am Arbeitsplatz gesetzlich verboten. Das gilt auch für E-Zigaretten (Vapes). Seit 2022 sind Raucherräume in Firmen nicht mehr erlaubt. Rauch nur draußen, an dem Platz, den dein Arbeitgeber erlaubt, und meistens nur in deiner Pause. Extra Raucherpausen sind kein Recht: Sprich sie mit deinem Vorgesetzten ab. Rauch nie in der Nähe von Dingen, die leicht brennen, wie Treibstoff oder Kartons im Lager. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.', // nagelezen AI ronde 3
     'c.smoking.p': 'Darf ich in meiner Pause draußen rauchen?',
     'c.smoking.s': 'Es ist kalt und es regnet. Ein Kollege sagt: „Rauch doch im Lagerraum, da sieht es keiner.“ Was machst du?',
-    'c.smoking.o1': 'Sag nein und rauch in deiner Pause draußen im Raucherbereich.',
+    'c.smoking.o1': 'Sag nein und rauch in deiner Pause draußen.', // nieuw, nalezen
     'c.smoking.o2': 'Rauch schnell im Lagerraum, nur dieses eine Mal.',
     'c.smoking.o3': 'Nimm stattdessen drinnen deine Vape, das ist ja erlaubt.',
     'c.smoking.w': 'Rauchen in Gebäuden ist gegen das Gesetz und kann ein Feuer auslösen. Eine Vape drinnen ist auch nicht erlaubt. Wer sich an die Regel hält, schützt alle.',
@@ -677,7 +677,7 @@ const t: CultureTranslation = {
     'c.respect.p': 'Ich gebe lieber nicht die Hand, aber ich grüße dich gern.',
     'c.respect.s': 'Ein Kollege macht oft Witze über deine Religion. Du hast ihn gebeten aufzuhören, aber er macht weiter. Was machst du?',
     'c.respect.o1': 'Sag es deinem Vorgesetzten oder der vertrouwenspersoon.',
-    'c.respect.o2': 'Lach mit, damit es keinen Ärger gibt.',
+    'c.respect.o2': 'Lach mit ihm mit, damit es keinen Ärger gibt.', // nieuw, nalezen
     'c.respect.o3': 'Mach zur Antwort Witze über seine Herkunft.',
     'c.respect.w': 'Solche Witze werden bei der Arbeit nicht akzeptiert. Es zu melden ist normal: Die Firma muss den Arbeitsplatz für alle sicher halten.',
     'c.health': 'Pausen und Arbeitszeiten',
@@ -692,10 +692,10 @@ const t: CultureTranslation = {
     'c.rights.b': 'Diskriminierung bei der Arbeit ist verboten, zum Beispiel wegen deiner Herkunft, Religion oder deines Geschlechts. Dein Arbeitgeber kann dich nicht einfach entlassen: Normalerweise braucht er die Erlaubnis vom UWV oder von einem Richter, oder deine Zustimmung. (In der Probezeit oder am Ende eines befristeten Vertrags gelten andere Regeln.) Unterschreib kein Papier über deine Kündigung, das du nicht verstehst. Hast du eine Vereinbarung zum Ende deiner Arbeit unterschrieben (vaststellingsovereenkomst)? Dann kannst du sie meistens noch innerhalb von 14 Tagen schriftlich widerrufen. Hol dir zuerst Hilfe bei der Gewerkschaft (zum Beispiel FNV), einer Antidiskriminierungsstelle oder beim Juridisch Loket (kostenlose Rechtsberatung). Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
     'c.rights.p': 'Ich möchte mich zuerst beraten lassen.',
     'c.rights.s': 'Dein Chef gibt dir ein Papier: „Unterschreib heute, dann gehst du im gegenseitigen Einvernehmen.“ Du verstehst es nicht gut. Was machst du?',
-    'c.rights.o1': 'Unterschreib noch nicht. Bitte um Zeit und lass dich zuerst beraten.',
+    'c.rights.o1': 'Unterschreib noch nicht. Lass dich zuerst beraten.', // nieuw, nalezen
     'c.rights.o2': 'Unterschreib, der Chef sagt ja, es ist in Ordnung.',
     'c.rights.o3': 'Leg das Papier weg und sprich nie darüber.',
-    'c.rights.w': 'Wenn du unterschreibst, kannst du Rechte verlieren, zum Beispiel auf Arbeitslosengeld (WW). Um Zeit für eine Beratung zu bitten ist normal und erlaubt.',
+    'c.rights.w': 'Steht darin etwas Falsches? Dann kannst du Rechte verlieren, zum Beispiel auf Arbeitslosengeld (WW). Um Zeit für eine Beratung zu bitten ist normal und erlaubt.', // nieuw, nalezen
     'c.leave': 'Urlaub und Sonderurlaub für Notfälle',
     'c.leave.b': 'Nach dem Gesetz bekommst du bezahlte freie Tage: mindestens 4-mal so viele Tage, wie du pro Woche arbeitest. Vollzeit, 5 Tage pro Woche? Dann mindestens 20 Tage im Jahr. Ein Tarifvertrag (cao) kann mehr geben. Beantrage Urlaub rechtzeitig und schriftlich. Ein plötzlicher Notfall, zum Beispiel ein Unfall oder eine Krankheit in deiner Familie? Dann kannst du kurzen bezahlten Sonderurlaub bekommen (calamiteitenverlof). Sag es sofort deinem Arbeitgeber. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.leave.p': 'Ich möchte gern Urlaub für Juli beantragen.',
@@ -836,7 +836,7 @@ const t: CultureTranslation = {
     'c.site.b': 'Bevor du mit einer Arbeit anfängst, halte kurz an und prüfe: Was kann hier schiefgehen? Das ist die LMRA (Last-Minute-Risikoanalyse). Trag immer deinen Helm, und eine Absturzsicherung, wenn du in der Höhe arbeitest. Stell dich nie unter eine hängende Last. Ist die Arbeit wirklich gefährlich? Dann darfst du aufhören, und du musst es sofort deinem Vorgesetzten sagen. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.site.p': 'Ich fange noch nicht an. Das ist nicht sicher.',
     'c.site.s': 'Du musst auf einem Gerüst arbeiten, aber ein Geländer fehlt. Ein Kollege sagt: „Pass einfach auf.“ Was machst du?',
-    'c.site.o1': 'Fang nicht an. Melde es zuerst deinem Vorgesetzten.',
+    'c.site.o1': 'Fang nicht an, und sag es deinem Vorgesetzten.', // nieuw, nalezen
     'c.site.o2': 'Fang an, aber pass sehr gut auf.',
     'c.site.o3': 'Repariere das Geländer selbst mit einem Seil.',
     'c.site.w': 'Ein Sturz aus der Höhe kann sehr schwere Verletzungen verursachen. Gefährliche Arbeit darfst du stoppen, und eine Meldung schützt das ganze Team.',
@@ -845,7 +845,7 @@ const t: CultureTranslation = {
     'c.line.p': 'Es gibt eine Störung. Ich habe den Notaus gedrückt.',
     'c.line.s': 'Ein Produkt steckt in der Maschine fest. Die Maschine läuft noch. Was machst du?',
     'c.line.o1': 'Drück den Notaus und ruf deinen Vorgesetzten.',
-    'c.line.o2': 'Zieh es schnell mit der Hand heraus.',
+    'c.line.o2': 'Zieh es schnell mit der Hand heraus, bevor es kaputtgeht.', // nieuw, nalezen
     'c.line.o3': 'Lass es und hoffe, dass die Maschine es selbst löst.',
     'c.line.w': 'Laufende Maschinen können in einer Sekunde schwere Unfälle verursachen. Die Maschine anhalten ist immer erlaubt und immer besser.',
     'c.quality': 'Qualität: Sag, was du siehst',
@@ -996,7 +996,7 @@ const t: CultureTranslation = {
     'c.gossip.o1': 'Sag „Nee, dat wil ik niet“ und bitte ihn, es zu löschen.', // nagelezen (2e lezing)
     'c.gossip.o2': 'Lach und lass ihn posten, damit du nicht schwierig bist.',
     'c.gossip.o3': 'Bitte ihn, es ohne deinen Namen zu posten.', // nagelezen (2e lezing)
-    'c.gossip.w': 'Niemand darf ohne deine Erlaubnis ein Video von dir online stellen. Nein sagen ist normal, und dein Arbeitgeber muss handeln, wenn Kollegen sich online übereinander lustig machen. Wenn er es trotzdem postet, sag es deinem Vorgesetzten.', // nagelezen (2e lezing)
+    'c.gossip.w': 'Meistens darf niemand ohne deine Erlaubnis ein Video von dir online stellen. Nein sagen ist normal, und dein Arbeitgeber muss handeln, wenn Kollegen sich online übereinander lustig machen. Wenn er es trotzdem postet, sag es deinem Vorgesetzten.', // nieuw, nalezen
     'c.boundaries': 'Grenzen überschreiten',
     'c.boundaries.b': 'Grensoverschrijdend gedrag ist Verhalten, das die Grenze von jemandem überschreitet: unerwünschtes Anfassen, sexuelle Bemerkungen oder Witze, Anstarren, unerwünschte Bilder schicken, Drohungen oder Anschreien. Es ist egal, ob die andere Person es „als Witz gemeint“ hat: Es zählt, wie es sich für dich anfühlt. Wenn du kannst, sag klar, dass es aufhören soll. Schreib auf, was passiert ist, wann und wer es gesehen hat. Sag es deinem Vorgesetzten, der Vertrauensperson (vertrouwenspersoon, wenn es eine gibt) oder der Personalabteilung (HR). Dein Arbeitgeber muss dich schützen, und du darfst nicht bestraft werden, weil du es meldest. Hast du gesehen, dass es einem Kollegen passiert? Frag, ob alles okay ist, und biete an, Zeuge zu sein.',
     'c.boundaries.p': 'Ich will, dass du aufhörst.',

@@ -103,7 +103,7 @@ const baseTips: CultureTip[] = [
       { id: 'c.ask.o2', en: 'Nod and try to guess.', best: false },
       { id: 'c.ask.o3', en: 'Say sorry for your Dutch and start working.', best: false },
     ],
-    why: { id: 'c.ask.w', en: 'Dutch supervisors expect questions. It is better to ask twice than to make a mistake.' },
+    why: { id: 'c.ask.w', en: 'Supervisors here expect questions. It is better to ask twice than to make a mistake.' },
   }),
   tip({
     id: 'c.gear',
@@ -131,7 +131,7 @@ const baseTips: CultureTip[] = [
     options: [
       { id: 'c.unsafe.o1', en: 'Warn colleagues and tell your supervisor.', best: true },
       { id: 'c.unsafe.o2', en: 'Say nothing, because nothing happened.', best: false },
-      { id: 'c.unsafe.o3', en: 'Fix it alone and tell nobody.', best: false },
+      { id: 'c.unsafe.o3', en: 'Fix the pallet yourself and tell nobody.', best: false },
     ],
     why: { id: 'c.unsafe.w', en: 'A near-accident is a warning. Reporting it helps prevent a real accident. Your employer may not punish you for reporting it.' },
   }),

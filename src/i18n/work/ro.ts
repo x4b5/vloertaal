@@ -552,8 +552,8 @@ const t: CultureTranslation = {
     's.cleansafe.3': 'Nu amesteca niciodată produse de curățenie.',
     'c.cleansafe.q': 'Pot să trec pe aici?',
     'c.cleansafe.a': 'Atenție, podeaua e încă alunecoasă.',
-    'c.cv': 'Un CV olandez scurt',
-    'c.cv.b': { m: 'Un CV olandez e scurt: 1 sau 2 pagini. Scrie datele de contact, experiența de muncă, studiile, limbile și abilitățile. Nu e nevoie de poză. Nu trebuie să scrii religia, vârsta sau starea civilă. Fii sincer despre ce știi să faci. Roagă pe cineva să-ți verifice olandeza.', f: 'Un CV olandez e scurt: 1 sau 2 pagini. Scrie datele de contact, experiența de muncă, studiile, limbile și abilitățile. Nu e nevoie de poză. Nu trebuie să scrii religia, vârsta sau starea civilă. Fii sinceră despre ce știi să faci. Roagă pe cineva să-ți verifice olandeza.', x: 'Un CV olandez e scurt: 1 sau 2 pagini. Scrie datele de contact, experiența de muncă, studiile, limbile și abilitățile. Nu e nevoie de poză. Nu trebuie să scrii religia, vârsta sau starea civilă. Spune sincer ce știi să faci. Roagă pe cineva să-ți verifice olandeza.' }, // x: nieuw, nalezen
+    'c.cv': 'Un CV scurt', // nieuw, nalezen
+    'c.cv.b': { m: 'Aici, un CV e scurt: 1 sau 2 pagini. Scrie datele de contact, experiența de muncă, studiile, limbile și abilitățile. Nu e nevoie de poză. Nu trebuie să scrii religia, vârsta sau starea civilă. Fii sincer despre ce știi să faci. Roagă pe cineva să-ți verifice olandeza.', f: 'Aici, un CV e scurt: 1 sau 2 pagini. Scrie datele de contact, experiența de muncă, studiile, limbile și abilitățile. Nu e nevoie de poză. Nu trebuie să scrii religia, vârsta sau starea civilă. Fii sinceră despre ce știi să faci. Roagă pe cineva să-ți verifice olandeza.', x: 'Aici, un CV e scurt: 1 sau 2 pagini. Scrie datele de contact, experiența de muncă, studiile, limbile și abilitățile. Nu e nevoie de poză. Nu trebuie să scrii religia, vârsta sau starea civilă. Spune sincer ce știi să faci. Roagă pe cineva să-ți verifice olandeza.' }, // nieuw, nalezen
     'c.cv.p': 'Îmi citești CV-ul? E corectă olandeza mea?',
     'c.cv.s': 'Ai lucrat 3 ani într-o fabrică în țara ta, dar nu ai diplomă. Ce scrii în CV?',
     'c.cv.o1': 'Scrii sincer munca și ce ai făcut acolo.',
@@ -567,7 +567,7 @@ const t: CultureTranslation = {
     'c.interview.o1': 'Pui o întrebare despre ore sau instruire.', // nagelezen (2e lezing)
     'c.interview.o2': 'Spui nu, pentru că nu e politicos să pui întrebări.',
     'c.interview.o3': 'Vorbești mai mult despre tine, ca să arăți că lucrezi bine.', // nagelezen (2e lezing)
-    'c.interview.w': 'Întrebările arată că te interesează postul. Angajatorii din Olanda se așteaptă des la ele.',
+    'c.interview.w': 'Întrebările arată că te interesează postul. Aici, angajatorii se așteaptă des la ele.', // nieuw, nalezen
     'c.findwork': 'Cere contractul pe hârtie',
     'c.findwork.b': 'Cere mereu un contract scris și o copie pentru tine. Citește-l înainte să semnezi sau roagă o persoană de încredere să te ajute. O agenție de muncă temporară (uitzendbureau) nu are voie să-ți ceară bani ca să-ți găsească de lucru. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.findwork.p': 'Pot să citesc întâi contractul?',
@@ -636,7 +636,7 @@ const t: CultureTranslation = {
     'c.smoking.b': 'În Olanda, fumatul în interiorul unui loc de muncă e interzis prin lege. Asta e valabil și pentru țigările electronice (vape). Din 2022, camerele pentru fumat din interiorul firmelor nu mai sunt permise. Fumează doar afară, în locul permis de angajator, și de obicei doar în pauză. Pauzele de fumat în plus nu sunt un drept: stabilește-le cu șeful. Nu fuma niciodată lângă lucruri care iau foc ușor, cum ar fi combustibilul sau cutiile dintr-un depozit. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.',
     'c.smoking.p': 'Pot să fumez afară în pauză?',
     'c.smoking.s': 'E frig și plouă. Un coleg spune: „Fumează în magazie, nu vede nimeni.” Ce faci?',
-    'c.smoking.o1': 'Spui nu și fumezi afară, la locul pentru fumat, în pauză.',
+    'c.smoking.o1': 'Spui nu și fumezi afară, în pauză.', // nieuw, nalezen
     'c.smoking.o2': 'Fumezi repede în magazie, doar de data asta.',
     'c.smoking.o3': 'Folosești în schimb vape-ul înăuntru, pentru că asta e permis.',
     'c.smoking.w': 'Fumatul înăuntru e împotriva legii și poate provoca un incendiu. Nici vape-ul nu e permis înăuntru. Când respecți regula, toți rămân în siguranță.',
@@ -677,7 +677,7 @@ const t: CultureTranslation = {
     'c.respect.p': 'Prefer să nu dau mâna, dar mă bucur să te salut.',
     'c.respect.s': 'Un coleg face des glume despre religia ta. I-ai cerut să se oprească, dar continuă. Ce faci?',
     'c.respect.o1': 'Îi spui șefului sau persoanei de încredere (vertrouwenspersoon).',
-    'c.respect.o2': 'Râzi și tu, ca să nu fie probleme.',
+    'c.respect.o2': 'Râzi împreună cu el, ca să nu fie probleme.', // nieuw, nalezen
     'c.respect.o3': 'Faci și tu glume despre originea lui.',
     'c.respect.w': 'Astfel de glume nu sunt acceptate la muncă. E normal să raportezi: firma trebuie să păstreze locul de muncă sigur pentru toți.',
     'c.health': 'Pauze și ore de lucru',
@@ -692,10 +692,10 @@ const t: CultureTranslation = {
     'c.rights.b': 'Discriminarea la muncă e interzisă, de exemplu din cauza originii, religiei sau genului tău. Angajatorul nu te poate concedia pur și simplu: de obicei are nevoie de permisiunea UWV sau a unui judecător, sau de acordul tău. (În perioada de probă sau la sfârșitul unui contract temporar se aplică alte reguli.) Nu semna o hârtie despre concedierea ta pe care nu o înțelegi. Ai semnat un acord de încetare a contractului (vaststellingsovereenkomst)? Atunci de obicei îl mai poți anula în scris în 14 zile. Cere întâi ajutor de la sindicat (de exemplu FNV), de la un birou pentru discriminare sau de la Juridisch Loket (sfaturi juridice gratuite). Informații generale. Pentru situația ta: întreabă sindicatul, Juridisch Loket sau FairWork.',
     'c.rights.p': 'Vreau să cer întâi un sfat.',
     'c.rights.s': 'Șeful îți dă o hârtie: „Semnează azi și pleci de comun acord.” Nu o înțelegi bine. Ce faci?',
-    'c.rights.o1': 'Nu semnezi încă. Ceri timp și ceri întâi un sfat.',
+    'c.rights.o1': 'Nu semnezi încă. Ceri întâi un sfat.', // nieuw, nalezen
     'c.rights.o2': 'O semnezi, pentru că șeful spune că e în regulă.',
     'c.rights.o3': 'Pui hârtia deoparte și nu mai vorbești niciodată despre ea.',
-    'c.rights.w': 'Dacă semnezi, poți pierde drepturi, de exemplu dreptul la ajutorul de șomaj (WW). E normal și permis să ceri timp ca să te sfătuiești.',
+    'c.rights.w': 'E ceva greșit în el? Atunci poți pierde drepturi, de exemplu dreptul la ajutorul de șomaj (WW). E normal și permis să ceri timp ca să te sfătuiești.', // nieuw, nalezen
     'c.leave': 'Concediu și concediu pentru urgențe',
     'c.leave.b': 'Prin lege ai zile libere plătite: cel puțin de 4 ori numărul de zile pe care le lucrezi pe săptămână. Normă întreagă, 5 zile pe săptămână? Atunci cel puțin 20 de zile pe an. Un cao poate da mai multe. Cere concediu din timp și în scris. O urgență neașteptată, ca un accident sau o boală în familie? Atunci poți primi un concediu scurt plătit (calamiteitenverlof). Anunță-ți imediat angajatorul. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.leave.p': 'Aș vrea să cer concediu pentru iulie.',
@@ -836,7 +836,7 @@ const t: CultureTranslation = {
     'c.site.b': 'Înainte să începi o lucrare, oprește-te o clipă și verifică: ce poate merge prost aici? Asta e LMRA (analiza riscurilor de ultim moment). Poartă mereu casca, iar când lucrezi la înălțime, și protecția împotriva căderii. Nu sta niciodată sub o încărcătură suspendată. Munca e cu adevărat periculoasă? Atunci ai voie să te oprești și trebuie să-i spui imediat șefului. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.site.p': 'Încă nu încep. Asta nu e sigur.',
     'c.site.s': 'Trebuie să lucrezi pe o schelă, dar lipsește o balustradă. Un coleg spune: „Ai grijă și gata.” Ce faci?',
-    'c.site.o1': 'Nu începi. Îi raportezi întâi șefului.',
+    'c.site.o1': 'Nu începi și îi spui șefului.', // nieuw, nalezen
     'c.site.o2': 'Începi, dar ai foarte mare grijă.',
     'c.site.o3': { m: 'Repari singur balustrada cu o sfoară.', f: 'Repari singură balustrada cu o sfoară.', x: 'Repari pe cont propriu balustrada cu o sfoară.' }, // x: nieuw, nalezen
     'c.site.w': 'O cădere de la înălțime poate provoca răni foarte grave. Ai voie să oprești o muncă periculoasă, iar raportarea protejează toată echipa.',
@@ -845,7 +845,7 @@ const t: CultureTranslation = {
     'c.line.p': 'E o defecțiune. Am apăsat butonul de oprire de urgență.',
     'c.line.s': 'Un produs s-a blocat în mașină. Mașina încă merge. Ce faci?',
     'c.line.o1': 'Apeși butonul de oprire de urgență și îl chemi pe șef.',
-    'c.line.o2': 'Îl scoți repede cu mâna.',
+    'c.line.o2': 'Îl scoți repede cu mâna, înainte să se strice.', // nieuw, nalezen
     'c.line.o3': 'Îl lași acolo și speri că mașina se descurcă singură.',
     'c.line.w': 'Mașinile în funcțiune pot provoca accidente grave într-o secundă. E mereu permis și mereu mai bine să oprești mașina.',
     'c.quality': 'Calitate: spune ce vezi',
@@ -996,7 +996,7 @@ const t: CultureTranslation = {
     'c.gossip.o1': 'Spui „Nee, dat wil ik niet” și îi ceri să-l șteargă.', // nagelezen (2e lezing)
     'c.gossip.o2': { m: 'Râzi și îl lași să-l posteze, ca să nu fii dificil.', f: 'Râzi și îl lași să-l posteze, ca să nu fii dificilă.', x: 'Râzi și îl lași să-l posteze, ca să nu faci probleme.' }, // x: nieuw, nalezen
     'c.gossip.o3': 'Îi ceri să-l posteze fără numele tău.', // nagelezen (2e lezing)
-    'c.gossip.w': 'Nimeni nu are voie să pună online un video cu tine fără permisiunea ta. E normal să spui nu, iar angajatorul trebuie să intervină când colegii își bat joc unii de alții online. Dacă îl postează totuși, spune-i șefului.', // nagelezen (2e lezing)
+    'c.gossip.w': 'De obicei, nimeni nu are voie să pună online un video cu tine fără permisiunea ta. E normal să spui nu, iar angajatorul trebuie să intervină când colegii își bat joc unii de alții online. Dacă îl postează totuși, spune-i șefului.', // nieuw, nalezen
     'c.boundaries': "Depășirea limitelor",
     'c.boundaries.b': { m: 'Grensoverschrijdend gedrag este un comportament care trece de limita cuiva: atingeri nedorite, remarci sau glume sexuale, priviri insistente, trimiterea de poze nedorite, amenințări sau țipete. Nu contează dacă celălalt „a vrut doar să glumească”: contează cum te simți tu. Dacă poți, spune clar că vrei să se oprească. Notează ce s-a întâmplat, când și cine a văzut. Spune-i șefului, persoanei de încredere (vertrouwenspersoon, dacă există) sau la HR. Angajatorul trebuie să te protejeze și nu poți fi pedepsit pentru că raportezi. Ai văzut că i s-a întâmplat unui coleg? Întreabă-l dacă e bine și oferă-te să fii martor.', f: 'Grensoverschrijdend gedrag este un comportament care trece de limita cuiva: atingeri nedorite, remarci sau glume sexuale, priviri insistente, trimiterea de poze nedorite, amenințări sau țipete. Nu contează dacă celălalt „a vrut doar să glumească”: contează cum te simți tu. Dacă poți, spune clar că vrei să se oprească. Notează ce s-a întâmplat, când și cine a văzut. Spune-i șefului, persoanei de încredere (vertrouwenspersoon, dacă există) sau la HR. Angajatorul trebuie să te protejeze și nu poți fi pedepsită pentru că raportezi. Ai văzut că i s-a întâmplat unui coleg? Întreabă-l dacă e bine și oferă-te să fii martor.', x: 'Grensoverschrijdend gedrag este un comportament care trece de limita cuiva: atingeri nedorite, remarci sau glume sexuale, priviri insistente, trimiterea de poze nedorite, amenințări sau țipete. Nu contează dacă celălalt „a vrut doar să glumească”: contează cum te simți tu. Dacă poți, spune clar că vrei să se oprească. Notează ce s-a întâmplat, când și cine a văzut. Spune-i șefului, persoanei de încredere (vertrouwenspersoon, dacă există) sau la HR. Angajatorul trebuie să te protejeze și nimeni nu te poate pedepsi pentru că raportezi. Ai văzut că i s-a întâmplat unui coleg? Întreabă-l dacă e bine și oferă-te să fii martor.' }, // x: nieuw, nalezen
     'c.boundaries.p': "Vreau să te oprești.",

@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'To dziś pojadę autobusem.',
     'c.plain.a.why': 'Bardzo mocny deszcz: w autobusie nie zmokniesz.',
     'c.easy': 'Powiedzenia: słowa znaczą coś innego',
-    'c.easy.b': 'Holendrzy często używają powiedzeń, także w pracy. Słowa mówią jedno, ale znaczą coś innego. „Een eitje” to małe jajko, ale znaczy: bardzo łatwe. Ty nie musisz używać powiedzeń. Nie rozumiesz jakiegoś powiedzenia? To po prostu zapytaj, co ono znaczy.',
+    'c.easy.b': 'Tutaj ludzie często używają powiedzeń, także w pracy. Słowa mówią jedno, ale znaczą coś innego. „Een eitje” to małe jajko, ale znaczy: bardzo łatwe. Ty nie musisz używać powiedzeń. Nie rozumiesz jakiegoś powiedzenia? To po prostu zapytaj, co ono znaczy.', // nieuw, nalezen
     'c.easy.p': 'Co masz na myśli?',
     'c.easy.s': 'Kolega patrzy na nowe zadanie i mówi: „Dat is een eitje!” Co ma na myśli?',
     'c.easy.o1': 'Zadanie jest bardzo łatwe.',

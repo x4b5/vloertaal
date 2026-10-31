@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'Dann nehme ich heute den Bus.',
     'c.plain.a.why': 'Sehr starker Regen: Im Bus bleibt man trocken.',
     'c.easy': 'Redewendungen: Die Wörter meinen etwas anderes',
-    'c.easy.b': 'Niederländer benutzen oft Redewendungen, auch bei der Arbeit. Die Wörter sagen das eine, aber sie meinen etwas anderes. „Een eitje“ ist ein kleines Ei, aber es bedeutet: sehr leicht. Du musst selbst keine Redewendungen benutzen. Du verstehst eine Redewendung nicht? Dann frag einfach, was sie bedeutet.',
+    'c.easy.b': 'Hier benutzen die Leute oft Redewendungen, auch bei der Arbeit. Die Wörter sagen das eine, aber sie meinen etwas anderes. „Een eitje“ ist ein kleines Ei, aber es bedeutet: sehr leicht. Du musst selbst keine Redewendungen benutzen. Du verstehst eine Redewendung nicht? Dann frag einfach, was sie bedeutet.', // nieuw, nalezen
     'c.easy.p': 'Was meinst du damit?',
     'c.easy.s': 'Dein Kollege sieht sich die neue Aufgabe an und sagt: „Dat is een eitje!“ Was meint er?',
     'c.easy.o1': 'Die Aufgabe ist sehr leicht.',
