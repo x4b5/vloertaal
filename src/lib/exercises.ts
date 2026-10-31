@@ -37,7 +37,11 @@ export type Exercise =
    *  `options` are then questions. */
   | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[]; reverse?: true }
   /** "How it works here": a workplace-culture card (not graded). */
-  | { kind: 'tip'; tip: CultureTip }
+  /**
+   * "Zo werkt het hier" in two pages (owner's choice, 31 October 2026): `read` the tip itself,
+   * then `say` its phrase ("Zeg het zo"). Without `part` (a lesson saved before): both on one page.
+   */
+  | { kind: 'tip'; tip: CultureTip; part?: 'read' | 'say' }
   /** A saying in a lesson of another topic (src/content/sayings.ts): "Zo zeggen ze het". Not graded;
    *  a "What does she mean?" situation (sayingQuestion) follows it. */
   | { kind: 'saying'; saying: LessonSaying }
@@ -891,7 +895,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
 
   // Language first, then one workplace custom, right after the new words.
   if (tip) {
-    if (!opts.review && ownTip) out.push({ kind: 'tip', tip });
+    if (!opts.review && ownTip) out.push({ kind: 'tip', tip, part: 'read' }, { kind: 'tip', tip, part: 'say' });
     out.push({ kind: 'situation', tip, options: shuffle(tip.options, rng) });
   }
 

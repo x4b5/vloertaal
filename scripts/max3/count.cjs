@@ -358,6 +358,8 @@ function defineStates(LANG) {
   // Tester mode: the "Iets melden" flag in the header (chrome, like the ✕).
   add('lesson:report', shot('meaning&report=1'), null, { expect: '.player-top .lesson-report' });
   add('lesson:tip', shot('tip'));
+  // The tip's second page: "Zeg het zo" on its own (31 October 2026).
+  add('lesson:tip-say', shot('tip&part=say'));
   add('lesson:saying', shot('saying'));
   add('lesson:saying-long', shot('saying&saying=l.measures'));
   add('lesson:word-card-saying', shot('intro&word=w.blad'));
@@ -366,38 +368,38 @@ function defineStates(LANG) {
   add('lesson:sounds-listen', shot('lesson&lesson=l.shortlong&at=10'));
   // "Een ongeluk melden" (l.accident, seed 1): a word card, the abstract word "gebeuren", the tip
   // and its situation, a sentence to build, the chat and typing "gewond".
-  for (const [key, at] of [['intro', 0], ['word-abstract', 7], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+  for (const [key, at] of [['intro', 0], ['word-abstract', 7], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:accident-${key}`, shot(`lesson&lesson=l.accident&at=${at}`));
   }
   // "Werken via een uitzendbureau" (l.agency, seed 1): a word card, the abstract word "de opdracht",
   // the tip and its situation, a sentence to build, the chat and typing "de opdracht".
-  for (const [key, at] of [['intro', 0], ['word-abstract', 4], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+  for (const [key, at] of [['intro', 0], ['word-abstract', 4], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:agency-${key}`, shot(`lesson&lesson=l.agency&at=${at}`));
   }
   // "Opdrachten van je leidinggevende" (l.task, seed 1): a word card, the abstract word "eerst",
   // the tip and its situation, a sentence to build, the chat and typing "de taak".
-  for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+  for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:task-${key}`, shot(`lesson&lesson=l.task&at=${at}`));
   }
   // "De eerste dag: je weg vinden" (l.arrive, seed 1): a word card, the picture choice "de buddy",
   // the tip and its situation, a sentence to build, the chat and typing "de ingang".
-  for (const [key, at] of [['intro', 0], ['pick', 13], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+  for (const [key, at] of [['intro', 0], ['pick', 14], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:arrive-${key}`, shot(`lesson&lesson=l.arrive&at=${at}`));
   }
   // "Dit heb ik nog niet geleerd" (l.notyet, seed 1): the abstract word "nog niet", a word card, the
   // tip and its situation (a Dutch quote with its speaker), a sentence to build, the chat and typing "mogen".
-  for (const [key, at] of [['word-abstract', 0], ['intro', 3], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+  for (const [key, at] of [['word-abstract', 0], ['intro', 3], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:notyet-${key}`, shot(`lesson&lesson=l.notyet&at=${at}`));
   }
   // "Slimme apps en AI" (u.ai, seed 1): every step of its four lessons (word cards, the abstract
   // words, picture and listen choices, the tip and its situation, the sentences, the chats, typing).
   for (const lesson of ['aihelp', 'aiprivate', 'aifake', 'aiplan']) {
-    for (let at = 0; at < 20; at++) add(`lesson:${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
+    for (let at = 0; at < 21; at++) add(`lesson:${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
   }
   // The tips of "Messages and the roster app" (l.texting: the example message on one line, never
   // split inside its quotes, and "Mag ik mijn dienst ruilen?") and "Beschermende kleding" (l.gear:
   // "Heb je dit ook in mijn maat?"), with their situations (seed 1).
-  for (const [key, at] of [['tip', 9], ['situation', 10]]) {
+  for (const [key, at] of [['tip', 9], ['tip-say', 10], ['situation', 11]]) {
     add(`lesson:texting-${key}`, shot(`lesson&lesson=l.texting&at=${at}`));
     add(`lesson:gear-${key}`, shot(`lesson&lesson=l.gear&at=${at}`));
   }
