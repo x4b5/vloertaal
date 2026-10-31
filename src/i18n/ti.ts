@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'ብዛዕባ ውዕል፡ ደሞዝ ወይ ካብ ስራሕ ምስጓግ ብናጻ ምኽሪ።',
     whoInspection: 'ዘይውሑስ ስራሕ፡ ዝወሓደ ደሞዝ ወይ ምዝመዛ ንምሕባር። ብዘይ ስም እውን ይከኣል።',
     whoFairwork: 'ኣብ ስራሕ ምዝመዛ ምስ ዘሎ፡ ወይ ጥርጣረ ምስ ዘሎ።',
+    who113: 'ሓሳብ ምቁራጽ ህይወት ምስ ዘሎ፡ ወይ ስክፍታ ብዛዕባ ካልእ ሰብ ምስ ዘሎ። ብነጻ፡ ለይትን መዓልትን።', // nieuw, nalezen
+    whoVeiligThuis: 'ኣብ ገዛ ዓመጽ ወይ በደል ምስ ዘሎ፡ ኣብ ካልእ ሰብ እውን። ብነጻ፡ ስም ከይተሃበ እውን ይከኣል።', // nieuw, nalezen
     settings: 'ምድላዋት',
     helpLanguage: 'ቋንቋ ሓገዝ',
     resetProgress: { m: 'ምዕባለይ ደምስስ', f: 'ምዕባለይ ደምስሲ', x: 'ምዕባለይ ደምስሱ' }, // x: nieuw, nalezen

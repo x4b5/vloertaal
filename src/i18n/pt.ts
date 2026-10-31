@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Conselho grátis sobre o teu contrato, o teu salário ou um despedimento.',
     whoInspection: 'Denuncia trabalho perigoso, salário baixo demais ou exploração. Podes fazê-lo de forma anónima.',
     whoFairwork: { m: 'Estás a ser explorado no trabalho, ou achas que sim.', f: 'Estás a ser explorada no trabalho, ou achas que sim.', x: 'Estás a ser explorado/a no trabalho, ou achas que sim.' },
+    who113: 'Pensas em pôr fim à vida, ou alguém te preocupa. Gratuito, dia e noite.', // nieuw, nalezen
+    whoVeiligThuis: 'Violência ou abuso em casa, contra ti ou contra outra pessoa. Gratuito, também sem dar o nome.', // nieuw, nalezen
     settings: 'Definições',
     helpLanguage: 'Língua de ajuda',
     resetProgress: 'Apagar o meu progresso',

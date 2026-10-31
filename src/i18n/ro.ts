@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Sfaturi gratuite despre contract, salariu sau concediere.',
     whoInspection: 'Raportează munca nesigură, salariul prea mic sau exploatarea. Poți face asta anonim.',
     whoFairwork: 'Cineva te exploatează la muncă, sau crezi că așa e.',
+    who113: 'Te gândești să-ți iei viața sau îți faci griji pentru cineva. Gratuit, zi și noapte.', // nieuw, nalezen
+    whoVeiligThuis: 'Violență sau abuz acasă, asupra ta sau a altcuiva. Gratuit, se poate și anonim.', // nieuw, nalezen
     settings: 'Setări',
     helpLanguage: 'Limba de ajutor',
     resetProgress: 'Șterge progresul meu',

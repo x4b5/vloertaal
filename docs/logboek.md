@@ -104,3 +104,8 @@ Elke maand:
    (`console.warn`, de test faalt niet). Pas de teksten aan (de `ids` in de `files`), maak een
    update, met een melding als het de leerling direct raakt (zie hierboven), en haal daarna de
    datum of het hele item weg.
+3. Zet daarna `LAW_CHECKED` (onderaan `src/content/updates.ts`) op de datum van deze check. Wie de
+   maandcheck doet (nu de eigenaar), werkt hem bij, en alleen na een echte check. De leerling ziet
+   die maand als "Bijgewerkt: …" in Werkregels (`RULES_CHECKED` in
+   `src/content/regels/disclaimer.ts` volgt hem vanzelf). Is hij ouder dan 45 dagen, dan geeft
+   `tests/upcomingLaw.test.ts` een waarschuwing.

@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Kostenlose Beratung zu deinem Vertrag, deinem Lohn oder einer Kündigung.',
     whoInspection: 'Melde unsichere Arbeit, zu wenig Lohn oder Ausbeutung. Das geht auch anonym.',
     whoFairwork: 'Du wirst bei der Arbeit ausgebeutet, oder du glaubst das.',
+    who113: 'Du denkst daran, dir das Leben zu nehmen, oder du machst dir Sorgen um jemanden. Kostenlos, Tag und Nacht.', // nieuw, nalezen
+    whoVeiligThuis: 'Gewalt oder Missbrauch zu Hause, gegen dich oder jemand anderen. Kostenlos, auch ohne deinen Namen.', // nieuw, nalezen
     settings: 'Einstellungen',
     helpLanguage: 'Hilfssprache',
     resetProgress: 'Meinen Fortschritt löschen',

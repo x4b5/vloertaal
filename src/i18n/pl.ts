@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Bezpłatna porada w sprawie umowy, wynagrodzenia lub zwolnienia.',
     whoInspection: 'Zgłoś niebezpieczną pracę, za niską pensję lub wyzysk. Możesz to zrobić anonimowo.',
     whoFairwork: 'Ktoś cię wyzyskuje w pracy albo tak myślisz.',
+    who113: 'Myślisz o odebraniu sobie życia albo martwisz się o kogoś. Bezpłatnie, w dzień i w nocy.', // nieuw, nalezen
+    whoVeiligThuis: 'Przemoc lub krzywdzenie w domu, wobec ciebie albo kogoś innego. Bezpłatnie, można anonimowo.', // nieuw, nalezen
     settings: 'Ustawienia',
     helpLanguage: 'Język pomocy',
     resetProgress: 'Zresetuj mój postęp',

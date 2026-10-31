@@ -60,6 +60,8 @@ export const uiEn = {
   whoLegal: 'Free advice about your contract, your pay or dismissal.',
   whoInspection: 'Report unsafe work, too little pay or exploitation. You can do it anonymously.',
   whoFairwork: 'You are exploited at work, or you think you are.',
+  who113: 'You think about ending your life, or you worry about someone. Free, day and night.',
+  whoVeiligThuis: 'Violence or abuse at home, to you or to someone else. Free, also without your name.',
   settings: 'Settings',
   helpLanguage: 'Help language',
   resetProgress: 'Reset my progress',
@@ -486,6 +488,7 @@ export const uiEn = {
   whoInspectionBe: 'Report too little pay, or work without a contract.',
   whoExploitBe: 'You are exploited at work, or you think you are.',
   whoUnionBe: 'Help with your pay, your contract or when your job ends. Members get more help.',
+  who1813Be: 'You think about ending your life, or you worry about someone. Free and anonymous.',
   /* "Er is iets veranderd": a notice on the home, once (src/components/NoticeCard.tsx; translations in src/i18n/notices). */
   noticeTitle: 'Something has changed',
   noticeMore: 'Read more',

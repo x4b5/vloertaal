@@ -439,6 +439,8 @@ const WORK_CONTACT_KEYS: Record<'nl' | 'be', { id: string; when: UiKey }[]> = {
     { id: 'h.juridischloket', when: 'whoLegal' },
     { id: 'h.arbeidsinspectie', when: 'whoInspection' },
     { id: 'h.fairwork', when: 'whoFairwork' },
+    { id: 'h.113', when: 'who113' },
+    { id: 'h.veiligthuis', when: 'whoVeiligThuis' },
   ],
   be: [
     { id: 'h.112', when: 'who112' },
@@ -446,6 +448,7 @@ const WORK_CONTACT_KEYS: Record<'nl' | 'be', { id: string; when: UiKey }[]> = {
     { id: 'h.be.tsw', when: 'whoInspectionBe' },
     { id: 'h.be.payoke', when: 'whoExploitBe' },
     { id: 'h.be.vakbond', when: 'whoUnionBe' },
+    { id: 'h.be.1813', when: 'who1813Be' },
   ],
 };
 /** The rows of "Problems at work? Who can help" for a country, each with its help-language line. */

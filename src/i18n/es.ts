@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Consejo gratis sobre tu contrato, tu sueldo o un despido.',
     whoInspection: 'Denuncia trabajo peligroso, un sueldo demasiado bajo o explotación. Puedes hacerlo de forma anónima.',
     whoFairwork: 'Te explotan en el trabajo, o crees que te explotan.',
+    who113: 'Piensas en quitarte la vida o te preocupa alguien. Gratis, de día y de noche.', // nieuw, nalezen
+    whoVeiligThuis: 'Violencia o abuso en casa, contra ti o contra otra persona. Gratis, también sin dar tu nombre.', // nieuw, nalezen
     settings: 'Ajustes',
     helpLanguage: 'Idioma de ayuda',
     resetProgress: 'Borrar mi progreso',

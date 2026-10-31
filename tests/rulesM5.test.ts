@@ -58,13 +58,19 @@ describe('Hulp in the work-rules track: "Wie bel je?"', () => {
     expect(byName['h.meldmisdaad'].show).toBe('0800-7000');
     expect(byName['h.geldfit'].show).toBe('0800-8115');
     expect(byName['h.politie'].show).toBe('0900-8844');
-    expect(byName['h.fairwork'].href).toBe('https://www.fairwork.nu');
+    // FairWork: a number to call (Inhoudsronde 3), the site still in the line.
+    expect(byName['h.fairwork'].href).toBe('tel:0207600809');
+    expect(byName['h.fairwork'].show).toContain('fairwork.nu');
+    // The crisis lines (audit-inhoud 7): 113, Veilig Thuis and the Centrum Seksueel Geweld.
+    expect(byName['h.113'].href).toBe('tel:113');
+    expect(byName['h.veiligthuis'].show).toContain('0800-2000');
+    expect(byName['h.csg'].show).toContain('0800-0188');
     expect(byName['h.uwv'].href).toBe('https://www.uwv.nl');
     // Discriminatie: the site the lessons name, no phone number.
     expect(byName['h.discriminatie'].show).toBe('discriminatie.nl');
     expect(byName['h.discriminatie'].href).toBe('https://www.discriminatie.nl');
     for (const id of ['h.huisartsenpost', 'h.vertrouwenspersoon', 'h.vakbond', 'h.gemeente']) expect(byName[id], id).toBeDefined();
-    expect(HELP_ROWS).toHaveLength(13);
+    expect(HELP_ROWS).toHaveLength(16);
     expect(new Set(HELP_ROWS.map((r) => r.id)).size).toBe(HELP_ROWS.length);
   });
 

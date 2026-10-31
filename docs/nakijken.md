@@ -95,8 +95,11 @@ lijken), `twijfel van de maker`, `bestand:regel`, en drie lege: `klopt?`, `corre
   Nederlands of Engels leest, en de taal van de werkvloer kent. Prioriteit: Tigrinya, dan Dari
   ([`vertaalcontrole.md`](vertaalcontrole.md)).
 - Per land één jurist of iemand van een vakbond: `review/feiten-NL/` of `review/feiten-BE/`.
-  Werkregels voor België staat nog uit, Taal voor België staat aan als bèta: allebei wachten ze
-  op deze lijst ([`werkregels-belgie.md`](werkregels-belgie.md), [`taal-belgie.md`](taal-belgie.md)).
+  Werkregels voor België en Taal voor België staan **allebei al live**, als bèta (sinds 31 oktober
+  2026: `BE_RULES_LIVE = true` en `BE_TAAL_LIVE = true`). Een leerling in België leest de Belgische
+  feiten dus nu al, terwijl een deskundige ze nog niet heeft nagekeken. Deze lijst is daarom
+  dringend. Zeg dat ook in de mail aan de jurist voor België
+  ([`werkregels-belgie.md`](werkregels-belgie.md), [`taal-belgie.md`](taal-belgie.md)).
 - Twee mensen voor dezelfde taal mag: geef ze elk een deel (de rijen staan op belang, dus de
   eerste helft is het belangrijkst), of laat de tweede de eerste nakijken.
 

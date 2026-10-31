@@ -458,7 +458,7 @@ describe('the closing line of the tips', () => {
 describe('"Problems at work? Who can help" in Belgium', () => {
   it('shows the Belgian places in Belgium, each with a line in every help language', () => {
     const be = workContacts('be').map((c) => c.id);
-    expect(be).toEqual(['h.112', ...['h.be.justitiehuis', 'h.be.payoke', 'h.be.tsw', 'h.be.vakbond'].sort((a, b) => helpRowsFor('be').findIndex((r) => r.id === a) - helpRowsFor('be').findIndex((r) => r.id === b))]);
+    expect(be).toEqual(['h.112', ...['h.be.justitiehuis', 'h.be.payoke', 'h.be.tsw', 'h.be.vakbond', 'h.be.1813'].sort((a, b) => helpRowsFor('be').findIndex((r) => r.id === a) - helpRowsFor('be').findIndex((r) => r.id === b))]);
     expect(workContacts('nl').map((c) => c.id)).toEqual(expect.arrayContaining(['h.juridischloket', 'h.arbeidsinspectie', 'h.fairwork']));
     for (const c of workContacts('be')) for (const lang of helpLanguages) expect(lang.ui[c.when]?.trim(), `${lang.code} ${c.when}`).toBeTruthy();
     for (const c of workContacts('be')) expect(`${c.row.name} ${c.row.when}`, c.id).not.toMatch(NL_ONLY);

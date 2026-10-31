@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Sözleşmen, maaşın veya işten çıkarılman hakkında ücretsiz danışmanlık.',
     whoInspection: 'Güvensiz işi, çok düşük maaşı veya sömürüyü bildir. İsimsiz de yapabilirsin.',
     whoFairwork: 'İşte sömürülüyorsun ya da öyle düşünüyorsun.',
+    who113: 'Hayatına son vermeyi düşünüyorsun ya da biri için endişeleniyorsun. Ücretsiz, gece gündüz.', // nieuw, nalezen
+    whoVeiligThuis: 'Evde şiddet veya istismar, sana ya da başka birine. Ücretsiz, isim vermeden de olur.', // nieuw, nalezen
     settings: 'Ayarlar',
     helpLanguage: 'Yardım dili',
     resetProgress: 'İlerlememi sıfırla',

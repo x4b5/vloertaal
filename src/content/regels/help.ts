@@ -76,7 +76,26 @@ export const HELP_ROWS: HelpRow[] = alphabetical([
   {
     id: 'h.fairwork', emoji: '🤝', name: 'FairWork',
     when: 'Iemand buit je uit op je werk, of je denkt dat het zo is.',
-    show: 'fairwork.nu', href: 'https://www.fairwork.nu', // ⚖️ check: still the right place (werkregels-bronnen.md, 5.28)
+    // ⚖️ check: the phone number of FairWork is 020 760 08 09 (help.unhcr.org/netherlands "for survivors of human trafficking", NL and EN, search result of 31 okt 2026; fairwork.nu itself could not be opened from this session). The site is still in the line, for who cannot call.
+    show: '020-7600809 · fairwork.nu', href: 'tel:0207600809', // ⚖️ check: number from UNHCR, not yet from fairwork.nu (werkregels-bronnen.md, 5.28)
+  },
+  {
+    // ⚖️ check: 113 Zelfmoordpreventie: 113 and 0800-0113, both free since October 2025, day and night, also a chat on 113.nl (ANP via hartvannederland.nl and welingelichtekringen.nl, Oct 2025; telecompaper.com; search results of 31 okt 2026, 113.nl could not be opened). Lesson 7.3 (veilig.ts, "te veel stress") is about stress, this is the crisis line.
+    id: 'h.113', emoji: '☎️', name: '113 Zelfmoordpreventie',
+    when: 'Je denkt aan zelfdoding, of je maakt je zorgen om iemand. Gratis, dag en nacht. Chatten kan ook, op 113.nl.',
+    show: '113 (gratis)', href: 'tel:113', // ⚖️ check: 113 is free since Oct 2025 (0800-0113 too)
+  },
+  {
+    // ⚖️ check: Veilig Thuis, advice and reports about domestic violence and child abuse: 0800-2000, free, day and night, anonymous if you want; you are put through to the Veilig Thuis of your region (rijksoverheid.nl "Wat moet ik doen bij huiselijk geweld?"; search result of 31 okt 2026)
+    id: 'h.veiligthuis', emoji: '🏠', name: 'Veilig Thuis',
+    when: 'Geweld of misbruik thuis, bij jou of bij iemand anders. Gratis, dag en nacht. Je mag anoniem bellen.',
+    show: '0800-2000 (gratis)', href: 'tel:08002000', // ⚖️ check: rijksoverheid.nl huiselijk geweld
+  },
+  {
+    // ⚖️ check: Centrum Seksueel Geweld: 0800-0188, free and anonymous, day and night, or the chat (centrumseksueelgeweld.nl "Bel 0800-0188"; om.nl "waar kunnen slachtoffers terecht"; search results of 31 okt 2026). The site says the number only works with a Dutch provider: hence the chat in the line. Also in rechten.ts (a comment only, until now).
+    id: 'h.csg', emoji: '🛡️', name: 'Centrum Seksueel Geweld',
+    when: 'Iemand deed je seksueel geweld aan, ook op je werk. Gratis, dag en nacht. Chatten kan ook, op de site.',
+    show: '0800-0188 (gratis)', href: 'tel:08000188', // ⚖️ check: centrumseksueelgeweld.nl
   },
   {
     id: 'h.vakbond', emoji: '✊', name: 'Vakbond (FNV of CNV)',
@@ -148,9 +167,14 @@ export const HELP_ROWS_BE: HelpRow[] = alphabetical([
     // ⚖️ check: Payoke (Antwerpen), PAG-ASA (Brussel) and Sürya (Luik) are the three recognised
     // centres for victims of human trafficking, also economic exploitation (KB 18 april 2013; Myria;
     // their sites from a search result of 31 October 2026, not opened). Also the Taal track's Hulp tab.
+    // ⚖️ check: 078 055 800 is the one number of the meldpunt mensenhandel of the FOD Justitie and the
+    // three centres (since 2023; working hours, urgent cases day and night; stopmensenhandel.be;
+    // news.belgium.be and werk.belgie.be "Werelddag tegen mensenhandel" 2023 and 2024; search results
+    // of 31 okt 2026). A 078 number costs a normal call: not "gratis". Inhoudsronde 3 (31 okt 2026):
+    // the number instead of payoke.be, so the row is one call (audit-inhoud 6 and 7).
     id: 'h.be.payoke', emoji: '🤝', name: 'Payoke, PAG-ASA of Sürya',
-    when: 'Iemand buit je uit op je werk, of je denkt dat het zo is.',
-    show: 'payoke.be · pag-asa.be', href: 'https://www.payoke.be',
+    when: 'Iemand buit je uit op je werk, of je denkt dat het zo is. Bel het meldpunt mensenhandel.',
+    show: '078 055 800 · stopmensenhandel.be', href: 'tel:078055800', // ⚖️ check: meldpunt mensenhandel (FOD Justitie)
   },
   {
     // ⚖️ check: Unia takes reports of discrimination for free, online or on 0800 12 800 (vlaanderen.be
@@ -167,6 +191,14 @@ export const HELP_ROWS_BE: HelpRow[] = alphabetical([
     id: 'h.be.1712', emoji: '💬', name: '1712',
     when: 'Geweld, misbruik of seksueel geweld, ook op je werk. Gratis en anoniem.',
     show: '1712', href: 'tel:1712',
+  },
+  {
+    // ⚖️ check: 1813 is the Zelfmoordlijn of Flanders: free and anonymous, day and night; also a chat
+    // and mail on zelfmoord1813.be (findahelpline.com "Zelfmoordlijn 1813"; VRT NWS 10 nov 2023;
+    // search results of 31 okt 2026, zelfmoord1813.be not opened). VRT: not always someone free at once.
+    id: 'h.be.1813', emoji: '☎️', name: '1813 Zelfmoordlijn',
+    when: 'Je denkt aan zelfdoding, of je maakt je zorgen om iemand. Gratis en anoniem, dag en nacht.',
+    show: '1813', href: 'tel:1813', // ⚖️ check: zelfmoord1813.be
   },
   {
     // ⚖️ check: VDAB, the public employment service of Flanders

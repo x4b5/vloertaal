@@ -25,6 +25,7 @@ export const UPDATES: Update[] = [
       'Nieuw bij Alle onderwerpen: een zoekbalk. Typ een woord, in het Nederlands of in je eigen taal, en je ziet de onderwerpen waar het in staat. Bijvoorbeeld "ziek" of "helm".',
       'Nieuw bij Over: Waarom Vloertaal? En "Wat is er nieuw?": hier zie je wat er in de app veranderd is.',
       'Werk je in België (Vlaanderen)? Kies dan bij de start, of later bij Instellingen, "België". In het spoor Werkregels krijg je dan de regels van België: alle onderwerpen, met Vlaamse woorden (loonbrief, interimkantoor, ziekenfonds, RVA). Dit is nieuw: de Belgische lessen zijn nog niet nagekeken door een expert. Zie je een fout? Mail naar hoi@vloertaal.nl.',
+      'Hulp: nieuwe nummers bij "Wie bel je?". In Nederland 113 (als je aan zelfdoding denkt), Veilig Thuis, het Centrum Seksueel Geweld en het nummer van FairWork. In België 1813 en het meldpunt mensenhandel (Payoke, PAG-ASA en Sürya).',
     ],
   },
   {
@@ -311,4 +312,61 @@ export const UPCOMING_LAW: UpcomingLaw[] = [
     files: ['src/content/work.ts', 'src/content/regels/units/contract.ts'],
     source: 'Stb. 2026, 205; inwerkingtredingsbesluit Stb. 2026, 206 (docs/werkregels-bronnen.md). De datums komen uit secundaire bronnen: check het Staatsblad.',
   },
+  {
+    // ⚖️ check: Wtta gaat in op 1-1-2027; aanvragen bij de NAU tot 1-7-2027; vanaf 1-1-2028 handhaaft de Arbeidsinspectie en krijgen uitleners zonder toelating en hun inleners een boete (rijksoverheid.nl "aanpak misstanden bij uitzendbureaus en andere uitleners"; kvk.nl "Wtta: strengere regels voor uitzendbureaus"; Eerste Kamer akkoord in nov 2025 (salarisvanmorgen.nl); gezocht 31 okt 2026)
+    law: 'Wtta (Wet toelating terbeschikkingstelling arbeidskrachten)',
+    country: 'nl',
+    dates: [
+      { date: '2027-01-01', what: 'De wet gaat in: een uitzendbureau of andere uitlener heeft een toelating nodig (aanvragen bij de Normeringsautoriteit Uitleenmarkt, NAU, gepland tot 1 juli 2027).' },
+      { date: '2028-01-01', what: 'Gepland: de Arbeidsinspectie handhaaft. Een bureau zonder toelating krijgt een boete, en het bedrijf dat mensen van zo\'n bureau laat werken (de inlener) ook.' },
+    ],
+    change: 'Taal: de tip over uitzendwerk (c.agency) noemt dat een bureau een toelating moet hebben, en hoe je dat checkt (het register van de NAU). Werkregels (contract.ts): de les over oproepwerk en uitzendloon (r.l.contract.3); de comment "Redactie" met "Wtta" daar bijwerken en weghalen. Daarna een update. Nog niet zeker: de precieze datums van de aanvraag (een internetconsultatie van 8 okt 2026 wijzigt de eisen).',
+    ids: ['c.agency', 'r.l.contract.3'],
+    files: ['src/content/work.ts', 'src/content/regels/units/contract.ts'],
+    source: 'rijksoverheid.nl (aanpak misstanden bij uitzendbureaus; nieuws 8 okt 2026 "internetconsultatie wijziging eisen wanneer bedrijven personeel mogen uitlenen"), kvk.nl (Wtta). Gezocht 31 okt 2026, de pagina\'s zelf niet geopend: check het Staatsblad.',
+  },
+  {
+    // ⚖️ check: werkgever mag geen huur meer inhouden op het minimumloon, gepland per 1-7-2028, samen met de Wet passende huur; tot dan hooguit 25% (rijksoverheid.nl nieuws 10 sept 2026 "Werkgever mag geen huur meer inhouden op minimumloon arbeidsmigrant"; Kamerbrief SZW 10 sept 2026, nr. 2026-0000293074; gezocht 31 okt 2026)
+    law: 'Afschaffen inhouding voor huisvesting op het minimumloon',
+    country: 'nl',
+    dates: [
+      { date: '2028-07-01', what: 'Gepland, nog niet zeker: de werkgever of het bureau mag de huur niet meer van het minimumloon afhalen. Tot dan mag dat nog, met grenzen (hooguit 25 procent).' },
+    ],
+    change: 'Taal: de tip over wonen via het bureau (c.housing). Werkregels: de vragen over huur van je loon (r.l.loon.2.wd2 in loon.ts, r.l.kas.2.wd2 in sector.ts). Eerst een plan: het is nog een wetsvoorstel, gekoppeld aan de Wet passende huur; de datum kan schuiven. Daarna een update met een melding (loon, NL).',
+    ids: ['c.housing', 'r.l.loon.2.wd2', 'r.l.kas.2.wd2'],
+    files: ['src/content/work.ts', 'src/content/regels/units/loon.ts', 'src/content/regels/units/sector.ts'],
+    source: 'rijksoverheid.nl nieuws 10 sept 2026; Kamerbrief SZW 10 sept 2026 (nr. 2026-0000293074). Eerder plan (2025): later afschaffen; 30 okt 2025 bleef de regeling nog bestaan (rijksoverheid.nl). Gezocht 31 okt 2026, niet in het Staatsblad.',
+  },
+  {
+    // ⚖️ check: werkloosheid beperkt in de tijd, in golven; de laatste groep (eerste periode, minstens 5 jaar gewerkt) verliest het recht op 1-7-2027; nieuwe regels volledig voor werkloosheid vanaf 1-3-2026 (onem.be "Hervorming van de werkloosheidsverzekering"; inami.fgov.be "beperking van werkloosheid in de tijd"; Grondwettelijk Hof 10 sept 2026; gezocht 31 okt 2026, onem.be zelf niet geopend)
+    law: 'Hervorming werkloosheid: beperkt in de tijd (België)',
+    country: 'be',
+    dates: [
+      { date: '2027-07-01', what: 'Gepland: de laatste groep (in de eerste periode, met minstens 5 jaar werk) verliest het recht op een werkloosheidsuitkering. Daarna geldt voor iedereen de nieuwe duur (meestal hooguit 2 jaar).' },
+    ],
+    change: 'Werkregels BE (be/units/geld.ts): de les over je werk kwijt (r.be.l.geld.1), vooral de vraag "voor altijd" (r.be.l.geld.1.tf1) en de comment "Redactie". Nakijken: de les zegt "sinds 1 januari 2026", de RVA noemt 1 maart 2026 voor nieuwe dossiers. Nog niet zeker wat de uitspraak van het Grondwettelijk Hof (10 sept 2026) verandert.',
+    ids: ['r.be.l.geld.1', 'r.be.l.geld.1.tf1'],
+    files: ['src/content/regels/be/units/geld.ts'],
+    source: 'onem.be (hervorming van de werkloosheidsverzekering, verwittigingsbrieven), inami.fgov.be. Gezocht 31 okt 2026, de pagina\'s zelf niet geopend: check het Belgisch Staatsblad (programmawet, BS 29 juli 2025).',
+  },
+  {
+    // ⚖️ check: algemene plicht om de echte werktijd te registreren, gepland per 1-1-2027, overgang tot ongeveer 1-4-2027; nog een voorontwerp (minister Clarinval), advies NAR 30 sept 2026 (securex.be "tijdsregistratie vanaf 2027: waar staan we vandaag"; partena-professional.be "arbeidstijdregistratie vanaf 1 januari 2027"; gezocht 31 okt 2026, secundaire bronnen)
+    law: 'Registratie van de werktijd (België)',
+    country: 'be',
+    dates: [
+      { date: '2027-01-01', what: 'Gepland, nog niet zeker: elke werkgever moet de uren die je echt werkt bijhouden, met een betrouwbaar systeem (geen prikklok verplicht). Wie nog geen systeem heeft, krijgt misschien tot april 2027.' },
+    ],
+    change: 'Werkregels BE (be/units/tijd.ts): de lessen over je werktijden (r.be.l.tijd.1) en overuren (r.be.l.tijd.3): erbij dat je baas je uren moet bijhouden, en dat je ze zelf ook noteert. Pas als de wet in het Belgisch Staatsblad staat.',
+    ids: ['r.be.l.tijd.1', 'r.be.l.tijd.3'],
+    files: ['src/content/regels/be/units/tijd.ts'],
+    source: 'securex.be en partena-professional.be (2026), een voorontwerp van wet en een advies van de NAR (30 sept 2026). Secundaire bronnen, nog geen wet: check het Belgisch Staatsblad.',
+  },
 ];
+
+/**
+ * The day the monthly law check (docs/logboek.md, "Elke maand") was last really done (YYYY-MM-DD).
+ * Whoever does that check (now the owner) sets it, and only after a real check. The learner sees
+ * its month as "Bijgewerkt: …" (RULES_CHECKED in src/content/regels/disclaimer.ts).
+ * tests/upcomingLaw.test.ts warns when it is older than 45 days.
+ */
+export const LAW_CHECKED = '2026-10-31';

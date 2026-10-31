@@ -72,6 +72,8 @@ export const uiNl: Record<UiKey, UiText> = {
   whoLegal: 'Gratis advies over je contract, je loon of ontslag.',
   whoInspection: 'Onveilig werk, te weinig loon of uitbuiting melden. Dat kan ook anoniem.',
   whoFairwork: 'Iemand buit je uit op je werk, of je denkt dat het zo is.',
+  who113: 'Je denkt aan zelfdoding, of je maakt je zorgen om iemand. Gratis, dag en nacht.', // nieuw, nalezen
+  whoVeiligThuis: 'Geweld of misbruik thuis, bij jou of bij iemand anders. Gratis, ook anoniem.', // nieuw, nalezen
   settings: 'Instellingen',
   helpLanguage: 'Taal', // regels: no "help language" in this track
   resetProgress: 'Mijn voortgang wissen',
@@ -447,6 +449,7 @@ export const uiNl: Record<UiKey, UiText> = {
   whoInspectionBe: 'Te weinig loon, of werken zonder contract melden.',
   whoExploitBe: 'Iemand buit je uit op je werk, of je denkt van wel.',
   whoUnionBe: 'Hulp bij je loon, je contract of als je werk stopt. Leden krijgen meer hulp.',
+  who1813Be: 'Je denkt aan zelfdoding, of je maakt je zorgen om iemand. Gratis en anoniem.', // nieuw, nalezen
   noticeTitle: 'Er is iets veranderd',
   noticeMore: 'Lees meer',
   noticeOk: 'Oké',
