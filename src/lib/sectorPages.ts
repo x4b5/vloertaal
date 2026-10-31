@@ -35,6 +35,7 @@ export const SECTOR_PAGES: readonly SectorPage[] = [
   { id: 'horticulture', path: '/tuinbouw/', name: 'Tuinbouw', phrase: 'de tuinbouw en de kas', short: 'de tuinbouw' },
   { id: 'technical', path: '/techniek/', name: 'Techniek', phrase: 'de techniek en de werkplaats', short: 'de techniek' },
   { id: 'garage', path: '/garage/', name: 'Garage', phrase: 'de garage en de autowerkplaats', short: 'de garage' },
+  { id: 'retail', path: '/winkel/', name: 'Winkel', phrase: 'de winkel en de supermarkt', short: 'de winkel' },
 ];
 
 const unit = (id: string): Unit => {

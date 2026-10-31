@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'Виробництво',
     sectorCare: 'Догляд',
     sectorHospitality: 'Готелі й ресторани',
+    sectorRetail: 'Магазин і супермаркет', // nieuw, nalezen
     sectorCleaning: 'Прибирання',
     sectorHorticulture: 'Садівництво і теплиці', // nieuw (30 okt 2026), nagelezen (2e lezing)
     sectorTechnical: 'Технічні роботи', // nieuw (30 okt 2026), nalezen
@@ -249,6 +250,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Вимкнено',
     sectorGroupMake: 'Виробництво і перевезення',
     sectorGroupCare: 'Догляд і обслуговування',
+    sectorGroupShop: 'Магазини й ресторани', // nieuw, nalezen
     sectorGroupBuild: 'Будівництво і техніка', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Жіночий голос',
     voiceMan: 'Чоловічий голос',

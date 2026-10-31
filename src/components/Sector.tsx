@@ -4,7 +4,7 @@ import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
 import {
-  CareIcon, CarIcon, CheckIcon, ChevronIcon, ConveyorIcon, CupIcon, ForkliftIcon, HelmetIcon, QuestionIcon, SproutIcon, SprayIcon, WrenchIcon,
+  CareIcon, CarIcon, CartIcon, CheckIcon, ChevronIcon, ConveyorIcon, CupIcon, ForkliftIcon, HelmetIcon, QuestionIcon, SproutIcon, SprayIcon, WrenchIcon,
 } from './Icons';
 import { WordPicture } from '../pictures';
 import { ChoiceCards, QuestionHead, type ChoiceOption } from './Choice';
@@ -23,6 +23,7 @@ const ICONS: Record<SectorId | 'none', typeof ForkliftIcon> = {
   horticulture: SproutIcon,
   technical: WrenchIcon,
   garage: CarIcon,
+  retail: CartIcon,
   none: QuestionIcon,
 };
 
@@ -44,6 +45,8 @@ export const SECTOR_PICTURES: Record<SectorId, string> = {
   // The drill of "In de werkplaats" (u.tech), and a car in front of a garage (u.garage).
   technical: 'w.boor',
   garage: 'w.garage',
+  // The till of "In de winkel" (u.shop).
+  retail: 'w.kassa',
 };
 
 const sectorPicture = (id: SectorId, size: number) => <WordPicture id={SECTOR_PICTURES[id]} emoji="" size={size} />;
@@ -57,7 +60,7 @@ const back = { group: null as SectorGroupId | null, at: 0, picked: false };
 const BACK_MS = 2000;
 
 /**
- * Step 1: one list of one kind of row (the list exception of max 3): the three kinds of work,
+ * Step 1: one list of one kind of row (the list exception of max 3): the four kinds of work,
  * each shown by its sectors' pictures and leading on (›, mirrored right to left), and "Weet ik
  * nog niet", which is the choice 'none' at once. The row of the current choice is marked.
  */
@@ -130,7 +133,7 @@ export function SectorGroupHead({ group, lang, level = 3 }: { group: SectorGroup
   return <H ref={ref} tabIndex={-1} className="max3-crumb sector-group-head"><Bi text={ui(g.key, lang)} /></H>;
 }
 
-/** Step 2: the three sectors of a group, each with its picture. */
+/** Step 2: the sectors of a group (2 or 3, never more: max 3), each with its picture. */
 export function SectorCards({ group, current, lang, onPick }: {
   group: SectorGroupId;
   current?: SectorChoice;

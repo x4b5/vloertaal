@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'Üretim',
     sectorCare: 'Sağlık ve bakım',
     sectorHospitality: 'Otel ve restoran',
+    sectorRetail: 'Mağaza ve market', // nieuw, nalezen
     sectorCleaning: 'Temizlik',
     sectorHorticulture: 'Bahçecilik', // nagelezen (2e lezing)
     sectorTechnical: 'Teknik işler', // nieuw (30 okt 2026), nalezen
@@ -249,6 +250,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Kapalı',
     sectorGroupMake: 'Üretim ve taşıma',
     sectorGroupCare: 'Bakım ve hizmet',
+    sectorGroupShop: 'Mağaza ve yeme-içme', // nieuw, nalezen
     sectorGroupBuild: 'İnşaat ve teknik', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Kadın sesi',
     voiceMan: 'Erkek sesi',

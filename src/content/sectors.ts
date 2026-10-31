@@ -13,7 +13,7 @@ import { withRegion } from './regio';
  */
 export type SectorId =
   | 'logistics' | 'construction' | 'production' | 'care' | 'hospitality' | 'cleaning' | 'horticulture'
-  | 'technical' | 'garage';
+  | 'technical' | 'garage' | 'retail';
 
 /** What is stored: a sector, or 'none' for "not sure yet" (= the whole course as one path). */
 export type SectorChoice = SectorId | 'none';
@@ -62,6 +62,11 @@ export const sectors: Sector[] = [
     rules: { units: ['r.techniek'], focus: ['r.veilig', 'r.afronden'] } },
   { id: 'garage', nl: 'Garage', key: 'sectorGarage', units: ['u.garage'], focus: ['u.safety', 'u.finish'],
     rules: { units: ['r.werkplaats'], focus: ['r.veilig', 'r.afronden'] } },
+  // De winkel (31 October 2026): was a basis unit for everyone ("Je baan"); now a sector of its
+  // own, so who works in a shop or supermarket gets it early. The roster (evenings and weekends)
+  // and the till (Rekenen: change and prices). Appended, so every existing sector keeps its path.
+  { id: 'retail', nl: 'Winkel', key: 'sectorRetail', units: ['u.shop'], focus: ['u.time', 'u.numbers'],
+    rules: { units: ['r.winkel'], focus: ['r.tijd', 'r.rekenen'] } },
 ];
 
 /** A sector's own units and focus units in one track. */
@@ -162,7 +167,7 @@ export function sectorFirstFocus(sector: SectorChoice | undefined, track: Track 
  * and "Weet ik nog niet", the list exception of max 3), then the three sectors of the group picked.
  * "Weet ik nog niet" is a row of its own on the first step: it gives the choice 'none'.
  */
-export type SectorGroupId = 'build' | 'make' | 'care';
+export type SectorGroupId = 'build' | 'make' | 'care' | 'shop';
 
 export interface SectorGroup {
   id: SectorGroupId;
@@ -174,7 +179,9 @@ export interface SectorGroup {
 export const sectorGroups: SectorGroup[] = [
   { id: 'build', nl: 'Bouw en techniek', key: 'sectorGroupBuild', sectors: ['construction', 'technical', 'garage'] },
   { id: 'make', nl: 'Maken en verplaatsen', key: 'sectorGroupMake', sectors: ['production', 'logistics', 'horticulture'] },
-  { id: 'care', nl: 'Zorg en service', key: 'sectorGroupCare', sectors: ['care', 'hospitality', 'cleaning'] },
+  // At most 3 cards in a group (max-3): with Winkel (31 October 2026) Horeca went to a group of its own with it.
+  { id: 'care', nl: 'Zorg en service', key: 'sectorGroupCare', sectors: ['care', 'cleaning'] },
+  { id: 'shop', nl: 'Winkel en horeca', key: 'sectorGroupShop', sectors: ['retail', 'hospitality'] },
 ];
 
 export const isSectorGroupId = (v: unknown): v is SectorGroupId => sectorGroups.some((g) => g.id === v);

@@ -488,3 +488,7 @@ export const CallIcon = (p: IconProps) => (
 export const SearchIcon = (p: IconProps) => (
   <Svg {...p}><circle cx="10.5" cy="10.5" r="6" {...stroke} /><path d="M15 15l5 5" {...stroke} /></Svg>
 );
+
+export const CartIcon = (p: IconProps) => (
+  <Svg {...p}><path d="M3 4h2.4l2.2 10.2h10.2L20 7H6.4" {...stroke} /><circle cx="9.4" cy="19" r="1.6" {...stroke} /><circle cx="16.6" cy="19" r="1.6" {...stroke} /></Svg>
+);
