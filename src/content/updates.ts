@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-31',
     items: [
+      'Een tip in de les staat nu op twee pagina\'s: eerst "Zo werkt het hier", dan "Zeg het zo" met de zin om te oefenen. Zo staat er minder op één scherm.',
       'Nieuw bij "Waar werk je?": Winkel. Werk je in een winkel of supermarkt? Kies dan "Winkel en horeca" en dan "Winkel". Dan komt het onderwerp In de winkel vroeg in je lespad, in Taal en in Werkregels. Horeca staat nu ook bij "Winkel en horeca". Je keuze van eerder blijft staan.',
       'Nieuw: een privacyverklaring op vloertaal.nl/privacy. Daar staat precies wat de app wel en niet doet. Ook nieuw: geeft de app een fout? Dan telt hij dat, zonder iets over jou (onder "Anoniem meetellen", dus ook uit te zetten). Zo kunnen we fouten sneller vinden.',
       'Hulp: tekeningen in plaats van emoji bij de tips en bij "Wie kan helpen?", en een voorleesknop in je eigen taal bij de uitleg en de tips (als je telefoon een stem voor je taal heeft). Bij Over › Jouw privacy staat nu een link naar de hele privacyverklaring.',
