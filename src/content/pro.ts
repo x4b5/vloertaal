@@ -43,10 +43,19 @@ export { PRO_TITLE };
  * Under the title: the question first, so whoever arrives (for example from a poster) sees at once
  * what we ask. Modest, as a question; what Vloertaal is follows in 'p.what', the reason in 'p.story'.
  */
-export const PRO_LEAD = 'Zou je willen meekijken? Vloertaal is nog in ontwikkeling en is gemaakt met hulp van AI. Daarom zouden we graag horen wat mensen die met taal werken ervan vinden. Zou je de app eens willen proberen en laten weten wat beter kan? En past het misschien bij je deelnemers? Elke opmerking helpt. Mail naar hoi@vloertaal.nl, of tik in een les op het vlaggetje Melden.';
+export const PRO_LEAD = 'Hoi, ik ben Xavier. Ik ben op dit moment bezig met het bouwen van Vloertaal, een oefenapp voor Nederlands op het werk. Graag zou ik daar de blik van professionals op willen: taalprofessionals, en experts op het gebied van de arbeidsmarkt en wet- en regelgeving. Zou je de app eens willen bekijken en laten weten wat beter kan, inhoudelijk of didactisch? En als het past: zou je deelnemers ermee willen laten oefenen? De app is grotendeels met behulp van AI gebouwd en nog niet door vakmensen nagekeken. Juist daarom is elke opmerking waardevol. Reageren kan via hoi@vloertaal.nl of via het vlaggetje Melden in een les.';
 
 /** 'p.what': what Vloertaal is, for someone who does not know it yet (it was the lead). */
-const WHAT = 'Vloertaal is een gratis web-app voor taalcoaches, NT2-docenten, taalhuizen, werkgevers, uitzendbureaus en scholen. Nieuwkomers en arbeidsmigranten oefenen er Nederlands mee voor hun werk: korte lessen met woorden, zinnen en gesprekjes van de werkvloer, met uitleg in dertien talen. Er is geen account nodig, en het werkt op elke telefoon. Het is bedoeld als een kleine aanvulling op een taalcursus of taalcoach, niet als vervanging.';
+const WHAT = 'Vloertaal is een gratis web-app waarmee nieuwkomers en arbeidsmigranten Nederlands oefenen voor hun werk. De lessen zijn kort en draaien om woorden, zinnen en gesprekjes uit de praktijk van de werkvloer, met uitleg in dertien hulptalen. Het gaat daarbij niet alleen om taal, maar ook om de geschreven en ongeschreven regels van het werk: van contract, loonstrook en ziekmelden tot de omgangsvormen op de werkvloer. Een account is niet nodig, en de app werkt op elke telefoon.';
+
+/** 'p.what', second paragraph: modest about its place, and that nobody earns from it. */
+const WHAT_PLACE = 'Vloertaal is nadrukkelijk bedoeld als aanvulling op een taalcursus of taalcoach, niet als vervanging. Er wordt niets aan verdiend: geen reclame, geen abonnement, en er worden geen gegevens verkocht.';
+
+/**
+ * 'p.story': the reason, written for professionals (the learner's About keeps its own plain text,
+ * 'a.story'). No second "Hoi, ik ben Xavier": the lead already says it.
+ */
+export const PRO_STORY = 'In mijn werk als arbeidsbemiddelaar zie ik regelmatig dat een plaatsing stukloopt op taal. Iemand begrijpt een instructie niet goed, of durft niet te vragen wat iets betekent. Vloertaal is een poging om dat iets makkelijker te maken: de taal van het werk oefenen, op de eigen telefoon, naast wat er al is. Ik kan en wil dit niet alleen doen. Daarvoor is de kennis nodig van mensen die dagelijks met taal werken.';
 
 const mission = aboutSection('a.mission');
 const story = aboutSection('a.story');
@@ -63,12 +72,12 @@ export const proSections: ProSection[] = [
   {
     // What it is and the mission in one block, before the reason (the story).
     id: 'p.what', emoji: mission.emoji, title: 'Wat is Vloertaal?',
-    body: [WHAT, mission.nl.body],
+    body: [WHAT, WHAT_PLACE],
   },
   {
-    // The owner's story, signed and dated as on Over; its last line leads into the test version.
+    // The owner's reason, for professionals, signed and dated as on Over; it leads into the test version.
     id: 'p.story', emoji: story.emoji, title: story.nl.title,
-    body: [story.nl.body, `${story.signed} · ${updateDate(STORY_DATE)}`],
+    body: [PRO_STORY, `${story.signed} · ${updateDate(STORY_DATE)}`],
   },
   {
     id: 'p.beta', emoji: beta.emoji, title: 'Een testversie: wie test er?',
