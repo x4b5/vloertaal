@@ -103,7 +103,7 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan vragen of mijn vakantiegeld wordt uitbetaald.', 'A2', 'gesprekken', 'I can ask if my holiday pay will be paid out.'],
   ]),
   onderwerp('u.stage', 'Stage lopen', [
-    ['Ik kan vragen wie mijn praktijkopleider is.', 'A2', 'spreken', 'I can ask who my placement supervisor is.'],
+    ['Ik kan vragen wie mijn praktijkopleider is.', 'A2', 'spreken', 'I can ask who my workplace trainer is.'],
     ['Ik kan om feedback en een voorbeeld vragen.', 'A2', 'gesprekken', 'I can ask for feedback and an example.'],
   ]),
   // Je baan

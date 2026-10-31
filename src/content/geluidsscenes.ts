@@ -836,7 +836,7 @@ export const geluidsscenes: Geluidsscene[] = [
         uitleg: { nl: 'De gast aan tafel zes heeft een allergie voor noten.', en: 'The guest at table six is allergic to nuts.' },
       },
       {
-        vraag: 'Wie weet of er noten in zitten?',
+        vraag: 'Aan wie vraag je het?',
         opties: [
           { nl: 'De gast.' },
           { nl: 'De baas.' },
