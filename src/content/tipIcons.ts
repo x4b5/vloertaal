@@ -1,4 +1,5 @@
 import { ruleIconId } from './regels/ruleIcons';
+import { emojiArt } from './emojiArt';
 
 /**
  * The drawings for the emoji of the language course's Hulp tab: the "Zo werkt het hier" tips
@@ -37,5 +38,5 @@ const bare = (emoji: string): string => emoji.replace(/️/g, '');
 
 /** The drawing's id for an emoji of either track, or '' (then the emoji itself is shown). */
 export function emojiIconId(emoji: string): string {
-  return ruleIconId(emoji) || tipIcons[bare(emoji)] || '';
+  return ruleIconId(emoji) || tipIcons[bare(emoji)] || emojiArt[bare(emoji)] || '';
 }

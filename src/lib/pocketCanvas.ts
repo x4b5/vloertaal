@@ -2,7 +2,7 @@ import { roundRect, sharePng } from './canvasShare';
 /**
  * The pocket card as a picture for the phone's gallery: drawn on a canvas (no libraries), portrait
  * 1080 wide. The word pictures are the same SVGs as on screen, serialised and drawn in; a phrase
- * without a drawing gets its emoji. Shared with navigator.share({ files }) where the phone can,
+ * without a drawing gets its number (never an emoji). Shared with navigator.share({ files }) where the phone can,
  * else downloaded as a PNG. Always the light paper look (it is a card, also on a dark phone).
  */
 
@@ -10,7 +10,7 @@ export interface PocketImageRow {
   nl: string;
   en: string;
   help?: string;
-  /** The picture on screen (an <svg>), or an emoji to draw instead. */
+  /** The picture on screen (an <svg>). `emoji` is no longer drawn (only SVG). */
   svg?: SVGSVGElement | null;
   emoji?: string;
 }
@@ -43,7 +43,6 @@ const C = {
 const LEXEND = "'Lexend Variable', Lexend, system-ui, sans-serif";
 const STENCIL = "'Big Shoulders Stencil Display', 'Lexend Variable', sans-serif";
 const HELP = `${LEXEND}, 'Noto Sans Arabic', 'Noto Sans Ethiopic', 'Abyssinica SIL', sans-serif`;
-const EMOJI = "'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Emoji', sans-serif";
 const font = (weight: number, size: number, family = LEXEND) => `${weight} ${size}px ${family}`;
 
 /** Splits text into lines that fit `max` px (words kept whole; a single long word on its own line). */
@@ -180,13 +179,8 @@ export async function drawPocketCard(d: PocketImage): Promise<HTMLCanvasElement>
     ctx.fill();
     const img = l.row.svg ? await svgImage(l.row.svg, PIC * 2) : null;
     if (img) ctx.drawImage(img, picX + 10, top + 10, PIC - 20, PIC - 20);
-    else if (l.row.emoji) {
-      ctx.font = font(400, 104, EMOJI);
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(l.row.emoji, picX + PIC / 2, top + PIC / 2 + 6);
-      ctx.textBaseline = 'alphabetic';
-    } else {
+    // No emoji ever (only SVG): without a drawing, the row's number.
+    else {
       ctx.font = font(800, 92, STENCIL);
       ctx.fillStyle = C.ink3;
       ctx.textAlign = 'center';
