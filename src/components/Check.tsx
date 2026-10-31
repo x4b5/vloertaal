@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import type { Unit } from '../content/types';
-import { unitIcons } from '../content/unitIcons';
+import { unitIcon } from '../content/unitIcons';
 import { checkPassed } from '../lib/instapCheck';
 import { WordPicture } from '../pictures';
 import { Bi } from './Bi';
@@ -37,7 +37,7 @@ export function CheckResult({ unit, right, total, lang, onMark, onLessons }: {
     <div className="player result-screen check-result">
       <div className="player-body result" dir={rtl ? 'rtl' : undefined}>
         <div className="check-result-sign" aria-hidden>
-          <WordPicture className="check-result-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={72} />
+          <WordPicture className="check-result-pic" id={unitIcon(unit.id)} emoji={unit.emoji} size={72} />
         </div>
         <h1 className="result-title check-result-title" tabIndex={-1} ref={title}>
           {passed

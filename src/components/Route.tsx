@@ -2,7 +2,7 @@ import { Fragment, useEffect, useRef, useState } from 'react';
 import { BeNote } from './BeNote';
 import { lessonNlOnly, unitNlOnly } from '../content/taalBe';
 import { Character } from './Characters';
-import { unitIcons } from '../content/unitIcons';
+import { unitIcon } from '../content/unitIcons';
 import { coursePlan } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { gloss, said, saidLang, ui, uiCount, type Bilingual } from '../i18n';
@@ -233,7 +233,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
         // its Start stays in view on a small phone.
         <section className={`rb-current ${dailyDue ? 'rb-tight' : ''}`} aria-label={`${unitIndex(block) + 1}. ${said(unitTitle(block, lang))}`}>
           <div id={`unit-${block.id.slice(2)}`} className={`rb-block ${marked === block.id ? 'rb-marked' : ''}`}>
-            <WordPicture className="rb-pic" id={unitIcons[block.id] ?? ''} emoji={block.emoji} size={64} />
+            <WordPicture className="rb-pic" id={unitIcon(block.id)} emoji={block.emoji} size={64} />
             <UnitTitle unit={block} lang={lang} heading />
             {unitNlOnly(block.id) && <BeNote lang={lang} className="rb-be-note" />}
             <BlockProgress unit={block} completed={completed} lang={lang} count={false} />
@@ -265,7 +265,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                         onClick={() => pick(unit)}
                         aria-label={`${said(t)}${dutch ? '' : ` · ${unit.titleNl}`}${rec ? ` · ${dutch ? '' : 'Aanbevolen · '}${said(ui('recommended', lang))}` : ''} · ${n ? `${n} / ` : ''}${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
                       >
-                        <WordPicture className="rb-choice-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={52} />
+                        <WordPicture className="rb-choice-pic" id={unitIcon(unit.id)} emoji={unit.emoji} size={52} />
                         <span className="rb-choice-text" dir={rtl ? 'rtl' : undefined}>
                           {rec && (
                             <span className="rb-rec-chip" aria-hidden>
@@ -315,7 +315,7 @@ function LinkedLocked({ unit, lang, onUpgrade }: { unit: Unit; lang?: HelpLangua
       dir={rtl ? 'rtl' : undefined}
       aria-label={dutchUi(lang) ? `${said(unitTitle(unit, lang))} · ${said(ui('fullVersion', lang))}` : `${said(unitTitle(unit, lang))} · ${unit.titleNl} · Volledige versie · ${said(ui('fullVersion', lang))}`}
     >
-      <WordPicture className="linked-locked-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
+      <WordPicture className="linked-locked-pic" id={unitIcon(unit.id)} emoji={unit.emoji} size={44} />
       <span className="linked-locked-text">
         <Bi className="linked-locked-title" text={unitTitle(unit, lang)} />
         <span className="linked-locked-full">
@@ -497,7 +497,7 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
           onClick={() => onOpen(unit.id)}
           aria-label={`${said(t)}${dutchUi(lang) ? '' : ` · ${unit.titleNl}`} · ${n} / ${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${via ? ` · ${said(ui('checkVia', lang))}` : ''}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
         >
-          <WordPicture className="topic-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
+          <WordPicture className="topic-pic" id={unitIcon(unit.id)} emoji={unit.emoji} size={44} />
           <span className="topic-text" dir={rtl ? 'rtl' : undefined} aria-hidden>
             <Bi className="topic-title" text={t} />
             {allowed && <LessonCount unit={unit} completed={completed} lang={lang} showDone={n > 0} />}
@@ -633,7 +633,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
       <div className="path route topic-page" dir={rtl ? 'rtl' : undefined}>
         {/* The topic's sign: its picture and how far the learner is (the name is in the head). */}
         <div className={`rb-block topic-sign ${marked ? 'rb-marked' : ''}`} aria-label={`${u + 1}. ${said(unitTitle(unit, lang))}`} role="group">
-          <WordPicture className="rb-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={64} />
+          <WordPicture className="rb-pic" id={unitIcon(unit.id)} emoji={unit.emoji} size={64} />
           {checked ? (
             <div className="topic-sign-side">
               <BlockProgress unit={unit} completed={completed} lang={lang} />
