@@ -203,6 +203,10 @@ const lang: HelpLanguageSource = {
     recommended: 'Recomandat',
     allTopics: 'Toate subiectele',
     topicsOrder: 'Arată subiectele',
+    routeTitle: 'Ce vrei să înveți?', // nieuw, nalezen
+    routeLearn: 'Învață olandeză pentru muncă, cu ajutor în limba ta', // nieuw, nalezen
+    routeRules: 'Vorbesc deja olandeză: cum se lucrează în Țările de Jos și Belgia', // nieuw, nalezen
+    routeLearnShort: 'Învață olandeză', // nieuw, nalezen
     byTheme: 'Pe teme',
     inOrder: 'În ordine',
     searchTopics: 'Caută un subiect', // nieuw, nalezen

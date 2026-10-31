@@ -203,6 +203,10 @@ const lang: HelpLanguageSource = {
     recommended: 'مُوصى به',
     allTopics: 'كل المواضيع',
     topicsOrder: 'عرض المواضيع',
+    routeTitle: 'مسار التعلّم', // nieuw, nalezen
+    routeLearn: 'تعلّم الهولندية للعمل، مع مساعدة بلغتك', // nieuw, nalezen
+    routeRules: 'أتكلّم الهولندية: كيف يسير العمل في هولندا وبلجيكا', // nieuw, nalezen
+    routeLearnShort: 'تعلّم الهولندية', // nieuw, nalezen
     byTheme: 'حسب الأقسام',
     inOrder: 'بالترتيب',
     searchTopics: 'البحث عن موضوع', // nieuw, nalezen

@@ -203,6 +203,10 @@ const lang: HelpLanguageSource = {
     recommended: 'Conseillé',
     allTopics: 'Tous les sujets',
     topicsOrder: 'Afficher les sujets',
+    routeTitle: 'Qu’est-ce que tu veux apprendre ?', // nieuw, nalezen
+    routeLearn: 'Apprendre le néerlandais pour le travail, avec de l’aide dans ta langue', // nieuw, nalezen
+    routeRules: 'Je parle déjà néerlandais : comment se passe le travail aux Pays-Bas et en Belgique', // nieuw, nalezen
+    routeLearnShort: 'Apprendre le néerlandais', // nieuw, nalezen
     byTheme: 'Par thème',
     inOrder: 'Dans l’ordre',
     searchTopics: 'Chercher un sujet', // nieuw, nalezen

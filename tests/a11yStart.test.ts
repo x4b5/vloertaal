@@ -39,7 +39,7 @@ describe('choice screens: a named group, the choice read out', () => {
 
   it('"Nederlands" (Werkregels): the line above it is decoration, the card says Werkregels in Dutch', () => {
     setRulesTrack(true);
-    const m = html(createElement(LanguagePicker, { onPick: () => {} }));
+    const m = html(createElement(LanguagePicker, { onPick: () => {}, rules: true }));
     expect(m).toContain('<span class="lang-sep" aria-hidden="true"></span>');
     const card = /<button[^>]*class="lang-btn lang-btn-nl[^"]*"[^>]*>/.exec(m)?.[0] ?? '';
     expect(card).toContain('lang="nl"');

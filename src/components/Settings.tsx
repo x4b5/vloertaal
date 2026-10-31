@@ -3,7 +3,8 @@ import { NOT_SURE, sectorGroups, sectors, type SectorChoice } from '../content/s
 import { REGIONS, regionMetaOf, regionsOn, type RegionChoice } from '../content/regio';
 import { ensureLanguage, hasGender, isLanguageLoaded, langTag, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
-import { dutchUi } from '../lib/track';
+import { dutchUi, rulesTrackOn } from '../lib/track';
+import { WordPicture } from '../pictures';
 import { NlPair } from './NlPair';
 import type { Access } from '../lib/access';
 import { autoSpeak, recordedIndexSettled, setPreferredVoice, setTempo, speak } from '../lib/audio';
@@ -104,6 +105,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   me: { nl: 'Taal en ik', key: 'settingsLangMe', icon: <GlobeIcon size={26} /> },
   lessons: { nl: 'Lessen', key: 'settingsLessons', icon: <RouteIcon size={26} /> },
   phone: { nl: 'Deze telefoon', key: 'settingsPhone', icon: <PhoneIcon size={26} /> },
+  route: { nl: 'Wat wil je leren?', key: 'routeTitle', icon: <WordPicture id="w.hallo" emoji="🗣️" size={26} /> },
   language: { nl: 'Hulptaal', key: 'helpLanguage', icon: <GlobeIcon size={24} /> },
   gender: { nl: 'Vrouw of man?', key: 'genderTitle', icon: <NeutralIcon size={24} /> },
   sector: { nl: 'Waar werk je?', key: 'chooseSector', icon: <SectorIcon id="logistics" size={24} /> },
@@ -282,6 +284,7 @@ export function Settings({
     install: installWay() !== null,
     offline: offlineSupported(),
     rules: dutchUi(lang),
+    routes: rulesTrackOn(),
     recorded: recorded.length > 0,
     // Only when the regions are offered (src/content/regio regionsOn) and the app can store one.
     region: regionsOn() && Boolean(onRegion),
@@ -293,6 +296,7 @@ export function Settings({
   /** The current value shown on a row. */
   const value = (p: SettingsPage): ReactNode => {
     switch (p) {
+      case 'route': return dutchUi(lang) ? <span className="set-row-value" lang="nl">Werkregels</span> : <Value text={say('routeLearnShort')} />;
       case 'language': return lang ? <span className="set-row-value" lang={langTag(lang.code)} dir={lang.dir}>{lang.nativeName}</span> : <span className="set-row-value" lang="en">English</span>;
       case 'gender': return progress.gender ? <Value text={say(progress.gender === 'f' ? 'genderWoman' : progress.gender === 'm' ? 'genderMan' : 'genderNone')} /> : null;
       case 'sector': {
@@ -353,6 +357,24 @@ export function Settings({
       case 'lessons':
       case 'phone':
         return rowsOf(settingsRows(page as SettingsList, ctx));
+      case 'route':
+        // Two cards: "Nederlands leren" leads on to the help language (in Werkregels: to choose one
+        // first; already there: the check, and back), "Ik spreek al Nederlands" is Werkregels.
+        return (
+          <ChoiceCards
+            label={said(ui('routeTitle', lang))}
+            current={dutchUi(lang) ? 'regels' : 'taal'}
+            onPick={(id) => {
+              if (id === 'regels') pickLanguage('nl');
+              else if (dutchUi(lang)) onPage('language');
+              else answered();
+            }}
+            options={[
+              { id: 'taal', nl: 'Nederlands leren', text: say('routeLearn'), picture: <WordPicture id="w.hallo" emoji="🗣️" size={52} />, next: dutchUi(lang) },
+              { id: 'regels', nl: 'Ik spreek al Nederlands', text: say('routeRules'), picture: <WordPicture id="w.contract" emoji="📘" size={52} /> },
+            ]}
+          />
+        );
       case 'language':
         return (
           <>

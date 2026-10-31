@@ -7,7 +7,7 @@ export type SettingsList = 'me' | 'lessons' | 'phone';
 
 export type SettingsPage =
   | SettingsList
-  | 'language' | 'gender' | 'sector' | 'sector-build' | 'sector-make' | 'sector-care' | 'sector-shop' | 'region' | 'country' | 'english' | 'certificates'
+  | 'route' | 'language' | 'gender' | 'sector' | 'sector-build' | 'sector-make' | 'sector-care' | 'sector-shop' | 'region' | 'country' | 'english' | 'certificates'
   | 'sound' | 'voice' | 'tempo' | 'speaking' | 'writing' | 'text' | 'theme'
   | 'offline' | 'reminder' | 'reminder-time' | 'install' | 'backup' | 'counting' | 'reset' | 'unlock'
   /** "Wat ken je al?": a screen of its own (App, src/components/Toets.tsx ToetsPage), from Lessen. */
@@ -26,6 +26,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   me: null,
   lessons: null,
   phone: null,
+  route: 'me',
   language: 'me',
   gender: 'me',
   sector: 'me',
@@ -86,6 +87,9 @@ export interface SettingsContext {
   /** Recorded (Vloertaal) voices are here. In the work-rules track the voice row is only there
    *  with them: the phone's own voice needs no choice. Missing = there are. */
   recorded?: boolean;
+  /** The two learning routes are offered (src/lib/track.ts rulesTrackOn): "Wat wil je leren?" first.
+   *  Missing = not offered. */
+  routes?: boolean;
   /** "Waar woon je?" is offered (src/content/regio regionsOn). Missing = not offered. */
   region?: boolean;
   /** This phone can recognise Dutch on the device, or download it (src/lib/listen.ts
@@ -96,7 +100,7 @@ export interface SettingsContext {
 /** The rows of a list, in order. */
 export function settingsRows(list: SettingsList, ctx: SettingsContext): SettingsPage[] {
   const rows: (SettingsPage | false)[] =
-    list === 'me' ? ['language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', 'country', !ctx.rules && ctx.helpLang && 'english', 'certificates', 'kaart']
+    list === 'me' ? [ctx.routes === true && 'route', (!ctx.rules || ctx.routes !== true) && 'language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', 'country', !ctx.rules && ctx.helpLang && 'english', 'certificates', 'kaart']
     : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'tempo', !ctx.rules && 'faster', !ctx.rules && 'speaking', !ctx.rules && ctx.listen === true && 'listen', !ctx.rules && 'writing', 'text', 'theme', !ctx.rules && 'toets']
     : [ctx.preview && 'unlock', ctx.offline && 'offline', 'reminder', ctx.install && 'install', 'backup', 'counting', 'reset'];
   return rows.filter((r): r is SettingsPage => Boolean(r));

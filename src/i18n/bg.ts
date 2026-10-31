@@ -203,6 +203,10 @@ const lang: HelpLanguageSource = {
     recommended: 'Препоръчано',
     allTopics: 'Всички теми',
     topicsOrder: 'Покажи темите',
+    routeTitle: 'Какво искаш да учиш?', // nieuw, nalezen
+    routeLearn: 'Нидерландски за работа, с помощ на твоя език', // nieuw, nalezen
+    routeRules: 'Вече говоря нидерландски: как се работи в Нидерландия и Белгия', // nieuw, nalezen
+    routeLearnShort: 'Учене на нидерландски', // nieuw, nalezen
     byTheme: 'По раздели',
     inOrder: 'По ред',
     searchTopics: 'Търсене на тема', // nieuw, nalezen
