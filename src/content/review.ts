@@ -1,3 +1,4 @@
+import { isTaalBeId, taalBeId, taalNlId } from './taalBe/ids';
 import type { Dialogue, Lesson, Sentence, Unit, Word } from './types';
 
 /**
@@ -78,7 +79,8 @@ const relatedWords: Record<string, string[]> = {
 };
 
 export const MIX_TITLE = 'Mixed review';
-export const mixLessonId = (unitId: string) => `l.${unitId.slice(2)}.mix`;
+// A Belgian unit's (src/content/taalBe: "be.u.society") is "be.l.society.mix".
+export const mixLessonId = (unitId: string): string => (isTaalBeId(unitId) ? taalBeId(mixLessonId(taalNlId(unitId))) : `l.${unitId.slice(2)}.mix`);
 export const isMixLesson = (lesson: Pick<Lesson, 'id'>) => lesson.id.endsWith('.mix');
 
 /** Words with a picture first (more exercise kinds), then the rest; in course order. */
@@ -121,8 +123,9 @@ export function mixLesson(unit: Unit, all: Unit[], met: (lessonId: string) => bo
   const teaching = (u: Unit) => u.lessons.filter((l) => !isMixLesson(l));
   const metLessons = (u: Unit) => teaching(u).filter((l) => met(l.id));
   const byId = new Map(all.map((u) => [u.id, u]));
-  const related = (relatedUnits[unit.id] ?? [])
-    .map((id) => byId.get(id))
+  // A Belgian unit has the related units of its Dutch twin, each as the Belgian course has it.
+  const related = (relatedUnits[unit.id] ?? relatedUnits[taalNlId(unit.id)] ?? [])
+    .map((id) => byId.get(id) ?? byId.get(taalBeId(id)))
     .filter((u): u is Unit => Boolean(u) && metLessons(u as Unit).length > 0);
   const own = teaching(unit);
   const taken = new Set<string>();
@@ -130,11 +133,13 @@ export function mixLesson(unit: Unit, all: Unit[], met: (lessonId: string) => bo
   // 4 words of this unit and 1 of each related unit (or the hand-picked ones): 6 words. Words of
   // related units the learner has not met are left out, and this unit's own words fill up.
   const ownWords = pickWords(own, 4, taken, takenText, turn);
-  const picked = relatedWords[unit.id];
+  const picked = relatedWords[unit.id] ?? relatedWords[taalNlId(unit.id)];
   const metWord = (id: string) => all.some((u) => u.id !== unit.id && metLessons(u).some((l) => l.words.some((w) => w.id === id)));
   const relWords = picked
     ? picked.map((id) => {
-        const w = all.flatMap((u) => teaching(u).flatMap((l) => l.words)).find((x) => x.id === id);
+        // In the Belgian course a hand-picked word may play in its Belgian version ("be.w.…").
+        const words = all.flatMap((u) => teaching(u).flatMap((l) => l.words));
+        const w = words.find((x) => x.id === id) ?? words.find((x) => x.id === taalBeId(id));
         if (!w) throw new Error(`Mixed review of ${unit.id}: no word ${id}`);
         return w;
       }).filter((w) => metWord(w.id) && !taken.has(w.id))

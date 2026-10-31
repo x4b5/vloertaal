@@ -1,4 +1,6 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
+import { BeNote } from './BeNote';
+import { lessonNlOnly, unitNlOnly } from '../content/taalBe';
 import { Character } from './Characters';
 import { unitIcons } from '../content/unitIcons';
 import { coursePlan } from '../content/sectors';
@@ -155,6 +157,8 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
               {icon && <WordPicture className="bay-pic" id={icon.id} emoji={icon.emoji} size={48} />}
               <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
                 <Bi className="bay-title" text={title} />
+                {/* In Belgium: a Dutch lesson that differs there (docs/taal-belgie.md). */}
+                {lessonNlOnly(lesson.id) && <BeNote lang={lang} inline className="bay-goal bay-note" />}
                 {saved && <ResumeChip save={saved} lang={lang} count={false} />}
                 {state === 'now' && !saved && (
                   <span className="bay-start">
@@ -230,6 +234,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
           <div id={`unit-${block.id.slice(2)}`} className={`rb-block ${marked === block.id ? 'rb-marked' : ''}`}>
             <WordPicture className="rb-pic" id={unitIcons[block.id] ?? ''} emoji={block.emoji} size={64} />
             <UnitTitle unit={block} lang={lang} heading />
+            {unitNlOnly(block.id) && <BeNote lang={lang} className="rb-be-note" />}
             <BlockProgress unit={block} completed={completed} lang={lang} count={false} />
           </div>
           {!blockPlayable(block, completed, access) && <FullOnly lang={lang} onUpgrade={onUpgrade} big />}
@@ -589,6 +594,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
     <div className="rb-all-screen topic-screen">
       {/* The head names the topic (Dutch small, the help language large); Back goes to All topics. */}
       <ScreenHead lang={lang} onBack={onBack} nl={unit.titleNl} text={unitTitle(unit, lang)} />
+      {unitNlOnly(unit.id) && <BeNote lang={lang} className="rb-be-note" />}
       <div className="path route topic-page" dir={rtl ? 'rtl' : undefined}>
         {/* The topic's sign: its picture and how far the learner is (the name is in the head). */}
         <div className={`rb-block topic-sign ${marked ? 'rb-marked' : ''}`} aria-label={`${u + 1}. ${said(unitTitle(unit, lang))}`} role="group">
@@ -670,6 +676,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                     {lesson.rule?.goal && <span className="bay-goal" lang="nl">{lesson.rule.goal}</span>}
                     {/* The Belgian course: a Dutch lesson there says so (src/content/regels/be). */}
                     {lesson.rule?.note && <span className="bay-goal bay-note" lang="nl">{lesson.rule.note}</span>}
+                    {/* The language course in Belgium (docs/taal-belgie.md). */}
+                    {!lesson.steps?.length && lessonNlOnly(lesson.id) && <BeNote lang={lang} inline className="bay-goal bay-note" />}
                     {saved && <ResumeChip save={saved} lang={lang} />}
                     {state === 'done' && !saved && via && <ViaCheck lang={lang} />}
                     {state === 'done' && !saved && !via && (

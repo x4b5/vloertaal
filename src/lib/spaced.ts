@@ -1,4 +1,6 @@
-import { allWords, teachingLessons } from '../content/curriculum';
+import { allWords, beOnlyTaalLessons, taalCourseUnits, teachingLessons } from '../content/curriculum';
+import { isMixLesson } from '../content/review';
+import { taalBeActive } from '../content/taalBe';
 import { courseUnits } from '../content/courses';
 import { allRegionUnits, regionTaalLessons } from '../content/regio';
 import type { RuleStep } from '../content/regels/types';
@@ -30,6 +32,11 @@ export const DAILY_MAX = 10;
 const DAILY_MIN = 4;
 export const DAILY_ID = 'l.today';
 
+/** The teaching lessons of the language course that plays now (src/content/curriculum.ts taalCourseUnits). */
+function taalTeaching() {
+  return taalBeActive() ? taalCourseUnits().flatMap((u) => u.lessons).filter((l) => !isMixLesson(l)) : teachingLessons;
+}
+
 export function addDays(day: string, n: number): string {
   const [y, m, d] = day.split('-').map(Number);
   return dayKey(new Date(y, m - 1, d + n));
@@ -41,7 +48,8 @@ let wordIndex: { regions: number; byId: Map<string, Word> } | null = null;
 function wordById(): Map<string, Word> {
   const regionLessons = regionTaalLessons();
   if (wordIndex?.regions !== regionLessons.length) {
-    wordIndex = { regions: regionLessons.length, byId: new Map([...allWords, ...regionLessons.flatMap((l) => l.words)].map((w) => [w.id, w])) };
+    // With the Belgian course's own words ("be.w.…", src/content/taalBe): their cards are found in either country.
+    wordIndex = { regions: regionLessons.length, byId: new Map([...allWords, ...beOnlyTaalLessons().filter((l) => !isMixLesson(l)).flatMap((l) => l.words), ...regionLessons.flatMap((l) => l.words)].map((w) => [w.id, w])) };
   }
   return wordIndex.byId;
 }
@@ -145,7 +153,8 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
   const boxes = Object.fromEntries(words.map((w) => [w.id, cards[w.id]?.box ?? 1]));
   const idSet = new Set(ids);
   const n = day ? dayNumber(day) : 0;
-  const from = teachingLessons
+  // The lessons of the course that plays now (in Belgium the Belgian ones: a Belgian word's sentences come along).
+  const from = taalTeaching()
     .map((l, at) => ({ l, at, box: Math.min(...l.words.filter((w) => idSet.has(w.id)).map((w) => boxes[w.id] ?? 1)) }))
     .filter(({ box }) => Number.isFinite(box))
     .sort((a, b) => a.box - b.box || b.at - a.at);
@@ -286,8 +295,12 @@ function ruleStepById(): Map<string, GradedRuleStep> {
 /** Is this card one of the track's own (a word, or a rules question)? The two tracks share one box. */
 function knownIn(track: Track): (id: string) => boolean {
   if (track === 'taal') {
+    // Today's review keeps the two countries apart (docs/taal-belgie.md): only the words of the
+    // course that plays now (a Belgian word in Belgium, its Dutch twin in the Netherlands), and the regions'.
     const words = wordById();
-    return (id) => words.has(id);
+    if (!taalBeActive()) return (id) => words.has(id) && !id.startsWith('be.');
+    const here = new Set(taalCourseUnits().flatMap((u) => u.lessons.flatMap((l) => l.words.map((w) => w.id))));
+    return (id) => words.has(id) && (here.has(id) || !allWords.some((w) => w.id === id) && !id.startsWith('be.'));
   }
   const byId = ruleStepById();
   return (id) => byId.has(id);
@@ -339,7 +352,7 @@ let sentenceIndex: { regions: number; byId: Map<string, Sentence> } | null = nul
 function sentenceById(): Map<string, Sentence> {
   const regionLessons = regionTaalLessons();
   if (sentenceIndex?.regions !== regionLessons.length) {
-    sentenceIndex = { regions: regionLessons.length, byId: new Map([...teachingLessons, ...regionLessons].flatMap((l) => l.sentences).map((s) => [s.id, s])) };
+    sentenceIndex = { regions: regionLessons.length, byId: new Map([...teachingLessons, ...beOnlyTaalLessons().filter((l) => !isMixLesson(l)), ...regionLessons].flatMap((l) => l.sentences).map((s) => [s.id, s])) };
   }
   return sentenceIndex.byId;
 }

@@ -428,6 +428,13 @@ export const uiNl: Record<UiKey, UiText> = {
   checkMark: 'Afvinken',
   checkVia: 'via check',
   checkUndo: 'Toch de lessen doen',
+  // Het spoor Taal in België (docs/taal-belgie.md). Het spoor Werkregels toont ze niet.
+  beNlOnly: 'Dit gaat over Nederland. In België is het anders.',
+  beTaalBeta: 'De Belgische lessen zijn nieuw en nog niet nagekeken door een expert.',
+  whoLegalBe: 'Gratis eerste advies van een advocaat, over je contract, je loon of ontslag.',
+  whoInspectionBe: 'Te weinig loon, of werken zonder contract melden.',
+  whoExploitBe: 'Iemand buit je uit op je werk, of je denkt dat het zo is.',
+  whoUnionBe: 'Hulp bij je loon, je contract of als je werk stopt. Leden krijgen meer hulp.',
 };
 
 const lang: HelpLanguageSource = {

@@ -17,9 +17,9 @@ const t: CultureTranslation = {
     'a.how': 'Jak to działa?',
     'a.how.b': 'Uczysz się niderlandzkiego z pomocą w swoim języku: polecenia i słowa widzisz też po polsku. Słuchasz, dotykasz ekranu, budujesz zdania i ćwiczysz krótkie rozmowy z kolegami z pracy.',
     'a.culture': 'Jak to tu działa',
-    'a.culture.b': 'Język jest najważniejszy. Ale Vloertaal mówi też o tym, jak zwykle wygląda praca w Holandii: mówić „je” do szefa, zadawać pytania, przychodzić na czas i mówić, kiedy coś ci przeszkadza. Te wskazówki znajdziesz w lekcjach i w części „Wskazówki do pracy”.',
+    'a.culture.b': 'Język jest najważniejszy. Ale Vloertaal mówi też o tym, jak zwykle wygląda praca w Holandii i w Belgii: mówić „je” do szefa, zadawać pytania, przychodzić na czas i mówić, kiedy coś ci przeszkadza. Te wskazówki znajdziesz w lekcjach i w części „Wskazówki do pracy”.', // nieuw, nalezen (Nederland en België)
     'a.who': 'Dla kogo to jest?',
-    'a.who.b': 'Dla każdego, kto dopiero zaczyna pracę w Holandii. Języki pomocy: arabski, tigrinia, perski, dari, ukraiński, turecki, polski, rumuński, bułgarski, hiszpański, portugalski, francuski i niemiecki.',
+    'a.who.b': 'Dla każdego, kto dopiero zaczyna pracę w Holandii lub Belgii. Języki pomocy: arabski, tigrinia, perski, dari, ukraiński, turecki, polski, rumuński, bułgarski, hiszpański, portugalski, francuski i niemiecki.', // nieuw, nalezen (Nederland en België)
     'a.free': 'Twoja prywatność',
     'a.free.b': 'Nie potrzebujesz konta. Twoje postępy są zapisywane tylko na tym telefonie albo komputerze. Jeśli to jest włączone, aplikacja anonimowo liczy, jak często robi się lekcje: bez imienia, bez śledzenia. Możesz to wyłączyć w „Ustawieniach”. Wynik testu i nagranie twojego głosu też zostają tylko na tym telefonie albo komputerze. Nauczyciel albo trener widzi tylko to, co mu pokażesz, na przykład kartę w „Pokaż, jak ci idzie”. Jeśli włączysz „Telefon słucha (próba)”, sam telefon rozpoznaje twój niderlandzki. Nic nie trafia do nas ani do innych.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) // nagelezen AI 31 okt
     'a.disclaimer': 'Dobrze wiedzieć',

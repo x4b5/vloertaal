@@ -461,6 +461,13 @@ export const uiEn = {
   checkMark: 'Tick off',
   checkVia: 'via check',
   checkUndo: 'Do the lessons anyway',
+  /* The language track in Belgium (docs/taal-belgie.md; translations in src/i18n/be/base.ts). */
+  beNlOnly: 'This is about the Netherlands. In Belgium it is different.',
+  beTaalBeta: 'The Belgian lessons are new and not checked by an expert yet.',
+  whoLegalBe: 'A free first advice from a lawyer, about your contract, your pay or dismissal.',
+  whoInspectionBe: 'Report too little pay, or work without a contract.',
+  whoExploitBe: 'You are exploited at work, or you think you are.',
+  whoUnionBe: 'Help with your pay, your contract or when your job ends. Members get more help.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

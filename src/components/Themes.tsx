@@ -6,6 +6,8 @@ import { unitDone } from '../lib/certificate';
 import { dutchUi } from '../lib/track';
 import { CheckIcon } from './Icons';
 import { NlPair } from './NlPair';
+import { BeNote } from './BeNote';
+import { lifeThemeHere } from '../content/taalBe';
 
 /**
  * Theme headers ("hoofdstukken", src/content/themes.ts): a plain, non-tappable row above a
@@ -15,13 +17,23 @@ import { NlPair } from './NlPair';
 
 /** A theme's name: the help language (English only: the English); the work-rules track: the Dutch. */
 export function themeText(theme: Theme, lang?: HelpLanguage): Bilingual {
+  // "Leven in België" in the Belgian language course (docs/taal-belgie.md); the work-rules track keeps its name.
+  if (theme.id === 'theme.life' && !dutchUi(lang) && lifeThemeHere() === 'be') return gloss('be.theme.life', BE_LIFE.title, lang);
   return dutchUi(lang) ? { en: theme.titleNl, lang } : gloss(theme.id, theme.title, lang);
+}
+
+/** The theme "Leven in Nederland" in the Belgian language course. */
+export const BE_LIFE = { title: 'Life in Belgium', titleNl: 'Leven in België' } as const;
+
+/** A theme's Dutch name, as the learner's course has it ("Leven in België" in Belgium). */
+export function themeNl(theme: Theme, lang?: HelpLanguage): string {
+  return theme.id === 'theme.life' && !dutchUi(lang) && lifeThemeHere() === 'be' ? BE_LIFE.titleNl : theme.titleNl;
 }
 
 /** A group's Dutch name and its help-language name ("Andere sectoren" for the other sectors). */
 function groupNames(group: ThemeGroup, lang?: HelpLanguage): { nl: string; text: Bilingual } {
   if (!group.theme) return { nl: 'Andere sectoren', text: ui('otherSectors', lang) };
-  return { nl: group.theme.titleNl, text: themeText(group.theme, lang) };
+  return { nl: themeNl(group.theme, lang), text: themeText(group.theme, lang) };
 }
 
 /** How many of these topics are finished. */
@@ -60,6 +72,8 @@ export function ThemeHeadRow({ group, lang, completed, counted = group.units, du
         </span>
         {done && <span className="theme-check" aria-hidden><CheckIcon size={16} /></span>}
       </h2>
+      {/* In Belgium with the Belgian course off: "Leven in Nederland" says it is about the Netherlands. */}
+      {group.key === 'theme.life' && !dutchOnly && !dutchUi(lang) && lifeThemeHere() === 'nl-marked' && <BeNote lang={lang} className="theme-be-note" />}
     </li>
   );
 }

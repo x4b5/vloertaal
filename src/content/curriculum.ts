@@ -4,6 +4,7 @@ import { soundsUnit } from './sounds';
 import { addMixLessons, isMixLesson, mixLessonFor } from './review';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
 import { rulesCourseUnits } from './rulesCourse';
+import { beTaalCourse, taalBeActive } from './taalBe';
 import { allRegionUnits, regionTaalLessons } from './regio';
 import type { Track } from '../lib/track';
 
@@ -379,6 +380,39 @@ export const phrasebookIds = [
 // Every unit ends with a "Mixed review" lesson of earlier items (src/content/review.ts).
 addMixLessons(units);
 
+/* ---- The course per country (docs/taal-belgie.md) ---- */
+
+let beCourse: Unit[] | null = null;
+/** The Belgian language course (src/content/taalBe): the Dutch one with the Belgian units and lines. */
+export function beTaalUnits(): Unit[] {
+  return (beCourse ??= beTaalCourse(units));
+}
+
+/**
+ * The language course of the learner's country: the Belgian one in Belgium (while it is switched
+ * on, src/content/taalBe/live.ts), the Dutch one (`units`) otherwise. A unit or lesson that is the
+ * same in both is the same object.
+ */
+export function taalCourseUnits(): Unit[] {
+  return taalBeActive() ? beTaalUnits() : units;
+}
+
+/** Both countries' language units, each once: the course that plays now first (lookups by id). */
+export function allCountriesTaalUnits(): Unit[] {
+  const here = taalCourseUnits();
+  const seen = new Set(here);
+  return [...here, ...[...units, ...beTaalUnits()].filter((u) => !seen.has(u) && (seen.add(u), true))];
+}
+
+/** The lessons of the Belgian course that the Dutch one does not have (Belgian or changed lessons). */
+export function beOnlyTaalLessons(): Lesson[] {
+  const nl = new Set(allLessonsOf(units));
+  return allLessonsOf(beTaalUnits()).filter((l) => !nl.has(l));
+}
+function allLessonsOf(list: Unit[]): Lesson[] {
+  return list.flatMap((u) => u.lessons);
+}
+
 export const allLessons: Lesson[] = units.flatMap((u) => u.lessons);
 /** The lessons that teach new items; mixed reviews only repeat them. */
 export const teachingLessons: Lesson[] = allLessons.filter((l) => !isMixLesson(l));
@@ -393,7 +427,11 @@ export const allReplies: ChatLine[] = allDialogues.map((d) => d.reply);
  */
 export function learnedWords(completed: Record<string, unknown>): Set<string> {
   // A region's lessons (src/content/regio) teach words too.
-  return new Set([...allLessons, ...regionTaalLessons()].filter((l) => completed[l.id]).flatMap((l) => l.words.map((w) => w.id)));
+  // The course of the learner's country (a Belgian lesson of the other course counts too).
+  const here = taalCourseUnits().flatMap((u) => u.lessons);
+  const ids = new Set(here.map((l) => l.id));
+  const other = allCountriesTaalUnits().flatMap((u) => u.lessons).filter((l) => !ids.has(l.id));
+  return new Set([...here, ...other, ...regionTaalLessons()].filter((l) => completed[l.id]).flatMap((l) => l.words.map((w) => w.id)));
 }
 
 /**
@@ -402,7 +440,8 @@ export function learnedWords(completed: Record<string, unknown>): Set<string> {
  */
 export function findLesson(id: string, track?: Track): { unit: Unit; lesson: Lesson } | undefined {
   // A region's units (src/content/regio) are found too: their ids never clash either ("rg.").
-  const where = [...(track === 'taal' ? units : track === 'regels' ? rulesCourseUnits() : [...units, ...rulesCourseUnits()]), ...allRegionUnits(track)];
+  // The language course of the learner's country first, then the other country's (a Belgian lesson).
+  const where = [...(track === 'taal' ? allCountriesTaalUnits() : track === 'regels' ? rulesCourseUnits() : [...allCountriesTaalUnits(), ...rulesCourseUnits()]), ...allRegionUnits(track)];
   for (const unit of where) {
     const lesson = unit.lessons.find((l) => l.id === id);
     if (lesson) return { unit, lesson };
@@ -418,7 +457,8 @@ export function findLesson(id: string, track?: Track): { unit: Unit; lesson: Les
 export function playLesson(id: string, completed: Record<string, unknown>, turn = 0): { unit: Unit; lesson: Lesson } | undefined {
   const found = findLesson(id);
   if (!found || !isMixLesson(found.lesson)) return found;
-  return { unit: found.unit, lesson: mixLessonFor(found.unit, units, completed, turn) };
+  const course = beTaalUnits().includes(found.unit) && !units.includes(found.unit) ? beTaalUnits() : taalCourseUnits();
+  return { unit: found.unit, lesson: mixLessonFor(found.unit, course, completed, turn) };
 }
 
 /** Look up any word or sentence by id (used by the phrasebook). */

@@ -17,9 +17,9 @@ const t: CultureTranslation = {
     'a.how': 'Wie funktioniert es?',
     'a.how.b': 'Du lernst Niederländisch mit Hilfe in deiner eigenen Sprache: Anweisungen und Wörter siehst du auch auf Deutsch. Du hörst zu, tippst, bildest Sätze und übst kurze Gespräche mit Kollegen.',
     'a.culture': 'So läuft es hier',
-    'a.culture.b': 'Die Sprache kommt zuerst. Aber Vloertaal erklärt auch, wie es an einem niederländischen Arbeitsplatz meistens läuft: „je“ zum Chef sagen, Fragen stellen, pünktlich sein und sagen, wenn dich etwas stört. Diese Tipps findest du in den Lektionen und unter „Tipps für die Arbeit“.',
+    'a.culture.b': 'Die Sprache kommt zuerst. Aber Vloertaal erklärt auch, wie es bei der Arbeit in den Niederlanden und in Belgien meistens läuft: „je“ zum Chef sagen, Fragen stellen, pünktlich sein und sagen, wenn dich etwas stört. Diese Tipps findest du in den Lektionen und unter „Tipps für die Arbeit“.', // nieuw, nalezen (Nederland en België)
     'a.who': 'Für wen ist es?',
-    'a.who.b': 'Für alle, die neu bei der Arbeit in den Niederlanden sind. Hilfssprachen: Arabisch, Tigrinya, Persisch, Dari, Ukrainisch, Türkisch, Polnisch, Rumänisch, Bulgarisch, Spanisch, Portugiesisch, Französisch und Deutsch.',
+    'a.who.b': 'Für alle, die neu bei der Arbeit in den Niederlanden oder in Belgien sind. Hilfssprachen: Arabisch, Tigrinya, Persisch, Dari, Ukrainisch, Türkisch, Polnisch, Rumänisch, Bulgarisch, Spanisch, Portugiesisch, Französisch und Deutsch.', // nieuw, nalezen (Nederland en België)
     'a.free': 'Deine Privatsphäre',
     'a.free.b': 'Du brauchst kein Konto. Dein Fortschritt wird nur auf diesem Handy oder Computer gespeichert. Wenn es eingeschaltet ist, zählt die App anonym, wie oft Lektionen gemacht werden: kein Name, kein Tracking. Du kannst das in den „Einstellungen“ ausschalten. Das Ergebnis des Tests und die Aufnahme deiner Stimme bleiben auch nur auf diesem Handy oder Computer. Eine Lehrkraft oder ein Coach sieht nur, was du selbst zeigst, zum Beispiel die Karte bei „Zeig, wie es läuft“. Schaltest du „Das Handy hört zu (Versuch)“ ein? Dann erkennt das Handy selbst dein Niederländisch. Nichts geht an uns oder an andere.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) // nagelezen AI 31 okt
     'a.disclaimer': 'Gut zu wissen',

@@ -19,5 +19,9 @@ export const isBeId = (id: string): boolean => id.startsWith(BE_PREFIX);
 /** The Belgian id of a Dutch work-rules id ("r.loon" → "r.be.loon"); a Belgian id stays as it is. */
 export const beId = (id: string): string => (isBeId(id) || !id.startsWith('r.') ? id : `${BE_PREFIX}${id.slice(2)}`);
 
-/** The Dutch id of a Belgian one ("r.be.l.loon.2" → "r.l.loon.2"); any other id stays as it is. */
-export const nlId = (id: string): string => (isBeId(id) ? `r.${id.slice(BE_PREFIX.length)}` : id);
+/**
+ * The Dutch id of a Belgian one ("r.be.l.loon.2" → "r.l.loon.2"); any other id stays as it is.
+ * The Belgian language track's ids too ("be.u.society" → "u.society", src/content/taalBe/ids.ts):
+ * so the themes, the sectors and the route find the Dutch twin of either track the same way.
+ */
+export const nlId = (id: string): string => (isBeId(id) ? `r.${id.slice(BE_PREFIX.length)}` : id.startsWith('be.') ? id.slice(3) : id);

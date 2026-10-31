@@ -3,6 +3,7 @@ import type { CharacterId } from '../components/Characters';
 import { Bust } from './kit';
 import units from './units';
 import icons from './icons';
+import { pictureIdOf } from '../content/taalBe/ids';
 
 /**
  * Original word pictures (flat vector, in the cast's style; see docs/tekenstijl.md).
@@ -71,7 +72,8 @@ export function WordPicture({ id, emoji, size = 96, className }: {
   className?: string;
 }): JSX.Element {
   const ready = usePicturesLoaded();
-  const draw = pictures[id] ?? iconPictures[id];
+  // A Belgian word that keeps its Dutch twin's drawing ("de refter": src/content/taalBe/ids.ts).
+  const draw = pictures[pictureIdOf(id)] ?? iconPictures[id];
   if (!draw && !ready) {
     // Not here yet: an empty square of the same size (no emoji that would then change).
     return createElement('span', { className: `word-pic word-pic-wait ${className ?? ''}`, 'aria-hidden': true, style: { display: 'inline-block', width: size, height: size } });

@@ -69,10 +69,10 @@ export const aboutSections: AboutSection[] = [
   {
     // The rules track is this, all through: left out there.
     id: 'a.culture', emoji: '🤝', title: 'How it works here', rules: false,
-    body: 'Language comes first. But Vloertaal also talks about how things usually go at a Dutch workplace: saying "je" to your boss, asking questions, being on time, and saying it when something bothers you. You find these tips in the lessons and under "Workplace tips".',
+    body: 'Language comes first. But Vloertaal also talks about how things usually go at work in the Netherlands and in Belgium: saying "je" to your boss, asking questions, being on time, and saying it when something bothers you. You find these tips in the lessons and under "Workplace tips".',
     nl: {
       title: 'Zo werkt het hier',
-      body: 'Taal komt eerst. Maar Vloertaal vertelt ook hoe het meestal gaat op het werk in Nederland. Bijvoorbeeld: je zegt "je" tegen je baas, je stelt vragen en je bent op tijd. En je zegt het als je iets niet fijn vindt. Deze tips vind je in de lessen en bij "Zo werkt het hier".',
+      body: 'Taal komt eerst. Maar Vloertaal vertelt ook hoe het meestal gaat op het werk in Nederland en in België. Bijvoorbeeld: je zegt "je" tegen je baas, je stelt vragen en je bent op tijd. En je zegt het als je iets niet fijn vindt. Deze tips vind je in de lessen en bij "Zo werkt het hier".',
     },
   },
   {
@@ -142,10 +142,10 @@ export const siteSections: AboutSection[] = [
   },
   {
     id: 'a.who', emoji: '🌍', title: 'Who is it for?',
-    body: 'For everyone who is new to working in the Netherlands. Help languages: Arabic, Tigrinya, Persian, Dari, Ukrainian, Turkish, Polish, Romanian, Bulgarian, Spanish, Portuguese, French and German.',
+    body: 'For everyone who is new to working in the Netherlands or Belgium. Help languages: Arabic, Tigrinya, Persian, Dari, Ukrainian, Turkish, Polish, Romanian, Bulgarian, Spanish, Portuguese, French and German.',
     nl: {
       title: 'Voor wie is het?',
-      body: 'Voor iedereen die nieuw is op het werk in Nederland. Hulptalen: Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens, Bulgaars, Spaans, Portugees, Frans en Duits.',
+      body: 'Voor iedereen die nieuw is op het werk in Nederland of België. Hulptalen: Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens, Bulgaars, Spaans, Portugees, Frans en Duits.',
     },
     nlRules: {
       title: 'Voor wie is het?',

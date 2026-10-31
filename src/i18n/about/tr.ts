@@ -17,9 +17,9 @@ const t: CultureTranslation = {
     'a.how': 'Nasıl çalışır?',
     'a.how.b': 'Hollandacayı kendi dilinde yardımla öğrenirsin: talimatları ve kelimeleri Türkçe olarak da görürsün. Dinlersin, dokunursun, cümle kurarsın ve iş arkadaşlarınla kısa konuşmalar yaparak pratik yaparsın.',
     'a.culture': 'Burada nasıl yapılır',
-    'a.culture.b': 'Önce dil gelir. Ama Vloertaal, bir Hollanda iş yerinde işlerin genelde nasıl yürüdüğünü de anlatır: patronuna “je” demek, soru sormak, zamanında gelmek ve bir şey seni rahatsız ettiğinde bunu söylemek. Bu ipuçlarını derslerde ve “İş yeri ipuçları” bölümünde bulursun.',
+    'a.culture.b': 'Önce dil gelir. Ama Vloertaal, Hollanda’da ve Belçika’da bir iş yerinde işlerin genelde nasıl yürüdüğünü de anlatır: patronuna “je” demek, soru sormak, zamanında gelmek ve bir şey seni rahatsız ettiğinde bunu söylemek. Bu ipuçlarını derslerde ve “İş yeri ipuçları” bölümünde bulursun.', // nieuw, nalezen (Nederland en België)
     'a.who': 'Kimin için?',
-    'a.who.b': 'Hollanda’da çalışmaya yeni başlayan herkes için. Yardım dilleri: Arapça, Tigrinya dili, Farsça, Darice, Ukraynaca, Türkçe, Lehçe, Rumence, Bulgarca, İspanyolca, Portekizce, Fransızca ve Almanca.',
+    'a.who.b': 'Hollanda’da veya Belçika’da çalışmaya yeni başlayan herkes için. Yardım dilleri: Arapça, Tigrinya dili, Farsça, Darice, Ukraynaca, Türkçe, Lehçe, Rumence, Bulgarca, İspanyolca, Portekizce, Fransızca ve Almanca.', // nieuw, nalezen (Nederland en België)
     'a.free': 'Gizliliğin',
     'a.free.b': 'Hesaba ihtiyacın yok. İlerlemen sadece bu telefonda ya da bilgisayarda kaydedilir. Açıksa, uygulama derslerin kaç kez yapıldığını anonim olarak sayar: isim yok, takip yok. Bunu “Ayarlar” bölümünde kapatabilirsin. Testin sonucu ve ses kaydın da sadece bu telefonda ya da bilgisayarda kalır. Bir öğretmen ya da koç sadece senin gösterdiğini görür, örneğin “Nasıl gittiğini göster” bölümündeki kartı. “Telefon dinlesin (deneme)” ayarını açarsan, Hollandacanı telefonun kendisi tanır. Bize veya başkalarına hiçbir şey gitmez.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) // nagelezen AI 31 okt
     'a.disclaimer': 'Bilmekte fayda var',

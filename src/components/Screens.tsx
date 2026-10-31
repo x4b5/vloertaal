@@ -5,14 +5,18 @@ import { Character } from './Characters';
 import { resultLineFor } from '../lib/greeting';
 import { aboutRules, aboutSections, CONTACT_EMAIL, PRO_TITLE } from '../content/about';
 import { LAST_UPDATE, updateDate } from '../content/updates';
-import { cultureTips } from '../content/culture';
+import { taalTips } from '../content/culture';
+import { taalBeActive, tipNlOnly } from '../content/taalBe';
+import { tipBody } from '../lib/tipText';
+import { BeNote } from './BeNote';
 import { regionTips } from '../content/regio';
 import { findLesson } from '../content/curriculum';
 import type { DailyCard } from '../lib/spaced';
 import { Flag } from './Flag';
 import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, NL_MORE, ui, uiCount, withoutN, type Bilingual, said, saidLang, langTag } from '../i18n';
 import type { HelpLanguage, LangCode, UiCode, UiKey } from '../i18n/types';
-import { HELP_ROWS } from '../content/regels/help';
+import { helpRowsFor, type HelpRow } from '../content/regels/help';
+import { learnerCountry } from '../content/country';
 import { dutchUi, rulesTrackOn } from '../lib/track';
 import { NlPair } from './NlPair';
 import { Fragment, useEffect, useRef, useState } from 'react';
@@ -357,17 +361,35 @@ export function WordsHub({ lang, onTips, after }: {
   );
 }
 
-/** "Problems at work? Who can help": the four numbers for this audience (from the work-rules track's
- *  list), in the same order as there: 112 first, then by name. */
-const WORK_CONTACT_KEYS: { id: string; when: UiKey }[] = [
-  { id: 'h.112', when: 'who112' },
-  { id: 'h.juridischloket', when: 'whoLegal' },
-  { id: 'h.arbeidsinspectie', when: 'whoInspection' },
-  { id: 'h.fairwork', when: 'whoFairwork' },
-];
-const WORK_CONTACTS = [...WORK_CONTACT_KEYS].sort(
-  (a, b) => HELP_ROWS.findIndex((r) => r.id === a.id) - HELP_ROWS.findIndex((r) => r.id === b.id),
-);
+/** "Problems at work? Who can help": the numbers for this audience (from the work-rules track's
+ *  list of the learner's country, src/content/regels/help.ts helpRowsFor), in the same order as
+ *  there: 112 first, then by name. In Belgium the Belgian places (docs/taal-belgie.md): like the
+ *  work rules' Hulp tab, this follows the country alone, also with the Belgian course off. */
+const WORK_CONTACT_KEYS: Record<'nl' | 'be', { id: string; when: UiKey }[]> = {
+  nl: [
+    { id: 'h.112', when: 'who112' },
+    { id: 'h.juridischloket', when: 'whoLegal' },
+    { id: 'h.arbeidsinspectie', when: 'whoInspection' },
+    { id: 'h.fairwork', when: 'whoFairwork' },
+  ],
+  be: [
+    { id: 'h.112', when: 'who112' },
+    { id: 'h.be.justitiehuis', when: 'whoLegalBe' },
+    { id: 'h.be.tsw', when: 'whoInspectionBe' },
+    { id: 'h.be.payoke', when: 'whoExploitBe' },
+    { id: 'h.be.vakbond', when: 'whoUnionBe' },
+  ],
+};
+/** The rows of "Problems at work? Who can help" for a country, each with its help-language line. */
+export function workContacts(country: 'nl' | 'be'): { id: string; when: UiKey; row: HelpRow }[] {
+  const rows = helpRowsFor(country);
+  return WORK_CONTACT_KEYS[country]
+    .flatMap((k) => {
+      const row = rows.find((r) => r.id === k.id);
+      return row ? [{ ...k, row }] : [];
+    })
+    .sort((a, b) => rows.indexOf(a.row) - rows.indexOf(b.row));
+}
 
 /**
  * The Hulp tab of the language course: who to call about trouble at work (the Werkregels track has
@@ -379,9 +401,7 @@ function WorkContacts({ lang }: { lang?: HelpLanguage }) {
     <section className="work-contacts" aria-labelledby="work-contacts-title">
       <h2 id="work-contacts-title" className="rh-title"><Bi text={ui('whoToCall', lang)} /></h2>
       <ul className="rh-rows">
-        {WORK_CONTACTS.map(({ id, when }) => {
-          const row = HELP_ROWS.find((r) => r.id === id);
-          if (!row) return null;
+        {workContacts(learnerCountry()).map(({ id, when, row }) => {
           // 112 has no link: the number is shown, not dialled with one tap (src/content/regels/help.ts).
           if (!row.href) return (
             <li key={id} className="rh-row">
@@ -559,6 +579,8 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
         <Wordmark />
         <p className="about-tag" lang="nl">{dutchUi(lang) ? ui('appTagline', lang).help : 'Nederlands voor op de werkvloer'}</p>
       </div>
+      {/* The language course in Belgium is a beta (docs/taal-belgie.md). */}
+      {!dutchUi(lang) && taalBeActive() && <BeNote lang={lang} kind="beta" className="about-be-note" />}
       {/* The work-rules track: its own sections, in Dutch only (src/content/about.ts aboutRules). */}
       {dutchUi(lang) ? aboutRules.map((s) => (
         <section key={s.id} className="about-section about-nl-on" lang="nl" dir="ltr">
@@ -919,7 +941,7 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
   const [open, setOpen] = useState<string | null>(null);
   // A tip shows once its lesson is done, or when its lesson is the next one on the own course.
   // With the tips of the learner's region (src/content/regio), once their lesson is done.
-  const visible = [...cultureTips, ...regionTips(progress.region)].filter((t) =>
+  const visible = [...taalTips(), ...regionTips(progress.region)].filter((t) =>
     Boolean(progress.completed[t.lessonId]) || isNextInCourse(t.lessonId, progress.completed, access, progress.sector));
   return (
     <div className="screen">
@@ -929,6 +951,8 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
       </div>
       <p className="muted"><Bi text={ui('cultureTipsHint', lang)} /></p>
       <p className="tips-note"><InfoIcon size={18} /><Bi text={ui('tipsNote', lang)} /></p>
+      {/* The Belgian course is a beta (docs/taal-belgie.md). */}
+      {taalBeActive() && <BeNote lang={lang} kind="beta" />}
       <ul className="tips-list">
         {visible.map((t) => (
           <li key={t.id} className={`tips-item ${open === t.id ? 'open' : ''}`}>
@@ -939,7 +963,8 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
             </button>
             {open === t.id && (
               <div className="tips-body">
-                <p><Bi text={gloss(`${t.id}.b`, t.body, lang)} /></p>
+                {tipNlOnly(t) && <BeNote lang={lang} />}
+                <p><Bi text={tipBody(t, lang)} /></p>
                 <div className="phrase">
                   <SpeakButton text={t.phrase.nl} help={lang} />
                   <div className="phrase-text">

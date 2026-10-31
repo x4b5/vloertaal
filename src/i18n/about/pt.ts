@@ -17,9 +17,9 @@ const t: CultureTranslation = {
     'a.how': 'Como funciona?',
     'a.how.b': 'Aprendes neerlandês com ajuda na tua língua: vês as instruções e as palavras também em português. Ouves, tocas no ecrã, fazes frases e praticas conversas curtas com colegas.',
     'a.culture': 'Como funciona aqui',
-    'a.culture.b': 'A língua vem primeiro. Mas o Vloertaal também fala de como as coisas costumam ser num local de trabalho nos Países Baixos: dizer "je" ao teu chefe, fazer perguntas, chegar a horas e dizer quando alguma coisa te incomoda. Encontras estas dicas nas lições e em "Dicas para o trabalho".',
+    'a.culture.b': 'A língua vem primeiro. Mas o Vloertaal também fala de como as coisas costumam ser num local de trabalho nos Países Baixos e na Bélgica: dizer "je" ao teu chefe, fazer perguntas, chegar a horas e dizer quando alguma coisa te incomoda. Encontras estas dicas nas lições e em "Dicas para o trabalho".', // nieuw, nalezen (Nederland en België)
     'a.who': 'Para quem é?',
-    'a.who.b': 'Para todas as pessoas que estão a começar a trabalhar nos Países Baixos. Línguas de ajuda: árabe, tigrínia, persa, dari, ucraniano, turco, polaco, romeno, búlgaro, espanhol, português, francês e alemão.',
+    'a.who.b': 'Para todas as pessoas que estão a começar a trabalhar nos Países Baixos ou na Bélgica. Línguas de ajuda: árabe, tigrínia, persa, dari, ucraniano, turco, polaco, romeno, búlgaro, espanhol, português, francês e alemão.', // nieuw, nalezen (Nederland en België)
     'a.free': 'A tua privacidade',
     'a.free.b': 'Não precisas de conta. O teu progresso fica guardado só neste telemóvel ou computador. Se estiver ligado, a app conta de forma anónima quantas vezes as lições são feitas: sem nome, sem rastreio. Podes desligar isto nas Definições. O resultado do teste e a gravação da tua voz também ficam só neste telemóvel ou computador. Um professor ou coach só vê o que tu lhe mostras, por exemplo o cartão em «Mostra como te está a correr». Se ligares «O telemóvel ouve (experimental)», o próprio telemóvel reconhece o teu neerlandês. Nada vai para nós nem para outros.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) // nagelezen AI 31 okt
     'a.disclaimer': 'É bom saber',

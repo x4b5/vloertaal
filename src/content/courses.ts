@@ -1,5 +1,6 @@
 import type { Track } from '../lib/track';
-import { learnedWords, units } from './curriculum';
+import { allCountriesTaalUnits, learnedWords, taalCourseUnits } from './curriculum';
+import { taalNlId } from './taalBe/ids';
 import { nlId } from './regels/be/ids';
 import { allCountriesRulesUnits, rulesCourseUnits, setRulesUnits } from './rulesCourse';
 import type { RuleStep } from './regels/types';
@@ -26,12 +27,13 @@ export function registerRulesCourse(rules: Unit[], be: Unit[] | null = null): vo
 
 /** The units of one track, in course order. */
 export function courseUnits(track: Track = 'taal'): Unit[] {
-  return track === 'regels' ? rulesCourseUnits() : units;
+  // The language course follows the country too (src/content/taalBe, docs/taal-belgie.md).
+  return track === 'regels' ? rulesCourseUnits() : taalCourseUnits();
 }
 
 /** Every unit of both courses (the language course first). */
 export function allCourseUnits(): Unit[] {
-  return [...units, ...rulesCourseUnits()];
+  return [...taalCourseUnits(), ...rulesCourseUnits()];
 }
 
 /** A lesson and its unit in one track's course (a region's unit of that track included). */
@@ -48,7 +50,7 @@ export function findLessonIn(track: Track, id: string): { unit: Unit; lesson: Le
  * allCourseUnits: they never get a certificate (the certificates are the same wherever you live).
  */
 export function findCourseUnit(id: string | undefined): Unit | undefined {
-  return id ? [...allCourseUnits(), ...allRegionUnits()].find((u) => u.id === id) : undefined;
+  return id ? [...allCourseUnits(), ...allCountriesTaalUnits(), ...allRegionUnits()].find((u) => u.id === id) : undefined;
 }
 
 /**
@@ -57,7 +59,12 @@ export function findCourseUnit(id: string | undefined): Unit | undefined {
  * Any other id (or a unit in neither) stays as it is.
  */
 export function rulesTwinHere(id: string): string {
-  if (!id.startsWith('r.')) return id;
+  // A language unit ("u.society" ↔ "be.u.society", src/content/taalBe) the same way.
+  if (!id.startsWith('r.')) {
+    if (!/^(be\.)?u\./.test(id)) return id;
+    const nl = taalNlId(id);
+    return taalCourseUnits().find((u) => taalNlId(u.id) === nl)?.id ?? id;
+  }
   const base = nlId(id);
   return rulesCourseUnits().find((u) => nlId(u.id) === base)?.id ?? id;
 }
@@ -69,7 +76,8 @@ export function isRulesLessonAnyCountry(lessonId: string): boolean {
 
 /** The unit a lesson belongs to, in either course (or a region's unit). */
 export function unitOfLesson(lessonId: string): Unit | undefined {
-  return [...allCourseUnits(), ...allRegionUnits()].find((u) => u.lessons.some((l) => l.id === lessonId));
+  // The language course of the other country too (a Belgian lesson is kept in a backup).
+  return [...allCourseUnits(), ...allCountriesTaalUnits(), ...allRegionUnits()].find((u) => u.lessons.some((l) => l.id === lessonId));
 }
 
 /** A lesson the player can play: words to learn (the Dutch course) or steps (the rules course). */

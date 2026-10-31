@@ -17,9 +17,9 @@ const t: CultureTranslation = {
     'a.how': '¿Cómo funciona?',
     'a.how.b': 'Aprendes neerlandés con ayuda en tu propio idioma: las instrucciones y las palabras también las ves en español. Escuchas, tocas la pantalla, formas frases y practicas conversaciones cortas con compañeros.',
     'a.culture': 'Así funciona aquí',
-    'a.culture.b': 'Lo primero es el idioma. Pero Vloertaal también cuenta cómo suelen ser las cosas en un trabajo en los Países Bajos: decir "je" a tu jefe, hacer preguntas, llegar a tiempo y decirlo cuando algo te molesta. Estos consejos están en las lecciones y en "Consejos para el trabajo".',
+    'a.culture.b': 'Lo primero es el idioma. Pero Vloertaal también cuenta cómo suelen ser las cosas en un trabajo en los Países Bajos y en Bélgica: decir "je" a tu jefe, hacer preguntas, llegar a tiempo y decirlo cuando algo te molesta. Estos consejos están en las lecciones y en "Consejos para el trabajo".', // nieuw, nalezen (Nederland en België)
     'a.who': '¿Para quién es?',
-    'a.who.b': 'Para todas las personas que empiezan a trabajar en los Países Bajos. Idiomas de ayuda: árabe, tigriña, persa, darí, ucraniano, turco, polaco, rumano, búlgaro, español, portugués, francés y alemán.',
+    'a.who.b': 'Para todas las personas que empiezan a trabajar en los Países Bajos o en Bélgica. Idiomas de ayuda: árabe, tigriña, persa, darí, ucraniano, turco, polaco, rumano, búlgaro, español, portugués, francés y alemán.', // nieuw, nalezen (Nederland en België)
     'a.free': 'Tu privacidad',
     'a.free.b': 'No necesitas una cuenta. Tu progreso solo se guarda en este teléfono o en esta computadora. Si está activado, la app cuenta de forma anónima cuántas veces se hacen las lecciones: sin nombre, sin seguimiento. Puedes desactivarlo en "Ajustes". El resultado de la prueba y la grabación de tu voz también se quedan solo en este teléfono o computadora. Un profesor o coach solo ve lo que tú le enseñas, por ejemplo la tarjeta de «Muestra cómo te va». Si activas «Que el teléfono escuche (experimental)», el propio teléfono reconoce tu neerlandés. No va nada a nosotros ni a otros.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) // nagelezen AI 31 okt
     'a.disclaimer': 'Es bueno saberlo',

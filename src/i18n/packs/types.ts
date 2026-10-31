@@ -15,6 +15,8 @@ export interface LanguagePack {
   sounds: CultureTranslation;
   /** "Wat kun je nu?" (src/content/kunJeNu.ts): the can-do sentences and their screen texts. */
   kunJeNu: CultureTranslation;
+  /** The language track in Belgium (src/i18n/be: docs/taal-belgie.md): its shared texts and units. */
+  be: CultureTranslation;
   /** Where the pack's file was loaded from (saved with the app for offline use). */
   url: string;
 }
