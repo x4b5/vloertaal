@@ -264,7 +264,7 @@ describe('the language course per country', () => {
     expect(be.map((u) => taalNlId(u.id))).toEqual(units.map((u) => u.id));
     expect(be.find((u) => taalNlId(u.id) === 'u.society')!.id).toBe('be.u.society');
     // An unchanged unit is the very same object.
-    expect(be.find((u) => u.id === 'u.firstday')).toBe(units.find((u) => u.id === 'u.firstday'));
+    expect(be.find((u) => u.id === 'u.help')).toBe(units.find((u) => u.id === 'u.help'));
     // A B line plays with its Belgian id and text.
     const login = be.find((u) => u.id === 'u.online')!.lessons.find((l) => l.id === 'l.login')!;
     expect(login.sentences.map((s) => s.id)).toContain('be.s.login.3');
