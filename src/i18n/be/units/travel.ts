@@ -124,9 +124,9 @@ export const pl: Gloss = {
     "be.c.transit.b": "We Flandrii jeździsz autobusem albo tramwajem De Lijn i pociągiem NMBS. W autobusie nie zapłacisz gotówką: kup bilet w aplikacji albo zapłać kartą bankową w autobusie. Jeździsz do pracy codziennie? Wtedy bilet okresowy (abonnement) jest często tańszy. Jeździsz do pracy pociągiem? Wtedy pracodawca płaci część twojego biletu okresowego na pociąg. Przy autobusie, tramwaju albo rowerze zależy to od twojego sektora: zapytaj o to. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen
     "be.c.transit.p": "Czy dostanę pieniądze za dojazd?", // = c.transit.p
     "be.c.transit.s": "Codziennie jeździsz do pracy pociągiem. Kolega dostaje pieniądze na bilet okresowy, a ty nie. Co robisz?", // nieuw, nalezen
-    "be.c.transit.o1": "Zapytać pracodawcę o pieniądze na pociąg.", // nieuw, nalezen
+    "be.c.transit.o1": "Pytasz pracodawcę o pieniądze na pociąg.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.o2": "Nic nie mówisz, bo to pewnie nie dla ciebie.", // = c.transit.o2
-    "be.c.transit.o3": "Czekać: dostają to tylko pracownicy z długą umową.", // nieuw, nalezen
+    "be.c.transit.o3": "Czekasz: dostają to tylko pracownicy z długą umową.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.w": "Za pociąg pracodawca musi zapłacić część twojego biletu okresowego. Przy innych sposobach dojazdu zależy to od sektora. Pytanie o to jest normalne.", // nieuw, nalezen
 };
 
@@ -178,9 +178,9 @@ export const es: Gloss = {
     "be.c.transit.b": "En Flandes coges el autobús o el tranvía de De Lijn, y el tren de la NMBS. En el autobús no puedes pagar en efectivo: compra el billete en la app, o paga con tu tarjeta bancaria en el autobús. ¿Vas al trabajo cada día? Entonces un abono (abonnement) muchas veces sale más barato. ¿Vas al trabajo en tren? Entonces tu empresa paga una parte de tu abono de tren. Para el autobús, el tranvía o la bici, depende de tu sector: pregunta. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
     "be.c.transit.p": "¿Recibo una compensación por mis gastos de viaje?", // = c.transit.p
     "be.c.transit.s": "Vas al trabajo en tren cada día. Un compañero recibe dinero para su abono de tren, tú no. ¿Qué haces?", // nieuw, nalezen
-    "be.c.transit.o1": "Preguntar a tu empresa por el dinero del tren.", // nieuw, nalezen
+    "be.c.transit.o1": "Preguntas a tu empresa por el dinero del tren.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.o2": "No dices nada, porque seguramente no es para ti.", // = c.transit.o2
-    "be.c.transit.o3": "Esperar: solo lo reciben los que tienen un contrato largo.", // nieuw, nalezen
+    "be.c.transit.o3": "Esperas: solo lo reciben los que tienen un contrato largo.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.w": "Para el tren, la empresa tiene que pagar una parte de tu abono. Para otras formas de viajar, depende de tu sector. Preguntar por ello es normal.", // nieuw, nalezen
 };
 
@@ -196,9 +196,9 @@ export const pt: Gloss = {
     "be.c.transit.b": "Na Flandres apanhas o autocarro ou o elétrico da De Lijn, e o comboio da NMBS. No autocarro não podes pagar em dinheiro: compra o bilhete na app, ou paga com o cartão bancário no autocarro. Vais trabalhar todos os dias? Então um passe (abonnement) é muitas vezes mais barato. Vais trabalhar de comboio? Então o teu empregador paga uma parte do teu passe de comboio. Para o autocarro, o elétrico ou a bicicleta, depende do teu setor: pergunta. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao justitiehuis (conselho jurídico grátis).", // nieuw, nalezen
     "be.c.transit.p": "Recebo dinheiro pelos meus custos de viagem?", // = c.transit.p
     "be.c.transit.s": "Vais trabalhar de comboio todos os dias. Um colega recebe dinheiro para o passe de comboio, tu não. O que fazes?", // nieuw, nalezen
-    "be.c.transit.o1": "Perguntar ao empregador pelo dinheiro do comboio.", // nieuw, nalezen
+    "be.c.transit.o1": "Perguntas ao empregador pelo dinheiro do comboio.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.o2": "Não dizes nada, porque provavelmente não é para ti.", // = c.transit.o2
-    "be.c.transit.o3": "Esperar: só o recebem os trabalhadores com contrato longo.", // nieuw, nalezen
+    "be.c.transit.o3": "Esperas: só o recebem os trabalhadores com contrato longo.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.w": "Para o comboio, o empregador tem de pagar uma parte do teu passe. Para outras formas de viajar, depende do teu setor. Perguntar é normal.", // nieuw, nalezen
 };
 
@@ -214,9 +214,9 @@ export const fr: Gloss = {
     "be.c.transit.b": "En Flandre, tu prends le bus ou le tram De Lijn, et le train de la NMBS (SNCB). Dans le bus, tu ne peux pas payer en espèces : achète un ticket dans l’appli, ou paie par carte bancaire dans le bus. Tu vas au travail tous les jours ? Alors un abonnement est souvent moins cher. Tu vas au travail en train ? Alors ton employeur paie une partie de ton abonnement de train. Pour le bus, le tram ou le vélo, ça dépend de ton secteur : renseigne-toi. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au justitiehuis (maison de justice : conseil juridique gratuit).", // nieuw, nalezen
     "be.c.transit.p": "Est-ce que mes frais de trajet sont remboursés ?", // = c.transit.p
     "be.c.transit.s": "Tu vas au travail en train tous les jours. Un collègue reçoit de l’argent pour son abonnement de train, toi non. Que fais-tu ?", // nieuw, nalezen
-    "be.c.transit.o1": "Demander à ton employeur l’argent pour le train.", // nieuw, nalezen
+    "be.c.transit.o1": "Demande à ton employeur l’argent pour le train.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.o2": "Ne dis rien, parce que ce n’est sûrement pas pour toi.", // = c.transit.o2
-    "be.c.transit.o3": "Attendre : seuls ceux qui ont un long contrat la reçoivent.", // nieuw, nalezen
+    "be.c.transit.o3": "Attends : seuls ceux qui ont un long contrat la reçoivent.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.w": "Pour le train, l’employeur doit payer une partie de ton abonnement. Pour les autres façons de voyager, ça dépend de ton secteur. C’est normal de poser la question.", // nieuw, nalezen
 };
 
@@ -232,8 +232,8 @@ export const de: Gloss = {
     "be.c.transit.b": "In Flandern fährst du mit Bus oder Straßenbahn von De Lijn und mit dem Zug der NMBS. Im Bus kannst du nicht bar zahlen: Kauf ein Ticket in der App oder zahl im Bus mit deiner Bankkarte. Fährst du jeden Tag zur Arbeit? Dann ist ein Abo (abonnement) oft billiger. Fährst du mit dem Zug zur Arbeit? Dann zahlt dein Arbeitgeber einen Teil deines Zug-Abos. Bei Bus, Straßenbahn oder Fahrrad hängt es von deinem Sektor ab: Frag danach. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen
     "be.c.transit.p": "Bekomme ich Geld für meine Fahrtkosten?", // = c.transit.p
     "be.c.transit.s": "Du fährst jeden Tag mit dem Zug zur Arbeit. Ein Kollege bekommt Geld für sein Zug-Abo, du nicht. Was machst du?", // nieuw, nalezen
-    "be.c.transit.o1": "Den Arbeitgeber nach dem Geld für den Zug fragen.", // nieuw, nalezen
+    "be.c.transit.o1": "Frag den Arbeitgeber nach dem Geld für den Zug.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.o2": "Sag nichts, das ist wahrscheinlich nicht für dich.", // = c.transit.o2
-    "be.c.transit.o3": "Warten: Nur wer einen langen Vertrag hat, bekommt es.", // nieuw, nalezen
+    "be.c.transit.o3": "Warte: Nur wer einen langen Vertrag hat, bekommt es.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.w": "Beim Zug muss der Arbeitgeber einen Teil deines Abos bezahlen. Bei anderen Wegen zur Arbeit hängt es von deinem Sektor ab. Danach zu fragen ist normal.", // nieuw, nalezen
 };

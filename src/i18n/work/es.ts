@@ -1487,7 +1487,7 @@ const t: CultureTranslation = {
     'w.goedin': "bueno en (algo), que se te da bien", // nieuw, nalezen
     'w.kiezen': "elegir", // nieuw, nalezen
     'w.beroep': "la profesión, el tipo de trabajo", // nieuw, nalezen
-    'w.bijbaan': "el trabajo a tiempo parcial (un trabajo pequeño junto a los estudios)", // nieuw, nalezen
+    'w.bijbaan': "el trabajo a tiempo parcial (un trabajo pequeño mientras estudias)", // nieuw, nalezen // nagelezen AI ronde 3
     'w.nauwkeurig': "cuidadoso y preciso", // nieuw, nalezen
     'w.meeloopdag': "el día de observación (un día en que acompañas a alguien en su trabajo)", // nieuw, nalezen
     's.mychoice.1': "Sé trabajar bien con las manos.", // nieuw, nalezen

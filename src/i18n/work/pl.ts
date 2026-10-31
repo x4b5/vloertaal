@@ -1487,7 +1487,7 @@ const t: CultureTranslation = {
     'w.goedin': "dobry w (czymś)", // nieuw, nalezen
     'w.kiezen': "wybierać", // nieuw, nalezen
     'w.beroep': "zawód, rodzaj pracy", // nieuw, nalezen
-    'w.bijbaan': "praca dorywcza (mała praca obok szkoły)", // nieuw, nalezen
+    'w.bijbaan': "praca dorywcza (dorywcza praca w czasie nauki)", // nieuw, nalezen // nagelezen AI ronde 3
     'w.nauwkeurig': "dokładny i staranny", // nieuw, nalezen
     'w.meeloopdag': "dzień obserwacji (dzień, w którym towarzyszysz komuś w pracy)", // nieuw, nalezen
     's.mychoice.1': "Umiem dobrze pracować rękami.", // nieuw, nalezen

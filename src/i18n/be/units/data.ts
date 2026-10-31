@@ -83,11 +83,11 @@ export const pl: Gloss = {
     'be.c.details': "Twoje dane: podawaj je dobrze", // nieuw, nalezen
     'be.c.details.b': "Na początku pracy podajesz swoje dane: imię i nazwisko, adres, numer telefonu, datę urodzenia i numer rejestru krajowego (rijksregisternummer albo bisnummer). Przeliteruj nazwisko powoli, litera po literze. Potem sprawdź swoje nazwisko w umowie i na pasku wypłaty (loonbrief). Błąd w nazwisku albo numerze może dać problemy z wypłatą lub podatkiem. Nowy adres albo numer telefonu? Powiedz pracodawcy.", // nieuw, nalezen
     'be.c.details.p': "Przeliteruję: A, L, I.", // nieuw, nalezen
-    'be.c.details.s': "Przez telefon biuro pracy tymczasowej (interimkantoor) zapisuje twoje nazwisko. Słyszysz, że piszą je źle. Co robisz?", // nieuw, nalezen
-    'be.c.details.o1': "Literujesz nazwisko powoli i prosisz, żeby je przeczytali.", // nieuw, nalezen
+    'be.c.details.s': "Przez telefon agencja pracy tymczasowej (interimkantoor) zapisuje twoje nazwisko. Słyszysz, że piszą je źle. Co robisz?", // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.details.o1': "Literujesz nazwisko powoli i prosisz, żeby ci je odczytali.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.details.o2': "Nic nie mówisz: mały błąd w nazwisku nie ma znaczenia.", // nieuw, nalezen
     'be.c.details.o3': "Rozłączasz się i liczysz, że znajdą błąd później.", // nieuw, nalezen
-    'be.c.details.w': "Twoje nazwisko musi być takie samo w umowie, na pasku wypłaty (loonbrief) i na dowodzie osobistym albo karcie pobytu. Wtedy wypłata i podatek się zgadzają. Przeliterowanie i ponowne usłyszenie to szybka kontrola.", // nieuw, nalezen
+    'be.c.details.w': "Twoje nazwisko musi być takie samo w umowie, na pasku wypłaty (loonbrief) i na dowodzie osobistym albo karcie pobytu. Wtedy wypłata i podatek się zgadzają. Przeliterowanie i prośba o odczytanie to szybka kontrola.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const ro: Gloss = {
@@ -119,7 +119,7 @@ export const es: Gloss = {
     'be.c.details': "Tus datos: dalos bien", // nieuw, nalezen
     'be.c.details.b': "Al empezar un trabajo, das tus datos: tu nombre, tu dirección, tu teléfono, tu fecha de nacimiento y tu número del registro nacional (rijksregisternummer, o bisnummer). Deletrea tu nombre despacio, letra a letra. Después revisa tu nombre en el contrato y en la nómina (loonbrief). Un error en tu nombre o en tu número puede dar problemas con el sueldo o los impuestos. ¿Dirección o teléfono nuevos? Díselo a tu empresa.", // nieuw, nalezen
     'be.c.details.p': "Te lo deletreo: A, L, I.", // nieuw, nalezen
-    'be.c.details.s': "Por teléfono, la oficina de trabajo temporal (interimkantoor) apunta tu apellido. Oyes que lo escriben mal. ¿Qué haces?", // nieuw, nalezen
+    'be.c.details.s': "Por teléfono, la agencia de trabajo temporal (interimkantoor) apunta tu apellido. Oyes que lo escriben mal. ¿Qué haces?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.details.o1': "Deletreas tu apellido despacio y pides que te lo lean.", // nieuw, nalezen
     'be.c.details.o2': "No dices nada: un pequeño error en tu nombre no importa.", // nieuw, nalezen
     'be.c.details.o3': "Cuelgas, y esperas que encuentren el error más tarde.", // nieuw, nalezen
@@ -155,7 +155,7 @@ export const de: Gloss = {
     'be.c.details': "Deine Daten: Gib sie richtig an", // nieuw, nalezen
     'be.c.details.b': "Am Anfang eines Jobs gibst du deine Daten an: deinen Namen, deine Adresse, deine Telefonnummer, dein Geburtsdatum und deine Nationalregisternummer (rijksregisternummer, oder bisnummer). Buchstabier deinen Namen langsam, Buchstabe für Buchstabe. Prüf danach deinen Namen in deinem Vertrag und auf deiner Lohnabrechnung (loonbrief). Ein Fehler im Namen oder in der Nummer kann Probleme mit deinem Lohn oder der Steuer machen. Neue Adresse oder Telefonnummer? Sag es deinem Arbeitgeber.", // nieuw, nalezen
     'be.c.details.p': "Ich buchstabiere es: A, L, I.", // nieuw, nalezen
-    'be.c.details.s': "Am Telefon schreibt das Zeitarbeitsbüro (interimkantoor) deinen Nachnamen auf. Du hörst, dass sie ihn falsch schreiben. Was machst du?", // nieuw, nalezen
+    'be.c.details.s': "Am Telefon schreibt die Zeitarbeitsfirma (interimkantoor) deinen Nachnamen auf. Du hörst, dass sie ihn falsch schreiben. Was machst du?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.details.o1': "Du buchstabierst deinen Namen langsam und lässt ihn vorlesen.", // nieuw, nalezen
     'be.c.details.o2': "Du sagst nichts: Ein kleiner Fehler im Namen ist egal.", // nieuw, nalezen
     'be.c.details.o3': "Du legst auf und hoffst, dass sie den Fehler später finden.", // nieuw, nalezen

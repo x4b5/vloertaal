@@ -72,7 +72,7 @@ export const tr: Gloss = {
 
 export const pl: Gloss = {
     "be.c.direct": "Ostrożne słowa, jasna prośba", // nieuw, nalezen
-    "be.c.direct.b": "Flamandzcy koledzy często mówią ostrożnie, na przykład „Zou je die doos daar willen zetten?”. To często i tak jasna prośba: zrób to. Niektórzy koledzy są bardzo bezpośredni, na przykład „Dat is fout”. Zwykle nie chcą być niegrzeczni. Ty też możesz mówić, co myślisz, jeśli zostajesz uprzejmy.", // nieuw, nalezen
+    "be.c.direct.b": "Flamandzcy koledzy często mówią ostrożnie, na przykład „Zou je die doos daar willen zetten?”. To często i tak jasna prośba: zrób to. Niektórzy koledzy są bardzo bezpośredni, na przykład „Dat is fout”. Zwykle nie chcą być niegrzeczni. Ty też możesz mówić, co myślisz, jeśli mówisz uprzejmie.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.direct.p": "Dobrze, to jak trzeba to zrobić?", // = c.direct.p
     "be.c.direct.s": "Kolega mówi: „Nee, dat is fout. Die doos moet daar.” Co robisz?", // = c.direct.s
     "be.c.direct.o1": "Pytasz, jak trzeba to zrobić, i przestawiasz karton.", // = c.direct.o1
@@ -127,7 +127,7 @@ export const pt: Gloss = {
 
 export const fr: Gloss = {
     "be.c.direct": "Des mots prudents, un message clair", // nieuw, nalezen
-    "be.c.direct.b": "Les collègues flamands disent souvent les choses avec prudence, comme « Zou je die doos daar willen zetten? ». C’est souvent quand même une demande claire : fais-le. Certains collègues sont très directs, comme « Dat is fout ». En général, ils ne veulent pas être impolis. Toi aussi, tu peux dire ce que tu penses, en restant aimable.", // nieuw, nalezen
+    "be.c.direct.b": "Les collègues flamands disent souvent les choses avec prudence, comme “Zou je die doos daar willen zetten?”. C’est souvent quand même une demande claire : fais-le. Certains collègues sont très directs, comme “Dat is fout”. En général, ils ne veulent pas être impolis. Toi aussi, tu peux dire ce que tu penses, en restant aimable.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.direct.p": "D’accord, alors comment il faut faire ?", // = c.direct.p
     "be.c.direct.s": "Un collègue dit : “Nee, dat is fout. Die doos moet daar.” Que fais-tu ?", // = c.direct.s
     "be.c.direct.o1": "Demande comment il faut faire et déplace le carton.", // = c.direct.o1

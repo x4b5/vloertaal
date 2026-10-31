@@ -139,13 +139,13 @@ export const pt: Gloss = {
 export const fr: Gloss = {
     "be.w.kantine": "la cantine (refter)", // nieuw, nalezen
     "be.c.je": "“Je” ou “u” ?", // = c.je
-    "be.c.je.b": "En Flandre, beaucoup de gens disent « u » au travail, surtout au début : au chef, à un client ou à une personne plus âgée. Entre collègues, on dit souvent « je », et à l’oral on entend aussi « ge ». Si tu as un doute, commence par « u » et écoute ce que font les autres.", // nieuw, nalezen
+    "be.c.je.b": "En Flandre, beaucoup de gens disent “u” au travail, surtout au début : au chef, à un client ou à une personne plus âgée. Entre collègues, on dit souvent “je”, et à l’oral on entend aussi “ge”. Si tu as un doute, commence par “u” et écoute ce que font les autres.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.je.p": "Je peux te dire “je” ?", // = c.je.p
     "be.c.je.s": "Ta nouvelle responsable dit : “Zeg maar je, hoor!” Qu’est-ce qu’elle veut dire ?", // = c.je.s
     "be.c.je.o1": "Elle veut que tu lui dises “je”.", // = c.je.o1
     "be.c.je.o2": "Elle te demande de dire quelque chose.", // = c.je.o2
     "be.c.je.o3": "Elle veut que tu parles plus poliment.", // = c.je.o3
-    "be.c.je.w": "« Zeg maar je » est amical : elle veut moins de distance. En Flandre, beaucoup de gens commencent par « u », alors attends que quelqu’un te le dise.", // nieuw, nalezen
+    "be.c.je.w": "“Zeg maar je” est amical : elle veut moins de distance. En Flandre, beaucoup de gens commencent par “u”, alors attends que quelqu’un te le dise.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const de: Gloss = {

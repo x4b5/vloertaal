@@ -79,13 +79,13 @@ export const tr: Gloss = {
 export const pl: Gloss = {
     "be.w.bhver": "EHBO’er (osoba, która w firmie udziela pierwszej pomocy)", // nieuw, nalezen
     "be.c.accident": "Zgłaszaj każdy wypadek", // = c.accident
-    "be.c.accident.b": "O każdym wypadku, nawet drobnym, powiedz przełożonemu albo EHBO’er (osobie, która w firmie udziela pierwszej pomocy). Pracujesz przez biuro pracy tymczasowej (interimkantoor)? Powiadom też biuro. W nagłym przypadku najpierw dzwoń pod 112. Pracodawca zgłasza wypadek swojemu ubezpieczycielowi od wypadków przy pracy (arbeidsongevallenverzekeraar): on płaci za leczenie. Poważny wypadek zgłasza się też do Toezicht op het Welzijn op het Werk. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen
+    "be.c.accident.b": "O każdym wypadku, nawet drobnym, powiedz przełożonemu albo EHBO’er (osobie, która w firmie udziela pierwszej pomocy). Pracujesz przez agencję pracy tymczasowej (interimkantoor)? Powiadom też agencję. W nagłym przypadku najpierw dzwoń pod 112. Pracodawca zgłasza wypadek swojemu ubezpieczycielowi od wypadków przy pracy (arbeidsongevallenverzekeraar): on płaci za leczenie. Poważny wypadek zgłasza się też do Toezicht op het Welzijn op het Werk. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.accident.p": "Mój kolega jest ranny. Gdzie jest EHBO’er?", // nieuw, nalezen
     "be.c.accident.s": "Przy podnoszeniu nadwyrężasz sobie plecy. Boisz się, że stracisz pracę. Co robisz?", // = c.accident.s
     "be.c.accident.o1": "Zgłaszasz to przełożonemu tego samego dnia.", // = c.accident.o1
     "be.c.accident.o2": "Nic nie mówisz, żeby nie stracić pracy.", // = c.accident.o2
     "be.c.accident.o3": "Czekasz, czy ból sam przejdzie.", // = c.accident.o3
-    "be.c.accident.w": "Zgłoś to tego samego dnia, nawet jeśli wydaje się drobne: ból może się później nasilić. Pracodawcy nie wolno cię ukarać za to zgłoszenie. Pracujesz przez biuro pracy tymczasowej? Powiedz też biuru.", // nieuw, nalezen
+    "be.c.accident.w": "Zgłoś to tego samego dnia, nawet jeśli wydaje się drobne: ból może się później nasilić. Pracodawcy nie wolno cię ukarać za to zgłoszenie. Pracujesz przez agencję pracy tymczasowej? Powiedz też agencji.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const ro: Gloss = {
@@ -115,13 +115,13 @@ export const bg: Gloss = {
 export const es: Gloss = {
     "be.w.bhver": "el EHBO’er (la persona de primeros auxilios de la empresa)", // nieuw, nalezen
     "be.c.accident": "Avisa de cada accidente", // = c.accident
-    "be.c.accident.b": "Cuéntale cada accidente, también uno pequeño, a tu encargado o al EHBO’er (la persona de primeros auxilios de la empresa). ¿Trabajas a través de una oficina de trabajo temporal (interimkantoor)? Avisa también a la oficina. En una emergencia, llama primero al 112. Tu empresa avisa del accidente a su seguro de accidentes de trabajo (arbeidsongevallenverzekeraar): ese seguro paga los gastos médicos. Un accidente grave se avisa también a Toezicht op het Welzijn op het Werk. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
+    "be.c.accident.b": "Cuéntale cada accidente, también uno pequeño, a tu encargado o al EHBO’er (la persona de primeros auxilios de la empresa). ¿Trabajas a través de una agencia de trabajo temporal (interimkantoor)? Avisa también a la agencia. En una emergencia, llama primero al 112. Tu empresa avisa del accidente a su seguro de accidentes de trabajo (arbeidsongevallenverzekeraar): ese seguro paga los gastos médicos. Un accidente grave se avisa también a Toezicht op het Welzijn op het Werk. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.accident.p": "Mi compañero está herido. ¿Dónde está el EHBO’er?", // nieuw, nalezen
     "be.c.accident.s": "Te haces daño en la espalda al levantar algo. Tienes miedo de perder tu trabajo. ¿Qué haces?", // = c.accident.s
     "be.c.accident.o1": "Se lo dices a tu encargado el mismo día.", // = c.accident.o1
     "be.c.accident.o2": "No dices nada, para no perder tu trabajo.", // = c.accident.o2
     "be.c.accident.o3": "Esperas a ver si el dolor se va solo.", // = c.accident.o3
-    "be.c.accident.w": "Avisa el mismo día, también si parece poca cosa: el dolor puede empeorar más tarde. Tu empresa no te puede castigar por avisar. ¿Trabajas a través de una oficina de trabajo temporal? Díselo también a la oficina.", // nieuw, nalezen
+    "be.c.accident.w": "Avisa el mismo día, también si parece poca cosa: el dolor puede empeorar más tarde. Tu empresa no te puede castigar por avisar. ¿Trabajas a través de una agencia de trabajo temporal? Díselo también a la agencia.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const pt: Gloss = {
@@ -151,11 +151,11 @@ export const fr: Gloss = {
 export const de: Gloss = {
     "be.w.bhver": "der EHBO’er (der betriebliche Ersthelfer)", // nieuw, nalezen
     "be.c.accident": "Melde jeden Unfall", // = c.accident
-    "be.c.accident.b": "Sag deinem Vorgesetzten oder dem EHBO’er (dem betrieblichen Ersthelfer) Bescheid, bei jedem Unfall, auch bei einem kleinen. Arbeitest du über ein Zeitarbeitsbüro (interimkantoor)? Sag es auch dort. Im Notfall ruf zuerst 112 an. Dein Arbeitgeber meldet den Unfall seiner Arbeitsunfallversicherung (arbeidsongevallenverzekeraar): Sie bezahlt die Behandlung. Ein schwerer Unfall wird auch dem Toezicht op het Welzijn op het Werk gemeldet. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen
+    "be.c.accident.b": "Sag deinem Vorgesetzten oder dem EHBO’er (dem betrieblichen Ersthelfer) Bescheid, bei jedem Unfall, auch bei einem kleinen. Arbeitest du über eine Zeitarbeitsfirma (interimkantoor)? Sag es auch dort. Im Notfall ruf zuerst 112 an. Dein Arbeitgeber meldet den Unfall seiner Arbeitsunfallversicherung (arbeidsongevallenverzekeraar): Sie bezahlt die Behandlung. Ein schwerer Unfall wird auch dem Toezicht op het Welzijn op het Werk gemeldet. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.accident.p": "Mein Kollege ist verletzt. Wo ist der EHBO’er?", // nieuw, nalezen
     "be.c.accident.s": "Du hast dir beim Heben den Rücken verletzt. Du hast Angst, deine Arbeit zu verlieren. Was machst du?", // = c.accident.s
     "be.c.accident.o1": "Melde es deinem Vorgesetzten am selben Tag.", // = c.accident.o1
     "be.c.accident.o2": "Sag nichts, damit du deine Arbeit nicht verlierst.", // = c.accident.o2
     "be.c.accident.o3": "Warte ab, ob der Schmerz von selbst weggeht.", // = c.accident.o3
-    "be.c.accident.w": "Melde es am selben Tag, auch wenn es klein scheint: Der Schmerz kann später schlimmer werden. Dein Arbeitgeber darf dich nicht bestrafen, weil du es meldest. Du arbeitest über ein Zeitarbeitsbüro? Sag es auch dort.", // nieuw, nalezen
+    "be.c.accident.w": "Melde es am selben Tag, auch wenn es klein scheint: Der Schmerz kann später schlimmer werden. Dein Arbeitgeber darf dich nicht bestrafen, weil du es meldest. Du arbeitest über eine Zeitarbeitsfirma? Sag es auch dort.", // nieuw, nalezen // nagelezen AI ronde 3
 };

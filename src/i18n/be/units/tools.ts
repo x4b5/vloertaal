@@ -155,7 +155,7 @@ export const de: Gloss = {
     "be.c.keeplearning.p": "Sprich ruhig Niederländisch mit mir, dann lerne ich es schneller.", // = c.keeplearning.p
     "be.c.keeplearning.s": "Deine Kollegen wechseln immer ins Englische, wenn sie mit dir reden. Du willst Niederländisch lernen. Was machst du?", // = c.keeplearning.s
     "be.c.keeplearning.o1": "Bedank dich und bitte sie, Niederländisch mit dir zu sprechen.", // = c.keeplearning.o1
-    "be.c.keeplearning.o2": "Sag nichts. Das Niederländisch kommt von selbst.", // = c.keeplearning.o2
+    "be.c.keeplearning.o2": "Sag nichts. Das Niederländische kommt von selbst.", // = c.keeplearning.o2 // nagelezen AI ronde 3
     "be.c.keeplearning.o3": "Antworte auch auf Englisch, weil das höflicher ist.", // = c.keeplearning.o3
     "be.c.keeplearning.w": "Kollegen wechseln oft ins Englische, um nett zu sein. Wenn du um Niederländisch bittest, helfen die meisten gern. Jeden Tag ein bisschen bei der Arbeit sprechen ist einer der schnellsten Wege zu lernen.", // = c.keeplearning.w
 };
