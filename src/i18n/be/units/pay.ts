@@ -82,24 +82,24 @@ export const fa: Gloss = {
 };
 
 export const prs: Gloss = {
-    'be.w.loonstrook': "فیش معاش (loonbrief)", // nieuw, nalezen
-    'be.s.payslip.2': "فیش معاشم درست نیست.", // nieuw, nalezen
-    'be.c.payslip.q': "فیش معاش تان را گرفتید؟", // nieuw, nalezen
+    'be.w.loonstrook': "ورق معاش (loonbrief)", // nieuw, nalezen // nagelezen AI ronde 3
+    'be.s.payslip.2': "ورق معاشم درست نیست.", // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.payslip.q': "ورق معاش تان را گرفتید؟", // nieuw, nalezen // nagelezen AI ronde 3
     'be.w.toeslag': "پاداش، پول اضافی (مثلاً برای کار شب)", // nieuw, nalezen
     'be.w.minimumloon': "جدول حداقل معاش (در رشتهٔ کاری شما)", // nieuw, nalezen
     'be.s.extra.1': "برای کار شب پاداش می‌گیرم؟", // nieuw, nalezen
-    'be.c.payslip': "فیش معاش (loonbrief) خود را چک کنید", // nieuw, nalezen
-    'be.c.payslip.b': "Brutoloon معاش شما پیش از هر کسر است. Nettoloon همان است که به حساب بانکی تان می‌آید. در این میان دو چیز کم می‌شود: RSZ (تأمین اجتماعی، 13.07% از معاش ناخالص) و bedrijfsvoorheffing (پیش‌پرداخت مالیه). کارفرما باید به شما فیش معاش (loonbrief) بدهد. روی آن اکثراً نمبر paritair comité است: توافق‌های رشتهٔ کاری شما، همچنان دربارهٔ حداقل معاش. کوپون غذا (maaltijdcheques) می‌گیرید؟ بخش کوچک آن را خود تان می‌پردازید. ساعت‌ها و معاش را در هر loonbrief چک کنید، و ساعت‌های کار تان را یادداشت کنید. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen
+    'be.c.payslip': "ورق معاش (loonbrief) خود را چک کنید", // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.payslip.b': "Brutoloon معاش شما پیش از هر کسر است. Nettoloon همان است که به حساب بانکی تان می‌آید. در این میان دو چیز کم می‌شود: RSZ (تأمین اجتماعی، 13.07% از معاش ناخالص) و bedrijfsvoorheffing (پیش‌پرداخت مالیه). کارفرما باید به شما ورق معاش (loonbrief) بدهد. روی آن اکثراً نمبر paritair comité است: توافق‌های رشتهٔ کاری شما، همچنان دربارهٔ حداقل معاش. کوپون غذا (maaltijdcheques) می‌گیرید؟ بخش کوچک آن را خود تان می‌پردازید. ساعت‌ها و معاش را در هر loonbrief چک کنید، و ساعت‌های کار تان را یادداشت کنید. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.payslip.p': "من ساعت‌های بیشتر کار کرده‌ام. می‌شود آن را بررسی کنید؟", // nieuw, nalezen
-    'be.c.payslip.s': "فیش معاش (loonbrief) شما ساعت‌های کمتر از کار تان نشان می‌دهد. چه می‌کنید؟", // nieuw, nalezen
+    'be.c.payslip.s': "ورق معاش (loonbrief) شما ساعت‌های کمتر از کار تان نشان می‌دهد. چه می‌کنید؟", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.payslip.o1': "یادداشت‌های خود را نشان دهید و از کارفرما بخواهید بررسی کند.", // nieuw, nalezen
     'be.c.payslip.o2': "چیزی نگویید، چون نمی‌خواهید مشکل شود.", // nieuw, nalezen
     'be.c.payslip.o3': "یک ماه صبر کنید: در loonbrief بعدی درست می‌شود.", // nieuw, nalezen
-    'be.c.payslip.w': "اشتباه در فیش معاش پیش می‌آید. پرسیدن دربارهٔ آن عادی و حق شماست. یادداشت تاریخ‌ها و ساعت‌ها بسیار کمک می‌کند. هنوز درست نیست؟ اتحادیهٔ کارگری کمک کرده می‌تواند.", // nieuw, nalezen
+    'be.c.payslip.w': "اشتباه در ورق معاش پیش می‌آید. پرسیدن دربارهٔ آن عادی و حق شماست. یادداشت تاریخ‌ها و ساعت‌ها بسیار کمک می‌کند. هنوز درست نیست؟ اتحادیهٔ کارگری کمک کرده می‌تواند.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.extra': "پول رخصتی و پاداش آخر سال", // nieuw, nalezen
     'be.c.extra.b': "شما پول رخصتی (vakantiegeld) می‌گیرید. مقدار آن به کار سال گذشته بستگی دارد. bediende هستید (اکثراً کار دفتری یا در دکان)؟ کارفرما آن را می‌پردازد: معاش معمول در رخصتی، و سالی یک بار پول اضافی (dubbel vakantiegeld). arbeider هستید (اکثراً کار با دست)؟ صندوق رخصتی (vakantiekas یا RJV) آن را می‌پردازد، از ماه می. بسیاری از رشته‌ها پاداش آخر سال (eindejaarspremie) هم می‌دهند. معاش شما هرگز نباید کمتر از حداقل paritair comité (barema) باشد. اضافه‌کاری دست‌کم 50% بیشتر می‌دهد، و اکثراً بعداً رخصتی. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen
     'be.c.extra.p': "پول رخصتی خود را چه وقت می‌گیرم؟", // nieuw, nalezen
-    'be.c.extra.s': "شما در یک فابریکه arbeider هستید. یک همکار می‌گوید: «در ماه می پول اضافی می‌گیری، ولی نه از آمر.» این چیست؟", // nieuw, nalezen
+    'be.c.extra.s': "شما در یک فابریکه arbeider هستید. یک همکار می‌گوید: «در ماه می پول اضافی می‌گیرید، ولی نه از آمر.» این چیست؟", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.extra.o1': "پول رخصتی، از صندوق رخصتی (vakantiekas).", // nieuw, nalezen
     'be.c.extra.o2': "تحفه‌ای از اتحادیه، برای اعضای آن.", // nieuw, nalezen
     'be.c.extra.o3': "معاش ماه سیزدهم از آمر، برای همه.", // nieuw, nalezen

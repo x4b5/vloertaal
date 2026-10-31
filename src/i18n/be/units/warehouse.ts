@@ -44,7 +44,7 @@ export const prs: Gloss = {
     "be.c.direct.s": "یک همکار می‌گوید: «Nee, dat is fout. Die doos moet daar.» شما چه می‌کنید؟", // = c.direct.s
     "be.c.direct.o1": "بپرسید که چطور باید شود و قطی را جابه‌جا کنید.", // = c.direct.o1
     "be.c.direct.o2": "چند بار معذرت بخواهید: همکار تان قهر است.", // = c.direct.o2
-    "be.c.direct.o3": "چیزی نگویید و جعبه را همان جایی که هست بگذارید.", // = c.direct.o3
+    "be.c.direct.o3": "چیزی نگویید و قطی را همان جایی که هست بگذارید.", // = c.direct.o3 // nagelezen AI ronde 3
     "be.c.direct.w": "گپ مستقیم دربارهٔ کار است، نه دربارهٔ خود شما. پرسیدن «hoe moet het dan?» نشان می‌دهد که شما می‌خواهید یاد بگیرید.", // = c.direct.w
 };
 

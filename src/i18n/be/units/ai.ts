@@ -79,7 +79,7 @@ export const prs: Gloss = {
     'be.c.aiprivate.o1': "اول بپرسید، و نام و آدرس را حذف کنید.", // nieuw, nalezen
     'be.c.aiprivate.o2': "همه چیز را در چت‌بات بگذارید: سریع‌تر است.", // nieuw, nalezen
     'be.c.aiprivate.o3': "گزارش را برای یک دوست بفرستید تا چک کند.", // nieuw, nalezen
-    'be.c.aiprivate.w': "نام‌ها و آدرس‌ها معلومات شخصی است. نباید همین طور به کمپنی دیگر بروند. کارفرمای شما می‌داند کدام اپ‌ها اجازه دارند.", // nieuw, nalezen
+    'be.c.aiprivate.w': "نام‌ها و آدرس‌ها معلومات شخصی است. نباید همین طور به کمپنی دیگر بروند. کارفرمای شما می‌داند استفاده از کدام اپ‌ها اجازه است.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const uk: Gloss = {
