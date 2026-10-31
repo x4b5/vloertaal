@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'Neerlandés para el trabajo',
     chooseLanguage: 'Elige tu idioma de ayuda',
     englishOnly: 'Solo inglés',
-    beta: 'Traducción en revisión',
+    beta: 'Traducción aún sin revisar', // nieuw, nalezen
     dayStreak: { one: 'día seguido', many: 'días seguidos', other: 'días seguidos' },
     streakStarted: '¡Empezaste una racha de días! Vuelve mañana.',
     streakGrew: { one: '¡{n} día seguido! Sigue así.', many: '¡{n} días seguidos! Sigue así.', other: '¡{n} días seguidos! Sigue así.' },
@@ -83,7 +83,7 @@ const lang: HelpLanguageSource = {
     chooseSector: '¿Dónde trabajas?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: '¿En qué país trabajas?',
-    countryHint: 'Las reglas de trabajo de Vloertaal son de los Países Bajos. En Bélgica muchas reglas son diferentes. Esto se queda en tu teléfono. No lo enviamos a ningún sitio.',
+    countryHint: 'Elige el país donde trabajas. Así recibes las reglas de trabajo de ese país. Esto se queda en tu teléfono. No lo enviamos a ningún sitio.', // nieuw, nalezen
     countryNl: 'Países Bajos',
     countryBe: 'Bélgica (Flandes)',
     tipsNote: 'Estos consejos son sobre el trabajo en los Países Bajos. Información general, no asesoramiento legal.',

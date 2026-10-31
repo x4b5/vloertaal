@@ -17,7 +17,7 @@ export const uiNl: Record<UiKey, UiText> = {
   appTagline: 'Werken in Nederland: zo gaat het', // regels
   chooseLanguage: 'Kies je taal',
   englishOnly: 'Ik leer Nederlands via het Engels', // regels: the other track, under "English"
-  beta: 'We kijken deze tekst nog na',
+  beta: 'Deze tekst is nog niet nagekeken',
   dayStreak: { one: 'dag op rij', other: 'dagen op rij' },
   streakStarted: 'Je bent een reeks begonnen! Kom morgen terug.',
   streakGrew: { one: '{n} dag op rij! Ga zo door.', other: '{n} dagen op rij! Ga zo door.' },
@@ -111,7 +111,7 @@ export const uiNl: Record<UiKey, UiText> = {
   sector: 'Je werk',
   chooseSector: 'Waar werk je?',
   countryTitle: 'In welk land werk je?',
-  countryHint: 'De werkregels in Vloertaal gaan over Nederland. In België zijn veel regels anders. Dit blijft op je telefoon. We sturen het nergens heen.',
+  countryHint: 'Kies het land waar je werkt. Dan krijg je de werkregels van dat land. Dit blijft op je telefoon. We sturen het nergens heen.',
   countryNl: 'Nederland',
   countryBe: 'België (Vlaanderen)',
   tipsNote: 'Deze tips gaan over werk in Nederland. Algemene informatie, geen juridisch advies.',

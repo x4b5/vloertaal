@@ -6,7 +6,7 @@ Vloertaal is een gratis webapp voor mensen die in Nederland (gaan) werken, ook a
 gaat. Geen account, geen reclame, geen verdienmodel. Live op **[vloertaal.nl](https://vloertaal.nl)**
 (wat er nieuw is: [vloertaal.nl/nieuw](https://vloertaal.nl/nieuw)). Contact: hoi@vloertaal.nl.
 
-De app is nog een **bètaversie**: experts en moedertaalsprekers kijken de inhoud na (zie onderaan).
+De app is nog een **bètaversie**: de inhoud is nog niet nagekeken door experts en moedertaalsprekers (zie onderaan).
 Sinds 15 oktober 2026 loopt een pilot met leerlingen ([`docs/pilot.md`](docs/pilot.md)).
 
 ![Vloertaal: taalkeuze, lespad, oefening, uitslag (Pools)](docs/screens-1.png)

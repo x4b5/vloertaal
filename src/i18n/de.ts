@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'Niederländisch für die Arbeit',
     chooseLanguage: 'Wähle deine Hilfssprache',
     englishOnly: 'Nur Englisch',
-    beta: 'Übersetzung wird geprüft',
+    beta: 'Übersetzung noch nicht geprüft', // nieuw, nalezen
     dayStreak: { one: 'Tag in Folge', other: 'Tage in Folge' },
     streakStarted: 'Deine Serie hat begonnen! Komm morgen wieder.',
     streakGrew: { one: '{n} Tag in Folge! Mach weiter so.', other: '{n} Tage in Folge! Mach weiter so.' },
@@ -83,7 +83,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Wo arbeitest du?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'In welchem Land arbeitest du?',
-    countryHint: 'Die Arbeitsregeln in Vloertaal gelten für die Niederlande. In Belgien sind viele Regeln anders. Das bleibt auf deinem Handy. Wir senden es nirgendwohin.',
+    countryHint: 'Wähle das Land, in dem du arbeitest. Dann bekommst du die Arbeitsregeln dieses Landes. Das bleibt auf deinem Handy. Wir schicken es nirgendwohin.', // nieuw, nalezen
     countryNl: 'Niederlande',
     countryBe: 'Belgien (Flandern)',
     tipsNote: 'Diese Tipps gelten für die Arbeit in den Niederlanden. Allgemeine Informationen, keine Rechtsberatung.',

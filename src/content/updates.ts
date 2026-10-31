@@ -14,6 +14,12 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-10-31',
+    items: [
+      'Werk je in België (Vlaanderen)? Kies dan bij de start, of later bij Instellingen, "België". In het spoor Werkregels krijg je dan de regels van België: alle onderwerpen, met Vlaamse woorden (loonbrief, interimkantoor, ziekenfonds, RVA). Dit is nieuw: de Belgische lessen zijn nog niet nagekeken door een expert. Zie je een fout? Mail naar hoi@vloertaal.nl.',
+    ],
+  },
+  {
     date: '2026-10-30',
     items: [
       'Nieuw bij Instellingen › Taal en ik: "Laat zien hoe het gaat". De telefoon maakt een kaart voor je begeleider: welke onderwerpen af zijn, op hoeveel dagen je oefende in de laatste 4 weken, je laatste les en (in het spoor Taal) de toets "Wat ken je al?". Jij laat de kaart zelf zien, of je bewaart of deelt hem als plaatje. Er gaat niets naar ons.',
@@ -25,7 +31,7 @@ export const UPDATES: Update[] = [
       'Werkregels: twee nieuwe sectoronderwerpen, Werken in de techniek (gereedschap, vonken en lawaai; stroom) en Werken in de garage (veilig in de werkplaats; de werkorder en de klant). Je kiest ze bij "Waar werk je?": Bouw en techniek, en dan Techniek of Garage.',
       'Voor de Entree-opleiding, in het spoor Taal: zes nieuwe onderwerpen aan het eind van het lespad. Je werk afronden (de werkbon lezen, opruimen en afmelden), In de werkplaats (gereedschap, lawaai en stroom), In de garage (banden en olie, en de klant beslist), Stage lopen (de POK en feedback vragen), Meedoen in Nederland (stemmen, de politie en bezwaar maken) en Online op je werk (inloggen en nepmails).',
       'Nieuwe lessen in bestaande onderwerpen: Waar ben ik goed in? en Na Entree (Diploma’s en verder komen), Een mail aan je werk (Bellen en appen met je werk), Je geld per maand (Geld en post) en Fit voor je werk (Gezondheid).',
-      'Alle nieuwe lessen hebben een tip "Zo werkt het hier" en een vertaling in de 13 hulptalen. Een moedertaalspreker kijkt de vertalingen nog na. De opnames volgen; tot dan leest de stem van je telefoon voor.',
+      'Alle nieuwe lessen hebben een tip "Zo werkt het hier" en een vertaling in de 13 hulptalen. De vertalingen zijn nog niet nagekeken door een moedertaalspreker. De opnames volgen; tot dan leest de stem van je telefoon voor.',
       'Nieuw onderwerp bij Starten: Getallen en gegevens. Twee lessen: je gegevens (je naam spellen, je telefoonnummer, het formulier) en dagen en datums (volgende week, tot en met). Het komt vóór Tijd en rooster.',
       'Nieuwe les bij Gezondheid: Lichaam en klachten. Met het hoofd, de rug, de hand en het oog, en de tip: zeg wat er gebeurde en waar het pijn doet.',
       'Nieuwe les bij Verlof en ziekte: Kinderen en werk. Een ziek kind ophalen, calamiteitenverlof, zwanger zijn en de kinderopvang.',
@@ -116,7 +122,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-16',
     items: [
-      'Nieuw: Werkregels, voor wie al Nederlands spreekt. Over de geschreven en ongeschreven regels op het werk. Het is nog een bètaversie: experts kijken de uitleg nog na.',
+      'Nieuw: Werkregels, voor wie al Nederlands spreekt. Over de geschreven en ongeschreven regels op het werk. Het is nog een bètaversie: de uitleg is nog niet nagekeken door experts.',
       'De onderwerpen staan nu in 8 thema\'s, zoals "Starten", "Je baan" en "Je rechten". Zo zie je beter waar je bent.',
       'Nieuw onderwerp: In de winkel (vakken vullen, de kassa, wisselgeld, ID vragen).',
       'Nieuw onderwerp: Rekenen (uren en tijden, geld, kilo en meter).',

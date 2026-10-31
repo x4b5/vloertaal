@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'İş yeri için Hollandaca',
     chooseLanguage: 'Yardım dilini seç',
     englishOnly: 'Sadece İngilizce',
-    beta: 'Çeviri kontrol ediliyor',
+    beta: 'Çeviri henüz kontrol edilmedi', // nieuw, nalezen
     dayStreak: 'günlük seri',
     streakStarted: 'Günlük serin başladı! Yarın yine gel.',
     streakGrew: 'Üst üste {n} gün! Böyle devam et.',
@@ -83,7 +83,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Nerede çalışıyorsun?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Hangi ülkede çalışıyorsun?',
-    countryHint: 'Vloertaal’daki iş kuralları Hollanda için. Belçika’da birçok kural farklı. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.',
+    countryHint: 'Çalıştığın ülkeyi seç. O ülkenin iş kurallarını görürsün. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.', // nieuw, nalezen
     countryNl: 'Hollanda',
     countryBe: 'Belçika (Flandre)',
     tipsNote: 'Bu ipuçları Hollanda’daki iş hakkında. Genel bilgidir, hukuki danışmanlık değildir.',

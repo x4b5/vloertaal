@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'Нидерландски за работното място',
     chooseLanguage: 'Избери език за помощ',
     englishOnly: 'Само английски',
-    beta: 'Преводът се проверява',
+    beta: 'Преводът още не е проверен', // nieuw, nalezen
     dayStreak: { one: 'ден поред', other: 'дни поред' },
     streakStarted: 'Серията ти от дни започна! Ела пак утре.',
     streakGrew: { one: '{n} ден поред! Продължавай така.', other: '{n} дни поред! Продължавай така.' },
@@ -83,7 +83,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Къде работиш?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'В коя държава работиш?',
-    countryHint: 'Правилата за работа във Vloertaal са за Нидерландия. В Белгия много правила са различни. Това остава на телефона ти. Не го изпращаме никъде.',
+    countryHint: 'Избери държавата, в която работиш. Ще получиш правилата за работа в нея. Това остава на телефона ти. Не го изпращаме никъде.', // nieuw, nalezen
     countryNl: 'Нидерландия',
     countryBe: 'Белгия (Фландрия)',
     tipsNote: 'Тези съвети са за работа в Нидерландия. Обща информация, не е правен съвет.',

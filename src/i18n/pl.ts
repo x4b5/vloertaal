@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'Niderlandzki do pracy',
     chooseLanguage: 'Wybierz język pomocy',
     englishOnly: 'Tylko angielski',
-    beta: 'Tłumaczenie w trakcie sprawdzania',
+    beta: 'Tłumaczenie jeszcze niesprawdzone', // nieuw, nalezen
     dayStreak: { one: 'dzień z rzędu', few: 'dni z rzędu', many: 'dni z rzędu', other: 'dni z rzędu' },
     streakStarted: 'Twoja seria dni się zaczęła! Wróć jutro.',
     streakGrew: { one: '{n} dzień z rzędu! Tak trzymaj.', few: '{n} dni z rzędu! Tak trzymaj.', many: '{n} dni z rzędu! Tak trzymaj.', other: '{n} dni z rzędu! Tak trzymaj.' },
@@ -83,7 +83,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Gdzie pracujesz?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'W jakim kraju pracujesz?',
-    countryHint: 'Zasady pracy w Vloertaal dotyczą Holandii. W Belgii wiele zasad jest innych. To zostaje w twoim telefonie. Nigdzie tego nie wysyłamy.',
+    countryHint: 'Wybierz kraj, w którym pracujesz. Dostaniesz zasady pracy tego kraju. To zostaje w twoim telefonie. Nigdzie tego nie wysyłamy.', // nieuw, nalezen
     countryNl: 'Holandia',
     countryBe: 'Belgia (Flandria)',
     tipsNote: 'Te wskazówki dotyczą pracy w Holandii. To ogólne informacje, nie porada prawna.',

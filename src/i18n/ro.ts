@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'Olandeză pentru locul de muncă',
     chooseLanguage: 'Alege limba de ajutor',
     englishOnly: 'Doar engleză',
-    beta: 'Traducere în verificare',
+    beta: 'Traducere încă neverificată', // nieuw, nalezen
     dayStreak: { one: 'zi la rând', few: 'zile la rând', other: 'de zile la rând' },
     streakStarted: 'Seria ta de zile a început! Revino mâine.',
     streakGrew: { one: '{n} zi la rând! Ține-o tot așa.', few: '{n} zile la rând! Ține-o tot așa.', other: '{n} de zile la rând! Ține-o tot așa.' },
@@ -83,7 +83,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Unde lucrezi?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'În ce țară lucrezi?',
-    countryHint: 'Regulile de muncă din Vloertaal sunt pentru Olanda. În Belgia, multe reguli sunt diferite. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.',
+    countryHint: 'Alege țara în care lucrezi. Primești regulile de muncă din acea țară. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.', // nieuw, nalezen
     countryNl: 'Olanda',
     countryBe: 'Belgia (Flandra)',
     tipsNote: 'Aceste sfaturi sunt despre munca în Olanda. Informații generale, nu consultanță juridică.',

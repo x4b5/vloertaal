@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'هالندی برای جای کار',
     chooseLanguage: 'زبان کمکی خود را انتخاب کنید',
     englishOnly: 'تنها انگلیسی',
-    beta: 'ترجمه زیر بررسی است',
+    beta: 'ترجمه هنوز بررسی نشده است', // nieuw, nalezen
     dayStreak: 'روز پی‌هم',
     streakStarted: 'روزهای پی‌همِ شما شروع شد! فردا دوباره بیایید.',
     streakGrew: '{n} روز پی‌هم! ادامه بدهید.',
@@ -83,7 +83,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'در کجا کار می‌کنید؟',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'در کدام کشور کار می‌کنید؟',
-    countryHint: 'قوانین کار در Vloertaal برای هالند است. در بلجیم بسیاری از قوانین فرق دارد. این روی تیلفون شما می‌ماند. آن را به جایی نمی‌فرستیم.',
+    countryHint: 'کشوری را که در آن کار می‌کنید انتخاب کنید. قوانین کار همان کشور را می‌بینید. این تنها روی تیلفون شما می‌ماند. ما آن را جایی نمی‌فرستیم.', // nieuw, nalezen
     countryNl: 'هالند',
     countryBe: 'بلجیم (فلاندر)',
     tipsNote: 'این نکته‌ها در باره کار در هالند است. معلومات عمومی است، نه مشوره حقوقی.',

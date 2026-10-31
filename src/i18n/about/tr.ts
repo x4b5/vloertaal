@@ -9,7 +9,7 @@ const t: CultureTranslation = {
     'a.what': 'Vloertaal nedir?',
     'a.what.b': 'Vloertaal, işinde ihtiyacın olan Hollandacayı öğrenmene yardım eder: depoda, mutfakta, fabrikada ya da inşaatta. Sadece iş yerindeki kelimeler değil, işle ilgili tüm dil: işe başvurmak, sözleşmen ve maaş bordron, hakların, konut ve belgeler, hastalık bildirmek ve iş arkadaşlarınla iyi geçinmek. Dersler kısadır, böylece her gün birkaç dakika pratik yapabilirsin. Vloertaal’ı boş anlar için küçük bir ek olarak düşün. Bir dil kursunun ya da bir dil öğretmeninin yerini tutmaz.',
     'a.beta': 'Deneme sürümü',
-    'a.beta.b': 'Vloertaal hâlâ bir deneme sürümüdür (beta). Uygulamayı küçük bir grup öğrenci ve eğitmenle test ediyoruz. Henüz her şey kontrol edilmedi: uzmanlar çevirileri ve kurallarla ilgili ipuçlarını hâlâ kontrol ediyor. Bir hata mı buldun? Adresimizi bu sayfanın en altında bulabilirsin.',
+    'a.beta.b': 'Vloertaal hâlâ bir deneme sürümüdür (beta). Uygulamayı küçük bir grup öğrenci ve eğitmenle test ediyoruz. Henüz her şey kontrol edilmedi. Çevirileri ve kurallarla ilgili ipuçlarını kontrol edecek uzmanlar hâlâ arıyoruz. Uzman mısın ya da dillerimizden biri ana dilin mi, yardım etmek ister misin? Bize yaz. Bir hata mı buldun? Adresimizi bu sayfanın en altında bulabilirsin.', // nieuw, nalezen
     'a.mission': 'Misyonumuz',
     'a.mission.b': 'Vloertaal biraz yardım etmek istiyor, böylece iş için Hollandaca öğrenmek biraz daha kolay olsun: ücretsiz, kolay ve kendi dilinde yardımla. Vloertaal’dan kimse para kazanmıyor: reklam yok, abonelik yok ve verilerin asla satılmaz.',
     'a.bram': 'Bram kim?',

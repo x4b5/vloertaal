@@ -43,7 +43,7 @@ export const aboutSections: AboutSection[] = [
     },
     nlRules: {
       title: 'Wat is Vloertaal?',
-      body: 'Vloertaal legt uit hoe werken in Nederland gaat. Voor mensen die al Nederlands spreken. Je leert de regels van de wet en je contract. En de regels die nergens staan, maar die iedereen kent. Bijvoorbeeld over werk zoeken, je loonstrook, ziek zijn, veiligheid en collega’s. De lessen zijn kort. Zo leer je elke dag een paar minuten. Zie Vloertaal als een tussendoortje. Het is een extra. Advies van je werkgever, een vakbond of het Juridisch Loket blijft nodig.',
+      body: 'Vloertaal legt uit hoe werken in Nederland en België gaat. Voor mensen die al Nederlands spreken. Je leert de regels van de wet en je contract. En de regels die nergens staan, maar die iedereen kent. Bijvoorbeeld over werk zoeken, je loonstrook, ziek zijn, veiligheid en collega’s. De lessen zijn kort. Zo leer je elke dag een paar minuten. Zie Vloertaal als een tussendoortje. Het is een extra. Advies van je werkgever, een vakbond, het Juridisch Loket (Nederland) of het justitiehuis (België) blijft nodig.',
     },
   },
   {
@@ -134,10 +134,10 @@ export const siteSections: AboutSection[] = [
     // The whole app is a beta (the pilot). "Our address is at the bottom of this page": on every
     // page that shows it (a language page, the professionals page) the contact comes last.
     id: 'a.beta', emoji: '🧪', title: 'A test version',
-    body: 'Vloertaal is still a test version (beta). We are testing it with a small group of learners and coaches. Not everything has been checked yet: experts are still checking the translations and the tips about rules. Did you find a mistake? You find our address at the bottom of this page.',
+    body: 'Vloertaal is still a test version (beta). We are testing it with a small group of learners and coaches. Not everything has been checked yet. We are still looking for experts to check the translations and the tips about rules. Are you an expert, or a native speaker of one of our languages, and do you want to help? Let us know. Did you find a mistake? You find our address at the bottom of this page.',
     nl: {
       title: 'Een testversie',
-      body: 'Vloertaal is nog een testversie (bèta). We testen de app met een kleine groep leerlingen en begeleiders. Nog niet alles is nagekeken: experts kijken de vertalingen en de tips over regels nog na. Zie je een fout? Ons adres staat onderaan deze pagina.',
+      body: 'Vloertaal is nog een testversie (bèta). We testen de app met een kleine groep leerlingen en begeleiders. Nog niet alles is nagekeken. We zoeken nog experts die de vertalingen en de tips over regels nakijken. Ben je expert, of is een van onze talen je moedertaal, en wil je helpen? Laat het ons weten. Zie je een fout? Ons adres staat onderaan deze pagina.',
     },
   },
   {
@@ -149,7 +149,7 @@ export const siteSections: AboutSection[] = [
     },
     nlRules: {
       title: 'Voor wie is het?',
-      body: 'Voor iedereen die al Nederlands spreekt en in Nederland werkt of werk zoekt. Ben je nieuw op je werk? Of wil je weten wat je rechten zijn? Dan is dit voor jou.',
+      body: 'Voor iedereen die al Nederlands spreekt en in Nederland of België werkt of werk zoekt. Kies bij de start of bij Instellingen het land waar je werkt. Ben je nieuw op je werk? Of wil je weten wat je rechten zijn? Dan is dit voor jou.',
     },
   },
 ];
