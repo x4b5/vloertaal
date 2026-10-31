@@ -380,7 +380,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The shift chat: "Wanneer begint je dienst?" → "Morgen om zeven uur." (right), "Tot morgen!" (wrong).
   const coffee = findLesson('l.shift')!.lesson.dialogues![0];
   const byeReply = allReplies.find((r) => r.id === 'c.hello.a')!;
-  exercises.chat = { kind: 'chat', dialogue: coffee, options: [coffee.reply, byeReply] };
+  exercises.chat = { kind: 'chat', dialogue: coffee, options: [coffee.reply, byeReply], ...(q.get('hint') === '1' ? { hint: true as const } : {}) };
   // Workplace culture: the speak-up tip and its situation (best option listed first);
   // &tip=l.hello another lesson's tip (that one quotes Dutch: "Zeg maar je, hoor!").
   const speakTip = tipForLesson(q.get('tip') ?? 'l.speakup') ?? tipForLesson('l.speakup')!;

@@ -35,7 +35,8 @@ export type Exercise =
   | { kind: 'type'; word: Word; options?: Word[]; pick?: true }
   /** `reverse` (later units): the reply is given and the learner picks the colleague's question;
    *  `options` are then questions. */
-  | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[]; reverse?: true }
+  /** `hint`: the colleague's line is translated before the answer (the first units, PROGRESSION.chatHint). */
+  | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[]; reverse?: true; hint?: true }
   /** "How it works here": a workplace-culture card (not graded). */
   | { kind: 'tip'; tip: CultureTip }
   /** A saying in a lesson of another topic (src/content/sayings.ts): "Zo zeggen ze het". Not graded;
@@ -758,7 +759,7 @@ export function buildRuleLesson(lesson: Lesson, opts: { seed?: number; review?: 
  *   before it (their lessons and mixed reviews) it is "hear and pick the written word" for every
  *   learner: no writing in the first topics (many learners read little).
  */
-export const PROGRESSION = { pickDutch: 4, type: 4, audioBuild: 7, reverseChat: 10 } as const;
+export const PROGRESSION = { pickDutch: 4, type: 4, chatHint: 4, audioBuild: 7, reverseChat: 10 } as const;
 
 /** The 0-based place of the lesson's unit on the learner's path (-1 outside it, e.g. today's review). */
 export function unitIndexOf(lesson: Lesson, sector?: SectorChoice, track: Track = trackOfId(lesson.id)): number {
@@ -835,6 +836,9 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // The first units: no writing (PROGRESSION.type), in a lesson and in its unit's mixed review.
   const ownUnit = daily ? -1 : mix ? unitIndexOf(lesson, opts.sector) : unitAt;
   const noWriting = ownUnit >= 0 && ownUnit < PROGRESSION.type;
+  // The first units: the colleague's line is translated before the answer too (support that
+  // fades: from PROGRESSION.chatHint on, the translation comes only after the answer).
+  const chatHint = ownUnit >= 0 && ownUnit < PROGRESSION.chatHint;
   const unwritten = (xs: Exercise[]): Exercise[] => (noWriting ? xs.map((e) => (e.kind === 'type' && (e.options?.length ?? 0) > 1 ? { ...e, pick: true } : e)) : xs);
   /** The word asked "the other way round" after the new words (pick the Dutch), if any. */
   let pickedDutch: string | undefined;
@@ -938,7 +942,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // unit's mixed review the last chat goes the other way round (pick the question).
   dialogues.forEach((dialogue, k) => {
     if (mixTurn && k === dialogues.length - 1) out.push({ kind: 'chat', dialogue, options: chatPromptOptions(dialogue, rng, 3, lesson), reverse: true });
-    else out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
+    else out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson), ...(chatHint ? { hint: true as const } : {}) });
   });
 
   // A saying that fits this lesson's topic, after the sayings unit: its card, then "What does she
