@@ -203,6 +203,7 @@ const lang: HelpLanguageSource = {
     recommended: 'پیشنهادی',
     allTopics: 'همهٔ موضوع‌ها',
     topicsOrder: 'نمایش موضوع‌ها',
+    privacyLink: 'بیانیهٔ حریم خصوصی را بخوانید (به هالندی)', // nieuw, nalezen
     byTheme: 'بر اساس بخش‌ها',
     inOrder: 'به ترتیب',
     searchTopics: 'جستجوی موضوع', // nieuw, nalezen

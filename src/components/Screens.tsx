@@ -1004,7 +1004,7 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
         <h1><Bi text={ui('cultureTips', lang)} /></h1>
       </div>
       <p className="muted"><Bi text={ui('cultureTipsHint', lang)} /><HelpSay text={ui('cultureTipsHint', lang).help} lang={lang} /></p>
-      <p className="tips-note"><InfoIcon size={18} /><Bi text={ui('tipsNote', lang)} /></p>
+      <p className="tips-note"><InfoIcon size={18} /><Bi text={ui('tipsNote', lang)} /><HelpSay text={ui('tipsNote', lang).help} lang={lang} /></p>
       {/* The Belgian course is a beta (docs/taal-belgie.md). */}
       {taalBeActive() && <BeNote lang={lang} kind="beta" />}
       <ul className="tips-list">

@@ -203,6 +203,7 @@ const lang: HelpLanguageSource = {
     recommended: 'مُوصى به',
     allTopics: 'كل المواضيع',
     topicsOrder: 'عرض المواضيع',
+    privacyLink: 'اقرأ بيان الخصوصية (بالهولندية)', // nieuw, nalezen
     byTheme: 'حسب الأقسام',
     inOrder: 'بالترتيب',
     searchTopics: 'البحث عن موضوع', // nieuw, nalezen

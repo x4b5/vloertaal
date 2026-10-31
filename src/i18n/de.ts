@@ -203,6 +203,7 @@ const lang: HelpLanguageSource = {
     recommended: 'Empfohlen',
     allTopics: 'Alle Themen',
     topicsOrder: 'Themen zeigen',
+    privacyLink: 'Datenschutzerklärung lesen (auf Niederländisch)', // nieuw, nalezen
     byTheme: 'Nach Bereich',
     inOrder: 'Der Reihe nach',
     searchTopics: 'Thema suchen', // nieuw, nalezen

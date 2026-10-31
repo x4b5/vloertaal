@@ -97,6 +97,7 @@ export const uiNl: Record<UiKey, UiText> = {
   fact14: 'In veel bibliotheken is een Taalhuis: gratis hulp om verder te leren.',
   fact30: 'Elke dag een beetje oefenen werkt beter dan af en toe heel veel. Jij doet het al 30 dagen!',
   topicsOrder: 'Toon de onderwerpen',
+  privacyLink: 'Lees de privacyverklaring',
   byTheme: 'Op thema',
   inOrder: 'Op volgorde',
   searchTopics: 'Zoek een onderwerp',

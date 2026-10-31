@@ -203,6 +203,7 @@ const lang: HelpLanguageSource = {
     recommended: 'Önerilen',
     allTopics: 'Tüm konular',
     topicsOrder: 'Konuları göster',
+    privacyLink: 'Gizlilik açıklamasını oku (Hollandaca)', // nieuw, nalezen
     byTheme: 'Temaya göre',
     inOrder: 'Sırayla',
     searchTopics: 'Konu ara', // nieuw, nalezen

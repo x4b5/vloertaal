@@ -203,6 +203,7 @@ const lang: HelpLanguageSource = {
     recommended: 'Recomandat',
     allTopics: 'Toate subiectele',
     topicsOrder: 'Arată subiectele',
+    privacyLink: 'Citește declarația de confidențialitate (în olandeză)', // nieuw, nalezen
     byTheme: 'Pe teme',
     inOrder: 'În ordine',
     searchTopics: 'Caută un subiect', // nieuw, nalezen

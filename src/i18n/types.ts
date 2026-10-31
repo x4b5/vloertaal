@@ -85,6 +85,8 @@ export const uiEn = {
   fact7: "Of the migrants who speak Dutch very well, 69 out of 100 have paid work.",
   fact14: "Many libraries have a Taalhuis: free help to keep learning Dutch.",
   fact30: "A little practice every day works better than a lot now and then. You have done it for 30 days!",
+  /* About › "Your privacy": the link to vloertaal.nl/privacy. */
+  privacyLink: "Read the privacy statement (in Dutch)",
   topicsOrder: "Show the topics",
   byTheme: "By theme",
   inOrder: "In order",

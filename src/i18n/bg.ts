@@ -203,6 +203,7 @@ const lang: HelpLanguageSource = {
     recommended: 'Препоръчано',
     allTopics: 'Всички теми',
     topicsOrder: 'Покажи темите',
+    privacyLink: 'Прочети декларацията за поверителност (на нидерландски)', // nieuw, nalezen
     byTheme: 'По раздели',
     inOrder: 'По ред',
     searchTopics: 'Търсене на тема', // nieuw, nalezen

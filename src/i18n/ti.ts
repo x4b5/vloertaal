@@ -204,6 +204,7 @@ const lang: HelpLanguageSource = {
     recommended: 'ዝምከር',
     allTopics: 'ኩሎም ኣርእስትታት',
     topicsOrder: 'ኣርእስትታት ምርኣይ',
+    privacyLink: 'መግለጺ ብሕትውና ኣንብብ (ብሆላንድኛ)', // nieuw, nalezen
     byTheme: 'ብክፍልታት',
     inOrder: 'ብቕደም ሰዓብ',
     searchTopics: 'ምድላይ ኣርእስቲ', // nieuw, nalezen
