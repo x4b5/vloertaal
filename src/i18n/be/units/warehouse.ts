@@ -6,7 +6,7 @@ import type { Gloss } from '../types';
 
 export const ar: Gloss = {
     "be.c.direct": "كلمات حذرة ورسالة واضحة", // nieuw, nalezen
-    "be.c.direct.b": "الزملاء الفلامانيون يقولون الأشياء غالباً بحذر، مثل «Zou je die doos daar willen zetten?». هذا غالباً مع ذلك طلب واضح: يجب فعله. بعض الزملاء مباشرون جداً، مثل «Dat is fout». هم عادةً لا يقصدون الوقاحة. يمكن أيضاً قول الرأي بصراحة، مع البقاء ودوداً.", // nieuw, nalezen
+    "be.c.direct.b": 'الزملاء الفلامانيون يقولون الأشياء غالباً بحذر، مثل «Zou je die doos daar willen zetten?». هذا غالباً مع ذلك طلب واضح: يجب فعله. بعض الزملاء مباشرون جداً، مثل «Dat is fout». هم عادةً لا يقصدون الوقاحة. يمكن أيضاً قول الرأي، لكن بلطف.', // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.direct.p": "حسناً، كيف يجب أن أفعلها إذن؟", // = c.direct.p
     "be.c.direct.s": { m: "زميل يقول: «Nee, dat is fout. Die doos moet daar.» ماذا تفعل؟", f: "زميل يقول: «Nee, dat is fout. Die doos moet daar.» ماذا تفعلين؟" }, // = c.direct.s
     "be.c.direct.o1": { m: "اسأل كيف يجب أن تفعلها، وانقل الصندوق.", f: "اسألي كيف يجب أن تفعليها، وانقلي الصندوق." }, // = c.direct.o1
@@ -17,12 +17,12 @@ export const ar: Gloss = {
 
 export const ti: Gloss = {
     "be.c.direct": "ጥንቁቓት ቃላት፡ ንጹር መልእኽቲ", // nieuw, nalezen
-    "be.c.direct.b": "ፍላንደርሳውያን መሳርሕቲ ብዙሕ ግዜ ብጥንቃቐ ይዛረቡ፡ ከም «Zou je die doos daar willen zetten?»። እዚ ብዙሕ ግዜ ግን ንጹር ሕቶ እዩ፡ ግበርዎ። ገለ መሳርሕቲ ኣዝዮም ቀጥታ እዮም፡ ከም «Dat is fout»። መብዛሕትኡ ግዜ ብገበን ኣይኮኑን ዝብልዎ። ንስኹም እውን ዝሓሰብኩምዎ ክትብሉ ትኽእሉ ኢኹም፡ ፍቕራውያን ክሳብ ዝኾንኩም።", // nieuw, nalezen
+    "be.c.direct.b": 'ፍላንደርሳውያን መሳርሕቲ ብዙሕ ግዜ ብጥንቃቐ ይዛረቡ፡ ከም «Zou je die doos daar willen zetten?»። እዚ ብዙሕ ግዜ ግን ንጹር ሕቶ እዩ፡ ግበርዎ። ገለ መሳርሕቲ ኣዝዮም ቀጥታ እዮም፡ ከም «Dat is fout»። መብዛሕትኡ ግዜ ንምጉዳእ ኢሎም ኣይኮኑን ዝብልዎ። ንስኹም እውን ዝሓሰብኩምዎ ክትብሉ ትኽእሉ ኢኹም፡ ብሕያውነት ክሳብ እትዛረቡ።', // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.direct.p": "ሕራይ፡ እሞ ከመይ ክግበር ኣለዎ?", // = c.direct.p
     "be.c.direct.s": { m: "ሓደ ብጻይ ስራሕ «Nee, dat is fout. Die doos moet daar.» ይብል። እንታይ ትገብር?", f: "ሓደ ብጻይ ስራሕ «Nee, dat is fout. Die doos moet daar.» ይብል። እንታይ ትገብሪ?", x: "ሓደ ብጻይ ስራሕ «Nee, dat is fout. Die doos moet daar.» ይብል። እንታይ ትገብሩ?" }, // = c.direct.s
     "be.c.direct.o1": { m: "ከመይ ክግበር ከም ዘለዎ ሕተት፡ ነቲ ሳጹን ድማ ቦታኡ ቀይሮ።", f: "ከመይ ክግበር ከም ዘለዎ ሕተቲ፡ ነቲ ሳጹን ድማ ቦታኡ ቀይርዮ።" }, // = c.direct.o1
     "be.c.direct.o2": { m: "ብዙሕ ግዜ ይቕረታ ሕተት፡ ብጻይ ስራሕካ ተቖጢዑ ኣሎ።", f: "ብዙሕ ግዜ ይቕረታ ሕተቲ፡ ብጻይ ስራሕኪ ተቖጢዑ ኣሎ።", x: "ብዙሕ ግዜ ይቕረታ ሕተቱ፡ ብጻይ ስራሕኩም ተቖጢዑ ኣሎ።" }, // = c.direct.o2
-    "be.c.direct.o3": { m: "ዋላ ሓንቲ ኣይትበል፡ ነቲ ሳንዱቕ ኣብ ዘለዎ ግደፎ።", f: "ዋላ ሓንቲ ኣይትበሊ፡ ነቲ ሳንዱቕ ኣብ ዘለዎ ግደፍዮ።" }, // = c.direct.o3
+    "be.c.direct.o3": { m: 'ዋላ ሓንቲ ኣይትበል፡ ነቲ ሳጹን ኣብ ዘለዎ ግደፎ።', f: 'ዋላ ሓንቲ ኣይትበሊ፡ ነቲ ሳጹን ኣብ ዘለዎ ግደፍዮ።' }, // = c.direct.o3 // nagelezen AI ronde 3
     "be.c.direct.w": { m: "ቀጥታ ርእይቶ ብዛዕባ እቲ ስራሕ እዩ፡ ብዛዕባኻ ኣይኮነን። «hoe moet het dan?» ምሕታት ክትመሃር ከም ትደሊ የርኢ።", f: "ቀጥታ ርእይቶ ብዛዕባ እቲ ስራሕ እዩ፡ ብዛዕባኺ ኣይኮነን። «hoe moet het dan?» ምሕታት ክትመሃሪ ከም ትደልዪ የርኢ።" }, // = c.direct.w
 };
 

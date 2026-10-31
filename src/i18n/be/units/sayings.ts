@@ -12,18 +12,18 @@ export const ar: Gloss = {
     "be.c.plain.o1": "ستقول بصراحة ما تفكر فيه.", // = c.plain.o1
     "be.c.plain.o2": "هي لا تريد أن تتكلم عن ذلك.", // nieuw, nalezen
     "be.c.plain.o3": "هي تأكل ورقة شجر.", // = c.plain.o3
-    "be.c.plain.w": "«Geen blad voor de mond nemen» معناها: قول ما تفكر فيه بصراحة ومباشرة. من يقولها ينبّه: الآن يأتي رأي مباشر.", // nieuw, nalezen
+    "be.c.plain.w": '«Geen blad voor de mond nemen» معناها: قول الرأي بصراحة ومباشرة. من يقولها ينبّه: الآن يأتي رأي مباشر.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const ti: Gloss = {
     "be.c.plain": "ብቐጥታ ምዝራብ", // = c.plain
-    "be.c.plain.b": "ፍላንደርሳውያን መሳርሕቲ ዝሓሰብዎ ብዙሕ ግዜ ብጥንቃቐ ይብሉ። ሓደ ሓደ ግዜ ብምስላ ይጅምሩ፡ «Ik neem geen blad voor de mond.»። ትርጉሙ፡ ዝሓሰብክዎ ብቕንዕና ክብል እየ። ድሕሪኡ ቀጥታ ርእይቶ ይመጽእ፡ ግን ብገበን ኣይኮነን። ንስኹም እውን ዝሓሰብኩምዎ ብቕንዕናን ብህድኣትን ክትብሉ ትኽእሉ ኢኹም።", // nieuw, nalezen
+    "be.c.plain.b": 'ፍላንደርሳውያን መሳርሕቲ ዝሓሰብዎ ብዙሕ ግዜ ብጥንቃቐ ይብሉ። ሓደ ሓደ ግዜ ብምስላ ይጅምሩ፡ «Ik neem geen blad voor de mond.»። ትርጉሙ፡ ዝሓሰብክዎ ብቕንዕና ክብል እየ። ድሕሪኡ ቀጥታ ርእይቶ ይመጽእ፡ ግን ንምጉዳእ ኢሎም ኣይኮኑን። ንስኹም እውን ዝሓሰብኩምዎ ብቕንዕናን ብህድኣትን ክትብሉ ትኽእሉ ኢኹም።', // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.plain.p": "ዝሓስቦ ብቕንዕና ክዛረብ ይፍቀደለይ ዶ?", // = c.plain.p
     "be.c.plain.s": { m: "ተቖጻጻሪትካ «Ik neem geen blad voor de mond.» ትብል። እንታይ ማለታ እያ?", f: "ተቖጻጻሪትኪ «Ik neem geen blad voor de mond.» ትብል። እንታይ ማለታ እያ?", x: "ተቖጻጻሪትኩም «Ik neem geen blad voor de mond.» ትብል። እንታይ ማለታ እያ?" }, // = c.plain.s
     "be.c.plain.o1": "እትሓስቦ ብቕንዕና ክትነግር እያ።", // = c.plain.o1
     "be.c.plain.o2": "ንሳ ብዛዕባኡ ክትዛረብ ኣይትደልን።", // nieuw, nalezen
     "be.c.plain.o3": "ቆጽሊ ትበልዕ ኣላ።", // = c.plain.o3
-    "be.c.plain.w": "«Geen blad voor de mond nemen» ማለት፡ ዝሓሰብካዮ ብቕንዕናን ብቐጥታን ምባል። ዝብሎ ሰብ የጠንቅቐኩም ኣሎ፡ ሕጂ ቀጥታ ርእይቶ ይመጽእ።", // nieuw, nalezen
+    "be.c.plain.w": '«Geen blad voor de mond nemen» ማለት፡ ዝሓሰብዎ ብቕንዕናን ብቐጥታን ምባል። ዝብሎ ሰብ የጠንቅቐኩም ኣሎ፡ ሕጂ ቀጥታ ርእይቶ ይመጽእ።', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const fa: Gloss = {

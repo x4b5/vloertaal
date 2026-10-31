@@ -8,7 +8,7 @@ export const ar: Gloss = {
     "be.w.huisartsenpost": "مركز الطبيب المناوب (huisartsenwachtpost) في المساء والليل وعطلة نهاية الأسبوع", // nieuw, nalezen
     "be.c.doctor.q": "مركز الطبيب المناوب، كيف يمكنني مساعدتك؟", // nieuw, nalezen
     "be.w.premie": "الاشتراك (ما يُدفع لصندوق التأمين الصحي ziekenfonds)", // nieuw, nalezen
-    "be.w.eigenrisico": "الحصة الشخصية (الجزء من التكلفة الذي تدفعه بنفسك)", // nieuw, nalezen
+    "be.w.eigenrisico": 'الحصة الشخصية (الجزء من التكلفة الذي يُدفع شخصياً)', // nieuw, nalezen // nagelezen AI ronde 3
     "be.w.zorgtoeslag": "التعويض المرتفع (مساعدة إضافية في تكاليف الصحة لذوي الدخل المنخفض)", // nieuw, nalezen
     "be.w.verzekeraar": "صندوق التأمين الصحي (ziekenfonds، mutualiteit)", // nieuw, nalezen
     "be.s.insurance.1": "أنا عضو في صندوق تأمين صحي.", // nieuw, nalezen
@@ -17,28 +17,28 @@ export const ar: Gloss = {
     "be.c.insurance.q": "في أي صندوق تأمين صحي أنت؟", // nieuw, nalezen
     "be.c.insurance.a": "لا أعرف. سأتحقق من ذلك.", // nieuw, nalezen
     "be.c.doctor": "الطبيب أم 112؟", // = c.doctor
-    "be.c.doctor.b": "من الأفضل اختيار طبيب عائلة (huisarts) قرب البيت. هل تحتاج إلى طبيب في المساء أو الليل أو عطلة نهاية الأسبوع؟ الاتصال بـ1733: هم يرسلونك إلى الطبيب المناوب (huisartsenwachtpost). الاتصال بـ112 فقط في حالة طوارئ: خطر على الحياة، أو حريق، أو جريمة تحدث الآن. الأدوية تُؤخذ من الصيدلية (apotheek).", // nieuw, nalezen
+    "be.c.doctor.b": 'من الأفضل اختيار طبيب عائلة (huisarts) قرب البيت. هل يلزم طبيب في المساء أو الليل أو عطلة نهاية الأسبوع؟ الاتصال بـ1733: هم يرسلونك إلى الطبيب المناوب (huisartsenwachtpost). الاتصال بـ112 فقط في حالة طوارئ: خطر على الحياة، أو حريق، أو جريمة تحدث الآن. الأدوية تُؤخذ من الصيدلية (apotheek).', // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.p": "هل ما زلتم تقبلون مرضى جدداً؟", // nieuw, nalezen
     "be.c.doctor.s": { m: "إنه السبت، في الليل. طفلك عنده حمّى شديدة، لكنه مستيقظ ويتنفس بشكل طبيعي. ماذا تفعل؟", f: "إنه السبت، في الليل. طفلك عنده حمّى شديدة، لكنه مستيقظ ويتنفس بشكل طبيعي. ماذا تفعلين؟" }, // = c.doctor.s
-    "be.c.doctor.o1": "الاتصال بـ1733.", // nieuw, nalezen
-    "be.c.doctor.o2": { m: "اتَّصِلْ بـ112.", f: "اتصلي بـ112." }, // = c.doctor.o2
+    "be.c.doctor.o1": { m: 'اتَّصِلْ بـ1733.', f: 'اتصلي بـ1733.', x: 'الاتصال بـ1733.' }, // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.doctor.o2": { m: 'اتَّصِلْ بـ112.', f: 'اتصلي بـ112.', x: 'الاتصال بـ112.' }, // = c.doctor.o2 // nagelezen AI ronde 3
     "be.c.doctor.o3": { m: "انتظر حتى يوم الاثنين ولا تفعل شيئاً.", f: "انتظري حتى يوم الاثنين ولا تفعلي شيئاً." }, // = c.doctor.o3
     "be.c.doctor.w": "الرقم 1733 يساعد في إيجاد طبيب خارج ساعات العمل. 112 لحالات الطوارئ: خطر على الحياة، أو حريق، أو جريمة تحدث الآن.", // nieuw, nalezen
     "be.c.insurance": "صندوق التأمين الصحي (ziekenfonds)", // nieuw, nalezen
-    "be.c.insurance.b": "في بلجيكا يجب الانضمام إلى صندوق تأمين صحي: ziekenfonds (mutualiteit)، أو Hulpkas (HZIV). الأفضل فعل ذلك عند بداية العمل. الـziekenfonds يرد جزءاً من تكاليف الطبيب والمستشفى والأدوية. الجزء الذي يُدفع شخصياً هو الـremgeld. مع دخل منخفض قد تحصل على verhoogde tegemoetkoming: عندها تدفع أقل. مرض لمدة طويلة؟ عندها يدفع الـziekenfonds أيضاً تعويضاً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).", // nieuw, nalezen
+    "be.c.insurance.b": { m: 'في بلجيكا يجب الانضمام إلى صندوق تأمين صحي: ziekenfonds (mutualiteit)، أو Hulpkas (HZIV). الأفضل فعل ذلك عند بداية العمل. الـziekenfonds يرد جزءاً من تكاليف الطبيب والمستشفى والأدوية. الجزء الذي يُدفع شخصياً هو الـremgeld. مع دخل منخفض قد تحصل على verhoogde tegemoetkoming: عندها تدفع أقل. مرض لمدة طويلة؟ عندها يدفع الـziekenfonds أيضاً تعويضاً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'في بلجيكا يجب الانضمام إلى صندوق تأمين صحي: ziekenfonds (mutualiteit)، أو Hulpkas (HZIV). الأفضل فعل ذلك عند بداية العمل. الـziekenfonds يرد جزءاً من تكاليف الطبيب والمستشفى والأدوية. الجزء الذي يُدفع شخصياً هو الـremgeld. مع دخل منخفض قد تحصلين على verhoogde tegemoetkoming: عندها تدفعين أقل. مرض لمدة طويلة؟ عندها يدفع الـziekenfonds أيضاً تعويضاً. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'في بلجيكا يجب الانضمام إلى صندوق تأمين صحي: ziekenfonds (mutualiteit)، أو Hulpkas (HZIV). الأفضل فعل ذلك عند بداية العمل. الـziekenfonds يرد جزءاً من تكاليف الطبيب والمستشفى والأدوية. الجزء الذي يُدفع شخصياً هو الـremgeld. مع دخل منخفض قد يوجد حق في verhoogde tegemoetkoming: عندها يكون الدفع أقل. مرض لمدة طويلة؟ عندها يدفع الـziekenfonds أيضاً تعويضاً. معلومات عامة. للوضع الشخصي: السؤال عند صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.p": "أريد أن أصبح عضواً في صندوق تأمين صحي. هل يمكنك مساعدتي؟", // nieuw, nalezen
     "be.c.insurance.s": "بدأت العمل هنا قبل أسبوعين وليس لديك ziekenfonds بعد. ما التصرف الصحيح؟", // nieuw, nalezen
-    "be.c.insurance.o1": "الانضمام بسرعة إلى ziekenfonds.", // nieuw, nalezen
-    "be.c.insurance.o2": { m: "انتظر: تأمينك من بلدك يكفي.", f: "انتظري: تأمينك من بلدك يكفي." }, // = c.insurance.o2
-    "be.c.insurance.o3": { m: "استخدم بطاقة تأمين صديق.", f: "استخدمي بطاقة تأمين صديق." }, // = c.insurance.o3
-    "be.c.insurance.w": "من دون ziekenfonds، تدفع للطبيب والمستشفى بنفسك. الانضمام بسرعة يحميك. يمكن لصاحب العمل أو مكتب التوظيف المؤقت المساعدة.", // nieuw, nalezen
+    "be.c.insurance.o1": { m: 'انضمّ بسرعة إلى ziekenfonds.', f: 'انضمّي بسرعة إلى ziekenfonds.', x: 'الانضمام بسرعة إلى ziekenfonds.' }, // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.insurance.o2": { m: 'انتظر: تأمينك من بلدك يكفي.', f: 'انتظري: تأمينك من بلدك يكفي.', x: 'الانتظار: التأمين من البلد الأصلي يكفي.' }, // = c.insurance.o2 // nagelezen AI ronde 3
+    "be.c.insurance.o3": { m: 'استخدم بطاقة تأمين صديق.', f: 'استخدمي بطاقة تأمين صديق.', x: 'استخدام بطاقة تأمين صديق.' }, // = c.insurance.o3 // nagelezen AI ronde 3
+    "be.c.insurance.w": 'من دون ziekenfonds، يُدفع للطبيب والمستشفى من المال الخاص. الانضمام بسرعة يحميك. يمكن لصاحب العمل أو مكتب العمل المؤقت المساعدة.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const ti: Gloss = {
     "be.w.huisartsenpost": "ናይ ምሸት፡ ለይትን ቀዳመ-ሰንበትን ቤት ሕክምና ሓኪም ስድራ (huisartsenwachtpost)", // nieuw, nalezen
     "be.c.doctor.q": "Huisartsenwachtpost፡ እንታይ ክሕግዘኩም ይኽእል?", // nieuw, nalezen
     "be.w.premie": "ክፍሊት ኣባልነት (ንziekenfonds ትኸፍልዎ)", // nieuw, nalezen
-    "be.w.eigenrisico": "ናትካ ክፋል (ካብቲ ወጻኢ ባዕልኻ እትኸፍሎ)", // nieuw, nalezen
+    "be.w.eigenrisico": 'ናይ ባዕልኹም ክፋል (ካብቲ ወጻኢ ባዕልኹም እትኸፍልዎ)', // nieuw, nalezen // nagelezen AI ronde 3
     "be.w.zorgtoeslag": "ተወሳኺ ሓገዝ ንወጻኢ ጥዕና (ንትሑት ኣታዊ)", // nieuw, nalezen
     "be.w.verzekeraar": "ፈንድ ጥዕና (ziekenfonds, mutualiteit)", // nieuw, nalezen
     "be.s.insurance.1": "ኣባል ziekenfonds እየ።", // nieuw, nalezen
@@ -50,16 +50,16 @@ export const ti: Gloss = {
     "be.c.doctor.b": "ኣብ ጥቓ ገዛኹም ሓኪም ስድራ (huisarts) ምረጹ። ምሸት፡ ለይቲ ወይ ቀዳመ-ሰንበት ሓኪም የድልየኩም ድዩ? ናብ 1733 ደውሉ፡ ናብቲ ተረኛ ሓኪም (huisartsenwachtpost) ይሰዱኹም። ናብ 112 ኣብ ህጹጽ ኩነታት ጥራይ ደውሉ፡ ሓደጋ ህይወት፡ ሓዊ፡ ወይ ሕጂ ዝፍጸም ገበን። መድሃኒት ካብ ፋርማሲ (apotheek) ትረኽቡ።", // nieuw, nalezen
     "be.c.doctor.p": "ገና ሓደሽቲ ሕሙማት ትቕበሉ ዶ?", // nieuw, nalezen
     "be.c.doctor.s": { m: "ቀዳም ለይቲ እዩ። ውላድካ ብርቱዕ ረስኒ ኣለዎ፡ ግን ነቒሑ ኣሎ፡ ብልሙድ ድማ የስተንፍስ። እንታይ ትገብር?", f: "ቀዳም ለይቲ እዩ። ውላድኪ ብርቱዕ ረስኒ ኣለዎ፡ ግን ነቒሑ ኣሎ፡ ብልሙድ ድማ የስተንፍስ። እንታይ ትገብሪ?", x: "ቀዳም ለይቲ እዩ። ውላድኩም ብርቱዕ ረስኒ ኣለዎ፡ ግን ነቒሑ ኣሎ፡ ብልሙድ ድማ የስተንፍስ። እንታይ ትገብሩ?" }, // = c.doctor.s
-    "be.c.doctor.o1": "ናብ 1733 ምድዋል።", // nieuw, nalezen
+    "be.c.doctor.o1": { m: 'ናብ 1733 ደውል።', f: 'ናብ 1733 ደውሊ።', x: 'ናብ 1733 ደውሉ።' }, // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": { m: "ናብ 112 ደውል።", f: "ናብ 112 ደውሊ።", x: "ናብ 112 ደውሉ።" }, // = c.doctor.o2
     "be.c.doctor.o3": { m: "ክሳዕ ሰኑይ ተጸበ፡ ገለ ድማ ኣይትግበር።", f: "ክሳዕ ሰኑይ ተጸበዪ፡ ገለ ድማ ኣይትግበሪ።" }, // = c.doctor.o3
     "be.c.doctor.w": "1733 ካብ ሰዓታት ስራሕ ወጻኢ ሓኪም ክትረኽቡ ይሕግዘኩም። 112 ንህጹጽ ኩነታት እዩ፡ ሓደጋ ህይወት፡ ሓዊ፡ ወይ ሕጂ ዝፍጸም ገበን።", // nieuw, nalezen
     "be.c.insurance": "ziekenfonds ናትኩም", // nieuw, nalezen
-    "be.c.insurance.b": { m: "ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትኮኑ ኣለኩም፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርኩም ግበርዎ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኹም እትኸፍልዎ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረኽቡ ትኽእሉ፡ ሽዑ ውሑድ ትኸፍሉ። ንነዊሕ ግዜ ሕሙማት ዲኹም? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለኩም። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተት።", f: "ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትኮኑ ኣለኩም፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርኩም ግበርዎ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኹም እትኸፍልዎ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረኽቡ ትኽእሉ፡ ሽዑ ውሑድ ትኸፍሉ። ንነዊሕ ግዜ ሕሙማት ዲኹም? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለኩም። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቲ።", x: "ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትኮኑ ኣለኩም፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርኩም ግበርዎ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኹም እትኸፍልዎ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረኽቡ ትኽእሉ፡ ሽዑ ውሑድ ትኸፍሉ። ንነዊሕ ግዜ ሕሙማት ዲኹም? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለኩም። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።" }, // nieuw, nalezen
+    "be.c.insurance.b": { m: 'ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትከውን ኣለካ፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርካ ግበሮ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኻ እትኸፍሎ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረክብ ትኽእል፡ ሽዑ ውሑድ ትኸፍል። ንነዊሕ ግዜ ሕሙም ዲኻ? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለካ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተት።', f: 'ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትኮኒ ኣለኪ፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርኪ ግበርዮ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኺ እትኸፍልዮ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረኽቢ ትኽእሊ፡ ሽዑ ውሑድ ትኸፍሊ። ንነዊሕ ግዜ ሕምምቲ ዲኺ? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለኪ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቲ።', x: 'ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትኮኑ ኣለኩም፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርኩም ግበርዎ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኹም እትኸፍልዎ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረኽቡ ትኽእሉ፡ ሽዑ ውሑድ ትኸፍሉ። ንነዊሕ ግዜ ሕሙማት ዲኹም? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለኩም። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።' }, // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.p": "ኣባል ziekenfonds ክኸውን እደሊ። ክትሕግዙኒ ትኽእሉ ዶ?", // nieuw, nalezen
     "be.c.insurance.s": "ቅድሚ ክልተ ሰሙን ኣብዚ ስራሕ ጀሚርኩም፡ ገና ziekenfonds የብልኩምን። እንታይ ትገብሩ?", // nieuw, nalezen
-    "be.c.insurance.o1": "ቀልጢፍኩም ኣባል ziekenfonds ምዃን።", // nieuw, nalezen
-    "be.c.insurance.o2": { m: "ተጸበ፡ መድሕን ናይ ዓድኻ ይኣክል እዩ።", f: "ተጸበዪ፡ መድሕን ናይ ዓድኺ ይኣክል እዩ።" }, // = c.insurance.o2
+    "be.c.insurance.o1": { m: 'ቀልጢፍካ ኣባል ziekenfonds ኩን።', f: 'ቀልጢፍኪ ኣባል ziekenfonds ኩኒ።', x: 'ቀልጢፍኩም ኣባል ziekenfonds ኩኑ።' }, // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.insurance.o2": { m: 'ተጸበ፡ መድሕን ናይ ዓድኻ ይኣክል እዩ።', f: 'ተጸበዪ፡ መድሕን ናይ ዓድኺ ይኣክል እዩ።', x: 'ተጸበዩ፡ መድሕን ናይ ዓድኹም ይኣክል እዩ።' }, // = c.insurance.o2 // nagelezen AI ronde 3
     "be.c.insurance.o3": { m: "ካርድ መድሕን ናይ ዓርክኻ ተጠቐም።", f: "ካርድ መድሕን ናይ ዓርክኺ ተጠቐሚ።", x: "ካርድ መድሕን ናይ ዓርክኹም ተጠቐሙ።" }, // = c.insurance.o3
     "be.c.insurance.w": "ብዘይ ziekenfonds፡ ሓኪምን ሆስፒታልን ባዕልኹም ትኸፍሉ። ቀልጢፍኩም ኣባል ምዃን ይሕልወኩም። ኣስራሒኹም ወይ ቤት ጽሕፈት ግዝያዊ ስራሕ ክሕግዘኩም ይኽእል።", // nieuw, nalezen
 };

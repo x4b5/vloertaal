@@ -27,7 +27,7 @@ export const ti: Gloss = {
     'be.c.details.o1': "ስምኩም ቀስ ኢልኩም ፊደል ብፊደል በልዎ፡ ደጊሞም ከንብብዎ ሕተትዎም።", // nieuw, nalezen
     'be.c.details.o2': "ገለ ኣይትበሉ፡ ኣብ ስምኩም ዘሎ ንእሽቶ ጌጋ ጸገም የብሉን።", // nieuw, nalezen
     'be.c.details.o3': "ስልኪ ዕጸዉ፡ ነቲ ጌጋ ደሓር ክረኽብዎ ድማ ተስፋ ግበሩ።", // nieuw, nalezen
-    'be.c.details.w': "ስምኩም ኣብ ውዕልኩም፡ ኣብ loonbriefኹምን ኣብ መንነት ካርድ ወይ ካርድ መንበሪኹምን ሓደ ዓይነት ክኸውን ኣለዎ። ሽዑ ደሞዝኩምን ግብርኹምን ብቕኑዕ ይኸዱ። ብፊደል ምባልን ደጊምካ ምስማዕን ቅልጡፍ መረጋገጺ እዩ።", // nieuw, nalezen
+    'be.c.details.w': 'ስምኩም ኣብ ውዕልኩም፡ ኣብ loonbriefኹምን ኣብ መንነት ወረቐትኩም ወይ ወረቐት መንበሪኹምን ሓደ ዓይነት ክኸውን ኣለዎ። ሽዑ ደሞዝኩምን ግብርኹምን ብቕኑዕ ይኸዱ። ብፊደል ምባልን ደጊምካ ምስማዕን ቅልጡፍ መረጋገጺ እዩ።', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const fa: Gloss = {
