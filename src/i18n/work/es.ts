@@ -1492,7 +1492,7 @@ const t: CultureTranslation = {
     'w.meeloopdag': "el día de observación (un día en que acompañas a alguien en su trabajo)", // nieuw, nalezen
     's.mychoice.1': "Se me da bien trabajar con las manos.", // nieuw, nalezen
     's.mychoice.2': "Me gusta trabajar con personas.", // nieuw, nalezen
-    's.mychoice.3': "¿Puedo acompañarles un día para ver el trabajo?", // nieuw, nalezen
+    's.mychoice.3': "¿Puedo acompañarlos un día para ver el trabajo?", // nieuw, nalezen // nagelezen AI 31 okt
     'c.mychoice.q': "¿Qué se te da bien?", // nieuw, nalezen
     'c.mychoice.a': { m: "Soy cuidadoso y preciso. En casa cuido de mi madre.", f: "Soy cuidadosa y precisa. En casa cuido de mi madre.", x: "Soy cuidadoso/a y preciso/a. En casa cuido de mi madre." }, // nieuw, nalezen
     'l.nextstep': "Después de Entree", // nieuw, nalezen
@@ -1616,13 +1616,13 @@ const t: CultureTranslation = {
     'c.council.o3': "Sin pasaporte neerlandés no puedes votar en nada.", // nieuw, nalezen
     'c.council.w': "Después de 5 años de residencia legal puedes votar para el concejo municipal. Para la Tweede Kamer necesitas la nacionalidad neerlandesa.", // nieuw, nalezen
     'c.police': "Tu documento y tus derechos", // nieuw, nalezen
-    'c.police.b': "Desde los 14 años tienes que enseñar tu documento de identidad cuando la policía te lo pide. Así que llévalo siempre encima. ¿Recibes una carta con una decisión con la que no estás de acuerdo, por ejemplo del ayuntamiento o del UWV? Entonces puedes presentar una reclamación por escrito (bezwaar maken). Hazlo antes de la fecha de la carta. La policía y el juez tienen que tratar a todos por igual. ¿Te detienen? Puedes pedir un abogado. El Juridisch Loket da consejos gratis.", // nieuw, nalezen
+    'c.police.b': "Desde los 14 años tienes que enseñar tu documento de identidad cuando la policía te lo pide. Así que llévalo siempre encima. ¿Recibes una carta con una decisión con la que no estás de acuerdo, por ejemplo del ayuntamiento o del UWV? Entonces puedes presentar una reclamación por escrito (bezwaar maken). Hazlo antes de la fecha que pone en la carta. La policía y el juez tienen que tratar a todos por igual. ¿Te detienen? Puedes pedir un abogado. El Juridisch Loket da consejos gratis.", // nieuw, nalezen // nagelezen AI 31 okt
     'c.police.p': "No estoy de acuerdo con esta decisión. Presento una reclamación.", // nieuw, nalezen
     'c.police.s': "Recibes una carta del ayuntamiento. No estás de acuerdo con su decisión. La carta dice que tienes seis semanas. ¿Qué haces?", // nieuw, nalezen
     'c.police.o1': "Escribes una carta de reclamación, antes de la fecha.", // nieuw, nalezen
     'c.police.o2': "Llamas una vez y esperas a que te devuelvan la llamada.", // nieuw, nalezen
     'c.police.o3': "Esperas: después de seis semanas se acaba solo.", // nieuw, nalezen
-    'c.police.w': "La reclamación se hace por escrito, antes de la fecha de la carta. Después de esa fecha, muchas veces es tarde. El Juridisch Loket te puede ayudar a escribirla.", // nieuw, nalezen
+    'c.police.w': "La reclamación se hace por escrito, antes de la fecha que pone en la carta. Después de esa fecha, muchas veces es tarde. El Juridisch Loket te puede ayudar a escribirla.", // nieuw, nalezen // nagelezen AI 31 okt
     'c.login': "Tu acceso es solo tuyo", // nieuw, nalezen
     'c.login.b': "Tu contraseña y tu DigiD son solo para ti. No se los des a nadie, tampoco a tu empresa ni a un compañero. En un ordenador compartido, cierra siempre la sesión cuando termines. ¿Te vas un momento? Bloquea la pantalla. ¿Has olvidado tu contraseña? Pide una nueva al departamento de informática (ICT-afdeling). Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
     'c.login.p': "Me voy un momento. Bloqueo la pantalla.", // nieuw, nalezen

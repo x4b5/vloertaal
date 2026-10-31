@@ -340,7 +340,7 @@ const lang: HelpLanguageSource = {
     coachCard: 'Nasıl gittiğini göster', // nieuw, nalezen
     coachCardIntro: 'Bu kart ilerlemeni gösterir. Öğretmenine, koçuna ya da amirine göster. Sen karar verirsin.', // nieuw, nalezen
     coachCardKeep: 'Kartı telefonun yapar. Hiçbir şey gönderilmez. Vloertaal hiçbir şey saklamaz.', // nieuw, nalezen
-    coachCardWhat: 'Kartta, Felemenkçe:', // nieuw, nalezen
+    coachCardWhat: 'Kartta, Hollandaca:', // nieuw, nalezen // nagelezen AI 31 okt
     coachTopics: 'Biten konular', // nieuw, nalezen
     coachDays: 'Son 4 haftada çalışılan günler', // nieuw, nalezen
     coachLast: 'Son ders, tarihiyle', // nieuw, nalezen

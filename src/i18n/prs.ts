@@ -317,34 +317,34 @@ const lang: HelpLanguageSource = {
     loadFailed: 'بارگیری نشد. انترنت وصل است؟',
     retry: 'دوباره کوشش کنید',
     /* "Wat ken je al?" (src/components/Toets.tsx) */
-    toetsTitle: 'از پیش چه می‌دانی؟', // nieuw, nalezen
-    toetsOffer: 'تقریباً 10 دقیقه. نمره‌ای در کار نیست. فقط برای خودت است.', // nieuw, nalezen
-    toetsEndOffer: 'تو چیزهای زیادی یاد گرفته‌ای. آزمون را دوباره انجام بده و ببین اکنون چه می‌دانی.', // nieuw, nalezen
+    toetsTitle: 'از پیش چه می‌دانید؟', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsOffer: 'تقریباً 10 دقیقه. نمره‌ای در کار نیست. فقط برای خود شماست.', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsEndOffer: 'شما چیزهای زیادی یاد گرفته‌اید. آزمون را دوباره انجام بدهید و ببینید حالا چه می‌دانید.', // nieuw, nalezen // nagelezen AI 31 okt
     toetsPartListen: 'شنیدن', // nieuw, nalezen
     toetsPartWords: 'کلمات', // nieuw, nalezen
     toetsPartSentences: 'جملات', // nieuw, nalezen
-    toetsListenAsk: 'گوش کن. معنایش چیست؟', // nieuw, nalezen
-    toetsNotSure: 'نمی‌دانی؟ فقط یکی را انتخاب کن. مشکلی نیست.', // nieuw, nalezen
-    toetsMicKeep: 'ثبت صدایت فقط در همین تیلفون می‌ماند. بعداً می‌توانی دوباره صدای خود را بشنوی.', // nieuw, nalezen
-    toetsStartDone: 'آغاز خوب! این‌ها را از پیش می‌دانی.', // nieuw, nalezen
-    toetsEndDone: 'آفرین! ببین اکنون چه می‌دانی.', // nieuw, nalezen
-    toetsYouThen: 'تو پیشتر', // nieuw, nalezen
-    toetsYouNow: 'تو اکنون', // nieuw, nalezen
-    toetsKeepGoing: 'هر روز کمی تمرین کن. این‌گونه بیشتر و بیشتر یاد می‌گیری.', // nieuw, nalezen
-    toetsStart: 'آزمون را آغاز کن', // nieuw, nalezen
+    toetsListenAsk: 'گوش کنید. معنایش چیست؟', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsNotSure: 'نمی‌دانید؟ فقط یکی را انتخاب کنید. مشکلی نیست.', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsMicKeep: 'ثبت صدای شما فقط در همین تیلفون می‌ماند. بعداً می‌توانید دوباره صدای خود را بشنوید.', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsStartDone: 'آغاز خوب! این‌ها را از پیش می‌دانید.', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsEndDone: 'آفرین! ببینید حالا چه می‌دانید.', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsYouThen: 'شما پیشتر', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsYouNow: 'شما حالا', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsKeepGoing: 'هر روز کمی تمرین کنید. اینطور بیشتر و بیشتر یاد می‌گیرید.', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsStart: 'آزمون را شروع کنید', // nieuw, nalezen // nagelezen AI 31 okt
     tempo: 'سرعت', // nieuw, nalezen
     tempoCalm: 'آرام', // nieuw, nalezen
     tempoNormal: 'عادی', // nieuw, nalezen
-    tempoHint: 'آرام یعنی آهسته و واضح. عادی مثل گپ زدن همکاران است. اگر بسیار چیزها را می‌فهمی، «عادی» را انتخاب کن.', // nieuw, nalezen
+    tempoHint: 'آرام یعنی آهسته و واضح. عادی مثل گپ زدن همکاران است. اگر بسیار چیزها را می‌فهمید، «عادی» را انتخاب کنید.', // nieuw, nalezen // nagelezen AI 31 okt
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
-    coachCard: 'نشان بده که چطور پیش می‌رود', // nieuw, nalezen
-    coachCardIntro: 'این کارت پیشرفت تو را نشان می‌دهد. آن را به معلم، مربی یا آمرت نشان بده. خودت تصمیم می‌گیری.', // nieuw, nalezen
-    coachCardKeep: 'تیلفونت خودش کارت را می‌سازد. چیزی فرستاده نمی‌شود. Vloertaal چیزی نگه نمی‌دارد.', // nieuw, nalezen
+    coachCard: 'نشان بدهید که چطور پیش می‌رود', // nieuw, nalezen // nagelezen AI 31 okt
+    coachCardIntro: 'این کارت پیشرفت شما را نشان می‌دهد. آن را به معلم، مربی یا آمر تان نشان بدهید. خود تان تصمیم می‌گیرید.', // nieuw, nalezen // nagelezen AI 31 okt
+    coachCardKeep: 'تیلفون شما خودش کارت را می‌سازد. چیزی فرستاده نمی‌شود. Vloertaal چیزی نگه نمی‌دارد.', // nieuw, nalezen // nagelezen AI 31 okt
     coachCardWhat: 'روی کارت، به زبان هالندی:', // nieuw, nalezen
     coachTopics: 'موضوعات تمام‌شده', // nieuw, nalezen
     coachDays: 'روزهای تمرین در 4 هفتهٔ گذشته', // nieuw, nalezen
     coachLast: 'آخرین درس، با تاریخ', // nieuw, nalezen
-    coachNameAsk: 'نامت روی کارت؟', // nieuw, nalezen
+    coachNameAsk: 'نام شما روی کارت؟', // nieuw, nalezen // nagelezen AI 31 okt
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'گوش دادن تیلفون (آزمایشی)', // nieuw, nalezen
     listenHint: 'بعد از گپ زدن، تیلفون می‌گوید که گپ شما را فهمید یا نی. این کار در خود تیلفون انجام می‌شود. هیچ چیزی به ما یا دیگران فرستاده نمی‌شود.', // nieuw, nalezen
@@ -359,7 +359,7 @@ const lang: HelpLanguageSource = {
     heardAlmost: 'تقریباً: {word} را دوباره بگویید', // nieuw, nalezen
     heardNotYet: 'هنوز نفهمید', // nieuw, nalezen
     goOnAnyway: 'باز هم ادامه', // nieuw, nalezen
-    fasterAsk: 'می‌خواهی تیزتر یاد بگیری؟', // nieuw, nalezen
+    fasterAsk: 'می‌خواهید تیزتر یاد بگیرید؟', // nieuw, nalezen // nagelezen AI 31 okt
     fasterHint: 'توضیح کمتر در درس‌های نو. هالندی با سرعت عادی.', // nieuw, nalezen
     fasterYes: 'بلی', // nieuw, nalezen
     fasterNo: 'نخیر', // nieuw, nalezen
@@ -367,13 +367,13 @@ const lang: HelpLanguageSource = {
     fasterSetting: 'تیزتر یاد گرفتن', // nieuw, nalezen
     fasterSettingHint: 'روشن: توضیح کمتر در درس‌های نو، و هالندی با سرعت عادی. خاموش: مثل پیش.', // nieuw, nalezen
     samenTitle: 'با هم تمرین کنید', // nieuw, nalezen
-    samenRowHint: 'دو نفر، یک موبایل', // nieuw, nalezen
-    samenIntro: 'با یک همکار، دوست یا استاد تمرین کن. به نوبت بخوانید.', // nieuw, nalezen
+    samenRowHint: 'دو نفر، یک تیلفون', // nieuw, nalezen // nagelezen AI 31 okt
+    samenIntro: 'با یک همکار، دوست یا استاد تمرین کنید. به نوبت بخوانید.', // nieuw, nalezen // nagelezen AI 31 okt
     samenHow: 'نفر 1 همکار است. نفر 2 جواب می‌دهد.', // nieuw, nalezen
     samenNoScore: 'هیچ چیز ثبت نمی‌شود. نمره‌ای نیست.', // nieuw, nalezen
     samenPerson: 'نفر {n}', // nieuw, nalezen
     samenAnswer: 'جواب', // nieuw, nalezen
-    samenHear: 'گوش کن', // nieuw, nalezen
+    samenHear: 'گوش کنید', // nieuw, nalezen // nagelezen AI 31 okt
     samenNext: 'بعدی', // nieuw, nalezen
     samenTranslation: 'ترجمه', // nieuw, nalezen
     samenEnd: 'شاباش! نقش‌ها را تبدیل کنید و یک بار دیگر انجام دهید؟', // nieuw, nalezen

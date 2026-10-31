@@ -33,7 +33,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.2': "ኣብ እንታይ ጽቡቕ ከም ዝኾንኩ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.lost.1': "ውዕለይ ይውዳእ ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.lost.2': "ተወሳኺ ክፍሊት ዓመታዊ ዕረፍተይ ክኽፈለኒ ድዩ ክሓትት እኽእል እየ።", // nieuw, nalezen
-    'kjn.u.stage.1': "ኣብ ትካል መሰልጠኒየይ መን ምዃኑ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.stage.1': "ኣብ ትካል መሰልጠኒይ መን ምዃኑ ክሓትት እኽእል እየ።", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "ርእይቶን ኣብነትን ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.time.1': "ፈረቓ ስራሐይ ሰዓት ክንደይ ከም ዝጅምር ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.time.2': "ሕማም ከም ዘለኒ ክብል እኽእል እየ።", // nieuw, nalezen

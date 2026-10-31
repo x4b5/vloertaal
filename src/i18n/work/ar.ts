@@ -1406,7 +1406,7 @@ const t: CultureTranslation = {
     's.carjob.1': "هل الزبون موافق على التكاليف؟", // nieuw, nalezen
     's.carjob.2': "هذه القطعة معطّلة.", // nieuw, nalezen
     's.carjob.3': "هل يمكنني القيام بتجربة قيادة؟", // nieuw, nalezen
-    'c.carjob.q': { m: "الفرامل سيئة أيضاً. هل تصلحها الآن؟", f: "الفرامل سيئة أيضاً. هل تصلحينها الآن؟", x: "الفرامل سيئة أيضاً. هل يكون إصلاحها الآن؟" }, // nieuw, nalezen
+    'c.carjob.q': { m: "الفرامل سيئة أيضاً. هل تصلحها الآن؟", f: "الفرامل سيئة أيضاً. هل تصلحينها الآن؟", x: "الفرامل سيئة أيضاً. هل يتمّ إصلاحها الآن؟" }, // nieuw, nalezen // nagelezen AI 31 okt
     'c.carjob.a': "أتصل بالزبون أولاً. يجب أن يوافق.", // nieuw, nalezen
     'u.stage': "التدريب العملي", // nieuw, nalezen
     'l.placement': "تدريبك العملي", // nieuw, nalezen

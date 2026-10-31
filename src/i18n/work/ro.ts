@@ -1560,7 +1560,7 @@ const t: CultureTranslation = {
     'c.handover.o3': "Scrii pe listă „totul gata”, pentru că ai dat tot ce ai putut.", // nieuw, nalezen
     'c.handover.w': "Șeful planifică lucrul. Când știe că camera 4 nu e gata, poate trimite pe altcineva. Așa niciun client nu găsește o cameră murdară.", // nieuw, nalezen
     'c.workshop': "Ochi, urechi și foc", // nieuw, nalezen
-    'c.workshop.b': "Șlefuitul, tăiatul și găuritul fac scântei, bucățele mici și mult zgomot. Poartă ochelari de protecție și protecție auditivă, chiar și pentru o treabă scurtă. Când e foarte zgomot, angajatorul trebuie să-ți dea protecție auditivă. Scânteile pot porni un incendiu. Pentru sudură, sau șlefuit lângă lucruri care pot arde, sunt reguli în plus (heet werk): întreabă înainte să începi. După lucru, strânge bucățelele de metal. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.workshop.b': "Șlefuitul, tăiatul și găuritul fac scântei, bucățele mici și mult zgomot. Poartă ochelari de protecție și protecție auditivă, chiar și pentru o treabă scurtă. Când e foarte zgomotos, angajatorul trebuie să-ți dea protecție auditivă. Scânteile pot porni un incendiu. Pentru sudură, sau șlefuit lângă lucruri care pot arde, sunt reguli în plus (heet werk): întreabă înainte să începi. După lucru, strânge bucățelele de metal. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen // nagelezen AI 31 okt
     'c.workshop.p': "Încep să șlefuiesc. Unde e protecția auditivă?", // nieuw, nalezen
     'c.workshop.s': "Trebuie să șlefuiești o bucată mică de metal. Durează un minut. Ochelarii de protecție sunt în altă cameră. Ce faci?", // nieuw, nalezen
     'c.workshop.o1': "Mai întâi îți iei ochelarii, chiar și pentru un minut.", // nieuw, nalezen
@@ -1657,7 +1657,7 @@ const t: CultureTranslation = {
     'c.nextstep.w': "Cu bbl lucrezi și înveți în același timp. Câștigi bani și primești o diplomă de nivel 2. Multor firme le place asta.", // nieuw, nalezen
     'c.email': "Un e-mail scurt: cine, ce, când", // nieuw, nalezen
     'c.email.b': "Un e-mail către lucru e scurt și politicos. Începe cu un salut, de exemplu „Beste Karin,”. Apoi spune ce vrei și când. Încheie cu un salut și numele tău complet. Scrie un subiect scurt, de exemplu „Vrij op vrijdag”. Recitește e-mailul înainte să-l trimiți.", // nieuw, nalezen
-    'c.email.p': "Dragă Karin, pot să am liber vineri? Cu salut, Ali Haddad", // nieuw, nalezen
+    'c.email.p': "Dragă Karin, pot să am liber vineri? Salutări, Ali Haddad", // nieuw, nalezen // nagelezen AI 31 okt
     'c.email.s': "Vrei o zi liberă vinerea viitoare. Ce e-mail către șef e cel mai bun?", // nieuw, nalezen
     'c.email.o1': "„Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad”", // nieuw, nalezen
     'c.email.o2': "„Vrijdag ben ik er niet.” (fără salut și fără numele tău).", // nieuw, nalezen
