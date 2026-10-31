@@ -6,3 +6,5 @@ dist
 public/credits.json
 piper-models/
 public/audio/
+# Lists for the volunteers and what comes back (npm run review:export, docs/nakijken.md)
+/review/
