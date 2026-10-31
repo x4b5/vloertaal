@@ -441,6 +441,10 @@ function defineStates(LANG) {
   add('after:result-review', shot('result&review=1'));
   // The first lesson's result, once: Continue and the row to the emergency phrases.
   add('after:result-phrases', shot('result&phrases=1'));
+  // "Probeer het vandaag op je werk" (src/components/WorkTry.tsx): a sentence with a speaker, no button.
+  add('after:result-worktry', shot('result&worktry=l.arrive'), null, { expect: '.result-worktry' });
+  // "Type what you hear" in the first units (PROGRESSION.type): hear and pick, for a Latin script too.
+  add('lesson:hear-pick-first', shot('type&pick=1'));
   add('after:streak', shot('streak&n=7'));
   add('after:streak-first', shot('streak&n=1'));
   // The fullest milestone: "Wist je dat?" (src/content/facts.ts) with a record and a free day.
@@ -534,9 +538,12 @@ function defineStates(LANG) {
   const toKaart = async (p) => { await realHome(p); await navTab(p, 2); await settle(p); await tap(p, '.set-row', 0); await settle(p); const rows = p.locator('.set-row'); await rows.nth((await rows.count()) - 1).click(); await settle(p, 900); };
   add('flow:kaart-name', '/', toKaart, { expect: '.cert-name-input' });
   add('flow:kaart', '/', async (p) => { await toKaart(p); await tap(p, '.cert-no-name'); await settle(p, 1500); }, { expect: '.kaart-img' });
-  add('flow:toets-offer', '/', (p) => realHome(p, { toets: undefined }), { expect: '.toets-offer' });
-  add('flow:toets-start', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
-  add('flow:toets-later', '/', async (p) => { await realHome(p, { toets: undefined }); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3 .bay-now' });
+  // "Wat ken je al?" comes after the first lesson (1.1 done); before it the home shows lesson 1.
+  const afterFirst = { toets: undefined, completed: { 'l.hello': { best: 1, times: 1 } } };
+  add('flow:toets-none-first', '/', (p) => realHome(p, { toets: undefined }), { expect: '.home3 .bay-now' });
+  add('flow:toets-offer', '/', (p) => realHome(p, afterFirst), { expect: '.toets-offer' });
+  add('flow:toets-start', '/', async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
+  add('flow:toets-later', '/', async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3 .bay-now' });
   // "Laat de telefoon luisteren (proef)" (src/lib/listen.ts), with a mocked on-device API
   // (&listen=, src/dev/ShotHarness.tsx fakeListenApi): its row in Lessen, its page (Dutch on the
   // phone, or still to download, and the wifi question), and the three outcomes after speaking.

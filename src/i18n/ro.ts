@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Sfaturi gratuite despre contract, salariu sau concediere.',
     whoInspection: 'Raportează munca nesigură, salariul prea mic sau exploatarea. Poți face asta anonim.',
     whoFairwork: 'Cineva te exploatează la muncă, sau crezi că așa e.',
+    who113: 'Te gândești să-ți iei viața sau îți faci griji pentru cineva. Gratuit, zi și noapte.', // nieuw, nalezen
+    whoVeiligThuis: 'Violență sau abuz acasă, asupra ta sau a altcuiva. Gratuit, se poate și anonim.', // nieuw, nalezen
     settings: 'Setări',
     helpLanguage: 'Limba de ajutor',
     resetProgress: 'Șterge progresul meu',
@@ -150,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Altă oră',
     remindAdd: 'Adaugă în calendarul meu',
     remindAdded: 'Deschide fișierul ca să-l adaugi în calendar.',
+    remindAddedAsk: 'Adăugat? Atunci îl vezi în calendar.', // nieuw, nalezen
     navAbout: 'Despre',
     tagMeaning: 'Sens',
     tagPick: 'Alege',
@@ -395,6 +398,9 @@ const lang: HelpLanguageSource = {
     checkMark: 'Bifează', // nieuw, nalezen
     checkVia: 'prin verificare', // nieuw, nalezen
     checkUndo: 'Totuși fă lecțiile', // nieuw, nalezen
+    shareInvite: 'Învăț olandeză pentru munca mea cu Vloertaal. Gratuit: {link}', // nieuw, nalezen
+    workTry: 'Încearcă azi la muncă', // nieuw, nalezen
+    saveFailed: 'Progresul tău nu a fost salvat. Telefonul e plin? Fă puțin loc. Sau mergi la Setări: „Păstrează-ți progresul”.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

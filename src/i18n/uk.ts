@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Безкоштовна порада щодо контракту, зарплати чи звільнення.',
     whoInspection: 'Повідом про небезпечну роботу, замалу зарплату чи експлуатацію. Можна анонімно.',
     whoFairwork: 'Тебе експлуатують на роботі, або ти так думаєш.',
+    who113: 'Ти думаєш про самогубство або хвилюєшся за когось. Безкоштовно, вдень і вночі.', // nieuw, nalezen
+    whoVeiligThuis: 'Насильство або кривда вдома, щодо тебе чи когось іншого. Безкоштовно, можна анонімно.', // nieuw, nalezen
     settings: 'Налаштування',
     helpLanguage: 'Мова підказок',
     resetProgress: 'Скинути мій прогрес',
@@ -150,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Інший час',
     remindAdd: 'Додати в мій календар',
     remindAdded: 'Відкрий файл, щоб додати його в календар.',
+    remindAddedAsk: 'Додано? Тоді побачиш його у своєму календарі.', // nieuw, nalezen
     navAbout: 'Інфо',
     tagMeaning: 'Значення',
     tagPick: 'Вибери',
@@ -395,6 +398,9 @@ const lang: HelpLanguageSource = {
     checkMark: 'Позначити', // nieuw, nalezen
     checkVia: 'через перевірку', // nieuw, nalezen
     checkUndo: 'Усе ж пройти уроки', // nieuw, nalezen
+    shareInvite: 'Я вчу нідерландську для роботи з Vloertaal. Безкоштовно: {link}', // nieuw, nalezen
+    workTry: 'Спробуй сьогодні на роботі', // nieuw, nalezen
+    saveFailed: 'Твій прогрес не збережено. Телефон заповнений? Звільни трохи місця. Або відкрий Налаштування: «Збережи свій прогрес».', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

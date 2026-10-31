@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Bezpłatna porada w sprawie umowy, wynagrodzenia lub zwolnienia.',
     whoInspection: 'Zgłoś niebezpieczną pracę, za niską pensję lub wyzysk. Możesz to zrobić anonimowo.',
     whoFairwork: 'Ktoś cię wyzyskuje w pracy albo tak myślisz.',
+    who113: 'Myślisz o odebraniu sobie życia albo martwisz się o kogoś. Bezpłatnie, w dzień i w nocy.', // nieuw, nalezen
+    whoVeiligThuis: 'Przemoc lub krzywdzenie w domu, wobec ciebie albo kogoś innego. Bezpłatnie, można anonimowo.', // nieuw, nalezen
     settings: 'Ustawienia',
     helpLanguage: 'Język pomocy',
     resetProgress: 'Zresetuj mój postęp',
@@ -150,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Inna godzina',
     remindAdd: 'Dodaj do mojego kalendarza',
     remindAdded: 'Otwórz plik, aby dodać go do kalendarza.',
+    remindAddedAsk: 'Dodane? Wtedy zobaczysz je w kalendarzu.', // nieuw, nalezen
     navAbout: 'O aplikacji',
     tagMeaning: 'Znaczenie',
     tagPick: 'Wybierz',
@@ -395,6 +398,9 @@ const lang: HelpLanguageSource = {
     checkMark: 'Odhacz', // nieuw, nalezen
     checkVia: 'przez test', // nieuw, nalezen
     checkUndo: 'Jednak zrób lekcje', // nieuw, nalezen
+    shareInvite: 'Uczę się niderlandzkiego do pracy z Vloertaal. Za darmo: {link}', // nieuw, nalezen
+    workTry: 'Spróbuj dziś w pracy', // nieuw, nalezen
+    saveFailed: 'Twoje postępy nie zostały zapisane. Czy telefon jest pełny? Zrób trochę miejsca. Albo wejdź w Ustawienia: „Zachowaj swoje postępy”.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

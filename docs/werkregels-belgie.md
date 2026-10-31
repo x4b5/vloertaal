@@ -4,10 +4,14 @@
 voorbeeld-unit (`loon`). De andere units schrijven de content-agents, elk in eigen bestanden.
 Achtergrond en het oordeel per les: [`belgie-vlaanderen-plan.md`](belgie-vlaanderen-plan.md).*
 
-Een deskundige kijkt elk feit na vóór dit live gaat. Tot dan staat het Belgische spoor **uit**
-(`BE_RULES_LIVE = false` in `src/content/regels/be/live.ts`): een leerling in België ziet dan het
-Nederlandse spoor, zoals vroeger. In ontwikkeling zet `?be=1` het aan; tests gebruiken
-`setBeRules(true)`.
+**Stand van nu (31 oktober 2026): het Belgische spoor staat live, als bèta** (`BE_RULES_LIVE =
+true` in `src/content/regels/be/live.ts`, de keuze van de eigenaar). Een leerling in België krijgt
+dus de Belgische lessen. Een deskundige heeft de ⚖️-feiten nog **niet** nagekeken: daarom staat de
+bètaregel bovenaan (`RULES_BETA`) en zegt "Goed om te weten" dat de lessen nog niet zijn nagekeken.
+Dat nakijken loopt nu ([`nakijken.md`](nakijken.md)), met voorrang voor ontslag, ziek, loon en
+uitbuiting. Zet `BE_RULES_LIVE = false` als je het spoor weer uit wilt: dan ziet een leerling in
+België het Nederlandse spoor, met de Belgische hulp. Tests gebruiken `setBeRules(true)`; in
+ontwikkeling zet `?be=1` het aan.
 
 ---
 
@@ -269,6 +273,9 @@ Vier agents, elk een eigen blok in `BE_TODO` en eigen bestanden (ongeveer even v
 | C · ziek, veilig, rechten | ziek, veilig, rechten, samen, sector warehouse, factory, care | `be/units/{ziek,veilig,rechten,samen}.ts`, `be/units/sector-{warehouse,factory,care}.ts` |
 | D · digitaal, burger, sectoren | digitaal, meedoen, duurzaam, schrijven, sector build, horeca, clean, kas, techniek, werkplaats | `be/units/{digitaal,meedoen,duurzaam,schrijven}.ts`, `be/units/sector-{build,horeca,clean,kas,techniek,werkplaats}.ts` |
 
-Als alles af is: `BE_TODO` is leeg, de deskundige kijkt de ⚖️ na, en dan pas `BE_RULES_LIVE = true`,
-een regel in `updates.ts` en de Belgische kant van de websitepagina's (`/werkregels`, de
-professionalspagina). Die statische pagina's gaan nu nog alleen over Nederland.
+Het plan was: `BE_TODO` is leeg, de deskundige kijkt de ⚖️ na, en dan pas `BE_RULES_LIVE = true`.
+Het is anders gegaan: `BE_TODO` is leeg en het spoor staat sinds 31 oktober 2026 live als bèta,
+**vóór** het nakijken (de keuze van de eigenaar, met een regel in `updates.ts`). Nog te doen: de
+deskundige kijkt de ⚖️ na (daarna gaat de bètaregel weg), en de Belgische kant van de
+websitepagina's (`/werkregels`, de professionalspagina). Die statische pagina's gaan nu nog alleen
+over Nederland.

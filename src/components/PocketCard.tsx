@@ -7,6 +7,7 @@ import type { HelpLanguage } from '../i18n/types';
 import { unitIndex } from '../lib/certificate';
 import { pocketPhrases } from '../lib/pocket';
 import { savePocketCard } from '../lib/pocketCanvas';
+import { shareText } from '../lib/shareLink';
 import { englishHidden, wantsEnglish } from '../lib/english';
 import { trackOfId } from '../lib/track';
 import { WordPicture } from '../pictures';
@@ -56,6 +57,7 @@ export function PocketCardScreen({ unit, lang, onBack, sector, region }: { unit:
           helpDir: lang?.dir ?? 'ltr',
           english: !rules && !englishHidden(lang?.code, wantsEnglish()),
           ...(rules ? { footer: 'Vloertaal · Werken in Nederland' } : {}),
+          helpCode: lang?.code,
           rows: phrases.map((p, i) => ({
             nl: p.nl,
             en: p.en,
@@ -65,6 +67,7 @@ export function PocketCardScreen({ unit, lang, onBack, sector, region }: { unit:
           })),
         },
         `vloertaal-spiekkaartje-${unit.id.slice(2)}.png`,
+        shareText(lang),
       );
       setSaved(how === 'saved' || how === 'shared');
     } catch {

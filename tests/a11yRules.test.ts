@@ -40,7 +40,8 @@ describe('the work-rules track with a screen reader', () => {
   it('names every tel: link with its number digit by digit, starting with the visible name', () => {
     const m = html(createElement(RulesHelp, { lang: nl(), onShelf: () => {} }));
     for (const r of HELP_ROWS.filter((x) => x.href?.startsWith('tel:'))) {
-      const label = labels(m).find((l) => l.startsWith(`${r.name}: bel`));
+      // A number in the name ("113 Zelfmoordpreventie") is said digit by digit too.
+      const label = labels(m).find((l) => l.startsWith(`${digitsApart(r.name)}: bel`));
       expect(label, r.id).toBeDefined();
       expect(label, r.id).toContain(digitsApart(r.show));
       expect(label, r.id).not.toMatch(/\d{2}/);

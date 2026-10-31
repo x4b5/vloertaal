@@ -60,6 +60,8 @@ export const uiEn = {
   whoLegal: 'Free advice about your contract, your pay or dismissal.',
   whoInspection: 'Report unsafe work, too little pay or exploitation. You can do it anonymously.',
   whoFairwork: 'You are exploited at work, or you think you are.',
+  who113: 'You think about ending your life, or you worry about someone. Free, day and night.',
+  whoVeiligThuis: 'Violence or abuse at home, to you or to someone else. Free, also without your name.',
   settings: 'Settings',
   helpLanguage: 'Help language',
   resetProgress: 'Reset my progress',
@@ -179,6 +181,7 @@ export const uiEn = {
   remindOwn: 'Other time',
   remindAdd: 'Add to my calendar',
   remindAdded: 'Open the file to add it to your calendar.',
+  remindAddedAsk: 'Added? Then you will see it in your calendar.',
   /* Round 2, understanding without reading: nav, exercise tags, tip toggle, top bar units, phrase sheet. */
   navAbout: 'About',
   tagMeaning: 'Meaning',
@@ -486,10 +489,17 @@ export const uiEn = {
   whoInspectionBe: 'Report too little pay, or work without a contract.',
   whoExploitBe: 'You are exploited at work, or you think you are.',
   whoUnionBe: 'Help with your pay, your contract or when your job ends. Members get more help.',
+  who1813Be: 'You think about ending your life, or you worry about someone. Free and anonymous.',
   /* "Er is iets veranderd": a notice on the home, once (src/components/NoticeCard.tsx; translations in src/i18n/notices). */
   noticeTitle: 'Something has changed',
   noticeMore: 'Read more',
   noticeOk: 'OK',
+  /* The text with a shared certificate, pocket card or coach card (src/lib/shareLink.ts): {link} is vloertaal.nl/<help language>. */
+  shareInvite: 'I am learning Dutch for my work with Vloertaal. It is free: {link}',
+  /* "Probeer het vandaag op je werk": one sentence of the lesson on its result (src/components/WorkTry.tsx). */
+  workTry: 'Try it at work today',
+  /** Saving the progress on this phone failed (src/lib/progress.ts saveProgress; src/components/SaveFailedNote.tsx): once. */
+  saveFailed: 'Your progress was not saved. Is your phone full? Make some room. Or go to Settings: Keep your progress.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

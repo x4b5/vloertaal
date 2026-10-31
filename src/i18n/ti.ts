@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'ብዛዕባ ውዕል፡ ደሞዝ ወይ ካብ ስራሕ ምስጓግ ብናጻ ምኽሪ።',
     whoInspection: 'ዘይውሑስ ስራሕ፡ ዝወሓደ ደሞዝ ወይ ምዝመዛ ንምሕባር። ብዘይ ስም እውን ይከኣል።',
     whoFairwork: 'ኣብ ስራሕ ምዝመዛ ምስ ዘሎ፡ ወይ ጥርጣረ ምስ ዘሎ።',
+    who113: 'ሓሳብ ምቁራጽ ህይወት ምስ ዘሎ፡ ወይ ስክፍታ ብዛዕባ ካልእ ሰብ ምስ ዘሎ። ብነጻ፡ ለይትን መዓልትን።', // nieuw, nalezen
+    whoVeiligThuis: 'ኣብ ገዛ ዓመጽ ወይ በደል ምስ ዘሎ፡ ኣብ ካልእ ሰብ እውን። ብነጻ፡ ስም ከይተሃበ እውን ይከኣል።', // nieuw, nalezen
     settings: 'ምድላዋት',
     helpLanguage: 'ቋንቋ ሓገዝ',
     resetProgress: { m: 'ምዕባለይ ደምስስ', f: 'ምዕባለይ ደምስሲ', x: 'ምዕባለይ ደምስሱ' }, // x: nieuw, nalezen
@@ -151,6 +153,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'ካልእ ሰዓት',
     remindAdd: { m: 'ኣብ ካሌንደረይ ወስኽ', f: 'ኣብ ካሌንደረይ ወስኺ', x: 'ኣብ ካሌንደረይ ወስኹ' }, // x: nieuw, nalezen
     remindAdded: { m: 'ናብ ካሌንደርካ ንምውሳኽ ነቲ ፋይል ክፈቶ።', f: 'ናብ ካሌንደርኪ ንምውሳኽ ነቲ ፋይል ክፈትዮ።' },
+    remindAddedAsk: 'ተወሲኹ ድዩ? ሽዑ ኣብ ካሌንደር ይርአ።', // nieuw, nalezen
     navAbout: 'ሓበሬታ',
     tagMeaning: 'ትርጉም',
     tagPick: { m: 'ምረጽ', f: 'ምረጺ', x: 'ምረጹ' }, // x: nieuw, nalezen
@@ -205,7 +208,7 @@ const lang: HelpLanguageSource = {
     allTopics: 'ኩሎም ኣርእስትታት',
     topicsOrder: 'ኣርእስትታት ምርኣይ',
     privacyLink: 'መግለጺ ብሕትውና ኣንብብ (ብሆላንድኛ)', // nieuw, nalezen
-    routeTitle: 'መንገዲ ትምህርቲ', // nieuw, nalezen
+    routeTitle: 'እንታይ ክትመሃሩ ትደልዩ?', // nieuw, nalezen (een vraag, de x-vorm)
     routeLearn: 'ንስራሕ ሆላንድኛ ምምሃር፡ ምስ ቋንቋ ሓገዝ', // nieuw, nalezen
     routeRules: 'ሆላንድኛ እዛረብ እየ፡ ስራሕ ኣብ ሆላንድን ቤልጅዩምን ከመይ ይኸይድ', // nieuw, nalezen
     routeLearnShort: 'ሆላንድኛ ምምሃር', // nieuw, nalezen
@@ -396,6 +399,9 @@ const lang: HelpLanguageSource = {
     checkMark: { m: 'ምልክት ግበር', f: 'ምልክት ግበሪ', x: 'ምልክት ግበሩ' }, // nieuw, nalezen
     checkVia: 'ብፈተና', // nieuw, nalezen
     checkUndo: { m: 'ግን ነቶም ትምህርትታት ግበሮም', f: 'ግን ነቶም ትምህርትታት ግበርዮም', x: 'ግን ነቶም ትምህርትታት ግበሩዎም' }, // nieuw, nalezen
+    shareInvite: 'ን ስራሐይ ሆላንድኛ ብ Vloertaal እመሃር ኣለኹ። ብነጻ እዩ: {link}', // nieuw, nalezen
+    workTry: { m: 'ሎሚ ኣብ ስራሕካ ፈትኖ', f: 'ሎሚ ኣብ ስራሕኪ ፈትንዮ', x: 'ሎሚ ኣብ ስራሕ ፈትንዎ' }, // nieuw, nalezen
+    saveFailed: 'ምዕባለኹም ኣይተዓቀበን። ተሌፎንኩም መሊኡ ድዩ? ቁሩብ ቦታ ግበሩ። ወይ ኣብ ምድላዋት: «ምዕባለኹም ዓቅቡ»።', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -1,3 +1,4 @@
+import { LAW_CHECKED } from '../updates';
 import { isBeId } from './be/ids';
 
 /**
@@ -5,9 +6,14 @@ import { isBeId } from './be/ids';
  * The Belgian course (docs/werkregels-belgie.md) has its own lines: the `_BE` ones below.
  */
 
-/** When the rules were last brought up to date (shown in the disclaimer). Not yet checked by an
- *  expert: that is what RULES_BETA says. */
-export const RULES_CHECKED = 'oktober 2026';
+const MONTHS = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
+/** "2026-10-31" → "oktober 2026". */
+export const monthYear = (day: string): string => `${MONTHS[Number(day.slice(5, 7)) - 1]} ${day.slice(0, 4)}`;
+
+/** When the rules were last brought up to date (shown in the disclaimer): the month of the last
+ *  monthly law check (LAW_CHECKED in src/content/updates.ts, set by whoever does that check; see
+ *  docs/logboek.md). Not yet checked by an expert: that is what RULES_BETA says. */
+export const RULES_CHECKED = monthYear(LAW_CHECKED);
 
 /**
  * Werkregels is live as a beta (src/lib/track.ts): experts have not checked every fact yet. The
@@ -155,9 +161,10 @@ export const regionRuleAdvice: Record<string, 'advice' | 'abuse' | 'civic' | 'bo
 // ⚖️ check: juridische eerstelijnsbijstand is gratis voor iedereen (o.a. in het justitiehuis); vakbonden helpen hun leden (justitie.belgium.be)
 /** Under a written rule of a Belgian unit (RULES_ADVICE). */
 export const RULES_ADVICE_BE = 'Algemene informatie. Vraag voor jouw situatie je werkgever, een vakbond of het justitiehuis.';
-// ⚖️ check: Unia helpt gratis bij discriminatie; bij uitbuiting kan je ook naar de sociale inspectie (unia.be, werk.belgie.be)
-/** Under the Belgian rules on uitbuiting, discriminatie, grensoverschrijdend gedrag and ontslag (RULES_ABUSE). */
-export const RULES_ABUSE_BE = 'Algemene informatie. Vraag hulp bij een vakbond, het justitiehuis of Unia.';
+// ⚖️ check: bij uitbuiting en mensenhandel helpen de erkende centra Payoke, PAG-ASA en Sürya, via één meldpunt: 078 055 800 (FOD Justitie en de centra, sinds 2023; stopmensenhandel.be; news.belgium.be en werk.belgie.be "Werelddag tegen mensenhandel" 2023 en 2024; zoekresultaten 31 okt 2026). Unia gaat over discriminatie, niet over uitbuiting (audit-inhoud 6): Unia blijft erin voor de regels over discriminatie (unia.be; HELP_ROWS_BE h.be.unia).
+/** Under the Belgian rules on uitbuiting, discriminatie, grensoverschrijdend gedrag and ontslag (RULES_ABUSE).
+ *  One line for all of them: the place for uitbuiting first, then Unia for discriminatie. */
+export const RULES_ABUSE_BE = 'Algemene informatie. Vraag hulp bij een vakbond of het justitiehuis. Uitbuiting? Bel Payoke, PAG-ASA of Sürya: 078 055 800. Discriminatie? Unia.';
 // ⚖️ check: de gemeente (adres, papieren) en het OCMW (leefloon, schulden) helpen bij de regels van de staat
 /** Under the Belgian rules of the state, not of your work (RULES_CIVIC). */
 export const RULES_CIVIC_BE = 'Algemene informatie. Vraag voor jouw situatie de gemeente, het OCMW of het justitiehuis.';

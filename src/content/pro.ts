@@ -1,5 +1,5 @@
 import { aboutSection, CONTACT_EMAIL, PRO_TITLE, STORY_DATE } from './about';
-import { updateDate } from './updates';
+import { updateDate } from './updateDate';
 
 /**
  * "Voor begeleiders en werkgevers": the page for professionals (language coaches, NT2 teachers,
@@ -89,7 +89,7 @@ export const proSections: ProSection[] = [
       'We testen in kleine groepen: leerlingen oefenen een week op hun eigen telefoon, met hun eigen begeleider erbij. Alle lessen staan open voor iedereen. Je hebt geen code of account nodig.',
     ],
     lines: [
-      { lead: 'Fout gezien in een les?', text: 'Tik bovenaan op het vlaggetje Melden. Dan opent een mail aan ons, met de plek in de app er al in: de les, de stap en de hulptaal. Schrijf erbij wat je zag. Een schermafbeelding helpt. Leerlingen kunnen dit ook zelf.' },
+      { lead: 'Fout gezien in een les?', text: 'Zet eerst de knop Melden aan: open vloertaal.nl/?test, of tik onderaan bij Over op de regel over Melden. Tik dan in de les bovenaan op het vlaggetje Melden. Dan opent een mail aan ons, met de plek in de app er al in: de les, de stap en de hulptaal. Schrijf erbij wat je zag. Een schermafbeelding helpt.' },
     ],
   },
   {
@@ -114,7 +114,7 @@ export const proSections: ProSection[] = [
       'Een leerling heeft geen account nodig: geen naam, geen e-mailadres, geen wachtwoord. Wat een leerling leert, staat alleen op de eigen telefoon of computer. Wij kunnen dat niet zien, en jij als begeleider ook niet: je ziet alleen wat de leerling zelf laat zien. Wil je weten hoe het gaat? Vraag de leerling om de begeleiderskaart te laten zien (Instellingen › Taal en ik › “Laat zien hoe het gaat”). Die kaart maakt de telefoon zelf, als plaatje. De leerling kiest zelf: laten zien, bewaren of sturen. De certificaten laten zien welke onderwerpen af zijn.',
       'De toets “Wat ken je al?” werkt net zo. De uitslag en de opname van de stem van de leerling (om later “Jij toen” en “Jij nu” te horen) blijven alleen op het toestel. Wij krijgen die niet. Kijk samen met de leerling naar het uitslagscherm. Met “Voortgang wissen” is alles weg, ook de opnames.',
       'Spreken met “Laat de telefoon luisteren (proef)”: dit staat standaard uit, en de leerling kan het alleen aanzetten op een telefoon die Nederlands zelf kan herkennen, zonder internet. De app gebruikt de herkenning alleen als de browser bevestigt dat die op het toestel gebeurt (processLocally). Kan dat niet, dan is de proef er niet. Er gaat geen geluid en geen tekst naar ons of naar anderen. De telefoon zegt alleen of hij de zin verstond, nooit een cijfer of “fout”.',
-      'Wat telt de app? Alleen hoe vaak een les begint, stopt of af is: welke les, in welk kwart iemand stopte, en ongeveer hoeveel minuten een les duurde. En hoe vaak de toets “Wat ken je al?” begint en af is (instap of eind), zonder de uitslag. Dat gaat zonder cookies, met GoatCounter. En of de app ergens een fout geeft: de soort fout, een korte code en een opgeschoonde foutmelding uit de code, nooit wat de leerling typte (hooguit drie per bezoek). Er gaat niets mee over de leerling: geen hulptaal, geen sector, geen naam en geen nummer.',
+      'Wat telt de app? Alleen hoe vaak een les begint, stopt of af is: welke les, in welk kwart iemand stopte, en ongeveer hoeveel minuten een les duurde. Of leerlingen terugkomen: elke telefoon telt één keer de 1e, 2e, 7e, 14e en 28e dag waarop de leerling een les deed, alleen met dat getal, zonder datum of nummer. En hoe vaak de toets “Wat ken je al?” begint en af is (instap of eind), zonder de uitslag. Dat gaat zonder cookies, met GoatCounter. En of de app ergens een fout geeft: de soort fout, een korte code en een opgeschoonde foutmelding uit de code, nooit wat de leerling typte (hooguit drie per bezoek). Er gaat niets mee over de leerling: geen hulptaal, geen sector, geen naam en geen nummer.',
       'De leerling kan het tellen uitzetten bij Instellingen (“Anoniem meetellen”). Vraagt de browser om niet gevolgd te worden (Do Not Track of Global Privacy Control)? Dan telt de app niets. Melden opent een gewone mail: er gaat pas iets naar ons als de leerling die zelf verstuurt. Alles op een rij: vloertaal.nl/privacy.',
     ],
   },

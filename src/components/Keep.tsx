@@ -484,10 +484,15 @@ function KeepTitle({ nl, text, lang }: { nl: string; text: ReturnType<typeof ui>
  *  install (only when the phone can): [Add to home screen] [Later];
  *  added: "Open the file to add it" and Continue (when there is no install page).
  */
-export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => void }) {
+export function KeepFlow({ lang, onDone, start }: {
+  lang?: HelpLanguage;
+  onDone: () => void;
+  /** Start on a later page, with a time already added (tests, screenshots); default: the question. */
+  start?: { step: KeepStep; added?: string };
+}) {
   const way = useInstallWay();
-  const [step, setStep] = useState<KeepStep>('ask');
-  const [added, setAdded] = useState<string | null>(null);
+  const [step, setStep] = useState<KeepStep>(start?.step ?? 'ask');
+  const [added, setAdded] = useState<string | null>(start?.added ?? null);
   const guard = useGuard(step);
   const rtl = lang?.dir === 'rtl';
   const go = (action: KeepAction) => {
@@ -562,7 +567,8 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
     body = (
       <>
         <div className="keep-hero keep3-logo" aria-hidden><LogoMark size={short ? 64 : 88} /></div>
-        {added && <p className="keep-ok keep3-added" role="status"><CheckIcon size={20} /><span dir="ltr">{added}</span><Bi text={ui(remindAddedKey(), lang)} /></p>}
+        {/* No tick: the app cannot know the learner saved it in the calendar (a file, or Google's page). */}
+        {added && <p className="keep-ok keep3-added keep3-asked" role="status"><CalendarGlyph /><span dir="ltr">{added}</span><Bi text={ui('remindAddedAsk', lang)} /></p>}
         <KeepTitle nl="Zet Vloertaal op je beginscherm" text={ui('installTitle', lang)} lang={lang} />
         <p className="keep3-hint"><Bi text={ui('installHint', lang)} /></p>
         {way === 'ios' && (
@@ -600,8 +606,10 @@ export function KeepFlow({ lang, onDone }: { lang?: HelpLanguage; onDone: () => 
     body = (
       <>
         {hero('cheer')}
-        <p className="keep-ok keep3-added keep3-added-big" role="status"><CheckIcon size={24} /><span dir="ltr">{added}</span></p>
+        {/* The time with a calendar, not "✓ 18:00": the app cannot know the learner saved it. */}
+        <p className="keep-ok keep3-added keep3-added-big keep3-asked" role="status"><CalendarGlyph /><span dir="ltr">{added}</span></p>
         <KeepTitle nl="Zet in je agenda" text={ui(remindAddedKey(), lang)} lang={lang} />
+        <p className="keep3-hint keep3-added-ask"><NlPair nlFirst nl="Toegevoegd? Dan zie je hem in je agenda." nlClass="keep3-btn-nl" dir="ltr" className="keep3-btn-gloss" text={ui('remindAddedAsk', lang)} /></p>
         <div className="keep3-actions">
           <button type="button" className="btn btn-primary keep3-btn keep-continue" onClick={guard(() => go('next'))}>
             <span className="keep3-btn-text keep3-center"><Bi className="keep3-btn-gloss" text={ui('continue', lang)} /></span>

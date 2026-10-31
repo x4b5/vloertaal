@@ -1,4 +1,5 @@
 import { roundRect, sharePng } from './canvasShare';
+import { siteLink } from './shareLink';
 /**
  * The pocket card as a picture for the phone's gallery: drawn on a canvas (no libraries), portrait
  * 1080 wide. The word pictures are the same SVGs as on screen, serialised and drawn in; a phrase
@@ -26,6 +27,8 @@ export interface PocketImage {
   english?: boolean;
   /** The line at the foot: what the app is about (default the Dutch course's). */
   footer?: string;
+  /** The help language's code: the address under the foot is its page (vloertaal.nl/pl). */
+  helpCode?: string;
 }
 
 const W = 1080;
@@ -111,7 +114,8 @@ export async function drawPocketCard(d: PocketImage): Promise<HTMLCanvasElement>
   measure.font = font(400, 34, HELP);
   const subLines = sub ? wrap(measure, sub, headW) : [];
   const headH = 250 + (titleLines.length - 1) * 62 + Math.max(0, subLines.length - 1) * 44;
-  const footH = 110;
+  // The foot: the app's name, and the site's address under it.
+  const footH = 150;
   const H = Math.round(PAD + headH + laid.reduce((s, l) => s + l.h, 0) + footH + PAD);
   const canvas = document.createElement('canvas');
   canvas.width = W;
@@ -219,6 +223,9 @@ export async function drawPocketCard(d: PocketImage): Promise<HTMLCanvasElement>
   ctx.fillStyle = C.ink3;
   ctx.font = font(600, 30);
   ctx.fillText(d.footer ?? 'Vloertaal · Nederlands voor het werk', W / 2, y + 66);
+  // The address (vloertaal.nl/pl with a help language), so a card sent on leads somewhere.
+  ctx.font = font(500, 26);
+  ctx.fillText(siteLink(d.helpCode), W / 2, y + 106);
   return canvas;
 }
 
@@ -226,6 +233,6 @@ const toBlob = (canvas: HTMLCanvasElement) =>
   new Promise<Blob>((resolve, reject) => canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('no image'))), 'image/png'));
 
 /** Shares the card as a PNG (the phone's share sheet, to keep it in the gallery), or downloads it. */
-export async function savePocketCard(d: PocketImage, fileName: string): Promise<'shared' | 'saved' | 'cancelled'> {
-  return sharePng(await toBlob(await drawPocketCard(d)), fileName, `Spiekkaartje · ${d.titleNl}`);
+export async function savePocketCard(d: PocketImage, fileName: string, text?: string): Promise<'shared' | 'saved' | 'cancelled'> {
+  return sharePng(await toBlob(await drawPocketCard(d)), fileName, `Spiekkaartje · ${d.titleNl}`, text);
 }

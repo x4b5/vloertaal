@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'استشارة مجانية حول العقد أو الأجر أو الفصل من العمل.',
     whoInspection: 'للإبلاغ عن عمل غير آمن أو أجر قليل جداً أو استغلال. ممكن دون ذكر الاسم.',
     whoFairwork: 'عند الاستغلال في العمل، أو الشك في ذلك.',
+    who113: 'عند التفكير في إنهاء الحياة، أو القلق على شخص آخر. مجاني، ليلاً ونهاراً.', // nieuw, nalezen
+    whoVeiligThuis: 'عنف أو إساءة في البيت، لك أو لشخص آخر. مجاني، ويمكن دون ذكر الاسم.', // nieuw, nalezen
     settings: 'الإعدادات',
     helpLanguage: 'لغة المساعدة',
     resetProgress: 'إعادة ضبط تقدّمي',
@@ -150,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'وقت آخر',
     remindAdd: { m: 'أضف إلى تقويمي', f: 'أضيفي إلى تقويمي', x: 'إضافة إلى تقويمي' }, // x: nieuw, nalezen
     remindAdded: { m: 'افتح الملف لإضافته إلى تقويمك.', f: 'افتحي الملف لإضافته إلى تقويمك.', x: 'يُرجى فتح الملف لإضافته إلى تقويمك.' }, // x: nieuw, nalezen
+    remindAddedAsk: 'هل أُضيف التذكير؟ عندها يظهر في التقويم.', // nieuw, nalezen
     navAbout: 'حول',
     tagMeaning: 'المعنى',
     tagPick: { m: 'اختر', f: 'اختاري', x: 'اختيار' }, // x: nieuw, nalezen
@@ -204,7 +207,7 @@ const lang: HelpLanguageSource = {
     allTopics: 'كل المواضيع',
     topicsOrder: 'عرض المواضيع',
     privacyLink: 'اقرأ بيان الخصوصية (بالهولندية)', // nieuw, nalezen
-    routeTitle: 'مسار التعلّم', // nieuw, nalezen
+    routeTitle: 'ماذا نتعلّم؟', // nieuw, nalezen (een vraag, zonder m/f)
     routeLearn: 'تعلّم الهولندية للعمل، مع مساعدة بلغتك', // nieuw, nalezen
     routeRules: 'أتكلّم الهولندية: كيف يسير العمل في هولندا وبلجيكا', // nieuw, nalezen
     routeLearnShort: 'تعلّم الهولندية', // nieuw, nalezen
@@ -395,6 +398,9 @@ const lang: HelpLanguageSource = {
     checkMark: 'تعليم كمنتهٍ', // nieuw, nalezen
     checkVia: 'عبر الاختبار', // nieuw, nalezen
     checkUndo: { m: 'اعمل الدروس رغم ذلك', f: 'اعملي الدروس رغم ذلك', x: 'القيام بالدروس رغم ذلك' }, // nieuw, nalezen
+    shareInvite: 'أتعلّم الهولندية لعملي مع Vloertaal. مجاناً: {link}', // nieuw, nalezen
+    workTry: { m: 'جرّبها اليوم في عملك', f: 'جرّبيها اليوم في عملك', x: 'للتجربة اليوم في العمل' }, // nieuw, nalezen
+    saveFailed: 'لم يُحفظ تقدّمك. هل الهاتف ممتلئ؟ الحل: إفراغ بعض المساحة. أو في الإعدادات: «حفظ تقدمك».', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

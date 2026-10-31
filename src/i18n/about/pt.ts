@@ -26,11 +26,11 @@ const t: CultureTranslation = {
     'a.who': 'Para quem é?',
     'a.who.b': 'Para todas as pessoas que estão a começar a trabalhar nos Países Baixos ou na Bélgica. Línguas de ajuda: árabe, tigrínia, persa, dari, ucraniano, turco, polaco, romeno, búlgaro, espanhol, português, francês e alemão.', // nieuw, nalezen (Nederland en België)
     'a.free': 'A tua privacidade',
-    'a.free.b': 'Não precisas de conta. O teu progresso fica guardado só neste telemóvel ou computador. Se estiver ligado, a app conta de forma anónima quantas vezes as lições são feitas: sem nome, sem rastreio. Se a app tiver um erro, também o conta, sem nada sobre ti. Podes desligar isto nas Definições. O resultado do teste e a gravação da tua voz também ficam só neste telemóvel ou computador. Um professor ou coach só vê o que tu lhe mostras, por exemplo o cartão em «Mostra como te está a correr». Se ligares «O telemóvel ouve (experimental)», o próprio telemóvel reconhece o teu neerlandês. Nada vai para nós nem para outros.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) // nagelezen AI 31 okt (fout-zin nieuw, nalezen)
+    'a.free.b': 'Não precisas de conta. O teu progresso fica guardado só neste telemóvel ou computador. Se estiver ligado, a app conta de forma anónima quantas vezes e em quantos dias as lições são feitas: sem nome, sem rastreio. Se a app tiver um erro, também o conta, sem nada sobre ti. Podes desligar isto nas Definições. O resultado do teste e a gravação da tua voz também ficam só neste telemóvel ou computador. Um professor ou coach só vê o que tu lhe mostras, por exemplo o cartão em «Mostra como te está a correr». Se ligares «O telemóvel ouve (experimental)», o próprio telemóvel reconhece o teu neerlandês. Nada vai para nós nem para outros.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) // nagelezen AI 31 okt (fout-zin nieuw, nalezen) // dagen-zin nieuw, nalezen
     'a.disclaimer': 'É bom saber',
     'a.disclaimer.b': 'As dicas do Vloertaal são informação geral, não são aconselhamento jurídico. As regras podem mudar; os textos foram atualizados pela última vez em outubro de 2026. Para a tua situação, pergunta ao teu empregador, a um sindicato ou ao Juridisch Loket.',
     'a.contact': 'Uma pergunta ou um erro?',
-    'a.contact.b': 'Encontraste um erro, por exemplo numa tradução ou numa dica? Ou tens uma pergunta? Envia um e-mail para hoi@vloertaal.nl. Uma captura de ecrã ajuda. Numa lição também podes tocar na bandeirinha "Melden" em cima: assim o e-mail já diz onde estás.',
+    'a.contact.b': 'Encontraste um erro, por exemplo numa tradução ou numa dica? Ou tens uma pergunta? Envia um e-mail para hoi@vloertaal.nl. Uma captura de ecrã ajuda.',
   },
 };
 

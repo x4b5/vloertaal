@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Sözleşmen, maaşın veya işten çıkarılman hakkında ücretsiz danışmanlık.',
     whoInspection: 'Güvensiz işi, çok düşük maaşı veya sömürüyü bildir. İsimsiz de yapabilirsin.',
     whoFairwork: 'İşte sömürülüyorsun ya da öyle düşünüyorsun.',
+    who113: 'Hayatına son vermeyi düşünüyorsun ya da biri için endişeleniyorsun. Ücretsiz, gece gündüz.', // nieuw, nalezen
+    whoVeiligThuis: 'Evde şiddet veya istismar, sana ya da başka birine. Ücretsiz, isim vermeden de olur.', // nieuw, nalezen
     settings: 'Ayarlar',
     helpLanguage: 'Yardım dili',
     resetProgress: 'İlerlememi sıfırla',
@@ -150,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Başka saat',
     remindAdd: 'Takvimime ekle',
     remindAdded: 'Takvimine eklemek için dosyayı aç.',
+    remindAddedAsk: 'Eklendi mi? O zaman takviminde görürsün.', // nieuw, nalezen
     navAbout: 'Hakkında',
     tagMeaning: 'Anlam',
     tagPick: 'Seç',
@@ -395,6 +398,9 @@ const lang: HelpLanguageSource = {
     checkMark: 'İşaretle', // nieuw, nalezen
     checkVia: 'kontrolle', // nieuw, nalezen
     checkUndo: 'Yine de dersleri yap', // nieuw, nalezen
+    shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
+    workTry: 'Bugün işte dene', // nieuw, nalezen
+    saveFailed: 'İlerlemen kaydedilmedi. Telefonun dolu mu? Biraz yer aç. Ya da Ayarlar’a git: “İlerlemeni sakla”.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -109,10 +109,10 @@ export const aboutSections: AboutSection[] = [
     // The privacy points in short: what is counted, exactly, is on the professionals page
     // (src/content/pro.ts, 'p.privacy'); that it is free is in 'a.mission' (siteSections).
     id: 'a.free', emoji: '🔒', title: 'Your privacy',
-    body: 'You do not need an account. Your progress is saved only on this phone or computer. If it is switched on, the app counts anonymously how often lessons are done: no name, no tracking. If the app has an error, it counts that too, without anything about you. You can turn this off in Settings. The result of the test and the recording of your voice also stay only on this phone or computer. A coach or teacher sees only what you show yourself, for example the card at “Show how it is going”. Do you turn on “Let the phone listen (trial)”? Then the phone itself recognises your Dutch. Nothing goes to us or to others.',
+    body: 'You do not need an account. Your progress is saved only on this phone or computer. If it is switched on, the app counts anonymously how often lessons are done, and on how many days: no name, no tracking. If the app has an error, it counts that too, without anything about you. You can turn this off in Settings. The result of the test and the recording of your voice also stay only on this phone or computer. A coach or teacher sees only what you show yourself, for example the card at “Show how it is going”. Do you turn on “Let the phone listen (trial)”? Then the phone itself recognises your Dutch. Nothing goes to us or to others.',
     nl: {
       title: 'Jouw privacy',
-      body: 'Je hebt geen account nodig. Wat je hebt geleerd, staat alleen op deze telefoon of computer. Staat het aan? Dan telt de app zonder naam hoe vaak mensen lessen doen. Niemand volgt je. Geeft de app een fout? Dan telt hij dat ook, zonder iets over jou. Je kunt dit uitzetten bij "Instellingen". Ook de uitslag van de toets en de opname van je stem blijven alleen op deze telefoon of computer. Een begeleider ziet alleen wat jij zelf laat zien, bijvoorbeeld de kaart bij “Laat zien hoe het gaat”. Zet je “Laat de telefoon luisteren (proef)” aan? Dan herkent de telefoon zelf je Nederlands. Er gaat niets naar ons of naar anderen.',
+      body: 'Je hebt geen account nodig. Wat je hebt geleerd, staat alleen op deze telefoon of computer. Staat het aan? Dan telt de app zonder naam hoe vaak mensen lessen doen, en op hoeveel dagen. Niemand volgt je. Geeft de app een fout? Dan telt hij dat ook, zonder iets over jou. Je kunt dit uitzetten bij "Instellingen". Ook de uitslag van de toets en de opname van je stem blijven alleen op deze telefoon of computer. Een begeleider ziet alleen wat jij zelf laat zien, bijvoorbeeld de kaart bij “Laat zien hoe het gaat”. Zet je “Laat de telefoon luisteren (proef)” aan? Dan herkent de telefoon zelf je Nederlands. Er gaat niets naar ons of naar anderen.',
     },
   },
   {
@@ -131,14 +131,14 @@ export const aboutSections: AboutSection[] = [
     // Last: where to send a mistake or a question. The address is a tappable mail link in the
     // body (the About page renders CONTACT_EMAIL as one, in every language and in Dutch).
     id: 'a.contact', emoji: '✉️', title: 'Questions or a mistake?',
-    body: 'Did you find a mistake, for example in a translation or in a tip? Or do you have a question? Send an e-mail to hoi@vloertaal.nl. A screenshot helps. In a lesson you can also tap the flag "Melden" at the top: then the e-mail already says where you are.',
+    body: 'Did you find a mistake, for example in a translation or in a tip? Or do you have a question? Send an e-mail to hoi@vloertaal.nl. A screenshot helps.',
     nl: {
       title: 'Vraag of fout?',
-      body: 'Zie je een fout, bijvoorbeeld in een vertaling of een tip? Of heb je een vraag? Stuur een mail naar hoi@vloertaal.nl. Een schermafbeelding helpt. In een les kun je ook bovenaan op het vlaggetje Melden tikken: dan staat in de mail al waar je bent.',
+      body: 'Zie je een fout, bijvoorbeeld in een vertaling of een tip? Of heb je een vraag? Stuur een mail naar hoi@vloertaal.nl. Een schermafbeelding helpt.',
     },
     nlRules: {
       title: 'Vraag of fout?',
-      body: 'Zie je een fout, bijvoorbeeld in een regel of een vraag? Of heb je een vraag? Stuur een mail naar hoi@vloertaal.nl. Een schermafbeelding helpt. In een les kun je ook bovenaan op het vlaggetje Melden tikken: dan staat in de mail al waar je bent.',
+      body: 'Zie je een fout, bijvoorbeeld in een regel of een vraag? Of heb je een vraag? Stuur een mail naar hoi@vloertaal.nl. Een schermafbeelding helpt.',
     },
   },
 ];

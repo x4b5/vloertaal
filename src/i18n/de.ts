@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Kostenlose Beratung zu deinem Vertrag, deinem Lohn oder einer Kündigung.',
     whoInspection: 'Melde unsichere Arbeit, zu wenig Lohn oder Ausbeutung. Das geht auch anonym.',
     whoFairwork: 'Du wirst bei der Arbeit ausgebeutet, oder du glaubst das.',
+    who113: 'Du denkst daran, dir das Leben zu nehmen, oder du machst dir Sorgen um jemanden. Kostenlos, Tag und Nacht.', // nieuw, nalezen
+    whoVeiligThuis: 'Gewalt oder Missbrauch zu Hause, gegen dich oder jemand anderen. Kostenlos, auch ohne deinen Namen.', // nieuw, nalezen
     settings: 'Einstellungen',
     helpLanguage: 'Hilfssprache',
     resetProgress: 'Meinen Fortschritt löschen',
@@ -150,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Andere Uhrzeit',
     remindAdd: 'Zu meinem Kalender hinzufügen',
     remindAdded: 'Öffne die Datei, um sie zu deinem Kalender hinzuzufügen.',
+    remindAddedAsk: 'Hinzugefügt? Dann siehst du sie in deinem Kalender.', // nieuw, nalezen
     navAbout: 'Über',
     tagMeaning: 'Bedeutung',
     tagPick: 'Wählen',
@@ -395,6 +398,9 @@ const lang: HelpLanguageSource = {
     checkMark: 'Abhaken', // nieuw, nalezen
     checkVia: 'per Check', // nieuw, nalezen
     checkUndo: 'Doch die Lektionen machen', // nieuw, nalezen
+    shareInvite: 'Ich lerne Niederländisch für meine Arbeit mit Vloertaal. Kostenlos: {link}', // nieuw, nalezen
+    workTry: 'Probier es heute bei der Arbeit', // nieuw, nalezen
+    saveFailed: 'Dein Fortschritt wurde nicht gespeichert. Ist dein Handy voll? Mach etwas Platz frei. Oder geh zu Einstellungen: „Deinen Fortschritt sichern“.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

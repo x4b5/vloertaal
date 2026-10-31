@@ -3442,6 +3442,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   font-size: 2rem; font-weight: 700; text-align: center;
 }
 .lang-guess .max3-cards { margin-top: 22px; }
+/* The guess page: the back arrow on its own row, so it never lies over the logo (dark on the dark tile). */
+.lang-guess > .chrome-head { margin-bottom: 0; }
 
 /* The password field shows what is typed and has no eye any more. */
 .pw-input { padding-inline-end: 16px; }
@@ -3649,6 +3651,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .keep3-added { justify-content: center; flex-wrap: wrap; text-align: center; font-size: 0.95rem; }
 .keep3-added .bi { align-items: center; }
 .keep3-added-big { font-size: 1.6rem; font-family: var(--stencil); font-weight: 800; }
+/* The time asked for, not confirmed: no green "done" (the app cannot know it is in the calendar). */
+.keep3-asked { color: var(--ink); }
 .keep3-ios { width: 100%; max-width: 420px; margin-top: 10px; }
 .keep3-logo { margin-top: 6px; }
 @media (max-height: 700px) {
@@ -4673,3 +4677,13 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 
 /* A speaker in a sentence ("Tik op [speaker]"): the app's own icon, on the text line (src/components/Bi.tsx iconize). */
 .inline-icon { display: inline-block; vertical-align: -0.2em; margin: 0 0.1em; }
+
+/* "Probeer het vandaag op je werk" (src/components/WorkTry.tsx): the "Onthoud" label of a rules
+   result, with the meaning under the sentence and the speaker beside all three lines. */
+.result-worktry .worktry-label-nl { font-weight: 700; }
+.result-worktry .worktry-gloss { grid-column: 1; --help-size: 0.9rem; color: var(--ink); }
+.result-worktry .speak-glyph { grid-row: 1 / span 3; }
+/* "Je voortgang is niet bewaard" (src/components/SaveFailedNote.tsx): the note's status region,
+   always there but taking no room or taps; the note looks like the sound note, above every screen. */
+.save-note-live { position: fixed; top: 0; left: 0; width: 0; height: 0; z-index: 40; pointer-events: none; }
+.save-note { z-index: 40; }

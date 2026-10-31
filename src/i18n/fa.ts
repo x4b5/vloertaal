@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'مشاورهٔ رایگان دربارهٔ قرارداد، حقوق یا اخراج.',
     whoInspection: 'گزارش کار ناامن، حقوق خیلی کم یا استثمار. می‌توانید ناشناس بمانید.',
     whoFairwork: 'در کار از شما سوءاستفاده می‌شود، یا فکر می‌کنید این‌طور است.',
+    who113: 'به پایان دادن به زندگی‌تان فکر می‌کنید، یا نگران کسی هستید. رایگان، شب و روز.', // nieuw, nalezen
+    whoVeiligThuis: 'خشونت یا بدرفتاری در خانه، علیه شما یا کس دیگری. رایگان، بدون گفتن نام هم می‌شود.', // nieuw, nalezen
     settings: 'تنظیمات',
     helpLanguage: 'زبان کمکی',
     resetProgress: 'پاک کردن پیشرفت من',
@@ -150,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'زمان دیگر',
     remindAdd: 'افزودن به تقویم من',
     remindAdded: 'فایل را باز کنید تا به تقویم شما اضافه شود.',
+    remindAddedAsk: 'اضافه شد؟ پس آن را در تقویم خود می‌بینید.', // nieuw, nalezen
     navAbout: 'درباره',
     tagMeaning: 'معنی',
     tagPick: 'انتخاب کنید',
@@ -395,6 +398,9 @@ const lang: HelpLanguageSource = {
     checkMark: 'علامت زدن', // nieuw, nalezen
     checkVia: 'با آزمون', // nieuw, nalezen
     checkUndo: 'با این حال درس‌ها را انجام دهید', // nieuw, nalezen
+    shareInvite: 'من با Vloertaal هلندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
+    workTry: 'امروز سر کار امتحانش کن', // nieuw, nalezen
+    saveFailed: 'پیشرفت شما ذخیره نشد. آیا گوشی پر است؟ کمی جا باز کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

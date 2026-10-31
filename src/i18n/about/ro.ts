@@ -26,11 +26,11 @@ const t: CultureTranslation = {
     'a.who': 'Pentru cine este?',
     'a.who.b': 'Pentru toți cei care sunt noi la muncă în Olanda sau în Belgia. Limbi de ajutor: arabă, tigrină, persană, dari, ucraineană, turcă, poloneză, română, bulgară, spaniolă, portugheză, franceză și germană.', // nieuw, nalezen (Nederland en België)
     'a.free': 'Confidențialitatea ta',
-    'a.free.b': 'Nu ai nevoie de cont. Progresul tău se salvează doar pe acest telefon sau calculator. Dacă este pornită, aplicația numără anonim cât de des se fac lecțiile: fără nume, fără urmărire. Dacă aplicația are o eroare, o numără și pe aceasta, fără nimic despre tine. O poți opri în „Setări”. Rezultatul testului și înregistrarea vocii tale rămân și ele doar pe acest telefon sau calculator. Un profesor sau un coach vede doar ce îi arăți tu, de exemplu cardul de la „Arată cum îți merge”. Dacă pornești „Telefonul ascultă (probă)”, telefonul însuși îți recunoaște olandeza. Nimic nu ajunge la noi sau la alții.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) (fout-zin nieuw, nalezen)
+    'a.free.b': 'Nu ai nevoie de cont. Progresul tău se salvează doar pe acest telefon sau calculator. Dacă este pornită, aplicația numără anonim cât de des și în câte zile se fac lecțiile: fără nume, fără urmărire. Dacă aplicația are o eroare, o numără și pe aceasta, fără nimic despre tine. O poți opri în „Setări”. Rezultatul testului și înregistrarea vocii tale rămân și ele doar pe acest telefon sau calculator. Un profesor sau un coach vede doar ce îi arăți tu, de exemplu cardul de la „Arată cum îți merge”. Dacă pornești „Telefonul ascultă (probă)”, telefonul însuși îți recunoaște olandeza. Nimic nu ajunge la noi sau la alții.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) (fout-zin nieuw, nalezen) // dagen-zin nieuw, nalezen
     'a.disclaimer': 'Bine de știut',
     'a.disclaimer.b': 'Sfaturile din Vloertaal sunt informații generale, nu consultanță juridică. Regulile se pot schimba; textele au fost actualizate ultima dată în octombrie 2026. Pentru situația ta, întreabă-ți angajatorul, un sindicat sau Juridisch Loket.',
     'a.contact': 'Întrebări sau o greșeală?',
-    'a.contact.b': 'Ai găsit o greșeală, de exemplu într-o traducere sau într-un sfat? Sau ai o întrebare? Trimite un e-mail la hoi@vloertaal.nl. O captură de ecran ajută. Într-o lecție poți apăsa și pe stegulețul „Melden” de sus: atunci e-mailul spune deja unde ești.',
+    'a.contact.b': 'Ai găsit o greșeală, de exemplu într-o traducere sau într-un sfat? Sau ai o întrebare? Trimite un e-mail la hoi@vloertaal.nl. O captură de ecran ajută.',
   },
 };
 

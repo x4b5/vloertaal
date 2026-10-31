@@ -4,7 +4,8 @@ import { BramSays } from './BramSays';
 import { Character } from './Characters';
 import { resultLineFor } from '../lib/greeting';
 import { aboutRules, aboutSections, CONTACT_EMAIL, PRO_TITLE, STORY_DATE } from '../content/about';
-import { dateLocale, LAST_UPDATE, updateDate } from '../content/updates';
+import { dateLocale, updateDate } from '../content/updateDate';
+import { useUpdates } from '../content/updatesLive';
 import { taalTips } from '../content/culture';
 import { taalBeActive, tipNlOnly } from '../content/taalBe';
 import { tipBody } from '../lib/tipText';
@@ -59,6 +60,8 @@ import { HelpSay } from './HelpSay';
 import { emojiIconId } from '../content/tipIcons';
 import { PRIVACY_PATH } from '../lib/paths';
 import { aboutDutchRemembered, rememberAboutDutch } from '../lib/aboutDutch';
+import { WorkTry } from './WorkTry';
+import type { WorkTryLine } from '../lib/workTry';
 
 /** The help languages in the list in alphabetical order of their English name (the line under each
  *  native name, and what the page is in before a language is chosen): Arabic, Bulgarian, Dari … */
@@ -238,7 +241,9 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   const q = g.dir === 'rtl' ? '\u061f' : '?';
   return (
     <div className="screen onboarding max3-page lang-guess">
-      {routes && <ChromeHead onBack={toRoute} />}
+      {/* The back arrow on its own row above the logo (not over it), at the start of the guessed
+          language: the right in Arabic, Persian and Dari. */}
+      {routes && <ChromeHead lang={g} onBack={toRoute} />}
       <div className="hero">
         <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
         {/* What the app is, in the guessed language (large), the English small under it. */}
@@ -439,6 +444,8 @@ const WORK_CONTACT_KEYS: Record<'nl' | 'be', { id: string; when: UiKey }[]> = {
     { id: 'h.juridischloket', when: 'whoLegal' },
     { id: 'h.arbeidsinspectie', when: 'whoInspection' },
     { id: 'h.fairwork', when: 'whoFairwork' },
+    { id: 'h.113', when: 'who113' },
+    { id: 'h.veiligthuis', when: 'whoVeiligThuis' },
   ],
   be: [
     { id: 'h.112', when: 'who112' },
@@ -446,6 +453,7 @@ const WORK_CONTACT_KEYS: Record<'nl' | 'be', { id: string; when: UiKey }[]> = {
     { id: 'h.be.tsw', when: 'whoInspectionBe' },
     { id: 'h.be.payoke', when: 'whoExploitBe' },
     { id: 'h.be.vakbond', when: 'whoUnionBe' },
+    { id: 'h.be.1813', when: 'who1813Be' },
   ],
 };
 /** The rows of "Problems at work? Who can help" for a country, each with its help-language line. */
@@ -596,7 +604,7 @@ function AboutBody({ text }: { text: Bilingual }) {
 }
 
 /**
- * The "Melden" flag in every lesson (on by default, src/lib/report.ts) off or on again, in the app
+ * The "Melden" flag in every lesson (off by default, src/lib/report.ts) on or off again, in the app
  * itself: a link opened in Safari does not reach an app on an iPhone's home screen, this does. In
  * Dutch, like the flag and its mail. Small, at the bottom of Over.
  */
@@ -633,6 +641,8 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
   dutch?: boolean;
 }) {
   const { recorded } = useVoices();
+  // The newest update's date (the logbook loads when it is not here yet: src/content/updatesLive.ts).
+  const lastUpdate = useUpdates()?.updates[0]?.date;
   const [dutchOn, setDutch] = useState(() => dutchStart ?? aboutDutchRemembered());
   // The work-rules track: its own sections, in Dutch only (no toggle).
   const dutch = dutchUi(lang) || dutchOn;
@@ -706,7 +716,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
                 <span className="news-link-icon" aria-hidden><WordPicture id="" emoji="📝" size={30} /></span>
                 <span className="news-link-text">
                   <Bi text={ui('whatsNew', lang)} />
-                  <span className="news-link-date muted small" lang={langTag(dateCode(lang))} dir={lang?.dir}>{updateDate(LAST_UPDATE, dateLocale(dateCode(lang)))}</span>
+                  {lastUpdate && <span className="news-link-date muted small" lang={langTag(dateCode(lang))} dir={lang?.dir}>{updateDate(lastUpdate, dateLocale(dateCode(lang)))}</span>}
                 </span>
                 <ChevronIcon />
               </button>
@@ -727,7 +737,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
       )}
       <TesterSwitch />
       {/* Without "Wat is er nieuw?" (a test, a screenshot): the newest update's date as plain text. */}
-      {!onNews && <p className="about-updated muted small"><Bi text={lastUpdatedText(lang)} /></p>}
+      {!onNews && lastUpdate && <p className="about-updated muted small"><Bi text={lastUpdatedText(lastUpdate, lang)} /></p>}
       {/* Which deploy runs on this phone (the commit; src/lib/appUpdate.ts loads a newer one). */}
       <p className="about-version muted small" dir="ltr" lang="nl">Versie {(import.meta.env.VITE_BUILD as string | undefined) ?? 'dev'}</p>
     </div>
@@ -749,12 +759,12 @@ function Signed({ name, code = 'en', dir }: { name: string; code?: string; dir?:
 }
 
 /** "Last updated: 15 October 2026", each line with the date in its own language. */
-function lastUpdatedText(lang?: HelpLanguage): Bilingual {
+function lastUpdatedText(day: string, lang?: HelpLanguage): Bilingual {
   const t = ui('lastUpdated', lang);
   return {
     ...t,
-    en: t.en.replace('{date}', updateDate(LAST_UPDATE, 'en-GB')),
-    help: t.help?.replace('{date}', updateDate(LAST_UPDATE, dateLocale(lang?.code ?? 'nl'))),
+    en: t.en.replace('{date}', updateDate(day, 'en-GB')),
+    help: t.help?.replace('{date}', updateDate(day, dateLocale(lang?.code ?? 'nl'))),
   };
 }
 
@@ -811,7 +821,10 @@ export function StatCard({ tone, label, icon, value, final, done, foot, badge }:
 /** From this many words still due after a review, the result says they come in the next days. */
 export const REVIEW_WAITING_MIN = 3;
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, easier = false }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, easier = false, workTry }: {
+  /** "Probeer het vandaag op je werk" (src/components/WorkTry.tsx, lib/workTry.ts): one sentence
+   *  of the lesson, with a speaker. Not a button. */
+  workTry?: WorkTryLine;
   /** After a lesson of the language track with chats: a calm row to "Oefen samen" (never
    *  needed: Continue goes on as always). Hidden while "Wil je sneller?" asks and the row to the
    *  emergency phrases is there too (Ja, Nee and two rows would be four things to tap). */
@@ -964,8 +977,10 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           </p>
         )}
         {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}
-        {/* (Not while "Wil je sneller?" asks: the question needs the room.) */}
-        {next && !onFaster && (
+        {/* (Not while "Wil je sneller?" asks: the question needs the room. Not with the row to the
+            emergency phrases after the first lesson either: on a small phone that row went half
+            under Verder; the home shows the next lesson anyway.) */}
+        {next && !onFaster && !onPhrases && (
           <p className="result-line result-next" dir={rtl ? 'rtl' : undefined}>
             {/* Said, not shown (no aria-label on a <p>): "Next:" before the title. */}
             <span className="sr-only" lang={saidLang(ui('nextUp', lang))}>{`${said(ui('nextUp', lang))}: `}</span>
@@ -974,6 +989,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             <Bi className="result-next-title" text={next} />
           </p>
         )}
+        {workTry && <WorkTry line={workTry} lang={lang} />}
         {/* After many mistakes: the next lesson is shorter. Plain, no judgement. */}
         {easier && (
           <p className="result-line result-easier" dir={rtl ? 'rtl' : undefined}>

@@ -19,7 +19,7 @@ import { hasPicture } from '../lib/wordPicture';
 import { PlayName, SpeakButton } from './SpeakButton';
 import { letterSteps } from '../lib/letters';
 import { createRng } from '../lib/random';
-import { pickInsteadOfTyping, writingInput } from '../lib/writing';
+import { typeAsPick, writingInput } from '../lib/writing';
 import { HelpSay } from './HelpSay';
 import { BeNote } from './BeNote';
 import { tipNlOnly } from '../content/taalBe';
@@ -724,7 +724,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
  */
 export function TypeExercise(props: Props<'type'>) {
   // Decided once per exercise, so a change in Settings never swaps it halfway.
-  const [pick] = useState(() => pickInsteadOfTyping(props.lang) && (props.ex.options?.length ?? 0) > 1);
+  const [pick] = useState(() => typeAsPick(props.ex, props.lang));
   return pick ? <HearPickWritten {...props} /> : <TypeWriting {...props} />;
 }
 
@@ -886,8 +886,8 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
 }
 
 /**
- * Complete the conversation: a colleague says a Dutch line, the learner picks the reply.
- * Tapping the colleague's words shows what they mean (English + help language).
+ * Complete the conversation: a colleague says a Dutch line, the learner picks the reply. What the
+ * colleague said shows in English + help language after the answer (not before).
  * Reversed (`ex.reverse`, later units): "your" reply is given (heard, with what it means) and the
  * learner picks what the colleague asked.
  */
@@ -918,10 +918,15 @@ function ChatForward({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
           <div className="chat-bubble">
             <SpeakButton glyph text={prompt.nl} help={lang} voice={voiceFor(them)} />
             <span className="chat-line" lang="nl">{breakable(prompt.nl)}</span>
-            {/* What was asked, always under it (a learner who can't read the Dutch must know). */}
-            <span className="chat-hint">
-              <Bi text={gloss(prompt.id, prompt.en, lang)} />
-            </span>
+            {/* What was asked: only after the answer. First the learner listens and reads the
+                Dutch (the speaker, and every reply has its own); with the translation in view
+                the chat could be solved without understanding the colleague. No extra button
+                for it ("vertaling" would be a fourth thing to tap next to the three replies). */}
+            {locked && (
+              <span className="chat-hint">
+                <Bi text={gloss(prompt.id, prompt.en, lang)} />
+              </span>
+            )}
           </div>
         </div>
         <div className="chat-row chat-me">

@@ -19,6 +19,7 @@ export const ar: CultureTranslation = {
     whoInspectionBe: 'للإبلاغ عن أجر قليل جداً أو عمل بدون عقد.', // nieuw, nalezen
     whoExploitBe: 'عند الاستغلال في العمل، أو الشك في ذلك.', // nieuw, nalezen
     whoUnionBe: 'مساعدة في الأجر أو العقد أو عند انتهاء العمل. الأعضاء يحصلون على مساعدة أكثر.', // nieuw, nalezen
+    who1813Be: 'عند التفكير في إنهاء الحياة، أو القلق على شخص آخر. مجاني وبدون ذكر الاسم.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'الحياة في بلجيكا', // nieuw, nalezen
@@ -38,6 +39,7 @@ export const ti: CultureTranslation = {
     whoInspectionBe: 'ዝወሓደ ደሞዝ ወይ ብዘይ ውዕል ምስራሕ ንምሕባር።', // nieuw, nalezen
     whoExploitBe: 'ኣብ ስራሕ ምዝመዛ ምስ ዘሎ፡ ወይ ጥርጣረ ምስ ዘሎ።', // nieuw, nalezen
     whoUnionBe: 'ሓገዝ ብዛዕባ ደሞዝ፡ ውዕል ወይ ስራሕ ምስ ዝውዳእ። ኣባላት ዝያዳ ሓገዝ ይረኽቡ።', // nieuw, nalezen
+    who1813Be: 'ሓሳብ ምቁራጽ ህይወት ምስ ዘሎ፡ ወይ ስክፍታ ብዛዕባ ካልእ ሰብ ምስ ዘሎ። ብነጻን ስም ከይተሃበን።', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'ህይወት ኣብ ቤልጅዩም', // nieuw, nalezen
@@ -57,6 +59,7 @@ export const fa: CultureTranslation = {
     whoInspectionBe: 'گزارش حقوق خیلی کم یا کار بدون قرارداد.', // nieuw, nalezen
     whoExploitBe: 'در کار از شما سوءاستفاده می‌شود، یا فکر می‌کنید این‌طور است.', // nieuw, nalezen
     whoUnionBe: 'کمک دربارهٔ حقوق، قرارداد یا وقتی کارتان تمام می‌شود. اعضا کمک بیشتری می‌گیرند.', // nieuw, nalezen
+    who1813Be: 'به پایان دادن به زندگی‌تان فکر می‌کنید، یا نگران کسی هستید. رایگان و بی‌نام.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'زندگی در بلژیک', // nieuw, nalezen
@@ -76,6 +79,7 @@ export const prs: CultureTranslation = {
     whoInspectionBe: 'گزارش معاش خیلی کم یا کار بدون قرارداد.', // nieuw, nalezen
     whoExploitBe: 'در کار از شما سوءاستفاده می‌شود، یا فکر می‌کنید که این‌طور است.', // nieuw, nalezen
     whoUnionBe: 'کمک دربارهٔ معاش، قرارداد یا وقتی کار تان ختم می‌شود. اعضا کمک بیشتر می‌گیرند.', // nieuw, nalezen
+    who1813Be: 'به ختم زندگی خود فکر می‌کنید، یا نگران کسی هستید. رایگان و بدون نام.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'زندگی در بلجیم', // nieuw, nalezen
@@ -95,6 +99,7 @@ export const uk: CultureTranslation = {
     whoInspectionBe: 'Повідом про замалу зарплату чи роботу без контракту.', // nieuw, nalezen
     whoExploitBe: 'Тебе експлуатують на роботі, або ти так думаєш.', // nieuw, nalezen
     whoUnionBe: 'Допомога щодо зарплати, контракту або коли робота закінчується. Члени отримують більше допомоги.', // nieuw, nalezen
+    who1813Be: 'Ти думаєш про самогубство або хвилюєшся за когось. Безкоштовно й анонімно.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'Життя в Бельгії', // nieuw, nalezen
@@ -114,6 +119,7 @@ export const tr: CultureTranslation = {
     whoInspectionBe: 'Çok düşük maaşı veya sözleşmesiz çalışmayı bildir.', // nieuw, nalezen
     whoExploitBe: 'İşte sömürülüyorsun ya da öyle düşünüyorsun.', // nieuw, nalezen
     whoUnionBe: 'Maaşın, sözleşmen konusunda veya işin bittiğinde yardım. Üyeler daha çok yardım alır.', // nieuw, nalezen
+    who1813Be: 'Hayatına son vermeyi düşünüyorsun ya da biri için endişeleniyorsun. Ücretsiz ve anonim.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'Belçika’da yaşam', // nieuw, nalezen
@@ -133,6 +139,7 @@ export const pl: CultureTranslation = {
     whoInspectionBe: 'Zgłoś za niską pensję albo pracę bez umowy.', // nieuw, nalezen
     whoExploitBe: 'Ktoś cię wyzyskuje w pracy albo tak myślisz.', // nieuw, nalezen
     whoUnionBe: 'Pomoc w sprawie wynagrodzenia, umowy albo gdy praca się kończy. Członkowie dostają więcej pomocy.', // nieuw, nalezen
+    who1813Be: 'Myślisz o odebraniu sobie życia albo martwisz się o kogoś. Bezpłatnie i anonimowo.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'Życie w Belgii', // nieuw, nalezen
@@ -152,6 +159,7 @@ export const ro: CultureTranslation = {
     whoInspectionBe: 'Raportează salariul prea mic sau munca fără contract.', // nieuw, nalezen
     whoExploitBe: 'Cineva te exploatează la muncă, sau crezi că așa e.', // nieuw, nalezen
     whoUnionBe: 'Ajutor cu salariul, contractul sau când munca se termină. Membrii primesc mai mult ajutor.', // nieuw, nalezen
+    who1813Be: 'Te gândești să-ți iei viața sau îți faci griji pentru cineva. Gratuit și anonim.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'Viața în Belgia', // nieuw, nalezen
@@ -171,6 +179,7 @@ export const bg: CultureTranslation = {
     whoInspectionBe: 'Съобщи за твърде ниска заплата или работа без договор.', // nieuw, nalezen
     whoExploitBe: 'Някой те експлоатира на работа, или мислиш, че е така.', // nieuw, nalezen
     whoUnionBe: 'Помощ за заплатата, договора или когато работата свършва. Членовете получават повече помощ.', // nieuw, nalezen
+    who1813Be: 'Мислиш да сложиш край на живота си или се тревожиш за някого. Безплатно и анонимно.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'Живот в Белгия', // nieuw, nalezen
@@ -190,6 +199,7 @@ export const es: CultureTranslation = {
     whoInspectionBe: 'Denuncia un sueldo demasiado bajo o un trabajo sin contrato.', // nieuw, nalezen
     whoExploitBe: 'Te explotan en el trabajo, o crees que te explotan.', // nieuw, nalezen
     whoUnionBe: 'Ayuda con tu sueldo, tu contrato o cuando termina tu trabajo. Los miembros reciben más ayuda.', // nieuw, nalezen
+    who1813Be: 'Piensas en quitarte la vida o te preocupa alguien. Gratis y anónimo.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'Vivir en Bélgica', // nieuw, nalezen
@@ -209,6 +219,7 @@ export const pt: CultureTranslation = {
     whoInspectionBe: 'Denuncia salário baixo demais ou trabalho sem contrato.', // nieuw, nalezen
     whoExploitBe: { m: 'Estás a ser explorado no trabalho, ou achas que sim.', f: 'Estás a ser explorada no trabalho, ou achas que sim.', x: 'Estás a ser explorado/a no trabalho, ou achas que sim.' }, // nieuw, nalezen
     whoUnionBe: 'Ajuda com o teu salário, o teu contrato ou quando o trabalho acaba. Os sócios recebem mais ajuda.', // nieuw, nalezen
+    who1813Be: 'Pensas em pôr fim à vida, ou alguém te preocupa. Gratuito e anónimo.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'Viver na Bélgica', // nieuw, nalezen
@@ -228,6 +239,7 @@ export const fr: CultureTranslation = {
     whoInspectionBe: 'Signale un salaire trop bas ou un travail sans contrat.', // nieuw, nalezen
     whoExploitBe: 'On t’exploite au travail, ou tu penses que c’est le cas.', // nieuw, nalezen
     whoUnionBe: 'De l’aide pour ton salaire, ton contrat ou quand ton travail s’arrête. Les membres reçoivent plus d’aide.', // nieuw, nalezen
+    who1813Be: 'Tu penses à mettre fin à ta vie, ou tu t’inquiètes pour quelqu’un. Gratuit et anonyme.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'Vivre en Belgique', // nieuw, nalezen
@@ -247,6 +259,7 @@ export const de: CultureTranslation = {
     whoInspectionBe: 'Melde zu wenig Lohn oder Arbeit ohne Vertrag.', // nieuw, nalezen
     whoExploitBe: 'Du wirst bei der Arbeit ausgebeutet, oder du glaubst das.', // nieuw, nalezen
     whoUnionBe: 'Hilfe bei deinem Lohn, deinem Vertrag oder wenn deine Arbeit endet. Mitglieder bekommen mehr Hilfe.', // nieuw, nalezen
+    who1813Be: 'Du denkst daran, dir das Leben zu nehmen, oder du machst dir Sorgen um jemanden. Kostenlos und anonym.', // nieuw, nalezen
   },
   gloss: {
     'be.theme.life': 'Leben in Belgien', // nieuw, nalezen

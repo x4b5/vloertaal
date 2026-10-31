@@ -156,7 +156,7 @@ function HelpRowItem({ row, lang }: { row: HelpRow; lang?: HelpLanguage }) {
           className="rh-card rh-link"
           href={row.href}
           {...(call ? {} : { target: '_blank', rel: 'noreferrer' })}
-          aria-label={`${row.name}: ${call ? 'bel' : 'open'} ${call ? digitsApart(row.show) : row.show}. ${row.when}`}
+          aria-label={`${digitsApart(row.name)}: ${call ? 'bel' : 'open'} ${call ? digitsApart(row.show) : row.show}. ${digitsApart(row.when)}`}
         >
           {body}
           <span className="rh-go" aria-hidden>{call ? <CallIcon size={24} /> : <GlobeIcon size={24} />}</span>

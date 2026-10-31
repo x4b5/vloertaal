@@ -10,6 +10,7 @@ import { KUN_VAARDIGHEID_UI, kunJeNu, pastBij, type KunZin } from '../content/ku
 import type { Progress } from '../lib/progress';
 import { KAART_NOTE, kaartAlt, kaartData } from '../lib/kaart';
 import { kaartPng, shareKaart } from '../lib/kaartCanvas';
+import { shareText } from '../lib/shareLink';
 import { Bi } from './Bi';
 import { HelpSay } from './HelpSay';
 import { NlPair } from './NlPair';
@@ -267,7 +268,7 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
     setBusy(true);
     setSaved(false);
     try {
-      const how = await shareCertificate(data, `vloertaal-certificaat-${unit.id.slice(2)}.png`, png.current?.key === key ? png.current.blob : undefined);
+      const how = await shareCertificate(data, `vloertaal-certificaat-${unit.id.slice(2)}.png`, png.current?.key === key ? png.current.blob : undefined, shareText(lang));
       // Downloaded (no share sheet on this phone or computer): say so, as the pocket card does.
       if (how === 'saved') setSaved(true);
     } catch {
@@ -498,7 +499,7 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
   const [name, setName] = useState(stored ?? '');
   const [asking, setAsking] = useState(stored === null);
   const [today] = useState(() => fixedToday ?? new Date());
-  const data = useMemo(() => kaartData(progress, name, today), [progress, name, today]);
+  const data = useMemo(() => ({ ...kaartData(progress, name, today), helpCode: lang?.code }), [progress, name, today, lang?.code]);
   const key = JSON.stringify(data);
   const [png, setPng] = useState<{ key: string; blob: Blob; url: string } | null>(null);
   const [failed, setFailed] = useState(false);
@@ -534,7 +535,7 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
     setBusy(true);
     setSaved(false);
     try {
-      if ((await shareKaart(shown.blob)) === 'saved') setSaved(true);
+      if ((await shareKaart(shown.blob, undefined, shareText(lang))) === 'saved') setSaved(true);
     } catch {
       // Nothing more to do: the card stays on screen, to show.
     } finally {

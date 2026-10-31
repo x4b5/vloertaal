@@ -1,4 +1,5 @@
 import { sharePng } from './canvasShare';
+import { siteLink } from './shareLink';
 import { C, drawLogo, fitName, font, fontsReady, HELP, RTL_LETTERS, spaced, STENCIL, toBlob, wrap } from './certCanvas';
 import { KAART_NOTE, kaartRows, type KaartData } from './kaart';
 
@@ -151,13 +152,16 @@ function layout(ctx: CanvasRenderingContext2D, d: KaartData, H: number, draw: bo
   }
   rule(y);
 
-  // "Gemaakt op deze telefoon. Vloertaal bewaart niets.", small, at the bottom.
-  const foot = Math.max(y + 9 * u, H - pad - 4.4 * u);
+  // "Gemaakt op deze telefoon. Vloertaal bewaart niets.", small, at the bottom, and the site's
+  // address under it (vloertaal.nl/pl with a help language), so a card sent on leads somewhere.
+  const foot = Math.max(y + 12.4 * u, H - pad - 4.4 * u);
   if (draw) {
     ctx.fillStyle = C.ink3;
     ctx.font = font(500, 2.2 * u);
     ctx.textAlign = 'center';
-    spaced(ctx, KAART_NOTE, px + pw / 2, foot, 0.03 * 2.2 * u);
+    spaced(ctx, KAART_NOTE, px + pw / 2, foot - 3.4 * u, 0.03 * 2.2 * u);
+    ctx.font = font(600, 2.2 * u);
+    ctx.fillText(siteLink(d.helpCode), px + pw / 2, foot);
     ctx.textAlign = 'left';
   }
   return foot + 4.4 * u + pad;
@@ -191,7 +195,7 @@ export async function kaartPng(d: KaartData): Promise<Blob> {
 }
 
 /** Shares the card as a PNG, or saves it where files cannot be shared (as the certificate). */
-export async function shareKaart(png: Blob, fileName = 'vloertaal-voortgang.png'): Promise<'shared' | 'saved' | 'cancelled'> {
-  return sharePng(png, fileName, 'Vloertaal · voortgang');
+export async function shareKaart(png: Blob, fileName = 'vloertaal-voortgang.png', text?: string): Promise<'shared' | 'saved' | 'cancelled'> {
+  return sharePng(png, fileName, 'Vloertaal · voortgang', text);
 }
 

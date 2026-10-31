@@ -8,7 +8,7 @@ import { mixLessonFor } from '../content/review';
 import type { Lesson, Unit } from '../content/types';
 import { tokenize } from './answers';
 import { allMatches } from './matches';
-import { clipUrl, recordedIndexReady } from './audio';
+import { clipSrc, clipUrl, recordedIndexReady } from './audio';
 import { castVoices, type VoiceRef } from './voices';
 import { persistStorage } from './install';
 import { ensureLanguage, ensureRegionTexts, isLanguageLoaded, isRegionTextsLoaded, LANG_CODES, loadedPackUrls } from '../i18n';
@@ -408,10 +408,27 @@ export async function refreshOfflineShell(): Promise<void> {
 /**
  * Fetches the help-language files loaded on this visit once more, now through the service worker,
  * so its cache keeps them (they loaded before it was running) and the app opens offline next time.
+ * Also every app script this visit loaded (`resources`, the performance entries): the files a
+ * language's file imports (a chunk it shares with another file) are not named in the page, so the
+ * worker would not have them, and offline the language's file would not run.
  */
+export function warmUrls(own: (string | undefined)[], resources: string[], origin: string): string[] {
+  const out = new Set(own.filter((u): u is string => Boolean(u)));
+  for (const r of resources) {
+    try {
+      const u = new URL(r);
+      if (u.origin === origin && /\/assets\/[^/]+\.js$/.test(u.pathname)) out.add(u.href);
+    } catch {
+      // Not a URL: skip.
+    }
+  }
+  return [...out];
+}
+
 export function warmLanguageCache(): void {
   if (!navigator.serviceWorker?.controller) return;
-  for (const url of [...loadedPackUrls(), ...loadedRegionUrls(), loadedPicturesUrl()]) if (url) fetch(url).catch(() => {});
+  const resources = (performance.getEntriesByType?.('resource') ?? []).map((e) => e.name);
+  for (const url of warmUrls([...loadedPackUrls(), ...loadedRegionUrls(), loadedPicturesUrl()], resources, location.origin)) fetch(url).catch(() => {});
 }
 
 /**
@@ -422,7 +439,8 @@ export async function warmPhrases(voice: VoiceRef): Promise<void> {
   if (!navigator.serviceWorker?.controller || navigator.onLine === false) return;
   await recordedIndexReady();
   for (const p of clipPaths(phrasebookTexts(), [voice], clipUrl)) {
-    const url = abs(p);
+    // The address the clip plays from (with its version, src/lib/audio.ts clipSrc): the one the service worker keeps.
+    const url = abs(clipSrc(p));
     if (!(await caches.match(url).catch(() => undefined))) await fetch(url).catch(() => {});
   }
 }

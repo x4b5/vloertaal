@@ -26,11 +26,11 @@ const t: CultureTranslation = {
     'a.who': 'Kimin için?',
     'a.who.b': 'Hollanda’da veya Belçika’da çalışmaya yeni başlayan herkes için. Yardım dilleri: Arapça, Tigrinya dili, Farsça, Darice, Ukraynaca, Türkçe, Lehçe, Rumence, Bulgarca, İspanyolca, Portekizce, Fransızca ve Almanca.', // nieuw, nalezen (Nederland en België)
     'a.free': 'Gizliliğin',
-    'a.free.b': 'Hesaba ihtiyacın yok. İlerlemen sadece bu telefonda ya da bilgisayarda kaydedilir. Açıksa, uygulama derslerin kaç kez yapıldığını anonim olarak sayar: isim yok, takip yok. Uygulamada bir hata olursa, onu da sayar; senin hakkında hiçbir şey olmadan. Bunu “Ayarlar” bölümünde kapatabilirsin. Testin sonucu ve ses kaydın da sadece bu telefonda ya da bilgisayarda kalır. Bir öğretmen ya da koç sadece senin gösterdiğini görür, örneğin “Nasıl gittiğini göster” bölümündeki kartı. “Telefon dinlesin (deneme)” ayarını açarsan, Hollandacanı telefonun kendisi tanır. Bize veya başkalarına hiçbir şey gitmez.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) // nagelezen AI 31 okt (fout-zin nieuw, nalezen)
+    'a.free.b': 'Hesaba ihtiyacın yok. İlerlemen sadece bu telefonda ya da bilgisayarda kaydedilir. Açıksa, uygulama derslerin kaç kez ve kaç günde yapıldığını anonim olarak sayar: isim yok, takip yok. Uygulamada bir hata olursa, onu da sayar; senin hakkında hiçbir şey olmadan. Bunu “Ayarlar” bölümünde kapatabilirsin. Testin sonucu ve ses kaydın da sadece bu telefonda ya da bilgisayarda kalır. Bir öğretmen ya da koç sadece senin gösterdiğini görür, örneğin “Nasıl gittiğini göster” bölümündeki kartı. “Telefon dinlesin (deneme)” ayarını açarsan, Hollandacanı telefonun kendisi tanır. Bize veya başkalarına hiçbir şey gitmez.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) // nagelezen AI 31 okt (fout-zin nieuw, nalezen) // dagen-zin nieuw, nalezen
     'a.disclaimer': 'Bilmekte fayda var',
     'a.disclaimer.b': 'Vloertaal’daki ipuçları genel bilgidir, hukuki tavsiye değildir. Kurallar değişebilir; metinler en son Ekim 2026’da güncellendi. Kendi durumun için işverenine, bir sendikaya veya Juridisch Loket’e sor.',
     'a.contact': 'Soru mu, hata mı?',
-    'a.contact.b': 'Bir hata mı buldun, örneğin bir çeviride ya da bir ipucunda? Ya da bir soru sormak mı istiyorsun? hoi@vloertaal.nl adresine e-posta gönder. Ekran görüntüsü yardımcı olur. Derste üstteki "Melden" bayrağına da dokunabilirsin: o zaman e-postada nerede olduğun zaten yazar.',
+    'a.contact.b': 'Bir hata mı buldun, örneğin bir çeviride ya da bir ipucunda? Ya da bir soru sormak mı istiyorsun? hoi@vloertaal.nl adresine e-posta gönder. Ekran görüntüsü yardımcı olur.',
   },
 };
 

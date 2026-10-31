@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Conselho grátis sobre o teu contrato, o teu salário ou um despedimento.',
     whoInspection: 'Denuncia trabalho perigoso, salário baixo demais ou exploração. Podes fazê-lo de forma anónima.',
     whoFairwork: { m: 'Estás a ser explorado no trabalho, ou achas que sim.', f: 'Estás a ser explorada no trabalho, ou achas que sim.', x: 'Estás a ser explorado/a no trabalho, ou achas que sim.' },
+    who113: 'Pensas em pôr fim à vida, ou alguém te preocupa. Gratuito, dia e noite.', // nieuw, nalezen
+    whoVeiligThuis: 'Violência ou abuso em casa, contra ti ou contra outra pessoa. Gratuito, também sem dar o nome.', // nieuw, nalezen
     settings: 'Definições',
     helpLanguage: 'Língua de ajuda',
     resetProgress: 'Apagar o meu progresso',
@@ -150,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Outra hora',
     remindAdd: 'Adicionar ao meu calendário',
     remindAdded: 'Abre o ficheiro para o adicionar ao teu calendário.',
+    remindAddedAsk: 'Adicionado? Então vais vê-lo no teu calendário.', // nieuw, nalezen
     navAbout: 'Sobre',
     tagMeaning: 'Significado',
     tagPick: 'Escolher',
@@ -395,6 +398,9 @@ const lang: HelpLanguageSource = {
     checkMark: 'Marcar', // nieuw, nalezen
     checkVia: 'com teste', // nieuw, nalezen
     checkUndo: 'Fazer as lições mesmo assim', // nieuw, nalezen
+    shareInvite: 'Estou a aprender neerlandês para o meu trabalho com o Vloertaal. Grátis: {link}', // nieuw, nalezen
+    workTry: 'Experimenta hoje no trabalho', // nieuw, nalezen
+    saveFailed: 'O teu progresso não foi guardado. O telemóvel está cheio? Liberta algum espaço. Ou vai a Definições: «Guarda o teu progresso».', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

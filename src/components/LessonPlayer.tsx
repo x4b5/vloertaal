@@ -24,7 +24,7 @@ import { sayingQuestion } from '../content/sayings';
 import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { learnerCharacter, voiceFor } from '../lib/voices';
-import { nonLatinHelp, pickInsteadOfTyping, writingInput } from '../lib/writing';
+import { nonLatinHelp, pickInsteadOfTyping, typeAsPick, writingInput } from '../lib/writing';
 import { castFor, colleaguesOf, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { PlayName } from './SpeakButton';
@@ -66,6 +66,10 @@ export interface LessonResult {
   /** Listening exercises left out ("I can't listen now", or sound switched off midway): not in
    *  `total`, and the result says so ("2 skipped, not counted"). */
   skipped?: number;
+  /** The cards answered right with an answer the learner made (a word written, a sentence built,
+   *  a sentence said), for today's review (lib/spaced.ts applyReview). Left out when this learner
+   *  could not make one (another script without writing, or without sound): the old rule then. */
+  made?: string[];
 }
 
 function solution(ex: Exercise): { text: string; nl: boolean } {
@@ -436,6 +440,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const rtl = lang?.dir === 'rtl';
   const goRef = useRef<HTMLButtonElement>(null);
   const wordResults = useRef<Record<string, boolean>>(resumed ? { ...saved!.words } : {});
+  /** Cards answered right with a made answer (LessonResult.made). */
+  const made = useRef(new Set<string>());
   /** "Without sound" without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
   const soundOff = quiet || cantListen;
@@ -675,6 +681,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       if (isRuleExercise(ex)) wordResults.current[ex.step.id] = (wordResults.current[ex.step.id] ?? true) && answer.correct;
       // A built sentence: its sentence card in "Herhaal vandaag" (lib/spaced.ts addLessonSentences).
       if (ex.kind === 'build') wordResults.current[ex.sentence.id] = (wordResults.current[ex.sentence.id] ?? true) && answer.correct;
+      // Made by the learner, not picked: a word written, a sentence built.
+      if (answer.correct && ex.kind === 'type' && !typeAsPick(ex, lang)) made.current.add(ex.word.id);
+      if (answer.correct && ex.kind === 'build') made.current.add(ex.sentence.id);
       // A match or a sentence that counts as a mistake: the words the wrong taps were on go back
       // to the first box of the review cards too (one stray tap is forgiven, as in the grading).
       if (!answer.correct && answer.missed?.length) {
@@ -751,7 +760,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     finished.current = true;
     if (persist) clearSave(lesson.id);
     sounds.done();
-    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current });
+    // Without a way to make an answer (another script without writing, no sound), no `made`.
+    const canMake = !soundOff && !pickInsteadOfTyping(lang);
+    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current, ...(canMake ? { made: [...made.current] } : {}) });
   }
 
   function reset() {
@@ -773,7 +784,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   function next(queued?: number) {
     const coming = typeof queued === 'number' ? queued : 0;
     // A sentence said ("Zeg het", never graded): it gets a spoken-sentence card (lib/spaced.ts).
-    if (ex?.kind === 'speak' && index < initial.length && !isWord(ex.item)) wordResults.current[speakCardId(ex.item.id)] = true;
+    if (ex?.kind === 'speak' && index < initial.length && !isWord(ex.item)) {
+      wordResults.current[speakCardId(ex.item.id)] = true;
+      made.current.add(speakCardId(ex.item.id));
+    }
     reset();
     let i = index + 1;
     // Skip audio-only exercises when the learner can't listen right now, or when nothing on this
@@ -937,7 +951,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const repeatsLeft = index >= initial.length ? queue.length - index : 0;
   /** Type what you hear, shown as "hear and pick the written word" (lib/writing.ts), or as real
    *  dictation (`writing`), which offers "I can't write this yet" instead of "I can't listen". */
-  const typePick = ex.kind === 'type' && pickInsteadOfTyping(lang) && (ex.options?.length ?? 0) > 1;
+  const typePick = ex.kind === 'type' && typeAsPick(ex, lang);
   /** Dictation with the keyboard: the one exercise that needs Check (to say the word is done). */
   const typing = ex.kind === 'type' && !typePick && writingInput(lang) === 'keys';
 
@@ -981,7 +995,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         <span className="lesson-name" aria-hidden>
           <Bi text={gloss(lesson.titleId ?? lesson.id, lesson.title, lang)} />
         </span>
-        {/* "Melden" (on by default in the beta, src/lib/report.ts): mail this place (lesson, step, word) to hoi@vloertaal.nl. In Dutch. */}
+        {/* "Melden" (off by default, on for testers with ?test or the switch under Over, src/lib/report.ts): mail this place (lesson, step, word) to hoi@vloertaal.nl. In Dutch. */}
         {report && (
           <a
             className="icon-btn lesson-report"

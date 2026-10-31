@@ -52,8 +52,8 @@ function PartTag({ part, lang }: { part: ToetsPart | 'speak'; lang?: HelpLanguag
 /* ------------------------------------------------------------------ the card on the home */
 
 /**
- * The offer on the home, in the place of the block: "Wat ken je al? · 10 minuten" with [Doen] and
- * [Later] (and "Ander onderwerp" under it: three things to tap).
+ * The offer on the home, in the place of the block (after the first lesson): "Wat ken je al? ·
+ * 10 minuten" with [Doe de toets] (its words as in Settings) and [Later] (and "Ander onderwerp" under it: three things to tap).
  */
 export function ToetsOffer({ moment, lang, onDo, onLater }: { moment: ToetsMoment; lang?: HelpLanguage; onDo: () => void; onLater: () => void }) {
   const rtl = lang?.dir === 'rtl';
@@ -75,7 +75,7 @@ export function ToetsOffer({ moment, lang, onDo, onLater }: { moment: ToetsMomen
       <div className="toets-offer-actions">
         <button type="button" className="btn btn-go btn-primary toets-do" onClick={onDo}>
           <span className="toets-btn-label">
-            <NlPair nlFirst nl="Doen" nlClass="toets-btn-nl" text={ui('start', lang)} />
+            <NlPair nlFirst nl="Doe de toets" nlClass="toets-btn-nl" text={ui('toetsStart', lang)} />
           </span>
           <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
         </button>

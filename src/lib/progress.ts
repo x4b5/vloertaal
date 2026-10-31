@@ -239,11 +239,39 @@ export function loadProgress(): Progress {
   return emptyProgress;
 }
 
-export function saveProgress(p: Progress): void {
+/** Told once when saving fails (src/components/SaveFailedNote.tsx): the progress that was not saved. */
+const saveFailedListeners = new Set<(p: Progress) => void>();
+let saveFailedTold = false;
+/** A failure before anyone listened (the app's first save comes before the note is there). */
+let saveFailedEarly: Progress | null = null;
+
+export function onSaveFailed(fn: (p: Progress) => void): () => void {
+  saveFailedListeners.add(fn);
+  if (saveFailedEarly && !saveFailedTold) {
+    saveFailedTold = true;
+    fn(saveFailedEarly);
+  }
+  saveFailedEarly = null;
+  return () => saveFailedListeners.delete(fn);
+}
+
+/**
+ * Keeps the progress on this phone. True when it was kept. When it fails (a full phone, blocked
+ * storage, private mode) the app still works, but the progress won't survive a reload: the
+ * learner hears about it once per visit (onSaveFailed), with what to do.
+ */
+export function saveProgress(p: Progress): boolean {
   try {
     localStorage.setItem(KEY, JSON.stringify(p));
+    return true;
   } catch {
-    // Ignore: progress just won't survive a reload.
+    if (saveFailedTold) return false;
+    if (!saveFailedListeners.size) saveFailedEarly = p;
+    else {
+      saveFailedTold = true;
+      saveFailedListeners.forEach((fn) => fn(p));
+    }
+    return false;
   }
 }
 

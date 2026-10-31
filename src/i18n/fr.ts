@@ -54,6 +54,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'Conseils gratuits sur ton contrat, ton salaire ou un licenciement.',
     whoInspection: 'Signale un travail dangereux, un salaire trop bas ou de l’exploitation. Tu peux le faire de façon anonyme.',
     whoFairwork: 'On t’exploite au travail, ou tu penses que c’est le cas.',
+    who113: 'Tu penses à mettre fin à ta vie, ou tu t’inquiètes pour quelqu’un. Gratuit, jour et nuit.', // nieuw, nalezen
+    whoVeiligThuis: 'Violence ou maltraitance à la maison, contre toi ou contre une autre personne. Gratuit, possible aussi sans donner ton nom.', // nieuw, nalezen
     settings: 'Réglages',
     helpLanguage: 'Langue d’aide',
     resetProgress: 'Effacer ma progression',
@@ -150,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Autre heure',
     remindAdd: 'Ajouter à mon calendrier',
     remindAdded: 'Ouvre le fichier pour l’ajouter à ton calendrier.',
+    remindAddedAsk: 'Ajouté ? Alors tu le vois dans ton agenda.', // nieuw, nalezen
     navAbout: 'À propos',
     tagMeaning: 'Sens',
     tagPick: 'Choisir',
@@ -395,6 +398,9 @@ const lang: HelpLanguageSource = {
     checkMark: 'Cocher', // nieuw, nalezen
     checkVia: 'par test', // nieuw, nalezen
     checkUndo: 'Faire quand même les leçons', // nieuw, nalezen
+    shareInvite: 'J’apprends le néerlandais pour mon travail avec Vloertaal. Gratuit : {link}', // nieuw, nalezen
+    workTry: 'Essaie aujourd’hui au travail', // nieuw, nalezen
+    saveFailed: 'Ta progression n’a pas été enregistrée. Ton téléphone est plein ? Libère un peu de place. Ou va dans Réglages : « Garde ta progression ».', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
