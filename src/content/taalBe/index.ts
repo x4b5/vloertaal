@@ -61,8 +61,7 @@ export const BE_TAAL_TODO: readonly string[] = [
   // Agent A: werk zoeken, contract, stage en verder leren
   'u.contract', 'u.stage', 'u.grow',
 
-  // Agent B: loon, papieren, geld en online
-  'u.money', 'u.data', 'u.ai',
+  // Agent B: loon, papieren, geld en online (af)
 
   // Agent C: rechten, verlof en ziekte, werk kwijt, uitbuiting
   'u.rights', 'u.leave', 'u.lost', 'u.exploit',
