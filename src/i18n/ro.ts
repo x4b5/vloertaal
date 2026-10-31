@@ -395,6 +395,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'Bifează', // nieuw, nalezen
     checkVia: 'prin verificare', // nieuw, nalezen
     checkUndo: 'Totuși fă lecțiile', // nieuw, nalezen
+    workTry: 'Încearcă azi la muncă', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -395,6 +395,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'Odhacz', // nieuw, nalezen
     checkVia: 'przez test', // nieuw, nalezen
     checkUndo: 'Jednak zrób lekcje', // nieuw, nalezen
+    workTry: 'Spróbuj dziś w pracy', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -395,6 +395,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'نشانی کردن', // nieuw, nalezen
     checkVia: 'با آزمون', // nieuw, nalezen
     checkUndo: 'با این هم درس‌ها را انجام دهید', // nieuw, nalezen
+    workTry: 'امروز در کار امتحانش کن', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

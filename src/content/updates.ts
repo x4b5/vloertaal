@@ -25,6 +25,7 @@ export const UPDATES: Update[] = [
       'Nieuw bij Alle onderwerpen: een zoekbalk. Typ een woord, in het Nederlands of in je eigen taal, en je ziet de onderwerpen waar het in staat. Bijvoorbeeld "ziek" of "helm".',
       'Nieuw bij Over: Waarom Vloertaal? En "Wat is er nieuw?": hier zie je wat er in de app veranderd is.',
       'Werk je in België (Vlaanderen)? Kies dan bij de start, of later bij Instellingen, "België". In het spoor Werkregels krijg je dan de regels van België: alle onderwerpen, met Vlaamse woorden (loonbrief, interimkantoor, ziekenfonds, RVA). Dit is nieuw: de Belgische lessen zijn nog niet nagekeken door een expert. Zie je een fout? Mail naar hoi@vloertaal.nl.',
+      'Taal: bij "Maak het gesprek af" zie je de vertaling pas na je antwoord. In de eerste onderwerpen hoef je niet te typen: je hoort een woord en kiest het. En na een les staat soms een zin om vandaag op je werk te proberen.',
     ],
   },
   {

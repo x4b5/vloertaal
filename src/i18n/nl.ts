@@ -450,6 +450,7 @@ export const uiNl: Record<UiKey, UiText> = {
   noticeTitle: 'Er is iets veranderd',
   noticeMore: 'Lees meer',
   noticeOk: 'Oké',
+  workTry: 'Probeer het vandaag op je werk',
 };
 
 const lang: HelpLanguageSource = {

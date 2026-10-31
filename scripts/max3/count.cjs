@@ -441,6 +441,10 @@ function defineStates(LANG) {
   add('after:result-review', shot('result&review=1'));
   // The first lesson's result, once: Continue and the row to the emergency phrases.
   add('after:result-phrases', shot('result&phrases=1'));
+  // "Probeer het vandaag op je werk" (src/components/WorkTry.tsx): a sentence with a speaker, no button.
+  add('after:result-worktry', shot('result&worktry=l.arrive'), null, { expect: '.result-worktry' });
+  // "Type what you hear" in the first units (PROGRESSION.type): hear and pick, for a Latin script too.
+  add('lesson:hear-pick-first', shot('type&pick=1'));
   add('after:streak', shot('streak&n=7'));
   add('after:streak-first', shot('streak&n=1'));
   // The fullest milestone: "Wist je dat?" (src/content/facts.ts) with a record and a free day.

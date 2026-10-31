@@ -490,6 +490,8 @@ export const uiEn = {
   noticeTitle: 'Something has changed',
   noticeMore: 'Read more',
   noticeOk: 'OK',
+  /* "Probeer het vandaag op je werk": one sentence of the lesson on its result (src/components/WorkTry.tsx). */
+  workTry: 'Try it at work today',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

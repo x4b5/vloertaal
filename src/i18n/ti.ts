@@ -396,6 +396,7 @@ const lang: HelpLanguageSource = {
     checkMark: { m: 'ምልክት ግበር', f: 'ምልክት ግበሪ', x: 'ምልክት ግበሩ' }, // nieuw, nalezen
     checkVia: 'ብፈተና', // nieuw, nalezen
     checkUndo: { m: 'ግን ነቶም ትምህርትታት ግበሮም', f: 'ግን ነቶም ትምህርትታት ግበርዮም', x: 'ግን ነቶም ትምህርትታት ግበሩዎም' }, // nieuw, nalezen
+    workTry: { m: 'ሎሚ ኣብ ስራሕካ ፈትኖ', f: 'ሎሚ ኣብ ስራሕኪ ፈትንዮ', x: 'ሎሚ ኣብ ስራሕ ፈትንዎ' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

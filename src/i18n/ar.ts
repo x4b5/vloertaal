@@ -395,6 +395,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'تعليم كمنتهٍ', // nieuw, nalezen
     checkVia: 'عبر الاختبار', // nieuw, nalezen
     checkUndo: { m: 'اعمل الدروس رغم ذلك', f: 'اعملي الدروس رغم ذلك', x: 'القيام بالدروس رغم ذلك' }, // nieuw, nalezen
+    workTry: { m: 'جرّبها اليوم في عملك', f: 'جرّبيها اليوم في عملك', x: 'للتجربة اليوم في العمل' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

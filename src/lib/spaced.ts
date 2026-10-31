@@ -8,6 +8,7 @@ import { modelQuestion } from '../content/regels/zegHet';
 import type { Dialogue, Lesson, Sentence, Unit, Word } from '../content/types';
 import { dayKey } from './progress';
 import type { Track } from './track';
+import { typable } from './typable';
 
 /**
  * "Herhaal vandaag": spaced repetition with a card box (Leitner). Every word the learner met
@@ -72,16 +73,44 @@ export function addLessonWords(cards: Cards, words: Word[], results: Record<stri
 }
 
 /**
+ * From this box on, a card moves up only after an answer the learner made: a word written (not
+ * picked from three), a sentence built or said. Recognising it (one of three, a third of the
+ * time a lucky guess) is practice without moving up: the card stays in its box and comes back
+ * after that box's days again.
+ */
+export const MADE_FROM_BOX = 3;
+
+/**
+ * Must this card's answer be made to move up from MADE_FROM_BOX? A word that can be written
+ * (typable): yes. A word that can't (too long, a capital, "BSN"), never gets a made question,
+ * so it moves up as before; so does a rules question (no word). Sentence cards are always made.
+ */
+export function needsMade(id: string): boolean {
+  const word = wordById().get(id);
+  return word ? typable(word) : isSentenceCard(id);
+}
+
+/**
  * After a daily review: right moves a card up a box, wrong sends it back to box 1. A word that was
  * not due yet (a top-up, dailyWordIds) keeps its box when right: its date moves one day on, so a
  * strong word is not sent away for a month by an early answer.
+ * `made` (the language course, LessonPlayer's LessonResult.made): the cards answered with an
+ * answer the learner made. With it, a card from MADE_FROM_BOX on that needsMade and was only
+ * recognised keeps its box (and its days). Without it (the rules track, or a learner who could
+ * not make an answer: another script without writing, no sound) every right answer moves up, as
+ * before. The saved cards keep their form: boxes already reached stay.
  */
-export function applyReview(cards: Cards, results: Record<string, boolean>, today: string): Cards {
+export function applyReview(cards: Cards, results: Record<string, boolean>, today: string, made?: readonly string[]): Cards {
   const next = { ...cards };
+  const madeSet = made ? new Set(made) : undefined;
   for (const [id, right] of Object.entries(results)) {
     const card = next[id] ?? { box: 1, due: today };
     if (right && card.due > today) {
       next[id] = { box: card.box, due: addDays(card.due, 1) };
+      continue;
+    }
+    if (right && madeSet && card.box >= MADE_FROM_BOX && !madeSet.has(id) && needsMade(id)) {
+      next[id] = { box: card.box, due: addDays(today, INTERVALS[card.box - 1]) };
       continue;
     }
     const box = right ? Math.min(card.box + 1, MAX_BOX) : 1;

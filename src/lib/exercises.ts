@@ -13,7 +13,8 @@ import { createRng, sample, shuffle } from './random';
 import { hasPicture, looksAlike, samePicture } from './wordPicture';
 import { type SpeakItem, withSpeaking } from './speaking';
 import { nearSynonyms } from '../content/synonyms';
-import { DAILY_ID } from './spaced';
+import { DAILY_ID, MADE_FROM_BOX } from './spaced';
+import { typable } from './typable';
 import { regionTaalLessons } from '../content/regio';
 import { type LessonSaying, sayingForLesson, sayingQuestion } from '../content/sayings';
 
@@ -29,8 +30,9 @@ export type Exercise =
   | { kind: 'build'; sentence: Sentence; tiles: string[]; salt?: number; audio?: true }
   /** Type what you hear. `options` (the word and two others): for a learner who reads only a
    *  non-Latin script, the same exercise becomes "hear and pick the written word" (see
-   *  lib/writing.ts); without them it is always typed. */
-  | { kind: 'type'; word: Word; options?: Word[] }
+   *  lib/writing.ts); without them it is always typed. `pick` (the first units, PROGRESSION.type):
+   *  "hear and pick the written word" for every learner, not only for another script. */
+  | { kind: 'type'; word: Word; options?: Word[]; pick?: true }
   /** `reverse` (later units): the reply is given and the learner picks the colleague's question;
    *  `options` are then questions. */
   | { kind: 'chat'; dialogue: Dialogue; options: ChatLine[]; reverse?: true }
@@ -583,6 +585,12 @@ export function planReviewKinds(boxes: readonly number[], opts: { quiet?: boolea
     const all = [...new Set([0, 1, 2, 3].map((k) => reviewKind(i + k, box, opts.quiet, opts.offset)))];
     // A word not fair to type (typable) gets one of its other directions.
     const own = opts.noType?.[i] && all.some((k) => k !== 'type') ? all.filter((k) => k !== 'type') : all;
+    // From box MADE_FROM_BOX on a card moves up only after an answer the learner makes
+    // (lib/spaced.ts applyReview): such a word is written when it can be, under the cap.
+    if (box >= MADE_FROM_BOX && own.includes('type') && count.type < cap) {
+      count.type++;
+      return 'type';
+    }
     // Under the cap first, then the least used; the rotation breaks ties.
     const pick = own.reduce((best, k) => {
       const score = (x: ReviewKind) => (count[x] >= cap ? 1000 : 0) + count[x];
@@ -608,17 +616,8 @@ function readableDutch(word: Word, lesson: Lesson, rng: () => number, nonLatin: 
   return { kind: 'meaning', word, options: options(word, lesson, rng) };
 }
 
-/**
- * A word that is fair to type from hearing: at most TYPE_MAX_LETTERS letters (the article not
- * counted), no capitals ("BSN", "DigiD", a name), and no hyphen or digit ("e-sigaret"): the
- * letter tiles (lib/letters.ts) spell letters only, so they would teach "esigaret". Other words
- * are heard and picked instead.
- */
-export const TYPE_MAX_LETTERS = 12;
-export function typable(word: Word): boolean {
-  const bare = word.nl.trim().replace(/^(de|het|een)\s+/i, '');
-  return !/\p{Lu}/u.test(word.nl) && !/[-\d]/.test(word.nl) && bare.replace(/[^\p{L}]/gu, '').length <= TYPE_MAX_LETTERS;
-}
+// A word fair to type from hearing (lib/typable.ts; today's review uses it too, lib/spaced.ts).
+export { TYPE_MAX_LETTERS, typable } from './typable';
 
 function reviewExercise(kind: ReviewKind, word: Word, lesson: Lesson, rng: () => number, nonLatin = false, quiet = false): Exercise {
   // A long word or one with capitals is not typed: heard and picked instead.
@@ -754,9 +753,12 @@ export function buildRuleLesson(lesson: Lesson, opts: { seed?: number; review?: 
  *   sentence is played (never without sound; the tiles keep their own speakers);
  * - `reverseChat`: one chat is the other way round: the reply is given and the learner picks the
  *   colleague's question: in a unit's later lessons the chat of the lesson before it, in the
- *   unit's mixed review its last chat.
+ *   unit's mixed review its last chat;
+ * - `type`: "type what you hear" is written (keyboard or letter tiles, Settings). In the units
+ *   before it (their lessons and mixed reviews) it is "hear and pick the written word" for every
+ *   learner: no writing in the first topics (many learners read little).
  */
-export const PROGRESSION = { pickDutch: 4, audioBuild: 7, reverseChat: 10 } as const;
+export const PROGRESSION = { pickDutch: 4, type: 4, audioBuild: 7, reverseChat: 10 } as const;
 
 /** The 0-based place of the lesson's unit on the learner's path (-1 outside it, e.g. today's review). */
 export function unitIndexOf(lesson: Lesson, sector?: SectorChoice, track: Track = trackOfId(lesson.id)): number {
@@ -830,6 +832,10 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   const unitAt = mix ? -1 : unitIndexOf(lesson, opts.sector);
   const mixTurn = mix && !daily && !lesson.repeat && dialogues.length > 1 && unitIndexOf(lesson, opts.sector) >= PROGRESSION.reverseChat;
   const later = (from: number) => unitAt >= from;
+  // The first units: no writing (PROGRESSION.type), in a lesson and in its unit's mixed review.
+  const ownUnit = daily ? -1 : mix ? unitIndexOf(lesson, opts.sector) : unitAt;
+  const noWriting = ownUnit >= 0 && ownUnit < PROGRESSION.type;
+  const unwritten = (xs: Exercise[]): Exercise[] => (noWriting ? xs.map((e) => (e.kind === 'type' && (e.options?.length ?? 0) > 1 ? { ...e, pick: true } : e)) : xs);
   /** The word asked "the other way round" after the new words (pick the Dutch), if any. */
   let pickedDutch: string | undefined;
   if (!opts.review && !mix) {
@@ -962,8 +968,8 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     : { kind: 'listen', word: t1, options: options(t1, lesson, pickRng) });
   // Speaking practice (Settings, on by default; never "Without sound"): one "say it" near the
   // end, placed after the rest is built so the other exercises stay the same with or without it.
-  if (opts.speak && !opts.quiet) return withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);
-  return out;
+  if (opts.speak && !opts.quiet) return unwritten(withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0));
+  return unwritten(out);
 }
 
 /**

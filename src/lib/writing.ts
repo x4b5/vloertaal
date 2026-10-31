@@ -43,6 +43,17 @@ export function pickInsteadOfTyping(lang?: HelpLanguage, writing = wantsWriting(
 }
 
 /**
+ * This "type what you hear" shows as "hear and pick the written word": for a learner who reads
+ * another script (pickInsteadOfTyping), and in the first units for everyone (`pick`,
+ * lib/exercises.ts PROGRESSION.type), unless the learner chose "Ik wil ook leren schrijven".
+ * Only with written words to pick from.
+ */
+export function typeAsPick(ex: { options?: readonly unknown[]; pick?: true }, lang?: HelpLanguage, writing = wantsWriting()): boolean {
+  if ((ex.options?.length ?? 0) < 2) return false;
+  return ex.pick ? !writing : pickInsteadOfTyping(lang, writing);
+}
+
+/**
  * How dictation is written: with letter tiles (three at a time, components/Exercises.tsx) or
  * with the phone's keyboard (a text field and Check). The default follows the script of the help
  * language: letter tiles for another script, the keyboard for the Latin one. The choice lives in
