@@ -601,11 +601,14 @@ export default {
     </g>
   ),
 
-  // "het compliment": the compliment — Henk gives Amina a thumbs up; she smiles, proud, with sparkles.
+  // "het compliment": the compliment — Henk says something nice (a star in his bubble); Amina
+  // smiles, proud, with sparkles. (No thumbs-up: that gesture is rude in some cultures.)
   'w.compliment': () => (
     <g>
-      <Bust who="henk" x={28} y={122} scale={0.52} expr="pleased" bold />
-      <Hand pose="thumb" x={56} y={98} rotate={8} scale={0.66} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
+      <Bust who="henk" x={28} y={122} scale={0.52} expr="pleased" talk bold />
+      <Bubble x={8} y={16} w={46} h={34} tail="left">
+        <Sparkle x={31} y={33} r={11} />
+      </Bubble>
       <Bust who="amina" x={88} y={122} scale={0.6} emotion="proud" tilt={-4} bold flip />
       <Sparkle x={66} y={24} r={8} />
       <Sparkle x={112} y={30} r={6} />

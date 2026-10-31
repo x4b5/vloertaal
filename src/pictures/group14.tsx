@@ -1,7 +1,7 @@
 import type { JSX, ReactNode } from 'react';
 import { CastHead, type CharacterId } from '../components/Characters';
 import type { Expr } from '../components/Faces';
-import { Arrow, Cross, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, Cross, CurveArrow, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle } from './kit';
 
 /** Word pictures, group 14 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
@@ -278,7 +278,9 @@ export default {
       <Motion x={52} y={48} dir={200} spread={50} n={3} len={8} gap={38} color={PAL.line} width={3.4} />
       {/* Handle */}
       <path d="M73 69L98 96" stroke={PAL.slate} strokeWidth="9" strokeLinecap="round" />
-      <path d="M80 77L100 98" stroke={PAL.ink} strokeWidth="13" strokeLinecap="round" />
+      {/* A red grip (an ink-black grip was lost on the dark card) */}
+      <path d="M80 77L100 98" stroke={PAL.red} strokeWidth="13" strokeLinecap="round" />
+      <path d="M84 77L102 96" stroke={PAL.redShade} strokeWidth="4" strokeLinecap="round" />
       {/* Lens and rim */}
       <circle cx="54" cy="50" r="28" fill="#e3f5ff" />
       <circle cx="54" cy="50" r="28" fill="none" stroke={PAL.slate} strokeWidth="8" />
@@ -407,20 +409,29 @@ export default {
     </g>
   ),
 
-  // "afkeuren": to reject — the product gets a red cross and a thumbs down: it is not good
+  // "afkeuren": to reject — Amina's hand takes a product off the line: it gets a red cross and
+  // goes into the red crate for rejects (no thumbs down: a neutral cross and a crate)
   'w.afkeuren': () => (
     <g>
-      <Ground cx={42} cy={106} rx={30} ry={4} />
-      {/* Product box (blue retail box with label) */}
-      <path d="M16 46L26 38H66L56 46Z" fill={PAL.blueLight} />
-      <path d="M56 46L66 38V96L56 104Z" fill={PAL.blueShade} />
-      <rect x="16" y="46" width="40" height="58" rx="2" fill={PAL.blue} />
-      <rect x="22" y="76" width="28" height="18" rx="2" fill={PAL.white} />
-      <path d="M26 81V89M29 81V89M33 81V89M36 81V89M40 81V89M44 81V89M46 81V89" stroke={PAL.ink} strokeWidth="1.6" />
-      <circle cx="36" cy="60" r="7" fill={PAL.yellow} />
-      <Cross x={52} y={40} r={16} />
-      {/* Thumbs down */}
-      <Hand pose="thumb" x={92} y={18} rotate={180} scale={1.1} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <Ground cx={84} cy={106} rx={28} ry={4} />
+      {/* The red crate for rejects */}
+      <path d="M62 72H108L104 104H66Z" fill={PAL.red} />
+      <path d="M95 72H108L104 104H93Z" fill={PAL.redShade} />
+      <path d="M71 84H97M72 94H96" stroke={PAL.redShade} strokeWidth="3" strokeLinecap="round" />
+      <rect x="59" y="66" width="52" height="9" rx="3" fill={PAL.redShade} />
+      <rect x="59" y="66" width="40" height="3" rx="1.5" fill={PAL.redLight} opacity=".7" />
+      {/* The product (blue retail box with its label), lifted off and tilted towards the crate */}
+      <g transform="rotate(-12 36 60)">
+        <path d="M16 40L24 33H56L48 40Z" fill={PAL.blueLight} />
+        <path d="M48 40L56 33V78L48 86Z" fill={PAL.blueShade} />
+        <rect x="16" y="40" width="32" height="46" rx="2" fill={PAL.blue} />
+        <rect x="20" y="64" width="24" height="15" rx="2" fill={PAL.white} />
+        <path d="M23 68V75M26 68V75M29.5 68V75M32.5 68V75M36 68V75M39.5 68V75M41.5 68V75" stroke={PAL.ink} strokeWidth="1.5" />
+        <circle cx="32" cy="52" r="6" fill={PAL.yellow} />
+      </g>
+      <Hand pose="hold" x={2} y={76} rotate={78} scale={0.74} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <CurveArrow from={[56, 28]} to={[88, 58]} bend={-14} color={PAL.sky} width={6} head={11} />
+      <Cross x={22} y={30} r={14} />
     </g>
   ),
 

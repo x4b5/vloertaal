@@ -470,27 +470,16 @@ export default {
     </g>
   ),
 
-  // "goed": good — a big thumbs up, with sparkles.
+  // "goed": good — Amina, glad, beside a big green tick, with sparkles (no thumbs-up: that
+  // gesture is rude in some of the learners' cultures).
   'w.kl.goed': () => (
     <g>
-      {/* Sleeve and cuff */}
-      <rect x="44" y="96" width="40" height="30" rx="6" fill={PAL.purple} />
-      <rect x="43" y="93" width="42" height="9" rx="4.5" fill={PAL.purpleShade} />
-      {/* The fist seen from the side, thumb straight up */}
-      <Shade color={SKIN.amina[1]} opacity={0.85} at={[92, 70, 12, 40]}>
-        <g fill={SKIN.amina[0]}>
-          <rect x="52" y="14" width="17" height="50" rx="8.5" transform="rotate(-6 60 60)" />
-          <rect x="40" y="50" width="46" height="46" rx="13" />
-          <rect x="28" y="50" width="34" height="13" rx="6.5" />
-          <rect x="26" y="61" width="34" height="12" rx="6" />
-          <rect x="27" y="72" width="32" height="12" rx="6" />
-          <rect x="30" y="83" width="28" height="11" rx="5.5" />
-        </g>
-      </Shade>
-      <path d="M34 62.5H56M33 73.5H55M35 84H54" stroke={SKIN.amina[1]} strokeWidth="1.8" strokeLinecap="round" />
-      <Shine d="M55 46Q54 32 57 22" width={3} opacity={0.45} />
-      <Sparkle x={92} y={30} r={10} />
-      <Sparkle x={24} y={30} r={6} />
+      <Bust who="amina" x={42} y={124} scale={0.72} expr="joy" squint bold />
+      <circle cx="91" cy="50" r="21" fill={PAL.okShade} transform="translate(0 3)" />
+      <circle cx="91" cy="50" r="21" fill={PAL.ok} />
+      <path d="M81 50L88 58L101 42" fill="none" stroke={PAL.white} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+      <Sparkle x={104} y={18} r={8} />
+      <Sparkle x={20} y={26} r={6} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;

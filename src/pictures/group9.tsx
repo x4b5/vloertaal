@@ -149,6 +149,9 @@ function Pot({ cx, base, w = 30, h = 20, color = PAL.mist, shade = PAL.steel }: 
   );
 }
 
+/** The scammer's grey hoodie, one step darker than steel. */
+const HOOD_SHADE = '#76828c';
+
 export default {
   // "het fietspad": the bike path — a red Dutch bike path running into the distance with a
   // white bike painted on it; a round blue bike sign beside it
@@ -368,12 +371,13 @@ export default {
   // fishing line: he is fishing for your bank card
   'w.oplichter': () => (
     <g>
-      {/* Hooded figure */}
-      <path d="M8 118C8 92 22 80 40 80C58 80 72 92 72 118Z" fill={PAL.slate} />
-      <path d="M58 86C66 92 72 102 72 118H60C62 104 61 94 58 86Z" fill={PAL.slateDark} opacity=".6" />
-      <path d="M33 86L40 98L47 86" fill="none" stroke={PAL.slateDark} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Hooded figure, in a grey hoodie: a slate one was lost on the dark card; the face stays dark */}
+      <path d="M8 118C8 92 22 80 40 80C58 80 72 92 72 118Z" fill={PAL.steel} />
+      <path d="M58 86C66 92 72 102 72 118H60C62 104 61 94 58 86Z" fill={HOOD_SHADE} />
+      <path d="M33 86L40 98L47 86" fill="none" stroke={HOOD_SHADE} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M36 96V108M44 96V108" stroke={PAL.mist} strokeWidth="2" strokeLinecap="round" />
-      <path d="M12 86C10 52 22 26 40 26C58 26 70 52 68 86Q54 92 40 92Q26 92 12 86Z" fill={PAL.slate} />
+      <path d="M12 86C10 52 22 26 40 26C58 26 70 52 68 86Q54 92 40 92Q26 92 12 86Z" fill={PAL.steel} />
+      <path d="M56 36C64 48 68 66 68 86Q62 89 56 90C60 70 60 50 56 36Z" fill={HOOD_SHADE} />
       <ellipse cx="40" cy="62" rx="17" ry="21" fill={PAL.slateDark} />
       <path d="M26 72Q40 86 54 72Q52 84 40 84Q28 84 26 72Z" fill={SKIN.henk[1]} opacity=".7" />
       <Shine d="M18 60Q19 40 32 31" width={3} opacity={0.3} />

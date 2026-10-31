@@ -379,28 +379,30 @@ export default {
     </g>
   ),
 
-  // "zwanger": pregnant — Amina, a hand laid on her round belly
+  // "zwanger": pregnant — Amina side on, both hands round her big round belly (a bigger bump
+  // than before, a hand on top and one under it, and a small heart)
   'w.zwanger': () => (
     <g>
-      <Ground cy={106} rx={28} ry={4} />
+      <Ground cy={106} rx={30} ry={4} />
       {/* Legs and shoes */}
-      <rect x="47" y="90" width="9" height="16" rx="3" fill={TROUSERS} />
-      <rect x="60" y="90" width="9" height="16" rx="3" fill={TROUSERS} />
-      <ellipse cx="50" cy="105" rx="7" ry="3.6" fill={PAL.slateDark} />
-      <ellipse cx="66" cy="105" rx="7" ry="3.6" fill={PAL.slateDark} />
-      {/* Long top over the round belly, the bump to the right */}
-      <Shade color={PAL.greenShade} opacity={1} at={[100, 86, 9, 24]}>
-        <path d="M46 50H68Q74 50 75 57Q96 64 96 82Q95 97 78 98H46Q41 98 41 92V58Q41 50 46 50Z" fill={PAL.green} />
+      <rect x="45" y="90" width="9" height="16" rx="3" fill={TROUSERS} />
+      <rect x="57" y="90" width="9" height="16" rx="3" fill={TROUSERS} />
+      <ellipse cx="48" cy="105" rx="7" ry="3.6" fill={PAL.slateDark} />
+      <ellipse cx="63" cy="105" rx="7" ry="3.6" fill={PAL.slateDark} />
+      {/* Long top over the big round belly: one shape, the bump well to the front */}
+      <Shade color={PAL.greenShade} opacity={1} at={[102, 86, 12, 26]}>
+        <path d="M44 50H66Q72 50 73 57Q97 62 97 80Q97 98 76 98H44Q39 98 39 92V58Q39 50 44 50Z" fill={PAL.green} />
       </Shade>
-      <path d="M76 60Q92 66 92 82" fill="none" stroke={PAL.white} strokeWidth="3.4" strokeLinecap="round" opacity=".4" />
-      <path d="M48 50L60 58L72 50" fill={PAL.purple} />
-      {/* Her arms: one hand on top of the belly, one under it */}
-      <path d="M46 58Q44 76 66 72" fill="none" stroke="#2f8f3e" strokeWidth="8" strokeLinecap="round" />
-      <ellipse cx="73" cy="71" rx="8" ry="5.4" fill={SKIN.amina[0]} transform="rotate(-14 73 71)" />
-      <path d="M72 69.4H79M72 73H78" stroke={SKIN.amina[1]} strokeWidth="1.3" strokeLinecap="round" />
-      <path d="M44 66Q44 92 70 92" fill="none" stroke="#23722f" strokeWidth="8" strokeLinecap="round" />
-      <ellipse cx="77" cy="91" rx="8" ry="5.4" fill={SKIN.amina[1]} transform="rotate(-8 77 91)" />
-      <Head who="amina" x={59} y={52} s={0.48} expr="pleased" />
+      <path d="M74 62Q90 66 92 80" fill="none" stroke={PAL.white} strokeWidth="3.6" strokeLinecap="round" opacity=".45" />
+      <path d="M46 50L58 58L70 50" fill={PAL.purple} />
+      {/* Her arm round the top of the belly, the other hand under it */}
+      <path d="M44 58Q42 74 66 68" fill="none" stroke={PAL.greenShade} strokeWidth="8" strokeLinecap="round" />
+      <ellipse cx="72" cy="66" rx="8" ry="5.4" fill={SKIN.amina[0]} transform="rotate(-18 72 66)" />
+      <path d="M71 64.4H78M71 68H77" stroke={SKIN.amina[1]} strokeWidth="1.3" strokeLinecap="round" />
+      <ellipse cx="82" cy="97" rx="8" ry="5" fill={SKIN.amina[0]} transform="rotate(12 82 97)" />
+      <Head who="amina" x={57} y={52} s={0.48} expr="pleased" />
+      {/* A small heart */}
+      <path d="M104 40C104 34 96 32 96 38C96 32 88 34 88 40C88 46 96 50 96 52C96 50 104 46 104 40Z" fill={PAL.red} />
     </g>
   ),
 
@@ -642,11 +644,11 @@ export default {
   'w.sparen': () => (
     <g>
       <Ground cy={106} rx={34} ry={4} />
+      {/* The glass jar: an opaque light tint (a see-through jar turned dark grey on the dark card) */}
+      <path d="M30 44Q26 48 26 56V96Q26 104 34 104H82Q90 104 90 96V56Q90 48 86 44Z" fill={TINT} />
       {/* The coins inside, seen through the glass */}
       {[98, 92, 86, 80, 74].map((y, i) => <FlatCoin key={y} x={56 + (i % 2 ? 2 : -2)} y={y} rx={22} />)}
       <FlatCoin x={48} y={68} rx={12} />
-      {/* The glass jar */}
-      <path d="M30 44Q26 48 26 56V96Q26 104 34 104H82Q90 104 90 96V56Q90 48 86 44Z" fill={PAL.ice} opacity=".38" />
       <path d="M80 44Q90 48 90 56V96Q90 104 82 104H78V44Z" fill={PAL.sky} opacity=".2" />
       <Shine d="M32 60V92" opacity={0.85} width={4} />
       {/* The lid with a slot */}
@@ -732,16 +734,25 @@ export default {
     </g>
   ),
 
-  // "de rij": the row (of plants) — one long row of plants going back, along its path
+  // "de rij": the row (of plants) — four equal tomato plants standing in one straight line on
+  // their gutter, side on (the receding row read as two triangles at card size; "het gewas" is
+  // plants of different sizes in a mound of soil)
   'w.rij': () => (
     <g>
-      {/* The path along the row */}
-      <path d="M62 110L84 28H90L106 110Z" fill={PAL.mist} />
-      {/* The row: a strip of soil, the plants getting smaller towards the back */}
-      <path d="M12 110L72 28H82L58 110Z" fill={PAL.brown} />
-      {[0.97, 0.9, 0.8, 0.64, 0.38, 0].map((t) => (
-        <Plant key={t} x={36 + t * 40} y={104 - t * 72} h={46 * (1 - 0.78 * t)} />
+      <Ground cy={106} rx={52} ry={4} />
+      {/* Gutter on two legs */}
+      <rect x="22" y="92" width="6" height="12" rx="2" fill={PAL.steel} />
+      <rect x="92" y="92" width="6" height="12" rx="2" fill={PAL.steel} />
+      <rect x="8" y="84" width="104" height="10" rx="3" fill={PAL.steel} />
+      <rect x="8" y="84" width="104" height="3.5" rx="1.75" fill={PAL.mist} />
+      {[22, 46, 70, 94].map((x) => (
+        <g key={x}>
+          <Plant x={x} y={80} h={46} />
+          <rect x={x - 7} y={76} width="14" height="9" rx="2" fill={PAL.paper} />
+          <rect x={x - 7} y={82} width="14" height="3" rx="1.5" fill={PAL.paperShade} />
+        </g>
       ))}
+      {[22, 46, 70, 94].map((x) => <Tomato key={x} x={x + 5} y={62} r={4.8} />)}
     </g>
   ),
 
