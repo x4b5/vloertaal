@@ -5,7 +5,7 @@ import { THEMES } from '../content/themes';
 import { KUN_REGELS, KUN_TAAL, type KunOnderwerp } from '../content/kunJeNu';
 import { languageNav } from './langPages';
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
-import { appLink, COACH_PATH } from './paths';
+import { appLink, ASK_PATH, COACH_PATH } from './paths';
 import { sectorNav } from './sectorPages';
 import { TOPIC_LINKS } from './topicPages';
 
@@ -89,6 +89,33 @@ ${sectorNav()}
 <h2>In de eigen taal van je leerlingen</h2>
 ${languageNav()}
 <p><a href="/intro/">Waarom Vloertaal?</a> · <a href="/nieuw/">Wat is er nieuw?</a></p>
+</footer>`,
+  );
+}
+
+/** The blocks of the short page, by id, in the order of the professionals page. */
+export const ASK_SECTION_IDS = ['p.what', 'p.story'] as const;
+
+/**
+ * vloertaal.nl/meekijken: the short page a poster's QR code points to. Only the question (the
+ * lead), what Vloertaal is and why, from the same texts as /voor-begeleiders, so the two cannot
+ * drift apart; a link leads to the full page. Not for search results (noindex, not in the
+ * sitemap): /voor-begeleiders is the page that should be found.
+ */
+export function askPage(): string {
+  const sections = proSections.filter((s) => (ASK_SECTION_IDS as readonly string[]).includes(s.id));
+  return plainPage(
+    {
+      path: ASK_PATH, lang: 'nl', ogLocale: 'nl_NL', noindex: true,
+      title: 'Zou je willen meekijken? | Vloertaal',
+      description: 'Vloertaal is een gratis oefenapp voor het werk, nog in ontwikkeling. Zou je willen meekijken?',
+    },
+    `<h1>Zou je willen meekijken?</h1>
+<p class="lead">${text(PRO_LEAD)}</p>
+<a class="cta" href="/">Open Vloertaal →</a>
+${sections.map(section).join('\n')}
+<footer>
+<p><a href="${COACH_PATH}">Meer voor begeleiders: zo zet je het in, privacy en alle onderwerpen →</a></p>
 </footer>`,
   );
 }

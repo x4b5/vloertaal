@@ -16,7 +16,6 @@ import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHu
 import { News } from './components/News';
 import { NoticeCard } from './components/NoticeCard';
 import { noticeFor, seeNotice } from './lib/notice';
-import { HomeGreeting } from './components/BramSays';
 import { NoVoiceNote, RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf } from './components/RulesHelp';
 import { GenderScreen } from './components/Gender';
 import { shouldAskGender } from './lib/askGender';
@@ -1120,7 +1119,6 @@ export default function App() {
             words={learnedItems(track, progress.completed)}
             lang={lang}
             quiet={Boolean(progress.quiet)}
-            greeting={<HomeGreeting progress={progress} due={daily?.state === 'due' ? daily.due : 0} lang={lang} />}
           />
           <Route
             progress={progress}
