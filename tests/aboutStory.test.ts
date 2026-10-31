@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeAll, describe, expect, it } from 'vitest';
 import { About } from '../src/components/Screens';
 import { aboutRules, aboutSection, aboutSections, STORY_DATE } from '../src/content/about';
-import { proSections } from '../src/content/pro';
+import { PRO_COSTS, PRO_STORY, proSections } from '../src/content/pro';
 import { updateDate } from '../src/content/updates';
 import { getHelpLanguage, helpLanguageSources, registerPack } from '../src/i18n/all';
 import nlPack from '../src/i18n/packs/nl';
@@ -93,6 +93,6 @@ describe('the owner’s story', () => {
     expect(pl.indexOf(getHelpLanguage('pl', 'f').gloss['a.story.b'] as string)).toBeLessThan(pl.indexOf(getHelpLanguage('pl', 'f').gloss['a.beta.b'] as string));
     expect(langPage('en')).toContain('31 October 2026');
     const p = proSections.find((s) => s.id === 'p.story')!;
-    expect(p.body).toEqual([aboutSection('a.story').nl.body, 'Xavier · 31 oktober 2026']);
+    expect(p.body).toEqual([PRO_STORY, PRO_COSTS, 'Xavier · 31 oktober 2026']);
   });
 });

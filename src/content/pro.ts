@@ -39,8 +39,26 @@ export interface ProSection {
 
 export { PRO_TITLE };
 
-/** Under the title: what Vloertaal is, for someone who does not know it yet. */
-export const PRO_LEAD = 'Voor taalcoaches, NT2-docenten, taalhuizen, werkgevers, uitzendbureaus en scholen. Vloertaal is een gratis web-app waarmee nieuwkomers en arbeidsmigranten Nederlands oefenen voor hun werk: korte lessen met woorden, zinnen en gesprekjes van de werkvloer, met uitleg in dertien talen. Geen account, geen reclame, en het werkt op elke telefoon. Een aanvulling op een taalcursus of taalcoach, geen vervanging.';
+/**
+ * Under the title: the question first, so whoever arrives (for example from a poster) sees at once
+ * what we ask. Modest, as a question; what Vloertaal is follows in 'p.what', the reason in 'p.story'.
+ */
+export const PRO_LEAD = 'Hoi, ik ben Xavier. Ik ben op dit moment bezig met het bouwen van Vloertaal, een oefenapp voor Nederlands op het werk. Graag zou ik daar de blik van professionals op willen: taalprofessionals, en experts op het gebied van de arbeidsmarkt en wet- en regelgeving. Zou je de app eens willen bekijken en laten weten wat beter kan, inhoudelijk of didactisch? En als het past: zou je deelnemers ermee willen laten oefenen? De app is grotendeels met behulp van AI gebouwd en nog niet door vakmensen nagekeken. Juist daarom is elke opmerking waardevol. Reageren kan via hoi@vloertaal.nl of via het vlaggetje Melden in een les.';
+
+/** 'p.what': what Vloertaal is, for someone who does not know it yet (it was the lead). */
+const WHAT = 'Vloertaal is een gratis web-app waarmee andertaligen en laaggeletterden oefenen voor hun werk. De lessen zijn kort en draaien om woorden, zinnen en gesprekjes uit de praktijk van de werkvloer, met uitleg in dertien hulptalen of in eenvoudig Nederlands dat de telefoon voorleest. Het gaat daarbij niet alleen om taal, maar ook om de geschreven en ongeschreven regels van het werk: van contract, loonstrook en ziekmelden tot de omgangsvormen op de werkvloer. Een account is niet nodig, en de app werkt op elke telefoon.';
+
+/** 'p.what', second paragraph: modest about its place, and that nobody earns from it. */
+const WHAT_PLACE = 'Vloertaal is nadrukkelijk bedoeld als aanvulling op een taalcursus of taalcoach, niet als vervanging. Er wordt niets aan verdiend: geen reclame, geen abonnement, en er worden geen gegevens verkocht.';
+
+/**
+ * 'p.story': the reason, written for professionals (the learner's About keeps its own plain text,
+ * 'a.story'). No second "Hoi, ik ben Xavier": the lead already says it.
+ */
+export const PRO_STORY = 'In mijn werk als arbeidsbemiddelaar zie ik regelmatig dat een plaatsing stukloopt op taal. Iemand begrijpt een instructie niet goed, of durft niet te vragen wat iets betekent. Vloertaal is een poging om dat iets makkelijker te maken: de taal van het werk oefenen, op de eigen telefoon, naast wat er al is. Ik bouw de app in mijn vrije tijd. De app zou ik graag samen verder ontwikkelen: met professionals, werkgevers en uiteraard de doelgroep zelf.';
+
+/** 'p.story', second paragraph: the costs, and the question about a subsidy or fund. */
+export const PRO_COSTS = 'De kosten zijn op dit moment nog beperkt. Als ze hoger worden, is een subsidie of fonds waarschijnlijk nodig, en daar zou ik graag hulp bij hebben. Ken je iemand die me daarbij zou kunnen helpen? Dan hoor ik dat graag.';
 
 const mission = aboutSection('a.mission');
 const story = aboutSection('a.story');
@@ -55,13 +73,14 @@ export const ENTREE_UNITS = ['Stage lopen', 'Rekenen op je werk', 'Je werk goed 
 
 export const proSections: ProSection[] = [
   {
-    id: 'p.mission', emoji: mission.emoji, title: mission.nl.title,
-    body: [mission.nl.body],
+    // What it is and the mission in one block, before the reason (the story).
+    id: 'p.what', emoji: mission.emoji, title: 'Wat is Vloertaal?',
+    body: [WHAT, WHAT_PLACE],
   },
   {
-    // The owner's story, signed and dated as on Over; its last line leads into the test version.
+    // The owner's reason, for professionals, signed and dated as on Over; it leads into the test version.
     id: 'p.story', emoji: story.emoji, title: story.nl.title,
-    body: [story.nl.body, `${story.signed} · ${updateDate(STORY_DATE)}`],
+    body: [PRO_STORY, PRO_COSTS, `${story.signed} · ${updateDate(STORY_DATE)}`],
   },
   {
     id: 'p.beta', emoji: beta.emoji, title: 'Een testversie: wie test er?',
@@ -151,6 +170,6 @@ export const proSections: ProSection[] = [
   {
     // Last, like the learner's About: the address is the page's mail link (one tap).
     id: 'p.contact', emoji: '✉️', title: 'Meedoen of meedenken?',
-    body: [`Wil je Vloertaal gebruiken met een groep, meedoen aan de test, of heb je een vraag of een fout gevonden? Mail naar ${CONTACT_EMAIL}.`],
+    body: [`Zou je Vloertaal willen gebruiken met een groep, of wil je meekijken? Of heb je een vraag of een fout gevonden? Mail dan naar ${CONTACT_EMAIL}.`],
   },
 ];

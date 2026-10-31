@@ -9,7 +9,8 @@ import { ENTREE_UNITS, PRO_LEAD, proSections } from '../src/content/pro';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import { getHelpLanguage, helpLanguageSources, registerPack, ui } from '../src/i18n/all';
 import nlPack from '../src/i18n/packs/nl';
-import { coachPage } from '../src/lib/coachPage';
+import { askPage, coachPage } from '../src/lib/coachPage';
+import { sitemap } from '../src/lib/sitemap';
 
 /**
  * Over for the learner, and a page of its own for coaches, teachers, employers and organisations
@@ -73,10 +74,10 @@ describe('Voor begeleiders en werkgevers: in the app and on the site, from one s
   const site = coachPage();
 
   it('has the professionals’ sections, in this order', () => {
-    expect(proSections.map((s) => s.id)).toEqual(['p.mission', 'p.story', 'p.beta', 'p.who', 'p.voices', 'p.privacy', 'p.facts', 'p.group', 'p.weekplan', 'p.kunjenu', 'p.entree', 'p.contact']);
+    expect(proSections.map((s) => s.id)).toEqual(['p.what', 'p.story', 'p.beta', 'p.who', 'p.voices', 'p.privacy', 'p.facts', 'p.group', 'p.weekplan', 'p.kunjenu', 'p.entree', 'p.contact']);
     // In their Dutch: the mission and for whom (both tracks), not on Over; the story and the test version, as on Over.
     const body = (id: string) => proSections.find((s) => s.id === id)!.body.join(' ') + (proSections.find((s) => s.id === id)!.lines ?? []).map((l) => l.text).join(' ');
-    expect(body('p.mission')).toContain(siteSections.find((s) => s.id === 'a.mission')!.nl.body);
+    expect(body('p.what')).toContain('aanvulling op een taalcursus of taalcoach, niet als vervanging');
     expect(body('p.beta')).toContain(aboutSection('a.beta').nl.body);
     expect(body('p.beta')).toContain('Melden');
     expect(body('p.who')).toContain(siteSections.find((s) => s.id === 'a.who')!.nl.body);
@@ -138,5 +139,25 @@ describe('translations: what left Over', () => {
       expect(src.gloss['a.mission.b'], src.code).toBeTruthy();
       expect(src.gloss['a.voices.b'], src.code).toBeUndefined();
     }
+  });
+});
+
+describe('vloertaal.nl/meekijken: the short page a poster points to', () => {
+  it('has only the question, what Vloertaal is and why, from the same texts', () => {
+    const page = askPage();
+    const sec = (id: string) => proSections.find((s) => s.id === id)!;
+    expect(page).toContain('<h1>Zou je willen meekijken?</h1>');
+    expect(page).toContain('Hoi, ik ben Xavier.');
+    expect(page).toContain(`mailto:${CONTACT_EMAIL}`);
+    for (const id of ['p.what', 'p.story']) expect(page).toContain(sec(id).title);
+    for (const id of ['p.beta', 'p.who', 'p.privacy', 'p.group', 'p.contact']) expect(page).not.toContain(`id="${id.slice(2)}"`);
+    expect(page).toContain('href="/voor-begeleiders/"');
+  });
+
+  it('is not for search results: noindex, no canonical, not in the sitemap', () => {
+    const page = askPage();
+    expect(page).toContain('<meta name="robots" content="noindex" />');
+    expect(page).not.toContain('rel="canonical"');
+    expect(sitemap()).not.toContain('/meekijken/');
   });
 });
