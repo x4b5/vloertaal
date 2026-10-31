@@ -399,6 +399,7 @@ const lang: HelpLanguageSource = {
     checkVia: 'чрез проверка', // nieuw, nalezen
     checkUndo: 'Все пак направи уроците', // nieuw, nalezen
     shareInvite: 'Уча нидерландски за работата си с Vloertaal. Безплатно е: {link}', // nieuw, nalezen
+    workTry: 'Опитай днес на работа', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

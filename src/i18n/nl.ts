@@ -455,6 +455,7 @@ export const uiNl: Record<UiKey, UiText> = {
   noticeMore: 'Lees meer',
   noticeOk: 'Oké',
   shareInvite: 'Ik leer Nederlands voor mijn werk met Vloertaal. Gratis: {link}', // nieuw, nalezen
+  workTry: 'Probeer het vandaag op je werk',
 };
 
 const lang: HelpLanguageSource = {

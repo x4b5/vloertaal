@@ -59,6 +59,8 @@ import { HelpSay } from './HelpSay';
 import { emojiIconId } from '../content/tipIcons';
 import { PRIVACY_PATH } from '../lib/paths';
 import { aboutDutchRemembered, rememberAboutDutch } from '../lib/aboutDutch';
+import { WorkTry } from './WorkTry';
+import type { WorkTryLine } from '../lib/workTry';
 
 /** The help languages in the list in alphabetical order of their English name (the line under each
  *  native name, and what the page is in before a language is chosen): Arabic, Bulgarian, Dari … */
@@ -816,7 +818,10 @@ export function StatCard({ tone, label, icon, value, final, done, foot, badge }:
 /** From this many words still due after a review, the result says they come in the next days. */
 export const REVIEW_WAITING_MIN = 3;
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, easier = false }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, easier = false, workTry }: {
+  /** "Probeer het vandaag op je werk" (src/components/WorkTry.tsx, lib/workTry.ts): one sentence
+   *  of the lesson, with a speaker. Not a button. */
+  workTry?: WorkTryLine;
   /** After a lesson of the language track with chats: a calm row to "Oefen samen" (never
    *  needed: Continue goes on as always). Hidden while "Wil je sneller?" asks and the row to the
    *  emergency phrases is there too (Ja, Nee and two rows would be four things to tap). */
@@ -981,6 +986,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             <Bi className="result-next-title" text={next} />
           </p>
         )}
+        {workTry && <WorkTry line={workTry} lang={lang} />}
         {/* After many mistakes: the next lesson is shorter. Plain, no judgement. */}
         {easier && (
           <p className="result-line result-easier" dir={rtl ? 'rtl' : undefined}>

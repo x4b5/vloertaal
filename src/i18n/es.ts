@@ -399,6 +399,7 @@ const lang: HelpLanguageSource = {
     checkVia: 'con prueba', // nieuw, nalezen
     checkUndo: 'Hacer las lecciones igualmente', // nieuw, nalezen
     shareInvite: 'Aprendo neerlandés para mi trabajo con Vloertaal. Gratis: {link}', // nieuw, nalezen
+    workTry: 'Pruébalo hoy en el trabajo', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

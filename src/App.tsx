@@ -10,6 +10,7 @@ import { trackOf, trackOfId } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
 import { tempoOf } from './lib/tempo';
 import { lessonPace, paceAfterLesson, reviewSoon, setFaster } from './lib/pace';
+import { type WorkTryLine, workTryFor } from './lib/workTry';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
@@ -66,7 +67,7 @@ type View =
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string; workTry?: WorkTryLine }
   /** "Oefen samen" (src/components/Samen.tsx): a lesson's chats, two people on one phone, from its
    *  result; streakUp / cert: the certificate or the streak milestone still follows. */
   | { name: 'samen'; lessonId: string; streakUp?: number; cert?: string }
@@ -743,14 +744,14 @@ export default function App() {
         : playLesson(view.lessonId, progress.completed, dayNumber(dayKey(new Date())));
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
-      const finish = ({ accuracy, review, right, total, words: results, skipped }: LessonResult) => {
+      const finish = ({ accuracy, review, right, total, words: results, skipped, made }: LessonResult) => {
         const now = practisedAt(lessonStarted.current, new Date(), progress.lastDay);
         const today = dayKey(now);
         const cards = progress.cards ?? {};
         const next = earnCertificates(daily
           // (Its review day is the day it was started for, with that day's words: one begun at
           // 23:58 and finished after midnight leaves today's own review to do.)
-          ? { ...completeDaily(progress, accuracy, now), reviewDay: dayKey(lessonStarted.current), cards: applyReview(cards, track === 'regels' ? results : reviewResults(results, view.ids ?? []), today) }
+          ? { ...completeDaily(progress, accuracy, now), reviewDay: dayKey(lessonStarted.current), cards: track === 'regels' ? applyReview(cards, results, today) : applyReview(cards, reviewResults(results, view.ids ?? []), today, made) }
           : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: found.lesson.steps?.length
             // A rules lesson: its questions get a card (by step id), for "Herhaal vandaag" of that track.
             ? addLessonItems(cards, gradedStepIds(found.lesson), results, today)
@@ -822,6 +823,9 @@ export default function App() {
           samen: !daily && !phrases && track === 'taal' && hasSamen(found.lesson) ? view.lessonId : undefined,
           // A rules lesson: its "Onthoud" line under the numbers.
           remember: daily ? undefined : found.lesson.rule?.remember,
+          // "Probeer het vandaag op je werk": after a language lesson's first time, once a day
+          // (lib/workTry.ts); not while "Wil je sneller?" needs the room.
+          workTry: daily || reviewing || askFaster || track !== 'taal' ? undefined : workTryFor(view.lessonId, !progress.completed[view.lessonId], today),
         });
       };
       return (
@@ -869,6 +873,7 @@ export default function App() {
           easier={view.easier}
           onFaster={view.askFaster ? (yes) => setProgress((p) => setFaster(p, yes, dayKey(new Date()))) : undefined}
           onSamen={view.samen ? () => replace({ name: 'samen', lessonId: view.samen!, streakUp: view.streakUp, cert: view.cert }) : undefined}
+          workTry={view.workTry}
         />
       );
     case 'streak':

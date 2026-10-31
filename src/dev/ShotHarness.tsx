@@ -1,4 +1,5 @@
 import { tipForLesson } from '../content/culture';
+import { workTryLine } from '../lib/workTry';
 import { sayingForLesson, sayingQuestion } from '../content/sayings';
 import { findLesson } from '../content/curriculum';
 import { useState } from 'react';
@@ -110,6 +111,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
         kind={review ? 'daily' : q.get('mix') === '1' ? 'review' : 'lesson'}
         next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l, id: next.id } : undefined}
         onPhrases={q.get('phrases') === '1' ? () => {} : undefined}
+        // &worktry=l.arrive: "Probeer het vandaag op je werk" with that lesson's sentence.
+        workTry={q.get('worktry') ? workTryLine(q.get('worktry')!) : undefined}
       />
     );
   }
@@ -368,7 +371,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     intro: { kind: 'intro', word: focus ?? hesje },
     listen: { kind: 'listen', word: focus ?? schoenen, options: [helm, focus ?? schoenen, hesje] },
     // With options: a non-Latin help language picks the written word (unless writing is on).
-    type: { kind: 'type', word: helm, options: [hesje, helm, handschoenen] },
+    // &pick=1: as in the first units (PROGRESSION.type), hear and pick for every learner.
+    type: { kind: 'type', word: helm, options: [hesje, helm, handschoenen], ...(q.get('pick') === '1' ? { pick: true as const } : {}) },
     // Guided matching: three pairs (lib/exercises.ts MATCH_PAIRS).
     match: { kind: 'match', words: [helm, handschoenen, hesje] },
     build: { kind: 'build', sentence: lesson.sentences[0], tiles: buildTiles(lesson.sentences[0], lesson, createRng(3)) },
