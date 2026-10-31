@@ -639,7 +639,7 @@ export function Phrasebook({ lang, onBack }: { lang?: HelpLanguage; onBack: () =
   );
 }
 
-function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
+export function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   /** A stamp on the card's corner (FOUTLOOS). */
   badge?: React.ReactNode;
   tone: 'gold' | 'green' | 'orange';
@@ -757,7 +757,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   // Today's review is not the day's end (the next lesson waits): "Review finished!", not "Done for today".
   const title = kind === 'lesson' ? ui('lessonComplete', lang) : ui('reviewComplete', lang);
   return (
-    <div className="player result-screen">
+    <div className={`player result-screen ${onFaster ? 'result-asks' : ''}`}>
       <div className="player-body result">
         <div className="result-hero">
           {/* Bram (the one with the thumb up) says one calm line. */}

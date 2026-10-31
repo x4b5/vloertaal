@@ -379,6 +379,13 @@ const lang: HelpLanguageSource = {
     samenEnd: 'Muito bem! Trocar de papéis e fazer outra vez?', // nieuw, nalezen
     samenSwap: 'Trocar de papéis', // nieuw, nalezen
     samenStop: 'Terminar', // nieuw, nalezen
+    checkStart: 'Já sei isto: teste curto', // nieuw, nalezen
+    checkPassed: 'Já conheces isto. Marcar este tema como feito?', // nieuw, nalezen
+    checkNoCert: 'Então ainda não há certificado. Recebes o certificado depois das lições.', // nieuw, nalezen
+    checkNotYet: 'As lições ajudam-te neste tema.', // nieuw, nalezen
+    checkMark: 'Marcar', // nieuw, nalezen
+    checkVia: 'com teste', // nieuw, nalezen
+    checkUndo: 'Fazer as lições mesmo assim', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

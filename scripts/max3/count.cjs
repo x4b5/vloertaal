@@ -553,6 +553,16 @@ function defineStates(LANG) {
     await tap(p, '.samen-swap');
   }, { expect: '.samen-turn-them .samen-badge-2' });
   add('samen:no-help', shot('samen&step=turn&at=0'), async (p) => { await tap(p, '.samen-help-toggle'); }, { expect: '.samen-help-toggle[aria-pressed="false"]' });
+  // "Ik ken dit al: korte check" (src/lib/instapCheck.ts): the topic page with the button, each
+  // of the 5 questions, the end (passed: Afvinken / Toch de lessen doen; not passed: Verder), the
+  // topic page after the check ("via check", Toch de lessen doen) and All topics in path order.
+  add('check:topic', shot('instapcheck&state=topic'), null, { list: true, expect: '.check-open' });
+  for (let i = 0; i < 5; i++) add(`check:q${i}`, shot(`instapcheck&state=question&at=${i}`), null, { expect: '.player' });
+  add('check:passed', shot('instapcheck&state=passed'), null, { expect: '.check-mark' });
+  add('check:notyet', shot('instapcheck&state=notyet'), null, { expect: '.check-go' });
+  add('check:checked', shot('instapcheck&state=checked'), null, { list: true, expect: '.check-undo' });
+  add('check:route', shot('instapcheck&state=route'), null, { list: true, expect: '.via-check' });
+  add('check:kaart', shot('instapcheck&state=kaart'), null, { expect: '.kaart-img' });
   return S;
 }
 

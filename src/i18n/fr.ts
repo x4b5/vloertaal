@@ -379,6 +379,13 @@ const lang: HelpLanguageSource = {
     samenEnd: 'Bravo ! Changer de rôle et recommencer ?', // nieuw, nalezen
     samenSwap: 'Changer de rôle', // nieuw, nalezen
     samenStop: 'Terminer', // nieuw, nalezen
+    checkStart: 'Je connais déjà : test court', // nieuw, nalezen
+    checkPassed: 'Tu connais déjà ça. Cocher ce thème ?', // nieuw, nalezen
+    checkNoCert: 'Alors pas encore de certificat. Tu l’as après les leçons.', // nieuw, nalezen
+    checkNotYet: 'Les leçons t’aident pour ce thème.', // nieuw, nalezen
+    checkMark: 'Cocher', // nieuw, nalezen
+    checkVia: 'par test', // nieuw, nalezen
+    checkUndo: 'Faire quand même les leçons', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

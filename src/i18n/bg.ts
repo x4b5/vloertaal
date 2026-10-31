@@ -379,6 +379,13 @@ const lang: HelpLanguageSource = {
     samenEnd: 'Браво! Сменете ролите и направете го още веднъж?', // nieuw, nalezen
     samenSwap: 'Сменете ролите', // nieuw, nalezen
     samenStop: 'Готово', // nieuw, nalezen
+    checkStart: 'Знам това: кратка проверка', // nieuw, nalezen
+    checkPassed: 'Вече знаеш това. Да отметнеш ли тази тема?', // nieuw, nalezen
+    checkNoCert: 'Тогава още няма сертификат. Ще го получиш след уроците.', // nieuw, nalezen
+    checkNotYet: 'Уроците ти помагат с тази тема.', // nieuw, nalezen
+    checkMark: 'Отметни', // nieuw, nalezen
+    checkVia: 'чрез проверка', // nieuw, nalezen
+    checkUndo: 'Все пак направи уроците', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

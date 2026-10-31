@@ -2,7 +2,9 @@ import { rulesCountry } from '../content/rulesCourse';
 import { findLesson } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
 import { TOETS_PARTS, type ToetsPart } from '../content/toets';
-import { certDate, earnedCertificates } from './certificate';
+import { certDate, earnedCertificates, hasCheck, unitDone } from './certificate';
+import { courseUnits } from '../content/courses';
+import { checkDay } from './instapCheck';
 import { kunAantal, kunJeNu } from '../content/kunJeNu';
 import { dayKey, type Progress } from './progress';
 import { trackOf, trackOfId, type Track } from './track';
@@ -38,9 +40,12 @@ export interface KaartData {
   track: Track;
   /** The work-rules track in the Belgian course (src/content/rulesCourse.ts): "werken in België". */
   be?: boolean;
-  /** Finished topics of this track. */
+  /** Finished topics of this track (those ticked off with a check too). */
   unitsDone: number;
-  /** The last (at most) three finished topics, by their Dutch title, the latest first. */
+  /** Of those, ticked off with a short check ("Ik ken dit al", src/lib/instapCheck.ts): no certificate. */
+  viaCheck: number;
+  /** The last (at most) three finished topics, by their Dutch title, the latest first; a topic
+   *  ticked off with a check has " (via check)" after its title. */
   lastUnits: string[];
   /**
    * "Wat kun je nu?" (src/content/kunJeNu.ts): how many can-do sentences the finished topics have,
@@ -108,13 +113,21 @@ function toetsOf(run: ToetsRun): KaartToets {
 export function kaartData(p: Progress, name: string, today: Date): KaartData {
   const track = trackOf(p);
   const earned = earnedCertificates(p, today, track);
+  // Topics ticked off with a check: done, without a certificate (said so on the card).
+  const checked = courseUnits(track)
+    .filter((u) => !earned.some((e) => e.unit.id === u.id) && unitDone(u, p.completed) && hasCheck(u, p.completed))
+    .map((unit) => ({ unit, day: checkDay(unit, p.completed) ?? dayKey(today), check: true }));
+  const order = courseUnits(track);
+  const done = [...earned.map((e) => ({ ...e, check: false })), ...checked].sort((a, b) => order.indexOf(a.unit) - order.indexOf(b.unit));
   // The latest first; on the same day, the later topic of the course first.
-  const latest = earned.map((e, i) => ({ ...e, i })).sort((a, b) => (a.day === b.day ? b.i - a.i : a.day < b.day ? 1 : -1));
+  const latest = done.map((e, i) => ({ ...e, i })).sort((a, b) => (a.day === b.day ? b.i - a.i : a.day < b.day ? 1 : -1));
   const last = p.lastLesson && trackOfId(p.lastLesson) === track ? p.lastLesson : undefined;
   const lastLesson = p.lessonDay && (last || !p.lastLesson)
     ? { text: last ? lessonText(last) : undefined, date: certDate(p.lessonDay) }
     : undefined;
-  const voorbeeld = latest.length ? kunJeNu(latest[0].unit.id)[0]?.nl : undefined;
+  // "Wat kun je nu?" is on the certificates: only the topics that have one.
+  const certified = latest.filter((e) => !e.check);
+  const voorbeeld = certified.length ? kunJeNu(certified[0].unit.id)[0]?.nl : undefined;
   const t = track === 'taal' ? p.toets : undefined;
   const toets = t?.instap || t?.eind
     ? { ...(t.instap ? { instap: toetsOf(t.instap) } : {}), ...(t.eind ? { eind: toetsOf(t.eind) } : {}) }
@@ -123,8 +136,9 @@ export function kaartData(p: Progress, name: string, today: Date): KaartData {
     name: name.trim(),
     track,
     ...(track === 'regels' && rulesCountry() === 'be' ? { be: true } : {}),
-    unitsDone: earned.length,
-    lastUnits: latest.slice(0, 3).map((e) => e.unit.titleNl),
+    unitsDone: done.length,
+    viaCheck: checked.length,
+    lastUnits: latest.slice(0, 3).map((e) => (e.check ? `${e.unit.titleNl} (via check)` : e.unit.titleNl)),
     kunZinnen: kunAantal(earned.map((e) => e.unit.id)),
     ...(voorbeeld ? { kunVoorbeeld: voorbeeld } : {}),
     days: practisedDays(p, today),
@@ -158,7 +172,11 @@ export function kaartRows(d: KaartData): KaartRow[] {
     {
       label: 'Onderwerpen af',
       value: String(d.unitsDone),
-      more: d.lastUnits.length ? [d.unitsDone > d.lastUnits.length ? `De laatste ${d.lastUnits.length}: ${d.lastUnits.join(', ')}` : d.lastUnits.join(', ')] : undefined,
+      more: d.lastUnits.length ? [
+        d.unitsDone > d.lastUnits.length ? `De laatste ${d.lastUnits.length}: ${d.lastUnits.join(', ')}` : d.lastUnits.join(', '),
+        // Ticked off with the short check: said plainly, so the coach knows there is no certificate.
+        ...(d.viaCheck > 0 ? [`Via check: ${d.viaCheck} (korte check, zonder certificaat)`] : []),
+      ] : undefined,
     },
     ...(d.kunZinnen > 0 ? [{
       label: 'Wat kun je nu?',

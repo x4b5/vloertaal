@@ -379,6 +379,13 @@ const lang: HelpLanguageSource = {
     samenEnd: 'Aferin! Rolleri değiştirip bir kez daha yapın?', // nieuw, nalezen
     samenSwap: 'Rolleri değiştirin', // nieuw, nalezen
     samenStop: 'Bitti', // nieuw, nalezen
+    checkStart: 'Bunu biliyorum: kısa kontrol', // nieuw, nalezen
+    checkPassed: 'Bunu zaten biliyorsun. Bu konuyu işaretlemek ister misin?', // nieuw, nalezen
+    checkNoCert: 'O zaman henüz sertifika yok. Sertifikayı derslerden sonra alırsın.', // nieuw, nalezen
+    checkNotYet: 'Dersler bu konuda sana yardım eder.', // nieuw, nalezen
+    checkMark: 'İşaretle', // nieuw, nalezen
+    checkVia: 'kontrolle', // nieuw, nalezen
+    checkUndo: 'Yine de dersleri yap', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

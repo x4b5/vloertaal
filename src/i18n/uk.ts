@@ -379,6 +379,13 @@ const lang: HelpLanguageSource = {
     samenEnd: 'Молодці! Поміняйтеся ролями і зробіть ще раз?', // nieuw, nalezen
     samenSwap: 'Поміняйтеся ролями', // nieuw, nalezen
     samenStop: 'Готово', // nieuw, nalezen
+    checkStart: 'Я це знаю: коротка перевірка', // nieuw, nalezen
+    checkPassed: 'Ти вже це знаєш. Позначити цю тему?', // nieuw, nalezen
+    checkNoCert: 'Тоді сертифіката ще немає. Ти отримаєш його після уроків.', // nieuw, nalezen
+    checkNotYet: 'Уроки допоможуть тобі з цією темою.', // nieuw, nalezen
+    checkMark: 'Позначити', // nieuw, nalezen
+    checkVia: 'через перевірку', // nieuw, nalezen
+    checkUndo: 'Усе ж пройти уроки', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

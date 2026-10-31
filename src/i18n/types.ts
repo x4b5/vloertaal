@@ -453,6 +453,14 @@ export const uiEn = {
   samenEnd: 'Well done! Swap roles and do it again?',
   samenSwap: 'Swap roles',
   samenStop: 'Done',
+  /* "Ik ken dit al: korte check" (src/lib/instapCheck.ts): tick off a first topic after the start test. */
+  checkStart: 'I know this: short check',
+  checkPassed: 'You know this already. Tick off this topic?',
+  checkNoCert: 'Then there is no certificate yet. You get it after the lessons.',
+  checkNotYet: 'The lessons help you with this topic.',
+  checkMark: 'Tick off',
+  checkVia: 'via check',
+  checkUndo: 'Do the lessons anyway',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

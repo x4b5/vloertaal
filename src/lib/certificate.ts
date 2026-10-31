@@ -20,6 +20,26 @@ export function unitDone(unit: Unit, completed: Record<string, unknown>): boolea
   return unit.lessons.length > 0 && unit.lessons.every((l) => completed[l.id]);
 }
 
+/** A lesson record of a check ("Ik ken dit al", src/lib/instapCheck.ts): ticked off, not done. */
+export const isCheckRecord = (r: unknown): boolean => Boolean(r && typeof r === 'object' && typeof (r as { check?: unknown }).check === 'string');
+
+/** A lesson of the topic is ticked off by a check (and not done for real since). */
+export function hasCheck(unit: Unit, completed: Record<string, unknown>): boolean {
+  return unit.lessons.some((l) => isCheckRecord(completed[l.id]));
+}
+
+/** The lesson was ticked off by a check (not done for real). */
+export const lessonViaCheck = (lessonId: string, completed: Record<string, unknown>): boolean => isCheckRecord(completed[lessonId]);
+
+/**
+ * The unit is done and earns its certificate: every lesson done, none of them only ticked off by
+ * a check. A topic "via check" counts as done everywhere (unitDone) but has no certificate until
+ * its lessons are done for real.
+ */
+export function unitEarned(unit: Unit, completed: Record<string, unknown>): boolean {
+  return unitDone(unit, completed) && !hasCheck(unit, completed);
+}
+
 /**
  * Sets the earned date (today) for every finished unit that has none yet. Returns the same
  * object when nothing changed, so it is safe to run on every change of progress.
@@ -27,7 +47,7 @@ export function unitDone(unit: Unit, completed: Record<string, unknown>): boolea
 export function earnCertificates<P extends Progress>(p: P, now: Date): P {
   const certs = p.certs ?? {};
   // Both courses: a learner who switched tracks keeps the certificates of each.
-  const fresh = allCourseUnits().filter((u) => !certs[u.id] && unitDone(u, p.completed));
+  const fresh = allCourseUnits().filter((u) => !certs[u.id] && unitEarned(u, p.completed));
   if (!fresh.length) return p;
   const today = dayKey(now);
   return { ...p, certs: { ...certs, ...Object.fromEntries(fresh.map((u) => [u.id, today])) } };
@@ -42,7 +62,8 @@ export function unitJustDone(before: Record<string, unknown>, after: Record<stri
   const unit = findLesson(lessonId)?.unit;
   // A unit earned before (a lesson was added to it since): the new lesson finishes it again, but
   // the certificate is the one from then, not a second one.
-  return unit && !isRegionUnitId(unit.id) && !certs[unit.id] && !unitDone(unit, before) && unitDone(unit, after) ? unit : undefined;
+  // A topic ticked off by a check earns it once its last lesson "via check" is done for real.
+  return unit && !isRegionUnitId(unit.id) && !certs[unit.id] && !unitEarned(unit, before) && unitEarned(unit, after) ? unit : undefined;
 }
 
 /** Can this unit have a certificate? Not a region's unit (see unitJustDone). */
@@ -57,11 +78,12 @@ export interface Earned {
 /**
  * Every certificate earned in the learner's track, in course order. A finished unit without a date
  * yet counts from today. A certificate once earned stays, also when a lesson was added to its unit
- * since (the route offers that lesson; the certificate does not disappear meanwhile).
+ * since (the route offers that lesson; the certificate does not disappear meanwhile). A topic
+ * ticked off by a check (src/lib/instapCheck.ts) has none.
  */
 export function earnedCertificates(p: Progress, now = new Date(), track: Track = trackOf(p)): Earned[] {
   return courseUnits(track)
-    .filter((u) => unitDone(u, p.completed) || (hasCertificate(u.id) && Boolean(p.certs?.[u.id])))
+    .filter((u) => unitEarned(u, p.completed) || (hasCertificate(u.id) && Boolean(p.certs?.[u.id])))
     .map((unit) => ({ unit, day: p.certs?.[unit.id] ?? dayKey(now) }));
 }
 

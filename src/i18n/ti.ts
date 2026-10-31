@@ -380,6 +380,13 @@ const lang: HelpLanguageSource = {
     samenEnd: 'ጽቡቕ ገይርኩም! ተራ ቀያይሩ እሞ ደጊምኩም ግበሩዎ?', // nieuw, nalezen
     samenSwap: 'ተራ ቀያይሩ', // nieuw, nalezen
     samenStop: 'ወዲእና', // nieuw, nalezen
+    checkStart: 'እዚ እፈልጦ እየ፡ ሓጺር ፈተና', // nieuw, nalezen
+    checkPassed: { m: 'እዚ ትፈልጦ ኢኻ። ነዚ ኣርእስቲ ክትምልክቶ ትደሊ ዶ?', f: 'እዚ ትፈልጥዮ ኢኺ። ነዚ ኣርእስቲ ክትምልክትዮ ትደልዪ ዶ?', x: 'እዚ ትፈልጥዎ ኢኹም። ነዚ ኣርእስቲ ክትምልክትዎ ትደልዩ ዶ?' }, // nieuw, nalezen
+    checkNoCert: 'ሽዑ ገና ምስክር ወረቐት የለን። ድሕሪ እቶም ትምህርትታት ይመጽእ።', // nieuw, nalezen
+    checkNotYet: 'እቶም ትምህርትታት ኣብዚ ኣርእስቲ ይሕግዙ።', // nieuw, nalezen
+    checkMark: { m: 'ምልክት ግበር', f: 'ምልክት ግበሪ', x: 'ምልክት ግበሩ' }, // nieuw, nalezen
+    checkVia: 'ብፈተና', // nieuw, nalezen
+    checkUndo: { m: 'ግን ነቶም ትምህርትታት ግበሮም', f: 'ግን ነቶም ትምህርትታት ግበርዮም', x: 'ግን ነቶም ትምህርትታት ግበሩዎም' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
