@@ -55,25 +55,25 @@ export const prs: Gloss = {
 export const uk: Gloss = {
     "be.w.bhver": "EHBO’er (працівник, який на роботі надає першу допомогу)", // nieuw, nalezen
     "be.c.accident": "Повідомляй про кожен нещасний випадок", // = c.accident
-    "be.c.accident.b": "Про кожен нещасний випадок, навіть дрібний, скажи керівнику або EHBO’er (працівнику, який на роботі надає першу допомогу). Працюєш через кадрове агентство (interimkantoor)? Повідом і агентство. У надзвичайній ситуації спершу дзвони 112. Роботодавець повідомляє про випадок своєму страховику від нещасних випадків на роботі (arbeidsongevallenverzekeraar): він оплачує лікування. Про серйозний нещасний випадок повідомляють також Toezicht op het Welzijn op het Werk. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+    "be.c.accident.b": "Про кожен нещасний випадок, навіть дрібний, скажи керівнику або EHBO’er (працівнику, який на роботі надає першу допомогу). Працюєш через агентство тимчасової роботи (interimkantoor)? Повідом і агентство. У надзвичайній ситуації спершу дзвони 112. Роботодавець повідомляє про випадок своєму страховику від нещасних випадків на роботі (arbeidsongevallenverzekeraar): він оплачує лікування. Про серйозний нещасний випадок повідомляють також Toezicht op het Welzijn op het Werk. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.accident.p": "Мій колега поранений. Де EHBO’er?", // nieuw, nalezen
     "be.c.accident.s": { m: "Ти пошкодив спину, коли щось піднімав. Ти боїшся втратити роботу. Що ти зробиш?", f: "Ти пошкодила спину, коли щось піднімала. Ти боїшся втратити роботу. Що ти зробиш?", x: "У тебе травма спини після підйому вантажу. Ти боїшся втратити роботу. Що ти зробиш?" }, // = c.accident.s
     "be.c.accident.o1": "Того ж дня повідомиш керівника.", // = c.accident.o1
     "be.c.accident.o2": "Нічого не скажеш, щоб не втратити роботу.", // = c.accident.o2
     "be.c.accident.o3": "Почекаєш і подивишся, чи біль минеться сам.", // = c.accident.o3
-    "be.c.accident.w": "Повідом того ж дня, навіть якщо це здається дрібницею: біль може посилитися пізніше. Роботодавець не має права карати тебе за це повідомлення. Працюєш через кадрове агентство? Скажи й агентству.", // nieuw, nalezen
+    "be.c.accident.w": "Повідом того ж дня, навіть якщо це здається дрібницею: біль може посилитися пізніше. Роботодавець не має права карати тебе за це повідомлення. Працюєш через агентство тимчасової роботи? Скажи й агентству.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const tr: Gloss = {
     "be.w.bhver": "EHBO’er (iş yerindeki ilk yardım görevlisi)", // nieuw, nalezen
     "be.c.accident": "Her kazayı bildir", // = c.accident
-    "be.c.accident.b": "Her kazayı, küçük olsa bile, amirine veya EHBO’er’e (iş yerindeki ilk yardım görevlisine) söyle. Bir geçici iş bürosu (interimkantoor) üzerinden mi çalışıyorsun? Büroya da haber ver. Acil durumda önce 112’yi ara. İşveren kazayı iş kazası sigortacısına (arbeidsongevallenverzekeraar) bildirir: tedavi masraflarını o öder. Ciddi bir kaza ayrıca Toezicht op het Welzijn op het Werk’e bildirilir. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
+    "be.c.accident.b": "Her kazayı, küçük olsa bile, amirine veya EHBO’er’e (iş yerindeki ilk yardım görevlisine) söyle. Bir geçici iş ajansı (interimkantoor) üzerinden mi çalışıyorsun? Ajansa da haber ver. Acil durumda önce 112’yi ara. İşveren kazayı iş kazası sigortacısına (arbeidsongevallenverzekeraar) bildirir: tedavi masraflarını o öder. Ciddi bir kaza ayrıca Toezicht op het Welzijn op het Werk’e bildirilir. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.accident.p": "İş arkadaşım yaralandı. EHBO’er nerede?", // nieuw, nalezen
     "be.c.accident.s": "Bir şey kaldırırken sırtını incitiyorsun. İşini kaybetmekten korkuyorsun. Ne yaparsın?", // = c.accident.s
     "be.c.accident.o1": "Aynı gün amirine bildirirsin.", // = c.accident.o1
     "be.c.accident.o2": "İşini kaybetmemek için hiçbir şey söylemezsin.", // = c.accident.o2
     "be.c.accident.o3": "Ağrının kendiliğinden geçip geçmeyeceğini beklersin.", // = c.accident.o3
-    "be.c.accident.w": "Küçük görünse bile aynı gün bildir: ağrı sonra artabilir. İşverenin seni bildirdiğin için cezalandırması yasaktır. Bir geçici iş bürosu üzerinden mi çalışıyorsun? Büroya da söyle.", // nieuw, nalezen
+    "be.c.accident.w": "Küçük görünse bile aynı gün bildir: ağrı sonra artabilir. İşverenin seni bildirdiğin için cezalandırması yasaktır. Bir geçici iş ajansı üzerinden mi çalışıyorsun? Ajansa da söyle.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const pl: Gloss = {
@@ -91,13 +91,13 @@ export const pl: Gloss = {
 export const ro: Gloss = {
     "be.w.bhver": "EHBO’er (persoana de prim ajutor din firmă)", // nieuw, nalezen
     "be.c.accident": "Raportează orice accident", // = c.accident
-    "be.c.accident.b": "Spune-i șefului sau EHBO’er-ului (persoanei de prim ajutor din firmă) despre orice accident, chiar și unul mic. Lucrezi printr-un birou de muncă temporară (interimkantoor)? Anunță și biroul. În caz de urgență, sună întâi la 112. Angajatorul raportează accidentul la asigurătorul lui pentru accidente de muncă (arbeidsongevallenverzekeraar): acesta plătește îngrijirile. Un accident grav se raportează și la Toezicht op het Welzijn op het Werk. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
+    "be.c.accident.b": "Spune-i șefului sau EHBO’er-ului (persoanei de prim ajutor din firmă) despre orice accident, chiar și unul mic. Lucrezi printr-o agenție de muncă temporară (interimkantoor)? Anunță și agenția. În caz de urgență, sună întâi la 112. Angajatorul raportează accidentul la asigurătorul lui pentru accidente de muncă (arbeidsongevallenverzekeraar): acesta plătește îngrijirile. Un accident grav se raportează și la Toezicht op het Welzijn op het Werk. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.accident.p": "Colegul meu e rănit. Unde e EHBO’er-ul?", // nieuw, nalezen
     "be.c.accident.s": "Îți accidentezi spatele când ridici ceva. Ți-e frică să nu-ți pierzi locul de muncă. Ce faci?", // = c.accident.s
     "be.c.accident.o1": "Îi raportezi șefului în aceeași zi.", // = c.accident.o1
     "be.c.accident.o2": "Nu spui nimic, ca să nu-ți pierzi locul de muncă.", // = c.accident.o2
     "be.c.accident.o3": "Aștepți să vezi dacă durerea trece de la sine.", // = c.accident.o3
-    "be.c.accident.w": "Raportează în aceeași zi, chiar dacă pare ceva mic: durerea se poate agrava mai târziu. Angajatorul nu are voie să te pedepsească pentru că ai raportat. Lucrezi printr-un birou de muncă temporară? Spune și biroului.", // nieuw, nalezen
+    "be.c.accident.w": "Raportează în aceeași zi, chiar dacă pare ceva mic: durerea se poate agrava mai târziu. Angajatorul nu are voie să te pedepsească pentru că ai raportat. Lucrezi printr-o agenție de muncă temporară? Spune și agenției.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const bg: Gloss = {

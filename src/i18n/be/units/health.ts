@@ -128,7 +128,7 @@ export const uk: Gloss = {
     "be.w.huisartsenpost": "чергова служба сімейних лікарів увечері, вночі й на вихідних (huisartsenwachtpost)", // nieuw, nalezen
     "be.c.doctor.q": "Чергова служба лікарів, чим я можу допомогти?", // nieuw, nalezen
     "be.w.premie": "членський внесок (те, що платиш у ziekenfonds)", // nieuw, nalezen
-    "be.w.eigenrisico": "власна частка (частина вартості, яку платиш сам)", // nieuw, nalezen
+    "be.w.eigenrisico": "власна частка (частина вартості, яку платиш ти)", // nieuw, nalezen // nagelezen AI ronde 3
     "be.w.zorgtoeslag": "підвищена компенсація (додаткова допомога з витратами на здоров’я при низькому доході)", // nieuw, nalezen
     "be.w.verzekeraar": "лікарняна каса (ziekenfonds, mutualiteit)", // nieuw, nalezen
     "be.s.insurance.1": "Я член лікарняної каси.", // nieuw, nalezen
@@ -140,18 +140,18 @@ export const uk: Gloss = {
     "be.c.doctor.b": "Обери сімейного лікаря (huisarts) біля дому. Потрібен лікар увечері, вночі або на вихідних? Дзвони 1733: тебе направлять до чергового лікаря (huisartsenwachtpost). Дзвони 112 тільки в надзвичайній ситуації: загроза життю, пожежа або злочин, який відбувається зараз. Ліки ти отримуєш в аптеці (apotheek).", // nieuw, nalezen
     "be.c.doctor.p": "Ви ще приймаєте нових пацієнтів?", // nieuw, nalezen
     "be.c.doctor.s": "Суботній вечір. У твоєї дитини висока температура, але вона при тямі й дихає нормально. Що ти зробиш?", // = c.doctor.s
-    "be.c.doctor.o1": "Подзвонити 1733.", // nieuw, nalezen
+    "be.c.doctor.o1": "Подзвониш 1733.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "Подзвониш 112.", // = c.doctor.o2
     "be.c.doctor.o3": "Чекатимеш до понеділка й нічого не робитимеш.", // = c.doctor.o3
     "be.c.doctor.w": "1733 допомагає знайти лікаря поза робочими годинами. 112 — для надзвичайних ситуацій: загроза життю, пожежа або злочин, який відбувається зараз.", // nieuw, nalezen
     "be.c.insurance": "Твоя лікарняна каса (ziekenfonds)", // nieuw, nalezen
-    "be.c.insurance.b": "У Бельгії ти мусиш вступити до лікарняної каси: ziekenfonds (mutualiteit) або Hulpkas (HZIV). Зроби це, коли починаєш працювати. Ziekenfonds повертає частину витрат на лікаря, лікарню та ліки. Частина, яку ти платиш сам, називається remgeld. З низьким доходом ти можеш отримати verhoogde tegemoetkoming: тоді платиш менше. Довго хворієш? Тоді ziekenfonds також виплачує тобі допомогу. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+    "be.c.insurance.b": "У Бельгії ти мусиш вступити до лікарняної каси: ziekenfonds (mutualiteit) або Hulpkas (HZIV). Зроби це, коли починаєш працювати. Ziekenfonds повертає частину витрат на лікаря, лікарню та ліки. Частина, яку платиш ти, називається remgeld. З низьким доходом ти можеш отримати verhoogde tegemoetkoming: тоді платиш менше. Довго хворієш? Тоді ziekenfonds також виплачує тобі допомогу. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.p": "Я хочу вступити до лікарняної каси. Ви можете мені допомогти?", // nieuw, nalezen
     "be.c.insurance.s": "Ти почав / почала тут працювати два тижні тому, і в тебе ще немає ziekenfonds. Що ти зробиш?", // nieuw, nalezen
-    "be.c.insurance.o1": "Швидко вступити до ziekenfonds.", // nieuw, nalezen
+    "be.c.insurance.o1": "Швидко вступиш до ziekenfonds.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.o2": "Почекаєш: страхування з твоєї країни вистачить.", // = c.insurance.o2
     "be.c.insurance.o3": "Користуватимешся страховою карткою друга.", // = c.insurance.o3
-    "be.c.insurance.w": "Без ziekenfonds ти сам платиш лікарю та лікарні. Швидко вступити — значить захистити себе. Роботодавець або кадрове агентство можуть допомогти.", // nieuw, nalezen
+    "be.c.insurance.w": "Без ziekenfonds ти платиш лікарю та лікарні сам / сама. Швидко вступити — значить захистити себе. Роботодавець або агентство тимчасової роботи можуть допомогти.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const tr: Gloss = {
@@ -170,7 +170,7 @@ export const tr: Gloss = {
     "be.c.doctor.b": "Evine yakın bir aile hekimi (huisarts) seç. Akşam, gece veya hafta sonu doktora mı ihtiyacın var? 1733’ü ara: seni nöbetçi doktora (huisartsenwachtpost) yönlendirirler. 112’yi sadece acil durumda ara: hayati tehlike, yangın veya şu an işlenen bir suç. İlaçları eczaneden (apotheek) alırsın.", // nieuw, nalezen
     "be.c.doctor.p": "Hâlâ yeni hasta kabul ediyor musunuz?", // nieuw, nalezen
     "be.c.doctor.s": "Cumartesi gecesi. Çocuğunun ateşi yüksek ama uyanık ve normal nefes alıyor. Ne yaparsın?", // = c.doctor.s
-    "be.c.doctor.o1": "1733’ü aramak.", // nieuw, nalezen
+    "be.c.doctor.o1": "1733’ü ararsın.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "112’yi ararsın.", // = c.doctor.o2
     "be.c.doctor.o3": "Pazartesiye kadar bekler ve hiçbir şey yapmazsın.", // = c.doctor.o3
     "be.c.doctor.w": "1733 mesai saatleri dışında doktor bulmana yardım eder. 112 acil durumlar içindir: hayati tehlike, yangın veya şu an işlenen bir suç.", // nieuw, nalezen
@@ -178,10 +178,10 @@ export const tr: Gloss = {
     "be.c.insurance.b": "Belçika’da bir sağlık sigortası kurumuna üye olmalısın: bir ziekenfonds (mutualiteit) ya da Hulpkas (HZIV). Bunu işe başladığında yap. Ziekenfonds doktor, hastane ve ilaç masraflarının bir kısmını geri öder. Kendin ödediğin kısım remgeld’dir. Gelirin düşükse verhoogde tegemoetkoming alabilirsin: o zaman daha az ödersin. Uzun süre mi hastasın? O zaman ziekenfonds sana bir ödenek de öder. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
     "be.c.insurance.p": "Bir sağlık sigortası kurumuna üye olmak istiyorum. Bana yardım edebilir misiniz?", // nieuw, nalezen
     "be.c.insurance.s": "İki hafta önce burada çalışmaya başladın ve henüz bir ziekenfonds’un yok. Ne yaparsın?", // nieuw, nalezen
-    "be.c.insurance.o1": "Hemen bir ziekenfonds’a üye olmak.", // nieuw, nalezen
+    "be.c.insurance.o1": "Hemen bir ziekenfonds’a üye olursun.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.o2": "Beklersin: kendi ülkendeki sigortan yeterli.", // = c.insurance.o2
     "be.c.insurance.o3": "Bir arkadaşının sigorta kartını kullanırsın.", // = c.insurance.o3
-    "be.c.insurance.w": "Ziekenfonds olmadan doktoru ve hastaneyi kendin ödersin. Hemen üye olmak seni korur. İşverenin veya geçici iş büron sana yardım edebilir.", // nieuw, nalezen
+    "be.c.insurance.w": "Ziekenfonds olmadan doktoru ve hastaneyi kendin ödersin. Hemen üye olmak seni korur. İşverenin veya geçici iş ajansın sana yardım edebilir.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const pl: Gloss = {
@@ -230,25 +230,25 @@ export const ro: Gloss = {
     "be.c.doctor.b": "Alege un medic de familie (huisarts) aproape de casă. Ai nevoie de un medic seara, noaptea sau în weekend? Sună la 1733: te trimit la medicul de gardă (huisartsenwachtpost). Sună la 112 doar în caz de urgență: pericol de moarte, incendiu sau o infracțiune care are loc acum. Medicamentele le iei de la farmacie (apotheek).", // nieuw, nalezen
     "be.c.doctor.p": "Mai primiți pacienți noi?", // nieuw, nalezen
     "be.c.doctor.s": "E sâmbătă noaptea. Copilul tău are febră mare, dar e treaz și respiră normal. Ce faci?", // = c.doctor.s
-    "be.c.doctor.o1": "Să suni la 1733.", // nieuw, nalezen
+    "be.c.doctor.o1": "Suni la 1733.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "Suni la 112.", // = c.doctor.o2
     "be.c.doctor.o3": "Aștepți până luni și nu faci nimic.", // = c.doctor.o3
     "be.c.doctor.w": "1733 te ajută să găsești un medic în afara orelor de program. 112 e pentru urgențe: pericol de moarte, incendiu sau o infracțiune care are loc acum.", // nieuw, nalezen
     "be.c.insurance": "Casa ta de sănătate (ziekenfonds)", // nieuw, nalezen
-    "be.c.insurance.b": "În Belgia trebuie să te înscrii la o casă de sănătate: un ziekenfonds (mutualiteit) sau Hulpkas (HZIV). Fă asta când începi să lucrezi. Ziekenfonds-ul îți dă înapoi o parte din costurile pentru medic, spital și medicamente. Partea pe care o plătești tu e remgeld. Cu un venit mic poți primi verhoogde tegemoetkoming: atunci plătești mai puțin. Ești bolnav mult timp? Atunci ziekenfonds-ul îți plătește și o indemnizație. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
+    "be.c.insurance.b": "În Belgia trebuie să te înscrii la o casă de sănătate: un ziekenfonds (mutualiteit) sau Hulpkas (HZIV). Fă asta când începi să lucrezi. Ziekenfonds-ul îți dă înapoi o parte din costurile pentru medic, spital și medicamente. Partea pe care o plătești tu e remgeld. Cu un venit mic poți primi verhoogde tegemoetkoming: atunci plătești mai puțin. Ești bolnav / bolnavă mult timp? Atunci ziekenfonds-ul îți plătește și o indemnizație. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.p": "Vreau să mă înscriu la o casă de sănătate. Mă puteți ajuta?", // nieuw, nalezen
     "be.c.insurance.s": "Lucrezi aici de două săptămâni și încă nu ai ziekenfonds. Ce faci?", // nieuw, nalezen
-    "be.c.insurance.o1": "Să te înscrii repede la un ziekenfonds.", // nieuw, nalezen
+    "be.c.insurance.o1": "Te înscrii repede la un ziekenfonds.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.o2": "Aștepți: asigurarea din țara ta e suficientă.", // = c.insurance.o2
     "be.c.insurance.o3": "Folosești cardul de asigurare al unui prieten.", // = c.insurance.o3
-    "be.c.insurance.w": "Fără ziekenfonds plătești singur medicul și spitalul. Dacă te înscrii repede, ești protejat. Angajatorul sau biroul de muncă temporară te poate ajuta.", // nieuw, nalezen
+    "be.c.insurance.w": "Fără ziekenfonds plătești singur / singură medicul și spitalul. Dacă te înscrii repede, te protejezi. Angajatorul sau agenția de muncă temporară te poate ajuta.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const bg: Gloss = {
     "be.w.huisartsenpost": "дежурният център на личните лекари вечер, нощем и през уикенда (huisartsenwachtpost)", // nieuw, nalezen
     "be.c.doctor.q": "Дежурен лекарски център, с какво мога да помогна?", // nieuw, nalezen
     "be.w.premie": "членският внос (това, което плащаш на ziekenfonds)", // nieuw, nalezen
-    "be.w.eigenrisico": "собственото участие (частта от разходите, която плащаш сам)", // nieuw, nalezen
+    "be.w.eigenrisico": "собственото участие (частта от разходите, която плащаш ти)", // nieuw, nalezen // nagelezen AI ronde 3
     "be.w.zorgtoeslag": "повишено обезщетение (допълнителна помощ за здравни разходи при нисък доход)", // nieuw, nalezen
     "be.w.verzekeraar": "здравната каса (ziekenfonds, mutualiteit)", // nieuw, nalezen
     "be.s.insurance.1": "Член съм на здравна каса.", // nieuw, nalezen
@@ -260,18 +260,18 @@ export const bg: Gloss = {
     "be.c.doctor.b": "Избери си личен лекар (huisarts) близо до дома. Трябва ти лекар вечер, нощем или през уикенда? Обади се на 1733: ще те насочат към дежурния лекар (huisartsenwachtpost). Обаждай се на 112 само при спешен случай: опасност за живота, пожар или престъпление, което става сега. Лекарства взимаш от аптеката (apotheek).", // nieuw, nalezen
     "be.c.doctor.p": "Приемате ли още нови пациенти?", // nieuw, nalezen
     "be.c.doctor.s": "Събота вечер е. Детето ти има висока температура, но е будно и диша нормално. Какво правиш?", // = c.doctor.s
-    "be.c.doctor.o1": "Да се обадиш на 1733.", // nieuw, nalezen
+    "be.c.doctor.o1": "Обаждаш се на 1733.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "Обаждаш се на 112.", // = c.doctor.o2
     "be.c.doctor.o3": "Чакаш до понеделник и не правиш нищо.", // = c.doctor.o3
     "be.c.doctor.w": "1733 ти помага да намериш лекар извън работното време. 112 е за спешни случаи: опасност за живота, пожар или престъпление, което става сега.", // nieuw, nalezen
     "be.c.insurance": "Твоята здравна каса (ziekenfonds)", // nieuw, nalezen
-    "be.c.insurance.b": "В Белгия трябва да се запишеш в здравна каса: ziekenfonds (mutualiteit) или Hulpkas (HZIV). Направи го, когато започнеш работа. Ziekenfonds връща част от разходите за лекар, болница и лекарства. Частта, която плащаш сам, е remgeld. При нисък доход може да получиш verhoogde tegemoetkoming: тогава плащаш по-малко. Болен си дълго време? Тогава ziekenfonds ти плаща и обезщетение. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
+    "be.c.insurance.b": "В Белгия трябва да се запишеш в здравна каса: ziekenfonds (mutualiteit) или Hulpkas (HZIV). Направи го, когато започнеш работа. Ziekenfonds връща част от разходите за лекар, болница и лекарства. Частта, която плащаш ти, е remgeld. При нисък доход може да получиш verhoogde tegemoetkoming: тогава плащаш по-малко. Болен / болна си дълго време? Тогава ziekenfonds ти плаща и обезщетение. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.p": "Искам да се запиша в здравна каса. Можете ли да ми помогнете?", // nieuw, nalezen
     "be.c.insurance.s": "Работиш тук от две седмици и още нямаш ziekenfonds. Какво правиш?", // nieuw, nalezen
-    "be.c.insurance.o1": "Бързо да се запишеш в ziekenfonds.", // nieuw, nalezen
+    "be.c.insurance.o1": "Бързо се записваш в ziekenfonds.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.o2": "Чакаш: застраховката от твоята страна е достатъчна.", // = c.insurance.o2
     "be.c.insurance.o3": "Ползваш здравната карта на приятел.", // = c.insurance.o3
-    "be.c.insurance.w": "Без ziekenfonds плащаш сам на лекаря и болницата. Бързото записване те пази. Работодателят или агенцията за временна работа могат да ти помогнат.", // nieuw, nalezen
+    "be.c.insurance.w": "Без ziekenfonds плащаш сам / сама на лекаря и болницата. Бързото записване те пази. Работодателят или агенцията за временна работа могат да ти помогнат.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const es: Gloss = {

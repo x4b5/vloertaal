@@ -67,13 +67,13 @@ export const uk: Gloss = {
 export const tr: Gloss = {
     "be.w.kantine": "yemekhane (refter)", // nieuw, nalezen
     "be.c.je": "“Je” mi, “u” mu?", // = c.je
-    "be.c.je.b": "Flandra’da birçok kişi işte \"u\" der, özellikle başta: patrona, müşteriye ya da yaşça büyük birine. İş arkadaşları birbirine çoğu zaman \"je\" der, konuşmada \"ge\" de duyarsın. Emin değilsen \"u\" ile başla ve başkalarının ne yaptığını dinle.", // nieuw, nalezen
+    "be.c.je.b": "Flandra’da birçok kişi işte “u” der, özellikle başta: patrona, müşteriye ya da yaşça büyük birine. İş arkadaşları birbirine çoğu zaman “je” der, konuşmada “ge” de duyarsın. Emin değilsen “u” ile başla ve başkalarının ne yaptığını dinle.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.je.p": "Sana “je” diyebilir miyim?", // = c.je.p
     "be.c.je.s": "Yeni amirin diyor ki: “Zeg maar je, hoor!” Ne demek istiyor?", // = c.je.s
     "be.c.je.o1": "Ona “je” demeni istiyor.", // = c.je.o1
     "be.c.je.o2": "Bir şey söylemeni istiyor.", // = c.je.o2
     "be.c.je.o3": "Daha kibar konuşmanı istiyor.", // = c.je.o3
-    "be.c.je.w": "\"Zeg maar je\" samimi bir sözdür: daha az mesafe istiyor. Flandra’da birçok kişi \"u\" ile başlar, bu yüzden biri sana bunu söyleyene kadar bekle.", // nieuw, nalezen
+    "be.c.je.w": "“Zeg maar je” samimi bir sözdür: daha az mesafe istiyor. Flandra’da birçok kişi “u” ile başlar, bu yüzden biri sana bunu söyleyene kadar bekle.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const pl: Gloss = {

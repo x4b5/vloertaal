@@ -50,7 +50,7 @@ export const prs: Gloss = {
 
 export const uk: Gloss = {
     "be.c.direct": "Обережні слова, ясне прохання", // nieuw, nalezen
-    "be.c.direct.b": "Фламандські колеги часто говорять обережно, наприклад «Zou je die doos daar willen zetten?». Часто це все одно чітке прохання: зроби це. Деякі колеги дуже прямі, наприклад «Dat is fout». Зазвичай вони не хочуть образити. Ти теж можеш казати, що думаєш, якщо залишаєшся привітним.", // nieuw, nalezen
+    "be.c.direct.b": "Фламандські колеги часто говорять обережно, наприклад «Zou je die doos daar willen zetten?» Часто це все одно чітке прохання: зроби це. Деякі колеги дуже прямі, наприклад «Dat is fout». Зазвичай вони не хочуть образити. Ти теж можеш казати, що думаєш, якщо залишаєшся привітним / привітною.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.direct.p": "Добре, а як тоді треба?", // = c.direct.p
     "be.c.direct.s": "Колега каже: «Nee, dat is fout. Die doos moet daar.» Що ти зробиш?", // = c.direct.s
     "be.c.direct.o1": "Запитаєш, як треба, і переставиш коробку.", // = c.direct.o1
@@ -61,7 +61,7 @@ export const uk: Gloss = {
 
 export const tr: Gloss = {
     "be.c.direct": "Dikkatli sözler, açık bir mesaj", // nieuw, nalezen
-    "be.c.direct.b": "Flaman iş arkadaşları çoğu zaman bir şeyi dikkatli söyler, örneğin \"Zou je die doos daar willen zetten?\" Bu çoğu zaman yine de açık bir istektir: yap. Bazı iş arkadaşları çok dolaysızdır, örneğin \"Dat is fout\". Genelde kaba olmak istemezler. Sen de düşündüğünü söyleyebilirsin, yeter ki kibar kal.", // nieuw, nalezen
+    "be.c.direct.b": "Flaman iş arkadaşları çoğu zaman bir şeyi dikkatli söyler, örneğin “Zou je die doos daar willen zetten?” Bu çoğu zaman yine de açık bir istektir: yap. Bazı iş arkadaşları çok dolaysızdır, örneğin “Dat is fout”. Genelde kaba olmak istemezler. Sen de düşündüğünü söyleyebilirsin, yeter ki kibar kal.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.direct.p": "Tamam, o zaman nasıl yapmalı?", // = c.direct.p
     "be.c.direct.s": "Bir iş arkadaşın diyor ki: “Nee, dat is fout. Die doos moet daar.” Ne yaparsın?", // = c.direct.s
     "be.c.direct.o1": "Nasıl yapılması gerektiğini sorar ve kutuyu taşırsın.", // = c.direct.o1
@@ -83,7 +83,7 @@ export const pl: Gloss = {
 
 export const ro: Gloss = {
     "be.c.direct": "Cuvinte prudente, mesaj clar", // nieuw, nalezen
-    "be.c.direct.b": "Colegii flamanzi spun des lucrurile cu grijă, de exemplu „Zou je die doos daar willen zetten?”. Asta e des totuși o cerere clară: fă-o. Unii colegi sunt foarte direcți, de exemplu „Dat is fout”. De obicei nu vor să fie nepoliticoși. Și tu poți spune ce crezi, cât timp rămâi prietenos.", // nieuw, nalezen
+    "be.c.direct.b": "Colegii flamanzi spun des lucrurile cu grijă, de exemplu „Zou je die doos daar willen zetten?” Asta e des totuși o cerere clară: fă-o. Unii colegi sunt foarte direcți, de exemplu „Dat is fout”. De obicei nu vor să fie nepoliticoși. Și tu poți spune ce crezi, cât timp rămâi prietenos / prietenoasă.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.direct.p": "Bine, atunci cum trebuie făcut?", // = c.direct.p
     "be.c.direct.s": "Un coleg spune: „Nee, dat is fout. Die doos moet daar.” Ce faci?", // = c.direct.s
     "be.c.direct.o1": "Întrebi cum trebuie făcut și muți cutia.", // = c.direct.o1
@@ -94,7 +94,7 @@ export const ro: Gloss = {
 
 export const bg: Gloss = {
     "be.c.direct": "Внимателни думи, ясно послание", // nieuw, nalezen
-    "be.c.direct.b": "Фламандските колеги често казват нещата внимателно, например „Zou je die doos daar willen zetten?“. Това често все пак е ясна молба: направи го. Някои колеги са много директни, например „Dat is fout“. Обикновено не искат да са груби. И ти можеш да казваш какво мислиш, стига да оставаш любезен.", // nieuw, nalezen
+    "be.c.direct.b": "Фламандските колеги често казват нещата внимателно, например „Zou je die doos daar willen zetten?“ Това често все пак е ясна молба: направи го. Някои колеги са много директни, например „Dat is fout“. Обикновено не искат да са груби. И ти можеш да казваш какво мислиш, стига да оставаш любезен / любезна.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.direct.p": "Добре, а как трябва да се направи?", // = c.direct.p
     "be.c.direct.s": "Колега казва: „Nee, dat is fout. Die doos moet daar.“ Какво правиш?", // = c.direct.s
     "be.c.direct.o1": "Питаш как трябва да се направи и преместваш кашона.", // = c.direct.o1

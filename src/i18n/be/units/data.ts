@@ -69,9 +69,9 @@ export const uk: Gloss = {
 export const tr: Gloss = {
     'be.s.details.3': "Bu form FOD Financiën (vergi dairesi) için.", // nieuw, nalezen
     'be.c.details': "Bilgilerini doğru ver", // nieuw, nalezen
-    'be.c.details.b': "İşe başlarken bilgilerini verirsin: adın, adresin, telefon numaran, doğum tarihin ve ulusal sicil numaran (rijksregisternummer ya da bisnummer). Adını yavaşça, harf harf kodla. Sonra adını sözleşmende ve maaş bordronda (loonbrief) kontrol et. Adında ya da numarada bir hata maaşında veya vergide sorun çıkarabilir. Yeni adres ya da telefon numarası mı? İşverenine söyle.", // nieuw, nalezen
+    'be.c.details.b': "İşe başlarken bilgilerini verirsin: adın, adresin, telefon numaran, doğum tarihin ve ulusal sicil numaran (rijksregisternummer ya da bisnummer). Adını yavaşça, harf harf söyle. Sonra adını sözleşmende ve maaş bordronda (loonbrief) kontrol et. Adında ya da numarada bir hata maaşında veya vergide sorun çıkarabilir. Yeni adres ya da telefon numarası mı? İşverenine söyle.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.details.p': "Harf harf söyleyeyim: A, L, I.", // nieuw, nalezen
-    'be.c.details.s': "Telefonda geçici iş bürosu (interimkantoor) soyadını yazıyor. Yanlış yazdıklarını duyuyorsun. Ne yaparsın?", // nieuw, nalezen
+    'be.c.details.s': "Telefonda geçici iş ajansı (interimkantoor) soyadını yazıyor. Yanlış yazdıklarını duyuyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.details.o1': "Adını yavaşça harf harf söyler, geri okumalarını istersin.", // nieuw, nalezen
     'be.c.details.o2': "Hiçbir şey demezsin: adında küçük bir hata önemli değil.", // nieuw, nalezen
     'be.c.details.o3': "Telefonu kapatır, hatayı sonra bulmalarını umarsın.", // nieuw, nalezen

@@ -215,16 +215,16 @@ export const uk: Gloss = {
   'be.w.zzper': "самозайнятий (ти працюєш на себе)", // nieuw, nalezen
   'be.s.permit.2': "Я працюю за наймом чи на себе?", // nieuw, nalezen
   'be.s.permit.3': "Я працюю неповний робочий день.", // nieuw, nalezen
-  'be.c.findwork': "Контракт — на папері", // nieuw, nalezen
+  'be.c.findwork': "Договір — на папері", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.findwork.b': "Завжди проси письмовий договір і копію для себе. Договір на певний строк (bepaalde tijd) або на неповний робочий час має бути на папері, коли ти починаєш. Прочитай його, перш ніж підписати, або попроси допомоги в людини, якій довіряєш. Перед першим днем роботодавець повідомляє про тебе соціальне страхування: це Dimona. Агентство тимчасової роботи (interimkantoor) не може просити в тебе гроші за пошук роботи. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
-  'be.c.findwork.p': "Можна мені спершу прочитати контракт?", // nieuw, nalezen
+  'be.c.findwork.p': "Можна мені спершу прочитати договір?", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.findwork.s': "Новий роботодавець каже: «Підпиши тут зараз. Прочитаєш потім». Що ти зробиш?", // nieuw, nalezen
   'be.c.findwork.o1': "Попросиш час, щоб прочитати, або копію.", // nieuw, nalezen
   'be.c.findwork.o2': "Швидко підпишеш, щоб не втратити роботу.", // nieuw, nalezen
   'be.c.findwork.o3': "Підпишеш, а потім попросиш копію.", // nieuw, nalezen
-  'be.c.findwork.w': "У контракті написано, скільки ти заробляєш і які в тебе права. Добрий роботодавець дасть тобі час прочитати. Ти можеш питати про все, чого не розумієш.", // nieuw, nalezen
+  'be.c.findwork.w': "У договорі написано, скільки ти заробляєш і які в тебе права. Добрий роботодавець дасть тобі час прочитати. Ти можеш питати про все, чого не розумієш.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.contract': "Випробувального строку немає, але є строк попередження", // nieuw, nalezen
-  'be.c.contract.b': "Старого випробувального строку (proeftijd) більше немає. Від самого початку в тебе є строк попередження (opzegtermijn). У перші місяці він короткий. Роботодавець хоче припинити роботу? Тоді він попереджає тебе письмово або платить тобі зарплату за цей час (opzegvergoeding). Працюєш неповний день зі змінними годинами? Графік роботи (uurrooster) ти отримуєш заздалегідь: зазвичай за 7 робочих днів. Твоя галузь може скоротити цей строк, але не менше ніж до 3. Правила твоєї галузі встановлює її паритетна комісія (paritair comité). Твоя робота закінчується? Попроси свій C4: він потрібен для допомоги по безробіттю. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+  'be.c.contract.b': "Старого випробувального строку (proeftijd) більше немає. Від самого початку в тебе є строк попередження (opzegtermijn). У перші місяці він короткий. Роботодавець хоче припинити роботу? Тоді він попереджає тебе письмово або платить тобі зарплату за цей час (opzegvergoeding). Працюєш неповний день зі змінними годинами? Графік роботи (uurrooster) ти отримуєш заздалегідь: зазвичай за 7 робочих днів. Твоя галузь може скоротити цей строк, але не менше ніж до 3 днів. Правила твоєї галузі встановлює її паритетна комісія (paritair comité). Твоя робота закінчується? Попроси свій C4: він потрібен для допомоги з безробіття. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.contract.p': "Який у мене строк попередження? І чи отримаю я свій C4?", // nieuw, nalezen
   'be.c.contract.s': "Через три тижні керівник каже: «Не виходить. Завтра можеш не приходити. Ти ще на випробувальному строку». Що правда?", // nieuw, nalezen
   'be.c.contract.o1': "Випробувального строку немає: ти отримуєш попередження або зарплату.", // nieuw, nalezen
@@ -234,17 +234,17 @@ export const uk: Gloss = {
   'be.c.agency': "Агентство — твій роботодавець", // nieuw, nalezen
   'be.c.agency.b': "Якщо ти працюєш через агентство тимчасової роботи (interimkantoor), твій роботодавець — агентство, а не фірма, де ти працюєш. Договір і зарплата — від агентства. Твій договір має бути на папері не пізніше ніж через 2 робочі дні після початку. Ти маєш право щонайменше на таку саму зарплату, як працівники фірми, що виконують ту саму роботу. Реєстрація безкоштовна: агентство ніколи не може просити в тебе гроші. Багато одноденних договорів (dagcontracten) підряд дозволені лише з поважної причини. Записуй свої відпрацьовані години й перевіряй їх у розрахунковому листі (loonbrief). Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
   'be.c.agency.p': "У моєму розрахунковому листі замало годин.", // nieuw, nalezen
-  'be.c.agency.s': "У розрахунковому листі (loonbrief) 32 години, а ти працюєш 38. Що ти зробиш?", // nieuw, nalezen
-  'be.c.agency.o1': "Покажи агентству свій список годин і попроси виправити.", // nieuw, nalezen
+  'be.c.agency.s': "У розрахунковому листі (loonbrief) 32 години, а насправді їх було 38. Що ти зробиш?", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.agency.o1': "Покажеш агентству свій список годин і попросиш виправити.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.agency.o2': "Нічого не скажеш, бо це лише 6 годин.", // nieuw, nalezen
   'be.c.agency.o3': "Попросиш начальника у фірмі, де працюєш, оплатити ці 6 годин.", // nieuw, nalezen
   'be.c.agency.w': "Тобі платить агентство, тож помилку має виправити агентство. Твій власний список дат і годин допомагає. Запитати про це — твоє право.", // nieuw, nalezen
   'be.c.permit': "Робота й інтеграція", // nieuw, nalezen
-  'be.c.permit.b': "Тобі треба проходити курс інтеграції (inburgering)? У Фландрії тебе супроводжує Agentschap Integratie en Inburgering. Скажи роботодавцю і заздалегідь запитай, чи можна поєднати уроки нідерландської з твоїм графіком (uurrooster). Не знаєш точно, чи можна тобі тут працювати? Перевір це до початку, наприклад у профспілці. Роботодавець має зареєструвати тебе до першого дня (Dimona). Тобі пропонують працювати на цій роботі як самозайнятий (zelfstandige)? Самозайнятий не отримує зарплату, коли хворіє, і не отримує допомогу по безробіттю. Спочатку порадься. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+  'be.c.permit.b': "Тобі треба проходити курс інтеграції (inburgering)? У Фландрії тебе супроводжує Agentschap Integratie en Inburgering. Скажи роботодавцю і заздалегідь запитай, чи можна поєднати уроки нідерландської з твоїм графіком (uurrooster). Не знаєш точно, чи можна тобі тут працювати? Перевір це до початку, наприклад у профспілці. Роботодавець має зареєструвати тебе до першого дня (Dimona). Тобі пропонують працювати на цій роботі як самозайнята особа (zelfstandige)? Самозайнята особа не отримує зарплату, коли хворіє, і не отримує допомогу з безробіття. Спочатку порадься. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.permit.p': "У вівторок у мене урок нідерландської. Чи можна врахувати це в моєму графіку?", // nieuw, nalezen
   'be.c.permit.s': "Ти починаєш нову роботу. Урок нідерландської у вівторок зранку, але за графіком ти працюєш у вівторки. Що ти зробиш?", // nieuw, nalezen
-  'be.c.permit.o1': "Скажи керівнику й попроси змінити графік.", // nieuw, nalezen
-  'be.c.permit.o2': "Пропусти урок нідерландської, бо робота важливіша.", // nieuw, nalezen
+  'be.c.permit.o1': "Скажеш керівнику й попросиш змінити графік.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.permit.o2': "Пропустиш урок нідерландської, бо робота важливіша.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.permit.o3': "Залишатимешся вдома по вівторках і нічого не скажеш.", // nieuw, nalezen
   'be.c.permit.w': "Інтеграція — теж обов’язок. Багато роботодавців допомагають, коли дізнаються вчасно. Твій супровідник в Agentschap теж може допомогти поєднати уроки з роботою.", // nieuw, nalezen
 };
@@ -275,7 +275,7 @@ export const tr: Gloss = {
   'be.c.contract': "Deneme süresi yok, ama ihbar süresi var", // nieuw, nalezen
   'be.c.contract.b': "Eski deneme süresi (proeftijd) artık yok. En baştan itibaren bir ihbar süren (opzegtermijn) var. İlk aylarda bu süre kısadır. İşveren işi bitirmek mi istiyor? O zaman sana yazılı ihbar verir ya da o süre için ücretini öder (opzegvergoeding). Değişen saatlerle yarı zamanlı mı çalışıyorsun? Çalışma planını (uurrooster) önceden alırsın: genellikle 7 iş günü önce. Sektörün bunu kısaltabilir, ama 3 günden az olamaz. Sektörünün kurallarını ortak komitesi (paritair comité) belirler. İşin bitiyor mu? C4 belgeni iste: işsizlik ödeneği için ona ihtiyacın var. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
   'be.c.contract.p': "İhbar sürem ne kadar? C4 belgemi de alacak mıyım?", // nieuw, nalezen
-  'be.c.contract.s': "Üç hafta sonra patronun diyor ki: \"Olmuyor. Yarın bırak. Hâlâ deneme süresindesin.\" Hangisi doğru?", // nieuw, nalezen
+  'be.c.contract.s': "Üç hafta sonra patronun diyor ki: “Olmuyor. Yarın bırak. Hâlâ deneme süresindesin.” Hangisi doğru?", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.contract.o1': "Deneme süresi yok: ihbar süresi ya da ücretini alırsın.", // nieuw, nalezen
   'be.c.contract.o2': "İlk haftalarda patron seni hemen çıkarabilir.", // nieuw, nalezen
   'be.c.contract.o3': "Hiçbir şey alamazsın, çünkü sadece üç hafta çalıştın.", // nieuw, nalezen
@@ -284,16 +284,16 @@ export const tr: Gloss = {
   'be.c.agency.b': "Bir geçici iş ajansı (interimkantoor) üzerinden çalışıyorsan, işverenin çalıştığın şirket değil, ajanstır. Sözleşmen ve ücretin ajanstan gelir. Sözleşmen en geç işe başladıktan 2 iş günü sonra yazılı olmalı. Aynı işi yapan şirket çalışanlarıyla en az aynı ücreti alma hakkın var. Kayıt ücretsizdir: geçici iş ajansı senden asla para isteyemez. Art arda çok sayıda günlük sözleşme (dagcontracten) ancak geçerli bir nedenle yapılabilir. Çalıştığın saatleri kendin not et ve maaş bordronda (loonbrief) kontrol et. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
   'be.c.agency.p': "Maaş bordromda saatler eksik.", // nieuw, nalezen
   'be.c.agency.s': "Maaş bordronda (loonbrief) 32 saat yazıyor, ama sen 38 saat çalıştın. Ne yaparsın?", // nieuw, nalezen
-  'be.c.agency.o1': "Kendi saat listeni ajansa göster ve düzeltmelerini iste.", // nieuw, nalezen
+  'be.c.agency.o1': "Kendi saat listeni ajansa gösterir ve düzeltmelerini istersin.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.agency.o2': "Sadece 6 saat olduğu için hiçbir şey söylemezsin.", // nieuw, nalezen
   'be.c.agency.o3': "Çalıştığın şirketteki patrondan bu 6 saati ödemesini istersin.", // nieuw, nalezen
   'be.c.agency.w': "Sana ücretini ajans öder, bu yüzden hatayı ajans düzeltmeli. Kendi tarih ve saat listen yardımcı olur. Bunu sormak senin hakkın.", // nieuw, nalezen
   'be.c.permit': "İş ve uyum", // nieuw, nalezen
-  'be.c.permit.b': "Uyum programına (inburgering) katılman mı gerekiyor? Flandra’da sana Agentschap Integratie en Inburgering eşlik eder. İşverenine söyle ve Felemenkçe derslerinin çalışma planına (uurrooster) uyup uymayacağını erkenden sor. Burada çalışabileceğinden emin değil misin? Başlamadan önce kontrol et, örneğin bir sendikada. İşverenin seni ilk gününden önce bildirmeli (Dimona). Bu iş için serbest çalışan (zelfstandige) olarak çalışmanı mı istiyorlar? Serbest çalışan hastalanınca ücret almaz, işsizlik ödeneği de almaz. Önce danış. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
-  'be.c.permit.p': "Salı günü Felemenkçe dersim var. Çalışma planım bunu dikkate alabilir mi?", // nieuw, nalezen
-  'be.c.permit.s': "Yeni bir işe başlıyorsun. Felemenkçe dersin salı sabahları, ama çalışma planında salı günleri çalışıyorsun. Ne yaparsın?", // nieuw, nalezen
-  'be.c.permit.o1': "Amirine söyle ve planın değişmesini iste.", // nieuw, nalezen
-  'be.c.permit.o2': "Felemenkçe dersini atla, çünkü iş önce gelir.", // nieuw, nalezen
+  'be.c.permit.b': "Uyum programına (inburgering) katılman mı gerekiyor? Flandra’da sana Agentschap Integratie en Inburgering eşlik eder. İşverenine söyle ve Hollandaca derslerinin çalışma planına (uurrooster) uyup uymayacağını erkenden sor. Burada çalışabileceğinden emin değil misin? Başlamadan önce kontrol et, örneğin bir sendikada. İşverenin seni ilk gününden önce bildirmeli (Dimona). Bu iş için serbest çalışan (zelfstandige) olarak çalışmanı mı istiyorlar? Serbest çalışan hastalanınca ücret almaz, işsizlik ödeneği de almaz. Önce danış. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.permit.p': "Salı günü Hollandaca dersim var. Çalışma planım bunu dikkate alabilir mi?", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.permit.s': "Yeni bir işe başlıyorsun. Hollandaca dersin salı sabahları, ama çalışma planında salı günleri çalışıyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.permit.o1': "Amirine söyler ve planın değişmesini istersin.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.permit.o2': "Hollandaca dersini atlarsın, çünkü iş önce gelir.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.permit.o3': "Hiçbir şey söylemeden salı günleri evde kalırsın.", // nieuw, nalezen
   'be.c.permit.w': "Uyum programı da bir görevdir. Birçok işveren erkenden bilirse yardım eder. Agentschap’taki rehberin de derslerini işine uydurmana yardım edebilir.", // nieuw, nalezen
 };
@@ -371,7 +371,7 @@ export const ro: Gloss = {
   'be.c.findwork.o3': "Semnezi și apoi ceri o copie.", // nieuw, nalezen
   'be.c.findwork.w': "Contractul spune cât câștigi și ce drepturi ai. Un angajator bun îți dă timp să-l citești. Poți întreba despre tot ce nu înțelegi.", // nieuw, nalezen
   'be.c.contract': "Nu există perioadă de probă, dar există preaviz", // nieuw, nalezen
-  'be.c.contract.b': "Vechea perioadă de probă (proeftijd) nu mai există. De la început ai un termen de preaviz (opzegtermijn). În primele luni e scurt. Angajatorul vrea să încheie colaborarea? Atunci îți dă preaviz în scris sau îți plătește salariul pentru acea perioadă (opzegvergoeding). Lucrezi cu normă parțială, cu ore care se schimbă? Îți primești programul (uurrooster) din timp: de obicei cu 7 zile lucrătoare înainte. Sectorul tău poate scurta termenul, dar nu sub 3. Regulile sectorului tău vin de la comisia lui paritară (paritair comité). Ți se termină munca? Cere formularul C4: ai nevoie de el pentru indemnizația de șomaj. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
+  'be.c.contract.b': "Vechea perioadă de probă (proeftijd) nu mai există. De la început ai un termen de preaviz (opzegtermijn). În primele luni e scurt. Angajatorul vrea să încheie colaborarea? Atunci îți dă preaviz în scris sau îți plătește salariul pentru acea perioadă (opzegvergoeding). Lucrezi cu normă parțială, cu ore care se schimbă? Îți primești programul (uurrooster) din timp: de obicei cu 7 zile lucrătoare înainte. Sectorul tău poate scurta termenul, dar nu sub 3 zile. Regulile sectorului tău vin de la comisia lui paritară (paritair comité). Ți se termină munca? Cere formularul C4: ai nevoie de el pentru indemnizația de șomaj. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.contract.p': "Cât de lung e preavizul meu? Și primesc formularul C4?", // nieuw, nalezen
   'be.c.contract.s': "După trei săptămâni, șeful spune: „Nu merge. De mâine nu mai veni. Ești încă în perioada de probă.” Ce e adevărat?", // nieuw, nalezen
   'be.c.contract.o1': "Nu există perioadă de probă: primești preaviz sau salariul.", // nieuw, nalezen
@@ -382,16 +382,16 @@ export const ro: Gloss = {
   'be.c.agency.b': "Dacă lucrezi printr-o agenție de muncă temporară (interimkantoor), angajatorul tău e agenția, nu firma unde lucrezi. Contractul și salariul vin de la agenție. Contractul trebuie să fie în scris, cel târziu la 2 zile lucrătoare după ce începi. Ai dreptul la cel puțin același salariu ca angajații firmei care fac aceeași muncă. Înscrierea e gratuită: agenția nu are voie niciodată să-ți ceară bani. Multe contracte de o zi (dagcontracten) la rând sunt permise doar cu un motiv întemeiat. Notează-ți orele lucrate și verifică-le pe fluturașul de salariu (loonbrief). Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
   'be.c.agency.p': "Pe fluturașul meu sunt prea puține ore.", // nieuw, nalezen
   'be.c.agency.s': "Pe fluturașul de salariu (loonbrief) scrie 32 de ore, dar ai lucrat 38. Ce faci?", // nieuw, nalezen
-  'be.c.agency.o1': "Arată-i agenției lista ta de ore și cere să corecteze.", // nieuw, nalezen
+  'be.c.agency.o1': "Îi arăți agenției lista ta de ore și ceri să o corecteze.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.agency.o2': "Nu spui nimic, pentru că sunt doar 6 ore.", // nieuw, nalezen
   'be.c.agency.o3': "Îi ceri șefului de la firma unde lucrezi să-ți plătească cele 6 ore.", // nieuw, nalezen
   'be.c.agency.w': "Agenția te plătește, deci agenția trebuie să corecteze greșeala. Lista ta cu date și ore ajută. E dreptul tău să întrebi.", // nieuw, nalezen
   'be.c.permit': "Munca și integrarea", // nieuw, nalezen
-  'be.c.permit.b': "Trebuie să urmezi programul de integrare (inburgering)? În Flandra te îndrumă Agentschap Integratie en Inburgering. Spune-i angajatorului și întreabă din timp dacă orele de neerlandeză se potrivesc cu programul tău de lucru (uurrooster). Nu știi sigur dacă ai voie să lucrezi aici? Verifică înainte să începi, de exemplu la un sindicat. Angajatorul trebuie să te declare înainte de prima zi (Dimona). Ți se cere să lucrezi ca independent (zelfstandige) pentru acest job? Un independent nu primește salariu când e bolnav și nici indemnizație de șomaj. Cere mai întâi un sfat. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
-  'be.c.permit.p': "Marți am oră de neerlandeză. Poate programul meu să țină cont de asta?", // nieuw, nalezen
-  'be.c.permit.s': "Începi un job nou. Ora de neerlandeză e marți dimineața, dar în programul de lucru ești trecut marțea. Ce faci?", // nieuw, nalezen
-  'be.c.permit.o1': "Spune-i șefului și cere să schimbe programul.", // nieuw, nalezen
-  'be.c.permit.o2': "Sari peste ora de neerlandeză, pentru că munca e pe primul loc.", // nieuw, nalezen
+  'be.c.permit.b': "Trebuie să urmezi programul de integrare (inburgering)? În Flandra te îndrumă Agentschap Integratie en Inburgering. Spune-i angajatorului și întreabă din timp dacă orele de olandeză se potrivesc cu programul tău de lucru (uurrooster). Nu știi sigur dacă ai voie să lucrezi aici? Verifică înainte să începi, de exemplu la un sindicat. Angajatorul trebuie să te declare înainte de prima zi (Dimona). Ți se cere să lucrezi ca independent (zelfstandige) pentru acest job? Un independent nu primește salariu când e bolnav și nici indemnizație de șomaj. Cere mai întâi un sfat. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.permit.p': "Marți am oră de olandeză. Poate programul meu să țină cont de asta?", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.permit.s': "Începi un job nou. Ora de olandeză e marți dimineața, dar în programul de lucru ești trecut marțea. Ce faci?", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.permit.o1': "Îi spui șefului și ceri să schimbe programul.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.permit.o2': "Sari peste ora de olandeză, pentru că munca e pe primul loc.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.permit.o3': "Stai acasă marțea fără să spui nimic.", // nieuw, nalezen
   'be.c.permit.w': "Integrarea e și ea o obligație. Mulți angajatori ajută când află din timp. Îndrumătorul tău de la Agentschap te poate ajuta și el să potrivești orele cu munca.", // nieuw, nalezen
 };
@@ -420,7 +420,7 @@ export const bg: Gloss = {
   'be.c.findwork.o3': "Подписваш и после искаш копие.", // nieuw, nalezen
   'be.c.findwork.w': "В договора пише колко печелиш и какви са правата ти. Добрият работодател ти дава време да го прочетеш. Можеш да питаш за всичко, което не разбираш.", // nieuw, nalezen
   'be.c.contract': "Няма изпитателен срок, но има предизвестие", // nieuw, nalezen
-  'be.c.contract.b': "Старият изпитателен срок (proeftijd) вече не съществува. От самото начало имаш срок на предизвестие (opzegtermijn). През първите месеци той е кратък. Работодателят иска да прекрати работата? Тогава ти дава писмено предизвестие или ти плаща заплатата за този период (opzegvergoeding). Работиш на непълен ден с променливи часове? Графика си (uurrooster) получаваш предварително: обикновено 7 работни дни по-рано. Секторът ти може да го скъси, но не под 3. Правилата на сектора ти идват от неговата паритетна комисия (paritair comité). Работата ти свършва? Поискай своя C4: трябва ти за обезщетение за безработица. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
+  'be.c.contract.b': "Старият изпитателен срок (proeftijd) вече не съществува. От самото начало имаш срок на предизвестие (opzegtermijn). През първите месеци той е кратък. Работодателят иска да прекрати работата? Тогава ти дава писмено предизвестие или ти плаща заплатата за този период (opzegvergoeding). Работиш на непълен ден с променливи часове? Графика си (uurrooster) получаваш предварително: обикновено 7 работни дни по-рано. Секторът ти може да го скъси, но не под 3 дни. Правилата на сектора ти идват от неговата паритетна комисия (paritair comité). Работата ти свършва? Поискай своя C4: трябва ти за обезщетение за безработица. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.contract.p': "Колко е моето предизвестие? И ще получа ли своя C4?", // nieuw, nalezen
   'be.c.contract.s': "След три седмици шефът казва: „Не се получава. От утре спри. Още си на изпитателен срок.“ Кое е вярно?", // nieuw, nalezen
   'be.c.contract.o1': "Няма изпитателен срок: получаваш предизвестие или заплата.", // nieuw, nalezen
@@ -430,8 +430,8 @@ export const bg: Gloss = {
   'be.c.agency': "Агенцията е твоят работодател", // nieuw, nalezen
   'be.c.agency.b': "Ако работиш чрез агенция за временна работа (interimkantoor), твоят работодател е агенцията, а не фирмата, където работиш. Договорът и заплатата идват от агенцията. Договорът трябва да е писмен най-късно 2 работни дни след като започнеш. Имаш право поне на същата заплата като служителите на фирмата, които вършат същата работа. Записването е безплатно: агенцията никога няма право да ти иска пари. Много еднодневни договори (dagcontracten) подред са позволени само с основателна причина. Води си свой списък с изработените часове и ги проверявай във фиша за заплата (loonbrief). Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
   'be.c.agency.p': "Във фиша ми за заплата има твърде малко часове.", // nieuw, nalezen
-  'be.c.agency.s': "Във фиша за заплата (loonbrief) пише 32 часа, а работиш 38. Какво правиш?", // nieuw, nalezen
-  'be.c.agency.o1': "Покажи на агенцията своя списък с часове и поискай поправка.", // nieuw, nalezen
+  'be.c.agency.s': "Във фиша за заплата (loonbrief) пише 32 часа, а реално са 38. Какво правиш?", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.agency.o1': "Показваш на агенцията своя списък с часове и искаш поправка.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.agency.o2': "Не казваш нищо, защото са само 6 часа.", // nieuw, nalezen
   'be.c.agency.o3': "Молиш шефа във фирмата, където работиш, да ти плати тези 6 часа.", // nieuw, nalezen
   'be.c.agency.w': "Агенцията ти плаща, затова агенцията трябва да поправи грешката. Твоят списък с дати и часове помага. Имаш право да питаш.", // nieuw, nalezen
@@ -439,8 +439,8 @@ export const bg: Gloss = {
   'be.c.permit.b': "Трябва ли да минеш курс за интеграция (inburgering)? Във Фландрия те води Agentschap Integratie en Inburgering. Кажи на работодателя си и питай навреме дали уроците по нидерландски могат да се съчетаят с графика ти (uurrooster). Не знаеш със сигурност дали можеш да работиш тук? Провери, преди да започнеш, например в синдикат. Работодателят трябва да те обяви преди първия ти ден (Dimona). Искат ли да работиш като самостоятелно заето лице (zelfstandige) за тази работа? Самостоятелно заетият не получава заплата, когато е болен, нито обезщетение за безработица. Първо поискай съвет. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
   'be.c.permit.p': "Във вторник имам урок по нидерландски. Може ли графикът ми да се съобрази с това?", // nieuw, nalezen
   'be.c.permit.s': "Започваш нова работа. Урокът по нидерландски е във вторник сутрин, но по графика работиш във вторниците. Какво правиш?", // nieuw, nalezen
-  'be.c.permit.o1': "Кажи на прекия си началник и поискай промяна в графика.", // nieuw, nalezen
-  'be.c.permit.o2': "Пропусни урока по нидерландски, защото работата е на първо място.", // nieuw, nalezen
+  'be.c.permit.o1': "Казваш на прекия си началник и искаш промяна в графика.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.permit.o2': "Пропускаш урока по нидерландски, защото работата е на първо място.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.permit.o3': "Оставаш вкъщи във вторник, без да кажеш нищо.", // nieuw, nalezen
   'be.c.permit.w': "Интеграцията също е задължение. Много работодатели помагат, когато научат навреме. Твоят придружител в Agentschap също може да ти помогне да съчетаеш уроците с работата.", // nieuw, nalezen
 };

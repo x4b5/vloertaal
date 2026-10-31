@@ -61,13 +61,13 @@ export const uk: Gloss = {
 
 export const tr: Gloss = {
     "be.c.plain": "Açıkça söylemek", // = c.plain
-    "be.c.plain.b": "Flaman iş arkadaşları düşündüklerini çoğu zaman dikkatli söyler. Bazen bir deyimle başlarlar: \"Ik neem geen blad voor de mond.\" Anlamı: düşündüğümü dürüstçe söyleyeceğim. Sonra dolaysız bir görüş gelir, ama kabalık amacı yoktur. Sen de düşündüğünü dürüstçe ve sakince söyleyebilirsin.", // nieuw, nalezen
+    "be.c.plain.b": "Flaman iş arkadaşları düşündüklerini çoğu zaman dikkatli söyler. Bazen bir deyimle başlarlar: “Ik neem geen blad voor de mond.” Anlamı: düşündüğümü dürüstçe söyleyeceğim. Sonra dolaysız bir görüş gelir, ama kabalık amacı yoktur. Sen de düşündüğünü dürüstçe ve sakince söyleyebilirsin.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.plain.p": "Ne düşündüğümü dürüstçe söyleyebilir miyim?", // = c.plain.p
     "be.c.plain.s": "Amirin diyor ki: “Ik neem geen blad voor de mond.” Ne demek istiyor?", // = c.plain.s
     "be.c.plain.o1": "Ne düşündüğünü dürüstçe söyleyecek.", // = c.plain.o1
     "be.c.plain.o2": "Bu konuda konuşmak istemiyor.", // nieuw, nalezen
     "be.c.plain.o3": "Bir yaprak yiyor.", // = c.plain.o3
-    "be.c.plain.w": "\"Geen blad voor de mond nemen\" şu demektir: düşündüğünü dürüstçe ve dolaysız söylemek. Bunu söyleyen kişi seni uyarıyor: şimdi dolaysız bir görüş geliyor.", // nieuw, nalezen
+    "be.c.plain.w": "“Geen blad voor de mond nemen” şu demektir: düşündüğünü dürüstçe ve dolaysız söylemek. Bunu söyleyen kişi seni uyarıyor: şimdi dolaysız bir görüş geliyor.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const pl: Gloss = {

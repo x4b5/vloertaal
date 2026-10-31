@@ -171,7 +171,7 @@ export const prs: Gloss = {
 export const uk: Gloss = {
   'be.l.nextstep': "Навчання після школи", // nieuw, nalezen
   'be.w.waarderen': "визнати (диплом)", // nieuw, nalezen
-  'be.w.bijbaan': "студентська підробітка (невелика робота поруч із навчанням)", // nieuw, nalezen
+  'be.w.bijbaan': "студентський підробіток (невелика робота поруч із навчанням)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "ознайомча практика (короткий візит, щоб побачити роботу)", // nieuw, nalezen
   'be.w.niveau2': "середня школа (для молоді, приблизно до 18 років)", // nieuw, nalezen
   'be.w.startkwalificatie': "освіта для дорослих (школа для дорослих, у CVO)", // nieuw, nalezen
@@ -184,7 +184,7 @@ export const uk: Gloss = {
   'be.c.nextstep.q': "Що ти хочеш робити далі?", // nieuw, nalezen
   'be.c.nextstep.a': "Я обираю дуальне навчання. Тоді я працюю і вчуся.", // nieuw, nalezen
   'be.c.diploma': "Твій диплом важливий", // nieuw, nalezen
-  'be.c.diploma.b': "У тебе диплом з іншої країни? Ти можеш попросити NARIC-Vlaanderen визнати його. NARIC порівнює його з фламандським дипломом. Визнані біженці за це не платять. Для деяких професій, наприклад медсестри, потрібне ще окреме визнання. Навчання обов’язкове для твоєї роботи? Тоді роботодавець має за нього заплатити, і воно рахується як робочий час. Багато працівників також мають право на кілька днів навчання щороку. Про курси запитай керівника або VDAB. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+  'be.c.diploma.b': "У тебе диплом з іншої країни? Ти можеш попросити NARIC-Vlaanderen визнати його. NARIC порівнює його з фламандським дипломом. Визнані біженці за це не платять. Для деяких професій, наприклад медсестри, потрібне ще окреме визнання. Навчання обов’язкове для твоєї роботи? Тоді роботодавець має за нього заплатити, і воно зараховується до робочого часу. Багато працівників також мають право на кілька днів навчання щороку. Про курси запитай керівника або VDAB. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "Є курси для мене?", // nieuw, nalezen
   'be.c.diploma.s': "Роботодавець каже, що в суботу ти мусиш пройти обовʼязкове навчання з безпеки, без оплати. Що правда?", // nieuw, nalezen
   'be.c.diploma.o1': "Його оплачує роботодавець, і це робочий час.", // nieuw, nalezen
@@ -192,9 +192,9 @@ export const uk: Gloss = {
   'be.c.diploma.o3': "Ти мусиш заплатити за навчання з власної кишені.", // nieuw, nalezen
   'be.c.diploma.w': "Якщо навчання обовʼязкове для твоєї роботи, роботодавець платить, і воно зараховується до робочого часу. Якщо незрозуміло, порадься.", // nieuw, nalezen
   'be.c.mychoice': "Твої сильні сторони важливі", // nieuw, nalezen
-  'be.c.mychoice.b': "Що в тебе добре виходить? Подумай про роботу, школу й дім. Догляд за родиною, студентська підробітка (studentenjob) чи волонтерство теж рахуються. Що тобі подобається, а що ні? Не знаєш точно, яка робота тобі підходить? Попроси коротку ознайомчу практику (snuffelstage) або піди на день відкритих дверей (opendeurdag). У школі тобі безкоштовно допомагає з вибором CLB. Дорослі можуть запитати у VDAB.", // nieuw, nalezen
+  'be.c.mychoice.b': "Що в тебе добре виходить? Подумай про роботу, школу й дім. Догляд за родиною, студентський підробіток (studentenjob) чи волонтерство теж мають значення. Що тобі подобається, а що ні? Не знаєш точно, яка робота тобі підходить? Попроси коротку ознайомчу практику (snuffelstage) або піди на день відкритих дверей (opendeurdag). У школі тобі безкоштовно допомагає з вибором CLB. Дорослі можуть запитати у VDAB.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.mychoice.p': "Я вмію ладнати з людьми. Удома я багато допомагаю.", // nieuw, nalezen
-  'be.c.mychoice.s': "У школі питають: «Що ти добре вмієш?». У тебе ще не було оплачуваної роботи. Що ти скажеш?", // nieuw, nalezen
+  'be.c.mychoice.s': "У школі питають: «Що ти добре вмієш?» У тебе ще не було оплачуваної роботи. Що ти скажеш?", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.mychoice.o1': "Що ти добре робиш удома, наприклад доглядаєш інших.", // nieuw, nalezen
   'be.c.mychoice.o2': "Що ще не знаєш, бо ще не мав / мала роботи.", // nieuw, nalezen
   'be.c.mychoice.o3': "Що ти можеш робити будь-яку роботу, геть усе.", // nieuw, nalezen
@@ -203,9 +203,9 @@ export const uk: Gloss = {
   'be.c.nextstep.b': "До 18 років треба ходити до школи (leerplicht). З 15 або 16 років можна також учитися на фірмі й у школі: дуальне навчання (duaal leren). Ти вже не в школі й ще не маєш диплома? В освіті для дорослих (volwassenenonderwijs), у CVO, ще можна отримати атестат про середню освіту. Раніше це називали tweedekansonderwijs. Шукаєш роботу? У VDAB є курси для багатьох професій. Для шукачів роботи багато з них безкоштовні. Піди на день відкритих дверей (opendeurdag) і попроси допомоги у VDAB. Ще в школі? Запитай у CLB.", // nieuw, nalezen
   'be.c.nextstep.p': "Чи можу я ще отримати диплом у дорослому віці?", // nieuw, nalezen
   'be.c.nextstep.s': "Тобі 24, і в тебе немає атестата про середню освіту. Ти хочеш кращу роботу. Що ти зробиш?", // nieuw, nalezen
-  'be.c.nextstep.o1': "Запитай у VDAB або CVO, як отримати диплом.", // nieuw, nalezen
-  'be.c.nextstep.o2': "Почекай: у 24 вже пізно вчитися.", // nieuw, nalezen
-  'be.c.nextstep.o3': "Візьми будь-яку роботу й назавжди кинь навчання.", // nieuw, nalezen
+  'be.c.nextstep.o1': "Запитаєш у VDAB або CVO, як отримати диплом.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o2': "Почекаєш: у 24 вже пізно вчитися.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o3': "Візьмеш будь-яку роботу й назавжди кинеш навчання.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.w': "Дорослі теж можуть учитися. У CVO можна отримати диплом. У VDAB є курси для багатьох професій, і для шукачів роботи багато з них безкоштовні.", // nieuw, nalezen
 };
 
@@ -219,9 +219,9 @@ export const tr: Gloss = {
   'be.w.bbl': "ikili eğitim (bir şirkette ve okulda öğrenirsin)", // nieuw, nalezen
   'be.w.doorstromen': "VDAB kursu (bir meslek için eğitim)", // nieuw, nalezen
   'be.w.aanmelden': "kaydolmak (bir okula ya da kursa)", // nieuw, nalezen
-  'be.w.opendag': "açık gün (bir okulu ziyaret edebilirsin)", // nieuw, nalezen
+  'be.w.opendag': "açık kapı günü (bir okulu ziyaret edebilirsin)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.nextstep.1': "Ortaöğretim diplomamı almak istiyorum.", // nieuw, nalezen
-  'be.s.nextstep.3': "Açık gün ne zaman?", // nieuw, nalezen
+  'be.s.nextstep.3': "Açık kapı günü ne zaman?", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.q': "Bundan sonra ne yapmak istiyorsun?", // nieuw, nalezen
   'be.c.nextstep.a': "İkili eğitimi seçiyorum. Böylece hem çalışırım hem öğrenirim.", // nieuw, nalezen
   'be.c.diploma': "Diploman değerlidir", // nieuw, nalezen
@@ -244,9 +244,9 @@ export const tr: Gloss = {
   'be.c.nextstep.b': "18 yaşından küçükken okula gitmek zorundasın (leerplicht). 15 ya da 16 yaşından itibaren bir şirkette ve okulda da öğrenebilirsin: ikili eğitim (duaal leren). Daha mı büyüksün ve henüz diploman yok mu? Yetişkin eğitiminde (volwassenenonderwijs), bir CVO’da, ortaöğretim diplomanı hâlâ alabilirsin. Eskiden buna tweedekansonderwijs denirdi. İş mi arıyorsun? VDAB’nin birçok meslek için kursları var. İş arayanlar için çoğu ücretsiz. Açık kapı gününe (opendeurdag) git ve VDAB’den yardım iste. Hâlâ okulda mısın? CLB’ye sor.", // nieuw, nalezen
   'be.c.nextstep.p': "Yetişkin olarak hâlâ diplomamı alabilir miyim?", // nieuw, nalezen
   'be.c.nextstep.s': "24 yaşındasın ve ortaöğretim diploman yok. Daha iyi bir iş istiyorsun. Ne yaparsın?", // nieuw, nalezen
-  'be.c.nextstep.o1': "VDAB’ye ya da bir CVO’ya diplomanı nasıl alacağını sor.", // nieuw, nalezen
-  'be.c.nextstep.o2': "Bekle: 24 yaşında öğrenmek için çok geç.", // nieuw, nalezen
-  'be.c.nextstep.o3': "Herhangi bir işe gir, ve öğrenmeyi tamamen bırak.", // nieuw, nalezen
+  'be.c.nextstep.o1': "VDAB’ye ya da bir CVO’ya diplomanı nasıl alacağını sorarsın.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o2': "Beklersin: 24 yaşında öğrenmek için çok geç.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o3': "Herhangi bir işe girer, öğrenmeyi tamamen bırakırsın.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.w': "Yetişkinler de öğrenebilir. Bir CVO’da diplomanı alabilirsin. VDAB’nin birçok meslek için kursu var ve iş arayanlar için çoğu ücretsiz.", // nieuw, nalezen
 };
 
@@ -367,9 +367,9 @@ export const bg: Gloss = {
   'be.c.nextstep.b': "До 18 години трябва да ходиш на училище (leerplicht). От 15 или 16 години можеш да учиш и във фирма, и в училище: дуално обучение (duaal leren). Вече не си в училищна възраст и нямаш диплома? В образованието за възрастни (volwassenenonderwijs), в CVO, още можеш да вземеш диплома за средно образование. Преди това се наричаше tweedekansonderwijs. Търсиш работа? VDAB има курсове за много професии. За търсещите работа много от тях са безплатни. Иди на ден на отворените врати (opendeurdag) и поискай помощ от VDAB. Още си в училище? Питай CLB.", // nieuw, nalezen
   'be.c.nextstep.p': "Мога ли още да взема диплома в зряла възраст?", // nieuw, nalezen
   'be.c.nextstep.s': "На 24 години си и нямаш диплома за средно образование. Искаш по-добра работа. Какво правиш?", // nieuw, nalezen
-  'be.c.nextstep.o1': "Питай VDAB или CVO как да вземеш диплома.", // nieuw, nalezen
-  'be.c.nextstep.o2': "Чакай: на 24 вече е късно за учене.", // nieuw, nalezen
-  'be.c.nextstep.o3': "Вземи каквато и да е работа и спри да учиш завинаги.", // nieuw, nalezen
+  'be.c.nextstep.o1': "Питаш VDAB или CVO как да вземеш диплома.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o2': "Чакаш: на 24 вече е късно за учене.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o3': "Вземаш каквато и да е работа и спираш да учиш завинаги.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.w': "И възрастните могат да учат. В CVO можеш да вземеш диплома. VDAB има курсове за много професии, а за търсещите работа много от тях са безплатни.", // nieuw, nalezen
 };
 

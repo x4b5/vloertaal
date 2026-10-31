@@ -70,11 +70,11 @@ export const uk: Gloss = {
     "be.s.checkout.1": "Ви платите карткою чи готівкою?", // nieuw, nalezen
     "be.c.checkout.q": "Можна тут заплатити карткою?", // nieuw, nalezen
     "be.c.checkout": "Документ для алкоголю й тютюну", // = c.checkout
-    "be.c.checkout.b": "Не можна продавати пиво чи вино тим, кому менше 16, а міцні напої чи тютюн — тим, кому менше 18: це закон. Не впевнений, скільки покупцеві років? Попроси посвідчення (identiteitskaart). Для тютюну проси посвідчення в усіх, хто виглядає молодшим за 25. Немає посвідчення або замолодий? Тоді не продавай і залишайся ввічливим. У кожній фірмі свої правила: запитай керівника, які правила там, де ти працюєш.", // nieuw, nalezen
+    "be.c.checkout.b": "Не можна продавати пиво чи вино тим, кому менше 16, а міцні напої чи тютюн — тим, кому менше 18: це закон. Не знаєш точно, скільки покупцеві років? Попроси посвідчення (identiteitskaart). Для тютюну проси посвідчення в усіх, хто виглядає молодшим за 25. Немає посвідчення або замолодий? Тоді не продавай і залишайся ввічливим / ввічливою. У кожній фірмі свої правила: запитай керівника, які правила там, де ти працюєш.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.p": "Без документа я не можу це продати.", // = c.checkout.p
     "be.c.checkout.s": "Молодий хлопець хоче купити пиво. На вигляд йому близько 14. Він каже, що йому 16, але посвідчення в нього немає. Що ти зробиш?", // nieuw, nalezen
     "be.c.checkout.o1": "Скажеш, що без документа не можеш продати.", // = c.checkout.o1
-    "be.c.checkout.o2": "Продати, бо він каже, що йому 16.", // nieuw, nalezen
+    "be.c.checkout.o2": "Продаси, бо він каже, що йому 16.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.o3": "Продаси, але тільки одну банку.", // = c.checkout.o3
     "be.c.checkout.w": "Без посвідчення ти не можеш знати його вік. Продавати пиво тим, кому менше 16, — проти закону, і магазин може отримати штраф.", // nieuw, nalezen
 };
@@ -89,7 +89,7 @@ export const tr: Gloss = {
     "be.c.checkout.p": "Kimlik olmadan bunu satamam.", // = c.checkout.p
     "be.c.checkout.s": "Genç bir adam bira almak istiyor. Yaklaşık 14 yaşında görünüyor. 16 yaşında olduğunu söylüyor ama yanında kimliği yok. Ne yaparsın?", // nieuw, nalezen
     "be.c.checkout.o1": "Kimlik olmadan satamayacağını söylersin.", // = c.checkout.o1
-    "be.c.checkout.o2": "Satmak, çünkü 16 yaşında olduğunu söylüyor.", // nieuw, nalezen
+    "be.c.checkout.o2": "Satarsın, çünkü 16 yaşında olduğunu söylüyor.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.o3": "Satarsın, ama sadece bir kutu.", // = c.checkout.o3
     "be.c.checkout.w": "Kimlik olmadan yaşını bilemezsin. 16 yaşından küçüğe bira satmak yasaya aykırıdır ve dükkân para cezası alabilir.", // nieuw, nalezen
 };
@@ -115,11 +115,11 @@ export const ro: Gloss = {
     "be.s.checkout.1": "Plătiți cu cardul sau cash?", // nieuw, nalezen
     "be.c.checkout.q": "Pot plăti aici cu cardul?", // nieuw, nalezen
     "be.c.checkout": "Act de identitate pentru alcool și tutun", // = c.checkout
-    "be.c.checkout.b": "Nu ai voie să vinzi bere sau vin cuiva sub 16 ani, nici băuturi tari sau tutun cuiva sub 18: asta e legea. Nu știi sigur câți ani are un client? Cere-i actul de identitate (identiteitskaart). La tutun, cere actul oricui pare mai tânăr de 25. Nu are act sau e prea tânăr? Atunci nu vinzi și rămâi politicos. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    "be.c.checkout.b": "Nu ai voie să vinzi bere sau vin cuiva sub 16 ani, nici băuturi tari sau tutun cuiva sub 18: asta e legea. Nu știi sigur câți ani are un client? Cere-i actul de identitate (identiteitskaart). La tutun, cere actul oricui pare mai tânăr de 25. Nu are act sau e prea tânăr? Atunci nu vinzi și rămâi politicos / politicoasă. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.p": "Fără act de identitate nu am voie să vând asta.", // = c.checkout.p
     "be.c.checkout.s": "Un tânăr vrea să cumpere bere. Pare să aibă vreo 14 ani. Spune că are 16, dar nu are act de identitate la el. Ce faci?", // nieuw, nalezen
     "be.c.checkout.o1": "Îi spui că fără act nu poți să-i vinzi.", // = c.checkout.o1
-    "be.c.checkout.o2": "Să vinzi, fiindcă spune că are 16 ani.", // nieuw, nalezen
+    "be.c.checkout.o2": "Îi vinzi, fiindcă spune că are 16 ani.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.o3": "Îi vinzi, dar doar o doză.", // = c.checkout.o3
     "be.c.checkout.w": "Fără act nu poți ști câți ani are. Să vinzi bere cuiva sub 16 ani e împotriva legii, iar magazinul poate primi amendă.", // nieuw, nalezen
 };
@@ -130,11 +130,11 @@ export const bg: Gloss = {
     "be.s.checkout.1": "Плащате с карта или в брой?", // nieuw, nalezen
     "be.c.checkout.q": "Мога ли да платя тук с карта?", // nieuw, nalezen
     "be.c.checkout": "Документ за алкохол и тютюн", // = c.checkout
-    "be.c.checkout.b": "Не можеш да продаваш бира или вино на човек под 16 години, нито силен алкохол или тютюн на човек под 18: такъв е законът. Не знаеш на колко години е клиентът? Поискай лична карта (identiteitskaart). За тютюн искай лична карта от всеки, който изглежда по-млад от 25. Няма лична карта или е твърде млад? Тогава не продаваш и оставаш учтив. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
+    "be.c.checkout.b": "Не можеш да продаваш бира или вино на човек под 16 години, нито силен алкохол или тютюн на човек под 18: такъв е законът. Не знаеш на колко години е клиентът? Поискай лична карта (identiteitskaart). За тютюн искай лична карта от всеки, който изглежда по-млад от 25. Няма лична карта или е твърде млад? Тогава не продаваш и оставаш учтив / учтива. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.p": "Без лична карта нямам право да продам това.", // = c.checkout.p
     "be.c.checkout.s": "Млад мъж иска да купи бира. Изглежда на около 14. Казва, че е на 16, но няма лична карта у себе си. Какво правиш?", // nieuw, nalezen
     "be.c.checkout.o1": "Казваш, че без документ не можеш да продадеш.", // = c.checkout.o1
-    "be.c.checkout.o2": "Да продадеш, защото казва, че е на 16.", // nieuw, nalezen
+    "be.c.checkout.o2": "Продаваш, защото казва, че е на 16.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.o3": "Продаваш, но само една кутийка.", // = c.checkout.o3
     "be.c.checkout.w": "Без лична карта не можеш да знаеш на колко е. Да продадеш бира на човек под 16 е против закона, а магазинът може да получи глоба.", // nieuw, nalezen
 };
