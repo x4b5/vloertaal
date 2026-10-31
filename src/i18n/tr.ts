@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'İş yeri için Hollandaca',
     chooseLanguage: 'Yardım dilini seç',
     englishOnly: 'Sadece İngilizce',
-    beta: 'Çeviri kontrol ediliyor',
+    beta: 'Çeviri henüz kontrol edilmedi', // nieuw, nalezen
     dayStreak: 'günlük seri',
     streakStarted: 'Günlük serin başladı! Yarın yine gel.',
     streakGrew: 'Üst üste {n} gün! Böyle devam et.',

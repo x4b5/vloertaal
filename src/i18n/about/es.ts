@@ -9,7 +9,7 @@ const t: CultureTranslation = {
     'a.what': '¿Qué es Vloertaal?',
     'a.what.b': 'Vloertaal te ayuda a aprender el neerlandés que necesitas en el trabajo: en el almacén, en la cocina, en la fábrica o en la obra. No solo las palabras del lugar de trabajo, sino todo el idioma alrededor del trabajo: buscar empleo, tu contrato y tu nómina, tus derechos, la vivienda y los papeles, avisar cuando no puedes trabajar por enfermedad y llevarte bien con tus compañeros. Las lecciones son cortas, así puedes practicar unos minutos cada día. Piensa en Vloertaal como un pequeño extra para los ratos libres. No sustituye a un curso de idiomas ni a un profesor de idiomas.',
     'a.beta': 'Una versión de prueba',
-    'a.beta.b': 'Vloertaal todavía es una versión de prueba (beta). La estamos probando con un pequeño grupo de alumnos y orientadores. Todavía no se ha revisado todo: unos expertos aún revisan las traducciones y los consejos sobre las normas. ¿Has encontrado un error? Nuestra dirección está al final de esta página.',
+    'a.beta.b': 'Vloertaal todavía es una versión de prueba (beta). La estamos probando con un pequeño grupo de alumnos y orientadores. Todavía no se ha revisado todo. Aún buscamos expertos que revisen las traducciones y los consejos sobre las normas. ¿Has encontrado un error? Nuestra dirección está al final de esta página.', // nieuw, nalezen
     'a.mission': 'Nuestra misión',
     'a.mission.b': 'Vloertaal quiere ayudar un poco, para que aprender neerlandés para el trabajo sea algo más fácil: gratis, fácil de usar y con ayuda en tu propio idioma. Nadie gana dinero con Vloertaal: no hay anuncios ni suscripción, y tus datos nunca se venden.',
     'a.bram': '¿Quién es Bram?',

@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'Niederländisch für die Arbeit',
     chooseLanguage: 'Wähle deine Hilfssprache',
     englishOnly: 'Nur Englisch',
-    beta: 'Übersetzung wird geprüft',
+    beta: 'Übersetzung noch nicht geprüft', // nieuw, nalezen
     dayStreak: { one: 'Tag in Folge', other: 'Tage in Folge' },
     streakStarted: 'Deine Serie hat begonnen! Komm morgen wieder.',
     streakGrew: { one: '{n} Tag in Folge! Mach weiter so.', other: '{n} Tage in Folge! Mach weiter so.' },

@@ -2,7 +2,7 @@ export const uiEn = {
   appTagline: 'Dutch for the work floor',
   chooseLanguage: 'Choose your language',
   englishOnly: 'English only',
-  beta: 'Translation in review',
+  beta: 'Translation not checked yet',
   dayStreak: 'day streak',
   streakStarted: 'You started a day streak! Come back tomorrow.',
   streakGrew: '{n} days in a row! Keep it going.',

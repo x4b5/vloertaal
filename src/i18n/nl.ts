@@ -17,7 +17,7 @@ export const uiNl: Record<UiKey, UiText> = {
   appTagline: 'Werken in Nederland: zo gaat het', // regels
   chooseLanguage: 'Kies je taal',
   englishOnly: 'Ik leer Nederlands via het Engels', // regels: the other track, under "English"
-  beta: 'We kijken deze tekst nog na',
+  beta: 'Deze tekst is nog niet nagekeken',
   dayStreak: { one: 'dag op rij', other: 'dagen op rij' },
   streakStarted: 'Je bent een reeks begonnen! Kom morgen terug.',
   streakGrew: { one: '{n} dag op rij! Ga zo door.', other: '{n} dagen op rij! Ga zo door.' },

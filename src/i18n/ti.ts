@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'ሆላንድኛ ንቦታ ስራሕ',
     chooseLanguage: { m: 'ቋንቋ ሓገዝካ ምረጽ', f: 'ቋንቋ ሓገዝኪ ምረጺ', x: 'ቋንቋ ሓገዝኩም ምረጹ' }, // x: nieuw, nalezen
     englishOnly: 'እንግሊዝኛ ጥራይ',
-    beta: 'ትርጉም ይምርመር ኣሎ',
+    beta: 'ትርጉም ገና ኣይተመርመረን', // nieuw, nalezen
     dayStreak: 'ተኸታታሊ መዓልትታት',
     streakStarted: { m: 'ተኸታታሊ መዓልትታትካ ጀሚርካ! ጽባሕ ተመለስ።', f: 'ተኸታታሊ መዓልትታትኪ ጀሚርኪ! ጽባሕ ተመለሲ።', x: 'ተኸታታሊ መዓልትታትኩም ጀሚርኩም! ጽባሕ ተመለሱ።' }, // x: nieuw, nalezen
     streakGrew: { m: '{n} ተኸታታሊ መዓልትታት! ቀጽል።', f: '{n} ተኸታታሊ መዓልትታት! ቀጽሊ።', x: '{n} ተኸታታሊ መዓልትታት! ቀጽሉ።' }, // x: nieuw, nalezen
