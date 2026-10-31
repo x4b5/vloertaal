@@ -32,7 +32,7 @@ of mailen:
 | `review/feiten-NL/` | `feiten-NL.csv` + `LEESMIJ.txt` | een jurist of vakbondsmens voor Nederland |
 | `review/feiten-BE/` | `feiten-BE.csv` + `LEESMIJ.txt` | een jurist of vakbondsmens voor België (Vlaanderen) |
 
-Waarom `review/` en niet de scratchpad: de eigenaar maakt de lijsten zelf, op zijn eigen
+Waarom `review/` en niet de scratchpad: de eigenaar maakt de lijsten zelf, op de eigen
 computer, en ingevulde bestanden kunnen namen of mailadressen van vrijwilligers bevatten. Die
 horen niet in git. Een nieuwe export overschrijft de oude lijsten; zet ingevulde bestanden dus in
 een eigen map, bijvoorbeeld `review/terug/`.
