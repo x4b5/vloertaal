@@ -5,6 +5,8 @@ import { RULES_BE_NOTE, RULES_COUNTRY, RULES_DISCLAIMER, RULES_DISCLAIMER_BE, RU
 import { isBeId } from '../content/regels/be/ids';
 import { rulesCountry } from '../content/rulesCourse';
 import { helpRowsFor, helpRowText, type HelpRow } from '../content/regels/help';
+import { ruleIconId } from '../content/regels/ruleIcons';
+import { unitIcon } from '../content/unitIcons';
 import type { Unit } from '../content/types';
 import { said, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
@@ -19,6 +21,7 @@ import { InfoGlyph, RULE_KIND_TAG } from './RuleSteps';
 import { SpeakButton } from './SpeakButton';
 import { DialectLine } from './Dialect';
 import { useVoices } from './useVoices';
+import { WordPicture } from '../pictures';
 
 /**
  * The Hulp tab of the work-rules track (it replaces the Noodzinnen phrasebook there), in plain
@@ -137,7 +140,7 @@ export function RulesDisclaimer({ be }: { be?: boolean } = {}) {
 function HelpRowItem({ row, lang }: { row: HelpRow; lang?: HelpLanguage }) {
   const body = (
     <>
-      <span className="rh-emoji" aria-hidden>{row.emoji}</span>
+      <span className="rh-emoji rh-pic" aria-hidden><WordPicture id={ruleIconId(row.emoji)} emoji={row.emoji} size={36} /></span>
       <span className="rh-text">
         <span className="rh-name">{breakable(row.name)}</span>
         <span className="rh-when">{breakable(row.when)}</span>
@@ -166,7 +169,7 @@ function HelpRowItem({ row, lang }: { row: HelpRow; lang?: HelpLanguage }) {
   return (
     <li className="rh-row">
       <div className="rh-card rh-say">
-        <span className="rh-emoji" aria-hidden>{row.emoji}</span>
+        <span className="rh-emoji rh-pic" aria-hidden><WordPicture id={ruleIconId(row.emoji)} emoji={row.emoji} size={36} /></span>
         <span className="rh-text">
           {/* The speaker is named after the row ("Afspelen: Vertrouwenspersoon"): its text is right beside it. */}
           <span className="rh-name"><ReadDigits text={row.name}>{breakable(row.name)}</ReadDigits> <SpeakButton text={helpRowText(row)} long needsDevice glyph help={lang} label={`${said(ui('playAudio', lang))}: ${digitsApart(row.name)}`} /></span>
@@ -217,7 +220,7 @@ export function RulesShelf({ progress, lang, onBack }: { progress: Progress; lan
           <p className="muted">{ui('cultureTipsHint', lang).help}</p>
           <ul className="tips-list shelf-list">
             {groups.flatMap(({ unit, rules }) => [
-              <li key={unit.id} className="shelf-unit"><h2 className="shelf-unit-title"><span aria-hidden>{unit.emoji}</span> {unit.title}</h2></li>,
+              <li key={unit.id} className="shelf-unit"><h2 className="shelf-unit-title"><WordPicture className="shelf-unit-pic" id={unitIcon(unit.id)} emoji={unit.emoji} size={32} /> {unit.title}</h2></li>,
               ...rules.map((r) => {
                 const isOpen = open === r.id;
                 const advice = r.rule === 'geschreven' ? ruleAdviceLine(r.id) : undefined;
@@ -225,7 +228,7 @@ export function RulesShelf({ progress, lang, onBack }: { progress: Progress; lan
                 return (
                   <li key={r.id} className={`tips-item ${isOpen ? 'open' : ''}`}>
                     <button type="button" className="tips-head" aria-expanded={isOpen} onClick={() => setOpen(isOpen ? null : r.id)}>
-                      <span className="tips-emoji" aria-hidden>{r.emoji}</span>
+                      <span className="tips-emoji tips-pic" aria-hidden><WordPicture id={ruleIconId(r.emoji)} emoji={r.emoji} size={36} /></span>
                       <span className="shelf-title">{r.title}</span>
                       <ChevronIcon />
                     </button>

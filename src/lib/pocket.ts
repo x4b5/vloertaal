@@ -2,6 +2,7 @@ import { allWords, findItem } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
 import { tipForLesson } from '../content/culture';
 import { ruleCards } from '../content/courses';
+import { rulePicture } from '../content/regels/ruleIcons';
 import type { RuleStep } from '../content/regels/types';
 import type { Unit, Word } from '../content/types';
 import { trackOfId } from './track';
@@ -67,7 +68,8 @@ const RULE_SAY_MAX = 60;
  * The pocket card of a rules unit, in this order: its key rules (the titles of its `key` rule
  * cards), then each lesson's "Onthoud" line, then the "Zo zeg je het" sentences (short ones
  * first), the same text never twice; `n` rows, as on every pocket card. A rule row carries its
- * rule card's emoji; a sentence row the speech balloon.
+ * rule card's picture (its emoji, drawn when src/content/regels/ruleIcons.ts has a drawing for it);
+ * a sentence row the speech balloon (drawn: two people talking).
  */
 export function rulePocketPhrases(unit: Unit, n = POCKET_SIZE): PocketPhrase[] {
   const out: PocketPhrase[] = [];
@@ -78,15 +80,15 @@ export function rulePocketPhrases(unit: Unit, n = POCKET_SIZE): PocketPhrase[] {
     seen.add(key);
     out.push(p);
   };
-  for (const r of unit.lessons.flatMap(ruleCards)) if (r.key) push({ id: r.id, nl: r.title, en: '', picture: { id: '', emoji: r.emoji }, rule: 'rule' });
+  for (const r of unit.lessons.flatMap(ruleCards)) if (r.key) push({ id: r.id, nl: r.title, en: '', picture: rulePicture(r.emoji), rule: 'rule' });
   for (const l of unit.lessons) {
     const line = l.rule?.remember;
     const card = ruleCards(l)[0];
-    if (line) push({ id: `${l.id}.onthoud`, nl: line, en: '', picture: card ? { id: '', emoji: card.emoji } : undefined, rule: 'rule' });
+    if (line) push({ id: `${l.id}.onthoud`, nl: line, en: '', picture: card ? rulePicture(card.emoji) : undefined, rule: 'rule' });
   }
   const models = unit.lessons.flatMap((l) => (l.steps ?? []).filter((s): s is Extract<RuleStep, { kind: 'model' }> => s.kind === 'model'));
   const shortFirst = [...models.filter((m) => m.nl.length <= RULE_SAY_MAX), ...models.filter((m) => m.nl.length > RULE_SAY_MAX)];
-  for (const m of shortFirst) push({ id: m.id, nl: m.nl, en: '', picture: { id: '', emoji: '💬' }, rule: 'say' });
+  for (const m of shortFirst) push({ id: m.id, nl: m.nl, en: '', picture: rulePicture('💬'), rule: 'say' });
   return out;
 }
 
