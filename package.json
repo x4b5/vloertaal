@@ -15,7 +15,9 @@
     "taal": "tsx scripts/taal-a2.ts",
     "scenes:lines": "tsx scripts/scene-lines.ts",
     "splash": "tsx scripts/splash-html.ts",
-    "kunjenu": "tsx scripts/kun-je-nu.ts"
+    "kunjenu": "tsx scripts/kun-je-nu.ts",
+    "review:export": "tsx scripts/review/export.ts",
+    "review:import": "tsx scripts/review/import.ts"
   },
   "dependencies": {
     "@fontsource-variable/lexend": "^5.3.0",
