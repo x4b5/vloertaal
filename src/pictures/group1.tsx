@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { CastHead } from '../components/Characters';
-import { Box, Bust, Cross, CurveArrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Box, Bubble, Bust, Cross, CurveArrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 
 /** Word pictures, group 1 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
@@ -51,30 +51,6 @@ function NewHat({ x = 60, y = 70, s = 1 }: { x?: number; y?: number; s?: number 
   );
 }
 
-/** A big thumbs-up seen from the side: curled fingers stacked on the left, thumb straight up. */
-function ThumbsUp() {
-  const [s, sh] = SKIN.henk;
-  return (
-    <g>
-      <rect x="44" y="96" width="40" height="30" rx="6" fill={PAL.blue} />
-      <rect x="43" y="93" width="42" height="9" rx="4.5" fill={PAL.blueShade} />
-      <Shade color={sh} opacity={0.8} at={[92, 70, 12, 40]}>
-        <g fill={s}>
-          <rect x="52" y="14" width="17" height="50" rx="8.5" transform="rotate(-6 60 60)" />
-          <rect x="40" y="50" width="46" height="46" rx="13" />
-          <rect x="28" y="50" width="34" height="13" rx="6.5" />
-          <rect x="26" y="61" width="34" height="12" rx="6" />
-          <rect x="27" y="72" width="32" height="12" rx="6" />
-          <rect x="30" y="83" width="28" height="11" rx="5.5" />
-        </g>
-      </Shade>
-      <path d="M34 62.5H56M33 73.5H55M35 84H54" stroke={sh} strokeWidth="1.8" strokeLinecap="round" />
-      <path d="M57 26Q58 22 62 22" fill="none" stroke={sh} strokeWidth="1.6" strokeLinecap="round" opacity=".8" />
-      <Shine d="M55 46Q54 32 57 22" width={3} opacity={0.45} />
-    </g>
-  );
-}
-
 export default {
   // "hallo": Bram smiles and waves.
   'w.hallo': () => (
@@ -114,8 +90,17 @@ export default {
     </g>
   ),
 
-  // "ja": a big thumbs-up (fist seen from the side, thumb straight up), with a small tick.
-  'w.ja': () => <g><ThumbsUp /><Tick x={92} y={30} r={15} /></g>,
+  // "ja": yes — Jada answers with a tick in her speech bubble, nodding (no thumbs-up: that
+  // gesture is rude in some of the learners' cultures).
+  'w.ja': () => (
+    <g>
+      <Bust who="jada" x={44} y={124} scale={0.74} expr="pleased" bold />
+      <path d="M14 40Q10 48 14 56M14 64Q10 72 14 80" fill="none" stroke={PAL.line} strokeWidth="3.4" strokeLinecap="round" />
+      <Bubble x={64} y={10} w={48} h={42} tail="left">
+        <Tick x={88} y={31} r={15} />
+      </Bubble>
+    </g>
+  ),
 
   // "nee": a flat hand says stop, with a red cross.
   'w.nee': () => (

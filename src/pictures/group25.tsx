@@ -821,11 +821,12 @@ export default {
       <rect x="78" y="40" width="9" height="15" rx="4" fill={PAL.slateDark} />
       <path d="M37 54Q38 64 48 66" fill="none" stroke={PAL.slateDark} strokeWidth="2.4" strokeLinecap="round" />
       {/* The laptop, seen from the back */}
-      <Shade color={PAL.slateDark} opacity={1} at={[104, 88, 10, 30]}>
-        <path d="M22 70Q22 66 26 66H94Q98 66 98 70L100 104H20Z" fill={PAL.slate} />
+      {/* A silver lid (a slate one was lost on the dark card), the gear in sky blue */}
+      <Shade color={PAL.steel} opacity={1} at={[104, 88, 10, 30]}>
+        <path d="M22 70Q22 66 26 66H94Q98 66 98 70L100 104H20Z" fill={PAL.mist} />
       </Shade>
       <rect x="14" y="102" width="92" height="6" rx="3" fill={PAL.steel} />
-      <Gear x={60} y={85} r={11} color={PAL.ice} hole={PAL.slate} />
+      <Gear x={60} y={85} r={11} color={PAL.sky} hole={PAL.mist} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;

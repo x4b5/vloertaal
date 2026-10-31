@@ -1,4 +1,4 @@
-import { useId, type JSX } from 'react';
+import type { JSX } from 'react';
 import { CastHead } from '../components/Characters';
 import { Arrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 
@@ -12,7 +12,7 @@ import { Arrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from '.
  *    the cable (a coil with bare copper ends, no plug), the power (a big yellow bolt).
  *  - the garage (l.garage): the car lift (a car up on two posts), flat (a flat tyre with a nail and
  *    air escaping).
- *  - broken (l.handover): a plate broken in two, with a shard.
+ *  - broken (l.handover): a hammer snapped in two, splinters flying.
  *  - the judge (l.police): Amina in a black gown with the white bands, with a gavel.
  * Look-alikes kept apart in LOOKALIKES (src/lib/wordPicture.ts): slijpen/de vonk (sparks),
  * de kabel/de stekker, lek/de band. See docs/tekenstijl.md and ./kit.tsx.
@@ -22,6 +22,7 @@ const BODY = PAL.steel;
 const BODY_DARK = '#76828c';
 const MARK = PAL.orange;
 const MARK_SHADE = PAL.orangeShade;
+const GOWN = '#4f5e6b';
 
 /**
  * A plain body chart seen from the side, looking right. `mark` colours one part orange.
@@ -70,36 +71,34 @@ function Wheel({ cx, cy, r = 10 }: { cx: number; cy: number; r?: number }) {
   );
 }
 
-/** A white plate with a blue rim, broken in two halves along a jagged line, and one shard. */
-function BrokenPlate() {
-  const id = `bp-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
-  const crack = 'M58 14L66 34L54 48L68 64L56 80L64 110';
-  const plate = (
-    <g>
-      <ellipse cx="60" cy="66" rx="44" ry="40" fill={PAL.paperShade} />
-      <ellipse cx="60" cy="62" rx="44" ry="40" fill={PAL.white} />
-      <ellipse cx="60" cy="62" rx="37" ry="33.5" fill="none" stroke={PAL.sky} strokeWidth="4" />
-      <ellipse cx="60" cy="64" rx="24" ry="21" fill={PAL.paperShade} />
-      <ellipse cx="60" cy="62" rx="23" ry="20" fill={PAL.paper} />
-    </g>
-  );
+/**
+ * A hammer snapped in two: the head with the top of the handle tips one way, the lower handle
+ * (red grip) the other, jagged wood showing at the break, with splinters flying.
+ */
+function BrokenHammer() {
   return (
     <g>
-      <defs>
-        <clipPath id={`${id}l`}><path d={`${crack}H0V14Z`} /></clipPath>
-        <clipPath id={`${id}r`}><path d={`${crack}H120V14Z`} /></clipPath>
-      </defs>
-      <Ground cx={60} cy={108} rx={46} ry={4.5} />
-      <g transform="translate(-10 3) rotate(-9 40 90)">
-        <g clipPath={`url(#${id}l)`}>{plate}</g>
+      <Ground cx={60} cy={107} rx={44} ry={4.5} />
+      {/* Upper part: head and the top of the handle */}
+      <g transform="translate(-8 4) rotate(-18 55 70)">
+        <path d="M50 38H60V66L57.5 71L55 65.5L52.5 71.5L50 66Z" fill={PAL.card} />
+        <path d="M56 38H60V66L57.5 71L56 68Z" fill={PAL.cardShade} />
+        <Shade color={PAL.slateDark} opacity={1} at={[90, 30, 14, 20]}>
+          <rect x="26" y="18" width="60" height="22" rx="5" fill={PAL.slate} />
+        </Shade>
+        <rect x="22" y="20" width="10" height="18" rx="3" fill={PAL.steel} />
+        <Shine d="M36 24H62" width={3.4} opacity={0.45} />
       </g>
-      <g transform="translate(10 4) rotate(10 80 90)">
-        <g clipPath={`url(#${id}r)`}>{plate}</g>
+      {/* Lower part: the rest of the handle with its grip */}
+      <g transform="translate(14 2) rotate(24 55 72)">
+        <path d="M50 75L52.5 70.5L55 76L57.5 70L60 75V100Q60 105 55 105Q50 105 50 100Z" fill={PAL.card} />
+        <path d="M56 73L57.5 70L60 75V100Q60 105 56 105Z" fill={PAL.cardShade} />
+        <rect x="48.5" y="84" width="13" height="22" rx="5" fill={PAL.red} />
+        <rect x="56" y="84" width="5.5" height="22" rx="2.7" fill={PAL.redShade} />
       </g>
-      {/* A small shard in the gap, and a few chips */}
-      <path d="M56 96L66 99L58 104Z" fill={PAL.paperShade} stroke={PAL.paperShade} strokeWidth="2" strokeLinejoin="round" />
-      <Shine d="M24 46Q30 32 44 26" opacity={0.55} />
-      <Motion x={60} y={20} dir={-90} spread={80} n={3} len={7} gap={6} color={PAL.line} width={3} />
+      {/* Splinters and the snap */}
+      <path d="M62 60L68 56L66 62Z M70 74L77 76L71 79Z M58 50L60 44L62 50Z" fill={PAL.cardDark} />
+      <Motion x={66} y={68} dir={-20} spread={80} n={3} len={9} gap={10} color={PAL.red} width={3.6} />
     </g>
   );
 }
@@ -237,10 +236,11 @@ export default {
     </g>
   ),
 
-  // "kapot": broken — a plate broken in two, with a shard in the gap
+  // "kapot": broken — a hammer snapped in two (the lesson: "Deze boor is kapot", "Deze kabel is
+  // kapot"; a tool, not a plate, which at card size read as two blue arcs)
   'w.kapot': () => (
     <g>
-      <BrokenPlate />
+      <BrokenHammer />
     </g>
   ),
 
@@ -249,7 +249,9 @@ export default {
     <g>
       <g transform="translate(48 114) scale(0.74) translate(-60 -134)">
         {/* Gown */}
-        <path d="M14 152C14 108 34 95 60 95C86 95 106 108 106 152Z" fill={PAL.slate} />
+        {/* A step lighter than slate, so the gown keeps its shape on the dark card */}
+        <path d="M14 152C14 108 34 95 60 95C86 95 106 108 106 152Z" fill={GOWN} />
+        <path d="M22 140C22 120 30 108 42 102" fill="none" stroke={PAL.white} strokeWidth="4" strokeLinecap="round" opacity=".3" />
         <path d="M86 100C99 108 106 124 106 152H86C88 132 88 114 86 100Z" fill={PAL.slateDark} />
         {/* Velvet front edges */}
         <path d="M46 98L52 152M74 98L68 152" stroke={PAL.slateDark} strokeWidth="7" strokeLinecap="round" />
