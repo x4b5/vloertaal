@@ -203,6 +203,10 @@ const lang: HelpLanguageSource = {
     recommended: 'پیشنهادی',
     allTopics: 'همهٔ موضوع‌ها',
     topicsOrder: 'نمایش موضوع‌ها',
+    routeTitle: 'چه می‌خواهید یاد بگیرید؟', // nieuw, nalezen
+    routeLearn: 'یادگیری هلندی برای کار، با کمک به زبان خودتان', // nieuw, nalezen
+    routeRules: 'هلندی بلدم: کار در هلند و بلژیک چطور است', // nieuw, nalezen
+    routeLearnShort: 'یادگیری هلندی', // nieuw, nalezen
     byTheme: 'بر اساس بخش‌ها',
     inOrder: 'به ترتیب',
     searchTopics: 'جستجوی موضوع', // nieuw, nalezen

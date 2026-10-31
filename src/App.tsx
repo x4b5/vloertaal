@@ -690,7 +690,7 @@ export default function App() {
   // "Woman or man?" (only for a help language with gender, so the password page already uses the
   // right form), the password, then the sector. Every page has a back arrow to the one before
   // (and the phone's Back does the same). The admin page above stays reachable with #beheer.
-  if (!progress.onboarded) return <Onboarding onDone={setLang} startWithList={langAgain} />;
+  if (!progress.onboarded) return <Onboarding onDone={setLang} startWithList={langAgain} previous={langAgain ? progress.helpLang : undefined} />;
   if (step === 'gender') {
     return (
       <GenderScreen

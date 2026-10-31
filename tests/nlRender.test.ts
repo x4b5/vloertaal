@@ -68,7 +68,9 @@ describe('the work-rules track renders in Dutch only', () => {
     }
     expect(settings('me')).not.toContain('Ook Engels tonen');
     expect(settings('me')).not.toContain('Vrouw of man?');
-    expect(settings('me')).toContain('>Nederlands<');
+    // The route row, not the language: "Wat wil je leren?" › Werkregels.
+    expect(settings('me')).toContain('>Wat wil je leren?<');
+    expect(settings('me')).toContain('>Werkregels<');
     const rules = { helpLang: true, gender: false, preview: false, install: false, offline: true, rules: true };
     expect(settingsRows('me', rules)).toEqual(['language', 'sector', 'country', 'certificates', 'kaart']);
     expect(settingsRows('lessons', rules)).toEqual(['sound', 'voice', 'text', 'theme']);
@@ -100,7 +102,10 @@ describe('the language list', () => {
     expect(count(off)).toBe(14);
     expect(off).not.toContain('ik spreek al Nederlands');
     setRulesTrack(true);
-    const on = html(createElement(LanguagePicker, { onPick: () => {} }));
+    // Since 31 October 2026 the work-rules track is a route of its own (RoutePage, Settings ›
+    // "Wat wil je leren?"): the list shows it only when asked to (rules).
+    expect(count(html(createElement(LanguagePicker, { onPick: () => {} })))).toBe(14);
+    const on = html(createElement(LanguagePicker, { onPick: () => {}, rules: true }));
     expect(count(on)).toBe(15);
     expect(on).toMatch(/lang="nl"[^>]*>.*Nederlands.*ik spreek al Nederlands/);
     // The very last, after English and under a line, with the word "Werkregels": another part of
@@ -113,7 +118,7 @@ describe('the language list', () => {
 
   it('shows flags as decoration (hidden from screen readers), never as an extra button', () => {
     setRulesTrack(true);
-    const m = html(createElement(LanguagePicker, { onPick: () => {} }));
+    const m = html(createElement(LanguagePicker, { onPick: () => {}, rules: true }));
     expect(m.match(/<button/g)).toHaveLength(15);
     // Drawn flags, no flag emoji: the emoji font for flags alone was 709 KB on the first screen.
     expect(m).not.toMatch(/[\u{1F1E6}-\u{1F1FF}]/u);
@@ -126,7 +131,7 @@ describe('the language list', () => {
 
   it('in Settings of the Dutch track: no English names under the languages', () => {
     setRulesTrack(true);
-    const m = html(createElement(LanguagePicker, { onPick: () => {}, current: 'nl', compact: true, showBeta: true, lang: nl() }));
+    const m = html(createElement(LanguagePicker, { onPick: () => {}, current: 'nl', compact: true, showBeta: true, lang: nl(), rules: true }));
     expect(m).not.toContain('>Arabic<');
     expect(m).not.toContain('lang-beta');
     expect(m).toContain('Ik leer Nederlands via het Engels');
