@@ -50,6 +50,8 @@ Deel daarom vanaf nu alleen nog `vloertaal.nl`.
 
 ## Instellingen in Vercel
 
+**Alleen main wordt gebouwd** (`vercel.json`, `git.deploymentEnabled`). Andere branches en PR's krijgen geen preview meer. Het gratis plan bouwt hooguit 100 keer per dag, en op 31 oktober 2026 was die limiet op door previews van branches. Een wijziging zie je dus pas na het mergen. Wil je toch een preview van één branch? Zet die branch dan tijdelijk op `true` in `vercel.json`.
+
 - **Environment Variables** → `ELEVENLABS_API_KEY` (alleen *Production*): dan toont de verborgen
   beheerpagina (`vloertaal.nl/#beheer`) het ElevenLabs-saldo. Het saldo wordt bij elke publicatie
   ververst. Optioneel.
