@@ -43,7 +43,7 @@ export const aboutSections: AboutSection[] = [
     },
     nlRules: {
       title: 'Wat is Vloertaal?',
-      body: 'Vloertaal legt uit hoe werken in Nederland gaat. Voor mensen die al Nederlands spreken. Je leert de regels van de wet en je contract. En de regels die nergens staan, maar die iedereen kent. Bijvoorbeeld over werk zoeken, je loonstrook, ziek zijn, veiligheid en collega’s. De lessen zijn kort. Zo leer je elke dag een paar minuten. Zie Vloertaal als een tussendoortje. Het is een extra. Advies van je werkgever, een vakbond of het Juridisch Loket blijft nodig.',
+      body: 'Vloertaal legt uit hoe werken in Nederland en België gaat. Voor mensen die al Nederlands spreken. Je leert de regels van de wet en je contract. En de regels die nergens staan, maar die iedereen kent. Bijvoorbeeld over werk zoeken, je loonstrook, ziek zijn, veiligheid en collega’s. De lessen zijn kort. Zo leer je elke dag een paar minuten. Zie Vloertaal als een tussendoortje. Het is een extra. Advies van je werkgever, een vakbond, het Juridisch Loket (Nederland) of het justitiehuis (België) blijft nodig.',
     },
   },
   {
@@ -149,7 +149,7 @@ export const siteSections: AboutSection[] = [
     },
     nlRules: {
       title: 'Voor wie is het?',
-      body: 'Voor iedereen die al Nederlands spreekt en in Nederland werkt of werk zoekt. Ben je nieuw op je werk? Of wil je weten wat je rechten zijn? Dan is dit voor jou.',
+      body: 'Voor iedereen die al Nederlands spreekt en in Nederland of België werkt of werk zoekt. Kies bij de start of bij Instellingen het land waar je werkt. Ben je nieuw op je werk? Of wil je weten wat je rechten zijn? Dan is dit voor jou.',
     },
   },
 ];
