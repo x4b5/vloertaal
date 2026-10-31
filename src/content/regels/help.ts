@@ -22,7 +22,18 @@ export interface HelpRow {
   emoji: string;
 }
 
-export const HELP_ROWS: HelpRow[] = [
+/**
+ * The rows in alphabetical order (as a learner reads the names, without "de" or "het": "De gemeente"
+ * under G), with 112 always on top: in an emergency it must be the first thing you see.
+ */
+const sortName = (r: HelpRow) => r.name.replace(/^(de|het)\s+/i, '');
+function alphabetical(rows: HelpRow[]): HelpRow[] {
+  const sos = rows.filter((r) => r.id === 'h.112');
+  const rest = rows.filter((r) => r.id !== 'h.112').sort((a, b) => sortName(a).localeCompare(sortName(b), 'nl', { sensitivity: 'base' }));
+  return [...sos, ...rest];
+}
+
+export const HELP_ROWS: HelpRow[] = alphabetical([
   {
     // No one-tap call: a tap by accident, or "to try", would dial the emergency number (feedback from an NT2 teacher, 29 okt 2026).
     // ⚖️ check: misuse of 112 is punishable (art. 142 Sr)
@@ -92,7 +103,7 @@ export const HELP_ROWS: HelpRow[] = [
     when: 'Vragen over geld of schulden. Gratis en anoniem.',
     show: '0800-8115', href: 'tel:08008115',
   },
-];
+]);
 
 /**
  * "Wie bel je?" for a learner who works in Belgium (Settings: "In welk land werk je?", Vlaanderen).
@@ -100,7 +111,7 @@ export const HELP_ROWS: HelpRow[] = [
  * the Dutch places. First version (30 okt 2026): every name, number and site has a ⚖️ check,
  * see docs/belgie-vlaanderen-plan.md.
  */
-export const HELP_ROWS_BE: HelpRow[] = [
+export const HELP_ROWS_BE: HelpRow[] = alphabetical([
   HELP_ROWS[0],
   {
     // ⚖️ check: 1733 is the number for the huisarts van wacht in Belgium (evenings, nights, weekends)
@@ -132,7 +143,7 @@ export const HELP_ROWS_BE: HelpRow[] = [
     when: 'Vragen over inburgering, je papieren of Nederlandse les.',
     show: 'integratie-inburgering.be', href: 'https://www.integratie-inburgering.be',
   },
-];
+]);
 
 /** The rows of "Wie bel je?" for the country the learner works in. */
 export const helpRowsFor = (country?: 'nl' | 'be'): HelpRow[] => (country === 'be' ? HELP_ROWS_BE : HELP_ROWS);
