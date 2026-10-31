@@ -150,6 +150,12 @@ en elke pull request krijgt een voorbeeldversie. GitHub Actions draait de tests
 → Record ElevenLabs voices**. Zie [`docs/livegang.md`](docs/livegang.md) voor de checklist, ook
 voor het aanzetten van de regio's.
 
+**Logboek**: wat er verandert, staat in `src/content/updates.ts` ("Wat is er nieuw?"). Een
+verandering in rechten, loon, ziekte, uitkering of veiligheid krijgt een melding die de leerling
+één keer ziet, en wetten die later ingaan staan in `UPCOMING_LAW`. Een PR die teksten verandert
+zonder het logboek krijgt een waarschuwing (`.github/workflows/logboek.yml`). Zie
+[`docs/logboek.md`](docs/logboek.md).
+
 ## Structuur
 
 ```

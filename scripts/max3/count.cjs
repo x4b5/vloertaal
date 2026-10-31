@@ -580,7 +580,22 @@ function defineStates(LANG) {
   add('check:checked', shot('instapcheck&state=checked'), null, { list: true, expect: '.check-undo' });
   add('check:route', shot('instapcheck&state=route'), null, { list: true, expect: '.via-check' });
   add('check:kaart', shot('instapcheck&state=kaart'), null, { expect: '.kaart-img' });
+  // "Er is iets veranderd" (src/components/NoticeCard.tsx, a made-up example: src/dev/MeldingShot.tsx):
+  // the card in the block's place ([Lees meer] [Oké], "Ander onderwerp"); after Oké the home as
+  // usual; Lees meer opens "Wat is er nieuw?", its back arrow the home; in Belgium no card.
+  meldingStates(add, shot);
   return S;
+}
+
+/** The notice's states, in both tracks (the shot's `lang` is the configuration's). */
+function meldingStates(add, shot) {
+  // With device voices: the Dutch speaker and the help language's read-aloud are on the card.
+  add('melding:home', shot('melding'), null, { voices: true, expect: '.home-offer .notice-card .notice-ok' });
+  add('melding:ok', shot('melding'), async (p) => { await tap(p, '.notice-ok'); await settle(p); }, { expect: '.home3 .bay-now' });
+  add('melding:more', shot('melding'), async (p) => { await tap(p, '.notice-more'); await settle(p); }, { expect: '.news .chrome-back' });
+  add('melding:back', shot('melding'), async (p) => { await tap(p, '.notice-more'); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.home3 .bay-now' });
+  add('melding:be', shot('melding&country=be'), null, { expect: '.home3 .bay-now' });
+  add('melding:new', shot('melding&state=new'), null, { expect: '.home3 .bay-now' });
 }
 
 /**
@@ -728,6 +743,8 @@ function defineRuleStates() {
   add('flow:nl-news', RULES, async (p) => { await nlHome(p); await navTab(p, 3); await settle(p); await tap(p, '.news-link'); await settle(p); }, { expect: '.news .chrome-back' });
   // "Wat kun je nu?" under a Werkregels certificate (Dutch only).
   add('kunjenu:rule-certificate', shot('certificate&cu=r.loon&name=Fatima%20Amrani'), null, { expect: '.kun-list' });
+  // "Er is iets veranderd" in Dutch only (see meldingStates).
+  meldingStates(add, shot);
   return S;
 }
 

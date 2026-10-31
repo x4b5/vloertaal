@@ -51,6 +51,7 @@ import { ToetsShot } from './ToetsShot';
 import { NiveauShot } from './NiveauShot';
 import { SamenShot } from './SamenShot';
 import { InstapCheckShot } from './InstapCheckShot';
+import { MeldingShot } from './MeldingShot';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -136,6 +137,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'samen') return <SamenShot lang={lang} gender={gender} q={q} />;
   // "Ik ken dit al: korte check": /?shot=instapcheck&state=topic|question&at=N|passed|notyet|checked|route|kaart (src/dev/InstapCheckShot.tsx).
   if (shot === 'instapcheck') return <InstapCheckShot lang={lang} gender={gender} q={q} />;
+  // "Er is iets veranderd" (a notice, with a made-up example): /?shot=melding&country=be&state=new (src/dev/MeldingShot.tsx).
+  if (shot === 'melding') return <MeldingShot lang={lang} gender={gender} q={q} />;
   // The app icon in every variant (scripts/icons/make-icons.cjs reads these): /?shot=logo&px=512
   if (shot === 'logo') return <LogoSheet px={Number(q.get('px') ?? 120)} />;
   // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety

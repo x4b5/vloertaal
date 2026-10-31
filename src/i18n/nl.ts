@@ -438,6 +438,9 @@ export const uiNl: Record<UiKey, UiText> = {
   whoInspectionBe: 'Te weinig loon, of werken zonder contract melden.',
   whoExploitBe: 'Iemand buit je uit op je werk, of je denkt van wel.',
   whoUnionBe: 'Hulp bij je loon, je contract of als je werk stopt. Leden krijgen meer hulp.',
+  noticeTitle: 'Er is iets veranderd',
+  noticeMore: 'Lees meer',
+  noticeOk: 'Oké',
 };
 
 const lang: HelpLanguageSource = {
