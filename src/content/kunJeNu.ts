@@ -1,6 +1,7 @@
 import type { UiKey } from '../i18n/types';
 import type { ThemeId } from './themes';
 import { THEME_UNITS } from './themes';
+import { beTaalOf, taalBeActive } from './taalBe';
 
 /**
  * "Wat kun je nu?": per onderwerp 2 of 3 korte can-do-zinnen in de ik-vorm (werkplan stap 2.6,
@@ -378,7 +379,7 @@ export function addKunBe(unit: string, titel: string, rijen: KunRij[]): void {
 export function kunJeNu(unitId: string): KunZin[] {
   // A Belgian unit of the language track ("be.u.society", src/content/taalBe) has its Dutch twin's lines.
   const be = unitId.startsWith('r.be.') ? byUnitBe.get(unitId) ?? byUnit.get(`r.${unitId.slice(5)}`) : unitId.startsWith('be.u.') ? byUnit.get(unitId.slice(3)) : undefined;
-  return (be ?? byUnit.get(unitId))?.zinnen ?? [];
+  return beKun(unitId, (be ?? byUnit.get(unitId))?.zinnen ?? []);
 }
 
 /** "past bij A2 · spreken" */
@@ -416,4 +417,15 @@ export const KUN_VERTAALD: ThemeId[] = [
 export function kunGlossIds(): string[] {
   const units = new Set(KUN_VERTAALD.flatMap((t) => THEME_UNITS[t].taal));
   return KUN_TAAL.filter((o) => units.has(o.unit)).flatMap((o) => o.zinnen.map((z) => z.id));
+}
+
+/**
+ * In the Belgian language course (src/content/taalBe), a can-do line of a B unit said otherwise in
+ * Flanders (`kun` in its file: "loonstrook" → "loonbrief"): the same id and translation, the
+ * Flemish sentence. Read at call time, so the Belgian files load first.
+ */
+function beKun(unitId: string, zinnen: KunZin[]): KunZin[] {
+  if (unitId.startsWith('r.') || !taalBeActive()) return zinnen;
+  const kun = beTaalOf(unitId)?.kun;
+  return kun ? zinnen.map((z) => (kun[z.id] ? { ...z, nl: kun[z.id] } : z)) : zinnen;
 }

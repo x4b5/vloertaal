@@ -4,10 +4,15 @@ import { linkRows } from './linkRows';
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 /**
- * The page vloertaal.nl/nieuw: what changed, newest first, in plain Dutch. A plain HTML page
+ * The page vloertaal.nl/nieuw: what is coming ("Binnenkort", UPCOMING), then what changed, newest
+ * first, in plain Dutch. A plain HTML page
  * (no app code, no tracking), made at build time from src/content/updates.ts.
  */
-export function updatesPage(updates: Update[]): string {
+export function updatesPage(updates: Update[], upcoming: string[] = []): string {
+  // "Binnenkort" first (no date, no promise); left out when there is nothing.
+  const soon = upcoming.length
+    ? `<section class="soon" aria-labelledby="soon"><h2 id="soon">Binnenkort</h2><p class="soon-sub">Hieraan werken we nu.</p><ul>${upcoming.map((i) => `<li>${esc(i)}</li>`).join('')}</ul></section>\n`
+    : '';
   const days = updates
     .map(
       (u) => `<section><h2><time datetime="${u.date}">${esc(updateDate(u.date))}</time></h2><ul>${u.items
@@ -48,6 +53,8 @@ export function updatesPage(updates: Update[]): string {
   section { background: var(--card); border: 2px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 0 0 16px; }
   h2 { font-size: 1.1rem; margin: 0 0 8px; display: inline-block; background: linear-gradient(transparent 55%, var(--yellow) 55%); }
   @media (prefers-color-scheme: dark) { h2 { background: none; color: var(--yellow); } }
+  .soon { border-style: dashed; }
+  .soon-sub { color: var(--ink2); margin: 0 0 6px; }
   ul { margin: 0; padding-inline-start: 1.2em; }
   li { margin: 6px 0; }
   footer { color: var(--ink2); font-size: 0.95rem; margin-top: 24px; }
@@ -62,7 +69,7 @@ export function updatesPage(updates: Update[]): string {
 <header><img src="/icon.svg?v=4" alt="" width="48" height="48" /><a href="/">vloertaal.</a></header>
 <h1>Wat is er nieuw?</h1>
 <p class="sub">Laatst bijgewerkt: <time datetime="${LAST_UPDATE}">${esc(updateDate(LAST_UPDATE))}</time>. Vloertaal is gratis en nog in de testfase.</p>
-${days}
+${soon}${days}
 <footer>
 <p>Zie je een fout, of heb je een vraag? Mail naar <a href="mailto:hoi@vloertaal.nl">hoi@vloertaal.nl</a>.</p>
 <p><a href="/">Naar de app: vloertaal.nl</a></p>

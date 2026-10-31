@@ -58,17 +58,13 @@ const BY_NL: Record<string, BeTaal | undefined> = {
  * between the blocks, so that two agents never change the same lines.
  */
 export const BE_TAAL_TODO: readonly string[] = [
-  // Agent A: werk zoeken, contract, stage en verder leren
-  'u.contract', 'u.stage', 'u.grow',
+  // Agent A: werk zoeken, contract, stage en verder leren (af)
 
-  // Agent B: loon, papieren, geld en online
-  'u.pay', 'u.papers', 'u.money', 'u.data', 'u.ai',
+  // Agent B: loon, papieren, geld en online (af)
 
-  // Agent C: rechten, verlof en ziekte, werk kwijt, uitbuiting
-  'u.rights', 'u.leave', 'u.lost', 'u.exploit',
+  // Agent C: rechten, verlof en ziekte, werk kwijt, uitbuiting (af)
 
-  // Agent D: gezondheid, reizen, de eerste dagen, samenwerken, winkel en kas
-  'u.health', 'u.travel', 'u.firstday', 'u.tools', 'u.safety', 'u.warehouse', 'u.time', 'u.teamwork', 'u.house', 'u.sayings', 'u.shop', 'u.kas',
+  // Agent D: gezondheid, reizen, de eerste dagen, samenwerken, winkel en kas (af)
 ];
 
 /** Every Belgian file written so far. */
@@ -100,7 +96,8 @@ const patchWord = (lines: Record<string, BeLine>) => <T extends { id: string; nl
 };
 
 /** A Dutch lesson with the B lines of its unit (the same object when none of its lines changes). */
-function patchLesson(l: Lesson, lines: Record<string, BeLine>): Lesson {
+function patchLesson(l: Lesson, lines: Record<string, BeLine>, titles: Record<string, string> = {}): Lesson {
+  if (titles[l.id]) l = { ...l, title: titles[l.id], titleId: taalBeId(l.id) };
   const ids = [...l.words, ...l.sentences, ...(l.dialogues ?? []).flatMap((d) => [d.prompt, d.reply])].map((x) => x.id);
   if (!ids.some((id) => lines[id])) return l;
   const p = patchWord(lines);
@@ -122,8 +119,8 @@ export function beTaalCourse(nlUnits: Unit[], files: Record<string, BeTaal | und
       changed.add(b.unit.id);
       return { ...b.unit, lessons: b.unit.lessons.filter((l) => !isMixLesson(l)) };
     }
-    if (!b?.lines) return u;
-    const lessons = u.lessons.filter((l) => !isMixLesson(l)).map((l) => patchLesson(l, b.lines!));
+    if (!b?.lines && !b?.titles) return u;
+    const lessons = u.lessons.filter((l) => !isMixLesson(l)).map((l) => patchLesson(l, b.lines ?? {}, b.titles));
     if (lessons.every((l, i) => l === u.lessons[i])) return u;
     changed.add(u.id);
     return { ...u, lessons };
@@ -197,6 +194,7 @@ export function beTaalIds(): string[] {
     ...beTaalFiles.flatMap((b) => [
       ...(b.unit ? [b.unit.id, ...b.unit.lessons.filter((l) => !isMixLesson(l)).flatMap(lessonIds)] : []),
       ...Object.keys(b.lines ?? {}).map(taalBeId),
+      ...Object.keys(b.titles ?? {}).map(taalBeId),
     ]),
     ...beTaalTips.flatMap((t) => [t.id, `${t.id}.b`, t.phrase.id, t.situation.id, ...t.options.map((o) => o.id), t.why.id]),
   ];

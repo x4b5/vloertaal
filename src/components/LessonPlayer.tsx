@@ -977,9 +977,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         </div>
         {/* The screen's heading for screen readers (one h1 per screen, as elsewhere); the visible
             name shows on wider screens only. */}
-        <h1 className="sr-only"><Bi text={gloss(lesson.id, lesson.title, lang)} /></h1>
+        <h1 className="sr-only"><Bi text={gloss(lesson.titleId ?? lesson.id, lesson.title, lang)} /></h1>
         <span className="lesson-name" aria-hidden>
-          <Bi text={gloss(lesson.id, lesson.title, lang)} />
+          <Bi text={gloss(lesson.titleId ?? lesson.id, lesson.title, lang)} />
         </span>
         {/* "Melden" (on by default in the beta, src/lib/report.ts): mail this place (lesson, step, word) to hoi@vloertaal.nl. In Dutch. */}
         {report && (

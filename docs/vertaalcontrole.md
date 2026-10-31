@@ -3,6 +3,23 @@
 Alle bestanden in `src/i18n/` zijn met AI gemaakt. Zet `reviewed: true` pas als een moedertaalspreker
 het hele bestand heeft gecontroleerd. Hieronder de punten waar de vertaler zelf twijfelde.
 
+## Nieuw 31 oktober 2026: "Waarom Vloertaal?", de nieuwe testversie-tekst en "Wat is er nieuw?" (alle talen)
+
+In `src/i18n/about/*.ts`: `a.story` (het verhaal van Xavier, ik-vorm), `a.beta.b` (nieuwe "we"-tekst) en de
+ui-keys `whatsNew`, `newsInDutch` en `upcomingNow`. Alles `// nieuw, nalezen`, met AI vertaald vanuit het Engels.
+
+- **Arbeidsbemiddelaar** als gewoon beroep: ar مستشار توظيف, ti ኣማኻሪ ስራሕ, fa/prs مشاور کاریابی, uk консультант
+  із працевлаштування, tr iş danışmanı, pl pośrednik pracy, ro consilier pentru locuri de muncă (twijfel: is er
+  een gewoner woord?), bg трудов посредник, es orientador laboral, pt técnico de emprego, fr conseiller emploi,
+  de Arbeitsvermittler.
+- **Het verhaal** heeft geen gendervormen (de ik is Xavier, een man: pl "zacząłem", uk "створив", es/pt "solo/sozinho",
+  fr "tout seul", bg/de "сам/allein"). **De we-tekst** spreekt de lezer aan: ar m/f, ti m/f/x (x = meervoud/beleefd);
+  de andere talen zijn genderneutraal geschreven (uk/pl "Бачиш/Widzisz" in plaats van een verleden tijd).
+- **Tigrinya:** "ስራሕ ጽቡቕ ኣይከይድን" voor "een baan gaat mis" en "ስራሖም ከይጠፍኦምን" voor "hun werk houden": natuurlijk?
+- **Perzisch** gebruikt برنامه voor "app", **Dari** اپ, zoals elders in die bestanden. Beide in شما.
+- **Turks:** "Bazen bir iş yine de kötü gidiyor" voor "Soms gaat een baan toch mis": natuurlijk?
+- **Pools:** "Czasem mimo to coś w pracy idzie nie tak" is vrij vertaald.
+
 ## Spaans, Portugees, Frans en Duits (nieuw, 30 oktober 2026)
 
 Vier nieuwe hulptalen (x4b5/vloertaal#129): met AI vertaald vanuit het Engels, daarna door een tweede

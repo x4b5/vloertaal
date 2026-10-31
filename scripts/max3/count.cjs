@@ -277,7 +277,10 @@ function defineStates(LANG) {
   add('be:help-tab', '/?be=1', async (p) => { await realHome(p, { country: 'be' }); await navTab(p, 1); await settle(p); }, { list: true, expect: '.work-contacts' });
   add('be:lesson-first', '/?be=1', async (p) => { await realHome(p, { country: 'be' }); await tap(p, '.bay-start, .route-start, .start-btn, button.btn-primary', 0); await settle(p, 900); }, { expect: '.be-note' });
   add('flow:settings-tab', '/', async (p) => { await realHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
-  add('flow:about-tab', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); });
+  // Over: the toggle and the mail link, then a list of two rows (begeleiders, "Wat is er nieuw?").
+  add('flow:about-tab', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); }, { list: true, expect: '.about-links' });
+  add('flow:news', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); await tap(p, '.news-link'); await settle(p); }, { expect: '.news .chrome-back' });
+  add('flow:news-back', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); await tap(p, '.news-link'); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.about-links' });
   add('flow:coaches', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); await tap(p, '.coach-link'); await settle(p); }, { list: true });
   add('flow:settings-me', '/', async (p) => { await realHome(p); await navTab(p, 2); await settle(p); await tap(p, '.set-row', 0); await settle(p); }, { list: true });
   add('flow:settings-sector', '/', async (p) => {
@@ -474,7 +477,12 @@ function defineStates(LANG) {
   add('settings:backup-empty', shot('settings&page=backup'), async (p) => { await putBack(p, []); }, { expect: '.waybill-ask' });
   add('settings:backup-big', shot('settings&page=backup'), async (p) => { await putBack(p, [], 2_100_000); }, { expect: '.keep-note' });
   add('tab:help', shot('words'), null, { list: true });
-  add('tab:about', shot('about'));
+  add('tab:about', shot('about'), null, { list: true, expect: '.about-links' });
+  add('tab:about-nl', shot('about&nl=1'), null, { list: true, expect: '.about-nl-on' });
+  // "Wat is er nieuw?": the last 3 dates and "Meer" (one tap), then every date (nothing to tap).
+  add('screen:news', shot('news'), null, { expect: '.news-more' });
+  add('screen:news-more', shot('news'), async (p) => { await tap(p, '.news-more'); await settle(p); }, { expect: '.news-day h2:focus' });
+  add('screen:news-all', shot('news&all=1'), null, { expect: '.news-day' });
   add('screen:coaches', shot('coaches'), null, { list: true });
   add('screen:tips', shot('tips'), null, { list: true });
   add('screen:tips-open', shot('tips'), async (p) => { await tap(p, '.tips-head', 0); await settle(p); }, { list: true });
@@ -666,7 +674,10 @@ function defineRuleStates() {
   add('rule:help-no-voice', shot('words'), null, { list: true, voices: false, expect: '.rh-rows' });
   add('rule:shelf', shot('words&shelf=1'), null, { list: true, expect: '.shelf-list' });
   add('rule:shelf-open', shot('words&shelf=1'), async (p) => { await tap(p, '.tips-head', 0); await settle(p); }, { list: true, expect: '.shelf-body .rule-advice' });
-  add('rule:about', shot('about'), null, { expect: '.about-section' });
+  add('rule:about', shot('about'), null, { expect: '.about-section .about-signed' });
+  // "Wat is er nieuw?" in Dutch only (no line that it is in Dutch).
+  add('rule:news', shot('news'), null, { expect: '.news-more' });
+  add('rule:news-more', shot('news'), async (p) => { await tap(p, '.news-more'); await settle(p); }, { expect: '.news-day h2:focus' });
   add('rule:settings', shot('settings'), null, { expect: '.max3-menu' });
   for (const pg of ['me', 'lessons', 'phone', 'language']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('rule:settings-sector', shot('settings&page=sector'), null, { list: true, expect: '.chrome-back' });
@@ -714,6 +725,7 @@ function defineRuleStates() {
   add('flow:nl-shelf', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); await tap(p, '.rules-shelf-link'); await settle(p); }, { list: true, expect: '.shelf-list' });
   add('flow:nl-settings-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
   add('flow:nl-about-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 3); await settle(p); }, { expect: '.about-section' });
+  add('flow:nl-news', RULES, async (p) => { await nlHome(p); await navTab(p, 3); await settle(p); await tap(p, '.news-link'); await settle(p); }, { expect: '.news .chrome-back' });
   // "Wat kun je nu?" under a Werkregels certificate (Dutch only).
   add('kunjenu:rule-certificate', shot('certificate&cu=r.loon&name=Fatima%20Amrani'), null, { expect: '.kun-list' });
   return S;

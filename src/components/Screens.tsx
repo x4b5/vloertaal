@@ -3,8 +3,8 @@ import { LessonCelebration } from './Celebrate';
 import { BramSays } from './BramSays';
 import { Character } from './Characters';
 import { resultLineFor } from '../lib/greeting';
-import { aboutRules, aboutSections, CONTACT_EMAIL, PRO_TITLE } from '../content/about';
-import { LAST_UPDATE, updateDate } from '../content/updates';
+import { aboutRules, aboutSections, CONTACT_EMAIL, PRO_TITLE, STORY_DATE } from '../content/about';
+import { dateLocale, LAST_UPDATE, updateDate } from '../content/updates';
 import { taalTips } from '../content/culture';
 import { taalBeActive, tipNlOnly } from '../content/taalBe';
 import { tipBody } from '../lib/tipText';
@@ -543,17 +543,22 @@ function TesterSwitch() {
 
 /**
  * "About Vloertaal" (the "Over" tab), for the learner, short and in their language: what the app
- * is, how it works, Bram, how work goes here, privacy in short, good to know and where to send a
- * question (src/content/about.ts), the voice credits, and one button to the page for coaches and
- * employers (src/components/Coaches.tsx). The "NL" toggle at the top end shows every section in plain Dutch (lang nl,
- * left to right also in Arabic, Persian and Dari); pressed again, the help language (or English)
- * comes back. The toggle is one tap target (the contact address in the last section is a mail
- * link: one more); the Dutch choice is remembered on this phone.
+ * is, why (the owner's story, signed and dated, then the test version), how it works, Bram, how
+ * work goes here, privacy in short, good to know and where to send a question
+ * (src/content/about.ts), the voice credits, and at the bottom a list of two rows of one kind: the
+ * page for coaches and employers (src/components/Coaches.tsx) and "Wat is er nieuw?" with the
+ * date of the newest update (src/components/News.tsx; the work-rules track has only that row).
+ * The "NL" toggle at the top end shows every section in plain Dutch (lang nl, left to right also
+ * in Arabic, Persian and Dari); pressed again, the help language (or English) comes back. Outside
+ * the list two things to tap: the toggle and the contact address (a mail link); the Dutch choice
+ * is remembered on this phone.
  */
-export function About({ lang, onCoaches, dutch: dutchStart }: {
+export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
   lang?: HelpLanguage;
   /** Opens "Voor begeleiders" (the topic links to send). */
   onCoaches?: () => void;
+  /** Opens "Wat is er nieuw?" (src/content/updates.ts); without it the date stays plain text. */
+  onNews?: () => void;
   /** Start with the Dutch on or off (screenshots, tests); default: as remembered on this phone. */
   dutch?: boolean;
 }) {
@@ -591,6 +596,7 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
             <span className="bi"><span className="bi-en">{s.title}</span></span>
           </h2>
           <p>{withMailLink(s.body, undefined, true)}</p>
+          {s.signed && <Signed name={s.signed} code="nl" />}
         </section>
       )) : aboutSections.map((s) => (
         <section key={s.id} className={dutch ? 'about-section about-nl-on' : 'about-section'} {...(dutch ? { lang: 'nl', dir: 'ltr' } : {})}>
@@ -603,18 +609,38 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
               : <Bi text={gloss(s.id, s.title, lang)} />}
           </h2>
           <p>{dutch ? withMailLink(s.nl.body) : <AboutBody text={gloss(`${s.id}.b`, s.body, lang)} />}</p>
+          {s.signed && <Signed name={s.signed} code={dutch ? 'nl' : lang?.code} dir={dutch ? 'ltr' : lang?.dir} />}
         </section>
       ))}
-      {/* The one way on to the professionals' page (src/content/pro.ts): its Dutch name, as on
-          that page, over the help language's (for the learner who shows it to a coach). */}
-      {onCoaches && (
-        <button type="button" className="phrase-banner about-banner coach-link" onClick={onCoaches}>
-          <span className="coach-link-icon" aria-hidden>🤝</span>
-          <span className="coach-link-text">
-            <NlPair nlFirst nl={PRO_TITLE} nlClass="coach-link-nl" text={ui('forCoaches', lang)} />
-          </span>
-          <ChevronIcon />
-        </button>
+      {/* Two rows of one kind (the list exception of "at most three"): the professionals' page
+          (src/content/pro.ts; its Dutch name, as on that page, over the help language's, for the
+          learner who shows it to a coach), and "Wat is er nieuw?" with the newest update's date. */}
+      {(onCoaches || onNews) && (
+        <ul className="about-links">
+          {onCoaches && (
+            <li>
+              <button type="button" className="phrase-banner about-banner coach-link" onClick={onCoaches}>
+                <span className="coach-link-icon" aria-hidden>🤝</span>
+                <span className="coach-link-text">
+                  <NlPair nlFirst nl={PRO_TITLE} nlClass="coach-link-nl" text={ui('forCoaches', lang)} />
+                </span>
+                <ChevronIcon />
+              </button>
+            </li>
+          )}
+          {onNews && (
+            <li>
+              <button type="button" className="phrase-banner about-banner news-link" onClick={onNews}>
+                <span className="news-link-icon" aria-hidden>📝</span>
+                <span className="news-link-text">
+                  <Bi text={ui('whatsNew', lang)} />
+                  <span className="news-link-date muted small" lang={langTag(dateCode(lang))} dir={lang?.dir}>{updateDate(LAST_UPDATE, dateLocale(dateCode(lang)))}</span>
+                </span>
+                <ChevronIcon />
+              </button>
+            </li>
+          )}
+        </ul>
       )}
       {recorded.length > 0 && (
         <ul className="about-credits muted small" lang={dutchUi(lang) ? 'nl' : 'en'} dir="ltr">
@@ -628,15 +654,27 @@ export function About({ lang, onCoaches, dutch: dutchStart }: {
         </ul>
       )}
       <TesterSwitch />
-      <p className="about-updated muted small"><Bi text={lastUpdatedText(lang)} /></p>
+      {/* Without "Wat is er nieuw?" (a test, a screenshot): the newest update's date as plain text. */}
+      {!onNews && <p className="about-updated muted small"><Bi text={lastUpdatedText(lang)} /></p>}
       {/* Which deploy runs on this phone (the commit; src/lib/appUpdate.ts loads a newer one). */}
       <p className="about-version muted small" dir="ltr" lang="nl">Versie {(import.meta.env.VITE_BUILD as string | undefined) ?? 'dev'}</p>
     </div>
   );
 }
 
-/** Locale for a date in a help language (Dari: Afghan Persian). */
-const DATE_LOCALE: Record<string, string> = { prs: 'fa-AF', nl: 'nl-NL' };
+/** The language a date is written in on a page: the help language, Dutch in the work-rules track, or English. */
+export function dateCode(lang?: HelpLanguage): string {
+  return lang?.code ?? 'en';
+}
+
+/** Under the owner's story: "Xavier · 31 oktober 2026", the date in the page's language (STORY_DATE). */
+function Signed({ name, code = 'en', dir }: { name: string; code?: string; dir?: 'ltr' | 'rtl' }) {
+  return (
+    <p className="about-signed muted small" lang={langTag(code)} dir={dir}>
+      <span lang="nl" dir="ltr">{name}</span> · <time dateTime={STORY_DATE}>{updateDate(STORY_DATE, dateLocale(code))}</time>
+    </p>
+  );
+}
 
 /** "Last updated: 15 October 2026", each line with the date in its own language. */
 function lastUpdatedText(lang?: HelpLanguage): Bilingual {
@@ -644,7 +682,7 @@ function lastUpdatedText(lang?: HelpLanguage): Bilingual {
   return {
     ...t,
     en: t.en.replace('{date}', updateDate(LAST_UPDATE, 'en-GB')),
-    help: t.help?.replace('{date}', updateDate(LAST_UPDATE, lang ? DATE_LOCALE[lang.code] ?? lang.code : 'nl-NL')),
+    help: t.help?.replace('{date}', updateDate(LAST_UPDATE, dateLocale(lang?.code ?? 'nl'))),
   };
 }
 

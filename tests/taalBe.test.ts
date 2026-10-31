@@ -233,7 +233,7 @@ describe('"Dit gaat over Nederland. In België is het anders."', () => {
     expect(lifeThemeHere()).toBe('nl-marked');
 
     inCountryBe(true);
-    expect(lessonNlOnly('l.payslip')).toBe(true); // u.pay: not written yet
+    expect(lessonNlOnly('l.payslip')).toBe(false); // u.pay: written
     expect(lessonNlOnly('l.login')).toBe(false); // u.online: written
     expect(unitNlOnly('u.society')).toBe(false); // written: Meedoen in België plays
     expect(lessonNlOnly('be.l.council')).toBe(false);
@@ -264,7 +264,7 @@ describe('the language course per country', () => {
     expect(be.map((u) => taalNlId(u.id))).toEqual(units.map((u) => u.id));
     expect(be.find((u) => taalNlId(u.id) === 'u.society')!.id).toBe('be.u.society');
     // An unchanged unit is the very same object.
-    expect(be.find((u) => u.id === 'u.firstday')).toBe(units.find((u) => u.id === 'u.firstday'));
+    expect(be.find((u) => u.id === 'u.help')).toBe(units.find((u) => u.id === 'u.help'));
     // A B line plays with its Belgian id and text.
     const login = be.find((u) => u.id === 'u.online')!.lessons.find((l) => l.id === 'l.login')!;
     expect(login.sentences.map((s) => s.id)).toContain('be.s.login.3');
@@ -394,10 +394,14 @@ describe('"Wat kun je nu?" and the test', () => {
     expect(kunJeNu('be.u.society').length).toBeGreaterThan(0);
   });
 
-  it('has a Dutch word in one can-do line only, of a unit still to write (u.pay: de loonstrook)', () => {
+  it('has a Dutch word in one can-do line only (u.pay: de loonstrook), said the Flemish way in Belgium', () => {
     const dutch = KUN_TAAL.filter((o) => o.zinnen.some((z) => NL_ONLY.test(z.nl))).map((o) => o.unit);
     expect(dutch).toEqual(['u.pay']);
-    expect(BE_TAAL_TODO).toContain('u.pay');
+    inCountryBe(true);
+    for (const o of KUN_TAAL) for (const z of kunJeNu(o.unit)) expect(z.nl, z.id).not.toMatch(NL_ONLY);
+    expect(kunJeNu('u.pay')[0]).toMatchObject({ id: 'kjn.u.pay.1', nl: 'Ik kan zeggen dat mijn loonbrief niet klopt.' });
+    inCountryBe(false);
+    expect(kunJeNu('u.pay')[0].nl).toMatch(/loonstrook/);
   });
 
   it('knows which items of the test are said otherwise in Belgium (they play their Belgian line once written)', () => {
@@ -458,5 +462,18 @@ describe('BE_TAAL_TODO', () => {
 
   it('has a translation for every Belgian id in every help language', () => {
     for (const lang of helpLanguages) for (const id of beTaalIds()) expect(lang.gloss[id]?.trim(), `${lang.code} ${id}`).toBeTruthy();
+  });
+});
+
+describe('a Belgian lesson title', () => {
+  it('l.nextstep is "Learning on after school" in Belgium, translated under be.l.nextstep', async () => {
+    const { beTaalCourse } = await import('../src/content/taalBe');
+    const { units } = await import('../src/content/curriculum');
+    const be = beTaalCourse(units);
+    const l = be.flatMap((u) => u.lessons).find((x) => x.id === 'l.nextstep')!;
+    expect(l.title).toBe('Learning on after school');
+    expect(l.titleId).toBe('be.l.nextstep');
+    const nl = units.flatMap((u) => u.lessons).find((x) => x.id === 'l.nextstep')!;
+    expect(nl.titleId).toBeUndefined();
   });
 });

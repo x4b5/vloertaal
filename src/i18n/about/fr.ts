@@ -4,12 +4,17 @@ const t: CultureTranslation = {
   ui: {
     about: 'À propos de Vloertaal',
     forCoaches: 'Pour les coachs et les employeurs', // nieuw, nalezen
+    whatsNew: 'Quoi de neuf ?', // nieuw, nalezen
+    newsInDutch: 'Les changements sont en néerlandais.', // nieuw, nalezen
+    upcomingNow: 'Nous travaillons là-dessus en ce moment.', // nieuw, nalezen
   },
   gloss: {
     'a.what': 'C’est quoi, Vloertaal ?',
     'a.what.b': 'Vloertaal t’aide à apprendre le néerlandais dont tu as besoin au travail : dans l’entrepôt, la cuisine, l’usine ou sur le chantier. Pas seulement les mots du lieu de travail, mais toute la langue autour du travail : chercher un emploi, ton contrat et ta fiche de paie, tes droits, le logement et les papiers, te déclarer malade et bien t’entendre avec tes collègues. Les leçons sont courtes, alors tu peux pratiquer quelques minutes chaque jour. Vois Vloertaal comme un petit plus, entre deux choses. Il ne remplace pas un cours de langue ni un coach de langue.',
+    'a.story': 'Pourquoi Vloertaal ?', // nieuw, nalezen
+    'a.story.b': 'Bonjour, je suis Xavier. Je travaille comme conseiller emploi. J’aide les gens à trouver du travail. Parfois, un emploi se passe mal quand même. Souvent, c’est à cause de la langue : quelqu’un ne comprend pas les explications, ou n’ose pas poser de questions. C’est pour ça que j’ai lancé Vloertaal. J’espère que l’appli aide, pour que plus de gens puissent bien faire leur travail et garder leur emploi. Mais je ne peux pas et je ne veux pas construire cette appli tout seul.', // nieuw, nalezen
     'a.beta': 'Une version de test',
-    'a.beta.b': 'Vloertaal est encore une version de test (bêta). Nous la testons avec un petit groupe d’apprenants et de coachs. Tout n’a pas encore été vérifié. Nous cherchons encore des experts pour vérifier les traductions et les conseils sur les règles. Tu es expert ou une de nos langues est ta langue maternelle, et tu veux aider ? Écris-nous. Tu as trouvé une erreur ? Notre adresse est en bas de cette page.', // nieuw, nalezen
+    'a.beta.b': 'Maintenant, nous continuons à construire Vloertaal, ensemble. L’appli est encore une version de test (bêta). Nous la testons avec un petit groupe d’apprenants et de coachs. Tout n’a pas encore été vérifié, et nous avons besoin d’aide pour ça. Une de nos langues est ta langue maternelle ? Ou tu connais bien le travail et les règles aux Pays-Bas ou en Belgique ? Alors aide-nous à améliorer l’appli. Tu as vu une erreur ? Dis-le-nous. Notre adresse est en bas de cette page.', // nieuw, nalezen
     'a.mission': 'Notre mission',
     'a.mission.b': 'Vloertaal veut aider un peu, pour qu’apprendre le néerlandais pour le travail devienne un peu plus facile : gratuit, simple à utiliser, et avec de l’aide dans ta langue. Personne ne gagne d’argent avec Vloertaal : pas de publicité, pas d’abonnement, et tes données ne sont jamais vendues.',
     'a.bram': 'Qui est Bram ?',

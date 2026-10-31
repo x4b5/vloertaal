@@ -331,6 +331,9 @@ export const uiNl: Record<UiKey, UiText> = {
   showDutch: 'Toon in het Nederlands',
   forCoaches: 'Voor begeleiders en werkgevers', // nieuw
   lastUpdated: 'Laatst bijgewerkt: {date}',
+  whatsNew: 'Wat is er nieuw?', // nieuw
+  newsInDutch: 'De veranderingen staan in het Nederlands.', // nieuw (niet getoond: in Werkregels is alles Nederlands)
+  upcomingNow: 'Hieraan werken we nu.', // nieuw
   buildListen: 'Luister en maak de zin',
   chatWhichQuestion: 'Welke vraag hoort bij dit antwoord?',
   reviewWaiting: 'Er wachten nog {n} vragen. Die komen de komende dagen terug.', // regels

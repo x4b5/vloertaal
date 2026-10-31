@@ -6,6 +6,7 @@ import { LessonPlayer } from '../components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub } from '../components/Screens';
 import { Settings } from '../components/Settings';
 import { Coaches } from '../components/Coaches';
+import { News } from '../components/News';
 import { SETTINGS_PARENT, type SettingsPage } from '../lib/settingsMenu';
 import { Admin } from '../components/Admin';
 import { Gate } from '../components/Gate';
@@ -229,6 +230,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   }
   // "Voor begeleiders" (from About): a link per topic.
   if (shot === 'coaches') return <Coaches onBack={() => {}} />;
+  // "Wat is er nieuw?" (from About): the last 3 dates and "Meer"; &all=1 every date.
+  if (shot === 'news') return <News lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} all={q.get('all') === '1'} />;
   // The gender question right after a help language with gender: /?shot=gender&lang=pl
   // (&gender=f shows it picked; Settings has the same cards: /?shot=settings&lang=pl&gender=f).
   if (shot === 'gender') return <GenderShot lang={(lang as LangCode) ?? 'pl'} gender={gender} greet={q.get('greet') === '1'} />;
@@ -281,7 +284,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     return (
       <>
         {/* &nl=1: the sections in Dutch (the "NL" toggle on); &nl=0 off, whatever this phone remembers. */}
-        <About lang={l} onCoaches={lang === 'nl' ? undefined : () => {}} dutch={q.get('nl') === '1' ? true : q.get('nl') === '0' ? false : undefined} />
+        <About lang={l} onCoaches={lang === 'nl' ? undefined : () => {}} onNews={() => {}} dutch={q.get('nl') === '1' ? true : q.get('nl') === '0' ? false : undefined} />
         <BottomNav current="about" onTab={() => {}} lang={l} />
       </>
     );

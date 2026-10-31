@@ -63,6 +63,8 @@ export interface Lesson {
   id: string;
   /** English title; translated via the help-language file under the same id. */
   title: string;
+  /** The id its title is translated under, when not its own (a Belgian title: "be.l.nextstep"). */
+  titleId?: string;
   words: Word[];
   sentences: Sentence[];
   /** Short chats for the "Complete the conversation" exercise. */

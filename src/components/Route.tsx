@@ -149,7 +149,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
         {unit.lessons.map((lesson, i) => {
           const state = homeLessonState(unit, lesson.id, completed, access);
           const icon = lessonIcon(lesson);
-          const title = gloss(lesson.id, lesson.title, lang);
+          const title = gloss(lesson.titleId ?? lesson.id, lesson.title, lang);
           const saved = state === 'now' && saves[lesson.id]?.review === false ? saves[lesson.id] : undefined;
           const css = state === 'later' ? 'locked' : state;
           const body = (
@@ -653,7 +653,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
             const open = allowed && (isUnlocked(lesson.id, completed, access) || (via && lessonAllowed(lesson.id, access)));
             const state = !open ? 'locked' : record ? 'done' : lesson.id === next?.id ? 'now' : 'open';
             const icon = lessonIcon(lesson);
-            const title = gloss(lesson.id, lesson.title, lang);
+            const title = gloss(lesson.titleId ?? lesson.id, lesson.title, lang);
             const saved = open && saves[lesson.id]?.review === Boolean(record) ? saves[lesson.id] : undefined;
             // Waits for the full version (the topic, or this lesson of it): a padlock, and a tap opens
             // the unlock card. Waits only for the lesson before it: an hourglass, nothing to tap.
