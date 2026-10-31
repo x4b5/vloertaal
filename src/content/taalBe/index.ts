@@ -62,7 +62,7 @@ export const BE_TAAL_TODO: readonly string[] = [
   'u.contract', 'u.stage', 'u.grow',
 
   // Agent B: loon, papieren, geld en online
-  'u.pay', 'u.papers', 'u.money', 'u.data', 'u.ai', 'u.online',
+  'u.pay', 'u.papers', 'u.money', 'u.data', 'u.ai',
 
   // Agent C: rechten, verlof en ziekte, werk kwijt, uitbuiting
   'u.rights', 'u.leave', 'u.lost', 'u.exploit',
@@ -114,10 +114,10 @@ function patchLesson(l: Lesson, lines: Record<string, BeLine>): Lesson {
  * is the same object as in the Dutch course. A changed unit gets its mixed review again, from the
  * Belgian course (src/content/review.ts).
  */
-export function beTaalCourse(nlUnits: Unit[]): Unit[] {
+export function beTaalCourse(nlUnits: Unit[], files: Record<string, BeTaal | undefined> = BY_NL): Unit[] {
   const changed = new Set<string>();
   const teaching = nlUnits.map((u) => {
-    const b = BY_NL[u.id];
+    const b = files[u.id];
     if (b?.unit) {
       changed.add(b.unit.id);
       return { ...b.unit, lessons: b.unit.lessons.filter((l) => !isMixLesson(l)) };

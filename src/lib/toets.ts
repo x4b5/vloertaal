@@ -100,7 +100,7 @@ const allSentences = (): Sentence[] => allLessons.flatMap((l) => l.sentences);
  * version ("de loonbrief", "de arbeidsarts": its "be." line), so the test asks what the lessons
  * taught. The items stay the same (their ids: the two moments compare). Elsewhere: as it is.
  */
-function inCountry<T extends { id: string }>(x: T): T {
+export function inCountry<T extends { id: string }>(x: T): T {
   if (!taalBeActive()) return x;
   const id = taalBeId(x.id);
   for (const l of beOnlyTaalLessons()) {

@@ -376,7 +376,8 @@ export function addKunBe(unit: string, titel: string, rijen: KunRij[]): void {
 
 /** De zinnen van een onderwerp ([] voor een onderwerp zonder zinnen, zoals dat van een regio). */
 export function kunJeNu(unitId: string): KunZin[] {
-  const be = unitId.startsWith('r.be.') ? byUnitBe.get(unitId) ?? byUnit.get(`r.${unitId.slice(5)}`) : undefined;
+  // A Belgian unit of the language track ("be.u.society", src/content/taalBe) has its Dutch twin's lines.
+  const be = unitId.startsWith('r.be.') ? byUnitBe.get(unitId) ?? byUnit.get(`r.${unitId.slice(5)}`) : unitId.startsWith('be.u.') ? byUnit.get(unitId.slice(3)) : undefined;
   return (be ?? byUnit.get(unitId))?.zinnen ?? [];
 }
 

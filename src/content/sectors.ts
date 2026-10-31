@@ -2,7 +2,7 @@ import { nlId } from './regels/be/ids';
 import type { UiKey } from '../i18n/types';
 import type { Track } from '../lib/track';
 import { courseUnits } from './courses';
-import { units } from './curriculum';
+import { taalCourseUnits } from './curriculum';
 import type { Lesson, Unit } from './types';
 import { withRegion } from './regio';
 
@@ -108,6 +108,8 @@ export function coursePlan(sector: SectorChoice | undefined, track: Track = 'taa
     return { main: withRegion(plan.main, region, track), other: plan.other };
   }
   if (track === 'regels') return rulesPlan(sector);
+  // The language course of the learner's country (src/content/taalBe: the Belgian one in Belgium).
+  const units = taalCourseUnits();
   if (!sector || sector === 'none') return { main: units, other: [] };
   const own = units.filter((u) => unitSector(u.id) === sector);
   const basis = units.filter((u) => unitSector(u.id) === undefined);

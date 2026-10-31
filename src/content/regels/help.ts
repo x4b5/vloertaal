@@ -137,7 +137,7 @@ export const HELP_ROWS_BE: HelpRow[] = alphabetical([
     // vlaanderen.be "Juridische eerstelijnsbijstand" and "Justitiehuizen", search results of 31
     // October 2026: vlaanderen.be could not be opened from this session). Also the Taal track's Hulp tab.
     id: 'h.be.justitiehuis', emoji: '⚖️', name: 'Justitiehuis',
-    when: 'Gratis eerste advies van een advocaat, over je contract, je loon of ontslag.',
+    when: 'Gratis eerste advies van een advocaat over je contract of loon.',
     show: 'vlaanderen.be/justitiehuizen', href: 'https://www.vlaanderen.be/justitiehuizen',
   },
   {
