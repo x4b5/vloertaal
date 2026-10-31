@@ -58,7 +58,7 @@ const WHAT_PLACE = 'Vloertaal is nadrukkelijk bedoeld als aanvulling op een taal
 export const PRO_STORY = 'In mijn werk als arbeidsbemiddelaar zie ik regelmatig dat een plaatsing stukloopt op taal. Iemand begrijpt een instructie niet goed, of durft niet te vragen wat iets betekent. Vloertaal is een poging om dat iets makkelijker te maken: de taal van het werk oefenen, op de eigen telefoon, naast wat er al is. Ik bouw de app in mijn vrije tijd. De app zou ik graag samen verder ontwikkelen: met professionals, werkgevers en uiteraard de doelgroep zelf.';
 
 /** 'p.story', second paragraph: the costs, and the question about a subsidy or fund. */
-export const PRO_COSTS = 'De kosten zijn op dit moment nog zeer beperkt. Als ze hoger worden, is een subsidie of fonds waarschijnlijk nodig, en daar zou ik graag hulp bij hebben. Ken je iemand die me daarbij zou kunnen helpen? Dan hoor ik dat graag.';
+export const PRO_COSTS = 'De kosten zijn op dit moment nog beperkt. Als ze hoger worden, is een subsidie of fonds waarschijnlijk nodig, en daar zou ik graag hulp bij hebben. Ken je iemand die me daarbij zou kunnen helpen? Dan hoor ik dat graag.';
 
 const mission = aboutSection('a.mission');
 const story = aboutSection('a.story');
