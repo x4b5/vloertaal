@@ -165,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { one: 'Tag', other: 'Tage' },
     wordsUnit: { one: 'Wort', other: 'Wörter' },
     countTitle: 'Anonym zählen',
-    countHint: 'Die App zählt, wie oft Lektionen gemacht werden und wie lange sie ungefähr dauern. Kein Name, kein Konto, kein Tracking.',
+    countHint: 'Die App zählt, wie oft Lektionen gemacht werden und wie lange sie ungefähr dauern. Und ob die App irgendwo einen Fehler hat. Kein Name, kein Konto, kein Tracking.', // fout-zin nieuw, nalezen
     certificate: 'Zertifikat',
     myCertificates: 'Meine Zertifikate',
     certsEmpty: 'Mach alle Lektionen eines Themas fertig. Dann bekommst du ein Zertifikat.',

@@ -165,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: 'gün',
     wordsUnit: 'kelime',
     countTitle: 'Anonim sayım',
-    countHint: 'Uygulama derslerin kaç kez yapıldığını ve yaklaşık ne kadar sürdüğünü sayar. İsim yok, hesap yok, takip yok.',
+    countHint: 'Uygulama derslerin kaç kez yapıldığını ve yaklaşık ne kadar sürdüğünü sayar. Ve uygulamada bir yerde hata olup olmadığını. İsim yok, hesap yok, takip yok.', // fout-zin nieuw, nalezen
     certificate: 'Sertifika',
     myCertificates: 'Sertifikalarım',
     certsEmpty: 'Bir ünitenin tüm derslerini bitir. Sonra bir sertifika alırsın.',

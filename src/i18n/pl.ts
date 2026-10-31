@@ -165,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { one: 'dzień', few: 'dni', many: 'dni', other: 'dni' },
     wordsUnit: { one: 'słowo', few: 'słowa', many: 'słów', other: 'słów' },
     countTitle: 'Anonimowe liczenie',
-    countHint: 'Aplikacja liczy, jak często robi się lekcje i mniej więcej ile trwają. Bez imienia, bez konta, bez śledzenia.',
+    countHint: 'Aplikacja liczy, jak często robi się lekcje i mniej więcej ile trwają. I czy w aplikacji gdzieś pojawia się błąd. Bez imienia, bez konta, bez śledzenia.', // fout-zin nieuw, nalezen
     certificate: 'Certyfikat',
     myCertificates: 'Moje certyfikaty',
     certsEmpty: 'Skończ wszystkie lekcje działu. Wtedy dostaniesz certyfikat.',

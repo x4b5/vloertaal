@@ -165,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { one: 'zi', few: 'zile', other: 'de zile' },
     wordsUnit: { one: 'cuvânt', few: 'cuvinte', other: 'de cuvinte' },
     countTitle: 'Numărare anonimă',
-    countHint: 'Aplicația numără cât de des se fac lecțiile și cam cât durează. Fără nume, fără cont, fără urmărire.',
+    countHint: 'Aplicația numără cât de des se fac lecțiile și cam cât durează. Și dacă aplicația are undeva o eroare. Fără nume, fără cont, fără urmărire.', // fout-zin nieuw, nalezen
     certificate: 'Certificat',
     myCertificates: 'Certificatele mele',
     certsEmpty: 'Termină toate lecțiile unei unități. Apoi primești un certificat.',

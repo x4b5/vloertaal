@@ -165,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { one: 'jour', many: 'jours', other: 'jours' },
     wordsUnit: { one: 'mot', many: 'mots', other: 'mots' },
     countTitle: 'Compter de façon anonyme',
-    countHint: 'L’appli compte combien de fois on fait les leçons, et à peu près combien de temps elles durent. Pas de nom, pas de compte, pas de suivi.',
+    countHint: 'L’appli compte combien de fois on fait les leçons, et à peu près combien de temps elles durent. Et si l’appli a une erreur quelque part. Pas de nom, pas de compte, pas de suivi.', // fout-zin nieuw, nalezen
     certificate: 'Certificat',
     myCertificates: 'Mes certificats',
     certsEmpty: 'Termine toutes les leçons d’une partie. Tu reçois alors un certificat.',
