@@ -71,3 +71,8 @@
 .result-samen.result-phrases .hub-nl { font-size: 1.1rem; color: var(--ink); font-weight: 650; }
 .result-samen.result-phrases .hub-text .bi { font-size: 1rem; font-weight: 600; }
 .result-samen.result-phrases .hub-text .bi.result-samen-hint { font-size: 0.9rem; font-weight: 400; color: var(--ink-2); }
+
+/* Larger text: the two tools stack instead of breaking a word in the middle ("Posłuc / haj"), and
+   the Dutch line to read aloud is never hyphenated ("be- / gin"), as in the chat bubbles. */
+.samen .samen-tools .btn-label, .samen .samen-tools .btn-label * { overflow-wrap: normal; hyphens: manual; -webkit-hyphens: manual; }
+:root .samen-body p.samen-line { hyphens: manual; -webkit-hyphens: manual; }

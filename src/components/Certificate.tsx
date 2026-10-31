@@ -305,7 +305,7 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
         <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
       )}
       <KunJeNuSection zinnen={zinnen} lang={lang} />
-      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
+      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)} dir={rtl ? 'rtl' : undefined}>
         <NlPair nlFirst nl="Naam wijzigen" className="keep-link-gloss" text={ui('certChangeName', lang)} />
       </button>
     </div>
@@ -594,7 +594,7 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
           <NlPair nlFirst nl={KAART_NOTE} nlClass="kaart-keep-nl" text={ui('coachCardKeep', lang)} />
         </p>
       </section>
-      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
+      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)} dir={rtl ? 'rtl' : undefined}>
         <NlPair nlFirst nl="Naam wijzigen" className="keep-link-gloss" text={ui('certChangeName', lang)} />
       </button>
     </div>

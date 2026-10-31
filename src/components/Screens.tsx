@@ -892,7 +892,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             </div>
           )}
           {onFaster ? (
-            <div className="foot-actions result-faster-actions">
+            <div className="foot-actions result-faster-actions" dir={rtl ? 'rtl' : undefined}>
               <button type="button" className="btn btn-ghost result-faster-no" onClick={() => answerFaster(false)} dir={rtl ? 'rtl' : undefined}>
                 <NlPair nlFirst nl="Nee" text={ui('fasterNo', lang)} />
               </button>

@@ -4554,3 +4554,10 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .kun-table thead th { font-size: 0.8rem; color: var(--muted); }
 .kun-table tbody th { font-weight: 650; }
 .kun-table td:last-child { white-space: nowrap; color: var(--muted); }
+
+/* Larger text with a back arrow (the sector's second step): the wordmark stays small enough to
+   keep clear of the arrow on a 360 px phone. */
+:root:is([data-text='large'], [data-text='xl']) .chrome-head ~ .hero .hero-logo .wordmark { font-size: min(2rem, 8.5vw); }
+/* "Naam wijzigen" under a certificate or the coach card: at the start side in right-to-left too
+   (a fit-content block in a page without dir). */
+.cert-rename[dir='rtl'] { margin-left: auto; margin-right: 0; }
