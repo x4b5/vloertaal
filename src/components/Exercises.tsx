@@ -921,8 +921,9 @@ function ChatForward({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
             {/* What was asked: only after the answer. First the learner listens and reads the
                 Dutch (the speaker, and every reply has its own); with the translation in view
                 the chat could be solved without understanding the colleague. No extra button
-                for it ("vertaling" would be a fourth thing to tap next to the three replies). */}
-            {locked && (
+                for it ("vertaling" would be a fourth thing to tap next to the three replies). In the
+                first units (ex.hint, PROGRESSION.chatHint) it is there from the start: support that fades. */}
+            {(locked || ex.hint) && (
               <span className="chat-hint">
                 <Bi text={gloss(prompt.id, prompt.en, lang)} />
               </span>

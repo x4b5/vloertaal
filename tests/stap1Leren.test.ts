@@ -90,3 +90,20 @@ describe('from box MADE_FROM_BOX: only a made answer moves a card up', () => {
     expect(needsMade(speakCardId(sentence.id))).toBe(true);
   });
 });
+
+describe('the chat translation: support that fades (PROGRESSION.chatHint)', () => {
+  const chats = (lesson: (typeof teachingLessons)[number]) =>
+    buildLesson(lesson, { review: false, seed: 3, speak: true }).filter((e): e is Extract<ReturnType<typeof buildLesson>[number], { kind: 'chat' }> => e.kind === 'chat');
+  it('shows the colleague\'s line translated before the answer in the first units', () => {
+    const early = teachingLessons.filter((l) => { const u = unitIndexOf(l); return u >= 0 && u < PROGRESSION.chatHint; });
+    const withChat = early.flatMap(chats);
+    expect(withChat.length).toBeGreaterThan(0);
+    for (const ex of withChat) expect(ex.hint, ex.dialogue.prompt.id).toBe(true);
+  });
+  it('only after the answer from then on', () => {
+    const later = teachingLessons.filter((l) => unitIndexOf(l) >= PROGRESSION.chatHint);
+    const withChat = later.flatMap(chats);
+    expect(withChat.length).toBeGreaterThan(0);
+    for (const ex of withChat) expect(ex.hint, ex.dialogue.prompt.id).toBeUndefined();
+  });
+});
