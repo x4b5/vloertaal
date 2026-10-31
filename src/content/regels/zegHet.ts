@@ -375,9 +375,22 @@ export const zegHetWrong: Record<string, readonly [{ text: string; feedback: str
   ],
 };
 
+/** Two wrong sentences for a model step, as in zegHetWrong. */
+export type ZegHetWrong = readonly [{ text: string; feedback: string }, { text: string; feedback: string }];
+
+/**
+ * The same for the Belgian units (ids "r.be.…"): each unit file brings its own (`zegHet` in
+ * src/content/regels/be/units/<name>.ts); src/content/regels/be/index.ts puts them here when the
+ * Belgian course loads.
+ */
+const zegHetWrongBe: Record<string, ZegHetWrong> = {};
+export function addZegHetBe(table: Record<string, ZegHetWrong>): void {
+  Object.assign(zegHetWrongBe, table);
+}
+
 /** The model step as a question (same id: it is the card in the box), or none without wrong sentences. */
 export function modelQuestion(step: ModelStep): WhatdoStep | undefined {
-  const wrong = zegHetWrong[step.id];
+  const wrong = zegHetWrong[step.id] ?? zegHetWrongBe[step.id];
   if (!wrong) return undefined;
   return {
     kind: 'whatdo',

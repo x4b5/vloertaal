@@ -2,7 +2,7 @@ import type { Gender, UiCode } from '../i18n/types';
 import { rulesTrackOn, trackOf, trackOfLang, type Track } from './track';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import { isRegionChoice, isRegionId, regionOf, regionsOn, type RegionChoice } from '../content/regio';
-import { findCourseUnit, unitOfLesson } from '../content/courses';
+import { findCourseUnit, isRulesLessonAnyCountry, unitOfLesson } from '../content/courses';
 import { rulesCourseUnits } from '../content/rulesCourse';
 import type { Cards } from './spaced';
 import { mergeToets, readToets, type ToetsState } from './toetsState';
@@ -425,7 +425,7 @@ export const BACKUP_MAX_BYTES = 2_000_000;
  * it is kept; any other unknown id (a lesson that was removed, a typo) is left out.
  */
 export function knownLessonId(id: string): boolean {
-  if (unitOfLesson(id)) return true;
+  if (unitOfLesson(id) || isRulesLessonAnyCountry(id)) return true;
   const region = /^rg\.([a-z]+)\./.exec(id)?.[1];
   if (region) return isRegionId(region) && !regionOf(region);
   return id.startsWith('r.') && rulesCourseUnits().length === 0;

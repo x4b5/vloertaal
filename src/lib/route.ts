@@ -1,3 +1,4 @@
+import { nlId } from '../content/regels/be/ids';
 import { courseUnits, findCourseUnit, unitOfLesson } from '../content/courses';
 import { isMixLesson } from '../content/review';
 import { coursePlan, sectorFirstFocus, sectorOwnUnit, sectorPriority, type SectorChoice } from '../content/sectors';
@@ -133,14 +134,15 @@ export function nextChoices(sector: SectorChoice | undefined, completed: Complet
   // warehouse, building and factory work, so it comes in week 1), then the next unit in course
   // order, the sector's own unit and the other basis units that matter most in that work; then
   // the course order. So a cleaner, a carer and a warehouse worker get different choices.
-  const weighted = sectorPriority(sector, track).map((id) => open.find((u) => u.id === id)).filter((u): u is Unit => Boolean(u));
+  // (A Belgian rules unit counts as its Dutch twin: the sectors name the Dutch ids.)
+  const weighted = sectorPriority(sector, track).map((id) => open.find((u) => nlId(u.id) === id)).filter((u): u is Unit => Boolean(u));
   // Recommended first: the sector's first focus unit (Safety in week 1 for warehouse, building and
   // factory work), and once that is done the sector's own unit (the words of that work: a carer
   // gets the care words in week 1, not only after the basis units).
   const firsts = [sectorFirstFocus(sector, track), sectorOwnUnit(sector, track)].filter(Boolean);
   // A focus unit with only its mixed review left gives way to the next one here (it still comes
   // after the lead, below), so the sector's own unit is not skipped while that review waits.
-  const first = firsts.map((id) => open.find((u) => u.id === id)).filter((u): u is Unit => Boolean(u) && !onlyMixLeft(u!, completed)).slice(0, 1);
+  const first = firsts.map((id) => open.find((u) => nlId(u.id) === id)).filter((u): u is Unit => Boolean(u) && !onlyMixLeft(u!, completed)).slice(0, 1);
   // The recommended (first) choice brings new lessons: a unit with only its mixed review left
   // still comes, but after it.
   const fresh = open.find((u) => !onlyMixLeft(u, completed));

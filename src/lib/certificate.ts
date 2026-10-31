@@ -1,3 +1,4 @@
+import { isBeId } from '../content/regels/be/ids';
 import { allCourseUnits, courseUnits, findCourseUnit, ruleCards } from '../content/courses';
 import { findLesson } from '../content/curriculum';
 import { trackOf, trackOfId, type Track } from './track';
@@ -198,6 +199,8 @@ export interface CertData {
    * it has no second title (the unit's title is Dutch already).
    */
   rules?: boolean;
+  /** A unit of the Belgian work rules ("r.be.…", src/content/regels/be): "Werken in België". */
+  be?: boolean;
   /**
    * "Wat kun je nu?" (src/content/kunJeNu.ts), in Dutch, only when the lines fit on the sheet
    * (src/lib/certCanvas.ts certKunFits; the screen under the sheet always shows them all).
@@ -223,6 +226,7 @@ export function certData(unit: Unit, day: string, name: string, lang?: HelpLangu
       lessons: shown.lessons.length,
       words: unitRuleCount(shown),
       rules: true,
+      ...(isBeId(unit.id) ? { be: true } : {}),
     };
   }
   return {
@@ -241,7 +245,7 @@ export function certData(unit: Unit, day: string, name: string, lang?: HelpLangu
 }
 
 /** Under the brand: what the certificate is about. */
-export const certSub = (d: Pick<CertData, 'rules'>) => (d.rules ? 'Werken in Nederland' : 'Nederlands voor het werk');
+export const certSub = (d: Pick<CertData, 'rules' | 'be'>) => (d.rules ? (d.be ? 'Werken in België' : 'Werken in Nederland') : 'Nederlands voor het werk');
 /** The label above the list. */
 export const certListLabel = (d: Pick<CertData, 'rules'>) => (d.rules ? 'Belangrijkste regels' : 'Kernwoorden');
 /** The line under the key words: "Nederlands voor het werk · 3 lessen · 12 woorden"; for the

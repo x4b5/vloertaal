@@ -4,9 +4,11 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { units } from '../src/content/curriculum';
 import { getHelpLanguage } from '../src/i18n/all';
 import { Gate } from '../src/components/Gate';
+import { CountryScreen } from '../src/components/Country';
 import {
   onboardingStep,
   previousStep,
+  shouldAskCountry,
   stepIndex,
   trialLessonAllowed,
   TRY_LESSON_ID,
@@ -23,7 +25,9 @@ describe('first-run order: language, gender (gendered only), password, sector', 
     expect(onboardingStep(pl, null)).toBe('gender');
     expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true }, null)).toBe('gate');
     expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true }, 'preview')).toBe('sector');
-    expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true, sector: 'none' }, 'preview')).toBe('done');
+    // Then "In welk land werk je?", and then the home.
+    expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true, sector: 'none' }, 'preview')).toBe('country');
+    expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true, sector: 'none', country: 'be' }, 'preview')).toBe('done');
   });
 
   it('goes straight to the password for a help language without gender, and for English only', () => {
@@ -51,8 +55,44 @@ describe('first-run order: language, gender (gendered only), password, sector', 
   });
 
   it('a learner from before the gender question with a sector keeps the one-time page (not a first-run step)', () => {
-    const old = { ...fresh, onboarded: true, helpLang: 'pl' as const, sector: 'none' as const };
+    const old = { ...fresh, onboarded: true, helpLang: 'pl' as const, sector: 'none' as const, country: 'nl' as const };
     expect(onboardingStep(old, 'full')).toBe('done');
+  });
+});
+
+describe('"In welk land werk je?": right after the sector, in both tracks', () => {
+  const done = { best: 1, times: 1 };
+  it('comes after the sector in the first run, and back goes to the sector', () => {
+    for (const helpLang of ['tr', 'nl', null] as const) {
+      const p = { ...fresh, onboarded: true, helpLang, sector: 'construction' as const, completed: {}, xp: 0 };
+      expect(onboardingStep(p, 'full'), String(helpLang)).toBe('country');
+      expect(shouldAskCountry(p)).toBe(false);
+      expect(onboardingStep({ ...p, country: 'nl' }, 'full')).toBe('done');
+    }
+    expect(previousStep('country', { ...fresh, onboarded: true, helpLang: 'tr' })).toBe('sector');
+    expect(stepIndex('sector')).toBeLessThan(stepIndex('country'));
+    expect(stepIndex('country')).toBeLessThan(stepIndex('done'));
+  });
+
+  it('a learner who began before the question: once on opening the home, not as a first-run step', () => {
+    const old = { ...fresh, onboarded: true, helpLang: 'tr' as const, sector: 'none' as const, completed: { 'l.hello': done }, xp: 10 };
+    expect(onboardingStep(old, 'full')).toBe('done');
+    expect(shouldAskCountry(old)).toBe(true);
+    // Chosen (either country): never again.
+    expect(shouldAskCountry({ ...old, country: 'nl' })).toBe(false);
+    expect(shouldAskCountry({ ...old, country: 'be' })).toBe(false);
+  });
+
+  it('has two cards and nothing else to tap (the back arrow only in the first run)', () => {
+    const tr = getHelpLanguage('tr', 'f');
+    const first = renderToStaticMarkup(createElement(CountryScreen, { lang: tr, onDone: () => {}, onBack: () => {} }));
+    expect(tappables(first)).toHaveLength(2);
+    expect(first).toContain('chrome-back');
+    expect(first).toContain('België (Vlaanderen)');
+    expect(first).toContain(tr!.ui.countryBe!);
+    const old = renderToStaticMarkup(createElement(CountryScreen, { lang: tr, onDone: () => {} }));
+    expect(tappables(old)).toHaveLength(2);
+    expect(old).not.toContain('chrome-back');
   });
 });
 

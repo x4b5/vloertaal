@@ -2,6 +2,7 @@ import base from '../nl';
 import { registerRulesCourse } from '../../content/courses';
 import { rulesUnits, sectorRulesUnits } from '../../content/regels';
 import { toCourseUnits } from '../../content/regels/course';
+import { beCourseUnits } from '../../content/regels/be';
 import type { LanguagePack } from './types';
 
 /**
@@ -12,7 +13,9 @@ import type { LanguagePack } from './types';
  */
 // The basis units in path order, then the sector units (src/content/sectors.ts puts the
 // learner's own one in its place on the path).
-registerRulesCourse(toCourseUnits([...rulesUnits, ...sectorRulesUnits]));
+// The Belgian course (docs/werkregels-belgie.md) beside it: played for progress.country 'be'
+// once it is switched on (src/content/regels/be/live.ts).
+registerRulesCourse(toCourseUnits([...rulesUnits, ...sectorRulesUnits]), beCourseUnits());
 // The regions' work-rules units are not here: they come with the region's own file, only for a
 // learner of that region (src/content/regio ensureRegion).
 

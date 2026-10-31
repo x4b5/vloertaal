@@ -1,4 +1,5 @@
 import type { Lesson, Unit } from '../types';
+import { isBeId } from './be/ids';
 import type { DrawnCard, RuleLesson, RuleStep, RuleUnit } from './types';
 
 /**
@@ -59,11 +60,12 @@ export function ruleStepTexts(step: RuleStep): string[] {
  * euro."). A row still to work out ("?") is left out: the voice never gives the answer away. The
  * voice says the times and amounts as words (src/lib/sayNumbers.ts).
  */
-/** A payslip step's slip as a drawn card (the `loonstrook` card), its asked-about row lit after the answer. */
+/** A payslip step's slip as a drawn card (the `loonstrook` card), its asked-about row lit after the
+ *  answer. In Belgium (an "r.be." step) it is called a loonbrief. */
 export function payslipCard(step: Extract<RuleStep, { kind: 'payslip' }>): DrawnCard {
   return {
     type: 'loonstrook',
-    title: 'Loonstrook',
+    title: isBeId(step.id) ? 'Loonbrief' : 'Loonstrook',
     sub: step.slip.periode,
     rows: step.slip.rows.map((r) => ({ label: r.label, value: r.value, ...(r.field === step.highlight ? { hit: true as const } : {}) })),
   };

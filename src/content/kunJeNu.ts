@@ -361,9 +361,23 @@ export const KUN_REGELS: KunOnderwerp[] = [
 
 const byUnit = new Map([...KUN_TAAL, ...KUN_REGELS].map((o) => [o.unit, o] as const));
 
+/** Een rij van "Wat kun je nu?" zoals een Belgische unit hem meebrengt (src/content/regels/be). */
+export type KunRij = [nl: string, niveau: KunNiveau, vaardigheid: KunVaardigheid];
+
+/**
+ * De zinnen van de Belgische units (ids "r.be.…", docs/werkregels-belgie.md): elke unit brengt ze
+ * zelf mee (`kun` in src/content/regels/be/units/<naam>.ts), src/content/regels/be/index.ts zet ze
+ * hier. Zonder eigen zinnen krijgt een Belgische unit de zinnen van de Nederlandse.
+ */
+const byUnitBe = new Map<string, KunOnderwerp>();
+export function addKunBe(unit: string, titel: string, rijen: KunRij[]): void {
+  byUnitBe.set(unit, onderwerp(unit, titel, rijen));
+}
+
 /** De zinnen van een onderwerp ([] voor een onderwerp zonder zinnen, zoals dat van een regio). */
 export function kunJeNu(unitId: string): KunZin[] {
-  return byUnit.get(unitId)?.zinnen ?? [];
+  const be = unitId.startsWith('r.be.') ? byUnitBe.get(unitId) ?? byUnit.get(`r.${unitId.slice(5)}`) : undefined;
+  return (be ?? byUnit.get(unitId))?.zinnen ?? [];
 }
 
 /** "past bij A2 · spreken" */

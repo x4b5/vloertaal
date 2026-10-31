@@ -1,3 +1,4 @@
+import { rulesCountry } from '../content/rulesCourse';
 import { findLesson } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
 import { TOETS_PARTS, type ToetsPart } from '../content/toets';
@@ -35,6 +36,8 @@ export interface KaartData {
   /** The learner's own name (as on the certificates), '' = none. */
   name: string;
   track: Track;
+  /** The work-rules track in the Belgian course (src/content/rulesCourse.ts): "werken in België". */
+  be?: boolean;
   /** Finished topics of this track. */
   unitsDone: number;
   /** The last (at most) three finished topics, by their Dutch title, the latest first. */
@@ -119,6 +122,7 @@ export function kaartData(p: Progress, name: string, today: Date): KaartData {
   return {
     name: name.trim(),
     track,
+    ...(track === 'regels' && rulesCountry() === 'be' ? { be: true } : {}),
     unitsDone: earned.length,
     lastUnits: latest.slice(0, 3).map((e) => e.unit.titleNl),
     kunZinnen: kunAantal(earned.map((e) => e.unit.id)),
@@ -131,7 +135,8 @@ export function kaartData(p: Progress, name: string, today: Date): KaartData {
 }
 
 /** The track, on the card's first line. */
-export const kaartTrack = (d: Pick<KaartData, 'track'>): string => (d.track === 'regels' ? 'Werkregels (werken in Nederland)' : 'Taal (Nederlands voor het werk)');
+export const kaartTrack = (d: Pick<KaartData, 'track' | 'be'>): string =>
+  d.track === 'regels' ? `Werkregels (werken in ${d.be ? 'België' : 'Nederland'})` : 'Taal (Nederlands voor het werk)';
 
 /** "Luisteren 4/6 · Woorden 5/6 · Zinnen 4/6" */
 export const toetsLineNl = (t: KaartToets): string => t.parts.map((x) => `${x.nl} ${x.right}/${x.of}`).join(' · ');
