@@ -1,17 +1,642 @@
 import type { Gloss } from '../types';
 
-// The translations of the Belgian version of u.contract (src/content/taalBe/units/contract.ts), one
-// object per help language: the gloss of every "be." id of the unit's file. Empty until it is written.
-export const ar: Gloss = {};
-export const ti: Gloss = {};
-export const fa: Gloss = {};
-export const prs: Gloss = {};
-export const uk: Gloss = {};
-export const tr: Gloss = {};
-export const pl: Gloss = {};
-export const ro: Gloss = {};
-export const bg: Gloss = {};
-export const es: Gloss = {};
-export const pt: Gloss = {};
-export const fr: Gloss = {};
-export const de: Gloss = {};
+// The translations of the Belgian version of u.contract (src/content/taalBe/units/contract.ts): new
+// lines and tips, and the parts that say the same as the Dutch tip copied from src/i18n/work/<lang>.ts.
+// Every text: // nieuw, nalezen
+
+export const ar: Gloss = {
+  'be.w.uitzendbureau': "مكتب العمل المؤقت (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "هل العقد لمدة محددة أم لمدة غير محددة؟", // nieuw, nalezen
+  'be.w.oproepkracht': "بدوام جزئي", // nieuw, nalezen
+  'be.w.proeftijd': "تعويض الإشعار (أجرك عن مدة الإشعار)", // nieuw, nalezen
+  'be.w.cao': "اللجنة المشتركة (تضع قواعد قطاعك)", // nieuw, nalezen
+  'be.s.contract.2': "عقدي سينتهي. متى أحصل على وثيقة C4؟", // nieuw, nalezen
+  'be.s.contract.3': "تحت أي لجنة مشتركة أكون؟", // nieuw, nalezen
+  'be.w.uitzendkracht': "العامل المؤقت (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "المستشار (الشخص المسؤول عنك في مكتب العمل المؤقت)", // nieuw, nalezen
+  'be.s.agency.1': "أعمل عن طريق مكتب عمل مؤقت.", // nieuw, nalezen
+  'be.s.agency.2': "هل أحصل غداً مرة أخرى على عقد يومي (عقد ليوم واحد)؟", // nieuw, nalezen
+  'be.w.zzper': "العامل المستقل (تعمل لحسابك)", // nieuw, nalezen
+  'be.s.permit.2': "هل أنا موظف أم عامل مستقل؟", // nieuw, nalezen
+  'be.s.permit.3': "أعمل بدوام جزئي.", // nieuw, nalezen
+  'be.c.findwork': "الحصول على العقد مكتوباً", // nieuw, nalezen
+  'be.c.findwork.b': "اطلب دائماً عقداً مكتوباً ونسخة لك. العقد لمدة محددة (bepaalde tijd) أو العقد بدوام جزئي يجب أن يكون مكتوباً عند بداية العمل. اقرأه قبل التوقيع، أو اطلب المساعدة من شخص تثق به. قبل يومك الأول، يبلّغ صاحب العمل الضمان الاجتماعي عنك: هذا هو Dimona. مكتب العمل المؤقت (interimkantoor) لا يحق له أن يطلب منك مالاً ليجد لك عملاً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).", // nieuw, nalezen
+  'be.c.findwork.p': "هل يمكنني أن أقرأ العقد أولاً؟", // nieuw, nalezen
+  'be.c.findwork.s': "صاحب عمل جديد يقول: «وقّع هنا الآن. يمكنك أن تقرأه لاحقاً.» ماذا تفعل؟", // nieuw, nalezen
+  'be.c.findwork.o1': "اطلب وقتاً لتقرأه، أو نسخة منه.", // nieuw, nalezen
+  'be.c.findwork.o2': "وقّع بسرعة، حتى لا تخسر الوظيفة.", // nieuw, nalezen
+  'be.c.findwork.o3': "وقّع، واطلب نسخة بعد ذلك.", // nieuw, nalezen
+  'be.c.findwork.w': "عقدك يقول كم تكسب وما هي حقوقك. صاحب العمل الجيد يعطيك وقتاً لتقرأه. يمكنك أن تسأل عن كل شيء لا تفهمه.", // nieuw, nalezen
+  'be.c.contract': "لا فترة تجربة، بل مدة إشعار", // nieuw, nalezen
+  'be.c.contract.b': "فترة التجربة القديمة (proeftijd) لم تعد موجودة. منذ البداية لديك مدة إشعار (opzegtermijn). في الأشهر الأولى تكون قصيرة. هل يريد صاحب العمل إنهاء العمل؟ عندها يعطيك إشعاراً مكتوباً، أو يدفع لك أجرك عن تلك المدة (opzegvergoeding). تعمل بدوام جزئي بساعات متغيرة؟ تحصل على جدول عملك (uurrooster) مسبقاً: عادة قبل 7 أيام عمل. يمكن لقطاعك أن يجعلها أقصر، ولكن ليس أقل من 3. قواعد قطاعك تأتي من لجنته المشتركة (paritair comité). هل ينتهي عملك؟ اطلب وثيقة C4: تحتاجها لإعانة البطالة. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).", // nieuw, nalezen
+  'be.c.contract.p': "كم مدة الإشعار عندي؟ وهل أحصل على وثيقة C4؟", // nieuw, nalezen
+  'be.c.contract.s': "بعد ثلاثة أسابيع يقول المدير: \"الأمر لا ينجح. توقّف غداً. ما زلت في فترة التجربة.\" ما الصحيح؟", // nieuw, nalezen
+  'be.c.contract.o1': "لا توجد فترة تجربة: تحصل على إشعار أو على أجرك.", // nieuw, nalezen
+  'be.c.contract.o2': "في الأسابيع الأولى يمكن للمدير أن يوقفك فوراً.", // nieuw, nalezen
+  'be.c.contract.o3': "لا تحصل على شيء، لأنك عملت ثلاثة أسابيع فقط.", // nieuw, nalezen
+  'be.c.contract.w': "فترة التجربة القديمة لم تعد موجودة. حتى في الأشهر الأولى تحصل على مدة إشعار، أو على أجرك عن تلك المدة. اطلب أيضاً وثيقة C4. لست متأكداً؟ اسأل النقابة.", // nieuw, nalezen
+  'be.c.agency': "مكتب العمل المؤقت هو صاحب عملك", // nieuw, nalezen
+  'be.c.agency.b': "إذا كنت تعمل عن طريق مكتب عمل مؤقت (interimkantoor)، فالمكتب هو صاحب عملك، لا الشركة التي تعمل فيها. عقدك وأجرك يأتيان من المكتب. يجب أن يكون عقدك مكتوباً، خلال 2 من أيام العمل بعد أن تبدأ على الأكثر. لك الحق في أجر لا يقل عن أجر عمال الشركة الذين يقومون بالعمل نفسه. التسجيل مجاني: مكتب العمل المؤقت لا يحق له أبداً أن يطلب منك مالاً. العقود اليومية الكثيرة المتتالية (dagcontracten) مسموحة فقط لسبب وجيه. احتفظ بقائمتك الخاصة بالساعات التي عملتها، وتحقّق منها في كشف الراتب (loonbrief). معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).", // nieuw, nalezen
+  'be.c.agency.p': "في قسيمة راتبي ساعات أقل مما يجب.", // nieuw, nalezen
+  'be.c.agency.s': "كشف راتبك (loonbrief) يبيّن 32 ساعة، لكنك عملت 38. ماذا تفعل؟", // nieuw, nalezen
+  'be.c.agency.o1': "تعرض قائمة ساعاتك على المكتب وتطلب التصحيح.", // nieuw, nalezen
+  'be.c.agency.o2': "لا تقل شيئاً، لأنها 6 ساعات فقط.", // nieuw, nalezen
+  'be.c.agency.o3': "اطلب من المدير في الشركة التي تعمل فيها أن يدفع لك 6 ساعات.", // nieuw, nalezen
+  'be.c.agency.w': "مكتب العمل المؤقت هو الذي يدفع لك، فعلى المكتب أن يصحّح الخطأ. قائمتك الخاصة بالتواريخ والساعات تساعد. السؤال عن ذلك حقك.", // nieuw, nalezen
+  'be.c.permit': "العمل والاندماج", // nieuw, nalezen
+  'be.c.permit.b': "هل يجب أن تتبع برنامج الاندماج المدني (inburgering)؟ في فلاندرز يرافقك Agentschap Integratie en Inburgering. أخبر صاحب العمل، واسأل مبكراً إن كان يمكن أن تتناسب دروس الهولندية مع جدول عملك (uurrooster). لست متأكداً إن كان يحق لك العمل هنا؟ تحقّق من ذلك قبل أن تبدأ، مثلاً عند نقابة. يجب أن يبلّغ صاحب العمل عنك قبل يومك الأول (Dimona). هل يطلبون منك أن تعمل لحسابك الخاص (zelfstandige) في هذا العمل؟ من يعمل لحسابه الخاص لا يحصل على أجر عند المرض، ولا على إعانة بطالة. اطلب النصيحة أولاً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).", // nieuw, nalezen
+  'be.c.permit.p': "عندي درس هولندية يوم الثلاثاء. هل يمكن أن يراعي جدول عملي ذلك؟", // nieuw, nalezen
+  'be.c.permit.s': "تبدأ عملاً جديداً. درس الهولندية صباح كل ثلاثاء، لكن جدول عملك فيه عمل أيام الثلاثاء. ماذا تفعل؟", // nieuw, nalezen
+  'be.c.permit.o1': "تخبر مسؤولك وتطلب تغيير الجدول.", // nieuw, nalezen
+  'be.c.permit.o2': "تترك درس الهولندية، لأن العمل أولاً.", // nieuw, nalezen
+  'be.c.permit.o3': "ابقَ في البيت أيام الثلاثاء دون أن تقول شيئاً.", // nieuw, nalezen
+  'be.c.permit.w': "الاندماج المدني واجب أيضاً. كثير من أصحاب العمل يساعدون عندما يعرفون مبكراً. المرافق في الـ Agentschap يمكنه أيضاً أن يساعدك في التوفيق بين دروسك وعملك.", // nieuw, nalezen
+};
+
+export const ti: Gloss = {
+  'be.w.uitzendbureau': "ቤት ጽሕፈት ግዝያዊ ስራሕ (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "እቲ ውዕል ንውሱን ግዜ ድዩ ወይስ ንዘይውሱን ግዜ?", // nieuw, nalezen
+  'be.w.oproepkracht': "ብፊርቂ ግዜ", // nieuw, nalezen
+  'be.w.proeftijd': "ካሕሳ ምሕባር (ደሞዝካ ንግዜ ምሕባር)", // nieuw, nalezen
+  'be.w.cao': "ሓባራዊ ኮሚተ (ሕግታት ናይ ዘርፍኹም ትሰርዕ)", // nieuw, nalezen
+  'be.s.contract.2': "ውዕለይ ይውዳእ ኣሎ። C4 መዓስ ይወሃበኒ?", // nieuw, nalezen
+  'be.s.contract.3': "ኣብ ትሕቲ ኣየናይ ሓባራዊ ኮሚተ እየ ዘለኹ?", // nieuw, nalezen
+  'be.w.uitzendkracht': "ግዝያዊ ሰራሕተኛ (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "ኣማኻሪ (ኣብ ቤት ጽሕፈት ግዝያዊ ስራሕ ዝከታተለኩም ሰብ)", // nieuw, nalezen
+  'be.s.agency.1': "ብቤት ጽሕፈት ግዝያዊ ስራሕ እየ ዝሰርሕ።", // nieuw, nalezen
+  'be.s.agency.2': "ጽባሕ ደጊመ ናይ ሓደ መዓልቲ ውዕል ክወሃበኒ ድዩ?", // nieuw, nalezen
+  'be.w.zzper': "ናይ ርእሱ ሰራሕተኛ (ንርእስኻ ትሰርሕ)", // nieuw, nalezen
+  'be.s.permit.2': "ሰራሕተኛ ድየ ወይስ ናይ ርእሰይ ሰራሕተኛ?", // nieuw, nalezen
+  'be.s.permit.3': "ብፊርቂ ግዜ እየ ዝሰርሕ።", // nieuw, nalezen
+  'be.c.findwork': "ውዕልኩም ብጽሑፍ ውሰዱ", // nieuw, nalezen
+  'be.c.findwork.b': "ኩሉ ግዜ ጽሑፍ ውዕልን ንዓኹም ቅዳሕን ሕተቱ። ውዕል ንውሱን ግዜ (bepaalde tijd) ወይ ውዕል ፊርቂ ግዜ ክትጅምሩ ከለኹም ብጽሑፍ ክኸውን ኣለዎ። ቅድሚ ምፍራምኩም ኣንብብዎ፡ ወይ ንእትኣምንዎ ሰብ ሓገዝ ሕተቱ። ቅድሚ ቀዳማይ መዓልትኹም፡ ኣስራሒኹም ናብ ማሕበራዊ ውሕስነት የፍልጠኩም፡ እዚ Dimona ይበሃል። ቤት ጽሕፈት ግዝያዊ ስራሕ (interimkantoor) ስራሕ ንምርካብ ገንዘብ ክሓተኩም ኣይፍቀዶን። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።", // nieuw, nalezen
+  'be.c.findwork.p': "ቅድም ነቲ ውዕል ከንብቦ ይኽእል ዶ?", // nieuw, nalezen
+  'be.c.findwork.s': "ሓድሽ ኣስራሒ «ሕጂ ኣብዚ ፈርም። ደሓር ከተንብቦ ትኽእል ኢኻ።» ይብለካ። እንታይ ትገብር?", // nieuw, nalezen
+  'be.c.findwork.o1': "ከተንብቦ ግዜ ሕተት፡ ወይ ቅዳሕ ሕተት።", // nieuw, nalezen
+  'be.c.findwork.o2': "ነቲ ስራሕ ከይተጥፍኦ፡ ቀልጢፍካ ፈርም።", // nieuw, nalezen
+  'be.c.findwork.o3': "ፈርሙ፡ ድሕሪኡ ድማ ቅዳሕ ሕተቱ።", // nieuw, nalezen
+  'be.c.findwork.w': "ውዕልካ ክንደይ ከም እትረኽብን እንታይ መሰላት ከም ዘለዉኻን ይነግር። ጽቡቕ ኣስራሒ ከተንብቦ ግዜ ይህበካ። ብዛዕባ ዘይተረደኣካ ኩሉ ክትሓትት ትኽእል ኢኻ።", // nieuw, nalezen
+  'be.c.contract': "ግዜ ፈተነ የለን፡ ግዜ ምሕባር ግን ኣሎ", // nieuw, nalezen
+  'be.c.contract.b': "እቲ ናይ ቀደም ግዜ ፈተነ (proeftijd) ሕጂ የለን። ካብ መጀመርታ ግዜ ምሕባር (opzegtermijn) ኣለኩም። ኣብ ቀዳሞት ኣዋርሕ ሓጺር እዩ። ኣስራሒኹም ስራሕ ከቋርጽ ይደሊ ድዩ? ሽዑ ብጽሑፍ የፍልጠኩም፡ ወይ ደሞዝኩም ንሓደ ግዜ ይኸፍለኩም (opzegvergoeding)። ብፊርቂ ግዜ ብዝቕያየር ሰዓታት ትሰርሑ ዶ? ሰሌዳ ስራሕኩም (uurrooster) ኣቐዲምኩም ትረኽብዎ፡ ብዙሕ ግዜ 7 መዓልታት ስራሕ ቀዲሙ። ዘርፍኹም ክሓጽሮ ይኽእል፡ ካብ 3 ግን ኣይውሕድን። ሕግታት ዘርፍኹም ካብ ሓባራዊ ኮሚተኡ (paritair comité) ይመጽእ። ስራሕኩም ይውዳእ ድዩ? C4 ሕተቱ፡ ንሓገዝ ስራሕ ኣልቦ የድልየኩም። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።", // nieuw, nalezen
+  'be.c.contract.p': "ግዜ ምሕባረይ ክንደይ እዩ? C4ከ ይወሃበኒ ድዩ?", // nieuw, nalezen
+  'be.c.contract.s': "ድሕሪ ሰለስተ ሰሙን ሓለቓኹም ይብል፦ \"ኣይሰርሐን። ጽባሕ ኣቋርጹ። ገና ኣብ ግዜ ፈተነ ኢኹም።\" እቲ ሓቂ ኣየናይ እዩ?", // nieuw, nalezen
+  'be.c.contract.o1': "ግዜ ፈተነ የለን፡ ምሕባር ወይ ደሞዝ ትረኽቡ።", // nieuw, nalezen
+  'be.c.contract.o2': "ኣብ ቀዳሞት ሰሙናት ሓለቓ ብቕጽበት ከቋርጸኩም ይኽእል።", // nieuw, nalezen
+  'be.c.contract.o3': "ሰለስተ ሰሙን ጥራይ ስለ ዝሰራሕኩም ዋላ ሓንቲ ኣይትረኽቡን።", // nieuw, nalezen
+  'be.c.contract.w': "እቲ ናይ ቀደም ግዜ ፈተነ ሕጂ የለን። ኣብ ቀዳሞት ኣዋርሕ እውን ግዜ ምሕባር፡ ወይ ደሞዝ ናይቲ ግዜ ትረኽቡ። C4 እውን ሕተቱ። ርግጸኛታት ኣይኮንኩምን? ንማሕበር ሰራሕተኛታት ሕተቱ።", // nieuw, nalezen
+  'be.c.agency': "ቤት ጽሕፈት ግዝያዊ ስራሕ ኣስራሒኹም እዩ", // nieuw, nalezen
+  'be.c.agency.b': "ብቤት ጽሕፈት ግዝያዊ ስራሕ (interimkantoor) እንተ ሰሪሕኩም፡ እቲ ቤት ጽሕፈት እዩ ኣስራሒኹም፡ እቲ እትሰርሕሉ ትካል ኣይኮነን። ውዕልኩምን ደሞዝኩምን ካብቲ ቤት ጽሕፈት ይመጽእ። ውዕልኩም ብጽሑፍ ክኸውን ኣለዎ፡ እንተ ደንጎየ ድሕሪ ምጅማርኩም 2 መዓልታት ስራሕ። ከምቶም ተመሳሳሊ ስራሕ ዝሰርሑ ሰራሕተኛታት ናይቲ ትካል፡ እንተ ወሓደ ተመሳሳሊ ደሞዝ ናይ ምርካብ መሰል ኣለኩም። ምምዝጋብ ብነጻ እዩ፡ ቤት ጽሕፈት ግዝያዊ ስራሕ ፈጺሙ ገንዘብ ክሓተኩም ኣይፍቀዶን። ብዙሓት ናይ ሓደ መዓልቲ ውዕላት (dagcontracten) ተኸታቲሎም ብጽቡቕ ምኽንያት ጥራይ ይፍቀዱ። ዝሰራሕኩምዎ ሰዓታት ባዕልኹም ጽሓፉ፡ ኣብ ወረቐት ደሞዝ (loonbrief) ድማ ኣረጋግጽዎ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።", // nieuw, nalezen
+  'be.c.agency.p': "ኣብ ወረቐት ደሞዘይ ዘሎ ሰዓታት ውሑድ እዩ።", // nieuw, nalezen
+  'be.c.agency.s': "ወረቐት ደሞዝኩም (loonbrief) 32 ሰዓት የርኢ፡ ንስኹም ግን 38 ሰሪሕኩም። እንታይ ትገብሩ?", // nieuw, nalezen
+  'be.c.agency.o1': "ዝርዝር ሰዓታትኩም ንቤት ጽሕፈት ኣርእዩ፡ ክእረም ሕተቱ።", // nieuw, nalezen
+  'be.c.agency.o2': "6 ሰዓት ጥራይ ስለ ዝኾነ፡ ገለ ኣይትበሉ።", // nieuw, nalezen
+  'be.c.agency.o3': "ነቲ ኣብቲ እትሰርሓሉ ትካል ዘሎ ሓላፊ ነተን 6 ሰዓታት ክኸፍለካ ሕተቶ።", // nieuw, nalezen
+  'be.c.agency.w': "ቤት ጽሕፈት ግዝያዊ ስራሕ እዩ ዝኸፍለኩም፡ ስለዚ እቲ ቤት ጽሕፈት እዩ ነቲ ጌጋ ከእርሞ ዘለዎ። ናይ ባዕልኹም ዝርዝር ዕለታትን ሰዓታትን ይሕግዝ። ብዛዕባኡ ምሕታት መሰልኩም እዩ።", // nieuw, nalezen
+  'be.c.permit': "ስራሕን ምውህሃድን", // nieuw, nalezen
+  'be.c.permit.b': "ስርዓት ምውህሃድ (inburgering) ክትከታተሉ ኣለኩም ዶ? ኣብ ፍላንደርስ Agentschap Integratie en Inburgering ይመርሓኩም። ንኣስራሒኹም ንገርዎ፡ ትምህርቲ ደች ምስ ሰሌዳ ስራሕኩም (uurrooster) ክሰማማዕ ከም ዝኽእል ኣቐዲምኩም ሕተቱ። ኣብዚ ክትሰርሑ ከም እተፍቀደልኩም ርግጸኛታት ኣይኮንኩምን? ቅድሚ ምጅማርኩም ኣረጋግጹ፡ ንኣብነት ኣብ ማሕበር ሰራሕተኛታት። ኣስራሒኹም ቅድሚ ቀዳማይ መዓልትኹም ከፍልጠኩም ኣለዎ (Dimona)። ነዚ ስራሕ ከም ናጻ ሰራሕተኛ (zelfstandige) ክትሰርሑ ይሓተኩም ዶ? ናጻ ሰራሕተኛ ምስ ሓመመ ደሞዝ ኣይረክብን፡ ሓገዝ ስራሕ ኣልቦ እውን ኣይረክብን። መጀመርታ ምኽሪ ሕተቱ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።", // nieuw, nalezen
+  'be.c.permit.p': "ሰሉስ ትምህርቲ ደች ኣለኒ። ሰሌዳ ስራሐይ ነዚ ክግንዘቦ ይኽእል ድዩ?", // nieuw, nalezen
+  'be.c.permit.s': "ሓድሽ ስራሕ ትጅምሩ። ትምህርቲ ደች ኩሉ ሰሉስ ንግሆ እዩ፡ ሰሌዳ ስራሕኩም ግን ሰሉስ ስራሕ የርኢ። እንታይ ትገብሩ?", // nieuw, nalezen
+  'be.c.permit.o1': "ንሓላፊኹም ንገሩ፡ ሰሌዳ ክቕየር ሕተቱ።", // nieuw, nalezen
+  'be.c.permit.o2': "ስራሕ ይቕድም ስለ ዝኾነ ትምህርቲ ደች ምግዳፍ።", // nieuw, nalezen
+  'be.c.permit.o3': "ገለ ከይበልኩም ኩሉ ሰሉስ ኣብ ገዛ ጽናሑ።", // nieuw, nalezen
+  'be.c.permit.w': "ምውህሃድ እውን ግዴታ እዩ። ብዙሓት ኣስራሕቲ ኣቐዲሞም ምስ ዝፈልጡ ይሕግዙ። መራሒኹም ኣብቲ Agentschap እውን ትምህርትኹም ምስ ስራሕኩም ንምስምማዕ ክሕግዘኩም ይኽእል።", // nieuw, nalezen
+};
+
+export const fa: Gloss = {
+  'be.w.uitzendbureau': "دفتر کاریابی موقت (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "قرارداد برای مدت معین است یا نامعین؟", // nieuw, nalezen
+  'be.w.oproepkracht': "پاره‌وقت", // nieuw, nalezen
+  'be.w.proeftijd': "غرامت پیش‌آگهی (دستمزدت برای مدت پیش‌آگهی)", // nieuw, nalezen
+  'be.w.cao': "کمیتهٔ مشترک (قانون‌های بخش کاری‌ات را می‌گذارد)", // nieuw, nalezen
+  'be.s.contract.2': "قراردادم تمام می‌شود. C4 را کی می‌گیرم؟", // nieuw, nalezen
+  'be.s.contract.3': "زیر کدام کمیتهٔ مشترک هستم؟", // nieuw, nalezen
+  'be.w.uitzendkracht': "کارگر موقت (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "مشاور (فرد رابط تو در دفتر کاریابی موقت)", // nieuw, nalezen
+  'be.s.agency.1': "از طریق یک دفتر کاریابی موقت کار می‌کنم.", // nieuw, nalezen
+  'be.s.agency.2': "فردا دوباره قرارداد یک‌روزه می‌گیرم؟", // nieuw, nalezen
+  'be.w.zzper': "خویش‌فرما (برای خودت کار می‌کنی)", // nieuw, nalezen
+  'be.s.permit.2': "من کارمندم یا خویش‌فرما؟", // nieuw, nalezen
+  'be.s.permit.3': "پاره‌وقت کار می‌کنم.", // nieuw, nalezen
+  'be.c.findwork': "قراردادت را کتبی بگیر", // nieuw, nalezen
+  'be.c.findwork.b': "همیشه قرارداد کتبی و یک نسخه برای خودت بخواه. قرارداد مدت معین (bepaalde tijd) یا قرارداد پاره‌وقت باید وقتی شروع می‌کنی روی کاغذ باشد. پیش از امضا آن را بخوان، یا از کسی که به او اعتماد داری کمک بخواه. پیش از روز اول، کارفرما تو را به تأمین اجتماعی اعلام می‌کند: این Dimona است. دفتر کاریابی موقت (interimkantoor) حق ندارد برای پیدا کردن کار از تو پول بخواهد. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشاورهٔ حقوقی رایگان) بپرس.", // nieuw, nalezen
+  'be.c.findwork.p': "می‌شود اول قرارداد را بخوانم؟", // nieuw, nalezen
+  'be.c.findwork.s': "یک کارفرمای جدید می‌گوید: «همین الان اینجا را امضا کن. بعداً می‌توانی بخوانی‌اش.» چه کار می‌کنی؟", // nieuw, nalezen
+  'be.c.findwork.o1': "وقت بخواه تا بخوانی‌اش، یا یک نسخه بخواه.", // nieuw, nalezen
+  'be.c.findwork.o2': "زود امضا کن، تا کار را از دست ندهی.", // nieuw, nalezen
+  'be.c.findwork.o3': "امضا کن، و بعد یک نسخه بخواه.", // nieuw, nalezen
+  'be.c.findwork.w': "قراردادت می‌گوید چقدر درآمد داری و چه حق‌هایی داری. یک کارفرمای خوب به تو وقت می‌دهد که آن را بخوانی. می‌توانی دربارهٔ هر چیزی که نمی‌فهمی سؤال کنی.", // nieuw, nalezen
+  'be.c.contract': "دورهٔ آزمایشی نیست، ولی مدت پیش‌آگهی هست", // nieuw, nalezen
+  'be.c.contract.b': "دورهٔ آزمایشی قدیمی (proeftijd) دیگر وجود ندارد. از همان اول مدت پیش‌آگهی (opzegtermijn) داری. در ماه‌های اول کوتاه است. کارفرما می‌خواهد کار را تمام کند؟ پس کتبی به تو خبر می‌دهد، یا دستمزد آن مدت را می‌پردازد (opzegvergoeding). پاره‌وقت با ساعت‌های متغیر کار می‌کنی؟ برنامهٔ کاری‌ات (uurrooster) را از قبل می‌گیری: معمولاً ۷ روز کاری پیش‌تر. بخش کاری‌ات می‌تواند آن را کوتاه‌تر کند، ولی نه کمتر از ۳. قانون‌های بخش کاری‌ات را کمیتهٔ مشترک آن (paritair comité) می‌گذارد. کارت تمام می‌شود؟ C4 را بخواه: برای کمک‌هزینهٔ بیکاری لازمش داری. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشاورهٔ حقوقی رایگان) بپرس.", // nieuw, nalezen
+  'be.c.contract.p': "مدت پیش‌آگهی من چقدر است؟ و C4 را می‌گیرم؟", // nieuw, nalezen
+  'be.c.contract.s': "بعد از سه هفته رئیست می‌گوید: «جواب نمی‌دهد. از فردا نیا. هنوز در دورهٔ آزمایشی هستی.» کدام درست است؟", // nieuw, nalezen
+  'be.c.contract.o1': "دورهٔ آزمایشی نیست: پیش‌آگهی یا دستمزدت را می‌گیری.", // nieuw, nalezen
+  'be.c.contract.o2': "در هفته‌های اول رئیس می‌تواند فوراً تو را بیرون کند.", // nieuw, nalezen
+  'be.c.contract.o3': "چیزی نمی‌گیری، چون فقط سه هفته کار کرده‌ای.", // nieuw, nalezen
+  'be.c.contract.w': "دورهٔ آزمایشی قدیمی دیگر وجود ندارد. در ماه‌های اول هم مدت پیش‌آگهی، یا دستمزد آن مدت را می‌گیری. C4 را هم بخواه. مطمئن نیستی؟ از اتحادیهٔ کارگری بپرس.", // nieuw, nalezen
+  'be.c.agency': "دفتر کاریابی موقت کارفرمای توست", // nieuw, nalezen
+  'be.c.agency.b': "اگر از طریق دفتر کاریابی موقت (interimkantoor) کار می‌کنی، کارفرمای تو آن دفتر است، نه شرکتی که در آن کار می‌کنی. قرارداد و دستمزدت از دفتر می‌آید. قراردادت باید کتبی باشد، حداکثر ۲ روز کاری بعد از شروع کار. حق داری دست‌کم همان دستمزد کارگران شرکت را بگیری که همان کار را می‌کنند. ثبت‌نام رایگان است: دفتر کاریابی موقت هرگز حق ندارد از تو پول بخواهد. قراردادهای یک‌روزهٔ زیاد پشت سر هم (dagcontracten) فقط با دلیل درست مجاز است. فهرست ساعت‌های کارت را خودت نگه دار و آن‌ها را روی فیش حقوقی (loonbrief) چک کن. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشاورهٔ حقوقی رایگان) بپرس.", // nieuw, nalezen
+  'be.c.agency.p': "در فیش حقوقی‌ام ساعت‌ها کم است.", // nieuw, nalezen
+  'be.c.agency.s': "فیش حقوقی‌ات (loonbrief) ۳۲ ساعت نشان می‌دهد، ولی تو ۳۸ ساعت کار کرده‌ای. چه کار می‌کنی؟", // nieuw, nalezen
+  'be.c.agency.o1': "فهرست ساعت‌هایت را به دفتر نشان بده و بخواه درستش کنند.", // nieuw, nalezen
+  'be.c.agency.o2': "چیزی نگو، چون فقط ۶ ساعت است.", // nieuw, nalezen
+  'be.c.agency.o3': "از رئیس شرکتی که در آن کار می‌کنی بخواه آن ۶ ساعت را پرداخت کند.", // nieuw, nalezen
+  'be.c.agency.w': "دفتر کاریابی موقت به تو دستمزد می‌دهد، پس دفتر باید اشتباه را درست کند. فهرست خودت از تاریخ‌ها و ساعت‌ها کمک می‌کند. پرسیدن دربارهٔ آن حق توست.", // nieuw, nalezen
+  'be.c.permit': "کار و دورهٔ ادغام", // nieuw, nalezen
+  'be.c.permit.b': "باید دورهٔ هم‌پذیری (inburgering) را بگذرانی؟ در فلاندر، Agentschap Integratie en Inburgering همراهی‌ات می‌کند. به کارفرما بگو، و زود بپرس که آیا کلاس‌های هلندی با برنامهٔ کاری‌ات (uurrooster) جور می‌شود. مطمئن نیستی که اجازهٔ کار اینجا را داری؟ پیش از شروع بررسی کن، مثلاً در یک اتحادیهٔ کارگری. کارفرما باید پیش از روز اول تو را اعلام کند (Dimona). از تو می‌خواهند برای این کار به‌عنوان خویش‌فرما (zelfstandige) کار کنی؟ خویش‌فرما وقت بیماری دستمزد نمی‌گیرد، و کمک‌هزینهٔ بیکاری هم نمی‌گیرد. اول مشورت بگیر. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشاورهٔ حقوقی رایگان) بپرس.", // nieuw, nalezen
+  'be.c.permit.p': "سه‌شنبه کلاس هلندی دارم. برنامهٔ کاری‌ام می‌تواند این را در نظر بگیرد؟", // nieuw, nalezen
+  'be.c.permit.s': "کار تازه‌ای شروع می‌کنی. کلاس هلندی‌ات صبح‌های سه‌شنبه است، ولی در برنامهٔ کاری‌ات سه‌شنبه‌ها کار داری. چه کار می‌کنی؟", // nieuw, nalezen
+  'be.c.permit.o1': "به سرپرستت بگو و بخواه برنامه را عوض کنند.", // nieuw, nalezen
+  'be.c.permit.o2': "کلاس هلندی را نمی‌روی، چون کار مهم‌تر است.", // nieuw, nalezen
+  'be.c.permit.o3': "سه‌شنبه‌ها بدون اینکه چیزی بگویی خانه بمان.", // nieuw, nalezen
+  'be.c.permit.w': "هم‌پذیری هم یک وظیفه است. بسیاری از کارفرماها وقتی زود بدانند کمک می‌کنند. راهنمای تو در Agentschap هم می‌تواند کمک کند کلاس‌هایت با کارت جور شود.", // nieuw, nalezen
+};
+
+export const prs: Gloss = {
+  'be.w.uitzendbureau': "دفتر کار موقت (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "قرارداد برای مدت معین است یا نامعین؟", // nieuw, nalezen
+  'be.w.oproepkracht': "نیمه‌وقت", // nieuw, nalezen
+  'be.w.proeftijd': "جبران اطلاع قبلی (معاش شما برای مدت اطلاع)", // nieuw, nalezen
+  'be.w.cao': "کمیتهٔ مشترک (مقررات سکتور کاری شما را می‌گذارد)", // nieuw, nalezen
+  'be.s.contract.2': "قراردادم ختم می‌شود. C4 را چه وقت می‌گیرم؟", // nieuw, nalezen
+  'be.s.contract.3': "زیر کدام کمیتهٔ مشترک هستم؟", // nieuw, nalezen
+  'be.w.uitzendkracht': "کارگر موقت (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "مشاور (شخص رابط شما در دفتر کار موقت)", // nieuw, nalezen
+  'be.s.agency.1': "از طریق یک دفتر کار موقت کار می‌کنم.", // nieuw, nalezen
+  'be.s.agency.2': "فردا دوباره قرارداد یک‌روزه می‌گیرم؟", // nieuw, nalezen
+  'be.w.zzper': "کارگر آزاد (برای خود تان کار می‌کنید)", // nieuw, nalezen
+  'be.s.permit.2': "من کارمند هستم یا کارگر آزاد؟", // nieuw, nalezen
+  'be.s.permit.3': "نیمه‌وقت کار می‌کنم.", // nieuw, nalezen
+  'be.c.findwork': "قرارداد خود را بالای کاغذ بگیرید", // nieuw, nalezen
+  'be.c.findwork.b': "همیشه قرارداد نوشته‌شده و یک کاپی برای خود تان بخواهید. قرارداد مدت معین (bepaalde tijd) یا قرارداد نیمه‌وقت باید وقتی شروع می‌کنید روی کاغذ باشد. پیش از امضا آن را بخوانید، یا از کسی که به او اعتماد دارید کمک بخواهید. پیش از روز اول، کارفرما شما را به تأمین اجتماعی اطلاع می‌دهد: این Dimona است. دفتر کار موقت (interimkantoor) حق ندارد برای پیدا کردن کار از شما پول بخواهد. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen
+  'be.c.findwork.p': "اول قرارداد را خوانده می‌توانم؟", // nieuw, nalezen
+  'be.c.findwork.s': "یک کارفرمای نو می‌گوید: «همین حالا اینجا امضا کنید. بعداً آن را بخوانید.» چه می‌کنید؟", // nieuw, nalezen
+  'be.c.findwork.o1': "برای خواندن آن وقت بخواهید، یا یک کاپی بخواهید.", // nieuw, nalezen
+  'be.c.findwork.o2': "زود امضا کنید، تا کار را از دست ندهید.", // nieuw, nalezen
+  'be.c.findwork.o3': "امضا کنید، و بعد یک کاپی بخواهید.", // nieuw, nalezen
+  'be.c.findwork.w': "قرارداد شما می‌گوید که چقدر پول می‌گیرید و چه حقوق دارید. یک کارفرمای خوب به شما وقت می‌دهد که آن را بخوانید. دربارهٔ هر چیزی که نمی‌فهمید، می‌توانید سوال کنید.", // nieuw, nalezen
+  'be.c.contract': "دورهٔ آزمایشی نیست، اما مدت اطلاع قبلی هست", // nieuw, nalezen
+  'be.c.contract.b': "دورهٔ آزمایشی قدیم (proeftijd) دیگر وجود ندارد. از همان شروع مدت اطلاع قبلی (opzegtermijn) دارید. در ماه‌های اول کوتاه است. کارفرما می‌خواهد کار را ختم کند؟ پس به شکل نوشته به شما اطلاع می‌دهد، یا معاش همان مدت را می‌پردازد (opzegvergoeding). نیمه‌وقت با ساعت‌های متغیر کار می‌کنید؟ تقسیم اوقات کاری تان (uurrooster) را از قبل می‌گیرید: معمولاً ۷ روز کاری پیش‌تر. سکتور شما می‌تواند آن را کوتاه‌تر کند، اما نه کمتر از ۳. مقررات سکتور شما را کمیتهٔ مشترک آن (paritair comité) می‌گذارد. کار تان ختم می‌شود؟ C4 را بخواهید: برای کمک‌پول بیکاری به آن ضرورت دارید. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen
+  'be.c.contract.p': "مدت اطلاع قبلی من چقدر است؟ و C4 را می‌گیرم؟", // nieuw, nalezen
+  'be.c.contract.s': "بعد از سه هفته آمر تان می‌گوید: «نمی‌شود. از فردا نیایید. هنوز در دورهٔ آزمایشی هستید.» کدام درست است؟", // nieuw, nalezen
+  'be.c.contract.o1': "دورهٔ آزمایشی نیست: اطلاع قبلی یا معاش تان را می‌گیرید.", // nieuw, nalezen
+  'be.c.contract.o2': "در هفته‌های اول آمر می‌تواند فوراً شما را بیرون کند.", // nieuw, nalezen
+  'be.c.contract.o3': "چیزی نمی‌گیرید، چون تنها سه هفته کار کرده‌اید.", // nieuw, nalezen
+  'be.c.contract.w': "دورهٔ آزمایشی قدیم دیگر وجود ندارد. در ماه‌های اول هم مدت اطلاع قبلی، یا معاش همان مدت را می‌گیرید. C4 را هم بخواهید. مطمئن نیستید؟ از اتحادیهٔ کارگری بپرسید.", // nieuw, nalezen
+  'be.c.agency': "دفتر کار موقت کارفرمای شماست", // nieuw, nalezen
+  'be.c.agency.b': "اگر از طریق دفتر کار موقت (interimkantoor) کار می‌کنید، کارفرمای شما همان دفتر است، نه شرکتی که در آن کار می‌کنید. قرارداد و معاش تان از دفتر می‌آید. قرارداد تان باید نوشته‌شده باشد، حداکثر ۲ روز کاری بعد از شروع کار. حق دارید دست‌کم همان معاش کارگران شرکت را بگیرید که همان کار را می‌کنند. ثبت‌نام رایگان است: دفتر کار موقت هرگز حق ندارد از شما پول بخواهد. قراردادهای یک‌روزهٔ زیاد پشت سر هم (dagcontracten) تنها با دلیل درست اجازه است. فهرست ساعت‌های کار تان را خود تان نگه دارید و آن‌ها را روی ورق معاش (loonbrief) چک کنید. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen
+  'be.c.agency.p': "در ورق معاشم ساعت‌ها کم است.", // nieuw, nalezen
+  'be.c.agency.s': "ورق معاش تان (loonbrief) ۳۲ ساعت نشان می‌دهد، اما شما ۳۸ ساعت کار کرده‌اید. چه می‌کنید؟", // nieuw, nalezen
+  'be.c.agency.o1': "فهرست ساعت‌های تان را به دفتر نشان بدهید و بخواهید درست کنند.", // nieuw, nalezen
+  'be.c.agency.o2': "چیزی نگویید، چون فقط ۶ ساعت است.", // nieuw, nalezen
+  'be.c.agency.o3': "از آمر کمپنی‌ای که در آن کار می‌کنید بخواهید که آن ۶ ساعت را بپردازد.", // nieuw, nalezen
+  'be.c.agency.w': "دفتر کار موقت به شما معاش می‌دهد، پس دفتر باید اشتباه را درست کند. فهرست خود تان از تاریخ‌ها و ساعت‌ها کمک می‌کند. پرسیدن در این باره حق شماست.", // nieuw, nalezen
+  'be.c.permit': "کار و دورهٔ ادغام", // nieuw, nalezen
+  'be.c.permit.b': "باید دورهٔ ادغام (inburgering) را بگذرانید؟ در فلاندر، Agentschap Integratie en Inburgering شما را همراهی می‌کند. به کارفرما بگویید، و زود بپرسید که آیا صنف‌های هالندی با تقسیم اوقات کاری تان (uurrooster) جور می‌آید. مطمئن نیستید که اجازهٔ کار اینجا را دارید؟ پیش از شروع بررسی کنید، مثلاً در یک اتحادیهٔ کارگری. کارفرما باید پیش از روز اول شما را اطلاع بدهد (Dimona). از شما می‌خواهند برای این کار به حیث کارکن مستقل (zelfstandige) کار کنید؟ کارکن مستقل وقت مریضی معاش نمی‌گیرد، و کمک‌پول بیکاری هم نمی‌گیرد. اول مشوره بگیرید. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen
+  'be.c.permit.p': "سه‌شنبه صنف هالندی دارم. تقسیم اوقات کاری‌ام می‌تواند این را در نظر بگیرد؟", // nieuw, nalezen
+  'be.c.permit.s': "کار نو شروع می‌کنید. صنف هالندی تان صبح‌های سه‌شنبه است، اما در تقسیم اوقات کاری تان سه‌شنبه‌ها کار دارید. چه می‌کنید؟", // nieuw, nalezen
+  'be.c.permit.o1': "به سرپرست تان بگویید و بخواهید تقسیم اوقات را تغییر بدهند.", // nieuw, nalezen
+  'be.c.permit.o2': "صنف هالندی را نمی‌روید، چون کار مهم‌تر است.", // nieuw, nalezen
+  'be.c.permit.o3': "سه‌شنبه‌ها بدون اینکه چیزی بگویید در خانه بمانید.", // nieuw, nalezen
+  'be.c.permit.w': "ادغام هم یک وظیفه است. بسیاری از کارفرماها وقتی زود بدانند کمک می‌کنند. رهنمای شما در Agentschap هم می‌تواند کمک کند تا صنف‌های تان با کار تان جور شود.", // nieuw, nalezen
+};
+
+export const uk: Gloss = {
+  'be.w.uitzendbureau': "агентство тимчасової роботи (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "Договір на певний строк чи безстроковий?", // nieuw, nalezen
+  'be.w.oproepkracht': "неповний робочий час", // nieuw, nalezen
+  'be.w.proeftijd': "компенсація за строк попередження (твоя зарплата за цей час)", // nieuw, nalezen
+  'be.w.cao': "паритетна комісія (вона встановлює правила твоєї галузі)", // nieuw, nalezen
+  'be.s.contract.2': "Мій договір закінчується. Коли я отримаю свій C4?", // nieuw, nalezen
+  'be.s.contract.3': "До якої паритетної комісії я належу?", // nieuw, nalezen
+  'be.w.uitzendkracht': "тимчасовий працівник (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "консультант (твоя контактна особа в агентстві)", // nieuw, nalezen
+  'be.s.agency.1': "Я працюю через агентство тимчасової роботи.", // nieuw, nalezen
+  'be.s.agency.2': "Я завтра знову отримаю одноденний договір?", // nieuw, nalezen
+  'be.w.zzper': "самозайнятий (ти працюєш на себе)", // nieuw, nalezen
+  'be.s.permit.2': "Я працюю за наймом чи на себе?", // nieuw, nalezen
+  'be.s.permit.3': "Я працюю неповний робочий день.", // nieuw, nalezen
+  'be.c.findwork': "Контракт — на папері", // nieuw, nalezen
+  'be.c.findwork.b': "Завжди проси письмовий договір і копію для себе. Договір на певний строк (bepaalde tijd) або на неповний робочий час має бути на папері, коли ти починаєш. Прочитай його, перш ніж підписати, або попроси допомоги в людини, якій довіряєш. Перед першим днем роботодавець повідомляє про тебе соціальне страхування: це Dimona. Агентство тимчасової роботи (interimkantoor) не може просити в тебе гроші за пошук роботи. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+  'be.c.findwork.p': "Можна мені спершу прочитати контракт?", // nieuw, nalezen
+  'be.c.findwork.s': "Новий роботодавець каже: «Підпиши тут зараз. Прочитаєш потім». Що ти зробиш?", // nieuw, nalezen
+  'be.c.findwork.o1': "Попросиш час, щоб прочитати, або копію.", // nieuw, nalezen
+  'be.c.findwork.o2': "Швидко підпишеш, щоб не втратити роботу.", // nieuw, nalezen
+  'be.c.findwork.o3': "Підпишеш, а потім попросиш копію.", // nieuw, nalezen
+  'be.c.findwork.w': "У контракті написано, скільки ти заробляєш і які в тебе права. Добрий роботодавець дасть тобі час прочитати. Ти можеш питати про все, чого не розумієш.", // nieuw, nalezen
+  'be.c.contract': "Випробувального строку немає, але є строк попередження", // nieuw, nalezen
+  'be.c.contract.b': "Старого випробувального строку (proeftijd) більше немає. Від самого початку в тебе є строк попередження (opzegtermijn). У перші місяці він короткий. Роботодавець хоче припинити роботу? Тоді він попереджає тебе письмово або платить тобі зарплату за цей час (opzegvergoeding). Працюєш неповний день зі змінними годинами? Графік роботи (uurrooster) ти отримуєш заздалегідь: зазвичай за 7 робочих днів. Твоя галузь може скоротити цей строк, але не менше ніж до 3. Правила твоєї галузі встановлює її паритетна комісія (paritair comité). Твоя робота закінчується? Попроси свій C4: він потрібен для допомоги по безробіттю. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+  'be.c.contract.p': "Який у мене строк попередження? І чи отримаю я свій C4?", // nieuw, nalezen
+  'be.c.contract.s': "Через три тижні керівник каже: «Не виходить. Завтра можеш не приходити. Ти ще на випробувальному строку». Що правда?", // nieuw, nalezen
+  'be.c.contract.o1': "Випробувального строку немає: ти отримуєш попередження або зарплату.", // nieuw, nalezen
+  'be.c.contract.o2': "У перші тижні керівник може звільнити тебе одразу.", // nieuw, nalezen
+  'be.c.contract.o3': "Ти нічого не отримуєш, бо працюєш лише три тижні.", // nieuw, nalezen
+  'be.c.contract.w': "Старого випробувального строку більше немає. І в перші місяці ти отримуєш строк попередження або зарплату за цей час. Попроси також свій C4. Не знаєш точно? Запитай профспілку.", // nieuw, nalezen
+  'be.c.agency': "Агентство — твій роботодавець", // nieuw, nalezen
+  'be.c.agency.b': "Якщо ти працюєш через агентство тимчасової роботи (interimkantoor), твій роботодавець — агентство, а не фірма, де ти працюєш. Договір і зарплата — від агентства. Твій договір має бути на папері не пізніше ніж через 2 робочі дні після початку. Ти маєш право щонайменше на таку саму зарплату, як працівники фірми, що виконують ту саму роботу. Реєстрація безкоштовна: агентство ніколи не може просити в тебе гроші. Багато одноденних договорів (dagcontracten) підряд дозволені лише з поважної причини. Записуй свої відпрацьовані години й перевіряй їх у розрахунковому листі (loonbrief). Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+  'be.c.agency.p': "У моєму розрахунковому листі замало годин.", // nieuw, nalezen
+  'be.c.agency.s': "У розрахунковому листі (loonbrief) 32 години, а ти працюєш 38. Що ти зробиш?", // nieuw, nalezen
+  'be.c.agency.o1': "Покажи агентству свій список годин і попроси виправити.", // nieuw, nalezen
+  'be.c.agency.o2': "Нічого не скажеш, бо це лише 6 годин.", // nieuw, nalezen
+  'be.c.agency.o3': "Попросиш начальника у фірмі, де працюєш, оплатити ці 6 годин.", // nieuw, nalezen
+  'be.c.agency.w': "Тобі платить агентство, тож помилку має виправити агентство. Твій власний список дат і годин допомагає. Запитати про це — твоє право.", // nieuw, nalezen
+  'be.c.permit': "Робота й інтеграція", // nieuw, nalezen
+  'be.c.permit.b': "Тобі треба проходити курс інтеграції (inburgering)? У Фландрії тебе супроводжує Agentschap Integratie en Inburgering. Скажи роботодавцю і заздалегідь запитай, чи можна поєднати уроки нідерландської з твоїм графіком (uurrooster). Не знаєш точно, чи можна тобі тут працювати? Перевір це до початку, наприклад у профспілці. Роботодавець має зареєструвати тебе до першого дня (Dimona). Тобі пропонують працювати на цій роботі як самозайнятий (zelfstandige)? Самозайнятий не отримує зарплату, коли хворіє, і не отримує допомогу по безробіттю. Спочатку порадься. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+  'be.c.permit.p': "У вівторок у мене урок нідерландської. Чи можна врахувати це в моєму графіку?", // nieuw, nalezen
+  'be.c.permit.s': "Ти починаєш нову роботу. Урок нідерландської у вівторок зранку, але за графіком ти працюєш у вівторки. Що ти зробиш?", // nieuw, nalezen
+  'be.c.permit.o1': "Скажи керівнику й попроси змінити графік.", // nieuw, nalezen
+  'be.c.permit.o2': "Пропусти урок нідерландської, бо робота важливіша.", // nieuw, nalezen
+  'be.c.permit.o3': "Залишатимешся вдома по вівторках і нічого не скажеш.", // nieuw, nalezen
+  'be.c.permit.w': "Інтеграція — теж обов’язок. Багато роботодавців допомагають, коли дізнаються вчасно. Твій супровідник в Agentschap теж може допомогти поєднати уроки з роботою.", // nieuw, nalezen
+};
+
+export const tr: Gloss = {
+  'be.w.uitzendbureau': "geçici iş ajansı (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "Sözleşme belirli süreli mi, belirsiz süreli mi?", // nieuw, nalezen
+  'be.w.oproepkracht': "yarı zamanlı", // nieuw, nalezen
+  'be.w.proeftijd': "ihbar tazminatı (ihbar süresi için ücretin)", // nieuw, nalezen
+  'be.w.cao': "ortak komite (sektörünün kurallarını belirler)", // nieuw, nalezen
+  'be.s.contract.2': "Sözleşmem bitiyor. C4 belgemi ne zaman alırım?", // nieuw, nalezen
+  'be.s.contract.3': "Hangi ortak komiteye bağlıyım?", // nieuw, nalezen
+  'be.w.uitzendkracht': "geçici işçi (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "danışman (ajanstaki irtibat kişin)", // nieuw, nalezen
+  'be.s.agency.1': "Bir geçici iş ajansı üzerinden çalışıyorum.", // nieuw, nalezen
+  'be.s.agency.2': "Yarın yine günlük sözleşme (bir günlük sözleşme) alacak mıyım?", // nieuw, nalezen
+  'be.w.zzper': "serbest çalışan (kendi hesabına çalışırsın)", // nieuw, nalezen
+  'be.s.permit.2': "Ben işçi miyim, serbest çalışan mı?", // nieuw, nalezen
+  'be.s.permit.3': "Yarı zamanlı çalışıyorum.", // nieuw, nalezen
+  'be.c.findwork': "Sözleşmeni yazılı al", // nieuw, nalezen
+  'be.c.findwork.b': "Her zaman yazılı bir sözleşme ve kendin için bir kopya iste. Belirli süreli (bepaalde tijd) ya da yarı zamanlı bir sözleşme, işe başladığında kâğıt üzerinde olmalı. İmzalamadan önce oku ya da güvendiğin birinden yardım iste. İlk gününden önce işverenin seni sosyal güvenliğe bildirir: buna Dimona denir. Geçici iş ajansı (interimkantoor) sana iş bulmak için senden para isteyemez. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
+  'be.c.findwork.p': "Sözleşmeyi önce okuyabilir miyim?", // nieuw, nalezen
+  'be.c.findwork.s': "Yeni bir işveren diyor ki: “Hemen buraya imza at. Sonra okursun.” Ne yaparsın?", // nieuw, nalezen
+  'be.c.findwork.o1': "Okumak için zaman veya bir kopya istersin.", // nieuw, nalezen
+  'be.c.findwork.o2': "İşi kaybetmemek için hemen imzalarsın.", // nieuw, nalezen
+  'be.c.findwork.o3': "İmzalar, sonra bir kopya istersin.", // nieuw, nalezen
+  'be.c.findwork.w': "Sözleşmen ne kazandığını ve hakların neler olduğunu söyler. İyi bir işveren sana okuman için zaman verir. Anlamadığın her şeyi sorabilirsin.", // nieuw, nalezen
+  'be.c.contract': "Deneme süresi yok, ama ihbar süresi var", // nieuw, nalezen
+  'be.c.contract.b': "Eski deneme süresi (proeftijd) artık yok. En baştan itibaren bir ihbar süren (opzegtermijn) var. İlk aylarda bu süre kısadır. İşveren işi bitirmek mi istiyor? O zaman sana yazılı ihbar verir ya da o süre için ücretini öder (opzegvergoeding). Değişen saatlerle yarı zamanlı mı çalışıyorsun? Çalışma planını (uurrooster) önceden alırsın: genellikle 7 iş günü önce. Sektörün bunu kısaltabilir, ama 3 günden az olamaz. Sektörünün kurallarını ortak komitesi (paritair comité) belirler. İşin bitiyor mu? C4 belgeni iste: işsizlik ödeneği için ona ihtiyacın var. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
+  'be.c.contract.p': "İhbar sürem ne kadar? C4 belgemi de alacak mıyım?", // nieuw, nalezen
+  'be.c.contract.s': "Üç hafta sonra patronun diyor ki: \"Olmuyor. Yarın bırak. Hâlâ deneme süresindesin.\" Hangisi doğru?", // nieuw, nalezen
+  'be.c.contract.o1': "Deneme süresi yok: ihbar süresi ya da ücretini alırsın.", // nieuw, nalezen
+  'be.c.contract.o2': "İlk haftalarda patron seni hemen çıkarabilir.", // nieuw, nalezen
+  'be.c.contract.o3': "Hiçbir şey alamazsın, çünkü sadece üç hafta çalıştın.", // nieuw, nalezen
+  'be.c.contract.w': "Eski deneme süresi artık yok. İlk aylarda da ihbar süresi ya da o süre için ücretini alırsın. C4 belgeni de iste. Emin değil misin? Sendikaya sor.", // nieuw, nalezen
+  'be.c.agency': "Geçici iş ajansı senin işverenindir", // nieuw, nalezen
+  'be.c.agency.b': "Bir geçici iş ajansı (interimkantoor) üzerinden çalışıyorsan, işverenin çalıştığın şirket değil, ajanstır. Sözleşmen ve ücretin ajanstan gelir. Sözleşmen en geç işe başladıktan 2 iş günü sonra yazılı olmalı. Aynı işi yapan şirket çalışanlarıyla en az aynı ücreti alma hakkın var. Kayıt ücretsizdir: geçici iş ajansı senden asla para isteyemez. Art arda çok sayıda günlük sözleşme (dagcontracten) ancak geçerli bir nedenle yapılabilir. Çalıştığın saatleri kendin not et ve maaş bordronda (loonbrief) kontrol et. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
+  'be.c.agency.p': "Maaş bordromda saatler eksik.", // nieuw, nalezen
+  'be.c.agency.s': "Maaş bordronda (loonbrief) 32 saat yazıyor, ama sen 38 saat çalıştın. Ne yaparsın?", // nieuw, nalezen
+  'be.c.agency.o1': "Kendi saat listeni ajansa göster ve düzeltmelerini iste.", // nieuw, nalezen
+  'be.c.agency.o2': "Sadece 6 saat olduğu için hiçbir şey söylemezsin.", // nieuw, nalezen
+  'be.c.agency.o3': "Çalıştığın şirketteki patrondan bu 6 saati ödemesini istersin.", // nieuw, nalezen
+  'be.c.agency.w': "Sana ücretini ajans öder, bu yüzden hatayı ajans düzeltmeli. Kendi tarih ve saat listen yardımcı olur. Bunu sormak senin hakkın.", // nieuw, nalezen
+  'be.c.permit': "İş ve uyum", // nieuw, nalezen
+  'be.c.permit.b': "Uyum programına (inburgering) katılman mı gerekiyor? Flandra’da sana Agentschap Integratie en Inburgering eşlik eder. İşverenine söyle ve Felemenkçe derslerinin çalışma planına (uurrooster) uyup uymayacağını erkenden sor. Burada çalışabileceğinden emin değil misin? Başlamadan önce kontrol et, örneğin bir sendikada. İşverenin seni ilk gününden önce bildirmeli (Dimona). Bu iş için serbest çalışan (zelfstandige) olarak çalışmanı mı istiyorlar? Serbest çalışan hastalanınca ücret almaz, işsizlik ödeneği de almaz. Önce danış. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
+  'be.c.permit.p': "Salı günü Felemenkçe dersim var. Çalışma planım bunu dikkate alabilir mi?", // nieuw, nalezen
+  'be.c.permit.s': "Yeni bir işe başlıyorsun. Felemenkçe dersin salı sabahları, ama çalışma planında salı günleri çalışıyorsun. Ne yaparsın?", // nieuw, nalezen
+  'be.c.permit.o1': "Amirine söyle ve planın değişmesini iste.", // nieuw, nalezen
+  'be.c.permit.o2': "Felemenkçe dersini atla, çünkü iş önce gelir.", // nieuw, nalezen
+  'be.c.permit.o3': "Hiçbir şey söylemeden salı günleri evde kalırsın.", // nieuw, nalezen
+  'be.c.permit.w': "Uyum programı da bir görevdir. Birçok işveren erkenden bilirse yardım eder. Agentschap’taki rehberin de derslerini işine uydurmana yardım edebilir.", // nieuw, nalezen
+};
+
+export const pl: Gloss = {
+  'be.w.uitzendbureau': "agencja pracy tymczasowej (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "Czy umowa jest na czas określony, czy nieokreślony?", // nieuw, nalezen
+  'be.w.oproepkracht': "w niepełnym wymiarze", // nieuw, nalezen
+  'be.w.proeftijd': "odszkodowanie za okres wypowiedzenia (twoja pensja za ten czas)", // nieuw, nalezen
+  'be.w.cao': "komisja parytetowa (ustala zasady w twojej branży)", // nieuw, nalezen
+  'be.s.contract.2': "Moja umowa się kończy. Kiedy dostanę swój C4?", // nieuw, nalezen
+  'be.s.contract.3': "Pod którą komisję parytetową podlegam?", // nieuw, nalezen
+  'be.w.uitzendkracht': "pracownik tymczasowy (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "konsultant (twoja osoba kontaktowa w agencji)", // nieuw, nalezen
+  'be.s.agency.1': "Pracuję przez agencję pracy tymczasowej.", // nieuw, nalezen
+  'be.s.agency.2': "Czy jutro znowu dostanę umowę na jeden dzień?", // nieuw, nalezen
+  'be.w.zzper': "samozatrudniony (pracujesz na własny rachunek)", // nieuw, nalezen
+  'be.s.permit.2': "Pracuję na etacie czy na własny rachunek?", // nieuw, nalezen
+  'be.s.permit.3': "Pracuję w niepełnym wymiarze.", // nieuw, nalezen
+  'be.c.findwork': "Weź umowę na piśmie", // nieuw, nalezen
+  'be.c.findwork.b': "Zawsze proś o umowę na piśmie i kopię dla siebie. Umowa na czas określony (bepaalde tijd) albo w niepełnym wymiarze musi być na papierze, gdy zaczynasz. Przeczytaj ją przed podpisaniem albo poproś o pomoc kogoś, komu ufasz. Przed twoim pierwszym dniem pracodawca zgłasza cię do ubezpieczeń społecznych: to Dimona. Agencja pracy tymczasowej (interimkantoor) nie może żądać od ciebie pieniędzy za znalezienie pracy. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen
+  'be.c.findwork.p': "Mogę najpierw przeczytać umowę?", // nieuw, nalezen
+  'be.c.findwork.s': "Nowy pracodawca mówi: „Podpisz tu teraz. Przeczytasz później.” Co robisz?", // nieuw, nalezen
+  'be.c.findwork.o1': "Prosisz o czas na przeczytanie albo o kopię.", // nieuw, nalezen
+  'be.c.findwork.o2': "Szybko podpisujesz, żeby nie stracić pracy.", // nieuw, nalezen
+  'be.c.findwork.o3': "Podpisujesz, a potem prosisz o kopię.", // nieuw, nalezen
+  'be.c.findwork.w': "W umowie jest napisane, ile zarabiasz i jakie masz prawa. Dobry pracodawca daje ci czas na przeczytanie. Możesz pytać o wszystko, czego nie rozumiesz.", // nieuw, nalezen
+  'be.c.contract': "Nie ma okresu próbnego, ale jest okres wypowiedzenia", // nieuw, nalezen
+  'be.c.contract.b': "Dawnego okresu próbnego (proeftijd) już nie ma. Od początku masz okres wypowiedzenia (opzegtermijn). W pierwszych miesiącach jest krótki. Pracodawca chce zakończyć współpracę? Wtedy daje ci wypowiedzenie na piśmie albo płaci ci pensję za ten czas (opzegvergoeding). Pracujesz w niepełnym wymiarze w zmiennych godzinach? Grafik (uurrooster) dostajesz z wyprzedzeniem: zwykle 7 dni roboczych wcześniej. Twoja branża może to skrócić, ale nie poniżej 3. Zasady twojej branży ustala jej komisja parytetowa (paritair comité). Twoja praca się kończy? Poproś o swój C4: potrzebujesz go do zasiłku dla bezrobotnych. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen
+  'be.c.contract.p': "Jak długi jest mój okres wypowiedzenia? I czy dostanę swój C4?", // nieuw, nalezen
+  'be.c.contract.s': "Po trzech tygodniach szef mówi: „To nie działa. Jutro już nie przychodź. Jesteś jeszcze na okresie próbnym”. Co jest prawdą?", // nieuw, nalezen
+  'be.c.contract.o1': "Nie ma okresu próbnego: dostajesz wypowiedzenie albo pensję.", // nieuw, nalezen
+  'be.c.contract.o2': "W pierwszych tygodniach szef może cię od razu zwolnić.", // nieuw, nalezen
+  'be.c.contract.o3': "Nic nie dostajesz, bo pracujesz dopiero trzy tygodnie.", // nieuw, nalezen
+  'be.c.contract.w': "Dawnego okresu próbnego już nie ma. Także w pierwszych miesiącach dostajesz okres wypowiedzenia albo pensję za ten czas. Poproś też o swój C4. Nie wiesz na pewno? Zapytaj związek zawodowy.", // nieuw, nalezen
+  'be.c.agency': "Agencja jest twoim pracodawcą", // nieuw, nalezen
+  'be.c.agency.b': "Jeśli pracujesz przez agencję pracy tymczasowej (interimkantoor), twoim pracodawcą jest agencja, a nie firma, w której pracujesz. Umowa i pensja są od agencji. Umowa musi być na piśmie najpóźniej 2 dni robocze po rozpoczęciu pracy. Masz prawo co najmniej do takiej samej pensji jak pracownicy firmy, którzy wykonują tę samą pracę. Rejestracja jest bezpłatna: agencja nigdy nie może żądać od ciebie pieniędzy. Wiele umów jednodniowych (dagcontracten) z rzędu wolno dawać tylko z ważnego powodu. Zapisuj swoje przepracowane godziny i sprawdzaj je na pasku wynagrodzenia (loonbrief). To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen
+  'be.c.agency.p': "Na moim pasku wypłaty jest za mało godzin.", // nieuw, nalezen
+  'be.c.agency.s': "Na pasku wynagrodzenia (loonbrief) jest 32 godziny, a pracujesz 38. Co robisz?", // nieuw, nalezen
+  'be.c.agency.o1': "Pokaż agencji swoją listę godzin i poproś o poprawkę.", // nieuw, nalezen
+  'be.c.agency.o2': "Nic nie mówisz, bo to tylko 6 godzin.", // nieuw, nalezen
+  'be.c.agency.o3': "Prosisz szefa w firmie, w której pracujesz, żeby zapłacił za te 6 godzin.", // nieuw, nalezen
+  'be.c.agency.w': "Płaci ci agencja, więc to agencja musi poprawić błąd. Twoja własna lista dat i godzin pomaga. Pytanie o to jest twoim prawem.", // nieuw, nalezen
+  'be.c.permit': "Praca i integracja", // nieuw, nalezen
+  'be.c.permit.b': "Musisz przejść kurs integracyjny (inburgering)? We Flandrii prowadzi cię Agentschap Integratie en Inburgering. Powiedz pracodawcy i zapytaj wcześnie, czy lekcje niderlandzkiego da się pogodzić z twoim grafikiem (uurrooster). Nie wiesz na pewno, czy możesz tu pracować? Sprawdź to przed rozpoczęciem, na przykład w związku zawodowym. Pracodawca musi cię zgłosić przed pierwszym dniem (Dimona). Proszą cię o pracę na samozatrudnieniu (zelfstandige)? Samozatrudniony nie dostaje pensji, gdy choruje, ani zasiłku dla bezrobotnych. Najpierw poproś o radę. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen
+  'be.c.permit.p': "We wtorek mam lekcję niderlandzkiego. Czy mój grafik może to uwzględnić?", // nieuw, nalezen
+  'be.c.permit.s': "Zaczynasz nową pracę. Lekcja niderlandzkiego jest we wtorki rano, ale w grafiku pracujesz we wtorki. Co robisz?", // nieuw, nalezen
+  'be.c.permit.o1': "Powiedz przełożonemu i poproś o zmianę grafiku.", // nieuw, nalezen
+  'be.c.permit.o2': "Opuść lekcję niderlandzkiego, bo praca jest najważniejsza.", // nieuw, nalezen
+  'be.c.permit.o3': "We wtorki zostajesz w domu i nic nie mówisz.", // nieuw, nalezen
+  'be.c.permit.w': "Integracja to też obowiązek. Wielu pracodawców pomaga, gdy wie o tym wcześnie. Twój opiekun w Agentschap też może pomóc pogodzić lekcje z pracą.", // nieuw, nalezen
+};
+
+export const ro: Gloss = {
+  'be.w.uitzendbureau': "agenția de muncă temporară (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "Contractul este pe perioadă determinată sau nedeterminată?", // nieuw, nalezen
+  'be.w.oproepkracht': "cu normă parțială", // nieuw, nalezen
+  'be.w.proeftijd': "indemnizația de preaviz (salariul tău pentru perioada de preaviz)", // nieuw, nalezen
+  'be.w.cao': "comisia paritară (stabilește regulile sectorului tău)", // nieuw, nalezen
+  'be.s.contract.2': "Contractul meu se termină. Când primesc formularul C4?", // nieuw, nalezen
+  'be.s.contract.3': "Sub ce comisie paritară sunt?", // nieuw, nalezen
+  'be.w.uitzendkracht': "lucrătorul temporar (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "consultantul (persoana ta de contact la agenție)", // nieuw, nalezen
+  'be.s.agency.1': "Lucrez printr-o agenție de muncă temporară.", // nieuw, nalezen
+  'be.s.agency.2': "Primesc mâine iar un contract de o zi?", // nieuw, nalezen
+  'be.w.zzper': "lucrătorul independent (lucrezi pe cont propriu)", // nieuw, nalezen
+  'be.s.permit.2': "Lucrez cu contract de muncă sau pe cont propriu?", // nieuw, nalezen
+  'be.s.permit.3': "Lucrez cu normă parțială.", // nieuw, nalezen
+  'be.c.findwork': "Cere contractul pe hârtie", // nieuw, nalezen
+  'be.c.findwork.b': "Cere mereu un contract scris și o copie pentru tine. Un contract pe perioadă determinată (bepaalde tijd) sau cu normă parțială trebuie să fie pe hârtie când începi. Citește-l înainte să semnezi sau cere ajutor de la cineva în care ai încredere. Înainte de prima zi, angajatorul te declară la asigurările sociale: asta e Dimona. O agenție de muncă temporară (interimkantoor) nu are voie să-ți ceară bani ca să-ți găsească un loc de muncă. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
+  'be.c.findwork.p': "Pot să citesc întâi contractul?", // nieuw, nalezen
+  'be.c.findwork.s': "Un angajator nou spune: „Semnează aici acum. Îl poți citi mai târziu.” Ce faci?", // nieuw, nalezen
+  'be.c.findwork.o1': "Ceri timp să-l citești sau o copie.", // nieuw, nalezen
+  'be.c.findwork.o2': "Semnezi repede, ca să nu pierzi postul.", // nieuw, nalezen
+  'be.c.findwork.o3': "Semnezi și apoi ceri o copie.", // nieuw, nalezen
+  'be.c.findwork.w': "Contractul spune cât câștigi și ce drepturi ai. Un angajator bun îți dă timp să-l citești. Poți întreba despre tot ce nu înțelegi.", // nieuw, nalezen
+  'be.c.contract': "Nu există perioadă de probă, dar există preaviz", // nieuw, nalezen
+  'be.c.contract.b': "Vechea perioadă de probă (proeftijd) nu mai există. De la început ai un termen de preaviz (opzegtermijn). În primele luni e scurt. Angajatorul vrea să încheie colaborarea? Atunci îți dă preaviz în scris sau îți plătește salariul pentru acea perioadă (opzegvergoeding). Lucrezi cu normă parțială, cu ore care se schimbă? Îți primești programul (uurrooster) din timp: de obicei cu 7 zile lucrătoare înainte. Sectorul tău poate scurta termenul, dar nu sub 3. Regulile sectorului tău vin de la comisia lui paritară (paritair comité). Ți se termină munca? Cere formularul C4: ai nevoie de el pentru indemnizația de șomaj. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
+  'be.c.contract.p': "Cât de lung e preavizul meu? Și primesc formularul C4?", // nieuw, nalezen
+  'be.c.contract.s': "După trei săptămâni, șeful spune: „Nu merge. De mâine nu mai veni. Ești încă în perioada de probă.” Ce e adevărat?", // nieuw, nalezen
+  'be.c.contract.o1': "Nu există perioadă de probă: primești preaviz sau salariul.", // nieuw, nalezen
+  'be.c.contract.o2': "În primele săptămâni, șeful te poate opri imediat.", // nieuw, nalezen
+  'be.c.contract.o3': "Nu primești nimic, pentru că lucrezi abia de trei săptămâni.", // nieuw, nalezen
+  'be.c.contract.w': "Vechea perioadă de probă nu mai există. Și în primele luni primești preaviz sau salariul pentru acea perioadă. Cere și formularul C4. Nu știi sigur? Întreabă sindicatul.", // nieuw, nalezen
+  'be.c.agency': "Agenția este angajatorul tău", // nieuw, nalezen
+  'be.c.agency.b': "Dacă lucrezi printr-o agenție de muncă temporară (interimkantoor), angajatorul tău e agenția, nu firma unde lucrezi. Contractul și salariul vin de la agenție. Contractul trebuie să fie în scris, cel târziu la 2 zile lucrătoare după ce începi. Ai dreptul la cel puțin același salariu ca angajații firmei care fac aceeași muncă. Înscrierea e gratuită: agenția nu are voie niciodată să-ți ceară bani. Multe contracte de o zi (dagcontracten) la rând sunt permise doar cu un motiv întemeiat. Notează-ți orele lucrate și verifică-le pe fluturașul de salariu (loonbrief). Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
+  'be.c.agency.p': "Pe fluturașul meu sunt prea puține ore.", // nieuw, nalezen
+  'be.c.agency.s': "Pe fluturașul de salariu (loonbrief) scrie 32 de ore, dar ai lucrat 38. Ce faci?", // nieuw, nalezen
+  'be.c.agency.o1': "Arată-i agenției lista ta de ore și cere să corecteze.", // nieuw, nalezen
+  'be.c.agency.o2': "Nu spui nimic, pentru că sunt doar 6 ore.", // nieuw, nalezen
+  'be.c.agency.o3': "Îi ceri șefului de la firma unde lucrezi să-ți plătească cele 6 ore.", // nieuw, nalezen
+  'be.c.agency.w': "Agenția te plătește, deci agenția trebuie să corecteze greșeala. Lista ta cu date și ore ajută. E dreptul tău să întrebi.", // nieuw, nalezen
+  'be.c.permit': "Munca și integrarea", // nieuw, nalezen
+  'be.c.permit.b': "Trebuie să urmezi programul de integrare (inburgering)? În Flandra te îndrumă Agentschap Integratie en Inburgering. Spune-i angajatorului și întreabă din timp dacă orele de neerlandeză se potrivesc cu programul tău de lucru (uurrooster). Nu știi sigur dacă ai voie să lucrezi aici? Verifică înainte să începi, de exemplu la un sindicat. Angajatorul trebuie să te declare înainte de prima zi (Dimona). Ți se cere să lucrezi ca independent (zelfstandige) pentru acest job? Un independent nu primește salariu când e bolnav și nici indemnizație de șomaj. Cere mai întâi un sfat. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
+  'be.c.permit.p': "Marți am oră de neerlandeză. Poate programul meu să țină cont de asta?", // nieuw, nalezen
+  'be.c.permit.s': "Începi un job nou. Ora de neerlandeză e marți dimineața, dar în programul de lucru ești trecut marțea. Ce faci?", // nieuw, nalezen
+  'be.c.permit.o1': "Spune-i șefului și cere să schimbe programul.", // nieuw, nalezen
+  'be.c.permit.o2': "Sari peste ora de neerlandeză, pentru că munca e pe primul loc.", // nieuw, nalezen
+  'be.c.permit.o3': "Stai acasă marțea fără să spui nimic.", // nieuw, nalezen
+  'be.c.permit.w': "Integrarea e și ea o obligație. Mulți angajatori ajută când află din timp. Îndrumătorul tău de la Agentschap te poate ajuta și el să potrivești orele cu munca.", // nieuw, nalezen
+};
+
+export const bg: Gloss = {
+  'be.w.uitzendbureau': "агенцията за временна работа (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "Договорът срочен ли е или безсрочен?", // nieuw, nalezen
+  'be.w.oproepkracht': "на непълен работен ден", // nieuw, nalezen
+  'be.w.proeftijd': "обезщетението за предизвестие (заплатата ти за срока на предизвестието)", // nieuw, nalezen
+  'be.w.cao': "паритетната комисия (тя определя правилата в твоя сектор)", // nieuw, nalezen
+  'be.s.contract.2': "Договорът ми свършва. Кога ще получа своя C4?", // nieuw, nalezen
+  'be.s.contract.3': "Към коя паритетна комисия съм?", // nieuw, nalezen
+  'be.w.uitzendkracht': "временният работник (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "консултантът (човекът за връзка в агенцията)", // nieuw, nalezen
+  'be.s.agency.1': "Работя чрез агенция за временна работа.", // nieuw, nalezen
+  'be.s.agency.2': "Утре пак ли ще получа договор за един ден?", // nieuw, nalezen
+  'be.w.zzper': "самонаетото лице (работиш за себе си)", // nieuw, nalezen
+  'be.s.permit.2': "Работя на трудов договор или на свободна практика?", // nieuw, nalezen
+  'be.s.permit.3': "Работя на непълен работен ден.", // nieuw, nalezen
+  'be.c.findwork': "Договорът – на хартия", // nieuw, nalezen
+  'be.c.findwork.b': "Винаги искай писмен договор и копие за себе си. Срочният договор (bepaalde tijd) или договорът за непълен работен ден трябва да е на хартия, когато започваш. Прочети го, преди да подпишеш, или помоли за помощ човек, на когото вярваш. Преди първия ти ден работодателят те обявява в социалното осигуряване: това е Dimona. Агенцията за временна работа (interimkantoor) няма право да ти иска пари, за да ти намери работа. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
+  'be.c.findwork.p': "Може ли първо да прочета договора?", // nieuw, nalezen
+  'be.c.findwork.s': "Нов работодател казва: „Подпиши тук сега. Ще го прочетеш после.“ Какво правиш?", // nieuw, nalezen
+  'be.c.findwork.o1': "Искаш време да го прочетеш или копие.", // nieuw, nalezen
+  'be.c.findwork.o2': "Подписваш бързо, за да не загубиш работата.", // nieuw, nalezen
+  'be.c.findwork.o3': "Подписваш и после искаш копие.", // nieuw, nalezen
+  'be.c.findwork.w': "В договора пише колко печелиш и какви са правата ти. Добрият работодател ти дава време да го прочетеш. Можеш да питаш за всичко, което не разбираш.", // nieuw, nalezen
+  'be.c.contract': "Няма изпитателен срок, но има предизвестие", // nieuw, nalezen
+  'be.c.contract.b': "Старият изпитателен срок (proeftijd) вече не съществува. От самото начало имаш срок на предизвестие (opzegtermijn). През първите месеци той е кратък. Работодателят иска да прекрати работата? Тогава ти дава писмено предизвестие или ти плаща заплатата за този период (opzegvergoeding). Работиш на непълен ден с променливи часове? Графика си (uurrooster) получаваш предварително: обикновено 7 работни дни по-рано. Секторът ти може да го скъси, но не под 3. Правилата на сектора ти идват от неговата паритетна комисия (paritair comité). Работата ти свършва? Поискай своя C4: трябва ти за обезщетение за безработица. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
+  'be.c.contract.p': "Колко е моето предизвестие? И ще получа ли своя C4?", // nieuw, nalezen
+  'be.c.contract.s': "След три седмици шефът казва: „Не се получава. От утре спри. Още си на изпитателен срок.“ Кое е вярно?", // nieuw, nalezen
+  'be.c.contract.o1': "Няма изпитателен срок: получаваш предизвестие или заплата.", // nieuw, nalezen
+  'be.c.contract.o2': "През първите седмици шефът може да те спре веднага.", // nieuw, nalezen
+  'be.c.contract.o3': "Не получаваш нищо, защото работиш само от три седмици.", // nieuw, nalezen
+  'be.c.contract.w': "Старият изпитателен срок вече не съществува. И през първите месеци получаваш предизвестие или заплатата за този период. Поискай и своя C4. Не знаеш със сигурност? Питай синдиката.", // nieuw, nalezen
+  'be.c.agency': "Агенцията е твоят работодател", // nieuw, nalezen
+  'be.c.agency.b': "Ако работиш чрез агенция за временна работа (interimkantoor), твоят работодател е агенцията, а не фирмата, където работиш. Договорът и заплатата идват от агенцията. Договорът трябва да е писмен най-късно 2 работни дни след като започнеш. Имаш право поне на същата заплата като служителите на фирмата, които вършат същата работа. Записването е безплатно: агенцията никога няма право да ти иска пари. Много еднодневни договори (dagcontracten) подред са позволени само с основателна причина. Води си свой списък с изработените часове и ги проверявай във фиша за заплата (loonbrief). Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
+  'be.c.agency.p': "Във фиша ми за заплата има твърде малко часове.", // nieuw, nalezen
+  'be.c.agency.s': "Във фиша за заплата (loonbrief) пише 32 часа, а работиш 38. Какво правиш?", // nieuw, nalezen
+  'be.c.agency.o1': "Покажи на агенцията своя списък с часове и поискай поправка.", // nieuw, nalezen
+  'be.c.agency.o2': "Не казваш нищо, защото са само 6 часа.", // nieuw, nalezen
+  'be.c.agency.o3': "Молиш шефа във фирмата, където работиш, да ти плати тези 6 часа.", // nieuw, nalezen
+  'be.c.agency.w': "Агенцията ти плаща, затова агенцията трябва да поправи грешката. Твоят списък с дати и часове помага. Имаш право да питаш.", // nieuw, nalezen
+  'be.c.permit': "Работа и интеграция", // nieuw, nalezen
+  'be.c.permit.b': "Трябва ли да минеш курс за интеграция (inburgering)? Във Фландрия те води Agentschap Integratie en Inburgering. Кажи на работодателя си и питай навреме дали уроците по нидерландски могат да се съчетаят с графика ти (uurrooster). Не знаеш със сигурност дали можеш да работиш тук? Провери, преди да започнеш, например в синдикат. Работодателят трябва да те обяви преди първия ти ден (Dimona). Искат ли да работиш като самостоятелно заето лице (zelfstandige) за тази работа? Самостоятелно заетият не получава заплата, когато е болен, нито обезщетение за безработица. Първо поискай съвет. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
+  'be.c.permit.p': "Във вторник имам урок по нидерландски. Може ли графикът ми да се съобрази с това?", // nieuw, nalezen
+  'be.c.permit.s': "Започваш нова работа. Урокът по нидерландски е във вторник сутрин, но по графика работиш във вторниците. Какво правиш?", // nieuw, nalezen
+  'be.c.permit.o1': "Кажи на прекия си началник и поискай промяна в графика.", // nieuw, nalezen
+  'be.c.permit.o2': "Пропусни урока по нидерландски, защото работата е на първо място.", // nieuw, nalezen
+  'be.c.permit.o3': "Оставаш вкъщи във вторник, без да кажеш нищо.", // nieuw, nalezen
+  'be.c.permit.w': "Интеграцията също е задължение. Много работодатели помагат, когато научат навреме. Твоят придружител в Agentschap също може да ти помогне да съчетаеш уроците с работата.", // nieuw, nalezen
+};
+
+export const es: Gloss = {
+  'be.w.uitzendbureau': "la agencia de trabajo temporal (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "¿El contrato es por tiempo determinado o indefinido?", // nieuw, nalezen
+  'be.w.oproepkracht': "a tiempo parcial", // nieuw, nalezen
+  'be.w.proeftijd': "la indemnización por preaviso (tu sueldo por el tiempo de preaviso)", // nieuw, nalezen
+  'be.w.cao': "la comisión paritaria (pone las reglas de tu sector)", // nieuw, nalezen
+  'be.s.contract.2': "Mi contrato termina. ¿Cuándo recibo mi C4?", // nieuw, nalezen
+  'be.s.contract.3': "¿A qué comisión paritaria pertenezco?", // nieuw, nalezen
+  'be.w.uitzendkracht': "el trabajador temporal (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "el consultor (tu persona de contacto en la agencia)", // nieuw, nalezen
+  'be.s.agency.1': "Trabajo a través de una agencia de trabajo temporal.", // nieuw, nalezen
+  'be.s.agency.2': "¿Mañana me dan otra vez un contrato de un día?", // nieuw, nalezen
+  'be.w.zzper': "el autónomo (trabajas por tu cuenta)", // nieuw, nalezen
+  'be.s.permit.2': "¿Trabajo por cuenta ajena o por cuenta propia?", // nieuw, nalezen
+  'be.s.permit.3': "Trabajo a tiempo parcial.", // nieuw, nalezen
+  'be.c.findwork': "Pide tu contrato por escrito", // nieuw, nalezen
+  'be.c.findwork.b': "Pide siempre un contrato por escrito y una copia para ti. Un contrato por tiempo determinado (bepaalde tijd) o a tiempo parcial tiene que estar en papel cuando empiezas. Léelo antes de firmar, o pide ayuda a alguien de confianza. Antes de tu primer día, tu empresa te declara a la seguridad social: es la Dimona. Una agencia de trabajo temporal (interimkantoor) no puede pedirte dinero por buscarte trabajo. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
+  'be.c.findwork.p': "¿Puedo leer primero el contrato?", // nieuw, nalezen
+  'be.c.findwork.s': "Una empresa nueva te dice: “Firma aquí ahora. Puedes leerlo después.” ¿Qué haces?", // nieuw, nalezen
+  'be.c.findwork.o1': "Pides tiempo para leerlo, o una copia.", // nieuw, nalezen
+  'be.c.findwork.o2': "Firmas rápido, para no perder el trabajo.", // nieuw, nalezen
+  'be.c.findwork.o3': "Firmas, y después pides una copia.", // nieuw, nalezen
+  'be.c.findwork.w': "Tu contrato dice cuánto ganas y cuáles son tus derechos. Una buena empresa te da tiempo para leerlo. Puedes preguntar todo lo que no entiendas.", // nieuw, nalezen
+  'be.c.contract': "No hay período de prueba, pero sí preaviso", // nieuw, nalezen
+  'be.c.contract.b': "El antiguo período de prueba (proeftijd) ya no existe. Desde el principio tienes un plazo de preaviso (opzegtermijn). En los primeros meses es corto. ¿Tu empresa quiere terminar? Entonces te avisa por escrito, o te paga tu sueldo por ese tiempo (opzegvergoeding). ¿Trabajas a tiempo parcial con horas que cambian? Recibes tu horario (uurrooster) con antelación: normalmente 7 días laborables antes. Tu sector puede acortarlo, pero no a menos de 3. Las reglas de tu sector vienen de su comisión paritaria (paritair comité). ¿Se termina tu trabajo? Pide tu C4: lo necesitas para la prestación por desempleo. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
+  'be.c.contract.p': "¿Cuánto dura mi preaviso? ¿Y me dan mi C4?", // nieuw, nalezen
+  'be.c.contract.s': "Después de tres semanas, tu jefe dice: «No funciona. Mañana ya no vengas. Todavía estás en período de prueba». ¿Qué es verdad?", // nieuw, nalezen
+  'be.c.contract.o1': "No hay período de prueba: te dan preaviso o tu sueldo.", // nieuw, nalezen
+  'be.c.contract.o2': "En las primeras semanas, el jefe puede echarte enseguida.", // nieuw, nalezen
+  'be.c.contract.o3': "No te dan nada, porque solo llevas tres semanas trabajando.", // nieuw, nalezen
+  'be.c.contract.w': "El antiguo período de prueba ya no existe. También en los primeros meses tienes un preaviso, o tu sueldo por ese tiempo. Pide también tu C4. ¿No lo sabes seguro? Pregunta al sindicato.", // nieuw, nalezen
+  'be.c.agency': "La agencia es tu empresa", // nieuw, nalezen
+  'be.c.agency.b': "Si trabajas a través de una agencia de trabajo temporal (interimkantoor), tu empresa es la agencia, no la empresa donde trabajas. Tu contrato y tu sueldo vienen de la agencia. Tu contrato tiene que estar por escrito, como muy tarde 2 días laborables después de empezar. Tienes derecho al menos al mismo sueldo que los trabajadores de la empresa que hacen el mismo trabajo. Inscribirse es gratis: una agencia nunca puede pedirte dinero. Muchos contratos de un día (dagcontracten) seguidos solo se permiten con un buen motivo. Apunta tus horas trabajadas y compruébalas en tu nómina (loonbrief). Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
+  'be.c.agency.p': "En mi nómina hay muy pocas horas.", // nieuw, nalezen
+  'be.c.agency.s': "Tu nómina (loonbrief) pone 32 horas, pero trabajaste 38. ¿Qué haces?", // nieuw, nalezen
+  'be.c.agency.o1': "Enseña tu lista de horas a la agencia y pide que lo corrijan.", // nieuw, nalezen
+  'be.c.agency.o2': "No dices nada, porque son solo 6 horas.", // nieuw, nalezen
+  'be.c.agency.o3': "Pides al jefe de la empresa donde trabajas que te pague las 6 horas.", // nieuw, nalezen
+  'be.c.agency.w': "La agencia te paga, así que la agencia tiene que corregir el error. Tu propia lista de fechas y horas ayuda. Preguntar es tu derecho.", // nieuw, nalezen
+  'be.c.permit': "Trabajo e integración", // nieuw, nalezen
+  'be.c.permit.b': "¿Tienes que hacer el programa de integración (inburgering)? En Flandes te acompaña el Agentschap Integratie en Inburgering. Díselo a tu empresa, y pregunta pronto si tus clases de neerlandés pueden encajar con tu horario (uurrooster). ¿No sabes seguro si puedes trabajar aquí? Compruébalo antes de empezar, por ejemplo en un sindicato. Tu empresa tiene que declararte antes de tu primer día (Dimona). ¿Te piden trabajar como autónomo (zelfstandige) en este trabajo? Un autónomo no cobra sueldo cuando está enfermo, ni prestación por desempleo. Pide consejo primero. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
+  'be.c.permit.p': "El martes tengo clase de neerlandés. ¿Puede mi horario tenerlo en cuenta?", // nieuw, nalezen
+  'be.c.permit.s': "Empiezas un trabajo nuevo. Tu clase de neerlandés es los martes por la mañana, pero tu horario te pone a trabajar los martes. ¿Qué haces?", // nieuw, nalezen
+  'be.c.permit.o1': "Díselo a tu responsable y pide cambiar el horario.", // nieuw, nalezen
+  'be.c.permit.o2': "Sáltate la clase de neerlandés, porque el trabajo va primero.", // nieuw, nalezen
+  'be.c.permit.o3': "Te quedas en casa los martes sin decir nada.", // nieuw, nalezen
+  'be.c.permit.w': "La integración también es una obligación. Muchas empresas ayudan si lo saben pronto. Tu acompañante del Agentschap también puede ayudarte a encajar las clases con tu trabajo.", // nieuw, nalezen
+};
+
+export const pt: Gloss = {
+  'be.w.uitzendbureau': "a agência de trabalho temporário (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "O contrato é a termo certo ou sem termo?", // nieuw, nalezen
+  'be.w.oproepkracht': "a tempo parcial", // nieuw, nalezen
+  'be.w.proeftijd': "a indemnização de pré-aviso (o teu salário pelo tempo de pré-aviso)", // nieuw, nalezen
+  'be.w.cao': "a comissão paritária (faz as regras do teu setor)", // nieuw, nalezen
+  'be.s.contract.2': "O meu contrato vai acabar. Quando recebo o meu C4?", // nieuw, nalezen
+  'be.s.contract.3': "A que comissão paritária pertenço?", // nieuw, nalezen
+  'be.w.uitzendkracht': "o trabalhador temporário (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "o consultor (a tua pessoa de contacto na agência)", // nieuw, nalezen
+  'be.s.agency.1': "Trabalho através de uma agência de trabalho temporário.", // nieuw, nalezen
+  'be.s.agency.2': "Amanhã volto a ter um contrato de um dia?", // nieuw, nalezen
+  'be.w.zzper': "o trabalhador independente (trabalhas por conta própria)", // nieuw, nalezen
+  'be.s.permit.2': "Trabalho por conta de outrem ou por conta própria?", // nieuw, nalezen
+  'be.s.permit.3': "Trabalho a tempo parcial.", // nieuw, nalezen
+  'be.c.findwork': "Pede o teu contrato em papel", // nieuw, nalezen
+  'be.c.findwork.b': "Pede sempre um contrato escrito e uma cópia para ti. Um contrato a termo (bepaalde tijd) ou a tempo parcial tem de estar em papel quando começas. Lê-o antes de assinar, ou pede ajuda a alguém de confiança. Antes do teu primeiro dia, o teu empregador declara-te à segurança social: é a Dimona. Uma agência de trabalho temporário (interimkantoor) não te pode pedir dinheiro para te arranjar trabalho. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao justitiehuis (conselho jurídico grátis).", // nieuw, nalezen
+  'be.c.findwork.p': "Posso ler primeiro o contrato?", // nieuw, nalezen
+  'be.c.findwork.s': "Um empregador novo diz: \"Assina já aqui. Podes ler mais tarde.\" O que fazes?", // nieuw, nalezen
+  'be.c.findwork.o1': "Pedes tempo para o ler, ou uma cópia.", // nieuw, nalezen
+  'be.c.findwork.o2': "Assinas depressa, para não perderes o emprego.", // nieuw, nalezen
+  'be.c.findwork.o3': "Assinas, e depois pedes uma cópia.", // nieuw, nalezen
+  'be.c.findwork.w': "O teu contrato diz quanto ganhas e quais são os teus direitos. Um bom empregador dá-te tempo para o ler. Podes perguntar tudo o que não percebes.", // nieuw, nalezen
+  'be.c.contract': "Não há período experimental, mas há pré-aviso", // nieuw, nalezen
+  'be.c.contract.b': "O antigo período experimental (proeftijd) já não existe. Desde o início tens um prazo de pré-aviso (opzegtermijn). Nos primeiros meses é curto. O teu empregador quer terminar? Então avisa-te por escrito, ou paga-te o salário desse tempo (opzegvergoeding). Trabalhas a tempo parcial com horas que mudam? Recebes o teu horário (uurrooster) com antecedência: normalmente 7 dias úteis antes. O teu setor pode encurtar isso, mas não para menos de 3. As regras do teu setor vêm da sua comissão paritária (paritair comité). O teu trabalho vai acabar? Pede o teu C4: precisas dele para o subsídio de desemprego. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao justitiehuis (conselho jurídico grátis).", // nieuw, nalezen
+  'be.c.contract.p': "Quanto tempo é o meu pré-aviso? E recebo o meu C4?", // nieuw, nalezen
+  'be.c.contract.s': "Ao fim de três semanas, o teu chefe diz: «Não está a resultar. Amanhã já não venhas. Ainda estás no período experimental.» O que é verdade?", // nieuw, nalezen
+  'be.c.contract.o1': "Não há período experimental: recebes pré-aviso ou o salário.", // nieuw, nalezen
+  'be.c.contract.o2': "Nas primeiras semanas, o chefe pode mandar-te embora logo.", // nieuw, nalezen
+  'be.c.contract.o3': "Não recebes nada, porque só trabalhas há três semanas.", // nieuw, nalezen
+  'be.c.contract.w': "O antigo período experimental já não existe. Também nos primeiros meses tens pré-aviso, ou o salário desse tempo. Pede também o teu C4. Não sabes ao certo? Pergunta ao sindicato.", // nieuw, nalezen
+  'be.c.agency': "A agência é o teu empregador", // nieuw, nalezen
+  'be.c.agency.b': "Se trabalhas através de uma agência de trabalho temporário (interimkantoor), o teu empregador é a agência, não a empresa onde trabalhas. O contrato e o salário vêm da agência. O contrato tem de estar por escrito, o mais tardar 2 dias úteis depois de começares. Tens direito a pelo menos o mesmo salário que os trabalhadores da empresa que fazem o mesmo trabalho. A inscrição é grátis: uma agência nunca te pode pedir dinheiro. Muitos contratos de um dia (dagcontracten) seguidos só são permitidos com uma boa razão. Aponta tu as horas que trabalhaste e confirma-as no recibo de vencimento (loonbrief). Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao justitiehuis (conselho jurídico grátis).", // nieuw, nalezen
+  'be.c.agency.p': "O meu recibo de vencimento tem horas a menos.", // nieuw, nalezen
+  'be.c.agency.s': "O teu recibo de vencimento (loonbrief) diz 32 horas, mas trabalhaste 38. O que fazes?", // nieuw, nalezen
+  'be.c.agency.o1': "Mostra a tua lista de horas à agência e pede para corrigir.", // nieuw, nalezen
+  'be.c.agency.o2': "Não dizes nada, porque são só 6 horas.", // nieuw, nalezen
+  'be.c.agency.o3': "Pedes ao chefe da empresa onde trabalhas que te pague as 6 horas.", // nieuw, nalezen
+  'be.c.agency.w': "É a agência que te paga, por isso é a agência que tem de corrigir o erro. A tua lista de datas e horas ajuda. Perguntar é um direito teu.", // nieuw, nalezen
+  'be.c.permit': "Trabalho e integração", // nieuw, nalezen
+  'be.c.permit.b': "Tens de fazer o programa de integração (inburgering)? Na Flandres, o Agentschap Integratie en Inburgering acompanha-te. Diz ao teu empregador, e pergunta cedo se as aulas de neerlandês podem encaixar no teu horário (uurrooster). Não sabes ao certo se podes trabalhar aqui? Confirma antes de começar, por exemplo num sindicato. O teu empregador tem de te declarar antes do teu primeiro dia (Dimona). Pedem-te para trabalhar como independente (zelfstandige) neste emprego? Um independente não recebe salário quando está doente, nem subsídio de desemprego. Pede conselho primeiro. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao justitiehuis (conselho jurídico grátis).", // nieuw, nalezen
+  'be.c.permit.p': "Na terça tenho aula de neerlandês. O meu horário pode ter isso em conta?", // nieuw, nalezen
+  'be.c.permit.s': "Começas um trabalho novo. A tua aula de neerlandês é às terças de manhã, mas o teu horário põe-te a trabalhar às terças. O que fazes?", // nieuw, nalezen
+  'be.c.permit.o1': "Diz ao teu chefe e pede para mudar o horário.", // nieuw, nalezen
+  'be.c.permit.o2': "Falta à aula de neerlandês, porque o trabalho vem primeiro.", // nieuw, nalezen
+  'be.c.permit.o3': "Ficas em casa às terças sem dizer nada.", // nieuw, nalezen
+  'be.c.permit.w': "A integração também é um dever. Muitos empregadores ajudam quando sabem cedo. O teu acompanhante no Agentschap também te pode ajudar a encaixar as aulas no teu trabalho.", // nieuw, nalezen
+};
+
+export const fr: Gloss = {
+  'be.w.uitzendbureau': "l’agence d’intérim (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "Le contrat est-il à durée déterminée ou indéterminée ?", // nieuw, nalezen
+  'be.w.oproepkracht': "à temps partiel", // nieuw, nalezen
+  'be.w.proeftijd': "l’indemnité de préavis (ton salaire pour la durée du préavis)", // nieuw, nalezen
+  'be.w.cao': "la commission paritaire (elle fixe les règles de ton secteur)", // nieuw, nalezen
+  'be.s.contract.2': "Mon contrat se termine. Quand est-ce que je reçois mon C4 ?", // nieuw, nalezen
+  'be.s.contract.3': "De quelle commission paritaire je dépends ?", // nieuw, nalezen
+  'be.w.uitzendkracht': "l’intérimaire (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "le consultant (ta personne de contact à l’agence d’intérim)", // nieuw, nalezen
+  'be.s.agency.1': "Je travaille via une agence d’intérim.", // nieuw, nalezen
+  'be.s.agency.2': "Est-ce que j’ai encore un contrat d’un jour demain ?", // nieuw, nalezen
+  'be.w.zzper': "le travailleur indépendant (tu travailles pour toi-même)", // nieuw, nalezen
+  'be.s.permit.2': "Je travaille avec un contrat ou à mon compte ?", // nieuw, nalezen
+  'be.s.permit.3': "Je travaille à temps partiel.", // nieuw, nalezen
+  'be.c.findwork': "Ton contrat par écrit", // nieuw, nalezen
+  'be.c.findwork.b': "Demande toujours un contrat écrit et une copie pour toi. Un contrat à durée déterminée (bepaalde tijd) ou à temps partiel doit être sur papier quand tu commences. Lis-le avant de signer, ou demande de l’aide à quelqu’un de confiance. Avant ton premier jour, ton employeur te déclare à la sécurité sociale : c’est la Dimona. Une agence d’intérim (interimkantoor) ne peut pas te demander d’argent pour te trouver un travail. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au justitiehuis (maison de justice : conseil juridique gratuit).", // nieuw, nalezen
+  'be.c.findwork.p': "Je peux d’abord lire le contrat ?", // nieuw, nalezen
+  'be.c.findwork.s': "Un nouvel employeur dit : “Signe ici maintenant. Tu pourras le lire plus tard.” Que fais-tu ?", // nieuw, nalezen
+  'be.c.findwork.o1': "Demande du temps pour le lire, ou une copie.", // nieuw, nalezen
+  'be.c.findwork.o2': "Signe vite, pour ne pas perdre le travail.", // nieuw, nalezen
+  'be.c.findwork.o3': "Signe, et demande une copie après.", // nieuw, nalezen
+  'be.c.findwork.w': "Ton contrat dit ce que tu gagnes et quels sont tes droits. Un bon employeur te donne le temps de le lire. Tu peux poser des questions sur tout ce que tu ne comprends pas.", // nieuw, nalezen
+  'be.c.contract': "Pas de période d’essai, mais un préavis", // nieuw, nalezen
+  'be.c.contract.b': "L’ancienne période d’essai (proeftijd) n’existe plus. Dès le début, tu as un délai de préavis (opzegtermijn). Les premiers mois, il est court. Ton employeur veut arrêter ? Alors il te donne un préavis par écrit, ou il te paie ton salaire pour cette période (opzegvergoeding). Tu travailles à temps partiel avec des heures qui changent ? Tu reçois ton horaire (uurrooster) à l’avance : en général 7 jours ouvrables avant. Ton secteur peut raccourcir ce délai, mais pas en dessous de 3. Les règles de ton secteur viennent de sa commission paritaire (paritair comité). Ton travail se termine ? Demande ton C4 : il te faut pour l’allocation de chômage. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au justitiehuis (maison de justice : conseil juridique gratuit).", // nieuw, nalezen
+  'be.c.contract.p': "Mon préavis dure combien de temps ? Et est-ce que je reçois mon C4 ?", // nieuw, nalezen
+  'be.c.contract.s': "Après trois semaines, ton chef dit : « Ça ne marche pas. Arrête demain. Tu es encore en période d’essai. » Qu’est-ce qui est vrai ?", // nieuw, nalezen
+  'be.c.contract.o1': "Il n’y a pas de période d’essai : tu as un préavis ou ton salaire.", // nieuw, nalezen
+  'be.c.contract.o2': "Les premières semaines, le chef peut t’arrêter tout de suite.", // nieuw, nalezen
+  'be.c.contract.o3': "Tu n’as droit à rien, car tu ne travailles que depuis trois semaines.", // nieuw, nalezen
+  'be.c.contract.w': "L’ancienne période d’essai n’existe plus. Même les premiers mois, tu as un préavis, ou ton salaire pour cette période. Demande aussi ton C4. Tu as un doute ? Demande au syndicat.", // nieuw, nalezen
+  'be.c.agency': "L’agence d’intérim est ton employeur", // nieuw, nalezen
+  'be.c.agency.b': "Si tu travailles via une agence d’intérim (interimkantoor), ton employeur est l’agence, pas l’entreprise où tu travailles. Ton contrat et ton salaire viennent de l’agence. Ton contrat doit être écrit, au plus tard 2 jours ouvrables après ton début. Tu as droit au moins au même salaire que les travailleurs de l’entreprise qui font le même travail. L’inscription est gratuite : une agence d’intérim ne peut jamais te demander d’argent. Beaucoup de contrats journaliers (dagcontracten) à la suite ne sont permis qu’avec une bonne raison. Note toi-même tes heures de travail, et vérifie-les sur ta fiche de paie (loonbrief). Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au justitiehuis (maison de justice : conseil juridique gratuit).", // nieuw, nalezen
+  'be.c.agency.p': "Sur ma fiche de paie, il y a trop peu d’heures.", // nieuw, nalezen
+  'be.c.agency.s': "Ta fiche de paie (loonbrief) indique 32 heures, mais tu en as travaillé 38. Que fais-tu ?", // nieuw, nalezen
+  'be.c.agency.o1': "Montre ta liste d’heures à l’agence et demande de corriger.", // nieuw, nalezen
+  'be.c.agency.o2': "Ne dis rien, parce que ce n’est que 6 heures.", // nieuw, nalezen
+  'be.c.agency.o3': "Demande au patron de l’entreprise où tu travailles de payer les 6 heures.", // nieuw, nalezen
+  'be.c.agency.w': "C’est l’agence d’intérim qui te paie, donc c’est elle qui doit corriger l’erreur. Ta propre liste de dates et d’heures aide. Poser la question, c’est ton droit.", // nieuw, nalezen
+  'be.c.permit': "Le travail et l’intégration", // nieuw, nalezen
+  'be.c.permit.b': "Tu dois suivre le parcours d’intégration (inburgering) ? En Flandre, l’Agentschap Integratie en Inburgering t’accompagne. Dis-le à ton employeur, et demande tôt si tes cours de néerlandais peuvent s’adapter à ton horaire (uurrooster). Tu ne sais pas si tu as le droit de travailler ici ? Vérifie-le avant de commencer, par exemple auprès d’un syndicat. Ton employeur doit te déclarer avant ton premier jour (Dimona). On te demande de travailler comme indépendant (zelfstandige) pour ce travail ? Un indépendant n’a pas de salaire quand il est malade, ni d’allocation de chômage. Demande d’abord conseil. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au justitiehuis (maison de justice : conseil juridique gratuit).", // nieuw, nalezen
+  'be.c.permit.p': "Le mardi, j’ai cours de néerlandais. Mon horaire peut-il en tenir compte ?", // nieuw, nalezen
+  'be.c.permit.s': "Tu commences un nouveau travail. Ton cours de néerlandais est le mardi matin, mais ton horaire te fait travailler le mardi. Que fais-tu ?", // nieuw, nalezen
+  'be.c.permit.o1': "Dis-le à ton responsable et demande de changer l’horaire.", // nieuw, nalezen
+  'be.c.permit.o2': "Tu sautes le cours de néerlandais, car le travail passe d’abord.", // nieuw, nalezen
+  'be.c.permit.o3': "Reste à la maison le mardi sans rien dire.", // nieuw, nalezen
+  'be.c.permit.w': "L’intégration est aussi une obligation. Beaucoup d’employeurs aident quand ils le savent tôt. Ton accompagnateur à l’Agentschap peut aussi t’aider à adapter tes cours à ton travail.", // nieuw, nalezen
+};
+
+export const de: Gloss = {
+  'be.w.uitzendbureau': "die Zeitarbeitsfirma (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "Ist der Vertrag befristet oder unbefristet?", // nieuw, nalezen
+  'be.w.oproepkracht': "in Teilzeit", // nieuw, nalezen
+  'be.w.proeftijd': "die Kündigungsentschädigung (dein Lohn für die Kündigungsfrist)", // nieuw, nalezen
+  'be.w.cao': "die paritätische Kommission (sie macht die Regeln deiner Branche)", // nieuw, nalezen
+  'be.s.contract.2': "Mein Vertrag endet. Wann bekomme ich mein C4?", // nieuw, nalezen
+  'be.s.contract.3': "Unter welche paritätische Kommission falle ich?", // nieuw, nalezen
+  'be.w.uitzendkracht': "die Zeitarbeitskraft (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "der Berater (deine Ansprechperson bei der Zeitarbeitsfirma)", // nieuw, nalezen
+  'be.s.agency.1': "Ich arbeite über eine Zeitarbeitsfirma.", // nieuw, nalezen
+  'be.s.agency.2': "Bekomme ich morgen wieder einen Tagesvertrag?", // nieuw, nalezen
+  'be.w.zzper': "der Selbstständige (du arbeitest für dich selbst)", // nieuw, nalezen
+  'be.s.permit.2': "Bin ich Arbeitnehmer oder selbstständig?", // nieuw, nalezen
+  'be.s.permit.3': "Ich arbeite in Teilzeit.", // nieuw, nalezen
+  'be.c.findwork': "Hol dir deinen Vertrag auf Papier", // nieuw, nalezen
+  'be.c.findwork.b': "Bitte immer um einen schriftlichen Vertrag und eine Kopie für dich. Ein befristeter Vertrag (bepaalde tijd) oder ein Teilzeitvertrag muss auf Papier sein, wenn du anfängst. Lies ihn, bevor du unterschreibst, oder bitte jemanden, dem du vertraust, um Hilfe. Vor deinem ersten Tag meldet dich dein Arbeitgeber bei der Sozialversicherung an: das ist die Dimona. Eine Zeitarbeitsfirma (interimkantoor) darf kein Geld von dir verlangen, um dir Arbeit zu finden. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen
+  'be.c.findwork.p': "Darf ich den Vertrag zuerst lesen?", // nieuw, nalezen
+  'be.c.findwork.s': "Ein neuer Arbeitgeber sagt: „Unterschreib jetzt hier. Lesen kannst du später.“ Was machst du?", // nieuw, nalezen
+  'be.c.findwork.o1': "Bitte um Zeit zum Lesen oder um eine Kopie.", // nieuw, nalezen
+  'be.c.findwork.o2': "Unterschreib schnell, damit du die Stelle nicht verlierst.", // nieuw, nalezen
+  'be.c.findwork.o3': "Unterschreib und bitte danach um eine Kopie.", // nieuw, nalezen
+  'be.c.findwork.w': "In deinem Vertrag steht, was du verdienst und welche Rechte du hast. Ein guter Arbeitgeber gibt dir Zeit, ihn zu lesen. Du darfst nach allem fragen, was du nicht verstehst.", // nieuw, nalezen
+  'be.c.contract': "Keine Probezeit, aber eine Kündigungsfrist", // nieuw, nalezen
+  'be.c.contract.b': "Die alte Probezeit (proeftijd) gibt es nicht mehr. Von Anfang an hast du eine Kündigungsfrist (opzegtermijn). In den ersten Monaten ist sie kurz. Will dein Arbeitgeber aufhören? Dann kündigt er schriftlich, oder er zahlt dir den Lohn für diese Zeit (opzegvergoeding). Teilzeit mit wechselnden Stunden? Deinen Arbeitsplan (uurrooster) bekommst du vorher: meist 7 Arbeitstage vorher. Deine Branche kann das kürzer machen, aber nicht kürzer als 3. Die Regeln deiner Branche kommen von ihrer paritätischen Kommission (paritair comité). Endet deine Arbeit? Frag nach deinem C4: du brauchst es für das Arbeitslosengeld. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen
+  'be.c.contract.p': "Wie lang ist meine Kündigungsfrist? Und bekomme ich mein C4?", // nieuw, nalezen
+  'be.c.contract.s': "Nach drei Wochen sagt dein Chef: „Es klappt nicht. Hör morgen auf. Du bist noch in der Probezeit.“ Was stimmt?", // nieuw, nalezen
+  'be.c.contract.o1': "Es gibt keine Probezeit: du bekommst eine Frist oder deinen Lohn.", // nieuw, nalezen
+  'be.c.contract.o2': "In den ersten Wochen darf der Chef dich sofort entlassen.", // nieuw, nalezen
+  'be.c.contract.o3': "Du bekommst nichts, weil du erst drei Wochen arbeitest.", // nieuw, nalezen
+  'be.c.contract.w': "Die alte Probezeit gibt es nicht mehr. Auch in den ersten Monaten hast du eine Kündigungsfrist, oder du bekommst den Lohn für diese Zeit. Frag auch nach deinem C4. Nicht sicher? Frag die Gewerkschaft.", // nieuw, nalezen
+  'be.c.agency': "Die Zeitarbeitsfirma ist dein Arbeitgeber", // nieuw, nalezen
+  'be.c.agency.b': "Wenn du über eine Zeitarbeitsfirma (interimkantoor) arbeitest, ist die Zeitarbeitsfirma dein Arbeitgeber, nicht die Firma, in der du arbeitest. Vertrag und Lohn kommen von der Zeitarbeitsfirma. Dein Vertrag muss schriftlich sein, spätestens 2 Arbeitstage nach deinem Beginn. Du hast ein Recht auf mindestens den gleichen Lohn wie die Beschäftigten der Firma, die die gleiche Arbeit machen. Die Anmeldung ist kostenlos: eine Zeitarbeitsfirma darf nie Geld von dir verlangen. Viele Tagesverträge (dagcontracten) hintereinander sind nur mit gutem Grund erlaubt. Schreib deine Arbeitsstunden selbst auf, und prüfe sie auf deiner Lohnabrechnung (loonbrief). Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen
+  'be.c.agency.p': "Auf meiner Lohnabrechnung stehen zu wenige Stunden.", // nieuw, nalezen
+  'be.c.agency.s': "Auf deiner Lohnabrechnung (loonbrief) stehen 32 Stunden, aber du hast 38 gearbeitet. Was machst du?", // nieuw, nalezen
+  'be.c.agency.o1': "Zeig der Zeitarbeitsfirma deine Stundenliste und bitte um Korrektur.", // nieuw, nalezen
+  'be.c.agency.o2': "Sag nichts, es sind ja nur 6 Stunden.", // nieuw, nalezen
+  'be.c.agency.o3': "Bitte den Chef in der Firma, in der du arbeitest, die 6 Stunden zu bezahlen.", // nieuw, nalezen
+  'be.c.agency.w': "Die Zeitarbeitsfirma bezahlt dich, also muss sie den Fehler korrigieren. Deine eigene Liste mit Daten und Stunden hilft. Danach zu fragen ist dein Recht.", // nieuw, nalezen
+  'be.c.permit': "Arbeit und Integration", // nieuw, nalezen
+  'be.c.permit.b': "Musst du den Integrationskurs (inburgering) machen? In Flandern begleitet dich das Agentschap Integratie en Inburgering. Sag es deinem Arbeitgeber, und frag früh, ob deine Niederländischkurse zu deinem Arbeitsplan (uurrooster) passen. Nicht sicher, ob du hier arbeiten darfst? Prüf es, bevor du anfängst, zum Beispiel bei einer Gewerkschaft. Dein Arbeitgeber muss dich vor deinem ersten Tag anmelden (Dimona). Sollst du für diesen Job als Selbstständiger (zelfstandige) arbeiten? Ein Selbstständiger bekommt keinen Lohn, wenn er krank ist, und kein Arbeitslosengeld. Lass dich zuerst beraten. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen
+  'be.c.permit.p': "Am Dienstag habe ich Niederländischkurs. Kann mein Arbeitsplan darauf Rücksicht nehmen?", // nieuw, nalezen
+  'be.c.permit.s': "Du fängst einen neuen Job an. Dein Niederländischkurs ist dienstagmorgens, aber laut Arbeitsplan arbeitest du dienstags. Was machst du?", // nieuw, nalezen
+  'be.c.permit.o1': "Sag es deinem Vorgesetzten und bitte, den Plan zu ändern.", // nieuw, nalezen
+  'be.c.permit.o2': "Lass den Niederländischkurs ausfallen, weil die Arbeit vorgeht.", // nieuw, nalezen
+  'be.c.permit.o3': "Bleib dienstags zu Hause, ohne etwas zu sagen.", // nieuw, nalezen
+  'be.c.permit.w': "Die Integration ist auch eine Pflicht. Viele Arbeitgeber helfen, wenn sie es früh wissen. Deine Begleitung beim Agentschap kann dir auch helfen, deine Kurse mit der Arbeit zu verbinden.", // nieuw, nalezen
+};

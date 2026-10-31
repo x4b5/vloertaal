@@ -59,7 +59,7 @@ const BY_NL: Record<string, BeTaal | undefined> = {
  */
 export const BE_TAAL_TODO: readonly string[] = [
   // Agent A: werk zoeken, contract, stage en verder leren
-  'u.contract', 'u.stage', 'u.grow',
+  'u.stage', 'u.grow',
 
   // Agent B: loon, papieren, geld en online
   'u.pay', 'u.papers', 'u.money', 'u.data', 'u.ai',
