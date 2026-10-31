@@ -4693,3 +4693,9 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .route-solo .bi-swap > .bi-help[lang='en'], .route-solo .bi-swap > .bi-sep { display: none; }
 .sector-hint > .help-say { display: flex; margin: 8px auto 0; }
 .lang-guess .onb-say { margin: 4px 0 10px; }
+/* ---- Stap 2: "Wat zeg je?" (Speaking.tsx, `turn`) ---- */
+.say-turn-chat { margin-bottom: 12px; }
+.say-turn-chat .say-model-off { visibility: hidden; }
+.say-reveal { flex: 1 1 100%; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; }
+.say-turn-chat .chat-bubble-me:has(.chat-line) { flex-wrap: wrap; justify-content: flex-start; flex: 0 1 auto; }
+.say-turn .say-face-example { color: var(--blue); }

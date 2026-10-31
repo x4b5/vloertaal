@@ -8,3 +8,5 @@ piper-models/
 public/audio/
 # Lists for the volunteers and what comes back (npm run review:export, docs/nakijken.md)
 /review/
+# Raw background sounds for the sound scenes: only the mixes and scenes.json go in (docs/geluidsscenes.md)
+public/audio-scenes/geluid/

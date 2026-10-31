@@ -407,6 +407,11 @@ const lang: HelpLanguageSource = {
     backupShare: { m: 'ናባኻ ስደድ', f: 'ናባኺ ስደዲ', x: 'ናባኹም ስደዱ' }, // nieuw, nalezen
     backupShareHint: { m: 'ነቲ ፋይል ናባኻ ስደዶ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።', f: 'ነቲ ፋይል ናባኺ ስደድዮ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።', x: 'ነቲ ፋይል ናባኹም ስደድዎ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።' }, // nieuw, nalezen
     backupMade: { m: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርካ ዓቅቦ። ደሓር ብእኡ ምዕባለኻ ክትመልሶ ትኽእል።', f: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርኪ ዓቅብዮ። ደሓር ብእኡ ምዕባለኺ ክትመልስዮ ትኽእሊ።', x: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርኩም ዓቅብዎ። ደሓር ብእኡ ምዕባለኹም ክትመልስዎ ትኽእሉ።' }, // nieuw, nalezen
+    speakTurnPrompt: { m: 'እንታይ ትብል?', f: 'እንታይ ትብሊ?', x: 'እንታይ ትብሉ?' }, // nieuw, nalezen
+    speakTurnExample: 'ኣብነት', // nieuw, nalezen
+    speakTurnReveal: { m: 'መልሲ ስማዕ', f: 'መልሲ ስምዒ', x: 'መልሲ ስምዑ' }, // nieuw, nalezen
+    sceneTitle: { m: 'ኣብ ቦታ ስራሕ ስማዕ', f: 'ኣብ ቦታ ስራሕ ስምዒ', x: 'ኣብ ቦታ ስራሕ ስምዑ' }, // nieuw, nalezen
+    sceneIntro: { m: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስማዕ። ድሕሪኡ ሕቶታት ይመጹ።', f: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስምዒ። ድሕሪኡ ሕቶታት ይመጹ።', x: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስምዑ። ድሕሪኡ ሕቶታት ይመጹ።' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

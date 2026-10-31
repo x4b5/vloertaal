@@ -406,6 +406,11 @@ const lang: HelpLanguageSource = {
     backupShare: 'Надіслати собі', // nieuw, nalezen
     backupShareHint: 'Надішли файл собі, наприклад у WhatsApp або електронною поштою.', // nieuw, nalezen
     backupMade: 'Готово. Добре збережи цей файл. З ним ти пізніше повернеш свій прогрес.', // nieuw, nalezen
+    speakTurnPrompt: 'Що ти скажеш?', // nieuw, nalezen
+    speakTurnExample: 'Приклад', // nieuw, nalezen
+    speakTurnReveal: 'Послухай відповідь', // nieuw, nalezen
+    sceneTitle: 'Слухай на роботі', // nieuw, nalezen
+    sceneIntro: 'Тут шумно, як на роботі. Слухай. Потім будуть запитання.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

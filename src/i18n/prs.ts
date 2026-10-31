@@ -406,6 +406,11 @@ const lang: HelpLanguageSource = {
     backupShare: 'برای خود تان بفرستید', // nieuw, nalezen
     backupShareHint: 'فایل را برای خود تان بفرستید، مثلاً در واتس‌اپ یا با ایمیل.', // nieuw, nalezen
     backupMade: 'تمام شد. این فایل را خوب نگه دارید. بعداً با آن پیشرفت خود را دوباره می‌آورید.', // nieuw, nalezen
+    speakTurnPrompt: 'چه می‌گویی؟', // nieuw, nalezen
+    speakTurnExample: 'نمونه', // nieuw, nalezen
+    speakTurnReveal: 'جواب را بشنو', // nieuw, nalezen
+    sceneTitle: 'در جای کار گوش کن', // nieuw, nalezen
+    sceneIntro: 'مثل جای کار، سر و صدا است. گوش کن. بعد سوال‌ها می‌آیند.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

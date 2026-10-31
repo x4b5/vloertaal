@@ -35,6 +35,7 @@ export const UPDATES: Update[] = [
       'Werkregels: 4 nieuwe lessen voor wie uit een ander land komt, voor Nederland en België. Ziek en naar je eigen land, je WW of uitkering meenemen (formulier U2), gedetacheerd zijn (A1, in België ook Limosa), en wonen, vervoer en boetes via het bureau. Nog niet nagekeken door een expert.',
       'Bewaar je voortgang: kan je telefoon je voortgang wissen? Dan vraagt de app na 3 lessen één keer of je een kopie wilt maken. Bij Instellingen › Bewaar je voortgang stuur je het bestand nu ook naar jezelf, bijvoorbeeld in WhatsApp of een e-mail.',
       'Bij de start kun je meer horen in je eigen taal: de vraag "Wat wil je leren?", de twee keuzes, "Polski?" en de uitleg bij de vragen daarna. Tik op de knop met de wereldbol. Die staat er als je telefoon een stem voor je taal heeft. De keuzes bij "Wat wil je leren?" zijn ook korter.',
+      'Taal: nieuw in de les is "Wat zeg je?". Vlak voor "Maak het gesprek af" hoor je de collega. Dan zeg je zelf het antwoord, en daarna hoor je het voorbeeld. Daarvoor gaat er meestal een andere oefening uit de les.',
     ],
   },
   {

@@ -462,6 +462,11 @@ export const uiNl: Record<UiKey, UiText> = {
   backupShare: 'Stuur naar jezelf', // nieuw, nalezen
   backupShareHint: 'Stuur het bestand naar jezelf, bijvoorbeeld in WhatsApp of in een e-mail.', // nieuw, nalezen
   backupMade: 'Klaar. Bewaar dit bestand goed. Daarmee zet je je voortgang later terug.', // nieuw, nalezen
+  speakTurnPrompt: 'Wat zeg je?',
+  speakTurnExample: 'Voorbeeld',
+  speakTurnReveal: 'Hoor het antwoord',
+  sceneTitle: 'Luister op de werkvloer',
+  sceneIntro: 'Er is lawaai, net als op je werk. Luister. Daarna komen de vragen.',
 };
 
 const lang: HelpLanguageSource = {

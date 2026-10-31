@@ -406,6 +406,11 @@ const lang: HelpLanguageSource = {
     backupShare: 'Kendine gönder', // nieuw, nalezen
     backupShareHint: 'Dosyayı kendine gönder, örneğin WhatsApp’ta veya e-postayla.', // nieuw, nalezen
     backupMade: 'Tamam. Bu dosyayı iyi sakla. Onunla ilerlemeni sonra geri yüklersin.', // nieuw, nalezen
+    speakTurnPrompt: 'Ne dersin?', // nieuw, nalezen
+    speakTurnExample: 'Örnek', // nieuw, nalezen
+    speakTurnReveal: 'Cevabı dinle', // nieuw, nalezen
+    sceneTitle: 'İş yerinde dinle', // nieuw, nalezen
+    sceneIntro: 'İşteki gibi gürültü var. Dinle. Sonra sorular gelir.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

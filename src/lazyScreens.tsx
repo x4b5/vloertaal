@@ -45,10 +45,12 @@ const milestone = part(() => import('./components/Milestone'));
 const coaches = part(() => import('./components/Coaches'));
 const admin = part(() => import('./components/Admin'));
 const certificate = part(() => import('./components/Certificate'));
+/** "Luister op de werkvloer": only opened once a scene's mix is on the server, so not warmed. */
+const scene = part(() => import('./components/Scene'));
 const PARTS: Part<unknown>[] = [settings, pocket, milestone, coaches, admin, certificate];
 
 /** The file of a screen of App (its View name), when it has one of its own. */
-const OF_VIEW: Partial<Record<string, Part<unknown>>> = { settings, pocket, coaches, admin, certificate, kaart: certificate, keep: milestone, streak: milestone, stopped: milestone };
+const OF_VIEW: Partial<Record<string, Part<unknown>>> = { settings, pocket, coaches, admin, certificate, kaart: certificate, keep: milestone, streak: milestone, stopped: milestone, scene };
 
 /** The app background while a screen's file loads: no spinner, nothing to tap, nothing jumps. */
 function Waiting() {
@@ -138,6 +140,7 @@ export const Admin = screen(admin, (m) => m.Admin, 'Admin');
 export const CertificateScreen = screen(certificate, (m) => m.CertificateScreen, 'CertificateScreen');
 export const CertEarned = screen(certificate, (m) => m.CertEarned, 'CertEarned');
 export const CoachCardScreen = screen(certificate, (m) => m.CoachCardScreen, 'CoachCardScreen');
+export const SceneScreen = screen(scene, (m) => m.SceneScreen, 'SceneScreen');
 
 let start: Promise<void> = Promise.resolve();
 

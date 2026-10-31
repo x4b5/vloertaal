@@ -406,6 +406,11 @@ const lang: HelpLanguageSource = {
     backupShare: 'Wyślij do siebie', // nieuw, nalezen
     backupShareHint: 'Wyślij plik do siebie, na przykład na WhatsAppie albo e-mailem.', // nieuw, nalezen
     backupMade: 'Gotowe. Dobrze przechowuj ten plik. Dzięki niemu później przywrócisz swoje postępy.', // nieuw, nalezen
+    speakTurnPrompt: 'Co mówisz?', // nieuw, nalezen
+    speakTurnExample: 'Przykład', // nieuw, nalezen
+    speakTurnReveal: 'Posłuchaj odpowiedzi', // nieuw, nalezen
+    sceneTitle: 'Słuchaj w pracy', // nieuw, nalezen
+    sceneIntro: 'Jest hałas, jak w pracy. Słuchaj. Potem będą pytania.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

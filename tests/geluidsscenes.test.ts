@@ -119,7 +119,7 @@ describe('geluidsscènes (src/content/geluidsscenes.ts)', () => {
     }
   });
 
-  it('is in the recording plan (docs/geluidsscenes.md) word for word, and waits there for its screen', () => {
+  it('is in the recording plan (docs/geluidsscenes.md) word for word, and says where its screen is', () => {
     const plan = readFileSync('docs/geluidsscenes.md', 'utf8');
     for (const s of geluidsscenes) {
       expect(plan, s.id).toContain(`\`${s.id}\``);
@@ -128,7 +128,7 @@ describe('geluidsscènes (src/content/geluidsscenes.ts)', () => {
       for (const b of s.beurten) expect(plan, s.id).toContain(b.nl);
     }
     const file = readFileSync('src/content/geluidsscenes.ts', 'utf8');
-    expect(file.split('\n')[0]).toBe('// Nog geen scherm; wacht op opnames (docs/geluidsscenes.md)');
+    expect(file.split('\n')[0]).toBe('// Scherm: src/components/Scene.tsx; alleen te zien met een mix (docs/geluidsscenes.md)');
   });
 
   // docs/taal-a2.md, with the checks of scripts/taal-a2.ts (npm run taal), which reads only the

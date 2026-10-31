@@ -43,8 +43,10 @@ export type Exercise =
   | { kind: 'saying'; saying: LessonSaying }
   /** "What do you do?": the tip's situation with shuffled options. */
   | { kind: 'situation'; tip: CultureTip; options: CultureTip['options'] }
-  /** "Say it": hear the Dutch, record yourself, compare, rate yourself. Never graded (lib/speaking.ts). */
-  | { kind: 'speak'; item: SpeakItem }
+  /** "Say it": hear the Dutch, record yourself, compare, rate yourself. Never graded (lib/speaking.ts).
+   *  `turn` ("Wat zeg je?", right before that chat): the colleague's line is heard and the learner
+   *  says the reply (`item`) first; only then is the reply shown and played as the example. */
+  | { kind: 'speak'; item: SpeakItem; turn?: Dialogue }
   /** The work-rules track (src/content/regels): one step of a rules lesson (buildRuleLesson). */
   | RuleExercise;
 
@@ -798,7 +800,11 @@ function reverseDialogue(lesson: Lesson): Dialogue | undefined {
  * sentence fewer to build (none by ear), and no extra question at the end (no saying, no second
  * listening question or reversed chat). Neither changes a review.
  */
-export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice; sayings?: boolean; fast?: boolean; easy?: boolean }): Exercise[] {
+/**
+ * `recorded` (the lesson player passes hasClip, lib/audio.ts): is there a recording of this Dutch
+ * line? Only with it, and with speaking on and sound on, a lesson gets "Wat zeg je?" (see withTurn).
+ */
+export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice; sayings?: boolean; fast?: boolean; easy?: boolean; recorded?: (text: string) => boolean }): Exercise[] {
   // The work-rules track: a lesson of steps (nothing in it needs to be heard, so "Without
   // sound" and speaking practice change nothing).
   if (lesson.steps?.length) return buildRuleLesson(lesson, { seed: opts.seed, review: opts.review });
@@ -925,7 +931,8 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   const pictured = words.filter(hasPicture);
   const target = hasPicture(d1) || !pictured.length ? d1 : pictured[Math.floor(rng() * pictured.length)];
   // At most three answers on a screen (the "at most 3" rule).
-  out.push(readableDutch(target, lesson, rng, Boolean(opts.nonLatin), Boolean(opts.quiet), false));
+  const pictureChoice = readableDutch(target, lesson, rng, Boolean(opts.nonLatin), Boolean(opts.quiet), false);
+  out.push(pictureChoice);
 
   sentences.forEach((sentence, k) => {
     const build: Exercise = { kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) };
@@ -955,9 +962,13 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // question; the sentence built by ear is listening practice too): the reply is given, pick
   // the question.
   const turned = later(PROGRESSION.reverseChat) ? reverseDialogue(lesson) : undefined;
+  let secondListen: Exercise | undefined;
   if (easy) { /* a shorter lesson: no second listening question here */ }
   else if (turned) out.push({ kind: 'chat', dialogue: turned, options: chatPromptOptions(turned, rng, 3, lesson), reverse: true });
-  else out.push(opts.quiet ? readableDutch(l2, lesson, rng, Boolean(opts.nonLatin), true, false) : { kind: 'listen', word: l2, options: options(l2, lesson, rng) });
+  else {
+    secondListen = opts.quiet ? readableDutch(l2, lesson, rng, Boolean(opts.nonLatin), true, false) : { kind: 'listen', word: l2, options: options(l2, lesson, rng) };
+    out.push(secondListen);
+  }
   // Typing what you hear has no reading twin; read the word and pick its meaning instead.
   // The written-word options for "hear and pick" come from their own generator, so the rest of
   // the lesson (and a saved place in it) stays the same as before they existed.
@@ -968,8 +979,35 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     : { kind: 'listen', word: t1, options: options(t1, lesson, pickRng) });
   // Speaking practice (Settings, on by default; never "Without sound"): one "say it" near the
   // end, placed after the rest is built so the other exercises stay the same with or without it.
-  if (opts.speak && !opts.quiet) return unwritten(withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0));
-  return unwritten(out);
+  if (!opts.speak || opts.quiet) return unwritten(out);
+  const spoken = withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);
+  // "Wat zeg je?" before a chat: in a lesson of its own (not a review of a topic, not today's
+  // review, not the shorter lesson after many mistakes), for a chat whose two lines are recorded.
+  const turnFor = !mix && !easy && opts.recorded ? dialogues.find((d) => opts.recorded!(d.prompt.nl) && opts.recorded!(d.reply.nl)) : undefined;
+  return unwritten(turnFor ? withTurn(spoken, turnFor, [secondListen, pictureChoice]) : spoken);
+}
+
+/**
+ * A lesson this long (with its "say it") is long enough: "Wat zeg je?" then takes the place of a
+ * less important exercise instead of making it longer. Almost every lesson has 21 (the Klanken
+ * lessons, without a tip, 19), so a lesson grows by one at most and never past 21.
+ */
+export const TURN_LONG = 20;
+
+/**
+ * "Wat zeg je?" (a speaking turn) put in right before the chat of `dialogue`: the colleague says
+ * their line, the learner says the reply, then hears it; the chat itself follows. In a long lesson
+ * (TURN_LONG) it replaces the first of `instead` that is in it: the second "what do you hear" (one
+ * word, the second time in this lesson), else the picture choice (a fourth "which word is it" on the
+ * same words). Nothing else moves, so the other exercises stay the same with or without it.
+ */
+export function withTurn(list: Exercise[], dialogue: Dialogue, instead: readonly (Exercise | undefined)[]): Exercise[] {
+  const at = list.findIndex((e) => e.kind === 'chat' && !e.reverse && e.dialogue === dialogue);
+  if (at < 0) return list;
+  const turn: Exercise = { kind: 'speak', item: { id: dialogue.reply.id, nl: dialogue.reply.nl, en: dialogue.reply.en }, turn: dialogue };
+  const drop = list.length >= TURN_LONG ? instead.find((e) => e && list.includes(e)) : undefined;
+  const out = [...list.slice(0, at), turn, ...list.slice(at)];
+  return drop ? out.filter((e) => e !== drop) : out;
 }
 
 /**

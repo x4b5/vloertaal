@@ -406,6 +406,11 @@ const lang: HelpLanguageSource = {
     backupShare: 'Envia para ti', // nieuw, nalezen
     backupShareHint: 'Envia o ficheiro para ti, por exemplo no WhatsApp ou por e-mail.', // nieuw, nalezen
     backupMade: 'Pronto. Guarda bem este ficheiro. Com ele recuperas o teu progresso mais tarde.', // nieuw, nalezen
+    speakTurnPrompt: 'O que dizes?', // nieuw, nalezen
+    speakTurnExample: 'Exemplo', // nieuw, nalezen
+    speakTurnReveal: 'Ouve a resposta', // nieuw, nalezen
+    sceneTitle: 'Ouve no trabalho', // nieuw, nalezen
+    sceneIntro: 'Há barulho, como no trabalho. Ouve. Depois vêm as perguntas.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

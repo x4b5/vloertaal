@@ -508,6 +508,12 @@ export const uiEn = {
   backupShareHint: 'Send the file to yourself, for example in WhatsApp or by e-mail.',
   /** The backup file was saved or sent. */
   backupMade: 'Done. Keep this file safe. With it you can put your progress back later.',
+  /* Stap 2: "Wat zeg je?" before a chat (src/components/Speaking.tsx), and the sound scenes (src/components/Scene.tsx). */
+  speakTurnPrompt: 'What do you say?',
+  speakTurnExample: 'Example',
+  speakTurnReveal: 'Hear the answer',
+  sceneTitle: 'Listen at work',
+  sceneIntro: 'There is noise, as at work. Listen. Then come the questions.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

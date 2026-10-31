@@ -406,6 +406,11 @@ const lang: HelpLanguageSource = {
     backupShare: 'Trimite-ți ție', // nieuw, nalezen
     backupShareHint: 'Trimite-ți fișierul ție, de exemplu pe WhatsApp sau pe e-mail.', // nieuw, nalezen
     backupMade: 'Gata. Păstrează bine acest fișier. Cu el îți recuperezi progresul mai târziu.', // nieuw, nalezen
+    speakTurnPrompt: 'Ce spui?', // nieuw, nalezen
+    speakTurnExample: 'Exemplu', // nieuw, nalezen
+    speakTurnReveal: 'Ascultă răspunsul', // nieuw, nalezen
+    sceneTitle: 'Ascultă la locul de muncă', // nieuw, nalezen
+    sceneIntro: 'E zgomot, ca la muncă. Ascultă. Apoi vin întrebările.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

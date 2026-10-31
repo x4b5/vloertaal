@@ -342,6 +342,14 @@ function defineStates(LANG) {
   add('route:topic', shot('topic&cu=u.firstday&state=mid'), null, { list: true });
   add('route:topic-done', shot('topic&cu=u.firstday&state=shelf'), null, { list: true });
   add('route:topic-locked', shot('topic&cu=u.pay&state=mid&access=preview'), null, { list: true });
+  // "Luister op de werkvloer" (stap 2): only with mixes in public/audio-scenes (none committed;
+  // a test mp3 for the count). The topic page with its scene rows, the scene's first page, after
+  // it was played (Verder), a question and its answer.
+  add('scene:topic', shot('scene&state=topic'), null, { list: true, expect: '.bay-scene' });
+  add('scene:listen', shot('scene&state=listen'), null, { expect: '.scene-play' });
+  add('scene:listen-played', shot('scene&state=listen'), async (p) => { await tap(p, '.scene-play'); }, { expect: '.scene-next' });
+  add('scene:question', shot('scene&state=question&at=0'), null, { expect: '.scene-choices' });
+  add('scene:answered', shot('scene&state=question&at=0'), async (p) => { await tap(p, '.scene-choices .choice', 0); await settle(p, 600); }, { expect: '.scene-why' });
   add('route:topic-sample', shot('topic&cu=u.firstday&state=new&access=sample'), null, { list: true });
   add('route:all-topics-tap', shot('all&state=mid'), async (p) => { await tap(p, '.topic-row', 0); await settle(p); }, { list: true });
   // "Volgorde": the own course in the order of the path (the choice is kept on the device).
@@ -444,6 +452,11 @@ function defineStates(LANG) {
   add('lesson:speak:recording', shot('speak-rec'));
   add('lesson:speak:compare', shot('speak-compare'));
   add('lesson:speak:off', shot('speak-off'));
+  // "Wat zeg je?" before the chat (stap 2): the colleague's line, then say the reply.
+  add('lesson:speak-turn:idle', shot('speak&turn=1'), null, { expect: '.say-turn .say-mic' });
+  add('lesson:speak-turn:compare', shot('speak-compare&turn=1'), null, { expect: '.say-turn .say-rate' });
+  add('lesson:speak-turn:off', shot('speak-off&turn=1'), null, { expect: '.say-turn .say-reveal' });
+  add('lesson:speak-turn:shown', shot('speak-off&turn=1'), async (p) => { await tap(p, '.say-reveal'); }, { expect: '.say-turn .chat-bubble-me .chat-line' });
   add('lesson:retry', shot('retry'));
   add('lesson:quiet', shot('meaning&quiet=1'));
   add('lesson:quit-dialog', shot('meaning'), async (p) => { await tap(p, '.player-top .lesson-close'); }, { expect: '.sheet-stop .sheet-stop-icon' });

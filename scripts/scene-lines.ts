@@ -7,12 +7,15 @@
 //                                     # (eerst npm run clips), zodat elevenlabs.mjs ze opneemt
 //   npm run scenes:lines -- --mix     # schrijft public/audio/scene-mix.sh: per scène de ffmpeg-
 //                                     # commando's die stem en omgevingsgeluid mengen
+//   npm run scenes:lines -- --manifest  # schrijft public/audio-scenes/scenes.json: de lijst van de
+//                                     # mixen die er zijn. Alleen die scènes toont de app (src/lib/scenes.ts).
+//                                     # scene-mix.sh doet dit zelf als laatste stap.
 //
 // Eén clip per beurt: id "<scène-id>.<n>" (g.bouw.steiger.1). Elke clip noemt zijn stem
 // ("voices"), dus elevenlabs.mjs neemt hem alleen in die stem op: Henk in Daniel, Jada in Noa,
 // Bram in Thijmen, Amina in Ariël (zoals src/lib/voices.ts). Een beurt van de leerling ("ik")
 // wordt in Thijmen en in Ariël opgenomen, net als learnerVoice: van zo'n scène komen twee mixen.
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { geluidsscenes, type Spreker } from '../src/content/geluidsscenes';
 import { sayAs } from '../src/lib/sayAs';
 
@@ -78,6 +81,29 @@ if (process.argv.includes('--mix')) {
       );
     }
   }
+  lines.push('# De lijst voor de app: alleen deze scènes worden getoond (src/lib/scenes.ts).', 'npm run scenes:lines -- --manifest');
   writeFileSync('public/audio/scene-mix.sh', `${lines.join('\n')}\n`);
   console.log('public/audio/scene-mix.sh geschreven.');
+}
+
+if (process.argv.includes('--manifest')) {
+  // De app toont een scène alleen als zijn mix er echt is (src/lib/scenes.ts): "<id>.mp3", of voor
+  // een scène met de leerling "<id>.thijmen.mp3" en "<id>.ariel.mp3".
+  const dir = 'public/audio-scenes';
+  const have = existsSync(dir) ? new Set(readdirSync(dir).filter((f) => f.endsWith('.mp3'))) : new Set<string>();
+  const scenes: Record<string, { unit: string; titel: string; files: string[] }> = {};
+  for (const s of geluidsscenes) {
+    const names = s.beurten.some((b) => b.wie === 'ik') ? LEARNER.map((v) => `${s.id}.${v}.mp3`) : [`${s.id}.mp3`];
+    const files = names.filter((f) => have.has(f));
+    if (files.length) scenes[s.id] = { unit: s.naUnit, titel: s.titel, files };
+  }
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(`${dir}/scenes.json`, `${JSON.stringify({ scenes }, null, 1)}\n`);
+  const n = Object.keys(scenes).length;
+  console.log(`${dir}/scenes.json: ${n} van de ${geluidsscenes.length} scènes hebben een mix.`);
+  for (const s of geluidsscenes) {
+    const f = scenes[s.id]?.files.length ?? 0;
+    const want = s.beurten.some((b) => b.wie === 'ik') ? 2 : 1;
+    if (f && f < want) console.log(`  let op: ${s.id} heeft maar ${f} van de ${want} mixen (de andere stem ziet hem niet).`);
+  }
 }

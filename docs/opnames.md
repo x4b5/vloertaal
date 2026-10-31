@@ -203,3 +203,40 @@ Tip: de spreker kan meteen meelezen. Klopt een zin niet, of klinkt hij vreemd? N
 Dan passen we eerst de tekst aan (in `src/i18n/ti.ts`) en neemt de spreker daarna op.
 
 Eén zin vergeten? Dat geeft niets. Die zin leest dan niemand voor (de app laat de knop weg), de rest werkt.
+## 6. "Wat zeg je?" in de les
+
+Voor een gesprek in de les komt nu "Wat zeg je?": de leerling hoort de collega en zegt zelf het
+antwoord. Dat gebruikt de opnames die er al zijn (de zin van de collega en het antwoord, `c.*.q` en
+`c.*.a` in `voices.json`). Er is niets nieuws op te nemen.
+
+Een gesprek zonder opname krijgt "Wat zeg je?" nog niet (nu 77 van de 102 gesprekken wel). Neem je de
+ontbrekende zinnen op (stap 1 tot en met 4), dan komt "Wat zeg je?" er vanzelf bij. Er hoeft dan
+niets aan de code te veranderen.
+
+## 7. De geluidsscènes ("Luister op de werkvloer")
+
+De 30 geluidsscènes (`src/content/geluidsscenes.ts`) zijn een collega op gewoon tempo, met lawaai
+van de werkvloer erachter. In de app staan ze pas als de mix er is. Alle stappen en keuzes staan in
+[`geluidsscenes.md`](geluidsscenes.md#stap-voor-stap-van-opname-tot-de-app). Kort:
+
+```sh
+npm run clips
+npm run scenes:lines -- --merge             # 124 scène-clips achter in public/audio/clips.json
+export ELEVENLABS_API_KEY=jouw-sleutel
+node scripts/voices/elevenlabs.mjs check    # alleen de prijs
+node scripts/voices/elevenlabs.mjs all      # de stemmen
+# het omgevingsgeluid: per scène public/audio-scenes/geluid/<scène-id>.mp3 (Sound Effects, 15 s, loop)
+npm run scenes:lines -- --mix               # het mixscript
+bash public/audio/scene-mix.sh              # 55 mixen en public/audio-scenes/scenes.json
+npx vitest run tests/scenes.test.ts tests/geluidsscenes.test.ts
+```
+
+- **Credits.** De stemmen: ongeveer 5.500 (5.526 tekens, één opname van elke zin; met een tweede
+  poging voor een paar zinnen 7.000 tot 10.000). Het omgevingsgeluid: 5.000 tot 8.000 als scènes
+  een geluid delen, 12.000 tot 16.000 met een eigen geluid per scène. Samen meestal **10.000 tot
+  15.000**. Kijk de prijs van Sound Effects na op de prijspagina van ElevenLabs; die verandert soms.
+- **Mee in de commit:** `public/audio-el/<stem>/g.*.mp3` met `public/audio-el/voices.json`,
+  `public/audio-scenes/*.mp3` en `public/audio-scenes/scenes.json`.
+- **Niet mee:** `public/audio/` en `public/audio-scenes/geluid/` (beide staan in `.gitignore`).
+- **Alleen wat er is.** De app toont alleen de scènes die in `scenes.json` staan. Haal je een mix weg,
+  draai dan `npm run scenes:lines -- --manifest` opnieuw.
