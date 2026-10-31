@@ -62,6 +62,10 @@ export const zegHetWrong: Record<string, readonly [{ text: string; feedback: str
     { text: 'Het maakt mij niet uit wat ik ben. Als ik maar werk heb.', feedback: 'Het is wel belangrijk. Werknemer of zzp\'er geeft andere rechten.' },
     { text: 'Ik vraag het wel aan een collega. Die weet het vast.', feedback: 'Een collega weet het misschien niet. Vraag het aan je baas.' },
   ],
+  'r.l.contract.5.mo1': [
+    { text: 'Ik werk hier. Papieren zijn niet mijn probleem, toch?', feedback: 'Toch wel. Je A1 is ook voor jou belangrijk.' },
+    { text: 'Geef me nu mijn A1-verklaring, anders stop ik ermee!', feedback: 'Dat klinkt boos. Je kunt het ook rustig vragen.' },
+  ],
   'r.l.stage.1.mo1': [
     { text: 'Oké, ik begin vandaag al. De POK komt later wel.', feedback: 'Zonder getekende POK begin je beter nog niet.' },
     { text: 'Ik weet niet of het mag. Ik zeg maar niets.', feedback: 'Dan weet je niet of de POK klaar is. Vraag het gewoon.' },
@@ -85,6 +89,10 @@ export const zegHetWrong: Record<string, readonly [{ text: string; feedback: str
   'r.l.loon.3.mo1': [
     { text: 'Ik heb wat langer gewerkt de laatste tijd. Dat is toch goed?', feedback: 'Dan weet de baas niet hoeveel uur. En je vraagt niets.' },
     { text: 'Ik heb 10 uur overgewerkt. Maar dat geeft niet, hoor. Laat maar.', feedback: 'Je mag vragen wat je voor je overuren krijgt.' },
+  ],
+  'r.l.loon.4.mo1': [
+    { text: 'Een boete? Oké, dan heb ik vast iets fout gedaan.', feedback: 'Vraag eerst waarom. Een boete moet in je contract staan.' },
+    { text: 'Ik betaal geen boete. Dit bureau is gewoon oneerlijk!', feedback: 'Dat klinkt boos. Vraag rustig waar het staat.' },
   ],
   'r.l.rekenen.1.mo1': [
     { text: 'Mijn rooster is raar. Er staan volgens mij te veel uren op.', feedback: 'Noem de uren. Dan kan de baas het snel nakijken.' },
@@ -141,6 +149,10 @@ export const zegHetWrong: Record<string, readonly [{ text: string; feedback: str
   'r.l.ziek.3.mo1': [
     { text: 'Ik voel me wat beter. Ik kom wel een keer terug.', feedback: 'Dan weet je baas niet wanneer je komt. Noem een dag.' },
     { text: 'Ik ben beter. Dat zeg ik morgen wel tegen een collega.', feedback: 'Je meldt je beter bij je leidinggevende. Niet bij een collega.' },
+  ],
+  'r.l.ziek.4.mo1': [
+    { text: 'Ik ben ziek. Ik ga morgen naar huis. Tot over een maand.', feedback: 'Je vraagt niets. Vraag eerst of het mag.' },
+    { text: 'Ik ben ziek. Mijn telefoon staat uit. Ik bel later wel.', feedback: 'Dan ben je niet bereikbaar. Dat moet wel.' },
   ],
   'r.l.veilig.1.mo1': [
     { text: 'Mijn handschoenen zijn kapot. Ik werk wel zonder verder.', feedback: 'Dan kun je je pijn doen. Vraag om nieuwe handschoenen.' },
@@ -331,6 +343,10 @@ export const zegHetWrong: Record<string, readonly [{ text: string; feedback: str
   'r.l.geld.7.mo1': [
     { text: 'Die jas is te klein. Ik betaal hem dus ook niet.', feedback: 'Dan komen er kosten bij. Meld eerst dat je hem terugstuurt.' },
     { text: 'Jullie jassen zijn waardeloos! Ik wil nu mijn geld!', feedback: 'Dat klinkt boos. Vraag het rustig, dan helpen ze je sneller.' },
+  ],
+  'r.l.geld.8.mo1': [
+    { text: 'Ik ga terug naar mijn land. Stop mijn WW maar.', feedback: 'Dan stopt je WW echt. Vraag eerst naar het formulier.' },
+    { text: 'Ik ben al in mijn land. Kunt u mijn WW hierheen sturen?', feedback: 'Dan ben je te laat. Vraag het vóór je vertrekt.' },
   ],
   'r.l.meedoen.4.mo1': [
     { text: 'Wauw, wat erg! Ik stuur het meteen naar iedereen.', feedback: 'Dan deel je misschien nepnieuws. Check het eerst.' },

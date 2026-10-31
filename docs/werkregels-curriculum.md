@@ -89,16 +89,16 @@ Zie ook de meetlat voor A2-niveau: [`taal-a2.md`](taal-a2.md).
 |---|---|---|
 | 1 | Werk zoeken en solliciteren | 1.1 Waar vind je werk? · 1.2 Je cv: kort en eerlijk · 1.3 Het sollicitatiegesprek · 1.4 Proefdag en het aanbod |
 | 2 | Je eerste dag | 2.1 Op tijd, en alles bij je · 2.2 Kennismaken · 2.3 Vragen stellen en terugzeggen |
-| 3 | Contract en soorten werk | 3.1 Je contract: wat staat erin? · 3.2 Proeftijd, tijdelijk en vast · 3.3 Oproepwerk en uitzendwerk · 3.4 Stage, leerwerkbaan en zzp |
-| 4 | Loon en loonstrook | 4.1 Bruto en netto · 4.2 Je loonstrook checken · 4.3 Vakantiegeld, toeslag en overwerk |
+| 3 | Contract en soorten werk | 3.1 Je contract: wat staat erin? · 3.2 Proeftijd, tijdelijk en vast · 3.3 Oproepwerk en uitzendwerk · 3.4 Stage, leerwerkbaan en zzp · 3.5 Gedetacheerd: de A1-verklaring |
+| 4 | Loon en loonstrook | 4.1 Bruto en netto · 4.2 Je loonstrook checken · 4.3 Vakantiegeld, toeslag en overwerk · 4.4 Wonen, vervoer en boetes via het bureau |
 | 5 | Werktijden, pauze en vrij | 5.1 Je rooster en je werktijden · 5.2 Pauze · 5.3 Overwerk en nee zeggen · 5.4 Vrij vragen en verlof · 5.5 Kinderen en zorg |
-| 6 | Ziek zijn | 6.1 Je ziekmelden · 6.2 Je rechten als je ziek bent · 6.3 Langer ziek en weer beter |
+| 6 | Ziek zijn | 6.1 Je ziekmelden · 6.2 Je rechten als je ziek bent · 6.3 Langer ziek en weer beter · 6.4 Ziek en naar je eigen land |
 | 7 | Veilig en gezond werken | 7.1 Beschermende spullen en uitleg · 7.2 Onveilig? Zeg het en stop · 7.3 Een ongeluk, of te veel stress · 7.4 Fit voor je werk: slapen, eten, bewegen · 7.5 Alcohol, drugs en je werk |
 | 8 | Samenwerken: de ongeschreven regels | 8.1 Direct zeggen en feedback · 8.2 Het oneens zijn · 8.3 Afspraak is afspraak · 8.4 Koffie, verjaardagen en je telefoon |
 | 9 | Problemen en je rechten | 9.1 Discriminatie · 9.2 Grensoverschrijdend gedrag · 9.3 Uitbuiting en oplichting · 9.4 Ontslag en het einde van je baan |
-| 10 | Uitkering, werk en geld | 10.1 Werk kwijt: WW · 10.2 Van uitkering naar werk · 10.3 Belasting terug en je post · 10.4 Schulden: vroeg hulp vragen · 10.5 Je werk stopt: regel dit · 10.6 Je geld per maand: vaste lasten en sparen · 10.7 Kopen, abonnementen en ruilen |
+| 10 | Uitkering, werk en geld | 10.1 Werk kwijt: WW · 10.2 Van uitkering naar werk · 10.3 Belasting terug en je post · 10.4 Schulden: vroeg hulp vragen · 10.5 Je werk stopt: regel dit · 10.6 Je geld per maand: vaste lasten en sparen · 10.7 Kopen, abonnementen en ruilen · 10.8 Werkloos en terug naar je land |
 
-**10 units, 42 lessen.** Les 5.5 en 10.5 kwamen erbij op 30 oktober 2026, en les 7.4, 7.5, 10.6 en 10.7 in de tweede Entree-ronde (deel 7). Na de Entree-units 11–17 komen nog unit 18 (Schrijven op je werk) en unit 19 (Jouw weg: kiezen en verder leren), ook in deel 7. Unit 3 is ook de unit voor herintreders en starters: stage, proeftijd,
+**10 units, 46 lessen.** Les 5.5 en 10.5 kwamen erbij op 30 oktober 2026, les 7.4, 7.5, 10.6 en 10.7 in de tweede Entree-ronde (deel 7), en les 3.5, 4.4, 6.4 en 10.8 voor arbeidsmigranten (deel 8, 31 oktober 2026). Na de Entree-units 11–17 komen nog unit 18 (Schrijven op je werk) en unit 19 (Jouw weg: kiezen en verder leren), ook in deel 7. Unit 3 is ook de unit voor herintreders en starters: stage, proeftijd,
 uitzendwerk en zzp. Volgorde: zoeken → beginnen → afspraken → geld → tijd → ziekte → veiligheid →
 samenwerken → problemen → uitkering. Units 8 en 9 kunnen ook eerder; ze bouwen niet op elkaar.
 
@@ -3955,3 +3955,145 @@ de klant het niet. Zeg het tegen je chef. Die belt haar.*
 
 **Wie kan je helpen:** je chef of de receptie van de garage (die belt de klant) · je
 praktijkopleider.
+
+---
+
+## 8. Arbeidsmigranten (31 oktober 2026)
+
+*4 lessen voor de gaten uit de inhoudsaudit (punt 4: "de situaties met het grootste risico
+ontbreken"). Elke les staat in Nederland én in België, in een bestaande unit: de Belgische versie
+staat in `src/content/regels/be/units/` met `r.be.`-id's. Alleen Werkregels: Nederlands op A2,
+zonder vertalingen en zonder opnames. Elk feit heeft in de code een `// ⚖️ check:` met de bron. De
+bronnen zijn opgezocht via zoekresultaten van uwv.nl, svb.nl, rijksoverheid.nl, postedworkers.nl,
+werk.belgie.be, vlaanderen.be, riziv.fgov.be en europa.eu; de sites zelf waren in deze sessie niet
+te openen. Een deskundige moet ze nakijken.*
+
+| Gat | Les | Waar | Nakijklijst |
+|---|---|---|---|
+| Ziek worden en naar je eigen land | 6.4 Ziek en naar je eigen land | `r.ziek` · `r.be.ziek` | A |
+| WW of werkloosheid meenemen (U2) | 10.8 Werkloos en terug naar je land | `r.geld` · `r.be.geld` | B (unit geld) |
+| Gedetacheerd: A1 (NL: melding WagwEU; BE: Limosa) | 3.5 Gedetacheerd: de A1-verklaring · BE: Gedetacheerd: A1 en Limosa | `r.contract` · `r.be.contract` | A |
+| Boetes, vervoer en wonen via het bureau (NL: keurmerk SNF/AKF) | 4.4 Wonen, vervoer en boetes via het bureau · BE: via je werk | `r.loon` · `r.be.loon` | A |
+
+**Waarom in bestaande units.** Ziek naar huis hoort bij ziek zijn, U2 bij "Je werk stopt: regel
+dit" (10.5), detacheren bij de soorten contract (unit 3), en inhoudingen bij de loonstrook (unit
+4). Een eigen unit "Werken vanuit het buitenland" zou alles bij elkaar zetten, maar dan mist de
+leerling deze lessen in de units waar die het zoekt. De lessen staan aan het eind van de unit; de
+volgorde van de andere lessen blijft gelijk.
+
+**Telling.** Units 1–10: 46 lessen (was 42). "Wat is het beste?": A 2, B 1, C 1 en in België A 1,
+B 1, C 2. "Waar of niet waar?": NL 3 waar, 4 niet waar; BE ook. "Wie vraag je het?": 4 per land.
+
+### Les 6.4 · Ziek en naar je eigen land
+
+**Leerdoel:** ziek en naar je eigen land? Je weet wat je regelt. Je vraagt het eerst.
+
+**Scène** · *Ewa met haar arm in een mitella, een tas met een busticket.* Ewa werkt via een
+uitzendbureau. Ze heeft haar pols gebroken. Ze kan 4 weken niet werken. Ze wil graag naar haar
+familie, in haar eigen land.
+
+**Regelkaart** · *Ziek en naar huis? Vraag het eerst, en blijf bereikbaar.*
+
+- Ben je ziek? Dan ga je niet zomaar naar je eigen land.
+- Vraag het eerst aan je werkgever of het bureau. De bedrijfsarts kijkt of de reis je herstel niet tegenhoudt ⚖️.
+- Ga je zonder toestemming? Dan kan je loon stoppen ⚖️ (art. 7:629 lid 3 en 6 BW).
+- Krijg je Ziektewet van UWV? Geef je reis dan eerst door aan UWV ⚖️ (uiterlijk 2 weken vooraf).
+- Geef je adres daar door, en neem je telefoon op.
+
+**België:** zeg het eerst aan je werkgever of het interimkantoor; geef je adres door, want je baas
+mag een controlearts sturen ⚖️ (art. 31 §3 Arbeidsovereenkomstenwet). Met een uitkering van het
+ziekenfonds meld je een reis vooraf; buiten de Europese Unie vraag je eerst toestemming aan de
+adviserend arts ⚖️.
+
+**Vragen:** waar of niet waar "Ben je ziek? Dan mag je altijd naar je eigen land, zonder iets te
+vragen." (niet waar) · wat doe je: Ewa vraagt het bureau eerst (goed) · waar of niet waar: een
+briefje van een dokter daar is handig, en neem je zorgpas mee (Europese pas) (waar) · wie vraag je:
+UWV (België: het ziekenfonds).
+
+**Onthoud:** Ziek en naar huis? Vraag het eerst, en blijf bereikbaar. *(België: Meld het eerst, en
+geef je adres door.)*
+
+**Wie kan je helpen:** je leidinggevende of het bureau · de bedrijfsarts · UWV. *(België: het
+interimkantoor · je ziekenfonds · een vakbond.)*
+
+### Les 10.8 · Werkloos en terug naar je land
+
+**Leerdoel:** je weet hoe je je WW meeneemt naar een ander EU-land. Je regelt het vóór je vertrekt.
+
+**Scène** · Piotr werkte 2 jaar in een fabriek. Zijn contract is gestopt. Hij krijgt nu WW. Hij wil
+terug naar Polen, en daar werk zoeken.
+
+**Regelkaart** · *WW meenemen? Vraag eerst het formulier U2 aan bij UWV.*
+
+- Ga je werk zoeken in een ander land van de EU? Dan kun je je WW soms meenemen ⚖️ (Verordening 883/2004 art. 64).
+- Je moet eerst minstens 4 weken ⚖️ bij UWV ingeschreven staan.
+- Vraag vóór je vertrek het formulier U2 aan bij UWV.
+- Meld je binnen 7 dagen ⚖️ bij het werkbureau in het nieuwe land.
+- Je krijgt de WW daar meestal hooguit 3 maanden ⚖️.
+- Ga je zonder U2? Dan stopt je WW.
+- Vraag UWV ook wat er met je zorgverzekering gebeurt.
+
+**België:** dezelfde regel voor de werkloosheidsuitkering; de U2 vraag je aan via je vakbond of de
+HVW, de RVA beslist ⚖️.
+
+**Vragen:** waar of niet waar "Je WW gaat altijd door, ook in een ander land." (niet waar) · wat
+doe je: Piotr vraagt UWV nu om het formulier U2 (goed) · waar of niet waar: eerst een tijd
+ingeschreven staan (waar) · wie vraag je: UWV (België: de HVW of je vakbond).
+
+**Onthoud:** WW meenemen? Vraag eerst het formulier U2 aan bij UWV.
+
+### Les 3.5 · Gedetacheerd: de A1-verklaring (België: A1 en Limosa)
+
+**Leerdoel:** je weet wat gedetacheerd zijn betekent. Je vraagt naar je A1-verklaring.
+
+**Scène** · Mohammed werkt voor een bouwbedrijf in Portugal. Het bedrijf stuurt hem 6 maanden naar
+Nederland (België). Hij blijft in dienst van het bedrijf in Portugal.
+
+**Regelkaart** · *Gedetacheerd? Vraag je werkgever om je A1-verklaring.*
+
+- Stuurt je werkgever je voor een tijd naar Nederland? Dan ben je gedetacheerd.
+- Je blijft dan vaak verzekerd in je eigen land. Het bewijs daarvan is de A1-verklaring ⚖️ (Verordening 883/2004 art. 12).
+- Detacheren kan meestal hooguit 2 jaar ⚖️.
+- In Nederland krijg je wel minstens het Nederlandse minimumloon ⚖️ (WagwEU).
+- Je werkgever meldt je werk vooraf bij de Nederlandse overheid ⚖️ (meldloket postedworkers.nl).
+
+**België:** de werkgever doet vóór het werk de Limosa-melding; het bewijs heet L1 ⚖️ (Programmawet
+27 december 2006). Je krijgt minstens het Belgische minimumloon voor jouw werk ⚖️ (wet 5 maart 2002).
+
+**Vragen:** waar of niet waar "Met een A1-verklaring mag je werkgever je minder geven dan het
+minimumloon." (niet waar) · wat doe je: vraag je baas om een kopie van je A1 (België: om de L1) ·
+wie vraag je: de Arbeidsinspectie (België: Toezicht op de Sociale Wetten).
+
+**Onthoud:** Gedetacheerd? Vraag je werkgever om je A1-verklaring. *(België: … om je A1 en je L1.)*
+
+### Les 4.4 · Wonen, vervoer en boetes via het bureau (België: via je werk)
+
+**Leerdoel:** je weet wat het bureau van je loon mag inhouden. Je checkt je huis en je loonstrook.
+
+**Scène** · Ewa woont net in Nederland. Ze werkt via een uitzendbureau in een magazijn. Ze woont in
+een huis van het bureau. Op haar loonstrook staan huur, vervoer en een boete.
+
+**Regelkaart** · *Wonen via het bureau? Check het keurmerk en je loonstrook.*
+
+- Heeft het huis een keurmerk? Alleen dan mag het bureau huur inhouden ⚖️. Dat keurmerk is van SNF of AKF.
+- Het mag hooguit 25 procent van het minimumloon zijn ⚖️.
+- Je huurcontract staat los van je werkcontract ⚖️.
+- Voor vervoer mag niets van je minimumloon af ⚖️ (Wml art. 13: alleen huisvesting en zorgverzekering).
+- Een boete mag alleen als die in je contract staat ⚖️ (art. 7:650 BW).
+
+*Redactie:* de inhouding voor huisvesting op het minimumloon verdwijnt waarschijnlijk per 1 juli
+2028 (Kamerbrief SZW 10 september 2026). Pas de les dan aan.
+
+**België:** je baas mag niet zomaar iets van je loon afhouden ⚖️ (Loonbeschermingswet art. 23); een
+boete mag alleen als die in het arbeidsreglement staat ⚖️; schade betaal je meestal alleen terug
+bij een zware fout ⚖️ (art. 18 Arbeidsovereenkomstenwet); alles staat op je loonbrief; vraag een
+apart huurcontract en zet de afspraak over het busje op papier (advies).
+
+**Vragen:** waar of niet waar "Het bureau mag voor elk huis de huur van je loon inhouden." (niet
+waar) · wat doe je: "busje 30 euro" op het minimumloon, Ewa vraagt waarom (goed) · waar of niet
+waar "Een boete mag alleen als die in je contract staat." (waar; België: een glas per ongeluk
+breken betaal je meestal niet) · wie vraag je: de Arbeidsinspectie (België: Toezicht op de Sociale
+Wetten).
+
+**Onthoud:** Wonen via het bureau? Check het keurmerk en je loonstrook. *(België: Iets van je loon
+af? Vraag waarom, en kijk op je loonbrief.)*

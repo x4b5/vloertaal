@@ -32,7 +32,8 @@ describe('counts: rules learned', () => {
   it('counts the rule cards of finished rules lessons', () => {
     expect(learnedItems('regels', {})).toBe(0);
     expect(learnedItems('regels', done('r.l.loon.1'))).toBe(1);
-    expect(learnedItems('regels', done(...unit('r.loon').lessons.map((l) => l.id)))).toBe(3);
+    // 4 lessons since les 4.4 "Wonen, vervoer en boetes via het bureau" (31 October 2026).
+    expect(learnedItems('regels', done(...unit('r.loon').lessons.map((l) => l.id)))).toBe(4);
     // A lesson not finished, or one of the other course, adds nothing.
     expect(learnedItems('regels', done('r.l.loon.1', 'l.hello', 'r.l.nothing'))).toBe(1);
     // Every finished rules lesson has exactly one rule card.
@@ -176,10 +177,11 @@ describe('certificate of a rules unit', () => {
     expect(d.titleNl).toBe('Loon en loonstrook');
     expect(d.titleEn).toBe('');
     expect(d.date).toBe('8 oktober 2026');
-    expect(d.words).toBe(3);
+    // Les 4.4 "Wonen, vervoer en boetes via het bureau" came in on 31 October 2026: 4 lessons.
+    expect(d.words).toBe(4);
     expect(certSub(d)).toBe('Werken in Nederland');
     expect(certListLabel(d)).toBe('Belangrijkste regels');
-    expect(certMeta(d)).toBe('Werken in Nederland · 3 lessen · 3 regels');
+    expect(certMeta(d)).toBe('Werken in Nederland · 4 lessen · 4 regels');
     expect(sealRing(d)).toBe(SEAL_RING_RULES);
     expect(CERT_NOTE).toMatch(/^Oefencertificaat/);
     // Nothing on it is about learning Dutch.

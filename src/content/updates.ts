@@ -32,6 +32,7 @@ export const UPDATES: Update[] = [
       'Rustiger begin: je start meteen met les 1. De toets "Wat ken je al?" komt pas na de eerste les. De knop Melden staat in de les niet meer aan. Wil je hem toch? Zet hem aan onderaan bij Over.',
       'Taal: bij "Maak het gesprek af" zie je de vertaling pas na je antwoord. In de eerste onderwerpen hoef je niet te typen: je hoort een woord en kiest het. En na een les staat soms een zin om vandaag op je werk te proberen.',
       'De app start sneller, en een woord dat je al hoorde speelt meteen. Kan je telefoon je voortgang niet bewaren? Dan zie je dat nu, met een tip.',
+      'Werkregels: 4 nieuwe lessen voor wie uit een ander land komt, voor Nederland en België. Ziek en naar je eigen land, je WW of uitkering meenemen (formulier U2), gedetacheerd zijn (A1, in België ook Limosa), en wonen, vervoer en boetes via het bureau. Nog niet nagekeken door een expert.',
     ],
   },
   {

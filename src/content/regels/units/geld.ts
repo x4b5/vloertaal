@@ -628,5 +628,101 @@ export const geldUnit: RuleUnit = {
         { kind: 'model', id: 'r.l.geld.7.mo1', context: 'Je wilt iets terugsturen naar een webwinkel.', nl: 'Ik wil deze jas terugsturen. Hoe krijg ik mijn geld terug?' },
       ],
     },
+    {
+      // Les 10.8 · Werkloos en terug naar je land (arbeidsmigranten, 31 oktober 2026; zie
+      //   docs/werkregels-curriculum.md, deel 8).
+      id: 'r.l.geld.8',
+      title: 'Werkloos en terug naar je land',
+      goal: 'Je weet hoe je je WW meeneemt naar een ander EU-land. Je regelt het vóór je vertrekt.',
+      remember: 'WW meenemen? Vraag eerst het formulier U2 aan bij UWV.',
+      // Wie kan je helpen: UWV · een vakbond · het Juridisch Loket.
+      help: ['uwv', 'vakbond', 'juridischloket'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.geld.8.sc1',
+          picture: 'Piotr met een koffer bij de bushalte. Hij kijkt op zijn telefoon.',
+          lines: [
+            'Piotr werkte 2 jaar in een fabriek.',
+            'Zijn contract is gestopt.',
+            'Hij krijgt nu WW.',
+            'Hij wil terug naar Polen, en daar werk zoeken.',
+          ],
+        },
+        // ⚖️ check: Wie werkloos is en werk gaat zoeken in een ander land van de EU, de EER of Zwitserland,
+        //   kan de WW meenemen (export) (Verordening 883/2004 art. 64; uwv.nl "met een WW-uitkering naar het
+        //   buitenland"; zoekresultaat 31-10-2026, uwv.nl was in deze sessie niet te openen).
+        // ⚖️ check: Voorwaarde: minstens 4 weken als werkzoekende ingeschreven bij UWV (art. 64 lid 1 sub a;
+        //   UWV kan een kortere termijn toestaan); het recht op WW is nog niet afgelopen (uwv.nl).
+        // ⚖️ check: Het formulier heet PD U2; je vraagt het vóór vertrek aan bij UWV (zoekresultaat: minstens
+        //   1 week vooraf). Binnen 7 dagen na vertrek meld je je als werkzoekende bij de arbeidsdienst van het
+        //   nieuwe land (art. 64 lid 1 sub b; nederlandwereldwijd.nl; europa.eu Your Europe).
+        // ⚖️ check: Export meestal 3 maanden; UWV kan verlengen tot 6 maanden (art. 64 lid 1 sub c; europa.eu).
+        //   Nakijken: geldt een herziening van Verordening 883/2004 (6 maanden export)? Niet in werking gevonden.
+        // ⚖️ check: Vertrek zonder PD U2: de WW stopt (uwv.nl; nederlandwereldwijd.nl "WW-uitkering buiten
+        //   Nederland, uitkering stopt").
+        // ⚖️ check: Na vertrek kan de Nederlandse zorgverzekering stoppen; vraag UWV naar de zorg tijdens de
+        //   export (formulier S1) (Verordening 883/2004 art. 17; uwv.nl; nakijken).
+        {
+          kind: 'rule',
+          id: 'r.l.geld.8.ru1',
+          emoji: '🗂️',
+          title: 'WW meenemen? Vraag eerst het formulier U2 aan bij UWV.',
+          body: [
+            'Ga je werk zoeken in een ander land van de EU? Dan kun je je WW soms meenemen.',
+            'Je moet eerst minstens 4 weken bij UWV ingeschreven staan.',
+            'Vraag vóór je vertrek het formulier U2 aan bij UWV.',
+            'Meld je binnen 7 dagen bij het werkbureau in het nieuwe land.',
+            'Je krijgt de WW daar meestal hooguit 3 maanden.',
+            'Ga je zonder U2? Dan stopt je WW.',
+            'Vraag UWV ook wat er met je zorgverzekering gebeurt.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: Zonder PD U2 gaat de WW niet mee; export meestal hooguit 3 maanden (Verordening 883/2004
+        //   art. 64; uwv.nl; zoekresultaat 31-10-2026).
+        {
+          kind: 'truefalse',
+          id: 'r.l.geld.8.tf1',
+          statement: 'Je WW gaat altijd door, ook in een ander land.',
+          answer: false,
+          why: 'Je WW gaat niet zomaar mee. Je hebt het formulier U2 nodig. Dat vraag je aan vóór je vertrekt. Meestal krijg je de WW daar hooguit 3 maanden.',
+        },
+        // ⚖️ check: Binnen 7 dagen na vertrek inschrijven bij de arbeidsdienst van het nieuwe land
+        //   (Verordening 883/2004 art. 64 lid 1 sub b).
+        {
+          kind: 'whatdo',
+          id: 'r.l.geld.8.wd1',
+          situation: 'Piotr wil volgende week naar Polen. Wat kan Piotr het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij gaat, en hij belt UWV vanuit Polen.', best: false, feedback: 'Dan is hij te laat. Het formulier vraag je vóór je vertrek aan.' },
+            { id: 'b', text: 'Hij vraagt UWV nu om het formulier U2.', best: true, feedback: 'Goed. Dan kan hij zijn WW meenemen.' },
+            { id: 'c', text: 'Hij stopt zelf zijn WW, en hij vraagt niets.', best: false, feedback: 'Dat hoeft niet. Met het formulier kan hij zijn WW soms meenemen.' },
+          ],
+          why: 'Vraag het formulier U2 aan vóór je vertrekt. Meld je in Polen binnen 7 dagen bij het werkbureau. Geef ook je nieuwe adres door aan UWV.',
+        },
+        // ⚖️ check: Minstens 4 weken ingeschreven als werkzoekende vóór de export; UWV kan een uitzondering
+        //   maken (Verordening 883/2004 art. 64 lid 1 sub a; uwv.nl).
+        {
+          kind: 'truefalse',
+          id: 'r.l.geld.8.tf2',
+          statement: 'Je moet eerst een tijd bij UWV ingeschreven staan. Pas dan kun je je WW meenemen.',
+          answer: true,
+          why: 'Klopt. Je staat eerst minstens 4 weken als werkzoekende bij UWV. Daarna kun je het formulier U2 krijgen. Soms mag het eerder, als UWV dat goed vindt.',
+        },
+        {
+          kind: 'whoask',
+          id: 'r.l.geld.8.wa1',
+          question: 'Je wilt je WW meenemen naar een ander land. Waar vraag je het formulier U2 aan?',
+          options: [
+            { id: 'a', who: 'gemeente', best: false, feedback: 'De gemeente gaat niet over je WW.' },
+            { id: 'b', who: 'vakbond', best: false, feedback: 'Een vakbond kan je helpen. Maar het formulier krijg je ergens anders.' },
+            { id: 'c', who: 'uwv', best: true, feedback: 'Goed. UWV geeft het formulier U2.' },
+          ],
+          why: 'Het formulier U2 vraag je aan bij UWV, vóór je vertrekt.',
+        },
+        { kind: 'model', id: 'r.l.geld.8.mo1', context: 'Je belt UWV, want je wilt terug naar je land.', nl: 'Ik ga werk zoeken in mijn eigen land. Kan ik het formulier U2 krijgen?' },
+      ],
+    },
   ],
 };

@@ -275,5 +275,101 @@ export const ziekUnit: RuleUnit = {
         { kind: 'model', id: 'r.l.ziek.3.mo1', context: 'Je meldt je beter bij je leidinggevende.', nl: 'Ik ben weer beter. Ik kan morgen weer komen werken.' },
       ],
     },
+    {
+      // Les 6.4 · Ziek en naar je eigen land (arbeidsmigranten, 31 oktober 2026; zie
+      //   docs/werkregels-curriculum.md, deel 8).
+      id: 'r.l.ziek.4',
+      title: 'Ziek en naar je eigen land',
+      goal: 'Ziek en naar je eigen land? Je weet wat je regelt. Je vraagt het eerst.',
+      remember: 'Ziek en naar huis? Vraag het eerst, en blijf bereikbaar.',
+      // Wie kan je helpen: je leidinggevende of het uitzendbureau · de bedrijfsarts · UWV (heb je een
+      //   Ziektewet-uitkering?).
+      help: ['leidinggevende', 'uitzendbureau', 'bedrijfsarts', 'uwv'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.ziek.4.sc1',
+          picture: 'Ewa met haar arm in een mitella. Naast haar staat een tas met een busticket.',
+          lines: [
+            'Ewa werkt via een uitzendbureau.',
+            'Ze heeft haar pols gebroken.',
+            'Ze kan 4 weken niet werken.',
+            'Ze wil graag naar haar familie, in haar eigen land.',
+          ],
+        },
+        // ⚖️ check: Wie ziek is, overlegt eerst met de werkgever (of het uitzendbureau) voor hij naar het
+        //   buitenland gaat; de bedrijfsarts adviseert of de reis het herstel niet hindert, de werkgever
+        //   beslist (grantthornton.nl "ziekmelding vanuit het buitenland"; hrpraktijk.nl; zoekresultaat 31-10-2026).
+        // ⚖️ check: Wie het herstel belemmert of vertraagt, of zich niet aan redelijke controlevoorschriften
+        //   houdt, kan zijn loon kwijtraken of opgeschort zien (art. 7:629 lid 3 sub c en lid 6 BW; wetten.overheid.nl).
+        // ⚖️ check: Met een Ziektewet-uitkering geef je een reis naar het buitenland uiterlijk 2 weken vóór
+        //   vertrek door aan UWV, met het wijzigingsformulier (uwv.nl "vakantie Ziektewet" en "met een
+        //   Ziektewet-uitkering naar het buitenland"; zoekresultaat, uwv.nl was in deze sessie niet te openen).
+        // ⚖️ check: Je moet bereikbaar blijven voor werkgever en bedrijfsarts, ook in het buitenland
+        //   (verzuimvoorschriften, art. 7:629 lid 6 BW).
+        {
+          kind: 'rule',
+          id: 'r.l.ziek.4.ru1',
+          emoji: '🏥',
+          title: 'Ziek en naar huis? Vraag het eerst, en blijf bereikbaar.',
+          body: [
+            'Ben je ziek? Dan ga je niet zomaar naar je eigen land.',
+            'Vraag het eerst aan je werkgever of het bureau.',
+            'De bedrijfsarts kijkt of de reis je herstel niet tegenhoudt.',
+            'Ga je zonder toestemming? Dan kan je loon stoppen.',
+            'Krijg je Ziektewet van UWV? Geef je reis dan eerst door aan UWV.',
+            'Geef je adres daar door, en neem je telefoon op.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: Zonder toestemming naar het buitenland terwijl je ziek bent kan leiden tot het stoppen of
+        //   opschorten van het loon (art. 7:629 lid 3 sub c en lid 6 BW); met toestemming loopt het loon door
+        //   (grantthornton.nl; zoekresultaat 31-10-2026).
+        {
+          kind: 'truefalse',
+          id: 'r.l.ziek.4.tf1',
+          statement: 'Ben je ziek? Dan mag je altijd naar je eigen land, zonder iets te vragen.',
+          answer: false,
+          why: 'Vraag het eerst aan je werkgever of het bureau. De bedrijfsarts kijkt of het kan. Ga je zonder toestemming? Dan kan je loon stoppen.',
+        },
+        {
+          kind: 'whatdo',
+          id: 'r.l.ziek.4.wd1',
+          situation: 'Ewa wil volgende week naar huis. Wat kan Ewa het beste doen?',
+          options: [
+            { id: 'a', text: 'Ze vraagt het bureau eerst of ze mag gaan.', best: true, feedback: 'Goed. Dan weet het bureau waar ze is.' },
+            { id: 'b', text: 'Ze gaat stil naar huis. Ze werkt nu toch niet.', best: false, feedback: 'Dan weet het bureau niet waar ze is. Haar loon kan stoppen.' },
+            { id: 'c', text: 'Ze zegt haar contract op. Dan is ze vrij om te gaan.', best: false, feedback: 'Dan raakt ze haar werk en haar loon kwijt. Dat hoeft niet.' },
+          ],
+          why: 'Vraag het eerst. Zeg waar je bent, en hoe ze je kunnen bellen. Krijg je toestemming? Dan loopt je loon meestal gewoon door.',
+        },
+        // ⚖️ check: Een verklaring van een arts in het land waar je bent, helpt om te laten zien dat je ziek
+        //   bent; bij twijfel moet de werknemer de ziekte aannemelijk maken (grantthornton.nl; zoekresultaat).
+        // ⚖️ check: Met de Europese zorgpas (EHIC, vaak op de achterkant van de Nederlandse zorgpas) krijg je
+        //   in een ander EU-land de nodige zorg via je zorgverzekering (Verordening 883/2004 art. 19;
+        //   rijksoverheid.nl "zorgverzekering en buitenland"; niet geopend, nakijken).
+        {
+          kind: 'truefalse',
+          id: 'r.l.ziek.4.tf2',
+          statement: 'Ben je ziek in je eigen land? Dan is een briefje van een dokter daar handig.',
+          answer: true,
+          why: 'Een briefje van een dokter daar laat zien dat je ziek bent. Neem ook je zorgpas mee. Op de achterkant staat vaak de Europese pas. Dan betaalt je zorgverzekering de nodige zorg.',
+        },
+        // ⚖️ check: Reis met een Ziektewet-uitkering uiterlijk 2 weken vooraf doorgeven aan UWV (uwv.nl
+        //   "vakantie Ziektewet"; zoekresultaat 31-10-2026).
+        {
+          kind: 'whoask',
+          id: 'r.l.ziek.4.wa1',
+          question: 'Je krijgt Ziektewet van UWV. Je wilt naar je eigen land. Aan wie geef je dat door?',
+          options: [
+            { id: 'a', who: 'huisarts', best: false, feedback: 'De huisarts helpt je beter worden. Je reis geef je ergens anders door.' },
+            { id: 'b', who: 'uwv', best: true, feedback: 'Goed. Geef het uiterlijk 2 weken voor je vertrek door.' },
+            { id: 'c', who: 'uitzendbureau', best: false, feedback: 'Je uitkering komt nu van UWV. Geef het daar door.' },
+          ],
+          why: 'Krijg je een Ziektewet-uitkering? Geef een reis uiterlijk 2 weken vooraf door aan UWV.',
+        },
+        { kind: 'model', id: 'r.l.ziek.4.mo1', context: 'Je bent ziek, en je wilt naar je familie.', nl: 'Ik ben ziek. Mag ik een tijd naar mijn familie? Ik blijf bereikbaar.' },
+      ],
+    },
   ],
 };
