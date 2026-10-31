@@ -8,6 +8,7 @@ import { BELGIUM_PATH, COACH_PATH, PRIVACY_PATH, RULES_PATH, TOPICS_PATH } from 
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
 import { SECTOR_PAGES } from './sectorPages';
 import { TOPIC_PAGES } from './topicPages';
+import { RULES_TOPIC_PAGES, rulesTopicPath } from './rulesPages';
 
 /**
  * Being found by place and by AI search (docs/seo-plan.md, "GEO"):
@@ -115,7 +116,7 @@ ${FLEMISH_WORDS.map(([nl, be]) => `<tr><td>${esc(nl)}</td><td><strong>${esc(be)}
 </tbody></table></section>
 ${units.length ? `<section aria-labelledby="rules"><h2 id="rules">Werkregels in België</h2>
 <p>Spreek je al Nederlands? Kies dan in de app “Nederlands” en “België”. Dan leer je hoe werken in België gaat, in ${units.length} onderwerpen:</p>
-<ul class="lines">${units.map((u) => `<li><strong>${esc(u.title)}</strong> – ${esc(u.lessons.map((l) => l.title).join(', '))}</li>`).join('')}</ul></section>` : ''}
+<ul class="lines">${units.map((u) => `<li><strong><a href="${rulesTopicPath(u.id)}">${esc(u.title)}</a></strong> – ${esc(u.lessons.map((l) => l.title).join(', '))}</li>`).join('')}</ul></section>` : ''}
 <section aria-labelledby="note"><h2 id="note">Goed om te weten</h2><p>${esc(RULES_DISCLAIMER_BE.join(' '))}</p></section>
 ${faqHtml(BE_FAQ)}
 <a class="cta" href="/">Open Vloertaal en kies “België” →</a>
@@ -171,6 +172,10 @@ ${SECTOR_PAGES.map((p) => link(p.path, p.name)).join('\n')}
 ## In je eigen taal
 
 ${LANG_PAGES.map((p) => link(p.path, p.nativeName)).join('\n')}
+
+## Werkregels per onderwerp
+
+${RULES_TOPIC_PAGES.map((p) => link(p.path, `${p.unit.title} (${p.country === 'be' ? 'België' : 'Nederland'})`)).join('\n')}
 
 ## Onderwerpen
 
