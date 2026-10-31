@@ -267,6 +267,15 @@ function defineStates(LANG) {
   add('flow:topic-restart-go', '/', async (p) => { await stopHalfwayDue(p); await tap(p, '.rb-other'); await settle(p); await tap(p, '.topic-row', 0); await settle(p); await tap(p, '.topic-tools .bay-restart'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
   // The Hulp tab: the phrases, then "Wie kan helpen" (a list of numbers to call, as in Werkregels).
   add('flow:help-tab', '/', async (p) => { await realHome(p); await navTab(p, 1); await settle(p); }, { list: true });
+  // The language track in Belgium (docs/taal-belgie.md): the line "Dit gaat over Nederland. In
+  // België is het anders." on the path, "Meedoen in België", its tip, All topics ("Leven in
+  // België") and the Hulp tab with the Belgian places. `?be=1`: on in development either way.
+  add('be:home', '/?be=1', (p) => realHome(p, { country: 'be' }), { expect: '.be-note' });
+  add('be:society', '/?be=1', (p) => realHome(p, { country: 'be', currentUnit: 'be.u.society' }), { expect: '.home3' });
+  add('be:society-topic', '/?be=1', async (p) => { await realHome(p, { country: 'be', currentUnit: 'be.u.society' }); await tap(p, '.rb-other'); await settle(p); await tapText(p, '.topic-row', 'Belgi'); await settle(p); }, { list: true, expect: '.topic-lessons' });
+  add('be:all-topics', '/?be=1', async (p) => { await realHome(p, { country: 'be' }); await tap(p, '.rb-other'); await settle(p); }, { list: true });
+  add('be:help-tab', '/?be=1', async (p) => { await realHome(p, { country: 'be' }); await navTab(p, 1); await settle(p); }, { list: true, expect: '.work-contacts' });
+  add('be:lesson-first', '/?be=1', async (p) => { await realHome(p, { country: 'be' }); await tap(p, '.bay-start, .route-start, .start-btn, button.btn-primary', 0); await settle(p, 900); }, { expect: '.be-note' });
   add('flow:settings-tab', '/', async (p) => { await realHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
   add('flow:about-tab', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); });
   add('flow:coaches', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); await tap(p, '.coach-link'); await settle(p); }, { list: true });
