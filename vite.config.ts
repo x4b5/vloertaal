@@ -11,6 +11,7 @@ import { hreflangLinks, LANG_PAGES, langPage } from './src/lib/langPages';
 import { askPage, coachPage } from './src/lib/coachPage';
 import { rulesPage, SECTOR_PAGES, sectorPage } from './src/lib/sectorPages';
 import { notFoundPage, siteLinks } from './src/lib/siteLinks';
+import { belgiumPage, faqScript, llmsTxt } from './src/lib/geoPages';
 import { sitemap } from './src/lib/sitemap';
 import { TOPIC_PAGES, topicPage, topicsIndexPage } from './src/lib/topicPages';
 
@@ -118,8 +119,8 @@ function introPagePlugin(): Plugin {
 /**
  * vloertaal.nl/pl, /ar, /uk … /en: what Vloertaal is, in each help language (src/lib/langPages.ts);
  * /bouw, /logistiek … and /werkregels in Dutch (src/lib/sectorPages.ts); /onderwerpen and a page per
- * topic (src/lib/topicPages.ts); /voor-begeleiders; a 404 page; and the sitemap that lists
- * them all (src/lib/sitemap.ts).
+ * topic (src/lib/topicPages.ts); /voor-begeleiders; /belgie and /llms.txt (src/lib/geoPages.ts);
+ * a 404 page; and the sitemap that lists them all (src/lib/sitemap.ts).
  */
 function langPagesPlugin(): Plugin {
   return {
@@ -129,6 +130,8 @@ function langPagesPlugin(): Plugin {
       for (const p of LANG_PAGES) this.emitFile({ type: 'asset', fileName: `${p.code}/index.html`, source: langPage(p.code) });
       for (const p of SECTOR_PAGES) this.emitFile({ type: 'asset', fileName: `${p.path.slice(1)}index.html`, source: sectorPage(p.id) });
       this.emitFile({ type: 'asset', fileName: 'werkregels/index.html', source: rulesPage() });
+      this.emitFile({ type: 'asset', fileName: 'belgie/index.html', source: belgiumPage() });
+      this.emitFile({ type: 'asset', fileName: 'llms.txt', source: llmsTxt() });
       this.emitFile({ type: 'asset', fileName: 'voor-begeleiders/index.html', source: coachPage() });
       this.emitFile({ type: 'asset', fileName: 'meekijken/index.html', source: askPage() });
       for (const t of TOPIC_PAGES) this.emitFile({ type: 'asset', fileName: `${t.path.slice(1)}index.html`, source: topicPage(t) });
@@ -139,7 +142,7 @@ function langPagesPlugin(): Plugin {
     // The start page names its other languages (hreflang) and links to every page, from the same lists.
     transformIndexHtml: {
       order: 'post',
-      handler: (html) => html.replace('</head>', `${hreflangLinks()}\n</head>`).replace('</body>', `${siteLinks()}\n</body>`),
+      handler: (html) => html.replace('</head>', `${hreflangLinks()}\n${faqScript()}\n</head>`).replace('</body>', `${siteLinks()}\n</body>`),
     },
   };
 }
