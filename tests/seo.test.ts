@@ -9,6 +9,7 @@ import { notFoundPage, siteLinks } from '../src/lib/siteLinks';
 import { HEADINGS, slugOf, TOPIC_PAGES, topicPage, topicsIndexPage } from '../src/lib/topicPages';
 import { unitFromSearch } from '../src/lib/unitLink';
 import { sitemap } from '../src/lib/sitemap';
+import { belgiumPage } from '../src/lib/geoPages';
 
 // What search engines read before any script runs (docs/seo-plan.md, step 2).
 const page = readFileSync('index.html', 'utf8');
@@ -184,8 +185,8 @@ describe('the page for coaches (docs/seo-plan.md, step 5)', () => {
 describe('links from the start page, before any script', () => {
   const links = siteLinks();
 
-  it('reach every plain page, the topics through their list', () => {
-    const reach = links + topicsIndexPage();
+  it('reach every plain page, the topics through their list, the work-rules topics through /werkregels and /belgie', () => {
+    const reach = links + topicsIndexPage() + rulesPage() + belgiumPage();
     for (const path of sitemap().match(/<loc>[^<]+<\/loc>/g)!.map((l) => l.slice(5 + 'https://vloertaal.nl'.length, -6))) {
       if (path === '/') continue;
       expect(reach).toContain(`href="${path}"`);

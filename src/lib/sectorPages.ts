@@ -8,6 +8,7 @@ import { languageNav } from './langPages';
 import { appLink, COACH_PATH, RULES_PATH } from './paths';
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
 import { unitSections } from './unitContent';
+import { rulesTopicPath } from './rulesPages';
 
 /**
  * The Dutch pages per sector (vloertaal.nl/bouw, /logistiek …) and for the work-rules track
@@ -138,7 +139,7 @@ export function rulesPage(): string {
 <a class="cta" href="/">Open Vloertaal en kies “Nederlands” →</a>
 ${all
   .map(
-    (u, i) => `<section aria-labelledby="u${i}"><h2 id="u${i}">${esc(u.title)}</h2>
+    (u, i) => `<section aria-labelledby="u${i}"><h2 id="u${i}"><a href="${rulesTopicPath(u.id)}">${esc(u.title)}</a></h2>
 <ul class="lines">${u.lessons.map((l) => `<li><strong>${esc(l.title)}</strong> – ${esc(l.goal)}</li>`).join('')}</ul>
 <p class="remember">Onthoud: ${esc(u.lessons[0].remember)}</p></section>`,
   )

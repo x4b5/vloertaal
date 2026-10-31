@@ -195,3 +195,22 @@ GEO heeft hier twee betekenissen, en we doen allebei (`src/lib/geoPages.ts`, `te
 **Nog te doen (Xavier):**
 - Bing Webmaster Tools (stap 1): ChatGPT en Copilot zoeken via Bing.
 - Vermeldingen op sites die AI-zoekmachines vaak aanhalen: Wikipedia-achtige lijsten, taalhuizen, VDAB, Agentschap Integratie en Inburgering, Atlas Antwerpen, en Belgische organisaties (stap 6).
+
+## Werkregels per onderwerp (31 oktober 2026)
+
+Mensen zoeken op één vraag, zoals "ziek melden uitzendbureau", "loonstrook uitleg" of "opzegtermijn België", niet op een hele cursus. Daarom heeft elk Werkregels-onderwerp nu een eigen pagina (`src/lib/rulesPages.ts`, `tests/rulesPages.test.ts`):
+- **Nederland:** `/werkregels/<onderwerp>/`, 28 pagina's.
+- **België:** `/belgie/werkregels/<onderwerp>/`, 28 pagina's, met `lang="nl-BE"` en de Belgische disclaimer.
+
+Elke pagina laat per les dit zien:
+- het doel;
+- de regelkaarten;
+- "Waar of niet waar?" met de uitleg;
+- "Onthoud".
+
+Verder heeft elke pagina:
+- gestructureerde gegevens: een `LearningResource` (gratis, A2, land) en een kruimelpad;
+- links: vanaf `/werkregels/` en `/belgie/`, naar de andere onderwerpen, en een knop die het onderwerp in de app opent (`/?unit=r.…`);
+- een plek in de sitemap en in `llms.txt`.
+
+De teksten komen uit de lessen zelf, dus de pagina's groeien mee. Zolang de Belgische feiten nog niet door een expert zijn nagekeken, zegt de disclaimer dat op elke pagina.
