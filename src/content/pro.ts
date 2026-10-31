@@ -55,7 +55,7 @@ const WHAT_PLACE = 'Vloertaal is nadrukkelijk bedoeld als aanvulling op een taal
  * 'p.story': the reason, written for professionals (the learner's About keeps its own plain text,
  * 'a.story'). No second "Hoi, ik ben Xavier": the lead already says it.
  */
-export const PRO_STORY = 'In mijn werk als arbeidsbemiddelaar zie ik regelmatig dat een plaatsing stukloopt op taal. Iemand begrijpt een instructie niet goed, of durft niet te vragen wat iets betekent. Vloertaal is een poging om dat iets makkelijker te maken: de taal van het werk oefenen, op de eigen telefoon, naast wat er al is. De verdere ontwikkeling zou ik graag in co-creatie doen: samen met professionals, werkgevers en uiteraard de doelgroep zelf.';
+export const PRO_STORY = 'In mijn werk als arbeidsbemiddelaar zie ik regelmatig dat een plaatsing stukloopt op taal. Iemand begrijpt een instructie niet goed, of durft niet te vragen wat iets betekent. Vloertaal is een poging om dat iets makkelijker te maken: de taal van het werk oefenen, op de eigen telefoon, naast wat er al is. De app zou ik graag samen verder ontwikkelen: met professionals, werkgevers en uiteraard de doelgroep zelf.';
 
 const mission = aboutSection('a.mission');
 const story = aboutSection('a.story');
