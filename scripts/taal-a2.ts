@@ -20,6 +20,7 @@ import { ASK_WHO, ASK_WHO_BE } from '../src/content/regels/askWho';
 import { beUnits } from '../src/content/regels/be';
 import { isBeId, nlId } from '../src/content/regels/be/ids';
 import { uiNl } from '../src/i18n/nl';
+import { UPDATES } from '../src/content/updates';
 
 type Text = { file: string; where: string; field: string; text: string };
 type Choice = { file: string; where: string; situation: string; options: RuleOption[] };
@@ -81,6 +82,8 @@ for (const [who, a] of [...Object.entries(ASK_WHO), ...Object.entries(ASK_WHO_BE
 for (const [key, value] of Object.entries(uiNl)) {
   for (const t of typeof value === 'string' ? [value] : Object.values(value)) texts.push({ file: 'src/i18n/nl.ts', where: key, field: 'ui', text: t });
 }
+// The notices the learner sees once ("Er is iets veranderd", src/content/updates.ts): A2 too.
+for (const u of UPDATES) if (u.notice) texts.push({ file: 'src/content/updates.ts', where: `${u.date} ${u.notice.id}`, field: 'notice', text: u.notice.nl });
 
 // ---- ⚖️: the notes of each file. A sentence belongs to one when it repeats a piece of the
 // note (3 words or more), or when most of its word pairs are in the notes. ----
