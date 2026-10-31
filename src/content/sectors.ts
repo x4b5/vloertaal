@@ -1,3 +1,4 @@
+import { nlId } from './regels/be/ids';
 import type { UiKey } from '../i18n/types';
 import type { Track } from '../lib/track';
 import { courseUnits } from './courses';
@@ -74,7 +75,8 @@ const sectorOfUnit = new Map(sectors.flatMap((s) => [...s.units, ...s.rules.unit
 
 /** The sector a unit belongs to, or undefined for a basis unit (for everyone). */
 export function unitSector(unitId: string): SectorId | undefined {
-  return sectorOfUnit.get(unitId);
+  // A Belgian rules unit ("r.be.build") belongs where its Dutch twin does.
+  return sectorOfUnit.get(nlId(unitId));
 }
 
 export const isSectorId = (v: unknown): v is SectorId => sectors.some((s) => s.id === v);
@@ -121,7 +123,7 @@ function rulesPlan(sector: SectorChoice | undefined): { main: Unit[]; other: Uni
   if (!sector || sector === 'none') return { main: all, other: [] };
   const own = all.filter((u) => unitSector(u.id) === sector);
   const basis = all.filter((u) => unitSector(u.id) === undefined);
-  const slot = basis.findIndex((u) => u.id === RULES_SLOT_AFTER);
+  const slot = basis.findIndex((u) => nlId(u.id) === RULES_SLOT_AFTER);
   const at = slot >= 0 ? slot + 1 : basis.length;
   return {
     main: [...basis.slice(0, at), ...own, ...basis.slice(at)],

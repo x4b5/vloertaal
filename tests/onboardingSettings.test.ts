@@ -156,3 +156,16 @@ describe('Settings as a menu of three', () => {
     expect(voiceRefs([])).toEqual({});
   });
 });
+
+describe('the language list', () => {
+  it('shows the help languages in alphabetical order of their English name, before English and Nederlands', async () => {
+    const { LanguagePicker } = await import('../src/components/Screens');
+    const html = renderToStaticMarkup(createElement(LanguagePicker, { onPick: () => {} }));
+    const byEnglish = [...languageMeta].sort((a, b) => a.name.localeCompare(b.name, 'en'));
+    const at = byEnglish.map((m) => html.indexOf(`>${m.nativeName}<`));
+    expect(at.every((x) => x > 0)).toBe(true);
+    expect(at).toEqual([...at].sort((a, b) => a - b));
+    expect(byEnglish[0].code).toBe('ar');
+    expect(byEnglish[1].code).toBe('bg');
+  });
+});

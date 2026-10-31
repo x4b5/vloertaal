@@ -184,6 +184,9 @@ function defineStates(LANG) {
   add('onb:sector-build', shot('sector&group=build'), null, { expect: '.chrome-back' });
   add('onb:sector-make', shot('sector&group=make'), null, { expect: '.chrome-back' });
   add('onb:sector-care', shot('sector&group=care'), null, { expect: '.chrome-back' });
+  // "In welk land werk je?" right after the sector: two cards (the back arrow in the first run).
+  add('onb:country', shot('country'), null, { expect: '.country-screen .chrome-back' });
+  add('onb:country-old', shot('country&old=1'), null, { expect: '.country-screen' });
   // ... and the real first-run flow from a clean device (the test browser is Dutch: no guess)
   const firstRun = (extra) => async (p) => {
     await p.evaluate(([x, lang]) => { localStorage.setItem('vloertaal.access', 'full'); localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: lang, ...x })); }, [extra, LANG]);
@@ -214,6 +217,12 @@ function defineStates(LANG) {
   // Back from step 2: the list again, the focus on the row of the group that was open.
   add('flow:sector-step2-back', '/', async (p) => { await firstRun({ gender: 'm' })(p); await tap(p, '.sector-group-row', 0); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.sector-groups [data-group="build"]:focus' });
   add('flow:sector-step2-phone-back', '/', async (p) => { await firstRun({ gender: 'm' })(p); await tap(p, '.sector-group-row', 1); await settle(p); await p.goBack(); await settle(p); }, { list: true, expect: '.sector-groups [data-group="make"]:focus' });
+  // The first run: after "Weet ik nog niet" the country page, its back arrow to the sector.
+  add('flow:country', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.sector-group-row', 3); await settle(p, 900); }, { expect: '.country-screen .chrome-back' });
+  add('flow:country-back', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.sector-group-row', 3); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.sector-groups' });
+  add('flow:country-home', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true, sector: 'none' })(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); }, { expect: '.home3' });
+  // A learner from before the country question: a one-time page on opening the home (no back).
+  add('flow:old-country', '/', firstRun({ gender: 'm', genderAsked: true, sector: 'none', completed: { 'l.hello': { best: 1, times: 1 } } }), { expect: '.country-screen' });
   // A learner from before the gender question: a one-time page instead of the home card (no back).
   if (gendered) add('flow:old-gender', '/', firstRun({ sector: 'none', completed: { 'l.hello': { best: 1, times: 1 } } }), { expect: '.gender-screen' });
   const realHome = async (p, extra = {}) => {
@@ -222,7 +231,7 @@ function defineStates(LANG) {
     await p.evaluate(([x, lang]) => {
       const d = new Date(); const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
       localStorage.setItem('vloertaal.access', 'full');
-      localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: lang, gender: 'm', sector: 'none', completed: {}, toets: { v: 1, skipped: today, start: today, unitsAt: 0 }, ...x }));
+      localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: lang, gender: 'm', sector: 'none', country: 'nl', completed: {}, toets: { v: 1, skipped: today, start: today, unitsAt: 0 }, ...x }));
     }, [extra, LANG]);
     await p.reload(); await settle(p, 900);
   };
@@ -666,7 +675,7 @@ function defineRuleStates() {
   // Nederlands -> (no gender page) -> the code page in Dutch -> the sector -> the home.
   const RULES = '/?rules=1';
   const nlStore = (extra) => async (p) => {
-    await p.evaluate((x) => { localStorage.setItem('vloertaal.access', 'full'); localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: 'nl', ...x })); }, extra);
+    await p.evaluate((x) => { localStorage.setItem('vloertaal.access', 'full'); localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: 'nl', country: 'nl', ...x })); }, extra);
     await p.reload(); await settle(p, 900);
   };
   const toNlGate = async (p) => { await tap(p, '.lang-btn-nl'); await settle(p); };
@@ -679,7 +688,8 @@ function defineRuleStates() {
   add('flow:nl-free-sector', RULES, async (p) => { await toNlGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { list: true, expect: '.sector-groups' });
   add('flow:nl-sector', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); }, { list: true, expect: '.sector-groups' });
   add('flow:nl-sector-back', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.pw-ok' });
-  add('flow:nl-home', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.max3-card', 2); await settle(p, 900); }, { expect: '.home3' });
+  add('flow:nl-country', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.max3-card', 2); await settle(p, 900); }, { expect: '.country-screen' });
+  add('flow:nl-home', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.max3-card', 2); await settle(p, 900); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); }, { expect: '.home3' });
   const nlHome = nlStore({ sector: 'none', completed: { 'r.l.zoeken.1': { best: 1, times: 1 } } });
   add('flow:nl-help-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); }, { list: true, expect: '.rh-rows' });
   add('flow:nl-shelf', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); await tap(p, '.rules-shelf-link'); await settle(p); }, { list: true, expect: '.shelf-list' });

@@ -321,39 +321,6 @@ export default {
     </g>
   ),
 
-  // "de functie": the job, the position — a clip-on job badge with a hard hat for the job.
-  'w.functie': () => (
-    <g>
-      <rect x="52" y="8" width="16" height="16" rx="4" fill={PAL.steel} />
-      <rect x="56" y="12" width="8" height="6" rx="2" fill={PAL.slate} />
-      <rect x="24" y="22" width="72" height="84" rx="10" fill={PAL.mist} transform="translate(0 4)" />
-      <Shade color={PAL.paperShade} opacity={1} at={[104, 64, 14, 50]}>
-        <rect x="24" y="22" width="72" height="84" rx="10" fill={PAL.paper} />
-      </Shade>
-      <path d="M24 32A10 10 0 0 1 34 22H86A10 10 0 0 1 96 32V36H24Z" fill={PAL.sky} />
-      <rect x="49" y="18" width="22" height="10" rx="3" fill={PAL.steel} />
-      <circle cx="60" cy="62" r="20" fill={TINT} />
-      <HardHat x={60} y={68} s={0.4} />
-      <path d="M38 90H82" stroke={PAL.navy} strokeWidth="5" strokeLinecap="round" />
-      <path d="M46 99H74" stroke={PAL.line} strokeWidth="3.4" strokeLinecap="round" />
-    </g>
-  ),
-
-  // "de baan": the job — Jada has work: her box on the table in front of her, and a green tick.
-  'w.baan': () => (
-    <g>
-      <Bust who="jada" x={44} y={120} scale={0.64} expr="joy" />
-      <Ground cx={86} cy={106} rx={22} ry={4} />
-      <g>
-        <rect x="68" y="74" width="34" height="30" rx="2" fill={PAL.card} />
-        <path d="M68 74L76 66H110L102 74Z" fill="#f0c48a" />
-        <path d="M102 74L110 66V96L102 104Z" fill={PAL.cardShade} />
-        <rect x="81" y="74" width="8" height="10" fill="#f6dcae" />
-      </g>
-      <Tick x={92} y={30} r={16} />
-    </g>
-  ),
-
   // "de vacature": the job opening — a "help wanted" poster pinned up: a person with a plus.
   'w.vacature': () => (
     <g transform="rotate(-3 60 60)">

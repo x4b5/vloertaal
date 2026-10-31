@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from './kit';
+import { Ground, PAL, SKIN, Shade, Shine } from './kit';
 import unitBanners from './units';
 
 /** Unit icons that no word picture covers (abstract topics). Same style as the word pictures. */
@@ -25,6 +25,28 @@ const iconPictures: Record<string, () => JSX.Element> = {
       <Shine d="M85 72Q87 78 92 81" color={PAL.yellowShine} width={3} opacity={1} />
     </g>
   ),
+  // Working together (u.teamwork): three hands stacked, from both sides. A calmer take on the
+  // word picture "samen" (four hands and sparkles), which was busy at 32-44 px: fewer, bigger
+  // hands, no sparkles.
+  'i.teamwork': () => {
+    const hand = (y: number, fromLeft: boolean, skin: [string, string], sleeve: [string, string]) => (
+      <g transform={fromLeft ? undefined : 'translate(120 0) scale(-1 1)'}>
+        <rect x="2" y={y - 12} width="36" height="24" rx="7" fill={sleeve[0]} />
+        <rect x="31" y={y - 12.5} width="10" height="25" rx="5" fill={sleeve[1]} />
+        <Shade color={skin[1]} opacity={1} at={[64, y + 12, 44, 5]}>
+          <rect x="38" y={y - 10} width="58" height="20" rx="10" fill={skin[0]} />
+        </Shade>
+        <rect x="41" y={y - 16} width="19" height="9" rx="4.5" fill={skin[0]} transform={`rotate(-14 41 ${y - 11})`} />
+      </g>
+    );
+    return (
+      <g>
+        {hand(84, true, SKIN.jada, [PAL.sky, PAL.skyShade])}
+        {hand(60, false, SKIN.henk, [PAL.navy, PAL.navyShade])}
+        {hand(36, true, SKIN.amina, [PAL.green, PAL.greenShade])}
+      </g>
+    );
+  },
 };
 
 export default iconPictures;

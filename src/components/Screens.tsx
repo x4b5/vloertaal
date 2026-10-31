@@ -53,6 +53,10 @@ import { ChromeBack, ChromeHead } from './ChromeBack';
 import { pushSubStep } from '../lib/onbHistory';
 import { aboutDutchRemembered, rememberAboutDutch } from '../lib/aboutDutch';
 
+/** The help languages in the list in alphabetical order of their English name (the line under each
+ *  native name, and what the page is in before a language is chosen): Arabic, Bulgarian, Dari … */
+const PICKER_ORDER = [...languageMeta].sort((a, b) => a.name.localeCompare(b.name, 'en'));
+
 export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
   /** The help language in use (Settings): the "in review" tag is written in it. */
   lang?: HelpLanguage;
@@ -97,7 +101,7 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   const ask = ui('chooseLanguage', lang);
   return (
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`} role="group" aria-label={said(ask)}>
-      {languageMeta.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed && !dutch))}
+      {PICKER_ORDER.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed && !dutch))}
       {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
       {/* "Nederlands – ik spreek al Nederlands": the work-rules track, always said in Dutch. Last,
           under a line and in its own colour, with the word "Werkregels": it is another part of
@@ -353,13 +357,17 @@ export function WordsHub({ lang, onTips, after }: {
   );
 }
 
-/** "Problems at work? Who can help": the four numbers for this audience (from the work-rules track's list). */
-const WORK_CONTACTS: { id: string; when: UiKey }[] = [
+/** "Problems at work? Who can help": the four numbers for this audience (from the work-rules track's
+ *  list), in the same order as there: 112 first, then by name. */
+const WORK_CONTACT_KEYS: { id: string; when: UiKey }[] = [
   { id: 'h.112', when: 'who112' },
   { id: 'h.juridischloket', when: 'whoLegal' },
   { id: 'h.arbeidsinspectie', when: 'whoInspection' },
   { id: 'h.fairwork', when: 'whoFairwork' },
 ];
+const WORK_CONTACTS = [...WORK_CONTACT_KEYS].sort(
+  (a, b) => HELP_ROWS.findIndex((r) => r.id === a.id) - HELP_ROWS.findIndex((r) => r.id === b.id),
+);
 
 /**
  * The Hulp tab of the language course: who to call about trouble at work (the Werkregels track has

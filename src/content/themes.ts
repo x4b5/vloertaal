@@ -1,3 +1,4 @@
+import { nlId } from './regels/be/ids';
 import type { Track } from '../lib/track';
 import type { Unit } from './types';
 
@@ -97,7 +98,7 @@ for (const t of THEMES) for (const track of ['taal', 'regels'] as const) for (co
 
 /** The theme a unit belongs to (either track; ids never clash), or undefined for one not mapped yet. */
 export function themeOf(unitId: string): Theme | undefined {
-  const id = themeOfUnit.get(unitId);
+  const id = themeOfUnit.get(nlId(unitId));
   return id ? themeById.get(id) : undefined;
 }
 
@@ -120,8 +121,9 @@ export interface ThemeGroup {
  * tests/themes.test.ts is satisfied) goes to the end, after the last theme, so it is never lost.
  */
 export function groupByTheme(list: Unit[]): ThemeGroup[] {
-  const groups: ThemeGroup[] = THEMES.map((theme) => ({ key: theme.id, theme, units: list.filter((u) => themeOfUnit.get(u.id) === theme.id) }));
-  const loose = list.filter((u) => !themeOfUnit.has(u.id));
+  // A Belgian rules unit ("r.be.loon") is in the theme of its Dutch twin.
+  const groups: ThemeGroup[] = THEMES.map((theme) => ({ key: theme.id, theme, units: list.filter((u) => themeOfUnit.get(nlId(u.id)) === theme.id) }));
+  const loose = list.filter((u) => !themeOfUnit.has(nlId(u.id)));
   if (loose.length) groups[groups.length - 1].units.push(...loose);
   return groups.filter((g) => g.units.length > 0);
 }

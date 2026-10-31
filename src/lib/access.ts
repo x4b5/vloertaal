@@ -1,3 +1,4 @@
+import { nlId } from '../content/regels/be/ids';
 import { allCourseUnits, courseUnits } from '../content/courses';
 import { THEMES, themeUnitIds } from '../content/themes';
 import { DAILY_ID } from './spaced';
@@ -137,7 +138,7 @@ export function sampleLessons(track: Track = 'taal'): string[] {
   const out: string[] = [];
   for (const theme of THEMES) {
     const ids = new Set(themeUnitIds(theme.id, track));
-    const inTheme = order.filter((u) => ids.has(u.id));
+    const inTheme = order.filter((u) => ids.has(nlId(u.id)));
     for (const unit of theme.id === 'theme.sector' ? inTheme : inTheme.slice(0, 1)) {
       const first = unit.lessons[0];
       if (first) out.push(first.id);

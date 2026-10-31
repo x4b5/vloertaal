@@ -1,6 +1,7 @@
 import type { Track } from '../lib/track';
 import { learnedWords, units } from './curriculum';
-import { rulesCourseUnits, setRulesUnits } from './rulesCourse';
+import { nlId } from './regels/be/ids';
+import { allCountriesRulesUnits, rulesCourseUnits, setRulesUnits } from './rulesCourse';
 import type { RuleStep } from './regels/types';
 import type { Lesson, Unit } from './types';
 import { allRegionUnits } from './regio';
@@ -14,9 +15,13 @@ import { allRegionUnits } from './regio';
  * id can search both.
  */
 
-/** Puts the rules course in place (src/i18n/packs/nl.ts; tests and screenshots with a stub). */
-export function registerRulesCourse(rules: Unit[]): void {
-  setRulesUnits(rules);
+/**
+ * Puts the rules course in place (src/i18n/packs/nl.ts; tests and screenshots with a stub). `be`:
+ * the Belgian course (docs/werkregels-belgie.md), played when progress.country is 'be'
+ * (src/content/rulesCourse.ts). Without it, a learner in Belgium plays the Dutch course.
+ */
+export function registerRulesCourse(rules: Unit[], be: Unit[] | null = null): void {
+  setRulesUnits(rules, be);
 }
 
 /** The units of one track, in course order. */
@@ -44,6 +49,22 @@ export function findLessonIn(track: Track, id: string): { unit: Unit; lesson: Le
  */
 export function findCourseUnit(id: string | undefined): Unit | undefined {
   return id ? [...allCourseUnits(), ...allRegionUnits()].find((u) => u.id === id) : undefined;
+}
+
+/**
+ * A rules unit's id as the course of the learner's country has it: "r.loon" is "r.be.loon" in the
+ * Belgian course once that unit is written there, and "r.be.loon" is "r.loon" in the Dutch one.
+ * Any other id (or a unit in neither) stays as it is.
+ */
+export function rulesTwinHere(id: string): string {
+  if (!id.startsWith('r.')) return id;
+  const base = nlId(id);
+  return rulesCourseUnits().find((u) => nlId(u.id) === base)?.id ?? id;
+}
+
+/** A rules lesson of either country's course (a backup keeps both, src/lib/progress.ts). */
+export function isRulesLessonAnyCountry(lessonId: string): boolean {
+  return allCountriesRulesUnits().some((u) => u.lessons.some((l) => l.id === lessonId));
 }
 
 /** The unit a lesson belongs to, in either course (or a region's unit). */

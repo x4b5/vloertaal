@@ -29,13 +29,25 @@ export const trialLessonAllowed = (lessonId: string, track: Track = 'taal') => l
 /**
  * The first run, one question per page, in this order: the help language, "Woman or man?" (only
  * for a help language with gender, so the password page already talks to you in the right
- * form), the password, then the sector. 'done' is the home.
+ * form), the password, the sector, then "In welk land werk je?" (both tracks). 'done' is the home.
  */
-export type OnbStep = 'language' | 'gender' | 'gate' | 'sector' | 'done';
-export const ONB_ORDER: readonly OnbStep[] = ['language', 'gender', 'gate', 'sector', 'done'];
+export type OnbStep = 'language' | 'gender' | 'gate' | 'sector' | 'country' | 'done';
+export const ONB_ORDER: readonly OnbStep[] = ['language', 'gender', 'gate', 'sector', 'country', 'done'];
 export const stepIndex = (s: OnbStep) => ONB_ORDER.indexOf(s);
 
-type OnbProgress = Pick<Progress, 'onboarded' | 'helpLang' | 'gender' | 'genderAsked' | 'sector'>;
+type OnbProgress = Pick<Progress, 'onboarded' | 'helpLang' | 'gender' | 'genderAsked' | 'sector'> & Partial<Pick<Progress, 'country' | 'completed' | 'xp'>>;
+
+/** Has the learner begun (a lesson done, or points)? Then the first run is over. */
+const started = (p: Partial<Pick<Progress, 'completed' | 'xp'>>) => Object.keys(p.completed ?? {}).length > 0 || (p.xp ?? 0) > 0;
+
+/**
+ * "In welk land werk je?" once, on a page of its own, for a learner who began before the question
+ * was in the first run (App.tsx, on opening the home, as the gender question): onboarded, a
+ * sector chosen, lessons begun, and no country chosen. Until they choose it is 'nl' (Progress.country).
+ */
+export function shouldAskCountry(p: OnbProgress): boolean {
+  return p.onboarded && p.sector !== undefined && p.country === undefined && started(p);
+}
 
 /**
  * Which first-run page shows. `gateAgain`: back from the sector to the password page, with the
@@ -48,6 +60,9 @@ export function onboardingStep(p: OnbProgress, access: Access | null, gateAgain 
   // Open to all (src/lib/access.ts): no password page, also not on the way back from the sector.
   if (!access || (gateAgain && !OPEN_TO_ALL)) return 'gate';
   if (p.sector === undefined) return 'sector';
+  // The first run: the country right after the sector. A learner who began before this question
+  // gets it on opening the home instead (shouldAskCountry), without a way back.
+  if (p.country === undefined && !started(p)) return 'country';
   return 'done';
 }
 
@@ -61,6 +76,8 @@ export function previousStep(step: OnbStep, p: OnbProgress): OnbStep | null {
     case 'sector':
       // Open to all: no password page, so back goes to the page before it.
       return OPEN_TO_ALL ? previousStep('gate', p) : 'gate';
+    case 'country':
+      return 'sector';
     default:
       return null;
   }

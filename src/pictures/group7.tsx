@@ -120,10 +120,11 @@ function Machine({ fault = false }: { fault?: boolean }) {
       <path d="M81 19A3 3 0 0 1 84 16" fill="none" stroke={PAL.white} strokeWidth="2" strokeLinecap="round" opacity=".7" />
       {fault && <Motion x={84} y={20} dir={-90} spread={150} n={5} len={6} gap={10} color={PAL.red} width={3.4} />}
       {/* Cabinet */}
-      <Shade color={PAL.blueShade} opacity={1} at={[110, 64, 14, 50]}>
-        <rect x="14" y="32" width="92" height="66" rx="7" fill={PAL.blue} />
+      {/* Blue when it runs; grey (switched off) when it has broken down */}
+      <Shade color={fault ? PAL.slate : PAL.blueShade} opacity={fault ? 0.5 : 1} at={[110, 64, 14, 50]}>
+        <rect x="14" y="32" width="92" height="66" rx="7" fill={fault ? PAL.steel : PAL.blue} />
       </Shade>
-      <path d="M20 37H76" stroke={PAL.blueLight} strokeWidth="2.6" strokeLinecap="round" opacity=".8" />
+      <path d="M20 37H76" stroke={fault ? PAL.mist : PAL.blueLight} strokeWidth="2.6" strokeLinecap="round" opacity=".8" />
       {/* Window with the gear inside */}
       <rect x="22" y="44" width="44" height="44" rx="5" fill={PAL.slateDark} />
       <Gear cx={44} cy={66} r={12} n={8} color={fault ? PAL.steel : PAL.yellow} shade={fault ? PAL.slate : PAL.yellowShade} hole={PAL.slateDark} />
@@ -400,8 +401,8 @@ export default {
   // panel with green and red buttons, and a green light on top
   'w.machine': () => <Machine />,
 
-  // "de storing": the breakdown — the same machine stopped: a red flashing light, a grey gear,
-  // smoke, and a yellow warning sign
+  // "de storing": the breakdown — the same machine stopped: grey (off), a red flashing light, a
+  // grey gear, smoke, and a big yellow warning sign in front
   'w.storing': () => (
     <g>
       <Machine fault />
@@ -412,9 +413,10 @@ export default {
         <circle cx="52" cy="26" r="8" />
       </g>
       <circle cx="26" cy="22" r="3" fill={PAL.white} opacity=".6" />
-      {/* Warning sign */}
-      <path d="M44 58L62 90H26Z" fill={PAL.yellow} stroke={PAL.yellow} strokeWidth="8" strokeLinejoin="round" />
-      <ExclaimMark x={44} y={78} size={20} color={PAL.ink} />
+      {/* Warning sign, big, in front of the machine */}
+      <path d="M50 52L76 98H24Z" fill={PAL.yellowShade} stroke={PAL.yellowShade} strokeWidth="9" strokeLinejoin="round" transform="translate(0 3)" />
+      <path d="M50 52L76 98H24Z" fill={PAL.yellow} stroke={PAL.yellow} strokeWidth="9" strokeLinejoin="round" />
+      <ExclaimMark x={50} y={81} size={28} color={PAL.ink} />
     </g>
   ),
 

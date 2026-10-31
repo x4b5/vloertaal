@@ -14,7 +14,7 @@ export const unitLink = (unitId: string): string =>
  * A rules unit's id as a link gives it. The rules course loads with its own file (after the
  * link is read), so only the form is checked here; a unit that is not there is left alone later.
  */
-const RULES_ID = /^r\.[a-z]+$/;
+const RULES_ID = /^r\.(be\.)?[a-z]+$/;
 
 /** Is this a unit a link may name: a unit of the Dutch course, or a well-formed rules unit id. */
 const knownUnit = (id: string) => (trackOfId(id) === 'regels' ? RULES_ID.test(id) : units.some((u) => u.id === id));

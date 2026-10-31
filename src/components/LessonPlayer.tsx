@@ -1027,6 +1027,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       <div className="player-body" ref={bodyRef} inert={askQuit}>
         <div className="ex-ghost" ref={ghostRef} aria-hidden />
         <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
+        {/* The Belgian course: a lesson that is still the Dutch one says so, on its first step. */}
+        {index === 0 && lesson.rule?.note && <p className="rule-country-note" role="note" lang="nl">{lesson.rule.note}</p>}
         <div className="ex-tag">
           {repeatsLeft > 0 ? (
             <>

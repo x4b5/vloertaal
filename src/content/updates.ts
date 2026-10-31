@@ -45,6 +45,8 @@ export const UPDATES: Update[] = [
       '32 woorden uit de nieuwe Entree-onderwerpen hadden nog een emoji. Ze hebben nu een eigen tekening, zoals de werkbon, de gehoorbescherming, de accu, het rijbewijs, de agent en de bijlage.',
       'Tien woorden die nog geen plaatje hadden, hebben nu een eigen tekening: het hoofd, de rug en de buik, slijpen, de kabel, de stroom, de hefbrug, lek, kapot en de rechter.',
       'Tien tijdwoorden hebben nu een plaatje, allemaal met dezelfde weekstrip (maandag eerst, het weekend in een andere kleur): de week, het weekend, maandag, zaterdag, elke dag, tot en met, volgende week, vorige week, overmorgen en de maand. Bij "Welk plaatje is het?" kunnen twee dagen nu naast elkaar staan.',
+      'Alle tekeningen nagekeken. Geen duim omhoog meer (dat gebaar is in sommige landen onbeleefd): ja, goed en het compliment hebben een nieuwe tekening. Ook nieuw en duidelijker: kapot, de rij en zwanger. In de donkere stand vallen de oplichter, zoeken, sparen, de rechter en de ICT-afdeling niet meer weg. Het onderwerp "Meedoen in Nederland" heeft nu een stembus als plaatje.',
+      'Het hoofd, de rug en de buik hebben nu elk een eigen tekening: iemand die laat zien waar het pijn doet (van voren, van achteren, met de hand op het voorhoofd). Inklokken en uitklokken, de machine en de storing, afkeuren en de rechter zijn duidelijker getekend: geen duim omlaag en geen hamer meer (die gebruikt een Nederlandse rechter niet). Nieuwe plaatjes bij de onderwerpen Samenwerken en Stage lopen.',
     ],
   },
   {
