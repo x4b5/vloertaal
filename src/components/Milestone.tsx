@@ -1,3 +1,4 @@
+import { WordPicture } from '../pictures';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { fillCount, ui, uiCount, said } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
@@ -290,7 +291,7 @@ function MilestoneFact({ streak, lang }: { streak: number; lang?: HelpLanguage }
   return (
     <aside className="milestone-fact">
       <p className="milestone-fact-title">
-        <span aria-hidden>💡</span>
+        <span aria-hidden><WordPicture id="" emoji="💡" size={22} /></span>
         <NlPair nlFirst nl="Wist je dat?" nlClass="milestone-fact-nl" className="milestone-fact-help" text={ui('factTitle', lang)} />
       </p>
       <Bi className="milestone-fact-text" text={ui(key, lang)} />

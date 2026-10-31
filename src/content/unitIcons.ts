@@ -89,5 +89,5 @@ export const rulesUnitIcons: Record<string, string> = {
 
 /** A unit's drawn icon in either track (a Belgian rules unit: its Dutch twin's), or '' (then its emoji). */
 export function unitIcon(unitId: string): string {
-  return unitIcons[unitId] ?? rulesUnitIcons[nlId(unitId)] ?? '';
+  return unitIcons[unitId] ?? unitIcons[nlId(unitId)] ?? rulesUnitIcons[nlId(unitId)] ?? '';
 }

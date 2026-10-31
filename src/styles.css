@@ -4670,3 +4670,6 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .check-result-actions .btn.btn-go, .check-result-actions .btn.btn-ghost { padding-inline: 10px; overflow-wrap: anywhere; }
 .check-result-actions .btn > span[lang='nl'] { font-weight: 700; font-size: 1.05rem; }
 .check-result-foot .check-go { flex: 1 1 100%; }
+
+/* A speaker in a sentence ("Tik op [speaker]"): the app's own icon, on the text line (src/components/Bi.tsx iconize). */
+.inline-icon { display: inline-block; vertical-align: -0.2em; margin: 0 0.1em; }

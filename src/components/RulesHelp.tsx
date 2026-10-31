@@ -65,7 +65,7 @@ export function RulesHelp({ lang, country, onShelf, onBack, after }: {
         {helpRowsFor(country).map((row) => <HelpRowItem key={row.id} row={row} lang={lang} />)}
       </ul>
       <button type="button" className="hub-card hub-tips rules-shelf-link" onClick={onShelf}>
-        <span className="hub-icon" aria-hidden><span className="entry-emoji">📘</span></span>
+        <span className="hub-icon" aria-hidden><WordPicture id="" emoji="📘" size={34} /></span>
         <span className="hub-text">
           <span className="hub-nl">{ui('cultureTips', lang).help ?? 'Alle regels'}</span>
           <span className="bi">De regels uit je lessen, om nog eens te lezen.</span>

@@ -1020,7 +1020,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
   return (
     <div className="exercise tip">
       <div className="tip-badge">
-        <span className="tip-badge-emoji" aria-hidden>{tip.emoji}</span>
+        <span className="tip-badge-emoji" aria-hidden><WordPicture id="" emoji={tip.emoji} size={28} /></span>
         {/* The help language large; the Dutch name is a small label under it. */}
         <span className="tip-badge-text tip-badge-swap">
           <NlPair nl="Zo werkt het hier" nlClass="tip-badge-nl" className="tip-badge-main" text={ui('cultureBadge', lang)} />
@@ -1065,7 +1065,7 @@ export function SayingCard({ ex, lang, onAnswer }: Props<'saying'>) {
   return (
     <div className="exercise tip saying">
       <div className="tip-badge">
-        <span className="tip-badge-emoji" aria-hidden>💬</span>
+        <span className="tip-badge-emoji" aria-hidden><WordPicture id="" emoji="💬" size={28} /></span>
         {/* The card's heading (it has no question): focus moves here on a new exercise, as to a
             question's .prompt (LessonPlayer), so a screen reader starts here and not on <body>. */}
         <span className="tip-badge-text tip-badge-swap" role="heading" aria-level={2} data-prompt tabIndex={-1} style={{ outline: 'none' }}>

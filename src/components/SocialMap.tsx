@@ -1,3 +1,4 @@
+import { WordPicture } from '../pictures';
 import { Fragment } from 'react';
 import { areaName, categoryGlossId, mapChecked, mapHref, shortUrl, SOCIAL_CATEGORIES, type Region, type SocialMapEntry } from '../content/regio';
 import { CONTACT_EMAIL } from '../content/about';
@@ -35,7 +36,7 @@ export function SocialMap({ region, lang, onBack }: { region: Region; lang?: Hel
           <NlPair nlFirst nl="Sociale kaart" nlClass="sm-title-nl" text={ui('socialMap', lang)} />
         </h1>
       </div>
-      <p className="sm-region"><span aria-hidden>📍</span> {region.nl}</p>
+      <p className="sm-region"><span aria-hidden><WordPicture id="" emoji="📍" size={20} /></span> {region.nl}</p>
       <section className="rules-disclaimer sm-note" aria-label="Goed om te weten">
         <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={24} /></span>
         <p>
@@ -85,7 +86,7 @@ function MapRow({ entry: e, region, lang }: { entry: SocialMapEntry; region: Reg
   const where = e.area.includes('all') ? areaName(region, 'all') : e.area.map((a) => areaName(region, a)).join(', ');
   const body = (
     <>
-      <span className="rh-emoji" aria-hidden>{e.emoji}</span>
+      <span className="rh-emoji rh-pic" aria-hidden><WordPicture id="" emoji={e.emoji} size={36} /></span>
       <span className="rh-text">
         <span className="rh-name">{breakable(e.name)}</span>
         <span className="rh-when">{breakable(e.when)}</span>
@@ -125,7 +126,7 @@ function MapRow({ entry: e, region, lang }: { entry: SocialMapEntry; region: Reg
 export function SocialMapLink({ region, lang, onOpen }: { region: Region; lang?: HelpLanguage; onOpen: () => void }) {
   return (
     <button type="button" className="hub-card hub-tips social-map-link" onClick={onOpen}>
-      <span className="hub-icon" aria-hidden><span className="entry-emoji">🗺️</span></span>
+      <span className="hub-icon" aria-hidden><WordPicture id="" emoji="🗺️" size={34} /></span>
       <span className="hub-text">
         <NlPair content nlFirst nl={<>Sociale kaart <span className="sm-nobr">{region.nl}</span></>} nlClass="hub-nl" text={ui('socialMap', lang)} />
         {/* The work-rules track: a line under it, as "Alle regels" has. */}

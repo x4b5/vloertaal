@@ -2,6 +2,22 @@ import type { ReactNode } from 'react';
 import { langTag, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { allMatches } from '../lib/matches';
+import { SpeakerIcon } from './Icons';
+
+/**
+ * "Tik op 🔊": the speaker in a text is the app's own speaker icon (SVG), not the emoji (the
+ * owner's rule: only SVG). Works on a string or on the parts isolateLatin made.
+ */
+export function iconize(node: ReactNode): ReactNode {
+  const one = (s: string, k: number | string): ReactNode => {
+    if (!s.includes('🔊')) return s;
+    const bits = s.split('🔊');
+    return bits.flatMap((b, i) => (i === 0 ? [b] : [<SpeakerIcon key={`${k}-${i}`} size={18} className="inline-icon" />, b]));
+  };
+  if (typeof node === 'string') return one(node, 's');
+  if (Array.isArray(node)) return node.map((n, i) => (typeof n === 'string' ? one(n, i) : n));
+  return node;
+}
 
 /**
  * Bilingual text. With a help language, that language comes first in the large type and the
@@ -15,7 +31,7 @@ export function Bi({ text, className }: { text: Bilingual; className?: string })
   if (text.lang?.code === 'nl') {
     return (
       <span className={`bi ${className ?? ''}`}>
-        <span className="bi-en" lang="nl">{text.help ?? text.en}</span>
+        <span className="bi-en" lang="nl">{iconize(text.help ?? text.en)}</span>
       </span>
     );
   }
@@ -29,14 +45,14 @@ export function Bi({ text, className }: { text: Bilingual; className?: string })
         <HelpText text={text.help} lang={text.lang} className="bi-en" />
         {/* Shown only where a context lays the pair out on one line (see .bi-sep). */}
         <span className="bi-sep" aria-hidden>·</span>
-        <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{text.en}</span>
+        <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{iconize(text.en)}</span>
       </span>
     );
   }
   return (
     <span className={`bi ${className ?? ''}`}>
       {/* English only: English (the page itself is Dutch, lang="nl"). */}
-      <span className="bi-en" lang="en">{text.en}</span>
+      <span className="bi-en" lang="en">{iconize(text.en)}</span>
     </span>
   );
 }
@@ -48,7 +64,7 @@ const LATIN_SCRIPT = new Set(['pl', 'ro', 'tr', 'nl', 'es', 'pt', 'fr', 'de']);
 export function HelpText({ text, lang, className = 'bi-help' }: { text: string; lang: HelpLanguage; className?: string }) {
   return (
     <span className={className} lang={langTag(lang.code)} dir={lang.dir}>
-      {lang.dir === 'rtl' || !LATIN_SCRIPT.has(lang.code) ? isolateLatin(text) : text}
+      {iconize(lang.dir === 'rtl' || !LATIN_SCRIPT.has(lang.code) ? isolateLatin(text) : text)}
     </span>
   );
 }

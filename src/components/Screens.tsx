@@ -606,7 +606,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
           <h2>
             {s.who
               ? <span className="about-emoji about-who" aria-hidden><Character who={s.who} crop="head" size={30} /></span>
-              : <span className="about-emoji" aria-hidden>{s.emoji}</span>}
+              : <span className="about-emoji" aria-hidden><WordPicture id="" emoji={s.emoji} size={30} /></span>}
             <span className="bi"><span className="bi-en">{s.title}</span></span>
           </h2>
           <p>{withMailLink(s.body, undefined, true)}</p>
@@ -618,7 +618,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
           <h2>
             {s.who
               ? <span className="about-emoji about-who" aria-hidden><Character who={s.who} crop="head" size={30} /></span>
-              : <span className="about-emoji" aria-hidden>{s.emoji}</span>}
+              : <span className="about-emoji" aria-hidden><WordPicture id="" emoji={s.emoji} size={30} /></span>}
             {dutch
               ? <span className="bi"><span className="bi-en">{s.nl.title}</span></span>
               : <Bi text={gloss(s.id, s.title, lang)} />}
@@ -636,7 +636,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
           {onCoaches && (
             <li>
               <button type="button" className="phrase-banner about-banner coach-link" onClick={onCoaches}>
-                <span className="coach-link-icon" aria-hidden>🤝</span>
+                <span className="coach-link-icon" aria-hidden><WordPicture id="w.afspraak" emoji="🤝" size={30} /></span>
                 <span className="coach-link-text">
                   <NlPair nlFirst nl={PRO_TITLE} nlClass="coach-link-nl" text={ui('forCoaches', lang)} />
                 </span>
@@ -647,7 +647,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
           {onNews && (
             <li>
               <button type="button" className="phrase-banner about-banner news-link" onClick={onNews}>
-                <span className="news-link-icon" aria-hidden>📝</span>
+                <span className="news-link-icon" aria-hidden><WordPicture id="" emoji="📝" size={30} /></span>
                 <span className="news-link-text">
                   <Bi text={ui('whatsNew', lang)} />
                   <span className="news-link-date muted small" lang={langTag(dateCode(lang))} dir={lang?.dir}>{updateDate(LAST_UPDATE, dateLocale(dateCode(lang)))}</span>

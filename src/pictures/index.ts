@@ -4,6 +4,7 @@ import { Bust } from './kit';
 import units from './units';
 import icons from './icons';
 import { pictureIdOf } from '../content/taalBe/ids';
+import { emojiIconId } from '../content/tipIcons';
 
 /**
  * Original word pictures (flat vector, in the cast's style; see docs/tekenstijl.md).
@@ -62,8 +63,11 @@ export const iconPictures: Record<string, () => JSX.Element> = icons;
 export const unitPictures: Record<string, () => JSX.Element> = units;
 
 /**
- * The picture for a word: the SVG when there is one, else the word's emoji (in the app's
- * emoji font). `size` is the width and height in px.
+ * The picture for a word, a topic or a rule: always an SVG, never an emoji (the owner's rule, 31
+ * October 2026: "alleen SVG"). By `id`; else the drawing for `emoji` (src/content/tipIcons.ts
+ * emojiIconId, which also reads the work rules' table and src/content/emojiArt). With no drawing
+ * at all: an empty square of the same size (tests/svgOnly.test.ts makes sure that never happens
+ * for the app's own content). `size` is the width and height in px.
  */
 export function WordPicture({ id, emoji, size = 96, className }: {
   id: string;
@@ -73,14 +77,16 @@ export function WordPicture({ id, emoji, size = 96, className }: {
 }): JSX.Element {
   const ready = usePicturesLoaded();
   // A Belgian word that keeps its Dutch twin's drawing ("de refter": src/content/taalBe/ids.ts).
-  const draw = pictures[pictureIdOf(id)] ?? iconPictures[id];
+  const art = emoji ? emojiIconId(emoji) : '';
+  const draw = (id ? pictures[pictureIdOf(id)] ?? iconPictures[id] : undefined) ?? (art ? pictures[art] ?? iconPictures[art] : undefined);
   if (!draw && !ready) {
     // Not here yet: an empty square of the same size (no emoji that would then change).
     return createElement('span', { className: `word-pic word-pic-wait ${className ?? ''}`, 'aria-hidden': true, style: { display: 'inline-block', width: size, height: size } });
   }
   if (!draw) {
-    const style: CSSProperties = { fontSize: Math.round(size * 0.8), lineHeight: 1, width: size, height: size };
-    return createElement('span', { className: `word-pic word-emoji ${className ?? ''}`, 'aria-hidden': true, style }, emoji);
+    // No drawing: an empty square, never the emoji.
+    const style: CSSProperties = { display: 'inline-block', width: size, height: size };
+    return createElement('span', { className: `word-pic word-pic-none ${className ?? ''}`, 'aria-hidden': true, style, 'data-emoji': emoji || undefined });
   }
   return createElement(
     'svg',
