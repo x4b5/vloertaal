@@ -1352,7 +1352,7 @@ const t: CultureTranslation = {
     'w.afmelden': "işi bitirdiğini bildirmek (işin bittiğini söyleyip çıkmak)", // nieuw, nalezen
     'w.kapot': "bozuk, kırık", // nieuw, nalezen
     'w.opslot': "kilitli", // nieuw, nalezen
-    'w.bijzonderheid': "özel durum (farklı giden bir şey)", // nieuw, nalezen
+    'w.bijzonderheid': "kapı", // nieuw, nalezen
     's.handover.1': "Yerimi topluyorum.", // nieuw, nalezen
     's.handover.2': "İşimi kontrol edebilir misiniz?", // nieuw, nalezen
     's.handover.3': "Amirime işi bitirdiğimi bildiriyorum.", // nieuw, nalezen
@@ -1407,7 +1407,7 @@ const t: CultureTranslation = {
     's.carjob.2': "Bu parça bozuk.", // nieuw, nalezen
     's.carjob.3': "Test sürüşü yapabilir miyim?", // nieuw, nalezen
     'c.carjob.q': "Frenler de kötü. Onları hemen yapar mısın?", // nieuw, nalezen
-    'c.carjob.a': "Önce müşteriyi ararım. Onun onay vermesi lazım.", // nieuw, nalezen
+    'c.carjob.a': "Önce şefe sorarım. Müşterinin onay vermesi lazım.", // nieuw, nalezen
     'u.stage': "Staj yapmak", // nieuw, nalezen
     'l.placement': "Stajın", // nieuw, nalezen
     'w.stage': "staj (bir şirkette öğreniyorsun)", // nieuw, nalezen
@@ -1455,10 +1455,10 @@ const t: CultureTranslation = {
     'w.wet': "yasa, kanun", // nieuw, nalezen
     's.police.1': "Para cezası aldım.", // nieuw, nalezen
     's.police.2': "İtiraz etmek istiyorum.", // nieuw, nalezen
-    's.police.3': "Avukat isteyebilir miyim?", // nieuw, nalezen
+    's.police.3': "Bir avukatla konuşmak istiyorum.", // nieuw, nalezen
     'c.police.q': "Kimlik belgenizi görebilir miyim?", // nieuw, nalezen
     'c.police.a': "Evet, buyurun. Ne oldu?", // nieuw, nalezen
-    'u.online': "İşte internet", // nieuw, nalezen
+    'u.online': "İş yerinde internet", // nieuw, nalezen // nagelezen AI 31 okt
     'l.login': "Giriş yapmak", // nieuw, nalezen
     'w.uitloggen': "çıkış yapmak (hesaptan)", // nieuw, nalezen
     'w.account': "hesap", // nieuw, nalezen
@@ -1490,11 +1490,11 @@ const t: CultureTranslation = {
     'w.bijbaan': "yan iş (okulun yanında küçük bir iş)", // nieuw, nalezen
     'w.nauwkeurig': "dikkatli ve titiz", // nieuw, nalezen
     'w.meeloopdag': "gözlem günü (birinin yanında bir gün işe gittiğin gün)", // nieuw, nalezen
-    's.mychoice.1': "Elimden iş gelir.", // nieuw, nalezen
+    's.mychoice.1': "Ellerimle iyi çalışabilirim.", // nieuw, nalezen
     's.mychoice.2': "İnsanlarla çalışmayı severim.", // nieuw, nalezen
     's.mychoice.3': "İşi görmek için bir gün yanınızda durabilir miyim?", // nieuw, nalezen
     'c.mychoice.q': "Neyde iyisin?", // nieuw, nalezen
-    'c.mychoice.a': "Titizim. Evde annemle ilgileniyorum.", // nieuw, nalezen
+    'c.mychoice.a': "İnsanlara iyi bakabilirim. Evde annemle ilgileniyorum.", // nieuw, nalezen
     'l.nextstep': "Entree’den sonra", // nieuw, nalezen
     'w.niveau2': "seviye 2 (mbo’nun bir sonraki seviyesi)", // nieuw, nalezen
     'w.startkwalificatie': "temel yeterlilik (mbo seviye 2 ya da daha yüksek diploma)", // nieuw, nalezen
@@ -1548,7 +1548,7 @@ const t: CultureTranslation = {
     'c.workorder.p': "İş emrinde on koli yazıyor. Doğru mu?", // nieuw, nalezen
     'c.workorder.s': "İş emrinde şöyle yazıyor: 3 numaralı odayı boya. İş arkadaşın 5 numaralı oda olduğunu söylüyor. Ne yaparsın?", // nieuw, nalezen
     'c.workorder.o1': "Amirine hangi odanın doğru olduğunu sorarsın.", // nieuw, nalezen
-    'c.workorder.o2': "3 numaralı odayı boyarsın, çünkü kâğıtta öyle yazıyor.", // nieuw, nalezen
+    'c.workorder.o2': "3 numaralı odayı boyarsın, çünkü iş emrinde öyle yazıyor.", // nieuw, nalezen
     'c.workorder.o3': "İki odayı da boyarsın, böylece emin olursun.", // nieuw, nalezen
     'c.workorder.w': "İki şey birbirini tutmuyorsa, başlamadan önce kontrol edersin. Kısa bir soru, işi baştan yapmaktan daha az zaman alır.", // nieuw, nalezen
     'c.handover': "Neyin bittiğini, neyin bitmediğini söyle", // nieuw, nalezen
@@ -1572,8 +1572,8 @@ const t: CultureTranslation = {
     'c.power.p': "Bozuk bir kablo görüyorum. Kim bakabilir?", // nieuw, nalezen
     'c.power.s': "Bir lamba asman gerekiyor. Bir iş arkadaşın diyor ki: “Elektrik kesik, sanırım.” Ne yaparsın?", // nieuw, nalezen
     'c.power.o1': "Eğitimli bir iş arkadaşından elektriğin kesik olduğunu kontrol etmesini istersin.", // nieuw, nalezen
-    'c.power.o2': "Başlarsın, ama kablolara sadece eldivenle dokunursun.", // nieuw, nalezen
-    'c.power.o3': "Elektrik var mı diye hissetmek için kabloya hızlıca dokunursun.", // nieuw, nalezen
+    'c.power.o2': "Başlarsın, ama kablolara dokunurken kalın eldiven giyersin.", // nieuw, nalezen
+    'c.power.o3': "Elektriğin kesik olduğunu kontrol etmek için ışığı açıp kapatırsın.", // nieuw, nalezen
     'c.power.w': "Elektrikte “sanırım” yeterli değildir. Elektrik çarpması seni öldürebilir. Eğitimli bir iş arkadaşı elektrik olmadığını kontrol eder, sonra başlayabilirsin.", // nieuw, nalezen
     'c.garage': "Arabanın altında güvenlik", // nieuw, nalezen
     'c.garage.b': "Sadece kriko üzerinde duran bir arabanın altına asla girme. Araba liftte ya da sehpalar üzerinde sağlam durmalı. Dökülen yağ zemini kaygan yapar: hemen temizle. Eski yağ, aküler ve temizlik ürünleri tehlikeli atıktır. Bunlar özel bir yere gider, asla normal çöpe ya da gidere değil. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
@@ -1587,8 +1587,8 @@ const t: CultureTranslation = {
     'c.carjob.b': "İş emrinde yazandan fazla sorun mu buluyorsun? Onları öylece tamir etme. Müşteri önce ek işi ve masrafları onaylamalı. Amirin ya da servis danışmanı müşteriyi arar. Test sürüşü sadece izinle ve sadece geçerli bir ehliyetle yapılır. Ne yaptığını ve hangi parçaları kullandığını yaz. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
     'c.carjob.p': "Bir sorun daha görüyorum. Müşteriyi kim arayacak?", // nieuw, nalezen
     'c.carjob.s': "Bir arabanın yağını değiştiriyorsun. Frenlerin de kötü olduğunu görüyorsun. Araba bir saat içinde hazır olmalı. Ne yaparsın?", // nieuw, nalezen
-    'c.carjob.o1': "Müşterinin aranması için amirine söylersin.", // nieuw, nalezen
-    'c.carjob.o2': "Frenleri de tamir edersin, müşteri memnun olur.", // nieuw, nalezen
+    'c.carjob.o1': "Müşteriyi araması için amirine söylersin.", // nieuw, nalezen
+    'c.carjob.o2': "Frenleri de tamir edersin: müşteri kesin güvenli bir araba ister.", // nieuw, nalezen
     'c.carjob.o3': "Hiçbir şey söylemezsin: frenler iş emrinde yok.", // nieuw, nalezen
     'c.carjob.w': "Müşteri öder, bu yüzden müşteri karar verir. Onun onayı olmadan servis öylece ek iş yapamaz. Kötü frenler tehlikelidir, bu yüzden söylemek önemlidir.", // nieuw, nalezen
     'c.placement': "Önce imzala, sonra başla", // nieuw, nalezen
@@ -1596,7 +1596,7 @@ const t: CultureTranslation = {
     'c.placement.p': "Staj sözleşmesi imzalanınca başlarım.", // nieuw, nalezen
     'c.placement.s': "Şirket yarın başlamanı istiyor. POK daha imzalanmadı. Ne yaparsın?", // nieuw, nalezen
     'c.placement.o1': "Staj danışmanından önce POK’u halletmesini istersin.", // nieuw, nalezen
-    'c.placement.o2': "Yarın başlarsın, POK’u birkaç hafta sonra imzalarsın.", // nieuw, nalezen
+    'c.placement.o2': "Yarın başlarsın, POK’u vaktin olunca imzalarsın.", // nieuw, nalezen
     'c.placement.o3': "Başlarsın, ama şimdilik okula bir şey söylemezsin.", // nieuw, nalezen
     'c.placement.w': "POK’ta ne öğrendiğin ve sana kimin yardım ettiği yazar. İmzalı bir POK olmadan stajın diploman için sayılmayabilir. Bu yüzden başlamadan önce imzalarsın.", // nieuw, nalezen
     'c.review': "Geri bildirim iste, bir de örnek", // nieuw, nalezen
@@ -1605,7 +1605,7 @@ const t: CultureTranslation = {
     'c.review.s': "İşyeri eğitmenin diyor ki: “Daha dikkatli çalışman lazım.” Ne demek istediğini bilmiyorsun. Ne yaparsın?", // nieuw, nalezen
     'c.review.o1': "Neyi farklı yapman gerektiğine dair bir örnek istersin.", // nieuw, nalezen
     'c.review.o2': "Evet dersin ve kendin anlayacağını umarsın.", // nieuw, nalezen
-    'c.review.o3': "Hiçbir şey ters gitmesin diye çok daha yavaş çalışırsın.", // nieuw, nalezen
+    'c.review.o3': "Hiçbir şey ters gitmesin diye bundan sonra çok daha yavaş çalışırsın.", // nieuw, nalezen
     'c.review.w': "Bir örnekle neyi değiştireceğini bilirsin. Sormak, öğrenmek istediğini gösterir. Eğitmenler bunu sever.", // nieuw, nalezen
     'c.council': "Kim oy verebilir?", // nieuw, nalezen
     'c.council.b': "Hollanda’da kimin karar vereceğini oy vererek seçersin. Belediye meclisi (gemeenteraad) senin şehrin hakkında karar verir. Tweede Kamer bütün ülke için yasaları yapar. Hollanda vatandaşlığın varsa 18 yaşından itibaren bütün seçimlerde oy verebilirsin. Belediye meclisi için daha çok kişi oy verebilir: burada yaşayan başka bir AB ülkesinden insanlar ve 5 yıl yasal oturumdan sonra AB dışından insanlar. Belediye (gemeente) sana bir oy kartı (stempas) gönderir. Onu kimliğinle birlikte götür. Oy verip veremeyeceğinden emin değil misin? Belediyeye sor.", // nieuw, nalezen
@@ -1620,11 +1620,11 @@ const t: CultureTranslation = {
     'c.police.p': "Bu karara katılmıyorum. İtiraz ediyorum.", // nieuw, nalezen
     'c.police.s': "Belediyeden bir mektup alıyorsun. Onların kararına katılmıyorsun. Mektupta altı haftan olduğu yazıyor. Ne yaparsın?", // nieuw, nalezen
     'c.police.o1': "Tarihten önce bir itiraz mektubu yazarsın.", // nieuw, nalezen
-    'c.police.o2': "Bir kez ararsın ve geri aramalarını beklersin.", // nieuw, nalezen
+    'c.police.o2': "Onları bir kez ararsın ve seni geri aramalarını beklersin.", // nieuw, nalezen
     'c.police.o3': "Beklersin: altı hafta sonra kendiliğinden biter.", // nieuw, nalezen
     'c.police.w': "İtiraz yazılı olarak, mektuptaki tarihten önce yapılır. O tarihten sonra çoğu zaman çok geçtir. Juridisch Loket onu yazmana yardım edebilir.", // nieuw, nalezen
     'c.login': "Girişin sadece senin", // nieuw, nalezen
-    'c.login.b': "Şifren ve DigiD’n sadece senin için. Onları kimseye verme, işverenine ya da bir iş arkadaşına bile. Ortak bir bilgisayarda işin bitince her zaman çıkış yap. Kısa bir süre mi uzaklaşıyorsun? Ekranını kilitle. Şifreni mi unuttun? Bilgi işlem bölümünden (ICT-afdeling) yenisini iste. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.login.b': "Şifren ve DigiD’n sadece senin için. Onları kimseye verme, işverenine ya da bir iş arkadaşına bile. Ortak bir bilgisayarda işin bitince her zaman çıkış yap. Kısa bir süre mi uzaklaşıyorsun? Ekranını kilitle. Şifreni mi unuttun? Bilgi işlem bölümünden (ICT-afdeling) yenisini iste. Bilgisayar kuralları şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu bilgi işlem bölümüne sor.", // nieuw, nalezen
     'c.login.p': "Biraz uzaklaşıyorum. Ekranımı kilitliyorum.", // nieuw, nalezen
     'c.login.s': "Amirin, evraklarını hızlıca halletmek için DigiD’ni ve şifreni istiyor. Ne yaparsın?", // nieuw, nalezen
     'c.login.o1': "Hayır dersin, o yardım ederken girişi kendin yaparsın.", // nieuw, nalezen
@@ -1636,15 +1636,15 @@ const t: CultureTranslation = {
     'c.phish.p': "Şüpheli bir bağlantıya tıkladım.", // nieuw, nalezen
     'c.phish.s': "Bir e-postadaki bağlantıya tıkladın ve şifreni yazdın. Sonra e-postanın sahte olduğunu görüyorsun. Ne yaparsın?", // nieuw, nalezen
     'c.phish.o1': "Şifreni değiştirir ve bilgi işlem bölümünü ararsın.", // nieuw, nalezen
-    'c.phish.o2': "E-postayı silersin ve bir şey olmamasını umarsın.", // nieuw, nalezen
+    'c.phish.o2': "Başka kimse tıklamasın diye e-postayı silersin.", // nieuw, nalezen
     'c.phish.o3': "Bir şey ters gidecek mi diye bir gün beklersin.", // nieuw, nalezen
     'c.phish.w': "Şifrenle başka biri işinin sistemlerine girebilir. Şifreni hızlıca değiştirip bilgi işlem bölümüne haber verirsen, bunu zamanında durdurabilirler.", // nieuw, nalezen
     'c.mychoice': "Güçlü yönlerin önemli", // nieuw, nalezen
     'c.mychoice.b': "Neyde iyisin? İşi, okulu ve evi düşün. Ailene bakmak, bir yan iş ya da gönüllü çalışma da sayılır. Neyi seversin, neyi sevmezsin? Hangi işin sana uyduğunu bilmiyor musun? Bir gün birinin yanında işe gitmek iste (meeloopdag). Okuldaki danışmanın seçmene yardım edebilir.", // nieuw, nalezen
-    'c.mychoice.p': "İnsanlarla aram iyidir. Evde çok yardım ederim.", // nieuw, nalezen
+    'c.mychoice.p': "İnsanlarla iyi geçinebilirim. Evde çok yardım ederim.", // nieuw, nalezen
     'c.mychoice.s': "Okulda sana soruyorlar: “Neyde iyisin?” Hiç maaşlı bir işin olmadı. Ne dersin?", // nieuw, nalezen
     'c.mychoice.o1': "Evde iyi yaptığın şeyleri, örneğin başkalarına bakmayı.", // nieuw, nalezen
-    'c.mychoice.o2': "Söyleyemeyeceğini, çünkü hiç işin olmadığını.", // nieuw, nalezen
+    'c.mychoice.o2': "Henüz bilmediğini, çünkü hiç işin olmadığını.", // nieuw, nalezen
     'c.mychoice.o3': "Her işi yapabileceğini, gerçekten her şeyi.", // nieuw, nalezen
     'c.mychoice.w': "Evde kazandığın beceriler de sayılır. Bakım, planlama ve yardım, işverenlerin ihtiyaç duyduğu becerilerdir. Ne yaptığını bir örnekle anlat.", // nieuw, nalezen
     'c.nextstep': "Entree’den sonra: seviye 2 ya da iş", // nieuw, nalezen

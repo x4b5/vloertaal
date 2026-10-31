@@ -1,3 +1,4 @@
+import type { UiKey } from '../i18n/types';
 import type { ThemeId } from './themes';
 import { THEME_UNITS } from './themes';
 
@@ -17,21 +18,20 @@ import { THEME_UNITS } from './themes';
  *
  * Vertalingen (alleen het spoor Taal; Werkregels is alleen Nederlands): de `id` van een zin is
  * zijn sleutel in src/i18n/kunjenu/<taal>.ts, zoals een unit-id in src/i18n/<taal>.ts. Verplicht
- * voor de onderwerpen van de thema's in KUN_VERTAALD (tests/kunJeNu.test.ts, tests/i18n.test.ts).
- * TODO: de thema's Samenwerken, Je rechten, Leven in Nederland en Jouw sector vertalen; tot dan
- * staat daar de Engelse zin (`en`) onder het Nederlands.
+ * voor de onderwerpen van de thema's in KUN_VERTAALD (tests/kunJeNu.test.ts, tests/i18n.test.ts):
+ * sinds 31 oktober 2026 alle acht thema's. De Engelse zin (`en`) is de hulptaal Engels.
  */
 
 /** Het niveau waar een zin bij past: A1 of A2 (ERK), of 1F (Werkregels). */
 export type KunNiveau = 'A1' | 'A2' | '1F';
 /** De vaardigheid waar een zin bij past. */
-export type KunVaardigheid = 'luisteren' | 'spreken' | 'lezen' | 'gesprekken';
+export type KunVaardigheid = 'luisteren' | 'spreken' | 'lezen' | 'schrijven' | 'gesprekken';
 
 export interface KunZin {
   /** "kjn.u.time.1": ook de sleutel van de vertaling (Taal). */
   id: string;
   nl: string;
-  /** Engels (alleen Taal): de hulptaal Engels, en de terugval zolang een vertaling ontbreekt. */
+  /** Engels (alleen Taal): de hulptaal Engels, en de terugval als een vertaling ontbreekt. */
   en?: string;
   niveau: KunNiveau;
   vaardigheid: KunVaardigheid;
@@ -103,7 +103,7 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan vragen of mijn vakantiegeld wordt uitbetaald.', 'A2', 'gesprekken', 'I can ask if my holiday pay will be paid out.'],
   ]),
   onderwerp('u.stage', 'Stage lopen', [
-    ['Ik kan vragen wie mijn praktijkopleider is.', 'A2', 'spreken', 'I can ask who my placement supervisor is.'],
+    ['Ik kan vragen wie mijn praktijkopleider is.', 'A2', 'spreken', 'I can ask who my workplace trainer is.'],
     ['Ik kan om feedback en een voorbeeld vragen.', 'A2', 'gesprekken', 'I can ask for feedback and an example.'],
   ]),
   // Je baan
@@ -122,7 +122,7 @@ export const KUN_TAAL: KunOnderwerp[] = [
   onderwerp('u.contact', 'Bellen en appen met je werk', [
     ['Ik kan bellen en zeggen wie ik ben.', 'A1', 'gesprekken', 'I can call and say who I am.'],
     ['Ik kan vragen of iemand mij terugbelt.', 'A2', 'spreken', 'I can ask someone to call me back.'],
-    ['Ik kan een kort bericht van mijn werk lezen.', 'A2', 'lezen', 'I can read a short message from work.'],
+    ['Ik kan een kort bericht aan mijn werk schrijven.', 'A2', 'schrijven', 'I can write a short message to work.'],
   ]),
   onderwerp('u.house', 'Huisregels', [
     ['Ik kan regels als "Roken verboden" lezen.', 'A1', 'lezen', 'I can read rules like "Roken verboden".'],
@@ -294,8 +294,8 @@ export const KUN_REGELS: KunOnderwerp[] = [
     ['Ik kan vragen om een ID bij alcohol.', '1F', 'gesprekken'],
   ]),
   onderwerp('r.schrijven', 'Schrijven op je werk', [
-    ['Ik kan een kort bericht aan mijn werk nalezen.', '1F', 'lezen'],
-    ['Ik kan zien wat in een sollicitatiemail hoort.', '1F', 'lezen'],
+    ['Ik kan een korte mail aan mijn werk schrijven.', '1F', 'schrijven'],
+    ['Ik kan kiezen wat in een sollicitatiemail hoort.', '1F', 'schrijven'],
   ]),
   // Samenwerken
   onderwerp('r.samen', 'Samenwerken: de ongeschreven regels', [
@@ -369,16 +369,33 @@ export function kunJeNu(unitId: string): KunZin[] {
 /** "past bij A2 · spreken" */
 export const pastBij = (z: Pick<KunZin, 'niveau' | 'vaardigheid'>): string => `past bij ${z.niveau} · ${z.vaardigheid}`;
 
+/** De vaardigheid in de hulptaal (een ui-sleutel): op het certificaat-scherm na het Nederlands, "(pisanie)". */
+export const KUN_VAARDIGHEID_UI: Record<KunVaardigheid, UiKey> = {
+  luisteren: 'kunLuisteren',
+  spreken: 'kunSpreken',
+  lezen: 'kunLezen',
+  schrijven: 'kunSchrijven',
+  gesprekken: 'kunGesprekken',
+};
+
 /** Hoeveel zinnen bij deze onderwerpen horen (de begeleiderskaart). */
 export function kunAantal(unitIds: string[]): number {
   return unitIds.reduce((n, id) => n + kunJeNu(id).length, 0);
 }
 
 /**
- * De thema's waarvan de zinnen (spoor Taal) in alle 13 hulptalen vertaald moeten zijn: de eerste
- * vier. TODO: de andere vier thema's.
+ * De thema's waarvan de zinnen (spoor Taal) in alle 13 hulptalen vertaald moeten zijn: alle acht.
  */
-export const KUN_VERTAALD: ThemeId[] = ['theme.start', 'theme.safe', 'theme.find', 'theme.job'];
+export const KUN_VERTAALD: ThemeId[] = [
+  'theme.start',
+  'theme.safe',
+  'theme.find',
+  'theme.job',
+  'theme.together',
+  'theme.rights',
+  'theme.life',
+  'theme.sector',
+];
 
 /** De ids van de zinnen die vertaald moeten zijn (src/i18n/kunjenu/<taal>.ts). */
 export function kunGlossIds(): string[] {

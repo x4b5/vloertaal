@@ -53,7 +53,7 @@ export const schrijvenUnit: RuleUnit = {
           situation: 'Welke mail kan Fatima het beste sturen?',
           options: [
             { id: 'a', text: 'Hoi Mark, ik ben dinsdagochtend niet op mijn werk. Ik moet naar school. Groetjes, Fatima', best: false, feedback: 'Ze vraagt niets. Ze zegt alleen dat ze er niet is.' },
-            { id: 'b', text: 'Beste Mark, mag ik dinsdagochtend vrij? Ik heb een gesprek op school. Fatima', best: true, feedback: 'Goed. Kort, met wat, wanneer en waarom.' },
+            { id: 'b', text: 'Beste Mark, mag ik dinsdagochtend vrij? Ik heb een gesprek op school. Groet, Fatima', best: true, feedback: 'Goed. Kort, met wat, wanneer en waarom.' },
             { id: 'c', text: 'Beste Mark, mag ik een keer vrij? Ik heb iets op school. Groet, Fatima', best: false, feedback: 'Mark weet niet wanneer. Noem de dag en het dagdeel.' },
           ],
           why: 'Een goede mail is kort. Er staat in: een groet, wat je wilt, wanneer, en je naam. Vraag het, zeg het niet alleen. Zet ook een onderwerp boven je mail. Bijvoorbeeld: "Vrij op dinsdagochtend".',
@@ -116,7 +116,7 @@ export const schrijvenUnit: RuleUnit = {
         {
           kind: 'whatdo',
           id: 'r.l.schrijven.2.wd1',
-          situation: 'Ewa heeft twee mailadressen. Welk adres kan Ewa het beste gebruiken?',
+          situation: 'Ewa heeft al een oud mailadres. Welk adres kan Ewa het beste gebruiken?',
           options: [
             { id: 'a', text: 'Een nieuw adres, met haar eigen naam erin.', best: true, feedback: 'Goed. Dan weet de werkgever meteen van wie de mail is.' },
             { id: 'b', text: 'Haar oude adres, prinsesje99@mail.nl.', best: false, feedback: 'Dat adres klinkt niet serieus. Een werkgever kiest dan snel iemand anders.' },

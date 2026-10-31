@@ -1,12 +1,12 @@
 import { dutchUi } from '../lib/track';
 import { Fragment, useEffect, useId, useMemo, useRef, useState } from 'react';
-import { gloss, langTag, ui, said } from '../i18n';
+import { gloss, langTag, ui, said, saidLang } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import type { SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { CERT_NOTE, certData, certDate, certListLabel, certMeta, certSub, earnedCertificates, loadCertName, saveCertName, sealRing, type CertData } from '../lib/certificate';
 import { certKunFits, certificatePng, fontsReady, shareCertificate } from '../lib/certCanvas';
-import { kunJeNu, pastBij, type KunZin } from '../content/kunJeNu';
+import { KUN_VAARDIGHEID_UI, kunJeNu, pastBij, type KunZin } from '../content/kunJeNu';
 import type { Progress } from '../lib/progress';
 import { KAART_NOTE, kaartAlt, kaartData } from '../lib/kaart';
 import { kaartPng, shareKaart } from '../lib/kaartCanvas';
@@ -305,7 +305,7 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
         <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
       )}
       <KunJeNuSection zinnen={zinnen} lang={lang} />
-      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
+      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)} dir={rtl ? 'rtl' : undefined}>
         <NlPair nlFirst nl="Naam wijzigen" className="keep-link-gloss" text={ui('certChangeName', lang)} />
       </button>
     </div>
@@ -315,7 +315,8 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
 /**
  * "Wat kun je nu?" under a certificate: the topic's can-do sentences (src/content/kunJeNu.ts), each
  * in Dutch with its meaning in the help language (the work-rules track: Dutch only) and, small,
- * the level and skill it fits ("past bij A2 · spreken"). Text only, nothing to tap.
+ * the level and skill it fits ("past bij A2 · spreken"), with the skill in the help language after
+ * it ("(mówienie)"; the work-rules track: Dutch only). Text only, nothing to tap.
  */
 function KunJeNuSection({ zinnen, lang }: { zinnen: KunZin[]; lang?: HelpLanguage }) {
   const id = useId();
@@ -332,7 +333,10 @@ function KunJeNuSection({ zinnen, lang }: { zinnen: KunZin[]; lang?: HelpLanguag
             <CheckIcon size={20} />
             <span className="kun-text">
               <NlPair nlFirst content nl={z.nl} nlClass="kun-nl" className="kun-help" text={gloss(z.id, z.en ?? z.nl, lang)} />
-              <span className="kun-tag" lang="nl" dir="ltr">{pastBij(z)}</span>
+              <span className="kun-tag" lang="nl" dir="ltr">
+                {pastBij(z)}
+                <KunSkill z={z} lang={lang} />
+              </span>
             </span>
           </li>
         ))}
@@ -342,6 +346,13 @@ function KunJeNuSection({ zinnen, lang }: { zinnen: KunZin[]; lang?: HelpLanguag
       </p>
     </section>
   );
+}
+
+/** The skill of a can-do sentence in the help language (English without one), after the Dutch: " (pisanie)". */
+function KunSkill({ z, lang }: { z: KunZin; lang?: HelpLanguage }) {
+  if (dutchUi(lang)) return null;
+  const t = ui(KUN_VAARDIGHEID_UI[z.vaardigheid], lang);
+  return <> (<bdi lang={saidLang(t)}>{said(t)}</bdi>)</>;
 }
 
 /**
@@ -471,9 +482,10 @@ const KAART_LEGEND: { nl: string; key: UiKey; toets?: boolean; kun?: boolean }[]
  * "Laat zien hoe het gaat" (Settings › Taal en ik): the coach card ("begeleiderskaart",
  * src/lib/kaart.ts), a picture this phone makes from its own progress, for the learner to show a
  * coach, teacher or employer. Nothing is sent: the learner shows it, or saves or shares the
- * picture themselves. On screen: the picture (large, with all it says as its text alternative),
- * [Bewaar of deel], what each line means in the help language, and [Naam wijzigen] (the same
- * name as on the certificates, asked first when it never was). Two things to tap, and Back.
+ * picture themselves. On screen: [Bewaar of deel] (above the picture, so it is always in view),
+ * the picture (large, with all it says as its text alternative), what each line means in the help
+ * language, and [Naam wijzigen] (the same name as on the certificates, asked first when it never
+ * was). Two things to tap, and Back.
  */
 export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
   progress: Progress;
@@ -547,17 +559,9 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
         <NlPair nlFirst nl="Deze kaart laat zien hoe het gaat. Laat hem zien aan je docent, coach of baas. Jij kiest." nlClass="kaart-intro-nl" text={intro} />
         <HelpSay text={intro.help} lang={lang} />
       </p>
-      <figure className="kaart-figure">
-        {shown ? (
-          <img className="kaart-img" src={shown.url} alt={alt} lang="nl" width={1200} />
-        ) : failed ? (
-          // No picture on this phone (an old browser): the same lines as text.
-          <p className="kaart-text" lang="nl" dir="ltr">{alt}</p>
-        ) : (
-          <div className="kaart-wait" role="img" aria-label={alt} lang="nl" />
-        )}
-      </figure>
-      <div className="cert-actions cert-actions-one">
+      {/* Above the picture: the main action is in view on every phone, also with large text
+          (the picture is taller than the rest of a small screen). */}
+      <div className="cert-actions cert-actions-one kaart-actions">
         <button type="button" className="btn btn-primary cert-btn cert-share kaart-share" onClick={share} aria-disabled={busy || !shown || undefined} dir={rtl ? 'rtl' : undefined}>
           <ShareGlyph />
           <span className="cert-btn-text">
@@ -568,6 +572,16 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
       {saved && (
         <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
       )}
+      <figure className="kaart-figure">
+        {shown ? (
+          <img className="kaart-img" src={shown.url} alt={alt} lang="nl" width={1200} />
+        ) : failed ? (
+          // No picture on this phone (an old browser): the same lines as text.
+          <p className="kaart-text" lang="nl" dir="ltr">{alt}</p>
+        ) : (
+          <div className="kaart-wait" role="img" aria-label={alt} lang="nl" />
+        )}
+      </figure>
       <section className="kaart-legend" dir={rtl ? 'rtl' : undefined} aria-label={said(ui('coachCardWhat', lang))}>
         <p className="kaart-legend-head"><NlPair nlFirst nl="Op de kaart, in het Nederlands:" nlClass="kaart-legend-nl" text={ui('coachCardWhat', lang)} /></p>
         <ul className="kaart-legend-rows">
@@ -583,7 +597,7 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
           <NlPair nlFirst nl={KAART_NOTE} nlClass="kaart-keep-nl" text={ui('coachCardKeep', lang)} />
         </p>
       </section>
-      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)}>
+      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)} dir={rtl ? 'rtl' : undefined}>
         <NlPair nlFirst nl="Naam wijzigen" className="keep-link-gloss" text={ui('certChangeName', lang)} />
       </button>
     </div>

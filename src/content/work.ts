@@ -2581,7 +2581,8 @@ const finishUnit = unit('finish', 'Finishing your work', 'Je werk afronden', '�
       ['afmelden', 'afmelden', 'to sign off (say that you are done and leave)', '📣', false],
       ['kapot', 'kapot', 'broken', '🪫'],
       ['opslot', 'op slot', 'locked', '🔐', false],
-      ['bijzonderheid', 'de bijzonderheid', 'the special point (something that went differently)', '❗', false],
+      // "de bijzonderheid" (B1) became "de deur", the door of the tip's "De deur zat op slot."; the id stays.
+      ['bijzonderheid', 'de deur', 'the door', '🚪', false],
     ],
     [
       ['Ik ruim mijn plek op.', 'I am tidying up my place.'],
@@ -2666,7 +2667,7 @@ const garageUnit = unit('garage', 'In the garage', 'In de garage', '🚗', '#1f6
       ['Dit onderdeel is kapot.', 'This part is broken.'],
       ['Mag ik een proefrit maken?', 'May I take a test drive?'],
     ],
-    [['De remmen zijn ook slecht. Doe je die meteen?', 'The brakes are bad too. Will you do them right away?'], ['Eerst bel ik de klant. Hij moet akkoord zijn.', 'First I call the customer. He must agree.']],
+    [['De remmen zijn ook slecht. Doe je die meteen?', 'The brakes are bad too. Will you do them right away?'], ['Eerst vraag ik het aan de chef. De klant moet akkoord zijn.', 'First I ask my supervisor. The customer must agree.']],
   ),
 ]);
 
@@ -2742,7 +2743,7 @@ const societyUnit = unit('society', 'Taking part in the Netherlands', 'Meedoen i
     [
       ['Ik heb een boete gekregen.', 'I got a fine.'],
       ['Ik wil bezwaar maken.', 'I want to object.'],
-      ['Mag ik een advocaat?', 'May I have a lawyer?'],
+      ['Ik wil met een advocaat praten.', 'I want to talk to a lawyer.'],
     ],
     [['Mag ik uw identiteitsbewijs zien?', 'May I see your ID?'], ['Ja, hier is het. Wat is er aan de hand?', 'Yes, here it is. What is going on?']],
   ),
@@ -2805,11 +2806,11 @@ const entreeMore: Record<string, Lesson[]> = {
         ['meeloopdag', 'de meeloopdag', 'the job shadow day (a day you join someone at work)', '👣', false],
       ],
       [
-        ['Ik ben goed met mijn handen.', 'I am good with my hands.'],
+        ['Ik kan goed met mijn handen werken.', 'I can work well with my hands.'],
         ['Ik werk graag met mensen.', 'I like working with people.'],
         ['Mag ik een dag meelopen?', 'May I join you for a day, to see the work?'],
       ],
-      [['Waar ben je goed in?', 'What are you good at?'], ['Ik ben nauwkeurig. Thuis zorg ik voor mijn moeder.', 'I am careful and exact. At home I care for my mother.']],
+      [['Waar ben je goed in?', 'What are you good at?'], ['Ik kan goed voor mensen zorgen. Thuis zorg ik voor mijn moeder.', 'I am good at caring for people. At home I care for my mother.']],
     ),
     lesson(
       'nextstep',
@@ -2902,7 +2903,7 @@ const entreeTips = [
     'Your work order says: paint room 3. Your colleague says it is room 5. What do you do?',
     [
       'Ask your supervisor which room is right.',
-      'Paint room 3, because the paper says so.',
+      'Paint room 3, because the work order says so.',
       'Paint both rooms, then you are sure.',
     ],
     'When two things do not match, you check before you start. A short question costs less time than doing the work again.',
@@ -2957,8 +2958,8 @@ const entreeTips = [
     'You must hang a lamp. A colleague says: "The power is off, I think." What do you do?',
     [
       'Ask a trained colleague to check that the power is off.',
-      'Start, but touch the wires only with gloves on.',
-      'Touch the wire quickly to feel if there is power.',
+      'Start, but wear thick gloves when you touch the wires.',
+      'Switch the light on and off to check that the power is off.',
     ],
     '"I think" is not enough with electricity. A shock can kill you. A trained colleague checks that there is no power, and then you can start.',
     ADVICE_LINE,
@@ -2996,8 +2997,8 @@ const entreeTips = [
     ['Ik zie nog een probleem. Wie belt de klant?', 'I see another problem. Who calls the customer?'],
     'You change the oil of a car. You see that the brakes are bad too. The car must be ready in one hour. What do you do?',
     [
-      'Tell your supervisor, so that the customer can be called.',
-      'Fix the brakes too, the customer will be happy.',
+      'Tell your supervisor, so they can call the customer.',
+      'Fix the brakes too: the customer surely wants a safe car.',
       'Say nothing: the brakes are not on the work order.',
     ],
     'The customer pays, so the customer decides. Without their OK, the garage may not just do extra work. Bad brakes are dangerous, so telling someone matters.',
@@ -3018,7 +3019,7 @@ const entreeTips = [
     'The company asks you to start tomorrow. The POK is not signed yet. What do you do?',
     [
       'Ask your placement coach to arrange the POK first.',
-      'Start tomorrow, and sign the POK in a few weeks.',
+      'Start tomorrow, and sign the POK when you have time.',
       'Start, but do not tell the school about it yet.',
     ],
     'The POK says what you learn and who helps you. Without a signed POK, your placement may not count for your diploma. So you sign it before you start.',
@@ -3037,7 +3038,7 @@ const entreeTips = [
     [
       'Ask for an example of what you must do differently.',
       'Say yes, and hope that you find out yourself.',
-      'Work much slower, so nothing can go wrong.',
+      'Work much slower from now on, so that nothing goes wrong.',
     ],
     'With an example, you know what to change. Asking shows that you want to learn. Trainers like that.',
     NONE,
@@ -3047,11 +3048,11 @@ const entreeTips = [
     '🌟',
     'Your strong points count',
     'What are you good at? Think of work, school and home. Caring for family, a side job or volunteer work count too. What do you like, and what do you not like? Not sure what work fits you? Ask to join someone at work for a day (meeloopdag). Your coach at school can help you choose.',
-    ['Ik ben goed met mensen. Ik help thuis veel.', 'I am good with people. I help a lot at home.'],
+    ['Ik kan goed met mensen omgaan. Ik help thuis veel.', 'I get on well with people. I help a lot at home.'],
     'At school they ask: "What are you good at?" You never had a paid job. What do you say?',
     [
       'What you do well at home, like caring for others.',
-      'That you cannot say, because you never had a job.',
+      'That you do not know yet, because you never had a job.',
       'That you can do every kind of work, all of it.',
     ],
     'Skills from home count too. Caring, planning and helping are skills that employers need. Say what you did, with an example.',
@@ -3173,7 +3174,7 @@ const entreeTips = [
     'You get a letter from the gemeente. You do not agree with their decision. The letter says you have six weeks. What do you do?',
     [
       'Write a letter to object, before the date.',
-      'Call once, and wait until they call back.',
+      'Call them once, and wait until they call you back.',
       'Wait: after six weeks, it stops by itself.',
     ],
     'You object in writing, before the date in the letter. After that date, it is often too late. The Juridisch Loket can help you write it.',
@@ -3194,7 +3195,10 @@ const entreeTips = [
       'Write it on a paper, so they can use it later.',
     ],
     'With your DigiD, someone can see and change your tax, benefits and health papers. It is only for you. You can log in yourself and let someone help you.',
-    HOUSE_LINE,
+    // Not HOUSE_LINE: in the situation the supervisor asks for the DigiD, and the DigiD is no
+    // company rule. The rules for computers (logging out, the screen) are, and the IT department
+    // knows them.
+    'Computer rules differ per company: ask the IT department what the rules are where you work.',
   ),
   tipFor(
     'phish',
@@ -3205,7 +3209,7 @@ const entreeTips = [
     'You clicked on a link in an e-mail and typed your password. Then you see that the e-mail was fake. What do you do?',
     [
       'Change your password, and call the IT department.',
-      'Delete the e-mail, and hope nothing happens.',
+      'Delete the e-mail, so that nobody else clicks on it.',
       'Wait a day to see if something goes wrong.',
     ],
     'With your password, someone else can get into the systems of your work. When you change it fast and tell the IT department, they can stop it in time.',

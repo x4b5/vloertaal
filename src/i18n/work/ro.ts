@@ -707,7 +707,7 @@ const t: CultureTranslation = {
     'c.illness': { m: 'Drepturile tale când ești bolnav', f: 'Drepturile tale când ești bolnavă', x: 'Drepturile tale în caz de boală' }, // x: nieuw, nalezen
     'c.illness.b': { m: 'Când ești bolnav, angajatorul trebuie să-ți plătească cel puțin 70% din salariu, timp de până la 2 ani. Un cao dă des mai mult. Pot exista până la 2 zile de așteptare (wachtdagen) fără plată, dar doar dacă scrie așa în contract sau în cao. Șeful nu are voie să te întrebe ce boală ai: despre sănătate și muncă vorbești cu medicul de medicina muncii (bedrijfsarts). Sună-ți angajatorul când te faci bine (betermelden). În primul an primești cel puțin salariul minim. Un contract pe perioadă determinată se termină la data de final, chiar dacă ești bolnav. Lucrezi printr-o agenție? Dacă ai în contract o clauză de agenție (uitzendbeding), contractul se poate termina când te îmbolnăvești. Atunci întreabă UWV despre Ziektewet, sau întreabă sindicatul. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.', f: 'Când ești bolnavă, angajatorul trebuie să-ți plătească cel puțin 70% din salariu, timp de până la 2 ani. Un cao dă des mai mult. Pot exista până la 2 zile de așteptare (wachtdagen) fără plată, dar doar dacă scrie așa în contract sau în cao. Șeful nu are voie să te întrebe ce boală ai: despre sănătate și muncă vorbești cu medicul de medicina muncii (bedrijfsarts). Sună-ți angajatorul când te faci bine (betermelden). În primul an primești cel puțin salariul minim. Un contract pe perioadă determinată se termină la data de final, chiar dacă ești bolnavă. Lucrezi printr-o agenție? Dacă ai în contract o clauză de agenție (uitzendbeding), contractul se poate termina când te îmbolnăvești. Atunci întreabă UWV despre Ziektewet, sau întreabă sindicatul. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.', x: 'În caz de boală, angajatorul trebuie să-ți plătească cel puțin 70% din salariu, timp de până la 2 ani. Un cao dă des mai mult. Pot exista până la 2 zile de așteptare (wachtdagen) fără plată, dar doar dacă scrie așa în contract sau în cao. Șeful nu are voie să te întrebe ce boală ai: despre sănătate și muncă vorbești cu medicul de medicina muncii (bedrijfsarts). Sună-ți angajatorul când te faci bine (betermelden). În primul an primești cel puțin salariul minim. Un contract pe perioadă determinată se termină la data de final, chiar și în caz de boală. Lucrezi printr-o agenție? Dacă ai în contract o clauză de agenție (uitzendbeding), contractul se poate termina când te îmbolnăvești. Atunci întreabă UWV despre Ziektewet, sau întreabă sindicatul. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.' }, // nalezen: feit gelijk getrokken // x: nieuw, nalezen
     'c.illness.p': 'M-am făcut bine. Mâine vin la muncă.',
-    'c.illness.s': { m: 'Ești bolnav de o săptămână. Angajatorul îți cere să mergi la medicul de medicina muncii. Ce faci?', f: 'Ești bolnavă de o săptămână. Angajatorul îți cere să mergi la medicul de medicina muncii. Ce faci?', x: 'Ești în concediu medical de o săptămână. Angajatorul îți cere să mergi la medicul de medicina muncii. Ce faci?' }, // x: nieuw, nalezen
+    'c.illness.s': { m: 'Ești bolnav de o săptămână. Angajatorul îți cere să mergi la medicul de medicina muncii. Ce faci?', f: 'Ești bolnavă de o săptămână. Angajatorul îți cere să mergi la medicul de medicina muncii. Ce faci?', x: 'Te-ai îmbolnăvit acum o săptămână. Angajatorul îți cere să mergi la medicul de medicina muncii. Ce faci?' }, // x: nieuw, nalezen // nagelezen AI 31 okt
     'c.illness.o1': 'Mergi și vorbești cu medicul despre sănătatea și munca ta.',
     'c.illness.o2': 'Nu mergi, pentru că ai deja doctorul tău.',
     'c.illness.o3': { m: 'Te întorci la muncă deși ești încă bolnav, ca să nu trebuiască să mergi.', f: 'Te întorci la muncă deși ești încă bolnavă, ca să nu trebuiască să mergi.', x: 'Te întorci la muncă deși încă nu te-ai vindecat, ca să nu trebuiască să mergi.' }, // x: nieuw, nalezen
@@ -1352,7 +1352,7 @@ const t: CultureTranslation = {
     'w.afmelden': "a anunța că ai terminat (spui că lucrul e gata și pleci)", // nieuw, nalezen
     'w.kapot': "stricat", // nieuw, nalezen
     'w.opslot': "încuiat", // nieuw, nalezen
-    'w.bijzonderheid': "detaliul important (ceva ce a mers altfel)", // nieuw, nalezen
+    'w.bijzonderheid': "ușa", // nieuw, nalezen
     's.handover.1': "Fac ordine la locul meu.", // nieuw, nalezen
     's.handover.2': "Puteți să-mi verificați lucrul?", // nieuw, nalezen
     's.handover.3': "Îl anunț pe șef că am terminat.", // nieuw, nalezen
@@ -1407,7 +1407,7 @@ const t: CultureTranslation = {
     's.carjob.2': "Piesa aceasta e stricată.", // nieuw, nalezen
     's.carjob.3': "Pot să fac o probă de drum?", // nieuw, nalezen
     'c.carjob.q': "Și frânele sunt proaste. Le faci imediat?", // nieuw, nalezen
-    'c.carjob.a': "Mai întâi îl sun pe client. Trebuie să fie de acord.", // nieuw, nalezen
+    'c.carjob.a': "Mai întâi îl întreb pe șef. Clientul trebuie să fie de acord.", // nieuw, nalezen
     'u.stage': "Stagiul de practică", // nieuw, nalezen
     'l.placement': "Stagiul tău", // nieuw, nalezen
     'w.stage': "stagiul de practică (înveți la o firmă)", // nieuw, nalezen
@@ -1455,7 +1455,7 @@ const t: CultureTranslation = {
     'w.wet': "legea", // nieuw, nalezen
     's.police.1': "Am primit o amendă.", // nieuw, nalezen
     's.police.2': "Vreau să fac contestație.", // nieuw, nalezen
-    's.police.3': "Pot să am un avocat?", // nieuw, nalezen
+    's.police.3': "Vreau să vorbesc cu un avocat.", // nieuw, nalezen
     'c.police.q': "Îmi arătați actul de identitate?", // nieuw, nalezen
     'c.police.a': "Da, poftim. Ce s-a întâmplat?", // nieuw, nalezen
     'u.online': "Online la lucru", // nieuw, nalezen
@@ -1490,11 +1490,11 @@ const t: CultureTranslation = {
     'w.bijbaan': "jobul pe lângă școală (o muncă mică)", // nieuw, nalezen
     'w.nauwkeurig': "atent și exact", // nieuw, nalezen
     'w.meeloopdag': "ziua de observare (o zi în care însoțești pe cineva la lucru)", // nieuw, nalezen
-    's.mychoice.1': "Mă pricep să lucrez cu mâinile.", // nieuw, nalezen
+    's.mychoice.1': "Știu să lucrez bine cu mâinile.", // nieuw, nalezen
     's.mychoice.2': "Îmi place să lucrez cu oamenii.", // nieuw, nalezen
     's.mychoice.3': "Pot să vă însoțesc o zi, ca să văd munca?", // nieuw, nalezen
     'c.mychoice.q': "La ce te pricepi?", // nieuw, nalezen
-    'c.mychoice.a': { m: "Sunt atent și exact. Acasă am grijă de mama.", f: "Sunt atentă și exactă. Acasă am grijă de mama.", x: "Sunt atent / atentă și exact / exactă. Acasă am grijă de mama." }, // nieuw, nalezen
+    'c.mychoice.a': "Mă pricep să am grijă de oameni. Acasă am grijă de mama.", // nieuw, nalezen
     'l.nextstep': "După Entree", // nieuw, nalezen
     'w.niveau2': "nivelul 2 (următorul nivel din mbo)", // nieuw, nalezen
     'w.startkwalificatie': "calificarea de bază (o diplomă mbo de nivel 2 sau mai mare)", // nieuw, nalezen
@@ -1548,7 +1548,7 @@ const t: CultureTranslation = {
     'c.workorder.p': "Pe fișa de lucru scrie zece cutii. E corect?", // nieuw, nalezen
     'c.workorder.s': "Pe fișa de lucru scrie: vopsește camera 3. Colegul tău zice că e camera 5. Ce faci?", // nieuw, nalezen
     'c.workorder.o1': "Îl întrebi pe șef care cameră e cea bună.", // nieuw, nalezen
-    'c.workorder.o2': "Vopsești camera 3, pentru că așa scrie pe hârtie.", // nieuw, nalezen
+    'c.workorder.o2': "Vopsești camera 3, pentru că așa scrie pe fișa de lucru.", // nieuw, nalezen
     'c.workorder.o3': { m: "Vopsești ambele camere, ca să fii sigur.", f: "Vopsești ambele camere, ca să fii sigură.", x: "Vopsești ambele camere, ca să fii sigur / sigură." }, // nieuw, nalezen
     'c.workorder.w': "Când două lucruri nu se potrivesc, verifici înainte să începi. O întrebare scurtă durează mai puțin decât să refaci lucrul.", // nieuw, nalezen
     'c.handover': "Spune ce e gata și ce nu", // nieuw, nalezen
@@ -1560,7 +1560,7 @@ const t: CultureTranslation = {
     'c.handover.o3': "Scrii pe listă „totul gata”, pentru că ai dat tot ce ai putut.", // nieuw, nalezen
     'c.handover.w': "Șeful planifică lucrul. Când știe că camera 4 nu e gata, poate trimite pe altcineva. Așa niciun client nu găsește o cameră murdară.", // nieuw, nalezen
     'c.workshop': "Ochi, urechi și foc", // nieuw, nalezen
-    'c.workshop.b': "Șlefuitul, tăiatul și găuritul fac scântei, bucățele mici și mult zgomot. Poartă ochelari de protecție și protecție auditivă, chiar și pentru o treabă scurtă. Când e foarte zgomot, angajatorul trebuie să-ți dea protecție auditivă. Scânteile pot porni un incendiu. Pentru sudură, sau șlefuit lângă lucruri care pot arde, sunt reguli în plus (heet werk): întreabă înainte să începi. După lucru, strânge bucățelele de metal. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.workshop.b': "Șlefuitul, tăiatul și găuritul fac scântei, bucățele mici și mult zgomot. Poartă ochelari de protecție și protecție auditivă, chiar și pentru o treabă scurtă. Când e foarte zgomotos, angajatorul trebuie să-ți dea protecție auditivă. Scânteile pot porni un incendiu. Pentru sudură, sau șlefuit lângă lucruri care pot arde, sunt reguli în plus (heet werk): întreabă înainte să începi. După lucru, strânge bucățelele de metal. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen // nagelezen AI 31 okt
     'c.workshop.p': "Încep să șlefuiesc. Unde e protecția auditivă?", // nieuw, nalezen
     'c.workshop.s': "Trebuie să șlefuiești o bucată mică de metal. Durează un minut. Ochelarii de protecție sunt în altă cameră. Ce faci?", // nieuw, nalezen
     'c.workshop.o1': "Mai întâi îți iei ochelarii, chiar și pentru un minut.", // nieuw, nalezen
@@ -1572,8 +1572,8 @@ const t: CultureTranslation = {
     'c.power.p': "Văd un cablu stricat. Cine se poate uita la el?", // nieuw, nalezen
     'c.power.s': "Trebuie să agăți o lampă. Un coleg zice: „Curentul e oprit, cred.” Ce faci?", // nieuw, nalezen
     'c.power.o1': "Rogi un coleg instruit să verifice dacă e oprit curentul.", // nieuw, nalezen
-    'c.power.o2': "Începi, dar atingi firele doar cu mănuși.", // nieuw, nalezen
-    'c.power.o3': "Atingi repede firul, ca să simți dacă e curent.", // nieuw, nalezen
+    'c.power.o2': "Începi, dar porți mănuși groase când atingi firele.", // nieuw, nalezen
+    'c.power.o3': "Aprinzi și stingi lumina, ca să verifici dacă e oprit curentul.", // nieuw, nalezen
     'c.power.w': "„Cred” nu e destul când e vorba de curent. Un șoc electric te poate omorî. Un coleg instruit verifică dacă nu mai e curent, și apoi poți începe.", // nieuw, nalezen
     'c.garage': "În siguranță sub mașină", // nieuw, nalezen
     'c.garage.b': "Nu intra niciodată sub o mașină care stă doar pe cric. Mașina trebuie să stea bine pe elevator sau pe capre. Uleiul vărsat face podeaua alunecoasă: curăță-l imediat. Uleiul vechi, bateriile și produsele de curățenie sunt deșeuri periculoase. Merg într-un loc special, niciodată la gunoiul obișnuit sau în canalizare. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
@@ -1587,8 +1587,8 @@ const t: CultureTranslation = {
     'c.carjob.b': "Găsești mai multe probleme decât scrie pe fișa de lucru? Nu le repara pur și simplu. Clientul trebuie mai întâi să fie de acord cu lucrul în plus și cu costurile. Șeful sau recepția îl sună pe client. Proba de drum se face doar cu permisiune și doar cu un permis de conducere valabil. Notează ce ai făcut și ce piese ai folosit. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
     'c.carjob.p': "Mai văd o problemă. Cine îl sună pe client?", // nieuw, nalezen
     'c.carjob.s': "Schimbi uleiul la o mașină. Vezi că și frânele sunt proaste. Mașina trebuie să fie gata într-o oră. Ce faci?", // nieuw, nalezen
-    'c.carjob.o1': "Îi spui șefului, ca să fie sunat clientul.", // nieuw, nalezen
-    'c.carjob.o2': "Repari și frânele, clientul o să fie mulțumit.", // nieuw, nalezen
+    'c.carjob.o1': "Îi spui șefului, ca să-l poată suna pe client.", // nieuw, nalezen
+    'c.carjob.o2': "Repari și frânele: clientul vrea cu siguranță o mașină sigură.", // nieuw, nalezen
     'c.carjob.o3': "Nu spui nimic: frânele nu sunt pe fișa de lucru.", // nieuw, nalezen
     'c.carjob.w': "Clientul plătește, deci clientul decide. Fără acordul lui, service-ul nu are voie să facă pur și simplu lucru în plus. Frânele proaste sunt periculoase, deci e important să spui.", // nieuw, nalezen
     'c.placement': "Mai întâi semnezi, apoi începi", // nieuw, nalezen
@@ -1596,7 +1596,7 @@ const t: CultureTranslation = {
     'c.placement.p': "Încep doar după ce e semnat contractul de stagiu.", // nieuw, nalezen
     'c.placement.s': "Firma îți cere să începi mâine. Contractul de stagiu (POK) nu e semnat încă. Ce faci?", // nieuw, nalezen
     'c.placement.o1': "Îl rogi pe coordonator să rezolve întâi POK-ul.", // nieuw, nalezen
-    'c.placement.o2': "Începi mâine și semnezi POK-ul peste câteva săptămâni.", // nieuw, nalezen
+    'c.placement.o2': "Începi mâine și semnezi POK-ul când ai timp.", // nieuw, nalezen
     'c.placement.o3': "Începi, dar deocamdată nu spui nimic școlii.", // nieuw, nalezen
     'c.placement.w': "În POK scrie ce înveți și cine te ajută. Fără un POK semnat, stagiul tău s-ar putea să nu conteze pentru diplomă. De aceea îl semnezi înainte să începi.", // nieuw, nalezen
     'c.review': "Cere feedback, și un exemplu", // nieuw, nalezen
@@ -1605,7 +1605,7 @@ const t: CultureTranslation = {
     'c.review.s': "Îndrumătorul îți spune: „Trebuie să lucrezi mai atent.” Nu știi ce vrea să spună. Ce faci?", // nieuw, nalezen
     'c.review.o1': "Ceri un exemplu de ce trebuie să faci altfel.", // nieuw, nalezen
     'c.review.o2': { m: "Zici da și speri că o să-ți dai seama singur.", f: "Zici da și speri că o să-ți dai seama singură.", x: "Zici da și speri că o să-ți dai seama singur / singură." }, // nieuw, nalezen
-    'c.review.o3': "Lucrezi mult mai încet, ca să nu greșești nimic.", // nieuw, nalezen
+    'c.review.o3': "De acum lucrezi mult mai încet, ca să nu greșești nimic.", // nieuw, nalezen
     'c.review.w': "Cu un exemplu știi ce să schimbi. Când întrebi, arăți că vrei să înveți. Îndrumătorilor le place asta.", // nieuw, nalezen
     'c.council': "Cine are voie să voteze?", // nieuw, nalezen
     'c.council.b': "În Țările de Jos alegi, prin vot, cine decide. Consiliul local (gemeenteraad) decide despre orașul tău. Tweede Kamer face legile pentru toată țara. Cu cetățenie olandeză poți vota la toate alegerile, de la 18 ani. Pentru consiliul local pot vota mai mulți oameni: oamenii din altă țară UE care locuiesc aici, și oamenii din afara UE după 5 ani de ședere legală. Primăria (gemeente) îți trimite cartea de vot (stempas). Ia-o cu tine, împreună cu actul de identitate. Nu știi sigur dacă ai voie să votezi? Întreabă la primărie.", // nieuw, nalezen
@@ -1620,11 +1620,11 @@ const t: CultureTranslation = {
     'c.police.p': "Nu sunt de acord cu decizia asta. Fac contestație.", // nieuw, nalezen
     'c.police.s': "Primești o scrisoare de la primărie. Nu ești de acord cu decizia lor. În scrisoare scrie că ai șase săptămâni. Ce faci?", // nieuw, nalezen
     'c.police.o1': "Scrii o contestație, înainte de data aceea.", // nieuw, nalezen
-    'c.police.o2': "Suni o dată și aștepți să te sune ei înapoi.", // nieuw, nalezen
+    'c.police.o2': "Îi suni o dată și aștepți până te sună ei înapoi.", // nieuw, nalezen
     'c.police.o3': "Aștepți: după șase săptămâni se oprește singur.", // nieuw, nalezen
     'c.police.w': "Contestația o faci în scris, înainte de data din scrisoare. După data aceea, de multe ori e prea târziu. Juridisch Loket te poate ajuta s-o scrii.", // nieuw, nalezen
     'c.login': "Contul tău e doar al tău", // nieuw, nalezen
-    'c.login.b': "Parola ta și DigiD-ul tău sunt doar pentru tine. Nu le da nimănui, nici angajatorului, nici unui coleg. Pe un calculator comun, ieși mereu din cont când ai terminat. Pleci o clipă? Blochează-ți ecranul. Ți-ai uitat parola? Cere una nouă de la departamentul IT (ICT-afdeling). Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.login.b': "Parola ta și DigiD-ul tău sunt doar pentru tine. Nu le da nimănui, nici angajatorului, nici unui coleg. Pe un calculator comun, ieși mereu din cont când ai terminat. Pleci o clipă? Blochează-ți ecranul. Ți-ai uitat parola? Cere una nouă de la departamentul IT (ICT-afdeling). Regulile pentru calculatoare diferă de la o firmă la alta: întreabă la departamentul IT care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
     'c.login.p': "Plec o clipă. Îmi blochez ecranul.", // nieuw, nalezen
     'c.login.s': "Șeful îți cere DigiD-ul și parola, ca să-ți rezolve repede actele. Ce faci?", // nieuw, nalezen
     'c.login.o1': { m: "Spui nu și intri singur în cont, iar el te ajută.", f: "Spui nu și intri singură în cont, iar el te ajută.", x: "Spui nu și intri singur / singură în cont, iar el te ajută." }, // nieuw, nalezen
@@ -1636,15 +1636,15 @@ const t: CultureTranslation = {
     'c.phish.p': "Am dat clic pe un link suspect.", // nieuw, nalezen
     'c.phish.s': "Ai dat clic pe un link dintr-un e-mail și ți-ai scris parola. Apoi vezi că e-mailul era fals. Ce faci?", // nieuw, nalezen
     'c.phish.o1': "Îți schimbi parola și suni la departamentul IT.", // nieuw, nalezen
-    'c.phish.o2': "Ștergi e-mailul și speri că nu se întâmplă nimic.", // nieuw, nalezen
+    'c.phish.o2': "Ștergi e-mailul, ca să nu mai dea nimeni click pe el.", // nieuw, nalezen
     'c.phish.o3': "Aștepți o zi, să vezi dacă merge ceva prost.", // nieuw, nalezen
     'c.phish.w': "Cu parola ta, altcineva poate intra în sistemele firmei. Când o schimbi repede și anunți departamentul IT, ei pot opri asta la timp.", // nieuw, nalezen
     'c.mychoice': "Punctele tale tari contează", // nieuw, nalezen
     'c.mychoice.b': "La ce te pricepi? Gândește-te la muncă, la școală și la casă. Grija pentru familie, un job pe lângă școală sau voluntariatul contează și ele. Ce îți place și ce nu-ți place? Nu știi ce muncă ți se potrivește? Cere să însoțești pe cineva la lucru o zi (meeloopdag). Îndrumătorul de la școală te poate ajuta să alegi.", // nieuw, nalezen
-    'c.mychoice.p': "Mă pricep la oameni. Acasă ajut mult.", // nieuw, nalezen
+    'c.mychoice.p': "Știu să mă înțeleg bine cu oamenii. Acasă ajut mult.", // nieuw, nalezen
     'c.mychoice.s': "La școală te întreabă: „La ce te pricepi?” N-ai avut niciodată un loc de muncă plătit. Ce spui?", // nieuw, nalezen
     'c.mychoice.o1': "Ce faci bine acasă, de exemplu grija pentru alții.", // nieuw, nalezen
-    'c.mychoice.o2': "Că nu poți spune, fiindcă n-ai avut niciodată un job.", // nieuw, nalezen
+    'c.mychoice.o2': "Că nu știi încă, fiindcă n-ai avut niciodată un job.", // nieuw, nalezen
     'c.mychoice.o3': "Că poți face orice fel de muncă, absolut tot.", // nieuw, nalezen
     'c.mychoice.w': "Și abilitățile de acasă contează. Grija pentru alții, planificarea și ajutorul sunt abilități de care au nevoie angajatorii. Spune ce ai făcut, cu un exemplu.", // nieuw, nalezen
     'c.nextstep': "După Entree: nivelul 2 sau muncă", // nieuw, nalezen
@@ -1657,7 +1657,7 @@ const t: CultureTranslation = {
     'c.nextstep.w': "Cu bbl lucrezi și înveți în același timp. Câștigi bani și primești o diplomă de nivel 2. Multor firme le place asta.", // nieuw, nalezen
     'c.email': "Un e-mail scurt: cine, ce, când", // nieuw, nalezen
     'c.email.b': "Un e-mail către lucru e scurt și politicos. Începe cu un salut, de exemplu „Beste Karin,”. Apoi spune ce vrei și când. Încheie cu un salut și numele tău complet. Scrie un subiect scurt, de exemplu „Vrij op vrijdag”. Recitește e-mailul înainte să-l trimiți.", // nieuw, nalezen
-    'c.email.p': "Dragă Karin, pot să am liber vineri? Cu salut, Ali Haddad", // nieuw, nalezen
+    'c.email.p': "Dragă Karin, pot să am liber vineri? Salutări, Ali Haddad", // nieuw, nalezen // nagelezen AI 31 okt
     'c.email.s': "Vrei o zi liberă vinerea viitoare. Ce e-mail către șef e cel mai bun?", // nieuw, nalezen
     'c.email.o1': "„Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad”", // nieuw, nalezen
     'c.email.o2': "„Vrijdag ben ik er niet.” (fără salut și fără numele tău).", // nieuw, nalezen

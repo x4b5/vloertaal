@@ -7,7 +7,11 @@
   margin: 4px 0 8px; padding: 16px; background: var(--card); color: var(--ink);
   border: 2px solid var(--edge); border-radius: var(--radius);
 }
-.toets-offer-head { display: flex; align-items: center; gap: 12px; }
+/* The icon, the title next to it and "10 min" under the title: the title keeps the whole width
+   (next to the chip it broke into words of a few letters on a small phone or with large text). */
+.toets-offer-head { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 6px 12px; }
+.toets-offer-icon { grid-row: 1 / span 2; }
+.toets-offer-head > .toets-time { grid-column: 2; justify-self: start; }
 .toets-offer-icon {
   flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
   background: var(--yellow); color: #1e2226;
@@ -43,10 +47,10 @@
 
 /* The result. */
 .toets-result-title { display: flex; flex-direction: column; gap: 4px; }
-.toets-parts { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 14px; }
-.toets-part { padding: 12px 14px; background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); }
-.toets-part-name { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-weight: 650; }
-.toets-part-icon { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--tag-bg); color: var(--tag-ink); }
+.toets-parts { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; }
+.toets-part { padding: 10px 14px 12px; background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); }
+.toets-part-name { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; font-weight: 650; }
+.toets-part-icon { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--tag-bg); color: var(--tag-ink); }
 .toets-part-nl { font-size: 1.05rem; margin-right: 8px; }
 [dir='rtl'] .toets-part-nl { margin-right: 0; margin-left: 8px; }
 .toets-part-help .bi-help, .toets-who-help .bi-help { --help-size: 0.8em; font-weight: 400; }
@@ -58,12 +62,17 @@
 [dir='rtl'] .toets-bar-fill { left: auto; right: 0; }
 .toets-bar-now .toets-bar-fill { background: var(--green); }
 .toets-bar-n { min-width: 3.5ch; font-weight: 750; font-variant-numeric: tabular-nums; text-align: end; }
+/* Then and now: "Jij toen" / "Jij nu" on the same row as its bar (Dutch above the help language),
+   so each part takes two short rows and the result fits a phone with the voices under it. */
+.toets-bar-then, .toets-bar-now { grid-template-columns: fit-content(40%) minmax(48px, 1fr) auto; margin-top: 4px; }
+.toets-bar-then > .toets-bar-who, .toets-bar-now > .toets-bar-who { grid-column: auto; flex-direction: column; flex-wrap: nowrap; gap: 0; line-height: 1.15; font-size: 0.9rem; }
 .toets-voices { margin-top: 18px; }
 .toets-voices-line { margin: 0; font-weight: 650; text-align: center; }
 .toets-voices .say-play { grid-template-areas: 'icon' 'who'; grid-template-columns: auto; min-height: 76px; }
 .toets-voices .say-who { display: flex; flex-direction: column; align-items: center; }
 .toets-keep { display: flex; flex-direction: column; gap: 4px; margin-top: 18px; line-height: 1.4; }
-.toets-page .toets-do { width: 100%; margin-top: 22px; }
+.toets-page .toets-do { width: 100%; margin-top: 18px; }
+.toets-page .toets-do + .toets-date { margin-top: 20px; }
 .toets-date { margin: 0; color: var(--muted); font-weight: 600; }
 
 /* The line on "Mijn certificaten" (not a button). */
@@ -74,4 +83,14 @@
 .toets-line-help .bi-help { --help-size: 0.8em; }
 .toets-line-n { color: var(--muted); font-size: 0.95rem; }
 .toets-result .toets-parts, .toets-result .toets-voices { width: 100%; max-width: 520px; margin-left: auto; margin-right: auto; }
-.toets-result-go { width: 100%; max-width: 520px; margin: 24px auto 0; }
+/* Continue in the pinned footer (Toets.tsx ToetsResult), as on a lesson's result. */
+.toets-result-foot .foot-actions { justify-content: center; }
+.toets-result-foot .toets-result-go { flex: 1 1 100%; width: 100%; max-width: 520px; margin: 0 auto; }
+
+/* A small phone (640 px high): the start's result keeps Continue in view without scrolling. */
+@media (max-height: 700px) {
+  .toets-result .toets-parts { gap: 10px; }
+  .toets-result .toets-part { padding-top: 10px; padding-bottom: 10px; }
+  .toets-result .toets-keep { margin-top: 12px; }
+  .toets-result .toets-result-foot { margin-top: 14px; padding-top: 8px; }
+}

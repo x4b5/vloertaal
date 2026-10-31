@@ -1,12 +1,17 @@
 import type { CultureTranslation } from '../culture/types';
 
 /** "Wat kun je nu?" in German (src/content/kunJeNu.ts): the heading, the note, the coach card's line and
- *  the can-do sentences of the first four themes (TODO: the other four). */
+ *  the can-do sentences of all eight themes. */
 const t: CultureTranslation = {
   ui: {
     kunJeNu: "Was kannst du jetzt?", // nieuw, nalezen
     kunNote: "Das Niveau bei jedem Satz ist eine Orientierung, kein offizielles Niveau.", // nieuw, nalezen
     coachCanDo: "Wie viele „Ich kann …“-Sätze du aus fertigen Themen hast", // nieuw, nalezen
+    kunLuisteren: "Hören", // nieuw, nalezen
+    kunSpreken: "Sprechen", // nieuw, nalezen
+    kunLezen: "Lesen", // nieuw, nalezen
+    kunSchrijven: "Schreiben", // nieuw, nalezen
+    kunGesprekken: "Gespräche", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "Ich kann mich einem Kollegen vorstellen.", // nieuw, nalezen
@@ -33,7 +38,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.2': "Ich kann sagen, was ich gut kann.", // nieuw, nalezen
     'kjn.u.lost.1': "Ich kann sagen, dass mein Vertrag endet.", // nieuw, nalezen
     'kjn.u.lost.2': "Ich kann fragen, ob mein Urlaubsgeld ausgezahlt wird.", // nieuw, nalezen
-    'kjn.u.stage.1': "Ich kann fragen, wer mein Praxisanleiter im Betrieb ist.", // nieuw, nalezen
+    'kjn.u.stage.1': "Ich kann fragen, wer mein Ausbilder im Betrieb ist.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "Ich kann um Feedback und ein Beispiel bitten.", // nieuw, nalezen
     'kjn.u.time.1': "Ich kann sagen, wann meine Schicht beginnt.", // nieuw, nalezen
     'kjn.u.time.2': "Ich kann sagen, dass ich krank bin.", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "Ich kann mich krankmelden und wieder gesund melden.", // nieuw, nalezen
     'kjn.u.contact.1': "Ich kann anrufen und sagen, wer ich bin.", // nieuw, nalezen
     'kjn.u.contact.2': "Ich kann jemanden bitten, mich zurückzurufen.", // nieuw, nalezen
-    'kjn.u.contact.3': "Ich kann eine kurze Nachricht von der Arbeit lesen.", // nieuw, nalezen
+    'kjn.u.contact.3': "Ich kann eine kurze Nachricht an meine Arbeit schreiben.", // nieuw, nalezen
     'kjn.u.house.1': "Ich kann Regeln wie „Roken verboden“ lesen.", // nieuw, nalezen
     'kjn.u.house.2': "Ich kann fragen, wo ich rauchen darf.", // nieuw, nalezen
     'kjn.u.house.3': "Ich kann sagen, dass etwas nicht erlaubt ist.", // nieuw, nalezen
@@ -57,6 +62,46 @@ const t: CultureTranslation = {
     'kjn.u.finish.2': "Ich kann sagen, was fertig ist und was nicht.", // nieuw, nalezen
     'kjn.u.online.1': "Ich kann sagen, dass mein Passwort nicht funktioniert.", // nieuw, nalezen
     'kjn.u.online.2': "Ich kann eine verdächtige E-Mail erkennen.", // nieuw, nalezen
+    'kjn.u.teamwork.1': "Ich kann sagen, dass mich etwas beschäftigt.", // nieuw, nalezen
+    'kjn.u.teamwork.2': "Ich kann ruhig Nein zu Extraarbeit sagen.", // nieuw, nalezen
+    'kjn.u.teamwork.3': "Ich kann fragen, was ich zuerst machen muss.", // nieuw, nalezen
+    'kjn.u.social.1': "Ich kann in der Pause ein bisschen plaudern.", // nieuw, nalezen
+    'kjn.u.social.2': "Ich kann sagen, dass ich einen Fehler gemacht habe.", // nieuw, nalezen
+    'kjn.u.social.3': "Ich kann sagen, dass etwas über meine Grenze geht.", // nieuw, nalezen
+    'kjn.u.sayings.1': "Ich kann ein paar übliche Redewendungen verstehen.", // nieuw, nalezen
+    'kjn.u.sayings.2': "Ich kann sagen, dass etwas sehr leicht ist (een eitje).", // nieuw, nalezen
+    'kjn.u.rights.1': "Ich kann sagen, dass ich ein Recht auf Pause habe.", // nieuw, nalezen
+    'kjn.u.rights.2': "Ich kann sagen, dass ich mich beschweren will.", // nieuw, nalezen
+    'kjn.u.exploit.1': "Ich kann sagen, dass ich meinen Pass selbst behalte.", // nieuw, nalezen
+    'kjn.u.exploit.2': "Ich kann fragen, ob ich etwas anonym melden kann.", // nieuw, nalezen
+    'kjn.u.papers.1': "Ich kann sagen, dass sich meine Adresse geändert hat.", // nieuw, nalezen
+    'kjn.u.papers.2': "Ich kann fragen, wie hoch die Miete ist.", // nieuw, nalezen
+    'kjn.u.health.1': "Ich kann sagen, wo es wehtut.", // nieuw, nalezen
+    'kjn.u.health.2': "Ich kann um einen Termin beim Hausarzt bitten.", // nieuw, nalezen
+    'kjn.u.money.1': "Ich kann sagen, dass ich einen Brief nicht verstehe.", // nieuw, nalezen
+    'kjn.u.money.2': "Ich kann am Telefon Nein zu einem Betrüger sagen.", // nieuw, nalezen
+    'kjn.u.travel.1': "Ich kann erzählen, wie ich zur Arbeit komme.", // nieuw, nalezen
+    'kjn.u.travel.2': "Ich kann fragen, wo die Bushaltestelle ist.", // nieuw, nalezen
+    'kjn.u.society.1': "Ich kann fragen, ob ich wählen darf.", // nieuw, nalezen
+    'kjn.u.society.2': "Ich kann sagen, dass ich Widerspruch einlegen will.", // nieuw, nalezen
+    'kjn.u.warehouse.1': "Ich kann kurze Anweisungen im Lager verstehen.", // nieuw, nalezen
+    'kjn.u.warehouse.2': "Ich kann sagen, wo etwas steht: links oder rechts.", // nieuw, nalezen
+    'kjn.u.build.1': "Ich kann eine Warnung auf der Baustelle verstehen.", // nieuw, nalezen
+    'kjn.u.build.2': "Ich kann nach Werkzeug fragen.", // nieuw, nalezen
+    'kjn.u.factory.1': "Ich kann sagen, dass es eine Störung gibt.", // nieuw, nalezen
+    'kjn.u.factory.2': "Ich kann sagen, was mit einem Produkt nicht stimmt.", // nieuw, nalezen
+    'kjn.u.care.1': "Ich kann einen Klienten fragen, ob ich helfen darf.", // nieuw, nalezen
+    'kjn.u.care.2': "Ich kann etwas an die Pflegefachkraft weitergeben.", // nieuw, nalezen
+    'kjn.u.horeca.1': "Ich kann Gäste fragen, was sie trinken möchten.", // nieuw, nalezen
+    'kjn.u.horeca.2': "Ich kann sagen, dass ich den Küchenchef frage.", // nieuw, nalezen
+    'kjn.u.clean.1': "Ich kann fragen, wo die Putzsachen sind.", // nieuw, nalezen
+    'kjn.u.clean.2': "Ich kann jemanden warnen, dass der Boden rutschig ist.", // nieuw, nalezen
+    'kjn.u.kas.1': "Ich kann fragen, in welcher Reihe ich anfange.", // nieuw, nalezen
+    'kjn.u.kas.2': "Ich kann fragen, ob ein Gewächshaus gespritzt wurde.", // nieuw, nalezen
+    'kjn.u.tech.1': "Ich kann fragen, ob noch Strom drauf ist.", // nieuw, nalezen
+    'kjn.u.tech.2': "Ich kann sagen, dass ein Kabel kaputt ist.", // nieuw, nalezen
+    'kjn.u.garage.1': "Ich kann sagen, dass ein Reifen platt ist.", // nieuw, nalezen
+    'kjn.u.garage.2': "Ich kann sagen, dass der Kunde erst einverstanden sein muss.", // nieuw, nalezen
   },
 };
 

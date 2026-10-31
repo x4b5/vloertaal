@@ -1,12 +1,17 @@
 import type { CultureTranslation } from '../culture/types';
 
 /** "Wat kun je nu?" in Polish (src/content/kunJeNu.ts): the heading, the note, the coach card's line and
- *  the can-do sentences of the first four themes (TODO: the other four). */
+ *  the can-do sentences of all eight themes. */
 const t: CultureTranslation = {
   ui: {
     kunJeNu: "Co teraz umiesz?", // nieuw, nalezen
     kunNote: "Poziom przy każdym zdaniu to wskazówka, a nie oficjalny poziom.", // nieuw, nalezen
     coachCanDo: "Ile masz zdań „Umiem …” z ukończonych tematów", // nieuw, nalezen
+    kunLuisteren: "słuchanie", // nieuw, nalezen
+    kunSpreken: "mówienie", // nieuw, nalezen
+    kunLezen: "czytanie", // nieuw, nalezen
+    kunSchrijven: "pisanie", // nieuw, nalezen
+    kunGesprekken: "rozmowy", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "Umiem przedstawić się komuś z pracy.", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "Umiem zgłosić chorobę i powrót do pracy.", // nieuw, nalezen
     'kjn.u.contact.1': "Umiem zadzwonić i powiedzieć, kim jestem.", // nieuw, nalezen
     'kjn.u.contact.2': "Umiem poprosić, żeby ktoś do mnie oddzwonił.", // nieuw, nalezen
-    'kjn.u.contact.3': "Umiem przeczytać krótką wiadomość z pracy.", // nieuw, nalezen
+    'kjn.u.contact.3': "Umiem napisać krótką wiadomość do pracy.", // nieuw, nalezen
     'kjn.u.house.1': "Umiem przeczytać zasady takie jak „Roken verboden”.", // nieuw, nalezen
     'kjn.u.house.2': "Umiem zapytać, gdzie wolno palić.", // nieuw, nalezen
     'kjn.u.house.3': "Umiem powiedzieć, że czegoś nie wolno.", // nieuw, nalezen
@@ -57,6 +62,46 @@ const t: CultureTranslation = {
     'kjn.u.finish.2': "Umiem powiedzieć, co jest gotowe, a co nie.", // nieuw, nalezen
     'kjn.u.online.1': "Umiem powiedzieć, że moje hasło nie działa.", // nieuw, nalezen
     'kjn.u.online.2': "Umiem rozpoznać podejrzany e-mail.", // nieuw, nalezen
+    'kjn.u.teamwork.1': "Umiem powiedzieć, że coś mi przeszkadza.", // nieuw, nalezen
+    'kjn.u.teamwork.2': "Umiem spokojnie odmówić dodatkowej pracy.", // nieuw, nalezen
+    'kjn.u.teamwork.3': "Umiem zapytać, co mam zrobić najpierw.", // nieuw, nalezen
+    'kjn.u.social.1': "Umiem chwilę pogadać z kimś w przerwie.", // nieuw, nalezen
+    'kjn.u.social.2': { m: "Umiem powiedzieć, że popełniłem błąd.", f: "Umiem powiedzieć, że popełniłam błąd.", x: "Umiem powiedzieć, że to mój błąd." }, // nieuw, nalezen
+    'kjn.u.social.3': "Umiem powiedzieć, że coś przekracza moją granicę.", // nieuw, nalezen
+    'kjn.u.sayings.1': "Rozumiem kilka popularnych wyrażeń.", // nieuw, nalezen
+    'kjn.u.sayings.2': "Umiem powiedzieć, że coś jest bardzo łatwe (een eitje).", // nieuw, nalezen
+    'kjn.u.rights.1': "Umiem powiedzieć, że mam prawo do przerwy.", // nieuw, nalezen
+    'kjn.u.rights.2': "Umiem powiedzieć, że chcę złożyć skargę.", // nieuw, nalezen
+    'kjn.u.exploit.1': "Umiem powiedzieć, że paszport zostaje u mnie.", // nieuw, nalezen
+    'kjn.u.exploit.2': "Umiem zapytać, czy mogę coś zgłosić bez podawania nazwiska.", // nieuw, nalezen
+    'kjn.u.papers.1': "Umiem powiedzieć, że zmienił się mój adres.", // nieuw, nalezen
+    'kjn.u.papers.2': "Umiem zapytać, ile wynosi czynsz.", // nieuw, nalezen
+    'kjn.u.health.1': "Umiem powiedzieć, gdzie mnie boli.", // nieuw, nalezen
+    'kjn.u.health.2': "Umiem poprosić o wizytę u lekarza rodzinnego.", // nieuw, nalezen
+    'kjn.u.money.1': "Umiem powiedzieć, że nie rozumiem listu.", // nieuw, nalezen
+    'kjn.u.money.2': "Umiem odmówić oszustowi przez telefon.", // nieuw, nalezen
+    'kjn.u.travel.1': "Umiem powiedzieć, jak dojeżdżam do pracy.", // nieuw, nalezen
+    'kjn.u.travel.2': "Umiem zapytać, gdzie jest przystanek autobusowy.", // nieuw, nalezen
+    'kjn.u.society.1': "Umiem zapytać, czy mogę głosować.", // nieuw, nalezen
+    'kjn.u.society.2': "Umiem powiedzieć, że chcę złożyć sprzeciw.", // nieuw, nalezen
+    'kjn.u.warehouse.1': "Rozumiem krótkie polecenia w magazynie.", // nieuw, nalezen
+    'kjn.u.warehouse.2': "Umiem powiedzieć, gdzie coś stoi: po lewej czy po prawej.", // nieuw, nalezen
+    'kjn.u.build.1': "Rozumiem ostrzeżenie na budowie.", // nieuw, nalezen
+    'kjn.u.build.2': "Umiem poprosić o narzędzia.", // nieuw, nalezen
+    'kjn.u.factory.1': "Umiem powiedzieć, że jest awaria.", // nieuw, nalezen
+    'kjn.u.factory.2': "Umiem powiedzieć, co jest nie tak z produktem.", // nieuw, nalezen
+    'kjn.u.care.1': "Umiem zapytać podopiecznego, czy mogę pomóc.", // nieuw, nalezen
+    'kjn.u.care.2': "Umiem coś przekazać pielęgniarce.", // nieuw, nalezen
+    'kjn.u.horeca.1': "Umiem zapytać gości, co podać do picia.", // nieuw, nalezen
+    'kjn.u.horeca.2': "Umiem powiedzieć, że zapytam szefa kuchni.", // nieuw, nalezen
+    'kjn.u.clean.1': "Umiem zapytać, gdzie są rzeczy do sprzątania.", // nieuw, nalezen
+    'kjn.u.clean.2': "Umiem ostrzec kogoś, że podłoga jest śliska.", // nieuw, nalezen
+    'kjn.u.kas.1': "Umiem zapytać, w którym rzędzie zaczynam.", // nieuw, nalezen
+    'kjn.u.kas.2': "Umiem zapytać, czy szklarnia była opryskana.", // nieuw, nalezen
+    'kjn.u.tech.1': "Umiem zapytać, czy jest jeszcze prąd.", // nieuw, nalezen
+    'kjn.u.tech.2': "Umiem powiedzieć, że kabel jest zepsuty.", // nieuw, nalezen
+    'kjn.u.garage.1': "Umiem powiedzieć, że opona jest przebita.", // nieuw, nalezen
+    'kjn.u.garage.2': "Umiem powiedzieć, że klient musi się najpierw zgodzić.", // nieuw, nalezen
   },
 };
 

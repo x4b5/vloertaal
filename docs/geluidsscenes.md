@@ -13,6 +13,7 @@ een instructie of een kort gesprek, met omgevingsgeluid erachter. Daarna 1 of 2 
   per sector, 3 tot 6 beurten, 25 tot 60 woorden, zinnen van hoogstens 12 woorden, de A2-regels
   van [`taal-a2.md`](taal-a2.md), alleen woorden uit de cursus (of een korte lijst gewone woorden),
   3 opties met 1 goed antwoord, en antwoorden die niet door hun lengte of plek verraden worden.
+  "Hè" staat in hoogstens een derde van de scènes, zodat het geen tic wordt.
 - **De zinnen voor de opname** maak je met `npm run scenes:lines` (zie hieronder).
 
 ## Sprekers en stemmen
@@ -42,28 +43,28 @@ tweede helft van het pad. De woorden zijn dan bekend. "Woorden" telt alleen de g
 | 1 | `g.bouw.steiger` | Bouw | Op de steiger | `u.build` | Henk, leerling | 31 | midden | ⚖️ |
 | 2 | `g.bouw.beton` | Bouw | Het beton is nat | `u.build` | Bram, Jada | 34 | zacht |  |
 | 3 | `g.bouw.last` | Bouw | Last boven je hoofd | `u.build` | Henk, leerling | 29 | midden | ⚖️ |
-| 4 | `g.techniek.slijpen` | Techniek | Slijpen in de werkplaats | `u.tech` | Henk, leerling | 30 | midden | ⚖️ |
+| 4 | `g.techniek.slijpen` | Techniek | Slijpen in de werkplaats | `u.tech` | Henk, leerling | 29 | midden | ⚖️ |
 | 5 | `g.techniek.stroom` | Techniek | Staat er stroom op? | `u.tech` | Jada, leerling | 30 | zacht | ⚖️ |
-| 6 | `g.techniek.werkbon` | Techniek | Klopt de werkbon? | `u.finish` | Henk, leerling | 28 | zacht |  |
+| 6 | `g.techniek.werkbon` | Techniek | Klopt de werkbon? | `u.finish` | Henk, leerling | 27 | zacht |  |
 | 7 | `g.garage.band` | Garage | Een lekke band | `u.garage` | Henk, leerling | 28 | midden |  |
-| 8 | `g.garage.klant` | Garage | Eerst de klant bellen | `u.garage` | Jada, leerling | 32 | zacht |  |
+| 8 | `g.garage.klant` | Garage | Eerst moet de klant akkoord zijn | `u.garage` | Jada, leerling | 36 | zacht |  |
 | 9 | `g.garage.proefrit` | Garage | De proefrit | `u.garage` | Henk, leerling | 29 | midden | ⚖️ |
 | 10 | `g.productie.storing` | Productie | Storing aan de band | `u.factory` | Henk, leerling | 35 | midden | ⚖️ |
 | 11 | `g.productie.etiket` | Productie | Het etiket klopt niet | `u.factory` | Jada, Bram | 34 | zacht |  |
 | 12 | `g.productie.dienst` | Productie | Je dienst aan band twee | `u.numbers` | Henk, leerling | 36 | midden |  |
-| 13 | `g.logistiek.heftruck` | Logistiek | De heftruck komt eraan | `u.warehouse` | Jada, leerling | 30 | midden | ⚖️ |
+| 13 | `g.logistiek.heftruck` | Logistiek | De heftruck komt eraan | `u.warehouse` | Jada, leerling | 29 | midden | ⚖️ |
 | 14 | `g.logistiek.scanner` | Logistiek | Waar is de scanner? | `u.warehouse` | Bram, Jada | 33 | zacht |  |
 | 15 | `g.logistiek.extra` | Logistiek | Een extra dienst | `u.warehouse` | Henk, leerling | 30 | zacht |  |
 | 16 | `g.tuinbouw.bespoten` | Tuinbouw | Kas drie is bespoten | `u.kas` | Henk, leerling | 27 | zacht | ⚖️ |
-| 17 | `g.tuinbouw.oogst` | Tuinbouw | Hoeveel rijen? | `u.kas` | Amina, Bram | 33 | zacht |  |
-| 18 | `g.tuinbouw.hitte` | Tuinbouw | Warm in de kas | `u.kas` | Henk, leerling | 32 | midden | ⚖️ |
+| 17 | `g.tuinbouw.oogst` | Tuinbouw | Hoeveel rijen? | `u.kas` | Amina, Bram | 32 | zacht |  |
+| 18 | `g.tuinbouw.hitte` | Tuinbouw | Warm in de kas | `u.kas` | Henk, leerling | 31 | midden | ⚖️ |
 | 19 | `g.zorg.gevallen` | Zorg | Mevrouw is gevallen | `u.care` | Jada, leerling | 29 | zacht | ⚖️ |
-| 20 | `g.zorg.pillen` | Zorg | De pillen | `u.care` | Jada, leerling | 35 | zacht | ⚖️ |
+| 20 | `g.zorg.pillen` | Zorg | De pillen | `u.care` | Jada, leerling | 34 | zacht | ⚖️ |
 | 21 | `g.zorg.ochtend` | Zorg | De ochtend | `u.care` | Jada, leerling | 36 | zacht |  |
-| 22 | `g.horeca.allergie` | Horeca | Een allergie | `u.horeca` | Jada, leerling | 33 | midden | ⚖️ |
-| 23 | `g.horeca.koelcel` | Horeca | In de koelcel | `u.horeca` | Henk, leerling | 30 | zacht | ⚖️ |
+| 22 | `g.horeca.allergie` | Horeca | Een allergie | `u.horeca` | Jada, leerling | 32 | midden | ⚖️ |
+| 23 | `g.horeca.koelcel` | Horeca | In de koelcel | `u.horeca` | Henk, leerling | 29 | zacht | ⚖️ |
 | 24 | `g.horeca.rekening` | Horeca | De rekening | `u.horeca` | Bram, Jada | 33 | midden |  |
-| 25 | `g.schoonmaak.glad` | Schoonmaak | De vloer is glad | `u.clean` | Jada, leerling | 31 | zacht | ⚖️ |
+| 25 | `g.schoonmaak.glad` | Schoonmaak | De vloer is glad | `u.clean` | Jada, leerling | 30 | zacht | ⚖️ |
 | 26 | `g.schoonmaak.mengen` | Schoonmaak | Niet mengen | `u.clean` | Henk, leerling | 33 | zacht | ⚖️ |
 | 27 | `g.schoonmaak.klaar` | Schoonmaak | Bijna klaar | `u.finish` | Jada, leerling | 29 | zacht |  |
 
@@ -128,7 +129,7 @@ Na `u.tech`. Geluid (midden, -18 dB): Metaalwerkplaats: een slijpmachine ver weg
 | Clip | Stem | Tekst |
 |---|---|---|
 | `g.techniek.slijpen.1` | Henk (Daniel) | Ga jij zo even slijpen? Die tien stukken hier. |
-| `g.techniek.slijpen.2` | Henk (Daniel) | Draag je bril en je gehoorbescherming, hè. Er komen veel vonken. |
+| `g.techniek.slijpen.2` | Henk (Daniel) | Draag je bril en je gehoorbescherming. Er komen veel vonken. |
 | `g.techniek.slijpen.3` | Leerling (Thijmen én Ariël) | Oké. Waar ligt het gereedschap? |
 | `g.techniek.slijpen.4` | Henk (Daniel) | Rechts, in de grote kast. |
 
@@ -162,7 +163,7 @@ Na `u.finish`. Geluid (zacht, -24 dB): Werkplaats: een radio zacht, iemand legt 
 | `g.techniek.werkbon.1` | Henk (Daniel) | Klopt het aantal op de werkbon? |
 | `g.techniek.werkbon.2` | Leerling (Thijmen én Ariël) | Nee. Ik heb acht kabels, geen twaalf. |
 | `g.techniek.werkbon.3` | Henk (Daniel) | Oké, schrijf acht op. Ik bestel er vier bij. |
-| `g.techniek.werkbon.4` | Henk (Daniel) | En zet je handtekening onderaan, hè. |
+| `g.techniek.werkbon.4` | Henk (Daniel) | En zet je handtekening onderaan. |
 
 - **Hoeveel kabels heb je?** Twaalf. · **Acht.** ✔ · Vier.  
   Uitleg: Er staan er twaalf op de werkbon, maar je hebt er acht. *(The work order says twelve, but you have eight.)*
@@ -187,7 +188,7 @@ Na `u.garage`. Geluid (midden, -18 dB): Garage: een luchtsleutel ratelt kort, ee
 - **Hoe laat komt de klant?** **Om vier uur.** ✔ · Om één uur. · Om vijf uur.  
   Uitleg: Henk zegt: de klant komt om vier uur. *(Henk says: the customer comes at four.)*
 
-#### 8. Eerst de klant bellen · `g.garage.klant`
+#### 8. Eerst moet de klant akkoord zijn · `g.garage.klant`
 
 Na `u.garage`. Geluid (zacht, -24 dB): Garage: een auto rijdt langzaam binnen, gereedschap op een kar, een deur.
 
@@ -195,8 +196,8 @@ Na `u.garage`. Geluid (zacht, -24 dB): Garage: een auto rijdt langzaam binnen, g
 |---|---|---|
 | `g.garage.klant.1` | Jada (Noa) | De remmen van deze auto zijn ook slecht. |
 | `g.garage.klant.2` | Leerling (Thijmen én Ariël) | Doe ik die meteen? |
-| `g.garage.klant.3` | Jada (Noa) | Nee, eerst bel ik de klant. Hij moet akkoord zijn met de kosten. |
-| `g.garage.klant.4` | Jada (Noa) | Het is driehonderd euro. Wacht even, hè. |
+| `g.garage.klant.3` | Jada (Noa) | Nee, de klant moet eerst akkoord zijn met de kosten. |
+| `g.garage.klant.4` | Jada (Noa) | Het is driehonderd euro. Vraag het even aan de chef. Hij belt de klant. |
 
 - **Waarom wacht je?** De monteur is nog in de pauze. · Het onderdeel is er nog niet. · **De klant moet eerst akkoord zijn.** ✔  
   Uitleg: Extra werk doe je pas als de klant akkoord is. *(You only do extra work when the customer agrees.)*
@@ -281,7 +282,7 @@ Na `u.warehouse`. Geluid (midden, -18 dB): Magazijn: een heftruck piept achterui
 | `g.logistiek.heftruck.1` | Jada (Noa) | Pas op, de heftruck komt eraan. Even stoppen. |
 | `g.logistiek.heftruck.2` | Jada (Noa) | Oké, loop maar. Pallet twaalf moet naar rechts, bij de stelling. |
 | `g.logistiek.heftruck.3` | Leerling (Thijmen én Ariël) | Rechts? Bij stelling vier? |
-| `g.logistiek.heftruck.4` | Jada (Noa) | Ja. En til met je benen, hè. |
+| `g.logistiek.heftruck.4` | Jada (Noa) | Ja. En til met je benen. |
 
 - **Waar moet pallet twaalf heen?** Naar links, bij de deur. · **Naar rechts, bij de stelling.** ✔ · Naar boven, bij de scanner.  
   Uitleg: Jada zegt: naar rechts, bij stelling vier. *(Jada says: to the right, by rack four.)*
@@ -347,7 +348,7 @@ Na `u.kas`. Geluid (zacht, -24 dB): Kas: ventilatoren, plastic kratten die op el
 |---|---|---|
 | `g.tuinbouw.oogst.1` | Amina (Ariël) | Hoeveel rijen heb je gedaan, Bram? |
 | `g.tuinbouw.oogst.2` | Bram (Thijmen) | Vier. Nog twee te gaan. |
-| `g.tuinbouw.oogst.3` | Amina (Ariël) | Goed. Je krat is vol, hè. Zet hem bij de plukkar. |
+| `g.tuinbouw.oogst.3` | Amina (Ariël) | Goed. Je krat is vol. Zet hem bij de plukkar. |
 | `g.tuinbouw.oogst.4` | Bram (Thijmen) | Oké. Om half tien is de pauze, toch? |
 | `g.tuinbouw.oogst.5` | Amina (Ariël) | Ja, een kwartier. |
 
@@ -363,7 +364,7 @@ Na `u.kas`. Geluid (midden, -18 dB): Kas: ventilatoren zoemen, sproeiers sissen 
 | Clip | Stem | Tekst |
 |---|---|---|
 | `g.tuinbouw.hitte.1` | Henk (Daniel) | Het is vandaag dertig graden in de kas. |
-| `g.tuinbouw.hitte.2` | Henk (Daniel) | Drink elk uur water, hè. Ook als je geen dorst hebt. |
+| `g.tuinbouw.hitte.2` | Henk (Daniel) | Drink elk uur water. Ook als je geen dorst hebt. |
 | `g.tuinbouw.hitte.3` | Leerling (Thijmen én Ariël) | Oké. Mag ik ook even naar buiten? |
 | `g.tuinbouw.hitte.4` | Henk (Daniel) | Ja, om elf uur. Tien minuten. |
 
@@ -396,7 +397,7 @@ Na `u.care`. Geluid (zacht, -24 dB): Zorg: een gang, een deur gaat zacht dicht, 
 
 | Clip | Stem | Tekst |
 |---|---|---|
-| `g.zorg.pillen.1` | Jada (Noa) | Het is negen uur, hè. Tijd voor de pillen. |
+| `g.zorg.pillen.1` | Jada (Noa) | Het is negen uur. Tijd voor de pillen. |
 | `g.zorg.pillen.2` | Jada (Noa) | Kun je meneer in kamer vier zijn pillen geven? |
 | `g.zorg.pillen.3` | Leerling (Thijmen én Ariël) | Nee, dat mag ik niet. Ik haal de verpleegkundige. |
 | `g.zorg.pillen.4` | Jada (Noa) | O ja, goed. Ze is in kamer zeven. |
@@ -433,11 +434,11 @@ Na `u.horeca`. Geluid (midden, -18 dB): Restaurantkeuken: pannen, de afzuiging z
 | `g.horeca.allergie.1` | Jada (Noa) | Tafel zes. Een gast heeft een allergie voor noten. |
 | `g.horeca.allergie.2` | Leerling (Thijmen én Ariël) | Oké. Zitten er noten in de soep? |
 | `g.horeca.allergie.3` | Jada (Noa) | Ik weet het niet. Vraag het even aan de chef. |
-| `g.horeca.allergie.4` | Jada (Noa) | En schrijf het op de bestelling, hè. |
+| `g.horeca.allergie.4` | Jada (Noa) | En schrijf het op de bestelling. |
 
 - **Waar heeft de gast een allergie voor?** Voor vlees. · **Voor noten.** ✔ · Voor melk.  
   Uitleg: De gast aan tafel zes heeft een allergie voor noten. *(The guest at table six is allergic to nuts.)*
-- **Wie weet of er noten in zitten?** De gast. · De baas. · **De chef.** ✔  
+- **Aan wie vraag je het?** De gast. · De baas. · **De chef.** ✔  
   Uitleg: Bij een allergie vraag je het altijd aan de chef. *(With an allergy you always ask the chef.)*
 
 #### 23. In de koelcel ⚖️ · `g.horeca.koelcel`
@@ -448,7 +449,7 @@ Na `u.horeca`. Geluid (zacht, -24 dB): Keuken: de koelcel zoemt, een mes op een 
 |---|---|---|
 | `g.horeca.koelcel.1` | Henk (Daniel) | Zet het vlees even in de koelcel. |
 | `g.horeca.koelcel.2` | Leerling (Thijmen én Ariël) | Oké. Op welke plank? |
-| `g.horeca.koelcel.3` | Henk (Daniel) | Onderaan. En schrijf de datum erop, hè. |
+| `g.horeca.koelcel.3` | Henk (Daniel) | Onderaan. En schrijf de datum erop. |
 | `g.horeca.koelcel.4` | Henk (Daniel) | Daarna snijd je de uien. Om vijf uur komen de eerste gasten. |
 
 - **Wat schrijf je op het vlees?** **De datum.** ✔ · De prijs. · Je naam.  
@@ -480,7 +481,7 @@ Na `u.clean`. Geluid (zacht, -24 dB): Kantoorgang: een stofzuiger in een andere 
 
 | Clip | Stem | Tekst |
 |---|---|---|
-| `g.schoonmaak.glad.1` | Jada (Noa) | Ben je klaar met de gang? Zet het bordje neer, hè. |
+| `g.schoonmaak.glad.1` | Jada (Noa) | Ben je klaar met de gang? Zet het bordje neer. |
 | `g.schoonmaak.glad.2` | Jada (Noa) | De vloer is nog glad. Een half uur ongeveer. |
 | `g.schoonmaak.glad.3` | Leerling (Thijmen én Ariël) | Oké. Waar staat het bordje? |
 | `g.schoonmaak.glad.4` | Jada (Noa) | Bij de emmers, in kast twee. |
@@ -599,7 +600,7 @@ bash public/audio/scene-mix.sh        # maakt public/audio-scenes/<id>[.thijmen|
 
 | Onderdeel | Hoeveel | Credits (ongeveer) |
 |---|---|---|
-| Stemmen, één opname van elke zin | 111 clips, 4.951 tekens (Daniel 1.681, Noa 1.497, Thijmen 1.045, Ariël 728) | **5.000** |
+| Stemmen, één opname van elke zin | 111 clips, 4.934 tekens (Daniel 1.665, Noa 1.500, Thijmen 1.045, Ariël 724) | **5.000** |
 | Stemmen, met een tweede poging voor zinnen die niet goed klinken | | 7.000 tot 10.000 |
 | Omgevingsgeluid, één loop per plek (± 12 plekken × 15 s) | | 5.000 tot 8.000 |
 | Omgevingsgeluid, een eigen loop per scène (27 × 15 s) | | 12.000 tot 16.000 |

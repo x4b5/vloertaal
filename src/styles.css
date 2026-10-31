@@ -2632,7 +2632,9 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .kaart-intro > .bi { order: 1; font-size: 1.05rem; font-weight: 600; }
 .kaart-intro > .kaart-intro-nl { order: 2; font-size: 0.9rem; color: var(--muted); }
 .kaart-intro > .help-say { order: 3; align-self: flex-start; }
-.kaart-figure { margin: 14px 0 0; }
+/* [Bewaar of deel] sits above the picture, so it is in view without scrolling on every phone. */
+.kaart-screen .kaart-actions { margin-top: 14px; }
+.kaart-figure { margin: 18px 0 0; }
 .kaart-img, .kaart-wait {
   display: block; width: 100%; height: auto; border-radius: 4px;
   box-shadow: 5px 5px 0 var(--label-shadow); background: #ebd6b5;
@@ -4510,6 +4512,10 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .result-faster-actions .btn { min-height: 56px; flex: 1 1 0; flex-direction: column; gap: 0; }
 .result-faster-actions .btn > span[lang='nl'] { font-weight: 700; font-size: 1.1rem; }
 @media (prefers-reduced-motion: reduce) { .result-faster { animation: none; } }
+/* A low screen, or large text on a phone: the question and Ja/Nee only (the explanation line
+   made the pinned footer cover almost the whole result). Settings › Sneller leren explains it. */
+@media (max-height: 700px) { .result-faster-hint { display: none; } }
+@media (max-height: 900px) { :root:is([data-text='large'], [data-text='xl']) .result-faster-hint { display: none; } }
 /* "Wat kun je nu?" (src/content/kunJeNu.ts): on the certificate sheet, in its own sizes (cqw, as
    src/lib/certCanvas.ts draws it), and as a card on the certificate screen, under the sheet. */
 .cert-kun { margin-top: 1.9cqw; }
@@ -4548,3 +4554,10 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .kun-table thead th { font-size: 0.8rem; color: var(--muted); }
 .kun-table tbody th { font-weight: 650; }
 .kun-table td:last-child { white-space: nowrap; color: var(--muted); }
+
+/* Larger text with a back arrow (the sector's second step): the wordmark stays small enough to
+   keep clear of the arrow on a 360 px phone. */
+:root:is([data-text='large'], [data-text='xl']) .chrome-head ~ .hero .hero-logo .wordmark { font-size: min(2rem, 8.5vw); }
+/* "Naam wijzigen" under a certificate or the coach card: at the start side in right-to-left too
+   (a fit-content block in a page without dir). */
+.cert-rename[dir='rtl'] { margin-left: auto; margin-right: 0; }

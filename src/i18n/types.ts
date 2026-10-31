@@ -433,6 +433,12 @@ export const uiEn = {
   kunJeNu: 'What can you do now?',
   kunNote: 'The level next to each sentence is a guide, not an official level.',
   coachCanDo: 'How many “I can …” sentences you have, from your finished topics',
+  /* The skill a sentence fits ("past bij A2 · schrijven"), next to the Dutch in the help language. */
+  kunLuisteren: 'listening',
+  kunSpreken: 'speaking',
+  kunLezen: 'reading',
+  kunSchrijven: 'writing',
+  kunGesprekken: 'conversations',
   /* "Oefen samen" (src/components/Samen.tsx): two people, one phone, the chats of a lesson. */
   samenTitle: 'Practise together',
   samenRowHint: 'Two people, one phone',

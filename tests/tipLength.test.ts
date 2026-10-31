@@ -37,3 +37,24 @@ describe('the best answer of a tip is not much longer than the wrong ones', () =
     }
   });
 });
+
+/**
+ * The 17 tips of the Entree lessons (30 October 2026): the best answer is the longest (or as long
+ * as the longest) in at most a third of them, so "pick the longest" does not work there either.
+ */
+const ENTREE_TIPS = [
+  'workorder', 'handover', 'workshop', 'power', 'garage', 'carjob', 'placement', 'review', 'mychoice',
+  'nextstep', 'email', 'budget', 'healthy', 'council', 'police', 'login', 'phish',
+].map((slug) => `c.${slug}`);
+
+describe('the Entree tips do not give the answer away by its length', () => {
+  it('has the best answer as the longest option in at most a third of them', () => {
+    const tips = ENTREE_TIPS.map((id) => cultureTips.find((t) => t.id === id));
+    expect(tips.filter((t) => !t)).toEqual([]);
+    const longest = tips.filter((t) => {
+      const best = t!.options.find((o) => o.best)!.en.length;
+      return t!.options.every((o) => o.best || o.en.length <= best);
+    });
+    expect(longest.length, longest.map((t) => t!.id).join(', ')).toBeLessThanOrEqual(Math.floor(ENTREE_TIPS.length / 3));
+  });
+});

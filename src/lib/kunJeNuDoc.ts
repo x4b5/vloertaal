@@ -32,7 +32,7 @@ Bij elke zin staat een niveau en een vaardigheid waar de zin bij **past**:
 
 - **Taal**: A1 of A2 van het ERK (Europees Referentiekader).
 - **Werkregels**: 1F (Referentiekader taal; ongeveer A2).
-- Vaardigheden: luisteren, spreken, lezen of gesprekken.
+- Vaardigheden: luisteren, spreken, lezen, schrijven of gesprekken.
 
 Dit is een richtlijn om de app in een les of traject in te passen. Het is **geen officieel
 niveau**, geen toets en geen bewijs van een niveau.
@@ -40,8 +40,7 @@ niveau**, geen toets en geen bewijs van een niveau.
 ## Vertalingen
 
 De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's ${vertaald}
-(\`src/i18n/kunjenu/\`, gemarkeerd met "nieuw, nalezen"). De andere thema's staan nog open
-(TODO): daar staat de Engelse zin onder het Nederlands. Werkregels is alleen Nederlands.
+(\`src/i18n/kunjenu/\`, gemarkeerd met "nieuw, nalezen"). Werkregels is alleen Nederlands.
 
 ## Taal (${KUN_TAAL.length} onderwerpen, ${taal} zinnen)
 

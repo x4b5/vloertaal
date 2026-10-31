@@ -101,7 +101,7 @@ const t: CultureTranslation = {
     'c.workshop.a.why': "Pytanie „dlaczego”: ta odpowiedź podaje powód, oczy trzeba chronić.", // nieuw, nalezen
     'c.power.a.why': "Praca przy lampie: ta odpowiedź najpierw pyta, czy prąd jest wyłączony.", // nieuw, nalezen
     'c.garage.a.why': "Prośba o zmianę opon: „tak” i pytanie, gdzie one są.", // nieuw, nalezen
-    'c.carjob.a.why': "Dodatkowa praca: klient musi się najpierw zgodzić, więc ta odpowiedź do niego dzwoni.", // nieuw, nalezen
+    'c.carjob.a.why': "Dodatkowa praca: klient musi się najpierw zgodzić, więc ta odpowiedź pyta szefa.", // nieuw, nalezen
     'c.placement.a.why': "Pytanie „kiedy”: ta odpowiedź podaje dzień, a umowa jest najpierw.", // nieuw, nalezen
     'c.review.a.why': "Uwaga nie jest jeszcze jasna: prośba o pokazanie to dobra odpowiedź.", // nieuw, nalezen
     'c.council.a.why': "Pytanie o głosowanie: „tak” i dwie rzeczy, które trzeba zabrać.", // nieuw, nalezen
