@@ -652,7 +652,7 @@ const t: CultureTranslation = {
     'c.hygiene.b': 'İş yerinde alkol ve uyuşturucu kullanmak veya bunları kullandıktan sonra işe gelmek neredeyse tüm şirketlerde yasaktır. Makinelerin ve forkliftlerin yanında çok tehlikelidir ve işten çıkarılmana yol açabilir. Bir ilaç uykunu getiriyor veya başını döndürüyor mu? Amirine söyle, böylece güvenli bir iş yapabilirsin. Hangi ilaç olduğunu söylemek zorunda değilsin. Gıda üretiminde hijyen kuralları sıkıdır: ellerini yıka, temiz iş kıyafeti giy, gerekirse bone tak ve takı takma. Kusma veya ishal mi var? Başlamadan önce bildir. Çalışma yerini düzenli tut. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.hygiene.p': 'Bir ilaç kullanıyorum. Uykumu getiriyor.',
     'c.hygiene.s': 'Doktorun sana uyku yapan bir ilaç veriyor. Yarın forklift kullanman gerekiyor. Ne yaparsın?',
-    'c.hygiene.o1': 'Güvenli bir iş yapabilmek için başlamadan önce amirine söylersin.',
+    'c.hygiene.o1': 'Başlamadan önce amirine söylersin.', // nieuw, nalezen
     'c.hygiene.o2': 'Hiçbir şey söylemez ve çok yavaş sürersin.',
     'c.hygiene.o3': 'Doktoruna sormadan ilacı bırakırsın.',
     'c.hygiene.w': 'Amirinin hangi ilaç olduğunu bilmesi gerekmez, sadece şu an araç süremeyeceğini veya makinelerle çalışamayacağını bilmesi yeter. Bu seni ve iş arkadaşlarını güvende tutar.',
@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.respect.o3': 'Sen de onun kökeniyle ilgili şakalar yaparsın.',
     'c.respect.w': 'Böyle şakalar iş yerinde kabul edilmez. Bildirmek normaldir: şirket iş yerini herkes için güvenli tutmak zorundadır.',
     'c.health': 'Molalar ve çalışma saatleri',
-    'c.health.b': 'Yasa sağlığını korur. 5,5 saatten fazla mı çalışıyorsun? O zaman en az 30 dakika mola hakkın var (2 kez 15 dakika olabilir). 10 saatten fazla mı? O zaman en az 45 dakika. Bir cao’da biraz farklı mola kuralları olabilir. Bir vardiyada en fazla 12 saat, bir haftada en fazla 60 saat çalışabilirsin. İşveren sana iş ayakkabısı veya eldiven gibi koruyucu ekipmanı ücretsiz vermek zorundadır. Güvensiz iş veya çok düşük ücret mi var? Bunu Nederlandse Arbeidsinspectie’ye bildirebilirsin, adını vermeden de. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
+    'c.health.b': 'Yasa sağlığını korur. 5,5 saatten fazla mı çalışıyorsun? O zaman en az 30 dakika mola hakkın var (2 kez 15 dakika olabilir). 10 saatten fazla mı? O zaman en az 45 dakika. Bir cao’da biraz farklı mola kuralları olabilir. Bir vardiyada en fazla 12 saat, bir haftada en fazla 60 saat çalışabilirsin. 18 yaşından küçük müsün? O zaman daha az saat çalışabilirsin. İşveren sana iş ayakkabısı veya eldiven gibi koruyucu ekipmanı ücretsiz vermek zorundadır. Güvensiz iş veya çok düşük ücret mi var? Bunu Nederlandse Arbeidsinspectie’ye bildirebilirsin, adını vermeden de. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.', // nieuw, nalezen
     'c.health.p': 'Henüz mola vermedim.',
     'c.health.s': '6 saattir molasız çalışıyorsun. Amirin devam etmeni istiyor. Ne yaparsın?',
     'c.health.o1': 'Şimdi molaya ihtiyacın olduğunu söylersin.', // nagelezen (2e lezing)
@@ -724,7 +724,7 @@ const t: CultureTranslation = {
     'c.gethelp.b': 'Kendinde veya başkasında sömürü işaretleri mi görüyorsun? Yardım al. Bunu Nederlandse Arbeidsinspectie’ye, istersen adını vermeden, veya polise bildirebilirsin. Meld Misdaad Anoniem: 0800-7000. Ücretsiz hukuki tavsiye: Juridisch Loket. Tehlikede misin? 112’yi ara. Hollanda’da çalışan herkes yardım alabilir, göçmenler de. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.',
     'c.gethelp.p': 'Yardıma ihtiyacım var. Sömürülüyorum.',
     'c.gethelp.s': 'Bir arkadaşın günde 14 saat çalışıyor, neredeyse hiç ücret almıyor ve patrondan korkuyor. Ne yapabilirsin?',
-    'c.gethelp.o1': 'İsterse adını vermeden Arbeidsinspectie veya Juridisch Loket ile iletişime geçmesine yardım edersin.',
+    'c.gethelp.o1': 'Arbeidsinspectie veya Juridisch Loket ile iletişime geçmesine yardım edersin.', // nieuw, nalezen
     'c.gethelp.o2': 'Ona bunun yeni çalışanlar için normal olduğunu söylersin.',
     'c.gethelp.o3': 'Sözleşmesi bitene kadar beklemesini, sonra başka iş aramasını söylersin.',
     'c.gethelp.w': 'Hollanda’da çalışan herkes için yardım vardır. Bildirim isim vermeden de yapılabilir.',
@@ -868,7 +868,7 @@ const t: CultureTranslation = {
     'c.privacy.b': 'Danışanlar hakkında gördüğün ve duyduğun şeyler iş yerinde kalır. İş dışında danışanlardan bahsetme ve asla onların fotoğraflarını paylaşma. Bakımdan önce ve sonra ellerini temizle. Bir danışanda ağrı veya düşme gibi bir değişiklik mi fark ediyorsun? Hemen hemşireye söyle. Eğitimin ve iznin yoksa asla ilaç verme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.privacy.p': 'Beyefendinin dünden daha fazla ağrısı var.',
     'c.privacy.s': 'Bir danışan senden haplarını istiyor. İlaç vermek için eğitimin yok. Ne yaparsın?',
-    'c.privacy.o1': 'Kibarca hemşireyi çağıracağını söyler ve bunu hemen yaparsın.',
+    'c.privacy.o1': 'Kibarca hemşireyi çağıracağını söylersin.', // nieuw, nalezen
     'c.privacy.o2': 'Neye ihtiyacı olduğunu bildiği için hapları verirsin.',
     'c.privacy.o3': 'Hayır der ve gidersin.',
     'c.privacy.w': 'Yanlış ilaç tehlikeli olabilir. Doğru kişiyi hemen çağırmak danışana yardım eder ve herkesi güvende tutar.',

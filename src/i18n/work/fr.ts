@@ -652,7 +652,7 @@ const t: CultureTranslation = {
     'c.hygiene.b': 'L’alcool et la drogue au travail, ou venir travailler après en avoir pris, sont interdits dans presque toutes les entreprises. C’est très dangereux près des machines et des chariots élévateurs, et ça peut mener au licenciement. Un médicament te donne sommeil ou des vertiges ? Dis-le à ton responsable, pour pouvoir faire un travail sans danger. Tu n’as pas besoin de dire quel médicament. Dans la production alimentaire, les règles d’hygiène sont strictes : lave-toi les mains, porte des vêtements de travail propres, une charlotte si nécessaire, et pas de bijoux. Vomissements ou diarrhée ? Signale-le avant de commencer. Garde ton poste de travail en ordre. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.',
     'c.hygiene.p': 'Je prends un médicament. Il me donne sommeil.',
     'c.hygiene.s': 'Ton médecin te donne un médicament qui donne sommeil. Demain, tu dois conduire un chariot élévateur. Que fais-tu ?',
-    'c.hygiene.o1': 'Préviens ton responsable avant de commencer, pour pouvoir faire un travail sans danger.',
+    'c.hygiene.o1': 'Préviens ton responsable avant de commencer.', // nieuw, nalezen
     'c.hygiene.o2': 'Ne dis rien et conduis très lentement.',
     'c.hygiene.o3': 'Arrête le médicament sans demander à ton médecin.',
     'c.hygiene.w': 'Ton responsable n’a pas besoin de savoir quel médicament, seulement que tu ne peux pas conduire ou travailler avec des machines maintenant. Ça vous protège, toi et tes collègues.',
@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.respect.o3': 'Fais toi aussi des blagues sur ses origines.',
     'c.respect.w': 'Ce genre de blagues n’est pas accepté au travail. Le signaler est normal : l’entreprise doit garder le lieu de travail sûr pour tout le monde.',
     'c.health': 'Les pauses et les horaires de travail',
-    'c.health.b': 'La loi protège ta santé. Tu travailles plus de 5 h 30 ? Alors tu as au moins 30 minutes de pause (ça peut être 2 fois 15 minutes). Plus de 10 heures ? Alors au moins 45 minutes. Une cao peut avoir des règles de pause un peu différentes. Tu peux travailler au maximum 12 heures par service et 60 heures par semaine. Ton employeur doit te donner gratuitement des équipements de protection, comme des chaussures de sécurité ou des gants. Travail dangereux ou salaire trop bas ? Tu peux le signaler à la Nederlandse Arbeidsinspectie, aussi sans donner ton nom. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
+    'c.health.b': 'La loi protège ta santé. Tu travailles plus de 5 h 30 ? Alors tu as au moins 30 minutes de pause (ça peut être 2 fois 15 minutes). Plus de 10 heures ? Alors au moins 45 minutes. Une cao peut avoir des règles de pause un peu différentes. Tu peux travailler au maximum 12 heures par service et 60 heures par semaine. Tu as moins de 18 ans ? Alors tu peux travailler moins d’heures au maximum. Ton employeur doit te donner gratuitement des équipements de protection, comme des chaussures de sécurité ou des gants. Travail dangereux ou salaire trop bas ? Tu peux le signaler à la Nederlandse Arbeidsinspectie, aussi sans donner ton nom. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen
     'c.health.p': 'Je n’ai pas encore eu de pause.',
     'c.health.s': 'Tu as travaillé 6 heures sans pause. Ton responsable te demande de continuer. Que fais-tu ?',
     'c.health.o1': 'Dis que tu as besoin de ta pause maintenant.', // nagelezen (2e lezing)
@@ -724,7 +724,7 @@ const t: CultureTranslation = {
     'c.gethelp.b': 'Tu vois des signes d’exploitation, pour toi ou pour quelqu’un d’autre ? Demande de l’aide. Tu peux le signaler à la Nederlandse Arbeidsinspectie, aussi de façon anonyme, ou à la police. Meld Misdaad Anoniem : 0800-7000. Conseil juridique gratuit : le Juridisch Loket. En danger ? Appelle le 112. Toute personne qui travaille aux Pays-Bas peut avoir de l’aide, aussi les migrants. Informations générales. Pour ta situation : demande au syndicat, au Juridisch Loket ou à FairWork.',
     'c.gethelp.p': 'J’ai besoin d’aide. On m’exploite.',
     'c.gethelp.s': 'Un ami travaille 14 heures par jour, ne reçoit presque pas de salaire et a peur du patron. Que peux-tu faire ?',
-    'c.gethelp.o1': 'Aide-le à contacter l’Arbeidsinspectie ou le Juridisch Loket, de façon anonyme s’il veut.',
+    'c.gethelp.o1': 'Aide-le à contacter l’Arbeidsinspectie ou le Juridisch Loket.', // nieuw, nalezen
     'c.gethelp.o2': 'Dis-lui que c’est normal pour les nouveaux travailleurs.',
     'c.gethelp.o3': 'Dis-lui d’attendre la fin de son contrat, puis de chercher un autre travail.',
     'c.gethelp.w': 'L’aide existe pour toute personne qui travaille aux Pays-Bas. On peut aussi faire un signalement sans donner de noms.',
@@ -868,7 +868,7 @@ const t: CultureTranslation = {
     'c.privacy.b': 'Ce que tu vois et entends sur les résidents reste au travail. Ne parle pas des résidents en dehors du travail, et ne publie jamais de photos d’eux. Lave-toi les mains avant et après les soins. Tu remarques un changement chez un résident, comme de la douleur ou une chute ? Dis-le tout de suite à l’infirmière. Ne donne jamais de médicaments, sauf si tu as la formation et l’autorisation. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.',
     'c.privacy.p': 'Le monsieur a plus mal qu’hier.',
     'c.privacy.s': 'Une résidente te demande ses médicaments. Tu n’as pas la formation pour donner des médicaments. Que fais-tu ?',
-    'c.privacy.o1': 'Dis gentiment que tu vas chercher l’infirmière, et fais-le tout de suite.',
+    'c.privacy.o1': 'Dis gentiment que tu vas chercher l’infirmière.', // nieuw, nalezen
     'c.privacy.o2': 'Donne les médicaments, parce qu’elle sait ce dont elle a besoin.',
     'c.privacy.o3': 'Dis non et pars.',
     'c.privacy.w': 'Un mauvais médicament peut être dangereux. Aller vite chercher la bonne personne aide le résident et protège tout le monde.',
