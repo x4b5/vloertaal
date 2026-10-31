@@ -204,6 +204,7 @@ const lang: HelpLanguageSource = {
     recommended: 'ዝምከር',
     allTopics: 'ኩሎም ኣርእስትታት',
     topicsOrder: 'ኣርእስትታት ምርኣይ',
+    privacyLink: 'መግለጺ ብሕትውና ኣንብብ (ብሆላንድኛ)', // nieuw, nalezen
     routeTitle: 'መንገዲ ትምህርቲ', // nieuw, nalezen
     routeLearn: 'ንስራሕ ሆላንድኛ ምምሃር፡ ምስ ቋንቋ ሓገዝ', // nieuw, nalezen
     routeRules: 'ሆላንድኛ እዛረብ እየ፡ ስራሕ ኣብ ሆላንድን ቤልጅዩምን ከመይ ይኸይድ', // nieuw, nalezen

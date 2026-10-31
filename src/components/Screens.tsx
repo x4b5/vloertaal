@@ -55,6 +55,9 @@ import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
 import { pushSubStep } from '../lib/onbHistory';
+import { HelpSay } from './HelpSay';
+import { emojiIconId } from '../content/tipIcons';
+import { PRIVACY_PATH } from '../lib/paths';
 import { aboutDutchRemembered, rememberAboutDutch } from '../lib/aboutDutch';
 
 /** The help languages in the list in alphabetical order of their English name (the line under each
@@ -257,6 +260,15 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   );
 }
 
+/** Under "Jouw privacy" in About: the whole privacy statement, vloertaal.nl/privacy (in Dutch). */
+function PrivacyLink({ lang }: { lang?: HelpLanguage }) {
+  return (
+    <a className="about-privacy-link" href={PRIVACY_PATH} target="_blank" rel="noopener">
+      <NlPair nlFirst nl="Lees de privacyverklaring" nlClass="about-privacy-nl" text={ui('privacyLink', lang)} />
+    </a>
+  );
+}
+
 /**
  * The very first page (since 31 October 2026, the owner's choice): what do you want to learn? Two
  * cards (max 3), each with its Dutch and, under it, the line in the phone's language when it is
@@ -402,10 +414,10 @@ export function WordsHub({ lang, onTips, after }: {
           <NlPair nlFirst nl="Noodzinnen" nlClass="hub-nl" text={ui('phrasebook', lang)} />
         </h1>
       </div>
-      <p className="muted hub-hint"><Bi text={ui('phrasebookHint', lang)} /></p>
+      <p className="muted hub-hint"><Bi text={ui('phrasebookHint', lang)} /><HelpSay text={ui('phrasebookHint', lang).help} lang={lang} /></p>
       <PhraseList lang={lang} />
       <button type="button" className="hub-card hub-tips" onClick={onTips}>
-        <span className="hub-icon" aria-hidden><span className="entry-emoji">💡</span></span>
+        <span className="hub-icon" aria-hidden><WordPicture id="w.afspraak" emoji="💡" size={34} /></span>
         <span className="hub-text">
           <NlPair nlFirst nl="Zo werkt het hier" nlClass="hub-nl" text={ui('cultureTips', lang)} />
         </span>
@@ -456,13 +468,15 @@ function WorkContacts({ lang }: { lang?: HelpLanguage }) {
   return (
     <section className="work-contacts" aria-labelledby="work-contacts-title">
       <h2 id="work-contacts-title" className="rh-title"><Bi text={ui('whoToCall', lang)} /></h2>
+      {/* Read aloud in the help language: what each place is for, after its Dutch name. */}
+      <HelpSay text={workContacts(learnerCountry()).map(({ when, row }) => `${row.name}: ${ui(when, lang).help ?? ''}`).join('. ')} lang={lang} />
       <ul className="rh-rows">
         {workContacts(learnerCountry()).map(({ id, when, row }) => {
           // 112 has no link: the number is shown, not dialled with one tap (src/content/regels/help.ts).
           if (!row.href) return (
             <li key={id} className="rh-row">
               <div className="rh-card">
-                <span className="rh-emoji" aria-hidden>{row.emoji}</span>
+                <span className="rh-emoji rh-pic" aria-hidden><WordPicture id={emojiIconId(row.emoji)} emoji={row.emoji} size={36} /></span>
                 <span className="rh-text">
                   <span className="rh-name" lang="nl">{row.name}</span>
                   <Bi className="rh-when" text={ui(when, lang)} />
@@ -475,7 +489,7 @@ function WorkContacts({ lang }: { lang?: HelpLanguage }) {
           return (
             <li key={id} className="rh-row">
               <a className="rh-card rh-link" href={row.href} {...(call ? {} : { target: '_blank', rel: 'noreferrer' })}>
-                <span className="rh-emoji" aria-hidden>{row.emoji}</span>
+                <span className="rh-emoji rh-pic" aria-hidden><WordPicture id={emojiIconId(row.emoji)} emoji={row.emoji} size={36} /></span>
                 <span className="rh-text">
                   <span className="rh-name" lang="nl">{row.name}</span>
                   <Bi className="rh-when" text={ui(when, lang)} />
@@ -648,10 +662,11 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
           <h2>
             {s.who
               ? <span className="about-emoji about-who" aria-hidden><Character who={s.who} crop="head" size={30} /></span>
-              : <span className="about-emoji" aria-hidden>{s.emoji}</span>}
+              : <span className="about-emoji" aria-hidden><WordPicture id="" emoji={s.emoji} size={30} /></span>}
             <span className="bi"><span className="bi-en">{s.title}</span></span>
           </h2>
           <p>{withMailLink(s.body, undefined, true)}</p>
+          {s.id === 'a.free' && <PrivacyLink lang={lang} />}
           {s.signed && <Signed name={s.signed} code="nl" />}
         </section>
       )) : aboutSections.map((s) => (
@@ -659,12 +674,13 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
           <h2>
             {s.who
               ? <span className="about-emoji about-who" aria-hidden><Character who={s.who} crop="head" size={30} /></span>
-              : <span className="about-emoji" aria-hidden>{s.emoji}</span>}
+              : <span className="about-emoji" aria-hidden><WordPicture id="" emoji={s.emoji} size={30} /></span>}
             {dutch
               ? <span className="bi"><span className="bi-en">{s.nl.title}</span></span>
               : <Bi text={gloss(s.id, s.title, lang)} />}
           </h2>
           <p>{dutch ? withMailLink(s.nl.body) : <AboutBody text={gloss(`${s.id}.b`, s.body, lang)} />}</p>
+          {s.id === 'a.free' && <PrivacyLink lang={lang} />}
           {s.signed && <Signed name={s.signed} code={dutch ? 'nl' : lang?.code} dir={dutch ? 'ltr' : lang?.dir} />}
         </section>
       ))}
@@ -676,7 +692,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
           {onCoaches && (
             <li>
               <button type="button" className="phrase-banner about-banner coach-link" onClick={onCoaches}>
-                <span className="coach-link-icon" aria-hidden>🤝</span>
+                <span className="coach-link-icon" aria-hidden><WordPicture id="w.afspraak" emoji="🤝" size={30} /></span>
                 <span className="coach-link-text">
                   <NlPair nlFirst nl={PRO_TITLE} nlClass="coach-link-nl" text={ui('forCoaches', lang)} />
                 </span>
@@ -687,7 +703,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
           {onNews && (
             <li>
               <button type="button" className="phrase-banner about-banner news-link" onClick={onNews}>
-                <span className="news-link-icon" aria-hidden>📝</span>
+                <span className="news-link-icon" aria-hidden><WordPicture id="" emoji="📝" size={30} /></span>
                 <span className="news-link-text">
                   <Bi text={ui('whatsNew', lang)} />
                   <span className="news-link-date muted small" lang={langTag(dateCode(lang))} dir={lang?.dir}>{updateDate(LAST_UPDATE, dateLocale(dateCode(lang)))}</span>
@@ -1043,15 +1059,15 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
         <ChromeBack lang={lang} onBack={onBack} />
         <h1><Bi text={ui('cultureTips', lang)} /></h1>
       </div>
-      <p className="muted"><Bi text={ui('cultureTipsHint', lang)} /></p>
-      <p className="tips-note"><InfoIcon size={18} /><Bi text={ui('tipsNote', lang)} /></p>
+      <p className="muted"><Bi text={ui('cultureTipsHint', lang)} /><HelpSay text={ui('cultureTipsHint', lang).help} lang={lang} /></p>
+      <p className="tips-note"><InfoIcon size={18} /><Bi text={ui('tipsNote', lang)} /><HelpSay text={ui('tipsNote', lang).help} lang={lang} /></p>
       {/* The Belgian course is a beta (docs/taal-belgie.md). */}
       {taalBeActive() && <BeNote lang={lang} kind="beta" />}
       <ul className="tips-list">
         {visible.map((t) => (
           <li key={t.id} className={`tips-item ${open === t.id ? 'open' : ''}`}>
             <button type="button" className="tips-head" aria-expanded={open === t.id} onClick={() => setOpen(open === t.id ? null : t.id)}>
-              <span className="tips-emoji" aria-hidden>{t.emoji}</span>
+              <span className="tips-emoji tips-pic" aria-hidden><WordPicture id={emojiIconId(t.emoji)} emoji={t.emoji} size={32} /></span>
               <Bi text={gloss(t.id, t.title, lang)} />
               <ChevronIcon />
             </button>
@@ -1059,6 +1075,7 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
               <div className="tips-body">
                 {tipNlOnly(t) && <BeNote lang={lang} />}
                 <p><Bi text={tipBody(t, lang)} /></p>
+                <HelpSay text={tipBody(t, lang).help} lang={lang} />
                 <div className="phrase">
                   <SpeakButton text={t.phrase.nl} help={lang} />
                   <div className="phrase-text">

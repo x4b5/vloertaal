@@ -1,3 +1,4 @@
+import { WordPicture } from '../pictures';
 import { gloss, said, ui, uiCount, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import type { Theme, ThemeGroup } from '../content/themes';
@@ -66,7 +67,7 @@ export function ThemeHeadRow({ group, lang, completed, counted = group.units, du
   return (
     <li className={`theme-head ${done ? 'theme-head-done' : ''}`} data-theme={group.key}>
       <h2 className="theme-title" aria-label={spoken} dir={rtl ? 'rtl' : undefined}>
-        {group.theme && <span className="theme-emoji" aria-hidden>{group.theme.emoji}</span>}
+        {group.theme && <span className="theme-emoji" aria-hidden><WordPicture id="" emoji={group.theme.emoji} size={28} /></span>}
         <span className="theme-names" aria-hidden>
           {dutchOnly ? <span className="theme-nl-only" lang="nl">{nl}</span> : <NlPair nlFirst nl={nl} nlClass="theme-nl" dir={rtl ? 'ltr' : undefined} className="theme-help" text={text} />}
         </span>

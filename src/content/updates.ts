@@ -19,6 +19,8 @@ export const UPDATES: Update[] = [
     items: [
       'Nieuw bij "Waar werk je?": Winkel. Werk je in een winkel of supermarkt? Kies dan "Winkel en horeca" en dan "Winkel". Dan komt het onderwerp In de winkel vroeg in je lespad, in Taal en in Werkregels. Horeca staat nu ook bij "Winkel en horeca". Je keuze van eerder blijft staan.',
       'Nieuw: een privacyverklaring op vloertaal.nl/privacy. Daar staat precies wat de app wel en niet doet. Ook nieuw: geeft de app een fout? Dan telt hij dat, zonder iets over jou (onder "Anoniem meetellen", dus ook uit te zetten). Zo kunnen we fouten sneller vinden.',
+      'Hulp: tekeningen in plaats van emoji bij de tips en bij "Wie kan helpen?", en een voorleesknop in je eigen taal bij de uitleg en de tips (als je telefoon een stem voor je taal heeft). Bij Over › Jouw privacy staat nu een link naar de hele privacyverklaring.',
+      'Overal eigen tekeningen, geen emoji meer: bij de tips, de thema\'s, de regels in Werkregels, Hulp en Over. Ruim 50 nieuwe tekeningen, in dezelfde stijl als de rest.',
       'Nieuw bij de start: "Wat wil je leren?" Kies "Nederlands leren" (met hulp in je eigen taal) of "Ik spreek al Nederlands" (Werkregels: hoe werken in Nederland en België gaat). Werkregels staat dus niet meer tussen de hulptalen. Later wisselen kan bij Instellingen › Taal en ik.',
       'Nieuw bij Alle onderwerpen: een zoekbalk. Typ een woord, in het Nederlands of in je eigen taal, en je ziet de onderwerpen waar het in staat. Bijvoorbeeld "ziek" of "helm".',
       'Nieuw bij Over: Waarom Vloertaal? En "Wat is er nieuw?": hier zie je wat er in de app veranderd is.',

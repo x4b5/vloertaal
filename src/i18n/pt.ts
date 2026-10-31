@@ -203,6 +203,7 @@ const lang: HelpLanguageSource = {
     recommended: 'Recomendado',
     allTopics: 'Todos os temas',
     topicsOrder: 'Mostrar os temas',
+    privacyLink: 'Ler a declaração de privacidade (em neerlandês)', // nieuw, nalezen
     routeTitle: 'O que queres aprender?', // nieuw, nalezen
     routeLearn: 'Aprender neerlandês para o trabalho, com ajuda na tua língua', // nieuw, nalezen
     routeRules: 'Já falo neerlandês: como funciona o trabalho nos Países Baixos e na Bélgica', // nieuw, nalezen

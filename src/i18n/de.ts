@@ -203,6 +203,7 @@ const lang: HelpLanguageSource = {
     recommended: 'Empfohlen',
     allTopics: 'Alle Themen',
     topicsOrder: 'Themen zeigen',
+    privacyLink: 'Datenschutzerklärung lesen (auf Niederländisch)', // nieuw, nalezen
     routeTitle: 'Was möchtest du lernen?', // nieuw, nalezen
     routeLearn: 'Niederländisch für die Arbeit lernen, mit Hilfe in deiner Sprache', // nieuw, nalezen
     routeRules: 'Ich spreche schon Niederländisch: wie Arbeit in den Niederlanden und Belgien läuft', // nieuw, nalezen

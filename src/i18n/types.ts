@@ -85,6 +85,8 @@ export const uiEn = {
   fact7: "Of the migrants who speak Dutch very well, 69 out of 100 have paid work.",
   fact14: "Many libraries have a Taalhuis: free help to keep learning Dutch.",
   fact30: "A little practice every day works better than a lot now and then. You have done it for 30 days!",
+  /* About › "Your privacy": the link to vloertaal.nl/privacy. */
+  privacyLink: "Read the privacy statement (in Dutch)",
   /* The first question (src/components/Screens.tsx RoutePage) and Settings: the two learning routes. */
   routeTitle: "What do you want to learn?",
   routeLearn: "Learn Dutch for work, with help in your own language",

@@ -4324,6 +4324,9 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .rh-emoji { flex: none; width: 32px; text-align: center; font-size: 1.5rem; line-height: 1; font-family: 'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Emoji', sans-serif; }
 /* A row of "Wie bel je?": the drawing of its emoji (src/content/regels/ruleIcons.ts), or the emoji. */
 .rh-pic { width: 36px; display: grid; place-items: center; }
+/* About › "Jouw privacy": the link to the whole statement (vloertaal.nl/privacy). */
+.about-privacy-link { display: inline-flex; flex-direction: column; gap: 2px; margin: 4px 0 0; color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.about-privacy-nl { font-weight: 500; }
 .rh-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .rh-name { font-weight: 700; font-size: 1.1rem; line-height: 1.25; overflow-wrap: anywhere; }
 .rh-when { font-size: 1rem; line-height: 1.4; color: var(--ink-2); }
@@ -4667,3 +4670,6 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .check-result-actions .btn.btn-go, .check-result-actions .btn.btn-ghost { padding-inline: 10px; overflow-wrap: anywhere; }
 .check-result-actions .btn > span[lang='nl'] { font-weight: 700; font-size: 1.05rem; }
 .check-result-foot .check-go { flex: 1 1 100%; }
+
+/* A speaker in a sentence ("Tik op [speaker]"): the app's own icon, on the text line (src/components/Bi.tsx iconize). */
+.inline-icon { display: inline-block; vertical-align: -0.2em; margin: 0 0.1em; }

@@ -318,7 +318,7 @@ export function DrawnCardView({ card, locked, lang, say, rowClass }: {
   return (
     <figure className={`slip card card-${card.type}${say ? ' card-says' : ''}`} aria-label={label} lang="nl">
       <div className="slip-head">
-        {pic && <span className="card-pic" aria-hidden>{pic}</span>}
+        {pic && <span className="card-pic" aria-hidden><WordPicture id="" emoji={pic} size={26} /></span>}
         <span className="slip-title">{card.title}</span>
         {card.sub && <span className="slip-period">{card.sub}</span>}
         {say && <span className="card-say"><Say text={cardSpeech(card)} lang={lang} name={label} /></span>}

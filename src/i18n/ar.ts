@@ -203,6 +203,7 @@ const lang: HelpLanguageSource = {
     recommended: 'مُوصى به',
     allTopics: 'كل المواضيع',
     topicsOrder: 'عرض المواضيع',
+    privacyLink: 'اقرأ بيان الخصوصية (بالهولندية)', // nieuw, nalezen
     routeTitle: 'مسار التعلّم', // nieuw, nalezen
     routeLearn: 'تعلّم الهولندية للعمل، مع مساعدة بلغتك', // nieuw, nalezen
     routeRules: 'أتكلّم الهولندية: كيف يسير العمل في هولندا وبلجيكا', // nieuw, nalezen

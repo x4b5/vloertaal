@@ -49,12 +49,15 @@ describe('the work-rules drawings (src/content/regels/ruleIcons.ts)', () => {
     expect(all.filter((e) => ruleIconId(e)).length / all.length).toBeGreaterThan(0.6);
   });
 
-  it('keeps an emoji without a drawing as it is', async () => {
+  it('never shows an emoji: one outside this table gets its drawing from the app-wide one, else an empty square', async () => {
     await loadPictures();
     expect(rulePicture('🧭')).toEqual({ id: '', emoji: '🧭' });
-    const plain = renderToStaticMarkup(createElement(WordPicture, { ...rulePicture('🧭'), size: 34 }));
-    expect(plain).toContain('🧭');
-    expect(plain).not.toContain('<svg');
+    // 🧭 is drawn by src/content/emojiArt (the compass), since "alleen SVG" (31 October 2026).
+    const art = renderToStaticMarkup(createElement(WordPicture, { ...rulePicture('🧭'), size: 34 }));
+    expect(art).toContain('<svg');
+    const none = renderToStaticMarkup(createElement(WordPicture, { id: '', emoji: '🫠', size: 34 }));
+    expect(none).not.toContain('<svg');
+    expect(none.replace(/data-emoji="[^"]*"/, '')).not.toContain('🫠');
     const drawn = renderToStaticMarkup(createElement(WordPicture, { ...rulePicture('🧤'), size: 34 }));
     expect(drawn).toContain('<svg');
   });

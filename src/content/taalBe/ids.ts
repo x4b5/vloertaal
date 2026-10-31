@@ -26,7 +26,13 @@ export const taalNlId = (id: string): string => (isTaalBeId(id) ? id.slice(TAAL_
  * Belgian words that keep the drawing of their Dutch twin (BeLine `picture: 'same'`: "de refter"
  * is the same room as "de kantine"). Filled by src/content/taalBe/index.ts; read by WordPicture.
  */
-const samePicture = new Map<string, string>();
+const samePicture = new Map<string, string>([
+  // Words of the Belgian units themselves (be.u.society) that show the same thing as a Dutch
+  // word's drawing: the police officer, the ID card with a photo. ("stemmen" keeps its own id:
+  // src/pictures/group32.tsx gives it the ballot box of w.stemmen.)
+  ['be.w.wijkagent', 'w.agent'],
+  ['be.w.identiteitskaart', 'w.identiteitsbewijs'],
+]);
 
 export function setSamePicture(beWordId: string, nlWordId: string): void {
   samePicture.set(beWordId, nlWordId);

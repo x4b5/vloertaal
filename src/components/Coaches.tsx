@@ -88,7 +88,7 @@ function Section({ s, children }: { s: ProSection; children?: ReactNode }) {
   return (
     <section className={facts ? 'coach-facts' : 'about-section pro-section'} aria-labelledby={id}>
       <h2 id={id} className={facts ? 'coach-facts-title' : undefined}>
-        {!facts && <span className="about-emoji" aria-hidden>{s.emoji}</span>}
+        {!facts && <span className="about-emoji" aria-hidden><WordPicture id="" emoji={s.emoji} size={30} /></span>}
         <span>{s.title}</span>
       </h2>
       {s.body.map((p) => <p key={p}>{withMail(p)}</p>)}
