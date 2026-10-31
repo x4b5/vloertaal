@@ -379,6 +379,13 @@ const lang: HelpLanguageSource = {
     samenEnd: 'Bravo! Schimbați rolurile și mai faceți o dată?', // nieuw, nalezen
     samenSwap: 'Schimbați rolurile', // nieuw, nalezen
     samenStop: 'Gata', // nieuw, nalezen
+    checkStart: 'Știu asta: verificare scurtă', // nieuw, nalezen
+    checkPassed: 'Știi deja asta. Bifezi tema aceasta?', // nieuw, nalezen
+    checkNoCert: 'Atunci nu ai încă certificat. Îl primești după lecții.', // nieuw, nalezen
+    checkNotYet: 'Lecțiile te ajută la această temă.', // nieuw, nalezen
+    checkMark: 'Bifează', // nieuw, nalezen
+    checkVia: 'prin verificare', // nieuw, nalezen
+    checkUndo: 'Totuși fă lecțiile', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -639,7 +639,7 @@ export function Phrasebook({ lang, onBack }: { lang?: HelpLanguage; onBack: () =
   );
 }
 
-function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
+export function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
   /** A stamp on the card's corner (FOUTLOOS). */
   badge?: React.ReactNode;
   tone: 'gold' | 'green' | 'orange';

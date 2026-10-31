@@ -379,6 +379,13 @@ const lang: HelpLanguageSource = {
     samenEnd: 'أحسنتما! بدّلا الأدوار وأعيدا مرة أخرى؟', // nieuw, nalezen
     samenSwap: 'بدّلا الأدوار', // nieuw, nalezen
     samenStop: 'إنهاء', // nieuw, nalezen
+    checkStart: 'أعرف هذا: اختبار قصير', // nieuw, nalezen
+    checkPassed: { m: 'أنت تعرف هذا. هل تريد أن تعلّم هذا الموضوع كمنتهٍ؟', f: 'أنتِ تعرفين هذا. هل تريدين أن تعلّمي هذا الموضوع كمنتهٍ؟', x: 'هذا معروف لك. تعليم هذا الموضوع كمنتهٍ؟' }, // nieuw, nalezen
+    checkNoCert: 'عندها لا توجد شهادة بعد. الشهادة تأتي بعد الدروس.', // nieuw, nalezen
+    checkNotYet: { m: 'الدروس تساعدك في هذا الموضوع.', f: 'الدروس تساعدكِ في هذا الموضوع.', x: 'الدروس مفيدة في هذا الموضوع.' }, // nieuw, nalezen
+    checkMark: 'تعليم كمنتهٍ', // nieuw, nalezen
+    checkVia: 'عبر الاختبار', // nieuw, nalezen
+    checkUndo: { m: 'اعمل الدروس رغم ذلك', f: 'اعملي الدروس رغم ذلك', x: 'القيام بالدروس رغم ذلك' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

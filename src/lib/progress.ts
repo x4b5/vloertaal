@@ -18,6 +18,12 @@ export interface LessonRecord {
   /** Best accuracy so far, 0–1. */
   best: number;
   times: number;
+  /**
+   * Ticked off with a short check ("Ik ken dit al", src/lib/instapCheck.ts), not done: the day
+   * (YYYY-MM-DD). Such a record has best 0 and times 0. The lesson counts as done everywhere,
+   * but its topic earns no certificate; doing the lesson for real gives a normal record.
+   */
+  check?: string;
 }
 
 export type ThemeChoice = 'auto' | 'light' | 'dark';
@@ -481,6 +487,8 @@ export function parseBackup(text: string): Backup | null {
     if (!knownLessonId(id)) continue;
     if (rec && typeof rec.best === 'number' && rec.best >= 0 && rec.best <= 1 && isCount(rec.times)) {
       completed[id] = { best: rec.best, times: Math.floor(rec.times) };
+      // Ticked off with a check (only a check record: one with lessons done is a normal one).
+      if (isDay(rec.check) && !rec.times) completed[id].check = rec.check;
     }
   }
   const out: Backup = { completed };
@@ -591,13 +599,24 @@ export function mergeAddsNothing(before: Progress, after: Progress): boolean {
   return learnt(before) === learnt(after);
 }
 
+/**
+ * One lesson on both sides: the best of both. A lesson done for real on one side wins over a
+ * check there ("Ik ken dit al", src/lib/instapCheck.ts); two checks keep the later day.
+ */
+function mergeRecord(mine: LessonRecord | undefined, theirs: LessonRecord): LessonRecord {
+  if (!mine) return theirs;
+  if (mine.check && theirs.check) return mine.check >= theirs.check ? mine : theirs;
+  if (mine.check) return { best: theirs.best, times: theirs.times };
+  if (theirs.check) return mine;
+  return { best: Math.max(mine.best, theirs.best), times: Math.max(mine.times, theirs.times) };
+}
+
 /** Adds a backup to the progress on this phone: the best of both, nothing is lost. */
 export function mergeBackup(p: Progress, file: Backup): Progress {
   const b = backupForTrack(file, trackOf(p));
   const completed = { ...p.completed };
   for (const [id, r] of Object.entries(b.completed ?? {})) {
-    const mine = completed[id];
-    completed[id] = mine ? { best: Math.max(mine.best, r.best), times: Math.max(mine.times, r.times) } : r;
+    completed[id] = mergeRecord(completed[id], r);
   }
   const cards: Cards = { ...(p.cards ?? {}) };
   for (const [id, c] of Object.entries(b.cards ?? {})) {

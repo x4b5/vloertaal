@@ -421,6 +421,13 @@ export const uiNl: Record<UiKey, UiText> = {
   samenEnd: 'Goed gedaan! Wissel de rollen en doe het nog een keer?',
   samenSwap: 'Wissel de rollen',
   samenStop: 'Klaar',
+  checkStart: 'Ik ken dit al: korte check',
+  checkPassed: 'Je kent dit al. Wil je dit onderwerp afvinken?',
+  checkNoCert: 'Je krijgt dan nog geen certificaat. Dat krijg je na de lessen.',
+  checkNotYet: 'De lessen helpen je bij dit onderwerp.',
+  checkMark: 'Afvinken',
+  checkVia: 'via check',
+  checkUndo: 'Toch de lessen doen',
 };
 
 const lang: HelpLanguageSource = {

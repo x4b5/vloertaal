@@ -379,6 +379,13 @@ const lang: HelpLanguageSource = {
     samenEnd: 'شاباش! نقش‌ها را تبدیل کنید و یک بار دیگر انجام دهید؟', // nieuw, nalezen
     samenSwap: 'نقش‌ها را تبدیل کنید', // nieuw, nalezen
     samenStop: 'خلاص', // nieuw, nalezen
+    checkStart: 'این را می‌دانم: آزمون کوتاه', // nieuw, nalezen
+    checkPassed: 'این را می‌دانید. این موضوع را تمام‌شده نشانی کنید؟', // nieuw, nalezen
+    checkNoCert: 'در آن صورت هنوز تصدیق‌نامه ندارید. تصدیق‌نامه را بعد از درس‌ها می‌گیرید.', // nieuw, nalezen
+    checkNotYet: 'درس‌ها در این موضوع به شما کمک می‌کنند.', // nieuw, nalezen
+    checkMark: 'نشانی کردن', // nieuw, nalezen
+    checkVia: 'با آزمون', // nieuw, nalezen
+    checkUndo: 'با این هم درس‌ها را انجام دهید', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

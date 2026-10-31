@@ -52,6 +52,9 @@ import { ToetsOffer, ToetsPage, ToetsPlayer, ToetsResult } from './components/To
 import { recordToets, toetsLater, toetsOffer, versionOf, type ToetsMoment } from './lib/toets';
 import { forgetVoices, keepVoice } from './lib/toetsVoice';
 import { Samen } from './components/Samen';
+import { CheckResult } from './components/Check';
+import { checkExercises, checkLesson, checkOffered, checkPassed, recordCheck, undoCheck } from './lib/instapCheck';
+import type { Exercise } from './lib/exercises';
 import { hasSamen, samenDialogues } from './lib/samen';
 
 type View =
@@ -98,7 +101,10 @@ type View =
   | { name: 'toets-result'; moment: ToetsMoment }
   | { name: 'toets-page' }
   /** "Laat zien hoe het gaat": the coach card (src/components/Certificate.tsx CoachCardScreen), from Settings › Taal en ik. */
-  | { name: 'kaart' };
+  | { name: 'kaart' }
+  /** "Ik ken dit al: korte check" (src/lib/instapCheck.ts): the 5 questions of a topic, and the end. */
+  | { name: 'check'; unit: string; seed: number }
+  | { name: 'check-result'; unit: string; right: number; total: number };
 
 const HOME: View = { name: 'home' };
 
@@ -115,7 +121,7 @@ const current = (): Entry | null => {
 };
 /** A screen a reload would not bring back: a lesson, its result and what follows it (the reminder
  *  offer too: its calendar file sends the learner away and back), the admin page. */
-const passing = (v: View) => v.name === 'lesson' || v.name === 'result' || v.name === 'toets' || v.name === 'toets-result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'keep' || v.name === 'admin'
+const passing = (v: View) => v.name === 'lesson' || v.name === 'result' || v.name === 'check' || v.name === 'check-result' || v.name === 'toets' || v.name === 'toets-result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'keep' || v.name === 'admin'
   || (v.name === 'phrasebook' && Boolean(v.streakUp || v.cert)) || v.name === 'samen';
 /** After a reload: back on the screen you were on, but a lesson or its result starts over at home. */
 const restored = (): View => {
@@ -208,6 +214,8 @@ export default function App() {
   const calmRef = useRef(false);
   /** Set while the app itself goes back out of a lesson, so that Back is not intercepted. */
   const leaving = useRef(false);
+  /** The check on screen ("Ik ken dit al"): its questions, made once per start (view.seed). */
+  const checkRun = useRef<{ key: string; exercises: Exercise[]; lesson: ReturnType<typeof checkLesson> } | null>(null);
 
   // The first run, one question per page: language, "Woman or man?" (help languages with gender),
   // password, sector (src/lib/onboarding.ts); 'done' is the app itself.
@@ -237,7 +245,7 @@ export default function App() {
   const firstScreen = useRef(true);
   useEffect(() => {
     if (firstScreen.current) { firstScreen.current = false; return; }
-    if (view.name === 'lesson' || view.name === 'toets') return;
+    if (view.name === 'lesson' || view.name === 'toets' || view.name === 'check') return;
     // A screen of a file of its own (src/lazyScreens.tsx) may draw its heading a moment later.
     let tries = 0;
     let t = 0;
@@ -347,7 +355,7 @@ export default function App() {
     const onPop = () => {
       goingBack.current = false;
       if (adminRequested()) return; // #beheer: the hashchange handler opens the admin page
-      if (viewRef.current.name === 'lesson' && !leaving.current) {
+      if ((viewRef.current.name === 'lesson' || viewRef.current.name === 'check') && !leaving.current) {
         // Stay in the lesson (put its entry back) and open its pause sheet.
         const lesson = viewRef.current;
         history.pushState({ view: lesson, depth: (current()?.depth ?? 0) + 1 } satisfies Entry, '');
@@ -363,7 +371,7 @@ export default function App() {
       }
       const v = current()?.view ?? HOME;
       // A finished lesson's entry was replaced by its result; never step back into a lesson.
-      setView(v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' ? HOME : v);
+      setView(v.name === 'lesson' || v.name === 'result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'check' || v.name === 'check-result' ? HOME : v);
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
@@ -913,6 +921,8 @@ export default function App() {
             onPocket={(id) => go({ name: 'pocket', unit: id })}
             onCertificate={(id) => go({ name: 'certificate', unit: id })}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
+            onCheck={(id) => go({ name: 'check', unit: id, seed: Date.now() >>> 0 })}
+            onUndoCheck={(id) => setProgress((p) => { const u = findUnit(id); return u ? undoCheck(p, u) : p; })}
             unlocked={unlockedShown}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
@@ -992,6 +1002,48 @@ export default function App() {
           />
           <BottomNav current="me" onTab={tab} lang={lang} />
         </>
+      );
+    }
+    case 'check': {
+      const unit = findUnit(view.unit);
+      // Only while the check is offered (a history entry or a reload cannot start one otherwise).
+      if (!unit || !checkOffered(progress, unit)) return null;
+      const key = `${unit.id}:${view.seed}`;
+      if (checkRun.current?.key !== key) checkRun.current = { key, exercises: checkExercises(unit, view.seed, Boolean(progress.quiet)), lesson: checkLesson(unit) };
+      const run = checkRun.current;
+      return (
+        <LessonPlayer
+          key={key}
+          lesson={run.lesson}
+          exercises={run.exercises}
+          review={false}
+          lang={lang}
+          backSignal={lessonBack}
+          quiet={Boolean(progress.quiet)}
+          onQuiet={setQuiet}
+          onQuit={() => { leaving.current = true; back(); }}
+          // Nothing is kept yet: ticking off is the learner's choice on the next screen.
+          onFinish={({ right, total }) => replace({ name: 'check-result', unit: unit.id, right, total })}
+          sector={progress.sector}
+        />
+      );
+    }
+    case 'check-result': {
+      const unit = findUnit(view.unit);
+      if (!unit) return null;
+      return (
+        <CheckResult
+          unit={unit}
+          right={view.right}
+          total={view.total}
+          lang={lang}
+          onMark={() => {
+            // Only after a passed check, and only once (a second tap, a history entry: nothing more).
+            if (checkPassed(view.right) && checkOffered(progress, unit)) setProgress((p) => recordCheck(p, unit, new Date()));
+            back();
+          }}
+          onLessons={back}
+        />
       );
     }
     case 'toets':

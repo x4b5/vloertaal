@@ -6,7 +6,8 @@ import type { Unit } from '../content/types';
 import { gloss, said, saidLang, ui, uiCount, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { type Access, lessonAllowed, unitAllowed } from '../lib/access';
-import { hasCertificate, unitDone } from '../lib/certificate';
+import { hasCertificate, hasCheck, lessonViaCheck, unitDone, unitEarned } from '../lib/certificate';
+import { checkOffered } from '../lib/instapCheck';
 import { isUnlocked } from '../lib/exercises';
 import type { DailyCard } from '../lib/spaced';
 import type { Progress } from '../lib/progress';
@@ -470,6 +471,8 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
     const n = blockDoneCount(unit, completed);
     const t = unitTitle(unit, lang);
     const now = block?.id === unit.id;
+    // Ticked off with a check ("Ik ken dit al", src/lib/instapCheck.ts): said, and shown small.
+    const via = finished && hasCheck(unit, completed);
     return (
       <li key={unit.id}>
         <button
@@ -477,12 +480,13 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
           id={`unit-${unit.id.slice(2)}`}
           className={`topic-row ${finished ? 'topic-done' : ''} ${now ? 'topic-now' : ''} ${allowed ? '' : 'topic-locked'}`}
           onClick={() => onOpen(unit.id)}
-          aria-label={`${said(t)}${dutchUi(lang) ? '' : ` · ${unit.titleNl}`} · ${n} / ${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
+          aria-label={`${said(t)}${dutchUi(lang) ? '' : ` · ${unit.titleNl}`} · ${n} / ${unit.lessons.length} ${said(uiCount('lessonsUnit', unit.lessons.length, lang))}${via ? ` · ${said(ui('checkVia', lang))}` : ''}${allowed ? '' : ` · ${said(ui('fullVersion', lang))}`}`}
         >
           <WordPicture className="topic-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={44} />
           <span className="topic-text" dir={rtl ? 'rtl' : undefined} aria-hidden>
             <Bi className="topic-title" text={t} />
             {allowed && <LessonCount unit={unit} completed={completed} lang={lang} showDone={n > 0} />}
+            {via && <ViaCheck lang={lang} />}
           </span>
           <span className="topic-end" aria-hidden>
             {!allowed ? <LockIcon size={18} /> : finished ? <span className="topic-check"><CheckIcon size={16} /></span> : <ChevronIcon size={20} />}
@@ -532,7 +536,7 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
  * and the certificate once the topic is finished) and its lessons. Done lessons can be practised
  * again here; the next one says Start (or Continue when it was stopped halfway).
  */
-export function TopicPage({ unit, progress, lang, access = 'full', onBack, onStart, onRestart, onPocket, onCertificate, onUpgrade, focus = false, unlocked = false }: {
+export function TopicPage({ unit, progress, lang, access = 'full', onBack, onStart, onRestart, onPocket, onCertificate, onUpgrade, onCheck, onUndoCheck, focus = false, unlocked = false }: {
   unit: Unit;
   progress: Progress;
   lang?: HelpLanguage;
@@ -545,6 +549,10 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
   onPocket?: (unitId: string) => void;
   onCertificate?: (unitId: string) => void;
   onUpgrade?: () => void;
+  /** "Ik ken dit al: korte check" (src/lib/instapCheck.ts): shown only when the check is offered. */
+  onCheck?: (unitId: string) => void;
+  /** "Toch de lessen doen": the topic's check records go (shown once it was ticked off with a check). */
+  onUndoCheck?: (unitId: string) => void;
   /** From a coach link: mark the topic for a moment. */
   focus?: boolean;
   /** The full version was unlocked a moment ago (from this page): the code was right. */
@@ -553,9 +561,14 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
   const { completed, sector } = progress;
   const rtl = lang?.dir === 'rtl';
   const allowed = unitAllowed(unit.id, access);
-  const finished = unitDone(unit, completed);
   // A certificate once earned stays offered, also when a lesson was added to the topic since.
-  const certified = Boolean(onCertificate) && hasCertificate(unit.id) && (finished || Boolean(progress.certs?.[unit.id]));
+  // A topic ticked off with a check has none (until its lessons are done for real).
+  const certified = Boolean(onCertificate) && hasCertificate(unit.id) && (unitEarned(unit, completed) || Boolean(progress.certs?.[unit.id]));
+  // "Ik ken dit al: korte check" (only after a high enough start test), or once ticked off with
+  // it: "via check" and "Toch de lessen doen". Never both, and never next to the certificate.
+  const checked = hasCheck(unit, completed);
+  const offerCheck = Boolean(onCheck) && allowed && !certified && checkOffered(progress, unit);
+  const undo = Boolean(onUndoCheck) && checked;
   // The next lesson, if the learner may play it (the sneak preview opens a topic's first lesson only).
   const following = allowed ? blockNext(unit, completed) : undefined;
   const next = following && lessonAllowed(following.id, access) ? following : undefined;
@@ -580,11 +593,16 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
         {/* The topic's sign: its picture and how far the learner is (the name is in the head). */}
         <div className={`rb-block topic-sign ${marked ? 'rb-marked' : ''}`} aria-label={`${u + 1}. ${said(unitTitle(unit, lang))}`} role="group">
           <WordPicture className="rb-pic" id={unitIcons[unit.id] ?? ''} emoji={unit.emoji} size={64} />
-          <BlockProgress unit={unit} completed={completed} lang={lang} />
+          {checked ? (
+            <div className="topic-sign-side">
+              <BlockProgress unit={unit} completed={completed} lang={lang} />
+              <ViaCheck lang={lang} />
+            </div>
+          ) : <BlockProgress unit={unit} completed={completed} lang={lang} />}
         </div>
         {unlocked && <UnlockedNote lang={lang} />}
         {allowed ? (
-          (onPocket || restartLesson || certified) && (
+          (onPocket || restartLesson || certified || offerCheck || undo) && (
             <div className="topic-tools" dir={rtl ? 'rtl' : undefined}>
               {restartLesson && onRestart && (
                 <RestartButton
@@ -599,6 +617,19 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                   <span className="unit-tool-text"><Bi className="unit-tool-label" text={ui('pocketCard', lang)} /></span>
                 </button>
               )}
+              {/* Max-3 here: Start again, the pocket card and the check (the certificate never comes
+                  with the check: a topic with a check has none). */}
+              {offerCheck && onCheck && (
+                <button type="button" className="unit-tool check-open" onClick={() => onCheck(unit.id)}>
+                  <span className="check-open-icon" aria-hidden><CheckIcon size={22} /></span>
+                  <span className="unit-tool-text"><NlPair nlFirst nl="Ik ken dit al: korte check" nlClass="unit-tool-nl" className="unit-tool-label" text={ui('checkStart', lang)} /></span>
+                </button>
+              )}
+              {undo && onUndoCheck && (
+                <button type="button" className="unit-tool check-undo" onClick={() => onUndoCheck(unit.id)}>
+                  <span className="unit-tool-text"><NlPair nlFirst nl="Toch de lessen doen" nlClass="unit-tool-nl" className="unit-tool-label" text={ui('checkUndo', lang)} /></span>
+                </button>
+              )}
               {/* A region's unit has no certificate (src/lib/certificate.ts hasCertificate). */}
               {certified && onCertificate && <CertBadge lang={lang} onOpen={() => onCertificate(unit.id)} />}
             </div>
@@ -610,7 +641,10 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
         <ol className="bays rb-lessons topic-lessons" data-list="lessons">
           {unit.lessons.map((lesson, i) => {
             const record = completed[lesson.id] as { best?: number } | undefined;
-            const open = allowed && isUnlocked(lesson.id, completed, access);
+            // Ticked off with a check: done, and a tap plays it as a new lesson (not a review),
+            // also while the lesson before it (a theme's first lesson, never ticked off) is open.
+            const via = lessonViaCheck(lesson.id, completed);
+            const open = allowed && (isUnlocked(lesson.id, completed, access) || (via && lessonAllowed(lesson.id, access)));
             const state = !open ? 'locked' : record ? 'done' : lesson.id === next?.id ? 'now' : 'open';
             const icon = lessonIcon(lesson);
             const title = gloss(lesson.id, lesson.title, lang);
@@ -626,8 +660,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                   type="button"
                   className="bay-card"
                   disabled={!open && !full}
-                  onClick={() => (full ? onUpgrade?.() : onStart(lesson.id, Boolean(record)))}
-                  aria-label={`${u + 1}.${i + 1} ${said(title)}${saved ? ` · ${resumeLabel(saved, lang)}` : open ? (record ? ` · ${said(ui('practice', lang))}` : ` · ${said(ui('start', lang))}`) : allowed && lessonAllowed(lesson.id, access) ? ` (${said(ui('locked', lang))})` : ` · ${said(ui('fullVersion', lang))}`}`}
+                  onClick={() => (full ? onUpgrade?.() : onStart(lesson.id, Boolean(record) && !via))}
+                  aria-label={`${u + 1}.${i + 1} ${said(title)}${saved ? ` · ${resumeLabel(saved, lang)}` : open ? (via ? ` · ${said(ui('checkVia', lang))} · ${said(ui('start', lang))}` : record ? ` · ${said(ui('practice', lang))}` : ` · ${said(ui('start', lang))}`) : allowed && lessonAllowed(lesson.id, access) ? ` (${said(ui('locked', lang))})` : ` · ${said(ui('fullVersion', lang))}`}`}
                 >
                   {icon && <WordPicture className="bay-pic" id={icon.id} emoji={icon.emoji} size={48} />}
                   <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
@@ -637,7 +671,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                     {/* The Belgian course: a Dutch lesson there says so (src/content/regels/be). */}
                     {lesson.rule?.note && <span className="bay-goal bay-note" lang="nl">{lesson.rule.note}</span>}
                     {saved && <ResumeChip save={saved} lang={lang} />}
-                    {state === 'done' && !saved && (
+                    {state === 'done' && !saved && via && <ViaCheck lang={lang} />}
+                    {state === 'done' && !saved && !via && (
                       <span className="bay-again">
                         {record?.best === 1 ? <CrownIcon size={16} /> : <CheckIcon size={16} />}
                         <Bi className="bay-again-label" text={ui('practice', lang)} />
@@ -659,5 +694,18 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
         </ol>
       </div>
     </div>
+  );
+}
+
+/** "via check": a topic or lesson ticked off with the short check (src/lib/instapCheck.ts), not done.
+ *  Calm text, not a button: the Dutch (as on the coach card), and the help language beside it. */
+function ViaCheck({ lang }: { lang?: HelpLanguage }) {
+  const text = ui('checkVia', lang);
+  return (
+    <span className="via-check" aria-hidden>
+      <CheckIcon size={14} />
+      <span className="via-check-nl" lang="nl">via check</span>
+      {lang && !dutchUi(lang) && text.help && text.help !== 'via check' && <HelpText className="via-check-help" text={text.help} lang={lang} />}
+    </span>
   );
 }
