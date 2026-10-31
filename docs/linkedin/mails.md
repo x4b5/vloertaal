@@ -1,23 +1,14 @@
 # Mails voor de pilot
 
-Antwoorden op wie reageert op het LinkedIn-bericht. Vul `[CODE]` zelf in. De code staat nergens in
-deze repo en hoort daar ook niet: geef hem alleen per bericht.
+Antwoorden op wie reageert op het LinkedIn-bericht.
 
-Houd per persoon bij wie de code kreeg en wanneer (een lijstje is genoeg). Dan weet je wie je na een
-week een bericht stuurt (mail 5).
+**De app staat open voor iedereen** (sinds 28 oktober 2026, `OPEN_TO_ALL` in `src/lib/access.ts`).
+Er is geen toegangscode en geen slot meer: alle lessen zijn open, zonder account. Stuur dus alleen
+de link: **vloertaal.nl**, of de pagina in de eigen taal (`vloertaal.nl/pl`, `vloertaal.nl/ar` …).
+Wie eerder een code invulde, merkt niets: die heeft gewoon alles.
 
-Wat iemand ziet:
-- **Zonder code: de sneak preview.** Per thema de eerste les (bij „Jouw sector” de eerste les van
-  iedere sector, 13 lessen in totaal), plus „Herhaal vandaag”. De rest staat op slot, met „Volledige
-  versie”. Op de codepagina staat „Geen code? Begin met de eerste lessen”. Wie alleen even wil
-  kijken, heeft dus geen code nodig: stuur alleen de link **vloertaal.nl**.
-- **Met een code: de volledige versie.** Alle lessen. Voor experts, coaches en de pilot. Kandidaten
-  die met de app leren, krijgen een eigen code. De code kan ook later nog: bij Instellingen, of bij
-  een onderwerp op slot.
-- De oude sneak-previewcode en de proefcode werken nog, maar zijn niet meer nodig.
-
-Wie een code eerder invulde, houdt het niveau van toen: dat staat op de telefoon. Een code die later
-een sneak preview werd, geeft wie hem al had dus nog steeds de volledige versie.
+Houd per persoon bij wie de link kreeg en wanneer (een lijstje is genoeg). Dan weet je wie je na
+een week een bericht stuurt (mail 5).
 
 **Iets melden.** In elke les staat rechtsboven een vlaggetje. Een tik opent een mail aan
 hoi@vloertaal.nl met de plek al ingevuld: les, stap, het woord of de zin, hulptaal, telefoon en
@@ -32,23 +23,22 @@ iPhone (die heeft een eigen geheugen, los van Safari).
 
 ## 1. Iemand wil de app proberen
 
-**Onderwerp:** Je toegangscode voor Vloertaal
+**Onderwerp:** Vloertaal proberen
 
 Hoi [naam],
 
-Leuk dat je Vloertaal wilt proberen! Je toegangscode is: **[CODE]**
+Leuk dat je Vloertaal wilt proberen! Je hebt geen code of account nodig: alle lessen zijn open.
 
 Zo begin je:
 1. Open **vloertaal.nl/?test** op je telefoon. De app is gemaakt voor de telefoon. Op een computer
    werkt hij ook, maar dan zie je hem smal.
 2. Kies een hulptaal. Wil je zien hoe het voor een leerling is? Kies dan een taal die je niet kent.
-3. Vul de code in als de app erom vraagt.
+3. Kies waar je werkt, en Nederland of België.
 4. Doe een paar lessen. Zet het geluid aan: alles wordt voorgelezen.
 
 Tip: je kunt de app op je beginscherm zetten. In de app staat hoe dat moet, bij Instellingen.
 
-Geef de code alsjeblieft niet zelf door. Wie hem ook wil hebben, kan mij mailen. Zo weet ik wie
-meedoet.
+Ken je iemand die de app ook wil proberen? Stuur de link gerust door.
 
 Zie je iets wat niet klopt? Tik in de les rechtsboven op het **vlaggetje**. Dan opent een mail aan
 mij met de plek al ingevuld. Schrijf erbij wat je zag; een schermfoto helpt.
@@ -67,8 +57,8 @@ Vloertaal · hoi@vloertaal.nl
 
 Hoi [naam],
 
-Dank je wel dat je wilt meekijken. Je toegangscode is: **[CODE]**. Open **vloertaal.nl/?test** op
-je telefoon, kies een hulptaal en vul de code in.
+Dank je wel dat je wilt meekijken. Open **vloertaal.nl/?test** op je telefoon en kies een
+hulptaal. Een code is niet nodig: alle lessen zijn open.
 
 Waar ik vooral benieuwd naar ben:
 - **Niveau:** passen de woorden en zinnen bij beginners (A1 tot A2)? Wat is te moeilijk?
@@ -93,8 +83,8 @@ Vloertaal · hoi@vloertaal.nl
 
 Hoi [naam],
 
-Dank je wel dat je wilt meekijken. Je toegangscode is: **[CODE]**. Open **vloertaal.nl/?test** op
-je telefoon, kies een hulptaal en vul de code in.
+Dank je wel dat je wilt meekijken. Open **vloertaal.nl/?test** op je telefoon en kies een
+hulptaal. Een code is niet nodig: alle lessen zijn open.
 
 In de taallessen staan korte tips over hoe het werkt op de Nederlandse werkvloer: ziekmelden,
 loonstrook, proeftijd, veiligheid. Klopt wat daar staat? Is er iets wat te kort door de bocht is?
@@ -121,8 +111,8 @@ Bijlage bij een ja: `docs/juridische-check.md`, `docs/werkregels-bronnen.md` en
 
 Hoi [naam],
 
-Wat fijn dat je wilt helpen! Je toegangscode is: **[CODE]**. Open **vloertaal.nl/?test** op je
-telefoon, kies **[taal]** als hulptaal en vul de code in.
+Wat fijn dat je wilt helpen! Open **vloertaal.nl/?test** op je telefoon en kies **[taal]** als
+hulptaal. Een code is niet nodig: alle lessen zijn open.
 
 Ik heb twee vragen:
 1. **Doe een paar lessen** en let op de teksten in het [taal]. Klinkt iets vreemd, onbeleefd,
@@ -150,7 +140,7 @@ kan).
 
 Hoi [naam],
 
-Een week geleden kreeg je de code voor Vloertaal. Hoe ging het? Je mag op deze mail antwoorden met
+Een week geleden kreeg je de link naar Vloertaal. Hoe ging het? Je mag op deze mail antwoorden met
 korte antwoorden, ook als je de app maar één keer hebt geopend.
 
 1. Hoe vaak heb je de app geopend, ongeveer?

@@ -453,6 +453,7 @@ export const uiNl: Record<UiKey, UiText> = {
   noticeTitle: 'Er is iets veranderd',
   noticeMore: 'Lees meer',
   noticeOk: 'Oké',
+  shareInvite: 'Ik leer Nederlands voor mijn werk met Vloertaal. Gratis: {link}', // nieuw, nalezen
 };
 
 const lang: HelpLanguageSource = {

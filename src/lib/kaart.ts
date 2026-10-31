@@ -37,6 +37,8 @@ export interface KaartToets {
 export interface KaartData {
   /** The learner's own name (as on the certificates), '' = none. */
   name: string;
+  /** The help language's code: the address at the foot of the picture is its page (vloertaal.nl/pl). */
+  helpCode?: string;
   track: Track;
   /** The work-rules track in the Belgian course (src/content/rulesCourse.ts): "werken in België". */
   be?: boolean;

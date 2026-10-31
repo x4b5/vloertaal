@@ -1,5 +1,6 @@
 import { CERT_NOTE, certListLabel, certMeta, certSub, sealRing, type CertData } from './certificate';
 import { roundRect, sharePng } from './canvasShare';
+import { siteLink } from './shareLink';
 
 /**
  * The certificate as a picture, drawn straight on a canvas (no libraries), in the same layout
@@ -498,6 +499,11 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
   ctx.font = font(500, 1.1 * u);
   ctx.textAlign = 'center';
   spaced(ctx, CERT_NOTE, px + pw / 2, py + ph - 2.4 * u, 0.04 * 1.1 * u);
+  // The site's address on the same line, at the start (under the date; the stamp is at the end),
+  // so a certificate sent on leads somewhere.
+  ctx.textAlign = 'left';
+  ctx.font = font(600, 1.1 * u);
+  ctx.fillText(siteLink(d.helpCode), left, py + ph - 2.4 * u);
   return canvas;
 }
 
@@ -515,6 +521,6 @@ export async function certificatePng(d: CertData): Promise<Blob> {
  * sheet the phone refused because the picture took too long). Returns what happened;
  * 'cancelled' when the learner closed the share sheet. `png`: the picture drawn ahead.
  */
-export async function shareCertificate(d: CertData, fileName: string, png: Promise<Blob> = certificatePng(d)): Promise<'shared' | 'saved' | 'cancelled'> {
-  return sharePng(await png, fileName, `Certificaat · ${d.titleNl}`);
+export async function shareCertificate(d: CertData, fileName: string, png: Promise<Blob> = certificatePng(d), text?: string): Promise<'shared' | 'saved' | 'cancelled'> {
+  return sharePng(await png, fileName, `Certificaat · ${d.titleNl}`, text);
 }

@@ -397,6 +397,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'تعليم كمنتهٍ', // nieuw, nalezen
     checkVia: 'عبر الاختبار', // nieuw, nalezen
     checkUndo: { m: 'اعمل الدروس رغم ذلك', f: 'اعملي الدروس رغم ذلك', x: 'القيام بالدروس رغم ذلك' }, // nieuw, nalezen
+    shareInvite: 'أتعلّم الهولندية لعملي مع Vloertaal. مجاناً: {link}', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

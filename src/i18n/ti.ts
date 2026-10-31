@@ -398,6 +398,7 @@ const lang: HelpLanguageSource = {
     checkMark: { m: 'ምልክት ግበር', f: 'ምልክት ግበሪ', x: 'ምልክት ግበሩ' }, // nieuw, nalezen
     checkVia: 'ብፈተና', // nieuw, nalezen
     checkUndo: { m: 'ግን ነቶም ትምህርትታት ግበሮም', f: 'ግን ነቶም ትምህርትታት ግበርዮም', x: 'ግን ነቶም ትምህርትታት ግበሩዎም' }, // nieuw, nalezen
+    shareInvite: 'ን ስራሐይ ሆላንድኛ ብ Vloertaal እመሃር ኣለኹ። ብነጻ እዩ: {link}', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

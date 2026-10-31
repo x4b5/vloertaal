@@ -14,7 +14,7 @@ de 100 GB per maand. Daarboven is Pro nodig (ongeveer $20 per maand) of een ande
 | ✅ | Domein `vloertaal.nl` gekoppeld (vercel.json, deelplaatje, canonical, robots, sitemap) | klaar |
 | ✅ | Contact `hoi@vloertaal.nl` en privacy op de pagina *Over* | klaar |
 | ✅ | Stemmen: ElevenLabs betaald plan, commercieel gebruik toegestaan | klaar |
-| ✅ | Pilot gestart (15 oktober 2026, LinkedIn); code per bericht, niet openbaar | loopt |
+| ✅ | Pilot gestart (15 oktober 2026, LinkedIn). Sinds 28 oktober staat de app open voor iedereen (`OPEN_TO_ALL`): geen toegangscode meer, alleen de link | loopt |
 | ⏳ | Nieuwe zinnen opnemen na elke merge met nieuwe Nederlandse tekst | jij: workflow draaien, zie onderaan |
 | ⏳ | Vertalingen laten nakijken door moedertaalsprekers | zie `vertaalcontrole.md` |
 | ⏳ | Werkvloer-tips laten nakijken door FNV / Juridisch Loket / FairWork | zie `juridische-check.md` |
@@ -115,7 +115,7 @@ Weer uitzetten kan met één regel in `src/lib/track.ts` (`RULES_TRACK = false`)
 - [ ] De datum in `RULES_CHECKED` (`src/content/regels/disclaimer.ts`) is de datum van die
       controle. Die datum staat in de app bij "Goed om te weten".
 - [ ] Getest op een echte telefoon (Android en iPhone), met en zonder Nederlandse voorleesstem:
-      taal kiezen → code → sector → eerste les → Hulp (een nummer bellen opent de telefoon) →
+      taal kiezen → sector → land → eerste les → Hulp (een nummer bellen opent de telefoon) →
       Instellingen → terug naar een hulptaal en weer naar Nederlands (de voortgang blijft).
 - [ ] `npm test` en `node scripts/max3/count.cjs --matrix` zijn groen.
 

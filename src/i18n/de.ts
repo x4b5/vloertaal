@@ -397,6 +397,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'Abhaken', // nieuw, nalezen
     checkVia: 'per Check', // nieuw, nalezen
     checkUndo: 'Doch die Lektionen machen', // nieuw, nalezen
+    shareInvite: 'Ich lerne Niederländisch für meine Arbeit mit Vloertaal. Kostenlos: {link}', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

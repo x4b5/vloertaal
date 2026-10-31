@@ -17,13 +17,15 @@ export function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w
  * Shares a PNG (the phone's share sheet, where the learner can save, send or print it), or saves
  * it when sharing files is not supported or fails (a computer; a share sheet the phone refused
  * because the picture took too long). 'cancelled' when the learner closed the share sheet.
+ * `text`: a short line with the link to go along (src/lib/shareLink.ts shareText), so a picture
+ * sent to a colleague leads somewhere.
  */
-export async function sharePng(blob: Blob, fileName: string, title: string): Promise<'shared' | 'saved' | 'cancelled'> {
+export async function sharePng(blob: Blob, fileName: string, title: string, text?: string): Promise<'shared' | 'saved' | 'cancelled'> {
   const file = new File([blob], fileName, { type: 'image/png' });
   const nav = navigator as Navigator & { canShare?: (data: ShareData) => boolean };
   if (nav.share && nav.canShare?.({ files: [file] })) {
     try {
-      await nav.share({ files: [file], title });
+      await nav.share(text ? { files: [file], title, text } : { files: [file], title });
       return 'shared';
     } catch (e) {
       if ((e as DOMException)?.name === 'AbortError') return 'cancelled';
