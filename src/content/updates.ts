@@ -188,7 +188,7 @@ export const UPCOMING: string[] = [
   'AI-stemmen (ElevenLabs) voor de nieuwe lessen en zinnen. Tot dan leest de stem van je telefoon voor.',
   'Belgische lessen in het spoor Taal: werk, loon, ziek zijn en je rechten in België.',
   'Luisteren zoals op de werkvloer: korte gesprekjes met geluid van het werk.',
-  'Experts en moedertaalsprekers kijken de lessen en vertalingen na. We zoeken hen nog.',
+  'Experts en moedertaalsprekers gaan de lessen en vertalingen nakijken. We zoeken hen nog.',
 ];
 
 /** The date of the newest update. */
