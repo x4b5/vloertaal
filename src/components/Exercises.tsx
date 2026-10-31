@@ -21,6 +21,10 @@ import { letterSteps } from '../lib/letters';
 import { createRng } from '../lib/random';
 import { pickInsteadOfTyping, writingInput } from '../lib/writing';
 import { HelpSay } from './HelpSay';
+import { BeNote } from './BeNote';
+import { tipNlOnly } from '../content/taalBe';
+import { isTaalBeId } from '../content/taalBe/ids';
+import { tipBody } from '../lib/tipText';
 
 export interface Answer {
   correct: boolean;
@@ -1023,8 +1027,11 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
         </span>
       </div>
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
+      {/* In Belgium (docs/taal-belgie.md): a Dutch tip that differs there says so; a Belgian tip says it is new. */}
+      {tipNlOnly(tip) && <BeNote lang={lang} />}
+      {isTaalBeId(tip.id) && <BeNote lang={lang} kind="beta" />}
       {/* In the lesson only the first sentences; the whole text is on "Zo werkt het hier". */}
-      <TipBody text={shortTip(gloss(`${tip.id}.b`, tip.body, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl)} lang={lang} />
+      <TipBody text={shortTip(tipBody(tip, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl)} lang={lang} />
       <div className="tip-say">
         <span className="tip-say-label"><Bi text={ui('sayThis', lang)} /></span>
         <div className="tip-say-row">

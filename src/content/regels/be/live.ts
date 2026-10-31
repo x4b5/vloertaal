@@ -15,7 +15,8 @@ export function setBeRules(on: boolean | null): void {
   forced = on;
 }
 
-function devFlag(): boolean {
+/** `?be=1` in development (also read by src/content/taalBe/live.ts: it turns both Belgian versions on). */
+export function devFlag(): boolean {
   if (!import.meta.env?.DEV || typeof location === 'undefined') return false;
   try {
     if (new URLSearchParams(location.search).get('be') === '1') sessionStorage.setItem('vloertaal:be', '1');

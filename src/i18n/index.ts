@@ -1,4 +1,5 @@
 import { mixLessonId, relatedUnits } from '../content/review';
+import { beTaalUnitIds } from '../content/taalBe';
 import { langMeta, languageMeta, langTag } from './meta';
 import type { LanguagePack, RegionTextPack } from './packs/types';
 import type { CultureTranslation } from './culture/types';
@@ -67,11 +68,11 @@ function merge(p: LanguagePack, r: CultureTranslation = NO_TEXTS): HelpLanguageS
   const mix = l.ui.mixLesson ?? uiEn.mixLesson;
   return {
     ...l,
-    ui: { ...l.ui, ...p.culture.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui, ...p.sayings.ui, ...p.sounds.ui, ...p.kunJeNu.ui, ...r.ui },
+    ui: { ...l.ui, ...p.culture.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui, ...p.sayings.ui, ...p.sounds.ui, ...p.kunJeNu.ui, ...p.be.ui, ...r.ui },
     gloss: {
-      ...l.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.about.gloss, ...p.learn.gloss, ...p.sayings.gloss, ...p.sounds.gloss, ...p.kunJeNu.gloss, ...r.gloss,
+      ...l.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.about.gloss, ...p.learn.gloss, ...p.sayings.gloss, ...p.sounds.gloss, ...p.kunJeNu.gloss, ...p.be.gloss, ...r.gloss,
       // Every unit's "Mixed review" lesson shares one title.
-      ...Object.fromEntries(Object.keys(relatedUnits).map((id) => [mixLessonId(id), isPlural(mix) ? mix.other : mix])),
+      ...Object.fromEntries([...Object.keys(relatedUnits), ...beTaalUnitIds].map((id) => [mixLessonId(id), isPlural(mix) ? mix.other : mix])),
     },
   };
 }

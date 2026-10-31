@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'هلندی برای محیط کار',
     chooseLanguage: 'زبان خود را انتخاب کنید',
     englishOnly: 'فقط انگلیسی',
-    beta: 'ترجمه در حال بررسی است',
+    beta: 'ترجمه هنوز بررسی نشده است', // nieuw, nalezen
     dayStreak: 'روز پشت سر هم',
     streakStarted: 'روزهای پشت سر همِ شما شروع شد! فردا برگردید.',
     streakGrew: '{n} روز پشت سر هم! ادامه بدهید.',

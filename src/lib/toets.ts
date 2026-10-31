@@ -1,4 +1,6 @@
-import { allDialogues, allLessons, allReplies, allWords } from '../content/curriculum';
+import { allDialogues, allLessons, allReplies, allWords, beOnlyTaalLessons } from '../content/curriculum';
+import { taalBeActive } from '../content/taalBe';
+import { taalBeId } from '../content/taalBe/ids';
 import { TOETS_PARTS, TOETS_SPEAK, TOETS_VERSIONS, type ToetsItem, type ToetsPart, type ToetsVersion } from '../content/toets';
 import type { ChatLine, Dialogue, Sentence, Word } from '../content/types';
 import { earnedCertificates } from './certificate';
@@ -93,6 +95,22 @@ export type ToetsQuestion =
 
 const allSentences = (): Sentence[] => allLessons.flatMap((l) => l.sentences);
 
+/**
+ * The test in Belgium (docs/taal-belgie.md): an item said otherwise there plays in its Belgian
+ * version ("de loonbrief", "de arbeidsarts": its "be." line), so the test asks what the lessons
+ * taught. The items stay the same (their ids: the two moments compare). Elsewhere: as it is.
+ */
+export function inCountry<T extends { id: string }>(x: T): T {
+  if (!taalBeActive()) return x;
+  const id = taalBeId(x.id);
+  for (const l of beOnlyTaalLessons()) {
+    const hit = [...l.words, ...l.sentences, ...(l.dialogues ?? []).flatMap((d) => [d.prompt, d.reply])].find((y) => y.id === id);
+    if (hit) return { ...x, ...hit } as T;
+  }
+  return x;
+}
+const inCountryChat = (d: Dialogue): Dialogue => ({ prompt: inCountry(d.prompt), reply: inCountry(d.reply) });
+
 /** A sentence, word or chat line of the course by id (undefined: not in the course). */
 export function toetsLine(id: string): { id: string; nl: string; en: string } | undefined {
   return allSentences().find((s) => s.id === id) ?? allWords.find((w) => w.id === id) ?? allReplies.find((r) => r.id === id)
@@ -102,15 +120,15 @@ export function toetsLine(id: string): { id: string; nl: string; en: string } | 
 function question(item: ToetsItem, rng: () => number): ToetsQuestion {
   const need = <T,>(x: T | undefined, id: string): T => { if (!x) throw new Error(`toets: ${id} is not in the course`); return x; };
   if (item.part === 'listen') {
-    const find = (id: string) => need(allSentences().find((s) => s.id === id), id);
+    const find = (id: string) => inCountry(need(allSentences().find((s) => s.id === id), id));
     return { part: 'listen', sentence: find(item.answer), options: shuffle([item.answer, ...item.others].map(find), rng) };
   }
   if (item.part === 'words') {
-    const find = (id: string) => need(allWords.find((w) => w.id === id), id);
+    const find = (id: string) => inCountry(need(allWords.find((w) => w.id === id), id));
     return { part: 'words', word: find(item.answer), options: shuffle([item.answer, ...item.others].map(find), rng) };
   }
-  const dialogue = need(allDialogues.find((d) => d.prompt.id === item.answer), item.answer);
-  const others = item.others.map((id) => need(allReplies.find((r) => r.id === id), id));
+  const dialogue = inCountryChat(need(allDialogues.find((d) => d.prompt.id === item.answer), item.answer));
+  const others = item.others.map((id) => inCountry(need(allReplies.find((r) => r.id === id), id)));
   return { part: 'sentences', dialogue, options: shuffle([dialogue.reply, ...others], rng) };
 }
 

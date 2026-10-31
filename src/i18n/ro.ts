@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'Olandeză pentru locul de muncă',
     chooseLanguage: 'Alege limba de ajutor',
     englishOnly: 'Doar engleză',
-    beta: 'Traducere în verificare',
+    beta: 'Traducere încă neverificată', // nieuw, nalezen
     dayStreak: { one: 'zi la rând', few: 'zile la rând', other: 'de zile la rând' },
     streakStarted: 'Seria ta de zile a început! Revino mâine.',
     streakGrew: { one: '{n} zi la rând! Ține-o tot așa.', few: '{n} zile la rând! Ține-o tot așa.', other: '{n} de zile la rând! Ține-o tot așa.' },

@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { BeNote } from './BeNote';
+import { lessonNlOnly } from '../content/taalBe';
 import type { Lesson } from '../content/types';
 import type { SectorChoice } from '../content/sectors';
 import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
@@ -1029,6 +1031,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
         {/* The Belgian course: a lesson that is still the Dutch one says so, on its first step. */}
         {index === 0 && lesson.rule?.note && <p className="rule-country-note" role="note" lang="nl">{lesson.rule.note}</p>}
+        {/* The language course in Belgium: a Dutch lesson that differs there says so (docs/taal-belgie.md). */}
+        {index === 0 && !lesson.steps?.length && lessonNlOnly(lesson.id) && <BeNote lang={lang} className="rule-country-note" />}
         <div className="ex-tag">
           {repeatsLeft > 0 ? (
             <>

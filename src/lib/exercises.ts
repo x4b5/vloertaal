@@ -1,4 +1,4 @@
-import { allDialogues, allLessons, allReplies, allWords, teachingLessons, units } from '../content/curriculum';
+import { allCountriesTaalUnits, allDialogues, allLessons, allReplies, allWords, teachingLessons } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
 import { coursePlan, mainLessons, type SectorChoice } from '../content/sectors';
 import { courseUnits, unitOfLesson } from '../content/courses';
@@ -203,7 +203,8 @@ export function typedLookalikes(ex: { word: Word; options?: readonly Word[] }): 
 
 /** The words of the lesson's unit: the fallback pool for picture choices (related words). */
 function unitWords(lesson: Lesson): Word[] {
-  return units.find((u) => u.lessons.some((l) => l.id === lesson.id))?.lessons.flatMap((l) => l.words) ?? [];
+  // Either country's course (a Belgian lesson, src/content/taalBe).
+  return allCountriesTaalUnits().find((u) => u.lessons.some((l) => l.id === lesson.id))?.lessons.flatMap((l) => l.words) ?? [];
 }
 
 /**
@@ -768,7 +769,7 @@ export function unitIndexOf(lesson: Lesson, sector?: SectorChoice, track: Track 
  *  (met a lesson ago, so it comes back the other way round). None in a unit's first lesson: its
  *  own chat the other way round right after it would give the answer away. */
 function reverseDialogue(lesson: Lesson): Dialogue | undefined {
-  const unit = units.find((u) => u.lessons.some((l) => l.id === lesson.id));
+  const unit = allCountriesTaalUnits().find((u) => u.lessons.some((l) => l.id === lesson.id));
   const i = unit ? unit.lessons.findIndex((l) => l.id === lesson.id) : -1;
   const before = i > 0 ? unit!.lessons[i - 1] : undefined;
   return before && !isMixLesson(before) ? before.dialogues?.[0] : undefined;

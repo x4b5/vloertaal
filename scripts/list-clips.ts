@@ -3,7 +3,8 @@
 // clip in every voice, unless the clip names its voices ("voices": only those record it).
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { cultureTips } from '../src/content/culture';
-import { phrasebookExtras, units as courseUnits } from '../src/content/curriculum';
+import { beOnlyTaalLessons, phrasebookExtras, units as courseUnits } from '../src/content/curriculum';
+import { beTaalTips } from '../src/content/taalBe';
 import { allRegionTips, allRegionUnits, isRegionLoaded, REGIONS, registerRegion, setRegionsOn } from '../src/content/regio';
 import zlPack from '../src/content/regio/zuid-limburg-pack';
 import { lessonSayings } from '../src/content/sayings';
@@ -20,13 +21,18 @@ const missing = REGIONS.filter((r) => !isRegionLoaded(r.id)).map((r) => r.id);
 if (missing.length) throw new Error(`scripts/list-clips.ts: register the region pack of ${missing.join(', ')}`);
 
 // The course, then the regions' language units (src/content/regio): their lines are recorded too.
-const units = [...courseUnits, ...allRegionUnits('taal')];
+// And the Belgian language course's own lines (src/content/taalBe, docs/taal-belgie.md): until they
+// are recorded the phone reads them; clips are found by their text, so a line written as in the Dutch
+// course ("Ik wil bezwaar maken.") plays its clip already.
+const units = [...courseUnits, ...allRegionUnits('taal'), { id: 'be', title: '', titleNl: '', emoji: '', color: '', lessons: beOnlyTaalLessons() }];
 
 const clips = new Map<string, string>();
 /** Clips only some voices record (to save credits): id -> voice keys. */
 const onlyVoices = new Map<string, string[]>();
 const add = (id: string, text: string, voices?: string[]) => {
   if (clips.has(id)) return;
+  // A Belgian line written as a Dutch one plays that clip (clips are found by text): no second take.
+  if (id.startsWith('be.') && [...clips.values()].includes(text)) return;
   clips.set(id, text);
   if (voices) onlyVoices.set(id, voices);
 };
@@ -39,7 +45,7 @@ for (const u of units)
       add(d.reply.id, d.reply.nl);
     }
   }
-for (const t of [...cultureTips, ...allRegionTips()]) {
+for (const t of [...cultureTips, ...allRegionTips(), ...beTaalTips]) {
   add(t.phrase.id, t.phrase.nl);
   // The Dutch quoted in a situation ("Zeg maar je, hoor!"), played beside its text.
   if (t.situation.nl) add(`${t.situation.id}.nl`, t.situation.nl);

@@ -17,7 +17,7 @@ export const uiNl: Record<UiKey, UiText> = {
   appTagline: 'Werken in Nederland: zo gaat het', // regels
   chooseLanguage: 'Kies je taal',
   englishOnly: 'Ik leer Nederlands via het Engels', // regels: the other track, under "English"
-  beta: 'We kijken deze tekst nog na',
+  beta: 'Deze tekst is nog niet nagekeken',
   dayStreak: { one: 'dag op rij', other: 'dagen op rij' },
   streakStarted: 'Je bent een reeks begonnen! Kom morgen terug.',
   streakGrew: { one: '{n} dag op rij! Ga zo door.', other: '{n} dagen op rij! Ga zo door.' },
@@ -428,6 +428,13 @@ export const uiNl: Record<UiKey, UiText> = {
   checkMark: 'Afvinken',
   checkVia: 'via check',
   checkUndo: 'Toch de lessen doen',
+  // Het spoor Taal in België (docs/taal-belgie.md). Het spoor Werkregels toont ze niet.
+  beNlOnly: 'Dit gaat over Nederland. In België is het anders.',
+  beTaalBeta: 'De Belgische lessen zijn nieuw en nog niet nagekeken door een expert.',
+  whoLegalBe: 'Gratis eerste advies van een advocaat over je contract of loon.',
+  whoInspectionBe: 'Te weinig loon, of werken zonder contract melden.',
+  whoExploitBe: 'Iemand buit je uit op je werk, of je denkt van wel.',
+  whoUnionBe: 'Hulp bij je loon, je contract of als je werk stopt. Leden krijgen meer hulp.',
 };
 
 const lang: HelpLanguageSource = {

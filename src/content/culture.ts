@@ -1,6 +1,7 @@
 import type { ChatLine, Dialogue, Lesson, Unit } from './types';
 import { ADVICE_LINE, dataUnit, toolsUnit, workTips } from './work';
 import { allRegionTips } from './regio';
+import { beTaalTips, beTipFor, taalBeActive } from './taalBe';
 
 /**
  * "Zo werkt het hier": Dutch workplace customs, norms and values, one per lesson.
@@ -449,8 +450,25 @@ export function tipGender(t: CultureTip): 'f' | 'm' | null {
 }
 
 export function tipForLesson(lessonId: string): CultureTip | undefined {
+  // In Belgium (the Belgian course on): the Belgian tip of the lesson first (src/content/taalBe);
+  // a Belgian lesson ("be.l.council") has only a Belgian tip, in either country.
+  const be = beTipFor(lessonId);
+  if (be && (taalBeActive() || lessonId.startsWith('be.'))) return be;
   // A region's lessons have their own tips (src/content/regio), kept apart from the course's.
   return cultureTips.find((t) => t.lessonId === lessonId) ?? allRegionTips().find((t) => t.lessonId === lessonId);
+}
+
+/**
+ * The tips of the learner's country, in course order (the "Zo werkt het hier" page): in Belgium a
+ * Belgian tip takes the place of its Dutch one (a C unit's tips, of its Dutch lessons'), the rest
+ * stays. In the Netherlands, or with the Belgian course off: cultureTips.
+ */
+export function taalTips(): CultureTip[] {
+  if (!taalBeActive()) return cultureTips;
+  return cultureTips.flatMap((t) => {
+    const twin = beTaalTips.find((b) => b.id === `be.${t.id}`);
+    return twin ? [twin] : [t];
+  });
 }
 
 /** Every id in this file that needs a help-language translation (work tips: see workIds in work.ts). */

@@ -4171,6 +4171,17 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
   font-size: 1rem; line-height: 1.4; font-weight: 700; color: var(--ink, inherit);
 }
 .bay-note { font-weight: 700; }
+/* The language course in Belgium (src/components/BeNote.tsx): "Dit gaat over Nederland. In
+   België is het anders." and the beta line. A calm line, not a button. */
+.be-note { display: block; color: var(--ink, inherit); }
+p.be-note {
+  margin: 8px 0 12px; padding: 8px 12px; border-radius: 10px; border: 2px solid var(--line, #d8d2c2);
+  font-size: 0.95rem; line-height: 1.4; font-weight: 700;
+}
+.be-note .bi-help { font-weight: 400; }
+p.be-note-beta { font-weight: 400; border-style: dashed; color: var(--muted); }
+.theme-be-note { margin: 0 0 8px; list-style: none; }
+.rb-be-note { margin: 4px 0 8px; }
 
 /* True or false: two cards side by side. */
 .choices-tf { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }

@@ -11,6 +11,7 @@ import { mixLessonFor } from '../src/content/review';
 import { THEMES } from '../src/content/themes';
 import { regionIds } from '../src/content/regio';
 import { kunGlossIds } from '../src/content/kunJeNu';
+import { beTaalIds } from '../src/content/taalBe';
 // The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
 import './regionLoaded';
 
@@ -41,6 +42,8 @@ const contentIds = [
   ...regionIds(),
   // "Wat kun je nu?" (src/content/kunJeNu.ts): the can-do sentences of the themes translated so far.
   ...kunGlossIds(),
+  // The language track in Belgium (src/content/taalBe, docs/taal-belgie.md): its units, lines, tips and shared texts.
+  ...beTaalIds(),
 ];
 
 describe('content and translations', () => {

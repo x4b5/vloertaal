@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'Niderlandzki do pracy',
     chooseLanguage: 'Wybierz język pomocy',
     englishOnly: 'Tylko angielski',
-    beta: 'Tłumaczenie w trakcie sprawdzania',
+    beta: 'Tłumaczenie jeszcze niesprawdzone', // nieuw, nalezen
     dayStreak: { one: 'dzień z rzędu', few: 'dni z rzędu', many: 'dni z rzędu', other: 'dni z rzędu' },
     streakStarted: 'Twoja seria dni się zaczęła! Wróć jutro.',
     streakGrew: { one: '{n} dzień z rzędu! Tak trzymaj.', few: '{n} dni z rzędu! Tak trzymaj.', many: '{n} dni z rzędu! Tak trzymaj.', other: '{n} dni z rzędu! Tak trzymaj.' },

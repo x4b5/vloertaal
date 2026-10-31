@@ -18,7 +18,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'Нидерландски за работното място',
     chooseLanguage: 'Избери език за помощ',
     englishOnly: 'Само английски',
-    beta: 'Преводът се проверява',
+    beta: 'Преводът още не е проверен', // nieuw, nalezen
     dayStreak: { one: 'ден поред', other: 'дни поред' },
     streakStarted: 'Серията ти от дни започна! Ела пак утре.',
     streakGrew: { one: '{n} ден поред! Продължавай така.', other: '{n} дни поред! Продължавай така.' },

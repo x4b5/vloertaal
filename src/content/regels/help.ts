@@ -132,6 +132,23 @@ export const HELP_ROWS_BE: HelpRow[] = alphabetical([
     show: 'werk.belgie.be', href: 'https://werk.belgie.be',
   },
   {
+    // ⚖️ check: juridische eerstelijnsbijstand: a free first advice from a lawyer, for everyone, at a
+    // justitiehuis or another place of the Commissie voor Juridische Bijstand (decreet 26 april 2019;
+    // vlaanderen.be "Juridische eerstelijnsbijstand" and "Justitiehuizen", search results of 31
+    // October 2026: vlaanderen.be could not be opened from this session). Also the Taal track's Hulp tab.
+    id: 'h.be.justitiehuis', emoji: '⚖️', name: 'Justitiehuis',
+    when: 'Gratis eerste advies van een advocaat over je contract of loon.',
+    show: 'vlaanderen.be/justitiehuizen', href: 'https://www.vlaanderen.be/justitiehuizen',
+  },
+  {
+    // ⚖️ check: Payoke (Antwerpen), PAG-ASA (Brussel) and Sürya (Luik) are the three recognised
+    // centres for victims of human trafficking, also economic exploitation (KB 18 april 2013; Myria;
+    // their sites from a search result of 31 October 2026, not opened). Also the Taal track's Hulp tab.
+    id: 'h.be.payoke', emoji: '🤝', name: 'Payoke, PAG-ASA of Sürya',
+    when: 'Iemand buit je uit op je werk, of je denkt dat het zo is.',
+    show: 'payoke.be · pag-asa.be', href: 'https://www.payoke.be',
+  },
+  {
     // ⚖️ check: VDAB, the public employment service of Flanders
     id: 'h.be.vdab', emoji: '📄', name: 'VDAB',
     when: 'Je zoekt werk of een opleiding. Of je wilt Nederlands leren.',

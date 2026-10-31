@@ -14,7 +14,7 @@ export const RULES_CHECKED = 'oktober 2026';
  * first line of the disclaimer says so, with where to report a mistake. Drop it (and the "bèta"
  * tag in the language list) once the expert check of docs/werkregels-bronnen.md is done.
  */
-export const RULES_BETA = 'Werkregels is nog een bètaversie. Experts kijken de uitleg nog na. Zie je een fout? Mail naar hoi@vloertaal.nl.';
+export const RULES_BETA = 'Werkregels is nog een bètaversie. De uitleg is nog niet nagekeken door een expert. Zie je een fout? Mail naar hoi@vloertaal.nl.';
 
 /** Shown under every `rule` step with `rule: 'geschreven'` (law, contract or cao). */
 export const RULES_ADVICE = 'Algemene informatie. Vraag voor jouw situatie je werkgever, een vakbond of het Juridisch Loket.';
@@ -176,7 +176,7 @@ export const RULES_NL_LESSON_NOTE = 'Deze les gaat nog over Nederland.';
 /** "Goed om te weten" for a learner in Belgium, with the Belgian course on (RULES_NOTICE). */
 export const RULES_NOTICE_BE = [
   'Vloertaal geeft algemene informatie over werk in België. Het is geen juridisch advies.',
-  'De Belgische lessen zijn nieuw. Een deskundige kijkt ze nog na. Zie je een fout? Mail naar hoi@vloertaal.nl.',
+  'De Belgische lessen zijn nieuw en nog niet nagekeken door een expert. Zie je een fout? Mail naar hoi@vloertaal.nl.',
   RULES_COUNTRY_BE,
   'Regels kunnen veranderen. Bijgewerkt: ' + RULES_CHECKED + '.',
   'Gaat het om jouw situatie? Vraag je werkgever, een vakbond of het justitiehuis.',

@@ -1,3 +1,4 @@
+import { learnerCountry, setLearnerCountry } from './country';
 import { beRulesOn } from './regels/be/live';
 import type { Unit } from './types';
 
@@ -14,7 +15,6 @@ import type { Unit } from './types';
  */
 let rules: Unit[] = [];
 let rulesBe: Unit[] | null = null;
-let country: 'nl' | 'be' = 'nl';
 
 /** Puts the course(s) in place. Without a Belgian course, a learner in Belgium plays the Dutch one. */
 export function setRulesUnits(units: Unit[], be: Unit[] | null = null): void {
@@ -24,12 +24,13 @@ export function setRulesUnits(units: Unit[], be: Unit[] | null = null): void {
 
 /** The country the learner works in (progress.country; undefined = 'nl'). */
 export function setRulesCountry(c: 'nl' | 'be' | undefined): void {
-  country = c === 'be' ? 'be' : 'nl';
+  // One country for both tracks (src/content/country.ts): the language track's Belgian version follows it too.
+  setLearnerCountry(c);
 }
 
 /** The country whose course plays now: 'be' only with a Belgian course registered. */
 export function rulesCountry(): 'nl' | 'be' {
-  return country === 'be' && rulesBe && beRulesOn() ? 'be' : 'nl';
+  return learnerCountry() === 'be' && rulesBe && beRulesOn() ? 'be' : 'nl';
 }
 
 /** The course of the learner's country (see rulesCountry). */
