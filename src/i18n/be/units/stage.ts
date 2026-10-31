@@ -6,35 +6,35 @@ import type { Gloss } from '../types';
 
 export const ar: Gloss = {
   'be.w.praktijkopleider': "المرشد (من يرشدك في الشركة)", // nieuw, nalezen
-  'be.w.pok': "عقد التدريب العملي (توقّعه أنت والمدرسة والشركة)", // nieuw, nalezen
+  'be.w.pok': 'عقد التدريب العملي (يوقّعه المتدرّب والمدرسة والشركة)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.leerbedrijf': "مركز CLB (مركز يساعد التلاميذ مجاناً)", // nieuw, nalezen
   'be.s.placement.2': "من هو مرشدي؟", // nieuw, nalezen
   'be.s.placement.3': "لم أوقّع عقد التدريب بعد.", // nieuw, nalezen
   'be.c.placement.a': "يوم الاثنين. أولاً نوقّع عقد التدريب.", // nieuw, nalezen
-  'be.c.placement': "وقّع أولاً، ثم ابدأ", // nieuw, nalezen
-  'be.c.placement.b': "في المدرسة تتعلّم كثيراً في شركة: هذا تدريبك العملي (stage). في التعلّم المزدوج (duaal leren) تتعلّم في المدرسة وفي شركة. قبل أن تبدأ، توقّع أنت والمدرسة والشركة اتفاقاً: stageovereenkomst. عمرك أقل من 18؟ عندها يوقّع والداك أيضاً. في الشركة يساعدك مرشدك (mentor). ومن المدرسة يساعدك مشرف التدريب (stagebegeleider). مشاكل في المدرسة أو في مكان التدريب؟ مركز CLB يساعد التلاميذ مجاناً وبسرية. مريض؟ اتصل بالشركة قبل وقت بدء عملك، وأخبر المدرسة أيضاً. القواعد تختلف من مدرسة لأخرى: اسأل مشرف التدريب.", // nieuw, nalezen
+  'be.c.placement': { m: 'وقّع أولاً، ثم ابدأ', f: 'وقّعي أولاً، ثم ابدئي', x: 'التوقيع أولاً، ثم البدء' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.b': { m: 'في المدرسة تتعلّم كثيراً في شركة: هذا تدريبك العملي (stage). في التعلّم المزدوج (duaal leren) تتعلّم في المدرسة وفي شركة. قبل أن تبدأ، توقّع أنت والمدرسة والشركة اتفاقاً: stageovereenkomst. عمرك أقل من 18؟ عندها يوقّع والداك أيضاً. في الشركة يساعدك مرشدك (mentor). ومن المدرسة يساعدك مشرف التدريب (stagebegeleider). مشاكل في المدرسة أو في مكان التدريب؟ مركز CLB يساعد التلاميذ مجاناً وبسرية. مريض؟ اتصل بالشركة قبل وقت بدء عملك، وأخبر المدرسة أيضاً. القواعد تختلف من مدرسة لأخرى: اسأل مشرف التدريب.', f: 'في المدرسة تتعلّمين كثيراً في شركة: هذا تدريبك العملي (stage). في التعلّم المزدوج (duaal leren) تتعلّمين في المدرسة وفي شركة. قبل أن تبدئي، توقّعين أنتِ والمدرسة والشركة اتفاقاً: stageovereenkomst. عمرك أقل من 18؟ عندها يوقّع والداكِ أيضاً. في الشركة يساعدكِ مرشدكِ (mentor). ومن المدرسة يساعدكِ مشرف التدريب (stagebegeleider). مشاكل في المدرسة أو في مكان التدريب؟ مركز CLB يساعد التلاميذ مجاناً وبسرية. مريضة؟ اتصلي بالشركة قبل وقت بدء عملك، وأخبري المدرسة أيضاً. القواعد تختلف من مدرسة لأخرى: اسألي مشرف التدريب.', x: 'في المدرسة يكون التعلّم كثيراً في شركة: هذا هو التدريب العملي (stage). في التعلّم المزدوج (duaal leren) يكون التعلّم في المدرسة وفي شركة. قبل البدء، يوقّع المتدرّب والمدرسة والشركة اتفاقاً: stageovereenkomst. العمر أقل من 18؟ عندها يوقّع الوالدان أيضاً. في الشركة يساعد المرشد (mentor). ومن المدرسة يساعد مشرف التدريب (stagebegeleider). مشاكل في المدرسة أو في مكان التدريب؟ مركز CLB يساعد التلاميذ مجاناً وبسرية. مرض؟ المطلوب الاتصال بالشركة قبل وقت بدء العمل، وإخبار المدرسة أيضاً. القواعد تختلف من مدرسة لأخرى: السؤال عند مشرف التدريب.' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.p': "لن أبدأ إلا بعد توقيع عقد التدريب.", // nieuw, nalezen
-  'be.c.placement.s': "الشركة تطلب منك أن تبدأ غداً. الـ stageovereenkomst لم يوقَّع بعد. ماذا تفعل؟", // nieuw, nalezen
-  'be.c.placement.o1': "تطلب من مشرف التدريب أن يرتّب الاتفاق أولاً.", // nieuw, nalezen
-  'be.c.placement.o2': "تبدأ غداً، وتوقّع الاتفاق عندما يكون لديك وقت.", // nieuw, nalezen
-  'be.c.placement.o3': "البدء، دون إخبار المدرسة الآن.", // nieuw, nalezen
-  'be.c.placement.w': "الـ stageovereenkomst يقول ماذا تتعلّم ومن يساعدك. بدون اتفاق موقَّع، قد لا يُحتسب تدريبك. لذلك توقّعه قبل أن تبدأ.", // nieuw, nalezen
+  'be.c.placement.s': { m: 'الشركة تطلب منك أن تبدأ غداً. الـ stageovereenkomst لم يوقَّع بعد. ماذا تفعل؟', f: 'الشركة تطلب منكِ أن تبدئي غداً. الـ stageovereenkomst لم يوقَّع بعد. ماذا تفعلين؟', x: 'الشركة تطلب البدء غداً. الـ stageovereenkomst لم يوقَّع بعد. ما التصرف الصحيح؟' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.o1': { m: 'اطلب من مشرف التدريب أن يرتّب الاتفاق أولاً.', f: 'اطلبي من مشرف التدريب أن يرتّب الاتفاق أولاً.', x: 'طلب ترتيب الاتفاق أولاً من مشرف التدريب.' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.o2': { m: 'ابدأ غداً، ووقّع الاتفاق عندما يكون لديك وقت.', f: 'ابدئي غداً، ووقّعي الاتفاق عندما يكون لديكِ وقت.', x: 'البدء غداً، وتوقيع الاتفاق عند وجود وقت.' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.o3': { m: 'ابدأ، لكن لا تخبر المدرسة الآن.', f: 'ابدئي، لكن لا تخبري المدرسة الآن.', x: 'البدء، دون إخبار المدرسة الآن.' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.w': 'الـ stageovereenkomst يقول ماذا يتعلّم المتدرّب ومن يساعده. بدون اتفاق موقَّع، قد لا يُحتسب التدريب. لذلك يكون التوقيع قبل البدء.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const ti: Gloss = {
   'be.w.praktijkopleider': "መራሒ (mentor፡ ኣብቲ ትካል ዝመርሓኩም)", // nieuw, nalezen
-  'be.w.pok': "ውዕል ልምምድ (ንስኻ፡ ቤት ትምህርትን ትካልን እትፍርምዎ)", // nieuw, nalezen
-  'be.w.leerbedrijf': "CLB (ንተማሃሮ ብነጻ ዝሕግዝ ማእከል)", // nieuw, nalezen
-  'be.s.placement.2': "መራሒየይ መን እዩ?", // nieuw, nalezen
+  'be.w.pok': 'ውዕል ልምምድ (ንስኹም፡ ቤት ትምህርትን ትካልን እትፍርምዎ)', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.w.leerbedrijf': 'CLB (ንተማሃሮ ብናጻ ዝሕግዝ ማእከል)', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.s.placement.2': 'መራሒይ መን እዩ?', // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.placement.3': "ገና ውዕል ልምምድ ኣይፈረምኩን።", // nieuw, nalezen
   'be.c.placement.a': "ሰኑይ። ቅድም ውዕል ልምምድ ንፍርም።", // nieuw, nalezen
-  'be.c.placement': "ቅድም ፈርም፡ ድሓር ጀምር", // nieuw, nalezen
-  'be.c.placement.b': "ኣብ ቤት ትምህርቲ ብዙሕ ግዜ ኣብ ትካል ትመሃሩ፡ እዚ ልምምድ ስራሕኩም (stage) እዩ። ኣብ ክልተኣዊ ምምሃር (duaal leren) ኣብ ቤት ትምህርትን ኣብ ትካልን ትመሃሩ። ቅድሚ ምጅማርኩም፡ ንስኹም፡ ቤት ትምህርትን ትካልን ስምምዕ ትፍርሙ፡ stageovereenkomst። ዕድሜኹም ትሕቲ 18 ድዩ? ሽዑ ወለድኹም እውን ይፍርሙ። ኣብቲ ትካል መራሒኹም (mentor) ይሕግዘኩም። ካብ ቤት ትምህርቲ ድማ ተቖጻጻሪ ልምምድ (stagebegeleider) ይሕግዘኩም። ኣብ ቤት ትምህርቲ ወይ ኣብ ቦታ ልምምድ ጸገም ኣሎ ዶ? CLB ንተማሃሮ ብነጻን ብምስጢርን ይሕግዝ። ሓሚምኩም ዶ? ቅድሚ ግዜ ምጅማር ስራሕኩም ናብቲ ትካል ደውሉ፡ ንቤት ትምህርቲ እውን ንገሩ። ሕግታት ካብ ቤት ትምህርቲ ናብ ቤት ትምህርቲ ይፈላለ፡ ንተቖጻጻሪ ልምምድኩም ሕተቱ።", // nieuw, nalezen
+  'be.c.placement': 'ቅድም ፈርሙ፡ ደሓር ጀምሩ', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.b': 'ኣብ ቤት ትምህርቲ ብዙሕ ግዜ ኣብ ትካል ትመሃሩ፡ እዚ ልምምድ ስራሕኩም (stage) እዩ። ኣብ ክልተኣዊ ምምሃር (duaal leren) ኣብ ቤት ትምህርትን ኣብ ትካልን ትመሃሩ። ቅድሚ ምጅማርኩም፡ ንስኹም፡ ቤት ትምህርትን ትካልን ስምምዕ ትፍርሙ፡ stageovereenkomst። ዕድሜኹም ትሕቲ 18 ድዩ? ሽዑ ወለድኹም እውን ይፍርሙ። ኣብቲ ትካል መራሒኹም (mentor) ይሕግዘኩም። ካብ ቤት ትምህርቲ ድማ ተቖጻጻሪ ልምምድ (stagebegeleider) ይሕግዘኩም። ኣብ ቤት ትምህርቲ ወይ ኣብ ቦታ ልምምድ ጸገም ኣሎ ዶ? CLB ንተማሃሮ ብናጻን ብምስጢርን ይሕግዝ። ሓሚምኩም ዶ? ቅድሚ ግዜ ምጅማር ስራሕኩም ናብቲ ትካል ደውሉ፡ ንቤት ትምህርቲ እውን ንገሩ። ሕግታት ካብ ቤት ትምህርቲ ናብ ቤት ትምህርቲ ይፈላለ፡ ንተቖጻጻሪ ልምምድኩም ሕተቱ።', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.p': "ውዕል ልምምድ ምስ ተፈርመ ጥራይ እጅምር።", // nieuw, nalezen
   'be.c.placement.s': "እቲ ትካል ጽባሕ ክትጅምሩ ይሓተኩም። stageovereenkomst ገና ኣይተፈረመን። እንታይ ትገብሩ?", // nieuw, nalezen
   'be.c.placement.o1': "ንተቖጻጻሪ ልምምድ ቅድም እቲ ስምምዕ ከዳልዎ ሕተቱ።", // nieuw, nalezen
-  'be.c.placement.o2': "ጽባሕ ምጅማር፡ ግዜ ምስ ረኸብኩም ድማ ነቲ ስምምዕ ምፍራም።", // nieuw, nalezen
-  'be.c.placement.o3': "ምጅማር፡ ግን ሕጂ ንቤት ትምህርቲ ዘይምሕባር።", // nieuw, nalezen
+  'be.c.placement.o2': 'ጽባሕ ጀምሩ፡ ግዜ ምስ ረኸብኩም ድማ ነቲ ስምምዕ ፈርምዎ።', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.o3': 'ጀምሩ፡ ግን ንቤት ትምህርቲ ገና ገለ ኣይትበሉ።', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.w': "stageovereenkomst እንታይ ከም እትመሃሩን መን ከም ዝሕግዘኩምን ይገልጽ። ብዘይ ዝተፈረመ ስምምዕ፡ ልምምድኩም ዘይጸድቕ ይኽእል። ስለዚ ቅድሚ ምጅማርኩም ትፍርምዎ።", // nieuw, nalezen
 };
 
@@ -51,21 +51,21 @@ export const fa: Gloss = {
   'be.c.placement.s': "شرکت از تو می‌خواهد فردا شروع کنی. stageovereenkomst هنوز امضا نشده. چه کار می‌کنی؟", // nieuw, nalezen
   'be.c.placement.o1': "از راهنمای کارآموزی بخواه اول توافق را درست کند.", // nieuw, nalezen
   'be.c.placement.o2': "فردا شروع کن، و هر وقت وقت داشتی توافق را امضا کن.", // nieuw, nalezen
-  'be.c.placement.o3': "شروع می‌کنی، ولی فعلاً به مدرسه چیزی نمی‌گویی.", // nieuw, nalezen
+  'be.c.placement.o3': "شروع کن، ولی فعلاً به مدرسه چیزی نگو.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.w': "stageovereenkomst می‌گوید چه یاد می‌گیری و چه کسی کمکت می‌کند. بدون توافق امضاشده، شاید کارآموزی‌ات حساب نشود. پس پیش از شروع امضایش کن.", // nieuw, nalezen
 };
 
 export const prs: Gloss = {
-  'be.w.praktijkopleider': "رهنما (mentor، رهنمای شما در شرکت)", // nieuw, nalezen
+  'be.w.praktijkopleider': "رهنما (mentor، رهنمای شما در کمپنی)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.pok': "قرارداد کارآموزی (شما، مکتب و کمپنی امضایش می‌کنید)", // nieuw, nalezen
   'be.w.leerbedrijf': "CLB (مرکزی که رایگان به شاگردان کمک می‌کند)", // nieuw, nalezen
   'be.s.placement.2': "رهنمای من کیست؟", // nieuw, nalezen
   'be.s.placement.3': "هنوز قرارداد کارآموزی را امضا نکرده‌ام.", // nieuw, nalezen
   'be.c.placement.a': "دوشنبه. اول قرارداد کارآموزی را امضا می‌کنیم.", // nieuw, nalezen
   'be.c.placement': "اول امضا، بعد شروع", // nieuw, nalezen
-  'be.c.placement.b': "در مکتب اکثراً در یک شرکت یاد می‌گیرید: این کارآموزی شماست (stage). در آموزش دوگانه (duaal leren) هم در مکتب و هم در شرکت یاد می‌گیرید. پیش از شروع، شما، مکتب و شرکت یک موافقت‌نامه امضا می‌کنید: stageovereenkomst. کمتر از ۱۸ سال دارید؟ پس والدین تان هم امضا می‌کنند. در شرکت، رهنمای تان (mentor) کمک تان می‌کند. از طرف مکتب، رهنمای کارآموزی (stagebegeleider) کمک تان می‌کند. در مکتب یا جای کارآموزی مشکل دارید؟ CLB رایگان و محرمانه به شاگردان کمک می‌کند. مریض هستید؟ پیش از وقت شروع کار به شرکت زنگ بزنید، و به مکتب هم خبر بدهید. مقررات در هر مکتب فرق می‌کند: از رهنمای کارآموزی تان بپرسید.", // nieuw, nalezen
+  'be.c.placement.b': "در مکتب اکثراً در یک کمپنی یاد می‌گیرید: این کارآموزی شماست (stage). در آموزش دوگانه (duaal leren) هم در مکتب و هم در کمپنی یاد می‌گیرید. پیش از شروع، شما، مکتب و کمپنی یک موافقت‌نامه امضا می‌کنید: stageovereenkomst. کمتر از ۱۸ سال دارید؟ پس والدین تان هم امضا می‌کنند. در کمپنی، رهنمای تان (mentor) کمک تان می‌کند. از طرف مکتب، رهنمای کارآموزی (stagebegeleider) کمک تان می‌کند. در مکتب یا جای کارآموزی مشکل دارید؟ CLB رایگان و محرمانه به شاگردان کمک می‌کند. مریض هستید؟ پیش از وقت شروع کار به کمپنی زنگ بزنید، و به مکتب هم خبر بدهید. مقررات در هر مکتب فرق می‌کند: از رهنمای کارآموزی تان بپرسید.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.p': "تنها وقتی شروع می‌کنم که قرارداد کارآموزی امضا شده باشد.", // nieuw, nalezen
-  'be.c.placement.s': "شرکت از شما می‌خواهد فردا شروع کنید. stageovereenkomst هنوز امضا نشده. چه می‌کنید؟", // nieuw, nalezen
+  'be.c.placement.s': "کمپنی از شما می‌خواهد فردا شروع کنید. stageovereenkomst هنوز امضا نشده. چه می‌کنید؟", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.o1': "از رهنمای کارآموزی بخواهید اول موافقت‌نامه را جور کند.", // nieuw, nalezen
   'be.c.placement.o2': "فردا شروع کنید، و هر وقت وقت داشتید موافقت‌نامه را امضا کنید.", // nieuw, nalezen
   'be.c.placement.o3': "شروع کنید، ولی فعلاً به مکتب چیزی نگویید.", // nieuw, nalezen
@@ -83,8 +83,8 @@ export const uk: Gloss = {
   'be.c.placement.b': "У школі ти часто вчишся на фірмі: це твоя практика (stage). У дуальному навчанні (duaal leren) ти вчишся і в школі, і на фірмі. Перед початком ти, школа і фірма підписуєте угоду: stageovereenkomst. Тобі менше 18? Тоді підписують і батьки. На фірмі тобі допомагає наставник (mentor). Від школи тобі допомагає керівник практики (stagebegeleider). Проблеми в школі чи на практиці? CLB допомагає учням безкоштовно й конфіденційно. Хвороба? Подзвони на фірму до початку роботи і скажи також школі. Правила в кожній школі свої: запитай керівника практики.", // nieuw, nalezen
   'be.c.placement.p': "Я почну, тільки коли договір про практику підписаний.", // nieuw, nalezen
   'be.c.placement.s': "Фірма просить тебе почати завтра. Угоду stageovereenkomst ще не підписано. Що ти зробиш?", // nieuw, nalezen
-  'be.c.placement.o1': "Попроси керівника практики спершу оформити угоду.", // nieuw, nalezen
-  'be.c.placement.o2': "Почни завтра, а угоду підпиши, коли буде час.", // nieuw, nalezen
+  'be.c.placement.o1': "Попросиш керівника практики спершу оформити угоду.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.o2': "Почнеш завтра, а угоду підпишеш, коли буде час.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.o3': "Почнеш, але поки що нічого не скажеш школі.", // nieuw, nalezen
   'be.c.placement.w': "У stageovereenkomst написано, чого ти вчишся і хто тобі допомагає. Без підписаної угоди практику можуть не зарахувати. Тому підпиши її до початку.", // nieuw, nalezen
 };
@@ -98,10 +98,10 @@ export const tr: Gloss = {
   'be.c.placement.a': "Pazartesi. Önce staj sözleşmesini imzalıyoruz.", // nieuw, nalezen
   'be.c.placement': "Önce imzala, sonra başla", // nieuw, nalezen
   'be.c.placement.b': "Okulda çoğu zaman bir şirkette öğrenirsin: bu senin stajın (stage). İkili eğitimde (duaal leren) hem okulda hem bir şirkette öğrenirsin. Başlamadan önce sen, okul ve şirket bir anlaşma imzalarsınız: stageovereenkomst. 18 yaşından küçük müsün? O zaman ailen de imzalar. Şirkette mentorun (mentor) sana yardım eder. Okul tarafından staj danışmanın (stagebegeleider) yardım eder. Okulda ya da stajda sorun mu var? CLB öğrencilere ücretsiz ve gizli olarak yardım eder. Hasta mısın? Başlama saatinden önce şirketi ara, okula da haber ver. Kurallar okuldan okula değişir: staj danışmanına sor.", // nieuw, nalezen
-  'be.c.placement.p': "Staj sözleşmesi imzalanınca başlarım.", // nieuw, nalezen
+  'be.c.placement.p': "Ancak staj sözleşmesi imzalanınca başlarım.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.s': "Şirket yarın başlamanı istiyor. stageovereenkomst henüz imzalanmadı. Ne yaparsın?", // nieuw, nalezen
-  'be.c.placement.o1': "Staj danışmanından önce anlaşmayı ayarlamasını iste.", // nieuw, nalezen
-  'be.c.placement.o2': "Yarın başla, anlaşmayı da vaktin olunca imzala.", // nieuw, nalezen
+  'be.c.placement.o1': "Staj danışmanından önce anlaşmayı ayarlamasını istersin.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.o2': "Yarın başlar, anlaşmayı da vaktin olunca imzalarsın.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.o3': "Başlarsın, ama şimdilik okula bir şey söylemezsin.", // nieuw, nalezen
   'be.c.placement.w': "stageovereenkomst neyi öğrendiğini ve sana kimin yardım ettiğini söyler. İmzalı bir anlaşma olmadan stajın sayılmayabilir. Bu yüzden başlamadan önce imzalarsın.", // nieuw, nalezen
 };
@@ -117,8 +117,8 @@ export const pl: Gloss = {
   'be.c.placement.b': "W szkole często uczysz się w firmie: to twoja praktyka (stage). W nauce dualnej (duaal leren) uczysz się w szkole i w firmie. Zanim zaczniesz, ty, szkoła i firma podpisujecie umowę: stageovereenkomst. Masz mniej niż 18 lat? Wtedy podpisują też rodzice. W firmie pomaga ci mentor (mentor). Ze szkoły pomaga ci opiekun praktyk (stagebegeleider). Problemy w szkole albo na praktyce? CLB pomaga uczniom za darmo i poufnie. Choroba? Zadzwoń do firmy przed godziną rozpoczęcia i powiedz też szkole. Zasady są różne w każdej szkole: zapytaj opiekuna praktyk.", // nieuw, nalezen
   'be.c.placement.p': "Zaczynam dopiero, kiedy umowa o praktykę jest podpisana.", // nieuw, nalezen
   'be.c.placement.s': "Firma prosi cię, żeby zacząć jutro. Umowa stageovereenkomst nie jest jeszcze podpisana. Co robisz?", // nieuw, nalezen
-  'be.c.placement.o1': "Poproś opiekuna praktyk, żeby najpierw załatwił umowę.", // nieuw, nalezen
-  'be.c.placement.o2': "Zacznij jutro, a umowę podpisz, kiedy będzie czas.", // nieuw, nalezen
+  'be.c.placement.o1': "Prosisz opiekuna praktyk, żeby najpierw załatwił umowę.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.o2': "Zaczynasz jutro, a umowę podpisujesz, kiedy będzie czas.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.o3': "Zaczynasz, ale na razie nic nie mówisz szkole.", // nieuw, nalezen
   'be.c.placement.w': "W stageovereenkomst jest napisane, czego się uczysz i kto ci pomaga. Bez podpisanej umowy praktyka może się nie liczyć. Dlatego podpisujesz ją przed rozpoczęciem.", // nieuw, nalezen
 };
@@ -151,8 +151,8 @@ export const bg: Gloss = {
   'be.c.placement.b': "В училище често учиш във фирма: това е твоят стаж (stage). При дуалното обучение (duaal leren) учиш и в училище, и във фирма. Преди да започнеш, ти, училището и фирмата подписвате споразумение: stageovereenkomst. Под 18 години ли си? Тогава подписват и родителите ти. Във фирмата ти помага менторът (mentor). От училището ти помага ръководителят на стажа (stagebegeleider). Проблеми в училище или на стажа? CLB помага на учениците безплатно и поверително. Болест? Обади се във фирмата преди началото на работа и кажи и на училището. Правилата са различни във всяко училище: питай ръководителя на стажа.", // nieuw, nalezen
   'be.c.placement.p': "Започвам чак когато договорът за стаж е подписан.", // nieuw, nalezen
   'be.c.placement.s': "Фирмата те моли да започнеш утре. Споразумението stageovereenkomst още не е подписано. Какво правиш?", // nieuw, nalezen
-  'be.c.placement.o1': "Помоли ръководителя на стажа първо да уреди споразумението.", // nieuw, nalezen
-  'be.c.placement.o2': "Започни утре, а споразумението подпиши, когато имаш време.", // nieuw, nalezen
+  'be.c.placement.o1': "Молиш ръководителя на стажа първо да уреди споразумението.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.o2': "Започваш утре, а споразумението подписваш, когато имаш време.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.o3': "Започваш, но засега не казваш нищо на училището.", // nieuw, nalezen
   'be.c.placement.w': "В stageovereenkomst пише какво учиш и кой ти помага. Без подписано споразумение стажът може да не се зачете. Затова го подписваш, преди да започнеш.", // nieuw, nalezen
 };
@@ -165,12 +165,12 @@ export const es: Gloss = {
   'be.s.placement.3': "Todavía no he firmado el convenio de prácticas.", // nieuw, nalezen
   'be.c.placement.a': "El lunes. Primero firmamos el convenio de prácticas.", // nieuw, nalezen
   'be.c.placement': "Primero firma, luego empieza", // nieuw, nalezen
-  'be.c.placement.b': "En la escuela aprendes muchas veces en una empresa: son tus prácticas (stage). En la formación dual (duaal leren) aprendes en la escuela y en una empresa. Antes de empezar, tú, la escuela y la empresa firmáis un acuerdo: el stageovereenkomst. ¿Tienes menos de 18 años? Entonces firman también tus padres. En la empresa te ayuda tu mentor (mentor). Desde la escuela te ayuda tu tutor de prácticas (stagebegeleider). ¿Problemas en la escuela o en las prácticas? El CLB ayuda a los alumnos gratis y con confidencialidad. ¿Enfermedad? Llama a la empresa antes de tu hora de entrada, y avisa también a la escuela. Las reglas cambian según la escuela: pregunta a tu tutor de prácticas.", // nieuw, nalezen
+  'be.c.placement.b': "En la escuela aprendes muchas veces en una empresa: son tus prácticas (stage). En la formación dual (duaal leren) aprendes en la escuela y en una empresa. Antes de empezar, tú, la escuela y la empresa firman un acuerdo: el stageovereenkomst. ¿Tienes menos de 18 años? Entonces firman también tus padres. En la empresa te ayuda tu mentor (mentor). Desde la escuela te ayuda tu tutor de prácticas (stagebegeleider). ¿Problemas en la escuela o en las prácticas? El CLB ayuda a los alumnos gratis y con confidencialidad. ¿Enfermedad? Llama a la empresa antes de tu hora de entrada, y avisa también a la escuela. Las reglas cambian según la escuela: pregunta a tu tutor de prácticas.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.p': "Solo empiezo cuando el convenio de prácticas esté firmado.", // nieuw, nalezen
   'be.c.placement.s': "La empresa te pide empezar mañana. El stageovereenkomst todavía no está firmado. ¿Qué haces?", // nieuw, nalezen
   'be.c.placement.o1': "Pide a tu tutor de prácticas que arregle primero el acuerdo.", // nieuw, nalezen
   'be.c.placement.o2': "Empieza mañana, y firma el acuerdo cuando tengas tiempo.", // nieuw, nalezen
-  'be.c.placement.o3': "Empiezas, pero de momento no se lo dices a la escuela.", // nieuw, nalezen
+  'be.c.placement.o3': "Empieza, pero de momento no se lo digas a la escuela.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.w': "El stageovereenkomst dice qué aprendes y quién te ayuda. Sin un acuerdo firmado, tus prácticas pueden no contar. Por eso lo firmas antes de empezar.", // nieuw, nalezen
 };
 
@@ -187,7 +187,7 @@ export const pt: Gloss = {
   'be.c.placement.s': "A empresa pede-te para começares amanhã. O stageovereenkomst ainda não está assinado. O que fazes?", // nieuw, nalezen
   'be.c.placement.o1': "Pede ao teu orientador de estágio para tratar primeiro do acordo.", // nieuw, nalezen
   'be.c.placement.o2': "Começa amanhã, e assina o acordo quando tiveres tempo.", // nieuw, nalezen
-  'be.c.placement.o3': "Começas, mas por agora não dizes nada à escola.", // nieuw, nalezen
+  'be.c.placement.o3': "Começa, mas por agora não digas nada à escola.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.w': "O stageovereenkomst diz o que aprendes e quem te ajuda. Sem um acordo assinado, o teu estágio pode não contar. Por isso assinas antes de começar.", // nieuw, nalezen
 };
 
@@ -204,7 +204,7 @@ export const fr: Gloss = {
   'be.c.placement.s': "L’entreprise te demande de commencer demain. La stageovereenkomst n’est pas encore signée. Que fais-tu ?", // nieuw, nalezen
   'be.c.placement.o1': "Demande à ton accompagnateur de stage de régler d’abord la convention.", // nieuw, nalezen
   'be.c.placement.o2': "Commence demain, et signe la convention quand tu as le temps.", // nieuw, nalezen
-  'be.c.placement.o3': "Tu commences, mais tu ne dis rien à l’école pour l’instant.", // nieuw, nalezen
+  'be.c.placement.o3': "Commence, mais ne dis rien à l’école pour l’instant.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.w': "La stageovereenkomst dit ce que tu apprends et qui t’aide. Sans convention signée, ton stage risque de ne pas compter. Alors tu la signes avant de commencer.", // nieuw, nalezen
 };
 
@@ -216,11 +216,11 @@ export const de: Gloss = {
   'be.s.placement.3': "Ich habe den Praktikumsvertrag noch nicht unterschrieben.", // nieuw, nalezen
   'be.c.placement.a': "Am Montag. Zuerst unterschreiben wir den Praktikumsvertrag.", // nieuw, nalezen
   'be.c.placement': "Erst unterschreiben, dann anfangen", // nieuw, nalezen
-  'be.c.placement.b': "In der Schule lernst du oft in einem Betrieb: das ist dein Praktikum (stage). Im dualen Lernen (duaal leren) lernst du in der Schule und in einem Betrieb. Bevor du anfängst, unterschreiben du, die Schule und der Betrieb eine Vereinbarung: die stageovereenkomst. Unter 18? Dann unterschreiben auch deine Eltern. Im Betrieb hilft dir dein Mentor (mentor). Von der Schule hilft dir deine Praktikumsbetreuung (stagebegeleider). Probleme in der Schule oder im Praktikum? Das CLB hilft Schülerinnen und Schülern kostenlos und vertraulich. Krank? Ruf vor deinem Arbeitsbeginn im Betrieb an, und sag es auch der Schule. Die Regeln sind an jeder Schule anders: frag deine Praktikumsbetreuung.", // nieuw, nalezen
+  'be.c.placement.b': "In der Schule lernst du oft in einem Betrieb: das ist dein Praktikum (stage). Im dualen Lernen (duaal leren) lernst du in der Schule und in einem Betrieb. Bevor du anfängst, unterschreiben du, die Schule und der Betrieb eine Vereinbarung: die stageovereenkomst. Unter 18? Dann unterschreiben auch deine Eltern. Im Betrieb hilft dir dein Mentor (mentor). Von der Schule hilft dir deine Praktikumsbetreuung (stagebegeleider). Probleme in der Schule oder im Praktikum? Das CLB hilft Schülerinnen und Schülern kostenlos und vertraulich. Krank? Ruf vor deinem Arbeitsbeginn im Betrieb an, und sag es auch der Schule. Die Regeln sind an jeder Schule anders: Frag deine Praktikumsbetreuung.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.p': "Ich fange erst an, wenn der Praktikumsvertrag unterschrieben ist.", // nieuw, nalezen
   'be.c.placement.s': "Der Betrieb bittet dich, morgen anzufangen. Die stageovereenkomst ist noch nicht unterschrieben. Was machst du?", // nieuw, nalezen
   'be.c.placement.o1': "Bitte deine Praktikumsbetreuung, zuerst die Vereinbarung zu regeln.", // nieuw, nalezen
   'be.c.placement.o2': "Fang morgen an, und unterschreib die Vereinbarung, wenn du Zeit hast.", // nieuw, nalezen
-  'be.c.placement.o3': "Du fängst an, sagst der Schule aber vorerst nichts.", // nieuw, nalezen
+  'be.c.placement.o3': "Fang an, aber sag der Schule vorerst nichts.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.w': "In der stageovereenkomst steht, was du lernst und wer dir hilft. Ohne unterschriebene Vereinbarung zählt dein Praktikum vielleicht nicht. Darum unterschreibst du sie, bevor du anfängst.", // nieuw, nalezen
 };

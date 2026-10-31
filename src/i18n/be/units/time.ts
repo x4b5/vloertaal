@@ -6,7 +6,7 @@ import type { Gloss } from '../types';
 
 export const ar: Gloss = {
     "be.c.sick": { m: "كيف تبلّغ أنك مريض", f: "كيف تبلّغين أنك مريضة", x: "كيفية الإبلاغ عن المرض" }, // = c.sick
-    "be.c.sick.b": "الاتصال بالمشرف شخصياً قبل بداية الوردية، إلا إذا كانت للشركة قاعدة أخرى. العمل عن طريق مكتب توظيف مؤقت (interimkantoor)؟ يجب إخبار المكتب أيضاً. لا داعي لقول نوع المرض. غالباً تلزم شهادة طبية (ziektebriefje)، أحياناً من اليوم الأول: نظام العمل (arbeidsreglement) يحدد متى. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).", // nieuw, nalezen
+    "be.c.sick.b": { m: 'الاتصال بالمشرف شخصياً قبل بداية الوردية، إلا إذا كانت للشركة قاعدة أخرى. العمل عن طريق مكتب عمل مؤقت (interimkantoor)؟ يجب إخبار المكتب أيضاً. لا داعي لقول نوع المرض. غالباً تلزم شهادة طبية (ziektebriefje)، أحياناً من اليوم الأول: نظام العمل (arbeidsreglement) يحدد متى. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'الاتصال بالمشرف شخصياً قبل بداية الوردية، إلا إذا كانت للشركة قاعدة أخرى. العمل عن طريق مكتب عمل مؤقت (interimkantoor)؟ يجب إخبار المكتب أيضاً. لا داعي لقول نوع المرض. غالباً تلزم شهادة طبية (ziektebriefje)، أحياناً من اليوم الأول: نظام العمل (arbeidsreglement) يحدد متى. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'الاتصال بالمشرف شخصياً قبل بداية الوردية، إلا إذا كانت للشركة قاعدة أخرى. العمل عن طريق مكتب عمل مؤقت (interimkantoor)؟ يجب إخبار المكتب أيضاً. لا داعي لقول نوع المرض. غالباً تلزم شهادة طبية (ziektebriefje)، أحياناً من اليوم الأول: نظام العمل (arbeidsreglement) يحدد متى. معلومات عامة. للوضع الشخصي: السؤال عند صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "أنا مريض. لا أستطيع أن آتي إلى العمل اليوم.", f: "أنا مريضة. لا أستطيع أن آتي إلى العمل اليوم." }, // = c.sick.p
     "be.c.sick.s": { m: "تستيقظ وعندك حمّى. نوبتك تبدأ الساعة 7:00. ماذا تفعل؟", f: "تستيقظين وعندك حمّى. نوبتك تبدأ الساعة 7:00. ماذا تفعلين؟" }, // = c.sick.s
     "be.c.sick.o1": { m: "اتصل بمشرفك قبل الساعة 7:00.", f: "اتصلي بمشرفك قبل الساعة 7:00." }, // = c.sick.o1
@@ -17,18 +17,18 @@ export const ar: Gloss = {
 
 export const ti: Gloss = {
     "be.c.sick": { m: "ሕማም ከመይ ትሕብር", f: "ሕማም ከመይ ትሕብሪ", x: "ሕማም ከመይ ትሕብሩ" }, // = c.sick
-    "be.c.sick.b": { m: "ንተቖጻጻሪኹም ባዕልኹም ደውሉ፡ ፈረቓኹም ቅድሚ ምጅማሩ፡ ትካልኩም ካልእ ሕጊ እንተ ዘይብሉ። ብቤት ጽሕፈት ግዝያዊ ስራሕ (interimkantoor) ዲኹም ትሰርሑ? ነቲ ቤት ጽሕፈት እውን ንገሩ። እንታይ ሕማም ከም ዘለኩም ክትነግሩ ኣየድልየኩምን። ብዙሕ ግዜ ወረቐት ሓኪም (ziektebriefje) የድልየኩም፡ ሓደ ሓደ ግዜ ካብ ቀዳመይቲ መዓልቲ፡ መዓስ ከም ዘድሊ ሕጊ ስራሕ (arbeidsreglement) ይገልጽ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተት።", f: "ንተቖጻጻሪኹም ባዕልኹም ደውሉ፡ ፈረቓኹም ቅድሚ ምጅማሩ፡ ትካልኩም ካልእ ሕጊ እንተ ዘይብሉ። ብቤት ጽሕፈት ግዝያዊ ስራሕ (interimkantoor) ዲኹም ትሰርሑ? ነቲ ቤት ጽሕፈት እውን ንገሩ። እንታይ ሕማም ከም ዘለኩም ክትነግሩ ኣየድልየኩምን። ብዙሕ ግዜ ወረቐት ሓኪም (ziektebriefje) የድልየኩም፡ ሓደ ሓደ ግዜ ካብ ቀዳመይቲ መዓልቲ፡ መዓስ ከም ዘድሊ ሕጊ ስራሕ (arbeidsreglement) ይገልጽ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቲ።", x: "ንተቖጻጻሪኹም ባዕልኹም ደውሉ፡ ፈረቓኹም ቅድሚ ምጅማሩ፡ ትካልኩም ካልእ ሕጊ እንተ ዘይብሉ። ብቤት ጽሕፈት ግዝያዊ ስራሕ (interimkantoor) ዲኹም ትሰርሑ? ነቲ ቤት ጽሕፈት እውን ንገሩ። እንታይ ሕማም ከም ዘለኩም ክትነግሩ ኣየድልየኩምን። ብዙሕ ግዜ ወረቐት ሓኪም (ziektebriefje) የድልየኩም፡ ሓደ ሓደ ግዜ ካብ ቀዳመይቲ መዓልቲ፡ መዓስ ከም ዘድሊ ሕጊ ስራሕ (arbeidsreglement) ይገልጽ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።" }, // nieuw, nalezen
+    "be.c.sick.b": { m: 'ንተቖጻጻሪኻ ባዕልኻ ደውል፡ ፈረቓኻ ቅድሚ ምጅማሩ፡ ትካልካ ካልእ ሕጊ እንተ ዘይብሉ። ብቤት ጽሕፈት ግዝያዊ ስራሕ (interimkantoor) ዲኻ ትሰርሕ? ነቲ ቤት ጽሕፈት እውን ንገር። እንታይ ሕማም ከም ዘለካ ክትነግር ኣየድልየካን። ብዙሕ ግዜ ወረቐት ሓኪም (ziektebriefje) የድልየካ፡ ሓደ ሓደ ግዜ ካብ ቀዳመይቲ መዓልቲ፡ መዓስ ከም ዘድሊ ሕጊ ስራሕ (arbeidsreglement) ይገልጽ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተት።', f: 'ንተቖጻጻሪኺ ባዕልኺ ደውሊ፡ ፈረቓኺ ቅድሚ ምጅማሩ፡ ትካልኪ ካልእ ሕጊ እንተ ዘይብሉ። ብቤት ጽሕፈት ግዝያዊ ስራሕ (interimkantoor) ዲኺ ትሰርሒ? ነቲ ቤት ጽሕፈት እውን ንገሪ። እንታይ ሕማም ከም ዘለኪ ክትነግሪ ኣየድልየክን። ብዙሕ ግዜ ወረቐት ሓኪም (ziektebriefje) የድልየኪ፡ ሓደ ሓደ ግዜ ካብ ቀዳመይቲ መዓልቲ፡ መዓስ ከም ዘድሊ ሕጊ ስራሕ (arbeidsreglement) ይገልጽ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቲ።', x: 'ንተቖጻጻሪኹም ባዕልኹም ደውሉ፡ ፈረቓኹም ቅድሚ ምጅማሩ፡ ትካልኩም ካልእ ሕጊ እንተ ዘይብሉ። ብቤት ጽሕፈት ግዝያዊ ስራሕ (interimkantoor) ዲኹም ትሰርሑ? ነቲ ቤት ጽሕፈት እውን ንገሩ። እንታይ ሕማም ከም ዘለኩም ክትነግሩ ኣየድልየኩምን። ብዙሕ ግዜ ወረቐት ሓኪም (ziektebriefje) የድልየኩም፡ ሓደ ሓደ ግዜ ካብ ቀዳመይቲ መዓልቲ፡ መዓስ ከም ዘድሊ ሕጊ ስራሕ (arbeidsreglement) ይገልጽ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።' }, // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "ሕሙም እየ። ሎሚ ናብ ስራሕ ክመጽእ ኣይክእልን እየ።", f: "ሕምምቲ እየ። ሎሚ ናብ ስራሕ ክመጽእ ኣይክእልን እየ።" }, // = c.sick.p
     "be.c.sick.s": { m: "ምስ ረስኒ ካብ ድቃስ ትበራበር። ፈረቓኻ ሰዓት 7:00 ይጅምር። እንታይ ትገብር?", f: "ምስ ረስኒ ካብ ድቃስ ትበራበሪ። ፈረቓኺ ሰዓት 7:00 ይጅምር። እንታይ ትገብሪ?", x: "ምስ ረስኒ ካብ ድቃስ ትበራበሩ። ፈረቓኹም ሰዓት 7:00 ይጅምር። እንታይ ትገብሩ?" }, // = c.sick.s
     "be.c.sick.o1": { m: "ቅድሚ ሰዓት 7:00 ንተቖጻጻሪኻ ደውል።", f: "ቅድሚ ሰዓት 7:00 ንተቖጻጻሪኺ ደውሊ።", x: "ቅድሚ ሰዓት 7:00 ንተቖጻጻሪኹም ደውሉ።" }, // = c.sick.o1
     "be.c.sick.o2": { m: "ሓደ ብጻይ ስራሕ ደሓር ንሓላፊ ክነግሮ ሕተቶ።", f: "ሓደ ብጻይ ስራሕ ደሓር ንሓላፊ ክነግሮ ሕተትዮ።" }, // = c.sick.o2
     "be.c.sick.o3": { m: "ኣብ ገዛ ጽናሕ እሞ ጽባሕ ደውል።", f: "ኣብ ገዛ ጽንሒ እሞ ጽባሕ ደውሊ።", x: "ኣብ ገዛ ጽንሑ እሞ ጽባሕ ደውሉ።" }, // = c.sick.o3
-    "be.c.sick.w": "ባዕልኻ ብግዜኡ ሕማም ምሕባር ኣብ መብዛሕትኡ ቦታታት ስራሕ ሕጊ እዩ። ኣስራሒ ክንደይ ግዜ ከም ዝወስድ ክሓትት ይኽእል፡ እንታይ ሕማም ምዃኑ ግን ኣይኮነን። ወረቐት ሓኪም የድልየኩም ድዩ ሕተቱ።", // nieuw, nalezen
+    "be.c.sick.w": 'ባዕልኹም ብግዜኡ ሕማም ምሕባር ኣብ መብዛሕትኡ ቦታታት ስራሕ ሕጊ እዩ። ኣስራሒ ክንደይ ግዜ ከም ዝወስድ ክሓትት ይኽእል፡ እንታይ ሕማም ምዃኑ ግን ኣይኮነን። ወረቐት ሓኪም የድልየኩም ድዩ ሕተቱ።', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const fa: Gloss = {
     "be.c.sick": "چطور مریضی‌ات را خبر بدهی", // = c.sick
-    "be.c.sick.b": "خودت به سرپرستت زنگ بزن، قبل از شروع شیفت، مگر اینکه شرکتت قانون دیگری داشته باشد. از طریق دفتر کار موقت (interimkantoor) کار می‌کنی؟ به آن دفتر هم خبر بده. لازم نیست بگویی چه بیماری‌ای داری. اغلب گواهی پزشک (ziektebriefje) لازم است، گاهی از روز اول: آیین‌نامهٔ کار (arbeidsreglement) می‌گوید از کی. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشاورهٔ حقوقی رایگان) بپرس.", // nieuw, nalezen
+    "be.c.sick.b": "خودت به سرپرستت زنگ بزن، قبل از شروع شیفت، مگر اینکه شرکتت قانون دیگری داشته باشد. از طریق دفتر کاریابی موقت (interimkantoor) کار می‌کنی؟ به آن دفتر هم خبر بده. لازم نیست بگویی چه بیماری‌ای داری. اغلب گواهی پزشک (ziektebriefje) لازم است، گاهی از روز اول: آیین‌نامهٔ کار (arbeidsreglement) می‌گوید از کی. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشاورهٔ حقوقی رایگان) بپرس.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": "من مریضم. امروز نمی‌توانم سر کار بیایم.", // = c.sick.p
     "be.c.sick.s": "با تب از خواب بیدار می‌شوی. شیفتت ساعت 7:00 شروع می‌شود. چه کار می‌کنی؟", // = c.sick.s
     "be.c.sick.o1": "قبل از ساعت 7:00 به سرپرستت زنگ بزن.", // = c.sick.o1
@@ -39,7 +39,7 @@ export const fa: Gloss = {
 
 export const prs: Gloss = {
     "be.c.sick": "چطور از مریضی خبر بدهید", // = c.sick
-    "be.c.sick.b": "خود تان به سرپرست زنگ بزنید، پیش از شروع نوبت کاری، مگر اینکه کمپنی قانون دیگری داشته باشد. از طریق دفتر کار موقت (interimkantoor) کار می‌کنید؟ به آن دفتر هم خبر بدهید. لازم نیست بگویید چه مریضی دارید. اکثراً تصدیق داکتر (ziektebriefje) لازم است، گاهی از روز اول: مقررات کار (arbeidsreglement) می‌گوید از چه وقت. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen
+    "be.c.sick.b": "خود تان به سرپرست زنگ بزنید، پیش از شروع نوبت کاری، مگر اینکه کمپنی قانون دیگری داشته باشد. از طریق دفتر کاریابی موقت (interimkantoor) کار می‌کنید؟ به آن دفتر هم خبر بدهید. لازم نیست بگویید چه مریضی دارید. اکثراً تصدیق داکتر (ziektebriefje) لازم است، گاهی از روز اول: مقررات کار (arbeidsreglement) می‌گوید از چه وقت. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": "من مریض هستم. امروز نمی‌توانم به کار بیایم.", // = c.sick.p
     "be.c.sick.s": "شما با تب از خواب بیدار می‌شوید. نوبت کاری شما ساعت 7:00 شروع می‌شود. چه می‌کنید؟", // = c.sick.s
     "be.c.sick.o1": "پیش از ساعت 7:00 به سرپرست خود زنگ بزنید.", // = c.sick.o1
@@ -50,18 +50,18 @@ export const prs: Gloss = {
 
 export const uk: Gloss = {
     "be.c.sick": { m: "Як повідомити, що ти хворий", f: "Як повідомити, що ти хвора", x: "Як повідомити про хворобу" }, // = c.sick
-    "be.c.sick.b": "Подзвони керівнику особисто, до початку зміни, якщо у фірмі немає іншого правила. Працюєш через кадрове агентство (interimkantoor)? Повідом і агентство. Ти не мусиш казати, яка в тебе хвороба. Часто потрібна довідка від лікаря (ziektebriefje), іноді з першого дня: коли саме, сказано в правилах роботи (arbeidsreglement). Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+    "be.c.sick.b": "Подзвони керівнику особисто, до початку зміни, якщо у фірмі немає іншого правила. Працюєш через агентство тимчасової роботи (interimkantoor)? Повідом і агентство. Ти не мусиш казати, яка в тебе хвороба. Часто потрібна довідка від лікаря (ziektebriefje), іноді з першого дня: коли саме, сказано в правилах внутрішнього розпорядку (arbeidsreglement). Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "Я хворий. Сьогодні не можу прийти на роботу.", f: "Я хвора. Сьогодні не можу прийти на роботу.", x: "Я хворий / хвора. Сьогодні не можу прийти на роботу." }, // = c.sick.p
     "be.c.sick.s": "Ти прокидаєшся з температурою. Твоя зміна починається о 7:00. Що ти зробиш?", // = c.sick.s
     "be.c.sick.o1": "Подзвониш керівнику до 7:00.", // = c.sick.o1
     "be.c.sick.o2": "Попросиш колегу пізніше сказати начальнику.", // = c.sick.o2
     "be.c.sick.o3": "Залишишся вдома і подзвониш завтра.", // = c.sick.o3
-    "be.c.sick.w": "Повідомити про хворобу самому і вчасно — правило на більшості робочих місць. Роботодавець може запитати, скільки це триватиме, але не яка це хвороба. Запитай, чи потрібна тобі довідка від лікаря.", // nieuw, nalezen
+    "be.c.sick.w": "Особисто і вчасно повідомити про хворобу — правило на більшості робочих місць. Роботодавець може запитати, скільки це триватиме, але не яка це хвороба. Запитай, чи потрібна тобі довідка від лікаря.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const tr: Gloss = {
     "be.c.sick": "Hastalık bildirimi nasıl yapılır", // = c.sick
-    "be.c.sick.b": "Vardiyan başlamadan önce amirini kendin ara, şirketinin başka bir kuralı yoksa. Bir geçici iş bürosu (interimkantoor) üzerinden mi çalışıyorsun? Büroya da haber ver. Hangi hastalığın olduğunu söylemek zorunda değilsin. Çoğu zaman doktor raporu (ziektebriefje) gerekir, bazen ilk günden: ne zaman gerektiğini iş yönetmeliği (arbeidsreglement) söyler. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen
+    "be.c.sick.b": "Vardiyan başlamadan önce amirini kendin ara, şirketinin başka bir kuralı yoksa. Bir geçici iş ajansı (interimkantoor) üzerinden mi çalışıyorsun? Ajansa da haber ver. Hangi hastalığın olduğunu söylemek zorunda değilsin. Çoğu zaman doktor raporu (ziektebriefje) gerekir, bazen ilk günden: ne zaman gerektiğini çalışma yönetmeliği (arbeidsreglement) söyler. Genel bilgi. Kendi durumun için işverenine, sendikaya veya justitiehuis’e (ücretsiz hukuki danışmanlık) sor.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": "Hastayım. Bugün işe gelemiyorum.", // = c.sick.p
     "be.c.sick.s": "Ateşle uyanıyorsun. Vardiyan 7:00'de başlıyor. Ne yaparsın?", // = c.sick.s
     "be.c.sick.o1": "Saat 7:00'den önce amirini ararsın.", // = c.sick.o1
@@ -72,7 +72,7 @@ export const tr: Gloss = {
 
 export const pl: Gloss = {
     "be.c.sick": "Jak zgłosić chorobę", // = c.sick
-    "be.c.sick.b": "Zadzwoń do przełożonego osobiście, przed początkiem zmiany, chyba że firma ma inną zasadę. Pracujesz przez biuro pracy tymczasowej (interimkantoor)? Powiadom też biuro. Nie musisz mówić, na co chorujesz. Często potrzebne jest zwolnienie od lekarza (ziektebriefje), czasem od pierwszego dnia: kiedy, mówi regulamin pracy (arbeidsreglement). To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen
+    "be.c.sick.b": "Zadzwoń do przełożonego osobiście, przed początkiem zmiany, chyba że firma ma inną zasadę. Pracujesz przez agencję pracy tymczasowej (interimkantoor)? Powiadom też agencję. Nie musisz mówić, na co chorujesz. Często potrzebne jest zwolnienie od lekarza (ziektebriefje), czasem od pierwszego dnia: kiedy, mówi regulamin pracy (arbeidsreglement). To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "Jestem chory. Nie mogę dziś przyjść do pracy.", f: "Jestem chora. Nie mogę dziś przyjść do pracy.", x: "Jestem chory / chora. Nie mogę dziś przyjść do pracy." }, // = c.sick.p
     "be.c.sick.s": "Budzisz się z gorączką. Twoja zmiana zaczyna się o 7:00. Co robisz?", // = c.sick.s
     "be.c.sick.o1": "Dzwonisz do przełożonego przed 7:00.", // = c.sick.o1
@@ -83,29 +83,29 @@ export const pl: Gloss = {
 
 export const ro: Gloss = {
     "be.c.sick": { m: "Cum anunți că ești bolnav", f: "Cum anunți că ești bolnavă", x: "Cum anunți că te-ai îmbolnăvit" }, // = c.sick
-    "be.c.sick.b": "Sună-ți personal șeful, înainte să înceapă tura, dacă firma nu are altă regulă. Lucrezi printr-un birou de muncă temporară (interimkantoor)? Anunță și biroul. Nu trebuie să spui ce boală ai. Deseori ai nevoie de un certificat medical (ziektebriefje), uneori din prima zi: regulamentul de muncă (arbeidsreglement) spune când. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen
+    "be.c.sick.b": "Sună-ți personal șeful, înainte să înceapă tura, dacă firma nu are altă regulă. Lucrezi printr-o agenție de muncă temporară (interimkantoor)? Anunță și agenția. Nu trebuie să spui ce boală ai. Deseori ai nevoie de o adeverință medicală (ziektebriefje), uneori din prima zi: regulamentul de muncă (arbeidsreglement) spune când. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau justitiehuis (sfat juridic gratuit).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "Sunt bolnav. Azi nu pot veni la muncă.", f: "Sunt bolnavă. Azi nu pot veni la muncă.", x: "Sunt bolnav / bolnavă. Azi nu pot veni la muncă." }, // = c.sick.p
     "be.c.sick.s": "Te trezești cu febră. Tura ta începe la 7:00. Ce faci?", // = c.sick.s
     "be.c.sick.o1": "Îl suni pe șef înainte de 7:00.", // = c.sick.o1
     "be.c.sick.o2": "Îi ceri unui coleg să-i spună mai târziu șefului.", // = c.sick.o2
     "be.c.sick.o3": "Stai acasă și suni mâine.", // = c.sick.o3
-    "be.c.sick.w": "Să anunți boala personal și la timp e regula în majoritatea locurilor de muncă. Angajatorul poate întreba cât va dura, dar nu ce boală e. Întreabă dacă ai nevoie de un certificat medical.", // nieuw, nalezen
+    "be.c.sick.w": "Să anunți boala personal și la timp e regula în majoritatea locurilor de muncă. Angajatorul poate întreba cât va dura, dar nu ce boală e. Întreabă dacă ai nevoie de o adeverință medicală.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const bg: Gloss = {
     "be.c.sick": { m: "Как да съобщиш, че си болен", f: "Как да съобщиш, че си болна", x: "Как да съобщиш за болест" }, // = c.sick
-    "be.c.sick.b": "Обади се лично на началника си, преди да започне смяната, освен ако фирмата няма друго правило. Работиш чрез агенция за временна работа (interimkantoor)? Кажи и на агенцията. Не е нужно да казваш каква болест имаш. Често трябва медицинска бележка (ziektebriefje), понякога от първия ден: правилникът за работа (arbeidsreglement) казва кога. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen
+    "be.c.sick.b": "Обади се лично на началника си, преди да започне смяната, освен ако фирмата няма друго правило. Работиш чрез агенция за временна работа (interimkantoor)? Кажи и на агенцията. Не е нужно да казваш каква болест имаш. Често трябва болнична бележка (ziektebriefje), понякога от първия ден: правилникът за работа (arbeidsreglement) казва кога. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "Болен съм. Днес не мога да дойда на работа.", f: "Болна съм. Днес не мога да дойда на работа.", x: "Болен / болна съм. Днес не мога да дойда на работа." }, // = c.sick.p
     "be.c.sick.s": "Събуждаш се с температура. Смяната ти започва в 7:00. Какво правиш?", // = c.sick.s
     "be.c.sick.o1": "Обаждаш се на началника преди 7:00.", // = c.sick.o1
     "be.c.sick.o2": "Молиш колега да каже на шефа по-късно.", // = c.sick.o2
     "be.c.sick.o3": "Оставаш вкъщи и се обаждаш утре.", // = c.sick.o3
-    "be.c.sick.w": "Да съобщиш лично и навреме, че си болен, е правилото на повечето работни места. Работодателят може да пита колко ще продължи, но не каква е болестта. Попитай дали ти трябва медицинска бележка.", // nieuw, nalezen
+    "be.c.sick.w": "Да съобщиш лично и навреме за болестта си е правилото на повечето работни места. Работодателят може да пита колко ще продължи, но не каква е болестта. Попитай дали ти трябва болнична бележка.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const es: Gloss = {
     "be.c.sick": "Cómo avisar por enfermedad", // = c.sick
-    "be.c.sick.b": "Llama tú a tu encargado, antes de que empiece tu turno, salvo que tu empresa tenga otra regla. ¿Trabajas a través de una oficina de trabajo temporal (interimkantoor)? Avisa también a la oficina. No tienes que decir qué enfermedad tienes. Muchas veces necesitas un justificante del médico (ziektebriefje), a veces desde el primer día: el reglamento de trabajo (arbeidsreglement) dice cuándo. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
+    "be.c.sick.b": "Llama tú a tu encargado, antes de que empiece tu turno, salvo que tu empresa tenga otra regla. ¿Trabajas a través de una agencia de trabajo temporal (interimkantoor)? Avisa también a la agencia. No tienes que decir qué enfermedad tienes. Muchas veces necesitas un justificante del médico (ziektebriefje), a veces desde el primer día: el reglamento de trabajo (arbeidsreglement) dice cuándo. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "Estoy enfermo. Hoy no puedo ir a trabajar.", f: "Estoy enferma. Hoy no puedo ir a trabajar.", x: "Estoy enfermo/a. Hoy no puedo ir a trabajar." }, // = c.sick.p
     "be.c.sick.s": "Te despiertas con fiebre. Tu turno empieza a las 7:00. ¿Qué haces?", // = c.sick.s
     "be.c.sick.o1": "Llamas a tu encargado antes de las 7:00.", // = c.sick.o1
@@ -138,7 +138,7 @@ export const fr: Gloss = {
 
 export const de: Gloss = {
     "be.c.sick": "So meldest du dich krank", // = c.sick
-    "be.c.sick.b": "Ruf deinen Vorgesetzten selbst an, bevor deine Schicht beginnt, außer deine Firma hat eine andere Regel. Arbeitest du über ein Zeitarbeitsbüro (interimkantoor)? Sag es auch dort. Du musst nicht sagen, welche Krankheit du hast. Oft brauchst du ein ärztliches Attest (ziektebriefje), manchmal schon ab dem ersten Tag: Die Arbeitsordnung (arbeidsreglement) sagt, wann. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen
+    "be.c.sick.b": "Ruf deinen Vorgesetzten selbst an, bevor deine Schicht beginnt, außer deine Firma hat eine andere Regel. Arbeitest du über eine Zeitarbeitsfirma (interimkantoor)? Sag es auch dort. Du musst nicht sagen, welche Krankheit du hast. Oft brauchst du ein ärztliches Attest (ziektebriefje), manchmal schon ab dem ersten Tag: Die Arbeitsordnung (arbeidsreglement) sagt, wann. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": "Ich bin krank. Ich kann heute nicht zur Arbeit kommen.", // = c.sick.p
     "be.c.sick.s": "Du wachst mit Fieber auf. Deine Schicht fängt um 7:00 Uhr an. Was machst du?", // = c.sick.s
     "be.c.sick.o1": "Ruf vor 7:00 Uhr deinen Vorgesetzten an.", // = c.sick.o1

@@ -25,7 +25,7 @@ export const ti: Gloss = {
     "be.c.je.o1": { m: "«je» ክትብላ ትደሊ።", f: "«je» ክትብልያ ትደሊ።" }, // = c.je.o1
     "be.c.je.o2": { m: "ገለ ክትብል ትሓተካ ኣላ።", f: "ገለ ክትብሊ ትሓተኪ ኣላ።", x: "ገለ ክትብሉ ትሓተኩም ኣላ።" }, // = c.je.o2
     "be.c.je.o3": { m: "ብዝያዳ ትሕትና ክትዛረብ ትደሊ።", f: "ብዝያዳ ትሕትና ክትዛረቢ ትደሊ።", x: "ብዝያዳ ትሕትና ክትዛረቡ ትደሊ።" }, // = c.je.o3
-    "be.c.je.w": "«Zeg maar je» ፍቕራዊ እዩ፡ ንሳ ውሑድ ርሕቀት ትደሊ። ኣብ ፍላንደርስ ብዙሓት ብ«u» ይጅምሩ፡ ስለዚ ሓደ ሰብ እዚ ክሳብ ዝብለኩም ተጸበዩ።", // nieuw, nalezen
+    "be.c.je.w": '«Zeg maar je» ናይ ሕያውነት ምልክት እዩ፡ ንሳ ውሑድ ርሕቀት ትደሊ። ኣብ ፍላንደርስ ብዙሓት ብ«u» ይጅምሩ፡ ስለዚ ሓደ ሰብ እዚ ክሳብ ዝብለኩም ተጸበዩ።', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const fa: Gloss = {
@@ -67,13 +67,13 @@ export const uk: Gloss = {
 export const tr: Gloss = {
     "be.w.kantine": "yemekhane (refter)", // nieuw, nalezen
     "be.c.je": "“Je” mi, “u” mu?", // = c.je
-    "be.c.je.b": "Flandra’da birçok kişi işte \"u\" der, özellikle başta: patrona, müşteriye ya da yaşça büyük birine. İş arkadaşları birbirine çoğu zaman \"je\" der, konuşmada \"ge\" de duyarsın. Emin değilsen \"u\" ile başla ve başkalarının ne yaptığını dinle.", // nieuw, nalezen
+    "be.c.je.b": "Flandra’da birçok kişi işte “u” der, özellikle başta: patrona, müşteriye ya da yaşça büyük birine. İş arkadaşları birbirine çoğu zaman “je” der, konuşmada “ge” de duyarsın. Emin değilsen “u” ile başla ve başkalarının ne yaptığını dinle.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.je.p": "Sana “je” diyebilir miyim?", // = c.je.p
     "be.c.je.s": "Yeni amirin diyor ki: “Zeg maar je, hoor!” Ne demek istiyor?", // = c.je.s
     "be.c.je.o1": "Ona “je” demeni istiyor.", // = c.je.o1
     "be.c.je.o2": "Bir şey söylemeni istiyor.", // = c.je.o2
     "be.c.je.o3": "Daha kibar konuşmanı istiyor.", // = c.je.o3
-    "be.c.je.w": "\"Zeg maar je\" samimi bir sözdür: daha az mesafe istiyor. Flandra’da birçok kişi \"u\" ile başlar, bu yüzden biri sana bunu söyleyene kadar bekle.", // nieuw, nalezen
+    "be.c.je.w": "“Zeg maar je” samimi bir sözdür: daha az mesafe istiyor. Flandra’da birçok kişi “u” ile başlar, bu yüzden biri sana bunu söyleyene kadar bekle.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const pl: Gloss = {
@@ -139,13 +139,13 @@ export const pt: Gloss = {
 export const fr: Gloss = {
     "be.w.kantine": "la cantine (refter)", // nieuw, nalezen
     "be.c.je": "“Je” ou “u” ?", // = c.je
-    "be.c.je.b": "En Flandre, beaucoup de gens disent « u » au travail, surtout au début : au chef, à un client ou à une personne plus âgée. Entre collègues, on dit souvent « je », et à l’oral on entend aussi « ge ». Si tu as un doute, commence par « u » et écoute ce que font les autres.", // nieuw, nalezen
+    "be.c.je.b": "En Flandre, beaucoup de gens disent “u” au travail, surtout au début : au chef, à un client ou à une personne plus âgée. Entre collègues, on dit souvent “je”, et à l’oral on entend aussi “ge”. Si tu as un doute, commence par “u” et écoute ce que font les autres.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.je.p": "Je peux te dire “je” ?", // = c.je.p
     "be.c.je.s": "Ta nouvelle responsable dit : “Zeg maar je, hoor!” Qu’est-ce qu’elle veut dire ?", // = c.je.s
     "be.c.je.o1": "Elle veut que tu lui dises “je”.", // = c.je.o1
     "be.c.je.o2": "Elle te demande de dire quelque chose.", // = c.je.o2
     "be.c.je.o3": "Elle veut que tu parles plus poliment.", // = c.je.o3
-    "be.c.je.w": "« Zeg maar je » est amical : elle veut moins de distance. En Flandre, beaucoup de gens commencent par « u », alors attends que quelqu’un te le dise.", // nieuw, nalezen
+    "be.c.je.w": "“Zeg maar je” est amical : elle veut moins de distance. En Flandre, beaucoup de gens commencent par “u”, alors attends que quelqu’un te le dise.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const de: Gloss = {

@@ -12,18 +12,18 @@ export const ar: Gloss = {
     "be.c.plain.o1": "ستقول بصراحة ما تفكر فيه.", // = c.plain.o1
     "be.c.plain.o2": "هي لا تريد أن تتكلم عن ذلك.", // nieuw, nalezen
     "be.c.plain.o3": "هي تأكل ورقة شجر.", // = c.plain.o3
-    "be.c.plain.w": "«Geen blad voor de mond nemen» معناها: قول ما تفكر فيه بصراحة ومباشرة. من يقولها ينبّه: الآن يأتي رأي مباشر.", // nieuw, nalezen
+    "be.c.plain.w": '«Geen blad voor de mond nemen» معناها: قول الرأي بصراحة ومباشرة. من يقولها ينبّه: الآن يأتي رأي مباشر.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const ti: Gloss = {
     "be.c.plain": "ብቐጥታ ምዝራብ", // = c.plain
-    "be.c.plain.b": "ፍላንደርሳውያን መሳርሕቲ ዝሓሰብዎ ብዙሕ ግዜ ብጥንቃቐ ይብሉ። ሓደ ሓደ ግዜ ብምስላ ይጅምሩ፡ «Ik neem geen blad voor de mond.»። ትርጉሙ፡ ዝሓሰብክዎ ብቕንዕና ክብል እየ። ድሕሪኡ ቀጥታ ርእይቶ ይመጽእ፡ ግን ብገበን ኣይኮነን። ንስኹም እውን ዝሓሰብኩምዎ ብቕንዕናን ብህድኣትን ክትብሉ ትኽእሉ ኢኹም።", // nieuw, nalezen
+    "be.c.plain.b": 'ፍላንደርሳውያን መሳርሕቲ ዝሓሰብዎ ብዙሕ ግዜ ብጥንቃቐ ይብሉ። ሓደ ሓደ ግዜ ብምስላ ይጅምሩ፡ «Ik neem geen blad voor de mond.»። ትርጉሙ፡ ዝሓሰብክዎ ብቕንዕና ክብል እየ። ድሕሪኡ ቀጥታ ርእይቶ ይመጽእ፡ ግን ንምጉዳእ ኢሎም ኣይኮኑን። ንስኹም እውን ዝሓሰብኩምዎ ብቕንዕናን ብህድኣትን ክትብሉ ትኽእሉ ኢኹም።', // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.plain.p": "ዝሓስቦ ብቕንዕና ክዛረብ ይፍቀደለይ ዶ?", // = c.plain.p
     "be.c.plain.s": { m: "ተቖጻጻሪትካ «Ik neem geen blad voor de mond.» ትብል። እንታይ ማለታ እያ?", f: "ተቖጻጻሪትኪ «Ik neem geen blad voor de mond.» ትብል። እንታይ ማለታ እያ?", x: "ተቖጻጻሪትኩም «Ik neem geen blad voor de mond.» ትብል። እንታይ ማለታ እያ?" }, // = c.plain.s
     "be.c.plain.o1": "እትሓስቦ ብቕንዕና ክትነግር እያ።", // = c.plain.o1
     "be.c.plain.o2": "ንሳ ብዛዕባኡ ክትዛረብ ኣይትደልን።", // nieuw, nalezen
     "be.c.plain.o3": "ቆጽሊ ትበልዕ ኣላ።", // = c.plain.o3
-    "be.c.plain.w": "«Geen blad voor de mond nemen» ማለት፡ ዝሓሰብካዮ ብቕንዕናን ብቐጥታን ምባል። ዝብሎ ሰብ የጠንቅቐኩም ኣሎ፡ ሕጂ ቀጥታ ርእይቶ ይመጽእ።", // nieuw, nalezen
+    "be.c.plain.w": '«Geen blad voor de mond nemen» ማለት፡ ዝሓሰብዎ ብቕንዕናን ብቐጥታን ምባል። ዝብሎ ሰብ የጠንቅቐኩም ኣሎ፡ ሕጂ ቀጥታ ርእይቶ ይመጽእ።', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const fa: Gloss = {
@@ -61,13 +61,13 @@ export const uk: Gloss = {
 
 export const tr: Gloss = {
     "be.c.plain": "Açıkça söylemek", // = c.plain
-    "be.c.plain.b": "Flaman iş arkadaşları düşündüklerini çoğu zaman dikkatli söyler. Bazen bir deyimle başlarlar: \"Ik neem geen blad voor de mond.\" Anlamı: düşündüğümü dürüstçe söyleyeceğim. Sonra dolaysız bir görüş gelir, ama kabalık amacı yoktur. Sen de düşündüğünü dürüstçe ve sakince söyleyebilirsin.", // nieuw, nalezen
+    "be.c.plain.b": "Flaman iş arkadaşları düşündüklerini çoğu zaman dikkatli söyler. Bazen bir deyimle başlarlar: “Ik neem geen blad voor de mond.” Anlamı: düşündüğümü dürüstçe söyleyeceğim. Sonra dolaysız bir görüş gelir, ama kabalık amacı yoktur. Sen de düşündüğünü dürüstçe ve sakince söyleyebilirsin.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.plain.p": "Ne düşündüğümü dürüstçe söyleyebilir miyim?", // = c.plain.p
     "be.c.plain.s": "Amirin diyor ki: “Ik neem geen blad voor de mond.” Ne demek istiyor?", // = c.plain.s
     "be.c.plain.o1": "Ne düşündüğünü dürüstçe söyleyecek.", // = c.plain.o1
     "be.c.plain.o2": "Bu konuda konuşmak istemiyor.", // nieuw, nalezen
     "be.c.plain.o3": "Bir yaprak yiyor.", // = c.plain.o3
-    "be.c.plain.w": "\"Geen blad voor de mond nemen\" şu demektir: düşündüğünü dürüstçe ve dolaysız söylemek. Bunu söyleyen kişi seni uyarıyor: şimdi dolaysız bir görüş geliyor.", // nieuw, nalezen
+    "be.c.plain.w": "“Geen blad voor de mond nemen” şu demektir: düşündüğünü dürüstçe ve dolaysız söylemek. Bunu söyleyen kişi seni uyarıyor: şimdi dolaysız bir görüş geliyor.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const pl: Gloss = {
@@ -127,13 +127,13 @@ export const pt: Gloss = {
 
 export const fr: Gloss = {
     "be.c.plain": "Dire les choses franchement", // = c.plain
-    "be.c.plain.b": "Les collègues flamands disent souvent avec prudence ce qu’ils pensent. Parfois, ils commencent par une expression : « Ik neem geen blad voor de mond. » Ça veut dire : je vais dire franchement ce que je pense. Ensuite vient un avis direct, mais ce n’est pas pour être impoli. Toi aussi, tu peux dire franchement ce que tu penses, calmement.", // nieuw, nalezen
+    "be.c.plain.b": "Les collègues flamands disent souvent avec prudence ce qu’ils pensent. Parfois, ils commencent par une expression : “Ik neem geen blad voor de mond.” Ça veut dire : je vais dire franchement ce que je pense. Ensuite vient un avis direct, mais ce n’est pas pour être impoli. Toi aussi, tu peux dire franchement ce que tu penses, calmement.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.plain.p": "Je peux dire honnêtement ce que je pense ?", // = c.plain.p
     "be.c.plain.s": "Ta responsable dit : “Ik neem geen blad voor de mond.” Qu’est-ce qu’elle veut dire ?", // = c.plain.s
     "be.c.plain.o1": "Elle va dire honnêtement ce qu’elle pense.", // = c.plain.o1
     "be.c.plain.o2": "Elle ne veut pas en parler.", // nieuw, nalezen
     "be.c.plain.o3": "Elle mange une feuille.", // = c.plain.o3
-    "be.c.plain.w": "« Geen blad voor de mond nemen » veut dire : dire franchement et directement ce que tu penses. La personne qui le dit te prévient : maintenant vient un avis direct.", // nieuw, nalezen
+    "be.c.plain.w": "“Geen blad voor de mond nemen” veut dire : dire franchement et directement ce que tu penses. La personne qui le dit te prévient : maintenant vient un avis direct.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const de: Gloss = {

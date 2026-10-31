@@ -8,46 +8,46 @@ export const ar: Gloss = {
   'be.l.nextstep': "مواصلة التعلّم بعد المدرسة", // nieuw, nalezen
   'be.w.waarderen': "الحصول على اعتراف (بشهادة)", // nieuw, nalezen
   'be.w.bijbaan': "عمل الطلاب (عمل صغير بجانب الدراسة)", // nieuw, nalezen
-  'be.w.meeloopdag': "تدريب الاستكشاف (زيارة قصيرة لترى العمل)", // nieuw, nalezen
+  'be.w.meeloopdag': 'تدريب الاستكشاف (زيارة قصيرة لرؤية العمل)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.niveau2': "التعليم الثانوي (للشباب، حتى نحو سن 18)", // nieuw, nalezen
   'be.w.startkwalificatie': "تعليم الكبار (مدرسة للبالغين، في مركز CVO)", // nieuw, nalezen
-  'be.w.bbl': "التعلّم المزدوج (تتعلّم في شركة وفي المدرسة)", // nieuw, nalezen
+  'be.w.bbl': 'التعلّم المزدوج (التعلّم في شركة وفي المدرسة)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.doorstromen': "دورة VDAB (تدريب لمهنة)", // nieuw, nalezen
   'be.w.aanmelden': "التسجيل (في مدرسة أو دورة)", // nieuw, nalezen
-  'be.w.opendag': "اليوم المفتوح (يمكنك زيارة مدرسة)", // nieuw, nalezen
+  'be.w.opendag': 'يوم الأبواب المفتوحة (يمكنك زيارة مدرسة)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.nextstep.1': "أريد أن أحصل على شهادة التعليم الثانوي.", // nieuw, nalezen
-  'be.s.nextstep.3': "متى اليوم المفتوح؟", // nieuw, nalezen
+  'be.s.nextstep.3': 'متى يوم الأبواب المفتوحة؟', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.q': "ماذا تريد أن تفعل بعد ذلك؟", // nieuw, nalezen
   'be.c.nextstep.a': "أختار التعلّم المزدوج. هكذا أعمل وأتعلّم.", // nieuw, nalezen
   'be.c.diploma': "شهادتك الدراسية لها قيمة", // nieuw, nalezen
-  'be.c.diploma.b': "هل لديك شهادة من بلد آخر؟ يمكنك أن تطلب من NARIC-Vlaanderen الاعتراف بها. تقارن NARIC شهادتك بشهادة فلامنكية. اللاجئون المعترف بهم لا يدفعون مقابل ذلك. لبعض المهن، مثل التمريض، تحتاج إلى اعتراف إضافي. هل التدريب إلزامي لعملك؟ عندها يجب أن يدفع صاحب العمل ثمنه، ويُحتسب وقت عمل. كثير من العمال لهم أيضاً حق في بعض أيام التدريب كل سنة. اسأل مسؤولك أو VDAB عن الدورات. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).", // nieuw, nalezen
+  'be.c.diploma.b': { m: 'هل لديك شهادة من بلد آخر؟ يمكنك أن تطلب من NARIC-Vlaanderen الاعتراف بها. تقارن NARIC شهادتك بشهادة فلامنكية. اللاجئون المعترف بهم لا يدفعون مقابل ذلك. لبعض المهن، مثل التمريض، تحتاج إلى اعتراف إضافي. هل التدريب إلزامي لعملك؟ عندها يجب أن يدفع صاحب العمل ثمنه، ويُحتسب وقت عمل. كثير من العمال لهم أيضاً حق في بعض أيام التدريب كل سنة. اسأل مسؤولك أو VDAB عن الدورات. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'هل لديك شهادة من بلد آخر؟ يمكنكِ أن تطلبي من NARIC-Vlaanderen الاعتراف بها. تقارن NARIC شهادتك بشهادة فلامنكية. اللاجئون المعترف بهم لا يدفعون مقابل ذلك. لبعض المهن، مثل التمريض، تحتاجين إلى اعتراف إضافي. هل التدريب إلزامي لعملك؟ عندها يجب أن يدفع صاحب العمل ثمنه، ويُحتسب وقت عمل. كثير من العمال لهم أيضاً حق في بعض أيام التدريب كل سنة. اسألي مسؤولك أو VDAB عن الدورات. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'شهادة من بلد آخر؟ يمكن طلب الاعتراف بها من NARIC-Vlaanderen. تقارن NARIC الشهادة بشهادة فلامنكية. اللاجئون المعترف بهم لا يدفعون مقابل ذلك. لبعض المهن، مثل التمريض، يلزم اعتراف إضافي. هل التدريب إلزامي للعمل؟ عندها يجب أن يدفع صاحب العمل ثمنه، ويُحتسب وقت عمل. كثير من العمال لهم أيضاً حق في بعض أيام التدريب كل سنة. السؤال عن الدورات يكون عند المسؤول أو VDAB. معلومات عامة. للوضع الشخصي: السؤال عند صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "هل هناك دورات لي؟", // nieuw, nalezen
-  'be.c.diploma.s': "صاحب العمل يقول إن عليك أن تأخذ تدريب سلامة إلزامياً يوم السبت، بدون أجر. ما الصحيح؟", // nieuw, nalezen
+  'be.c.diploma.s': { m: 'صاحب العمل يقول إن عليك أن تأخذ تدريب سلامة إلزامياً يوم السبت، بدون أجر. ما الصحيح؟', f: 'صاحب العمل يقول إن عليكِ أن تأخذي تدريب سلامة إلزامياً يوم السبت، بدون أجر. ما الصحيح؟', x: 'صاحب العمل يقول إن تدريب السلامة الإلزامي يكون يوم السبت، بدون أجر. ما الصحيح؟' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.o1': "يدفعه صاحب العمل، وهو وقت عمل.", // nieuw, nalezen
   'be.c.diploma.o2': "التدريب يكون دائماً في وقت فراغك.", // nieuw, nalezen
-  'be.c.diploma.o3': "يجب أن تدفع ثمن التدريب بنفسك.", // nieuw, nalezen
-  'be.c.diploma.w': "إذا كان التدريب إلزامياً لعملك، صاحب العمل يدفع ويُحسب وقت عمل. إذا لم يكن الأمر واضحاً، اطلب النصيحة.", // nieuw, nalezen
+  'be.c.diploma.o3': { m: 'يجب أن تدفع ثمن التدريب بنفسك.', f: 'يجب أن تدفعي ثمن التدريب بنفسك.', x: 'ثمن التدريب على العامل نفسه.' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.diploma.w': { m: 'إذا كان التدريب إلزامياً لعملك، صاحب العمل يدفع ويُحسب وقت عمل. إذا لم يكن الأمر واضحاً، اطلب النصيحة.', f: 'إذا كان التدريب إلزامياً لعملك، صاحب العمل يدفع ويُحسب وقت عمل. إذا لم يكن الأمر واضحاً، اطلبي النصيحة.', x: 'إذا كان التدريب إلزامياً للعمل، صاحب العمل يدفع ويُحسب وقت عمل. إذا لم يكن الأمر واضحاً، فطلب النصيحة مفيد.' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.mychoice': "نقاط قوتك مهمة", // nieuw, nalezen
-  'be.c.mychoice.b': "في ماذا أنت جيد؟ فكّر في العمل والمدرسة والبيت. رعاية العائلة أو عمل الطلاب (studentenjob) أو العمل التطوعي تُحتسب أيضاً. ماذا تحب، وماذا لا تحب؟ لست متأكداً أي عمل يناسبك؟ اطلب تدريب استكشاف قصيراً (snuffelstage)، أو اذهب إلى يوم الأبواب المفتوحة (opendeurdag). في المدرسة يساعدك مركز CLB على الاختيار، مجاناً. البالغون يمكنهم أن يسألوا VDAB.", // nieuw, nalezen
+  'be.c.mychoice.b': { m: 'في ماذا أنت جيد؟ فكّر في العمل والمدرسة والبيت. رعاية العائلة أو عمل الطلاب (studentenjob) أو العمل التطوعي تُحتسب أيضاً. ماذا تحب، وماذا لا تحب؟ لست متأكداً أي عمل يناسبك؟ اطلب تدريب استكشاف قصيراً (snuffelstage)، أو اذهب إلى يوم الأبواب المفتوحة (opendeurdag). في المدرسة يساعدك مركز CLB على الاختيار، مجاناً. البالغون يمكنهم أن يسألوا VDAB.', f: 'في ماذا أنتِ جيدة؟ فكّري في العمل والمدرسة والبيت. رعاية العائلة أو عمل الطلاب (studentenjob) أو العمل التطوعي تُحتسب أيضاً. ماذا تحبين، وماذا لا تحبين؟ لستِ متأكدة أي عمل يناسبك؟ اطلبي تدريب استكشاف قصيراً (snuffelstage)، أو اذهبي إلى يوم الأبواب المفتوحة (opendeurdag). في المدرسة يساعدكِ مركز CLB على الاختيار، مجاناً. البالغون يمكنهم أن يسألوا VDAB.', x: 'ما نقاط القوة؟ التفكير في العمل والمدرسة والبيت يساعد. رعاية العائلة أو عمل الطلاب (studentenjob) أو العمل التطوعي تُحتسب أيضاً. ما الذي يعجب، وما الذي لا يعجب؟ لا يقين بالعمل المناسب؟ يمكن طلب تدريب استكشاف قصير (snuffelstage)، أو الذهاب إلى يوم الأبواب المفتوحة (opendeurdag). في المدرسة يساعد مركز CLB على الاختيار، مجاناً. البالغون يمكنهم أن يسألوا VDAB.' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.mychoice.p': "أستطيع التعامل جيداً مع الناس. أساعد كثيراً في البيت.", // nieuw, nalezen
   'be.c.mychoice.s': "في المدرسة السؤال: «ما نقاط قوتك؟» لم يكن هناك عمل مدفوع أبداً. ما الجواب الأفضل؟", // nieuw, nalezen
   'be.c.mychoice.o1': "المهارات في البيت، مثل رعاية الآخرين.", // nieuw, nalezen
   'be.c.mychoice.o2': "أن الجواب غير معروف بعد، لعدم وجود عمل سابق.", // nieuw, nalezen
   'be.c.mychoice.o3': "القدرة على القيام بأي عمل، كل شيء حقاً.", // nieuw, nalezen
   'be.c.mychoice.w': "مهارات البيت تُحسب أيضاً. الرعاية والتخطيط والمساعدة مهارات يحتاجها أصحاب العمل. المهم ذكر ما تمّ فعله، مع مثال.", // nieuw, nalezen
-  'be.c.nextstep': "شهادة، حتى وأنت بالغ", // nieuw, nalezen
-  'be.c.nextstep.b': "تحت سن 18 يجب أن تذهب إلى المدرسة (leerplicht). من سن 15 أو 16 يمكنك أيضاً أن تتعلّم في شركة وفي المدرسة: التعلّم المزدوج (duaal leren). أكبر سناً، وليس لديك شهادة بعد؟ في تعليم الكبار (volwassenenonderwijs)، في مركز CVO، ما زال بإمكانك أن تحصل على شهادة التعليم الثانوي. كان الناس يسمّون هذا tweedekansonderwijs. تبحث عن عمل؟ لدى VDAB دورات لمهن كثيرة. للباحثين عن عمل، كثير منها مجاني. اذهب إلى يوم الأبواب المفتوحة (opendeurdag)، واطلب المساعدة من VDAB. ما زلت في المدرسة؟ اسأل مركز CLB.", // nieuw, nalezen
-  'be.c.nextstep.p': "هل يمكنني وأنا بالغ أن أحصل على شهادتي؟", // nieuw, nalezen
-  'be.c.nextstep.s': "عمرك 24 سنة وليس لديك شهادة التعليم الثانوي. تريد عملاً أفضل. ماذا تفعل؟", // nieuw, nalezen
-  'be.c.nextstep.o1': "تسأل VDAB أو مركز CVO كيف تحصل على شهادتك.", // nieuw, nalezen
-  'be.c.nextstep.o2': "تنتظر: في سن 24 أنت أكبر من أن تتعلّم.", // nieuw, nalezen
-  'be.c.nextstep.o3': "تأخذ أي عمل، وتتوقّف عن التعلّم نهائياً.", // nieuw, nalezen
-  'be.c.nextstep.w': "البالغون يمكنهم أن يتعلّموا. في مركز CVO يمكنك أن تحصل على شهادتك. لدى VDAB دورات لمهن كثيرة، وللباحثين عن عمل كثير منها مجاني.", // nieuw, nalezen
+  'be.c.nextstep': { m: 'شهادة، حتى وأنت بالغ', f: 'شهادة، حتى وأنتِ بالغة', x: 'شهادة، حتى للكبار' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.b': { m: 'تحت سن 18 يجب أن تذهب إلى المدرسة (leerplicht). من سن 15 أو 16 يمكنك أيضاً أن تتعلّم في شركة وفي المدرسة: التعلّم المزدوج (duaal leren). أكبر سناً، وليس لديك شهادة بعد؟ في تعليم الكبار (volwassenenonderwijs)، في مركز CVO، ما زال بإمكانك أن تحصل على شهادة التعليم الثانوي. كان الناس يسمّون هذا tweedekansonderwijs. تبحث عن عمل؟ لدى VDAB دورات لمهن كثيرة. للباحثين عن عمل، كثير منها مجاني. اذهب إلى يوم الأبواب المفتوحة (opendeurdag)، واطلب المساعدة من VDAB. ما زلت في المدرسة؟ اسأل مركز CLB.', f: 'تحت سن 18 يجب أن تذهبي إلى المدرسة (leerplicht). من سن 15 أو 16 يمكنكِ أيضاً أن تتعلّمي في شركة وفي المدرسة: التعلّم المزدوج (duaal leren). أكبر سناً، وليس لديكِ شهادة بعد؟ في تعليم الكبار (volwassenenonderwijs)، في مركز CVO، ما زال بإمكانكِ أن تحصلي على شهادة التعليم الثانوي. كان الناس يسمّون هذا tweedekansonderwijs. تبحثين عن عمل؟ لدى VDAB دورات لمهن كثيرة. للباحثين عن عمل، كثير منها مجاني. اذهبي إلى يوم الأبواب المفتوحة (opendeurdag)، واطلبي المساعدة من VDAB. ما زلتِ في المدرسة؟ اسألي مركز CLB.', x: 'تحت سن 18 الذهاب إلى المدرسة إلزامي (leerplicht). من سن 15 أو 16 يمكن أيضاً التعلّم في شركة وفي المدرسة: التعلّم المزدوج (duaal leren). سن أكبر، ولا شهادة بعد؟ في تعليم الكبار (volwassenenonderwijs)، في مركز CVO، ما زال ممكناً الحصول على شهادة التعليم الثانوي. كان الناس يسمّون هذا tweedekansonderwijs. البحث عن عمل؟ لدى VDAB دورات لمهن كثيرة. للباحثين عن عمل، كثير منها مجاني. يوم الأبواب المفتوحة (opendeurdag) مفيد، وVDAB يساعد. ما زالت المدرسة مستمرة؟ السؤال عند مركز CLB.' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.p': 'هل يمكنني كشخص بالغ أن أحصل على شهادتي؟', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.s': { m: 'عمرك 24 سنة وليس لديك شهادة التعليم الثانوي. تريد عملاً أفضل. ماذا تفعل؟', f: 'عمرك 24 سنة وليس لديكِ شهادة التعليم الثانوي. تريدين عملاً أفضل. ماذا تفعلين؟', x: 'العمر 24 سنة، ولا توجد شهادة التعليم الثانوي. الهدف عمل أفضل. ما التصرف الصحيح؟' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o1': { m: 'اسأل VDAB أو مركز CVO كيف تحصل على شهادتك.', f: 'اسألي VDAB أو مركز CVO كيف تحصلين على شهادتك.', x: 'سؤال VDAB أو مركز CVO عن طريقة الحصول على الشهادة.' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o2': { m: 'انتظر: في سن 24 أنت أكبر من أن تتعلّم.', f: 'انتظري: في سن 24 أنتِ أكبر من أن تتعلّمي.', x: 'الانتظار: سن 24 متأخر جداً للتعلّم.' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o3': { m: 'خذ أي عمل، وتوقّف عن التعلّم نهائياً.', f: 'خذي أي عمل، وتوقّفي عن التعلّم نهائياً.', x: 'أخذ أي عمل، والتوقف عن التعلّم نهائياً.' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.w': 'البالغون يمكنهم أن يتعلّموا. في مركز CVO يمكن الحصول على الشهادة. لدى VDAB دورات لمهن كثيرة، وللباحثين عن عمل كثير منها مجاني.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const ti: Gloss = {
   'be.l.nextstep': "ድሕሪ ቤት ትምህርቲ ምቕጻል ትምህርቲ", // nieuw, nalezen
-  'be.w.waarderen': "(ዲፕሎማ) ከም ዝፍለጥ ምግባር", // nieuw, nalezen
+  'be.w.waarderen': '(ንዲፕሎማ) ኣፍልጦ ምርካብ', // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.bijbaan': "ስራሕ ተማሃራይ (ብጎኒ ትምህርቲ ንእሽቶ ስራሕ)", // nieuw, nalezen
   'be.w.meeloopdag': "ናይ ምፍላጥ ልምምድ (ነቲ ስራሕ ንምርኣይ ሓጺር ምብጻሕ)", // nieuw, nalezen
   'be.w.niveau2': "ካልኣይ ደረጃ ትምህርቲ (ንመንእሰያት፡ ክሳብ 18 ዓመት ኣቢሉ)", // nieuw, nalezen
@@ -55,21 +55,21 @@ export const ti: Gloss = {
   'be.w.bbl': "ክልተኣዊ ምምሃር (ኣብ ትካልን ኣብ ቤት ትምህርትን ትመሃሩ)", // nieuw, nalezen
   'be.w.doorstromen': "ስልጠና VDAB (ስልጠና ንሓደ ስራሕ)", // nieuw, nalezen
   'be.w.aanmelden': "ምምዝጋብ (ኣብ ቤት ትምህርቲ ወይ ኮርስ)", // nieuw, nalezen
-  'be.w.opendag': "መዓልቲ ክፉት ኣፍደገ (ቤት ትምህርቲ ክትበጽሕ ትኽእል)", // nieuw, nalezen
+  'be.w.opendag': 'መዓልቲ ክፉት ማዕጾ (ቤት ትምህርቲ ክትበጽሑ ትኽእሉ)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.nextstep.1': "ዲፕሎማ ካልኣይ ደረጃ ትምህርቲ ክወስድ እደሊ።", // nieuw, nalezen
-  'be.s.nextstep.3': "መዓልቲ ክፉት ኣፍደገ መዓስ እዩ?", // nieuw, nalezen
+  'be.s.nextstep.3': 'መዓልቲ ክፉት ማዕጾ መዓስ እዩ?', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.q': "ድሕሪ እዚ እንታይ ክትገብሩ ትደልዩ?", // nieuw, nalezen
   'be.c.nextstep.a': "ክልተኣዊ ምምሃር እመርጽ። ሽዑ እሰርሕን እመሃርን።", // nieuw, nalezen
   'be.c.diploma': "ዲፕሎማኹም ይቑጸር", // nieuw, nalezen
-  'be.c.diploma.b': "ካብ ካልእ ሃገር ዲፕሎማ ኣለኩም ዶ? ንNARIC-Vlaanderen ክፈልጦ ክትሓቱ ትኽእሉ። NARIC ምስ ዲፕሎማ ፍላንደርስ የወዳድሮ። ኣፍልጦ ዝረኸቡ ስደተኛታት ነዚ ኣይከፍሉን። ንገለ ስራሓት፡ ከም ነርስ፡ ተወሳኺ ኣፍልጦ የድልየኩም። ስልጠና ንስራሕኩም ግዴታ ድዩ? ሽዑ ኣስራሒኹም ክኸፍሎ ኣለዎ፡ ከም ግዜ ስራሕ ድማ ይቑጸር። ብዙሓት ሰራሕተኛታት ኣብ ዓመት ገለ መዓልታት ስልጠና ናይ ምርካብ መሰል እውን ኣለዎም። ብዛዕባ ኮርሳት ንሓላፊኹም ወይ ንVDAB ሕተቱ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።", // nieuw, nalezen
+  'be.c.diploma.b': 'ካብ ካልእ ሃገር ዲፕሎማ ኣለኩም ዶ? ንNARIC-Vlaanderen ኣፍልጦ ክህቦ ክትሓቱ ትኽእሉ። NARIC ምስ ዲፕሎማ ፍላንደርስ የወዳድሮ። ኣፍልጦ ዝረኸቡ ስደተኛታት ነዚ ኣይከፍሉን። ንገለ ስራሓት፡ ከም ነርስ፡ ተወሳኺ ኣፍልጦ የድልየኩም። ስልጠና ንስራሕኩም ግዴታ ድዩ? ሽዑ ኣስራሒኹም ክኸፍሎ ኣለዎ፡ ከም ግዜ ስራሕ ድማ ይቑጸር። ብዙሓት ሰራሕተኛታት ኣብ ዓመት ገለ መዓልታት ስልጠና ናይ ምርካብ መሰል እውን ኣለዎም። ብዛዕባ ኮርሳት ንሓላፊኹም ወይ ንVDAB ሕተቱ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "ንዓይ ዝኸውን ኮርሳት ኣለዉ ድዮም?", // nieuw, nalezen
   'be.c.diploma.s': "ኣስራሒኹም ቀዳም ብዘይ ደሞዝ ግዴታ ዝኾነ ስልጠና ድሕንነት ክትወስዱ ኣለኩም ይብለኩም። ሓቂ እንታይ እዩ?", // nieuw, nalezen
   'be.c.diploma.o1': "ኣስራሒ ይኸፍሎ፡ ግዜ ስራሕ ድማ እዩ።", // nieuw, nalezen
-  'be.c.diploma.o2': "ስልጠና ኩሉ ግዜ ኣብ ናይ ባዕልኹም ነጻ ግዜ እዩ።", // nieuw, nalezen
+  'be.c.diploma.o2': 'ስልጠና ኩሉ ግዜ ኣብ ናይ ባዕልኹም ናጻ ግዜ እዩ።', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.o3': "ንስልጠና ባዕልኹም ክትከፍሉ ኣለኩም።", // nieuw, nalezen
   'be.c.diploma.w': "ስልጠና ንስራሕኩም ግዴታ እንተ ኾይኑ፡ ኣስራሒ ይኸፍል፡ ከም ግዜ ስራሕ ድማ ይቑጸር። ንጹር እንተ ዘይኮይኑ፡ ምኽሪ ሕተቱ።", // nieuw, nalezen
-  'be.c.mychoice': "ጥንካረታትካ ኣገደስቲ እዮም", // nieuw, nalezen
-  'be.c.mychoice.b': "ኣብ እንታይ ጽቡቓት ኢኹም? ብዛዕባ ስራሕ፡ ቤት ትምህርትን ገዛን ሕሰቡ። ንስድራ ምክንኻን፡ ስራሕ ተማሃራይ (studentenjob) ወይ ወለንታዊ ስራሕ እውን ይቑጸሩ። እንታይ ትፈትዉ፡ እንታይከ ኣይትፈትዉን? ኣየናይ ስራሕ ከም ዝሰማማዓኩም ርግጸኛታት ኣይኮንኩምን? ሓጺር ናይ ምፍላጥ ልምምድ (snuffelstage) ሕተቱ፡ ወይ ናብ መዓልቲ ክፉት ማዕጾ (opendeurdag) ኺዱ። ኣብ ቤት ትምህርቲ CLB ብነጻ ክትመርጹ ይሕግዘኩም። ዓበይቲ ንVDAB ክሓቱ ይኽእሉ።", // nieuw, nalezen
+  'be.c.mychoice': 'ጥንካረታትኩም ኣገደስቲ እዮም', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.mychoice.b': 'ኣብ እንታይ ጽቡቓት ኢኹም? ብዛዕባ ስራሕ፡ ቤት ትምህርትን ገዛን ሕሰቡ። ንስድራ ምክንኻን፡ ስራሕ ተማሃራይ (studentenjob) ወይ ወለንታዊ ስራሕ እውን ይቑጸሩ። እንታይ ትፈትዉ፡ እንታይከ ኣይትፈትዉን? ኣየናይ ስራሕ ከም ዝሰማማዓኩም ርግጸኛታት ኣይኮንኩምን? ሓጺር ናይ ምፍላጥ ልምምድ (snuffelstage) ሕተቱ፡ ወይ ናብ መዓልቲ ክፉት ማዕጾ (opendeurdag) ኺዱ። ኣብ ቤት ትምህርቲ CLB ብናጻ ክትመርጹ ይሕግዘኩም። ዓበይቲ ንVDAB ክሓቱ ይኽእሉ።', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.mychoice.p': "ምስ ሰባት ጽቡቕ ክዛመድ እኽእል እየ። ኣብ ገዛ ብዙሕ እሕግዝ።", // nieuw, nalezen
   'be.c.mychoice.s': "ኣብ ቤት ትምህርቲ «ኣብ እንታይ ጽቡቓት ኢኹም?» ይሓቱኹም። ክፍሊት ዘለዎ ስራሕ ፈጺሙ ኣይነበረን። እንታይ ትብሉ?", // nieuw, nalezen
   'be.c.mychoice.o1': "ኣብ ገዛ ጽቡቕ ዝግበር ነገር፡ ከም ንኻልኦት ምእላይ።", // nieuw, nalezen
@@ -77,13 +77,13 @@ export const ti: Gloss = {
   'be.c.mychoice.o3': "ዝኾነ ዓይነት ስራሕ ክግበር ከም ዝከኣል፡ ብሓቂ ኩሉ።", // nieuw, nalezen
   'be.c.mychoice.w': "ክእለት ካብ ገዛ እውን ይቑጸር። ምእላይ፡ ምውጣንን ምሕጋዝን ኣስራሕቲ ዘድልዮም ክእለታት እዮም። ዝተገብረ ብኣብነት ምንጋር ይሕግዝ።", // nieuw, nalezen
   'be.c.nextstep': "ዲፕሎማ፡ ዓቢ ኮንኩም እውን", // nieuw, nalezen
-  'be.c.nextstep.b': "ትሕቲ 18 ዓመት ናብ ቤት ትምህርቲ ክትከዱ ግዴታ እዩ (leerplicht)። ካብ 15 ወይ 16 ዓመት ኣብ ትካልን ኣብ ቤት ትምህርትን ክትመሃሩ ትኽእሉ፡ ክልተኣዊ ምምሃር (duaal leren)። ዓበይቲ ኢኹም፡ ገና ዲፕሎማ የብልኩምን? ኣብ ትምህርቲ ዓበይቲ (volwassenenonderwijs)፡ ኣብ CVO፡ ዲፕሎማ ካልኣይ ደረጃ ትምህርቲ ገና ክትወስዱ ትኽእሉ። ሰባት ቀደም tweedekansonderwijs ይብልዎ ነይሮም። ስራሕ ትደልዩ ዶ? VDAB ንብዙሓት ስራሓት ኮርሳት ኣለዎ። ንስራሕ ዝደልዩ ሰባት ብዙሓት ብነጻ እዮም። ናብ መዓልቲ ክፉት ማዕጾ (opendeurdag) ኺዱ፡ ንVDAB ድማ ሓገዝ ሕተቱ። ገና ኣብ ቤት ትምህርቲ ኢኹም? ንCLB ሕተቱ።", // nieuw, nalezen
+  'be.c.nextstep.b': 'ትሕቲ 18 ዓመት ናብ ቤት ትምህርቲ ክትከዱ ግዴታ እዩ (leerplicht)። ካብ 15 ወይ 16 ዓመት ኣብ ትካልን ኣብ ቤት ትምህርትን ክትመሃሩ ትኽእሉ፡ ክልተኣዊ ምምሃር (duaal leren)። ዓበይቲ ኢኹም፡ ገና ዲፕሎማ የብልኩምን? ኣብ ትምህርቲ ዓበይቲ (volwassenenonderwijs)፡ ኣብ CVO፡ ዲፕሎማ ካልኣይ ደረጃ ትምህርቲ ገና ክትወስዱ ትኽእሉ። ሰባት ቀደም tweedekansonderwijs ይብልዎ ነይሮም። ስራሕ ትደልዩ ዶ? VDAB ንብዙሓት ስራሓት ኮርሳት ኣለዎ። ንስራሕ ዝደልዩ ሰባት ብዙሓት ብናጻ እዮም። ናብ መዓልቲ ክፉት ማዕጾ (opendeurdag) ኺዱ፡ ንVDAB ድማ ሓገዝ ሕተቱ። ገና ኣብ ቤት ትምህርቲ ኢኹም? ንCLB ሕተቱ።', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.p': "ከም ዓቢ ሰብ ገና ዲፕሎማይ ክወስድ ይኽእል ድየ?", // nieuw, nalezen
   'be.c.nextstep.s': "ዕድሜኹም 24 ዓመት እዩ፡ ዲፕሎማ ካልኣይ ደረጃ ትምህርቲ የብልኩምን። ዝሓሸ ስራሕ ትደልዩ። እንታይ ትገብሩ?", // nieuw, nalezen
   'be.c.nextstep.o1': "ንVDAB ወይ ንCVO ዲፕሎማ ብኸመይ ከም እትወስዱ ሕተቱ።", // nieuw, nalezen
-  'be.c.nextstep.o2': "ምጽባይ፡ ኣብ 24 ዓመት ንምምሃር ዓቢ ኢኹም።", // nieuw, nalezen
-  'be.c.nextstep.o3': "ዝኾነ ስራሕ ምውሳድ፡ ምምሃር ድማ ንሓዋሩ ምቁራጽ።", // nieuw, nalezen
-  'be.c.nextstep.w': "ዓበይቲ ገና ክመሃሩ ይኽእሉ። ኣብ CVO ዲፕሎማኹም ክትወስዱ ትኽእሉ። VDAB ንብዙሓት ስራሓት ኮርሳት ኣለዎ፡ ንስራሕ ዝደልዩ ድማ ብዙሓት ብነጻ እዮም።", // nieuw, nalezen
+  'be.c.nextstep.o2': 'ተጸበዩ፡ ኣብ 24 ዓመት ንምምሃር ዓቢ ኢኹም።', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o3': 'ዝኾነ ስራሕ ውሰዱ፡ ምምሃር ድማ ንሓዋሩ ኣቋርጹ።', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.w': 'ዓበይቲ ገና ክመሃሩ ይኽእሉ። ኣብ CVO ዲፕሎማኹም ክትወስዱ ትኽእሉ። VDAB ንብዙሓት ስራሓት ኮርሳት ኣለዎ፡ ንስራሕ ዝደልዩ ድማ ብዙሓት ብናጻ እዮም።', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const fa: Gloss = {
@@ -102,7 +102,7 @@ export const fa: Gloss = {
   'be.c.nextstep.q': "بعد از این می‌خواهی چه کار کنی؟", // nieuw, nalezen
   'be.c.nextstep.a': "یادگیری دوگانه را انتخاب می‌کنم. آن‌وقت هم کار می‌کنم هم یاد می‌گیرم.", // nieuw, nalezen
   'be.c.diploma': "مدرک تحصیلی‌ات ارزش دارد", // nieuw, nalezen
-  'be.c.diploma.b': "مدرکی از کشور دیگری داری؟ می‌توانی از NARIC-Vlaanderen بخواهی آن را به رسمیت بشناسد. NARIC آن را با یک مدرک فلاندری مقایسه می‌کند. پناهندگان شناخته‌شده برای این پول نمی‌دهند. برای بعضی شغل‌ها، مثل پرستاری، یک شناسایی اضافه لازم است. آموزشی برای کارت اجباری است؟ پس کارفرما باید هزینه‌اش را بدهد، و جزو ساعت کار حساب می‌شود. خیلی از کارگرها هم هر سال حق چند روز آموزش دارند. از سرپرستت یا VDAB دربارهٔ دوره‌ها بپرس. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشاورهٔ حقوقی رایگان) بپرس.", // nieuw, nalezen
+  'be.c.diploma.b': "مدرکی از کشور دیگری داری؟ می‌توانی از NARIC-Vlaanderen بخواهی آن را به رسمیت بشناسد. NARIC آن را با یک مدرک فلاندری مقایسه می‌کند. پناهندگان شناخته‌شده برای این پول نمی‌دهند. برای بعضی شغل‌ها، مثل پرستار، یک شناسایی اضافه لازم است. آموزشی برای کارت اجباری است؟ پس کارفرما باید هزینه‌اش را بدهد، و جزو ساعت کار حساب می‌شود. خیلی از کارگرها هم هر سال حق چند روز آموزش دارند. از سرپرستت یا VDAB دربارهٔ دوره‌ها بپرس. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشاورهٔ حقوقی رایگان) بپرس.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "دوره‌ای برای من هست؟", // nieuw, nalezen
   'be.c.diploma.s': "کارفرما می‌گوید باید شنبه یک آموزش ایمنی اجباری را بدون حقوق بگذرانی. چه چیزی درست است؟", // nieuw, nalezen
   'be.c.diploma.o1': "پولش را کارفرما می‌دهد و وقت کار حساب می‌شود.", // nieuw, nalezen
@@ -129,12 +129,12 @@ export const fa: Gloss = {
 
 export const prs: Gloss = {
   'be.l.nextstep': "ادامهٔ آموزش بعد از مکتب", // nieuw, nalezen
-  'be.w.waarderen': "(سند تحصیلی را) به رسمیت شناختن دادن", // nieuw, nalezen
+  'be.w.waarderen': "(سند تحصیلی را) به رسمیت شناساندن", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.bijbaan': "کار محصلی (کار کوچک در کنار درس)", // nieuw, nalezen
   'be.w.meeloopdag': "کارآموزی آشنایی (بازدید کوتاه برای دیدن کار)", // nieuw, nalezen
   'be.w.niveau2': "تعلیمات متوسطه (برای جوانان، تا حدود ۱۸ سالگی)", // nieuw, nalezen
   'be.w.startkwalificatie': "تعلیمات کاهلان (مکتب برای کاهلان، در یک CVO)", // nieuw, nalezen
-  'be.w.bbl': "آموزش دوگانه (در شرکت و در مکتب یاد می‌گیرید)", // nieuw, nalezen
+  'be.w.bbl': "آموزش دوگانه (در کمپنی و در مکتب یاد می‌گیرید)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.doorstromen': "کورس VDAB (آموزش برای یک وظیفه)", // nieuw, nalezen
   'be.w.aanmelden': "ثبت‌نام کردن (در مکتب یا کورس)", // nieuw, nalezen
   'be.w.opendag': "روز دروازه‌های باز (می‌توانید از مکتب دیدن کنید)", // nieuw, nalezen
@@ -143,7 +143,7 @@ export const prs: Gloss = {
   'be.c.nextstep.q': "بعد از این می‌خواهید چه کار کنید؟", // nieuw, nalezen
   'be.c.nextstep.a': "آموزش دوگانه را انتخاب می‌کنم. آن وقت هم کار می‌کنم و هم یاد می‌گیرم.", // nieuw, nalezen
   'be.c.diploma': "دیپلوم شما ارزش دارد", // nieuw, nalezen
-  'be.c.diploma.b': "سند تحصیلی از کشور دیگری دارید؟ می‌توانید از NARIC-Vlaanderen بخواهید آن را به رسمیت بشناسد. NARIC آن را با یک سند فلاندری مقایسه می‌کند. پناهندگان شناخته‌شده برای این پول نمی‌دهند. برای بعضی وظیفه‌ها، مثل نرسنگ، یک شناسایی اضافی لازم است. آموزشی برای کار تان اجباری است؟ پس کارفرما باید مصرف آن را بدهد، و جزو وقت کار حساب می‌شود. بسیاری از کارگران هم هر سال حق چند روز آموزش دارند. از سرپرست تان یا VDAB در بارهٔ کورس‌ها بپرسید. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen
+  'be.c.diploma.b': "سند تحصیلی از کشور دیگری دارید؟ می‌توانید از NARIC-Vlaanderen بخواهید آن را به رسمیت بشناسد. NARIC آن را با یک سند فلاندری مقایسه می‌کند. پناهندگان شناخته‌شده برای این پول نمی‌دهند. برای بعضی وظیفه‌ها، مثل نرس، یک شناسایی اضافی لازم است. آموزشی برای کار تان اجباری است؟ پس کارفرما باید مصرف آن را بدهد، و جزو وقت کار حساب می‌شود. بسیاری از کارگران هم هر سال حق چند روز آموزش دارند. از سرپرست تان یا VDAB در بارهٔ کورس‌ها بپرسید. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "برای من کورس هست؟", // nieuw, nalezen
   'be.c.diploma.s': "کارفرما می‌گوید که باید روز شنبه یک آموزش حتمی مصئونیت را بدون معاش بگیرید. کدام درست است؟", // nieuw, nalezen
   'be.c.diploma.o1': "کارفرما می‌پردازد و وقت کاری حساب می‌شود.", // nieuw, nalezen
@@ -159,7 +159,7 @@ export const prs: Gloss = {
   'be.c.mychoice.o3': "اینکه هر کاری را انجام داده می‌توانید، واقعاً همه چیز.", // nieuw, nalezen
   'be.c.mychoice.w': "مهارت‌های خانه هم حساب می‌شود. مراقبت، پلان کردن و کمک کردن مهارت‌هایی است که کارفرماها لازم دارند. بگویید که چه کرده‌اید، با یک مثال.", // nieuw, nalezen
   'be.c.nextstep': "سند تحصیلی، حتی در کاهلی", // nieuw, nalezen
-  'be.c.nextstep.b': "کمتر از ۱۸ سال باید به مکتب بروید (leerplicht). از ۱۵ یا ۱۶ سالگی می‌توانید در شرکت و در مکتب هم یاد بگیرید: آموزش دوگانه (duaal leren). بزرگ‌تر هستید و هنوز سند ندارید؟ در تعلیمات کاهلان (volwassenenonderwijs)، در یک CVO، هنوز می‌توانید سند متوسطه تان را بگیرید. پیش‌تر به این tweedekansonderwijs می‌گفتند. دنبال کار هستید؟ VDAB برای بسیاری از وظیفه‌ها کورس دارد. برای کارجویان، بسیاری از آن‌ها رایگان است. به روز دروازه‌های باز (opendeurdag) بروید، و از VDAB کمک بخواهید. هنوز در مکتب هستید؟ از CLB بپرسید.", // nieuw, nalezen
+  'be.c.nextstep.b': "کمتر از ۱۸ سال باید به مکتب بروید (leerplicht). از ۱۵ یا ۱۶ سالگی می‌توانید در کمپنی و در مکتب هم یاد بگیرید: آموزش دوگانه (duaal leren). بزرگ‌تر هستید و هنوز سند ندارید؟ در تعلیمات کاهلان (volwassenenonderwijs)، در یک CVO، هنوز می‌توانید سند متوسطه تان را بگیرید. پیش‌تر به این tweedekansonderwijs می‌گفتند. دنبال کار هستید؟ VDAB برای بسیاری از وظیفه‌ها کورس دارد. برای کارجویان، بسیاری از آن‌ها رایگان است. به روز دروازه‌های باز (opendeurdag) بروید، و از VDAB کمک بخواهید. هنوز در مکتب هستید؟ از CLB بپرسید.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.p': "در کاهلی هنوز می‌توانم سند تحصیلی‌ام را بگیرم؟", // nieuw, nalezen
   'be.c.nextstep.s': "۲۴ سال دارید و سند متوسطه ندارید. کار بهتر می‌خواهید. چه می‌کنید؟", // nieuw, nalezen
   'be.c.nextstep.o1': "از VDAB یا یک CVO بپرسید چطور سند تان را بگیرید.", // nieuw, nalezen
@@ -171,7 +171,7 @@ export const prs: Gloss = {
 export const uk: Gloss = {
   'be.l.nextstep': "Навчання після школи", // nieuw, nalezen
   'be.w.waarderen': "визнати (диплом)", // nieuw, nalezen
-  'be.w.bijbaan': "студентська підробітка (невелика робота поруч із навчанням)", // nieuw, nalezen
+  'be.w.bijbaan': "студентський підробіток (невелика робота поруч із навчанням)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "ознайомча практика (короткий візит, щоб побачити роботу)", // nieuw, nalezen
   'be.w.niveau2': "середня школа (для молоді, приблизно до 18 років)", // nieuw, nalezen
   'be.w.startkwalificatie': "освіта для дорослих (школа для дорослих, у CVO)", // nieuw, nalezen
@@ -184,7 +184,7 @@ export const uk: Gloss = {
   'be.c.nextstep.q': "Що ти хочеш робити далі?", // nieuw, nalezen
   'be.c.nextstep.a': "Я обираю дуальне навчання. Тоді я працюю і вчуся.", // nieuw, nalezen
   'be.c.diploma': "Твій диплом важливий", // nieuw, nalezen
-  'be.c.diploma.b': "У тебе диплом з іншої країни? Ти можеш попросити NARIC-Vlaanderen визнати його. NARIC порівнює його з фламандським дипломом. Визнані біженці за це не платять. Для деяких професій, наприклад медсестри, потрібне ще окреме визнання. Навчання обов’язкове для твоєї роботи? Тоді роботодавець має за нього заплатити, і воно рахується як робочий час. Багато працівників також мають право на кілька днів навчання щороку. Про курси запитай керівника або VDAB. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
+  'be.c.diploma.b': "У тебе диплом з іншої країни? Ти можеш попросити NARIC-Vlaanderen визнати його. NARIC порівнює його з фламандським дипломом. Визнані біженці за це не платять. Для деяких професій, наприклад медсестри, потрібне ще окреме визнання. Навчання обов’язкове для твоєї роботи? Тоді роботодавець має за нього заплатити, і воно зараховується до робочого часу. Багато працівників також мають право на кілька днів навчання щороку. Про курси запитай керівника або VDAB. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "Є курси для мене?", // nieuw, nalezen
   'be.c.diploma.s': "Роботодавець каже, що в суботу ти мусиш пройти обовʼязкове навчання з безпеки, без оплати. Що правда?", // nieuw, nalezen
   'be.c.diploma.o1': "Його оплачує роботодавець, і це робочий час.", // nieuw, nalezen
@@ -192,9 +192,9 @@ export const uk: Gloss = {
   'be.c.diploma.o3': "Ти мусиш заплатити за навчання з власної кишені.", // nieuw, nalezen
   'be.c.diploma.w': "Якщо навчання обовʼязкове для твоєї роботи, роботодавець платить, і воно зараховується до робочого часу. Якщо незрозуміло, порадься.", // nieuw, nalezen
   'be.c.mychoice': "Твої сильні сторони важливі", // nieuw, nalezen
-  'be.c.mychoice.b': "Що в тебе добре виходить? Подумай про роботу, школу й дім. Догляд за родиною, студентська підробітка (studentenjob) чи волонтерство теж рахуються. Що тобі подобається, а що ні? Не знаєш точно, яка робота тобі підходить? Попроси коротку ознайомчу практику (snuffelstage) або піди на день відкритих дверей (opendeurdag). У школі тобі безкоштовно допомагає з вибором CLB. Дорослі можуть запитати у VDAB.", // nieuw, nalezen
+  'be.c.mychoice.b': "Що в тебе добре виходить? Подумай про роботу, школу й дім. Догляд за родиною, студентський підробіток (studentenjob) чи волонтерство теж мають значення. Що тобі подобається, а що ні? Не знаєш точно, яка робота тобі підходить? Попроси коротку ознайомчу практику (snuffelstage) або піди на день відкритих дверей (opendeurdag). У школі тобі безкоштовно допомагає з вибором CLB. Дорослі можуть запитати у VDAB.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.mychoice.p': "Я вмію ладнати з людьми. Удома я багато допомагаю.", // nieuw, nalezen
-  'be.c.mychoice.s': "У школі питають: «Що ти добре вмієш?». У тебе ще не було оплачуваної роботи. Що ти скажеш?", // nieuw, nalezen
+  'be.c.mychoice.s': "У школі питають: «Що ти добре вмієш?» У тебе ще не було оплачуваної роботи. Що ти скажеш?", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.mychoice.o1': "Що ти добре робиш удома, наприклад доглядаєш інших.", // nieuw, nalezen
   'be.c.mychoice.o2': "Що ще не знаєш, бо ще не мав / мала роботи.", // nieuw, nalezen
   'be.c.mychoice.o3': "Що ти можеш робити будь-яку роботу, геть усе.", // nieuw, nalezen
@@ -203,9 +203,9 @@ export const uk: Gloss = {
   'be.c.nextstep.b': "До 18 років треба ходити до школи (leerplicht). З 15 або 16 років можна також учитися на фірмі й у школі: дуальне навчання (duaal leren). Ти вже не в школі й ще не маєш диплома? В освіті для дорослих (volwassenenonderwijs), у CVO, ще можна отримати атестат про середню освіту. Раніше це називали tweedekansonderwijs. Шукаєш роботу? У VDAB є курси для багатьох професій. Для шукачів роботи багато з них безкоштовні. Піди на день відкритих дверей (opendeurdag) і попроси допомоги у VDAB. Ще в школі? Запитай у CLB.", // nieuw, nalezen
   'be.c.nextstep.p': "Чи можу я ще отримати диплом у дорослому віці?", // nieuw, nalezen
   'be.c.nextstep.s': "Тобі 24, і в тебе немає атестата про середню освіту. Ти хочеш кращу роботу. Що ти зробиш?", // nieuw, nalezen
-  'be.c.nextstep.o1': "Запитай у VDAB або CVO, як отримати диплом.", // nieuw, nalezen
-  'be.c.nextstep.o2': "Почекай: у 24 вже пізно вчитися.", // nieuw, nalezen
-  'be.c.nextstep.o3': "Візьми будь-яку роботу й назавжди кинь навчання.", // nieuw, nalezen
+  'be.c.nextstep.o1': "Запитаєш у VDAB або CVO, як отримати диплом.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o2': "Почекаєш: у 24 вже пізно вчитися.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o3': "Візьмеш будь-яку роботу й назавжди кинеш навчання.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.w': "Дорослі теж можуть учитися. У CVO можна отримати диплом. У VDAB є курси для багатьох професій, і для шукачів роботи багато з них безкоштовні.", // nieuw, nalezen
 };
 
@@ -219,9 +219,9 @@ export const tr: Gloss = {
   'be.w.bbl': "ikili eğitim (bir şirkette ve okulda öğrenirsin)", // nieuw, nalezen
   'be.w.doorstromen': "VDAB kursu (bir meslek için eğitim)", // nieuw, nalezen
   'be.w.aanmelden': "kaydolmak (bir okula ya da kursa)", // nieuw, nalezen
-  'be.w.opendag': "açık gün (bir okulu ziyaret edebilirsin)", // nieuw, nalezen
+  'be.w.opendag': "açık kapı günü (bir okulu ziyaret edebilirsin)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.nextstep.1': "Ortaöğretim diplomamı almak istiyorum.", // nieuw, nalezen
-  'be.s.nextstep.3': "Açık gün ne zaman?", // nieuw, nalezen
+  'be.s.nextstep.3': "Açık kapı günü ne zaman?", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.q': "Bundan sonra ne yapmak istiyorsun?", // nieuw, nalezen
   'be.c.nextstep.a': "İkili eğitimi seçiyorum. Böylece hem çalışırım hem öğrenirim.", // nieuw, nalezen
   'be.c.diploma': "Diploman değerlidir", // nieuw, nalezen
@@ -244,16 +244,16 @@ export const tr: Gloss = {
   'be.c.nextstep.b': "18 yaşından küçükken okula gitmek zorundasın (leerplicht). 15 ya da 16 yaşından itibaren bir şirkette ve okulda da öğrenebilirsin: ikili eğitim (duaal leren). Daha mı büyüksün ve henüz diploman yok mu? Yetişkin eğitiminde (volwassenenonderwijs), bir CVO’da, ortaöğretim diplomanı hâlâ alabilirsin. Eskiden buna tweedekansonderwijs denirdi. İş mi arıyorsun? VDAB’nin birçok meslek için kursları var. İş arayanlar için çoğu ücretsiz. Açık kapı gününe (opendeurdag) git ve VDAB’den yardım iste. Hâlâ okulda mısın? CLB’ye sor.", // nieuw, nalezen
   'be.c.nextstep.p': "Yetişkin olarak hâlâ diplomamı alabilir miyim?", // nieuw, nalezen
   'be.c.nextstep.s': "24 yaşındasın ve ortaöğretim diploman yok. Daha iyi bir iş istiyorsun. Ne yaparsın?", // nieuw, nalezen
-  'be.c.nextstep.o1': "VDAB’ye ya da bir CVO’ya diplomanı nasıl alacağını sor.", // nieuw, nalezen
-  'be.c.nextstep.o2': "Bekle: 24 yaşında öğrenmek için çok geç.", // nieuw, nalezen
-  'be.c.nextstep.o3': "Herhangi bir işe gir, ve öğrenmeyi tamamen bırak.", // nieuw, nalezen
+  'be.c.nextstep.o1': "VDAB’ye ya da bir CVO’ya diplomanı nasıl alacağını sorarsın.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o2': "Beklersin: 24 yaşında öğrenmek için çok geç.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o3': "Herhangi bir işe girer, öğrenmeyi tamamen bırakırsın.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.w': "Yetişkinler de öğrenebilir. Bir CVO’da diplomanı alabilirsin. VDAB’nin birçok meslek için kursu var ve iş arayanlar için çoğu ücretsiz.", // nieuw, nalezen
 };
 
 export const pl: Gloss = {
   'be.l.nextstep': "Dalsza nauka po szkole", // nieuw, nalezen
-  'be.w.waarderen': "uznać (dyplom)", // nieuw, nalezen
-  'be.w.bijbaan': "praca studencka (mała praca obok szkoły)", // nieuw, nalezen
+  'be.w.waarderen': "uzyskać uznanie (dyplomu)", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.w.bijbaan': "praca studencka (dorywcza praca w czasie nauki)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "praktyka zapoznawcza (krótka wizyta, żeby zobaczyć pracę)", // nieuw, nalezen
   'be.w.niveau2': "szkoła średnia (dla młodzieży, mniej więcej do 18 lat)", // nieuw, nalezen
   'be.w.startkwalificatie': "edukacja dorosłych (szkoła dla dorosłych, w CVO)", // nieuw, nalezen
@@ -367,16 +367,16 @@ export const bg: Gloss = {
   'be.c.nextstep.b': "До 18 години трябва да ходиш на училище (leerplicht). От 15 или 16 години можеш да учиш и във фирма, и в училище: дуално обучение (duaal leren). Вече не си в училищна възраст и нямаш диплома? В образованието за възрастни (volwassenenonderwijs), в CVO, още можеш да вземеш диплома за средно образование. Преди това се наричаше tweedekansonderwijs. Търсиш работа? VDAB има курсове за много професии. За търсещите работа много от тях са безплатни. Иди на ден на отворените врати (opendeurdag) и поискай помощ от VDAB. Още си в училище? Питай CLB.", // nieuw, nalezen
   'be.c.nextstep.p': "Мога ли още да взема диплома в зряла възраст?", // nieuw, nalezen
   'be.c.nextstep.s': "На 24 години си и нямаш диплома за средно образование. Искаш по-добра работа. Какво правиш?", // nieuw, nalezen
-  'be.c.nextstep.o1': "Питай VDAB или CVO как да вземеш диплома.", // nieuw, nalezen
-  'be.c.nextstep.o2': "Чакай: на 24 вече е късно за учене.", // nieuw, nalezen
-  'be.c.nextstep.o3': "Вземи каквато и да е работа и спри да учиш завинаги.", // nieuw, nalezen
+  'be.c.nextstep.o1': "Питаш VDAB или CVO как да вземеш диплома.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o2': "Чакаш: на 24 вече е късно за учене.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.nextstep.o3': "Вземаш каквато и да е работа и спираш да учиш завинаги.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.nextstep.w': "И възрастните могат да учат. В CVO можеш да вземеш диплома. VDAB има курсове за много професии, а за търсещите работа много от тях са безплатни.", // nieuw, nalezen
 };
 
 export const es: Gloss = {
   'be.l.nextstep': "Seguir aprendiendo después de la escuela", // nieuw, nalezen
   'be.w.waarderen': "hacer reconocer (un título)", // nieuw, nalezen
-  'be.w.bijbaan': "el trabajo de estudiante (un trabajo pequeño junto a los estudios)", // nieuw, nalezen
+  'be.w.bijbaan': "el trabajo de estudiante (un trabajo pequeño mientras estudias)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "la práctica de prueba (una visita corta para ver el trabajo)", // nieuw, nalezen
   'be.w.niveau2': "la enseñanza secundaria (para jóvenes, hasta unos 18 años)", // nieuw, nalezen
   'be.w.startkwalificatie': "la educación de adultos (escuela para adultos, en un CVO)", // nieuw, nalezen
@@ -389,7 +389,7 @@ export const es: Gloss = {
   'be.c.nextstep.q': "¿Qué quieres hacer después?", // nieuw, nalezen
   'be.c.nextstep.a': "Elijo la formación dual. Así trabajo y aprendo.", // nieuw, nalezen
   'be.c.diploma': "Tu diploma cuenta", // nieuw, nalezen
-  'be.c.diploma.b': "¿Tienes un título de otro país? Puedes pedir a NARIC-Vlaanderen que lo reconozca. NARIC lo compara con un título flamenco. Las personas refugiadas reconocidas no pagan por esto. Para algunos trabajos, como enfermería, necesitas un reconocimiento más. ¿Una formación es obligatoria para tu trabajo? Entonces tu empresa tiene que pagarla, y cuenta como tiempo de trabajo. Muchos trabajadores también tienen derecho a algunos días de formación cada año. Pregunta a tu responsable o al VDAB por los cursos. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
+  'be.c.diploma.b': "¿Tienes un título de otro país? Puedes pedir a NARIC-Vlaanderen que lo reconozca. NARIC lo compara con un título flamenco. Las personas refugiadas reconocidas no pagan por esto. Para algunos trabajos, como enfermería, necesitas un reconocimiento más. ¿Una formación es obligatoria para tu trabajo? Entonces tu empresa tiene que pagarla, y cuenta como tiempo de trabajo. Muchos trabajadores también tienen derecho a algunos días de formación cada año. Pregunta a tu encargado o al VDAB por los cursos. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "¿Hay cursos para mí?", // nieuw, nalezen
   'be.c.diploma.s': "Tu empresa dice que tienes que hacer una formación de seguridad obligatoria el sábado, sin sueldo. ¿Qué es verdad?", // nieuw, nalezen
   'be.c.diploma.o1': "La paga la empresa, y es tiempo de trabajo.", // nieuw, nalezen
@@ -417,7 +417,7 @@ export const es: Gloss = {
 export const pt: Gloss = {
   'be.l.nextstep': "Continuar a aprender depois da escola", // nieuw, nalezen
   'be.w.waarderen': "fazer reconhecer (um diploma)", // nieuw, nalezen
-  'be.w.bijbaan': "o trabalho de estudante (um pequeno trabalho ao lado da escola)", // nieuw, nalezen
+  'be.w.bijbaan': "o trabalho de estudante (um pequeno trabalho enquanto estudas)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "o estágio de observação (uma visita curta para ver o trabalho)", // nieuw, nalezen
   'be.w.niveau2': "o ensino secundário (para jovens, até mais ou menos 18 anos)", // nieuw, nalezen
   'be.w.startkwalificatie': "o ensino de adultos (escola para adultos, num CVO)", // nieuw, nalezen
@@ -458,7 +458,7 @@ export const pt: Gloss = {
 export const fr: Gloss = {
   'be.l.nextstep': "Continuer à apprendre après l’école", // nieuw, nalezen
   'be.w.waarderen': "faire reconnaître (un diplôme)", // nieuw, nalezen
-  'be.w.bijbaan': "le job étudiant (un petit travail à côté de l’école)", // nieuw, nalezen
+  'be.w.bijbaan': "le job étudiant (un petit travail pendant tes études)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "le stage découverte (une courte visite pour voir le travail)", // nieuw, nalezen
   'be.w.niveau2': "l’enseignement secondaire (pour les jeunes, jusqu’à environ 18 ans)", // nieuw, nalezen
   'be.w.startkwalificatie': "l’enseignement pour adultes (école pour adultes, dans un CVO)", // nieuw, nalezen
@@ -471,7 +471,7 @@ export const fr: Gloss = {
   'be.c.nextstep.q': "Qu’est-ce que tu veux faire ensuite ?", // nieuw, nalezen
   'be.c.nextstep.a': "Je choisis la formation en alternance. Comme ça, je travaille et j’apprends.", // nieuw, nalezen
   'be.c.diploma': "Ton diplôme compte", // nieuw, nalezen
-  'be.c.diploma.b': "Tu as un diplôme d’un autre pays ? Tu peux demander à NARIC-Vlaanderen de le reconnaître. NARIC le compare à un diplôme flamand. Les réfugiés reconnus ne paient pas pour cela. Pour certains métiers, comme infirmier, il faut une reconnaissance en plus. Une formation est obligatoire pour ton travail ? Alors ton employeur doit la payer, et elle compte comme temps de travail. Beaucoup de travailleurs ont aussi droit à quelques jours de formation chaque année. Demande à ton responsable ou au VDAB pour les cours. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au justitiehuis (maison de justice : conseil juridique gratuit).", // nieuw, nalezen
+  'be.c.diploma.b': "Tu as un diplôme d’un autre pays ? Tu peux demander à NARIC-Vlaanderen de le reconnaître. NARIC le compare à un diplôme flamand. Les réfugiés reconnus ne paient pas pour cela. Pour certains métiers, comme infirmier, il faut une reconnaissance en plus. Une formation est obligatoire pour ton travail ? Alors ton employeur doit la payer, et elle compte comme temps de travail. Beaucoup de travailleurs ont aussi droit à quelques jours de formation chaque année. Pose tes questions sur les cours à ton responsable ou au VDAB. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au justitiehuis (maison de justice : conseil juridique gratuit).", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "Il y a des cours pour moi ?", // nieuw, nalezen
   'be.c.diploma.s': "Ton employeur dit que tu dois faire une formation de sécurité obligatoire samedi, sans salaire. Qu’est-ce qui est vrai ?", // nieuw, nalezen
   'be.c.diploma.o1': "L’employeur la paie, et c’est du temps de travail.", // nieuw, nalezen

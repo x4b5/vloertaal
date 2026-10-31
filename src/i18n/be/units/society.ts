@@ -17,7 +17,7 @@ export const ar: Gloss = {
   'be.s.council.1': 'سأنتقل إلى بيت آخر. أعطي عنواني الجديد للبلدية.', // nieuw, nalezen
   'be.s.council.2': 'هل يحق لي التصويت للمجلس البلدي؟', // nieuw, nalezen
   'be.s.council.3': 'وصلتني رسالة الدعوة إلى التصويت بالبريد.', // nieuw, nalezen
-  'be.c.council.q': 'هل التصويت يوم الأحد في خطتك؟', // nieuw, nalezen
+  'be.c.council.q': { m: 'هل ستذهب للتصويت يوم الأحد؟', f: 'هل ستذهبين للتصويت يوم الأحد؟', x: 'هل التصويت يوم الأحد ضمن خطتك؟' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.council.a': 'نعم. معي رسالة الدعوة وبطاقة الهوية.', // nieuw, nalezen
   'be.l.police': 'الشرطة والاعتراض وحقوقك', // nieuw, nalezen
   'be.w.wijkagent': 'شرطي الحي', // nieuw, nalezen
@@ -32,7 +32,7 @@ export const ar: Gloss = {
   'be.c.police.q': 'هل يمكنني رؤية بطاقة هويتك؟', // nieuw, nalezen
   'be.c.police.a': 'نعم، تفضّل. ماذا يحدث؟', // nieuw, nalezen
   'be.c.council': 'البلدية، ومن يحق له التصويت', // nieuw, nalezen
-  'be.c.council.b': 'البلدية (gemeente) تحفظ عنوانك وتعطيك بطاقة الهوية. انتقال إلى بيت جديد؟ يجب إبلاغ بلدية البيت الجديد خلال 8 أيام عمل. بعدها يأتي شرطي الحي (wijkagent) ليتأكد أنك تسكن هناك. كل 6 سنوات تجري انتخابات المجلس البلدي (gemeenteraad). يحق التصويت فيها لمن هو من بلد آخر في الاتحاد الأوروبي، ولمن هو من خارج الاتحاد الأوروبي بعد 5 سنوات من الإقامة القانونية. أولاً يلزم التسجيل كناخب في البلدية. في فلاندرز التصويت للمجلس البلدي غير إلزامي. في الانتخابات الأخرى يجب على البلجيكيين الذهاب للتصويت (opkomstplicht). تصلك رسالة (oproepingsbrief): خذها مع بطاقة الهوية. لست متأكداً؟ اسأل البلدية.', // nieuw, nalezen
+  'be.c.council.b': 'البلدية (gemeente) تحفظ عنوانك وتعطيك بطاقة الهوية. انتقال إلى بيت جديد؟ يجب إبلاغ بلدية البيت الجديد خلال 8 أيام عمل. بعدها يأتي شرطي الحي (wijkagent) ليتأكد أنك تسكن هناك. كل 6 سنوات تجري انتخابات المجلس البلدي (gemeenteraad). يحق التصويت فيها لمن هو من بلد آخر في الاتحاد الأوروبي، ولمن هو من خارج الاتحاد الأوروبي بعد 5 سنوات من الإقامة القانونية. أولاً يلزم التسجيل كناخب في البلدية. في فلاندرز التصويت للمجلس البلدي غير إلزامي. في الانتخابات الأخرى يجب على البلجيكيين الذهاب للتصويت (opkomstplicht). تصل رسالة (oproepingsbrief): يجب أخذها مع بطاقة الهوية. عند الشك: السؤال في البلدية.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.council.p': 'هل يحق لي التصويت للمجلس البلدي؟ هل يجب أن أسجّل أولاً؟', // nieuw, nalezen
   'be.c.council.s': 'الأصل من المغرب، والإقامة في خنت (Gent) قانونية منذ ست سنوات. لا جنسية بلجيكية. قريباً انتخابات للمجلس البلدي. ما الصحيح؟', // nieuw, nalezen
   'be.c.council.o1': 'يحق التصويت، بعد التسجيل في البلدية.', // nieuw, nalezen
@@ -40,7 +40,7 @@ export const ar: Gloss = {
   'be.c.council.o3': 'بلا جواز سفر بلجيكي لا يحق التصويت أبداً.', // nieuw, nalezen
   'be.c.council.w': 'بعد 5 سنوات من الإقامة القانونية يحق التصويت للمجلس البلدي. يلزم التسجيل كناخب أولاً. أما البرلمان الفدرالي فتلزم له الجنسية البلجيكية.', // nieuw, nalezen
   'be.c.police': 'بطاقة هويتك وحقوقك', // nieuw, nalezen
-  'be.c.police.b': 'من عمر 15 سنة يجب أن تكون بطاقة الهوية (أو بطاقة الإقامة) معك دائماً، وأن تُظهرها عندما تطلبها الشرطة. وصلتك رسالة فيها قرار لا توافق عليه، مثلاً غرامة من البلدية؟ عندها يمكنك الرد كتابةً (bezwaar maken). الرسالة تقول كيف، وحتى متى. افعل ذلك قبل ذلك التاريخ. الجميع متساوون أمام القانون. الشرطة تريد استجوابك؟ عندها يحق لك أن تتكلم مع محامٍ أولاً. الاستشارة الأولى من محامٍ مجانية، في justitiehuis. تمييز؟ Unia يمكنها المساعدة.', // nieuw, nalezen
+  'be.c.police.b': 'من عمر 15 سنة يجب أن تكون بطاقة الهوية (أو بطاقة الإقامة) معك دائماً، وأن تُظهرها عندما تطلبها الشرطة. وصلتك رسالة فيها قرار لا توافق عليه، مثلاً غرامة من البلدية؟ عندها يمكنك الرد كتابةً (bezwaar maken). الرسالة تقول كيف، وحتى متى. يجب أن يكون ذلك قبل ذلك التاريخ. الجميع متساوون أمام القانون. الشرطة تريد استجوابك؟ عندها يحق لك أن تتكلم مع محامٍ أولاً. الاستشارة الأولى من محامٍ مجانية، في justitiehuis. تمييز؟ Unia يمكنها المساعدة.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.p': 'لا أوافق على هذا القرار. أقدّم اعتراضاً.', // nieuw, nalezen
   'be.c.police.s': 'وصلت رسالة من البلدية فيها غرامة. الغرامة تبدو غير صحيحة. في الرسالة تاريخ أخير للرد. ما التصرف الصحيح؟', // nieuw, nalezen
   'be.c.police.o1': 'الرد كتابةً، قبل التاريخ المذكور في الرسالة.', // nieuw, nalezen
@@ -61,7 +61,7 @@ export const ti: Gloss = {
   'be.s.council.1': 'ገዛ እቕይር ኣለኹ። ሓድሽ ኣድራሻይ ንምምሕዳር ከተማ እህብ ኣለኹ።', // nieuw, nalezen
   'be.s.council.2': 'ንቤት ምኽሪ ከተማ ክድምጽ ይፍቀደለይ ድዩ?', // nieuw, nalezen
   'be.s.council.3': 'ደብዳቤ ምድማጽ ብፖስታ መጺኡኒ።', // nieuw, nalezen
-  'be.c.council.q': 'ሰንበት ምድማጽ ኣሎ ድዩ ኣብ መደብ?', // nieuw, nalezen
+  'be.c.council.q': { m: 'ሰንበት ክትድምጽ ክትከይድ ዲኻ?', f: 'ሰንበት ክትድምጺ ክትከዲ ዲኺ?', x: 'ሰንበት ክትድምጹ ክትከዱ ዲኹም?' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.council.a': 'እወ። ደብዳቤ ምድማጽን መንነት ወረቐተይን ኣለዉኒ።', // nieuw, nalezen
   'be.l.police': 'ፖሊስ፡ ተቓውሞ ከምኡውን መሰላት', // nieuw, nalezen
   'be.w.wijkagent': 'ፖሊስ ናይ ከባቢ', // nieuw, nalezen
@@ -76,15 +76,15 @@ export const ti: Gloss = {
   'be.c.police.q': 'መንነት ወረቐት ክርኢ ይኽእል ድየ?', // nieuw, nalezen
   'be.c.police.a': 'እወ፡ እንሆ። እንታይ ኣሎ?', // nieuw, nalezen
   'be.c.council': 'ምምሕዳር ከተማ፡ መን ክድምጽ ይኽእል', // nieuw, nalezen
-  'be.c.council.b': 'ምምሕዳር ከተማ (gemeente) ኣድራሻ ይሕዝ፡ መንነት ወረቐት ድማ ይህብ። ገዛ ምቕያር? ኣብ ውሽጢ 8 መዓልታት ስራሕ ንምምሕዳር ከተማ ናይቲ ሓድሽ ገዛ ምሕባር የድሊ። ድሕሪኡ ፖሊስ ናይ ከባቢ (wijkagent) ኣብኡ ከም እትነብር ክርኢ ይመጽእ። ኣብ ነፍሲ ወከፍ 6 ዓመት ምርጫ ቤት ምኽሪ ከተማ (gemeenteraad) ኣሎ። ካብ ካልእ ሃገር ናይ ኤውሮጳዊ ሕብረት ዝመጹ፡ ከምኡውን ካብ ደገ ኤውሮጳዊ ሕብረት ድሕሪ 5 ዓመት ሕጋዊ መንበሪ፡ ክድምጹ ይኽእሉ። መጀመርታ ኣብ ምምሕዳር ከተማ ከም መራጺ ምምዝጋብ የድሊ። ኣብ ፍላንደርስ ንቤት ምኽሪ ከተማ ምድማጽ ግዴታ ኣይኮነን። ኣብ ካልኦት ምርጫታት ቤልጅዩማውያን ክድምጹ ግዴታ ኣለዎም (opkomstplicht)። ደብዳቤ (oproepingsbrief) ይመጽእ፡ ምስ መንነት ወረቐት ሒዝካ ኺድ። ርግጸኛ ዘይኮንካ? ንምምሕዳር ከተማ ሕተት።', // nieuw, nalezen
+  'be.c.council.b': { m: 'ምምሕዳር ከተማ (gemeente) ኣድራሻ ይሕዝ፡ መንነት ወረቐት ድማ ይህብ። ገዛ ምቕያር? ኣብ ውሽጢ 8 መዓልታት ስራሕ ንምምሕዳር ከተማ ናይቲ ሓድሽ ገዛ ምሕባር የድሊ። ድሕሪኡ ፖሊስ ናይ ከባቢ (wijkagent) ኣብኡ ከም እትነብር ክርኢ ይመጽእ። ኣብ ነፍሲ ወከፍ 6 ዓመት ምርጫ ቤት ምኽሪ ከተማ (gemeenteraad) ኣሎ። ካብ ካልእ ሃገር ናይ ኤውሮጳዊ ሕብረት ዝመጹ፡ ከምኡውን ካብ ደገ ኤውሮጳዊ ሕብረት ድሕሪ 5 ዓመት ሕጋዊ መንበሪ፡ ክድምጹ ይኽእሉ። መጀመርታ ኣብ ምምሕዳር ከተማ ከም መራጺ ምምዝጋብ የድሊ። ኣብ ፍላንደርስ ንቤት ምኽሪ ከተማ ምድማጽ ግዴታ ኣይኮነን። ኣብ ካልኦት ምርጫታት ቤልጅዩማውያን ክድምጹ ግዴታ ኣለዎም (opkomstplicht)። ደብዳቤ (oproepingsbrief) ይመጽእ፡ ምስ መንነት ወረቐት ሒዝካ ኺድ። ርግጸኛ ዘይኮንካ? ንምምሕዳር ከተማ ሕተት።', f: 'ምምሕዳር ከተማ (gemeente) ኣድራሻ ይሕዝ፡ መንነት ወረቐት ድማ ይህብ። ገዛ ምቕያር? ኣብ ውሽጢ 8 መዓልታት ስራሕ ንምምሕዳር ከተማ ናይቲ ሓድሽ ገዛ ምሕባር የድሊ። ድሕሪኡ ፖሊስ ናይ ከባቢ (wijkagent) ኣብኡ ከም እትነብር ክርኢ ይመጽእ። ኣብ ነፍሲ ወከፍ 6 ዓመት ምርጫ ቤት ምኽሪ ከተማ (gemeenteraad) ኣሎ። ካብ ካልእ ሃገር ናይ ኤውሮጳዊ ሕብረት ዝመጹ፡ ከምኡውን ካብ ደገ ኤውሮጳዊ ሕብረት ድሕሪ 5 ዓመት ሕጋዊ መንበሪ፡ ክድምጹ ይኽእሉ። መጀመርታ ኣብ ምምሕዳር ከተማ ከም መራጺ ምምዝጋብ የድሊ። ኣብ ፍላንደርስ ንቤት ምኽሪ ከተማ ምድማጽ ግዴታ ኣይኮነን። ኣብ ካልኦት ምርጫታት ቤልጅዩማውያን ክድምጹ ግዴታ ኣለዎም (opkomstplicht)። ደብዳቤ (oproepingsbrief) ይመጽእ፡ ምስ መንነት ወረቐት ሒዝኪ ኪዲ። ርግጸኛ ዘይኮንኪ? ንምምሕዳር ከተማ ሕተቲ።', x: 'ምምሕዳር ከተማ (gemeente) ኣድራሻ ይሕዝ፡ መንነት ወረቐት ድማ ይህብ። ገዛ ምቕያር? ኣብ ውሽጢ 8 መዓልታት ስራሕ ንምምሕዳር ከተማ ናይቲ ሓድሽ ገዛ ምሕባር የድሊ። ድሕሪኡ ፖሊስ ናይ ከባቢ (wijkagent) ኣብኡ ከም እትነብር ክርኢ ይመጽእ። ኣብ ነፍሲ ወከፍ 6 ዓመት ምርጫ ቤት ምኽሪ ከተማ (gemeenteraad) ኣሎ። ካብ ካልእ ሃገር ናይ ኤውሮጳዊ ሕብረት ዝመጹ፡ ከምኡውን ካብ ደገ ኤውሮጳዊ ሕብረት ድሕሪ 5 ዓመት ሕጋዊ መንበሪ፡ ክድምጹ ይኽእሉ። መጀመርታ ኣብ ምምሕዳር ከተማ ከም መራጺ ምምዝጋብ የድሊ። ኣብ ፍላንደርስ ንቤት ምኽሪ ከተማ ምድማጽ ግዴታ ኣይኮነን። ኣብ ካልኦት ምርጫታት ቤልጅዩማውያን ክድምጹ ግዴታ ኣለዎም (opkomstplicht)። ደብዳቤ (oproepingsbrief) ይመጽእ፡ ምስ መንነት ወረቐት ሒዝኩም ኪዱ። ርግጸኛታት ዘይኮንኩም? ንምምሕዳር ከተማ ሕተቱ።' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.council.p': 'ንቤት ምኽሪ ከተማ ክድምጽ ይፍቀደለይ ድዩ? መጀመርታ ክምዝገብ ኣለኒ ድዩ?', // nieuw, nalezen
-  'be.c.council.s': 'መበቆል ካብ ሞሮኮ፡ ኣብ ኽሕንት (Gent) ንሹድሽተ ዓመት ሕጋዊ መንበሪ። ቤልጅዩማዊ ዜግነት የለን። ቀልጢፉ ምርጫ ቤት ምኽሪ ከተማ ኣሎ። እንታይ እዩ ሓቂ?', // nieuw, nalezen
+  'be.c.council.s': 'መበቆል ካብ ሞሮኮ፡ ኣብ ኽሕንት (Gent) ንሽዱሽተ ዓመት ሕጋዊ መንበሪ። ቤልጅዩማዊ ዜግነት የለን። ቀልጢፉ ምርጫ ቤት ምኽሪ ከተማ ኣሎ። እንታይ እዩ ሓቂ?', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.council.o1': 'ምድማጽ ይፍቀድ፡ ድሕሪ ኣብ ምምሕዳር ከተማ ምምዝጋብ።', // nieuw, nalezen
   'be.c.council.o2': 'ንፈደራላዊ ባይቶ እውን ምድማጽ ይፍቀድ።', // nieuw, nalezen
   'be.c.council.o3': 'ብዘይ ቤልጅዩማዊ ፓስፖርት ፈጺሙ ምድማጽ ኣይፍቀድን።', // nieuw, nalezen
   'be.c.council.w': 'ድሕሪ 5 ዓመት ሕጋዊ መንበሪ ንቤት ምኽሪ ከተማ ምድማጽ ይፍቀድ። መጀመርታ ከም መራጺ ምምዝጋብ የድሊ። ንፈደራላዊ ባይቶ ቤልጅዩማዊ ዜግነት የድሊ።', // nieuw, nalezen
   'be.c.police': 'መንነት ወረቐትን መሰላትን', // nieuw, nalezen
-  'be.c.police.b': 'ካብ 15 ዓመት ጀሚሩ መንነት ወረቐት (ወይ ወረቐት መንበሪ) ኩሉ ግዜ ምሳኻ ክህሉ ኣለዎ፡ ፖሊስ ምስ ዝሓቶ ድማ ምርኣይ የድሊ። ዘይትሰማምዓሉ ውሳነ ዘለዎ ደብዳቤ መጺኡ፡ ንኣብነት መቕጻዕቲ ካብ ምምሕዳር ከተማ? ሽዑ ብጽሑፍ መልሲ ምሃብ ይከኣል (bezwaar maken)። እቲ ደብዳቤ ብኸመይን ክሳብ መዓስን ይነግር። ቅድሚ እቲ ዕለት ግበሮ። ኩሉ ሰብ ኣብ ቅድሚ ሕጊ ማዕረ እዩ። ፖሊስ ክሓትት ይደሊ? ሽዑ መጀመርታ ምስ ጠበቓ ምዝራብ ይፍቀድ። ቀዳማይ ምኽሪ ካብ ጠበቓ ብናጻ እዩ፡ ኣብ justitiehuis። ኣድልዎ? Unia ክሕግዝ ይኽእል።', // nieuw, nalezen
+  'be.c.police.b': { m: 'ካብ 15 ዓመት ጀሚሩ መንነት ወረቐት (ወይ ወረቐት መንበሪ) ኩሉ ግዜ ምሳኻ ክህሉ ኣለዎ፡ ፖሊስ ምስ ዝሓቶ ድማ ምርኣይ የድሊ። ዘይትሰማምዓሉ ውሳነ ዘለዎ ደብዳቤ መጺኡ፡ ንኣብነት መቕጻዕቲ ካብ ምምሕዳር ከተማ? ሽዑ ብጽሑፍ መልሲ ምሃብ ይከኣል (bezwaar maken)። እቲ ደብዳቤ ብኸመይን ክሳብ መዓስን ይነግር። ቅድሚ እቲ ዕለት ግበሮ። ኩሉ ሰብ ኣብ ቅድሚ ሕጊ ማዕረ እዩ። ፖሊስ ክሓትት ይደሊ? ሽዑ መጀመርታ ምስ ጠበቓ ምዝራብ ይፍቀድ። ቀዳማይ ምኽሪ ካብ ጠበቓ ብናጻ እዩ፡ ኣብ justitiehuis። ኣድልዎ? Unia ክሕግዝ ይኽእል።', f: 'ካብ 15 ዓመት ጀሚሩ መንነት ወረቐት (ወይ ወረቐት መንበሪ) ኩሉ ግዜ ምሳኺ ክህሉ ኣለዎ፡ ፖሊስ ምስ ዝሓቶ ድማ ምርኣይ የድሊ። ዘይትሰማምዒሉ ውሳነ ዘለዎ ደብዳቤ መጺኡ፡ ንኣብነት መቕጻዕቲ ካብ ምምሕዳር ከተማ? ሽዑ ብጽሑፍ መልሲ ምሃብ ይከኣል (bezwaar maken)። እቲ ደብዳቤ ብኸመይን ክሳብ መዓስን ይነግር። ቅድሚ እቲ ዕለት ግበርዮ። ኩሉ ሰብ ኣብ ቅድሚ ሕጊ ማዕረ እዩ። ፖሊስ ክሓትት ይደሊ? ሽዑ መጀመርታ ምስ ጠበቓ ምዝራብ ይፍቀድ። ቀዳማይ ምኽሪ ካብ ጠበቓ ብናጻ እዩ፡ ኣብ justitiehuis። ኣድልዎ? Unia ክሕግዝ ይኽእል።', x: 'ካብ 15 ዓመት ጀሚሩ መንነት ወረቐት (ወይ ወረቐት መንበሪ) ኩሉ ግዜ ምሳኹም ክህሉ ኣለዎ፡ ፖሊስ ምስ ዝሓቶ ድማ ምርኣይ የድሊ። ዘይትሰማምዑሉ ውሳነ ዘለዎ ደብዳቤ መጺኡ፡ ንኣብነት መቕጻዕቲ ካብ ምምሕዳር ከተማ? ሽዑ ብጽሑፍ መልሲ ምሃብ ይከኣል (bezwaar maken)። እቲ ደብዳቤ ብኸመይን ክሳብ መዓስን ይነግር። ቅድሚ እቲ ዕለት ግበርዎ። ኩሉ ሰብ ኣብ ቅድሚ ሕጊ ማዕረ እዩ። ፖሊስ ክሓትት ይደሊ? ሽዑ መጀመርታ ምስ ጠበቓ ምዝራብ ይፍቀድ። ቀዳማይ ምኽሪ ካብ ጠበቓ ብናጻ እዩ፡ ኣብ justitiehuis። ኣድልዎ? Unia ክሕግዝ ይኽእል።' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.p': 'በዚ ውሳነ ኣይሰማማዕን እየ። ተቓውሞ የቕርብ ኣለኹ።', // nieuw, nalezen
   'be.c.police.s': 'ካብ ምምሕዳር ከተማ መቕጻዕቲ ዘለዎ ደብዳቤ መጺኡ። እቲ መቕጻዕቲ ቅኑዕ ኣይመስልን። ኣብቲ ደብዳቤ ናይ መልሲ ዕለት ኣሎ። እንታይ ይግበር?', // nieuw, nalezen
   'be.c.police.o1': 'ብጽሑፍ መልሲ ምሃብ፡ ቅድሚ እቲ ኣብ ደብዳቤ ዘሎ ዕለት።', // nieuw, nalezen
@@ -98,43 +98,43 @@ export const fa: Gloss = {
   'be.l.council': 'شهرداری (gemeente) و رأی دادن', // nieuw, nalezen
   'be.w.stemmen': 'رأی دادن', // nieuw, nalezen
   'be.w.gemeentehuis': 'ساختمان شهرداری', // nieuw, nalezen
-  'be.w.gemeenteraad': 'شورای شهر (دربارهٔ شهر شما تصمیم می‌گیرد)', // nieuw, nalezen
+  'be.w.gemeenteraad': 'شورای شهر (دربارهٔ شهر تو تصمیم می‌گیرد)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.burgemeester': 'شهردار', // nieuw, nalezen
-  'be.w.oproepingsbrief': 'نامهٔ دعوت به رأی‌گیری (می‌گوید کجا و کی رأی می‌دهید)', // nieuw, nalezen
+  'be.w.oproepingsbrief': 'نامهٔ دعوت به رأی‌گیری (می‌گوید کجا و کی رأی می‌دهی)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.opkomstplicht': 'وظیفهٔ رفتن برای رأی دادن', // nieuw, nalezen
   'be.s.council.1': 'خانه‌ام را عوض می‌کنم. آدرس جدیدم را به شهرداری می‌دهم.', // nieuw, nalezen
   'be.s.council.2': 'آیا می‌توانم برای شورای شهر رأی بدهم؟', // nieuw, nalezen
   'be.s.council.3': 'نامهٔ رأی‌گیری‌ام با پست آمد.', // nieuw, nalezen
   'be.c.council.q': 'یکشنبه برای رأی دادن می‌روی؟', // nieuw, nalezen
   'be.c.council.a': 'بله. نامهٔ رأی‌گیری و کارت شناسایی‌ام را دارم.', // nieuw, nalezen
-  'be.l.police': 'پلیس، اعتراض و حقوق شما', // nieuw, nalezen
+  'be.l.police': 'پلیس، اعتراض و حق‌های تو', // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.wijkagent': 'مأمور پلیس محله', // nieuw, nalezen
   'be.w.identiteitskaart': 'کارت شناسایی (eID)', // nieuw, nalezen
-  'be.w.boete': 'جریمه (پولی که به عنوان تنبیه باید بپردازید)', // nieuw, nalezen
-  'be.w.bezwaar': 'اعتراض (کتبی می‌گویید که موافق نیستید)', // nieuw, nalezen
+  'be.w.boete': 'جریمه (پولی که به‌عنوان مجازات باید بپردازی)', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.w.bezwaar': 'اعتراض (کتبی می‌گویی که موافق نیستی)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.advocaat': 'وکیل', // nieuw, nalezen
-  'be.w.recht': 'حق (آنچه قانون می‌گوید می‌توانید بکنید یا بگیرید)', // nieuw, nalezen
+  'be.w.recht': 'حق (آنچه قانون می‌گوید می‌توانی بکنی یا بگیری)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.police.1': 'کارت شناسایی‌ام همیشه همراهم است.', // nieuw, nalezen
   'be.s.police.2': 'می‌خواهم اعتراض کنم.', // nieuw, nalezen
   'be.s.police.3': 'می‌خواهم اول با یک وکیل حرف بزنم.', // nieuw, nalezen
   'be.c.police.q': 'می‌توانم کارت شناسایی‌تان را ببینم؟', // nieuw, nalezen
   'be.c.police.a': 'بله، بفرمایید. چه شده است؟', // nieuw, nalezen
-  'be.c.council': 'شهرداری شما، و چه کسی می‌تواند رأی بدهد', // nieuw, nalezen
-  'be.c.council.b': 'شهرداری (gemeente) آدرس شما را نگه می‌دارد و کارت شناسایی‌تان را می‌دهد. اسباب‌کشی می‌کنید؟ ظرف 8 روز کاری به شهرداری خانهٔ جدیدتان خبر بدهید. بعد مأمور پلیس محله (wijkagent) می‌آید تا ببیند آنجا زندگی می‌کنید. هر 6 سال انتخابات شورای شهر (gemeenteraad) برگزار می‌شود. کسانی که از کشور دیگری از اتحادیهٔ اروپا هستند، و کسانی که از بیرون اتحادیهٔ اروپا هستند پس از 5 سال اقامت قانونی، می‌توانند در آن رأی بدهند. اول در شهرداری به عنوان رأی‌دهنده ثبت‌نام می‌کنید. در فلاندر رأی دادن برای شورای شهر اجباری نیست. در انتخابات دیگر، بلژیکی‌ها باید برای رأی دادن بروند (opkomstplicht). نامه‌ای (oproepingsbrief) می‌گیرید: آن را با کارت شناسایی‌تان ببرید. مطمئن نیستید؟ از شهرداری بپرسید.', // nieuw, nalezen
+  'be.c.council': 'شهرداری تو، و چه کسی می‌تواند رأی بدهد', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.council.b': 'شهرداری (gemeente) آدرست را نگه می‌دارد و کارت شناسایی‌ات را می‌دهد. اسباب‌کشی می‌کنی؟ ظرف 8 روز کاری به شهرداری خانهٔ جدیدت خبر بده. بعد مأمور پلیس محله (wijkagent) می‌آید تا ببیند آنجا زندگی می‌کنی. هر 6 سال انتخابات شورای شهر (gemeenteraad) برگزار می‌شود. کسانی که از کشور دیگری از اتحادیهٔ اروپا هستند، و کسانی که از بیرون اتحادیهٔ اروپا هستند پس از 5 سال اقامت قانونی، می‌توانند در آن رأی بدهند. اول در شهرداری به‌عنوان رأی‌دهنده ثبت‌نام می‌کنی. در فلاندر رأی دادن برای شورای شهر اجباری نیست. در انتخابات دیگر، بلژیکی‌ها باید برای رأی دادن بروند (opkomstplicht). نامه‌ای (oproepingsbrief) می‌گیری: آن را با کارت شناسایی‌ات ببر. مطمئن نیستی؟ از شهرداری بپرس.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.council.p': 'آیا می‌توانم برای شورای شهر رأی بدهم؟ باید اول ثبت‌نام کنم؟', // nieuw, nalezen
-  'be.c.council.s': 'شما اهل مراکش هستید و شش سال است که به‌طور قانونی در خنت (Gent) زندگی می‌کنید. بلژیکی نیستید. به‌زودی انتخابات شورای شهر است. چه چیزی درست است؟', // nieuw, nalezen
-  'be.c.council.o1': 'می‌توانید رأی بدهید، پس از ثبت‌نام در شهرداری.', // nieuw, nalezen
-  'be.c.council.o2': 'برای پارلمان فدرال هم می‌توانید رأی بدهید.', // nieuw, nalezen
-  'be.c.council.o3': 'بدون پاسپورت بلژیکی اصلاً نمی‌توانید رأی بدهید.', // nieuw, nalezen
-  'be.c.council.w': 'پس از 5 سال اقامت قانونی می‌توانید برای شورای شهر رأی بدهید. اول باید به عنوان رأی‌دهنده ثبت‌نام کنید. برای پارلمان فدرال تابعیت بلژیکی لازم است.', // nieuw, nalezen
-  'be.c.police': 'کارت شناسایی و حقوق شما', // nieuw, nalezen
-  'be.c.police.b': 'از 15 سالگی باید همیشه کارت شناسایی (یا کارت اقامت) همراهتان باشد و وقتی پلیس خواست، آن را نشان بدهید. نامه‌ای با تصمیمی گرفته‌اید که با آن موافق نیستید، مثلاً جریمه‌ای از شهرداری؟ آن وقت می‌توانید کتبی پاسخ بدهید (bezwaar maken). نامه می‌گوید چطور و تا کی. قبل از آن تاریخ این کار را بکنید. همه در برابر قانون برابرند. پلیس می‌خواهد از شما بازجویی کند؟ آن وقت حق دارید اول با یک وکیل حرف بزنید. اولین مشاوره با وکیل رایگان است، در justitiehuis. تبعیض؟ Unia می‌تواند کمک کند.', // nieuw, nalezen
+  'be.c.council.s': 'اهل مراکشی و شش سال است که به‌طور قانونی در خنت (Gent) زندگی می‌کنی. بلژیکی نیستی. به‌زودی انتخابات شورای شهر است. چه چیزی درست است؟', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.council.o1': 'می‌توانی رأی بدهی، پس از ثبت‌نام در شهرداری.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.council.o2': 'برای پارلمان فدرال هم می‌توانی رأی بدهی.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.council.o3': 'بدون پاسپورت بلژیکی اصلاً نمی‌توانی رأی بدهی.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.council.w': 'پس از 5 سال اقامت قانونی می‌توانی برای شورای شهر رأی بدهی. اول باید به‌عنوان رأی‌دهنده ثبت‌نام کنی. برای پارلمان فدرال تابعیت بلژیکی لازم است.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police': 'کارت شناسایی و حق‌های تو', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.b': 'از 15 سالگی باید همیشه کارت شناسایی (یا کارت اقامت) همراهت باشد و وقتی پلیس خواست، آن را نشان بدهی. نامه‌ای با تصمیمی گرفته‌ای که با آن موافق نیستی، مثلاً جریمه‌ای از شهرداری؟ آن وقت می‌توانی کتبی پاسخ بدهی (bezwaar maken). نامه می‌گوید چطور و تا کی. قبل از آن تاریخ این کار را بکن. همه در برابر قانون برابرند. پلیس می‌خواهد از تو بازجویی کند؟ آن وقت حق داری اول با یک وکیل حرف بزنی. اولین مشاوره با وکیل رایگان است، در justitiehuis. تبعیض؟ Unia می‌تواند کمک کند.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.p': 'با این تصمیم موافق نیستم. اعتراض می‌کنم.', // nieuw, nalezen
-  'be.c.police.s': 'با نامه‌ای از شهرداری جریمه گرفته‌اید. فکر می‌کنید درست نیست. نامه یک تاریخ برای پاسخ دادن می‌دهد. چه کار می‌کنید؟', // nieuw, nalezen
-  'be.c.police.o1': 'قبل از تاریخ نامه، کتبی پاسخ بدهید.', // nieuw, nalezen
-  'be.c.police.o2': 'یک بار زنگ بزنید و منتظر بمانید تا به شما زنگ بزنند.', // nieuw, nalezen
-  'be.c.police.o3': 'صبر کنید: بعد از آن تاریخ خودش تمام می‌شود.', // nieuw, nalezen
-  'be.c.police.w': 'کتبی پاسخ می‌دهید، قبل از تاریخ نامه. بعد از آن تاریخ اغلب دیر است. justitiehuis اولین مشاوره را رایگان می‌دهد.', // nieuw, nalezen
+  'be.c.police.s': 'با نامه‌ای از شهرداری جریمه گرفته‌ای. فکر می‌کنی درست نیست. نامه یک تاریخ برای پاسخ دادن می‌دهد. چه کار می‌کنی؟', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o1': 'قبل از تاریخی که در نامه آمده، کتبی پاسخ بده.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o2': 'یک بار زنگ بزن و منتظر بمان تا به تو زنگ بزنند.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o3': 'صبر کن: بعد از آن تاریخ خودش تمام می‌شود.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.w': 'کتبی پاسخ می‌دهی، قبل از تاریخی که در نامه آمده. بعد از آن تاریخ اغلب دیر است. justitiehuis اولین مشاوره را رایگان می‌دهد.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const prs: Gloss = {
@@ -149,8 +149,8 @@ export const prs: Gloss = {
   'be.s.council.1': 'خانه‌ام را تبدیل می‌کنم. آدرس نو خود را به شاروالی می‌دهم.', // nieuw, nalezen
   'be.s.council.2': 'آیا می‌توانم برای شورای شهر رأی بدهم؟', // nieuw, nalezen
   'be.s.council.3': 'نامهٔ رأی‌دهی من با پست آمد.', // nieuw, nalezen
-  'be.c.council.q': 'یکشنبه برای رأی دادن می‌روی؟', // nieuw, nalezen
-  'be.c.council.a': 'بلی. نامهٔ رأی‌دهی و تذکرهٔ هویت خود را دارم.', // nieuw, nalezen
+  'be.c.council.q': 'یکشنبه برای رأی دادن می‌روید؟', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.council.a': 'بلی. نامهٔ رأی‌دهی و کارت هویت خود را دارم.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.l.police': 'پولیس، اعتراض و حقوق شما', // nieuw, nalezen
   'be.w.wijkagent': 'پولیس ساحه', // nieuw, nalezen
   'be.w.identiteitskaart': 'کارت هویت (eID)', // nieuw, nalezen
@@ -175,10 +175,10 @@ export const prs: Gloss = {
   'be.c.police.b': 'از 15 سالگی باید همیشه کارت هویت (یا کارت اقامت) با شما باشد و وقتی پولیس خواست، آن را نشان بدهید. نامه‌ای با تصمیمی گرفته‌اید که با آن موافق نیستید، مثلاً جریمه‌ای از شاروالی؟ آن وقت می‌توانید به‌طور کتبی جواب بدهید (bezwaar maken). نامه می‌گوید چطور و تا چه وقت. پیش از آن تاریخ این کار را بکنید. همه در برابر قانون برابر هستند. پولیس می‌خواهد از شما سوال و جواب کند؟ آن وقت حق دارید اول با یک وکیل گپ بزنید. اولین مشوره با وکیل رایگان است، در justitiehuis. تبعیض؟ Unia می‌تواند کمک کند.', // nieuw, nalezen
   'be.c.police.p': 'با این تصمیم موافق نیستم. اعتراض می‌کنم.', // nieuw, nalezen
   'be.c.police.s': 'با نامه‌ای از شاروالی جریمه گرفته‌اید. فکر می‌کنید درست نیست. نامه یک تاریخ برای جواب دادن می‌دهد. چه کار می‌کنید؟', // nieuw, nalezen
-  'be.c.police.o1': 'پیش از تاریخ نامه، کتبی جواب بدهید.', // nieuw, nalezen
+  'be.c.police.o1': 'پیش از تاریخی که در نامه آمده، کتبی جواب بدهید.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o2': 'یک بار زنگ بزنید و منتظر بمانید تا به شما زنگ بزنند.', // nieuw, nalezen
   'be.c.police.o3': 'صبر کنید: بعد از آن تاریخ خودش ختم می‌شود.', // nieuw, nalezen
-  'be.c.police.w': 'به‌طور کتبی جواب می‌دهید، پیش از تاریخ نامه. بعد از آن تاریخ اکثراً دیر است. justitiehuis اولین مشوره را رایگان می‌دهد.', // nieuw, nalezen
+  'be.c.police.w': 'به‌طور کتبی جواب می‌دهید، پیش از تاریخی که در نامه آمده. بعد از آن تاریخ اکثراً دیر است. justitiehuis اولین مشوره را رایگان می‌دهد.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const uk: Gloss = {
@@ -199,7 +199,7 @@ export const uk: Gloss = {
   'be.w.wijkagent': 'дільничний поліцейський', // nieuw, nalezen
   'be.w.identiteitskaart': 'ID-картка (eID)', // nieuw, nalezen
   'be.w.boete': 'штраф (гроші, які треба заплатити як покарання)', // nieuw, nalezen
-  'be.w.bezwaar': 'заперечення (ти письмово кажеш, що не згоден)', // nieuw, nalezen
+  'be.w.bezwaar': 'заперечення (ти письмово кажеш, що не погоджуєшся)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.advocaat': 'адвокат', // nieuw, nalezen
   'be.w.recht': 'право (що закон дозволяє тобі робити чи отримати)', // nieuw, nalezen
   'be.s.police.1': 'Моя ID-картка завжди при мені.', // nieuw, nalezen
@@ -208,7 +208,7 @@ export const uk: Gloss = {
   'be.c.police.q': 'Можна побачити вашу ID-картку?', // nieuw, nalezen
   'be.c.police.a': 'Так, ось вона. Що сталося?', // nieuw, nalezen
   'be.c.council': 'Твоя громада і хто може голосувати', // nieuw, nalezen
-  'be.c.council.b': 'Громада (gemeente) зберігає твою адресу і видає тобі ID-картку. Переїжджаєш? Повідом громаду нового житла протягом 8 робочих днів. Потім дільничний (wijkagent) приходить перевірити, що ти там живеш. Кожні 6 років відбуваються вибори до ради громади (gemeenteraad). Голосувати можуть люди з іншої країни ЄС, а люди з-поза ЄС — після 5 років законного перебування. Спершу треба зареєструватися як виборець у громаді. У Фландрії голосувати за раду громади не обов’язково. На інших виборах бельгійці мусять прийти голосувати (opkomstplicht). Ти отримаєш лист (oproepingsbrief): візьми його разом з ID-карткою. Не впевнений? Запитай у громаді.', // nieuw, nalezen
+  'be.c.council.b': 'Громада (gemeente) зберігає твою адресу і видає тобі ID-картку. Переїжджаєш? Повідом громаду нового житла протягом 8 робочих днів. Потім дільничний (wijkagent) приходить перевірити, що ти там живеш. Кожні 6 років відбуваються вибори до ради громади (gemeenteraad). Голосувати можуть люди з іншої країни ЄС, а люди з-поза ЄС — після 5 років законного перебування. Спершу треба зареєструватися як виборець у громаді. У Фландрії голосувати за раду громади не обов’язково. На інших виборах бельгійці мусять прийти голосувати (opkomstplicht). Ти отримаєш лист (oproepingsbrief): візьми його разом з ID-карткою. Не знаєш точно? Запитай у громаді.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.council.p': 'Чи можу я голосувати за раду громади? Мені спершу треба зареєструватися?', // nieuw, nalezen
   'be.c.council.s': 'Ти з Марокко і вже шість років законно живеш у Генті (Gent). У тебе немає бельгійського громадянства. Скоро вибори до ради громади. Що правда?', // nieuw, nalezen
   'be.c.council.o1': 'Можна голосувати, після реєстрації в громаді.', // nieuw, nalezen
@@ -216,12 +216,12 @@ export const uk: Gloss = {
   'be.c.council.o3': 'Без бельгійського паспорта взагалі не можна голосувати.', // nieuw, nalezen
   'be.c.council.w': 'Після 5 років законного перебування можна голосувати за раду громади. Спершу треба зареєструватися як виборець. Для федерального парламенту потрібне бельгійське громадянство.', // nieuw, nalezen
   'be.c.police': 'Твоя ID-картка і твої права', // nieuw, nalezen
-  'be.c.police.b': 'З 15 років ID-картка (або картка на проживання) має бути завжди при тобі, і ти показуєш її, коли просить поліція. Отримав лист з рішенням, з яким не згоден, наприклад штраф від громади? Тоді можна відповісти письмово (bezwaar maken). У листі сказано, як і до якої дати. Зроби це до цієї дати. Усі рівні перед законом. Поліція хоче тебе допитати? Тоді ти маєш право спершу поговорити з адвокатом. Перша порада адвоката безкоштовна, у justitiehuis. Дискримінація? Unia може допомогти.', // nieuw, nalezen
-  'be.c.police.p': 'Я не згоден із цим рішенням. Я подаю заперечення.', // nieuw, nalezen
-  'be.c.police.s': 'Ти отримуєш листом штраф від громади. Тобі здається, що це неправильно. У листі є дата для відповіді. Що ти робиш?', // nieuw, nalezen
-  'be.c.police.o1': 'Відповісти письмово, до дати в листі.', // nieuw, nalezen
-  'be.c.police.o2': 'Подзвонити один раз і чекати, поки передзвонять.', // nieuw, nalezen
-  'be.c.police.o3': 'Чекати: після цієї дати все мине саме.', // nieuw, nalezen
+  'be.c.police.b': 'З 15 років ID-картка (або картка на проживання) має бути завжди при тобі, і ти показуєш її, коли просить поліція. Отримуєш лист із рішенням, з яким не погоджуєшся, наприклад штраф від громади? Тоді можна відповісти письмово (bezwaar maken). У листі сказано, як і до якої дати. Зроби це до цієї дати. Усі рівні перед законом. Поліція хоче тебе допитати? Тоді ти маєш право спершу поговорити з адвокатом. Перша порада адвоката безкоштовна, у justitiehuis. Дискримінація? Unia може допомогти.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.p': 'Я не погоджуюся з цим рішенням. Я подаю заперечення.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.s': 'Ти отримуєш листом штраф від громади. Тобі здається, що це неправильно. У листі є дата для відповіді. Що ти зробиш?', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o1': 'Відповіси письмово, до дати в листі.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o2': 'Подзвониш один раз і чекатимеш, поки передзвонять.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o3': 'Чекатимеш: після цієї дати все мине саме.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.w': 'Відповідають письмово, до дати в листі. Після неї часто вже запізно. У justitiehuis дають першу пораду безкоштовно.', // nieuw, nalezen
 };
 
@@ -252,7 +252,7 @@ export const tr: Gloss = {
   'be.c.police.q': 'Kimlik kartınızı görebilir miyim?', // nieuw, nalezen
   'be.c.police.a': 'Evet, buyurun. Ne oldu?', // nieuw, nalezen
   'be.c.council': 'Belediyen ve kimin oy verebileceği', // nieuw, nalezen
-  'be.c.council.b': 'Belediye (gemeente) adresini kayıtlı tutar ve sana kimlik kartını verir. Taşınıyor musun? Yeni evinin belediyesine 8 iş günü içinde bildir. Sonra mahalle polisi (wijkagent) orada oturduğunu kontrol etmeye gelir. Her 6 yılda bir belediye meclisi (gemeenteraad) seçimi olur. Başka bir AB ülkesinden gelenler ve AB dışından gelenler 5 yıl yasal oturumdan sonra bu seçimde oy verebilir. Önce belediyeye seçmen olarak kaydolursun. Flandre’da belediye meclisi için oy vermek zorunlu değildir. Diğer seçimlerde Belçikalılar oy vermeye gitmek zorundadır (opkomstplicht). Bir mektup (oproepingsbrief) alırsın: onu kimlik kartınla birlikte götür. Emin değil misin? Belediyeye sor.', // nieuw, nalezen
+  'be.c.council.b': 'Belediye (gemeente) adresini kayıtlı tutar ve sana kimlik kartını verir. Taşınıyor musun? Yeni evinin belediyesine 8 iş günü içinde bildir. Sonra mahalle polisi (wijkagent) orada oturduğunu kontrol etmeye gelir. Her 6 yılda bir belediye meclisi (gemeenteraad) seçimi olur. Başka bir AB ülkesinden gelenler bu seçimde oy verebilir; AB dışından gelenler ise 5 yıl yasal oturumdan sonra. Önce belediyeye seçmen olarak kaydolursun. Flandra’da belediye meclisi için oy vermek zorunlu değildir. Diğer seçimlerde Belçikalılar oy vermeye gitmek zorundadır (opkomstplicht). Bir mektup (oproepingsbrief) alırsın: onu kimlik kartınla birlikte götür. Emin değil misin? Belediyeye sor.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.council.p': 'Belediye meclisi için oy verebilir miyim? Önce kaydolmam gerekiyor mu?', // nieuw, nalezen
   'be.c.council.s': 'Faslısın ve altı yıldır Gent’te yasal olarak yaşıyorsun. Belçika vatandaşı değilsin. Yakında belediye meclisi seçimi var. Hangisi doğru?', // nieuw, nalezen
   'be.c.council.o1': 'Belediyeye kaydolduktan sonra oy verebilirsin.', // nieuw, nalezen
@@ -263,9 +263,9 @@ export const tr: Gloss = {
   'be.c.police.b': '15 yaşından itibaren kimlik kartın (veya oturum kartın) her zaman yanında olmalı ve polis isterse göstermelisin. Kabul etmediğin bir kararın yazılı olduğu bir mektup mu aldın, örneğin belediyeden bir para cezası? O zaman yazılı olarak cevap verebilirsin (bezwaar maken). Mektup nasıl ve ne zamana kadar yapacağını yazar. O tarihten önce yap. Herkes yasa önünde eşittir. Polis seni sorgulamak mı istiyor? O zaman önce bir avukatla konuşma hakkın var. Bir avukattan ilk danışmanlık ücretsizdir, justitiehuis’te. Ayrımcılık mı? Unia yardım edebilir.', // nieuw, nalezen
   'be.c.police.p': 'Bu karara katılmıyorum. İtiraz ediyorum.', // nieuw, nalezen
   'be.c.police.s': 'Belediyeden mektupla bir para cezası alıyorsun. Bunun doğru olmadığını düşünüyorsun. Mektupta cevap için bir tarih var. Ne yaparsın?', // nieuw, nalezen
-  'be.c.police.o1': 'Mektuptaki tarihten önce yazılı cevap ver.', // nieuw, nalezen
-  'be.c.police.o2': 'Bir kere ara ve seni geri aramalarını bekle.', // nieuw, nalezen
-  'be.c.police.o3': 'Bekle: o tarihten sonra kendiliğinden biter.', // nieuw, nalezen
+  'be.c.police.o1': 'Mektuptaki tarihten önce yazılı cevap verirsin.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o2': 'Bir kere arar ve seni geri aramalarını beklersin.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o3': 'Beklersin: o tarihten sonra kendiliğinden biter.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.w': 'Mektuptaki tarihten önce yazılı olarak cevap verirsin. O tarihten sonra çoğu zaman çok geçtir. Justitiehuis ilk danışmanlığı ücretsiz verir.', // nieuw, nalezen
 };
 
@@ -340,7 +340,7 @@ export const ro: Gloss = {
   'be.c.police.q': 'Pot să vă văd cartea de identitate?', // nieuw, nalezen
   'be.c.police.a': 'Da, poftiți. Ce s-a întâmplat?', // nieuw, nalezen
   'be.c.council': 'Primăria ta și cine are voie să voteze', // nieuw, nalezen
-  'be.c.council.b': 'Primăria (gemeente) îți ține adresa și îți dă cartea de identitate. Te muți? Anunță primăria noii locuințe în 8 zile lucrătoare. Apoi polițistul de cartier (wijkagent) vine să verifice că locuiești acolo. La fiecare 6 ani sunt alegeri pentru consiliul local (gemeenteraad). Pot vota oamenii din altă țară UE, iar cei din afara UE după 5 ani de ședere legală. Mai întâi te înscrii ca alegător la primărie. În Flandra votul pentru consiliul local nu este obligatoriu. La celelalte alegeri, belgienii trebuie să meargă la vot (opkomstplicht). Primești o scrisoare (oproepingsbrief): ia-o cu tine, împreună cu cartea de identitate. Nu ești sigur? Întreabă la primărie.', // nieuw, nalezen
+  'be.c.council.b': 'Primăria (gemeente) îți ține adresa și îți dă cartea de identitate. Te muți? Anunță primăria noii locuințe în 8 zile lucrătoare. Apoi polițistul de cartier (wijkagent) vine să verifice că locuiești acolo. La fiecare 6 ani sunt alegeri pentru consiliul local (gemeenteraad). Pot vota oamenii din altă țară UE, iar cei din afara UE după 5 ani de ședere legală. Mai întâi te înscrii ca alegător la primărie. În Flandra votul pentru consiliul local nu este obligatoriu. La celelalte alegeri, belgienii trebuie să meargă la vot (opkomstplicht). Primești o scrisoare (oproepingsbrief): ia-o cu tine, împreună cu cartea de identitate. Nu știi sigur? Întreabă la primărie.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.council.p': 'Am voie să votez pentru consiliul local? Trebuie să mă înscriu mai întâi?', // nieuw, nalezen
   'be.c.council.s': 'Vii din Maroc și locuiești legal în Gent de șase ani. Nu ai cetățenie belgiană. În curând sunt alegeri pentru consiliul local. Ce este adevărat?', // nieuw, nalezen
   'be.c.council.o1': 'Ai voie să votezi, după ce te înscrii la primărie.', // nieuw, nalezen
@@ -375,7 +375,7 @@ export const bg: Gloss = {
   'be.w.wijkagent': 'кварталният полицай', // nieuw, nalezen
   'be.w.identiteitskaart': 'личната карта (eID)', // nieuw, nalezen
   'be.w.boete': 'глобата (пари, които плащаш като наказание)', // nieuw, nalezen
-  'be.w.bezwaar': 'възражението (казваш писмено, че не си съгласен)', // nieuw, nalezen
+  'be.w.bezwaar': 'възражението (казваш писмено, че не си съгласен / съгласна)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.advocaat': 'адвокатът', // nieuw, nalezen
   'be.w.recht': 'правото (какво законът ти позволява да правиш или да получиш)', // nieuw, nalezen
   'be.s.police.1': 'Винаги нося личната си карта.', // nieuw, nalezen
@@ -384,7 +384,7 @@ export const bg: Gloss = {
   'be.c.police.q': 'Може ли да видя личната ви карта?', // nieuw, nalezen
   'be.c.police.a': 'Да, ето я. Какво има?', // nieuw, nalezen
   'be.c.council': 'Твоята община и кой може да гласува', // nieuw, nalezen
-  'be.c.council.b': 'Общината (gemeente) пази адреса ти и ти издава личната карта. Местиш се? Съобщи на общината на новото жилище до 8 работни дни. След това кварталният полицай (wijkagent) идва да провери, че живееш там. На всеки 6 години има избори за общински съвет (gemeenteraad). В тях могат да гласуват хора от друга страна от ЕС, а хора извън ЕС след 5 години законно пребиваване. Първо се записваш като избирател в общината. Във Фландрия гласуването за общинския съвет не е задължително. На другите избори белгийците трябва да отидат да гласуват (opkomstplicht). Получаваш писмо (oproepingsbrief): вземи го с личната си карта. Не си сигурен? Попитай в общината.', // nieuw, nalezen
+  'be.c.council.b': 'Общината (gemeente) пази адреса ти и ти издава личната карта. Местиш се? Съобщи на общината на новото жилище до 8 работни дни. След това кварталният полицай (wijkagent) идва да провери, че живееш там. На всеки 6 години има избори за общински съвет (gemeenteraad). В тях могат да гласуват хора от друга страна от ЕС, а хора извън ЕС след 5 години законно пребиваване. Първо се записваш като избирател в общината. Във Фландрия гласуването за общинския съвет не е задължително. На другите избори белгийците трябва да отидат да гласуват (opkomstplicht). Получаваш писмо (oproepingsbrief): вземи го с личната си карта. Не знаеш със сигурност? Попитай в общината.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.council.p': 'Мога ли да гласувам за общинския съвет? Трябва ли първо да се запиша?', // nieuw, nalezen
   'be.c.council.s': 'Идваш от Мароко и от шест години живееш законно в Гент (Gent). Нямаш белгийско гражданство. Скоро има избори за общински съвет. Кое е вярно?', // nieuw, nalezen
   'be.c.council.o1': 'Можеш да гласуваш, след като се запишеш в общината.', // nieuw, nalezen
@@ -392,8 +392,8 @@ export const bg: Gloss = {
   'be.c.council.o3': 'Без белгийски паспорт изобщо не можеш да гласуваш.', // nieuw, nalezen
   'be.c.council.w': 'След 5 години законно пребиваване можеш да гласуваш за общинския съвет. Първо трябва да се запишеш като избирател. За федералния парламент трябва белгийско гражданство.', // nieuw, nalezen
   'be.c.police': 'Личната ти карта и твоите права', // nieuw, nalezen
-  'be.c.police.b': 'От 15 години трябва винаги да носиш личната си карта (или картата за пребиваване) и да я показваш, когато полицията поиска. Получаваш писмо с решение, с което не си съгласен, например глоба от общината? Тогава можеш да отговориш писмено (bezwaar maken). В писмото пише как и до кога. Направи го преди тази дата. Всички са равни пред закона. Полицията иска да те разпита? Тогава имаш право първо да говориш с адвокат. Първият съвет от адвокат е безплатен, в justitiehuis. Дискриминация? Unia може да помогне.', // nieuw, nalezen
-  'be.c.police.p': 'Не съм съгласен с това решение. Подавам възражение.', // nieuw, nalezen
+  'be.c.police.b': 'От 15 години трябва винаги да носиш личната си карта (или картата за пребиваване) и да я показваш, когато полицията поиска. Получаваш писмо с решение, с което не си съгласен / съгласна, например глоба от общината? Тогава можеш да отговориш писмено (bezwaar maken). В писмото пише как и до кога. Направи го преди тази дата. Всички са равни пред закона. Полицията иска да те разпита? Тогава имаш право първо да говориш с адвокат. Първият съвет от адвокат е безплатен, в justitiehuis. Дискриминация? Unia може да помогне.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.p': 'Не приемам това решение. Подавам възражение.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.s': 'Получаваш с писмо глоба от общината. Мислиш, че не е правилна. В писмото има дата за отговор. Какво правиш?', // nieuw, nalezen
   'be.c.police.o1': 'Отговаряш писмено, преди датата в писмото.', // nieuw, nalezen
   'be.c.police.o2': 'Обаждаш се веднъж и чакаш да ти се обадят.', // nieuw, nalezen
@@ -439,10 +439,10 @@ export const es: Gloss = {
   'be.c.police.b': 'Desde los 15 años debes llevar siempre tu carné de identidad (o tu tarjeta de residencia) y enseñarlo cuando la policía lo pida. ¿Recibes una carta con una decisión con la que no estás de acuerdo, por ejemplo una multa del ayuntamiento? Entonces puedes responder por escrito (bezwaar maken). La carta dice cómo y hasta cuándo. Hazlo antes de esa fecha. Todos son iguales ante la ley. ¿La policía quiere interrogarte? Entonces puedes hablar primero con un abogado. El primer consejo de un abogado es gratis, en el justitiehuis. ¿Discriminación? Unia puede ayudar.', // nieuw, nalezen
   'be.c.police.p': 'No estoy de acuerdo con esta decisión. Presento un recurso.', // nieuw, nalezen
   'be.c.police.s': 'Recibes por carta una multa del ayuntamiento. Crees que no es justa. La carta da una fecha para responder. ¿Qué haces?', // nieuw, nalezen
-  'be.c.police.o1': 'Respondes por escrito, antes de la fecha de la carta.', // nieuw, nalezen
+  'be.c.police.o1': 'Respondes por escrito, antes de la fecha que pone en la carta.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o2': 'Llamas una vez y esperas a que te llamen.', // nieuw, nalezen
   'be.c.police.o3': 'Esperas: después de esa fecha, se acaba solo.', // nieuw, nalezen
-  'be.c.police.w': 'Se responde por escrito, antes de la fecha de la carta. Después de esa fecha suele ser tarde. El justitiehuis da un primer consejo gratis.', // nieuw, nalezen
+  'be.c.police.w': 'Se responde por escrito, antes de la fecha que pone en la carta. Después de esa fecha suele ser tarde. El justitiehuis da un primer consejo gratis.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const pt: Gloss = {
@@ -483,10 +483,10 @@ export const pt: Gloss = {
   'be.c.police.b': 'A partir dos 15 anos tens de andar sempre com o cartão de identidade (ou o cartão de residência) e mostrá-lo quando a polícia pedir. Recebes uma carta com uma decisão com que não concordas, por exemplo uma multa da câmara? Então podes responder por escrito (bezwaar maken). A carta diz como e até quando. Fá-lo antes dessa data. Todos são iguais perante a lei. A polícia quer interrogar-te? Então podes falar primeiro com um advogado. O primeiro conselho de um advogado é grátis, no justitiehuis. Discriminação? A Unia pode ajudar.', // nieuw, nalezen
   'be.c.police.p': 'Não concordo com esta decisão. Apresento uma reclamação.', // nieuw, nalezen
   'be.c.police.s': 'Recebes por carta uma multa da câmara. Achas que não está certa. A carta dá uma data para responder. O que fazes?', // nieuw, nalezen
-  'be.c.police.o1': 'Respondes por escrito, antes da data da carta.', // nieuw, nalezen
+  'be.c.police.o1': 'Respondes por escrito, antes da data que vem na carta.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o2': 'Ligas uma vez e esperas que te liguem de volta.', // nieuw, nalezen
   'be.c.police.o3': 'Esperas: depois dessa data, acaba sozinho.', // nieuw, nalezen
-  'be.c.police.w': 'Responde-se por escrito, antes da data da carta. Depois dessa data, muitas vezes é tarde. O justitiehuis dá um primeiro conselho grátis.', // nieuw, nalezen
+  'be.c.police.w': 'Responde-se por escrito, antes da data que vem na carta. Depois dessa data, muitas vezes é tarde. O justitiehuis dá um primeiro conselho grátis.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const fr: Gloss = {
@@ -527,10 +527,10 @@ export const fr: Gloss = {
   'be.c.police.b': 'Dès 15 ans, tu dois toujours avoir sur toi ta carte d’identité (ou ta carte de séjour) et la montrer quand la police la demande. Tu reçois une lettre avec une décision avec laquelle tu n’es pas d’accord, par exemple une amende de la commune ? Alors tu peux répondre par écrit (bezwaar maken). La lettre dit comment et jusqu’à quand. Fais-le avant cette date. Tout le monde est égal devant la loi. La police veut t’interroger ? Alors tu peux d’abord parler à un avocat. Un premier conseil d’un avocat est gratuit, au justitiehuis (maison de justice). Discrimination ? Unia peut aider.', // nieuw, nalezen
   'be.c.police.p': 'Je ne suis pas d’accord avec cette décision. Je fais une réclamation.', // nieuw, nalezen
   'be.c.police.s': 'Tu reçois par lettre une amende de la commune. Tu penses qu’elle n’est pas juste. La lettre donne une date pour répondre. Que fais-tu ?', // nieuw, nalezen
-  'be.c.police.o1': 'Répondre par écrit, avant la date de la lettre.', // nieuw, nalezen
-  'be.c.police.o2': 'Appeler une fois, et attendre qu’ils rappellent.', // nieuw, nalezen
-  'be.c.police.o3': 'Attendre : après cette date, ça s’arrête tout seul.', // nieuw, nalezen
-  'be.c.police.w': 'On répond par écrit, avant la date de la lettre. Après cette date, il est souvent trop tard. Le justitiehuis donne un premier conseil gratuit.', // nieuw, nalezen
+  'be.c.police.o1': 'Réponds par écrit, avant la date indiquée dans la lettre.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o2': 'Appelle une fois, et attends qu’ils te rappellent.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o3': 'Attends : après cette date, ça s’arrête tout seul.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.w': 'On répond par écrit, avant la date indiquée dans la lettre. Après cette date, il est souvent trop tard. Le justitiehuis donne un premier conseil gratuit.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const de: Gloss = {

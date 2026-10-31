@@ -4,11 +4,11 @@ import type { Gloss } from '../types';
 // Dutch ones (src/i18n/work/<lang>.ts) with DigiD → itsme (in s.login.3: the itsme code). // nieuw, nalezen
 
 export const ar: Gloss = {
-    'be.s.login.3': "لا أعطي itsme الخاص بي لأحد.", // nieuw, nalezen
+    'be.s.login.3': 'لا أعطي رمز itsme الخاص بي لأحد.', // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login': "دخولك لك وحدك", // nieuw, nalezen
     'be.c.login.b': { m: "كلمة المرور وitsme لك وحدك. لا تعطهما لأحد، ولا حتى لصاحب العمل أو لزميل. على حاسوب مشترك، سجّل الخروج دائماً عندما تنتهي. ستبتعد لحظة؟ اقفل شاشتك. نسيت كلمة المرور؟ اطلب كلمة جديدة من قسم تقنية المعلومات (ICT-afdeling). قواعد الحاسوب تختلف من شركة لأخرى: اسأل قسم تقنية المعلومات عن القواعد في مكان عملك.", f: "كلمة المرور وitsme لكِ وحدكِ. لا تعطيهما لأحد، ولا حتى لصاحب العمل أو لزميل. على حاسوب مشترك، سجّلي الخروج دائماً عندما تنتهين. ستبتعدين لحظة؟ اقفلي شاشتك. نسيتِ كلمة المرور؟ اطلبي كلمة جديدة من قسم تقنية المعلومات (ICT-afdeling). قواعد الحاسوب تختلف من شركة لأخرى: اسألي قسم تقنية المعلومات عن القواعد في مكان عملك.", x: "كلمة المرور وitsme شخصيتان تماماً. لا تُعطيان لأحد، ولا حتى لصاحب العمل أو لزميل. على حاسوب مشترك، تسجيل الخروج ضروري دائماً عند الانتهاء. ابتعاد للحظة؟ قفل الشاشة. نسيان كلمة المرور؟ طلب كلمة جديدة من قسم تقنية المعلومات (ICT-afdeling). قواعد الحاسوب تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند قسم تقنية المعلومات." }, // nieuw, nalezen
     'be.c.login.p': "سأبتعد لحظة. سأقفل شاشتي.", // nieuw, nalezen
-    'be.c.login.s': { m: "مشرفك يطلب itsme الخاص بك وكلمة المرور، ليرتّب أوراقك بسرعة. ماذا تفعل؟", f: "مشرفك يطلب itsme الخاص بكِ وكلمة المرور، ليرتّب أوراقكِ بسرعة. ماذا تفعلين؟", x: "المشرف يطلب itsme وكلمة المرور، ليرتّب الأوراق بسرعة. ما التصرف الصحيح؟" }, // nieuw, nalezen
+    'be.c.login.s': { m: 'مشرفك يطلب رمز itsme الخاص بك وكلمة المرور، ليرتّب أوراقك بسرعة. ماذا تفعل؟', f: 'مشرفك يطلب رمز itsme الخاص بكِ وكلمة المرور، ليرتّب أوراقكِ بسرعة. ماذا تفعلين؟', x: 'المشرف يطلب رمز itsme وكلمة المرور، ليرتّب الأوراق بسرعة. ما التصرف الصحيح؟' }, // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login.o1': "الرفض، وتسجيل الدخول بنفسك بينما يساعد.", // nieuw, nalezen
     'be.c.login.o2': "إعطاؤهما هذه المرة فقط، لأنه المدير.", // nieuw, nalezen
     'be.c.login.o3': "كتابتهما على ورقة، ليستعملهما لاحقاً.", // nieuw, nalezen
@@ -16,11 +16,11 @@ export const ar: Gloss = {
 };
 
 export const ti: Gloss = {
-    'be.s.login.3': "itsme ንዝኾነ ሰብ ኣይህቦን።", // nieuw, nalezen
-    'be.c.login': "ምእታውካ ናትካ ጥራይ እዩ", // nieuw, nalezen
-    'be.c.login.b': { m: "መሕለፊ ቃልካን itsmeን ንዓኻ ጥራይ እዮም። ንዝኾነ ሰብ ኣይትሃቦም፡ ንኣስራሒ ወይ ንመሳርሕቲ እውን ከይተረፈ። ኣብ ናይ ሓባር ኮምፒተር፡ ምስ ወዳእካ ኩሉ ግዜ ካብ ሕሳብ ውጻእ። ንቑሩብ ትኸይድ ዲኻ? ስክሪን ዕጸዎ። መሕለፊ ቃል ረሲዕካ ዲኻ? ካብ ክፍሊ IT (ICT-afdeling) ሓድሽ ሕተት። ሕግታት ኮምፒተር ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕካ እንታይ ሕግታት ከም ዘለዉ ንክፍሊ IT ሕተት።", f: "መሕለፊ ቃልክን itsmeን ንዓኺ ጥራይ እዮም። ንዝኾነ ሰብ ኣይትሃብዮም፡ ንኣስራሒ ወይ ንመሳርሕቲ እውን ከይተረፈ። ኣብ ናይ ሓባር ኮምፒተር፡ ምስ ወዳእኪ ኩሉ ግዜ ካብ ሕሳብ ውጽኢ። ንቑሩብ ትኸዲ ዲኺ? ስክሪን ዕጸውዮ። መሕለፊ ቃል ረሲዕኪ ዲኺ? ካብ ክፍሊ IT (ICT-afdeling) ሓድሽ ሕተቲ። ሕግታት ኮምፒተር ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኪ እንታይ ሕግታት ከም ዘለዉ ንክፍሊ IT ሕተቲ።", x: "መሕለፊ ቃልኩምን itsmeን ንዓኹም ጥራይ እዮም። ንዝኾነ ሰብ ኣይትሃብዎም፡ ንኣስራሒ ወይ ንመሳርሕቲ እውን ከይተረፈ። ኣብ ናይ ሓባር ኮምፒተር፡ ምስ ወዳእኩም ኩሉ ግዜ ካብ ሕሳብ ውጽኡ። ንቑሩብ ትኸዱ ዶ? ስክሪን ዕጸውዎ። መሕለፊ ቃል ረሲዕኩም ዶ? ካብ ክፍሊ IT (ICT-afdeling) ሓድሽ ሕተቱ። ሕግታት ኮምፒተር ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኩም እንታይ ሕግታት ከም ዘለዉ ንክፍሊ IT ሕተቱ።" }, // nieuw, nalezen
+    'be.s.login.3': 'ኮድ itsme ንዝኾነ ሰብ ኣይህቦን።', // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.login': { m: 'ምእታውካ ናትካ ጥራይ እዩ', f: 'ምእታውኪ ናትኪ ጥራይ እዩ', x: 'ምእታውኩም ናትኩም ጥራይ እዩ' }, // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.login.b': { m: 'መሕለፊ ቃልካን itsmeን ንዓኻ ጥራይ እዮም። ንዝኾነ ሰብ ኣይትሃቦም፡ ንኣስራሒ ወይ ንመሳርሕቲ እውን ከይተረፈ። ኣብ ናይ ሓባር ኮምፒተር፡ ምስ ወዳእካ ኩሉ ግዜ ካብ ሕሳብ ውጻእ። ንቑሩብ ትኸይድ ዲኻ? ስክሪን ዕጸዎ። መሕለፊ ቃል ረሲዕካ ዲኻ? ካብ ክፍሊ IT (ICT-afdeling) ሓድሽ ሕተት። ሕግታት ኮምፒተር ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕካ እንታይ ሕግታት ከም ዘለዉ ንክፍሊ IT ሕተት።', f: 'መሕለፊ ቃልኪን itsmeን ንዓኺ ጥራይ እዮም። ንዝኾነ ሰብ ኣይትሃብዮም፡ ንኣስራሒ ወይ ንመሳርሕቲ እውን ከይተረፈ። ኣብ ናይ ሓባር ኮምፒተር፡ ምስ ወዳእኪ ኩሉ ግዜ ካብ ሕሳብ ውጽኢ። ንቑሩብ ትኸዲ ዲኺ? ስክሪን ዕጸውዮ። መሕለፊ ቃል ረሲዕኪ ዲኺ? ካብ ክፍሊ IT (ICT-afdeling) ሓድሽ ሕተቲ። ሕግታት ኮምፒተር ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኪ እንታይ ሕግታት ከም ዘለዉ ንክፍሊ IT ሕተቲ።', x: 'መሕለፊ ቃልኩምን itsmeን ንዓኹም ጥራይ እዮም። ንዝኾነ ሰብ ኣይትሃብዎም፡ ንኣስራሒ ወይ ንመሳርሕቲ እውን ከይተረፈ። ኣብ ናይ ሓባር ኮምፒተር፡ ምስ ወዳእኩም ኩሉ ግዜ ካብ ሕሳብ ውጽኡ። ንቑሩብ ትኸዱ ዶ? ስክሪን ዕጸውዎ። መሕለፊ ቃል ረሲዕኩም ዶ? ካብ ክፍሊ IT (ICT-afdeling) ሓድሽ ሕተቱ። ሕግታት ኮምፒተር ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኩም እንታይ ሕግታት ከም ዘለዉ ንክፍሊ IT ሕተቱ።' }, // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login.p': "ንቑሩብ እኸይድ ኣለኹ። ስክሪነይ እዓጹ።", // nieuw, nalezen
-    'be.c.login.s': { m: "ተቖጻጻሪኻ ወረቓቕቲ ቀልጢፉ ንምድላው itsmeን መሕለፊ ቃልን ይሓተካ። እንታይ ትገብር?", f: "ተቖጻጻሪኺ ወረቓቕቲ ቀልጢፉ ንምድላው itsmeን መሕለፊ ቃልን ይሓተኪ። እንታይ ትገብሪ?", x: "ተቖጻጻሪኹም ወረቓቕቲ ቀልጢፉ ንምድላው itsmeን መሕለፊ ቃልን ይሓተኩም። እንታይ ትገብሩ?" }, // nieuw, nalezen
+    'be.c.login.s': { m: 'ተቖጻጻሪኻ ወረቓቕቲ ቀልጢፉ ንምድላው ኮድ itsmeን መሕለፊ ቃልን ይሓተካ። እንታይ ትገብር?', f: 'ተቖጻጻሪኺ ወረቓቕቲ ቀልጢፉ ንምድላው ኮድ itsmeን መሕለፊ ቃልን ይሓተኪ። እንታይ ትገብሪ?', x: 'ተቖጻጻሪኹም ወረቓቕቲ ቀልጢፉ ንምድላው ኮድ itsmeን መሕለፊ ቃልን ይሓተኩም። እንታይ ትገብሩ?' }, // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login.o1': "ኣይፋል ምባል፡ ንሱ እናሓገዘ ብውልቂ ምእታው።", // nieuw, nalezen
     'be.c.login.o2': "ሓለቓ ስለ ዝኾነ፡ ሓንሳእ ጥራይ ምሃብ።", // nieuw, nalezen
     'be.c.login.o3': "ደሓር ክጥቀመሉ ኣብ ወረቐት ምጽሓፍ።", // nieuw, nalezen
@@ -33,9 +33,9 @@ export const fa: Gloss = {
     'be.c.login.b': "رمز عبور و itsme تو فقط برای خودت است. آن‌ها را به هیچ‌کس نده، حتی به کارفرما یا همکارت. روی کامپیوتر مشترک، وقتی کارت تمام شد همیشه از حساب خارج شو. چند لحظه می‌روی؟ صفحه را قفل کن. رمزت را فراموش کردی؟ از بخش IT (ICT-afdeling) رمز تازه بخواه. قانون‌های کامپیوتر در هر شرکت فرق دارد: از بخش IT بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
     'be.c.login.p': "چند لحظه می‌روم. صفحه‌ام را قفل می‌کنم.", // nieuw, nalezen
     'be.c.login.s': "سرپرستت itsme و رمز عبورت را می‌خواهد تا کارهای اداری‌ات را زود درست کند. چه کار می‌کنی؟", // nieuw, nalezen
-    'be.c.login.o1': "نه می‌گویی و خودت وارد می‌شوی، او کمک می‌کند.", // nieuw, nalezen
-    'be.c.login.o2': "این یک بار می‌دهی، چون رئیست است.", // nieuw, nalezen
-    'be.c.login.o3': "روی کاغذ می‌نویسی تا بعداً استفاده کند.", // nieuw, nalezen
+    'be.c.login.o1': "نه بگو، و خودت وارد شو تا او کمک کند.", // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.login.o2': "همین یک بار بده، چون رئیست است.", // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.login.o3': "روی کاغذ بنویسش تا بعداً استفاده کند.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login.w': "با itsme تو، کسی می‌تواند مالیات، کمک‌هزینه‌ها و مدارک پزشکی‌ات را ببیند و عوض کند. این فقط برای خودت است. می‌توانی خودت وارد شوی و بگذاری کسی کمکت کند.", // nieuw, nalezen
 };
 
@@ -45,8 +45,8 @@ export const prs: Gloss = {
     'be.c.login.b': "رمز و itsme شما تنها برای خود شماست. آن‌ها را به هیچ کس ندهید، حتی به کارفرما یا همکار تان. روی کمپیوتر مشترک، وقتی کار تان تمام شد همیشه از حساب خارج شوید. چند لحظه می‌روید؟ صفحه را قفل کنید. رمز خود را فراموش کردید؟ از بخش IT (ICT-afdeling) رمز نو بخواهید. مقررات کمپیوتر در هر کمپنی فرق می‌کند: از بخش IT بپرسید که مقررات جای کار شما چیست.", // nieuw, nalezen
     'be.c.login.p': "چند لحظه می‌روم. صفحهٔ خود را قفل می‌کنم.", // nieuw, nalezen
     'be.c.login.s': "سرپرست تان itsme و رمز شما را می‌خواهد تا کارهای اداری تان را زود جور کند. چه می‌کنید؟", // nieuw, nalezen
-    'be.c.login.o1': "نه بگویید و خود تان داخل شوید، او کمک می‌کند.", // nieuw, nalezen
-    'be.c.login.o2': "این یک بار بدهید، چون آمر شماست.", // nieuw, nalezen
+    'be.c.login.o1': "نی بگویید، و خود تان داخل شوید تا او کمک کند.", // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.login.o2': "همین یک بار بدهید، چون آمر شماست.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login.o3': "روی کاغذ بنویسید تا بعداً استفاده کند.", // nieuw, nalezen
     'be.c.login.w': "با itsme شما، کسی می‌تواند مالیه، کمک‌پول‌ها و اسناد صحی تان را ببیند و تغییر بدهد. این تنها برای خود شماست. می‌توانید خود تان داخل شوید و بگذارید کسی کمک تان کند.", // nieuw, nalezen
 };
@@ -76,7 +76,7 @@ export const tr: Gloss = {
 };
 
 export const pl: Gloss = {
-    'be.s.login.3': "Nikomu nie daję mojego itsme.", // nieuw, nalezen
+    'be.s.login.3': "Nikomu nie daję mojego kodu itsme.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login': "Twoje logowanie jest tylko twoje", // nieuw, nalezen
     'be.c.login.b': "Twoje hasło i twoje itsme są tylko dla ciebie. Nie dawaj ich nikomu, także pracodawcy ani koledze. Na wspólnym komputerze zawsze się wyloguj, kiedy skończysz. Odchodzisz na chwilę? Zablokuj ekran. Nie pamiętasz hasła? Poproś dział IT (ICT-afdeling) o nowe. Zasady korzystania z komputerów są różne w każdej firmie: zapytaj dział IT, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
     'be.c.login.p': "Odchodzę na chwilę. Blokuję ekran.", // nieuw, nalezen
@@ -112,7 +112,7 @@ export const bg: Gloss = {
 };
 
 export const es: Gloss = {
-    'be.s.login.3': "No le doy mi itsme a nadie.", // nieuw, nalezen
+    'be.s.login.3': "No le doy mi código de itsme a nadie.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login': "Tu acceso es solo tuyo", // nieuw, nalezen
     'be.c.login.b': "Tu contraseña y tu itsme son solo para ti. No se los des a nadie, tampoco a tu empresa ni a un compañero. En un ordenador compartido, cierra siempre la sesión cuando termines. ¿Te vas un momento? Bloquea la pantalla. ¿Has olvidado tu contraseña? Pide una nueva al departamento de informática (ICT-afdeling). Las normas de los ordenadores cambian de una empresa a otra: pregunta al departamento de informática cuáles son en tu trabajo.", // nieuw, nalezen
     'be.c.login.p': "Me voy un momento. Bloqueo la pantalla.", // nieuw, nalezen
@@ -124,7 +124,7 @@ export const es: Gloss = {
 };
 
 export const pt: Gloss = {
-    'be.s.login.3': "Não dou o meu itsme a ninguém.", // nieuw, nalezen
+    'be.s.login.3': "Não dou o meu código itsme a ninguém.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login': "O teu acesso é só teu", // nieuw, nalezen
     'be.c.login.b': "A tua palavra-passe e o teu itsme são só para ti. Não os dês a ninguém, nem ao teu empregador nem a um colega. Num computador partilhado, termina sempre a sessão quando acabares. Vais sair um momento? Bloqueia o ecrã. Esqueceste-te da palavra-passe? Pede uma nova ao departamento de informática (ICT-afdeling). As regras dos computadores são diferentes em cada empresa: pergunta ao departamento de informática quais são as regras onde trabalhas.", // nieuw, nalezen
     'be.c.login.p': "Vou sair um momento. Vou bloquear o ecrã.", // nieuw, nalezen
@@ -136,7 +136,7 @@ export const pt: Gloss = {
 };
 
 export const fr: Gloss = {
-    'be.s.login.3': "Je ne donne mon itsme à personne.", // nieuw, nalezen
+    'be.s.login.3': "Je ne donne mon code itsme à personne.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login': "Ton accès, c’est le tien", // nieuw, nalezen
     'be.c.login.b': "Ton mot de passe et ton itsme sont seulement pour toi. Ne les donne à personne, même pas à ton employeur ou à un collègue. Sur un ordinateur partagé, déconnecte-toi toujours quand tu as fini. Tu t’en vas un moment ? Verrouille ton écran. Tu as oublié ton mot de passe ? Demande-en un nouveau au service informatique (ICT-afdeling). Les règles pour les ordinateurs changent d’une entreprise à l’autre : demande au service informatique quelles sont les règles là où tu travailles.", // nieuw, nalezen
     'be.c.login.p': "Je m’en vais un moment. Je verrouille mon écran.", // nieuw, nalezen
@@ -148,7 +148,7 @@ export const fr: Gloss = {
 };
 
 export const de: Gloss = {
-    'be.s.login.3': "Meine itsme gebe ich niemandem.", // nieuw, nalezen
+    'be.s.login.3': "Meinen itsme-Code gebe ich niemandem.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login': "Dein Login gehört nur dir", // nieuw, nalezen
     'be.c.login.b': "Dein Passwort und deine itsme sind nur für dich. Gib sie niemandem, auch nicht deinem Arbeitgeber oder einem Kollegen. An einem gemeinsamen Computer logg dich immer aus, wenn du fertig bist. Gehst du kurz weg? Sperr deinen Bildschirm. Passwort vergessen? Frag die IT-Abteilung (ICT-afdeling) nach einem neuen. Die Regeln für Computer sind in jeder Firma anders: Frag die IT-Abteilung, welche Regeln bei dir gelten.", // nieuw, nalezen
     'be.c.login.p': "Ich gehe kurz weg. Ich sperre meinen Bildschirm.", // nieuw, nalezen

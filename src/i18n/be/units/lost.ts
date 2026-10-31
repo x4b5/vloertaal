@@ -26,7 +26,7 @@ export const ar: Gloss = {
   'be.c.ww.p': "أريد أن أطلب إعانة. ماذا يجب أن أفعل؟", // nieuw, nalezen
   'be.c.ww.s': { m: 'أنت غاضب من عملك وتريد أن تستقيل اليوم. ما التصرّف الحكيم؟', f: 'أنت غاضبة من عملك وتريدين أن تستقيلي اليوم. ما التصرّف الحكيم؟' },
   'be.c.ww.o1': { m: 'اطلب النصيحة أولاً، قبل أن تستقيل.', f: 'اطلبي النصيحة أولاً، قبل أن تستقيلي.' },
-  'be.c.ww.o2': "الاستقالة اليوم: الإعانة ستأتي على كل حال.", // nieuw, nalezen
+  'be.c.ww.o2': { m: 'استقل اليوم: ستحصل على الإعانة على كل حال.', f: 'استقيلي اليوم: ستحصلين على الإعانة على كل حال.', x: 'الاستقالة اليوم: الإعانة ستأتي على كل حال.' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.ww.o3': { m: 'توقف عن المجيء إلى العمل دون أن تقول شيئاً.', f: 'توقفي عن المجيء إلى العمل دون أن تقولي شيئاً.' },
   'be.c.ww.w': "الاستقالة قد تُفقد الإعانة لفترة. الحديث أولاً مع المشرف أو النقابة أو justitiehuis قد يساعد على إيجاد طريق أفضل.", // nieuw, nalezen
   'be.c.jobends': "ينتهي عملك: ماذا يتوقف أيضاً؟",
@@ -38,20 +38,20 @@ export const ar: Gloss = {
   'be.c.jobends.o3': "البقاء، وعدم الحديث عن ذلك مع أحد.", // nieuw, nalezen
   'be.c.jobends.w': "عقد الإيجار منفصل عن عقد العمل. فيه مدة البقاء المسموحة. justitiehuis يعطي أول استشارة مجانية.", // nieuw, nalezen
   'be.c.newjob': 'البحث عن عمل جديد',
-  'be.c.newjob.b': end("قبل الرحيل، طلب رسالة توصية (referentie). الاحتفاظ بقسائم الأجر (loonbrieven) والعقد وورقة C4. تحديث السيرة الذاتية. البحث عن عمل في VDAB (vdab.be) وفي وكالات العمل المؤقت (interimkantoren). لا دفع للمال أبداً مقابل الحصول على عمل.", arBase, 'abuse'), // nieuw, nalezen
+  'be.c.newjob.b': end("قبل الرحيل، طلب رسالة توصية (referentie). الاحتفاظ بقسائم الأجر (loonbrieven) والعقد وورقة C4. تحديث السيرة الذاتية. البحث عن عمل في VDAB (vdab.be) وفي مكاتب العمل المؤقت (interimkantoren). لا دفع للمال أبداً مقابل الحصول على عمل.", arBase, 'abuse'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.p': 'هل يمكنني أن أعطي اسمك كمرجع؟',
   'be.c.newjob.s': { m: 'شخص يعرض عليك عملاً، لكن يجب أولاً أن تدفع 300 يورو «من أجل الوظيفة». ماذا تفعل؟', f: 'شخص يعرض عليك عملاً، لكن يجب أولاً أن تدفعي 300 يورو «من أجل الوظيفة». ماذا تفعلين؟' },
-  'be.c.newjob.o1': "عدم الدفع. البحث عن وكالة عمل مؤقت حقيقية.", // nieuw, nalezen
+  'be.c.newjob.o1': { m: 'لا تدفع. ابحث عن مكتب عمل مؤقت حقيقي.', f: 'لا تدفعي. ابحثي عن مكتب عمل مؤقت حقيقي.', x: 'عدم الدفع. البحث عن مكتب عمل مؤقت حقيقي.' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.o2': { m: 'ادفع، لأن الوظيفة الجيدة تستحق ذلك.', f: 'ادفعي، لأن الوظيفة الجيدة تستحق ذلك.' },
   'be.c.newjob.o3': { m: 'ادفع النصف الآن والباقي لاحقاً.', f: 'ادفعي النصف الآن والباقي لاحقاً.' },
-  'be.c.newjob.w': "طلب المال مقابل عمل علامة تحذير. لا يحق لوكالة العمل المؤقت أن تأخذ مالاً مقابل إيجاد عمل. البحث عن عمل ممكن أيضاً في VDAB.", // nieuw, nalezen
+  'be.c.newjob.w': 'طلب المال مقابل عمل علامة تحذير. لا يحق لمكتب العمل المؤقت أن تأخذ مالاً مقابل إيجاد عمل. البحث عن عمل ممكن أيضاً في VDAB.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const ti: Gloss = {
   'be.w.ww': "C4 (ስራሕኩም ምስ ተወደአ ካብ ኣስራሒ እትረኽብዎ ወረቐት)", // nieuw, nalezen
   'be.w.uwv': "RVA (ብዛዕባ ሓገዝ ስራሕ ኣልቦነት ዝውስን ሃገራዊ ቤት ጽሕፈት)", // nieuw, nalezen
   'be.s.ww.1': "ኣብ VDAB እምዝገብ።", // nieuw, nalezen
-  'be.c.ww.a': "C4 ይሓትት፡ ናብ ማሕበር ሰራሕተኛታት ድማ እኸይድ።", // nieuw, nalezen
+  'be.c.ww.a': 'C4 እሓትት፡ ናብ ማሕበር ሰራሕተኛታት ድማ እኸይድ።', // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.jobends.2': "ኣብ justitiehuis ምኽሪ እሓትት።", // nieuw, nalezen
   'be.s.jobends.3': "መድሕነይ ይቕጽል እንተ ኾይኑ ንziekenfonds እሓትት።", // nieuw, nalezen
   'be.s.newjob.2': 'ወረቓቕቲ ደሞዘይ እዕቅቦም።',
@@ -60,25 +60,25 @@ export const ti: Gloss = {
   'be.c.ww.p': "ሓገዝ ክሓትት እደሊ። እንታይ ክገብር ኣለኒ?", // nieuw, nalezen
   'be.c.ww.s': { m: 'ብስራሕካ ተቖጢዕካ ሎሚ ክትገድፎ ትደሊ። ብልሒ ዝኾነ እንታይ እዩ?', f: 'ብስራሕኪ ተቖጢዕኪ ሎሚ ክትገድፍዮ ትደልዪ። ብልሒ ዝኾነ እንታይ እዩ?' },
   'be.c.ww.o1': { m: 'ቅድሚ ምግዳፍካ፡ ቅድም ምኽሪ ውሰድ።', f: 'ቅድሚ ምግዳፍኪ፡ ቅድም ምኽሪ ውሰዲ።', x: 'ቅድሚ ምግዳፍኩም፡ ቅድም ምኽሪ ውሰዱ።' },
-  'be.c.ww.o2': "ሎሚ ስራሕ ምግዳፍ፡ ብዝኾነ ሓገዝ ክትረኽቡ ኢኹም።", // nieuw, nalezen
+  'be.c.ww.o2': { m: 'ሎሚ ስራሕካ ግደፍ፡ ብዝኾነ ሓገዝ ክትረክብ ኢኻ።', f: 'ሎሚ ስራሕኪ ግደፊ፡ ብዝኾነ ሓገዝ ክትረኽቢ ኢኺ።', x: 'ሎሚ ስራሕኩም ግደፉ፡ ብዝኾነ ሓገዝ ክትረኽቡ ኢኹም።' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.ww.o3': { m: 'ገለ ከይበልካ ናብ ስራሕ ምምጻእ ኣቋርጽ።', f: 'ገለ ከይበልኪ ናብ ስራሕ ምምጻእ ኣቋርጺ።', x: 'ገለ ከይበልኩም ናብ ስራሕ ምምጻእ ኣቋርጹ።' },
   'be.c.ww.w': "ስራሕ ምግዳፍ ንግዜ ሓገዝኩም ከጥፍኣልኩም ይኽእል። መጀመርታ ምስ ተቖጻጻሪ፡ ማሕበር ሰራሕተኛታት ወይ justitiehuis ምዝራብ ዝሓሸ መንገዲ ክትረኽቡ ይሕግዘኩም።", // nieuw, nalezen
   'be.c.jobends': { m: 'ስራሕካ ይውዳእ፡ ካልእ እንታይ ይቋረጽ?', f: 'ስራሕኪ ይውዳእ፡ ካልእ እንታይ ይቋረጽ?', x: 'ስራሕኩም ይውዳእ፡ ካልእ እንታይ ይቋረጽ?' },
-  'be.c.jobends.b': end("ስራሕኩም ምስ ተወደአ፡ ናይ መወዳእታ ሕሳብ (eindafrekening) ተቖጻጸሩ፡ C4 ድማ ሕተቱ። ሰራሕተኛ ቤት ጽሕፈት (bediende) ዶ ኢኹም? ሽዑ ገንዘብ ዕረፍቲ ምስ ናይ መወዳእታ ደሞዝ ትረኽቡ። ሰራሕተኛ ኢድ (arbeider)? ሽዑ ኣብ ዝቕጽል ዓመት ካብ ሳጹን ዕረፍቲ (vakantiekas) ትረኽብዎ። ብኤጀንሲ ዝመጸ ገዛ ወይ ሚኒባስ ብሓደ ግዜ ክውዳእ ይኽእል። ውዕል ክራይኩም ናይ ገዛእ ርእሱ ሕግታት ኣለዎ፡ ቅድሚ ካብ ገዛ ምውጻእኩም ምኽሪ ሕተቱ። ንሕክምና ብziekenfonds ዝተመሓደርኩም ኢኹም። ምስ ሓገዝ ስራሕ ኣልቦነት መብዛሕትኡ ግዜ መድሕን ይቕጽል። ገዛ ትቕይሩ ዶ? ኣብ ውሽጢ 8 መዓልቲ ስራሕ ንgemeente (ምምሕዳር ከተማ) ሓብሩ። ናብ ሃገርኩም ትምለሱ ዶ? ንziekenfonds ሕተቱ።", tiBase, 'advice'), // nieuw, nalezen
-  'be.c.jobends.p': 'ናይ መወዳእታ ክፍሊተይ መዓስ ይበጽሓኒ?',
+  'be.c.jobends.b': end("ስራሕኩም ምስ ተወደአ፡ ናይ መወዳእታ ሕሳብ (eindafrekening) ተቖጻጸሩ፡ C4 ድማ ሕተቱ። ሰራሕተኛ ቤት ጽሕፈት (bediende) ዶ ኢኹም? ሽዑ ገንዘብ ዕረፍቲ ምስ ናይ መወዳእታ ደሞዝ ትረኽቡ። ሰራሕተኛ ኢድ (arbeider)? ሽዑ ኣብ ዝቕጽል ዓመት ካብ ፈንድ ዕረፍቲ (vakantiekas) ትረኽብዎ። ብኤጀንሲ ዝመጸ ገዛ ወይ ሚኒባስ ብሓደ ግዜ ክውዳእ ይኽእል። ውዕል ክራይኩም ናይ ገዛእ ርእሱ ሕግታት ኣለዎ፡ ቅድሚ ካብ ገዛ ምውጻእኩም ምኽሪ ሕተቱ። ንሕክምና ብziekenfonds መድሕን ኣለኩም። ምስ ሓገዝ ስራሕ ኣልቦነት መብዛሕትኡ ግዜ መድሕን ይቕጽል። ገዛ ትቕይሩ ዶ? ኣብ ውሽጢ 8 መዓልቲ ስራሕ ንgemeente (ምምሕዳር ከተማ) ሓብሩ። ናብ ሃገርኩም ትምለሱ ዶ? ንziekenfonds ሕተቱ።", tiBase, 'advice'), // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.jobends.p': 'ናይ መወዳእታ ሕሳበይ መዓስ ይበጽሓኒ?', // nagelezen AI ronde 3
   'be.c.jobends.s': "ስራሕኩም ዓርቢ ይውዳእ። ኤጀንሲ ክፍልኹም እውን የዳሉ። እንታይ ትገብሩ?", // nieuw, nalezen
   'be.c.jobends.o1': "ውዕል ክራይ እንታይ ከም ዝብል ምሕታት፡ ምኽሪ ድማ ምውሳድ።", // nieuw, nalezen
   'be.c.jobends.o2': "ስራሕ ስለ ዝውዳእ ዓርቢ ካብ ክፍሊ ምውጻእ።", // nieuw, nalezen
   'be.c.jobends.o3': "ምጽናሕ፡ ምስ ዝኾነ ሰብ ብዛዕባኡ ዘይምዝራብ።", // nieuw, nalezen
   'be.c.jobends.w': "ውዕል ክራይኩም ካብ ውዕል ስራሕኩም ፍሉይ እዩ። ክንደይ ግዜ ክትጸንሑ ከም ትኽእሉ ኣብኡ ይጽሓፍ። justitiehuis ናይ መጀመርታ ናጻ ምኽሪ ክህበኩም ይኽእል።", // nieuw, nalezen
   'be.c.newjob': 'ሓድሽ ስራሕ ምድላይ',
-  'be.c.newjob.b': end("ቅድሚ ምኻድኩም ናይ ምስክርነት ደብዳቤ (referentie) ሕተቱ። ወረቓቕቲ ደሞዝ (loonbrieven)፡ ውዕልኩምን C4ን ዓቅቡ። CV ኣሐድሱ። ኣብ VDAB (vdab.be)ን ኣብ ናይ ግዚያዊ ስራሕ ኤጀንሲታት (interimkantoren)ን ስራሕ ድለዩ። ስራሕ ንምርካብ ፈጺምኩም ገንዘብ ኣይትኽፈሉ።", tiBase, 'abuse'), // nieuw, nalezen
+  'be.c.newjob.b': end("ቅድሚ ምኻድኩም ናይ ምስክርነት ደብዳቤ (referentie) ሕተቱ። ወረቓቕቲ ደሞዝ (loonbrieven)፡ ውዕልኩምን C4ን ዓቅቡ። CV ኣሐድሱ። ኣብ VDAB (vdab.be)ን ኣብ ኣባይቲ ጽሕፈት ግዝያዊ ስራሕ (interimkantoren)ን ስራሕ ድለዩ። ስራሕ ንምርካብ ፈጺምኩም ገንዘብ ኣይትኽፈሉ።", tiBase, 'abuse'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.p': 'ስምኩም ከም መወከሲ ክህብ ይኽእል ዶ?',
   'be.c.newjob.s': { m: 'ሓደ ሰብ ስራሕ የቕርበልካ፡ ግን ቅድም 300 ዩሮ «ንስራሕ» ክትከፍል ኣለካ። እንታይ ትገብር?', f: 'ሓደ ሰብ ስራሕ የቕርበልኪ፡ ግን ቅድም 300 ዩሮ «ንስራሕ» ክትከፍሊ ኣለኪ። እንታይ ትገብሪ?', x: 'ሓደ ሰብ ስራሕ የቕርበልኩም፡ ግን ቅድም 300 ዩሮ «ንስራሕ» ክትከፍሉ ኣለኩም። እንታይ ትገብሩ?' },
-  'be.c.newjob.o1': "ዘይምኽፋል። ሓቀኛ ኤጀንሲ ምድላይ።", // nieuw, nalezen
+  'be.c.newjob.o1': { m: 'ኣይትኽፈል። ሓቀኛ ቤት ጽሕፈት ግዝያዊ ስራሕ ድለ።', f: 'ኣይትኽፈሊ። ሓቀኛ ቤት ጽሕፈት ግዝያዊ ስራሕ ድለዪ።', x: 'ኣይትኽፈሉ። ሓቀኛ ቤት ጽሕፈት ግዝያዊ ስራሕ ድለዩ።' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.o2': { m: 'ጽቡቕ ስራሕ ዋጋ ስለ ዘለዎ፡ ክፈል።', f: 'ጽቡቕ ስራሕ ዋጋ ስለ ዘለዎ፡ ክፈሊ።', x: 'ጽቡቕ ስራሕ ዋጋ ስለ ዘለዎ፡ ክፈሉ።' },
   'be.c.newjob.o3': { m: 'ሕጂ ፍርቂ ክፈል፡ እቲ ዝተረፈ ድማ ደሓር።', f: 'ሕጂ ፍርቂ ክፈሊ፡ እቲ ዝተረፈ ድማ ደሓር።', x: 'ሕጂ ፍርቂ ክፈሉ፡ እቲ ዝተረፈ ድማ ደሓር።' },
-  'be.c.newjob.w': "ንስራሕ ገንዘብ ምሕታት ምልክት ሓደጋ እዩ። ናይ ግዚያዊ ስራሕ ኤጀንሲ ስራሕ ስለ ዝረኸበልኩም ገንዘብ ክወስድ ኣይፍቀዶን። ኣብ VDAB እውን ስራሕ ክትደልዩ ትኽእሉ።", // nieuw, nalezen
+  'be.c.newjob.w': 'ንስራሕ ገንዘብ ምሕታት ምልክት ሓደጋ እዩ። ቤት ጽሕፈት ግዝያዊ ስራሕ ስራሕ ስለ ዝረኸበልኩም ገንዘብ ክወስድ ኣይፍቀዶን። ኣብ VDAB እውን ስራሕ ክትደልዩ ትኽእሉ።', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const fa: Gloss = {
@@ -106,13 +106,13 @@ export const fa: Gloss = {
   'be.c.jobends.o3': "بمان، و با هیچ‌کس دربارهٔ آن حرف نزن.", // nieuw, nalezen
   'be.c.jobends.w': "قرارداد اجاره‌ات از قرارداد کارت جداست. در آن نوشته چه مدت می‌توانی بمانی. justitiehuis می‌تواند اولین مشاوره را رایگان به تو بدهد.", // nieuw, nalezen
   'be.c.newjob': 'دنبال کار جدید گشتن',
-  'be.c.newjob.b': end("پیش از رفتن، یک معرفی‌نامه (referentie) بخواه. فیش‌های حقوقی (loonbrieven)، قرارداد و C4 خودت را نگه دار. رزومه‌ات را به‌روز کن. در VDAB (vdab.be) و در شرکت‌های کار موقت (interimkantoren) دنبال کار بگرد. هرگز برای گرفتن کار پول نده.", faBase, 'abuse'), // nieuw, nalezen
+  'be.c.newjob.b': end("پیش از رفتن، یک معرفی‌نامه (referentie) بخواه. فیش‌های حقوقی (loonbrieven)، قرارداد و C4 خودت را نگه دار. رزومه‌ات را به‌روز کن. در VDAB (vdab.be) و در دفترهای کاریابی موقت (interimkantoren) دنبال کار بگرد. هرگز برای گرفتن کار پول نده.", faBase, 'abuse'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.p': 'می‌توانم اسم شما را به‌عنوان معرف بدهم؟',
   'be.c.newjob.s': 'کسی به تو کاری پیشنهاد می‌کند، ولی اول باید ۳۰۰ یورو «برای کار» بدهی. چه کار می‌کنی؟',
-  'be.c.newjob.o1': "پول نده. دنبال یک شرکت کار موقت واقعی بگرد.", // nieuw, nalezen
+  'be.c.newjob.o1': "پول نده. دنبال یک دفتر کاریابی موقت واقعی بگرد.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.o2': 'پول بده، چون یک کار خوب ارزشش را دارد.',
   'be.c.newjob.o3': 'الان نصفش را بده و بقیه را بعداً.',
-  'be.c.newjob.w': "پول خواستن برای کار یک نشانهٔ خطر است. شرکت کار موقت حق ندارد برای پیدا کردن کار از تو پول بگیرد. در VDAB هم می‌توانی دنبال کار بگردی.", // nieuw, nalezen
+  'be.c.newjob.w': "پول خواستن برای کار یک نشانهٔ خطر است. دفتر کاریابی موقت حق ندارد برای پیدا کردن کار از تو پول بگیرد. در VDAB هم می‌توانی دنبال کار بگردی.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const prs: Gloss = {
@@ -121,7 +121,7 @@ export const prs: Gloss = {
   'be.s.ww.1': "در VDAB ثبت‌نام می‌کنم.", // nieuw, nalezen
   'be.c.ww.a': "C4 خود را می‌خواهم و به اتحادیه می‌روم.", // nieuw, nalezen
   'be.s.jobends.2': "از justitiehuis مشوره می‌گیرم.", // nieuw, nalezen
-  'be.s.jobends.3': "از ziekenfonds خود می‌پرسم که بیمه‌ام ادامه دارد یا نه.", // nieuw, nalezen
+  'be.s.jobends.3': "از ziekenfonds خود می‌پرسم که بیمه‌ام ادامه دارد یا نی.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.newjob.2': 'ورق‌های معاش خود را نگه می‌دارم.',
   'be.c.ww': "کمک‌پول بیکاری", // nieuw, nalezen
   'be.c.ww.b': end("کار خود را از دست داده‌اید؟ کارفرما حداکثر در آخرین روز کاری شما یک C4 به شما می‌دهد. فوراً در VDAB به‌حیث کارجو ثبت‌نام کنید. بعد کمک‌پول خود را از طریق اتحادیهٔ کارگری (ABVV، ACV یا ACLVB) درخواست کنید، یا اگر عضو نیستید از طریق HVW. درخواست را به خود RVA نمی‌دهید: RVA تصمیم می‌گیرد. اول باید به اندازهٔ کافی کار کرده باشید. کمک‌پول از نظر زمان محدود است: مدت آن به این بستگی دارد که چقدر کار کرده‌اید. خود تان بدون دلیل خوب استعفا داده‌اید؟ پس معمولاً برای مدتی کمک‌پول نمی‌گیرید.", prsBase, 'advice'), // nieuw, nalezen
@@ -140,13 +140,13 @@ export const prs: Gloss = {
   'be.c.jobends.o3': "بمانید، و با هیچ کس دربارهٔ آن گپ نزنید.", // nieuw, nalezen
   'be.c.jobends.w': "قرارداد کرایهٔ شما از قرارداد کار جداست. در آن نوشته که چه مدت می‌توانید بمانید. justitiehuis می‌تواند اولین مشوره را رایگان به شما بدهد.", // nieuw, nalezen
   'be.c.newjob': 'کار نو پالیدن',
-  'be.c.newjob.b': end("پیش از رفتن، یک معرفی‌نامه (referentie) بخواهید. ورقه‌های معاش (loonbrieven)، قرارداد و C4 خود را نگه دارید. CV خود را تازه کنید. در VDAB (vdab.be) و در دفترهای کار موقت (interimkantoren) کار بپالید. هرگز برای گرفتن کار پول ندهید.", prsBase, 'abuse'), // nieuw, nalezen
+  'be.c.newjob.b': end("پیش از رفتن، یک معرفی‌نامه (referentie) بخواهید. ورق‌های معاش (loonbrieven)، قرارداد و C4 خود را نگه دارید. CV خود را تازه کنید. در VDAB (vdab.be) و در دفترهای کاریابی موقت (interimkantoren) کار بپالید. هرگز برای گرفتن کار پول ندهید.", prsBase, 'abuse'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.p': 'نام شما را به حیث معرف داده می‌توانم؟',
   'be.c.newjob.s': 'کسی به شما کار پیشنهاد می‌کند، اما اول باید ۳۰۰ یورو «برای کار» بدهید. چه می‌کنید؟',
-  'be.c.newjob.o1': "پول ندهید. یک دفتر کار موقت واقعی بپالید.", // nieuw, nalezen
+  'be.c.newjob.o1': "پول ندهید. یک دفتر کاریابی موقت واقعی بپالید.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.o2': 'پول بدهید، چون یک کار خوب ارزشش را دارد.',
   'be.c.newjob.o3': 'حالا نیمه‌اش را بدهید و باقی را بعداً.',
-  'be.c.newjob.w': "پول خواستن برای کار یک نشانهٔ خطر است. دفتر کار موقت حق ندارد برای پیدا کردن کار از شما پول بگیرد. در VDAB هم می‌توانید کار بپالید.", // nieuw, nalezen
+  'be.c.newjob.w': "پول خواستن برای کار یک نشانهٔ خطر است. دفتر کاریابی موقت حق ندارد برای پیدا کردن کار از شما پول بگیرد. در VDAB هم می‌توانید کار بپالید.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const uk: Gloss = {
@@ -155,14 +155,14 @@ export const uk: Gloss = {
   'be.s.ww.1': "Я реєструюся у VDAB.", // nieuw, nalezen
   'be.c.ww.a': "Я попрошу свій C4 і піду до профспілки.", // nieuw, nalezen
   'be.s.jobends.2': "Я питаю поради в justitiehuis.", // nieuw, nalezen
-  'be.s.jobends.3': "Я питаю свій ziekenfonds, чи моє страхування триває.", // nieuw, nalezen
+  'be.s.jobends.3': "Я питаю свій ziekenfonds, чи діє далі моє страхування.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.newjob.2': 'Я зберігаю свої розрахункові листи.',
   'be.c.ww': "Допомога з безробіття", // nieuw, nalezen
   'be.c.ww.b': end("Втратив / втратила роботу? Роботодавець дає тобі C4, найпізніше в останній робочий день. Одразу зареєструйся як шукач роботи у VDAB. Потім подай заяву на допомогу через профспілку (ABVV, ACV чи ACLVB) або через HVW, якщо ти не член профспілки. Заяву подають не в саму RVA: RVA вирішує. Спершу ти маєш пропрацювати достатньо довго. Допомога обмежена в часі: як довго, залежить від того, скільки ти працював / працювала. Ти звільнився / звільнилася сам / сама без поважної причини? Тоді зазвичай якийсь час не отримуєш допомоги.", ukBase, 'advice'), // nieuw, nalezen
   'be.c.ww.p': "Я хочу подати заяву на допомогу. Що мені робити?", // nieuw, nalezen
   'be.c.ww.s': 'Ти сердишся через роботу й хочеш сьогодні звільнитися. Що розумно?',
   'be.c.ww.o1': 'Спершу порадитися, перш ніж звільнятися.',
-  'be.c.ww.o2': "Звільнитися сьогодні: допомогу однаково дадуть.", // nieuw, nalezen
+  'be.c.ww.o2': "Звільнишся сьогодні: допомогу однаково дадуть.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.ww.o3': 'Перестати ходити на роботу й нічого не казати.',
   'be.c.ww.w': "Звільнення може коштувати тобі допомоги на якийсь час. Розмова спершу з керівником, профспілкою чи justitiehuis може допомогти знайти кращий шлях.", // nieuw, nalezen
   'be.c.jobends': "Робота закінчується: що ще припиняється?",
@@ -174,7 +174,7 @@ export const uk: Gloss = {
   'be.c.jobends.o3': "Залишишся й ні з ким про це не говоритимеш.", // nieuw, nalezen
   'be.c.jobends.w': "Твій договір оренди окремий від трудового договору. У ньому написано, як довго ти можеш жити там. Justitiehuis може дати тобі першу безкоштовну пораду.", // nieuw, nalezen
   'be.c.newjob': 'Пошук нової роботи',
-  'be.c.newjob.b': end("Перш ніж піти, попроси рекомендацію (referentie). Зберігай свої розрахункові листи (loonbrieven), контракт і C4. Онови резюме. Шукай роботу у VDAB (vdab.be) і в агентствах тимчасової роботи (interimkantoren). Ніколи не плати гроші, щоб отримати роботу.", ukBase, 'abuse'), // nieuw, nalezen
+  'be.c.newjob.b': end("Перш ніж піти, попроси рекомендацію (referentie). Зберігай свої розрахункові листи (loonbrieven), договір і C4. Онови резюме. Шукай роботу у VDAB (vdab.be) і в агентствах тимчасової роботи (interimkantoren). Ніколи не плати гроші, щоб отримати роботу.", ukBase, 'abuse'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.p': 'Можна вказати вас як рекомендацію?',
   'be.c.newjob.s': 'Тобі пропонують роботу, але спершу треба заплатити 300 євро «за роботу». Що ти зробиш?',
   'be.c.newjob.o1': "Не платитимеш. Шукатимеш справжнє агентство.", // nieuw, nalezen
@@ -234,15 +234,15 @@ export const pl: Gloss = {
   'be.c.ww.o3': 'Przestajesz przychodzić do pracy i nic nie mówisz.',
   'be.c.ww.w': "Zwolnienie się może cię kosztować zasiłek na jakiś czas. Rozmowa najpierw z przełożonym, związkiem zawodowym albo justitiehuis może pomóc znaleźć lepsze wyjście.", // nieuw, nalezen
   'be.c.jobends': "Kończy się praca: co jeszcze się kończy?",
-  'be.c.jobends.b': end("Kiedy twoja praca się kończy, sprawdź końcowe rozliczenie (eindafrekening) i poproś o C4. Jesteś pracownikiem umysłowym (bediende)? Wtedy dostajesz dodatek urlopowy z ostatnią pensją. Pracownikiem fizycznym (arbeider)? Wtedy dostajesz go w następnym roku z kasy urlopowej (vakantiekas). Mieszkanie albo bus przez agencję mogą skończyć się w tym samym czasie. Twoja umowa najmu ma własne zasady: poproś o radę, zanim wyprowadzisz się z mieszkania. Na leczenie jesteś ubezpieczony / ubezpieczona przez swój ziekenfonds. Z zasiłkiem dla bezrobotnych zwykle zostajesz ubezpieczony / ubezpieczona. Przeprowadzasz się? Powiedz gemeente w ciągu 8 dni roboczych. Wracasz do swojego kraju? Zapytaj swój ziekenfonds.", plBase, 'advice'), // nieuw, nalezen
+  'be.c.jobends.b': end("Kiedy twoja praca się kończy, sprawdź końcowe rozliczenie (eindafrekening) i poproś o C4. Jesteś pracownikiem umysłowym (bediende)? Wtedy dostajesz wynagrodzenie urlopowe z ostatnią pensją. Pracownikiem fizycznym (arbeider)? Wtedy dostajesz go w następnym roku z kasy urlopowej (vakantiekas). Mieszkanie albo bus przez agencję mogą skończyć się w tym samym czasie. Twoja umowa najmu ma własne zasady: poproś o radę, zanim wyprowadzisz się z mieszkania. Na leczenie jesteś ubezpieczony / ubezpieczona przez swój ziekenfonds. Z zasiłkiem dla bezrobotnych zwykle zostajesz ubezpieczony / ubezpieczona. Przeprowadzasz się? Zgłoś to w gminie (gemeente) w ciągu 8 dni roboczych. Wracasz do swojego kraju? Zapytaj swój ziekenfonds.", plBase, 'advice'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.jobends.p': "Kiedy dostanę rozliczenie końcowe?",
   'be.c.jobends.s': "Twoja praca kończy się w piątek. Agencja załatwia ci też pokój. Co robisz?", // nieuw, nalezen
   'be.c.jobends.o1': "Pytasz, co jest w umowie najmu, i prosisz o radę.", // nieuw, nalezen
   'be.c.jobends.o2': "Wyprowadzasz się z pokoju w piątek, bo praca się kończy.", // nieuw, nalezen
   'be.c.jobends.o3': "Zostajesz i z nikim o tym nie rozmawiasz.", // nieuw, nalezen
-  'be.c.jobends.w': "Twoja umowa najmu jest oddzielna od umowy o pracę. Jest w niej, jak długo możesz zostać. Justitiehuis może dać ci pierwszą bezpłatną poradę.", // nieuw, nalezen
+  'be.c.jobends.w': "Twoja umowa najmu jest oddzielna od umowy o pracę. Jest w niej napisane, jak długo możesz zostać. Justitiehuis może dać ci pierwszą bezpłatną poradę.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob': 'Szukanie nowej pracy',
-  'be.c.newjob.b': end("Zanim odejdziesz, poproś o referencje (referentie). Zachowaj swoje odcinki wypłaty (loonbrieven), umowę i C4. Zaktualizuj CV. Szukaj pracy w VDAB (vdab.be) i w agencjach pracy tymczasowej (interimkantoren). Nigdy nie płać, żeby dostać pracę.", plBase, 'abuse'), // nieuw, nalezen
+  'be.c.newjob.b': end("Zanim odejdziesz, poproś o referencje (referentie). Zachowaj swoje paski wypłaty (loonbrieven), umowę i C4. Zaktualizuj CV. Szukaj pracy w VDAB (vdab.be) i w agencjach pracy tymczasowej (interimkantoren). Nigdy nie płać, żeby dostać pracę.", plBase, 'abuse'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.p': 'Czy mogę podać pana/panią jako osobę do referencji?',
   'be.c.newjob.s': 'Ktoś proponuje ci pracę, ale najpierw musisz zapłacić 300 euro „za pracę”. Co robisz?',
   'be.c.newjob.o1': "Nie płacisz. Szukasz prawdziwej agencji.", // nieuw, nalezen
@@ -268,7 +268,7 @@ export const ro: Gloss = {
   'be.c.ww.o3': 'Nu mai vii la muncă și nu spui nimic.',
   'be.c.ww.w': "Demisia te poate costa ajutorul pentru o vreme. Dacă vorbești întâi cu șeful, cu sindicatul sau cu justitiehuis, poți găsi o cale mai bună.", // nieuw, nalezen
   'be.c.jobends': "Se termină munca: ce se mai termină?",
-  'be.c.jobends.b': end("Când munca ta se termină, verifică lichidarea finală (eindafrekening) și cere-ți C4-ul. Ești funcționar (bediende)? Atunci primești banii de concediu odată cu ultimul salariu. Muncitor (arbeider)? Atunci îi primești anul următor, de la casa de concedii (vakantiekas). Locuința sau un microbuz prin agenție se pot termina în același timp. Contractul tău de închiriere are regulile lui: cere sfat înainte să pleci din casă. Pentru îngrijiri medicale ești asigurat prin ziekenfonds. Cu ajutor de șomaj, de obicei rămâi asigurat. Te muți? Anunță gemeente (primăria) în 8 zile lucrătoare. Te întorci în țara ta? Întreabă la ziekenfonds.", roBase, 'advice'), // nieuw, nalezen
+  'be.c.jobends.b': end("Când munca ta se termină, verifică lichidarea finală (eindafrekening) și cere-ți C4-ul. Ești funcționar (bediende)? Atunci primești banii de concediu odată cu ultimul salariu. Muncitor (arbeider)? Atunci îi primești anul următor, de la casa de concedii (vakantiekas). Locuința sau un microbuz prin agenție se pot termina în același timp. Contractul tău de închiriere are regulile lui: cere sfat înainte să pleci din casă. Pentru îngrijiri medicale ai asigurare prin ziekenfonds. Cu ajutor de șomaj, de obicei asigurarea continuă. Te muți? Anunță gemeente (primăria) în 8 zile lucrătoare. Te întorci în țara ta? Întreabă la ziekenfonds.", roBase, 'advice'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.jobends.p': "Când primesc lichidarea finală?",
   'be.c.jobends.s': "Munca ta se termină vineri. Agenția îți dă și camera. Ce faci?", // nieuw, nalezen
   'be.c.jobends.o1': "Întrebi ce scrie în contractul de închiriere și ceri sfat.", // nieuw, nalezen
@@ -289,16 +289,16 @@ export const bg: Gloss = {
   'be.w.ww': "C4 (документът от работодателя, когато работата ти свърши)", // nieuw, nalezen
   'be.w.uwv': "RVA (националната служба, която решава за обезщетението за безработица)", // nieuw, nalezen
   'be.s.ww.1': "Записвам се във VDAB.", // nieuw, nalezen
-  'be.c.ww.a': "Ще поискам моя C4 и ще отида в синдиката.", // nieuw, nalezen
+  'be.c.ww.a': "Ще поискам своя C4 и ще отида в синдиката.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.jobends.2': "Питам за съвет в justitiehuis.", // nieuw, nalezen
-  'be.s.jobends.3': "Питам моя ziekenfonds дали осигуровката ми продължава.", // nieuw, nalezen
+  'be.s.jobends.3': "Питам своя ziekenfonds дали осигуровката ми продължава.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.newjob.2': 'Пазя фишовете си за заплата.',
   'be.c.ww': "Обезщетение за безработица", // nieuw, nalezen
   'be.c.ww.b': end("Загуби работата си? Работодателят ти дава C4, най-късно в последния ти работен ден. Веднага се запиши като търсещ работа във VDAB. След това подай молба за обезщетение чрез синдикат (ABVV, ACV или ACLVB) или чрез HVW, ако не си член. Не подаваш молбата в самата RVA: RVA решава. Първо трябва да си работил / работила достатъчно дълго. Обезщетението е ограничено във времето: колко дълго зависи от това колко дълго си работил / работила. Напусна сам / сама, без основателна причина? Тогава обикновено известно време не получаваш обезщетение.", bgBase, 'advice'), // nieuw, nalezen
   'be.c.ww.p': "Искам да подам молба за обезщетение. Какво трябва да направя?", // nieuw, nalezen
   'be.c.ww.s': { m: 'Ядосан си на работата си и искаш да напуснеш днес. Кое е разумно?', f: 'Ядосана си на работата си и искаш да напуснеш днес. Кое е разумно?', x: 'Работата те ядосва и искаш да напуснеш днес. Кое е разумно?' },
   'be.c.ww.o1': 'Първо да потърсиш съвет, преди да напуснеш.',
-  'be.c.ww.o2': "Да напуснеш днес: и без това ще получиш обезщетение.", // nieuw, nalezen
+  'be.c.ww.o2': "Напускаш днес: и без това ще получиш обезщетение.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.ww.o3': 'Да спреш да ходиш на работа, без да кажеш нищо.',
   'be.c.ww.w': "Напускането може да ти струва обезщетението за известно време. Ако първо говориш с началника, синдиката или justitiehuis, може да намериш по-добър път.", // nieuw, nalezen
   'be.c.jobends': "Работата свършва: какво друго спира?",
@@ -427,7 +427,7 @@ export const de: Gloss = {
   'be.s.ww.1': "Ich melde mich beim VDAB an.", // nieuw, nalezen
   'be.c.ww.a': "Ich frage nach meinem C4 und gehe zur Gewerkschaft.", // nieuw, nalezen
   'be.s.jobends.2': "Ich hole mir Rat im Justitiehuis.", // nieuw, nalezen
-  'be.s.jobends.3': "Ich frage mein ziekenfonds, ob meine Versicherung weiterläuft.", // nieuw, nalezen
+  'be.s.jobends.3': "Ich frage meinen ziekenfonds, ob meine Versicherung weiterläuft.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.newjob.2': 'Ich bewahre meine Lohnabrechnungen auf.',
   'be.c.ww': "Arbeitslosengeld", // nieuw, nalezen
   'be.c.ww.b': end("Arbeit verloren? Dein Arbeitgeber gibt dir ein C4, spätestens an deinem letzten Arbeitstag. Melde dich sofort beim VDAB als arbeitssuchend. Beantrage dann dein Arbeitslosengeld über eine Gewerkschaft (ABVV, ACV oder ACLVB) oder über die HVW, wenn du kein Mitglied bist. Du beantragst es nicht bei der RVA selbst: Die RVA entscheidet. Du musst vorher lange genug gearbeitet haben. Das Arbeitslosengeld ist zeitlich begrenzt: Wie lange, hängt davon ab, wie lange du gearbeitet hast. Hast du selbst gekündigt, ohne guten Grund? Dann bekommst du meistens eine Zeit lang kein Arbeitslosengeld.", deBase, 'advice'), // nieuw, nalezen
@@ -438,9 +438,9 @@ export const de: Gloss = {
   'be.c.ww.o3': 'Komm einfach nicht mehr zur Arbeit, ohne etwas zu sagen.',
   'be.c.ww.w': "Eine Kündigung kann dich eine Zeit lang dein Arbeitslosengeld kosten. Wenn du zuerst mit deinem Vorgesetzten, der Gewerkschaft oder dem Justitiehuis sprichst, findest du vielleicht einen besseren Weg.", // nieuw, nalezen
   'be.c.jobends': "Dein Job endet: Was hört noch auf?",
-  'be.c.jobends.b': end("Wenn deine Arbeit endet, prüfe deine Schlussabrechnung (eindafrekening) und frag nach deinem C4. Bist du Angestellter (bediende)? Dann bekommst du dein Urlaubsgeld mit deinem letzten Lohn. Arbeiter (arbeider)? Dann bekommst du es im Jahr danach von der Urlaubskasse (vakantiekas). Wohnung oder ein Kleinbus über die Agentur können gleichzeitig enden. Dein Mietvertrag hat eigene Regeln: Hol dir Rat, bevor du aus der Wohnung ausziehst. Für deine Gesundheitskosten bist du über dein ziekenfonds versichert. Mit Arbeitslosengeld bleibst du meistens versichert. Du ziehst um? Sag es der gemeente innerhalb von 8 Arbeitstagen. Du gehst zurück in dein Land? Frag dein ziekenfonds.", deBase, 'advice'), // nieuw, nalezen
+  'be.c.jobends.b': end("Wenn deine Arbeit endet, prüfe deine Schlussabrechnung (eindafrekening) und frag nach deinem C4. Bist du Angestellter (bediende)? Dann bekommst du dein Urlaubsgeld mit deinem letzten Lohn. Arbeiter (arbeider)? Dann bekommst du es im Jahr danach von der Urlaubskasse (vakantiekas). Wohnung oder ein Kleinbus über die Zeitarbeitsfirma können gleichzeitig enden. Dein Mietvertrag hat eigene Regeln: Hol dir Rat, bevor du aus der Wohnung ausziehst. Für deine Gesundheitskosten bist du über deinen ziekenfonds versichert. Mit Arbeitslosengeld bleibst du meistens versichert. Du ziehst um? Sag es der gemeente innerhalb von 8 Arbeitstagen. Du gehst zurück in dein Land? Frag deinen ziekenfonds.", deBase, 'advice'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.jobends.p': "Wann bekomme ich meine Schlussabrechnung?",
-  'be.c.jobends.s': "Deine Arbeit endet am Freitag. Die Agentur besorgt dir auch dein Zimmer. Was machst du?", // nieuw, nalezen
+  'be.c.jobends.s': "Deine Arbeit endet am Freitag. Die Zeitarbeitsfirma besorgt dir auch dein Zimmer. Was machst du?", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.jobends.o1': "Frag, was in deinem Mietvertrag steht, und lass dich beraten.", // nieuw, nalezen
   'be.c.jobends.o2': "Verlass das Zimmer am Freitag, weil die Arbeit aufhört.", // nieuw, nalezen
   'be.c.jobends.o3': "Bleib und sprich mit niemandem darüber.", // nieuw, nalezen

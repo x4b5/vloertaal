@@ -39,7 +39,7 @@ export const ti: Gloss = {
     "be.c.task.o1": { m: "ደጊሙ ከርእየካ ሕተት።", f: "ደጊሙ ከርእየኪ ሕተቲ።", x: "ደጊሙ ከርእየኩም ሕተቱ።" }, // = c.task.o1
     "be.c.task.o2": { m: "በቲ ዝተረደኣካ ፍርቂ ጀምር።", f: "በቲ ዝተረደኣኪ ፍርቂ ጀምሪ።", x: "በቲ ዝተረደኣኩም ፍርቂ ጀምሩ።" }, // = c.task.o2
     "be.c.task.o3": { m: "ሓደ ብጻይ ስራሕ ክሳዕ ዝገብሮ ተጸበ።", f: "ሓደ ብጻይ ስራሕ ክሳዕ ዝገብሮ ተጸበዪ።" }, // = c.task.o3
-    "be.c.task.w": "ደጊም ምሕታት ልሙድ እዩ፡ ሓንቲ ደቒቕ ጥራይ ይወስድ። ጌጋ ምእራም ግን ብዙሕ ዝያዳ ግዜ ይወስድ። መብዛሕትኦም ተቖጻጸርቲ ክልተ ግዜ ከርእዩ ይመርጹ።", // = c.task.w
+    "be.c.task.w": 'እንደገና ምሕታት ልሙድ እዩ፡ ሓንቲ ደቒቕ ጥራይ ይወስድ። ጌጋ ምእራም ግን ብዙሕ ዝያዳ ግዜ ይወስድ። መብዛሕትኦም ተቖጻጸርቲ ክልተ ግዜ ከርእዩ ይመርጹ።', // = c.task.w // nagelezen AI ronde 3
 };
 
 export const fa: Gloss = {
@@ -90,7 +90,7 @@ export const uk: Gloss = {
     "be.c.speakup.o3": "Скаржитимешся на нього всім іншим колегам.", // = c.speakup.o3
     "be.c.speakup.w": "У Фландрії люди часто кажуть це обережно, у спокійну хвилину, але таки кажуть. Сказати рано і спокійно — значить зберегти добрі стосунки.", // nieuw, nalezen
     "be.c.task": "Скажи, коли закінчиш, і питай, коли щось незрозуміло", // = c.task
-    "be.c.task.b": "Керівник часто дає завдання кількома словами й чекає, що ти скажеш, коли все готово. Сказати «ja», коли ти не зрозумів, часто призводить до помилок. Перепитати або попросити показати — тут нормально і не грубо.", // nieuw, nalezen
+    "be.c.task.b": "Керівник часто дає завдання кількома словами й чекає, що ти скажеш, коли все готово. Сказати «ja», коли тобі щось незрозуміло, часто призводить до помилок. Перепитати або попросити показати — тут нормально і не грубо.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.task.p": "Готово! Що мені тепер робити?", // = c.task.p
     "be.c.task.s": { m: "Керівник дуже швидко пояснює завдання. Ти зрозумів лише половину. Що ти зробиш?", f: "Керівник дуже швидко пояснює завдання. Ти зрозуміла лише половину. Що ти зробиш?", x: "Керівник дуже швидко пояснює завдання. Ти розумієш лише половину. Що ти зробиш?" }, // = c.task.s
     "be.c.task.o1": "Попросиш показати ще раз.", // = c.task.o1
@@ -109,7 +109,7 @@ export const tr: Gloss = {
     "be.c.speakup.o3": "Onu diğer bütün iş arkadaşlarına şikâyet edersin.", // = c.speakup.o3
     "be.c.speakup.w": "Flandra’da insanlar bunu çoğu zaman dikkatli ve sakin bir anda söyler, ama söyler. Erken ve sakin söylemek ilişkiyi iyi tutar.", // nieuw, nalezen
     "be.c.task": "Bitince söyle, anlamadığında sor", // = c.task
-    "be.c.task.b": "Amir çoğu zaman bir işi birkaç kelimeyle verir ve bitince söylemeni bekler. Anlamadığında \"ja\" demek çoğu zaman hatalara yol açar. Tekrar sormak ya da göstermesini istemek burada normaldir ve kabalık değildir.", // nieuw, nalezen
+    "be.c.task.b": "Amir çoğu zaman bir işi birkaç kelimeyle verir ve bitince söylemeni bekler. Anlamadığında “ja” demek çoğu zaman hatalara yol açar. Tekrar sormak ya da göstermesini istemek burada normaldir ve kabalık değildir.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.task.p": "Bitti! Şimdi ne yapayım?", // = c.task.p
     "be.c.task.s": "Amirin bir işi çok hızlı anlatıyor. Sadece yarısını anladın. Ne yaparsın?", // = c.task.s
     "be.c.task.o1": "Bir kez daha göstermesini istersin.", // = c.task.o1
@@ -166,7 +166,7 @@ export const bg: Gloss = {
     "be.c.speakup.o3": "Оплакваш се от него на всички други колеги.", // = c.speakup.o3
     "be.c.speakup.w": "Във Фландрия хората често го казват внимателно, в спокоен момент, но го казват. Да го кажеш рано и спокойно пази добрите отношения.", // nieuw, nalezen
     "be.c.task": "Кажи, когато приключиш, и питай, когато не е ясно", // = c.task
-    "be.c.task.b": "Началникът често дава задача с няколко думи и очаква да кажеш, когато е готово. Да кажеш „ja“, когато не си разбрал, често води до грешки. Да попиташ пак или да помолиш да ти покажат е нормално тук и не е грубо.", // nieuw, nalezen
+    "be.c.task.b": "Началникът често дава задача с няколко думи и очаква да кажеш, когато е готово. Да кажеш „ja“, когато не ти е ясно, често води до грешки. Да попиташ пак или да помолиш да ти покажат е нормално тук и не е грубо.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.task.p": "Готово! Какво да правя сега?", // = c.task.p
     "be.c.task.s": { m: "Началникът ти обяснява задача много бързо. Разбрал си само половината. Какво правиш?", f: "Началникът ти обяснява задача много бързо. Разбрала си само половината. Какво правиш?", x: "Началникът ти обяснява задача много бързо. Разбираш само половината. Какво правиш?" }, // = c.task.s
     "be.c.task.o1": "Молиш да ти го покажат още веднъж.", // = c.task.o1
@@ -223,7 +223,7 @@ export const fr: Gloss = {
     "be.c.speakup.o3": "Plains-toi de lui à tous les autres collègues.", // = c.speakup.o3
     "be.c.speakup.w": "En Flandre, les gens le disent souvent avec prudence, à un moment calme, mais ils le disent. Le dire tôt et calmement garde une bonne relation.", // nieuw, nalezen
     "be.c.task": "Dis quand c’est fini, demande quand ce n’est pas clair", // = c.task
-    "be.c.task.b": "Un responsable donne souvent une tâche en quelques mots, et attend que tu dises quand c’est fini. Dire « ja » sans avoir compris mène souvent à des erreurs. Redemander, ou demander qu’on te montre, est normal ici et pas impoli.", // nieuw, nalezen
+    "be.c.task.b": "Un responsable donne souvent une tâche en quelques mots, et attend que tu dises quand c’est fini. Dire “ja” sans avoir compris mène souvent à des erreurs. Redemander, ou demander qu’on te montre, est normal ici et pas impoli.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.task.p": "Fini ! Qu’est-ce que je dois faire maintenant ?", // = c.task.p
     "be.c.task.s": "Ton responsable explique une tâche très vite. Tu n’as compris que la moitié. Que fais-tu ?", // = c.task.s
     "be.c.task.o1": "Demande à le voir encore une fois.", // = c.task.o1
