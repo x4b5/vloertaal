@@ -58,30 +58,35 @@ describe('the sector in two steps', () => {
   // Since 30 October 2026 (owner's decision): step 1 is a list of one kind of row, the three
   // kinds of work and "Weet ik nog niet" (the list exception of max 3); step 2 the three sectors
   // of a group. "Iets anders" is gone.
-  it('puts every sector in exactly one of three groups, three per group', () => {
+  // With Winkel (31 October 2026) a fourth group: "Winkel en horeca". At most 3 sectors per group (max-3 on step 2).
+  it('puts every sector in exactly one of four groups, at most three per group', () => {
     const all = sectorGroups.flatMap((g) => g.sectors);
-    expect(sectorGroups.map((g) => g.id)).toEqual(['build', 'make', 'care']);
+    expect(sectorGroups.map((g) => g.id)).toEqual(['build', 'make', 'care', 'shop']);
     expect(all).toHaveLength(new Set(all).size);
     expect([...all].sort()).toEqual(sectors.map((s) => s.id).sort());
-    for (const g of sectorGroups) expect(g.sectors, g.id).toHaveLength(3);
+    for (const g of sectorGroups) {
+      expect(g.sectors.length, g.id).toBeGreaterThanOrEqual(2);
+      expect(g.sectors.length, g.id).toBeLessThanOrEqual(3);
+    }
     expect(sectorGroups.find((g) => g.id === 'build')!.sectors).toEqual(['construction', 'technical', 'garage']);
     expect(sectorGroups.find((g) => g.id === 'make')!.sectors).toEqual(['production', 'logistics', 'horticulture']);
-    expect(sectorGroups.find((g) => g.id === 'care')!.sectors).toEqual(['care', 'hospitality', 'cleaning']);
-    expect(sectorGroups.map((g) => g.nl)).toEqual(['Bouw en techniek', 'Maken en verplaatsen', 'Zorg en service']);
+    expect(sectorGroups.find((g) => g.id === 'care')!.sectors).toEqual(['care', 'cleaning']);
+    expect(sectorGroups.find((g) => g.id === 'shop')!.sectors).toEqual(['retail', 'hospitality']);
+    expect(sectorGroups.map((g) => g.nl)).toEqual(['Bouw en techniek', 'Maken en verplaatsen', 'Zorg en service', 'Winkel en horeca']);
     for (const g of sectorGroups) expect(uiEn[g.key]).toBeTruthy();
     expect(Object.keys(uiEn)).not.toContain('sectorGroupOther');
   });
   const rows = (html: string) => html.match(/class="set-row sector-group-row/g)?.length ?? 0;
-  it('shows step 1 as one list of four rows of one kind, "Weet ik nog niet" last', () => {
+  it('shows step 1 as one list of five rows of one kind, "Weet ik nog niet" last', () => {
     const html = renderToStaticMarkup(createElement(SectorGroupList, { onGroup: () => {}, onNotSure: () => {} }));
     expect(html.match(/<ul /g)).toHaveLength(1);
-    expect(rows(html)).toBe(4);
-    expect(html.match(/<button/g)).toHaveLength(4);
+    expect(rows(html)).toBe(5);
+    expect(html.match(/<button/g)).toHaveLength(5);
     expect(html).not.toContain('max3-card');
-    for (const nl of ['Bouw en techniek', 'Maken en verplaatsen', 'Zorg en service']) expect(html).toContain(nl);
-    expect([...html.matchAll(/data-group="(\w+)"/g)].map((m) => m[1])).toEqual(['build', 'make', 'care', 'none']);
-    // The three groups lead on (a chevron), "Weet ik nog niet" does not.
-    expect(html.match(/set-row-chev/g)).toHaveLength(3);
+    for (const nl of ['Bouw en techniek', 'Maken en verplaatsen', 'Zorg en service', 'Winkel en horeca']) expect(html).toContain(nl);
+    expect([...html.matchAll(/data-group="(\w+)"/g)].map((m) => m[1])).toEqual(['build', 'make', 'care', 'shop', 'none']);
+    // The four groups lead on (a chevron), "Weet ik nog niet" does not.
+    expect(html.match(/set-row-chev/g)).toHaveLength(4);
     // The Dutch labels carry their language.
     expect(html).toContain('<span class="set-row-nl" lang="nl">Weet ik nog niet</span>');
   });

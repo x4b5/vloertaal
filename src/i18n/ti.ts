@@ -98,6 +98,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'ምፍራይ',
     sectorCare: 'ክንክን',
     sectorHospitality: 'ቤት ብልዕን ሆቴልን',
+    sectorRetail: 'ድኳንን ሱፐርማርኬትን', // nieuw, nalezen
     sectorCleaning: 'ጽሬት',
     sectorHorticulture: "ሕርሻ ኣትክልትን ገዛ ኣትክልትን", // nagelezen (2e lezing)
     sectorTechnical: 'ቴክኒካዊ ስራሕ', // nieuw (30 okt 2026), nalezen
@@ -165,7 +166,7 @@ const lang: HelpLanguageSource = {
     daysUnit: 'መዓልትታት',
     wordsUnit: 'ቃላት',
     countTitle: 'ብዘይ ስም ምቑጻር',
-    countHint: 'እቲ ኣፕ ትምህርትታት ክንደይ ግዜ ከም ዝውዳእን ብግምት ክንደይ ከም ዝወስድን ይቖጽር። ስም የለን፡ ኣካውንት የለን፡ ምክትታል የለን።',
+    countHint: 'እቲ ኣፕ ትምህርትታት ክንደይ ግዜ ከም ዝውዳእን ብግምት ክንደይ ከም ዝወስድን ይቖጽር። ከምኡ’ውን ኣብቲ ኣፕ ጌጋ እንተ ኣጋጢሙ። ስም የለን፡ ኣካውንት የለን፡ ምክትታል የለን።', // fout-zin nieuw, nalezen
     certificate: 'ምስክር ወረቐት',
     myCertificates: 'ምስክር ወረቐታተይ',
     certsEmpty: { m: 'ኩሉ ትምህርትታት ሓደ ክፍሊ ወድእ። ሽዑ ምስክር ወረቐት ትረኽብ።', f: 'ኩሉ ትምህርትታት ሓደ ክፍሊ ወድኢ። ሽዑ ምስክር ወረቐት ትረኽቢ።', x: 'ኩሉ ትምህርትታት ሓደ ክፍሊ ወድኡ። ሽዑ ምስክር ወረቐት ትረኽቡ።' }, // x: nieuw, nalezen
@@ -250,6 +251,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'ዕጹው',
     sectorGroupMake: 'ምስራሕን ምጽዓንን',
     sectorGroupCare: 'ክንክንን ኣገልግሎትን',
+    sectorGroupShop: 'ድኳንን ቤት ብልዕን', // nieuw, nalezen
     sectorGroupBuild: 'ህንጻን ቴክኒክን', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'ድምጺ ሰበይቲ',
     voiceMan: 'ድምጺ ሰብኣይ',

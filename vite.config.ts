@@ -12,6 +12,7 @@ import { askPage, coachPage } from './src/lib/coachPage';
 import { rulesPage, SECTOR_PAGES, sectorPage } from './src/lib/sectorPages';
 import { notFoundPage, siteLinks } from './src/lib/siteLinks';
 import { belgiumPage, faqScript, llmsTxt } from './src/lib/geoPages';
+import { privacyPage } from './src/lib/privacyPage';
 import { sitemap } from './src/lib/sitemap';
 import { TOPIC_PAGES, topicPage, topicsIndexPage } from './src/lib/topicPages';
 
@@ -132,6 +133,7 @@ function langPagesPlugin(): Plugin {
       this.emitFile({ type: 'asset', fileName: 'werkregels/index.html', source: rulesPage() });
       this.emitFile({ type: 'asset', fileName: 'belgie/index.html', source: belgiumPage() });
       this.emitFile({ type: 'asset', fileName: 'llms.txt', source: llmsTxt() });
+      this.emitFile({ type: 'asset', fileName: 'privacy/index.html', source: privacyPage() });
       this.emitFile({ type: 'asset', fileName: 'voor-begeleiders/index.html', source: coachPage() });
       this.emitFile({ type: 'asset', fileName: 'meekijken/index.html', source: askPage() });
       for (const t of TOPIC_PAGES) this.emitFile({ type: 'asset', fileName: `${t.path.slice(1)}index.html`, source: topicPage(t) });

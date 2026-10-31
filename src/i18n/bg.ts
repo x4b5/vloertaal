@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'Производство',
     sectorCare: 'Грижа за хора',
     sectorHospitality: 'Хотели и ресторанти',
+    sectorRetail: 'Магазин и супермаркет', // nieuw, nalezen
     sectorCleaning: 'Почистване',
     sectorHorticulture: 'Градинарство', // nieuw (30 okt 2026), nagelezen (2e lezing)
     sectorTechnical: 'Техника', // nieuw (30 okt 2026), nalezen
@@ -164,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { one: 'ден', other: 'дни' },
     wordsUnit: { one: 'дума', other: 'думи' },
     countTitle: 'Анонимно броене',
-    countHint: 'Приложението брои колко често се правят уроците и колко време отнемат приблизително. Без име, без акаунт, без следене.',
+    countHint: 'Приложението брои колко често се правят уроците и колко време отнемат приблизително. И дали някъде в приложението има грешка. Без име, без акаунт, без следене.', // fout-zin nieuw, nalezen
     certificate: 'Сертификат',
     myCertificates: 'Моите сертификати',
     certsEmpty: 'Завърши всички уроци от един раздел. Тогава получаваш сертификат.',
@@ -249,6 +250,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Изключено',
     sectorGroupMake: 'Производство и превоз',
     sectorGroupCare: 'Грижа и обслужване',
+    sectorGroupShop: 'Магазини и заведения', // nieuw, nalezen
     sectorGroupBuild: 'Строителство и техника', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Женски глас',
     voiceMan: 'Мъжки глас',

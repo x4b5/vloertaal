@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'Виробництво',
     sectorCare: 'Догляд',
     sectorHospitality: 'Готелі й ресторани',
+    sectorRetail: 'Магазин і супермаркет', // nieuw, nalezen
     sectorCleaning: 'Прибирання',
     sectorHorticulture: 'Садівництво і теплиці', // nieuw (30 okt 2026), nagelezen (2e lezing)
     sectorTechnical: 'Технічні роботи', // nieuw (30 okt 2026), nalezen
@@ -164,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { one: 'день', few: 'дні', many: 'днів', other: 'днів' },
     wordsUnit: { one: 'слово', few: 'слова', many: 'слів', other: 'слів' },
     countTitle: 'Анонімний підрахунок',
-    countHint: 'Застосунок рахує, як часто проходять уроки і скільки приблизно вони тривають. Без імені, без акаунта, без стеження.',
+    countHint: 'Застосунок рахує, як часто проходять уроки і скільки приблизно вони тривають. І чи є десь помилка в застосунку. Без імені, без акаунта, без стеження.', // fout-zin nieuw, nalezen
     certificate: 'Сертифікат',
     myCertificates: 'Мої сертифікати',
     certsEmpty: 'Пройди всі уроки розділу. Тоді отримаєш сертифікат.',
@@ -249,6 +250,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Вимкнено',
     sectorGroupMake: 'Виробництво і перевезення',
     sectorGroupCare: 'Догляд і обслуговування',
+    sectorGroupShop: 'Магазини й ресторани', // nieuw, nalezen
     sectorGroupBuild: 'Будівництво і техніка', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Жіночий голос',
     voiceMan: 'Чоловічий голос',

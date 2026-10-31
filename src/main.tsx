@@ -5,6 +5,7 @@ import { Crashed, Splash } from './components/Splash';
 import { startScreens } from './lazyScreens';
 import { loadProgress } from './lib/progress';
 import { readTesterParam } from './lib/report';
+import { watchErrors } from './lib/errors';
 import { watchForUpdates } from './lib/appUpdate';
 import { applyTheme } from './lib/theme';
 import { applyTextSize } from './lib/textSize';
@@ -26,6 +27,8 @@ import './cards.css';
 const params = new URLSearchParams(location.search);
 // vloertaal.nl/?test: this phone shows "Iets melden" in lessons (testers; ?test=0 off). src/lib/report.ts
 readTesterParam(location.search);
+// Where the app goes wrong, counted without anything about the learner (src/lib/errors.ts).
+watchErrors();
 
 // Apply the saved theme before the first paint, so there is no light/dark flash.
 // Dev screenshot pages follow the browser's colour scheme instead.

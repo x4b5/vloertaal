@@ -5,6 +5,7 @@ import { loadProgress } from '../lib/progress';
 import { RestartIcon } from './Icons';
 import { CAST } from './Characters';
 import { LogoMark } from './Logo';
+import { reportError } from '../lib/errors';
 
 /**
  * The calm start screen while a help language's texts load: the same as the static splash in
@@ -62,6 +63,8 @@ export class Crashed extends Component<{ children: ReactNode }, { failed: boolea
   }
   componentDidCatch(error: unknown) {
     console.error(error);
+    // Counted without anything about the learner (src/lib/errors.ts), under "Anoniem meetellen".
+    reportError('scherm', error);
   }
   private reload = () => {
     try { history.replaceState(null, '', location.pathname + location.search); } catch { /* keep the address */ }

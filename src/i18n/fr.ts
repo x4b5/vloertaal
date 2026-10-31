@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'Production',
     sectorCare: 'Soins',
     sectorHospitality: 'Hôtellerie et restauration',
+    sectorRetail: 'Magasin et supermarché', // nieuw, nalezen
     sectorCleaning: 'Nettoyage',
     sectorHorticulture: 'Horticulture', // nieuw (30 okt 2026), nagelezen (2e lezing)
     sectorTechnical: 'Technique', // nieuw (30 okt 2026), nalezen
@@ -164,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { one: 'jour', many: 'jours', other: 'jours' },
     wordsUnit: { one: 'mot', many: 'mots', other: 'mots' },
     countTitle: 'Compter de façon anonyme',
-    countHint: 'L’appli compte combien de fois on fait les leçons, et à peu près combien de temps elles durent. Pas de nom, pas de compte, pas de suivi.',
+    countHint: 'L’appli compte combien de fois on fait les leçons, et à peu près combien de temps elles durent. Et si l’appli a une erreur quelque part. Pas de nom, pas de compte, pas de suivi.', // fout-zin nieuw, nalezen
     certificate: 'Certificat',
     myCertificates: 'Mes certificats',
     certsEmpty: 'Termine toutes les leçons d’une partie. Tu reçois alors un certificat.',
@@ -249,6 +250,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Désactivé',
     sectorGroupMake: 'Fabriquer et transporter',
     sectorGroupCare: 'Soins et services',
+    sectorGroupShop: 'Commerce et restauration', // nieuw, nalezen
     sectorGroupBuild: 'Bâtiment et technique', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Voix de femme',
     voiceMan: 'Voix d’homme',

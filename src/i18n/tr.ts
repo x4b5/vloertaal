@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'Üretim',
     sectorCare: 'Sağlık ve bakım',
     sectorHospitality: 'Otel ve restoran',
+    sectorRetail: 'Mağaza ve market', // nieuw, nalezen
     sectorCleaning: 'Temizlik',
     sectorHorticulture: 'Bahçecilik', // nagelezen (2e lezing)
     sectorTechnical: 'Teknik işler', // nieuw (30 okt 2026), nalezen
@@ -164,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: 'gün',
     wordsUnit: 'kelime',
     countTitle: 'Anonim sayım',
-    countHint: 'Uygulama derslerin kaç kez yapıldığını ve yaklaşık ne kadar sürdüğünü sayar. İsim yok, hesap yok, takip yok.',
+    countHint: 'Uygulama derslerin kaç kez yapıldığını ve yaklaşık ne kadar sürdüğünü sayar. Ve uygulamada bir yerde hata olup olmadığını. İsim yok, hesap yok, takip yok.', // fout-zin nieuw, nalezen
     certificate: 'Sertifika',
     myCertificates: 'Sertifikalarım',
     certsEmpty: 'Bir ünitenin tüm derslerini bitir. Sonra bir sertifika alırsın.',
@@ -249,6 +250,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Kapalı',
     sectorGroupMake: 'Üretim ve taşıma',
     sectorGroupCare: 'Bakım ve hizmet',
+    sectorGroupShop: 'Mağaza ve yeme-içme', // nieuw, nalezen
     sectorGroupBuild: 'İnşaat ve teknik', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Kadın sesi',
     voiceMan: 'Erkek sesi',

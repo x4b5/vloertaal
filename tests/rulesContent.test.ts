@@ -88,10 +88,10 @@ const KEY_RULES = [
 ];
 
 describe('rules content: ids', () => {
-  it('has the 10 units in path order, the 7 Entree units beside them, 2 more at the end, and the 9 sector units', () => {
+  it('has the 10 units in path order, 6 Entree units beside them, 2 more at the end, and the 10 sector units', () => {
     const FIRST_TEN = ['r.zoeken', 'r.start', 'r.contract', 'r.loon', 'r.tijd', 'r.ziek', 'r.veilig', 'r.samen', 'r.rechten', 'r.geld'];
     expect(rulesUnits.map((u) => u.id)).toEqual([
-      'r.zoeken', 'r.start', 'r.afronden', 'r.contract', 'r.stage', 'r.loon', 'r.rekenen', 'r.tijd', 'r.winkel',
+      'r.zoeken', 'r.start', 'r.afronden', 'r.contract', 'r.stage', 'r.loon', 'r.rekenen', 'r.tijd',
       'r.ziek', 'r.veilig', 'r.samen', 'r.rechten', 'r.geld', 'r.digitaal', 'r.meedoen', 'r.duurzaam',
       // The second Entree round (curriculum, deel 7): writing, and "Jouw weg" after Entree.
       'r.schrijven', 'r.loopbaan',
@@ -102,9 +102,11 @@ describe('rules content: ids', () => {
     // 7.5, 10.6 and 10.7 in the second Entree round) and the 25 of the Entree additions (15.3 "AI op
     // je werk" came later; 16.4 and the 5 lessons of units 18 and 19 in the second round).
     expect(rulesUnits.filter((u) => FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(42);
-    expect(rulesUnits.filter((u) => !FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(25);
-    expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual(['r.build', 'r.care', 'r.clean', 'r.factory', 'r.horeca', 'r.kas', 'r.techniek', 'r.warehouse', 'r.werkplaats']);
-    for (const u of sectorRulesUnits) expect(u.lessons, u.id).toHaveLength(2);
+    // The 3 lessons of the winkel left the path when it became a sector unit (31 October 2026).
+    expect(rulesUnits.filter((u) => !FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(22);
+    expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual(['r.build', 'r.care', 'r.clean', 'r.factory', 'r.horeca', 'r.kas', 'r.techniek', 'r.warehouse', 'r.werkplaats', 'r.winkel']);
+    // The winkel was an Entree unit of the path (3 lessons) before it became a sector (31 October 2026).
+    for (const u of sectorRulesUnits) expect(u.lessons, u.id).toHaveLength(u.id === 'r.winkel' ? 3 : 2);
   });
 
   it('gives every unit, lesson, step and option a unique, well-formed id', () => {
@@ -201,7 +203,7 @@ describe('rules content: key rules and advice', () => {
   it('has the 10 pocket-card rules as key rules, and no others', () => {
     const keyRules = rules.filter((r) => r.key);
     expect(keyRules.map((r) => r.title).sort()).toEqual([...KEY_RULES].sort());
-    for (const r of keyRules) expect(rulesUnits.some((u) => u.lessons.some((l) => l.steps.includes(r))), r.id).toBe(true);
+    for (const r of keyRules) expect([...rulesUnits, ...sectorRulesUnits].some((u) => u.lessons.some((l) => l.steps.includes(r))), r.id).toBe(true);
   });
 
   it('marks every written rule with an advice line, and only written rules', () => {
@@ -330,7 +332,8 @@ describe('rules content: model sentences and recorded clips', () => {
  */
 describe('rules content: the Entree additions and their drawn cards', () => {
   const ENTREE = ['r.winkel', 'r.rekenen', 'r.afronden', 'r.stage', 'r.digitaal', 'r.meedoen', 'r.duurzaam'];
-  const entree = rulesUnits.filter((u) => ENTREE.includes(u.id));
+  // The winkel is one of them, though since 31 October 2026 a sector unit (not in the path).
+  const entree = [...rulesUnits, ...sectorRulesUnits].filter((u) => ENTREE.includes(u.id));
   const entreeSteps = entree.flatMap((u) => u.lessons.flatMap((l) => l.steps));
   type Card = Extract<RuleStep, { kind: 'card' }>;
   const cards = steps.filter((s): s is Card => s.kind === 'card');
@@ -346,7 +349,7 @@ describe('rules content: the Entree additions and their drawn cards', () => {
 
   // With 16.4 "Nieuws, nepnieuws en een mening" (second Entree round): 20 lessons, B and C one more,
   // one more true.
-  it('has 7 units with 20 lessons, all in the path, with the doc\'s tally (A 14, B 15, C 15; 11 true, 10 false)', () => {
+  it('has 7 units with 20 lessons (the winkel now a sector unit), with the doc\'s tally (A 14, B 15, C 15; 11 true, 10 false)', () => {
     expect(entree.map((u) => u.id).sort()).toEqual([...ENTREE].sort());
     expect(entree.flatMap((u) => u.lessons)).toHaveLength(20);
     const pos: Record<string, number> = {};
@@ -363,8 +366,8 @@ describe('rules content: the Entree additions and their drawn cards', () => {
   it('has the cards of units 11, 12 and 13, of every kind, and the garage\'s work order', () => {
     expect(cards.map((s) => s.id)).toEqual([
       'r.l.afronden.1.ca1', 'r.l.rekenen.1.ca1', 'r.l.rekenen.1.ca2', 'r.l.rekenen.1.ca3', 'r.l.rekenen.2.ca1',
-      'r.l.rekenen.2.ca2', 'r.l.rekenen.2.ca3', 'r.l.rekenen.3.ca1', 'r.l.rekenen.3.ca2', 'r.l.winkel.3.ca1',
-      'r.l.werkplaats.2.ca1',
+      'r.l.rekenen.2.ca2', 'r.l.rekenen.2.ca3', 'r.l.rekenen.3.ca1', 'r.l.rekenen.3.ca2',
+      'r.l.werkplaats.2.ca1', 'r.l.winkel.3.ca1',
     ]);
     expect(new Set(cards.map((s) => s.card.type))).toEqual(new Set(['rooster', 'kassabon', 'pakbon', 'etiket', 'werkbon', 'loonstrook']));
   });

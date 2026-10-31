@@ -7,7 +7,7 @@ export type SettingsList = 'me' | 'lessons' | 'phone';
 
 export type SettingsPage =
   | SettingsList
-  | 'language' | 'gender' | 'sector' | 'sector-build' | 'sector-make' | 'sector-care' | 'region' | 'country' | 'english' | 'certificates'
+  | 'language' | 'gender' | 'sector' | 'sector-build' | 'sector-make' | 'sector-care' | 'sector-shop' | 'region' | 'country' | 'english' | 'certificates'
   | 'sound' | 'voice' | 'tempo' | 'speaking' | 'writing' | 'text' | 'theme'
   | 'offline' | 'reminder' | 'reminder-time' | 'install' | 'backup' | 'counting' | 'reset' | 'unlock'
   /** "Wat ken je al?": a screen of its own (App, src/components/Toets.tsx ToetsPage), from Lessen. */
@@ -32,6 +32,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   'sector-build': 'sector',
   'sector-make': 'sector',
   'sector-care': 'sector',
+  'sector-shop': 'sector',
   region: 'me',
   country: 'me',
   english: 'me',

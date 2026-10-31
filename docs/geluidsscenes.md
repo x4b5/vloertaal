@@ -67,6 +67,9 @@ tweede helft van het pad. De woorden zijn dan bekend. "Woorden" telt alleen de g
 | 25 | `g.schoonmaak.glad` | Schoonmaak | De vloer is glad | `u.clean` | Jada, leerling | 30 | zacht | ⚖️ |
 | 26 | `g.schoonmaak.mengen` | Schoonmaak | Niet mengen | `u.clean` | Henk, leerling | 33 | zacht | ⚖️ |
 | 27 | `g.schoonmaak.klaar` | Schoonmaak | Bijna klaar | `u.finish` | Jada, leerling | 29 | zacht |  |
+| 28 | `g.winkel.datum` | Winkel | Over de datum | `u.shop` | Henk, leerling | 34 | zacht | ⚖️ |
+| 29 | `g.winkel.klant` | Winkel | Een klant wil rijst | `u.shop` | Jada, leerling | 29 | zacht |  |
+| 30 | `g.winkel.kassa` | Winkel | Op de kassa | `u.shop` | Henk, leerling | 37 | midden | ⚖️ |
 
 ## De scènes
 
@@ -523,6 +526,57 @@ Na `u.finish`. Geluid (zacht, -24 dB): Kantoor in de avond: stil, de airco zoemt
 - **Wat gebeurt er om negen uur?** De pauze begint. · **Alles gaat op slot.** ✔ · Je begint in kamer tien.  
   Uitleg: Om negen uur gaat alles op slot; dan meld je je af. *(At nine everything is locked; then you sign off.)*
 
+### Winkel
+
+#### 28. Over de datum ⚖️ · `g.winkel.datum`
+
+Na `u.shop`. Geluid (zacht, -24 dB): Supermarkt: koelvakken zoemen, een winkelwagen rolt voorbij, mensen praten zacht.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.winkel.datum.1` | Henk (Daniel) | Kijk even naar de producten in gang drie. |
+| `g.winkel.datum.2` | Henk (Daniel) | Is een product over de datum? Dan haal je het weg. |
+| `g.winkel.datum.3` | Leerling (Thijmen én Ariël) | Oké. Waar laat ik die producten? |
+| `g.winkel.datum.4` | Henk (Daniel) | In de bak achterin. Niet terug in het schap. |
+
+- **Wat doe je met een product over de datum?** Je zet het achteraan in het schap. · **Je doet het in de bak achterin.** ✔ · Je zet het bij de kassa.  
+  Uitleg: Een product over de datum haal je uit het schap. *(You take a product past its date off the shelf.)*
+- **In welke gang zijn de producten?** **In gang drie.** ✔ · In gang twee. · In gang tien.  
+  Uitleg: Henk zegt: de producten in gang drie. *(Henk says: the products in aisle three.)*
+
+#### 29. Een klant wil rijst · `g.winkel.klant`
+
+Na `u.shop`. Geluid (zacht, -24 dB): Supermarkt: een scanner piept bij de kassa, een winkelwagen, mensen praten zacht.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.winkel.klant.1` | Jada (Noa) | Die klant wil rijst. Weet jij waar die ligt? |
+| `g.winkel.klant.2` | Leerling (Thijmen én Ariël) | Nee, dat weet ik niet zeker. |
+| `g.winkel.klant.3` | Jada (Noa) | In gang vier, onderaan. |
+| `g.winkel.klant.4` | Jada (Noa) | Loop even met de klant mee. Dat vinden klanten fijn. |
+
+- **Waar ligt de rijst?** In gang vijf, achteraan. · Bij de kassa, achterin. · **In gang vier, onderaan.** ✔  
+  Uitleg: Jada zegt: in gang vier, onderaan. *(Jada says: in aisle four, at the bottom.)*
+- **Wat doe je met de klant?** **Je loopt met de klant mee.** ✔ · Je zegt: in gang vier. · Je belt de chef even.  
+  Uitleg: Jada zegt: loop even met de klant mee. *(Jada says: walk along with the customer.)*
+
+#### 30. Op de kassa ⚖️ · `g.winkel.kassa`
+
+Na `u.shop`. Geluid (midden, -18 dB): Supermarkt bij de kassa: scanners piepen, een lade met geld gaat open, een kar.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.winkel.kassa.1` | Henk (Daniel) | Jij zit vandaag op kassa twee, tot drie uur. |
+| `g.winkel.kassa.2` | Henk (Daniel) | Wil iemand alcohol? Vraag dan even om een ID. |
+| `g.winkel.kassa.3` | Henk (Daniel) | Onder de achttien mag dat niet. |
+| `g.winkel.kassa.4` | Leerling (Thijmen én Ariël) | Oké. En mijn pauze? |
+| `g.winkel.kassa.5` | Henk (Daniel) | Om half één. Dan zit Jada op jouw kassa. |
+
+- **Wat doe je als iemand alcohol wil?** Je zegt: dat kan niet. · **Je vraagt om een ID.** ✔ · Je belt eerst de chef.  
+  Uitleg: Henk zegt: onder de achttien mag dat niet. *(Henk says: under eighteen that is not allowed.)*
+- **Hoe laat is je pauze?** Om half twee. · Om drie uur. · **Om half één.** ✔  
+  Uitleg: Henk zegt: je pauze is om half één. *(Henk says: your break is at half past twelve.)*
+
 ## Zo maak je het met ElevenLabs
 
 ### 1. De stemmen (het bestaande opnamescript)
@@ -589,7 +643,7 @@ ffmpeg -y -i beurt1.mp3 -i beurt2.mp3 -i beurt3.mp3 -stream_loop -1 -i geluid.mp
 (`-stream_loop -1` herhaalt het geluid; `amix ... duration=first` stopt als de stem klaar is;
 `areverse,afade,areverse` is de uitfade. Nodig: ffmpeg 4.4 of nieuwer.) Getest met ffmpeg 6.1.
 
-Alle 27 scènes in één keer, met de goede bestanden en het goede niveau per scène:
+Alle 30 scènes in één keer, met de goede bestanden en het goede niveau per scène:
 
 ```sh
 npm run scenes:lines -- --mix         # schrijft public/audio/scene-mix.sh
@@ -600,10 +654,10 @@ bash public/audio/scene-mix.sh        # maakt public/audio-scenes/<id>[.thijmen|
 
 | Onderdeel | Hoeveel | Credits (ongeveer) |
 |---|---|---|
-| Stemmen, één opname van elke zin | 111 clips, 4.934 tekens (Daniel 1.665, Noa 1.500, Thijmen 1.045, Ariël 724) | **5.000** |
+| Stemmen, één opname van elke zin | 124 clips, 5.526 tekens (Daniel 1.971, Noa 1.622, Thijmen 1.127, Ariël 806) | **5.500** |
 | Stemmen, met een tweede poging voor zinnen die niet goed klinken | | 7.000 tot 10.000 |
 | Omgevingsgeluid, één loop per plek (± 12 plekken × 15 s) | | 5.000 tot 8.000 |
-| Omgevingsgeluid, een eigen loop per scène (27 × 15 s) | | 12.000 tot 16.000 |
+| Omgevingsgeluid, een eigen loop per scène (30 × 15 s) | | 12.000 tot 16.000 |
 
 De stem kost 1 credit per teken (`eleven_multilingual_v2`; `npm run scenes:lines` telt het precies).
 Sound Effects rekent per gegenereerde seconde; de prijs verandert soms, dus kijk hem na op de
@@ -637,5 +691,5 @@ Echte stemmen en echt geluid klinken het meest als de werkvloer. Dat kan bij een
    scène als extra oefening na dat onderwerp tonen, of in de herhaling.
 5. **De ⚖️-scènes** noemen een veiligheidsregel of rechtenfeit (valbeveiliging, last van de kraan,
    spanningsloos werken, rijbewijs, storing aan een machine, heftruck, bespoten kas, hitte, gevallen cliënt, pillen,
-   allergie, datum in de koelcel, natte vloer, middelen mengen). Laat ze nalezen zoals de andere
+   allergie, datum in de koelcel, natte vloer, middelen mengen, vlees over de datum, alcohol onder de 18). Laat ze nalezen zoals de andere
    ⚖️-teksten.

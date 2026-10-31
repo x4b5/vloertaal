@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'تولید',
     sectorCare: 'مراقبت و پرستاری',
     sectorHospitality: 'رستوران و هتل',
+    sectorRetail: 'فروشگاه و سوپرمارکت', // nieuw, nalezen
     sectorCleaning: 'نظافت',
     sectorHorticulture: 'باغبانی و گلخانه', // nagelezen (2e lezing)
     sectorTechnical: 'کارهای فنی', // nieuw (30 okt 2026), nalezen
@@ -164,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: 'روز',
     wordsUnit: 'کلمه',
     countTitle: 'شمارش ناشناس',
-    countHint: 'برنامه می‌شمارد که درس‌ها چند بار انجام می‌شوند و تقریباً چقدر طول می‌کشند. بدون نام، بدون حساب، بدون ردیابی.',
+    countHint: 'برنامه می‌شمارد که درس‌ها چند بار انجام می‌شوند و تقریباً چقدر طول می‌کشند. و اینکه آیا برنامه جایی خطا می‌دهد. بدون نام، بدون حساب، بدون ردیابی.', // fout-zin nieuw, nalezen
     certificate: 'گواهی',
     myCertificates: 'گواهی‌های من',
     certsEmpty: 'همهٔ درس‌های یک بخش را تمام کنید. بعد یک گواهی می‌گیرید.',
@@ -249,6 +250,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'خاموش',
     sectorGroupMake: 'ساخت و جابه‌جایی',
     sectorGroupCare: 'مراقبت و خدمات',
+    sectorGroupShop: 'فروشگاه و رستوران', // nieuw, nalezen
     sectorGroupBuild: 'ساختمان و فنی', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'صدای زن',
     voiceMan: 'صدای مرد',

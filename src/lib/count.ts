@@ -8,6 +8,8 @@
  * only content in the path, a count cannot say who it was.)
  *
  * Started, stopped and finished per lesson show where learners give up (docs/pilot.md).
+ * Under the same switch, src/lib/errors.ts counts where the app goes wrong ("/e/fout/…"): only
+ * the kind of error and a short code, never what the learner typed or where they were.
  *
  * Nothing is sent:
  * - in development and tests (only a production build on vloertaal.nl counts, not a preview);
@@ -142,6 +144,17 @@ function send(url: string): void {
   } catch {
     // Counting never gets in the way of learning.
   }
+}
+
+/**
+ * Counts a path that src/lib/errors.ts made (it says only what went wrong in the code), with a
+ * short title for the dashboard. A no-op unless mayCount(), like count().
+ */
+export function countRaw(path: string, title: string): boolean {
+  if (!mayCount()) return false;
+  const base = COUNTER.replace(/\/+$/, '');
+  send(`${base}/count?p=${encodeURIComponent(path)}&e=true&t=${encodeURIComponent(title)}`);
+  return true;
 }
 
 /** Counts one event (one request). A no-op unless mayCount(). */

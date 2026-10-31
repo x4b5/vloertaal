@@ -24,7 +24,8 @@ import { dailyRuleIds } from '../src/lib/spaced';
  * in the route, on the certificate and in today's review.
  */
 
-const SECTOR = new Set(sectorRulesUnits.map((u) => u.id));
+// The winkel became a sector unit later (31 October 2026); its file kept its name (winkel.ts).
+const SECTOR = new Set(sectorRulesUnits.map((u) => u.id).filter((id) => id !== 'r.winkel'));
 const fileOf = (u: RuleUnit) => `src/content/regels/be/units/${SECTOR.has(nlId(u.id)) ? 'sector-' : ''}${nlId(u.id).slice(2)}.ts`;
 const units = beUnits.map((b) => b.unit);
 const lessons = units.flatMap((u) => u.lessons);

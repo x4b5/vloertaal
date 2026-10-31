@@ -5,6 +5,7 @@
   "outputDirectory": "dist",
   "trailingSlash": true,
   "redirects": [
+    { "source": "/onderwerpen/in-de-winkel/", "destination": "/winkel/", "permanent": true },
     { "source": "/:path*", "has": [{ "type": "host", "value": "www.vloertaal.nl" }], "destination": "https://vloertaal.nl/:path*", "permanent": true }
   ],
   "headers": [

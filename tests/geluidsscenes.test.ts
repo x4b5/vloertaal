@@ -158,10 +158,10 @@ describe('geluidsscènes (src/content/geluidsscenes.ts)', () => {
       // the cast, and sounds people make
       'bram', 'henk', 'jada', 'amina', 'hè', 'hé', 'o', 'top', 'toch',
       // numbers
-      'één', 'elf', 'twaalf', 'vijftien', 'dertig', 'tweehonderd', 'driehonderd', 'derde', 'eerste',
+      'één', 'elf', 'twaalf', 'achttien', 'vijftien', 'dertig', 'tweehonderd', 'driehonderd', 'derde', 'eerste',
       // forms of course words (course: tillen, bestelling, afkeuren, repareren, vervangen, …)
       'tilt', 'bestel', 'bestellen', 'bestelt', 'keur', 'keuren', 'repareer', 'vervangt', 'pakt', 'maakt',
-      'meldt', 'leegt', 'haalt', 'helpt', 'blijft', 'ruimt', 'roep', 'roept', 'drink', 'gebruik', 'wissel',
+      'meldt', 'leegt', 'haalt', 'vraagt', 'helpt', 'blijft', 'ruimt', 'roep', 'roept', 'drink', 'gebruik', 'wissel',
       'leggen', 'zetten', 'wachten', 'stoppen', 'moeten', 'brengen', 'draait', 'gebeurt', 'slaapt', 'ruikt', 'valt',
       'kabels', 'emmers', 'gasten', 'stukken', 'meters', 'middel', 'middelen', 'natte', 'gevaarlijke',
       'blauwe', 'groene', 'grote', 'slechte', 'ander', 'elk', 'welk', 'jouw', 'haar', 'ze', 'erin', 'erop',

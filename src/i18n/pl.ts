@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'Produkcja',
     sectorCare: 'Opieka',
     sectorHospitality: 'Gastronomia i hotele',
+    sectorRetail: 'Sklep i supermarket', // nieuw, nalezen
     sectorCleaning: 'Sprzątanie',
     sectorHorticulture: 'Ogrodnictwo', // nieuw (30 okt 2026), nagelezen (2e lezing)
     sectorTechnical: 'Technika', // nieuw (30 okt 2026), nalezen
@@ -164,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { one: 'dzień', few: 'dni', many: 'dni', other: 'dni' },
     wordsUnit: { one: 'słowo', few: 'słowa', many: 'słów', other: 'słów' },
     countTitle: 'Anonimowe liczenie',
-    countHint: 'Aplikacja liczy, jak często robi się lekcje i mniej więcej ile trwają. Bez imienia, bez konta, bez śledzenia.',
+    countHint: 'Aplikacja liczy, jak często robi się lekcje i mniej więcej ile trwają. I czy w aplikacji gdzieś pojawia się błąd. Bez imienia, bez konta, bez śledzenia.', // fout-zin nieuw, nalezen
     certificate: 'Certyfikat',
     myCertificates: 'Moje certyfikaty',
     certsEmpty: 'Skończ wszystkie lekcje działu. Wtedy dostaniesz certyfikat.',
@@ -249,6 +250,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Wyłączone',
     sectorGroupMake: 'Produkcja i transport',
     sectorGroupCare: 'Opieka i usługi',
+    sectorGroupShop: 'Handel i gastronomia', // nieuw, nalezen
     sectorGroupBuild: 'Budownictwo i technika', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Głos kobiety',
     voiceMan: 'Głos mężczyzny',

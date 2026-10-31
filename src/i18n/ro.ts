@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'Producție',
     sectorCare: 'Îngrijire',
     sectorHospitality: 'Hoteluri și restaurante',
+    sectorRetail: 'Magazin și supermarket', // nieuw, nalezen
     sectorCleaning: 'Curățenie',
     sectorHorticulture: 'Horticultură', // nieuw (30 okt 2026), nagelezen (2e lezing)
     sectorTechnical: 'Tehnică', // nieuw (30 okt 2026), nalezen
@@ -164,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { one: 'zi', few: 'zile', other: 'de zile' },
     wordsUnit: { one: 'cuvânt', few: 'cuvinte', other: 'de cuvinte' },
     countTitle: 'Numărare anonimă',
-    countHint: 'Aplicația numără cât de des se fac lecțiile și cam cât durează. Fără nume, fără cont, fără urmărire.',
+    countHint: 'Aplicația numără cât de des se fac lecțiile și cam cât durează. Și dacă aplicația are undeva o eroare. Fără nume, fără cont, fără urmărire.', // fout-zin nieuw, nalezen
     certificate: 'Certificat',
     myCertificates: 'Certificatele mele',
     certsEmpty: 'Termină toate lecțiile unei unități. Apoi primești un certificat.',
@@ -249,6 +250,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Oprit',
     sectorGroupMake: 'Producție și transport',
     sectorGroupCare: 'Îngrijire și servicii',
+    sectorGroupShop: 'Magazine și restaurante', // nieuw, nalezen
     sectorGroupBuild: 'Construcții și tehnică', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Voce de femeie',
     voiceMan: 'Voce de bărbat',

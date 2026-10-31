@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'الإنتاج',
     sectorCare: 'الرعاية',
     sectorHospitality: 'المطاعم والفنادق',
+    sectorRetail: 'المتاجر والسوبرماركت', // nieuw, nalezen
     sectorCleaning: 'التنظيف',
     sectorHorticulture: 'البستنة', // nagelezen (2e lezing)
     sectorTechnical: 'الأعمال التقنية', // nieuw (30 okt 2026), nalezen
@@ -164,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { zero: 'يوم', one: 'يوم', two: 'يومان', few: 'أيام', many: 'يوماً', other: 'يوم' },
     wordsUnit: { zero: 'كلمة', one: 'كلمة', two: 'كلمتان', few: 'كلمات', many: 'كلمة', other: 'كلمة' },
     countTitle: 'إحصاء مجهول الهوية',
-    countHint: 'يعدّ التطبيق كم مرة تُنجَز الدروس وكم تستغرق تقريباً. بدون اسم، بدون حساب، بدون تتبّع.',
+    countHint: 'يعدّ التطبيق كم مرة تُنجَز الدروس وكم تستغرق تقريباً. وهل يحدث خطأ في التطبيق. بدون اسم، بدون حساب، بدون تتبّع.', // fout-zin nieuw, nalezen
     certificate: 'شهادة',
     myCertificates: 'شهاداتي',
     certsEmpty: { m: 'أنهِ كل دروس وحدة. ثم تحصل على شهادة.', f: 'أنهي كل دروس وحدة. ثم تحصلين على شهادة.' },
@@ -249,6 +250,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'إيقاف',
     sectorGroupMake: 'الصنع والنقل',
     sectorGroupCare: 'الرعاية والخدمة',
+    sectorGroupShop: 'المتاجر والمطاعم', // nieuw, nalezen
     sectorGroupBuild: 'البناء والتقنية', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'صوت امرأة',
     voiceMan: 'صوت رجل',

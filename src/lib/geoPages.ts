@@ -4,7 +4,7 @@ import { RULES_DISCLAIMER_BE } from '../content/regels/disclaimer';
 import { LAST_UPDATE } from '../content/updates';
 import { LANG_PAGES } from './langPages';
 import { linkRows } from './linkRows';
-import { BELGIUM_PATH, COACH_PATH, RULES_PATH, TOPICS_PATH } from './paths';
+import { BELGIUM_PATH, COACH_PATH, PRIVACY_PATH, RULES_PATH, TOPICS_PATH } from './paths';
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
 import { SECTOR_PAGES } from './sectorPages';
 import { TOPIC_PAGES } from './topicPages';
@@ -162,6 +162,7 @@ ${link(COACH_PATH, 'Voor begeleiders en werkgevers')}
 ${link(TOPICS_PATH, 'Alle onderwerpen')}
 ${link('/intro/', 'Waarom Vloertaal?')}
 ${link('/nieuw/', 'Wat is er nieuw?', 'het logboek')}
+${link(PRIVACY_PATH, 'Privacy')}
 
 ## Sectoren
 
