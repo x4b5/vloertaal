@@ -1,7 +1,7 @@
 import type { CultureTranslation } from '../culture/types';
 
 /** "Wat kun je nu?" in Arabic (src/content/kunJeNu.ts): the heading, the note, the coach card's line and
- *  the can-do sentences of the first four themes (TODO: the other four). */
+ *  the can-do sentences of all eight themes. */
 const t: CultureTranslation = {
   ui: {
     kunJeNu: "ماذا أستطيع الآن؟", // nieuw, nalezen
@@ -62,6 +62,46 @@ const t: CultureTranslation = {
     'kjn.u.finish.2': "أستطيع أن أقول ما الذي انتهى وما الذي لم ينتهِ.", // nieuw, nalezen
     'kjn.u.online.1': "أستطيع أن أقول إن كلمة المرور لا تعمل.", // nieuw, nalezen
     'kjn.u.online.2': "أستطيع أن أتعرف على بريد إلكتروني مشبوه.", // nieuw, nalezen
+    'kjn.u.teamwork.1': "أستطيع أن أقول إن هناك شيئًا يزعجني.", // nieuw, nalezen
+    'kjn.u.teamwork.2': "أستطيع أن أرفض العمل الإضافي بهدوء.", // nieuw, nalezen
+    'kjn.u.teamwork.3': "أستطيع أن أسأل ماذا يجب أن أفعل أولاً.", // nieuw, nalezen
+    'kjn.u.social.1': "أستطيع أن أدردش قليلًا في الاستراحة.", // nieuw, nalezen
+    'kjn.u.social.2': "أستطيع أن أقول إنني ارتكبت خطأ.", // nieuw, nalezen
+    'kjn.u.social.3': "أستطيع أن أقول إن شيئًا يتجاوز حدّي.", // nieuw, nalezen
+    'kjn.u.sayings.1': "أستطيع أن أفهم بعض التعابير الشائعة.", // nieuw, nalezen
+    'kjn.u.sayings.2': "أستطيع أن أقول إن شيئًا سهل جدًا (een eitje).", // nieuw, nalezen
+    'kjn.u.rights.1': "أستطيع أن أقول إن من حقي أن آخذ استراحة.", // nieuw, nalezen
+    'kjn.u.rights.2': "أستطيع أن أقول إنني أريد أن أقدّم شكوى.", // nieuw, nalezen
+    'kjn.u.exploit.1': "أستطيع أن أقول إن جواز سفري يبقى معي.", // nieuw, nalezen
+    'kjn.u.exploit.2': "أستطيع أن أسأل هل أستطيع أن أبلغ عن شيء بدون اسمي.", // nieuw, nalezen
+    'kjn.u.papers.1': "أستطيع أن أقول إن عنواني تغيّر.", // nieuw, nalezen
+    'kjn.u.papers.2': "أستطيع أن أسأل كم الإيجار.", // nieuw, nalezen
+    'kjn.u.health.1': "أستطيع أن أقول أين أشعر بالألم.", // nieuw, nalezen
+    'kjn.u.health.2': "أستطيع أن أطلب موعدًا مع طبيب العائلة.", // nieuw, nalezen
+    'kjn.u.money.1': "أستطيع أن أقول إنني لا أفهم رسالة.", // nieuw, nalezen
+    'kjn.u.money.2': "أستطيع أن أقول لا لمحتال على الهاتف.", // nieuw, nalezen
+    'kjn.u.travel.1': "أستطيع أن أقول كيف أذهب إلى عملي.", // nieuw, nalezen
+    'kjn.u.travel.2': "أستطيع أن أسأل أين موقف الحافلة.", // nieuw, nalezen
+    'kjn.u.society.1': "أستطيع أن أسأل هل يحق لي أن أصوّت.", // nieuw, nalezen
+    'kjn.u.society.2': "أستطيع أن أقول إنني أريد أن أقدّم اعتراضًا.", // nieuw, nalezen
+    'kjn.u.warehouse.1': "أستطيع أن أفهم تعليمات قصيرة في المستودع.", // nieuw, nalezen
+    'kjn.u.warehouse.2': "أستطيع أن أقول أين يوجد شيء: على اليسار أم على اليمين.", // nieuw, nalezen
+    'kjn.u.build.1': "أستطيع أن أفهم تحذيرًا في موقع البناء.", // nieuw, nalezen
+    'kjn.u.build.2': "أستطيع أن أطلب أدوات.", // nieuw, nalezen
+    'kjn.u.factory.1': "أستطيع أن أقول إن هناك عطلًا.", // nieuw, nalezen
+    'kjn.u.factory.2': "أستطيع أن أقول ما المشكلة في منتج.", // nieuw, nalezen
+    'kjn.u.care.1': "أستطيع أن أسأل المستفيد من الرعاية هل يمكنني مساعدته.", // nieuw, nalezen
+    'kjn.u.care.2': "أستطيع أن أنقل شيئًا إلى الممرّضة.", // nieuw, nalezen
+    'kjn.u.horeca.1': "أستطيع أن أسأل الضيوف ماذا يحبون أن يشربوا.", // nieuw, nalezen
+    'kjn.u.horeca.2': "أستطيع أن أقول إنني سأسأل الطاهي.", // nieuw, nalezen
+    'kjn.u.clean.1': "أستطيع أن أسأل أين أدوات التنظيف.", // nieuw, nalezen
+    'kjn.u.clean.2': "أستطيع أن أنبّه شخصًا إلى أن الأرض زلقة.", // nieuw, nalezen
+    'kjn.u.kas.1': "أستطيع أن أسأل في أي صف أبدأ.", // nieuw, nalezen
+    'kjn.u.kas.2': "أستطيع أن أسأل هل رُشّت الدفيئة.", // nieuw, nalezen
+    'kjn.u.tech.1': "أستطيع أن أسأل هل ما زالت هناك كهرباء.", // nieuw, nalezen
+    'kjn.u.tech.2': "أستطيع أن أقول إن الكابل معطّل.", // nieuw, nalezen
+    'kjn.u.garage.1': "أستطيع أن أقول إن الإطار مثقوب.", // nieuw, nalezen
+    'kjn.u.garage.2': "أستطيع أن أقول إن الزبون يجب أن يوافق أولاً.", // nieuw, nalezen
   },
 };
 

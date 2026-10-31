@@ -1,7 +1,7 @@
 import type { CultureTranslation } from '../culture/types';
 
 /** "Wat kun je nu?" in French (src/content/kunJeNu.ts): the heading, the note, the coach card's line and
- *  the can-do sentences of the first four themes (TODO: the other four). */
+ *  the can-do sentences of all eight themes. */
 const t: CultureTranslation = {
   ui: {
     kunJeNu: "Que sais-tu faire maintenant ?", // nieuw, nalezen
@@ -62,6 +62,46 @@ const t: CultureTranslation = {
     'kjn.u.finish.2': "Je peux dire ce qui est fini et ce qui ne l’est pas.", // nieuw, nalezen
     'kjn.u.online.1': "Je peux dire que mon mot de passe ne marche pas.", // nieuw, nalezen
     'kjn.u.online.2': "Je peux reconnaître un e-mail suspect.", // nieuw, nalezen
+    'kjn.u.teamwork.1': "Je peux dire que quelque chose me tracasse.", // nieuw, nalezen
+    'kjn.u.teamwork.2': "Je peux dire non calmement à du travail en plus.", // nieuw, nalezen
+    'kjn.u.teamwork.3': "Je peux demander ce que je dois faire d’abord.", // nieuw, nalezen
+    'kjn.u.social.1': "Je peux discuter un peu pendant la pause.", // nieuw, nalezen
+    'kjn.u.social.2': "Je peux dire que j’ai fait une erreur.", // nieuw, nalezen
+    'kjn.u.social.3': "Je peux dire que quelque chose dépasse ma limite.", // nieuw, nalezen
+    'kjn.u.sayings.1': "Je peux comprendre quelques expressions courantes.", // nieuw, nalezen
+    'kjn.u.sayings.2': "Je peux dire que quelque chose est très facile (een eitje).", // nieuw, nalezen
+    'kjn.u.rights.1': "Je peux dire que j’ai droit à une pause.", // nieuw, nalezen
+    'kjn.u.rights.2': "Je peux dire que je veux faire une réclamation.", // nieuw, nalezen
+    'kjn.u.exploit.1': "Je peux dire que je garde mon passeport.", // nieuw, nalezen
+    'kjn.u.exploit.2': "Je peux demander si je peux signaler quelque chose sans donner mon nom.", // nieuw, nalezen
+    'kjn.u.papers.1': "Je peux dire que mon adresse a changé.", // nieuw, nalezen
+    'kjn.u.papers.2': "Je peux demander combien coûte le loyer.", // nieuw, nalezen
+    'kjn.u.health.1': "Je peux dire où j’ai mal.", // nieuw, nalezen
+    'kjn.u.health.2': "Je peux demander un rendez-vous chez le médecin généraliste.", // nieuw, nalezen
+    'kjn.u.money.1': "Je peux dire que je ne comprends pas une lettre.", // nieuw, nalezen
+    'kjn.u.money.2': "Je peux dire non à un escroc au téléphone.", // nieuw, nalezen
+    'kjn.u.travel.1': "Je peux dire comment je vais au travail.", // nieuw, nalezen
+    'kjn.u.travel.2': "Je peux demander où est l’arrêt de bus.", // nieuw, nalezen
+    'kjn.u.society.1': "Je peux demander si j’ai le droit de voter.", // nieuw, nalezen
+    'kjn.u.society.2': "Je peux dire que je veux faire une réclamation contre une décision.", // nieuw, nalezen
+    'kjn.u.warehouse.1': "Je peux comprendre des consignes courtes à l’entrepôt.", // nieuw, nalezen
+    'kjn.u.warehouse.2': "Je peux dire où se trouve quelque chose : à gauche ou à droite.", // nieuw, nalezen
+    'kjn.u.build.1': "Je peux comprendre un avertissement sur le chantier.", // nieuw, nalezen
+    'kjn.u.build.2': "Je peux demander des outils.", // nieuw, nalezen
+    'kjn.u.factory.1': "Je peux dire qu’il y a une panne.", // nieuw, nalezen
+    'kjn.u.factory.2': "Je peux dire ce qui ne va pas avec un produit.", // nieuw, nalezen
+    'kjn.u.care.1': "Je peux demander à un résident si je peux l’aider.", // nieuw, nalezen
+    'kjn.u.care.2': "Je peux transmettre quelque chose à l’infirmière.", // nieuw, nalezen
+    'kjn.u.horeca.1': "Je peux demander aux clients ce qu’ils veulent boire.", // nieuw, nalezen
+    'kjn.u.horeca.2': "Je peux dire que je vais demander au chef.", // nieuw, nalezen
+    'kjn.u.clean.1': "Je peux demander où est le matériel de nettoyage.", // nieuw, nalezen
+    'kjn.u.clean.2': "Je peux prévenir quelqu’un que le sol est glissant.", // nieuw, nalezen
+    'kjn.u.kas.1': "Je peux demander dans quelle rangée je commence.", // nieuw, nalezen
+    'kjn.u.kas.2': "Je peux demander si une serre a été traitée.", // nieuw, nalezen
+    'kjn.u.tech.1': "Je peux demander s’il y a encore du courant.", // nieuw, nalezen
+    'kjn.u.tech.2': "Je peux dire qu’un câble est abîmé.", // nieuw, nalezen
+    'kjn.u.garage.1': "Je peux dire qu’un pneu est crevé.", // nieuw, nalezen
+    'kjn.u.garage.2': "Je peux dire que le client doit d’abord être d’accord.", // nieuw, nalezen
   },
 };
 

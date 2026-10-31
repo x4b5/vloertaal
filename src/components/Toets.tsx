@@ -367,12 +367,13 @@ function VoicesThenNow({ lang }: { lang?: HelpLanguage }) {
   );
 }
 
-/** The result: three bars (after the end, then and now side by side), calm words, Continue. */
+/** The result: three bars (after the end, then and now side by side), calm words, Continue (pinned). */
 export function ToetsResult({ moment, now, before, lang, onDone }: { moment: ToetsMoment; now: Run; before?: Run; lang?: HelpLanguage; onDone: () => void }) {
   const title = useRef<HTMLHeadingElement>(null);
   useEffect(() => { title.current?.focus({ preventScroll: true }); }, []);
   const rtl = lang?.dir === 'rtl';
   const end = moment === 'eind';
+  const moreBelow = useMoreBelow();
   return (
     <div className="player result-screen toets-result" dir={rtl ? 'rtl' : undefined}>
       <div className="player-body result">
@@ -386,14 +387,45 @@ export function ToetsResult({ moment, now, before, lang, onDone }: { moment: Toe
             <NlPair nlFirst nl="Oefen elke dag een beetje. Dan leer je steeds meer." nlClass="toets-keep-nl" text={ui('toetsKeepGoing', lang)} />
           </p>
         )}
-        {/* In the page, after the bars and the voices (a pinned footer would cover "Jij toen / Jij nu"). */}
-        <button type="button" className="btn btn-go btn-primary toets-result-go" onClick={onDone} dir={rtl ? 'rtl' : undefined}>
-          <Bi className="btn-label" text={ui('continue', lang)} />
-          <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
-        </button>
       </div>
+      {/* Pinned to the bottom (sticky, in the flow): Continue is always in view, and at the end of
+          the page the footer sits under "Jij toen / Jij nu", never over them. A soft shadow on its
+          top edge while there is more above it to scroll to (no extra button: max 3 to tap). */}
+      <footer className={`player-foot toets-result-foot ${moreBelow ? 'foot-more' : ''}`}>
+        <div className="foot-inner foot-actions">
+          <button type="button" className="btn btn-go btn-primary toets-result-go" onClick={onDone} dir={rtl ? 'rtl' : undefined}>
+            <Bi className="btn-label" text={ui('continue', lang)} />
+            <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
+          </button>
+        </div>
+      </footer>
     </div>
   );
+}
+
+/** True while the page can still scroll down (the pinned footer then shows a soft shadow). */
+function useMoreBelow(): boolean {
+  const [more, setMore] = useState(false);
+  useEffect(() => {
+    const root = document.documentElement;
+    let raf = 0;
+    const measure = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => setMore(root.scrollHeight - (window.scrollY + window.innerHeight) > 4));
+    };
+    measure();
+    const ro = typeof ResizeObserver === 'function' ? new ResizeObserver(measure) : null;
+    ro?.observe(document.body);
+    window.addEventListener('scroll', measure, { passive: true });
+    window.addEventListener('resize', measure);
+    return () => {
+      cancelAnimationFrame(raf);
+      ro?.disconnect();
+      window.removeEventListener('scroll', measure);
+      window.removeEventListener('resize', measure);
+    };
+  }, []);
+  return more;
 }
 
 /** The three parts as bars. */
@@ -408,8 +440,8 @@ export function ToetsBars({ now, before, lang }: { now: Run; before?: Run; lang?
 /* ------------------------------------------------------------------ Settings */
 
 /**
- * Settings › Lessen › "Wat ken je al?": the last result (the end next to the start), "Jij toen /
- * Jij nu", and [Doe de toets] (the start, or the end once the start was done).
+ * Settings › Lessen › "Wat ken je al?": [Doe de toets] (the start, or the end once the start was
+ * done), then the last result (the end next to the start) and "Jij toen / Jij nu".
  */
 export function ToetsPage({ progress, lang, onBack, onStart }: { progress: Progress; lang?: HelpLanguage; onBack: () => void; onStart: (m: ToetsMoment) => void }) {
   const t = progress.toets;
@@ -422,23 +454,25 @@ export function ToetsPage({ progress, lang, onBack, onStart }: { progress: Progr
         <ChromeBack lang={lang} onBack={onBack} />
         <h1 className="max3-title"><NlPair text={ui('toetsTitle', lang)} nl="Wat ken je al?" nlClass="max3-title-nl" /></h1>
       </div>
-      {now ? (
-        <>
-          <p className="toets-date" lang="nl"><bdi dir="ltr">{now.day.split('-').reverse().join('-')}</bdi></p>
-          <ToetsBars now={now} before={before} lang={lang} />
-          {t?.eind && <VoicesThenNow lang={lang} />}
-        </>
-      ) : (
+      {!now && (
         <p className="toets-offer-text">
           <NlPair nlFirst nl="Ongeveer 10 minuten. Je krijgt geen cijfer." nlClass="toets-offer-text-nl" text={ui('toetsOffer', lang)} />
         </p>
       )}
+      {/* First the action, then the last result: [Doe de toets] is in view on every phone. */}
       <button type="button" className="btn btn-go btn-primary toets-do" onClick={() => onStart(settingsMoment(progress, new Date()))}>
         <span className="toets-btn-label">
           <NlPair nlFirst nl="Doe de toets" nlClass="toets-btn-nl" text={ui('toetsStart', lang)} />
         </span>
         <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
       </button>
+      {now && (
+        <>
+          <p className="toets-date" lang="nl"><bdi dir="ltr">{now.day.split('-').reverse().join('-')}</bdi></p>
+          <ToetsBars now={now} before={before} lang={lang} />
+          {t?.eind && <VoicesThenNow lang={lang} />}
+        </>
+      )}
     </div>
   );
 }

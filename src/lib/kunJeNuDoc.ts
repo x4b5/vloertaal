@@ -40,8 +40,7 @@ niveau**, geen toets en geen bewijs van een niveau.
 ## Vertalingen
 
 De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's ${vertaald}
-(\`src/i18n/kunjenu/\`, gemarkeerd met "nieuw, nalezen"). De andere thema's staan nog open
-(TODO): daar staat de Engelse zin onder het Nederlands. Werkregels is alleen Nederlands.
+(\`src/i18n/kunjenu/\`, gemarkeerd met "nieuw, nalezen"). Werkregels is alleen Nederlands.
 
 ## Taal (${KUN_TAAL.length} onderwerpen, ${taal} zinnen)
 

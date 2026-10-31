@@ -482,9 +482,10 @@ const KAART_LEGEND: { nl: string; key: UiKey; toets?: boolean; kun?: boolean }[]
  * "Laat zien hoe het gaat" (Settings › Taal en ik): the coach card ("begeleiderskaart",
  * src/lib/kaart.ts), a picture this phone makes from its own progress, for the learner to show a
  * coach, teacher or employer. Nothing is sent: the learner shows it, or saves or shares the
- * picture themselves. On screen: the picture (large, with all it says as its text alternative),
- * [Bewaar of deel], what each line means in the help language, and [Naam wijzigen] (the same
- * name as on the certificates, asked first when it never was). Two things to tap, and Back.
+ * picture themselves. On screen: [Bewaar of deel] (above the picture, so it is always in view),
+ * the picture (large, with all it says as its text alternative), what each line means in the help
+ * language, and [Naam wijzigen] (the same name as on the certificates, asked first when it never
+ * was). Two things to tap, and Back.
  */
 export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
   progress: Progress;
@@ -558,17 +559,9 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
         <NlPair nlFirst nl="Deze kaart laat zien hoe het gaat. Laat hem zien aan je docent, coach of baas. Jij kiest." nlClass="kaart-intro-nl" text={intro} />
         <HelpSay text={intro.help} lang={lang} />
       </p>
-      <figure className="kaart-figure">
-        {shown ? (
-          <img className="kaart-img" src={shown.url} alt={alt} lang="nl" width={1200} />
-        ) : failed ? (
-          // No picture on this phone (an old browser): the same lines as text.
-          <p className="kaart-text" lang="nl" dir="ltr">{alt}</p>
-        ) : (
-          <div className="kaart-wait" role="img" aria-label={alt} lang="nl" />
-        )}
-      </figure>
-      <div className="cert-actions cert-actions-one">
+      {/* Above the picture: the main action is in view on every phone, also with large text
+          (the picture is taller than the rest of a small screen). */}
+      <div className="cert-actions cert-actions-one kaart-actions">
         <button type="button" className="btn btn-primary cert-btn cert-share kaart-share" onClick={share} aria-disabled={busy || !shown || undefined} dir={rtl ? 'rtl' : undefined}>
           <ShareGlyph />
           <span className="cert-btn-text">
@@ -579,6 +572,16 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
       {saved && (
         <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
       )}
+      <figure className="kaart-figure">
+        {shown ? (
+          <img className="kaart-img" src={shown.url} alt={alt} lang="nl" width={1200} />
+        ) : failed ? (
+          // No picture on this phone (an old browser): the same lines as text.
+          <p className="kaart-text" lang="nl" dir="ltr">{alt}</p>
+        ) : (
+          <div className="kaart-wait" role="img" aria-label={alt} lang="nl" />
+        )}
+      </figure>
       <section className="kaart-legend" dir={rtl ? 'rtl' : undefined} aria-label={said(ui('coachCardWhat', lang))}>
         <p className="kaart-legend-head"><NlPair nlFirst nl="Op de kaart, in het Nederlands:" nlClass="kaart-legend-nl" text={ui('coachCardWhat', lang)} /></p>
         <ul className="kaart-legend-rows">

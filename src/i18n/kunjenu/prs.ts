@@ -1,7 +1,7 @@
 import type { CultureTranslation } from '../culture/types';
 
 /** "Wat kun je nu?" in Dari (src/content/kunJeNu.ts): the heading, the note, the coach card's line and
- *  the can-do sentences of the first four themes (TODO: the other four). */
+ *  the can-do sentences of all eight themes. */
 const t: CultureTranslation = {
   ui: {
     kunJeNu: "حالا چه کار کرده می‌توانید؟", // nieuw, nalezen // nagelezen AI 31 okt
@@ -62,6 +62,46 @@ const t: CultureTranslation = {
     'kjn.u.finish.2': "می‌توانم بگویم که چه چیز تمام شده و چه چیز نه.", // nieuw, nalezen
     'kjn.u.online.1': "می‌توانم بگویم که رمزم کار نمی‌کند.", // nieuw, nalezen
     'kjn.u.online.2': "می‌توانم یک ایمیل مشکوک را بشناسم.", // nieuw, nalezen
+    'kjn.u.teamwork.1': "می‌توانم بگویم که یک چیز مرا ناراحت می‌کند.", // nieuw, nalezen
+    'kjn.u.teamwork.2': "می‌توانم به آرامی به کار اضافی نی بگویم.", // nieuw, nalezen
+    'kjn.u.teamwork.3': "می‌توانم بپرسم که اول چه کار کنم.", // nieuw, nalezen
+    'kjn.u.social.1': "می‌توانم در وقت تفریح کمی گپ بزنم.", // nieuw, nalezen
+    'kjn.u.social.2': "می‌توانم بگویم که اشتباه کردم.", // nieuw, nalezen
+    'kjn.u.social.3': "می‌توانم بگویم که یک چیز از حد من می‌گذرد.", // nieuw, nalezen
+    'kjn.u.sayings.1': "می‌توانم چند اصطلاح معمول را بفهمم.", // nieuw, nalezen
+    'kjn.u.sayings.2': "می‌توانم بگویم که یک چیز خیلی آسان است (een eitje).", // nieuw, nalezen
+    'kjn.u.rights.1': "می‌توانم بگویم که حق تفریح دارم.", // nieuw, nalezen
+    'kjn.u.rights.2': "می‌توانم بگویم که می‌خواهم شکایت کنم.", // nieuw, nalezen
+    'kjn.u.exploit.1': "می‌توانم بگویم که پاسپورتم پیش خودم می‌ماند.", // nieuw, nalezen
+    'kjn.u.exploit.2': "می‌توانم بپرسم که یک چیز را بدون نام خود گزارش داده می‌توانم یا نی.", // nieuw, nalezen
+    'kjn.u.papers.1': "می‌توانم بگویم که آدرس من تغییر کرده.", // nieuw, nalezen
+    'kjn.u.papers.2': "می‌توانم بپرسم که کرایه چند است.", // nieuw, nalezen
+    'kjn.u.health.1': "می‌توانم بگویم که کجایم درد می‌کند.", // nieuw, nalezen
+    'kjn.u.health.2': "می‌توانم از داکتر خانوادگی وقت ملاقات بگیرم.", // nieuw, nalezen
+    'kjn.u.money.1': "می‌توانم بگویم که یک نامه را نمی‌فهمم.", // nieuw, nalezen
+    'kjn.u.money.2': "می‌توانم در تیلفون به یک فریب‌کار نی بگویم.", // nieuw, nalezen
+    'kjn.u.travel.1': "می‌توانم بگویم که چطور به کار می‌روم.", // nieuw, nalezen
+    'kjn.u.travel.2': "می‌توانم بپرسم که ایستگاه بس کجاست.", // nieuw, nalezen
+    'kjn.u.society.1': "می‌توانم بپرسم که اجازه دارم رأی بدهم یا نی.", // nieuw, nalezen
+    'kjn.u.society.2': "می‌توانم بگویم که می‌خواهم اعتراض کنم.", // nieuw, nalezen
+    'kjn.u.warehouse.1': "می‌توانم هدایت‌های کوتاه را در گدام بفهمم.", // nieuw, nalezen
+    'kjn.u.warehouse.2': "می‌توانم بگویم که یک چیز کجاست: طرف چپ یا طرف راست.", // nieuw, nalezen
+    'kjn.u.build.1': "می‌توانم یک هشدار را در جای ساختمان‌سازی بفهمم.", // nieuw, nalezen
+    'kjn.u.build.2': "می‌توانم ابزار بخواهم.", // nieuw, nalezen
+    'kjn.u.factory.1': "می‌توانم بگویم که یک خرابی پیش آمده.", // nieuw, nalezen
+    'kjn.u.factory.2': "می‌توانم بگویم که یک محصول چه نقصی دارد.", // nieuw, nalezen
+    'kjn.u.care.1': "می‌توانم از یک مراجع بپرسم که کمکش کنم یا نی.", // nieuw, nalezen
+    'kjn.u.care.2': "می‌توانم یک چیز را به نرس خبر بدهم.", // nieuw, nalezen
+    'kjn.u.horeca.1': "می‌توانم از مهمان‌ها بپرسم که چه می‌نوشند.", // nieuw, nalezen
+    'kjn.u.horeca.2': "می‌توانم بگویم که از آشپز پرسان می‌کنم.", // nieuw, nalezen
+    'kjn.u.clean.1': "می‌توانم بپرسم که سامان پاک‌کاری کجاست.", // nieuw, nalezen
+    'kjn.u.clean.2': "می‌توانم به کسی هشدار بدهم که زمین لشم است.", // nieuw, nalezen
+    'kjn.u.kas.1': "می‌توانم بپرسم که از کدام قطار شروع کنم.", // nieuw, nalezen
+    'kjn.u.kas.2': "می‌توانم بپرسم که یک گلخانه دواپاشی شده یا نی.", // nieuw, nalezen
+    'kjn.u.tech.1': "می‌توانم بپرسم که هنوز برق است یا نی.", // nieuw, nalezen
+    'kjn.u.tech.2': "می‌توانم بگویم که یک کیبل خراب است.", // nieuw, nalezen
+    'kjn.u.garage.1': "می‌توانم بگویم که یک تایر پنچر است.", // nieuw, nalezen
+    'kjn.u.garage.2': "می‌توانم بگویم که مشتری اول باید موافقه کند.", // nieuw, nalezen
   },
 };
 
