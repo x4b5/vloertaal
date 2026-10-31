@@ -9,7 +9,8 @@ import { ENTREE_UNITS, PRO_LEAD, proSections } from '../src/content/pro';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import { getHelpLanguage, helpLanguageSources, registerPack, ui } from '../src/i18n/all';
 import nlPack from '../src/i18n/packs/nl';
-import { coachPage } from '../src/lib/coachPage';
+import { askPage, coachPage } from '../src/lib/coachPage';
+import { sitemap } from '../src/lib/sitemap';
 
 /**
  * Over for the learner, and a page of its own for coaches, teachers, employers and organisations
@@ -138,5 +139,25 @@ describe('translations: what left Over', () => {
       expect(src.gloss['a.mission.b'], src.code).toBeTruthy();
       expect(src.gloss['a.voices.b'], src.code).toBeUndefined();
     }
+  });
+});
+
+describe('vloertaal.nl/meekijken: the short page a poster points to', () => {
+  it('has only the question, what Vloertaal is and why, from the same texts', () => {
+    const page = askPage();
+    const sec = (id: string) => proSections.find((s) => s.id === id)!;
+    expect(page).toContain('<h1>Zou je willen meekijken?</h1>');
+    expect(page).toContain('Hoi, ik ben Xavier.');
+    expect(page).toContain(`mailto:${CONTACT_EMAIL}`);
+    for (const id of ['p.what', 'p.story']) expect(page).toContain(sec(id).title);
+    for (const id of ['p.beta', 'p.who', 'p.privacy', 'p.group', 'p.contact']) expect(page).not.toContain(`id="${id.slice(2)}"`);
+    expect(page).toContain('href="/voor-begeleiders/"');
+  });
+
+  it('is not for search results: noindex, no canonical, not in the sitemap', () => {
+    const page = askPage();
+    expect(page).toContain('<meta name="robots" content="noindex" />');
+    expect(page).not.toContain('rel="canonical"');
+    expect(sitemap()).not.toContain('/meekijken/');
   });
 });
