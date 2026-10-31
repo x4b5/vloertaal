@@ -3521,6 +3521,19 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* All topics: one row per topic, one tap per row (the list exception). */
 .topics { padding: 8px 16px 0; }
 /* "Thema's | Volgorde" above All topics: like the Settings choices (.segmented), one row of two. */
+/* The search bar on "Alle onderwerpen" (src/lib/topicSearch.ts): one field, the magnifier inside. */
+.topics-search { position: relative; margin: 0 0 12px; }
+.topics-search-icon { position: absolute; inset-inline-start: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.topics-search-input {
+  width: 100%; min-height: 52px; padding: 10px 14px; padding-inline-start: 44px;
+  font: inherit; font-size: 1.05rem; color: var(--ink); background: var(--card);
+  border: 2px solid var(--line); border-radius: var(--radius);
+}
+.topics-search-input::placeholder { color: var(--muted); opacity: 1; }
+.topics-search-input:focus-visible { outline: none; border-color: var(--edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 40%, transparent); }
+.topics-none { margin: 8px 4px; color: var(--ink); }
+.topics-none .bi { gap: 2px; }
+.topics-none-nl { font-weight: 600; }
 .topics-order { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 14px; }
 .topics-order-btn {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 52px; padding: 6px 8px;

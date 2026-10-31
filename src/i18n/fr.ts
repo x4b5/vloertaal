@@ -204,6 +204,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Afficher les sujets',
     byTheme: 'Par thème',
     inOrder: 'Dans l’ordre',
+    searchTopics: 'Chercher un sujet', // nieuw, nalezen
+    searchNone: 'Aucun sujet avec ce mot.', // nieuw, nalezen
     lessonsUnit: { one: 'leçon', many: 'leçons', other: 'leçons' },
     lessonsUnitOne: 'leçon',
     topicsUnit: { one: 'sujet', many: 'sujets', other: 'sujets' },

@@ -19,7 +19,7 @@ import { lessonIcon } from '../lib/lessonIcon';
 import { WordPicture } from '../pictures';
 import { Bi, HelpText } from './Bi';
 import { CertBadge } from './CertBadge';
-import { CheckIcon, ChevronIcon, CrownIcon, HourglassIcon, LockIcon } from './Icons';
+import { CheckIcon, ChevronIcon, CrownIcon, HourglassIcon, LockIcon, SearchIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
 import { NlPair } from './NlPair';
 import { dutchUi, trackOf } from '../lib/track';
@@ -29,6 +29,7 @@ import { PocketIcon } from './Offline';
 import { countedUnits, planGroups } from '../content/themes';
 import { ThemeHeadRow } from './Themes';
 import { loadTopicsOrder, saveTopicsOrder, type TopicsOrder } from '../lib/topicsOrder';
+import { SEARCH_MIN, searchKey, searchTopics } from '../lib/topicSearch';
 
 /**
  * The home ("Route"): at most 3 things to tap (src/lib/route.ts).
@@ -447,8 +448,13 @@ function ScreenHead({ lang, onBack, nl, text }: { lang?: HelpLanguage; onBack: (
  *
  * Above the list two buttons switch between "Thema's" (as above) and "Volgorde": the own course
  * in the order of the path, without theme headers, then the other sectors under their header.
- * The choice is kept on the device (src/lib/topicsOrder.ts). With the back arrow (not counted)
- * that is two things to tap outside the list.
+ * The choice is kept on the device (src/lib/topicsOrder.ts).
+ *
+ * At the top a search bar (src/lib/topicSearch.ts): type a word in Dutch, the help language or
+ * English and the list shows only the topics that have it, best first, without theme headers
+ * (or one line when none has it). While searching, the two order buttons step aside. With the
+ * back arrow (not counted) that is three things to tap outside the list: search and the two
+ * order buttons.
  */
 export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
   progress: Progress;
@@ -468,6 +474,10 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
     saveTopicsOrder(o);
   };
   const groups = planGroups({ main, other });
+  const [query, setQuery] = useState('');
+  const searching = searchKey(query).length >= SEARCH_MIN;
+  const found = searching ? searchTopics([...main, ...other], query, lang) : [];
+  const searchLabel = ui('searchTopics', lang);
   // No route numbers in the rows: grouped by theme they would jump ("09, 18, 22"). A topic keeps
   // its number on its own page, its pocket card and its certificate.
   const row = (unit: Unit) => {
@@ -504,6 +514,30 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
     <div className="rb-all-screen topics-screen">
       <ScreenHead lang={lang} onBack={onBack} nl="Alle onderwerpen" text={ui('allTopics', lang)} />
       <div className="topics" dir={rtl ? 'rtl' : undefined}>
+        <div className="topics-search" role="search">
+          <SearchIcon size={20} className="topics-search-icon" />
+          <input
+            type="search"
+            className="topics-search-input"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={said(searchLabel)}
+            aria-label={dutchUi(lang) ? 'Zoek een onderwerp' : `${said(searchLabel)} · Zoek een onderwerp`}
+            lang={saidLang(searchLabel)}
+            enterKeyHint="search"
+            autoComplete="off"
+            spellCheck={false}
+          />
+        </div>
+        {searching ? (
+          found.length > 0 ? (
+            <ul className="topic-list topic-list-found" data-list="topics" aria-live="polite">
+              {found.map((unit) => row(unit))}
+            </ul>
+          ) : (
+            <p className="topics-none" role="status"><NlPair nlFirst nl="Geen onderwerp met dit woord." nlClass="topics-none-nl" text={ui('searchNone', lang)} /></p>
+          )
+        ) : (<>
         <div className="topics-order" role="group" aria-label={said(ui('topicsOrder', lang))}>
           {(['theme', 'route'] as const).map((o) => (
             <button key={o} type="button" className={`topics-order-btn ${order === o ? 'is-on' : ''}`} aria-pressed={order === o} onClick={() => pickOrder(o)}>
@@ -531,6 +565,7 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
               </>
             )}
         </ul>
+        </>)}
       </div>
     </div>
   );

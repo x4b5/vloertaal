@@ -205,6 +205,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'ኣርእስትታት ምርኣይ',
     byTheme: 'ብክፍልታት',
     inOrder: 'ብቕደም ሰዓብ',
+    searchTopics: 'ምድላይ ኣርእስቲ', // nieuw, nalezen
+    searchNone: 'በዚ ቃል ዝኾነ ኣርእስቲ የለን።', // nieuw, nalezen
     lessonsUnit: 'ትምህርትታት',
     lessonsUnitOne: 'ትምህርቲ',
     topicsUnit: 'ኣርእስትታት',

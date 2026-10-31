@@ -204,6 +204,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'نمایش موضوع‌ها',
     byTheme: 'بر اساس بخش‌ها',
     inOrder: 'به ترتیب',
+    searchTopics: 'جستجوی موضوع', // nieuw, nalezen
+    searchNone: 'موضوعی با این کلمه نیست.', // nieuw, nalezen
     lessonsUnit: 'درس',
     lessonsUnitOne: 'درس',
     topicsUnit: 'موضوع',
