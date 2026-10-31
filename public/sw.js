@@ -1,7 +1,7 @@
 // App files: network first, cache as fallback (also when the network stalls), so the app is
 // always fresh online and still opens offline; this build's hashed files straight from the cache.
-// Recorded sound of a unit the learner saved for offline use (the "Save for offline" chip under
-// a unit, src/lib/offline.ts) is answered from its own cache first.
+// Recorded sound comes from the phone first: a unit the learner saved for offline use (the "Save
+// for offline" chip under a unit, src/lib/offline.ts), or a clip played before (AUDIO).
 //
 // Each build gets its own app cache: the build writes its id and its hashed files into BUILD and
 // FILES below (vite.config.ts, swBuild), so this file changes with every deploy, the browser
@@ -170,23 +170,31 @@ async function stallCopy(req, url) {
   return fromCache(req);
 }
 
+/**
+ * A clip never changes under its address: a new recording has a new one (?v=<take>.<text>,
+ * src/lib/audio.ts clipSrc). So one played before plays straight from the phone, without asking
+ * the network first (on a slow line that was a wait of seconds at every tap).
+ */
 async function audio(req) {
-  // Saved for offline: from the phone, no network needed.
-  const saved = await caches.open(OFFLINE).then((c) => c.match(req.url));
+  // Saved for offline: from the phone, no network needed (saved without a version: any version).
+  const saved = await caches.open(OFFLINE).then((c) => c.match(req.url, { ignoreSearch: true }));
   if (saved) return ranged(saved, req);
+  // The page is saving a unit (it puts the file in OFFLINE itself): no second copy here.
+  if (req.headers.get('x-vloertaal-save')) return fetch(req).catch(() => Response.error());
+  const played = await caches.open(AUDIO).then((c) => c.match(req.url)).catch(() => undefined);
+  if (played) return ranged(played, req);
+  // Not played before: the network. When it stalls or fails, any version of the clip kept on the phone.
+  const older = () => caches.match(req.url, { ignoreSearch: true }).then((hit) => hit && ranged(hit, req));
   try {
-    // The page is saving a unit (it puts the file in OFFLINE itself): no second copy here.
-    if (req.headers.get('x-vloertaal-save')) return await fetch(req);
     // A player asks for a part (Range: bytes=0-) and gets 206, which can't be kept: ask for the
     // whole clip (they are small), keep it, and answer the part asked for from it.
     const net = fetch(req.url).then((res) => {
       keep(req, res, AUDIO);
       return res.ok ? ranged(res, req) : res;
     });
-    return await orCopy(net, () => caches.match(req.url).then((hit) => hit && ranged(hit, req)));
+    return await orCopy(net, older);
   } catch {
-    const hit = await caches.match(req.url);
-    return hit ? ranged(hit, req) : Response.error();
+    return (await older()) || Response.error();
   }
 }
 

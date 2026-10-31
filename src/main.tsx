@@ -2,6 +2,7 @@ import { StrictMode, type ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import { Crashed, Splash } from './components/Splash';
+import { SaveFailedNote } from './components/SaveFailedNote';
 import { startScreens } from './lazyScreens';
 import { loadProgress } from './lib/progress';
 import { readTesterParam } from './lib/report';
@@ -18,6 +19,7 @@ import type { UiCode } from './i18n/types';
 import { setRulesTrack } from './lib/track';
 import { setDeviceRate } from './lib/audio';
 import { loadPictures } from './pictures';
+import { ensureUpdates } from './content/updatesLive';
 import '@fontsource-variable/lexend';
 import '@fontsource/big-shoulders-stencil-display/800';
 import './styles.css';
@@ -45,6 +47,9 @@ const langBoot = ensureLanguage(loadProgress().helpLang).catch(() => {});
 const regionBoot = ensureRegionFor(loadProgress().region, loadProgress().helpLang).catch(() => {});
 // The word pictures load alongside (their own file); a returning learner's first screen has them.
 const picsBoot = loadPictures().catch(() => {});
+// The logbook (src/content/updatesLive.ts, not in the start file): a returning learner's home may
+// show a notice from it ("Er is iets veranderd"), so it loads alongside. A new visitor never sees one.
+const newsBoot = loadProgress().onboarded ? ensureUpdates().catch(() => {}) : null;
 // The stylesheet loads without blocking the splash (vite.config.ts): React waits for it. Its link
 // notes a failure itself (data-failed), as it may come before this script runs.
 const appCss = document.querySelector<HTMLLinkElement>('link[data-app-css]');
@@ -87,8 +92,9 @@ if (import.meta.env.DEV && params.get('shot')) {
   const screensBoot = Promise.race([startScreens(), new Promise<void>((done) => window.setTimeout(done, 2500))]);
   // The help language's file, the region and the pictures wait at most 8 s (a connection that hangs):
   // then App draws its own splash, which offers "Try again" and goes on when the file comes.
-  const filesBoot = Promise.race([Promise.all([langBoot, regionBoot, loadProgress().onboarded ? picsBoot : null]), new Promise<void>((done) => window.setTimeout(done, 8000))]);
-  void Promise.all([cssBoot, filesBoot, screensBoot]).then(([css]) => (css ? render(<App />) : cssFailed()));
+  const filesBoot = Promise.race([Promise.all([langBoot, regionBoot, loadProgress().onboarded ? picsBoot : null, newsBoot]), new Promise<void>((done) => window.setTimeout(done, 8000))]);
+  // (With the note for when saving the progress fails: src/components/SaveFailedNote.tsx.)
+  void Promise.all([cssBoot, filesBoot, screensBoot]).then(([css]) => (css ? render(<><App /><SaveFailedNote /></>) : cssFailed()));
 }
 
 // Offline support: cache the app after the first visit (production only).

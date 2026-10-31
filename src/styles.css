@@ -4683,3 +4683,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .result-worktry .worktry-label-nl { font-weight: 700; }
 .result-worktry .worktry-gloss { grid-column: 1; --help-size: 0.9rem; color: var(--ink); }
 .result-worktry .speak-glyph { grid-row: 1 / span 3; }
+/* "Je voortgang is niet bewaard" (src/components/SaveFailedNote.tsx): the note's status region,
+   always there but taking no room or taps; the note looks like the sound note, above every screen. */
+.save-note-live { position: fixed; top: 0; left: 0; width: 0; height: 0; z-index: 40; pointer-events: none; }
+.save-note { z-index: 40; }

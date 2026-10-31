@@ -1,8 +1,10 @@
+/// <reference types="vitest/config" />
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+import { beLangSplit } from './scripts/beLangSplit';
 import { UPCOMING, UPDATES } from './src/content/updates';
 import { updatesPage } from './src/lib/updatesPage';
 import { INTRO_QUESTIONS } from './src/content/intro';
@@ -198,7 +200,10 @@ export default defineConfig({
       include: 448,
     },
   },
-  plugins: [react(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild()],
+  // `npm test`: only this checkout's tests (not the copies in .claude/worktrees), and time for the
+  // tests that walk all the content on a busy machine (5 s was too tight: tests/exercises.test.ts).
+  test: { exclude: ['.claude/**', 'node_modules/**', 'dist/**'], testTimeout: 15000 },
+  plugins: [react(), beLangSplit(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild()],
   build: {
     // Old, cheap phones (Android 7–10 with an old Chrome or Samsung Internet, iPhones on iOS 13–15):
     // Vite's own default is 'baseline-widely-available' (Chrome 111, iOS 16.4), whose ?. ?? ??= and

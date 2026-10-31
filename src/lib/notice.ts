@@ -1,9 +1,11 @@
-import { UPDATES, type Notice, type Update } from '../content/updates';
+import type { Notice, Update } from '../content/updates';
+import { loadedUpdates } from '../content/updatesLive';
 import { dayKey, type Progress } from './progress';
 import { trackOf } from './track';
 
 /**
  * "Er is iets veranderd" (src/content/updates.ts, Notice): which notice the home shows, if any.
+ * (The logbook as loaded: src/content/updatesLive.ts; a returning learner's start waits for it.)
  *  - Only to a learner in that country (Progress.country; not chosen = 'nl') and that track.
  *  - Only an update newer than the learner's first day (Progress.firstDay), and not after today:
  *    a new learner never sees old notices (their lessons already say what is new).
@@ -21,7 +23,7 @@ export interface DatedNotice extends Notice {
 export const noticeGlossId = (id: string): string => `notice.${id}`;
 
 /** Every notice in the list, newest first (as UPDATES). */
-export function allNotices(updates: Update[] = UPDATES): DatedNotice[] {
+export function allNotices(updates: Update[] = loadedUpdates()): DatedNotice[] {
   return updates.flatMap((u) => (u.notice ? [{ ...u.notice, date: u.date }] : []));
 }
 
@@ -44,12 +46,12 @@ function waiting(p: Progress, today: Date, updates: Update[]): DatedNotice[] {
 }
 
 /** The one notice for the home now (the newest waiting), or null. */
-export function noticeFor(p: Progress, today: Date, updates: Update[] = UPDATES): DatedNotice | null {
+export function noticeFor(p: Progress, today: Date, updates: Update[] = loadedUpdates()): DatedNotice | null {
   return waiting(p, today, updates)[0] ?? null;
 }
 
 /** The notice was closed (Oké or Lees meer): it, and the older ones still waiting, never come back. */
-export function seeNotice(p: Progress, id: string, today: Date, updates: Update[] = UPDATES): Progress {
+export function seeNotice(p: Progress, id: string, today: Date, updates: Update[] = loadedUpdates()): Progress {
   const shown = waiting(p, today, updates);
   const at = shown.findIndex((n) => n.id === id);
   const ids = [id, ...(at >= 0 ? shown.slice(at + 1).map((n) => n.id) : [])];

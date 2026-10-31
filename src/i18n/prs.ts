@@ -400,6 +400,7 @@ const lang: HelpLanguageSource = {
     checkUndo: 'با این هم درس‌ها را انجام دهید', // nieuw, nalezen
     shareInvite: 'من با Vloertaal هالندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
     workTry: 'امروز در کار امتحانش کن', // nieuw, nalezen
+    saveFailed: 'پیشرفت شما ذخیره نشد. آیا تیلفون پر است؟ کمی جا خالی کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
