@@ -141,7 +141,8 @@ export function QuestionHead({ nl, text, hint, logo = true, say = false, lang }:
           : <>{nl && <span className="sector-title-nl" lang="nl"><bdi dir="ltr">{nl}</bdi></span>}<Bi text={text} /></>}
       </h2>
       {say && nl && <QuestionSay nl={nl} help={text.help} lang={lang} />}
-      {hint && <p className="sector-hint"><Bi text={hint} /></p>}
+      {/* The hint can be heard in the help language too (its recording, else the phone's voice). */}
+      {hint && <p className="sector-hint"><Bi text={hint} />{say && <HelpSay text={hint.help} lang={lang} />}</p>}
     </>
   );
 }

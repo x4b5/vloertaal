@@ -208,8 +208,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Покажи темите',
     privacyLink: 'Прочети декларацията за поверителност (на нидерландски)', // nieuw, nalezen
     routeTitle: 'Какво искаш да учиш?', // nieuw, nalezen
-    routeLearn: 'Нидерландски за работа, с помощ на твоя език', // nieuw, nalezen
-    routeRules: 'Вече говоря нидерландски: как се работи в Нидерландия и Белгия', // nieuw, nalezen
+    routeLearn: 'Нидерландски за работа', // nieuw, nalezen
+    routeRules: 'Вече говоря нидерландски: правилата в работата', // nieuw, nalezen
     routeLearnShort: 'Учене на нидерландски', // nieuw, nalezen
     byTheme: 'По раздели',
     inOrder: 'По ред',

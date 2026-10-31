@@ -208,8 +208,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'نمایش موضوع‌ها',
     privacyLink: 'بیانیهٔ حریم خصوصی را بخوانید (به هالندی)', // nieuw, nalezen
     routeTitle: 'چه می‌خواهید یاد بگیرید؟', // nieuw, nalezen
-    routeLearn: 'آموختن هالندی برای کار، با کمک به زبان خودتان', // nieuw, nalezen
-    routeRules: 'هالندی را بلد هستم: کار در هالند و بلجیم چطور است', // nieuw, nalezen
+    routeLearn: 'آموختن هالندی برای کار', // nieuw, nalezen
+    routeRules: 'هالندی را بلد هستم: قوانین کار', // nieuw, nalezen
     routeLearnShort: 'آموختن هالندی', // nieuw, nalezen
     byTheme: 'بر اساس بخش‌ها',
     inOrder: 'به ترتیب',

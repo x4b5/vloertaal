@@ -1,6 +1,7 @@
 import { ui, said } from '../i18n';
 import type { Gender, HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
+import { HelpSay } from './HelpSay';
 import { useFreshCards } from './useFreshScreen';
 import { NlPair } from './NlPair';
 import { Character, type CharacterId } from './Characters';
@@ -123,7 +124,7 @@ export function GenderScreen({ lang, onDone, current, onBack, greet = false }: {
         <Bi text={title} />
       </Title>
       <QuestionSay nl="Vrouw of man?" help={title.help} lang={lang} />
-      <p className="sector-hint"><Bi text={ui('genderHint', lang)} /></p>
+      <p className="sector-hint"><Bi text={ui('genderHint', lang)} /><HelpSay text={ui('genderHint', lang).help} lang={lang} /></p>
       <GenderPicker current={current} lang={lang} onPick={onDone} />
     </div>
   );

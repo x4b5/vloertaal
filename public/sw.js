@@ -17,7 +17,7 @@ const AUDIO = 'vloertaal-audio-v1';
 const AUDIO_MAX = 300;
 
 const scope = () => self.registration.scope;
-const isAudio = (url) => /\/audio(-el)?\/.+\.mp3$/.test(url.pathname);
+const isAudio = (url) => /\/audio(-el|-help)?\/.+\.mp3$/.test(url.pathname);
 const built = new Set(FILES.map((f) => new URL(f, scope()).href));
 /** A hashed app file (Vite's assets/) of another build than this one. */
 const otherBuild = (url) => url.pathname.includes('/assets/') && built.size > 0 && !built.has(url.href);
@@ -44,8 +44,9 @@ async function cacheShell() {
     .filter((u) => u.origin === self.location.origin && !isAudio(u))
     .map((u) => u.href);
   // The build's own files must come; an icon, the manifest or the recorded-voice index may fail
-  // without stopping the update (the index: without it offline, every speaker would fall silent).
-  const optional = [...urls, new URL('audio-el/voices.json', scope()).href];
+  // without stopping the update (the index: without it offline, every speaker would fall silent;
+  // the same for the help-language recordings' list, src/lib/helpAudio.ts).
+  const optional = [...urls, new URL('audio-el/voices.json', scope()).href, new URL('audio-help/manifest.json', scope()).href];
   await Promise.all(optional.map((u) => cache.add(u).catch((e) => { if (built.has(u)) throw e; })));
   const had = new Set();
   const fonts = new URL('fonts/', scope()).pathname;

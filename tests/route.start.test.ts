@@ -19,7 +19,9 @@ describe('the first page: two routes', () => {
     expect(m).toContain('Nederlands leren');
     expect(m).toContain('Ik spreek al Nederlands');
     expect(m).toContain('Mówię już po niderlandzku');
-    expect(m.match(/<button/g)).toHaveLength(2);
+    // Two cards to choose from; the speaker for the question is not a choice (max-3 leaves it out).
+    expect(m.match(/class="max3-card /g)).toHaveLength(2);
+    expect(m).toContain('class="onb-say"');
   });
 
   it('opens on the route page while the track is on, and on the language page when it is off', () => {

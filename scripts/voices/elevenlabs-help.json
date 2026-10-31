@@ -1,0 +1,24 @@
+{
+  "format": "mp3_44100_64",
+  "defaultVoiceId": "3fjjbhBA9yI42Aoj0o18",
+  "notes": {
+    "defaultVoiceId": "Ariël, the Dutch voice of the lessons. Better: a native voice per language from the Voice Library (put its id in voiceId).",
+    "model": "eleven_multilingual_v2 (29 languages) knows ar, uk, tr, pl, ro, bg, es, pt, fr, de. Persian is only in eleven_v3. Tigrinya is in neither: a native speaker records it (docs/opnames.md).",
+    "prs": "Dari: no ElevenLabs model names it; eleven_v3 reads it as Persian. Let a Dari speaker listen before it goes live; if it sounds Iranian, record it by phone like Tigrinya."
+  },
+  "langs": {
+    "ar": { "model": "eleven_multilingual_v2" },
+    "ti": { "human": true },
+    "fa": { "model": "eleven_v3" },
+    "prs": { "model": "eleven_v3", "listen": true },
+    "uk": { "model": "eleven_multilingual_v2" },
+    "tr": { "model": "eleven_multilingual_v2" },
+    "pl": { "model": "eleven_multilingual_v2" },
+    "ro": { "model": "eleven_multilingual_v2" },
+    "bg": { "model": "eleven_multilingual_v2" },
+    "es": { "model": "eleven_multilingual_v2" },
+    "pt": { "model": "eleven_multilingual_v2" },
+    "fr": { "model": "eleven_multilingual_v2" },
+    "de": { "model": "eleven_multilingual_v2" }
+  }
+}
