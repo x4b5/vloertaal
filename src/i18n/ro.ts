@@ -97,6 +97,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'Producție',
     sectorCare: 'Îngrijire',
     sectorHospitality: 'Hoteluri și restaurante',
+    sectorRetail: 'Magazin și supermarket', // nieuw, nalezen
     sectorCleaning: 'Curățenie',
     sectorHorticulture: 'Horticultură', // nieuw (30 okt 2026), nagelezen (2e lezing)
     sectorTechnical: 'Tehnică', // nieuw (30 okt 2026), nalezen
@@ -249,6 +250,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'Oprit',
     sectorGroupMake: 'Producție și transport',
     sectorGroupCare: 'Îngrijire și servicii',
+    sectorGroupShop: 'Magazine și restaurante', // nieuw, nalezen
     sectorGroupBuild: 'Construcții și tehnică', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Voce de femeie',
     voiceMan: 'Voce de bărbat',

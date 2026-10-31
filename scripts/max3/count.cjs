@@ -184,6 +184,7 @@ function defineStates(LANG) {
   add('onb:sector-build', shot('sector&group=build'), null, { expect: '.chrome-back' });
   add('onb:sector-make', shot('sector&group=make'), null, { expect: '.chrome-back' });
   add('onb:sector-care', shot('sector&group=care'), null, { expect: '.chrome-back' });
+  add('onb:sector-shop', shot('sector&group=shop'), null, { expect: '.chrome-back' });
   // "In welk land werk je?" right after the sector: two cards (the back arrow in the first run).
   add('onb:country', shot('country'), null, { expect: '.country-screen .chrome-back' });
   add('onb:country-old', shot('country&old=1'), null, { expect: '.country-screen' });
@@ -458,7 +459,7 @@ function defineStates(LANG) {
   // with the back arrow (the "look only" way out).
   for (const pg of ['me', 'lessons', 'phone', 'language', 'sector', 'certificates']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('settings:phone-preview', shot('settings&page=phone&access=preview'), null, { list: true });
-  for (const pg of ['gender', 'sector-build', 'sector-make', 'sector-care', 'english', 'sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
+  for (const pg of ['gender', 'sector-build', 'sector-make', 'sector-care', 'sector-shop', 'english', 'sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
   add('settings:writing-ar', shot('settings&page=writing', 'ar'));
   add('settings:install', shot('settings&page=install&install=prompt'));
   add('settings:unlock', shot('settings&page=unlock&access=preview'));

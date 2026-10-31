@@ -26,7 +26,7 @@ import { buildUnit, careUnit, cleanUnit, factoryUnit, horecaUnit, kasUnit, techn
  *
  * The Entree additions (docs/entree-aanvulling.md, units 11–17) sit beside the unit they build on,
  * so the first ten keep their order among themselves: afronden after the first day, stage after
- * the contract, rekenen after loon (it uses bruto and netto) and the winkel after tijd; digitaal,
+ * the contract, rekenen after loon (it uses bruto and netto); digitaal,
  * meedoen and duurzaam at the end. The second Entree round (docs/werkregels-curriculum.md, deel 7)
  * adds schrijven and loopbaan at the end ("Jouw weg" is the last step after Entree). This order is
  * the course and route order (toCourseUnits).
@@ -40,7 +40,6 @@ export const rulesUnits: RuleUnit[] = [
   loonUnit,
   rekenenUnit,
   tijdUnit,
-  winkelUnit,
   ziekUnit,
   veiligUnit,
   samenUnit,
@@ -55,7 +54,8 @@ export const rulesUnits: RuleUnit[] = [
 
 /**
  * Short sector units (curriculum, deel 6): 2 lessons each, in the order of src/content/sectors.ts.
- * Techniek and the garage (curriculum, deel 7) come last: their sector cards came later (in the
- * group "Bouw en techniek", src/content/sectors.ts).
+ * Techniek and the garage (curriculum, deel 7) come after: their sector cards came later (in the
+ * group "Bouw en techniek", src/content/sectors.ts). The winkel last: a basis unit until it got a
+ * sector card (31 October 2026, group "Winkel en horeca"); it has 3 lessons.
  */
-export const sectorRulesUnits: RuleUnit[] = [warehouseUnit, buildUnit, factoryUnit, careUnit, horecaUnit, cleanUnit, kasUnit, techniekUnit, werkplaatsUnit];
+export const sectorRulesUnits: RuleUnit[] = [warehouseUnit, buildUnit, factoryUnit, careUnit, horecaUnit, cleanUnit, kasUnit, techniekUnit, werkplaatsUnit, winkelUnit];

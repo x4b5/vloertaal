@@ -35,6 +35,7 @@ const SECTOR_UNITS = ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca
  * sectors' units); with none, they come after the sector units.
  */
 const APPENDED = ['u.shop', 'u.numbers', 'u.ai'];
+const SHOP = 'u.shop';
 /** A sector unit added after those ("In de kas", 30 October 2026): at the very end of the course. */
 const LATE_SECTOR_UNITS = ['u.kas'];
 /**
@@ -53,8 +54,10 @@ const expectedOrder = (own: string | null) => {
   const main = BASIS.map((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
   const late = [...LATE_SECTOR_UNITS, ...LATE_OWN].filter((id) => !main.includes(id));
+  // "In de winkel" became the own unit of Winkel (31 October 2026): with a sector it now waits with
+  // the other sectors' units (in its course place, after Schoonmaak), unless it is the own one.
   return own
-    ? [...main, ...APPENDED, ...LATE_BASIS.filter((id) => !LATE_OWN.includes(id)), ...rest, ...late]
+    ? [...main, ...APPENDED.filter((id) => id !== SHOP), ...LATE_BASIS.filter((id) => !LATE_OWN.includes(id)), ...[...rest, SHOP].filter((id) => !main.includes(id)), ...late]
     : [...main, ...rest, ...APPENDED, ...LATE_SECTOR_UNITS, ...LATE_BASIS];
 };
 
@@ -71,6 +74,7 @@ const TAAL_ORDER: Record<string, string[]> = {
   horticulture: expectedOrder('u.kas'),
   technical: expectedOrder('u.tech'),
   garage: expectedOrder('u.garage'),
+  retail: expectedOrder('u.shop'),
 };
 
 /** The 3 choices after lesson 1.1, as before the tracks. */
@@ -86,6 +90,7 @@ const TAAL_CHOICES: Record<string, string[]> = {
   horticulture: ['u.safety', 'u.firstday', 'u.kas'],
   technical: ['u.safety', 'u.firstday', 'u.tech'],
   garage: ['u.safety', 'u.firstday', 'u.garage'],
+  retail: ['u.time', 'u.firstday', 'u.shop'],
 };
 
 describe("the Dutch course ('taal') is exactly as before", () => {

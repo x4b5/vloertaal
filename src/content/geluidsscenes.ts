@@ -1030,4 +1030,108 @@ export const geluidsscenes: Geluidsscene[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- Winkel
+  {
+    id: 'g.winkel.datum',
+    sector: 'retail',
+    titel: 'Over de datum',
+    naUnit: 'u.shop',
+    recht: true, // ⚖️ een product over de datum (te gebruiken tot) haal je uit het schap
+    beurten: [
+      { wie: 'henk', nl: 'Kijk even naar de producten in gang drie.' },
+      { wie: 'henk', nl: 'Is een product over de datum? Dan haal je het weg.' },
+      { wie: 'ik', nl: 'Oké. Waar laat ik die producten?' },
+      { wie: 'henk', nl: 'In de bak achterin. Niet terug in het schap.' },
+    ],
+    geluid: { nl: 'Supermarkt: koelvakken zoemen, een winkelwagen rolt voorbij, mensen praten zacht.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Wat doe je met een product over de datum?',
+        opties: [
+          { nl: 'Je zet het achteraan in het schap.' },
+          { nl: 'Je doet het in de bak achterin.', goed: true },
+          { nl: 'Je zet het bij de kassa.' },
+        ],
+        uitleg: { nl: 'Een product over de datum haal je uit het schap.', en: 'You take a product past its date off the shelf.' },
+      },
+      {
+        vraag: 'In welke gang zijn de producten?',
+        opties: [
+          { nl: 'In gang drie.', goed: true },
+          { nl: 'In gang twee.' },
+          { nl: 'In gang tien.' },
+        ],
+        uitleg: { nl: 'Henk zegt: de producten in gang drie.', en: 'Henk says: the products in aisle three.' },
+      },
+    ],
+  },
+  {
+    id: 'g.winkel.klant',
+    sector: 'retail',
+    titel: 'Een klant wil rijst',
+    naUnit: 'u.shop',
+    beurten: [
+      { wie: 'jada', nl: 'Die klant wil rijst. Weet jij waar die ligt?' },
+      { wie: 'ik', nl: 'Nee, dat weet ik niet zeker.' },
+      { wie: 'jada', nl: 'In gang vier, onderaan.' },
+      { wie: 'jada', nl: 'Loop even met de klant mee. Dat vinden klanten fijn.' },
+    ],
+    geluid: { nl: 'Supermarkt: een scanner piept bij de kassa, een winkelwagen, mensen praten zacht.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Waar ligt de rijst?',
+        opties: [
+          { nl: 'In gang vijf, achteraan.' },
+          { nl: 'Bij de kassa, achterin.' },
+          { nl: 'In gang vier, onderaan.', goed: true },
+        ],
+        uitleg: { nl: 'Jada zegt: in gang vier, onderaan.', en: 'Jada says: in aisle four, at the bottom.' },
+      },
+      {
+        vraag: 'Wat doe je met de klant?',
+        opties: [
+          { nl: 'Je loopt met de klant mee.', goed: true },
+          { nl: 'Je zegt: in gang vier.' },
+          { nl: 'Je belt de chef even.' },
+        ],
+        uitleg: { nl: 'Jada zegt: loop even met de klant mee.', en: 'Jada says: walk along with the customer.' },
+      },
+    ],
+  },
+  {
+    id: 'g.winkel.kassa',
+    sector: 'retail',
+    titel: 'Op de kassa',
+    naUnit: 'u.shop',
+    recht: true, // ⚖️ alcohol alleen aan mensen van 18 jaar of ouder (Alcoholwet)
+    beurten: [
+      { wie: 'henk', nl: 'Jij zit vandaag op kassa twee, tot drie uur.' },
+      { wie: 'henk', nl: 'Wil iemand alcohol? Vraag dan even om een ID.' },
+      { wie: 'henk', nl: 'Onder de achttien mag dat niet.' },
+      { wie: 'ik', nl: 'Oké. En mijn pauze?' },
+      { wie: 'henk', nl: 'Om half één. Dan zit Jada op jouw kassa.' },
+    ],
+    geluid: { nl: 'Supermarkt bij de kassa: scanners piepen, een lade met geld gaat open, een kar.', niveau: 'midden' },
+    vragen: [
+      {
+        vraag: 'Wat doe je als iemand alcohol wil?',
+        opties: [
+          { nl: 'Je zegt: dat kan niet.' },
+          { nl: 'Je vraagt om een ID.', goed: true },
+          { nl: 'Je belt eerst de chef.' },
+        ],
+        uitleg: { nl: 'Henk zegt: onder de achttien mag dat niet.', en: 'Henk says: under eighteen that is not allowed.' },
+      },
+      {
+        vraag: 'Hoe laat is je pauze?',
+        opties: [
+          { nl: 'Om half twee.' },
+          { nl: 'Om drie uur.' },
+          { nl: 'Om half één.', goed: true },
+        ],
+        uitleg: { nl: 'Henk zegt: je pauze is om half één.', en: 'Henk says: your break is at half past twelve.' },
+      },
+    ],
+  },
 ];

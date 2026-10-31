@@ -25,7 +25,8 @@ describe('the sector groups', () => {
     expect(sectorGroups.map((g) => [g.nl, g.sectors.map((id) => sectors.find((s) => s.id === id)!.nl)])).toEqual([
       ['Bouw en techniek', ['Bouw', 'Techniek', 'Garage']],
       ['Maken en verplaatsen', ['Productie', 'Logistiek', 'Tuinbouw']],
-      ['Zorg en service', ['Zorg', 'Horeca', 'Schoonmaak']],
+      ['Zorg en service', ['Zorg', 'Schoonmaak']],
+      ['Winkel en horeca', ['Winkel', 'Horeca']],
     ]);
     expect(isSectorGroupId('build')).toBe(true);
     expect(isSectorGroupId('other')).toBe(false);

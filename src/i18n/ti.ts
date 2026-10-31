@@ -98,6 +98,7 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'ምፍራይ',
     sectorCare: 'ክንክን',
     sectorHospitality: 'ቤት ብልዕን ሆቴልን',
+    sectorRetail: 'ድኳንን ሱፐርማርኬትን', // nieuw, nalezen
     sectorCleaning: 'ጽሬት',
     sectorHorticulture: "ሕርሻ ኣትክልትን ገዛ ኣትክልትን", // nagelezen (2e lezing)
     sectorTechnical: 'ቴክኒካዊ ስራሕ', // nieuw (30 okt 2026), nalezen
@@ -250,6 +251,7 @@ const lang: HelpLanguageSource = {
     settingOff: 'ዕጹው',
     sectorGroupMake: 'ምስራሕን ምጽዓንን',
     sectorGroupCare: 'ክንክንን ኣገልግሎትን',
+    sectorGroupShop: 'ድኳንን ቤት ብልዕን', // nieuw, nalezen
     sectorGroupBuild: 'ህንጻን ቴክኒክን', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'ድምጺ ሰበይቲ',
     voiceMan: 'ድምጺ ሰብኣይ',
