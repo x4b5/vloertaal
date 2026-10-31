@@ -165,7 +165,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { one: 'dia', many: 'dias', other: 'dias' },
     wordsUnit: { one: 'palavra', many: 'palavras', other: 'palavras' },
     countTitle: 'Contagem anónima',
-    countHint: 'A app conta quantas vezes as lições são feitas, e mais ou menos quanto tempo demoram. Sem nome, sem conta, sem rastreio.',
+    countHint: 'A app conta quantas vezes as lições são feitas, e mais ou menos quanto tempo demoram. E se a app tem algum erro. Sem nome, sem conta, sem rastreio.', // fout-zin nieuw, nalezen
     certificate: 'Certificado',
     myCertificates: 'Os meus certificados',
     certsEmpty: 'Termina todas as lições de uma unidade. Depois recebes um certificado.',

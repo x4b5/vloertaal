@@ -189,7 +189,7 @@ export const uiEn = {
   wordsUnit: 'words',
   /* Retention: anonymous counting (Settings) and a certificate per finished unit. */
   countTitle: 'Count anonymously',
-  countHint: 'The app counts how often lessons are done, and about how long they take. No name, no account, no tracking.',
+  countHint: 'The app counts how often lessons are done, and about how long they take. And whether the app has an error somewhere. No name, no account, no tracking.',
   certificate: 'Certificate',
   myCertificates: 'My certificates',
   certsEmpty: 'Finish all lessons of a unit. Then you get a certificate.',

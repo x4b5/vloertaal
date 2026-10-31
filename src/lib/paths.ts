@@ -9,3 +9,5 @@ export const TOPICS_PATH = '/onderwerpen/';
 export const appLink = (unitId: string) => `/?unit=${encodeURIComponent(unitId.slice(2))}`;
 /** Werken in België (Vlaanderen): the Belgian version of the app in one page (src/lib/geoPages.ts). */
 export const BELGIUM_PATH = '/belgie/';
+/** The privacy statement (src/lib/privacyPage.ts). */
+export const PRIVACY_PATH = '/privacy/';
