@@ -141,9 +141,11 @@ describe('the server keeps a clip with a version only (vercel.json)', () => {
   it('as it is with ?v=, and asks again without one (a new take keeps the file name)', () => {
     const rules = JSON.parse(readFileSync('vercel.json', 'utf8')).headers as { source: string; has?: { type: string; key: string }[]; headers: { key: string; value: string }[] }[];
     const audioRules = rules.filter((r) => r.source.startsWith('/audio'));
-    expect(audioRules).toHaveLength(1);
-    expect(audioRules[0].source).toBe('/audio-el/(.*)');
-    expect(audioRules[0].has).toEqual([{ type: 'query', key: 'v' }]);
-    expect(audioRules[0].headers).toEqual([{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }]);
+    // The Dutch clips, and the help-language recordings (src/lib/helpAudio.ts), the same way.
+    expect(audioRules.map((r) => r.source)).toEqual(['/audio-el/(.*)', '/audio-help/(.*)']);
+    for (const r of audioRules) {
+      expect(r.has).toEqual([{ type: 'query', key: 'v' }]);
+      expect(r.headers).toEqual([{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }]);
+    }
   });
 });

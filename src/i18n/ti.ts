@@ -209,8 +209,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'ኣርእስትታት ምርኣይ',
     privacyLink: 'መግለጺ ብሕትውና ኣንብብ (ብሆላንድኛ)', // nieuw, nalezen
     routeTitle: 'እንታይ ክትመሃሩ ትደልዩ?', // nieuw, nalezen (een vraag, de x-vorm)
-    routeLearn: 'ንስራሕ ሆላንድኛ ምምሃር፡ ምስ ቋንቋ ሓገዝ', // nieuw, nalezen
-    routeRules: 'ሆላንድኛ እዛረብ እየ፡ ስራሕ ኣብ ሆላንድን ቤልጅዩምን ከመይ ይኸይድ', // nieuw, nalezen
+    routeLearn: 'ንስራሕ ሆላንድኛ ምምሃር', // nieuw, nalezen
+    routeRules: 'ሆላንድኛ እዛረብ እየ፡ ሕግታት ስራሕ', // nieuw, nalezen
     routeLearnShort: 'ሆላንድኛ ምምሃር', // nieuw, nalezen
     byTheme: 'ብክፍልታት',
     inOrder: 'ብቕደም ሰዓብ',

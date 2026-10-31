@@ -32,6 +32,7 @@ export const UPDATES: Update[] = [
       'Rustiger begin: je start meteen met les 1. De toets "Wat ken je al?" komt pas na de eerste les. De knop Melden staat in de les niet meer aan. Wil je hem toch? Zet hem aan onderaan bij Over.',
       'Taal: bij "Maak het gesprek af" zie je de vertaling pas na je antwoord. In de eerste onderwerpen hoef je niet te typen: je hoort een woord en kiest het. En na een les staat soms een zin om vandaag op je werk te proberen.',
       'De app start sneller, en een woord dat je al hoorde speelt meteen. Kan je telefoon je voortgang niet bewaren? Dan zie je dat nu, met een tip.',
+      'Bij de start kun je meer horen in je eigen taal: de vraag "Wat wil je leren?", de twee keuzes, "Polski?" en de uitleg bij de vragen daarna. Tik op de knop met de wereldbol. Die staat er als je telefoon een stem voor je taal heeft. De keuzes bij "Wat wil je leren?" zijn ook korter.',
     ],
   },
   {

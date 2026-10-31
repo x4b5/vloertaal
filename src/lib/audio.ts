@@ -2,6 +2,7 @@ import { BRAM_HELLO, BRAM_VOICE, DEVICE, type VoiceRef } from './voices';
 import { sayAs } from './sayAs';
 import { sentences } from './dutch';
 import { deviceRateFor, paceOf, recordedRateFor, type Pace, type Tempo } from './tempo';
+import { helpClipUrl } from './helpAudio';
 
 /** Dutch text-to-speech through the browser, plus small feedback sounds. */
 
@@ -671,11 +672,25 @@ export function helpVoice(code: string): SpeechSynthesisVoice | null {
   return voices.find((v) => want.some((w) => v.lang.toLowerCase().replace('_', '-').split('-')[0] === w)) ?? null;
 }
 
-/** Reads a help-language text aloud with the device's voice for it (a tap; plays even when quiet). */
+/**
+ * Reads a help-language text aloud (a tap; plays even when quiet): its recording when there is one
+ * (src/lib/helpAudio.ts, at its own speed), else the device's voice for that language. A recording
+ * that does not play lets the device's voice say it, when the phone has one.
+ */
 export function speakHelp(text: string, code: string): void {
+  const url = helpClipUrl(code, text);
+  if (url) {
+    playClip(url, text, false, 'en', 1, () => speakHelpDevice(text, code), 'real');
+    return;
+  }
+  speakHelpDevice(text, code);
+}
+
+function speakHelpDevice(text: string, code: string): void {
   const voice = helpVoice(code);
-  if (!voice) return;
+  // Also without a voice: a recording that failed is no longer "being said".
   stopAll();
+  if (!voice) return;
   const u = new SpeechSynthesisUtterance(text);
   u.voice = voice;
   u.lang = voice.lang;

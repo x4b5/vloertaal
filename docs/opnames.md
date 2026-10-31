@@ -83,3 +83,123 @@ uitkomt. Zo wordt de lijst kleiner.
 
 Een nieuwe zin zonder opname? Zet hem in `PENDING_RECORDING`, anders faalt de eerste test van
 `tests/g4b3Clips.test.ts`.
+
+---
+
+# Opnames in de hulptaal (de eerste schermen)
+
+De eerste schermen hebben een luisterknop in de hulptaal (de wereldbol met een tekstballon):
+de route ("Wat wil je leren?"), de taalraad ("Polski?") en de vragen en uitleg bij
+"Vrouw of man?", "Waar werk je?" en "In welk land werk je?".
+
+De knop speelt eerst een **opname** af. Is er geen opname, dan leest **de stem van de telefoon**
+het voor. Heeft de telefoon geen stem voor die taal (Tigrinya bijna altijd, Perzisch en Dari soms),
+dan is er **geen knop**. Een opname is er pas als de eigenaar hem maakt. Zonder opnames werkt
+alles zoals vroeger.
+
+- De lijst: `public/audio-help/clips.json` (per taal 12 tot 19 korte zinnen, ongeveer 5.800 tekens).
+  Maken: `npm run help:clips` (geen sleutel nodig). De teksten komen uit `scripts/help-clips-list.ts`.
+- De opnames: `public/audio-help/<taal>/<naam>.mp3`, bijvoorbeeld `public/audio-help/ar/routeTitle.mp3`.
+- Wat er is opgenomen: `public/audio-help/manifest.json` (per taal: naam → de tekst die de opname zegt).
+  De app zoekt een opname op **tekst**. Verandert een tekst, dan gebruikt de app de oude opname niet
+  meer, tot hij opnieuw is opgenomen.
+- Een naam als `chooseSector.f` is de vorm voor een vrouw, `.m` voor een man; zonder punt is het
+  de vorm voordat de leerling "Vrouw of man?" heeft gekozen.
+
+## Welke taal met welk model
+
+| Taal | Hoe | Model |
+|---|---|---|
+| ar, uk, tr, pl, ro, bg, es, pt, fr, de | ElevenLabs | `eleven_multilingual_v2` (29 talen; deze 10 staan erin) |
+| fa (Perzisch) | ElevenLabs | `eleven_v3` (Perzisch staat alleen in v3, niet in v2) |
+| prs (Dari) | ElevenLabs, **eerst laten naluisteren** | `eleven_v3`, als Perzisch: geen model noemt Dari |
+| ti (Tigrinya) | **een moedertaalspreker** met de telefoon | geen: Tigrinya staat in geen enkel model |
+
+Gevonden op 31 oktober 2026 (zoeken op het web; de site van ElevenLabs zelf was vanaf hier niet
+bereikbaar). `check` hieronder vraagt het ook aan ElevenLabs zelf, per model ("knows it: yes/NO").
+Eleven v4 (september 2026) heeft volgens het nieuws 90+ talen, maar er is nog geen lijst. Staat
+Tigrinya er later in, zet dan in `scripts/voices/elevenlabs-help.json` bij `ti` een `model` in plaats
+van `"human": true`.
+
+**Stem.** Standaard spreekt Ariël (de Nederlandse stem van de lessen) ook de hulptalen. Beter klinkt
+een stem die de taal als moedertaal heeft: kies er een in de *Voice Library* van ElevenLabs en zet
+het id bij die taal in `scripts/voices/elevenlabs-help.json` (`"ar": { "model": "…", "voiceId": "…" }`).
+
+## Opnemen met ElevenLabs
+
+```sh
+export ELEVENLABS_API_KEY=jouw-sleutel
+npm run help:clips
+node scripts/voices/elevenlabs-help.mjs check     # kost niets: per taal wat er ontbreekt en de prijs
+node scripts/voices/elevenlabs-help.mjs sample    # 1 zin per taal ("Wat wil je leren?"): luister na
+node scripts/voices/elevenlabs-help.mjs all       # alles wat ontbreekt of oud is (niet Tigrinya)
+npm run help:missing                              # controle: per taal "missing 0 · outdated 0"
+```
+
+Eén of een paar talen: `LANGS=ar,fa node scripts/voices/elevenlabs-help.mjs all`.
+`MAX_CREDITS=3000` (standaard 8000) stopt de run voordat hij meer uitgeeft.
+Commit daarna `public/audio-help/` (de mp3's en `manifest.json`).
+
+**Credits (schatting).** Ongeveer 1 credit per teken (`eleven_multilingual_v2` en `eleven_v3`):
+
+- `sample`: ongeveer **260** credits (12 zinnen);
+- `all`, de 12 talen zonder Tigrinya: ongeveer **5.250** credits;
+- later een tekst veranderd: alleen die zin, een paar tientallen credits.
+
+Luister vooral **Dari** en **Perzisch** na, liefst met iemand die de taal spreekt. Klinkt het Dari
+Iraans, gooi de mp3's van `prs` weg en laat ze inspreken zoals Tigrinya hieronder.
+
+## Tigrinya (en eventueel Dari): een moedertaalspreker neemt op
+
+Vraag een moedertaalspreker uit de pilot (iemand die goed leest). Het kost ongeveer 20 minuten.
+
+1. Maak de lijst: `node scripts/voices/help-manifest.mjs list ti`. Je ziet per regel de bestandsnaam,
+   het scherm en de zin. Stuur die lijst (of de tabel hieronder) naar de spreker.
+2. De spreker neemt **elke zin apart** op met de telefoon (de app *Dictafoon* of *Spraakrecorder*):
+   - in een stille kamer, de telefoon op 20 cm;
+   - rustig en duidelijk, zoals je het tegen een nieuwe collega zegt;
+   - precies de zin van de lijst, niets ervoor of erna;
+   - de bestandsnaam van de lijst, bijvoorbeeld `routeTitle`.
+3. Zet de bestanden om naar mp3 en zet ze in `public/audio-help/ti/`:
+
+   ```sh
+   for f in *.m4a; do ffmpeg -i "$f" -ac 1 -ar 44100 -b:a 64k -af silenceremove=1:0:-45dB,areverse,silenceremove=1:0:-45dB,areverse "public/audio-help/ti/${f%.m4a}.mp3"; done
+   ```
+
+   (Stilte aan het begin en eind gaat eraf. Werkt de spreker met een ander formaat, vervang `.m4a`.)
+4. Luister ze na en zet ze in de lijst van de app:
+
+   ```sh
+   node scripts/voices/help-manifest.mjs add ti
+   ```
+
+   Je ziet hoeveel er zijn gevonden en welke nog ontbreken. Commit `public/audio-help/`.
+
+De zinnen in het Tigrinya (31 oktober 2026; `list ti` geeft altijd de actuele lijst):
+
+| Bestand | Scherm | Zin |
+|---|---|---|
+| `routeTitle.mp3` | route | እንታይ ክትመሃሩ ትደልዩ? |
+| `routeLearn.mp3` | route | ንስራሕ ሆላንድኛ ምምሃር |
+| `routeRules.mp3` | route | ሆላንድኛ እዛረብ እየ፡ ሕግታት ስራሕ |
+| `langAsk.mp3` | raad | ትግርኛ? |
+| `langGuessYes.mp3` | raad | እወ |
+| `langGuessOther.mp3` | raad | ካልእ ቋንቋ |
+| `genderTitle.mp3` | vrouw-man | ሰበይቲ ወይስ ሰብኣይ? |
+| `genderHint.mp3` | vrouw-man | ቋንቋኹም ብቕኑዕ መንገዲ ምእንቲ ክዛረበኩም። |
+| `chooseSector.mp3` | werk | ኣበይ ኢኹም ትሰርሑ? |
+| `chooseSector.f.mp3` | werk | ኣበይ ኢኺ ትሰርሒ? |
+| `chooseSector.m.mp3` | werk | ኣበይ ኢኻ ትሰርሕ? |
+| `sectorHint.mp3` | werk | ትምህርትታት ናይ ስራሕካ ኣቐዲሞም ይመጹ። ደሓር ኣብ ምድላዋት ክትቅይሮ ትኽእል ኢኻ። |
+| `sectorHint.f.mp3` | werk | ትምህርትታት ናይ ስራሕኪ ኣቐዲሞም ይመጹ። ደሓር ኣብ ምድላዋት ክትቅይርዮ ትኽእሊ ኢኺ። |
+| `countryTitle.mp3` | land | ኣብ ኣየናይ ሃገር ኢኹም ትሰርሑ? |
+| `countryTitle.f.mp3` | land | ኣብ ኣየናይ ሃገር ኢኺ ትሰርሒ? |
+| `countryTitle.m.mp3` | land | ኣብ ኣየናይ ሃገር ኢኻ ትሰርሕ? |
+| `countryHint.mp3` | land | እትሰርሑሉ ሃገር ምረጹ። ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም። እዚ ኣብ ተሌፎንኩም ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና። |
+| `countryHint.f.mp3` | land | እትሰርሕሉ ሃገር ምረጺ። ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ። እዚ ኣብ ተሌፎንኪ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና። |
+| `countryHint.m.mp3` | land | እትሰርሓሉ ሃገር ምረጽ። ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ። እዚ ኣብ ተሌፎንካ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና። |
+
+Tip: de spreker kan meteen meelezen. Klopt een zin niet, of klinkt hij vreemd? Noteer het.
+Dan passen we eerst de tekst aan (in `src/i18n/ti.ts`) en neemt de spreker daarna op.
+
+Eén zin vergeten? Dat geeft niets. Die zin leest dan niemand voor (de app laat de knop weg), de rest werkt.
