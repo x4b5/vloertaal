@@ -1,5 +1,7 @@
 import { Fragment, useState, type ReactNode } from 'react';
-import { units } from '../content/curriculum';
+import { taalCourseUnits } from '../content/curriculum';
+import { rulesCourseUnits } from '../content/rulesCourse';
+import { taalNlId } from '../content/taalBe/ids';
 import { unitIcons } from '../content/unitIcons';
 import type { Unit } from '../content/types';
 import { unitLink } from '../lib/unitLink';
@@ -12,7 +14,7 @@ import { ThemeHeadRow } from './Themes';
 import { COACH_FACTS } from '../content/facts';
 import { CONTACT_EMAIL } from '../content/about';
 import { PRO_LEAD, PRO_TITLE, proSections, type ProSection } from '../content/pro';
-import { KUN_REGELS, KUN_TAAL, type KunOnderwerp } from '../content/kunJeNu';
+import { KUN_REGELS, KUN_TAAL, kunOnderwerpenNu, type KunOnderwerp } from '../content/kunJeNu';
 
 /**
  * "Voor begeleiders en werkgevers" (Dutch only), its own page from the button at the bottom of
@@ -31,7 +33,8 @@ import { KUN_REGELS, KUN_TAAL, type KunOnderwerp } from '../content/kunJeNu';
 export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner's help language: the back arrow says Back in it too. */ lang?: HelpLanguage }) {
   const [copied, setCopied] = useState<string | null>(null);
   const share = async (unit: Unit) => {
-    const url = unitLink(unit.id);
+    // A Belgian unit ("be.u.society") is linked by its Dutch id: the app opens the course of the learner's country.
+    const url = unitLink(taalNlId(unit.id));
     try {
       if (navigator.share) {
         // A short Dutch line goes with the link (WhatsApp shows it above the link).
@@ -49,7 +52,7 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
   };
   const topics = (
     <ul className="coach-links coach-list coach-list-themes">
-      {groupByTheme(units).map((group) => (
+      {groupByTheme(taalCourseUnits()).map((group) => (
         <Fragment key={group.key}>
           <ThemeHeadRow group={group} dutchOnly />
           {group.units.map((unit) => (
@@ -104,7 +107,8 @@ function Section({ s, children }: { s: ProSection; children?: ReactNode }) {
  * <details> (two things to tap: with the mail address, three on this page; the list is the exception).
  */
 function KunTabel() {
-  const sporen: [string, KunOnderwerp[]][] = [['Taal', KUN_TAAL], ['Werkregels', KUN_REGELS]];
+  // In Belgium the Belgian titles and sentences ("Meedoen in België"), from the course that plays now.
+  const sporen: [string, KunOnderwerp[]][] = [['Taal', kunOnderwerpenNu(KUN_TAAL, taalCourseUnits())], ['Werkregels', kunOnderwerpenNu(KUN_REGELS, rulesCourseUnits())]];
   return (
     <>
       {sporen.map(([naam, lijst]) => (
