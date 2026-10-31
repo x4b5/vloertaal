@@ -12,6 +12,7 @@ import { prs as papers } from './units/papers';
 import { prs as pay } from './units/pay';
 import { prs as house } from './units/house';
 import { prs as sayings } from './units/sayings';
+import { prs as social } from './units/social';
 import { prs as rights } from './units/rights';
 import { prs as leave } from './units/leave';
 import { prs as exploit } from './units/exploit';
@@ -32,5 +33,5 @@ import { prs as online } from './units/online';
  * (./base.ts) and every unit's own file (./units). Loaded with the language's pack. A content
  * agent changes only its own unit files, never this one.
  */
-const texts: CultureTranslation = { ui: base.ui, gloss: { ...base.gloss, ...firstday, ...tools, ...safety, ...warehouse, ...data, ...time, ...teamwork, ...contract, ...papers, ...pay, ...house, ...sayings, ...rights, ...leave, ...exploit, ...grow, ...health, ...money, ...travel, ...lost, ...shop, ...ai, ...kas, ...stage, ...society, ...online } };
+const texts: CultureTranslation = { ui: base.ui, gloss: { ...base.gloss, ...firstday, ...tools, ...safety, ...warehouse, ...data, ...time, ...teamwork, ...contract, ...papers, ...pay, ...house, ...social, ...sayings, ...rights, ...leave, ...exploit, ...grow, ...health, ...money, ...travel, ...lost, ...shop, ...ai, ...kas, ...stage, ...society, ...online } };
 export default texts;

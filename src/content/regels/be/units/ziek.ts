@@ -332,7 +332,7 @@ export const be: BeUnit = {
             ],
             why: 'De arbeidsarts kijkt welk werk je kunt doen. De adviserend arts van je ziekenfonds praat soms mee.',
           },
-          { kind: 'model', id: 'r.be.l.ziek.3.mo1', context: 'Je meldt je beter bij je leidinggevende.', nl: 'Ik ben weer beter. Ik kan morgen weer komen werken.' },
+          { kind: 'model', id: 'r.be.l.ziek.3.mo1', context: 'Je zegt je leidinggevende dat je weer kunt werken.', nl: 'Ik ben weer beter. Ik kan morgen weer komen werken.' },
         ],
       },
     ],

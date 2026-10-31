@@ -105,11 +105,11 @@ const tips = [
     title: 'Your job ends: what else stops?',
     body:
       'When your job ends, check your final pay (eindafrekening), and ask for your C4. Are you a white-collar worker (bediende)? Then you get your holiday pay with your last pay. A blue-collar worker (arbeider)? Then you get it the year after, from the holiday fund (vakantiekas). ' +
-      'Housing or a van through the agency can stop at the same time. Your rental contract has its own rules: ask for advice before you leave the house. ' +
+      'Housing or a van through the interim office can stop at the same time. Your rental contract has its own rules: ask for advice before you leave the house. ' +
       'You are insured for care through your ziekenfonds. With unemployment benefit you usually stay insured. Moving? Tell the gemeente within 8 working days. Going back to your own country? Ask your ziekenfonds. ' +
       ADVICE,
     phrase: ['Wanneer krijg ik mijn eindafrekening?', 'When do I get my final pay?'],
-    situation: 'Your job ends on Friday. The agency also arranges your room. What do you do?',
+    situation: 'Your job ends on Friday. The interim office also arranges your room. What do you do?',
     options: [
       'Ask what your rental contract says, and get advice.',
       'Leave the room on Friday, because the job stops.',
@@ -128,15 +128,15 @@ const tips = [
     lessonId: 'l.newjob',
     emoji: '🔭',
     title: 'Looking for new work',
-    body: 'Before you leave, ask for a reference (referentie). Keep your payslips (loonbrieven), your contract and your C4. Update your CV. Look for work at the VDAB (vdab.be) and at interim agencies (interimkantoren). Never pay money to get a job. ' + ABUSE,
+    body: 'Before you leave, ask for a reference (referentie). Keep your payslips (loonbrieven), your contract and your C4. Update your CV. Look for work at the VDAB (vdab.be) and at interim offices (interimkantoren). Never pay money to get a job. ' + ABUSE,
     phrase: ['Mag ik u als referentie opgeven?', 'May I give your name as a reference?'],
     situation: 'Someone offers you a job, but first you must pay 300 euros "for the job". What do you do?',
     options: [
-      'Do not pay. Look for a real interim agency.',
+      'Do not pay. Look for a real interim office.',
       'Pay, because a good job is worth it.',
       'Pay half now and the rest later.',
     ],
-    why: 'Asking money for a job is a warning sign. An interim agency may not ask you money for finding work. You can also look for work at the VDAB.',
+    why: 'Asking money for a job is a warning sign. An interim office may not ask you money for finding work. You can also look for work at the VDAB.',
   }),
 ];
 

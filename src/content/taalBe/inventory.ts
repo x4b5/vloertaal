@@ -2,7 +2,7 @@
  * The inventory of the language track for Belgium (Vlaanderen), docs/taal-belgie.md: every unit,
  * lesson and tip of the Dutch course, with what changes in Belgium.
  *
- *   A  holds in Belgium too: nothing changes, at most one word ("Dutch supervisors").
+ *   A  holds in Belgium too: nothing changes (the tips say "here", not "Dutch").
  *   B  a few words or one fact differ (loonstrook → loonbrief, DigiD → itsme, uitzendbureau →
  *      interimkantoor): a B change in the unit's file (`lines`, and a Belgian tip).
  *   C  wholly different (Meedoen in Nederland, DigiD, toeslagen, Entree): a new lesson or unit.
@@ -37,7 +37,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.arrive': L('B', 'A', 'de kantine heet in Vlaanderen vaak de refter (zelfde plaatje)'),
   } },
   'u.help': { kind: 'A', lessons: {
-    'l.understand': L('A', 'A', 'één woord: "Dutch supervisors"'),
+    'l.understand': L('A', 'A', 'de tip zegt "Supervisors here" (was "Dutch supervisors")'),
   } },
   'u.tools': { kind: 'B', lessons: {
     'l.translate': L('A', 'A'),
@@ -73,8 +73,8 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.task': L('A', 'B', '"In the Netherlands a supervisor …"'),
   } },
   'u.apply': { kind: 'A', lessons: {
-    'l.cv': L('A', 'A', 'één woord: "A Dutch CV"'),
-    'l.interview': L('A', 'A', 'één woord: "Dutch employers"'),
+    'l.cv': L('A', 'A', 'de tip zegt "A CV here" (was "A Dutch CV")'),
+    'l.interview': L('A', 'A', 'de tip zegt "Employers here" (was "Dutch employers")'),
   } },
   'u.contract': { kind: 'B', lessons: {
     'l.findwork': L('B', 'B', 'het uitzendbureau → het interimkantoor'),
@@ -96,15 +96,15 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.clock': L('A', 'A'),
     'l.hygiene': L('A', 'A'),
   } },
-  'u.social': { kind: 'A', lessons: {
+  'u.social': { kind: 'B', lessons: {
     'l.smalltalk': L('A', 'A'),
     'l.mistakes': L('A', 'A'),
-    'l.respect': L('A', 'A', 'vertrouwenspersoon bestaat ook in België'),
+    'l.respect': L('A', 'B', 'vertrouwenspersoon "if your company has one"; in België moet elke werkgever een preventieadviseur psychosociale aspecten hebben'),
     'l.gossip': L('A', 'A'),
-    'l.boundaries': L('A', 'A', 'vertrouwenspersoon en HR; in België ook de preventieadviseur (psychosociaal)'),
+    'l.boundaries': L('A', 'B', 'vertrouwenspersoon "if there is one" en HR; in België ook de preventieadviseur psychosociale aspecten (verplicht)'),
   } },
   'u.sayings': { kind: 'B', lessons: {
-    'l.easy': L('A', 'A', 'één woord: "Dutch people"'),
+    'l.easy': L('A', 'A', 'de tip zegt "Here, people" (was "Dutch people")'),
     'l.plain': L('A', 'B', '"Dutch colleagues often say directly": Vlamingen zijn vaak minder direct'),
   } },
   'u.rights': { kind: 'B', lessons: {

@@ -7,7 +7,9 @@ import type { BeTaal } from '../types';
  *  - l.leave: het calamiteitenverlof → het verlof om dwingende redenen (often unpaid), and the tip
  *    (20 days off after a full year, klein verlet);
  *  - l.illness: de bedrijfsarts → de arbeidsarts (the same drawing), de wachtdag → het gewaarborgd
- *    loon (there is no waiting day), doorbetalen → het ziektebriefje, a sentence and the chat with
+ *    loon (there is no waiting day), doorbetalen → het ziektebriefje, betermelden → terugkomen
+ *    ("betermelden" is Dutch usage: in Flanders you say that you can work again, that you come
+ *    back; the same drawing; "Wat kun je nu?" says it too, `kun` below), a sentence and the chat with
  *    the arbeidsarts and the ziektebriefje, and the tip (the note within 2 working days, the
  *    gewaarborgd loon, then the ziekenfonds);
  *  - l.kids: the sentence with het calamiteitenverlof, het zorgverlof → het geboorteverlof, and
@@ -37,6 +39,7 @@ const lines: BeTaal['lines'] = {
   'w.bedrijfsarts': { nl: 'de arbeidsarts', en: 'the occupational doctor (the doctor of your work)', picture: 'same' },
   'w.wachtdag': { nl: 'het gewaarborgd loon', en: 'the guaranteed wage (your employer pays the first days you are sick)', emoji: '💶' },
   'w.doorbetalen': { nl: 'het ziektebriefje', en: 'the sick note (from your doctor)', emoji: '📝' },
+  'w.betermelden': { nl: 'terugkomen', en: 'to come back (to work, after an illness)', picture: 'same' },
   's.illness.2': { nl: 'Ik heb een afspraak met de arbeidsarts.', en: 'I have an appointment with the occupational doctor.' },
   'c.illness.a': { nl: 'Dat zeg ik liever niet. Ik heb een ziektebriefje.', en: 'I would rather not say. I have a sick note.' },
   's.kids.2': { nl: 'Mag ik verlof om dwingende redenen opnemen?', en: 'May I take leave for urgent reasons?' },
@@ -154,4 +157,12 @@ const tips = [
   }),
 ];
 
-export const be: BeTaal = { nl: 'u.leave', lines, tips };
+/**
+ * "Wat kun je nu?" in Belgium: "beter melden" is Dutch usage; in Flanders you say that you can work
+ * again (same id, same translation: "report back when I am better").
+ */
+const kun: BeTaal['kun'] = {
+  'kjn.u.leave.2': 'Ik kan me ziek melden en zeggen dat ik weer kan werken.',
+};
+
+export const be: BeTaal = { nl: 'u.leave', lines, tips, kun };

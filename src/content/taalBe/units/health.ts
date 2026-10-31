@@ -35,11 +35,11 @@ const lines: BeTaal['lines'] = {
   'w.premie': { nl: 'de bijdrage', en: 'the member fee (what you pay the ziekenfonds)', emoji: '🪙', picture: false },
   'w.eigenrisico': { nl: 'het remgeld', en: 'the own share (the part of the cost you pay yourself)', emoji: '🧮', picture: false },
   'w.zorgtoeslag': { nl: 'de verhoogde tegemoetkoming', en: 'the extra help with health costs (for a low income)', emoji: '🤲', picture: false },
-  'w.verzekeraar': { nl: 'het ziekenfonds', en: 'the health fund (mutualiteit)', emoji: '☂️', picture: false },
-  's.insurance.1': { nl: 'Ik ben lid van een ziekenfonds.', en: 'I am a member of a health fund.' },
+  'w.verzekeraar': { nl: 'het ziekenfonds', en: 'the health insurance fund (mutualiteit)', emoji: '☂️', picture: false },
+  's.insurance.1': { nl: 'Ik ben lid van een ziekenfonds.', en: 'I am a member of a health insurance fund.' },
   's.insurance.2': { nl: 'Wordt dit terugbetaald?', en: 'Is this paid back (covered)?' },
   's.insurance.3': { nl: 'Ik vraag de verhoogde tegemoetkoming aan.', en: 'I apply for the extra help with health costs.' },
-  'c.insurance.q': { nl: 'Bij welk ziekenfonds ben je?', en: 'Which health fund are you with?' },
+  'c.insurance.q': { nl: 'Bij welk ziekenfonds ben je?', en: 'Which health insurance fund are you with?' },
   'c.insurance.a': { nl: 'Dat weet ik niet. Ik kijk het na.', en: 'I do not know. I will check it.' },
 };
 
@@ -74,8 +74,8 @@ const tips = [
       lessonId: 'l.insurance',
       emoji: '☂️',
       title: 'Your ziekenfonds',
-      body: `In Belgium you must join a health fund: a ziekenfonds (mutualiteit), or the Hulpkas (HZIV). Do it when you start working. The ziekenfonds pays back a part of the costs of the doctor, the hospital and medicines. The part you pay yourself is the remgeld. With a low income you may get verhoogde tegemoetkoming: then you pay less. Are you sick for a long time? Then the ziekenfonds also pays you a benefit. ${BE_ADVICE}`,
-      phrase: ['Ik wil lid worden van een ziekenfonds. Kunt u mij helpen?', 'I want to join a health fund. Can you help me?'],
+      body: `In Belgium you must join a health insurance fund: a ziekenfonds (mutualiteit), or the Hulpkas (HZIV). Do it when you start working. The ziekenfonds pays back a part of the costs of the doctor, the hospital and medicines. The part you pay yourself is the remgeld. With a low income you may get verhoogde tegemoetkoming: then you pay less. Are you sick for a long time? Then the ziekenfonds also pays you a benefit. ${BE_ADVICE}`,
+      phrase: ['Ik wil lid worden van een ziekenfonds. Kunt u mij helpen?', 'I want to join a health insurance fund. Can you help me?'],
       situation: 'You started working here two weeks ago and you have no ziekenfonds yet. What do you do?',
       options: [
         'Join a ziekenfonds quickly.',

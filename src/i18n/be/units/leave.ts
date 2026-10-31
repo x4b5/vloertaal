@@ -18,6 +18,7 @@ export const ar: Gloss = {
   'be.w.bedrijfsarts': "طبيب العمل (طبيب مكان العمل)", // nieuw, nalezen
   'be.w.wachtdag': "الأجر المضمون (صاحب العمل يدفع الأيام الأولى من المرض)", // nieuw, nalezen
   'be.w.doorbetalen': "الشهادة الطبية (ورقة المرض من الطبيب)", // nieuw, nalezen
+  'be.w.betermelden': "العودة (إلى العمل، بعد المرض)", // nieuw, nalezen
   'be.s.illness.2': "عندي موعد مع طبيب العمل.", // nieuw, nalezen
   'be.c.illness.a': "أفضّل ألّا أقول. عندي شهادة طبية.", // nieuw, nalezen
   'be.s.kids.2': "هل يمكنني أخذ إجازة لأسباب طارئة؟", // nieuw, nalezen
@@ -53,6 +54,7 @@ export const ti: Gloss = {
   'be.w.bedrijfsarts': "ሓኪም ስራሕ (ሓኪም ናይ ቦታ ስራሕኩም)", // nieuw, nalezen
   'be.w.wachtdag': "ውሑስ ደሞዝ (ኣስራሒ ናይ መጀመርታ መዓልትታት ሕማም ይኸፍል)", // nieuw, nalezen
   'be.w.doorbetalen': "ናይ ሕማም ወረቐት (ካብ ሓኪም)", // nieuw, nalezen
+  'be.w.betermelden': "ምምላስ (ናብ ስራሕ፡ ድሕሪ ሕማም)", // nieuw, nalezen
   'be.s.illness.2': "ምስ ሓኪም ስራሕ ቆጸራ ኣለኒ።", // nieuw, nalezen
   'be.c.illness.a': "ዘይምዝራብ ይሓይሽ። ናይ ሕማም ወረቐት ኣለኒ።", // nieuw, nalezen
   'be.s.kids.2': "ብህጹጽ ምኽንያት ፍቓድ ክወስድ ይኽእል ዶ?", // nieuw, nalezen
@@ -88,6 +90,7 @@ export const fa: Gloss = {
   'be.w.bedrijfsarts': "پزشک طب کار (پزشک محل کارت)", // nieuw, nalezen
   'be.w.wachtdag': "دستمزد تضمین‌شده (کارفرما روزهای اول بیماری را می‌پردازد)", // nieuw, nalezen
   'be.w.doorbetalen': "گواهی پزشکی (از دکتر)", // nieuw, nalezen
+  'be.w.betermelden': "برگشتن (سر کار، بعد از بیماری)", // nieuw, nalezen
   'be.s.illness.2': "با پزشک طب کار وقت ملاقات دارم.", // nieuw, nalezen
   'be.c.illness.a': "ترجیح می‌دهم نگویم. گواهی پزشکی دارم.", // nieuw, nalezen
   'be.s.kids.2': "می‌توانم مرخصی به دلیل‌های فوری بگیرم؟", // nieuw, nalezen
@@ -123,6 +126,7 @@ export const prs: Gloss = {
   'be.w.bedrijfsarts': "داکتر طب کار (داکتر جای کار شما)", // nieuw, nalezen
   'be.w.wachtdag': "معاش تضمین‌شده (کارفرما روزهای اول مریضی را می‌پردازد)", // nieuw, nalezen
   'be.w.doorbetalen': "تصدیق داکتر (ورقهٔ مریضی)", // nieuw, nalezen
+  'be.w.betermelden': "برگشتن (به کار، بعد از مریضی)", // nieuw, nalezen
   'be.s.illness.2': "با داکتر طب کار وقت ملاقات دارم.", // nieuw, nalezen
   'be.c.illness.a': "ترجیح می‌دهم نگویم. تصدیق داکتر دارم.", // nieuw, nalezen
   'be.s.kids.2': "آیا می‌توانم رخصتی به دلایل عاجل بگیرم؟", // nieuw, nalezen
@@ -158,6 +162,7 @@ export const uk: Gloss = {
   'be.w.bedrijfsarts': "лікар з медицини праці (лікар твоєї роботи)", // nieuw, nalezen
   'be.w.wachtdag': "гарантована зарплата (роботодавець платить за перші дні хвороби)", // nieuw, nalezen
   'be.w.doorbetalen': "лікарняна довідка (від лікаря)", // nieuw, nalezen
+  'be.w.betermelden': "повернутися (на роботу, після хвороби)", // nieuw, nalezen
   'be.s.illness.2': "У мене прийом у лікаря з медицини праці.", // nieuw, nalezen
   'be.c.illness.a': "Я краще не казатиму. У мене є лікарняна довідка.", // nieuw, nalezen
   'be.s.kids.2': "Можна мені взяти відпустку з невідкладних причин?", // nieuw, nalezen
@@ -193,6 +198,7 @@ export const tr: Gloss = {
   'be.w.bedrijfsarts': "iş yeri hekimi (işinin doktoru)", // nieuw, nalezen
   'be.w.wachtdag': "garanti ücret (işveren hastalığın ilk günlerini öder)", // nieuw, nalezen
   'be.w.doorbetalen': "doktor raporu (hastalık belgesi)", // nieuw, nalezen
+  'be.w.betermelden': "geri dönmek (hastalıktan sonra işe)", // nieuw, nalezen
   'be.s.illness.2': "İş yeri hekimiyle randevum var.", // nieuw, nalezen
   'be.c.illness.a': "Söylememeyi tercih ederim. Doktor raporum var.", // nieuw, nalezen
   'be.s.kids.2': "Acil nedenlerle izin alabilir miyim?", // nieuw, nalezen
@@ -228,6 +234,7 @@ export const pl: Gloss = {
   'be.w.bedrijfsarts': "lekarz medycyny pracy (lekarz twojej pracy)", // nieuw, nalezen
   'be.w.wachtdag': "gwarantowane wynagrodzenie (pracodawca płaci za pierwsze dni choroby)", // nieuw, nalezen
   'be.w.doorbetalen': "zwolnienie lekarskie (zaświadczenie od lekarza)", // nieuw, nalezen
+  'be.w.betermelden': "wrócić (do pracy, po chorobie)", // nieuw, nalezen
   'be.s.illness.2': "Mam wizytę u lekarza medycyny pracy.", // nieuw, nalezen
   'be.c.illness.a': "Wolę tego nie mówić. Mam zwolnienie lekarskie.", // nieuw, nalezen
   'be.s.kids.2': "Czy mogę wziąć urlop z pilnych powodów?", // nieuw, nalezen
@@ -263,6 +270,7 @@ export const ro: Gloss = {
   'be.w.bedrijfsarts': "medicul de medicina muncii (medicul de la locul tău de muncă)", // nieuw, nalezen
   'be.w.wachtdag': "salariul garantat (angajatorul plătește primele zile de boală)", // nieuw, nalezen
   'be.w.doorbetalen': "adeverința medicală (de la medic)", // nieuw, nalezen
+  'be.w.betermelden': "a reveni (la muncă, după boală)", // nieuw, nalezen
   'be.s.illness.2': "Am o programare la medicul de medicina muncii.", // nieuw, nalezen
   'be.c.illness.a': "Prefer să nu spun. Am o adeverință medicală.", // nieuw, nalezen
   'be.s.kids.2': "Pot să iau concediu din motive urgente?", // nieuw, nalezen
@@ -298,6 +306,7 @@ export const bg: Gloss = {
   'be.w.bedrijfsarts': "лекарят по трудова медицина (лекарят на работата ти)", // nieuw, nalezen
   'be.w.wachtdag': "гарантираната заплата (работодателят плаща първите дни на болест)", // nieuw, nalezen
   'be.w.doorbetalen': "болничната бележка (от лекаря)", // nieuw, nalezen
+  'be.w.betermelden': "връщам се (на работа, след болест)", // nieuw, nalezen
   'be.s.illness.2': "Имам час при лекаря по трудова медицина.", // nieuw, nalezen
   'be.c.illness.a': "Предпочитам да не казвам. Имам болнична бележка.", // nieuw, nalezen
   'be.s.kids.2': "Може ли да взема отпуск по неотложни причини?", // nieuw, nalezen
@@ -333,6 +342,7 @@ export const es: Gloss = {
   'be.w.bedrijfsarts': "el médico / la médica del trabajo", // nieuw, nalezen
   'be.w.wachtdag': "el sueldo garantizado (tu empresa paga los primeros días de baja)", // nieuw, nalezen
   'be.w.doorbetalen': "el certificado médico (del médico)", // nieuw, nalezen
+  'be.w.betermelden': "volver (al trabajo, después de una enfermedad)", // nieuw, nalezen
   'be.s.illness.2': "Tengo una cita con el médico del trabajo.", // nieuw, nalezen
   'be.c.illness.a': "Prefiero no decirlo. Tengo un certificado médico.", // nieuw, nalezen
   'be.s.kids.2': "¿Puedo tomar un permiso por motivos urgentes?", // nieuw, nalezen
@@ -368,6 +378,7 @@ export const pt: Gloss = {
   'be.w.bedrijfsarts': "o médico / a médica do trabalho", // nieuw, nalezen
   'be.w.wachtdag': "o salário garantido (o teu empregador paga os primeiros dias de doença)", // nieuw, nalezen
   'be.w.doorbetalen': "o atestado médico (do médico)", // nieuw, nalezen
+  'be.w.betermelden': "voltar (ao trabalho, depois de uma doença)", // nieuw, nalezen
   'be.s.illness.2': "Tenho uma consulta com o médico do trabalho.", // nieuw, nalezen
   'be.c.illness.a': "Prefiro não dizer. Tenho um atestado médico.", // nieuw, nalezen
   'be.s.kids.2': "Posso tirar uma licença por motivos urgentes?", // nieuw, nalezen
@@ -403,6 +414,7 @@ export const fr: Gloss = {
   'be.w.bedrijfsarts': "le médecin du travail (le médecin de ton travail)", // nieuw, nalezen
   'be.w.wachtdag': "le salaire garanti (ton employeur paie les premiers jours de maladie)", // nieuw, nalezen
   'be.w.doorbetalen': "le certificat médical (du médecin)", // nieuw, nalezen
+  'be.w.betermelden': "revenir (au travail, après une maladie)", // nieuw, nalezen
   'be.s.illness.2': "J’ai rendez-vous chez le médecin du travail.", // nieuw, nalezen
   'be.c.illness.a': "Je préfère ne pas le dire. J’ai un certificat médical.", // nieuw, nalezen
   'be.s.kids.2': "Est-ce que je peux prendre un congé pour raisons impérieuses ?", // nieuw, nalezen
@@ -438,6 +450,7 @@ export const de: Gloss = {
   'be.w.bedrijfsarts': "der Arbeitsarzt / die Arbeitsärztin (der Arzt deiner Arbeit)", // nieuw, nalezen
   'be.w.wachtdag': "der garantierte Lohn (dein Arbeitgeber zahlt die ersten Krankheitstage)", // nieuw, nalezen
   'be.w.doorbetalen': "die Krankmeldung vom Arzt (das Attest)", // nieuw, nalezen
+  'be.w.betermelden': "zurückkommen (zur Arbeit, nach einer Krankheit)", // nieuw, nalezen
   'be.s.illness.2': "Ich habe einen Termin beim Arbeitsarzt.", // nieuw, nalezen
   'be.c.illness.a': "Das sage ich lieber nicht. Ich habe ein Attest.", // nieuw, nalezen
   'be.s.kids.2': "Darf ich Urlaub aus dringenden Gründen nehmen?", // nieuw, nalezen
