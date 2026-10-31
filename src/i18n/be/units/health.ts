@@ -80,7 +80,7 @@ export const fa: Gloss = {
     "be.c.doctor.b": "یک پزشک خانواده (huisarts) نزدیک خانه‌ات انتخاب کن. عصر، شب یا آخر هفته پزشک لازم داری؟ به 1733 زنگ بزن: تو را به پزشک کشیک (huisartsenwachtpost) می‌فرستند. فقط در وضعیت اضطراری به 112 زنگ بزن: خطر جانی، آتش‌سوزی یا جرمی که همین حالا اتفاق می‌افتد. دارو را از داروخانه (apotheek) می‌گیری.", // nieuw, nalezen
     "be.c.doctor.p": "آیا هنوز بیمار جدید قبول می‌کنید؟", // nieuw, nalezen
     "be.c.doctor.s": "شنبه شب است. بچه‌ات تب بالایی دارد، ولی بیدار است و عادی نفس می‌کشد. چه کار می‌کنی؟", // = c.doctor.s
-    "be.c.doctor.o1": "به 1733 زنگ بزنی.", // nieuw, nalezen
+    "be.c.doctor.o1": "به 1733 زنگ بزن.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "به ۱۱۲ زنگ بزن.", // = c.doctor.o2
     "be.c.doctor.o3": "تا دوشنبه صبر کن و هیچ کاری نکن.", // = c.doctor.o3
     "be.c.doctor.w": "1733 کمکت می‌کند بیرون از ساعت اداری پزشک پیدا کنی. 112 برای وضعیت اضطراری است: خطر جانی، آتش‌سوزی یا جرمی که همین حالا اتفاق می‌افتد.", // nieuw, nalezen
@@ -88,10 +88,10 @@ export const fa: Gloss = {
     "be.c.insurance.b": "در بلژیک باید عضو یک صندوق بیمهٔ درمان شوی: یک ziekenfonds (mutualiteit)، یا Hulpkas (HZIV). وقتی شروع به کار می‌کنی این کار را بکن. ziekenfonds بخشی از هزینهٔ پزشک، بیمارستان و دارو را برمی‌گرداند. بخشی که خودت می‌پردازی remgeld است. با درآمد کم ممکن است verhoogde tegemoetkoming بگیری: آن وقت کمتر می‌پردازی. مدت طولانی بیماری؟ آن وقت ziekenfonds به تو کمک‌هزینه هم می‌دهد. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشاورهٔ حقوقی رایگان) بپرس.", // nieuw, nalezen
     "be.c.insurance.p": "می‌خواهم عضو یک صندوق بیمهٔ درمان شوم. می‌توانید کمکم کنید؟", // nieuw, nalezen
     "be.c.insurance.s": "دو هفته پیش اینجا شروع به کار کردی و هنوز ziekenfonds نداری. چه کار می‌کنی؟", // nieuw, nalezen
-    "be.c.insurance.o1": "زود عضو یک ziekenfonds شوی.", // nieuw, nalezen
+    "be.c.insurance.o1": "زود عضو یک ziekenfonds شو.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.o2": "صبر کن: بیمهٔ کشور خودت کافی است.", // = c.insurance.o2
     "be.c.insurance.o3": "از کارت بیمهٔ یک دوست استفاده کن.", // = c.insurance.o3
-    "be.c.insurance.w": "بدون ziekenfonds، پول پزشک و بیمارستان را خودت می‌پردازی. زود عضو شدن از تو محافظت می‌کند. کارفرما یا دفتر کار موقت می‌تواند کمکت کند.", // nieuw, nalezen
+    "be.c.insurance.w": "بدون ziekenfonds، پول پزشک و بیمارستان را خودت می‌پردازی. زود عضو شدن از تو محافظت می‌کند. کارفرما یا دفتر کاریابی موقت می‌تواند کمکت کند.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const prs: Gloss = {
@@ -121,7 +121,7 @@ export const prs: Gloss = {
     "be.c.insurance.o1": "زود عضو یک ziekenfonds شوید.", // nieuw, nalezen
     "be.c.insurance.o2": "صبر کنید: بیمهٔ کشور خود تان کافی است.", // = c.insurance.o2
     "be.c.insurance.o3": "از کارت بیمهٔ یک دوست استفاده کنید.", // = c.insurance.o3
-    "be.c.insurance.w": "بدون ziekenfonds، پول داکتر و شفاخانه را خود تان می‌پردازید. زود عضو شدن از شما محافظت می‌کند. کارفرما یا دفتر کار موقت می‌تواند کمک تان کند.", // nieuw, nalezen
+    "be.c.insurance.w": "بدون ziekenfonds، پول داکتر و شفاخانه را خود تان می‌پردازید. زود عضو شدن از شما محافظت می‌کند. کارفرما یا دفتر کاریابی موقت می‌تواند کمک تان کند.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const uk: Gloss = {

@@ -97,22 +97,22 @@ const t: CultureTranslation = {
     'c.jobends.a.why': "خانه به کار بسته است: این جواب مهلت خبر دادن را می‌پرسد.",
     // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
     'c.workorder.a.why': "کلمه‌ای روشن نیست: پرسیدن پیش از شروع جواب درست است.", // nieuw, nalezen
-    'c.handover.a.why': "پرسیده‌اند همه چیز تمام است یا نه: این جواب می‌گوید چه تمام نشده، و چرا.", // nieuw, nalezen
+    'c.handover.a.why': "پرسیده‌اند همه چیز تمام است یا نی: این جواب می‌گوید چه تمام نشده، و چرا.", // nieuw, nalezen // nagelezen AI ronde 3
     'c.workshop.a.why': "پرسیده‌اند چرا: این جواب دلیل را می‌گوید، چشم باید محافظت شود.", // nieuw, nalezen
-    'c.power.a.why': "کار روی چراغ: این جواب اول می‌پرسد که برق قطع است یا نه.", // nieuw, nalezen
+    'c.power.a.why': "کار روی چراغ: این جواب اول می‌پرسد که برق قطع است یا نی.", // nieuw, nalezen // nagelezen AI ronde 3
     'c.garage.a.why': "خواسته‌اند تایرها عوض شود: یک بلی، و یک سوال که تایرها کجاست.", // nieuw, nalezen
     'c.carjob.a.why': "کار اضافی: مشتری باید اول موافقه کند، پس این جواب از سرپرست می‌پرسد.", // nieuw, nalezen
     'c.placement.a.why': "پرسیده‌اند چه وقت: این جواب روز را می‌گوید، و قرارداد اول است.", // nieuw, nalezen
     'c.review.a.why': "نظر هنوز روشن نیست: خواستن اینکه نشان بدهند جواب خوب است.", // nieuw, nalezen
     'c.council.a.why': "دربارهٔ رأی دادن: یک بلی، و دو چیزی که باید همراه برد.", // nieuw, nalezen
     'c.police.a.why': "پولیس سند هویت می‌خواهد: نشانش بدهید و بپرسید چه گپ است.", // nieuw, nalezen
-    'c.login.a.why': "پرسیده‌اند ورود کار می‌کند یا نه: این جواب نه می‌گوید، و چرا.", // nieuw, nalezen
+    'c.login.a.why': "پرسیده‌اند ورود کار می‌کند یا نی: این جواب نی می‌گوید، و چرا.", // nieuw, nalezen // nagelezen AI ronde 3
     'c.phish.a.why': "دربارهٔ لینک: یک بلی صادقانه، و یک تماس با بخش IT.", // nieuw, nalezen
     'c.mychoice.a.why': "پرسیده‌اند نقطهٔ قوت چیست: این جواب یکی را با مثال می‌گوید.", // nieuw, nalezen
     'c.nextstep.a.why': "پرسیده‌اند پلان چیست: این جواب bbl را می‌گوید و معنایش را.", // nieuw, nalezen
-    'c.email.a.why': "پرسیده‌اند فرستاده شده یا نه: هنوز نه، اول کنترول می‌شود.", // nieuw, nalezen
-    'c.budget.a.why': "پیشنهاد «بعداً بپردازید»: یک نهٔ با ادب، با دلیل.", // nieuw, nalezen
-    'c.healthy.a.why': "پیشنهاد تابلیت: یک نهٔ با ادب، با دلیل.", // nieuw, nalezen
+    'c.email.a.why': "پرسیده‌اند فرستاده شده یا نی: هنوز نی، اول کنترول می‌شود.", // nieuw, nalezen // nagelezen AI ronde 3
+    'c.budget.a.why': "پیشنهاد «بعداً بپردازید»: یک «نی» با ادب، با دلیل.", // nieuw, nalezen // nagelezen AI ronde 3
+    'c.healthy.a.why': "پیشنهاد تابلیت: یک «نی» با ادب، با دلیل.", // nieuw, nalezen // nagelezen AI ronde 3
   },
 };
 

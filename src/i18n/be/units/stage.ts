@@ -51,21 +51,21 @@ export const fa: Gloss = {
   'be.c.placement.s': "شرکت از تو می‌خواهد فردا شروع کنی. stageovereenkomst هنوز امضا نشده. چه کار می‌کنی؟", // nieuw, nalezen
   'be.c.placement.o1': "از راهنمای کارآموزی بخواه اول توافق را درست کند.", // nieuw, nalezen
   'be.c.placement.o2': "فردا شروع کن، و هر وقت وقت داشتی توافق را امضا کن.", // nieuw, nalezen
-  'be.c.placement.o3': "شروع می‌کنی، ولی فعلاً به مدرسه چیزی نمی‌گویی.", // nieuw, nalezen
+  'be.c.placement.o3': "شروع کن، ولی فعلاً به مدرسه چیزی نگو.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.w': "stageovereenkomst می‌گوید چه یاد می‌گیری و چه کسی کمکت می‌کند. بدون توافق امضاشده، شاید کارآموزی‌ات حساب نشود. پس پیش از شروع امضایش کن.", // nieuw, nalezen
 };
 
 export const prs: Gloss = {
-  'be.w.praktijkopleider': "رهنما (mentor، رهنمای شما در شرکت)", // nieuw, nalezen
+  'be.w.praktijkopleider': "رهنما (mentor، رهنمای شما در کمپنی)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.pok': "قرارداد کارآموزی (شما، مکتب و کمپنی امضایش می‌کنید)", // nieuw, nalezen
   'be.w.leerbedrijf': "CLB (مرکزی که رایگان به شاگردان کمک می‌کند)", // nieuw, nalezen
   'be.s.placement.2': "رهنمای من کیست؟", // nieuw, nalezen
   'be.s.placement.3': "هنوز قرارداد کارآموزی را امضا نکرده‌ام.", // nieuw, nalezen
   'be.c.placement.a': "دوشنبه. اول قرارداد کارآموزی را امضا می‌کنیم.", // nieuw, nalezen
   'be.c.placement': "اول امضا، بعد شروع", // nieuw, nalezen
-  'be.c.placement.b': "در مکتب اکثراً در یک شرکت یاد می‌گیرید: این کارآموزی شماست (stage). در آموزش دوگانه (duaal leren) هم در مکتب و هم در شرکت یاد می‌گیرید. پیش از شروع، شما، مکتب و شرکت یک موافقت‌نامه امضا می‌کنید: stageovereenkomst. کمتر از ۱۸ سال دارید؟ پس والدین تان هم امضا می‌کنند. در شرکت، رهنمای تان (mentor) کمک تان می‌کند. از طرف مکتب، رهنمای کارآموزی (stagebegeleider) کمک تان می‌کند. در مکتب یا جای کارآموزی مشکل دارید؟ CLB رایگان و محرمانه به شاگردان کمک می‌کند. مریض هستید؟ پیش از وقت شروع کار به شرکت زنگ بزنید، و به مکتب هم خبر بدهید. مقررات در هر مکتب فرق می‌کند: از رهنمای کارآموزی تان بپرسید.", // nieuw, nalezen
+  'be.c.placement.b': "در مکتب اکثراً در یک کمپنی یاد می‌گیرید: این کارآموزی شماست (stage). در آموزش دوگانه (duaal leren) هم در مکتب و هم در کمپنی یاد می‌گیرید. پیش از شروع، شما، مکتب و کمپنی یک موافقت‌نامه امضا می‌کنید: stageovereenkomst. کمتر از ۱۸ سال دارید؟ پس والدین تان هم امضا می‌کنند. در کمپنی، رهنمای تان (mentor) کمک تان می‌کند. از طرف مکتب، رهنمای کارآموزی (stagebegeleider) کمک تان می‌کند. در مکتب یا جای کارآموزی مشکل دارید؟ CLB رایگان و محرمانه به شاگردان کمک می‌کند. مریض هستید؟ پیش از وقت شروع کار به کمپنی زنگ بزنید، و به مکتب هم خبر بدهید. مقررات در هر مکتب فرق می‌کند: از رهنمای کارآموزی تان بپرسید.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.p': "تنها وقتی شروع می‌کنم که قرارداد کارآموزی امضا شده باشد.", // nieuw, nalezen
-  'be.c.placement.s': "شرکت از شما می‌خواهد فردا شروع کنید. stageovereenkomst هنوز امضا نشده. چه می‌کنید؟", // nieuw, nalezen
+  'be.c.placement.s': "کمپنی از شما می‌خواهد فردا شروع کنید. stageovereenkomst هنوز امضا نشده. چه می‌کنید؟", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.o1': "از رهنمای کارآموزی بخواهید اول موافقت‌نامه را جور کند.", // nieuw, nalezen
   'be.c.placement.o2': "فردا شروع کنید، و هر وقت وقت داشتید موافقت‌نامه را امضا کنید.", // nieuw, nalezen
   'be.c.placement.o3': "شروع کنید، ولی فعلاً به مکتب چیزی نگویید.", // nieuw, nalezen
