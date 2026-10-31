@@ -21,37 +21,35 @@ const lesson = units[0].lessons[0];
 const word = lesson.words[0];
 
 describe('Iets melden (testers)', () => {
-  it('is on by default for everyone; ?test=0 or the switch under Over turns it off, ?test on again', () => {
-    expect(testerMode('full')).toBe(true);
-    expect(testerMode('preview')).toBe(true);
-    expect(testerMode(null)).toBe(true);
-    readTesterParam('?unit=pay');
-    expect(testerMode('full')).toBe(true);
-    readTesterParam('?test=0');
+  it('is off by default (a learner sees no fourth button); ?test turns it on, ?test=0 off again', () => {
     expect(testerMode('full')).toBe(false);
-    // The sneak preview too (it needs no code: every new learner has it, the switch decides).
-    expect(testerMode('sample')).toBe(false);
+    expect(testerMode('preview')).toBe(false);
+    expect(testerMode(null)).toBe(false);
+    readTesterParam('?unit=pay');
+    expect(testerMode('full')).toBe(false);
     readTesterParam('?test');
     expect(testerMode('full')).toBe(true);
+    // The sneak preview too (it needs no code: every new learner has it, the switch decides).
+    expect(testerMode('sample')).toBe(true);
     readTesterParam('?test=0');
+    expect(testerMode('full')).toBe(false);
     readTesterParam('?test=1');
     expect(testerMode('preview')).toBe(true);
   });
 
-  it('the switch under Over turns it off and on in the app itself (a home-screen app on an iPhone never sees a link from Safari)', () => {
-    expect(testerSwitch()).toBe(true);
-    expect(setTesterSwitch(false)).toBe(true);
-    expect(testerMode('full')).toBe(false);
+  it('the switch under Over turns it on and off in the app itself (a home-screen app on an iPhone never sees a link from Safari)', () => {
+    expect(testerSwitch()).toBe(false);
     expect(setTesterSwitch(true)).toBe(true);
     expect(testerMode('full')).toBe(true);
-    // Blocked storage: the switch says it could not remember, and the flag stays (the default).
+    expect(setTesterSwitch(false)).toBe(true);
+    expect(testerMode('full')).toBe(false);
+    // Blocked storage: the switch says it could not remember, and the flag stays off (the default).
     (globalThis as { localStorage?: unknown }).localStorage = { getItem: () => { throw new Error('blocked'); }, setItem: () => { throw new Error('blocked'); }, removeItem: () => { throw new Error('blocked'); } };
-    expect(setTesterSwitch(false)).toBe(false);
-    expect(testerMode('full')).toBe(true);
+    expect(setTesterSwitch(true)).toBe(false);
+    expect(testerMode('full')).toBe(false);
   });
 
   it('the note that explains the flag: for who reads Dutch and came to test, not for a learner', () => {
-    // On by default: the flag shows, the Dutch note does not (a learner who reads little Dutch).
     expect(explainReport('full', false)).toBe(false);
     // Not for the sneak preview: every new learner has it, also who reads no Dutch.
     expect(explainReport('sample', false)).toBe(false);
@@ -60,10 +58,15 @@ describe('Iets melden (testers)', () => {
     expect(explainReport('full', false)).toBe(true);
   });
 
-  it('Over has the switch, in Dutch', () => {
+  it('Over has the switch, in Dutch (off at first), and "Vraag of fout?" with the mail address', () => {
     const html = renderToStaticMarkup(createElement(About, { lang: undefined }));
-    expect(html).toContain('class="about-tester" aria-pressed="true"');
-    expect(html).toContain('Knop Melden staat aan');
+    expect(html).toContain('class="about-tester" aria-pressed="false"');
+    expect(html).toContain('Knop Melden staat uit');
+    expect(html).toContain('href="mailto:hoi@vloertaal.nl"');
+    // The contact text no longer sends a learner to a button that is not there.
+    expect(html).not.toContain('vlaggetje Melden');
+    setTesterSwitch(true);
+    expect(renderToStaticMarkup(createElement(About, { lang: undefined }))).toContain('Knop Melden staat aan');
   });
 
   it('names the step by id, with the Dutch', () => {

@@ -981,7 +981,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         <span className="lesson-name" aria-hidden>
           <Bi text={gloss(lesson.titleId ?? lesson.id, lesson.title, lang)} />
         </span>
-        {/* "Melden" (on by default in the beta, src/lib/report.ts): mail this place (lesson, step, word) to hoi@vloertaal.nl. In Dutch. */}
+        {/* "Melden" (off by default, on for testers with ?test or the switch under Over, src/lib/report.ts): mail this place (lesson, step, word) to hoi@vloertaal.nl. In Dutch. */}
         {report && (
           <a
             className="icon-btn lesson-report"

@@ -30,7 +30,7 @@ const t: CultureTranslation = {
     'a.disclaimer': 'Bine de știut',
     'a.disclaimer.b': 'Sfaturile din Vloertaal sunt informații generale, nu consultanță juridică. Regulile se pot schimba; textele au fost actualizate ultima dată în octombrie 2026. Pentru situația ta, întreabă-ți angajatorul, un sindicat sau Juridisch Loket.',
     'a.contact': 'Întrebări sau o greșeală?',
-    'a.contact.b': 'Ai găsit o greșeală, de exemplu într-o traducere sau într-un sfat? Sau ai o întrebare? Trimite un e-mail la hoi@vloertaal.nl. O captură de ecran ajută. Într-o lecție poți apăsa și pe stegulețul „Melden” de sus: atunci e-mailul spune deja unde ești.',
+    'a.contact.b': 'Ai găsit o greșeală, de exemplu într-o traducere sau într-un sfat? Sau ai o întrebare? Trimite un e-mail la hoi@vloertaal.nl. O captură de ecran ajută.',
   },
 };
 

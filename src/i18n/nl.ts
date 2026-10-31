@@ -187,6 +187,7 @@ export const uiNl: Record<UiKey, UiText> = {
   remindOwn: 'Andere tijd',
   remindAdd: 'Zet in mijn agenda',
   remindAdded: 'Open het bestand. Dan staat het in je agenda.',
+  remindAddedAsk: 'Toegevoegd? Dan zie je hem in je agenda.',
   navAbout: 'Over',
   tagMeaning: 'Betekenis',
   tagPick: 'Kies',

@@ -30,7 +30,7 @@ const t: CultureTranslation = {
     'a.disclaimer': 'Dobrze wiedzieć',
     'a.disclaimer.b': 'Wskazówki w Vloertaal to ogólne informacje, a nie porada prawna. Przepisy mogą się zmieniać; teksty ostatnio zaktualizowano w październiku 2026 roku. Jeśli chodzi o twoją sytuację, zapytaj swojego pracodawcę, związek zawodowy albo Juridisch Loket.',
     'a.contact': 'Pytanie albo błąd?',
-    'a.contact.b': 'Widzisz błąd, na przykład w tłumaczeniu albo we wskazówce? Albo masz pytanie? Wyślij e-mail na adres hoi@vloertaal.nl. Zrzut ekranu pomaga. Na lekcji możesz też dotknąć chorągiewki „Melden” u góry: wtedy w e-mailu jest już napisane, gdzie jesteś.',
+    'a.contact.b': 'Widzisz błąd, na przykład w tłumaczeniu albo we wskazówce? Albo masz pytanie? Wyślij e-mail na adres hoi@vloertaal.nl. Zrzut ekranu pomaga.',
   },
 };
 

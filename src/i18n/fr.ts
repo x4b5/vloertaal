@@ -152,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Autre heure',
     remindAdd: 'Ajouter à mon calendrier',
     remindAdded: 'Ouvre le fichier pour l’ajouter à ton calendrier.',
+    remindAddedAsk: 'Ajouté ? Alors tu le vois dans ton agenda.', // nieuw, nalezen
     navAbout: 'À propos',
     tagMeaning: 'Sens',
     tagPick: 'Choisir',

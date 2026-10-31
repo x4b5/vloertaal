@@ -27,6 +27,7 @@ export const UPDATES: Update[] = [
       'Werk je in België (Vlaanderen)? Kies dan bij de start, of later bij Instellingen, "België". In het spoor Werkregels krijg je dan de regels van België: alle onderwerpen, met Vlaamse woorden (loonbrief, interimkantoor, ziekenfonds, RVA). Dit is nieuw: de Belgische lessen zijn nog niet nagekeken door een expert. Zie je een fout? Mail naar hoi@vloertaal.nl.',
       'Hulp: nieuwe nummers bij "Wie bel je?". In Nederland 113 (als je aan zelfdoding denkt), Veilig Thuis, het Centrum Seksueel Geweld en het nummer van FairWork. In België 1813 en het meldpunt mensenhandel (Payoke, PAG-ASA en Sürya).',
       'Deel je een certificaat, spiekkaartje of je kaart? Dan staat onderaan het adres van de app, bijvoorbeeld vloertaal.nl/pl. Er gaat ook een korte tekst mee met de link, in je eigen taal. En de app telt nu ook of mensen terugkomen: één keer op je 1e, 2e, 7e, 14e en 28e dag met een les. Zonder naam, en uit te zetten bij "Anoniem meetellen".',
+      'Rustiger begin: je start meteen met les 1. De toets "Wat ken je al?" komt pas na de eerste les. De knop Melden staat in de les niet meer aan. Wil je hem toch? Zet hem aan onderaan bij Over.',
     ],
   },
   {

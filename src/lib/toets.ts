@@ -12,15 +12,18 @@ import { TOETS_STATE_VERSION, type ToetsRun, type ToetsScore, type ToetsState } 
 /**
  * "Wat ken je al?" (src/content/toets.ts): when it is offered, its questions, and what is kept.
  *
- *  - The start (instap, version A): offered on the home of the language track to a learner who has
- *    finished fewer than INSTAP_UNTIL_LESSONS lessons; never required. "Later" passes it over (it
+ *  - The start (instap, version A): offered on the home of the language track once the first lesson
+ *    (1.1) is done, to a learner who has finished fewer than INSTAP_UNTIL_LESSONS lessons; never
+ *    required. The very first home shows the first lesson, not a test. "Later" passes it over (it
  *    does not come back by itself; Settings has it always).
  *  - The end (eind, version B): offered once the start was done or passed over, after END_DAYS days
  *    or END_UNITS more finished topics, whichever comes first. "Later" waits LATER_DAYS days.
  */
 export type ToetsMoment = 'instap' | 'eind';
 
-/** The start is offered while fewer lessons than this are done (a learner who is just starting). */
+/** The start is offered once this many lessons are done (the first lesson first, then the test) ... */
+export const INSTAP_FROM_LESSONS = 1;
+/** ... and while fewer lessons than this are done (a learner who is just starting). */
 export const INSTAP_UNTIL_LESSONS = 3;
 /** The end: this many days after the start ... */
 export const END_DAYS = 28;
@@ -50,7 +53,10 @@ function addDays(day: string, n: number): string {
 export function toetsOffer(p: Progress, today: Date, unitsDone = taalUnitsDone(p, today)): ToetsMoment | null {
   if (trackOf(p) !== 'taal') return null;
   const t = p.toets;
-  if (!t?.instap && !t?.skipped) return taalLessons(p.completed) < INSTAP_UNTIL_LESSONS ? 'instap' : null;
+  if (!t?.instap && !t?.skipped) {
+    const n = taalLessons(p.completed);
+    return n >= INSTAP_FROM_LESSONS && n < INSTAP_UNTIL_LESSONS ? 'instap' : null;
+  }
   if (t.eind) return null;
   const key = dayKey(today);
   if (t.later && t.later > key) return null;

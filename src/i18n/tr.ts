@@ -152,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Başka saat',
     remindAdd: 'Takvimime ekle',
     remindAdded: 'Takvimine eklemek için dosyayı aç.',
+    remindAddedAsk: 'Eklendi mi? O zaman takviminde görürsün.', // nieuw, nalezen
     navAbout: 'Hakkında',
     tagMeaning: 'Anlam',
     tagPick: 'Seç',

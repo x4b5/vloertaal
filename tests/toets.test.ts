@@ -6,7 +6,7 @@ import { GENDERED_LANGS, isPlural, uiEn } from '../src/i18n/types';
 import { countPath } from '../src/lib/count';
 import { emptyProgress, mergeBackup, parseBackup, type Progress, backupFile, replaceWithBackup } from '../src/lib/progress';
 import {
-  END_DAYS, INSTAP_UNTIL_LESSONS, recordToets, rightId, scoreOf, settingsMoment, speakSentence, toetsLater, toetsLine, toetsOffer, toetsQuestions,
+  END_DAYS, INSTAP_FROM_LESSONS, INSTAP_UNTIL_LESSONS, recordToets, rightId, scoreOf, settingsMoment, speakSentence, toetsLater, toetsLine, toetsOffer, toetsQuestions,
 } from '../src/lib/toets';
 import { readToets } from '../src/lib/toetsState';
 
@@ -81,8 +81,11 @@ describe('"Wat ken je al?": when it is offered', () => {
   const taal: Progress = { ...emptyProgress, onboarded: true, helpLang: 'pl' };
   const lessons = (n: number) => Object.fromEntries(['l.hello', 'l.people', 'l.arrive', 'l.understand'].slice(0, n).map((id) => [id, { best: 1, times: 1 }]));
 
-  it('offers the start to a new learner of the language track, not after a few lessons, not in the work-rules track', () => {
-    expect(toetsOffer(taal, day(2026, 10, 30), 0)).toBe('instap');
+  it('offers the start after the first lesson, not before it, not after a few lessons, not in the work-rules track', () => {
+    // The very first home: lesson 1.1 with Start, no test yet.
+    expect(INSTAP_FROM_LESSONS).toBe(1);
+    expect(toetsOffer(taal, day(2026, 10, 30), 0)).toBeNull();
+    expect(toetsOffer({ ...taal, completed: lessons(1) }, day(2026, 10, 30), 0)).toBe('instap');
     expect(toetsOffer({ ...taal, completed: lessons(INSTAP_UNTIL_LESSONS - 1) }, day(2026, 10, 30), 0)).toBe('instap');
     expect(toetsOffer({ ...taal, completed: lessons(INSTAP_UNTIL_LESSONS) }, day(2026, 10, 30), 0)).toBeNull();
     expect(toetsOffer({ ...taal, helpLang: 'nl' }, day(2026, 10, 30), 0)).toBeNull();

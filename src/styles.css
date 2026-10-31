@@ -3442,6 +3442,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   font-size: 2rem; font-weight: 700; text-align: center;
 }
 .lang-guess .max3-cards { margin-top: 22px; }
+/* The guess page: the back arrow on its own row, so it never lies over the logo (dark on the dark tile). */
+.lang-guess > .chrome-head { margin-bottom: 0; }
 
 /* The password field shows what is typed and has no eye any more. */
 .pw-input { padding-inline-end: 16px; }
@@ -3649,6 +3651,8 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .keep3-added { justify-content: center; flex-wrap: wrap; text-align: center; font-size: 0.95rem; }
 .keep3-added .bi { align-items: center; }
 .keep3-added-big { font-size: 1.6rem; font-family: var(--stencil); font-weight: 800; }
+/* The time asked for, not confirmed: no green "done" (the app cannot know it is in the calendar). */
+.keep3-asked { color: var(--ink); }
 .keep3-ios { width: 100%; max-width: 420px; margin-top: 10px; }
 .keep3-logo { margin-top: 6px; }
 @media (max-height: 700px) {

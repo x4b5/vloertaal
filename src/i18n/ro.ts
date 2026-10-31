@@ -152,6 +152,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Altă oră',
     remindAdd: 'Adaugă în calendarul meu',
     remindAdded: 'Deschide fișierul ca să-l adaugi în calendar.',
+    remindAddedAsk: 'Adăugat? Atunci îl vezi în calendar.', // nieuw, nalezen
     navAbout: 'Despre',
     tagMeaning: 'Sens',
     tagPick: 'Alege',

@@ -52,6 +52,9 @@ describe('the first-run language guess', () => {
       expect(m.ui, l.code).toEqual({ chooseLanguage: l.ui.chooseLanguage, langGuessYes: l.ui.langGuessYes, langGuessOther: l.ui.langGuessOther, appTagline: l.ui.appTagline, loadFailed: l.ui.loadFailed, retry: l.ui.retry, routeTitle: l.ui.routeTitle, routeLearn: l.ui.routeLearn, routeRules: l.ui.routeRules });
     }
   });
+  it('the route page asks a question in every language ("Wat wil je leren?", not "leerroute")', () => {
+    for (const m of languageMeta) expect(m.ui.routeTitle, m.code).toMatch(/[?؟፧]\s*$/);
+  });
 });
 
 describe('the sector in two steps', () => {

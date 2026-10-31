@@ -181,6 +181,7 @@ export const uiEn = {
   remindOwn: 'Other time',
   remindAdd: 'Add to my calendar',
   remindAdded: 'Open the file to add it to your calendar.',
+  remindAddedAsk: 'Added? Then you will see it in your calendar.',
   /* Round 2, understanding without reading: nav, exercise tags, tip toggle, top bar units, phrase sheet. */
   navAbout: 'About',
   tagMeaning: 'Meaning',

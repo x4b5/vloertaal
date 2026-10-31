@@ -238,7 +238,9 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   const q = g.dir === 'rtl' ? '\u061f' : '?';
   return (
     <div className="screen onboarding max3-page lang-guess">
-      {routes && <ChromeHead onBack={toRoute} />}
+      {/* The back arrow on its own row above the logo (not over it), at the start of the guessed
+          language: the right in Arabic, Persian and Dari. */}
+      {routes && <ChromeHead lang={g} onBack={toRoute} />}
       <div className="hero">
         <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
         {/* What the app is, in the guessed language (large), the English small under it. */}
@@ -599,7 +601,7 @@ function AboutBody({ text }: { text: Bilingual }) {
 }
 
 /**
- * The "Melden" flag in every lesson (on by default, src/lib/report.ts) off or on again, in the app
+ * The "Melden" flag in every lesson (off by default, src/lib/report.ts) on or off again, in the app
  * itself: a link opened in Safari does not reach an app on an iPhone's home screen, this does. In
  * Dutch, like the flag and its mail. Small, at the bottom of Over.
  */
@@ -967,8 +969,10 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           </p>
         )}
         {/* What comes next: an arrow, the lesson's picture and its title (no Dutch "Volgende:"). */}
-        {/* (Not while "Wil je sneller?" asks: the question needs the room.) */}
-        {next && !onFaster && (
+        {/* (Not while "Wil je sneller?" asks: the question needs the room. Not with the row to the
+            emergency phrases after the first lesson either: on a small phone that row went half
+            under Verder; the home shows the next lesson anyway.) */}
+        {next && !onFaster && !onPhrases && (
           <p className="result-line result-next" dir={rtl ? 'rtl' : undefined}>
             {/* Said, not shown (no aria-label on a <p>): "Next:" before the title. */}
             <span className="sr-only" lang={saidLang(ui('nextUp', lang))}>{`${said(ui('nextUp', lang))}: `}</span>

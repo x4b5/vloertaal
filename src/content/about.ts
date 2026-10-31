@@ -131,14 +131,14 @@ export const aboutSections: AboutSection[] = [
     // Last: where to send a mistake or a question. The address is a tappable mail link in the
     // body (the About page renders CONTACT_EMAIL as one, in every language and in Dutch).
     id: 'a.contact', emoji: '✉️', title: 'Questions or a mistake?',
-    body: 'Did you find a mistake, for example in a translation or in a tip? Or do you have a question? Send an e-mail to hoi@vloertaal.nl. A screenshot helps. In a lesson you can also tap the flag "Melden" at the top: then the e-mail already says where you are.',
+    body: 'Did you find a mistake, for example in a translation or in a tip? Or do you have a question? Send an e-mail to hoi@vloertaal.nl. A screenshot helps.',
     nl: {
       title: 'Vraag of fout?',
-      body: 'Zie je een fout, bijvoorbeeld in een vertaling of een tip? Of heb je een vraag? Stuur een mail naar hoi@vloertaal.nl. Een schermafbeelding helpt. In een les kun je ook bovenaan op het vlaggetje Melden tikken: dan staat in de mail al waar je bent.',
+      body: 'Zie je een fout, bijvoorbeeld in een vertaling of een tip? Of heb je een vraag? Stuur een mail naar hoi@vloertaal.nl. Een schermafbeelding helpt.',
     },
     nlRules: {
       title: 'Vraag of fout?',
-      body: 'Zie je een fout, bijvoorbeeld in een regel of een vraag? Of heb je een vraag? Stuur een mail naar hoi@vloertaal.nl. Een schermafbeelding helpt. In een les kun je ook bovenaan op het vlaggetje Melden tikken: dan staat in de mail al waar je bent.',
+      body: 'Zie je een fout, bijvoorbeeld in een regel of een vraag? Of heb je een vraag? Stuur een mail naar hoi@vloertaal.nl. Een schermafbeelding helpt.',
     },
   },
 ];
